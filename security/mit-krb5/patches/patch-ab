@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
+
+--- appl/telnet/telnet/Makefile.in.orig	Thu Aug 29 05:10:06 2002
++++ appl/telnet/telnet/Makefile.in
+@@ -45,8 +45,8 @@ OBJS=	authenc.o commands.o main.o networ
+ 
+ all:: telnet
+ 
+-telnet:	$(OBJS) $(KRB4COMPAT_DEPLIBS) ../libtelnet/libtelnet.a
+-	$(CC_LINK) -o $@ $(OBJS) ../libtelnet/libtelnet.a $(KRB4COMPAT_LIBS)
++telnet:	$(OBJS) $(KRB4COMPAT_DEPLIBS) ../libtelnet/libtelnet$(DEPSTLIBEXT)
++	$(CC_LINK) -o $@ $(OBJS) ../libtelnet/libtelnet$(DEPSTLIBEXT) $(KRB4COMPAT_LIBS)
+ 
+ clean::
+ 	$(RM) telnet
+@@ -58,7 +58,6 @@ install::
+ 	  $(INSTALL_DATA) $(srcdir)/$$f.1 \
+ 		${DESTDIR}$(CLIENT_MANDIR)/`echo $$f|sed '$(transform)'`.1; \
+ 	done
+-	$(INSTALL_DATA) $(srcdir)/tmac.doc ${DESTDIR}$(CLIENT_MANDIR)/tmac.doc
+ 
+ authenc.o: defines.h externs.h general.h ring.h types.h $(ARPA_TELNET)
+ commands.o: defines.h externs.h general.h ring.h types.h $(ARPA_TELNET)
