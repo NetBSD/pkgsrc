@@ -1,0 +1,2 @@
+You might have a look at /usr/pkg/share/jed/lib/* and install a
+file defaults.sl for site defaults there.
