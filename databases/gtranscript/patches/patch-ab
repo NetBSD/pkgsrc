@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/08/20 16:11:22 rh Exp $
+
+--- examples/Makefile.in.orig	Fri Aug  6 21:50:16 1999
++++ examples/Makefile.in	Fri Aug 20 17:21:40 1999
+@@ -69,7 +69,7 @@
+ gnomepath = @gnomepath@
+ sedpath = @sedpath@
+ 
+-Examplesdir = $(prefix)/share/gtranscript/examples
++Examplesdir = $(prefix)/share/examples/gtranscript
+ Examples_DATA = Info PhoneBook Table1
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES = 
