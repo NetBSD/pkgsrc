@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/10 11:34:22 itojun Exp $
+include/mhash.h
+lib/libmhash.a
+lib/libmhash.la
+lib/libmhash.so
+lib/libmhash.so.2
+lib/libmhash.so.2.0
+man/man3/mhash.3
