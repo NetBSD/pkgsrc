@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2482 2004/11/26 13:39:48 adam Exp $
+$NetBSD: TODO,v 1.2483 2004/11/26 16:25:28 cube Exp $
 
 Suggested new packages
 ======================
@@ -1226,7 +1226,6 @@ Suggested package updates
 	o stlport-4.6.2
 	o strace-4.5.8
 	o subtitleripper-0.3-4
-	o sudo-1.6.8p4
 	o sunclock-1.5
 	o swfdec-0.3.2
 	o swi-prolog-5.4.4
