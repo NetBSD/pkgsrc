@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.4 2004/11/16 18:04:00 tv Exp $
+# $NetBSD: BSDOS.mk,v 1.5 2004/12/27 06:41:50 jlam Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -94,9 +94,6 @@ TSORT?=		/usr/bin/tsort
 TYPE?=		which
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
-
-USERADD?=	/usr/sbin/adduser
-GROUPADD?=	/usr/sbin/addgroup
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
