@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/03/26 11:02:14 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/26 01:14:04 tv Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -19,6 +19,7 @@ USE_LIBTOOL=	yes
 
 ALL_TARGET.${OPSYS}?=	generic		# good luck!
 ALL_TARGET.Darwin=	netbsd
+ALL_TARGET.Interix=	netbsd
 ALL_TARGET.Linux=	${LOWER_OPSYS}
 .if !empty(OPSYS:M*BSD)
 ALL_TARGET.${OPSYS}=	netbsd
