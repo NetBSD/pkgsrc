@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/17 15:16:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/17 15:50:31 nra Exp $
 
 DISTNAME=	logcheck-1.1.1
 CATEGORIES=	security
@@ -12,5 +12,10 @@ post-patch:
 	@${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.old
 	@${SED} -e "s+/usr/local+${PREFIX}+g" \
 		< ${WRKSRC}/Makefile.old > ${WRKSRC}/Makefile
+	@${MV} ${WRKSRC}/systems/freebsd/logcheck.sh \
+		${WRKSRC}/systems/freebsd/logcheck.sh.old
+	@${SED} -e "s+/usr/local+${PREFIX}+g" \
+		${WRKSRC}/systems/freebsd/logcheck.sh.old > \
+		${WRKSRC}/systems/freebsd/logcheck.sh
 
 .include "../../mk/bsd.pkg.mk"
