@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/02/22 03:50:59 hubertf Exp $
+
+--- configure.BAK	Mon Feb 21 06:09:34 2000
++++ configure	Mon Feb 21 06:10:18 2000
+@@ -931,12 +931,13 @@
+ 	case "$use_mit_pthreads+$use_ptl2" in
+ 		yes+no)
+ 			echo "$ac_t""mit-pthreads" 1>&6
+-			pkg="/usr/pkg/pthreads"
++			pkg="${LOCALBASE}/pthreads"
+ 			lib1="-L$pkg/lib -Wl,-R$pkg/lib"
+ 			lib2="-lpthread -lm -lgcc -lpthread"
+ 			LIBS="$lib1 $lib2 $LIBS"
+ 			CPPFLAGS="-I$pkg/include $CPPFLAGS"
+ 			STD_CINCLUDES="-I$pkg/include"
++			CC=${LOCALBASE}/pthreads/bin/pgcc
+ 			;;
+ 		no+yes)
+ 			echo "$ac_t""PTL2" 1>&6

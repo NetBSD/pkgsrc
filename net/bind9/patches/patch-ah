@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/02/22 03:50:59 hubertf Exp $
+
+--- lib/isc/unix/ifiter_sysctl.c.orig	Mon Feb 21 15:20:39 2000
++++ lib/isc/unix/ifiter_sysctl.c	Mon Feb 21 15:21:05 2000
+@@ -21,6 +21,8 @@
+  * and 19.16.
+  */ 
+ 
++#include <errno.h>
++
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
+ 

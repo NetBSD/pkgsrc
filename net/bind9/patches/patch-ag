@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/02/22 03:50:59 hubertf Exp $
+
+--- lib/isc/unix/ifiter_ioctl.c.orig	Mon Feb 21 15:16:05 2000
++++ lib/isc/unix/ifiter_ioctl.c	Mon Feb 21 15:16:38 2000
+@@ -15,6 +15,9 @@
+  * SOFTWARE.
+  */
+ 
++#include <errno.h>
++
++
+ /*
+  * Obtain the list of network interfaces using the SIOCGLIFCONF ioctl.
+  * See netintro(4).
