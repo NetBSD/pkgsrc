@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8741 2005/01/14 08:38:13 adrianp Exp $
+$NetBSD: CHANGES,v 1.8742 2005/01/14 08:52:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -290,3 +290,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkg_notify to 0.4.1nb1 [jmmv 2005-01-13]
 	Added openpam-20040210 [jlam 2005-01-13]
 	Updated ike-scan to 1.7 [adrianp 2005-01-14]
+	Updated lbreakout2 to 2.5.2 [adam 2005-01-14]
