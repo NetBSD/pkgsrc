@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2004/12/20 11:31:11 grant Exp $
+# $NetBSD: Makefile,v 1.10 2005/02/19 18:46:39 wiz Exp $
 #
 
-DISTNAME=	XML-Simple-2.12
+DISTNAME=	XML-Simple-2.14
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5xsi
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/XML-Simple/
 COMMENT=	Easy Perl API to read/write XML
 
 DEPENDS+=       p5-XML-SAX-[0-9]*:../../textproc/p5-XML-SAX
