@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 1998/03/16 11:16:17 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/06/18 23:48:55 tron Exp $
+bin/wine
+etc/wine.conf.example
+@unexec rm -f %D/etc/wine.conf
 include/wine/windows.h
 include/wine/wintypes.h
 lib/libwine.so.1.0
-bin/wine
+lib/wine.sym
 man/man1/wine.1
 @exec /sbin/ldconfig || /usr/bin/true
 @unexec /sbin/ldconfig || /usr/bin/true

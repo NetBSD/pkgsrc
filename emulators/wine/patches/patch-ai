@@ -1,0 +1,10 @@
+--- multimedia/mmsystem.c.orig	Sat Jun 13 14:31:17 1998
++++ multimedia/mmsystem.c	Thu Jun 18 00:31:40 1998
+@@ -24,6 +24,7 @@
+ #include "debug.h"
+ #include "xmalloc.h"
+ #include "callback.h"
++#include "debugtools.h"
+ 
+ static int	InstalledCount;
+ static int	InstalledListLen;
