@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/17 08:46:04 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/18 15:25:24 agc Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -43,8 +43,6 @@ TCLSH=		tclsh8.0
 # security/pgp
 # mail/faces
 # audio/rplay
-
-MAN1=		exmh.1
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} PREFIX=${PREFIX} TCLSH=${TCLSH} \
