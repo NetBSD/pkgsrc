@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/18 21:12:50 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/09/12 17:00:33 minskim Exp $
 #
 
 DISTNAME=	Cg-${DIST_VER}-Linux
@@ -28,6 +28,7 @@ DEPENDS+=	suse_base>=7.3:../../emulators/suse_base
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/Cg
 	${INSTALL_DATA_DIR} ${PREFIX}/include/CgFX
+	${INSTALL_DATA_DIR} ${PREFIX}/share/NVIDIA-Cg-linux
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/NVIDIA-Cg-linux
 	${INSTALL_PROGRAM} ${WRKSRC}/usr/bin/cgc ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/usr/include/Cg/* ${PREFIX}/include/Cg
