@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/08/23 21:18:24 frueauf Exp $
+# $NetBSD: Makefile,v 1.10 1998/08/23 21:25:19 frueauf Exp $
 #
 
 DISTNAME=	xpkgwedge-0.4
@@ -7,7 +7,7 @@ DISTFILES=	# none
 
 MAINTAINER=	tv@netbsd.org
 
-EXTRACT_ONLY=	# empty
+NO_CHECKSUM=	yes
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 USE_IMAKE=	yes
