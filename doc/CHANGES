@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1169 2003/01/19 21:31:06 hubertf Exp $
+$NetBSD: CHANGES,v 1.1170 2003/01/20 01:43:31 chris Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -334,3 +334,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nail to 10.4 [cjep 2003-01-19]
 	Updated mozilla to 1.2.1nb3 [tron 2003-01-19]
 	Updated csound-bath to 4.23 [hubertf 2003-01-19]
+	Updated sylpheed to 0.8.9 [chris 2003-01-19]
