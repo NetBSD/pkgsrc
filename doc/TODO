@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1157 2003/12/11 00:06:29 heinz Exp $
+$NetBSD: TODO,v 1.1158 2003/12/11 15:23:36 adam Exp $
 
 Suggested new packages
 ======================
@@ -319,7 +319,6 @@ Suggested package updates
 	o staroffice-7
 	o stella-1.3
 	o streamtuner-0.10.2
-	o sylpheed-claws-0.9.7
 	o t1lib-5.0.0
 	o tcl/tk-8.4.5
 	o tcl-expect-5.39.0
