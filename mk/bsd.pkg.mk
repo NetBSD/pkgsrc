@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.222 1999/03/09 11:14:52 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.223 1999/03/09 15:31:59 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1012,7 +1012,9 @@ do-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
 .ifdef WRKOBJDIR
-	${_PKG_SILENT}${_PKG_DEBUG}if ${LN} -fs ${WRKDIR} ${WRKDIR_BASENAME} 2>/dev/null; then	\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RM} -f ${WRKDIR_BASENAME};					\
+	if ${LN} -s ${WRKDIR} ${WRKDIR_BASENAME} 2>/dev/null; then	\
 		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
 	fi
 .endif # WRKOBJDIR
@@ -1272,7 +1274,8 @@ _PORT_USE: .USE
 			if [ -L ${PREFIX}/$$manpage.gz ]; then		\
 				set - `${FILE} ${PREFIX}/$$manpage.gz | ${SED} -e 's|\.gz$$||'`; \
 				shift `expr $$# - 1`;			\
-				${LN} -sf $${1} ${PREFIX}/$$manpage;	\
+				${RM} -f ${PREFIX}/$$manpage;		\
+				${LN} -s $${1} ${PREFIX}/$$manpage;	\
 				${RM} ${PREFIX}/$$manpage.gz;		\
 			else						\
 				${GUNZIP_CMD} ${PREFIX}/$$manpage.gz;	\
@@ -1290,7 +1293,8 @@ _PORT_USE: .USE
 			if [ -L ${PREFIX}/$$manpage ]; then		\
 				set - `${FILE} ${PREFIX}/$$manpage`;	\
 				shift `expr $$# - 1`;			\
-				${LN} -sf $${1}.gz ${PREFIX}/$$manpage.gz; \
+				${RM} -f ${PREFIX}/$$manpage.gz; 	\
+				${LN} -s $${1}.gz ${PREFIX}/$$manpage.gz; \
 				${RM} ${PREFIX}/$$manpage;		\
 			else						\
 				${GZIP_CMD} ${PREFIX}/$$manpage;	\
@@ -1308,21 +1312,25 @@ _PORT_USE: .USE
 		case "${SHLIB_TYPE}" in					\
 		"ELF")							\
 			${ECHO_MSG} "===>   [Automatic ${SHLIB_TYPE} shared object handling]";\
-			for so in $$sos; do				\
-				so1=`${ECHO} $$so | ${SED} -e 's|\.[0-9]*$$||'`; \
-				so2=`${ECHO} $$so1 | ${SED} -e 's|\.[0-9]*$$||'`; \
-				if ${GREP} -c "^$$so2$$" ${PLIST}; then \
-					${SED} -e "s|^$$so$$|&!$$so2|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
-					${ECHO_MSG} "${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so2"; \
-					${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so2; \
+			for so2 in $$sos; do				\
+				so1=`${ECHO} $$so2 | ${SED} -e 's|\.[0-9]*$$||'`; \
+				so0=`${ECHO} $$so1 | ${SED} -e 's|\.[0-9]*$$||'`; \
+				cnt=`${EGREP} -c -x "$$so0" ${PLIST} || ${TRUE}`; \
+				if [ $$cnt -eq 0 ]; then		\
+					${SED} -e "s|^$$so2$$|&!$$so0|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
+					${ECHO_MSG} "${LN} -s ${PREFIX}/$$so2 ${PREFIX}/$$so0"; \
+					${RM} -f ${PREFIX}/$$so0; 	\
+					${LN} -s ${PREFIX}/$$so2 ${PREFIX}/$$so0; \
 				fi;					\
-				if ${GREP} -c "^$$so1$$" ${PLIST}; then \
-					${SED} -e "s|^$$so$$|&!$$so1|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
-					${ECHO_MSG} "${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so1";	\
-					${LN} -sf ${PREFIX}/$$so ${PREFIX}/$$so1; \
+				cnt=`${EGREP} -c -x "$$so1" ${PLIST} || ${TRUE}`; \
+				if [ $$cnt -eq 0 ]; then		\
+					${SED} -e "s|^$$so2$$|&!$$so1|" -e 'y|!|\n|' ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
+					${ECHO_MSG} "${LN} -s ${PREFIX}/$$so2 ${PREFIX}/$$so1"; \
+					${RM} -f ${PREFIX}/$$so1; 	\
+					${LN} -s ${PREFIX}/$$so2 ${PREFIX}/$$so1; \
 				fi;					\
 				if [ X"${PKG_VERBOSE}" != X"" ]; then	\
-					${ECHO_MSG} "$$so";		\
+					${ECHO_MSG} "$$so2";		\
 				fi;					\
 			done;						\
 			;;						\
@@ -1341,11 +1349,12 @@ _PORT_USE: .USE
 		"*")							\
 			${ECHO_MSG} "No shared libraries for ${MACHINE_ARCH}"; \
 			for so in $$sos; do				\
+				if [ X"${PKG_VERBOSE}" != X"" ]; then	\
+					${ECHO_MSG} "Ignoring $$so";	\
+				fi;					\
 				${SED} -e "s;^$$so$$;@comment No shared objects - &;" ${PLIST} > ${PLIST}.tmp && \
 					${MV} ${PLIST}.tmp ${PLIST};	\
 			done;						\
-			${SED} -e "s;.*\.so$;@comment No shared objects - &;" ${PLIST} > ${PLIST}.tmp && \
-				${MV} ${PLIST}.tmp ${PLIST};		\
 			;;						\
 		esac;							\
 	fi)
