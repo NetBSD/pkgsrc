@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $NetBSD: do-install,v 1.3 2000/08/28 23:03:56 wiz Exp $
+#
 
 cd $WRKSRC
 DIRS=`ls -d bin/*`
@@ -7,6 +10,7 @@ DOCS="README benchmark-descriptions interpreting-results sigmetrics97-paper.ps.g
 
 mkdir -p $PREFIX/bin/hbench
 mkdir -p $PREFIX/share/hbench
+mkdir -p $PREFIX/share/hbench/Results
 
 for basedir in $DIRS; do
 	OSDIR=`basename $basedir`
@@ -28,6 +32,5 @@ ${PREFIX}/bin/hbench/maindriver ${PREFIX}/share/hbench/conf/`hostname`.run
 EOF
 chown bin:bin ${PREFIX}/bin/run-hbench
 chmod 0755 ${PREFIX}/bin/run-hbench
-cp -R Results $PREFIX/share/hbench
-rm $PREFIX/share/hbench/Results/Makefile.orig
+cp Results/Makefile $PREFIX/share/hbench/Results
 cp -R conf $PREFIX/share/hbench
