@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/03 18:49:57 reed Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/24 15:30:33 grant Exp $
 #
 
 DISTNAME=		gtk-theme-switch-2.0.0rc2
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.muhri.net/
 COMMENT=		Allows quick & easy switching of GTK+ 2.x themes
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/switch2 \
