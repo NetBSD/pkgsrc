@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.352 2003/03/08 17:10:37 wiz Exp $
+$NetBSD: TODO,v 1.353 2003/03/08 18:03:50 mycroft Exp $
 
 Suggested new packages
 ======================
@@ -193,7 +193,6 @@ Suggested package updates
 	o netscape-7.02
 	o ns-flash-6.0.79
 	o nut-7.17
-	o ogle-0.9.0
 	o openh323-1.11.2
 	o openldap-2.1.12
 	o openoffice-1.0.2 [skrll]
