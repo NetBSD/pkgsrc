@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2003/07/25 20:32:27 tron Exp $
+$NetBSD: distinfo,v 1.10 2003/07/28 13:30:05 tron Exp $
 
 SHA1 (intlfonts-1.2.1/Asian.tar.gz) = 93aade50bbd0e12fd56ff424be939cc586b1a435
 Size (intlfonts-1.2.1/Asian.tar.gz) = 194681 bytes
@@ -20,7 +20,7 @@ SHA1 (intlfonts-1.2.1/European.BIG.tar.gz) = c4eb6e276ee54d4fd6bb268d21ab2e528cc
 Size (intlfonts-1.2.1/European.BIG.tar.gz) = 27106 bytes
 SHA1 (intlfonts-1.2.1/Japanese.BIG.tar.gz) = 7bfd84337543c15c42c04915f495e604fd8a1d98
 Size (intlfonts-1.2.1/Japanese.BIG.tar.gz) = 1696222 bytes
-SHA1 (intlfonts-1.2.1/README.split) = 51bcb0b4ca9aed151a8f09bb829e43ae913d582f
-Size (intlfonts-1.2.1/README.split) = 2138 bytes
+SHA1 (intlfonts-1.2.1/README.split) = 8054d92e2c38353eb4b0b86279ec1289eb06f5c2
+Size (intlfonts-1.2.1/README.split) = 2088 bytes
 SHA1 (patch-aa) = a0a788fd5f6c775565b2a2ed0e75b9512eddebc3
 SHA1 (patch-ab) = 6f0227b059d28dea9109ee10263eba7f0dc3e412
