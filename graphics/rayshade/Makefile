@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/03/27 08:54:57 tron Exp $
+# $NetBSD: Makefile,v 1.6 2000/04/07 13:32:34 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/05/26 04:04:11 mph Exp
 #
 
@@ -11,7 +11,6 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=     packages@netbsd.org
 
-BUILD_DEPENDS=	${BUILD_ROOT}/graphics/urt/${WRKDIR:T}/include/rle.h:../../graphics/urt:configure
 DEPENDS+=	urt-3.1b1:../../graphics/urt
 
 HAS_CONFIGURE=		yes
@@ -22,7 +21,7 @@ ALL_TARGET=
 pre-configure:
 	${SED} -e 's|@CFLAGS@|${CFLAGS}|g' 			\
 		-e 's|\$${PREFIX}|${PREFIX}|g'			\
-		-e 's|\$${URTDIR}|${BUILD_ROOT}/graphics/urt/${WRKDIR:T}|g' \
+		-e 's|\$${LOCALBASE}|${LOCALBASE}|g'			\
 		${FILESDIR}/config.ans > ${WRKDIR}/config.ans
 
 do-install:
