@@ -1,8 +1,17 @@
-$NetBSD: patch-ad,v 1.10 2003/11/14 15:25:16 fredb Exp $
+$NetBSD: patch-ad,v 1.11 2003/12/13 19:22:13 jmmv Exp $
 
---- driver/Makefile.in.orig	2003-09-07 19:00:00.000000000 -0500
+--- driver/Makefile.in.orig	2003-10-25 09:47:19.000000000 +0200
 +++ driver/Makefile.in
-@@ -456,7 +456,7 @@ install-pam:
+@@ -287,7 +287,7 @@ install-program: $(EXES)
+ 	fi ;								      \
+ 	echo $$inst xscreensaver $(install_prefix)$(bindir)/xscreensaver ;    \
+ 	$$inst xscreensaver $(install_prefix)$(bindir)/xscreensaver
+-	@for exe in xscreensaver-command xscreensaver-demo	           \
++	@for exe in xscreensaver-command			           \
+ 		    xscreensaver-getimage @EXES_OSX@ ; do	           \
+ 	  echo $(INSTALL_PROGRAM) $$exe $(install_prefix)$(bindir)/$$exe ; \
+ 	       $(INSTALL_PROGRAM) $$exe $(install_prefix)$(bindir)/$$exe ; \
+@@ -462,7 +462,7 @@ install-pam:
  	  fi ;								\
  	fi
  
@@ -11,7 +20,7 @@ $NetBSD: patch-ad,v 1.10 2003/11/14 15:25:16 fredb Exp $
  	@lost=""							     ;\
           if [ "$(GNOME_DATADIR)" != "" ]; then                                \
  	                                                                      \
-@@ -464,10 +464,6 @@ install-gnome:: screensaver-properties.d
+@@ -470,10 +470,6 @@ install-gnome:: screensaver-properties.d
               echo $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_1)"        ;\
                    $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_1)"        ;\
             fi                                                                ;\
@@ -22,7 +31,7 @@ $NetBSD: patch-ad,v 1.10 2003/11/14 15:25:16 fredb Exp $
             if [ ! -d "$(install_prefix)$(GNOME_CCDIR_3)" ]; then              \
               echo $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_3)"        ;\
                    $(INSTALL_DIRS) "$(install_prefix)$(GNOME_CCDIR_3)"        ;\
-@@ -488,16 +484,6 @@ install-gnome:: screensaver-properties.d
+@@ -494,16 +490,6 @@ install-gnome:: screensaver-properties.d
             fi                                                                ;\
  	                                                                      \
             echo $(INSTALL_DATA) screensaver-properties.desktop		      \
@@ -39,7 +48,7 @@ $NetBSD: patch-ad,v 1.10 2003/11/14 15:25:16 fredb Exp $
               $(install_prefix)$(GNOME_CCDIR_3)/screensaver-properties.desktop;\
  	                                                                      \
             if   $(INSTALL_DATA) screensaver-properties.desktop		      \
-@@ -531,7 +517,7 @@ install-gnome:: screensaver-properties.d
+@@ -537,7 +523,7 @@ install-gnome:: screensaver-properties.d
             fi                                                                ;\
           fi
  
@@ -48,7 +57,7 @@ $NetBSD: patch-ad,v 1.10 2003/11/14 15:25:16 fredb Exp $
  	@if [ "$(GNOME_DATADIR)" != "" ]; then                                \
             if [ ! -d "$(install_prefix)$(GNOME_BINDIR)" ]; then               \
               echo $(INSTALL_DIRS) "$(install_prefix)$(GNOME_BINDIR)"         ;\
-@@ -630,8 +616,6 @@ uninstall-gnome::
+@@ -636,8 +622,6 @@ uninstall-gnome::
            f=screensaver-properties.desktop                                   ;\
            echo rm -f $(install_prefix)$(GNOME_CCDIR_1)/$$f                   ;\
                 rm -f $(install_prefix)$(GNOME_CCDIR_1)/$$f                   ;\

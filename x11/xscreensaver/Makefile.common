@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.57 2003/11/14 14:58:15 fredb Exp $
+# $NetBSD: Makefile.common,v 1.58 2003/12/13 19:22:12 jmmv Exp $
 #
 
-DISTNAME=		xscreensaver-4.13
+DISTNAME=		xscreensaver-4.14
 CATEGORIES=		x11
 MASTER_SITES=		${HOMEPAGE} \
 			ftp://ftp.fu-berlin.de/unix/X11/graphics/xscreensaver/
@@ -28,10 +28,9 @@ CONFIGURE_ENV+=		ac_cv_x_app_defaults="${PREFIX}/lib/X11/app-defaults"
 CONFIGURE_ENV+=		PERL="${PERL5}" ac_cv_perl_version="${PERL_VERSION}"
 MAKE_ENV+=		KDEDIR=${PREFIX}
 
-DISTINFO_FILE=		${.CURDIR}/../xscreensaver/distinfo
-FILESDIR=		${.CURDIR}/../xscreensaver/files
-PATCHDIR=		${.CURDIR}/../xscreensaver/patches
-PKGDIR=			${.CURDIR}/../xscreensaver
+DISTINFO_FILE=		${.CURDIR}/../../x11/xscreensaver/distinfo
+FILESDIR=		${.CURDIR}/../../x11/xscreensaver/files
+PATCHDIR=		${.CURDIR}/../../x11/xscreensaver/patches
 
 .include "../../mk/bsd.prefs.mk"
 
