@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.22 2002/07/11 10:23:13 abs Exp $
+$NetBSD: patch-aa,v 1.23 2002/12/02 12:08:43 tron Exp $
 
---- Makefile.orig	Tue May 14 21:20:07 2002
-+++ Makefile
+--- Makefile.orig	Sat Nov 30 16:36:10 2002
++++ Makefile	Mon Dec  2 12:43:07 2002
 @@ -2,15 +2,20 @@
  # Please read docs/Readme.html, or http://www.analog.cx/
  # This is a general Unix-like Makefile: Makefiles for other OS's can be found
@@ -18,12 +18,12 @@ $NetBSD: patch-aa,v 1.22 2002/07/11 10:23:13 abs Exp $
  #                 BS2000/OSD needs CFLAGS = -XLLML -XLLMK
  #                 NeXTSTEP needs CFLAGS = -O2 -pipe -no-precomp 
 -DEFS =          # any combination of -DNOPIPES -DNODNS -DNODIRENT -DNOGLOB ...
-+DEFS =	-DANALOGDIR=\"${PREFIX}/lib/analog/\" \
++DEFS = -DANALOGDIR=\"${PREFIX}/lib/analog/\" \
 +	-DDEFAULTCONFIGFILE=\"${SYSCONFDIR}/analog.cfg\" \
 +	-DIMAGEDIR=\"/images/\" \
 +	-DLANGDIR=\"${PREFIX}/lib/analog/lang/\" \
 +	-DLOGFILE=\"/var/log/httpd-access.log\"
-+# 		any combination of -DNOPIPES -DNODNS -DNODIRENT -DNOGLOB ...
++#		any combination of -DNOPIPES -DNODNS -DNODIRENT -DNOGLOB ...
  #                 ... -DNOOPEN -DNOFOLLOW -DNOALARM -DNOGRAPHICS -DNOGMTIME ...
- #                 ... -DEBCDIC -DUSE_PLAIN_SETJMP -DHAVE_GD -DHAVE_PCRE ...
- #                 ... -DNEED_STRCMP -DNEED_MEMMOVE -DNEED_STRTOUL ...
+ #                 ... -DEBCDIC -DUSE_PLAIN_SETJMP ...
+ #                 ... -DHAVE_GD -DHAVE_ZLIB -DHAVE_PCRE ...
