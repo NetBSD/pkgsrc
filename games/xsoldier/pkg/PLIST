@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/08/01 14:58:18 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/09/15 00:05:41 garbled Exp $
 bin/xsoldier
 share/xsoldier/Boss1.xpm
 share/xsoldier/Boss2.xpm
@@ -29,6 +29,4 @@ share/xsoldier/PlayerShot3.xpm
 share/xsoldier/Star1.xpm
 share/xsoldier/Star2.xpm
 share/xsoldier/Title.xpm
-share/xsoldier/.scorefile
-@unexec rm -f %D/share/xsoldier/.scorefile
 @dirrm share/xsoldier
