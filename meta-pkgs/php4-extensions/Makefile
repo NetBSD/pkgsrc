@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/11/06 18:35:19 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/08 20:19:40 jdolecek Exp $
 
 DISTNAME=	php-extensions-4.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs www php
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -38,6 +38,7 @@ DEPENDS+=	php-mssql-4.3.*:../../databases/php-mssql
 DEPENDS+=	php-mysql-4.3.*:../../databases/php-mysql
 DEPENDS+=	php-odbc-4.3.*:../../databases/php-odbc
 DEPENDS+=	php-openssl-4.3.*:../../security/php-openssl
+DEPENDS+=	php-pdflib-4.3.*:../../print/php-pdflib
 DEPENDS+=	php-pgsql-4.3.*:../../databases/php-pgsql
 DEPENDS+=	php-posix-4.3.*:../../devel/php-posix
 DEPENDS+=	php-shmop-4.3.*:../../devel/php-shmop
@@ -53,7 +54,6 @@ DEPENDS+=	php-zlib-4.3.*:../../archivers/php-zlib
 # PHP 4.x-only extensions
 DEPENDS+=	php-apc-4.3.*:../../www/php4-apc
 DEPENDS+=	php-domxml-4.3.*:../../textproc/php4-domxml
-DEPENDS+=	php-pdflib-4.3.*:../../print/php4-pdflib
 DEPENDS+=	php-xslt-4.3.*:../../textproc/php4-xslt
 
 EXTRACT_ONLY=	# empty
