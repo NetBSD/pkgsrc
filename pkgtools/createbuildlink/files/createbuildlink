@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.23 2004/07/06 23:18:04 wiz Exp $
+#	$NetBSD: createbuildlink,v 1.24 2004/07/06 23:40:11 wiz Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -36,11 +36,10 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 #
-# Create an initial buildlink2.mk or buildlink3.mk from a package's Makefile
-# and PLIST
+# Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.23 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.24 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
