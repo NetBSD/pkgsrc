@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/07/08 13:36:33 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/10 23:46:15 jtb Exp $
 
-DISTNAME=	tree-puzzle-5.0
-PKGNAME=	puzzle-5.0
+DISTNAME=	tree-puzzle-5.1
+PKGNAME=	puzzle-5.1
 CATEGORIES=	biology
 MASTER_SITES=	http://members.tripod.de/korbi/puzzle/ \
 		ftp://ftp.ebi.ac.uk/pub/software/unix/puzzle/ \
@@ -19,10 +19,13 @@ GNU_CONFIGURE=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/puzzle
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} manual.html *.gif 		\
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} tree-puzzle.pdf	\
 		${PREFIX}/share/doc/puzzle
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/puzzle
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} tree-puzzle.html	\
+		*.gif ${PREFIX}/share/doc/html/puzzle
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/puzzle
-	cd ${WRKSRC}/data; ${INSTALL_DATA} atp6.a globin.a		\
-		marswolf.n primates.b ${PREFIX}/share/examples/puzzle
+	cd ${WRKSRC}/data && ${INSTALL_DATA} EF.* *.a *.n *.b	\
+		${PREFIX}/share/examples/puzzle
 
 .include "../../mk/bsd.pkg.mk"
