@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.1.1.1 1999/11/27 04:08:32 hubertf Exp $
+$NetBSD: patch-af,v 1.2 2000/03/14 16:52:29 tron Exp $
 
---- plug-ins/libgck/gck/Makefile.in.BAK	Fri Nov 26 16:44:57 1999
-+++ plug-ins/libgck/gck/Makefile.in	Fri Nov 26 16:45:09 1999
-@@ -189,7 +189,8 @@
- gckinclude_HEADERS =  	gck.h			gckcolor.h		gckcommon.h		gckimage.h		gcklistbox.h		gckmath.h		gcktypes.h		gckui.h			gckvector.h
+--- plug-ins/libgck/gck/Makefile.in.orig	Sat Mar  4 04:10:53 2000
++++ plug-ins/libgck/gck/Makefile.in	Tue Mar 14 00:01:17 2000
+@@ -191,7 +191,8 @@
+ gckinclude_HEADERS =  	gck.h
  
  
 -libgck_la_LDFLAGS =  	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) -release $(LT_RELEASE)

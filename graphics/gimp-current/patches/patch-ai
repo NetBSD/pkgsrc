@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2000/03/14 16:52:29 tron Exp $
+
+--- intl/Makefile.in.old	Sat Mar  4 03:22:37 2000
++++ intl/Makefile.in	Tue Mar 14 16:54:09 2000
+@@ -31,7 +31,7 @@
+ libdir = $(exec_prefix)/lib
+ includedir = $(prefix)/include
+ datadir = $(prefix)/@DATADIRNAME@
+-localedir = $(datadir)/locale
++localedir = $(prefix)/share/locale
+ gnulocaledir = $(prefix)/share/locale
+ gettextsrcdir = @datadir@/gettext/intl
+ aliaspath = $(localedir):.
