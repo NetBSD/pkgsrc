@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.14 2001/04/23 14:52:53 skrll Exp $
+$NetBSD: patch-aa,v 1.15 2002/03/25 12:25:29 grant Exp $
 
---- src/Makefile.in.orig	Wed Feb 21 02:17:35 2001
-+++ src/Makefile.in
+--- src/Makefile.in.orig	Sun Feb 10 18:39:19 2002
++++ src/Makefile.in	Mon Mar 25 11:59:49 2002
 @@ -4,7 +4,7 @@
  #---------------------------------------------------------------------------
  CC              = @CC@
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.14 2001/04/23 14:52:53 skrll Exp $
  ELFDIR = @ELFDIR@# Location of elf objects
  
  #---------------------------------------------------------------------------
-@@ -36,7 +36,7 @@
+@@ -38,7 +38,7 @@
  exec_prefix = @exec_prefix@
  install_lib_dir = @libdir@
  install_include_dir = @includedir@
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.14 2001/04/23 14:52:53 skrll Exp $
  DOC_FILES = ../changes.txt ../COPY* ../doc/slangdoc.html ../doc/text/*.txt
  MODULE_INSTALL_DIR = @libdir@/slang/modules
  #---------------------------------------------------------------------------
-@@ -74,11 +74,11 @@
+@@ -76,11 +76,11 @@
  CONFIG_H		= config.h
  ALL_CFLAGS		= $(CFLAGS) -Dunix $(THIS_LIB_DEFINES)
  ALL_ELF_CFLAGS		= $(ELF_CFLAGS) -Dunix $(THIS_LIB_DEFINES)
@@ -42,8 +42,8 @@ $NetBSD: patch-aa,v 1.14 2001/04/23 14:52:53 skrll Exp $
 +NORMAL_LIB = lib$(THIS_LIB).la
  OBJDIR_NORMAL_LIB = $(OBJDIR)/$(NORMAL_LIB)
  
- ELFLIB = lib$(THIS_LIB).so#
-@@ -87,7 +87,7 @@
+ # ELFLIB = lib$(THIS_LIB).so#
+@@ -92,7 +92,7 @@
  
  ELFDIR_ELF_LIB = $(ELFDIR)/$(ELFLIB_MAJOR_MINOR)#
  
@@ -52,7 +52,7 @@ $NetBSD: patch-aa,v 1.14 2001/04/23 14:52:53 skrll Exp $
  EXECDEPS = $(OBJDIR_NORMAL_LIB)
  
  OFILES = @PROGRAM_OFILES@
-@@ -106,13 +106,12 @@
+@@ -112,13 +112,12 @@
  #---------------------------------------------------------------------------
  # Rules
  #---------------------------------------------------------------------------
@@ -69,7 +69,7 @@ $NetBSD: patch-aa,v 1.14 2001/04/23 14:52:53 skrll Exp $
  	@echo ""
  	@echo $(NORMAL_LIB) created in $(OBJDIR)
  
-@@ -137,8 +136,7 @@
+@@ -143,8 +142,7 @@
  install: install_basic_lib install_docs
  install_basic_lib: $(DEST_LIBDIR) $(DEST_INCDIR) $(OBJDIR_NORMAL_LIB)
  	@echo installing $(OBJDIR_NORMAL_LIB) in $(DEST_LIBDIR)
