@@ -1,0 +1,3 @@
+  G-Wrap is a tool for specifying types, functions, and constants to
+import into a Scheme interpreter, and for generating code (in C) to
+interface these to the Guile interpreter in particular.
