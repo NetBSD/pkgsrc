@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2000/07/05 19:25:50 hubertf Exp $
+$NetBSD: patch-aa,v 1.3 2000/08/15 00:38:40 jlam Exp $
 
---- Configure.orig	Wed Mar 22 21:36:37 2000
-+++ Configure	Tue Jul  4 04:14:37 2000
+--- Configure.orig	Wed Mar 22 15:36:37 2000
++++ Configure	Mon Aug 14 18:27:04 2000
 @@ -70,7 +70,7 @@
  fi
  
@@ -159,24 +159,6 @@ $NetBSD: patch-aa,v 1.2 2000/07/05 19:25:50 hubertf Exp $
  : The default "style" setting is made in installstyle.U
  : XXX No longer works with Prefixit stuff.
  prog=`echo $package | $sed 's/-*[0-9.]*$//'`
-@@ -6326,7 +6333,7 @@
- 	# No dynamic loading being used, so don't bother even to prompt.
- 	useshrplib='false'
- 	;;
--*)	case "$useshrplib" in
-+*)	case true in
- 	'')	case "$osname" in
- 		svr4*|dgux|dynixptx|esix|powerux|beos|cygwin*)
- 			dflt=y
-@@ -6374,7 +6381,7 @@
- 	;;
- esac
- 
--case "$useshrplib" in
-+case true in
- true)
- 	case "$libperl" in
- 	'')
 @@ -6476,10 +6483,10 @@
  	aix)
  		# We'll set it in Makefile.SH...
