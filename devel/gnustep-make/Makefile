@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/09/27 15:22:11 rh Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/27 23:52:38 rh Exp $
 #
 
 DISTNAME=		gnustep-make-1.5.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel gnustep
 MASTER_SITES=		ftp://ftp.gnustep.org/pub/gnustep/core/
 
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.gnustep.org/
 COMMENT=		GNUstep makefile package
 
 USE_GMAKE=		YES
+USE_X11=		YES
 MAKEFILE=		GNUmakefile
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${PREFIX}/share/GNUstep
