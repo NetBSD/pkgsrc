@@ -1,4 +1,4 @@
-/*	$NetBSD: __fts13.c,v 1.2 2003/08/27 12:25:40 jmmv Exp $	*/
+/*	$NetBSD: __fts13.c,v 1.3 2003/09/01 15:31:15 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993, 1994
@@ -29,7 +29,9 @@
  * SUCH DAMAGE.
  */
 
-#include "config.h"
+#if HAVE_CONFIG_H
+#include "nbconfig.h"
+#endif
 
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
@@ -39,28 +41,28 @@
 #if 0
 static char sccsid[] = "@(#)fts.c	8.6 (Berkeley) 8/14/94";
 #else
-__RCSID("$NetBSD: __fts13.c,v 1.2 2003/08/27 12:25:40 jmmv Exp $");
+__RCSID("$NetBSD: __fts13.c,v 1.3 2003/09/01 15:31:15 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
 #include <sys/param.h>
 #include <sys/stat.h>
 
-#ifdef HAVE_ASSERT_H
+#if HAVE_ASSERT_H
 #include <assert.h>
 #endif
 
-#ifdef HAVE_DIRENT_H
+#if HAVE_DIRENT_H
 #include <dirent.h>
 #endif
 
 #include <errno.h>
 
-#ifdef HAVE_FCNTL_H
+#if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
 
-#ifdef HAVE_LIMITS_H
+#if HAVE_LIMITS_H
 #include <limits.h>
 #endif
 

@@ -1,4 +1,4 @@
-/*	$NetBSD: extern.h,v 1.3 2003/07/13 02:36:17 grant Exp $	*/
+/*	$NetBSD: extern.h,v 1.4 2003/09/01 15:31:17 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1991, 1993
@@ -35,20 +35,16 @@
  *	@(#)extern.h	8.1 (Berkeley) 6/6/93
  */
 
-#include "nbtypes.h"
+#include <nbconfig.h>
+#include <nbtypes.h>
 
-#include "mtree.h"
+#include <mtree.h>
 
-#if HAVE_CONFIG_H
-#include "config.h" 
-#else 
-#  ifdef netbsd
-#define HAVE_LCHMOD 1
+#ifdef __NetBSD__
 #define HAVE_STRUCT_STAT_ST_FLAGS 1
-#  endif
 #endif
  
-#ifdef HAVE_ERR_H
+#if HAVE_ERR_H
 #include <err.h> 
 #endif
 
@@ -112,4 +108,4 @@ extern char	fullpath[];
 extern slist_t	includetags, excludetags;
 
 
-#include "stat_flags.h"
+#include <stat_flags.h>

@@ -1,4 +1,4 @@
-/*	$NetBSD: namespace.h,v 1.1.1.1 2003/03/31 05:02:52 grant Exp $	*/
+/*	$NetBSD: namespace.h,v 1.2 2003/09/01 15:31:18 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
@@ -36,11 +36,9 @@
 #ifndef _NAMESPACE_H_
 #define _NAMESPACE_H_
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
+#include <nbconfig.h>
 
-#ifdef HAVE_SYS_CDEFS_H
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
