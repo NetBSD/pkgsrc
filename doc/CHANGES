@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4805 2004/02/12 23:45:06 jmmv Exp $
+$NetBSD: CHANGES,v 1.4806 2004/02/12 23:55:03 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -800,3 +800,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated squid to 2.5.4nb8 [taca 2004-02-12]
 	Updated libxml2 to 2.6.6 [xtraeme 2004-02-12]
 	Updated gnome-vfs2 to 2.4.2nb3 [jmmv 2004-02-12]
+	Updated libtar to 1.2.11 [seb 2004-02-13]
