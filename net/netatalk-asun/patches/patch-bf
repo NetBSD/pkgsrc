@@ -1,4 +1,4 @@
-$NetBSD: patch-bf,v 1.4 2001/05/21 18:42:21 abs Exp $
+$NetBSD: patch-bf,v 1.5 2001/05/24 17:00:58 abs Exp $
 
 --- man/man8/psf.8.orig	Tue May 20 18:35:43 1997
 +++ man/man8/psf.8

@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.4 2001/05/21 18:42:21 abs Exp $
+$NetBSD: patch-an,v 1.5 2001/05/24 17:00:58 abs Exp $
 
 --- etc/psf/Makefile.orig	Thu Feb  4 06:57:52 1999
 +++ etc/psf/Makefile

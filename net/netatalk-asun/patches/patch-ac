@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2001/05/21 18:42:21 abs Exp $
+$NetBSD: patch-ac,v 1.5 2001/05/24 17:00:57 abs Exp $
 
 --- config/AppleVolumes.system.orig	Thu Feb  4 07:49:04 1999
 +++ config/AppleVolumes.system

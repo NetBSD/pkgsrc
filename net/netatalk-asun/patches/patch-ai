@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.4 2001/05/21 18:42:21 abs Exp $
+$NetBSD: patch-ai,v 1.5 2001/05/24 17:00:58 abs Exp $
 
 --- etc/atalkd/main.c.orig	Mon Jan 25 09:21:13 1999
 +++ etc/atalkd/main.c

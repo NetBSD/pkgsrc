@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.4 2001/05/21 18:42:21 abs Exp $
+$NetBSD: patch-aw,v 1.5 2001/05/24 17:00:58 abs Exp $
 
 --- libatalk/nbp/nbp_util.c.orig	Thu Feb  4 07:27:02 1999
 +++ libatalk/nbp/nbp_util.c

@@ -1,4 +1,4 @@
-$NetBSD: patch-bh,v 1.4 2001/05/21 18:42:21 abs Exp $
+$NetBSD: patch-bh,v 1.5 2001/05/24 17:00:58 abs Exp $
 
 --- sys/freebsd/Makefile.orig	Thu Feb  4 07:38:12 1999
 +++ sys/freebsd/Makefile

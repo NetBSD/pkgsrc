@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.5 2001/05/21 18:42:21 abs Exp $
+$NetBSD: patch-ae,v 1.6 2001/05/24 17:00:57 abs Exp $
 
 --- etc/afpd/Makefile.orig	Sat Feb  6 20:02:31 1999
 +++ etc/afpd/Makefile

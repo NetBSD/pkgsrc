@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.4 2001/05/21 18:42:21 abs Exp $
+$NetBSD: patch-ah,v 1.5 2001/05/24 17:00:58 abs Exp $
 
 --- etc/atalkd/Makefile.orig	Wed Jul  9 20:51:55 1997
 +++ etc/atalkd/Makefile
