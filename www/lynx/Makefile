@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2004/01/20 12:27:59 agc Exp $
+# $NetBSD: Makefile,v 1.65 2004/02/13 08:07:52 jlam Exp $
 #
 
 DISTNAME=		lynx2.8.4rel.1
@@ -70,19 +70,15 @@ CONFIGURE_ARGS+=	--enable-justify-elts
 CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
 
-pre-install:
-	${RM} -f ${WRKSRC}/CHANGES.orig
-
-post-install:
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/lynx
-
-.if (${LYNX_SCREEN_LIB} == slang)
+.if ${LYNX_SCREEN_LIB} == "slang"
 .  include "../../devel/libslang/buildlink3.mk"
-.elif (${LYNX_SCREEN_LIB} == ncurses)
+.elif ${LYNX_SCREEN_LIB} == "ncurses"
 USE_NCURSES=		color
 .  include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-color-style
-.elif (${LYNX_SCREEN_LIB} != curses)
+.elif ${LYNX_SCREEN_LIB} == "curses"
+.  include "../../mk/curses.buildlink3.mk"
+.else
 pre-configure:
 	@${ECHO} '****************************************************'
 	@${ECHO} '* Invalid value for LYNX_SCREEN_LIB. Please choose *'
@@ -119,7 +115,12 @@ CONFIGURE_ARGS+= 	--with-socks5
 CONFIGURE_ARGS+=       --enable-ipv6
 .endif
 
-.include "../../devel/ncurses/buildlink3.mk"
+pre-install:
+	${RM} -f ${WRKSRC}/CHANGES.orig
+
+post-install:
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/lynx
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
