@@ -1,20 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/28 19:55:17 rh Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/08 13:36:33 jtb Exp $
 
---- makefile.orig	Sun May 23 15:40:28 1999
-+++ makefile	Sun May 23 15:40:42 1999
-@@ -10,11 +10,11 @@
+--- src/ml.h.orig	Thu May 24 05:12:06 2001
++++ src/ml.h
+@@ -173,7 +173,7 @@
+ /* function prototypes of all ml function */
  
- 
- # ANSI C compiler
--CC = gcc
--CFLAGS = -O3 -Wall -pedantic -ansi
-+#CC = gcc
-+#CFLAGS = -O3 -Wall -pedantic -ansi
- # Comment out for compiler other than gcc
--#CC = cc
--#CFLAGS = -O 
-+CC = cc
-+CFLAGS = -O 
- 
- # ANSI math library
- LIBFLAGS = -lm
+ void convfreq(dvector);
+-void radixsort(cmatrix, ivector, int, int, int *);
++void my_radixsort(cmatrix, ivector, int, int, int *);
+ void condenceseq(cmatrix, ivector, cmatrix, ivector, int, int, int);
+ void countconstantsites(cmatrix, ivector, int, int, int *, int*);
+ void evaluateseqs(void);
