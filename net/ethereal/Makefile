@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2002/02/03 11:41:31 mjl Exp $
+# $NetBSD: Makefile,v 1.55 2002/02/17 21:23:39 tron Exp $
 
 DISTNAME=		ethereal-0.9.1
 CATEGORIES=		net
@@ -20,8 +20,10 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
 EVAL_PREFIX+=		GTKDIR=gtk+
-CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}" \
-			--with-ucdsnmp=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-gtk-prefix=${BUILDLINK_DIR} \
+			--with-ucdsnmp=${BUILDLINK_DIR}
 LIBS+=			-lcrypto
 
+.include "../../x11/gtk/buildlink.mk"
+.include "../ucd-snmp/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
