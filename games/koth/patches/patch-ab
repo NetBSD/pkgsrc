@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1999/08/05 01:58:12 hubertf Exp $
+
+--- src/Makefile.in.orig	Thu Aug  5 03:32:08 1999
++++ src/Makefile.in	Thu Aug  5 03:37:40 1999
+@@ -86,7 +86,7 @@
+ DEFS = @DEFS@ -I. -I$(srcdir) -I..
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lgii -lggi
+ koth_OBJECTS =  kclient.o tcpcore.o relay.o gfx.o player.o clihandlers.o \
+ packets.o terrain.o ballistics.o text.o weapon.o weapongfx.o
+ koth_DEPENDENCIES = 
