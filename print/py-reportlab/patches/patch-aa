@@ -1,13 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2003/07/26 15:01:02 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2004/05/05 09:06:35 drochner Exp $
 
---- setup.py.orig	2003-07-01 20:58:37.000000000 +0200
-+++ setup.py	2003-07-26 16:31:46.000000000 +0200
-@@ -7,7 +7,8 @@
-     import os, sys
-     from distutils.core import setup, Extension
+--- setup.py.orig	2003-11-10 09:30:49.000000000 +0100
++++ setup.py	2004-05-04 19:33:28.000000000 +0200
+@@ -9,7 +9,7 @@
+     VERSION = re.search(r'^#\s*define\s+VERSION\s*"([^"]+)"',open('_rl_accel.c','r').read(),re.MULTILINE)
+     VERSION = VERSION and VERSION.group(1) or 'unknown'
  
 -    if sys.platform in ['linux2', 'win32', 'sunos5', 'freebsd4', 'aix4', 'mac', 'darwin']:
-+#    if sys.platform in ['linux2', 'win32', 'sunos5', 'freebsd4', 'aix4', 'mac', 'darwin']:
 +    if 1:
          LIBS=[]
      else:

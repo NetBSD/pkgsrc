@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/07/26 15:00:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/05/05 09:06:35 drochner Exp $
 ${PYSITELIB}/_rl_accel.so
 ${PYSITELIB}/pyHnj.so
 ${PYSITELIB}/reportlab/MANIFEST.in
@@ -20,14 +20,12 @@ ${PYSITELIB}/reportlab/demos/stdfonts/stdfonts.py
 ${PYSITELIB}/reportlab/demos/tests/testdemos.py
 ${PYSITELIB}/reportlab/docs/00readme.txt
 ${PYSITELIB}/reportlab/docs/genAll.py
-${PYSITELIB}/reportlab/docs/graphguide.pdf
 ${PYSITELIB}/reportlab/docs/graphguide/ch1_intro.py
 ${PYSITELIB}/reportlab/docs/graphguide/ch2_concepts.py
 ${PYSITELIB}/reportlab/docs/graphguide/ch3_shapes.py
 ${PYSITELIB}/reportlab/docs/graphguide/ch4_widgets.py
 ${PYSITELIB}/reportlab/docs/graphguide/ch5_charts.py
 ${PYSITELIB}/reportlab/docs/graphguide/gengraphguide.py
-${PYSITELIB}/reportlab/docs/graphics_reference.pdf
 ${PYSITELIB}/reportlab/docs/images/Edit_Prefs.gif
 ${PYSITELIB}/reportlab/docs/images/Python_21.gif
 ${PYSITELIB}/reportlab/docs/images/Python_21_HINT.gif
@@ -37,11 +35,9 @@ ${PYSITELIB}/reportlab/docs/images/jpnchars.jpg
 ${PYSITELIB}/reportlab/docs/images/lj8100.jpg
 ${PYSITELIB}/reportlab/docs/images/replogo.a85
 ${PYSITELIB}/reportlab/docs/images/replogo.gif
-${PYSITELIB}/reportlab/docs/reference.pdf
 ${PYSITELIB}/reportlab/docs/reference/build.bat
 ${PYSITELIB}/reportlab/docs/reference/genreference.py
 ${PYSITELIB}/reportlab/docs/reference/reference.yml
-${PYSITELIB}/reportlab/docs/userguide.pdf
 ${PYSITELIB}/reportlab/docs/userguide/app_demos.py
 ${PYSITELIB}/reportlab/docs/userguide/ch1_intro.py
 ${PYSITELIB}/reportlab/docs/userguide/ch2_graphics.py
@@ -79,6 +75,7 @@ ${PYSITELIB}/reportlab/graphics/charts/slidebox.py
 ${PYSITELIB}/reportlab/graphics/charts/spider.py
 ${PYSITELIB}/reportlab/graphics/charts/textlabels.py
 ${PYSITELIB}/reportlab/graphics/charts/utils.py
+${PYSITELIB}/reportlab/graphics/charts/utils3d.py
 ${PYSITELIB}/reportlab/graphics/renderPDF.py
 ${PYSITELIB}/reportlab/graphics/renderPM.py
 ${PYSITELIB}/reportlab/graphics/renderPS.py
@@ -119,6 +116,7 @@ ${PYSITELIB}/reportlab/lib/__BUILD.dsw
 ${PYSITELIB}/reportlab/lib/__init__.py
 ${PYSITELIB}/reportlab/lib/_rl_accel.c
 ${PYSITELIB}/reportlab/lib/_rl_accel.dsp
+${PYSITELIB}/reportlab/lib/_rl_accel.java
 ${PYSITELIB}/reportlab/lib/abag.py
 ${PYSITELIB}/reportlab/lib/attrmap.py
 ${PYSITELIB}/reportlab/lib/codecharts.py
@@ -193,8 +191,11 @@ ${PYSITELIB}/reportlab/test/test_docstrings.py
 ${PYSITELIB}/reportlab/test/test_extra.py
 ${PYSITELIB}/reportlab/test/test_graphics_charts.py
 ${PYSITELIB}/reportlab/test/test_graphics_images.py
+${PYSITELIB}/reportlab/test/test_graphics_layout.py
 ${PYSITELIB}/reportlab/test/test_graphics_speed.py
 ${PYSITELIB}/reportlab/test/test_hello.py
+${PYSITELIB}/reportlab/test/test_images.py
+${PYSITELIB}/reportlab/test/test_invariant.py
 ${PYSITELIB}/reportlab/test/test_lib_colors.py
 ${PYSITELIB}/reportlab/test/test_lib_sequencer.py
 ${PYSITELIB}/reportlab/test/test_lib_utils.py
@@ -208,6 +209,7 @@ ${PYSITELIB}/reportlab/test/test_pdfbase_encodings.py
 ${PYSITELIB}/reportlab/test/test_pdfbase_fontembed.py
 ${PYSITELIB}/reportlab/test/test_pdfbase_pdfmetrics.py
 ${PYSITELIB}/reportlab/test/test_pdfbase_pdfutils.py
+${PYSITELIB}/reportlab/test/test_pdfbase_postscript.py
 ${PYSITELIB}/reportlab/test/test_pdfbase_ttfonts.py
 ${PYSITELIB}/reportlab/test/test_pdfgen_callback.py
 ${PYSITELIB}/reportlab/test/test_pdfgen_general.py
@@ -223,6 +225,7 @@ ${PYSITELIB}/reportlab/test/test_platypus_toc.py
 ${PYSITELIB}/reportlab/test/test_platypus_xref.py
 ${PYSITELIB}/reportlab/test/test_pyfiles.py
 ${PYSITELIB}/reportlab/test/test_renderSVG.py
+${PYSITELIB}/reportlab/test/test_rl_accel.py
 ${PYSITELIB}/reportlab/test/test_source_chars.py
 ${PYSITELIB}/reportlab/test/test_table_layout.py
 ${PYSITELIB}/reportlab/test/test_tools_pythonpoint.py
@@ -258,6 +261,7 @@ ${PYSITELIB}/reportlab/tools/pythonpoint/customshapes.py
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/LeERC___.AFM
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/LeERC___.PFB
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/examples.py
+${PYSITELIB}/reportlab/tools/pythonpoint/demos/figures.xml
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/htu.xml
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/leftlogo.a85
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/leftlogo.gif
@@ -267,6 +271,7 @@ ${PYSITELIB}/reportlab/tools/pythonpoint/demos/outline.gif
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/pplogo.gif
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/python.gif
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/pythonpoint.xml
+${PYSITELIB}/reportlab/tools/pythonpoint/demos/slidebox.py
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/spectrum.png
 ${PYSITELIB}/reportlab/tools/pythonpoint/demos/vertpython.gif
 ${PYSITELIB}/reportlab/tools/pythonpoint/pythonpoint.dtd
