@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-mi,v 1.2 1998/06/06 23:48:21 tv Exp $
+@comment $NetBSD: PLIST-mi,v 1.3 1998/07/21 21:34:09 cjs Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -240,6 +240,8 @@ http/include/util_date.h
 http/include/util_md5.h
 http/include/util_script.h
 http/include/util_uri.h
+http/logs/.keep_me
+http/proxy/.keep_me
 man/man1/ab.1
 man/man1/apachectl.1
 man/man1/dbmmanage.1
@@ -257,14 +259,14 @@ sbin/logresolve
 sbin/rotatelogs
 @dirrm http/cgi-bin
 @dirrm http/conf
-@dirrm http/htdocs
 @dirrm http/htdocs/manual/images
 @dirrm http/htdocs/manual/misc
 @dirrm http/htdocs/manual/mod
 @dirrm http/htdocs/manual/vhosts
 @dirrm http/htdocs/manual
+@dirrm http/htdocs
 @dirrm http/icons
 @dirrm http/include
 @dirrm http/logs
+@dirrm http/proxy
 @dirrm http
-@dirrm lib/apache
