@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.12 2003/09/23 13:22:38 grant Exp $	*/
+/*	$NetBSD: perform.c,v 1.13 2003/12/20 04:23:05 grant Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.12 2003/09/23 13:22:38 grant Exp $");
+__RCSID("$NetBSD: perform.c,v 1.13 2003/12/20 04:23:05 grant Exp $");
 #endif
 #endif
 
@@ -51,6 +51,11 @@ __RCSID("$NetBSD: perform.c,v 1.12 2003/09/23 13:22:38 grant Exp $");
 #if HAVE_STRING_H
 #include <string.h>
 #endif
+#if HAVE_SYS_UTSNAME_H
+#include <sys/utsname.h>
+#endif
+
+static int read_buildinfo(char **);
 
 static char LogDir[FILENAME_MAX];
 static int zapLogDir;		/* Should we delete LogDir? */
@@ -117,14 +122,16 @@ pkg_do(const char *pkg)
 	char    replace_from[FILENAME_MAX];
 	char    replace_via[FILENAME_MAX];
 	char    replace_to[FILENAME_MAX];
+	char   *buildinfo[BI_ENUM_COUNT];
 	int	replacing = 0;
 	char   *where_to;
 	char   dbdir[FILENAME_MAX];
-	const char *exact, *extra1, *extra2;
+	const char *exact, *extra1;
 	FILE   *cfile;
 	int     errc;
 	plist_t *p;
 	struct stat sb;
+	struct utsname host_uname;
 	int     inPlace;
 	int	rc;
 	Boolean	is_depoted_pkg = FALSE;
@@ -185,11 +192,10 @@ pkg_do(const char *pkg)
 						goto bomb;
 					}
 				}
-				extra1 = "--fast-read";
-				extra2 = CONTENTS_FNAME;
+				extra1 = CONTENTS_FNAME;
 			} else {
 			        /* some values for stdin */
-				extra1 = extra2 = NULL;
+				extra1 = NULL;
 				sb.st_size = 100000;	/* Make up a plausible average size */
 			}
 			Home = make_playpen(playpen, sizeof(playpen), sb.st_size * 4);
@@ -197,7 +203,7 @@ pkg_do(const char *pkg)
 				warnx("unable to make playpen for %ld bytes",
 				      (long) (sb.st_size * 4));
 			where_to = Home;
-			if (unpack(pkg, extra1, extra2)) {
+			if (unpack(pkg, extra1)) {
 				warnx("unable to extract table of contents file from `%s' - not a package?",
 				      pkg);
 				goto bomb;
@@ -258,7 +264,7 @@ pkg_do(const char *pkg)
 				goto success;
 
 			/* Finally unpack the whole mess */
-			if (unpack(pkg, NULL, NULL)) {
+			if (unpack(pkg, NULL)) {
 				warnx("unable to extract `%s'!", pkg);
 				goto bomb;
 			}
@@ -273,6 +279,56 @@ pkg_do(const char *pkg)
 			printf("%s\n", where_playpen());
 			write_plist(&Plist, stdout, NULL);
 			return 0;
+		}
+	}
+
+	/* Check OS, version and architecture */
+	if (read_buildinfo(buildinfo) != 0 && !Force) {
+		warnx("aborting.");
+		goto bomb;
+	}
+
+	if (uname(&host_uname) == 0) {
+		int	osbad = 0;
+
+		/* handle Darwin's uname(3) on powerpc writing
+		 * "Power Macintosh" in struct uname.machine.
+		 */
+		if (strcmp(host_uname.machine, "Power Macintosh") == 0)
+			strcpy(host_uname.machine, "powerpc"); /* it fits */
+
+		/* If either the OS or arch are different, bomb */
+		if (strcmp(host_uname.sysname, buildinfo[BI_OPSYS]) != 0 ||
+		strcmp(host_uname.machine, buildinfo[BI_MACHINE_ARCH]) != 0)
+			osbad = 2;
+
+		/* If OS and arch are the same, warn if version differs */
+		if (strcmp(host_uname.sysname, buildinfo[BI_OPSYS]) == 0 &&
+		    strcmp(host_uname.machine, buildinfo[BI_MACHINE_ARCH]) == 0) {
+			if (strcmp(host_uname.release, buildinfo[BI_OS_VERSION]) != 0)
+				osbad = 1;
+		} else
+			osbad = 2;
+
+		if (osbad) {
+			warnx("Package `%s' OS mismatch:", pkg);
+			warnx("%s/%s %s (pkg) vs. %s/%s %s (this host)",
+			    buildinfo[BI_OPSYS],
+			    buildinfo[BI_MACHINE_ARCH],
+			    buildinfo[BI_OS_VERSION],
+			    host_uname.sysname,
+			    host_uname.machine,
+			    host_uname.release);
+		}
+		if (!Force && (osbad >= 2)) {
+			    warnx("aborting.");
+			    goto bomb;
+		}
+	} else {
+		warnx("uname() failed.");
+		if (!Force) {
+			warnx("aborting.");
+			goto bomb;
 		}
 	}
 
@@ -877,4 +933,54 @@ pkg_perform(lpkg_head_t *pkgs)
 	ftp_stop();
 	
 	return err_cnt;
+}
+
+/* Read package build information */
+static int
+read_buildinfo(char **buildinfo)
+{
+	char   *key;
+	char   *line;
+	size_t	len;
+	FILE   *fp;
+
+	fp = fopen(BUILD_INFO_FNAME, "r");
+	if (!fp) {
+		warnx("unable to open %s file.", BUILD_INFO_FNAME);
+		return 1;
+	}
+
+	while ((line = fgetln(fp, &len)) != NULL) {
+		if (line[len - 1] == '\n')
+			line[len - 1] = '\0';
+
+		if ((key = strsep(&line, "=")) == NULL)
+			continue;
+
+		/*
+		 * pkgsrc used to create the BUILDINFO file using
+		 * "key= value", so skip the space if it's there.
+		 */
+		if (line == NULL)
+			continue;
+		if (line[0] == ' ')
+			line += sizeof(char);
+
+		/* we only care about opsys, arch and version */
+		if (line[0] != '\0') {
+			if (strcmp(key, "OPSYS") == 0)
+			    buildinfo[BI_OPSYS] = strdup(line);
+			else if (strcmp(key, "OS_VERSION") == 0)
+			    buildinfo[BI_OS_VERSION] = strdup(line);
+			else if (strcmp(key, "MACHINE_ARCH") == 0)
+			    buildinfo[BI_MACHINE_ARCH] = strdup(line);
+		}
+	}
+	if (buildinfo[BI_OPSYS] == NULL ||
+	    buildinfo[BI_OS_VERSION] == NULL ||
+	    buildinfo[BI_MACHINE_ARCH] == NULL) {
+		warnx("couldn't extract build information from package.");
+		return 1;
+	}
+	return 0;
 }

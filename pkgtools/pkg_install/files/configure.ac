@@ -75,7 +75,7 @@ dnl Checks for header files.
 AC_HEADER_STDC
 AC_CHECK_HEADERS([db1/db.h db.h])
 AC_CHECK_HEADERS([fnmatch.h md5.h regex.h])
-AC_CHECK_HEADERS([sys/ioctl.h sys/resource.h sys/wait.h])
+AC_CHECK_HEADERS([sys/ioctl.h sys/resource.h sys/utsname.h sys/wait.h])
 
 # Checks for library functions.
 AC_CHECK_FUNCS([chflags dbopen tgetent vfork])

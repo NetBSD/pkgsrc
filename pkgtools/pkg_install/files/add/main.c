@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.5 2003/09/23 07:13:46 grant Exp $	*/
+/*	$NetBSD: main.c,v 1.6 2003/12/20 04:23:05 grant Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.16 1997/10/08 07:45:43 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.5 2003/09/23 07:13:46 grant Exp $");
+__RCSID("$NetBSD: main.c,v 1.6 2003/12/20 04:23:05 grant Exp $");
 #endif
 #endif
 
@@ -201,9 +201,8 @@ main(int argc, char **argv)
 	}
 
 	error += pkg_perform(&pkgs);
-	if (error  != 0) {
-		if (Verbose)
-			warnx("%d package addition(s) failed", error);
+	if (error != 0) {
+		warnx("%d package addition%s failed", error, error == 1 ? "" : "s");
 		exit(1);
 	}
 	exit(0);
