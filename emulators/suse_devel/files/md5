@@ -1,10 +1,10 @@
-$NetBSD: md5,v 1.1.1.1 1999/08/24 21:24:57 tron Exp $
+$NetBSD: md5,v 1.2 2000/01/09 07:11:00 tls Exp $
 
-MD5 (suse/bin86.rpm) = 9865486f4b8a5caf7dbf8a1cf470f5f9
-MD5 (suse/binutils.rpm) = 7caae57b860869d58068e9003f871263
-MD5 (suse/egcs.rpm) = 349330e337a3bd742da5264a95e25d4c
-MD5 (suse/g77.rpm) = b5b7eccd31975ded722c79f8a72cedf3
-MD5 (suse/gpp.rpm) = c263c1d3cc9942ce40ba83b698d8f023
-MD5 (suse/libc.rpm) = ec6f80e89a3dfb72cfd394fee1862092
-MD5 (suse/linclude.rpm) = aab078fbc9acf4f1272986134693fc5a
-MD5 (suse/make.rpm) = e0ab861a085f79371532fe9a43b7243f
+MD5 (suse63/bin86.rpm) = e90c2bd38ccc43d4bf12099cb672b0fb
+MD5 (suse63/binutils.rpm) = 8c532f899cee8ba1d87d5875d2198d05
+MD5 (suse63/egcs.rpm) = c5aa9efa9fc9b77adcced0ac4cb0e84f
+MD5 (suse63/g77.rpm) = 305f69d1a78254cfc7c7a37de52fa30d
+MD5 (suse63/gpp.rpm) = 5584b70da79327bd71b93722d5c26a3e
+MD5 (suse63/libc.rpm) = 8f2fb43fbe4105e2e7d184eecdea2ef6
+MD5 (suse63/linclude.rpm) = 173af5d3b462d87eadfc61e48298f13c
+MD5 (suse63/make.rpm) = bb6b53eddacba71a7948765f674f2666

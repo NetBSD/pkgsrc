@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 1999/10/07 17:41:52 tron Exp $
+# $NetBSD: Makefile,v 1.12 2000/01/09 07:11:10 tls Exp $
 
 DISTNAME=		shlibs5
-PKGNAME=		suse_libc5-6.1p1
+PKGNAME=		suse_libc5-6.3
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=a1/}
 EXTRACT_SUFX=		.rpm
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.rpm
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
-DEPENDS+=		suse_compat-6.1p1:../suse_compat
+DEPENDS+=		suse_compat-6.3:../suse_compat
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		yes

@@ -1,23 +1,30 @@
-# $NetBSD: Makefile,v 1.10 1999/10/07 17:41:49 tron Exp $
+# $NetBSD: Makefile,v 1.11 2000/01/09 07:10:37 tls Exp $
 
-DISTNAME=		suse_base-6.1p1
+DISTNAME=		suse_base-6.3
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=a1/}
 DISTFILES=		${RPMFILES}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tls@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
 BUILD_DEPENDS+=		${RPMLIB}:../../misc/rpm
 
-CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4
+CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4 suse_base-6.1
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
-RPMFILES=		aaa_dir.rpm shlibs.rpm ldso.rpm \
-			bash.rpm gppshare.rpm ncurses.rpm
+# Careful!  The ncurses-p1.rpm file doesn't come from SuSE, quite.
+# It's been rebuilt to use seteuid() where an ill-advised SuSE patch
+# to standard ncurses uses setfsuid(), which is basically impossible
+# to emulate correctly under NetBSD.  So you'll find _this_ file _only_
+# on your local NetBSD mirror, not on SuSE or its mirrors.  Don't use
+# SuSE's ncurses.rpm -- it'll make things like /bin/sh dump core.
+#
+RPMFILES=		aaa_dir.rpm shlibs.rpm ldso.rpm libz.rpm \
+			bash.rpm gppshare.rpm ncurses-p1.rpm
 RPMIGNOREPATH=		tmp usr/tmp var
 
 LDD=			${PREFIX}/${EMULSUBDIR}/usr/bin/ldd
