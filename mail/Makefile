@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2005/01/09 03:21:33 schmonz Exp $
+# $NetBSD: Makefile,v 1.242 2005/01/10 18:48:58 adrianp Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -173,7 +173,6 @@ SUBDIR+=	rss2email
 SUBDIR+=	ruby-tmail
 SUBDIR+=	safecat
 SUBDIR+=	sendmail
-SUBDIR+=	sendmail811
 SUBDIR+=	sendmail812
 SUBDIR+=	sigrot
 SUBDIR+=	sma
