@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.4 2004/10/08 21:02:54 mjl Exp $
+$NetBSD: patch-ai,v 1.5 2004/10/09 06:49:23 mjl Exp $
 
 --- make/common.mak.orig	2003-07-29 13:25:23.000000000 +0200
-+++ make/common.mak	2004-10-08 22:12:34.000000000 +0200
++++ make/common.mak	2004-10-09 04:17:05.000000000 +0200
 @@ -273,11 +273,11 @@
  #
  $(OBJDIR)/%.o : %.cxx 
@@ -49,3 +49,21 @@ $NetBSD: patch-ai,v 1.4 2004/10/08 21:02:54 mjl Exp $
  endif
  
  # ifdef PROG
+@@ -451,7 +451,7 @@
+ 	@$(MAKE) DEBUG= libs
+ 
+ libs ::
+-	set -e; for i in $(LIBDIRS); do $(MAKE) -C $$i debugdepend debug; done
++	# set -e; for i in $(LIBDIRS); do $(MAKE) -C $$i debugdepend debug; done
+ 
+ else
+ 
+@@ -480,7 +480,7 @@
+ optlibs :: libs
+ 
+ libs ::
+-	set -e; for i in $(LIBDIRS); do $(MAKE) -C $$i optdepend opt; done
++	# set -e; for i in $(LIBDIRS); do $(MAKE) -C $$i optdepend opt; done
+ 
+ endif
+ 
