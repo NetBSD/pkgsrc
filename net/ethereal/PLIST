@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/03/31 07:03:30 cube Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/05/14 09:20:31 xtraeme Exp $
 bin/editcap
 bin/ethereal
 bin/idl2eth
@@ -11,10 +11,10 @@ lib/ethereal/plugins/${PKGVERSION}/artnet.la
 lib/ethereal/plugins/${PKGVERSION}/artnet.so
 lib/ethereal/plugins/${PKGVERSION}/asn1.la
 lib/ethereal/plugins/${PKGVERSION}/asn1.so
-lib/ethereal/plugins/${PKGVERSION}/coseventcomm.la
-lib/ethereal/plugins/${PKGVERSION}/coseventcomm.so
 lib/ethereal/plugins/${PKGVERSION}/ciscosm.la
 lib/ethereal/plugins/${PKGVERSION}/ciscosm.so
+lib/ethereal/plugins/${PKGVERSION}/coseventcomm.la
+lib/ethereal/plugins/${PKGVERSION}/coseventcomm.so
 lib/ethereal/plugins/${PKGVERSION}/cosnaming.la
 lib/ethereal/plugins/${PKGVERSION}/cosnaming.so
 lib/ethereal/plugins/${PKGVERSION}/docsis.la
@@ -43,7 +43,6 @@ lib/ethereal/plugins/${PKGVERSION}/rudp.la
 lib/ethereal/plugins/${PKGVERSION}/rudp.so
 lib/ethereal/plugins/${PKGVERSION}/v5ua.la
 lib/ethereal/plugins/${PKGVERSION}/v5ua.so
-lib/libethereal.a
 lib/libethereal.la
 lib/libethereal.so
 lib/libethereal.so.0
@@ -74,8 +73,8 @@ share/ethereal/help/overview.txt
 share/ethereal/help/toc
 share/ethereal/help/well_known.txt
 share/ethereal/manuf
-@dirrm share/ethereal/diameter
 @dirrm share/ethereal/help
+@dirrm share/ethereal/diameter
 @dirrm share/ethereal
 @dirrm lib/ethereal/plugins/${PKGVERSION}
 @dirrm lib/ethereal/plugins
