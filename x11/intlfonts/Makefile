@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 1999/09/11 09:35:00 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/04/07 03:51:54 itojun Exp $
 
-DISTNAME=	intlfonts-1.1
+DISTNAME=	intlfonts-1.2
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNU:=intlfonts/intlfonts-1.1-split/}
+MASTER_SITES=	${MASTER_SITE_GNU:=intlfonts/intlfonts-1.2-split/}
 DISTFILES=	${FONT_SETS:S/$/${EXTRACT_SUFX}/} ${MISC_FILES}
 
 MAINTAINER=	packages@netbsd.org
@@ -18,19 +18,27 @@ FONT_SETS=	Asian		\
 # They are all bigger than 24 dots -- you'll only want them if you
 # want to display text in really big fonts.
 #
-EXTRA_FONTS=	Chinese-BIG	\
-		European-BIG	\
-		Japanese-BIG
+EXTRA_FONTS=	Chinese.BIG	\
+		European.BIG	\
+		Japanese.BIG
 
-MISC_FILES=	Makefile	\
-		README		\
-		README-split
+# Type1/TrueType fonts for Latin1, Thai and Vietnamese
+# XXX need "fonts.scale" for them
+#
+#EXTRA_FONTS+=	Type1		\
+#		TrueType
+#CONFIGURE_ARGS+=--with-type1 --with-truetype
+
+MISC_FILES=	README.split
 
 DIST_SUBDIR=	intlfonts
 EXTRACT_ONLY=	${FONT_SETS:S/$/${EXTRACT_SUFX}/}
 MESSAGE_FILE=	${WRKSRC}/MESSAGE
 USE_X11BASE=	yes
-WRKSRC=		${WRKDIR}
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--with-fontdir=${PREFIX}/lib/X11/fonts/intlfonts \
+		--without-bdf --enable-compress=gzip
 
 post-extract:
 .for FILE in ${MISC_FILES}
@@ -39,8 +47,5 @@ post-extract:
 
 do-build:
 	${SED} -e 's#@PREFIX@#${PREFIX}#g' <${PKGDIR}/MESSAGE >${MESSAGE_FILE}
-
-do-install:
-	(cd ${WRKSRC}; ${MAKE} PREFIX=${PREFIX} ${FONT_SETS})
 
 .include "../../mk/bsd.pkg.mk"
