@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/18 12:09:25 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/25 09:29:38 wiz Exp $
 #
 
 DISTNAME=	lhs-0.1
@@ -11,6 +11,7 @@ COMMENT=	Lightweight HTTP Server, IPv6-aware and SSL-enabled
 
 WRKSRC=		${WRKDIR}/lhs
 
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 
 BUILD_DEFS+=	USE_INET6
@@ -21,5 +22,5 @@ MAKE_ENV+=	DEFAULT_ROOT_DIR=${PREFIX}/share/httpd/htdocs
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lhs ${PREFIX}/sbin/lhs
 
-.include "../../security/openssl/buildlink.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
