@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2004/06/28 13:02:21 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.19 2004/09/21 16:44:50 jmmv Exp $
 bin/gconf-merge-tree
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
@@ -26,19 +26,7 @@ libexec/gconfd-2
 man/man1/gconftool-2.1
 share/aclocal/gconf-2.m4
 share/doc/gconf/ch01.html
-share/doc/gconf/ch01s02.html
-share/doc/gconf/ch02.html
-share/doc/gconf/ch02s02.html
-share/doc/gconf/ch02s03.html
-share/doc/gconf/ch02s04.html
-share/doc/gconf/ch06.html
-share/doc/gconf/ch06s02.html
-share/doc/gconf/ch06s03.html
-share/doc/gconf/ch07.html
-share/doc/gconf/conventions.html
 share/doc/gconf/gconf-GConfClient.html
-share/doc/gconf/gconf-client-reference.html
-share/doc/gconf/gconf-client.html
 share/doc/gconf/gconf-gconf-backend.html
 share/doc/gconf/gconf-gconf-changeset.html
 share/doc/gconf/gconf-gconf-engine.html
@@ -50,10 +38,7 @@ share/doc/gconf/gconf-gconf-schema.html
 share/doc/gconf/gconf-gconf-sources.html
 share/doc/gconf/gconf-gconf-value.html
 share/doc/gconf/gconf-gconf.html
-share/doc/gconf/gconf-internals-reference.html
-share/doc/gconf/gconf-reference.html
 share/doc/gconf/gconf.devhelp
-share/doc/gconf/gconftool.html
 share/doc/gconf/home.png
 share/doc/gconf/index.html
 share/doc/gconf/index.sgml
@@ -68,6 +53,7 @@ ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/GConf2.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/GConf2.mo
@@ -97,6 +83,8 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/GConf2.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/GConf2.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/GConf2.mo
