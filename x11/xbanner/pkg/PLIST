@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 1998/08/18 21:54:40 tron Exp $
-share/doc/xbanner/COPYING-2.0
+@comment $NetBSD: PLIST,v 1.2 1998/08/18 22:31:59 tron Exp $
+bin/xbanner
+bin/freetemp
+bin/xb_check
+lib/X11/app-defaults/XBanner
 share/doc/xbanner/stars.gif
 share/doc/xbanner/rnd_doc.html
 share/doc/xbanner/red_line.gif
@@ -8,53 +11,7 @@ share/doc/xbanner/fonttips.html
 share/doc/xbanner/email.gif
 share/doc/xbanner/XBanner_Users_Manual.html
 share/doc/xbanner/Resource_Reference.html
-share/doc/xbanner/README.Debian
-share/doc/xbanner/README.DEC_Unix
-share/doc/xbanner/README.DEC_Ultrix
 share/doc/xbanner/Credits.txt
 share/doc/xbanner/Changes.txt
 share/doc/xbanner/xb_check.html
-share/examples/xbanner/_other_ideas/Just_an_Idea
-share/examples/xbanner/_other_ideas/00_My_Comments
-share/examples/xbanner/_other_ideas/FgGrad_Idea_2
-share/examples/xbanner/_other_ideas/FatText_Sky
-share/examples/xbanner/_other_ideas/Evgeny_Stambulchik
-share/examples/xbanner/_other_ideas/My_Home_Setup.tar
-share/examples/xbanner/Demo/Cyc_Ripples
-share/examples/xbanner/Demo/Demo
-share/examples/xbanner/Demo/3D-Shadow
-share/examples/xbanner/Demo/Backlight
-share/examples/xbanner/Demo/Backlight2
-share/examples/xbanner/Demo/Cyc_FGC_LeftSplit
-share/examples/xbanner/Demo/Cyc_Fade_TopDown
-share/examples/xbanner/Demo/Cyc_Fan
-share/examples/xbanner/Demo/Cyc_FatText
-share/examples/xbanner/Demo/Cyc_FgPlasma
-share/examples/xbanner/Demo/Cyc_LeftRight
-share/examples/xbanner/Demo/Cyc_Plasma
-share/examples/xbanner/Demo/Cyc_Plasma_FgPlasma
-share/examples/xbanner/Demo/Fade
-share/examples/xbanner/Demo/FatText
-share/examples/xbanner/Demo/FatText2
-share/examples/xbanner/Demo/FgGrad
-share/examples/xbanner/Demo/FgPlasma
-share/examples/xbanner/Demo/FunnyOutline
-share/examples/xbanner/Demo/PopArt
-share/examples/xbanner/Demo/Shadowed-Outline
-share/examples/xbanner/Demo/Shake
-share/examples/xbanner/Demo/StandOut
-share/examples/xbanner/Demo/Thick
-share/examples/xbanner/Demo/StandOut2_1
-share/examples/xbanner/Demo/StandOut2_2
-share/examples/xbanner/Demo/Demo.bash
-share/examples/xbanner/Demo/Coin
-share/examples/xbanner/XBanner.sample
-share/examples/xbanner/XBanner.ad
-share/examples/xbanner/README.Demo
-bin/xbanner
-bin/freetemp
-bin/xb_check
-@dirrm share/examples/xbanner/Demo
-@dirrm share/examples/xbanner/_other_ideas
-@dirrm share/examples/xbanner
 @dirrm share/doc/xbanner
