@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.35 2004/07/26 16:30:37 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.36 2004/07/26 16:33:41 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -66,4 +66,6 @@ Pullup ticket 70, requested by Grant Beattie [agc 2004-07-26]
 	Build fix for gimp-print-cups
 Pullup ticket 71, requested by Grant Beattie [agc 2004-07-26]
 	Solaris fix for libpcap
+Pullup ticket 72, requested by Grant Beattie [agc 2004-07-26]
+	Build fix for scanssh
 
