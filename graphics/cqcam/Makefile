@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/24 11:45:17 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/01 13:38:43 agc Exp $
 #
 
 DISTNAME=	cqcam-0.45a
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.cs.virginia.edu/~patrick/cqcam/
 ONLY_FOR_ARCHS=	i386
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	tk-8.0p2:../../x11/tk80
+DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 LICENSE=	no-profit
 
