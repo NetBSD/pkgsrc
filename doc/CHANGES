@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8155 2004/11/29 17:39:44 jmmv Exp $
+$NetBSD: CHANGES,v 1.8156 2004/11/29 17:55:08 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5644,3 +5644,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated AiCA to 0.81 [wiz 2004-11-29]
 	Updated xchat2 to 2.4.1 [minskim 2004-11-29]
 	Updated epiphany to 2.4.6 [jmmv 2004-11-29]
+	Updated jabberd2 to 2.0s4nb1 [abs 2004-11-29]
+
