@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/27 13:33:35 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/10/03 20:56:53 jlam Exp $
 #
 # This Makefile fragment is included by packages that use windowmaker.
 #
@@ -48,12 +48,18 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.windowmaker}
 
 BUILDLINK_CONFIG.wm-wings=		${BUILDLINK_PREFIX.windowmaker}/bin/get-wings-flags
 BUILDLINK_CONFIG_WRAPPER.wm-wings=	${BUILDLINK_DIR}/bin/get-wings-flags
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.wm-wings}|${BUILDLINK_CONFIG.wm-wings}|g"
 
 BUILDLINK_CONFIG.wm-wutil=		${BUILDLINK_PREFIX.windowmaker}/bin/get-wutil-flags
 BUILDLINK_CONFIG_WRAPPER.wm-wutil=	${BUILDLINK_DIR}/bin/get-wutil-flags
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.wm-wutil}|${BUILDLINK_CONFIG.wm-wutil}|g"
 
 BUILDLINK_CONFIG.wm-wraster=		${BUILDLINK_PREFIX.windowmaker}/bin/get-wraster-flags
 BUILDLINK_CONFIG_WRAPPER.wm-wraster=	${BUILDLINK_DIR}/bin/get-wraster-flags
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.wm-wraster}|${BUILDLINK_CONFIG.wm-wraster}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 GET_WINGS_FLAGS?=	${BUILDLINK_CONFIG_WRAPPER.wm-wings}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/08/17 21:14:05 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/10/03 20:56:44 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libnet.
 #
@@ -35,6 +35,8 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.libnet}
 
 BUILDLINK_CONFIG.libnet=	${BUILDLINK_PREFIX.libnet}/bin/libnet-config
 BUILDLINK_CONFIG_WRAPPER.libnet=${BUILDLINK_DIR}/bin/libnet-config
+REPLACE_BUILDLINK_SED+=	\
+	-e "s|${BUILDLINK_CONFIG_WRAPPER.libnet}|${BUILDLINK_CONFIG.libnet}|g"
 
 .if defined(USE_CONFIG_WRAPPER)
 LIBNET_CONFIG?=	${BUILDLINK_CONFIG_WRAPPER.libnet}
