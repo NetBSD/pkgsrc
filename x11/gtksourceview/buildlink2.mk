@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/02/07 15:21:43 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/02/13 20:53:56 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use gtksourceview.
 #
@@ -16,7 +16,6 @@ EVAL_PREFIX+=	BUILDLINK_PREFIX.gtksourceview=gtksourceview
 BUILDLINK_PREFIX.gtksourceview_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.gtksourceview+=	include/gtksourceview-1.0/gtksourceview/*
 BUILDLINK_FILES.gtksourceview+=	lib/libgtksourceview-1.0.*
-BUILDLINK_FILES.gtksourceview+=	lib/pkgconfig/gtksourceview-1.0.pc
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
