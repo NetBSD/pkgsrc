@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.238 2004/05/12 01:03:58 jschauma Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.239 2004/05/15 09:44:00 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -2193,7 +2193,7 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_GNOME=	http://public.planetmirror.com.au/pub/GNOME/
 #MASTER_SITE_GNU=	http://public.planetmirror.com.au/pub/gnu/
 #MASTER_SITE_MOZILLA=	http://public.planetmirror.com.au/pub/mozilla/releases/
-#MASTER_SITE_PERL_CPAN=	http://public.planetmirror.com.au/pub/perl/CPAN/modules/by-module/
+#MASTER_SITE_PERL_CPAN=	ftp://mirror.aarnet.edu.au/pub/cpan/modules/by-module/
 #MASTER_SITE_SUNSITE=	http://public.planetmirror.com.au/pub/sunsite/
 #MASTER_SITE_SUSE=	http://public.planetmirror.com.au/pub/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ 
 #MASTER_SITE_TEX_CTAN=	http://public.planetmirror.com.au/pub/tex-archive/
