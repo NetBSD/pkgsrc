@@ -1,4 +1,4 @@
-/*	$NetBSD: pkgdb.c,v 1.11 2003/09/01 16:27:15 jlam Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.12 2003/09/02 01:37:05 jlam Exp $	*/
 
 #include <nbcompat.h>
 #if HAVE_CONFIG_H
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: pkgdb.c,v 1.11 2003/09/01 16:27:15 jlam Exp $");
+__RCSID("$NetBSD: pkgdb.c,v 1.12 2003/09/02 01:37:05 jlam Exp $");
 #endif
 
 /*
@@ -74,10 +74,13 @@ __RCSID("$NetBSD: pkgdb.c,v 1.11 2003/09/01 16:27:15 jlam Exp $");
 /* just in case we change the environment variable name */
 #define PKG_DBDIR		"PKG_DBDIR"
 
+#if HAVE_DBOPEN
 static DB   *pkgdbp;
+#endif
 static char *pkgdb_dir = NULL;
 static char  pkgdb_cache[FILENAME_MAX];
 
+#if HAVE_DBOPEN
 /*
  *  Open the pkg-database
  *  Return value:
@@ -249,6 +252,18 @@ pkgdb_remove_pkg(const char *pkg)
 	}
 	return ret;
 }
+
+#else /* if !HAVE_DBOPEN */
+
+int	pkgdb_open(int mode) { return -1; }
+void	pkgdb_close(void) {}
+int	pkgdb_store(const char *key, const char *val) { return EXIT_SUCCESS; }
+char   *pkgdb_retrieve(const char *key) { return NULL; }
+void	pkgdb_dump(void) {}
+int	pkgdb_remove(const char *key) { return EXIT_SUCCESS; }
+int	pkgdb_remove_pkg(const char *pkg) { return EXIT_SUCCESS; }
+
+#endif /* HAVE_DBOPEN */
 
 /*
  *  Return name of cache file in the buffer that was passed.
