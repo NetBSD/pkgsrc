@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.817 2003/09/01 11:51:47 martti Exp $
+$NetBSD: TODO,v 1.818 2003/09/01 16:02:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -143,7 +143,6 @@ Suggested package updates
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
 	o grepmail-5.20
-	o grhino-0.8.1
 	o gstreamer-0.6.3
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.3
