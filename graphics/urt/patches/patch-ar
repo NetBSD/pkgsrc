@@ -1,0 +1,18 @@
+$NetBSD: patch-ar,v 1.1 2001/02/26 16:56:36 agc Exp $
+
+Use libtool
+
+--- cnv/rletoabA62/makefile.src	2001/02/26 15:57:54	1.1
++++ cnv/rletoabA62/makefile.src	2001/02/26 15:59:21
+@@ -15,9 +15,8 @@
+ # Executables.  The .out will be stripped off in the install action.
+ 
+ rletoabA62.out	:	rletoabA62.o rle.o
+-			$(CC) $(CFLAGS) -o rletoabA62.new \
+-			  rletoabA62.o rle.o $(LIBS)
+-			mv rletoabA62.new rletoabA62.out
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} -o rletoabA62.new rletoabA62.o rle.o ../../lib/librle.la -lm
++	mv rletoabA62.new rletoabA62.out
+ 
+ # Incremental install, copies executable to DEST dir.
+ install		:	default install-pgm
