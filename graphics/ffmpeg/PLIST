@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/19 12:39:27 tron Exp $
+bin/ffmpeg
+bin/ffserver
+share/doc/ffmpeg/FAQ
+share/doc/ffmpeg/README
+share/doc/ffmpeg/README.dev
+share/doc/ffmpeg/README.tech
+share/doc/ffmpeg/TODO
+share/doc/ffmpeg/bench.txt
+share/doc/ffmpeg/ffmpeg.txt
+share/doc/ffmpeg/ffserver.conf
+share/doc/ffmpeg/ffserver.txt
+@dirrm share/doc/ffmpeg
