@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 11:09:25 agc Exp $
+$NetBSD: patch-ab,v 1.5 1998/09/17 12:02:54 agc Exp $
 
---- configure.orig	Tue Nov 25 11:31:42 1997
-+++ configure	Mon Feb  9 07:20:00 1998
+--- configure.orig	Tue Nov 25 16:31:42 1997
++++ configure	Thu Sep 17 11:36:29 1998
 @@ -3781,7 +3781,7 @@
  if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -11,3 +11,12 @@ $NetBSD: patch-ab,v 1.4 1998/08/07 11:09:25 agc Exp $
  	    SHLIB_LD="ld -Bshareable -x"
  	    SHLIB_LD_LIBS=""
  	    SHLIB_SUFFIX=".so"
+@@ -4518,7 +4518,7 @@
+ s%@BUILD_DLTEST@%$BUILD_DLTEST%g
+ s%@DL_LIBS@%$DL_LIBS%g
+ s%@DL_OBJS@%$DL_OBJS%g
+-s%@LD_FLAGS@%$LD_FLAGS%g
++s%@LD_FLAGS@%$LDFLAGS%g
+ s%@MAKE_LIB@%$MAKE_LIB%g
+ s%@MATH_LIBS@%$MATH_LIBS%g
+ s%@SHLIB_CFLAGS@%$SHLIB_CFLAGS%g
