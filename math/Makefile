@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2001/02/10 04:13:28 jtb Exp $
+# $NetBSD: Makefile,v 1.49 2001/02/10 04:19:17 jtb Exp $
 #
 
     SUBDIR += R
@@ -23,6 +23,7 @@
     SUBDIR += libffm
     SUBDIR += mcsim
     SUBDIR += meschach
+    SUBDIR += metis
     SUBDIR += minpack
     SUBDIR += ntl
     SUBDIR += octave
