@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.977 2003/10/30 15:16:21 wiz Exp $
+$NetBSD: TODO,v 1.978 2003/10/30 15:20:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -105,6 +105,11 @@ Suggested new packages
 	info2man
 	http://freshmeat.net/projects/info2man/
 	requires perl, provides info2man and info2pod
+
+	vmips
+	http://vmips.sourceforge.net/
+	vmips is a virtual machine simulator based around a MIPS
+	R3000 RISC CPU core.
 
 Suggested package updates
 =========================
