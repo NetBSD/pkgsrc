@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2003/05/02 11:57:26 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2003/05/11 05:24:29 jmc Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	5
@@ -21,6 +21,10 @@ BROKEN=		Compilation causes arm32 machines to hang
 .endif
 
 .include "../../mk/bsd.prefs.mk"
+
+.if (${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "NetBSD")
+CXXFLAGS+=-ftemplate-depth-30
+.endif
 
 .if ${OPSYS} == "NetBSD"
 LIBS+=			-Wl,--export-dynamic
