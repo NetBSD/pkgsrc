@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 1998/12/07 11:37:51 frueauf Exp $
+# $NetBSD: Makefile,v 1.17 1998/12/21 00:32:32 frueauf Exp $
 # $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
-DISTNAME=	ddd-3.1.1
+DISTNAME=	ddd-3.1.2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ips.cs.tu-bs.de/pub/local/softech/ddd/  \
 		ftp://richb-pc.acc.qc.edu/pub/ddd/  \
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www.cs.tu-bs.de/softech/ddd/
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
-CONFLICTS=	ddd-2.2.3 ddd-3.1
+CONFLICTS=	ddd-2.2.3 ddd-3.1 ddd-3.1.1
 
 USE_MOTIF=	yes
 GNU_CONFIGURE=	yes
