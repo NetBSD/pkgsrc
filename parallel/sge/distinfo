@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/03 00:38:34 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2004/05/19 06:53:38 dmcmahill Exp $
 
 SHA1 (sge-5.3p6.tar.gz) = be0ff4ea59d14a1186e5fd35987df6f15fbc21fe
 Size (sge-5.3p6.tar.gz) = 9388452 bytes
@@ -20,7 +20,7 @@ SHA1 (patch-ao) = 22788540ea416f8630f4e423775f28abc2941eec
 SHA1 (patch-ap) = 97f14b5c2469b977806458aa670f2fdbfdc38476
 SHA1 (patch-aq) = 1d2bd0d16a4e8bb7e614f6e8bef8b9205da24e71
 SHA1 (patch-ar) = ecf6259d9f4eb91f84fa86ea3853cde64b746088
-SHA1 (patch-as) = 114dad61ed17d0668303c472a42b049691fa1664
+SHA1 (patch-as) = db661826d8128b9a5def81a39cb7e0688a320198
 SHA1 (patch-at) = 502b66d687afebb9d945c1664e11978986be0fbc
 SHA1 (patch-au) = cec0609d9239ecc9749249145851ad4f637db38a
 SHA1 (patch-av) = da8392761b8c9cfdc0c82f3d3df7edf73584c59e
