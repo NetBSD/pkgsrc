@@ -1,17 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: maildirmake.sh,v 1.1.1.1 2001/08/16 06:19:24 jlam Exp $
+# $NetBSD: maildirmake.sh,v 1.2 2002/01/01 08:00:45 jlam Exp $
 #
 # Wrapper to execute maildirmake from amongst any installed maildirmake
 # executable.
 
-maildirmakes=" \
-	@LOCALBASE@/bin/imapd.maildirmake \
-	@LOCALBASE@/bin/maildrop.maildirmake \
-	"
-
-maildirmake=NONE
-for file in ${maildirmakes}
+maildirmake=
+for file in @LOCALBASE@/bin/*.maildirmake
 do
 	if [ -x ${file} ]
 	then
@@ -19,7 +14,7 @@ do
 	fi
 done
 
-if [ "${maildirmake}" = "NONE" ]
+if [ -z "${maildirmake}" ]
 then
 	@ECHO@ "$0: can't find a valid maildirmake executable"
 	exit 1
