@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/04/10 01:28:25 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/03 18:50:05 jmmv Exp $
 #
 
 DISTNAME=	website-2.3
@@ -24,13 +24,14 @@ EGDIR=		${PREFIX}/share/examples/docbook-website
 XML_CATALOGS=	${DTDDIR}/catalog
 
 do-install:
+	cd ${WRKSRC} && ${FIND} . -name "*.orig" -exec ${RM} {} \;
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${DTDDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC} && ${PAX} -rw ChangeLog README VERSION WhatsNew	\
+	cd ${WRKSRC} && ${PAX} -rwpm ChangeLog README VERSION WhatsNew	\
 		${DOCDIR}
-	cd ${WRKSRC}/example && ${PAX} -rw . ${EGDIR}
-	cd ${WRKSRC} && ${PAX} -rw VERSION extensions xsl *.dtd *.mod	\
+	cd ${WRKSRC}/example && ${PAX} -rwpm . ${EGDIR}
+	cd ${WRKSRC} && ${PAX} -rwpm VERSION extensions xsl *.dtd *.mod	\
 		${DTDDIR}
 	${INSTALL_DATA} ${FILESDIR}/catalog ${DTDDIR}/catalog
 
