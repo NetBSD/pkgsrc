@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2005/03/06 22:23:04 markd Exp $
+# $NetBSD: Makefile,v 1.235 2005/03/07 14:49:47 minskim Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -220,6 +220,7 @@ SUBDIR+=	vfu
 SUBDIR+=	visual-regexp
 SUBDIR+=	vttest
 SUBDIR+=	watch
+SUBDIR+=	wdic
 SUBDIR+=	xchm
 SUBDIR+=	xdg-dirs
 SUBDIR+=	xdg-x11-dirs
