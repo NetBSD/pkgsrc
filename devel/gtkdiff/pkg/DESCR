@@ -1,0 +1,7 @@
+Gtkdiff is a diff front-end program using GNOME.
+
+Features
+========
+* It has two view modes, one-pane and two-panes.
+* Supports directory diff.
+* Easy navigation across differences.

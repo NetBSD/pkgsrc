@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/16 17:57:43 rh Exp $
+bin/gtkdiff
+bin/gtkdiff-rcs
+man/man1/gtkdiff.1
+man/man1/gtkdiff-rcs.1
+share/gnome/apps/Utilities/gtkdiff.desktop
+share/gtkdiff/gtkdiffrc
+@dirrm share/gtkdiff
