@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/25 14:55:59 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/18 07:11:24 fredb Exp $
 #
 
 DISTNAME=	tmake-1.7
@@ -23,17 +23,17 @@ do-build:
 	${SED}  -e 's;@PERL5@;${PERL5};g' \
 		-e 's;@TMAKEPATH@;${TMAKEPATH};g' \
 		${WRKSRC}/bin/tmake.BAK > ${WRKSRC}/bin/tmake
-	${RM} ${WRKSRC}/bin/tmake.BAK
+	${RM} -f ${WRKSRC}/bin/tmake.BAK
 	${MV} ${WRKSRC}/lib/netbsd-g++/tmake.conf ${WRKSRC}/lib/netbsd-g++/tmake.conf.BAK
 	${SED}  -e 's;@LOCALBASE@;${LOCALBASE};g' \
 		-e 's;@X11BASE@;${X11BASE};g' \
 		-e 's;@GLBASE@;${GLBASE};g' \
 		${WRKSRC}/lib/netbsd-g++/tmake.conf.BAK > ${WRKSRC}/lib/netbsd-g++/tmake.conf
-	${RM} ${WRKSRC}/lib/netbsd-g++/tmake.conf.BAK
+	${RM} -f ${WRKSRC}/lib/netbsd-g++/tmake.conf.BAK
 	${MV} ${WRKSRC}/bin/progen ${WRKSRC}/bin/progen.BAK
 	${SED} 's;/usr/bin/perl;${PERL5};g' \
 		${WRKSRC}/bin/progen.BAK > ${WRKSRC}/bin/progen
-	${RM} ${WRKSRC}/bin/progen.BAK
+	${RM} -f ${WRKSRC}/bin/progen.BAK
 
 # avoid installing .orig files
 pre-install:
