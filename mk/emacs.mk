@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.13 2003/04/11 01:23:14 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.14 2003/04/24 18:22:07 jmc Exp $
 #
 # A Makefile fragment for Emacs Lisp packages.
 #
@@ -116,7 +116,7 @@ _EMACS_VERSION=	${EMACS_VERSION_DEFAULT}
 .endif
 .endif
 .if !defined(_EMACS_VERSION)
-_EMACS_VERSION=	${EMACS_VERSION_FIRSTACCEPTED}
+_EMACS_VERSION=	${_EMACS_VERSION_FIRSTACCEPTED}
 .endif
 
 # Set version specifics.
