@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.348 2003/01/09 08:30:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.349 2003/01/30 12:05:58 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -93,6 +93,7 @@ SUBDIR+=	ip6_int
 SUBDIR+=	ipa
 SUBDIR+=	ipcalc
 SUBDIR+=	ipcheck
+SUBDIR+=	iperf
 SUBDIR+=	ipv6calc
 SUBDIR+=	ipw
 SUBDIR+=	irrd
@@ -111,6 +112,7 @@ SUBDIR+=	latd
 SUBDIR+=	lftp
 SUBDIR+=	libIDL
 SUBDIR+=	libares
+SUBDIR+=	libdnet
 SUBDIR+=	libnids
 SUBDIR+=	libpcap
 SUBDIR+=	libsscript
