@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.122 2004/11/27 01:30:40 kristerw Exp $
+# $NetBSD: Makefile,v 1.123 2004/12/29 20:24:20 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.88
+DISTNAME=		xmame-0.89
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -114,5 +114,6 @@ do-install:
 	${INSTALL_DATA_DIR}  ${PREFIX}/share/doc/xmame
 	${INSTALL_DATA} ${WRKSRC}/doc/xmame-doc.txt ${PREFIX}/share/doc/xmame
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
