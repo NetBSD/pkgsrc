@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.common,v 1.1 2004/10/30 18:10:35 minskim Exp $
+#
+
+DISTNAME=	xchat-2.4.0
+CATEGORIES=	chat gnome
+MASTER_SITES=	http://www.xchat.org/files/source/2.4/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://www.xchat.org/
+
+DISTINFO_FILE=	${.CURDIR}/../../chat/xchat2/distinfo
+
+GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		YES
+USE_LIBTOOL=		YES
+USE_GNU_TOOLS+=		make
+
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
