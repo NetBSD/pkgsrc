@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:08 wiz Exp $
+$NetBSD: distinfo,v 1.3 2001/11/19 19:39:04 jlam Exp $
 
 SHA1 (adns-1.0.tar.gz) = 7675da67c7829f2db9a6fafd64f1f90c7bce412a
 Size (adns-1.0.tar.gz) = 208741 bytes
+SHA1 (patch-aa) = 17764ad5a7557bcda1fda5fdb62fbb7d4e0cd075
+SHA1 (patch-ab) = 3eaa20dbe95de934693c00b73d42fbaf8ff5e5e9
