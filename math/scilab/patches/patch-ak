@@ -1,21 +1,18 @@
-$NetBSD: patch-ak,v 1.2 1999/03/05 11:22:35 frueauf Exp $
+$NetBSD: patch-ak,v 1.3 1999/12/22 13:25:42 dmcmahill Exp $
 
---- ./routines/metanet/saveg.c.orig	Sat Aug  8 14:01:11 1998
-+++ ./routines/metanet/saveg.c	Sat Aug  8 14:06:07 1998
-@@ -1,4 +1,7 @@
- #include <stdio.h>
- #ifndef __MSC__
-+#if defined(netbsd) || defined(freebsd) 
-+#include <sys/types.h>
-+#endif
- #include <dirent.h>
- #endif
-@@ -13,4 +16,8 @@
- /** only used for x=dir[1024] **/
- #define  getwd(x) _getcwd(x,1024) 
-+#endif
-+
-+#if defined(netbsd) || defined(freebsd)
-+#include <unistd.h>
- #endif
- 
+--- ./tests/grand.tst.orig	Tue Dec 14 05:56:09 1999
++++ ./tests/grand.tst	Tue Dec 21 17:45:26 1999
+@@ -172,5 +172,5 @@
+ PS=(1:N)'/N;
+ //plot2d(RdevS,PS);
+-// theoretical result 
++// theorical result 
+ [P]=cdfchi("PQ",RdevS,A*ones(RdevS));
+ //plot2d(RdevS,P,2,"000")
+@@ -184,5 +184,5 @@
+ PS=(1:N)'/N;
+ //plot2d(RdevS,PS);
+-// theoretical result 
++// theorical result 
+ [P]=cdfpoi("PQ",RdevS,A*ones(RdevS));
+ //plot2d(RdevS,P,2,"000")
