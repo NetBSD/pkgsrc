@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1009 2003/01/04 13:25:47 cjep Exp $
+$NetBSD: CHANGES,v 1.1010 2003/01/04 17:29:50 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -74,3 +74,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated koth to 0.7.6nb1 [wiz 2003-01-04]
 	Added file-roller-2.0.4 [jmmv 2003-01-04]
 	Updated GutenMark-words to 20021228 [cjep 2003-01-04]
+	Updated gtk2 to 2.2.0nb2 [jmmv 2003-01-04]
