@@ -1,0 +1,48 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/03/30 09:13:12 rh Exp $
+
+--- Makefile.orig	Thu Mar 25 01:17:34 1999
++++ Makefile	Tue Mar 30 10:49:43 1999
+@@ -4,23 +4,24 @@
+ 
+ # Where you want cdlabelgen and related files to be
+ 
+-BASE_DIR   = /usr/local
++BASE_DIR   = ${PREFIX}
+ TEMPLATE   = ./postscript/template.ps
+ SOURCES    = cdlabelgen ChangeLog COPYING INSTALL README Makefile
+ POSTSCRIPT = template.ps recycle.ps recycle.epsi mp3.eps cdda.eps cd.eps penguin.eps
+ DISTFILES = ${SOURCES} ${POSTSCRIPT}
+ 
+ # just use 'cp -a' if you don't have install...
+-INSTALL		:= install -m 0755 -p
+-INSTALL_FILE	:= install -m 0644 -p
+ 
+ all: cdlabelgen
++	${SED} s=@PREFIX@=${PREFIX}=g <cdlabelgen >cdlabelgen.new
++	${MV} cdlabelgen.new cdlabelgen
++	${PREFIX}/bin/perldoc cdlabelgen >cdlabelgen.0
+ 
+ ###
+ install: 
+ 	@echo "Installing cdlabelgen under ${BASE_DIR}"
+ 	@echo ""
+-	$(INSTALL) cdlabelgen ${BASE_DIR}/bin
++	${INSTALL_SCRIPT} cdlabelgen ${PREFIX}/bin
+ 	@if [ ! -d ${BASE_DIR}/share/cdlabelgen ]; then \
+ 	mkdir ${BASE_DIR}/share/cdlabelgen; \
+ 	chmod 755 ${BASE_DIR}/share/cdlabelgen; \
+@@ -28,11 +29,12 @@
+ 	echo "${BASE_DIR}/share/cdlabelgen already exists, not creating"; \
+ 	echo ""; \
+         fi
+-	$(INSTALL_FILE) ${TEMPLATE} ${BASE_DIR}/share/cdlabelgen
++	${INSTALL_DATA} ${TEMPLATE} ${BASE_DIR}/share/cdlabelgen
+ 	set -e; \
+ 	for file in $(POSTSCRIPT); do \
+-		$(INSTALL_FILE) postscript/$$file ${BASE_DIR}/share/cdlabelgen/; \
++		${INSTALL_DATA} postscript/$$file ${BASE_DIR}/share/cdlabelgen/; \
+ 	done
++	${INSTALL_MAN} cdlabelgen.0 ${PREFIX}/man/cat1
+ 
+ dist: 
+ 	rm -rf cdlabelgen-${VERSION}
