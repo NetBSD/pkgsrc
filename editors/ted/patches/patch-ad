@@ -1,6 +1,6 @@
---- Ted/configure.orig	Sun Mar  3 23:24:16 2002
-+++ Ted/configure	Tue Apr  9 12:13:32 2002
-@@ -1946,7 +1946,6 @@
+--- bitmap/configure.orig	Sun Mar  3 23:24:16 2002
++++ bitmap/configure	Tue Apr  9 12:14:17 2002
+@@ -1825,7 +1825,6 @@
  
      # Includes
      for ac_dir in		\
