@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2003/10/13 15:02:15 salo Exp $
+$NetBSD: patch-aa,v 1.12 2004/11/26 09:24:21 adam Exp $
 
---- Makefile.in.orig	2003-10-06 10:23:20.000000000 +0200
-+++ Makefile.in	2003-10-06 13:00:34.000000000 +0200
-@@ -16,9 +16,7 @@
+--- Makefile.in.orig	2004-11-10 02:05:51.000000000 +0000
++++ Makefile.in
+@@ -16,9 +16,7 @@ NSOCKDIR=@NSOCKDIR@
  CC = @CC@
  CXX = @CXX@
  CCOPT = 
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.11 2003/10/13 15:02:15 salo Exp $
  DEFS = @DEFS@ -DNMAP_VERSION=\"$(NMAP_VERSION)\" -DNMAP_NAME=\"$(NMAP_NAME)\" -DNMAP_URL=\"$(NMAP_URL)\" -DNMAP_PLATFORM=\"$(NMAP_PLATFORM)\" -DNMAPDATADIR=\"$(nmapdatadir)\"
  # For mtrace debugging -- see MTRACE define in main.cc for instructions
  # Should only be enabled during debugging and not in any real release.
-@@ -61,12 +59,6 @@
+@@ -69,12 +67,6 @@ $(TARGET): $(DEPS) @PCAP_DEPENDS@ @PCRE_
  # all of the prerequisites (e.g. recursive makes and such)
  FORCE:
  
