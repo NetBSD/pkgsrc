@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.6 2003/01/24 09:41:28 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.7 2003/07/18 12:21:39 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
-# Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
+# Copyright (c) 2002, 2003, Julio Merino <jmmv@netbsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -31,24 +31,108 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
+ProgName="`basename $0`"
+
+# ----------------------------------------------------------------------
+# Default environment values and functions
+# ----------------------------------------------------------------------
+
+# USE_GCC3, CFLAGS, CPPFLAGS and CXXFLAGS are ommited from _MKCONF_VARS
+# as they require special handling.
+_MKCONF_VARS="OBJMACHINE MKOBJDIRS BSDSRCDIR WRKOBJDIR DISTDIR PACKAGES \
+              PKG_DEVELOPER CLEANDEPENDS LOCALBASE PKG_SYSCONFBASE \
+              CFLAGS CPPFLAGS CXXFLAGS USE_AUDIT_PACKAGES PKGVULNDIR"
+
+_TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
+                SETS_X11 USE_XPKGWEDGE REAL_SRC REAL_SRC_OPTS REAL_PKGSRC \
+                REAL_PKGSRC_OPTS REAL_DISTFILES REAL_DISTFILES_OPTS \
+                REAL_PACKAGES REAL_PACKAGES_OPTS REAL_PKGVULNDIR"
+
+env_clean()
+{
+    MKCONF_VARS=""
+    TEMPLATE_VARS=""
+    for var in ${_MKCONF_VARS} ${_TEMPLATE_VARS}; do
+        eval $var=\"\"
+    done
+}
+
+env_setdefaults()
+{
+    MKCONF_VARS="$MKCONF_VARS ${_MKCONF_VARS}"
+    TEMPLATE_VARS="$TEMPLATE_VARS ${_TEMPLATE_VARS}"
+
+    # Default values for variables that will be written to mk.conf.
+    : ${OBJMACHINE:=yes}
+    : ${MKOBJDIRS:=yes}
+    : ${BSDSRCDIR:=/usr/src}
+    : ${WRKOBJDIR:=/pkg_comp/obj/pkgsrc}
+    : ${DISTDIR:=/pkg_comp/distfiles}
+    : ${PACKAGES:=/pkg_comp/packages}
+    : ${PKG_DEVELOPER:=yes}
+    : ${CLEANDEPENDS:=yes}
+    : ${LOCALBASE:=/usr/pkg}
+    : ${PKG_SYSCONFDIR:=/usr/pkg/etc}
+    : ${CFLAGS:=}
+    : ${CPPFLAGS:=}
+    : ${CXXFLAGS:=}
+    : ${USE_GCC3:=no}
+    : ${USE_AUDIT_PACKAGES:=yes}
+    : ${PKGVULNDIR:=/usr/pkg/share}
+
+    # Default values for global variables used in the script.
+    : ${DESTDIR:=/var/chroot/pkg_comp/default}
+    : ${ROOTSHELL:=/bin/ksh}
+    : ${COPYROOTCFG:=no}
+    : ${BUILD_TARGET:=package}
+    : ${DISTRIBDIR:=/var/pub/NetBSD}
+    : ${SETS:=base.tgz comp.tgz etc.tgz text.tgz}
+    : ${SETS_X11:=xbase.tgz xcomp.tgz xcontrib.tgz xfont.tgz xmisc.tgz xserver.tgz}
+    : ${USE_XPKGWEDGE:=yes}
+    : ${REAL_SRC:=/usr/src}
+    : ${REAL_SRC_OPTS:=-t null -o ro}
+    : ${REAL_PKGSRC:=/usr/pkgsrc}
+    : ${REAL_PKGSRC_OPTS:=-t null -o ro}
+    : ${REAL_DISTFILES:=/usr/pkgsrc/distfiles}
+    : ${REAL_DISTFILES_OPTS:=-t null -o rw}
+    : ${REAL_PACKAGES:=/usr/pkgsrc/packages}
+    : ${REAL_PACKAGES_OPTS:=-t null -o rw}
+    : ${REAL_PKGVULNDIR:=/usr/pkgsrc/distfiles}
+}
+
 # ----------------------------------------------------------------------
 # Misc functions
 # ----------------------------------------------------------------------
+
 err()
 {
-    echo "$progname: $1"
+    echo "$ProgName: $1"
     exit 1
 }
 
 usage()
 {
-    echo "usage: $progname [-c conf_file] target [pkg_names]"
+    echo "usage: $ProgName [-c conf_file] target [pkg_names]"
     exit 1
+}
+
+copy_vulnerabilities()
+{
+    if [ "$USE_AUDIT_PACKAGES" = "yes" ]; then
+        echo "PKG_COMP ==> Installing new \`vulnerabilities' file"
+        if [ ! -f "$REAL_PKGVULNDIR/vulnerabilities" ]; then
+            echo "$REAL_PKGVULNDIR/vulnerabilities not found."
+        else
+            mkdir -p $DESTDIR/$PKGVULNDIR
+            cp $REAL_PKGVULNDIR/vulnerabilities $DESTDIR/$PKGVULNDIR
+        fi
+    fi
 }
 
 # ----------------------------------------------------------------------
 # Filesystem functions
 # ----------------------------------------------------------------------
+
 fsmount()
 {
     printf "PKG_COMP ==> Mounting chroot filesystems:"
@@ -159,69 +243,43 @@ fsumount()
 # ----------------------------------------------------------------------
 # maketemplate target
 # ----------------------------------------------------------------------
+
 pkg_maketemplate()
 {
     if [ -f "$conffile" ]; then
         err "$conffile already exists"
     fi
 
-    echo "Creating template: $conffile"
     mkdir -p $confdir
     cat > $conffile <<EOF
 # -*- sh -*-
 #
-# pkg_comp configuration file
+# pkg_comp - configuration file
+# See pkg_comp(8) for a detailed description of each variable.
 #
 
-DESTDIR="/var/chroot/pkg_comp/default"
-ROOTSHELL="/bin/sh"
-COPYROOTCFG="no"
-COPTS="-pipe"
-
-# Target used to build packages.
-BUILD_TARGET="package"
-
-# Binary sets (tgz) are found in \$DISTRIBDIR/binary/sets
-DISTRIBDIR="/var/pub/NetBSD"
-
-# These sets are unpacked to setup the initial chroot.
-SETS="base.tgz comp.tgz etc.tgz text.tgz"
-
-# X configuration. Leave SETS_X11 empty to disable X11.
-SETS_X11="xbase.tgz xcomp.tgz xcontrib.tgz xfont.tgz xmisc.tgz xserver.tgz"
-USE_XPKGWEDGE="yes"
-USE_XF86_4="yes"
-
-# pkgsrc configuration.
-LOCALBASE="/usr/pkg"
-PKG_SYSCONFBASE="\${LOCALBASE}/etc"
-
-# Special directories. They are mounted inside the chroot jail using
-# mount_null. Leave empty to avoid mounting.
-REAL_SRC="/usr/src"
-REAL_SRC_OPTS="-t null -o ro"
-REAL_PKGSRC="/usr/pkgsrc"
-REAL_PKGSRC_OPTS="-t null -o ro"
-REAL_DISTFILES="/usr/pkgsrc/distfiles"
-REAL_DISTFILES_OPTS="-t null -o rw"
-REAL_PACKAGES="/usr/pkgsrc/packages"
-REAL_PACKAGES_OPTS="-t null -o rw"
-
-# Specify which packages to build automatically after building the chroot.
-MAKE_PACKAGES=""
-
-# Install these packages after building the chroot. They must be present in
-# inside REAL_PACKAGES. You must specify the complete name.
-INSTALL_PACKAGES=""
-
-# Append this file to the generated mk.conf.
-EXTRAMK=
 EOF
+
+    echo "# Variables used internally by pkg_comp." >> $conffile
+    for var in $TEMPLATE_VARS; do
+        eval val=\""\$$var"\"
+        echo "$var=\"$val\"" >> $conffile
+    done
+
+    echo >> $conffile
+    echo "# Default variables written to the generated mk.conf." >> $conffile
+    for var in $MKCONF_VARS; do
+        eval val=\""\$$var"\"
+        echo "$var=\"$val\"" >> $conffile
+    done
+
+    echo "pkg_comp: $conffile created.  Edit the file by hand now."
 }
 
 # ----------------------------------------------------------------------
 # makeroot target
 # ----------------------------------------------------------------------
+
 pkg_makeroot()
 {
     # Check for directories that will be null mounted.
@@ -250,7 +308,11 @@ pkg_makeroot()
         err "DESTDIR $DESTDIR already exists"
     fi
 
-    allsets="$SETS $SETS_X11"
+    if [ "$SETS_X11" = "no" ]; then
+        allsets="$SETS"
+    else
+        allsets="$SETS $SETS_X11"
+    fi
 
     for s in $allsets; do
         if [ ! -f $DISTRIBDIR/binary/sets/$s ]; then
@@ -305,15 +367,32 @@ pkg_makeroot()
     makeroot_mkconf
 
     echo " done."
+ 
+    # From now on, filesystems may be mounted, so we need to trap
+    # signals to umount them.
+    trap "echo \"*** Process aborted ***\" ; fsumount ; exit 1" INT QUIT
 
-    makeroot_xpkgwedge
+    if [ "$USE_AUDIT_PACKAGES" = "yes" ]; then
+        pkg_build security/audit-packages
+    fi
 
-    if [ -n "$MAKE_PACKAGES" ]; then
-        pkg_build $MAKE_PACKAGES
+    if [ "$USE_GCC3" = "yes" ]; then
+        if [ -z "`echo $MAKE_PACKAGES $INSTALL_PACKAGES | grep gcc3`" ]; then
+            AVOID_GCC3=yes pkg_build lang/gcc3
+        fi
+    fi
+
+    if [ "$SETS_X11" != "no" ]; then
+        makeroot_xpkgwedge
+        pkg_build pkgtools/x11-links
     fi
 
     if [ -n "$INSTALL_PACKAGES" ]; then
         pkg_install $INSTALL_PACKAGES
+    fi
+
+    if [ -n "$MAKE_PACKAGES" ]; then
+        pkg_build $MAKE_PACKAGES
     fi
 }
 
@@ -321,20 +400,20 @@ makeroot_mkconf()
 {
     file="$DESTDIR/etc/mk.conf"
 
-    echo "OBJMACHINE=yes" >> $file
-    echo "MKOBJDIRS=yes" >> $file
-    echo "BSDSRCDIR=/usr/src" >> $file
-    echo "WRKOBJDIR=/pkg_comp/obj/pkgsrc" >> $file
-    echo "DISTDIR=/pkg_comp/distfiles" >> $file
-    echo "PACKAGES=/pkg_comp/packages" >> $file
-    echo "PKG_DEVELOPER?=yes" >> $file
-    echo "CLEANDEPENDS?=yes" >> $file
+    cat >> $file <<EOF
+#
+# /etc/mk.conf
+# File automatically generated by pkg_comp on `date`
+#
 
-    echo "COPTS=$COPTS" >> $file
-    echo "USE_XF86_4=$USE_XF86_4" >> $file
+EOF
 
-    echo "LOCALBASE=$LOCALBASE" >> $file
-    echo "PKG_SYSCONFBASE=$PKG_SYSCONFBASE" >> $file
+    for var in $MKCONF_VARS; do
+        eval val=\""\$$var"\"
+        if [ -n "$val" ]; then
+            echo "$var ?= $val" >> $file
+        fi
+    done
 
     if [ -n "$EXTRAMK" ]; then
         if [ ! -f "$EXTRAMK" ]; then
@@ -342,6 +421,28 @@ makeroot_mkconf()
         else
             cat $EXTRAMK >> $file
         fi
+    fi
+
+    if [ "$USE_AUDIT_PACKAGES" != "yes" ]; then
+        echo "ALLOW_VULNERABLE_PACKAGES ?= YES" >> $file
+    fi
+
+    if [ "$USE_GCC3" = "yes" ]; then
+        cat >>$file <<EOF
+.if !defined(AVOID_GCC3) && exists(/usr/pkg/share/examples/gcc-3.3/mk.conf)
+USE_GCC3 = yes
+CFLAGS += $CFLAGS
+CPPFLAGS += $CPPFLAGS
+CXXFLAGS += $CXXFLAGS
+.include "/usr/pkg/share/examples/gcc-3.3/mk.conf"
+.endif
+EOF
+    else
+        cat >>$file <<EOF
+CFLAGS += $CFLAGS
+CPPFLAGS += $CPPFLAGS
+CXXFLAGS += $CXXFLAGS
+EOF
     fi
 }
 
@@ -359,6 +460,7 @@ makeroot_xpkgwedge()
 # ----------------------------------------------------------------------
 # build target
 # ----------------------------------------------------------------------
+
 pkg_build()
 {
     pkgs="$*"
@@ -373,6 +475,8 @@ pkg_build()
     if [ -n "$invalid" ]; then
         err "invalid packages:$invalid"
     fi
+
+    copy_vulnerabilities
 
     # Build them
     fsmount
@@ -413,6 +517,7 @@ EOF
 # ----------------------------------------------------------------------
 # install target
 # ----------------------------------------------------------------------
+
 pkg_install()
 {
     pkgs="$*"
@@ -420,6 +525,8 @@ pkg_install()
     if [ -z "$REAL_PACKAGES" ]; then
         err "REAL_PACKAGES is not set"
     fi
+
+    copy_vulnerabilities
 
     fsmount
     failed=""
@@ -448,18 +555,21 @@ EOF
 # ----------------------------------------------------------------------
 # chroot target
 # ----------------------------------------------------------------------
+
 pkg_chroot()
 {
     if [ ! -d $DESTDIR ]; then
         err "$DESTDIR does not exist"
     fi
 
+    copy_vulnerabilities
+
     fsmount
     echo "PKG_COMP ==> Entering chroot: $DESTDIR"
     if [ $# -eq 0 ]; then
-        chroot $DESTDIR $ROOTSHELL
+        ENV=/etc/shrc chroot $DESTDIR $ROOTSHELL
     else
-        chroot $DESTDIR $*
+        ENV=/etc/shrc chroot $DESTDIR $*
     fi
     echo
     fsumount
@@ -468,6 +578,7 @@ pkg_chroot()
 # ----------------------------------------------------------------------
 # removeroot target
 # ----------------------------------------------------------------------
+
 pkg_removeroot()
 {
     if [ -f $fsstate ]; then
@@ -479,54 +590,9 @@ pkg_removeroot()
 }
 
 # ----------------------------------------------------------------------
-# removepkgs target
-# ----------------------------------------------------------------------
-pkg_removepkgs()
-{
-    fsmount
-    echo "PKG_COMP ==> Removing packages"
-    cat > $DESTDIR/pkg_comp/tmp/removeall.sh <<EOF
-#!/bin/sh
-list="\`pkg_info\`"
-while [ -n "\$list" ]; do
-    echo "Deleting all (non-recursive)"
-    pkg_delete "*"
-    list="\`pkg_info\`"
-done
-EOF
-    chmod +x $DESTDIR/pkg_comp/tmp/removeall.sh
-    chroot $DESTDIR /pkg_comp/tmp/removeall.sh
-    rm $DESTDIR/pkg_comp/tmp/removeall.sh
-
-    printf "Cleaning pkg tree ($LOCALBASE):"
-    rm -rf $DESTDIR$LOCALBASE
-    echo " done."
-
-    if [ -d "$PKG_SYSCONFBASE" ]; then
-        printf "Cleaning pkg configuration ($PKG_SYSCONFBASE):"
-        rm -rf $DESTDIR$PKG_SYSCONFBASE
-        echo " done."
-    fi
-
-    printf "Cleaning pkg database:"
-    rm -rf $DESTDIR/var/db/pkg
-    mkdir -p $DESTDIR/var/db/pkg
-    echo " done."
-    makeroot_xpkgwedge
-    if [ -n "$MAKE_PACKAGES" ]; then
-        pkg_build $MAKE_PACKAGES
-    fi
-    if [ -n "$INSTALL_PACKAGES" ]; then
-        pkg_install $INSTALL_PACKAGES
-    fi
-    fsumount
-}
-
-# ----------------------------------------------------------------------
 # Main program
 # ----------------------------------------------------------------------
 
-progname="`basename $0`"
 confdir="$HOME/pkg_comp"
 
 # Parse options
@@ -564,42 +630,34 @@ readconf()
             err "must be run as root"
         fi
         echo "Reading config file: $conffile"
+        env_clean
         . $conffile
+        env_setdefaults
     else
         err "$conffile does not exist"
     fi
 
-    if [ -z "$LOCALBASE" ]; then
-        LOCALBASE="/usr/pkg"
-    fi
-
-    if [ -z "$PKG_SYSCONFBASE" ]; then
-        PKG_SYSCONFBASE="/usr/pkg/etc"
-    fi
-
     fsstate="$DESTDIR/pkg_comp/tmp/mount.stat"
-
-    if [ -n "$SETS_X11" ]; then
-        MAKE_PACKAGES="$MAKE_PACKAGES pkgtools/x11-links"
-    fi
 }
 
 checkroot()
 {
-   if [ ! -d "$DESTDIR" ]; then
-       err "chroot not initialized; use makeroot first."
-   fi
-   if [ "$DESTDIR" = "/" ]; then
-       err "DESTDIR cannot be /"
-   fi
+    if [ ! -d "$DESTDIR" ]; then
+        err "chroot not initialized; use makeroot first."
+    fi
+    if [ "$DESTDIR" = "/" ]; then
+        err "DESTDIR cannot be /"
+    fi
 
-   # From now on, filesystems may be mounted, so we need to trap
-   # signals to umount them.
-   trap "echo \"*** Process aborted ***\" ; fsumount ; exit 1" INT QUIT
+    # From now on, filesystems may be mounted, so we need to trap
+    # signals to umount them.
+    trap "echo \"*** Process aborted ***\" ; fsumount ; exit 1" INT QUIT
 }
 
 case "$target" in
     maketemplate)
+        env_clean
+        env_setdefaults
         pkg_maketemplate
         exit 0
         ;;
@@ -626,11 +684,6 @@ case "$target" in
         pkg_chroot $args
         exit 0
         ;;
-    removepkgs)
-        readconf
-        checkroot
-        pkg_removepkgs
-        ;;
     removeroot)
         readconf
         checkroot
@@ -653,7 +706,7 @@ case "$target" in
         pkg_removeroot
         ;;
     *)
-        err "unknown target '$target'"
+        err "unknown target \`$target'"
         ;;
 esac
 
