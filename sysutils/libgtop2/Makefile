@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/05/04 04:55:49 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/09/21 16:49:46 jmmv Exp $
 
-DISTNAME=		libgtop-2.6.0
+DISTNAME=		libgtop-2.8.0
 PKGNAME=		${DISTNAME:S/-/2-/}
-PKGREVISION=		1
 CATEGORIES=		sysutils gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -39,6 +38,9 @@ CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib2}
 CONFIGURE_ARGS+=	--with-catgets --with-libgtop-guile=no
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ENV+=		AWK="${AWK}" LN_S="${LN} -s" PERL="${PERL5}"
+
+PRINT_PLIST_AWK+=	/^(bin\/libgtop_server2|include\/libgtop-2.0\/glibtop_suid.h)$$/ \
+				{ print "$${LIBGTOP_SERVER}" $$0; next }
 
 .include "../../mk/bsd.prefs.mk"
 
