@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/08/04 20:37:05 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2003/08/05 12:19:00 markd Exp $
 
 DISTNAME=	kdelibs-3.1.3
 PKGNAME=	kdelibdocs-3.1.3
@@ -14,7 +14,7 @@ DEPENDS+=		qt3-docs>=3.1.1:../../x11/qt3-docs
 NO_CONFIGURE=		yes
 
 EVAL_PREFIX+=		QT3DIR=qt3-docs
-DOCINSTALLDIR=		${X11PREFIX}/share/doc/kde/HTML/en
+DOCINSTALLDIR=		${PREFIX}/share/doc/kde/HTML/en
 
 do-build:
 	${MKDIR} ${WRKDIR}/kdelibs
