@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2001/07/14 02:36:29 taya Exp $
+# $NetBSD: Makefile,v 1.149 2001/07/16 17:19:58 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -9,6 +9,7 @@ SUBDIR+=	amaya
 SUBDIR+=	analog
 SUBDIR+=	ap-DBI
 SUBDIR+=	ap-Embperl
+SUBDIR+=	ap-aolserver
 SUBDIR+=	ap-auth-cookie
 SUBDIR+=	ap-auth-ldap
 SUBDIR+=	ap-auth-postgresql
@@ -41,8 +42,8 @@ SUBDIR+=	communicator
 SUBDIR+=	cronolog
 SUBDIR+=	curl
 SUBDIR+=	cvsweb
-SUBDIR+=	galway
 SUBDIR+=	galeon
+SUBDIR+=	galway
 SUBDIR+=	glibwww
 SUBDIR+=	grail
 SUBDIR+=	gtkhtml
@@ -92,11 +93,11 @@ SUBDIR+=	p5-HTML-Tagset
 SUBDIR+=	p5-HTML-Template
 SUBDIR+=	p5-HTML-Tree
 SUBDIR+=	p5-HTTP-Request-Form
+SUBDIR+=	p5-Template-Toolkit
 SUBDIR+=	p5-URI
 SUBDIR+=	p5-VRML
 SUBDIR+=	p5-libapreq
 SUBDIR+=	p5-libwww
-SUBDIR+=	p5-Template-Toolkit
 SUBDIR+=	php3
 SUBDIR+=	php3-gd
 SUBDIR+=	php3-ldap
