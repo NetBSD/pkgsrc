@@ -1,16 +1,22 @@
-$NetBSD: patch-aa,v 1.6 1999/10/01 15:09:23 drochner Exp $
---- configs/netbsd-g++-static.orig	Fri Feb 26 18:02:07 1999
-+++ configs/netbsd-g++-static	Fri Jun  4 14:00:58 1999
-@@ -1,5 +1,6 @@
+$NetBSD: patch-aa,v 1.7 2000/03/28 21:41:44 dmcmahill Exp $
+
+--- configs/netbsd-g++-static.orig	Tue Jul 20 04:45:11 1999
++++ configs/netbsd-g++-static	Thu Oct 21 14:15:45 1999
+@@ -1,6 +1,7 @@
  # Compiling
  SYSCONF_CXX		= g++
-+SYSCONF_CXX_LIB		= $(LIBTOOL) --mode=compile g++
+ SYSCONF_CC		= gcc
++SYSCONF_CXX_LIB		= $(LIBTOOL) --cplusplus --mode=compile g++
  
  # Compiling with support libraries
  SYSCONF_CXXFLAGS_X11	= -I/usr/X11R6/include
-@@ -14,8 +15,8 @@
- SYSCONF_LFLAGS_X11	= -L/usr/X11R6/lib
- SYSCONF_LIBS_X11	= -lX11 -lXext
+@@ -12,11 +13,11 @@
+ 
+ # Linking with support libraries
+ # X11
+-SYSCONF_LFLAGS_X11	= -L/usr/X11R6/lib
++SYSCONF_LFLAGS_X11	= -L/usr/X11R6/lib -Wl,-R/usr/X11R6/lib
+ SYSCONF_LIBS_X11	= -lXext -lX11 -lm
  # Qt, Qt+OpenGL
 -SYSCONF_LFLAGS_QT	= -L$(QTDIR)/lib
 -SYSCONF_LIBS_QT		= -lqt
@@ -19,12 +25,12 @@ $NetBSD: patch-aa,v 1.6 1999/10/01 15:09:23 drochner Exp $
  SYSCONF_LIBS_QT_OPENGL	= -lqgl
  # OpenGL
  SYSCONF_LFLAGS_OPENGL	= -L/usr/X11R6/lib
-@@ -24,38 +25,24 @@
+@@ -25,41 +26,27 @@
  SYSCONF_LIBS_YACC	= 
  
  # Linking applications
 -SYSCONF_LINK		= g++
-+SYSCONF_LINK		= $(LIBTOOL) --mode=link g++
++SYSCONF_LINK		= $(LIBTOOL) --cplusplus --mode=link g++
  SYSCONF_LFLAGS		= 
  SYSCONF_LIBS		= 
  
@@ -35,12 +41,12 @@ $NetBSD: patch-aa,v 1.6 1999/10/01 15:09:23 drochner Exp $
  SYSCONF_MOC		= $(QTDIR)/bin/moc
  
 -# Linking shared libraries
--#   - Build the $(TARGET) library, eg. lib$(TARGET).so.0.0
+-#   - Build the $(TARGET) library, eg. lib$(TARGET).so.2.0.1
 -#   - Place target in $(DESTDIR) - which has a trailing /
--#   - Usually needs to incorporate $(VER_MAJ) and $(VER_MIN)
+-#   - Usually needs to incorporate $(VER_MAJ), $(VER_MIN) and $(VER_PATCH)
 -#
 -SYSCONF_LINK_SHLIB	= ld
--SYSCONF_LINK_TARGET_SHARED	= lib$(TARGET).so.$(VER_MAJ).$(VER_MIN)
+-SYSCONF_LINK_TARGET_SHARED	= lib$(TARGET).so.$(VER_MAJ).$(VER_MIN).$(VER_PATCH)
 -SYSCONF_LINK_LIB_SHARED	= $(SYSCONF_LINK_SHLIB) -Bshareable $(LFLAGS) -o $(DESTDIR)$(SYSCONF_LINK_TARGET_SHARED) `lorder /usr/lib/c++rt0.o $(OBJECTS) $(OBJMOC) | tsort` $(LIBS)
 -
 -# Linking static libraries
@@ -52,17 +58,22 @@ $NetBSD: patch-aa,v 1.6 1999/10/01 15:09:23 drochner Exp $
 -SYSCONF_LINK_TARGET_STATIC = lib$(TARGET).a
 -SYSCONF_LINK_LIB_STATIC	= rm -f $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) ; \
 -				 $(SYSCONF_AR) $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) $(OBJECTS) $(OBJMOC) 
-+SYSCONF_LINK_TARGET = lib$(TARGET).la
-+SYSCONF_LINK_LIB	= rm -f $(SYSCONF_LINK_TARGET) ; \
-+	$(LIBTOOL) --mode=link g++ -rpath $(PREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) \
-+	-o $(SYSCONF_LINK_TARGET) $(OBJECTS:.o=.lo) $(OBJMOC:.o=.lo) 
++SYSCONF_LINK_TARGET	= lib$(TARGET).la
++SYSCONF_LINK_LIB	= rm -f $(DESTDIR)$(SYSCONF_LINK_TARGET) ; \
++	$(SYSCONF_LINK) -rpath $(PREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) \
++	-o $(SYSCONF_LINK_TARGET) $(OBJECTS:.o=.lo) $(OBJMOC:.o=.lo)
  # Compiling application source
- SYSCONF_CXXFLAGS	= -O2 -fno-strength-reduce
+ SYSCONF_CXXFLAGS	= -O2
+ SYSCONF_CFLAGS		= -O2
  # Compiling library source
--SYSCONF_CXXFLAGS_LIB	= -O2 -fno-strength-reduce -fPIC
-+SYSCONF_CXXFLAGS_LIB	=
+-SYSCONF_CXXFLAGS_LIB	= -fPIC
+-SYSCONF_CFLAGS_LIB	= -fPIC
++SYSCONF_CXXFLAGS_LIB	= 
++SYSCONF_CFLAGS_LIB	= 
  # Compiling shared-object source
--SYSCONF_CXXFLAGS_SHOBJ	= -O2 -fno-strength-reduce -fPIC
+-SYSCONF_CXXFLAGS_SHOBJ	= -fPIC
+-SYSCONF_CFLAGS_SHOBJ	= -fPIC
 -SYSCONF_LINK_LIB	= $(SYSCONF_LINK_LIB_STATIC)
 -SYSCONF_LINK_TARGET	= $(SYSCONF_LINK_TARGET_STATIC)
-+SYSCONF_CXXFLAGS_SHOBJ	= -O2 -fno-strength-reduce
++SYSCONF_CXXFLAGS_SHOBJ	= 
++SYSCONF_CFLAGS_SHOBJ	= 
