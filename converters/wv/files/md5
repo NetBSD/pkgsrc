@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/09/05 10:35:26 wiz Exp $
+$NetBSD: md5,v 1.4 2000/10/16 15:14:23 rh Exp $
 
-MD5 (wv-0.5.44.tar.gz) = e1286c8792d3912e4c15de68dcbff7be
+MD5 (wv-0.6.0.tar.gz) = 0addb073d247c550824976196cbaa8b8

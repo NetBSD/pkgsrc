@@ -1,26 +1,26 @@
-$NetBSD: patch-aa,v 1.2 2000/08/05 02:39:19 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2000/10/16 15:14:23 rh Exp $
 
---- Makefile.in.orig	Thu Dec 16 10:52:20 1999
-+++ Makefile.in	Fri Aug  4 21:37:11 2000
+--- Makefile.in.orig	Wed Sep 20 20:42:43 2000
++++ Makefile.in
 @@ -76,7 +76,7 @@
  
  VPATH = @srcdir@
  
--CFLAGS = @CFLAGS@ @DEFS@ @ZLIB_CFLAGS@ -I. -I./ -I$(srcdir)/ -I$(srcdir)/iconv/ -I$(srcdir)/magick/ -I$(srcdir)/expat/xmlparse/ -I$(srcdir)/oledecod/  @TTF_CFLAGS@ @WMF_CFLAGS@ -DTTFDIR=\"$(libdir)/wv/ttf\" -DXMLCONFIG=\"$(libdir)/wv/wvConfig.xml\" -DHTMLCONFIG=\"$(libdir)/wv/wvHtml.xml\" 
-+CFLAGS = @CFLAGS@ @DEFS@ @ZLIB_CFLAGS@ -I. -I./ -I$(srcdir)/ -I$(srcdir)/iconv/ -I$(srcdir)/magick/ -I$(srcdir)/expat/xmlparse/ -I$(srcdir)/oledecod/ @WMF_CFLAGS@ @TTF_CFLAGS@ -DTTFDIR=\"$(prefix)/share/wv/ttf\" -DXMLCONFIG=\"$(prefix)/share/wv/wvConfig.xml\" -DHTMLCONFIG=\"$(prefix)/share/wv/wvHtml.xml\" @CPPFLAGS@
+-CFLAGS = @CFLAGS@ @DEFS@ @ZLIB_CFLAGS@ -I. -I./ -I$(srcdir)/ -I$(srcdir)/getopt-wv/ -I$(srcdir)/iconv/ -I$(srcdir)/magick/ -I$(srcdir)/expat/xmlparse/ @TTF_CFLAGS@ @WMF_CFLAGS@ -DTTFDIR=\"$(libdir)/wv/ttf\" -DXMLCONFIG=\"$(libdir)/wv/wvConfig.xml\" -DHTMLCONFIG=\"$(libdir)/wv/wvHtml.xml\" 
++CFLAGS = @CFLAGS@ @DEFS@ @ZLIB_CFLAGS@ -I. -I./ -I$(srcdir)/ -I$(srcdir)/getopt-wv/ -I$(srcdir)/iconv/ -I$(srcdir)/magick/ -I$(srcdir)/expat/xmlparse/ @WMF_CFLAGS@ @TTF_CFLAGS@ -DTTFDIR=\"$(prefix)/share/wv/ttf\" -DXMLCONFIG=\"$(prefix)/share/wv/wvConfig.xml\" -DHTMLCONFIG=\"$(prefix)/share/wv/wvHtml.xml\" 
  
- MKINSTALLDIRS = $(srcdir)/mkinstalldirs
- 
-@@ -223,7 +223,7 @@
+ CFLAGS += \
+ 	-I$(srcdir)/libole2/ \
+@@ -237,7 +237,7 @@
  wv-incconfig: Makefile
- 	rm -f wv-incconfig
+ 	$(RM) -f wv-incconfig
  	echo \#\!/bin/sh > wv-incconfig
 -	echo echo @ZLIB_CFLAGS@ -I$(includedir) @WMF_CFLAGS@ >> wv-incconfig
 +	echo echo @WMF_CFLAGS@ @ZLIB_CFLAGS@ -I$(includedir) >> wv-incconfig
  
  lex.yy.c: parser.lex
  	$(LEX) parser.lex
-@@ -293,10 +293,11 @@
+@@ -325,10 +325,11 @@
  	$(mandir) \
  	$(mandir)/man1 \
  	$(libdir) \
@@ -36,17 +36,18 @@ $NetBSD: patch-aa,v 1.2 2000/08/05 02:39:19 jlam Exp $
  	$(includedir)
  	
  
-@@ -313,13 +314,16 @@
- 	$(INSTALL_DATA) $(srcdir)/wvHtml.1 $(mandir)/man1/
+@@ -366,15 +367,15 @@
+ 	$(INSTALL_DATA) $(srcdir)/wvSummary.1 $(mandir)/man1/
  	$(INSTALL_DATA) wv.h $(includedir)/wv.h
  	$(INSTALL_DATA) $(srcdir)/libwv.a $(libdir)/libwv.a
 -	$(INSTALL_DATA) $(srcdir)/wvHtml.xml $(libdir)/wv/wvHtml.xml
+-	$(INSTALL_DATA) $(srcdir)/wvLaTeX.xml $(libdir)/wv/wvLaTeX.xml
+-	$(INSTALL_DATA) $(srcdir)/wvCleanLaTeX.xml $(libdir)/wv/wvCleanLaTeX.xml
 -	$(INSTALL_DATA) $(srcdir)/wvConfig.xml $(libdir)/wv/wvConfig.xml
-+	$(INSTALL_DATA) $(srcdir)/lyx.xml $(prefix)/share/wv/lyx.xml
 +	$(INSTALL_DATA) $(srcdir)/wvHtml.xml $(prefix)/share/wv/wvHtml.xml
-+	$(INSTALL_DATA) $(srcdir)/wvConfig.xml $(prefix)/share/wv/wvConfig.xml
 +	$(INSTALL_DATA) $(srcdir)/wvLaTeX.xml $(prefix)/share/wv/wvLaTeX.xml
-+	$(INSTALL_DATA) $(srcdir)/wvOnline.xml $(prefix)/share/wv/wvOnline.xml
++	$(INSTALL_DATA) $(srcdir)/wvCleanLaTeX.xml $(prefix)/share/wv/wvCleanLaTeX.xml
++	$(INSTALL_DATA) $(srcdir)/wvConfig.xml $(prefix)/share/wv/wvConfig.xml
  	for filename in wingdingfont/*.gif; do \
 -		$(INSTALL_DATA) $$filename $(libdir)/wv/wingdingfont; \
 +		$(INSTALL_DATA) $$filename $(prefix)/share/wv/wingdingfont; \

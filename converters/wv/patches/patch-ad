@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2000/10/16 15:14:23 rh Exp $
+
+--- wv.h.orig	Mon Oct 16 15:35:58 2000
++++ wv.h
+@@ -109,7 +109,11 @@
+     S32 y;
+     }POINT;
+ #else
++#define read_32ubit wmf_read_32ubit
++#define read_16ubit wmf_read_16ubit
+ #	include <wmfapi.h>
++#undef read_32ubit
++#undef read_16ubit
+ #endif
+ 
+ 

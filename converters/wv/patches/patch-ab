@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2000/08/05 02:39:19 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2000/10/16 15:14:23 rh Exp $
 
---- configure.in.orig	Thu Dec 16 10:35:16 1999
-+++ configure.in	Fri Aug  4 21:37:12 2000
-@@ -305,7 +305,7 @@
+--- configure.orig	Tue Sep 19 21:38:01 2000
++++ configure
+@@ -3567,7 +3567,7 @@
  _SAVE_LDFLAGS=$LDFLAGS
  
  if test "$TTF_DIR" != "" ; then
@@ -11,18 +11,28 @@ $NetBSD: patch-ab,v 1.2 2000/08/05 02:39:19 jlam Exp $
  LDFLAGS="-L${TTF_DIR}/lib $LDFLAGS"
  fi
  
-@@ -319,20 +319,21 @@
-     AC_MSG_RESULT("$result")
- fi
- if [ test "$SYSTEM_TTF" = 1 ]; then
--    AC_CHECK_LIB(ttf, TT_Init_FreeType, [TTF_LIBS="-lttf"],no_ttf=yes,-lm)
-+    AC_CHECK_LIB(ttf, TT_Init_FreeType, [TTF_LIBS="-lttf -lintl"],
-+    no_ttf=yes,-lintl)
+@@ -3602,7 +3602,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
  else
-     no_ttf=yes
+   ac_save_LIBS="$LIBS"
+-LIBS="-lttf -lm $LIBS"
++LIBS="-lttf -lintl -lm $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 3608 "configure"
+ #include "confdefs.h"
+@@ -3630,7 +3630,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  TTF_LIBS="-lttf"
++  TTF_LIBS="-lttf -lintl"
+ else
+   echo "$ac_t""no" 1>&6
+ no_ttf=yes
+@@ -3641,14 +3641,14 @@
  fi
  
- if [ test -n "${TTF_DIR}" && test -d "${TTF_DIR}" && test "$SYSTEM_TTF" = 1 ]; then
+ if  test -n "${TTF_DIR}" && test -d "${TTF_DIR}" && test "$SYSTEM_TTF" = 1 ; then
 -    TTF_CFLAGS="-I${TTF_DIR}/include"
 +    TTF_CFLAGS="-I${TTF_DIR}/include/freetype"
      TTF_LIBS="-L${TTF_DIR}/lib ${TTF_LIBS}"
@@ -37,27 +47,36 @@ $NetBSD: patch-ab,v 1.2 2000/08/05 02:39:19 jlam Exp $
  	fi
  
  	if test "$TTF_DIR" = no; then
-@@ -345,15 +346,16 @@
- 		AC_MSG_RESULT("$result")
- 	fi
- 	if [ test "$SYSTEM_TTF" = 1 ]; then
--		AC_CHECK_LIB(ttf, TT_Init_FreeType, [TTF_LIBS="-lttf"],no_ttf=yes,-lm)
-+		AC_CHECK_LIB(ttf, TT_Init_FreeType, [TTF_LIBS="-lttf -lintl"],
-+		no_ttf=yes,-lintl)
- 	else
- 		no_ttf=yes
- 	fi
+@@ -3684,7 +3684,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lttf -lm $LIBS"
++LIBS="-lttf -lintl -lm $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 3690 "configure"
+ #include "confdefs.h"
+@@ -3712,7 +3712,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  TTF_LIBS="-lttf"
++  TTF_LIBS="-lttf -lintl"
+ else
+   echo "$ac_t""no" 1>&6
+ no_ttf=yes
+@@ -3724,8 +3724,8 @@
  
  
- if [ test -n "${TTF_DIR}" && test -d "${TTF_DIR}" && test "$SYSTEM_TTF" = 1 ]; then
+ if  test -n "${TTF_DIR}" && test -d "${TTF_DIR}" && test "$SYSTEM_TTF" = 1 ; then
 -    TTF_CFLAGS="-I${TTF_DIR}"
 -    TTF_LIBS="-L${TTF_DIR} ${TTF_LIBS}"
 +    TTF_CFLAGS="-I${TTF_DIR}/include/freetype"
-+    TTF_LIBS="-L${TTF_DIR}/include ${TTF_LIBS}"
++    TTF_LIBS="-L${TTF_DIR}/lib ${TTF_LIBS}"
  fi
  
  fi
-@@ -374,7 +376,7 @@
+@@ -3747,7 +3747,7 @@
  _SAVE_LIBS=$LIBS
  
  if test "$WMF_DIR" != "" ; then
@@ -66,26 +85,37 @@ $NetBSD: patch-ab,v 1.2 2000/08/05 02:39:19 jlam Exp $
  LDFLAGS="-L${WMF_DIR}/lib $LDFLAGS"
  fi
  
-@@ -397,13 +399,13 @@
+@@ -3813,7 +3813,7 @@
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  WMF_LIBS="-lgdwmf -lwmf -lxgd -ldib -lpng"
++  WMF_LIBS="-lgdwmf -lwmf -lttf -lxgd -ldib -lpng"
+ else
+   echo "$ac_t""no" 1>&6
+ no_wmf=yes
+@@ -3824,7 +3824,7 @@
  fi
  
- if [ test -n "${WMF_DIR}" && test -d "${WMF_DIR}" && test "$SYSTEM_WMF" = 1 ]; then
+ if  test -n "${WMF_DIR}" && test -d "${WMF_DIR}" && test "$SYSTEM_WMF" = 1 ; then
 -    WMF_CFLAGS="-I${WMF_DIR}/include"
 +    WMF_CFLAGS="-I${WMF_DIR}/include/libwmf"
      WMF_LIBS="-L${WMF_DIR}/lib ${WMF_LIBS}"
  fi
  
- if test "x$no_wmf" = xyes; then
- 	if test "$WMF_DIR" != "" ; then
--	CFLAGS="-I${WMF_DIR}/include $CFLAGS"
-+	CFLAGS="-I${WMF_DIR}/include/libwmf $CFLAGS"
- 	LDFLAGS="-L${WMF_DIR}/lib $LDFLAGS"
- 	fi
+@@ -3869,7 +3869,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lgdwmf -lwmf -lxgd -ldib -lpng $TTF_LIBS $XPM_LIBS $X_LIBS -lX11 $X_EXTRA_LIBS -lm $LIBS"
++LIBS="-lgdwmf -lwmf -lttf -lxgd -ldib -lpng $TTF_LIBS $XPM_LIBS $X_LIBS -lX11 $X_EXTRA_LIBS -lm $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 3875 "configure"
+ #include "confdefs.h"
+@@ -3909,8 +3909,8 @@
  
-@@ -427,8 +429,8 @@
  
- 
- if [ test -n "${WMF_DIR}" && test -d "${WMF_DIR}" && test "$SYSTEM_WMF" = 1 ]; then
+ if  test -n "${WMF_DIR}" && test -d "${WMF_DIR}" && test "$SYSTEM_WMF" = 1 ; then
 -    WMF_CFLAGS="-I${WMF_DIR}"
 -    WMF_LIBS="-L${WMF_DIR} ${WMF_LIBS}"
 +    WMF_CFLAGS="-I${WMF_DIR}/include/libwmf"
@@ -93,3 +123,17 @@ $NetBSD: patch-ab,v 1.2 2000/08/05 02:39:19 jlam Exp $
  fi
  
  fi
+@@ -5425,11 +5425,11 @@
+ 		echo $ac_n "checking if PNG package is complete""... $ac_c" 1>&6
+ echo "configure:5427: checking if PNG package is complete" >&5
+ 		if test $passed -gt 0; then
+-			if test $failed -gt 0; then
++			if false; then
+ 				echo "$ac_t""no -- some components failed test" 1>&6
+ 				have_png='no (failed tests)'
+ 			else
+-				LIB_PNG='-lpng'
++				LIB_PNG='-lpng -lz'
+ 				cat >> confdefs.h <<\EOF
+ #define HasPNG 1
+ EOF
