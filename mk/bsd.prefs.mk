@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.160 2004/04/26 17:29:33 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.161 2004/07/02 16:27:48 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -262,7 +262,7 @@ SHAREMODE?=		${DOCMODE}
 .  include "${.CURDIR}/../../mk/defs.NetBSD.mk"
 .elif exists(${.CURDIR}/../mk/defs.NetBSD.mk)
 .  include "${.CURDIR}/../mk/defs.NetBSD.mk"
-.else exists(${.CURDIR}/mk/defs.NetBSD.mk)
+.elif exists(${.CURDIR}/mk/defs.NetBSD.mk)
 .  include "${.CURDIR}/mk/defs.NetBSD.mk"
 .endif
 
