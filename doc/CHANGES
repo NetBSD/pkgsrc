@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2882 2003/07/25 09:09:45 jmmv Exp $
+$NetBSD: CHANGES,v 1.2883 2003/07/25 09:15:03 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2931,3 +2931,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added bkedit-0.6.21 [wiz 2003-07-24]
 	Added openssh+gssapi-3.6.1.2.20030430 [jwise 2003-07-24]
 	Updated xmule to 1.4.2 [jmmv 2003-07-25]
+	Updated gnome2-terminal to 2.0.2 [jmmv 2003-07-25]
