@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2296 2003/05/23 14:21:05 kristerw Exp $
+$NetBSD: CHANGES,v 1.2297 2003/05/23 14:47:08 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2108,3 +2108,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated moz-flash to 1.0nb4 [salo 2003-05-23]
 	Updated xmame to 0.68.1 [kristerw 2003-05-23]
 	Updated xmess to 0.68.1 [kristerw 2003-05-23]
+	Added scli-0.2.12 [seb 2003-05-23]
