@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.19 1999/02/20 22:48:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 1999/03/27 23:08:45 frueauf Exp $
 # $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
-DISTNAME=	ddd-3.1.3
+DISTNAME=	ddd-3.1.4
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ips.cs.tu-bs.de/pub/local/softech/ddd/  \
 		ftp://richb-pc.acc.qc.edu/pub/ddd/  \
 		ftp://ftp.gre.ac.uk/pub/tools/debuggers/ddd/  \
 		ftp://uiarchive.cso.uiuc.edu/pub/packages/ddd/
 
-MAINTAINER=     packages@netbsd.org
+MAINTAINER=     frueauf@netbsd.org
 HOMEPAGE=	http://www.cs.tu-bs.de/softech/ddd/
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
