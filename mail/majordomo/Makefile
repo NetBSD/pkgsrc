@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/09/12 11:05:12 agc Exp $
+# $NetBSD: Makefile,v 1.16 2001/10/01 21:15:12 jlam Exp $
 
 DISTNAME=		majordomo-1.94.5
 CATEGORIES=		mail
@@ -64,6 +64,7 @@ require-uid:
 		if ! ${CHGRP} ${MAJORDOMO_GROUP}			\
 			"/tmp/grouptestmajordomo1.$$" >/dev/null 2>&1; then \
 			realtarget="root-require-uid";			\
+			action="create user for";			\
 			${_SU_TARGET};					\
 		fi;							\
 		${RM} -f "/tmp/grouptestmajordomo1.$$";			\

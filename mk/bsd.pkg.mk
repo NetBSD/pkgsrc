@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.817 2001/10/01 17:14:40 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.818 2001/10/01 21:15:11 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2014,7 +2014,7 @@ _SU_TARGET=								\
 			${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
 			${PRE_ROOT_CMD};				\
 		fi;                                             	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to install ${PKGNAME}."; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`/bin/hostname` to $$action ${PKGNAME}."; \
 		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
 		${SU_CMD} "cd ${.CURDIR}; ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
 	fi
@@ -2033,12 +2033,14 @@ do-su-install:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	realtarget="real-su-install";					\
+	action="install";						\
 	${_SU_TARGET} 
 
 do-su-package:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Packaging ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	realtarget="real-su-package";					\
+	action="package";						\
 	${_SU_TARGET} 
 	
 
@@ -2081,6 +2083,7 @@ do-su-deinstall: uptodate-pkgtools
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	realtarget="real-su-deinstall";					\
 	realflags="DEINSTALLDEPENDS=${DEINSTALLDEPENDS}";		\
+	action="deinstall";						\
 	${_SU_TARGET} 
 
 .  if (${DEINSTALLDEPENDS} != "NO")
