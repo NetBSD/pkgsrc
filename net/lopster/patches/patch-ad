@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2001/03/28 02:35:38 hubertf Exp $
+$NetBSD: patch-ad,v 1.2 2002/01/18 13:39:05 martti Exp $
 
---- Makefile.in.orig	Tue Feb 13 23:58:32 2001
-+++ Makefile.in
-@@ -86,7 +86,7 @@
+--- Makefile.in.orig	Sun Nov  4 19:33:45 2001
++++ Makefile.in	Fri Jan 18 14:21:55 2002
+@@ -87,7 +87,7 @@
  VERSION = @VERSION@
  l = @l@
  
