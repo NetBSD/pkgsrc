@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/16 06:40:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/24 13:51:14 grant Exp $
 #
 
 DISTNAME=	mono-0.29
@@ -19,7 +19,7 @@ NOT_FOR_PLATFORM=	NetBSD-1.[0-5]*-*
 NOT_FOR_PLATFORM+=	NetBSD-1.6-* NetBSD-1.6.*-*
 NOT_FOR_PLATFORM+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[AB]-*
 
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/06/23 20:36:13 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/24 13:51:14 grant Exp $
 #
 
 DISTNAME=	coq-7.4
@@ -10,7 +10,7 @@ MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://coq.inria.fr/
 COMMENT=	Theorem prover which extracts programs from proofs
 
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_BUILDLINK2=	YES
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	-prefix ${PREFIX}

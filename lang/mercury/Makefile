@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/09/28 09:13:57 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/24 13:51:14 grant Exp $
 
 DISTNAME=		mercury-compiler-0.11.0
 PKGNAME=		mercury-0.11.0
@@ -13,7 +13,7 @@ COMMENT=		Modern logic/functional programming language
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_GNU_READLINE=	yes	# rl_prep_term_function
 
 INFO_FILES=		mercury.info mercury_faq.info mercury_library.info

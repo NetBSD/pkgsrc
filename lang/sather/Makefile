@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/13 20:29:46 kristerw Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/24 13:51:15 grant Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		2
@@ -11,7 +11,7 @@ COMMENT=		Compiler for the Sather object oriented programming language
 
 USE_BUILDLINK2=		# defined
 USE_X11=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 
 ALL_TARGET=		full optional
 MAKE_ENV+=		_OPSYS_RPATH_NAME=${_OPSYS_RPATH_NAME}
