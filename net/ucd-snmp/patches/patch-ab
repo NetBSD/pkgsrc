@@ -1,0 +1,11 @@
+--- agent/Makefile.in.orig	Tue Apr 20 18:13:58 1999
++++ agent/Makefile.in	Tue Apr 20 18:14:11 1999
+@@ -4,7 +4,7 @@
+ 
+ TARG=	 snmpd
+ USELIBS= ../snmplib/libsnmp.$(SHLIB_EXTENSION)$(SHLIB_VERSION)
+-LIBS=	 -L../snmplib $(CC_RUNTIME_ARG) -lsnmp @LIBS@
++LIBS=	 -L../snmplib $(CC_RUNTIME_ARG) -lsnmp @LIBS@ @LIBWRAP@
+ 
+ CPPFLAGS=@CPPFLAGS@ -I.. -I$(srcdir)/.. -I$(srcdir)/../snmplib \
+ 	-I$(srcdir) -I. -I$(srcdir)/mibgroup -Imibgroup
