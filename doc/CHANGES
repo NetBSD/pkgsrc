@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2364 2003/05/30 14:17:53 gehenna Exp $
+$NetBSD: CHANGES,v 1.2365 2003/05/30 15:28:43 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2207,3 +2207,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ipa to 1.3.4 [salo 2003-05-30]
 	Updated arts to 1.1.2nb1 [markd 2003-05-30]
 	Updated cvsync to 0.22.0 [gehenna 2003-05-30]
+	Updated seahorse to 0.7.3 [jmmv 2003-05-30]

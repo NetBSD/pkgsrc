@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.604 2003/05/30 14:30:44 taca Exp $
+$NetBSD: TODO,v 1.605 2003/05/30 15:28:43 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -232,7 +232,6 @@ Suggested package updates
 	o sawfish-1.3
 	o scribus-0.8
 	o scsh-0.6.4
-	o seahorse-0.7.3
 	o sendfile-20010424
 	o sketch-0.6.15
 	o smalltalk-2.1.2
