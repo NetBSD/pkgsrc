@@ -1,0 +1,58 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/02/19 12:35:21 agc Exp $
+
+Linux tape handling.
+
+--- tapecopy.c	2001/02/19 12:10:13	1.1
++++ tapecopy.c	2001/02/19 12:14:00
+@@ -113,6 +113,7 @@
+ {
+ int             rc;                     /* Return code               */
+ struct mtget    stblk;                  /* Area for MTIOCGET ioctl   */
++long		gstat;
+ 
+     rc = ioctl (devfd, MTIOCGET, (char*)&stblk);
+     if (rc < 0)
+@@ -122,10 +123,15 @@
+         return -1;
+     }
+ 
+-    print_status (devname, stblk.mt_gstat);
++#if (defined(BSD) && BSD >= 199306)
++    gstat = (stblk.mt_dsreg << 16) | stblk.mt_erreg;
++#else
++    gstat = stblk.mt_gstat;
++#endif
++    print_status (devname, gstat);
+ 
+-    if (GMT_EOD(stblk.mt_gstat)) return 1;
+-    if (GMT_EOT(stblk.mt_gstat)) return 1;
++    if (GMT_EOD(gstat)) return 1;
++    if (GMT_EOT(gstat)) return 1;
+ 
+     return 0;
+ } /* end function print_status */
+@@ -152,6 +158,7 @@
+ long            density;                /* Tape density code         */
+ BYTE            labelrec[81];           /* Standard label (ASCIIZ)   */
+ AWSTAPE_BLKHDR  awshdr;                 /* AWSTAPE block header      */
++long		gstat;
+ 
+     /* The first argument is the tape device name */
+     if (argc > 1 && argv[1] != NULL && strlen(argv[1]) > 5
+@@ -209,9 +216,14 @@
+     else
+         printf ("%s tape density code: 0x%lX\n", devname, density);
+ 
+-    if (stblk.mt_gstat != 0)
++#if (defined(BSD) && BSD >= 199306)
++    gstat = (stblk.mt_dsreg << 16) | stblk.mt_erreg;
++#else
++    gstat = stblk.mt_gstat;
++#endif
++    if (gstat != 0)
+     {
+-        print_status (devname, stblk.mt_gstat);
++        print_status (devname, gstat);
+     }
+ 
+     /* Set the tape device to process variable length blocks */
