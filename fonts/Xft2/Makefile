@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/08/02 13:45:22 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2003/09/19 01:56:45 grant Exp $
 #
 
 DISTNAME=	fcpackage.2_1
@@ -20,7 +20,7 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 USE_X11=	YES
-USE_GNU_TOOLS=	awk
+USE_GNU_TOOLS+=	awk
 
 .include "../../fonts/fontconfig/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
