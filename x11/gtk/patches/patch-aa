@@ -1,0 +1,10 @@
+--- glib/configure.orig	Wed Jan 28 13:28:59 1998
++++ glib/configure	Wed Jan 28 13:31:16 1998
+@@ -561,6 +561,7 @@
+ # AFS /usr/afsws/bin/install, which mishandles nonexistent args
+ # SVR4 /usr/ucb/install, which tries to use the nonexistent group "staff"
+ # ./install, which can be erroneously created by make from ./install.sh.
++INSTALL=""         # added to make it work with NetBSD pkg system.
+ echo $ac_n "checking for a BSD compatible install""... $ac_c" 1>&6
+ echo "configure:566: checking for a BSD compatible install" >&5
+ if test -z "$INSTALL"; then
