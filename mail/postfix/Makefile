@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.148 2004/08/07 07:58:32 jlam Exp $
+# $NetBSD: Makefile,v 1.149 2004/08/07 16:56:53 jlam Exp $
 
 DISTNAME=	postfix-2.1.4
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 DIST_SUBDIR=	postfix
 
-PATCHFILES+=		postfix-2.1.1-canonical_classes-with_docs.diff
-PATCH_SITES+=		ftp://ftp.gw.com/pub/people/kim/patches/
-PATCH_DIST_STRIP=	-p1
+CLASS_PATCH=		postfix-2.1.1-canonical_classes-with_docs.diff
+PATCHFILES+=		${CLASS_PATCH}
+SITES_${CLASS_PATCH}=	ftp://ftp.gw.com/pub/people/kim/patches/
+PATCH_DIST_STRIP.${CLASS_PATCH}=	-p1
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
