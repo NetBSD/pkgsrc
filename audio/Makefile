@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.234 2004/05/09 04:44:26 minskim Exp $
+# $NetBSD: Makefile,v 1.235 2004/05/10 01:49:24 minskim Exp $
 #
 
 COMMENT=	Audio tools
@@ -157,6 +157,7 @@ SUBDIR+=	openal
 SUBDIR+=	oss
 SUBDIR+=	p5-Audio-CD
 SUBDIR+=	p5-Audio-Wav
+SUBDIR+=	p5-CDDB
 SUBDIR+=	p5-MP3-Info
 SUBDIR+=	p5-MP3-Tag
 SUBDIR+=	portaudio
