@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/02/21 21:25:03 agc Exp $
+# $NetBSD: Makefile,v 1.17 1999/02/23 08:45:48 agc Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/13 23:29:52 jmz Exp
 #
 
@@ -17,39 +17,31 @@ SCRIPTS_ENV=	"LANG=${ISPELL_LANG}"
 USE_GTEXINFO=	yes
 INFO_FILES=	ispell.info
 
-.include "../../mk/bsd.prefs.mk"
-
-_INTTYPES!=	if [ -e /usr/include/inttypes.h ]; then ${ECHO} "Exists"; else ${ECHO} "No go"; fi
-
-.if (${_INTTYPES} == "Exists")
-CFLAGS+= -DHAVE_INTTYPES_H
+.if exists(/usr/include/inttypes.h)
+CFLAGS+=	-DHAVE_INTTYPES_H
 .endif
 
-pre-extract pre-build pre-install:
-.if !defined(ISPELL_FR)
-	@${ECHO} '******************************************************'
-	@${ECHO} '* Note that you can build a french/english version   *'
-	@${ECHO} '* by typing "make french"                            *'
-	@${ECHO} '******************************************************'
-.else
+.include "../../mk/bsd.prefs.mk"
+
+.ifdef ISPELL_FR
 EXTRA_DICT=	francais-IREQ-1.4.tar.gz
 MASTER_SITES+=	ftp://ftp.robot.ireq.ca/pub/ispell/
 DISTFILES+=	${EXTRA_DICT}
 .endif
 
 pre-extract:
-.if !defined(ISPELL_LANG)
+.ifndef ISPELL_LANG
 	@${ECHO} '******************************************************'
 	@${ECHO} '* Note that you can build a british version by       *'
 	@${ECHO} '* typing "make british" following a "make clean"     *'
+	@${ECHO} '* Note that you can build a french/english version   *'
+	@${ECHO} '* by typing "make french"                            *'
 	@${ECHO} '******************************************************'
 .endif
 
 pre-configure:
 .if defined(EXTRA_DICT)
 	@${ECHO} ${EXTRA_DICT} > ${WRKDIR}/extra_dict
-.else
-	@${ECHO} -n
 .endif
 
 post-configure:
