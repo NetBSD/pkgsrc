@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6672 2004/07/25 07:43:30 grant Exp $
+$NetBSD: CHANGES,v 1.6673 2004/07/25 12:28:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3562,3 +3562,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Image-Imlib2 to 1.03 [kim 2004-07-25]
 	Updated nbsed to 20040725 [grant 2004-07-25]
 	Updated aspell to 0.50.5nb1 [grant 2004-07-25]
+	Updated NeoPop-SDL to 0.2 [wiz 2004-07-25]
