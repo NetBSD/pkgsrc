@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/12/04 03:59:26 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2004/12/23 14:43:28 jlam Exp $
 
 DISTNAME=	heimdal-0.6.3
 PKGREVISION=	2
@@ -46,7 +46,7 @@ PKG_DEFAULT_OPTIONS+=	prefix-cmds
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.heimdal
-PKG_SUPPORTED_OPTIONS=	db4 prefix-cmds #ldap
+PKG_SUPPORTED_OPTIONS=	db4 ldap prefix-cmds
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdb4)
@@ -55,11 +55,10 @@ PKG_SUPPORTED_OPTIONS=	db4 prefix-cmds #ldap
 .  include "../../mk/bdb.buildlink3.mk"
 .endif
 
-# XXX Using Heimdal with an LDAP backend isn't supported yet.
-#.if !empty(PKG_OPTIONS:Mldap)
-#.  include "../../databases/openldap/buildlink3.mk"
-#CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap}
-#.endif
+.if !empty(PKG_OPTIONS:Mldap)
+.  include "../../databases/openldap/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap}
+.endif
 
 # Rename some of Heimdal's applications so they won't conflict with
 # other packages.
