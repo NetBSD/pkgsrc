@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/01 19:14:30 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/13 20:26:31 jmmv Exp $
 lib/epiphany/extensions/libcertificatesextension.a
 lib/epiphany/extensions/libcertificatesextension.la
 lib/epiphany/extensions/libcertificatesextension.so
@@ -45,11 +45,15 @@ ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/epiphany-extensions-1.0.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/epiphany-extensions-1.0.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/epiphany-extensions-1.0.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/epiphany-extensions-1.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/epiphany-extensions-1.0.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/epiphany-extensions-1.0.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/epiphany-extensions-1.0.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/epiphany-extensions-1.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/epiphany-extensions-1.0.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/epiphany-extensions-1.0.mo
 @dirrm share/epiphany-extensions/icons
 @dirrm share/epiphany-extensions/glade
 @dirrm share/epiphany-extensions
