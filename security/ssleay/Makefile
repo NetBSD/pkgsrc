@@ -1,5 +1,9 @@
-# $NetBSD: Makefile,v 1.8 1998/09/30 20:08:21 cjs Exp $
+# $NetBSD: Makefile,v 1.9 1998/10/02 03:22:57 cjs Exp $
 # FreeBSD: Makefile,v 1.20 1998/08/27 16:38:02 markm Exp
+#
+#  Note that the config file goes in ${PREFIX}/lib; this cannot easily
+#  be changed to etc without modifing a bunch of code on the software
+#  itself, due to certain assumptions it makes. [cjs]
 #
 
 DISTNAME=		SSLeay-0.9.0b
@@ -20,7 +24,7 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	util/NetBSD.sh
 CONFIGURE_ARGS=		${MACHINE_ARCH}
 
-PLIST_SRC=	${PKGDIR}/PLIST
+PLIST_SRC=	${WRKSRC}/PLIST
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
 PLIST_SRC+=	${PKGDIR}/PLIST.rsaref2
 .endif
@@ -50,6 +54,8 @@ post-extract:
 	${SED} -e 's|@@@PREFIX@@@|${PREFIX}|g' < ${FILESDIR}/NetBSD.sh \
 		> ${WRKSRC}/util/NetBSD.sh
 	chmod 755 ${WRKSRC}/util/NetBSD.sh
+	${SED} -e 's|@@@PREFIX@@@|${PREFIX}|g' < ${PKGDIR}/PLIST \
+		> ${WRKSRC}/PLIST
 
 post-patch:
 	@${CP} ${WRKSRC}/Configure ${WRKSRC}/foo

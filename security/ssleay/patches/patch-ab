@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 1998/10/01 21:09:39 frueauf Exp $
+$NetBSD: patch-ab,v 1.6 1998/10/02 03:22:57 cjs Exp $
 --- Makefile.ssl.orig	Fri Jun 26 01:25:25 1998
 +++ Makefile.ssl	Wed Sep 16 14:33:49 1998
 @@ -62,7 +62,7 @@
@@ -14,6 +14,6 @@ $NetBSD: patch-ab,v 1.5 1998/10/01 21:09:39 frueauf Exp $
  		sh util/ranlib.sh $(INSTALLTOP)/lib/$$i; \
  		chmod 644 $(INSTALLTOP)/lib/$$i ); \
  	done
-+	cp apps/ssleay.cnf $(INSTALLTOP)/etc/ssleay.cnf.sample
++	cp apps/ssleay.cnf $(INSTALLTOP)/lib/ssleay.cnf.eg
  
  # DO NOT DELETE THIS LINE -- make depend depends on it.
