@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/12/19 20:16:06 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/03/07 07:13:59 jmc Exp $
 
 DISTNAME=	SNNSv4.2
 PKGNAME=	snns-4.2
@@ -16,6 +16,11 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS= --enable-global --prefix=${LOCALBASE}
 
 XGUILOADPATH=	${LOCALBASE}/share/snns
+
+#
+# Avoids a double configure loop that looses the install directory
+post-configure:
+		cd ${WRKSRC} && touch configuration/* configure Makefile.def config.h
 
 post-install:
 		${INSTALL_DATA_DIR} ${XGUILOADPATH};
