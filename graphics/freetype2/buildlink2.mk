@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2003/10/28 18:55:36 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2003/10/30 12:28:56 grant Exp $
 
 .if !defined(FREETYPE2_BUILDLINK2_MK)
 FREETYPE2_BUILDLINK2_MK=	# defined
@@ -87,6 +87,10 @@ LIBTOOL_ARCHIVE_UNTRANSFORM_SED+=	\
 	-e "s|${BUILDLINK_PREFIX.freetype2}/lib/libfreetype.la|${_BLNK_FREETYPE2_LDFLAGS}|g" \
 	-e "s|${LOCALBASE}/lib/libfreetype.la|${_BLNK_FREETYPE2_LDFLAGS}|g"
 .endif
+
+# packages expect to find the freetype headers in freetype/, so append
+# the right path to CPPFLAGS.
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.freetype2}/include/freetype2
 
 freetype2-buildlink: _BUILDLINK_USE
 
