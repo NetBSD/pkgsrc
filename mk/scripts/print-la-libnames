@@ -1,6 +1,6 @@
 # /bin/sh
 #
-# $NetBSD: print-la-libnames,v 1.3 2004/10/05 22:34:07 jlam Exp $
+# $NetBSD: print-la-libnames,v 1.4 2004/11/12 21:21:08 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -56,7 +56,7 @@ do
 	*)	lapath="./$la" ;;
 	esac
 
-	if [ -r "$lapath" ]; then
+	if [ -r "$lapath" -a ! -h "$lapath" ]; then
 		if ${GREP} -q "libtool library file" "$lapath"; then
 			. "$lapath"
 			if [ "$installed" = "no" ]; then
