@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/24 17:05:33 jmmv Exp $
-
-SHA1 (drwright-0.17.tar.bz2) = dbf75a2adc97fe1ae615a2889420d20ffe4ec2ff
-Size (drwright-0.17.tar.bz2) = 261762 bytes
-SHA1 (patch-aa) = ea2c1ed9bd0d8d6a9c9cd8cfde1d53e16e70a7b3
-SHA1 (patch-ab) = 85bbd95a12528910f9c02f7fa99193e778c8bee0
