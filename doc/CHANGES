@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4608 2004/01/26 12:05:22 tron Exp $
+$NetBSD: CHANGES,v 1.4609 2004/01/26 12:11:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -494,3 +494,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mencode to 1.0rc3nb1 [tron 2004-01-25]
 	Updated balsa2 2.0.16 [rh 2004-01-26]
 	Updated cucipop 1.31nb1 [grant 2004-01-26]
+	Updated gtk-gnutella to 0.93.3 [adam 2004-01-26]
