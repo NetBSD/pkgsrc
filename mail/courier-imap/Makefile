@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/08/15 19:40:04 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/16 06:23:21 jlam Exp $
 
 DISTNAME=	courier-imap-1.3.8.2
 CATEGORIES=	mail
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.inter7.com/courierimap/
 COMMENT=	IMAP server for access to Maildir-style mailboxes
+
+DEPENDS+=	courier-maildirmake-[0-9]*:../../mail/courier-maildirmake
 
 USE_BUILDLINK_ONLY=	# defined
 USE_GMAKE=		# defined
@@ -82,10 +84,14 @@ pre-install:
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/courierimap.sh ${PREFIX}/etc/courierimap
-	${INSTALL_SCRIPT} ${FILESDIR}/courierimaps.sh ${PREFIX}/etc/courierimaps
-	${INSTALL_SCRIPT} ${FILESDIR}/courierpop.sh ${PREFIX}/etc/courierpop
-	${INSTALL_SCRIPT} ${FILESDIR}/courierpops.sh ${PREFIX}/etc/courierpops
+	for file in							\
+		courierimap.sh courierimaps.sh				\
+		courierpop.sh courierpops.sh;				\
+	do								\
+		src=${FILESDIR}/$${file};				\
+		dest=${PREFIX}/etc/rc.d/$${file%.sh};			\
+		${INSTALL_SCRIPT} $${src} $${dest};			\
+	done
 	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/courier
 	${INSTALL_DATA} ${WRKSRC}/imap/README				\
