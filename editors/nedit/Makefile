@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.29 2003/07/17 21:34:44 grant Exp $
+# $NetBSD: Makefile,v 1.30 2003/12/12 10:20:53 adam Exp $
 
-VERS=		5.3
 DISTNAME=	nedit-${VERS}-source
 PKGNAME=	nedit-${VERS}
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
@@ -13,6 +12,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nedit.org/
 COMMENT=	Motif based standard GUI style text editor
+
+VERS=		5.3
 
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
