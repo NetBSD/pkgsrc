@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.36 2004/09/19 19:51:04 he Exp $
-#
+# $NetBSD: Makefile,v 1.37 2004/10/01 13:35:37 adam Exp $
 
-DISTNAME=		tcl8.4.6-src
-PKGNAME=		tcl-8.4.6
-PKGREVISION=		5
-CATEGORIES=		lang
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcl/}
+DISTNAME=	tcl8.4.7-src
+PKGNAME=	tcl-8.4.7
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
-MAINTAINER=		jwise@NetBSD.org
-HOMEPAGE=		http://www.tcl.tk/
-COMMENT=		Ousterhout's Tool Command Language, a scripting language
+MAINTAINER=	jwise@NetBSD.org
+HOMEPAGE=	http://www.tcl.tk/
+COMMENT=	Ousterhout's Tool Command Language, a scripting language
 
 CONFLICTS+=		tclman80-[0-9]*
 
@@ -27,7 +25,6 @@ INSTALL_TARGET=		install
 
 # Initially install the man pages into ${WRKDIR}/man, as we need a staged
 # install to avoid overwriting existing manpages in ${PREFIX}/man.
-#
 CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
 
 .include "../../mk/bsd.prefs.mk"
@@ -45,7 +42,6 @@ CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
 
 # NetBSD-1.5.x-m68k platforms apparently have a compiler optimization bug
 # tickled by the Tcl code that manifests in code generation problems.
-#
 .if (${MACHINE_PLATFORM:MNetBSD-1.5*-m68k} != "")
 CONFIGURE_ENV+=		COMPILER_OPTIMIZATION_BUG=YES
 .endif
@@ -58,7 +54,6 @@ CONFIGURE_ENV+=		COMPILER_OPTIMIZATION_BUG=YES
 
 # Modify mkLinks script to remove the short-filename manpage if it was
 # linked to a longer filename.
-#
 post-patch:
 	@cd ${WRKSRC};							\
 	${MV} -f mkLinks mkLinks.tmp;					\
