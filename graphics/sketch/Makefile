@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/11/14 14:47:54 agc Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/22 04:43:23 hubertf Exp $
 #
 
 DISTNAME=	sketch-0.6.10
@@ -37,7 +37,7 @@ do-install:
 .endfor
 	(cd ${WRKSRC}; ${INSTALL_SCRIPT} finishinst.py sk2ps.py sketch.py ${SKETCHDIR})
 	${INSTALL_DATA_DIR} ${SKETCHDOCDIR}
-	cd ${WRKSRC} && ${PAX} ${SKETCHDOCS} ${SKETCHDOCDIR}
+	cd ${WRKSRC} && ${PAX} -rw -pe -v ${SKETCHDOCS} ${SKETCHDOCDIR}
 	${INSTALL_DATA_DIR} ${SKETCHEXDIR}
 	cd ${WRKSRC}/Examples && ${PAX} -rw . ${SKETCHEXDIR}
 	(cd ${SKETCHDIR}; python finishinst.py)
