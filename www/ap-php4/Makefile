@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2004/02/14 17:21:54 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2004/04/24 23:03:25 xtraeme Exp $
 #
 
 PKGNAME=		ap-php-${PHP_BASE_VERS}
 PKGREVISION=		# empty
 COMMENT=		Apache (${PKG_APACHE}) module for PHP4
 
-DEPENDS+=		php>=${PHP_BASE_VERS}:../../www/php4
-
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 APACHE_MODULE=		YES
 SHLIBTOOL_OVERRIDE=	libtool
 
@@ -25,5 +23,6 @@ do-install:
 			${PREFIX}/lib/httpd/mod_php4.so;	\
 	fi
 
+.include "../../www/php4/buildlink3.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
