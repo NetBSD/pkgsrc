@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.26 1998/04/17 10:13:20 agc Exp $
+# $NetBSD: Packages.txt,v 1.27 1998/04/17 21:47:26 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -170,6 +170,11 @@ To get the package source going, you need to get the pkgsrc.tar.gz file
 from ftp://ftp.netbsd.org/pub/NetBSD-current/tar_files/pkgsrc.tar.gz and
 unpack it into /usr/pkgsrc.
 
+As an alternative, you can get pkgsrc via the Software Update Protocol,
+SUP. To do so, make sure your supfile has a line saying "release=pkgsrc" in
+it, see the examples in /usr/share/examples/supfiles, and that the
+directory /usr/pkgsrc does exist. Then, simply start "sup".
+
 
  2.2 Fetching distfiles
  ======================
@@ -255,14 +260,15 @@ Building, installation and creation of a binary package are all controlled
 by the package's Makefile.
 
 There is a Makefile for each package. This file includes the standard
-"../../mk/bsd.pkg.mk" file, which sets all the definitions and actions
-necessary for the package to compile and install itself. The mandatory fields
-are the DISTNAME which specifies the base name of the distribution file to be
-downloaded from the site on the Internet, MASTER_SITES which specifies that
-site, CATEGORIES which denotes the categories into which the package falls,
-PKGNAME which is the name of the package and the MAINTAINER name. This is
-so that anyone who quibbles with the (always completely correct) decisions
-taken by the guy who maintains the port can complain vigorously.
+bsd.pkg.mk file (referenced as "../../mk/bsd.pkg.mk"), which sets all the
+definitions and actions necessary for the package to compile and install
+itself. The mandatory fields are the DISTNAME which specifies the base name
+of the distribution file to be downloaded from the site on the Internet,
+MASTER_SITES which specifies that site, CATEGORIES which denotes the
+categories into which the package falls, PKGNAME which is the name of the
+package and the MAINTAINER name. This is so that anyone who quibbles with
+the (always completely correct) decisions taken by the guy who maintains
+the port can complain vigorously.
 
 Currently the following values are available for CATEGORIES. If more than
 one is used, they need to be separated by spaces:
