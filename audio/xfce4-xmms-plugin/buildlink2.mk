@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/12/03 06:38:40 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/12/13 00:45:21 wiz Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-xmms-plugin.
 #
@@ -9,7 +9,7 @@
 XFCE4_XMMS_PLUGIN_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-xmms-plugin
-BUILDLINK_DEPENDS.xfce4-xmms-plugin?=		xfce4-xmms-plugin>=0.1.1
+BUILDLINK_DEPENDS.xfce4-xmms-plugin?=		xfce4-xmms-plugin>=0.1.1nb1
 BUILDLINK_PKGSRCDIR.xfce4-xmms-plugin?=		../../audio/xfce4-xmms-plugin
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-xmms-plugin=xfce4-xmms-plugin
