@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.7 2004/02/10 08:54:14 grant Exp $
+$NetBSD: distinfo,v 1.8 2004/06/25 15:17:55 seb Exp $
 
-SHA1 (sed-4.0.9.tar.gz) = b11241648a58662d2976fd8384f74be1821fea65
-Size (sed-4.0.9.tar.gz) = 769849 bytes
+SHA1 (sed-4.1.tar.gz) = b5f1f9686dc7e9042d6c77dce45a5cad2cb8f11d
+Size (sed-4.1.tar.gz) = 773204 bytes
 SHA1 (patch-aa) = 781e0da47d5107eb8c24072e1ffefe258fa1fd49
-SHA1 (patch-ac) = c94eb0b500e2c50af14ed443a14991cc4097dd54
-SHA1 (patch-ad) = 4acbb42d539f13cd0b5f0d3f2f01a81d785bb895
 SHA1 (patch-ae) = ac64d18f3aa44777aba71a76a768aa3b8f72f9ff
