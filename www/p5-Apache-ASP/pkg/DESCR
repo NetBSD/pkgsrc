@@ -1,0 +1,10 @@
+This module provides a Active Server Pages port to Apache. Active Server
+Pages is a web application platform that originated with Microsoft's IIS
+server. Under Apache for both Win32 and Unix, it allows a developer to
+create web applications with session management and perl embedded in
+static html files.
+
+This is a portable solution, similar to ActiveWare's PerlScript and MKS's
+PScript implementation of perl for IIS ASP. Work has been done and will
+continue to make ports to and from these other implementations as seemless
+as possible.
