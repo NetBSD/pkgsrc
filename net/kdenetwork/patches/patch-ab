@@ -1,11 +1,11 @@
---- krn/Makefile.in.orig	Sun Apr 19 01:53:41 1998
-+++ krn/Makefile.in	Tue Apr 28 01:01:53 1998
-@@ -128,7 +128,7 @@
+--- krn/Makefile.in.orig	Fri Jul 10 20:38:48 1998
++++ krn/Makefile.in	Tue Jul 14 23:24:59 1998
+@@ -141,7 +141,7 @@
+ 	-lqt -lXext -lX11 -lmimelib -lgdbm $(LIBCOMPAT) $(LIBSOCKET)
  
- INCLUDES = $(all_includes)
- 
--LDADD = $(LIBCOMPAT) $(LIBSOCKET) $(all_libraries) -lkfm -lkhtmlw -ljscript -lkdeui -lkdecore -lkfile $(LIBJPEG) -lqt -lXext -lX11 -lmimelib -luulib -lgdbm $(KDE_RPATH)
-+LDADD = $(LIBCOMPAT) $(LIBSOCKET) $(all_libraries) -lkfm -lkhtmlw -ljscript -lkdeui -lkdecore -lkfile $(LIBJPEG) -lqt -lXext -lX11 -lmimelib -luu -lgdbm $(KDE_RPATH)
+ kdecode_LDADD = -lkfile -lkfm -lkdeui -lkdecore -lqt -lXext \
+-	-lX11 -luulib $(KDE_RPATH) $(LIBCOMPAT) $(LIBSOCKET)
++	-lX11 -luu $(KDE_RPATH) $(LIBCOMPAT) $(LIBSOCKET)
  
  ICONDIR = $(kde_icondir)
  MINIDIR =  $(kde_minidir)
