@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.285 2002/10/16 15:42:05 jschauma Exp $
+$NetBSD: CHANGES,v 1.286 2002/10/16 16:03:22 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3298,3 +3298,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gnumeric to 1.0.10 [martti 2002-10-16]
 	Added img2eps-0.1 [dillo 2002-10-16]
 	Added newmat-10 [jschauma 2002-10-16]
+	Updated oss to 3.9.7e [jlam 2002-10-16]
