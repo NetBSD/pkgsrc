@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 1998/09/13 20:39:44 garbled Exp $
+$NetBSD: patch-aa,v 1.4 1998/09/13 23:38:52 garbled Exp $
 --- Imakefile.orig	Sun Aug  1 22:45:08 1993
-+++ Imakefile	Sun Sep 13 13:25:43 1998
++++ Imakefile	Sun Sep 13 16:26:17 1998
 @@ -32,9 +32,9 @@
  
  ETCS =  cbzone.help \
@@ -45,12 +45,12 @@ $NetBSD: patch-aa,v 1.3 1998/09/13 20:39:44 garbled Exp $
  InstallNonExec(cbzone.help,$(TANK_LIBDIR))
  InstallNonExec(cbzone.motd,$(TANK_LIBDIR))
 -InstallNonExec(cbzone.highscores,$(TANK_LIBDIR))
-+InstallNonExec(cbzone.highscores,/var/games)
  InstallNamedNonExec(Cbzone.ad,Cbzone,$(TANK_APPDIR))
  InstallMultiple($(SOUNDS),$(TANK_SOUNDDIR))
  
  install::
 -	@if chgrp games $(TANK_BINDIR)/cbzone.exec $(TANK_LIBDIR)/cbzone.highscores 2>/dev/null ; then \
++	cat /dev/null >>/var/games/cbzone.highscores
 +	@if chgrp games $(TANK_BINDIR)/cbzone.exec /var/games/cbzone.highscores 2>/dev/null ; then \
  		(set -x ; chmod 2755 $(TANK_BINDIR)/cbzone.exec ) ; \
 -		(set -x ; chmod 664 $(TANK_LIBDIR)/cbzone.highscores ) ; \
