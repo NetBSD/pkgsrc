@@ -5,6 +5,7 @@ DIR_GZLIB=/usr/lib
 DIR_INC=$PREFIX/include
 DIR_JPEGLIB=$PREFIX/lib
 DIR_MAN=$PREFIX/man
+DSO=no
 INSTALL=
 JPEG=yes
 MANSCHEME=bsd-source-strip
