@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2004/10/20 21:25:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2004/12/28 21:57:30 jmmv Exp $
 #
 
-DISTNAME=	gnome-system-monitor-2.8.0
+DISTNAME=	gnome-system-monitor-2.8.1
 PKGNAME=	${DISTNAME:S/gnome/gnome2/}
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.8/}
