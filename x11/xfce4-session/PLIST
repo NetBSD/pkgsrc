@@ -1,0 +1,87 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/17 12:52:48 martti Exp $
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/nb_NO/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfce4-session.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfce4-session.mo
+bin/xfce4-session
+bin/xfce4-session-logout
+etc/xdg/xfce4-session/xfce4-session.rc
+include/xfce4/xfce4-session-4.2/libxfsm/xfsm-splash-engine.h
+include/xfce4/xfce4-session-4.2/libxfsm/xfsm-splash-rc.h
+lib/libxfsm-4.2.la
+lib/pkgconfig/xfce4-session-1.0.pc
+lib/xfce4/mcs-plugins/session_settings.la
+lib/xfce4/mcs-plugins/splash_settings.la
+lib/xfce4/splash/engines/libbalou.la
+lib/xfce4/splash/engines/libmice.la
+lib/xfce4/splash/engines/libsimple.la
+libexec/balou-export-theme
+libexec/balou-install-theme
+libexec/xfsm-shutdown-helper
+man/man1/xfce4-session.1
+man/man1/xfce4-session-logout.1
+share/applications/xfce-session-settings.desktop
+share/applications/xfce-splash-settings.desktop
+share/icons/hicolor/128x128/apps/xfce4-session.png
+share/icons/hicolor/48x48/apps/xfce4-session.png
+share/icons/hicolor/48x48/apps/xfce4-splash.png
+share/icons/hicolor/48x48/apps/xfsm-shutdown.png
+share/icons/hicolor/64x64/apps/xfsm-gnome-kde-logo.png
+share/icons/hicolor/72x72/apps/xfsm-trash-hilight.png
+share/icons/hicolor/72x72/apps/xfsm-trash-normal.png
+share/icons/hicolor/scalable/apps/xfce4-session.svg
+share/icons/hicolor/scalable/apps/xfsm-shutdown.svg
+share/themes/Default/balou/logo.png
+share/themes/Default/balou/themerc
+share/xfce4/doc/C/images/xfsm-advanced.png
+share/xfce4/doc/C/images/xfsm-general.png
+share/xfce4/doc/C/images/xfsm-splash.png
+share/xfce4/doc/C/xfce4-session.html
+@dirrm share/themes/Default/balou
+@dirrm share/icons/hicolor/72x72/apps
+@dirrm share/icons/hicolor/72x72
+@dirrm share/icons/hicolor/64x64/apps
+@dirrm share/icons/hicolor/64x64
+@dirrm share/icons/hicolor/128x128/apps
+@dirrm share/icons/hicolor/128x128
+@dirrm lib/xfce4/splash/engines
+@dirrm lib/xfce4/splash
+@dirrm include/xfce4/xfce4-session-4.2/libxfsm
+@dirrm include/xfce4/xfce4-session-4.2
+@dirrm etc/xdg/xfce4-session
+@unexec ${RMDIR} %D/share/themes/Default 2>/dev/null || ${TRUE}
