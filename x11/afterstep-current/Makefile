@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 1999/08/30 02:32:12 fredb Exp $
+# $NetBSD: Makefile,v 1.9 1999/09/03 11:12:25 fredb Exp $
 
 DISTNAME=		AfterStep-1.7.142
-PKGNAME=		afterstep-1.7.143
+PKGNAME=		afterstep-1.7.146
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.afterstep.org/devel/snapshots/ \
 			ftp://ftp.afterstep.org/devel/archives/1.7/ \
@@ -17,7 +17,10 @@ PATCH_SITES=		ftp://ftp.afterstep.org/devel/patches/ \
 	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/ \
 	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/contrib/ \
 	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/archive/
-PATCHFILES=		1.7.142-01-sasha-png_jpg_warnings.patch.gz
+PATCHFILES=	1.7.142-01-sasha-png_jpg_warnings.patch.gz \
+		1.7.142-02-tildouf-wharf_transient_and_Audio_fix.patch.gz \
+		1.7.142-03-allanon-icons_and_wharf.patch.gz \
+		1.7.142-04-allanon-desk_and_shaped_icons_and_wharf_reswallow.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		fb@enteract.com
