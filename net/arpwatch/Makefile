@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2001/02/25 04:18:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2001/08/24 11:37:07 abs Exp $
 #
 
-DISTNAME=	arpwatch-2.1a4
+DISTNAME=	arpwatch-2.1a11
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/
-EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	bouyer@netbsd.org
 COMMENT=	monitor ARP activity on a network, maintaining a database
@@ -25,8 +24,8 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-DEPENDS+=	libpcap-0.4:../../net/libpcap
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
+DEPENDS+=	libpcap>=0.4:../../net/libpcap
 .endif
 
 .include "../../mk/bsd.pkg.mk"
