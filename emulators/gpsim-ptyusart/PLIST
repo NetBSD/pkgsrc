@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/29 20:55:51 bouyer Exp $
+lib/libgpsim_ptyusart.la
+share/examples/gpsim-ptyusart/tst_txdot.asm
+share/examples/gpsim-ptyusart/tst_txrx.asm
+share/examples/gpsim-ptyusart/tst_txrx.stc
+share/examples/gpsim-ptyusart/tstloopback.c
+@dirrm share/examples/gpsim-ptyusart
