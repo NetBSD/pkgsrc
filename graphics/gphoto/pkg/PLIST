@@ -1,44 +1,56 @@
-@comment $NetBSD: PLIST,v 1.3 2000/01/19 17:36:28 tron Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/06/21 00:44:36 hubertf Exp $
+bin/dc21x_cam
+bin/gphoto
 bin/gphoto-exifdump
 bin/qm100
 bin/qmxxx
 bin/rsony
-bin/gphoto
-lib/gphoto/drivers/libgphoto_canon.so.0.0
-lib/gphoto/drivers/libgphoto_canon.a
-lib/gphoto/drivers/libgphoto_casio_qv.so.0.0
-lib/gphoto/drivers/libgphoto_casio_qv.a
-lib/gphoto/drivers/libgphoto_dir.so.0.0
-lib/gphoto/drivers/libgphoto_dir.a
-lib/gphoto/drivers/libgphoto_fuji.so.0.0
-lib/gphoto/drivers/libgphoto_fuji.a
-lib/gphoto/drivers/libgphoto_kodak_dc2x.so.0.0
-lib/gphoto/drivers/libgphoto_kodak_dc2x.a
-lib/gphoto/drivers/libgphoto_kodak_generic.so.0.0
-lib/gphoto/drivers/libgphoto_kodak_generic.a
-lib/gphoto/drivers/libgphoto_konica_qm100.so.0.0
-lib/gphoto/drivers/libgphoto_konica_qm100.a
-lib/gphoto/drivers/libgphoto_konica_qmxxx.so.0.0
-lib/gphoto/drivers/libgphoto_konica_qmxxx.a
-lib/gphoto/drivers/libgphoto_dimage_v.so.0.0
-lib/gphoto/drivers/libgphoto_dimage_v.a
-lib/gphoto/drivers/libgphoto_mustek_mdc800.so.1.0
-lib/gphoto/drivers/libgphoto_mustek_mdc800.a
-lib/gphoto/drivers/libgphoto_coolpix600.so.0.0
-lib/gphoto/drivers/libgphoto_coolpix600.a
-lib/gphoto/drivers/libgphoto_philips.so.0.5
-lib/gphoto/drivers/libgphoto_philips.a
-lib/gphoto/drivers/libgphoto_photopc.so.0.0
-lib/gphoto/drivers/libgphoto_photopc.a
-lib/gphoto/drivers/libgphoto_ricoh300z.so.0.0
-lib/gphoto/drivers/libgphoto_ricoh300z.a
-lib/gphoto/drivers/libgphoto_sony_dscf55.so.0.0
-lib/gphoto/drivers/libgphoto_sony_dscf55.a
-lib/gphoto/drivers/libgphoto_sony_dscf1.so.0.0
-lib/gphoto/drivers/libgphoto_sony_dscf1.a
+lib/libgphoto_canon.a
+lib/libgphoto_canon.so.0.0
+lib/libgphoto_casio_qv.a
+lib/libgphoto_casio_qv.so.0.0
+lib/libgphoto_coolpix600.a
+lib/libgphoto_coolpix600.so.0.0
+lib/libgphoto_dimage_v.a
+lib/libgphoto_dimage_v.so.0.0
+lib/libgphoto_dir.a
+lib/libgphoto_dir.so.0.0
+lib/libgphoto_fuji.a
+lib/libgphoto_fuji.so.0.0
+lib/libgphoto_kodak_dc2x.a
+lib/libgphoto_kodak_dc2x.so.0.0
+lib/libgphoto_kodak_generic.a
+lib/libgphoto_kodak_generic.so.0.0
+lib/libgphoto_konica_qm100.a
+lib/libgphoto_konica_qm100.so.0.0
+lib/libgphoto_konica_qmxxx.a
+lib/libgphoto_konica_qmxxx.so.0.0
+lib/libgphoto_mustek_mdc800.a
+lib/libgphoto_mustek_mdc800.so.1.0
+lib/libgphoto_philips.a
+lib/libgphoto_philips.so.0.5
+lib/libgphoto_photopc.a
+lib/libgphoto_photopc.so.0.0
+lib/libgphoto_ricoh300z.a
+lib/libgphoto_ricoh300z.so.0.0
+lib/libgphoto_samsung.a
+lib/libgphoto_samsung.so.0.0
+lib/libgphoto_sony_dscf1.a
+lib/libgphoto_sony_dscf1.so.0.0
+lib/libgphoto_sony_dscf55.a
+lib/libgphoto_sony_dscf55.so.0.0
 man/man1/gphoto.1
-share/doc/gphoto/AUTHORS
-share/doc/gphoto/MANUAL
+share/gnome/apps/Graphics/gphoto.desktop
+share/gphoto/doc/AUTHORS
+share/gphoto/doc/MANUAL
+share/gphoto/gallery/CSStheme/gphotobutton.png
+share/gphoto/gallery/CSStheme/index_bottom.html
+share/gphoto/gallery/CSStheme/index_top.html
+share/gphoto/gallery/CSStheme/mwcos.png
+share/gphoto/gallery/CSStheme/picture.html
+share/gphoto/gallery/CSStheme/styles.css
+share/gphoto/gallery/CSStheme/thumbnail.html
+share/gphoto/gallery/CSStheme/vh40.png
 share/gphoto/gallery/Default/banner.gif
 share/gphoto/gallery/Default/index.gif
 share/gphoto/gallery/Default/index_bottom.html
@@ -56,20 +68,12 @@ share/gphoto/gallery/RedNGray/next.gif
 share/gphoto/gallery/RedNGray/picture.html
 share/gphoto/gallery/RedNGray/previous.gif
 share/gphoto/gallery/RedNGray/thumbnail.html
-share/gphoto/gallery/CSStheme/index_bottom.html
-share/gphoto/gallery/CSStheme/index_top.html
-share/gphoto/gallery/CSStheme/mwcos.png
-share/gphoto/gallery/CSStheme/picture.html
-share/gphoto/gallery/CSStheme/styles.css
-share/gphoto/gallery/CSStheme/thumbnail.html
-share/gphoto/gallery/CSStheme/vh40.png
-share/gphoto/gallery/CSStheme/gphotobutton.png
-share/gnome/apps/Graphics/gphoto.desktop
 @dirrm share/gphoto/gallery/RedNGray
 @dirrm share/gphoto/gallery/Default
 @dirrm share/gphoto/gallery/CSStheme
 @dirrm share/gphoto/gallery
+@dirrm share/gphoto/doc
 @dirrm share/gphoto
-@dirrm share/doc/gphoto
-@dirrm lib/gphoto/drivers
-@dirrm lib/gphoto
+@dirrm share/gnome/apps/Graphics
+@dirrm share/gnome/apps
+@dirrm share/gnome
