@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2003/12/28 15:40:14 zuntum Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 19:14:54 wiz Exp $
 
 SHA1 (devtodo-0.1.17.tar.gz) = 088610093f1d34f242e18b04e1cf651684f25472
+RMD160 (devtodo-0.1.17.tar.gz) = 6743b7ab4ab8bc906a334389b3a9cc43b071794c
 Size (devtodo-0.1.17.tar.gz) = 312755 bytes
 SHA1 (patch-aa) = 3a3d0acf6bd102e73fe6f280f4d62d950ce66183
 SHA1 (patch-ab) = 049b2b3201ffefbc70314d3bda2789fc6aeaff0a

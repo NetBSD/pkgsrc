@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2004/03/05 03:30:35 minskim Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 19:14:54 wiz Exp $
 
 SHA1 (gDeskCal-0_57.tar.gz) = 70058e23d27a6c418293725be4cb0d05f588042d
+RMD160 (gDeskCal-0_57.tar.gz) = 44f46476d4ed9c9b68d95dcd692703bc1c6de8d2
 Size (gDeskCal-0_57.tar.gz) = 102798 bytes

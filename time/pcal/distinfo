@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2002/10/25 11:33:32 drochner Exp $
+$NetBSD: distinfo,v 1.4 2005/02/23 19:14:55 wiz Exp $
 
 SHA1 (pcal-4.7.tar.bz2) = 4604067da16b7674630eb4d8894406b885e85d89
+RMD160 (pcal-4.7.tar.bz2) = d0b5380da2bbf94c5c5824f3355b583abba593bc
 Size (pcal-4.7.tar.bz2) = 134913 bytes
 SHA1 (patch-aa) = 4defcb72a9cfdfa167e02b15c896be5550d2b219
 SHA1 (patch-ab) = 95205a855ed29f45f68bdb940f88d33133348b97

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/10/23 17:04:37 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 19:14:55 wiz Exp $
 
 SHA1 (Time-Piece-1.08.tar.gz) = c5f37fca9cf753d4f68233d9c11c2a0d7db8356f
+RMD160 (Time-Piece-1.08.tar.gz) = e917eb20a351a6f1393f340b2e8329944a79c252
 Size (Time-Piece-1.08.tar.gz) = 18824 bytes
