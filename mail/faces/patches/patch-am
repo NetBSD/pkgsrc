@@ -1,0 +1,12 @@
+diff -ur ../faces-DIST/filters/rs2icon.c ./filters/rs2icon.c
+--- ../faces-DIST/filters/rs2icon.c	Mon Apr 15 13:40:03 1991
++++ ./filters/rs2icon.c	Fri Oct  1 14:32:15 1999
+@@ -21,7 +21,7 @@
+  */
+ 
+ #include <stdio.h>
+-#ifdef SYSV32 || hpux
++#if defined(SYSV32) || defined(hpux)
+ #include <string.h>
+ #else
+ #include <strings.h>

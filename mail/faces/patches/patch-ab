@@ -1,324 +1,482 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 11:09:35 agc Exp $
-
-*** compface/Makefile.orig	Thu Oct 24 11:28:06 1991
---- compface/Makefile	Sat May 17 23:23:52 1997
-***************
-*** 19,80 ****
-  #
-  #SYSV           = -DSYSV32
-  #--------------------------------------------------------------------------
-! # BINDIR, LIBDIR, and MANDIR are expected to be overridden by the
-  # calling Makefile
-  
-  BINDIR		= /usr/local/bin
-  LIBDIR		= /usr/local/lib
-! MANDIR		= /usr/manl
-  
-  NAME		= compface
-  UNNAME		= uncompface
-  EXECUTABLE	= $(BINDIR)/$(NAME)
-  UNEXECUTABLE	= $(BINDIR)/$(UNNAME)
-  LIBNAME		= lib$(NAME).a
-! LIBRARY		= $(LIBDIR)/$(LIBNAME)
-  MAN1DIR		= $(MANDIR)/man1
-  MAN3DIR		= $(MANDIR)/man3
-  OBJECTS		= arith.o file.o compress.o gen.o uncompface.o
-  SOURCES		= compface.c uncompface.o arith.c file.c compress.c gen.c \
-  		  cmain.c uncmain.c
-  HDRS		= compface.h data.h
-  OTHERS		= README $(NAME).1 $(NAME).3 Makefile
-  
-  CC		= cc
-  CDEFS		= $(SYSV)
-! CCOMP		= -g
-  CFLAGS		= $(CDEFS) $(CCOMP)
-  
-! all:		$(NAME) $(UNNAME)
-  
-! $(NAME) :	cmain.o compface.o $(LIBNAME)
-! 		$(CC) $(CFLAGS) -o $(NAME) cmain.o compface.o $(LIBNAME)
-  
-  $(UNNAME) :	uncmain.o $(LIBNAME)
-! 		$(CC) $(CFLAGS) -o $(UNNAME) uncmain.o $(LIBNAME)
-! 
-! $(LIBNAME) :	$(OBJECTS)
-! 		ar rc $(LIBNAME) $(OBJECTS)
-! 		-ranlib $(LIBNAME)
-  
-  lint :
-  		lint -abchx $(SOURCES)
-  
-  clean :
-! 		rm -f *.o *.a *.sh core a.out $(NAME) $(UNNAME)
-  
-  install :	$(NAME) $(UNNAME) $(LIBNAME)
-! 		-cp $(NAME) $(EXECUTABLE)
-! 		strip $(EXECUTABLE)
-! 		-cp $(UNNAME) $(UNEXECUTABLE)
-! 		strip $(UNEXECUTABLE)
-! 		-cp $(NAME).1 $(MAN1DIR)
-! 		rm -f $(MAN1DIR)/$(UNNAME).1
-! 		-ln $(MAN1DIR)/$(NAME).1 $(MAN1DIR)/$(UNNAME).1
-! 		-cp $(LIBNAME) $(LIBRARY)
-! 		-cp $(NAME).3 $(MAN3DIR)
-! 		rm -f $(MAN3DIR)/$(UNNAME).3
-! 		-ln $(MAN3DIR)/$(NAME).3 $(MAN3DIR)/$(UNNAME).3
-  
-  shar :
-  		shar.script $(OTHERS) $(HDRS) $(SOURCES) > $(NAME).sh
---- 19,82 ----
-  #
-  #SYSV           = -DSYSV32
-  #--------------------------------------------------------------------------
-! # BINDIR, LIBDIR, INCDIR and MANDIR are expected to be overridden by the
-  # calling Makefile
-  
-  BINDIR		= /usr/local/bin
-  LIBDIR		= /usr/local/lib
-! INCDIR		= /usr/local/include
-! MANDIR		= /usr/local/man
-  
-  NAME		= compface
-  UNNAME		= uncompface
-  EXECUTABLE	= $(BINDIR)/$(NAME)
-  UNEXECUTABLE	= $(BINDIR)/$(UNNAME)
-  LIBNAME		= lib$(NAME).a
-! SHLIB_MAJOR	= 1
-! SHLIB_MINOR	= 0
-! LIB		= $(NAME)
-! NOPROFILE	= ''
-! LIBRARY		= $(LIBDIR)
-  MAN1DIR		= $(MANDIR)/man1
-  MAN3DIR		= $(MANDIR)/man3
-  OBJECTS		= arith.o file.o compress.o gen.o uncompface.o
-  SOURCES		= compface.c uncompface.o arith.c file.c compress.c gen.c \
-  		  cmain.c uncmain.c
-+ SRCS		= arith.c file.c compress.c gen.c uncompface.c
-  HDRS		= compface.h data.h
-  OTHERS		= README $(NAME).1 $(NAME).3 Makefile
-  
-  CC		= cc
-  CDEFS		= $(SYSV)
-! CCOMP		= -pipe -O2
-  CFLAGS		= $(CDEFS) $(CCOMP)
-  
-! all:		lib$(NAME).a lib$(NAME).so.$(SHLIB_MAJOR).$(SHLIB_MINOR) $(NAME) $(UNNAME) 
-  
-! $(NAME) :	cmain.o compface.o
-! 		$(CC) $(CFLAGS) -o $(NAME) cmain.o compface.o -L./ -lcompface
-  
-  $(UNNAME) :	uncmain.o $(LIBNAME)
-! 		$(CC) $(CFLAGS) -o $(UNNAME) uncmain.o -L./ -lcompface
-  
-  lint :
-  		lint -abchx $(SOURCES)
-  
-  clean :
-! 		rm -f *.o *po *so *.a *.so.* *.sh core a.out $(NAME) $(UNNAME)
-  
-  install :	$(NAME) $(UNNAME) $(LIBNAME)
-! 		install -c -s -o bin -m 755 $(NAME) $(EXECUTABLE)
-! 		install -c -s -o bin -m 755 $(UNNAME) $(UNEXECUTABLE)
-! 		install -c -g bin -o bin -m 444 $(NAME).1 $(MAN1DIR)
-! 		-rm -f $(MAN1DIR)/$(UNNAME).1*
-! 		ln -fs $(MAN1DIR)/$(NAME).1 $(MAN1DIR)/$(UNNAME).1
-! 		install -c -o bin -m 444 $(LIBNAME) $(LIBRARY)
-! 		install -c -o bin -m 444 lib$(NAME).so.$(SHLIB_MAJOR).$(SHLIB_MINOR) $(LIBRARY)
-! 		install -c -g bin -o bin -m 444 $(NAME).3 $(MAN3DIR)
-! 		rm -f $(MAN3DIR)/$(UNNAME).3*
-! 		ln -fs $(MAN3DIR)/$(NAME).3 $(MAN3DIR)/$(UNNAME).3
-! 		install -m 444 -o bin -g bin -c compface.h $(INCDIR)
-  
-  shar :
-  		shar.script $(OTHERS) $(HDRS) $(SOURCES) > $(NAME).sh
-***************
-*** 88,90 ****
---- 90,94 ----
-  gen.o:		gen.c compface.h data.h
-  uncmain.o:	uncmain.c compface.h data.h
-  uncompface.o:	uncompface.c compface.h data.h
-+ 
-+ .include <bsd.lib.mk>
-diff -c -N ../faces/compface/compface.1 ./compface/compface.1
-*** ../faces/compface/compface.1	Fri Mar 15 06:10:29 1991
---- ./compface/compface.1	Tue Dec 10 17:28:10 1996
-***************
-*** 12,17 ****
---- 12,19 ----
-  .LP
-  .B uncompface
-  [
-+ .B \-X
-+ ] [
-  .I infile
-  [
-  .I outfile
-***************
-*** 25,31 ****
-  face image files.
-  .I uncompface
-  is an inverse filter which performs an inverse transformation with no
-! loss of data.
-  The algorithm used is highly tuned for its purpose and achieves better
-  than a five to one compression ratio on average.
-  Arguments operate identically for both programmes.
---- 27,33 ----
-  face image files.
-  .I uncompface
-  is an inverse filter which performs an inverse transformation with no
-! loss of data. 
-  The algorithm used is highly tuned for its purpose and achieves better
-  than a five to one compression ratio on average.
-  Arguments operate identically for both programmes.
-***************
-*** 56,61 ****
---- 58,69 ----
-  .I compface
-  averages less than 200 characters.
-  The average number of output lines is three.
-+ .SH OPTIONS
-+ .TP 12
-+ .B \-X
-+ The same as
-+ .I uncompface
-+ | ikon2xbm. Usefull for exmh!
-  .SH DIAGNOSTICS
-  Exit status is normally 0.
-  Possible errors include IO errors when opening, reading or writing
-diff -c -N ../faces/compface/file.c ./compface/file.c
-*** ../faces/compface/file.c	Wed Jun 19 08:29:13 1991
---- ./compface/file.c	Wed Dec 11 09:25:17 1996
-***************
-*** 15,20 ****
---- 15,22 ----
-  
-  #include "compface.h"
-  
-+ int xbitmap=0;
-+ 
-  void
-  BigRead(fbuf)
-  register char *fbuf;
-***************
-*** 127,136 ****
---- 129,147 ----
-  {
-  	register char *s, *t;
-  	register int i, bits, digits, words;
-+ 	extern int xbitmap;
-+ 	int digsperword = DIGSPERWORD;
-+ 	int wordsperline = WORDSPERLINE;
-  
-  	s = F;
-  	t = fbuf;
-  	bits = digits = words = i = 0;
-+ 	if (xbitmap) {
-+ 		sprintf(t,"#define noname_width 48\n#define noname_height 48\nstatic char noname_bits[] = {\n ");
-+ 		while (*t) t++;
-+ 		digsperword = 2;
-+ 		wordsperline = 15;
-+ 	}
-  	while (s < F + PIXELS)
-  	{
-  		if ((bits == 0) && (digits == 0))
-***************
-*** 138,162 ****
-  			*(t++) = '0';
-  			*(t++) = 'x';
-  		}
-! 		if (*(s++))
-! 			i = i * 2 + 1;
-! 		else
-! 			i *= 2;
-  		if (++bits == BITSPERDIG)
-  		{
-! 			*(t++) = *(i + HexDigits);
-  			bits = i = 0;
-! 			if (++digits == DIGSPERWORD)
-  			{
-  				*(t++) = ',';
-  				digits = 0;
-! 				if (++words == WORDSPERLINE)
-  				{
-  					*(t++) = '\n';
-  					words = 0;
-  				}
-  			}
-  		}
-  	}
-  	*(t++) = '\0';
-  }
---- 149,191 ----
-  			*(t++) = '0';
-  			*(t++) = 'x';
-  		}
-! 		if (xbitmap) {
-! 			if (*(s++))
-! 				i = (i >> 1) | 0x8;
-! 			else
-! 				i >>= 1;
-! 		}
-! 		else {
-! 			if (*(s++))
-! 				i = i * 2 + 1;
-! 			else
-! 				i *= 2;
-! 		}
-  		if (++bits == BITSPERDIG)
-  		{
-! 			if (xbitmap) {
-! 				t++;
-! 				t[-(digits & 1) * 2] = *(i + HexDigits);
-! 			}
-! 			else *(t++) = *(i + HexDigits);
-  			bits = i = 0;
-! 			if (++digits == digsperword)
-  			{
-+ 				if (xbitmap && (s >= F + PIXELS)) break;
-  				*(t++) = ',';
-  				digits = 0;
-! 				if (++words == wordsperline)
-  				{
-  					*(t++) = '\n';
-+ 					if (xbitmap) *(t++) = ' ';
-  					words = 0;
-  				}
-  			}
-  		}
-+ 	}
-+ 	if (xbitmap) {
-+ 		sprintf(t, "}\n");
-+ 		while (*t) t++;
-  	}
-  	*(t++) = '\0';
-  }
-diff -c -N ../faces/compface/uncmain.c ./compface/uncmain.c
-*** ../faces/compface/uncmain.c	Thu Oct 24 03:28:07 1991
---- ./compface/uncmain.c	Wed Dec 11 09:27:47 1996
-***************
-*** 18,23 ****
---- 18,25 ----
-  #include <fcntl.h>
-  #include "compface.h"
-  
-+ extern int xbitmap;
-+ 
-  /* the buffer is longer than needed to handle sparse input formats */
-  #define FACEBUFLEN 2048
-  char fbuf[FACEBUFLEN];
-***************
-*** 59,64 ****
---- 61,73 ----
-    while (**argv)
-      if (*((*argv)++) == '/')
-        cmdname = *argv;               /* find the command's basename */
-+ 
-+   if (argc > 1 && !strcmp(argv[1], "-X"))
-+     {
-+       xbitmap++;
-+       argc--;
-+       argv++;
-+     }
-  
-    if (argc > 3)
-      {
+diff -ur ../faces-DIST/Makefile ./Makefile
+--- ../faces-DIST/Makefile	Fri Oct  1 14:36:38 1999
++++ ./Makefile	Fri Oct  1 14:32:03 1999
+@@ -0,0 +1,478 @@
++#
++#  Makefile for faces, an icon face server, plus associated software.
++#
++#  Graphical versions for NeWS, SunView, X11 and XView.
++#
++#  @(#)Makefile.dist 1.10 91/11/19
++#
++#  Copyright (c) Rich Burridge.
++#                Sun Microsystems, Australia - All rights reserved.
++#
++#  Permission is given to distribute these sources, as long as the
++#  copyright messages are not removed, and no monies are exchanged. 
++#
++#  No responsibility is taken for any errors inherent either
++#  to the comments or the code of this program, but if reported
++#  to me then an attempt will be made to fix them.
++#
++#========================================================================
++#
++#  There are various small changes needed when compiling faces on
++#  different systems.  These have been isolated here, and should be
++#  uncommented and set accordingly, if needed.
++#
++#========================================================================
++# Installation prefix.
++PREFIX           ?=@localbase@
++#------------------------------------------------------------------------
++#  If you want audio support, then the following line should be uncommented.
++#
++AUDIO_SUPPORT     = -DAUDIO_SUPPORT
++#========================================================================
++#  There is a default command (/usr/demo/SOUND/play), which is used to
++#  play audio files. Alternatively you can specify your own custom
++#  command here. Uncomment the following line and set appropriately.
++#
++AUDIO_CMD         = -DAUDIO_CMD=\"@localbase@/bin/rplay\"
++#========================================================================
++#  Faces displays a background pattern in its' window. When the window
++#  is not completely full, this gives the appearance of trying to blend
++#  in with the background. By default, this is a root gray color, but you
++#  can specify the name of a file containing an alternate pattern to use.
++#  Uncomment the next two lines and set appropriately.
++#
++#BACKNAME          = @localbase@/sample-background
++#BACKGROUND        = -DBACKGROUND=\"$(BACKNAME)\"
++#------------------------------------------------------------------------
++#  Uncomment the following two lines to use the Domain Name Service to 
++#  attempt to convert unqualified hostnames, or hostnames with partial
++#  domains to fully qualified domain names.
++#
++#  When used with NISLOOKUP, DNSLOOKUP will take precedance.
++#
++#  NOTE that the domain name returned by DNS will be converted to lower
++#  case before attempting a machines.tab match, or constructing an icon
++#  file name.
++#
++#  NOTE that for this to work you must have at least a minimal
++#  /etc/resolv.conf file containing a valid nameserver entry.
++#
++DNSLOOKUP	= -DDNSLOOKUP
++DNSLIB		=
++#------------------------------------------------------------------------
++#  If you do not want to show the number of messages on the face icon,
++#  then uncomment the next line.
++# 
++#DONTSHOWNO       = -DDONTSHOWNO
++#------------------------------------------------------------------------
++#  If you do not want to show the timestamp on the face icon, then
++#  uncomment the next line.
++#
++#DONTSHOWTIME     = -DDONTSHOWTIME
++#------------------------------------------------------------------------
++#  If you do not want to show the username on the face icon, then
++#  uncomment the next line.
++#
++#DONTSHOWUSER     = -DDONTSHOWUSER
++#------------------------------------------------------------------------
++#  By default, faces looks for the face images in @localbase@/faces. If
++#  you wish to specify an alternate location, then these two lines should
++#  be uncommented and set appropriately. Note that the value must be
++#  a single directory name, not a colon separated list of paths.
++#               
++FACEDIR           = @localbase@/share/faces
++CFACEDIR	= -DFACEDIR=\"$(FACEDIR)\"
++#------------------------------------------------------------------------
++#  It is possible to determine what type of monitoring faces does at
++#  run time with different command line options, but it is also possible
++#  to define it at compile time.
++#
++#  Monitor type (0 = mail (new),  1 = mail (all), 2 = print queue).
++#                3 = custom prog, 4 = users).
++#
++#FMONTYPE         = -DFMONTYPE=0
++#------------------------------------------------------------------------
++#  If you have the poll(2) system call, then uncomment the following
++#  definition. Note that you will also have to uncomment the NOSELECT
++#  definition. This is needed for SVR4 machines.
++#
++#HASPOLL         = -DHASPOLL
++#------------------------------------------------------------------------
++#  Some users on monochrome screens display everything in reverse video.
++#  If you would like faces to do the same, then this line needs to be
++#  uncommented.
++#
++#INVERT           = -DINVERT
++#------------------------------------------------------------------------
++#  When no icon is found for a given user, the unknown icon may be displayed
++#  either with the user name, or labeled as `unknown'.  The former case
++#  provides the most information, the latter allows all unknown users
++#  within a given community to be lumped into a single image.  To select
++#  the latter case uncomment the following line.
++#
++#NAMEUNKNOWN	= -DNAMEUNKNOWN
++#------------------------------------------------------------------------
++#  If you are compiling the NeWS version, then the following two lines
++#  should be uncommented, and set appropriately.
++#
++#NEWSINCDIR	= -I$(OPENWINHOME)/include
++#NEWSLIBDIR	= -L$(OPENWINHOME)/lib
++#------------------------------------------------------------------------
++#  Uncomment the following line to use the Sun Network Information
++#  Services (NIS, formerly YP) to look for hosts which do not explicitly
++#  appear in the machines.tab file. When used with DNSLOOKUP, DNSLOOKUP
++#  takes precedance.
++#
++#  Note that the domain name will be converted to lower case before
++#  attempting to match in the machines file, or create an icon filename.
++#
++NISLOOKUP	= -DNISLOOKUP
++#------------------------------------------------------------------------
++#  If you don't want faces to use full domain names for extracting face
++#  icons, then you should uncomment the NODOMAINS definition below.
++#
++#NODOMAINS	= -DNODOMAINS
++#------------------------------------------------------------------------
++#  If your system doesn't have the gethostname() system call, then this
++#  might be a useful alternative. This is needed for SVR4 machines.
++#
++#NOGETHOSTNAME  = -DNOGETHOSTNAME
++#------------------------------------------------------------------------
++#  By default, faces will check the "From " line first for username and
++#  hostname, and then the "From:" line. 
++#  Not all machines have the index() string library function. If you
++#  don't have this function then you should uncomment the NOINDEX
++#  definition below.
++#
++#NOINDEX         = -DNOINDEX
++#--------------------------------------------------------------------------
++#  It appears that not every Unix system defines MAXPATHLEN, which indicates
++#  the maximum length of a Unix pathname. If your system doesn't, then
++#  you need to uncomment this definition.
++#
++#NOMAXPATHLEN    = -DNOMAXPATHLEN
++#--------------------------------------------------------------------------
++#  Not every version of Unix (in particular System V derivitives) has the
++#  select() system call. If your machine doesn't have this call, then you
++#  need to uncomment the following definition.
++#
++#NOSELECT        = -DNOSELECT
++#--------------------------------------------------------------------------
++#  If your system lacks the utime() library call and definition, then
++#  uncomment the following definition.
++#
++#NOUTIME         = -DNOUTIME
++#--------------------------------------------------------------------------
++#  By default, faces rechecks for new mail or print jobs every sixty
++#  seconds. If you would like to specify an alternate period, then uncomment
++#  the following line and set appropriately.
++#
++#PERIOD           = -DPERIOD=30
++#------------------------------------------------------------------------
++#  By default, faces will examine printer queues a la Berkeley Style.
++#  Alternatively, if you have the PLP printer spooling system running, then
++#  uncomment the next line.
++#
++#PLP              = -DPLP
++#-------------------------------------------------------------------------
++#  If you are using the RAND mailer which uses four ^A characters to mark
++#  the beginning and end of messages, then you will need to uncomment the
++#  following line.
++#
++#RAND             = -DRAND
++#-------------------------------------------------------------------------
++#  Faces is designed to work on a big-endian machine by default. If you
++#  are compiling for a little-endian machine (such as the Sun 386i), then
++#  you need to uncomment the following line.
++#
++#REVORDER	  = -DREVORDER
++#------------------------------------------------------------------------
++#  If you not running under a BSD4.3 derived system, the parameters
++#  to the select call are different, and this definition should be
++#  uncommented. You need to uncomment this for SunOS v3.x.
++#
++SELTYPE        = -DNO_43SELECT
++#------------------------------------------------------------------------
++#  If you are building faces on a Silicon Graphics machine, then you will
++#  need to uncomment the following two definitions.
++#
++#SGIDEF		= -Umips
++#SGILIBS	= -lsun -lc_s
++#------------------------------------------------------------------------
++#  If the pending mail for users is in a different directory than
++#  /usr/spool/mail, uncomment the following and set appropriately.
++#
++SPOOLDIR	= -DSPOOLDIR=\"/var/mail\"
++#------------------------------------------------------------------------
++#  If faces is setup to monitor mail, then the name of the default
++#  spoolfile is /usr/spool/mail/username. An alternative spoolfile name
++#  can be given by uncommenting the following line and setting
++#  appropriately.
++#
++#SPOOLFILE       = -DSPOOLFILE=\"/usr/richb/Mail/pending\"
++#--------------------------------------------------------------------------
++#  If you are trying to build faces on an SVR4 machine, then you should
++#  uncomment the following entry, and set SVR4LIBS to the list of SVR4
++#  specific libraries needed to link reve.
++#
++#SVR4LIBS     = -lnsl -lsocket -lgen
++#--------------------------------------------------------------------------
++#  If you are running on a Unix System V machine, then you should uncomment
++#  the next definition.
++#
++#SYSV		= -DSYSV32
++#--------------------------------------------------------------------------
++#  If you are running SunOS v3.x, then pr_ttext doesn't exist, and
++#  you must uncomment this definition.
++#
++#TTEXT          = -DNO_PR_TTEXT
++#------------------------------------------------------------------------
++#  Uncomment if building faces under Sequoia's operating system.
++#
++#TOPIX          = -DTOPIX
++#--------------------------------------------------------------------------
++#  If the -U command line option is given to faces, then mail is sent to
++#  a special mail alias. This alias is really a shell script, which will
++#  take the given information, and try to update the faces database. By
++#  default that alias is called "facemaker", but it is possible to give an
++#  alternative alias here. This might be useful if a collection of machines
++#  were remotely mounting the faces database from a file server.
++#
++#UPDATE		= -DUPDATE=\"facemaker@fileserver\"
++#------------------------------------------------------------------------
++#  If your system does not have the memset() library call, but instead
++#  uses the bzero() library call, then the following definition needs to
++#  be uncommented.
++#
++#USE_BZERO      = -DUSE_BZERO
++#------------------------------------------------------------------------
++#  If your system does not have the getcwd() library call, but instead
++#  uses the getwd() library call, then the following definition needs to
++#  be uncommented.
++#
++#USE_GETWD      = -DUSE_GETWD
++#------------------------------------------------------------------------
++#  If you are compiling the X11 version under MIT X11R3, you will need to
++#  uncomment the following definition:
++#
++#X11R3		= -DX11R3
++#------------------------------------------------------------------------
++#  If you are compiling the X11 version and the X11 include and
++#  library files are not in a standard place, then the following
++#  two lines should be uncommented, and set appropriately.
++#
++X11INCDIR         = -I$(X11BASE)/include
++X11LIBDIR         = -L$(X11BASE)/lib
++#------------------------------------------------------------------------
++#  If you are compiling the XView version, then the following two lines
++#  should be uncommented, and set appropriately.
++#
++#XVIEWINCDIR      = -I$(OPENWINHOME)/include
++#XVIEWLIBDIR      = -L$(OPENWINHOME)/lib
++#
++#=======================================================================
++#
++#  Default locations where faces files will be installed.
++#  You might wish to alter these values.
++#
++BINDIR		= $(PREFIX)/bin
++LIBDIR		= $(PREFIX)/lib
++INCDIR		= $(PREFIX)/include
++MANDIR		= $(PREFIX)/man
++MANSECT		= 1
++
++#
++#  Options for submakes
++#
++MAKEOPTS	= $(MFLAGS) BINDIR=$(BINDIR) LIBDIR=$(LIBDIR) \
++			    INCDIR=$(INCDIR) MANDIR=$(MANDIR) CC=$(CC) \
++			    NOINDEX=$(NOINDEX) SYSV=$(SYSV)
++
++#
++# Override DEBUG on the command line as `DEBUG=-DDEBUG' to enable various
++# additional checking diagnostic output options.
++#
++DEBUG		=
++
++#
++#  Compilation flags and standard macro definitions.
++#
++CDEFS		= $(AUDIO_SUPPORT) $(AUDIO_CMD) $(BACKGROUND) \
++		  $(DNSLOOKUP) $(DONTSHOWNO) $(DONTSHOWTIME) $(DONTSHOWUSER) \
++		  $(CFACEDIR) $(FMONTYPE) $(HASPOLL) $(INVERT) \
++		  $(NAMEUNKNOWN) $(NEWSINCDIR) $(NISLOOKUP) $(NODOMAINS) \
++		  $(NOGETHOSTNAME) $(NOINDEX) $(NOMAXPATHLEN) $(NOSELECT) \
++		  $(NOUTIME) $(PERIOD) $(PLP) $(RAND) $(REVORDER) \
++		  $(SELTYPE) $(SGIDEF) $(SPOOLDIR) $(SPOOLFILE) $(SYSV) \
++		  $(TTEXT) $(TOPIX) $(UPDATE) $(USE_BZERO) $(USE_GETWD) \
++		  $(X11R3) $(X11INCDIR) $(XVIEWINCDIR) $(DEBUG)
++CCOMP		= -pipe -O2
++CFLAGS		= $(CCOMP) $(CDEFS)
++#
++#=======================================================================
++
++.KEEP_STATE:
++
++BINARIES	= psfaces svfaces xfaces xvfaces
++
++CC		= cc
++MAKE		= make
++
++STDSRCS		= address.c get.c main.c mon.c parsefrom.c rec.c
++STDOBJS		= address.o get.o main.o mon.o parsefrom.o rec.o
++STDLIBS		= -L./compface -lcompface $(DNSLIB) $(SGILIBS)
++
++COMPFACE	= compface
++FACES		= facedir
++FILTERS		= filters
++SCRIPTS         = scripts
++GSRCS		= news.c sunview.c x11.c xview.c
++HDRS		= addr.h extern.h faces.h patchlevel.h
++IMAGES		= noface.xbm nomail.xbm noprint.xbm \
++		  nopaper.xbm nothing.xbm nousers.xbm
++OTHERS		= CHANGES CHANGES-v1.4 README TODO MANIFEST FILES \
++		  faces.man.text faces.man face_update.1 faces_cps.cps \
++		  Faces.ad Makefile.dist face_update
++XFACE		= xface
++
++SFILES1		= mon.c rec.c
++SFILES2		= main.c parsefrom.c
++SFILES3		= get.c news.c sunview.c
++SFILES4		= x11.c $(HDRS)
++SFILES5		= xview.c
++SFILES6		= CHANGES-v1.4
++SFILES7		= CHANGES README TODO
++SFILES8		= MANIFEST FILES Makefile.dist faces_cps.cps face_update \
++		  faces.sendmail
++SFILES9		= faces.man face_update.1 $(IMAGES)
++SFILES10	= faces.man.text Faces.ad
++SFILES11	= $(FACES)
++SFILES12	= $(COMPFACE)
++SFILES13	= $(FILTERS)
++SFILES14	= $(SCRIPTS)
++SFILES15	= address.y $(XFACE)
++
++NEWSLIBS	= $(NEWSLIBDIR) -lcps
++SVIEWLIBS	= -lsuntool -lsunwindow -lpixrect
++#
++#  The following definition can vary. Here are a few examples:
++#
++#  Sun/MIT X11R4:                  $(X11LIBDIR) -lX11
++#  Dell Unix (Interactive 386/ix): $(X11LIBDIR) -lX11 -linet
++#  AT&T's XWIN:                    $(X11LIBDIR) -lX11_s -lc_s -lnsl_s -lpt
++#
++X11LIBS		= -L/usr/X11R6/lib -lX11
++XVIEWLIBS	= $(XVIEWLIBDIR) -lxview -lolgx -lX11
++
++help:
++		@echo
++		@echo "You need to specify one of the following options:"
++		@echo
++		@echo "  make sunview    - to make the SunView version."
++		@echo "  make news       - to make the NeWS version."
++		@echo "  make x11        - to make the X11 version."
++		@echo "  make xview      - to make the XView version."
++		@echo
++		@echo "This should be followed by:"
++		@echo
++		@echo "  make install"
++		@echo "  make clean"
++		@echo
++
++all:		x11
++
++news:		$(STDOBJS) news.o faces_cps.h
++		(cd compface; $(MAKE) $(MAKEOPTS))
++		(cd filters; $(MAKE) $(MAKEOPTS))
++		$(CC) -o psfaces $(CFLAGS) $(STDOBJS) news.o \
++						$(STDLIBS) $(NEWSLIBS)
++		-cp psfaces faces
++
++sunview:	$(STDOBJS) sunview.o
++		(cd compface; $(MAKE) $(MAKEOPTS))
++		(cd filters; $(MAKE) $(MAKEOPTS))
++		$(CC) -o svfaces $(CFLAGS) $(STDOBJS) sunview.o \
++						$(STDLIBS) $(SVIEWLIBS)
++		-cp svfaces faces
++
++x11:		$(STDOBJS) x11.o
++		(cd compface; $(MAKE) $(MAKEOPTS))
++		(cd filters; $(MAKE) $(MAKEOPTS))
++		$(CC) -o xfaces $(CFLAGS) $(STDOBJS) x11.o \
++					$(STDLIBS) $(X11LIBS) $(SVR4LIBS)
++		-cp xfaces faces
++
++xview:		$(STDOBJS) xview.o
++		(cd compface; $(MAKE) $(MAKEOPTS))
++		(cd filters; $(MAKE) $(MAKEOPTS))
++		$(CC) -o xvfaces $(CFLAGS) $(STDOBJS) xview.o \
++					$(STDLIBS) $(XVIEWLIBS) $(SVR4LIBS)
++		-cp xvfaces faces
++
++tables:
++		-mkdir $(FACEDIR)
++		-install -c -m 644 machine.tab $(FACEDIR)
++		-install -c -m 644 people.tab $(FACEDIR)
++
++install:
++		make tables
++		(cd compface; $(MAKE) $(MAKEOPTS) install)
++		(cd filters; $(MAKE) $(MAKEOPTS) install)
++		(cd scripts; $(MAKE) $(MAKEOPTS) install)
++		install -c -s -m 751 faces $(BINDIR)
++		install -c -m 755 face_update $(BINDIR)
++		install -c -m 755 faces.sendmail $(BINDIR)
++		install -c -m 644 faces.man \
++				$(MANDIR)/man$(MANSECT)/faces.$(MANSECT)
++		install -c -m 444 face_update.1 \
++				$(MANDIR)/man$(MANSECT)/face_update.$(MANSECT)
++		install -c -m 444 -o bin Faces.ad /usr/X11R6/lib/X11/app-defaults/Faces
++
++clean:
++		(cd compface; $(MAKE) $(MAKEOPTS) clean)
++		(cd filters; $(MAKE) $(MAKEOPTS) clean)
++		rm -f *.o Part* *~ $(BINARIES) faces core
++
++saber:
++		#load $(CDEFS) $(STDSRCS) x11.c $(STDLIBS) $(X11LIBS)
++
++lint:		lint-news lint-sunview lint-x11 lint-xview
++lint-news:;	lint $(CDEFS) $(STDSRCS) news.c $(NEWSLIBS)
++lint-sunview:;	lint $(CDEFS) $(STDSRCS) sunview.c $(SVIEWLIBS)
++lint-x11:;	lint $(CDEFS) $(STDSRCS) x11.c
++lint-xview:;	lint $(CDEFS) $(STDSRCS) xview.c
++
++shar:;          shar.script $(SFILES1)  > faces.part1
++		shar.script $(SFILES2)  > faces.part2
++		shar.script $(SFILES3)  > faces.part3
++		shar.script $(SFILES4)  > faces.part4
++		shar.script $(SFILES5)  > faces.part5
++		shar.script $(SFILES6)  > faces.part6
++		shar.script $(SFILES7)  > faces.part7
++		shar.script $(SFILES8)  > faces.part8
++		shar.script $(SFILES9)  > faces.part9
++		shar.script $(SFILES10) > faces.part10
++		shar.script $(SFILES11) > faces.part11
++		shar.script $(SFILES12) > faces.part12
++		shar.script $(SFILES13) > faces.part13
++		shar.script $(SFILES14) > faces.part14
++		shar.script $(SFILES15) > faces.part15
++
++create:         SCCS
++		-sccs create $(STDSRCS) $(GSRCS) $(HDRS) $(IMAGES) $(OTHERS)
++
++SCCS:
++		mkdir SCCS
++		chmod 755 SCCS
++
++faces_cps.h:	faces_cps.cps
++		cps $<
++
++get.o:		get.c faces.h extern.h patchlevel.h
++main.o:		main.c faces.h $(IMAGES)
++mon.o:		mon.c faces.h extern.h
++news.o:		news.c faces.h extern.h faces_cps.h
++rec.o:		rec.c faces.h extern.h
++sunview.o:	sunview.c faces.h extern.h
++x11.o:		x11.c faces.h extern.h
++xview.o:	xview.c faces.h extern.h
