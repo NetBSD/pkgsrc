@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.111 2004/07/06 23:07:35 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.112 2004/07/09 00:18:28 hubertf Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -67,7 +67,7 @@ my $seen_NO_CHECKSUM = 0;
 my $seen_USE_PKGLOCALEDIR = 0;
 my $seen_USE_BUILDLINK3 = 0;
 my %predefined;
-my $pkgname		= "(none)";
+my $pkgname		= "";
 
 
 # == Output of messages to the user ==
@@ -100,6 +100,7 @@ sub checkearlier($@);
 sub abspathname($$);
 sub is_predefined($);
 sub category_check();
+sub check_package();
 
 sub parse_command_line() {
 	my %opts = ();
@@ -125,37 +126,35 @@ EOF
 		print "$conf_distver\n";
 		exit;
 	}
-}
-parse_command_line();
-
-log_info(NO_FILE, NO_LINE_NUMBER, "config: portsdir: \"$conf_portsdir\" ".
-	"rcsidstr: \"$conf_rcsidstr\" ".
-	"localbase: $conf_localbase");
-
-#
-# just for safety.
-#
-if (! -d $opt_packagedir) {
-	print STDERR "FATAL: invalid directory $opt_packagedir specified.\n";
-	exit 1;
+	return 1;
 }
 
-if (-e <$opt_packagedir/../Packages.txt>) {
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking category Makefile.");
-	category_check();
+sub main() {
+	parse_command_line();
+
+	log_info(NO_FILE, NO_LINE_NUMBER, "config: portsdir: \"$conf_portsdir\" ".
+		"rcsidstr: \"$conf_rcsidstr\" ".
+		"localbase: $conf_localbase");
+
+	if (-f "$opt_packagedir/../Packages.txt") {
+		log_info(NO_FILE, NO_LINE_NUMBER, "checking category Makefile.");
+		category_check();
+	} elsif (-f "$opt_packagedir/../../Packages.txt") {
+		if ($opt_packagedir eq ".") {
+			$category = basename(dirname(cwd()));
+		} else {
+			$category = basename(dirname($opt_packagedir));
+		}
+		check_package();
+	} else {
+		log_error(NO_FILE, NO_LINE_NUMBER, "cannot check \"$opt_packagedir\".");
+	}
 	print_summary_and_exit();
 }
 
-if (-e <$opt_packagedir/../../Packages.txt>) {
-	if ($opt_packagedir eq ".") {
-		$category = basename(dirname(cwd()));
-	} else {
-		$category = basename(dirname($opt_packagedir));
-	}
-}
-
-%predefined = ();
-foreach my $i (split("\n", <<EOF)) {
+sub check_package() {
+	%predefined = ();
+	foreach my $i (split("\n", <<EOF)) {
 XCONTRIB	ftp://crl.dec.com/pub/X11/contrib/
 XCONTRIB	ftp://ftp.sunsite.auc.dk/pub/X/X.org/contrib/
 XCONTRIB	ftp://ftp.uni-paderborn.de/pub/X11/contrib/
@@ -181,131 +180,131 @@ GNOME		ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/
 SOURCEFORGE	ftp://download.sourceforge.net/
 SOURCEFORGE	http://download.sourceforge.net/
 EOF
-	my ($j, $k) = split(/\t+/, $i);
-	$predefined{$k} = $j;
-}
+		my ($j, $k) = split(/\t+/, $i);
+		$predefined{$k} = $j;
+	}
 
-# we need to handle the Makefile first to get some variables
-log_info(NO_FILE, NO_LINE_NUMBER, "checking Makefile.");
-if (! -f "$opt_packagedir/Makefile") {
-	log_error(NO_FILE, NO_LINE_NUMBER, "no Makefile in \"$opt_packagedir\".");
-} else {
-	checkfile_Makefile("Makefile") || log_error("$opt_packagedir/Makefile", NO_LINE_NUMBER, "error while reading.");
-}
+	# we need to handle the Makefile first to get some variables
+	log_info(NO_FILE, NO_LINE_NUMBER, "checking Makefile.");
+	if (! -f "$opt_packagedir/Makefile") {
+		log_error(NO_FILE, NO_LINE_NUMBER, "no Makefile in \"$opt_packagedir\".");
+	} else {
+		checkfile_Makefile("Makefile") || log_error("$opt_packagedir/Makefile", NO_LINE_NUMBER, "error while reading.");
+	}
 
+	#
+	# check for files.
+	#
+	my @checker = ("$pkgdir/DESCR");
+	my %checker = ("$pkgdir/DESCR", \&checkfile_DESCR);
 
-#
-# check for files.
-#
-my @checker = ("$pkgdir/DESCR");
-my %checker = ("$pkgdir/DESCR", \&checkfile_DESCR);
-
-if ($opt_extrafile) {
-	foreach my $i ((<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>)) {
+	if ($opt_extrafile) {
+		foreach my $i ((<$opt_packagedir/$filesdir/*>, <$opt_packagedir/$pkgdir/*>)) {
+			next if (! -T $i);
+			next if ($i =~ /distinfo$/);
+			next if ($i =~ /Makefile$/);
+			$i =~ s/^\Q$opt_packagedir\E\///;
+			next if (defined $checker{$i});
+			if ($i =~ /MESSAGE/) {
+				unshift(@checker, $i);
+				$checker{$i} = \&checkfile_MESSAGE;
+			} elsif ($i =~ /PLIST/) {
+			        unshift(@checker, $i);
+				$checker{$i} = \&checkfile_PLIST;
+			} else {
+			        push(@checker, $i);
+				$checker{$i} = \&checkpathname;
+			}
+		}
+	}
+	foreach my $i (<$opt_packagedir/$patchdir/patch-*>) {
 		next if (! -T $i);
-		next if ($i =~ /distinfo$/);
-		next if ($i =~ /Makefile$/);
 		$i =~ s/^\Q$opt_packagedir\E\///;
 		next if (defined $checker{$i});
-		if ($i =~ /MESSAGE/) {
-			unshift(@checker, $i);
-			$checker{$i} = \&checkfile_MESSAGE;
-		} elsif ($i =~ /PLIST/) {
-		        unshift(@checker, $i);
-			$checker{$i} = \&checkfile_PLIST;
+		push(@checker, $i);
+		$checker{$i} = \&checkfile_patches_patch;
+	}
+	if (-f "$opt_packagedir/$distinfo") {
+		my $i = "$distinfo";
+		next if (defined $checker{$i});
+		push(@checker, $i);
+		$checker{$i} = \&checkfile_distinfo;
+	}
+	{
+		# Make sure there's a distinfo if there are patches
+		my $patches=0;
+		patch:
+	    	    foreach my $i (<$opt_packagedir/$patchdir/patch-*>) {
+			if ( -T "$i" ) { 
+				$patches=1;
+				last patch;
+			}
+		}
+		if ($patches && ! -f "$opt_packagedir/$distinfo" ) {
+			log_warning(NO_FILE, NO_LINE_NUMBER, "no $opt_packagedir/$distinfo file. Please run '$conf_make makepatchsum'.");
+		}
+	}
+	foreach my $i (@checker) {
+		log_info(NO_FILE, NO_LINE_NUMBER, "checking $i.");
+		if (! -f "$opt_packagedir/$i") {
+			log_error(NO_FILE, NO_LINE_NUMBER, "no $i in \"$opt_packagedir\".");
 		} else {
-		        push(@checker, $i);
-			$checker{$i} = \&checkpathname;
+			$checker{$i}->($i) || log_warning(NO_FILE, NO_LINE_NUMBER, "Cannot open the file $i\n");
+			if ($i !~ /patches\/patch/) {
+				&checklastline($i) ||
+					log_warning(NO_FILE, NO_LINE_NUMBER, "Cannot open the file $i\n");
+			}
 		}
 	}
-}
-foreach my $i (<$opt_packagedir/$patchdir/patch-*>) {
-	next if (! -T $i);
-	$i =~ s/^\Q$opt_packagedir\E\///;
-	next if (defined $checker{$i});
-	push(@checker, $i);
-	$checker{$i} = \&checkfile_patches_patch;
-}
-if (-e <$opt_packagedir/$distinfo>) {
-	my $i = "$distinfo";
-	next if (defined $checker{$i});
-	push(@checker, $i);
-	$checker{$i} = \&checkfile_distinfo;
-}
-{
-	# Make sure there's a distinfo if there are patches
-	my $patches=0;
-	patch:
-    	    foreach my $i (<$opt_packagedir/$patchdir/patch-*>) {
-		if ( -T "$i" ) { 
-			$patches=1;
-			last patch;
+	if (-f "$opt_packagedir/$distinfo") {
+		if ( $seen_NO_CHECKSUM ) {
+			log_warning(NO_FILE, NO_LINE_NUMBER, "NO_CHECKSUM set, but $opt_packagedir/$distinfo exists. Please remove it.");
 		}
-	}
-	if ($patches && ! -f "$opt_packagedir/$distinfo" ) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "no $opt_packagedir/$distinfo file. Please run '$conf_make makepatchsum'.");
-	}
-}
-foreach my $i (@checker) {
-	log_info(NO_FILE, NO_LINE_NUMBER, "checking $i.");
-	if (! -f "$opt_packagedir/$i") {
-		log_error(NO_FILE, NO_LINE_NUMBER, "no $i in \"$opt_packagedir\".");
 	} else {
-		$checker{$i}->($i) || log_warning(NO_FILE, NO_LINE_NUMBER, "Cannot open the file $i\n");
-		if ($i !~ /patches\/patch/) {
-			&checklastline($i) ||
-				log_warning(NO_FILE, NO_LINE_NUMBER, "Cannot open the file $i\n");
+		if ( ! $seen_NO_CHECKSUM ) {
+			log_warning(NO_FILE, NO_LINE_NUMBER, "no $opt_packagedir/$distinfo file. Please run '$conf_make makesum'.");
 		}
 	}
-}
-if (-e <$opt_packagedir/$distinfo> ) {
-	if ( $seen_NO_CHECKSUM ) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "NO_CHECKSUM set, but $opt_packagedir/$distinfo exists. Please remove it.");
+	if (-f "$opt_packagedir/$filesdir/md5") {
+		log_error(NO_FILE, NO_LINE_NUMBER, "$filesdir/md5 is deprecated -- run '$conf_make mdi' to generate distinfo.");
 	}
-} else {
-	if ( ! $seen_NO_CHECKSUM ) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "no $opt_packagedir/$distinfo file. Please run '$conf_make makesum'.");
+	if (-f "$opt_packagedir/$filesdir/patch-sum") {
+		log_error(NO_FILE, NO_LINE_NUMBER, "$filesdir/patch-sum is deprecated -- run '$conf_make mps' to generate distinfo.");
 	}
-}
-if (-e <$opt_packagedir/$filesdir/md5> ) {
-	log_error(NO_FILE, NO_LINE_NUMBER, "$filesdir/md5 is deprecated -- run '$conf_make mdi' to generate distinfo.");
-}
-if (-e <$opt_packagedir/$filesdir/patch-sum> ) {
-	log_error(NO_FILE, NO_LINE_NUMBER, "$filesdir/patch-sum is deprecated -- run '$conf_make mps' to generate distinfo.");
-}
-if (-e <$pkgdir/COMMENT> ) {
-	log_error(NO_FILE, NO_LINE_NUMBER, "$pkgdir/COMMENT is deprecated -- please use a COMMENT variable instead.");
-}
-if (-d "$opt_packagedir/pkg" ) {
-	log_error(NO_FILE, NO_LINE_NUMBER, "$opt_packagedir/pkg and its contents are deprecated!\n".
-		"\tPlease 'mv $opt_packagedir/pkg/* $opt_packagedir' and 'rmdir $opt_packagedir/pkg'.");
-}
-if (-d "$opt_packagedir/scripts" ) {
-	log_warning(NO_FILE, NO_LINE_NUMBER, "$opt_packagedir/scripts and its contents are deprecated! Please call the script(s)\n".
-		"\texplicitly from the corresponding target(s) in the pkg's Makefile.");
-}
-if (! -f "$opt_packagedir/$pkgdir/PLIST"
-    and ! -f "$opt_packagedir/$pkgdir/PLIST-mi"
-    and ! $seen_PLIST_SRC
-    and ! $seen_NO_PKG_REGISTER ) {
-	log_warning(NO_FILE, NO_LINE_NUMBER, "no PLIST or PLIST-mi, and PLIST_SRC and NO_PKG_REGISTER unset.\n     Are you sure PLIST handling is ok?");
-}
-if ($opt_committer) {
-	if (scalar(@_ = <$opt_packagedir/work*/*>) || -d "$opt_packagedir/work*") {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "be sure to cleanup $opt_packagedir/work* ".
-			"before committing the package.");
+	if (-f "$pkgdir/COMMENT") {
+		log_error(NO_FILE, NO_LINE_NUMBER, "$pkgdir/COMMENT is deprecated -- please use a COMMENT variable instead.");
 	}
-	if (scalar(@_ = <$opt_packagedir/*/*~>) || scalar(@_ = <$opt_packagedir/*~>)) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "for safety, be sure to cleanup ".
-			"emacs backup files before committing the package.");
+	if (-d "$opt_packagedir/pkg") {
+		log_error(NO_FILE, NO_LINE_NUMBER, "$opt_packagedir/pkg and its contents are deprecated!\n".
+			"\tPlease 'mv $opt_packagedir/pkg/* $opt_packagedir' and 'rmdir $opt_packagedir/pkg'.");
 	}
-	if (scalar(@_ = <$opt_packagedir/*/*.orig>) || scalar(@_ = <$opt_packagedir/*.orig>)
-	 || scalar(@_ = <$opt_packagedir/*/*.rej>) || scalar(@_ = <$opt_packagedir/*.rej>)) {
-		log_warning(NO_FILE, NO_LINE_NUMBER, "for safety, be sure to cleanup ".
-			"patch backup files before committing the package.");
+	if (-d "$opt_packagedir/scripts") {
+		log_warning(NO_FILE, NO_LINE_NUMBER, "$opt_packagedir/scripts and its contents are deprecated! Please call the script(s)\n".
+			"\texplicitly from the corresponding target(s) in the pkg's Makefile.");
 	}
-}
-print_summary_and_exit();
+	if (! -f "$opt_packagedir/$pkgdir/PLIST"
+	    and ! -f "$opt_packagedir/$pkgdir/PLIST-mi"
+	    and ! $seen_PLIST_SRC
+	    and ! $seen_NO_PKG_REGISTER ) {
+		log_warning(NO_FILE, NO_LINE_NUMBER, "no PLIST or PLIST-mi, and PLIST_SRC and NO_PKG_REGISTER unset.\n     Are you sure PLIST handling is ok?");
+	}
+	if ($opt_committer) {
+		if (scalar(@_ = <$opt_packagedir/work*/*>) || -d "$opt_packagedir/work*") {
+			log_warning(NO_FILE, NO_LINE_NUMBER, "be sure to cleanup $opt_packagedir/work* ".
+				"before committing the package.");
+		}
+		if (scalar(@_ = <$opt_packagedir/*/*~>) || scalar(@_ = <$opt_packagedir/*~>)) {
+			log_warning(NO_FILE, NO_LINE_NUMBER, "for safety, be sure to cleanup ".
+				"emacs backup files before committing the package.");
+		}
+		if (scalar(@_ = <$opt_packagedir/*/*.orig>) || scalar(@_ = <$opt_packagedir/*.orig>)
+		 || scalar(@_ = <$opt_packagedir/*/*.rej>) || scalar(@_ = <$opt_packagedir/*.rej>)) {
+			log_warning(NO_FILE, NO_LINE_NUMBER, "for safety, be sure to cleanup ".
+				"patch backup files before committing the package.");
+		}
+	}
+	return 1;
+} # check_package
 
 #
 # Subroutines common to all checking routines
@@ -455,7 +454,7 @@ sub checkfile_MESSAGE($) {
 		log_warning($fname, NO_LINE_NUMBER, "file too short.");
 		return 0;
 	}
-	if ($message->[0]->[2] ne 75 x "=") {
+	if ($message->[0]->[2] ne "=" x 75) {
 		log_warning($message->[0]->[0], $message->[0]->[1], "expected a line of exactly 75 \"=\" characters.");
 	}
 	if ($message->[1]->[2] !~ /^$regex_rcsidstr$/) {
@@ -466,7 +465,7 @@ sub checkfile_MESSAGE($) {
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, $regex_validchars);
 	}
-	if ($message->[-1] ne 75 x "=") {
+	if ($message->[-1] ne "=" x 75) {
 		log_warning($message->[-1]->[0], $message->[-1]->[1], "expected a line of exactly 75 \"=\" characters.");
 	}
 	return 1;
@@ -1836,3 +1835,9 @@ sub print_summary_and_exit()
 	}
 	exit($errors != 0);
 }
+
+#
+# The main program
+#
+
+main();
