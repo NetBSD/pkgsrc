@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2002/03/23 02:23:01 wiz Exp $
 
---- extract.c.orig	Sat Dec 16 21:46:53 2000
-+++ extract.c	Sat Dec 16 21:47:36 2000
+--- extract.c.orig	Tue Nov  6 13:23:36 2001
++++ extract.c
 @@ -6,7 +6,7 @@
  static char    inslst[INSMAX];                 /*   values set by readxfil     */
  static int     onsect, offsect;                /*      "       "       "       */
@@ -12,14 +12,14 @@ $NetBSD: patch-ag,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
  static SRTBLK *frstout, *prvout;        /* links for building new outlist */
  
 @@ -56,7 +56,7 @@
- 		for(ip = &inslst[0]; ip < &inslst[INSMAX]; *ip++ = 1);
- 	}
- 	ontime = a0.newp3 = a0.p3val = onbeat;
--	offtime = f0.newp2 = f0.p2val = offbeat;
-+	cs_offtime = f0.newp2 = f0.p2val = offbeat;
+                 for(ip = &inslst[0]; ip < &inslst[INSMAX]; *ip++ = 1);
+         }
+         ontime = a0.newp3 = a0.p3val = onbeat;
+-        offtime = f0.newp2 = f0.p2val = offbeat;
++        cs_offtime = f0.newp2 = f0.p2val = offbeat;
  }
  
- void extract(void)	/* extract instr events within the time period */
+ void extract(void)      /* extract instr events within the time period */
 @@ -101,7 +101,7 @@
          if (sectno == onsect && warped)
            ontime = a0.newp3 = realt(onbeat);
@@ -30,7 +30,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
          break;
        case 't':
 @@ -110,7 +110,7 @@
-       case 'f':   
+       case 'f':
        casef: if (sectno == onsect && bp->newp2 < ontime)
          bp->newp2 = ontime;
 -      else if (sectno == offsect && bp->newp2 > offtime)

@@ -1,13 +1,14 @@
-$NetBSD: patch-aq,v 1.1 2002/01/21 11:28:16 wiz Exp $
+$NetBSD: patch-aq,v 1.2 2002/03/23 02:23:01 wiz Exp $
 
---- anal/pvoc/makef.orig	Sun May 16 20:04:33 1999
-+++ anal/pvoc/makef
-@@ -6,7 +6,7 @@
+--- sdif.h.orig	Fri Jan 25 05:02:59 2002
++++ sdif.h
+@@ -53,7 +53,8 @@
+ #ifndef __SDIF_H
+ #define __SDIF_H
  
- OBJS =  main.o $T/pvanal.o $T/filopen.o $T/sfheader.o \
- 	$T/soundin.o $T/ulaw.o $T/aiff.o $T/wave.o $T/ieee80.o $T/memalloc.o \
--	$T/pvoc.o $T/fft.o $T/dsputil.o $T/window.o $T/winX11.o $T/winascii.o \
-+	$T/pvoc.o $T/fft.o $T/dsputil.o $T/window.o $T/winascii.o \
- 	$T/winEPS.o $T/aifc.o $T/getstring.o
+-
++#include "cs.h"
++#undef printf
  
- pvocs:	pvanal
+ /****************************************************/
+ /* Create 32-bit and 64-bit int and float typedefs. */
