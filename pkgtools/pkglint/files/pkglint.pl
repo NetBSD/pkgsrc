@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.35 2000/09/05 00:02:17 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.36 2000/12/02 02:02:59 wiz Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -131,6 +131,7 @@ TEX_CTAN	ftp://ftp.wustl.edu/packages/TeX/
 TEX_CTAN	ftp://ftp.funet.fi/pub/TeX/CTAN/
 TEX_CTAN	ftp://ftp.tex.ac.uk/public/ctan/tex-archive/
 TEX_CTAN	ftp://ftp.dante.de/tex-archive/
+SUNSITE		ftp://metalab.unc.edu/pub/Linux/
 SUNSITE		ftp://sunsite.unc.edu/pub/Linux/
 SUNSITE		ftp://ftp.infomagic.com/pub/mirrors/linux/sunsite/
 SUNSITE		ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
@@ -138,6 +139,8 @@ GNOME		ftp://ftp.gnome.org/pub/GNOME/
 GNOME		ftp://ftp.sunet.se/pub/X11/GNOME/
 GNOME		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/
 GNOME		ftp://ftp.tuwien.ac.at/hci/gnome.org/GNOME/
+SOURCEFORGE	ftp://download.sourceforge.net/
+SOURCEFORGE	http://download.sourceforge.net/
 EOF
 	($j, $k) = split(/\t+/, $i);
 	$predefined{$k} = $j;
