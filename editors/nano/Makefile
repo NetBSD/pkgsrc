@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2004/02/12 14:34:06 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2004/04/22 17:14:37 tv Exp $
 
 DISTNAME=	nano-1.0.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=nano/}
 
