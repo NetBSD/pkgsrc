@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.772 2002/12/13 17:28:56 cjep Exp $
+$NetBSD: CHANGES,v 1.773 2002/12/13 17:52:04 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3940,3 +3940,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added xpk-0.1.4 [cjep 2002-12-13]
 	Added p5-IO-Zlib-1.01 [cjep 2002-12-13]
 	Added p5-Mac-Macbinary-0.04 [cjep 2002-12-13]
+	Added lbrate-1.1 [cjep 2002-12-13]
