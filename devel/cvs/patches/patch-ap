@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.2 2000/10/18 03:31:16 hubertf Exp $
+$NetBSD: patch-ap,v 1.3 2000/10/21 19:29:06 wiz Exp $
 
 --- src/main.c.orig	Thu Sep  7 01:35:04 2000
 +++ src/main.c
@@ -10,7 +10,15 @@ $NetBSD: patch-ap,v 1.2 2000/10/18 03:31:16 hubertf Exp $
  int logoff = 0;
  
  /* Set if we should be writing CVSADM directories at top level.  At
-@@ -239,6 +240,7 @@
+@@ -49,6 +50,7 @@
+ int top_level_admin = 0;
+ 
+ mode_t cvsumask = UMASK_DFLT;
++char *RCS_citag = NULL;
+ 
+ char *CurDir;
+ 
+@@ -239,6 +241,7 @@
      "    -w           Make checked-out files read-write (default).\n",
      "    -l           Turn history logging off.\n",
      "    -n           Do not execute anything that will change the disk.\n",
@@ -18,7 +26,7 @@ $NetBSD: patch-ap,v 1.2 2000/10/18 03:31:16 hubertf Exp $
      "    -t           Show trace of program execution -- try with -n.\n",
      "    -v           CVS version and copyright.\n",
      "    -T tmpdir    Use 'tmpdir' for temporary files.\n",
-@@ -432,7 +434,7 @@
+@@ -432,7 +435,7 @@
      int help = 0;		/* Has the user asked for help?  This
  				   lets us support the `cvs -H cmd'
  				   convention to give help for cmd. */
@@ -27,7 +35,7 @@ $NetBSD: patch-ap,v 1.2 2000/10/18 03:31:16 hubertf Exp $
      static struct option long_options[] =
      {
          {"help", 0, NULL, 'H'},
-@@ -562,6 +564,8 @@
+@@ -562,6 +565,8 @@
  		break;
  	    case 'n':
  		noexec = 1;
@@ -36,7 +44,7 @@ $NetBSD: patch-ap,v 1.2 2000/10/18 03:31:16 hubertf Exp $
  	    case 'l':			/* Fall through */
  		logoff = 1;
  		break;
-@@ -936,7 +940,7 @@
+@@ -936,7 +941,7 @@
  		/*
  		 * Check to see if the repository exists.
  		 */

@@ -1,18 +1,25 @@
-$NetBSD: patch-ae,v 1.2 2000/10/18 03:31:16 hubertf Exp $
+$NetBSD: patch-ae,v 1.3 2000/10/21 19:29:06 wiz Exp $
 
 --- src/rcs.c.orig	Mon Aug 21 23:16:38 2000
 +++ src/rcs.c
-@@ -3361,6 +3361,9 @@
+@@ -3348,7 +3348,7 @@
+     size_t len;
+ };
+ #define KEYWORD_INIT(s) (s), sizeof (s) - 1
+-static const struct rcs_keyword keywords[] =
++static struct rcs_keyword keywords[] =
+ {
+     { KEYWORD_INIT ("Author") },
+     { KEYWORD_INIT ("Date") },
+@@ -3361,6 +3361,7 @@
      { KEYWORD_INIT ("Revision") },
      { KEYWORD_INIT ("Source") },
      { KEYWORD_INIT ("State") },
-+#ifdef LOCALID
-+    { KEYWORD_INIT (LOCALID) },
-+#endif
++    { NULL, 0 },
      { NULL, 0 }
  };
  enum keyword
-@@ -3375,7 +3378,8 @@
+@@ -3375,7 +3376,8 @@
      KEYWORD_RCSFILE,
      KEYWORD_REVISION,
      KEYWORD_SOURCE,
@@ -22,7 +29,19 @@ $NetBSD: patch-ae,v 1.2 2000/10/18 03:31:16 hubertf Exp $
  };
  
  /* Convert an RCS date string into a readable string.  This is like
-@@ -3603,6 +3607,7 @@
+@@ -3512,6 +3514,11 @@
+ 	return;
+     }
+ 
++    if (RCS_citag != NULL) {
++	keywords[KEYWORD_LOCALID].string = RCS_citag;
++	keywords[KEYWORD_LOCALID].len = strlen(RCS_citag);
++    }
++
+     /* If we are using -kkvl, dig out the locker information if any.  */
+     locker = NULL;
+     if (expand == KFLAG_KVL)
+@@ -3603,6 +3610,7 @@
  
  	    case KEYWORD_HEADER:
  	    case KEYWORD_ID:
@@ -30,3 +49,12 @@ $NetBSD: patch-ae,v 1.2 2000/10/18 03:31:16 hubertf Exp $
  		{
  		    char *path;
  		    int free_path;
+@@ -4234,7 +4242,7 @@
+ 	if (info != NULL)
+ 	{
+ 	    /* If the size of `devtype' changes, fix the sscanf call also */
+-	    char devtype[16];
++	    char devtype[16+1];
+ 
+ 	    if (sscanf (info->data, "%16s %lu",
+ 			devtype, &devnum_long) < 2)

@@ -1,8 +1,16 @@
-$NetBSD: patch-am,v 1.4 2000/10/18 03:31:16 hubertf Exp $
+$NetBSD: patch-am,v 1.5 2000/10/21 19:29:06 wiz Exp $
 
 --- src/cvs.h.orig	Sat Jul  8 21:57:21 2000
 +++ src/cvs.h
-@@ -394,6 +394,7 @@
+@@ -363,6 +363,7 @@
+ extern int use_editor;
+ extern int cvswrite;
+ extern mode_t cvsumask;
++extern char *RCS_citag;
+ 
+ /* Access method specified in CVSroot. */
+ typedef enum {
+@@ -394,6 +395,7 @@
  
  extern int trace;		/* Show all commands */
  extern int noexec;		/* Don't modify disk anywhere */
@@ -10,7 +18,7 @@ $NetBSD: patch-am,v 1.4 2000/10/18 03:31:16 hubertf Exp $
  extern int logoff;		/* Don't write history entry */
  
  extern int top_level_admin;
-@@ -654,6 +655,7 @@
+@@ -654,6 +656,7 @@
  #define	RUN_STDOUT_APPEND	0x0004	/* append to stdout, don't truncate */
  #define	RUN_STDERR_APPEND	0x0008	/* append to stderr, don't truncate */
  #define	RUN_SIGIGNORE		0x0010	/* ignore interrupts for command */
