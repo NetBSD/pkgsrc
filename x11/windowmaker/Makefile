@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2000/07/22 02:18:45 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.53 2000/07/31 04:14:12 jlam Exp $
 
 DISTNAME=		WindowMaker-0.62.1
 PKGNAME=		windowmaker-0.62.1
@@ -11,7 +11,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.windowmaker.org/
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
-DEPENDS+=		gettext-0.10.*:../../devel/gettext
+DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 DEPENDS+=		libproplist-0.10.*:../../devel/libproplist
 DEPENDS+=		libungif-*:../../graphics/libungif
 DEPENDS+=		jpeg-6b:../../graphics/jpeg

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2000/06/05 01:12:37 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2000/07/31 04:14:11 jlam Exp $
 
 DISTNAME=		gtk+-1.2.8
 CATEGORIES=		x11
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gtk.org/
 
-DEPENDS+=		gettext-0.10.*:../../devel/gettext
+DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 DEPENDS+=		glib>=1.2.8:../../devel/glib
 BUILD_DEPENDS+=		${LOCALBASE}/bin/perl:../../lang/perl5
 

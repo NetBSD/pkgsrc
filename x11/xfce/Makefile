@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/07/15 20:39:28 agc Exp $
+# $NetBSD: Makefile,v 1.11 2000/07/31 04:14:13 jlam Exp $
 
 DISTNAME=	xfce-3.3.1
 CATEGORIES=	x11
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.xfce.org/archive/
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.xfce.org/
 
-DEPENDS+=       gettext-0.10.*:../../devel/gettext
+DEPENDS+=       gettext>=0.10.35nb1:../../devel/gettext
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 DEPENDS+=	imlib-1.9.*:../../graphics/imlib
 DEPENDS+=	xpm-3.4k:../../graphics/xpm

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2000/06/26 20:52:33 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2000/07/31 04:14:08 jlam Exp $
 #
 
-DISTNAME=		gnucash-1.4.1
+DISTNAME=		gnucash-1.4.3
 CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			http://download.sourceforge.net/gnucash/
@@ -10,7 +10,7 @@ MAINTAINER=		drankin@bohemians.lexington.ky.us
 HOMEPAGE=		http://www.gnucash.org/
 
 DEPENDS+=		gnome-libs>=1.0.40:../../x11/gnome-libs
-DEPENDS+=		gettext>=0.10.35:../../devel/gettext
+DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 DEPENDS+=		eperl-2.2.14:../../textproc/eperl
 DEPENDS+=		libperl-5.00404:../../lang/libperl
 DEPENDS+=		g-wrap>=0.9.4:../../devel/g-wrap
