@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.15 2000/02/20 15:22:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2000/02/21 19:54:38 wiz Exp $
 bin/pth-config
 bin/pthread-config
 include/pth.h
 include/pthread.h
 lib/libpth.a
-lib/libpth.so.13.0
+lib/libpth.so.13.1
 lib/libpthread.a
-lib/libpthread.so.13.0
+lib/libpthread.so.13.1
 man/man1/pth-config.1
 man/man1/pthread-config.1
 man/man3/pth.3
@@ -21,6 +21,7 @@ share/doc/pth/README
 share/doc/pth/SUPPORT
 share/doc/pth/TESTS
 share/doc/pth/THANKS
+share/doc/pth/USERS
 share/doc/pth/pthread.ps
 share/doc/pth/rse-pmt.ps
 @dirrm share/doc/pth
