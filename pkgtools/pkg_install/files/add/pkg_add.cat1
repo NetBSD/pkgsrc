@@ -131,8 +131,9 @@ OOPPTTIIOONNSS
 
      --uu      If the package that's being installed is already installed,
              either in the same or a different version, an update is per-
-             formed.  See below for a more detailed description of the
-             process.
+             formed.  If this is specified twice, then any dependant packages
+             that are too old will also be updated to fulfill the dependecy.
+             See below for a more detailed description of the process.
 
      --VV      Print version number and exit.
 
@@ -190,6 +191,10 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 these required packages are not currently installed, an
                 attempt is made to find and install it; if the missing package
                 cannot be found or installed, the installation is terminated.
+                If the --uu option was specified twice, required packages that
+                are installed, but with too old of a version, are also
+                updated.  The dependant packages are found according to the
+                normal PKG_PATH rules.
 
            4.   A search is made for any @@ooppttiioonn directives which control how
                 the package is added to the system.  The only currently imple-
