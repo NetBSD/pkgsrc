@@ -1,0 +1,12 @@
+$NetBSD: patch-rsaref-1,v 1.1 1998/09/30 20:08:21 cjs Exp $
+--- Makefile.ssl.orig	Fri Jun 26 01:25:25 1998
++++ Makefile.ssl	Wed Sep 16 14:33:49 1998
+@@ -175,7 +175,7 @@
+ 	VERSION PROBLEMS MINFO makefile.one e_os.h \
+ 	MICROSOFT makevms.com config PATENTS
+ WDIRS=  windows
+-LIBS=   libcrypto.a libssl.a 
++LIBS=	libcrypto.a libssl.a libRSAglue.a
+ 
+ GENERAL=        Makefile
+ BASENAME=       SSLeay
