@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2001/09/12 13:21:29 jun Exp $
+$NetBSD: distinfo,v 1.16 2001/09/17 09:14:24 jun Exp $
 
-SHA1 (mew-2.0.53.tar.gz) = cb4df5afa37ea72d80f553a8d62bacc3704bf572
-Size (mew-2.0.53.tar.gz) = 733493 bytes
+SHA1 (mew-2.0.54.tar.gz) = d7ec52ad5e012eb94cc1f571bf2a1fff4897c081
+Size (mew-2.0.54.tar.gz) = 734871 bytes
 SHA1 (patch-aa) = 2c7b779d03d377da7684896bf2556b77bc4d7025
