@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2001/04/13 16:09:03 tron Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/23 20:37:31 tron Exp $
 
-DISTNAME=	nxtvepg-0.4.5
+DISTNAME=	nxtvepg-0.5.0
 CATEGORIES=	misc
 MASTER_SITES=	http://www.nefkom.net/tomzo/prj/nxtvepg/src/
 
