@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.143 1998/08/12 01:30:13 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.144 1998/08/14 22:10:53 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -492,13 +492,17 @@ CKSUMFILES!=	\
 CKSUMFILES=		${ALLFILES}
 .endif
 
-# List of all files, with ${DIST_SUBDIR} in front.  Used for checksum.
+# List of all files, with ${DIST_SUBDIR} in front.  Used for fetch and checksum.
 .if defined(DIST_SUBDIR)
 _CKSUMFILES?=	${CKSUMFILES:S/^/${DIST_SUBDIR}\//}
+_DISTFILES?=	${DISTFILES:S/^/${DIST_SUBDIR}\//}
 _IGNOREFILES?=	${IGNOREFILES:S/^/${DIST_SUBDIR}\//}
+_PATCHFILES?=	${PATCHFILES:S/^/${DIST_SUBDIR}\//}
 .else
 _CKSUMFILES?=	${CKSUMFILES}
+_DISTFILES?=	${DISTFILES}
 _IGNOREFILES?=	${IGNOREFILES}
+_PATCHFILES?=	${PATCHFILES}
 .endif
 
 # This is what is actually going to be extracted, and is overridable
@@ -745,20 +749,21 @@ describe:
 do-fetch:
 	@${MKDIR} ${_DISTDIR}
 	@(cd ${_DISTDIR}; \
-	 for file in ${DISTFILES}; do \
-		if [ ! -f $$file -a ! -f `${BASENAME} $$file` ]; then \
-			if [ -h $$file -o -h `${BASENAME} $$file` ]; then \
-				${ECHO_MSG} ">> ${_DISTDIR}/$$file is a broken symlink."; \
+	 for file in ${_DISTFILES}; do \
+		bfile=`${BASENAME} $$file`; \
+		if [ ! -f $$file -a ! -f $$bfile ]; then \
+			if [ -h $$file -o -h $$bfile ]; then \
+				${ECHO_MSG} ">> ${_DISTDIR}/$$bfile is a broken symlink."; \
 				${ECHO_MSG} ">> Perhaps a filesystem (most likely a CD) isn't mounted?"; \
 				${ECHO_MSG} ">> Please correct this problem and try again."; \
 				exit 1; \
 			fi ; \
-			${ECHO_MSG} ">> $$file doesn't seem to exist on this system."; \
+			${ECHO_MSG} ">> $$bfile doesn't seem to exist on this system."; \
 			for site in ${MASTER_SITES}; do \
-				${ECHO_MSG} ">> Attempting to fetch $$file from $${site}."; \
-				if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} ${FETCH_AFTER_ARGS}; then \
+				${ECHO_MSG} ">> Attempting to fetch $$bfile from $${site}."; \
+				if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
 					if [ -f ${MD5_FILE} ]; then \
-						CKSUM=`${MD5} < ${DISTDIR}/$$file`; \
+						CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
 						CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
 						if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
 							continue 2; \
@@ -777,19 +782,30 @@ do-fetch:
 	 done)
 .if defined(PATCHFILES)
 	@(cd ${_DISTDIR}; \
-	 for file in ${PATCHFILES}; do \
-		if [ ! -f $$file -a ! -f `${BASENAME} $$file` ]; then \
-			if [ -h $$file -o -h `${BASENAME} $$file` ]; then \
-				${ECHO_MSG} ">> ${_DISTDIR}/$$file is a broken symlink."; \
+	 for file in ${_PATCHFILES}; do \
+		bfile=`${BASENAME} $$file`; \
+		if [ ! -f $$file -a ! -f $$bfile ]; then \
+			if [ -h $$file -o -h $$bfile ]; then \
+				${ECHO_MSG} ">> ${_DISTDIR}/$$bfile is a broken symlink."; \
 				${ECHO_MSG} ">> Perhaps a filesystem (most likely a CD) isn't mounted?"; \
 				${ECHO_MSG} ">> Please correct this problem and try again."; \
 				exit 1; \
 			fi ; \
-			${ECHO_MSG} ">> $$file doesn't seem to exist on this system."; \
+			${ECHO_MSG} ">> $$bfile doesn't seem to exist on this system."; \
 			for site in ${PATCH_SITES}; do \
 			    ${ECHO_MSG} ">> Attempting to fetch from $${site}."; \
-				if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} ${FETCH_AFTER_ARGS}; then \
-					continue 2; \
+				if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
+					if [ -f ${MD5_FILE} ]; then \
+						CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
+						CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
+						if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
+							continue 2; \
+						else \
+							${ECHO_MSG} ">> Checksum failure - trying next site."; \
+						fi; \
+					else \
+						continue 2; \
+					fi; \
 				fi \
 			done; \
 			${ECHO_MSG} ">> Couldn't fetch it - please try to retrieve this";\
