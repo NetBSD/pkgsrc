@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.nolinguas,v 1.2 1999/02/02 10:24:11 tron Exp $
+@comment $NetBSD: PLIST.nolinguas,v 1.3 1999/03/20 00:17:20 tron Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -45,7 +45,10 @@ GNUstep/Apps/WPrefs.app/tiff/speed3.tiff
 GNUstep/Apps/WPrefs.app/tiff/speed3s.tiff
 GNUstep/Apps/WPrefs.app/tiff/speed4.tiff
 GNUstep/Apps/WPrefs.app/tiff/speed4s.tiff
+GNUstep/Apps/WPrefs.app/tiff/tdel.tiff
+GNUstep/Apps/WPrefs.app/tiff/tedit.tiff
 GNUstep/Apps/WPrefs.app/tiff/temp.tiff
+GNUstep/Apps/WPrefs.app/tiff/textr.tiff
 GNUstep/Apps/WPrefs.app/tiff/theme.tiff
 GNUstep/Apps/WPrefs.app/tiff/timer0.tiff
 GNUstep/Apps/WPrefs.app/tiff/timer0s.tiff
@@ -59,6 +62,7 @@ GNUstep/Apps/WPrefs.app/tiff/timer4.tiff
 GNUstep/Apps/WPrefs.app/tiff/timer4s.tiff
 GNUstep/Apps/WPrefs.app/tiff/timer5.tiff
 GNUstep/Apps/WPrefs.app/tiff/timer5s.tiff
+GNUstep/Apps/WPrefs.app/tiff/tnew.tiff
 GNUstep/Apps/WPrefs.app/tiff/whandling.tiff
 GNUstep/Apps/WPrefs.app/tiff/windowfocus.tiff
 GNUstep/Apps/WPrefs.app/tiff/workspace.tiff
@@ -130,6 +134,7 @@ bin/getstyle
 bin/seticons
 bin/setstyle
 bin/wdwrite
+bin/wkdemenu.pl
 bin/wm-oldmenu2new
 bin/wmaker
 bin/wmaker.inst
@@ -137,6 +142,11 @@ bin/wmsetbg
 bin/wsetfont
 bin/wxcopy
 bin/wxpaste
+etc/WindowMaker/WMGLOBAL
+etc/WindowMaker/WMRootMenu
+etc/WindowMaker/WMState
+etc/WindowMaker/WMWindowAttributes
+etc/WindowMaker/WindowMaker
 include/WINGs.h
 include/WINGsP.h
 include/WMaker.h
@@ -145,7 +155,7 @@ include/wraster.h
 lib/libWINGs.a
 lib/libWMaker.a
 lib/libwraster.a
-lib/libwraster.so.1.2
+lib/libwraster.so.2.0
 man/man1/geticonset.1
 man/man1/getstyle.1
 man/man1/seticons.1
@@ -160,11 +170,6 @@ share/WINGs/Images.xpm
 share/WINGs/defaultIcon.tiff
 share/WINGs/defaultIcon.xpm
 share/WindowMaker/Backgrounds/BlueImage.jpeg
-share/WindowMaker/Defaults/WMGLOBAL
-share/WindowMaker/Defaults/WMRootMenu
-share/WindowMaker/Defaults/WMState
-share/WindowMaker/Defaults/WMWindowAttributes
-share/WindowMaker/Defaults/WindowMaker
 share/WindowMaker/IconSets/Default.iconset
 share/WindowMaker/Icons/BitchX.tiff
 share/WindowMaker/Icons/BitchX.xpm
@@ -279,9 +284,8 @@ share/WindowMaker/Pixmaps/tile.xpm
 share/WindowMaker/Pixmaps/tile2.xpm
 share/WindowMaker/Pixmaps/xv.xpm
 share/WindowMaker/README
-share/WindowMaker/README.GNOME
-share/WindowMaker/README.KDE
 share/WindowMaker/README.themes
+share/WindowMaker/SoundSets/.keep_me
 share/WindowMaker/Sounds/.keep_me
 share/WindowMaker/Styles/Autumn.style
 share/WindowMaker/Styles/Black.style
@@ -311,10 +315,20 @@ share/WindowMaker/Styles/VioletBlue.style
 share/WindowMaker/Themes/Checker.themed/checker.xpm
 share/WindowMaker/Themes/Checker.themed/style
 share/WindowMaker/Themes/Default.style
+share/WindowMaker/Themes/LeetWM.themed/LeetWM.jpg
+share/WindowMaker/Themes/LeetWM.themed/LeetWMMenutb1.jpg
+share/WindowMaker/Themes/LeetWM.themed/LeetWMMenutb2.jpg
+share/WindowMaker/Themes/LeetWM.themed/LeetWMTile1.jpg
+share/WindowMaker/Themes/LeetWM.themed/LeetWMtb1.jpg
+share/WindowMaker/Themes/LeetWM.themed/LeetWMtb2.jpg
+share/WindowMaker/Themes/LeetWM.themed/style
 share/WindowMaker/Themes/Night.themed/SeaNight.jpeg
 share/WindowMaker/Themes/Night.themed/style
 share/WindowMaker/Themes/OpenStep.style
 share/WindowMaker/Themes/Pastel.style
+share/WindowMaker/Themes/STEP2000.themed/BlueImage2.jpeg
+share/WindowMaker/Themes/STEP2000.themed/style
+share/WindowMaker/Themes/SteelBlueSilk.style
 share/WindowMaker/autostart.sh
 share/WindowMaker/exitscript.sh
 share/WindowMaker/menu
@@ -340,25 +354,33 @@ share/WindowMaker/menu.ru
 share/WindowMaker/menu.se
 share/WindowMaker/menu.sl
 share/WindowMaker/menu.tr
+share/WindowMaker/menu.zh_TW.Big5
 share/WindowMaker/plmenu
 share/WindowMaker/plmenu.fr
 share/WindowMaker/plmenu.hr
 share/WindowMaker/wmmacros
 share/WindowMaker/xtree.dat
+share/doc/WindowMaker/README
+share/doc/WindowMaker/README.GNOME
+share/doc/WindowMaker/README.KDE
 @dirrm GNUstep/Apps/WPrefs.app/tiff
 @dirrm GNUstep/Apps/WPrefs.app/xpm
 @dirrm GNUstep/Apps/WPrefs.app
 @dirrm GNUstep/Apps
 @dirrm GNUstep
+@dirrm etc/WindowMaker
 @dirrm share/WINGs
 @dirrm share/WindowMaker/Backgrounds
-@dirrm share/WindowMaker/Defaults
 @dirrm share/WindowMaker/IconSets
 @dirrm share/WindowMaker/Icons
 @dirrm share/WindowMaker/Pixmaps
+@dirrm share/WindowMaker/SoundSets
 @dirrm share/WindowMaker/Sounds
 @dirrm share/WindowMaker/Styles
 @dirrm share/WindowMaker/Themes/Checker.themed
+@dirrm share/WindowMaker/Themes/LeetWM.themed
 @dirrm share/WindowMaker/Themes/Night.themed
+@dirrm share/WindowMaker/Themes/STEP2000.themed
 @dirrm share/WindowMaker/Themes
 @dirrm share/WindowMaker
+@dirrm share/doc/WindowMaker
