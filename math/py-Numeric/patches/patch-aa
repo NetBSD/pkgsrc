@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 1998/04/10 22:30:41 tron Exp $
+$NetBSD: patch-aa,v 1.2 1998/04/12 21:56:05 tron Exp $
 
 Turn LLNL's compile script into a configure script :-)
 
