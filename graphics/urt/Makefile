@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/01/02 03:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2000/03/27 08:54:56 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 #
 
@@ -21,7 +21,7 @@ EXTRACT_ONLY=	urt-3.1b.tar.Z
 
 USE_X11=	yes
 NO_WRKSUBDIR=   yes
-CONFIGURE_SCRIPT=Configure
+CONFIGURE_SCRIPT=./Configure
 CONFIGURE_ARGS=	config/urt
 HAS_CONFIGURE=	yes
 MAKEFILE=	makefile

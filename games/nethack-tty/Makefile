@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/12/24 22:30:04 pooka Exp $
+# $NetBSD: Makefile,v 1.6 2000/03/27 08:54:56 tron Exp $
 
 DISTNAME=		nethack-3.3.0
 PKGNAME=		nethack-tty-3.3.0
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.win.tue.nl/games/roguelike/nethack/
 DEPENDS+=		nethack-lib-3.3.0:../nethack-lib
 
 HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	sys/unix/setup.sh
+CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 ALL_TARGET=		nethack
 INSTALL_TARGET=		binfiles
 MAKE_ENV+=		GTYPE=-tty
