@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/27 13:32:01 zuntum Exp $
+bin/imwheel
+man/man1/imwheel.1
+share/examples/imwheel/imwheelrc
+@dirrm share/examples/imwheel
