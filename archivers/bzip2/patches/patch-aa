@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2003/09/18 18:46:32 wiz Exp $
-
---- Makefile.orig	Sat Jan 26 00:34:53 2002
-+++ Makefile	Sun Mar 24 14:56:33 2002
-@@ -2,18 +2,15 @@
+--- Makefile.orig	2002-01-25 17:34:53.000000000 -0600
++++ Makefile	2003-12-05 16:45:09.000000000 -0600
+@@ -2,43 +2,36 @@
  SHELL=/bin/sh
  
  # To assist in cross-compiling
@@ -17,30 +15,28 @@ $NetBSD: patch-aa,v 1.7 2003/09/18 18:46:32 wiz Exp $
  # Suitably paranoid flags to avoid bugs in gcc-2.7
  BIGFILES=-D_FILE_OFFSET_BITS=64
 -CFLAGS=-Wall -Winline -O2 -fomit-frame-pointer -fno-strength-reduce $(BIGFILES)
--
++CFLAGS+=${BZIP_CFLAGS} $(BIGFILES)
+ 
 -# Where you want it installed when you do 'make install'
 -PREFIX=/usr
 -
-+CFLAGS+=${BZIP_CFLAGS} $(BIGFILES)
- 
- OBJS= blocksort.o  \
-       huffman.o    \
-@@ -23,22 +20,18 @@
-       decompress.o \
-       bzlib.o
- 
+-
+-OBJS= blocksort.o  \
+-      huffman.o    \
+-      crctable.o   \
+-      randtable.o  \
+-      compress.o   \
+-      decompress.o \
+-      bzlib.o
+-
 -all: libbz2.a bzip2 bzip2recover test
-+all: libbz2.la bzip2 bzip2recover test
- 
+-
 -bzip2: libbz2.a bzip2.o
 -	$(CC) $(CFLAGS) $(LDFLAGS) -o bzip2 bzip2.o -L. -lbz2
-+bzip2: libbz2.la bzip2.o
-+	$(LD) $(CFLAGS) $(LDFLAGS) -static -o bzip2 bzip2.o libbz2.la
- 
- bzip2recover: bzip2recover.o
+-
+-bzip2recover: bzip2recover.o
 -	$(CC) $(CFLAGS) $(LDFLAGS) -o bzip2recover bzip2recover.o
-+	$(LD) $(CFLAGS) $(LDFLAGS) -static -o bzip2recover bzip2recover.o
- 
+-
 -libbz2.a: $(OBJS)
 -	rm -f libbz2.a
 -	$(AR) cq libbz2.a $(OBJS)
@@ -49,10 +45,60 @@ $NetBSD: patch-aa,v 1.7 2003/09/18 18:46:32 wiz Exp $
 -		echo $(RANLIB) libbz2.a ; \
 -		$(RANLIB) libbz2.a ; \
 -	fi
++OBJS= blocksort.lo  \
++      huffman.lo    \
++      crctable.lo   \
++      randtable.lo  \
++      compress.lo   \
++      decompress.lo \
++      bzlib.lo
++
++all: libbz2.la bzip2 bzip2recover test
++
++bzip2: libbz2.la bzip2.lo
++	$(LD) $(CFLAGS) $(LDFLAGS) -static -o bzip2 bzip2.lo libbz2.la
++
++bzip2recover: bzip2recover.lo
++	$(LD) $(CFLAGS) $(LDFLAGS) -static -o bzip2recover bzip2recover.lo
++
 +libbz2.la: $(OBJS)
 +	rm -f libbz2.la
-+	$(LD) $(LDFLAGS) -o libbz2.la $(OBJS:.o=.lo) -version-info 0:0  \
++	$(LD) $(LDFLAGS) -o libbz2.la $(OBJS) -version-info 0:0  \
 +		-rpath $(PREFIX)/lib
  
  check: test
  test: bzip2
+@@ -102,24 +95,24 @@
+ 	sample1.rb2 sample2.rb2 sample3.rb2 \
+ 	sample1.tst sample2.tst sample3.tst
+ 
+-blocksort.o: blocksort.c
++blocksort.lo: blocksort.c
+ 	@cat words0
+ 	$(CC) $(CFLAGS) -c blocksort.c
+-huffman.o: huffman.c
++huffman.lo: huffman.c
+ 	$(CC) $(CFLAGS) -c huffman.c
+-crctable.o: crctable.c
++crctable.lo: crctable.c
+ 	$(CC) $(CFLAGS) -c crctable.c
+-randtable.o: randtable.c
++randtable.lo: randtable.c
+ 	$(CC) $(CFLAGS) -c randtable.c
+-compress.o: compress.c
++compress.lo: compress.c
+ 	$(CC) $(CFLAGS) -c compress.c
+-decompress.o: decompress.c
++decompress.lo: decompress.c
+ 	$(CC) $(CFLAGS) -c decompress.c
+-bzlib.o: bzlib.c
++bzlib.lo: bzlib.c
+ 	$(CC) $(CFLAGS) -c bzlib.c
+-bzip2.o: bzip2.c
++bzip2.lo: bzip2.c
+ 	$(CC) $(CFLAGS) -c bzip2.c
+-bzip2recover.o: bzip2recover.c
++bzip2recover.lo: bzip2recover.c
+ 	$(CC) $(CFLAGS) -c bzip2recover.c
+ 
+ DISTNAME=bzip2-1.0.2
