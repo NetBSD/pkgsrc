@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/05/14 10:26:37 kristerw Exp $
+$NetBSD: patch-aa,v 1.2 2005/01/28 14:58:28 adam Exp $
 
---- configure.orig	Fri May 14 12:10:46 2004
-+++ configure	Fri May 14 12:11:26 2004
-@@ -2435,7 +2435,8 @@
+--- configure.orig	2001-10-05 18:18:03.000000000 +0000
++++ configure
+@@ -6198,7 +6198,8 @@ else
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
