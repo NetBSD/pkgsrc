@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2001/10/16 07:05:24 jlam Exp $
+# $NetBSD: Makefile,v 1.108 2001/10/19 21:06:42 kei Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -69,6 +69,7 @@ SUBDIR+=	p5-Locale-Codes
 SUBDIR+=	p5-Search
 SUBDIR+=	pdmenu
 SUBDIR+=	php4-calendar
+SUBDIR+=	php4-mbstring
 SUBDIR+=	pinfo
 SUBDIR+=	proj
 SUBDIR+=	pty-redir
