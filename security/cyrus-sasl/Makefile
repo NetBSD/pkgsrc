@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2001/12/04 06:15:00 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2001/12/10 12:43:21 martti Exp $
 
 DISTNAME=		cyrus-sasl-1.5.24
-PKGREVISION=		3
+PKGREVISION=		4
 SVR4_PKGNAME=		csasl
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
@@ -52,21 +52,13 @@ CONFIGURE_ARGS+=	--disable-scram		# --- no SCRAM-MD5
 CONFIGURE_ARGS+=	--disable-sia		# --- no SIA
 CONFIGURE_ARGS+=	--disable-srp		# --- no SRP
 CONFIGURE_ARGS+=	--disable-x509		# --- no X.509
+CONFIGURE_ARGS+=	--disable-krb4		# --- no KERBEROS_V4
 
-.if defined(KERBEROS)
-.undef USE_BUILDLINK_ONLY
-.if ${OPSYS} == "NetBSD"
-USE_KERBEROS=		# defined
-CONFIGURE_ARGS+=	--enable-krb4=${PREFIX} --enable-gssapi=/usr # KERBEROS_V4
-DEPENDS+=		kth-krb4-[0-9]*:../../security/kth-krb4
-PLIST_SRC+=		${PKGDIR}/PLIST.krb4 ${PKGDIR}/PLIST.krb5
-.elif ${OPSYS} == "SunOS"
-USE_KERBEROS=		# defined
+.if defined(SASL_USE_GSSAPI) && ${SASL_USE_GSSAPI} == "YES"
 CONFIGURE_ARGS+=	--enable-gssapi=/usr	# GSSAPI
 PLIST_SRC+=		${PKGDIR}/PLIST.krb5
 .else
-CONFIGURE_ARGS+=	--disable-krb4 --disable-gssapi # --- no KERBEROS_V4
-.endif
+CONFIGURE_ARGS+=	--disable-gssapi	# --- no GSSAPI
 .endif
 
 PLIST_SRC+=		${PKGDIR}/PLIST.plugins

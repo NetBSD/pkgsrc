@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.krb4,v 1.1 2001/11/01 01:22:01 zuntum Exp $
-lib/sasl/libkerberos4.a
-lib/sasl/libkerberos4.la
-lib/sasl/libkerberos4.so
-lib/sasl/libkerberos4.so.1
-lib/sasl/libkerberos4.so.1.15
