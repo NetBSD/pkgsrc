@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6907 2004/08/16 17:13:54 minskim Exp $
+$NetBSD: CHANGES,v 1.6908 2004/08/16 17:24:42 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3864,3 +3864,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added glabels-2.0.1 [wiz 2004-08-16]
 	Updated zsh to 4.2.1 [recht 2004-08-16]
 	Added py-funge-0.2beta1 [minskim 2004-08-16]
+	Updated libnbcompat to 20040814 [jlam 2004-08-16]

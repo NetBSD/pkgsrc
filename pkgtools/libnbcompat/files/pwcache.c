@@ -1,4 +1,4 @@
-/*	$NetBSD: pwcache.c,v 1.6 2004/08/10 18:47:55 jlam Exp $	*/
+/*	$NetBSD: pwcache.c,v 1.7 2004/08/16 17:24:56 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -66,9 +66,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#if HAVE_CONFIG_H
 #include "nbcompat/nbconfig.h"
-#endif
 
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
@@ -78,7 +76,7 @@
 #if 0
 static char sccsid[] = "@(#)cache.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: pwcache.c,v 1.6 2004/08/10 18:47:55 jlam Exp $");
+__RCSID("$NetBSD: pwcache.c,v 1.7 2004/08/16 17:24:56 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 

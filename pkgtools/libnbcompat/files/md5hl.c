@@ -1,16 +1,14 @@
-/*	$NetBSD: md5hl.c,v 1.5 2003/09/06 23:03:03 grant Exp $	*/
+/*	$NetBSD: md5hl.c,v 1.6 2004/08/16 17:24:56 jlam Exp $	*/
 
 /*
  * Written by Jason R. Thorpe <thorpej@netbsd.org>, April 29, 1997.
  * Public domain.
  */
 
-#if HAVE_CONFIG_H
 #include "nbcompat/nbconfig.h"
-#endif
+#include "nbcompat/nbtypes.h"
 
 /* #include "namespace.h" */
-#include "nbcompat/nbtypes.h"
 
 #define	MDALGORITHM	MD5
 
