@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/03 03:21:13 sekiya Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/08 08:32:44 minskim Exp $
 
 DISTNAME=		gqmpeg-0.91.1
 #PKGREVISION=		0
@@ -34,11 +34,13 @@ CONFIGURE_ARGS+=	--enable-russian
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		GNOME_DATADIR=${PREFIX}/share
 
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+
 # in case gnome isn't installed, we need to create the directories
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gnome/apps/Multimedia
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps
 
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
