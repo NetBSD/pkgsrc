@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2003/11/03 11:45:28 recht Exp $
+$NetBSD: distinfo,v 1.11 2004/08/06 16:51:39 sketch Exp $
 
 SHA1 (p0f-2.0.3/p0f-2.0.3.tgz) = a27fc55d81289ea990af765c27e7d5b7347e6f52
 Size (p0f-2.0.3/p0f-2.0.3.tgz) = 119407 bytes
 SHA1 (patch-aa) = f05549d73409fb392582be47d15a75b00b321b44
 SHA1 (patch-ab) = 6bf3c0997a303ec8de7f25a483c830d368d5c1a2
 SHA1 (patch-ac) = 1b7e8ed5830f1e9fe53004e4347dc184037327b2
-SHA1 (patch-ad) = 8dd941205b94213ee2caa100ab26780315ed28ca
+SHA1 (patch-ad) = 353a1b725601f8a0a45582be9ab4b1978736f765
