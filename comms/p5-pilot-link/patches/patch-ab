@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1 1999/05/24 16:09:57 tron Exp $
+
+--- Makefile.PL.in.orig	Sun May  3 05:11:27 1998
++++ Makefile.PL.in	Mon May 24 17:26:10 1999
+@@ -16,5 +16,6 @@
+     'NAME'	=> 'PDA::Pilot',
+     'VERSION'	=> '0.1',
++    'LDFROM'	=> "\$(OBJECT) -R$libdir",
+     'LIBS'	=> $lib,
+     'INC'	=> '-I../include',
+ );

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/22 22:12:08 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/05/24 16:09:57 tron Exp $
 
 DISTNAME=	pilot-link.0.9.3
 PKGNAME=	p5-pilot-link-0.9.3
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-perl5=${PERL5_BIN} --without-tcl \
 		--without-python --without-java
 
+MAKE_ENV+=	OTHERLDFLAGS="${LDFLAGS}"
 PERL5_BIN=	${LOCALBASE}/bin/perl
 WRKSRC=		${WRKDIR}/${DISTNAME}/Perl5
 
