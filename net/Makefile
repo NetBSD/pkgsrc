@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.250 2001/10/11 09:57:20 martti Exp $
+# $NetBSD: Makefile,v 1.251 2001/10/11 14:50:48 agc Exp $
 #
 
 COMMENT=	Networking tools
 
 SUBDIR+=	6to4
 SUBDIR+=	6tunnel
+SUBDIR+=	LaBrea
 SUBDIR+=	ORBit
 SUBDIR+=	SDL_net
 SUBDIR+=	adns
