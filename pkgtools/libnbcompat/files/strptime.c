@@ -1,5 +1,4 @@
-/*	$Id: strptime.c,v 1.1.1.1 2003/03/31 05:03:05 grant Exp $	*/
-/*	$NetBSD: strptime.c,v 1.1.1.1 2003/03/31 05:03:05 grant Exp $	*/
+/*	$NetBSD: strptime.c,v 1.2 2003/09/06 23:03:05 grant Exp $	*/
 
 /*-
  * Copyright (c) 1997, 1998 The NetBSD Foundation, Inc.

@@ -1,4 +1,4 @@
-/*	$Id: fseeko.c,v 1.1.1.1 2003/03/31 05:02:44 grant Exp $	*/
+/*	$NetBSD: fseeko.c,v 1.2 2003/09/06 23:03:02 grant Exp $	*/
 
 /*
  * Copyright 2002 Luke Mewburn <lukem@netbsd.org>.
