@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.76 2004/11/23 05:32:22 jlam Exp $
+# $NetBSD: gcc.mk,v 1.77 2004/11/30 14:50:37 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -334,7 +334,7 @@ LDFLAGS+=	${_GCC_LDFLAGS}
 # GCC executables.
 #
 _GCC_DIR=	${WRKDIR}/.gcc
-_GCC_LINKS=	# empty
+_GCC_VARS=	# empty
 
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
 _GCCBINDIR=	${_GCC_PREFIX}bin
@@ -342,34 +342,35 @@ _GCCBINDIR=	${_GCC_PREFIX}bin
 _GCCBINDIR=	${_CC:H}
 .endif
 .if exists(${_GCCBINDIR}/gcc)
+_GCC_VARS+=	CC
 _GCC_CC=	${_GCC_DIR}/bin/gcc
-_GCC_LINKS+=	_GCC_CC
-PKG_CC=		${_GCC_CC}
-CC=		${PKG_CC:T}
+_ALIASES.CC=	cc gcc
 CCPATH=		${_GCCBINDIR}/gcc
+PKG_CC:=	${_GCC_CC}
 .endif
-.if exists(${_GCCBINDIR}/cpp) && ${OPSYS} != "Darwin"
+.if exists(${_GCCBINDIR}/cpp)
+_GCC_VARS+=	CPP
 _GCC_CPP=	${_GCC_DIR}/bin/cpp
-_GCC_LINKS+=	_GCC_CPP
-PKG_CPP=	${_GCC_CPP}
-CPP=		${PKG_CPP:T}
+_ALIASES.CPP=	cpp
+CPPPATH=	${_GCCBINDIR}/cpp
+PKG_CPP:=	${_GCC_CPP}
 .endif
 .if exists(${_GCCBINDIR}/g++)
+_GCC_VARS+=	CXX
 _GCC_CXX=	${_GCC_DIR}/bin/g++
-_GCC_LINKS+=	_GCC_CXX
-PKG_CXX=	${_GCC_CXX}
-CXX=		${PKG_CXX:T}
+_ALIASES.CXX=	c++ g++
 CXXPATH=	${_GCCBINDIR}/g++
+PKG_CXX:=	${_GCC_CXX}
 .endif
 .if exists(${_GCCBINDIR}/g77)
+_GCC_VARS+=	FC
 _GCC_FC=	${_GCC_DIR}/bin/g77
-_GCC_LINKS+=	_GCC_FC
-PKG_FC=		${_GCC_FC}
-FC=		${PKG_FC:T}
-F77=		${PKG_FC:T}
+_ALIASES.FC=	f77 g77
 FCPATH=		${_GCCBINDIR}/g77
 F77PATH=	${_GCCBINDIR}/g77
+PKG_FC:=	${_GCC_FC}
 .endif
+_COMPILER_STRIP_VARS+=	${_GCC_VARS}
 
 # Pass the required flags to imake to tell it we're using gcc on Solaris.
 .if ${OPSYS} == "SunOS"
@@ -416,16 +417,22 @@ BUILD_DEPENDS+=	${_GCC_DEPENDENCY}
 .endif
 
 # Create compiler driver scripts in ${WRKDIR}.
-.for _target_ in ${_GCC_LINKS}
-.  if !target(${${_target_}})
-override-tools: ${${_target_}}        
-${${_target_}}:
+.for _var_ in ${_GCC_VARS}
+.  if !target(${_GCC_${_var_}})
+override-tools: ${_GCC_${_var_}}        
+${_GCC_${_var_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
-	 ${ECHO} 'exec ${_GCCBINDIR}/${${_target_}:T} "$$@"';		\
+	 ${ECHO} 'exec ${_GCCBINDIR}/${.TARGET:T} "$$@"';		\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+.    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -x "${_alias_}" ]; then					\
+		${LN} -f ${.TARGET} ${_alias_};				\
+	fi
+.    endfor
 .  endif
 .endfor
 
