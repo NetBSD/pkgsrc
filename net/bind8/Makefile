@@ -1,14 +1,14 @@
 #
-# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/17 18:56:03 itojun Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
 
 DISTNAME=	bind
-PKGNAME=	bind-8.2.3
+PKGNAME=	bind-8.2.4
 WRKSRC=		${WRKDIR}/src
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/8.2.3/
+MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/8.2.4/
 DISTFILES=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 
 MAINTAINER=	packages@NetBSD.org
@@ -17,7 +17,7 @@ COMMENT=	The Berkeley Internet Name Daemon, an implementation of DNS
 
 Y2K=		http://www.isc.org/ISC/y2k.html
 
-DIST_SUBDIR=	bind/8.2.3
+DIST_SUBDIR=	bind/8.2.4
 EXTRACT_ONLY=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
 
 post-build:
@@ -26,6 +26,6 @@ post-build:
 post-install:
 	@(cd ${WRKDIR}/doc/man && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${INSTALL_TARGET})
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind8
-	${INSTALL_DATA} ${WRKDIR}/doc/html/* ${PREFIX}/share/doc/bind8
+	(cd ${WRKDIR}/doc/html/; tar Bpcf - .) | (cd ${PREFIX}/share/doc/bind8; tar Bpxf -)
 
 .include "../../mk/bsd.pkg.mk"
