@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2003/12/30 17:04:28 cjep Exp $
+# $NetBSD: Makefile,v 1.45 2004/01/03 15:28:45 jmmv Exp $
 
 DISTNAME=	kdelibs-3.1.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -13,6 +13,9 @@ USE_BUILDLINK2=		YES
 USE_GCC_SHLIB=		YES
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
+
+SGML_CATALOGS=		${PREFIX}/share/kde/apps/ksgmltools2/customization/catalog
+SGML_CATALOGS+=		${PREFIX}/share/kde/apps/ksgmltools2/docbook/xml-dtd-4.1.2/docbook.cat
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -122,6 +125,7 @@ USE_PKGSRC_GCC=		# defined
 .include "../../security/openssl/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
+.include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../x11/qt3-libs/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 
