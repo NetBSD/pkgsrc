@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/06/21 20:16:26 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2001/06/30 18:39:29 jlam Exp $
 
 DISTNAME=	tk8.3.2
 PKGNAME=	tk-8.3.2nb1
@@ -19,9 +19,31 @@ USE_X11=		yes
 USE_BUILDLINK_ONLY=	yes
 USE_LIBTOOL=		yes
 
-.include "../../lang/tcl/buildlink.mk"
+# Initially install the man pages into ${WRKDIR}/man, as we need a staged
+# install to avoid overwriting existing manpages in ${PREFIX}/man.
+#
+CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
+
+# Modify mkLinks script to remove the short-filename manpage if it was
+# linked to a longer filename.
+#
+post-patch:
+	@cd ${WRKSRC};							\
+	${MV} -f mkLinks mkLinks.tmp;					\
+	${GREP} -v "^exit 0" mkLinks.tmp > mkLinks;			\
+	${CAT} mkLinks.tmp						\
+		| ${AWK} '/^  *ln / { print $$2 }'			\
+		| ${SORT} -u						\
+		| ${GREP} -v ".*\.n"					\
+		| ${SED} -e "s,^,${RM} -f ,"				\
+		>> mkLinks;						\
+	${RM} -f mkLinks.tmp;						\
+	${CHMOD} +x mkLinks;
 
 post-install:
+	${CHMOD} -R ugo-w ${WRKDIR}/man
+	cd ${WRKDIR}; ${PAX} -rw man ${PREFIX}
+	${CHMOD} -R ug+rw ${WRKDIR}/man
 	${RM} -f ${PREFIX}/bin/wish
 	cd ${PREFIX}/bin && ${LN} -s wish8.3 wish
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tk
@@ -56,4 +78,5 @@ post-install:
 test:
 	cd ${WRKSRC}; ${SETENV} LIBTOOL=${LIBTOOL} PREFIX=${PREFIX} ${MAKE} test
 
+.include "../../lang/tcl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
