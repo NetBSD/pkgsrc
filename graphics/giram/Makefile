@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 1999/06/21 09:17:20 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 1999/08/17 05:18:43 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1999/06/19 17:38:24 cpiazza Exp $
 
-DISTNAME=	Giram-0.0.18
-PKGNAME=	giram-0.0.18
+DISTNAME=	Giram-0.1.1
+PKGNAME=	giram-0.1.1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.minet.net/pub/giram/
 
@@ -19,7 +19,7 @@ CONFIGURE_ENV=	GTK_CONFIG="${X11BASE}/bin/gtk-config" \
 		CFLAGS="-I${LOCALBASE}/include ${CFLAGS}"
 
 post-install:
-	@${MKDIR} ${PREFIX}/Giram/SampleScenes
-	${INSTALL_DATA} ${WRKSRC}/SampleScenes/* ${PREFIX}/Giram/SampleScenes/
+	@${MKDIR} ${PREFIX}/share/examples/Giram
+	${INSTALL_DATA} ${WRKSRC}/SampleScenes/* ${PREFIX}/share/examples/Giram/
 
 .include "../../mk/bsd.pkg.mk"
