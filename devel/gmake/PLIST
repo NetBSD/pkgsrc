@@ -1,18 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2003/06/23 11:01:39 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/02/15 21:58:52 seb Exp $
 bin/${GNU_PROGRAM_PREFIX}make
 ${GMAKE_LINK}bin/gmake
-info/make.info
-info/make.info-1
-info/make.info-2
-info/make.info-3
-info/make.info-4
-info/make.info-5
-info/make.info-6
-info/make.info-7
-info/make.info-8
-info/make.info-9
-info/make.info-10
-info/make.info-11
 man/man1/${GNU_PROGRAM_PREFIX}make.1
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/make.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/make.mo
