@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2053 2003/04/27 10:00:14 jmmv Exp $
+$NetBSD: CHANGES,v 1.2054 2003/04/27 11:46:17 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1750,3 +1750,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome2 to 2.2.1 [rh 2003-04-27]
 	Updated gnome-mime-data to 2.2.0 [rh 2003-04-27]
 	Updated libbonoboui to 2.2.0.1nb1 [jmmv 2003-04-27]
+	Updated nmap to 3.26 [salo 2003-04-27]
+	Updated nmapfe to 0.95nb3 [salo 2003-04-27]
