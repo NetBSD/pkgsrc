@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/02/27 17:14:28 jlam Exp $
+$NetBSD: distinfo,v 1.4 2002/09/23 09:28:47 jlam Exp $
 
 SHA1 (sp3f4.kit.tar.Z) = bded1e078d0acfef090117490a7ac8a57887f39e
 Size (sp3f4.kit.tar.Z) = 2086528 bytes
@@ -8,7 +8,7 @@ SHA1 (patch-ac) = 1554932f75b8532b1e2293390b5cea03a7133bb4
 SHA1 (patch-ad) = ffcc3d3a03da19134dab68ac52d510655d2af6c0
 SHA1 (patch-ae) = cad6420b959acadedeeaaa17e4d8ff06511cda10
 SHA1 (patch-af) = 23d047049d5f183af12e14b56c535adf95b9f208
-SHA1 (patch-ag) = f628e53a4dc0c63dc5b3b9287bb3f52cdb73dfc1
+SHA1 (patch-ag) = d03a660e2e1f96eb4b5edb71c32fb0b44cc7921e
 SHA1 (patch-ah) = 2c1f4f135cbba8e7159be4ae811e54e5464cbdda
 SHA1 (patch-ai) = 7e94175896b98f17f43338a05ed993657d4cc844
 SHA1 (patch-aj) = 6229e4066ab8bfba8b29bcc1260d75563637a784
