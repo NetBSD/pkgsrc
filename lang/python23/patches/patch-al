@@ -1,45 +1,21 @@
-$NetBSD: patch-al,v 1.3 2003/09/10 00:11:04 recht Exp $
+$NetBSD: patch-al,v 1.4 2003/12/08 21:13:56 recht Exp $
 
---- pyconfig.h.in.orig	2003-07-22 17:20:49.000000000 +0200
-+++ pyconfig.h.in	2003-09-10 01:01:29.000000000 +0200
-@@ -835,6 +835,13 @@
- /* Define _OSF_SOURCE to get the makedev macro. */
- #undef _OSF_SOURCE
+--- configure.orig	2003-09-27 10:58:55.000000000 +0200
++++ configure	2003-12-08 21:34:21.000000000 +0100
+@@ -1440,6 +1440,8 @@
+   # Reconfirmed for OpenBSD 3.3 by Zachary Hamm.
+   OpenBSD/2.* | OpenBSD/3.[0123])
+     define_xopen_source=no;;
++  NetBSD/1.5 | NetBSD/1.5.* | NetBSD/1.6 | NetBSD/1.6.* | NetBSD/1.6[A-S])
++    define_xopen_source=no;;
+   # On Solaris 2.6, sys/wait.h is inconsistent in the usage
+   # of union __?sigval. Reported by Stuart Bishop.
+   SunOS/5.6)
+@@ -13837,6 +13839,7 @@
+ /* end confdefs.h.  */
  
-+/* These defines disable needed library functions on NetBSD < 1.6T */
-+/* ( _NETBSD_SOURCE doesn't exist prior to 1.6T ) */
-+#if defined(__NetBSD__)
-+#include <sys/param.h>
-+#endif
-+#if !defined(__NetBSD__) || __NetBSD_Version__ > 106200000
-+
- /* Define to 2 if the system does not provide POSIX.1 features except with
-    this defined. */
- #undef _POSIX_1_SOURCE
-@@ -845,18 +852,20 @@
- /* Define to 1 if you need to in order for `stat' and other things to work. */
- #undef _POSIX_SOURCE
- 
--/* Define if you have POSIX threads, and your system does not define that. */
--#undef _POSIX_THREADS
--
--/* Define to force use of thread-safe errno, h_errno, and other functions */
--#undef _REENTRANT
--
- /* Define to the level of X/Open that your system supports */
- #undef _XOPEN_SOURCE
- 
- /* Define to activate Unix95-and-earlier features */
- #undef _XOPEN_SOURCE_EXTENDED
- 
-+#endif /* __NetBSD_Version__ */
-+
-+/* Define if you have POSIX threads, and your system does not define that. */
-+#undef _POSIX_THREADS
-+
-+/* Define to force use of thread-safe errno, h_errno, and other functions */
-+#undef _REENTRANT
-+
- /* Define on FreeBSD to activate all library features */
- #undef __BSD_VISIBLE
- 
+ #include "confdefs.h"
++#include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>

@@ -1,6 +1,1 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.1 2003/08/18 20:57:12 recht Exp $
-lib/python2.3/lib-dynload/bsddb185.so
-lib/python2.3/test/output/test_linuxaudiodev
-lib/python2.3/test/test_linuxaudiodev.py
-lib/python2.3/test/test_linuxaudiodev.pyc
-lib/python2.3/test/test_linuxaudiodev.pyo
+@comment $NetBSD: PLIST.NetBSD,v 1.2 2003/12/08 21:13:56 recht Exp $

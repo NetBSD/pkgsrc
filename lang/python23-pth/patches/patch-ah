@@ -1,13 +1,22 @@
-$NetBSD: patch-ah,v 1.1.1.1 2003/08/04 08:29:32 drochner Exp $
+$NetBSD: patch-ah,v 1.2 2003/12/08 21:13:56 recht Exp $
 
---- Include/patchlevel.h.orig	2003-08-03 13:47:59.000000000 +0200
-+++ Include/patchlevel.h	2003-08-03 13:48:20.000000000 +0200
-@@ -26,7 +26,7 @@
- #define PY_RELEASE_SERIAL	0
+--- Makefile.pre.in.orig	2003-09-20 12:50:28.000000000 +0200
++++ Makefile.pre.in
+@@ -56,7 +56,7 @@ MAKESETUP=      $(srcdir)/Modules/makese
+ OPT=		@OPT@
+ BASECFLAGS=	@BASECFLAGS@
+ CFLAGS=		$(BASECFLAGS) $(OPT)
+-CPPFLAGS=	-I. -I$(srcdir)/Include
++CPPFLAGS+=	-I. -I$(srcdir)/Include
+ LDFLAGS=	@LDFLAGS@
+ LDLAST=		@LDLAST@
+ SGI_ABI=	@SGI_ABI@
+@@ -305,7 +305,7 @@ all:		$(BUILDPYTHON) oldsharedmods share
+ $(BUILDPYTHON):	Modules/$(MAINOBJ) $(LIBRARY) $(LDLIBRARY)
+ 		$(LINKCC) $(LDFLAGS) $(LINKFORSHARED) -o $@ \
+ 			Modules/$(MAINOBJ) \
+-			$(BLDLIBRARY) $(LIBS) $(MODLIBS) $(SYSLIBS) $(LDLAST)
++			$(BLDLIBRARY) $(LIBS) $(MODLIBS) $(SYSLIBS) $(LDLAST) ${LINK_ALL_LIBGCC_HACK}
  
- /* Version as a string */
--#define PY_VERSION		"2.3"
-+#define PY_VERSION		"2p3"
- 
- /* Version as a single 4-byte hex number, e.g. 0x010502B2 == 1.5.2b2.
-    Use this for numeric comparisons, e.g. #if PY_VERSION_HEX >= ... */
+ platform: $(BUILDPYTHON)
+ 	$(RUNSHARED) ./$(BUILDPYTHON) -E -c 'import sys ; from distutils.util import get_platform ; print get_platform()+"-"+sys.version[0:3]' >platform

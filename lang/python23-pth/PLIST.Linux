@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2003/08/18 20:57:14 recht Exp $
-lib/python2p3/lib-dynload/_bsddb.so
+@comment $NetBSD: PLIST.Linux,v 1.2 2003/12/08 21:13:56 recht Exp $
 lib/python2p3/lib-dynload/${LOWER_OPSYS}audiodev.so
-lib/python2p3/lib-dynload/ossaudiodev.so
 lib/python2p3/plat-${LOWER_OPSYS}2/CDROM.py
 lib/python2p3/plat-${LOWER_OPSYS}2/CDROM.pyc
 lib/python2p3/plat-${LOWER_OPSYS}2/CDROM.pyo

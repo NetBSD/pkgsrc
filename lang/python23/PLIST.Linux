@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2003/08/18 20:57:12 recht Exp $
-lib/python2.3/lib-dynload/_bsddb.so
+@comment $NetBSD: PLIST.Linux,v 1.2 2003/12/08 21:13:56 recht Exp $
 lib/python2.3/lib-dynload/${LOWER_OPSYS}audiodev.so
-lib/python2.3/lib-dynload/ossaudiodev.so
 lib/python2.3/plat-${LOWER_OPSYS}2/CDROM.py
 lib/python2.3/plat-${LOWER_OPSYS}2/CDROM.pyc
 lib/python2.3/plat-${LOWER_OPSYS}2/CDROM.pyo
@@ -11,7 +9,3 @@ lib/python2.3/plat-${LOWER_OPSYS}2/DLFCN.pyo
 lib/python2.3/plat-${LOWER_OPSYS}2/TYPES.py
 lib/python2.3/plat-${LOWER_OPSYS}2/TYPES.pyc
 lib/python2.3/plat-${LOWER_OPSYS}2/TYPES.pyo
-lib/python2.3/test/output/test_${LOWER_OPSYS}audiodev
-lib/python2.3/test/test_${LOWER_OPSYS}audiodev.py
-lib/python2.3/test/test_${LOWER_OPSYS}audiodev.pyc
-lib/python2.3/test/test_${LOWER_OPSYS}audiodev.pyo
