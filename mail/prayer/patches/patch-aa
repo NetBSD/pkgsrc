@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2003/07/02 12:08:22 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2003/07/28 15:51:24 adam Exp $
 
---- Config.orig	2002-11-07 09:50:44.000000000 +0100
-+++ Config
-@@ -17,9 +17,9 @@ ACCOUNTD_SSL_ENABLE  = false  # Enable S
+--- Config.orig	2003-05-29 11:49:38.000000000 +0200
++++ Config	2003-07-28 16:50:50.000000000 +0200
+@@ -14,9 +14,9 @@
  DIRECT_ENABLE        = false  # Experimental. Leave this switched off... 
  
  # Following depend on the way that you have configured c-client
@@ -12,9 +12,20 @@ $NetBSD: patch-aa,v 1.3 2003/07/02 12:08:22 jmmv Exp $
 -CCLIENT_KERB_ENABLE  = false  # C-client was built with Kerberos support
 +CCLIENT_KERB_ENABLE  = true   # C-client was built with Kerberos support
  
- ############################################################################
- # Location of compiler
-@@ -53,9 +53,9 @@ BASE_LIBS    = -lcrypt
+ # Probably don't need the following
+ ACCOUNTD_ENABLE      = false  # Only of use in Cambridge at the moment.
+@@ -35,8 +35,8 @@
+ # Base Compiler options for GCC.
+ #BASECFLAGS   = -Wall -g
+ #BASELDFLAGS  = -g
+-BASECFLAGS   = -Wall -g -O2
+-BASELDFLAGS  = -g -O2
++BASECFLAGS   = -Wall
++BASELDFLAGS  =
+ BASE_LIBS    = -lcrypt
+ 
+ # Base Compiler options for Sun SUNWspro compiler
+@@ -56,9 +56,9 @@
  # which points to ../../imap/c-client. This just reduces the amount of
  # noise output on each line when building the package.
  #
@@ -27,16 +38,18 @@ $NetBSD: patch-aa,v 1.3 2003/07/02 12:08:22 jmmv Exp $
  CCLIENT_SSL_ENABLE  = true
  
  #
-@@ -99,7 +99,7 @@ PAM_LIBS    = -lpam
+@@ -101,8 +101,8 @@
+ PAM_LIBS    = -lpam
  
  # Kerberos (required if CCLIENT_KERB_ENABLE set)
- KERB_INCLUDE = 
+-KERB_INCLUDE = -I/usr/kerberos/include
 -KERB_LIBS    = -L/usr/kerberos/lib -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err
++KERB_INCLUDE = -I/usr/include
 +KERB_LIBS    = -L/usr/lib -lgssapi -lcom_err -lkrb5 -lasn1 -lroken -ldes
  
  # SSL definitions (required if SSL_ENABLE or CCLIENT_SSL_ENABLE set)
  #
-@@ -121,8 +121,8 @@ DB_INCLUDE=
+@@ -126,8 +126,8 @@
  DB_LIBS=-ldb
  
  # Following suitable for FreeBSD with DB 4 package installed
@@ -47,7 +60,7 @@ $NetBSD: patch-aa,v 1.3 2003/07/02 12:08:22 jmmv Exp $
  
  ############################################################################
  
-@@ -143,7 +143,7 @@ RW_GROUP   = prayer
+@@ -148,7 +148,7 @@
  # Default configuration and permissions does not allow prayer user to
  # update prayer configuration file.
  
@@ -56,7 +69,7 @@ $NetBSD: patch-aa,v 1.3 2003/07/02 12:08:22 jmmv Exp $
  RO_USER   = root
  RO_GROUP  = prayer
  
-@@ -158,6 +158,6 @@ PRIVATE_DIR  = 0750
+@@ -163,6 +163,6 @@
  PRIVATE_FILE = 0640
  
  # Location of configuration files and binaries
