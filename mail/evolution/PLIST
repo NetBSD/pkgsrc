@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2004/09/22 08:09:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.20 2004/10/15 21:31:51 jmmv Exp $
 bin/evolution-2.0
 include/evolution-2.0/camel/broken-date-parser.h
 include/evolution-2.0/camel/camel-address.h
@@ -378,14 +378,22 @@ share/gnome/help/evolution-2.0/C/figures/contacts_mainwindow_a.png
 share/gnome/help/evolution-2.0/C/figures/evo_account_info_a.png
 share/gnome/help/evolution-2.0/C/figures/evo_contacteditor_a.png
 share/gnome/help/evolution-2.0/C/figures/evo_email_a.png
+share/gnome/help/evolution-2.0/C/figures/evo_gwreceive_a.png
 share/gnome/help/evolution-2.0/C/figures/evo_identity_a.png
+share/gnome/help/evolution-2.0/C/figures/evo_imapreceive_a.png
 share/gnome/help/evolution-2.0/C/figures/evo_mail_callout_a.png
+share/gnome/help/evolution-2.0/C/figures/evo_maildirreceive_a.png
+share/gnome/help/evolution-2.0/C/figures/evo_mboxreceive_a.png
+share/gnome/help/evolution-2.0/C/figures/evo_mereceive_a.png
+share/gnome/help/evolution-2.0/C/figures/evo_mhreceive_a.png
 share/gnome/help/evolution-2.0/C/figures/evo_newmess_a.png
+share/gnome/help/evolution-2.0/C/figures/evo_popreceive_a.png
 share/gnome/help/evolution-2.0/C/figures/evo_receive_setup2_a.png
 share/gnome/help/evolution-2.0/C/figures/evo_receive_setup_a.png
 share/gnome/help/evolution-2.0/C/figures/evo_rule_a.png
 share/gnome/help/evolution-2.0/C/figures/evo_send_setup_a.png
 share/gnome/help/evolution-2.0/C/figures/evo_timezone_a.png
+share/gnome/help/evolution-2.0/C/figures/evo_usereceive_a.png
 share/gnome/help/evolution-2.0/C/figures/exchange-delegation.png
 share/gnome/help/evolution-2.0/C/figures/exchange-identity.png
 share/gnome/help/evolution-2.0/C/figures/exchange-receive-options.png
@@ -425,6 +433,7 @@ ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/evolution-2.0.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/evolution-2.0.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/evolution-2.0.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/evolution-2.0.mo
+${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/evolution-2.0.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/evolution-2.0.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/evolution-2.0.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/evolution-2.0.mo
