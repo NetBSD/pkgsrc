@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/03/13 17:37:28 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2002/04/20 18:46:07 fredb Exp $
 
 DISTNAME=		gkrellm_snmp-0.18
 PKGNAME=		gkrellm-snmp-0.18
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net sysutils
 MASTER_SITES=		http://triq.net/gkrellm/
 
@@ -11,7 +11,7 @@ HOMEPAGE=		http://triq.net/gkrellm.html
 COMMENT=		simple snmp monitor for gkrellm
 
 DEPENDS+=		gkrellm-1.2.*:../../sysutils/gkrellm
-DEPENDS+=		ucd-snmp>=4.1.0:../../net/ucd-snmp
+DEPENDS+=		ucd-snmp-4.2.4*:../../net/ucd-snmp
 
 USE_GMAKE=		#defined
 
