@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/09 15:44:33 he Exp $
+# $NetBSD: Makefile,v 1.3 2004/11/09 16:37:10 wiz Exp $
 #
 
 DISTNAME=	Apache-AuthCookie-3.05
@@ -10,7 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~mschout/Apache-AuthCookie-3.04/
 COMMENT=	Perl5 module for Authentication and Authorization via cookies
 
-DEPENDS+=	ap-perl>=1.29:../../www/ap-perl/
+DEPENDS+=	ap-perl>=1.29:../../www/ap-perl
 
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/AuthCookie/.packlist
