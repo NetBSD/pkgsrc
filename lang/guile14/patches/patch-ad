@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/01/07 00:58:28 uebayasi Exp $
+
+--- guile-readline/Makefile.in.orig	Tue May 14 00:53:17 2002
++++ guile-readline/Makefile.in	Wed Oct 23 00:45:38 2002
+@@ -94,7 +94,7 @@
+ libguilereadline_la_SOURCES = readline.c
+ libguilereadline_la_LIBADD = ../libguile/libguile.la
+ libguilereadline_la_LDFLAGS = -version-info @LIBGUILEREADLINE_INTERFACE@ \
+-  -export-dynamic -no-undefined
++  -export-dynamic
+ 
+ 
+ BUILT_SOURCES = readline.x
+@@ -178,8 +178,8 @@
+ 	$(mkinstalldirs) $(DESTDIR)$(libdir)
+ 	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo " $(LIBTOOL) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$p"; \
+-	    $(LIBTOOL) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$p; \
++	    echo " $(LIBTOOL) --mode=install $(INSTALL_DATA) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$p"; \
++	    $(LIBTOOL) --mode=install $(INSTALL_DATA) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(libdir)/$$p; \
+ 	  else :; fi; \
+ 	done
+ 

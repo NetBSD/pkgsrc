@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/01/07 00:58:28 uebayasi Exp $
+
+--- doc/Makefile.in.orig	Mon May 13 22:41:34 2002
++++ doc/Makefile.in	Mon Aug 26 21:50:55 2002
+@@ -130,7 +130,7 @@
+ INFO_DEPS = guile.info
+ DVIS = guile.dvi
+ TEXINFOS = guile.texi
+-DIST_COMMON = README $(guile_TEXINFOS) COPYING ChangeLog Makefile.am \
++DIST_COMMON = README $(info_TEXINFOS) COPYING ChangeLog Makefile.am \
+ 	Makefile.in mdate-sh stamp-vti texinfo.tex version.texi
+ all: all-am
+ 
