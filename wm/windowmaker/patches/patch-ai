@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1 2004/11/15 11:02:51 sketch Exp $
+
+--- WINGs/dragsource.c.orig	2004-11-15 10:24:38.140204000 +0000
++++ WINGs/dragsource.c	2004-11-15 10:31:35.798026000 +0000
+@@ -1,5 +1,7 @@
+ #include "../src/config.h"
+ 
++#include <X11/Xlib.h>
++#include <X11/Xutil.h>
+ #include <X11/Xatom.h>
+ #include <X11/cursorfont.h>
+ #ifdef SHAPE

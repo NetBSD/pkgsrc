@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2004/11/15 11:02:51 sketch Exp $
+
+--- src/switchpanel.c.orig	2004-11-15 10:44:36.799472000 +0000
++++ src/switchpanel.c	2004-11-15 10:44:59.875415000 +0000
+@@ -26,6 +26,8 @@
+ #include <sys/time.h>
+ 
+ #ifdef SHAPE
++#include <X11/Xlib.h>
++#include <X11/Xutil.h>
+ #include <X11/extensions/shape.h>
+ 
+ extern Bool wShapeSupported;
