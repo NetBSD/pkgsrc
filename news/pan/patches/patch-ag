@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 2001/10/15 07:24:39 rh Exp $
+
+--- pan/text.c.orig	Thu Oct  4 23:39:24 2001
++++ pan/text.c
+@@ -23,7 +23,11 @@
+ #include <ctype.h>
+ #include <string.h>
+ 
++#ifdef HAVE_ALLOCA_H
+ #include <alloca.h>
++#else
++#include <stdlib.h>
++#endif
+ 
+ #include <glib.h>
+ #include <gtk/gtkmain.h>
