@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:59:52 zuntum Exp $
-bin/elm
+@comment $NetBSD: PLIST,v 1.2 2002/10/23 00:07:07 jlam Exp $
 bin/answer
 bin/checkalias
+bin/elm
 bin/elmalias
 bin/fastmail
 bin/frm
@@ -13,14 +13,17 @@ bin/nfrm
 bin/printmail
 bin/readmsg
 bin/wnewmail
-lib/elmcharset
+lib/elm.map.bin/unidata.bin
 lib/elm-help.0
 lib/elm-help.1
 lib/elm-help.2
 lib/elm-help.3
 lib/elm.mimecharsets
-lib/elm.mimetypes
+lib/elm.mimetypes-dist
+lib/elmcharset
 lib/elmrc-info
+lib/elmterminal
+lib/elmunidata
 lib/prlong
 man/cat1/answer.0
 man/cat1/checkalias.0
@@ -51,3 +54,4 @@ man/man1/printmail.1
 man/man1/readmsg.1
 man/man1/wnewmail.1
 share/nls/C/elm2.4me+.cat
+@dirrm lib/elm.map.bin
