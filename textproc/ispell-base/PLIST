@@ -1,23 +1,21 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/11 13:18:08 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/12/01 12:18:21 markd Exp $
 bin/buildhash
+bin/deformat-c
+bin/deformat-sh
 bin/findaffix
 bin/icombine
 bin/ijoin
 bin/ispell
 bin/munchlist
-bin/sq
 bin/tryaffix
-bin/unsq
 lib/american.hash
 lib/americanmed+.hash
 lib/english.aff
 lib/english.hash
-man/man1/buildhash.1.gz
-man/man1/findaffix.1.gz
-man/man1/ispell.1.gz
-man/man1/munchlist.1.gz
-man/man1/sq.1.gz
-man/man1/tryaffix.1.gz
-man/man1/unsq.1.gz
-man/man4/ispell.4.gz
-man/man4/english.4.gz
+man/man1/buildhash.1
+man/man1/findaffix.1
+man/man1/ispell.1
+man/man1/munchlist.1
+man/man1/tryaffix.1
+man/man4/ispell.4
+man/man4/english.4

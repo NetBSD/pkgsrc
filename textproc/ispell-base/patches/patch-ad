@@ -1,16 +1,17 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/03/14 12:10:22 agc Exp $
---- buildhash.c.orig	Mon Jan 23 11:28:24 1995
-+++ buildhash.c	Mon Oct 26 23:20:42 1998
-@@ -211,7 +211,7 @@
+$NetBSD: patch-ad,v 1.2 2004/12/01 12:18:21 markd Exp $
+
+--- buildhash.c.orig	2001-07-26 09:51:45.000000000 +1200
++++ buildhash.c
+@@ -237,7 +237,7 @@ static void output ()
      {
      register FILE *		houtfile;
      register struct dent *	dp;
 -    int				strptr;
-+    PTRSIZE				strptr;
++    PTRSIZE			strptr;
      int				n;
-     int				i;
+     unsigned int		i;
      int				maxplen;
-@@ -336,7 +336,7 @@
+@@ -362,7 +362,7 @@ static void output ()
  	{
  	if (dp->next != 0)
  	    {

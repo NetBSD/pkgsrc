@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.2 2002/08/25 21:51:17 jlam Exp $
+$NetBSD: patch-am,v 1.3 2004/12/01 12:18:21 markd Exp $
 
---- munchlist.X.orig	Fri Jul 19 21:47:10 2002
-+++ munchlist.X	Fri Jul 19 21:48:24 2002
-@@ -128,7 +128,7 @@
+--- munchlist.X.orig	2001-07-26 09:51:46.000000000 +1200
++++ munchlist.X
+@@ -160,7 +160,7 @@ then
      set -vx
  fi
  LIBDIR=!!LIBDIR!!
@@ -10,4 +10,4 @@ $NetBSD: patch-am,v 1.2 2002/08/25 21:51:17 jlam Exp $
 +TDIR=${TMPDIR-/tmp}
  TMP=${TDIR}/munch$$
  SORTTMP="-T ${TDIR}"			# !!SORTTMP!!
- if [ -r ./icombine ]
+ 
