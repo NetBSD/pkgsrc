@@ -1,0 +1,161 @@
+$NetBSD: patch-ae,v 1.5 2004/11/28 22:39:07 atatat Exp $
+
+Incorporate a patch from the author that widens the NETBSDV definition
+to account for new current versioning system, properly handles the
+sys/bufq.h mess, adds a bit more to procfs support, and adds ptyfs
+support.
+
+--- dialects/n+obsd/dnode.c.orig	2004-07-06 15:20:23.000000000 -0400
++++ dialects/n+obsd/dnode.c
+@@ -188,7 +188,7 @@ process_node(va)
+ 	struct mfsnode m;
+ 	struct nfsnode n;
+ 	enum nodetype {NONODE, CDFSNODE, DOSNODE, EXT2NODE, FDESCNODE, INODE,
+-		KERNFSNODE, MFSNODE, NFSNODE, PFSNODE} nty;
++		KERNFSNODE, MFSNODE, NFSNODE, PFSNODE, PTYFSNODE} nty;
+ 	enum vtype type;
+ 	struct vnode *v, vb;
+ 	struct l_vfs *vfs;
+@@ -262,6 +262,11 @@ process_node(va)
+ 	size_t sz;
+ #endif	/* defined(HASPROCFS) */
+ 
++#if	defined(HASPTYFS)
++	struct ptyfsnode pt;
++	struct specinfo si;
++#endif	/* defined(HASPTYFS) */
++
+ #if	defined(HASNULLFS)
+ 
+ process_overlaid_node:
+@@ -523,6 +528,19 @@ process_overlaid_node:
+ 	    break;
+ #endif	/* defined(HASPROCFS) */
+ 
++#if    defined(HASPTYFS)
++	case VT_PTYFS:
++	    if (!v->v_data
++	    ||  kread((KA_T)v->v_data, (char *)&pt, sizeof(pt))) {
++		(void) snpf(Namech, Namechl, "can't read ptyfsnode at: %s",
++		    print_kptr((KA_T)v->v_data, (char *)NULL, 0));
++		enter_nm(Namech);
++		return;
++	    }
++	    nty = PTYFSNODE;
++	    break;
++#endif	/* defined(HASPTYFS) */
++
+ #if	defined(HASEXT2FS)
+ 	case VT_EXT2FS:
+ #endif	/* defined(HASEXT2FS) */
+@@ -769,6 +787,21 @@ process_overlaid_node:
+ 	case NFSNODE:
+ 	    dev = NVATTR.va_fsid;
+ 	    devs = 1;
++
++#if	defined(HASPTYFS)
++	case PTYFSNODE:
++	    if (v->v_un.vu_specinfo
++	    &&  !kread((KA_T)v->v_un.vu_specinfo, (char *)&si, sizeof(si))) {
++		rdev = si.si_rdev;
++		rdevs = 1;
++	    }
++	    if (vfs) {
++		dev = (dev_t)vfs->fsid.__fsid_val[0];
++		devs = 1;
++	    }
++	    break;
++#endif	/* defined(HASPTYFS) */
++
+ 	}
+ /*
+  * Obtain the inode number.
+@@ -836,6 +869,13 @@ process_overlaid_node:
+ 	    break;
+ #endif	/* defined(HASPROCFS) */
+ 
++#if	defined(HASPTYFS)
++	case PTYFSNODE:
++	    Lf->inode = (unsigned long)pt.ptyfs_fileno;
++	    Lf->inp_ty = 1;
++	    break;
++#endif	/* defined(HASPTYFS) */
++
+ 	}
+ 
+ /*
+@@ -1152,7 +1192,8 @@ process_overlaid_node:
+  * 	ioctl(fd, TIOCNOTTY) files;
+  *	/kern files
+  *	memory node files;
+- *	/proc files.
++ *	/proc files;
++ *	ptyfs files.
+  */
+ 
+ 	if (type == VBAD)
+@@ -1222,14 +1263,52 @@ process_overlaid_node:
+ 		(void) snpf(ep, sz, "/%d/notepg", p.pfs_pid);
+ 		ty = "PGID";
+ 		break;
++	    case Pfd:
++		ep = endnm(&sz);
++		(void) snpf(ep, sz, "/%d/fd", p.pfs_pid);
++		ty = "PFD";
++		break;
++	    case Pmap:
++		ep = endnm(&sz);
++		(void) snpf(ep, sz, "/%d/map", p.pfs_pid);
++		ty = "PMAP";
++		break;
++	    case Pmaps:
++		ep = endnm(&sz);
++		(void) snpf(ep, sz, "/%d/maps", p.pfs_pid);
++		ty = "PMPS";
++		break;
+ 	    }
+ 	    if (ty)
+ 		(void) snpf(Lf->type, sizeof(Lf->type), ty);
+-	    if (Namech[0])
+-		enter_nm(Namech);
+ 	}
+ #endif	/* defined(HASPROCFS) */
+ 
++#if	defined(HASPTYFS)
++	else if (nty == PTYFSNODE) {
++	    (void) snpf(Namech, Namechl, "%s", Lf->fsdir);
++	    Lf->nlink = 1;
++	    Lf->nlink_def = 1;
++	    switch (pt.ptyfs_type) {
++	    case PTYFSpts:
++		ep = endnm(&sz);
++		(void) snpf(ep, sz, "/%lu", (unsigned long)pt.ptyfs_pty);
++		break;
++	    case PTYFSptc:
++		ep = endnm(&sz);
++		(void) snpf(ep, sz, "/%lu (master)",
++		    (unsigned long)pt.ptyfs_pty);
++		break;
++	    case PTYFSroot:
++		Lf->sz = 512;
++		Lf->sz_def = 1;
++		break;
++	    }
++	    if (ty)
++		(void) snpf(Lf->type, sizeof(Lf->type), ty);
++	}
++#endif	/* defined(HASPTYFS) */
++
+ #if	defined(HASBLKDEV)
+ /*
+  * If this is a VBLK file and it's missing an inode number, try to
+@@ -1283,7 +1362,9 @@ process_overlaid_node:
+ 	    if (Sfile && is_file_named((char *)NULL,
+ 				       ((type == VCHR) || (type == VBLK)) ? 1
+ 									  : 0))
++	    {
+ 		Lf->sf |= SELNM;
++	    }
+ 	    if (ns)
+ 		Namech[0] = '\0';
+ 	}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2004/10/21 13:09:20 atatat Exp $
+# $NetBSD: Makefile,v 1.79 2004/11/28 22:39:07 atatat Exp $
 #
 
 DISTNAME=		lsof_4.73
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
@@ -30,6 +31,7 @@ SRCBALL_NAME=		${DISTNAME}_src
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=		yes
+BUILDLINK_PASSTHRU_DIRS=	/usr/src/sys
 
 .include "../../mk/bsd.prefs.mk"
 
