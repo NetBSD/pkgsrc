@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2004/06/02 14:32:22 taya Exp $
+# $NetBSD: Makefile.common,v 1.42 2004/06/19 00:25:04 xtraeme Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -81,7 +81,8 @@ CONFIGURE_ARGS+=	--enable-calendar
 CONFIGURE_ARGS+=	--enable-mathml
 .endif
 
-.if exists(${X11BASE}/include/X11/extensions/Xinerama.h) && exists(${X11BASE}/lib/libXinerama.so)
+.if exists(${X11BASE}/include/X11/extensions/Xinerama.h) && \
+	exists(${X11BASE}/lib/libXinerama.so)
 CONFIGURE_ARGS+=	--enable-xinerama
 .endif
 
@@ -143,8 +144,10 @@ pre-configure:
 	cd ${WRKSRC}/nsprpub && ${AUTOCONF}
 
 post-build:
-	${ECHO} skin,install,select,classic/1.0 >> ${WRKSRC}/dist/bin/chrome/installed-chrome.txt
-	${ECHO} locale,install,select,en-US >> ${WRKSRC}/dist/bin/chrome/installed-chrome.txt
+	${ECHO} skin,install,select,classic/1.0 >> \
+		${WRKSRC}/dist/bin/chrome/installed-chrome.txt
+	${ECHO} locale,install,select,en-US >> \
+		${WRKSRC}/dist/bin/chrome/installed-chrome.txt
 
 do-install:
 	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR}/moz-install
@@ -164,5 +167,13 @@ CONFIGURE_ARGS+=	--enable-xft
 .include "../../fonts/Xft2/buildlink3.mk"
 .endif
 
+# Fix for firefox* packages.
+SUBST_CLASSES=		pc
+SUBST_STAGE.pc=		post-extract
+SUBST_FILES.pc=		build/unix/*.pc.in
+SUBST_SED.pc=		-e "s|%includedir%|${PREFIX}/include/${MOZILLA}|g" \
+			-e "s|%libdir%|${PREFIX}/lib/${MOZILLA}|g"
+SUBST_MESSAGE.pc=	"Fixing pkgconfig files."
+			
 .include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
