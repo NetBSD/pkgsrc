@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/10/02 01:09:06 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/11 03:51:04 jschauma Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -60,6 +60,11 @@ do-build:
 	cd ${WRKSRC} && ${SH} netscape-installer
 
 do-install:
+.if ${NS_INST} == "complete"
+	cd ${WRKSRC}/dest/plugins && ${LN} -sf 				\
+		java2/plugin/i386/ns600/libjavaplugin_oji.so		\
+		libjavaplugin_oji.so
+.endif
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/netscape/netscape7
 	cd ${WRKSRC}/dest && ${PAX} -rw . ${PREFIX}/lib/netscape/netscape7
 	${INSTALL_SCRIPT} ${WRKDIR}/netscape7 ${PREFIX}/bin
