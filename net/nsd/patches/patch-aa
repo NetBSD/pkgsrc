@@ -1,31 +1,18 @@
-$NetBSD: patch-aa,v 1.3 2002/05/08 03:08:34 itojun Exp $
+$NetBSD: patch-aa,v 1.4 2002/08/28 16:05:52 itojun Exp $
 
---- Makefile.orig	Thu May  2 00:58:23 2002
-+++ Makefile	Tue May  7 14:26:33 2002
-@@ -41,15 +41,14 @@
- # Run-time enviroment settings
+--- Makefile.orig	Thu Aug 22 20:40:52 2002
++++ Makefile	Thu Aug 29 01:02:59 2002
+@@ -67,12 +67,11 @@
+ #
  
  # The directory where the nsd nsdc and zonec binaries will be installed
 -PREFIX		= /usr/local
- NSDBINDIR       = ${PREFIX}/sbin
+ NSDBINDIR	= ${PREFIX}/sbin
  NSDMANDIR	= ${PREFIX}/man/man8
  
  # The directory where the master zone files are located
 -NSDZONESDIR     = ${PREFIX}/etc/nsd
-+NSDZONESDIR     = /etc/nsd
++NSDZONESDIR     = ${PKG_SYSCONFDIR}
  
  # The file containing the list of the zones to be compiled into the NSD database
--NSDZONES	= ${PREFIX}/etc/nsd/nsd.zones
-+NSDZONES	= /etc/nsd/nsd.zones
- 
- # The flags to pass to the NSD on startup
- NSDFLAGS        = 
-@@ -92,7 +91,7 @@
- #
- #	Please see DBFLAGS below to switch the internal database type.
- #
--FEATURES	= # -DINET6
-+FEATURES	= -DINET6
- 
- # To compile NSD with internal red-black tree database
- # uncomment the following two lines
+ NSDZONES	= ${NSDZONESDIR}/nsd.zones
