@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/07/22 19:34:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/11/25 22:04:03 ben Exp $
 
 DISTNAME=	gmodplay-0.08
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://magic.metawire.com/~rani/ \
 		http://rani.free.fr/
