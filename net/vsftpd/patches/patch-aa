@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/06/19 11:32:02 zuntum Exp $
+
+--- Makefile.orig	Wed May 16 23:48:51 2001
++++ Makefile
+@@ -1,8 +1,7 @@
+ # Makefile for systems with GNU tools
+-CC 	=	gcc
+ INSTALL	=	install
+ IFLAGS  = -idirafter dummyinc
+-CFLAGS	=	-O2 -Wall -W -Wshadow #-pedantic -Werror -Wconversion
++CFLAGS	+=	-Wall -W -Wshadow #-pedantic -Werror -Wconversion
+ 
+ LIBS	=	`./vsf_findlibs.sh`
+ LINK	=	-s
+@@ -21,9 +20,7 @@
+ 	$(CC) -o vsftpd $(OBJS) $(LINK) $(LIBS)
+ 
+ install:
+-	$(INSTALL) -m 755 vsftpd /usr/sbin/vsftpd
+-	if [ -x /etc/xinetd.d ]; then \
+-		$(INSTALL) -m 644 xinetd.d/vsftpd /etc/xinetd.d/vsftpd; fi
++	$(BSD_INSTALL_PROGRAM) vsftpd $(PREFIX)/libexec/vsftpd
+ 
+ clean:
+ 	rm -f *.o *.swp vsftpd
