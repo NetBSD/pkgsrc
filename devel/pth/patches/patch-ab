@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/05 05:09:48 sakamoto Exp $
+
+--- ./Makefile.in.orig	Sun Jul  4 23:10:35 1999
++++ ./Makefile.in	Mon Jul  5 13:22:59 1999
+@@ -193,5 +193,5 @@
+ 	$(SHTOOL) install -c -m 644 pth.3 $(mandir)/man3/pth.3
+ 	$(SHTOOL) install -c -m 644 pth.h $(includedir)/pth.h
+-	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libpth.la $(libdir)/libpth.la
++	@$(LIBTOOL) --mode=install install -c -m 644 libpth.la $(libdir)/libpth.la
+ install-pthread:
+ 	$(SHTOOL) install -c -m 755 pthread-config $(bindir)/pthread-config
+@@ -199,5 +199,5 @@
+ 	$(SHTOOL) install -c -m 644 pthread.h $(includedir)/pthread.h
+ 	$(SHTOOL) install -c -m 644 pthread.3 $(mandir)/man3/pthread.3
+-	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libpthread.la $(libdir)/libpthread.la
++	@$(LIBTOOL) --mode=install install -c -m 644 libpthread.la $(libdir)/libpthread.la
+ 
+ #   clean the source tree for re-building
