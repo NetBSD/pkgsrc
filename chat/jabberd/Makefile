@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/02/02 01:37:09 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/11 03:22:37 xtraeme Exp $
 #
 
 DISTNAME=		jabberd-1.4.3
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://jabberd.jabberstudio.org/1.4/dist/
 
@@ -68,7 +69,7 @@ pre-configure:
 		${WRKSRC}/jabber.xml.in > ${WRKSRC}/jabber.xml
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR} ${LIBDIR} ${INCDIR}
+	${INSTALL_DATA_DIR} ${EGDIR} ${LIBDIR} ${INCDIR} ${INCDIR}/lib
 	${INSTALL_DATA} ${WRKSRC}/jabber.xml ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/platform-settings ${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/jabberd/jabberd ${PREFIX}/sbin
@@ -78,8 +79,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/dnsrv/dnsrv.so ${LIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/dialback/dialback.so ${LIBDIR}
 	${INSTALL_DATA} ${WRKSRC}/jabberd/jabberd.h ${INCDIR}
-	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/lib.h ${INCDIR}
-	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/xmlparse.h ${INCDIR}
+	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/lib.h ${INCDIR}/lib
+	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/xmlparse.h ${INCDIR}/lib
 
 .include "../../devel/pth/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
