@@ -1,9 +1,0 @@
-The default NetBSD/sparc /usr/lib/c++rt0.o is compiled -fpic. This means
-it can only handle offsets up to a certain size, and can fail to work in
-large programs. Compiling -fPIC allows larger offsets and should permit
-large programs to function. As mixing object files compiled with -fpic
-and -fPIC isn't allowed, the system c++rt0.o must be exchanged so that
--fPIC can be used everywhere.
-
-This package allows most of pkgsrc to compile on NetBSD/sparc systems
-which run an OS version prior to 1.4.3 (which already contains this fix).
