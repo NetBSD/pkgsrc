@@ -1,6 +1,16 @@
-$NetBSD: patch-aa,v 1.5 2000/05/02 18:48:42 danw Exp $
+$NetBSD: patch-aa,v 1.6 2000/08/15 21:01:52 wiz Exp $
+
 --- configure.orig	Sun Jan 30 03:26:06 2000
-+++ configure	Wed Apr 26 20:36:07 2000
++++ configure	Tue Aug 15 02:50:10 2000
+@@ -786,7 +786,7 @@
+ 
+ 
+ 
+-LIBKPATHSEA='$(TOPDIR)/kpathsea/libkpathsea.$(LIBEXT)'
++LIBKPATHSEA='$(TOPDIR)/kpathsea/STATIC/libkpathsea.$(LIBEXT)'
+ 
+ 
+ ### Make it possible to have Octave's array and matrix classes do bounds
 @@ -5180,7 +5180,7 @@
  
  
