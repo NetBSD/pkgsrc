@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.41 2005/01/11 18:33:16 tv Exp $
+# $NetBSD: pre-build,v 1.42 2005/01/18 14:11:11 tv Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -15,9 +15,9 @@ else
     . `dirname $0`/build.conf
 fi
 
-PRUNEDISTFILES=${PRUNEDISTFILES:-"no"}
-PRUNEPACKAGES=${PRUNEPACKAGES:-"no"}
-PRUNELINKS=${PRUNEPACKAGES:-"no"}
+PRUNEDISTFILES=${PRUNEDISTFILES:-"yes"}
+PRUNEPACKAGES=${PRUNEPACKAGES:-"yes"}
+PRUNELINKS=${PRUNEPACKAGES:-"yes"}
 
 PKGLINT_PKG_DIR=${USR_PKGSRC}/pkgtools/pkglint
 
