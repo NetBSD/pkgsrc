@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.8 2003/03/23 11:46:45 grant Exp $
+$NetBSD: patch-aa,v 1.9 2003/12/06 18:26:36 wiz Exp $
 
---- doc/autoconf.texi.orig	Tue Dec  3 18:16:32 2002
+--- doc/autoconf.texi.orig	Tue Nov  4 09:33:44 2003
 +++ doc/autoconf.texi
-@@ -100,7 +100,7 @@ published by the Free Software Foundatio
- * Autoconf: (autoconf).         Create source code configuration scripts
+@@ -213,7 +213,7 @@ published by the Free Software Foundatio
+ * Autoconf: (autoconf).         Create source code configuration scripts.
  @end direntry
  
 -@dircategory Individual utilities
