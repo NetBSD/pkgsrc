@@ -1,19 +1,36 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/10/31 20:06:24 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2001/11/19 04:58:59 lukem Exp $
 #
+
+PKGNAME=$1
+STAGE=$2
 
 USER="@GALE_USER@"
 GROUP="@GALE_GROUP@"
-USERDEL="@USERDEL@"
-GROUPDEL="@GROUPDEL@"
 
-case "$2" in
-	DEINSTALL)
-		echo "Removing user ${USER}"
-		${USERDEL} -r ${USER}
-		echo "Removing group ${GROUP}"
-		${GROUPDEL} ${GROUP}
+CAT="@CAT@"
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+
+POST-DEINSTALL)
+	${CAT} << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove:
+
+  * the \`${USER}' user
+  * the \`${GROUP}' group
+  * the \`${PKG_PREFIX}/etc/gale' directory
+
+===========================================================================
+EOF
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
 	;;
 esac
 exit 0
