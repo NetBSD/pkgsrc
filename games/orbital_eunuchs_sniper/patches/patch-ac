@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/07/23 16:07:15 wiz Exp $
+
+--- src/snipe2d.in.orig	2002-10-08 06:42:52.000000000 +0200
++++ src/snipe2d.in
+@@ -1,4 +1,4 @@
+-#! /bin/bash
++#! /bin/sh
+ prefix=@prefix@
+ cd @datadir@/@PACKAGE@
+ ./snipe2d.x86.dynamic $*
