@@ -1,0 +1,39 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
+
+--- src/dctc_process.c.orig	Tue Jul 30 17:54:39 2002
++++ src/dctc_process.c
+@@ -535,9 +535,9 @@ static void update_users_info(void)
+ 	}
+ 
+ 	if( (amount/(1024.0*1024.0*1024.0)) > 1024.0)
+-		sprintf(buf,"%'d users (%'.2lfTB)",clst->rows,amount/(1024.0*1024.0*1024.0*1024.0));
++		sprintf(buf,"%d users (%.2fTB)",clst->rows,amount/(1024.0*1024.0*1024.0*1024.0));
+ 	else
+-		sprintf(buf,"%'d users (%'.2lfGB)",clst->rows,amount/(1024.0*1024.0*1024.0));
++		sprintf(buf,"%d users (%.2fGB)",clst->rows,amount/(1024.0*1024.0*1024.0));
+ 	w=get_widget_by_widget_name("users_info_label");
+ 	if(w==NULL)
+ 		return;
+@@ -697,7 +697,7 @@ static void uinfo_fnc(const GString *s)
+ 	fsize=g_string_new("");
+ 	
+ 	if(vsize>(1024.0*1024.0*1024.0))
+-		g_string_sprintf(fsize,"%'.2fGB",vsize/(1024.0*1024.0*1024.0));
++		g_string_sprintf(fsize,"%.2fGB",vsize/(1024.0*1024.0*1024.0));
+ 	else if(vsize>(1024.0*1024.0))
+ 		g_string_sprintf(fsize,"%.2fMB",vsize/(1024.0*1024.0));
+ 	else if(vsize>(1024.0))
+@@ -4140,11 +4140,11 @@ static void first_level_glst_end_fnc(Gtk
+ #endif
+ 					if(spd<1024.0)
+ 					{
+-						g_string_sprintfa(spd_str,"[%.2lfB/s]",spd);
++						g_string_sprintfa(spd_str,"[%.2fB/s]",spd);
+ 					}
+ 					else if(spd<(1024.0*1024.0))
+ 					{
+-						g_string_sprintfa(spd_str,"[%.2lfKB/s]",spd/1024.0);
++						g_string_sprintfa(spd_str,"[%.2fKB/s]",spd/1024.0);
+ 					}
+ 
+ 					/* Estimated Time to Arrival computation: now (in second) + missing_bytes/spd */

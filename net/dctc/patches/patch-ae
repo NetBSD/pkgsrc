@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
+
+--- src/keyboard.c.orig	Mon Jul 15 09:13:14 2002
++++ src/keyboard.c
+@@ -35,7 +35,6 @@
+ #include <netdb.h>
+ #include <glib.h>
+ 
+-#if !(defined(BSD) && (BSD >= 199103))
+        #if defined(__GNU_LIBRARY__) && !defined(_SEM_SEMUN_UNDEFINED)
+        /* union semun is defined by including <sys/sem.h> */
+        #else
+@@ -47,7 +46,6 @@
+                struct seminfo *__buf;      /* buffer for IPC_INFO */
+        };
+        #endif
+-#endif
+ 
+ #include "dc_com.h"
+ #include "display.h"

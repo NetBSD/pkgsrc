@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
+bin/GDLjoiner
+bin/dctc
+bin/hublist
+man/man1/dctc.1

@@ -1,0 +1,58 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
+
+--- src/callbacks.c.orig	Sun Aug 25 10:28:02 2002
++++ src/callbacks.c
+@@ -2,6 +2,13 @@
+ #  include <config.h>
+ #endif
+ 
++#ifdef __linux__
++#include <linux/sem.h>
++#else
++#ifndef SEMVMX
++#define SEMVMX  32767           /* semaphore maximum value */
++#endif
++#endif
+ #include <math.h>
+ #include <sys/types.h>
+ #include <signal.h>
+@@ -14,11 +21,10 @@
+ #include <dirent.h>
+ #include <gdk/gdkkeysyms.h>
+ #include <gdk/gdk.h>
+-#include <linux/sem.h>
+ #include <gnome.h>
+ #include <glib.h>
+ #include <time.h>
+-#include <db.h>
++#include <db4/db.h>
+ #include <string.h>
+ 
+ #include "callbacks.h"
+@@ -1383,7 +1389,7 @@ on_find_entry_activate                 (
+ 
+ 		val=atof(gtk_entry_get_text(GTK_ENTRY(w)));
+ 
+-		g_string_sprintfa(req,"%lf",scale*val);
++		g_string_sprintfa(req,"%f",scale*val);
+ 	}
+ 
+ 	w=get_widget_by_widget_name("find_result");
+@@ -2610,7 +2616,7 @@ on_apply_pref_clicked                  (
+ 			}
+ 			if(i==4)
+ 				i=0;
+-			g_string_sprintf(out,"/OFFSET %lf\n",strtod(v,NULL)*scale[i]);
++			g_string_sprintf(out,"/OFFSET %f\n",strtod(v,NULL)*scale[i]);
+ 			send_data_to_dctc(out->str);
+ 		}
+ 	}
+@@ -3226,7 +3232,7 @@ static void reload_ls_cache_clist(int ev
+ 				nw[1]=buf;
+ 
+ 				printf("%llX",lsch.share_size);
+-				sprintf(buf,"%'llu", lsch.share_size);
++				sprintf(buf,"%llu", lsch.share_size);
+ 				gtk_clist_append(clst,nw);
+ 			}
+ 		}

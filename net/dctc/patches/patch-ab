@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
+
+--- configure.orig	Thu Jul 25 14:42:18 2002
++++ configure
+@@ -1860,14 +1860,14 @@ fi
+ 
+ 
+ if test "x$manu_db" = "xyes"; then
+-		echo $ac_n "checking for db_env_create in -ldb-4.0""... $ac_c" 1>&6
+-echo "configure:1865: checking for db_env_create in -ldb-4.0" >&5
+-ac_lib_var=`echo db-4.0'_'db_env_create | sed 'y%./+-%__p_%'`
++		echo $ac_n "checking for db_env_create in -ldb4""... $ac_c" 1>&6
++echo "configure:1865: checking for db_env_create in -ldb4" >&5
++ac_lib_var=`echo db4'_'db_env_create | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-ldb-4.0  $LIBS"
++LIBS="-ldb4  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 1873 "configure"
+ #include "confdefs.h"
+@@ -1902,7 +1902,7 @@ fi
+ 
+ 	if test "x$HAVE_DB40" = "xyes"; then
+ 		
+-		berkeleydb_libs="-ldb-4.0"
++		berkeleydb_libs="-ldb4"
+ 	else
+ 		echo $ac_n "checking for db_env_create in -ldb-3.3""... $ac_c" 1>&6
+ echo "configure:1909: checking for db_env_create in -ldb-3.3" >&5

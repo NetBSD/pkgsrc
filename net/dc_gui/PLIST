@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/11 20:47:14 wiz Exp $
+bin/dc_gui
+share/gnome/help/dc_gui/C/index.html
+share/gnome/help/dc_gui/C/topic.dat
+share/gnome/help/dc_gui/es/index.html
+share/gnome/help/dc_gui/es/topic.dat
+share/gnome/help/dc_gui/nl/index.html
+share/gnome/help/dc_gui/nl/topic.dat
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/dc_gui.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/dc_gui.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/dc_gui.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/dc_gui.mo
+@dirrm share/gnome/help/dc_gui/nl/images
+@dirrm share/gnome/help/dc_gui/nl
+@dirrm share/gnome/help/dc_gui/es/images
+@dirrm share/gnome/help/dc_gui/es
+@dirrm share/gnome/help/dc_gui/C/images
+@dirrm share/gnome/help/dc_gui/C
+@dirrm share/gnome/help/dc_gui
+@unexec ${RMDIR} share/gnome/help 2>/dev/null || ${TRUE}
