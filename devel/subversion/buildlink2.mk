@@ -1,10 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/02/03 20:22:01 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/04/15 16:23:22 salo Exp $
+#
 
 .if !defined(SUBVERSION_BUILDLINK2_MK)
 SUBVERSION_BUILDLINK2_MK=          #defined
 
 BUILDLINK_PACKAGES+=			subversion-base
-BUILDLINK_DEPENDS.subversion-base?=	subversion>=0.17.1
+BUILDLINK_DEPENDS.subversion-base?=	subversion>=0.20.1
 BUILDLINK_PKGSRCDIR.subversion-base?=	../../devel/subversion
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.subversion-base=subversion
@@ -15,9 +16,9 @@ BUILDLINK_FILES.subversion-base+=	include/subversion-1/*
 BUILDLINK_FILES.subversion-base+=	lib/libsvn*
 
 .include "../../databases/db4/buildlink2.mk"
+.include "../../textproc/expat/buildlink2.mk"
 .include "../../www/apache2/buildlink2.mk"
 .include "../../www/neon/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
 
 BUILDLINK_TARGETS+=             subversion-base-buildlink
 
