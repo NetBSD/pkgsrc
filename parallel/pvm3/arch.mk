@@ -1,3 +1,6 @@
+# $NetBSD: arch.mk,v 1.2 2002/10/12 17:30:33 dmcmahill Exp $
+#
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
