@@ -1,0 +1,51 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/03/28 20:42:08 jmmv Exp $
+
+Index: configure.ac
+===================================================================
+--- configure.ac	(revision 1860)
++++ configure.ac	(working copy)
+@@ -18,6 +18,7 @@
+ 
+ AC_DEFINE(_REENTRANT,1,link with reentrant library functions)
+ AC_DEFINE(_POSIX_C_SOURCE,199506L,link with POSIX library functions)
++AC_DEFINE(_XOPEN_SOURCE,500,link with XOpen library functions)
+ 
+ dnl *** uncomment if you want to insert a magic value in every object instance for debugging ***
+ dnl AC_DEFINE(MAGIC,1,put "SableVM" in every instance)
+@@ -90,12 +91,6 @@
+ 		enable_signals_for_exceptions=no
+ 	fi])
+ 
+-case "$enable_signals_for_exceptions" in
+-	no)	;;
+-	yes)	AC_DEFINE(_SABLEVM_SIGNALS_FOR_EXCEPTIONS,1,use signals to detect exceptions) ;;
+-	*)	AC_MSG_ERROR(bad value \"${enable_signals_for_exceptions}\" for --enable-signals-for-exceptions) ;;
+-esac
+-
+ dnl garbage collection
+ AC_ARG_WITH(gc,
+ 	[  --with-gc=TYPE          use given garbage collector (none,copying)],,
+@@ -200,7 +195,23 @@
+ AC_C_INLINE
+ AC_TYPE_SIZE_T
+ AC_HEADER_TIME
++AC_CHECK_TYPE(siginfo_t, have_siginfo=yes;
++              AC_DEFINE(HAVE_SIGINFO, [],
++                        [Define to 1 if you have siginfo support]),
++              have_siginfo=no, [#include <signal.h>])
+ 
++dnl Handle signals for exceptions based on the availability of siginfo_t.
++if test "$have_siginfo" = no; then
++	enable_signals_for_exceptions=no
++	AC_MSG_WARN([siginfo not available; disabled use of signals])
++fi
++
++case "$enable_signals_for_exceptions" in
++	no)	;;
++	yes)	AC_DEFINE(_SABLEVM_SIGNALS_FOR_EXCEPTIONS,1,use signals to detect exceptions) ;;
++	*)	AC_MSG_ERROR(bad value \"${enable_signals_for_exceptions}\" for --enable-signals-for-exceptions) ;;
++esac
++
+ dnl Checks for library functions.
+ AC_FUNC_MALLOC
+ AC_FUNC_MMAP
