@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/28 19:44:07 xtraeme Exp $
+
+--- Makefile.in.orig	2003-11-05 01:18:17.000000000 +0100
++++ Makefile.in	2003-11-05 01:18:49.000000000 +0100
+@@ -103,8 +103,8 @@
+ install_sh = @install_sh@
+ EXTRA_DIST = PROTOCOL Doxyfile.in
+ 
+-SUBDIRS = ac-helpers etc tools man mio sx util expat idn scod $(JABBERD_SUBDIRS)
+-DIST_SUBDIRS = ac-helpers etc tools man mio sx util expat idn scod c2s resolver router s2s sm
++SUBDIRS = ac-helpers tools man mio sx util expat idn scod $(JABBERD_SUBDIRS)
++DIST_SUBDIRS = ac-helpers tools man mio sx util expat idn scod c2s resolver router s2s sm
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
