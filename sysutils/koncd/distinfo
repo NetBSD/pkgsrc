@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.4 2001/06/13 12:41:55 bouyer Exp $
+$NetBSD: distinfo,v 1.5 2001/11/13 21:26:58 jlam Exp $
 
 SHA1 (koncd-0.7.1.tar.gz) = db387b3cd83c3a50d96175ef2a5b5ed98eec05b2
 Size (koncd-0.7.1.tar.gz) = 1286825 bytes
 SHA1 (patch-aa) = 8e726fdf59fd22ab628791d2650b2749ababa910
 SHA1 (patch-ab) = d63c278ee45f49f64fcb4edb9bc133ce54cde5ec
 SHA1 (patch-ac) = a216dfc85f7e274263544f76c0e98f323dad0153
+SHA1 (patch-ad) = 9145a6bd0800431eb98ed025740d62c12ffd5611
+SHA1 (patch-ae) = f163837afe101c8115168eb106f653769b9fc7ec
