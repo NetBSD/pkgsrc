@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/04/14 21:39:01 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/05/21 09:37:07 mrg Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -16,8 +16,8 @@ USE_CROSSBASE=		yes
 USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-64-bit-bfd \
-			--enable-targets=${ENABLE_TARGETS_LIST} \
+CONFIGURE_ARGS+=	--enable-64-bit-bfd
+CONFIGURE_ARGS+=	--enable-targets=${ENABLE_TARGETS_LIST} \
 			--target=i386-linux
 # --target above ensures that --host is not included as default
 MAKE_ARGS+=		CFLAGS="${CFLAGS}"
@@ -25,14 +25,17 @@ ALL_TARGET=		all-binutils all-ld
 
 BINDIR=			${PREFIX}/libexec/binutils
 
-ENABLE_TARGETS=		alpha-netbsd \
+ENABLE_TARGETS+=	alpha-netbsd \
 			i386-cygwin32 i386-elf i386-go32 i386-linux \
 			i386-netbsd i386-netware \
 			m68k-elf m68k-netbsd m68k-sunos4 \
 			mips-dec-netbsd \
 			powerpc-eabi powerpcle-eabi \
-			sparc-netbsd sparc-solaris2 sparc-sunos4 \
-			sparc64-elf
+			sparc-netbsd sparc-solaris2 sparc-sunos4
+
+# this breaks the `sparc-solaris2' target (which adds sparc_elf32
+# which we use for the `sparc-netbsdelf' target
+#ENABLE_TARGETS+=	sparc64-elf
 
 post-extract:
 	@${RM} -rf ${WRKSRC}/gas
