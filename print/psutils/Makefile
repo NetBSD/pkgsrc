@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/11/26 10:13:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2003/01/28 22:04:01 jlam Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -16,6 +16,7 @@ DEPENDS+=	papersize-[0-9]*:../../print/papersize
 
 WRKSRC=		${WRKDIR}/psutils
 USE_PERL5=	yes
+USE_PKGINSTALL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -57,5 +58,4 @@ post-install:
 	low=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`;		\
 	${ECHO} "PAPERSIZE=$$low" > ${EGDIR}/psutils.cfg;
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

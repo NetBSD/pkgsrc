@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/01/08 01:52:43 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2003/01/28 22:04:31 jlam Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 CATEGORIES+=		lang
@@ -7,6 +7,7 @@ COMMENT=		HTML-embedded scripting language
 CONFLICTS+=		ap-php-4.0.3pl1
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "Makefile.php"
@@ -41,5 +42,4 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/php
 	${INSTALL_DATA} ${WRKSRC}/php.gif ${PREFIX}/share/php
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

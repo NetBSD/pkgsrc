@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/09/26 23:59:00 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/28 22:04:09 jlam Exp $
 #
 
 DISTNAME=		xdm-krb4-3.3.6.3
@@ -8,8 +8,9 @@ MASTER_SITES=		ftp://gutemine.geo.Uni-Koeln.DE/pub/xdm-krb4/
 MAINTAINER=		wennmach@netbsd.org
 COMMENT=		Kerberos IV and AFS aware xdm
 
-USE_BUILDLINK2=		# defined
-USE_IMAKE=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
+USE_IMAKE=		yes
 
 .if exists(/usr/lib/libroken.a)
 KRB4_INCLUDE=	-I/usr/include/kerberosIV
@@ -41,5 +42,4 @@ post-patch:
 pre-install:
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

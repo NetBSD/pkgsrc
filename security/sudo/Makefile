@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2002/12/25 12:26:46 grant Exp $
+# $NetBSD: Makefile,v 1.53 2003/01/28 22:04:08 jlam Exp $
 #
 
 DISTNAME=		sudo-1.6.6
@@ -14,8 +14,9 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.courtesan.com/sudo/
 COMMENT=		Allow others to run commands as root
 
-USE_BUILDLINK2=		# defined
-GNU_CONFIGURE=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -49,5 +50,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sudoers ${EGDIR}/sudoers
 	${INSTALL_DATA} ${WRKSRC}/sample.sudoers ${EGDIR}/sudoers.sample
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/08/25 21:50:01 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2003/01/28 22:03:52 jlam Exp $
 
 DISTNAME=	lftp-2.5.2
 CATEGORIES=	net
@@ -14,6 +14,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
 			--sysconfdir=${PKG_SYSCONFDIR}
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
@@ -35,5 +36,4 @@ post-install:
 .include "../../devel/readline/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

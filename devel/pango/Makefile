@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/01/04 19:59:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2003/01/28 22:03:16 jlam Exp $
 #
 
 DISTNAME=		pango-1.2.0
@@ -13,6 +13,7 @@ HOMEPAGE=		http://www.pango.org
 COMMENT=		Library for layout and rendering of text
 
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 USE_GMAKE=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
@@ -41,5 +42,4 @@ CONFIGURE_ARGS+=	--with-qt=no
 .include "../../fonts/Xft2/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/12/22 12:22:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2003/01/28 22:03:04 jlam Exp $
 # FreeBSD Id: Makefile,v 1.29 1996/12/20 23:46:22 ache Exp 
 #
 
@@ -24,10 +24,11 @@ MAKE_FLAGS=		MACHINE=netbsd CC=${CC} INSTALL="${INSTALL}" \
 		COMPRESSION_FILE=${PKG_SYSCONFDIR}/compression_methods \
 		COMPRESSION_FILE_EG=${EGDIR}/compression_methods
 
+USE_PKGINSTALL=	yes
 EGDIR=		${PREFIX}/share/examples/tracker
 CONF_FILES=	${EGDIR}/compression_methods ${PKG_SYSCONFDIR}/compression_methods
 
-INFO_FILES=		tracker.info
+INFO_FILES=	tracker.info
 
 pre-install:
 	cd ${WRKSRC}/Docs && \
@@ -41,5 +42,4 @@ post-install:
 	${CP} -R ${WRKSRC}/Docs/* ${PREFIX}/share/doc/tracker
 
 .include "../../mk/texinfo.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

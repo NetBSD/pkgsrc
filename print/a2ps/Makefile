@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2003/01/10 07:45:23 cjep Exp $
+# $NetBSD: Makefile,v 1.40 2003/01/28 22:03:59 jlam Exp $
 
 DISTNAME=		a2ps-4.13b
 PKGNAME=		a2ps-4.13.0.2
@@ -22,6 +22,7 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/auxdir/ltconfig
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LPR=lpr
@@ -41,5 +42,4 @@ pre-build:
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

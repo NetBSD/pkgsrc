@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/19 09:04:09 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:15 jlam Exp $
 #
 
 DISTNAME=	p4d
@@ -8,6 +8,8 @@ COMMENT=	Perforce SCM server
 P4BINONLY=	# defined
 
 .include "../../devel/p4/Makefile.common"
+
+USE_PKGINSTALL=	yes
 
 FILES_SUBST+=	P4USER=${P4USER:Q}
 FILES_SUBST+=	P4ROOT=${P4ROOT:Q}
@@ -30,5 +32,4 @@ P4JOURNAL?=	journal
 do-install:
 	${INSTALL_PROGRAM} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${PREFIX}/sbin
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

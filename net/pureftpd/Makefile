@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/01/16 09:14:51 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/01/28 22:03:55 jlam Exp $
 #
 
 DISTNAME=	pure-ftpd-1.0.12
@@ -10,6 +10,7 @@ MAINTAINER=	dawszy@arhea.net
 HOMEPAGE=	http://www.pureftpd.org/
 COMMENT=	FTP daemon with optional SQL support
 
+USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-sysquotas	\
@@ -26,5 +27,4 @@ BUILD_DEFS+=	PURE_FTPD_USE_MYSQL
 
 RCD_SCRIPTS=	pure_ftpd
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

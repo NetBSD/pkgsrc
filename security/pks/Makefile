@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/09/19 09:04:25 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/28 22:04:07 jlam Exp $
 
 DISTNAME=		pks-0.9.4
 CATEGORIES=		security www
@@ -16,6 +16,7 @@ HOMEPAGE=		http://www.mit.edu/people/marc/pks/
 COMMENT=		PGP Public Key Server
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/pks
 CONFIGURE_ARGS+=	--localstatedir=/var/pks
@@ -32,6 +33,4 @@ RCD_SCRIPTS=	pksd
 OWN_DIRS=	/var/pks /var/pks/db /var/pks/incoming
 
 .include "../../databases/db/buildlink2.mk"
-
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

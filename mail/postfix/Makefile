@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2003/01/26 13:20:08 taca Exp $
+# $NetBSD: Makefile,v 1.78 2003/01/28 22:03:36 jlam Exp $
 
 DISTNAME=	postfix-2.0.3
 CATEGORIES=	mail
@@ -13,6 +13,7 @@ DIST_SUBDIR=	postfix
 POSTFIX_SPOOL=	/var/spool/postfix
 
 USE_BUILDLINK2=	yes
+USE_PKGINSTALL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -171,5 +172,4 @@ post-install:
 	${TEST} -f /etc/postfix/master.cf || \
 		${INSTALL_DATA} ${PREFIX}/share/postfix/master.cf /etc/postfix
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

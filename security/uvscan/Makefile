@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/09/18 21:15:18 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2003/01/28 22:04:08 jlam Exp $
 
 DISTNAME=		vlnx416e
 PKGNAME=		uvscan-4.16.0
@@ -31,6 +31,7 @@ DATDIR=			${PREFIX}/share/uvscan
 UVSCANDIR=		${PREFIX}/libexec/uvscan
 DATFILES=		clean.dat internet.dat names.dat scan.dat readme.txt
 
+USE_PKGINSTALL=		yes
 FILES_SUBST+=		UVSCANDIR=${UVSCANDIR:Q}
 FILES_SUBST+=		DATFILES=${DATFILES:Q}
 
@@ -74,5 +75,4 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR};		\
 	done
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../emulators/suse_linux/Makefile.application"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/01/24 13:34:41 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/01/28 22:03:24 jlam Exp $
 #
 
 DISTNAME=	libggi-2.0b2.1
@@ -10,13 +10,14 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.ggi-project.org/
 COMMENT=	General Graphics Interface library is a flexible drawing library
 
-USE_BUILDLINK2=		# defined
-USE_X11=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
+USE_X11=		yes
 
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
@@ -39,5 +40,4 @@ post-configure:
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../graphics/libgii/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

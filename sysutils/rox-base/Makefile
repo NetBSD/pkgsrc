@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/05 10:01:00 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/28 22:04:18 jlam Exp $
 #
 
 DISTNAME=	rox-base-1.0.2
@@ -14,6 +14,7 @@ COMMENT=	Shared ROX resources
 DIST_SUBDIR=	rox
 
 USE_BUILDLINK2=	yes
+USE_PKGINSTALL=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
@@ -28,5 +29,4 @@ do-install:
 	${CP} -Rf ${WRKSRC}/Choices ${PREFIX}/share/rox
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/rox
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/01/01 22:02:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/28 22:03:25 jlam Exp $
 
 DISTNAME=		tcm-2.01.src
 PKGNAME=		tcm-2.01
@@ -13,6 +13,7 @@ COMMENT=		TCM - Toolkit for Conceptual Modeling
 WRKSRC=			${WRKDIR}/tcm-2.01/src
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 
 # These two variables denote where the installed location of the libraries
@@ -92,7 +93,6 @@ do-install:
 		${PREFIX}/share/doc/html/tcm/wishlist/
 
 .include "../../mk/motif.buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if defined(MOTIF_TYPE) && (${MOTIF_TYPE} == "lesstif")

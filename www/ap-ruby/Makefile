@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/10/25 12:58:27 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/28 22:04:25 jlam Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.modruby.net/
 COMMENT=	Apache module that embeds Ruby interpreter within
 
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
 DIST_SUBDIR=	ruby
 USE_RUBY=	YES
 RUBY_REQD=	1.6
@@ -47,5 +48,5 @@ post-install:
 .include "../../lang/ruby-base/buildlink2.mk"
 .include "../../textproc/ruby-eruby/buildlink2.mk"
 .include "../../www/apache/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/16 13:23:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:18 jlam Exp $
 
 DISTNAME=	kochi-gothic-20020503
 PKGNAME=	kochi-ttf-20020503
@@ -18,8 +18,9 @@ KOCHI_VERSION=	0.2.20020503
 
 WRKSRC=		${WRKDIR}/kochi-gothic
 
-NO_BUILD=	# Defined
-USE_X11BASE=	# Defined
+NO_BUILD=	yes
+USE_X11BASE=	yes
+USE_PKGINSTALL=	yes
 
 INSTALL_TMPL=	${FILESDIR}/install
 DEINSTALL_TMPL=	${FILESDIR}/deinstall
@@ -37,5 +38,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/fonts/kochi-mincho.ttf \
 	    ${PREFIX}/lib/X11/fonts/TrueType/kochi-mincho.ttf
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

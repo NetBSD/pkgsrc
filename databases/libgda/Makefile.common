@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2002/12/26 18:56:05 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/01/28 22:03:12 jlam Exp $
 #
 
 DISTNAME?=		libgda-0.8.199
@@ -14,6 +14,7 @@ USE_X11=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
@@ -32,4 +33,3 @@ CONF_FILES+=		${EGDIR}/config ${PKG_SYSCONFDIR}/config
 .include "../../lang/python22/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/01/08 19:56:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2003/01/28 22:04:24 jlam Exp $
 
 VERS=			0.80.2
 DISTNAME=		WindowMaker-${VERS}
@@ -16,6 +16,7 @@ COMMENT=		GNUStep-compliant NEXTSTEP(tm) window manager clone
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -90,7 +91,6 @@ post-install:
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # "egcs" has an optimizer problem on "arm32".

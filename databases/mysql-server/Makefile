@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/01/21 08:13:18 lukem Exp $
+# $NetBSD: Makefile,v 1.35 2003/01/28 22:03:12 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=		3
@@ -10,6 +10,7 @@ COMMENT=		MySQL, a free SQL database (server)
 CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--without-berkeley-db
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_GMAKE=		YES
 
 
@@ -66,5 +67,5 @@ post-install:
 
 .include "../../databases/mysql-client/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/21 08:27:25 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/28 22:03:14 jlam Exp $
 #
 
 DISTNAME=	cvsgraph-1.2.0
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.akhphd.au.dk/~bertho/cvsgraph/
 COMMENT=	graphically represents CVS/RCS branches and file revisions
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -39,6 +40,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/cvsgraph.conf ${EGDIR}
 
 .include "../../graphics/gd/buildlink2.mk"
-
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

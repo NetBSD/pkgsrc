@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/08 23:15:59 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:29 jlam Exp $
 
 PKGNAME=		courier-authmysql-${BASE_VERS}
 PKGREVISION?=		# empty
@@ -8,6 +8,7 @@ DEPENDS+=		courier-auth>=${BASE_VERS}:../../mail/courier-auth
 
 .include "../../mail/courier-auth/Makefile.authdaemond"
 
+USE_PKGINSTALL=		yes
 CONFIGURE_ARGS+=	--with-authmysql
 LDFLAGS+=		${BUILDLINK_LDFLAGS.mysql-client}
 
@@ -29,5 +30,4 @@ do-install:
 		${PREFIX}/share/doc/html/courier
 
 .include "../../databases/mysql-client/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2003/01/13 19:06:27 kristerw Exp $
+# $NetBSD: Makefile,v 1.89 2003/01/28 22:03:17 jlam Exp $
 #
 
 DISTNAME=		xmame-0.62.2
@@ -16,6 +16,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
 MAKEFILE=		makefile.unix
@@ -106,5 +107,5 @@ do-install:
 
 .include "../../audio/esound/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
+
 .include "../../mk/bsd.pkg.mk"

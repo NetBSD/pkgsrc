@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/01/16 09:27:59 grant Exp $
+# $NetBSD: Makefile,v 1.21 2003/01/28 22:03:55 jlam Exp $
 
 DISTNAME=	rp-pppoe-3.5
 CATEGORIES=	net
@@ -11,6 +11,7 @@ COMMENT=	Roaring Penguin's PPP over Ethernet client
 
 CONFLICTS+=	mouse_pppoe<20000912nb1
 
+USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PPPD=${PPPD}
 
@@ -24,5 +25,4 @@ post-install:
 	${INSTALL_DATA} pppoe.conf pppoe-server-options \
 	  ${PREFIX}/share/examples/rp-pppoe
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/08/25 21:50:18 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2003/01/28 22:03:57 jlam Exp $
 
 DISTNAME=	vtun-2.5
 CATEGORIES=	net
@@ -9,6 +9,7 @@ HOMEPAGE=	http://vtun.sourceforge.net/
 COMMENT=	Virtual Tunnels over TCP/IP networks with traffic shaping
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -52,5 +53,4 @@ do-install:
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

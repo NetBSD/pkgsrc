@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/11/26 11:26:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/28 22:03:59 jlam Exp $
 #
 
 DISTNAME=	apsfilter-7.2.2
@@ -22,6 +22,7 @@ WRKSRC=		${WRKDIR}/apsfilter
 
 HAS_CONFIGURE=	YES
 USE_BZIP2=	YES
+USE_PKGINSTALL=	YES
 
 CONFIGURE_ARGS+=--prefix=${LOCALBASE}
 CONFIGURE_ARGS+=--with-shell=${SH}
@@ -47,5 +48,4 @@ post-patch:
 #		> ${DEINSTALL_FILE}
 
 .include "../../mk/ghostscript.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

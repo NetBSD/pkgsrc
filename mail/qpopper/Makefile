@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/11/23 17:01:20 taca Exp $
+# $NetBSD: Makefile,v 1.36 2003/01/28 22:03:38 jlam Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -17,7 +17,8 @@ COMMENT=		Qualcomm's POP server for Eudora
 
 .include "Makefile.common"
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 
 PKG_USERS?=		${QPOPPER_USER}
@@ -35,6 +36,4 @@ post-install:
 		 ${PREFIX}/share/examples
 
 .include "../../security/openssl/buildlink2.mk"
-
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

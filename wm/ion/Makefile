@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/12/22 21:33:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/28 22:04:22 jlam Exp $
 #
 
 DISTNAME=	ion-20010523
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.students.tut.fi/~tuomov/ion/
 COMMENT=	keyboard friendly tiling window manager
 
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
 USE_X11BASE=	YES
 USE_GMAKE=	YES
 
@@ -29,5 +30,4 @@ CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 # PKG_SYSCONFSUBDIR we are currently using.
 MAKE_ENV=		PKG_SYSCONFBASE="${PKG_SYSCONFBASE}"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2002/12/03 21:21:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.91 2003/01/28 22:03:34 jlam Exp $
 
 DISTNAME=		mutt-1.4i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -13,12 +13,13 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.mutt.org/
 COMMENT=		text-based MIME mail client with PGP support
 
-BUILD_USES_MSGFMT=	# defined
+BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		# defined
-USE_GMAKE=		# defined
-GNU_CONFIGURE=		# defined
-USE_PKGLOCALEDIR=	# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
+USE_GMAKE=		yes
+GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
 			--with-docdir=${PREFIX}/share/doc/mutt \
 			--without-included-gettext \
@@ -34,7 +35,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang}
 .else
 . if ${MUTT_USE_NCURSES} == YES
-USE_NCURSES=		# defined
+USE_NCURSES=		yes
 . endif
 . include "../../devel/ncurses/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_PREFIX.ncurses}
@@ -77,5 +78,4 @@ post-install:
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/09/19 09:04:18 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/28 22:03:56 jlam Exp $
 
 DISTNAME=		samba-2.0.10
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -11,9 +11,10 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX
 
-BUILD_USES_MSGFMT=	# defined
-GNU_CONFIGURE=		# defined
-USE_BUILDLINK2=		# defined
+BUILD_USES_MSGFMT=	yes
+GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -91,5 +92,4 @@ post-install:
 .include "../../devel/readline/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2003/01/23 00:00:17 seb Exp $
+# $NetBSD: Makefile,v 1.94 2003/01/28 22:04:06 jlam Exp $
 
 DISTNAME=		openssh-3.5p1
 PKGNAME=		openssh-3.5.0.1
@@ -47,6 +47,7 @@ PLIST_SUBST+=		MANDIR=${MANDIR}
 PLIST_SUBST+=		RCD_SCRIPTS_EGDIR=${RCD_SCRIPTS_EGDIR}
 
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${MANDIR}
@@ -143,5 +144,4 @@ post-install:
 .include "../../security/openssl/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

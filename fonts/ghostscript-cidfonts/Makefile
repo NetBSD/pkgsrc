@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/13 22:35:01 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/28 22:03:18 jlam Exp $
 
 DISTNAME=	ghostscript-cidfonts-20000901
 CATEGORIES=	fonts
@@ -16,8 +16,9 @@ ADOBE_RESOURCEDIR=	${PREFIX}/share/Adobe/Resource
 GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/Resource
 
 EXTRACT_ONLY=		# empty
-NO_CONFIGURE=		# defined
-NO_BUILD=		# defined
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
+USE_PKGINSTALL=		yes
 
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
@@ -31,5 +32,4 @@ MAKE_DIRS=		${GS_RESOURCEDIR} ${GS_RESOURCEDIR}/CIDFont
 do-install:	# nothing
 
 .include "../../mk/ghostscript.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

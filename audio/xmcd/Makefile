@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2003/01/24 13:36:18 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2003/01/28 22:03:04 jlam Exp $
 
 DISTNAME=	xmcd-3.0.2
 CATEGORIES=	audio
@@ -14,9 +14,10 @@ PATCH_DIST_STRIP=	-p1
 
 WRKSRC=		${WRKDIR}/xmcd-3.0
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 USE_NCURSES=		# cursor_normal, cursor_invisible (in ncurses in term.h)
-USE_IMAKE=		# defined
+USE_IMAKE=		yes
 MAKE_ENV+=		BATCH_BINDIR=${PREFIX}/bin
 MAKE_ENV+=		BATCH_LIBDIR=${PREFIX}/lib/X11
 MAKE_ENV+=		BATCH_MANDIR=${PREFIX}/man/man1
@@ -53,5 +54,4 @@ post-install:
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/motif.buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

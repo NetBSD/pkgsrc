@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/08/25 21:51:36 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/28 22:04:23 jlam Exp $
 #
 
 DISTNAME=	pwm-1.0
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.students.tut.fi/~tuomov/pwm/
 COMMENT=	Window manager that frames multiple client windows in a single frame
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_X11=		YES
 USE_GMAKE=		YES
 MAKE_ENV+=		SYSCONFDIR="${PKG_SYSCONFDIR}"
@@ -30,5 +31,4 @@ SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 post-install:
 	${RM} -f ${EGDIR}/sample.conf
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/09/19 09:04:02 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2003/01/28 22:03:03 jlam Exp $
 #
 
 DISTNAME=	rplay-3.3.2
@@ -11,6 +11,7 @@ HOMEPAGE=	http://rplay.doit.org/
 COMMENT=	Network audio player
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -31,6 +32,5 @@ pre-configure:
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/rx/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/12/17 12:03:01 lukem Exp $
+# $NetBSD: Makefile,v 1.23 2003/01/28 22:04:19 jlam Exp $
 
 DISTNAME=		nut-1.2.1
 PKGREVISION=		1
@@ -16,6 +16,7 @@ ALL_TARGET=		cgi
 INSTALL_TARGET=		install-cgi
 
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR}			\
@@ -38,5 +39,4 @@ CONF_FILES+=		${NUT_EGDIR}/upsstats.html.sample \
 			${NUT_CONFDIR}/upsstats.html
 
 .include "../../graphics/gd/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

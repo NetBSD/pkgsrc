@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2002/11/26 12:32:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.73 2003/01/28 22:03:24 jlam Exp $
 #
 
 DISTNAME=		imlib-1.9.14
@@ -20,6 +20,7 @@ USE_GMAKE=		yes
 UNLIMIT_RESOURCES=	datasize
 
 USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 
 CPPFLAGS+=		-DENABLE_NLS
 CONFIGURE_ENV+=		ac_cv_path_CONVERT_PROG="${LOCALBASE}/bin/convert"
@@ -58,5 +59,4 @@ post-install:
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
