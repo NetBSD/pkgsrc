@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2002/12/31 04:33:21 grant Exp $
+# $NetBSD: Makefile.common,v 1.9 2003/01/02 05:41:56 grant Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -116,7 +116,8 @@ CONFIGURE_ARGS+= --with-pthreads
 
 .if ${MOZILLA_USE_XFT} == "YES"
 CONFIGURE_ARGS+=	--enable-xft
-BUILD_DEPENDS+=		pkgconfig>=0.10.0:../../devel/pkgconfig
+# pkgconfig defaults to a "build" dependancy, which is what we want.
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../fonts/Xft2/buildlink2.mk"
 .endif
 
