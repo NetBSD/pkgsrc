@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/24 15:23:47 grant Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/17 01:13:57 minskim Exp $
 #
 
 DISTNAME=	tidy_src_031002
@@ -15,7 +15,7 @@ HOMEPAGE=	http://tidy.sourceforge.net/
 COMMENT=	Fixes and tidies up HTML files
 
 WRKSRC=		${WRKDIR}/tidy
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 NO_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 BUILD_DIRS=	${WRKSRC}/build/gmake
