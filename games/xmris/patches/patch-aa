@@ -1,0 +1,26 @@
+--- Imakefile.orig	Fri Jul 31 00:15:54 1998
++++ Imakefile	Fri Jul 31 00:20:49 1998
+@@ -73,3 +73,3 @@
+ XCOMM SCORE = $(LOCAL)/lib/$(APP)
+-SCORE = $(LIBDIR)/$(APP)
++SCORE = $(X11BASE)/share/$(APP)
+ /* to install default gardens not in app_defaults/$(APP)
+@@ -86,3 +86,3 @@
+ XCOMM required for setuid, try one or the other, (the first is better)
+-XCOMM EXTRA_LOAD_FLAGS = -R$(USRLIBDIR)$${LD_RUN_PATH+\:$$LD_RUN_PATH}
++XCOMM EXTRA_LOAD_FLAGS = -Wl,-R$(USRLIBDIR)$${LD_RUN_PATH+\:$$LD_RUN_PATH}
+ XCOMM EXTRA_LOAD_FLAGS = -static
+@@ -95,3 +95,3 @@
+ XCOMM open access on the score file, 'cos transputers can't do setuid
+-INSTSCOREFLAGS = -m 777
++INSTSCOREFLAGS = -m 664
+ #else
+@@ -99,5 +99,5 @@
+ XCOMM these are set for a setuid xmris
+-OWNER = -o games
+-INSTSCOREFLAGS = $(OWNER) -m 755
+-INSTMRISFLAGS = $(OWNER) $(INSTUIDFLAGS)
++OWNER = -o bin -g games
++INSTSCOREFLAGS = $(OWNER) -m 775
++INSTMRISFLAGS = $(OWNER) -m 2755
+ XCOMM normal install locations
