@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 12:26:49 agc Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/23 17:18:31 jmmv Exp $
 #
 
 DISTNAME=	docbook-simple-1.1b1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://docbook.org/xml/simple/1.1b1/
 EXTRACT_SUFX=	.zip
