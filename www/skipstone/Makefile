@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2002/03/28 10:40:33 jmc Exp $
-#
+# $NetBSD: Makefile,v 1.11 2002/04/22 13:39:26 tron Exp $
 
-DISTNAME=	skipstone-0.8.0
+DISTNAME=	skipstone-0.8.1
 CATEGORIES=	www
 MASTER_SITES=	http://www.muhri.net/skipstone/
 

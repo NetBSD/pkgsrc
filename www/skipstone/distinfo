@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2002/03/28 10:40:33 jmc Exp $
+$NetBSD: distinfo,v 1.7 2002/04/22 13:39:26 tron Exp $
 
-SHA1 (skipstone-0.8.0.tar.gz) = 50f91b86d8f0a69a59fba42e0a0d548ff02837e5
-Size (skipstone-0.8.0.tar.gz) = 377299 bytes
+SHA1 (skipstone-0.8.1.tar.gz) = 91650eef792acdc02db70b5b1bcac3c9c674cd1e
+Size (skipstone-0.8.1.tar.gz) = 393285 bytes
 SHA1 (patch-aa) = 64d4423f214aa8cfc2792831d3d5f8046e8ad88c
 SHA1 (patch-ab) = 0ce631832790a2fd2e243c75ddf466aad337ec2e
 SHA1 (patch-ac) = d79acc2997b95d3844501ed0f4e767beac6b90ad
