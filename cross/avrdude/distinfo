@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/17 19:09:23 wennmach Exp $
+
+SHA1 (avrdude-4.1.0.tar.gz) = e3d88668ae06713a4d5576c982f32ff909903525
+Size (avrdude-4.1.0.tar.gz) = 327572 bytes
+SHA1 (patch-aa) = 1b7527e8590a098560042ad2dbb5798d162c1462
+SHA1 (patch-ab) = 620d791e8118aeabff5ca10d9e1bc5a2e794b2b6
+SHA1 (patch-ac) = 9fc1969e2db8a04a400ed62292d7da1666e64918
+SHA1 (patch-ad) = 7e3ce331afbf08e9db6a03178c247410e79d820e
+SHA1 (patch-ae) = 96be79ab7aeb1539f175a0e775cf8a536513028e
+SHA1 (patch-af) = 089decf6d74803cfad5a8a5848709f0ab747e03e
