@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/06 01:58:07 sakamoto Exp $
+$NetBSD: patch-aa,v 1.2 2001/12/19 20:08:51 wiz Exp $
 
---- ./compat/Makefile.in.orig	Sun Dec  5 06:42:06 1999
-+++ ./compat/Makefile.in	Mon Dec  6 10:00:29 1999
-@@ -101,5 +101,5 @@
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
- CCLD = $(CC)
--LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
-+LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@ -rpath $(PREFIX)/lib
- DIST_COMMON =  Makefile.am Makefile.in getopt.c getopt1.c strdup.c
+--- Makefile.in.orig	Mon Jul 16 19:53:54 2001
++++ Makefile.in
+@@ -80,7 +80,7 @@
+ VERSION = @VERSION@
+ cflags_set = @cflags_set@
  
+-SUBDIRS = compat lib program formats extra docs
++SUBDIRS = compat lib program extra docs
+ EXTRA_DIST = autogen.sh
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

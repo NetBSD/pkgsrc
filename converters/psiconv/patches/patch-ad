@@ -1,31 +1,13 @@
-$NetBSD: patch-ad,v 1.2 2000/08/30 16:13:13 sakamoto Exp $
+$NetBSD: patch-ad,v 1.3 2001/12/19 20:08:51 wiz Exp $
 
---- psiconv/gen_image.c.orig	Sat Dec  4 09:46:15 1999
-+++ psiconv/gen_image.c	Sat Jul  8 18:49:11 2000
-@@ -33,8 +33,24 @@
- static Image *get_paint_data_section(psiconv_paint_data_section sec)
- {
-   Image *image;
--  image = CreateImage(sec->xsize,sec->ysize,sec->red,sec->green,
--                             sec->blue,NULL);
-+  float *pixel, *p, *red, *green, *blue;
-+  int x,y;
-+  ExceptionInfo exception;
-+
-+  red = sec->red;
-+  green = sec->green;
-+  blue = sec->blue;
-+  p = pixel = malloc(sec->xsize * sec->ysize * 3 * sizeof(float));
-+  for (y = 0; y < sec->ysize; y++) {
-+    for (x = 0; x < sec->xsize; x++) {
-+      *p++ = *red++;
-+      *p++ = *green++;
-+      *p++ = *blue++;
-+    }
-+  }
-+  image = ConstituteImage(sec->xsize,sec->ysize,"RGB",FloatPixel,pixel,&exception);
-+  free(pixel);
-+
-   return image;
- }
- 
+--- program/psiconv/gen_image.c.orig	Sat Jun 30 15:35:24 2001
++++ program/psiconv/gen_image.c
+@@ -221,7 +221,7 @@
+   ff.output = psiconv_gen_image;
+   for (mi = GetMagickFileList(); mi ; mi = mi->next) {
+     if (mi->encoder) {
+-      ff.name = strdup(mi->tag);
++      ff.name = strdup(mi->name);
+       ff.description = strdup(mi->description);
+       psiconv_list_add(fileformat_list,&ff);
+     }
