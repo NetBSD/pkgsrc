@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2001/08/06 09:47:29 rh Exp $
+# $NetBSD: Makefile,v 1.239 2001/08/13 21:40:42 nra Exp $
 #
 
 COMMENT=	Networking tools
@@ -25,6 +25,7 @@ SUBDIR+=	bridged
 SUBDIR+=	cftp
 SUBDIR+=	choparp
 SUBDIR+=	cia
+SUBDIR+=	cidr
 SUBDIR+=	citrix_ica
 SUBDIR+=	coda5_client
 SUBDIR+=	coda5_server
