@@ -1,42 +1,62 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:57 jlam Exp $
-include/Xbae/Matrix.h
-include/Xbae/Input.h
+@comment $NetBSD: PLIST,v 1.5 2004/11/23 17:04:15 wiz Exp $
 include/Xbae/Caption.h
-include/Xbae/MatrixP.h
+include/Xbae/CaptionP.h
 include/Xbae/Clip.h
 include/Xbae/ClipP.h
-include/Xbae/CaptionP.h
+include/Xbae/Input.h
 include/Xbae/InputP.h
+include/Xbae/Matrix.h
+include/Xbae/MatrixP.h
 include/Xbae/patchlevel.h
 lib/libXbae.la
 man/man3/XbaeCaption.3
 man/man3/XbaeInput.3
 man/man3/XbaeMatrix.3
 share/aclocal/ac_find_xbae.m4
-share/doc/html/Xbae/images/lesstif.png
-share/doc/html/Xbae/images/new.png
-share/doc/html/Xbae/images/x2tog.png
-share/doc/html/Xbae/images/linux.png
-share/doc/html/Xbae/images/mailbox.png
-share/doc/html/Xbae/callbacks.html
-share/doc/html/Xbae/cellwidgets.html
-share/doc/html/Xbae/contents.html
-share/doc/html/Xbae/coverplus.html
-share/doc/html/Xbae/difffonts.html
-share/doc/html/Xbae/index.html
-share/doc/html/Xbae/main.html
-share/doc/html/Xbae/morelines.html
-share/doc/html/Xbae/psdriver.html
-share/doc/html/Xbae/rowheights.html
-share/doc/html/Xbae/scrolling.html
-share/doc/html/Xbae/spancells.html
-share/doc/html/Xbae/title.html
-share/doc/html/Xbae/FAQ.html
-share/doc/html/Xbae/NEWS
-share/doc/html/Xbae/README
-share/doc/html/Xbae/INSTALL
-@dirrm share/doc/html/Xbae/images
-@dirrm share/doc/html/Xbae
+share/doc/Xbae/FAQ.html
+share/doc/Xbae/NEWS
+share/doc/Xbae/README
+share/doc/Xbae/contents.html
+share/doc/Xbae/coverplus.html
+share/doc/Xbae/difffonts.html
+share/doc/Xbae/images/LDO.jpg
+share/doc/Xbae/images/add.jpg
+share/doc/Xbae/images/bg.png
+share/doc/Xbae/images/capfloor1.png
+share/doc/Xbae/images/capfloor3.png
+share/doc/Xbae/images/caption.png
+share/doc/Xbae/images/choice.png
+share/doc/Xbae/images/colors.jpg
+share/doc/Xbae/images/coverplus.png
+share/doc/Xbae/images/draw.png
+share/doc/Xbae/images/fifteen.jpg
+share/doc/Xbae/images/input.png
+share/doc/Xbae/images/lesstif.png
+share/doc/Xbae/images/list.jpg
+share/doc/Xbae/images/mailbox.png
+share/doc/Xbae/images/matrix.jpg
+share/doc/Xbae/images/multifixed.jpg
+share/doc/Xbae/images/new.png
+share/doc/Xbae/images/organize.jpg
+share/doc/Xbae/images/pricing.jpg
+share/doc/Xbae/images/risk.jpg
+share/doc/Xbae/images/select-push.jpg
+share/doc/Xbae/images/taam.png
+share/doc/Xbae/images/updated.png
+share/doc/Xbae/images/xbasket.png
+share/doc/Xbae/images/xbill2-2.png
+share/doc/Xbae/images/xbum1-2.png
+share/doc/Xbae/index.html
+share/doc/Xbae/main.html
+share/doc/Xbae/morelines.html
+share/doc/Xbae/psdriver.html
+share/doc/Xbae/scrolling.html
+share/doc/Xbae/sites.html
+share/doc/Xbae/spancells.html
+share/doc/Xbae/title.html
+share/doc/Xbae/users.html
+@dirrm share/doc/Xbae/images
+@dirrm share/doc/Xbae
 @dirrm include/Xbae
 @exec test %D = ${LOCALBASE} || ln -fs %D/share/aclocal/ac_find_xbae.m4 ${LOCALBASE}/share/aclocal/ac_find_xbae.m4
 @unexec test %D = ${LOCALBASE} || ${RM} ${LOCALBASE}/share/aclocal/ac_find_xbae.m4

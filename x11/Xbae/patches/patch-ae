@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2001/07/29 06:25:16 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2004/11/23 17:04:15 wiz Exp $
 
---- doc/images/Makefile.in.orig	Wed May 23 16:51:48 2001
+--- doc/images/Makefile.in.orig	2004-10-29 22:08:32.000000000 +0200
 +++ doc/images/Makefile.in
-@@ -108,7 +108,7 @@
+@@ -213,7 +213,7 @@ x_libraries = @x_libraries@
  # Lets put the informational stuff in a sub directory to avoid 
  # polluting /usr/local for default installs.
  #
--imagedir = $(exec_prefix)/Xbae/images
-+imagedir = $(prefix)/share/doc/html/Xbae/images
+-imagedir = $(datadir)/Xbae/images
++imagedir = $(datadir)/doc/Xbae/images
  
  #
  # Cut the distribution size, don't distribute these in a source
