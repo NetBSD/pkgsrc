@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.2 2002/12/14 10:28:43 tron Exp $
+$NetBSD: patch-af,v 1.3 2002/12/14 12:31:57 schmonz Exp $
 
---- pico/makefile.osx.orig	Fri Sep 20 20:23:15 2002
-+++ pico/makefile.osx	Sat Dec 14 10:50:55 2002
-@@ -38,10 +38,6 @@
+--- pico/makefile.osx.orig	Fri Sep 20 14:23:15 2002
++++ pico/makefile.osx
+@@ -38,11 +38,7 @@ STDCFLAGS=	-Dbsd -DJOB_CONTROL
  CFLAGS=         $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(STDCFLAGS)
  
  # switches for library building
@@ -10,10 +10,12 @@ $NetBSD: patch-af,v 1.2 2002/12/14 10:28:43 tron Exp $
 -LIBARGS=	ru
 -RANLIB=		ranlib
 -
- LIBS=		$(EXTRALDFLAGS) -lncurses
+-LIBS=		$(EXTRALDFLAGS) -lncurses
++LIBS=		$(EXTRALDFLAGS)
  
  OFILES=		attach.o basic.o bind.o browse.o buffer.o \
-@@ -55,17 +51,17 @@
+ 		composer.o display.o file.o fileio.o line.o pico_os.o \
+@@ -55,17 +51,17 @@ HFILES=		headers.h estruct.h edef.h efun
  # dependencies for the Unix versions of pico and libpico.a
  #
  all:		pico pilot
