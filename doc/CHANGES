@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6311 2004/06/25 14:57:19 taca Exp $
+$NetBSD: CHANGES,v 1.6312 2004/06/25 15:35:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3061,3 +3061,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmms-musepack to 1.00 [jmmv 2004-06-25]
 	Added p7zip-0.80 [wiz 2004-06-25]
 	Updated p5-Jcode to 0.86 [taca 2004-06-25]
+	Updated gsed to 4.1 [seb 2004-06-25]
