@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/09/27 23:17:50 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/10/02 06:43:39 jlam Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 CATEGORIES=	comms
@@ -29,6 +29,9 @@ PM_DOC_DIR=	${PREFIX}/share/doc/${DISTNAME:C/-.*$//}
 post-extract:
 		@${RM} -f ${WRKSRC}/SyncCM.pm
 		@${CHMOD} +x ${WRKSRC}/Setup
+
+pre-install:
+		@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 do-install:
 		${INSTALL_DATA_DIR} ${PM_PERL_DIR} ${PM_DOC_DIR}
