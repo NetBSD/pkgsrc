@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 1999/10/11 14:01:37 proff Exp $
+# $NetBSD: Makefile,v 1.47 1999/10/11 17:47:10 proff Exp $
 #
 
     SUBDIR += amp
@@ -29,6 +29,9 @@
     SUBDIR += festvox-ogirab
     SUBDIR += festvox-rab16
     SUBDIR += festvox-rab8
+    SUBDIR += festvox-us1
+    SUBDIR += festvox-us2
+    SUBDIR += festvox-us3
     SUBDIR += festvox-tll
     SUBDIR += freezetag
     SUBDIR += gdcd
@@ -44,6 +47,9 @@
     SUBDIR += maplay
     SUBDIR += mbrola
     SUBDIR += mbrolavox-en1
+    SUBDIR += mbrolavox-us1
+    SUBDIR += mbrolavox-us2
+    SUBDIR += mbrolavox-us3
     SUBDIR += mikmod
     SUBDIR += mp3info
     SUBDIR += mpg123
