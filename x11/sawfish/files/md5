@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 2000/08/07 15:55:58 danw Exp $
+$NetBSD: md5,v 1.3 2000/10/27 08:07:47 jlam Exp $
 
-MD5 (sawfish-0.30.3.tar.gz) = 235a5d39558ab8253124d50634bc01dc
+MD5 (sawfish-0.32.tar.gz) = cfbf988a645810cc0fd8a670f0652250
