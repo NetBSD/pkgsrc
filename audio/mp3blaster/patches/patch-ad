@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2003/09/30 09:44:00 cube Exp $
+$NetBSD: patch-ad,v 1.2 2003/12/03 12:31:36 cube Exp $
 
---- configure.orig	2002-10-20 19:04:59.000000000 +0200
+--- configure.orig	2003-11-28 21:07:16.000000000 +0100
 +++ configure
-@@ -1589,7 +1589,7 @@ echo "$ac_t""$ac_cv_prog_gcc_traditional
+@@ -1591,7 +1591,7 @@ echo "$ac_t""$ac_cv_prog_gcc_traditional
    fi
  fi
  
@@ -10,8 +10,8 @@ $NetBSD: patch-ad,v 1.1 2003/09/30 09:44:00 cube Exp $
 +for ac_func in strdup strstr getopt_long_only
  do
  echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
- echo "configure:1596: checking for $ac_func" >&5
-@@ -2420,7 +2420,7 @@ else
+ echo "configure:1598: checking for $ac_func" >&5
+@@ -2542,7 +2542,7 @@ else
  fi
  done
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.1 2003/09/30 09:44:00 cube Exp $
  do
  ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
-@@ -3749,13 +3749,15 @@ fi
+@@ -3907,13 +3907,15 @@ fi
  
  
  
@@ -38,7 +38,7 @@ $NetBSD: patch-ad,v 1.1 2003/09/30 09:44:00 cube Exp $
  
  trap '' 1 2 15
  cat > confcache <<\EOF
-@@ -3858,7 +3860,7 @@ done
+@@ -4016,7 +4018,7 @@ done
  ac_given_srcdir=$srcdir
  ac_given_INSTALL="$INSTALL"
  
@@ -47,7 +47,7 @@ $NetBSD: patch-ad,v 1.1 2003/09/30 09:44:00 cube Exp $
  EOF
  cat >> $CONFIG_STATUS <<EOF
  
-@@ -3919,6 +3921,7 @@ s%@NAS_CFLAGS@%$NAS_CFLAGS%g
+@@ -4079,6 +4081,7 @@ s%@NAS_CFLAGS@%$NAS_CFLAGS%g
  s%@NCURSES_LIBS@%$NCURSES_LIBS%g
  s%@LIBMPEGSOUND@%$LIBMPEGSOUND%g
  s%@LIBNMIXER@%$LIBNMIXER%g
@@ -55,7 +55,7 @@ $NetBSD: patch-ad,v 1.1 2003/09/30 09:44:00 cube Exp $
  s%@SRCDIRS@%$SRCDIRS%g
  
  CEOF
-@@ -3961,7 +3964,7 @@ EOF
+@@ -4121,7 +4124,7 @@ EOF
  
  cat >> $CONFIG_STATUS <<EOF
  
