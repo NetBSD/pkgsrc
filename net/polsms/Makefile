@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/07/21 17:11:09 martti Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/20 12:22:20 agc Exp $
 #
 
 DISTNAME=	sms-1.9.2d
 PKGNAME=	pol${DISTNAME}
-WRKSRC=		${WRKDIR}/sms
 CATEGORIES=	net
 MASTER_SITES=	http://www.ceti.pl/~miki/komputery/download/sms/
 
@@ -11,6 +10,7 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.ceti.pl/~miki/komputery/sms.html
 COMMENT=	Send SMS to cellular phones in Poland (Plus, Idea, Era)
 
+WRKSRC=		${WRKDIR}/sms
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 

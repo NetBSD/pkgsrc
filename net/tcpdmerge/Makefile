@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 17:11:22 martti Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:22:22 agc Exp $
 
 DISTNAME=	tcpdmerge-1.0
-WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	http://phantom.nemoto.ecei.tohoku.ac.jp/~akiraka/tcpdmerge/
 DISTFILES=	tcpdmerge.c 00README.TXT
@@ -9,6 +8,8 @@ DISTFILES=	tcpdmerge.c 00README.TXT
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://phantom.nemoto.ecei.tohoku.ac.jp/~akiraka/tcpdmerge/
 COMMENT=	Merge two tcpdump output files
+
+WRKSRC=		${WRKDIR}
 
 do-extract:
 	${MKDIR} ${WRKSRC}

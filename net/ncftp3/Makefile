@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/09/28 09:13:58 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/20 12:22:20 agc Exp $
 
 DISTNAME=	ncftp-3.1.6-src
 PKGNAME=	ncftp3-3.1.6
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ncftp.com/ncftp/
 
@@ -10,6 +9,7 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.ncftp.com/
 COMMENT=	FTP replacement with advanced user interface
 
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
 

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/12/18 14:32:01 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:23:57 agc Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.1
-WRKSRC=			${WRKDIR}
 CATEGORIES=		pkgtools devel
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -11,6 +10,7 @@ MAINTAINER=		dillo@NetBSD.org
 #HOMEPAGE=		http://www.NetBSD.org/Documentation/netbsd/Packages.txt
 COMMENT=		Check for files not owned by any package
 
+WRKSRC=		${WRKDIR}
 USE_PERL5=	run
 USE_PKGINSTALL=	yes
 USE_DB185=	yes

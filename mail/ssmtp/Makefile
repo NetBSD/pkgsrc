@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/11/14 00:51:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:19:44 agc Exp $
 # FreeBSD Id: ports/mail/ssmtp/Makefile,v 1.10 2003/04/14 08:41:04 leeym Exp
 #
 # TLS functionality needs testing. Please let me know the result,
@@ -10,7 +10,6 @@
 DISTNAME=	ssmtp_2.60.3
 PKGNAME=	ssmtp-2.60.3
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${PKGBASE}-${PKGVERSION:C/([0-9]+.[0-9]+)(.[0-9]+)(nb[0-9]+)?$/\1/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/ssmtp/}
 
@@ -18,6 +17,7 @@ MAINTAINER=	pkg@pop.707.to
 HOMEPAGE=	http://packages.debian.org/testing/mail/ssmtp.html
 COMMENT=	Extremely simple MTA to forward mail to a mail hub
 
+WRKSRC=			${WRKDIR}/${PKGBASE}-${PKGVERSION:C/([0-9]+.[0-9]+)(.[0-9]+)(nb[0-9]+)?$/\1/}
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 

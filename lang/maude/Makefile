@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/12/31 01:20:35 kristerw Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:19:16 agc Exp $
 #
 
 DISTNAME=	maude-src
 PKGNAME=	maude-2.0.1
-WRKSRC=		${WRKDIR}/Maude-${PKGVERSION}
 CATEGORIES=	lang
 MASTER_SITES=	http://maude.cs.uiuc.edu/download/ \
 		http://maude.cs.uiuc.edu/download/current/
@@ -21,6 +20,7 @@ BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
+WRKSRC=		${WRKDIR}/Maude-${PKGVERSION}
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/maude

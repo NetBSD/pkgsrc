@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:45:55 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:19:43 agc Exp $
 # FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
 #
 
 DISTNAME=		elm-2.4ME+93
 PKGNAME=		elm-me-2.4.93
 PKGREVISION=				1
-WRKSRC=			${WRKDIR}/elm2.4.ME+.93
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.ozone.fmi.fi/KEH/ \
 			ftp://ftp.funet.fi/pub/unix/mail/elm/elm-2.4ME+/ \
@@ -17,6 +16,7 @@ COMMENT=		ELM Mail User Agent with ME extensions
 
 CONFLICTS=		elm-[0-9]*
 
+WRKSRC=			${WRKDIR}/elm2.4.ME+.93
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 HAS_CONFIGURE=		YES

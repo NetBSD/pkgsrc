@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2003/07/17 22:54:48 grant Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/20 12:26:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.17 1997/12/08 15:45:27 tg Exp
 #
 
 DISTNAME=	rman
 PKGNAME=	rman-3.0.9
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://polyglot.sourceforge.net/pub/polyglotman/ \
 		http://polyglotman.sourceforge.net/
@@ -12,6 +11,8 @@ MASTER_SITES=	ftp://polyglot.sourceforge.net/pub/polyglotman/ \
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://polyglotman.sourceforge.net/
 COMMENT=	Produces HTML from formatted and unformatted man pages
+
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:53 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:26:16 agc Exp $
 #
 
 DISTNAME=	Wallpaper-0.1.1
 PKGNAME=	rox-wallpaper-0.1.1
 PKGREVISION=	3
-WRKSRC=		${WRKDIR}/Wallpaper
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -16,6 +15,7 @@ COMMENT=	For setting the backdrop
 DEPENDS+=	rox-lib>=0.1.4:../../sysutils/rox-lib
 DEPENDS+=	ImageMagick>=5.3.9:../../graphics/ImageMagick
 
+WRKSRC=		${WRKDIR}/Wallpaper
 DIST_SUBDIR=	rox
 
 NO_CONFIGURE=	yes

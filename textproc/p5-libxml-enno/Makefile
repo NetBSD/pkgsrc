@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/12/03 22:14:46 kristerw Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:26:50 agc Exp $
 
 DISTNAME=	libxml-enno-1.05a
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5lxe
-WRKSRC=		${WRKDIR}/libxml-enno-1.05
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TJ/TJMATHER/}
 
@@ -20,6 +19,7 @@ DEPENDS+=	p5-Parse-Yapp>=1.04:../../devel/p5-Parse-Yapp
 CONFLICTS+=	p5-XML-DOM-[0-9]* p5-XML-XQL-[0-9]*
 CONFLICTS+=	p5-XML-Checker-[0-9]* p5-XML-RegExp-[0-9]*
 
+WRKSRC=			${WRKDIR}/libxml-enno-1.05
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/libxml-enno/.packlist
 

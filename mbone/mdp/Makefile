@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/10/11 03:20:30 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:20:24 agc Exp $
 #
 
 DISTNAME=	src-mdp-1.9a5
-WRKSRC=		${WRKDIR}/mdp/unix
 CATEGORIES=	mbone
 MASTER_SITES+=	http://manimac.itd.nrl.navy.mil/MDP/dist/
 MASTER_SITES+=	http://downloads.pf.itd.nrl.navy.mil/protolib/
@@ -12,6 +11,7 @@ MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://manimac.itd.nrl.navy.mil/MDP/
 COMMENT=	Multicast file transfer
 
+WRKSRC=		${WRKDIR}/mdp/unix
 USE_GMAKE=	YES
 ALL_TARGET=	mdp
 

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/26 13:40:17 pooka Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:25:33 agc Exp $
 
 DISTNAME=		hackbot-2.15
-WRKSRC=			${WRKDIR}/hackbot
 CATEGORIES=		security net
 MASTER_SITES=		http://ws.obit.nl/hackbot/ \
 			http://www.xs4all.nl/~mvberkum/hackbot/ \
@@ -12,6 +11,7 @@ MAINTAINER=		nk@atki.net
 HOMEPAGE=		http://ws.obit.nl/hackbot/
 COMMENT=		Vulnerability scanner written in Perl
 
+WRKSRC=			${WRKDIR}/hackbot
 MANCOMPRESSED=		YES
 USE_PERL5=		YES
 REPLACE_PERL=		hackbot.pl

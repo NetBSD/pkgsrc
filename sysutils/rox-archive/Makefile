@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 17:24:26 martti Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:26:16 agc Exp $
 #
 
 DISTNAME=	Archive-0.1.2
 PKGNAME=	rox-archive-0.1.2
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/Archive
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -16,6 +15,7 @@ COMMENT=	Simple archiver
 # no real libraries there
 DEPENDS+=	rox-lib>=0.1.4nb1:../../sysutils/rox-lib
 
+WRKSRC=		${WRKDIR}/Archive
 DIST_SUBDIR=	rox
 
 USE_BUILDLINK2=	yes

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2003/11/13 21:13:49 tron Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/20 12:27:16 agc Exp $
 
 DISTNAME=	plan-1.8.4
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	x11 time
 MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/graphics/plan/
 
@@ -9,6 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.in-berlin.de/User/bitrot/plan.html
 COMMENT=	Schedule planner based on X/Motif
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
 ALL_TARGET=	netbsd

@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2004/01/08 12:06:37 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:22:20 agc Exp $
 #
 # XXX do not use -- see ../netatalk instead
 
 DISTNAME=		netatalk-990130
 PKGNAME=		netatalk-umich-19990130
 PKGREVISION=		2
-WRKSRC=			${WRKDIR}/netatalk-990130
 CATEGORIES=		net
 MASTER_SITES=		ftp://terminator.rs.itd.umich.edu/unix/netatalk/
 
@@ -16,6 +15,7 @@ COMMENT=		University of Michigan's netatalk; AppleTalk interworking
 CONFLICTS=		netatalk-asun-[0-9]*
 CONFLICTS+=		netatalk-[0-9]*
 
+WRKSRC=			${WRKDIR}/netatalk-990130
 MAKE_ENV+=		MKLINT=no NOGCCERROR=true
 
 do-configure:

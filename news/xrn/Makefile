@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:52:11 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:22:41 agc Exp $
 #
 
 DISTNAME=	9.01
 PKGNAME=	xrn-9.01
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	news x11
 MASTER_SITES=	ftp://sipb.mit.edu/pub/xrn/
 EXTRACT_SUFX=	.tgz
@@ -13,6 +12,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mit.edu/people/jik/software/xrn.html
 COMMENT=	Usenet News reader for the X window system
 
+WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	xrn
 
 USE_IMAKE=	yes

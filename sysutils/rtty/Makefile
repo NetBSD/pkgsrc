@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.21 2003/07/21 17:24:32 martti Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/20 12:26:16 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/01/06 12:13:36 jkh Exp
 #
 
 DISTNAME=	rtty-3.2
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.vix.com/pub/vixie/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Multiuser "tip"/"cu" replacement with logging
+
+WRKSRC=		${WRKDIR}
 
 pre-configure:
 	${CHMOD} -R u+w ${WRKDIR}

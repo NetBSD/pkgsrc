@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 22:52:13 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/20 12:23:57 agc Exp $
 #
 
 DISTNAME=	dfdisk-1.0
-WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,6 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Fetch distfiles from multiple locations
 
+WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 USE_PKGINSTALL=	yes

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/01/18 17:56:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/20 12:18:16 agc Exp $
 #
 
 DISTNAME=	kmplayer-0.8.2rc5
-WRKSRC=		${WRKDIR}/kmplayer
 CATEGORIES=	graphics kde
 MASTER_SITES=	http://www.xs4all.nl/~jjvrieze/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +14,7 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS=		mplayer>=1.0rc3:../../graphics/mplayer
 DEPENDS+=		mencoder>=1.0rc3:../../graphics/mencoder
 
+WRKSRC=			${WRKDIR}/kmplayer
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes

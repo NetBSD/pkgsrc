@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2003/11/06 19:29:06 gavan Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/20 12:18:16 agc Exp $
 
 DISTNAME=		Hermes-1.3.3
-WRKSRC=			${WRKDIR}/Hermes-1.3.3
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.clanlib.org/download/files/
 EXTRACT_SUFX=		.tar.bz2
@@ -10,6 +9,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.clanlib.org/hermes/
 COMMENT=		Library for conversion of pixel graphics
 
+WRKSRC=			${WRKDIR}/Hermes-1.3.3
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

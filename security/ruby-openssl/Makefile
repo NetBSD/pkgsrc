@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/11/12 03:39:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:25:34 agc Exp $
 
 DISTNAME=		ossl-0.1.4a
 PKGNAME=		${RUBY_PKGNAMEPREFIX}openssl-0.1.4.1
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/ossl
 CATEGORIES=		security
 MASTER_SITES=		http://freesoftware.fsf.org/download/rubypki/
 
@@ -11,6 +10,7 @@ MAINTAINER=		taca@NetBSD.org
 HOMEPAGE=		http://www.freesoftware.fsf.org/rubypki/
 COMMENT=		OpenSSL interface module for Ruby
 
+WRKSRC=			${WRKDIR}/ossl
 DIST_SUBDIR=		ruby
 USE_RUBY_EXTCONF=	yes
 RUBY_REQD=		1.6.4

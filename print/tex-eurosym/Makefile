@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/12/24 13:02:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:24:29 agc Exp $
 #
 
 DISTNAME=	eurosym-1.0
 PKGNAME=	tex-${DISTNAME}
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/eurosym
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
@@ -15,6 +14,7 @@ COMMENT=	Euro symbols for LaTeX
 # included in teTeX2
 DEPENDS+=	teTeX-bin-1.0.*:../../print/teTeX1-bin
 
+WRKSRC=		${WRKDIR}/eurosym
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

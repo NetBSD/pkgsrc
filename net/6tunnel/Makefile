@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2003/09/22 16:18:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:22:18 agc Exp $
 #
 
 DISTNAME=	6tunnel-0.09
-WRKSRC=		${WRKDIR}/6tunnel
 CATEGORIES=	net
 MASTER_SITES=	ftp://amba.bydg.pdi.net/pub/wojtekka/
 
 MAINTAINER=	zuntum@NetBSD.org
 COMMENT=	v4/v6 protocol translation
+
+WRKSRC=		${WRKDIR}/6tunnel
 
 .include "../../mk/bsd.prefs.mk"
 

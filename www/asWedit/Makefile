@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:55:29 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:27:58 agc Exp $
 
 DISTNAME=		${PKGNAME}-i386.linux
 PKGNAME=		asWedit-4.0.1
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		www
 MASTER_SITES=		http://www.advasoft.com/asWedit/ \
 			http://gd.tuwien.ac.at/infosys/editors/asWedit/ \
@@ -24,6 +23,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 NO_BUILD=		yes
 
 CHECK_SHLIBS=		no

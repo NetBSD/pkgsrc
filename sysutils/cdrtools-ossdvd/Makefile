@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/17 16:09:07 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:26:15 agc Exp $
 
 DISTNAME=	cdrtools-2.01a18
 PKGNAME=	cdrtools-ossdvd-2.01.1.18
-WRKSRC=		${WRKDIR}/cdrtools-2.01
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 
@@ -18,6 +17,7 @@ CONFLICTS=	mkisofs-[0-9]* cdrecord-* cdrtools-*
 
 .include "../../mk/bsd.prefs.mk"
 
+WRKSRC=			${WRKDIR}/cdrtools-2.01
 USE_BUILDLINK2=		# defined
 USE_GMAKE=		# defined
 TBL?=			tbl

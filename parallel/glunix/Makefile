@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2003/03/31 03:46:29 jmc Exp $
+# $NetBSD: Makefile,v 1.27 2004/01/20 12:22:59 agc Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	parallel
 MASTER_SITES=	http://now.cs.berkeley.edu/Glunix/ \
 		http://www.inficad.com/~garbled/
@@ -20,6 +19,7 @@ DEPENDS+=	{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/ssh
 SSH=		${LOCALBASE}/bin/ssh
 .endif
 
+WRKSRC=		${WRKDIR}
 USE_GMAKE=	yes
 USE_PERL5=	yes
 INTERACTIVE_STAGE=	fetch

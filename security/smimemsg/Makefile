@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:20:36 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:25:34 agc Exp $
 #
 
 DISTNAME=	smimemsg15
 PKGNAME=	smimemsg-1.5
-WRKSRC=		${WRKDIR}/smimemsg
 CATEGORIES=	security
 MASTER_SITES=	http://mars.elcom.nitech.ac.jp/security/
 
@@ -11,6 +10,7 @@ MAINTAINER=	tech-pkg@jp.NetBSD.org
 HOMEPAGE=	http://mars.elcom.nitech.ac.jp/security/
 COMMENT=	Generate and read S/MIME messages
 
+WRKSRC=		${WRKDIR}/smimemsg
 GNU_CONFIGURE=	YES
 
 RESTRICTED=             "Source code redistribution is not permitted.consult okuno@mars.elcom.nitech.ac.jp."

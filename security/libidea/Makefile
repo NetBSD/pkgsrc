@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:57 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:25:34 agc Exp $
 #
 
 DISTNAME=	libidea-0.8.2b
-WRKSRC=		${WRKDIR}/idea
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.psy.uq.oz.au/pub/Crypto/libeay/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.psy.uq.oz.au/libeay/ \
@@ -13,6 +12,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.media-crypt.com/pages/fidea.html
 COMMENT=	IDEA block cipher library
 
+WRKSRC=		${WRKDIR}/idea
 CRYPTO=		YES
 LICENCE=	IDEA-licence
 RESTRICTED=	IDEA is a patented algorithm that requires proper licensing

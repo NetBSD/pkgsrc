@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:40:50 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:18:16 agc Exp $
 #
 
 DISTNAME=	sgif1122
 PKGNAME=	giftrans-1.12.2
-WRKSRC=		${WRKDIR}/usr/src/${PKGNAME_NOREV}
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/Linux/woven/html/
 EXTRACT_SUFX=	.tgz
@@ -11,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://ion.le.ac.uk/~mar5/giftrans.html
 COMMENT=	Manipulate GIF89a images' transparency, comment and other data
+
+WRKSRC=		${WRKDIR}/usr/src/${PKGNAME_NOREV}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/giftrans ${PREFIX}/bin

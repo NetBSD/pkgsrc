@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2004/01/07 02:21:17 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/01/20 12:26:49 agc Exp $
 #
 
 DISTNAME=	icu-2.6.1
-WRKSRC=		${WRKDIR}/${PKGBASE}/source
 CATEGORIES=	textproc
 #
 # The IBM site has long delays that can cause ftp to timeout.  Use the
@@ -16,6 +15,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://oss.software.ibm.com/icu/
 COMMENT=	Robust and full-featured Unicode services
 
+WRKSRC=			${WRKDIR}/${PKGBASE}/source
 USE_GMAKE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES

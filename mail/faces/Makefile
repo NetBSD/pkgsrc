@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2003/07/22 14:03:23 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2004/01/20 12:19:43 agc Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/faces
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/faces/faces/faces-1.6.1/
 EXTRACT_SUFX=	.tar.Z
@@ -17,6 +16,7 @@ CONFLICTS=	compface-[0-9]*
 LICENSE=	limited-redistribution
 RESTRICTED=	"Distribution not allowed if money exchanged"
 
+WRKSRC=			${WRKDIR}/faces
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 USE_LIBTOOL=		YES

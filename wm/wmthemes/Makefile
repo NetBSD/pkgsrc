@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/04 17:24:06 tron Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/20 12:27:35 agc Exp $
 
 #
 # There is no distinfo file because users can specify alternate themes
@@ -6,7 +6,6 @@
 #
 
 DISTNAME=	wmthemes-0.80.0
-WRKSRC=		${WRKDIR}
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://download.themes.org/wm/
 DISTFILES=	${THEME_FILES}
@@ -17,6 +16,7 @@ COMMENT=	Themes for the window manager WindowMaker
 
 DEPENDS+=	windowmaker>=0.80.0nb1:../../wm/windowmaker
 
+WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	wmthemes
 
 USE_X11BASE=	yes

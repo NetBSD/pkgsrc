@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2003/07/17 22:55:20 grant Exp $
+# $NetBSD: Makefile,v 1.42 2004/01/20 12:27:57 agc Exp $
 
 DISTNAME=       analog-5.32
-WRKSRC=		${WRKDISTDIR}/src
 CATEGORIES=	www
 MASTER_SITES=   ${HOMEPAGE} \
 		http://www.web42.com/analog/ \
@@ -12,6 +11,7 @@ MAINTAINER=     tron@NetBSD.org
 HOMEPAGE=	http://www.analog.cx/
 COMMENT=	Extremely fast program for analysing WWW logfiles
 
+WRKSRC=		${WRKDISTDIR}/src
 ALL_TARGET=	analog
 MAKE_ENV+=	PREFIX=${PREFIX} SYSCONFDIR=${PKG_SYSCONFDIR}
 WRKDISTDIR=	${WRKDIR}/${DISTNAME}

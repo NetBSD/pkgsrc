@@ -1,8 +1,7 @@
-# $NetBSD: Makefile.common,v 1.49 2003/09/17 19:41:03 grant Exp $
+# $NetBSD: Makefile.common,v 1.50 2004/01/20 12:24:28 agc Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
-WRKSRC=			${WRKDIR}/gs${GS_VERS}
 CATEGORIES=		print
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
 			ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/aladdin/gs${GS_VERS:S/.//}/
@@ -19,6 +18,7 @@ CONFLICTS+=		hpijs-[0-9]*
 DEPENDS+=		ghostscript-fonts-6.0:../../fonts/ghostscript-fonts
 DEPENDS+=		watanabe-vfont-19930318:../../fonts/watanabe_vfont
 
+WRKSRC=			${WRKDIR}/gs${GS_VERS}
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/01/18 16:30:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:24:30 agc Exp $
 #
 
 DISTNAME=	xpdf-japanese-2004-jan-16
 PKGNAME=	xpdf-japanese-20040116
-WRKSRC=		${WRKDIR}/xpdf-japanese
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
@@ -15,6 +14,7 @@ DEPENDS+=	xpdf>=2.02:../../print/xpdf
 
 USE_PKGINSTALL=	yes
 
+WRKSRC=		${WRKDIR}/xpdf-japanese
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:47:53 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:20:05 agc Exp $
 
 DISTNAME=	otter-3.0.6
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/source
 CATEGORIES=	math
 MASTER_SITES=	ftp://info.mcs.anl.gov/pub/Otter/
 
@@ -10,6 +9,7 @@ HOMEPAGE=	http://www.mcs.anl.gov/AR/otter/
 COMMENT=	Automated Deduction System
 
 ALL_TARGET=	otter
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/source
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/otter ${PREFIX}/bin

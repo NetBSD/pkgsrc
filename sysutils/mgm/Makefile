@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:53:42 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:26:15 agc Exp $
 
 DISTNAME=	mgm-1.1
-WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*$//}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.xiph.org/mgm/
 EXTRACT_SUFX=	.tgz
@@ -12,6 +11,7 @@ COMMENT=	Moaning Goat Meter
 
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
 
+WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*$//}
 NO_BUILD=	# defined
 USE_PERL5=	YES
 PERL_SCRIPTS=	mgm

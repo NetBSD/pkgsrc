@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:46:08 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:19:43 agc Exp $
 #
 
 DISTNAME=	fromto-1.5
-WRKSRC=		${WRKDIR}
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/
 EXTRACT_SUFX=	#empty
@@ -12,6 +11,7 @@ COMMENT=	Sendmail logfile viewer
 
 RESTRICTED=	"Redistribution allowed for non-commercial purposes only"
 
+WRKSRC=		${WRKDIR}
 USE_PERL5=	yes
 
 do-extract:

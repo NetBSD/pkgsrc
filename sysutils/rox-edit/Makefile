@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2004/01/03 18:49:53 reed Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:26:16 agc Exp $
 #
 
 DISTNAME=	Edit-0.1.2
 PKGNAME=	rox-edit-0.1.2
 PKGREVISION=	3
-WRKSRC=		${WRKDIR}/Edit
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -15,6 +14,7 @@ COMMENT=	Simple text editor for ROX
 
 DEPENDS+=	rox-lib>=0.1.4:../../sysutils/rox-lib
 
+WRKSRC=		${WRKDIR}/Edit
 DIST_SUBDIR=	rox
 
 NO_CONFIGURE=	yes

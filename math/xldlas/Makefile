@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2004/01/03 18:49:46 reed Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/20 12:20:05 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/09/26 23:18:07 steve Exp
 #
 
 DISTNAME=		xldlas-0.85
 PKGREVISION=		3
-WRKSRC=			${WRKDIR}/xldlas
 CATEGORIES=		math
 MASTER_SITES=		http://sunsite.math.klte.hu/mirrors/xldlas/	\
 			${MASTER_SITE_SUNSITE:=X11/xapps/math/}
@@ -18,6 +17,7 @@ ONLY_FOR_PLATFORM=      NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
 			NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-mipsel	\
 			NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
 
+WRKSRC=			${WRKDIR}/xldlas
 USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 

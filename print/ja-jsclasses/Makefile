@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/08/30 22:51:30 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:24:29 agc Exp $
 
 DISTNAME=	jsclasses-030624
 PKGNAME=	ja-${DISTNAME}
-WRKSRC=		${WRKDIR}/jsclasses
 CATEGORIES=	print japanese
 MASTER_SITES=	http://www.matsusaka-u.ac.jp/~okumura/jsclasses/
 EXTRACT_SUFX=	.zip
@@ -13,6 +12,7 @@ COMMENT=	New document class files for pLaTeX
 
 DEPENDS+=	ja-ptex-bin>=2.1.3:../../print/ja-ptex-bin
 
+WRKSRC=			${WRKDIR}/jsclasses
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:52:02 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:22:22 agc Exp $
 
 DISTNAME=	wistumbler-20020816
 PKGNAME=	wistumbler-20020816.0
 PKGREVISION=			1
-WRKSRC=		${WRKDIR}/wistumbler
 CATEGORIES=	net
 MASTER_SITES=	http://gongon.com/persons/iseki/wistumbler/
 
@@ -11,6 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gongon.com/persons/iseki/wistumbler/
 COMMENT=	Network stumbler for WaveLAN/IEEE wireless networking
 
+WRKSRC=		${WRKDIR}/wistumbler
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 

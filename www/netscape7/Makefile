@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2003/09/19 13:21:11 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/20 12:27:59 agc Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
 PKGNAME=		netscape${VERS_MAJ}-${VERS_MAJ}.${VERS_MIN}
 PKGREVISION=		2
-WRKSRC=			${WRKDIR}/netscape-installer
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.netscape.com/pub/netscape7/${SUB}/ \
 			ftp://sunsite.utk.edu/pub/netscape/netscape7/${SUB}/ \
@@ -25,6 +24,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 INTERACTIVE_STAGE=	build
 
+WRKSRC=			${WRKDIR}/netscape-installer
 PKG_LANG?=		english
 VERS_MAJ=		7
 VERS_MIN=		1

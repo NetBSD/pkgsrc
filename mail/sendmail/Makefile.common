@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.13 2003/12/03 22:11:02 reed Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/01/20 12:19:44 agc Exp $
 #
 # Makefile fragment shared with libmilter
 #
 
 DISTNAME=	sendmail.${DIST_VERS}
-WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
@@ -30,6 +29,7 @@ BUILD_DEFS+=    USE_INET6 USE_TCPWRAPPERS USE_LDAP USE_DB2 \
 		USE_SASL USE_SASL2 USE_STARTTLS USE_DB4
 DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
+WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
 USE_BUILDLINK2=	YES
 USE_GNU_TOOLS+=	m4
 MAKE_ENV+=	M4="${M4}"

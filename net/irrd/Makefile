@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2003/05/10 17:18:09 kim Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/20 12:22:19 agc Exp $
 
 DISTNAME=	irrd2.1.5
 PKGNAME=	irrd-2.1.5
 EXTRACT_SUFX=	.tgz
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	net
 MASTER_SITES=	http://www.irrd.net/ \
 		ftp://ftp.merit.edu/radb/irrd/ \
@@ -18,6 +17,7 @@ DEPENDS+=	wget-[0-9]*:../../net/wget
 
 USE_PERL5=	# defined
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-gdbm
 CONFIGURE_ARGS+=--disable-thread

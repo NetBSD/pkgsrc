@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 17:10:48 martti Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:22:19 agc Exp $
 #
 
 DISTNAME=	live.2003.04.04
 PKGNAME=	lib${DISTNAME:S/./-/}
-WRKSRC=		${WRKDIR}/live
 CATEGORIES=	net
 MASTER_SITES=	http://www.live.com/liveMedia/public/
 
@@ -11,6 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.live.com/liveMedia/
 COMMENT=	Set of C++ libraries for multimedia streaming
 
+WRKSRC=		${WRKDIR}/live
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 

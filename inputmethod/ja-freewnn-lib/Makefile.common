@@ -1,8 +1,7 @@
-# $NetBSD: Makefile.common,v 1.5 2003/07/29 21:13:19 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/01/20 12:18:53 agc Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
-WRKSRC=		${WRKDIR}/Xsi
 MASTER_SITES=	ftp://ftp.freewnn.org/pub/FreeWnn/	\
 		ftp://etlport.etl.go.jp/pub/FreeWnn/	\
 		ftp://ftp.st.ryukoku.ac.jp/pub/japanese-im/FreeWnn/	\
@@ -14,6 +13,7 @@ PATCHFILES=	patch-1.1.0-a01.gz
 PATCH_DIST_STRIP=	-p2
 DIST_SUBDIR=	freewnn
 
+WRKSRC=		${WRKDIR}/Xsi
 INSTALL_TARGET=	install install.man
 
 .include "../../mk/bsd.prefs.mk"

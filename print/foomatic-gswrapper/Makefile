@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:52:26 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:24:28 agc Exp $
 
 DISTNAME=	foomatic-gswrapper
 PKGNAME=	foomatic-gswrapper-1.2
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 EXTRACT_SUFX=	# empty
 MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/}
@@ -17,6 +16,7 @@ MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.linuxprinting.org/gswrapper.html
 COMMENT=	Foomatic Ghostscript Wrapper
 
+WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 USE_BUILDLINK2=		YES

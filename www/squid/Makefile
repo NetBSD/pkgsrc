@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.100 2004/01/18 14:30:37 taca Exp $
+# $NetBSD: Makefile,v 1.101 2004/01/20 12:28:00 agc Exp $
 
 DISTNAME=	squid-2.5.STABLE4
 PKGNAME=	squid-2.5.4
 PKGREVISION=	7
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -52,6 +51,7 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 USE_PERL5=	build
 DIST_SUBDIR=	squid-2.5.4
 DOCDIR=		${PREFIX}/share/doc/squid

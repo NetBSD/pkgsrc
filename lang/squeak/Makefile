@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2003/07/17 21:45:24 grant Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/20 12:19:17 agc Exp $
 #
 
 DISTNAME=	Squeak-3.0
 PKGNAME=	squeak-3.0
-WRKSRC=		${WRKDIR}/Squeak-3.0/build
 CATEGORIES=	lang
 MASTER_SITES=	ftp://st.cs.uiuc.edu/Smalltalk/Squeak/3.0/platform-independent/
 MASTER_SITES+=	ftp://st.cs.uiuc.edu/Smalltalk/Squeak/3.0/unix-linux/src/
@@ -17,6 +16,7 @@ COMMENT=	Full Smalltalk 80 with portability to UN*X, Mac, and Windows
 
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
+WRKSRC=		${WRKDIR}/Squeak-3.0/build
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_X11=	yes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:45:07 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:19:17 agc Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
 PKGNAME=	py-extclass-2.2.2
-WRKSRC=		${WRKDIR}/${DISTNAME}/lib/Components/ExtensionClass
 CATEGORIES=	lang
 MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
@@ -13,6 +12,7 @@ HOMEPAGE=	http://www.digicool.com/releases/ExtensionClass
 COMMENT=	Python-extensible C "classes" and Acquisition for Python
 
 EXTRACT_ELEMENTS=       ${DISTNAME}/lib/Components/ExtensionClass
+WRKSRC=			${WRKDIR}/${DISTNAME}/lib/Components/ExtensionClass
 
 do-configure:
 	( cd ${WRKSRC} ;\

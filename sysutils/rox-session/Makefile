@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2004/01/03 18:49:53 reed Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/20 12:26:16 agc Exp $
 #
 
 DISTNAME=	ROX-Session-0.1.14
 PKGNAME=	rox-session-0.1.14
 PKGREVISION=	8
-WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Session/src
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -15,6 +14,7 @@ COMMENT=	Very simple session manager
 
 DEPENDS+=	rox>=1.2.0nb2:../../sysutils/rox
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Session/src
 DIST_SUBDIR=	rox
 
 USE_BUILDLINK2=	yes

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:51:36 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:22:20 agc Exp $
 #
 
 DISTNAME=		ispman-0.5
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5isp
-WRKSRC=			${WRKDIR}/ispman/Modules/ISPMan
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ispman/}
 
@@ -19,6 +18,7 @@ DEPENDS+=		p5-IMAP-Admin>=1.2.5:../../mail/p5-IMAP-Admin
 DEPENDS+=		p5-Convert-ASN1>=0.07:../../textproc/p5-Convert-ASN1
 DEPENDS+=		p5-IO-stringy>=1.213:../../devel/p5-IO-stringy
 
+WRKSRC=			${WRKDIR}/ispman/Modules/ISPMan
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/ISPMan/.packlist
 PLIST_SRC=		${WRKDIR}/PLIST

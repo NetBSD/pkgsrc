@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:20:10 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:25:34 agc Exp $
 #
 
 DISTNAME=	libbf-0.8.2b
-WRKSRC=		${WRKDIR}/bf
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.psy.uq.oz.au/pub/Crypto/libeay/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.psy.uq.oz.au/libeay/ \
@@ -13,6 +12,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.counterpane.com/blowfish.html
 COMMENT=	Blowfish block cipher library
 
+WRKSRC=		${WRKDIR}/bf
 CRYPTO=		YES
 
 .include "../../mk/bsd.prefs.mk"

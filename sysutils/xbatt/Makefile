@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 22:53:57 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/20 12:26:16 agc Exp $
 #
 
 DISTNAME=	xbatt-1.3pr1
 PKGNAME=	xbatt-1.3.1
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/xbatt-1.3
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www2.clave.gr.jp/~eto/xbatt/
 
@@ -16,6 +15,7 @@ COMMENT=	Displays battery status of your notebook via APM
 PKG_SKIP_REASON=	"APM is not available for ${MACHINE_PLATFORM}"
 .endif
 
+WRKSRC=		${WRKDIR}/xbatt-1.3
 USE_BUILDLINK2=	YES
 USE_IMAKE=	YES
 ALL_TARGET=	xbatt

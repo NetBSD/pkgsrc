@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:47:37 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:20:04 agc Exp $
 #
 
 DISTNAME=	fplsa
 PKGNAME=	gp-fplsa-1.0
 PKGREVISION=	1
 SVR4_PKGNAME=	gpfpl
-WRKSRC=		${WRKDIR}/fplsa
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/
 EXTRACT_SUFX=	.zoo
@@ -14,6 +13,7 @@ MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://www.gap-system.org/Share/fplsa.html
 COMMENT=	GAP interface to FPLSA
 
+WRKSRC=		${WRKDIR}/fplsa
 USE_BUILDLINK2=	YES
 GAP_PKG_NAME=	fplsa
 ALL_TARGET=	default

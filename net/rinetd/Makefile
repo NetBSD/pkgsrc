@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/10/01 01:15:44 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:22:21 agc Exp $
 #
 
 DISTNAME=		rinetd
 PKGNAME=		${DISTNAME}-0.62
-WRKSRC=			${WRKDIR}/${PKGNAME:S|nb*||}
 CATEGORIES=		net
 MASTER_SITES=		http://www.boutell.com/rinetd/http/
 
@@ -11,6 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.boutell.com/rinetd/
 COMMENT=		Internet redirection server
 
+WRKSRC=			${WRKDIR}/${PKGNAME:S|nb*||}
 NO_CONFIGURE=		# defined
 USE_PKGINSTALL=		yes
 ALL_TARGET=		rinetd

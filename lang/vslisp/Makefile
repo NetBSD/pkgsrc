@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/01/12 10:02:39 cjep Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:19:18 agc Exp $
 
 DISTNAME=		vslisp-4.0-1
 PKGNAME=		vslisp-4.0.1
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/vslisp-4.0
 CATEGORIES=		lang
 MASTER_SITES=		ftp://vslisp.sourceforge.net/pub/vslisp/
 
@@ -11,6 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://vslisp.sourceforge.net/
 COMMENT=		Embeddable Lisp library and standalone interpreter
 
+WRKSRC=			${WRKDIR}/vslisp-4.0
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE= 	${WRKSRC}/ltconfig

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/12/30 17:28:38 cjep Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:27:59 agc Exp $
 
 DISTNAME=		netscape-v304-export.x86-unknown-bsd
 PKGNAME=		navigator3-3.04
-WRKSRC=			${WRKDIR}
 CATEGORIES=		www
 MASTER_SITES=		ftp://archive.netscape.com/archive/navigator/3.04/shipping/english/unix/bsdi11/navigator_complete/
 
@@ -18,6 +17,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+WRKSRC=			${WRKDIR}
 USE_X11BASE=		YES
 SCRIPTS_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 NO_BUILD=		YES

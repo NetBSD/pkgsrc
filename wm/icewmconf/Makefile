@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:55:13 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:27:35 agc Exp $
 
 DISTNAME=	icewmconf-2.1.0
-WRKSRC=		${WRKDIR}
 CATEGORIES=	wm
 MASTER_SITES=	http://sdboyd.dyndns.org/icewmconf/
 
@@ -9,6 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sdboyd.dyndns.org/icewmconf/
 COMMENT=	Graphical configuration tool for IceWM
 
+WRKSRC=		${WRKDIR}
 USE_BUILDLINK2=	# defined
 FILENAME=	${WRKDIR}/${DISTNAME:C/-.*//}
 NO_BUILD=	# defined

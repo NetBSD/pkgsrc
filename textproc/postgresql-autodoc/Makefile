@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/09/09 14:18:58 recht Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:26:50 agc Exp $
 #
 
 DISTNAME=	postgresql_autodoc-1.12
-WRKSRC=		${WRKDIR}/postgresql_autodoc
 CATEGORIES=	textproc databases
 MASTER_SITES=	http://www.rbt.ca/autodoc/binaries/
 
@@ -13,6 +12,7 @@ COMMENT=	Generate HTML, DOT, and XML description of database structure
 DEPENDS=	p5-DBD-postgresql-[0-9]*:../../databases/p5-DBD-postgresql
 DEPENDS+=	p5-HTML-Template-[0-9]*:../../www/p5-HTML-Template
 
+WRKSRC=		${WRKDIR}/postgresql_autodoc
 USE_PERL5=	yes
 USE_GMAKE=	yes
 USE_BUILDLINK2=	yes

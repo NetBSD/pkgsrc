@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:54 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:26:50 agc Exp $
 
 DISTNAME=	pyDict-0.2.5.1
 PKGREVISION=	3
-WRKSRC=		${WRKDIR}/dict
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pydict/}
 
@@ -10,6 +9,7 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/pydict/
 COMMENT=	Chinese <-> English dictionary, under both console and X11
 
+WRKSRC=		${WRKDIR}/dict
 USE_X11BASE=	yes
 
 NO_CONFIGURE=	yes

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/12/28 19:22:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:26:15 agc Exp $
 
 DISTNAME=	cdrtools-2.01a21
 PKGNAME=	cdrecord-xcdroast-0.98a15.2.01a21
-WRKSRC=		${WRKDIR}/${DISTNAME:C/a.*//}
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +15,7 @@ CONFLICTS+=	cdrecord-xcdroast098a13-*
 
 .include "../../mk/bsd.prefs.mk"
 
+WRKSRC=			${WRKDIR}/${DISTNAME:C/a.*//}
 USE_BUILDLINK2=		# defined
 USE_GMAKE=		# defined
 
