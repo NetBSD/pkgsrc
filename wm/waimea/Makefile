@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/18 20:09:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/20 19:04:38 jmmv Exp $
 #
 
 DISTNAME=	waimea-0.4.0
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=waimea/}
 
@@ -12,6 +13,7 @@ COMMENT=	Fast and highly customizable virtual window manager
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
+USE_PERL5=	run
 USE_X11=	YES
 
 .include "../../mk/bsd.prefs.mk"
@@ -30,8 +32,14 @@ CONFIGURE_ARGS+=	--disable-shape
 
 CONFIGURE_ARGS+=	--disable-randr
 
+REPLACE_PERL = \
+	${WRKSRC}/data/scripts/filelist.pl \
+	${WRKSRC}/data/scripts/procinfo.pl \
+	${WRKSRC}/data/scripts/stylesdir.pl.in
+
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../fonts/Xft2/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/imlib2/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
