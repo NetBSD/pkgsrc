@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.26 2005/01/14 18:41:00 jmmv Exp $
+# $NetBSD: texinfo.mk,v 1.27 2005/01/15 10:50:18 jmmv Exp $
 #
 # Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -55,11 +55,6 @@ USE_PKGINSTALL=		YES
 # Pathname relative to ${PREFIX} of directory holding the info
 # files and the Info dir file.
 INFO_DIR?=	info
-
-# The 'dir' file has to be skipped from the check-files functionality
-# because it does not belong to any package (thus it is not registered
-# in any PLIST).
-CHECK_FILES_SKIP+=	${INFO_DIR}/dir
 
 # Does the system have the install-info command?
 # Any version will fit (really?).
