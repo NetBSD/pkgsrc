@@ -1,23 +1,23 @@
-$NetBSD: patch-ab,v 1.7 2003/07/28 17:50:11 hubertf Exp $
+$NetBSD: patch-ab,v 1.8 2004/01/29 16:58:03 jmmv Exp $
 
---- util/Makefile.in.orig	Thu Jul 10 18:03:35 2003
+--- util/Makefile.in.orig	2004-01-15 13:22:41.000000000 +0100
 +++ util/Makefile.in
-@@ -95,10 +95,10 @@
+@@ -95,10 +95,10 @@ regex_cmd = @regex_cmd@
  SUBDIRS = fbrun
  INCLUDES = -I../src/FbTk/
- bin_SCRIPTS = fbsetbg fluxbox-generate_menu
+ bin_SCRIPTS = fbsetbg fluxbox-generate_menu startfluxbox
 -bin_PROGRAMS = bsetroot
 -bsetroot_SOURCES = bsetroot.cc bsetroot.hh
--bsetroot_LDADD = ../src/FbRootWindow.o ../src/I18n.o ../src/FbAtoms.o \
--	../src/FbTk/libFbTk.a
+-bsetroot_LDADD = ../src/FbRootWindow.o ../src/I18n.o \
+-			../src/FbAtoms.o ../src/FbTk/libFbTk.a
 +#HF#bin_PROGRAMS = bsetroot
 +#HF#bsetroot_SOURCES = bsetroot.cc bsetroot.hh
-+#HF#bsetroot_LDADD = ../src/FbRootWindow.o ../src/I18n.o ../src/FbAtoms.o \
-+#HF#	../src/FbTk/libFbTk.a
++#HF#bsetroot_LDADD = ../src/FbRootWindow.o ../src/I18n.o \
++#HF#			../src/FbAtoms.o ../src/FbTk/libFbTk.a
  
  
  MAINTAINERCLEANFILES = Makefile.in
-@@ -107,14 +107,14 @@
+@@ -109,14 +109,14 @@ subdir = util
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
@@ -38,7 +38,7 @@ $NetBSD: patch-ab,v 1.7 2003/07/28 17:50:11 hubertf Exp $
  SCRIPTS = $(bin_SCRIPTS)
  
  
-@@ -124,7 +124,7 @@
+@@ -126,7 +126,7 @@ CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/depcomp
@@ -47,7 +47,7 @@ $NetBSD: patch-ab,v 1.7 2003/07/28 17:50:11 hubertf Exp $
  CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
  LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) \
-@@ -142,7 +142,7 @@
+@@ -144,7 +144,7 @@ LTCOMPILE = $(LIBTOOL) --mode=compile $(
  CCLD = $(CC)
  LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -56,7 +56,7 @@ $NetBSD: patch-ab,v 1.7 2003/07/28 17:50:11 hubertf Exp $
  
  RECURSIVE_TARGETS = info-recursive dvi-recursive install-info-recursive \
  	uninstall-info-recursive all-recursive install-data-recursive \
-@@ -150,7 +150,7 @@
+@@ -152,7 +152,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	uninstall-recursive check-recursive installcheck-recursive
  DIST_COMMON = Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -65,7 +65,7 @@ $NetBSD: patch-ab,v 1.7 2003/07/28 17:50:11 hubertf Exp $
  
  all: all-recursive
  
-@@ -196,9 +196,9 @@
+@@ -198,9 +198,9 @@ uninstall-binPROGRAMS:
  
  clean-binPROGRAMS:
  	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
@@ -78,7 +78,7 @@ $NetBSD: patch-ab,v 1.7 2003/07/28 17:50:11 hubertf Exp $
  install-binSCRIPTS: $(bin_SCRIPTS)
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -227,7 +227,7 @@
+@@ -229,7 +229,7 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -87,12 +87,14 @@ $NetBSD: patch-ab,v 1.7 2003/07/28 17:50:11 hubertf Exp $
  
  distclean-depend:
  	-rm -rf $(DEPDIR)
-@@ -473,7 +473,7 @@
- distclean-local:
- 	rm -f *\~ Makefile.in
+@@ -477,8 +477,8 @@ all-local:	startfluxbox
+ clean-local:
+ 		rm -f startfluxbox fluxbox-generate_menu
  
--bsetroot.o: bsetroot.cc ../config.h bsetroot.hh ../src/FbRootWindow.hh ../src/FbAtoms.hh
-+#HF#bsetroot.o: bsetroot.cc ../config.h bsetroot.hh ../src/FbRootWindow.hh ../src/FbAtoms.hh
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
+-bsetroot.o: 	bsetroot.cc ../config.h bsetroot.hh \
+-			../src/FbRootWindow.hh ../src/FbAtoms.hh
++#HF#bsetroot.o: 	bsetroot.cc ../config.h bsetroot.hh \
++#HF#			../src/FbRootWindow.hh ../src/FbAtoms.hh
+ 
+ startfluxbox: 	startfluxbox.in
+ 		@regex_cmd@ -e "s,@pkgdatadir@,$(pkgdatadir),g" \
