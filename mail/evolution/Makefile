@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.5 2001/09/24 04:02:29 mycroft Exp $
-#
+# $NetBSD: Makefile,v 1.6 2001/09/25 13:31:17 tron Exp $
 
-DISTNAME=		evolution-0.12
+DISTNAME=		evolution-0.13
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/evolution/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@netbsd.org
-HOMEPAGE=		http://www.ximian.com/apps/evolution.php3
+HOMEPAGE=		http://www.ximian.com/products/ximian_evolution/
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 DEPENDS+=		bison-*:../../devel/bison
 DEPENDS+=		db3-2.9:../../databases/db3
-DEPENDS+=		gal>=0.10:../../devel/gal
+DEPENDS+=		gal>=0.12:../../devel/gal
 DEPENDS+=		bonobo>=1.0.7:../../devel/bonobo
-DEPENDS+=		bonobo-conf>=0.10:../../devel/bonobo-conf
-DEPENDS+=		gtkhtml>=0.11.1:../../www/gtkhtml
+DEPENDS+=		bonobo-conf>=0.11:../../devel/bonobo-conf
+DEPENDS+=		gtkhtml>=0.12.0:../../www/gtkhtml
 DEPENDS+=		gnome-vfs>=1.0.1:../../sysutils/gnome-vfs
 DEPENDS+=		libunicode>=0.4:../../textproc/libunicode
 DEPENDS+=		oaf>=0.6.5:../../devel/oaf
