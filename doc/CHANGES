@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9198 2005/02/19 03:41:17 lukem Exp $
+$NetBSD: CHANGES,v 1.9199 2005/02/19 03:49:59 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -944,3 +944,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sqwebmail to 5.0.0 [jlam 2005-02-18]
 	Updated gnutls to 1.2.0 [wiz 2005-02-19]
 	Updated wesnoth to 0.8.10 [lukem 2005-02-19]
+	Updates news to 0.2 [jschauma 2005-02-19]
