@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/26 13:03:59 adam Exp $
+${PYSITELIB}/afm.py
+${PYSITELIB}/tfm.py
+bin/gf2pbm
+bin/mftrace
+man/man1/mftrace.1
