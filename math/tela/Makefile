@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/05/14 00:37:04 jtb Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/09 18:39:40 wiz Exp $
 
 DISTNAME=		tela-1.34
 CATEGORIES=		math
@@ -14,8 +14,7 @@ DEPENDS+=		plotmtv-[0-9]*:../../graphics/plotmtv
 GNU_CONFIGURE=		# defined
 USE_FORTRAN=		# defined
 USE_X11=		# defined
-USE_BUILDLINK_ONLY=	# defined
-REPLACE_BUILDLINK=	${WRKSRC}/telakka
+USE_BUILDLINK2=		# defined
 
 INSTALL_TARGET= 	install installdocs
 
@@ -29,10 +28,10 @@ pre-configure:
 		$$f > $$f.tmp && ${MV} -f $$f.tmp $$f;		\
 	done
 
-.include "../../math/lapack/buildlink.mk"
-.include "../../math/blas/buildlink.mk"
-.include "../../devel/readline/buildlink.mk"
-.include "../../devel/hdf/buildlink.mk"
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
+.include "../../math/lapack/buildlink2.mk"
+.include "../../math/blas/buildlink2.mk"
+.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/hdf/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
