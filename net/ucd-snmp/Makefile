@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/05/25 06:37:32 tron Exp $
+# $NetBSD: Makefile,v 1.43 2002/05/25 06:39:10 tron Exp $
 
 DISTNAME=	ucd-snmp-4.2.4
 CATEGORIES=	net
@@ -43,7 +43,6 @@ CONFIGURE_ARGS+=--enable-ipv6
 .else
 CONFIGURE_ARGS+=--disable-ipv6
 .endif
-CONFIGURE_SCRIPT=	${SH} -x ./configure
 
 # this might make it easier to use scotty's mibs, and local ones too
 CONFIGURE_ARGS+=--with-mibdirs="${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm2.1.10/mibs:${PREFIX}/lib/tnm2.1.8/mibs:/usr/local/share/snmp/mibs"
