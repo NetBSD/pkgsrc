@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2000/12/14 04:27:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.47 2001/01/23 22:32:37 manu Exp $
 #
 
     SUBDIR += atari800
@@ -11,6 +11,7 @@
     SUBDIR += freebsd_lib
     SUBDIR += ia64sim
     SUBDIR += linux-locale
+    SUBDIR += linuxppc_lib
     SUBDIR += pcemu
     SUBDIR += plex86
     SUBDIR += simh
