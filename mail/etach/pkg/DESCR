@@ -1,0 +1,6 @@
+Etach is an Emacs add-on that allows easy management of MIME email
+attachments in RMAIL and Mail modes.  Attachments and detachments are
+as simple as entering the Emacs commands M-x attach and M-x detach,
+respectively.  Also provided is the ability to forward mail via
+message/rfc822 format (M-x mime-forward), useful when forwarding
+messages that contain MIME attachments.
