@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/29 12:42:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:38:26 martti Exp $
 #
 
 DISTNAME=	BLT2.4o
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.tcltk.com/aa004735/pub/blt/
 
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://www.tcltk.com/blt/index.html
-COMMENT=	extension to Tcl/Tk
+COMMENT=	Extension to Tcl/Tk
 
 USE_BUILDLINK2=		YES
 USE_X11=		YES

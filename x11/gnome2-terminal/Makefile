@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/13 13:53:58 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 17:38:27 martti Exp $
 #
 
 DISTNAME=		gnome-terminal-2.0.1
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		sab@posix.org.uk
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		xterm like terminal program for GNOME 2
+COMMENT=		Xterm like terminal program for GNOME 2
 
 BUILD_USES_MSGFMT=	YES
 DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs

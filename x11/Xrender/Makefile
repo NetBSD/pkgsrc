@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:56:20 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 17:38:24 martti Exp $
 
 DISTNAME=	fcpackage.2_1
 PKGNAME=	Xrender-${XRENDER_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://fontconfig.org/release/
 
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://fontconfig.org/
-COMMENT=	client library for the X Rendering Extension protocol
+COMMENT=	Client library for the X Rendering Extension protocol
 
 # This value is RENDER_MAJOR.RENDOR_MINOR from ${WRKSRC}/render.h.
 XRENDER_VERSION=	0.7

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:56:59 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:38:34 martti Exp $
 #
 
 DISTNAME=	xmon.1.5.4
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=devel_tools/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ee.ryerson.ca/~elf/xapps/Q-XVIII.html
-COMMENT=	interactive X protocol monitor
+COMMENT=	Interactive X protocol monitor
 
 USE_X11BASE=	YES
 USE_IMAKE=	YES
