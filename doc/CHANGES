@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3770 2003/11/01 18:28:53 wiz Exp $
+$NetBSD: CHANGES,v 1.3771 2003/11/02 05:40:58 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4292,3 +4292,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated silc-client-icb to 0.14nb4 [salo 2003-11-01]
 	Updated gtkmm to 2.2.8 [wiz 2003-11-01]
 	Updated gqview-devel to 1.3.4 [wiz 2003-11-01]
+	Updated apache to 1.3.29 [grant 2003-11-02]
+	Updated ap-ssl to 2.8.16 [grant 2003-11-02]
