@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5800 2004/05/03 08:46:57 adam Exp $
+$NetBSD: CHANGES,v 1.5801 2004/05/03 10:08:47 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2326,3 +2326,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added muse-0.9 [xtraeme 2004-05-02]
 	Added sge-5.3p6 [dmcmahill 2004-05-02]
 	Updated libusb to 0.1.8 [adam 2004-05-03]
+	Added ncmpc-0.10.1 [grant 2004-05-03]
