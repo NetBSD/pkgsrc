@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/24 21:16:02 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/07 16:21:38 tv Exp $
 include/itcl.h
 include/itclDecls.h
 include/itclInt.h
@@ -9,11 +9,7 @@ lib/iwidgets
 lib/itclConfig.sh
 lib/tcl/itcl3.3/pkgIndex.tcl
 lib/tcl/itcl3.3/itcl.tcl
-lib/tcl/itcl3.3/libitcl33.so
-lib/tcl/itcl3.3/libitcl33.so.0
-lib/tcl/itcl3.3/libitcl33.so.0.0
 lib/tcl/itcl3.3/libitcl33.la
-lib/tcl/itcl3.3/libitcl33.a
 lib/tcl/itcl3.3/libitclstub33.a
 lib/tcl/itk3.3/pkgIndex.tcl
 lib/tcl/itk3.3/Archetype.itk
@@ -21,11 +17,7 @@ lib/tcl/itk3.3/Toplevel.itk
 lib/tcl/itk3.3/Widget.itk
 lib/tcl/itk3.3/itk.tcl
 lib/tcl/itk3.3/tclIndex
-lib/tcl/itk3.3/libitk33.so
-lib/tcl/itk3.3/libitk33.so.0
-lib/tcl/itk3.3/libitk33.so.0.0
 lib/tcl/itk3.3/libitk33.la
-lib/tcl/itk3.3/libitk33.a
 lib/tcl/iwidgets/scripts/buttonbox.itk
 lib/tcl/iwidgets/scripts/calendar.itk
 lib/tcl/iwidgets/scripts/canvasprintbox.itk
