@@ -1,4 +1,4 @@
-# $NetBSD: libtool-post-logic,v 1.6 2004/04/22 22:28:19 snj Exp $
+# $NetBSD: libtool-post-logic,v 1.7 2004/04/24 22:04:46 jlam Exp $
 
 case $arg in
 #
@@ -14,8 +14,11 @@ case $arg in
 # We convert the former into the latter by remembering all "local"
 # directories that are mentioned in -L* arguments to to libtool
 # wrapper, and checking to see if <dir>/libfoo.la exists when we see
-# "-lfoo" on the libtool command line.
+# "-lfoo" on the libtool command line.  Avoid matching the buildlink
+# directory here for the WRKSRC == WRKDIR case.
 #
+-L${BUILDLINK_DIR}/*)
+	;;
 -L.|-L./*|-L..*|-L[!/]*|-L${WRKSRC}*)
 	case $fixlibpath in
 	yes)
