@@ -1,12 +1,16 @@
-$NetBSD: patch-aa,v 1.6 2005/03/10 17:26:18 tv Exp $
+$NetBSD: patch-aa,v 1.7 2005/03/13 01:26:45 tv Exp $
 
---- term/x11.trm.orig	Wed Apr 14 08:18:24 2004
-+++ term/x11.trm
-@@ -55,6 +55,7 @@
-  */
+--- src/stdfn.h.orig	Tue Apr 13 13:24:01 2004
++++ src/stdfn.h
+@@ -258,6 +258,11 @@ extern char *sys_errlist[];
+ # include <time.h>
+ #endif
  
- #include "driver.h"
-+#include <sys/time.h>
- 
- #ifdef TERM_REGISTER
- register_term(x11)
++/* <sys/time.h> may be needed for fd_set and/or some of the above */
++#ifdef HAVE_SYS_TIME_H
++# include <sys/time.h>
++#endif
++
+ #ifndef HAVE_TIME_T_IN_TIME_H
+ # define time_t long
+ #endif
