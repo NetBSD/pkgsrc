@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2449 2003/06/07 10:43:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.2450 2003/06/07 17:39:59 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2371,3 +2371,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fly to 1.6.5nb3 [jmmv 2003-06-06]
 	Updated cpuflags to 0.46 [abs 2003-06-06]
 	Updated ettercap to 0.6.9nb2 [jmmv 2003-06-07]
+	Updated clamav to 0.54nb2 [jmmv 2003-06-07]
