@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/27 22:58:57 wiz Exp $
+$NetBSD: distinfo,v 1.2 2005/01/30 21:56:24 wiz Exp $
 
 SHA1 (Mixminion-0.0.7.1.tar.gz) = 62df7fea95e88267215ed7dc07a1715e099f5312
 Size (Mixminion-0.0.7.1.tar.gz) = 437539 bytes
-SHA1 (patch-aa) = 2f1c89cf13accdb820636a07f062a8c3f1f6bd0a
+SHA1 (patch-aa) = fe3eed950f09db4aa54865ee99bf0965289dac09
 SHA1 (patch-ab) = 1882865030d118f220181816c8594011465cdb63
 SHA1 (patch-ac) = e6f1dbc080e50feb9174d09df7b22c053c50e540
