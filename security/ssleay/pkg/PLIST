@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1998/12/03 17:30:01 tv Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/04/06 04:46:57 hubertf Exp $
 bin/CA.sh
 bin/asn1parse
 bin/base64
@@ -79,7 +79,7 @@ bin/verify
 bin/version
 bin/x509
 etc/ssleay.cnf.example
-@exec if [ -f %D/etc/ssleay.cnf ]; then; else cp -p %D/%F %D/etc/ssleay.cnf; fi
+@exec if [ -f %D/etc/ssleay.cnf ]; then : ; else cp -p %D/%F %D/etc/ssleay.cnf; fi
 include/ssleay/asn1.h
 include/ssleay/asn1_mac.h
 include/ssleay/bio.h
