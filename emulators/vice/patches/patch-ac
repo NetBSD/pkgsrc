@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 1999/05/18 08:45:49 tv Exp $
+$NetBSD: patch-ac,v 1.3 1999/07/27 08:38:37 mycroft Exp $
 
 --- configure.orig	Sat Apr 24 14:11:32 1999
-+++ configure	Tue May 18 01:55:08 1999
++++ configure	Tue Jul 27 04:35:03 1999
 @@ -4841,14 +4841,14 @@
    if test x"$with_readline" != "xno" ; then
      READLINE=""
@@ -29,6 +29,15 @@ $NetBSD: patch-ac,v 1.2 1999/05/18 08:45:49 tv Exp $
  else
    echo "$ac_t""no" 1>&6
   
+@@ -5243,7 +5243,7 @@
+     # For Solaris; some versions of Sun CC require a space after -R and
+     # others require no space.  Words are not sufficient . . . .
+     case "`(uname -sr) 2>/dev/null`" in
+-    "SunOS 5"*)
++    "SunOS 5"*|"NetBSD "*)
+       echo $ac_n "checking whether -R must be followed by a space""... $ac_c" 1>&6
+ echo "configure:5249: checking whether -R must be followed by a space" >&5
+       ac_xsave_LIBS="$LIBS"; LIBS="$LIBS -R$x_libraries"
 @@ -6295,7 +6295,7 @@
  
    fi
