@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/02/15 20:49:24 drochner Exp $
+
+--- man/Makefile.in.orig	Fri Feb 15 20:56:37 2002
++++ man/Makefile.in	Fri Feb 15 20:57:16 2002
+@@ -190,7 +190,7 @@
+ 
+ # Conditional installation of manpages is currently broken in automake...
+ 
+-man_MANS = cups-calibrate.8 escputil.1 gimpprint.3 gimpprint-config.1
++man_MANS = escputil.1
+ 
+ DISTCLEANFILES = cups-calibrate.8 escputil.1 gimpprint-config.1
+ MAINTAINERCLEANFILES = Makefile.in
