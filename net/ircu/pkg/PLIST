@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/24 20:37:40 tv Exp $
+etc/ircd/ircd.conf.example
+man/man8/ircd.8
+sbin/ircd
+sbin/ircd-chkconf
+share/doc/ircd/readme.crules
+share/doc/ircd/readme.who
+@dirrm etc/ircd
+@dirrm share/doc/ircd
