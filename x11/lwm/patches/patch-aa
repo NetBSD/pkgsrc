@@ -1,0 +1,9 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/09 18:37:18 jwise Exp $
+--- Imakefile.orig	Fri Jul  9 14:00:45 1999
++++ Imakefile	Fri Jul  9 14:06:45 1999
+@@ -8,4 +8,4 @@
+ 	shape.c resource.c version.c
+ OBJS = ${SRCS:.c=.o}
+ 
+-ComplexProgramTarget(lwm)
++ComplexProgramTargetNoMan(lwm)
