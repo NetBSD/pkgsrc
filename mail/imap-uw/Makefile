@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/02/20 22:48:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2000/04/10 03:21:02 simonb Exp $
 #
 
 DISTNAME=       imap-4.5
@@ -31,6 +31,7 @@ do-install:
 	${INST_PROG} ${WRKSRC}/ipopd/ipop2d ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop3d ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/mtest/mtest ${PREFIX}/sbin
+	${LN} -sf ${PREFIX}/libexec/imapd ${PREFIX}/sbin/rimapd
 	${INSTALL_MAN} ${WRKSRC}/imapd.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/ipopd.8 ${PREFIX}/man/man8
 	${LN} -sf ipopd.8 ${PREFIX}/man/man8/ipop2d.8
