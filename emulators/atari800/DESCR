@@ -1,24 +1,24 @@
-Please refer to /usr/pkg/share/doc/atari (or equivalent on your
-system) for the distribution documents. A man page has also been
-installed. The system wide configuration file can be found at
-/usr/pkg/lib/atari/atari800.cfg (or similar) which you will probably
-want to copy to your home directory, at some stage, to personalise the
-settings.
+Atari 8-bit machine emulator for multiple platforms.
 
-If you're at all serious about your emulator then you SHOULD check out
-these URL's in the order they're written:
-
-  http://www.signus.demon.co.uk/david/
-  http://zippy.sonoma.edu/~kendrick/nbs/new_and_emu.html
-  ftp://ftp.hackerz.com/hackerz/atari/web/index.html
-  comp.sys.atari.8bit
-
-This should get you started and provide you with numerous links to
-other web sites. 
-
-The ROM's for the Atari computers are, unfortunately, copyright. This
-port will attempt to down-load another freeware Atari emulator for DOS
-called PC Xformer 2.5 which contains copies of these ROM files. If you
-would like to take a further look at XF2.5 you should find it in your
-distfiles directory (if it successfully down-loaded :->). For more info
-on this emulator check out "http://www.halcyon.com/brasoft/".
+Major features:
+o Atari 400, 800, 600 XL, 800XL, 130XE, 5200 Games System.
+o 130XE compatible memory expansions: 320K, 576K, 1088K.
+o Optional 4K RAM between 0xc000 and 0xcfff in 400/800 mode.
+o Cycle-exact 6502 emulation, all unofficial instructions.
+o Cycle-exact NMI interrupts, scanline-based POKEY interrupts.
+o Scanline-based ANTIC emulation, all display modes, precise timing.
+o Player/Missile Graphics, exact priority control and collision detection.
+o Exact POKEY shift registers (sound and random number generator).
+o 8 disk drives, emulated at computer-to-drive communication
+  and fast patched SIO levels.
+o ATR, XFD, DCM, ATR.GZ and XFD.GZ disk images.
+o Direct loading of Atari executable files.
+o 24 cartridge types, raw and CART format.
+o Cassette player, raw and CAS images.
+o Printer support.
+o Files can be stored directly on your host computer via the H: device.
+o Current emulation state can be saved in a state file.
+o Sound support (possibility to redirect it to WAV files).
+o Stereo (two POKEYs) emulation.
+o Joystick controller using numeric keypad and real joystick support.
+o Screen snapshots (normal and interlaced) to PCX files.

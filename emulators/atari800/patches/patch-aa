@@ -1,25 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/05/23 05:17:05 tv Exp $
+$NetBSD: patch-aa,v 1.2 2002/11/22 12:25:49 wiz Exp $
 
---- sound.c.orig	Tue Dec  1 11:46:36 1998
-+++ sound.c	Sun May 23 00:35:02 1999
-@@ -5,7 +5,7 @@
- #ifdef VOXWARE
+--- sound.c.orig	Wed Aug  7 10:43:58 2002
++++ sound.c	Wed Nov 20 15:50:44 2002
+@@ -7,7 +7,7 @@
+ #ifdef SOUND
  #include <fcntl.h>
  #include <sys/ioctl.h>
 -#include <sys/soundcard.h>
 +#include <soundcard.h>
  
  #include "pokeysnd.h"
+ #include "log.h"
+@@ -20,7 +20,7 @@
  
-@@ -57,9 +57,9 @@
- 		unsigned int formats;
- 		int tmp;
+ #define DEFDSPRATE 22050
  
--		dsp_fd = open("/dev/dsp", O_WRONLY, 0777);
-+		dsp_fd = open("/dev/audio", O_WRONLY, 0777);
- 		if (dsp_fd == -1) {
--			perror("/dev/dsp");
-+			perror("/dev/audio");
- 			exit(1);
- 		}
- 		/*
+-static char *dspname = "/dev/dsp";
++static char *dspname = "/dev/audio";
+ static int dsprate = DEFDSPRATE;
+ static int fragstofill = 0;
+ static int snddelay = 60;		/* delay in milliseconds */

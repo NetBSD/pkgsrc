@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2002/05/12 10:16:46 abs Exp $
+# $NetBSD: Makefile,v 1.15 2002/11/22 12:25:48 wiz Exp $
+#
 
-DISTNAME=	Atari800-0.9.9a
-PKGNAME=	atari800-0.9.9a
+DISTNAME=	atari800-1.2.4
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atari800/}
-DISTFILES=	a800s099a.zip xf25.zip
+DISTFILES=	atari800-1.2.4.tar.gz xf25.zip
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://cas3.zlin.vutbr.cz/~stehlik/a800.htm
+HOMEPAGE=	http://atari800.atari.org
 COMMENT=	Atari 8-bit computer, 5200 console emulator
 
 BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
@@ -18,39 +19,45 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_X11=		yes
-EXTRACT_CMD=	unzip -Loq ${DOWNLOADED_DISTFILE}
+USE_BUILDLINK2=		YES
+USE_GMAKE=		YES
+USE_X11=		YES
+
+EXTRACT_ONLY=	atari800-1.2.4.tar.gz
 MAKE_FLAGS=	LDFLAGS="${LDFLAGS} -L${X11BASE}/lib" OBJ="atari_x11.o" \
 		CFLAGS="-c ${CFLAGS} -DPREFIX=\\\"${PREFIX}\\\""
 #override HOME to avoid picking up a bad ${HOME}/.atari800 during the build
-MAKE_FLAGS+=      HOME=${WRKSRC}
+MAKE_FLAGS+=	HOME=${WRKSRC}
 
 post-extract:
-	@${FIND} ${WRKDIR} -type f -print | ${XARGS} ${CHMOD} 0644
-	@${MV} ${WRKDIR}/Atari800-0.9.9a/* ${WRKSRC}/
+	@cd ${WRKDIR} && ${LOCALBASE}/bin/unzip -Lqo ${DISTDIR}/xf25.zip
 
 do-build:
-	@printf 'n\nn\ny\n' | (cd ${WRKSRC} && \
-		${MAKE} ${MAKE_FLAGS} -f Makefile.unix config.h >/dev/null)
-	@${RM} -f ${WRKSRC}/atari_x11.o
-	@cd ${WRKSRC} && ${MAKE} CPPFLAGS="-I${X11BASE}/include -DSHM" \
-		LDLIBS="-lX11 -lXext -lm -lossaudio" ${MAKE_FLAGS} \
-		-f Makefile.unix atari800
+	@cd ${WRKSRC} && LDFLAGS="-s -L${X11BASE}/lib -Wl,-R,${X11BASE}/lib" LIBS=-lossaudio ./configure --prefix=${PREFIX} --with-x --enable-MONITOR_BREAK  --enable-MONITOR_HINTS --enable-MONITOR_ASSEMBLER  --enable-SOUND --enable-SET_LED --target=x11-shm
+	@${ECHO} '#define PREFIX "${PREFIX}"' >> ${WRKSRC}/config.h
+	@cd ${WRKSRC} && ${GMAKE}
 	${MV} ${WRKSRC}/atari800 ${WRKSRC}/atari800-shm
-	@${RM} -f ${WRKSRC}/atari_x11.o
-	@cd ${WRKSRC} && ${MAKE} CPPFLAGS="-I${X11BASE}/include" \
-		LDLIBS="-lX11 -lm -lossaudio" ${MAKE_FLAGS} \
-		-f Makefile.unix atari800
+	@cd ${WRKSRC} && ${GMAKE} clean
+	@cd ${WRKSRC} && LDFLAGS="-s" LIBS=-lossaudio ./configure --prefix=${PREFIX} --enable-MONITOR_BREAK  --enable-MONITOR_HINTS --enable-MONITOR_ASSEMBLER  --enable-SOUND --enable-SET_LED --target=curses
+	@${ECHO} '#define PREFIX "${PREFIX}"' >> ${WRKSRC}/config.h
+	@cd ${WRKSRC} && ${GMAKE}
+	${MV} ${WRKSRC}/atari800 ${WRKSRC}/atari800-curses
+	@cd ${WRKSRC} && ${GMAKE} clean
+	@cd ${WRKSRC} && LDFLAGS="-s -L${X11BASE}/lib -Wl,-R,${X11BASE}/lib" LIBS=-lossaudio ./configure --prefix=${PREFIX} --with-x --enable-MONITOR_BREAK  --enable-MONITOR_HINTS --enable-MONITOR_ASSEMBLER  --enable-SOUND --enable-SET_LED --target=x11
+	@${ECHO} '#define PREFIX "${PREFIX}"' >> ${WRKSRC}/config.h
+	@cd ${WRKSRC} && ${GMAKE}
 	${SED} -e 's,@PREFIX@,${PREFIX},g' <${FILESDIR}/atari800.cfg \
 		>${WRKSRC}/atari800.cfg
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/atari800 ${PREFIX}/share/doc/atari800
+	${INSTALL_DATA_DIR} ${PREFIX}/share/atari800
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/atari800
 	${INSTALL_PROGRAM} ${WRKSRC}/atari800-shm ${WRKSRC}/atari800 \
-		${PREFIX}/bin/
+		${WRKSRC}/atari800-curses ${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKDIR}/*.rom ${WRKDIR}/*.xfd ${WRKDIR}/*.atr \
 		${WRKSRC}/atari800.cfg ${PREFIX}/share/atari800/
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/USAGE \
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/DOC/README \
+		${WRKDIR}/${DISTNAME}/DOC/USAGE \
 		${PREFIX}/share/doc/atari800
 	${INSTALL_DATA} ${WRKSRC}/atari800.man ${PREFIX}/man/man1/atari800.1
 

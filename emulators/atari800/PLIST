@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/22 12:25:48 wiz Exp $
 bin/atari800
+bin/atari800-curses
 bin/atari800-shm
 man/man1/atari800.1
 share/atari800/atari800.cfg
