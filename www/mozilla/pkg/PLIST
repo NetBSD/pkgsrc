@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/05/24 23:28:30 fvdl Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/05/25 21:20:30 frueauf Exp $
 bin/moz-export
 bin/mozilla-export
 lib/mozilla/libDtWidgets.so.1.0
@@ -45,3 +45,4 @@ lib/mozilla/libxml.so.1.0
 lib/mozilla/libxp.so.1.0
 lib/mozilla/libxpcom.so.1.0
 lib/mozilla/libzlib.so.1.0
+@dirrm lib/mozilla
