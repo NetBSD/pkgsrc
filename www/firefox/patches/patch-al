@@ -1,8 +1,9 @@
-$NetBSD: patch-al,v 1.1 2004/04/29 14:13:19 adam Exp $
+$NetBSD: patch-al,v 1.2 2004/06/23 16:47:12 taya Exp $
 
---- gfx/src/ps/nsFontMetricsPS.h.orig	2004-04-29 11:13:06.000000000 +0000
-+++ gfx/src/ps/nsFontMetricsPS.h
-@@ -320,7 +320,7 @@ protected:
+diff -ru ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.h ./gfx/src/ps/nsFontMetricsPS.h
+--- ../Orig/mozilla/gfx/src/ps/nsFontMetricsPS.h	2003-04-23 01:25:09.000000000 +0900
++++ ./gfx/src/ps/nsFontMetricsPS.h	2004-06-15 23:56:04.000000000 +0900
+@@ -320,7 +320,7 @@
    nsCOMPtr<nsITrueTypeFontCatalogEntry> mFaceID;
    nsCOMPtr<nsIFreeType2> mFt2;
    PRUint16        mPixelSize;
@@ -11,7 +12,7 @@ $NetBSD: patch-al,v 1.1 2004/04/29 14:13:19 adam Exp $
  
  
    static PRBool AddUserPref(nsIAtom *aLang, const nsFont& aFont,
-@@ -363,7 +363,7 @@ public:
+@@ -363,7 +363,7 @@
  protected:
    nsCOMPtr<nsITrueTypeFontCatalogEntry> mEntry;
    nsCOMPtr<nsIFreeType2> mFt2;
