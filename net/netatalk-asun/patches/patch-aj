@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.5 2001/05/21 18:42:21 abs Exp $
+$NetBSD: patch-aj,v 1.6 2001/05/24 17:00:58 abs Exp $
 
 --- etc/atalkd/nbp.c.orig	Sun Dec 13 05:22:42 1998
 +++ etc/atalkd/nbp.c
