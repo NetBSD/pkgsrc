@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4201 2003/12/20 13:39:44 grant Exp $
+$NetBSD: CHANGES,v 1.4202 2003/12/20 16:01:21 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5261,3 +5261,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mozilla-stable to 1.4.1nb1 [grant 2003-12-20]
 	Updated MozillaFirebird to 0.7nb1 [grant 2003-12-20]
 	Updated tnftpd to 20031217nb1 [grant 2003-12-20]
+	Added mysql-client-4.0.17 [martti 2003-12-20]
+	Added mysql-server-4.0.17 [martti 2003-12-20]
