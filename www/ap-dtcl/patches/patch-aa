@@ -1,6 +1,8 @@
---- builddtcl.sh.orig	Tue Oct  9 11:45:26 2001
-+++ builddtcl.sh	Tue Oct  9 12:04:15 2001
-@@ -3,53 +3,2 @@
+--- builddtcl.sh.orig	Fri Apr 19 14:19:04 2002
++++ builddtcl.sh	Fri Apr 19 14:19:13 2002
+@@ -1,57 +1,6 @@
+ #!/bin/sh
+ # $Id: patch-aa,v 1.7 2002/04/19 18:32:37 jwise Exp $
  
 -# Name of tclsh - on FreeBSD, this is probably tclsh8.2
 -TCLSH=tclsh  ######### CHANGEME ##########
@@ -26,7 +28,7 @@
 -# comment this out for shared lib installs
 -# APACHE=$HOME/download/apache-1.3/  ######### CHANGEME ##########
 -# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
--APACHE=/usr/local/src/apache-1.3/
+-# APACHE=/usr/local/src/apache-1.3/
 -# APACHE=/
 -
 -export APACHE
@@ -54,3 +56,5 @@
 -fi
 -
  # find location of tclConfig.sh, source it, and export variables to
+ # make them available to 'make'
+ 
