@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/10/29 17:47:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/10/29 20:44:32 xtraeme Exp $
 
 DISTNAME=	mklivecd-0.7
 CATEGORIES=	sysutils
@@ -8,8 +8,8 @@ DISTFILES=	# empty
 MAINTAINER=	xtraeme@NetBSD.org
 COMMENT=	Build a NetBSD i386 Live CD via command line
 
-BUILD_DEPENDS+=	{cdrecord,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrecord
-BUILD_DEPENDS+=	grub>=0.95:../../sysutils/grub
+DEPENDS+=	{cdrecord,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrecord
+DEPENDS+=	grub>=0.95:../../sysutils/grub
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
