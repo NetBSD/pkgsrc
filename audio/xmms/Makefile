@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/09/09 19:43:14 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2002/10/03 08:05:27 jlam Exp $
 #
 
 DISTNAME=	xmms-1.2.7
@@ -29,18 +29,18 @@ LIBS+=			-liconv
 PTHREAD_OPTS+=		require
 
 .if (${OPSYS} == NetBSD)
-CONFIGURE_ARGS+=	--with-dev-dsp=/dev/sound
+CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}
 CPPFLAGS+=		-DHAVE_NANOSLEEP=1
 
-.if (${MACHINE_ARCH} == i386)
+.  if (${MACHINE_ARCH} == i386)
 post-patch:
-.if (${OBJECT_FMT} == a.out)
+.    if (${OBJECT_FMT} == a.out)
 	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}/Input/mpg123/decode_i586.s
-.endif
+.    endif
 	cd ${WRKSRC}/Input/mpg123 && \
 	${MV} decode_i586.s decode_i586.s.orig && \
 	${SED} -e 's@^/@#/@g' <decode_i586.s.orig >decode_i586.s
-.endif
+.  endif
 .endif
 
 .include "../../audio/esound/buildlink2.mk"
@@ -52,4 +52,5 @@ post-patch:
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
