@@ -1,8 +1,19 @@
-$NetBSD: patch-ab,v 1.2 2004/04/08 15:47:49 kristerw Exp $
+$NetBSD: patch-ab,v 1.3 2004/05/23 23:28:29 danw Exp $
 
---- scheme.c.orig	2003-01-07 20:40:51.000000000 +0100
-+++ scheme.c	2004-04-08 17:40:03.000000000 +0200
-@@ -91,8 +91,16 @@
+--- scheme.c.orig	Tue Jan  7 14:40:51 2003
++++ scheme.c
+@@ -57,9 +57,7 @@
+ 
+ #include <string.h>
+ #include <stdlib.h>
+-#ifndef macintosh
+-# include <malloc.h>
+-#else
++#ifdef macintosh
+ static int stricmp(const char *s1, const char *s2)
+ {
+   unsigned char c1, c2;
+@@ -91,8 +89,16 @@ static const char *strlwr(char *s) {
  # define prompt "> "
  #endif
  
@@ -20,7 +31,7 @@ $NetBSD: patch-ab,v 1.2 2004/04/08 15:47:49 kristerw Exp $
  #endif
  
  #ifndef FIRST_CELLSEGS
-@@ -569,7 +577,7 @@
+@@ -569,7 +575,7 @@ static int alloc_cellseg(scheme *sc, int
  	  i = ++sc->last_cell_seg ;
  	  sc->alloc_seg[i] = cp;
  	  /* adjust in TYPE_BITS-bit boundary */
@@ -29,7 +40,7 @@ $NetBSD: patch-ab,v 1.2 2004/04/08 15:47:49 kristerw Exp $
  	    cp=(char*)(adj*((long)cp/adj+1));
  	  }
          /* insert new segment in address order */
-@@ -2055,7 +2063,7 @@
+@@ -2055,7 +2061,7 @@ struct dump_stack_frame { 
  
  static void s_save(scheme *sc, enum scheme_opcodes op, pointer args, pointer code) 
  { 
@@ -38,7 +49,7 @@ $NetBSD: patch-ab,v 1.2 2004/04/08 15:47:49 kristerw Exp $
    struct dump_stack_frame *next_frame; 
  
    /* enough room for the next frame? */ 
-@@ -2075,7 +2083,7 @@
+@@ -2075,7 +2081,7 @@ static void s_save(scheme *sc, enum sche
  
  static pointer _s_return(scheme *sc, pointer a) 
  { 
@@ -47,7 +58,7 @@ $NetBSD: patch-ab,v 1.2 2004/04/08 15:47:49 kristerw Exp $
    struct dump_stack_frame *frame; 
  
    sc->value = (a); 
-@@ -2115,7 +2123,7 @@
+@@ -2115,7 +2121,7 @@ static void dump_stack_free(scheme *sc) 
  
  static INLINE void dump_stack_mark(scheme *sc) 
  { 
