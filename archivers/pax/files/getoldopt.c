@@ -1,4 +1,4 @@
-/*	$NetBSD: getoldopt.c,v 1.3 2003/06/30 11:45:40 grant Exp $	*/
+/*	$NetBSD: getoldopt.c,v 1.4 2003/09/05 18:40:52 jlam Exp $	*/
 
 /*
  * Plug-compatible replacement for getopt() for parsing tar-like
@@ -9,22 +9,35 @@
  * in the Public Domain for your edification and enjoyment.
  */
 
-#include "nbcompat.h"
-
-#ifdef HAVE_SYS_CDEFS_H
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#include <nbcompat.h>
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-
 #if defined(__RCSID) && !defined(lint)
-__RCSID("$NetBSD: getoldopt.c,v 1.3 2003/06/30 11:45:40 grant Exp $");
+__RCSID("$NetBSD: getoldopt.c,v 1.4 2003/09/05 18:40:52 jlam Exp $");
 #endif /* not lint */
 
+#if HAVE_GETOPT_H
 #include <getopt.h>
+#endif
+#if HAVE_STDIO_H
 #include <stdio.h>
+#endif
+#if HAVE_STRING_H
 #include <string.h>
+#endif
+#if HAVE_STDLIB_H
 #include <stdlib.h>
+#endif
+#if HAVE_UNISTD_H
 #include <unistd.h>
+#endif
+#if HAVE_SYS_STAT_H
 #include <sys/stat.h>
+#endif
 #include "pax.h"
 #include "extern.h"
 
