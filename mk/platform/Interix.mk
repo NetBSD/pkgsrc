@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.16 2005/01/18 19:37:08 tv Exp $
+# $NetBSD: Interix.mk,v 1.17 2005/01/18 22:36:37 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -26,6 +26,10 @@
 # perl58	*
 # python23	*
 # zsh		*
+
+# "catinstall" not yet supported as there's no shipped [gn]roff
+MANINSTALL=	maninstall
+MAKE_FLAGS+=	MKCATPAGES=no
 
 AWK?=		/usr/contrib/bin/gawk
 BASENAME?=	/bin/basename
