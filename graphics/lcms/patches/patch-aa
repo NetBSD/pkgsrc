@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2004/04/11 04:35:22 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.4 2004/10/25 21:43:21 minskim Exp $
 
---- include/lcms.h.orig	2003-12-20 15:00:11.000000000 +0000
-+++ include/lcms.h	2004-04-09 18:17:12.000000000 +0000
-@@ -76,5 +76,5 @@
+--- include/lcms.h.orig	2004-05-19 04:09:56.000000000 -0500
++++ include/lcms.h
+@@ -73,7 +73,7 @@
+ 
  // Metroworks CodeWarrior
  
 -#if __MWERKS__ 
 +#ifdef __MWERKS__ 
  #   define unlink remove
  #   if WIN32 
+ #       define USE_CUSTOM_SWAB 1
