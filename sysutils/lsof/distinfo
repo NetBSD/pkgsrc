@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.39 2004/04/01 20:15:54 tron Exp $
+$NetBSD: distinfo,v 1.40 2004/04/29 04:19:22 atatat Exp $
 
 SHA1 (lsof_4.71.tar.bz2) = 20f63f6122f5a9a55cf3396e32d33ed4325271ba
 Size (lsof_4.71.tar.bz2) = 701281 bytes
 SHA1 (patch-aa) = 36790019394b4088c226222d4aefaec50430bcf3
-SHA1 (patch-ab) = f71f0ccc5617b83d9bfb5bfe3aabae448af15314
+SHA1 (patch-ab) = f321acb9a1f8cacb4fc9aa8da40d0c60a07e59b9
+SHA1 (patch-ac) = 941b149d31d0bf59192a11b53989d53c9111305b
+SHA1 (patch-ad) = 3d0037bf0a31b108e8adaf8c93b6fa72aa44dfb2
