@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/03/22 03:52:06 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/23 18:07:06 wiz Exp $
 
 DISTNAME=	cvsup-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
@@ -14,7 +14,8 @@ WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-i386 NetBSD-[2-9]*-i386
-DIST_SUBDIR=	cvsup-${MACHINE_ARCH}-${OS_VERSION:C/(...).*/\1/}
+# remove on next update -- see PR 25255 for details
+DIST_SUBDIR=	cvsup-i386-1.6
 
 CONFLICTS=	cvsup-[0-9]* cvsup-gui-[0-9]*
 
