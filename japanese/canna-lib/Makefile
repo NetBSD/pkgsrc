@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/08/27 04:06:57 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/06 07:25:48 sakamoto Exp $
 #
 
 DISTNAME=	Canna35b2
@@ -14,9 +14,6 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://www.nec.co.jp/japanese/product/computer/soft/canna/
 
-PLIST_TMP=	${PKGDIR}/PLIST
-PLIST_SRC=	${WRKDIR}/PLIST
-
 INSTALL_TARGET=	install install.man
 
 .include "../../mk/bsd.prefs.mk"
@@ -25,6 +22,10 @@ CANNAGROUP?=    daemon
 DICT_DIR?=	/var/dict
 MAKE_ENV+=      CANNAOWNER=${CANNAOWNER} CANNAGROUP=${CANNAGROUP} \
 		DICT_DIR=${DICT_DIR}
+PLIST_SUBST=	CANNAOWNER=${CANNAOWNER}	\
+		CANNAGROUP=${CANNAGROUP}	\
+		DICT_DIR=${DICT_DIR}		\
+		PREFIX=${PREFIX}
 
 post-patch:
 	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
@@ -42,13 +43,6 @@ do-configure:
 
 post-configure:
 	@${LN} -s ${WRKSRC}/server/*.h ${WRKSRC}/include
-
-post-build:
-	@${SED} -e 's|$${CANNAOWNER}|${CANNAOWNER}|'		\
-		-e 's|$${CANNAGROUP}|${CANNAGROUP}|'		\
-		-e 's|$${DICT_DIR}|${DICT_DIR}|'		\
-		-e 's|$${PREFIX}|${PREFIX}|'			\
-		${PLIST_TMP} > ${PLIST_SRC}
 
 post-install:
 	@${LN} -s ${DICT_DIR}/canna ${PREFIX}/share/canna/dic
