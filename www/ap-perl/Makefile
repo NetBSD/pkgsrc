@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/08/27 22:40:36 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2000/09/07 04:47:20 jlam Exp $
 #
 
 DISTNAME=		mod_perl-1.24
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/} \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://perl.apache.org/
 
-DEPENDS+=		libperl-5.*:../../lang/libperl
+DEPENDS+=		libperl-{5.0*,5.6.0nb*,5.[6-9]*}:../../lang/libperl
 DEPENDS+=		apache{,6}-1.3.*:../../www/apache
 
 USE_PERL5=		# defined
@@ -25,7 +25,7 @@ do-configure:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/htdocs/manual/mod/mod_perl.html \
-		${PREFIX}/share/httpd/htdocs/manual/mod/
+		${PREFIX}/share/httpd/htdocs/manual/mod
 
 .include "../../mk/bsd.pkg.mk"
 
