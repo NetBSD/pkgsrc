@@ -1,4 +1,4 @@
-<!-- $NetBSD: README.top,v 1.4 1998/02/24 10:42:55 agc Exp $ -->
+<!-- $NetBSD: README.top,v 1.5 1998/05/14 11:22:55 agc Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection</title>
@@ -31,6 +31,9 @@ For more information on how to build any of the packages from
 the NetBSD Packages Collection, see the included <A HREF="README">README</A> file.
 For a more in-depth description, see the
 <A HREF="http://www.netbsd.org/Documentation/netbsd/Packages.txt">Packages.txt</A> document.
+
+The most up-to-date version of the Packages Collection is available from
+<A HREF="ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc">the NetBSD ftp server</A>.
 
 </body>
 </html>
