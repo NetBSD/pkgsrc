@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2001/09/17 18:11:36 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2001/09/26 03:12:14 jlam Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -20,6 +20,7 @@ HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde
 CONFIGURE_ARGS+=	-Dprefix="${PREFIX}"
+CONFIGURE_ARGS+=	-Dscriptdir="${PREFIX}/bin"
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
 CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
 CONFIGURE_ARGS+=	-Dcc="${CC}"
