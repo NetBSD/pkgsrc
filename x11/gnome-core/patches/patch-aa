@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2002/04/11 01:31:34 jlam Exp $
+$NetBSD: patch-aa,v 1.11 2002/09/14 02:46:56 rh Exp $
 
---- configure.orig	Sat Jan 26 18:19:48 2002
+--- configure.orig	Tue Sep 10 04:09:25 2002
 +++ configure
-@@ -1325,8 +1325,8 @@
+@@ -1328,8 +1328,8 @@ else
  fi
  	if test x$gnome_cv_orbit_found = xyes; then
  		
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.10 2002/04/11 01:31:34 jlam Exp $
  		
  		
  	else
-@@ -1343,8 +1343,8 @@
+@@ -1346,8 +1346,8 @@ else
    
  		gnome_cv_gnorba_found=no
  		if test x$gnome_cv_orbit_found = xyes; then
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.10 2002/04/11 01:31:34 jlam Exp $
  			if test -n "$GNORBA_LIBS"; then
  				gnome_cv_gnorba_found=yes
  			fi
-@@ -1364,8 +1364,8 @@
+@@ -1367,8 +1367,8 @@ else
  fi
  	if test x$gnome_cv_orbit_found = xyes; then
  		
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.10 2002/04/11 01:31:34 jlam Exp $
  		
  		
  	else
-@@ -7250,8 +7250,8 @@
+@@ -7068,8 +7068,8 @@ rm -f conftest*
  
  CFLAGS_save=$CFLAGS
  LIBS_save=$LIBS
@@ -45,8 +45,8 @@ $NetBSD: patch-aa,v 1.10 2002/04/11 01:31:34 jlam Exp $
 +LIBS=`$GNOME_CONFIG --libs gnomeui`
  
  echo $ac_n "checking for gnome_window_icon_set_default_from_file in -lgnomeui""... $ac_c" 1>&6
- echo "configure:7258: checking for gnome_window_icon_set_default_from_file in -lgnomeui" >&5
-@@ -8974,6 +8974,11 @@
+ echo "configure:7076: checking for gnome_window_icon_set_default_from_file in -lgnomeui" >&5
+@@ -8792,6 +8792,11 @@ fi
     sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
  	< $srcdir/po/POTFILES.in > po/POTFILES
    
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.10 2002/04/11 01:31:34 jlam Exp $
  # AM_GNOME_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
  gnomelocaledir='${prefix}/share/locale'
-@@ -9203,7 +9208,10 @@
+@@ -9021,7 +9026,10 @@ echo "configure:9021: checking for GdkPi
  PIXBUF_CFLAGS=`$GNOME_CONFIG --cflags gdk_pixbuf`
  PIXBUF_LIBS=`$GNOME_CONFIG --libs gdk_pixbuf`
  if test "x$PIXBUF_CFLAGS" != x ; then
@@ -70,9 +70,9 @@ $NetBSD: patch-aa,v 1.10 2002/04/11 01:31:34 jlam Exp $
      if test "$vers" -ge 0007000; then
          echo "$ac_t""found" 1>&6
      else
-@@ -9231,8 +9239,8 @@
+@@ -9049,8 +9057,8 @@ ZVT_LIBS=`$GNOME_CONFIG --libs zvt`
  echo $ac_n "checking for Glade libraries >= $LIBGLADE_REQUIRED""... $ac_c" 1>&6
- echo "configure:9233: checking for Glade libraries >= $LIBGLADE_REQUIRED" >&5
+ echo "configure:9051: checking for Glade libraries >= $LIBGLADE_REQUIRED" >&5
  libglade_ok=no
 -if gnome-config --libs libglade > /dev/null 2>&1; then 
 -    verstxt=`gnome-config --modversion libglade`
@@ -81,7 +81,7 @@ $NetBSD: patch-aa,v 1.10 2002/04/11 01:31:34 jlam Exp $
      vers=`echo "$verstxt" | awk -F. '{ printf "%d", $1 * 1000 + $2;}'`
      if test "$vers" -ge 14; then
  	echo "$ac_t""$marker_ok found $verstxt" 1>&6
-@@ -9248,14 +9256,14 @@
+@@ -9066,14 +9074,14 @@ if test "$libglade_ok" = no; then
  fi
  unset libglade_ok
  GT_LIBS="libglade zvt gnorba gnomeui"

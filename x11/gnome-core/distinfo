@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2002/04/11 01:31:34 jlam Exp $
+$NetBSD: distinfo,v 1.8 2002/09/14 02:46:56 rh Exp $
 
-SHA1 (gnome-core-1.4.0.6.tar.bz2) = d2c055d3b56416e732042369241d1b0d7423a312
-Size (gnome-core-1.4.0.6.tar.bz2) = 5697603 bytes
-SHA1 (patch-aa) = 3b409e986eee294aca98784a88aa946a66a6a8e7
-SHA1 (patch-ab) = 7790d8305aee701033ed5d508d9c5d330f1194cf
+SHA1 (gnome-core-1.4.2.tar.bz2) = 213989b6ded4175f98a208d51fae180897beb20b
+Size (gnome-core-1.4.2.tar.bz2) = 6276384 bytes
+SHA1 (patch-aa) = 9101f170b13095fe1f3517a1f9aba7e919aa733f
+SHA1 (patch-ab) = 54d7ee01544a4928742d89773f9e9ec2c8e9f0bf
 SHA1 (patch-ac) = 02d5c68e9f2fedeb3a5b51900e553b92766ba32b
 SHA1 (patch-ag) = cf578cd3de610d216499f43dc229c266ab9ef447
-SHA1 (patch-aj) = a0afc1cc6c414e710e555112dccb945ded4c3251
+SHA1 (patch-aj) = c4a30d54b19f0f5036f2e10981290da60bbcc3cf
