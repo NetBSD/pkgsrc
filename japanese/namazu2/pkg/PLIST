@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/27 02:29:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/08/21 14:01:19 taca Exp $
 bin/bnamazu
 bin/gcnmz
 bin/kwnmz
@@ -22,6 +22,7 @@ include/namazu/parser.h
 include/namazu/query.h
 include/namazu/re.h
 include/namazu/regex.h
+include/namazu/score.h
 include/namazu/search.h
 include/namazu/util.h
 include/namazu/var.h
@@ -30,8 +31,8 @@ include/namazu/wakati.h
 lib/libnmz.a
 lib/libnmz.la
 lib/libnmz.so
-lib/libnmz.so.4
-lib/libnmz.so.4.2
+lib/libnmz.so.5
+lib/libnmz.so.5.0
 @exec /bin/mkdir %D/libdata/namazu 2>/dev/null|| /usr/bin/true
 @exec /bin/mkdir %D/libdata/namazu/index 2>/dev/null || /usr/bin/true
 @dirrm libdata/namazu/index
@@ -55,20 +56,31 @@ share/namazu/doc/ja/tutorial.html
 @dirrm share/namazu/doc/ja
 share/namazu/doc/namazu.css
 @dirrm share/namazu/doc
+share/namazu/etc/AUTHORS
 share/namazu/etc/CREDITS
+share/namazu/etc/COPYING
+share/namazu/etc/ChangeLog
 share/namazu/etc/ChangeLog.1
+share/namazu/etc/HACKING
+share/namazu/etc/HACKING-ja
+share/namazu/etc/INSTALL
 share/namazu/etc/INSTALL-ja
+share/namazu/etc/NEWS
+share/namazu/etc/README
 share/namazu/etc/README-es
 share/namazu/etc/README-ja
+share/namazu/etc/THANKS
+share/namazu/etc/TODO
 share/namazu/etc/namazu.png
-share/namazu/etc/namazu.spec
-share/namazu/etc/namazu.spec.in
 @dirrm share/namazu/etc
 share/namazu/filter/bzip2.pl
 share/namazu/filter/compress.pl
+share/namazu/filter/deb.pl
+share/namazu/filter/dvi.pl
 share/namazu/filter/excel.pl
 share/namazu/filter/gfilter.pl
 share/namazu/filter/gzip.pl
+share/namazu/filter/hdml.pl
 share/namazu/filter/hnf.pl
 share/namazu/filter/html.pl
 share/namazu/filter/mailnews.pl
@@ -76,8 +88,10 @@ share/namazu/filter/man.pl
 share/namazu/filter/mhonarc.pl
 share/namazu/filter/msword.pl
 share/namazu/filter/pdf.pl
+share/namazu/filter/postscript.pl
 share/namazu/filter/powerpoint.pl
 share/namazu/filter/rfc.pl
+share/namazu/filter/rpm.pl
 share/namazu/filter/taro.pl
 share/namazu/filter/tex.pl
 @dirrm share/namazu/filter
