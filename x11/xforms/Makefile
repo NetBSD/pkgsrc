@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/05/24 20:39:50 tv Exp $
+# $NetBSD: Makefile,v 1.13 1999/06/11 03:05:10 jlam Exp $
 #
 
 DISTNAME=	bxform-088
@@ -22,7 +22,7 @@ HOMEPAGE=	http://bragg.phys.uwm.edu/xforms/
 
 ONLY_FOR_PLATFORM=	*-*-{arm32,i386,m68k,sparc,ns32k}
 
-DIST_SUBDIR=	xforms/${ARCH_SUBDIR}
+DIST_SUBDIR=	xforms-${MACHINE_ARCH}
 
 ## Define OBJMACHINE so WRKDIR is defined to be ${MACHINE_ARCH}-specific.
 OBJMACHINE=	yes
