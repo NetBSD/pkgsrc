@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/05/23 15:09:06 heinz Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/07 02:01:38 jlam Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -37,7 +37,7 @@ DF_TETEX_BIN= tetex-src-${TETEX_BIN_VERS}${EXTRACT_SUFX}
 DF_DVIPSK_PATCH= dvipsk-jpatch-${DVIPSK_PATCH_VERS}${EXTRACT_SUFX}
 DF_MENDEXK= mendexk${MENDEXK_VERS}${EXTRACT_SUFX}
 
-WRKDIR_=		${_PKGSRCDIR}/print/teTeX-bin/${WRKDIR:T}
+WRKDIR_=		${PKGSRCDIR}/print/teTeX-bin/${WRKDIR:T}
 TETEX_DIR=		${WRKDIR_}/tetex-src-${TETEX_BIN_VERS}
 WRKSRC=			${TETEX_DIR}
 WRKSRC_PTEX=		${WRKSRC}/texk/web2c/${DISTNAME:S/-src//}
