@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2004/05/24 12:31:52 tron Exp $
+# $NetBSD: Makefile.common,v 1.31 2004/05/24 13:13:09 tron Exp $
 
 DISTNAME=	xchat-1.8.11
 PKGREVISION=	8
@@ -30,8 +30,7 @@ CONFIGURE_ARGS+=	--enable-python
 BUILD_DEFS+=		USE_INET6 USE_SOCKS
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		pythonpath=${PYTHONBIN} \
-			ac_cv_path_perlpath=${LOCALBASE}/bin/perl
+CONFIGURE_ENV+=		ac_cv_path_perlpath=${PERL5} pythonpath=${PYTHONBIN}
 
 .include "../../mk/bsd.prefs.mk"
 
