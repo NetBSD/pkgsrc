@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/09/27 23:18:12 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2002/03/11 07:51:41 skrll Exp $
 #
 
 DISTNAME=		libungif-4.1.0
@@ -30,13 +30,6 @@ MAKE_ENV+=		CC="${CC} -I${LOCALBASE}/include"
 
 post-patch:
 	${RM} ${WRKSRC}/doc/gif2x11.html
-
-# We patch configure.in, so touch the Makefile.in files to prevent automake
-# from regenerating them.
-#
-pre-build:
-	${TOUCH} ${WRKSRC}/aclocal.m4
-	${FIND} ${WRKSRC} -name "Makefile.in" -print | ${XARGS} ${TOUCH}
 
 post-install:
 	cd ${PREFIX}; \
