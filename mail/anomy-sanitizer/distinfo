@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/05/16 23:18:46 kim Exp $
+$NetBSD: distinfo,v 1.3 2003/06/08 16:01:24 kim Exp $
 
-SHA1 (anomy-sanitizer-1.59.tar.gz) = dfc99479ad7bab5e4c4f052d7d6fb85aac48203a
-Size (anomy-sanitizer-1.59.tar.gz) = 130608 bytes
+SHA1 (anomy-sanitizer-1.60.tar.gz) = e50a3cba3e0db48b8c2e3e65082b7954e230bf40
+Size (anomy-sanitizer-1.60.tar.gz) = 134810 bytes
