@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.16 2001/05/18 10:38:47 abs Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.17 2001/07/02 13:23:22 abs Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -83,7 +83,8 @@ verify the version specified in each DEPEND correctly matches a current
 pkgsrc package.
 .It Fl g Ar pkgsrcmap
 Generate pkgsrcmap file containing an entry for each package of
-'pkgname pkgdir pkgver'.
+.Ql pkgname pkgdir pkgver
+.
 .It Fl h
 Basic help and usage.
 .It Fl i
@@ -109,7 +110,8 @@ specify the -o, -m, or -p flags respectively.
 As 
 .Fl i
 plus for mismatched packages, display REQUIRED details and run
-'make fetch-list | sh' to ensure all the distfiles needed for
+.Ql make fetch-list | sh
+to ensure all the distfiles needed for
 the latest version are present.
 .Pp
 Warning: The behaviour of this command may change in a later version.
