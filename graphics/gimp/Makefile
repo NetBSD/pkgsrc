@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2004/03/29 22:16:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.89 2004/03/30 20:24:35 minskim Exp $
 #
 
 DISTNAME=	gimp-${GIMP_VER}
@@ -55,6 +55,7 @@ post-install:
 			${LOCALBASE}/share/aclocal/gimp.m4
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
