@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/06/09 22:12:35 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2004/08/30 16:00:49 jmmv Exp $
 
 --- config.in.orig	2003-06-09 13:00:02.000000000 +0200
 +++ config.in
-@@ -4,11 +4,13 @@
+@@ -4,16 +4,18 @@
  # paths below.
  
  # In which directory do you want tkpasman to be installed?
@@ -18,6 +18,13 @@ $NetBSD: patch-aa,v 1.2 2003/06/09 22:12:35 jmmv Exp $
  
  # The Makefile should find wish8.3 and tclsh8.3.  When it fails, enter here
  # the full path to your wish and tclsh shell.
+-WISH=
+-TCLSH= 
++WISH=@WISH@
++TCLSH=@TCLSH@
+ 
+ # Filename of the user config file of TkPasMan.  Be sure to quote file-
+ # names starting with a tilde!
 @@ -27,12 +29,12 @@ PWDFILE='~/.tkpasman'
  
  # Build in openssl support (true or false, optional).
