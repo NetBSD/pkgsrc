@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/01/26 11:36:38 jmmv Exp $
+$NetBSD: patch-ad,v 1.2 2004/02/22 10:00:31 jmmv Exp $
 
 --- app_rsrc.h.orig	2001-02-12 22:17:53.000000000 +0100
 +++ app_rsrc.h
@@ -28,15 +28,6 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/01/26 11:36:38 jmmv Exp $
     { "-noafc"              , RNafc            , XrmoptionNoArg , pFALSE      },
     { "-disableDirectV"     , RNdisableDirectV , XrmoptionNoArg , pTRUE       },
     { "-remoteType"         , RNremoteType     , XrmoptionSepArg, NULL        },
-@@ -389,7 +394,7 @@ static XtResource Resources[] = {
-         (XtPointer) True },
-     { RNdspDevice, RCaudioDevice, XtRString, sizeof(String),
-         XtOffsetOf(AppResources, dsp_device ), XtRImmediate,
--        "/dev/dsp"  },
-+        "/dev/audio"  },
-     { RNmixerDevice, RCaudioDevice, XtRString, sizeof(String),
-         XtOffsetOf(AppResources, mixer_device ), XtRImmediate,
-         "/dev/mixer"  },
 @@ -434,6 +439,10 @@ static XtResource Resources[] = {
          XtOffsetOf(AppResources, Bpp_32bit), XtRString,
          "-1" /*  0 = Guess */ },   

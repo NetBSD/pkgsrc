@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1.1.1 2004/01/26 11:36:40 jmmv Exp $
+$NetBSD: patch-aj,v 1.2 2004/02/22 10:00:31 jmmv Exp $
 
 --- Fxtv.orig	2003-09-28 17:38:29.000000000 +0200
 +++ Fxtv	2003-09-28 17:38:29.000000000 +0200
@@ -11,15 +11,6 @@ $NetBSD: patch-aj,v 1.1.1.1 2004/01/26 11:36:40 jmmv Exp $
  Fxtv*afc:      		False
                                          ! Automatic Frequency Control
  !Fxtv*remoteType:	Hauppauge
-@@ -57,7 +59,7 @@
- 
- ! Method to override audio device
- !Fxtv*doSound:          true
--!Fxtv*dspDevice:        /dev/dsp
-+!Fxtv*dspDevice:        /dev/audio
- !Fxtv*mixerDevice:      /dev/mixer
- !Fxtv*mixerChannel:     line
-                                         ! line, line1/2/3, cd, mic, video
 @@ -320,6 +322,7 @@
  *imageSaveDialog*suffixLabel.label:            Append Img # Suffix
  *imageSaveDialog*formatLabel.label:            Format:
