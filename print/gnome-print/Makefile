@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2002/04/10 01:59:14 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2002/08/26 19:39:29 mjl Exp $
 #
 
-DISTNAME=		gnome-print-0.35
+DISTNAME=		gnome-print-0.36
 CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-print/}
 
@@ -10,6 +10,9 @@ HOMEPAGE=		http://www.levien.com/gnome/print-arch.html
 COMMENT=		Prototype implementation of the Gnome Printing Architecture
 
 DEPENDS+=		ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
+
+BUILDLINK_DEPENDS.libxml=	libxml>=1.8.8
+BUILDLINK_DEPENDS.gdk-pixbuf=	gdk-pixbuf>=0.7.0
 
 USE_BUILDLINK_ONLY=	YES
 USE_LIBTOOL=		YES
