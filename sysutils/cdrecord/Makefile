@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:49 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/19 11:07:49 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 23:55:31 asami Exp
 #
 
-DISTNAME=	cdrecord-1.5
+DISTNAME=	cdrecord-1.6
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/
 
