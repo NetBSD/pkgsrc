@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 1999/07/30 12:33:31 agc Exp $
+
+It's not a fatal error if you can't allocate colours - so print
+a warning message, and continue.
+
+--- xworld.c	1999/07/30 12:26:14	1.1
++++ xworld.c	1999/07/30 12:26:35
+@@ -305,7 +305,9 @@
+         xcolor[i].blue = color[i].blue;
+         if (XAllocColor(display, cmap, &xcolor[i]) == 0) {
+             fprintf(stderr, "xworld: can't allocate colors\n");
++#if 0
+             exit(-1);
++#endif
+         }
+     } 
+ 
