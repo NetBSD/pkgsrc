@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2438 2003/06/06 07:04:27 chris Exp $
+$NetBSD: CHANGES,v 1.2439 2003/06/06 07:41:31 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2351,3 +2351,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fftw to 3.0nb1 [wiz 2003-06-05]
 	Updated gpc to 2.1nb2 [jtb 2003-06-06]
 	Updated sylpheed to 0.9.2 [chris 2003-06-06]
+	Updated pim6sd to 20030606a [itojun 2003-06-06]
+	Updated pim6dd to 20030606a [itojun 2003-06-06]
