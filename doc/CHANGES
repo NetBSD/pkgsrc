@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1980 2003/04/19 08:40:15 salo Exp $
+$NetBSD: CHANGES,v 1.1981 2003/04/20 06:59:41 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1661,3 +1661,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added PanoTools-2.6b1 [rh 2003-04-19]
 	Added moz-mplayer-0.71 [salo 2003-04-19]
 	Added beaver-0.2.6 [salo 2003-04-19]
+	Updated PanoTools to 2.6b1nb1 [rh 2003-04-20]
