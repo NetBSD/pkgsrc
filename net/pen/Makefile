@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:11:07 martti Exp $
+# $NetBSD: Makefile,v 1.7 2003/10/30 23:36:29 xtraeme Exp $
 #
 
-DISTNAME=	pen-0.10.1
+DISTNAME=	pen-0.12.0
 CATEGORIES=	net
 MASTER_SITES=	http://siag.nu/pub/pen/					\
 		ftp://siag.nu/pub/pen/
@@ -14,15 +14,6 @@ GNU_CONFIGURE=	YES
 
 # Avoid pen complaining on NetBSD
 CONFIGURE_ARGS+=	--with-fd_setsize=2048
-
-post-install:
-#.for prg in pen mergelogs
-#		${INSTALL_PROGRAM} ${WRKSRC}/${prg} ${PREFIX}/sbin
-#		${INSTALL_MAN} ${WRKSRC}/${prg}.1 ${PREFIX}/man/man8/${prg}.8
-#.endfor
-		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pen
-.for doc in CONTROL COPYING ChangeLog HOWTO README
-		${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/pen
-.endfor
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/pen
 
 .include "../../mk/bsd.pkg.mk"
