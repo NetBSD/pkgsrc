@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1818 2004/06/06 23:08:12 heinz Exp $
+$NetBSD: TODO,v 1.1819 2004/06/06 23:44:24 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -153,7 +153,7 @@ Suggested new packages
 	http://player.helixcommunity.org/2004/downloads/
 	RealNetwork's open source audio/video player
 
-	Putty
+	Putty [Already in pkgsrc-wip, wip/putty]
 	http://www.chiark.greenend.org.uk/~sgtatham/putty/
 	SSH client
 
