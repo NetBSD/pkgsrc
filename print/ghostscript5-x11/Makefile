@@ -1,18 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2000/04/16 17:44:28 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/04/20 16:29:55 jlam Exp $
 
-PKGNAME=	${DISTNAME:S/-/-x11-/}nb1
+PKGNAME=	${DISTNAME:S/-/-x11-/}nb2
 CATEGORIES+=	x11
 
-DEPENDS+=	ghostscript-5.50nb1:../../print/ghostscript5
+CONFLICTS=	ghostscript-*
 
 USE_X11=	# defined
 
 MAKE_ENV+=	USE_X11=
 SCRIPTS_ENV+=	USE_X11=yes
-
-post-extract:	common-post-extract
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/obj/gs ${PREFIX}/bin/gs
 
 .include "../../print/ghostscript5/Makefile.common"
