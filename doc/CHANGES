@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3919 2003/12/03 12:33:33 cube Exp $
+$NetBSD: CHANGES,v 1.3920 2003/12/03 12:54:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4762,3 +4762,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Time-HiRes to 1.52 [chris 2003-12-03]
 	Updated R to 1.8.1 [markd 2003-12-03]
 	Updated mp3blaster to 3.2.0 [cube 2003-12-03]
+	Updated xbindkeys to 1.6.5 [jmmv 2003-12-03]
+	Updated xbindkeys-tk to 1.6.5 [jmmv 2003-12-03]
