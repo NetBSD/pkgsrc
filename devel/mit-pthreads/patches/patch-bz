@@ -1,0 +1,11 @@
+--- include/pthread/fd.h	Sat Mar 25 15:51:48 1995
++++ include/pthread/fd.h	Fri Nov  5 10:37:43 1999
+@@ -117,6 +117,8 @@
+ 
+ #if defined(PTHREAD_KERNEL)
+ 
++extern off_t machdep_sys_lseek(int, off_t, int);
++
+ #endif
+ 
+ __END_DECLS
