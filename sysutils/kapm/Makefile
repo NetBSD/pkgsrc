@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/01/11 14:22:33 cjep Exp $
+# $NetBSD: Makefile,v 1.16 2003/01/11 15:21:49 cjep Exp $
 #
 
 DISTNAME=	kapm-0.3.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://bodnar42.dhs.org/kapm/
 COMMENT=	Monitor a laptop's battery status and perform other APM tasks
 
 .if !exists(/usr/include/machine/apmvar.h)
-PKG_FAIL_REASON=	"APM is not available for ${MACHINE_PLATFORM}"
+PKG_SKIP_REASON=	"APM is not available for ${MACHINE_PLATFORM}"
 .endif
 
 DEPENDS+=	kdebase-1.1.2nb1:../../x11/kdebase
