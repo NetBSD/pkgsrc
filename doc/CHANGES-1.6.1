@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.7 2003/03/17 08:29:54 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.8 2003/03/20 16:41:44 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -276,3 +276,15 @@ graphics/xpaint/patches/patch-ag		1.2
 don't try and do ${XMFMF} -a because that produces 'xmkmf -a -a' which
 causes an error.  This builds and runs on alpha now.
 	[dmcmahill, ticket #1217]
+
+mail/mutt/Makefile				1.93
+mail/mutt/distinfo				1.13
+mail/mutt/patches/patch-af			1.4
+
+Update mutt to 1.4.1:
+
+ fix a buffer overflow in mutt's IMAP client code which
+ was identified by Core Security Technologies, and fixed by Edmund
+ Grimley Evans.  A more detailed advisory will be published by Core
+ Security.
+	[jschauma, ticket #1223]
