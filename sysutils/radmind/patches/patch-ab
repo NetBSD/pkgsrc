@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1 2005/01/19 12:54:13 wiz Exp $
+
+--- ra.sh.orig	2004-12-21 17:48:00.000000000 +0100
++++ ra.sh
+@@ -23,7 +23,7 @@
+ SERVER="_RADMIND_HOST"
+ TLSLEVEL="_RADMIND_AUTHLEVEL"
+ EDITOR=${EDITOR:-vi}
+-DEFAULTS="/etc/defaults/radmind"
++DEFAULTS="_PKG_SYSCONFDIR/radmind.defaults"
+ FSDIFFROOT="."
+ FLAG="/var/radmind/client/.RadmindRunning"
+ 
+@@ -46,14 +46,6 @@ fi
+ LTMP="${TMPDIR}/lapply.out"
+ FTMP="${TMPDIR}/fsdiff.out"
+ 
+-# different systems use different default dirs
+-if [ ! -f "${DEFAULTS}" ]; then
+-    DEFAULTS="/etc/default/radmind"
+-    if [ ! -f "${DEFAULTS}" ]; then
+-	DEFAULTS="/etc/radmind.defaults"
+-    fi
+-fi
+-
+ Yn() {
+     echo -n "$*" "[Yn] "
+     read ans
