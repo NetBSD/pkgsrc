@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2003/07/02 13:00:46 grant Exp $
+# $NetBSD: Makefile,v 1.73 2003/07/02 13:03:25 grant Exp $
 
 DISTNAME=		openssl-0.9.6g
 PKGREVISION=		2
@@ -55,9 +55,9 @@ PATCHFILES=		openssl-0.9.6g-20020810-netbsd.patch.gz
 
 PKG_SYSCONFDIR.${PKGBASE}?=	/etc/openssl
 
-. if !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
+.  if !exists(/usr/libexec/ld.elf_so) && !exists(/usr/libexec/ld.so)
 PKG_FAIL_REASON=	${PKGNAME} requires shared object support
-. endif
+.  endif
 .endif	# ${OPSYS} == "NetBSD"
 
 .if ${OPSYS} == "Darwin"
@@ -66,22 +66,20 @@ LD_PATH_VARNAME=	DYLD_LIBRARY_PATH
 LD_PATH_VARNAME=	LD_LIBRARY_PATH
 .endif
 
-.if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
+.if defined(USE_RSAREF2) && ${USE_RSAREF2} == "YES"
 .  include "../../security/rsaref/buildlink2.mk"
 CONFIGURE_ARGS+=	rsaref -L${BUILDLINK_PREFIX.rsaref}/lib
 PLIST_RSAREF=		${PKGDIR}/PLIST.rsaref
 .endif
 
-.if (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
+.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
 CONFIGURE_SCRIPT=	Configure
 .  if !empty(CC:M*gcc*)
 CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-gcc
 .  else
 CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-cc
 .  endif
-.endif
-
-.if ${OPSYS} == "IRIX" && ${ABI} =="64"
+.elif ${OPSYS} == "IRIX" && ${ABI} == "64"
 CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ARGS+=	irix64-mips4-cc
 .endif
