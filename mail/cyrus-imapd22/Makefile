@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/05/27 05:09:04 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/27 09:28:16 recht Exp $
 
 DISTNAME=	cyrus-imapd-2.2.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
@@ -81,6 +81,26 @@ CONFIGURE_ENV+=		COMPILE_ET=${COMERRBASE}/bin/compile_et
 .else
 CONFIGURE_ARGS+=	--with-com-err=yes
 .endif
+
+# use METHOD for IMAP IDLE
+# METHOD is poll, idled or no
+# Default: not defined
+# (== poll)
+.if defined(CYRUS_IDLE)
+.  if ${CYRUS_IDLE} != "poll" && ${CYRUS_IDLE} != "idled"	\
+	&& ${CYRUS_IDLE} != "no"
+PKG_FAIL_REASON+=	"CYRUS_IDLE must be poll, idled or no"
+.  endif
+CONFIGURE_ARGS+=	--with-idle=${CYRUS_IDLE}
+.  if ${CYRUS_IDLE} == "idled"
+PLIST_SUBST+=	IDLED=
+.  else
+PLIST_SUBST+=	IDLED="@comment "
+.  endif
+.else
+PLIST_SUBST+=	IDLED="@comment "
+.endif
+BUILD_DEFS+=	CYRUS_IDLE
 
 MAKEFLAGS+=		PERL=${PERL5}
 
