@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/08/07 22:14:52 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2002/03/04 11:57:10 seb Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -18,7 +18,6 @@ EXTRACT_ONLY=   # empty
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=    # defined
 MANCOMPRESSED_IF_MANZ=	YES
-PLIST_SRC=	${WRKDIR}/PLIST
 BUILD_DEFS+=	MANINSTALL
 
 MAKE_ENV+=	BINDIR=${LOCALBASE}/bin MANDIR=${LOCALBASE}/man
@@ -40,16 +39,6 @@ post-extract:
 	; do								\
 		${CP} ${FILESDIR}/$$FILE ${WRKSRC};			\
 	done
-
-pre-install:
-	@${RM} -f ${PLIST_SRC}
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	@if [ -n "${MANINSTALL:Mcatinstall}" ]; then			\
-		${ECHO} man/cat1/digest.0 >> ${PLIST_SRC};		\
-	fi
-	@if [ -n "${MANINSTALL:Mmaninstall}" ]; then			\
-		${ECHO} man/man1/digest.1 >> ${PLIST_SRC};		\
-	fi
 
 test:
 	@${ECHO} "No news is good news"
