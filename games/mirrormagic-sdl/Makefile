@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/12 00:18:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/03 08:25:36 wiz Exp $
 #
 
 DISTNAME=		mirrormagic-2.0.1
 PKGNAME=		${DISTNAME:S/-/-sdl-/}
+PKGREVISION=		1
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.artsoft.org/RELEASES/unix/mirrormagic/
 
@@ -44,6 +45,6 @@ do-install:
 .endfor
 	${CHOWN} -R games:games ${SCORE_PATH}
 
-.include "../../audio/SDL-mixer/buildlink2.mk"
-.include "../../graphics/SDL-image/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink2.mk"
+.include "../../graphics/SDL_image/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/15 17:28:57 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/03 08:25:36 wiz Exp $
 #
 
 DISTNAME=	lgeneral-1.1.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lgeneral/}
 
@@ -16,5 +17,5 @@ USE_X11=	YES
 CONFIGURE_ARGS+=	--disable-dl
 
 .include "../../devel/SDL/buildlink2.mk"
-.include "../../audio/SDL-mixer/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
