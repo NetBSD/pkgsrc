@@ -1,74 +1,16 @@
-$NetBSD: patch-ad,v 1.4 2001/03/31 03:03:09 mycroft Exp $
+$NetBSD: patch-ad,v 1.5 2002/07/13 01:03:35 mycroft Exp $
 
---- drivers/drv_sun.c.orig	Mon Feb 14 22:10:21 2000
-+++ drivers/drv_sun.c	Sat Mar 31 03:01:36 2001
-@@ -61,7 +61,7 @@
- #include <sys/audioio.h>
- #endif
- 
--#define DEFAULT_FRAGSIZE 12
-+#define DEFAULT_FRAGSIZE 13
- 
- #if !defined __NetBSD__  && !defined __OpenBSD__
- #ifdef HAVE_SUN_AUDIOIO_H
-@@ -72,26 +72,12 @@
+--- drivers/drv_sun.c.orig	Sun Jan 13 00:58:57 2002
++++ drivers/drv_sun.c	Thu Jul 11 02:12:04 2002
+@@ -79,9 +79,9 @@
  #endif
  
  /* Sound device to open */
 -#ifdef SUNOS4
 +#ifndef SOLARIS /* SunOS, NetBSD */
  #define SOUNDDEVICE "/dev/sound"
- #else /* Solaris, *BSD */
+-#else /* Solaris, *BSD */
++#else /* Solaris */
  #define SOUNDDEVICE "/dev/audio"
  #endif
  
--/* Compatibility defines, for old *BSD or SunOS systems */
--#ifndef AUDIO_ENCODING_PCM16
--#define AUDIO_ENCODING_PCM16 AUDIO_ENCODING_LINEAR
--#endif
--#ifndef AUDIO_ENCODING_PCM8
--#define AUDIO_ENCODING_PCM8 AUDIO_ENCODING_LINEAR8
--#endif
--#ifndef AUDIO_ENCODING_SLINEAR_LE
--#define AUDIO_ENCODING_SLINEAR_LE AUDIO_ENCODING_PCM16
--#endif
--#ifndef AUDIO_ENCODING_ULINEAR_LE
--#define AUDIO_ENCODING_ULINEAR_LE AUDIO_ENCODING_PCM8
--#endif
--
- /* Compatibility defines, for old *BSD systems */
- #ifndef AUDIO_SPEAKER
- #define AUDIO_SPEAKER 0x01
-@@ -262,7 +248,7 @@
- 			md_mode |= (DMODE_STEREO | DMODE_16BITS);
- 			play_precision = 16;
- 			play_stereo = 2;
--			play_encoding = AUDIO_ENCODING_SLINEAR_LE;
-+			play_encoding = AUDIO_ENCODING_LINEAR;
- 		}
- #endif
- 	}
-@@ -273,13 +259,7 @@
- 		if ((play_precision == 8) && (play_stereo == 1) &&
- 			(play_rate <= 8000)) play_encoding = AUDIO_ENCODING_ULAW;
- 		else
--#ifdef SUNOS4
- 			play_encoding = AUDIO_ENCODING_LINEAR;
--#else
--			play_encoding =
--				(play_precision ==
--				 16) ? AUDIO_ENCODING_SLINEAR_LE : AUDIO_ENCODING_ULINEAR_LE;
--#endif
- 	}
- 
- 	/* get current audio settings if we want to keep the playback output
-@@ -319,7 +299,9 @@
- 	}
- 	if ((audioinfo.play.precision != play_precision) ||
- 		(audioinfo.play.channels != play_stereo) ||
-+#if 0
- 		(audioinfo.play.encoding != play_encoding) ||
-+#endif
- 		(audioinfo.play.sample_rate != play_rate)) {
- 		_mm_errno = MMERR_SUN_INIT;
- 		return 1;
