@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/23 18:46:05 wiz Exp $
 
 DISTNAME=	xephem-3.4
 CATEGORIES=	x11
 MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
-		ftp://iraf.noao.edu/contrib/xephem/ \
-		ftp://star.rl.ac.uk/pub/iraf/contrib/xephem/ \
-		ftp://iphcip1.physik.uni-mainz.de/pub/xephem/ \
-		ftp://ecf.hq.eso.org/iraf/contrib/xephem/ \
-		ftp://sinobu.mtk.nao.ac.jp/NOAO/contrib/xephem/
+		ftp://iphcip1.physik.uni-mainz.de/pub/xephem/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.clearskyinstitute.com/xephem/
