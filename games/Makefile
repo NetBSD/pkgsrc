@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 1998/08/18 09:26:04 frueauf Exp $
+# $NetBSD: Makefile,v 1.32 1998/08/23 09:57:30 garbled Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -85,6 +85,7 @@
 #    SUBDIR += xmj
     SUBDIR += xmris
 #    SUBDIR += xneko
+     SUBDIR += xnibbles
 #    SUBDIR += xonix
 #    SUBDIR += xpacman
 #    SUBDIR += xpat2
