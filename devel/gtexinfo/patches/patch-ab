@@ -1,0 +1,19 @@
+*** info/Makefile.in.orig	Thu Jul 31 19:51:17 1997
+--- info/Makefile.in	Tue Oct  7 16:54:31 1997
+***************
+*** 107,113 ****
+  PROGRAMS =  $(bin_PROGRAMS) $(noinst_PROGRAMS)
+  
+  
+! DEFS = @DEFS@ -I. -I$(srcdir) -I..
+  CPPFLAGS = @CPPFLAGS@
+  LDFLAGS = @LDFLAGS@
+  LIBS = @LIBS@
+--- 107,113 ----
+  PROGRAMS =  $(bin_PROGRAMS) $(noinst_PROGRAMS)
+  
+  
+! DEFS = @DEFS@ -DPORTSINFODIR=\"$(prefix)/info\" -I. -I$(srcdir) -I..
+  CPPFLAGS = @CPPFLAGS@
+  LDFLAGS = @LDFLAGS@
+  LIBS = @LIBS@

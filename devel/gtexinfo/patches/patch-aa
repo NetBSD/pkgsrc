@@ -1,26 +1,19 @@
---- util/install-info.c	1996/10/03 23:13:36	1.12
-+++ util/install-info.c	1997/10/07 13:10:54
-@@ -338,16 +338,23 @@
-    We define this function here rather than using strerror
-    because not all systems have strerror.  */
- 
-+#include <sys/param.h>
-+#include <string.h>
-+
- char *
- my_strerror (errnum)
-      int errnum;
- {
-+#if (defined(BSD) && BSD >= 199306)
-+	return strerror(errnum);
-+#else
-   extern char *sys_errlist[];
-   extern int sys_nerr;
- 
-   if (errnum >= 0 && errnum < sys_nerr)
-     return sys_errlist[errnum];
-   return (char *) "Unknown error";
-+#endif
- }
- 
- /* This table defines all the long-named options, says whether they
+*** util/install-info.c.orig	Tue Oct  7 16:08:31 1997
+--- util/install-info.c	Tue Oct  7 16:43:18 1997
+***************
+*** 335,341 ****
+  topmost node of the Info hierarchy, called (dir)Top.\n\
+  The first time you invoke Info you start off looking at this node.\n\
+  \n\
+! File: dir       Node: Top       This is the top of the INFO tree\n\
+  \n\
+    This (the Directory node) gives a menu of major topics.\n\
+    Typing \"q\" exits, \"?\" lists all Info commands, \"d\" returns here,\n\
+--- 335,341 ----
+  topmost node of the Info hierarchy, called (dir)Top.\n\
+  The first time you invoke Info you start off looking at this node.\n\
+  \n\
+! File: dir	Node: Top	This is the top of the INFO tree\n\
+  \n\
+    This (the Directory node) gives a menu of major topics.\n\
+    Typing \"q\" exits, \"?\" lists all Info commands, \"d\" returns here,\n\
