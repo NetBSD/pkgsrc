@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 1999/12/10 09:13:59 itohy Exp $
+
+--- xbatt.c.orig	Fri Sep 18 21:03:05 1998
++++ xbatt.c	Fri Dec 10 07:48:25 1999
+@@ -219,6 +219,7 @@
+ String fallback_resouces[] = {
+     "*width: 39",
+     "*height: 39",
++    NULL
+ };
+ 
+ main(
