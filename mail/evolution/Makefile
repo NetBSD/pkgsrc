@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2004/04/17 10:42:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.61 2004/04/17 10:58:49 jmmv Exp $
 
 DISTNAME=		evolution-1.4.5
 PKGREVISION=		9
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
 
-BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.3.6nb1
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
 
 # Using a wildcard here doesn't make sense because the version number of
 # "db3" is hardcoded in the "configure" script and some source modules
