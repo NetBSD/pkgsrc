@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/06 03:45:30 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/01/02 22:58:28 salo Exp $
+lib/aspell/gaeilge
 share/aspell/gaeilge.dat
 share/aspell/gaeilge_phonet.dat
 share/pspell/ga-gaeilge-aspell.pwli
-lib/aspell/gaeilge
-@unexec ${RMDIR} %D/share/aspell 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/pspell 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/aspell 2>/dev/null || ${TRUE}
