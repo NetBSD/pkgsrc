@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2002/06/05 12:07:23 markd Exp $
+$NetBSD: distinfo,v 1.3 2002/06/12 14:04:59 wiz Exp $
 
 SHA1 (ttf2pt1-3.4.0.tgz) = 1e11478ab5f6dae26ea743dc1149603d652746bb
 Size (ttf2pt1-3.4.0.tgz) = 204811 bytes
-SHA1 (patch-aa) = 38977dc201e8a66bd1b26e9f7a813d4f34330a6f
+SHA1 (patch-aa) = 798855010e4c1615ac25050e21771103c92f2fff

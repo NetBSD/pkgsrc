@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/06/05 12:07:22 markd Exp $
+# $NetBSD: Makefile,v 1.3 2002/06/12 14:04:59 wiz Exp $
 #
 
 DISTNAME=	ttf2pt1-3.4.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ttf2pt1/}
 EXTRACT_SUFX=	.tgz
