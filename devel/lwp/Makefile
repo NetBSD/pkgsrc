@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 14:38:41 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/27 19:00:36 phil Exp $
 #
 
-DISTNAME=	lwp-1.1
+DISTNAME=	lwp-1.6
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/coda/src/ \
+MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/lwp/src/ \
 		ftp://ftp.wu-wien.ac.at/pub/systems/coda/src/
 
-MAINTAINER=	fb@enteract.com
+MAINTAINER=	phil@cs.wwu.edu
 HOMEPAGE=	http://www.coda.cs.cmu.edu/
 COMMENT=	Light Weight Process style threads
 
