@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/05/24 20:39:50 tv Exp $
+# $NetBSD: Makefile,v 1.26 1999/06/18 23:48:49 tron Exp $
 #
 
 DISTNAME=		gnome-libs-1.0.9
@@ -43,7 +43,7 @@ post-install:
 .include "../../mk/bsd.pkg.mk"
 
 .if (${OBJECT_FMT} == a.out)
-.if exists(/usr/bin/c89)
+.if exists(/usr/bin/c89) && (${MACHINE_ARCH} != sparc)
 MAKE_ENV+=	A_OUT_LIBTOOL_FLAGS=--cplusplus
 .else
 MAKE_ENV+=	A_OUT_STATIC=-static
