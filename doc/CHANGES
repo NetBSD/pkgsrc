@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8920 2005/01/25 17:38:47 jschauma Exp $
+$NetBSD: CHANGES,v 1.8921 2005/01/25 18:07:48 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -596,3 +596,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated pkg_alternatives to 1.1 [jmmv 2005-01-25]
 	Updated sun-jre14 to 2.7 [jschauma 2005-01-25]
 	Updated sun-jdk14 to 2.7 [jschauma 2005-01-25]
+	Updated sun-jre13 to 1.0.15 [jschauma 2005-01-25]
+	Updated sun-jdk13 to 1.0.15 [jschauma 2005-01-25]
