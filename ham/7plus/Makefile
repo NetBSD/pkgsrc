@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/31 11:32:49 wulf Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/14 15:52:59 wulf Exp $
 #
 
-DISTNAME=	7pl223sr
-PKGNAME=	7plus-223
-WRKSRC=		${WRKDIR}/7plsrc.223
+DISTNAME=	7pl225sr
+PKGNAME=	7plus-225
+WRKSRC=		${WRKDIR}/7plsrc.225
 CATEGORIES=	ham
-MASTER_SITES=	ftp://ftp.ping.net.au/pub/unix/ham/
-DISTFILES=	7pl223sr.tgz \
+MASTER_SITES=	http://home.t-online.de/home/dg1bbq/
+DISTFILES=	7pl225sr.tgz \
 		7pl210mg.tgz
 
 MAINTAINER=	wulf@netbsd.org
