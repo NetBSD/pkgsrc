@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2003/02/04 11:25:21 chris Exp $
+# $NetBSD: Makefile,v 1.34 2003/02/15 00:49:10 salo Exp $
 
 DISTNAME=	sylpheed-0.8.10
+PKGREVISION=	1
 CATEGORIES=	mail news x11
 MASTER_SITES=	http://sylpheed.good-day.net/sylpheed/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +11,7 @@ HOMEPAGE=	http://sylpheed.good-day.net/index.cgi.en
 COMMENT=	X based e-mail and netnews client
 
 BUILD_USES_MSGFMT=	yes
+DEPENDS+=		metamail>=2.7:../../mail/metamail
 
 CONFLICTS=	sylpheed-claws-[0-9]*
 
