@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2002/11/06 23:30:02 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/04/26 09:49:37 jmmv Exp $
 #
 
 DISTNAME=		WindowMaker-extra-0.1
 PKGNAME=		wmextra-0.1
 PKGREVISION=		1
-CATEGORIES=		x11 wm
+CATEGORIES=		x11 wm windowmaker
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/source/release/
 
 MAINTAINER=		jlam@netbsd.org

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/03/28 21:14:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/04/26 09:49:36 jmmv Exp $
 #
 
 DISTNAME=	windowmaker-desktop-1.1
-CATEGORIES=	meta-pkgs x11
+CATEGORIES=	meta-pkgs x11 windowmaker
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
