@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9593 2005/03/24 02:27:51 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.9594 2005/03/24 02:56:59 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1694,3 +1694,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gsymcheck to 20050313 [dmcmahill 2005-03-23]
 	Updated libgeda to 20050313 [dmcmahill 2005-03-23]
 	Updated pcb-current to 20050315 [dmcmahill 2005-03-23]
+	Removed speakfreely [jlam 2005-03-24]
