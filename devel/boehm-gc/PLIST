@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/08/17 05:01:58 kei Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/07/09 00:18:54 recht Exp $
 include/gc.h
 include/gc/gc.h
 include/gc/gc_alloc.h
@@ -21,7 +21,9 @@ include/gc/private/gc_locks.h
 include/gc/private/gc_priv.h
 include/gc/private/gcconfig.h
 include/gc/weakpointer.h
+include/gc_allocator.h
 include/gc_config_macros.h
+include/gc_cpp.h
 include/gc_local_alloc.h
 include/gc_pthread_redirects.h
 include/gc_typed.h
@@ -31,7 +33,11 @@ lib/libgc.la
 lib/libgc.so
 lib/libgc.so.1
 lib/libgc.so.1.2
-lib/libleak.a
+lib/libgccpp.a
+lib/libgccpp.la
+lib/libgccpp.so
+lib/libgccpp.so.1
+lib/libgccpp.so.1.2
 man/man3/gc.3
 share/doc/gc/README
 share/doc/gc/README.DGUX386
@@ -63,6 +69,7 @@ share/doc/gc/gcdescr.html
 share/doc/gc/gcinterface.html
 share/doc/gc/leak.html
 share/doc/gc/scale.html
+share/doc/gc/simple_example.html
 share/doc/gc/tree.html
 @dirrm share/doc/gc
 @dirrm include/gc/private
