@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1998/08/17 00:11:34 kim Exp $
+
+--- configure.ORIG	Sun Aug 16 19:58:30 1998
++++ configure	Sun Aug 16 20:00:49 1998
+@@ -2550,7 +2550,7 @@
+ fi
+ 
+ 
+-if [ $host_vendor = linux ] ; then
++if [ "$host_vendor" = linux ] ; then
+     LDFLAGS="$LDFLAGS -z"
+ fi
+ 
