@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.16 2003/08/29 11:25:20 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.17 2003/10/05 10:28:42 wiz Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
 include/libexslt/exsltconfig.h
+include/libexslt/exsltexports.h
 include/libxslt/attributes.h
 include/libxslt/documents.h
 include/libxslt/extensions.h
@@ -21,17 +22,18 @@ include/libxslt/variables.h
 include/libxslt/xslt.h
 include/libxslt/xsltInternals.h
 include/libxslt/xsltconfig.h
+include/libxslt/xsltexports.h
 include/libxslt/xsltutils.h
 lib/libexslt.a
 lib/libexslt.la
 lib/libexslt.so
 lib/libexslt.so.7
-lib/libexslt.so.7.21
+lib/libexslt.so.7.22
 lib/libxslt.a
 lib/libxslt.la
 lib/libxslt.so
 lib/libxslt.so.1
-lib/libxslt.so.1.32
+lib/libxslt.so.1.33
 lib/libxsltbreakpoint.a
 lib/libxsltbreakpoint.la
 lib/libxsltbreakpoint.so
@@ -86,7 +88,6 @@ share/doc/html/libxslt/libxslt-transform.html
 share/doc/html/libxslt/libxslt-variables.html
 share/doc/html/libxslt/libxslt-xslt.html
 share/doc/html/libxslt/libxslt-xsltInternals.html
-share/doc/html/libxslt/libxslt-xsltinternals.html
 share/doc/html/libxslt/libxslt-xsltutils.html
 share/doc/html/libxslt/news.html
 share/doc/html/libxslt/node.gif

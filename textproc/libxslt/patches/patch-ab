@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.10 2003/07/11 23:43:54 wiz Exp $
+$NetBSD: patch-ab,v 1.11 2003/10/05 10:28:42 wiz Exp $
 
---- doc/Makefile.in.orig	Mon Jul  7 00:00:26 2003
+--- doc/Makefile.in.orig	Fri Sep 12 14:23:10 2003
 +++ doc/Makefile.in
-@@ -132,7 +132,7 @@ EXTRA_DIST = \
+@@ -76,7 +76,7 @@ DLLTOOL = @DLLTOOL@
+ ECHO = @ECHO@
+ EXTRA_LIBS = @EXTRA_LIBS@
+ 
+-HTML_DIR = $(datadir)/doc
++HTML_DIR = $(datadir)/doc/html
+ INSTALLED_XSLT_LIB = @INSTALLED_XSLT_LIB@
+ INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
+ LDFLAGS = @LDFLAGS@
+@@ -145,7 +145,7 @@ EXTRA_DIST = \
  
  
  # The name of the module.
@@ -11,19 +20,16 @@ $NetBSD: patch-ab,v 1.10 2003/07/11 23:43:54 wiz Exp $
  
  # The top-level SGML file.
  DOC_MAIN_XML_FILE = libxslt.xml
-@@ -140,9 +140,9 @@ DOC_MAIN_XML_FILE = libxslt.xml
- # The directory containing the source code (if it contains documentation).
- DOC_SOURCE_DIR = ..
- 
--HTML_DIR = $(datadir)/doc
-+HTML_DIR = $(datadir)/doc/html
+@@ -156,7 +156,7 @@ DOC_SOURCE_DIR = ..
+ # A file in win32 depends upon two of the doc files
+ WIN32_DIR = $(top_srcdir)/win32
  
 -TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)/html
 +TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
  PAGES = API.html bugs.html contribs.html docs.html downloads.html \
         help.html index.html intro.html news.html xsltproc2.html FAQ.html
  
-@@ -367,7 +367,6 @@ install-data-local: 
+@@ -428,7 +428,6 @@ install-data-local: 
  	-@INSTALL@ -m 0644 $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR)
  	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)/tutorial
  	-@INSTALL@ -m 0644 $(srcdir)/tutorial/* $(DESTDIR)$(TARGET_DIR)/tutorial
