@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3996 2003/12/06 17:25:38 tron Exp $
+$NetBSD: CHANGES,v 1.3997 2003/12/06 17:56:39 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4992,3 +4992,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnutls to 1.0.0 [xtraeme 2003-12-05] 
 	Updated wmbiff to 0.4.19 [tron 2003-12-06]
 	Removed plex86 [tron 2003-12-06]
+	Updated gal2 to 1.99.10 [recht 2003-12-06]
