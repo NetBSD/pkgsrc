@@ -1,8 +1,26 @@
-$NetBSD: patch-ac,v 1.10 2003/09/30 21:01:08 mycroft Exp $
+$NetBSD: patch-ac,v 1.11 2004/02/26 16:42:39 jmmv Exp $
 
---- configure.orig	2003-09-07 23:59:59.000000000 +0000
-+++ configure	2003-09-30 20:53:14.000000000 +0000
-@@ -11629,7 +11629,7 @@
+--- configure.orig	2003-10-25 09:47:18.000000000 +0200
++++ configure
+@@ -2592,6 +2592,9 @@ echo "${ECHO_T}Turning on SGI compiler w
+     esac
+   fi
+ 
++# Disable c89 options, since these trigger more errors than expected and
++# cause build failures.
++if false; then
+ if test -n "$GCC"; then
+    if test -n "$GCC"; then
+    echo "$as_me:$LINENO: checking whether gcc accepts -std" >&5
+@@ -2638,6 +2641,7 @@ echo "${ECHO_T}Disabling C++ comments in
+      CC="$CC -Wp,-lang-c89"
+    fi
+   fi
++fi
+ 
+ if test -n "$GCC"; then
+    if test -n "$GCC"; then
+@@ -11657,7 +11661,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -11,7 +29,7 @@ $NetBSD: patch-ac,v 1.10 2003/09/30 21:01:08 mycroft Exp $
  cat >conftest.$ac_ext <<_ACEOF
  #line $LINENO "configure"
  /* confdefs.h.  */
-@@ -11709,7 +11709,7 @@
+@@ -11737,7 +11741,7 @@ echo "$as_me: WARNING: Cannot find compa
      # from Matt Knopp <mhat@infocalypse.netlag.com>
      # (who got it from amu@mit.edu)
  
@@ -20,7 +38,7 @@ $NetBSD: patch-ac,v 1.10 2003/09/30 21:01:08 mycroft Exp $
  
      # jwz: MacOS X uses -lkrb5, but not -lcrypt
  
-@@ -13711,19 +13711,7 @@
+@@ -13739,19 +13743,7 @@ fi
    fi
  
  
