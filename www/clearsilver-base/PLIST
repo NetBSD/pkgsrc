@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/28 23:59:40 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/06 05:28:40 epg Exp $
 bin/cstest
 bin/static.cgi
 include/ClearSilver/ClearSilver.h
@@ -126,11 +126,17 @@ man/man3/mCreate.3
 man/man3/mDestroy.3
 man/man3/mLock.3
 man/man3/mUnlock.3
+man/man3/nerr_error_string.3
+man/man3/nerr_error_traceback.3
+man/man3/nerr_handle.3
 man/man3/nerr_ignore.3
+man/man3/nerr_init.3
 man/man3/nerr_log_error.3
+man/man3/nerr_match.3
 man/man3/nerr_pass.3
 man/man3/nerr_pass_ctx.3
 man/man3/nerr_raise.3
+man/man3/nerr_register.3
 man/man3/skipDelete.3
 man/man3/skipFreeList.3
 man/man3/skipInsert.3
