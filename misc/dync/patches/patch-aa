@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 1999/04/05 01:33:18 hubertf Exp $
+
+--- Makefile.in.BAK	Mon Apr  5 03:25:03 1999
++++ Makefile.in	Mon Apr  5 03:26:07 1999
+@@ -32,8 +32,9 @@
+ 	@./$(EXE) -f tests/1.c root > tests/1.out
+ 	@diff tests/1.exp tests/1.out
+ 	@echo "2. Testing stat(2)"
+-	@./$(EXE) -f tests/2.c tests/2.c > tests/2.out
+-	@diff tests/2.exp tests/2.out
++	@echo "<Skipped due to timezone-differences>"
++#	@./$(EXE) -f tests/2.c tests/2.c > tests/2.out
++#	@diff tests/2.exp tests/2.out
+ 	@echo "3. Testing program as argument"
+ 	@./$(EXE) 'int main() { printf("Hello world\n"); exit(0); }' > tests/3.out
+ 	@diff tests/3.exp tests/3.out
