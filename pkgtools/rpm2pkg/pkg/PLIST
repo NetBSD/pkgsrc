@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/25 08:57:53 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/28 10:44:39 manu Exp $
 sbin/rpm2pkg
+man/man8/rpm2pkg.8
