@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/03/09 11:37:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/04/20 12:44:16 markd Exp $
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/arts.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/artsmessage_8cc-source.html
@@ -7967,9 +7967,6 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/classKServiceGroup__inherit__grap
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/classKServiceGroup__inherit__graph.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/classKServiceOffer-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/classKServiceOffer.html
-share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/classKServiceOffer__coll__graph.map
-share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/classKServiceOffer__coll__graph.md5
-share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/classKServiceOffer__coll__graph.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/classKServiceType-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/classKServiceType.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/classKServiceTypeProfile-members.html
@@ -8502,9 +8499,6 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/inherit__graph__90.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/inherit__graph__91.map
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/inherit__graph__91.md5
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/inherit__graph__91.png
-share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/inherit__graph__92.map
-share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/inherit__graph__92.md5
-share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/inherit__graph__92.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/inherits.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/installdox
 share/doc/kde/HTML/en/kdelibs-apidocs/kio/html/ioslave__defaults_8h-source.html
