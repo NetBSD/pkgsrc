@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/25 05:42:40 xtraeme Exp $
+
+--- Makefile.in.orig	2004-07-14 22:52:53.000000000 +0200
++++ Makefile.in	2004-11-25 05:53:05.000000000 +0100
+@@ -1,8 +1,8 @@
+ all: gld
+ 
+ gld: cnf.o server.o sql.o sockets.o greylist.o gld.h
+-	@CC@ -O2 @DEFS@ -Wall server.o sql.o sockets.o cnf.o greylist.o @MYSQL_LIBS@ -o gld
+-	strip gld
++	@CC@ -O2 @DEFS@ -Wall server.o sql.o sockets.o cnf.o greylist.o \
++		$(LDFLAGS) -lmysqlclient -o gld
+ 
+ sockets.o: sockets.c sockets.h
+ 	@CC@ -O2 @DEFS@ -Wall -c sockets.c
+@@ -23,11 +23,14 @@
+ 	rm -f  gld *.o
+ 
+ install: gld gld.conf
+-	mkdir -p /usr/local/bin
+-	cp gld /usr/local/bin
+-	chmod 700 /usr/local/bin/gld
+-	cp gld.conf /etc/gld.conf.sample
+-	chmod 600 /etc/gld.conf.sample
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) gld $(PREFIX)/bin
++	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/examples/gld
++	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/gld
++	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/doc/gld
++	$(BSD_INSTALL_DATA) gld.conf $(PREFIX)/share/examples/gld
++	$(BSD_INSTALL_DATA) tables.sql $(PREFIX)/share/gld
++	$(BSD_INSTALL_DATA) README LICENCE $(PREFIX)/share/doc/gld
+ 
+ distclean: clean
+ 	rm -f Makefile config.status config.log config.cache
