@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/06 20:24:37 hubertf Exp $
+bin/dlint
+bin/digparse
+man/man1/dlint.1
