@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/25 20:00:55 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/30 00:25:04 minskim Exp $
 
 DISTNAME=		gthumb-2.6.0.1
 CATEGORIES=		graphics
@@ -25,6 +25,7 @@ GCONF2_SCHEMAS+=	gthumb.schemas
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
