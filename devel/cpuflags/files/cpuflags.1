@@ -1,4 +1,4 @@
-.\"	$NetBSD: cpuflags.1,v 1.12 2003/05/29 11:45:50 abs Exp $
+.\"	$NetBSD: cpuflags.1,v 1.13 2004/03/17 00:26:55 abs Exp $
 .Dd May 31, 2001
 .Dt CPUFLAGS 1
 .Os
@@ -23,7 +23,7 @@ is not specified it defaults to the first
 found in the path.
 .Sh ENVIRONMENT
 The makefile fragment
-.Pa /usr/pkg/share/mk/cpuflags.mk
+.Pa @PREFIX@/share/mk/cpuflags.mk
 will set the following
 .Xr make 1
 variables, plus add CPU_FLAGS and CPU_DIR to .MAKEFLAGS for sub-makes.
@@ -39,12 +39,12 @@ Has CPU_FLAGS appended
 Has CPU_FLAGS appended
 .El
 .Sh FILES
-.Bl -tag -width /usr/pkg/share/mk/optimize_gcc.mk -compact
-.It /usr/pkg/share/mk/cpuflags.mk
+.Bl -tag -width @PREFIX@/share/mk/optimize_gcc.mk -compact
+.It @PREFIX@/share/mk/cpuflags.mk
 Set appropriate compiler flags based on the output from
 .Nm .
 Suitable for inclusion in /etc/mk.conf
-.It /usr/pkg/share/mk/optimize_gcc.mk
+.It @PREFIX@/share/mk/optimize_gcc.mk
 Attempt to set additional -mXXX gcc flags based on gcc version and packages
 being compiled. Note: This is experimental and not supported.
 .El
@@ -56,7 +56,7 @@ and recompiling the
 kernel or userland by adding the following to
 .Pa /etc/mk.conf :
 .Bd -literal -offset indent
- .sinclude "/usr/pkg/share/mk/cpuflags.mk"
+ .sinclude "@PREFIX@/share/mk/cpuflags.mk"
 .Ed
 .Pp
 Those desiring further optimisation can install the lang/gcc3 package, and
@@ -64,17 +64,17 @@ add the following to
 .Pa /etc/mk.conf 
 instead:
 .Bd -literal -offset indent
- .sinclude "/usr/pkg/share/examples/gcc/mk.conf"
- .sinclude "/usr/pkg/share/mk/cpuflags.mk"
+ .sinclude "@PREFIX@/share/examples/gcc/mk.conf"
+ .sinclude "@PREFIX@/share/mk/cpuflags.mk"
 .Ed
 .Pp
 To experiment with optimisations that can break generated code there is
 optimize_gcc.mk. This is unsupported, but for full effect add the following to
 .Pa /etc/mk.conf :
 .Bd -literal -offset indent
- .sinclude "/usr/pkg/share/examples/gcc/mk.conf"
- .sinclude "/usr/pkg/share/mk/cpuflags.mk"
- .sinclude "/usr/pkg/share/mk/optimize_gcc.mk"
+ .sinclude "@PREFIX@/share/examples/gcc/mk.conf"
+ .sinclude "@PREFIX@/share/mk/cpuflags.mk"
+ .sinclude "@PREFIX@/share/mk/optimize_gcc.mk"
 .Ed
 .Pp
 On all except low memory machines compliation can be speeded up by adding the
