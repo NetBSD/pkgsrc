@@ -1,7 +1,7 @@
 #!@SH@
-# $NetBSD: phoenix.sh,v 1.2 2003/04/14 21:28:11 grant Exp $
+# $NetBSD: phoenix.sh,v 1.3 2003/05/25 06:52:53 grant Exp $
 
-LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:@PREFIX@/lib/phoenix-@PLATFORM@"
+LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:@PREFIX@/lib/MozillaFirebird-@PLATFORM@"
 export LD_LIBRARY_PATH
 
-exec @PREFIX@/lib/phoenix-@PLATFORM@/phoenix "$@"
+exec @PREFIX@/lib/MozillaFirebird-@PLATFORM@/MozillaFirebird "$@"
