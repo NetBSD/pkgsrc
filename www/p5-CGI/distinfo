@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/06/07 04:29:04 jlam Exp $
+$NetBSD: distinfo,v 1.4 2002/01/28 00:27:36 jlam Exp $
 
-SHA1 (CGI.pm-2.752.tar.gz) = d7b429f8ed4c258578dad6d9e8980a2fb46a89ad
-Size (CGI.pm-2.752.tar.gz) = 171821 bytes
-SHA1 (patch-aa) = ddcd635e3a39269436bed02fafe6864533dd5bf7
+SHA1 (CGI.pm-2.79.tar.gz) = 6083784f5c573112793ccf8b07bb78ae6c109cd1
+Size (CGI.pm-2.79.tar.gz) = 193432 bytes
+SHA1 (patch-aa) = b266728844c401c5656b1f51a485147826e9c1a5
