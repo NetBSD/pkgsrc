@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/20 12:14:05 agc Exp $
+# $NetBSD: Makefile,v 1.21 2004/04/11 08:12:34 snj Exp $
 #
 
 DISTNAME=	hexedit-1.2.2
@@ -13,7 +13,7 @@ COMMENT=	To view and edit files in hexadecimal or ASCII
 
 WRKSRC=		${WRKDIR}/hexedit
 GNU_CONFIGURE=	yes
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/hexedit
@@ -21,5 +21,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/hexedit
 .endfor
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
