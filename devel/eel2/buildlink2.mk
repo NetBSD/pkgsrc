@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/12/13 00:45:22 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2003/12/14 21:47:51 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use eel2.
 #
@@ -9,14 +9,13 @@
 EEL2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			eel2
-BUILDLINK_DEPENDS.eel2?=		eel2>=2.2.3.1nb4
+BUILDLINK_DEPENDS.eel2?=		eel2>=2.4.1
 BUILDLINK_PKGSRCDIR.eel2?=		../../devel/eel2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.eel2=eel2
 BUILDLINK_PREFIX.eel2_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.eel2+=	include/eel-2/eel/*.h
 BUILDLINK_FILES.eel2+=	lib/libeel-2.*
-BUILDLINK_FILES.eel2+=	lib/pkgconfig/eel-2.0.pc
 
 .include "../../sysutils/gnome-vfs2/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
