@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.5 2004/05/12 16:37:07 drochner Exp $
+$NetBSD: distinfo,v 1.6 2004/06/21 15:55:55 drochner Exp $
 
-SHA1 (xine-lib-1-rc4.tar.gz) = 1cf447ce447a5572e40aea9fa25e19f73ba2decf
-Size (xine-lib-1-rc4.tar.gz) = 6788315 bytes
+SHA1 (xine-lib-1-rc5.tar.gz) = b38aa71ab717ba04f03591d1d003da4ce23ed1cf
+Size (xine-lib-1-rc5.tar.gz) = 7052663 bytes
 SHA1 (patch-aa) = beb7617b8361c06cf5224f0027731f025f7dc519
 SHA1 (patch-ab) = a5205d23d02dff84b0e8a9f850f3833cacc28c5a
 SHA1 (patch-ac) = 7959d6d3599c9debe79b1b4a5749b6af714588a0
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
 SHA1 (patch-ae) = cf7486ed50a782fcfb17ad0985e76a7ae09a2938
-SHA1 (patch-ag) = 23fca3bd89be1f852456d31e46f6449b577c0dad
+SHA1 (patch-ag) = bc7374182a0812baf619e9648c608f1b80982b67
 SHA1 (patch-ah) = 3f9b23c4a7994259056b73209a9e194db759f06d
 SHA1 (patch-ai) = f71e3cb57bf30cbf9653a469c040b6e3f717ba97
 SHA1 (patch-al) = af557ce4fd64e11f84947e067f445e59628c6f99
-SHA1 (patch-am) = 98d95c618ee15df9ff592b3a677387507841c2d7
-SHA1 (patch-ao) = d4cbdf5da7c912b4306681032d6d964b84760909
+SHA1 (patch-am) = 10f6433a8549bdce60ace5dcbd51df85eaa7ea16
+SHA1 (patch-ao) = aa9fbe13b00f6e8bbf1857b4d29147dc63bbc8d4
 SHA1 (patch-ap) = aaf63024c1049c1f2175d9974367a6b84ac3028f
 SHA1 (patch-aq) = ec5707d3b7b69912342afc7bef3e8cd182c75ded
 SHA1 (patch-ar) = c0053ebca44544c42e39aab775e8441b6e9faa30
