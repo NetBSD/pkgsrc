@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 11:13:52 agc Exp $
+$NetBSD: patch-ae,v 1.3 1998/09/28 13:10:07 frueauf Exp $
 
---- sudoers.man.orig	Tue Jan 13 05:55:42 1998
-+++ sudoers.man	Wed Jul  1 20:19:04 1998
+--- sudoers.man.orig	Mon Sep  7 05:43:40 1998
++++ sudoers.man	Tue Sep 22 11:33:01 1998
 @@ -297,7 +297,7 @@
  \fB\s-1DO\s0 \s-1NOT\s0\fR define an alias of \fI\s-1ALL\s0\fR, it will \fB\s-1NOT\s0\fR be used.
  Note that \fI\s-1ALL\s0\fR implies the entire universe of hosts/users/commands.
@@ -11,7 +11,12 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:13:52 agc Exp $
  Note that the \*(L"!\*(R" notation only works in a user's command list.  You
  may not use it to subtract elements in a User_Alias, Host_Alias,
  Cmnd_Alias or user list.
-@@ -334,7 +334,7 @@
+@@ -330,11 +330,11 @@
+ .Ve
+ .Vb 6
+ \&    # Command alias specification
+-\&    Cmnd_Alias  LPCS=/usr/etc/lpc,/usr/ucb/lprm
++\&    Cmnd_Alias  LPCS=/usr/sbin/lpc,/usr/bin/lprm
  \&    Cmnd_Alias  SHELLS=/bin/sh,/bin/csh,/bin/tcsh,/bin/ksh
  \&    Cmnd_Alias  SU=/bin/su
  \&    Cmnd_Alias  MISC=/bin/rm,/bin/cat:\e
@@ -23,7 +28,7 @@ $NetBSD: patch-ae,v 1.2 1998/08/07 11:13:52 agc Exp $
 @@ -344,11 +344,11 @@
  \&    +interns    +openlabs=ALL,!SHELLS,!SU
  \&    britt       REMOTE=SHUTDOWN:ALL=LPCS
- \&    jimbo       CUNETS=/bin/su ?*,!/bin/su root
+ \&    jimbo       CUNETS=/bin/su ?*,!/bin/su *root*
 -\&    nieusma     SERVERS=SHUTDOWN,/etc/reboot:\e
 +\&    nieusma     SERVERS=SHUTDOWN,/sbin/reboot:\e
  \&                HUB=ALL,!SHELLS
