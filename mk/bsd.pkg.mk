@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.671 2001/02/26 17:23:37 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.672 2001/02/26 19:39:17 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -563,7 +563,7 @@ ID?=		/usr/xpg4/bin/id
 IDENT?=		${LOCALBASE}/bin/ident
 LDCONFIG?=	/usr/bin/true
 LN?=		/usr/bin/ln
-LOCALEDIR?=	lib
+PKGLOCALEDIR?=	lib
 LS?=		/usr/bin/ls
 MKDIR?=		/usr/bin/mkdir -p
 MTREE?=		${LOCALBASE}/bsd/bin/mtree
@@ -613,7 +613,7 @@ ID?=		/usr/bin/id
 IDENT?=		/usr/bin/ident
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
-LOCALEDIR?=	share
+PKGLOCALEDIR?=	share
 LS?=		/bin/ls
 MKDIR?=		/bin/mkdir -p
 MTREE?=		${LOCALBASE}/bsd/bin/mtree
@@ -659,7 +659,7 @@ ID?=		/usr/bin/id
 IDENT?=		/usr/bin/ident
 LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
-LOCALEDIR?=	share
+PKGLOCALEDIR?=	share
 LS?=		/bin/ls
 MKDIR?=		/bin/mkdir -p
 MTREE?=		/usr/sbin/mtree
