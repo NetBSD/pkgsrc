@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.7 2004/10/18 14:37:24 tron Exp $
+$NetBSD: patch-ag,v 1.7.2.1 2004/12/22 08:31:29 snj Exp $
 
 --- libtiff/tif_fax3.c.orig	2003-11-06 09:22:13.000000000 +0100
 +++ libtiff/tif_fax3.c	2004-10-18 16:24:04.000000000 +0200
@@ -12,7 +12,7 @@ $NetBSD: patch-ag,v 1.7 2004/10/18 14:37:24 tron Exp $
 +	char	*cp = NULL;
 +	tsize_t	bytes = nmemb * elem_size;
 +
-+	if (elem_size && bytes / elem_size == nmemb)
++	if (nmemb && elem_size && bytes / elem_size == nmemb)
 +		cp = (char*) _TIFFmalloc(bytes);
 +
 +	if (cp == NULL)
