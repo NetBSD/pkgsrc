@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2001/10/04 14:53:46 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2001/10/04 18:47:49 hubertf Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -23,9 +23,7 @@ SUBDIR+=	ghostscript-nox11
 SUBDIR+=	gnome-print
 SUBDIR+=	gv
 SUBDIR+=	html2ps
-SUBDIR+=	hugelatex
 SUBDIR+=	if-psprint
-SUBDIR+=	jadetex
 SUBDIR+=	lgrind
 SUBDIR+=	lilypond
 SUBDIR+=	lyx
@@ -50,6 +48,8 @@ SUBDIR+=	teTeX-bin
 SUBDIR+=	teTeX-share
 SUBDIR+=	teTeX-sharesrc
 SUBDIR+=	tex-eurosym
+SUBDIR+=	tex-hugelatex
+SUBDIR+=	tex-jadetex
 SUBDIR+=	transfig
 SUBDIR+=	xpdf
 SUBDIR+=	xpp
