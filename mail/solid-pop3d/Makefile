@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2004/06/08 12:23:59 cjep Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/04 01:49:17 wiz Exp $
 
 DISTNAME=		solid-pop3d-0.15
 CATEGORIES=		mail
 MASTER_SITES=		http://solidpop3d.pld.org.pl/
 
-MAINTAINER=		socrtp@soclab.eu.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://solidpop3d.pld.org.pl/
 COMMENT=		Flexible POP3 server
 
