@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/12/13 19:08:13 xtraeme Exp $
-
-SHA1 (openbox-3.0.tar.gz) = 5156e3b53f8707511b5921bc3f0180ef8b3c215b
-Size (openbox-3.0.tar.gz) = 549264 bytes
-SHA1 (patch-aa) = 41cc531d21ac23814d33b20ec754784396fe2b05
