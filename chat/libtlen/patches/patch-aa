@@ -1,13 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/22 21:49:42 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2004/02/28 14:26:08 minskim Exp $
 
---- lib/Makefile.in.orig	2003-01-16 10:33:32.000000000 +0000
+--- lib/Makefile.in.orig	2003-01-16 04:33:32.000000000 -0600
 +++ lib/Makefile.in
+@@ -13,7 +13,7 @@ VERSION_MAJOR=1
+ VERSION_MINOR=5
+ 
+ CC = @CC@
+-CFLAGS = @CFLAGS_LIBTLEN@ -I.. -fPIC -Wall -ggdb
++CFLAGS = @CFLAGS_LIBTLEN@ -I.. -fPIC
+ LIBS= @LIBS_LIBTLEN@
+ 
+ MAKE = @MAKE@
 @@ -33,7 +33,7 @@ STATIC = libtlen.a
  HEADERS = *.h
  libincludedir = /libtlen
  
 -all: static shared test-client
-+all: static test-client
++all: static
  static: $(STATIC)
  shared: $(SHARED)
  test-client: testclient
@@ -19,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/22 21:49:42 minskim Exp $
 -	$(RANLIB) $(STATIC)
 +	${LIBTOOL} --mode=link ${CC} -o ${STATIC:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info ${VERSION_MAJOR}:${VERSION_MINOR}
 +
-+%.o: %.c
++.c.o:
 +	${LIBTOOL} --mode=compile ${CC} -c ${CPPFLAGS} ${CFLAGS} $< -o $@
  
  $(SHARED): $(OBJS)
@@ -32,7 +41,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/22 21:49:42 minskim Exp $
  
  install-shared:
  	$(INSTALL) -d $(DESTDIR)$(libdir)
-@@ -66,12 +68,11 @@ install-shared:
+@@ -66,8 +68,7 @@ install-shared:
  	cd $(DESTDIR)$(libdir) && $(LN_S) -f $(SHARED) $(SHAREDMM)
  
  install-static:
@@ -42,8 +51,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/22 21:49:42 minskim Exp $
  
  install-devel:
  	$(INSTALL) -d $(DESTDIR)$(includedir)$(libincludedir)
- 	$(INSTALL) -m 644 $(HEADERS) $(DESTDIR)$(includedir)$(libincludedir)
- 
- testclient: $(STATIC) testclient.c
--	$(CC) -Wall -ggdb -o testclient testclient.c libtlen.a $(LIBS)
-+	${LIBTOOL} --mode=link $(CC) -Wall -o testclient testclient.c libtlen.la $(LIBS)
