@@ -1,0 +1,68 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/08/24 12:33:38 agc Exp $
+
+*** sourceold/unix/makefile	Tue Sep  3 08:48:13 1996
+--- source/unix/makefile	Tue Dec  3 22:49:24 1996
+***************
+*** 28,44 ****
+  # Use libXXX.a if you want to force static linking of the libraries.
+  #   Use -Llibdir -lXXX if you want to use shared libraries (if they are
+  #   available).  It doesn't matter if you only have libXXX.a libraries.
+! PNGDIR = $(SRCDIR)/libpng
+! LIBPNGINC = -I$(PNGDIR)
+  #LIBPNGLIB = $(PNGDIR)/libpng.a
+! LIBPNGLIB = -L$(PNGDIR) -lpng
+! #LIBPNGLIB = -L/usr/local/lib -lpng
+  
+! ZLIBDIR = $(SRCDIR)/zlib
+! ZLIBINC = -I$(ZLIBDIR)
+  #ZLIBLIB = $(ZLIBDIR)/libz.a
+! ZLIBLIB = -L$(ZLIBDIR) -lz
+! #ZLIBLIB = -L/usr/local/lib -lz
+  
+  # This is the suffix for object files.
+  OBJ     = .o
+--- 28,44 ----
+  # Use libXXX.a if you want to force static linking of the libraries.
+  #   Use -Llibdir -lXXX if you want to use shared libraries (if they are
+  #   available).  It doesn't matter if you only have libXXX.a libraries.
+! PNGDIR = #$(SRCDIR)/libpng
+! LIBPNGINC = -I${PREFIX}/include
+  #LIBPNGLIB = $(PNGDIR)/libpng.a
+! #LIBPNGLIB = -L$(PNGDIR) -lpng
+! LIBPNGLIB = -L${PREFIX}/lib -lpng
+  
+! #ZLIBDIR = $(SRCDIR)/zlib
+! #ZLIBINC = -I$(ZLIBDIR)
+  #ZLIBLIB = $(ZLIBDIR)/libz.a
+! #ZLIBLIB = -L$(ZLIBDIR) -lz
+! ZLIBLIB =  -lz
+  
+  # This is the suffix for object files.
+  OBJ     = .o
+***************
+*** 55,61 ****
+  #X11 = /usr/local/X11R6
+  #X11 = /usr/openwin        # for some SunOS systems
+  #X11 = /usr/lpp/X11        # for some AIX systems
+! X11 = /usr/X11
+  
+  # You probably won't need to change these if you have the X11 variable
+  #   above set properly...
+--- 55,61 ----
+  #X11 = /usr/local/X11R6
+  #X11 = /usr/openwin        # for some SunOS systems
+  #X11 = /usr/lpp/X11        # for some AIX systems
+! X11 = ${X11BASE}
+  
+  # You probably won't need to change these if you have the X11 variable
+  #   above set properly...
+***************
+*** 901,907 ****
+                            config.h             \
+                            $(SRCDIR)/frame.h    \
+                            $(SRCDIR)/optout.h   \
+-                           $(PNGDIR)/png.h      \
+                            $(SRCDIR)/png_pov.h  \
+                            $(SRCDIR)/point.h    \
+                            $(SRCDIR)/povproto.h \
+--- 901,906 ----
