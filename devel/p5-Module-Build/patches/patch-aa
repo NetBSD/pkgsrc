@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/21 16:15:38 kim Exp $
+
+--- lib/Module/Build.pm.orig	Tue Aug 26 15:33:52 2003
++++ lib/Module/Build.pm	Sat Sep 13 18:13:02 2003
+@@ -29,6 +29,7 @@
+ 		 irix      Unix
+ 		 darwin    Unix
+ 		 machten   Unix
++		 netbsd    Unix
+ 		 next      Unix
+ 		 openbsd   Unix
+ 		 dec_osf   Unix

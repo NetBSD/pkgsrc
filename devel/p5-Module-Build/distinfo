@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/21 16:15:38 kim Exp $
+
+SHA1 (Module-Build-0.20.tar.gz) = 189ede34451d5fe9997089982be822d869d8d2a3
+Size (Module-Build-0.20.tar.gz) = 81068 bytes
+SHA1 (patch-aa) = 1a80e08e32a3310bd5be6b0ee0a855e9ce54aeec
