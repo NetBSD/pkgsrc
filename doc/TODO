@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1129 2003/12/05 22:21:17 cjep Exp $
+$NetBSD: TODO,v 1.1130 2003/12/05 22:29:23 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -346,7 +346,6 @@ Suggested package updates
 	o tct-1.12
 	o teapop-0.3.8
 	o tin-1.6.1 [dillo]
-	o tinyproxy-1.6.2 [xtraeme]
 	o tkman-2.2
 	o tla-1.1.0.5 [replacing arch; pkg/23022]
 	o tla-1.1.0.7
