@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/12/14 23:54:09 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/16 07:47:43 recht Exp $
 bin/bug-buddy
 man/man1/bug-buddy.1
 share/application-registry/bug-buddy.applications
@@ -65,6 +65,7 @@ ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/bug-buddy.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/bug-buddy.mo
@@ -81,7 +82,10 @@ share/pixmaps/bug-buddy.png
 @comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/gnome/help/bug-buddy/C
 @dirrm share/gnome/help/bug-buddy
+@comment @dirrm share/gnome/help
 @dirrm share/bug-buddy/bugzilla/ximian
 @dirrm share/bug-buddy/bugzilla/gnome
 @dirrm share/bug-buddy/bugzilla
 @dirrm share/bug-buddy
+@comment @dirrm share/applications
+@comment @dirrm share/application-registry
