@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.23 2005/02/16 10:59:03 grant Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.24 2005/02/19 04:19:59 grant Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -316,6 +316,14 @@ _WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-osf1-cc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-osf1-ld
+.elif ${OPSYS} == "AIX"
+_WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-aix-cc
+_WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
+_WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-aix-ld
+_WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-aix-cc
+_WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-aix-cc
+_WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
+_WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
 .endif
 
 # Filter to scrunch shell scripts by removing comments and empty lines.
@@ -456,6 +464,18 @@ ${WRAPPER_TMPDIR}/cmd-sink-aix-xlc:					\
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
+${WRAPPER_TMPDIR}/cmd-sink-aix-cc:					\
+		${WRAPPER_SRCDIR}/cmd-sink-aix-cc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/cmd-sink-aix-ld:					\
+		${WRAPPER_SRCDIR}/cmd-sink-aix-ld
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
 ${WRAPPER_TMPDIR}/cmd-sink-darwin-xlc:					\
 		${WRAPPER_SRCDIR}/cmd-sink-darwin-xlc
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
@@ -506,6 +526,12 @@ ${WRAPPER_TMPDIR}/cmd-sink-icc-cc:					\
 
 ${WRAPPER_TMPDIR}/cmd-sink-icc81-cc:					\
 		${WRAPPER_SRCDIR}/cmd-sink-icc81-cc
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
+
+${WRAPPER_TMPDIR}/transform-aix-cc:					\
+		${WRAPPER_SRCDIR}/transform-aix-cc
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
