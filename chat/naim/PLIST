@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/03/04 17:51:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/04/23 21:26:46 wiz Exp $
 bin/naim
 bin/nicq
 bin/nirc
@@ -20,6 +20,7 @@ man/man1/nirc.1
 man/man1/nlily.1
 share/doc/naim/COLORS
 share/doc/naim/FAQ
+share/doc/naim/README
 share/doc/naim/commands.txt
 share/doc/naim/keyboard.txt
 @dirrm share/doc/naim
