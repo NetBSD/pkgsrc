@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2004/03/28 21:27:58 darcy Exp $
+$NetBSD: distinfo,v 1.2 2004/11/26 23:00:01 darcy Exp $
 
-SHA1 (epydoc-2.0.tar.gz) = c480553391d307d5212c913e917a712a0b8b9641
-Size (epydoc-2.0.tar.gz) = 516920 bytes
+SHA1 (epydoc-2.1.tar.gz) = f2034c5e1b9cf0d2d16e0b9c8af0d3581af524e4
+Size (epydoc-2.1.tar.gz) = 529943 bytes
