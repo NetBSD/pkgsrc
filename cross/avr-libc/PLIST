@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/17 18:50:22 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/30 18:03:16 kristerw Exp $
+avr/include/avr/boot.h
 avr/include/avr/crc16.h
 avr/include/avr/delay.h
 avr/include/avr/eeprom.h
@@ -42,6 +43,7 @@ avr/include/avr/iotn26.h
 avr/include/avr/iotn28.h
 avr/include/avr/parity.h
 avr/include/avr/pgmspace.h
+avr/include/avr/portpins.h
 avr/include/avr/sfr_defs.h
 avr/include/avr/signal.h
 avr/include/avr/sleep.h
@@ -127,63 +129,82 @@ avr/lib/libscanf_flt.a
 avr/lib/libscanf_min.a
 share/doc/avr-libc/AUTHORS
 share/doc/avr-libc/LICENSE
-share/doc/avr-libc/avr-libc-user-manual.pdf
-share/doc/avr-libc/avr-libc-user-manual.ps
-share/doc/avr-libc/avr-libc-user-manual/FAQ.html
-share/doc/avr-libc/avr-libc-user-manual/acks.html
-share/doc/avr-libc/avr-libc-user-manual/annotated.html
-share/doc/avr-libc/avr-libc-user-manual/assembler.html
-share/doc/avr-libc/avr-libc-user-manual/classes.html
-share/doc/avr-libc/avr-libc-user-manual/demo.png
-share/doc/avr-libc/avr-libc-user-manual/demo_project.html
-share/doc/avr-libc/avr-libc-user-manual/deprecated.html
-share/doc/avr-libc/avr-libc-user-manual/dox.css
-share/doc/avr-libc/avr-libc-user-manual/doxygen.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2blank.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2doc.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2folderclosed.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2folderopen.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2lastnode.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2link.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2mlastnode.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2mnode.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2node.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2plastnode.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2pnode.png
-share/doc/avr-libc/avr-libc-user-manual/ftv2vertline.png
-share/doc/avr-libc/avr-libc-user-manual/group__avr__eeprom.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__errno.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__interrupts.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__inttypes.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__io.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__math.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__pgmspace.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__sfr.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__sfr__notes.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__sleep.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__stdio.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__stdlib.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__string.html
-share/doc/avr-libc/avr-libc-user-manual/group__avr__watchdog.html
-share/doc/avr-libc/avr-libc-user-manual/group__ctype.html
-share/doc/avr-libc/avr-libc-user-manual/group__setjmp.html
-share/doc/avr-libc/avr-libc-user-manual/index.html
-share/doc/avr-libc/avr-libc-user-manual/inline_asm.html
-share/doc/avr-libc/avr-libc-user-manual/install_tools.html
-share/doc/avr-libc/avr-libc-user-manual/main.html
-share/doc/avr-libc/avr-libc-user-manual/malloc-std.png
-share/doc/avr-libc/avr-libc-user-manual/malloc-x1.png
-share/doc/avr-libc/avr-libc-user-manual/malloc-x2.png
-share/doc/avr-libc/avr-libc-user-manual/malloc.html
-share/doc/avr-libc/avr-libc-user-manual/mem_sections.html
-share/doc/avr-libc/avr-libc-user-manual/modules.html
-share/doc/avr-libc/avr-libc-user-manual/pages.html
-share/doc/avr-libc/avr-libc-user-manual/structdiv__t.html
-share/doc/avr-libc/avr-libc-user-manual/structldiv__t.html
-share/doc/avr-libc/avr-libc-user-manual/tree.html
-share/doc/avr-libc/avr-libc-user-manual/twi_demo.html
-share/doc/avr-libc/avr-libc-user-manual/using_avrprog.html
-share/doc/avr-libc/avr-libc-user-manual/using_tools.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}.pdf
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}.ps
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/FAQ.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/acks.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/annotated.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/assembler.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/classes.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/demo.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/demo_project.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/deprecated.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000000.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000001.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000002.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000003.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000004.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000005.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000006.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000007.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000008.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000009.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000010.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000011.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000012.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dir_000013.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/dox.css
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/doxygen.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/ftv2blank.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/ftv2doc.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/ftv2folderclosed.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/ftv2folderopen.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/ftv2lastnode.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/ftv2link.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/ftv2mlastnode.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/ftv2mnode.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/ftv2node.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/ftv2plastnode.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/ftv2pnode.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/ftv2vertline.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__boot.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__crc.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__eeprom.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__errno.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__interrupts.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__inttypes.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__io.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__math.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__pgmspace.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__sfr.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__sfr__notes.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__sleep.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__stdio.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__stdlib.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__string.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__avr__watchdog.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__ctype.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/group__setjmp.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/index.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/inline_asm.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/install_tools.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/main.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/malloc-std.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/malloc-x1.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/malloc-x2.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/malloc.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/mem_sections.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/modules.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/pages.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/release_method.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/releases.png
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/structdiv__t.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/structldiv__t.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/todo.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/tree.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/twi_demo.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/using_avrprog.html
+share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}/using_tools.html
 share/doc/avr-libc/examples/avr-recv.c
 share/doc/avr-libc/examples/demo/Makefile
 share/doc/avr-libc/examples/demo/demo.bin
@@ -199,12 +220,13 @@ share/doc/avr-libc/examples/send_byte.s
 share/doc/avr-libc/examples/signal.c
 share/doc/avr-libc/examples/twitest/Makefile
 share/doc/avr-libc/examples/twitest/twitest.c
-@dirrm avr/include/avr
-@dirrm avr/lib/avr3
-@dirrm avr/lib/avr4
-@dirrm avr/lib/avr5
-@dirrm share/doc/avr-libc/avr-libc-user-manual
 @dirrm share/doc/avr-libc/examples/twitest
 @dirrm share/doc/avr-libc/examples/demo
 @dirrm share/doc/avr-libc/examples
+@dirrm share/doc/avr-libc/avr-libc-user-manual-${PKGVERSION}
 @dirrm share/doc/avr-libc
+@dirrm avr/lib/avr5
+@dirrm avr/lib/avr4
+@dirrm avr/lib/avr3
+@dirrm avr/include/avr
+@dirrm avr/include
