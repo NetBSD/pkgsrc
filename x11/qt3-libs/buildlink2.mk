@@ -4,7 +4,7 @@
 QT3_LIBS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		qt3-libs
-BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.0.4nb2
+BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.0.5
 BUILDLINK_PKGSRCDIR.qt3-libs?=	../../x11/qt3-libs
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.qt3-libs=qt3-libs
@@ -15,11 +15,14 @@ BUILDLINK_FILES.qt3-libs+=	qt3/lib/libqt-mt.*
 
 QTDIR=		${BUILDLINK_PREFIX.qt3-libs}/qt3
 
+PTHREAD_OPTS+=	require
+
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/mng/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 
 CONFIGURE_ENV+=		QTDIR="${QTDIR}"
 CONFIGURE_ENV+=		MOC="${QTDIR}/bin/moc"
