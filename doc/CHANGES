@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4522 2004/01/20 21:20:34 recht Exp $
+$NetBSD: CHANGES,v 1.4523 2004/01/20 21:34:24 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -363,3 +363,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mozilla-stable to 1.4.1nb2 [snj 2004-01-20]
 	Added elvis-2.2.0 [recht 2004-01-20]
 	Added elvis-x11-2.2.0 [recht 2004-01-20]
+	Added pthread-sem-1.0 [rh 2004-01-20]
