@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2001/04/29 18:52:40 danw Exp $
+
+libtool 1.2 needs to be outsmarted here, but what they're trying doesn't
+work with libtool 1.4.
+
+--- storage-modules/Makefile.in.orig	Sun Apr 29 14:34:04 2001
++++ storage-modules/Makefile.in	Sun Apr 29 14:34:15 2001
+@@ -166,7 +166,7 @@
+ libstorage_efs_la_SOURCES =  	bonobo-storage-efs.c		bonobo-storage-efs.h		bonobo-stream-efs.c		bonobo-stream-efs.h
+ 
+ 
+-libstorage_efs_la_LDFLAGS =  	$(common_ldflags) 				-L$(shell pwd)/$(top_builddir)/libefs/src/.libs 	-lefs
++libstorage_efs_la_LDFLAGS =  	$(common_ldflags) 				-L$(shell pwd)/$(top_builddir)/libefs/src	-lefs
+ 
+ 
+ #
