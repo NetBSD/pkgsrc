@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 18:24:53 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/22 16:16:06 jlam Exp $
 # FreeBSD Id: Makefile,v 1.8 1996/11/21 11:27:26 asami Exp
 #
 
@@ -11,15 +11,15 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Implementation of MIME, the Multipurpose Internet Mail Extensions
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
-
-USE_X11=	yes
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
+USE_BUILDLINK_ONLY=	yes
+USE_X11=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
 CFLAGS=		-DSYSV
-MAKE_ENV+=	CFLAGS="${CFLAGS}" CC="${CC}"
+MAKE_ENV+=	CC="${CC}"
 .endif
 
 post-patch:
