@@ -1,4 +1,4 @@
-$NetBSD: patch-ex,v 1.1 2003/03/11 13:10:31 markd Exp $
+$NetBSD: patch-ex,v 1.2 2003/07/08 14:05:07 markd Exp $
 
 --- khelpcenter/infoconsts.h.orig	Sat Aug  3 02:12:14 2002
 +++ khelpcenter/infoconsts.h
@@ -6,7 +6,7 @@ $NetBSD: patch-ex,v 1.1 2003/03/11 13:10:31 markd Exp $
  const unsigned int INFODIRS = 9;
  const QString INFODIR[] = {"", "/usr/info/", "/usr/share/info/",
  			   "/usr/lib/info/",
-+			   "/usr/pkg/info/",
++			   "@LOCALBASE@/info/",
  			   "/usr/local/info/", "/usr/local/lib/info/",
  			   "/usr/X11R6/info/", "/usr/X11R6/lib/info/",
  			   "/usr/X11R6/lib/xemacs/info/"};

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/05/22 02:42:45 markd Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/08 14:05:06 markd Exp $
 
 DISTNAME=	kdebase-3.1.2
 CATEGORIES=	x11
@@ -96,6 +96,15 @@ _KDE_SETUID_ROOT=	${ROOT_USER} ${ROOT_GROUP} 4755
 SPECIAL_PERMS+=	${PREFIX}/bin/konsole_grantpty	${_KDE_SETUID_ROOT}
 SPECIAL_PERMS+=	${PREFIX}/bin/kcheckpass	${_KDE_SETUID_ROOT}
 SPECIAL_PERMS+=	${PREFIX}/bin/ksysguardd	${_KDE_SETUID_ROOT}
+
+pre-configure:
+	cd ${WRKSRC};							\
+	files="kioslave/info/kde-info2html.conf khelpcenter/infoconsts.h"; \
+	for file in $${files}; do					\
+		${SED} -e 's|@LOCALBASE@|${LOCALBASE}|' $${file} >	\
+			$${file}.new;					\
+		${MV} -f $${file}.new $${file};				\
+	done
 
 post-build:
 	cd ${WRKSRC};							\
