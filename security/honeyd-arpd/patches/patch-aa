@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/20 09:15:53 xtraeme Exp $
+
+--- arpd.8.orig	Fri Jun  6 21:38:58 2003
++++ arpd.8	Fri Jun  6 21:40:47 2003
+@@ -2,12 +2,12 @@
+ .\" Copyright (c) 2001 Dug Song <dugsong@monkey.org>
+ .\"
+ .Dd August 4, 2001
+-.Dt ARPD 8
++.Dt HONEYD-ARPD 8
+ .Sh NAME
+-.Nm arpd
++.Nm honeyd-arpd
+ .Nd ARP reply daemon
+ .Sh SYNOPSIS
+-.Nm arpd
++.Nm honeyd-arpd
+ .Op Fl d
+ .Op Fl i Ar interface
+ .Op Ar net ...
+@@ -51,8 +51,8 @@
+ Mutiple addresses may be specified.
+ .El
+ .Sh FILES
+-.Bl -tag -width /var/run/arpd.pid
+-.It Pa /var/run/arpd.pid
++.Bl -tag -width /var/run/honeyd-arpd.pid
++.It Pa /var/run/honeyd-arpd.pid
+ .El
+ .Sh SEE ALSO
+ .Xr pcapd 8 ,
