@@ -1,17 +1,13 @@
-# New ports collection makefile for:    swish-e
-# Version required:     		1.3.2
-# Date created:         		23 Feb 98
-# Whom:              			Daniel O'Connor <doconnor@gsoft.com.au>
-#
-# $FreeBSD: ports/www/swish-e/Makefile,v 1.3 1999/08/31 02:43:18 peter Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/12/14 16:30:01 bouyer Exp $
+# FreeBSD Id: ports/www/swish-e/Makefile,v 1.3 1999/08/31 02:43:18 peter Exp
 
 DISTNAME=       swish-efiles.1.3.2
 PKGNAME=        swish-e-1.3.2
 CATEGORIES=     www textproc
 MASTER_SITES=   ftp://sunsite.berkeley.edu/pub/swish-e/
 
-MAINTAINER=	doconnor@gsoft.com.au
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE= 	http://sunsite.berkeley.edu/SWISH-E/
 
 WRKSRC=		${WRKDIR}/src
 USE_GMAKE=	yes
@@ -24,4 +20,4 @@ do-install:
 	$(INSTALL_DATA) ${WRKSRC}/swishspider ${PREFIX}/share/examples/swish-e
 	$(INSTALL_DATA) ${WRKSRC}/README-SWISH-E ${PREFIX}/share/examples/swish-e
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

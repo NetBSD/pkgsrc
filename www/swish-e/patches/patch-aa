@@ -1,6 +1,16 @@
---- fs.c.old	Fri Nov 27 13:30:13 1998
-+++ fs.c	Fri Nov 27 13:32:19 1998
-@@ -539,23 +539,28 @@
+$NetBSD: patch-aa,v 1.2 1999/12/14 16:30:02 bouyer Exp $
+
+--- fs.c.orig	Wed Jan  6 19:27:02 1999
++++ fs.c	Tue Dec 14 17:12:54 1999
+@@ -41,7 +41,6 @@
+ static struct swline *titconlist = 0;
+ static struct swline *fileislist = 0;
+ static struct swline *suffixlist = 0;
+-static struct swline *nocontentslist = 0;
+ 
+ 
+ /* Have we already indexed a file or directory?
+@@ -365,23 +364,28 @@
  int ishtml(filename)
  char *filename;
  {
