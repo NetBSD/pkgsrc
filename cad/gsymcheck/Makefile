@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/15 23:51:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 13:46:23 wiz Exp $
 #
 
 DISTNAME=		gsymcheck-${PKGVERSION}
@@ -11,6 +11,7 @@ MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.geda.seul.org/
+COMMENT=		EDA (Electronic Design Automation) symbol checker
 
 DEPENDS+=		libgeda-${PKGVERSION}:../../cad/libgeda
 DEPENDS+=		geda-symbols-${PKGVERSION}:../../cad/geda-symbols

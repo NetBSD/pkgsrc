@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/09/27 14:14:24 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 13:41:32 wiz Exp $
 
 DISTNAME=	RasMol_2.7.1
 PKGNAME=	rasmol-2.7.1
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.bernstein-plus-sons.com/software/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.bernstein-plus-sons.com/software/rasmol/
+COMMENT=	Molecular Graphics Visualisation Tool
 
 USE_IMAKE=	YES
 

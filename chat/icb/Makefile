@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/15 00:36:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:51:24 wiz Exp $
 #
 
 # Note: The file ftp://ftp.icb.net/pub/icb/icb-0.9grok2.tar.gz is way
@@ -10,6 +10,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		cjs@netbsd.org
 HOMEPAGE=		http://www.icb.net/
+COMMENT=		Internet CB - a mostly-defunct chat client
 
 NO_SRC_ON_FTP=		"already in MASTER_SITE_LOCAL"
 

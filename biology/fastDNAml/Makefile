@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/18 22:46:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 13:41:29 wiz Exp $
 
 DISTNAME=	fastDNAml_1.2.1
 PKGNAME=	fastDNAml-1.2.1
@@ -8,6 +8,7 @@ MASTER_SITES=	http://geta.life.uiuc.edu/~gary/programs/fastDNAml/
 
 MAINTAINER=	babafou@babafou.eu.org
 HOMEPAGE=	http://geta.life.uiuc.edu/~gary/programs/fastDNAml.html
+COMMENT=	Program derived from Joseph Felsenstein's version 3.3 DNAML
 
 RESTRICTED=	"No commercial distribution without a royalty agreement with the author"
 NO_SRC_ON_CDROM=	${RESTRICTED}

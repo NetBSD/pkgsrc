@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/23 23:14:22 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 13:46:31 wiz Exp $
 #
 
 DISTNAME=	xchiplogo
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.eleceng.adelaide.edu.au/Personal/moini/
 
 MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.eleceng.adelaide.edu.au/Personal/moini/chiplogo.html
+COMMENT=	Program for generating pretty logos on VLSI chips
 
 DEPENDS+=	xforms-*:../../x11/xforms
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/22 08:38:53 rh Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 13:46:20 wiz Exp $
 #
 
 DISTNAME=	symbols-${PKGVERSION}
@@ -12,6 +12,7 @@ MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.geda.seul.org/
+COMMENT=	Library of symbols for gEDA
 
 CONFLICTS+=	gEDA<19991011
 

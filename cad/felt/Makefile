@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/10 16:56:33 jtb Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 13:46:19 wiz Exp $
 
 DISTNAME=	felt-3.05.src
 PKGNAME=	felt-3.05
@@ -8,6 +8,7 @@ DISTFILES=	felt-3.05.src.tar.gz felt-3.05.ps.gz
 
 MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://felt.sourceforge.net/
+COMMENT=	Free system for introductory level finite element analysis
 
 DEPENDS+=	readline-[0-9]*:../../devel/readline
 
