@@ -1,27 +1,37 @@
-$NetBSD: patch-aa,v 1.5 1999/07/21 23:25:08 mjl Exp $
+$NetBSD: patch-aa,v 1.6 1999/12/18 04:53:18 mjl Exp $
 
---- makemake.in.orig	Thu Jan  7 16:23:48 1999
-+++ makemake.in	Wed Jul 21 20:07:38 1999
-@@ -280,7 +280,7 @@
+--- makemake.in.orig	Tue Jul 20 21:03:11 1999
++++ makemake.in	Sat Dec 18 04:45:33 1999
+@@ -316,7 +316,7 @@
       LIBTERMCAP='@LIBTERMCAP@'           # either '-ltermcap' or '-lncurses'
       LIBDL='@LIBDL@'                     # either '-ldl' or ''
       X_INCLUDES='@X_INCLUDES@'           # either '-I/usr/somewhere/include' or ''
 -     X_LIBS='@X_LIBS@'                   # either '-L/usr/somewhere/lib -lX11' or ''
-+     X_LIBS='-Wl,-rpath ${X11BASE}/lib @X_LIBS@'                   # either '-L/usr/somewhere/lib -lX11' or ''
++     X_LIBS='-Wl,-rpath ${X11BASE}/lib @X_LIBS@' # either '-L/usr/somewhere/lib -lX11' or ''
       host='@host@'                       # something like 'sparc-sun-sunos4'
       host_cpu='@host_cpu@'               # something like 'sparc'
       host_vendor='@host_vendor@'         # something like 'sun'
-@@ -1056,6 +1056,9 @@
-     *) ;;
+@@ -1116,6 +1116,10 @@
    esac
  fi
-+if [ "$TSYSOS" = "netbsd" ] ; then # NetBSD
-+      XCFLAGS=$XCFLAGS' -DNO_GENERATIONAL_GC -fpcc-struct-return -Dunix'
-+fi     
  
++if [ "$TSYSOS" = "netbsd" ] ; then # NetBSD
++	XCFLAGS=$XCFLAGS' -DNO_GENERATIONAL_GC -fpcc-struct-return -Dunix'
++fi     
++ 
  if [ $TSYS = sun4 -a $CROSS = false ] ; then
    ARCH_K=`(arch -k) 2>/dev/null || uname -m 2>/dev/null` # kernel architecture, see arch(1)
-@@ -2380,7 +2383,7 @@
+   if [ "$ARCH_K" = sun4 -o "$ARCH_K" = sun4c -o "$ARCH_K" = sun4e ] ; then
+@@ -1595,7 +1599,7 @@
+ echol "dvidir = \$(exec_prefix)${NEXT_}share${NEXT_}dvi"
+ case "$fsstnd" in
+   gnu_ext)
+-    echol "docdir = \$(exec_prefix)${NEXT_}doc"
++    echol "docdir = \$(exec_prefix)${NEXT_}share${NEXT_}doc"
+     echol "lispdocdir = \$(docdir)${NEXT_}clisp"
+     ;;
+   suse)
+@@ -2503,7 +2507,7 @@
    if [ $HOS = unix ] ; then
      echotab "if test -d locale; then rm -rf locale; fi"
      echotab "mkdir locale"
@@ -30,38 +40,72 @@ $NetBSD: patch-aa,v 1.5 1999/07/21 23:25:08 mjl Exp $
    else
      echotab "mkdir locale"
      eval `grep ALL_LINGUAS= src/gettext/configure.in`
-@@ -2919,7 +2922,7 @@
-     fi
+@@ -3084,13 +3088,11 @@
      case "$fsstnd" in
        gnu_ext)
--        echotab "if [ ! -d \$(mandir)/html ] ; then mkdir \$(mandir)/html ; fi"
+         echotab "if [ ! -d \$(exec_prefix)/share ] ; then mkdir \$(exec_prefix)/share ; fi"
+-        echotab "if [ ! -d \$(htmldir) ] ; then mkdir \$(htmldir) ; fi"
+-        echotab "if [ ! -d \$(dvidir) ] ; then mkdir \$(dvidir) ; fi"
 +        echotab "if [ ! -d \$(prefix)/share/doc/clisp ] ; then mkdir \$(prefix)/share/doc/clisp ; fi"
          ;;
-       suse | redhat | debian)
-         echotab "if [ ! -d \$(docdir) ] ; then mkdir \$(docdir) ; fi"
-@@ -2977,10 +2980,10 @@
-     fi
+     esac
+     echotab "if [ ! -d \$(docdir) ] ; then mkdir \$(docdir) ; fi"
+     echotab "if [ ! -d \$(lispdocdir) ] ; then mkdir \$(lispdocdir) ; fi"
+-    echotab "if [ ! -d \$(lispdocdir)/doc ] ; then mkdir \$(lispdocdir)/doc ; fi"
+     echol
+     echol "install-bin : lisp${LEXE} lispinit.mem clisp.c force"
+     echotab "if [ ! -d \$(prefix) ] ; then mkdir \$(prefix) ; fi"
+@@ -3132,17 +3134,10 @@
      case "$fsstnd" in
        gnu_ext)
--        echotab "if [ ! -d \$(mandir)/html ] ; then mkdir \$(mandir)/html ; fi"
--        echotab "\$(INSTALL_DATA) clisp.html \$(mandir)/html/clisp.html"
+         echotab "if [ ! -d \$(exec_prefix)/share ] ; then mkdir \$(exec_prefix)/share ; fi"
+-        echotab "if [ ! -d \$(htmldir) ] ; then mkdir \$(htmldir) ; fi"
+-        echotab "\$(INSTALL_DATA) clisp.html \$(htmldir)/clisp.html"
+-        if [ $TERMINAL = readline ] ; then
+-          echotab "\$(INSTALL_DATA) clreadline.html \$(htmldir)/clreadline.html"
+-        fi
+-        echotab "if [ ! -d \$(dvidir) ] ; then mkdir \$(dvidir) ; fi"
+-        if test -n "$GROFF"; then
+-          echotab "\$(INSTALL_DATA) clisp.dvi \$(dvidir)/clisp.dvi"
+-        fi
 +        echotab "if [ ! -d \$(prefix)/share/doc/clisp ] ; then mkdir \$(prefix)/share/doc/clisp ; fi"
 +        echotab "\$(INSTALL_DATA) clisp.html \$(prefix)/share/doc/clisp/clisp.html"
          if [ $TERMINAL = readline ] ; then
--          echotab "\$(INSTALL_DATA) clreadline.html \$(mandir)/html/clreadline.html"
+-          echotab "\$(INSTALL_DATA) clreadline.dvi \$(dvidir)/clreadline.dvi"
 +          echotab "\$(INSTALL_DATA) clreadline.html \$(prefix)/share/doc/clisp/clreadline.html"
          fi
          ;;
-       suse | redhat | debian)
-@@ -3016,9 +3019,9 @@
+     esac
+@@ -3152,9 +3147,8 @@
+     echotab "if [ ! -d \$(exec_prefix) ] ; then mkdir \$(exec_prefix) ; fi"
+     echotab "if [ ! -d \$(docdir) ] ; then mkdir \$(docdir) ; fi"
+     echotab "if [ ! -d \$(lispdocdir) ] ; then mkdir \$(lispdocdir) ; fi"
+-    echotab "if [ ! -d \$(lispdocdir)/doc ] ; then mkdir \$(lispdocdir)/doc ; fi"
+     echotab "\$(INSTALL_DATA) \$(READMES) \$(lispdocdir)/"
+-    echotab "\$(INSTALL_DATA) \$(MANUALS)${manual_dvi} \$(lispdocdir)/doc/"
++    echotab "\$(INSTALL_DATA) \$(MANUALS)${manual_dvi} \$(lispdocdir)/"
+     echol
+     echol
+     echol "installcheck : ${TESTSDIR} force"
+@@ -3181,18 +3175,14 @@
      fi
      case "$fsstnd" in
        gnu_ext)
--        echotab "\$(RM) \$(mandir)/html/clisp.html"
+-        echotab "\$(RM) \$(htmldir)/clisp.html"
+-        if [ $TERMINAL = readline ] ; then
+-          echotab "\$(RM) \$(htmldir)/clreadline.html"
+-        fi
+-        echotab "\$(RM) \$(dvidir)/clisp.dvi"
 +        echotab "\$(RM) \$(prefix)/share/doc/clisp/clisp.html"
          if [ $TERMINAL = readline ] ; then
--          echotab "\$(RM) \$(mandir)/html/clreadline.html"
+-          echotab "\$(RM) \$(dvidir)/clreadline.dvi"
 +          echotab "\$(RM) \$(prefix)/share/doc/clisp/clreadline.html"
          fi
          ;;
-       suse | redhat | debian)
+     esac
+     echotab "for f in \$(READMES); do \$(RM) \$(lispdocdir)/\$\$f; done"
+-    echotab "for f in \$(MANUALS)${manual_dvi}; do \$(RM) \$(lispdocdir)/doc/\$\$f; done"
++    echotab "for f in \$(MANUALS)${manual_dvi}; do \$(RM) \$(lispdocdir)/\$\$f; done"
+     echol
+     echol
+   fi
