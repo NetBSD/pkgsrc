@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.67 2001/12/12 16:30:06 wiz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.68 2001/12/24 19:29:32 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -276,6 +276,10 @@ ZOULARIS_VERSION=	20000522
 .include "${ZOULARISBASE}/share/mk/zoularis.mk"
 .endif
 MAKEFLAGS+=		ZOULARIS_VERSION="${ZOULARIS_VERSION}"
+.endif
+
+.if defined(USE_PTHREAD)
+.include "../../mk/pthread.buildlink.mk"
 .endif
 
 .endif	# BSD_PKG_MK
