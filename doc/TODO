@@ -281,7 +281,7 @@ Suggested package updates
 	o maildrop-1.6.3
 	o maradns-1.0.21
 	o marbles-1.0.6
-	o matchbox-0.8.2
+	o matchbox-0.8.2 [pkgsrc-wip]
 	o mhonarc-2.6.9
 	o micq-0.4.11
 	o midnight-commander-4.6.0
@@ -368,7 +368,6 @@ Suggested package updates
 	o teapop-0.3.8
 	o texi2html-1.70
 	o texinfo-4.7
-	o thunderbird-0.6
 	o thy-0.9.0 [pkg/25318]
 	o tkdesk-2.0
 	o tkman-2.2
@@ -399,7 +398,6 @@ Suggested package updates
 	o xfce-4.0.5
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.3.0
-	o xmms-1.2.10
 	o xmms-alarm-0.3.5
 	o xmms-crossfade-0.3.4
 	o xmms-iris-0.12
