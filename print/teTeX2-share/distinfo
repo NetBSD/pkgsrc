@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/02/23 04:59:31 kei Exp $
+$NetBSD: distinfo,v 1.2 2003/03/15 08:17:09 kei Exp $
 
-SHA1 (teTeX/tetex-texmf-2.0.1.tar.gz) = e66fada16623da7565ed69dc8ee54b693cb211c4
-Size (teTeX/tetex-texmf-2.0.1.tar.gz) = 52070902 bytes
+SHA1 (teTeX/tetex-texmf-2.0.2.tar.gz) = 9ad88d5fc1df7e10b3538f7b5e3871ceefe8ee2f
+Size (teTeX/tetex-texmf-2.0.2.tar.gz) = 52424280 bytes
