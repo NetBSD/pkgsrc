@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.9 2004/02/05 03:35:20 jlam Exp $
+# $NetBSD: mipspro.mk,v 1.10 2004/02/05 03:39:17 jlam Exp $
 
 .if !defined(COMPILER_MIPSPRO_MK)
 COMPILER_MIPSPRO_MK=	one
@@ -33,7 +33,7 @@ CC_VERSION=	mipspro
 # The following section is included only if we're not being included by
 # bsd.prefs.mk.
 #
-.if empty(BSD_PREFS_MK:M+*)
+.if empty(BSD_PREFS_MK)
 .  if empty(COMPILER_MIPSPRO_MK:Mtwo)
 COMPILER_MIPSPRO_MK+=	two
 
