@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2003/06/23 09:55:01 seb Exp $
+# $NetBSD: Makefile,v 1.59 2003/07/12 13:17:56 dillo Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -26,6 +26,8 @@ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 
 INFO_FILES=		glib.info
 USE_NEW_TEXINFO=	YES
+
+TEST_TARGET=		check
 
 PTHREAD_OPTS+=		require
 
@@ -82,10 +84,6 @@ post-configure:
 		${MV} $${f}.fixed $${f};				\
 	done
 .endif
-
-test: build
-	cd ${WRKSRC} &&  ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
-		tee ${WRKDIR}/check.log
 
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
