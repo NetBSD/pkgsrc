@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.15 1999/02/20 22:48:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 1999/03/07 11:31:46 tron Exp $
 #
 
-DISTNAME=	gnome-libs-0.99.3
+DISTNAME=	gnome-libs-1.0.1
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-libs/ \
-		ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/gnome-libs/
+MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-1.0/sources/ \
+		ftp://ftp.jimpick.com/pub/mirrors/gnome/gnome-1.0/sources/ \
+		ftp://ftp.informatik.uni-bonn.de/pub/os/unix/gnome/gnome-1.0/sources/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
+DEPENDS+=	ORBit-0.4.0:../../corba/ORBit
+DEPENDS+=	imlib-1.9.4:../../graphics/imlib
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
-DEPENDS+=	imlib-1.9.0:../../graphics/imlib
-DEPENDS+=	ORBit-0.3.90:../../corba/ORBit
 
 NOT_FOR_ARCHS=	alpha	# problems with gtk
 
