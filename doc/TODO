@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2660 2004/12/05 09:43:15 jmmv Exp $
+$NetBSD: TODO,v 1.2661 2004/12/05 11:05:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -279,6 +279,7 @@ Suggested package updates
 	o Xaw3d-1.5E
 	o YoSucker-63
 	o aap-0.144
+	o abiword-2.2.1
 	o abiword1-1.0.7
 	o acpi-iasl-20040715
 	o adzap-20041124
@@ -421,6 +422,7 @@ Suggested package updates
 	o docbook-4.3
 	o docbook-website-2.5.0
 	o docsis-0.9.1
+	o dovecot-0.99.12
 	o dpkg-1.10.25
 	o drscheme-208
 	o dsssl-docbook-modular-1.79
@@ -615,6 +617,7 @@ Suggested package updates
 	o lcab-1.011
 	o lcc-4.2
 	o leafnode-1.10.7
+	o leafpad-0.7.8
 	o libast-0.6
 	o libcdio-0.71
 	o libcomprex-0.3.3
@@ -628,7 +631,7 @@ Suggested package updates
 	o libgnomemm26-2.8.0?
 	o libgnomeuimm26-2.8.0?
 	o libhydrogen-0.9.0
-	o libidn-0.5.11
+	o libidn-0.5.12
 	o libjit-0.0.4
 	o libksba-0.9.9
 	o liblive-2004.11.20
@@ -722,7 +725,7 @@ Suggested package updates
 	o nsca-1.2.0
 	o nsd-2.1.5
 	o nslint-2.1a3
-	o nut-10.11
+	o nut-10.12
 	o obexftp-0.10.6
 	o objc-3.2.6
 	o ocaml-3.08
@@ -932,6 +935,7 @@ Suggested package updates
 	o plplot-5.3.1
 	o pnet-0.6.8 [pkg/27013]
 	o pnet-0.6.10
+	o png-1.2.8
 	o poedit-1.3.1
 	o polsms-2.0.2
 	o poppy-4.01
@@ -944,7 +948,7 @@ Suggested package updates
 	o psgml-mode-1.3.1
 	o psmisc-21.5
 	o pstree-2.26
-	o pth-2.0.2
+	o pth-2.0.3
 	o puf-0.93.3
 	o puzzle-5.2
 	o pv-0.9.0
@@ -1004,7 +1008,7 @@ Suggested package updates
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
-	o raine-0.42.0
+	o raine-0.42.1
 	o randread-0.2
 	o raptor-1.4.2
 	o rasmol-2.7.2.1.1
@@ -1206,6 +1210,7 @@ Suggested package updates
 	o xpad-2.0
 	o xpuyopuyo-0.9.5
 	o xskat-4.0
+	o xterm-197
 	o xtide-2.7.1
 	o xtraceroute-0.9.1
 	o xtux-20030306
