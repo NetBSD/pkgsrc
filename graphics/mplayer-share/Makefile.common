@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.43 2003/10/26 14:04:41 tron Exp $
+# $NetBSD: Makefile.common,v 1.44 2003/10/26 14:26:25 tron Exp $
 #
 
 MPLAYER_DIST_VERSION=	1.0pre1
@@ -37,7 +37,6 @@ CONFIGURE_ARGS+=	--prefix="${PREFIX}" \
 			--with-extralibdir="${LOCALBASE}/lib" \
 			--with-extralibdir="${X11BASE}/lib" \
 			--disable-mpdvdkit \
-			--disable-gcc-checking \
 
 # The configure script attempts to test-execute compiled programs in /tmp,
 # but that directory may be mounted as noexec; work this around by setting
