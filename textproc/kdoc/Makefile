@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2001/03/27 03:20:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/27 09:30:30 skrll Exp $
 #
 
-DISTNAME=	kdoc-2.0.1b
-WRKSRC=		${WRKDIR}/kdoc-2.0.1
+DISTNAME=	kdoc-2.1
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/2.0.1/distribution/tar/generic/src/ \
-		ftp://ftp.us.kde.org/pub/kde/stable/2.0.1/distribution/tar/generic/src/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/2.0.1/distribution/tar/generic/src/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src/ \
+		ftp://ftp.us.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src/
 EXTRACT_SUFX=   .tar.bz2
 
 MAINTAINER=	wulf@netbsd.org
