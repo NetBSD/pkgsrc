@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.181 2003/01/13 10:13:08 wiz Exp $
+$NetBSD: TODO,v 1.182 2003/01/13 19:40:09 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -244,8 +244,6 @@ Suggested package updates
 	o xerces-c-2.1.0 [heinz]
 	o xfstt-1.4
 	o xmcd-3.2.0
-	o xmame-0.62.2
-	o xmess-0.62.2
 	o xpuyopuyo-0.9.5
 	o xsidplay-1.6.5pre20
 	o yudit-2.7.2
