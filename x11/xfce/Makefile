@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2001/06/11 06:34:59 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/09/14 16:11:55 wiz Exp $
 
-DISTNAME=		xfce-3.6.3
+DISTNAME=		xfce-3.8.6
 CATEGORIES=		x11
 MASTER_SITES=		http://www.xfce.org/archive/
 
