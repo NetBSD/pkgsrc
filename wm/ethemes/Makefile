@@ -1,9 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/09/04 13:09:43 salo Exp $
-
-#
-# There is no distinfo file since the files change contents so often on the
-# master site
-#
+# $NetBSD: Makefile,v 1.10 2003/11/21 09:31:15 wiz Exp $
 
 DISTNAME=	ethemes-0.1
 PKGREVISION=	2
@@ -21,7 +16,6 @@ DIST_SUBDIR=	ethemes
 USE_X11=	yes
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
-NO_CHECKSUM=	yes
 EXTRACT_ONLY=
 
 E_DATADIR=	share/enlightenment/themes
