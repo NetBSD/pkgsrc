@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/01/17 03:44:27 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/17 04:40:15 jlam Exp $
 
 DISTNAME=	rx-1.5
 CATEGORIES=	devel
@@ -19,8 +19,6 @@ INFO_FILES=	rx.info
 RX_MAJOR=	0
 RX_MINOR=	0
 MAKE_ENV+=	RX_MAJOR="${RX_MAJOR}" RX_MINOR="${RX_MINOR}"
-
-ALL_TARGET=	all info
 
 post-install:
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} ${INFO_FILES} ${PREFIX}/info
