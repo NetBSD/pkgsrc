@@ -1,11 +1,11 @@
---- krn/kdecode.cpp.old	Wed Nov 12 21:56:57 1997
-+++ krn/kdecode.cpp	Fri Mar 20 23:15:21 1998
-@@ -9,7 +9,7 @@
+--- krn/kdecode.cpp.orig	Tue Apr 28 22:17:41 1998
++++ krn/kdecode.cpp	Tue Jul 14 23:22:25 1998
+@@ -13,7 +13,7 @@
  #include <qstrlist.h>
  #include <kconfig.h>
  #include <kapp.h>
 -#include <uudeview.h>
 +#include <uu.h>
- #include <mimelib/mimepp.h>
+ //#include <mimelib/mimepp.h>
  #include "ktempfile.h"
  #include <kapp.h>
