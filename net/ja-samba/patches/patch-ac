@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.3 2003/03/29 08:18:49 taca Exp $
+$NetBSD: patch-ac,v 1.4 2003/05/27 15:59:09 taca Exp $
 
---- configure.orig	2003-02-12 16:00:58.000000000 +0900
+--- configure.orig	2003-05-20 12:13:24.000000000 +0900
 +++ configure
-@@ -20306,6 +20306,49 @@ _ACEOF
- fi
+@@ -20408,6 +20408,49 @@ echo "${ECHO_T}no" >&6
  
+ fi;
  
 +echo $ac_n "checking for __libc_sched_setscheduler in -lc""... $ac_c" 1>&6
 +echo "configure:11950: checking for __libc_sched_setscheduler in -lc" >&5
@@ -50,9 +50,9 @@ $NetBSD: patch-ac,v 1.3 2003/03/29 08:18:49 taca Exp $
 +
 +
  #################################################
- # check for pam_smbpass support
- echo "$as_me:$LINENO: checking whether to use pam_smbpass" >&5
-@@ -26356,6 +26399,7 @@ s,@TERMLIBS@,$TERMLIBS,;t t
+ # check for a NISPLUS password database
+ echo "$as_me:$LINENO: checking whether to use NISPLUS SAM database" >&5
+@@ -25919,6 +25962,7 @@ s,@TERMLIBS@,$TERMLIBS,;t t
  s,@TERMLDFLAGS@,$TERMLDFLAGS,;t t
  s,@ROFF@,$ROFF,;t t
  s,@DYNEXP@,$DYNEXP,;t t
