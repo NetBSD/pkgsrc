@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/24 18:06:22 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/10 17:45:55 tsarna Exp $
 #
 
 DISTNAME=	Python-2.2.1
@@ -20,13 +20,9 @@ PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 PLIST_SRC=	${PKGDIR}/PLIST.common ${PKGDIR}/PLIST.${LOWER_OPSYS} \
 		${PKGDIR}/PLIST.common_end
 
-CONFIGURE_ARGS+=	--without-mpz --without-gdbm
-
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--without-threads
 .endif
-
-PLIST_SRC+=	
 
 INSTALL_TARGET=	altinstall
 
