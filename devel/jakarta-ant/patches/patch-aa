@@ -1,9 +1,11 @@
---- build.xml.orig	Wed Apr  3 15:37:20 2002
-+++ build.xml	Wed Apr  3 15:40:10 2002
-@@ -248,6 +248,7 @@
+--- build.xml.orig	Thu Oct 11 09:58:31 2001
++++ build.xml	Fri Apr 19 13:18:12 2002
+@@ -247,7 +247,8 @@
+       <exclude name="${optional.package}/jdepend/*" unless="jdepend.present" />
        <exclude name="${optional.package}/sitraka/**" unless="jakarta.oro.present"/>
        <exclude name="${optional.package}/metamata/MAudit*" unless="jakarta.oro.present"/>
-       <exclude name="${optional.package}/metamata/**" unless="jdk1.2+" />
+-      <exclude name="${optional.package}/metamata/**" unless="jdk1.2+" />
++      <exclude name="${optional.package}/metamata/**" />
 +      <exclude name="${optional.package}/TraXLiaison.java" unless="trax.impl.present" />
      </javac>
      
