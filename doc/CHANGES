@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7372 2004/10/07 16:17:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.7373 2004/10/07 17:30:05 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4572,3 +4572,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tuxpaint-stamps to 2004.10.03 [wiz 2004-10-07]
 	Added tuxpaint-config to 0.0.5 [wiz 2004-10-07]
 	Updated epiphany to 1.4.3 [jmmv 2004-10-07]
+	Updated exim to 4.43 [abs 2004-10-07]
+	Updated exim-exiscan to 4.43_28 [abs 2004-10-07]
+	Updated exim-html to 4.40 [abs 2004-10-07]
+
