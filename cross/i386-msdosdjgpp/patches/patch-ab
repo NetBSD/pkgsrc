@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 1998/08/12 12:30:59 tv Exp $
+$NetBSD: patch-ab,v 1.2 1998/08/13 13:30:57 tv Exp $
 
---- djgpp/include/sys/djtypes.h.orig	Mon Aug  3 09:21:37 1998
-+++ djgpp/include/sys/djtypes.h	Mon Aug  3 09:36:57 1998
+--- ../djgpp/include/sys/djtypes.h.orig	Mon Aug  3 09:21:37 1998
++++ ../djgpp/include/sys/djtypes.h	Mon Aug  3 09:36:57 1998
 @@ -2,15 +2,21 @@
  #ifndef __DJ_sys_djtypes_h_
  #define __DJ_sys_djtypes_h_
