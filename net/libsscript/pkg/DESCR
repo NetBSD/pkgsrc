@@ -1,0 +1,4 @@
+  Socket Script Lib is a simple library which can be used to create
+network-oriented software in C.  It provides functions to do common
+socket features.  It is based on the Socket Script scripting
+language created in 1997.
