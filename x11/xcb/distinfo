@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:44 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:50 skrll Exp $
 
-MD5 (xcb-2.3.tar.gz) = eadb95febb5490f6414d11f689aeac75
+SHA1 (xcb-2.3.tar.gz) = 75fc99971f0b002ba3d13fd03082b5b70cfb5715
+Size (xcb-2.3.tar.gz) = 16940 bytes

@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:08 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:40 skrll Exp $
 
-MD5 (kdebase-1.1.2.tar.bz2) = 330492b058e8087fca7f1ce350363254
-MD5 (Daemon.README) = d9b6293606deccc7b7d4cfbe80b12291
-MD5 (Daemon.png) = b5240009171ebb04560e00b24adf52f9
+SHA1 (kdebase-1.1.2.tar.bz2) = d48e7f48f1b6305c37b0a4b42c017e525bee012b
+Size (kdebase-1.1.2.tar.bz2) = 7181379 bytes
+SHA1 (Daemon.png) = e77a42c644beecd66c4b95c0ae68c08c728a4e6d
+Size (Daemon.png) = 15725 bytes
+SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
+Size (Daemon.README) = 2191 bytes
 SHA1 (patch-aa) = f5cbf17ad7cc49613fa0377995b2922da6166148
 SHA1 (patch-ab) = f34c3a13e01ed2ba49beef268a4d42d6dc5e8b78
 SHA1 (patch-ac) = 0439450208f093dd7bae6b4bea6dd5067cbe0989

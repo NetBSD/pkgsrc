@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:14:44 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:36 skrll Exp $
 
-MD5 (aterm-0.4.0.tar.gz) = ae09530c1721681e151a2048146d7fd0
+SHA1 (aterm-0.4.0.tar.gz) = 20507c5204bbd5137391d2aa0bea922eb0a3fc88
+Size (aterm-0.4.0.tar.gz) = 304950 bytes
 SHA1 (patch-aa) = c41c6273d0c19577bfe1cda4cc3496554e6d9de9

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:41 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:48 skrll Exp $
 
-MD5 (x3270-3213.tgz) = 287ac7df34e67bddc0cc298a626e0ffe
+SHA1 (x3270-3213.tgz) = ce92607384f72761bd85bc7f5cd37d59f52a4452
+Size (x3270-3213.tgz) = 500073 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:35 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:46 skrll Exp $
 
-MD5 (wmessage-0.8.tar.gz) = 84a2bbc60bda2bcc7e050614b07b21a9
+SHA1 (wmessage-0.8.tar.gz) = 07782d6ce8be9662bce99653ca3c44109e7a9f11
+Size (wmessage-0.8.tar.gz) = 15762 bytes
 SHA1 (patch-aa) = 93c9b769b1c5e652aa114f373d6b195a234e39dc
 SHA1 (patch-ab) = b3bf6c311ad8d0f4080ceb2e6aab29177d1f569c
 SHA1 (patch-ac) = 69a032cbbf5d4ecca497c90a89316a700301a5e4

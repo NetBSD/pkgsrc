@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:14:47 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:36 skrll Exp $
 
-MD5 (dxpc-3.7.0.tar.gz) = 9b9b6605e46bf1731d44e150049a019e
+SHA1 (dxpc-3.7.0.tar.gz) = 06b6b7d555c3f1b40e61f54cabddc65ddf619d25
+Size (dxpc-3.7.0.tar.gz) = 109529 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:49 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:53 skrll Exp $
 
-MD5 (xearth-1.1.tar.gz) = 6e409dffaa8dc5fae1064e38935ab61f
+SHA1 (xearth-1.1.tar.gz) = 5b664648ff592d6f29a96a17823ec59db4958b1d
+Size (xearth-1.1.tar.gz) = 157887 bytes

@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:16:10 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:58 skrll Exp $
 
-MD5 (xmx-2.1alpha.pl7.tar.gz) = bb8f7d05113c82a95d1a00ddc947b378
+SHA1 (xmx-2.1alpha.pl7.tar.gz) = b517b20a7bfa352b12ffb7dd260d50ea6c1ec21b
+Size (xmx-2.1alpha.pl7.tar.gz) = 498352 bytes

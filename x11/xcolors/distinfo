@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:50 skrll Exp $
 
-MD5 (xcolors.tar.gz) = IGNORE
+SHA1 (xcolors.tar.gz) = IGNORE
 SHA1 (patch-aa) = 3dd0444d505850b22373ca2ceaf209383f1fc7b7

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:26 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:44 skrll Exp $
 
-MD5 (ruby-gtk-0.23.tar.gz) = 054100d5651024af90b36cb8c2401982
+SHA1 (ruby-gtk-0.23.tar.gz) = 4bb68929c8096ae7f35d63ee6a59c773a18ad288
+Size (ruby-gtk-0.23.tar.gz) = 295430 bytes
 SHA1 (patch-aa) = 70d5e707f520578f0c4dc219ee346fab6ce309ed

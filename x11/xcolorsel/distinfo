@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:51 skrll Exp $
 
-MD5 (xcolorsel-1.1a-src.tar.gz) = b802c50bf32ea8909827d373c5bfbb8f
+SHA1 (xcolorsel-1.1a-src.tar.gz) = 398df69d3c5ac99ee21b1e19100b98f385a1666c
+Size (xcolorsel-1.1a-src.tar.gz) = 67359 bytes
 SHA1 (patch-aa) = 1dbdc4ab8a347ff904016a8fc1401063652b221a
 SHA1 (patch-ab) = f6dcb6895bb4013d2a433d164516dd41fc4cd47d
 SHA1 (patch-ac) = 8bbdcba8de4d69450459512b1527c729a24760a1

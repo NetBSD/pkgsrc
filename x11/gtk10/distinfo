@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:05 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:39 skrll Exp $
 
-MD5 (gtk+-1.0.6.tar.gz) = 9e0bbb878e6b0905a0c0146adfdd4146
+SHA1 (gtk+-1.0.6.tar.gz) = 41a144ccbcafe974d2b1adc7adc8e6857654e146
+Size (gtk+-1.0.6.tar.gz) = 1299144 bytes
 SHA1 (patch-aa) = 9bd430722cab37b31bf8dfb7d5f3b6f6d4457ed9
 SHA1 (patch-ab) = f27544bda9926ab783891d2cd75aa305a71c6a7c
 SHA1 (patch-ac) = 5e97cc40be37bdf3b2b273d5feabb009d0732d8f

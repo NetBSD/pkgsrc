@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:16:31 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:08:02 skrll Exp $
 
-MD5 (xworld-2.0.tar.gz) = 226cbd2b0698d8d9e5f56851d9c90e5e
+SHA1 (xworld-2.0.tar.gz) = 99217a8f0b63ef8685c5508fbbff4f5d7bb9b9a8
+Size (xworld-2.0.tar.gz) = 113385 bytes
 SHA1 (patch-aa) = a9ec5f66cbd033e65cfe4a569ec0490e0724100d
 SHA1 (patch-ab) = 60d1591c3c155e9fbf6bac094b20cd6a6df73df0
 SHA1 (patch-ac) = f008b4140f3f27be2c6a05a3ece2c74f0a3e2899

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:40 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:48 skrll Exp $
 
-MD5 (x2x-1.27.tar.gz) = 3d1bc863f3209ec37caf7f57bde7e8f0
+SHA1 (x2x-1.27.tar.gz) = ff817f2c9ce5b99f1d1cbb58efcc2c5e8bdbe94f
+Size (x2x-1.27.tar.gz) = 16776 bytes
 SHA1 (patch-man) = 836928297a81c46b380ad0ccf9cf62148fa49d89

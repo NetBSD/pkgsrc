@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:15:26 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:44 skrll Exp $
 
-MD5 (ruby-1.4.6.tar.gz) = 3c910657b164749d9b98d7448df17f9a
+SHA1 (ruby-1.4.6.tar.gz) = 662e21cd2f6bf521a77ab179e11b669738579cc5
+Size (ruby-1.4.6.tar.gz) = 775123 bytes
