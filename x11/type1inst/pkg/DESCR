@@ -1,0 +1,8 @@
+type1inst is a small perl script which generates the
+"fonts.scale" file required by an X11 server to use any
+Type 1 PostScript fonts which exist in a particular
+directory.  It gathers this informatiom from the font files
+themselves, a task which previously was done by hand.  The
+script is also capable of generating the similar "Fontmap"
+file used by ghostscript.  It can also generate sample sheets
+for the fonts.
