@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/07/11 09:31:33 agc Exp $
+# $NetBSD: Makefile,v 1.7 2000/07/11 10:39:05 agc Exp $
 
 DISTNAME=	xfce-3.3.1
 CATEGORIES=	x11
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	XFCE_LOCALE_DIR=${PREFIX}/share/locale
 CONFIGURE_ARGS+=--without-included-gettext \
 		--datadir=${PREFIX}/share \
-		--with-imlib=${X11BASE} \
+		--with-imlib=`${PKG_INFO} -qp imlib | ${AWK} '{print $$2}'` \
 		--with-xpm=`${PKG_INFO} -qp xpm | ${AWK} '{print $$2}'`
 USE_GMAKE=	yes
 
