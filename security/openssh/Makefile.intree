@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.intree,v 1.2 2002/06/28 18:00:45 jlam Exp $
+# $NetBSD: Makefile.intree,v 1.3 2002/06/28 18:34:14 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,6 +35,8 @@ LOCALBASE:=		/usr
 PKG_SYSCONFBASE:=	/etc
 MANDIR:=		share/man
 RCD_SCRIPTS_EGDIR:=	share/examples/openssh
+.else
+IGNORE=		"Unable to update in-tree OpenSSH for ${OPSYS}-${OS_VERSION}."
 .endif
 
 real-tarball:
