@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2004/01/21 14:08:24 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.67 2004/02/14 11:31:50 jlam Exp $
 
-DISTNAME=		openldap-2.1.22
-PKGREVISION=		3
+DISTNAME=		openldap-2.1.25
 SVR4_PKGNAME=		oldap
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
@@ -18,10 +16,10 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
-USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
-
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PTHREAD_OPTS+=		require
 
 TEST_TARGET=		test
 
@@ -32,14 +30,15 @@ PKG_SYSCONFSUBDIR=	openldap
 #
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var/openldap
+CONFIGURE_ARGS+=	--enable-bdb
+CONFIGURE_ARGS+=	--enable-crypt
 CONFIGURE_ARGS+=	--enable-dnssrv
 CONFIGURE_ARGS+=	--enable-ldap
+CONFIGURE_ARGS+=	--enable-ldbm
 CONFIGURE_ARGS+=	--enable-passwd
 CONFIGURE_ARGS+=	--enable-wrappers
 CONFIGURE_ARGS+=	--with-tls=openssl
 CONFIGURE_ARGS+=	--without-readline
-CONFIGURE_ARGS+=	--enable-ldbm
-CONFIGURE_ARGS+=	--enable-crypt
 
 BUILD_DEFS+=		USE_SASL USE_SASL2
 
@@ -90,7 +89,18 @@ CONF_FILES_PERMS+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}	\
 .for FILE in ${SUPPS}
 SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
 .endfor
-RCD_SCRIPTS=		slapd
+RCD_SCRIPTS=		slapd slurpd
+
+.include "../../databases/db4/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
+.if ${PTHREAD_TYPE} == "native"
+CONFIGURE_ARGS+=	--with-threads
+.elif ${PTHREAD_TYPE} == "pth"
+CONFIGURE_ARGS+=	--with-threads=pth
+.endif
 
 post-install:
 	${_ULIMIT_CMD}cd ${WRKSRC}/libraries/libldap;			\
@@ -98,19 +108,5 @@ post-install:
 	${_ULIMIT_CMD}cd ${WRKSRC}/servers/slapd;			\
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install-conf sysconfdir=${EGDIR}; \
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install-schema sysconfdir=${EGDIR}
-
-.include "../../databases/db4/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
-CONFIGURE_ARGS+=	--with-threads
-PLIST_SRC=		${.CURDIR}/PLIST.slurpd ${.CURDIR}/PLIST
-.else
-# --without-threads is recommended with back-shell
-#
-CONFIGURE_ARGS+=	--without-threads --enable-shell
-.endif
 
 .include "../../mk/bsd.pkg.mk"

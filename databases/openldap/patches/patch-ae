@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2003/12/04 14:48:17 agc Exp $
+$NetBSD: patch-ae,v 1.2 2004/02/14 11:31:50 jlam Exp $
 
---- servers/slapd/back-bdb/init.c.orig	2003-11-17 21:31:19.000000000 +0100
+--- servers/slapd/back-bdb/init.c.orig	Sat Nov 29 04:59:10 2003
 +++ servers/slapd/back-bdb/init.c
-@@ -460,17 +460,19 @@ bdb_db_close( BackendDB *be )
+@@ -461,17 +461,19 @@ bdb_db_close( BackendDB *be )
  	bdb_cache_release_all (&bdb->bi_cache);
  
  #ifdef SLAP_IDL_CACHE
