@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.4 2002/01/18 09:23:58 martin Exp $
+$NetBSD: distinfo,v 1.5 2003/12/14 15:12:11 wiz Exp $
 
-SHA1 (gpa-0.4.3.tar.gz) = a0fab8d335ab8127bd6e4386bd4a09d0f08ce42f
-Size (gpa-0.4.3.tar.gz) = 424975 bytes
-SHA1 (patch-aa) = 91dfb9e3349cb1f0134151ffb71d713b7e6f118a
+SHA1 (gpa-0.7.0.tar.gz) = cdaf03fab206b91b7b425673c2526bf56a482419
+Size (gpa-0.7.0.tar.gz) = 647457 bytes
