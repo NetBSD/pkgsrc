@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/09/28 09:13:56 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2003/12/14 10:10:52 cjs Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -14,6 +14,7 @@ CONFLICTS+=		vim-xaw-[0-9]*
 
 CONFIGURE_ARGS+=	--enable-gui=no --without-x
 CONFIGURE_ARGS+=	--with-tlib=ncurses
+CONFIGURE_ARGS+=	--enable-multibyte
 
 ALL_TARGET=		vim
 INSTALL_TARGET=		installvimbin
@@ -25,4 +26,5 @@ post-install:
 	done
 
 .include "../../devel/ncurses/buildlink2.mk"
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
