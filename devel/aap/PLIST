@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/18 12:49:31 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/23 22:34:22 cjep Exp $
 bin/aap
 lib/aap/Exec-${PKGVERSION}/Action.py
 lib/aap/Exec-${PKGVERSION}/Action.pyc
@@ -99,6 +99,9 @@ lib/aap/Exec-${PKGVERSION}/__init__.py
 lib/aap/Exec-${PKGVERSION}/__init__.pyc
 lib/aap/Exec-${PKGVERSION}/__init__.pyo
 lib/aap/Exec-${PKGVERSION}/aap
+lib/aap/Exec-${PKGVERSION}/aap.py
+lib/aap/Exec-${PKGVERSION}/aap.pyc
+lib/aap/Exec-${PKGVERSION}/aap.pyo
 lib/aap/Exec-${PKGVERSION}/aapnetrc.py
 lib/aap/Exec-${PKGVERSION}/aapnetrc.pyc
 lib/aap/Exec-${PKGVERSION}/aapnetrc.pyo

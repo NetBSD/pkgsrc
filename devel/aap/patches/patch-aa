@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/11/18 12:49:31 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2002/11/23 22:34:23 cjep Exp $
 
---- main.aap.orig	Sun Nov  3 22:00:26 2002
+--- main.aap.orig	Thu Nov 14 09:17:37 2002
 +++ main.aap
 @@ -41,19 +41,21 @@
  	@if not os.access(PREFIX, os.W_OK):
@@ -27,5 +27,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/11/18 12:49:31 cjep Exp $
 +#	    :print Creating a symbolic link for "aap" in $PREFIX/share/doc
 +#	    :sys ln -fs $dir/doc $PREFIX/share/doc
      @else:
- 	:print On this system you will have to do it manually:
- 	:print Add the directory "`os.getcwd()`" to your $$PATH
+ 	:print On this system you will have to do this manually:
+ 	:print 1. Add the directory "`os.getcwd()`" to your $$PATH
