@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.23 2002/05/19 12:44:59 schmonz Exp $
+# $NetBSD: defs.Darwin.mk,v 1.24 2002/06/02 00:40:18 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -55,6 +55,7 @@ TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
 
+CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	# use the GNU cpp, not the OS X cpp
 DEF_UMASK?=		0022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 GROUPADD?=		${FALSE}			# XXX - Fix me!
