@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/10/11 12:11:41 grant Exp $
+
+--- configure.orig	1995-04-21 06:10:14.000000000 +1000
++++ configure
+@@ -624,7 +624,7 @@ test -z "$INSTALL_PROGRAM" && INSTALL_PR
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
+ 
+ echo $ac_n "checking whether ${MAKE-make} sets \$MAKE""... $ac_c" 1>&4
+-set dummy ${MAKE-make}; ac_make=$2
++set dummy `basename ${MAKE-make}`; ac_make=$2
+ if eval "test \"`echo '${'ac_cv_prog_make_${ac_make}_set'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&4
+ else
