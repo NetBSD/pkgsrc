@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/06/21 08:30:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.21 2004/06/21 08:32:05 xtraeme Exp $
 
 DISTNAME=		dovecot-0.99.10.6
 CATEGORIES=		mail
@@ -18,7 +18,7 @@ USE_PKGINSTALL= 	YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--localstatedir=/var
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-ssldir=${SSLCERTS}
 
 # Avoid an ICE in gcc2 on sparc64
