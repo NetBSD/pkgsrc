@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2001/02/27 22:11:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/05/02 22:22:44 jlam Exp $
 bin/mkstrip
 bin/extdgts
 libdata/wwwcount/digits/A/peng.gif
@@ -102,4 +102,3 @@ man/man1/mkstrip.1
 @dirrm share/doc/wwwcount/Count2.5/eximages
 @dirrm share/doc/wwwcount/Count2.5
 @dirrm share/doc/wwwcount
-@unexec rmdir %D/libexec/cgi-bin 2>/dev/null || true
