@@ -1,0 +1,25 @@
+$NetBSD: patch-ap,v 1.1 2000/06/16 14:16:55 pooka Exp $
+--- lib/libxview/base/xv_error.c.orig	Tue Jun 29 07:14:42 1993
++++ lib/libxview/base/xv_error.c	Sat Jan  8 02:04:40 2000
+@@ -11,15 +11,20 @@
+  */
+ 
+ #include <stdio.h>
++#include <sys/param.h>
+ #include <xview/pkg_public.h>
+ #include <X11/Xlib.h>
+ #include <xview_private/i18n_impl.h>
+ #include <xview_private/portable.h>
+ 
+ /* Unix system error variables */
++#if (defined(BSD) && (BSD >= 199306))
++#include <errno.h>
++#else
+ extern int      sys_nerr;
+-extern char    *sys_errlist[];
+ extern int      errno;
++extern char    *sys_errlist[];
++#endif
+ 
+ Xv_private_data char *xv_app_name;
+ Xv_private int (*xv_error_proc) ();
