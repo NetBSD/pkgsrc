@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2003/11/11 11:53:56 wiz Exp $
+$NetBSD: distinfo,v 1.5 2004/07/19 13:47:51 wiz Exp $
 
-SHA1 (superlu_3.0.tar.gz) = 8c05fc06fe4e349d9945e3164fd1d3efc8fcc991
-Size (superlu_3.0.tar.gz) = 1105196 bytes
-SHA1 (patch-aa) = 196ec71f5bd05f92462e27f050a500d094d28c16
-SHA1 (patch-ab) = 568122da7d4879e967725ae15bc69b103cedddc6
+SHA1 (superlu-3.0.1/superlu_3.0.tar.gz) = 662803e2c2ec6c604884ba356219dec98eae0976
+Size (superlu-3.0.1/superlu_3.0.tar.gz) = 1116795 bytes
+SHA1 (patch-aa) = e35d3e257b091a9241f41c81b211de10af65f321
