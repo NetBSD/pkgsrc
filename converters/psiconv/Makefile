@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/12 20:33:02 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/07/09 06:25:31 sakamoto Exp $
 #
 
 DISTNAME=	psiconv-0.6.1
@@ -13,16 +13,14 @@ COMMENT=	PSION 5 file format data conversion utilities
 DEPENDS+=	libgetopt-[0-9]*:../../devel/libgetopt
 LIBS=		-lgetopt
 .endif
-DEPENDS+=	ImageMagick>=5.2.2:../../graphics/ImageMagick
 
-MAGICK_CONFIG=	${LOCALBASE}/bin/Magick-config
+.include "../../graphics/ImageMagick/buildlink.mk"
 
 USE_X11=	YES
 USE_LIBTOOL=	YES
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 GNU_CONFIGURE=	YES
-CPPFLAGS+=	`${MAGICK_CONFIG} --cppflags` -DIMAGEMAGICK
-LIBS+=		`${MAGICK_CONFIG} --libs`
+CPPFLAGS+=	-DIMAGEMAGICK
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/psiconv
