@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/07/17 21:35:21 grant Exp $
+# $NetBSD: Makefile,v 1.23 2003/08/30 18:53:07 jlam Exp $
 #
 
 DISTNAME=		compat12-${MACHINE_ARCH}
@@ -13,11 +13,15 @@ COMMENT=		Shared libraries for NetBSD 1.2 (and earlier) compatibility
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-ns32k \
 			NetBSD-*-sparc
 
+NO_BUILD=		# defined
 NO_MTREE=		# defined
 SHLIB_HANDLING=		NO
+USE_PKGINSTALL=		YES
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
+FILES_SUBST+=		COMPAT_LIBDIR=${COMPAT_LIBDIR}
+FILES_SUBST+=		MACHINE_ARCH=${MACHINE_ARCH}
+FILES_SUBST+=		OBJECT_FMT=${OBJECT_FMT}
+FILES_SUBST+=		LDCONFIG=${LDCONFIG}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,21 +37,8 @@ COMPAT_LIBDIR=		lib
 
 PLIST_SUBST+=		COMPAT_LIBDIR=${COMPAT_LIBDIR}
 
-do-build:
-	${SED}	-e "s,@MACHINE_ARCH@,${MACHINE_ARCH},g" \
-		-e "s,@COMPAT_LIBDIR@,${COMPAT_LIBDIR},g" \
-		-e "s,@LDCONFIG@,${LDCONFIG},g" \
-		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}  -e "s,@MACHINE_ARCH@,${MACHINE_ARCH},g" \
-		-e "s,@OBJECT_FMT@,${OBJECT_FMT},g" \
-		-e "s,@LDCONFIG@,${LDCONFIG},g" \
-		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${COMPAT_LIBDIR}
 	${INSTALL_DATA} ${WRKDIR}/lib*.so* ${PREFIX}/${COMPAT_LIBDIR}
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
