@@ -1,4 +1,4 @@
-/*	$NetBSD: if_tap.c,v 1.4 2005/02/27 10:39:52 cube Exp $	*/
+/*	$NetBSD: if_tap.c,v 1.5 2005/03/24 22:39:07 cube Exp $	*/
 
 /*
  *  Copyright (c) 2003, 2004 The NetBSD Foundation.
@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__KERNEL_RCSID(0, "$NetBSD: if_tap.c,v 1.4 2005/02/27 10:39:52 cube Exp $");
+__KERNEL_RCSID(0, "$NetBSD: if_tap.c,v 1.5 2005/03/24 22:39:07 cube Exp $");
 
 #if defined(_KERNEL_OPT)
 #include "bpfilter.h"
@@ -259,7 +259,7 @@ tap_attach(struct device *parent, struct device *self, void *aux)
 	struct tap_softc *sc = (struct tap_softc *)self;
 	struct ifnet *ifp;
 	u_int8_t enaddr[ETHER_ADDR_LEN] =
-	    { 0xf0, 0x0b, 0xa4, 0xff, 0xff, 0xff };
+	    { 0xf2, 0x0b, 0xa4, 0xff, 0xff, 0xff };
 	char enaddrstr[18];
 	uint32_t ui;
 	int error;
@@ -331,7 +331,7 @@ tap_attach(struct device *parent, struct device *self, void *aux)
 	    &node, CTLFLAG_READWRITE,
 	    CTLTYPE_STRING, sc->sc_dev.dv_xname, NULL,
 	    tap_sysctl_handler, 0, sc, 18,
-	    CTL_NET, PF_LINK, tap_node, sc->sc_dev.dv_unit, CTL_EOL)) != 0)
+	    CTL_NET, AF_LINK, tap_node, sc->sc_dev.dv_unit, CTL_EOL)) != 0)
 		aprint_error("%s: sysctl_createv returned %d, ignoring\n",
 		    sc->sc_dev.dv_xname, error);
 
@@ -384,7 +384,7 @@ tap_detach(struct device* self, int flags)
 	 * sysctl_destroyv.  One should be sure to always end the path with
 	 * CTL_EOL.
 	 */
-	if ((error = sysctl_destroyv(NULL, CTL_NET, PF_LINK, tap_node,
+	if ((error = sysctl_destroyv(NULL, CTL_NET, AF_LINK, tap_node,
 	    sc->sc_dev.dv_unit, CTL_EOL)) != 0)
 		aprint_error("%s: sysctl_destroyv returned %d, ignoring\n",
 		    sc->sc_dev.dv_xname, error);
@@ -1220,7 +1220,7 @@ SYSCTL_SETUP(sysctl_tap_setup, "sysctl net.link.tap subtree setup")
 	    CTLFLAG_PERMANENT,
 	    CTLTYPE_NODE, "link", NULL,
 	    NULL, 0, NULL, 0,
-	    CTL_NET, PF_LINK, CTL_EOL)) != 0)
+	    CTL_NET, AF_LINK, CTL_EOL)) != 0)
 		return;
 
 	/*
@@ -1240,7 +1240,7 @@ SYSCTL_SETUP(sysctl_tap_setup, "sysctl net.link.tap subtree setup")
 	    CTLFLAG_PERMANENT,
 	    CTLTYPE_NODE, "tap", NULL,
 	    NULL, 0, NULL, 0,
-	    CTL_NET, PF_LINK, CTL_CREATE, CTL_EOL)) != 0)
+	    CTL_NET, AF_LINK, CTL_CREATE, CTL_EOL)) != 0)
 		return;
 	tap_node = node->sysctl_num;
 }
