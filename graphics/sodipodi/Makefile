@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/07/12 22:51:27 mycroft Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/01 06:40:54 jlam Exp $
 #
 
 DISTNAME=	sodipodi-0.23
@@ -17,7 +17,7 @@ USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 
-PTHREAD_TYPE=	native pth
+PTHREAD_OPTS+=		require
 
 .include "../../devel/bonobo/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2001/12/04 15:55:47 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2002/08/01 06:40:52 jlam Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
 CATEGORIES=	databases
@@ -21,8 +21,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--enable-threads
-CONFIGURE_ARGS+=	--enable-gnuthreads
-CONFIGURE_ARGS+=	--with-pth=${BUILDLINK_DIR}
+PTHREAD_OPTS+=		require
 
 # Override the local definitions that point to the self-contained libtool
 # convenience library.  We want the one installed by pkgsrc.  Also override
@@ -59,4 +58,9 @@ fix-ltdl-and-lexlib:
 	done
 
 .include "../../devel/libtool/buildlink.mk"
-.include "../../devel/pth/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
+CONFIGURE_ARGS+=	--enable-gnuthreads
+CONFIGURE_ARGS+=	--with-pth=${BUILDLINK_DIR}
+.endif

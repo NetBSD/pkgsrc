@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/03/13 17:37:04 fredb Exp $
+# $NetBSD: Makefile,v 1.26 2002/08/01 06:40:54 jlam Exp $
 
 DISTNAME=		ClanLib-0.4.4
 PKGREVISION=		1
@@ -13,6 +13,7 @@ USE_BUILDLINK_ONLY=	yes
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
+PTHREAD_OPTS+=		require
 
 .if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--enable-asm386
@@ -38,7 +39,7 @@ post-patch:
 .include "../../graphics/hermes/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/Mesa/buildlink.mk"
-.include "../../devel/pth/buildlink.mk"
+.include "../../mk/pthread.buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
