@@ -1,0 +1,10 @@
+--- Makefile.in.orig	2003-05-03 18:17:47.000000000 +0200
++++ Makefile.in	2003-05-03 18:18:40.000000000 +0200
+@@ -76,7 +76,6 @@
+         done
+ 	@echo "Installing defaults, icons and themes in $(DESTDIR)$(LIBDIR)"
+ 	@$(INSTALLDIR) $(DESTDIR)$(LIBDIR)
+-	@$(INSTALLDIR) $(DESTDIR)$(CFGDIR)
+ 	@for lib in $(LIBFILES) ; do \
+             $(INSTALLLIB) "$$lib" $(DESTDIR)$(LIBDIR); \
+         done

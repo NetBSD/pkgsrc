@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2003/04/27 12:44:29 cjep Exp $
+# $NetBSD: Makefile.common,v 1.19 2003/05/03 16:38:12 jmmv Exp $
 
 DISTNAME=		icewm-1.2.0
 CATEGORIES=		x11 wm
@@ -10,6 +10,7 @@ HOMEPAGE=		http://icewm.sourceforge.net/
 GNU_CONFIGURE=		# defined
 USE_X11BASE=		# defined
 USE_GMAKE=		# defined
+USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	# defined
 BUILD_USES_MSGFMT=	# defined
 
@@ -24,6 +25,8 @@ CONFIGURE_ARGS+=	--disable-apm
 .endif
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
+PKG_SYSCONFSUBDIR=	icewm
+
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 CPPFLAGS+=		-DSTART_PIXMAP=\"\\\"bsd-daemon.xpm\\\"\"
 .endif
@@ -34,6 +37,8 @@ INSTALL_TARGET=		install-base install-nls
 
 post-extract:
 	${CP} ${FILES} ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
+	${MV} ${WRKSRC}/po/zh_CN.gb2312.po ${WRKSRC}/po/zh_CN.GB2312.po
+	${MV} ${WRKSRC}/po/zh_CN.gb2312.pox ${WRKSRC}/po/zh_CN.GB2312.pox
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${HTMLDIR}
