@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3227 2003/09/03 17:44:42 wiz Exp $
+$NetBSD: CHANGES,v 1.3228 2003/09/03 18:25:58 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3512,3 +3512,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated audit-packages to 1.19 [tron 2003-09-03]
 	Updated libnbcompat to 20030827 [jlam 2003-09-03]
 	Updated xscavenger to 1.4.4 [wiz 2003-09-03]
+	Updated sylpheed-claws to 0.9.4 [xtraeme 2003-09-03]
+	Updated wxGTK to 2.4.1 [xtraeme 2003-09-03]
