@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2004/03/29 01:50:39 grant Exp $
+$NetBSD: patch-aa,v 1.5 2004/03/29 03:11:03 grant Exp $
 
---- configure.orig	1999-01-06 13:33:39.000000000 +1100
+--- configure.orig	2001-11-10 00:58:04.000000000 +1100
 +++ configure
-@@ -1146,6 +1146,8 @@ echo "configure:1127: checking Open Clie
- 			SYBASE_OS="-lm -ldl -ldgc";;
- 		aix*)
- 			SYBASE_OS="-lm";;
-+		netbsd*)
-+			SYBASE_OS="-lm";;
- 		*)
- 			SYBASE_OS="-lm -ldl";;
- 	esac
-@@ -1301,7 +1303,7 @@ else
+@@ -1209,6 +1209,8 @@ echo "configure:1191: checking Open Clie
+ 				SYBASE_OS="-lm -ldl -ldgc";;
+ 			aix*)
+ 				SYBASE_OS="-lm";;
++			netbsd*)
++				SYBASE_OS="-lm";;
+ 			*)
+ 				SYBASE_OS="-lm -ldl";;
+ 		esac
+@@ -1373,7 +1375,7 @@ else
  			CPPFLAGS="${CPPFLAGS} -L${READLINE_LIBDIR}"
  		fi
  
@@ -20,3 +20,21 @@ $NetBSD: patch-aa,v 1.4 2004/03/29 01:50:39 grant Exp $
  			"-ltermcap -lucb"
  		do
  			LIBS="${ORIG_LIBS} -lreadline ${lib}"
+@@ -1459,7 +1461,7 @@ if eval "test \"`echo '$''{'ac_cv_lib_$a
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lreadline "${READLINE_LIBS}" $LIBS"
++LIBS="-lreadline ${READLINE_LIBS} $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 1465 "configure"
+ #include "confdefs.h"
+@@ -1493,7 +1495,7 @@ if eval "test \"`echo '$ac_cv_lib_'$ac_l
+ #define $ac_tr_lib 1
+ EOF
+ 
+-  LIBS="-lreadline $LIBS"
++  LIBS="-lreadline ${READLINE_LIBS} $LIBS"
+ 
+ else
+   echo "$ac_t""no" 1>&6

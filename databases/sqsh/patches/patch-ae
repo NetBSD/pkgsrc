@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2001/05/22 05:28:24 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2004/03/29 03:11:03 grant Exp $
 
---- var_readline.c.orig	Tue Jan  5 21:32:33 1999
-+++ var_readline.c	Tue May 22 01:06:13 2001
+--- src/var_readline.c.orig	Tue Jan  5 21:32:33 1999
++++ src/var_readline.c	Tue May 22 01:06:13 2001
 @@ -31,8 +31,7 @@
  
  #if defined(USE_READLINE)

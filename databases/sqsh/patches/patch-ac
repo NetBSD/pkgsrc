@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2001/05/22 05:28:24 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2004/03/29 03:11:03 grant Exp $
 
---- sqsh_buf.c.orig	Tue Jan  5 21:25:26 1999
-+++ sqsh_buf.c	Tue May 22 01:04:48 2001
+--- src/sqsh_buf.c.orig	Tue Jan  5 21:25:26 1999
++++ src/sqsh_buf.c	Tue May 22 01:04:48 2001
 @@ -37,7 +37,7 @@
  
  #if defined(USE_READLINE)

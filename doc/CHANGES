@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5338 2004/03/29 02:48:39 perry Exp $
+$NetBSD: CHANGES,v 1.5339 2004/03/29 03:17:53 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1566,3 +1566,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sqsh to 1.7nb3 [grant 2004-03-29]
 	Updated metamail to 2.7nb4 [snj 2004-03-29]
 	Updated clisp to 2.33 [perry 2004-03-29]
+	Updated sqsh to 2.1 [grant 2004-03-29]
