@@ -1,15 +1,13 @@
-# $NetBSD: Makefile.common,v 1.11 2000/05/11 21:35:04 abs Exp $
+# $NetBSD: Makefile.common,v 1.12 2000/07/25 06:27:33 tron Exp $
 #
 # Common include file for communicator and navigator packages
 
 .include "../../mk/bsd.prefs.mk"
 
-# Use export version by default.
-NS_ENCRYPTION?=	export
-
 # Note - the version will be overridden for certain architectures which
 #	 do not have the latest version available (eg: SunOS sparc)
-NS_VERS=	4.73
+NS_VERS=	4.74
+NS_ENCRYPTION=	us
 LDAP_VERS=	40
 #
 # Based on OPSYS and MACHINE_ARCH, define:
@@ -56,6 +54,7 @@ VENDOR_NAME=	Linux 2.2
 IGNORE=	"requires SunOS libraries - see compat_sunos(8)"
 .endif
 NS_VERS=	4.61
+NS_ENCRYPTION=	export
 LDAP_VERS=	30
 PLIST_ARCH=	sunos-sparc
 DISTUNAME=	sparc-sun-sunos4.1.3_U1
@@ -94,25 +93,6 @@ PLIST_SRC=	${PKGDIR}/PLIST.pre \
 		${PKGDIR}/PLIST.${PLIST_ARCH} \
 		${PKGDIR}/PLIST.post
 PLIST_SUBST+=	NS_VERS=${NS_VERS} LDAP_VERS=${LDAP_VERS} BINNAME=${BINNAME}
-
-.if (${NS_ENCRYPTION} == "us")
-MASTER_SITES=
-RESTRICTED=		"128-bit key strong encryption; export-controlled"
-MIRROR_DISTFILE=	no
-ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 # *-*-sparc
-DOWNLOAD=		http://www.netscape.com/download/
-
-do-fetch:
-	@if [ ! -f ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${ECHO_MSG} "    The 128-bit key strong encryption version of"; \
-	    ${ECHO_MSG} "    Netscape for ${VENDOR_NAME} must be fetched"; \
-	    ${ECHO_MSG} "    into \"${DISTDIR}/${DIST_SUBDIR}\" from the following URL:"; \
-	    ${ECHO_MSG} "    ${DOWNLOAD}"; \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${FALSE}; \
-	fi
-.endif
 
 do-install:
 	${MKDIR} ${MOZILLA_HOME}/java/classes
