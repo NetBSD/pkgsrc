@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2001/04/13 05:07:52 itojun Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2001/04/15 01:18:07 itojun Exp $
 bin/newaliases
 bin/mailq
 bin/hoststat
@@ -62,38 +62,30 @@ share/sendmail/feature/accept_unresolvable_domains.m4
 share/sendmail/feature/access_db.m4
 share/sendmail/feature/allmasquerade.m4
 share/sendmail/feature/always_add_domain.m4
-share/sendmail/feature/authinfo.m4
 share/sendmail/feature/bestmx_is_local.m4
 share/sendmail/feature/bitdomain.m4
 share/sendmail/feature/blacklist_recipients.m4
-share/sendmail/feature/compat_check.m4
 share/sendmail/feature/delay_checks.m4
 share/sendmail/feature/dnsbl.m4
 share/sendmail/feature/domaintable.m4
-share/sendmail/feature/enhdnsbl.m4
 share/sendmail/feature/generics_entire_domain.m4
 share/sendmail/feature/genericstable.m4
 share/sendmail/feature/ldap_routing.m4
 share/sendmail/feature/limited_masquerade.m4
 share/sendmail/feature/local_lmtp.m4
-share/sendmail/feature/local_no_masquerade.m4
 share/sendmail/feature/local_procmail.m4
-share/sendmail/feature/lookupdotdomain.m4
 share/sendmail/feature/loose_relay_check.m4
 share/sendmail/feature/mailertable.m4
 share/sendmail/feature/masquerade_entire_domain.m4
 share/sendmail/feature/masquerade_envelope.m4
-share/sendmail/feature/msp.m4 
 share/sendmail/feature/no_default_msa.m4
 share/sendmail/feature/nocanonify.m4
 share/sendmail/feature/nodns.m4
 share/sendmail/feature/notsticky.m4
 share/sendmail/feature/nouucp.m4
 share/sendmail/feature/nullclient.m4
-share/sendmail/feature/preserve_local_plus_detail.m4 
-share/sendmail/feature/preserve_luser_host.m4 
 share/sendmail/feature/promiscuous_relay.m4
-share/sendmail/feature/queuegroup.m4 
+share/sendmail/feature/rbl.m4
 share/sendmail/feature/redirect.m4
 share/sendmail/feature/relay_based_on_MX.m4
 share/sendmail/feature/relay_entire_domain.m4
@@ -123,6 +115,7 @@ share/sendmail/mailer/qpage.m4
 share/sendmail/mailer/smtp.m4
 share/sendmail/mailer/usenet.m4
 share/sendmail/mailer/uucp.m4
+share/sendmail/ostype/aix2.m4
 share/sendmail/ostype/aix3.m4
 share/sendmail/ostype/aix4.m4
 share/sendmail/ostype/aix5.m4
@@ -138,7 +131,6 @@ share/sendmail/ostype/darwin.m4
 share/sendmail/ostype/dgux.m4
 share/sendmail/ostype/domainos.m4
 share/sendmail/ostype/dynix3.2.m4
-share/sendmail/ostype/freebsd4.m4
 share/sendmail/ostype/gnu.m4
 share/sendmail/ostype/hpux10.m4
 share/sendmail/ostype/hpux11.m4
@@ -171,7 +163,6 @@ share/sendmail/ostype/ultrix4.m4
 share/sendmail/ostype/unixware7.m4
 share/sendmail/ostype/unknown.m4
 share/sendmail/ostype/uxpds.m4
-share/sendmail/sendmail.schema
 share/sendmail/sh/makeinfo.sh
 share/sendmail/siteconfig/uucp.cogsci.m4
 share/sendmail/siteconfig/uucp.old.arpa.m4

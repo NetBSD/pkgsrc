@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.13 2001/04/13 05:07:51 itojun Exp $
+$NetBSD: patch-aa,v 1.14 2001/04/15 01:18:07 itojun Exp $
 
---- devtools/OS/NetBSD.orig	Fri Jan 26 04:03:44 2001
-+++ devtools/OS/NetBSD	Fri Mar 16 09:22:18 2001
-@@ -2,13 +2,15 @@
- define(`confMAPDEF', `-DNEWDB -DNIS -DMAP_REGEX')
+--- devtools/OS/NetBSD-orig	Fri Apr 28 07:46:10 2000
++++ devtools/OS/NetBSD	Wed Jul 26 13:05:56 2000
+@@ -3,13 +3,15 @@
  define(`confENVDEF', ` -DNETISO')
  define(`confDEPEND_TYPE', `CC-M')
+ define(`confSTDIO_TYPE', `torek')
 -define(`confSBINGRP', `wheel')
 -define(`confUBINOWN', `root')
 -define(`confUBINGRP', `wheel')
