@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/03 00:50:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/08 03:58:18 xtraeme Exp $
 #
 
 DISTNAME=	xcompmgr-cvs-20040914
@@ -16,6 +16,13 @@ WRKSRC=		${WRKDIR}/${PKGBASE}
 GNU_CONFIGURE=	yes
 USE_BUILDLINK3=	yes
 USE_X11=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86) || \
+    defined(X11_TYPE) && !empty(X11_TYPE:Mnative) || !defined(X11_TYPE)
+PKG_SKIP_REASON+=	"This package is exclusively for X.org."
+.endif
 
 pre-configure:
 	cd ${WRKSRC};			\
