@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2000/01/06 01:32:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/08/22 03:21:32 wiz Exp $
 bin/omega
+man/man6/omega.6
 share/omega/omega.hi
 share/omega/omega.log
 share/omega/omegahi.bak
