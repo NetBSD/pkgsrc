@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4330 2004/01/03 10:48:10 jmmv Exp $
+$NetBSD: CHANGES,v 1.4331 2004/01/03 15:29:44 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -30,3 +30,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added fp-netbsd-ws-4.3.1 [ben 2004-01-02]
 	Updated adobe-cmaps to 20030924 [cjep 2004-01-02]
 	Updated pkg_comp to 1.13 [jmmv 2004-01-03]
+	Updated kdelibs to 3.1.4nb3 [jmmv 2004-01-03]
