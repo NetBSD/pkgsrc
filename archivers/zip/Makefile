@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2004/12/03 15:14:51 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2004/12/17 22:41:15 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp
 #
 
 DISTNAME=	zip-2.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 DISTFILES=	zip23.tar.gz zcrypt29.zip
