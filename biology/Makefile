@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/09/27 23:36:59 jschauma Exp $
+# $NetBSD: Makefile,v 1.17 2003/09/27 23:47:20 jschauma Exp $
 #
 
 COMMENT=	Software for the biological sciences
@@ -17,5 +17,6 @@ SUBDIR+=	profit
 SUBDIR+=	puzzle
 SUBDIR+=	rasmol
 SUBDIR+=	sewer
+SUBDIR+=	stride
 
 .include "../mk/bsd.pkg.subdir.mk"
