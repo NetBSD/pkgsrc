@@ -1,19 +1,25 @@
-@comment $NetBSD: PLIST,v 1.7 2004/02/20 16:06:22 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/01/05 15:56:42 drochner Exp $
 bin/gphoto2
 man/man1/gphoto2.1
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gphoto2.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gphoto2.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gphoto2.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gphoto2.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gphoto2.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gphoto2.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gphoto2.mo
