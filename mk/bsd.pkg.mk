@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1241 2003/08/22 22:04:03 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1242 2003/08/23 03:57:49 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1373,7 +1373,7 @@ tools: patch
 
 # Disable buildlink
 .PHONY: buildlink
-.if defined(NO_BUILDLINK) && !target(configure)
+.if defined(NO_BUILDLINK) && !target(buildlink)
 buildlink: tools
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_COOKIE}
 .endif
