@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1 1998/12/14 14:43:10 mycroft Exp $
+
+--- linuxdoom-1.10/r_data.c~	Mon Dec 14 09:38:47 1998
++++ linuxdoom-1.10/r_data.c	Mon Dec 14 09:37:51 1998
+@@ -86,10 +86,10 @@
+ typedef struct
+ {
+     char		name[8];
+-    boolean		masked;	
++    short		masked[2];		// OBSOLETE
+     short		width;
+     short		height;
+-    void		**columndirectory;	// OBSOLETE
++    short		columndirectory[2];	// OBSOLETE
+     short		patchcount;
+     mappatch_t	patches[1];
+ } maptexture_t;
