@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2001/04/16 18:54:37 zuntum Exp $
+# $NetBSD: Makefile,v 1.13 2002/04/29 10:43:16 wiz Exp $
 #
-# The version number for skill does not match the @P number.
-# This is normal.
 
-DISTNAME=	skill-4.0
+DISTNAME=	skill-4.1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://fast.cs.utah.edu/pub/skill/
 EXTRACT_SUFX=	.tgz
@@ -14,7 +12,7 @@ COMMENT=	Signal processes given user names, ttys, commands, or pids
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-MAKE_ENV+=	OSTYPE=bsd-44
+MAKE_ENV+=	OSTYPE=nbsd-44
 .elif ${OPSYS} == "SunOS"
 BINMODE=	02555
 MAKE_ENV+=	OSTYPE=sys-5r4 BINGRP=sys CPPFLAGS=

@@ -1,31 +1,27 @@
-$NetBSD: patch-aa,v 1.9 2001/04/16 18:54:37 zuntum Exp $
+$NetBSD: patch-aa,v 1.10 2002/04/29 10:43:17 wiz Exp $
 
---- Makefile.orig	Tue May 30 04:03:08 2000
+--- Makefile.orig	Sat Apr  6 06:53:39 2002
 +++ Makefile
-@@ -54,16 +54,16 @@
- SHELL=	/bin/sh
+@@ -59,15 +59,15 @@
  
  # CONFIGURE: Set location of executable, it's group and mode.
--BINDIR=	/usr/local/bin
--BINGRP=	kmem
--BINMOD=	2755
-+BINDIR=	${PREFIX}/bin
-+#BINGRP=	kmem
-+#BINMOD=	${BINMODE}
+ BINDIR=	${PREFIX}/bin
+-BINGRP=	wheel
+-BINMOD=	555
++#BINGRP=	wheel
++#BINMOD=	555
  
  # CONFIGURE: Set location of man directory and man page suffix.
--MANDIR=	/usr/man/manl
--MANSFX=	l
-+MANDIR=	${PREFIX}/man/man1
-+MANSFX=	1
+ MANDIR=	${PREFIX}/man/man1
+ MANSFX=	1
  
  # CONFIGURE(Config): Select an OSTYPE for your machine from the list above.
--OSTYPE=	sys-5r4
-+#OSTYPE=	bsd-44
+-OSTYPE=	nbsd-44
++#OSTYPE=	nbsd-44
  
  # CONFIGURE(Config): Add any OS-specific options here.
  COPTS=	
-@@ -75,7 +75,7 @@
+@@ -79,7 +79,7 @@
  OBJS=	main.o argparse.o getproc.o
  HDRS=	conf.h
  
@@ -34,7 +30,7 @@ $NetBSD: patch-aa,v 1.9 2001/04/16 18:54:37 zuntum Exp $
  
  all:	skill
  
-@@ -90,20 +90,20 @@
+@@ -94,20 +94,20 @@
  
  install: skill
  #(SysV)	filepriv -d ${DESTDIR}/${BINDIR}/skill
