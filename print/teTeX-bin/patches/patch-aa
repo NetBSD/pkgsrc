@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/03 13:54:56 hubertf Exp $
+
+Note that POSIX uses SIGCHLD ...! - HF
+
+--- texk/web2c/window/mftalk.c.orig	Thu Jul 15 16:52:02 1999
++++ texk/web2c/window/mftalk.c	Thu Jul 15 16:52:44 1999
+@@ -102,7 +102,11 @@
+   fatal (setmode, setmode (cs_pipe[1], O_BINARY) == -1);
+ #endif
+ 
++#ifdef __NetBSD__
++  old = signal (SIGCHLD, child_died);
++#else
+   old = signal (SIGCLD, child_died);
++#endif
+   fatal (old, old == SIG_ERR);
+ 
+   sprintf (height, "-h%d", screendepth);
+@@ -145,7 +149,11 @@
+       fatal (close, close (sc_pipe[1]) == -1);
+       fatal (close, close (cs_pipe[0]) == -1);
+       fatal (close, close (cs_pipe[1]) == -1);
++#ifdef __NetBSD__
++      fatal (signal, signal (SIGCHLD, old) == SIG_ERR);
++#else
+       fatal (signal, signal (SIGCLD, old) == SIG_ERR);
++#endif
+       break;
+     default:
+       res = read (cs_pipe[0], &ack, sizeof (int));
