@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1152 2003/03/19 01:19:30 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1153 2003/03/22 04:00:57 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -315,7 +315,7 @@ PATCH_DIST_ARGS+=	--batch
 .endif
 .if defined(_PATCH_CAN_BACKUP) && ${_PATCH_CAN_BACKUP} == "yes"
 PATCH_ARGS+=		${_PATCH_BACKUP_ARG} .orig
-PATCH_DIST_ARGS+=	${_PATCH_BACKUP_ARG} .orig
+PATCH_DIST_ARGS+=	${_PATCH_BACKUP_ARG} .orig_dist
 .endif
 PATCH_FUZZ_FACTOR?=	-F0			# Default to zero fuzz
 
