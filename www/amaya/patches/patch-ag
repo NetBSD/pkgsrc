@@ -1,3 +1,4 @@
+$NetBSD: patch-ag,v 1.2 2001/02/28 10:26:03 wiz Exp $
 --- ../Makefile.in.orig	Fri Dec 22 17:16:48 2000
 +++ ../Makefile.in	Sun Jan 14 12:38:48 2001
 @@ -263,14 +263,6 @@
