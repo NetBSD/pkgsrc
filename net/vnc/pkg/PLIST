@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.12 2000/11/10 16:57:26 abs Exp $
+@comment $NetBSD: PLIST,v 1.13 2000/11/13 10:26:16 abs Exp $
 bin/Xvnc
+bin/vncconnect
 bin/vncpasswd
 bin/vncserver
 share/doc/vnc/Xvnc.gif
