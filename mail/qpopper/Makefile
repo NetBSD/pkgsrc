@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/09/09 19:25:30 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2002/11/23 17:01:20 taca Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -21,6 +21,7 @@ USE_BUILDLINK2=		# defined
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 
 PKG_USERS?=		${QPOPPER_USER}
+MAKE_ENV+=		BINGRP=${BINGRP}
 
 pre-build:
 	${SED}	-e "s|/usr/local/lib|${PREFIX}/libexec|g"		\
