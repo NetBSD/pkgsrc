@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2003/06/18 14:47:21 simonb Exp $
+$NetBSD: distinfo,v 1.13 2003/10/24 01:12:52 xtraeme Exp $
 
-SHA1 (xpdf-2.02pl1.tar.gz) = a8b482e49027c6166f7399b8d5f412ddcaef2eb3
-Size (xpdf-2.02pl1.tar.gz) = 476349 bytes
+SHA1 (xpdf-2.03.tar.gz) = 5c9af4be4b9dbdce19369819411a61f38f86ea98
+Size (xpdf-2.03.tar.gz) = 501007 bytes
 SHA1 (patch-aa) = bf57c8955a25fc723fdcc86acc2055876c39a686
 SHA1 (patch-ab) = e0e7bca53918c125db5dcece7153afbec6e089ce
 SHA1 (patch-ac) = 6fa74df05e01510c792eb2b20f670e6903f30aa2
