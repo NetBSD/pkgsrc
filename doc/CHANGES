@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8272 2004/12/05 09:39:32 jmmv Exp $
+$NetBSD: CHANGES,v 1.8273 2004/12/05 09:40:09 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5774,5 +5774,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mail-notification to 1.0 [jmmv 2004-12-05]
 	Updated libgnomecups to 0.1.13 [jmmv 2004-12-05]
 	Updated beecrypt to 4.1.1 [jmmv 2004-12-05]
-	Updated octave-forge to 20041116 [2004-12-05]
+	Updated octave-forge to 20041116 [adam 2004-12-05]
 	Updated desktop-file-utils to 0.9 [jmmv 2004-12-05]
