@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/22 13:44:19 rh Exp $
+bin/updatenews
+etc/newscache.conf-dist
+@unexec install-info --delete %D/info/NewsCache.info %D/info/dir
+info/NewsCache.info
+@exec install-info %D/info/NewsCache.info %D/info/dir
+man/man5/newscache.conf.5
+man/man8/NewsCache.8
+man/man8/NewsCacheClean.8
+man/man8/updatenews.8
+sbin/NewsCache
+sbin/NewsCacheClean
+sbin/accesslog
+sbin/cachestat
+sbin/hostlog
+sbin/hoststat
