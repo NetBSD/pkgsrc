@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/03/03 11:34:58 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/07/28 10:06:44 seb Exp $
 bin/acyclic
 bin/ccomps
 bin/colorize
@@ -10,6 +10,7 @@ bin/dotty
 bin/gc
 bin/gpr
 @comment bin/graphsearch
+bin/gvpack
 bin/gxl2dot
 bin/lefty
 bin/lneato
@@ -154,6 +155,7 @@ man/man1/dot2gxl.1
 man/man1/dotty.1
 man/man1/gc.1
 man/man1/gpr.1
+man/man1/gvpack.1
 man/man1/gxl2dot.1
 man/man1/lefty.1
 man/man1/neato.1
