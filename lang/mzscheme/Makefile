@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/09/18 12:48:35 yyamano Exp $
+# $NetBSD: Makefile,v 1.10 2003/10/24 20:34:44 kristerw Exp $
 
 DISTNAME=		mzscheme.src.unix
 PKGNAME=		mzscheme-200
@@ -7,6 +7,8 @@ CATEGORIES=		lang
 MASTER_SITES=		http://download.plt-scheme.org/bundles/200/mzscheme/
 DIST_SUBDIR=		${PKGNAME_NOREV}
 PKGREVISION=		1
+
+EXTRACT_USING_PAX=	# defined
 
 MAINTAINER=		pooka@NetBSD.org
 HOMEPAGE=		http://www.plt-scheme.org/software/mzscheme/
