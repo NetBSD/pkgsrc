@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/12/22 21:46:25 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2005/02/28 16:20:10 uebayasi Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xemacs
 PKG_SUPPORTED_OPTIONS=	ldap xface canna
@@ -25,4 +25,3 @@ CONFIGURE_ARGS=	--with-canna
 .else
 CONFIGURE_ARGS=	--without-canna
 .endif
-

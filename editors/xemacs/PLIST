@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/02/09 07:54:58 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/02/28 16:20:09 uebayasi Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
@@ -489,6 +489,7 @@ lib/${DISTNAME}/etc/gnudoit.1
 lib/${DISTNAME}/etc/gnuserv.1
 lib/${DISTNAME}/etc/gnuserv.README
 lib/${DISTNAME}/etc/gray1.xbm
+lib/${DISTNAME}/etc/gtkrc
 lib/${DISTNAME}/etc/idd/drop
 lib/${DISTNAME}/etc/idd/dropmsk
 lib/${DISTNAME}/etc/ms-kermit
@@ -1060,7 +1061,7 @@ lib/${DISTNAME}/lisp/mule/canna-leim.elc
 lib/${DISTNAME}/lisp/mule/chinese.el${ELSUFX}
 lib/${DISTNAME}/lisp/mule/chinese.elc
 lib/${DISTNAME}/lisp/mule/custom-load.el${ELSUFX}
-lib/${DISTNAME}/lisp/mule/custom-load.elc
+@comment XXX 21.4.17 excludes this! - lib/${DISTNAME}/lisp/mule/custom-load.elc
 lib/${DISTNAME}/lisp/mule/cyrillic.el${ELSUFX}
 lib/${DISTNAME}/lisp/mule/cyrillic.elc
 lib/${DISTNAME}/lisp/mule/english.el${ELSUFX}
