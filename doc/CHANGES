@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2046 2003/04/26 15:47:53 mrauch Exp $
+$NetBSD: CHANGES,v 1.2047 2003/04/26 16:19:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1743,3 +1743,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cfengine2 to 2.0.6 [seb 2003-04-26]
 	Updated cfengine2-doc to 2.0.6 [seb 2003-04-26]
 	Updated openoffice-linux to 1.0.3.1 [mrauch 2003-04-26]
+	Added ruby-rexml-2.4.8 [taca 2003-04-26]
