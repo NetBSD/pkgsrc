@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/02/05 20:14:06 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/02/18 04:00:44 wulf Exp $
 include/hamlib/rig.h
 include/hamlib/riglist.h
 include/hamlib/rig_dll.h
@@ -6,8 +6,8 @@ include/hamlib/rotator.h
 include/hamlib/rotlist.h
 include/hamlib/rigclass.h
 include/hamlib/rotclass.h
-lib/libhamlib-1.1.4.so.1.0
-lib/libhamlib-1.1.4.so.1
+lib/libhamlib-1.2.0.so.2.0
+lib/libhamlib-1.2.0.so.2
 lib/libhamlib.la
 lib/libhamlib.so
 lib/libhamlib.a
@@ -53,14 +53,38 @@ lib/hamlib-dummy.a
 lib/hamlib-easycomm.la
 lib/hamlib-easycomm.so
 lib/hamlib-easycomm.a
+lib/hamlib-flexradio.la
+lib/hamlib-flexradio.so
+lib/hamlib-flexradio.a
+lib/hamlib-fodtrack.la
+lib/hamlib-fodtrack.so
+lib/hamlib-fodtrack.a
+lib/hamlib-lowe.la
+lib/hamlib-lowe.so
+lib/hamlib-lowe.a
+lib/hamlib-microtune.la
+lib/hamlib-microtune.so
+lib/hamlib-microtune.a
+lib/hamlib-rft.la
+lib/hamlib-rft.so
+lib/hamlib-rft.a
+lib/hamlib-rpcrot.la
+lib/hamlib-rpcrot.so
+lib/hamlib-rpcrot.a
+lib/hamlib-sartek.la
+lib/hamlib-sartek.so
+lib/hamlib-sartek.a
+lib/hamlib-tapr.la
+lib/hamlib-tapr.so
+lib/hamlib-tapr.a
 lib/hamlib-rotorez.la
 lib/hamlib-rotorez.so
 lib/hamlib-rotorez.a
 lib/libhamlib++.la
 lib/libhamlib++.so
 lib/libhamlib++.a
-lib/libhamlib++-1.1.4.so.1
-lib/libhamlib++-1.1.4.so.1.0
+lib/libhamlib++-1.2.0.so.2
+lib/libhamlib++-1.2.0.so.2.0
 bin/rigctl
 bin/rotctl
 sbin/rpc.rigd
