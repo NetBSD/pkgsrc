@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1513 2004/10/11 23:38:53 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1514 2004/10/12 14:34:57 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -4959,7 +4959,7 @@ BEGIN {									\
 _PLIST_AWK_LIBTOOL?=	# empty
 .else
 _PLIST_AWK_LIBTOOL?=							\
-/\.la$$/ {								\
+/^[^@].*\.la$$/ {							\
 	system("cd ${PREFIX} && ${SH} ${_PRINT_LA_LIBNAMES} " $$0)	\
 }
 .endif
