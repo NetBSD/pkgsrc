@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2003/12/13 19:08:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.53 2003/12/13 21:10:53 xtraeme Exp $
 #
 
 COMMENT=	Window managers (for X)
@@ -40,6 +40,7 @@ SUBDIR+=	menu2wm
 SUBDIR+=	metacity
 SUBDIR+=	metacity-setup
 SUBDIR+=	novawm
+SUBDIR+=	obconf
 SUBDIR+=	olvwm
 SUBDIR+=	openbox3
 SUBDIR+=	openbox
