@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1999/06/18 01:14:23 hubertf Exp $
+
+--- Makefile.in.orig	Fri Jun 18 02:50:58 1999
++++ Makefile.in	Fri Jun 18 02:51:09 1999
+@@ -98,7 +98,7 @@
+ localedir = @localedir@
+ 
+ EXTRA_DIST = reconf configure README.irix TODO ABOUT-NLS
+-SUBDIRS = m4 doc src intl po
++SUBDIRS = m4 doc intl src po
+ 
+ DISTCLEANFILES = intl/libintl.h
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
