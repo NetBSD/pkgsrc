@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.13 2004/01/17 03:39:35 grant Exp $
+# $NetBSD: printdepends,v 1.14 2004/01/30 10:54:36 grant Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -38,6 +38,13 @@
 # to contain any failure messages in each package directory.
 #
 
+# Pull in PKGLIST
+if [ -f "$BULK_BUILD_CONF" ]; then
+	. $BULK_BUILD_CONF
+else
+	. `dirname $0`/build.conf
+fi
+
 if [ ! -z "$1" ]; then
 	brokenfile=$1
 else
@@ -61,11 +68,15 @@ GREP=`${BMAKE} show-var VARNAME=GREP`
 SED=`${BMAKE} show-var VARNAME=SED`
 cd $cwd
 
-# List of all pkgs, from pkgsrc/*/Makefile
-list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
-#list=`${GREP} '^[^#].*'SUBDIR ma*/Makefile | ${SED} 's,/Makefile.*= *,/,'`
-#list=x11/gnome
-#list='x11/xteddy x11/xsnow'
+if [ -n "${PKGLIST}" ]; then
+	list="${PKGLIST}"
+else
+	# List of all pkgs, from pkgsrc/*/Makefile
+	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
+fi
+
+# cache the package list for printindex
+echo list='"'${list}'"' > .pkglist
 
 for pkgdir in $list
 do

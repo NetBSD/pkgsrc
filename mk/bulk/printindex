@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.13 2003/12/10 13:59:06 sketch Exp $
+# $NetBSD: printindex,v 1.14 2004/01/30 10:54:36 grant Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -63,9 +63,12 @@ GREP=`${BMAKE} show-var VARNAME=GREP`
 SED=`${BMAKE} show-var VARNAME=SED`
 cd $cwd
 
-# List of all pkgs, from pkgsrc/*/Makefile
-list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
-
+if [ -r ${cwd}/.pkglist ]; then
+	. ${cwd}/.pkglist
+else
+	# fall back to all packages.
+	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
+fi
 
 for pkgdir in $list
 do
