@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1999/12/12 21:18:31 bouyer Exp $
+# $NetBSD: Makefile,v 1.30 1999/12/16 15:01:19 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
@@ -45,6 +45,7 @@
     SUBDIR += ted-pt
     SUBDIR += ted-sv
     SUBDIR += texi2html
+    SUBDIR += textutils
     SUBDIR += unroff
 #    SUBDIR += wdiff
 
