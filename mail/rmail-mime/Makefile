@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/12/10 19:21:56 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/13 15:03:11 jschauma Exp $
 #
 
 DISTNAME=	rmail-mime-1.13.0
@@ -17,7 +17,7 @@ PLIST_SUBST+=	SITE_LISP=${SITE_LISP}
 
 do-build:
 	cd ${WRKSRC}; ${EMACS_BIN} --no-init-file --no-site-file -batch \
-		-l ruby-mode.el -f batch-byte-compile rmail-mime.el
+		-f batch-byte-compile rmail-mime.el
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${SITE_LISP}
