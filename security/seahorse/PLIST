@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/02/18 14:56:02 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/05/27 17:17:38 jmmv Exp $
 bin/seahorse
 share/applications/seahorse.desktop
 share/gconf/schemas/seahorse.schemas
@@ -25,6 +25,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/seahorse.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/seahorse.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/seahorse.mo
@@ -35,8 +36,11 @@ share/omf/seahorse/seahorse-C.omf
 share/pixmaps/seahorse.png
 share/seahorse/glade/seahorse-add-subkey.glade2
 share/seahorse/glade/seahorse-add-uid.glade2
+share/seahorse/glade/seahorse-decrypt-file.glade2
+share/seahorse/glade/seahorse-decrypt-verify-file.glade2
+share/seahorse/glade/seahorse-encrypt-file.glade2
+share/seahorse/glade/seahorse-encrypt-sign-file.glade2
 share/seahorse/glade/seahorse-export.glade2
-share/seahorse/glade/seahorse-file-manager.glade2
 share/seahorse/glade/seahorse-generate.glade2
 share/seahorse/glade/seahorse-import.glade2
 share/seahorse/glade/seahorse-key-manager.glade2
@@ -44,8 +48,11 @@ share/seahorse/glade/seahorse-key-properties.glade2
 share/seahorse/glade/seahorse-preferences.glade2
 share/seahorse/glade/seahorse-recipients.glade2
 share/seahorse/glade/seahorse-revoke.glade2
+share/seahorse/glade/seahorse-sign-file.glade2
+share/seahorse/glade/seahorse-sign.glade2
 share/seahorse/glade/seahorse-signatures.glade2
 share/seahorse/glade/seahorse-text-editor.glade2
+share/seahorse/glade/seahorse-verify-file.glade2
 @dirrm share/seahorse/glade
 @dirrm share/seahorse
 @dirrm share/omf/seahorse
