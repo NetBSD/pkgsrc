@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.517 2004/07/16 01:32:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.518 2004/07/16 15:39:08 recht Exp $
 #
 
 COMMENT=	Development utilities
@@ -297,7 +297,7 @@ SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Data-Buffer
 SUBDIR+=	p5-Data-ShowTable
 SUBDIR+=	p5-Data-TemporaryBag
-SUBDIR+=    p5-Date-Business
+SUBDIR+=	p5-Date-Business
 SUBDIR+=	p5-Date-Calc
 SUBDIR+=	p5-Date-Manip
 SUBDIR+=	p5-Devel-Profile
@@ -393,6 +393,7 @@ SUBDIR+=	php4-sysvshm
 SUBDIR+=	physfs
 SUBDIR+=	pilrc
 SUBDIR+=	pkgconfig
+SUBDIR+=	ply
 SUBDIR+=	popt
 SUBDIR+=	prc-tools
 SUBDIR+=	prcs
