@@ -1,0 +1,11 @@
+--- include/config.h.orig	Fri Mar 12 23:16:03 1999
++++ include/config.h	Fri Mar 12 23:17:09 1999
+@@ -11,7 +11,7 @@
+ // It's not missing, but it pulls in libg++
+ #define SP_NEW_H_MISSING
+ // set_new_handler() has to be declared extern "C"
+-#define SP_SET_NEW_HANDLER_EXTERN_C
++// #define SP_SET_NEW_HANDLER_EXTERN_C
+ #ifndef SP_MANUAL_INST
+ #define SP_MANUAL_INST
+ #endif
