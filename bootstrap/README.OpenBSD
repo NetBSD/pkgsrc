@@ -1,4 +1,4 @@
-$NetBSD: README.OpenBSD,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+$NetBSD: README.OpenBSD,v 1.2 2004/07/31 04:07:03 xtraeme Exp $
 
 Please read the general README file as well.
 
@@ -28,5 +28,5 @@ of the mk.conf file with:
 # OpenBSD stuff
 .endif
 
-bootstrap-pkgsrc has been tested on OpenBSD 3.2 (i386). Some testing has
+bootstrap-pkgsrc has been tested on OpenBSD 3.2 and 3.5 (i386). Some testing has
 been done on 3.0 as well.
