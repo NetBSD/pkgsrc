@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:50:00 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/31 01:00:29 kristerw Exp $
 
 DISTNAME=	Sjeng-Free-11.0
 PKGNAME=	sjeng-11.0
@@ -23,6 +23,10 @@ TBDIR=		${PREFIX}/share/egtb
 
 DOCDIR=		${PREFIX}/share/doc/sjeng
 EGDIR=		${PREFIX}/share/examples/sjeng
+
+.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+GCC_REQD=	3.0
+.endif
 
 post-build:
 	cd ${WRKSRC};							\
