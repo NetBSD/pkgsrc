@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/08/02 21:45:39 seb Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/02 22:09:36 seb Exp $
 
 DISTNAME=	yorick-1.5.12
 WRKSRC=		${WRKDIR}/yorick-1.5
@@ -12,7 +12,11 @@ COMMENT=	Numerical algebra system (similar to Matlab)
 
 USE_BUILDLINK2=	yes
 USE_X11=        yes
+BUILD_DIRS=	${WRKSRC} ${WRKSRC}/doc
+INSTALL_DIRS=	${WRKSRC}
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
 INFO_FILES=	yorick.info
 
 post-patch:
@@ -25,12 +29,10 @@ post-install:
 	for f in yorick gist; do \
 	cd ${PREFIX}/bin && ${LN} -sf ../lib/yorick/1.5/bin/$$f $$f; \
 	done
-	cd ${WRKSRC}/doc && ${MAKE} all
 	${INSTALL_DATA} ${WRKSRC}/doc/yorick.info* ${PREFIX}/info
 	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${PREFIX}/man/man1
 	cd ${PREFIX}/share/doc && ${LN} -sf ../yorick/1.5/doc yorick
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/emacs/*.el ${PREFIX}/share/emacs/site-lisp
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
