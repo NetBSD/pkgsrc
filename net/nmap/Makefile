@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/01/22 11:20:04 salo Exp $
+# $NetBSD: Makefile,v 1.32 2004/01/23 11:43:06 jmmv Exp $
 #
 
 DISTNAME=	nmap-3.50
@@ -10,7 +10,9 @@ MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.insecure.org/nmap/
 COMMENT=	Network/port scanner with OS detection
 
-USE_BUILDLINK2=	YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	YES
 USE_GCC_SHLIB=	YES
 GNU_CONFIGURE=	YES
 
@@ -25,8 +27,8 @@ CONFIGURE_ARGS+=	--without-nmapfe
 MAKE_ENV+=	CPPFLAGS=""
 .endif
 
-.include "../../devel/pcre/buildlink2.mk"
-.include "../../net/libpcap/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
