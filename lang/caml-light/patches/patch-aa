@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/06/21 11:42:47 bouyer Exp $
+$NetBSD: patch-aa,v 1.2 2004/03/20 22:35:04 bouyer Exp $
 
---- Makefile.orig	Thu Apr 24 16:51:03 1997
-+++ Makefile	Mon Jun 19 11:26:56 2000
+--- Makefile.orig	1997-04-24 16:51:03.000000000 +0200
++++ Makefile	2004-03-08 01:07:53.010550000 +0100
 @@ -7,7 +7,7 @@
  # Additional options to $(CC).
  # If you are using gcc, add -fno-defer-pop.
@@ -35,3 +35,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/06/21 11:42:47 bouyer Exp $
  
  # Some "make"s need this to ensure that they call the Bourne shell,
  # not the C shell. Seems harmless on most other "make"s.
+@@ -49,7 +49,7 @@
+ 
+ # Configure the system
+ configure:
+-	cd ../config; sh autoconf "$(CC) $(OPTS) $(LIBS)"
++	cd ../config; sh ./autoconf "$(CC) $(OPTS) $(LIBS)"
+ 
+ # Build the system for the first time
+ world:
