@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1 2003/10/06 07:21:57 mycroft Exp $
+
+--- src/video_out/video_out_none.c.orig	2003-07-13 19:29:04.000000000 +0000
++++ src/video_out/video_out_none.c	2003-10-06 07:16:41.000000000 +0000
+@@ -95,6 +95,8 @@
+     abort();
+   }
+   
++  pthread_mutex_init (&frame->vo_frame.mutex, NULL);
++
+   frame->vo_frame.base[0] = NULL;
+   frame->vo_frame.base[1] = NULL;
+   frame->vo_frame.base[2] = NULL;
