@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/01/19 10:24:18 salo Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/29 21:43:34 jmmv Exp $
 #
 
 DISTNAME=	sp-1.3.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=   ftp://ftp.jclark.com/pub/sp/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.jclark.com/pub/sp/ \
@@ -21,15 +21,15 @@ CONFLICTS+=	opensp-[0-9]*
 
 USE_BUILDLINK2=	YES
 
-MAKE_ENV+=	PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
+MAKE_ENV+=	SGML_DEFAULT_CATALOG="${SGML_DEFAULT_CATALOG}"
+
+SGML_CATALOGS=	${PREFIX}/share/sgml/dtd/html.soc
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sp ${PREFIX}/share/sgml/dtd
 	cd ${WRKSRC}/doc; for n in *.htm ; do ${INSTALL_DATA} $$n ${PREFIX}/share/doc/sp/$n ; done
 	cd ${WRKSRC}/pubtext; for n in * ; do ${INSTALL_DATA} $$n ${PREFIX}/share/sgml/dtd/$n ; done
 	cd ${WRKSRC}/lib; ${INSTALL_DATA} libsp.a ${PREFIX}/lib/libsp.a
-	${PREFIX}/bin/xmlcatmgr -c ${PREFIX}/share/sgml/catalog add \
-		CATALOG ${PREFIX}/share/sgml/dtd/html.soc
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,5 +43,5 @@ post-patch:
 	done
 .endif
 
-.include "../../textproc/xmlcatmgr/buildlink2.mk"
+.include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
