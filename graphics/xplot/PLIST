@@ -1,15 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:45 zuntum Exp $
-bin/tcpdump2xplot.pl
+@comment $NetBSD: PLIST,v 1.2 2003/09/27 02:27:47 dan Exp $
+bin/tcpdump2xplot
 bin/xplot
 share/doc/xplot/ANNOUNCE
 share/doc/xplot/README
 share/doc/xplot/README.tcp_plots
-share/doc/xplot/demo.0
-share/doc/xplot/demo.1
-share/doc/xplot/demo.2
-share/doc/xplot/demo.3
-share/doc/xplot/demo.4
-share/doc/xplot/demo.5
-share/doc/xplot/demo.6
-share/doc/xplot/demo.7
 @dirrm share/doc/xplot
