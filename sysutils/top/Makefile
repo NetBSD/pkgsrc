@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/10/22 10:10:35 agc Exp $
+# $NetBSD: Makefile,v 1.4 1997/12/22 07:45:54 hubertf Exp $
 # New ports collection makefile for:    top
 # Version required:     3.5beta6
 # Date created:         25 Sep 1994
@@ -24,9 +24,9 @@ OSVERSION!=	sysctl -n kern.osreldate
 .if ${OSVERSION} >= 221002
 BROKEN=		"top is included in FreeBSD version 221002 or later"
 .endif
-CONFIGURE_ARGS=		freebsd2
+CONFIGURE_ARGS+=		freebsd2
 .elif (${OPSYS} == "NetBSD")
-CONFIGURE_ARGS=		netbsd13
+CONFIGURE_ARGS+=		netbsd13
 .endif
 
 pre-configure:

@@ -3,7 +3,7 @@
 # Date created:		24 Oct 1997
 # Whom:			hubertf@netbsd.org
 #
-# $Id: Makefile,v 1.2 1997/10/27 00:31:18 hubertf Exp $
+# $Id: Makefile,v 1.3 1997/12/22 07:45:47 hubertf Exp $
 #
 
 DISTNAME=	mc-4.1
@@ -14,7 +14,7 @@ MASTER_SITE_SUBDIR=	utils/file/managers/mc
 MAINTAINER=	ports@FreeBSD.org
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS=	--with-ncurses --without-edit --without-subshell
+CONFIGURE_ARGS+=	--with-ncurses --without-edit --without-subshell
 MAN1=		mc.1 mcedit.1
 MAN8=		mcserv.8
 
