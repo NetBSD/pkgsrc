@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2003/01/03 15:24:57 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2003/01/14 13:14:32 wiz Exp $
 #
 
 DISTNAME=	easytag-0.26
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=easytag/}
 
@@ -19,7 +20,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-#.include "../../audio/flac/buildlink2.mk"
+.include "../../audio/flac/buildlink2.mk"
 .include "../../audio/id3lib/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
