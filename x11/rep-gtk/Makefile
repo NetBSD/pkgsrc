@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.9 2001/09/27 23:19:02 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/22 02:27:38 mycroft Exp $
 #
 
-DISTNAME=		rep-gtk-0.14
+DISTNAME=		rep-gtk-0.15
 CATEGORIES=		x11 lang
-MASTER_SITES=		ftp://rep-gtk.sourceforge.net/pub/rep-gtk/
+MASTER_SITES=		http://prdownloads.sourceforge.net/rep-gtk/
 
 MAINTAINER=		danw@netbsd.org
 HOMEPAGE=		http://rep-gtk.sourceforge.net/
 COMMENT=		librep bindings for gtk (used by sawmill)
 
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
-DEPENDS+=		librep>=0.13.1:../../lang/librep
+DEPENDS+=		librep>=0.15:../../lang/librep
 DEPENDS+=		libglade-[0-9]*:../../devel/libglade
 DEPENDS+=		gnome-libs-[0-9]*:../../x11/gnome-libs
 DEPENDS+=		gdk-pixbuf-gnome>=0.9.0:../../graphics/gdk-pixbuf-gnome
