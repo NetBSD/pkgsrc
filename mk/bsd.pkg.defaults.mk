@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.194 2003/12/17 03:00:11 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.195 2003/12/17 13:48:02 keihan Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -493,7 +493,7 @@ WARN_NO_OBJECT_FMT?=yes
 # "arch" are replaced with OS release ("1.5", ...) and architecture
 # ("mipsel", ...)
 # Possible: any ftp url, see above.
-# Default: ftp://ftp.netbsd.org/pub/NetBSD/packages/$${rel}/$${arch}
+# Default: ftp://ftp.NetBSD.org/pub/NetBSD/packages/$${rel}/$${arch}
 
 #BIN_INSTALL_FLAGS=
 # List of flags passed to pkg_add(8) in the bin_install package.
@@ -2043,7 +2043,7 @@ XCHAT_USE_SSL?=	YES
 #
 #	Overrides for faster or cheaper sites.
 #
-#	Refer to http://www.netbsd.org/Sites/net.html or /usr/doc/MIRRORS
+#	Refer to http://www.NetBSD.org/mirrors/ or /usr/doc/MIRRORS
 #	for information on determining the location of NetBSD mirror sites.
 #
 
@@ -2060,21 +2060,21 @@ XCHAT_USE_SSL?=	YES
 #			http://public.planetmirror.com.au/pub/sourceforge/
 #MASTER_SITE_XCONTRIB=	http://public.planetmirror.com.au/pub/X11/contrib/
 #MASTER_SITE_XEMACS=	ftp://ftp.au.xemacs.org/pub/xemacs/
-#MASTER_SITE_BACKUP=	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/ \
-#			ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
-#MASTER_SITE_LOCAL=	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/ \
-#			ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
+#MASTER_SITE_BACKUP=	ftp://ftp.au.NetBSD.org/pub/NetBSD/packages/distfiles/ \
+#			ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/
+#MASTER_SITE_LOCAL=	ftp://ftp.au.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/ \
+#			ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 #
 
 # Austria
 #
-#MASTER_SITE_XCONTRIB=	ftp://ftp.at.netbsd.org/hci/X11/x.org/contrib/
-#MASTER_SITE_GNU=	ftp://ftp.at.netbsd.org/gnu/gnusrc/
-#MASTER_SITE_PERL_CPAN=	ftp://ftp.at.netbsd.org/languages/perl/CPAN/modules/by-module/
-#MASTER_SITE_TEX_CTAN=	ftp://ftp.at.netbsd.org/publishing/tex/CTAN/
+#MASTER_SITE_XCONTRIB=	ftp://ftp.at.NetBSD.org/hci/X11/x.org/contrib/
+#MASTER_SITE_GNU=	ftp://ftp.at.NetBSD.org/gnu/gnusrc/
+#MASTER_SITE_PERL_CPAN=	ftp://ftp.at.NetBSD.org/languages/perl/CPAN/modules/by-module/
+#MASTER_SITE_TEX_CTAN=	ftp://ftp.at.NetBSD.org/publishing/tex/CTAN/
 #MASTER_SITE_SUNSITE=	ftp://ftp.univie.ac.at/systems/linux/sunsite/
 #MASTER_SITE_XEMACS=	ftp://ftp.at.xemacs.org/editors/xemacs/
-#MASTER_SITE_BACKUP=	ftp://ftp.at.netbsd.org/opsys/NetBSD/packages/distfiles/
+#MASTER_SITE_BACKUP=	ftp://ftp.at.NetBSD.org/opsys/NetBSD/packages/distfiles/
 
 # Denmark
 #
@@ -2083,7 +2083,7 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.sunsite.auc.dk/pub/tex/ctan/
 #MASTER_SITE_SUNSITE=	ftp://ftp.suaunsite.auc.dk/mirrors/sunsite.unc.edu/pub/Linux/
 #MASTER_SITE_XEMACS=	ftp://ftp.dk.xemacs.org/pub/emacs/xemacs/
-#MASTER_SITE_BACKUP=	ftp://ftp.dk.netbsd.org/pub/NetBSD/packages/distfiles/
+#MASTER_SITE_BACKUP=	ftp://ftp.dk.NetBSD.org/pub/NetBSD/packages/distfiles/
 
 # Finland
 #
@@ -2096,7 +2096,7 @@ XCHAT_USE_SSL?=	YES
 #	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
 #MASTER_SITE_XEMACS=	ftp://ftp.fi.xemacs.org/pub/mirrors/ftp.xemacs.org/pub/tux/xemacs/
 #MASTER_SITE_BACKUP=	\
-#	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/
+#	ftp://ftp.fi.NetBSD.org/pub/NetBSD/packages/distfiles/
 
 # France
 #
@@ -2122,7 +2122,7 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_XEMACS=	ftp://ftp.jp.xemacs.org/pub/GNU/xemacs/
 #MASTER_SITE_BACKUP=	\
 #	ftp://ftp.ring.gr.jp/pub/NetBSD/packages/distfiles/ \
-#	ftp://ftp.jp.netbsd.org/pub/NetBSD/packages/distfiles/
+#	ftp://ftp.jp.NetBSD.org/pub/NetBSD/packages/distfiles/
 
 # Switzerland
 #
@@ -2141,7 +2141,7 @@ XCHAT_USE_SSL?=	YES
 #MASTER_SITE_XEMACS=	ftp://ftp.uk.xemacs.org/sites/ftp.xemacs.org/pub/xemacs/
 #MASTER_SITE_BACKUP=	\
 #	ftp://sunsite.org.uk/packages/NetBSD/packages/distfiles/ \
-#	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
+#	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/
 
 # USA
 #
@@ -2149,14 +2149,14 @@ XCHAT_USE_SSL?=	YES
 #	ftp://mirror.mcs.anl.gov/pub/ftp.suse.com/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 
 # France. This will try to fetch distfile from the distfile mirror
-# before trying ${MASTER_SITE} or the distfiles at ftp.netbsd.org
+# before trying ${MASTER_SITE} or the distfiles at ftp.NetBSD.org
 #
 #MASTER_SITE_OVERRIDE=	\
-#	ftp://ftp2.fr.netbsd.org/pub/NetBSD/packages/distfiles/
+#	ftp://ftp2.fr.NetBSD.org/pub/NetBSD/packages/distfiles/
 #MASTER_SITE_BACKUP=	\
-#	ftp://ftp2.fr.netbsd.org/pub/NetBSD/packages/distfiles/
+#	ftp://ftp2.fr.NetBSD.org/pub/NetBSD/packages/distfiles/
 #MASTER_SITE_LOCAL=	\
-#	ftp://ftp.fr.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
+#	ftp://ftp.fr.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 .if exists(${.CURDIR}/../../mk/bsd.pkg.obsolete.mk)
 .include "${.CURDIR}/../../mk/bsd.pkg.obsolete.mk"
