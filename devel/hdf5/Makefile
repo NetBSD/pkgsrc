@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2002/10/28 16:32:01 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2003/04/29 23:05:22 jtb Exp $
 
-DISTNAME=		hdf5-1.4.4
+DISTNAME=		hdf5-1.4.5
 CATEGORIES=		devel
 MASTER_SITES=		ftp://hdf.ncsa.uiuc.edu/HDF5/hdf5-1.4.4/src/ \
 			ftp://sunsite.doc.ic.ac.uk/packages/HDF/HDF5/hdf5-1.4.4/src/ \
