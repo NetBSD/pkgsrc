@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2003/06/09 07:47:15 martti Exp $
+# $NetBSD: Makefile,v 1.40 2003/06/23 11:12:33 adam Exp $
 
 DISTNAME=	mrtg-2.9.29
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		http://gd.tuwien.ac.at/infosys/network/tools/mrtg/pub/ \
@@ -15,15 +16,11 @@ MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 COMMENT=	The Multi-Router Traffic Grapher
 
-DEPENDS=	gd>=1.8.4nb1:../../graphics/gd
-
 USE_BUILDLINK2=	YES
 USE_PERL5=	YES
 PERL5_REQD=	5.6.1
 USE_X11=	YES
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS= --with-gd-inc=${LOCALBASE}/include \
-		--with-gd-lib=${LOCALBASE}/lib
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -78,5 +75,6 @@ do-install:
 	  ${INSTALL_SCRIPT} ${WRKSRC}/bin/$$FILE ${PREFIX}/bin/mrtg$$FILE; \
 	done
 
+.include "../../graphics/freetype-lib/buildlink2.mk"
 .include "../../graphics/gd/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
