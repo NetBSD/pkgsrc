@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.409 2000/02/28 01:38:37 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.410 2000/02/28 22:13:31 fredb Exp $
 #
 # This file is in the public domain.
 #
@@ -1727,7 +1727,7 @@ root-deinstall:
 		${ECHO} Running ${PKG_DELETE} ${root-install-flags} $$found ; \
 		${PKG_DELETE} ${root-install-flags} $$found || ${TRUE} ; \
 	fi
-.if (${DEINSTALLDEPENDS} != "NO")
+.if (${DEINSTALLDEPENDS} != "NO") && (${DEINSTALLDEPENDS} != "ALL")
 	@${SHCOMMENT} Also remove BUILD_DEPENDS:
 .for pkg in ${BUILD_DEPENDS:C/:.*$//}
 	${_PKG_SILENT}${_PKG_DEBUG} \
