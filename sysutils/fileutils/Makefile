@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/12/06 16:12:55 grant Exp $
+# $NetBSD: Makefile,v 1.25 2002/12/06 17:58:07 grant Exp $
 
 DISTNAME=		fileutils-4.1.11
 CATEGORIES=		sysutils
@@ -9,9 +9,9 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/fileutils/fileutils.html
 COMMENT=		GNU file management utilities
 
-GNU_CONFIGURE=		# defined
-USE_PKGLOCALEDIR=	# defined
-USE_BUILDLINK2=		# defined
+GNU_CONFIGURE=		YES
+USE_PKGLOCALEDIR=	YES
+USE_BUILDLINK2=		YES
 CONFIGURE_ARGS+=	--program-prefix=g \
 			--with-libiconv-prefix=${BUILDLINK_PREFIX.libiconv}
 
