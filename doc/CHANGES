@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3322 2003/09/11 11:14:47 jmmv Exp $
+$NetBSD: CHANGES,v 1.3323 2003/09/11 12:43:59 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3631,3 +3631,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ddd to 3.3.7 [martti 2003-09-11]
 	Updated distcc to 2.10.1 [martti 2003-09-11]
 	Added gtksourceview-0.6.0 [jmmv 2003-09-11]
+	Updated libgda to 0.99.0 [jmmv 2003-09-11]
+	Updated libgnomedb to 0.99.0 [jmmv 2003-09-11]
+	Updated mergeant to 0.12.1nb2 [jmmv 2003-09-11]
+	Updated glade2 to 2.0.0nb4 [jmmv 2003-09-11]
