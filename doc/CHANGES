@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1504 2003/02/28 23:26:23 grant Exp $
+$NetBSD: CHANGES,v 1.1505 2003/03/01 00:07:15 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -861,3 +861,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated links-gui to 2.1.0.8nb1 [is 2003-02-27]
 	Updated libgnomecanvas to 2.2.0.2 [jmmv 2003-02-28]
 	Updated libiconv to 1.8nb1 [grant 2003-02-28]
+	Updated xv to 3.10anb5 [grant 2003-02-28]
