@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2003/09/02 09:08:52 grant Exp $
+# $NetBSD: Makefile,v 1.80 2003/09/02 22:30:46 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -32,8 +32,6 @@ PKG_PRESERVE=		# defined
 
 VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
-
-CPPFLAGS+=		${BUILDLINK_CPPFLAGS.libnbcompat}
 
 PKG_DBDIR?=		/var/db/pkg
 PKG_INFO=		PKG_DBDIR=${PKG_DBDIR} ${PKG_INFO_CMD}
