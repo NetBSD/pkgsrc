@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2004/11/14 07:50:58 jlam Exp $
+# $NetBSD: hacks.mk,v 1.3 2004/11/14 08:00:14 jlam Exp $
 
 .include "../../mk/compiler.mk"
 
@@ -30,7 +30,7 @@ CFLAGS+=	-DDEBUGGING -g -msoft-quad-float -O2
 ### to free unreference scalar".  Remove optimisation flags as a
 ### workaround until GCC is fixed.
 ###
-.if !empty(CC_VERSION:Mgcc*) && (${MACHINE_ARCH} == "powerpc")
+.if !empty(CC_VERSION:Mgcc*) && !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
 PKG_HACKS+=		powerpc-codegen
 BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 .endif
