@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/02 13:04:46 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/08/21 04:02:45 hubertf Exp $
 bin/xtermset
 man/man1/xtermset.1
 share/doc/xtermset/ctlseqs.ms
 share/doc/xtermset/ctlseqs.0
 share/doc/xtermset/COPYING
-share/doc/xtermset/INSTALL
 share/doc/xtermset/README
 @dirrm share/doc/xtermset
