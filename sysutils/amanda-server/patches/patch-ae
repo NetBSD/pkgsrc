@@ -1,8 +1,27 @@
-$NetBSD: patch-ae,v 1.6 2004/05/12 18:45:26 bouyer Exp $
+$NetBSD: patch-ae,v 1.7 2004/10/03 09:19:16 bouyer Exp $
 
---- changer-src/scsi-changer-driver.c.orig	2003-01-26 11:20:56.000000000 -0800
-+++ changer-src/scsi-changer-driver.c	2004-02-23 08:44:56.000000000 -0800
-@@ -1358,13 +1358,14 @@
+--- changer-src/scsi-changer-driver.c.orig	Sun Jan 26 20:20:56 2003
++++ changer-src/scsi-changer-driver.c	Sat Oct  2 20:54:52 2004
+@@ -372,6 +372,18 @@
+    NoBarCode,
+    GenericSearch,
+    GenericSenseHandler},
++  {"SDLT320",
++   "DLT Tape [SDLT320]",
++   DoNothing,
++   DoNothing,
++   DoNothing,
++   DoNothing,
++   DLT4000Eject,
++   GenericClean,
++   GenericRewind,
++   GenericBarCode,
++   GenericSearch,
++   GenericSenseHandler},
+   {"DLT8000",
+    "DLT Tape [DLT8000]",
+    DoNothing,
+@@ -1358,13 +1370,14 @@
  {
    int ret = 0;
    extern OpenFiles_T *pDev;
@@ -18,3 +37,39 @@ $NetBSD: patch-ae,v 1.6 2004/05/12 18:45:26 bouyer Exp $
    DebugPrint(DEBUG_INFO, SECTION_BARCODE,"##### STOP BarCode (%d)\n",ret);
    return(ret);
  }
+@@ -3770,7 +3783,7 @@
+                                      barcode,
+                                      V2(pEAAPage->MediumTransportElementAddress),
+                                      MTE+1,
+-				     sizeof(MediumTransportElementDescriptor_T),
++				     0, /* let the buffer auto-size */
+                                      (char **)&DataBuffer) != 0)
+             {
+               if (DataBuffer != 0)
+@@ -3855,7 +3868,7 @@
+                                      barcode,
+                                      V2(pEAAPage->FirstStorageElementAddress),
+                                      STE,
+-				     sizeof(StorageElementDescriptor_T),
++				     0, /* let the buffer auto-size */
+                                      (char **)&DataBuffer) != 0)
+             {
+               if (DataBuffer != 0)
+@@ -3942,7 +3955,7 @@
+                                      barcode,
+                                      V2(pEAAPage->FirstImportExportElementAddress),
+                                      IEE,
+-				     sizeof(ImportExportElementDescriptor_T),
++				     0, /* let the buffer auto-size */
+                                      (char **)&DataBuffer) != 0)
+             {
+               if (DataBuffer != 0)
+@@ -4027,7 +4040,7 @@
+                                      barcode,
+                                      V2(pEAAPage->FirstDataTransferElementAddress),
+                                      DTE,
+-				     sizeof(DataTransferElementDescriptor_T),
++				     0, /* let the buffer auto-size */
+                                      (char **)&DataBuffer) != 0)
+             {
+               if (DataBuffer != 0)
