@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2003/01/28 22:03:24 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2003/04/02 12:05:25 wiz Exp $
 #
 
-DISTNAME=	libggi-2.0b2.1
-PKGREVISION=	1
+DISTNAME=	libggi-2.0.3.src
+PKGNAME=	${DISTNAME:S/.src//}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.ggi-project.org/pub/ggi/ggi/current/
+MASTER_SITES=	ftp://ftp.ggi-project.org/pub/ggi/ggi/v2.0/ \
+		http://www.ggi-project.org/ftp/ggi/v2.0/ \
+		${MASTER_SITE_SOURCEFORGE:=ggi/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.ggi-project.org/
@@ -25,17 +29,19 @@ CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
 PKG_SYSCONFSUBDIR=	ggi
 EGDIR=			${PREFIX}/share/examples/ggi
 CONF_FILES=		${EGDIR}/libggi.conf ${PKG_SYSCONFDIR}/libggi.conf
-CONF_FILES+=		${EGDIR}/libggimisc.conf ${PKG_SYSCONFDIR}/libggimisc.conf
 
-PLIST_SRC=	${WRKDIR}/PLIST
+.include "../../mk/bsd.prefs.mk"
 
-post-configure:
-	@if [ -f ${X11BASE}/include/X11/extensions/xf86dga.h ]; then	\
-		${CP} ${PKGDIR}/PLIST ${PLIST_SRC};			\
-	else								\
-		${GREP} -v lib.ggi.display.xf86dga ${PKGDIR}/PLIST	\
-			> ${PLIST_SRC};					\
-	fi
+.if exists(${X11BASE}/include/X11/extensions/xf86dga.h)
+#
+# it would be more logical to set PLIST_SRC to PLIST first and then add
+# PLIST.dga to it, but @dirrm lib/ggi/display will fail while processing
+# pkg/PLIST, because the directory still contains files (they are listed in
+# PLIST.dga) and isn't empty, thus can't be removed
+#
+PLIST_SRC=              ${PKGDIR}/PLIST.dga
+PLIST_SRC+=             ${PKGDIR}/PLIST
+.endif
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../graphics/libgii/buildlink2.mk"
