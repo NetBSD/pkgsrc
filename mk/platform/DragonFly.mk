@@ -1,4 +1,4 @@
-# $NetBSD: DragonFly.mk,v 1.2 2004/11/02 22:24:35 wiz Exp $
+# $NetBSD: DragonFly.mk,v 1.3 2004/11/16 16:21:40 tv Exp $
 #
 # Variable definitions for the DragonFly operating system.
 
@@ -98,7 +98,6 @@ DEPENDS+=	${USE_USERADD:D${_USER_DEPENDS}}
 DEPENDS+=	${USE_GROUPADD:D${_USER_DEPENDS}}
 .endif
 
-CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
 .if ${OBJECT_FMT} == "ELF"
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
