@@ -1,0 +1,100 @@
+$NetBSD: patch-ac,v 1.1 2002/06/24 18:38:36 kent Exp $
+
+--- util.c.orig	Tue Jun 25 01:16:57 2002
++++ util.c
+@@ -465,6 +465,7 @@
+     char        mydate[256];
+     struct tm   tm, *ntm;
+     time_t      t;
++    int		ds_off;		/* date string offset */
+ 
+ #ifdef WEB500GW_DEBUG
+     Web500gw_debug(WEB500GW_DEBUG_UTIL, "  format_date (%s, \"%s\")\n",
+@@ -473,15 +474,22 @@
+     if (!s)
+         return(NULL);
+ 
+-    /* s should point to: YYMMDDHHmmSSZ */
++    /* s should point to: YYMMDDHHmmSSZ (13 chars) */
+     /* ... well 2 digits for year :-( */
+-
+-    tm.tm_year = 10*(s[0] - '0') + (s[1] - '0');
+-    tm.tm_mon  = 10*(s[2] - '0') + (s[3] - '0') - 1;
+-    tm.tm_mday = 10*(s[4] - '0') + (s[5] - '0');
+-    tm.tm_hour = 10*(s[6] - '0') + (s[7] - '0');
+-    tm.tm_min  = 10*(s[8] - '0') + (s[9] - '0');
+-    tm.tm_sec  = 10*(s[10] - '0') + (s[11] - '0');
++    /* or: YYYYMMDDHHmmSSZ (15 chars; 4-digit years) */
++    if (strlen(s) == 13) {
++	tm.tm_year = 10*(s[0] - '0') + (s[1] - '0');
++	ds_off = 2;
++    } else {
++	tm.tm_year = 1000*(s[0] - '0') + 100*(s[1] - '0') +
++	    10*(s[2] - '0') + (s[3] - '0');
++	ds_off = 4;
++    }
++    tm.tm_mon  = 10*(s[ds_off] - '0')    + (s[ds_off+1] - '0') - 1;
++    tm.tm_mday = 10*(s[ds_off+2] - '0')  + (s[ds_off+3] - '0');
++    tm.tm_hour = 10*(s[ds_off+4] - '0')  + (s[ds_off+5] - '0');
++    tm.tm_min  = 10*(s[ds_off+6] - '0')  + (s[ds_off+7] - '0');
++    tm.tm_sec  = 10*(s[ds_off+8] - '0')  + (s[ds_off+9] - '0');
+     tm.tm_isdst = 0;
+ 
+ #if ! (defined(__hpux) || defined(_AIX) || defined(sunos5) || defined(linux) || defined(unixware7))
+@@ -524,6 +532,7 @@
+     char month_name[4];
+     int year = 0, month = 0, day = 0, hour = 0, min = 0, sec = 0;
+     int i = 0;
++    int ds_off;			/* date string offset */
+ 
+ #ifdef WEB500GW_DEBUG
+     Web500gw_debug(WEB500GW_DEBUG_UTIL, "  cmp_dates (%s, %s)\n",
+@@ -554,7 +563,8 @@
+             &day, month_name, &year, &hour, &min, &sec);
+         if (year < 70)
+             year += 100;
+-        year += 1900;
++	if (year < 1900)
++	    year += 1900;
+     } else {         /* normal HTTP date (RFC 822/1123): dd Mmm yyyy hh:mm:ss */
+         sscanf(http_date, "%d %s %d %d:%d:%d", 
+             &day, month_name, &year, &hour, &min, &sec);
+@@ -568,17 +578,31 @@
+         day, month, year, 0);
+     Web500gw_debug(WEB500GW_DEBUG_UTIL, "%d:%d:%d\n", hour, min, sec, 0);
+ #endif
+-    if ((i = ((10*(ldap_date[0] - '0') + (ldap_date[1] - '0') + 1900) - year)))
+-        return i > 0;
+-    if ((i = ((10*(ldap_date[2] - '0') + (ldap_date[3] - '0')) - month)))
++    /* ldap_date should point to: YYMMDDHHmmSSZ (13 chars) */
++    /* ... well 2 digits for year :-( */
++    /* or: YYYYMMDDHHmmSSZ (15 chars; 4-digit years) */
++    if (strlen(ldap_date) == 13) {
++	ds_off=2;
++	if ((i = ((10*(ldap_date[0] - '0') + (ldap_date[1] - '0') + 1900) - year)))
++	    return i > 0;
++    } else {
++	ds_off=4;
++	if ((i = ((1000*(ldap_date[0] - '0') +
++		    100*(ldap_date[1] - '0') +
++		     10*(ldap_date[2] - '0') +
++			(ldap_date[3] - '0')) - year )))
++	    return i > 0;
++    }
++
++    if ((i = ((10*(ldap_date[ds_off] - '0') + (ldap_date[ds_off+1] - '0')) - month)))
+         return i > 0;
+-    if ((i = ((10*(ldap_date[4] - '0') + (ldap_date[5] - '0')) - day)))
++    if ((i = ((10*(ldap_date[ds_off+2] - '0') + (ldap_date[ds_off+3] - '0')) - day)))
+         return i > 0;
+-    if ((i = ((10*(ldap_date[6] - '0') + (ldap_date[7] - '0')) - hour)))
++    if ((i = ((10*(ldap_date[ds_off+4] - '0') + (ldap_date[ds_off+5] - '0')) - hour)))
+         return i > 0;
+-    if ((i = ((10*(ldap_date[8] - '0') + (ldap_date[9] - '0')) - min)))
++    if ((i = ((10*(ldap_date[ds_off+6] - '0') + (ldap_date[ds_off+7] - '0')) - min)))
+         return i > 0;
+-    if ((i = ((10*(ldap_date[10] - '0') + (ldap_date[11] - '0')) - sec)))
++    if ((i = ((10*(ldap_date[ds_off+8] - '0') + (ldap_date[ds_off+9] - '0')) - sec)))
+         return i > 0;
+ 
+     /* gone so far - dates are identical */
