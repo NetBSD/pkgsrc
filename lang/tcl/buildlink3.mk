@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2004/10/03 00:15:03 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2004/10/30 05:48:51 minskim Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TCL_BUILDLINK3_MK:=	${TCL_BUILDLINK3_MK}+
@@ -25,6 +25,8 @@ BUILDLINK_TRANSFORM+=	l:tcl8.4:tcl84
 
 TCLCONFIG_SH?=		${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 
+PRINT_PLIST_AWK+=	/^@dirrm lib\/tcl$$/ \
+				{ print "@comment in tcl: " $$0; next; }
 .endif	# TCL_BUILDLINK3_MK
 
 .if !defined(_TCL_NOTHREAD)
