@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/02/13 19:17:23 fredb Exp $
+# $NetBSD: Makefile,v 1.21 2000/03/16 15:30:02 wiz Exp $
 #
 
 DISTNAME=	xmcd-2.6
@@ -17,7 +17,7 @@ MAKE_ENV+=	MACHINE_ARCH="${MACHINE_ARCH}" SHELL=/bin/sh
 
 post-install:
 .for FILE in cda cddbcmd wm2xmcd xmcd
-	@test -n "${STRIPFLAG}" && \
+	@${TEST} -n "${STRIPFLAG}" && \
 	strip ${PREFIX}/lib/X11/xmcd/bin-${OPSYS}-${MACHINE_ARCH}/${FILE}
 .endfor
 	${MV} ${PREFIX}/man/cat1/cda.1 ${PREFIX}/man/man1/cda.1
