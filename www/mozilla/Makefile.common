@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.2 2002/10/03 16:08:13 taya Exp $
+# $NetBSD: Makefile.common,v 1.3 2002/10/19 15:00:02 taya Exp $
 
-DISTNAME=	mozilla-source-${MOZ_VER}
+DISTNAME?=	mozilla-source-${MOZ_VER}
 PKGNAME=	${MOZILLA}-${MOZ_VER}
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=mozilla${MOZ_VER}/src/}
 CATEGORIES=	www
 
 MAINTAINER=	taya@netbsd.org
-HOMEPAGE=	http://www.mozilla.org/
+HOMEPAGE?=	http://www.mozilla.org/
 
 WRKSRC=		${WRKDIR}/mozilla
 FILESDIR=	"../../www/mozilla/files"
@@ -18,13 +18,12 @@ USE_PERL5=	build
 USE_GMAKE=	yes
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-tests \
+CONFIGURE_ARGS+= --disable-tests \
 		--disable-debug \
 		--with-system-jpeg=${BUILDLINK_PREFIX.jpeg} \
 		--with-system-png=${BUILDLINK_PREFIX.png} \
 		--enable-mathml \
-		--enable-crypto \
-		--enable-svg
+		--enable-crypto
 
 SHAREMODE?=	644
 ALL_TARGET=	# empty
@@ -46,15 +45,20 @@ NOT_FOR_PLATFORM=	NetBSD-1.4.*-* NetBSD-*-m68k
 MOZ_LIBDIR=	${PREFIX}/lib/${MOZILLA}
 MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
 CONFIGURE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
-MAKE_ENV+=	MOZ_INTERNAL_LIBART_LGPL=1
-CONFIGURE_ENV+=	MOZ_INTERNAL_LIBART_LGPL=1
 LDFLAGS+=	-Wl,-R${MOZ_LIBDIR}
+
+.ifdef BUILD_SVG
+MAKE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
+CONFIGURE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
+CONFIGURE_ARGS+=	--enable-svg
+.endif
 
 # avoid creating a .mozilla directory in the users home
 # directory
 SCRIPTS_ENV+=	HOME="${WRKDIR}"
 
 PLIST_SUBST+=	MOZILLA="${MOZILLA}"
+PLIST_SUBST+=	MOZILLA_BIN="${MOZILLA_BIN}"
 .if ${OBJECT_FMT} == "ELF"
 SO_SUFFIX=	"so"
 .else
@@ -75,6 +79,7 @@ SCRIPTS_ENV+=	BINGRP=${BINGRP}
 SCRIPTS_ENV+=	BINMODE=${BINMODE}
 SCRIPTS_ENV+=	SETENV=${SETENV}
 SCRIPTS_ENV+=   MOZILLA=${MOZILLA}
+SCRIPTS_ENV+=   MOZILLA_BIN=${MOZILLA_BIN}
 SCRIPTS_ENV+=	SO_SUFFIX=${SO_SUFFIX}
 
 PTHREAD_OPTS+=	native optional
@@ -104,6 +109,8 @@ do-install:
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
 CONFIGURE_ARGS+= --without-pthreads
+.else
+CONFIGURE_ARGS+= --with-pthreads
 .endif
 
 .include "../../mk/autoconf.mk"
