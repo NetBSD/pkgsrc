@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8177 2004/11/30 14:25:03 wiz Exp $
+$NetBSD: CHANGES,v 1.8178 2004/11/30 15:01:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5671,3 +5671,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated BitTornado to 0.3.8 [wiz 2004-11-30]
 	Updated BitTornado-gui to 0.3.8 [wiz 2004-11-30]
 	Updated gnome-icon-theme to 2.8.0nb2 [wiz 2004-11-30]
+	Updated cooledit to 3.17.12 [adam 2004-11-30]
