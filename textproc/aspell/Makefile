@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 22:54:01 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/19 10:53:26 jmmv Exp $
 #
 
 DISTNAME=		aspell-0.50.3
@@ -8,12 +8,13 @@ MASTER_SITES=		${MASTER_SITE_GNU:=aspell/}
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://aspell.net/
-COMMENT=		spell checker with good multi-language support
+COMMENT=		Spell checker with good multi-language support
 
 CONFLICTS=		libpspell-[0-9]*
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
+USE_GCC_SHLIB=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -29,7 +30,7 @@ REPLACE_PERL=		scripts/aspell-import
 # Create directory for dictionaries.
 #
 post-install:
-	${MKDIR} ${PREFIX}/lib/aspell
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/aspell
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
