@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 1998/08/06 21:07:40 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/09/13 20:24:28 garbled Exp $
 bin/battalion
 man/man6/battalion.6
-share/battalion/battalion_hiscore
 share/battalion/HELP/bathelp01.gif
 share/battalion/HELP/bathelp02.gif
 share/battalion/HELP/bathelp03.gif
