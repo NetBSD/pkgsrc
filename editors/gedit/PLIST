@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/12/15 00:16:02 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/12/15 01:04:06 xtraeme Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-2.4/gedit/bonobo-mdi-child.h
@@ -48,6 +48,9 @@ lib/gedit-2/plugins/libshell_output.so
 lib/gedit-2/plugins/libsort.a
 lib/gedit-2/plugins/libsort.la
 lib/gedit-2/plugins/libsort.so
+lib/gedit-2/plugins/libspell.a
+lib/gedit-2/plugins/libspell.la
+lib/gedit-2/plugins/libspell.so
 lib/gedit-2/plugins/libtaglist.a
 lib/gedit-2/plugins/libtaglist.la
 lib/gedit-2/plugins/libtaglist.so
@@ -57,6 +60,7 @@ lib/gedit-2/plugins/libtime.so
 lib/gedit-2/plugins/sample.gedit-plugin
 lib/gedit-2/plugins/shell_output.gedit-plugin
 lib/gedit-2/plugins/sort.gedit-plugin
+lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
 lib/pkgconfig/gedit-2.4.pc
@@ -68,12 +72,14 @@ share/gedit-2/glade/docinfo.glade2
 share/gedit-2/glade/gedit-encodings-dialog.glade2
 share/gedit-2/glade/gedit-preferences.glade2
 share/gedit-2/glade/goto-line.glade2
+share/gedit-2/glade/languages-dialog.glade2
 share/gedit-2/glade/page-setup-dialog.glade2
 share/gedit-2/glade/plugin-manager.glade2
 share/gedit-2/glade/program-location-dialog.glade2
 share/gedit-2/glade/replace.glade2
 share/gedit-2/glade/shell_output.glade2
 share/gedit-2/glade/sort.glade2
+share/gedit-2/glade/spell-checker.glade2
 share/gedit-2/glade/time.glade2
 share/gedit-2/glade/uri.glade2
 share/gedit-2/taglist/HTML.tags
@@ -179,11 +185,25 @@ share/pixmaps/gedit-icon.png
 share/pixmaps/gedit-logo.png
 share/pixmaps/gedit-plugin-manager.png
 @dirrm share/omf/gedit
+@dirrm share/gnome/help/gedit/zh_TW
+@dirrm share/gnome/help/gedit/zh_CN
+@dirrm share/gnome/help/gedit/sv
 @dirrm share/gnome/help/gedit/ro/figures
+@dirrm share/gnome/help/gedit/ro
+@dirrm share/gnome/help/gedit/ko
+@dirrm share/gnome/help/gedit/ja
+@dirrm share/gnome/help/gedit/it
+@dirrm share/gnome/help/gedit/fr
+@dirrm share/gnome/help/gedit/es
+@dirrm share/gnome/help/gedit/de
 @dirrm share/gnome/help/gedit/C/figures
+@dirrm share/gnome/help/gedit/C
 @dirrm share/gedit-2/ui
 @dirrm share/gedit-2/taglist
 @dirrm share/gedit-2/glade
+@dirrm share/gedit-2
 @dirrm lib/gedit-2/plugins
+@dirrm lib/gedit-2
 @dirrm include/gedit-2.4/gedit/recent-files
 @dirrm include/gedit-2.4/gedit
+@dirrm include/gedit-2.4

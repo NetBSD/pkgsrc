@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/12/15 00:16:02 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2003/12/15 01:04:06 xtraeme Exp $
 #
 
 DISTNAME=		gedit-2.4.1
@@ -26,14 +26,13 @@ GCONF2_SCHEMAS=		gedit.schemas
 
 CONFIGURE_ARGS+=	--enable-schemas-install
 
-.if 0
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../print/libgnomeprintui/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../devel/eel2/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
+.include "../../print/libgnomeprintui/buildlink2.mk"
+.include "../../textproc/aspell/buildlink2.mk"
 .include "../../x11/gtksourceview/buildlink2.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
