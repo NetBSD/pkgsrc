@@ -1,0 +1,240 @@
+$NetBSD: patch-ag,v 1.1 1998/11/24 07:56:07 hubertf Exp $
+
+--- /usr/local/pkgsrc//mbone/vic/work/vic-2.8/configure.in	Fri Jun 21 08:36:47 1996
++++ configure.in	Wed Nov 19 15:53:36 1997
+@@ -225,8 +225,13 @@
+ 	V_LIB="$V_LIB -lipc"
+ 	;;
+ *-*-netbsd*)
++	V_STATIC=""
+ 	V_TARCMD="tar -h -c -f"
+-	V_LIB="$V_LIB -L/usr/local/lib"
++	V_LIB="$V_LIB -L/usr/pkg/lib"
++	V_SHM=""
++	;;
++*-*-freebsd*)
++	V_STATIC=""
+ 	;;
+ *-*-hpux*)
+ 	V_CCOPT="-O"
+--- /usr/local/pkgsrc//mbone/vic/work/vic-2.8/configure.in.tk	Thu May 16 10:06:05 1996
++++ configure.in.tk	Wed Nov 19 15:45:22 1997
+@@ -7,13 +7,13 @@
+ 		echo "'$d' is not a directory"
+ 		exit 1
+ 	fi
+-	V_INCLUDE_TCL=-I$d/include
+-	if test ! -r $d/include/tcl.h ; then
+-		echo "can't find tcl.h in $d/include"
++	V_INCLUDE_TCL=-I$d
++	if test ! -r $d/tcl.h ; then
++		echo "can't find tcl.h in $d"
+ 		exit 1
+ 	fi
+-	places="$d/lib/libtcl7.5.so \
+-		$d/lib/libtcl7.5.a \
++	places="$d/lib/libtcl8.0.so \
++		$d/lib/libtcl8.0.a \
+ 		$d/lib/libtcl.so \
+ 		$d/lib/libtcl.a"
+ 	V_LIB_TCL=FAIL
+@@ -27,7 +27,7 @@
+ 		echo "can't find libtcl.a in $d/lib"
+ 		exit 1
+ 	fi
+-	places="$d/lib/tcl7.5 \
++	places="$d/lib/tcl8.0 \
+ 		$d/lib/tcl"
+ 	V_LIBRARY_TCL=FAIL
+ 	for dir in $places; do
+@@ -44,13 +44,16 @@
+ 	AC_TEST_CPP([#include <tcl.h>], V_INCLUDE_TCL="", V_INCLUDE_TCL=FAIL)
+ 	if test "$V_INCLUDE_TCL" = FAIL; then
+ 		echo "checking for tcl.h"
+-		places="$PWD/../tcl7.5 \
+-			/usr/src/local/tcl7.5 \
+-			/import/tcl/include/tcl7.5 \
++		places="$PWD/../tcl8.0 \
++			/usr/src/local/tcl8.0 \
++			/import/tcl/include/tcl8.0 \
+ 			$prefix/include \
+ 			$x_includes/tk \
+ 			$x_includes \
++			/usr/pkg/include \
++			/usr/pkg/include/tcl8.0 \
+ 			/usr/local/include \
++			/usr/local/include/tcl8.0 \
+ 			/usr/contrib/include \
+ 			/usr/include"
+ 		for dir in $places; do
+@@ -64,22 +67,23 @@
+ 			exit 1
+ 		fi
+ 	fi
+-	AC_CHECK_LIB(tcl7.5, main, V_LIB_TCL="-ltcl7.5", V_LIB_TCL="FAIL")
++	AC_CHECK_LIB(tcl80, main, V_LIB_TCL="-ltcl80", V_LIB_TCL="FAIL")
+ 	if test "$V_LIB_TCL" = FAIL; then
+ 		echo "checking for libtcl.a"
+ 		places="\
+ 			$prefix/lib \
+ 			$x_libraries \
++			/usr/pkg/lib \
+ 			/usr/contrib/lib \
+ 			/usr/local/lib \
+ 			/usr/lib \
+-			$PWD/../tcl7.5 \
+-			/usr/src/local/tcl7.5 \
+-			/import/tcl/lib/tcl7.5 \
++			$PWD/../tcl8.0 \
++			/usr/src/local/tcl8.0 \
++			/import/tcl/lib/tcl8.0 \
+ 			"
+ 		for dir in $places; do
+-			if test -r $dir/libtcl7.5.so -o -r $dir/libtcl7.5.a; then
+-				V_LIB_TCL="-L$dir -ltcl7.5"
++			if test -r $dir/libtcl80.so -o -r $dir/libtcl80.a; then
++				V_LIB_TCL="-L$dir -ltcl80"
+ 				break
+ 			fi
+ 			if test -r $dir/libtcl.so -o -r $dir/libtcl.a; then
+@@ -98,13 +102,14 @@
+ 	fi
+ 	echo "checking for tcl/init.tcl"
+ 	V_LIBRARY_TCL=FAIL
+-	places="/usr/local/lib/tcl7.5 \
+-		/usr/contrib/lib/tcl7.5 \
+-		/usr/lib/tcl7.5 \
+-		/usr/lib/tk/tcl7.5 \
+-		/import/tcl/lib/tcl7.5 \
+-		$prefix/lib/tcl7.5 \
+-		$x_libraries/tcl7.5 \
++	places="/usr/local/lib/tcl8.0 \
++		/usr/pkg/lib/tcl8.0 \
++		/usr/contrib/lib/tcl8.0 \
++		/usr/lib/tcl8.0 \
++		/usr/lib/tk/tcl8.0 \
++		/import/tcl/lib/tcl8.0 \
++		$prefix/lib/tcl8.0 \
++		$x_libraries/tcl8.0 \
+ 		/usr/local/lib/tcl \
+ 		/usr/lib/tcl \
+ 		/usr/lib/tk/tcl \
+@@ -133,13 +138,13 @@
+ 		echo "'$d' is not a directory"
+ 		exit 1
+ 	fi
+-	V_INCLUDE_TK=-I$d/include
+-	if test ! -r $d/include/tk.h ; then
+-		echo "can't find tk.h in $d/include"
++	V_INCLUDE_TK=-I$d
++	if test ! -r $d/tk.h ; then
++		echo "can't find tk.h in $d"
+ 		exit 1
+ 	fi
+-	places="$d/lib/libtk4.1.so \
+-		$d/lib/libtk4.1.a \
++	places="$d/lib/libtk8.0.so \
++		$d/lib/libtk8.0.a \
+ 		$d/lib/libtk.so \
+ 		$d/lib/libtk.a"
+ 	V_LIB_TK=FAIL
+@@ -153,7 +158,7 @@
+ 		echo "can't find libtk.a in $d/lib"
+ 		exit 1
+ 	fi
+-	places="$d/lib/tk4.1 \
++	places="$d/lib/tk8.0 \
+ 		$d/lib/tk"
+ 	V_LIBRARY_TK=FAIL
+ 	for dir in $places; do
+@@ -170,18 +175,21 @@
+ 	AC_TEST_CPP([#include <tk.h>], V_INCLUDE_TK="", V_INCLUDE_TK=FAIL)
+ 	if test "$V_INCLUDE_TK" = FAIL; then
+ 		echo "checking for tk.h"
+-		V_INCLUDE_TK=""
++		V_INCLUDE_TK="FAIL"
+ 		places="\
+ 			$prefix/include \
++			/usr/pkg/include \
++			/usr/pkg/include/tk8.0 \
+ 			/usr/local/include \
++			/usr/local/include/tk8.0 \
+ 			/usr/contrib/include \
+ 			/usr/include/tcl \
+ 			/usr/include\
+ 			$x_includes/tk \
+ 			$x_includes \
+-			$PWD/../tk4.1 \
+-			/usr/src/local/tk4.1 \
+-			/import/tcl/include/tk4.1 \
++			$PWD/../tk8.0 \
++			/usr/src/local/tk8.0 \
++			/import/tcl/include/tk8.0 \
+ 			"
+ 		for dir in $places; do
+ 			if test -r $dir/tk.h ; then
+@@ -194,21 +202,22 @@
+ 			exit 1
+ 		fi
+ 	fi
+-	AC_CHECK_LIB(tk4.1, main, V_LIB_TK="-ltk4.1", V_LIB_TK="FAIL")
++	AC_CHECK_LIB(tk80, main, V_LIB_TK="-ltk80", V_LIB_TK="FAIL")
+ 	if test "$V_LIB_TK" = FAIL; then
+ 		echo "checking for libtk.a"
+ 		places="/usr/local/lib \
++			/usr/pkg/lib \
+ 			/usr/contrib/lib \
+ 			/usr/lib \
+ 			/usr/lib/tk \
+ 			/import/tcl/lib \
+-			$PWD/../tk4.1 \
+-			/usr/src/local/tk4.1 \
++			$PWD/../tk8.0 \
++			/usr/src/local/tk8.0 \
+ 			$prefix/lib \
+ 			$x_libraries"
+ 		for dir in $places; do
+-			if test -r $dir/libtk4.1.so -o -r $dir/libtk4.1.a; then
+-				V_LIB_TK="-L$dir -ltk4.1"
++			if test -r $dir/libtk80.so -o -r $dir/libtk80.a; then
++				V_LIB_TK="-L$dir -ltk80"
+ 				break
+ 			fi
+ 			if test -r $dir/libtk.so -o -r $dir/libtk.a; then
+@@ -227,15 +236,16 @@
+ 	fi
+ 	echo "checking for tk/tk.tcl"
+ 	V_LIBRARY_TK=FAIL
+-	places="/usr/local/lib/tk4.1 \
+-		/usr/contrib/lib/tk4.1 \
+-		/usr/lib/tk4.1 \
+-		/usr/lib/tk/tk4.1 \
+-		/import/tcl/lib/tk4.1 \
+-		$prefix/lib/tk4.1 \
+-		$x_libraries/tk4.1 \
+-		$PWD/../tk4.1/library \
+-		/usr/src/local/tk4.1/library \
++	places="/usr/local/lib/tk8.0 \
++		/usr/pkg/lib/tk8.0 \
++		/usr/contrib/lib/tk8.0 \
++		/usr/lib/tk8.0 \
++		/usr/lib/tk/tk8.0 \
++		/import/tcl/lib/tk8.0 \
++		$prefix/lib/tk8.0 \
++		$x_libraries/tk8.0 \
++		$PWD/../tk8.0/library \
++		/usr/src/local/tk8.0/library \
+ 		/usr/local/lib/tk \
+ 		/usr/lib/tk \
+ 		/usr/lib/tk/tk \
+--- /usr/local/pkgsrc//mbone/vic/work/vic-2.8/Makefile.in	Mon Jul 22 18:32:53 1996
++++ Makefile.in	Tue Nov 18 13:16:25 1997
+@@ -303,7 +303,7 @@
+ 	 chown bin @prefix@/bin/vic
+ 	 chgrp bin @prefix@/bin/vic
+ 	 chmod 555 @prefix@/bin/vic
+-	 cp vic.1 @prefix@/man/vic.1
++	 cp vic.1 @prefix@/man/man1/vic.1
+ 	 cp histtolut @prefix@/bin/histtolut
+ 	 chown bin @prefix@/bin/histtolut
+ 	 chgrp bin @prefix@/bin/histtolut
