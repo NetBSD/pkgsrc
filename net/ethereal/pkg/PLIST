@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2000/07/05 21:52:44 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.9 2000/08/05 07:33:37 tron Exp $
 bin/editcap
 bin/ethereal
 bin/tethereal
 etc/manuf
-lib/ethereal/plugins/0.8.10/gryphon.la
-lib/ethereal/plugins/0.8.10/libgryphon.a
-lib/ethereal/plugins/0.8.10/libgryphon.so.0.0
+lib/ethereal/plugins/${ETHEREAL_VERSION}/gryphon.la
+lib/ethereal/plugins/${ETHEREAL_VERSION}/libgryphon.a
+lib/ethereal/plugins/${ETHEREAL_VERSION}/libgryphon.so.0.0
 man/man1/editcap.1
 man/man1/ethereal.1
 man/man1/tethereal.1
-@dirrm lib/ethereal/plugins/0.8.10
+@dirrm lib/ethereal/plugins/${ETHEREAL_VERSION}
 @dirrm lib/ethereal/plugins
 @dirrm lib/ethereal
