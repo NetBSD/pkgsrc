@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1999/03/30 12:52:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 1999/04/16 10:50:12 rh Exp $
 #
 
 # Note to package maintainers:
@@ -31,7 +31,7 @@ MANCOMPRESSED=		yes
 .endif
 
 post-install:
-	if [ ! -f $${PKG_DBDIR:-/var/db/pkg}/pkgdb.byfile.db ]; then
+	if [ ! -f $${PKG_DBDIR:-/var/db/pkg}/pkgdb.byfile.db ]; then \
 		if [ ! -d $${PKG_DBDIR:-/var/db/pkg} ]; then \
 			${MKDIR} $${PKG_DBDIR:-/var/db/pkg}; \
 		fi; \
