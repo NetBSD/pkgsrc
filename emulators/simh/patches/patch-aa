@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.4 2002/10/19 21:38:10 thorpej Exp $
+
+--- Makefile.orig	Sat Oct 19 14:23:26 2002
++++ Makefile	Sat Oct 19 14:24:16 2002
+@@ -3,8 +3,8 @@
+ # Note: -O2 is sometimes broken in GCC when setjump/longjump is being
+ # used. Try -O2 only with released simulators.
+ #
+-CC = gcc -O2 -lm -I .
+-#CC = gcc -O2 -g -lm -I .
++CC = gcc -O2 -lm -lpcap -I .
++#CC = gcc -O2 -g -lm -lpcap -I .
+ 
+ 
+ 
+@@ -12,7 +12,7 @@
+ # Common Libraries
+ #
+ BIN = BIN/
+-SIM = scp.c scp_tty.c sim_sock.c sim_tmxr.c
++SIM = scp.c scp_tty.c sim_ether.c sim_sock.c sim_tmxr.c
+ 
+ 
+ 
