@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/06/30 22:40:07 abs Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/02 19:34:22 drochner Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -36,8 +36,11 @@ INFO_FILES=		cpp.info g77.info gcc.info gcj.info
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/pthread.h)
-# '--host=i386--netbsdelf2.0' causes ".../ld: cannot find -lgcc_eh"
-CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --enable-threads
+CONFIGURE_ARGS=		--host=${MACHINE_GNU_ARCH}--netbsdelf2.0
+PTHREAD_OPTS+=		require native
+.include "../../mk/pthread.buildlink2.mk"
+CPPFLAGS+=	-I${BUILDLINK_DIR}/include
+CFLAGS+=	-I${BUILDLINK_DIR}/include
 .else
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM}
 .endif
