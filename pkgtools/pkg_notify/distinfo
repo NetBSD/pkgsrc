@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2005/01/11 14:42:15 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2005/01/14 10:04:01 jmmv Exp $
 
-SHA1 (pkg_notify-0.4.1.tar.gz) = d1864a23e5ec797191e9aee4d6a2889033cd1ec3
-Size (pkg_notify-0.4.1.tar.gz) = 5417 bytes
+SHA1 (pkg_notify-0.4.2.tar.gz) = 67e7b2216d046abdb9179c67f5ce2a661570b105
+Size (pkg_notify-0.4.2.tar.gz) = 5741 bytes

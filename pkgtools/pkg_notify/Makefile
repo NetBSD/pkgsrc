@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/01/13 21:51:19 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2005/01/14 10:04:01 jmmv Exp $
 #
 
-DISTNAME=	pkg_notify-0.4.1
-PKGREVISION=	1
+DISTNAME=	pkg_notify-0.4.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://imil.net/NetBSD/
 
@@ -37,8 +36,10 @@ SUBST_SED.pkg_notify=		-e 's|/usr/pkgsrc|${PKGSRCDIR}|'	\
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_notify ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/${PKGBASE}.list ${EXAMPLEDIR}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
