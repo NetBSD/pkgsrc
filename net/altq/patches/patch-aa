@@ -1,0 +1,10 @@
+--- Makefile.orig	Wed Jan 13 09:47:07 1999
++++ Makefile	Wed Jan 13 09:47:14 1999
+@@ -14,6 +14,6 @@
+ # for INRIA IPv6
+ #	make install SYS_DEFINES=-DINET6
+ 
+-SUBDIR= cbq-tools red-tools rio-tools wfq-tools fifoq-tools atm-tools
++SUBDIR= atm-tools
+ 
+ .include <bsd.subdir.mk>
