@@ -1,0 +1,1 @@
+You will also need to install ucspi-tcp package (pkgsrc/net/ucspi-tcp) if you want to use axfrdns or axfr-get
