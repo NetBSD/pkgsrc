@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/26 01:28:26 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 17:42:22 wiz Exp $
 
 DISTNAME=	${PKGNAME:S/-/_/}
 PKGNAME=	xbattbar-1.4.1
@@ -8,6 +8,7 @@ MASTER_SITES=	http://infonet.aist-nara.ac.jp/member/suguru/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://infonet.aist-nara.ac.jp/member/suguru/xbattbar.html
+COMMENT=	X11 battery graph for laptops
 
 USE_X11BASE=	# defined
 USE_IMAKE=	# defined

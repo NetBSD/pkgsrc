@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/09/03 13:31:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 17:42:21 wiz Exp $
 #
 
 DISTNAME=	xbatt-1.3pr1
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www2.clave.gr.jp/~eto/xbatt/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www2.clave.gr.jp/~eto/xbatt/	# Not really
+COMMENT=	Displays battery status of your notebook via APM
 
 .if !exists(/usr/include/machine/apmvar.h)
 IGNORE+=	"APM is not available for ${MACHINE_PLATFORM}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/21 15:02:26 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:51:39 wiz Exp $
 
 DISTNAME=	cupsomatic
 PKGNAME=	cupsomatic-1.3
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	# empty
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.linuxprinting.org/cups-doc.html
+COMMENT=	Foomatic CUPS printer filter
 
 CONFLICTS+=	cupsomatic-200012??
 

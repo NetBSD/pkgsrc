@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/05 09:01:03 tron Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/17 17:49:41 wiz Exp $
 
 DISTNAME=		cyrus-sasl-1.5.24
 PKGNAME=		${DISTNAME}nb3
@@ -8,6 +8,7 @@ MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://asg2.web.cmu.edu/sasl/
+COMMENT=		Simple Authentication and Security Layer
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
 

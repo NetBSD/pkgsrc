@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/03 22:15:30 bad Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 17:42:17 wiz Exp $
 #
 
 DISTNAME=	pstree-2.16
@@ -6,6 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.go.dlr.de/fresh/unix/src/misc/
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	Display processes in a tree
 
 CONFLICTS+=	psmisc-*
 

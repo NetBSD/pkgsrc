@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/08/23 23:14:31 tron Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/17 17:42:10 wiz Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/11/29 12:43:12 asami Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=		http://www.tigr.net/afterstep/as-apps/download/asapm/ \
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.tigr.net/afterstep/as-apps/download/asapm/
+COMMENT=		Laptop battery status display for X11
 
 .if !exists(/usr/include/machine/apmvar.h)
 IGNORE+=		"APM is not available for ${MACHINE_PLATFORM}"
