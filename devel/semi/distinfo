@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:08:29 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:46 wiz Exp $
 
-MD5 (semi-1.14.3.tar.gz) = 1947c164814f6f9a11e03c49cd98a776
+SHA1 (semi-1.14.3.tar.gz) = 8d03481ae1bd63beb02d13d403e47cd1dbc7d894
+Size (semi-1.14.3.tar.gz) = 135371 bytes
 SHA1 (patch-aa) = 0c5d6bb7628c9f6871d3f8f3adaf9a66da6f9d98

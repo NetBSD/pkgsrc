@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:37 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:31 wiz Exp $
 
-MD5 (nasm-0.98.tar.gz) = fc334b4b05b5f57fe3fc867c42320ef9
+SHA1 (nasm-0.98.tar.gz) = c18adc9a543d785fa3b950dd2980a350a3eff772
+Size (nasm-0.98.tar.gz) = 468600 bytes

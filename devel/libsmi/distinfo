@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:07:27 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 00:44:29 wiz Exp $
 
-MD5 (libsmi-0.1.6.tar.gz) = 0d24d3e2bdd67ad1d7332f6a0077f6c6
+SHA1 (libsmi-0.1.6.tar.gz) = 3be4a0b6be42145b9f51d1a0ad0b6cc6cedcdccd
+Size (libsmi-0.1.6.tar.gz) = 443504 bytes
