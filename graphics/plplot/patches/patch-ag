@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/12/02 05:40:33 jtb Exp $
+
+--- src/plctrl.c.orig
++++ src/plctrl.c
+@@ -131,7 +131,7 @@
+ /* Anything else is assumed to be Unix */
+ 
+ #ifndef PLLIBDEV
+-#define PLLIBDEV "/usr/local/plplot/lib"
++#define PLLIBDEV "%%PREFIX%%/lib/plplot"
+ #endif
+ 
+ #endif
