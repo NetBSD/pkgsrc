@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/06/27 13:26:22 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/27 13:42:46 grant Exp $
 #
 
 DISTNAME=	AiCA-0.71.1
@@ -10,6 +10,7 @@ HOMEPAGE=	http://mars.elcom.nitech.ac.jp/security/
 COMMENT=	Manage Certification Authority,PKI viewer/converter/verification
 
 GNU_CONFIGURE=	yes
+USE_BUILDLINK3=	yes
 
 RESTRICTED=             "Source code redistribution is not permitted. consult okuno@mars.elcom.nitech.ac.jp."
 NO_SRC_ON_FTP=		${RESTRICTED}
