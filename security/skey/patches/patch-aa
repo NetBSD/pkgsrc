@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2003/07/23 14:34:29 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/23 16:03:56 salo Exp $
 
---- Makefile.in.orig   Thu May 10 17:10:49 2001
-+++ Makefile.in        Wed Jul 23 12:31:50 2003
-@@ -18,10 +18,10 @@
+--- Makefile.in.orig	Thu May 10 18:10:49 2001
++++ Makefile.in	Wed Jul 23 17:18:18 2003
+@@ -18,15 +18,18 @@
  AR=@AR@
  RANLIB=@RANLIB@
  INSTALL=@INSTALL@
@@ -10,14 +10,36 @@ $NetBSD: patch-aa,v 1.1 2003/07/23 14:34:29 jmmv Exp $
 -INSTALL_MAN=${INSTALL} -c -m 444
 -INSTALL_SCRIPT=${INSTALL} -c -m 555
 -INSTALL_DATA=${INSTALL} -c -m 444
-+INSTALL_PROGRAM=@INSTALL_PROGRAM@
-+INSTALL_MAN=@INSTALL_DATA@
-+INSTALL_SCRIPT=@INSTALL_SCRIPT@
-+INSTALL_DATA=@INSTALL_DATA@
++INSTALL_PROGRAM=${BSD_INSTALL_PROGRAM}
++INSTALL_MAN=${BSD_INSTALL_MAN}
++INSTALL_SCRIPT=${BSD_INSTALL_SCRIPT}
++INSTALL_DATA=${BSD_INSTALL_DATA}
  PERL=@PERL@
  SENDMAIL=@SENDMAIL@
  TOUCH=@TOUCH@
-@@ -88,14 +88,6 @@
+ LDFLAGS=-L. @LDFLAGS@
+ 
++GCC=@GCC@
++host=@host@
++
+ TARGETS=skey skeyinit skeyinfo skeyaudit
+ LIBOBJS=skeylogin.o skeysubr.o put.o errx.o md4c.o md5c.o rmd160.o rmd160hl.o sha1.o sha1hl.o flock.o strlcpy.o login_cap.o
+ SKEYOBJS=skey.o
+@@ -49,6 +52,13 @@
+ 
+ all: ${TARGETS} ${MANPAGES}
+ 
++ifeq (sparc64, $(findstring sparc64, $(host)))
++ifdef GCC
++sha1.o: config.h
++	${CC} ${CFLAGS:-O%=-O0} -c -o $@ sha1.c
++endif
++endif
++
+ ${LIBOBJS}: config.h
+ 
+ libskey.a: ${LIBOBJS}
+@@ -88,14 +98,6 @@
  	done
  
  install: ${TARGETS}
