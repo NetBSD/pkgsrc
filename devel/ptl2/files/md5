@@ -1,4 +1,6 @@
-$NetBSD: md5,v 1.5 1999/06/23 16:57:08 msaitoh Exp $
+$NetBSD: md5,v 1.6 1999/08/06 17:08:58 msaitoh Exp $
 
 MD5 (PTL2-current-990622.tar.gz) = 7a8f5227fc4d864575bc4e9af9f47ad6
 MD5 (PTL2-current-990622-patch-1) = 8f607c1d5e389a711ea9360b59f81b64
+MD5 (PTL2-current-990622-patch-2) = e9d3bf2bb39cca792e1259dec8a48e62
+MD5 (PTL2-current-990622-patch-3) = c532723b3f42fa661a17d46e1f8f58b8
