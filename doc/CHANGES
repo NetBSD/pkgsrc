@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5574 2004/04/14 14:42:36 adam Exp $
+$NetBSD: CHANGES,v 1.5575 2004/04/14 14:46:47 manu Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1949,3 +1949,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bmp to 0.9.6.1 [jmmv 2004-04-14]
 	Updated bmp-esound to 0.9.6.1 [jmmv 2004-04-14]
 	Updated timidity to 2.13.0 [adam 2004-04-14]
+	Added libspf-alt-0.4.0 [manu 2004-04-14]
