@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.39 2004/04/16 23:59:32 heinz Exp $
+dnl $NetBSD: configure.ac,v 1.40 2004/04/18 06:02:19 heinz Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -380,6 +380,10 @@ AH_BOTTOM([
 
 #if HAVE_SYS_BYTEORDER_H
 #include <sys/byteorder.h>
+#endif
+
+#if HAVE_LIMITS_H
+#include <limits.h>
 #endif
 
 #ifndef LITTLE_ENDIAN
