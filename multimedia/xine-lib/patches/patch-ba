@@ -1,0 +1,57 @@
+$NetBSD: patch-ba,v 1.1 2004/08/10 11:24:46 drochner Exp $
+
+--- src/input/vcd/xineplug_inp_vcd.c.orig	2004-06-13 23:28:56.000000000 +0200
++++ src/input/vcd/xineplug_inp_vcd.c
+@@ -48,6 +48,7 @@
+ #define SHORT_PLUGIN_NAME "VCD"
+ #define MRL_PREFIX "vcd://"
+ #define MRL_PREFIX_LEN strlen(MRL_PREFIX)
++#define MRL_MAX_LEN 1024
+ 
+ #define xine_config_entry_t xine_cfg_entry_t
+ 
+@@ -474,7 +475,7 @@ vcd_parse_mrl(/*in*/ const char *default
+     return false;
+   }
+ 
+-  count = sscanf (p, "%[^@]@%1[EePpSsTt]%u", 
++  count = sscanf (p, "%1024[^@]@%1[EePpSsTt]%u", 
+ 		  device_str, type_str, &num);
+   itemid->num = num;
+   
+@@ -498,7 +499,7 @@ vcd_parse_mrl(/*in*/ const char *default
+     {
+       /* No device/file given, so use the default device and try again. */
+       if (NULL == default_vcd_device) return false;
+-      strcpy(device_str, default_vcd_device);
++      strncpy(device_str, default_vcd_device, MRL_MAX_LEN);
+       if (p[0] == '@') p++;
+       count = sscanf (p, "%1[EePpSsTt]%u", type_str, &num);
+       type_str[0] = toupper(type_str[0]);
+@@ -790,7 +791,7 @@ static xine_mrl_t **
+ vcd_class_get_dir (input_class_t *this_gen, const char *filename, 
+                     int *num_files) {
+ 
+-  char             intended_vcd_device[1024]="";
++  char             intended_vcd_device[MRL_MAX_LEN+1]="";
+   vcdinfo_itemid_t itemid;
+ 
+   vcd_input_class_t *class = (vcd_input_class_t *) this_gen;
+@@ -922,7 +923,7 @@ vcd_class_get_description (input_class_t
+ static char *
+ vcd_class_get_identifier (input_class_t *this_gen) {
+   dbg_print((INPUT_DBG_CALL|INPUT_DBG_EXT), "called\n");
+-  return SHORT_PLUGIN_NAME;
++  return strdup(SHORT_PLUGIN_NAME);
+ }
+ 
+ /* 
+@@ -1452,7 +1453,7 @@ vcd_class_get_instance (input_class_t *c
+ {
+   vcd_input_class_t  *class = (vcd_input_class_t *) class_gen;
+ 
+-  char intended_vcd_device[1024]="";
++  char intended_vcd_device[MRL_MAX_LEN+1]="";
+   vcdinfo_itemid_t itemid;
+   char *check_mrl=NULL;
+   bool used_default;
