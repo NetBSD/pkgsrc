@@ -1,20 +1,9 @@
-#!/bin/sh
-#
-# $NetBSD: INSTALL,v 1.2 2003/04/10 15:25:45 kent Exp $
+# $NetBSD: INSTALL,v 1.3 2003/08/30 18:48:35 jlam Exp $
 # $PEACE: INSTALL,v 1.1 2002/08/21 02:02:27 kent Exp $
-
-PKGNAME=$1
-STAGE=$2
-
-SED=/usr/bin/sed
-LN=/bin/ln
-MKDIR=/bin/mkdir
 
 CROSSINC=${PKG_PREFIX}/cross/i386-netbsdpe/include
 
 case ${STAGE} in
-PRE-INSTALL)
-	;;
 POST-INSTALL)
 	${SED} "s/^extern const/__declspec(dllimport) extern const/g" /usr/include/ctype.h > ${CROSSINC}/ctype.h
 	${SED} "s/^extern FILE/__declspec(dllimport) extern FILE/" /usr/include/stdio.h > ${CROSSINC}/stdio.h
@@ -27,9 +16,4 @@ POST-INSTALL)
 	${MKDIR} ${CROSSINC}/sys
 	${SED} "s/FSHIFT/SYS_PARAM_FSHIFT/g" /usr/include/sys/param.h > ${CROSSINC}/sys/param.h
 	;;
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
-	;;
 esac
-exit 0
