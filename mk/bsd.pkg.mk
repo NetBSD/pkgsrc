@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1604 2005/03/24 17:46:00 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1605 2005/03/29 08:17:42 garbled Exp $
 #
 # This file is in the public domain.
 #
@@ -2688,6 +2688,7 @@ do-shlib-handling:
 		fi;  							\
 		case "$$shlib_type" in					\
 		ELF) 	;;						\
+		aixlib) ;;						\
 		"a.out") 						\
 			${AWK} '${_AOUT_AWK}' <${PLIST} >${PLIST}.tmp ;	\
 			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
@@ -2717,10 +2718,6 @@ do-shlib-handling:
 			else						\
 				${RM} ${PLIST}.tmp ;			\
 			fi ;						\
-			;;						\
-		"aixlib")						\
-			${AWK} '${_AIXLIB_AWK}' <${PLIST} >${PLIST}.tmp && \
-			${MV} ${PLIST}.tmp ${PLIST};			\
 			;;						\
 		"*")							\
 			if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 	\
