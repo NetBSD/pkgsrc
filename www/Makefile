@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2001/10/29 16:52:18 jlam Exp $
+# $NetBSD: Makefile,v 1.160 2001/10/29 19:36:28 jlam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -28,6 +28,7 @@ SUBDIR+=	ap-xslt
 SUBDIR+=	apache
 SUBDIR+=	apache-current
 SUBDIR+=	apache6
+SUBDIR+=	apc-gui
 SUBDIR+=	arena
 SUBDIR+=	asWedit
 SUBDIR+=	asp2php
