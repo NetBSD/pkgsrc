@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9248 2005/02/21 16:39:03 hamajima Exp $
+$NetBSD: CHANGES,v 1.9249 2005/02/21 16:52:17 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1008,3 +1008,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed ruby-digest [taca 2005-02-21]
 	Removed ruby-openssl [taca 2005-02-21]
 	Updated dtcpclient-20040923nb1 [hamajima 2005-02-21]
+	Updated xorg-server to 6.8.1nb3 [hira 2005-02-21]
