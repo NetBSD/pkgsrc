@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/09/05 09:33:18 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/01/07 04:59:58 explorer Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -19,7 +19,7 @@ DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
 DEPENDS+=	zlib-*:../../devel/zlib
 .endif
 
-PHP_VERSION=	3.0.16
+PHP_VERSION=	3.0.18
 
 .if defined(BUILDING_EXTENSION_MODULE) || defined(BUILDING_SERVER_MODULE)
 DEPENDS+=	php-${PHP_VERSION}:../../www/php3
