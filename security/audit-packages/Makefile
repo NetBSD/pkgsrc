@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2003/07/21 17:20:06 martti Exp $
+# $NetBSD: Makefile,v 1.26 2003/08/22 10:11:57 agc Exp $
 
-DISTNAME=	audit-packages-1.16
+DISTNAME=	audit-packages-1.17
 WRKSRC=		${WRKDIR}
 CATEGORIES=	security pkgtools
 MASTER_SITES=	# empty
@@ -31,6 +31,7 @@ do-build:
 			-e 's|@PKGSRCDIR@|${_PKGSRCDIR}|g'		\
 			-e 's|@PKG_TOOLS_BIN@|${PKG_TOOLS_BIN}|g'	\
 			-e 's|@SH@|${SH}|g'				\
+			-e 's|@WC@|${WC}|g'				\
 			${FILESDIR}/$$f > ${WRKSRC}/$$f;		\
 	done
 	${NROFF} ${WRKSRC}/audit-packages.8 >${WRKSRC}/audit-packages.0
