@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.946 2002/12/30 18:05:11 sommerfeld Exp $
+$NetBSD: CHANGES,v 1.947 2002/12/30 18:15:19 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4316,3 +4316,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added zephyr-20010518 [sommerfeld 2002-12-30]
 	Added tzc-2.6.15 [sommerfeld 2002-12-30]
 	Added zephyr-mode-2.5.20 [sommerfeld 2002-12-30]
+	Updated leafnode to 1.9.31 [cjep 2002-12-30]
