@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2003/09/29 09:20:12 seb Exp $
+$NetBSD: distinfo,v 1.4 2003/12/04 09:27:01 seb Exp $
 
 SHA1 (xpaste-1.1.shar.gz) = 15c022ddb3e43bc25721e9185aebe5d5ef8160a2
 Size (xpaste-1.1.shar.gz) = 6144 bytes
 SHA1 (patch-aa) = 467ecb06be395db5222614beeaba6694eb44c1fc
+SHA1 (patch-ab) = ef12cd1b9a1244fa3193298b1a00783fb984ed43
