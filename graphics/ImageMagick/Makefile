@@ -3,7 +3,7 @@
 # Date created:         11th December 1997
 # Whom:                 tron
 #
-# $NetBSD: Makefile,v 1.10 1998/02/02 08:59:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1998/02/05 01:36:13 tron Exp $
 #
 
 DISTNAME=	ImageMagick-4.0
@@ -30,17 +30,6 @@ CAT1=		display.0 montage.0 import.0 animate.0 convert.0 identify.0 \
 
 CAT4=		miff.0
 CAT5=		quantize.0
-
-post-extract:
-	(cd ${WRKSRC} && \
-	    for i in display montage import animate convert identify \
-		mogrify combine ImageMagick; do \
-	        ln -s $$i.1 $$i.man ; \
-	    done; \
-	    ln -s miff.4 miff.man; \
-	    ln -s quantize.5 quantize.man; )
-	(cd ${WRKSRC}/xtp && ln -s xtp.1 xtp.man)
-
 
 post-install:
 	${LDCONFIG} || ${TRUE}
