@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5494 2004/04/09 13:10:12 adam Exp $
+$NetBSD: CHANGES,v 1.5495 2004/04/09 13:56:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1864,3 +1864,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated glu to 6.0.1 [adam 2004-04-09]
 	Updated glut to 6.0.1 [adam 2004-04-09]
 	Updated wine to 20040408 [adam 2004-04-09]
+	Updated ed2k-gtk-gui to 0.6.2 [minskim 2004-04-09]
