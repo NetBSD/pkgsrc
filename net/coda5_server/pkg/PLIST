@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2001/05/15 08:32:52 phil Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/05/31 22:58:08 jlam Exp $
 bin/norton
 bin/norton-reinit
 bin/reinit
@@ -7,8 +7,6 @@ sbin/auth2
 sbin/backup
 sbin/backup.sh
 sbin/bldvldb.sh
-sbin/coda-setup-ports
-sbin/codaconfedit
 sbin/codasrv
 sbin/codastart
 sbin/createvol_rep
@@ -29,6 +27,8 @@ sbin/tape.pl
 sbin/updateclnt
 sbin/updatefetch
 sbin/updatesrv
+sbin/vice-coda-setup-ports
+sbin/vice-codaconfedit
 sbin/vice-killvolumes
 sbin/vice-setup
 sbin/vice-setup-rvm
