@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/07/31 10:36:46 fredb Exp $
+
+--- configure.orig	Thu Dec 10 05:52:19 1998
++++ configure	Tue Dec 29 00:26:35 1998
+@@ -4012,6 +4012,7 @@
+ s%@DEFS@%$DEFS%g
+ s%@LDFLAGS@%$LDFLAGS%g
+ s%@LIBS@%$LIBS%g
++s%@LOCALBASE@%$LOCALBASE%g
+ s%@exec_prefix@%$exec_prefix%g
+ s%@prefix@%$prefix%g
+ s%@program_transform_name@%$program_transform_name%g
