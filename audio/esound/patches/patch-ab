@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 1999/04/07 23:21:26 tron Exp $
+
+--- audio_oss.c.orig	Wed Dec 30 17:28:45 1998
++++ audio_oss.c	Thu Apr  8 01:18:25 1999
+@@ -17,7 +17,7 @@
+ #define ARCH_esd_audio_devices
+ const char *esd_audio_devices()
+ {
+-    return "/dev/dsp, /dev/dsp2, etc.";
++    return "/dev/audio, /dev/audio2, etc.";
+ }
+ 
+ 
+@@ -34,7 +34,7 @@
+         mode = O_RDWR;
+ 
+     /* open the sound device */
+-    device = esd_audio_device ? esd_audio_device : "/dev/dsp";
++    device = esd_audio_device ? esd_audio_device : "/dev/audio";
+     if ((afd = open(device, mode, 0)) == -1)
+     {   /* Opening device failed */
+         perror(device);
