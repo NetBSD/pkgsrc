@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/05/01 07:16:14 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2001/05/22 04:33:12 jlam Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -28,7 +28,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include	# for gsm.h and rxposix.h
 DEPENDS+=	readline>=4.0:../../devel/readline
 .endif
 
-INFO_FILES=	RPLAY.info RPLAY.info librplay.info rplay.info
+INFO_FILES=	RPLAY.info RPTP.info librplay.info rplay.info
 
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf
