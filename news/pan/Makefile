@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/01/23 21:50:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2004/02/14 19:24:05 minskim Exp $
 #
 
 DISTNAME=		pan-0.14.2
@@ -15,17 +15,17 @@ DEPENDS+=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 BUILD_USES_MSGFMT=	YES
 
 USE_PERL5=		build
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 LIBS=			-lcompat
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../net/gnet/buildlink2.mk"
-.include "../../textproc/gtkspell/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../net/gnet/buildlink3.mk"
+.include "../../textproc/gtkspell/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
