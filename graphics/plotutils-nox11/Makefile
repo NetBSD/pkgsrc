@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/19 10:14:11 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/03 09:29:58 heinz Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -23,6 +23,8 @@ INFO_FILES=	plotutils.info
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libplotter
 CONFIGURE_ARGS+=	--without-x
+OPSYSVARS+=		USE_GNU_TOOLS
+USE_GNU_TOOLS.IRIX+=	awk
 
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig ${WRKSRC}/libxmi/ltconfig
