@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5710 2004/04/21 21:48:19 wiz Exp $
+$NetBSD: CHANGES,v 1.5711 2004/04/22 09:07:53 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2213,3 +2213,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-File-MMagic to 1.22 [taca 2004-04-21]
 	Updated mathomatic to 11.0c [minskim 2004-04-21]
 	Updated cdrtools-ossdvd to 2.01a24 [wiz 2004-04-21]
+	Updated rhythmbox to 0.8.1 [jmmv 2004-04-22]
