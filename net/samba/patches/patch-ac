@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2000/01/19 00:42:43 jlam Exp $
+$NetBSD: patch-ac,v 1.4 2000/05/02 15:24:10 jlam Exp $
 
---- acconfig.h.orig	Wed Oct 13 01:26:21 1999
-+++ acconfig.h	Tue Jan 18 14:12:29 2000
-@@ -78,7 +78,9 @@
+--- acconfig.h.orig	Tue Apr 25 19:06:11 2000
++++ acconfig.h	Fri Apr 28 16:27:20 2000
+@@ -79,7 +79,9 @@
  #undef SIZEOF_INO_T
  #undef SIZEOF_OFF_T
  #undef STAT_STATVFS64

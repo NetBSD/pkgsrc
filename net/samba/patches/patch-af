@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2000/01/19 00:42:43 jlam Exp $
+$NetBSD: patch-af,v 1.2 2000/05/02 15:24:10 jlam Exp $
 
---- include/includes.h.orig	Wed Nov 10 21:36:00 1999
-+++ include/includes.h	Tue Jan 18 14:12:29 2000
-@@ -775,20 +775,20 @@
+--- include/includes.h.orig	Tue Apr 25 19:06:46 2000
++++ include/includes.h	Fri Apr 28 16:34:56 2000
+@@ -808,20 +808,20 @@
  #define ULTRIX_AUTH 1
  #endif
  
