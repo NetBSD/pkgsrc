@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1470 2003/02/23 11:29:49 salo Exp $
+$NetBSD: CHANGES,v 1.1471 2003/02/23 13:12:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -812,3 +812,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added teTeX2-share-2.0.1 [kei 2003-02-23]
 	Added teTeX2-sharesrc-2.0.1 [kei 2003-02-23]
 	Updated star to 1.4.3 [salo 2003-02-23]
+	Updated openmotif to 2.1.30nb2 [jmmv 2003-02-23]
