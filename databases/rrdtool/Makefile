@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2003/06/19 10:13:54 cjep Exp $
+# $NetBSD: Makefile,v 1.21 2003/06/23 10:33:52 adam Exp $
 #
 
 DISTNAME=	rrdtool-1.0.40
+PKGREVISION=	1
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/rrdtool/pub/
 
@@ -48,6 +49,7 @@ MAKE_ENV+=	_RPATH=${_OPSYS_RPATH_NAME}
 post-extract:
 	${RM} ${WRKSRC}/perl-shared/ntmake.pl
 
+.include "../../graphics/freetype-lib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/gd/buildlink2.mk"
 .include "../../www/cgilib/buildlink2.mk"
