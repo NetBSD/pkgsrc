@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/15 09:50:03 zuntum Exp $
+$NetBSD: distinfo,v 1.2 2003/10/19 19:58:24 kristerw Exp $
 
 SHA1 (safecat-1.11.tar.gz) = feae513ccd8dcd7968a35590d08f6a5670adb784
 Size (safecat-1.11.tar.gz) = 33011 bytes
+SHA1 (patch-aa) = c3970abb4291f5e67f9510e8b2b51fb5e48861f8
