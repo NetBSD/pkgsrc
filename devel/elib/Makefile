@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/01/10 14:26:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/04 21:42:52 seb Exp $
 #
 
 DISTNAME=	elib-1.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://jde.sunsite.dk/
 
@@ -27,7 +28,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/elib
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
 			${EMACS_LISPPREFIX}/elib
-	cd ${WRKSRC} && ${INSTALL_DATA} ${INFO_FILES} ${PREFIX}/info
+	cd ${WRKSRC} && ${INSTALL_DATA} elib.info* ${PREFIX}/info
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
