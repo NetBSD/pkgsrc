@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.44 2001/03/30 16:30:24 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.45 2001/04/17 17:08:41 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -72,7 +72,7 @@ if ($opt{'D'} && @ARGV)
 	{
 	my(@baddist);
 
-	@baddist = &scan_pkgsrc_distfiles_vs_md5($pkgsrcdir, $pkgdistdir,
+	@baddist = &scan_pkgsrc_distfiles_vs_distinfo($pkgsrcdir, $pkgdistdir,
 							$opt{'o'}, $opt{'m'});
 	if ($opt{'r'})
 	    {
@@ -952,31 +952,33 @@ sub pkgsrc_check_depends
 	}
     }
 
-# Extract all md5 entries, then verify contents of distfiles
+# Extract all distinfo entries, then verify contents of distfiles
 #
-sub scan_pkgsrc_distfiles_vs_md5
+sub scan_pkgsrc_distfiles_vs_distinfo
     {
-    my($pkgsrcdir, $pkgdistdir, $check_unref, $check_md5) = @_;
+    my($pkgsrcdir, $pkgdistdir, $check_unref, $check_distinfo) = @_;
     my($cat, @categories, $pkgdir);
     my(%distfiles, %sumfiles, @distwarn, $file, $numpkg);
     my(@bad_distfiles);
 
     @categories = &list_pkgsrc_categories($pkgsrcdir);
 
-    &verbose("Scanning pkgsrc md5s: ".'_'x@categories."\b"x@categories);
+    &verbose("Scanning pkgsrc distinfo: ".'_'x@categories."\b"x@categories);
     $numpkg = 0;
     foreach $cat (sort @categories)
 	{
 	foreach $pkgdir (&list_pkgsrc_pkgdirs($pkgsrcdir, $cat))
 	    {
-	    if (open(MD5, "$pkgsrcdir/$cat/$pkgdir/files/md5"))
+	    if (open(DISTINFO, "$pkgsrcdir/$cat/$pkgdir/distinfo"))
 		{
 		++$numpkg;
-		while( <MD5> )
+		while( <DISTINFO> )
 		    {
 		    if (m/^(\w+) ?\(([^\)]+)\) = (\S+)/)
 			{
-			if (!defined($distfiles{$2}))
+			if (substr($2, 0, 6) eq 'patch-')
+			    { next; }
+			if (!defined $distfiles{$2})
 			    {
 			    $distfiles{$2}{'sumtype'} = $1;
 			    $distfiles{$2}{'sum'} = $3;
@@ -990,7 +992,7 @@ sub scan_pkgsrc_distfiles_vs_md5
 			    }
 			}
 		    }
-		close(MD5);
+		close(DISTINFO);
 		}
 	    }
 	&verbose('.');
@@ -1020,7 +1022,7 @@ sub scan_pkgsrc_distfiles_vs_md5
 	print join("\n", sort @bad_distfiles), "\n";
 	}
 
-    if ($check_md5)
+    if ($check_distinfo)
 	{
 	my($sum);
 	if (@distwarn)
@@ -1057,8 +1059,8 @@ opts:
   -h : This help.	 [see lintpkgsrc(1) for more information]
 
 Installed package options:		Distfile options:
-  -i : Check version against pkgsrc	  -m : List md5 mismatches
-  -u : Fetch distfiles (may change)	  -o : List obsolete (no md5)
+  -i : Check version against pkgsrc	  -m : List distinfo mismatches
+  -u : Fetch distfiles (may change)	  -o : List obsolete (no distinfo)
 
 Prebuilt package options:		Makefile options:
   -p : List old/obsolete		  -B : List packages marked as 'BROKEN'
