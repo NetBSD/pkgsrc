@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.58 2003/05/27 08:40:19 grant Exp $
+# $NetBSD: Makefile,v 1.59 2003/05/28 08:59:19 grant Exp $
 
-# Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
 PKGREVISION=		2
 CATEGORIES=		lang
