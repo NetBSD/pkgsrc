@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 14:53:33 agc Exp $
+SHA1 (patch-aa) = 0cfe03d2bbae988a6c59ec4ee67244ed836d7f1d
 
-SHA1 (zsh-3.0.8.tar.gz) = d5d07abdd9c0f063c79d19de9482f7517016b54d
-Size (zsh-3.0.8.tar.gz) = 657979 bytes
-SHA1 (patch-aa) = 7209d74d6a7535e41d8db1d1109a6039b9bb3e0e
-SHA1 (patch-ab) = be8e64c07903177c1912ef52798d2c3dafcc2520
-SHA1 (patch-ac) = 2d80828a22ee0414c93442cfdbf2e08817afb8bb
-SHA1 (patch-ad) = 613fcaaa117aa38ff2e41eddaad5947bd5e0190d
+SHA1 (zsh-4.0.1.tar.bz2) = f47c555f4d85745017869b15e22d64a67304a716
+Size (zsh-4.0.1.tar.bz2) = 1650945 bytes
+SHA1 (patch-aa) = 0cfe03d2bbae988a6c59ec4ee67244ed836d7f1d
+SHA1 (patch-ab) = 9f9ca7de2eb97308102316ef2acc8b0fa5175f93
