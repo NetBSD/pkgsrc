@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2001/09/16 14:03:07 taya Exp $
+# $NetBSD: Makefile,v 1.73 2001/10/16 15:52:08 taya Exp $
 
-MOZ_VER=	0.9.4
+MOZ_VER=	0.9.5
 NB_VER=
 DISTNAME=	mozilla-source-${MOZ_VER}
 PKGNAME=	mozilla-${MOZ_VER}${NB_VER}
@@ -16,26 +16,27 @@ COMMENT=	The open-source version of the Netscape browser
 
 BUILD_DEPENDS+=	perl>=${PERL5_REQD}:../../lang/perl5
 BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
-DEPENDS+=	gtk+>=1.2.8:../../x11/gtk
-DEPENDS+=	gdk-pixbuf>=0.10.1:../../graphics/gdk-pixbuf
-DEPENDS+=	ORBit>=0.5.3:../../net/ORBit
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.11:../../graphics/png
-
-ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
-			NetBSD-1.5_ALPHA-i386 NetBSD-1.5_BETA-* \
-			NetBSD-1.[5-9]*-* Linux-*-*
 
 USE_GMAKE=	yes
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tests \
 		--disable-debug \
-		--with-jpeg=${LOCALBASE} \
-		--with-png=${LOCALBASE} \
+		--with-jpeg=${BUILDLINK_DIR} \
+		--with-png=${BUILDLINK_DIR} \
 		--enable-mathml \
 		--enable-svg \
 		--enable-crypto
+
+.include	"../../x11/gtk/buildlink.mk"
+.include	"../../graphics/gdk-pixbuf/buildlink.mk"
+.include	"../../net/ORBit/buildlink.mk"
+.include	"../../graphics/jpeg/buildlink.mk"
+.include	"../../graphics/png/buildlink.mk"
+
+ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-i386 NetBSD-1.4Z[A-Z]-i386 \
+			NetBSD-1.5_ALPHA-i386 NetBSD-1.5_BETA-* \
+			NetBSD-1.[5-9]*-* Linux-*-*
 
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
 MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
