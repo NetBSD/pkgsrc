@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/09/04 18:32:45 abs Exp $
+# $NetBSD: Makefile,v 1.14 2003/11/06 14:25:04 gavan Exp $
 #
 
 DISTNAME=	mserv-0.35
@@ -17,6 +17,8 @@ CONFIGURE_ENV+=	MY_LIBS="-lvorbisfile -lvorbis"
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share/mserv
 USE_BUILDLINK2=	yes
 REPLACE_PERL=	support/mservedit webclient/main.cgi webclient/margin.cgi webclient/mserv.cgi
+
+LDFLAGS.SunOS+=	-lnsl -lsocket
 
 post-configure:
 	${MV} ${WRKSRC}/mserv/soundcard.h ${WRKSRC}/mserv/mservsoundcard.h
