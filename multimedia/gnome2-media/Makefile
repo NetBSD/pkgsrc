@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/03/26 02:27:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/02 05:51:03 jmmv Exp $
 
-DISTNAME=		gnome-media-2.4.1.1
-PKGREVISION=		7
+DISTNAME=		gnome-media-2.6.0
 CATEGORIES=		multimedia gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -27,18 +26,13 @@ CONFIGURE_ENV+=		XGETTEXT="${LOCALBASE}/bin/xgettext"
 
 .include "../../mk/bsd.prefs.mk"
 
-post-extract:
-	@cd ${WRKSRC}/gnome-cd && \
-	${MV} freebsd-cdrom.h bsd-cdrom.h && \
-	${MV} freebsd-cdrom.c bsd-cdrom.c
-
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
 CONFIGURE_ENV+=		CDROM_HOST="bsd"
 .endif
 
 GCONF2_SCHEMAS=		CDDB-Slave2.schemas
+GCONF2_SCHEMAS+=	gnome-audio-profiles.schemas
 GCONF2_SCHEMAS+=	gnome-cd.schemas
-GCONF2_SCHEMAS+=	gnome-volume-control.schemas
 GCONF2_SCHEMAS+=	gnome-sound-recorder.schemas
 
 .include "../../audio/esound/buildlink3.mk"
