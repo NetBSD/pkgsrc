@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.430 2003/10/09 06:21:59 thorpej Exp $
+# $NetBSD: Makefile,v 1.431 2003/11/18 16:28:13 cube Exp $
 #
 
 COMMENT=	Development utilities
@@ -95,6 +95,7 @@ SUBDIR+=	elf
 SUBDIR+=	elfsh
 SUBDIR+=	elib
 SUBDIR+=	emacs-ilisp
+SUBDIR+=	emacs20-elib
 SUBDIR+=	eric3
 SUBDIR+=	exctags
 SUBDIR+=	fastdep
