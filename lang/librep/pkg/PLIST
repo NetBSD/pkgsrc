@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/08/07 15:45:16 danw Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/10/27 08:01:47 jlam Exp $
 bin/rep
 bin/rep-config
 bin/rep-remote
@@ -8,8 +8,9 @@ include/rep.h
 include/rep_lisp.h
 include/rep_regexp.h
 include/rep_subrs.h
-@unexec install-info --delete %D/info/librep.info %D/info/dir
+@unexec install-info --delete --info-dir=%D/info %D/info/librep.info
 info/librep.info
+@exec install-info --info-dir=%D/info %D/info/librep.info
 info/librep.info-1
 info/librep.info-2
 info/librep.info-3
@@ -18,163 +19,262 @@ info/librep.info-5
 info/librep.info-6
 info/librep.info-7
 info/librep.info-8
-@exec   install-info          %D/info/librep.info %D/info/dir
 lib/librep.a
 lib/librep.la
-lib/librep.so.9.4
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/DOC
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/gdbm.la
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/gettext.la
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgdbm.a
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgdbm.so
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgdbm.so.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgdbm.so.0.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgettext.a
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgettext.so
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgettext.so.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgettext.so.0.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libreadline.a
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libreadline.so
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libreadline.so.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libreadline.so.0.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/librecord-profile.a
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/librecord-profile.so
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/librecord-profile.so.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/librecord-profile.so.0.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libsdbm.a
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libsdbm.so
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libsdbm.so.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libsdbm.so.0.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtables.a
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtables.so
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtables.so.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtables.so.0.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtimers.a
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtimers.so
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtimers.so.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtimers.so.0.0
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/readline.la
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/record-profile.la
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/sdbm.la
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/tables.la
-libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/timers.la
-libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libtool
-libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/rules.mk
-@dirrm libexec/rep/0.12.4/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@dirrm libexec/rep/0.12.4
-@dirrm libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
-@dirrm libexec/rep
+lib/librep.so.10.1
+libexec/rep/${MACHINE_GNU_PLATFORM}/install-aliases
+libexec/rep/${MACHINE_GNU_PLATFORM}/libtool
+libexec/rep/${MACHINE_GNU_PLATFORM}/rep_config.h
+libexec/rep/${MACHINE_GNU_PLATFORM}/rules.mk
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/DOC
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/gdbm.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/gettext.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/readline.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/data/libtables.a
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/data/libtables.so.0.0
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/data/tables.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/i18n/gettext.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/i18n/libgettext.a
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/i18n/libgettext.so.0.0
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/db/gdbm.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/db/libgdbm.a
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/db/libgdbm.so.0.0
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/db/libsdbm.a
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/db/libsdbm.so.0.0
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/db/sdbm.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/libreadline.a
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/libreadline.so.0.0
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/libsockets.a
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/libsockets.so.0.0
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/libtimers.a
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/libtimers.so.0.0
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/readline.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/sockets.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/timers.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/lang/librecord-profile.a
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/lang/librecord-profile.so.0.0
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/lang/record-profile.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/vm/libsafe-interpreter.a
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/vm/libsafe-interpreter.so.0.0
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/vm/safe-interpreter.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/sdbm.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/tables.la
+libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/timers.la
 share/aclocal/rep.m4
-share/rep/0.12.4/lisp/autoload.jl
-share/rep/0.12.4/lisp/backquote.jl
-share/rep/0.12.4/lisp/backquote.jlc
-share/rep/0.12.4/lisp/bytecode-defs.jl
-share/rep/0.12.4/lisp/bytecode-defs.jlc
-share/rep/0.12.4/lisp/bytecodes.jl
-share/rep/0.12.4/lisp/bytecodes.jlc
-share/rep/0.12.4/lisp/cgi-get.jl
-share/rep/0.12.4/lisp/cgi-get.jlc
-share/rep/0.12.4/lisp/compiler-asm.jl
-share/rep/0.12.4/lisp/compiler-asm.jlc
-share/rep/0.12.4/lisp/compiler-basic.jl
-share/rep/0.12.4/lisp/compiler-basic.jlc
-share/rep/0.12.4/lisp/compiler-bindings.jl
-share/rep/0.12.4/lisp/compiler-bindings.jlc
-share/rep/0.12.4/lisp/compiler-const.jl
-share/rep/0.12.4/lisp/compiler-const.jlc
-share/rep/0.12.4/lisp/compiler-inline.jl
-share/rep/0.12.4/lisp/compiler-inline.jlc
-share/rep/0.12.4/lisp/compiler-lap.jl
-share/rep/0.12.4/lisp/compiler-lap.jlc
-share/rep/0.12.4/lisp/compiler-modules.jl
-share/rep/0.12.4/lisp/compiler-modules.jlc
-share/rep/0.12.4/lisp/compiler-opt.jl
-share/rep/0.12.4/lisp/compiler-opt.jlc
-share/rep/0.12.4/lisp/compiler-rep.jl
-share/rep/0.12.4/lisp/compiler-rep.jlc
-share/rep/0.12.4/lisp/compiler-scheme.jl
-share/rep/0.12.4/lisp/compiler-scheme.jlc
-share/rep/0.12.4/lisp/compiler-src.jl
-share/rep/0.12.4/lisp/compiler-src.jlc
-share/rep/0.12.4/lisp/compiler-utils.jl
-share/rep/0.12.4/lisp/compiler-utils.jlc
-share/rep/0.12.4/lisp/compiler.jl
-share/rep/0.12.4/lisp/compiler.jlc
-share/rep/0.12.4/lisp/date.jl
-share/rep/0.12.4/lisp/date.jlc
-share/rep/0.12.4/lisp/debug.jl
-share/rep/0.12.4/lisp/debug.jlc
-share/rep/0.12.4/lisp/define.jl
-share/rep/0.12.4/lisp/define.jlc
-share/rep/0.12.4/lisp/disassembler.jl
-share/rep/0.12.4/lisp/disassembler.jlc
-share/rep/0.12.4/lisp/dump.jl
-share/rep/0.12.4/lisp/dump.jlc
-share/rep/0.12.4/lisp/environ.jl
-share/rep/0.12.4/lisp/environ.jlc
-share/rep/0.12.4/lisp/gaol.jl
-share/rep/0.12.4/lisp/gaol.jlc
-share/rep/0.12.4/lisp/init.jl
-share/rep/0.12.4/lisp/init.jlc
-share/rep/0.12.4/lisp/lisp-doc.jl
-share/rep/0.12.4/lisp/lisp-doc.jlc
-share/rep/0.12.4/lisp/mailaddr.jl
-share/rep/0.12.4/lisp/mailaddr.jlc
-share/rep/0.12.4/lisp/memoize.jl
-share/rep/0.12.4/lisp/memoize.jlc
-share/rep/0.12.4/lisp/mutex.jl
-share/rep/0.12.4/lisp/mutex.jlc
-share/rep/0.12.4/lisp/profiler.jl
-share/rep/0.12.4/lisp/profiler.jlc
-share/rep/0.12.4/lisp/pwd-prompt.jl
-share/rep/0.12.4/lisp/pwd-prompt.jlc
-share/rep/0.12.4/lisp/queues.jl
-share/rep/0.12.4/lisp/queues.jlc
-share/rep/0.12.4/lisp/records.jl
-share/rep/0.12.4/lisp/records.jlc
-share/rep/0.12.4/lisp/remote-ftp.jl
-share/rep/0.12.4/lisp/remote-ftp.jlc
-share/rep/0.12.4/lisp/remote-rcp.jl
-share/rep/0.12.4/lisp/remote-rcp.jlc
-share/rep/0.12.4/lisp/remote-rep.jl
-share/rep/0.12.4/lisp/remote-rep.jlc
-share/rep/0.12.4/lisp/remote-utils.jl
-share/rep/0.12.4/lisp/remote-utils.jlc
-share/rep/0.12.4/lisp/remote.jl
-share/rep/0.12.4/lisp/remote.jlc
-share/rep/0.12.4/lisp/rep-autoload.jl
-share/rep/0.12.4/lisp/rep-packages.jl
-share/rep/0.12.4/lisp/rep-packages.jlc
-share/rep/0.12.4/lisp/rep-repl.jl
-share/rep/0.12.4/lisp/rep-repl.jlc
-share/rep/0.12.4/lisp/rep.jl
-share/rep/0.12.4/lisp/rep.jlc
-share/rep/0.12.4/lisp/ring.jl
-share/rep/0.12.4/lisp/ring.jlc
-share/rep/0.12.4/lisp/scheme-data.jl
-share/rep/0.12.4/lisp/scheme-data.jlc
-share/rep/0.12.4/lisp/scheme-misc.jl
-share/rep/0.12.4/lisp/scheme-misc.jlc
-share/rep/0.12.4/lisp/scheme-syntax-funs.jl
-share/rep/0.12.4/lisp/scheme-syntax-funs.jlc
-share/rep/0.12.4/lisp/scheme-syntax.jl
-share/rep/0.12.4/lisp/scheme-syntax.jlc
-share/rep/0.12.4/lisp/scheme-utils.jl
-share/rep/0.12.4/lisp/scheme-utils.jlc
-share/rep/0.12.4/lisp/scheme.jl
-share/rep/0.12.4/lisp/scheme.jlc
-share/rep/0.12.4/lisp/sort.jl
-share/rep/0.12.4/lisp/sort.jlc
-share/rep/0.12.4/lisp/string-util.jl
-share/rep/0.12.4/lisp/string-util.jlc
-share/rep/0.12.4/lisp/symbol-table.jl
-share/rep/0.12.4/lisp/symbol-table.jlc
-share/rep/0.12.4/lisp/tar-file-handler.jl
-share/rep/0.12.4/lisp/tar-file-handler.jlc
-share/rep/0.12.4/lisp/threads.jl
-share/rep/0.12.4/lisp/threads.jlc
-share/rep/0.12.4/lisp/tilde.jl
-share/rep/0.12.4/lisp/tilde.jlc
-@dirrm share/rep/0.12.4/lisp
-@dirrm share/rep/0.12.4
+share/rep/0.13.1/lisp/cgi-get.jl
+share/rep/0.13.1/lisp/cgi-get.jlc
+share/rep/0.13.1/lisp/compiler.jl
+share/rep/0.13.1/lisp/compiler.jlc
+share/rep/0.13.1/lisp/date.jl
+share/rep/0.13.1/lisp/date.jlc
+share/rep/0.13.1/lisp/disassembler.jl
+share/rep/0.13.1/lisp/disassembler.jlc
+share/rep/0.13.1/lisp/gaol.jl
+share/rep/0.13.1/lisp/gaol.jlc
+share/rep/0.13.1/lisp/lisp-doc.jl
+share/rep/0.13.1/lisp/lisp-doc.jlc
+share/rep/0.13.1/lisp/mailaddr.jl
+share/rep/0.13.1/lisp/mailaddr.jlc
+share/rep/0.13.1/lisp/memoize.jl
+share/rep/0.13.1/lisp/memoize.jlc
+share/rep/0.13.1/lisp/mutex.jl
+share/rep/0.13.1/lisp/mutex.jlc
+share/rep/0.13.1/lisp/queues.jl
+share/rep/0.13.1/lisp/queues.jlc
+share/rep/0.13.1/lisp/records.jl
+share/rep/0.13.1/lisp/records.jlc
+share/rep/0.13.1/lisp/remote-ftp.jl
+share/rep/0.13.1/lisp/remote-ftp.jlc
+share/rep/0.13.1/lisp/remote-rep.jl
+share/rep/0.13.1/lisp/remote-rep.jlc
+share/rep/0.13.1/lisp/rep.jl
+share/rep/0.13.1/lisp/rep.jlc
+share/rep/0.13.1/lisp/rep/data.jl
+share/rep/0.13.1/lisp/rep/data.jlc
+share/rep/0.13.1/lisp/rep/data/objects.jl
+share/rep/0.13.1/lisp/rep/data/objects.jlc
+share/rep/0.13.1/lisp/rep/data/queues.jl
+share/rep/0.13.1/lisp/rep/data/queues.jlc
+share/rep/0.13.1/lisp/rep/data/records.jl
+share/rep/0.13.1/lisp/rep/data/records.jlc
+share/rep/0.13.1/lisp/rep/data/ring.jl
+share/rep/0.13.1/lisp/rep/data/ring.jlc
+share/rep/0.13.1/lisp/rep/data/sort.jl
+share/rep/0.13.1/lisp/rep/data/sort.jlc
+share/rep/0.13.1/lisp/rep/data/string-util.jl
+share/rep/0.13.1/lisp/rep/data/string-util.jlc
+share/rep/0.13.1/lisp/rep/data/symbol-table.jl
+share/rep/0.13.1/lisp/rep/data/symbol-table.jlc
+share/rep/0.13.1/lisp/rep/i18n/xgettext.jl
+share/rep/0.13.1/lisp/rep/i18n/xgettext.jlc
+share/rep/0.13.1/lisp/rep/io/file-handlers.jl
+share/rep/0.13.1/lisp/rep/io/file-handlers.jlc
+share/rep/0.13.1/lisp/rep/io/file-handlers/remote.jl
+share/rep/0.13.1/lisp/rep/io/file-handlers/remote.jlc
+share/rep/0.13.1/lisp/rep/io/file-handlers/remote/ftp.jl
+share/rep/0.13.1/lisp/rep/io/file-handlers/remote/ftp.jlc
+share/rep/0.13.1/lisp/rep/io/file-handlers/remote/rcp.jl
+share/rep/0.13.1/lisp/rep/io/file-handlers/remote/rcp.jlc
+share/rep/0.13.1/lisp/rep/io/file-handlers/remote/rep.jl
+share/rep/0.13.1/lisp/rep/io/file-handlers/remote/rep.jlc
+share/rep/0.13.1/lisp/rep/io/file-handlers/remote/utils.jl
+share/rep/0.13.1/lisp/rep/io/file-handlers/remote/utils.jlc
+share/rep/0.13.1/lisp/rep/io/file-handlers/tar.jl
+share/rep/0.13.1/lisp/rep/io/file-handlers/tar.jlc
+share/rep/0.13.1/lisp/rep/io/file-handlers/tilde.jl
+share/rep/0.13.1/lisp/rep/io/file-handlers/tilde.jlc
+share/rep/0.13.1/lisp/rep/io/files.jl
+share/rep/0.13.1/lisp/rep/io/files.jlc
+share/rep/0.13.1/lisp/rep/io/streams.jl
+share/rep/0.13.1/lisp/rep/io/streams.jlc
+share/rep/0.13.1/lisp/rep/lang/backquote.jl
+share/rep/0.13.1/lisp/rep/lang/backquote.jlc
+share/rep/0.13.1/lisp/rep/lang/compat-doc.jl
+share/rep/0.13.1/lisp/rep/lang/compat-doc.jlc
+share/rep/0.13.1/lisp/rep/lang/debugger.jl
+share/rep/0.13.1/lisp/rep/lang/debugger.jlc
+share/rep/0.13.1/lisp/rep/lang/define.jl
+share/rep/0.13.1/lisp/rep/lang/define.jlc
+share/rep/0.13.1/lisp/rep/lang/doc.jl
+share/rep/0.13.1/lisp/rep/lang/doc.jlc
+share/rep/0.13.1/lisp/rep/lang/interpreter.jl
+share/rep/0.13.1/lisp/rep/lang/interpreter.jlc
+share/rep/0.13.1/lisp/rep/lang/math.jl
+share/rep/0.13.1/lisp/rep/lang/math.jlc
+share/rep/0.13.1/lisp/rep/lang/profiler.jl
+share/rep/0.13.1/lisp/rep/lang/profiler.jlc
+share/rep/0.13.1/lisp/rep/mail/addr.jl
+share/rep/0.13.1/lisp/rep/mail/addr.jlc
+share/rep/0.13.1/lisp/rep/module-system.jl
+share/rep/0.13.1/lisp/rep/module-system.jlc
+share/rep/0.13.1/lisp/rep/net/domain-name.jl
+share/rep/0.13.1/lisp/rep/net/domain-name.jlc
+share/rep/0.13.1/lisp/rep/regexp.jl
+share/rep/0.13.1/lisp/rep/regexp.jlc
+share/rep/0.13.1/lisp/rep/structures.jl
+share/rep/0.13.1/lisp/rep/structures.jlc
+share/rep/0.13.1/lisp/rep/system.jl
+share/rep/0.13.1/lisp/rep/system.jlc
+share/rep/0.13.1/lisp/rep/system/environ.jl
+share/rep/0.13.1/lisp/rep/system/environ.jlc
+share/rep/0.13.1/lisp/rep/system/pwd-prompt.jl
+share/rep/0.13.1/lisp/rep/system/pwd-prompt.jlc
+share/rep/0.13.1/lisp/rep/threads/mutex.jl
+share/rep/0.13.1/lisp/rep/threads/mutex.jlc
+share/rep/0.13.1/lisp/rep/threads/utils.jl
+share/rep/0.13.1/lisp/rep/threads/utils.jlc
+share/rep/0.13.1/lisp/rep/user.jl
+share/rep/0.13.1/lisp/rep/user.jlc
+share/rep/0.13.1/lisp/rep/util/autoloader.jl
+share/rep/0.13.1/lisp/rep/util/autoloader.jlc
+share/rep/0.13.1/lisp/rep/util/base64.jl
+share/rep/0.13.1/lisp/rep/util/base64.jlc
+share/rep/0.13.1/lisp/rep/util/date.jl
+share/rep/0.13.1/lisp/rep/util/date.jlc
+share/rep/0.13.1/lisp/rep/util/gaol.jl
+share/rep/0.13.1/lisp/rep/util/gaol.jlc
+share/rep/0.13.1/lisp/rep/util/ispell.jl
+share/rep/0.13.1/lisp/rep/util/ispell.jlc
+share/rep/0.13.1/lisp/rep/util/memoize.jl
+share/rep/0.13.1/lisp/rep/util/memoize.jlc
+share/rep/0.13.1/lisp/rep/util/repl.jl
+share/rep/0.13.1/lisp/rep/util/repl.jlc
+share/rep/0.13.1/lisp/rep/util/time.jl
+share/rep/0.13.1/lisp/rep/util/time.jlc
+share/rep/0.13.1/lisp/rep/vm/assembler.jl
+share/rep/0.13.1/lisp/rep/vm/assembler.jlc
+share/rep/0.13.1/lisp/rep/vm/bytecode-defs.jl
+share/rep/0.13.1/lisp/rep/vm/bytecode-defs.jlc
+share/rep/0.13.1/lisp/rep/vm/bytecodes.jl
+share/rep/0.13.1/lisp/rep/vm/bytecodes.jlc
+share/rep/0.13.1/lisp/rep/vm/compiler.jl
+share/rep/0.13.1/lisp/rep/vm/compiler.jlc
+share/rep/0.13.1/lisp/rep/vm/compiler/basic.jl
+share/rep/0.13.1/lisp/rep/vm/compiler/basic.jlc
+share/rep/0.13.1/lisp/rep/vm/compiler/bindings.jl
+share/rep/0.13.1/lisp/rep/vm/compiler/bindings.jlc
+share/rep/0.13.1/lisp/rep/vm/compiler/inline.jl
+share/rep/0.13.1/lisp/rep/vm/compiler/inline.jlc
+share/rep/0.13.1/lisp/rep/vm/compiler/lap.jl
+share/rep/0.13.1/lisp/rep/vm/compiler/lap.jlc
+share/rep/0.13.1/lisp/rep/vm/compiler/modules.jl
+share/rep/0.13.1/lisp/rep/vm/compiler/modules.jlc
+share/rep/0.13.1/lisp/rep/vm/compiler/no-lang.jl
+share/rep/0.13.1/lisp/rep/vm/compiler/no-lang.jlc
+share/rep/0.13.1/lisp/rep/vm/compiler/rep.jl
+share/rep/0.13.1/lisp/rep/vm/compiler/rep.jlc
+share/rep/0.13.1/lisp/rep/vm/compiler/scheme.jl
+share/rep/0.13.1/lisp/rep/vm/compiler/scheme.jlc
+share/rep/0.13.1/lisp/rep/vm/compiler/src.jl
+share/rep/0.13.1/lisp/rep/vm/compiler/src.jlc
+share/rep/0.13.1/lisp/rep/vm/compiler/unscheme.jl
+share/rep/0.13.1/lisp/rep/vm/compiler/unscheme.jlc
+share/rep/0.13.1/lisp/rep/vm/compiler/utils.jl
+share/rep/0.13.1/lisp/rep/vm/compiler/utils.jlc
+share/rep/0.13.1/lisp/rep/vm/disassembler.jl
+share/rep/0.13.1/lisp/rep/vm/disassembler.jlc
+share/rep/0.13.1/lisp/rep/vm/peephole.jl
+share/rep/0.13.1/lisp/rep/vm/peephole.jlc
+share/rep/0.13.1/lisp/rep/www/cgi-get.jl
+share/rep/0.13.1/lisp/rep/www/cgi-get.jlc
+share/rep/0.13.1/lisp/rep/www/fetch-url.jl
+share/rep/0.13.1/lisp/rep/www/fetch-url.jlc
+share/rep/0.13.1/lisp/rep/www/quote-url.jl
+share/rep/0.13.1/lisp/rep/www/quote-url.jlc
+share/rep/0.13.1/lisp/ring.jl
+share/rep/0.13.1/lisp/ring.jlc
+share/rep/0.13.1/lisp/scheme.jl
+share/rep/0.13.1/lisp/scheme.jlc
+share/rep/0.13.1/lisp/scheme/data.jl
+share/rep/0.13.1/lisp/scheme/data.jlc
+share/rep/0.13.1/lisp/scheme/misc.jl
+share/rep/0.13.1/lisp/scheme/misc.jlc
+share/rep/0.13.1/lisp/scheme/syntax-funs.jl
+share/rep/0.13.1/lisp/scheme/syntax-funs.jlc
+share/rep/0.13.1/lisp/scheme/syntax.jl
+share/rep/0.13.1/lisp/scheme/syntax.jlc
+share/rep/0.13.1/lisp/scheme/utils.jl
+share/rep/0.13.1/lisp/scheme/utils.jlc
+share/rep/0.13.1/lisp/symbol-table.jl
+share/rep/0.13.1/lisp/symbol-table.jlc
+share/rep/0.13.1/lisp/unscheme.jl
+share/rep/0.13.1/lisp/unscheme.jlc
+share/rep/0.13.1/lisp/unscheme/data.jl
+share/rep/0.13.1/lisp/unscheme/data.jlc
+share/rep/0.13.1/lisp/unscheme/misc.jl
+share/rep/0.13.1/lisp/unscheme/misc.jlc
+share/rep/0.13.1/lisp/unscheme/syntax-funs.jl
+share/rep/0.13.1/lisp/unscheme/syntax-funs.jlc
+share/rep/0.13.1/lisp/unscheme/syntax.jl
+share/rep/0.13.1/lisp/unscheme/syntax.jlc
+@dirrm share/rep/0.13.1/lisp/unscheme
+@dirrm share/rep/0.13.1/lisp/scheme
+@dirrm share/rep/0.13.1/lisp/rep/www
+@dirrm share/rep/0.13.1/lisp/rep/vm/compiler
+@dirrm share/rep/0.13.1/lisp/rep/vm
+@dirrm share/rep/0.13.1/lisp/rep/util
+@dirrm share/rep/0.13.1/lisp/rep/threads
+@dirrm share/rep/0.13.1/lisp/rep/system
+@dirrm share/rep/0.13.1/lisp/rep/net
+@dirrm share/rep/0.13.1/lisp/rep/mail
+@dirrm share/rep/0.13.1/lisp/rep/lang
+@dirrm share/rep/0.13.1/lisp/rep/io/file-handlers/remote
+@dirrm share/rep/0.13.1/lisp/rep/io/file-handlers
+@dirrm share/rep/0.13.1/lisp/rep/io
+@dirrm share/rep/0.13.1/lisp/rep/i18n
+@dirrm share/rep/0.13.1/lisp/rep/data
+@dirrm share/rep/0.13.1/lisp/rep
+@dirrm share/rep/0.13.1/lisp
+@dirrm share/rep/0.13.1
 @dirrm share/rep
+@dirrm libexec/rep/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/vm
+@dirrm libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/lang
+@dirrm libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io/db
+@dirrm libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/io
+@dirrm libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/i18n
+@dirrm libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep/data
+@dirrm libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}/rep
+@dirrm libexec/rep/0.13.1/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/rep/0.13.1
+@dirrm libexec/rep
