@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.591 2002/11/24 16:40:02 martti Exp $
+$NetBSD: CHANGES,v 1.592 2002/11/24 17:25:17 magick Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3706,3 +3706,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated sylpheed to 0.8.6nb1 [chris 2002-11-24]
 	Updated gpgme to 0.3.13 [chris 2002-11-24]
 	Updated postfix to 1.1.12 [martti 2002-11-24]
+	Updated nxtvepg to 2.4.0 [magick 2002-11-24]
