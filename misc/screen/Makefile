@@ -1,9 +1,9 @@
 # New ports collection makefile for:	screen
-# Version required:     3.7.2
+# Version required:     3.7.4
 # Date created:         25 Nov 1994
 # Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.4 1998/01/24 21:28:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/10 20:35:34 tv Exp $
 # FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
 #
 
