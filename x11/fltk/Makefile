@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2003/02/28 11:57:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2003/03/09 19:28:15 jschauma Exp $
 #
 
 DISTNAME=	fltk-1.0.11-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	1
+PKGREVISION=	2
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 CATEGORIES=	x11
@@ -28,5 +28,6 @@ TEST_TARGET=		test
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-libtool=${PKGLIBTOOL}
 
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/glu/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
