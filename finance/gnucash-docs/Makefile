@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/11/06 21:46:00 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/26 22:40:00 jdolecek Exp $
 
 DISTNAME=		gnucash-docs-1.8.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		finance
 MASTER_SITES=		http://www.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -19,13 +19,6 @@ USE_PKGLOCALEDIR=	YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-post-buildlink:
-	${LN} -s /usr/include/db.h ${BUILDLINK_DIR}/include/db_185.h
-.endif
 
 BUILD_DEPENDS=			docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
