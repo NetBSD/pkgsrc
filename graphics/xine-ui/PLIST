@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/11 11:59:55 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/05 10:00:50 drochner Exp $
 bin/aaxine
 bin/xine
 bin/xine-bugreport
@@ -9,24 +9,8 @@ man/man1/xine-bugreport.1
 man/man1/xine-check.1
 man/man1/xine-remote.1
 man/man1/xine.1
-share/doc/xine-ui/FAQ_de
-share/doc/xine-ui/FAQ_en
-share/doc/xine-ui/FAQ_es
-share/doc/xine-ui/FAQ_fr
-share/doc/xine-ui/FAQ_it
-share/doc/xine-ui/FAQ_pl
-share/doc/xine-ui/FAQ_uk
 share/doc/xine-ui/README.config_en
-share/doc/xine-ui/README.divx4
-share/doc/xine-ui/README.dxr3
-share/doc/xine-ui/README.dxr3_pl
-share/doc/xine-ui/README.freebsd
-share/doc/xine-ui/README.irix
-share/doc/xine-ui/README.mrl
-share/doc/xine-ui/README.opengl
-share/doc/xine-ui/README.solaris
-share/doc/xine-ui/README.syncfb
-share/doc/xine-ui/README.tvmode
+share/doc/xine-ui/README.corba
 share/doc/xine-ui/README_cs
 share/doc/xine-ui/README_de
 share/doc/xine-ui/README_en
@@ -36,7 +20,6 @@ share/doc/xine-ui/README_fr
 share/doc/xine-ui/README_it
 share/doc/xine-ui/README_pl
 share/doc/xine-ui/README_uk
-share/doc/xine-ui/bug_report_form
 share/doc/xitk/README
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xine-ui.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xitk.mo
@@ -46,6 +29,8 @@ ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xine-ui.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xitk.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xine-ui.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xitk.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xine-ui.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xitk.mo
 ${PKGLOCALEDIR}/locale/pl_PL/LC_MESSAGES/xine-ui.mo
 ${PKGLOCALEDIR}/locale/pl_PL/LC_MESSAGES/xitk.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xine-ui.mo
@@ -121,6 +106,7 @@ share/xine/skins/CelomaChrome/SliderVBg.png
 share/xine/skins/CelomaChrome/SliderVPad.png
 share/xine/skins/CelomaChrome/SnapBtn.png
 share/xine/skins/CelomaChrome/skinconfig
+share/xine/skins/black.mpv
 share/xine/skins/cloudy/ComBox.png
 share/xine/skins/cloudy/ComDismiss.png
 share/xine/skins/cloudy/ComLetters.png
@@ -183,6 +169,7 @@ share/xine/skins/cloudy/fonts.dir
 share/xine/skins/cloudy/skinconfig
 share/xine/skins/cloudy/smooth.pcf.gz
 share/xine/skins/xine-ui_logo.mpv
+share/xine/skins/xine_splash.png
 share/xine/skins/xinetic/BigArrowDown.png
 share/xine/skins/xinetic/BigArrowLeft.png
 share/xine/skins/xinetic/BigArrowRight.png
