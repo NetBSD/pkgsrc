@@ -1,18 +1,20 @@
---- src/runtime/rmisc.r.orig	Sat Nov  4 00:26:32 1995
-+++ src/runtime/rmisc.r	Sat Nov  2 16:48:35 1996
-@@ -125,15 +125,6 @@
+--- src/runtime/rmisc.r	1997/10/02 09:28:35	1.1
++++ src/runtime/rmisc.r	1997/10/02 09:30:08
+@@ -123,14 +123,15 @@
     return buf;
  #endif					/* OS2EMX */
  
 -#if FreeBSD
--#define ecvt(w,x,y,z) 0
--
--   sprintf(buf, "%f", number);
--   for(i=strlen(buf); i>1 && buf[i-1]=='0' && buf[i-2]!='.'; i--)
--      buf[i-1] = '\0';
--   return buf;
++#if (defined(GenericBSD) && !defined(FreeBSD))
++/* This is commented out in the FreeBSD ports collection */
+ #define ecvt(w,x,y,z) 0
+ 
+    sprintf(buf, "%f", number);
+    for(i=strlen(buf); i>1 && buf[i-1]=='0' && buf[i-2]!='.'; i--)
+       buf[i-1] = '\0';
+    return buf;
 -#endif					/* FreeBSD */
--
++#endif					/* GenericBSD && !FreeBSD */
+ 
     p1 = ecvt(number, ndigit, &decpt, &sign);
     p2 = buf;
-    if (sign)

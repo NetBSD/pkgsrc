@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/06 15:19:30 agc Exp $
 # New ports collection makefile for:    icon
 # Version required:     9.3
 # Date created:         05 April 1995
