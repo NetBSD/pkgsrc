@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/30 12:41:05 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/02/15 05:56:58 salo Exp $
 bin/centericq
 bin/cicqconv
 bin/cicqsync
@@ -16,13 +16,17 @@ share/centericq/url.wav
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/centericq.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/centericq.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/centericq.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/centericq.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/centericq.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/centericq.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/centericq.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/centericq.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/centericq.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/centericq.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/centericq.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/centericq.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/centericq.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/centericq.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/centericq.mo
 @dirrm share/centericq/contrib/spanish
 @dirrm share/centericq/contrib
