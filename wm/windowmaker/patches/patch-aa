@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2001/10/05 12:18:58 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2001/10/07 13:08:32 rh Exp $
 
---- doc/Makefile.am.orig	Thu Sep 13 00:11:05 2001
-+++ doc/Makefile.am	Fri Oct  5 14:01:28 2001
-@@ -3,17 +3,17 @@
+--- doc/Makefile.in.orig	Fri Oct  5 02:52:33 2001
++++ doc/Makefile.in
+@@ -105,17 +105,17 @@
  SUBDIRS = sk
  
  man_MANS = \
@@ -29,5 +29,5 @@ $NetBSD: patch-aa,v 1.5 2001/10/05 12:18:58 wiz Exp $
 +	wxcopy.1 \
 +	wxpaste.1
  
- EXTRA_DIST = $(man_MANS)
  
+ EXTRA_DIST = $(man_MANS)
