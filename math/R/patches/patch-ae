@@ -1,0 +1,28 @@
+$NetBSD: patch-ae,v 1.1 1999/05/25 23:51:12 jlam Exp $
+
+--- Makefile.in.orig	Fri Apr 16 09:25:20 1999
++++ Makefile.in	Tue May 25 02:48:46 1999
+@@ -49,15 +49,19 @@
+ 	    $(INSTALL_DATA) $${f} $(rhome); \
+ 	  done)
+ 	@echo "Installing executables ..."
+-	@$(INSTALL_PROGRAM) bin/R.binary $(rhome)/bin
++	@$(INSTALL_PROGRAM) bin/R.binary $(bindir)
++	@if [ -f bin/R.gnome ]; then \
++	  $(INSTALL_PROGRAM) bin/R.gnome $(bindir); \
++	fi
+ 	@cat bin/R | sed "s@RHOME=.*@RHOME=$(rhome)@" > $(rhome)/bin/R
+ 	@cat bin/R | sed "s@RHOME=.*@RHOME=$(rhome)@" > $(bindir)/R
+ 	@chmod 755 $(bindir)/R $(rhome)/bin/R
+-	@for f in `ls bin/* | grep -v '^bin/\(R\|R.binary\)\**$$'`; do \
+-	  $(INSTALL) $${f} $(rhome)/bin; \
++	@for f in \
++	  `ls bin/* | grep -v '^bin/\(R\|R.binary\|R.gnome\)\**$$'`; do \
++	  $(INSTALL_SCRIPT) $${f} $(rhome)/bin; \
+ 	done
+ 	@for f in Rd2txt Rdconv Rdindex Sd2Rd; do \
+-	  $(INSTALL) bin/$${f} $(bindir); \
++	  $(INSTALL_OWN_SCRIPT) bin/$${f} $(bindir); \
+ 	done
+ 	@echo "Installing headers ..."
+ 	@for f in include/*.h; do \
