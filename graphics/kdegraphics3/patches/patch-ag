@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2002/08/28 07:15:30 skrll Exp $
+$NetBSD: patch-ag,v 1.2 2003/03/11 13:25:00 markd Exp $
 
---- kuickshow/src/Makefile.am.orig	Fri Mar 22 01:31:08 2002
+--- kuickshow/src/Makefile.am.orig	Mon Sep 16 09:12:49 2002
 +++ kuickshow/src/Makefile.am
-@@ -1,26 +1,29 @@
+@@ -1,25 +1,28 @@
  ## Makefile.am for kuickshow
  
  bin_PROGRAMS = kuickshow
@@ -23,9 +23,8 @@ $NetBSD: patch-ag,v 1.1 2002/08/28 07:15:30 skrll Exp $
 +libkuickshow_main_la_SOURCES =	kuickshow.cpp \
  	aboutwidget.cpp     generalwidget.cpp  kuickconfigdlg.cpp  main.cpp \
  	defaultswidget.cpp  imagewindow.cpp    kuickdata.cpp  \
- 	imdata.cpp          basewidget.cpp \
- 	filefinder.cpp      kurlwidget.cpp logo.cpp filewidget.cpp \
- 	logotabdialog.cpp  kuickio.cpp    kuick.cpp imlibwidget.cpp
+ 	imdata.cpp filefinder.cpp kurlwidget.cpp filewidget.cpp \
+ 	kuickio.cpp kuick.cpp imlibwidget.cpp slideshowwidget.cpp printing.cpp
  
 +kuickshow_la_LDFLAGS = $(all_libraries) -module -avoid-version
 +kuickshow_la_LIBADD  = $(LIB_KDEPRINT) $(LIB_IMLIB) libkuickshow_main.la
@@ -39,7 +38,7 @@ $NetBSD: patch-ag,v 1.1 2002/08/28 07:15:30 skrll Exp $
  kuickshow_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  
-@@ -36,6 +39,3 @@ KDE_ICON = kuickshow
+@@ -35,6 +38,3 @@ KDE_ICON = kuickshow
   # this is where the kdelnk file will go 
  appsdir   = $(kde_appsdir)/Graphics
  apps_DATA = kuickshow.desktop
