@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/22 14:33:05 minskim Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 15:59:11 agc Exp $
 
 SHA1 (gtmess-0.9.tar.gz) = 344305d6245cce53252ab3ea1c145c2cceb8f8a6
+RMD160 (gtmess-0.9.tar.gz) = e0751fb1ab7f066594d657e05e82f0b4bc3d9047
 Size (gtmess-0.9.tar.gz) = 271257 bytes
