@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/02/10 17:59:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/11 06:30:13 xtraeme Exp $
 #
 
 DISTNAME=		nautilus-2.4.2
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.gnome.org/projects/nautilus/
 COMMENT=		Nautilus file manager for GNOME2
 
 USE_PKGLOCALEDIR=	yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
@@ -42,11 +42,11 @@ CONF_FILES+=		${EGDIR}/${conffile} ${PKG_SYSCONFDIR}/${conffile}
 .undef conffile
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libgsf/buildlink2.mk"
-.include "../../devel/eel2/buildlink2.mk"
-.include "../../graphics/imlib2/buildlink2.mk"
-.include "../../graphics/librsvg2/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
-.include "../../x11/gnome-desktop/buildlink2.mk"
+.include "../../devel/libgsf/buildlink3.mk"
+.include "../../devel/eel2/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
+.include "../../graphics/librsvg2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../x11/gnome-desktop/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
