@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.1 2002/04/18 15:59:56 fredb Exp $
+
+Avoid the following error with gcc-2.95.3 (NetBSD-1.5ZC-m68k):
+
+    c++ -DHAVE_CONFIG_H -I. -I. -I. -I.. -I.. -I../boost   -I/usr/X11R6/include
+	-I/usr/X11R6/include/X11   -isystem /usr/X11R6/include  -O2 -c lyxfunc.C
+    lyxfunc.C: In method `const class string LyXFunc::Dispatch(int, const string & = string())':
+    lyxfunc.C:3027: Internal compiler error.
+    lyxfunc.C:3027: Please submit a full bug report.
+    lyxfunc.C:3027: See <URL:http://www.gnu.org/software/gcc/bugs.html> for instructions.
+    *** Error code 1
+
+    Stop.
+    make: stopped in /t/pkgobj/print/lyx/work.m68k/lyx-1.1.6fix4/src
+    [and so on]
+
+Line 3027 is a single close bracket, the end of a switch statement that starts
+on line 675. Increasing the process stack size to 32768 didn't help.
+
+--- src/Makefile.in.orig	Wed Apr 17 10:36:29 2002
++++ src/Makefile.in
+@@ -414,6 +414,10 @@
+ lyx$(EXEEXT): $(lyx_OBJECTS) $(lyx_DEPENDENCIES)
+ 	@rm -f lyx$(EXEEXT)
+ 	$(CXXLINK) $(lyx_LDFLAGS) $(lyx_OBJECTS) $(lyx_LDADD) $(LIBS)
++lyxfunc.o: lyxfunc.C
++	$(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) -O -c $<
++lyxfunc.lo: lyxfunc.C
++	$(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) -O -c $<
+ .C.o:
+ 	$(CXXCOMPILE) -c $<
+ .C.lo:
