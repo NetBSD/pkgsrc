@@ -1,8 +1,17 @@
-$NetBSD: patch-ak,v 1.1 2002/06/27 15:52:20 agc Exp $
+$NetBSD: patch-ak,v 1.2 2004/01/18 13:59:25 mrauch Exp $
 
---- subband.h	2002/06/27 15:41:04	1.1
-+++ subband.h	2002/06/27 15:41:40
-@@ -35,8 +35,8 @@
+--- subband.h.orig	1994-06-23 14:14:40.000000000 +0200
++++ subband.h
+@@ -27,7 +27,7 @@
+ #include "synthesis_filter.h"
+ #include "crc.h"
+ 
+-enum e_channels { both, left, right };
++enum e_channels { both, maplay_left, maplay_right };
+ 
+ // abstract base class for subband classes of layer I and II:
+ class Subband
+@@ -35,8 +35,8 @@ class Subband
  public:
    virtual void read_allocation (Ibitstream *, Header *, Crc16 *) = 0;
    virtual void read_scalefactor (Ibitstream *, Header *) = 0;
