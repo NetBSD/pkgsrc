@@ -1,6 +1,6 @@
-$NetBSD: patch-ar,v 1.14 2004/09/09 22:26:17 wiz Exp $
+$NetBSD: patch-ar,v 1.15 2005/03/01 15:36:48 wiz Exp $
 
---- src/server.c.orig	2004-09-10 00:21:52.000000000 +0200
+--- src/server.c.orig	2004-09-24 21:59:08.000000000 +0200
 +++ src/server.c
 @@ -773,6 +773,7 @@ E Protocol error: Root says \"%s\" but p
         nothing.  But for rsh, we need to do it now.  */
@@ -31,7 +31,7 @@ $NetBSD: patch-ar,v 1.14 2004/09/09 22:26:17 wiz Exp $
  	case 'q':
  	    quiet = 1;
  	    break;
-@@ -5292,6 +5298,7 @@ switch_to_user (cvs_username, username)
+@@ -5293,6 +5299,7 @@ switch_to_user (cvs_username, username)
      const char *username;
  {
      struct passwd *pw;
@@ -39,7 +39,7 @@ $NetBSD: patch-ar,v 1.14 2004/09/09 22:26:17 wiz Exp $
  
      pw = getpwnam (username);
      if (pw == NULL)
-@@ -5370,7 +5377,15 @@ error 0 %s: no such system user\n", user
+@@ -5371,7 +5378,15 @@ error 0 %s: no such system user\n", user
  	}
      }
  
