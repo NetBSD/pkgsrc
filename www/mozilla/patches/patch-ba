@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.10 2002/07/12 13:07:27 taya Exp $
+$NetBSD: patch-ba,v 1.11 2002/08/29 15:11:15 taya Exp $
 
 diff -ru ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg ./nsprpub/pr/include/md/_netbsd.cfg
---- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg	Wed Apr 10 12:16:42 2002
-+++ ./nsprpub/pr/include/md/_netbsd.cfg	Wed Jul 10 22:51:15 2002
+--- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg	Sat Dec  2 06:29:17 2000
++++ ./nsprpub/pr/include/md/_netbsd.cfg	Wed Aug 28 11:22:16 2002
 @@ -45,7 +45,8 @@
  
  #define PR_AF_INET6 24  /* same as AF_INET6 */
