@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/07/18 07:46:40 itohy Exp $
+
+--- drvfig.h.orig	Sun Aug  8 02:33:38 1999
++++ drvfig.h	Fri Jul 14 07:52:05 2000
+@@ -47,6 +47,7 @@
+ 	void print_polyline_coords();
+ 	void print_spline_coords_noxsplines(int linestyle, float localLineWidth);
+ 	void prpoint(ostream & os, const Point& p) const;
++	void prpointnl(ostream & os, const Point& p) const;
+ 	void print_spline_coords1();
+ 	void print_spline_coords2();
+ 

@@ -1,0 +1,53 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/07/18 07:46:40 itohy Exp $
+
+--- miscutil.cpp.orig	Mon Jul  3 02:18:37 2000
++++ miscutil.cpp	Thu Jul 13 21:23:57 2000
+@@ -28,6 +28,10 @@
+ 
+ #if defined(unix) || defined(__unix__) || defined(_unix) || defined(__unix) || defined(__EMX__)
+ #include <unistd.h>
++#include <sys/param.h>
++#if defined(BSD) && BSD >= 199306
++#define HAVE_MKSTEMP
++#endif
+ #else
+ #include <direct.h>
+ #endif
+@@ -113,6 +117,17 @@
+ 
+ char * full_qualified_tempnam(const char * pref)
+ {
++#ifdef HAVE_MKSTEMP
++	char buf[80];
++	int fd;
++
++	/* safer than tempnam(), probably, but, .... */
++	sprintf(buf, "/tmp/%sXXXXXX", pref);
++	if ((fd = mkstemp(buf)) < 0)
++		return NULL;
++	close(fd);
++	return strdup(buf);
++#else
+ #if defined (__BCPLUSPLUS__) || defined (__TCPLUSPLUS__)
+ /* borland has a prototype that expects a char * as second arg */
+ 	char * filename = tempnam(0,(char *) pref);
+@@ -141,6 +156,7 @@
+ 		return filename;
+ 	}
+ #endif
++#endif
+ }
+ 
+ // a strdup which uses new instead of malloc
+@@ -280,7 +296,11 @@
+ 
+ TempFile::TempFile()  
+ { 
++#if 1
++	tempFileName = full_qualified_tempnam("pstmp");
++#else
+ 	tempFileName = tempnam(0,"pstmp"); 
++#endif
+ 	// cout << "constructed " << tempFileName << endl; 
+ }
+ 
