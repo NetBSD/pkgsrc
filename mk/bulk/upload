@@ -1,22 +1,24 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.20 2005/01/24 03:41:34 jschauma Exp $
+# $NetBSD: upload,v 1.21 2005/01/24 15:00:48 jschauma Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
 #
 
-CKSUM="cksum";
 MD5="digest md5";
 SHA1="digest sha1";
-BSDSUM="sum -o 1";
-SYSVSUM="sum -o 2";
 
 opsys=`uname -s`
 case "$opsys" in
-NetBSD)	BMAKE=make ;;
+NetBSD)	BMAKE=make;
+	BSDSUM="sum -o 1";
+	CKSUM="cksum";
+	SYSVSUM="sum -o 2";
+	;;
 IRIX*)  BMAKE=bmake;
-	BSDSUM="sum -r";
-	SYSVSUM="sum";
+#	BSDSUM="sum -r";
+#	CKSUM="cksum";
+#	SYSVSUM="sum";
 	;;
 *)	BMAKE=bmake ;;
 esac
@@ -124,6 +126,11 @@ if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 	fi
 
 	( cd ${pkgsrcdir}/pkgtools/digest; ${BMAKE} bulk-install )
+
+	[ -z "${BSDSUM}" ] && BSDSUM="echo"
+	[ -z "${CKSUM}" ] && CKSUM="echo"
+	[ -z "${SYSVSUM}" ] && SYSVSUM="echo"
+
 	for i in All/*; do
 		if ! grep -q $i $exf; then
 			${BSDSUM} $i >> BSDSUM
@@ -133,19 +140,20 @@ if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 			${SYSVSUM} $i >> SYSVSUM
 		fi
 	done
+
+	[ "${BSDSUM}" = "echo" ] && rm BSDSUM
+	[ "${CKSUM}" = "echo" ] && rm CKSUM
+	[ "${SYSVSUM}" = "echo" ] && rm SYSVSUM
 	
 	if [ x"${SIGN_AS}" != x"" ]; then
 		for i in ${SUMFILES}; do
-			echo "Signing $i"
-			gpg --clearsign $i && rm $i
+			if [ -s $i ]; then
+				echo "Signing $i"
+				gpg --clearsign $i && rm $i
+				echo ${i}.asc >> $osf
+			fi
 		done
-		SUMFILES="BSDSUM.asc CKSUM.asc MD5.asc SHA1.asc SYSVSUM.asc"
 	fi
-
-	for i in ${SUMFILES}; do
-		[ -s ${packages}/${i} ] && echo $i >> $osf
-	done
-
 fi
 
 
