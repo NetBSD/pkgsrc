@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2000/08/12 16:39:39 perry Exp $
+# $NetBSD: Makefile,v 1.147 2000/08/12 16:41:58 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -93,9 +93,7 @@
     SUBDIR += ra-rtsp-proxy
     SUBDIR += radius
     SUBDIR += rdist6
-# rp-pppoe's Makefile invokes pppd, which can be very dangerous
-# on some machines. Turned off pending a fix to that. --Perry Metzger
-#   SUBDIR += rp-pppoe
+    SUBDIR += rp-pppoe
     SUBDIR += rsync
     SUBDIR += rumba
     SUBDIR += samba
