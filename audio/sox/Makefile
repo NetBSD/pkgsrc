@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/12/08 14:41:38 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2003/12/11 09:57:20 grant Exp $
 
 DISTNAME=	sox-12.17.4
 PKGREVISION=	2
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-fast-ulaw \
 			--enable-fast-alaw \
 			--with-sun-audio \
-			--without-oss-dsp \
+			--disable-oss-dsp \
 			--with-ogg-vorbislib=${BUILDLINK_PREFIX.libvorbis}/lib \
 			--with-ogg-vorbisinc=${BUILDLINK_PREFIX.libvorbis}/include
 
