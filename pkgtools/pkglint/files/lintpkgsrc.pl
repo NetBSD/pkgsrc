@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.50 2001/05/21 13:27:14 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.51 2001/05/30 16:44:46 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -501,7 +501,9 @@ sub glob2regex
 	    { $regex .= '.*'; }
 	elsif ($_ eq '?')
 	    { $regex .= '.'; }
-	elsif ($_ eq '\\')
+	elsif ($_ eq '+')
+	    { $regex .= '.'; }
+	elsif ($_ eq '\\+')
 	    { $regex .= $_ . shift @chars; }
 	elsif ($_ eq '.' || $_ eq '|' )
 	    { $regex .= quotemeta; }
