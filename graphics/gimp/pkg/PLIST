@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 1999/04/05 23:28:29 tron Exp $
+@comment $NetBSD: PLIST,v 1.12 1999/05/04 22:47:22 tron Exp $
 bin/gimp
 bin/gimptool
 include/gck/gck.h
@@ -15,6 +15,11 @@ include/libgimp/gimpenums.h
 include/libgimp/gimpfeatures.h
 include/libgimp/gimpmenu.h
 include/libgimp/gimpui.h
+@unexec install-info --delete %D/info/pdb.info %D/info/dir
+info/pdb.info
+info/pdb.info-1
+info/pdb.info-2
+@exec install-info %D/info/pdb.info %D/info/dir
 lib/gimp/1.0/plug-ins/AlienMap
 lib/gimp/1.0/plug-ins/CEL
 lib/gimp/1.0/plug-ins/CML_explorer

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 1999/05/02 14:35:57 tron Exp $
+# $NetBSD: Makefile,v 1.37 1999/05/04 22:47:21 tron Exp $
 
 DISTNAME=	gimp-1.0.4
 CATEGORIES=	graphics
@@ -34,6 +34,8 @@ LDFLAGS+=		-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-gtk-prefix=${X11BASE}
 CONFIGURE_ENV=		CPPFLAGS="${CPPFLAGS}"
 
+INFO_FILES=		pdb.info
+
 post-configure:
 	@${ECHO_MSG} "--> now configuring in ${GIMP_DATA}"
 	@(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${CONFIGURE_ENV} \
@@ -46,9 +48,8 @@ pre-build:
 	 fi
 
 post-install:
-.for DOC_TARGET in ${ALL_TARGET} ${INSTALL_TARGET}
-	@(cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${DOC_TARGET})
-.endfor
+	@(cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET})
+	@(cd ${WRKSRC}/docs && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
 	@${ECHO_MSG} "--> now installing in ${GIMP_DATA}"
 	@(cd ${WRKDIR}/${GIMP_DATA} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} \
 	    ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
