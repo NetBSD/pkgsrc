@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1740 2003/03/22 11:01:14 jmmv Exp $
+$NetBSD: CHANGES,v 1.1741 2003/03/22 13:50:52 chris Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1257,3 +1257,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated docbook to 4.2nb3 [jmmv 2003-03-22]
 	Updated lyx to 1.3.0nb1 [jmmv 2003-03-22]
 	Updated racoon to 20021120anb1 [jmmv 2003-03-22]
+	Updated sylpheed to 0.8.11nb1 [chris 2003-03-22]
