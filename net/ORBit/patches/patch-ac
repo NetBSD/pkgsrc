@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.7 2001/03/13 08:08:33 skrll Exp $
+
+--- configure.orig	Mon Mar 12 23:59:21 2001
++++ configure
+@@ -3454,6 +3454,10 @@
+ 		LIB_WRAP=-lwrap
+ 		echo "Found $THEFILE/libwrap.so" 1>&5
+ 		break
++	elif test -f $THEFILE/libwrap.so.*.*; then
++		LIB_WRAP=-lwrap
++		echo "Found $THEFILE/libwrap.so" 1>&5
++		break
+ 	else
+ 		echo "From $I, checking in dir $THEFILE for libwrap.a" 1>&5
+ 		if test -f $THEFILE/libwrap.a; then
