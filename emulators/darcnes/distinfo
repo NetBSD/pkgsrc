@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:06:06 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 10:49:53 agc Exp $
 
-MD5 (dn9a1011.tgz) = 80c81d8634debdac6a7a1e32442facaf
+SHA1 (dn9a1011.tgz) = 2f3e401dd1a667bf7f7350fb374c006f4fc2e79c
+Size (dn9a1011.tgz) = 191641 bytes
 SHA1 (patch-aa) = 51f4cbd166682acf8110c5e903ba303a1c21955f
 SHA1 (patch-ad) = 1b3b493b41402edab814b6addaf19cc44dc2e8eb
 SHA1 (patch-ae) = b4a1029aebc356f10a90df35dcf3c392232a8c05
