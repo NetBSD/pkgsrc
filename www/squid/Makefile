@@ -1,18 +1,28 @@
-# $NetBSD: Makefile,v 1.26 2000/03/07 20:05:22 tron Exp $
+# $NetBSD: Makefile,v 1.27 2000/03/21 10:09:51 tron Exp $
 
 DISTNAME=	squid-2.3.STABLE2-src
 PKGNAME=	squid-2.3s2
 CATEGORIES=	www
-MASTER_SITES=  \
-	ftp://squid.nlanr.net/pub/squid-2/STABLE/ \
+MASTER_SITES=	\
+	http://www.squid-cache.org/Versions/v2/2.3/ \
 	ftp://ftp.gw.com/pub/unix/squid/squid-2/STABLE/ \
 	ftp://www.unimelb.edu.au/pub/cwis/servers/unix/squid/squid-2/STABLE/ \
 	ftp://sunsite.auc.dk/pub/infosystems/squid/squid-2/STABLE/ \
 	ftp://ftp.net.lut.ac.uk/squid/squid-2/STABLE/ \
 	ftp://ftp.xlink.net/pub/mirror.squid/squid-2/STABLE/
 
+PATCH_DIST_ARGS=-d ${WRKSRC}/src --forward --quiet -E ${PATCH_DIST_STRIP}
+PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.3/bugs/
+PATCHFILES=	squid-2.3.stable2-EOF_in_cf.data.pre.patch \
+		squid-2.3.stable2-USE_DNSSERVER.patch \
+		squid-2.3.stable2-USE_DNSSERVER_part2.patch \
+		squid-2.3.stable2-getMyHostname.patch \
+		squid-2.3.stable2-hostname_whitespace.patch \
+		squid-2.3.stable2-netdb_exchange_loop.patch \
+		squid-2.3.stable2-redirected_username_logging.patch
+
 MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://squid.nlanr.net/Squid/
+HOMEPAGE=	http://www.squid-cache.org/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/perl:../../lang/perl5
 
@@ -45,6 +55,12 @@ SQUID_ICP_PORT?=	3130
 DEPENDS+=	egcs-1.1.2:../../lang/egcs
 MAKE_ENV+=	CPPFLAGS= CFLAGS=
 .endif
+
+pre-patch:
+	@cd ${WRKSRC}/src && \
+	${MV} client_side.c client_side.c.prepatch && \
+	${SED} -e 's#1\.459\.2\.36#1\.459\.2\.37#' <client_side.c.prepatch \
+	  >client_side.c
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKDIR}/squid.sh
