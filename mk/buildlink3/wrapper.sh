@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.7 2004/01/21 13:52:56 jlam Exp $
+# $NetBSD: wrapper.sh,v 1.8 2004/01/29 06:06:41 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -41,6 +41,8 @@ original_cmd="$0 $@"
 $echo [*] $original_cmd >> $wrapperlog
 
 cmd="@WRAPPEE@"
+ldflags=
+libs=
 set -- "$@" @_BLNK_WRAP_EXTRA_FLAGS@
 while $test $# -gt 0 -o -n "${buf1}${buf2}${buf3}${buf4}${buf5}"; do
 	cachehit=no
@@ -72,6 +74,7 @@ while $test $# -gt 0 -o -n "${buf1}${buf2}${buf3}${buf4}${buf5}"; do
 	#
 	. $buildcmd
 done
+cmd="$cmd $ldflags $libs"
 
 @_BLNK_WRAP_ENV@
 @_BLNK_WRAP_SANITIZE_PATH@
