@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/02/19 22:32:45 rh Exp $
+
+--- configure.orig	Sat Oct 30 02:26:14 1999
++++ configure	Sat Feb 19 21:51:23 2000
+@@ -2917,6 +2917,42 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ 
++ac_safe=`echo "machine/joystick.h" | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for machine/joystick.h""... $ac_c" 1>&6
++echo "configure:2887: checking for machine/joystick.h" >&5
++if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  cat > conftest.$ac_ext <<EOF
++#line 2892 "configure"
++#include "confdefs.h"
++#include <machine/joystick.h>
++EOF
++ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++{ (eval echo configure:2897: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
++ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
++if test -z "$ac_err"; then
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=yes"
++else
++  echo "$ac_err" >&5
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_header_$ac_safe=no"
++fi
++rm -f conftest*
++fi
++if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++  cat >> confdefs.h <<\EOF
++#define MACHINE_JOYSTICK_IS_PRESENT 1
++EOF
++
++else
++  echo "$ac_t""no" 1>&6
++fi
++
+ ac_safe=`echo "linux/joystick.h" | sed 'y%./+-%__p_%'`
+ echo $ac_n "checking for linux/joystick.h""... $ac_c" 1>&6
+ echo "configure:2923: checking for linux/joystick.h" >&5

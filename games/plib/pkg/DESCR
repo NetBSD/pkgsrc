@@ -1,0 +1,34 @@
+  PLIB is a set of OpenSource (LGPL) libraries that will permit
+programmers to write games and other realtime interactive
+applications that are 100% portable across a wide range of hardware
+and operating systems.  PLIB is OpenSource software, issued under
+the terms of the Library varient GNU Public License (LGPL).
+
+The contents of PLIB are: 
+
+ * GUI Widgets: Picoscopic User Interface Library (PUI)
+		A fully portable GUI interface that needs only
+		GLUT, OpenGL and C++.
+
+ * Sound Replay: Sound Library (SL)
+		A fully portable Audio driver suited to C++, GLUT
+		and realtime applications that need low latency.
+		Includes a simple 'MOD' music loader/player.
+
+ * Matrix/Vector math: Simple Geometry Library(SG)
+		A set of matrix and vector math functions that was
+		specifically written to simplify the writing of
+		efficient OpenGL programs. You need to include
+		this code into any SSG applications.
+
+ * Scene Graph: Simple Scene Graph Library (SSG)
+		A scene graph library layered on top of OpenGL.
+
+ * Joystick: JS
+		Supports more Joysticks with more axes and
+		buttons than GLUT.
+
+ * Fonts/Text: Fonts'n'Text Library (FNT)
+		Supports text output in OpenGL using texture
+		mapped fonts. These are much faster to render
+		than GLUT's fonts.
