@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/12 20:47:13 bad Exp $
+lib/perl5/site_perl/File/KGlob.pm
+lib/perl5/site_perl/File/KGlob2RE.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/File/KGlob/.packlist
