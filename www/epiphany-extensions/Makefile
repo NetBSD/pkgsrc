@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/01/10 13:18:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/22 16:26:48 jmmv Exp $
 #
 
-DISTNAME=	epiphany-extensions-1.4.4
+DISTNAME=	epiphany-extensions-1.6.0
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/1.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/1.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -12,13 +12,20 @@ COMMENT=	Extensions for the Epiphany web browser
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
+USE_GNU_TOOLS=		make
 USE_LIBTOOL=		YES
+USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
 
 # Avoid -Werror, which breaks the build sometimes.
 CONFIGURE_ARGS+=	--enable-compile-warnings=no
+CONFIGURE_ARGS+=	--with-extensions=all
 
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/dom
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/webbrwsr
+
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -29,5 +36,6 @@ CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/webbrwsr
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/opensp/buildlink3.mk"
 .include "../../www/epiphany/buildlink3.mk"
+.include "../../www/mozilla-gtk2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
