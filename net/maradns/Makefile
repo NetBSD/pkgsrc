@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/12/28 02:47:47 reed Exp $
+# $NetBSD: Makefile,v 1.12 2005/03/14 23:41:35 wiz Exp $
 
 DISTNAME=	maradns-1.0.18
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://www.maradns.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,6 @@ COMMENT=	Secure DNS server for *NIX systems
 
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
-RCD_SCRIPTS=		maradns
 HAS_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
