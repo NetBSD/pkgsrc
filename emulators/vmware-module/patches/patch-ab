@@ -1,16 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
+$NetBSD: patch-ab,v 1.2 2003/02/16 02:35:56 bad Exp $
 
 --- rc.d/linuxrtc	Wed Apr  4 04:43:17 2001
 +++ rc.d/linuxrtc	Sun Jun 10 13:55:56 2001
-@@ -2,6 +2,7 @@
- #
- 
- # PROVIDE: linuxrtc
-+# BEFORE: securelevel
- 
- . /etc/rc.subr
- 
-@@ -13,8 +14,8 @@
+@@ -13,8 +17,8 @@
  
  load_rc_config $name
  
@@ -23,15 +15,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
  {
 --- rc.d/vmmon	Wed Apr  4 04:42:40 2001
 +++ rc.d/vmmon	Sun Jun 10 13:56:04 2001
-@@ -2,6 +2,7 @@
- #
- 
- # PROVIDE: vmmon
-+# BEFORE: securelevel
- 
- . /etc/rc.subr
- 
-@@ -13,8 +14,8 @@
+@@ -13,8 +13,8 @@
  
  load_rc_config $name
  
@@ -44,15 +28,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
  {
 --- rc.d/vmnet	Wed Apr  4 04:42:40 2001
 +++ rc.d/vmnet	Sun Jun 10 13:56:12 2001
-@@ -2,6 +2,7 @@
- #
- 
- # PROVIDE: vmnet
-+# BEFORE: securelevel
- 
- . /etc/rc.subr
- 
-@@ -13,8 +14,8 @@
+@@ -13,8 +13,8 @@
  
  load_rc_config $name
  
@@ -63,13 +39,3 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
  
  vmnet_prestart()
  {
---- rc.d/vmnetif	Wed Apr  4 04:43:19 2001
-+++ rc.d/vmnetif	Sun Jun 10 13:37:57 2001
-@@ -2,6 +2,7 @@
- 
- # PROVIDE: vmnet-netifup
- # REQUIRE: vmmon vmnet
-+# BEFORE: securelevel
- 
- . /etc/rc.subr
- 
