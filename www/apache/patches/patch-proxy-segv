@@ -1,0 +1,19 @@
+This patch fixes a segmentation violation in mod_proxy when a
+response is non-cachable.  Problem reported by Doug Bloebaum.
+
+Index: modules/proxy/proxy_util.c
+===================================================================
+RCS file: /home/cvs/apache-1.3/src/modules/proxy/proxy_util.c,v
+retrieving revision 1.70
+diff -u -r1.70 proxy_util.c
+--- src/modules/proxy/proxy_util.c	1998/08/31 19:51:59	1.70
++++ src/modules/proxy/proxy_util.c	1998/10/09 16:21:14
+@@ -581,7 +581,7 @@
+                 ap_reset_timeout(r);
+ 
+             if (w <= 0) {
+-                if (c != NULL) {
++                if (c != NULL && c->fp != NULL) {
+                     /* when a send failure occurs, we need to decide
+                      * whether to continue loading and caching the
+                      * document, or to abort the whole thing
