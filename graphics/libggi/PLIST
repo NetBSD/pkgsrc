@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/16 22:29:10 he Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/09/17 07:57:51 he Exp $
 bin/cube3d
 bin/ggiteleserver
 bin/monitest
@@ -121,6 +121,9 @@ lib/ggi/display/sub.so
 lib/ggi/display/tele.a
 lib/ggi/display/tele.la
 lib/ggi/display/tele.so
+${COND_TERMINFO}lib/ggi/display/terminfo.a
+${COND_TERMINFO}lib/ggi/display/terminfo.la
+${COND_TERMINFO}lib/ggi/display/terminfo.so
 lib/ggi/display/tile.a
 lib/ggi/display/tile.la
 lib/ggi/display/tile.so

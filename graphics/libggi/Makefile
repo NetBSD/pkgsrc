@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/04/16 17:39:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.29 2004/09/17 07:57:51 he Exp $
 #
 
 DISTNAME=	libggi-2.0.4.src
@@ -29,6 +29,16 @@ EGDIR=			${PREFIX}/share/examples/ggi
 CONF_FILES=		${EGDIR}/libggi.conf ${PKG_SYSCONFDIR}/libggi.conf
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+.if !empty(OS_VERSION:M1.[56].*)
+PLIST_SUBST+=	COND_TERMINFO="@comment "
+.else
+PLIST_SUBST+=	COND_TERMINFO=""
+.endif
+.else
+PLIST_SUBST+=	COND_TERMINFO=""
+.endif
 
 .if exists(${X11BASE}/include/X11/extensions/xf86dga.h)
 #
