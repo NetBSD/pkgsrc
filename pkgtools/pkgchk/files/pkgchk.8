@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgchk.8,v 1.14 2003/09/10 19:04:53 jmmv Exp $
+.\"	$NetBSD: pkgchk.8,v 1.15 2003/09/16 14:36:10 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -37,6 +37,11 @@ Use the pkgchk.conf file
 Add the comma separated list of tags to those checked when parsing
 pkgchk.conf. Also includes
 .Ev PKGCHK_TAGS .
+.It Fl L Ar file
+Redirect the output for all commands run into the logfile
+.Pa file .
+Should be specified as a full pathname. On any error the tail end of the
+logfile will be displayed.
 .It Fl U Ar tags
 Remove the comma separated list of tags from those checked when
 parsing pkgchk.conf. Also includes
