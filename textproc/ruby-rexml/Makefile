@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2004/11/28 04:42:29 taca Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/05 15:21:06 taca Exp $
 #
 
 DISTNAME=	rexml_${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-rexml-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.germane-software.com/archives/
 EXTRACT_SUFX=	.tgz
@@ -10,6 +11,16 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	rasputin@idoru.mine.nu
 HOMEPAGE=	http://www.germane-software.com/software/rexml/
 COMMENT=	Pure Ruby XML parser based on Java Electric XML
+
+.include "../../lang/ruby/rubyversion.mk"
+
+.if ${RUBY_VER} == "16"
+RUBY_ICONV_DIR=	../../converters/ruby${RUBY_VER}-iconv
+.else
+RUBY_ICONV_DIR=	../../converters/ruby-iconv
+.endif
+
+DEPENDS+= ${RUBY_PKGPREFIX}-iconv,${RUBY_PKGPREFIX}-uconv}:${RUBY_ICONV_DIR}
 
 VERSION=		3.1.2
 USE_RUBY_INSTALL=	yes
