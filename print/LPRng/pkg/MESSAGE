@@ -1,17 +1,21 @@
+$NetBSD: MESSAGE,v 1.2 1999/09/13 18:40:53 jlam Exp $
+===========================================================================
 
-To activate the new printing system do the following:
+To activate the LPRng printing system do the following:
+	- set `lpd=NO' in /etc/rc.conf
+	- run ${PREFIX}/etc/rc.d/lprng.sh (may be added to /etc/rc.local)
+	- remember to adjust your aliases or your PATH to use the new programs
 
-- save your old printcap (`cp /etc/printcap /etc/printcap.save')
-- set `lpd_enable=NO' in /etc/rc.conf
-- run checkpc -f to make sure that necessary files have been created
-- reboot or kill the old lpd (`killall lpd') and
-  start the new one (`/usr/local/sbin/lpd')
-- remember to adjust your aliases or your PATH to use the new programs
+Note that LPRng uses:
+	/etc/printcap
+	/etc/lpd_printcap
+	/etc/lpd.conf
+	/etc/lpd.perms
 
-Note that LPRng uses /etc/printcap, /etc/lpd.conf, and /etc/lpd.perms
+For further information, have a look at
+	${PREFIX}/share/doc/LPRng/LPRng-HOWTO.txt
 
-For further information, have a look at:
-  /usr/local/share/doc/LPRng
-also:
-  http://www.astart.com/lprng.html
+or point your favorite brower at
+	${PREFIX}/share/doc/LPRng/LPRng-HOWTO.html
 
+===========================================================================
