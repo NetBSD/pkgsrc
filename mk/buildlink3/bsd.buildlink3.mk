@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.22 2003/08/27 11:34:01 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.23 2003/08/27 12:05:42 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -686,6 +686,8 @@ _BLNK_WRAP_EXTRA_FLAGS.CPP=	${_BLNK_CPPFLAGS} ${_BLNK_LDFLAGS}
 _BLNK_WRAP_EXTRA_FLAGS.FC=	${_BLNK_CPPFLAGS} ${_BLNK_LDFLAGS}
 _BLNK_WRAP_EXTRA_FLAGS.LD=	${_BLNK_LDFLAGS}
 
+.PHONY: buildlink-wrappers
+
 buildlink-wrappers: ${_BLNK_LIBTOOL_DO_INSTALL}
 buildlink-wrappers: ${_BLNK_LIBTOOL_FIX_LA}
 
@@ -803,6 +805,7 @@ CC.SunOS?=		${SUNWSPROBASE}/bin/cc
 CXX.SunOS?=		${SUNWSPROBASE}/bin/CC
 .endif
 
+.PHONY: buildlink-${_BLNK_OPSYS}-wrappers
 buildlink-${_BLNK_OPSYS}-wrappers: buildlink-wrappers
 .for _wrappee_ in ${_BLNK_WRAPPEES.${_BLNK_OPSYS}}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
