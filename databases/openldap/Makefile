@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2004/02/21 01:48:38 jlam Exp $
+# $NetBSD: Makefile,v 1.72 2004/02/21 01:55:14 jlam Exp $
 
 DISTNAME=		openldap-2.1.25
 SVR4_PKGNAME=		oldap
@@ -28,7 +28,7 @@ PKG_SYSCONFSUBDIR=	openldap
 #
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var/openldap
-CONFIGURE_ARGS+=	--enable-dynamic	# link against shared libs
+CONFIGURE_ARGS+=	--enable-dynamic   # link servers against shared libs
 CONFIGURE_ARGS+=	--enable-bdb
 CONFIGURE_ARGS+=	--enable-crypt
 CONFIGURE_ARGS+=	--enable-dnssrv
