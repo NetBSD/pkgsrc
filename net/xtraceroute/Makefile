@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/10/20 13:26:56 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2002/10/21 15:18:13 wiz Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -15,7 +15,6 @@ BUILD_USES_MSGFMT=	yes
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
-USE_LIBINTL=	yes
 USE_BUILDLINK2=	yes
 
 CONFIGURE_ARGS+= --with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
@@ -30,6 +29,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/hosts.cache    ${PREFIX}/share/xtraceroute/hosts.cache
 	${INSTALL_DATA} ${WRKDIR}/networks.cache ${PREFIX}/share/xtraceroute/networks.cache
 
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
