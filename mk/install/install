@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.15 2002/10/04 23:46:27 jlam Exp $
+# $NetBSD: install,v 1.16 2002/10/23 17:43:17 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -110,7 +110,12 @@ POST-INSTALL)
 	if [ -n "${MAKE_DIRS}" -o -n "${OWN_DIRS}" -o			\
 	     -n "${MAKE_DIRS_PERMS}" -o -n "${OWN_DIRS_PERMS}" ]; then
 		_print_dir_header=1
-		eval set -- ${MAKE_DIRS} ${OWN_DIRS}
+		if [ -z "${RCD_SCRIPTS}" -o "${_PKG_RCD_SCRIPTS}" = "NO" ]; then
+			_RCD_SCRIPTS_DIR=
+		else
+			_RCD_SCRIPTS_DIR="${RCD_SCRIPTS_DIR}"
+		fi
+		eval set -- ${_RCD_SCRIPTS_DIR} ${MAKE_DIRS} ${OWN_DIRS}
 		for dir; do
 			if [ -d "${dir}" ]; then
 				continue
