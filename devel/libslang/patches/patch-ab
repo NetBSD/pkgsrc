@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 1998/10/04 15:30:51 tv Exp $
+$NetBSD: patch-ab,v 1.5 1999/06/17 22:57:24 mjl Exp $
 
---- configure.orig	Sun Oct  4 09:26:00 1998
-+++ configure	Sun Oct  4 09:26:17 1998
-@@ -1386,17 +1386,6 @@
+--- configure.orig	Mon Jun  7 01:34:53 1999
++++ configure	Thu Jun 17 00:54:16 1999
+@@ -1840,17 +1840,6 @@
  
  TERMCAP=-ltermcap
  
 -echo $ac_n "checking for Terminfo""... $ac_c" 1>&6
--echo "configure:1391: checking for Terminfo" >&5
+-echo "configure:1845: checking for Terminfo" >&5
 -for terminfo_dir in $JD_Terminfo_Dirs
 -do
 -   if test -d $terminfo_dir 
