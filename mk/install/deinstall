@@ -1,6 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.24 2003/11/21 10:54:14 jlam Exp $
+# $NetBSD: deinstall,v 1.25 2003/11/23 07:14:43 jlam Exp $
 
 eval set -- ${PKG_USERS}
 for userset; do
@@ -101,11 +101,6 @@ VIEW-DEINSTALL)
 	;;
 
 DEINSTALL)
-	if [ "${PKG_INSTALLATION_TYPE}" = "overwrite" ]; then
-		${SETENV} PKG_PREFIX="${PKG_PREFIX}" \
-			$0 ${PKGNAME} VIEW-DEINSTALL
-	fi
-
 	# Remove configuration files if they don't differ from the default
 	# config file.
 	#
