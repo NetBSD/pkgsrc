@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2004/07/02 15:40:01 drochner Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/07/03 06:49:18 grant Exp $
 
 GCC_VERSION=	3.3.4
 DISTNAME=	gcc-${GCC_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU:=gcc/releases/gcc-${GCC_VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
