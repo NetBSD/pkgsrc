@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2000/01/05 01:12:50 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/05/16 11:20:02 sakamoto Exp $
 # FreeBSD Id: ports/japanese/xjman/Makefile,v 1.10 1999/10/30 15:34:24 sada Exp
 
-DISTNAME=	xjman-0.4
+DISTNAME=	xjman-0.5
 CATEGORIES=	japanese x11
 MASTER_SITES=	http://xjman.dsl.gr.jp/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,11 +9,11 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://xjman.dsl.gr.jp/
 
-DEPENDS+=	ja-man-19990531:../../japanese/man
+DEPENDS+=	ja-man-*:../../japanese/man
 
 USE_X11BASE=	yes
 PLIST_SRC=	${WRKDIR}/PLIST
-WRKSRC=		${WRKDIR}/man/ja_JP.ujis
+WRKSRC=		${WRKDIR}/man/ja_JP.eucJP
 XJMANDIR=	man/ja_JP.EUC
 MAKE_ENV+=	XJMANDIR=${XJMANDIR}
 
