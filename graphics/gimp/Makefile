@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2004/04/10 06:42:49 xtraeme Exp $
+# $NetBSD: Makefile,v 1.93 2004/04/10 08:11:46 jmmv Exp $
 #
 
 DISTNAME=	gimp-2.0.0
@@ -48,11 +48,6 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
-
-post-install:
-	${TEST} ${PREFIX} = ${LOCALBASE} ||				\
-		${LN} -fs ${PREFIX}/share/aclocal/gimp.m4		\
-			${LOCALBASE}/share/aclocal/gimp.m4
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
