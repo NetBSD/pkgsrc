@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/04/05 19:12:21 jwise Exp $
+# $NetBSD: Makefile,v 1.20 2001/06/21 13:12:27 abs Exp $
 
 DISTNAME=	${PKGNAME}-src
 PKGNAME=	jakarta-tomcat-3.2.1
@@ -29,8 +29,8 @@ post-patch:
 		-e "s|@JAVA_HOME@|${JAVA_HOME}|g"			\
 		${WRKSRC}/src/etc/workers.properties > ${WRKSRC}/src/etc/workers.properties.tmp
 		${MV} ${WRKSRC}/src/etc/workers.properties.tmp ${WRKSRC}/src/etc/workers.properties
-	${RM} ${WRKSRC}/src/share/org/apache/tomcat/task/ApacheConfig.java.orig
-	${RM} ${WRKSRC}/src/etc/workers.properties.orig
+	${RM} -f ${WRKSRC}/src/share/org/apache/tomcat/task/ApacheConfig.java.orig
+	${RM} -f ${WRKSRC}/src/etc/workers.properties.orig
 
 post-build:
 	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
