@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/09/23 21:07:25 reed Exp $
+# $NetBSD: Makefile,v 1.46 2004/09/28 17:59:55 erh Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 PKGREVISION=		1
@@ -8,7 +8,6 @@ HOMEPAGE=		http://httpd.apache.org/
 COMMENT=		Apache HTTP (Web) server, version 2
 
 CONFLICTS=		apache-*ssl-[0-9]* apache-[0-9]* apache6-[0-9]*
-CONFLICTS+=		ap-*-[0-9]*	# Apache-1.x DSOs
 
 BUILD_DEFS+=		USE_INET6
 
