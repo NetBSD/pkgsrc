@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.9 2001/06/11 01:59:35 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.10 2001/06/11 03:21:24 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
@@ -6,10 +6,9 @@
 #
 # (1) Optionally define USE_GNU_READLINE to force use of GNU readline.
 # (2) Optionally define READLINE_REQD to the version of GNU readline desired.
-# (3) Include this Makefile fragment in the package Makefile,
-# (4) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
+# (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
-# (5) Add ${BUILDLINK_DIR}/lib to the front of the linker's library search
+# (4) Add ${BUILDLINK_DIR}/lib to the front of the linker's library search
 #     path.
 #
 # NOTE:	You may need to do some more work to get libedit recognized over
@@ -30,75 +29,62 @@ _NEED_GNU_READLINE=	YES
 .endif
 
 .if ${_NEED_GNU_READLINE} == "YES"
-DEPENDS+=		readline>=${READLINE_REQD}:../../devel/readline
-READLINE_HEADERS=	${LOCALBASE}/include/readline/*
-READLINE_LIBS=		${LOCALBASE}/lib/libreadline.*
-HISTORY_LIBS+=		${LOCALBASE}/lib/libhistory.*
+DEPENDS+=			readline>=${READLINE_REQD}:../../devel/readline
+BUILDLINK_PREFIX.readline=	${LOCALBASE}
+BUILDLINK_FILES.readline=	include/readline/*
+BUILDLINK_FILES.readline+=	lib/libreadline.*
+
+BUILDLINK_PREFIX.history=	${LOCALBASE}
+BUILDLINK_FILES.history+=	lib/libhistory.*
 .else
 .if exists(/usr/include/readline.h)
 HAVE_LIBEDIT_READLINE=	# defined
-READLINE_HEADERS=	/usr/include/readline.h
-READLINE_HEADERS+=	/usr/include/history.h
-READLINE_LIBS=		/usr/lib/libedit.*
-HISTORY_LIBS=		/usr/lib/libedit.*
+BUILDLINK_PREFIX.editline=	/usr
+BUILDLINK_FILES.editline=	lib/libedit.*
+
+BUILDLINK_PREFIX.readline=	/usr
+BUILDLINK_FILES.readline=	include/readline.h
+BUILDLINK_FILES.readline+=	lib/libedit.*
+BUILDLINK_TRANSFORM.readline=	-e "s|/readline.h|/readline/readline.h|g"
+BUILDLINK_TRANSFORM.readline+=	-e "s|libedit|libreadline|g"
+
+BUILDLINK_PREFIX.history=	/usr
+BUILDLINK_FILES.history=	include/history.h
+BUILDLINK_FILES.history+=	lib/libedit.*
+BUILDLINK_TRANSFORM.history=	-e "s|/history.h|/readline/history.h|g"
+BUILDLINK_TRANSFORM.history+=	-e "s|libedit|libhistory|g"
 .else # exists(/usr/include/readline/readline.h)
 HAVE_LIBEDIT_READLINE=	# defined
-READLINE_HEADERS=	/usr/include/readline/*
-READLINE_LIBS=		/usr/lib/libedit.*
-HISTORY_LIBS=		/usr/lib/libedit.*
+BUILDLINK_PREFIX.editline=	/usr
+BUILDLINK_FILES.editline=	lib/libedit.*
+
+BUILDLINK_PREFIX.readline=	/usr
+BUILDLINK_FILES.readline=	include/readline/*
+BUILDLINK_FILES.readline+=	lib/libedit.*
+BUILDLINK_TRANSFORM.readline=	-e "s|libedit|libreadline|g"
+
+BUILDLINK_PREFIX.history=	/usr
+BUILDLINK_FILES.history+=	lib/libedit.*
+BUILDLINK_TRANSFORM.history=	-e "s|libedit|libhistory|g"
 .endif
 .endif
 
-READLINE_BUILDLINK_COOKIE=	${BUILDLINK_DIR}/.readline_buildlink_done
-READLINE_BUILDLINK_TARGETS=	link-readline-headers
 .if defined(HAVE_LIBEDIT_READLINE) && defined(USE_LIBTOOL)
-READLINE_BUILDLINK_TARGETS+=	editline-libtool-archive
+BUILDLINK_TARGETS.readline=	editline-libtool-archive
+.else
+BUILDLINK_TARGETS.readline=	# empty
 .endif
-READLINE_BUILDLINK_TARGETS+=	link-readline-libs
-BUILDLINK_TARGETS+=		${READLINE_BUILDLINK_COOKIE}
+.if defined(HAVE_LIBEDIT_READLINE)
+BUILDLINK_TARGETS.readline+=	editline-buildlink
+.endif
+BUILDLINK_TARGETS.readline+=	readline-buildlink
+BUILDLINK_TARGETS.readline+=	history-buildlink
+BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.readline}
 
-pre-configure: ${READLINE_BUILDLINK_COOKIE}
-
-${READLINE_BUILDLINK_COOKIE}: ${READLINE_BUILDLINK_TARGETS}
-	@${TOUCH} ${TOUCH_FLAGS} ${READLINE_BUILDLINK_COOKIE}
-
-# This target links the headers into ${BUILDLINK_DIR}/include, which should
-# be searched first by the C preprocessor.
-#
-link-readline-headers:
-	@${ECHO} "Linking readline headers into ${BUILDLINK_DIR}/include."
-	@${MKDIR} ${BUILDLINK_DIR}/include/readline
-	@${RM} -f ${BUILDLINK_DIR}/include/readline/*
-	@for inc in ${READLINE_HEADERS}; do				\
-		dest=${BUILDLINK_DIR}/include/readline/`${BASENAME} $${inc}`; \
-		if [ -f $${inc} ]; then					\
-			${RM} -f $${dest};				\
-			${LN} -sf $${inc} $${dest};			\
-		fi;							\
-	done
-
-# This target links the libraries into ${BUILDLINK_DIR}/lib, which should
-# be searched first by the linker.
-#
-link-readline-libs:
-	@${ECHO} "Linking readline libraries into ${BUILDLINK_DIR}/lib."
-	@${MKDIR} ${BUILDLINK_DIR}/lib
-	@for lib in ${READLINE_LIBS}; do				\
-		name=`${BASENAME} $${lib} | ${SED} "s|libedit|libreadline|"`; \
-		dest=${BUILDLINK_DIR}/lib/$${name};			\
-		if [ -f $${lib} ]; then					\
-			${RM} -f $${dest};				\
-			${LN} -sf $${lib} $${dest};			\
-		fi;							\
-	done
-	@for lib in ${HISTORY_LIBS}; do					\
-		name=`${BASENAME} $${lib} | ${SED} "s|libedit|libhistory|"`; \
-		dest=${BUILDLINK_DIR}/lib/$${name};			\
-		if [ -f $${lib} ]; then					\
-			${RM} -f $${dest};				\
-			${LN} -sf $${lib} $${dest};			\
-		fi;							\
-	done
+pre-configure: ${BUILDLINK_TARGETS.readline}
+editline-buildlink: _BUILDLINK_USE
+readline-buildlink: _BUILDLINK_USE
+history-buildlink: _BUILDLINK_USE
 
 .if defined(HAVE_LIBEDIT_READLINE) && defined(USE_LIBTOOL)
 editline-libtool-archive:
