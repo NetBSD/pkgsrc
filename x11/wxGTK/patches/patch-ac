@@ -1,71 +1,62 @@
-$NetBSD: patch-ac,v 1.3 2000/09/01 02:45:57 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.4 2003/03/31 17:44:22 jmmv Exp $
 
---- src/makelib.env.in.orig	Sun Aug 20 04:52:57 2000
-+++ src/makelib.env.in	Thu Aug 31 14:03:25 2000
-@@ -34,23 +34,21 @@
+--- src/makelib.env.in.orig	Thu Mar  6 01:16:24 2003
++++ src/makelib.env.in	Thu Mar  6 23:16:16 2003
+@@ -33,6 +33,7 @@
+ INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
 +INSTALL_DATA = @INSTALL_DATA_DIR@
  
--TARGETLIB_STATIC = $(TARGET_LIBNAME).a
--TARGETLIB_SHARED = $(TARGET_LIBNAME).so.$(LIBVERSION_CURRENT).$(LIBVERSION_REVISION).$(LIBVERSION_AGE)
--TARGETLIB_LINK1 = $(TARGET_LIBNAME).so.$(LIBVERSION_CURRENT)
--TARGETLIB_LINK2 = $(TARGET_LIBNAME).so
-+#TARGETLIB_STATIC = $(TARGET_LIBNAME).a
-+#TARGETLIB_SHARED = $(TARGET_LIBNAME).so.$(LIBVERSION_CURRENT).$(LIBVERSION_REVISION).$(LIBVERSION_AGE)
+ TARGETLIB_STATIC = $(TARGET_LIBNAME).a
+ TARGETLIB_SHARED = $(TARGET_LIBNAME).so.$(LIBVERSION_CURRENT).$(LIBVERSION_REVISION).$(LIBVERSION_AGE)
+@@ -47,13 +48,13 @@
+ .SUFFIXES: .o .c .cpp .cxx
  
--TARGETLIB_SONAME = @WX_TARGET_LIBRARY_SONAME@
+ .c.o:
+-	$(CC) -c $(CFLAGS) $(PICFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile $(CC) -c $(CFLAGS)  -o $@ $<
  
- # Clears all default suffixes
--.SUFFIXES:	.o .cpp .c .cxx
-+.SUFFIXES:	.o .cpp .c .cxx
- 
--.c.o :
--	$(CCC) -c $(CFLAGS) $(PICFLAGS) -o $@ $<
-+.c.o :
-+	${LIBTOOL} --mode=compile $(CCC) -c $(CFLAGS)  -o $@ $<
- 
--.cpp.o :
--	$(CC) -c $(CPPFLAGS) $(PICFLAGS) -o $@ $<
-+.cpp.o :
+ .cpp.o:
+-	$(CXX) -c $(CXXFLAGS) $(PICFLAGS) -o $@ $<
 +	${LIBTOOL} --mode=compile $(CC) -c $(CPPFLAGS)  -o $@ $<
  
--.cxx.o :
--	$(CC) -c $(CPPFLAGS) $(PICFLAGS) -o $@ $<
-+.cxx.o :
+ .cxx.o:
+-	$(CXX) -c $(CXXFLAGS) $(PICFLAGS) -o $@ $<
 +	${LIBTOOL} --mode=compile $(CC) -c $(CPPFLAGS)  -o $@ $<
  
  # the comment at the end of the next line is needed because otherwise autoconf
-@@ -62,40 +60,19 @@
+ # would remove this line completely - it contains a built-in hack to remove
+@@ -62,40 +63,21 @@
  
+ include $(top_builddir)/src/make.env
  
 -all: libtype_@WX_TARGET_LIBRARY_TYPE@
 +all: $(TARGET_LIBNAME).la 
  
--libtype_so: CREATE_LINKS
- 
--libtype_a: $(TARGETLIB_STATIC)
+-libtype_so: $(top_builddir)/lib/$(TARGETLIB_SHARED)
 -
+-libtype_a: $(top_builddir)/lib/$(TARGETLIB_STATIC)
 -
--$(TARGETLIB_SHARED): $(OBJECTS)
+-$(top_builddir)/lib/$(TARGETLIB_SHARED): $(OBJECTS)
 -	@$(INSTALL) -d $(top_builddir)/lib
--	$(SHARED_LD) $(top_builddir)/lib/$@ $(TARGETLIB_SONAME) $(OBJECTS)
--
--CREATE_LINKS: $(TARGETLIB_SHARED)
+-	$(SHARED_LD) $@ $(TARGETLIB_SONAME) $(OBJECTS) $(LDFLAGS_VERSIONING)
 -	cd $(top_builddir)/lib \
 -		&& $(RM) $(TARGETLIB_LINK1) $(TARGETLIB_LINK2) \
 -		&& $(LN_S) $(TARGETLIB_SHARED) $(TARGETLIB_LINK1) \
 -		&& $(LN_S) $(TARGETLIB_SHARED) $(TARGETLIB_LINK2)
 -
--$(TARGETLIB_STATIC): $(OBJECTS)
+-$(top_builddir)/lib/$(TARGETLIB_STATIC): $(OBJECTS)
+-	@$(INSTALL) -d $(top_builddir)/lib
 +$(TARGET_LIBNAME).la: $(OBJECTS)
- 	@$(INSTALL) -d $(top_builddir)/lib
--	ar $(AROPTIONS) $(top_builddir)/lib/$@ $(OBJECTS)
--	$(RANLIB) $(top_builddir)/lib/$@
++	@$(INSTALL_DATA_DIR) $(top_builddir)/lib
+ 	@$(RM) $@
+-	$(AR) $(AROPTIONS) $@ $(OBJECTS)
+-	$(RANLIB) $@
 -
 -install: install_@WX_TARGET_LIBRARY_TYPE@ install_headers
 +	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJECTS:.o=.lo} \
-+	-rpath ${PREFIX}/lib -version-info major:minor \
++	-rpath ${PREFIX}/lib -version-info major:minor
  
 -install_so:
 -	$(INSTALL_PROGRAM) $(top_builddir)/lib/$(TARGETLIB_SHARED) $(libdir)/$(TARGETLIB_SHARED)
@@ -85,3 +76,4 @@ $NetBSD: patch-ac,v 1.3 2000/09/01 02:45:57 dmcmahill Exp $
 +	$(INSTALL_DATA_DIR)  $(includedir)/wx/$(HEADER_SUBDIR)
  	@for h in $(HEADERS); do \
  	  $(INSTALL_DATA) $(HEADER_PATH)/$(HEADER_SUBDIR)/$$h $(includedir)/wx/$(HEADER_SUBDIR)/$$h; \
+ 	  echo "installing $(includedir)/wx/$(HEADER_SUBDIR)/$$h"; \

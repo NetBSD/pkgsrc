@@ -1,16 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2001/06/15 16:53:27 drochner Exp $
+$NetBSD: patch-ad,v 1.2 2003/03/31 17:44:22 jmmv Exp $
 
---- src/common/unzip.h.orig	Thu Jun 14 23:50:13 2001
-+++ src/common/unzip.h	Fri Jun 15 00:07:59 2001
-@@ -56,6 +56,11 @@
- #include "zlib.h"
- #endif
+--- wx-config.in.orig	Mon Mar 10 01:34:49 2003
++++ wx-config.in	Mon Mar 10 01:35:42 2003
+@@ -139,7 +139,7 @@
+       if test $static_flag = yes ; then
+           echo "$libs @LDFLAGS@ @WXCONFIG_RPATH@ @libdir@/@WXCONFIG_LIBS_STATIC@ @LIBS@ @DMALLOC_LIBS@"
+       else
+-          echo $libs @LDFLAGS@ @WXCONFIG_RPATH@ @WXCONFIG_LIBS@ @DMALLOC_LIBS@
++          echo $libs @LDFLAGS@ @WXCONFIG_RPATH@ @WXCONFIG_LIBS@ @LIBS@ @DMALLOC_LIBS@
+       fi
  
-+#ifndef OF
-+#include <ctype.h>
-+#define OF(x) __P(x)
-+#endif
-+
- #if defined(STRICTUNZIP) || defined(STRICTZIPUNZIP)
- /* like the STRICT of WIN32, we define a pointer that cannot be converted
-     from (void*) without cast */
+       ;;
