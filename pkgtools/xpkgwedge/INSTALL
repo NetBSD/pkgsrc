@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.10 2004/04/27 18:33:52 tv Exp $
+# $NetBSD: INSTALL,v 1.11 2004/04/30 19:44:21 tv Exp $
 
 FONT_PROGS="@FONT_PROGS@"
 X11BASE=@X11BASE@
@@ -44,11 +44,18 @@ VIEW-INSTALL)
 	) > ${HOSTDEF}
 	${RM} -f ${HOSTDEF}.bak
 	${ECHO} "done."
-	case ${X11BASE} in
-	*openwin)
+	case `uname`:${X11BASE} in
+	*:*openwin)
 		${ECHO_N} "Patching OpenWindows templates..."
 		${SED} "${SITEDEF_SUBST_SED}" ${X11_SITEDEF} > ${SITEDEF}
 		${SED} "${SV4LIB_SUBST_SED}" ${X11_SV4LIB} > ${SV4LIB}
+		${ECHO} "done."
+		;;
+	Interix:/usr/X11R6)
+		${ECHO_N} "Patching Interix templates..."
+		${SED} -e "1i\\
+#include <host.def>
+" -e "/CcCmd/d;/ProjectRoot/d" ${X11_SITEDEF} > ${SITEDEF}
 		${ECHO} "done."
 		;;
 	esac
