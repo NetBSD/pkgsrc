@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/06/22 13:58:26 frueauf Exp $
+# $NetBSD: Makefile,v 1.15 1998/07/15 12:40:14 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.3.2
@@ -91,7 +91,14 @@ post-install:
 	fi
 	@/usr/sbin/chown -R ${PGUSER}:${PGGROUP} ${PREFIX}/${PGUSER}
 	@${ECHO} 'Initializing PostgreSQL Databases - this may take a few minutes...'
-	@${LDCONFIG} -m ${PREFIX}/${PGUSER}/lib || ${TRUE}
+	@case `${GREP} -c '^${PREFIX}/${PGUSER}/lib$$' /etc/ld.so.conf` in	\
+	0)									\
+		${ECHO} "************** WARNING ********************";		\
+		${ECHO} "Please add ${PREFIX}/${PGUSER}/lib to /etc/ld.so.conf";\
+		${ECHO} "so that this package is usable after any reboot";	\
+		${ECHO} "************** WARNING ********************";		\
+		;;								\
+	esac
 	@${ECHO} '${SETENV} PATH=${PREFIX}/${PGUSER}/bin:$$PATH ${PREFIX}/${PGUSER}/bin/initdb --pglib=${PREFIX}/${PGUSER}/lib --pgdata=${PREFIX}/${PGUSER}/data' | su -l ${PGUSER}
 	@${SED} -e "s=!!PREFIX!!=${PREFIX}=g" < ${FILESDIR}/pgsql.sh.tmpl \
 		> ${PREFIX}/etc/rc.d/pgsql.sh
