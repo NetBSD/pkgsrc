@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.34 2000/03/02 05:11:42 kim Exp $
+# $NetBSD: Makefile,v 1.35 2000/03/02 05:23:54 kim Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
 DISTNAME=	nmh-1.0.3
 CATEGORIES=	mail
-MASTER_SITES=   ftp://ftp.mhost.com/pub/nmh/
+MASTER_SITES=	ftp://ftp.mhost.com/pub/nmh/ \
+		ftp://ftp.gw.com/pub/unix/mail/mh/nmh/
 
-MAINTAINER=     kim@tac.nyc.ny.us
+MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.math.gatech.edu/nmh/
 
 CONFLICTS=	ja-mh-*
@@ -30,11 +31,11 @@ CONFIGURE_ARGS+= \
 		--with-mts=${NMH_MTA}
 
 .ifdef NMH_EDITOR
-CONFIGURE_ARGS+= --with-editor=${NMH_EDITOR}
+CONFIGURE_ARGS+=--with-editor=${NMH_EDITOR}
 .endif
 
 .ifdef NMH_PAGER
-CONFIGURE_ARGS+= --with-pager=${NMH_PAGER}
+CONFIGURE_ARGS+=--with-pager=${NMH_PAGER}
 .endif
 
 .if defined(KERBEROS) && ${KERBEROS} == 4
