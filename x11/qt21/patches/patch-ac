@@ -1,12 +1,10 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/04/28 17:18:23 drochner Exp $
-
---- configs/solaris-g++-static.orig	Wed Apr 12 15:26:52 2000
-+++ configs/solaris-g++-static	Fri Apr 28 16:12:03 2000
+--- ./configs/solaris-g++-static.orig	Wed Apr 12 14:26:52 2000
++++ ./configs/solaris-g++-static	Wed Jun 14 22:39:39 2000
 @@ -1,31 +1,32 @@
  # Compiling
 -SYSCONF_CXX		= g++
 +SYSCONF_CXX		= ${LOCALBASE}/egcs/bin/g++
-+SYSCONF_CXX_LIB	= $(LIBTOOL) --cplusplus --mode=compile ${SYSCONF_CXX}
++SYSCONF_CXX_LIB	= $(LIBTOOL) --mode=compile ${SYSCONF_CXX}
  SYSCONF_CC		= gcc
  
  # Compiling with support libraries
@@ -57,7 +55,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/04/28 17:18:23 drochner Exp $
  #
 -SYSCONF_AR		= ar cq
 -SYSCONF_LINK_TARGET_STATIC = lib$(TARGET).a
-+SYSCONF_AR		= $(LIBTOOL) --cplusplus --mode=link $(SYSCONF_CXX) -rpath $(PREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) -o
++SYSCONF_AR		= $(LIBTOOL) --mode=link $(SYSCONF_CXX) -rpath $(QTPREFIX)/lib -version-info $(VER_MAJ):$(VER_MIN) -o
 +SYSCONF_LINK_TARGET_STATIC = lib$(TARGET).la
  SYSCONF_LINK_LIB_STATIC	= rm -f $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) ; \
 -				 $(SYSCONF_AR) $(DESTDIR)$(SYSCONF_LINK_TARGET_STATIC) $(OBJECTS) $(OBJMOC) 
