@@ -1,12 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/03 15:07:23 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2002/10/08 07:53:46 jlam Exp $
 
---- src/menus.c.orig	Thu Jun 22 19:31:59 2000
-+++ src/menus.c
-@@ -36,7 +36,6 @@
- #include <libgnomeprint/gnome-print-preview.h>
- #include <libgnomeprint/gnome-print-pixbuf.h>
- #include <libgnomeprint/gnome-font.h>
--#include <libgnomeprint/gnome-printer-profile.h>
- #include <libgnomeprint/gnome-printer-dialog.h>
- #include <libgnomeprint/gnome-print-master.h>
- #include <libgnomeprint/gnome-print-master-preview.h>
+--- configure.orig	Sat Jul  8 12:33:34 2000
++++ configure
+@@ -2513,7 +2513,7 @@ help_yes_print=no
+ 
+ echo $ac_n "checking for static libgnomeprint""... $ac_c" 1>&6
+ echo "configure:2516: checking for static libgnomeprint" >&5
+-if test -e $GNOME_PRINT_PREFIX/lib/libgnomeprint.a ; then
++if false; then
+ 	echo "$ac_t""yes" 1>&6
+ 	cat >> confdefs.h <<\EOF
+ #define HAVE_GNOME_PRINT 1
+@@ -2537,7 +2537,7 @@ fi
+ 
+ echo $ac_n "checking if Bonobo uses OAF""... $ac_c" 1>&6
+ echo "configure:2540: checking if Bonobo uses OAF" >&5
+-if ( gnome-config --libs bonobo | grep oaf ) > /dev/null 2>&1; then
++if false; then
+ 	enable_oaf="yes"
+ else
+ 	enable_oaf="no"
