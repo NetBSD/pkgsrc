@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/09/21 18:18:50 tron Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/12 02:10:18 wiz Exp $
 
 DISTNAME=	wmsound-0.9.4
 CATEGORIES=	audio x11
@@ -9,7 +9,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} wmsdefault${EXTRACT_SUFX}
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.frontiernet.net/~southgat/wmsound/
 
-DEPENDS+=	windowmaker-*:../../x11/windowmaker
+DEPENDS+=	windowmaker-*:../../wm/windowmaker
 
 USE_X11BASE=	yes
 USE_IMAKE=	yes

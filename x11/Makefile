@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2000/12/12 01:31:05 wiz Exp $
+# $NetBSD: Makefile,v 1.191 2000/12/12 02:10:17 wiz Exp $
 #
 
     SUBDIR += XF86Setup
@@ -6,33 +6,24 @@
     SUBDIR += Xaw3d
     SUBDIR += Xbae
     SUBDIR += XmHTML
-    SUBDIR += afterstep
-    SUBDIR += amiwm
     SUBDIR += asclock
     SUBDIR += asclock-gtk
     SUBDIR += asclock-xlib
     SUBDIR += ascp
-    SUBDIR += blackbox
     SUBDIR += blt
     SUBDIR += catclock
     SUBDIR += controlcenter
-    SUBDIR += ctwm
     SUBDIR += dclock
     SUBDIR += dxpc
     SUBDIR += ebuilder
     SUBDIR += econf
     SUBDIR += egtk
     SUBDIR += emiclock
-    SUBDIR += enlightenment
     SUBDIR += eterm
     SUBDIR += ethemes
     SUBDIR += filerunner
     SUBDIR += fltk
-    SUBDIR += flwm
     SUBDIR += fvwm-wharf
-    SUBDIR += fvwm1
-    SUBDIR += fvwm2
-    SUBDIR += fvwm95
     SUBDIR += gdm
     SUBDIR += glclock
     SUBDIR += gnome
@@ -49,8 +40,6 @@
     SUBDIR += gtkglarea
     SUBDIR += gtkstep
     SUBDIR += hanterm
-    SUBDIR += icewm
-    SUBDIR += icewm-gnome
     SUBDIR += kde
     SUBDIR += kdebase
     SUBDIR += kdelibs
@@ -60,9 +49,7 @@
     SUBDIR += kworldwatch
     SUBDIR += lesstif
     SUBDIR += lesstif12
-    SUBDIR += lwm
     SUBDIR += modeline
-    SUBDIR += olvwm
     SUBDIR += oneko
     SUBDIR += openmotif
     SUBDIR += p5-Tk
@@ -83,9 +70,6 @@
     SUBDIR += ruby-Tk
     SUBDIR += ruby-gtk
     SUBDIR += rxvt
-    SUBDIR += sawfish
-    SUBDIR += sawfish-replibs
-    SUBDIR += scwm
     SUBDIR += speyes
     SUBDIR += sunclock
     SUBDIR += swing
@@ -95,12 +79,8 @@
     SUBDIR += tk
     SUBDIR += tkinfo
     SUBDIR += tkman
-    SUBDIR += tvtwm
     SUBDIR += type1inst
     SUBDIR += unclutter
-    SUBDIR += uwm
-    SUBDIR += windowmaker
-    SUBDIR += wm2
     SUBDIR += wmakerconf
     SUBDIR += wmavgload
     SUBDIR += wmcalclock
@@ -112,7 +92,6 @@
     SUBDIR += wmthemes
     SUBDIR += wmtime
     SUBDIR += wmweather
-    SUBDIR += wmx
     SUBDIR += wterm
     SUBDIR += wxGTK
     SUBDIR += x2x
