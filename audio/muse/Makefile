@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/10/03 00:13:08 tv Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/19 03:42:44 jlam Exp $
 #
 
 DISTNAME=	MuSE-0.9
@@ -20,6 +20,7 @@ USE_X11=	yes
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--disable-ncurses
+CONFIGURE_ARGS+=	--disable-lubrify
 CONFIGURE_ARGS+=	--enable-gtk2
 LIBS+=			${LIBOSSAUDIO}
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
