@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.181 1998/10/20 16:01:03 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.182 1998/10/20 17:03:25 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -380,14 +380,10 @@ PKG_CREATE?=	/usr/sbin/pkg_create
 PKG_DELETE?=	/usr/sbin/pkg_delete
 PKG_INFO?=	/usr/sbin/pkg_info
 
-.if !defined(PKG_ARGS)
+.ifndef PKG_ARGS
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true|sort -u`"
-.if defined(CONFLICTS)
-# Only use -C if the pkg_create command supports it.
-__PKG_CREATE_C__!=	${PKG_CREATE} -C 2>&1 | /usr/bin/egrep 'illegal option' ; echo
-.if (${__PKG_CREATE_C__} == "")
+.ifdef CONFLICTS
 PKG_ARGS+=		-C "${CONFLICTS}"
-.endif
 .endif
 .ifdef PKG_RELATIVE_SYMLINKS
 PKG_ARGS+=		-l
@@ -404,10 +400,10 @@ PKG_ARGS+=		-r ${REQ_FILE}
 .ifdef MESSAGE_FILE
 PKG_ARGS+=		-D ${MESSAGE_FILE}
 .endif
-.if !defined(NO_MTREE)
+.ifndef NO_MTREE
 PKG_ARGS+=		-m ${MTREE_FILE}
 .endif
-.endif
+.endif # !PKG_ARGS
 PKG_SUFX?=		.tgz
 # where pkg_add records its dirty deeds.
 PKG_DBDIR?=		/var/db/pkg
@@ -526,7 +522,10 @@ DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 PKGNAME?=		${DISTNAME}
 
 # Latest version of pkgtools required for this file.
-PKGTOOLS_REQD=		19980908
+.ifdef PKG_RELATIVE_SYMLINKS
+PKGTOOLS_REQD=		19981019
+.endif
+PKGTOOLS_REQD?=		19980908
 
 # Check that we're using up-to-date pkg_* tools with this file.
 .ifndef _PKGTOOLS_VER
