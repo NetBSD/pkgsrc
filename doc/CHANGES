@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3315 2003/09/10 17:31:40 gavan Exp $
+$NetBSD: CHANGES,v 1.3316 2003/09/10 19:14:26 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3614,3 +3614,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ruby-DBD-postgresql to 0.0.21 [taca 2003-09-10]
 	Added ruby-DBD-mysql-0.0.21 [taca 2003-09-10]
 	Updated xpkgwedge to 1.8 [gavan 2003-09-10]
+	Updated pkg_chk to 1.40 [jmmv 2003-09-10]
