@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.93 2002/12/22 13:48:35 wiz Exp $
+$NetBSD: TODO,v 1.94 2002/12/22 13:56:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -84,6 +84,7 @@ Suggested package updates
 	o cdrecord-1.11a39 [pkg/19073]
 	o cdrecord-1.11a40
 	o centericq-4.9.0
+	o cfengine-1.6.5 [pkg/19459|seb]
 	o citrix-ica [pkg/19210]
 	o clisp-2.30
 	o courier-0.40 [jlam]
