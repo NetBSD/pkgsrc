@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/11/10 18:03:25 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2000/02/09 15:22:38 tron Exp $
 #
 
 DISTNAME=		kaffe-1.0.5
@@ -9,7 +9,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.kaffe.org/
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png-1.0.3:../../graphics/png
+DEPENDS+=		png-*:../../graphics/png
 DEPENDS+=		libungif-*:../../graphics/libungif
 
 USE_X11=		yes
