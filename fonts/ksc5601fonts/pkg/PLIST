@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/29 08:04:57 itojun Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/10/29 09:00:47 itojun Exp $
 lib/X11/fonts/local/batang10.pcf.gz
 lib/X11/fonts/local/batang10b.pcf.gz
 lib/X11/fonts/local/batang12.pcf.gz
@@ -53,6 +53,10 @@ lib/X11/fonts/local/hmm14.pcf.gz
 lib/X11/fonts/local/hmm16.pcf.gz
 lib/X11/fonts/local/hmm18.pcf.gz
 lib/X11/fonts/local/hmm20.pcf.gz
+lib/X11/fonts/local/kaist-newmj16.pcf.gz
+lib/X11/fonts/local/kaist-newmj18.pcf.gz
+lib/X11/fonts/local/ks_iyagi16.pcf.gz
+lib/X11/fonts/local/ks_philgi16.pcf.gz
 lib/X11/fonts/local/mzgt16e.pcf.gz
 lib/X11/fonts/local/mzgt16h.pcf.gz
 lib/X11/fonts/local/mzgt16h1.pcf.gz
