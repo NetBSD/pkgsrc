@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/11/13 21:08:56 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/11/14 13:06:25 jlam Exp $
 #
 # This Makefile fragment is included by packages that use the KDE2
 # configure-and-build process.
@@ -55,16 +55,18 @@ KDE2_BUILDLINK_MK=	# defined
 #
 USE_X11BASE=		YES
 
-# Default values so that even if the package using this file is not
+.if !defined(USE_BUILDLINK_ONLY)
+#
+# Default values so that even if the package using this file is not strongly
 # buildlinkified, there are sensible values for finding the KDE2 and Qt2
 # headers and libraries.
 #
 KDEDIR?=		${X11PREFIX}
-QTDIR?=			${X11PREFIX}
+QTDIR?=			${X11PREFIX}/qt2
 BUILDLINK_KDEDIR?=	${KDEDIR}
 BUILDLINK_QTDIR?=	${QTDIR}
+.endif
 
-.if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS+=	--datadir="${KDEDIR}/share/kde"
 CONFIGURE_ARGS+=	--with-qt-dir="${BUILDLINK_QTDIR}"
 CONFIGURE_ARGS+=	--with-extra-includes="${_KDE2_EXTRA_INCLUDES}"
@@ -104,5 +106,4 @@ CONFIGURE_ENV+=		kde_sounddir="${KDEDIR}/share/kde/sounds"
 CONFIGURE_ENV+=		kde_templatesdir="${KDEDIR}/share/kde/templates"
 CONFIGURE_ENV+=		kde_toolbardir="${KDEDIR}/share/kde/toolbar"
 CONFIGURE_ENV+=		kde_wallpaperdir="${KDEDIR}/share/kde/wallpapers"
-.endif	# GNU_CONFIGURE
 .endif	# KDE2_BUILDLINK_MK
