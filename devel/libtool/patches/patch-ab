@@ -1,20 +1,8 @@
-$NetBSD: patch-ab,v 1.17 2001/02/28 10:16:58 skrll Exp $
+$NetBSD: patch-ab,v 1.18 2001/02/28 18:18:23 skrll Exp $
 
---- ltmain.sh.orig	Mon Feb 19 05:05:23 2001
+--- ltmain.sh.orig	Wed Feb 28 17:56:25 2001
 +++ ltmain.sh
-@@ -508,9 +508,8 @@
-         # was found and let the user know that the "--tag" command
-         # line option must be used.
-         if test -z "$tagname"; then
--          echo "$modename: unable to infer tagged configuration"
--          echo "$modename: specify a tag with \`--tag'" 1>&2
--	  exit 1
-+          echo "$modename: warning: unable to infer tagged configuration" 1>&2
-+          echo "$modename: warning: using the default" 1>&2
- #        else
- #          echo "$modename: using $tagname tagged configuration"
-         fi
-@@ -946,7 +945,6 @@
+@@ -946,7 +946,6 @@
  	  continue
  	  ;;
  	release)
@@ -22,19 +10,7 @@ $NetBSD: patch-ab,v 1.17 2001/02/28 10:16:58 skrll Exp $
  	  prev=
  	  continue
  	  ;;
-@@ -1447,9 +1445,8 @@
-         # was found and let the user know that the "--tag" command
-         # line option must be used.
-         if test -z "$tagname"; then
--          echo "$modename: unable to infer tagged configuration"
--          echo "$modename: specify a tag with \`--tag'" 1>&2
--	  exit 1
-+          echo "$modename: warning: unable to infer tagged configuration"
-+          echo "$modename: warning: using the default" 1>&2
- #       else
- #         echo "$modename: using $tagname tagged configuration"
-         fi
-@@ -2397,7 +2394,7 @@
+@@ -2397,7 +2396,7 @@
  
  	# Check that each of the things are valid numbers.
  	case "$current" in
@@ -43,7 +19,7 @@ $NetBSD: patch-ab,v 1.17 2001/02/28 10:16:58 skrll Exp $
  	*)
  	  $echo "$modename: CURRENT \`$current' is not a nonnegative integer" 1>&2
  	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -2406,7 +2403,7 @@
+@@ -2406,7 +2405,7 @@
  	esac
  
  	case "$revision" in
@@ -52,7 +28,7 @@ $NetBSD: patch-ab,v 1.17 2001/02/28 10:16:58 skrll Exp $
  	*)
  	  $echo "$modename: REVISION \`$revision' is not a nonnegative integer" 1>&2
  	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -2415,7 +2412,7 @@
+@@ -2415,7 +2414,7 @@
  	esac
  
  	case "$age" in
@@ -61,7 +37,7 @@ $NetBSD: patch-ab,v 1.17 2001/02/28 10:16:58 skrll Exp $
  	*)
  	  $echo "$modename: AGE \`$age' is not a nonnegative integer" 1>&2
  	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
-@@ -2612,6 +2609,9 @@
+@@ -2612,6 +2611,9 @@
  	  *-*-cygwin* | *-*-mingw* | *-*-pw32* | *-*-os2* | *-*-beos*)
  	    # these systems don't actually have a c library (as such)!
  	    ;;
