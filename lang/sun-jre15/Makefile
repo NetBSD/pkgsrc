@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/09 04:34:07 tv Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/17 07:25:15 rh Exp $
 
 # Note: Regen distinfo with SUN_JRE15_USE_JCE=YES
 
@@ -41,6 +41,11 @@ PLIST_SRC=      	${WRKDIR}/PLIST
 .if !empty(SUN_JRE15_USE_JCE:M[Yy][Ee][Ss])
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_5_0.zip
 .endif
+
+post-extract:
+	-${MKDIR} ${WRKSRC}/.systemPrefs
+	${TOUCH} ${WRKSRC}/.systemPrefs/.system.lock
+	${TOUCH} ${WRKSRC}/.systemPrefs/.systemRootModFile
 
 do-configure:
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
