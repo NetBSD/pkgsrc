@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.137 2003/03/26 20:19:51 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.138 2003/04/03 22:47:42 rh Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -261,6 +261,9 @@ PATCH_FUZZ_FACTOR?= -F0
 #ACCEPTABLE_LICENSES+=	unrar-license
 # Enable it if you accept the license terms for the unrar archiver
 # and would like to build unrar.  see pkgsrc/archivers/unrar.
+#ACCEPTABLE_LICENSES+=	webwasher-license
+# Enable it if you accept the license terms for webwasher and would
+# like to build webwasher.  see pkgsrc/licenses/webwasher-license
 #ACCEPTABLE_LICENSES+=	zoo-license
 # Enable it if you accept the license terms for the zoo archiver
 # and would like to build zoo.  see pkgsrc/archivers/zoo.
