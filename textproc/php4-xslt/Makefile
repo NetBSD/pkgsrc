@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/07/06 19:52:01 jdolecek Exp $
+# $NetBSD: Makefile,v 1.12 2004/07/12 04:32:21 jdolecek Exp $
 
 MODNAME=		xslt
 CATEGORIES+=		textproc
@@ -14,9 +14,18 @@ CONFIGURE_ARGS+=	--with-${MODNAME}-sablot=${BUILDLINK_PREFIX.sablotron}
 CONFIGURE_ARGS+=	--with-expat-dir=${BUILDLINK_PREFIX.expat}
 
 # this is necessary so that PHP would find either the libc iconv
-# or use the packaged iconv, as appropriate; see also converters/php4-iconv
+# or use the packaged iconv, as appropriate; using
+# --with-iconv=shared,${BUILDLINK_PREFIX.iconv} assumes libiconv exists
+
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../mk/buildlink3/bsd.builtin.mk"
+
+.if !empty(USE_BUILTIN.iconv:M[nN][oO])
+# use libiconv
+CONFIGURE_ARGS+=	--with-iconv-dir=${BUILDLINK_PREFIX.iconv:Q}
+.else
 CONFIGURE_ARGS+=	--with-iconv-dir
-CONFIGURE_ENV+=		PHP_ICONV=${BUILDLINK_PREFIX.iconv:Q}
+.endif
 
 PLIST_SRC+=		${.CURDIR}/PLIST.extras
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
