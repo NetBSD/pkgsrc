@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 1998/08/23 15:12:05 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/10/07 20:17:20 agc Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
-DISTNAME=	ucd-snmp-3.5
+DISTNAME=	ucd-snmp-3.5.3
 CATEGORIES=	net
 MASTER_SITES= 	ftp://ftp.ece.ucdavis.edu/pub/snmp/ \
 		ftp://sunsite.cnlab-switch.ch/mirror/ucd-snmp/ \
@@ -11,7 +11,7 @@ MASTER_SITES= 	ftp://ftp.ece.ucdavis.edu/pub/snmp/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.ece.ucdavis.edu/ucd-snmp/
 
-CONFLICTS=	ucd-snmp-3.4
+CONFLICTS=	ucd-snmp-3.4 ucd-snmp-3.5
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-defaults
