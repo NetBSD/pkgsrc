@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/01/01 23:35:28 agc Exp $
+# $NetBSD: Makefile,v 1.40 2004/01/05 11:36:40 jlam Exp $
 
 DISTNAME=	audit-packages-1.28
 WRKSRC=		${WRKDIR}
@@ -9,9 +9,14 @@ DISTFILES=	# empty
 MAINTAINER=	agc@NetBSD.org
 COMMENT=	Tools to show vulnerabilities in installed packages
 
-NO_CHECKSUM=    yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
+
+USE_BUILDLINK3=	yes
+NO_CHECKSUM=    yes
+
+INSTALLATION_DIRS=	man/cat8 man/man8 sbin
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/11/23 01:23:58 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/05 11:29:41 jlam Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -17,7 +17,9 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.atstake.com/research/tools/network_utilities/
 COMMENT=	Read and write data across network connections
 
-USE_BUILDLINK2=	yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
 MAKE_ENV+=	DFLAGS="-DGAPING_SECURITY_HOLE -DTELNET"
 ALL_TARGET=	${LOWER_OPSYS}
 
@@ -25,6 +27,8 @@ EXTRA_PROGS=	data rservice xor
 EXAMPLE_DIR=	share/examples/nc
 
 PLIST_SRC=	${PKGDIR}/PLIST ${WRKSRC}/data/PLIST.data
+
+INSTALLATION_DIRS=	man/man1 sbin
 
 post-build:
 	@cd ${WRKSRC}/data && ${SETENV} ${MAKE_ENV} ${MAKE} ${EXTRA_PROGS}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2003/12/24 09:54:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.174 2004/01/05 11:32:40 jlam Exp $
 #
 
 DISTNAME=	pkglint-3.66
@@ -13,14 +13,19 @@ COMMENT=	Verifier for NetBSD packages and complete pkgsrc tree
 
 DEPENDS+=	digest>=20010101:../../pkgtools/digest
 
-USE_PERL5=	YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_PERL5=	yes
+
+NO_BUILDLINK=	yes
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR:Q}
 
 DISTVER=	${DISTNAME:S/pkglint-//}
+
+INSTALLATION_DIRS=	bin man/cat1 man/man1
 
 .include "../../mk/bsd.prefs.mk"
 
