@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2001/04/22 07:54:34 kei Exp $
+# $NetBSD: Makefile,v 1.118 2001/04/22 10:00:14 kei Exp $
 #
 
 COMMENT=	Games
@@ -78,6 +78,7 @@ SUBDIR+=	nethack-lib
 SUBDIR+=	nethack-qt
 SUBDIR+=	nethack-tty
 SUBDIR+=	nethack-x11
+SUBDIR+=	netmaj
 SUBDIR+=	netmaze
 SUBDIR+=	netris
 SUBDIR+=	newvox
