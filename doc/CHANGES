@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1477 2003/02/24 16:11:18 salo Exp $
+$NetBSD: CHANGES,v 1.1478 2003/02/24 20:48:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -823,3 +823,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated automake to 1.7.3 [wiz 2003-02-24]
 	Added dvipdfmx-0.0.0.20021230 [kei 2003-02-24]
 	Updated feh to 1.2.5 [salo 2003-02-24]
+	Updated libxml2 to 2.5.3 [jmmv 2003-02-24]
+	Updated libxslt to 1.0.26 [jmmv 2003-02-24]
