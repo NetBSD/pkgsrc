@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5682 2004/04/20 15:49:06 jmmv Exp $
+$NetBSD: CHANGES,v 1.5683 2004/04/20 15:59:57 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2183,3 +2183,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kdevelop to 3.0.3 [markd 2004-04-20]
 	Updated gnome-icon-theme to 1.2.1nb1 [minskim 2004-04-20]
 	Updated gnome2-games to 2.6.1 [jmmv 2004-04-20]
+	Updated cyrus-imapd to 2.2.3nb2 [recht 2004-04-20]
