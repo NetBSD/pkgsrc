@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:01 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/22 16:03:26 wiz Exp $
 
-MD5 (gogo235.tgz) = caaab77a8711e7cfc375bef1339beb5b
+SHA1 (gogo239b.tgz) = 9665d73d21314c6945c1f89b4d84f8f56f82d676
+Size (gogo239b.tgz) = 293494 bytes
 SHA1 (patch-aa) = 41639b1c9b7d981991a7e3684540ec96018a6c5e
-SHA1 (patch-ab) = 7234a8250df16076a09f0f268347eeadae55534c
