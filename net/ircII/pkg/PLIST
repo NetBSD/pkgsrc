@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.13 1999/07/15 06:26:27 mrg Exp $
-bin/irc-4.4J
+@comment $NetBSD: PLIST,v 1.14 1999/08/23 12:27:13 mrg Exp $
+bin/irc-4.4L
 bin/ircbug
 bin/irc
 bin/ircio
@@ -72,6 +72,7 @@ share/irc/script/help
 share/irc/script/icb
 share/irc/script/history
 share/irc/script/history-match
+share/irc/script/icb
 share/irc/script/imap
 share/irc/script/ircIIhelp
 share/irc/script/ircprimer
@@ -489,6 +490,7 @@ share/irc/help/assign@.GZ@
 share/irc/help/away@.GZ@
 share/irc/help/basics@.GZ@
 share/irc/help/beep@.GZ@
+share/irc/help/brick@.GZ@
 share/irc/help/bye@.GZ@
 share/irc/help/cd@.GZ@
 share/irc/help/channel@.GZ@
