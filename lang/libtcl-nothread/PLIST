@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/06/22 18:38:46 drochner Exp $
+lib/libtcl84-nothread.a
+lib/libtcl84-nothread.la
+lib/libtcl84-nothread.so
+lib/libtcl84-nothread.so.1
+lib/libtcl84-nothread.so.1.0
+lib/tclConfig-nothread.sh
