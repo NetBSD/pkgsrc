@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2003/08/11 15:09:32 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/14 01:26:55 xtraeme Exp $
 #
 
-DISTNAME=	dillo-0.7.3
+DISTNAME=	dillo-0.8.0
 CATEGORIES=	www
 MASTER_SITES=	http://dillo.auriga.wearlab.de/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +10,7 @@ MAINTAINER=	Benjamin.Wong@cc.gatech.edu
 HOMEPAGE=	http://dillo.auriga.wearlab.de/
 COMMENT=	Very small and fast graphical web-browser
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
@@ -33,9 +33,9 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/dillorc ${EGDIR}/dillorc.default
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
