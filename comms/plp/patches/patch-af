@@ -1,12 +1,14 @@
-$NetBSD: patch-af,v 1.4 2001/04/23 08:26:01 skrll Exp $
+$NetBSD: patch-af,v 1.5 2001/08/19 18:39:51 jlam Exp $
 
---- Makefile.orig	Tue Nov  2 21:05:02 1999
+--- Makefile.orig	Tue Nov  2 16:05:02 1999
 +++ Makefile
-@@ -17,17 +17,11 @@
+@@ -16,18 +16,12 @@
+ 
  # Compiler & flags
  INCLUDE=-I../utils
- CFLAGS= -Wall -g -O2
+-CFLAGS= -Wall -g -O2
 -CC=g++ $(CFLAGS) $(INCLUDE)
++CFLAGS+= -Wall -g -O2
 +CC=$(LIBTOOL) --mode=compile $(REALCXX) $(CFLAGS) $(INCLUDE)
  
  # Linker and flags
@@ -19,7 +21,7 @@ $NetBSD: patch-af,v 1.4 2001/04/23 08:26:01 skrll Exp $
 -# Archiver
 -AR=ar -cr
 +LIBS=../utils/libplputils.la
-+LD=$(LIBTOOL) --mode=link $(REALCXX)
++LD=$(LIBTOOL) --mode=link $(REALCXX) $(LDFLAGS)
  
  #######################################
  # You shouldn't need to look any further..
