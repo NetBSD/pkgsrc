@@ -1,0 +1,10 @@
+Gpsd is a user land daemon acting as a liason between a gps or
+Loran-C receiver and clients. The receiver is expected to generate
+position information as NMEA-0183 sentences, or Rockwell binary format,
+although that can be changed.
+
+Gpsd listens on port 2947 for clients requesting position, time,
+velocity or altitude information.
+
+Gpsd can take information from the gps and translate it into
+something easier to understand for clients.
