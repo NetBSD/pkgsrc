@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2000/01/04 17:52:03 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.14 2000/01/11 01:15:37 tron Exp $
 bin/mc
 bin/mcedit
 bin/mcmfmt
@@ -36,6 +36,7 @@ lib/mc/mc-gnome.ext
 lib/mc/mc.csh
 lib/mc/mc.ext
 lib/mc/mc.hint
+lib/mc/mc.hint.cs
 lib/mc/mc.hint.es
 lib/mc/mc.hlp
 lib/mc/mc.lib
@@ -93,6 +94,7 @@ ${LOCALEBASE}/locale/ro/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/ru/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/sv/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/wa/LC_MESSAGES/mc.mo
+${LOCALEBASE}/locale/uk/LC_MESSAGES/mc.mo
 ${LOCALEBASE}/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
 @dirrm lib/mc/term
 @dirrm lib/mc/syntax
