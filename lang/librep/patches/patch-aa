@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.6 2002/04/10 11:13:28 hubertf Exp $
+
+--- Makedefs.in.orig	Wed Apr 10 12:57:38 2002
++++ Makedefs.in
+@@ -57,7 +57,7 @@
+ EXTRA_LIBOBJS=@EXTRA_LIBOBJS@
+ READLINE_LIBS=@READLINE_LIBS@
+ GMP_LIBS=@GMP_LIBS@
+-GDBM_LIBS=@GDBM_LIBS@
++GDBM_LIBS=${LIBS} @GDBM_LIBS@
+ ALLOCA=@ALLOCA@
+ 
+ DESTDIR=
