@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/05/12 10:16:46 abs Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/27 18:41:11 jlam Exp $
 #
 
 DISTNAME=		zsnes1337src
@@ -21,10 +21,10 @@ WRKSRC=			${WRKDIR}/zsnes-1.337/src
 
 GNU_CONFIGURE=		# defined
 USE_GMAKE=		# defined
-USE_CONFIG_WRAPPER=	# defined
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
+USE_X11=		# defined
 
-.include "../../devel/SDL/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/SDL/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
