@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2005/03/24 16:14:03 minskim Exp $
+
+--- decode.c.orig	1990-08-05 06:04:08.000000000 -0500
++++ decode.c
+@@ -16,6 +16,9 @@
+ #include <time.h>
+ #define index   strchr
+ #else
++#ifdef __linux__
++#include <time.h>
++#endif
+ #ifdef __TURBOC__
+ #include <time.h>
+ #include <io.h>
