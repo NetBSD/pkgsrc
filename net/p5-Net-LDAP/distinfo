@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/06/27 01:52:04 dogcow Exp $
+
+SHA1 (perl-ldap-0.23.tar.gz) = 36e33c689f8d1d131a70c1773ce5791332c97e07
+Size (perl-ldap-0.23.tar.gz) = 173048 bytes
