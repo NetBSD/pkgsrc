@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/07/12 04:05:50 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/07/12 04:09:55 tv Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -7,13 +7,17 @@ PKGNAME=        mosaic-2.7b5
 CATEGORIES=     www
 MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/Web/Mosaic/Unix/source/
 
+MAINTAINER=	tv@netbsd.org
+
 DEPENDS=	jpeg-6b:../../graphics/jpeg \
 		png-0.96:../../graphics/png \
 		xpm-3.4k:../../graphics/xpm
 
 USE_X11=	yes
 USE_MOTIF=	yes
+
 WRKSRC=		${WRKDIR}/Mosaic-src
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
 		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include"
