@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1588 2004/04/07 11:52:03 wiz Exp $
+$NetBSD: TODO,v 1.1589 2004/04/07 11:58:35 salo Exp $
 
 Suggested new packages
 ======================
@@ -230,7 +230,6 @@ Suggested package updates
 	o lftp-3.0.1
 	o libcaca-0.9
 	o libcdaudio-0.99.10
-	o libebml-0.6.4
 	o libesmtp-1.0.2
 	o libevent-0.8
 	o libidn-0.4.2

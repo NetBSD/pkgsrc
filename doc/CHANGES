@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5471 2004/04/07 11:53:17 jmmv Exp $
+$NetBSD: CHANGES,v 1.5472 2004/04/07 11:58:35 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1825,5 +1825,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kaffe to 1.1.4 [xtraeme 2004-04-06]
 	Added kaffe-nox11-1.1.4 [xtraeme 2004-04-06]
 	Updated nail to 10.7 [cjep 2004-04-06]
-	Updated libgtop2 to 2.6.0 [jmmv 2004-04-06]
-	Updated ggv2 to 2.6.0.1 [jmmv 2004-04-06]
+	Updated libgtop2 to 2.6.0 [jmmv 2004-04-07]
+	Updated ggv2 to 2.6.0.1 [jmmv 2004-04-07]
+	Updated libebml to 0.6.5 [salo 2004-04-07]
