@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/08 17:33:18 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/08 19:32:15 cjep Exp $
 #
 
 DISTNAME=	pcl-cvs-2.9.9
@@ -9,8 +9,11 @@ MAINTAINER=	packages@netbsd.org
 #HOMEPAGE=
 COMMENT=	front-end to CVS for emacs
 
-DEPENDS+= 	emacs-[0-9]*:../../editors/emacs
+DEPENDS+= 	emacs-20.*:../../editors/emacs
 DEPENDS+=	elib>=1.0:../../devel/elib
+
+CONFLICTS=	emacs-21.*
+CONFLICTS+=	emacs21
 
 .include "../../mk/bsd.prefs.mk"
 
