@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/01/20 22:20:46 snj Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/01/22 10:55:46 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -61,9 +61,9 @@ MESSAGE_SRC+=	${.CURDIR}/../../www/mozilla-bin/MESSAGE.compat_linux
 .  endif
 
 # non-linux builds are "unofficial" and in contrib/
+MOZ_CONTRIB?=	contrib/
+.  if defined(MOZ_PLATFORM) && ${MOZ_PLATFORM} == "linux"
 MOZ_CONTRIB=	# empty
-.  if defined(MOZ_PLATFORM) && ${MOZ_PLATFORM} != "linux"
-MOZ_CONTRIB=	contrib/
 .  endif
 
 # Linux builds on NetBSD
