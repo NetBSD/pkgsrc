@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2001/04/09 11:45:35 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/04/20 23:27:38 jtb Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/08/10 22:31:15 fenner Exp
 #
 
-DISTNAME=       ast53unx
-PKGNAME=        astrolog-5.30
+DISTNAME=       ast54unx
+PKGNAME=        astrolog-5.40
 CATEGORIES=     misc
 MASTER_SITES=   http://www.astrolog.org/ftp/ephem/ \
 		http://www.astrolog.org/ftp/ \
@@ -36,13 +36,13 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} astrolog ${PREFIX}/bin
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/astrolog
 	cd ${WRKSRC} && \
-		${INSTALL_DATA} Helpfile.530 ${PREFIX}/share/doc/astrolog
+		${INSTALL_DATA} Helpfile.540 ${PREFIX}/share/doc/astrolog
 	cd ${WRKSRC} && \
-		${INSTALL_DATA} Update.530 ${PREFIX}/share/doc/astrolog
+		${INSTALL_DATA} Update.540 ${PREFIX}/share/doc/astrolog
 	cd ${WRKSRC} && \
-		${INSTALL_DATA} README.530 ${PREFIX}/share/doc/astrolog
+		${INSTALL_DATA} README.540 ${PREFIX}/share/doc/astrolog
 	@${ECHO}
-	@${ECHO} "See the file ${PREFIX}/share/doc/astrolog/Helpfile.530 for"
+	@${ECHO} "See the file ${PREFIX}/share/doc/astrolog/Helpfile.540 for"
 	@${ECHO} "help and tune ${PREFIX}/lib/astrolog/astrolog.dat"
 
 .include "../../mk/bsd.pkg.mk"
