@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.330 2004/02/16 18:44:32 snj Exp $
+# $NetBSD: Packages.txt,v 1.331 2004/02/17 03:24:28 snj Exp $
 ###########################################################################
 
 			==========================
@@ -1170,11 +1170,16 @@ Here's how to use libtool in a pkg in seven simple steps:
  6.3 Using libtool on GNU packages that already support libtool
  ==============================================================
 
-Add USE_LIBTOOL=yes and LIBTOOL_OVERRIDE=${WRKSRC}/libtool to the
-package Makefile as the quick way to bypass the pkg's own libtool.
-For older libtool using packages, libtool is made by ltconfig script
-during the do-configure step; you can check the libtool script
-location by doing "make configure; find work*/ -name libtool".
+Add USE_LIBTOOL=yes to the package Makefile.  This will override the
+package's own libtool in most cases.  For older libtool using packages,
+libtool is made by ltconfig script during the do-configure step; you can
+check the libtool script location by doing "make configure; find work*/
+-name libtool".
+
+LIBTOOL_OVERRIDE specifies which libtool scripts, relative to WRKSRC, to
+override.  By default, it is set to "libtool */libtool */*/libtool".  If
+this does not match the location of the package's libtool script(s), set
+it as appropriate.
 
 If you do not need *.a static libraries built and installed, then use
 SHLIBTOOL_OVERRIDE instead.
