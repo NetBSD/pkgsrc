@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2004/07/21 16:03:33 shannonjr Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/26 21:55:37 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	gcc34-${GCC_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +15,37 @@ COMMENT=	This is the gcc 3.4 compiler
 GCC_VERSION=		3.4.1
 
 .include "../../mk/bsd.prefs.mk"
+
+# Determine whether to use binutils
+.if ${OPSYS} == "NetBSD"
+.  if !defined(USE_BINUTILS)
+AS_PATH:=   ${AS}
+.    for _dir_ in ${PATH:C/\:/ /g}
+.      if empty(AS_PATH:M/*)
+.        if exists(${_dir_}/${AS})
+AS_PATH:=   ${_dir_}/${AS}
+.        endif
+.      endif
+.    endfor
+.    if !empty(AS_PATH:M${LOCALBASE}/*)
+USE_BINUTILS=	YES
+.    else
+AS_VERSION!=	${AS} --version | ${AWK} '{				\
+		    split($$3, v, /[.]/);				\
+		    printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
+		    exit;						\
+		}'
+USE_BINUTILS!=	${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
+.    endif
+MAKEFLAGS+=	USE_BINUTILS=${USE_BINUTILS}
+.  endif
+.endif
+.if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
+DEPENDS+=	binutils>=2.14:../../devel/binutils
+CONFIGURE_ARGS+=	--with-as=${LOCALBASE}/bin/as
+CONFIGURE_ARGS+=	--with-gnu-as
+CONFIGURE_ARGS+=	--with-gnu-ld
+.endif
 
 # Optional languages - change as required
 #   If BUILD_ADA is YES, then you'll need to specify
@@ -46,10 +78,7 @@ CONFIGURE_ARGS+=	--enable-languages="${LANGS}"
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-__cxa_atexit
-CONFIGURE_ARGS+=	--enable-nls
-CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--enable-long-long
-CONFIGURE_ARGS+=	--enable-clocale=generic
 # GNU pth is useless here
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])
 # ADA tasking strictly requires native threads
@@ -66,6 +95,8 @@ USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 HAS_CONFIGURE=		YES
+CONFIG_SHELL?=		${SH}
+CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 USE_MAKEINFO=		YES
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
@@ -99,12 +130,8 @@ GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
-GCC_PLATFORM=		${MACHINE_GNU_ARCH}--netbsdelf2.0
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include
 CFLAGS+=	-I${BUILDLINK_DIR}/include
-CONFIGURE_ARGS+=	--host=${GCC_PLATFORM}
-GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc/${GCC_PLATFORM}/${GCC_VERSION}
-GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
 
 post-patch:
 .if (${MACHINE_GNU_ARCH} == "x86_64")
@@ -192,5 +219,6 @@ BUILDLINK_DEPMETHOD.gcc3-ada=build
 .  endif
 .endif
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
