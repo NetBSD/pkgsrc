@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2589 2003/06/25 21:41:52 tsarna Exp $
+$NetBSD: CHANGES,v 1.2590 2003/06/26 00:56:35 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2571,3 +2571,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ja-jsclasses to 030624 [wiz 2003-06-25]
 	Updated sqlite to 2.8.3 [tsarna 2003-06-25]
 	Added py-sqlite-0.4.3 [tsarna 2003-06-25]
+	Updated cvsync to 0.23.4 [gehenna 2003-06-26]
