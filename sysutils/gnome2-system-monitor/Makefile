@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/04/14 16:15:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/05/07 01:14:50 xtraeme Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.6.0
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-system-monitor/2.6/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME 2 system monitor program
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/19 15:04:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/07 01:14:48 xtraeme Exp $
 #
 
 DISTNAME=	mlview-0.6.2
@@ -7,7 +7,7 @@ CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mlview/0.6/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.freespiders.org/projects/gmlview/
 COMMENT=	XML editor for the GNOME environment
 

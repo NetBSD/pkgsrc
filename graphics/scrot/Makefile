@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/02/11 22:56:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2004/05/07 01:14:48 xtraeme Exp $
 #
 
 DISTNAME=	scrot-0.8
@@ -6,7 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://linuxbrit.co.uk/downloads/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://linuxbrit.co.uk/scrot/
 COMMENT=	Commandline screen capture util like "import", but using imlib2
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2004/04/11 05:57:30 snj Exp $
+# $NetBSD: Makefile,v 1.7 2004/05/07 01:14:47 xtraeme Exp $
 #
 
 DISTNAME=	ninja-1.5.8.1
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ninja.qoop.org/ninja/sources/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://ninja.qoop.org/
 COMMENT=	Another IRC client based on ircII
 

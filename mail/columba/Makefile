@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/09 17:09:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/07 01:14:48 xtraeme Exp $
 #
 
 DISTNAME=	columba-unix-1.0_M2-bin
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=columba/}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://columba.sourceforge.net/
 COMMENT=	Graphical Email Client written in JAVA (TM)
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/02 22:59:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/07 01:14:46 xtraeme Exp $
 #
 
 DISTNAME=	MuSE-0.9
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.dyne.org/muse/releases/ \
 		http://www.ljudmila.org/~jaromil/muse/releases/ \
 		ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/ 
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://muse.dyne.org/
 COMMENT=	Multiple Streaming Engine
 

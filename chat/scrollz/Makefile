@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/29 08:05:07 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/07 01:14:47 xtraeme Exp $
 #
 
 DISTNAME=	ScrollZ-1.9
@@ -6,7 +6,7 @@ PKGNAME=	scrollz-1.9
 CATEGORIES=	chat
 MASTER_SITES=   http://scrollz.broken.com/source/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.scrollz.com/
 COMMENT=        Advanced IRC client based on ircII client
 

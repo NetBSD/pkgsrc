@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2004/03/12 05:46:21 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/07 01:14:47 xtraeme Exp $
 #
 
 DISTNAME=	roxirc-1.8
 CATEGORIES=	chat
 MASTER_SITES=	http://roxirc.lighter.net/download/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://roxirc.lighter.net/
 COMMENT=	Graphical IRC client written in tcl/tk
 

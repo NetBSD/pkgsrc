@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/20 14:35:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2004/05/07 01:14:50 xtraeme Exp $
 #
 
 DISTNAME=		gnopernicus-0.8.4
@@ -6,7 +6,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnopernicus/0.8/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Collection of accessibility apps for GNOME 2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/25 03:06:52 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/07 01:14:47 xtraeme Exp $
 #
 
 DISTNAME=	Glib-${DIST_VERSION}
@@ -6,7 +6,7 @@ PKGNAME=	p5-glib2-${DIST_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 COMMENT=	Perl bindings for Glib 2
 

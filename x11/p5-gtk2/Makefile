@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2004/04/19 17:53:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/07 01:14:51 xtraeme Exp $
 
 DISTNAME=	Gtk2-1.042
 PKGNAME=	p5-gtk2-1.042
 CATEGORIES=	x11 perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 COMMENT=	Perl bindings for GTK+ 2.0
 

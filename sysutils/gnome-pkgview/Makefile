@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2004/04/24 08:09:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/07 01:14:50 xtraeme Exp $
 #
 
 DISTNAME=	gnome-pkgview-1.0.6
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.greatnorthern.demon.co.uk/packages/gnome-pkgview/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.greatnorthern.demon.co.uk/gnome-pkgview.html
 COMMENT=	Displays the version of GNOME components installed
 

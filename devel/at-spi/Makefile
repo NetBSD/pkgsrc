@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/01 18:30:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/07 01:14:47 xtraeme Exp $
 #
 
 DISTNAME=		at-spi-1.4.0
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/at-spi/1.4/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Assistive Technology Service Provider Interface
 
