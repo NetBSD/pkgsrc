@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2003/08/04 14:27:29 seb Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/12/08 21:44:35 wiz Exp $
 bin/wget
-man/man1/wget.1
 info/wget.info
 info/wget.info-1
 info/wget.info-2
 info/wget.info-3
 info/wget.info-4
+man/man1/wget.1
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/wget.mo
@@ -25,12 +25,14 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/wget.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/wget.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/wget.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/wget.mo
 share/examples/wget/wgetrc
 @dirrm share/examples/wget
