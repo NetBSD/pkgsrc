@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/01/02 09:12:38 skrll Exp $
+# $NetBSD: Makefile,v 1.19 2003/01/17 03:20:58 markd Exp $
 
 DISTNAME=	kdelibs-3.0.5a
 CATEGORIES=	x11
@@ -46,6 +46,8 @@ PLIST_SUBST+=		KDED_WORKAROUND="@comment "
 .  else
 PLIST_SUBST+=		KDED_WORKAROUND=""
 .  endif
+.else
+PLIST_SUBST+=		KDED_WORKAROUND=""
 .endif
 
 # We will create the complete icon directory tree for use by other KDE3
