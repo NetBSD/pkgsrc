@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/02/04 22:50:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/04/20 13:29:12 markd Exp $
 bin/ghns
 bin/ical2vcal
 bin/kabc2mutt
@@ -170,6 +170,8 @@ lib/kde3/conduit_doc.la
 lib/kde3/conduit_doc.so
 lib/kde3/conduit_knotes.la
 lib/kde3/conduit_knotes.so
+lib/kde3/conduit_mal.la
+lib/kde3/conduit_mal.so
 lib/kde3/conduit_popmail.la
 lib/kde3/conduit_popmail.so
 lib/kde3/conduit_sysinfo.la
@@ -922,10 +924,10 @@ share/kde/apps/ktnef/icons/locolor/16x16/actions/ktnef_extract_all_to.png
 share/kde/apps/ktnef/icons/locolor/16x16/actions/ktnef_extract_to.png
 share/kde/apps/ktnef/ktnefui.rc
 share/kde/config.kcfg/kandy.kcfg
+share/kde/config.kcfg/knotes.kcfg
 share/kde/config.kcfg/kontact.kcfg
 share/kde/config.kcfg/korganizer.kcfg
 share/kde/config/khotnewstuffrc
-share/kde/config/knotesrc
 share/kde/icons/crystalsvg/128x128/apps/kaddressbook.png
 share/kde/icons/crystalsvg/128x128/apps/karm.png
 share/kde/icons/crystalsvg/128x128/apps/kmail.png
@@ -1056,6 +1058,7 @@ share/kde/services/kresources/kcal/local.desktop
 share/kde/services/kresources/kcal/localdir.desktop
 share/kde/services/kresources/kcal/remote.desktop
 share/kde/services/ldifvcardthumbnail.desktop
+share/kde/services/mal_conduit.desktop
 share/kde/services/popmail-conduit.desktop
 share/kde/services/sieve.protocol
 share/kde/services/sysinfo_conduit.desktop
