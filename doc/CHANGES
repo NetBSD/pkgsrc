@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.148 2002/10/03 13:23:49 agc Exp $
+$NetBSD: CHANGES,v 1.149 2002/10/03 13:57:19 markd Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3076,3 +3076,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated sendmail to 8.12.6nb1 [itojun 2002-10-03]
 	Updated cdrecord-devel to 1.10.34nb1 [lukem 2002-10-03]
 	Added easyedit-1.4.5a [cjep 2002-10-03]
+	Updated kdesdk to 3.0.3 [markd 2002-10-03]
+	Updated kdevelop-base to 2.1.3 [markd 2002-10-03]
+	Updated kdevelop to 2.1.3 [markd 2002-10-03]
