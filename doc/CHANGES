@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9240 2005/02/21 00:06:40 taca Exp $
+$NetBSD: CHANGES,v 1.9241 2005/02/21 06:15:56 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -989,3 +989,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated amarok to 1.2 [wiz 2005-02-20]
 	Updated netbsd-tap to 20050220 [cube 2005-02-20]
 	Updated squid to 2.5.8nb2 [taca 2005-02-20]
+	Updated postgresql80-server to 8.0.1nb1 [grant 2005-02-21]
