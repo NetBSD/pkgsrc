@@ -1,9 +1,15 @@
-$NetBSD: patch-ab,v 1.2 2002/10/26 18:45:29 grant Exp $
+$NetBSD: patch-ab,v 1.3 2003/06/11 13:24:09 wiz Exp $
 
---- src/ctlib/Makefile.am.orig	Sun Aug 18 00:34:31 2002
-+++ src/ctlib/Makefile.am
-@@ -6,3 +6,4 @@ lib_LTLIBRARIES	=	libct.la
- libct_la_SOURCES=	ct.c cs.c blk.c ctutil.c
- libct_la_LIBADD	=	$(TDSOBJECTS) $(NETWORK_LIBS) $(LIBICONV)
- INCLUDES	=	-I$(top_srcdir)/include
-+LIBS		=	@LIBICONV@
+--- src/pool/Makefile.in.orig	Wed Jun 11 14:41:58 2003
++++ src/pool/Makefile.in
+@@ -450,10 +450,6 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(ETC)
+-	if test ! -f $(ETC)/pool.conf; then \
+-		$(INSTALL_DATA) $(srcdir)/pool.conf $(ETC)/pool.conf; \
+-	fi
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
