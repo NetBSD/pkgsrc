@@ -1,82 +1,22 @@
-$NetBSD: patch-aa,v 1.5 2001/04/09 16:44:59 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2001/07/21 15:23:52 jlam Exp $
 
---- ../configure.orig	Wed Feb 28 11:34:16 2001
+--- ../configure.orig	Wed Feb 28 02:34:16 2001
 +++ ../configure
-@@ -1651,57 +1651,11 @@
+@@ -1651,7 +1651,7 @@
    :
  fi
  
 -if test "$with_graphic-libs" = "no" ; then
--    echo $ac_n "checking for libjpeg version = 6b""... $ac_c" 1>&6
--echo "configure:1657: checking for libjpeg version = 6b" >&5
--    cat > conftest.$ac_ext <<EOF
--#line 1659 "configure"
--#include "confdefs.h"
--#include <jpeglib.h>
--         x JPEG_LIB_VERSION x
--EOF
--if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
--  egrep "x 62 *x" >/dev/null 2>&1; then
--  rm -rf conftest*
--          echo "$ac_t""yes" 1>&6
-         LIBJPEG='-ljpeg'
-         MAKEJPEG='#'
--else
--  rm -rf conftest*
--          echo "$ac_t""no" 1>&6
--        LIBJPEG='../libjpeg.a'              
--fi
--rm -f conftest*
--
--    echo $ac_n "checking for libpng version = 1.0.x""... $ac_c" 1>&6
--echo "configure:1678: checking for libpng version = 1.0.x" >&5
--    cat > conftest.$ac_ext <<EOF
--#line 1680 "configure"
--#include "confdefs.h"
--#include <png.h>
--	x PNG_LIBPNG_VER_STRING x
--EOF
--if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
--  egrep "x \"1.0\..*\" *x" >/dev/null 2>&1; then
--  rm -rf conftest*
--          echo "$ac_t""yes" 1>&6
++if test "$with_graphic_libs" = "no" ; then
+     echo $ac_n "checking for libjpeg version = 6b""... $ac_c" 1>&6
+ echo "configure:1657: checking for libjpeg version = 6b" >&5
+     cat > conftest.$ac_ext <<EOF
+@@ -1686,7 +1686,7 @@
+   rm -rf conftest*
+           echo "$ac_t""yes" 1>&6
          LIBPNG='-lpng'
-         LIBZ=''
+-        LIBZ=''
++        LIBZ='-lz'
  	MAKEPNG='#'
--else
--  rm -rf conftest*
--          echo "$ac_t""no" 1>&6
--        LIBPNG='../libpng.a'
--        LIBZ='../libz.a'
--        
--fi
--rm -f conftest*
--
--else
--    LIBJPEG='../libjpeg.a'
--    LIBPNG='../libpng.a'
--    LIBZ='../libz.a'
--fi
- 
- 
- 
-@@ -6453,10 +6407,7 @@
- #there is a modified header file we need
- PNGINCL="-I\$(THOTDIR)/libpng -I\$(THOTDIR)/libpng/zlib"
- fi
--if test "${LIBJPEG}" = "../libjpeg.a" ; then
--#there is a modified header file we need
--JPEGINCL="-I\$(THOTDIR)/libjpeg"
--fi
-+JPEGINCL="-I${LOCALBASE}/include"
- 
- 
- THOTINCLUDES="-I${API} -I${VAR} -I${INCL} -I${FUNC} -I${SCHEMAS} ${JPEGINCL} ${PNGINCL}"
-@@ -6523,7 +6474,6 @@
- 
- EXTRA_MAKEFILE_IN=
- make_output="Makefile Options.orig:Options.in tools/Makefile \
--       libjpeg/Makefile libpng/Makefile libpng/zlib/Makefile \
-        tools/mkdep/Makefile \
-        tools/cextract-1.7/Makefile thotlib/Makefile \
-        thotlib/include/Makefile batch/Makefile tablelib/Makefile"
+ else
+   rm -rf conftest*
