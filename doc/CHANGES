@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3596 2003/09/30 17:59:59 sjg Exp $
+$NetBSD: CHANGES,v 1.3597 2003/09/30 19:18:03 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4031,3 +4031,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkglint to 3.62 [abs 2003-09-30]
 	Added pygopherd 2.0.3 [recht 2003-09-30]
 	Updated mk-files to 20030930 [sjg 2003-09-30]
+	Updated libkver to 0.2 [seb 2003-09-30]
