@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2002/09/24 11:57:28 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2002/11/07 03:49:42 dillo Exp $
 
 --- Makefile.orig	Sun Oct 28 02:10:49 2001
 +++ Makefile
@@ -26,7 +26,15 @@ $NetBSD: patch-ab,v 1.5 2002/09/24 11:57:28 wiz Exp $
  # HP-UX trusted system
  #LIBS += -lsec
  # Solaris (POP_STANDALONE, POP_VIRTUAL)
-@@ -24,7 +24,7 @@ LIBS =
+@@ -17,14 +17,14 @@ LIBS =
+ # PAM
+ #LIBS += -lpam
+ # TCP wrappers
+-#LIBS += -lwrap
++LIBS += -lwrap
+ # libwrap may also want this
+ #LIBS += -lnsl
+ # OpenSSL (-DHAVE_OPENSSL)
  #LIBS += -lcrypto
  
  DESTDIR =
