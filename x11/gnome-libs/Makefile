@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2001/06/19 07:38:33 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2001/06/26 16:30:58 jlam Exp $
 
 DISTNAME=		gnome-libs-1.2.13
 CATEGORIES=		x11 gnome
@@ -25,6 +25,8 @@ CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} \
 
 USE_CONFIG_WRAPPER=	YES
 USE_BUILDLINK_ONLY=	YES
+REPLACE_BUILDLINK=	gnomeConf.sh
+REPLACE_BUILDLINK+=	gnome-config
 
 .include "../../audio/esound/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
@@ -62,19 +64,6 @@ post-patch:
 pre-build:
 	cd ${WRKSRC}/support && \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} gnomesupport.h
-
-# Fix config scripts by removing buildlink directory references.
-post-build:
-	@cd ${WRKSRC};							\
-	config_scripts="gnomeConf.sh gnome-config";			\
-	for file in $${config_scripts}; do				\
-		${MV} -f $${file} $${file}.fixme;			\
-		${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
-			-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\
-			$${file}.fixme > $${file};			\
-		${RM} -f $${file}.fixme;				\
-		${CHMOD} +x $${file};					\
-	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/CORBA/servers
