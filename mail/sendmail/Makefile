@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/04/08 23:00:33 tron Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/10 16:41:21 tron Exp $
 
 DISTNAME=	sendmail.8.9.3
 PKGNAME=	sendmail-8.9.3
@@ -9,15 +9,16 @@ MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.sendmail.org/
 
+DEPENDS+=	db-2.7.3:../../databases/db
+
 LICENSE=	no-profit
 
-MESSAGE_FILE=	${WRKDIR}/MESSAGE
 NO_CONFIGURE=	yes
+MAKE_ENV+=	MANOWN="${MANOWN}" MANGRP="${MANGRP}" MANMODE="${MANMODE}"
+
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
 WRKSRC=		${WRKDIR}/${PKGNAME}
 OBJDIR!=	echo obj.`uname -srm | tr \  .`
-
-LIBEXECDIR=	${PREFIX}/libexec/sendmail
-SBINDIR=	${PREFIX}/sbin
 
 post-build:
 	${SED} -e 's#@@PKGNAME@@#${PKGNAME}#g' \
@@ -26,19 +27,11 @@ post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
 	  <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.sendmail
 
-do-install:
+pre-install:
+	${MKDIR} ${PREFIX}/libexec/sendmail
+
+post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.sendmail ${PREFIX}/etc
-	${MKDIR} -p ${LIBEXECDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/src/${OBJDIR}/sendmail ${LIBEXECDIR}
-	${CHMOD} u+s ${LIBEXECDIR}/sendmail
-.for SECTION in 1 5 8
-	${INSTALL_DATA} ${WRKSRC}/src/${OBJDIR}/*.${SECTION} \
-	  ${PREFIX}/man/man${SECTION}
-.endfor
-	${INSTALL_PROGRAM} ${WRKSRC}/mailstats/${OBJDIR}/mailstats ${SBINDIR}
-	${INSTALL_DATA} ${WRKSRC}/mailstats/${OBJDIR}/*.8 ${PREFIX}/man/man8
-	${INSTALL_PROGRAM} ${WRKSRC}/praliases/${OBJDIR}/praliases ${SBINDIR}
-	${INSTALL_DATA} ${WRKSRC}/praliases/${OBJDIR}/*.8 ${PREFIX}/man/man8
 	${CP} -pr ${WRKSRC}/cf ${PREFIX}/share/sendmail
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/sendmail
 
