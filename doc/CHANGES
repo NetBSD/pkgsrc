@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4249 2003/12/24 13:06:23 jmmv Exp $
+$NetBSD: CHANGES,v 1.4250 2003/12/24 16:39:04 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5366,9 +5366,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ja-dvipdfm to 0.13.2cnb1 [jmmv 2003-12-24]
 	Updated ja-ptex-bin to 3.1.2nb1 [jmmv 2003-12-24]
 	Updated ja-ptex-share to 2.1nb1 [jmmv 2003-12-24]
-	Updated xdvik to 22.40v.j1.14nb3 [jmmv 2003-12-24]
+	Updated ja-vfxdvik to 22.40v.j1.14nb3 [jmmv 2003-12-24]
 	Updated lilypond to 1.4.13nb3 [jmmv 2003-12-24]
-	Updated eurosym to 1.0nb2 [jmmv 2003-12-24]
+	Updated tex-eurosym to 1.0nb2 [jmmv 2003-12-24]
 	Updated TeXfamily to 1.2.1nb4 [jmmv 2003-12-24]
 	Updated latex2html to 2002.2.1nb1 [jmmv 2003-12-24]
 	Updated p5-Template-Toolkit to 2.10nb1 [jmmv 2003-12-24]
