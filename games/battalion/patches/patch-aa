@@ -1,0 +1,45 @@
+--- Makefile.orig	Thu Jan 16 09:31:58 1997
++++ Makefile	Sat Jul 25 09:22:54 1998
+@@ -25,3 +25,3 @@
+ # ------------------------------------------------------------
+-CC = CC
++CC = cc
+ 
+@@ -39,5 +39,5 @@
+ # ------------------------------------------------------------
+-#GLIB = -lMesaGL -lMesaGLU
++GLIB = -lMesaGL -lMesaGLU
+ # or
+-GLIB =  -lGL -lGLU
++#GLIB =  -lGL -lGLU
+ 
+@@ -53,3 +53,3 @@
+ # ------------------------------------------------------------
+-OS = -DSGIVERSION
++#OS = -DSGIVERSION
+ # or
+@@ -79,4 +79,4 @@
+ # ------------------------------------------------------------
+-AUDIOLIB = -laudio -laudiofile
+-AUDIODEF = -DSGIAUDIO
++#AUDIOLIB = -laudio -laudiofile
++#AUDIODEF = -DSGIAUDIO
+ 
+@@ -93,4 +93,5 @@
+ # ------------------------------------------------------------
+-CFLAGS     = -O  -I/usr/local/X11/include -I/usr/demo/SOUND/ -I./.
+-
++CFLAGS     = -O $(DEFS) -I$(PREFIX)/include -I./.
++DATADIR	= $(PREFIX)/share/battalion/
++DEFS = -DDATADIR=\"$(DATADIR)\"
+ 
+@@ -99,3 +100,3 @@
+ # ------------------------------------------------------------
+-LIBFLAGS     = 
++LIBFLAGS     = $(RPATH) -L$(PREFIX)/lib -lcompat
+ 
+@@ -117,2 +118,4 @@
+ 	$(CC) -o $(TARGET) $(OBJ) $(LIBFLAGS) $(GLIB) $(LIBS) $(AUDIOLIB)
++
++install:
+ 
