@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7002 2004/08/26 11:08:32 gavan Exp $
+$NetBSD: CHANGES,v 1.7003 2004/08/26 13:19:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4052,3 +4052,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated less to 382 [wiz 2004-08-26]
 	Updated offlineimap to 4.0.6 [seb 2004-08-26]
 	Updated gaim to 0.82 [gavan 2004-08-26]
+	Updated gnupg to 1.2.6 [wiz 2004-08-26]
