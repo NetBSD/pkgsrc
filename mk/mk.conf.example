@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.113 2000/01/15 01:03:17 jwise Exp $
+# $NetBSD: mk.conf.example,v 1.114 2000/01/15 12:22:30 ad Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -628,18 +628,6 @@ PAPERSIZE=	A4
 #	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/ \
 #	ftp://ftp2.au.netbsd.org/pub/NetBSD/packages/distfiles/
 
-# Finland
-#
-#MASTER_SITE_XCONTRIB=	ftp://ftp.funet.fi/pub/X11/contrib/
-#MASTER_SITE_GNU= 	ftp://ftp.funet.fi/pub/gnu/gnu/
-#MASTER_SITE_PERL_CPAN=	\
-#	ftp://ftp.funet.fi/pub/languages/perl/CPAN/modules/by-module/
-#MASTER_SITE_TEX_CTAN=	ftp://ftp.funet.fi/pub/TeX/CTAN/
-#MASTER_SITE_SUNSITE=	\
-#	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
-#MASTER_SITE_BACKUP=	\
-#	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/
-
 # Austria
 #
 #MASTER_SITE_XCONTRIB=	ftp://ftp.at.netbsd.org/hci/X11/contrib/
@@ -657,6 +645,18 @@ PAPERSIZE=	A4
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.sunsite.auc.dk/pub/tex/ctan/
 #MASTER_SITE_SUNSITE=	ftp://ftp.sunsite.auc.dk/mirrors/sunsite.unc.edu/pub/Linux/
 
+# Finland
+#
+#MASTER_SITE_XCONTRIB=	ftp://ftp.funet.fi/pub/X11/contrib/
+#MASTER_SITE_GNU= 	ftp://ftp.funet.fi/pub/gnu/gnu/
+#MASTER_SITE_PERL_CPAN=	\
+#	ftp://ftp.funet.fi/pub/languages/perl/CPAN/modules/by-module/
+#MASTER_SITE_TEX_CTAN=	ftp://ftp.funet.fi/pub/TeX/CTAN/
+#MASTER_SITE_SUNSITE=	\
+#	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
+#MASTER_SITE_BACKUP=	\
+#	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/
+
 # Japan
 #
 #MASTER_SITE_XCONTRIB=	ftp://ftp.ring.gr.jp/pub/X/opengroup/contrib/
@@ -664,6 +664,14 @@ PAPERSIZE=	A4
 #MASTER_SITE_PERL_CPAN=	ftp://ftp.ring.gr.jp/pub/lang/perl/CPAN/modules/by-module/
 #MASTER_SITE_TEX_CTAN=	ftp://ftp.ring.gr.jp/pub/text/CTAN/
 #MASTER_SITE_SUNSITE=	ftp://sunsite.sut.ac.jp/pub/archives/linux/sunsite-unc/
-#MASTER_SITE_BACKUP=	\
 #	ftp://ftp.ring.gr.jp/pub/NetBSD/packages/distfiles/ \
 #	ftp://ftp.jp.netbsd.org/pub/NetBSD/packages/distfiles/
+
+# United Kingdom
+#
+#MASTER_SITE_XCONTRIB=	ftp://sunsite.org.uk/pub/Mirrors/ftp.x.org/contrib/
+#MASTER_SITE_GNU=	ftp://sunsite.org.uk/pub/packages/gnu/
+#MASTER_SITE_PERL_CPAN=	ftp://sunsite.org.uk/pub/packages/perl/CPAN/modules/by-module/
+#MASTER_SITE_TEX_CTAN=	ftp://sunsite.org.uk/pub/packages/tex/uk-tex/
+#MASTER_SITE_SUNSITE=	ftp://sunsite.org.uk/pub/Mirrors/sunsite.unc.edu/pub/Linux/
+#MASTER_SITE_BACKUP=	ftp://sunsite.org.uk/pub/packages/NetBSD/packages/distfiles/
