@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.17 2004/02/25 09:20:59 grant Exp $
+# $NetBSD: build.conf-example,v 1.18 2004/03/16 13:55:51 hubertf Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
@@ -45,6 +45,10 @@ PRUNEDISTFILES=no
 #http_proxy=http://proxy.machi.ne:3128/
 
 # Uploading binary packages:
+
+# Update vulnerability database before uploading.
+# can be set to 'yes' or 'no'.
+UPDATE_VULNERABILITY_LIST=yes
 
 # destination for packages with the OSVERSION_SPECIFIC flag set.  Needs major.minor.patch
 # version.
