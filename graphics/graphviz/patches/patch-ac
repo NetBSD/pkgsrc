@@ -1,83 +1,30 @@
-$NetBSD: patch-ac,v 1.2 2002/03/10 23:58:41 seb Exp $
+$NetBSD: patch-ac,v 1.3 2002/03/21 08:47:07 seb Exp $
 
---- configure.orig	Fri Mar  1 22:34:05 2002
+--- configure.orig	Wed Mar 20 18:06:51 2002
 +++ configure
-@@ -1475,60 +1475,9 @@
-   fi
+@@ -1388,7 +1388,7 @@
+ echo "$as_me: WARNING: ${am_backtick}missing' script is too old or missing" >&2;}
  fi
  
--for ac_declaration in \
--   ''\
--   '#include <stdlib.h>' \
--   'extern "C" void std::exit (int) throw (); using std::exit;' \
--   'extern "C" void std::exit (int); using std::exit;' \
--   'extern "C" void exit (int) throw ();' \
--   'extern "C" void exit (int);' \
--   'void exit (int);'
--do
--  cat > conftest.$ac_ext <<EOF
--#line 1489 "configure"
--#include "confdefs.h"
--#include <stdlib.h>
--$ac_declaration
--int main() {
--exit (42);
--; return 0; }
--EOF
--if { (eval echo configure:1497: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
--  :
--else
--  echo "configure: failed program was:" >&5
--  cat conftest.$ac_ext >&5
--  rm -rf conftest*
--  continue
--fi
--rm -f conftest*
--  cat > conftest.$ac_ext <<EOF
--#line 1507 "configure"
--#include "confdefs.h"
--$ac_declaration
--int main() {
--exit (42);
--; return 0; }
--EOF
--if { (eval echo configure:1514: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
--  rm -rf conftest*
--  break
--else
--  echo "configure: failed program was:" >&5
--  cat conftest.$ac_ext >&5
--fi
--rm -f conftest*
--done
--if test -n "$ac_declaration"; then
--  echo '#ifdef __cplusplus' >>confdefs.h
--  echo $ac_declaration      >>confdefs.h
--  echo '#endif'             >>confdefs.h
--fi
--
--
- 
-         echo $ac_n "checking for strerror in -lcposix""... $ac_c" 1>&6
--echo "configure:1532: checking for strerror in -lcposix" >&5
-+echo "configure:1481: checking for strerror in -lcposix" >&5
- ac_lib_var=`echo cposix'_'strerror | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
-@@ -1860,7 +1809,7 @@
+-for ac_prog in gawk mawk nawk awk
++for ac_prog in mawk gawk nawk awk
+ do
+   # Extract the first word of "$ac_prog", so it can be a program name with args.
+ set dummy $ac_prog; ac_word=$2
+@@ -3077,7 +3077,7 @@
  done
  test -n "$YACC" || YACC="yacc"
  
 -for ac_prog in gawk mawk nawk awk
 +for ac_prog in mawk gawk nawk awk
  do
- # Extract the first word of "$ac_prog", so it can be a program name with args.
+   # Extract the first word of "$ac_prog", so it can be a program name with args.
  set dummy $ac_prog; ac_word=$2
-@@ -5893,7 +5842,10 @@
+@@ -7527,7 +7527,10 @@
  PATHSEPARATOR=";"
  else
  # This sucks!  Whatever happened to standards for file system layout?
--DEFAULT_FONTPATH="/usr/X11R6/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/TrueType:/usr/share/fonts/truetype:/usr/openwin/lib/X11/fonts/TrueType:/usr/openwin/lib/X11/fonts/TrueType"
+-DEFAULT_FONTPATH="/usr/X11R6/lib/X11/fonts/TrueType:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/TrueType:/usr/share/fonts/truetype:/usr/openwin/lib/X11/fonts/TrueType"
 +DEFAULT_FONTPATH="${X11PREFIX}/lib/X11/fonts/TrueType:${X11PREFIX}/lib/X11/fonts/truetype"
 +if test x"$X11PREFIX" != x"$X11BASE" ; then
 +DEFAULT_FONTPATH="${DEFAULT_FONTPATH}:${X11BASE}/lib/X11/fonts/TrueType:${X11BASE}/lib/X11/fonts/truetype"
@@ -85,35 +32,55 @@ $NetBSD: patch-ac,v 1.2 2002/03/10 23:58:41 seb Exp $
  PATHSEPARATOR=":"
  fi
  fi
-@@ -6079,12 +6031,11 @@
+@@ -7725,9 +7728,8 @@
  
  # Some systems don't have Tcl.  Don't build
  # the Tcl products if we don't have the library.
 -TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh
  if test -f $TCLCONFIG; then
-     echo "$ac_t""using $TCLCONFIG" 1>&6
+-    echo "$as_me:7730: result: using $TCLCONFIG" >&5
++    echo "$as_me:7732: result: using $TCLCONFIG" >&5
+ echo "${ECHO_T}using $TCLCONFIG" >&6
+     file=${TCLCONFIG}
+     . $file
+@@ -7731,10 +7733,10 @@
+ echo "${ECHO_T}using $TCLCONFIG" >&6
      file=${TCLCONFIG}
      . $file
 -    TCL_SUBDIRS="tclstubs tclhandle gdtclft tcldot tcldgr tcldgl tclpathplan"
 +    TCL_SUBDIRS="tclhandle gdtclft tcldot tcldgr tcldgl tclpathplan"
      TCL_PKGINDEX="gdtclft/pkgIndex.tcl tcldot/pkgIndex.tcl tcldgr/pkgIndex.tcl tcldgl/pkgIndex.tcl tclpathplan/pkgIndex.tcl"
  else
-     echo "configure: warning: Unable to find tclConfig.sh. The packages: "gdtclft tcldot tcldgr tcldgl tclpathplan" will not be built" 1>&2
-@@ -6156,12 +6107,11 @@
+-    { echo "$as_me:7737: WARNING: Unable to find tclConfig.sh. The packages: \"gdtclft tcldot tcldgr tcldgl tclpathplan\" will not be built" >&5
++    { echo "$as_me:7739: WARNING: Unable to find tclConfig.sh. The packages: \"gdtclft tcldot tcldgr tcldgl tclpathplan\" will not be built" >&5
+ echo "$as_me: WARNING: Unable to find tclConfig.sh. The packages: \"gdtclft tcldot tcldgr tcldgl tclpathplan\" will not be built" >&2;}
+     TCL_SUBDIRS=""
+     TCL_PKGINDEX=""
+@@ -7754,9 +7756,8 @@
  
  # Some systems have Tcl, but not TK.  Don't build
  # the Tk products if we don't have the library.
 -TKCONFIG=${WISH_EXEC_PREFIX}/lib/tkConfig.sh
  if test -f $TKCONFIG; then
-     echo "$ac_t""using $TKCONFIG" 1>&6
+-    echo "$as_me:7759: result: using $TKCONFIG" >&5
++    echo "$as_me:7760: result: using $TKCONFIG" >&5
+ echo "${ECHO_T}using $TKCONFIG" >&6
+     file=${TKCONFIG}
+     . $file
+@@ -7760,10 +7761,10 @@
+ echo "${ECHO_T}using $TKCONFIG" >&6
      file=${TKCONFIG}
      . $file
 -    TK_SUBDIRS="tkstubs tkspline"
 +    TK_SUBDIRS="tkspline"
      TK_PKGINDEX="tkspline/pkgIndex.tcl"
  else
-     echo "configure: warning: Unable to find tkConfig.sh. The package "tkspline" will not be built" 1>&2
-@@ -8710,36 +8660,12 @@
+-    { echo "$as_me:7766: WARNING: Unable to find tkConfig.sh. The package \"tkspline\" will not be built" >&5
++    { echo "$as_me:7767: WARNING: Unable to find tkConfig.sh. The package \"tkspline\" will not be built" >&5
+ echo "$as_me: WARNING: Unable to find tkConfig.sh. The package \"tkspline\" will not be built" >&2;}
+     TK_SUBDIRS=""
+     TK_PKGINDEX=""
+@@ -10978,35 +10979,11 @@
  
  # -----------------------------------
  # tclInt.h
@@ -132,7 +99,6 @@ $NetBSD: patch-ac,v 1.2 2002/03/10 23:58:41 seb Exp $
 -fi
 +TCLINT_INCLUDES="-I${BUILDLINK_DIR}/include/tcl/generic"
  
- 
  # -----------------------------------
  # tkInt.h
 -if test -f "$TK_SRC_DIR/generic/tkInt.h"; then
@@ -150,5 +116,5 @@ $NetBSD: patch-ac,v 1.2 2002/03/10 23:58:41 seb Exp $
 -fi
 +TKINT_INCLUDES="-I${BUILDLINK_DIR}/include/tk/generic"
  
- 
  # -----------------------------------
+ # Special checks
