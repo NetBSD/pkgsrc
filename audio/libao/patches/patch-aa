@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.5 2001/08/17 17:09:13 wiz Exp $
+
 --- src/plugins/oss/ao_oss.c.orig	Mon Aug 13 16:20:05 2001
 +++ src/plugins/oss/ao_oss.c	Wed Aug 15 00:15:59 2001
 @@ -81,8 +81,8 @@
