@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2004/02/15 18:41:44 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2004/04/01 18:30:06 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use gail.
 #
@@ -9,7 +9,7 @@
 GAIL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gail
-BUILDLINK_DEPENDS.gail?=		gail>=1.4.1nb1
+BUILDLINK_DEPENDS.gail?=		gail>=1.6.0
 BUILDLINK_PKGSRCDIR.gail?=		../../devel/gail
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gail=gail
