@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/10/01 02:51:43 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2001/10/01 10:38:02 agc Exp $
 #
 
 COMMENT=	Archivers
@@ -26,7 +26,6 @@ SUBDIR+=	lzop
 SUBDIR+=	macutil
 SUBDIR+=	mscompress
 SUBDIR+=	nulib2
-SUBDIR+=	p5-Compress-Zlib
 SUBDIR+=	ppunpack
 SUBDIR+=	rar
 SUBDIR+=	ruby-zlib
