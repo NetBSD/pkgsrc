@@ -1,0 +1,33 @@
+===========================================================================
+$NetBSD: extract_instructions,v 1.1.1.1 2002/09/19 22:33:49 jschauma Exp $
+
+    Now running the Netscape 7 installation program.  Note that the
+    installation requires a working internet connection and the DISPLAY
+    environment variable to be set.
+
+    1) Choose 'Next' on the first screen
+
+    2) Choose 'Accept' on the End-User License Agreement (EULA)
+
+    3) Do not change settings from "Recommended" on the
+       next screen, but do change the  "Destination Directory" to:
+
+        @WRKSRC@/dest
+
+       Then press 'Next'.
+
+    4) Set the proxy settings as appropriate for you and click 'Install'
+
+    5) Lean back and wait while the installer downloads the necessary files. 
+       Depending on the speed of your connection, this may take a while.
+
+    6) Click 'Ok' on "Installation has completed."
+
+    7) Netscape7 will now start and try to convince you to register with
+       Netscape.  It's up to you to do so, but it's not required.  Exit
+       Netscape to continue the package installation.
+
+
+===========================================================================
+
+Be sure to read the above!  Proceeding in @delay@ seconds...
