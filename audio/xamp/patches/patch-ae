@@ -1,9 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/09/17 00:48:27 hubertf Exp $
+$NetBSD: patch-ae,v 1.2 2000/03/23 23:27:25 dmcmahill Exp $
 
---- Makefile.in.orig	Wed Feb 11 06:37:20 1998
-+++ Makefile.in	Fri Sep 17 02:30:10 1999
-@@ -14,7 +14,8 @@
- DEFINES = -DOS_@OS_TYPE@ -DARCH_@ARCH_TYPE@
+--- Makefile.in.orig	Tue Feb 10 17:37:20 1998
++++ Makefile.in	Wed Mar 22 18:48:42 2000
+@@ -15,5 +15,6 @@
  CFLAGS = @CFLAGS@ ${DEFINES} ${DEBUG} ${BACK}
  LDFLAGS = @LDFLAGS@
 -INSTALL= @INSTALL@
@@ -11,22 +10,24 @@ $NetBSD: patch-ae,v 1.1.1.1 1999/09/17 00:48:27 hubertf Exp $
 +DESTDIR= ${PREFIX}/bin
  
  #
- # uncomment both of these if you want profiling support
-@@ -37,7 +38,7 @@
- 	id3.o id3Data.o QLayer.o mid3.o mid3Data.o pixmaps/pixmaps.o \
+@@ -38,5 +39,5 @@
  	backs/backs.o
  	
 -LIBS = @QT_LDFLAGS@ -lm -lqt
-+LIBS = @QT_LDFLAGS@ -lm -lqt -Wl,-rpath,$(X11BASE)/lib -lX11 -lXext
++LIBS = @QT_LDFLAGS@ -lm -lqt1 -Wl,-rpath,$(X11BASE)/lib -lX11 -lXext
  
  all: xamp
- 
-@@ -59,7 +60,7 @@
- 	cd pixmaps ; make
+@@ -60,5 +61,5 @@
  
  xamp: images $(OBJ) 
 -	$(CC) -o xamp $(OBJ) $(LDFLAGS) $(LIBS) 
 +	$(CXX) -o xamp $(OBJ) $(LDFLAGS) $(LIBS) -lossaudio
  	
  install:
- 	$(INSTALL) -m 755 xamp $(DESTDIR)
+@@ -94,5 +95,5 @@
+ 
+ qembed.cpp:
+-	$(CXX) qembed.cpp -o qembed -lqt
++	$(CXX) qembed.cpp -o qembed -lqt1
+ .SUFFIXES: .cpp
+ .cpp.o:
