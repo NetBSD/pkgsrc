@@ -1,16 +1,16 @@
-$NetBSD: patch-bp,v 1.1.1.1 1999/10/08 04:34:43 dbj Exp $
+$NetBSD: patch-bp,v 1.2 2004/01/11 14:21:27 cube Exp $
 
---- /dev/null	Wed Dec 31 16:00:00 1969
-+++ pppd/mppe.h	Tue Jun 22 18:44:01 1999
+--- pppd/mppe.h.orig	2004-01-11 15:09:06.000000000 +0100
++++ pppd/mppe.h
 @@ -0,0 +1,63 @@
 +#ifndef __MPPE_INCLUDE__
 +
 +#ifndef CI_MPPE
 +#define CI_MPPE			18	/* config. option for MPPE */
-+#endif CI_MPPE
++#endif /* CI_MPPE */
 +#ifndef CILEN_MPPE
 +#define CILEN_MPPE		6	/* length of config. option */
-+#endif CILEN_MPPE
++#endif /* CILEN_MPPE */
 +
 +typedef struct mppe_state {
 +    int    us_unit;	/* Interface unit number */
