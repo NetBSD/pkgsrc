@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.226 2005/01/03 14:32:28 wiz Exp $
+# $NetBSD: Makefile,v 1.227 2005/01/05 12:33:13 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -95,6 +95,7 @@ SUBDIR+=	kdeedu3
 SUBDIR+=	kdepim3
 SUBDIR+=	kdeutils3
 SUBDIR+=	kdrill
+SUBDIR+=	kgeography
 SUBDIR+=	kodos
 SUBDIR+=	koffice
 SUBDIR+=	kp
