@@ -1,4 +1,4 @@
-/*	$NetBSD: process.c,v 1.3 2003/08/25 16:06:49 jschauma Exp $	*/
+/*	$NetBSD: process.c,v 1.4 2003/10/16 12:04:41 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Diomidis Spinellis.
@@ -47,7 +47,7 @@
 #if 0
 static char sccsid[] = "@(#)process.c	8.6 (Berkeley) 4/20/94";
 #else
-__RCSID("$NetBSD: process.c,v 1.3 2003/08/25 16:06:49 jschauma Exp $");
+__RCSID("$NetBSD: process.c,v 1.4 2003/10/16 12:04:41 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -103,10 +103,10 @@ static SPACE HS, PS, SS;
 #define	hs		HS.space
 #define	hsl		HS.len
 
-static __inline int	 applies(struct s_command *);
+static inline int	 applies(struct s_command *);
 static void		 flush_appends(void);
 static void		 lputs(char *);
-static __inline int	 regexec_e(regex_t *, const char *, int, int, size_t);
+static inline int	 regexec_e(regex_t *, const char *, int, int, size_t);
 static void		 regsub(SPACE *, char *, char *);
 static int		 substitute(struct s_command *);
 
@@ -310,7 +310,7 @@ new:		if (!nflag && !pd)
  * Return TRUE if the command applies to the current line.  Sets the inrange
  * flag to process ranges.  Interprets the non-select (``!'') flag.
  */
-static __inline int
+static inline int
 applies(struct s_command *cp)
 {
 	int r;
@@ -539,7 +539,7 @@ lputs(char *s)
 		err(FATAL, "stdout: %s", strerror(errno ? errno : EIO));
 }
 
-static __inline int
+static inline int
 regexec_e(regex_t *preg, const char *string, int eflags, int nomatch, size_t slen)
 {
 	int eval;

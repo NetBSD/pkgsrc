@@ -1,4 +1,4 @@
-/*	$NetBSD: defs.h,v 1.2 2003/08/23 22:13:56 jschauma Exp $	*/
+/*	$NetBSD: defs.h,v 1.3 2003/10/16 12:04:41 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Diomidis Spinellis.
@@ -37,7 +37,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)defs.h	8.1 (Berkeley) 6/6/93
- *	$NetBSD: defs.h,v 1.2 2003/08/23 22:13:56 jschauma Exp $
+ *	$NetBSD: defs.h,v 1.3 2003/10/16 12:04:41 grant Exp $
  */
 
 /*
@@ -146,11 +146,3 @@ typedef struct {
 #define	WARNING		2	/* Just print the warning */
 #define	COMPILE		3	/* Print error, count and finish script */
 #define	COMPILE2	3	/* Print error, count and finish script */
-
-#ifndef DEFFILEMODE
-#define DEFFILEMODE     (S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH)
-#endif
-
-#ifndef HAVE_FGETLN
-char *fgetln(FILE *, size_t *);
-#endif
