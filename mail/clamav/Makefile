@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/12/05 03:59:39 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/12/08 06:47:31 grant Exp $
 
 DISTNAME=	clamav-0.60
 PKGREVISION=	1
@@ -49,8 +49,9 @@ pre-configure:
 post-install:
 	${CHOWN} -R ${CLAMAV_USER}:${CLAMAV_GROUP} ${PREFIX}/share/clamav
 
-.include "../../devel/zlib/buildlink2.mk"
 .include "../../archivers/bzip2/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
+
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/autoconf.mk"
 .include "../../mk/automake.mk"
