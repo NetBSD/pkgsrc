@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2000/08/28 09:14:50 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2000/10/17 00:05:02 wiz Exp $
 #
 
 DISTNAME=       cvs-1.10
@@ -13,6 +13,10 @@ GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
 
 BUILD_DEFS+=	RCS_LOCALID
+
+.if exists(/usr/bin/cvs)
+IGNORE=		"${PKGNAME} is part of your NetBSD distribution"
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
