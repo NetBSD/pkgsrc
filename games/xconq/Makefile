@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 21:39:30 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/07/30 10:52:35 kleink Exp $
 
 DISTNAME=		xconq-7.4.1
 CATEGORIES=		games x11
 MASTER_SITES=		ftp://sources.redhat.com/pub/xconq/
+PKGREVISION=		1
 
 MAINTAINER=		kleink@NetBSD.org
 HOMEPAGE=		http://sources.redhat.com/xconq/
