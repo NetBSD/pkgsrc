@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1932 2004/07/14 01:34:16 jlam Exp $
+$NetBSD: TODO,v 1.1933 2004/07/14 08:35:00 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -168,7 +168,6 @@ Suggested package updates
 	o anjuta-1.2.2
 	o ap-jk-5.0.25
 	o ap-python-2.7.10
-	o apache-2.0.50 [adrianp]
 	o apcupsd-3.10.13
 	o aqsis-0.9.1
 	o asc-1.15.0
