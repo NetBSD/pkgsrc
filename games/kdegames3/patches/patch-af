@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2003/08/06 15:07:06 mrg Exp $
+
+--- kbackgammon/engines/nextgen/kbggame.cpp.orig	2003-05-07 21:45:35.000000000 +1000
++++ kbackgammon/engines/nextgen/kbggame.cpp	2003-08-06 22:04:14.000000000 +1000
+@@ -26,7 +26,8 @@
+ 
+ #include <kplayer.h>
+ 
+-#include <iostream.h>
++#include <iostream>
++using namespace std;
+ 
+ /*
+  * Constructor

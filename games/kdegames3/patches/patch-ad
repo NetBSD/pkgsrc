@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.3 2003/08/06 15:07:06 mrg Exp $
+
+--- kbackgammon/engines/nextgen/kbgng.cpp.orig	2003-05-07 21:45:35.000000000 +1000
++++ kbackgammon/engines/nextgen/kbgng.cpp	2003-08-06 22:02:29.000000000 +1000
+@@ -35,7 +35,8 @@
+ #include <qbuttongroup.h>
+ #include <qcheckbox.h>
+ #include <kconfig.h>
+-#include <iostream.h>
++#include <iostream>
++using namespace std;
+ #include <klocale.h>
+ #include <kmainwindow.h>
+ #include <klineeditdlg.h>
+@@ -46,7 +47,6 @@
+ 
+ #include <version.h>
+ 
+-#include <iostream.h>
+ 
+ 
+ /*
