@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/10/27 21:29:49 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/12/14 09:20:18 toshii Exp $
 #
 
-DISTNAME=	mad-0.14.0b
+DISTNAME=	mad-0.14.2b
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/} \
 		ftp://ftp.mars.org/pub/mpeg/
@@ -19,6 +19,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../audio/esound/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/zlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

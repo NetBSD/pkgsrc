@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/10/27 21:29:49 jlam Exp $
+$NetBSD: distinfo,v 1.4 2001/12/14 09:20:18 toshii Exp $
 
-SHA1 (mad-0.14.0b.tar.gz) = ecf2658e963b9a1c89aafc089f6659c3cdb858b6
-Size (mad-0.14.0b.tar.gz) = 703852 bytes
-SHA1 (patch-aa) = 3d5744dac1a5ee499aaaafa1dd0696d960bc0180
-SHA1 (patch-ab) = c573fdb2d0353352db40be773d8e5292fc1d26b3
-SHA1 (patch-ac) = e04c3bae51e90032aa3ced4377e8b0e34bd496c9
+SHA1 (mad-0.14.2b.tar.gz) = 07303e2a512a9956d63fef3451ae7823e5f03b68
+Size (mad-0.14.2b.tar.gz) = 721345 bytes
+SHA1 (patch-ac) = c02a8a2e8c720bb8fb96c1b48ef76db010375d11

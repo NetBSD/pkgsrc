@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:14 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/14 09:20:18 toshii Exp $
 bin/abxtest
 bin/madplay
+include/id3tag.h
 include/mad.h
+lib/libid3tag.a
+lib/libid3tag.la
+lib/libid3tag.so
+lib/libid3tag.so.1
+lib/libid3tag.so.1.0
 lib/libmad.so
-lib/libmad.so.0
-lib/libmad.so.0.0
+lib/libmad.so.1
+lib/libmad.so.1.0
 lib/libmad.a
 lib/libmad.la
 man/man1/abxtest.1
