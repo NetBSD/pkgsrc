@@ -1,0 +1,23 @@
+  Awka is an open-source implementation of the AWK programming language.  Awka
+is not an interpreter like Gawk, Mawk or Nawk, but instead it converts the
+program to ANSI-C, then compiles this using gcc or a native C compiled to
+create a binary executable.
+
+  As of version 0.7.0, you can write C functions and compile them into a
+library, then have these functions available for use in AWK scripts as if they
+were builtin.  From now on, using Awka you are no longer bound to the limited
+AWK universe plus a few extras. You are free to extend functionality in
+whatever direction C allows you, and have this available within the concise,
+elegant AWK language framework.
+
+  You may distribute the executable, without having to provide the source code
+for your AWK program.  Please note, however, that executables using Awka must
+be distributed free of charge.  Note that using the optional dfa library that
+accompanies awka, or compiling awka under cygwin, will subject translated C
+source code to the GPL, but not the AWK source.
+
+  Translating AWK programs to C means you can link them with C & C++ code, thus
+extending functionality way beyond what is possible in interpretive AWK.
+
+  Awka-generated executables perform comparatively with, and in many cases
+faster than, the quickest freely-available AWK interpreter.
