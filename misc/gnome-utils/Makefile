@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/07/08 01:39:32 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/07/14 23:12:07 tron Exp $
 #
 
 DISTNAME=	gnome-utils-1.0.1
@@ -21,7 +21,7 @@ HOMEPAGE=	http://www.gnome.org/
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	ncurses-4.2:../../devel/ncurses
-DEPENDS+=	gnome-core-1.0.5:../../x11/gnome-core
+DEPENDS+=	gnome-core-1.0.7:../../x11/gnome-core
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
