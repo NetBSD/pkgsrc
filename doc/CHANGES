@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7952 2004/11/23 00:35:02 ben Exp $
+$NetBSD: CHANGES,v 1.7953 2004/11/23 08:51:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5385,3 +5385,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmbmon to 2.05 [wiz 2004-11-22]
 	Removed apache6 [wiz 2004-11-22]
 	Updated fprot-workstation-bin to 4.4.8 [ben 2004-11-22]
+	Updated nas to 1.7 [adam 2004-11-23]
