@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/29 12:40:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/25 11:49:31 seb Exp $
 
 DISTNAME=	slib2d4
 #
@@ -22,6 +22,7 @@ NO_BUILD=	# defined
 SLIBDIR=	${PREFIX}/share/slib
 DOCDIR=		${PREFIX}/share/doc/slib
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	slib.info
 
 do-install:
@@ -31,5 +32,4 @@ do-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} README FAQ ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/slib.info ${PREFIX}/info
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
