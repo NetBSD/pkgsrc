@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/08/24 02:00:59 taca Exp $
+# $NetBSD: Makefile,v 1.41 2003/08/30 20:05:13 seb Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=		4
@@ -34,8 +34,6 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
 .  endif
 .endif
 
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-
 PKG_USERS=		${MYSQL_USER}:${MYSQL_GROUP}::MySQL\\ database\\ administrator:${MYSQL_DATADIR}:${SH}
 PKG_GROUPS=		${MYSQL_GROUP}
 RCD_SCRIPTS=		mysqld
@@ -44,7 +42,7 @@ FILES_SUBST+=		MYSQL_DATADIR=${MYSQL_DATADIR}
 MESSAGE_SUBST+=		MYSQL_DATADIR=${MYSQL_DATADIR} \
 			MYSQL_USER=${MYSQL_USER} MYSQL_GROUP=${MYSQL_GROUP}
 BUILD_DEFS+=		MYSQL_DATADIR
-MAKE_DIRS_PERMS+=	${MYSQL_DATADIR} ${MYSQL_USER} ${MYSQL_GROUP} 0700
+OWN_DIRS_PERMS+=	${MYSQL_DATADIR} ${MYSQL_USER} ${MYSQL_GROUP} 0700
 
 post-configure:
 	cd ${WRKSRC} && ${CP} -f config.h include/my_config.h
@@ -53,18 +51,12 @@ post-build:
 	cd ${WRKSRC}/scripts && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}	\
 		${MAKE_FLAGS} safe_mysqld mysql_install_db
 
-pre-install:
-	${SED}	-e "s|@MYSQL_DATADIR@|${MYSQL_DATADIR}|g"		\
-		-e "s|@CAT@|${CAT}|g"					\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/safe_mysqld ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysql_install_db ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/support-files/mysql.server ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/mysqld.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/man/safe_mysqld.1 ${PREFIX}/man/man1
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../databases/mysql-client/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
