@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/20 11:56:33 frueauf Exp $
+# $NetBSD: Makefile,v 1.10 1998/06/21 02:35:53 tv Exp $
 # FreeBSD Id: Makefile,v 1.17 1996/12/17 05:18:09 asami Exp
 #
 
@@ -13,7 +13,6 @@ GNU_CONFIGURE=  yes
 WRKSRC=         ${WRKDIR}/${PKGNAME}
 ALL_TARGET=     all catalogs
 INSTALL_TARGET= install install.man
-MAN1=		tcsh.1
 
 post-patch:
 	( cd ${WRKSRC}/nls/greek ; for i in * ; do ${ECHO} $$i ; ${MV} $$i $$i.BAK ; ${SED} -e 's/\\"/"/g' -e "s/\\\'/'/g" <$$i.BAK >$$i ; done )
