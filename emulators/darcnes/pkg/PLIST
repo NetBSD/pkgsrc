@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/13 23:28:07 wiz Exp $
+bin/darcnes
+share/doc/darcnes/readme
+@dirrm share/doc/darcnes
