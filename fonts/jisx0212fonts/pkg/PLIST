@@ -1,0 +1,6 @@
+lib/X11/fonts/local/jisksp14.pcf.Z
+lib/X11/fonts/local/jisksp16-1990.pcf.Z
+lib/X11/fonts/local/jisksp40.pcf.Z
+lib/X11/fonts/local/min-1-24.pcf.Z
+@exec cd %D/lib/X11/fonts/local; mkfontdir
+@unexec cd %D/lib/X11/fonts/local; mkfontdir
