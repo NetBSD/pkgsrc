@@ -1,6 +1,2 @@
 Texi2html is a Perl program which translates Texinfo files to pure HTML with
 no Info or other format in-between.
-
-More information about texi2html can be found at its home page:
-
-http://wwwcn1.cern.ch/dci/texi2html/
