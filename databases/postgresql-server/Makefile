@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/04/04 07:41:05 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2002/08/07 07:28:35 jlam Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 COMMENT=		PostgreSQL database server programs
@@ -41,6 +41,13 @@ OWN_DIRS_PERMS=		${PGHOME} ${PGUSER} ${PGGROUP} 0755
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 
 do-build:
+#
+# Avoid conflict between "${LOCALBASE}/include/openssl/des.h" and
+# "/usr/include/crypt.h" -- we want the definitions in the former.
+#
+.if (${OPSYS} == "SunOS")
+	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
+.endif
 .for DIR in ${DIRS_TO_BUILD}
 	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
 		${MAKE_PROGRAM} ${ALL_TARGET}
