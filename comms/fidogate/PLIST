@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2003/06/27 16:41:19 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/01/12 20:37:56 seb Exp $
 etc/rc.d/fidogate
-info/fidogate.info
 lib/fidogate/areafix.help
 lib/fidogate/bin/areasbbssync
 lib/fidogate/bin/ftnafutil
