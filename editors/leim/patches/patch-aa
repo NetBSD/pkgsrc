@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/28 14:11:24 tron Exp $
+
+--- Makefile.in.orig	Mon Jan 11 12:40:22 1999
++++ Makefile.in	Tue Dec 28 14:53:29 1999
+@@ -37,7 +37,7 @@
+ 
+ # Which Emacs to use to convert TIT files to Emacs Lisp files,
+ # byte-compile Emacs Lisp files, and generate the file leim-list.el.
+-BUILT-EMACS = ${dot}${dot}/src/emacs
++BUILT-EMACS = ${LOCALBASE}/bin/emacs
+ 
+ buildlisppath=${srcdir}/${dot}${dot}/lisp
+ 
