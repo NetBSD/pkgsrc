@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/03/26 02:27:37 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2005/04/02 17:17:44 hubertf Exp $
 #
 # XXX This package needs to be installed with the same PREFIX as teTeX
 #
@@ -12,7 +12,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www-cs-faculty.stanford.edu/~knuth/cweb.html
 COMMENT=		CWEB System of Structured Documentation
 
-CONFLICTS+=		teTeX-bin>=2.0
+CONFLICTS+=		teTeX-bin>=2.0		# Part of teTeX>=2.0
 
 DEPENDS+= 		teTeX-[0-9]*:../../print/teTeX1
 
