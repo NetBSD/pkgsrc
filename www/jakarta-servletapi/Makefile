@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/03/29 00:19:34 jwise Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/21 13:12:25 abs Exp $
 
 DISTNAME=	jakarta-servletapi-3.2-src
 PKGNAME=	jakarta-servletapi-3.2.1
@@ -15,16 +15,22 @@ USE_JAVA=	yes
 
 MAKE_ENV+=	JAVA_HOME=${JAVA_HOME}
 MAKEFILE=	build.xml
+PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.javadoc
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
+
+post-build:
+	rm -f ${WRKDIR}/PLIST.javadoc
+	cd ${WRKDIR}/dist/servletapi/docs ; ${FIND} * -type f -print | sort | ${SED} 's:^:share/doc/java/jakarta-servletapi/:' > ${WRKDIR}/PLIST.javadoc
+	cd ${WRKDIR}/dist/servletapi/docs ; ${FIND} * -type d -print | sort -r | ${SED} 's:^:@dirrm share/doc/java/jakarta-servletapi/:' >> ${WRKDIR}/PLIST.javadoc
+	echo '@dirrm share/doc/java/jakarta-servletapi' >> ${WRKDIR}/PLIST.javadoc
 
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/dist/servletapi/lib/servlet.jar ${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jakarta-servletapi
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jakarta-servletapi/api
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/java/jakarta-servletapi
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/java/jakarta-servletapi
-	${INSTALL_DATA} ${WRKDIR}/dist/servletapi/docs/api/* ${PREFIX}/share/doc/java/jakarta-servletapi/api
+	cd ${WRKDIR}/dist/servletapi/docs ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/jakarta-servletapi ; ${GTAR} pvxf - )
 
 .include "../../mk/bsd.pkg.mk"
 MAKE_PROGRAM=	${LOCALBASE}/bin/ant
