@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 1998/09/15 05:38:45 garbled Exp $
+--- configure.orig	Mon Sep 14 20:20:15 1998
++++ configure	Mon Sep 14 20:20:28 1998
+@@ -2517,7 +2517,7 @@
+ #
+ LibWWW_headers="WWWLib.h WWWApp.h WWWFile.h WWWHTTP.h WWWMIME.h WWWNews.h WWWTrans.h"
+ LibWWW_HTAncMan_h="HTAncMan.h"
+-LibWWW_config_h="config.h"
++LibWWW_config_h="wwwconf.h"
+ 
+ 
+ #
