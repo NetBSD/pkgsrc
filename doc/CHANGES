@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9579 2005/03/23 15:47:56 minskim Exp $
+$NetBSD: CHANGES,v 1.9580 2005/03/23 15:59:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1591,3 +1591,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated digest to 20050323 [agc 2005-03-23]
 	Updated rdesktop to 1.4.0 [xtraeme 2005-03-23]
 	Added ruby-doc-stdlib-0.9.13 [minskim 2005-03-23]
+	Updated p5-xmltv to 0.5.39 [wiz 2005-03-23]

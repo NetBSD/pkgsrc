@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3274 2005/03/23 15:25:32 xtraeme Exp $
+$NetBSD: TODO,v 1.3275 2005/03/23 15:59:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -290,7 +290,7 @@ Suggested package updates
 	o ap2-chroot-0.4
 	o ap2-transform-0.6.0
 	o apcupsd-3.10.16 [requires threads, doesn't work with pth on 1.6]
-	o apr-1.0.0
+	o apr-1.1.1
 	o apsfilter-7.2.6
 	o aqsis-0.9.2
 	o aranym-0.8.10
@@ -698,7 +698,7 @@ Suggested package updates
 	o openacs-5.1.4
 	o openal-20050202
 	o opencobol-0.31
-	o openldap-2.2.23
+	o openldap-2.2.24
 	o openmotif-2.2.4
 	o openssh-4.0
 	o oregano-0.40.3
@@ -819,7 +819,6 @@ Suggested package updates
 	o p5-perl-ldap-0.3202
 	o p5-razor-agents-2.67
 	o p5-sybperl-2.17
-	o p5-xmltv-0.5.39
 	o pam-smbpass-3.0.11
 	o pari-2.2.7
 	o pbzip2-0.9.2
