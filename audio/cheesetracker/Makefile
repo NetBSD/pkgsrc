@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/07/17 16:36:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/07/18 09:31:50 agc Exp $
 #
 
 DISTNAME=		cheesetracker-0.5.5
@@ -26,7 +26,7 @@ USE_GMAKE=		yes
 post-extract:
 	${RM} -f ${WRKSRC}/install-sh
 	${RM} -f ${WRKSRC}/mkinstalldirs
-	${LN} -s ${LOCALBASE}/share/automake/install-sh ${WRKSRC}/install-sh
-	${LN} -s ${LOCALBASE}/share/automake/mkinstalldirs ${WRKSRC}/mkinstalldirs
+	${CP} ${LOCALBASE}/share/automake/install-sh ${WRKSRC}/install-sh
+	${CP} ${LOCALBASE}/share/automake/mkinstalldirs ${WRKSRC}/mkinstalldirs
 
 .include "../../mk/bsd.pkg.mk"
