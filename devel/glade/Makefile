@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2003/04/13 13:23:56 tron Exp $
+# $NetBSD: Makefile,v 1.37 2003/04/20 08:33:58 rh Exp $
 
 DISTNAME=	glade-0.6.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNOME:=sources/glade/0.6/}
 
@@ -30,6 +31,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/portability.txt ${PREFIX}/share/doc/glade
 	${INSTALL_DATA} ${WRKSRC}/doc/source_code.txt ${PREFIX}/share/doc/glade
 
+.include "../../devel/bonobo/buildlink2.mk"
+.include "../../devel/oaf/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../x11/gnome-core/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
