@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/01/10 12:41:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2003/02/18 14:56:05 jmmv Exp $
 
 DISTNAME=	multi-gnome-terminal-1.6.1
+PKGREVISION=	1
 CATEGORIES=	gnome x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=multignometerm/}
 
@@ -21,6 +22,6 @@ CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
-.include "../../textproc/scrollkeeper/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 
 .include "../../mk/bsd.pkg.mk"

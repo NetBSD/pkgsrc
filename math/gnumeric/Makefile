@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2003/01/17 02:23:21 rh Exp $
+# $NetBSD: Makefile,v 1.68 2003/02/18 14:56:00 jmmv Exp $
 #
 
 DISTNAME=		gnumeric-1.0.12
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.0/}
 
@@ -25,7 +25,6 @@ USE_PERL5=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-psiconv
-CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 LIBS+=      		-lunicode
 
 USE_LIBTOOL=		YES
@@ -41,6 +40,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 .include "../../print/gnome-print/buildlink2.mk"
 .include "../../textproc/libunicode/buildlink2.mk"
 .include "../../textproc/libxml/buildlink2.mk"
-.include "../../textproc/scrollkeeper/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 
 .include "../../mk/bsd.pkg.mk"

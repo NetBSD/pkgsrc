@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/17 12:27:05 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/02/18 14:56:01 jmmv Exp $
 bin/bonobo-application-ps
 bin/ggv
 share/locale/de/LC_MESSAGES/ggv.mo
@@ -107,6 +107,7 @@ share/omf/ggv/ggv-C.omf
 share/omf/ggv/ggv-it.omf
 share/omf/ggv/ggv-ja.omf
 @dirrm share/omf/ggv
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gnome/help/ggv/ja/stylesheet-images
 @dirrm share/gnome/help/ggv/ja
 @dirrm share/gnome/help/ggv/C/stylesheet-images
@@ -114,5 +115,3 @@ share/omf/ggv/ggv-ja.omf
 @dirrm share/gnome/help/ggv/it/stylesheet-images
 @dirrm share/gnome/help/ggv/it
 @dirrm share/gnome/help/ggv
-@unexec scrollkeeper-rebuilddb
-@exec scrollkeeper-rebuilddb

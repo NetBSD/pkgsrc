@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/02/14 21:11:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/18 14:55:59 jmmv Exp $
 #
 
 DISTNAME=		eog-2.2.0
+PKGREVISION=		1
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/eog/2.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -18,11 +19,10 @@ USE_X11=		YES
 USE_GMAKE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 
 GCONF2_SCHEMAS= 	eog.schemas
 
-.include "../../textproc/scrollkeeper/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../print/libgnomeprint/buildlink2.mk"
 .include "../../sysutils/gnome-vfs2/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
