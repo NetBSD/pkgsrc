@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2429 2004/11/23 16:59:02 jschauma Exp $
+$NetBSD: TODO,v 1.2430 2004/11/23 17:15:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -258,7 +258,6 @@ Suggested package updates
 	o GutenMark-20040320
 	o TeXmacs-1.0.4.4
 	o Xaw3d-1.5E
-	o Xbae-4.50.0
 	o YoSucker-63
 	o aap-0.144
 	o abiword1-1.0.7
@@ -519,6 +518,7 @@ Suggested package updates
 	o gnetcat-0.7.1
 	o gnetman-20041117
 	o gnocatan-0.8.1.30
+	o gnome-vfs-2.8.3
 	o gnotime-2.2.1
 	o gnugk-2.2.0
 	o gnunet-0.6.5
@@ -569,7 +569,7 @@ Suggested package updates
 	o icdprog-0.5
 	o icecast-2.1.0
 	o icepref-2.3
-	o ices-2.0.0
+	o ices-mp3-2.0.0
 	o icewm-1.2.17
 	o icewm-gnome-1.2.17
 	o icewm-imlib-1.2.17
@@ -1161,7 +1161,6 @@ Suggested package updates
 	o xpad-2.0
 	o xpenguins-2.2
 	o xpuyopuyo-0.9.5
-	o xquote-2.6.9
 	o xskat-4.0
 	o xtide-2.7.1
 	o xtraceroute-0.9.1
