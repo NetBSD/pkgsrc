@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.21 1999/09/18 15:24:12 kim Exp $
+# $NetBSD: Makefile,v 1.22 2000/02/01 16:41:48 rh Exp $
 # FreeBSD Id: Makefile,v 1.18 1997/05/16 01:42:31 asami Exp 
 #
 
     SUBDIR += arc
     SUBDIR += bzip2
     SUBDIR += bunzip
+    SUBDIR += fastjar
     SUBDIR += freeze
     SUBDIR += gcpio
     SUBDIR += gsharutils
