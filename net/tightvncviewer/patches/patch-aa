@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2001/09/23 00:55:16 mycroft Exp $
+
+--- vncviewer/Imakefile.orig	Mon Jun 18 13:17:15 2001
++++ vncviewer/Imakefile	Sun Sep 23 00:09:50 2001
+@@ -6,12 +6,7 @@
+ CDEBUGFLAGS = -O2
+ #endif
+ 
+-XCOMM Shared memory support works OK on x86 linux, not tested elsewhere but
+-XCOMM seems to cause problems on Digital Unix.
+-
+-#if defined(i386Architecture) && defined(LinuxArchitecture)
+ DEFINES = -DMITSHM
+-#endif
+ 
+ INCLUDES = -I../include -I. -I/usr/include
+ VNCAUTH_LIB = ../libvncauth/libvncauth.a
