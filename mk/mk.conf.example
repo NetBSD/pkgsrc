@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.142 2000/06/08 16:00:44 wennmach Exp $
+# $NetBSD: mk.conf.example,v 1.143 2000/07/06 15:12:04 hubertf Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -24,6 +24,13 @@
 #
 #	Firstly, definitions for NetBSD and package collection
 #
+
+#PKG_DEVELOPER=	yes
+# Run some sanity checks that package developers want:
+#  * make sure patches apply with zero fuzz
+#  * run check-shlibs to see that all binaries will find their libs
+# Possible: defined, not defined
+# Default: not defined
 
 #MANZ=
 # gzip manual pages at installation time
