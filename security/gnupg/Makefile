@@ -1,15 +1,20 @@
-# $NetBSD: Makefile,v 1.3 1999/04/09 09:39:20 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/12/02 15:50:43 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
-DISTNAME=	gnupg-0.9.5
+DISTNAME=	gnupg-1.0.0
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.gnupg.org/pub/gcrypt/
+MASTER_SITES=	ftp://ftp.gnupg.org/pub/gcrypt/gnupg/
 
 MAINTAINER=	packages@NetBSD.ORG
-HOMEPAGE=	http://www.gnupg.org
+HOMEPAGE=	http://www.gnupg.org/
 
-GNU_CONFIGURE=  yes
+DEPENDS+=	gettext-0.10.35:../../devel/gettext
+
+USE_GMAKE=	yes
+
+GNU_CONFIGURE=	yes
+
 RESTRICTED=	"Cryptographic software"
 MIRROR_DISTFILE=no
 
