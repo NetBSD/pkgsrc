@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/03/11 03:01:54 tv Exp $
+# $NetBSD: Makefile,v 1.29 2001/05/14 13:03:47 agc Exp $
 #
 
 COMMENT=	Archivers
@@ -26,6 +26,7 @@ SUBDIR+=	nulib2
 SUBDIR+=	ppunpack
 SUBDIR+=	rar
 SUBDIR+=	squsq
+SUBDIR+=	szdd
 SUBDIR+=	unace
 SUBDIR+=	unarj
 SUBDIR+=	undms
