@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6256 2004/06/21 04:06:54 wiz Exp $
+$NetBSD: CHANGES,v 1.6257 2004/06/21 07:08:29 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2991,3 +2991,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated websvn to 1.40 [xtraeme 2004-06-21]
 	Updated bozohttpd to 20040218nb6 [lukem 2004-06-21]
 	Updated scmxx to 0.7.1 [wiz 2004-06-21]
+	Added xfce4-weather-plugin-0.3.9 [martti 2004-06-21]
+	Added xfce4-cpugraph-plugin-0.2.0 [martti 2004-06-21]
+	Added xfce4-xkb-plugin-0.3.1 [martti 2004-06-21]
+	Added xfce4-taskbar-plugin-0.1.0 [martti 2004-06-21]
+	Added xfce4-windowlist-plugin-0.1.0 [martti 2004-06-21]
