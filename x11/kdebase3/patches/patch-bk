@@ -1,15 +1,15 @@
-$NetBSD: patch-bk,v 1.3 2003/01/02 09:12:34 skrll Exp $
+$NetBSD: patch-bk,v 1.4 2003/03/11 13:10:21 markd Exp $
 
---- kicker/Makefile.in.orig	Fri Dec 27 18:19:11 2002
+--- kicker/Makefile.in.orig	Fri Jan 17 09:03:07 2003
 +++ kicker/Makefile.in
-@@ -291,19 +291,23 @@ INCLUDES = $(all_includes)
+@@ -289,19 +289,23 @@ INCLUDES = $(all_includes)
  SUBDIRS = share core ui buttons . proxy taskmanager taskbar applets extensions menuext data
  
  bin_PROGRAMS = kicker
 -lib_LTLIBRARIES = kicker.la
 +lib_LTLIBRARIES = libkicker_main.la kicker.la
  
- CLEANFILES = dummy.cpp
+ CLEANFILES = dummy.cpp dummy_la.cpp
  
 -kicker_la_LIBADD = core/libkicker_core.la  buttons/libkicker_buttons.la \
 +libkicker_main_la_LIBADD = core/libkicker_core.la  buttons/libkicker_buttons.la \
@@ -22,17 +22,17 @@ $NetBSD: patch-bk,v 1.3 2003/01/02 09:12:34 skrll Exp $
 +libkicker_main_la_LDFLAGS = $(KDE_PLUGIN) $(all_libraries)
  
 -kicker_LDADD = kicker.la
--kicker_SOURCES = dummy.cpp
+-kicker_SOURCES = dummy_la.cpp
 +kicker_la_LIBADD = libkicker_main.la
 +kicker_la_SOURCES = kicker_main.cpp
-+kicker_la_LDFLAGS = -module -avoid-version $(all_libraries)
++kicker_la_LDFLAGS = -module $(all_libraries)
 +
 +kicker_LDADD = libkicker_main.la
 +kicker_SOURCES = kicker_main.cpp
  kicker_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  autostart_DATA = panel.desktop
-@@ -314,21 +318,26 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -318,21 +322,26 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -55,43 +55,45 @@ $NetBSD: patch-bk,v 1.3 2003/01/02 09:12:34 skrll Exp $
  bin_PROGRAMS = kicker$(EXEEXT)
  PROGRAMS = $(bin_PROGRAMS)
  
--am_kicker_OBJECTS = dummy.$(OBJEXT)
+-am_kicker_OBJECTS = dummy_la.$(OBJEXT)
 +am_kicker_OBJECTS = kicker_main.$(OBJEXT)
  #>- kicker_OBJECTS = $(am_kicker_OBJECTS)
  #>+ 1
--kicker_OBJECTS = dummy.$(OBJEXT)
+-kicker_OBJECTS = dummy_la.$(OBJEXT)
 -kicker_DEPENDENCIES = kicker.la
 +kicker_OBJECTS = kicker_main.$(OBJEXT)
 +kicker_DEPENDENCIES = libkicker_main.la
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -336,9 +345,11 @@ CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
+@@ -341,9 +350,13 @@ LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Plo $(DEPDIR)/dummy.Po
+ am__depfiles_maybe = depfiles
+-#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Plo ./$(DEPDIR)/dummy_la.Po
 -#>+ 2
--@AMDEP_TRUE@DEP_FILES =   $(DEPDIR)/dummy.Plo $(DEPDIR)/dummy.Po
-+#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Plo $(DEPDIR)/kicker_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kicker_main.Po
-+#>+ 3
-+@AMDEP_TRUE@DEP_FILES =   $(DEPDIR)/dummy.Plo $(DEPDIR)/kicker_main.Plo \
-+@AMDEP_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kicker_main.Po
+-@AMDEP_TRUE@DEP_FILES =   ./$(DEPDIR)/dummy.Plo ./$(DEPDIR)/dummy_la.Po
++#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kicker_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kicker_main.Po
++#>+ 4
++@AMDEP_TRUE@DEP_FILES =   ./$(DEPDIR)/dummy.Plo \
++@AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kicker_main.Plo \
++@AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kicker_main.Po
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -359,7 +370,8 @@ CXXLD = $(CXX)
+@@ -364,7 +377,8 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
 -DIST_SOURCES = $(kicker_la_SOURCES) $(kicker_SOURCES)
 +DIST_SOURCES = $(kicker_la_SOURCES) $(libkicker_main_la_SOURCES) \
 +	$(kicker_SOURCES)
- DATA = $(autostart_DATA)
+ DATA = $(autostart_DATA) $(config_DATA) $(update_DATA)
  
  
-@@ -369,7 +381,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -374,7 +388,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	uninstall-recursive check-recursive installcheck-recursive
  DIST_COMMON = AUTHORS ChangeLog Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -100,10 +102,10 @@ $NetBSD: patch-bk,v 1.3 2003/01/02 09:12:34 skrll Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -416,11 +428,13 @@ uninstall-libLTLIBRARIES:
- 
- clean-libLTLIBRARIES:
- 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+@@ -419,11 +433,13 @@ clean-libLTLIBRARIES:
+ 	  echo "rm -f \"$${dir}/so_locations\""; \
+ 	  rm -f "$${dir}/so_locations"; \
+ 	done
 -#>- kicker.la: $(kicker_la_OBJECTS) $(kicker_la_DEPENDENCIES) 
 -#>+ 2
 -@KDE_USE_CLOSURE_TRUE@kicker.la: kicker.la.closure $(kicker_la_OBJECTS) $(kicker_la_DEPENDENCIES) 
@@ -115,20 +117,29 @@ $NetBSD: patch-bk,v 1.3 2003/01/02 09:12:34 skrll Exp $
 +@KDE_USE_CLOSURE_TRUE@libkicker_main.la: libkicker_main.la.closure $(libkicker_main_la_OBJECTS) $(libkicker_main_la_DEPENDENCIES) 
 +@KDE_USE_CLOSURE_FALSE@libkicker_main.la: $(libkicker_main_la_OBJECTS) $(libkicker_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libkicker_main_la_LDFLAGS) $(libkicker_main_la_OBJECTS) $(libkicker_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -456,7 +470,8 @@ distclean-compile:
+@@ -464,7 +480,8 @@ distclean-compile:
  	-rm -f *.tab.c
  
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Plo@am__quote@
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kicker_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kicker_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy_la.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kicker_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kicker_main.Po@am__quote@
  
  distclean-depend:
- 	-rm -rf $(DEPDIR)
-@@ -740,17 +755,17 @@ dummy.cpp:
+ 	-rm -rf ./$(DEPDIR)
+@@ -649,7 +666,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=kcmkicker.desktop panel.desktop kicker-3.1-properSizeSetting.pl kickerrc.upd 
++KDE_DIST=kicker-3.1-properSizeSetting.pl kcmkicker.desktop kicker.la.closure kicker.la.blsav kickerrc.upd kicker libkicker_main.la.blsav panel.desktop libkicker_main.la.closure 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -807,17 +824,17 @@ dummy.cpp dummy_la.cpp:
  .NOEXPORT:
  
  #>+ 8
