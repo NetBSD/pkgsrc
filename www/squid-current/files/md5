@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.3 1998/10/12 06:11:39 kim Exp $
+$NetBSD: md5,v 1.4 1999/01/08 15:29:47 bad Exp $
 
-MD5 (squid-2.0.PATCH2-src.tar.gz) = 2237cc7f55fab149f65f98a9fdfa08c5
+MD5 (squid-2.1.PATCH2-src.tar.gz) = 71c6b2437e562224d43dcde5765001f8
+MD5 (squid-2.1.PATCH2-clientHandleIMSReply-leak.patch) = c5416dc4a2c0fa09a27790b575a19d9c

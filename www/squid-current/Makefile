@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 1998/12/06 12:48:50 tron Exp $
+# $NetBSD: Makefile,v 1.6 1999/01/08 15:29:46 bad Exp $
 #
 
-DISTNAME=	squid-2.0.PATCH2
+DISTNAME=	squid-2.1.PATCH2
 CATEGORIES=	www
 MASTER_SITES=  \
 	ftp://squid.nlanr.net/pub/squid-2/ \
@@ -12,15 +12,19 @@ MASTER_SITES=  \
 	ftp://ftp.net.lut.ac.uk/squid/squid-2/
 EXTRACT_SUFX=	-src.tar.gz
 
+PATCH_SITES= \
+	http://squid.nlanr.net/Squid/v2/2.1/ \
+	http://mirror.aarnet.edu.au/squid/v2/2.1/
+PATCHFILES=squid-2.1.PATCH2-clientHandleIMSReply-leak.patch
+
+MAINTAINER=	bad@netbsd.org
+HOMEPAGE=	http://squid.nlanr.net/Squid/
+
 CONFLICTS=	squid-1.1.21 \
 		squid-2.0.PRE1 \
 		squid-2.0.RELEASE \
-		squid-2.0.PATCH1
-
-MAINTAINER=	kim@tac.nyc.ny.us
-HOMEPAGE=	http://squid.nlanr.net/Squid/
-
-IGNORE=		"can be found in \"pkgsrc/www/squid\""
+		squid-2.0.PATCH1 \
+		squid-2.0.PATCH2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--sysconfdir=/etc \
@@ -30,6 +34,7 @@ CONFIGURE_ARGS=	--sysconfdir=/etc \
 CONFIGURE_ARGS+=	--enable-cachemgr-hostname=localhost
 CONFIGURE_ARGS+=	--enable-icmp
 #CONFIGURE_ARGS+=	--enable-snmp
+CONFIGURE_ARGS+=	--enable-cache-digests
 
 MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
@@ -46,16 +51,16 @@ pre-install:
 	@${MKDIR} ${PREFIX}/share/squid/icons
 	@(							\
 	cd ${WRKSRC}/errors/English;				\
-	ls ERR_* | sed -e 's@^@share/squid/errors/@';		\
-	echo "@dirrm share/squid/errors";			\
+	ls ERR_* | ${SED} -e 's@^@share/squid/errors/@';		\
+	${ECHO} "@dirrm share/squid/errors";			\
 	cd ${WRKSRC}/icons;					\
-	ls anthony-*.gif | sed -e 's@^@share/squid/icons/@';	\
-	echo "@dirrm share/squid/icons";			\
-	echo "share/squid/mib.txt";				\
-	echo "share/squid/mime.conf";				\
-	echo "share/squid/mime.conf.default";			\
-	echo "share/squid/squid.conf.default";			\
-	echo "@dirrm share/squid";				\
+	ls anthony-*.gif | ${SED} -e 's@^@share/squid/icons/@';	\
+	${ECHO} "@dirrm share/squid/icons";			\
+	${ECHO} "share/squid/mib.txt";				\
+	${ECHO} "share/squid/mime.conf";				\
+	${ECHO} "share/squid/mime.conf.default";			\
+	${ECHO} "share/squid/squid.conf.default";			\
+	${ECHO} "@dirrm share/squid";				\
 	) > ${WRKDIR}/PLIST.share
 
 # This is GNU ${datadir}/squid/squid.conf
