@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/04 10:07:58 tron Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/26 04:05:50 jschauma Exp $
 
 DISTNAME=		shlibs5
 PKGNAME=		suse_libc5-${SUSE_VERSION}
@@ -21,3 +21,4 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}
 
 .include "../suse64_linux/Makefile.common"
+.include "../../mk/bsd.pkg.mk"

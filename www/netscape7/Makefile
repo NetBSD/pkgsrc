@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/01/28 20:05:39 abs Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/26 04:05:39 jschauma Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -94,6 +94,6 @@ ARCH=${MACHINE_ARCH:C/i[3-6]86/i386/g}
 
 .if exists(Makefile.${OPSYS}.${ARCH})
 .  include "Makefile.${OPSYS}.${ARCH}"
-.else
-.  include "../../mk/bsd.pkg.mk"
 .endif
+
+.include "../../mk/bsd.pkg.mk"
