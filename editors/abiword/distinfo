@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2004/01/24 13:10:56 xtraeme Exp $
+$NetBSD: distinfo,v 1.24 2004/03/06 07:12:55 xtraeme Exp $
 
-SHA1 (abiword-2.0.3.tar.bz2) = d582bc616ee98166004f7dd2879d7e5fe4f7d4ab
-Size (abiword-2.0.3.tar.bz2) = 22072758 bytes
+SHA1 (abiword-2.0.4.tar.bz2) = 9e2d9b00cf3d1991e474b1ac78a9f86c9b673734
+Size (abiword-2.0.4.tar.bz2) = 22057414 bytes
 SHA1 (patch-aa) = 730e205f54516535394659c74e052bbe706e1bc2
 SHA1 (patch-ab) = a678cee31946b0102e6e62145b1d87eb3b323989
