@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2002/03/01 01:58:35 abs Exp $
+# $NetBSD: Makefile,v 1.28 2002/07/27 21:32:48 jschauma Exp $
 #
 
 VERSION=	1.1.8
 PKGNAME=	jdk-${VERSION}
+PKGREVISION=	1
 CATEGORIES=     lang
 MASTER_SITES=   ftp://ftp.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/ \
 		ftp://ftp.de.netbsd.org/pub/NetBSD/misc/java/i386/${VERSION}/
@@ -12,15 +13,11 @@ MAINTAINER=     jwise@netbsd.org
 HOMEPAGE=       http://www.quick.com.au/java/
 COMMENT=	Sun's Java(tm) Development Kit
 
-CONFLICTS=	blackdown-j* sun-j*
-
 LICENSE=	jdk-license
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !defined(JDK_HOME)
-JDK_HOME:=	${LOCALBASE}/java
-.endif
+JDK_HOME:=	${LOCALBASE}/java/${PKGNAME}
 MESSAGE_SUBST+=	JDK_HOME=${JDK_HOME}
 
 .if ${OBJECT_FMT} == "ELF"
@@ -66,8 +63,8 @@ pre-install:
 
 do-install:
 	${RM} -f ${WRKSRC}/*.orig
-	${MKDIR} ${JDK_HOME}
-	cd ${WRKSRC} ; ${GTAR} pcf - . | ( cd ${JDK_HOME} ; ${GTAR} pvxf - )
+	${INSTALL_PROGRAM_DIR} ${JDK_HOME}
+	cd ${WRKSRC} && ${PAX} -rw . ${JDK_HOME}
 
 .include "../../mk/bsd.pkg.mk"
 
