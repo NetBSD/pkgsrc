@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/31 16:13:24 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/31 16:55:55 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-server-${XF_VER}
@@ -11,7 +11,8 @@ MAINTAINER=		xfree86@blef.org
 HOMEPAGE=		http://www.xfree86.org/
 COMMENT=		XFree86 X server and related programs
 
-USE_BUILDLINK2=		YES
+USE_IMAKE=		yes
+USE_BUILDLINK2=		yes
 DISTINFO_FILE=		${.CURDIR}/../XFree86-libs/distinfo
 PATCHDIR=		${.CURDIR}/../XFree86-libs/patches
 
@@ -24,11 +25,25 @@ XINSTALL_MAN_DIRS=	programs/Xserver
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
+PLIST_SUBST+=		DRIMODULES=
 USE_PERL5=		yes # Still we need perl (at least for now)
 .  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "alpha"
 XBUILD_DIRS+=		lib/XThrStub lib/X11 lib/Xext lib/GL
 XINSTALL_DIRS+=		lib/GL/mesa/src/drv
 .  endif
+.else
+PLIST_SUBST+=		LIBDRI="@comment "
+PLIST_SUBST+=		DRIMODULES="@comment "
+.endif
+
+.if ${OPSYS} == "Linux"
+PLIST_SUBST+=		KBDMODE="@comment "
+.else
+PLIST_SUBST+=		KBDMODE=
+.endif
+
+.if ${OPSYS} == "FreeBSD"
+PLIST_SUBST+=		LIBDRI=
 .endif
 
 pre-install:
