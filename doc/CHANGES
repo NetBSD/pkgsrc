@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1432 2003/02/18 14:58:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.1433 2003/02/18 19:57:39 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -763,3 +763,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-panel to 2.2.0.1nb2 [jmmv 2003-02-18]
 	Updated gnome2-terminal to 2.0.1nb3 [jmmv 2003-02-18]
 	Updated multi-gnome-terminal to 1.6.1nb1 [jmmv 2003-02-18]
+	Added wap-utils-1.3.1 [jschauma 2003-02-18]
+	Removed ap-utils-1.3.1 [jschauma 2003-02-18]
