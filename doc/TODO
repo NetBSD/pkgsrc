@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2204 2004/10/06 22:49:44 reed Exp $
+$NetBSD: TODO,v 1.2205 2004/10/07 13:48:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -178,6 +178,7 @@ Suggested package updates
 =========================
 
 	o ImageViewer-0.6.3
+	o R-2.0.0
 	o TeXmacs-1.0.4.3
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
@@ -249,6 +250,7 @@ Suggested package updates
 	o eggdrop-1.6.17
 	o elk-3.99.6
 	o elm-me-2.4pl121
+	o erlang-r10b
 	o ettercap-0.7.1
 	o evolution-2.0.0
 	o feh-1.2.7
@@ -282,7 +284,7 @@ Suggested package updates
 	o gossip-0.7.7
 	o gpsdrive-2.09
 	o grace-5.1.17
-	o gstreamer-0.8.6
+	o gstreamer-0.8.7
 	o gtkglext-1.0.6
 	o gtkmm-2.4.5
 	o gtksee-0.5.6 [pkg/26372]
@@ -370,7 +372,7 @@ Suggested package updates
 	o openh323-1.12.2
 	o openoffice-1.1.3
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
-	o oss-3.99.1g
+	o oss-3.99.1h
 	o p5-CGI-3.05
 	o p5-CGI-Application-3.1
 	o p5-Exception-Class-1.17
@@ -413,6 +415,7 @@ Suggested package updates
 	o siag-3.6.0
 	o skkinput-2.06.4
 	o slib-3a1
+	o slrn-0.9.8.1
 	o smalltalk-2.1.8
 	o smarteiffel-2.0b2 [replacing smalleiffel|pkg/26540]
 	o sml-nj-110.49 [pkgsrc-wip]
@@ -428,6 +431,7 @@ Suggested package updates
 	o staroffice-7p1
 	o streamtuner-0.12.5
 	o sweep-0.8.3
+	o sylpheed-0.9.99
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
 	o tcm-2.20
