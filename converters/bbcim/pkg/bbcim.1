@@ -1,0 +1,253 @@
+.\" -*- nroff -*-
+.\"
+.\" bbcim.
+.\" Copyright (C) 1996 W.H.Scholten.
+.\"
+.\" This program is free; you may redistribute it and/or modified
+.\" versions of it if you give me due credit.
+.\" You may not use part or whole of the source code for any commercial product.
+.\"
+.\" This program is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+.\"
+.\"
+.\" bbcim.1 - nroff -man source for  bbcim  man page.
+.\"
+.\"
+.\"
+.Dd June, 1997
+.Dt BBCIM 1
+.\"
+.\"------------------------------------------------------------------
+.\"
+.Sh NAME
+.Nm bbcim
+.Nd Acorn BBC Micro file conversion utility
+.\"
+.\"------------------------------------------------------------------
+.\"
+.Sh SYNOPSIS
+.Nm
+.Op Fl H
+.Op Fl V
+.Oo
+.Xo Fl a Ns Op Cm b Ns
+.Op Cm r
+.Ar image Ar file ...
+.Xc
+.Oc
+.Op Fl c Ar image
+.Op Fl d Ar image Ar file ...
+.Oo
+.Xo Fl e Ns Op Cm ds Ns
+.Op Cm # Ns
+.Op Cm b Ns
+.Op Cm rq
+.Ar image Op Ar file ...
+.Xc
+.Oc
+.Op Fl crc
+.Op Fl 40 | 80 | max | min
+.Nm ""
+.Fl s Ns Oo
+.Cm #
+.Oc
+.Ar file
+.Nm ""
+.Fl x Ar file ...
+.Nm ""
+. Fl y Ar file ...
+.Nm ""
+.Fl icrc Ar file ...
+.Nm ""
+.Fl xcrc
+.Nm ""
+.Fl interss Op Cm sd|dd
+.Ar image Ar image Ar image
+.Nm ""
+.Fl splitds Op Cm sd|dd
+.Ar image
+.Nm ""
+.Fl ddos2dfs Ar image
+.Nm ""
+.Fl w62dfs Ar image
+.\"
+.\"------------------------------------------------------------------ .\"
+.Sh DESCRIPTION
+.Nm
+is a file conversion utility to help in
+transferring files and conversion of disk images for use
+with BBC Micro emulators.
+.Pp
+The
+.Nm
+utilitiy can be invoked to perform a variety of different
+conversions - each synopsis form provides a different
+conversion. The first synopsis form has the
+following options:
+.Bl -tag -width Ds 
+.It Fl H
+Display usage information.
+.It Fl V
+Display version information.
+.It Xo Fl a Ns Op Cm b Ns
+.Op Cm r
+.Ar image Ar file ...
+.Xc
+Add files (in archive format) to the disk image.
+.Pp
+Information files are automatically skipped so
+.Pp
+.Dl bbcim -a diskimage *
+.Pp
+will work without problems. If the disk image
+didn't exist a new one will be created. The modifier
+.Cm r
+removes the files after adding them to the
+diskimage and the modifier
+.Cm b
+allows files to be added without an information file
+existing - the load and execute addresses of the file
+will be set to 0.
+.It Fl c Ar image
+List disk image catalogue.
+.It Fl d Ar image Ar file ...
+Delete files from disk image.
+.Pp
+Files without a BBC directory are assumed to have the
+root directory, e.g.
+.Pa file
+is assumed to be
+.Pa $. Ns Ar file
+.It Xo Fl e Ns Op Cm ds Ns
+.Op Cm # Ns
+.Op Cm b Ns
+.Op Cm r
+.Ar image Op Ar file ...
+.Xc
+Extract files from the disk image specified in
+.Ar image .
+.Pp
+When the extract option is specified without modifiers
+files are extracted with the filename format
+.Pa Ar image Ns .$. Ns Ar file
+and an information file (containing load and execution
+addresses) of filename format
+.Pa Ar image Ns .$. Ns Ar file Ns .inf
+is created.
+.Pp
+The
+.Cm d
+modifier places all files in a directory
+named after the disk image, i.e.
+.Pa Ar image Ns /$. Ns Ar file
+.Pp
+The
+.Cm s
+modifier will extract files with short filenames in that
+they don't include the image name in any way.
+.Pp
+The
+.Cm #
+modifier removes the BBC root directory
+.Qq $
+and glues other directories to the filename which may
+result in name clashes. That is
+.Pa E.E
+and
+.Pa EE
+would clash. If this happens you will be asked whether
+what you want to do
+.Pp Adding the
+.Cm b
+modifier only extracts the bare files - no information
+files are created.
+.Pp
+If the 
+.Cm r
+modifier is specified the image is deleted after all files
+have been extracted.
+.Pp
+In all cases a catalogue file
+.Pa imagefile.cat
+is made except when a list of file names is given, in
+which case only the files in the list are extracted
+from the disk image and
+.Cm r
+is ignored.
+.It Fl crc
+Calculate CRCs for all the files in the disk image.
+.It Fl 40
+Expand the disk image to 40 tracks.
+.It Fl 80
+Expand the disk image to 80 tracks.
+.It Fl max
+Expand the disk image to (almost) 256K.
+.It Fl min
+Truncate or minimise the disk image. This is equivalent to
+a
+.Ic *COMPACT
+and cutting off after last used sector.
+.El
+.Pp
+The remaining synopsis forms are as follows:
+.Bl -tag -width Ds
+.It Xo Fl s Ns Op Cm #
+.Ar file
+.Xc
+Split a text file with file information into information
+files. Lines not starting with a BBC (DFS) file name are
+skipped. The modifier
+.Cm #
+removes the DFS directory $
+and glues others to the file name. This can be used to
+make archive files from an xbeeb directory
+ CAN BE USED TO
+MAKE ARCHIVE FILES FROM AN XBEEB DIRECTORY. 
+.It Fl x Ar file ...
+.Qq xbeeb
+conversion of archive files in the list.
+.It Fl y Ar file ...
+Rename archive and information files to standard format (as
+produced with # in -e), adds CRC's if not found or check
+crc's if found.
+.It Fl icrc Ar file ...
+Check CRCs of given archive files.
+.It Fl xcrc
+Check CRCs in a xbeeb catalogue file against the real
+files.
+.It Xo Fl interss Op Cm sd|dd
+.Ar image1 Ar image2 Ar image3
+.Xc
+Interleaves single sided disk images
+.Ar image1
+and
+.Ar image2
+to create a new image
+.Ar image3 .
+.It Xo Fl splitds Op Cm Sd|dd
+.Ar file
+.Xc
+Split an interleaved disk image
+.Ar image
+into
+.Pa Ar image Ns .0 and
+.Pa Ar image Ns .1 .
+.It Fl ddos2dfs Ar image
+Split a single sided DDOS disk dump into several DFS
+disk images.
+.It Fl w62dfs Ar image
+Split a single sided Watford 62 DFS disk image
+.Ar image
+into 2
+DFS disk images
+.Ar image Ns .w1 and
+.Ar image Ns .w2 .
+.El
+.Sh AUTHOR
+.Nm
+was written by Wouter Scholten last known email address
+wouters@cistron.nl. This man page was put together by Nick
+Hudson (nick@nthcliff.demon.co.uk)
+

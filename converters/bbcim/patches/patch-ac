@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/06/07 19:05:21 skrll Exp $
+
+--- ddos2dfs.c.orig	Mon Jun 30 11:32:25 1997
++++ ddos2dfs.c	Sun Jun  4 16:57:25 2000
+@@ -24,9 +24,9 @@
+     #ifdef NL
+     printf("Naam van het DD bbc diskbeeld?");
+     #else
+-    printf("Name of the DD bbc diskimage?");
++    printf("Name of the DD bbc diskimage?\n");
+     #endif
+-    scanf("%50s", disk);
++    exit(1);
+   }
+   else strcpy(disk, argv[2]);
+ 
+@@ -43,7 +43,7 @@
+ #ifdef NL
+     printf("Bestand  %s is niet te openen\n\n", disk);
+ #else
+-    printf("File %s cannot be opened\n\n", disk);
++    printf("File %s cannot be opened\n", disk);
+ #endif
+     exit(1);
+   }
