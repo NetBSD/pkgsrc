@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/02/14 17:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2004/02/21 19:17:33 minskim Exp $
 #
 
 DISTNAME=		oaf-0.6.10
@@ -11,7 +11,7 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		New object activation framework for GNOME
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_X11BASE=		YES
@@ -20,8 +20,8 @@ USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
-.include "../../devel/popt/buildlink2.mk"
-.include "../../textproc/libxml/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../textproc/libxml/buildlink3.mk"
+.include "../../x11/gnome-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
