@@ -1,14 +1,13 @@
-$NetBSD: patch-ad,v 1.4 2001/03/25 01:09:50 jtb Exp $
+$NetBSD: patch-ad,v 1.5 2002/05/03 23:14:52 jtb Exp $
 
---- /dev/null	Sun Mar 25 00:37:46 2001
-+++ hdf/src/Makefile
-@@ -0,0 +1,43 @@
+--- /dev/null	Wed May  1 14:00:57 2002
++++ hdf/src/Makefile	Wed May  1 14:01:38 2002
+@@ -0,0 +1,42 @@
 +LIB= df
 +
 +LIBDIR= ${PREFIX}/lib
 +
 +CPPFLAGS+= -Dunix -DMEM_LIST
-+CPPFLAGS+= -I${JPEGBASE}/include
 +
 +NOLINT= 1
 +MKPIC= no
@@ -17,7 +16,7 @@ $NetBSD: patch-ad,v 1.4 2001/03/25 01:09:50 jtb Exp $
 +
 +NOGCCERROR= 1
 +
-+SRCS= atom.c bitvect.c cdeflate.c cnbit.c cnone.c crle.c cskphuff.c	\
++SRCS=   atom.c bitvect.c cdeflate.c cnbit.c cnone.c crle.c cskphuff.c	\
 +	df24.c df24f.c dfan.c dfanf.c dfcomp.c dfconv.c dff.c dfgr.c	\
 +	dfgroup.c dfimcomp.c dfjpeg.c dfkconv.c dfkcray.c dfkfuji.c	\
 +	dfknat.c dfkswap.c dfkvms.c dfp.c dfpf.c dfr8.c dfr8f.c dfrle.c	\
