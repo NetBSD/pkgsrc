@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/06/19 04:08:48 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2001/07/14 12:37:54 jlam Exp $
 #
 
 DISTNAME=		giflib-4.1.0
@@ -36,7 +36,7 @@ post-patch:
 #
 pre-build:
 	${TOUCH} ${WRKSRC}/aclocal.m4
-	${FIND} ${WRKSRC} -name "Makefile.in" -print0 | ${XARGS} -0 ${TOUCH}
+	${FIND} ${WRKSRC} -name "Makefile.in" -print | ${XARGS} ${TOUCH}
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
