@@ -1,0 +1,2 @@
+distfetch helps you to fetch all the distfiles you need to compile
+your packages. Only the required distfiles are downloaded.
