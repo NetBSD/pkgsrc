@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/06/26 16:57:09 rh Exp $
+
+--- Makefile.in.orig	Wed Jun 21 23:59:21 2000
++++ Makefile.in	Mon Jun 26 17:52:19 2000
+@@ -427,7 +427,7 @@
+ 	sed < $@.in > $@.tmp \
+ 	    -e 's:@-GUILE-@:${GUILE}:' \
+ 	    -e 's:@-VERSION-@:${VERSION}:' \
+-	    -e 's:@-libdir-@:${libdir}:' \
++	    -e 's:@-libdir-@:${libdir}:g' \
+ 	    -e 's:@-includedir-@:${includedir}:'
+ 	chmod +x $@.tmp
+ 	mv $@.tmp $@
