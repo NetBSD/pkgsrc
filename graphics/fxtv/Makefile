@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/16 15:22:19 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2001/05/10 22:54:12 tron Exp $
 
 DISTNAME=	fxtv-1.03
 CATEGORIES=	graphics
@@ -11,8 +11,8 @@ COMMENT=	TV display application for Brooktree 848 compatible TV cards
 
 DEPENDS+=	tiff>=3.5.5:../../graphics/tiff
 
-ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
-			NetBSD-1.5_ALPHA-* NetBSD-1.[5-9]*-*
+ONLY_FOR_PLATFORM=	NetBSD-1.[5-9]*-arm32 NetBSD-1.[5-9]*-atari \
+			NetBSD-1.[5-9]*-i386
 
 USE_X11BASE=	YES
 USE_XAW=	YES
