@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.90.4.5 2003/08/01 19:00:34 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.90.4.6 2003/08/14 07:37:06 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -1079,7 +1079,6 @@ ${BUILDLINK_DIR}/${_prog_}: ${_GNU_MISSING}
 .  endfor
 .endfor
 
-.if defined(USE_NEW_TEXINFO)
 # install-info and makeinfo handling.
 #
 # Create an install-info script that is a "no operation" command
@@ -1103,7 +1102,7 @@ ${BUILDLINK_DIR}/bin/install-info:
 CONFIGURE_ENV+=	MAKEINFO="${BUILDLINK_DIR}/bin/makeinfo"
 MAKE_ENV+=	MAKEINFO="${BUILDLINK_DIR}/bin/makeinfo"
 
-.  if empty(USE_MAKEINFO:M[nN][oO])
+.if empty(USE_MAKEINFO:M[nN][oO])
 do-buildlink: makeinfo-wrapper
 makeinfo-wrapper: ${BUILDLINK_DIR}/bin/makeinfo
 ${BUILDLINK_DIR}/bin/makeinfo:
@@ -1115,7 +1114,7 @@ ${BUILDLINK_DIR}/bin/makeinfo:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} 'exec ${MAKEINFO} "$$@"' >> ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-.  else # !USE_MAKEINFO
+.else # !USE_MAKEINFO
 do-buildlink: hide-makeinfo
 hide-makeinfo: ${BUILDLINK_DIR}/bin/makeinfo
 ${BUILDLINK_DIR}/bin/makeinfo: ${_GNU_MISSING}
@@ -1127,5 +1126,4 @@ ${BUILDLINK_DIR}/bin/makeinfo: ${_GNU_MISSING}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} 'exit 1' >>  ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-.  endif # USE_MAKEINFO
-.endif # USE_NEW_TEXINFO
+.endif # USE_MAKEINFO
