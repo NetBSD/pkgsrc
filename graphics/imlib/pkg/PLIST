@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2000/02/12 03:24:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2000/06/09 11:06:22 wiz Exp $
 bin/imlib_config
 bin/imlib-config
 etc/imrc
@@ -11,10 +11,36 @@ include/gdk_imlib_types.h
 include/Imlib.h
 include/Imlib_private.h
 include/Imlib_types.h
-lib/libImlib.so.10.8
 lib/libImlib.a
+lib/libImlib.la
+lib/libImlib.so.10.8
 lib/libgdk_imlib.a
+lib/libgdk_imlib.la
 lib/libgdk_imlib.so.10.8
+lib/libimlib-bmp.a
+lib/libimlib-bmp.la
+lib/libimlib-bmp.so.0.0
+lib/libimlib-gif.a
+lib/libimlib-gif.la
+lib/libimlib-gif.so.0.0
+lib/libimlib-jpeg.a
+lib/libimlib-jpeg.la
+lib/libimlib-jpeg.so.0.0
+lib/libimlib-png.a
+lib/libimlib-png.la
+lib/libimlib-png.so.0.0
+lib/libimlib-ppm.a
+lib/libimlib-ppm.la
+lib/libimlib-ppm.so.0.0
+lib/libimlib-ps.a
+lib/libimlib-ps.la
+lib/libimlib-ps.so.0.0
+lib/libimlib-tiff.a
+lib/libimlib-tiff.la
+lib/libimlib-tiff.so.0.0
+lib/libimlib-xpm.a
+lib/libimlib-xpm.la
+lib/libimlib-xpm.so.0.0
 share/aclocal/imlib.m4
 share/doc/imlib/bg.gif
 share/doc/imlib/border_diag.gif
