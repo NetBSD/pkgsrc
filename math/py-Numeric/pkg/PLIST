@@ -1,43 +1,51 @@
-@comment $NetBSD: PLIST,v 1.5 2000/09/05 08:47:38 rh Exp $
-include/python1.5/arrayobject.h
-include/python1.5/f2c.h
-include/python1.5/fftpack.h
-include/python1.5/ranlib.h
-include/python1.5/ufuncobject.h
-lib/python1.5/site-packages/_numpymodule.so
-lib/python1.5/site-packages/fast_umathmodule.so
-lib/python1.5/site-packages/fftpack.so
-lib/python1.5/site-packages/lapack_lite.so
-lib/python1.5/site-packages/multiarraymodule.so
-lib/python1.5/site-packages/ranlib.so
-lib/python1.5/site-packages/umathmodule.so
-lib/python1.5/site-packages/ArrayPrinter.py
-lib/python1.5/site-packages/ArrayPrinter.pyc
-lib/python1.5/site-packages/ArrayPrinter.pyo
-lib/python1.5/site-packages/FFT.py
-lib/python1.5/site-packages/FFT.pyc
-lib/python1.5/site-packages/FFT.pyo
-lib/python1.5/site-packages/LinearAlgebra.py
-lib/python1.5/site-packages/LinearAlgebra.pyc
-lib/python1.5/site-packages/LinearAlgebra.pyo
-lib/python1.5/site-packages/MLab.py
-lib/python1.5/site-packages/MLab.pyc
-lib/python1.5/site-packages/MLab.pyo
-lib/python1.5/site-packages/Matrix.py
-lib/python1.5/site-packages/Matrix.pyc
-lib/python1.5/site-packages/Matrix.pyo
-lib/python1.5/site-packages/Numeric.py
-lib/python1.5/site-packages/Numeric.pyc
-lib/python1.5/site-packages/Numeric.pyo
-lib/python1.5/site-packages/Precision.py
-lib/python1.5/site-packages/Precision.pyc
-lib/python1.5/site-packages/Precision.pyo
-lib/python1.5/site-packages/RandomArray.py
-lib/python1.5/site-packages/RandomArray.pyc
-lib/python1.5/site-packages/RandomArray.pyo
-lib/python1.5/site-packages/UserArray.py
-lib/python1.5/site-packages/UserArray.pyc
-lib/python1.5/site-packages/UserArray.pyo
-share/doc/py-Numeric/doc.html
-share/doc/py-Numeric/home.html
-@dirrm share/doc/py-Numeric
+@comment $NetBSD: PLIST,v 1.6 2000/12/05 10:05:46 drochner Exp $
+PYINC/Numeric/arrayobject.h
+PYINC/Numeric/f2c.h
+PYINC/Numeric/ranlib.h
+PYINC/Numeric/ufuncobject.h
+PYSITELIB/FFT/FFT.py
+PYSITELIB/FFT/FFT.pyc
+PYSITELIB/FFT/__init__.py
+PYSITELIB/FFT/__init__.pyc
+PYSITELIB/FFT/fftpack.so
+PYSITELIB/MA/MA_version.py
+PYSITELIB/MA/MA_version.pyc
+PYSITELIB/MA/__init__.py
+PYSITELIB/MA/__init__.pyc
+PYSITELIB/MA/activeattr.py
+PYSITELIB/MA/activeattr.pyc
+PYSITELIB/Numeric/ArrayPrinter.py
+PYSITELIB/Numeric/ArrayPrinter.pyc
+PYSITELIB/Numeric/LinearAlgebra.py
+PYSITELIB/Numeric/LinearAlgebra.pyc
+PYSITELIB/Numeric/MLab.py
+PYSITELIB/Numeric/MLab.pyc
+PYSITELIB/Numeric/Matrix.py
+PYSITELIB/Numeric/Matrix.pyc
+PYSITELIB/Numeric/Numeric.py
+PYSITELIB/Numeric/Numeric.pyc
+PYSITELIB/Numeric/Precision.py
+PYSITELIB/Numeric/Precision.pyc
+PYSITELIB/Numeric/RandomArray.py
+PYSITELIB/Numeric/RandomArray.pyc
+PYSITELIB/Numeric/UserArray.py
+PYSITELIB/Numeric/UserArray.pyc
+PYSITELIB/Numeric/_numpy.so
+PYSITELIB/Numeric/arrayfns.so
+PYSITELIB/Numeric/lapack_lite.so
+PYSITELIB/Numeric/multiarray.so
+PYSITELIB/Numeric/numeric_version.py
+PYSITELIB/Numeric/numeric_version.pyc
+PYSITELIB/Numeric/ranlib.so
+PYSITELIB/Numeric/umath.so
+PYSITELIB/RNG/RNG.so
+PYSITELIB/RNG/Statistics.py
+PYSITELIB/RNG/Statistics.pyc
+PYSITELIB/RNG/__init__.py
+PYSITELIB/RNG/__init__.pyc
+PYSITELIB/Numeric.pth
+@dirrm PYINC/Numeric
+@dirrm PYSITELIB/FFT
+@dirrm PYSITELIB/Numeric
+@dirrm PYSITELIB/MA
+@dirrm PYSITELIB/RNG
