@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.1 2004/01/28 10:58:00 lukem Exp $
+$NetBSD: patch-ba,v 1.2 2004/02/01 22:37:19 tron Exp $
 
---- pgp.c.orig	2002-01-10 02:39:28.000000000 +1100
-+++ pgp.c
+--- pgp.c.orig	Wed Jan  9 16:39:28 2002
++++ pgp.c	Sun Feb  1 23:32:50 2004
 @@ -55,7 +55,7 @@
  
  
@@ -11,20 +11,20 @@ $NetBSD: patch-ba,v 1.1 2004/01/28 10:58:00 lukem Exp $
  
  void pgp_void_passphrase (void)
  {
-
---- send.c.orig	2002-01-31 09:50:59.000000000 +1100
-+++ send.c
-@@ -1611,6 +1611,13 @@ full_fcc:
-     }
+@@ -737,14 +737,14 @@
+     
+     if (pgp_copy_checksig  (pgperr, s->fpout) >= 0)
+       badsig = 0;
+-
+-    safe_fclose (&pgperr);
+     
+     if ((rv = mutt_wait_filter (thepid)))
+       badsig = -1;
+     
+      dprint (1, (debugfile, "pgp_verify_one: mutt_wait_filter returned %d.\n", rv));
    }
- 
-+#ifdef HAVE_PGP
-+  {
-+    /* Extend the expiry time while messages keep getting sent.  */
-+    extern time_t PgpExptime;
-+    PgpExptime = time (NULL) + PgpTimeout;
-+  }
-+#endif /* HAVE_PGP */
- 
-   rv = 0;
++
++  safe_fclose (&pgperr);
+   
+   state_attach_puts (_("[-- End of PGP output --]\n\n"), s);
    
