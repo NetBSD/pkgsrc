@@ -1,0 +1,7 @@
+Binkd is a Fidonet mailer designed to operate via TCP/IP networks.  As a
+FTN-compatible internet daemon, it makes possible efficient utilization of
+TCP/IP protocol suite as a transport layer in FTN-based (Fido Technology
+Network) networks.
+
+Binkd expects your spool for Fido-like networks to be in BSO ("Bink style
+outbound") format. BSO is also used by ifmail and BinkleyTerm mailers.
