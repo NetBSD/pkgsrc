@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/09/16 10:07:39 martti Exp $
+# $NetBSD: Makefile,v 1.26 2002/10/20 07:58:36 martti Exp $
 
 DISTNAME=	squirrelmail-1.2.8
 CATEGORIES=	mail www
@@ -39,8 +39,8 @@ CONF_FILES+=	${EGDIR}/squirrelmail.conf ${PKG_SYSCONFDIR}/squirrelmail.conf
 
 OWN_DIRS=		${DATADIR}
 OWN_DIRS+=		${SMDIR} ${SMDIR}/config
-OWN_DIRS_PERMS=		${ATTACHMENTS_DIR} ${ROOT_USER} nobody 730
-OWN_DIRS_PERMS+=	${USER_PREFS_DIR} nobody nobody 755
+OWN_DIRS_PERMS=		${ATTACHMENTS_DIR} ${ROOT_USER} ${APACHE_GROUP} 730
+OWN_DIRS_PERMS+=	${USER_PREFS_DIR} ${APACHE_USER} ${APACHE_GROUP} 755
 
 post-patch:
 	cd ${WRKSRC};							\
