@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3367 2005/04/05 14:57:32 cube Exp $
+$NetBSD: TODO,v 1.3368 2005/04/06 04:16:11 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -461,7 +461,6 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdeskcal-0.57.1
 	o gdm1-2.2.5.5
-	o getmail-4.3.5
 	o gettext-0.14.2
 	o gfract-0.3.2
 	o ghc-6.2.2
