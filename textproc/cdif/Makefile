@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:37:18 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/07 21:16:10 jtb Exp $
 #
 
 DISTNAME=		cdif-1.15
@@ -8,6 +8,8 @@ EXTRACT_SUFX=		# empty
 
 MAINTAINER=		packages@netbsd.org
 COMMENT=		word context diff
+
+LICENSE=		no-commercial-use
 
 USE_PERL5=		# defined
 
