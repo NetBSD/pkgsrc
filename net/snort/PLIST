@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2004/09/21 15:50:26 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.17 2004/09/23 20:01:34 adrianp Exp $
 bin/snort
 man/man8/snort.8
 share/doc/snort/AUTHORS
@@ -2464,7 +2464,7 @@ share/snort/rules/web-misc.rules
 share/snort/rules/web-php.rules
 share/snort/rules/x11.rules
 @dirrm share/snort/rules
-@dirrm share/snort
+@unexec ${RMDIR} %D/share/snort 2>/dev/null || ${TRUE}
 @dirrm share/examples/snort
 @dirrm share/doc/snort/signatures
 @dirrm share/doc/snort
