@@ -3,6 +3,7 @@
 # Date Created:		04 Aug 1996
 # Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
 #
+# $NetBSD: Makefile,v 1.2 1998/03/01 22:28:58 tron Exp $
 # $FreeBSD Id: Makefile,v 1.14 1998/02/18 22:20:02 hoek Exp
 #
 
@@ -26,9 +27,8 @@ DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/uulib/libuu.so.1.0 ${PREFIX}/lib
-	@${LDCONFIG} -m ${PREFIX}/lib
+	@${LDCONFIG} || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/uulib/libuu.a ${PREFIX}/lib
-	@/usr/bin/ranlib ${PREFIX}/lib/libuu.a
 	${INSTALL_DATA} ${WRKSRC}/uulib/uudeview.h ${PREFIX}/include/uu.h
 	${INSTALL_MAN} ${FILESDIR}/uulib.3 ${PREFIX}/man/man3
 	perl -pi -e '$$a = '\''${PREFIX}/'\''; $$a =~ s/([^\w\/])/\\$$1/g; s/FUNKYTOKENHERE/$$a/' ${PREFIX}/man/man3/uulib.3
