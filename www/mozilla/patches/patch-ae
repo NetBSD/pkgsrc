@@ -1,0 +1,32 @@
+diff -ru ../mozilla-current.orig/mozilla/nsprpub/config/NetBSD.mk ./nsprpub/config/NetBSD.mk
+--- ../mozilla-current.orig/mozilla/nsprpub/config/NetBSD.mk	Thu Apr 22 06:37:38 1999
++++ ./nsprpub/config/NetBSD.mk	Sun Jun  4 14:06:23 2000
+@@ -44,11 +44,25 @@
+ 
+ ARCH			= netbsd
+ 
+-DLL_SUFFIX		= so.1.0
++SHLIB_MAJOR		= 1
++SHLIB_MINOR		= 0
+ 
+-DSO_CFLAGS		= -fPIC
++ifeq ($(OBJECT_FMT),ELF)
++DLL_SUFFIX		= so
++DSO_CFLAGS		= -fpic -DPIC
++DSO_LDOPTS		= -x -shared -soname lib$(LIBRARY_NAME)$(MOD_VERSION).so.$(SHLIB_MAJOR)
++LIBRUNPATH		= `(cd $(DIST)/bin; pwd)`
++SHLIB_LDSTARTFILE= /usr/lib/crtbeginS.o
++SHLIB_LDENDFILE= /usr/lib/crtendS.o
++else
++DLL_SUFFIX		= so.$(SHLIB_MAJOR).$(SHLIB_MINOR)
++DSO_CFLAGS		= -fpic -DPIC
+ DSO_LDFLAGS		=
+-DSO_LDOPTS		= -Bshareable
++DSO_LDOPTS		= -x -shared
++SHLIB_LDSTARTFILE= /usr/lib/c++rt0.o
++SHLIB_LDENDFILE=
++endif
++#
+ ifeq ($(OS_TEST),alpha)
+ DSO_LDOPTS		= -shared
+ endif

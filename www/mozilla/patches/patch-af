@@ -1,0 +1,27 @@
+diff -ru ../mozilla-current.orig/mozilla/nsprpub/config/rules.mk ./nsprpub/config/rules.mk
+--- ../mozilla-current.orig/mozilla/nsprpub/config/rules.mk	Sat May 13 05:32:17 2000
++++ ./nsprpub/config/rules.mk	Sun Jun  4 14:06:24 2000
+@@ -105,6 +105,11 @@
+ else
+ ifdef MKSHLIB
+ SHARED_LIBRARY	= $(OBJDIR)/lib$(LIBRARY_NAME)$(LIBRARY_VERSION).$(DLL_SUFFIX)
++ifeq ($(OS_ARCH), NetBSD)
++ifeq ($(OBJECT_FMT),ELF)
++SHARED_LIBRARY	= $(OBJDIR)/lib$(LIBRARY_NAME)$(LIBRARY_VERSION).$(DLL_SUFFIX).$(SHLIB_MAJOR).$(SHLIB_MINOR)
++endif # ELF
++endif # NetBSD
+ endif
+ endif
+ 
+@@ -347,7 +352,11 @@
+ 	$(MKSHLIB) -o $@ $(OBJS) $(EXTRA_LIBS) $(OS_LIBS) $(OBJDIR)/VMSuni.opt
+ 	@echo "`translate $@`" > $(@:.$(DLL_SUFFIX)=.vms)
+ else	# OpenVMS
++ifeq ($(OS_ARCH), NetBSD)
++	$(MKSHLIB) -o $@ $(SHLIB_LDSTARTFILE) $(OBJS) $(EXTRA_LIBS) $(OS_LIBS) $(SHLIB_LDENDFILE)
++else	# NetBSD
+ 	$(MKSHLIB) -o $@ $(OBJS) $(EXTRA_LIBS) $(OS_LIBS)
++endif	# NetBSD
+ endif	# OpenVMS
+ endif   # OS2
+ endif	# WINNT
