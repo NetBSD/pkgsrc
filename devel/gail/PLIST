@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/21 01:04:24 rh Exp $
+include/gail-1.0/libgail-util/gail-util.h
+include/gail-1.0/libgail-util/gailmisc.h
+include/gail-1.0/libgail-util/gailtextutil.h
+lib/gtk-2.0/modules/libgail.a
+lib/gtk-2.0/modules/libgail.la
+lib/gtk-2.0/modules/libgail.so
+lib/libgailutil.a
+lib/libgailutil.la
+lib/libgailutil.so
+lib/libgailutil.so.17
+lib/libgailutil.so.17.0
+lib/pkgconfig/gail.pc
+share/gtk-doc/html/gail-libgail-util/gail-libgail-util-gailmisc.html
+share/gtk-doc/html/gail-libgail-util/gail-libgail-util-gailtextutil.html
+share/gtk-doc/html/gail-libgail-util/index.html
+share/gtk-doc/html/gail-libgail-util/libgail-util-main.html
+@dirrm share/gtk-doc/html/gail-libgail-util
+@unexec ${RMDIR} share/gtk-doc/html 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} lib/gtk-2.0/modules 2>/dev/null || ${TRUE}
+@dirrm include/gail-1.0/libgail-util
+@dirrm include/gail-1.0
