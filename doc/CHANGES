@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9322 2005/02/26 17:22:53 wiz Exp $
+$NetBSD: CHANGES,v 1.9323 2005/02/26 17:28:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1121,3 +1121,32 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated leim to 21.4 [wiz 2005-02-26]
 	Updated fontconfig to 2.2.99 [wiz 2005-02-26]
 	Updated p5-Compress-Zlib to 1.34 [wiz 2005-02-26]
+	Updated intltool to 0.33 [jmmv 2005-02-26]
+	Updated startup-notification to 0.8 [jmmv 2005-02-26]
+	Updated gnome-vfs2 to 2.8.4 [jmmv 2005-02-26]
+	Updated gnome-vfs2-cdda to 2.8.4 [jmmv 2005-02-26]
+	Updated gnome-vfs2-smb to 2.8.4 [jmmv 2005-02-26]
+	Updated libglade to 2.4.2 [jmmv 2005-02-26]
+	Updated libart2 to 2.3.17 [jmmv 2005-02-26]
+	Updated gnome-keyring to 0.4.1 [jmmv 2005-02-26]
+	Updated libgnomeprint to 2.8.2 [jmmv 2005-02-26]
+	Updated libgnomeprintui to 2.8.2 [jmmv 2005-02-26]
+	Updated libgtop to 2.8.3 [jmmv 2005-02-26]
+	Updated libgtkhtml to 2.6.3 [jmmv 2005-02-26]
+	Updated gail to 1.8.2 [jmmv 2005-02-26]
+	Updated gnome2-pixmaps to 2.8.3 [jmmv 2005-02-26]
+	Updated gnome-desktop to 2.8.3 [jmmv 2005-02-26]
+	Updated gnome-panel to 2.8.3 [jmmv 2005-02-26]
+	Updated gnome-base to 2.8.3 [jmmv 2005-02-26]
+	Updated at-spi to 1.6.2 [jmmv 2005-02-26]
+	Updated epiphany to 1.4.8 [jmmv 2005-02-26]
+	Updated gnome-speech to 0.3.6 [jmmv 2005-02-26]
+	Updated dasher to 3.2.13 [jmmv 2005-02-26]
+	Updated file-roller to 2.8.4 [jmmv 2005-02-26]
+	Updated gok to 0.11.17 [jmmv 2005-02-26]
+	Updated gnome-mag to 0.11.14 [jmmv 2005-02-26]
+	Updated gnopernicus to 0.9.19 [jmmv 2005-02-26]
+	Updated gnome2-system-monitor to 2.8.3 [jmmv 2005-02-26]
+	Updated nautilus-cd-burner to 2.8.7 [jmmv 2005-02-26]
+	Updated gnome to 2.8.3 [jmmv 2005-02-26]
+	Updated gnome-devel to 2.8.3 [jmmv 2005-02-26]
