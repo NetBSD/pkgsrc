@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 1999/04/15 23:17:30 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/15 23:32:59 rh Exp $
 #
 
-#    SUBDIR += bioperl
+    SUBDIR += bioperl
 #    SUBDIR += clustalw
 #    SUBDIR += clustalx
 #    SUBDIR += dnagui
