@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.618 2000/11/26 21:12:54 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.619 2000/11/27 15:57:43 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1786,7 +1786,6 @@ root-install:
 					next;				\
 				}					\
 				/.*\/lib[^\/]+\.so\.[0-9]+$$/ { next; }	\
-				/.*\/lib[^\/]+\.so$$/ { next; }		\
 				{ print; }' < ${PLIST} > ${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST}; \
 			;;						\
 		"a.out")						\
@@ -3017,7 +3016,6 @@ print-PLIST:
 	case "$$shlib_type" in						\
 	"ELF")								\
 		RMELFLIBS='-e /.*\/lib[^\/]*\.so\.[0-9]*$$/d		\
-			   -e /.*\/lib[^\/]*\.so$$/d' ;			\
 	esac ;								\
 	${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
 	 | ${SED}							\
