@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4564 2004/01/23 06:38:53 grant Exp $
+$NetBSD: CHANGES,v 1.4565 2004/01/23 08:43:17 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -416,3 +416,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated postfix to 2.0.18 [martti 2004-01-23]
 	Updated mserv to 0.35nb7 [grant 2004-01-23]
 	Updated mserv-devel to 0.39anb1 [grant 2004-01-23]
+	Added tme-0.2 [skrll 2004-01-23]
