@@ -1,0 +1,50 @@
+$NetBSD: patch-an,v 1.1 1999/11/30 01:30:50 hubertf Exp $
+
+--- src/callbacks.c.orig	Tue Nov 30 01:34:40 1999
++++ src/callbacks.c	Tue Nov 30 01:40:05 1999
+@@ -578,17 +578,33 @@
+ 	group = NULL;
+ 	label = gtk_label_new("Port:");
+ 	gtk_widget_show(label);
++#ifdef __NetBSD__
++	port0 = gtk_radio_button_new_with_label(NULL, "/dev/tty00 (COM1)");
++#else   
+ 	port0 = gtk_radio_button_new_with_label(NULL, "/dev/ttyS0 (COM1)");
++#endif
+         gtk_widget_show(port0);
+ 	gtk_button_clicked(GTK_BUTTON(port0));
+         group = gtk_radio_button_group(GTK_RADIO_BUTTON(port0));
++#ifdef __NetBSD__
++        port1 = gtk_radio_button_new_with_label(group, "/dev/tty01 (COM2)");
++#else   
+         port1 = gtk_radio_button_new_with_label(group, "/dev/ttyS1 (COM2)");
++#endif
+         gtk_widget_show(port1);
+         group = gtk_radio_button_group(GTK_RADIO_BUTTON(port1));
++#ifdef __NetBSD__
++        port2 = gtk_radio_button_new_with_label(group, "/dev/tty02 (COM3)");
++#else   
+         port2 = gtk_radio_button_new_with_label(group, "/dev/ttyS2 (COM3)");
++#endif
+         gtk_widget_show(port2);
+         group = gtk_radio_button_group(GTK_RADIO_BUTTON(port2));
++#ifdef __NetBSD__
++        port3 = gtk_radio_button_new_with_label(group, "/dev/tty03 (COM4)");
++#else   
+         port3 = gtk_radio_button_new_with_label(group, "/dev/ttyS3 (COM4)");
++#endif
+         gtk_widget_show(port3);
+         group = gtk_radio_button_group(GTK_RADIO_BUTTON(port3));
+         other = gtk_radio_button_new_with_label(group, "other");
+@@ -704,7 +720,11 @@
+ 	}
+ 
+ 	/* reset to defaults, and save */
++#ifdef __NetBSD__
++	sprintf(serial_port, "/dev/tty00");
++#else   
+ 	sprintf(serial_port, "/dev/ttyS0");
++#endif
+ 	sprintf(camera_model, "Browse Directory");
+ 	sprintf(post_process_script, "");
+ 	save_config();

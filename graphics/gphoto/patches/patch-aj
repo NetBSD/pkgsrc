@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1 1999/11/30 01:30:50 hubertf Exp $
+
+--- konica/configDialog.c.orig	Tue Nov 30 01:34:40 1999
++++ konica/configDialog.c	Tue Nov 30 01:37:29 1999
+@@ -84,10 +84,17 @@
+ static char *PortLabel[] = 
+ {
+    "Autodetect",
++#ifdef __NetBSD__
++   "/dev/tty00",
++   "/dev/tty01",
++   "/dev/tty02",
++   "/dev/tty03"
++#else
+    "/dev/ttyS0",
+    "/dev/ttyS1",
+    "/dev/ttyS2",
+    "/dev/ttyS3"
++#endif
+ };
+ /*---------------------------------------------------------------------*
+  *                                                                     *
