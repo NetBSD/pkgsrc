@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.6 2001/10/14 20:34:53 dmcmahill Exp $
+# $NetBSD: printindex,v 1.7 2001/11/25 23:24:26 dmcmahill Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
@@ -71,7 +71,7 @@ do
 		cd $pkgdir
 		pkgname=`make show-var VARNAME=PKGNAME`
 		if [ $? != 0 ]; then
-			echo "ERROR: printindex could not extract PKNAME for $pkgdir" > /dev/stderr
+			echo "ERROR: printindex could not extract PKGNAME for $pkgdir" > /dev/stderr
 			echo "make show-var VARNAME=PKGNAME failed" > $brokenfile
 			make show-var VARNAME=PKGNAME >> $brokenfile 2>&1
 			exit 1
