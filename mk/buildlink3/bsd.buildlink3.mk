@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.101 2004/03/05 19:09:56 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.102 2004/03/05 19:25:37 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -81,19 +81,50 @@ _BLNK_X11_LINKS_DIR=	${BUILDLINK_PREFIX.x11-links}/${X11_LINKS_SUBDIR}
 _BLNK_X11_LINKS_PACKAGE=	# empty
 .endif
 
-# _BLNK_DEPENDS contains all of the unique elements of BUILDLINK_DEPENDS.
-# _BLNK_PACKAGES contains all of the unique elements of BUILDLINK_PACKAGES.
+# For each package we use, check whether we are using the built-in
+# version of the package or if we are using the pkgsrc version.  The
+# necessary logic is encapsulated in a package's builtin.mk file, which
+# is required to define USE_BUILTIN.<pkg> to be either "yes" or "no".
 #
-_BLNK_DEPENDS=		# empty
-.for _pkg_ in ${BUILDLINK_DEPENDS}
-.  if empty(_BLNK_DEPENDS:M${_pkg_})
-_BLNK_DEPENDS+=		${_pkg_}
+.for _pkg_ in ${BUILDLINK_PACKAGES}
+USE_BUILTIN.${_pkg_}?=	no
+.  if !empty(PREFER_NATIVE:M[yY][eE][sS])
+USE_BUILTIN.${_pkg_}=	yes
+.  endif
+.  if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+USE_BUILTIN.${_pkg_}=	no
+.  endif
+.  if !empty(PREFER_NATIVE:M${_pkg_})
+USE_BUILTIN.${_pkg_}=	yes
+.  endif
+.  if !empty(PREFER_PKGSRC:M${_pkg_})
+USE_BUILTIN.${_pkg_}=	no
+.  endif
+.  if exists(${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk)
+.     include "${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk"
+.  endif
+.  if !defined(IS_BUILTIN.${_pkg_})
+USE_BUILTIN.${_pkg_}=	no
 .  endif
 .endfor
+
+# _BLNK_PACKAGES contains all of the unique elements of BUILDLINK_PACKAGES.
+#
 _BLNK_PACKAGES=		# empty
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 .  if empty(_BLNK_PACKAGES:M${_pkg_})
 _BLNK_PACKAGES+=	${_pkg_}
+.  endif
+.endfor
+
+# _BLNK_DEPENDS contains all of the elements of BUILDLINK_DEPENDS that
+# name packages for which we aren't using the built-in software and hence
+# need to add a dependency.
+#
+_BLNK_DEPENDS=	# empty
+.for _pkg_ in ${BUILDLINK_DEPENDS}   
+.  if empty(_BLNK_DEPENDS:M${_pkg_}) && !empty(USE_BUILTIN.${_pkg_}:M[nN][oO])
+_BLNK_DEPENDS+=	${_pkg_}
 .  endif
 .endfor
 
