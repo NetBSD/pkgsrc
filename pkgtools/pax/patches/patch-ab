@@ -1,0 +1,88 @@
+$NetBSD
+
+Patch 1.4_BETA version to compile under 1.3*
+
+
+--- /usr/cvs/src-1.4/lib/libc/gen/pwcache.c	Tue Jan 19 21:11:29 1999
++++ pwcache.c	Fri Apr 23 15:35:17 1999
+@@ -42,11 +42,11 @@
+ #if 0
+ static char sccsid[] = "@(#)cache.c	8.1 (Berkeley) 5/31/93";
+ #else
+-__RCSID("$NetBSD: patch-ab,v 1.1.1.1 1999/04/23 13:33:02 hubertf Exp $");
++/* __RCSID("$NetBSD: patch-ab,v 1.1.1.1 1999/04/23 13:33:02 hubertf Exp $"); *//*HF*/
+ #endif
+ #endif /* not lint */
+ 
+-#include "namespace.h"
++/* #include "namespace.h" */
+ 
+ #include <sys/types.h>
+ #include <sys/param.h>
+@@ -79,12 +79,13 @@
+ static UIDC **usrtb = NULL;	/* user name to uid cache */
+ static GIDC **grptb = NULL;	/* group name to gid cache */
+ 
+-static u_int st_hash __P((const char *, size_t, int));
++/*  static u_int st_hash __P((const char *, size_t, int)); *//*HF*/
+ static int uidtb_start __P((void));
+ static int gidtb_start __P((void));
+ static int usrtb_start __P((void));
+ static int grptb_start __P((void));
+ 
++#if 0
+ static u_int
+ st_hash(name, len, tabsz)
+ 	const char *name;
+@@ -100,6 +101,7 @@
+ 
+ 	return (key % tabsz);
+ }
++#endif
+ 
+ /*
+  * uidtb_start
+@@ -213,6 +215,7 @@
+ 	return (0);
+ }
+ 
++#if 0
+ /*
+  * user_from_uid()
+  *	caches the name (if any) for the uid. If noname clear, we always return the
+@@ -292,7 +295,9 @@
+ 	}
+ 	return (ptr->name);
+ }
++#endif
+ 
++#if 0
+ /*
+  * group_from_gid()
+  *	caches the name (if any) for the gid. If noname clear, we always return the
+@@ -372,6 +377,7 @@
+ 	}
+ 	return (ptr->name);
+ }
++#endif
+ 
+ /*
+  * uid_from_user()
+@@ -406,7 +412,7 @@
+ 	 * look up in hash table, if found and valid return the uid,
+ 	 * if found and invalid, return a -1
+ 	 */
+-	pptr = usrtb + st_hash(name, namelen, UNM_SZ);
++	pptr = usrtb + st_hash((char *)name, namelen, UNM_SZ);
+ 	ptr = *pptr;
+ 
+ 	if ((ptr != NULL) && (ptr->valid > 0) && !strcmp(name, ptr->name)) {
+@@ -478,7 +484,7 @@
+ 	 * look up in hash table, if found and valid return the uid,
+ 	 * if found and invalid, return a -1
+ 	 */
+-	pptr = grptb + st_hash(name, namelen, GID_SZ);
++	pptr = grptb + st_hash((char *)name, namelen, GID_SZ);
+ 	ptr = *pptr;
+ 
+ 	if ((ptr != NULL) && (ptr->valid > 0) && !strcmp(name, ptr->name)) {
