@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:11:39 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/14 23:57:02 wiz Exp $
+freetds/etc/freetds.conf
 freetds/include/bkpublic.h
 freetds/include/common.h
 freetds/include/cspublic.h
@@ -12,10 +13,11 @@ freetds/include/sybdb.h
 freetds/include/syberror.h
 freetds/include/sybfront.h
 freetds/include/tds.h
+freetds/include/tds_configs.h
 freetds/include/tdsconvert.h
+freetds/include/tdsodbc.h
 freetds/include/tdsutil.h
 freetds/include/tdsver.h
-freetds/interfaces
 freetds/lib/libct.a
 freetds/lib/libct.la
 freetds/lib/libct.so
@@ -24,13 +26,19 @@ freetds/lib/libct.so.0.0
 freetds/lib/libsybdb.a
 freetds/lib/libsybdb.la
 freetds/lib/libsybdb.so
-freetds/lib/libsybdb.so.0
-freetds/lib/libsybdb.so.0.0
+freetds/lib/libsybdb.so.1
+freetds/lib/libsybdb.so.1.0
 freetds/lib/libtds.a
 freetds/lib/libtds.la
 freetds/lib/libtds.so
 freetds/lib/libtds.so.0
 freetds/lib/libtds.so.0.0
+freetds/lib/libtdssrv.a
+freetds/lib/libtdssrv.la
+freetds/lib/libtdssrv.so
+freetds/lib/libtdssrv.so.0
+freetds/lib/libtdssrv.so.0.0
 @dirrm freetds/lib
 @dirrm freetds/include
+@dirrm freetds/etc
 @dirrm freetds
