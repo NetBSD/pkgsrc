@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/08 20:07:38 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/06 22:41:28 jschauma Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -26,6 +26,12 @@ TEST_TARGET=		test
 # install to avoid overwriting existing manpages in ${PREFIX}/man.
 #
 CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(ABI) && ${ABI} == "64"
+CONFIGURE_ARGS+=	--enable-64bit
+.endif
 
 # Modify mkLinks script to remove the short-filename manpage if it was
 # linked to a longer filename.
