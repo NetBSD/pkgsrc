@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/11/30 17:29:30 taca Exp $
+# $NetBSD: Makefile,v 1.42 2004/12/13 22:51:09 agc Exp $
 
 DISTNAME=		magicpoint-1.10a
 PKGREVISION=		4
@@ -54,14 +54,16 @@ pre-install:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgp
-	cd ${WRKSRC}; \
-	${INSTALL_DATA} COPYRIGHT COPYRIGHT.jp FAQ \
-		README README.fonts README.fonts.jp README.lang \
-		SYNTAX USAGE USAGE.jp ${PREFIX}/share/doc/mgp
+	cd ${WRKSRC};							\
+		for f in COPYRIGHT COPYRIGHT.jp FAQ README README.fonts	\
+			README.fonts.jp README.lang SYNTAX USAGE USAGE.jp; do \
+			${INSTALL_DATA} $$f ${PREFIX}/share/doc/mgp;	\
+		done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mgp
-	cd ${WRKSRC}/sample; \
-	${INSTALL_DATA} README* *.jpg *.eps *.mgp *.xbm mgprc-sample \
-		${PREFIX}/share/examples/mgp
+	cd ${WRKSRC}/sample;						\
+		for f in README* *.jpg *.eps *.mgp *.xbm mgprc-sample; do \
+			${INSTALL_DATA} $$f ${PREFIX}/share/examples/mgp; \
+		done
 
 .for engine pkg in ${MGP_RENDERING_ENGINES}
 .  if !empty(PKG_OPTIONS:M${engine})
