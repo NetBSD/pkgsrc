@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/08/20 15:17:11 tsarna Exp $
+# $NetBSD: Makefile,v 1.16 1998/09/15 17:05:06 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/11 03:54:43 fenner Exp 
 #
 
@@ -17,7 +17,15 @@ BUILD_DEPENDS=	${GSM_WORK}/lib/libgsm.a:${GSM_DIR}:build
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 #DEPENDS+=	gsm-1.0.10:${GSM_DIR}
 
-GSM_DIR=	${PKGSRCDIR}/audio/gsm
+.include "../../mk/bsd.prefs.mk"
+
+.ifdef WRKOBJDIR
+BUILD_ROOT=	${WRKOBJDIR}
+.else
+BUILD_ROOT=	${PKGSRCDIR}
+.endif
+
+GSM_DIR=	${BUILD_ROOT}/audio/gsm
 GSM_WORK=	${GSM_DIR}/${WRKDIR:T}/gsm-1.0-pl10
 
 GNU_CONFIGURE=	yes
