@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/02/04 04:43:29 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/14 13:31:12 dmcmahill Exp $
 #
 
 PKGNAME=		ns-flash-4.0r12
@@ -9,9 +9,7 @@ ONLY_FOR_PLATFORM=      *-*-i386 *-*-sparc
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "i386")
-.if !exists(/emul/linux/lib/ld-linux.so.2)
-IGNORE=		"requires Linux glibc2 libraries - see compat_linux(8)"
-.endif
+DEPENDS+=		suse_linux>=6.1:../../emulators/suse_linux
 DISTUNAME=		linux
 WRKNAME=		Linux
 .elif ${MACHINE_ARCH} == "sparc" && ${OPSYS} == "SunOS"
