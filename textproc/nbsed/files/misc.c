@@ -1,4 +1,4 @@
-/*	$NetBSD: misc.c,v 1.2 2004/06/13 13:04:02 grant Exp $	*/
+/*	$NetBSD: misc.c,v 1.3 2004/08/21 08:39:54 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -67,35 +67,41 @@
  * SUCH DAMAGE.
  */
 
+#if HAVE_CONFIG_H
 #include "config.h"
-
-#ifdef HAVE_SYS_CDEFS_H
+#endif
+#include <nbcompat.h>
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)misc.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: misc.c,v 1.2 2004/06/13 13:04:02 grant Exp $");
+__RCSID("$NetBSD: misc.c,v 1.3 2004/08/21 08:39:54 jlam Exp $");
 #endif
 #endif /* not lint */
 
+#if HAVE_SYS_TYPES_H
 #include <sys/types.h>
+#endif
 
-#ifdef HAVE_ERRNO_H
+#if HAVE_ERRNO_H
 #include <errno.h>
 #endif
-
-#ifdef HAVE_REGEX_H
+#if HAVE_REGEX_H
 #include <regex.h>
 #endif
-
+#if HAVE_STDARG_H
 #include <stdarg.h>
+#endif
+#if HAVE_STDIO_H
 #include <stdio.h>
+#endif
+#if HAVE_STDLIB_H
 #include <stdlib.h>
-
-#ifdef HAVE_STRING_H
+#endif
+#if HAVE_STRING_H
 #include <string.h>
 #endif
 
