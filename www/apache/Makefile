@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.72 2001/05/18 06:01:35 jlam Exp $
+# $NetBSD: Makefile,v 1.73 2001/06/09 06:36:42 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
-DISTNAME=		apache_1.3.19
-PKGNAME=		apache-1.3.19nb2
+DISTNAME=		apache_1.3.20
+PKGNAME=		apache-1.3.20
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/ \
@@ -15,7 +15,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 MASTER_SITES+=		http://www.modssl.org/source/ \
 			ftp://ftp.uni-trier.de/pub/unix/security/mod_ssl/source/
 DISTFILES+=		${MODSSL_DISTNAME}${EXTRACT_SUFX}
-MODSSL_DISTNAME=	mod_ssl-2.8.3-1.3.19
+MODSSL_DISTNAME=	mod_ssl-2.8.4-1.3.20
 MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
 
 MAINTAINER=		jlam@netbsd.org
@@ -53,6 +53,10 @@ PLIST_SRC=		${PKGDIR}/PLIST.suexec
 BUILD_DEFS+=		APACHE_USER APACHE_SUEXEC_DOCROOT
 .endif
 
+# Note that there is NO static compile module hook here.  This is intentional.
+# Under Apache 1.3, modules can be compiled to link dynamically to the server
+# using the "apxs" program.  See apxs(8).
+
 .if !defined(NOPIC)
 CONFIGURE_ARGS+=	--enable-module=so	# requires dlopen()
 CONFIGURE_ARGS+=	--enable-shared=proxy
@@ -87,9 +91,19 @@ BUILD_DEFS+=		APACHE_SUEXEC
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
-# Note that there is NO static compile module hook here.  This is intentional.
-# Under Apache 1.3, modules can be compiled to link dynamically to the server
-# using the "apxs" program.  See apxs(8).
+# Given foo=${bar}, replace @foo@ with ${bar}.
+#
+FILES_SUBST=		APACHE_SYSCONFDIR=${APACHE_SYSCONFDIR}
+FILES_SUBST+=		CAT=${CAT:Q}
+FILES_SUBST+=		CHMOD=${CHMOD:Q}
+FILES_SUBST+=		CHOWN=${CHOWN:Q}
+FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		MKDIR=${MKDIR:Q}
+FILES_SUBST+=		PREFIX=${PREFIX}
+FILES_SUBST+=		RM=${RM:Q}
+FILES_SUBST+=		RMDIR=${RMDIR:Q}
+FILES_SUBST+=		TRUE=${TRUE:Q}
+FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/-e s!@/}
 
 post-extract:
 	${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include
@@ -106,44 +120,30 @@ pre-patch:
 		${MODSSL_SRC}/pkg.sslmod/sslmod.patch			\
 		${MODSSL_SRC}/pkg.sslsup/sslsup.patch			\
 		| ${PATCH} ${PATCH_ARGS}
-	cd ${WRKSRC} && ${TAIL} +154					\
+	cd ${WRKSRC} && ${TAIL} +160					\
 		${MODSSL_SRC}/pkg.ssldoc/ssldoc.patch			\
 		| ${PATCH} ${PATCH_ARGS}
-	${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
+	${FIND} ${WRKSRC} -name '*.orig' -print0 | ${XARGS} -0 ${RM} -f
 
 pre-configure:
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
+	${SED} ${FILES_SUBST_SED}					\
 		${FILESDIR}/config.layout > ${WRKDIR}/config.layout
 
 pre-install:
-	${FIND} ${WRKSRC}/htdocs -name '*.orig' -exec ${RM} -f {} \;
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
-	${SED}	-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@RM@|${RM}|g"					\
-		-e "s|@RMDIR@|${RMDIR}|g"				\
-		-e "s|@TRUE@|${TRUE}|g"					\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}	-e "s|@CAT@|${CAT}|g"					\
-		-e "s|@CHMOD@|${CHMOD}|g"				\
-		-e "s|@CHOWN@|${CHOWN}|g"				\
-		-e "s|@CP@|${CP}|g"					\
-		-e "s|@MKDIR@|${MKDIR}|g"				\
-		-e "s|@APACHE_SYSCONFDIR@|${APACHE_SYSCONFDIR}|g"	\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
+	${FIND} ${WRKSRC}/htdocs -name '*.orig' -print0 | ${XARGS} -0 ${RM} -f
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
 .if !defined(NOPIC)
 	cd ${PREFIX}/lib/httpd; ${MV} libproxy.so mod_proxy.so
 .endif
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/httpd
-	for i in httpd.conf magic mime.types; do			\
-		${INSTALL_DATA} ${APACHE_SYSCONFDIR}/$$i.default	\
+	for file in httpd.conf magic mime.types; do			\
+		${INSTALL_DATA} ${APACHE_SYSCONFDIR}/$${file}.default	\
 			${PREFIX}/share/examples/httpd;			\
-		${RM} -f ${APACHE_SYSCONFDIR}/$$i.default;		\
+		${RM} -f ${APACHE_SYSCONFDIR}/$${file}.default;		\
 	done
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
