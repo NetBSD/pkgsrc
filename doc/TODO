@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2636 2004/12/03 12:52:49 wiz Exp $
+$NetBSD: TODO,v 1.2637 2004/12/03 13:03:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -725,7 +725,6 @@ Suggested package updates
 	o ng-1.4.4
 	o nhc98-1.17
 	o nn-6.6.5
-	o nosefart-2.1
 	o nrg2iso-0.4
 	o ns-flash-6.0.79
 	o ns-plugger-common-5.1.3
