@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/09/25 12:04:06 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2002/10/06 11:43:25 jlam Exp $
 
 DISTNAME=	xanim2801
 PKGNAME=	xanim-2.80.1
@@ -31,7 +31,14 @@ USE_IMAKE=	YES
 MAKE_ENV+=		${XANIM_AUDIO.${OPSYS}}
 XANIM_AUDIO.Linux=	XA_AUDIO_DEFS="-DXA_LINUX_AUDIO"		\
 			XA_AUDIO_LIBS="-lc"
+
+.if defined(USE_OSS)
+XANIM_AUDIO.NetBSD=	XA_AUDIO_DEFS="-DXA_LINUX_AUDIO"		\
+			XA_AUDIO_LIBS="${LIBOSSAUDIO}"
+.else
 XANIM_AUDIO.NetBSD=	XA_AUDIO_DEFS="-DXA_NetBSD_AUDIO"
+.endif
+
 XANIM_AUDIO.SunOS=	XA_AUDIO_DEFS="-DXA_SPARC_AUDIO -DSVR4 -DXA_SELECT"
 
 post-extract:
@@ -42,5 +49,5 @@ post-extract:
 		${GUNZIP_CMD} ${WRKSRC}/mods/$$file;			\
 	done
 
+.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
-
