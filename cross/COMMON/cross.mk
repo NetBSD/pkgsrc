@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.11 1999/05/21 09:37:07 mrg Exp $
+#	$NetBSD: cross.mk,v 1.12 1999/07/16 00:50:04 wrstuden Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -97,6 +97,7 @@ EGCS_INTVERSION=	egcs-2.91.60
 EGCS_PATCHBUNDLE=	${EGCS_DISTNAME}-NetBSD-19980104.diff.gz
 EGCS_WRKSRC=		${WRKDIR}/${EGCS_DISTNAME}
 EGCS_LANGUAGES=		c # add to these below
+BUILD_DEPENDS+= autoheader:../../devel/autoconf
 
 .if defined(EGCS_NO_RUNTIME) || defined(EGCS_FAKE_RUNTIME)
 EGCS_NO_CXX_RUNTIME=	yes
