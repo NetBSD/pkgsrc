@@ -1,4 +1,4 @@
-/*	$NetBSD: pax.h,v 1.4 2003/12/20 04:45:04 grant Exp $	*/
+/*	$NetBSD: pax.h,v 1.5 2004/03/11 20:10:29 tv Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -40,6 +40,12 @@
 #else
 #define HAVE_LUTIMES 1
 #define HAVE_STRUCT_STAT_ST_FLAGS 1
+#define HAVE_SYS_MTIO_H 1
+#endif
+
+/* Tape support only available if one of the following is available. */
+#if HAVE_SYS_MTIO_H || HAVE_SYS_TAPE_H
+#define SUPPORT_TAPE 1
 #endif
 
 /*
@@ -72,7 +78,9 @@
 #define ISREG		0	/* regular file */
 #define ISCHR		1	/* character device */
 #define ISBLK		2	/* block device */
+#ifdef SUPPORT_TAPE
 #define ISTAPE		3	/* tape drive */
+#endif
 #define ISPIPE		4	/* pipe/socket */
 #ifdef SUPPORT_RMT
 #define	ISRMT		5	/* rmt */
