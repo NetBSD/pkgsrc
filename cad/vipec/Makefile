@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/02/06 02:39:16 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.31 2003/02/07 10:34:07 dmcmahill Exp $
 #
 
 DISTNAME=	ViPEC-3.1.3
@@ -14,6 +14,7 @@ BUILD_DEPENDS+=		tmake-*:../../devel/tmake
 USE_BUILDLINK2=		yes
 USE_X11=		yes
 USE_GMAKE=		yes
+UNLIMIT_RESOURCES+=	datasize
 
 CONFLICTS+=		vipec-[0-9]*
 
