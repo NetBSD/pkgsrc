@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 1999/01/04 09:30:46 frueauf Exp $
+# $NetBSD: Makefile,v 1.38 1999/01/20 16:56:00 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -55,6 +55,7 @@ CONFIGURE_ARGS+=${MACHINE_GNU_ARCH}--netbsd --prefix=${PREFIX} \
 		--site-libraries=${PREFIX}/lib \
 		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp \
 		${PREFIX}/share/xemacs/site-lisp" -with-ncurses=no \
+		--with-session=yes \
 		${WITH_MULE} ${WITH_DIALOGS} ${WITH_XFACE} ${WITH_SOUND}
 
 MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}" INSTALL_SCRIPT="${INSTALL_SCRIPT}"
