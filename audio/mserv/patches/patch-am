@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2002/10/03 15:46:59 abs Exp $
+$NetBSD: patch-am,v 1.2 2003/09/03 12:35:14 martin Exp $
 
---- mserv/opt.c.orig	Thu Jul 13 22:14:41 2000
-+++ mserv/opt.c
-@@ -164,8 +164,8 @@ int opt_read(const char *root)
+--- mserv/opt.c.orig	2003-08-03 16:57:20.000000000 +0200
++++ mserv/opt.c	2003-09-03 13:35:18.000000000 +0200
+@@ -164,8 +164,8 @@
    /* special case - player variable is an indirected to another variable */
    if ((val = conf_getvalue("player")) == NULL) {
      if (mserv_verbose)
