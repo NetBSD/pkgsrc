@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2004/10/04 10:42:39 grant Exp $
+# $NetBSD: builtin.mk,v 1.11 2004/10/14 03:16:35 minskim Exp $
 
 .if !defined(_BLNK_LIBINTL_FOUND)
 _BLNK_LIBINTL_FOUND!=	\
@@ -162,6 +162,9 @@ CONFIGURE_ENV+=		INTLLIBS="${BUILDLINK_LDADD.gettext}"
 .  if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
 .    if ${_BLNK_LIBINTL_FOUND} == "yes"
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl="yes"
+.      if defined(_GETTEXT_NGETTEXT) && !empty(_GETTEXT_NGETTEXT:Myes)
+CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libintl="yes"
+.      endif
 .    endif
 .  endif
 .  if !empty(USE_BUILTIN.gettext:M[nN][oO])
