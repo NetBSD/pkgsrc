@@ -1,22 +1,24 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/03 20:24:13 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/15 16:23:23 salo Exp $
+#
 
-DISTNAME=	subversion-r4503
-PKGNAME=	ap2-subversion-0.17.1
+DISTNAME=	subversion-0.20.1
+PKGNAME=	${DISTNAME:S/^/ap2-/}
 CATEGORIES=	devel
-MASTER_SITES=	http://subversion.tigris.org/files/documents/15/2699/
+MASTER_SITES=	http://subversion.tigris.org/files/documents/15/3440/
 
 MAINTAINER=	epg@pretzelnet.org
 HOMEPAGE=	http://subversion.tigris.org/
 COMMENT=	WebDAV server (Apache module) for Subversion
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= \
-  --with-berkeley-db=${BUILDLINK_PREFIX.db4}/include/db4:${LOCALBASE}
-CONFIGURE_ARGS+= --with-apxs=${APXS}
-CONFIGURE_ARGS+= --disable-mod-activation
-USE_BUILDLINK2=	yes
-USE_LIBTOOL=	yes
-SHLIBTOOL_OVERRIDE= ${WRKSRC}/libtool
+USE_BUILDLINK2=	YES
+USE_LIBTOOL=	YES
+GNU_CONFIGURE=	YES
+
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_PREFIX.db4}/include/db4:${LOCALBASE}
+CONFIGURE_ARGS+=	--with-apxs=${APXS}
+CONFIGURE_ARGS+=	--disable-mod-activation
 
 APACHE_MODULE=	YES
 
@@ -30,4 +32,5 @@ post-extract:
 
 .include "../../devel/subversion/buildlink2.mk"
 .include "../../www/apache2/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/02/03 20:24:13 drochner Exp $
+$NetBSD: distinfo,v 1.2 2003/04/15 16:23:23 salo Exp $
 
-SHA1 (subversion-r4503.tar.gz) = 7e7180216d974daf4e883839d72fa0d93eb11b08
-Size (subversion-r4503.tar.gz) = 6911118 bytes
+SHA1 (subversion-0.20.1.tar.gz) = d180593fe5f23a5daff82c65957ff16571eb14d8
+Size (subversion-0.20.1.tar.gz) = 7645003 bytes
