@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1349 2004/01/19 23:47:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1350 2004/01/20 22:15:21 snj Exp $
 #
 # This file is in the public domain.
 #
@@ -909,7 +909,7 @@ MAKEFLAGS+= ${def:C/=.*//}=${_dir_${def:C/=.*//}}
 
 # Set the CLASSPATH for Java packages.  This must come after EVAL_PREFIX
 # is evaluated because PKG_JAVA_HOME is used in a .if.endif conditional,
-# and it's value is indirectly set by EVAL_PREFIX.
+# and its value is indirectly set by EVAL_PREFIX.
 #
 .if defined(USE_JAVA)
 .  if exists(${PKG_JAVA_HOME}/lib/${_JAVA_BASE_CLASSES})

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/20 12:27:59 agc Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/20 22:21:09 snj Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -90,7 +90,7 @@ do-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-# everything specific to your OS/Arch goes into it's own Makefile
+# everything specific to your OS/Arch goes into its own Makefile
 # group together i386, i486, i586 and i686 (for Linux)
 ARCH=${MACHINE_ARCH:C/i[3-6]86/i386/g}
 
