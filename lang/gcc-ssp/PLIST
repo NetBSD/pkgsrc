@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/17 01:27:42 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/10/06 13:38:56 dmcmahill Exp $
 etc/gcc-ssp.mk
 ${PKGBASENAME}/bin/c++
 ${PKGBASENAME}/bin/c++filt
@@ -200,9 +200,11 @@ ${PKGBASENAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/libg2c.a
 ${PKGBASENAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/libgcc.a
 ${PKGBASENAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/libobjc.a
 ${PKGBASENAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/libstdc++.a
+${PKGBASENAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/libstdc++.so
 ${PKGBASENAME}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/specs
 ${PKGBASENAME}/lib/libiberty.a
-${PKGBASENAME}/lib/libstdc++.a.2.10.0
+${PKGBASENAME}/lib/libstdc++.a.4.0
+${PKGBASENAME}/lib/libstdc++.so.4.0
 ${PKGBASENAME}/man/man1/cccp.1
 ${PKGBASENAME}/man/man1/g++.1
 ${PKGBASENAME}/man/man1/g77.1
