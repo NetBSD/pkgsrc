@@ -1,20 +1,13 @@
-#!/bin/sh
-#
-# $NetBSD: INSTALL,v 1.1 2001/10/31 23:52:28 zuntum Exp $
-
-PKGNAME=$1
-STAGE=$2
+# $NetBSD: INSTALL,v 1.2 2003/08/30 19:02:33 jlam Exp $
 
 case ${STAGE} in
-PRE-INSTALL)
-	;;
 POST-INSTALL)
 	MACHINE_ARCH=@MACHINE_ARCH@
 	OBJECT_FMT=@OBJECT_FMT@
 
 	if [ "${MACHINE_ARCH}" = "mipsel" ]
 	then
-		ln -sf ld.elf_so /usr/libexec/ld.so
+		${LN} -sf ld.elf_so /usr/libexec/ld.so
 	fi
 
 	# Only create the symlink on certain platform/object combinations.  Note
@@ -39,7 +32,7 @@ POST-INSTALL)
 			if [ -e /emul/$emul -o -L /emul/$emul ] || \
 			   [ \( -e /emul -o -L /emul \) -a ! -d /emul ]
 			then
-				cat <<EOF
+				${CAT} <<EOF
 ==============================================================================
 	IMPORTANT:  You must create a symbolic link from /emul/$emul
 	to ${PKG_PREFIX}/emul/$emul in order for this package to work
@@ -49,8 +42,8 @@ POST-INSTALL)
 ==============================================================================
 EOF
 			else
-				mkdir -p /emul
-				ln -sf ${PKG_PREFIX}/emul/$emul /emul/$emul
+				${MKDIR} -p /emul
+				${LN} -sf ${PKG_PREFIX}/emul/$emul /emul/$emul
 			fi
 		fi
 	fi
@@ -58,11 +51,6 @@ EOF
 	# Regenerate the shared library cache.  This should work on either
 	# a.out or on ELF with the 1.5 release.
 	#
-	( @LDCONFIG@ || true ) >/dev/null 2>&1
-	;;
-*)
-	echo "Unexpected argument: ${STAGE}"
-	exit 1
+	( @LDCONFIG@ || ${TRUE} ) >/dev/null 2>&1
 	;;
 esac
-exit 0
