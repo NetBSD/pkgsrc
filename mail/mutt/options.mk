@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2004/11/17 19:56:49 xtraeme Exp $
+# $NetBSD: options.mk,v 1.5 2005/01/01 22:05:26 grant Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
-PKG_SUPPORTED_OPTIONS=	slang ncurses ssl sasl1
+PKG_SUPPORTED_OPTIONS=	slang ncurses ssl sasl1 buffy-size
 
 .if !defined(PKG_OPTIONS.mutt)
 PKG_DEFAULT_OPTIONS+=	ssl
@@ -39,4 +39,11 @@ CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 .else
 CONFIGURE_ARGS+=	--without-ssl
+.endif
+
+###
+### configure option --enable-buffy-size
+###
+.if !empty(PKG_OPTIONS:Mbuffy-size)
+CONFIGURE_ARGS+=	--enable-buffy-size
 .endif
