@@ -1,7 +1,7 @@
-$NetBSD: patch-bh,v 1.1 2002/01/03 20:40:45 tron Exp $
+$NetBSD: patch-bh,v 1.2 2002/03/28 10:11:54 jmc Exp $
 
---- ../gcc-2.95.3/gcc/ginclude/va-sparc.h.orig	Wed Dec 16 22:19:44 1998
-+++ ../gcc-2.95.3/gcc/ginclude/va-sparc.h	Thu Jan  3 20:37:54 2002
+--- ../gcc-2.95.3/gcc/ginclude/va-sparc.h.orig 2000/07/26 00:18:59 1.1.1.1
++++ ../gcc-2.95.3/gcc/ginclude/va-sparc.h 2001/01/30 22:36:39 1.2
 @@ -5,7 +5,7 @@
  
  #ifndef __GNUC_VA_LIST

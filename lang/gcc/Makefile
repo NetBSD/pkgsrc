@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.38 2002/03/25 14:43:00 cjep Exp $
+# $NetBSD: Makefile,v 1.39 2002/03/28 10:11:50 jmc Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/}
+PKGREVISION=		1
 
+#
+# Synced from patches against main source tree as of:
+#
+# 03/28/02
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
 COMMENT=		GNU Compiler Collection
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-
-# The platforms listed below are the only tested platforms so far.
-# If you get gcc working on other platforms, then please add them.
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-arm32 SunOS-*-*
 
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
@@ -33,10 +34,6 @@ WRKSRC=			${WRKDIR}/objdir
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld --infodir=${PREFIX}/info
 
 GCC_PREFIX=		${LOCALBASE}/${PKGNAME}
-.if ${MACHINE_PLATFORM:MNetBSD-*-sparc}
-PLIST_SRC=		${PKGDIR}/PLIST.NetBSD-sparc
-PLIST_SRC+=		${PKGDIR}/PLIST
-.endif
 .else
 .if (${CC} != gcc)
 ALL_TARGET=		bootstrap
@@ -51,11 +48,17 @@ post-extract:
 	${MKDIR} ${WRKSRC}
 	cd ${WRKSRC}/../${DISTNAME}/gcc/config; \
 	${CP} ${FILESDIR}/xm-netbsd.h .; \
-	for ARCH in arm arm i386 m68k sh sparc vax; do \
+	${CP} ${FILESDIR}/xm-target64.h .; \
+	for FILE in ${FILESDIR}/*_* ; do \
+	  ARCH=`basename $${FILE} | cut -d_ -f1`; \
+	  DEST=`basename $${FILE} | sed -e "s/$${ARCH}_//"`; \
 	  ${MKDIR} $${ARCH}; \
-	  ${CP} ${FILESDIR}/$${ARCH}_netbsd-elf.h $${ARCH}/netbsd-elf.h; \
+	  ${CP} $${FILE} $${ARCH}/$${DEST}; \
 	done; \
-	${CP} ${FILESDIR}/sparc_netbsd-elf-common.h sparc/netbsd-elf-common.h
+	cd ${WRKSRC}/../${DISTNAME}; \
+	for i in gcc/config/alpha/netbsd-elf.h gcc/config/arm/t-netbsd gcc/config/mips/x-netbsd libf2c/libF77/dtime_.c libf2c/libF77/etime_.c; do \
+	  ${RM} $${i};\
+	done
 
 post-patch:
 	${ECHO} "bogus" >${WRKSRC}/../${DISTNAME}/gcc/cstamp-h.in

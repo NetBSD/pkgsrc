@@ -1,7 +1,7 @@
-$NetBSD: patch-cf,v 1.1 2002/01/03 20:40:50 tron Exp $
+$NetBSD: patch-cf,v 1.2 2002/03/28 10:11:54 jmc Exp $
 
---- ../gcc-2.95.3/libf2c/libU77/hostnm_.c.orig	Mon Apr 27 12:11:57 1998
-+++ ../gcc-2.95.3/libf2c/libU77/hostnm_.c	Thu Jan  3 20:37:55 2002
+--- ../gcc-2.95.3/libf2c/libU77/hostnm_.c.orig 2000/07/26 00:19:25 1.1.1.1
++++ ../gcc-2.95.3/libf2c/libU77/hostnm_.c 2001/05/30 07:02:39 1.2
 @@ -36,6 +36,7 @@
  
  #if HAVE_GETHOSTNAME

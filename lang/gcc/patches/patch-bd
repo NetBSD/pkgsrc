@@ -1,7 +1,7 @@
-$NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
+$NetBSD: patch-bd,v 1.2 2002/03/28 10:11:54 jmc Exp $
 
---- ../gcc-2.95.3/gcc/config/vax/vax.md.orig	Wed Dec 16 22:14:26 1998
-+++ ../gcc-2.95.3/gcc/config/vax/vax.md	Thu Jan  3 20:37:54 2002
+--- ../gcc-2.95.3/gcc/config/vax/vax.md.orig 2000/07/26 00:18:55 1.1.1.1
++++ ../gcc-2.95.3/gcc/config/vax/vax.md 2002/03/28 06:51:36 1.16
 @@ -135,20 +135,20 @@
  ;; patterns need to be recognized.
  ;; -- Ken Raeburn (Raeburn@Watch.COM) 24 August 1991.
@@ -52,12 +52,11 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(match_operand:DI 1 "general_operand" "I,g"))]
    ""
    "@
-@@ -195,8 +195,32 @@
+@@ -194,9 +194,33 @@
+ 
  ;;  Loads of constants between 64 and 128 used to be done with
  ;; "addl3 $63,#,dst" but this is slower than movzbl and takes as much space.
- 
--(define_insn "movsi"
--  [(set (match_operand:SI 0 "general_operand" "=g")
++
 +(define_expand "movsi"
 +  [(set (match_operand:SI 0 "nonimmediate_operand" "")
 +	(match_operand:SI 1 "general_operand" ""))]
@@ -81,13 +80,38 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
 +      DONE;
 +    }
 +}")
-+
+ 
+-(define_insn "movsi"
+-  [(set (match_operand:SI 0 "general_operand" "=g")
 +(define_insn "movgensi"
 +  [(set (match_operand:SI 0 "nonimmediate_operand" "=g")
  	(match_operand:SI 1 "general_operand" "g"))]
    ""
    "*
-@@ -241,7 +265,7 @@
+@@ -212,14 +236,20 @@
+       /* Make sure the reg hasn't been clobbered.  */
+       && ! reg_set_between_p (operands[0], XEXP (link, 0), insn))
+     return \"incl %0\";
+-  if (GET_CODE (operands[1]) == SYMBOL_REF || GET_CODE (operands[1]) == CONST)
++  if (GET_CODE (operands[1]) == SYMBOL_REF
++      || GET_CODE (operands[1]) == LABEL_REF
++      || GET_CODE (operands[1]) == CONST)
+     {
+       if (push_operand (operands[0], SImode))
+ 	return \"pushab %a1\";
+       return \"movab %a1,%0\";
+     }
+   if (operands[1] == const0_rtx)
+-    return \"clrl %0\";
++    {
++      if (push_operand (operands[0], SImode))
++	return \"pushl %1\";
++      return \"clrl %0\";
++    }
+   if (GET_CODE (operands[1]) == CONST_INT
+       && (unsigned) INTVAL (operands[1]) >= 64)
+     {
+@@ -241,7 +271,7 @@
  }")
  
  (define_insn "movhi"
@@ -96,7 +120,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(match_operand:HI 1 "general_operand" "g"))]
    ""
    "*
-@@ -274,7 +298,7 @@
+@@ -274,7 +304,7 @@
  }")
  
  (define_insn "movstricthi"
@@ -105,7 +129,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(match_operand:HI 1 "general_operand" "g"))]
    ""
    "*
-@@ -295,7 +319,7 @@
+@@ -295,7 +325,7 @@
  }")
  
  (define_insn "movqi"
@@ -114,7 +138,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(match_operand:QI 1 "general_operand" "g"))]
    ""
    "*
-@@ -324,7 +348,7 @@
+@@ -324,7 +354,7 @@
  }")
  
  (define_insn "movstrictqi"
@@ -123,7 +147,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(match_operand:QI 1 "general_operand" "g"))]
    ""
    "*
-@@ -358,8 +382,8 @@
+@@ -358,8 +388,8 @@
  ;; that anything generated as this insn will be recognized as one
  ;; and that it won't successfully combine with anything.
  (define_insn "movstrhi1"
@@ -134,7 +158,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
     (use (match_operand:HI 2 "general_operand" "g"))
     (clobber (reg:SI 0))
     (clobber (reg:SI 1))
-@@ -373,67 +397,67 @@
+@@ -373,67 +403,67 @@
  ;; Extension and truncation insns.
  
  (define_insn "truncsiqi2"
@@ -213,7 +237,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(zero_extend:SI (match_operand:QI 1 "nonimmediate_operand" "g")))]
    ""
    "movzbl %1,%0")
-@@ -441,37 +465,37 @@
+@@ -441,37 +471,37 @@
  ;; Fix-to-float conversion insns.
  
  (define_insn "floatsisf2"
@@ -257,7 +281,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(float:DF (match_operand:QI 1 "nonimmediate_operand" "g")))]
    ""
    "cvtb%# %1,%0")
-@@ -479,37 +503,37 @@
+@@ -479,37 +509,37 @@
  ;; Float-to-fix conversion insns.
  
  (define_insn "fix_truncsfqi2"
@@ -301,7 +325,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(fix:SI (fix:DF (match_operand:DF 1 "general_operand" "gF"))))]
    ""
    "cvt%#l %1,%0")
-@@ -517,7 +541,7 @@
+@@ -517,7 +547,7 @@
  ;;- All kinds of add instructions.
  
  (define_insn "adddf3"
@@ -310,7 +334,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(plus:DF (match_operand:DF 1 "general_operand" "0,gF,gF")
  		 (match_operand:DF 2 "general_operand" "gF,0,gF")))]
    ""
-@@ -527,7 +551,7 @@
+@@ -527,7 +557,7 @@
     add%#3 %1,%2,%0")
  
  (define_insn "addsf3"
@@ -319,7 +343,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(plus:SF (match_operand:SF 1 "general_operand" "0,gF,gF")
  		 (match_operand:SF 2 "general_operand" "gF,0,gF")))]
    ""
-@@ -550,7 +574,7 @@
+@@ -550,7 +580,7 @@
  
  
  (define_insn "addsi3"
@@ -328,7 +352,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(plus:SI (match_operand:SI 1 "general_operand" "g")
  		 (match_operand:SI 2 "general_operand" "g")))]
    ""
-@@ -602,7 +626,7 @@
+@@ -602,7 +632,7 @@
  }")
  
  (define_insn "addhi3"
@@ -337,7 +361,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(plus:HI (match_operand:HI 1 "general_operand" "g")
  		 (match_operand:HI 2 "general_operand" "g")))]
    ""
-@@ -628,7 +652,7 @@
+@@ -628,7 +658,7 @@
  }")
  
  (define_insn "addqi3"
@@ -346,7 +370,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(plus:QI (match_operand:QI 1 "general_operand" "g")
  		 (match_operand:QI 2 "general_operand" "g")))]
    ""
-@@ -655,14 +679,14 @@
+@@ -655,14 +685,14 @@
  
  ;; The add-with-carry (adwc) instruction only accepts two operands.
  (define_insn "adddi3"
@@ -363,7 +387,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
    int carry = 1;
  
    split_quadword_operands (operands, low, 3);
-@@ -700,7 +724,7 @@
+@@ -700,7 +730,7 @@
  ;;- All kinds of subtract instructions.
  
  (define_insn "subdf3"
@@ -372,7 +396,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(minus:DF (match_operand:DF 1 "general_operand" "0,gF")
  		  (match_operand:DF 2 "general_operand" "gF,gF")))]
    ""
-@@ -709,7 +733,7 @@
+@@ -709,7 +739,7 @@
     sub%#3 %2,%1,%0")
  
  (define_insn "subsf3"
@@ -381,7 +405,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(minus:SF (match_operand:SF 1 "general_operand" "0,gF")
  		  (match_operand:SF 2 "general_operand" "gF,gF")))]
    ""
-@@ -718,7 +742,7 @@
+@@ -718,7 +748,7 @@
     subf3 %2,%1,%0")
  
  (define_insn "subsi3"
@@ -390,7 +414,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(minus:SI (match_operand:SI 1 "general_operand" "0,g")
  		  (match_operand:SI 2 "general_operand" "g,g")))]
    ""
-@@ -727,7 +751,7 @@
+@@ -727,7 +757,7 @@
     subl3 %2,%1,%0")
  
  (define_insn "subhi3"
@@ -399,7 +423,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(minus:HI (match_operand:HI 1 "general_operand" "0,g")
  		  (match_operand:HI 2 "general_operand" "g,g")))]
    ""
-@@ -736,7 +760,7 @@
+@@ -736,7 +766,7 @@
     subw3 %2,%1,%0")
  
  (define_insn "subqi3"
@@ -408,7 +432,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(minus:QI (match_operand:QI 1 "general_operand" "0,g")
  		  (match_operand:QI 2 "general_operand" "g,g")))]
    ""
-@@ -746,14 +770,14 @@
+@@ -746,14 +776,14 @@
  
  ;; The subtract-with-carry (sbwc) instruction only takes two operands.
  (define_insn "subdi3"
@@ -425,7 +449,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
    int carry = 1;
  
    split_quadword_operands (operands, low, 3);
-@@ -791,7 +815,7 @@
+@@ -791,7 +821,7 @@
  ;;- Multiply instructions.
  
  (define_insn "muldf3"
@@ -434,7 +458,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(mult:DF (match_operand:DF 1 "general_operand" "0,gF,gF")
  		 (match_operand:DF 2 "general_operand" "gF,0,gF")))]
    ""
-@@ -801,7 +825,7 @@
+@@ -801,7 +831,7 @@
     mul%#3 %1,%2,%0")
  
  (define_insn "mulsf3"
@@ -443,7 +467,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(mult:SF (match_operand:SF 1 "general_operand" "0,gF,gF")
  		 (match_operand:SF 2 "general_operand" "gF,0,gF")))]
    ""
-@@ -811,7 +835,7 @@
+@@ -811,7 +841,7 @@
     mulf3 %1,%2,%0")
  
  (define_insn "mulsi3"
@@ -452,7 +476,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(mult:SI (match_operand:SI 1 "general_operand" "0,g,g")
  		 (match_operand:SI 2 "general_operand" "g,0,g")))]
    ""
-@@ -821,7 +845,7 @@
+@@ -821,7 +851,7 @@
     mull3 %1,%2,%0")
  
  (define_insn "mulhi3"
@@ -461,7 +485,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(mult:HI (match_operand:HI 1 "general_operand" "0,g,g")
  		 (match_operand:HI 2 "general_operand" "g,0,g")))]
    ""
-@@ -831,7 +855,7 @@
+@@ -831,7 +861,7 @@
     mulw3 %1,%2,%0")
  
  (define_insn "mulqi3"
@@ -470,7 +494,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(mult:QI (match_operand:QI 1 "general_operand" "0,g,g")
  		 (match_operand:QI 2 "general_operand" "g,0,g")))]
    ""
-@@ -841,7 +865,7 @@
+@@ -841,7 +871,7 @@
     mulb3 %1,%2,%0")
  
  (define_insn "mulsidi3"
@@ -479,7 +503,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(mult:DI (sign_extend:DI
  		  (match_operand:SI 1 "nonimmediate_operand" "g"))
  		 (sign_extend:DI
-@@ -850,7 +874,7 @@
+@@ -850,7 +880,7 @@
    "emul %1,%2,$0,%0")
  
  (define_insn ""
@@ -488,7 +512,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(plus:DI
  	 (mult:DI (sign_extend:DI
  		   (match_operand:SI 1 "nonimmediate_operand" "g"))
-@@ -862,7 +886,7 @@
+@@ -862,7 +892,7 @@
  
  ;; 'F' constraint means type CONST_DOUBLE
  (define_insn ""
@@ -497,7 +521,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(plus:DI
  	 (mult:DI (sign_extend:DI
  		   (match_operand:SI 1 "nonimmediate_operand" "g"))
-@@ -881,7 +905,7 @@
+@@ -881,7 +911,7 @@
  ;;- Divide instructions.
  
  (define_insn "divdf3"
@@ -506,7 +530,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(div:DF (match_operand:DF 1 "general_operand" "0,gF")
  		(match_operand:DF 2 "general_operand" "gF,gF")))]
    ""
-@@ -890,7 +914,7 @@
+@@ -890,7 +920,7 @@
     div%#3 %2,%1,%0")
  
  (define_insn "divsf3"
@@ -515,7 +539,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(div:SF (match_operand:SF 1 "general_operand" "0,gF")
  		(match_operand:SF 2 "general_operand" "gF,gF")))]
    ""
-@@ -899,7 +923,7 @@
+@@ -899,7 +929,7 @@
     divf3 %2,%1,%0")
  
  (define_insn "divsi3"
@@ -524,7 +548,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(div:SI (match_operand:SI 1 "general_operand" "0,g")
  		(match_operand:SI 2 "general_operand" "g,g")))]
    ""
-@@ -908,7 +932,7 @@
+@@ -908,7 +938,7 @@
     divl3 %2,%1,%0")
  
  (define_insn "divhi3"
@@ -533,7 +557,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(div:HI (match_operand:HI 1 "general_operand" "0,g")
  		(match_operand:HI 2 "general_operand" "g,g")))]
    ""
-@@ -917,7 +941,7 @@
+@@ -917,7 +947,7 @@
     divw3 %2,%1,%0")
  
  (define_insn "divqi3"
@@ -542,7 +566,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(div:QI (match_operand:QI 1 "general_operand" "0,g")
  		(match_operand:QI 2 "general_operand" "g,g")))]
    ""
-@@ -939,7 +963,7 @@
+@@ -939,7 +969,7 @@
  
  ;; Bit-and on the vax is done with a clear-bits insn.
  (define_expand "andsi3"
@@ -551,7 +575,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(and:SI (not:SI (match_operand:SI 1 "general_operand" "g"))
  		(match_operand:SI 2 "general_operand" "g")))]
    ""
-@@ -962,7 +986,7 @@
+@@ -962,7 +992,7 @@
  }")
  
  (define_expand "andhi3"
@@ -560,7 +584,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(and:HI (not:HI (match_operand:HI 1 "general_operand" "g"))
  		(match_operand:HI 2 "general_operand" "g")))]
    ""
-@@ -984,7 +1008,7 @@
+@@ -984,7 +1014,7 @@
  }")
  
  (define_expand "andqi3"
@@ -569,7 +593,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(and:QI (not:QI (match_operand:QI 1 "general_operand" "g"))
  		(match_operand:QI 2 "general_operand" "g")))]
    ""
-@@ -1006,7 +1030,7 @@
+@@ -1006,7 +1036,7 @@
  }")
  
  (define_insn ""
@@ -578,7 +602,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(and:SI (not:SI (match_operand:SI 1 "general_operand" "g,g"))
  		(match_operand:SI 2 "general_operand" "0,g")))]
    ""
-@@ -1015,7 +1039,7 @@
+@@ -1015,7 +1045,7 @@
     bicl3 %1,%2,%0")
  
  (define_insn ""
@@ -587,7 +611,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(and:HI (not:HI (match_operand:HI 1 "general_operand" "g,g"))
  		(match_operand:HI 2 "general_operand" "0,g")))]
    ""
-@@ -1024,7 +1048,7 @@
+@@ -1024,7 +1054,7 @@
     bicw3 %1,%2,%0")
  
  (define_insn ""
@@ -596,7 +620,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(and:QI (not:QI (match_operand:QI 1 "general_operand" "g,g"))
  		(match_operand:QI 2 "general_operand" "0,g")))]
    ""
-@@ -1038,7 +1062,7 @@
+@@ -1038,7 +1068,7 @@
  ;; opportunities in combine.c.
  
  (define_insn ""
@@ -605,7 +629,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(and:SI (match_operand:SI 1 "general_operand" "0,g")
  		(match_operand:SI 2 "const_int_operand" "n,n")))]
    ""
-@@ -1047,7 +1071,7 @@
+@@ -1047,7 +1077,7 @@
     bicl3 %N2,%1,%0")
  
  (define_insn ""
@@ -614,7 +638,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(and:HI (match_operand:HI 1 "general_operand" "0,g")
  		(match_operand:HI 2 "const_int_operand" "n,n")))]
    ""
-@@ -1056,7 +1080,7 @@
+@@ -1056,7 +1086,7 @@
     bicw3 %H2,%1,%0")
  
  (define_insn ""
@@ -623,7 +647,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(and:QI (match_operand:QI 1 "general_operand" "0,g")
  		(match_operand:QI 2 "const_int_operand" "n,n")))]
    ""
-@@ -1067,7 +1091,7 @@
+@@ -1067,7 +1097,7 @@
  ;;- Bit set instructions.
  
  (define_insn "iorsi3"
@@ -632,7 +656,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(ior:SI (match_operand:SI 1 "general_operand" "0,g,g")
  		(match_operand:SI 2 "general_operand" "g,0,g")))]
    ""
-@@ -1077,7 +1101,7 @@
+@@ -1077,7 +1107,7 @@
     bisl3 %2,%1,%0")
  
  (define_insn "iorhi3"
@@ -641,7 +665,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(ior:HI (match_operand:HI 1 "general_operand" "0,g,g")
  		(match_operand:HI 2 "general_operand" "g,0,g")))]
    ""
-@@ -1087,7 +1111,7 @@
+@@ -1087,7 +1117,7 @@
     bisw3 %2,%1,%0")
  
  (define_insn "iorqi3"
@@ -650,7 +674,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(ior:QI (match_operand:QI 1 "general_operand" "0,g,g")
  		(match_operand:QI 2 "general_operand" "g,0,g")))]
    ""
-@@ -1099,7 +1123,7 @@
+@@ -1099,7 +1129,7 @@
  ;;- xor instructions.
  
  (define_insn "xorsi3"
@@ -659,7 +683,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(xor:SI (match_operand:SI 1 "general_operand" "0,g,g")
  		(match_operand:SI 2 "general_operand" "g,0,g")))]
    ""
-@@ -1109,7 +1133,7 @@
+@@ -1109,7 +1139,7 @@
     xorl3 %2,%1,%0")
  
  (define_insn "xorhi3"
@@ -668,7 +692,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(xor:HI (match_operand:HI 1 "general_operand" "0,g,g")
  		(match_operand:HI 2 "general_operand" "g,0,g")))]
    ""
-@@ -1119,7 +1143,7 @@
+@@ -1119,7 +1149,7 @@
     xorw3 %2,%1,%0")
  
  (define_insn "xorqi3"
@@ -677,7 +701,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(xor:QI (match_operand:QI 1 "general_operand" "0,g,g")
  		(match_operand:QI 2 "general_operand" "g,0,g")))]
    ""
-@@ -1129,49 +1153,49 @@
+@@ -1129,49 +1159,49 @@
     xorb3 %2,%1,%0")
  
  (define_insn "negdf2"
@@ -735,7 +759,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(not:QI (match_operand:QI 1 "general_operand" "g")))]
    ""
    "mcomb %1,%0")
-@@ -1182,32 +1206,32 @@
+@@ -1182,32 +1212,32 @@
  ;; prevents converting shifts to ZERO_EXTRACTs with negative positions,
  ;; which isn't valid.
  (define_expand "ashrsi3"
@@ -773,7 +797,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(ashift:SI (match_operand:SI 1 "general_operand" "g")
  		   (match_operand:QI 2 "general_operand" "g")))]
    ""
-@@ -1231,24 +1255,24 @@
+@@ -1231,24 +1261,24 @@
  
  ;; Arithmetic right shift on the vax works by negating the shift count.
  (define_expand "ashrdi3"
@@ -802,7 +826,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(ashiftrt:DI (match_operand:DI 1 "general_operand" "g")
  		     (neg:QI (match_operand:QI 2 "general_operand" "g"))))]
    ""
-@@ -1263,7 +1287,7 @@
+@@ -1263,7 +1293,7 @@
    [(set (match_dup 3)
  	(minus:QI (const_int 32)
  		  (match_dup 4)))
@@ -811,7 +835,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(zero_extract:SI (match_operand:SI 1 "register_operand" "r")
  			 (match_dup 3)
  			 (match_operand:SI 2 "register_operand" "g")))]
-@@ -1276,32 +1300,32 @@
+@@ -1276,32 +1306,32 @@
  
  ;; Rotate right on the vax works by negating the shift count.
  (define_expand "rotrsi3"
@@ -849,7 +873,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(rotatert:SI (match_operand:SI 1 "general_operand" "g")
  		     (neg:QI (match_operand:QI 2 "general_operand" "g"))))]
    ""
-@@ -1309,7 +1333,7 @@
+@@ -1309,7 +1339,7 @@
  
  ;This insn is probably slower than a multiply and an add.
  ;(define_insn ""
@@ -858,7 +882,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  ;	(mult:SI (plus:SI (match_operand:SI 1 "general_operand" "g")
  ;			  (match_operand:SI 2 "general_operand" "g"))
  ;		 (match_operand:SI 3 "general_operand" "g")))]
-@@ -1348,7 +1372,7 @@
+@@ -1348,7 +1378,7 @@
  }")
  
  (define_insn ""
@@ -867,7 +891,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(zero_extract:SI (match_operand:SI 1 "register_operand" "ro")
  			 (match_operand:QI 2 "const_int_operand" "n")
  			 (match_operand:SI 3 "const_int_operand" "n")))]
-@@ -1373,7 +1397,7 @@
+@@ -1373,7 +1403,7 @@
  }")
  
  (define_insn ""
@@ -876,7 +900,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(sign_extract:SI (match_operand:SI 1 "register_operand" "ro")
  			 (match_operand:QI 2 "const_int_operand" "n")
  			 (match_operand:SI 3 "const_int_operand" "n")))]
-@@ -1425,7 +1449,7 @@
+@@ -1425,7 +1455,7 @@
  ;; anyway, we can't allow immediate values for the primary source operand.
  
  (define_insn ""
@@ -885,7 +909,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(sign_extract:SI (match_operand:SI 1 "register_operand" "ro")
  			 (match_operand:QI 2 "general_operand" "g")
  			 (match_operand:SI 3 "general_operand" "g")))]
-@@ -1442,7 +1466,7 @@
+@@ -1442,7 +1472,7 @@
  }")
  
  (define_insn ""
@@ -894,7 +918,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(zero_extract:SI (match_operand:SI 1 "register_operand" "ro")
  			 (match_operand:QI 2 "general_operand" "g")
  			 (match_operand:SI 3 "general_operand" "g")))]
-@@ -1488,7 +1512,7 @@
+@@ -1488,7 +1518,7 @@
    "cmpzv %2,%1,%0,%3")
  
  (define_insn "extv"
@@ -903,7 +927,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(sign_extract:SI (match_operand:QI 1 "memory_operand" "m")
  			 (match_operand:QI 2 "general_operand" "g")
  			 (match_operand:SI 3 "general_operand" "g")))]
-@@ -1517,7 +1541,7 @@
+@@ -1517,7 +1547,7 @@
    "")
  
  (define_insn ""
@@ -912,7 +936,76 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(zero_extract:SI (match_operand:QI 1 "memory_operand" "m")
  			 (match_operand:QI 2 "general_operand" "g")
  			 (match_operand:SI 3 "general_operand" "g")))]
-@@ -1840,63 +1864,66 @@
+@@ -1602,7 +1632,9 @@
+ 		      (label_ref (match_operand 0 "" ""))
+ 		      (pc)))]
+   ""
+-  "jgtru %l0")
++  "*
++  OUTPUT_JUMP(\"jgtru %l0\", 0, \"jneq %l0\");
++  ")
+ 
+ (define_insn "blt"
+   [(set (pc)
+@@ -1620,7 +1652,9 @@
+ 		      (label_ref (match_operand 0 "" ""))
+ 		      (pc)))]
+   ""
+-  "jlssu %l0")
++  "*
++  OUTPUT_JUMP(\"jlssu %l0\", 0, 0);
++  ")
+ 
+ (define_insn "bge"
+   [(set (pc)
+@@ -1638,7 +1672,9 @@
+ 		      (label_ref (match_operand 0 "" ""))
+ 		      (pc)))]
+   ""
+-  "jgequ %l0")
++  "*
++  OUTPUT_JUMP(\"jgequ %l0\", 0, 0);
++  ")
+ 
+ (define_insn "ble"
+   [(set (pc)
+@@ -1656,10 +1692,12 @@
+ 		      (label_ref (match_operand 0 "" ""))
+ 		      (pc)))]
+   ""
+-  "jlequ %l0")
++  "*
++  OUTPUT_JUMP(\"jlequ %l0\", NULL, \"jeql %l0\");
++  ")
+ 
+ ;; Recognize reversed jumps.
+-(define_insn ""
++(define_insn "*rbr"
+   [(set (pc)
+ 	(if_then_else (match_operator 0 "comparison_operator"
+ 				      [(cc0)
+@@ -1667,7 +1705,19 @@
+ 		      (pc)
+ 		      (label_ref (match_operand 1 "" ""))))]
+   ""
+-  "j%C0 %l1") ; %C0 negates condition
++  "*
++  if ((cc_status.flags & CC_NO_OVERFLOW) != 0)
++    {
++      if (GET_CODE (operands[0]) == LTU
++	  || GET_CODE (operands[0]) == GEU)
++	fatal (\"Cannot reverse branch\");
++      if (GET_CODE (operands[0]) == GTU)
++	return \"jeql %l0\";
++      if (GET_CODE (operands[0]) == LEU)
++	return \"jneq %l0\";
++    }
++  return \"j%C0 %l1\"; /* %C0 negates condition */
++  ")
+ 
+ ;; Recognize jbs, jlbs, jbc and jlbc instructions.  Note that the operand
+ ;; of jlbs and jlbc insns are SImode in the hardware.  However, if it is
+@@ -1840,63 +1890,66 @@
  ;; It is used in the call instruction as a byte, but in the addl2 as
  ;; a word.  Since the only time we actually use it in the call instruction
  ;; is when it is a constant, SImode (for addl2) is the proper mode.
@@ -1021,7 +1114,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  
  ;; Call subroutine returning any type.
  
-@@ -1949,7 +1976,7 @@
+@@ -1949,7 +2002,7 @@
  ;; If you are tempted to try `g', please don't--it's not worth
  ;; the risk we will reopen the same bug.
  (define_insn "indirect_jump"
@@ -1030,7 +1123,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
    ""
    "jmp (%0)")
  
-@@ -2003,7 +2030,7 @@
+@@ -2003,7 +2056,7 @@
  					  (mult:SI (minus:SI (match_dup 0)
  							     (const_int 0))
  						   (const_int 2)))))
@@ -1039,7 +1132,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  		      (pc)))]
    ""
    "casel %0,$0,%1")
-@@ -2017,7 +2044,7 @@
+@@ -2017,7 +2070,7 @@
  ;; because < matches any autodecrement, not just a push.
  
  (define_insn ""
@@ -1048,7 +1141,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(match_operand:QI 1 "address_operand" "p"))]
    ""
    "*
-@@ -2029,7 +2056,7 @@
+@@ -2029,7 +2082,7 @@
  }")
  
  (define_insn ""
@@ -1057,7 +1150,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(match_operand:HI 1 "address_operand" "p"))]
    ""
    "*
-@@ -2041,7 +2068,7 @@
+@@ -2041,7 +2094,7 @@
  }")
  
  (define_insn ""
@@ -1066,7 +1159,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(match_operand:SI 1 "address_operand" "p"))]
    ""
    "*
-@@ -2053,7 +2080,7 @@
+@@ -2053,7 +2106,7 @@
  }")
  
  (define_insn ""
@@ -1075,7 +1168,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(match_operand:DI 1 "address_operand" "p"))]
    ""
    "*
-@@ -2065,7 +2092,7 @@
+@@ -2065,7 +2118,7 @@
  }")
  
  (define_insn ""
@@ -1084,7 +1177,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(match_operand:SF 1 "address_operand" "p"))]
    ""
    "*
-@@ -2077,7 +2104,7 @@
+@@ -2077,7 +2130,7 @@
  }")
  
  (define_insn ""
@@ -1093,7 +1186,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(match_operand:DF 1 "address_operand" "p"))]
    ""
    "*
-@@ -2102,7 +2129,7 @@
+@@ -2102,7 +2155,7 @@
  ;; above sequences to before attempting to recognize the new insn.
  
  (define_insn ""
@@ -1102,7 +1195,7 @@ $NetBSD: patch-bd,v 1.1 2002/01/03 20:40:44 tron Exp $
  	(and:SI (ashiftrt:SI (match_operand:SI 1 "general_operand" "g")
  			     (match_operand:QI 2 "const_int_operand" "n"))
  		(match_operand:SI 3 "const_int_operand" "n")))]
-@@ -2124,13 +2151,14 @@
+@@ -2124,13 +2177,14 @@
  ;; optimized away.
  
  (define_insn ""

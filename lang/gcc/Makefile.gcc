@@ -1,6 +1,9 @@
-# $NetBSD: Makefile.gcc,v 1.2 2002/03/25 14:43:35 cjep Exp $
+# $NetBSD: Makefile.gcc,v 1.3 2002/03/28 10:11:50 jmc Exp $
 
 .include "../../mk/bsd.prefs.mk"
+
+GCC_VERSION!=           gcc --version
+.if (${GCC_VERSION} != "2.95.3") || defined(${GCC_FORCE_BUILD})
 
 BUILD_DEPENDS+=	gcc>=2.95.3:../../lang/gcc
 
@@ -14,4 +17,5 @@ CC=	${LOCALBASE}/gcc-2.95.3/bin/cc
 CPP=	${LOCALBASE}/gcc-2.95.3/bin/cpp
 CXX=	${LOCALBASE}/gcc-2.95.3/bin/c++
 F77=	${LOCALBASE}/gcc-2.95.3/bin/g77
+.endif
 .endif

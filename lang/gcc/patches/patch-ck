@@ -1,7 +1,7 @@
-$NetBSD: patch-ck,v 1.1 2002/01/03 20:40:51 tron Exp $
+$NetBSD: patch-ck,v 1.2 2002/03/28 10:11:55 jmc Exp $
 
---- ../gcc-2.95.3/libstdc++/stl/stl_alloc.h.orig	Fri May  7 12:13:28 1999
-+++ ../gcc-2.95.3/libstdc++/stl/stl_alloc.h	Thu Jan  3 20:37:55 2002
+--- ../gcc-2.95.3/libstdc++/stl/stl_alloc.h.orig 2000/07/26 00:19:47 1.1.1.1
++++ ../gcc-2.95.3/libstdc++/stl/stl_alloc.h 2001/05/30 10:51:55 1.2
 @@ -1050,6 +1050,12 @@
  
  #undef __PRIVATE

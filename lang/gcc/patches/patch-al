@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.5 2002/01/03 20:40:43 tron Exp $
+$NetBSD: patch-al,v 1.6 2002/03/28 10:11:53 jmc Exp $
 
---- ../gcc-2.95.3/gcc/config/i386/i386.h.orig	Sun Apr 25 13:43:49 1999
-+++ ../gcc-2.95.3/gcc/config/i386/i386.h	Thu Jan  3 20:37:53 2002
+--- ../gcc-2.95.3/gcc/config/i386/i386.h.orig 2000/07/26 00:18:23 1.1.1.1
++++ ../gcc-2.95.3/gcc/config/i386/i386.h 2001/06/01 13:31:46 1.2
 @@ -258,15 +258,15 @@
     option if the fixed part matches.  The actual option name is made
     by appending `-m' to the specified name.  */

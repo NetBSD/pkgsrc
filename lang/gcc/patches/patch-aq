@@ -1,7 +1,7 @@
-$NetBSD: patch-aq,v 1.3 2002/01/03 20:40:43 tron Exp $
+$NetBSD: patch-aq,v 1.4 2002/03/28 10:11:53 jmc Exp $
 
---- ../gcc-2.95.3/gcc/config/mips/netbsd.h.orig	Wed Dec 16 22:09:19 1998
-+++ ../gcc-2.95.3/gcc/config/mips/netbsd.h	Thu Jan  3 20:37:53 2002
+--- ../gcc-2.95.3/gcc/config/mips/netbsd.h.orig 2000/07/26 00:18:39 1.1.1.1
++++ ../gcc-2.95.3/gcc/config/mips/netbsd.h 2001/11/08 07:21:54 1.6
 @@ -18,210 +18,189 @@
  the Free Software Foundation, 59 Temple Place - Suite 330,
  Boston, MA 02111-1307, USA.  */

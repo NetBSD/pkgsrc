@@ -1,7 +1,7 @@
-$NetBSD: patch-bo,v 1.1 2002/01/03 20:40:47 tron Exp $
+$NetBSD: patch-bo,v 1.2 2002/03/28 10:11:54 jmc Exp $
 
---- ../gcc-2.95.3/gcc/c-parse.c.orig	Tue Apr 27 00:35:53 1999
-+++ ../gcc-2.95.3/gcc/c-parse.c	Thu Jan  3 20:37:54 2002
+--- ../gcc-2.95.3/gcc/c-parse.c.orig 2000/07/26 00:17:21 1.1.1.1
++++ ../gcc-2.95.3/gcc/c-parse.c 2002/01/30 15:16:06 1.4
 @@ -1,69 +1,68 @@
  
  /*  A Bison parser, made from c-parse.y
