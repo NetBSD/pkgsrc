@@ -21,7 +21,7 @@ BINGROUP?=	root
 # Tools paths
 MSGFMT?=	msgfmt
 MSGFMT_OPT?=	-f -v 
-INSTALL?=	install
+INSTALL?=	$(BSD_INSTALL)
 PKG_CONFIG?=	pkg-config
 STRIP?=		-s
 
