@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/11/17 11:35:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/23 20:49:32 rh Exp $
 #
 
 DISTNAME=		skype_staticQT-${DIST_VERSION}
 PKGNAME=		skype-${DIST_VERSION}
-PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://download.skype.com/linux/
 EXTRACT_SUFX=		.tar.bz2
@@ -30,7 +29,7 @@ NO_BUILD=		yes
 NO_CONFIGURE=		yes
 CHECK_SHLIBS=		no
 
-DIST_VERSION=		0.92.0.12
+DIST_VERSION=		0.93.0.3
 
 RESTRICTED=             "Redistribution not allowed yet."
 NO_SRC_ON_CDROM=        ${RESTRICTED}
