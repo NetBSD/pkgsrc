@@ -7601,11 +7601,14 @@ echo "${ECHO_T}$pkg_cv_INT_SL_ADD" >&6
 fi
 
 
-
 pkg_use_nbcompat_statfs=yes
-echo "$as_me:$LINENO: checking for statfs" >&5
-echo $ECHO_N "checking for statfs... $ECHO_C" >&6
-if test "${ac_cv_func_statfs+set}" = set; then
+
+for ac_func in statvfs
+do
+as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
+echo "$as_me:$LINENO: checking for $ac_func" >&5
+echo $ECHO_N "checking for $ac_func... $ECHO_C" >&6
+if eval "test \"\${$as_ac_var+set}\" = set"; then
   echo $ECHO_N "(cached) $ECHO_C" >&6
 else
   cat >conftest.$ac_ext <<_ACEOF
@@ -7616,7 +7619,7 @@ cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
 /* System header to define __stub macros and hopefully few prototypes,
-    which can conflict with char statfs (); below.
+    which can conflict with char $ac_func (); below.
     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
     <limits.h> exists even on freestanding compilers.  */
 #ifdef __STDC__
@@ -7631,14 +7634,14 @@ extern "C"
 #endif
 /* We use char because int might match the return type of a gcc2
    builtin and then its argument prototype would still apply.  */
-char statfs ();
+char $ac_func ();
 /* The GNU C library defines this for functions which it implements
     to always fail with ENOSYS.  Some functions are actually named
     something starting with __ and the normal name is an alias.  */
-#if defined (__stub_statfs) || defined (__stub___statfs)
+#if defined (__stub_$ac_func) || defined (__stub___$ac_func)
 choke me
 #else
-char (*f) () = statfs;
+char (*f) () = $ac_func;
 #endif
 #ifdef __cplusplus
 }
@@ -7647,7 +7650,7 @@ char (*f) () = statfs;
 int
 main ()
 {
-return f != statfs;
+return f != $ac_func;
   ;
   return 0;
 }
@@ -7664,24 +7667,31 @@ if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
   ac_status=$?
   echo "$as_me:$LINENO: \$? = $ac_status" >&5
   (exit $ac_status); }; }; then
-  ac_cv_func_statfs=yes
+  eval "$as_ac_var=yes"
 else
   echo "$as_me: failed program was:" >&5
 sed 's/^/| /' conftest.$ac_ext >&5
 
-ac_cv_func_statfs=no
+eval "$as_ac_var=no"
 fi
 rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
 fi
-echo "$as_me:$LINENO: result: $ac_cv_func_statfs" >&5
-echo "${ECHO_T}$ac_cv_func_statfs" >&6
-if test $ac_cv_func_statfs = yes; then
+echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_var'}'`" >&5
+echo "${ECHO_T}`eval echo '${'$as_ac_var'}'`" >&6
+if test `eval echo '${'$as_ac_var'}'` = yes; then
+  cat >>confdefs.h <<_ACEOF
+#define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
+_ACEOF
+ pkg_use_nbcompat_statfs=yes
+else
 
-	case $host_os in
-	sunos*|solaris*)
-		echo "$as_me:$LINENO: checking for statvfs" >&5
-echo $ECHO_N "checking for statvfs... $ECHO_C" >&6
-if test "${ac_cv_func_statvfs+set}" = set; then
+
+for ac_func in statfs
+do
+as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
+echo "$as_me:$LINENO: checking for $ac_func" >&5
+echo $ECHO_N "checking for $ac_func... $ECHO_C" >&6
+if eval "test \"\${$as_ac_var+set}\" = set"; then
   echo $ECHO_N "(cached) $ECHO_C" >&6
 else
   cat >conftest.$ac_ext <<_ACEOF
@@ -7692,7 +7702,7 @@ cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
 /* System header to define __stub macros and hopefully few prototypes,
-    which can conflict with char statvfs (); below.
+    which can conflict with char $ac_func (); below.
     Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
     <limits.h> exists even on freestanding compilers.  */
 #ifdef __STDC__
@@ -7707,14 +7717,14 @@ extern "C"
 #endif
 /* We use char because int might match the return type of a gcc2
    builtin and then its argument prototype would still apply.  */
-char statvfs ();
+char $ac_func ();
 /* The GNU C library defines this for functions which it implements
     to always fail with ENOSYS.  Some functions are actually named
     something starting with __ and the normal name is an alias.  */
-#if defined (__stub_statvfs) || defined (__stub___statvfs)
+#if defined (__stub_$ac_func) || defined (__stub___$ac_func)
 choke me
 #else
-char (*f) () = statvfs;
+char (*f) () = $ac_func;
 #endif
 #ifdef __cplusplus
 }
@@ -7723,7 +7733,7 @@ char (*f) () = statvfs;
 int
 main ()
 {
-return f != statvfs;
+return f != $ac_func;
   ;
   return 0;
 }
@@ -7740,34 +7750,34 @@ if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
   ac_status=$?
   echo "$as_me:$LINENO: \$? = $ac_status" >&5
   (exit $ac_status); }; }; then
-  ac_cv_func_statvfs=yes
+  eval "$as_ac_var=yes"
 else
   echo "$as_me: failed program was:" >&5
 sed 's/^/| /' conftest.$ac_ext >&5
 
-ac_cv_func_statvfs=no
+eval "$as_ac_var=no"
 fi
 rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
 fi
-echo "$as_me:$LINENO: result: $ac_cv_func_statvfs" >&5
-echo "${ECHO_T}$ac_cv_func_statvfs" >&6
-if test $ac_cv_func_statvfs = yes; then
-  :
+echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_var'}'`" >&5
+echo "${ECHO_T}`eval echo '${'$as_ac_var'}'`" >&6
+if test `eval echo '${'$as_ac_var'}'` = yes; then
+  cat >>confdefs.h <<_ACEOF
+#define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
+_ACEOF
+ pkg_use_nbcompat_statfs=no
 else
 
-			{ { echo "$as_me:$LINENO: error: statfs can't be implemented correctly" >&5
-echo "$as_me: error: statfs can't be implemented correctly" >&2;}
+		{ { echo "$as_me:$LINENO: error: statfs can't be implemented" >&5
+echo "$as_me: error: statfs can't be implemented" >&2;}
    { (exit 1); exit 1; }; }
 
 fi
+done
 
-		;;
-	*)
-		pkg_use_nbcompat_statfs=no
-		;;
-	esac
 
 fi
+done
 
 
 if test $pkg_use_nbcompat_statfs = yes; then
