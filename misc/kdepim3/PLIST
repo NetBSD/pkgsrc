@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/03/11 13:22:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/05/22 02:57:13 markd Exp $
 bin/ical2vcal
 bin/kabc2mutt
 bin/kaddressbook
@@ -45,18 +45,12 @@ lib/kde3/kfile_vcf.la
 lib/kde3/kfile_vcf.so
 lib/kde3/libaddressconduit.la
 lib/kde3/libaddressconduit.so
-lib/kde3/libaddressconduit.so.0
-lib/kde3/libaddressconduit.so.0.0
 lib/kde3/libexpenseconduit.la
 lib/kde3/libexpenseconduit.so
-lib/kde3/libexpenseconduit.so.0
-lib/kde3/libexpenseconduit.so.0.0
 lib/kde3/libkaddressbookpart.la
 lib/kde3/libkaddressbookpart.so
 lib/kde3/libknotesconduit.la
 lib/kde3/libknotesconduit.so
-lib/kde3/libknotesconduit.so.0
-lib/kde3/libknotesconduit.so.0.0
 lib/kde3/libkorg_birthdays.la
 lib/kde3/libkorg_birthdays.so
 lib/kde3/libkorg_datenums.la
@@ -71,24 +65,14 @@ lib/kde3/libkorg_webexport.la
 lib/kde3/libkorg_webexport.so
 lib/kde3/libnullconduit.la
 lib/kde3/libnullconduit.so
-lib/kde3/libnullconduit.so.0
-lib/kde3/libnullconduit.so.0.0
 lib/kde3/libpopmailconduit.la
 lib/kde3/libpopmailconduit.so
-lib/kde3/libpopmailconduit.so.0
-lib/kde3/libpopmailconduit.so.0.0
 lib/kde3/libtimeconduit.la
 lib/kde3/libtimeconduit.so
-lib/kde3/libtimeconduit.so.0
-lib/kde3/libtimeconduit.so.0.0
 lib/kde3/libtodoconduit.la
 lib/kde3/libtodoconduit.so
-lib/kde3/libtodoconduit.so.0
-lib/kde3/libtodoconduit.so.0.0
 lib/kde3/libvcalconduit.la
 lib/kde3/libvcalconduit.so
-lib/kde3/libvcalconduit.so.0
-lib/kde3/libvcalconduit.so.0.0
 lib/libkalarmd.la
 lib/libkalarmd.so
 lib/libkalarmd.so.0
