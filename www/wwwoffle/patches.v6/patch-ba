@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.2 1999/09/03 21:10:54 tron Exp $
+$NetBSD: patch-ba,v 1.3 1999/11/26 06:09:01 itohy Exp $
 
---- config.c.orig	Sat Dec  5 11:52:07 1998
-+++ config.c	Thu Aug 26 15:36:02 1999
-@@ -705,11 +705,15 @@
+--- config.c.orig	Thu Sep 23 01:31:33 1999
++++ config.c	Thu Nov 25 20:00:34 1999
+@@ -798,11 +798,15 @@
      localhost=(*LocalHost)->key.string;
   else
      localhost="localhost";
@@ -21,7 +21,7 @@ $NetBSD: patch-ba,v 1.2 1999/09/03 21:10:54 tron Exp $
   else
      strcpy(ret,localhost);
  
-@@ -727,20 +731,32 @@
+@@ -821,20 +825,32 @@
    int port If true then check the port number as well.
    ++++++++++++++++++++++++++++++++++++++*/
  
@@ -58,7 +58,7 @@ $NetBSD: patch-ba,v 1.2 1999/09/03 21:10:54 tron Exp $
   if(colon)
      *colon=':';
  
-@@ -765,14 +781,23 @@
+@@ -859,14 +875,23 @@
    char *host The name of the host (and port number) to be checked.
    ++++++++++++++++++++++++++++++++++++++*/
  
@@ -86,8 +86,8 @@ $NetBSD: patch-ba,v 1.2 1999/09/03 21:10:54 tron Exp $
  
   if(IsLocalHost(host,0))
      isit=1;
-@@ -782,6 +807,10 @@
-        if(wildcard_match(host,(*p)->key.string))
+@@ -881,6 +906,10 @@
+        else if(wildcard_match(host,(*p)->key.string))
           {isit=1;break;}
  
 +
@@ -97,7 +97,7 @@ $NetBSD: patch-ba,v 1.2 1999/09/03 21:10:54 tron Exp $
   if(colon)
      *colon=':';
  
-@@ -2031,7 +2060,7 @@
+@@ -2192,7 +2221,7 @@
         {errmsg=(char*)malloc(40);strcpy(errmsg,"Expecting a hostname, got nothing.");}
       else
         {
@@ -106,7 +106,7 @@ $NetBSD: patch-ba,v 1.2 1999/09/03 21:10:54 tron Exp $
          if(colon)
            {errmsg=(char*)malloc(56+strlen(text));sprintf(errmsg,"Expecting a hostname not a port number, got '%s'.",text);}
          else
-@@ -2058,7 +2087,7 @@
+@@ -2219,7 +2248,7 @@
        {errmsg=(char*)malloc(48);strcpy(errmsg,"Expecting a hostname (and port), got nothing.");}
      else
        {

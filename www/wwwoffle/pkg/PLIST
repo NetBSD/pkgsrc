@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/09/03 21:07:38 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/11/26 06:09:01 itohy Exp $
 bin/wwwoffle
 bin/wwwoffle-ls
 bin/wwwoffle-mv
@@ -26,7 +26,10 @@ share/doc/wwwoffle/README.CONF
 share/doc/wwwoffle/README.PWD
 share/doc/wwwoffle/README.htdig
 share/doc/wwwoffle/README.win32
+share/doc/wwwoffle/README.lang
 share/doc/wwwoffle/UPGRADE
 @dirrm share/doc/wwwoffle
 @exec @GTAR@ xzCf / %D/libdata/wwwoffle-spool.tar.gz
-@unexec rm -rf /var/wwwoffle
+@unexec cd /var/wwwoffle && rm -rf html lasttime outgoing prevtime* temp
+@unexec rmdir /var/wwwoffle/* 2>/dev/null && rmdir /var/wwwoffle ; :
+@unexec if [ -d /var/wwwoffle ]; then echo "If you won't use the WWWOFFLE package anymore, remove the cache manually by"; echo '	rm -rf /var/wwwoffle'; fi

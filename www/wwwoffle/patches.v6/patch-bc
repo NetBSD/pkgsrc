@@ -1,7 +1,7 @@
-$NetBSD: patch-bc,v 1.2 1999/09/03 21:10:54 tron Exp $
+$NetBSD: patch-bc,v 1.3 1999/11/26 06:09:01 itohy Exp $
 
---- misc.c.orig	Tue Aug 24 19:50:58 1999
-+++ misc.c	Tue Aug 24 20:24:24 1999
+--- misc.c.orig	Thu Jul  8 01:37:57 1999
++++ misc.c	Thu Nov 25 20:00:34 1999
 @@ -44,7 +44,7 @@
   URL *Url=(URL*)malloc(sizeof(URL));
   char *copyurl,*mallocurl=malloc(strlen(url)+2);
@@ -33,18 +33,3 @@ $NetBSD: patch-bc,v 1.2 1999/09/03 21:10:54 tron Exp $
  
   if(!Url->local && IsLocalHost(Url->host,1) && Url->Protocol && Url->Protocol==&Protocols[0])
     {
-@@ -394,12 +399,13 @@
-           *match=0;
- 
-        match=&path[strlen(path)-3];
--       if(match>=path && !strcmp(match,"/.."))
-+       if(match>=path && !strcmp(match,"/..")) {
-           if(match==path)
-              *match=0;
-           else
-              while(match>path && *--match!='/')
-                 *match=0;
-+       }
- 
-        new=(char*)malloc(strlen(Url->proto)+strlen(Url->host)+strlen(path)+8);
-        sprintf(new,"%s://%s%s",Url->proto,Url->host,path);
