@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/15 16:40:45 drochner Exp $
+bin/sip${PYVERSSUFFIX}
+${PYINC}/sip.h
+${PYINC}/sipQt.h
+${PYSITELIB}/libsip.a
+${PYSITELIB}/libsip.la
+${PYSITELIB}/libsip.so
+${PYSITELIB}/libsip.so.10
+${PYSITELIB}/libsip.so.10.1
