@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.20 2002/01/19 21:29:41 agc Exp $
+# $NetBSD: defs.SunOS.mk,v 1.21 2002/02/27 04:41:23 yyamano Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -85,6 +85,11 @@ _OPSYS_HAS_OSSAUDIO=	no		# libossaudio is available
 _PATCH_BACKUP_ARG= 	-z		# switch to patch(1) for backup file
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
 _USE_RPATH=		yes		# add rpath to LDFLAGS
+
+.if !defined(DEBUG_FLAGS)
+_STRIPFLAG_CC?=		-s	# cc(1) option to strip
+_STRIPFLAG_INSTALL?=	-s	# install(1) option to strip
+.endif
 
 # Migration aid for old /usr/local LOCALBASE
 .if !defined(LOCALBASE) && exists(${DESTDIR}/usr/local/libexec/cgi-bin) && \
