@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2000/07/31 18:11:09 tron Exp $
+
+--- devtools/OS/SunOS.5.9	Fri Jul 14 06:27:07 2000
++++ devtools/OS/SunOS.5.9	Wed Jul 26 13:06:46 2000
+@@ -2,8 +2,9 @@
+ define(`confCC', `gcc')
+ define(`confBEFORE', `sysexits.h')
+-define(`confMAPDEF', `-DNDBM -DNIS -DNISPLUS -DMAP_REGEX -DLDAPMAP')
++define(`confMAPDEF', `-DNDBM -DNIS -DNISPLUS -DMAP_REGEX')
+ define(`confENVDEF', `-DSOLARIS=20900')
+-define(`confLIBS', `-lsocket -lnsl -lldap')
++define(`confLIBS', `-lsocket -lnsl')
++define(`confLDOPTS', `${LDFLAGS}')
+ define(`confMTLDOPTS', `-lpthread')
+ define(`confMBINDIR', `/usr/lib')
+ define(`confEBINDIR', `/usr/lib')
