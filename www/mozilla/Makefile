@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2000/06/14 00:10:35 soren Exp $
+# $NetBSD: Makefile,v 1.29 2000/06/14 16:43:25 soren Exp $
 #
 
 DISTNAME=	mozilla-20000612
@@ -17,19 +17,24 @@ BUILD_DEPENDS+=	autoconf:../../devel/autoconf
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
-USE_MOTIF=	yes
 
 MOZ_OBJDIR=	${OPSYS}${OS_VERSION}_OPT.OBJ
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
 
-MAKE_ENV+=	NO_SECURITY=1 MOZ_MEDIUM=1 MOZILLA_CLIENT=1 NO_MDUPDATE=1 \
-		BUILD_OPT=1 LIBRUNPATH=${MOZ_LIBDIR}
+MAKE_ENV+=	MOZILLA_CLIENT=1 NO_MDUPDATE=1 BUILD_OPT=1 \
+		LIBRUNPATH=${MOZ_LIBDIR}
+
+do-fetch:
+	@${ECHO} XXX How to cvs checkout from a pserver non-interactively?
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
+	(cd ${WRKSRC} && autoconf)
 
 pre-build:
 	${ECHO} 0000000000 > ${WRKSRC}/build/build_number
+
+do-build:
+	(cd ${WRKSRC} && gmake -f client.mk)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dist/${MOZ_OBJDIR}/bin/moz-export \
