@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/10/24 13:05:33 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/19 11:55:10 drochner Exp $
 #
 
 DISTNAME=	pygoogle-0.5.2
 PKGNAME=	${PYPKGPREFIX}-google-0.5.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://diveintomark.org/projects/pygoogle/
 EXTRACT_SUFX=	.zip
