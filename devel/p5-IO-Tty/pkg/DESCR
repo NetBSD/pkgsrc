@@ -1,0 +1,31 @@
+IO::Tty and IO::Pty provide an interface to pseudo tty's
+
+To build this distribution run
+
+  perl Makefile.PL
+  make
+  make install
+
+There is no make test for this distribution as it is hard to automate.
+But they is a script included calle try.
+
+If try is run with arguments it will run then as a command with the
+output connected via a pseudo tty, eg
+
+   perl -Mblib try ls
+
+If run without arguments it should output something like
+
+io_pty_ttyname/dev/ttya0
+master IO::Pty=GLOB(0x81a8d40) *Symbol::GEN0 /dev/ttya0
+slave  IO::Tty=GLOB(0x81a4d34) *Symbol::GEN1 /dev/ttya0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10           
