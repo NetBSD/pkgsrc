@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/03/04 19:41:06 fredb Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/24 15:38:42 wiz Exp $
 # KAME Id: Makefile,v 1.6 1999/11/28 14:36:04 itojun Exp
 #
 
@@ -21,6 +21,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
+
+INTERACTIVE_STAGE=	fetch
 
 _FETCH_MESSAGE= \
 	${ECHO} '======================================================='; \
