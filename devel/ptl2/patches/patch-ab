@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.4 1999/05/12 16:17:53 tv Exp $
+$NetBSD: patch-ab,v 1.5 1999/11/15 19:16:36 rh Exp $
 
---- Util/Makefile.in.orig	Wed May 12 12:21:31 1999
-+++ Util/Makefile.in	Wed May 12 12:21:43 1999
-@@ -269,7 +269,6 @@
+--- Util/Makefile.in.orig	Mon Nov 15 20:12:32 1999
++++ Util/Makefile.in	Mon Nov 15 20:12:32 1999
+@@ -293,7 +293,6 @@
  	@echo "Loading $@ ... "
- 	$(MKSHLIBCMD) -o $@ $(LIBRARY_OBJS_PIC) libc_r/*.po net_r/*.po $(altsysdir)/*.po
+ 	$(MKSHLIBCMD) -o $@ $(LIBRARY_OBJS_PIC) $(LIBC_R_OBJS_PIC) $(NET_R_OBJS_PIC) $(altsysdir)/*.po
  	-rm -f $(SHARED_LIBRARY)
 -	$(LN_S) $@ $(SHARED_LIBRARY)
  	@echo done
  
- .c.po:
+ # misc.c must be compiled without -O option
