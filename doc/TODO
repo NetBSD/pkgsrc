@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.76 2002/12/16 23:31:46 jmmv Exp $
+$NetBSD: TODO,v 1.77 2002/12/17 16:59:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -65,7 +65,7 @@ Suggested package updates
 
 	o acroread-5.1
 	o amaya-7.0
-	o anjuta-1.0.0
+	o anjuta-1.0.1
 	o aspell-0.50.3
 	o auctex-11.14
 	o aumix-2.8
@@ -159,7 +159,7 @@ Suggested package updates
 	o kdevelop-2.1.4 [3.0alpha1]
 	o koffice-1.2.1
 	o lame-3.93.1 [pkg/19388]
-	o lbreakout2-2.3.5
+	o lbreakout2-2.4
 	o lcms-1.0.9
 	o lftp-2.6.3 [pkg/19419]
 	o libexif-0.5.7
@@ -178,6 +178,7 @@ Suggested package updates
 	o lynx-2.8.5dev9 (lynx-current)
 	o mcrypt-2.6.3
 	o memtest86-3.0
+	o metacity-2.4.8
 	o mgp-1.09a
 	o mhonarc-2.5.13 [pkg/19366]
 	o mixer.app-1.8.0
@@ -205,6 +206,7 @@ Suggested package updates
 	o postgresql-7.3
 	o povray-3.5
 	o psi-0.8.7
+	o psm-0.8.7 [pkg/19428]
 	o pureftpd-0.13a [pkg/19233]
 	o pygtk-0.6.11
 	o pygtk-1.9.13
@@ -215,7 +217,7 @@ Suggested package updates
 	o rt-2.1.15
 	o rxvt-2.7.9
 	o sawfish-1.2
-	o scmxx-0.6.3.1
+	o scmxx-0.6.3.3
 	o scribus-0.8
 	o scrollkeeper-0.3.11
 	o sed-4.0.4
@@ -223,6 +225,7 @@ Suggested package updates
 	o shorten-3.5.0
 	o siag-office-3.5.3
 	o smalltalk-2.0.10
+	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
 	o sodipodi-0.28
 	o speex-1.0beta2
