@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/07/08 10:49:39 agc Exp $
+# $NetBSD: Makefile,v 1.5 2000/01/10 00:17:57 wiz Exp $
 
 DISTNAME=	ucblogo-4.6
 CATEGORIES=	lang
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 MAKEFILE=	makefile
 GNU_CONFIGURE=	yes
 # otherwise ./configure guesses -L incorrectly
-CONFIGURE_ENV+=	LIBS=-L/usr/X11R6/lib
+CONFIGURE_ENV+=	LIBS=-L${X11BASE}/lib
 USE_X11=	yes
 
 .include "../../mk/bsd.pkg.mk"
