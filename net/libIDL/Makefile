@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/02/14 18:26:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2004/03/06 06:30:33 reed Exp $
 #
 
 DISTNAME=		libIDL-0.8.3
@@ -12,7 +12,7 @@ COMMENT=		CORBA Interface Definition Language parser
 
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
-USE_GNU_TOOLS+=		lex
+USE_GNU_TOOLS+=		lex yacc
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libIDL-2.0.pc.in
 INFO_FILES=		libIDL2.info
