@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/22 14:11:24 jmmv Exp $
+
+--- boost/boost/detail/limits.hpp.orig	2003-02-18 13:12:14.000000000 +0100
++++ boost/boost/detail/limits.hpp	2003-02-18 13:13:50.000000000 +0100
+@@ -47,6 +47,14 @@
+ #include <cwchar> // for WCHAR_MIN and WCHAR_MAX
+ #endif
+ 
++#ifdef __NetBSD__
++#include <machine/endian.h>
++#if BYTE_ORDER == BIG_ENDIAN
++#define BOOST_BIG_ENDIAN
++#else
++#define BOOST_LITTLE_ENDIAN
++#endif
++#else
+ // The macros are not named appropriately.  We don't care about integer
+ // bit layout, but about floating-point NaN (etc.) bit patterns.
+ #if defined(__sparc) || defined(__sparc__) || defined(__powerpc__) || defined(__ppc__) || defined(__hppa) || defined(_MIPSEB) || defined(_POWER)
+@@ -56,6 +64,7 @@
+ #else
+ #error The file boost/detail/limits.hpp needs to be set up for your CPU type.
+ #endif
++#endif
+ 
+ namespace std {
+ 
