@@ -1,4 +1,4 @@
-# $NetBSD: ccache.mk,v 1.1 2004/02/01 00:31:00 jlam Exp $
+# $NetBSD: ccache.mk,v 1.2 2004/02/01 01:33:06 jlam Exp $
 
 .if !defined(COMPILER_CCACHE_MK)
 COMPILER_CCACHE_MK=	defined
@@ -30,8 +30,8 @@ _CCACHEBASE?=		${LOCALBASE}
 _CCACHE_DIR=	${WRKDIR}/.ccache
 PATH:=		${_CCACHE_DIR}/bin:${PATH}
 
-CC=		${_CCACHE_DIR}/bin/cc
-CXX=		${_CCACHE_DIR}/bin/c++
+CC:=		${_CCACHE_DIR}/bin/${CC:T}
+CXX:=		${_CCACHE_DIR}/bin/${CXX:T}
 
 .  for _target_ in CC CXX
 override-tools: ${${_target_}}
