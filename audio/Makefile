@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/04/04 20:11:06 proff Exp $
+# $NetBSD: Makefile,v 1.28 1999/04/06 17:35:32 tron Exp $
 #
 
     SUBDIR += amp
@@ -47,10 +47,12 @@
     SUBDIR += timidity
     SUBDIR += tosha
     SUBDIR += tracker
+    SUBDIR += wmsound
     SUBDIR += xcdplayer
     SUBDIR += xhippo
     SUBDIR += xmcd
     SUBDIR += xmix
     SUBDIR += xmmix
     SUBDIR += xwave
+
 .include "../mk/bsd.pkg.subdir.mk"
