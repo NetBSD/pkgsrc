@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 21:22:26 grant Exp $
+# $NetBSD: Makefile,v 1.17 2003/10/29 16:31:46 gavan Exp $
 #
 
 DISTNAME=	id3ed-1.10.4
@@ -12,6 +12,7 @@ COMMENT=	Edit id3 description tags in mpeg3 files
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
+USE_GCC_SHLIB=		YES
 
 USE_GNU_READLINE=	# uses rl_startup_hook
 
