@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2004/12/24 17:16:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2005/02/04 21:35:51 adrianp Exp $
 
 .include "Makefile.common"
-
-PKGREVISION=	8
 
 CONFIGURE_ARGS+=	-no-tk
 CONFIGURE_ENV+=		disable_x11=yes
@@ -16,6 +14,10 @@ PLIST_SRC=	${PKGDIR}/PLIST.opt
 PLIST_SRC+=	${PKGDIR}/PLIST.prof
 .  endif
 PLIST_SRC+=	${PKGDIR}/PLIST
+.endif
+
+.if ${OPSYS} == "Darwin"
+PLIST_SRC+=	${PKGDIR}/PLIST.stub
 .endif
 
 .include "../../mk/bsd.pkg.mk"
