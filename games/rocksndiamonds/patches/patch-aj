@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1 2002/02/02 11:59:10 jdolecek Exp $
+
+--- src/screens.c.orig	Sat Feb  2 12:51:14 2002
++++ src/screens.c	Sat Feb  2 12:52:14 2002
+@@ -2027,7 +2027,7 @@ void CustomizeKeyboard(int player_nr)
+ 
+ void CalibrateJoystick(int player_nr)
+ {
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+   struct joystick joy_ctrl;
+ #else
+   struct joystick_control
+@@ -2092,7 +2092,7 @@ void CalibrateJoystick(int player_nr)
+ 
+   BackToFront();
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+   joy_ctrl.b1 = joy_ctrl.b2 = 0;
+ #else
+   joy_ctrl.buttons = 0;

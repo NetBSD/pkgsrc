@@ -8,7 +8,7 @@ Included are many levels known from the games "Boulderdash",
 and a lot of new levels designed by other players.
 
 Some features:
-- joystick support for Linux, FreeBSD and DOS/Windows
+- joystick support for Linux, FreeBSD, NetBSD and DOS/Windows
 - network and local multiplayer support
 - soft scrolling with 50 frames/s
 - stereo sound effects and music
