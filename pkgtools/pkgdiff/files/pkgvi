@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pkgvi,v 1.5 2001/01/21 15:09:41 hubertf Exp $
+# $NetBSD: pkgvi,v 1.6 2001/03/16 13:11:41 wiz Exp $
 #
 # Copyright (c) 2001 Tomasz Luchowski. All rights reserved.
 #
@@ -74,7 +74,7 @@ fi
 
 $editor "$tmp"
 
-if cmp "$file" "$tmp" 2>&1 >/dev/null
+if cmp "$file" "$tmp" >/dev/null 2>&1
 then
 	echo "$progname: File unchanged."
 else
@@ -87,4 +87,9 @@ fi
 if [ -f "$tmp" ]
 then
 	rm "$tmp"
+fi
+
+if [ -f "$tmp~" ]
+then
+	rm "$tmp~"
 fi
