@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2000/04/19 15:30:05 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2000/08/11 23:02:37 jlam Exp $
 #
 
-DISTNAME=		R-1.0.1
+DISTNAME=		R-1.1.0
 CATEGORIES=		math
 MASTER_SITES=		http://cran.r-project.org/src/base/ \
 			ftp://cran.r-project.org/pub/R/src/base/ \
@@ -19,7 +19,10 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://cran.r-project.org/
 
+BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 DEPENDS+=		readline>=4.0:../../devel/readline
+DEPENDS+=		jpeg-*:../../graphics/jpeg
+DEPENDS+=		png-*:../../graphics/png
 
 USE_FORTRAN=		# defined
 USE_X11=		# defined
@@ -27,13 +30,22 @@ USE_PERL5=		# defined
 USE_GMAKE=		# defined
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--enable-readline --with-x
-CONFIGURE_ARGS+=	--without-gnome --without-libmoto
-CONFIGURE_ARGS+=	--without-blas --without-blas-risc
+CONFIGURE_ARGS+=	--with-x
+CONFIGURE_ARGS+=	--with-readline
+CONFIGURE_ARGS+=	--without-gnome			# not yet stable
+CONFIGURE_ARGS+=	--without-tcltk			# not yet stable
+CONFIGURE_ARGS+=	--without-atlas
+CONFIGURE_ARGS+=	--without-blas
+CONFIGURE_ARGS+=	--without-blas_risc
 CONFIGURE_ARGS+=	--without-dxml
+CONFIGURE_ARGS+=	--without-libmoto
+
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-CONFIGURE_ENV+=		MAKE="${LOCALBASE}/bin/gmake"
+CONFIGURE_ENV+=		LIBS="${LIBS}"
+CONFIGURE_ENV+=		MAKE="${MAKE_PROGRAM}"
+
 CPPFLAGS+=		-I${LOCALBASE}/include		# readline/readline.h
+LIBS+=			-ltermcap			# -lreadline -ltermcap
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -49,16 +61,13 @@ R_PAPERSIZE=		Letter
 .endif
 CONFIGURE_ENV+=		R_PAPERSIZE="${R_PAPERSIZE}"
 
-.if (${OPSYS} == "SunOS")
-BSD_INSTALL?=	/usr/ucb/install
-.else
-BSD_INSTALL?=	/usr/bin/install
-.endif
-INSTALL_OWN_SCRIPT=	${BSD_INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
-INSTALL_SCRIPT=		${BSD_INSTALL} ${COPY} -m ${BINMODE}
-INSTALL_DATA=		${BSD_INSTALL} ${COPY} -m 644
+# These macros are used during the build, so strip off the -o,-g flags.
+#
+INSTALL_DATA=		${INSTALL} ${COPY} -m ${SHAREMODE}
+INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 
-MAKE_ENV+=		INSTALL_OWN_SCRIPT="${INSTALL_OWN_SCRIPT}"
+pre-configure:
+	cd ${WRKSRC} && autoreconf
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/R
