@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/07/20 21:44:29 jmmv Exp $
+
+--- cgictest.c.orig	Sun Jan 12 13:59:43 2003
++++ cgictest.c
+@@ -33,7 +33,13 @@ void Cookies();
+ void LoadEnvironment();
+ void SaveEnvironment();
+ 
+-int cgiMain() {
++int main() {
++
++	/*
++         *  Initialize the library environment.
++         */
++	cgiInit();
++    
+ #ifdef DEBUG
+ 	LoadEnvironment();
+ #endif /* DEBUG */

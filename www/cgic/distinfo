@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/20 21:44:29 jmmv Exp $
+
+SHA1 (cgic202.tar.gz) = 8db924f00a7443f8953ea37a084025332e0efbb1
+Size (cgic202.tar.gz) = 49531 bytes
+SHA1 (patch-aa) = 1799e30492707962a9fdf927697657021e7afdce
+SHA1 (patch-ab) = 42e8ee71eeb363e702dfab66344811a8967d382d
+SHA1 (patch-ac) = 948ba16e838bb50c60b14e75ccffc942ec01144a
+SHA1 (patch-ad) = 6ef230a6cc265121dbcbaef392bc1d9c43d167b0
+SHA1 (patch-ae) = 30c7170033e3fce8dea2991456d76cdd26e5cae2
+SHA1 (patch-af) = e143b77cabe7cb8ac44bd74419ed875800dc1d1d
