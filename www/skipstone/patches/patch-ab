@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/08/09 07:56:24 simonb Exp $
+$NetBSD: patch-ab,v 1.2 2002/01/24 13:47:03 wiz Exp $
 
---- src/skipstone.h.orig	Mon Jul  2 21:41:31 2001
-+++ src/skipstone.h	Mon Jul  2 21:43:48 2001
-@@ -38,6 +38,11 @@
+--- src/skipstone.h.orig	Fri Dec 28 23:27:53 2001
++++ src/skipstone.h
+@@ -40,6 +40,11 @@
  #define SKIPSTONE_SYSTEM_THEME_DIR "/usr/share/skipstone/pixmaps"
  #define SKIPSTONE_LOCAL_PLUGIN_DIR "/usr/local/share/skipstone/plugins"
  #define SKIPSTONE_SYSTEM_PLUGIN_DIR "/usr/share/skipstone/plugins"
