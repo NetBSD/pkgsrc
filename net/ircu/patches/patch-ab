@@ -1,0 +1,52 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/11/24 20:37:40 tv Exp $
+
+--- config/config-sh.in.orig	Fri May  1 19:30:04 1998
++++ config/config-sh.in	Tue Nov 24 13:31:51 1998
+@@ -44,7 +44,6 @@
+   if [ "$DEFAULTS" != "none" ]; then
+     bool 'Do you want to change your previous configuration' CHANGE_CONFIG
+     if [ "$CHANGE_CONFIG" = "n" ]; then
+-      echo "Ok, I will only prompt you for NEW parameters."
+       USE_DEFAULT=y
+     else
+       USE_DEFAULT=n
+@@ -63,13 +62,10 @@
+     eval exec_prefix="$prefix"
+   fi
+   string 'Which compiler do you want to use' CC "$CC_DEFAULT"
+-  echo "* For the following four questions, specify 'none' when you want it to be empty."
+   eval string "'What flags should I pass to $CC [none]'" CFLAGS "'$CFLAGS_DEFAULT'"
+   string 'Do you need extra include directories [none]' EXTRA_INCLUDEDIRS none
+   if [ -z "$LDFLAGS_DEFAULT" ]; then
+     LDFLAGS_DEFAULT=none
+-  else
+-    eval LDFLAGS_DEFAULT="$LDFLAGS_DEFAULT"
+   fi
+   string 'Which linker flags do you need [none]' LDFLAGS "$LDFLAGS_DEFAULT"
+   if [ -z "$LIBS" ]; then
+@@ -78,9 +74,6 @@
+   string 'Which extra libraries do you need [none]' IRCDLIBS "$LIBS"
+   eval bindir="$bindir"
+   string 'In which directory should I install the ircd binary' BINDIR $bindir
+-  if [ ! -d "$BINDIR" ]; then
+-    echo "$BINDIR : No such directory"
+-  fi
+   string 'What should the name of the installed symbolic link to the exectuable be' SYMLINK ircd
+   string 'Which permissions do you want the binary to have' IRCDMODE 711
+   string 'Which owner do you want the binary to have' IRCDOWN "`id | sed -e 's/.*uid=[0-9]*(//' -e 's/).*//' 2> /dev/null`"
+@@ -192,7 +185,6 @@
+   eval DPATH_DEFAULT="${prefix}/lib/ircd"
+   string 'Directory where all ircd stuff resides' DPATH $DPATH_DEFAULT
+   define_string SPATH "$BINDIR/ircd"
+-  echo "The following filenames are either full paths or files within DPATH"
+   string 'Server configuration file' CPATH 'ircd.conf'
+   string 'Server MOTD file' MPATH 'ircd.motd'
+   string 'Server remote MOTD file (3 lines max)' RPATH 'remote.motd'
+@@ -338,7 +330,6 @@
+     int 'Check clone delay (600!)' CHECK_CLONE_DELAY 600
+   fi
+   int 'Max auto connects per class (1!)' MAXIMUM_LINKS 1
+-  echo '* Never define this on a production server:'
+   bool 'Enable message logging' MSGLOG_ENABLED
+   if [ "$MSGLOG_ENABLED" = "y" ]; then
+     int 'Message log size' MSGLOG_SIZE 128
