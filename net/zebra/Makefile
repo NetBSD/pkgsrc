@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/10/29 15:35:35 itojun Exp $
+# $NetBSD: Makefile,v 1.28 2000/12/26 14:32:30 itojun Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -18,6 +18,7 @@ BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
 
 # libedit does not work due to missing functions.
 .if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"
+BROKEN=		"possible security issue"
 DEPENDS+=	readline-*:../../devel/readline
 CONFIGURE_ARGS+=--enable-vtysh
 CONFIGURE_ENV+=	LIBS=-L${LOCALBASE}/lib CPPFLAGS=-I${LOCALBASE}/include
