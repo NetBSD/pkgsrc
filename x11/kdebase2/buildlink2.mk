@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2004/01/03 18:49:59 reed Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/03/26 02:28:01 wiz Exp $
 
 .if !defined(KDEBASE2_BUILDLINK2_MK)
 KDEBASE2_BUILDLINK2_MK=	# defined
@@ -8,6 +8,7 @@ KDEBASE2_BUILDLINK2_MK=	# defined
 BUILDLINK_PACKAGES+=		kdebase2
 BUILDLINK_PKGBASE.kdebase2?=	kdebase
 BUILDLINK_DEPENDS.kdebase2?=	kdebase>=2.2.2nb4
+BUILDLINK_RECOMMENDED.kdebase2?=	kdebase>=2.2.2nb6
 BUILDLINK_PKGSRCDIR.kdebase2?=	../../x11/kdebase2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdebase2=kdebase
