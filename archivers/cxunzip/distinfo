@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/10/06 12:33:03 rtr Exp $
+$NetBSD: distinfo,v 1.3 2003/11/26 10:40:01 abs Exp $
 
-SHA1 (cxunzip-0.96.tar.gz) = 5c639c344a8a3a05ab33419d1b1f66b99ac460a4
-Size (cxunzip-0.96.tar.gz) = 185785 bytes
-SHA1 (patch-aa) = 1738c34f3a0ca48f8651228b72e044b32872d6a1
-SHA1 (patch-ab) = 4850d910d93a17f7be0987a76eb209f777955f9d
-SHA1 (patch-ac) = 7b97e5faf824c5347ace88ff8bbddf6404390238
+SHA1 (cxunzip-0.98.tar.gz) = 515721b5e016d0384deadbc61ba0cfe0d042d16f
+Size (cxunzip-0.98.tar.gz) = 188499 bytes
+SHA1 (patch-aa) = fa6c6d1817f43c2f373209cbae5a300189595857
