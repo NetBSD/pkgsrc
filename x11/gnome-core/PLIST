@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/04/10 20:23:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2002/07/19 04:54:24 mycroft Exp $
 bin/deskguide_applet
 bin/gmenu
 bin/gnome-about
@@ -1051,8 +1051,8 @@ share/pixmaps/vnterm.xpm
 @dirrm share/pixmaps/mailcheck
 @dirrm share/pixmaps/fish
 @dirrm share/omf/gnome-core
-@unexec ${RMDIR} share/mc/templates 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} share/mc 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/mc/templates 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/mc 2>/dev/null || ${TRUE}
 @dirrm share/gnome/panel
 @dirrm share/gnome/html/panel
 @dirrm share/gnome/hints
