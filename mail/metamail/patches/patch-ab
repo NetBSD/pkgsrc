@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 1999/09/03 08:19:15 agc Exp $
+$NetBSD: patch-ab,v 1.5 2003/03/23 13:39:26 jmmv Exp $
 
---- config.h.orig	Wed Nov 24 15:36:07 1993
-+++ config.h	Fri Sep  3 09:07:12 1999
-@@ -65,6 +65,12 @@
+--- config.h.orig	1993-11-24 16:36:07.000000000 +0100
++++ config.h
+@@ -65,6 +65,12 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
  #endif
  #endif
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.4 1999/09/03 08:19:15 agc Exp $
  /* NOTE:  The RESET_PROGRAM resets the terminal to a "normal" state 
     If you comment out the definition, all will be well except that metamail's
     -R switch won't work, and metamail-called programs might be more likely
-@@ -100,7 +106,9 @@
+@@ -100,7 +106,9 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
  #endif
  
  #ifdef SYSV
@@ -25,7 +25,7 @@ $NetBSD: patch-ab,v 1.4 1999/09/03 08:19:15 agc Exp $
  #define bcopy(a, b, c) memcpy(b, a, c)
  #define bzero(a, b) memset(a, 0, b)
  #define bcmp memcmp
-@@ -155,7 +163,11 @@
+@@ -155,9 +163,13 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
  #ifdef NeXT
  #define sigtype void
  #else
@@ -33,7 +33,18 @@ $NetBSD: patch-ab,v 1.4 1999/09/03 08:19:15 agc Exp $
 +#define sigtype void
 +#else
  #define sigtype int
+ #endif
+ #endif
 +#endif
- #endif
- #endif
  
+ #ifdef MSDOS
+ #define PATH_SEPARATOR ';'
+@@ -173,7 +185,7 @@ WITHOUT ANY EXPRESS OR IMPLIED WARRANTIE
+ #else
+ #define PATH_SEPARATOR ':'
+ #ifndef STDPATH
+-#define STDPATH "/.mailcap:/usr/local/etc/mailcap:/usr/etc/mailcap:/etc/mailcap:/etc/mail/mailcap:/usr/public/lib/mailcap"
++#define STDPATH "/.mailcap:" PKG_SYSCONFDIR "/mailcap"
+ #endif
+ #endif
+ #endif
