@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/23 12:09:00 markd Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/28 13:18:11 markd Exp $
 
 DISTNAME=	kbiff-3.7
 PKGREVISION=	1
@@ -13,7 +13,9 @@ COMMENT= 	A new mail notification utility for KDE
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=          yes
+SHLIBTOOL_OVERRIDE=	libtool
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
