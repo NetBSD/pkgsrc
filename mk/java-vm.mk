@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.25 2004/05/05 16:47:12 xtraeme Exp $
+# $NetBSD: java-vm.mk,v 1.26 2004/06/03 20:19:08 abs Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -44,10 +44,10 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 #
 .if defined(USE_JAVA2) && !empty(USE_JAVA2:M[yY][eE][sS])
 _PKG_JVMS?=		sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe wonka \
-			jdk12 jdk13
+			jdk12 jdk13 jdk14
 .else
 _PKG_JVMS?=		jdk sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe \
-			wonka jdk12 jdk13
+			wonka jdk12 jdk13 jdk14
 .endif
 
 # To be deprecated: if PKG_JVM is explicitly set, then use it as the
@@ -81,9 +81,11 @@ _PKG_JVM_DEFAULT?=	kaffe
 _ONLY_FOR_PLATFORMS.jdk= \
 	NetBSD-*-i386 Linux-*-i[3-6]86
 _ONLY_FOR_PLATFORMS.jdk12= \
-	NetBSD-1.[6-9]*-i386 NetBSD-2.*-i386
+	NetBSD-1.[6-9]*-i386 NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.jdk13= \
-	NetBSD-1.[6-9]*-i386 NetBSD-2.*-i386
+	NetBSD-1.[6-9]*-i386 NetBSD-[2-9].*-i386
+_ONLY_FOR_PLATFORMS.jdk14= \
+	NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.blackdown-jdk13= \
 	NetBSD-*-i386 NetBSD-*-powerpc NetBSD-*-sparc \
 	Linux-*-i[3-6]86 Linux-*-powerpc Linux-*-sparc
@@ -94,7 +96,7 @@ _ONLY_FOR_PLATFORMS.blackdown-jdk13+= \
 _ONLY_FOR_PLATFORMS.sun-jdk13= \
 	NetBSD-*-i386 Linux-*-i[3-6]86 Darwin-*-*
 _ONLY_FOR_PLATFORMS.sun-jdk14= \
-	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 NetBSD-2.*-i386 \
+	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 NetBSD-[2-9].*-i386 \
 	Linux-*-i[3-6]86
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
@@ -113,6 +115,7 @@ _PKG_JVMS_ACCEPTED+=	${PKG_JVMS_ACCEPTED:M${_jvm_}}
 _JAVA_PKGBASE.jdk=		jdk
 _JAVA_PKGBASE.jdk12=		jdk12
 _JAVA_PKGBASE.jdk13=		jdk13
+_JAVA_PKGBASE.jdk14=		jdk14
 _JAVA_PKGBASE.sun-jdk13=	sun-jdk13
 _JAVA_PKGBASE.sun-jdk14=	sun-jdk14
 _JAVA_PKGBASE.blackdown-jdk13=	blackdown-jdk13
@@ -136,7 +139,7 @@ _PKG_JVM_INSTALLED.${_jvm_}!= \
 #
 .if ${_PKG_JVM_DEFAULT} == "sun-jdk"
 .  if !empty(MACHINE_PLATFORM:MNetBSD-1.6[M-Z]*-i386) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-2.*-i386) || \
+      !empty(MACHINE_PLATFORM:MNetBSD-[2-9].*-i386) || \
       !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86)
 .    if defined(_PKG_JVM_INSTALLED.sun-jdk14) && \
 	(${_PKG_JVM_INSTALLED.sun-jdk14} == "yes")
@@ -191,6 +194,7 @@ _PKG_JVM=		"none"
 BUILDLINK_DEPENDS.jdk?=			jdk-[0-9]*
 BUILDLINK_DEPENDS.jdk12?=		jdk12-[0-9]*
 BUILDLINK_DEPENDS.jdk13?=		jdk13-[0-9]*
+BUILDLINK_DEPENDS.jdk14?=		jdk14-[0-9]*
 BUILDLINK_DEPENDS.sun-jdk13?=		sun-jdk13-[0-9]*
 BUILDLINK_DEPENDS.sun-jre13?=		sun-jre13-[0-9]*
 BUILDLINK_DEPENDS.sun-jdk14?=		sun-jdk14-[0-9]*
@@ -203,6 +207,7 @@ BUILDLINK_DEPENDS.wonka?=		wonka-[0-9]*
 _JRE.jdk=		jdk
 _JRE.jdk12=		jdk12
 _JRE.jdk13=		jdk13
+_JRE.jdk14=		jdk14
 _JRE.sun-jdk13=		sun-jre13
 _JRE.sun-jdk14=		sun-jre14
 _JRE.blackdown-jdk13=	blackdown-jre13
@@ -223,6 +228,10 @@ _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.2.2
 _JDK_PKGSRCDIR=		../../wip/jdk13
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.3.1
+.elif ${_PKG_JVM} == "jdk14"
+_JDK_PKGSRCDIR=		../../wip/jdk14
+_JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.4.2
 .elif ${_PKG_JVM} == "sun-jdk13"
 _JDK_PKGSRCDIR=		../../lang/sun-jdk13
 _JRE_PKGSRCDIR=		../../lang/sun-jre13
