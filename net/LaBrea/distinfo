@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/10/11 14:49:31 agc Exp $
+
+SHA1 (LaBrea.tgz) = 988f183e7623300179c01bbf617d407fc0aa4807
+Size (LaBrea.tgz) = 23860 bytes
+SHA1 (patch-aa) = aeb62428e0105d092c4c26cf9af21d171d310bd8
