@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.246 1999/04/06 09:39:30 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.247 1999/04/06 14:11:10 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1479,24 +1479,25 @@ pkg-su-install:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ `${ID} -u` = 0 ]; then					\
 		${MAKE} ${.MAKEFLAGS} root-install;			\
+	elif [ "X${BATCH}" != X"" ]; then				\
+		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run mtree."; \
+		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
 	else								\
-		if [ "X${BATCH}" != X"" ]; then				\
-			${ECHO_MSG} "Warning: Batch mode, not superuser, can't run mtree."; \
-			${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
-		else							\
-			make=`${TYPE} ${MAKE} | ${AWK} '{ print $$NF }'`; \
-			force="";					\
-			if [ "X${FORCE_PKG_REGISTER}" != X"" ]; then	\
-				force="FORCE_PKG_REGISTER=1";		\
-			fi;						\
-			if [ "X${PRE_ROOT_CMD}" != "X${TRUE}" ]; then	\
-				${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
-				${PRE_ROOT_CMD};			\
-			fi;                                             \
-			${ECHO_MSG} "===>  Becoming root@`/bin/hostname` to install ${PKGNAME}."; \
-			${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
-			${SU_CMD} "cd ${.CURDIR}; $$make $$force ${.MAKEFLAGS} root-install"; \
-                fi;							\
+		make=`${TYPE} ${MAKE} | ${AWK} '{ print $$NF }'`;	\
+		args="";						\
+		if [ "X${FORCE_PKG_REGISTER}" != X"" ]; then		\
+			args="FORCE_PKG_REGISTER=1";			\
+		fi;							\
+		if [ "X${PKG_DEBUG_LEVEL}" != X"" ]; then		\
+			args="$$args PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL}"; \
+		fi;							\
+		if [ "X${PRE_ROOT_CMD}" != "X${TRUE}" ]; then		\
+			${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
+			${PRE_ROOT_CMD};				\
+		fi;                                             	\
+		${ECHO_MSG} "===>  Becoming root@`/bin/hostname` to install ${PKGNAME}."; \
+		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
+		${SU_CMD} "cd ${.CURDIR}; $$make $$args ${.MAKEFLAGS} root-install"; \
 	fi
 
 # Empty pre-* and post-* targets, note we can't use .if !target()
@@ -2247,7 +2248,7 @@ fake-pkg: ${PLIST} ${DESCR}
 		for dep in `${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true ECHO_MSG=${TRUE} | sort -u`; do \
 			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
 			${ECHO} "a sanity check should be put in here to prevent some user having the pkg installed/registered twice somehow - HF" >/dev/null ; \
-			if [ -z $$realdep ]; then			\
+			if ${TEST} -z $$realdep; then			\
 				${ECHO} "$$dep not installed - NOT registered" ; \
 			elif [ -d ${PKG_DBDIR}/$$realdep ]; then	\
 				if ${TEST} ! -e ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; then \
