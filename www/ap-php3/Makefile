@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:21:51 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/20 05:23:28 jonb Exp $
 #
 
 PKGNAME=	ap-${DISTNAME}
 
 COMMENT=	PHP3 server module for Apache
 
-DEPENDS+=	apache-1.3.*:../../www/apache
+DEPENDS+=	apache{,6}-1.3.*:../../www/apache
 
 USE_PERL5=	# defined
 
