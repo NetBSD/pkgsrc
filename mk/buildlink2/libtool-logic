@@ -1,0 +1,33 @@
+# $NetBSD: libtool-logic,v 1.1 2002/12/26 17:17:32 jlam Exp $
+
+case $arg in
+-L.|-L./*|-L..*|-L${WRKSRC}*)
+	case $fixlibpath in
+	yes)
+		lpath=`$echo "X$arg" | $Xsed -e "s/^-L//"`
+		$echo "*** [buildlink2] Warning: deprecated -L$lpath detected"
+		case "$rellpath" in
+		*"$lpath "*)	;;
+		*"$lpath"*)	;;
+		*)		rellpath="$rellpath $lpath" ;;
+		esac
+		;;
+	esac
+	;;
+-l*)
+	case $fixlibpath in
+	yes)
+		lib=`$echo "X$arg" | $Xsed -e "s/^-l//"`
+		for dir in $rellpath; do
+			la="$dir/lib$lib.la"
+			if $test -f "$la"; then
+				$echo "*** [buildlink2] Warning: replaced $arg with $la"
+				arg="$la"
+				cachesettings='skipcache=yes'
+			fi
+		done
+		;;
+	esac
+	addtoprivatecache=yes
+	;;
+esac
