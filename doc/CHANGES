@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7300 2004/09/30 22:14:06 rh Exp $
+$NetBSD: CHANGES,v 1.7301 2004/09/30 22:37:31 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4498,3 +4498,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated socat to 1.4.0.2 [adrianp 2004-09-30]
 	Updated subversion to 1.1.0 [epg 2004-09-30]
 	Added sun-jre15-5.0 [rh 2004-09-30]
+	Added cppunit-1.10.2 [wulf 2004-10-1]
