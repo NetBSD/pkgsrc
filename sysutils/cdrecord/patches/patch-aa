@@ -1,0 +1,13 @@
+--- lib/libschily.mk~	Sat May 17 12:31:25 1997
++++ lib/libschily.mk	Sun Nov  2 19:21:32 1997
+@@ -49,8 +49,8 @@
+ 
+ $(ARCHDIRX)align_test$(DEP_SUFFIX):	$(ARCHDIRX)
+ 
+-include		$(ARCHDIRX)avoffset$(DEP_SUFFIX)
+-include		$(ARCHDIRX)align_test$(DEP_SUFFIX)
++#include		$(ARCHDIRX)avoffset$(DEP_SUFFIX)
++#include		$(ARCHDIRX)align_test$(DEP_SUFFIX)
+ 
+ CLEAN_FILEX=	$(ARCHDIR)/align_test.o $(ARCHDIR)/align_test
+ CLEAN_FILEX +=	$(ARCHDIR)/avoffset.o $(ARCHDIR)/avoffset
