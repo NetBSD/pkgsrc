@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/03/13 17:36:45 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2002/06/15 18:35:13 dmcmahill Exp $
 #
 
 DISTNAME=	rrdtool-1.0.33
@@ -14,8 +14,9 @@ DEPENDS+=	cgilib-0.5:../../www/cgilib
 DEPENDS+=	gd>=1.8.4nb1:../../graphics/gd
 DEPENDS+=	jpeg-6*:../../graphics/jpeg
 
-# IEEE math not good enough on alpha
-NOT_FOR_PLATFORM=	NetBSD-*-alpha
+#needs FPC code not found in older versions of NetBSD
+NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
+			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
 USE_LIBTOOL=	# defined
 USE_GMAKE=	# defined
