@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2005/03/28 18:50:02 wiz Exp $
 --- manlifter.orig	Fri Dec 24 23:44:11 2004
 +++ manlifter	Sun Jan  9 14:06:09 2005
 @@ -300,7 +300,8 @@
