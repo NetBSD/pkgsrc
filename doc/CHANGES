@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3931 2003/12/03 17:28:34 gson Exp $
+$NetBSD: CHANGES,v 1.3932 2003/12/03 17:43:05 gson Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4788,3 +4788,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated aspell to 0.50.4.1 [recht 2003-12-03]
 	Updated icu to 2.6.1 [recht 2003-12-03]
 	Updated mono to 0.29 [recht 2003-12-03]
+	Updated bbapm to 0.0.1nb1 [gson 2003-12-03]
