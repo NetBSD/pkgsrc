@@ -1,3 +1,4 @@
+$NetBSD: patch-by,v 1.2 1999/12/28 05:08:12 wiz Exp $
 --- pthreads/signal.c	Tue Mar 12 20:33:17 1996
 +++ pthreads/signal.c	Thu Nov  4 13:17:26 1999
 @@ -303,9 +303,17 @@
