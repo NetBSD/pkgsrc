@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1999/02/19 14:32:49 rh Exp $
+$NetBSD: md5,v 1.3 1999/06/04 11:52:04 tron Exp $
 
-MD5 (ethereal-0.5.1.tar.gz) = 0cb4499458fb7d20950e704486921c63
+MD5 (ethereal-0.6.2.tar.gz) = e887f29d5b71a52ab70e048d0d36dd4b
