@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.15 2001/05/21 21:39:14 wiz Exp $
+$NetBSD: patch-aa,v 1.16 2001/05/28 02:41:55 jlam Exp $
 
---- scripts/makefile.std.orig	Wed Dec  8 18:44:40 1999
-+++ scripts/makefile.std
+--- scripts/makefile.std.orig	Fri Jan  5 19:25:50 2001
++++ scripts/makefile.std	Sun May 27 22:36:02 2001
 @@ -3,7 +3,7 @@
  # For conditions of distribution and use, see copyright notice in png.h
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.15 2001/05/21 21:39:14 wiz Exp $
 -LDFLAGS=-L. -L$(ZLIBLIB) -lpng -lz -lm
 +CC=${LIBTOOL} --mode=compile $(REALCC)
 +#CFLAGS+=-O # -g -DPNG_DEBUG=5
-+LDFLAGS=libpng.la -lz -lm
++#LDFLAGS=-L. -L$(ZLIBLIB) -lpng -lz -lm
  
  #RANLIB=echo
  RANLIB=ranlib
@@ -35,12 +35,12 @@ $NetBSD: patch-aa,v 1.15 2001/05/21 21:39:14 wiz Exp $
 -	ar rc $@  $(OBJS)
 -	$(RANLIB) $@
 +libpng.la: $(OBJS)
-+	${LIBTOOL} --mode=link $(REALCC) -o $@ ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -lz -lm -version-info 2:0
++	${LIBTOOL} --mode=link $(REALCC) -o $@ ${OBJS:.o=.lo} -rpath ${PREFIX}/lib ${LDFLAGS} -lz -lm -version-info 2:0
  
 -pngtest: pngtest.o libpng.a
 -	$(CC) -o pngtest $(CFLAGS) pngtest.o $(LDFLAGS)
 +pngtest: pngtest.o libpng.la
-+	${LIBTOOL} --mode=link $(REALCC) -o pngtest $(CFLAGS) pngtest.o $(LDFLAGS)
++	${LIBTOOL} --mode=link $(REALCC) -o pngtest $(CFLAGS) pngtest.o $(LDFLAGS) libpng.la -lz -lm
  
  test: pngtest
  	./pngtest
