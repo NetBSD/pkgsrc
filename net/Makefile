@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.529 2005/01/10 10:27:55 drochner Exp $
+# $NetBSD: Makefile,v 1.530 2005/01/13 08:24:36 itojun Exp $
 #
 
 COMMENT=	Networking tools
@@ -173,6 +173,7 @@ SUBDIR+=	linc
 SUBDIR+=	llnlxdir
 SUBDIR+=	llnlxftp
 SUBDIR+=	lopster
+SUBDIR+=	mDNSResponder
 SUBDIR+=	maradns
 SUBDIR+=	md-whois
 SUBDIR+=	mirror
