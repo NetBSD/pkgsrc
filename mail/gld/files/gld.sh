@@ -1,11 +1,11 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gld.sh,v 1.4 2005/01/19 15:39:44 xtraeme Exp $
+# $NetBSD: gld.sh,v 1.5 2005/01/19 15:48:41 xtraeme Exp $
 #
 
 # PROVIDE: gld
 # BEFORE: mail
-# REQUIRE: DAEMON LOGIN
+# REQUIRE: DAEMON LOGIN mysqld
 
 . /etc/rc.subr
 
