@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9744 2005/04/04 09:33:50 adam Exp $
+$NetBSD: CHANGES,v 1.9745 2005/04/04 09:35:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1895,3 +1895,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated nessus-core to 2.2.4 [adam 2005-04-04]
 	Updated nessus-plugins to 2.2.4 [adam 2005-04-04]
 	Updated nessus to 2.2.4 [adam 2005-04-04]
+	Updated p5-Lchown to 1.00 [wiz 2005-04-04]
