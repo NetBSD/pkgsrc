@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.6 1998/09/22 06:11:40 garbled Exp $
+# $NetBSD: Makefile,v 1.7 1998/11/13 01:50:21 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
 DISTNAME=       Mosaic-src-2.7b5
 PKGNAME=        mosaic-2.7b5
+WRKSRC=		${WRKDIR}/Mosaic-src
 CATEGORIES=     www
 MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/Web/Mosaic/Unix/source/
-
-NOT_FOR_ARCHS=	alpha	#LP64 problems
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/
@@ -16,10 +15,10 @@ DEPENDS=	jpeg-6b:../../graphics/jpeg \
 		png-1.0.2:../../graphics/png \
 		xpm-3.4k:../../graphics/xpm
 
+NOT_FOR_ARCHS=	alpha	#LP64 problems
+
 USE_X11=	yes
 USE_MOTIF=	yes
-
-WRKSRC=		${WRKDIR}/Mosaic-src
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
