@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/06/12 05:30:44 kei Exp $
-lib/X11/fonts/local/K14-1.pcf.gz
-lib/X11/fonts/local/K14-2.pcf.gz
-lib/X11/fonts/local/jiskan16-2000-1.pcf.gz
-lib/X11/fonts/local/jiskan16-2000-2.pcf.gz
-@exec /usr/X11R6/bin/mkfontdir %D/lib/X11/fonts/misc
-@unexec /usr/X11R6/bin/mkfontdir %D/lib/X11/fonts/misc
