@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9245 2005/02/21 12:17:48 wiz Exp $
+$NetBSD: CHANGES,v 1.9246 2005/02/21 14:57:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -998,3 +998,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated nessus to 2.2.3 [adam 2005-02-21]
 	Updated zsh to 4.2.4 [adam 2005-02-21]
 	Updated p5-Log-Dispatch to 2.10 [wiz 2005-02-21]
+	Updated libtecla to 1.6.1 [adam 2005-02-21]
