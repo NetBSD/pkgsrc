@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/01 06:02:24 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/06/21 00:46:11 jlam Exp $
 include/freetype.h
 include/fterrid.h
 include/ftnameid.h
@@ -9,6 +9,7 @@ include/ftxkern.h
 include/ftxpost.h
 include/ftxwidth.h
 lib/libttf.a
+lib/libttf.la
 lib/libttf.so.3.0
 share/locale/cs/LC_MESSAGES/freetype.mo
 share/locale/de/LC_MESSAGES/freetype.mo
