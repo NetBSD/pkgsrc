@@ -1,8 +1,8 @@
-$NetBSD: patch-bd,v 1.1 1999/12/25 05:28:37 kim Exp $
+$NetBSD: patch-bd,v 1.2 2000/03/20 02:25:55 itojun Exp $
 
---- readconf.c.orig	Wed May 12 07:19:27 1999
-+++ readconf.c	Fri Dec 24 21:50:42 1999
-@@ -170,7 +170,13 @@
+--- readconf.c-	Wed May 12 20:19:27 1999
++++ readconf.c	Mon Mar 20 09:47:24 2000
+@@ -170,6 +170,9 @@
    oGlobalKnownHostsFile, oUserKnownHostsFile, oConnectionAttempts,
    oBatchMode, oStrictHostKeyChecking, oCompression, oCompressionLevel,
    oKeepAlives, oUsePrivilegedPort, oKerberosAuthentication,
@@ -10,23 +10,9 @@ $NetBSD: patch-bd,v 1.1 1999/12/25 05:28:37 kim Exp $
 +  oAFSTokenPassing,
 +#endif /* AFS */
    oKerberosTgtPassing, oClearAllForwardings, oNumberOfPasswordPrompts,
-+#ifdef ENABLE_ANOTHER_PORT_TRY
-+  oAnotherPort,
-+#endif /* ENABLE_ANOTHER_PORT_TRY */
    oXauthPath, oGatewayPorts, oPasswordPromptLogin, oPasswordPromptHost
  } OpCodes;
- 
-@@ -194,6 +200,9 @@
-   { "hostname", oHostName },
-   { "proxycommand", oProxyCommand },
-   { "port", oPort },
-+#ifdef ENABLE_ANOTHER_PORT_TRY
-+  { "anotherport", oAnotherPort },
-+#endif /* ENABLE_ANOTHER_PORT_TRY */
-   { "cipher", oCipher },
-   { "remoteforward", oRemoteForward },
-   { "localforward", oLocalForward },
-@@ -213,6 +222,9 @@
+@@ -213,6 +216,9 @@
    { "useprivilegedport", oUsePrivilegedPort },
    { "kerberosauthentication", oKerberosAuthentication },
    { "kerberostgtpassing", oKerberosTgtPassing },
@@ -36,7 +22,7 @@ $NetBSD: patch-bd,v 1.1 1999/12/25 05:28:37 kim Exp $
    { "clearallforwardings", oClearAllForwardings },
    { "numberofpasswordprompts", oNumberOfPasswordPrompts },
    { "xauthlocation", oXauthPath },
-@@ -354,6 +366,12 @@
+@@ -354,6 +360,12 @@
        intptr = &options->kerberos_tgt_passing;
        goto parse_flag;
        
@@ -49,20 +35,7 @@ $NetBSD: patch-bd,v 1.1 1999/12/25 05:28:37 kim Exp $
      case oFallBackToRsh:
        intptr = &options->fallback_to_rsh;
        goto parse_flag;
-@@ -497,6 +515,12 @@
- 	*intptr = value;
-       break;
-       
-+#ifdef ENABLE_ANOTHER_PORT_TRY
-+    case oAnotherPort:
-+      intptr = &options->another_port;
-+      goto parse_int;
-+#endif /* ENABLE_ANOTHER_PORT_TRY */
-+
-     case oConnectionAttempts:
-       intptr = &options->connection_attempts;
-       goto parse_int;
-@@ -678,6 +702,9 @@
+@@ -678,6 +690,9 @@
    options->rsa_authentication = -1;
    options->kerberos_authentication = -1;
    options->kerberos_tgt_passing = -1;
@@ -72,17 +45,7 @@ $NetBSD: patch-bd,v 1.1 1999/12/25 05:28:37 kim Exp $
    options->tis_authentication = -1;
    options->password_authentication = -1;
    options->rhosts_rsa_authentication = -1;
-@@ -689,6 +716,9 @@
-   options->keepalives = -1;
-   options->compression_level = -1;
-   options->port = -1;
-+#ifdef ENABLE_ANOTHER_PORT_TRY
-+  options->another_port = -1;
-+#endif /* ENABLE_ANOTHER_PORT_TRY */
-   options->connection_attempts = -1;
-   options->number_of_password_prompts = -1;
-   options->password_prompt_login = -1;
-@@ -724,17 +754,19 @@
+@@ -724,17 +739,19 @@
    if (options->rsa_authentication == -1)
      options->rsa_authentication = 1;
    if (options->kerberos_authentication == -1)
@@ -108,14 +71,3 @@ $NetBSD: patch-bd,v 1.1 1999/12/25 05:28:37 kim Exp $
    if (options->tis_authentication == -1)
      options->tis_authentication = 0;
    if (options->password_authentication == -1)
-@@ -759,6 +791,10 @@
-     options->compression_level = 6;
-   if (options->port == -1)
-     options->port = 0; /* Filled in ssh_connect. */
-+#ifdef ENABLE_ANOTHER_PORT_TRY
-+  if (options->another_port == -1)
-+    options->another_port = 0;
-+#endif /* ENABLE_ANOTHER_PORT_TRY */
-   if (options->connection_attempts == -1)
-     options->connection_attempts = 4;
-   if (options->number_of_password_prompts == -1)

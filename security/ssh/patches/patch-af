@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
+$NetBSD: patch-af,v 1.10 2000/03/20 02:25:50 itojun Exp $
 
---- sshd.c.orig	Wed May 12 13:19:29 1999
-+++ sshd.c	Mon Mar  6 15:19:36 2000
+--- sshd.c-	Wed May 12 20:19:29 1999
++++ sshd.c	Mon Mar 20 09:57:30 2000
 @@ -511,7 +511,7 @@
  #include "firewall.h"   /* TIS authsrv authentication */
  #endif
@@ -41,228 +41,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
  
  /* Server configuration options. */
  ServerOptions options;
-@@ -553,6 +564,19 @@
- /* Name of the server configuration file. */
- char *config_file_name = SERVER_CONFIG_FILE;
- 
-+/* Flag indicating whether IPv4 or IPv6.  This can be set on the command line.
-+   Default value is AF_UNSPEC means both IPv4 and IPv6. */
-+#ifdef ENABLE_IPV6
-+int IPv4or6 = AF_UNSPEC;
-+#else
-+int IPv4or6 = AF_INET;
-+#endif
-+
-+#ifdef ENABLE_LOG_AUTH
-+char *unauthenticated_user = NULL;
-+int log_auth_flag = 0;
-+#endif /* ENABLE_LOG_AUTH */
-+
- /* Debug mode flag.  This can be set on the command line.  If debug
-    mode is enabled, extra debugging output will be sent to the system
-    log, the daemon will not go to background, and will exit after processing
-@@ -576,7 +600,17 @@
- 
- /* This is set to the socket that the server is listening; this is used in
-    the SIGHUP signal handler. */
--int listen_sock;
-+#define	MAX_LISTEN_SOCKS	16
-+int listen_socks[MAX_LISTEN_SOCKS];
-+int num_listen_socks = 0;
-+void close_listen_socks()
-+{
-+  int i;
-+
-+  for (i = 0; i < num_listen_socks; i++)
-+    close(listen_socks[i]);
-+  num_listen_socks = -1;
-+}
- 
- /* This is not really needed, and could be eliminated if server-specific
-    and client-specific code were removed from newchannels.c */
-@@ -649,7 +683,6 @@
-               const char *display, const char *auth_proto,
-               const char *auth_data, const char *ttyname);
- 
--
- /* Signal handler for SIGHUP.  Sshd execs itself when it receives SIGHUP;
-    the effect is to reread the configuration file (and to regenerate
-    the server key). */
-@@ -666,7 +699,7 @@
- void sighup_restart(void)
- {
-   log_msg("Received SIGHUP; restarting.");
--  close(listen_sock);
-+  close_listen_socks();
-   execvp(saved_argv[0], saved_argv);
-   log_msg("RESTART FAILED: av[0]='%.100s', error: %.100s.", 
-       saved_argv[0], strerror(errno));
-@@ -680,7 +713,7 @@
- RETSIGTYPE sigterm_handler(int sig)
- {
-   log_msg("Received signal %d; terminating.", sig);
--  close(listen_sock);
-+  close_listen_socks();
-   exit(255);
- }
- 
-@@ -759,7 +792,7 @@
-   int perm_denied = 0;
-   int ret;
-   fd_set fdset;
--  struct sockaddr_in sin;
-+  struct sockaddr_storage from;
-   char buf[100]; /* Must not be larger than remote_version. */
-   char remote_version[100]; /* Must be at least as big as buf. */
-   char *comment;
-@@ -769,6 +802,9 @@
-   struct linger linger;
- #endif /* SO_LINGER */
-   int done;
-+  struct addrinfo *ai;
-+  char ntop[ADDRSTRLEN], strport[PORTSTRLEN];
-+  int listen_sock, maxfd;
-   
-   /* Save argv[0]. */
-   saved_argv = av;
-@@ -787,10 +823,26 @@
-   initialize_server_options(&options);
- 
-   /* Parse command-line arguments. */
--  while ((opt = getopt(ac, av, "f:p:b:k:h:g:diqV:")) != EOF)
-+  while ((opt = getopt(ac, av, "f:p:b:k:h:g:diqV:4"
-+#ifdef ENABLE_IPV6
-+	"6"
-+#endif
-+	)) != EOF)
-     {
-       switch (opt)
-         {
-+	case '4':
-+#ifdef ENABLE_IPV6
-+	  IPv4or6 = (IPv4or6 == AF_INET6) ? AF_UNSPEC : AF_INET;
-+#else
-+	  IPv4or6 = AF_INET;
-+#endif
-+	  break;
-+#ifdef ENABLE_IPV6
-+	case '6':
-+	  IPv4or6 = (IPv4or6 == AF_INET) ? AF_UNSPEC : AF_INET6;
-+	  break;
-+#endif
-         case 'f':
-           config_file_name = optarg;
-           break;
-@@ -807,7 +859,7 @@
-           options.server_key_bits = atoi(optarg);
-           break;
-         case 'p':
--          options.port = atoi(optarg);
-+	  options.ports[options.num_ports++] = atoi(optarg);
-           break;
-         case 'g':
-           options.login_grace_time = atoi(optarg);
-@@ -829,6 +881,10 @@
-           fprintf(stderr, "sshd version %s [%s]\n", SSH_VERSION, HOSTTYPE);
-           fprintf(stderr, "Usage: %s [options]\n", av0);
-           fprintf(stderr, "Options:\n");
-+	  fprintf(stderr, "  -4         Use IPv4 only\n");
-+#ifdef ENABLE_IPV6
-+	  fprintf(stderr, "  -6         Use IPv6 only\n");
-+#endif
-           fprintf(stderr, "  -f file    Configuration file (default %s/sshd_config)\n", ETCDIR);
-           fprintf(stderr, "  -d         Debugging mode\n");
-           fprintf(stderr, "  -i         Started from inetd\n");
-@@ -857,16 +913,15 @@
-       fprintf(stderr, "fatal: Bad server key size.\n");
-       exit(1);
-     }
--  if (options.port < 1 || options.port > 65535)
--    {
--      fprintf(stderr, "fatal: Bad port number.\n");
--      exit(1);
--    }
-   if (options.umask != -1)
-     {
-       umask(options.umask);
-     }
- 
-+#ifdef ENABLE_LOG_AUTH
-+  log_auth_flag = options.log_auth;
-+#endif /* ENABLE_LOG_AUTH */
-+
-   /* Check that there are no remaining arguments. */
-   if (optind < ac)
-     {
-@@ -1034,10 +1089,13 @@
-     }
-   else
-     {
-+  for (ai = options.listen_addrs; ai; ai = ai->ai_next)
-+    {
-       /* Create socket for listening. */
--      listen_sock = socket(AF_INET, SOCK_STREAM, 0);
-+      listen_sock = socket(ai->ai_family, SOCK_STREAM, 0);
-       if (listen_sock < 0)
-         fatal("socket: %.100s", strerror(errno));
-+      listen_socks[num_listen_socks] = listen_sock;
- 
-       /* Set socket options.  We try to make the port reusable and have it
-          close as fast as possible without waiting in unnecessary wait states
-@@ -1051,21 +1109,30 @@
-                  sizeof(linger));
- #endif /* SO_LINGER */
- 
--      /* Initialize the socket address. */
--      memset(&sin, 0, sizeof(sin));
--      sin.sin_family = AF_INET;
--      sin.sin_addr = options.listen_addr;
--      sin.sin_port = htons(options.port);
-+      getnameinfo(ai->ai_addr, ai->ai_addrlen,
-+		  ntop, sizeof(ntop), strport, sizeof(strport),
-+		  NI_NUMERICHOST|NI_NUMERICSERV);
- 
-       /* Bind the socket to the desired port. */
--      if (bind(listen_sock, (struct sockaddr *)&sin, sizeof(sin)) < 0)
-+      if (bind(listen_sock, ai->ai_addr, ai->ai_addrlen) < 0)
-         {
--          error("bind: %.100s", strerror(errno));
--          shutdown(listen_sock, 2);
-+	  error("Bind to port %s on %s failed: %.200s.",
-+		strport, ntop, strerror(errno));
-           close(listen_sock);
--          fatal("Bind to port %d failed: %.200s.", options.port,
--                strerror(errno));
-+	  continue;
-         }
-+      num_listen_socks++;
-+
-+      /* Start listening on the port. */
-+      log_msg("Server listening on %s port %s.", ntop, strport);
-+      if (listen(listen_sock, 5) < 0)
-+	fatal("listen: %.100s", strerror(errno));
-+
-+      } /* for (ai = options.listen_addrs; ai; ai = ai->ai_next) */
-+      freeaddrinfo(options.listen_addrs);
-+
-+      if (!num_listen_socks)
-+	fatal("Cannot bind all addresses.");
- 
-       if (!debug_flag)
-         {
-@@ -1081,11 +1148,6 @@
-             }
-         }
- 
--      /* Start listening on the port. */
--      log_msg("Server listening on port %d.", options.port);
--      if (listen(listen_sock, 5) < 0)
--        fatal("listen: %.100s", strerror(errno));
--
-       /* Generate an rsa key. */
-       log_msg("Generating %d bit RSA key.", options.server_key_bits);
-       rsa_generate_key(&sensitive_data.private_key, &public_key,
-@@ -1115,7 +1177,6 @@
+@@ -1115,7 +1126,6 @@
        /* Arrange SIGCHLD to be caught. */
        signal(SIGCHLD, main_sigchld_handler);
  
@@ -270,7 +49,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
  #ifdef KRB5
        /* Initialize contexts and setup replay cache */
        if (!ssh_context)
-@@ -1128,7 +1189,6 @@
+@@ -1128,7 +1138,6 @@
            krb5_init_ets(ssh_context);
          }
  #endif
@@ -278,70 +57,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
  
        /* Stay listening for connections until the system crashes or the
           daemon is killed with a signal. */
-@@ -1139,9 +1199,15 @@
-           
-           /* Wait in select until there is a connection. */
-           FD_ZERO(&fdset);
--          FD_SET(listen_sock, &fdset);
--          ret = select(listen_sock + 1, &fdset, NULL, NULL, NULL);
--          if (ret < 0 || !FD_ISSET(listen_sock, &fdset))
-+	  maxfd = 0;
-+	  for (i = 0; i < num_listen_socks; i++)
-+	    {
-+	      FD_SET(listen_socks[i], &fdset);
-+	      if (listen_socks[i] > maxfd)
-+		maxfd = listen_socks[i];
-+	    }
-+	  ret = select(maxfd + 1, &fdset, NULL, NULL, NULL);
-+	  if (ret < 0)
-             {
-               if (errno == EINTR)
-                 continue;
-@@ -1149,8 +1215,12 @@
-               continue;
-             }
-           
--          aux = sizeof(sin);
--          newsock = accept(listen_sock, (struct sockaddr *)&sin, &aux);
-+      for (i = 0; i < num_listen_socks; i++)
-+	{
-+	  if (!FD_ISSET(listen_socks[i], &fdset))
-+	    continue;
-+	  aux = sizeof(from);
-+	  newsock = accept(listen_socks[i], (struct sockaddr *)&from, &aux);
-           if (newsock < 0)
-             {
-               if (errno == EINTR)
-@@ -1166,7 +1236,7 @@
-               /* In debugging mode.  Close the listening socket, and start
-                  processing the connection without forking. */
-               debug("Server will not fork when running in debugging mode.");
--              close(listen_sock);
-+	      close_listen_socks();
-               sock_in = newsock;
-               sock_out = newsock;
-               pid = getpid();
-@@ -1195,7 +1265,7 @@
-                      the accepted socket.  Reinitialize logging (since our
-                      pid has changed).  We break out of the loop to handle
-                      the connection. */
--                  close(listen_sock);
-+		  close_listen_socks();
-                   sock_in = newsock;
-                   sock_out = newsock;
- #ifdef LIBWRAP
-@@ -1233,6 +1303,10 @@
-           
-           /* Close the new socket (the child is now taking care of it). */
-           close(newsock);
-+        } /* for (i = 0; i < num_host_socks; i++) */
-+	  /* child process check (or debug mode) */
-+	  if (num_listen_socks < 0)
-+	    break;
-         }
-     }
-   
-@@ -1407,6 +1481,16 @@
+@@ -1407,6 +1416,16 @@
    /* Try to remove authentication socket and directory */
    auth_delete_socket(NULL);
    
@@ -358,7 +74,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
    /* The connection has been terminated. */
    log_msg("Closing connection to %.100s", get_remote_ipaddr());
    packet_close();
-@@ -1470,17 +1554,17 @@
+@@ -1470,17 +1489,17 @@
    if (options.tis_authentication)
      auth_mask |= 1 << SSH_AUTH_TIS;
  #endif
@@ -381,7 +97,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
  #endif
    if (options.password_authentication)
      auth_mask |= 1 << SSH_AUTH_PASSWORD;
-@@ -1677,7 +1761,7 @@
+@@ -1677,7 +1696,7 @@
      /* XXX No days_before_password_expires calculation here */
    }
  #endif /* HAVE_USERSEC_H */
@@ -390,7 +106,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
    {
      struct spwd *sp;
      
-@@ -1783,56 +1867,62 @@
+@@ -1783,56 +1802,62 @@
      endspent();
    }
  #endif /* HAVE_ETC_SHADOW */
@@ -476,7 +192,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
  
  #ifdef HAVE_HPUX_TCB_AUTH
    {
-@@ -2039,7 +2129,7 @@
+@@ -2039,7 +2064,7 @@
            }
      }
    
@@ -485,7 +201,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
    grp = getgrgid(pwd->pw_gid);
    if (grp)
      group = grp->gr_name;
-@@ -2151,12 +2241,12 @@
+@@ -2151,12 +2176,12 @@
    unsigned int client_host_key_bits;
    MP_INT client_host_key_e, client_host_key_n;
    int password_attempts = 0;
@@ -501,7 +217,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
    login_cap_t *lc;
    const char *hostname;
    const char *ipaddr;
-@@ -2167,10 +2257,18 @@
+@@ -2167,10 +2192,18 @@
    ipaddr = get_remote_ipaddr();
  #endif /* HAVE_LOGIN_CAP_H */
  
@@ -521,20 +237,16 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
    /* For KRB5 allow the user to input fully qualified name i.e.
       "username@realm" as the local user name. Then use this name to call
       out to krb5_aname_to_localname to find if there is a localname
-@@ -2203,8 +2301,11 @@
+@@ -2203,7 +2236,7 @@
      }
    else 
      krb5_parse_name(ssh_context, user, &client);
 -#endif /* defined(KERBEROS) && defined(KRB5) */
 +#endif /* KRB5 */
                           
-+#ifdef ENABLE_LOG_AUTH
-+  unauthenticated_user = user;
-+#endif /* ENABLE_LOG_AUTH */
    /* Verify that the user is a valid user.  We disallow usernames starting
       with any characters that are commonly used to start NIS entries. */
-   pw = getpwnam(user);
-@@ -2218,11 +2319,11 @@
+@@ -2218,11 +2251,11 @@
    pwcopy.pw_passwd = xstrdup(pw->pw_passwd);
    pwcopy.pw_uid = pw->pw_uid;
    pwcopy.pw_gid = pw->pw_gid;
@@ -548,7 +260,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
    pwcopy.pw_dir = xstrdup(pw->pw_dir);
    pwcopy.pw_shell = xstrdup(pw->pw_shell);
    pw = &pwcopy;
-@@ -2241,11 +2342,11 @@
+@@ -2241,11 +2274,11 @@
  
    debug("Attempting authentication for %.100s.", user);
  
@@ -563,7 +275,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
  #if defined (HAVE_SIA)
    /* For SIA, only call auth_password() here if the user really
       has no password.  Otherwise, the call would generate misleading
-@@ -2254,12 +2355,21 @@
+@@ -2254,9 +2287,13 @@
    if (options.password_authentication && sia_no_password(user) &&
        auth_password(user, ""))
  #else /* defined(HAVE_SIA) */
@@ -579,15 +291,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
      {
        /* Authentication with empty password succeeded. */
        debug("Login for user %.100s accepted without authentication.", user);
-+#ifdef ENABLE_LOG_AUTH
-+      log_auth("%.100s from %.700s (%s)",
-+	       user, get_canonical_hostname(),
-+	       "empty password accepted");
-+#endif /* ENABLE_LOG_AUTH */
-       authentication_type = SSH_AUTH_PASSWORD;
-       authenticated = 1;
-       /* Success packet will be sent after loop below. */
-@@ -2281,34 +2391,61 @@
+@@ -2281,34 +2318,61 @@
        /* Process the packet. */
        switch (type)
          {
@@ -657,7 +361,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
          case SSH_CMSG_AUTH_KERBEROS:
            if (!options.kerberos_authentication)
              {
-@@ -2316,9 +2453,10 @@
+@@ -2316,9 +2380,10 @@
                log_msg("Kerberos authentication disabled.");
                break;
              }
@@ -669,19 +373,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
              {
                char *tkt_user;
                
-@@ -2334,6 +2472,11 @@
-                   /* Client has successfully authenticated to us. */
-                   log_msg("Kerberos authentication accepted %.100s for login to account %.100s from %.200s",
-                           tkt_user, user, get_canonical_hostname());
-+#ifdef ENABLE_LOG_AUTH
-+		  log_auth("%.100s from %.700s (%s)",
-+			   user, get_canonical_hostname(),
-+			   "kerberos authentication accepted");
-+#endif /* ENABLE_LOG_AUTH */
-                   authentication_type = SSH_AUTH_KERBEROS;
-                   authenticated = 1;
-                   break;
-@@ -2347,11 +2490,31 @@
+@@ -2347,11 +2412,31 @@
                  }
                free(tkt_user);
              }
@@ -717,43 +409,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
            
          case SSH_CMSG_AUTH_RHOSTS:
            if (!options.rhosts_authentication)
-@@ -2382,6 +2545,11 @@
-               /* Authentication accepted. */
-               log_msg("Rhosts authentication accepted for %.100s, remote %.100s on %.700s.",
-                   user, client_user, get_canonical_hostname());
-+#ifdef ENABLE_LOG_AUTH
-+	      log_auth("%.100s from %.100s@%.700s (%s)",
-+		       user, client_user, get_canonical_hostname(),
-+		       "rhosts authentication accepted");
-+#endif /* ENABLE_LOG_AUTH */
-               authentication_type = SSH_AUTH_RHOSTS;
-               authenticated = 1;
-               remote_user_name = client_user;
-@@ -2441,6 +2609,11 @@
-                               options.strict_modes))
-             {
-               /* Authentication accepted. */
-+#ifdef ENABLE_LOG_AUTH
-+	      log_auth("%.100s from %.100s@%.700s (%s)",
-+		       user, client_user, get_canonical_hostname(),
-+                       "rhosts with RSA host authentication accepted");
-+#endif /* ENABLE_LOG_AUTH */
-               authentication_type = SSH_AUTH_RHOSTS_RSA;
-               authenticated = 1;
-               remote_user_name = client_user;
-@@ -2474,6 +2647,11 @@
-                 /* Successful authentication. */
-                 mpz_clear(&n);
-                 log_msg("RSA authentication for %.100s accepted.", user);
-+#ifdef ENABLE_LOG_AUTH
-+		log_auth("%.100s from %.700s (%s)",
-+			 user, get_canonical_hostname(),
-+			 "RSA user authentication accepted");
-+#endif /* ENABLE_LOG_AUTH */
-                 authentication_type = SSH_AUTH_RSA;
-                 authenticated = 1;
-                 break;
-@@ -2568,7 +2746,7 @@
+@@ -2568,7 +2653,7 @@
              if (!strncmp(buf, "challenge ", 10) ||
                  !strncmp(buf, "chalnecho ", 10)) {
                snprintf(prompt, sizeof(prompt),
@@ -762,19 +418,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
                debug("TIS challenge %.500s", buf);
                packet_start(SSH_SMSG_AUTH_TIS_CHALLENGE);
                packet_put_string(prompt, strlen(prompt));
-@@ -2608,6 +2786,11 @@
-               auth_close();
-               memset(password, 0, strlen(password));
-               xfree(password);
-+#ifdef ENABLE_LOG_AUTH
-+	      log_auth("%.100s from @%.700s (%s)",
-+		       user, get_canonical_hostname(),
-+                       "TIS authentication accepted");
-+#endif /* ENABLE_LOG_AUTH */
-               authentication_type = SSH_AUTH_TIS;
-               authenticated = 1;
-               break;
-@@ -2657,17 +2840,22 @@
+@@ -2657,11 +2742,11 @@
            password_attempts++;
  
            /* Try authentication with the password. */
@@ -789,18 +433,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
              {
                /* Successful authentication. */
                /* Clear the password from memory. */
-               memset(password, 0, strlen(password));
-               xfree(password);
-               log_msg("Password authentication for %.100s accepted.", user);
-+#ifdef ENABLE_LOG_AUTH
-+	      log_auth("%.100s from %.700s (%s)",
-+		       user, get_canonical_hostname(),
-+		       "password authentication accepted");
-+#endif /* ENABLE_LOG_AUTH */
-               authentication_type = SSH_AUTH_PASSWORD;
-               authenticated = 1;
-               break;
-@@ -2688,7 +2876,7 @@
+@@ -2688,7 +2773,7 @@
        if (authenticated)
          break;
  
@@ -809,7 +442,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
        /* If you forwarded a ticket you get one shot for proper
           authentication. */
        /* If tgt was passed unlink file */
-@@ -2699,7 +2887,7 @@
+@@ -2699,7 +2784,7 @@
            else
              ticket = NULL;
        }
@@ -818,19 +451,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
        
        /* Send a message indicating that the authentication attempt failed. */
        packet_start(SSH_SMSG_FAILURE);
-@@ -2708,6 +2896,11 @@
-     }
- 
-   /* Check if the user is logging in as root and root logins are disallowed. */
-+#ifdef ENABLE_LOG_AUTH
-+  if ((pw->pw_uid == UID_ROOT && options.permit_root_login == 1) ||
-+      (pw->pw_uid == UID_ROOT && options.permit_root_login == 0 && !forced_command))
-+    log_auth("ROOT LOGIN REFUSED FROM %.200s", get_canonical_hostname());
-+#endif /* ENABLE_LOG_AUTH */
-   if (pw->pw_uid == UID_ROOT && options.permit_root_login == 1)
-     {
-       if (authentication_type == SSH_AUTH_PASSWORD)
-@@ -2724,7 +2917,7 @@
+@@ -2724,7 +2809,7 @@
                              get_canonical_hostname());
        }
  
@@ -839,17 +460,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
    
    lc = login_getclass(pw->pw_class);
    
-@@ -2775,6 +2968,9 @@
-   packet_start(SSH_SMSG_SUCCESS);
-   packet_send();
-   packet_write_wait();
-+#ifdef ENABLE_LOG_AUTH
-+  unauthenticated_user = NULL;
-+#endif /* ENABLE_LOG_AUTH */
- 
-   /* Perform session preparation. */
-   do_authenticated(pw);
-@@ -2965,6 +3161,21 @@
+@@ -2965,6 +3050,21 @@
            display = x11_create_display_inet(screen);
            if (!display)
              goto fail;
@@ -871,12 +482,8 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
            break;
  #else /* XAUTH_PATH */
            /* No xauth program; we won't accept forwarding with spoofing. */
-@@ -3280,15 +3491,12 @@
-   char line[256];
-   struct stat st;
-   int quiet_login;
--  struct sockaddr_in from;
-+  struct sockaddr_storage from;
+@@ -3283,12 +3383,9 @@
+   struct sockaddr_in from;
    int fromlen;
    struct pty_cleanup_context cleanup_context;
 -#if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
@@ -889,19 +496,16 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
  
    /* We no longer need the child running on user's privileges. */
    userfile_uninit();
-@@ -3387,9 +3595,9 @@
- 
-       /* Record that there was a login on that terminal. */
+@@ -3389,7 +3486,7 @@
        record_login(pid, ttyname, pw->pw_name, pw->pw_uid, hostname, 
--                   &from);
-+		   (struct sockaddr *)&from);
+                    &from);
  
 -#if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
 +#if (defined (__FreeBSD__) || defined(__NetBSD__)) && defined(HAVE_LOGIN_CAP_H)
        lc = login_getclass(pw->pw_class);
  #endif
  
-@@ -3398,7 +3606,7 @@
+@@ -3398,7 +3495,7 @@
        snprintf(line, sizeof(line), "%.200s/.hushlogin", pw->pw_dir);
        quiet_login = stat(line, &st) >= 0;
  
@@ -910,7 +514,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
        quiet_login = login_getcapbool(lc, "hushlogin", quiet_login);
  #endif
       
-@@ -3425,7 +3633,7 @@
+@@ -3425,7 +3522,7 @@
          }
  #endif /* HAVE_SIA */
  
@@ -919,7 +523,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
        if (command == NULL && !quiet_login)
          {
  #ifdef HAVE_LOGIN_CAP_H
-@@ -3457,7 +3665,7 @@
+@@ -3457,7 +3554,7 @@
            FILE *f;
  
            /* Print /etc/motd if it exists. */
@@ -928,7 +532,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
            f = fopen(login_getcapstr(lc, "welcome", "/etc/motd", "/etc/motd"),
                      "r");
  #else
-@@ -3469,33 +3677,9 @@
+@@ -3469,33 +3566,9 @@
                  fputs(line, stdout);
                fclose(f);
              }
@@ -963,15 +567,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
        login_close(lc);
  #endif
  
-@@ -3876,6 +4060,7 @@
-   char *user_shell;
-   char *remote_ip;
-   int remote_port;
-+  int local_port;
- #if defined (__FreeBSD__) && defined(HAVE_LOGIN_CAP_H)
-   login_cap_t *lc;
-   char *real_shell;
-@@ -3883,8 +4068,11 @@
+@@ -3883,8 +3956,11 @@
    lc = login_getclass(pw->pw_class);
    auth_checknologin(lc);
  #else /* !HAVE_LOGIN_CAP_H */
@@ -984,23 +580,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
    
    if ((lc = login_getclass(pw->pw_class)) == NULL)
      {
-@@ -3981,6 +4169,7 @@
-   user_shell = xstrdup(pw->pw_shell);
-   remote_ip = xstrdup(get_remote_ipaddr());
-   remote_port = get_remote_port();
-+  local_port = get_local_port();
- 
-   /* Close the connection descriptors; note that this is the child, and the 
-      server will still have the socket open, and it is important that we
-@@ -4000,7 +4189,6 @@
-   /* Close any extra file descriptors.  Note that there may still be
-      descriptors left by system functions.  They will be closed later. */
-   endpwent();
--  endhostent();
- 
-   /* Set dummy encryption key to clear information about the key from
-      memory.  This key will never be used. */
-@@ -4019,7 +4207,7 @@
+@@ -4019,7 +4095,7 @@
    if (command != NULL || !options.use_login)
  #endif /* USELOGIN */
      {
@@ -1009,7 +589,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
        char *p, *s, **tmpenv;
  
        /* Initialize the new environment.
-@@ -4180,10 +4368,23 @@
+@@ -4180,10 +4256,23 @@
       and means /bin/sh. */
    shell = (user_shell[0] == '\0') ? DEFAULT_SHELL : user_shell;
  
@@ -1034,16 +614,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
    /* Initialize the environment if not already done. In the first part we
       allocate space for all environment variables. */
    if (env == NULL)
-@@ -4257,7 +4458,7 @@
- 
-   /* Set SSH_CLIENT. */
-   snprintf(buf, sizeof(buf),
--           "%.50s %d %d", remote_ip, remote_port, options.port);
-+           "%.50s %d %d", remote_ip, remote_port, local_port);
-   child_set_env(&env, &envsize, "SSH_CLIENT", buf);
- 
-   /* Set SSH_TTY if we have a pty. */
-@@ -4290,13 +4491,21 @@
+@@ -4290,13 +4379,21 @@
    }
  #endif
  
@@ -1068,60 +639,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
  
    /* Set variable for forwarded authentication connection, if we have one. */
    if (auth_get_socket_name() != NULL)
-@@ -4426,7 +4635,8 @@
-                 int i;
-                 char name[255], *p;
-                 char line[256];
--                struct hostent *hp;
-+		struct addrinfo hints, *ai, *aitop;
-+		char ntop[ADDRSTRLEN];
-                 
-                 strncpy(name, display, sizeof(name));
-                 name[sizeof(name) - 1] = '\0';
-@@ -4443,7 +4653,10 @@
-                 /* Moved this call here to avoid a nasty buf in SunOS
-                    4.1.4 libc where gethostbyname closes an unrelated
-                    file descriptor. */
--                hp = gethostbyname(name);
-+		memset(&hints, 0, sizeof(hints));
-+		hints.ai_family = IPv4or6;
-+		if (getaddrinfo(name, NULL, &hints, &aitop) != 0)
-+		  aitop = 0;
- 
-                 snprintf(line, sizeof(line),
-                          "%.200s -q -", options.xauth_path);
-@@ -4461,21 +4674,24 @@
-                                 cp - display, display, cp, auth_proto,
-                                 auth_data);
- #endif
--                        if (hp)
-+                        if (aitop)
-                           {
--                            for(i = 0; hp->h_addr_list[i]; i++)
-+			    for (ai = aitop; ai; ai = ai->ai_next)
-                               {
-+				getnameinfo(ai->ai_addr, ai->ai_addrlen,
-+					    ntop, sizeof(ntop), NULL, 0,
-+					    NI_NUMERICHOST);
-+				if (strchr(ntop, ':'))
-+				  continue; /* XXX - xauth doesn't accept it */
-                                 if (debug_flag)
-                                   {
-                                     fprintf(stderr, "Running %s add %s%s %s %s\n",
-                                             options.xauth_path,
--                                            inet_ntoa(*((struct in_addr *)
--                                                        hp->h_addr_list[i])),
-+					    ntop,
-                                             cp, auth_proto, auth_data);
-                                   }
-                                 fprintf(f, "add %s%s %s %s\n",
--                                        inet_ntoa(*((struct in_addr *)
--                                                    hp->h_addr_list[i])),
-+					ntop,
-                                         cp, auth_proto, auth_data);
-                               }
-                           }
-@@ -4554,7 +4770,7 @@
+@@ -4554,7 +4651,7 @@
            /* Execute the shell. */
            argv[0] = buf;
            argv[1] = NULL;
@@ -1130,7 +648,7 @@ $NetBSD: patch-af,v 1.9 2000/03/06 14:34:18 mjl Exp $
            execve(real_shell, argv, env);
  #else
            execve(shell, argv, env);
-@@ -4579,7 +4795,7 @@
+@@ -4579,7 +4676,7 @@
    argv[1] = "-c";
    argv[2] = (char *)command;
    argv[3] = NULL;
