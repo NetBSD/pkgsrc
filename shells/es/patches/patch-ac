@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2004/02/26 07:47:48 uebayasi Exp $
+$NetBSD: patch-ac,v 1.2 2005/01/25 04:46:29 tv Exp $
 
 --- main.c~	Tue May 30 06:13:50 1995
 +++ main.c	Thu Apr 10 09:20:49 1997
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1 2004/02/26 07:47:48 uebayasi Exp $
  #endif
  
 -#if !HPUX && !defined(linux)
-+#if !HPUX && !defined(linux) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__)
++#if !HPUX && !defined(linux) && !defined(__FreeBSD__) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__INTERIX)
  extern int getopt (int argc, char **argv, const char *optstring);
  #endif
  extern int optind;
