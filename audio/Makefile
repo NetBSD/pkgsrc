@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.221 2004/04/06 10:02:51 jmmv Exp $
+# $NetBSD: Makefile,v 1.222 2004/04/11 18:14:46 jmmv Exp $
 #
 
 COMMENT=	Audio tools
@@ -14,6 +14,8 @@ SUBDIR+=	arts
 SUBDIR+=	audacity
 SUBDIR+=	aumix
 SUBDIR+=	bladeenc
+SUBDIR+=	bmp
+SUBDIR+=	bmp-esound
 SUBDIR+=	cam
 SUBDIR+=	cd-discid
 SUBDIR+=	cdd
