@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1 2002/01/14 17:18:03 wiz Exp $
+
+--- src/pre.l.orig	Mon Jul 30 09:47:12 2001
++++ src/pre.l
+@@ -2006,5 +2006,5 @@
+ 
+ extern "C" { // some bogus code to keep the compiler happy
+ //  int  preYYwrap() { return 1 ; }
+-  void preYYdummy() { yy_flex_realloc(0,0); } 
++//  void preYYdummy() { yy_flex_realloc(0,0); } 
+ }
