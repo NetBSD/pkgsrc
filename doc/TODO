@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1388 2004/02/16 15:30:22 wiz Exp $
+$NetBSD: TODO,v 1.1389 2004/02/16 20:56:28 snj Exp $
 
 Suggested new packages
 ======================
@@ -261,15 +261,12 @@ Suggested package updates
 	o netatalk-1.6.3 [pkg/21930]
 	o nethack-3.4.3
 	o newscache-0.99.22p1
-	o nicotine-1.0.7 [pkg/24343]
 	o ns-flash-6.0.79
-	o nsd-1.2.3 [pkg/24034]
 	o nut-9.10
 	o ocaml-3.07pl2
 	o onyx-5.0.1
 	o openal-20040215
 	o openh323-1.11.2
-	o openldap-2.1.25
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
 	o oss-3.9.8d
