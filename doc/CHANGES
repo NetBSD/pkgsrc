@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4296 2003/12/31 00:11:26 kristerw Exp $
+$NetBSD: CHANGES,v 1.4297 2003/12/31 01:23:40 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5489,3 +5489,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added MozillaFirebird-gtk2-bin-0.7 [grant 2003-12-30]
 	Added buddy-2.2 [kristerw 2003-12-31]
 	Added libtecla-1.5.0 [kristerw 2003-12-31]
+	Updated maude to 2.0.1 [kristerw 2003-12-31]
