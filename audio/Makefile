@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2003/07/13 08:40:28 mrg Exp $
+# $NetBSD: Makefile,v 1.178 2003/07/19 09:01:35 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -56,7 +56,6 @@ SUBDIR+=	festvox-us1
 SUBDIR+=	festvox-us2
 SUBDIR+=	festvox-us3
 SUBDIR+=	flac
-SUBDIR+=	flac-xmms
 SUBDIR+=	freezetag
 SUBDIR+=	gdcd
 SUBDIR+=	gkrellm-volume
@@ -182,13 +181,14 @@ SUBDIR+=	xmix
 SUBDIR+=	xmmix
 SUBDIR+=	xmms
 SUBDIR+=	xmms-bezier
-SUBDIR+=	xmms-bump-scope
 SUBDIR+=	xmms-blursk
+SUBDIR+=	xmms-bump-scope
 SUBDIR+=	xmms-crossfade
 SUBDIR+=	xmms-dflowers
 SUBDIR+=	xmms-dscope
 SUBDIR+=	xmms-dspectogram
 SUBDIR+=	xmms-dspectral
+SUBDIR+=	xmms-flac
 SUBDIR+=	xmms-fmradio
 SUBDIR+=	xmms-funtimedancer
 SUBDIR+=	xmms-gdancer
