@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2005/03/21 04:03:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.40 2005/03/23 00:51:10 schmonz Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
@@ -22,12 +22,7 @@ USE_BUILDLINK3=		yes
 # We change conf-home from the default "/usr/local" and don't
 # provide compatibility symlinks. We also patch to honor PKG_SYSCONFDIR
 # and to set reasonable permissions on standard pkgsrc directories.
-RESTRICTED=		"modified source and binaries may not be distributed"
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-
-BUILD_TARGET=		it
-INSTALL_TARGET=		setup check
+DJB_RESTRICTED=		YES
 
 EGDIR=			${PREFIX}/share/examples/djbdns
 CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
@@ -49,14 +44,10 @@ CFLAGS+=		--include errno.h
 
 .include "options.mk"
 
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
-
 post-install:
 	cd ${WRKDIR}/djbdns-man; for i in 1 5 8; do			 \
 	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/man/man$$i; done \
 	done
 
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

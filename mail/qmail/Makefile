@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/03/13 03:25:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2005/03/23 00:51:09 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -32,12 +32,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 
-BUILD_TARGET= 		it man
-INSTALL_TARGET=		setup check
+DJB_BUILD_TARGETS= 	man
 
-RESTRICTED=		"modified source and binaries may not be distributed"
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
+DJB_RESTRICTED=		YES
 NO_PACKAGE=		"needs work to function properly as a binary package"
 
 USE_PKGINSTALL=		yes
@@ -99,11 +96,6 @@ post-extract:
 	export extract_file; cd ${WRKSRC}; ${EXTRACT_CMD};		\
 	${MV} ${PKGNAME_NOREV} ..; ${MV} ${DISTNAME}.patch ..
 
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
-
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/README.pkgsrc            \
 		> ${WRKDIR}/README.pkgsrc
@@ -132,4 +124,5 @@ post-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/$$i ${SHAREDIR}/setup;	\
 	done
 
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

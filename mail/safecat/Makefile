@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/03/13 03:25:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2005/03/23 00:51:10 schmonz Exp $
 #
 
 DISTNAME=		safecat-1.12
@@ -11,12 +11,9 @@ COMMENT=		Write data safely to a maildir
 
 USE_BUILDLINK3=		yes
 
-BUILD_TARGET=		it install instcheck
-INSTALL_TARGET=		setup check
+DJB_RESTRICTED=		NO
+DJB_BUILD_TARGETS=	install instcheck
+DJB_CONFIG_HOME=	conf-root
 
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	${ECHO} ${PREFIX} > ${WRKSRC}/conf-root
-
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
