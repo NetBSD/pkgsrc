@@ -1,36 +1,32 @@
-# $NetBSD: Makefile,v 1.2 1999/06/08 09:57:48 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/30 05:49:41 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/04/05 04:46:33 max Exp $
 
-DISTNAME=	kakasi-2.2.5
+DISTNAME=	kakasi-2.3.0
 CATEGORIES=	japanese
-MASTER_SITES=	ftp://sunsite.sut.ac.jp/pub/asia-info/japanese-src/packages/ \
-	ftp://ftp.kusastro.kyoto-u.ac.jp/pub/baba/wais/ \
-		ftp://etlport.etl.go.jp/pub/mule/contrib/ \
-		ftp://ftp.cs.buffalo.edu/pub/mule/contrib/ \
-		ftp://sh.wide.ad.jp/JAPAN/mule/contrib/ \
-		ftp://ftp.funet.fi/pub/gnu/funet/emacs/mule/contrib/ \
-		ftp://ftp.iij.ad.jp/pub/misc/mule/contrib/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} kakasidict.940620.gz \
-		kakasi-ext.tar.gz
+MASTER_SITES=	ftp://kakasi.namazu.org/pub/kakasi/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} kakasidict.940620.gz
 
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+HOMEPAGE=	http://kakasi.namazu.org/
 
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX} kakasi-ext.tar.gz
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+USE_LIBTOOL=	YES
+GNU_CONFIGURE=	YES
+ALL_TARGET=	all dict
+INSTALL_TARGET=	install dict-install
+
 post-extract:
 	@${GZCAT} ${DISTDIR}/kakasidict.940620.gz > ${WRKSRC}/kakasidict
 
-pre-patch:
-	@${PATCH} ${PATCH_DIST_ARGS} < ${WRKDIR}/kakasi-ext/patch.kakasi-2.2.5
+post-configure:
+	@${RM} -f ${WRKSRC}/libtool
+	@${LN} -s ${LIBTOOL} ${WRKSRC}/libtool
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/kakasi.1 ${PREFIX}/man/ja_JP.EUC/man1
-	${MKDIR} ${PREFIX}/share/doc/kakasi
-	${INSTALL_DATA} ${WRKSRC}/JISYO ${PREFIX}/share/doc/kakasi
-	${INSTALL_DATA} ${WRKSRC}/../README* ${PREFIX}/share/doc/kakasi
-	${INSTALL_DATA} ${WRKDIR}/kakasi-ext/KAKASI.DOC \
-	  ${PREFIX}/share/doc/kakasi/kakasi-ext.doc
+	${INSTALL_MAN} ${WRKSRC}/doc/kakasi.1 ${PREFIX}/man/ja_JP.EUC/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/kakasi.cat ${PREFIX}/man/ja_JP.EUC/cat1
 
 .include "../../mk/bsd.pkg.mk"
