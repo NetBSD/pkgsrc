@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.73 2002/12/16 22:26:55 wiz Exp $
+$NetBSD: TODO,v 1.74 2002/12/16 22:27:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -99,7 +99,7 @@ Suggested package updates
 	o easytag-0.25
 	o eel2-2.0.8 [pkg/19410]
 	o eggdrop-1.6.13
-	o eog2-1.0.4
+	o eog2-1.0.4 [pkg/19412]
 	o elinks-0.3.2 (0.4pre18)
 	o elm-me-2.4pl100
 	o eterm-0.9.2 [pkg/19393]
