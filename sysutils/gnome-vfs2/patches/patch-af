@@ -1,7 +1,5 @@
-$NetBSD: patch-af,v 1.4 2004/04/23 03:29:27 minskim Exp $
-
---- libgnomevfs/gnome-vfs-cdrom.c.orig	2004-02-16 05:13:24.000000000 -0600
-+++ libgnomevfs/gnome-vfs-cdrom.c
+--- libgnomevfs/gnome-vfs-cdrom.c.orig	Sun Oct 24 16:56:46 2004
++++ libgnomevfs/gnome-vfs-cdrom.c	Sun Oct 24 16:56:17 2004
 @@ -37,6 +37,8 @@
  
  #ifdef __linux__
@@ -11,3 +9,31 @@ $NetBSD: patch-af,v 1.4 2004/04/23 03:29:27 minskim Exp $
  #endif
  
  #ifdef HAVE_SYS_CDIO_H
+@@ -87,8 +89,9 @@
+ 	}
+ 
+ 	return type;
+-#elif defined(HAVE_SYS_MNTCTL_H)
+-	return CDS_NO_INFO;
++#elif defined(__linux__)
++	*fd = open (vol_dev_path, O_RDONLY|O_NONBLOCK);
++	return ioctl (*fd, CDROM_DISC_STATUS, CDSL_CURRENT);
+ #elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+ 	struct ioc_toc_header header;
+ #if defined(__FreeBSD__) || defined(__DragonFly__)
+@@ -143,6 +146,7 @@
+ #endif /* defined(__FreeBSD__) */
+ 	return type;
+ #else
++	#if !defined(__APPLE__)
+ 	*fd = open (vol_dev_path, O_RDONLY|O_NONBLOCK);
+ 	if (*fd  < 0) {
+ 		return -1;
+@@ -153,6 +157,7 @@
+ 		return -1;
+ 	}
+ 	return ioctl (*fd, CDROM_DISC_STATUS, CDSL_CURRENT);
++	#endif
+ #endif
+ }
+ 
