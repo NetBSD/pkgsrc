@@ -1,0 +1,11 @@
+--- src/defs.h.BAK	Sun Feb  7 02:37:57 1999
++++ src/defs.h	Sun Feb  7 02:38:05 1999
+@@ -15,7 +15,7 @@
+ #define WELCOME \
+ "Nighthawk version " VERSION " (" DATED "), Copyright (C) 1997 Jason Nunn.\n\n"
+ 
+-#define FUNKPLAY_PATH INSTALL_DIR "/bin/nighthawk_sound"
++#define FUNKPLAY_PATH PREFIX "/bin/nighthawk_sound"
+ 
+ #define STR_LABEL_LEN 40
+ #define STR_LEN       256

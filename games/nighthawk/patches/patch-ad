@@ -1,0 +1,13 @@
+--- options.h.BAK	Sun Feb  7 01:25:16 1999
++++ options.h	Sun Feb  7 01:31:44 1999
+@@ -8,8 +8,8 @@
+ configure theses directives.
+ --------------------------------------------------------------------------
+ --------------------------------------------------------------------------*/
+-#define INSTALL_DIR "/tmp"
+-#define SCORES_FILE "/tmp/nighthawk.scores"
++#define INSTALL_DIR PREFIX "/share/nighthawk"
++#define SCORES_FILE "/var/games/nighthawk.scores"
+ 
+ /*
+ uncomment this if you have a slow machine. this will reduce high intensive
