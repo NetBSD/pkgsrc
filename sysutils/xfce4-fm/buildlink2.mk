@@ -1,8 +1,8 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/09/26 10:32:34 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/09/27 06:57:16 martti Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-fm.
 #
-# This file was created automatically using createbuildlink 2.6.
+# This file was created automatically using createbuildlink 2.7.
 #
 
 .if !defined(XFCE4_FM_BUILDLINK2_MK)
@@ -27,11 +27,9 @@ BUILDLINK_FILES.xfce4-fm+=	lib/pkgconfig/xffm-1.0.pc
 BUILDLINK_FILES.xfce4-fm+=	lib/xfce4/mcs-plugins/libxffmsettings.*
 
 .include "../../databases/dbh/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../x11/xfce4-mcs-plugins/buildlink2.mk"
 .include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	xfce4-fm-buildlink
 
