@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/07/07 19:40:04 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2004/09/04 13:56:46 schmonz Exp $
 
-SHA1 (jam-2.5.zip) = 89f0eeb52b8566e3cf065f40124fa08d7cb5ac33
-Size (jam-2.5.zip) = 193624 bytes
+SHA1 (jam-2.5nb1/jam-2.5.zip) = 794a3f4483315c6b9f010f03b592646d3815328c
+Size (jam-2.5nb1/jam-2.5.zip) = 191864 bytes
