@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/09/16 18:51:32 xtraeme Exp $
-info/slib.info
+@comment $NetBSD: PLIST,v 1.6 2004/02/16 18:11:52 seb Exp $
 share/doc/slib/FAQ
 share/doc/slib/README
 share/slib/Bev2slib.scm
