@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/03/22 23:01:52 tron Exp $
+$NetBSD: patch-ae,v 1.2 2004/11/30 11:26:59 hannken Exp $
 
---- examples/chrony.conf.example.orig	Sun Feb 17 23:23:19 2002
+--- examples/chrony.conf.example.orig	2002-02-03 22:46:29.000000000 +0100
 +++ examples/chrony.conf.example
 @@ -3,5 +3,5 @@
  #
@@ -16,7 +16,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2002/03/22 23:01:52 tron Exp $
 +driftfile /var/db/chrony.drift
  
  # If you want to use the program called chronyc to configure aspects of
-@@ -100,5 +100,5 @@
+@@ -100,5 +100,5 @@ driftfile /etc/chrony.drift
  # assumed by default.
  
 -keyfile /etc/chrony.keys

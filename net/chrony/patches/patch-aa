@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/03/22 23:01:52 tron Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/30 11:26:59 hannken Exp $
 
---- Makefile.in.orig	Sun Feb 17 23:23:12 2002
+--- Makefile.in.orig	2003-09-20 00:48:26.000000000 +0200
 +++ Makefile.in
-@@ -43,7 +43,7 @@
+@@ -60,7 +60,7 @@ EXTRA_CLI_LIBS=@EXTRA_CLI_LIBS@
  
  DEFS=@SYSDEFS@
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/03/22 23:01:52 tron Exp $
  
  # Until we have a main procedure we can link, just build object files
  # to test compilation
-@@ -51,10 +51,10 @@
+@@ -68,10 +68,10 @@ CFLAGS = $(CCWARNFLAGS) $(OPTFLAGS)
  all : chronyd chronyc
  
  chronyd : $(OBJS) $(EXTRA_OBJS)
@@ -24,55 +24,50 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/03/22 23:01:52 tron Exp $
  
  client.o : client.c
  	$(CC) $(CFLAGS) $(DEFS) @READLINE_COMPILE@ -c $<
-@@ -79,37 +79,38 @@
- 	[ -d $(INSTALL_PREFIX) ] || mkdir $(INSTALL_PREFIX)
- 	[ -d $(INSTALL_PREFIX)/sbin ] || mkdir $(INSTALL_PREFIX)/sbin
- 	[ -d $(INSTALL_PREFIX)/bin ] || mkdir $(INSTALL_PREFIX)/bin
--	[ -d $(INSTALL_PREFIX)/doc ] || mkdir $(INSTALL_PREFIX)/doc
-+	[ -d $(INSTALL_PREFIX)/share ] || mkdir $(INSTALL_PREFIX)/share
- 	[ -d $(INSTALL_PREFIX)/man ] || mkdir $(INSTALL_PREFIX)/man
-+	[ -d $(INSTALL_PREFIX)/share/doc ] || mkdir $(INSTALL_PREFIX)/share/doc
- 	[ -d $(INSTALL_PREFIX)/man/man1 ] || mkdir $(INSTALL_PREFIX)/man/man1
- 	[ -d $(INSTALL_PREFIX)/man/man5 ] || mkdir $(INSTALL_PREFIX)/man/man5
- 	[ -d $(INSTALL_PREFIX)/man/man8 ] || mkdir $(INSTALL_PREFIX)/man/man8
--	[ -d $(INSTALL_PREFIX)/doc/chrony ] || mkdir $(INSTALL_PREFIX)/doc/chrony
-+	[ -d $(INSTALL_PREFIX)/share/doc/chrony ] || mkdir $(INSTALL_PREFIX)/share/doc/chrony
- 	cp chronyd $(INSTALL_PREFIX)/sbin/chronyd
- 	chown root $(INSTALL_PREFIX)/sbin/chronyd
- 	chmod 555 $(INSTALL_PREFIX)/sbin/chronyd
- 	cp chronyc $(INSTALL_PREFIX)/bin/chronyc
- 	chown root $(INSTALL_PREFIX)/bin/chronyc
- 	chmod 555 $(INSTALL_PREFIX)/bin/chronyc
--	cp chrony.txt $(INSTALL_PREFIX)/doc/chrony/chrony.txt
--	chown root $(INSTALL_PREFIX)/doc/chrony/chrony.txt
--	chmod 444 $(INSTALL_PREFIX)/doc/chrony/chrony.txt
--	cp COPYING $(INSTALL_PREFIX)/doc/chrony/COPYING
--	chown root $(INSTALL_PREFIX)/doc/chrony/COPYING
--	chmod 444 $(INSTALL_PREFIX)/doc/chrony/COPYING
--	cp README $(INSTALL_PREFIX)/doc/chrony/README
--	chown root $(INSTALL_PREFIX)/doc/chrony/README
--	chmod 444 $(INSTALL_PREFIX)/doc/chrony/README
-+	cp chrony.txt $(INSTALL_PREFIX)/share/doc/chrony/chrony.txt
-+	chown root $(INSTALL_PREFIX)/share/doc/chrony/chrony.txt
-+	chmod 444 $(INSTALL_PREFIX)/share/doc/chrony/chrony.txt
-+	cp COPYING $(INSTALL_PREFIX)/share/doc/chrony/COPYING
-+	chown root $(INSTALL_PREFIX)/share/doc/chrony/COPYING
-+	chmod 444 $(INSTALL_PREFIX)/share/doc/chrony/COPYING
-+	cp README $(INSTALL_PREFIX)/share/doc/chrony/README
-+	chown root $(INSTALL_PREFIX)/share/doc/chrony/README
-+	chmod 444 $(INSTALL_PREFIX)/share/doc/chrony/README
- 	cp chrony.1 $(INSTALL_PREFIX)/man/man1
- 	chown root $(INSTALL_PREFIX)/man/man1/chrony.1
- 	chmod 444 $(INSTALL_PREFIX)/man/man1/chrony.1
- 	cp chronyc.1 $(INSTALL_PREFIX)/man/man1
- 	chown root $(INSTALL_PREFIX)/man/man1/chronyc.1
- 	chmod 444 $(INSTALL_PREFIX)/man/man1/chronyc.1
--	cp chronyd.8 $(INSTALL_PREFIX)/man/man8
-+	sed 's|@PREFIX@|$(INSTALL_PREFIX)|g' chronyd.8 > $(INSTALL_PREFIX)/man/man8/chronyd.8
- 	chown root $(INSTALL_PREFIX)/man/man8/chronyd.8
- 	chmod 444 $(INSTALL_PREFIX)/man/man8/chronyd.8
--	cp chrony.conf.5 $(INSTALL_PREFIX)/man/man5
-+	sed 's|@PREFIX@|$(INSTALL_PREFIX)|g' chrony.conf.5 > $(INSTALL_PREFIX)/man/man5/chrony.conf.5
- 	chown root $(INSTALL_PREFIX)/man/man5/chrony.conf.5
- 	chmod 444 $(INSTALL_PREFIX)/man/man5/chrony.conf.5
+@@ -93,34 +93,18 @@ version.h : version.txt
+ # seem to vary between systems.
  
+ install: chronyd chronyc
+-	[ -d $(DESTDIR)$(INSTALL_PREFIX) ] || mkdir -p $(DESTDIR)$(INSTALL_PREFIX)
+-	[ -d $(DESTDIR)$(INSTALL_PREFIX)/sbin ] || mkdir -p $(DESTDIR)$(INSTALL_PREFIX)/sbin
+-	[ -d $(DESTDIR)$(INSTALL_PREFIX)/bin ] || mkdir -p $(DESTDIR)$(INSTALL_PREFIX)/bin
+-	[ -d $(DESTDIR)$(INSTALL_PREFIX)/doc ] || mkdir -p $(DESTDIR)$(INSTALL_PREFIX)/doc
+-	[ -d $(DESTDIR)$(MANDIR)/man1 ] || mkdir -p $(DESTDIR)$(MANDIR)/man1
+-	[ -d $(DESTDIR)$(MANDIR)/man5 ] || mkdir -p $(DESTDIR)$(MANDIR)/man5
+-	[ -d $(DESTDIR)$(MANDIR)/man8 ] || mkdir -p $(DESTDIR)$(MANDIR)/man8
+-	[ -d $(DESTDIR)$(INSTALL_PREFIX)/doc/chrony ] || mkdir -p $(DESTDIR)$(INSTALL_PREFIX)/doc/chrony
+-	if [ -f $(DESTDIR)$(INSTALL_PREFIX)/sbin/chronyd ]; then rm -f $(DESTDIR)$(INSTALL_PREFIX)/sbin/chronyd ; fi
+-	if [ -f $(DESTDIR)$(INSTALL_PREFIX)/bin/chronyc ]; then rm -f $(DESTDIR)$(INSTALL_PREFIX)/bin/chronyc ; fi
+-	cp chronyd $(DESTDIR)$(INSTALL_PREFIX)/sbin/chronyd
+-	chmod 555 $(DESTDIR)$(INSTALL_PREFIX)/sbin/chronyd
+-	cp chronyc $(DESTDIR)$(INSTALL_PREFIX)/bin/chronyc
+-	chmod 555 $(DESTDIR)$(INSTALL_PREFIX)/bin/chronyc
+-	cp chrony.txt $(DESTDIR)$(INSTALL_PREFIX)/doc/chrony/chrony.txt
+-	chmod 444 $(DESTDIR)$(INSTALL_PREFIX)/doc/chrony/chrony.txt
+-	cp COPYING $(DESTDIR)$(INSTALL_PREFIX)/doc/chrony/COPYING
+-	chmod 444 $(DESTDIR)$(INSTALL_PREFIX)/doc/chrony/COPYING
+-	cp README $(DESTDIR)$(INSTALL_PREFIX)/doc/chrony/README
+-	chmod 444 $(DESTDIR)$(INSTALL_PREFIX)/doc/chrony/README
+-	cp chrony.1 $(DESTDIR)$(MANDIR)/man1
+-	chmod 444 $(DESTDIR)$(MANDIR)/man1/chrony.1
+-	cp chronyc.1 $(DESTDIR)$(MANDIR)/man1
+-	chmod 444 $(DESTDIR)$(MANDIR)/man1/chronyc.1
+-	cp chronyd.8 $(DESTDIR)$(MANDIR)/man8
+-	chmod 444 $(DESTDIR)$(MANDIR)/man8/chronyd.8
+-	cp chrony.conf.5 $(DESTDIR)$(MANDIR)/man5
+-	chmod 444 $(DESTDIR)$(MANDIR)/man5/chrony.conf.5
++	[ -d $(DESTDIR)$(INSTALL_PREFIX)/share/doc/chrony ] || mkdir -p $(DESTDIR)$(INSTALL_PREFIX)/share/doc/chrony
++	$(INSTALL_PROGRAM) chronyd $(DESTDIR)$(INSTALL_PREFIX)/sbin
++	$(INSTALL_PROGRAM) chronyc $(DESTDIR)$(INSTALL_PREFIX)/bin
++	$(INSTALL_DATA) chrony.txt $(DESTDIR)$(INSTALL_PREFIX)/share/doc/chrony
++	$(INSTALL_DATA) COPYING $(DESTDIR)$(INSTALL_PREFIX)/share/doc/chrony
++	$(INSTALL_DATA) README $(DESTDIR)$(INSTALL_PREFIX)/share/doc/chrony
++	$(INSTALL_MAN) chrony.1 $(DESTDIR)$(MANDIR)/man1
++	$(INSTALL_MAN) chronyc.1 $(DESTDIR)$(MANDIR)/man1
++	sed 's|@PREFIX@|$(INSTALL_PREFIX)|g' chronyd.8 > chronyd.0
++	$(INSTALL_MAN) chronyd.0 $(DESTDIR)$(MANDIR)/man8/chronyd.8
++	sed 's|@PREFIX@|$(INSTALL_PREFIX)|g' chrony.conf.5 > chrony.conf.0
++	$(INSTALL_MAN) chrony.conf.0 $(DESTDIR)$(MANDIR)/man5/chrony.conf.5
+ 
+ %.o : %.c
+ 	$(CC) $(CFLAGS) $(DEFS) -c $<
