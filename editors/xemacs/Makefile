@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 1999/08/18 09:13:09 agc Exp $
+# $NetBSD: Makefile,v 1.11 1999/08/23 08:09:45 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
-DISTNAME=	xemacs-21.1.4
+DISTNAME=	xemacs-21.1.6
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-21.1/ \
 		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/xemacs-21.1/ \
@@ -31,7 +31,7 @@ BUILD_DEFS+=	USE_XFACE
 
 WITH_DIALOGS=	--with-dialogs=athena3d
 
-.if defined(USE_XFACE)
+.if defined(USE_XFACE) && ${USE_XFACE} == YES
 WITH_XFACE=	--with-xface=yes
 DEPENDS+=	faces-1.6.1:../../mail/faces
 .else
