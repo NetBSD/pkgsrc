@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2002/08/01 02:37:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.51 2002/08/21 02:43:44 grant Exp $
 #
 
 DISTNAME=	cvs-1.11
@@ -18,12 +18,12 @@ GNU_CONFIGURE=	yes
 BUILD_DEFS+=		USE_INET6
 USE_BUILDLINK_ONLY=	yes
 
-.if (${OPSYS} == "NetBSD")
+.if ${OPSYS} == "NetBSD"
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		cvs-1.11-v6-20020111.diff.gz
 PATCH_DIST_STRIP=	-p1
 
-.if ${USE_INET6} == "YES"
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6

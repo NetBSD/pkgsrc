@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/10 09:05:09 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/21 02:43:45 grant Exp $
 
 DISTNAME=	Canna35b2
 PKGNAME=	Canna-dict-3.5.2
@@ -27,7 +27,7 @@ BUILD_DEFS+=	USE_INET6
 .include "../../mk/bsd.prefs.mk"
 NO_MTREE=	yes
 LOCALBASE=	${IMDICTDIR}
-.if 0	# ${USE_INET6} == "YES"
+.if 0	# defined(USE_INET6) && ${USE_INET6} == "YES"
 INET6=		-DINET6
 .else
 INET6=		# empty

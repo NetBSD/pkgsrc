@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/08/05 16:37:49 mrg Exp $
+# $NetBSD: Makefile,v 1.21 2002/08/21 02:43:45 grant Exp $
 #
 
 DISTNAME=	bozohttpd-5.13
@@ -19,7 +19,7 @@ MAKE_ENV+=	BINDIR=${PREFIX}/libexec MANDIR=${PREFIX}/man
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_INET6) && (${USE_INET6} == "YES")
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
 CPPFLAGS+=	-DINET6
 .endif
 

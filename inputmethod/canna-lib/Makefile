@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/10 09:47:26 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/21 02:43:45 grant Exp $
 #
 
 DISTNAME=	Canna35b2
@@ -21,7 +21,7 @@ INSTALL_TARGET=	install install.man
 BUILD_DEFS+=	USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
-.if 0	# ${USE_INET6} == "YES"
+.if 0	# defined(USE_INET6) && ${USE_INET6} == "YES"
 INET6=		-DINET6
 .else
 INET6=		# empty
