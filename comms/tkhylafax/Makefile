@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/03/08 20:27:13 minskim Exp $
+# $NetBSD: Makefile,v 1.25 2004/06/05 14:07:56 minskim Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/08/07 23:56:12 asami Exp
 #
 
@@ -18,5 +18,7 @@ DEPENDS+=	hylafax>=4.1:../../comms/hylafax
 DEPENDS+=	tk>=8.3.2:../../x11/tk83
 
 WRKSRC=		${WRKDIR}/tkhylafax
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 .include "../../mk/bsd.pkg.mk"
