@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2003/07/22 22:38:36 jmmv Exp $
+$NetBSD: patch-aa,v 1.9.10.1 2005/02/14 16:21:48 salo Exp $
 --- Makefile.orig	Thu Jan 16 17:31:58 1997
 +++ Makefile	Wed Apr 12 21:03:39 2000
 @@ -23,7 +23,7 @@
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.9 2003/07/22 22:38:36 jmmv Exp $
  #         (USEFUL TO POINT TO WHERE THE MESA LIBRARIES RESIDE)
  # ------------------------------------------------------------
 -LIBFLAGS     = 
-+LIBFLAGS     = ${LDFLAGS} -L$(X11BASE)/lib -lcompat
++LIBFLAGS     += ${LDFLAGS} -L$(X11BASE)/lib
  
  # you should now be able to type 'make' and everything should be fine ...
  

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/10/03 00:14:42 tv Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2005/02/14 16:21:47 salo Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
@@ -17,6 +17,14 @@ WRKSRC=			${WRKDIR}/battalionSource
 EXTRACT_ONLY=		battalionSource1.4.tar.Z
 USE_BUILDLINK3=		yes
 USE_X11=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+MAKE_ENV+=	LIBFLAGS=-lcompat
+.elif ${OPSYS} == "Linux"
+MAKE_ENV+=	OS="-DLINUXVERSION"
+.endif
 
 do-install:
 	${INSTALL} -c -s -o ${ROOT_USER} -g games -m 2755 ${WRKSRC}/battalion ${PREFIX}/bin
