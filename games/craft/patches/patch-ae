@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.1.1.1 1998/10/13 00:37:33 garbled Exp $
+--- setupedit.hc.orig	Thu Sep 24 10:09:51 1998
++++ setupedit.hc	Thu Sep 24 10:10:11 1998
+@@ -36,11 +36,11 @@
+      {cmap *m [5];
+       char s  [128];
+ 
+-      sprintf (s, "hcraft/pic.%d", xpic_pawn_idle);    m [0] = new cmap (w, s);
+-      sprintf (s, "hcraft/pic.%d", xpic_knight_idle);  m [1] = new cmap (w, s);
+-      sprintf (s, "hcraft/pic.%d", xpic_archer_idle);  m [2] = new cmap (w, s);
+-      sprintf (s, "hcraft/pic.%d", xpic_cata_idle);    m [3] = new cmap (w, s);
+-      sprintf (s, "hcraft/pic.%d", xpic_doktor_idle);  m [4] = new cmap (w, s);
++      sprintf (s, "@PREFIX@/share/craft/hcraft/pic.%d", xpic_pawn_idle);    m [0] = new cmap (w, s);
++      sprintf (s, "@PREFIX@/share/craft/hcraft/pic.%d", xpic_knight_idle);  m [1] = new cmap (w, s);
++      sprintf (s, "@PREFIX@/share/craft/hcraft/pic.%d", xpic_archer_idle);  m [2] = new cmap (w, s);
++      sprintf (s, "@PREFIX@/share/craft/hcraft/pic.%d", xpic_cata_idle);    m [3] = new cmap (w, s);
++      sprintf (s, "@PREFIX@/share/craft/hcraft/pic.%d", xpic_doktor_idle);  m [4] = new cmap (w, s);
+       m [0]->show (80,  50 - 20); 
+       m [1]->show (80, 100 - 20);
+       m [2]->show (80, 150 - 20);
