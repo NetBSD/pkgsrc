@@ -1,0 +1,83 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/20 20:03:53 jtb Exp $
+bin/${SWIPL}
+bin/plld
+bin/plrc
+include/SWI-Prolog.h
+include/SWI-Stream.h
+lib/${SWILIBDIR}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}/${SWIPL}
+lib/${SWILIBDIR}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}/plld
+lib/${SWILIBDIR}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}/plrc
+lib/${SWILIBDIR}/bin/swipl
+lib/${SWILIBDIR}/boot/apply.pl
+lib/${SWILIBDIR}/boot/autoload.pl
+lib/${SWILIBDIR}/boot/bags.pl
+lib/${SWILIBDIR}/boot/dwim.pl
+lib/${SWILIBDIR}/boot/history.pl
+lib/${SWILIBDIR}/boot/init.pl
+lib/${SWILIBDIR}/boot/list.pl
+lib/${SWILIBDIR}/boot/listing.pl
+lib/${SWILIBDIR}/boot/load.pl
+lib/${SWILIBDIR}/boot/make.pl
+lib/${SWILIBDIR}/boot/messages.pl
+lib/${SWILIBDIR}/boot/parms.pl
+lib/${SWILIBDIR}/boot/profile.pl
+lib/${SWILIBDIR}/boot/qlf.pl
+lib/${SWILIBDIR}/boot/rc.pl
+lib/${SWILIBDIR}/boot/sort.pl
+lib/${SWILIBDIR}/boot/syspred.pl
+lib/${SWILIBDIR}/boot/toplevel.pl
+lib/${SWILIBDIR}/boot/topvars.pl
+lib/${SWILIBDIR}/boot/writef.pl
+lib/${SWILIBDIR}/boot32.prc
+lib/${SWILIBDIR}/include/SWI-Exports
+lib/${SWILIBDIR}/include/SWI-Prolog.h
+lib/${SWILIBDIR}/include/SWI-Stream.h
+lib/${SWILIBDIR}/include/stub.c
+lib/${SWILIBDIR}/library/INDEX.pl
+lib/${SWILIBDIR}/library/MANUAL
+lib/${SWILIBDIR}/library/am_match.pl
+lib/${SWILIBDIR}/library/backcomp.pl
+lib/${SWILIBDIR}/library/bim.pl
+lib/${SWILIBDIR}/library/check.pl
+lib/${SWILIBDIR}/library/ctypes.pl
+lib/${SWILIBDIR}/library/edinburgh.pl
+lib/${SWILIBDIR}/library/edit.pl
+lib/${SWILIBDIR}/library/emacs_interface.pl
+lib/${SWILIBDIR}/library/explain.pl
+lib/${SWILIBDIR}/library/files.pl
+lib/${SWILIBDIR}/library/gensym.pl
+lib/${SWILIBDIR}/library/help.pl
+lib/${SWILIBDIR}/library/helpidx.pl
+lib/${SWILIBDIR}/library/netscape.pl
+lib/${SWILIBDIR}/library/oset.pl
+lib/${SWILIBDIR}/library/qsave.pl
+lib/${SWILIBDIR}/library/quintus.pl
+lib/${SWILIBDIR}/library/readln.pl
+lib/${SWILIBDIR}/library/shell.pl
+lib/${SWILIBDIR}/library/shlib.pl
+lib/${SWILIBDIR}/library/statistics.pl
+lib/${SWILIBDIR}/library/system.pl
+lib/${SWILIBDIR}/library/threadutil.pl
+lib/${SWILIBDIR}/library/tty.pl
+lib/${SWILIBDIR}/library/url.pl
+lib/${SWILIBDIR}/man/${SWIPL}.1
+lib/${SWILIBDIR}/man/plld.1
+lib/${SWILIBDIR}/man/plrc.1
+lib/${SWILIBDIR}/man/readline.3
+lib/${SWILIBDIR}/runtime/${MACHINE_ARCH}-${LOWER_OPSYS}/libpl.a
+lib/${SWILIBDIR}/swipl
+man/man1/${SWIPL}.1
+man/man1/plld.1
+man/man1/plrc.1
+@dirrm lib/${SWILIBDIR}/runtime/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/${SWILIBDIR}/runtime
+@dirrm lib/${SWILIBDIR}/man
+@dirrm lib/${SWILIBDIR}/library
+@exec /bin/mkdir -p /usr/pkg/lib/${SWILIBDIR}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/${SWILIBDIR}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/${SWILIBDIR}/lib
+@dirrm lib/${SWILIBDIR}/include
+@dirrm lib/${SWILIBDIR}/boot
+@dirrm lib/${SWILIBDIR}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/${SWILIBDIR}/bin
+@dirrm lib/${SWILIBDIR}
