@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6616 2004/07/20 15:33:23 hubertf Exp $
+$NetBSD: CHANGES,v 1.6617 2004/07/20 17:42:30 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3470,3 +3470,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fuse-utils to 0.7.0 [adam 2004-07-20]
 	Updated bidwatcher to 1.3.15nb1 [tron 2004-07-20]
 	Updated xlockmore to 5.13 [hubertf 2004-07-20]
+	Renamed galeon to galeon12 [abs 2004-07-20]
+	Renamed galeon-devel to galeon [abs 2004-07-20]
+	Updated galeon to 1.3.16 [abs 2004-07-20]
+
