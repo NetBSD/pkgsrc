@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1997/10/28 01:08:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1997/11/09 22:16:03 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -26,7 +26,7 @@
 #    SUBDIR += gopher
 #    SUBDIR += icmpinfo
 #    SUBDIR += irc
-#    SUBDIR += ircII
+    SUBDIR += ircII
 #    SUBDIR += ircii-epic
 #    SUBDIR += isc-dhcp
 #    SUBDIR += ivs
