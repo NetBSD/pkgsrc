@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/08/28 16:46:44 kim Exp $
+# $NetBSD: Makefile,v 1.10 1999/08/28 23:25:30 kim Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
@@ -50,7 +50,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/run/rateup ${PREFIX}/libexec/
 	${INSTALL_SCRIPT} ${WRKSRC}/run/mrtg ${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/run/BER.pm ${WRKSRC}/run/SNMP_Session.pm \
-		${WRKSRC}/run/SNMP_util.pm ${PREFIX}/lib/perl5/site_perl/
+		${WRKSRC}/run/SNMP_util.pm ${WRKSRC}/run/locales_mrtg.pm \
+		${PREFIX}/lib/perl5/site_perl/
 	for file in cfgmaker cfgmaker_ip indexmaker; do \
 		${INSTALL_SCRIPT} ${WRKSRC}/run/$$file \
 			${PREFIX}/bin/mrtg$$file; \
