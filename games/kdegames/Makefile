@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/03/23 21:25:40 tron Exp $
+# $NetBSD: Makefile,v 1.28 1999/03/23 22:19:26 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:49 asami Exp
 #
 
@@ -17,9 +17,7 @@ DEPENDS+=	qwspritefield-1.6:../../x11/qwspritefield
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include" \
-		"--x-lib=${PREFIX}/lib -L${LOCALBASE}/lib" \
-		"--datadir=${PREFIX}/share/kde" \
+CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
 CFLAGS+=	-I${LOCALBASE}/include
