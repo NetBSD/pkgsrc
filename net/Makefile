@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.331 2002/08/26 11:28:00 itojun Exp $
+# $NetBSD: Makefile,v 1.332 2002/08/27 08:10:25 seb Exp $
 #
 
 COMMENT=	Networking tools
@@ -119,6 +119,7 @@ SUBDIR+=	mrt
 SUBDIR+=	mrtg
 SUBDIR+=	mtr
 SUBDIR+=	mtr-gtk
+SUBDIR+=	nam
 SUBDIR+=	nap
 SUBDIR+=	napshare
 SUBDIR+=	nbtscan
@@ -143,6 +144,7 @@ SUBDIR+=	nmap
 SUBDIR+=	nmapfe
 SUBDIR+=	nocol
 SUBDIR+=	nprobe
+SUBDIR+=	ns
 SUBDIR+=	nsca
 SUBDIR+=	nsd
 SUBDIR+=	nslint
