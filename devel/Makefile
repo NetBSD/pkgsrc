@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.343 2002/10/25 20:03:23 cjep Exp $
+# $NetBSD: Makefile,v 1.344 2002/10/28 13:10:08 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -137,6 +137,7 @@ SUBDIR+=	kdevelop-base
 SUBDIR+=	lcc
 SUBDIR+=	lclint
 SUBDIR+=	ldapsdk
+SUBDIR+=	libargparse
 SUBDIR+=	libavl
 SUBDIR+=	libbegemot
 SUBDIR+=	libbonobo
