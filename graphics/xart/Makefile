@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/08/03 09:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/08/22 14:53:48 jlam Exp $
 #
 
 DISTNAME=       xart19980415
@@ -13,7 +13,6 @@ COMMENT=	Paint program (enhanced xpaint)
 
 USE_BUILDLINK_ONLY=YES
 USE_IMAKE=      YES
-USE_XPM=	YES
 
 WRKSRC=		${WRKDIR}/19980415
 
@@ -24,4 +23,5 @@ post-extract:
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/tiff/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
