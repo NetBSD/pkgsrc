@@ -1,0 +1,22 @@
+$NetBSD: patch-bm,v 1.1 2004/04/22 09:18:45 tron Exp $
+
+--- otherlibs/num/Makefile.orig	Thu Jun 27 13:36:01 2002
++++ otherlibs/num/Makefile	Thu Apr 22 10:34:37 2004
+@@ -53,13 +53,13 @@
+ $(CAMLOBJS:.cmo=.cmx): ../../ocamlopt
+ 
+ install:
+-	if test -f dllnums.so; then cp dllnums.so $(STUBLIBDIR)/dllnums.so; fi
+-	cp libnums.a $(LIBDIR)/libnums.a
++	if test -f dllnums.so; then ${BSD_INSTALL_DATA} dllnums.so $(STUBLIBDIR)/dllnums.so; fi
++	${BSD_INSTALL_DATA} libnums.a $(LIBDIR)/libnums.a
+ 	cd $(LIBDIR); $(RANLIB) libnums.a
+-	cp nums.cma $(CMIFILES) $(CMIFILES:.cmi=.mli) $(LIBDIR)
++	${BSD_INSTALL_DATA} nums.cma $(CMIFILES) $(CMIFILES:.cmi=.mli) $(LIBDIR)
+ 
+ installopt:
+-	cp $(CAMLOBJS:.cmo=.cmx) nums.cmxa nums.a $(LIBDIR)
++	${BSD_INSTALL_DATA} $(CAMLOBJS:.cmo=.cmx) nums.cmxa nums.a $(LIBDIR)
+ 	cd $(LIBDIR); $(RANLIB) nums.a
+ 
+ partialclean:

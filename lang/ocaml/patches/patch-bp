@@ -1,0 +1,22 @@
+$NetBSD: patch-bp,v 1.1 2004/04/22 09:18:46 tron Exp $
+
+--- otherlibs/threads/Makefile.orig	Mon Jul  8 09:30:08 2002
++++ otherlibs/threads/Makefile	Thu Apr 22 10:34:37 2004
+@@ -99,12 +99,12 @@
+ 	rm -f pervasives.mli marshal.mli unix.mli
+ 
+ install:
+-	if test -f dllthreads.so; then cp dllthreads.so $(STUBLIBDIR)/dllthreads.so; fi
+-	cp libthreads.a $(LIBDIR)/libthreads.a
++	if test -f dllthreads.so; then ${BSD_INSTALL_DATA} dllthreads.so $(STUBLIBDIR)/dllthreads.so; fi
++	${BSD_INSTALL_DATA} libthreads.a $(LIBDIR)/libthreads.a
+ 	cd $(LIBDIR); $(RANLIB) libthreads.a
+-	if test -d $(LIBDIR)/threads; then : ; else mkdir $(LIBDIR)/threads; fi
+-	cp thread.cmi mutex.cmi condition.cmi event.cmi threadUnix.cmi threads.cma stdlib.cma unix.cma $(LIBDIR)/threads
+-	cp thread.mli mutex.mli condition.mli event.mli threadUnix.mli $(LIBDIR)
++	if test -d $(LIBDIR)/threads; then : ; else ${BSD_INSTALL_DATA_DIR} $(LIBDIR)/threads; fi
++	${BSD_INSTALL_DATA} thread.cmi mutex.cmi condition.cmi event.cmi threadUnix.cmi threads.cma stdlib.cma unix.cma $(LIBDIR)/threads
++	${BSD_INSTALL_DATA} thread.mli mutex.mli condition.mli event.mli threadUnix.mli $(LIBDIR)
+ 
+ installopt:
+ 

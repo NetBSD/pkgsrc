@@ -1,0 +1,23 @@
+$NetBSD: patch-bo,v 1.1 2004/04/22 09:18:45 tron Exp $
+
+--- otherlibs/systhreads/Makefile.orig	Thu Jun 27 13:36:02 2002
++++ otherlibs/systhreads/Makefile	Thu Apr 22 10:34:37 2004
+@@ -70,13 +70,13 @@
+ 	rm -f $(GENFILES)
+ 
+ install:
+-	if test -f dllthreads.so; then cp dllthreads.so $(STUBLIBDIR)/dllthreads.so; fi
+-	cp libthreads.a $(LIBDIR)/libthreads.a
++	if test -f dllthreads.so; then ${BSD_INSTALL_DATA} dllthreads.so $(STUBLIBDIR)/dllthreads.so; fi
++	${BSD_INSTALL_DATA} libthreads.a $(LIBDIR)/libthreads.a
+ 	cd $(LIBDIR); $(RANLIB) libthreads.a
+-	if test -d $(LIBDIR)/threads; then :; else mkdir $(LIBDIR)/threads; fi
+-	cp $(THREAD_OBJS:.cmo=.cmi) threads.cma $(LIBDIR)/threads
++	if test -d $(LIBDIR)/threads; then :; else ${BSD_INSTALL_DATA_DIR} $(LIBDIR)/threads; fi
++	${BSD_INSTALL_DATA} $(THREAD_OBJS:.cmo=.cmi) threads.cma $(LIBDIR)/threads
+ 	rm -f $(LIBDIR)/threads/stdlib.cma
+-	cp thread.mli mutex.mli condition.mli event.mli threadUnix.mli $(LIBDIR)
++	${BSD_INSTALL_DATA} thread.mli mutex.mli condition.mli event.mli threadUnix.mli $(LIBDIR)
+ 
+ installopt:
+ 	cp libthreadsnat.a $(LIBDIR)/libthreadsnat.a

@@ -1,0 +1,15 @@
+$NetBSD: patch-an,v 1.1 2004/04/22 09:18:38 tron Exp $
+
+--- camlp4/man/Makefile.orig	Fri Jul 19 16:53:49 2002
++++ camlp4/man/Makefile	Thu Apr 22 10:34:37 2004
+@@ -14,8 +14,8 @@
+ get_promote:
+ 
+ install:
+-	-$(MKDIR) $(MANDIR)/man1
+-	-cp $(TARGET) $(MANDIR)/man1/.
++	-${BSD_INSTALL_MAN_DIR} $(MANDIR)/man1
++	-${BSD_INSTALL_MAN} $(TARGET) $(MANDIR)/man1/.
+ 	-cd $(MANDIR)/man1; rm -f camlp4o.1; ln -s $(TARGET) camlp4o.1
+ 	-cd $(MANDIR)/man1; rm -f camlp4r.1; ln -s $(TARGET) camlp4r.1
+ 	-cd $(MANDIR)/man1; rm -f mkcamlp4.1; ln -s $(TARGET) mkcamlp4.1
