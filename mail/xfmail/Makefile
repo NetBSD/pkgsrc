@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2004/10/03 00:12:55 tv Exp $
+# $NetBSD: Makefile,v 1.34 2005/02/10 19:10:21 garbled Exp $
 
-DISTNAME=		xfmail-1.4.7
-PKGREVISION=		6
+DISTNAME=		xfmail-1.5.5
+PKGREVISION=		0
 CATEGORIES=		mail x11
 MASTER_SITES=		ftp://xfmail.ufies.org/pub/xfmail/release/1.4.7/source/
 EXTRACT_SUFX=		.tar.bz2
@@ -23,10 +23,6 @@ USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
-
-pre-configure:
-	cd ${WRKSRC} && ( ${LN} -sf config/configure.in . && ${LN} -sf config/acconfig.h . )
-	cd ${WRKSRC} && ( ${AUTOHEADER} && ${AUTOCONF} )
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xfmail
