@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2003/09/03 12:35:12 martin Exp $
+$NetBSD: patch-ab,v 1.8 2004/02/20 00:41:16 abs Exp $
 
---- mserv/cmd.c.orig	2003-08-02 16:26:19.000000000 +0200
-+++ mserv/cmd.c	2003-09-03 13:51:41.000000000 +0200
-@@ -51,7 +51,7 @@
+--- mserv/cmd.c.orig	Sat Aug  2 15:26:19 2003
++++ mserv/cmd.c
+@@ -51,7 +51,7 @@ met:
  #include <math.h>
  #include "mserv.h"
  #include "misc.h"
