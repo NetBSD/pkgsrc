@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/03/22 09:46:10 adam Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/29 23:32:12 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
@@ -91,7 +91,8 @@ post-install:
 	${ECHO} "#endif";				\
 	) >> ${X11ROOT}/lib/X11/config/host.def
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-2.[0-9]*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-1.6[M-Z]*) ||	\
+    !empty(MACHINE_PLATFORM:MNetBSD-[2-9]*)
 .  if exists(/usr/include/threadlib.h)
 SUBST_CLASSES+=		thr
 SUBST_STAGE.thr=	post-patch
