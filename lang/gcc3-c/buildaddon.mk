@@ -1,4 +1,4 @@
-# $NetBSD: buildaddon.mk,v 1.4 2003/07/23 09:48:44 drochner Exp $
+# $NetBSD: buildaddon.mk,v 1.5 2003/08/11 14:16:01 drochner Exp $
 
 .include "../../lang/gcc3-c/Makefile.common"
 
@@ -7,7 +7,7 @@ pre-build:
 	${LN} -sf ${GCC_PREFIX}/lib/libiberty.a ${WRKSRC}/libiberty
 	${LN} -sf ${GCC_PREFIX}/bin/gcc ${WRKSRC}/gcc/xgcc
 
-BUILDLINK_DEPENDS.gcc3c?=	gcc3${GCC3_PKGMODIF}-c-3.3nb1
+BUILDLINK_DEPENDS.gcc3c?=	gcc3${GCC3_PKGMODIF}-c-3.3.1
 BUILDLINK_PKGSRCDIR.gcc3c?=	../../lang/gcc3-c
 
 BUILDLINK_PREFIX.gcc3c=	${LOCALBASE}
