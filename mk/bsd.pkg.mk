@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.417 2000/03/13 14:24:27 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.418 2000/03/13 17:47:07 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -544,7 +544,7 @@ TRUE?=		/usr/bin/true
 TYPE?=		type
 .endif # !SunOS
 
-.if defined(DESTDIR)
+.if (defined(DESTDIR) && defined(PKGTOOLS_VERSION))
 PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
 PKG_CREATE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_create
 PKG_DELETE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_delete
