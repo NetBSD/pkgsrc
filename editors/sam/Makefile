@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/05/15 11:50:52 agc Exp $
+# $NetBSD: Makefile,v 1.13 2000/05/15 12:15:17 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:40 obrien Exp
 #
 
@@ -16,17 +16,21 @@ EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 MANCOMPRESSED=		yes
 USE_X11=		yes
 
+DEPENDS+=		libXgFonts-1.0:../../fonts/Xg
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
+
 .if ${X11BASE} != "/usr/openwin"
 OTHER_X_LIBS=	-lSM -lICE
 .endif
+
 do-build:
 	for d in libXg libframe sam samterm; do				\
 		(cd ${WRKSRC}/$$d; make -f Make.solaris 		\
 				OTHER_X_LIBS="${OTHER_X_LIBS}");	\
 	done
-.endif
+.endif # SunOS
 
 .include "../../mk/bsd.pkg.mk"
