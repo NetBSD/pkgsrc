@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5443 2004/04/05 02:45:44 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5444 2004/04/05 05:04:22 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1779,3 +1779,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lua to 5.0.2 [xtraeme 2004-04-05]
 	Updated gftp to 2.0.17 [xtraeme 2004-04-05]
 	Updated gftp-gtk1 to 2.0.17 [xtraeme 2004-04-05]
+	Added allegro-4.1.13 [xtraeme 2004-04-05]
