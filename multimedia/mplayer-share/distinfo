@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2004/07/24 01:19:35 wiz Exp $
+$NetBSD: distinfo,v 1.13 2004/11/06 00:47:34 wiz Exp $
 
 SHA1 (mplayer-1.0rc5/MPlayer-1.0pre5.tar.bz2) = cf64892871b8673e452b5d390be25144d85fe307
 Size (mplayer-1.0rc5/MPlayer-1.0pre5.tar.bz2) = 5072836 bytes
@@ -10,4 +10,5 @@ SHA1 (mplayer-1.0rc5/font-arial-cp1250.tar.bz2) = ccf11dce5d0fb72fd3af97f788b747
 Size (mplayer-1.0rc5/font-arial-cp1250.tar.bz2) = 249705 bytes
 SHA1 (patch-aa) = 9a90cadba608c518e998024f8dbde39cbfab70da
 SHA1 (patch-ab) = 68e81c67cd3902499f912d3ca8c6d6bc208a2433
+SHA1 (patch-ac) = 696183adc3777cb4d9bc4b6d96d5cb7c88ec489d
 SHA1 (patch-ad) = 95c8741263b822e20eea3da00ca64923ed91c53b
