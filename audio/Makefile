@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.246 2004/07/04 22:38:33 agc Exp $
+# $NetBSD: Makefile,v 1.247 2004/07/06 14:54:53 xtraeme Exp $
 #
 
 COMMENT=	Audio tools
@@ -91,6 +91,7 @@ SUBDIR+=	gst-plugins-oss
 SUBDIR+=	gst-plugins-vorbis
 SUBDIR+=	gtkmserv
 SUBDIR+=	guspatches
+SUBDIR+=	hydrogen
 SUBDIR+=	icecast
 SUBDIR+=	icecast1
 SUBDIR+=	ices-mp3
@@ -110,6 +111,7 @@ SUBDIR+=	libao-esound
 SUBDIR+=	libaudiofile
 SUBDIR+=	libcdaudio
 SUBDIR+=	libcddb
+SUBDIR+=	libhydrogen
 SUBDIR+=	libid3tag
 SUBDIR+=	libmad
 SUBDIR+=	libmikmod
