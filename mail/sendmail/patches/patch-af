@@ -1,24 +1,91 @@
-$NetBSD: patch-af,v 1.5 2000/12/07 15:53:10 itojun Exp $
+$NetBSD: patch-af,v 1.6 2001/01/04 12:09:29 itojun Exp $
 
---- sendmail/conf.c.orig	Sun Sep 24 01:54:01 2000
-+++ sendmail/conf.c	Thu Dec  7 17:12:14 2000
-@@ -4911,3 +4911,3 @@
- 			ia6 = sa->sin6.sin6_addr;
--			if (ia6.s6_addr == in6addr_any.s6_addr)
-+			if (IN6_IS_ADDR_UNSPECIFIED(&ia6))
- 			{
-@@ -5094,3 +5094,13 @@
- 			ia6 = sa->sin6.sin6_addr;
--			if (ia6.s6_addr == in6addr_any.s6_addr)
+--- sendmail/conf.c.orig	Fri Dec 29 08:51:54 2000
++++ sendmail/conf.c	Thu Jan  4 20:58:00 2001
+@@ -4546,18 +4546,32 @@
+ 	static struct hostent he;
+ 	static char buf[1000];
+ 	extern struct hostent *_switch_gethostbyaddr_r();
+-
+-	hp = _switch_gethostbyaddr_r(addr, len, type, &he, buf, sizeof(buf), &h_errno);
+ # else /* SOLARIS == 20300 || SOLARIS == 203 */
+ 	extern struct hostent *__switch_gethostbyaddr();
+-
+-	hp = __switch_gethostbyaddr(addr, len, type);
+ # endif /* SOLARIS == 20300 || SOLARIS == 203 */
+ #else /* (SOLARIS > 10000 && SOLARIS < 20400) || (defined(SOLARIS) && SOLARIS < 204) */
+ # if NETINET6
+ 	int err;
+ # endif /* NETINET6 */
++#endif /* (SOLARIS > 10000 && SOLARIS < 20400) || (defined(SOLARIS) && SOLARIS < 204) */
++
++#if NETINET6
++	if (type == AF_INET6) {
++		if (IN6_IS_ADDR_UNSPECIFIED((struct in6_addr *)addr) ||
++		    IN6_IS_ADDR_LINKLOCAL((struct in6_addr *)addr)) {
++			h_errno = HOST_NOT_FOUND;
++			return NULL;
++		}
++	}
++#endif /* NETINET6 */
+ 
++#if (SOLARIS > 10000 && SOLARIS < 20400) || (defined(SOLARIS) && SOLARIS < 204)
++# if SOLARIS == 20300 || SOLARIS == 203
++	hp = _switch_gethostbyaddr_r(addr, len, type, &he, buf, sizeof(buf), &h_errno);
++# else /* SOLARIS == 20300 || SOLARIS == 203 */
++	hp = __switch_gethostbyaddr(addr, len, type);
++# endif /* SOLARIS == 20300 || SOLARIS == 203 */
++#else /* (SOLARIS > 10000 && SOLARIS < 20400) || (defined(SOLARIS) && SOLARIS < 204) */
+ # if NETINET6
+ 	hp = getipnodebyaddr(addr, len, type, &err);
+ 	h_errno = err;
+@@ -4935,18 +4949,19 @@
+ 		switch (af)
+ 		{
+ 		  case AF_INET6:
+-			ia6 = sa->sin6.sin6_addr;
+-#   ifdef __KAME__
+-			/* convert into proper scoped address - */
+-			if ((IN6_IS_ADDR_LINKLOCAL(&ia6) ||
+-			     IN6_IS_ADDR_SITELOCAL(&ia6)) &&
+-			    sa->sin6.sin6_scope_id == 0)
+-			{
+-				sa->sin6.sin6_scope_id = ntohs(ia6.s6_addr[3] |
+-					((unsigned int) ia6.s6_addr[2] << 8));
+-				ia6.s6_addr[2] = ia6.s6_addr[3] = 0;
 +#    ifdef __KAME__
-+			/* convert into proper scoped address - */
-+			if ((IN6_IS_ADDR_LINKLOCAL(&ia6) ||
-+			     IN6_IS_ADDR_SITELOCAL(&ia6)) &&
++			/* convert into proper scoped address */
++			if ((IN6_IS_ADDR_LINKLOCAL(&sa->sin6.sin6_addr) ||
++			     IN6_IS_ADDR_SITELOCAL(&sa->sin6.sin6_addr)) &&
 +			    sa->sin6.sin6_scope_id == 0) {
-+				sa->sin6.sin6_scope_id = ntohs(ia6.s6_addr[3] |
-+				     ((unsigned int)ia6.s6_addr[2] << 8));
-+				ia6.s6_addr[2] = ia6.s6_addr[3] = 0;
++				struct in6_addr *ia6p;
++				ia6p = &sa->sin6.sin6_addr;
++				sa->sin6.sin6_scope_id = ntohs(ia6p->s6_addr[3] |
++				     ((unsigned int)ia6p->s6_addr[2] << 8));
++				ia6p->s6_addr[2] = ia6p->s6_addr[3] = 0;
+ 			}
+-#   endif /* __KAME__ */
++#    endif
++			ia6 = sa->sin6.sin6_addr;
+ 			if (IN6_IS_ADDR_UNSPECIFIED(&ia6))
+ 			{
+ 				addr = anynet_ntop(&ia6, buf6, sizeof buf6);
+@@ -5129,6 +5144,18 @@
+ 
+ #   if NETINET6
+ 		  case AF_INET6:
++#    ifdef __KAME__
++			/* convert into proper scoped address */
++			if ((IN6_IS_ADDR_LINKLOCAL(&sa->sin6.sin6_addr) ||
++			     IN6_IS_ADDR_SITELOCAL(&sa->sin6.sin6_addr)) &&
++			    sa->sin6.sin6_scope_id == 0) {
++				struct in6_addr *ia6p;
++				ia6p = &sa->sin6.sin6_addr;
++				sa->sin6.sin6_scope_id = ntohs(ia6p->s6_addr[3] |
++				     ((unsigned int)ia6p->s6_addr[2] << 8));
++				ia6p->s6_addr[2] = ia6p->s6_addr[3] = 0;
 +			}
 +#    endif
-+			if (IN6_IS_ADDR_UNSPECIFIED(&ia6))
+ 			ia6 = sa->sin6.sin6_addr;
+ 			if (IN6_IS_ADDR_UNSPECIFIED(&ia6))
  			{
