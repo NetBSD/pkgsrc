@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/02/08 02:08:21 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/09 01:04:45 jlam Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/-base-/}
@@ -8,10 +8,10 @@ COMMENT=	Generic shared library support script (the script itself)
 
 CONFLICTS+=	libtool<=1.3.5nb11
 
-# We are going to want libtool to find the same version of C and C++
-# compilers.
+# We are going to want libtool to find the same versions of the C, C++,
+# and Fortran compilers.
 #
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++ fortran
 
 .include "../../devel/libtool/Makefile.common"
 
