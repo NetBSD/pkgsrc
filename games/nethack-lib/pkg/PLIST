@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/04/14 14:06:54 pooka Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/11/27 22:31:03 pooka Exp $
 bin/nethack
 bin/recover
 man/man6/nethack.6
@@ -8,7 +8,6 @@ man/man6/recover.6
 man/man6/dlb.6
 share/nethackdir/rip.xpm
 share/nethackdir/pet_mark.xbm
-share/nethackdir/x11tiles
 share/nethackdir/license
 share/nethackdir/quest.dat
 share/nethackdir/options
