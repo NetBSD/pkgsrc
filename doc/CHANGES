@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4573 2004/01/23 16:11:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.4574 2004/01/23 16:33:35 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -427,3 +427,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py-xml-0.8.3 [recht 2004-01-23]
 	Removed pyxml [recht 2004-01-23]
 	Updated gnome2-games to 2.4.1.1nb1 [jmmv 2004-01-23]
+	Added ispell-russian-io-0.99f5 [agc 2004-01-23]
