@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2001/02/22 15:28:57 tv Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/10/31 14:32:31 tv Exp $
 etc/fidogate/fidogate.conf.dist
 @dirrm etc/fidogate
 etc/rc.d/fidogate
@@ -11,7 +11,6 @@ lib/fidogate/bin/ftnafutil
 lib/fidogate/bin/ftnfattach
 lib/fidogate/bin/ftnoutpkt
 lib/fidogate/bin/ftntickpost
-lib/fidogate/bin/hosts2dns
 lib/fidogate/bin/latest
 lib/fidogate/bin/logcheck
 lib/fidogate/bin/logdaily
@@ -22,13 +21,16 @@ lib/fidogate/bin/nl-autoupd
 lib/fidogate/bin/nl-check
 lib/fidogate/bin/nl-del
 lib/fidogate/bin/nl-diff
+lib/fidogate/bin/out-freq
 lib/fidogate/bin/out-ls
 lib/fidogate/bin/out-manip
 lib/fidogate/bin/out-rm0
 lib/fidogate/bin/out-rmbsy
+lib/fidogate/bin/outb
+lib/fidogate/bin/outb-kill
 lib/fidogate/bin/pktdebug
 lib/fidogate/bin/pktmore
-lib/fidogate/bin/recvuu
+lib/fidogate/bin/runafutil
 lib/fidogate/bin/runchklock
 lib/fidogate/bin/runffx
 lib/fidogate/bin/rungate
@@ -43,8 +45,6 @@ lib/fidogate/bin/runtoss
 lib/fidogate/bin/rununpack
 lib/fidogate/bin/send-ffx
 lib/fidogate/bin/send-fidogate
-lib/fidogate/bin/senduu
-lib/fidogate/bin/senduumail
 lib/fidogate/bin/sumcrc
 lib/fidogate/charset.bin
 lib/fidogate/charset.map
