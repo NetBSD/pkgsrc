@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4587 2004/01/24 02:05:01 kristerw Exp $
+$NetBSD: CHANGES,v 1.4588 2004/01/24 09:20:12 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -441,3 +441,17 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-curl to 7.10.8 [recht 2004-01-23]
 	Updated perl to 5.8.2 [jlam 2004-01-23]
 	Updated udunits to 1.12.1 [kristerw 2004-01-24]
+	Added imake-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-clients-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-libs-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-server-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-fontserver-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-fonts100dpi-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-fonts75dpi-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-fontsScalable-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-fontsMisc-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-fontsEncodings-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-fontsCyrillic-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-man-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-docs-4.3.0 [xtraeme 2004-01-24]
+	Added XFree86-4.3.0 [xtraeme 2004-01-24]
