@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/08 14:56:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 13:51:21 wiz Exp $
 
 DISTNAME=	ircii-pana-1.0c18
 PKGNAME=	bitchx-1.0.3.18
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.bitchx.org/pub/BitchX/source/
 
 MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://www.bitchx.org/
+COMMENT=	IRC client based on ircII
 
 DEPENDS+=	ncurses>=5.2:../../devel/ncurses
 # not enabled since BitchX dumps core on startup

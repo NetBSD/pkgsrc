@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/28 19:55:17 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/16 13:41:31 wiz Exp $
 
 DISTNAME=	puzzle-402
 PKGNAME=	puzzle-4.0.2
@@ -12,6 +12,7 @@ MASTER_SITES=	http://members.tripod.de/korbi/puzzle/ \
 
 MAINTAINER=	babafou@babafou.eu.org
 HOMEPAGE=	http://members.tripod.de/korbi/puzzle/
+COMMENT=	Maximum likelihood analysis of molecular sequence data
 
 MAKEFILE=	makefile
 ALL_TARGET=	puzzle

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/06 19:56:38 lukem Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 13:51:23 wiz Exp $
 #
 
 DISTNAME=	gale-0.99a
@@ -7,6 +7,7 @@ MASTER_SITES=	http://download.gale.org/
 
 MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://gale.org
+COMMENT=	secure instant messaging system
 
 DEPENDS+=	adns-1.0:../../net/adns/
 DEPENDS+=	boehm-gc-5.3:../../devel/boehm-gc/
