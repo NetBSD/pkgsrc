@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2003/08/19 15:48:17 agc Exp $
+# $NetBSD: Makefile,v 1.140 2003/08/29 00:25:34 dan Exp $
 #
 
 COMMENT=	Security tools
@@ -15,6 +15,7 @@ SUBDIR+=	arirang
 SUBDIR+=	audit-packages
 SUBDIR+=	avcheck
 SUBDIR+=	beecrypt
+SUBDIR+=	bitstir
 SUBDIR+=	cfs
 SUBDIR+=	crack
 SUBDIR+=	cy-login
