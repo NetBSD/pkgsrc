@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2002/08/25 18:38:54 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2002/11/18 07:49:24 jlam Exp $
 #
 
 PKGNAME=	Mesa-${MESA_VERSION}
@@ -13,9 +13,7 @@ CONFLICTS=	Mesa-glx-[0-9]*
 
 .include "Makefile.common"
 
-BUILDLINK_DEPENDS.MesaLib=	MesaLib-${MESA_VERSION}
-BUILDLINK_DEPENDS.glu=		glu-${MESA_VERSION}
-BUILDLINK_DEPENDS.glut=		glut-${MESA_VERSION}
+MESA_REQD=	${MESA_VERSION}
 
 USE_BUILDLINK2=	yes
 
