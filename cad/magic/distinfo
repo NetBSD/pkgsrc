@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2004/01/23 11:43:33 agc Exp $
+$NetBSD: distinfo,v 1.4 2004/09/17 09:36:02 he Exp $
 
 SHA1 (magic-7.1.tar.gz) = 176eb4c6a0ff33c6e265e61360c02da4f454f101
 Size (magic-7.1.tar.gz) = 3860487 bytes
@@ -18,3 +18,4 @@ SHA1 (patch-am) = c4e695c370db01775b321970a327ea0851fdf437
 SHA1 (patch-an) = 83e9e5242b483f398962a6237551b860749e70f0
 SHA1 (patch-ao) = 747c18b5e997d652054d17acbdb1fee0748d77a8
 SHA1 (patch-ap) = b2b9e1c45dbefd1d93205bcc15ea713c38181598
+SHA1 (patch-aq) = 8ca051b61a8d79988838be4c1bc4dca3eed6bcaa
