@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.754 2002/12/12 03:24:52 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.755 2002/12/12 04:39:56 kim Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3912,3 +3912,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added fontconfig-2.1 [jmmv 2002-12-11]
 	Added vifm-0.1 [jmmv 2002-12-11]
 	Updated gawk to 3.1.1 [dmcmahill 2002-12-11]
+	Updated tmda to 0.65 [kim 2002-12-12]

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/11/11 05:28:07 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/12/12 04:38:30 kim Exp $
 bin/tmda-address
 bin/tmda-check-address
 bin/tmda-filter
@@ -112,7 +112,7 @@ ${DOCDIR}/contrib/collectaddys
 ${DOCDIR}/contrib/def2html
 ${DOCDIR}/contrib/printcdb
 ${DOCDIR}/contrib/printdbm
-${DOCDIR}/contrib/sample.tmdarc
+${DOCDIR}/contrib/sample.config
 ${DOCDIR}/contrib/tmda.el
 ${DOCDIR}/contrib/tmda.spec
 ${SHAREDIR}/bounce.txt
