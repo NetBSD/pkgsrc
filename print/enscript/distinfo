@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:41:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/01/25 18:57:59 kleink Exp $
 
 SHA1 (enscript-1.6.1.tar.gz) = f99e21a8366baf331daaa6675d7c9d2dc026eb27
 Size (enscript-1.6.1.tar.gz) = 645856 bytes
+SHA1 (patch-aa) = 7cab0636de9b4551391a6c2753eaf0c8c2a01679
+SHA1 (patch-ab) = 1cb3f286421dc772475246617ec270d887971018

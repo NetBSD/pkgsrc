@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2001/09/27 23:18:36 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2002/01/25 18:57:58 kleink Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/27 08:10:30 tg Exp
 #
 
 DISTNAME=		enscript-1.6.1
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=enscript/}
 
