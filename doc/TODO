@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2921 2005/01/17 13:24:30 martti Exp $
+$NetBSD: TODO,v 1.2922 2005/01/17 23:04:27 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -340,7 +340,6 @@ Suggested package updates
 	o boost-1.32.0
 	o boson-0.10
 	o btparse-0.34
-	o bugzilla-2.18
 	o bzflag-1.10.8
 	o c4-1.10
 	o camlimages-2.12
