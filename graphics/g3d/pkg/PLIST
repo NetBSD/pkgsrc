@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/22 03:35:21 sakamoto Exp $
+bin/g3d
+include/b3d/b3d.h
+include/b3d/btex.h
+include/b3d/geo.h
+include/b3d/global.h
+include/b3d/model.h
+include/b3d/sgi.h
+include/b3d/transform.h
+lib/libb3d.a
+lib/libb3d.so.0.1
+share/pixmaps/g3d/exit.xpm
+share/pixmaps/g3d/file.xpm
+share/pixmaps/g3d/lineadd.xpm
+share/pixmaps/g3d/linesel.xpm
+share/pixmaps/g3d/linesub.xpm
+share/pixmaps/g3d/new.xpm
+share/pixmaps/g3d/pointadd.xpm
+share/pixmaps/g3d/pointsel.xpm
+share/pixmaps/g3d/pointsub.xpm
+share/pixmaps/g3d/right_arrow.xpm
+share/pixmaps/g3d/save.xpm
+share/pixmaps/g3d/triadd.xpm
+share/pixmaps/g3d/trisel.xpm
+share/pixmaps/g3d/trisub.xpm
+share/pixmaps/g3d/tritex.xpm
+@dirrm share/pixmaps/g3d
+@dirrm include/b3d
