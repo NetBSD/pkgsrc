@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2001/04/22 08:22:48 tron Exp $
+# $NetBSD: Makefile,v 1.95 2001/04/27 17:18:20 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -14,6 +14,7 @@ SUBDIR+=	cdparanoia
 SUBDIR+=	cmp3
 SUBDIR+=	cs4235
 SUBDIR+=	csound
+SUBDIR+=	csound-bath
 SUBDIR+=	csound-manual
 SUBDIR+=	dap
 SUBDIR+=	disc-cover
