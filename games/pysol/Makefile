@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/10 03:16:47 snj Exp $
 #
 
 DISTNAME=	pysol-4.81
 CATEGORIES=	games
 MASTER_SITES=	http://www.oberhumer.com/opensource/pysol/download/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${CARDSETS}${EXTRACT_SUFX}
 EXTRACT_SUFX=	.tar.bz2
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${CARDSETS}${EXTRACT_SUFX}
 
 MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://wildsau.idv.uni-linz.ac.at/mfx/pysol.html
@@ -33,8 +33,8 @@ post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@(cd ${PREFIX}; \
 	  ${FIND} share/pysol \( -type f -or -type l \) -print | \
-	    sort >> ${PLIST_SRC}; \
-	  for DIR in `${FIND} share/pysol -type d -print | sort -r`; do \
+	    ${SORT} >> ${PLIST_SRC}; \
+	  for DIR in `${FIND} share/pysol -type d -print | ${SORT} -r`; do \
 	  ${ECHO} "@dirrm $$DIR" >> ${PLIST_SRC}; \
 	  done)
 
