@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/05 18:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/06 04:10:48 xtraeme Exp $
 #
 
 VERS=		0.50.16
@@ -20,21 +20,22 @@ DEPENDS+=	vcdimager>=0.7.12:../../sysutils/vcdimager-devel
 DEPENDS+=	cdrecord>=1.10:../../sysutils/cdrecord
 DEPENDS+=	subtitleripper-[0-9]*:../../textproc/subtitleripper
 DEPENDS+=	p5-Gdk-Pixbuf-[0-9]*:../../graphics/p5-Gdk-Pixbuf
+
 .if (${MACHINE_ARCH} == "i386")
 #DEPENDS+=	rar>=2.02:../../archivers/rar
 .endif
 
 BUILDLINK_DEPENDS.perl= perl>=5.6.0
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 
 PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Video/DVDRip/.packlist
 
 # XXX xine support
 # XXX fping support
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/ImageMagick/buildlink2.mk"
-.include "../../multimedia/mjpegtools/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../multimedia/mjpegtools/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
