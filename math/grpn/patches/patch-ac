@@ -1,0 +1,50 @@
+$NetBSD: patch-ac,v 1.1 2002/04/02 02:01:24 dmcmahill Exp $
+
+--- funcs.c.orig	Mon May 31 19:44:50 1999
++++ funcs.c
+@@ -313,6 +313,45 @@
+    }
+ }
+ 
++void Db10Stack(){
++   Number *n1, *n2;
++
++   finishEditor();
++
++   if(checkArgs("db10", 1)) return;
++   SaveStackState(1);
++
++   n1 = Pop();
++
++   n2 = dbNumber(n1,10.0);
++   if(n2){
++      Push(n2); freeNumber(n1);
++      UndoStackState(1);
++   } else {
++      Push(n1);
++      CancelStackState();
++   }
++}
++
++void Db20Stack(){
++   Number *n1, *n2;
++
++   finishEditor();
++
++   if(checkArgs("db20", 1)) return;
++   SaveStackState(1);
++
++   n1 = Pop();
++
++   n2 = dbNumber(n1,20.0);
++   if(n2){
++      Push(n2); freeNumber(n1);
++      UndoStackState(1);
++   } else {
++      Push(n1);
++      CancelStackState();
++   }
++}
+ 
+ void RipStack(){
+    Number *n1, *n2, *n3;
