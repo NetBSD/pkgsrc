@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2003/08/02 05:22:59 mrg Exp $
+
+--- mplex/systems.cc.orig	2002-04-30 00:36:01.000000000 +1000
++++ mplex/systems.cc	2003-06-28 23:54:51.000000000 +1000
+@@ -2,6 +2,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <assert.h>
+ #include <sys/param.h>
+ #include <sys/stat.h>
+ #include "systems.hh"
