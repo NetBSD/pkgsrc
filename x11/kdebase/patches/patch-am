@@ -1,5 +1,6 @@
-$NetBSD: patch-am,v 1.4 1999/11/12 04:50:00 hubertf Exp $
+$NetBSD: patch-am,v 1.5 1999/12/12 19:06:37 jdolecek Exp $
 
+This patch is no longer needed in KDE2		jdolecek 1999/12/12
 --- ./kdm/session.c	Fri Aug 20 20:35:10 1999
 +++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kdm/session.c	Fri Nov 12 05:10:30 1999
 @@ -50,6 +50,7 @@
