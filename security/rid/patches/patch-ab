@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/06/27 12:21:21 grant Exp $
+
+--- pinger.c.orig	2000-02-25 15:33:24.000000000 +1100
++++ pinger.c
+@@ -141,7 +141,7 @@ void process_alive(int num_hosts)
+ }
+ 
+ /* Standard checksum routine */
+-inline unsigned short
++unsigned short
+ ip_cksum(u_short *addr, int len)
+ {
+         register int    nleft = len;
