@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2004/11/28 04:10:36 taca Exp $
+
+--- Makefile.orig	2004-06-08 02:04:57.000000000 +0900
++++ Makefile
+@@ -26,7 +26,7 @@ RUBY?=		/usr/pkg/bin/ruby
+ POPAUTHDB?=	/usr/pkg/etc/apop.auth
+ DTCPS_TUNIF?=	gif0
+ DTCPC_TUNIF?=	gif0
+-.elseif (${OPSYS} == "FreeBSD")
++.elif (${OPSYS} == "FreeBSD")
+ RUBY?=		/usr/local/bin/ruby
+ POPAUTHDB?=	/usr/local/etc/qpopper/pop.auth
+ DTCPS_TUNIF?=	gif0
