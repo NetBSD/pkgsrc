@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.64 2004/11/12 15:39:22 jlam Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.65 2004/11/16 18:34:12 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -72,6 +72,9 @@ BULK_ID?=
 
 # This file exists to mark a package as broken
 BROKENFILE?=	.broken${BULK_ID}.html
+
+# This file is the work log for a broken package
+BROKENWRKLOG?=	.broken${BULK_ID}.work.html
 
 # This file is where the log of the build goes
 BUILDLOG?=	.make${BULK_ID}
@@ -348,7 +351,22 @@ bulk-package:
 			${RM} ${BUILDLOG} ; \
 		else \
 			${MV} ${BUILDLOG} ${BROKENFILE} ;\
+			if [ -f "${WRKLOG}" ]; then \
+				(${ECHO_MSG} "<pre>"; \
+				${ECHO_MSG} ""; \
+				${CAT} ${WRKLOG}; \
+				${ECHO_MSG} "</pre>"; \
+				) >> ${BROKENWRKLOG}; \
+			fi; \
 			( \
+			if [ -f "${BROKENWRKLOG}" ]; then \
+				${ECHO_MSG} "</pre>"; \
+				${ECHO_MSG} "<p>"; \
+				${ECHO_MSG} "Please view the <a href=\"../../${PKGPATH}/${BROKENWRKLOG}\">work log for ${PKGNAME}</a>"; \
+				${ECHO_MSG} "</p>"; \
+				${ECHO_MSG} "<pre>"; \
+				${ECHO_MSG} ""; \
+			fi ; \
 			${ECHO_MSG} "BULK> ${PKGNAME} was marked as broken:" ; \
 			${LS} -la ${BROKENFILE} ; \
 			${ECHO_MSG} ${MAKE} deinstall ; \
