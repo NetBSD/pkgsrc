@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2003/07/21 17:16:20 martti Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/25 11:48:31 dillo Exp $
 #
 
 DISTNAME=	dvidvi-1.0
 CATEGORIES=	print
 MASTER_SITES=	ftp://sunsite.univie.ac.at/pub/distfiles/
 
-MAINTAINER=	dillo@giga.or.at
+MAINTAINER=	dillo@NetBSD.org
 COMMENT=	Select and/or rearrange pages in a TeX dvi file
 
 NO_SRC_ON_FTP=	Unable to determine distribution license

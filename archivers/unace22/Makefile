@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/22 04:02:41 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/25 11:48:31 dillo Exp $
 #
 
 DISTNAME=	linunace22
@@ -11,7 +11,7 @@ MASTER_SITES=	http://www.servidas.net/winace/ \
 		http://ace.imptech.net/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	dillo@giga.or.at
+MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives (2.2 linux binary)
 
