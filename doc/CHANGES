@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6030 2004/05/26 13:23:15 markd Exp $
+$NetBSD: CHANGES,v 1.6031 2004/05/26 13:53:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2654,3 +2654,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-twisted to 1.3.0 [recht 2004-05-26]
 	Added tacshell-0.91 [sekiya 2004-05-26]
 	Updated kdebase3 to 3.2.2nb2 [markd 2004-05-26]
+	Updated lwm to 1.2.0 [adam 2004-05-26]
