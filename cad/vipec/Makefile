@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/22 07:21:55 grant Exp $
+# $NetBSD: Makefile,v 1.35 2004/04/11 23:00:29 snj Exp $
 #
 
 DISTNAME=	ViPEC-3.1.3
@@ -11,7 +11,7 @@ COMMENT=	Network analyser for electrical networks
 
 BUILD_DEPENDS+=		tmake-*:../../devel/tmake
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 UNLIMIT_RESOURCES+=	datasize
@@ -31,5 +31,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/vipec.sh ${PREFIX}/bin/vipec
 	${INSTALL_DATA} ${WRKSRC}/vipec.cfg ${PREFIX}/vipec
 
-.include "../../x11/qt2-libs/buildlink2.mk"
+.include "../../x11/qt2-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
