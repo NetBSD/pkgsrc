@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/06/30 11:24:54 seb Exp $
+# $NetBSD: Makefile,v 1.38 2003/07/07 12:51:44 uebayasi Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.12
@@ -128,7 +128,7 @@ COMMENT=	Common elisp packages for xemacs 21
 
 DEPENDS+=	xemacs>=21.1.14:../../editors/xemacs
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
+DIST_SUBDIR=	${PKGBASE}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 
