@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/02/11 23:06:42 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/24 18:21:42 snj Exp $
 #
 
 DISTNAME=	coreutils-5.0
@@ -14,7 +14,7 @@ COMMENT=	GNU ls utility with color support
 CONFLICTS=	coreutils-[0-9]* linuxls-[0-9]*
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PERL5=		build
 
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX="${GNU_PROGRAM_PREFIX}"
@@ -32,6 +32,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/man/ls.1 \
 		${PREFIX}/man/man1/${GNU_PROGRAM_PREFIX}ls.1
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
