@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2000/07/15 01:23:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2000/09/21 14:34:56 jlam Exp $
 ${PGUSER}/.profile.pgsql
 ${PGUSER}/post-install-notes
 bin/createdb
@@ -23,7 +23,7 @@ bin/postgres
 bin/postmaster
 bin/psql
 bin/vacuumdb
-etc/rc.d/pgsql.sh
+etc/rc.d/pgsql
 include/pgsql/access/attnum.h
 include/pgsql/c.h
 include/pgsql/commands/trigger.h
