@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.90.4.7 2003/08/16 09:08:50 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.90.4.8 2003/08/16 09:25:36 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -56,6 +56,11 @@ CONFIGURE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
+_BLNK_CPPFLAGS=		-I${LOCALBASE}/include
+_BLNK_LDFLAGS=		-L${LOCALBASE}/lib
+.if ${_USE_RPATH} == "yes"
+_BLNK_LDFLAGS+=		-Wl,${_OPSYS_RPATH_NAME}${LOCALBASE}/lib
+.endif
 _BLNK_OPSYS=		${OPSYS}
 
 BUILDLINK_SHELL?=	${SH}
@@ -81,88 +86,6 @@ MAKE_ENV+=		BUILDLINK_CACHE_ALL=yes
 .  endif
 .endfor
 
-# Prepend ${BUILDLINK_DIR}/bin to the PATH so that the wrappers are found
-# first when searching for executables.
-#
-PATH:=			${BUILDLINK_DIR}/bin:${PATH}
-
-# BUILDLINK_DEPENDS contains the list of packages for which we add
-# dependencies.
-#
-BUILDLINK_DEPENDS=	${BUILDLINK_PACKAGES}
-
-.for _pkg_ in ${BUILDLINK_DEPENDS}
-#
-# Add the proper dependency on each package pulled in by buildlink2.mk
-# files.  BUILDLINK_DEPMETHOD.<pkg> contains a list of either "full" or
-# "build", and if any of that list if "full" then we use a full dependency
-# on <pkg>, otherwise we use a build dependency on <pkg>.  By default,
-# we use a full dependency.
-#
-.  if !defined(BUILDLINK_DEPMETHOD.${_pkg_})
-BUILDLINK_DEPMETHOD.${_pkg_}=	full
-.  endif
-.  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
-_BUILDLINK_DEPMETHOD.${_pkg_}=	DEPENDS
-.  elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
-_BUILDLINK_DEPMETHOD.${_pkg_}=	BUILD_DEPENDS
-.  endif
-.  if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
-      defined(BUILDLINK_PKGSRCDIR.${_pkg_})
-.    for _depends_ in ${BUILDLINK_DEPENDS.${_pkg_}}
-${_BUILDLINK_DEPMETHOD.${_pkg_}}+= \
-	${_depends_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
-.    endfor
-.  endif
-.endfor
-
-.for _pkg_ in ${BUILDLINK_PACKAGES}
-#
-# BUILDLINK_PLIST_CMD.<pkg> is a sequence of shell commands that extracts
-# a list of all of the files installed by <pkg>.  This list is relative to
-# ${BUILDLINK_PREFIX.<pkg>}.
-#
-BUILDLINK_PLIST_CMD.${_pkg_}= \
-	${PKG_INFO} -f ${BUILDLINK_PKGBASE.${_pkg_}} |			\
-		${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p'
-.endfor
-
-# Pass the proper -I.../-L.../-Wl,-R... flags to the compiler and linker.
-
-_BLNK_CPPFLAGS=		# empty
-_BLNK_LDFLAGS=		# empty
-
-.for _pkg_ in ${BUILDLINK_PACKAGES}
-_BLNK_INCDIR.${_pkg_}=	${BUILDLINK_PREFIX.${_pkg_}}/include
-_BLNK_LIBDIR.${_pkg_}=	${BUILDLINK_PREFIX.${_pkg_}}/lib
-
-.  if exists(${_BLNK_INCDIR.${_pkg_}})
-.    if empty(_BLNK_CPPFLAGS:M-I${_BLNK_INCDIR.${_pkg_}})
-_BLNK_CPPFLAGS+=	-I${_BLNK_INCDIR.${_pkg_}}
-.    endif
-.  endif
-.  if exists(${_BLNK_LIBDIR.${_pkg_}})
-.    if empty(_BLNK_LDFLAGS:M-L${_BLNK_LIBDIR.${_pkg_}})
-_BLNK_LDFLAGS+=		-L${_BLNK_LIBDIR.${_pkg_}}
-.    endif
-.    if empty(_BLNK_LDFLAGS:M-L${_BLNK_LIBDIR.${_pkg_}})
-_BLNK_LDFLAGS+=		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.${_pkg_}}/lib
-.    endif
-.  endif
-.endfor
-
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
-.  if empty(_BLNK_CPPFLAGS:M-I${LOCALBASE}/include)
-_BLNK_CPPFLAGS+=	-I${LOCALBASE}/include
-.  endif
-.  if empty(_BLNK_LDFLAGS:M-L${LOCALBASE}/lib)
-_BLNK_LDFLAGS+=		-L${LOCALBASE}/lib
-.  endif
-.endif
-.if empty(_BLNK_LDFLAGS:M-Wl,${RPATH_FLAG}${LOCALBASE}/lib)
-_BLNK_LDFLAGS+=		-Wl,${RPATH_FLAG}${LOCALBASE}/lib
-.endif
-
 .if defined(USE_X11)
 USE_X11_LINKS?=		YES
 .  if !empty(USE_X11_LINKS:M[nN][oO])
@@ -171,17 +94,11 @@ USE_X11_LINKS?=		YES
 BUILD_DEPENDS+=		x11-links>=0.12:../../pkgtools/x11-links
 _BLNK_X11_DIR=		${LOCALBASE}/share/x11-links
 .  endif
-.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
-.    if empty(_BLNK_CPPFLAGS:M-I${X11BASE}/include)
 _BLNK_CPPFLAGS+=	-I${X11BASE}/include
-.    endif
-.    if empty(_BLNK_LDFLAGS:M-L${X11BASE}/lib)
 _BLNK_LDFLAGS+=		-L${X11BASE}/lib
-.    endif
-.  endif
-.  if empty(_BLNK_LDFLAGS:M-Wl,${RPATH_FLAG}${X11BASE}/lib)
-_BLNK_LDFLAGS+=		-Wl,${RPATH_FLAG}${X11BASE}/lib
-.  endif
+.if ${_USE_RPATH} == "yes"
+_BLNK_LDFLAGS+=		-Wl,${_OPSYS_RPATH_NAME}${X11BASE}/lib
+.endif
 .endif
 
 CONFIGURE_ENV+=		BUILDLINK_CPPFLAGS="${_BLNK_CPPFLAGS}"
@@ -204,6 +121,44 @@ CPPFLAGS+=	${FLAG}
 .  if empty(LDFLAGS:M${FLAG})
 LDFLAGS+=	${FLAG}
 .  endif
+.endfor
+
+# Prepend ${BUILDLINK_DIR}/bin to the PATH so that the wrappers are found
+# first when searching for executables.
+#
+PATH:=			${BUILDLINK_DIR}/bin:${PATH}
+
+.for _pkg_ in ${BUILDLINK_PACKAGES}
+#
+# Add the proper dependency on each package pulled in by buildlink2.mk
+# files.  BUILDLINK_DEPMETHOD.<pkg> contains a list of either "full" or
+# "build", and if any of that list if "full" then we use a full dependency
+# on <pkg>, otherwise we use a build dependency on <pkg>.  By default,
+# we use a full dependency.
+#
+.  if !defined(BUILDLINK_DEPMETHOD.${_pkg_})
+BUILDLINK_DEPMETHOD.${_pkg_}=	full
+.  endif
+.  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
+_BUILDLINK_DEPMETHOD.${_pkg_}=	DEPENDS
+.  elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
+_BUILDLINK_DEPMETHOD.${_pkg_}=	BUILD_DEPENDS
+.  endif
+.  if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
+      defined(BUILDLINK_PKGSRCDIR.${_pkg_})
+.    for _depends_ in ${BUILDLINK_DEPENDS.${_pkg_}}
+${_BUILDLINK_DEPMETHOD.${_pkg_}}+= \
+	${_depends_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
+.    endfor
+.  endif
+#
+# BUILDLINK_PLIST_CMD.<pkg> is a sequence of shell commands that extracts
+# a list of all of the files installed by <pkg>.  This list is relative to
+# ${BUILDLINK_PREFIX.<pkg>}.
+#
+BUILDLINK_PLIST_CMD.${_pkg_}= \
+	${PKG_INFO} -f ${BUILDLINK_PKGBASE.${_pkg_}} |			\
+		${SED} -n '/File:/s/^[ 	]*File:[ 	]*//p'
 .endfor
 
 # Create the buildlink include and lib directories so that the Darwin
@@ -492,16 +447,16 @@ _REPLACE_BUILDLINK= \
 # When "unbuildlinkifying" a file, we must remove references to the
 # buildlink directories and change any -llib to the proper replacement
 # libraries (-lreadline -> -ledit, etc.).  Redundant -Idir and -Ldir
-# options are removed to optimize the resulting file.
+# options are removed to optimize the resulting file.  Also, prefer the
+# .la files in ${LOCALBASE}/lib over the ones in
+# ${LOCALBASE}/${DEPOT_SUBDIR}/*/lib when creating new .la files.  This
+# makes "overwrite" packages look and feel more like they would without
+# the pkgviews integration.
 #
 LIBTOOL_ARCHIVE_UNTRANSFORM_SED?=	# empty
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
 _LIBTOOL_ARCHIVE_UNTRANSFORM_SED=	\
 	-e "s|${LOCALBASE}/${DEPOT_SUBDIR}/[^/]*/|${LOCALBASE}/|g"	\
 	-e "s|${X11BASE}/${DEPOT_SUBDIR}/[^/]*/|${X11BASE}/|g"
-.else
-_LIBTOOL_ARCHIVE_UNTRANSFORM_SED=	# empty
-.endif
 _LIBTOOL_ARCHIVE_UNTRANSFORM_SED+=	${LIBTOOL_ARCHIVE_UNTRANSFORM_SED}
 REPLACE_BUILDLINK_SED?=			# empty
 _REPLACE_BUILDLINK_SED=			${REPLACE_BUILDLINK_SED}
