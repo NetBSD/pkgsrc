@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6651 2004/07/23 15:12:39 tron Exp $
+$NetBSD: CHANGES,v 1.6652 2004/07/23 15:15:29 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3520,3 +3520,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated teapop to 0.3.8 [zuntum 2004-07-23]
 	Updated popa3d to 0.6.4.1 [wiz 2004-07-23]
 	Updated samba to 3.0.5 [tron 2004-07-23]
+	Updated gmime to 2.1.7 [recht 2004-07-23]
+	Updated balsa2 to 2.2.0 [recht 2004-07-23]
