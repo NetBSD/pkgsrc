@@ -1,13 +1,37 @@
-$NetBSD: patch-ab,v 1.2 2002/08/25 19:23:20 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2004/03/28 22:00:05 minskim Exp $
 
---- config.h.in.orig	Fri Dec 21 10:00:06 2001
+--- config.h.in.orig	2003-01-19 18:40:15.000000000 -0600
 +++ config.h.in
-@@ -12,6 +12,8 @@
- /*  Define if the system has imon and IMONIOC_ ioctl flags.  */
- #undef HAVE_IMON
+@@ -52,6 +52,9 @@
+ /* Define to 1 if you have the `select' function. */
+ #undef HAVE_SELECT
  
++/* Define to 1 if you have the `unsetenv' function. */
++#undef HAVE_UNSETENV
++
+ /* Define to 1 if the system has the type `socklen_t'. */
+ #undef HAVE_SOCKLEN_T
+ 
+@@ -76,6 +79,9 @@
+ /* Define to 1 if `sa_len' is member of `struct sockaddr'. */
+ #undef HAVE_STRUCT_SOCKADDR_SA_LEN
+ 
++/* Define to 1 if `sun_len' is member of `struct sockaddr_un'. */
++#undef HAVE_STRUCT_SOCKADDR_UN_SUN_LEN
++
+ /* Define to 1 if you have the <syslog.h> header file. */
+ #undef HAVE_SYSLOG_H
+ 
+@@ -120,6 +126,12 @@
+ /* Define to 1 if you have the <unistd.h> header file. */
+ #undef HAVE_UNISTD_H
+ 
++/* Define to 1 if you have the <mntent.h> header file. */
 +#undef HAVE_MNTENT_H
 +
- /*  Define if the system has the struct revokdi and the IMONIOC_REVOKDI
- **  ioctl flag.  (IRIX 5.3 doesn't.)
- */
++/* Define to 1 if you have the <sys/sysmacros.h> header file. */
++#undef HAVE_SYS_SYSMACROS_H
++
+ /* Define to 1 if the system has the type `_Bool'. */
+ #undef HAVE__BOOL
+ 
