@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/04/21 23:34:32 kei Exp $
+# $NetBSD: Makefile,v 1.35 2002/04/24 13:48:48 martti Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -111,7 +111,6 @@ CONFIGURE_ENV+= use_menu=y use_matrix=n use_image=y use_ansi_color=y
 CONFIGURE_ENV+= use_help_cgi=n use_migemo=n
 CONFIGURE_ENV+= ded=vi dmail=Mail dbrowser=
 CONFIGURE_ENV+= dcc="${CC}" dtermlib="-ltermcap"
-CONFIGURE_ENV+= dldflags="-Wl,-rpath,${LOCALBASE}/lib"
 CONFIGURE_ENV+= dmodel=6
 CONFIGURE_ENV+= LOCALBASE="${LOCALBASE}"
 CONFIGURE_ARGS+= --yes
@@ -169,6 +168,7 @@ post-install:
 	    ${RM} -f w3mhelp.html; \
 	    ${LN} -s w3mhelp${HELP_W3M}${HELP_LANG}.html w3mhelp.html)
 
+.include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/imlib/buildlink.mk"
 .include "../../devel/boehm-gc/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
