@@ -1,9 +1,8 @@
 #
-# $NetBSD: Makefile,v 1.22 2004/06/09 18:55:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2004/11/27 01:41:24 lukem Exp $
 #
 
-DISTNAME=		cvsweb-3.0.1
-PKGREVISION=		1
+DISTNAME=		cvsweb-3.0.4
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.freebsd.org/pub/FreeBSD/ports/local-distfiles/scop/
 
@@ -15,6 +14,10 @@ DEPENDS+=		p5-File-Temp>=0.12:../../devel/p5-File-Temp
 DEPENDS+=		p5-IPC-Run>=0.74:../../devel/p5-IPC-Run
 DEPENDS+=		p5-MIME-Types>=1.12:../../mail/p5-MIME-Types
 DEPENDS+=		p5-URI>=1.30:../../www/p5-URI
+
+.if !exists(/usr/bin/rlog)
+DEPENDS+=		rcs-[0-9]*:../../devel/rcs
+.endif
 
 NO_BUILDLINK=		YES
 NO_BUILD=		YES
@@ -44,10 +47,6 @@ CVSWEB_DOCS=		ChangeLog INSTALL NEWS README TODO
 
 CONF_FILES=		${EGDIR}/cvsweb.conf ${PKG_SYSCONFDIR}/cvsweb.conf
 
-.if !exists(/usr/bin/rlog)
-DEPENDS+=		rcs-[0-9]*:../../devel/rcs
-.endif
-
 do-install:
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/libexec/cgi-bin
 	${INSTALL_SCRIPT} ${WRKSRC}/cvsweb.cgi ${PREFIX}/libexec/cgi-bin
@@ -70,7 +69,7 @@ do-install:
 
 SUBST_CLASSES=		prefix
 SUBST_STAGE.prefix=	post-patch
-SUBST_FILES.prefix=	cvsweb.conf cvsweb.cgi INSTALL	
+SUBST_FILES.prefix=	cvsweb.conf cvsweb.cgi INSTALL
 SUBST_SED.prefix=	-e "s,/usr/local/etc/apache,${PKG_SYSCONFBASE}/httpd,g"
 SUBST_SED.prefix+=	-e "s,/usr/local/etc/cvsweb,${PKG_SYSCONFDIR},g"
 SUBST_SED.prefix+=	-e "s,/usr/local/bin,${LOCALBASE}/bin,g"
