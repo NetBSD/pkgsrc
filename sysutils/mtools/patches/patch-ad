@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.3.2.2 2003/06/19 01:10:04 grant Exp $
+
+--- devices.c.orig	2000-05-28 12:20:54.000000000 +0200
++++ devices.c	2003-05-22 17:35:16.000000000 +0200
+@@ -798,7 +798,7 @@
+ #endif /* __FreeBSD__ */
+  
+ /*** /jes -- for ALR 486 DX4/100 ***/
+-#if defined(OS_netbsd)
++#if defined(OS_netbsd) || defined(OS_netbsdelf)
+ #define predefined_devices
+ struct device devices[] = {
+ 	{"/dev/rfd0a", 'A', FHD312},
