@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/09/13 18:03:30 fredb Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/16 13:30:48 wiz Exp $
 # FreeBSD ID: Makefile,v 1.8 1997/01/06 12:04:12 jkh Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=audio/nas/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://radscan.com/nas.html
+COMMENT=	Network Audio System
 
 USE_IMAKE=	# defined
 USE_X11BASE=	# defined

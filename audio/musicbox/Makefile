@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/07/15 20:39:14 agc Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 13:30:48 wiz Exp $
 
 DISTNAME=	musicbox-1.01p2
 CATEGORIES=	audio
@@ -6,6 +6,7 @@ MASTER_SITES=	ftp://freebsd.csie.nctu.edu.tw/Upload/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	rxg@ms25.url.com.tw
+COMMENT=	X11 front-interface for mpg123
 
 DEPENDS+=	mpg123-0.59r:../../audio/mpg123
 DEPENDS+=	qt1-1.44:../../x11/qt1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/03/16 12:16:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 13:37:51 wiz Exp $
 
 DISTNAME=		heapsort.c
 PKGNAME=		heapsort-1.0
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftp.nosc.mil/pub/aburto/heapsort/
 EXTRACT_SUFX=		#empty
 
 MAINTAINER=		root@garbled.net
+COMMENT=		benchmark program for variable sized arrays
 
 NO_WRKSUBDIR=		yes
 

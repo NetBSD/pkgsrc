@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/30 13:57:44 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 13:30:42 wiz Exp $
 #
 
 DISTNAME=	icecast-1.3.7
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.icecast.org/releases/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.icecast.org/
+COMMENT=	Internet broadcasting system using Mpeg Layer III streaming
 
 DEPENDS+=	unproven-pthreads>=0.17:../../devel/unproven-pthreads
 DEPENDS+=	readline-4.*:../../devel/readline

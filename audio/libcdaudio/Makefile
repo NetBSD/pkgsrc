@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/12/05 22:35:09 perry Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 13:30:45 wiz Exp $
 #
 
 DISTNAME=		libcdaudio-0.99.4
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://cdcd.undergrid.net/libcdaudio/ \
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://cdcd.undergrid.net/libcdaudio/
+COMMENT=		Multi-platform CD player development library
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/05/04 10:38:27 pooka Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/16 13:37:53 wiz Exp $
 
 DISTNAME=		iozone3_9
 PKGNAME=		iozone-3.09
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.tar
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.iozone.org/
+COMMENT=		Benchmark for file read and write speed
 
 WRKSRC=			${WRKDIR}/src
 MAKEFILE=		makefile

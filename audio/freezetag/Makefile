@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/10/22 23:55:49 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/16 13:30:40 wiz Exp $
 #
 
 DISTNAME=	freezetag-0.9.2
@@ -7,6 +7,7 @@ MASTER_SITES=	http://katz.linuxpower.org/freezetag/current/
 
 MAINTAINER=	kleink@netbsd.org
 HOMEPAGE=	http://katz.linuxpower.org/freezetag/
+COMMENT=	Id3 tag editor for GTK+-1.2.0 and higher
 
 DEPENDS=	gtk+-1.2.*:../../x11/gtk
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/10/29 08:54:52 pooka Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/16 13:30:54 wiz Exp $
 #
 
 DISTNAME=	xsidplay-1_5_4
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pooka@netbsd.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
+COMMENT=	Commodore 64 music player and SID chip emulator for X11
 
 DEPENDS+=	sidplay>=1.0:../../audio/sidplay
 DEPENDS+=	qt2>=2.2.1nb1:../../x11/qt2
