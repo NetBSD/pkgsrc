@@ -9,7 +9,7 @@
  # the following should be best for a pentium
  # -O2 -s -m486 -malign-jumps=2 -malign-loops=2 -malign-functions=2
 -CFLAGS	= -O2
-+CFLAGS	= -O2 -pipe -DHAVE_EXTERN_SYS_ERRLIST=1
++CFLAGS	:= $(CFLAGS) -pipe -DHAVE_EXTERN_SYS_ERRLIST=1
  
  # For "real" 64bit OS, e.g. Digital Unix 4.0. Irix6?, use:
  # CFLAGS += -DPOINTER_IS_NOT_INT
