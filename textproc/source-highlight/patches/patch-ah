@@ -1,16 +1,16 @@
-$NetBSD: patch-ah,v 1.1 2002/12/23 22:27:50 seb Exp $
+$NetBSD: patch-ah,v 1.2 2003/02/16 20:53:48 seb Exp $
 
---- tests/Makefile.in.orig	Mon Dec 23 21:52:22 2002
+--- tests/Makefile.in.orig	2003-02-09 09:23:16.000000000 +0000
 +++ tests/Makefile.in
-@@ -103,6 +103,7 @@ am__quote = @am__quote@
- install_sh = @install_sh@
+@@ -138,6 +138,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
  source_highlightdatadir = @source_highlightdatadir@
  source_highlightdocdir = @source_highlightdocdir@
 +source_highlightdochtmldir = @source_highlightdochtmldir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
  
- TAGS_J2H_OPTION = -f html --tags-file $(top_srcdir)/src/tags.j2h 
- 
-@@ -149,7 +150,7 @@ test.l test.l.html
+@@ -186,7 +187,7 @@ test.l test.l.html
  
  CPP2HTML_WHEADERS = $(CPP2HTML) --header=$(srcdir)/header.html --footer=$(srcdir)/footer.html --title="Header and footer test"
  
@@ -19,16 +19,24 @@ $NetBSD: patch-ah,v 1.1 2002/12/23 22:27:50 seb Exp $
  test.py.html
  
  
-@@ -159,7 +160,7 @@ mkinstalldirs = $(SHELL) $(top_srcdir)/m
+@@ -195,8 +196,10 @@ subdir = tests
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
++depcomp =
++am__depfiles_maybe =
  DIST_SOURCES =
 -DATA = $(source_highlightdoc_DATA)
 +DATA = $(source_highlightdochtml_DATA)
  
  DIST_COMMON = Makefile.am Makefile.in
  all: all-am
-@@ -171,23 +172,23 @@ $(srcdir)/Makefile.in:  Makefile.am  $(t
+@@ -204,27 +207,27 @@ all: all-am
+ .SUFFIXES:
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  tests/Makefile
++	  $(AUTOMAKE) --gnu  --ignore-deps tests/Makefile
  Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
  	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
  uninstall-info-am:
@@ -62,7 +70,7 @@ $NetBSD: patch-ah,v 1.1 2002/12/23 22:27:50 seb Exp $
  	done
  tags: TAGS
  TAGS:
-@@ -223,7 +224,7 @@ check: check-am
+@@ -269,7 +272,7 @@ check: check-am
  all-am: Makefile $(DATA)
  
  installdirs:
@@ -71,7 +79,7 @@ $NetBSD: patch-ah,v 1.1 2002/12/23 22:27:50 seb Exp $
  
  install: install-am
  install-exec: install-exec-am
-@@ -266,7 +267,7 @@ info: info-am
+@@ -312,7 +315,7 @@ info: info-am
  
  info-am:
  
@@ -80,9 +88,9 @@ $NetBSD: patch-ah,v 1.1 2002/12/23 22:27:50 seb Exp $
  
  install-exec-am:
  
-@@ -284,17 +285,17 @@ mostlyclean: mostlyclean-am
+@@ -338,17 +341,17 @@ ps: ps-am
  
- mostlyclean-am: mostlyclean-generic
+ ps-am:
  
 -uninstall-am: uninstall-info-am uninstall-source_highlightdocDATA
 +uninstall-am: uninstall-info-am uninstall-source_highlightdochtmlDATA
@@ -94,8 +102,8 @@ $NetBSD: patch-ah,v 1.1 2002/12/23 22:27:50 seb Exp $
 -	install-source_highlightdocDATA install-strip installcheck \
 +	install-source_highlightdochtmlDATA install-strip installcheck \
  	installcheck-am installdirs maintainer-clean \
- 	maintainer-clean-generic mostlyclean mostlyclean-generic \
- 	uninstall uninstall-am uninstall-info-am \
+ 	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
+ 	pdf-am ps ps-am uninstall uninstall-am uninstall-info-am \
 -	uninstall-source_highlightdocDATA
 +	uninstall-source_highlightdochtmlDATA
  
