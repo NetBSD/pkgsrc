@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.16 2004/05/28 00:46:27 dillo Exp $
+
+--- src/unix/joystick-drivers/joy_usb.c.orig	Sun Mar  7 01:01:12 2004
++++ src/unix/joystick-drivers/joy_usb.c
+@@ -255,11 +255,14 @@ static void joy_usb_poll(void)
+ 
+ static int joy_read(int fd, int i)
+ {
+-  int len, axis, usage, page, d;
++  int len, new, axis, usage, page, d;
+   struct hid_item *h;
+ 
+-  len = read(fd, priv_joy_data[i].data_buf, priv_joy_data[i].dlen);
+-  if (len != priv_joy_data[i].dlen)
++  new = 0;
++  while ((len=read(fd, priv_joy_data[i].data_buf, priv_joy_data[i].dlen))
++	 == priv_joy_data[i].dlen)
++      new = 1;
++  if (!new)
+     return FALSE;
+ 
+   for (h = priv_joy_data[i].hids; h; h = h->next)
