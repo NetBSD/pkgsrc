@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/10/15 23:59:18 mjl Exp $
+# $NetBSD: Makefile,v 1.12 2000/01/01 17:11:28 mjl Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/03 21:52:01 asami Exp
 #
 
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://space.mit.edu/pub/davis/most/ \
 MAINTAINER=	rhwang@bigpanda.com
 HOMEPAGE=	http://space.mit.edu/~davis/most.html
 
-DEPENDS+=	libslang-1.3.9:../../devel/libslang
+DEPENDS+=	libslang-*:../../devel/libslang
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-x
