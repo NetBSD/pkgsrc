@@ -1,15 +1,8 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 11:10:26 agc Exp $
-
-*** mcfn_install.in.orig	Thu Jun 19 23:17:04 1997
---- mcfn_install.in	Thu Jun 19 23:17:12 1997
-***************
-*** 1,4 ****
-! #/bin/sh
-  #
-  prefix=@prefix@
-  if test -n `echo $prefix | grep prefix`; then
---- 1,4 ----
-! #!/bin/sh
-  #
-  prefix=@prefix@
-  if test -n `echo $prefix | grep prefix`; then
+--- mcfn_install.in.orig	Mon May 25 06:16:04 1998
++++ mcfn_install.in	Sun Oct  4 09:11:40 1998
+@@ -1,4 +1,4 @@
+-#/bin/sh
++#!/bin/sh
+ #
+ prefix=@prefix@
+ if test -n `echo $prefix | grep prefix`; then

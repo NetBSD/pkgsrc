@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 1998/08/20 15:17:14 tsarna Exp $
+# $NetBSD: Makefile,v 1.12 1998/10/04 17:16:21 tv Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
-DISTNAME=		mc-4.1
+DISTNAME=		mc-4.1.35
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	utils/file/managers/mc
@@ -10,19 +10,15 @@ MASTER_SITE_SUBDIR=	utils/file/managers/mc
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnome.org/mc/
 
-DEPENDS+=		ncurses-1.9.9g:../../devel/ncurses
+DEPENDS+=		libslang-1.2.2:../../devel/libslang
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-ncurses --without-edit --without-subshell
+CONFIGURE_ARGS+=	--with-catgets --with-netrc --with-slang \
+			--without-x --without-gnome --without-tk
 
-pre-configure:
-	for f in `find ${WRKDIR}/. -type f -print|xargs ${GREP} -l '/usr/local'`; do \
-		${ECHO} patching $$f ; \
-		${CP} -p $$f $$f.tmp ; \
-		${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f.tmp > $$f && ${MV} $$f.tmp $$f; \
-	done
-
-post-install:
-	@ ${RMDIR} ${PREFIX}/lib/mc/icons
+# Funny stuff to get this to use the system libslang.
+CONFIGURE_ENV+=		LIBS="-lm -ltermcap" CPPFLAGS="-I${LOCALBASE}/include"
+CFLAGS+=		-Dunix -I${LOCALBASE}/include
+LDFLAGS+=		-L${LOCALBASE}/lib
 
 .include "../../mk/bsd.pkg.mk"
