@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3247 2005/03/22 00:08:23 schmonz Exp $
+$NetBSD: TODO,v 1.3248 2005/03/22 01:12:26 seb Exp $
 
 Suggested new packages
 ======================
@@ -275,7 +275,6 @@ Suggested package updates
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
-	o amarok-1.2.2
 	o amavis-0.3.12
 	o amaya-9.1
 	o anomy-sanitizer-1.70
