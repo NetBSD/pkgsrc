@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/01 05:02:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/27 02:02:17 schmonz Exp $
 #
 
-DISTNAME=	cvs2p4-2.0
+DISTNAME=	cvs2p4-2.3.2
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.perforce.com/perforce/utils/cvs2p4/
+MASTER_SITES=	ftp://public.perforce.com/public/perforce/utils/cvs2p4/
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	schmonz@netbsd.org
