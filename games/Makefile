@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2000/03/28 00:36:50 jlam Exp $
+# $NetBSD: Makefile,v 1.84 2000/04/02 18:17:31 rh Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -11,6 +11,7 @@
     SUBDIR += battleball
     SUBDIR += cbzone
     SUBDIR += cgoban
+    SUBDIR += corewars
     SUBDIR += craft
     SUBDIR += crossfire
     SUBDIR += dopewars
