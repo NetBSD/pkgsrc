@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/16 01:32:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/28 02:45:06 minskim Exp $
 #
 
 DISTNAME=	advancecomp-1.10
@@ -11,6 +11,7 @@ COMMENT=	Recompression utilities for .zip, .png, .mng and .gz files
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c++
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
