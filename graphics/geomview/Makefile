@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/28 23:59:18 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/01 22:37:13 jtb Exp $
 
 DISTNAME=		geomview-1.8.1
 CATEGORIES=		graphics math
@@ -14,10 +14,9 @@ GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_MOTIF=		YES
 USE_MESA=		YES
-EVAL_PREFIX+=		MESA_PREFIX=Mesa
 
 CONFIGURE_ARGS+=	--without-xforms
-CONFIGURE_ARGS+=	--with-opengl=${MESA_PREFIX}
+CONFIGURE_ARGS+=	--with-opengl=${X11BASE}
 CONFIGURE_ARGS+=	--with-motif=${MOTIFBASE}
 CONFIGURE_ENV+=		CPPFLAGS="-Dunix -Dalloca=__builtin_alloca"
 
