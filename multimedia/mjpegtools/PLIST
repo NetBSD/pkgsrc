@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/11 13:17:03 recht Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/17 05:50:50 sekiya Exp $
 bin/jpeg2yuv
 bin/lav2avi.sh
 bin/lav2mpeg
@@ -99,7 +99,10 @@ lib/liblavplay-1.6.so.2
 lib/liblavplay-1.6.so.2.2
 lib/liblavplay.la
 lib/liblavplay.so
-lib/libmjpegutils.a
+lib/libmjpegutils-1.6.so.2
+lib/libmjpegutils-1.6.so.2.2
+lib/libmjpegutils.la
+lib/libmjpegutils.so
 lib/libmpeg2encpp-1.6.so.2
 lib/libmpeg2encpp-1.6.so.2.2
 lib/libmpeg2encpp.la
