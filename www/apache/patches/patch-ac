@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2000/09/12 14:17:32 jlam Exp $
+$NetBSD: patch-ac,v 1.4 2000/10/13 21:46:46 jlam Exp $
 
 --- htdocs/index.html.en.orig	Sat Nov 20 16:29:40 1999
 +++ htdocs/index.html.en
@@ -7,32 +7,31 @@ $NetBSD: patch-ac,v 1.3 2000/09/12 14:17:32 jlam Exp $
  
  <P>
 -The Apache <A HREF="manual/index.html">documentation</A> has been included with this distribution.
--
-+The Apache <A HREF="manual/index.html">documentation</A>
-+has been included with this distribution.<BR>
++The Apache <A HREF="manual/index.html">documentation</A> has been included with this distribution.<BR>
 +If the <STRONG>mod_ssl</STRONG> SSL extension has been installed, read the
-+<A
-+ HREF="manual/mod/mod_ssl/index.html"
-+>SSL documentation</A>
-+carefully.
++<A HREF="manual/mod/mod_ssl/index.html">SSL documentation</A> carefully.
 +</P>
 +<P>
-+Information on the NetBSD multiplatform operating system can be found
-+at <A HREF="http://www.netbsd.org/">NetBSD's homepage</A> on the net.
++Information on the NetBSD multiplatform operating system can be found at
++<A HREF="http://www.netbsd.org/">NetBSD's homepage</A> on the net.
 +</P>
+ 
  <P>
 -You are free to use the image below on an Apache-powered web server.  Thanks for using Apache!
-+The Webmaster of this site is free to use the images below on
-+an Apache/NetBSD-powered Web server.  Thanks for using
++The Webmaster of this site is free to use the images below on an
++Apache/NetBSD-powered Web server.  Thanks for using
 +<A HREF="http://www.apache.org/">Apache</A> on
 +<A HREF="http://www.netbsd.org/">NetBSD</A>!
 +</P>
  
 -<DIV ALIGN="CENTER"><IMG SRC="apache_pb.gif" ALT=""></DIV>
-+<DIV ALIGN="CENTER"><IMG SRC="apache_pb.gif" ALT="">
-+<A HREF="http://www.netbsd.org/">
-+<IMG SRC="sitedrivenby.gif" border=0 
-+ ALT="Site driven by NetBSD - NetBSD rocks!"></A>
++<DIV ALIGN="CENTER">
++ <A HREF="http://www.apache.org/">
++  <IMG SRC="apache_pb.gif" BORDER=0 ALT="Powered by Apache">
++ </A>
++ <A HREF="http://www.netbsd.org/">
++  <IMG SRC="sitedrivenby.gif" BORDER=0 ALT="Site driven by NetBSD">
++ </A>
 +</DIV>
  </BODY>
  </HTML>
