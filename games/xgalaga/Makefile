@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.18 2004/04/11 11:45:22 tron Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/11 11:50:03 tron Exp $
 
-DISTNAME=		incoming		# yes, really!
-PKGNAME=		xgalaga-2.0.34
+DISTNAME=		xgalaga-2.0.34
 PKGREVISION=		2
 CATEGORIES=		games x11
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xgalaga/}
-EXTRACT_SUFX=		# empty
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		root@garbled.net
 COMMENT=		Very fast true-to-the-original port of galaga for X11
 
-WRKSRC=			${WRKDIR}/${PKGNAME:C,nb${PKGREVISION},,}
+NO_SRC_ON_FTP=		"already in MASTER_SITE_LOCAL"
+
 USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${PREFIX}/share/xgalaga
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/bin
+
+WRKSRC=			${WRKDIR}/${PKGNAME:C,nb${PKGREVISION},,}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/xgalaga/README
