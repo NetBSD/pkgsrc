@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 1999/09/07 13:22:00 is Exp $
---- netcat.c.orig	Tue Sep  7 14:43:01 1999
-+++ netcat.c	Tue Sep  7 14:51:37 1999
+$NetBSD: patch-ab,v 1.2 1999/09/07 13:47:09 is Exp $
+--- netcat.c.orig	Tue Sep  7 15:15:59 1999
++++ netcat.c	Tue Sep  7 15:42:44 1999
 @@ -151,6 +151,7 @@
  
  /* global cmd flags: */
@@ -39,3 +39,11 @@ $NetBSD: patch-ab,v 1.1 1999/09/07 13:22:00 is Exp $
  #ifdef GAPING_SECURITY_HOLE
        case 'e':				/* prog to exec */
  	pr00gie = optarg;
+@@ -1643,6 +1653,7 @@
+ 	-e prog			program to exec after connect [dangerous!!]");
+ #endif
+   holler ("\
++	-b			allow broadcasts\n\
+ 	-g gateway		source-routing hop point[s], up to 8\n\
+ 	-G num			source-routing pointer: 4, 8, 12, ...\n\
+ 	-h			this cruft\n\
