@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/13 17:37:13 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2002/04/28 22:21:15 wiz Exp $
 
 DISTNAME=	ogle_gui-0.8.2
 PKGREVISION=	1
@@ -19,9 +19,10 @@ DEPENDS+=	libglade>=0.17nb1:../../devel/libglade
 
 CONFIGURE_ARGS+=--bindir=${PREFIX}/lib/ogle
 
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-#USE_LIBTOOL=	yes
+GNU_CONFIGURE=		yes
+USE_GMAKE=		yes
+USE_CONFIG_WRAPPER=	yes
+#USE_LIBTOOL=		yes
 BUILDLINK_DEPENDS.libxml2=	libxml2>=2.4.5
 #LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
