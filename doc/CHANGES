@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6363 2004/06/28 12:34:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.6364 2004/06/28 12:38:50 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3124,3 +3124,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libsndfile to 1.0.10 [adam 2004-06-28]
 	Updated pkglint to 3.81 [abs 2004-06-28]
 	Updated eel2 to 2.6.2 [jmmv 2004-06-28]
+	Updated gail to 1.6.6 [jmmv 2004-06-28]
