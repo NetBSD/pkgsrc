@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/05/20 11:09:17 hubertf Exp $
+
+--- packages/Makefile.in.orig	Thu Oct 16 16:06:35 2003
++++ packages/Makefile.in
+@@ -33,7 +33,7 @@ CNFG=@CNFG@
+ 
+ # Values filled from the main SWI-Prolog configure
+ 
+-MAKE=@MAKE@
++MAKE=gmake
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ bindir=@bindir@

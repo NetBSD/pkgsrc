@@ -1,0 +1,95 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/20 11:09:17 hubertf Exp $
+bin/plld
+bin/plrc
+bin/swi-prolog
+include/SWI-Prolog.h
+include/SWI-Stream.h
+lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/plld
+lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/plrc
+lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/swi-prolog
+lib/swi-prolog-${PKGVERSION}/bin/swipl
+lib/swi-prolog-${PKGVERSION}/boot/apply.pl
+lib/swi-prolog-${PKGVERSION}/boot/autoload.pl
+lib/swi-prolog-${PKGVERSION}/boot/bags.pl
+lib/swi-prolog-${PKGVERSION}/boot/dwim.pl
+lib/swi-prolog-${PKGVERSION}/boot/history.pl
+lib/swi-prolog-${PKGVERSION}/boot/init.pl
+lib/swi-prolog-${PKGVERSION}/boot/license.pl
+lib/swi-prolog-${PKGVERSION}/boot/load.pl
+lib/swi-prolog-${PKGVERSION}/boot/menu.pl
+lib/swi-prolog-${PKGVERSION}/boot/messages.pl
+lib/swi-prolog-${PKGVERSION}/boot/parms.pl
+lib/swi-prolog-${PKGVERSION}/boot/qlf.pl
+lib/swi-prolog-${PKGVERSION}/boot/rc.pl
+lib/swi-prolog-${PKGVERSION}/boot/sort.pl
+lib/swi-prolog-${PKGVERSION}/boot/syspred.pl
+lib/swi-prolog-${PKGVERSION}/boot/toplevel.pl
+lib/swi-prolog-${PKGVERSION}/boot/topvars.pl
+lib/swi-prolog-${PKGVERSION}/boot/writef.pl
+lib/swi-prolog-${PKGVERSION}/boot${BITS}.prc
+lib/swi-prolog-${PKGVERSION}/dotfiles/README
+lib/swi-prolog-${PKGVERSION}/dotfiles/dotplrc
+lib/swi-prolog-${PKGVERSION}/dotfiles/dotxpcerc
+lib/swi-prolog-${PKGVERSION}/dotfiles/edit
+lib/swi-prolog-${PKGVERSION}/include/SWI-Prolog.h
+lib/swi-prolog-${PKGVERSION}/include/SWI-Stream.h
+lib/swi-prolog-${PKGVERSION}/include/stub.c
+lib/swi-prolog-${PKGVERSION}/library/INDEX.pl
+@unexec rm -f %D/%F
+lib/swi-prolog-${PKGVERSION}/library/MANUAL
+lib/swi-prolog-${PKGVERSION}/library/am_match.pl
+lib/swi-prolog-${PKGVERSION}/library/backcomp.pl
+lib/swi-prolog-${PKGVERSION}/library/bim.pl
+lib/swi-prolog-${PKGVERSION}/library/check.pl
+lib/swi-prolog-${PKGVERSION}/library/checklast.pl
+lib/swi-prolog-${PKGVERSION}/library/checkselect.pl
+lib/swi-prolog-${PKGVERSION}/library/ctypes.pl
+lib/swi-prolog-${PKGVERSION}/library/debug.pl
+lib/swi-prolog-${PKGVERSION}/library/edinburgh.pl
+lib/swi-prolog-${PKGVERSION}/library/edit.pl
+lib/swi-prolog-${PKGVERSION}/library/emacs_interface.pl
+lib/swi-prolog-${PKGVERSION}/library/explain.pl
+lib/swi-prolog-${PKGVERSION}/library/files.pl
+lib/swi-prolog-${PKGVERSION}/library/gensym.pl
+lib/swi-prolog-${PKGVERSION}/library/help.pl
+lib/swi-prolog-${PKGVERSION}/library/helpidx.pl
+lib/swi-prolog-${PKGVERSION}/library/listing.pl
+lib/swi-prolog-${PKGVERSION}/library/lists.pl
+lib/swi-prolog-${PKGVERSION}/library/main.pl
+lib/swi-prolog-${PKGVERSION}/library/make.pl
+lib/swi-prolog-${PKGVERSION}/library/netscape.pl
+lib/swi-prolog-${PKGVERSION}/library/occurs.pl
+lib/swi-prolog-${PKGVERSION}/library/option.pl
+lib/swi-prolog-${PKGVERSION}/library/ordsets.pl
+lib/swi-prolog-${PKGVERSION}/library/oset.pl
+lib/swi-prolog-${PKGVERSION}/library/qpforeign.pl
+lib/swi-prolog-${PKGVERSION}/library/qsave.pl
+lib/swi-prolog-${PKGVERSION}/library/quintus.pl
+lib/swi-prolog-${PKGVERSION}/library/readln.pl
+lib/swi-prolog-${PKGVERSION}/library/readutil.pl
+lib/swi-prolog-${PKGVERSION}/library/shell.pl
+lib/swi-prolog-${PKGVERSION}/library/shlib.pl
+lib/swi-prolog-${PKGVERSION}/library/statistics.pl
+lib/swi-prolog-${PKGVERSION}/library/system.pl
+lib/swi-prolog-${PKGVERSION}/library/threadutil.pl
+lib/swi-prolog-${PKGVERSION}/library/tty.pl
+lib/swi-prolog-${PKGVERSION}/library/url.pl
+lib/swi-prolog-${PKGVERSION}/runtime/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/libpl.a
+lib/swi-prolog-${PKGVERSION}/swipl
+man/man1/plld.1
+man/man1/plrc.1
+man/man1/swi-prolog.1
+@dirrm lib/swi-prolog-${PKGVERSION}/runtime/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
+@dirrm lib/swi-prolog-${PKGVERSION}/runtime
+@exec ${MKDIR} %D/lib/swi-prolog-${PKGVERSION}/man
+@dirrm lib/swi-prolog-${PKGVERSION}/man
+@dirrm lib/swi-prolog-${PKGVERSION}/library
+@exec ${MKDIR} %D/lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
+@dirrm lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
+@dirrm lib/swi-prolog-${PKGVERSION}/lib
+@dirrm lib/swi-prolog-${PKGVERSION}/include
+@dirrm lib/swi-prolog-${PKGVERSION}/dotfiles
+@dirrm lib/swi-prolog-${PKGVERSION}/boot
+@dirrm lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
+@dirrm lib/swi-prolog-${PKGVERSION}/bin
+@dirrm lib/swi-prolog-${PKGVERSION}
