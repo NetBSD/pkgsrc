@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/10/30 17:06:32 sakamoto Exp $
+# $NetBSD: Makefile,v 1.6 1999/11/01 04:03:09 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/02/10 18:13:21 motoyuki Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.03
@@ -15,12 +15,6 @@ DEPENDS=	ja-less-332:../../japanese/less
 CONFLICTS=	nmh-*
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OBJECT_FMT} == ELF
-LIBMH_VERSION=	3
-.else
-LIBMH_VERSION=	3.2
-.endif
-PLIST_SUBST=	LIBMH_VERSION=${LIBMH_VERSION}
 
 MANCOMPRESSED=	yes
 GNU_CONFIGURE=	yes
