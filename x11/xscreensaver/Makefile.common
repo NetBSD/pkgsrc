@@ -1,40 +1,44 @@
-# $NetBSD: Makefile.common,v 1.4 2000/07/27 15:59:09 tron Exp $
+# $NetBSD: Makefile.common,v 1.5 2000/08/01 10:46:33 jlam Exp $
 #
 
-DISTNAME=	xscreensaver-3.25
-CATEGORIES=	x11
-MASTER_SITES=	${HOMEPAGE} \
-		ftp://ftp.fu-berlin.de/unix/X11/graphics/xscreensaver/
+DISTNAME=		xscreensaver-3.25
+CATEGORIES=		x11
+MASTER_SITES=		${HOMEPAGE} \
+			ftp://ftp.fu-berlin.de/unix/X11/graphics/xscreensaver/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.jwz.org/xscreensaver/
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.jwz.org/xscreensaver/
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-DEPENDS+=	Mesa-*:../../graphics/Mesa
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
+DEPENDS+=		Mesa-*:../../graphics/Mesa
+DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--without-shadow
-CONFIGURE_ARGS+=--without-motif
-CONFIGURE_ARGS+=--enable-subdir=${PREFIX}/libexec/xscreensaver
-CONFIGURE_ARGS+=--with-zippy=/usr/games/fortune
-CONFIGURE_ENV+=	INSTALL=/usr/bin/install
+USE_X11BASE=		yes
+USE_PERL5=		yes
+USE_XAW=		yes
 
-USE_X11BASE=	yes
-USE_PERL5=	yes
-USE_XAW=	yes
+EVAL_PREFIX+=		GTKDIR=gtk+
+EVAL_PREFIX+=		XPMDIR=xpm
 
-FILESDIR=	${.CURDIR}/../../x11/xscreensaver/files
-PATCHDIR=	${.CURDIR}/../../x11/xscreensaver/patches
-PKGDIR=		${.CURDIR}/../../x11/xscreensaver/pkg
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-subdir=${PREFIX}/libexec/xscreensaver
+CONFIGURE_ARGS+=	--with-gl
+CONFIGURE_ARGS+=	--with-gtk=${GTKDIR}
+CONFIGURE_ARGS+=	--with-xpm=${XPMDIR}
+CONFIGURE_ARGS+=	--without-motif
+CONFIGURE_ARGS+=	--without-shadow
+CONFIGURE_ARGS+=	--with-zippy=/usr/games/fortune
+CONFIGURE_ENV+=		INSTALL=/usr/bin/install
+
+FILESDIR=		${.CURDIR}/../../x11/xscreensaver/files
+PATCHDIR=		${.CURDIR}/../../x11/xscreensaver/patches
+PKGDIR=			${.CURDIR}/../../x11/xscreensaver/pkg
 
 post-patch:
 	cd ${WRKSRC}/driver ; \
 	f=xscreensaver.kss ; \
 	[ -f $$f.BAK ] || ${MV} $$f $$f.BAK ; \
-	${SED} \
-		-e 's|@PREFIX@|${PREFIX}|g' \
-		<xscreensaver.kss.BAK >xscreensaver.kss
+	${SED} -e 's|@PREFIX@|${PREFIX}|g' < $f.BAK > $f
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -42,9 +46,9 @@ XAW_TYPE?=	3d
 
 .if (${OPSYS} == "NetBSD")
 .if defined(KERBEROS)
-CFLAGS+=	-I/usr/include/kerberosIV
+CFLAGS+=		-I/usr/include/kerberosIV
 .else
-CONFIGURE_ARGS+=--without-kerberos
+CONFIGURE_ARGS+=	--without-kerberos
 .endif
 .endif
 
