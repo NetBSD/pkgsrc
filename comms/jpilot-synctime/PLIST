@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:13 zuntum Exp $
+${PLUGINSDIR}/libsynctime.a
+${PLUGINSDIR}/libsynctime.la
+${PLUGINSDIR}/libsynctime.so
+${PLUGINSDIR}/libsynctime.so.1
+${PLUGINSDIR}/libsynctime.so.1.1

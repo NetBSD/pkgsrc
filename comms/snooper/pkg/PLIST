@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1999/05/12 06:08:49 sakamoto Exp $
-bin/snooper
-share/doc/snooper/README
-@dirrm share/doc/snooper

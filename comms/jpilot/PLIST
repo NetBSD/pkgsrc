@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:10 zuntum Exp $
+bin/jpilot
+bin/jpilot-dump
+bin/jpilot-sync
+bin/jpilot-upgrade-99
+include/jpilot/libplugin.h
+include/jpilot/prefs.h
+man/man1/jpilot-sync.1
+man/man1/jpilot-upgrade-99.1
+man/man1/jpilot.1
+lib/jpilot/plugins/.directory
+share/doc/html/jpilot/manual.html
+share/doc/html/jpilot/plugin.html
+share/jpilot/AddressDB.pdb
+share/jpilot/DatebookDB.pdb
+share/jpilot/MemoDB.pdb
+share/jpilot/ToDoDB.pdb
+share/jpilot/jpilotrc.blue
+share/jpilot/jpilotrc.default
+share/jpilot/jpilotrc.green
+share/jpilot/jpilotrc.purple
+share/jpilot/jpilotrc.steel
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/jpilot.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/jpilot.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/jpilot.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/jpilot.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/jpilot.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/jpilot.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/jpilot.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/jpilot.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/jpilot.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/jpilot.mo
+@dirrm share/jpilot
+@dirrm share/doc/html/jpilot
+@dirrm lib/jpilot/plugins
+@dirrm lib/jpilot
+@dirrm include/jpilot
