@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/01/02 15:03:18 mjl Exp $
+$NetBSD: distinfo,v 1.2 2003/09/19 09:33:33 wiz Exp $
 
-SHA1 (Devel-StackTrace-1.02.tar.gz) = 999c1ea48e2f5ce4ea42c2d6629ee922c66fd52e
-Size (Devel-StackTrace-1.02.tar.gz) = 6024 bytes
+SHA1 (Devel-StackTrace-1.03.tar.gz) = 23231f49b273bbb8a93ab0f81ff472ed0a5a27bd
+Size (Devel-StackTrace-1.03.tar.gz) = 6468 bytes
