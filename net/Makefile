@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.407 2003/09/16 20:08:14 seb Exp $
+# $NetBSD: Makefile,v 1.408 2003/09/19 11:56:01 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -259,7 +259,6 @@ SUBDIR+=	sharity-light
 SUBDIR+=	sipcalc
 SUBDIR+=	sitescooper
 SUBDIR+=	slurm
-SUBDIR+=	smb2www
 SUBDIR+=	smokeping
 SUBDIR+=	sniffit
 SUBDIR+=	snort
