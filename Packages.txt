@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.198 2001/10/02 11:15:29 abs Exp $
+# $NetBSD: Packages.txt,v 1.199 2001/10/11 11:11:15 martti Exp $
 ###########################################################################
 
 			==========================
@@ -2308,6 +2308,10 @@ E.g:
 	% cvs rm patches/patch-a
 	% cvs add patches/patch-aa
 	% cvs ci
+
+The commit message of the initial import should include part of the
+pkg/DESCR file, so people reading the mailing lists know what the
+package is/does.
 
 Please note all package updates/additions in doc/pkg-CHANGES! It's very
 important to keep this file up to date and conforming to the existing
