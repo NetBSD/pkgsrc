@@ -1,29 +1,11 @@
---- configure.orig	Wed Nov 19 23:32:40 1997
-+++ configure	Wed Jan 28 15:07:07 1998
-@@ -977,7 +977,7 @@
- 
- 
- include_subdirs="Motif$include_version_suffix"
--lib_subdirs="Xm$version_suffix Mrm$version_suffix config"
-+lib_subdirs="Xm$version_suffix Uil$version_suffix Mrm$version_suffix config"
- lib_cleandirs="Xm$version_suffix Uil$version_suffix Mrm$version_suffix config"
- client_subdirs="Motif-1.2"
- client_cleandirs="Motif-1.2"
-@@ -2672,7 +2672,7 @@
- 
- 
- major_shared=0
--minor_shared=82
-+minor_shared=1
- pico_version=
- 
- 
-@@ -2708,7 +2708,7 @@
+--- configure.orig	Sat Mar 14 16:50:38 1998
++++ configure	Sun Mar 22 22:59:29 1998
+@@ -3946,7 +3946,7 @@
  
  lexicographic_readdir=1
  
--CFLAGS="$debug_flag $verbose_flag $production_flag"
-+CFLAGS="$CCFLAGS $verbose_flag $production_flag"
+-CFLAGS="$debug_flag $conversions_flag $verbose_flag $production_flag"
++CFLAGS="$CCFLAGS $conversions_flag $verbose_flag $production_flag"
  GPROF_FLAGS="-pg"
  GPROF_CFLAGS=""
  EXTRACFLAGS=""
