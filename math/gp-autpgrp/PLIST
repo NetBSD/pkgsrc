@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/22 18:28:33 cjep Exp $
+lib/gap4.3/pkg/autpgrp/doc/autpgrp.tex
+lib/gap4.3/pkg/autpgrp/doc/influen.tex
+lib/gap4.3/pkg/autpgrp/doc/manual.six
+lib/gap4.3/pkg/autpgrp/doc/manual.tex
+lib/gap4.3/pkg/autpgrp/doc/method.tex
+lib/gap4.3/pkg/autpgrp/doc/underl.tex
+lib/gap4.3/pkg/autpgrp/doc/manual.dvi
+lib/gap4.3/pkg/autpgrp/doc/manual.pdf
+lib/gap4.3/pkg/autpgrp/doc/manual.mst
+lib/gap4.3/pkg/autpgrp/init.g
+lib/gap4.3/pkg/autpgrp/read.g
+lib/gap4.3/pkg/autpgrp/gap/autoops.gi
+lib/gap4.3/pkg/autpgrp/gap/autos.gd
+lib/gap4.3/pkg/autpgrp/gap/autos.gi
+lib/gap4.3/pkg/autpgrp/gap/banner.g
+lib/gap4.3/pkg/autpgrp/gap/general.gi
+lib/gap4.3/pkg/autpgrp/gap/hybrstab.gi
+lib/gap4.3/pkg/autpgrp/gap/initmat.gi
+lib/gap4.3/pkg/autpgrp/gap/initperm.gi
+lib/gap4.3/pkg/autpgrp/gap/matrix.gi
+lib/gap4.3/pkg/autpgrp/gap/matrstab.gi
+lib/gap4.3/pkg/autpgrp/gap/nicestab.gi
+lib/gap4.3/pkg/autpgrp/gap/orbstab.gi
+lib/gap4.3/pkg/autpgrp/htm/CHAP001.htm
+lib/gap4.3/pkg/autpgrp/htm/CHAP002.htm
+lib/gap4.3/pkg/autpgrp/htm/CHAP003.htm
+lib/gap4.3/pkg/autpgrp/htm/CHAP004.htm
+lib/gap4.3/pkg/autpgrp/htm/chapters.htm
+lib/gap4.3/pkg/autpgrp/htm/theindex.htm
+lib/gap4.3/pkg/autpgrp/htm/indxA.htm
+lib/gap4.3/pkg/autpgrp/htm/indxC.htm
+lib/gap4.3/pkg/autpgrp/htm/indxI.htm
+lib/gap4.3/pkg/autpgrp/htm/indxO.htm
+lib/gap4.3/pkg/autpgrp/htm/indxS.htm
+lib/gap4.3/pkg/autpgrp/htm/indxT.htm
+lib/gap4.3/pkg/autpgrp/htm/biblio.htm
+lib/gap4.3/pkg/autpgrp/htm/indxN.htm
+lib/gap4.3/pkg/autpgrp/PkgInfo.g
+lib/gap4.3/pkg/autpgrp/README
+@dirrm lib/gap4.3/pkg/autpgrp/doc
+@dirrm lib/gap4.3/pkg/autpgrp/gap
+@dirrm lib/gap4.3/pkg/autpgrp/htm
+@dirrm lib/gap4.3/pkg/autpgrp
