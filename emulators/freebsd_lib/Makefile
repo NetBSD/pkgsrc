@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/05/22 19:31:07 tv Exp $
+# $NetBSD: Makefile,v 1.5 1999/05/22 19:33:49 tv Exp $
 #
 
 DISTNAME=		freebsd_lib-2.2.7
@@ -30,5 +30,8 @@ do-install:
 		${INSTALL_DATA} $$file ${PREFIX}/emul/freebsd/$$file; \
 	done
 	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} - POST-INSTALL
+
+show-shlib-type:
+	@${ECHO} a.out
 
 .include "../../mk/bsd.pkg.mk"
