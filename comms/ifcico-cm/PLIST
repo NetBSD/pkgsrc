@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:08 zuntum Exp $
-etc/ifcico/config.dist
-etc/ifcico/config-global.dist
-@dirrm etc/ifcico
+@comment $NetBSD: PLIST,v 1.2 2002/12/25 13:39:36 jmmv Exp $
 man/man8/ifcico.8
 man/man8/ifindex.8
 man/man8/ifinfo.8
@@ -16,3 +13,6 @@ sbin/ifreq
 sbin/ifroute
 sbin/ifstat
 sbin/nlpatch
+share/examples/ifcico-cm/config
+share/examples/ifcico-cm/config-global
+@dirrm share/examples/ifcico-cm

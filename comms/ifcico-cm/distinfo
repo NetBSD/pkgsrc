@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2002/07/06 19:05:53 tv Exp $
+$NetBSD: distinfo,v 1.4 2002/12/25 13:39:36 jmmv Exp $
 
 SHA1 (ifcico-3.0.cm.alpha-4.1.tar.gz) = d17aefcde0da1b29249f7039305400d87f4eecf7
 Size (ifcico-3.0.cm.alpha-4.1.tar.gz) = 249029 bytes
-SHA1 (patch-aa) = f53f323dadf88dee064cd7c4c13f0a52581ed601
+SHA1 (patch-aa) = 4d9098365649037bfb7e4016fb62dc2f9bbfc9a0
 SHA1 (patch-ab) = daa8f8678549f2f5b5c175ff17e7331c68e59920
 SHA1 (patch-ac) = 0a097b8a75b61cafa70aac2154453f9c96213ff5
 SHA1 (patch-ad) = af477df6773ea60c9e420918e0b54bd0b994c97a
