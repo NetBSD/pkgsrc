@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2001/02/17 18:22:23 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2001/03/18 03:05:07 mjl Exp $
 #
 
-DISTNAME=		gnumeric-0.61
+DISTNAME=		gnumeric-0.64
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnumeric/}
 
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.gnome.org/gnumeric/
 COMMENT=		Powerful and easy to use spreadsheet program from the GNOME project
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/python:../../lang/python
+DEPENDS+=		libglade>=0.16:../../devel/libglade
 DEPENDS+=		gal>=0.3:../../devel/gal
 DEPENDS+=		gb>=0.0.17:../../lang/gb
 DEPENDS+=		libole2>=0.1.7:../../devel/libole2
