@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/27 13:33:38 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/08/17 21:14:17 jlam Exp $
 #
 # This Makefile fragment is included by packages that use kdelibs2.
 #
@@ -49,11 +49,13 @@ BUILDLINK_CONFIG_WRAPPER.kdelibs2=	${BUILDLINK_DIR}/bin/kde-config
 BUILDLINK_CONFIG.kdelibs2-artsc=	 ${BUILDLINK_PREFIX.kdelibs2}/bin/artsc-config
 BUILDLINK_CONFIG_WRAPPER.kdelibs2-artsc= ${BUILDLINK_DIR}/bin/artsc-config
 
-.if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
+.if defined(USE_CONFIG_WRAPPER)
 ARTSCCONFIG?=		${BUILDLINK_CONFIG_WRAPPER.kdelibs2-artsc}
 KDECONFIG?=		${BUILDLINK_CONFIG_WRAPPER.kdelibs2}
 CONFIGURE_ENV+=		ARTSCCONFIG="${ARTSCCONFIG}"
 CONFIGURE_ENV+=		KDECONFIG="${KDECONFIG}"
+MAKE_ENV+=		ARTSCCONFIG="${ARTSCCONFIG}"
+MAKE_ENV+=		KDECONFIG="${KDECONFIG}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.kdelibs2}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/27 13:33:33 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/08/17 21:14:13 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ORBit.
 #
@@ -52,11 +52,13 @@ BUILDLINK_CONFIG_WRAPPER.libIDL=${BUILDLINK_DIR}/bin/libIDL-config
 BUILDLINK_CONFIG.orbit=		${BUILDLINK_PREFIX.ORBit}/bin/orbit-config
 BUILDLINK_CONFIG_WRAPPER.orbit=	${BUILDLINK_DIR}/bin/orbit-config
 
-.if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
+.if defined(USE_CONFIG_WRAPPER)
 LIBIDL_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.libIDL}
 ORBIT_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.orbit}
 CONFIGURE_ENV+=		LIBIDL_CONFIG="${LIBIDL_CONFIG}"
 CONFIGURE_ENV+=		ORBIT_CONFIG="${ORBIT_CONFIG}"
+MAKE_ENV+=		LIBIDL_CONFIG="${LIBIDL_CONFIG}"
+MAKE_ENV+=		ORBIT_CONFIG="${ORBIT_CONFIG}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.ORBit}

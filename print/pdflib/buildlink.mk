@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/29 05:45:57 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/08/17 21:14:14 jlam Exp $
 #
 # This Makefile fragment is included by packages that use pdflib.
 #
@@ -35,9 +35,10 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.pdflib}
 BUILDLINK_CONFIG.pdflib=	${BUILDLINK_PREFIX.pdflib}/bin/pdflib-config
 BUILDLINK_CONFIG_WRAPPER.pdflib=	${BUILDLINK_DIR}/bin/pdflib-config
 
-.if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
+.if defined(USE_CONFIG_WRAPPER)
 PDFLIB_CONFIG?=			${BUILDLINK_CONFIG_WRAPPER.pdflib}
 CONFIGURE_ENV+=			PDFLIB_CONFIG="${PDFLIB_CONFIG}"
+MAKE_ENV+=			PDFLIB_CONFIG="${PDFLIB_CONFIG}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.pdflib}
