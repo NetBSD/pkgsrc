@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.4 2002/04/21 11:22:13 cjep Exp $
+$NetBSD: distinfo,v 1.5 2002/06/23 13:51:42 kent Exp $
 
-SHA1 (cheesetracker-0.2.2.tar.gz) = 29683ca15f3306f3a580f7f8baf31d8ad79c249b
-Size (cheesetracker-0.2.2.tar.gz) = 196767 bytes
-SHA1 (patch-aa) = 363a9f2595723c9a2cfccaf351965405f60775a5
-SHA1 (patch-ab) = 81a12ba155e08608ad608a3e9229be1c819ca844
-SHA1 (patch-ac) = 6941553d51917ad267870e8c03af6a0816de86e5
-SHA1 (patch-ad) = ae6d9096984a82edbde66a341703a3baf19722bb
-SHA1 (patch-ae) = 3380911c6806188c6dcdf0f572c4d983a745f112
-SHA1 (patch-af) = 860549927a44009d38380fca35409513ba2af8dd
+SHA1 (cheesetracker-0.5.5.tar.gz) = a1f6c9310db97ab151670ec5af22e2a7dd42c099
+Size (cheesetracker-0.5.5.tar.gz) = 703797 bytes
+SHA1 (patch-aa) = e6c9db09b838f25b88a2e94f17145fea0357458c
+SHA1 (patch-ab) = 19a744e00bb7b3d18739a78747f519451ffaa934
+SHA1 (patch-ac) = 0899a7117405f0f1ec4f3566db17a61948c3ddf4
+SHA1 (patch-ad) = 83c5724488ec351bae98cd78f09b95aff28aa1e5
+SHA1 (patch-ae) = b861d569c15e044092e6346cdea87448e7e0d42b
