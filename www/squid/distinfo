@@ -1,41 +1,8 @@
-$NetBSD: distinfo,v 1.84 2005/02/28 16:59:08 taca Exp $
+$NetBSD: distinfo,v 1.85 2005/03/01 11:16:58 taca Exp $
 
-SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8.tar.bz2) = de126ef85612fcd1a44bdd67d4a410c4d47cd02d
-RMD160 (squid-2.5.8-2005022000/squid-2.5.STABLE8.tar.bz2) = 8580418eb08e4608de2bfe6850f1bd16fb5bb746
-Size (squid-2.5.8-2005022000/squid-2.5.STABLE8.tar.bz2) = 1057299 bytes
-SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-dns_assert.patch) = 41af4ec15e007d5bc2dbbdecaeb426a5f391c40f
-RMD160 (squid-2.5.8-2005022000/squid-2.5.STABLE8-dns_assert.patch) = 6bbda3f2c7509fa219a59d398797509ae361adaf
-Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-dns_assert.patch) = 2524 bytes
-SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-format_fixes.patch) = 6319ab7ddb769576c1b27f2b6bf33e74af7b0e7f
-RMD160 (squid-2.5.8-2005022000/squid-2.5.STABLE8-format_fixes.patch) = a6fb30a416e131720051f992568a3f56ad46cdc6
-Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-format_fixes.patch) = 10056 bytes
-SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-html_high_chars.patch) = 88da65e60bc75b448385696ac2059f690a1b24c1
-RMD160 (squid-2.5.8-2005022000/squid-2.5.STABLE8-html_high_chars.patch) = f2c159478771d6d0ef9f432dd4d224c52bb0d382
-Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-html_high_chars.patch) = 766 bytes
-SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-ftp_cleanup.patch) = a710fbb1ae4d24927ce88c46d394fc585ae2a325
-RMD160 (squid-2.5.8-2005022000/squid-2.5.STABLE8-ftp_cleanup.patch) = c8e6e613ab85d6a38bc9d9c955009f941310dc6f
-Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-ftp_cleanup.patch) = 4532 bytes
-SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-relaxed_header_parser.patch) = db757dc98f295631a50119b39d873c0d8d9d1c71
-RMD160 (squid-2.5.8-2005022000/squid-2.5.STABLE8-relaxed_header_parser.patch) = f325174106bc2849c59b964d865c42d5b536fa82
-Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-relaxed_header_parser.patch) = 3217 bytes
-SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-gcc4.patch) = d200cc77e44f4c0295add906140b29d604ffdf83
-RMD160 (squid-2.5.8-2005022000/squid-2.5.STABLE8-gcc4.patch) = eecce4d53153117d8de21543f0fb3f71f45fa06f
-Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-gcc4.patch) = 12128 bytes
-SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-ar.patch) = ee83eab02ddbcca07bf54cf16811523fc2794e46
-RMD160 (squid-2.5.8-2005022000/squid-2.5.STABLE8-ar.patch) = b211cd705e4272aeedebf20c8588b42930d8d65d
-Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-ar.patch) = 4142 bytes
-SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-reconfigure_peer_leaks.patch) = 3c4085e47359a765dc1ea86a1235f318c81aef05
-RMD160 (squid-2.5.8-2005022000/squid-2.5.STABLE8-reconfigure_peer_leaks.patch) = 9e13b5cda3aec75b668e2da91218d946adc932bf
-Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-reconfigure_peer_leaks.patch) = 2769 bytes
-SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-ftp_url_display.patch) = d1c8b604daef88b6be067e8fccedd7e34ca100e3
-RMD160 (squid-2.5.8-2005022000/squid-2.5.STABLE8-ftp_url_display.patch) = 42351ddcc40d2a2cdce5e5e31da01f1af25b6f1b
-Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-ftp_url_display.patch) = 611 bytes
-SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-fqdn_spaces.patch) = 08b941f8572bfa66462b9ecb78d894b643ae2053
-RMD160 (squid-2.5.8-2005022000/squid-2.5.STABLE8-fqdn_spaces.patch) = c5666650f66d54d049784f8af515d40c24db4577
-Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-fqdn_spaces.patch) = 1430 bytes
-SHA1 (squid-2.5.8-2005022000/squid-2.5.STABLE8-retry_on_error.patch) = 6342d33f8392d7f6c62579baf67f632d0243ffc3
-RMD160 (squid-2.5.8-2005022000/squid-2.5.STABLE8-retry_on_error.patch) = 6361d2a71925a26d1992fff554a9803ec5a05a8f
-Size (squid-2.5.8-2005022000/squid-2.5.STABLE8-retry_on_error.patch) = 1988 bytes
+SHA1 (squid-2.5.9-2005022800/squid-2.5.STABLE9.tar.bz2) = 9605e274f548bfc8dcb60a299b680df2846ee74b
+RMD160 (squid-2.5.9-2005022800/squid-2.5.STABLE9.tar.bz2) = 98e49ff58ffc4664a46350f3d6c34be99b713716
+Size (squid-2.5.9-2005022800/squid-2.5.STABLE9.tar.bz2) = 1057776 bytes
 SHA1 (patch-aa) = 3e6fb677125eec276fdfa62336c134f26e1e1edd
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
