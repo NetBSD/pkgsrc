@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/12/03 09:08:24 frueauf Exp $
+# $NetBSD: Makefile,v 1.15 1998/12/04 09:36:25 tron Exp $
 # $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
@@ -7,8 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ips.cs.tu-bs.de/pub/local/softech/ddd/  \
 		ftp://richb-pc.acc.qc.edu/pub/ddd/  \
 		ftp://ftp.gre.ac.uk/pub/tools/debuggers/ddd/  \
-		ftp://uiarchive.cso.uiuc.edu/pub/packages/ddd/  \
-		ftp://ftp.th-darmstadt.de/pub/programming/tools/ddd/
+		ftp://uiarchive.cso.uiuc.edu/pub/packages/ddd/
 
 MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://www.cs.tu-bs.de/softech/ddd/
