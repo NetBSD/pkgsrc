@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/05/20 12:30:29 wiz Exp $
+
+--- Imakefile.orig	Thu May  9 19:06:14 2002
++++ Imakefile
+@@ -1,5 +1,5 @@
+ XTOP = /usr/local/src/XFree86/xc
+-XFONTENCLIB = $(XTOP)/exports/lib/libfontenc.a
++XFONTENCLIB = -lfontenc
+ 
+ LOCAL_LIBRARIES = $(XFONTENCLIB) $(FREETYPE2LIB)
+ 
