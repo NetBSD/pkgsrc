@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/01/25 17:32:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/08 20:27:15 minskim Exp $
 
 DISTNAME=	ns-src-2.26
 PKGNAME=	${DISTNAME:S/-src//}
@@ -36,6 +36,6 @@ post-install:
 .include  "../../net/libpcap/buildlink2.mk"
 .include  "../../devel/tcl-tclcl/buildlink2.mk"
 .include  "../../lang/tcl-otcl/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

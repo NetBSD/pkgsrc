@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/11/12 03:39:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/08 20:27:15 minskim Exp $
 #
 
 DISTNAME=	TkPasMan-2.2a
@@ -43,5 +43,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tkpasman
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/tkpasman
 
-.include "../../x11/tk/buildlink2.mk"
+.include "../../x11/tk83/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
