@@ -4,7 +4,7 @@
 QT3_LIBS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		qt3-libs
-BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.0.4nb1
+BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.0.4nb2
 BUILDLINK_PKGSRCDIR.qt3-libs?=	../../x11/qt3-libs
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.qt3-libs=qt3-libs
