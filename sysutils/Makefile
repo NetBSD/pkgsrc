@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2002/07/10 13:48:51 agc Exp $
-#
+# $NetBSD: Makefile,v 1.155 2002/07/11 11:41:28 tron Exp $
 
 COMMENT=	System utilities
 
@@ -21,6 +20,7 @@ SUBDIR+=	bbsload
 SUBDIR+=	bchunk
 SUBDIR+=	bkpupsd
 SUBDIR+=	c++rt0
+SUBDIR+=	cdbkup
 SUBDIR+=	cdrdao
 SUBDIR+=	cdrecord
 SUBDIR+=	cfengine
