@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/05/12 10:16:44 abs Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/22 09:54:05 agc Exp $
 #
 
 DISTNAME=	audacity-src-0.96
@@ -12,17 +12,13 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://audacity.sourceforge.net/
 COMMENT=	audio editor
 
-DEPENDS+=	wxGTK>=2.2.7nb1:../../x11/wxGTK
-DEPENDS+=	pth-[0-9]*:../../devel/pth
-DEPENDS+=	id3lib-[0-9]*:../../audio/id3lib
-DEPENDS+=	libmpeg3-[0-9]*:../../devel/libmpeg3
-DEPENDS+=	lame>=3.89:../../audio/lame
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--without-xaudio --with-libmpeg3
-CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include"
 USE_GMAKE=	yes
+
+USE_BUILDLINK_ONLY=	yes
 
 # XXX Internal compiler error with -O2
 .if (${MACHINE_ARCH} == alpha)
@@ -39,4 +35,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/audacity ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/audacity-help.htb ${PREFIX}/share
 
+.include "../../audio/id3lib/buildlink.mk"
+.include "../../audio/lame/buildlink.mk"
+.include "../../devel/libmpeg3/buildlink.mk"
+.include "../../x11/wxGTK/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
