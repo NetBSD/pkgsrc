@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1410 2004/02/18 13:32:38 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1411 2004/02/21 12:29:23 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1378,8 +1378,11 @@ PATH:=			${_dir_}:${PATH}
 .  endif
 .endfor
 
-PATH_ENV+=	PATH=${PATH:Q}
-PATH_ENV+=	_PREPENDED_TO_PATH=${_PREPENDED_TO_PATH:Q}
+# Add these bits to the environment use when invoking the sub-make
+# processes for build-related phases.
+#
+BUILD_ENV+=	PATH=${PATH:Q}
+BUILD_ENV+=	_PREPENDED_TO_PATH=${_PREPENDED_TO_PATH:Q}
 
 .MAIN: all
 
@@ -3223,7 +3226,7 @@ ${TOOLS_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-tools PKG_PHASE=tools
 
 ${BUILDLINK_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${PATH_ENV} ${MAKE} ${MAKEFLAGS} real-buildlink PKG_PHASE=buildlink
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-buildlink PKG_PHASE=buildlink
 
 ${CONFIGURE_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
@@ -3232,7 +3235,7 @@ ${CONFIGURE_COOKIE}:
 	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${PATH_ENV} ${MAKE} ${MAKEFLAGS} real-configure PKG_PHASE=configure
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-configure PKG_PHASE=configure
 .endif
 
 ${BUILD_COOKIE}:
@@ -3242,11 +3245,11 @@ ${BUILD_COOKIE}:
 	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${PATH_ENV} ${MAKE} ${MAKEFLAGS} real-build PKG_PHASE=build
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-build PKG_PHASE=build
 .endif
 
 ${TEST_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${PATH_ENV} ${MAKE} ${MAKEFLAGS} real-test PKG_PHASE=test
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-test PKG_PHASE=test
 
 ${INSTALL_COOKIE}:
 .if ${INTERACTIVE_STAGE:Minstall} == "install" && defined(BATCH)
@@ -3255,11 +3258,11 @@ ${INSTALL_COOKIE}:
 	@${TOUCH} ${INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${PATH_ENV} ${MAKE} ${MAKEFLAGS} real-install PKG_PHASE=install
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-install PKG_PHASE=install
 .endif
 
 ${PACKAGE_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${PATH_ENV} ${MAKE} ${MAKEFLAGS} real-package PKG_PHASE=package
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-package PKG_PHASE=package
 
 .PHONY: extract-message patch-message tools-message buildlink-message
 .PHONY: configure-message build-message test-message
