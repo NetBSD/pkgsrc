@@ -1,19 +1,19 @@
+# $NetBSD: Makefile,v 1.2 1997/10/29 00:40:28 augustss Exp $
 # New ports collection makefile for:	xmmix
-# Version required:	1.2
-# Date created:		Mon Aug  5 10:54:25 CDT 1996
-# Whom:			erich@FreeBSD.org
-#
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:19:29 augustss Exp $
+# Version required:     1.2-pl2
+# Date created:		97-10-24
+# Whom:			augustss@cs.chalmers.se
 #
 
-DISTNAME=	xmmix-1.2
+DISTNAME=       xmmix-1.2
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	applications/
+MASTER_SITES=   ftp://ftp.netcom.com/pub/tk/tkan/xmmix-1.2/src/
 
-MAINTAINER=	erich@FreeBSD.org
+MAINTAINER=	augustss@cs.chalmers.se
 
 USE_IMAKE=	yes
 REQUIRES_MOTIF=	yes
+
+MAN1=		xmmix.1
 
 .include <bsd.port.mk>

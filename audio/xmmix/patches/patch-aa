@@ -1,22 +1,172 @@
---- ./appenv.h.org	Sun Jul 14 10:48:59 1996
-+++ ./appenv.h	Mon Aug 19 04:05:16 1996
-@@ -59,7 +59,7 @@
- #include <sys/types.h>
- #include <sys/stat.h>
- #include <sys/ioctl.h>
--#include <sys/soundcard.h>
-+#include <machine/soundcard.h>
- #include <stdlib.h>
- #include <stdio.h>
- #include <errno.h>
---- ./Imakefile.org	Sun Jul 14 10:48:56 1996
-+++ ./Imakefile	Mon Aug 19 04:09:48 1996
+--- ../xmmix-1.2/Imakefile	Sun Jul 14 19:48:56 1996
++++ ./Imakefile	Fri Oct 24 23:34:17 1997
 @@ -43,7 +43,7 @@
   * #include "Motif.tmpl"
   * #include "Motif.rules"
   */
 -LOCAL_LIBRARIES= XmClientLibs
-+LOCAL_LIBRARIES= ${MOTIFLIB} ${XTOOLLIB} ${XLIB}
++LOCAL_LIBRARIES= -lXm -lXt -lX11 -lossaudio
  
  
  /*
+--- ../xmmix-1.2/appenv.h	Sun Jul 14 19:48:59 1996
++++ ./appenv.h	Fri Oct 24 23:33:47 1997
+@@ -59,7 +59,11 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
++#ifdef __NetBSD__
++#include <soundcard.h>
++#else
+ #include <sys/soundcard.h>
++#endif
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <errno.h>
+--- ../xmmix-1.2/main.c	Thu Nov  7 17:01:43 1996
++++ ./main.c	Mon Aug 11 23:12:51 1997
+@@ -159,7 +159,7 @@
+ 	post_realize_config(&widgets);
+ 
+ 	/* Register callback routines */
+-	register_callbacks(&widgets);
++	register_callbacks(&widgets, app);
+ 
+ 	/* Initialize screen controls */
+ 	mx_start(&widgets);
+--- ../xmmix-1.2/mixer.c	Thu Nov  7 17:00:26 1996
++++ ./mixer.c	Mon Aug 11 23:20:15 1997
+@@ -104,6 +104,14 @@
+  ***********************/
+ 
+ 
++#ifdef __NetBSD__
++void
++mxchg(int sig)
++{
++	deliverSIGIO();
++}
++#endif
++
+ /*
+  * do_ioctl
+  *	Perform ioctl command.  If file is not yet open or if we
+@@ -681,11 +689,13 @@
+ 	/* Query sound driver version */
+ 	if ((fp = fopen("/dev/sndstat", "r")) == NULL) {
+ 		if (!app_data.demo) {
++#ifndef __NetBSD__
+ 			fprintf(errfp, "%s: %s: %s\n",
+ 				PROGNAME,
+ 				"Cannot open /dev/sndstat",
+ 				"assuming pre-3.0 sound driver.");
+ 			maxdevs = MAXDEVS_V2;
++#endif
+ 		}
+ 		return;
+ 	}
+@@ -915,6 +925,7 @@
+ mx_start(widgets_t *m)
+ {
+ 	char	msg[256];
++	int one = 1;
+ 
+ 	if (app_data.autoload != NULL && app_data.autoload[0] != '\0' &&
+ 	    strcmp(app_data.autoload, "/dev/null") != 0) {
+@@ -930,6 +941,14 @@
+ 		}
+ 	}
+ 
++#if defined(__NetBSD__)
++	signal(SIGIO, mxchg);
++	ioctl(dev_fd, FIOASYNC, &one);
++#endif
++
++	/* Query hardware mixer settings */
++	mx_queryhw(&widgets);
++
+ 	/* Update screen controls to match current status */
+ 	mx_updctl(m);
+ }
+@@ -1531,6 +1550,22 @@
+ 	if (p->reason != XmCR_FOCUS || form == (Widget) NULL)
+ 		return;
+ 
++	/* Query hardware mixer settings */
++	mx_queryhw(&widgets);
++
++	/* Update screen controls */
++	mx_updctl(&widgets);
++}
++
++
++/*
++ * mx_change
++ *	Mixer device has changed
++ */
++/*ARGSUSED*/
++void
++mx_change(XtPointer client_data)
++{
+ 	/* Query hardware mixer settings */
+ 	mx_queryhw(&widgets);
+ 
+--- ../xmmix-1.2/mixer.h	Sun Jul 14 19:49:04 1996
++++ ./mixer.h	Mon Aug 11 23:19:17 1997
+@@ -78,6 +78,7 @@
+ extern void	mx_fsok_btn(Widget, XtPointer, XtPointer);
+ extern void	mx_fscancel_btn(Widget, XtPointer, XtPointer);
+ extern void	mx_focuschg(Widget, XtPointer, XtPointer);
++extern void	mx_change(XtPointer);
+ 
+ #endif	/* __MIXER_H__ */
+ 
+--- ../xmmix-1.2/widget.c	Sun Jul 14 19:49:09 1996
++++ ./widget.c	Sat Oct 25 00:24:43 1997
+@@ -973,6 +973,10 @@
+ 	delw = XmInternAtom(display, "WM_DELETE_WINDOW", False);
+ }
+ 
++static XtSignalId sigid;
++void deliverSIGIO() {
++	XtNoticeSignal(sigid);
++}
+ 
+ /*
+  * register_callbacks
+@@ -985,7 +989,7 @@
+  *	Nothing
+  */
+ void
+-register_callbacks(widgets_t *m)
++register_callbacks(widgets_t *m, XtAppContext app)
+ {
+ 	int	i;
+ 
+@@ -1126,6 +1130,15 @@
+ 		XmNfocusCallback,
+ 		(XtCallbackProc) mx_focuschg, (XtPointer) m->form
+ 	);
++
++#ifdef __NetBSD__
++	/*
++	 * Mixer SIGIO change callback
++	 */
++	sigid = XtAppAddSignal(app,
++		(XtSignalCallbackProc) mx_change, (XtPointer) 0
++	);
++#endif
+ 
+ 	/*
+ 	 * Install WM_DELETE_WINDOW handler
+--- ../xmmix-1.2/widget.h	Sun Jul 14 19:49:10 1996
++++ ./widget.h	Mon Aug 11 23:13:43 1997
+@@ -119,7 +119,7 @@
+ extern void	widget_init(widgets_t *);
+ extern void	create_widgets(widgets_t *);
+ extern void	post_realize_config(widgets_t *);
+-extern void	register_callbacks(widgets_t *);
++extern void	register_callbacks(widgets_t *, XtAppContext);
+ 
+ #endif /* __WIDGET_H__ */
+ 
