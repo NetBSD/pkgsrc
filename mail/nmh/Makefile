@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2003/07/26 18:25:06 salo Exp $
+# $NetBSD: Makefile,v 1.53 2003/11/23 07:18:15 salo Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -73,7 +73,7 @@ post-configure:
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
 	for f in `${GREP} '^${DOCDIR}/' ${PKGDIR}/PLIST`; do \
-	    ${INSTALL_DATA} ${WRKSRC}/`basename $$f` ${PREFIX}/${DOCDIR}; \
+	    ${INSTALL_DATA} ${WRKSRC}/`${BASENAME} $$f` ${PREFIX}/${DOCDIR}; \
 	done
 	${INSTALL_DATA} ${FILESDIR}/mhn.defaults.dist ${PREFIX}/etc/nmh
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
