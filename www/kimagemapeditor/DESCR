@@ -1,0 +1,16 @@
+KImageMapEditor is a tool for easily defining regions in HTML image maps. 
+
+Features:   
+o the ability to edit image maps in existing HTML documents
+o importing image maps from HTML documents, with a dialog for selecting an
+  image map to modify from the maps in the document
+o a list of all image maps in the active HTML file, for switching among,
+  deleting or adding new imagemaps
+o a list of all images in the active HTML file, for switching among the images
+o a pane which displays the appearance and name of the defined regions in the
+  current image map
+o use as a component, such as for use as an imagemap viewer plugin in Konqueror
+  or as an editor plugin in Quanta Plus
+o visual (mouse) and tabular (keyboard) modification of image map regions
+o exporting the revised image maps as an HTML document
+o integration with Quanta Plus.

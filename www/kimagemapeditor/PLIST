@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/20 11:19:44 markd Exp $
+bin/kimagemapeditor
+lib/kde3/libkimagemapeditor.a
+lib/kde3/libkimagemapeditor.la
+share/kde/applnk/Development/kimagemapeditor.desktop
+share/kde/apps/kimagemapeditor/addpointcursor.png
+share/kde/apps/kimagemapeditor/freehandcursor.png
+share/kde/apps/kimagemapeditor/kimagemapeditorpartui.rc
+share/kde/apps/kimagemapeditor/kimagemapeditorui.rc
+share/kde/apps/kimagemapeditor/polygoncursor.png
+share/kde/apps/kimagemapeditor/removepointcursor.png
+share/kde/icons/hicolor/16x16/apps/kimagemapeditor.png
+share/kde/icons/hicolor/22x22/actions/addpoint.png
+share/kde/icons/hicolor/22x22/actions/arrow.png
+share/kde/icons/hicolor/22x22/actions/circle.png
+share/kde/icons/hicolor/22x22/actions/circle2.png
+share/kde/icons/hicolor/22x22/actions/freehand.png
+share/kde/icons/hicolor/22x22/actions/lower.png
+share/kde/icons/hicolor/22x22/actions/polygon.png
+share/kde/icons/hicolor/22x22/actions/raise.png
+share/kde/icons/hicolor/22x22/actions/rectangle.png
+share/kde/icons/hicolor/22x22/actions/removepoint.png
+share/kde/icons/hicolor/32x32/apps/kimagemapeditor.png
+share/kde/icons/hicolor/48x48/apps/kimagemapeditor.png
+share/kde/icons/locolor/16x16/apps/kimagemapeditor.png
+share/kde/icons/locolor/32x32/apps/kimagemapeditor.png
+share/kde/locale/de/LC_MESSAGES/kimagemapeditor.mo
+share/kde/locale/es/LC_MESSAGES/kimagemapeditor.mo
+share/kde/locale/fr/LC_MESSAGES/kimagemapeditor.mo
+share/kde/locale/nl/LC_MESSAGES/kimagemapeditor.mo
+share/kde/services/kimagemapeditorpart.desktop
+@dirrm share/kde/apps/kimagemapeditor
