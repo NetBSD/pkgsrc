@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.10 2001/10/17 17:56:57 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.11 2002/03/23 19:21:47 itojun Exp $
 #
 # This Makefile fragment is included by packages that use OpenSSL.
 #
@@ -38,7 +38,11 @@ BUILDLINK_DEPENDS.openssl=	openssl>=0.9.6
 .endif
 
 _NEED_OPENSSL=		YES
+.if ${OPSYS} == "Darwin"
+_OPENSSLV_H=		/usr/local/include/openssl/opensslv.h
+.else
 _OPENSSLV_H=		/usr/include/openssl/opensslv.h
+.endif
 .if exists(${_OPENSSLV_H})
 _OPENSSL_VERSION!=	${AWK} '/.*OPENSSL_VERSION_NUMBER.*/ { print $$3 }' \
 				${_OPENSSLV_H}
@@ -77,8 +81,13 @@ BUILDLINK_PREFIX.openssl_DEFAULT=	${LOCALBASE}
 SSLBASE=			${BUILDLINK_PREFIX.openssl}
 SSLCERTS=			${SSLBASE}/certs
 .else
+.if ${OPSYS} == "Darwin"
+BUILDLINK_PREFIX.openssl=	/usr/local
+SSLBASE=			/usr/local
+.else
 BUILDLINK_PREFIX.openssl=	/usr
 SSLBASE=			/usr
+.endif
 SSLCERTS=			/etc/openssl/certs
 .endif
 BUILD_DEFS+=			SSLBASE SSLCERTS
