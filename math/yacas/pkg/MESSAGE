@@ -1,4 +1,6 @@
-Note:  For proper operation, your terminal setting must have "-extproc"
+ $NetBSD: MESSAGE,v 1.2 2000/02/29 14:27:16 dmcmahill Exp $
+
+ Note:  For proper operation, your terminal setting must have "-extproc"
  set.  This can be checked with "stty -a".  Alternatively, you can run
  the script "yacas.sh" instead of directly running the binary program 
  "yacas".
