@@ -1,13 +1,9 @@
-$NetBSD: patch-aa,v 1.11 2000/03/13 01:20:27 wiz Exp $
+$NetBSD: patch-aa,v 1.12 2000/04/17 05:34:13 rh Exp $
 
---- Makefile.in.orig	Mon Feb 28 17:19:49 2000
-+++ Makefile.in	Mon Mar 13 01:53:46 2000
-@@ -53,10 +53,10 @@
- CC          = @CC@
- CPPFLAGS    = @CPPFLAGS@ -I.
- CFLAGS      = @CFLAGS@
--LDFLAGS     = @LDFLAGS@ -L.
-+LDFLAGS     = @LDFLAGS@
+--- Makefile.in.orig	Thu Mar 23 20:40:27 2000
++++ Makefile.in	Mon Apr 17 07:27:50 2000
+@@ -56,7 +56,7 @@
+ LDFLAGS     = @LDFLAGS@
  LIBS        = @LIBS@
  SHTOOL      = $(srcdir)/shtool
 -LIBTOOL     = $(C)libtool
@@ -15,19 +11,20 @@ $NetBSD: patch-aa,v 1.11 2000/03/13 01:20:27 wiz Exp $
  RM          = rm -f
  RMDIR       = rmdir
  TRUE        = true
-@@ -226,13 +226,13 @@
- 	$(SHTOOL) install -c -m 644 $(S)pth.3 $(mandir)/man3/pth.3
+@@ -227,14 +227,14 @@
  	$(SHTOOL) install -c -m 644 $(S)pth.m4 $(datadir)/aclocal/pth.m4
  	$(SHTOOL) install -c -m 644 pth.h $(includedir)/pth.h
--	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libpth.la $(libdir)/libpth.la
-+	@$(LIBTOOL) --mode=install install -c -m 644 libpth.la $(libdir)/libpth.la
+ 	@umask 022; $(LIBTOOL) --mode=install \
+-	$(SHTOOL) install -c libpth.la $(libdir)/libpth.la
++	install -c libpth.la $(libdir)/libpth.la
  install-pthread:
  	$(SHTOOL) install -c -m 755 pthread-config $(bindir)/pthread-config
  	$(SHTOOL) install -c -m 644 $(S)pthread-config.1 $(mandir)/man1/pthread-config.1
  	$(SHTOOL) install -c -m 644 pthread.h $(includedir)/pthread.h
  	$(SHTOOL) install -c -m 644 $(S)pthread.3 $(mandir)/man3/pthread.3
--	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libpthread.la $(libdir)/libpthread.la
-+	@$(LIBTOOL) --mode=install install -c -m 644 libpthread.la $(libdir)/libpthread.la
+ 	@umask 022; $(LIBTOOL) --mode=install \
+-	$(SHTOOL) install -c libpthread.la $(libdir)/libpthread.la
++	install -c libpthread.la $(libdir)/libpthread.la
  
  #   uninstall the package
  uninstall:
