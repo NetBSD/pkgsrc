@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4091 2003/12/14 11:50:35 wiz Exp $
+$NetBSD: CHANGES,v 1.4092 2003/12/14 12:04:52 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5123,3 +5123,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added compat16-1.6.0 [grant 2003-12-14]
 	Updated vim to 6.2.0nb2 [cjs 2003-12-14]
 	Updated diffstat to 1.34 [jmmv 2003-12-14]
+	Updated kile to 1.6 [markd 2003-12-14]
+	Updated ivtools to 1.1.2 [markd 2003-12-14]
