@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/06/24 18:38:36 kent Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/09 12:27:37 wiz Exp $
 
 DISTNAME=	web500gw-2.1b3
 PKGREVISION=	1
@@ -9,7 +9,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.tu-chemnitz.de/~fri/web500gw/
 COMMENT=	WWW to ldap gateway
 
-#DEPENDS+=	openldap-1.2.*:../../databases/openldap1
-.include "../../databases/openldap1/buildlink.mk"
-#.include "../../databases/openldap/buildlink.mk"
+USE_BUILDLINK2=	YES
+
+.include "../../databases/openldap1/buildlink2.mk"
+#.include "../../databases/openldap/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

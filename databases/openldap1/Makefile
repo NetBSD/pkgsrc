@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/23 17:34:38 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/09 12:28:16 wiz Exp $
 #
 
 DISTNAME=	openldap-1.2.13
@@ -16,7 +16,7 @@ COMMENT=	Lightweight directory access protocol server and client package
 
 CONFLICTS+=	ldapsdk-[0-9]*
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/build/ltconfig
 
@@ -34,8 +34,8 @@ CONFIGURE_ARGS+=	--enable-wrappers
 .endif
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
-.include "../../databases/db/buildlink.mk"
-CPPFLAGS+=	-I${BUILDLINK_DIR}/include/db2
+.include "../../databases/db/buildlink2.mk"
+CPPFLAGS+=	-I${BUILDLINK_PREFIX.db}/include/db2
 LIBS=		-ldb2 -lpthread -lrt
 .endif
 
