@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.60 2003/10/19 07:09:32 grant Exp $
+# $NetBSD: defs.Darwin.mk,v 1.61 2003/11/21 00:14:00 grant Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -31,6 +31,8 @@ GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
 HEAD?=		/usr/bin/head
 HOSTNAME_CMD?=	/bin/hostname
 ID?=		/usr/bin/id
+IMAKE?=		${X11BASE}/bin/imake ${IMAKEOPTS}
+IMAKEOPTS+=	-DBuildHtmlManPages=NO
 LDCONFIG?=	/sbin/ldconfig
 LDD?=		/usr/bin/otool -L
 LN?=		/bin/ln
