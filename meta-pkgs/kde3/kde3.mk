@@ -1,4 +1,4 @@
-# $NetBSD: kde3.mk,v 1.2 2004/07/05 12:26:01 markd Exp $
+# $NetBSD: kde3.mk,v 1.3 2004/09/19 04:17:22 markd Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -87,8 +87,13 @@ CONFIGURE_ENV+=		kde_wallpaperdir="${KDEDIR}/share/kde/wallpapers"
 CONFIGURE_ENV+=		xdg_appsdir="${KDEDIR}/share/applications/kde"
 CONFIGURE_ENV+=		xdg_directorydir="${KDEDIR}/share/desktop-directories"
 
-BUILDLINK_DEPMETHOD.qt3-tools=	build
+_IN_ARTS_BUILD?=	no
+.if !empty(_IN_ARTS_BUILD:M[nN][oO])
+BUILDLINK_DEPENDS.qt3-libs+=	qt3-libs>=3.3.3nb1
+.include "../../x11/qt3-libs/buildlink3.mk"
+.endif
 
+BUILDLINK_DEPMETHOD.qt3-tools=	build
 .include "../../x11/qt3-tools/buildlink3.mk"
 
 .endif	# KDE3_MK
