@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/07/13 13:53:33 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/09/13 07:53:53 jdolecek Exp $
 
 .if !defined(LIBXML2_BUILDLINK2_MK)
 LIBXML2_BUILDLINK2_MK=	# defined
@@ -14,7 +14,6 @@ BUILDLINK_FILES.libxml2+=	lib/libxml2.*
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
 
 BUILDLINK_TARGETS+=	libxml2-buildlink
 
