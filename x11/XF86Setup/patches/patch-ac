@@ -1,0 +1,40 @@
+$NetBSD: patch-ac,v 1.1 1998/09/08 10:17:26 agc Exp $
+
+Introduce a configure script which produces a file called
+res_cpp_symbol, containing either a definition or "undefinition" of
+HAVE_RESOLUTION_FIELD
+
+--- /dev/null	Tue Sep  8 10:40:44 1998
++++ configure	Tue Sep  8 10:27:51 1998
+@@ -0,0 +1,31 @@
++#! /bin/sh
++
++
++cat > config.c << EOF
++#include <X11/Intrinsic.h>
++#include <X11/Xmd.h>
++#include <X11/extensions/xf86misc.h>
++
++int
++main(int argc, char **argv)
++{
++	XF86MiscMouseSettings	mouse;
++
++	mouse.resolution = 400;
++	mouse.buttons = 3;
++	exit(0);
++}
++EOF
++
++ex=1
++cc -g config.c 2>/dev/null
++case $? in
++0)
++	echo "-DHAVE_RESOLUTION_FIELD=1" > ./res_cpp_symbol
++	ex=0 ;;
++*)	echo "-UHAVE_RESOLUTION_FIELD" > ./res_cpp_symbol ;;
++esac
++
++rm -f config.c config.o a.out
++
++exit $ex
