@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/06/15 08:22:17 shell Exp $
+$NetBSD: patch-aa,v 1.2 2002/07/09 16:49:20 wiz Exp $
 
 --- Makefile.orig	Tue Feb 15 04:41:27 2000
 +++ Makefile
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/06/15 08:22:17 shell Exp $
  
  ttf2psm: $(OBJS)
 -	$(CC) $(CFLAGS) $(INCLUDEDIR) $(LIBS) -o ttf2psm $(OBJS)
-+	$(CC) $(CFLAGS) $(LDFLAGS) $(INCLUDEDIR) $(LIBS) -o ttf2psm $(OBJS)
++	$(CC) $(CFLAGS) $(LDFLAGS) $(INCLUDEDIR) -o ttf2psm $(OBJS) $(LIBS)
  
  install: all bg5ps bg5ps.conf
  	mkdir -p $(ETCDIR)
