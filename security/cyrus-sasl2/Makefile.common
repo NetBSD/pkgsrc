@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/09/13 19:08:50 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/10/03 12:56:48 seb Exp $
 #
 # This Makefile fragment should be included _below_ and SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=	--without-pam
 # clean up a bit to help package maintainer produce patch files
 post-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}			\
-	${FIND} ${WRKSRC} -type f -name "*.orig" | ${XARGS} ${RM}
+	${FIND} ${WRKSRC} -type f -name "*.orig" | ${XARGS} ${RM} -f
 
 # Left here as reference for patch makers...
 #pre-configure:
