@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8507 2004/12/29 10:23:49 minskim Exp $
+$NetBSD: CHANGES,v 1.8508 2004/12/29 11:16:45 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6681,3 +6681,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added py24-html-docs-2.4 [minskim 2004-12-29]
 	Updated aiksaurus to 1.2.1 [recht 2004-12-29]
 	Updated awstats to 6.2 [minskim 2004-12-29]
+	Updated py-gtk2 to 2.4.1 [recht 2004-12-29]
+	Updated py-ORBit to 2.0.1 [recht 2004-12-29]
+	Updated py-gnome2 to 2.6.2 [recht 2004-12-29]
