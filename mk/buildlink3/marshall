@@ -1,4 +1,4 @@
-# $NetBSD: marshall,v 1.4 2003/10/04 10:20:09 jlam Exp $
+# $NetBSD: marshall,v 1.5 2003/10/09 08:19:47 jlam Exp $
 #
 # Handle cases where multiple consecutive arguments must be processed
 # together, either by merging the arguments or "skipping" the extra
@@ -22,6 +22,6 @@ case $arg in
 # transformation.
 #
 -install_name)
-	skip=1
+	skipargs=1
 	;;
 esac
