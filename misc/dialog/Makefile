@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 18:08:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/19 15:53:11 jlam Exp $
 #
 
 DISTNAME=       dialog-0.6z
@@ -8,24 +8,23 @@ MASTER_SITES=   ${MASTER_SITE_SUNSITE:=utils/shell/}
 MAINTAINER=	jlam@netbsd.org
 COMMENT=	Display dialog boxes from shell scripts
 
-NO_CONFIGURE=	# defined
-USE_GMAKE=	# defined
-USE_CURSES=	# defined
+USE_BUILDLINK_ONLY=	# defined
+USE_GMAKE=		# defined
+#USE_CURSES=		# undefined
+
+EGDIR=			${PREFIX}/share/examples/dialog
+EGFILES=		checklist guage infobox inputbox menubox msgbox
+EGFILES+=		radiolist textbox yesno
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dialog
-.for file in checklist guage infobox inputbox menubox msgbox radiolist textbox yesno
-	${SED} "s,\.\./dialog,${PREFIX}/bin/dialog,g" \
-		${WRKSRC}/samples/${file} > ${WRKSRC}/samples/${file}.tmp
-	${INSTALL_SCRIPT} ${WRKSRC}/samples/${file}.tmp \
-		${PREFIX}/share/examples/dialog/${file}
-	${RM} ${WRKSRC}/samples/${file}.tmp
-.endfor
+	${INSTALL_DATA_DIR} ${EGDIR}
+	cd ${WRKSRC}/samples; for file in ${EGFILES}; do		\
+		${MV} $${file} $${file}.tmp;				\
+		${SED} "s|\.\./dialog|${PREFIX}/bin/dialog|g"		\
+			$${file}.tmp > $${file};			\
+		${RM} $${file}.tmp;					\
+		${INSTALL_SCRIPT} $${file} ${EGDIR};			\
+	done
 
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(NEED_NCURSES) && ${NEED_NCURSES} == "YES"
-MAKE_ENV+=	HAVE_TRUE_NCURSES=true
-.endif
-
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
