@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/12 09:30:40 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/12 09:31:24 zuntum Exp $
 
-DISTNAME=	KoboDeluxe-0.4pre8
+DISTNAME=	KoboDeluxe-0.4rc8
 CATEGORIES=	games
 MASTER_SITES=	http://olofson.net/kobodl/download/
 
