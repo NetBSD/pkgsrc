@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/07 03:33:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/12/18 13:59:00 wiz Exp $
 
 DISTNAME=		suse_gtk2-${SUSE_VERSION}
 PKGREVISION=		2
@@ -12,7 +12,7 @@ COMMENT=		Linux compatibility package for GTK2 binaries
 
 DEPENDS+=		suse_fontconfig>=${SUSE_VERSION}:../../emulators/suse91_fontconfig
 DEPENDS+=		suse_freetype2>=${SUSE_VERSION}:../../emulators/suse91_freetype2
-DEPENDS+=		suse_libjpeg>=${SUSE_VERSION}:../../emulators/suse91_libpng
+DEPENDS+=		suse_libjpeg>=${SUSE_VERSION}:../../emulators/suse91_libjpeg
 DEPENDS+=		suse_libpng>=${SUSE_VERSION}:../../emulators/suse91_libpng
 DEPENDS+=		suse_libtiff>=${SUSE_VERSION}:../../emulators/suse91_libtiff
 DEPENDS+=		suse_x11>=${SUSE_VERSION}:../../emulators/suse91_x11
