@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2002/10/25 17:54:55 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/11/09 13:37:19 wiz Exp $
 
-DISTNAME=	reed-4.6
+DISTNAME=	reed-5.4
 CATEGORIES=	misc
 MASTER_SITES=	http://www.sacredchao.net/software/reed/
 
@@ -8,13 +8,25 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.sacredchao.net/software/reed/index.shtml
 COMMENT=	auto-scrolling file viewer
 
-GNU_CONFIGURE=		YES
+CONFIGURE_SCRIPT=	./configures
+CONFIGURE_ARGS+=	-p ${PREFIX}
+HAS_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PERL5=		YES
-REPLACE_PERL=		scripts/breed scripts/wrap
+REPLACE_PERL=		breed fix_bookmarks.pl wrap
 
 # wgetnstr()
 INCOMPAT_CURSES=	NetBSD-1.5-* NetBSD-1.5.*-* NetBSD-1.5[A-U]-*
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/reed ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/breed ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/wrap ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/breed.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/reed.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/wrap.1 ${PREFIX}/man/man1
+	${INSTALL_DATA_DIR} ${PREFIX}/share/reed
+	${INSTALL_DATA} ${WRKSRC}/help ${PREFIX}/share/reed/
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
