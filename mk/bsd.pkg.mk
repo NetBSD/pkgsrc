@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.912 2002/01/23 13:05:51 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.913 2002/01/25 07:16:16 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1474,6 +1474,22 @@ EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} ${DOWNLOADED_DISTFILE}
 .  endif
 .endfor
 
+# _SHELL_EXTRACT is a case statement used to conditionalize the extraction
+# of $${file} based on the file extension.
+#
+_SHELL_EXTRACT=		case $$file in
+.for __suffix__ in ${_EXTRACT_SUFFICES}
+_SHELL_EXTRACT+=							\
+	*${__suffix__})							\
+		{ cd ${WRKDIR} && ${EXTRACT_CMD${__suffix__}}; };	\
+		;;
+.endfor
+_SHELL_EXTRACT+=							\
+	*)								\
+		{ cd ${WRKDIR} && ${_DFLT_EXTRACT_CMD}; };		\
+		;;
+_SHELL_EXTRACT+=	esac;
+
 ${WRKDIR}:
 .if !defined(KEEP_WRKDIR)
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
@@ -1506,25 +1522,9 @@ do-extract: ${WRKDIR}
 	done                                                                    
 .  else
 .    for __file__ in ${EXTRACT_ONLY}
-.      for __suffix__ in ${_EXTRACT_SUFFICES}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -f ${WRKDIR}/.extracted ]; then				\
-		case "${__file__}" in					\
-		*${__suffix__})						\
-			file="${__file__}";				\
-			{ cd ${WRKDIR} && ${EXTRACT_CMD${__suffix__}}; }; \
-			${ECHO} "$$file" > ${WRKDIR}/.extracted;	\
-			;;						\
-		esac;							\
-	fi
-.      endfor	# __suffix__
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -f ${WRKDIR}/.extracted ]; then				\
-		file="${__file__}";					\
-		{ cd ${WRKDIR} && ${_DFLT_EXTRACT_CMD}; };		\
-		${ECHO} "$$file" > ${WRKDIR}/.extracted;		\
-	fi
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR}/.extracted
+	file="${__file__}";						\
+	${_SHELL_EXTRACT}
 .    endfor	# __file__
 .  endif	# defined(EXTRACT_CMD)
 .endif
