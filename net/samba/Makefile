@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1999/11/16 21:01:04 jlam Exp $
+# $NetBSD: Makefile,v 1.30 1999/11/16 21:23:03 jlam Exp $
 
 DISTNAME=	samba-2.0.6
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 STARTUP_SCRIPT=	${PREFIX}/etc/rc.d/samba.sh.sample
-SAMPLE_CONFIG=	${PREFIX}/share/examples/smb.conf.sample
+SAMPLE_CONFIG=	${PREFIX}/share/examples/samba/smb.conf.sample
 SAMBA_LOGDIR=	/var/log
 SAMBA_LOCKDIR=	/var/run/samba
 SAMBA_ETCDIR?=	/etc/samba
@@ -46,6 +46,12 @@ post-install:
 	for file in ${WRKDIR}/${DISTNAME}/docs/textdocs/* ; do \
 		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/samba/textdocs; \
 	done
+
+	${MKDIR} ${PREFIX}/share/examples/samba
+	cd ${WRKDIR}/${DISTNAME}/examples; \
+	${CP} -R * ${PREFIX}/share/examples/samba
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/samba
+	${CHMOD} -R ugo-w ${PREFIX}/share/examples/samba
 
 	${SED}	-e "s:__PREFIX__:${PREFIX}:g" \
 		-e "s:__ECHO__:${ECHO}:g" \
