@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/03/04 17:49:17 tron Exp $
+# $NetBSD: Makefile,v 1.47 2004/04/11 19:05:39 xtraeme Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=    3
@@ -13,8 +13,8 @@ PATCH_SITES=		${HOMEPAGE}
 PATCHFILES=		xmcd-3.0.2-proxyauth-patch
 PATCH_DIST_STRIP=	-p1
 
-WRKSRC=		${WRKDIR}/xmcd-3.0
-USE_BUILDLINK2=		yes
+WRKSRC=			${WRKDIR}/xmcd-3.0
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
@@ -55,8 +55,8 @@ post-install:
 		done;							\
 	fi
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/motif.buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/motif.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
