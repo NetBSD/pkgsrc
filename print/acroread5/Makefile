@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2004/11/07 12:32:04 markd Exp $
+# $NetBSD: Makefile,v 1.24 2004/12/18 17:17:16 jdolecek Exp $
 
 DISTNAME=	acroread5	# Overridden below
-PKGNAME=	acroread5-5.09
+PKGNAME=	acroread5-5.10
 CATEGORIES=	print
 MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/acrobatreader/unix/5.x/
 
@@ -18,7 +18,7 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 LICENSE=	adobe-acrobat-license
 
-WRKSRC=		${WRKDIR}
+WRKSRC=		${WRKDIR}/installers
 CHECK_SHLIBS=	NO
 NO_BUILD=	YES
 SHLIB_HANDLING=	NO
@@ -33,26 +33,26 @@ PLATFORM=	unknown
 .if ${OPSYS} == "NetBSD"
 . if (${MACHINE_ARCH} == "i386")
 DEPENDS=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-DISTNAME=	linux-509
+DISTNAME=	linux-5010
 PLATFORM=	intellinux
 . elif (${MACHINE_ARCH} == "sparc")
 .  if !exists(/emul/svr4/usr/lib/ld.so)
 PKG_FAIL_REASON= '${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 .  endif
-DISTNAME=	solaris-509
+DISTNAME=	solaris-5010
 PLATFORM=	sparcsolaris
 . elif (${MACHINE_ARCH} == "sparc64")
 .  if !exists(/emul/svr4_32/usr/lib/ld.so)
 PKG_FAIL_REASON= '${PKGNAME} requires Solaris libraries - see compat_svr4_32(8)'
 .  endif
-DISTNAME=	solaris-509
+DISTNAME=	solaris-5010
 PLATFORM=	sparcsolaris
 . endif
 .elif ${OPSYS} == "Linux"
-DISTNAME=	linux-509
+DISTNAME=	linux-5010
 PLATFORM=	intellinux
 .elif ${OPSYS} == "SunOS"
-DISTNAME=	solaris-509
+DISTNAME=	solaris-5010
 PLATFORM=	sparcsolaris
 .endif
 
