@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2002/05/16 16:58:05 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2002/10/08 13:22:37 wiz Exp $
 
 DISTNAME=		sawfish-${SF_VERS}
 SF_VERS=		1.0.1
@@ -8,18 +8,18 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sawmill/}
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://sawmill.sourceforge.net/
 
-DEPENDS+=		librep>=0.15.1nb1:../../lang/librep
 DEPENDS+=		rep-gtk>=0.15nb2:../../x11/rep-gtk
 
 USE_X11=		# defined
-
+USE_BUILDLINK2=		# defined
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
 
-FILESDIR=		${.CURDIR}/../../wm/sawfish/files
+DISTINFO_FILE=		${.CURDIR}/../../wm/sawfish/distinfo
 PATCHDIR=		${.CURDIR}/../../wm/sawfish/patches
 
-.include "../../graphics/imlib/buildlink.mk"
-.include "../../x11/controlcenter/buildlink.mk"
+.include "../../graphics/imlib/buildlink2.mk"
+.include "../../lang/librep/buildlink2.mk"
+.include "../../x11/controlcenter/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

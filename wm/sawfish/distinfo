@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2001/10/22 02:34:38 mycroft Exp $
+$NetBSD: distinfo,v 1.5 2002/10/08 13:22:37 wiz Exp $
 
 SHA1 (sawfish-1.0.1.tar.gz) = bd254134da79b66da431f4b61f9fb2f3b2cf378f
 Size (sawfish-1.0.1.tar.gz) = 1326727 bytes
-SHA1 (patch-aa) = 18f4912ef5ae1a5201643b90aaac3f5f0a0c1550
+SHA1 (patch-aa) = 68ebcda2da73b32c245844d7b753e6b68e880647
 SHA1 (patch-ab) = 20ffaa03c787c0edaee2cdeea5855395ebb57fdc
 SHA1 (patch-ac) = 0f9558d5c968074d5ecf76534952478f128c2c29
