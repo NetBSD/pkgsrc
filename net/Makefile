@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.361 2003/03/24 15:26:26 bouyer Exp $
+# $NetBSD: Makefile,v 1.362 2003/03/31 15:55:50 jmmv Exp $
 #
 
 COMMENT=	Networking tools
@@ -125,6 +125,7 @@ SUBDIR+=	lopster
 SUBDIR+=	lukemftp
 SUBDIR+=	md-whois
 SUBDIR+=	mirror
+SUBDIR+=	mldonkey
 SUBDIR+=	mouse-pppoe
 SUBDIR+=	mrstat
 SUBDIR+=	mrt
