@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.197 2004/03/31 15:51:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.198 2004/04/02 07:41:40 rh Exp $
 #
 
 COMMENT=	Miscellaneous utilities
 
 SUBDIR+=	9menu
+SUBDIR+=	Addresses
 SUBDIR+=	JMdict
 SUBDIR+=	XFree86-dirs
 SUBDIR+=	XFree86-docs
