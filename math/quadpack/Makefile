@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/30 01:25:21 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/01 01:51:33 jtb Exp $
 
-DISTNAME=		quadpack-20001129
+DISTNAME=		quadpack-20001130
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -11,12 +11,10 @@ WRKSRC=			${WRKDIR}/quadpack
 USE_LIBTOOL=		YES
 UES_FORTRAN=		YES
 
-FOPTS?=			-O3
-
 .include "../../mk/bsd.prefs.mk"
 
 pre-build:
-	@${SED} -e 's:%%FORTRAN%%:'${FC}':g;s:%%FOPTS%%:'${FOPTS}':g' \
+	@${SED} -e 's:%%FORTRAN%%:'${FC}':g' \
 	< ${FILESDIR}/Makefile > ${WRKSRC}/Makefile
 
 post-install:

@@ -2,7 +2,7 @@ LIB 	= quadpack
 
 LIBDIR	= ${PREFIX}/lib
 FORTRAN = %%FORTRAN%%
-FOPTS	= %%FOPTS%%
+FOPTS	= -O3
 
 all:	lib$(LIB)
 

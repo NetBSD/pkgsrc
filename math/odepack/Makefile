@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2000/11/30 01:37:22 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/01 01:50:44 jtb Exp $
 
-DISTNAME=		odepack-20001129
+DISTNAME=		odepack-20001130
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -10,12 +10,10 @@ WRKSRC=			${WRKDIR}/odepack
 USE_LIBTOOL=		YES
 USE_FORTRAN=		YES
 
-FOPTS?=			-O3
-
 .include "../../mk/bsd.prefs.mk"
 
 pre-build:
-	@${SED} -e 's:%%FORTRAN%%:'${FC}':g;s:%%FOPTS%%:'${FOPTS}':g' \
+	@${SED} -e 's:%%FORTRAN%%:'${FC}':g' \
 	< ${FILESDIR}/Makefile > ${WRKSRC}/Makefile
 
 post-install:
