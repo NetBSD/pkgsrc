@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2003/06/23 20:15:18 jtb Exp $
+$NetBSD: patch-ae,v 1.2 2003/06/29 23:04:19 jtb Exp $
 
 --- asmcomp/sparc/emit.mlp.orig
 +++ asmcomp/sparc/emit.mlp
@@ -16,3 +16,12 @@ $NetBSD: patch-ae,v 1.1 2003/06/23 20:15:18 jtb Exp $
  
  let emit_symbol s =
    if String.length s >= 1 & s.[0] = '.'
+@@ -79,7 +78,7 @@
+ (* Output a label *)
+ 
+ let label_prefix =
+-  if Config.system = "solaris" || Config.system = "linux" then ".L" else "L"
++  if Config.system = "sunos" then "L" else ".L"
+ 
+ let emit_label lbl =
+   emit_string label_prefix; emit_int lbl

@@ -1,47 +1,42 @@
-$NetBSD: patch-ac,v 1.1 2003/06/23 20:15:18 jtb Exp $
+$NetBSD: patch-ac,v 1.2 2003/06/29 23:04:19 jtb Exp $
 
 --- asmrun/signals.c.orig
 +++ asmrun/signals.c
-@@ -52,10 +52,15 @@
-   ((ctx)->__sc_jmpbuf.__jmp_context.__gpr[(regno)])
+@@ -162,6 +162,8 @@
+ void handle_signal(int sig, struct sigcontext * context)
+ #elif defined(TARGET_power) && defined(SYS_rhapsody)
+ void handle_signal(int sig, int code, struct sigcontext * context)
++#elif defined(TARGET_power) && defined(SYS_bsd)
++void handle_signal(int sig, int code, struct sigcontext * context)
  #else
- #define STRUCT_SIGCONTEXT struct sigcontext
-+#ifdef __NetBSD__
-+#define CONTEXT_GPR(ctx, regno) \
-+  ((ctx)->sc_frame.fixreg[(regno)])
-+#else
- #define CONTEXT_GPR(ctx, regno) \
-   ((ctx)->sc_jmpbuf.jmp_context.gpr[(regno)])
+ void handle_signal(int sig)
  #endif
- #endif
-+#endif
- 
- volatile int async_signal_mode = 0;
- volatile int pending_signal = 0;
-@@ -199,8 +204,12 @@
- #endif
- #if defined(TARGET_power) && defined(SYS_elf)
-       /* Cached in register 30 */
-+#ifdef __NetBSD__
-+      context->sc_frame.fixreg[30] = (unsigned long) young_limit;
-+#else
-       context->regs->gpr[30] = (unsigned long) young_limit;
- #endif
-+#endif
- #if defined(TARGET_power) && defined(SYS_rhapsody)
+@@ -205,6 +207,10 @@
        /* Cached in register 30 */
        CONTEXT_GPR(context, 30) = (unsigned long) young_limit;
-@@ -422,8 +431,13 @@
- static void trap_handler(int sig, struct sigcontext * context)
- {
-   /* Recover young_ptr and caml_exception_pointer from registers 31 and 29 */
-+#ifdef __NetBSD__
-+  caml_exception_pointer = (char *) context->sc_frame.fixreg[29];
-+  young_ptr = (char *) context->sc_frame.fixreg[31];
-+#else
-   caml_exception_pointer = (char *) context->regs->gpr[29];
-   young_ptr = (char *) context->regs->gpr[31];
+ #endif
++#if defined(TARGET_power) && defined(SYS_bsd)
++      /* Cached in register 30 */
++      context->sc_frame.fixreg[30] = (unsigned long) young_limit;
 +#endif
-   array_bound_error();
+     }
+   }
+ }
+@@ -443,6 +449,17 @@
  }
  #endif
+ 
++#if defined(TARGET_power) && defined(SYS_bsd)
++static void trap_handler(int sig, int code, struct sigcontext * context)
++{
++  /* Recover young_ptr and caml_exception_pointer from registers 31 and 29 */
++  caml_exception_pointer = (char *) context->sc_frame.fixreg[29];
++  young_ptr = (char *) context->sc_frame.fixreg[31];
++  array_bound_error();
++}
++#endif
++
++
+ /* Machine- and OS-dependent handling of stack overflow */
+ 
+ #ifdef HAS_STACK_OVERFLOW_DETECTION

@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST.opt,v 1.3 2002/08/22 02:56:51 jschauma Exp $
+@comment $NetBSD: PLIST.opt,v 1.4 2003/06/29 23:04:18 jtb Exp $
+bin/camlp4o.opt
+bin/camlp4r.opt
 bin/ocamlc.opt
+bin/ocamldoc.opt
+bin/ocamllex.opt
 bin/ocamlopt
 bin/ocamlopt.opt
 lib/ocaml/arg.cmx
@@ -173,6 +177,9 @@ lib/ocaml/nums.a
 lib/ocaml/nums.cmxa
 lib/ocaml/obj.cmx
 lib/ocaml/obj.p.cmx
+lib/ocaml/ocamldoc/odoc_info.a
+lib/ocaml/ocamldoc/odoc_info.cmxa
+lib/ocaml/ocamldoc/odoc_opt.cmi
 lib/ocaml/oo.cmx
 lib/ocaml/oo.p.cmx
 lib/ocaml/parsing.cmx
