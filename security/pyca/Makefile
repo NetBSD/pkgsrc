@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/11/12 03:39:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/15 18:10:06 drochner Exp $
 
 # Date-based distfile name for pre-releases leading to 0.6.6.
 DISTNAME=	pyca-20031021
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.pyca.de/
 COMMENT=	Administration tools for X.509/PKIX CA
 
 USE_BUILDLINK2=	# defined
-NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
 
 .include "../../mk/bsd.prefs.mk"
@@ -25,11 +24,21 @@ PKG_SYSCONFDIR.openssl?=	/etc/openssl
 .endif
 
 PYTHON_PATCH_SCRIPTS=	bin/*.py cgi-bin/*.py sbin/*.py
-PYTHON_PATCH_SCRIPT_SED= \
+
+PYCA_SCRIPT_FIXUP_SED= \
 	-e "s|/usr/local/pyca/pylib|${PREFIX}/lib/pyca|g"		\
 	-e "s|/etc/openssl/openssl.cnf|${PKG_SYSCONFDIR}/openssl.cnf|g"	\
 	-e "s|/home/.*/openssl.cnf|${PKG_SYSCONFDIR}/openssl.cnf|g"	\
 	-e "s|/home/.*/pylib|${PREFIX}/lib/pyca|g"
+
+pyca-script-fixup:
+	cd ${WRKSRC}; for file in ${PYTHON_PATCH_SCRIPTS}; do \
+		${SED} ${PYCA_SCRIPT_FIXUP_SED} \
+			<$${file} >$${file}.fixed; \
+		${MV} $${file}.fixed $${file}; \
+	done
+
+post-configure: pyca-script-fixup
 
 do-install:
 	cd ${WRKSRC}; for file in bin/*.py; do				\
