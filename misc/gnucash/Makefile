@@ -1,26 +1,32 @@
-# $NetBSD: Makefile,v 1.9 2000/02/28 01:25:13 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2000/05/13 06:21:01 rh Exp $
 #
 
-DISTNAME=       gnucash-1.1.25
+DISTNAME=       gnucash-1.3.7
 CATEGORIES=	misc
-MASTER_SITES=   ftp://ftp.gnucash.org/pub/gnucash/sources/
+MASTER_SITES=   ftp://ftp.gnucash.org/pub/gnucash/sources/unstable/1.3.x/
 
-MAINTAINER=	mellon@isc.org
+MAINTAINER=	drankin@bohemians.lexington.ky.us
 HOMEPAGE=	http://www.gnucash.org/
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	swig-1.1p5:../../devel/swig
+DEPENDS+=	gnome-libs>=1.0.40:../../x11/gnome-libs
+DEPENDS+=	gettext>=0.10.35:../../devel/gettext
 DEPENDS+=	eperl-2.2.14:../../textproc/eperl
-DEPENDS+=	XmHTML-1.1.*:../../x11/XmHTML
-DEPENDS+=	guile-1.3.*:../../lang/guile
 DEPENDS+=	libperl-5.00404:../../lang/libperl
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
+DEPENDS+=	guile-1.3.*:../../lang/guile
+DEPENDS+=	guile-slib-2c7:../../devel/guile-slib
+DEPENDS+=	swig-1.1p5:../../devel/swig
+DEPENDS+=	libxml-1.8.5:../../textproc/libxml
 
 USE_X11=	yes
-USE_MOTIF=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-guile=${LOCALBASE} --with-perl-includes=${LOCALBASE}/lib/perl5/${MACHINE_ARCH}-netbsd/5.00404/CORE
+CONFIGURE_ARGS+= --with-guile-config=${LOCALBASE}/bin/guile-config \
+	--without-motif --without-included-gettext \
+   --with-perl-includes=${LOCALBASE}/lib/perl5/${MACHINE_ARCH}-netbsd/5.00404
+CONFIGURE_ENV+=	"LOCALBASE=${LOCALBASE}"
 USE_GMAKE=	yes
+USE_PERL=	yes
+USE_LIBTOOL=	yes
+
+ALL_TARGET=	gnome
 
 .include "../../mk/bsd.pkg.mk"
