@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/02/14 11:52:11 jtb Exp $
+
+--- pplot.c.orig	Wed Feb 14 09:24:41 2001
++++ pplot.c
+@@ -1,7 +1,7 @@
+ #define DOUBLE
+-#include "plplot.h" 
+-#include <stdio.h> 
+ #include <math.h> 
++#include "plplot/plplot.h" 
++#include <stdio.h> 
+ #include <stdlib.h> 
+ 
+ #define WORD_CHARS "ABCDEFGHIJKLMNOPQRSTUVWXYZ_1234567890abcdefghijklmnopqrstuvwxyz"

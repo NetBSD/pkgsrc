@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/14 11:52:11 jtb Exp $
+
+--- Makefile.build.orig	Fri Sep  3 21:59:31 1999
++++ Makefile.build
+@@ -8,8 +8,7 @@
+ ROOT=
+ 
+ # These flags needed to compile ps.c and ljiip.c driver routines
+-CFLAGS = -O -DSTDC_HEADERS=1 -DPAD_ARRAY=1   -I. -I/usr/lib/yorick/1.4/h \
+-	-I/usr/lib/plplot/include -DDOUBLE
++CFLAGS = -O -DSTDC_HEADERS=1 -DPAD_ARRAY=1   -I. -DDOUBLE
+ 
+ ##############################################
+ 
+@@ -46,7 +45,7 @@
+ 	"Nameclash! must get rid of Makefile so this can work"; false ; fi
+ 	yorick -batch make.i yplotl yplotl.i
+ 	mv -f Makefile Makefile_yplotl
+-	make -f Makefile_yplotl
++	make -f Makefile_yplotl PKG_LIBS="`plplot_linkage` -lyorm"
+ 
+ ##############################################
+ 
+@@ -64,7 +63,7 @@
+ 	"Nameclash! must get rid of Makefile so this can work"; false ; fi
+ 	yorick -batch make.i yplot yplot.i
+ 	mv -f Makefile Makefile_yplot
+-	make -f Makefile_yplot
++	make -f Makefile_yplot PKG_LIBS="`plplot_linkage` -lyorm"
+ 
+ # generate doc/yplot.doc using local yplot and mkdoc
+ doc/yplot.doc: yplot yplot_doc.csh
