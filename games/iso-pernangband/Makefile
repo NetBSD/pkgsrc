@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/17 21:51:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2001/10/18 23:32:27 hubertf Exp $
 #
 
 DISTNAME=		iso-pern_src-0_2_6
@@ -25,8 +25,8 @@ post-patch:
 	# change keymap to match isometric view, much more convenient
 	${CP}	${WRKSRC}/../lib/user/pref-sdl.prf \
 		${WRKSRC}/../lib/user/pref-sdl.prf.orig
-	${SED}	-e 's,1$,2,' -e 's,2$,3,' -e 's,3$,6,' -e 's,4$,1,' \
-		-e 's,6$,9,' -e 's,7$,4,' -e 's,8$,7,' -e 's,9$,8,' \
+	${SED}	-e 's,1$$,2,' -e 's,2$$,3,' -e 's,3$$,6,' -e 's,4$$,1,' \
+		-e 's,6$$,9,' -e 's,7$$,4,' -e 's,8$$,7,' -e 's,9$$,8,' \
 		<${WRKSRC}/../lib/user/pref-sdl.prf.orig \
 		>${WRKSRC}/../lib/user/pref-sdl.prf
 
