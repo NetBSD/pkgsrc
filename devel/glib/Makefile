@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2001/06/18 21:34:02 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2001/06/19 06:03:25 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -34,5 +34,23 @@ CFLAGS=		-O0
 .if (${OPSYS} != SunOS)
 .include "../../devel/pth/buildlink.mk"
 .endif
+
+GLIB_VERSION=		${PKGNAME:S/glib-//}
+
+# We patch the version info in the configure scripts for reasons related to
+# shared library numbering, but we don't want it to leak into the various
+# installed files.  Explicitly replace the version number with the correct
+# one derived from the package name.
+#
+pre-configure:
+	@cd ${WRKSRC};							\
+	files="glib-config.in docs/glib-config.1.in glib.pc.in gmodule.pc.in gthread.pc.in"; \
+	for file in $${files}; do					\
+		${MV} -f $${file} $${file}.fixme;			\
+		${SED}	-e "s|@GLIB_VERSION@|${GLIB_VERSION}|g"		\
+			-e "s|@VERSION@|${GLIB_VERSION}|g"		\
+			$${file}.fixme > $${file};			\
+		${RM} $${file}.fixme;					\
+	done
 
 .include "../../mk/bsd.pkg.mk"
