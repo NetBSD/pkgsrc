@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.11 2000/06/21 22:43:17 hubertf Exp $
+# $NetBSD: url2pkg,v 1.12 2000/06/22 00:13:41 wiz Exp $
 #
 # url2pkg
 # (c) 1999 Hubert Feyrer
@@ -133,6 +133,12 @@ echo ""
 echo "Contents of "`echo w*`"/${wrksrc}:"
 ls -la w*/$wrksrc
 
+if [ ! -f pkg/COMMENT ]; then
+	touch pkg/COMMENT
+fi
+if [ ! -f pkg/DESCR ]; then
+	touch pkg/DESCR
+fi
 echo ""
 echo "Don't forget to fill in pkg/COMMENT and pkg/DESCR when you're done."
 echo ""
