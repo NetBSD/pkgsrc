@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2003/09/19 17:23:16 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/09/22 21:55:55 recht Exp $
 #
 
 DISTNAME=	xft-2.1.2
 PKGNAME=	Xft2-2.1.2
+PKGREVISION=	1
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://x2.freedesktop.org/Software/fontconfig/releases/
 
@@ -22,6 +23,7 @@ USE_GMAKE=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		awk
 
+PKGCONFIG_OVERRIDE=	${WRKSRC}/xft.pc.in
 #LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 MAKE_ENV+=		EGREP=${EGREP}
 
