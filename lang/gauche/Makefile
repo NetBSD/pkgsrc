@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.18 2003/09/17 16:52:10 yyamano Exp $
+# $NetBSD: Makefile,v 1.19 2004/03/29 09:34:26 kei Exp $
 #
 
-DISTNAME=	Gauche-0.6.3
-PKGREVISION=	3
+DISTNAME=	Gauche-0.7.4.2
+PKGREVISION=	#
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gauche/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minoura@NetBSD.org
 HOMEPAGE=	http://www.shiro.dreamhost.com/scheme/gauche/index.html
-COMMENT=	R5RS Scheme implementation developed to be a handy script interpreter
+COMMENT=	R5RS Scheme implementation aimed to be a handy tool for daily works
 
-# devel/boehm-gc cannot be used because Gauche requires PIC version
-#DEPENDS+=	boehm-gc-[0-9]*:../../devel/boehm-gc
 DEPENDS+=	slib-[0-9]*:../../devel/slib
 
 # Due to GC dynamic loading support, this package runs on limited platforms
@@ -46,6 +44,7 @@ CONFIGURE_ARGS+=	--enable-multibyte=${GAUCHE_MULTIBYTE}
 .if ${OPSYS} == "Darwin"
 .  include "../../devel/dlcompat/buildlink2.mk"
 .endif
+.include "../../devel/boehm-gc/buildlink2.mk"
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 

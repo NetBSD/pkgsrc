@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.3 2004/03/29 09:34:27 kei Exp $
+
+--- Makefile.in.orig	2004-03-29 08:52:23.000000000 +0900
++++ Makefile.in	2004-03-29 08:52:42.000000000 +0900
+@@ -13,8 +13,8 @@
+ srcdir      = @srcdir@
+ datadir     = @datadir@
+ 
+-SUBDIRS = gc src lib ext doc
+-SRIDBUS = doc ext lib src gc
++SUBDIRS = src lib ext doc
++SRIDBUS = doc ext lib src
+ MKINSTDIR = @top_srcdir@/mkinstalldirs
+ INSTALL = @INSTALL@
+ GAUCHE_VERSION  = @GAUCHE_VERSION@
+@@ -22,7 +22,7 @@
+ DESTDIR =
+ 
+ CONFIG_GENERATED = Makefile config.cache config.log config.status libtool \
+-	           configure.lineno autom4* gc/autom4*
++	           configure.lineno autom4*
+ AUTOCONF_GENERATED = $(CONFIG_GENERATED) configure
+ 
+ all:
+@@ -64,7 +64,7 @@
+ 
+ maintainer-clean: clean
+ 	for d in $(SRIDBUS); do (cd $$d; $(MAKE) maintainer-clean); done
+-	rm -rf $(AUTOCONF_GENERATED) VERSION INSTALL INSTALL.eucjp DIST_EXCLUDE_X gc/configure
++	rm -rf $(AUTOCONF_GENERATED) VERSION INSTALL INSTALL.eucjp DIST_EXCLUDE_X
+ 
+ dist:
+ 	@echo "To create a distribution tarball, use DIST script."
