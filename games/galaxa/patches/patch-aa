@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:40 agc Exp $
+$NetBSD: patch-aa,v 1.3 1998/08/23 07:18:30 garbled Exp $
 
 --- makefile.orig	Wed Apr 22 22:41:21 1998
 +++ makefile	Fri Jul 24 04:39:58 1998
@@ -20,8 +20,8 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:40:40 agc Exp $
  
 -# XLIB=-L /usr/X11R6/lib -lX11 -lcompat
 -# CFLAGS=-I/usr/X11/include
-+XLIB=	-R$(INSTALLROOT)/lib -L$(INSTALLROOT)/lib -lX11 #-lcompat
-+CFLAGS=	-I$(INSTALLROOT)/include $(DIRS)
++XLIB=	-Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -lX11 #-lcompat
++CFLAGS=	-I$(X11BASE)/include $(DIRS)
  
 @@ -41,3 +46,3 @@
  galaxa:	$(OBJECTS)
