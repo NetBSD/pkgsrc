@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/04 02:14:44 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/31 12:42:43 dmcmahill Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
@@ -18,22 +18,21 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	pcb-[0-9]*
 
-SNAPDATE=	20040215
+SNAPDATE=	20040530
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	lex make
 USE_X11=	yes
 USE_BUILDLINK3=	yes
 
-EVAL_PREFIX+=   BISONDIR=bison
-YACC=		${BISONDIR}/bin/bison
-
 INFO_FILES=	pcb.info
 
 .include "../../mk/bsd.prefs.mk"
 
-EVAL_PREFIX+=   TKDIR=tk
+EVAL_PREFIX+=   BISONDIR=bison
 EVAL_PREFIX+=   M4DIR=m4
+EVAL_PREFIX+=   TKDIR=tk
 M4=${M4DIR}/bin/${GNU_PROGRAM_PREFIX}m4
+YACC=		${BISONDIR}/bin/bison
 CONFIGURE_ENV+=	WISH=${TKDIR}/bin/wish
 
 .if ${XAW_TYPE} == "xpm"
