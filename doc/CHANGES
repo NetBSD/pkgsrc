@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3426 2003/09/17 15:17:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.3427 2003/09/17 15:51:06 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3750,3 +3750,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added catdoc-tk-0.91.4 [jmmv 2003-09-17]
 	Updated xbindkeys to 1.5.5nb1 [jmmv 2003-09-17]
 	Added xbindkeys-tk-1.5.5 [jmmv 2003-09-17]
+	Updated vera to 1.11 [hubertf 2003-09-17]

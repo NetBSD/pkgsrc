@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/03 08:26:22 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/09/17 15:51:12 hubertf Exp $
 info/vera.info
 info/vera.info-1
 info/vera.info-2
@@ -11,3 +11,7 @@ info/vera.info-8
 info/vera.info-9
 info/vera.info-10
 info/vera.info-11
+info/vera.info-12
+info/vera.info-13
+info/vera.info-14
+info/vera.info-15
