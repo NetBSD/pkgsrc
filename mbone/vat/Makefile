@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/01/26 22:14:18 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2000/01/26 22:16:47 jlam Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -30,9 +30,6 @@ INSTALL_TARGET=		install install-man
 
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
-
-post-install:
-	@strip ${PREFIX}/bin/vat
 
 pre-clean:
 	@cd ${GSM_DIR}; ${MAKE} clean
