@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/04 00:00:53 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/11 05:51:53 xtraeme Exp $
 #
 
 DISTNAME=		imlib2-1.1.0
@@ -11,9 +11,9 @@ HOMEPAGE=		http://www.enlightenment.org/pages/imlib2.html
 COMMENT=		Image manipulation library
 
 GNU_CONFIGURE=		YES
-USE_X11BASE=		YES
+USE_X11=		YES
 USE_LIBTOOL=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/imlib2.pc.in
@@ -27,10 +27,10 @@ CONFIGURE_ARGS+=	--enable-mmx
 .endif
 BUILD_DEFS+=		USE_MMX
 
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/libungif/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
