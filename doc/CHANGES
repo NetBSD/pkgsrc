@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7852 2004/11/14 16:49:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.7853 2004/11/14 17:02:35 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5271,3 +5271,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnats to 4.0.1 [soren 2004-11-14]
 	Updated p5-DBIx-SearchBuilder to 1.01nb1 [seb 2004-11-14]
 	Updated gmime to 2.1.9 [jmmv 2004-11-14]
+	Updated balsa2 to 2.2.5 [jmmv 2004-11-14]
