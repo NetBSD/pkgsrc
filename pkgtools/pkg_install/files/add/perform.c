@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.19 2004/04/09 18:38:12 tv Exp $	*/
+/*	$NetBSD: perform.c,v 1.20 2004/04/11 06:56:11 rh Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.44 1997/10/13 15:03:46 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.19 2004/04/09 18:38:12 tv Exp $");
+__RCSID("$NetBSD: perform.c,v 1.20 2004/04/11 06:56:11 rh Exp $");
 #endif
 #endif
 
@@ -50,6 +50,9 @@ __RCSID("$NetBSD: perform.c,v 1.19 2004/04/09 18:38:12 tv Exp $");
 #endif
 #if HAVE_STRING_H
 #include <string.h>
+#endif
+#if HAVE_STDLIB_H
+#include <stdlib.h>
 #endif
 #if HAVE_SYS_UTSNAME_H
 #include <sys/utsname.h>
@@ -321,6 +324,23 @@ pkg_do(const char *pkg)
 			    host_uname.release);
 		}
 		if (!Force && (osbad >= 2)) {
+			    warnx("aborting.");
+			    goto bomb;
+		}
+	}
+
+	/* Check if IGNORE_RECOMMENDED was set when this package was built. */
+
+	if (buildinfo[BI_IGNORE_RECOMMENDED] != NULL &&
+	    strcasecmp(buildinfo[BI_IGNORE_RECOMMENDED], "NO") != 0) {
+		warnx("Package `%s' has", pkg);
+		warnx("IGNORE_RECOMMENDED set: This package was built with");
+		warnx("dependency recommendations ignored.  It may have been");
+		warnx("built against a set of installed packages that is");
+		warnx("different from the recommended set of pre-requisites.");
+		warnx("As a cconsequence, this package may not work on this");
+		warnx("or other systems with a different set of packages.");
+		if (!Force && !getenv("PKG_IGNORE_RECOMMENDED")) {
 			    warnx("aborting.");
 			    goto bomb;
 		}
@@ -966,7 +986,10 @@ read_buildinfo(char **buildinfo)
 		if (line[0] == ' ')
 			line += sizeof(char);
 
-		/* we only care about opsys, arch and version */
+		/*
+		 * we only care about opsys, arch, version, and
+		 * dependency recommendations
+		 */
 		if (line[0] != '\0') {
 			if (strcmp(key, "OPSYS") == 0)
 			    buildinfo[BI_OPSYS] = strdup(line);
@@ -974,6 +997,8 @@ read_buildinfo(char **buildinfo)
 			    buildinfo[BI_OS_VERSION] = strdup(line);
 			else if (strcmp(key, "MACHINE_ARCH") == 0)
 			    buildinfo[BI_MACHINE_ARCH] = strdup(line);
+			else if (strcmp(key, "IGNORE_RECOMMENDED") == 0)
+			    buildinfo[BI_IGNORE_RECOMMENDED] = strdup(line);
 		}
 	}
 	if (buildinfo[BI_OPSYS] == NULL ||
