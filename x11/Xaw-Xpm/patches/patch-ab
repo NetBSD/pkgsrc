@@ -1,0 +1,39 @@
+--- Imakefile.orig	Sun Nov 10 04:29:35 1996
++++ Imakefile	Fri Apr 24 12:42:34 1998
+@@ -7,7 +7,7 @@
+ #define HasSharedData YES
+ #define LibName Xaw3d
+ #define SoRev SOXAWREV
+-#define IncSubdir Xaw3d
++#define IncSubdir X11/Xaw3d
+ 
+ #ifdef LinuxArchitecture
+ AWIDGET3DSRC = .
+@@ -35,7 +35,7 @@
+ #endif
+ 
+ #ifdef SharedXawReqs
+-REQUIREDLIBS = SharedXawReqs -lXpm
++REQUIREDLIBS = SharedXawReqs -L${PREFIX}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -lXpm
+ #endif
+ 
+ DEFINES = XawI18nDefines
+@@ -46,7 +46,8 @@
+ XCOMM -DSUN_AUDIO enables /dev/audio style widget action sounds.
+ XCOMM
+ 
+-EXTRA_DEFINES = -I. -DARROW_SCROLLBAR -DUSEGRAY -DSUN_AUDIO
++EXTRA_DEFINES = -DARROW_SCROLLBAR -DUSEGRAY -DSUN_AUDIO
++EXTRA_INCLUDES = -I.
+ 
+ HEADERS = \
+ 	AllWidgets.h \
+@@ -225,7 +226,7 @@
+ 
+ #include <Library.tmpl>
+ 
+-CDEBUGFLAGS = -O2 -m486 -Wall
++CDEBUGFLAGS = -O2 -Wall
+ 
+ #ifdef LexCmd
+ LEX=LexCmd
