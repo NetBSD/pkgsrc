@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2000/06/25 11:50:35 pooka Exp $
+# $NetBSD: Makefile.common,v 1.4 2000/06/25 12:10:12 pooka Exp $
 
 VIM_VERSION=		5.7
 
@@ -7,7 +7,7 @@ CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
 			ftp://ftp.nuxi.com/pub/vim/unix/ \
 			ftp://ftp.fu-berlin.de/misc/editors/vim/unix/ \
-			ftp://ftp.twics.co.jp/pub/vim/unix
+			ftp://ftp.twics.co.jp/pub/vim/unix/
 DISTFILES=		${DISTNAME}-src${EXTRACT_SUFX}
 
 MAINTAINER=		pooka@netbsd.org
