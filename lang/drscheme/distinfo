@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2001/09/05 21:30:36 groo Exp $
+$NetBSD: distinfo,v 1.4 2001/10/05 01:22:08 groo Exp $
 
-SHA1 (plt.src.x.tar.gz) = 3b05035d5dc77f5b9ca0f4e2157eb7bb69458396
-Size (plt.src.x.tar.gz) = 4744453 bytes
+SHA1 (drscheme/103p1/plt.src.x.tar.gz) = 3b05035d5dc77f5b9ca0f4e2157eb7bb69458396
+Size (drscheme/103p1/plt.src.x.tar.gz) = 4744453 bytes
 SHA1 (patch-aa) = 3964a50f7aae3c9b1ea551307b1892da3afd2b7c
 SHA1 (patch-ac) = eb690d4ff07e5e2cf336e7b05de9b027dfce5531
 SHA1 (patch-ae) = 14847f1fc4f9168381ae66eb529add4fd94fd362
