@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/11/05 20:55:48 wiz Exp $
+
+--- libvisual/lv_mem.h.orig	2004-09-06 17:10:52.000000000 +0200
++++ libvisual/lv_mem.h
+@@ -8,7 +8,7 @@ extern "C" {
+ #endif /* __cplusplus */
+ 
+ #if defined(__GNUC__) && !defined(VISUAL_OS_WIN32)
+-void *visual_mem_malloc0 (visual_size_t nbytes) __attribute_malloc__;
++void *visual_mem_malloc0 (visual_size_t nbytes);
+ #else
+ void *visual_mem_malloc0 (visual_size_t nbytes);
+ #endif /* __GNUC__ */
