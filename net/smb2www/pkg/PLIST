@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/18 04:52:34 hubertf Exp $
+libexec/smb2www/bin/smbclient
+libexec/smb2www/cgi-bin/smb2www.pl
+libexec/smb2www/cgi-bin/smb2www.pm
+libexec/smb2www/cgi-bin/smbdir.pl
+libexec/smb2www/cgi-bin/smbfile.pl
+libexec/smb2www/cgi-bin/smbgrp.pl
+libexec/smb2www/cgi-bin/smbhelp.pl
+libexec/smb2www/cgi-bin/smbmsg.pl
+libexec/smb2www/cgi-bin/smbshr.pl
+libexec/smb2www/cgi-bin/smbtar.pl
+libexec/smb2www/etc/dutch.lang
+libexec/smb2www/etc/dutch_help.lang
+libexec/smb2www/etc/english.lang
+libexec/smb2www/etc/english_help.lang
+libexec/smb2www/etc/finnish.lang
+libexec/smb2www/etc/finnish_help.lang
+libexec/smb2www/etc/smb2www.conf
+libexec/smb2www/images/archive.gif
+libexec/smb2www/images/cloud.gif
+libexec/smb2www/images/computer.gif
+libexec/smb2www/images/file.gif
+libexec/smb2www/images/folder.gif
+libexec/smb2www/images/group.gif
+libexec/smb2www/images/help.gif
+libexec/smb2www/images/message.gif
+libexec/smb2www/images/network.gif
+libexec/smb2www/images/printer.gif
+libexec/smb2www/images/search.gif
+libexec/smb2www/images/share.gif
+libexec/smb2www/images/world.gif
+@dirrm libexec/smb2www/images
+@dirrm libexec/smb2www/etc
+@dirrm libexec/smb2www/cgi-bin
+@dirrm libexec/smb2www/bin
+@dirrm libexec/smb2www
