@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/23 15:48:21 agc Exp $
+# $NetBSD: Makefile,v 1.5 2001/12/02 14:47:13 tron Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/player-/}
@@ -8,8 +8,9 @@ DEPENDS+=	libflash-[0-9]*:${COMMONDIR}
 
 COMMENT=	standalone open source flash(tm) player
 
-PATCHDIR=	${.CURDIR}/${COMMONDIR}/patches
+DISTINFO_FILE=	${.CURDIR}/${COMMONDIR}/distinfo
 FILESDIR=	${.CURDIR}/${COMMONDIR}/files
+PATCHDIR=	${.CURDIR}/${COMMONDIR}/patches
 
 do-build:
 		cd ${WRKSRC}/Player && ${SETENV} ${MAKE_ENV} ${MAKE}
