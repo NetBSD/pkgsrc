@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:19:46 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/05 19:51:18 jlam Exp $
 #
 
 DISTNAME=	scotty-2.1.10
@@ -10,7 +10,7 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://wwwhome.cs.utwente.nl/~schoenw/scotty/
 COMMENT=	graphical network discovery and monitoring tool based on scotty
 
-DEPENDS+=	tk-8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	tcl-scotty-2.1.10:../../net/tcl-scotty
 
 GNU_CONFIGURE=  yes

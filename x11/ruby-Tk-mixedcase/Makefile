@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/25 04:18:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/05/05 19:51:20 jlam Exp $
 # FreeBSD Id: ports/x11-toolkits/rubytk/Makefile,v 1.3 1999/08/31 02:59:34 peter Exp
 
 DISTNAME=	ruby-1.4.6
@@ -17,7 +17,7 @@ HOMEPAGE=	http://www.ruby-lang.org/
 COMMENT=	Ruby interface to Tcl/Tk libraries
 
 DEPENDS+=	ruby-1.4.*:../../lang/ruby
-DEPENDS+=	tk-8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 TCL_LIB=	tcl83
 TK_LIB=		tk83

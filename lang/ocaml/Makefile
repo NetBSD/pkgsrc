@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 09:07:23 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/05 19:51:15 jlam Exp $
 #
 
 DISTNAME=		ocaml-3.00
@@ -9,7 +9,7 @@ MAINTAINER=		groo@netbsd.org
 HOMEPAGE=		http://caml.inria.fr/ocaml/
 COMMENT=		the latest implementation of the Caml dialect of ML
 
-DEPENDS+=		tk-8.3.2:../../x11/tk
+DEPENDS+=		tk>=8.3.2:../../x11/tk
 
 USE_GMAKE=		yes
 HAS_CONFIGURE=		yes
