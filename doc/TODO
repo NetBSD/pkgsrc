@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2228 2004/10/19 11:31:52 wiz Exp $
+$NetBSD: TODO,v 1.2229 2004/10/19 16:46:54 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -248,7 +248,7 @@ Suggested package updates
 	o elk-3.99.6
 	o elm-me-2.4pl121
 	o erlang-r10b
-	o ettercap-0.7.1
+	o ettercap-0.7.1 [wip/ettercap-NG|adrianp]
 	o evolution-2.0.0
 	o feh-1.2.7
 	o festival-1.4.3
@@ -314,7 +314,7 @@ Suggested package updates
 	o libcddb-0.9.6
 	o libidn-0.5.8
 	o libmpeg3-1.5.4
-	o libnet-1.1.2.1
+	o libnet-1.1.2.1 [wip/libnet11|adrianp]
 	o libnids-1.19
 	o libole2-2.2.8
 	o libsigc++-2.0.3
