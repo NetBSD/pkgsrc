@@ -19,11 +19,11 @@
  
  gqmpeg: $(OBJS)
 -	$(CC) $(OBJS) -o gqmpeg $(LDFLAGS)
-+	$(CC) $(OBJS) -o gqmpeg $(LDFLAGS) -lossaudio
++	$(CC) $(OBJS) -o gqmpeg $(LDFLAGS) 
  
  static: $(OBJS)
 -	$(CC) $(OBJS) -o gqmpeg.static -static $(LDFLAGS)
-+	$(CC) $(OBJS) -o gqmpeg.static -static $(LDFLAGS) -lossaudio
++	$(CC) $(OBJS) -o gqmpeg.static -static $(LDFLAGS)
  
  install: gqmpeg
  	install -c gqmpeg $(PREFIX)/bin/gqmpeg
