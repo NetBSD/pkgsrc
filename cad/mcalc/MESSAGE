@@ -1,0 +1,11 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2001/11/15 03:10:45 dmcmahill Exp $
+
+${PKGNAME} has been installed in ${PREFIX}/${MCALCBASE}
+To access ${PKGNAME} point your favorite JavaScript capable web
+broswer to ${PREFIX}/${MCALCBASE}/index.html
+
+To make this available via a running httpd server, you must either
+map the directory ${PREFIX}/${MCALCBASE} or copy the contents
+of that directory to one used by your httpd server.
+======================================================================
