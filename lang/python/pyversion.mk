@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.17 2002/11/23 00:54:44 schmonz Exp $
+# $NetBSD: pyversion.mk,v 1.18 2002/12/23 14:11:36 wiz Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -103,8 +103,6 @@ PYVERSSUFFIX=	2p2
 PYPKGPREFIX=	py22pth
 .  if defined(USE_BUILDLINK2)
 .    include "../../devel/pth/buildlink2.mk"
-.  else
-.    include "../../devel/pth/buildlink.mk"
 .  endif
 .elif ${_PYTHON_VERSION} == "21"
 PYPKGSRCDIR=	../../lang/python21
@@ -120,8 +118,6 @@ PYVERSSUFFIX=	2p1
 PYPKGPREFIX=	py21pth
 .  if defined(USE_BUILDLINK2)
 .    include "../../devel/pth/buildlink2.mk"
-.  else
-.    include "../../devel/pth/buildlink.mk"
 .  endif
 .elif ${_PYTHON_VERSION} == "20"
 PYPKGSRCDIR=	../../lang/python20
