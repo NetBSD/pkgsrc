@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2001/12/17 07:10:15 tron Exp $
+# $NetBSD: Makefile,v 1.60 2002/01/03 00:08:35 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.56.1
+DISTNAME=		xmame-0.56.2
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://roms.mame.dk/emu/ \
 			http://x.mame.net/download/
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		kristerw@netbsd.org
 HOMEPAGE=		http://x.mame.net/
-COMMENT=		X11 emulator for old arcade and console machines
+COMMENT=		X11 emulator for old arcade machines
 
 RESTRICTED=		"selling is not allowed"
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -25,6 +25,7 @@ TARGET=			${PKGBASE}
 ROMPATH=		${PREFIX}/share/${TARGET}
 SPOOLDIR=		/var/games/${TARGET}
 
+MAKE_FLAGS+=		TARGET="${TARGET:S/x//}"
 MAKE_FLAGS+=		CC="${CC}"
 MAKE_FLAGS+=		LIBS="${LDFLAGS} ${LIBS}"
 MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
@@ -106,7 +107,7 @@ post-configure:
 	cd ${WRKSRC}/doc;						\
 	${SED}	-e "s|@ROMPATH@|${ROMPATH}|g"				\
 		-e "s|@SPOOLDIR@|${SPOOLDIR}|g"				\
-		${TARGET}rc.dist > ${TARGET}rc
+		xmamerc.dist > ${TARGET}rc
 .if ${MAKE_FLAGS:M*USB*} != ""
 	${LN} -fs /usr/include/usb.h ${BUILDLINK_DIR}/include
 	for FILE in /usr/lib/libusb*; do				\
@@ -117,7 +118,7 @@ post-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${TARGET}.${MAME_DISP_METHOD}	\
 		${PREFIX}/bin/${TARGET}
-	${INSTALL_MAN} ${WRKSRC}/doc/${TARGET}.6			\
+	${INSTALL_MAN} ${WRKSRC}/doc/xmame.6				\
 		${PREFIX}/man/man6/${TARGET}.6
 	${INSTALL_DATA_DIR} ${ROMPATH}
 	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
