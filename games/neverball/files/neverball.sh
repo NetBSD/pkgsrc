@@ -1,6 +1,6 @@
 # !/bin/sh
 #
-# $NetBSD: neverball.sh,v 1.1.1.1 2004/04/18 05:02:55 xtraeme Exp $
+# $NetBSD: neverball.sh,v 1.2 2004/04/18 05:09:28 xtraeme Exp $
 
 progname=$(basename $0)
 
@@ -10,7 +10,7 @@ usage()
 Usage: ${progname} -x [game]
 
 There are two games to play, \`neverball' and \`neverputt',
-you can choose any of them via -c flag, i.e:
+you can choose any of them via -x flag, i.e:
 
     ${progname} -x ball
     ${progname} -x putt
