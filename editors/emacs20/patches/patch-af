@@ -1,0 +1,47 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/04/11 00:31:45 uebayasi Exp $
+
+--- src/Makefile.in.orig	Thu Jan 16 19:08:48 2003
++++ src/Makefile.in
+@@ -329,7 +329,7 @@
+ #ifdef USE_X_TOOLKIT
+ #define @X_TOOLKIT_TYPE@
+ #if defined (LUCID) || defined (ATHENA)
+-LIBW= -lXaw
++LIBW= -lXaw @LIBXPM@
+ #endif
+ #ifdef MOTIF
+ #if defined (HAVE_MOTIF_2_1) && defined (HAVE_LIBXP)
+@@ -402,7 +402,7 @@
+    ask GCC explicitly where to find libgcc.a.  */
+ 
+ #ifndef LINKER
+-#define LINKER $(CC) -nostdlib
++#define LINKER $(CC) -nostartfiles
+ #endif
+ 
+ #ifndef LIB_GCC
+@@ -457,7 +457,7 @@
+ #endif /* not ORDINARY_LINK */
+ 
+ ALL_LDFLAGS = LD_SWITCH_SYSTEM LD_SWITCH_SYSTEM_TEMACS LD_SWITCH_MACHINE \
+-	 LD_SWITCH_MACHINE_TEMACS LD_SWITCH_SITE $(LDFLAGS)
++	 LD_SWITCH_MACHINE_TEMACS LD_SWITCH_SITE
+ 
+ /* A macro which other sections of Makefile can redefine to munge the
+    flags before they're passed to LD.  This is helpful if you have
+@@ -804,14 +804,7 @@
+ #define OBJECTS_MACHINE
+ #endif
+ 
+-all: emacs bytecomp OTHER_FILES
+-
+-bytecomp: emacs
+-	./emacs -batch -q -f batch-byte-compile \
+-	${lispsource}ange-ftp.el ${lispsource}international/ccl.el \
+-	${lispsource}international/mule-cmds.el \
+-	${lispsource}international/mule.el \
+-	${lispsource}international/titdic-cnv.el
++all: emacs OTHER_FILES
+ 
+ emacs: temacs ${etc}DOC ${lisp}
+ #ifdef CANNOT_DUMP
