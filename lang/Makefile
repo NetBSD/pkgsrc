@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/10/15 13:20:23 agc Exp $
+# $NetBSD: Makefile,v 1.20 1998/12/02 02:43:17 tv Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -28,6 +28,7 @@
     SUBDIR += jdk
     SUBDIR += kaffe
 #    SUBDIR += lcc
+    SUBDIR += libperl
 #    SUBDIR += logo
     SUBDIR += mawk
 #    SUBDIR += mit-scheme
