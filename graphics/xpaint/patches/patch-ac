@@ -1,0 +1,12 @@
+--- ./misc.h.org	Tue Jun 25 01:50:41 1996
++++ ./misc.h	Tue Mar 25 18:20:30 1997
+@@ -23,7 +23,9 @@
+ 
+ #ifndef linux
+ #if defined(BSD4_4) || defined(HPArchitecture) || defined(SGIArchitecture) || defined(_AIX)
++#if !defined(__FreeBSD__)
+ void srandom(unsigned int);
++#endif
+ #else
+ int srandom(unsigned int);
+ #endif	/* BSD4_4 */
