@@ -1,0 +1,7 @@
+# $NetBSD: xfree.xpm,v 1.1 2003/09/02 07:14:49 jlam Exp $
+#
+include/X11/xpm.h
+lib/libXpm.a
+lib/libXpm.so
+lib/libXpm.so.4
+lib/libXpm.so.4.11
