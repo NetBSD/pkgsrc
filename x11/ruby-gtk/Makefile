@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.14 2002/03/13 17:38:04 fredb Exp $
+# $NetBSD: Makefile,v 1.15 2002/03/21 04:23:38 fredb Exp $
 # FreeBSD: ports/x11-toolkits/ruby-gtk/Makefile,v 1.16 2000/10/15 15:45:59 knu Exp
 
 DISTNAME=	ruby-gtk-0.25
 PKGNAME=	${RUBY_PKGNAMEPREFIX}gtk-0.25
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.ruby-lang.org/gtk/download/
 
 MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://www.ruby-lang.org/gtk/en/
 COMMENT=	Ruby interface to Gtk+ toolkits
+
+DEPENDS+=	lang/ruby-base>=1.6.7nb1:../../lang/ruby-base
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/ruby-//}
 
