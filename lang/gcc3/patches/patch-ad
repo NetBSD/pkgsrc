@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2003/05/24 18:38:59 jschauma Exp $
+
+--- gcc/java/Make-lang.in.orig	Sat May 24 13:53:25 2003
++++ gcc/java/Make-lang.in	Sat May 24 13:53:47 2003
+@@ -207,8 +207,8 @@
+ 	  else true; fi; \
+ 	else true; fi
+ 	-if [ -f jc1$(exeext) ] && [ -f $(DESTDIR)$(infodir)/gcj.info ]; then \
+-	  if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
+-	    install-info --dir-file=$(DESTDIR)$(infodir)/dir $(DESTDIR)$(infodir)/gcj.info; \
++	  if $(SHELL) -c '${INSTALL_INFO} --version' >/dev/null 2>&1; then \
++	    ${INSTALL_INFO} --dir-file=$(DESTDIR)$(infodir)/dir $(DESTDIR)$(infodir)/gcj.info; \
+ 	  else true; fi; \
+ 	else true; fi
+ 
