@@ -1,0 +1,19 @@
+
+
+-lm
+clock_t
+
+cc
+@CFLAGS@
+-I${PREFIX}/include -I${URTDIR}/include
+
+${URTDIR}
+${PREFIX}/lib/librle.a
+drand48
+11
+${PREFIX}/bin
+/usr/bin/mkdep
+yacc
+
+y
+
