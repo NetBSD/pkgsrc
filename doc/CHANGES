@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.77 2002/09/27 02:03:55 schmonz Exp $
+$NetBSD: CHANGES,v 1.78 2002/09/27 09:46:10 shell Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2986,3 +2986,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated bash to 2.05nb2 [jlam 2002-09-26]
 	Added bash-doc-2.05 [jlam 2002-09-26]
 	Updated cvs2p4 to 2.3.2 [schmonz 2002-09-27]
+	Updated p5-Net-SSLeay to 1.20 [shell 2002-09-27]
+	Updated p5-IO-Socket-SSL to 0.91 [shell 2002-09-27]
+	Updated p5-SSLeay to 0.45 [shell 2002-09-27]
+	Updated p5-URI to 1.22 [shell 2002-09-27]
