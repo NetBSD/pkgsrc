@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.20 1998/07/31 14:56:46 tv Exp $
+# $NetBSD: mk.conf.example,v 1.21 1998/08/12 02:54:30 tv Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection
@@ -16,6 +16,10 @@ MANZ=		1		# gzip manual pages at installation time
 #LOCALBASE=	/usr/local	# Where non-X-based packages will be installed
                                 # Possible: any path
                                 # Default: /usr/pkg
+
+#CROSSBASE=	/usr/pkg/cross	# Where "cross" category packages install
+                                # Possible: any path
+                                # Default: ${LOCALBASE}/cross
 
 #X11BASE=	/usr/X11R6	# Where X11 is installed on the system
                                 # (and the default install path of X11 pkgs)
