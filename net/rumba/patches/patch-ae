@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.3 2000/12/28 01:35:43 wiz Exp $
+
+--- nfs/Makefile.orig	Wed Dec 31 01:29:08 1997
++++ nfs/Makefile
+@@ -16,13 +16,13 @@
+ 
+ all: nfs.o
+ 
+-COMPILE = $(CC) $(ARCH) -c $(INCLUDES) $(CFLAGS)
++COMPILE = $(CC) -c $(INCLUDES) $(CFLAGS)
+ 
+ .c.o:
+ 	$(COMPILE) $<
+ 
+ nfs.o: $(OFILES)
+-	$(LD) $(ARCH) -r -o $@ $(OFILES)
++	$(LD) -r -o $@ $(OFILES)
+ 
+ # the purpose of the sed "s/char data/long long data/" hack is to ensure
+ # proper alignment. [Marc Boucher <marc@CAM.ORG>]
