@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/09/13 09:48:48 itojun Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/11/13 01:53:40 itojun Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -6,6 +6,9 @@ bin/nslookup
 bin/nsupdate
 etc/rc.d/lwresd
 etc/rc.d/named9
+include/bind9/check.h
+include/bind9/getaddresses.h
+include/bind9/version.h
 include/dns/a6.h
 include/dns/acl.h
 include/dns/adb.h
@@ -159,7 +162,9 @@ include/isccc/types.h
 include/isccc/util.h
 include/isccc/version.h
 include/isccfg/cfg.h
+include/isccfg/grammar.h
 include/isccfg/log.h
+include/isccfg/namedconf.h
 include/isccfg/version.h
 include/lwres/context.h
 include/lwres/int.h
@@ -218,6 +223,7 @@ sbin/rndc-confgen
 @dirrm include/isc
 @dirrm include/dst
 @dirrm include/dns
+@dirrm include/bind9
 man/man1/dig.1
 man/man1/host.1
 man/man3/lwres.3
