@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/07 08:13:55 hamajima Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/23 04:41:00 jlam Exp $
 #
 
 DISTNAME=	cnxtutil-0.00-alpha
@@ -10,7 +10,7 @@ MAINTAINER=	hamajima@NetBSD.org
 HOMEPAGE=	http://www2.starcat.ne.jp/~takam/bsd/NetBSD.html#webcamnote
 COMMENT=	Creative WEBCAM Notebook Utility Programs
 
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		yes
 
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"

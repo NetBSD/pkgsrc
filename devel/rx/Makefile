@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/02/22 16:48:11 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/23 04:41:00 jlam Exp $
 
 DISTNAME=	rx-1.5
 CATEGORIES=	devel
@@ -9,7 +9,7 @@ MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/rx/rx.html
 COMMENT=	Fast replacement for the GNU regex library
 
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 USE_LIBTOOL=	# defined
 GNU_CONFIGURE=	# defined
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/21 08:19:57 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/23 04:41:00 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/10/10 06:53:29 obrien Exp
 
 DISTNAME=	lrzsz-0.12.20
@@ -11,7 +11,7 @@ COMMENT=	Receive/Send files via X/Y/ZMODEM protocol.  (unrestrictive)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-catgets

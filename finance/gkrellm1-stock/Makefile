@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/18 15:33:21 cube Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/23 04:41:00 jlam Exp $
 
 DISTNAME=	gkrellstock-0.2
 PKGNAME=	gkrellm-stock-0.2
@@ -13,7 +13,7 @@ COMMENT=	gkrellm stock ticker plugin
 DEPENDS+=       p5-finance-quote-1.*:../../finance/p5-finance-quote
 
 WRKSRC=		${WRKDIR}/gkrellStock-0.2
-USE_BUILDLINK3=	# defined
+USE_BUILDLINK3=	yes
 USE_PERL5=	# defined
 
 do-configure:
