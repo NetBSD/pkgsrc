@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4887 2004/02/17 19:55:54 minskim Exp $
+$NetBSD: CHANGES,v 1.4888 2004/02/17 20:40:41 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -898,3 +898,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libxslt to 1.1.3 [jmmv 2004-02-17]
 	Updated realplayer to 8.0.1nb1 [wiz 2004-02-17]
 	Added py-xmms-2.02 [minskim 2004-02-17]
+	Updated blender to 2.32 [jschauma 2004-02-17]
