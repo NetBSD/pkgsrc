@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2002/11/04 09:54:30 seb Exp $
+# $NetBSD: Makefile,v 1.35 2002/11/04 13:48:35 seb Exp $
 
 DISTNAME=		cyrus-imapd-2.0.16
-PKGREVISION=		2
+PKGREVISION=		3
 SVR4_PKGNAME=		cimap
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
@@ -13,6 +13,7 @@ COMMENT=		Cyrus IMAP server
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
+AUTOCONF_REQD=		2.13
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -96,6 +97,11 @@ post-patch:
 		${MV} -f $${file}.fixed $${file};			\
 	done
 
+pre-configure:
+	cd ${WRKSRC};							\
+	${AUTOHEADER};							\
+	${AUTOCONF}
+
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${PREFIX}/cyrus/bin
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -109,5 +115,6 @@ post-install:
 .include "../../security/cyrus-sasl/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
