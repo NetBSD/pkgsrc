@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/08/07 11:48:47 fredb Exp $
+# $NetBSD: Makefile,v 1.15 2000/08/07 17:24:23 fredb Exp $
 #
 
 DISTNAME=		lynx2.8.4dev.7
@@ -7,6 +7,7 @@ CATEGORIES=		www
 MASTER_SITES=		http://lynx.isc.org/current/ \
 			http://lynx.isc.org/po/ \
 			http://www.iro.umontreal.ca/contrib/po/teams/PO/
+EXTRACT_SUFX=		.tar.bz2		# For dependence on bzip2
 DISTFILES+=		lynx2.8.4dev.7.tar.bz2
 DISTFILES+=		lynx-2.8.3.rel1.cs.po
 DISTFILES+=		lynx-2.8.4.da.po
@@ -30,6 +31,7 @@ RESTRICTED=		"Crypto, export-controlled"
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
+EXTRACT_ONLY=		${DISTFILES:M*.tar.bz2}
 WRKSRC=			${WRKDIR}/lynx2-8-4
 
 GNU_CONFIGURE=		yes
@@ -66,14 +68,14 @@ CONFIGURE_ARGS+=	--enable-prettysrc
 CONFIGURE_ARGS+=	--enable-read-eta
 
 post-extract:
-	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.cs.po ${WRKSRC}/po/cs.po
-	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.de.po ${WRKSRC}/po/de.po
-	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.ja.po ${WRKSRC}/po/ja.po
-	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.nl.po ${WRKSRC}/po/nl.po
-	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.pt_BR.po ${WRKSRC}/po/pt_BR.po
-	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.ru.po ${WRKSRC}/po/ru.po
-	@${CP} ${DISTDIR}/lynx-2.8.3.rel1.sl.po ${WRKSRC}/po/sl.po
-	@${CP} ${DISTDIR}/lynx-2.8.4.da.po ${WRKSRC}/po/da.po
+	${CP} ${DISTDIR}/lynx-2.8.3.rel1.cs.po ${WRKSRC}/po/cs.po
+	${CP} ${DISTDIR}/lynx-2.8.4.da.po ${WRKSRC}/po/da.po
+	${CP} ${DISTDIR}/lynx-2.8.3.rel1.de.po ${WRKSRC}/po/de.po
+	${CP} ${DISTDIR}/lynx-2.8.3.rel1.ja.po ${WRKSRC}/po/ja.po
+	${CP} ${DISTDIR}/lynx-2.8.3.rel1.nl.po ${WRKSRC}/po/nl.po
+	${CP} ${DISTDIR}/lynx-2.8.3.rel1.pt_BR.po ${WRKSRC}/po/pt_BR.po
+	${CP} ${DISTDIR}/lynx-2.8.3.rel1.ru.po ${WRKSRC}/po/ru.po
+	${CP} ${DISTDIR}/lynx-2.8.3.rel1.sl.po ${WRKSRC}/po/sl.po
 
 post-configure:
 	(${ECHO}; \
