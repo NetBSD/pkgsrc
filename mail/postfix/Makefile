@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2004/04/13 06:29:43 martti Exp $
+# $NetBSD: Makefile,v 1.127 2004/04/14 04:28:38 minskim Exp $
 
 DISTNAME=	postfix-2.0.19
 CATEGORIES=	mail
@@ -81,9 +81,9 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
 		-lldap -llber
 .if ${OPSYS} != "Linux"
 .include "../../databases/db4/buildlink3.mk"
-CCARGS+=	-I${BUILDLINK_PREFIX.db}/include/db4
-AUXLIBS+=	-L${BUILDLINK_PREFIX.db}/lib                    \
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db}/lib     \
+CCARGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
+AUXLIBS+=	-L${BUILDLINK_PREFIX.db4}/lib                    \
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db4}/lib     \
 		-ldb4
 .endif
 .endif
@@ -219,9 +219,9 @@ do-install:
 
 .if ${OPSYS} == "Linux"
 .include "../../databases/db/buildlink3.mk"
-CCARGS+=	-I${BUILDLINK_PREFIX.db}/include/db2
-AUXLIBS+=	-L${BUILDLINK_PREFIX.db}/lib                    \
-		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db}/lib     \
+CCARGS+=	-I${BUILDLINK_PREFIX.db2}/include/db2
+AUXLIBS+=	-L${BUILDLINK_PREFIX.db2}/lib                    \
+		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.db2}/lib     \
 		-ldb2
 .endif
 
