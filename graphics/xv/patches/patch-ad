@@ -1,7 +1,6 @@
-$NetBSD: patch-ad,v 1.4 1998/08/07 10:40:56 agc Exp $
-
---- ./Imakefile.org	Fri Jan 13 12:24:01 1995
-+++ ./Imakefile	Wed Jul  5 03:32:57 1995
+$NetBSD: patch-ad,v 1.5 1998/09/12 17:48:56 garbled Exp $
+--- Imakefile.orig	Wed Sep  9 09:33:20 1998
++++ Imakefile	Sat Sep 12 10:09:26 1998
 @@ -6,13 +6,15 @@
  /* if, for whatever reason, you're unable to get the JPEG library to compile
   * on your machine, *COMMENT OUT* the following line
@@ -44,14 +43,14 @@ $NetBSD: patch-ad,v 1.4 1998/08/07 10:40:56 agc Exp $
  
 +#ifdef UseInstalledTiff
 +TIFF = -DDOTIFF
-+LIBTIFF = -L$(LOCALBASE)/lib -ltiff
++LIBTIFF = -L$(LOCALBASE)/lib -ltiff -ljpeg -lz
 +TIFFINCLUDE = -I$(LOCALBASE)/include
 +#endif
 +
  #ifdef HavePDS
  PDS = -DDOPDS
  #endif
-@@ -142,8 +158,8 @@
+@@ -141,8 +157,8 @@
  #endif
  
  
