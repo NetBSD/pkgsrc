@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2002/08/25 21:52:11 jlam Exp $
+$NetBSD: distinfo,v 1.6 2002/11/05 13:13:04 martti Exp $
 
-SHA1 (gateway-1.2.0.tar.gz) = f81fdfca26be69de8505550a076fb3628f477af2
-Size (gateway-1.2.0.tar.gz) = 2094749 bytes
+SHA1 (gateway-1.2.1.tar.gz) = 023bdf8ab9e769ef76872d4010af6bbd0da4c5ba
+Size (gateway-1.2.1.tar.gz) = 2134160 bytes
 SHA1 (patch-aa) = 5982f3ddffe19910aa433b7c47c734f18387bf0e
 SHA1 (patch-ab) = df965c5d3bf3751c46d1650eb3f8e2adcfb66277
