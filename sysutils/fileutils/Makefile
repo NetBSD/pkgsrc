@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/02/26 19:47:43 tron Exp $
+# $NetBSD: Makefile,v 1.14 2001/12/19 00:14:31 seb Exp $
 
 DISTNAME=		fileutils-4.0
 CATEGORIES=		sysutils
@@ -12,5 +12,9 @@ USE_GTEXINFO=		yes
 NO_PATCH=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--program-prefix=g
+
+post-configure:
+	@${TOUCH} ${WRKSRC}/m4/Makefile.am ${WRKSRC}/m4/Makefile.in \
+		${WRKSRC}/m4/Makefile
 
 .include "../../mk/bsd.pkg.mk"
