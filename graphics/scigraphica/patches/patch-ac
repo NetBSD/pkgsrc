@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2001/07/11 10:39:10 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2002/01/24 19:24:04 wiz Exp $
 
---- zvt/subshell.c.orig	Tue Jul 10 16:53:42 2001
-+++ zvt/subshell.c	Tue Jul 10 16:54:32 2001
+--- zvt/subshell.c.orig	Tue Nov 20 22:41:43 2001
++++ zvt/subshell.c
 @@ -242,6 +242,7 @@
  }
  #endif
@@ -19,7 +19,7 @@ $NetBSD: patch-ac,v 1.1 2001/07/11 10:39:10 drochner Exp $
  
  static struct termios*
  init_term_with_defaults(struct termios* term)
-@@ -423,18 +424,15 @@
+@@ -423,20 +424,17 @@
  static void *
  get_ptys (int *master, int *slave, int update_wutmp)
  {
@@ -29,8 +29,10 @@ $NetBSD: patch-ac,v 1.1 2001/07/11 10:39:10 drochner Exp $
  	struct termios term;	
 -        char *term_name;
  
+ /*
  //	*master = receive_fd (helper_socket_fdpassing [0]);
  //	*slave  = receive_fd (helper_socket_fdpassing [0]);
+ */
  
 -        term_name = ((char *) alloca (path_max())) + 1;
  	init_term_with_defaults(&term);

@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2001/07/11 10:39:10 drochner Exp $
+$NetBSD: patch-ab,v 1.3 2002/01/24 19:24:04 wiz Exp $
 
---- src/Makefile.in.orig	Mon Jul  2 23:02:06 2001
-+++ src/Makefile.in	Tue Jul 10 13:52:18 2001
-@@ -151,7 +151,7 @@
+--- src/Makefile.in.orig	Fri Nov 30 18:03:38 2001
++++ src/Makefile.in
+@@ -161,7 +161,7 @@
  
  DEFS = @DEFS@ -I. -I$(srcdir) -I..
  CPPFLAGS = @CPPFLAGS@
 -LDFLAGS = @LDFLAGS@
 +LDFLAGS = @LDFLAGS@ -export-dynamic
- sga_OBJECTS =  gtkpixmapmenuitem.o sg.o sg_arrange_dialog.o \
- sg_axis_dialog.o sg_clipboard.o sg_column_dialog.o sg_dataset.o \
- sg_dataset_dialog.o sg_dialogs.o sg_edit_function_dialog.o \
+ scigraphica_OBJECTS =  gtkpixmapmenuitem.$(OBJEXT) gtkplotart.$(OBJEXT) \
+ gtkplotgnome.$(OBJEXT) sg.$(OBJEXT) sg_arrange_dialog.$(OBJEXT) \
+ sg_axis_dialog.$(OBJEXT) sg_clipboard.$(OBJEXT) \

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2002/01/19 16:06:40 drochner Exp $
+$NetBSD: distinfo,v 1.6 2002/01/24 19:24:04 wiz Exp $
 
-SHA1 (sg-0.7.0.tar.gz) = 2b5e07f4e6aacfbf6ca51f3f54e96debe8ed1f42
-Size (sg-0.7.0.tar.gz) = 677749 bytes
-SHA1 (patch-aa) = f63d16069f94d3c8f9f803edac256410cfe2d677
-SHA1 (patch-ab) = a8b55efd65d773785247c1c798fdcd1925ae0385
-SHA1 (patch-ac) = 603070a4dbdd2d98f94786408218d056eff9b8f4
+SHA1 (scigraphica-0.8.0.tar.gz) = 7a3b932f4e5de39bbf815c0e5629005e3c209421
+Size (scigraphica-0.8.0.tar.gz) = 841199 bytes
+SHA1 (patch-aa) = 5cd12c4adaa496bafc6bb68c57575a4e35d3913a
+SHA1 (patch-ab) = f96a2bf4d9ac22e9ec9c467b010f9f9cf4a642d5
+SHA1 (patch-ac) = c105e7f5ac410bbce44df667594b70cfdba825af
