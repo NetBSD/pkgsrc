@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/05/22 21:30:31 agc Exp $
+$NetBSD: distinfo,v 1.2 2002/08/25 19:22:51 jlam Exp $
 
 SHA1 (libart_lgpl-2.3.8.tar.bz2) = f87fe20d8135a5778112aea28698f6022a779a06
 Size (libart_lgpl-2.3.8.tar.bz2) = 205615 bytes

@@ -1,4 +1,4 @@
-$NetBSD: patch-df,v 1.4 2002/08/21 16:00:13 skrll Exp $
+$NetBSD: patch-df,v 1.5 2002/08/25 19:23:45 jlam Exp $
 
 --- ksysguard/ksysguardd/FreeBSD/netdev.c.orig	Wed Aug 21 17:39:19 2002
 +++ ksysguard/ksysguardd/FreeBSD/netdev.c

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/08/21 11:05:28 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/08/25 19:22:33 jlam Exp $
 #
 
 DISTNAME=	libusb-0.1.6a

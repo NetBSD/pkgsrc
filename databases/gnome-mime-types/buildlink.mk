@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/05/12 01:09:02 rh Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/08/25 19:22:07 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gnome-mime-data.
 #

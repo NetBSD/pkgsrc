@@ -1,4 +1,4 @@
-$NetBSD: patch-be,v 1.1.1.1 2002/05/31 13:18:59 skrll Exp $
+$NetBSD: patch-be,v 1.2 2002/08/25 19:23:38 jlam Exp $
 
 --- kdesktop/main.cc.orig	Wed May  8 19:21:24 2002
 +++ kdesktop/main.cc

@@ -1,4 +1,4 @@
-$NetBSD: patch-cb,v 1.1.1.1 2002/05/31 13:19:01 skrll Exp $
+$NetBSD: patch-cb,v 1.2 2002/08/25 19:23:40 jlam Exp $
 
 --- klipper/main.cpp.orig	Wed Feb 20 21:50:04 2002
 +++ klipper/main.cpp

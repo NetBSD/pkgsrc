@@ -1,4 +1,4 @@
-$NetBSD: patch-bl,v 1.1.1.1 2002/05/31 13:16:47 skrll Exp $
+$NetBSD: patch-bl,v 1.2 2002/08/25 19:23:54 jlam Exp $
 
 --- kioslave/file/file.cc.orig	Thu Feb 28 14:50:26 2002
 +++ kioslave/file/file.cc

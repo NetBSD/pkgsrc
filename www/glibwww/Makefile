@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/07/15 14:46:15 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/25 19:23:25 jlam Exp $
 #
 
 DISTNAME=		glibwww-0.2

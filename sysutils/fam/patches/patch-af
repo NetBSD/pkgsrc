@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2002/05/12 10:25:48 rh Exp $
+$NetBSD: patch-af,v 1.2 2002/08/25 19:23:21 jlam Exp $
 
 --- fam/FileSystemTable.c++.orig	Tue Dec 18 11:03:37 2001
 +++ fam/FileSystemTable.c++

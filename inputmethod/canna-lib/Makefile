@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/21 02:43:45 grant Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/25 19:22:55 jlam Exp $
 #
 
 DISTNAME=	Canna35b2
