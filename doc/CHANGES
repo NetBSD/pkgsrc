@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3712 2003/10/19 09:26:17 agc Exp $
+$NetBSD: CHANGES,v 1.3713 2003/10/19 10:24:05 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4225,3 +4225,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated adzap to 20031018 [kleink 2003-10-18]
 	Updated cpuflags to 0.58 [rh 2003-10-19]
 	Updated xbattbar to 1.4.2nb3 [agc 2003-10-19]
+	Updated squidGuard to 1.2.0nb2 [jmmv 2003-10-19]
