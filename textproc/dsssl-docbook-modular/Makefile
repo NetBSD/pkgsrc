@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/07/30 17:04:04 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/21 10:52:05 jlam Exp $
 # FreeBSD Id: Makefile,v 1.17 1999/04/24 09:25:32 kuriyama Exp
 
 DISTNAME=	db157
@@ -18,6 +18,7 @@ EXTRACT_CMD=	unzip ${DOWNLOADED_DISTFILE}
 NO_MTREE=	yes
 WRKSRC=		${WRKDIR}/docbook
 
+USE_BUILDINK2=	# defined
 INSTDIR=	${PREFIX}/share/sgml/docbook/dsssl/modular
 
 do-build:
