@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/08/21 21:01:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2000/09/05 08:47:38 rh Exp $
 
 DISTNAME=	LLNLPython4
 PKGNAME=	py-Numeric-1.3
@@ -29,5 +29,9 @@ post-install:
 	${INSTALL_DATA} *.py *.pyc *.pyo ${PREFIX}/lib/python1.5/site-packages)
 	@${MKDIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/Doc/*.html ${DOCDIR}
+.for incs in arrayobject.h f2c.h fftpack.h ranlib.h ufuncobject.h
+	${INSTALL_DATA} ${WRKSRC}/Include/${incs} \
+		${PREFIX}/include/python1.5
+.endfor
 
 .include "../../mk/bsd.pkg.mk"

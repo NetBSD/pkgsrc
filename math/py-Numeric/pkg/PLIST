@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 1998/04/27 08:03:43 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/09/05 08:47:38 rh Exp $
+include/python1.5/arrayobject.h
+include/python1.5/f2c.h
+include/python1.5/fftpack.h
+include/python1.5/ranlib.h
+include/python1.5/ufuncobject.h
 lib/python1.5/site-packages/_numpymodule.so
 lib/python1.5/site-packages/fast_umathmodule.so
 lib/python1.5/site-packages/fftpack.so
