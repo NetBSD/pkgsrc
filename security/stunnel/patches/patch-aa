@@ -1,31 +1,35 @@
-$NetBSD: patch-aa,v 1.6 2000/12/19 07:03:22 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2001/01/22 13:30:36 martin Exp $
 
---- Makefile.in.orig	Sat Oct 21 10:02:03 2000
-+++ Makefile.in
+--- Makefile.in.orig	Tue Dec 19 19:42:46 2000
++++ Makefile.in	Mon Jan 22 13:59:59 2001
 @@ -9,7 +9,7 @@
  sbindir=@sbindir@
  libdir=@libdir@
  man8dir=@mandir@/man8
 -piddir=@localstatedir@/stunnel/
-+piddir=/var/run
++piddir=/var/run/
  ssldir=@ssldir@
  PEM_DIR=@PEM_DIR@
  @SET_MAKE@
-@@ -20,11 +20,11 @@
+@@ -20,7 +20,7 @@
  CFLAGS=@CFLAGS@ @DEFS@ -Dlibdir=\"$(libdir)\" -DPIDDIR=\"$(piddir)\"
  LIBS=@LIBS@
  OBJS=stunnel.o ssl.o protocol.o sthreads.o pty.o log.o
 -DESTFILES=$(sbindir)/stunnel $(libdir)/stunnel.so $(man8dir)/stunnel.8  $(PEM_DIR)/stunnel.pem
 +DESTFILES=$(sbindir)/stunnel $(libdir)/stunnel.so $(man8dir)/stunnel.8
  
+ WINGCC=i386-mingw32msvc-gcc 
+ WINCFLAGS=-O2 -Wall -DUSE_WIN32 -DHAVE_OPENSSL -I../openssl-0.9.6/outinc
+@@ -29,7 +29,7 @@
+ 
  # standard external rules
  
--all: stunnel stunnel.so stunnel.pem
-+all: stunnel stunnel.so
+-all: stunnel stunnel.8 stunnel.html stunnel.so stunnel.pem
++all: stunnel stunnel.8 stunnel.html stunnel.so
  
  install: all installdirs $(DESTFILES)
  
-@@ -52,7 +52,6 @@
+@@ -57,7 +57,6 @@
  
  installdirs: mkinstalldirs
  	./mkinstalldirs $(sbindir) $(libdir) $(man8dir) $(PEM_DIR) $(piddir)
