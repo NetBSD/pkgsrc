@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/01/10 07:45:43 cjep Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/29 23:14:10 grant Exp $
 
 DISTNAME=	lyx-${LYX_VERS}
 PKGNAME=	cjk-${DISTNAME}
@@ -27,7 +27,7 @@ USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 USE_PERL5=		yes
 USE_X11=		yes
-USE_CXX=		yes
+USE_GCC_SHLIB=		yes
 GNU_CONFIGURE=		yes
 
 USE_LIBTOOL=		yes
@@ -36,7 +36,6 @@ LIBTOOL_OVERRIDE+=	${WRKSRC}/sigc++/libtool
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
-.include "../../lang/gcc/buildlink2.mk"
 .include "../../x11/xforms/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

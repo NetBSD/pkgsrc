@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/03/09 19:28:19 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/29 23:14:12 grant Exp $
 #
 
 DISTNAME=		xplanet-0.93
@@ -11,7 +11,7 @@ HOMEPAGE=		http://xplanet.sourceforge.net/
 COMMENT=		Rotating rendered map of the Earth in X11 root window
 
 USE_BUILDLINK2=		yes
-USE_CXX=		yes
+USE_GCC_SHLIB=		yes
 USE_X11=		yes
 USE_GMAKE=		yes
 

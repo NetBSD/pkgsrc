@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/05/28 13:24:35 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/29 23:14:12 grant Exp $
 
 .if !defined(GCC3_BUILDLINK2_MK)
 GCC3_BUILDLINK2_MK=	# defined
@@ -9,10 +9,10 @@ GCC_REQD?=			3.3
 BUILDLINK_DEPENDS.gcc?=		gcc3>=${GCC_REQD}
 BUILDLINK_PKGSRCDIR.gcc?=	../../lang/gcc3
 
-# Packages that use the C++ compiler and subsequently link against the
-# shared libstdc++ from the package need a full dependency.
+# Packages that link against gcc shared libraries need a full
+# dependency.
 #
-.if defined(USE_CXX)
+.if defined(USE_GCC_SHLIB)
 BUILDLINK_DEPMETHOD.gcc+=	full
 .else
 BUILDLINK_DEPMETHOD.gcc?=	build
@@ -57,7 +57,7 @@ CXX=		${_GCC_PREFIX}bin/g++
 F77=		${_GCC_PREFIX}bin/g77
 PKG_FC=		${F77}
 
-.  if defined(USE_CXX)
+.  if defined(USE_GCC_SHLIB)
 LDFLAGS+=		${BUILDLINK_LDFLAGS.gcc}
 .  endif
 BUILDLINK_WRAPPER_ENV+=	\
