@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/04/03 14:47:16 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2001/06/29 19:53:21 jlam Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -12,31 +12,33 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	Display tool for PDF files
 
-DEPENDS+=	freetype-lib-1.3.1:../../graphics/freetype
 DEPENDS+=	ghostscript-fonts-*:../../fonts/ghostscript-fonts
-DEPENDS+=	t1lib>=1.0.1:../../textproc/t1lib
 
 CONFLICTS=	xpdf-crypto-*
 
-USE_X11BASE=	YES
-USE_XPM=	YES
-GNU_CONFIGURE=	YES
+USE_BUILDLINK_ONLY=	YES
+USE_X11BASE=		YES
+GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=--enable-japanese --enable-chinese
-CONFIGURE_ARGS+=--with-freetype-includes=${LOCALBASE}/include
-CONFIGURE_ARGS+=--with-t1-includes=${X11PREFIX}/include
-CONFIGURE_ENV+=	CXXFLAGS="${CXXFLAGS}"
-MAKE_ENV+=	SED="${SED}" ECHO="${ECHO}"
-
-post-install:
-	${SED} 's|@@LOCALBASE@@|${LOCALBASE}|' \
-		< ${FILESDIR}/xpdf-app-defaults \
-		> ${X11PREFIX}/lib/X11/app-defaults/Xpdf
+CONFIGURE_ARGS+=	--enable-japanese
+CONFIGURE_ARGS+=	--enable-chinese
+CONFIGURE_ARGS+=	--with-freetype-includes=${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+=	--with-t1-includes=${BUILDLINK_DIR}/include
+CONFIGURE_ENV+=		CXXFLAGS="${CXXFLAGS}"
+MAKE_ENV+=		SED="${SED}" ECHO="${ECHO}"
 
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
-CONFIGURE_ARGS+= --enable-a4-paper
+CONFIGURE_ARGS+=	--enable-a4-paper
 .endif
 
+post-install:
+	${SED}	-e "s|@@LOCALBASE@@|${LOCALBASE}|g"			\
+		${FILESDIR}/xpdf-app-defaults				\
+		> ${X11PREFIX}/lib/X11/app-defaults/Xpdf
+
+.include "../../graphics/freetype-lib/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../textproc/t1lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
