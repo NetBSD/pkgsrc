@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/15 21:46:26 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/07 13:41:34 seb Exp $
 # FreeBSD Id: ports/devel/avr-binutils/Makefile,v 1.9 2003/03/07 06:00:08 ade Exp
 
 DISTNAME=		binutils-2.13.2.1
@@ -10,14 +10,24 @@ MAINTAINER=		karlj@mdstud.chalmers.se
 COMMENT=		GNU binutils for Atmel AVR 8-bit RISC microcontrollers
 
 USE_BZIP2=		yes
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
-CONFIGURE_ARGS=		--target=avr --prefix=${PREFIX}
-USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-HAS_CONFIGURE=		yes
-LIBTOOLFILES=		configure bfd/configure binutils/configure \
-			etc/configure gas/configure gprof/configure \
-			intl/configure ld/configure libiberty/configure \
-			opcodes/configure
+USE_MAKEINFO=		YES
+USE_NEW_TEXINFO=	YES
+
+CONFIGURE_ARGS=		--target=avr
+
+INFO_FILES=		as.info binutils.info ld.info
+
+# Prevent the need to run texi2pod.pl and pod2man hence
+# the need for perl as build dependency.
+post-configure:
+	cd ${WRKSRC};						\
+	for f in ld/ldver.texi ld/ld.1 gas/doc/gasver.texi	\
+	  gas/doc/as.1; do					\
+		${TOUCH} $${f};					\
+	done
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/15 21:46:26 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/07 13:41:35 seb Exp $
 avr/bin/ar
 avr/bin/as
 avr/bin/ld
@@ -99,9 +99,6 @@ man/man1/avr-windres.1
 man/man1/avr-c++filt.1
 man/man1/avr-as.1
 man/man1/avr-ld.1
-@unexec install-info --delete %D/info/as.info %D/info/dir
-@unexec install-info --delete %D/info/binutils.info %D/info/dir
-@unexec install-info --delete %D/info/ld.info %D/info/dir
 info/as.info
 info/as.info-1
 info/as.info-10
@@ -125,9 +122,6 @@ info/ld.info-3
 info/ld.info-4
 info/ld.info-5
 info/ld.info-6
-@exec install-info %D/info/as.info %D/info/dir
-@exec install-info %D/info/binutils.info %D/info/dir
-@exec install-info %D/info/ld.info %D/info/dir
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/binutils.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/binutils.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gas.mo
