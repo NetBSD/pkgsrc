@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3035 2003/08/13 07:28:08 itojun Exp $
+$NetBSD: CHANGES,v 1.3036 2003/08/13 13:26:26 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3260,3 +3260,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sun-jre14 to 2.0 [jschauma 2003-08-13]
 	Updated sun-jdk14 to 2.0 [jschauma 2003-08-13]
 	Added quagga-0.96 [itojun 2003-08-13]
+	Updated lsof to 4.68nb1 [atatat 2003-08-13]
