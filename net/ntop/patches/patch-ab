@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 1998/08/07 22:42:29 kim Exp $
+$NetBSD: patch-ab,v 1.2 1998/08/08 21:28:32 kim Exp $
 
 --- ntop.h.orig	Fri Jul 31 12:31:45 1998
-+++ ntop.h	Fri Aug  7 18:07:14 1998
-@@ -16,7 +16,13 @@
++++ ntop.h	Sat Aug  8 17:19:25 1998
+@@ -16,9 +16,16 @@
  #endif
  
  #include <errno.h>
@@ -16,8 +16,11 @@ $NetBSD: patch-ab,v 1.1 1998/08/07 22:42:29 kim Exp $
 +#endif
  #include <ctype.h>
  #include <sys/types.h>
++#include <sys/param.h>
  #include <unistd.h>
-@@ -38,7 +44,6 @@
+ #include <sys/socket.h>
+ #include <sys/select.h>
+@@ -38,7 +45,6 @@
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
