@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9442 2005/03/06 15:47:14 minskim Exp $
+$NetBSD: CHANGES,v 1.9443 2005/03/06 16:49:45 chris Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1297,3 +1297,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated imap-uw-utils to 20050108 [adrianp 2005-03-06]
 	Updated sylpheed to 1.0.3 [chris 2005-03-06]
 	Updated flim to 1.14.7 [minsskim 2005-03-06]
+	Updated sylpheed-claws to 1.0.1 [chris 2005-03-06]
+	Updated sylpheed-claws-dillo-viewer to 1.0.1 [chris 2005-03-06]
+	Updated sylpheed-claws-image-viewer to 1.0.1 [chris 2005-03-06]
+	Updated sylpheed-claws-trayicon to 1.0.1 [chris 2005-03-06]
