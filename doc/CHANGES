@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1956 2003/04/17 04:57:54 uebayasi Exp $
+$NetBSD: CHANGES,v 1.1957 2003/04/17 06:01:49 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1629,3 +1629,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated Mule-UCS to 0.84nb3 [kei 2003-04-16]
 	Updated Mule-UCS to 0.84nb4 [uebayasi 2003-04-17]
 	Updated flim to 1.14.5nb2 [uebayasi 2003-04-17]
+	Updated tc to 2.3 [uebayasi 2003-04-17]
