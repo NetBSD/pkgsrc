@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2003/03/13 17:08:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.59 2003/03/18 22:59:52 jschauma Exp $
 
 DISTNAME=	wget-1.8.2
 CATEGORIES=	net
@@ -30,9 +30,9 @@ WGET_USE_SSL?=		YES
 .if ${WGET_USE_SSL} == YES
 .include "../../security/openssl/buildlink2.mk"
 CONFIGURE_ARGS+=--with-ssl=${SSLBASE}
+.else
+CONFIGURE_ARGS+=--without-ssl
 .endif
-
-CONFIGURE_ARGS+=--with-ssl=${SSLBASE}
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
