@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/02/04 15:47:35 frueauf Exp $
+# $NetBSD: Makefile,v 1.15 1999/02/04 21:35:01 frueauf Exp $
 #
 
 # note: if updated, update shlib version number in patch-aa
@@ -44,8 +44,10 @@ pre-configure:
 	@${ECHO} 'support library and clients will be built.'
 	@${ECHO} '##########################################'
 .else
+NO_PACKAGE=	"mysql_install_db needs data dir from distribution."
+
 post-install:
-	(cd ${WRKSRC}; ./scripts/mysql_install_db)
+	(cd ${WRKSRC}; ./scripts/mysql_install_db && mysqladmin shutdown)
 	@${CAT} ${PKGDIR}/PLIST-server >>${PLIST_SRC}
 .endif
 

@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.3 1999/02/04 21:35:01 frueauf Exp $
+
+--- dbug/Makefile.in-orig	Wed Jul  8 11:11:32 1998
++++ dbug/Makefile.in	Thu Feb  4 17:14:29 1999
+@@ -142,7 +142,7 @@
+ LIBRARIES =  $(pkglib_LIBRARIES)
+ 
+ 
+-DEFS = @DEFS@ -I. -I$(srcdir) -I..
++DEFS = @DEFS@ -I. -I$(srcdir) -I.. -Dunix
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
