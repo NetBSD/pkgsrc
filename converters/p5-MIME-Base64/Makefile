@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/08 18:23:45 bad Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/22 13:51:33 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/08/04 22:47:16 ache Exp
 #
 
@@ -10,10 +10,7 @@ MASTER_SITE_SUBDIR=     MIME
 
 MAINTAINER=	hubertf@netbsd.org
 
-USE_PERL5=	YES
-
-MAN3=           MIME::Base64.3 MIME::QuotedPrint.3
-MAN3PREFIX=	${PREFIX}/lib/perl5
+USE_PERL5=	yes
 
 do-configure:
 		@ cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
