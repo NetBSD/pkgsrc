@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/01/04 03:57:36 reed Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 12:13:52 agc Exp $
 
 SHA1 (whois_4.6.9.tar.gz) = 625fcbb2951f4b2192cf8186e40f268902d9ddbd
+RMD160 (whois_4.6.9.tar.gz) = 65b8d52f53d765a74aeec2bb27db86b9fec081b4
 Size (whois_4.6.9.tar.gz) = 48016 bytes

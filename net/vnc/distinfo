@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.8 2005/02/17 23:16:44 tron Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 12:14:06 agc Exp $
 
 SHA1 (vnc-3.3.3r2_unixsrc.tgz) = 98e9d2e2c2d0f4f9cb9cafee22d21a868189b176
+RMD160 (vnc-3.3.3r2_unixsrc.tgz) = 3c70c386065d8b0254b1a0627455fb7bc03846ae
 Size (vnc-3.3.3r2_unixsrc.tgz) = 2072772 bytes
 SHA1 (vnc-3.3.2r2_doc.tgz) = 857b05c4d8de8b00bfd1ab06a408d9d9a5bb4a6b
+RMD160 (vnc-3.3.2r2_doc.tgz) = 95a79bf3b6f0ddbf80c2b9d9d57d9cf0bf0539da
 Size (vnc-3.3.2r2_doc.tgz) = 1009890 bytes
 SHA1 (vnc-3.3.3r2-v6-20010421.diff.gz) = d2af7e0fb0074200f490f6463fb250901368875e
+RMD160 (vnc-3.3.3r2-v6-20010421.diff.gz) = dea9aff6124bfdbe099fd1207e20d22cab1c0d6b
 Size (vnc-3.3.3r2-v6-20010421.diff.gz) = 6510 bytes
 SHA1 (patch-aa) = c642605b62bccc7fca23eda3d00654015bf3b8ab
 SHA1 (patch-ab) = f31282e99502dc50b53c660472aa297ef25e0772

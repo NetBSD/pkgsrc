@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/11/14 21:19:03 cube Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 12:13:52 agc Exp $
 
 SHA1 (maradns-1.0.18.tar.bz2) = 788b875bed781f11dea8f4d38209e4bd49dc42d8
+RMD160 (maradns-1.0.18.tar.bz2) = 6d7abffa321d093a3ab59ab8e3497fec589016a1
 Size (maradns-1.0.18.tar.bz2) = 414047 bytes
 SHA1 (patch-aa) = c33101aacf39c6cf4fe361d82c7e48882a33e37c
 SHA1 (patch-ab) = 664188f15cc8068fb8d7572d2fef7870cd998ab7

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2001/12/12 18:25:39 wiz Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 12:13:47 agc Exp $
 
 SHA1 (gnapster-1.5.0.tar.gz) = 0e88422c9ed9f1882f7ef735357ad616a8d636e7
+RMD160 (gnapster-1.5.0.tar.gz) = 4697c85190dd511d5839339a7aa324f1dd8bbcf0
 Size (gnapster-1.5.0.tar.gz) = 513813 bytes
 SHA1 (patch-aa) = b1d8bea52d7007d6d46e8a8792ea392da98b8693
 SHA1 (patch-ab) = 2cf48c1860a663df6bb2283b76aa88e649f6479d

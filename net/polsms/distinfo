@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.10 2004/12/26 22:13:33 zuntum Exp $
+$NetBSD: distinfo,v 1.11 2005/02/24 12:14:01 agc Exp $
 
 SHA1 (sms-2.0.2.tar.gz) = 769a0a62a7868647cf25076c4de5c0b5ffbbbe3f
+RMD160 (sms-2.0.2.tar.gz) = 4f3c0f5cdbf8e0c0ebfa7f8ee4ee459b364ede31
 Size (sms-2.0.2.tar.gz) = 47578 bytes

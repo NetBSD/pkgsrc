@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/07/12 00:21:12 zuntum Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 12:14:04 agc Exp $
 
 SHA1 (sipcalc-1.1.2.tar.gz) = 2e0e0f7fc38134d4b8561135a2e5021605880ff4
+RMD160 (sipcalc-1.1.2.tar.gz) = 37a610ee3bcb5ed7265c5cbebf3991e27af46843
 Size (sipcalc-1.1.2.tar.gz) = 74268 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.16 2004/10/03 16:16:39 taca Exp $
+$NetBSD: distinfo,v 1.17 2005/02/24 12:13:50 agc Exp $
 
 SHA1 (samba-2.2.11-ja-1.0.tar.bz2) = 94944b5a81e37322c6f112474e7df14e4cde8e1a
+RMD160 (samba-2.2.11-ja-1.0.tar.bz2) = 996e982032b9c493fd0baeedbdac6819f280a957
 Size (samba-2.2.11-ja-1.0.tar.bz2) = 7473344 bytes
 SHA1 (patch-aa) = 2f553bd640a819e9543d4678c779d5f98a164e3f
 SHA1 (patch-ab) = a2eef891b0a38955f22a9adeec09666d231a541f
