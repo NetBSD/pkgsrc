@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/11/29 01:12:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/21 12:58:33 wiz Exp $
 #
 
 DISTNAME=	xbatt-1.3pr1
@@ -16,8 +16,8 @@ COMMENT=	Displays battery status of your notebook via APM
 IGNORE+=	"APM is not available for ${MACHINE_PLATFORM}"
 .endif
 
+USE_BUILDLINK2=	YES
 USE_IMAKE=	YES
-USE_XPM=	YES
 ALL_TARGET=	xbatt
 
 post-install:
@@ -26,4 +26,5 @@ post-install:
 		${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/xbatt
 		${INSTALL_MAN} ${WRKSRC}/README.jp ${PREFIX}/share/doc/xbatt
 
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
