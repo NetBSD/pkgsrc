@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2848 2003/07/21 12:41:36 martti Exp $
+$NetBSD: CHANGES,v 1.2849 2003/07/21 12:51:55 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2885,3 +2885,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added libggiwmh-0.1.0 [wiz 2003-07-21]
 	Updated bins to 1.1.22 [martti 2003-07-21]
 	Updated distcc to 2.9 [martti 2003-07-21]
+	Updated pgcc to 2.95.2.1nb1 [seb 2003-07-21]
