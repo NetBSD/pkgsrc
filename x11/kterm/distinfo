@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2003/08/13 23:56:37 itojun Exp $
+$NetBSD: distinfo,v 1.12 2003/08/24 20:28:12 itojun Exp $
 
 SHA1 (kterm-6.2.0.tar.gz) = 23b612254e9f7c9f5e233a4bcacc651887a3f7ee
 Size (kterm-6.2.0.tar.gz) = 200448 bytes
-SHA1 (kterm-620-0213-20030814.diff.gz) = 888b079167ac71abf82314bda02b6fdde8a7274e
-Size (kterm-620-0213-20030814.diff.gz) = 14192 bytes
+SHA1 (kterm-620-0213-20030825.diff.gz) = 48ecccb1dd7de2f0337a4bb782e1ad4516e0266f
+Size (kterm-620-0213-20030825.diff.gz) = 14586 bytes
 SHA1 (patch-aa) = eaf65b3832b493cf0354b504dc546f42f45af303
 SHA1 (patch-ab) = 011b1fc5033f61784e57030c78f6cca5a82722d1
