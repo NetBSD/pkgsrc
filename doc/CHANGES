@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6144 2004/06/05 17:37:02 minskim Exp $
+$NetBSD: CHANGES,v 1.6145 2004/06/05 17:47:12 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2798,3 +2798,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated apache2 to 2.0.49nb2 [taca 2004-06-05]
 	Updated raine to 0.40.2 [xtraeme 2004-06-05]
 	Updated mew to 2.3nb1 [minskim 2004-06-05]
+	Added weechat-0.0.6 [xtraeme 2004-06-05]
