@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/01/13 04:29:21 uebayasi Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/08 13:35:20 uebayasi Exp $
 
 DISTNAME=	emacs-packages-0.5
 CATEGORIES=	meta-pkgs editors
@@ -34,11 +34,11 @@ DEPENDS+=	haskell-mode-[0-9]*:../../devel/haskell-mode
 DEPENDS+=	iiimecf-[0-9]*:../../inputmethod/iiimecf
 DEPENDS+=	irchat-pj-[0-9]*:../../chat/irchat-pj
 DEPENDS+=	ispell-emacs-[0-9]*:../../textproc/ispell-emacs
-.if defined(_EMACS_VERSION_EMACS_MAJOR) && ${_EMACS_VERSION_EMACS_MAJOR} == "21"
-DEPENDS+=	jde-[0-9]*:../../editors/jde
-.endif
+#.if defined(_EMACS_VERSION_EMACS_MAJOR) && ${_EMACS_VERSION_EMACS_MAJOR} == "21"
+#DEPENDS+=	jde-[0-9]*:../../editors/jde
+#.endif
 DEPENDS+=	liece-[0-9]*:../../chat/liece
-DEPENDS+=	lookup-[0-9]*:../../misc/lookup
+#DEPENDS+=	lookup-[0-9]*:../../misc/lookup
 DEPENDS+=	mailcrypt-[0-9]*:../../mail/mailcrypt
 DEPENDS+=	matlab-mode-*:../../editors/matlab-mode
 #DEPENDS+=	mew-[0-9]*:../../mail/mew

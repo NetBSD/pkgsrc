@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.18 2004/05/08 13:35:20 uebayasi Exp $
 
 DISTNAME=	wl-2.10.0
 CATEGORIES=	mail
@@ -10,7 +10,7 @@ COMMENT=	Mail/news management system with IMAP4rev1 support for Emacs
 
 DEPENDS+=	semi>=1.13.7:../../devel/semi
 # XXX please someone adjust paths and PLIST for XEmacs...
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20
 
 MAKE_FLAGS+=	LISPDIR=${EMACS_LISPPREFIX}
 MAKE_FLAGS+=	PIXMAPDIR=${PREFIX}/share/wl
