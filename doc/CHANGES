@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7272 2004/09/27 10:45:41 wiz Exp $
+$NetBSD: CHANGES,v 1.7273 2004/09/27 11:05:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4463,3 +4463,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated semi to 1.14.6nb2 [uebayasi 2004-09-27]
 	Updated gcc34-ada to 3.4.2 [shannonjr 2004-09-27]
 	Updated dcraw to 1.206 [wiz 2004-09-27]
+	Updated ImageMagick to 6.0.8-3 [adam 2004-09-27]
