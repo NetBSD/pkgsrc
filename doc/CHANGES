@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5170 2004/03/09 11:25:14 seb Exp $
+$NetBSD: CHANGES,v 1.5171 2004/03/09 12:43:56 kent Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1271,3 +1271,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cgoban-java to 2.5.7 [rh 2004-03-09]
 	Updated bittorrent to 3.4nb1 [recht 2004-03-09]
 	Updated freewais-sf to 2.2.12nb1 [seb 2004-03-09]
+	Updated peace to 0.0.20040309 [kent 2004-03-09]
+	Updated cross-i386-netbsdpe to 3.3.3 [kent 2004-03-09]
+	Updated w32api to 2.5 [kent 2004-03-09]
