@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6257 2004/06/21 07:08:29 martti Exp $
+$NetBSD: CHANGES,v 1.6258 2004/06/21 07:30:23 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2996,3 +2996,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added xfce4-xkb-plugin-0.3.1 [martti 2004-06-21]
 	Added xfce4-taskbar-plugin-0.1.0 [martti 2004-06-21]
 	Added xfce4-windowlist-plugin-0.1.0 [martti 2004-06-21]
+	Updated gpass to 0.4.4 [jmmv 2004-06-21]
