@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2117 2003/05/01 22:04:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.2118 2003/05/02 07:38:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1821,3 +1821,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated portsentry to 1.0nb2 [jmmv 2003-05-01]
 	Updated tripwire to 1.2nb1 [jmmv 2003-05-01]
 	Updated socks4 to 2.2nb1 [jmmv 2003-05-01]
+	Updated newscache to 0.99.17nb1 [jmmv 2003-05-02]
