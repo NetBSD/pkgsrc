@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/08/09 10:44:44 seb Exp $
+# $NetBSD: Makefile,v 1.28 2004/06/12 04:36:56 grant Exp $
 #
 
 DISTNAME=	libg++-${GXXVERSION}
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=libg++/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	GNU C++ Class Library
+
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 .if !exists(/usr/lib/libstdc++.so.2.0) && !exists(/usr/lib/libstdc++.so)
 PKG_SKIP_REASON= '${PKGNAME} is part of your NetBSD-1.3.x distribution. This is designed for NetBSD>=1.4.'
