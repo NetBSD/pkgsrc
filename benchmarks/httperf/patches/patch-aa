@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2003/09/19 18:06:36 wiz Exp $
+
+--- Makefile.orig	Tue Jun  2 04:06:52 1998
++++ Makefile	Fri Sep 19 15:34:28 2003
+@@ -38,9 +38,9 @@
+ CPPDEBUG := -DDEBUG $(CPPDEBUG)
+ CPPOPTIM := -DNDEBUG $(CPPOPTIM)
+ 
+-CPPFLAGS = -I. -Ilib $(CPP$(HOW))
+-CFLAGS = $(CONFIG) $(CFLAGS$(HOW))
+-LDFLAGS = $(LDFLAGS$(HOW))
++CPPFLAGS += -I. -Ilib $(CPP$(HOW))
++#CFLAGS = $(CONFIG) $(CFLAGS$(HOW))
++#LDFLAGS = $(LDFLAGS$(HOW))
+ 
+ HTTPERF = httperf object call conn sess core event http timer $(EXTRA)
+ 
