@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:58 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/17 17:06:19 fredb Exp $
 bin/abstime
 bin/mmix
 bin/mmixal
@@ -23,11 +23,16 @@ share/examples/mmix/halves.mmix
 share/examples/mmix/halves.mms
 share/examples/mmix/harm.mms
 share/examples/mmix/hello.mms
+share/examples/mmix/hptest.mms
 share/examples/mmix/inout.mms
 share/examples/mmix/iotest.mms
 share/examples/mmix/iotest1.mms
 share/examples/mmix/iotest2.mms
 share/examples/mmix/number1.mms
+share/examples/mmix/permu-heap.mms
+share/examples/mmix/permu-langdon.mms
+share/examples/mmix/permu-plain.mms
+share/examples/mmix/permu-st.mms
 share/examples/mmix/phi.mms
 share/examples/mmix/plain.mmconfig
 share/examples/mmix/popup.mms
@@ -39,8 +44,8 @@ share/examples/mmix/primesf.mms
 share/examples/mmix/primesfx.mms
 share/examples/mmix/primessf.mms
 share/examples/mmix/primesx.mmconfig
-share/examples/mmix/primesx.mmix
 share/examples/mmix/primesx.mms
+share/examples/mmix/pushtest.mms
 share/examples/mmix/saddle1.mms
 share/examples/mmix/saddle2.mms
 share/examples/mmix/silly.mms

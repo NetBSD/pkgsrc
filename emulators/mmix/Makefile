@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2002/03/17 16:34:46 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/17 17:06:19 fredb Exp $
 
 DISTNAME=	mmix
 PKGNAME=	mmix-20000918
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators devel lang
 MASTER_SITES=	http://www-cs-faculty.stanford.edu/~knuth/programs/
 
