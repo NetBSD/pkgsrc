@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/08/27 09:13:48 skrll Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/28 08:46:44 skrll Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
@@ -24,7 +24,7 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${QTPREFIX}/bin
 	${INSTALL_DATA_DIR} ${QTPREFIX}/lib
-	${PKGLIBTOOL} ${INSTALL_DATA} ${WRKSRC}/lib/libqt-mt.la ${QTPREFIX}/lib
+	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/lib/libqt-mt.la ${QTPREFIX}/lib
 	${INSTALL_DATA_DIR} ${QTPREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/include/*.h ${QTPREFIX}/include
 	${INSTALL_DATA_DIR} ${QTPREFIX}/include/private
