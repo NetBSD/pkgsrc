@@ -1,8 +1,54 @@
-$NetBSD: patch-ad,v 1.7 2003/07/17 20:21:31 jmmv Exp $
+$NetBSD: patch-ad,v 1.8 2003/09/28 15:58:34 jmmv Exp $
 
 --- app_rsrc.h.orig	2001-02-12 22:17:53.000000000 +0100
 +++ app_rsrc.h
-@@ -525,96 +525,95 @@ static XtResource Resources[] = {
+@@ -80,6 +80,8 @@ typedef struct _AppResources {
+     int      Bpp_24bit;
+     int      Bpp_32bit;
+ 
++    Boolean  aot_mode;
++
+     Boolean  afc_mode;
+     Boolean  disable_direct_v;
+     String   remote_type;             /*  Type of Remote Control attached  */
+@@ -191,6 +193,8 @@ extern AppResources     App_res;
+ 
+ #define RNafc               "afc"
+ #define RCafc               "Afc"
++#define RNalwaysOnTop       "alwaysOnTop"
++#define RCalwaysOnTop       "AlwaysOnTop"
+ 
+ #define RNdisableDirectV    "disableDirectV"
+ #define RCdisableDirectV    "DisableDirectV"
+@@ -284,6 +288,7 @@ static XrmOptionDescRec Cmd_line_options
+    { "-Bpp24bit"           , RNBpp24bit       , XrmoptionSepArg, NULL        },
+    { "-Bpp32bit"           , RNBpp32bit       , XrmoptionSepArg, NULL        },
+                                                                              
++   { "-noalwaysOnTop"      , RNalwaysOnTop    , XrmoptionNoArg , pFALSE      },
+    { "-noafc"              , RNafc            , XrmoptionNoArg , pFALSE      },
+    { "-disableDirectV"     , RNdisableDirectV , XrmoptionNoArg , pTRUE       },
+    { "-remoteType"         , RNremoteType     , XrmoptionSepArg, NULL        },
+@@ -389,7 +394,7 @@ static XtResource Resources[] = {
+         (XtPointer) True },
+     { RNdspDevice, RCaudioDevice, XtRString, sizeof(String),
+         XtOffsetOf(AppResources, dsp_device ), XtRImmediate,
+-        "/dev/dsp"  },
++        "/dev/audio"  },
+     { RNmixerDevice, RCaudioDevice, XtRString, sizeof(String),
+         XtOffsetOf(AppResources, mixer_device ), XtRImmediate,
+         "/dev/mixer"  },
+@@ -434,6 +439,10 @@ static XtResource Resources[] = {
+         XtOffsetOf(AppResources, Bpp_32bit), XtRString,
+         "-1" /*  0 = Guess */ },   
+ 
++    { RNalwaysOnTop, RCalwaysOnTop, XtRBoolean, sizeof(Boolean),
++        XtOffsetOf(AppResources, aot_mode), XtRImmediate,
++        (XtPointer) True },
++
+     { RNafc, RCafc, XtRBoolean, sizeof(Boolean),
+         XtOffsetOf(AppResources, afc_mode), XtRImmediate,
+         (XtPointer) True },
+@@ -525,96 +534,96 @@ static XtResource Resources[] = {
  };
  
  
@@ -114,6 +160,7 @@ $NetBSD: patch-ad,v 1.7 2003/07/17 20:21:31 jmmv Exp $
 +"-satU [0..200]              - U Saturation       (%); def=100\n" \
 +"-satV [0..284]              - V Saturation       (%); def=100\n" \
 +"-aspectlock                 - Enable 4:3 aspect lock on video window\n" \
++"-noalwaysOnTop              - Disable always on top\n" \
 +"\n" \
 +"-deviceNumber <#>           - bktr/tuner device numbers; def=0\n" \
 +"-inputFormat <fmt>          - Tuner signal input format (ntsc,ntscm,ntscj,\n" \
@@ -133,7 +180,7 @@ $NetBSD: patch-ad,v 1.7 2003/07/17 20:21:31 jmmv Exp $
 +"-antennaFreqSet <freqset>   - Freq set for antenna (def = nabcst)\n" \
 +"\n" \
 +"-noAudio                    - Suppress playing audio through soundcard\n" \
-+"-dspDevice                  - Override default DSP device   (def=/dev/dsp)\n" \
++"-dspDevice                  - Override default DSP device   (def=/dev/audio)\n" \
 +"-mixerDevice                - Override default mixer device (def=/dev/mixer)\n" \
 +"-mixerChannel               - Audio mixer (line,line1/2/3,cd,mic,video)\n" \
 +"\n" \
@@ -188,7 +235,15 @@ $NetBSD: patch-ad,v 1.7 2003/07/17 20:21:31 jmmv Exp $
  
  static String fallback_resources[] = { 
   /*"Fxtv.geometry: +10+10",*/
-@@ -789,6 +788,7 @@ static String fallback_resources[] = { 
+@@ -681,6 +690,7 @@ static String fallback_resources[] = { 
+    "*menuBox*optionsMenu*captureToCmd.label:  Capture To...",
+    "*menuBox*optionsMenu*saveOptionsCmd.label:Save Options",
+    "*menuBox*optionsMenu*setAfcCmd.label:     AFC",
++   "*menuBox*optionsMenu*setAotCmd.label:     Always on top",
+ 
+    "*menuBox*helpMenu.label:                  Help",
+    "*menuBox*helpMenu.menu.label:             Help",
+@@ -789,6 +799,7 @@ static String fallback_resources[] = { 
     "*imageSaveDialog*suffixLabel.label:            Append Img # Suffix",
     "*imageSaveDialog*formatLabel.label:            Format:",
     "*imageSaveDialog*formatMenuBox*tiffCmd.label:  TIFF",
@@ -196,7 +251,7 @@ $NetBSD: patch-ad,v 1.7 2003/07/17 20:21:31 jmmv Exp $
     "*imageSaveDialog*formatMenuBox*ppmCmd.label:   PPM",
     "*imageSaveDialog*okCmd.label:                  OK",
  
-@@ -902,6 +902,7 @@ static String fallback_resources[] = { 
+@@ -902,6 +913,7 @@ static String fallback_resources[] = { 
     "*videoSaveDialog*imageEncLabel.label:           IMAGE ENCODE",
     "*videoSaveDialog*iFileFmtLabel.label:           Format:",
     "*videoSaveDialog*iFileFmtMenuBox*tiffCmd.label: TIFF",

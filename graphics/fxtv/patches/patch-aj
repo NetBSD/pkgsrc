@@ -1,8 +1,26 @@
-$NetBSD: patch-aj,v 1.1 2002/12/21 11:10:03 wiz Exp $
+$NetBSD: patch-aj,v 1.2 2003/09/28 15:58:34 jmmv Exp $
 
---- Fxtv.orig	Sat Dec 21 11:57:15 2002
-+++ Fxtv
-@@ -320,6 +320,7 @@ Fxtv*iconName: FXTV
+--- Fxtv.orig	2003-09-28 17:38:29.000000000 +0200
++++ Fxtv	2003-09-28 17:38:29.000000000 +0200
+@@ -11,6 +11,8 @@
+                                         ! tuner, video, svideo, csvideo, dev3
+ !Fxtv*defaultAudioInput: tuner           
+                                         ! tuner, external, internal, auto
++Fxtv*alwaysOnTop: 	True
++                                        ! Always On Top
+ Fxtv*afc:      		False
+                                         ! Automatic Frequency Control
+ !Fxtv*remoteType:	Hauppauge
+@@ -57,7 +59,7 @@
+ 
+ ! Method to override audio device
+ !Fxtv*doSound:          true
+-!Fxtv*dspDevice:        /dev/dsp
++!Fxtv*dspDevice:        /dev/audio
+ !Fxtv*mixerDevice:      /dev/mixer
+ !Fxtv*mixerChannel:     line
+                                         ! line, line1/2/3, cd, mic, video
+@@ -320,6 +322,7 @@
  *imageSaveDialog*suffixLabel.label:            Append Img # Suffix
  *imageSaveDialog*formatLabel.label:            Format:
  *imageSaveDialog*formatMenuBox*tiffCmd.label:  TIFF
@@ -10,7 +28,7 @@ $NetBSD: patch-aj,v 1.1 2002/12/21 11:10:03 wiz Exp $
  *imageSaveDialog*formatMenuBox*ppmCmd.label:   PPM
  *imageSaveDialog*okCmd.label:                  OK
  
-@@ -432,6 +433,7 @@ Fxtv*iconName: FXTV
+@@ -432,6 +435,7 @@
  *videoSaveDialog*imageEncLabel.label:           IMAGE ENCODE
  *videoSaveDialog*iFileFmtLabel.label:           Format:
  *videoSaveDialog*iFileFmtMenuBox*tiffCmd.label: TIFF
