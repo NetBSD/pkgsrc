@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.167 2001/01/07 19:39:26 skrll Exp $
+# $NetBSD: mk.conf.example,v 1.168 2001/01/28 03:20:25 itojun Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -125,19 +125,37 @@
 # 			no-profit limited-redistribution shareware
 # Whitespace-delimited list of the types of license which are
 # acceptable for installation.  (apart from standard "free" licenses
-# such as Berkeley/CMU and GPL).
-# Possible: One or more of: fee-based-commercial-use, no-commercial-use,
-# no-profit, no-redistribution, shareware
-#
-# In addition, the following specific license values should be added
-# if you have read and accept the corresponding license document:
-#
-# kermit-license -- the redistribution license for ckermit
-# sun-jsdk20-license -- the download license for Sun's JSDK distribution
-# sun-swing-license -- the download license for Sun's Swing (JFC) toolkit
-# adobe-acrobat-license -- usage policy for Adobe Acrobat
+# such as Berkeley/CMU and GPL).  Possible values are presented below.
 #
 # Default: none
+
+#ACCEPTABLE_LICENSES+=	fee-based-commercial-use
+# Enable it if you are okay to build/use third-party software, which require
+# fees for commercial use (i.e. you are willing to pay, or you are
+# non-commercial).
+#ACCEPTABLE_LICENSES+=	no-commercial-use
+# Enable it if you are okay to build/use third-party software, which is not
+# for commercial use (i.e. you are non-commerical)
+#ACCEPTABLE_LICENSES+=	no-profit
+# Enable it if you are okay to build/use third-party software, which is not
+# for for-profit use (i.e. you will use the software for non-profit purpose)
+#ACCEPTABLE_LICENSES+=	limited-redistribution
+# Enable it if you are okay to build/use third-party software, which has
+# restriction on redistribution.
+#ACCEPTABLE_LICENSES+=	shareware
+# Enable it if you are okay to build/use shareware.
+#ACCEPTABLE_LICENSES+=	kermit-license
+# Enable it if you accept the redistribution license for ckermit and would
+# like to build ckermit.  see pkgsrc/comms/kermit.
+#ACCEPTABLE_LICENSES+=	 sun-jsdk20-license
+# Enable it if you accept the download license for Sun JSDK and would
+# like to build Sun JSDK.  see pkgsrc/lang/jdk.
+#ACCEPTABLE_LICENSES+=	 sun-swing-license
+# Enable it if you accept the download license for Sun's Swing (JFC) toolkit
+# and would like to build JFC.  see pkgsrc/x11/swing.
+#ACCEPTABLE_LICENSES+= adobe-acrobat-license
+# Enable it if you accept the usage policy for Adobe Acrobat
+# and would like to build it.  see pkgsrc/print/acroread.
 
 #SPECIFIC_PKGS=
 # Don't use the default of all packages (from the top-level of the
