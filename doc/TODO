@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.899 2003/09/24 09:14:29 xtraeme Exp $
+$NetBSD: TODO,v 1.900 2003/09/25 08:27:40 grant Exp $
 
 Suggested new packages
 ======================
@@ -117,6 +117,7 @@ Suggested package updates
 	o cxref-1.5e
 	o dante-1.1.14
 	o dctc-0.85.5
+	o dlcompat-20030629 [grant]
 	o dnetc-2.9004-482 [pkg/22390]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
