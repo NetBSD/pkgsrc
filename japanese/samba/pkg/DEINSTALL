@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1.1.1 2000/08/30 17:29:45 kei Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+SAMBA_PRIVATE=@SAMBA_PRIVATE@
+
+case ${STAGE} in
+DEINSTALL)
+	;;
+POST-DEINSTALL)
+	cat << EOF
+===========================================================================
+If you won't be using ${PKGNAME} any longer, you may want to remove the
+following files:
+	
+	${SAMBA_PRIVATE}/smbpasswd
+===========================================================================
+EOF
+	;;
+*)
+	echo "Unexpected argument: $2"
+	exit 1
+	;;
+esac
+exit 0
