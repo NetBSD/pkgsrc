@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2947 2005/01/21 14:48:27 wiz Exp $
+$NetBSD: TODO,v 1.2948 2005/01/21 14:58:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -882,6 +882,7 @@ Suggested package updates
 	o pilot-link-0.11.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
+	o pine-4.62
 	o pircbot-1.4.2
 	o plan-1.8.7
 	o plib-1.8.3
