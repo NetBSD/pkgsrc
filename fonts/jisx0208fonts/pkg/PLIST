@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/09 15:20:48 itojun Exp $
+lib/X11/fonts/local/10x20b.pcf.gz
+lib/X11/fonts/local/10x20m.pcf.gz
+lib/X11/fonts/local/10x20rkb.pcf.gz
+lib/X11/fonts/local/10x20rkm.pcf.gz
+lib/X11/fonts/local/5x10B.pcf.gz
+lib/X11/fonts/local/5x10a.pcf.gz
+lib/X11/fonts/local/5x10rk.pcf.gz
+lib/X11/fonts/local/6x12B.pcf.gz
+lib/X11/fonts/local/6x12a.pcf.gz
+lib/X11/fonts/local/6x12rk.pcf.gz
+lib/X11/fonts/local/clR5x8.pcf.gz
+lib/X11/fonts/local/elisat10.pcf.gz
+lib/X11/fonts/local/elisau10.pcf.gz
+lib/X11/fonts/local/ipa-10x20b.pcf.gz
+lib/X11/fonts/local/ipa-10x20m.pcf.gz
+lib/X11/fonts/local/jpnhn4-iso.pcf.gz
+lib/X11/fonts/local/jpnhn4-jis.pcf.gz
+lib/X11/fonts/local/k20b.pcf.gz
+lib/X11/fonts/local/k20m.pcf.gz
+lib/X11/fonts/local/knj10.pcf.gz
+lib/X11/fonts/local/knj10B.pcf.gz
+lib/X11/fonts/local/knmhn12x.pcf.gz
+lib/X11/fonts/local/knmzn12x.pcf.gz
+share/doc/jisx0208fonts/README.naga10-1.1
+share/doc/jisx0208fonts/README.kappa20
+@dirrm share/doc/jisx0208fonts
+@exec %D/bin/mkfontdir %D/lib/X11/fonts/local
+@unexec %D/bin/mkfontdir %D/lib/X11/fonts/local
