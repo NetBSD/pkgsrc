@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3881 2003/11/30 14:10:04 taca Exp $
+$NetBSD: CHANGES,v 1.3882 2003/11/30 23:08:45 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4674,3 +4674,29 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated subversion to 0.32.1 [junyoung 2003-11-29]
 	Updated nabi to 0.11 [junyoung 2003-11-29]
 	Updated squid to 2.5.4nb2 [taca 2003-11-30]
+	Updated p5-SDL to 1.19.2nb6 [jschauma 2003-11-30]
+	Updated smpeg to 0.4.4nb5 [jschauma 2003-11-30]
+	Updated rewind to 20020420nb3 [jschauma 2003-11-30]
+	Updated wine to 20031016nb1 [jschauma 2003-11-30]
+	Updated battalion to 1.4nb3 [jschauma 2003-11-30]
+	Updated bzflag to 1.7.5.6nb3 [jschauma 2003-11-30]
+	Updated glchess to 0.4.7nb4 [jschauma 2003-11-30]
+	Updated quake to 2.30nb3 [jschauma 2003-11-30]
+	Updated quake6 to 0.0nb1 [jschauma 2003-11-30]
+	Updated tuxracer to 0.61nb4 [jschauma 2003-11-30]
+	Updated GlutKit to 0.3.1r2nb3 [jschauma 2003-11-30]
+	Updated Mesa to 5.0.2nb1 [jschauma 2003-11-30]
+	Updated SDLKit to 0.3.1r2nb4 [jschauma 2003-11-30]
+	Updated clanlib to 0.4.4nb5 [jschauma 2003-11-30]
+	Updated dx to 4.2.0nb2 [jschauma 2003-11-30]
+	Updated g3d to 0.0.2nb3 [jschauma 2003-11-30]
+	Updated geomview to 1.8.1nb3 [jschauma 2003-11-30]
+	Updated gtkgltext to 0.7.1nb2 [jschauma 2003-11-30]
+	Updated hitchhiker to 0.6nb4 [jschauma 2003-11-30]
+	Updated xtraceroute to 0.8.14nb4 [jschauma 2003-11-30]
+	Updated fltk to 1.0.11nb3 [jschauma 2003-11-30]
+	Updated fox to 1.0.43nb1 [jschauma 2003-11-30]
+	Updated gtkglarea to 1.2.2nb4 [jschauma 2003-11-30]
+	Updated kdebase to 1.1.2nb4 [jschauma 2003-11-30]
+	Updated qt2-libs to 2.3.1nb5 [jschauma 2003-11-30]
+	Updated xlockmore to 5.10nb1 [jschauma 2003-11-30]
