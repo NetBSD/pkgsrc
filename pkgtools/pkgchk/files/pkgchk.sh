@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.47 2003/10/04 21:07:53 agc Exp $
+# $Id: pkgchk.sh,v 1.48 2003/12/09 12:54:13 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -330,7 +330,7 @@ while [ $# != 0 ]; do
 	-k )	opt_k=1 ;;
 	-l )	opt_l=1 ;;
 	-n )	opt_n=1 ;;
-	-r )	opt_r=1 ;;
+	-r )	opt_r=1 ; opt_i=1 ;;
 	-s )	opt_s=1 ;;
 	-u )	opt_u=1 ; opt_i=1 ;;
 	-v )	opt_v=1 ;;
@@ -366,7 +366,7 @@ if [ -n "$opt_h" -o $# != 1 ];then
 	-k	Continue with further packages if errors are encountered
 	-l	List binary packages including dependencies (implies -c)
 	-n	Display actions that would be taken, but do not perform them
-	-r	Recursively remove mismatched files (use with care)
+	-r	Recursively remove mismatches (use with care) (implies -i)
 	-s      Limit installations to building from source
 	-u      Update all mismatched packages (implies -i)
 	-v      Verbose
