@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.329 2002/09/24 18:04:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.330 2002/09/27 10:41:28 rh Exp $
 #
 
 COMMENT=	Development utilities
@@ -96,6 +96,7 @@ SUBDIR+=	global
 SUBDIR+=	gmake
 SUBDIR+=	gmp
 SUBDIR+=	gnome-objc
+SUBDIR+=	gnustep-make
 SUBDIR+=	gobo-eiffel
 SUBDIR+=	gpasm
 SUBDIR+=	gperf
