@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/12/10 19:49:46 veego Exp $
+
+--- configure-orig	Fri Aug 31 11:39:53 2001
++++ configure	Wed Oct 10 21:18:49 2001
+@@ -2663,6 +2663,11 @@
+ #define LIBAO_SOLARIS 
+ EOF
+ ;;
++    *-netbsd*)
++	cat >> confdefs.h <<\EOF
++#define LIBAO_SOLARIS 
++EOF
++;;
+     esac
+ fi
+ 
