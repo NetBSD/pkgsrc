@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.6 2003/09/03 12:35:13 martin Exp $
+$NetBSD: patch-af,v 1.7 2003/09/03 19:55:28 abs Exp $
 
 --- mserv/defconf.c.orig	2003-08-04 20:25:36.000000000 +0200
 +++ mserv/defconf.c	2003-09-03 13:44:02.000000000 +0200
@@ -82,7 +82,7 @@ $NetBSD: patch-af,v 1.6 2003/09/03 12:35:13 martin Exp $
 +"player_mp3=prog_mpg123\n"
 +"player_wav=prog_play\n"
 +"player_au=prog_play\n"
-+"player_ogg=prog_ogg\n"
++"player_ogg=prog_ogg123\n"
 +"\n"
 +"# Set default random mode, either on or off.  You must still tell mserv to\n"
 +"# start playing (PLAY).\n"
