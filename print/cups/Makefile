@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/12/11 08:53:07 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2000/12/11 09:00:51 jlam Exp $
 #
 
 DISTNAME=		cups-1.1.4-source
@@ -82,6 +82,7 @@ pre-install:
 	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g" \
 		-e "s,@CUPS_GROUP@,${CUPS_GROUP},g" \
 		-e "s,@ADDUSER@,${ADDUSER},g" \
+		-e "s,@ADDGROUP@,${ADDGROUP},g" \
 		-e "s,@CAT@,${CAT},g" \
 		-e "s,@CHGRP@,${CHGRP},g" \
 		-e "s,@CHMOD@,${CHMOD},g" \
