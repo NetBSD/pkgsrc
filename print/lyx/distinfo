@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/10/25 13:55:47 martti Exp $
+$NetBSD: distinfo,v 1.5 2002/01/18 11:02:32 martti Exp $
 
-SHA1 (lyx-1.1.6fix3.tar.gz) = 613df936fa19103c9ba06b3fe596288a9411b4bc
-Size (lyx-1.1.6fix3.tar.gz) = 5436150 bytes
+SHA1 (lyx-1.1.6fix4.tar.gz) = 5ea61039c9ffe875dff57cfc03fd76d116d5c218
+Size (lyx-1.1.6fix4.tar.gz) = 5564490 bytes
