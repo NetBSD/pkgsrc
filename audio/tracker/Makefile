@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/22 11:05:02 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/10 08:02:08 agc Exp $
 # FreeBSD Id: Makefile,v 1.29 1996/12/20 23:46:22 ache Exp 
 #
 
@@ -16,7 +16,7 @@ WRKSRC=			${WRKDIR}/tracker
 MAKE_FLAGS=		MACHINE=netbsd CC=${CC} INSTALL="${INSTALL}" \
 		INST_BIN_OPT="-c -s -m ${BINMODE} -o ${BINOWN} -g ${BINGRP}" \
 		INST_MAN_OPT="-c -m 644 -o ${BINOWN} -g ${BINGRP}" \
-		COMPRESSION_FILE=${PREFIX}/etc/compression_methods -f
+		COMPRESSION_FILE=${PREFIX}/etc/compression_methods
 
 INFO_FILES=		tracker.info
 

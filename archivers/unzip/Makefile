@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/20 11:56:18 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/10 08:02:08 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=     packages@netbsd.org
 
 MAKEFILE=       unix/Makefile
 ALL_TARGET=     bsd
-MAKE_FLAGS=     LOCAL_UNZIP="${CFLAGS} -DUSE_UNSHRINK" -f
+MAKE_FLAGS=     LOCAL_UNZIP="${CFLAGS} -DUSE_UNSHRINK"
 MAN1=           funzip.1 unzip.1 unzipsfx.1 zipgrep.1 zipinfo.1
 
 do-install:

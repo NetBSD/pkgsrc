@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/06/03 14:08:50 agc Exp $
+# $NetBSD: Makefile,v 1.15 1998/06/10 08:02:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/10/13 11:22:43 asami Exp
 #
 
@@ -20,7 +20,7 @@ MAKE_ENV=	PORTSDIR=${.CURDIR}/../..
 EXTRACT_ONLY=	${GS_SOURCES}
 WRKSRC=		${WRKDIR}/gs5.10
 MAKEFILE=	unix-gcc.mak
-MAKE_FLAGS=	prefix=${PREFIX} zlibc_=-lz CFLAGS="${CFLAGS}" -f
+MAKE_FLAGS=	prefix=${PREFIX} zlibc_=-lz CFLAGS="${CFLAGS}"
 MAN1=		gs.1 pdf2dsc.1 pdf2ps.1 ps2ascii.1 ps2epsi.1 ps2pdf.1
 
 GS_SOURCES=	ghostscript-5.10.tar.gz
