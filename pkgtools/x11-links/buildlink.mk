@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/10/07 20:16:43 veego Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/10/09 07:07:25 jlam Exp $
 #
 # This Makefile fragment is included by packages that use X11.
 #
@@ -17,6 +17,10 @@ X11_LINKS_BUILDLINK_MK=	# defined
 
 BUILDLINK_PREFIX.X11=	${X11BASE}
 
+# The files listed below are the union of the sets of files installed by
+# the supported XFree86 distributions, minus the set of files representing
+# bits that may be added via pkgsrc, e.g. Xpm, freetype2, etc.
+#
 BUILDLINK_FILES.X11=	include/DPS/ColorSB.h
 BUILDLINK_FILES.X11+=	include/DPS/ColorSBP.h
 BUILDLINK_FILES.X11+=	include/DPS/DPSScrollW.h
