@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2002/04/27 10:07:01 rh Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/04 19:31:44 jlam Exp $
 #
 
-DISTNAME=		flac-1.0.2-src
-PKGNAME=		flac-1.0.2
+DISTNAME=		flac-1.0.3
 WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		audio archivers
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flac/}
@@ -13,24 +12,17 @@ COMMENT=		free lossless audio codec
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_PLATFORM:MNetBSD-*-i386} != ""
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386)
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 .endif
 
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		ac_cv_path_XMMS_CONFIG="no"
+
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/flac
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/flac/images
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/flac/ru
-	${INSTALL_DATA} ${WRKSRC}/doc/images/*.gif \
-		${WRKSRC}/doc/images/*.jpg \
-		${PREFIX}/share/doc/flac/images
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/flac
-	${INSTALL_DATA} ${WRKSRC}/doc/ru/*.html ${PREFIX}/share/doc/flac/ru
-
-.include "../../audio/libogg/buildlink.mk"
+.include "../../audio/libogg/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

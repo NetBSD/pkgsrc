@@ -1,48 +1,59 @@
-@comment $NetBSD: PLIST,v 1.2 2002/04/27 10:07:01 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/09/04 19:31:44 jlam Exp $
 bin/flac
 bin/metaflac
+include/FLAC++/all.h
+include/FLAC++/decoder.h
+include/FLAC++/encoder.h
+include/FLAC++/metadata.h
 include/FLAC/all.h
 include/FLAC/assert.h
 include/FLAC/file_decoder.h
 include/FLAC/format.h
+include/FLAC/metadata.h
 include/FLAC/ordinals.h
-include/FLAC/seek_table.h
 include/FLAC/seekable_stream_decoder.h
 include/FLAC/stream_decoder.h
 include/FLAC/stream_encoder.h
-include/FLAC/utility.h
+lib/libFLAC++.a
+lib/libFLAC++.la
+lib/libFLAC++.so
+lib/libFLAC++.so.1
+lib/libFLAC++.so.1.1
 lib/libFLAC.a
 lib/libFLAC.la
 lib/libFLAC.so
-lib/libFLAC.so.2
-lib/libFLAC.so.2.1
+lib/libFLAC.so.3
+lib/libFLAC.so.3.1
 man/man1/flac.1
-share/doc/flac/images/1x1.gif
-share/doc/flac/images/cafebug.gif
-share/doc/flac/images/logo.jpg
-share/doc/flac/comparison.html
-share/doc/flac/developers.html
-share/doc/flac/documentation.html
-share/doc/flac/download.html
-share/doc/flac/features.html
-share/doc/flac/format.html
-share/doc/flac/goals.html
-share/doc/flac/id.html
-share/doc/flac/index.html
-share/doc/flac/news.html
-share/doc/flac/ru/authors.html
-share/doc/flac/ru/comparison.html
-share/doc/flac/ru/developers.html
-share/doc/flac/ru/documentation.html
-share/doc/flac/ru/download.html
-share/doc/flac/ru/features.html
-share/doc/flac/ru/format.html
-share/doc/flac/ru/goals.html
-share/doc/flac/ru/id.html
-share/doc/flac/ru/index.html
-share/doc/flac/ru/links.html
-share/doc/flac/ru/news.html
+share/aclocal/libFLAC++.m4
+share/aclocal/libFLAC.m4
+share/doc/html/flac/comparison.html
+share/doc/html/flac/developers.html
+share/doc/html/flac/documentation.html
+share/doc/html/flac/download.html
+share/doc/html/flac/features.html
+share/doc/html/flac/format.html
+share/doc/html/flac/goals.html
+share/doc/html/flac/id.html
+share/doc/html/flac/images/1x1.gif
+share/doc/html/flac/images/cafebug.gif
+share/doc/html/flac/images/logo.jpg
+share/doc/html/flac/index.html
+share/doc/html/flac/news.html
+share/doc/html/flac/ru/authors.html
+share/doc/html/flac/ru/comparison.html
+share/doc/html/flac/ru/developers.html
+share/doc/html/flac/ru/documentation.html
+share/doc/html/flac/ru/download.html
+share/doc/html/flac/ru/features.html
+share/doc/html/flac/ru/format.html
+share/doc/html/flac/ru/goals.html
+share/doc/html/flac/ru/id.html
+share/doc/html/flac/ru/index.html
+share/doc/html/flac/ru/links.html
+share/doc/html/flac/ru/news.html
+@dirrm share/doc/html/flac/ru
+@dirrm share/doc/html/flac/images
+@dirrm share/doc/html/flac
 @dirrm include/FLAC
-@dirrm share/doc/flac/images
-@dirrm share/doc/flac/ru
-@dirrm share/doc/flac
+@dirrm include/FLAC++

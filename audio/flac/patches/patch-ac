@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2002/09/04 19:31:45 jlam Exp $
+
+--- doc/ru/Makefile.in.orig	Wed Sep  4 01:49:17 2002
++++ doc/ru/Makefile.in
+@@ -126,7 +126,7 @@ install_sh = @install_sh@
+ 
+ AUTOMAKE_OPTIONS = foreign
+ 
+-docdir = $(datadir)/doc/$(PACKAGE)-$(VERSION)/ru
++docdir = $(datadir)/doc/html/$(PACKAGE)/ru
+ 
+ doc_DATA = \
+ 	authors.html \
