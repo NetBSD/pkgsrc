@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 1999/08/29 08:29:27 jlam Exp $
+# $NetBSD: Makefile,v 1.108 1999/09/07 00:35:09 jwise Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -119,7 +119,7 @@
 #    SUBDIR += xdtm
     SUBDIR += xearth
     SUBDIR += xephem
-#    SUBDIR += xfce
+    SUBDIR += xfce
 #    SUBDIR += xfed
 #    SUBDIR += xfedor
     SUBDIR += xfishtank
