@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.972 2003/10/27 21:49:43 cube Exp $
+$NetBSD: TODO,v 1.973 2003/10/29 11:57:59 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -180,7 +180,6 @@ Suggested package updates
 	o gdm-2.4.4.4
 	o generator-0.35
 	o gentoo-0.11.37
-	o getmail-3.2.0
 	o gettext-0.12.1
 	o gforth-0.6.2
 	o ghostscript-8.00 (apfl)
