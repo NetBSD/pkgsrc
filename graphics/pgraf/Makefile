@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 15:22:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/11 21:49:15 jtb Exp $
 
 DISTNAME=		pgraf-20010131
 CATEGORIES=		graphics
@@ -9,6 +9,8 @@ COMMENT=		Portable graphics system
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 USE_X11=		YES
+
+CONFLICTS=		pgp5-*		# Both have a `pgps' executable
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/include/pgraf.h ${PREFIX}/include
