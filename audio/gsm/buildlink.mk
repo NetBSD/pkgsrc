@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/30 09:30:51 zuntum Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:09 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gsm.
 #
@@ -15,6 +15,8 @@
 .if !defined(GSM_BUILDLINK_MK)
 GSM_BUILDLINK_MK=	# defined
 
+.include "../../mk/bsd.buildlink.mk"
+
 BUILDLINK_DEPENDS.gsm?=	gsm>=1.0.10
 DEPENDS+=	${BUILDLINK_DEPENDS.gsm}:../../audio/gsm
 
@@ -28,7 +30,5 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.gsm}
 
 pre-configure: ${BUILDLINK_TARGETS.gsm}
 gsm-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# GSM_BUILDLINK_MK

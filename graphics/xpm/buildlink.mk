@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/17 17:54:33 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:26 jlam Exp $
 #
 # This Makefile fragment is included by packages that use xpm.
 #
@@ -12,6 +12,8 @@
 
 .if !defined(XPM_BUILDLINK_MK)
 XPM_BUILDLINK_MK=	# defined
+
+.include "../../mk/bsd.buildlink.mk"
 
 USE_XPM=		# defined
 
@@ -37,7 +39,5 @@ BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.xpm}
 pre-configure: ${BUILDLINK_TARGETS.xpm}
 xpm-x11base-buildlink: _BUILDLINK_USE
 xpm-localbase-buildlink: _BUILDLINK_USE
-
-.include "../../mk/bsd.buildlink.mk"
 
 .endif	# XPM_BUILDLINK_MK
