@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2002/04/03 09:29:55 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2002/10/19 03:51:03 jlam Exp $
 
---- configure.in.orig	Thu Aug 16 11:36:31 2001
+--- configure.in.orig	Mon Sep 30 23:34:28 2002
 +++ configure.in
-@@ -150,6 +150,15 @@
+@@ -150,6 +150,15 @@ PGAC_ARG_REQ(with, libs,      [  --with-
  
  
  #
@@ -18,8 +18,8 @@ $NetBSD: patch-ab,v 1.1 2002/04/03 09:29:55 jlam Exp $
  # Locale (--enable-locale)
  #
  AC_MSG_CHECKING([whether to build with locale support])
-@@ -401,6 +410,18 @@
- [AC_MSG_RESULT(no)])
+@@ -398,6 +407,18 @@ PGAC_ARG_BOOL(with, python, no, [  --wit
+ AC_MSG_RESULT([$with_python])
  AC_SUBST(with_python)
  
 +# If python is enabled (above), then optionally byte-compile the modules.
@@ -37,7 +37,7 @@ $NetBSD: patch-ab,v 1.1 2002/04/03 09:29:55 jlam Exp $
  #
  # Optionally build the Java/JDBC tools
  #
-@@ -649,8 +670,10 @@
+@@ -682,8 +703,10 @@ fi
  ## Libraries
  ##
  
