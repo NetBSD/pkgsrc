@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.232 2001/10/30 13:39:49 damon Exp $
+# $NetBSD: Makefile,v 1.233 2001/11/25 09:42:24 zuntum Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -49,6 +49,7 @@ SUBDIR+=	kdelibdocs
 SUBDIR+=	kdelibdocs2
 SUBDIR+=	kdelibs
 SUBDIR+=	kdelibs2
+SUBDIR+=	keylaunch
 SUBDIR+=	khostchooser
 SUBDIR+=	kterm
 SUBDIR+=	lesstif
