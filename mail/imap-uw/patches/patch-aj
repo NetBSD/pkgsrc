@@ -1,0 +1,263 @@
+$NetBSD: patch-aj,v 1.1 2000/11/09 08:56:36 tron Exp $
+
+--- src/imapd/imapd.c.orig	Wed Oct 25 01:14:45 2000
++++ src/imapd/imapd.c	Thu Nov  9 09:50:21 2000
+@@ -10,12 +10,27 @@
+  *		Internet: MRC@CAC.Washington.EDU
+  *
+  * Date:	5 November 1990
+- * Last Edited:	24 October 2000
+- * 
+- * The IMAP toolkit provided in this Distribution is
+- * Copyright 2000 University of Washington.
+- * The full text of our legal notices is contained in the file called
+- * CPYRIGHT, included with this Distribution.
++ * Last Edited:	25 August 2000
++ *
++ * Copyright 2000 by the University of Washington
++ *
++ *  Permission to use, copy, modify, and distribute this software and its
++ * documentation for any purpose and without fee is hereby granted, provided
++ * that the above copyright notice appears in all copies and that both the
++ * above copyright notice and this permission notice appear in supporting
++ * documentation, and that the name of the University of Washington not be
++ * used in advertising or publicity pertaining to distribution of the software
++ * without specific, written prior permission.  This software is made
++ * available "as is", and
++ * THE UNIVERSITY OF WASHINGTON DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED,
++ * WITH REGARD TO THIS SOFTWARE, INCLUDING WITHOUT LIMITATION ALL IMPLIED
++ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, AND IN
++ * NO EVENT SHALL THE UNIVERSITY OF WASHINGTON BE LIABLE FOR ANY SPECIAL,
++ * INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
++ * LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, TORT
++ * (INCLUDING NEGLIGENCE) OR STRICT LIABILITY, ARISING OUT OF OR IN CONNECTION
++ * WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
++ *
+  */
+ 
+ /* Primary I/O calls */
+@@ -167,7 +182,6 @@
+ void psizedtext (SIZEDTEXT *s);
+ void ptext (SIZEDTEXT *s);
+ void pthread (THREADNODE *thr);
+-void pcapability (long flag);
+ long nameok (char *ref,char *name);
+ char *bboardname (char *cmd,char *name);
+ char *imap_responder (void *challenge,unsigned long clen,unsigned long *rlen);
+@@ -181,7 +195,7 @@
+ 
+ /* Global storage */
+ 
+-char *version = "2000.283";	/* version number of this server */
++char *version = "2000.279";	/* version number of this server */
+ time_t alerttime = 0;		/* time of last alert */
+ time_t sysalerttime = 0;	/* time of last system alert */
+ time_t useralerttime = 0;	/* time of last user alert */
+@@ -248,8 +262,7 @@
+ #include "linkage.c"
+   rfc822_date (tmp);		/* get date/time at startup */
+ 				/* initialize server */
+-  server_init ((s = strrchr (argv[0],'/')) ? s + 1 : argv[0],
+-		"imap","imaps","imap",clkint,kodint,hupint,trmint);
++  server_init (argv[0],"imap","imaps","imap",clkint,kodint,hupint,trmint);
+ 				/* forbid automatic untagged expunge */
+   mail_parameters (NIL,SET_EXPUNGEATPING,NIL);
+ 				/* arm proxy copy callback */
+@@ -257,15 +270,13 @@
+   s = myusername_full (&i);	/* get user name and flags */
+   switch (i) {
+   case MU_NOTLOGGEDIN:
+-    PSOUT ("* OK [");		/* not logged in, ordinary startup */
+-    pcapability (-1);
++    PSOUT ("* OK ");		/* not logged in, ordinary startup */
+     break;
+   case MU_ANONYMOUS:
+     anonymous = T;		/* anonymous user, fall into default */
+     s = "ANONYMOUS";
+   case MU_LOGGEDIN:
+-    PSOUT ("* PREAUTH [");	/* already logged in, pre-authorized */
+-    pcapability (1);
++    PSOUT ("* PREAUTH ");	/* already logged in, pre-authorized */
+     user = cpystr (s);		/* copy user name */
+     pass = cpystr ("*");	/* set fake password */
+     state = SELECT;		/* enter select state */
+@@ -273,7 +284,6 @@
+   default:
+     fatal ("Unknown state from myusername_full()");
+   }
+-  PSOUT ("] ");
+   PSOUT (tcp_serverhost ());
+   PSOUT (" IMAP4rev1 ");
+   PSOUT (version);
+@@ -357,8 +367,33 @@
+       else if (!strcmp (cmd,"CAPABILITY")) {
+ 	if (arg) response = badarg;
+ 	else {
+-	  PSOUT ("* ");
+-	  pcapability (0);	/* print capabilities */
++	  AUTHENTICATOR *auth = mail_lookup_auth (1);
++	  THREADER *thr = (THREADER *) mail_parameters (NIL,GET_THREADERS,NIL);
++	  PSOUT ("* CAPABILITY IMAP4 IMAP4REV1 NAMESPACE IDLE SCAN SORT MULTIAPPEND MAILBOX-REFERRALS LOGIN-REFERRALS");
++#ifdef IMAPSPECIALCAP
++	  PBOUT (' ');
++	  PSOUT (IMAPSPECIALCAP);
++#endif
++#ifdef PLAINTEXT_DISABLED
++	  PSOUT (" LOGINDISABLED");
++#endif
++	  while (auth) {
++#ifdef PLAINTEXT_DISABLED
++				/* disable insecure authenticators */
++	    if (!auth->secflag) auth->server = NIL;
++#endif
++	    if (auth->server) {
++	      PSOUT (" AUTH=");
++	      PSOUT (auth->name);
++	    }
++	    auth = auth->next;
++	  }
++	  if (!stat (ANOFILE,&sbuf)) PSOUT (" AUTH=ANONYMOUS");
++	  while (thr) {
++	    PSOUT (" THREAD=");
++	    PSOUT (thr->name);
++	    thr = thr->next;
++	  }
+ 	  CRLF;
+ 	}
+ 	if (stream)		/* allow untagged EXPUNGE */
+@@ -383,9 +418,6 @@
+ 	      user = cpystr ("ANONYMOUS");
+ 	      state = SELECT;	/* make select */
+ 	      alerttime = 0;	/* force alert */
+-	      PSOUT ("* ");
+-	      pcapability (1);	/* print logged-in capabilities */
+-	      CRLF;
+ 	      syslog (LOG_INFO,"Authenticated anonymous=%.80s host=%.80s",s,
+ 		      tcp_clienthost ());
+ 	      fs_give ((void **) &s);
+@@ -395,9 +427,6 @@
+ 	  else if (user = cpystr (mail_auth (s,imap_responder,argc,argv))) {
+ 	    state = SELECT;	/* make select */
+ 	    alerttime = 0;	/* force alert */
+-	    PSOUT ("* ");
+-	    pcapability (1);	/* print logged-in capabilities */
+-	    CRLF;
+ 	    syslog (LOG_INFO,"Authenticated user=%.80s host=%.80s",
+ 		    user,tcp_clienthost ());
+ 	  }
+@@ -433,9 +462,6 @@
+ 	    ucase (user);	/* make all uppercase for consistency */
+ 	    state = SELECT;	/* make select */
+ 	    alerttime = 0;	/* force alert */
+-	    PSOUT ("* ");
+-	    pcapability (1);	/* print logged-in capabilities */
+-	    CRLF;
+ 	    syslog (LOG_INFO,"Login anonymous=%.80s host=%.80s",pass,
+ 		    tcp_clienthost ());
+ 	  }
+@@ -445,9 +471,6 @@
+ 	    if (server_login (user,pass,s,argc,argv)) {
+ 	      state = SELECT;	/* make select */
+ 	      alerttime = 0;	/* force alert */
+-	      PSOUT ("* ");
+-	      pcapability (1);	/* print logged-in capabilities */
+-	      CRLF;
+ 	      syslog (LOG_INFO,"Login user=%.80s host=%.80s",user,
+ 		      tcp_clienthost ());
+ 	    }
+@@ -682,13 +705,13 @@
+ 	      response = badatt;/* bad thread attribute */
+ 	  else if (arg && *arg) response = badarg;
+ 	  else {
++	    PSOUT ("* THREAD");
+ 	    if (thr = mail_thread (stream,ucase (s),cs,spg,
+ 				      uid ? SE_UID : NIL)) {
+-	      PSOUT ("* THREAD ");
++	      PBOUT (' ');
+ 	      pthread (thr);
+ 	      mail_free_threadnode (&thr);
+ 	    }
+-	    else PSOUT ("* THREAD");
+ 	    CRLF;
+ 	  }
+ 	  if (spg) mail_free_searchpgm (&spg);
+@@ -2984,68 +3007,21 @@
+     PBOUT ('(');		/* open branch */
+     if (thr->num) {		/* first node message number */
+       pnum (thr->num);
+-      if (t = thr->next) {	/* any subsequent nodes? */
+-	PBOUT (' ');
+-	while (t) {		/* for each subsequent node */
+-	  if (t->branch) {	/* branches? */
+-	    pthread (t);	/* yes, recurse to do branch */
+-	    t = NIL;		/* done */
+-	  }
+-	  else {		/* just output this number */
+-	    pnum (t->num);
+-	    t = t->next;	/* and do next message */
+-	  }
+-	  if (t) PBOUT (' ');	/* delimit if more to come */
+-	}
++      if (thr->next) PBOUT (' ');
++    }
++    for (t = thr->next; t;) {	/* any subsequent nodes? */
++      if (t->branch) {		/* branches? */
++	pthread (t);		/* yes, recurse to do branch */
++	t = NIL;		/* done */
++      }
++      else {			/* just output this number */
++	pnum (t->num);
++	t = t->next;		/* and do next message */
+       }
++      if (t) PBOUT (' ');	/* delimit if more to come */
+     }
+-    else pthread (thr->next);	/* nest for dummy */
+     PBOUT (')');		/* done with this branch */
+     thr = thr->branch;		/* do next branch */
+-  }
+-}
+-
+-/* Print capabilities
+- * Accepts: option flag
+- */
+-
+-void pcapability (long flag)
+-{
+-  struct stat sbuf;
+-  AUTHENTICATOR *auth = mail_lookup_auth (1);
+-  THREADER *thr = (THREADER *) mail_parameters (NIL,GET_THREADERS,NIL);
+-				/* always output protocol level */
+-  PSOUT ("CAPABILITY IMAP4 IMAP4REV1");
+-#ifdef IMAPSPECIALCAP
+-  PBOUT (' ');
+-  PSOUT (IMAPSPECIALCAP);
+-#endif
+-  if (flag >= 0) {		/* want post-authentication capabilities? */
+-    PSOUT (" NAMESPACE IDLE MAILBOX-REFERRALS SCAN SORT");
+-    while (thr) {		/* threaders */
+-      PSOUT (" THREAD=");
+-      PSOUT (thr->name);
+-      thr = thr->next;
+-    }
+-    if (!anonymous) PSOUT (" MULTIAPPEND");
+-  }
+-  if (flag <= 0) {		/* want pre-authentication capabilities? */
+-    PSOUT (" LOGIN-REFERRALS");
+-#ifdef PLAINTEXT_DISABLED
+-    PSOUT (" LOGINDISABLED");
+-#endif
+-    while (auth) {
+-#ifdef PLAINTEXT_DISABLED
+-				/* disable insecure authenticators */
+-      if (!auth->secflag) auth->server = NIL;
+-#endif
+-      if (auth->server) {
+-	PSOUT (" AUTH=");
+-	PSOUT (auth->name);
+-      }
+-      auth = auth->next;
+-    }
+-    if (!stat (ANOFILE,&sbuf)) PSOUT (" AUTH=ANONYMOUS");
+   }
+ }
+ 
