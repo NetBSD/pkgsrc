@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.2 2000/09/03 12:57:22 wiz Exp $
 --- tcl/tabhist.tcl.orig	Thu Aug 31 12:12:32 2000
 +++ tcl/tabhist.tcl	Thu Aug 31 12:13:10 2000
 @@ -72,7 +72,7 @@
