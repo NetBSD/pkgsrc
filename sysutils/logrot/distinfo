@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:50:29 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:29:05 agc Exp $
 
-MD5 (logrot-1.5.tar.gz) = d8d43ac65a9eeda218e8d30af6ac5846
+SHA1 (logrot-1.5.tar.gz) = 0a2b87cff099ba724f7911e5c55287243fde5384
+Size (logrot-1.5.tar.gz) = 34837 bytes

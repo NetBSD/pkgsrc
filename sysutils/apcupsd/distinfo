@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:49:45 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:28:59 agc Exp $
 
-MD5 (apcupsd-3.6.2.tar.gz) = 2512748a0cd7937b99adb7d92d917d4f
+SHA1 (apcupsd-3.6.2.tar.gz) = bcf605bed09cdc55be30eed4f92e0a831767e62b
+Size (apcupsd-3.6.2.tar.gz) = 282646 bytes
 SHA1 (patch-aa) = 817e325217a68e866661b5617225aea7f1b0eac1
 SHA1 (patch-ab) = b098f80ef14e1be4aa4943a125eb79c5629bf352
 SHA1 (patch-ac) = c2de47eabb3add67b6578d26c5edb9c2301c3f44
