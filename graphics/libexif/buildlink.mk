@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/02/12 15:09:49 martti Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/02/13 07:03:11 martti Exp $
 #
 # This Makefile fragment is included by packages that use libexif.
 #
@@ -13,7 +13,7 @@ LIBEXIF_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libexif?=	libexif-0.4
+BUILDLINK_DEPENDS.libexif?=	libexif>=0.4
 DEPENDS+=	${BUILDLINK_DEPENDS.libexif}:../../graphics/libexif
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.libexif=libexif
