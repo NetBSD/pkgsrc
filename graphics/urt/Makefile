@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/03/22 09:38:23 agc Exp $
+# $NetBSD: Makefile,v 1.5 1999/04/05 17:23:02 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 #
 
@@ -29,16 +29,16 @@ ALL_TARGET=
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/urt ${PREFIX}/share/examples/urt
-	cd ${PREFIX}/share/doc/urt; \
-	${EXTRACT_CMD} xf ${DISTDIR}/urt-doc.tar; \
-	cd doc; \
-	find -d . | cpio -dump ..; \
-	cd ..; \
-	${RM} -rf doc; \
-	cd ${PREFIX}/share/examples/urt; \
-	${EXTRACT_CMD} xf ${DISTDIR}/urt-img.tar; \
-	chown -R root:wheel . ; \
-	find . -type d -exec chmod 775 '{}' \; ; \
-	find . -type f -exec chmod 664 '{}' \;
+	cd ${PREFIX}/share/doc/urt && (\
+	    ${GTAR} xf ${DISTDIR}/urt-doc.tar; \
+	    cd doc; \
+	    find -d . | cpio -dump ..; \
+	    cd ..; \
+	    ${RM} -rf doc)
+	cd ${PREFIX}/share/examples/urt && (\
+	    ${GTAR} xf ${DISTDIR}/urt-img.tar; \
+	    chown -R root:wheel . ; \
+	    find . -type d -exec chmod 775 '{}' \; ; \
+	    find . -type f -exec chmod 664 '{}' \;)
 
 .include "../../mk/bsd.pkg.mk"
