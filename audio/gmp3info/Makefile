@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2001/09/27 23:17:44 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/30 09:34:49 wiz Exp $
+#
 
 DISTNAME=	mp3info-0.8.2
 PKGNAME=	g${DISTNAME}
@@ -11,11 +12,11 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.ibiblio.org/mp3info/
 COMMENT=	Utility to read and modify the ID3 tags of MP3 files
 
-DEPENDS+=	gtk+>=1.2.0:../../x11/gtk
-DEPENDS+=	ncurses>=5.0:../../devel/ncurses
-
 CONFLICTS=	mp3info-[0-9]*
 
-USE_X11=	YES
+USE_CONFIG_WRAPPER=	yes
 
+.include "../../devel/ncurses/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
