@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.45 2002/03/22 09:01:14 martti Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.46 2002/03/25 08:04:04 martti Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1280,6 +1280,11 @@ USE_WNN4?= YES
 # Used in xemacs package to build in support for xface
 # (pkgsrc/mail/face)
 # Possible: not defined, YES
+# Default: not defined
+
+#VIM_EXTRA_OPTS=
+# Used in vim package to build with non-gui extra options
+# Possible: not defined, see "configure --help"
 # Default: not defined
 
 WINDOWMAKER_OPTIONS?= gnome kde openlook
