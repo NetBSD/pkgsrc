@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2001/02/16 14:38:44 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/04/13 17:58:51 jtb Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/09/15 07:22:06 tg Exp
 #
 
-DISTNAME=		noweb-2.9a
+DISTNAME=		noweb-2.9anb1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.cs.virginia.edu/pub/nr/
 EXTRACT_SUFX=		.tgz
@@ -23,5 +23,9 @@ WRKSRC=			${WRKDIR}/src
 do-configure:
 	(cd ${WRKSRC} ; ./awkname awk)
 .endif
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/noweb
+	${INSTALL_DATA} ${WRKDIR}/examples/* ${PREFIX}/share/examples/noweb
 
 .include "../../mk/bsd.pkg.mk"
