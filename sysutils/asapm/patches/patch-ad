@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/06/09 21:00:05 kivinen Exp $
+
+--- state.h.orig	1999-03-09 12:35:24.000000000 +0200
++++ state.h
+@@ -13,6 +13,8 @@
+ /* file -> APM device */
+ #if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+ #define APM_PROC "/dev/apm"
++#include <paths.h>
++#define SYSMON_DEV _PATH_SYSMON
+ #else
+ #define APM_PROC "/proc/apm"
+ #endif
