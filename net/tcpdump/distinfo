@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 12:14:05 agc Exp $
+$NetBSD: distinfo,v 1.6.2.1 2005/03/27 07:00:55 snj Exp $
 
 SHA1 (tcpdump-3.8.3.tar.gz) = 7ae3c29fe843fc23ae89acd8b1b1e513213f6042
 RMD160 (tcpdump-3.8.3.tar.gz) = 585c1ad9a93a8329b1d60057dd334e7b1a88097c
 Size (tcpdump-3.8.3.tar.gz) = 567116 bytes
+SHA1 (patch-aa) = d70302c6fa68d0d170fa5c22ce0a348bdf0233be
+SHA1 (patch-ab) = 628f0ecf34a7c9a5c17000b234360f7846c07847
