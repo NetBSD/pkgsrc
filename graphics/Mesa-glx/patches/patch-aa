@@ -1,88 +1,44 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/09/29 22:44:17 tron Exp $
+$NetBSD: patch-aa,v 1.2 2000/04/11 22:36:05 tron Exp $
 
---- libGL/Makefile.in.orig	Sun Jul  4 23:58:47 1999
-+++ libGL/Makefile.in	Wed Sep 29 19:06:23 1999
-@@ -7,7 +7,7 @@
- # These define the name/version of the shared library we're building
- # ------------------------------------------------------------------
- LIBNAME = GL
--SOGLREV = 1.0
-+SOGLREV = 3:0
+--- configure.in.orig	Fri Mar 31 06:26:15 2000
++++ configure.in	Wed Apr 12 00:05:05 2000
+@@ -933,39 +933,6 @@
+   xserver_flags="$xserver_flags -D_XSERVER64"
+ fi
  
- # Source and Object files
- # -----------------------
-@@ -16,7 +16,6 @@
- 	map_points.c pointers.c glx_varray.c
- 
- OBJS = ${SRCS:.c=.o}
--UNSHARED_OBJS = unshared/*.o
- 
- 
- # Additional compiler rules
-@@ -34,22 +33,12 @@
- 	${CC} ${ALL_CFLAGS} -E $*.c > $@
- 
- .c.o:
--ifeq "${USE_DYNAMIC_MODULE}" "yes"
--	${RM} $@
--	${CC} ${ALL_CFLAGS} ${SHARED_CFLAGS} -c $<
--else
--	${RM} unshared/$@
--	${CC} ${ALL_CFLAGS} -c $< -o unshared/$@
--endif
-+	${LIBTOOL} ${CC} ${ALL_CFLAGS} -c $< 
- 
- # Main targets
- # ------------
- 
--ifeq "${USE_DYNAMIC_MODULE}" "yes"
--all : lib${LIBNAME}.so.${SOGLREV}
--else
--all : unshared-subdir lib${LIBNAME}.a
--endif
-+all : lib${LIBNAME}.la
- 
- clean :
- 	${RM} *.CKP *.ln *.BAK *.bak *.o core errs ,* *~ *.a .emacs_* tags TAGS make.log MakeOut  "#"*
-@@ -61,20 +50,8 @@
- 	${DEPEND} -f .deps -- ${ALL_CFLAGS} -- ${SRCS}
- 
- 
--ifeq "${USE_DYNAMIC_MODULE}" "yes"
--install: lib${LIBNAME}.so.${SOGLREV}
--	@if [ -d ${INSTALL_libdir} ]; then set +x; \
--	else (set -x; ${MKDIR} ${INSTALL_libdir}); fi
--	${INSTALL} ${INSTALLFLAGS} ${INSTBINFLAGS} lib${LIBNAME}.so.${SOGLREV} ${INSTALL_libdir}
--	@T=`echo ${INSTALL_libdir}/lib${LIBNAME}.so.${SOGLREV} | sed 's/\.[^\.]*$$//'`; set -x; ${RM} $$T && ${LN} lib${LIBNAME}.so.${SOGLREV} $$T
--	${RM} ${INSTALL_libdir}/lib${LIBNAME}.so
--	${LN} lib${LIBNAME}.so.${SOGLREV} ${INSTALL_libdir}/lib${LIBNAME}.so
--else
--install: lib${LIBNAME}.a
--	@if [ -d ${INSTALL_libdir} ]; then set +x; \
--	else (set -x; ${MKDIR} ${INSTALL_libdir}); fi
--	${INSTALL} ${INSTALLFLAGS} ${INSTBINFLAGS} lib${LIBNAME}.a ${INSTALL_libdir}
--endif
-+install: lib${LIBNAME}.la
-+	${LIBTOOL} ${BSD_INSTALL_DATA} $< ${INSTALL_libdir}
- 
- tags :
- 	${TAGS} -w *.[ch]
-@@ -92,15 +69,9 @@
- render.c: genlib.tcl genGL.tcl
- 	${TCLSH} genlib.tcl
- 
--lib${LIBNAME}.so.${SOGLREV} : render.c ${OBJS}
--	${RM} $@~
--	@SONAME=`echo $@ | sed 's/\.[^\.]*$$//'`; set -x; \
--	${CC} -o ./$@~ ${SHARED_LDFLAGS} -Wl,-soname,$$SONAME ${OBJS} ${XLIBDIR} -lX11 -lXi ${MATHLIBS}; \
--	${RM} $$SONAME; ${LN} $@ $$SONAME; \
--	${RM} $@
--	${MV} $@~ $@
--	${RM} lib${LIBNAME}.so
--	${LN} $@ lib${LIBNAME}.so
-+lib${LIBNAME}.la : render.c ${OBJS}
-+	${LIBTOOL} --mode=link ${CC} -rpath ${INSTALL_libdir} \
-+	  -version-info ${SOGLREV} -o $@ ${OBJS:.o=.lo}
- 
- lib${LIBNAME}.a : render.c ${UNSHARED_OBJS}
- 	${RM} $@~
+-dnl try to save some labor on the location of glx.conf
+-dnl we want it to be in the same place as XF86Config,
+-dnl so look in some common locations and hope for the best.
+-
+-which_sysconf=`echo $sysconfdir | grep "\$.prefix."`
+-if test -z "$which_sysconf"
+- then
+-  echo "sysconfdir not set"
+- else
+-  AC_MSG_CHECKING([XF86Config location])
+-  if test -f /etc/XF86Config
+-   then
+-    sysconfdir="/etc"
+-    AC_MSG_RESULT([$sysconfdir])
+-  elif test -f /etc/X11/XF86Config
+-   then
+-    sysconfdir="/etc/X11"
+-    AC_MSG_RESULT([$sysconfdir])
+-  elif test -f ${x_libraries}/X11/XF86Config
+-   then
+-    sysconfdir=${x_libraries}/X11/XF86Config
+-    AC_MSG_RESULT([${sysconfdir}])
+-  elif test -f /usr/X11R6/lib/X11/XF86Config
+-   then
+-    sysconfdir="/usr/X11R6/lib/X11/XF86Config"
+-    AC_MSG_RESULT([${sysconfdir}])
+-   else
+-    AC_MSG_RESULT([can't find it!])
+-    AC_MSG_WARN([defaulting to ${sysconfdir} for glx.conf])
+-  fi
+-fi
+-
+-
+ dnl
+ dnl Checks for library functions.
+ dnl
