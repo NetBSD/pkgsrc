@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1999/01/16 12:35:44 tron Exp $
+$NetBSD: patch-aa,v 1.5 1999/02/02 10:24:11 tron Exp $
 
---- doc/Makefile.in.orig	Sat Jan  9 20:55:55 1999
-+++ doc/Makefile.in	Mon Jan 11 09:44:13 1999
-@@ -142,7 +142,7 @@
+--- doc/Makefile.in.orig	Wed Jan 20 10:00:00 1999
++++ doc/Makefile.in	Sun Jan 31 04:52:26 1999
+@@ -126,7 +126,7 @@
  	for i in $$list; do \
  	  if test -f $(srcdir)/$$i; then file=$(srcdir)/$$i; \
  	  else file=$$i; fi; \
