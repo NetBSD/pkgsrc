@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/10 11:02:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/11 02:19:28 jlam Exp $
 #
 
 DISTNAME=	gle-3.1.0
@@ -12,7 +12,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.linas.org/gle/
 COMMENT=	GL subroutines for drawing tubing and extrusions
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 
@@ -22,5 +22,5 @@ CONFIG_SUB_OVERRIDE+=	${WRKSRC}/config.sub
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
