@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2002/03/16 03:39:30 taca Exp $
+# $NetBSD: Makefile,v 1.3 2002/03/16 11:00:17 taca Exp $
 #
 
-DISTNAME=	erb-1.4.0
+DISTNAME=	erb-1.4.1
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www2a.biglobe.ne.jp/~seki/ruby/
