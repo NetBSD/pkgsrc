@@ -1,0 +1,31 @@
+$NetBSD: patch-ah,v 1.1 1999/06/04 16:00:04 sommerfeld Exp $
+
+--- scsh/bsd/signals1.c.~1~	Thu Sep 12 02:01:30 1996
++++ scsh/bsd/signals1.c	Fri Jun  4 11:33:37 1999
+@@ -5,6 +5,10 @@
+ /* Make sure our exports match up w/the implementation: */
+ #include "../signals1.h"
+ 
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#endif
++
+ /* This table converts Unix signal numbers to S48/scsh interrupt numbers.
+ ** If the signal doesn't have an interrupt number, the entry is -1.
+ ** (Only asynchronous signals have interrupt numbers.)
+@@ -45,10 +49,13 @@
+ 	scshint_winch,	/* SIGWINCH */
+ 	scshint_info,	/* SIGINFO */
+ 	scshint_usr1,	/* SIGUSR1 */
+-	scshint_usr2	/* SIGUSR2 */
++	scshint_usr2,	/* SIGUSR2 */
++#if defined(__NetBSD__) && defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 103080000)
++	scshint_pwr,	/* SIGPWR */
++#endif
+         };
+ 
+-const int max_sig = 31; /* SIGUSR2 */
++const int max_sig = (sizeof(sig2int)/sizeof(int)) - 1;
+ 
+ /*
+ scshint_alarm
