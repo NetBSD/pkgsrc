@@ -3,7 +3,8 @@
 # Date created:         17 Nov 1995
 # Whom:                 markm
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/11 21:54:02 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/24 00:31:35 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.6 1996/11/17 09:05:15 obrien Exp
 #
 
 DISTNAME=       buffer-1.17
