@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/02/21 21:18:28 veego Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/23 10:56:47 wiz Exp $
 #
 
 .if ${MACHINE_ARCH} == "sparc64"
@@ -26,8 +26,8 @@ COMMENT=		32-bit shared libraries for NetBSD 1.6 (and earlier) compatibility
 
 CONFLICTS=		netbsd32_compat15-[0-9]*
 
-ONLY_FOR_PLATFORM=	NetBSD-2*-sparc64
-ONLY_FOR_PLATFORM+=	NetBSD-2*-x86_64
+ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-sparc64
+ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-x86_64
 
 NO_MTREE=		# defined
 NO_BUILD=		# defined

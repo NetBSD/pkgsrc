@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/02/21 20:57:20 veego Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/23 10:55:28 wiz Exp $
 #
 
 DISTNAME=		compat16-${MACHINE_ARCH}-${VERSION}
@@ -13,7 +13,7 @@ COMMENT=		Shared libraries for NetBSD 1.6 (and earlier) compatibility
 
 VERSION=		1.6.0
 
-ONLY_FOR_PLATFORM=	NetBSD-1.6[A-Z]*-i386 NetBSD-2*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.6[A-Z]*-i386 NetBSD-[2-9]*-i386
 
 NO_MTREE=		# defined
 NO_BUILD=		# defined
