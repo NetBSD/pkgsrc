@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4646 2004/01/30 21:47:30 david Exp $
+$NetBSD: CHANGES,v 1.4647 2004/01/31 00:30:15 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -531,3 +531,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kmplayer to 0.8.2rc5nb3 [jmmv 2004-01-29]
 	Updated ngrep to 1.41 [adam 2004-01-30]
 	Updated freeradius to 0.9.3 [david 2004-01-30]
+	Updated dejagnu to 1.4.4 [kristerw 2004-01-31]
