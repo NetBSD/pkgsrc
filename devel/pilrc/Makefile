@@ -1,29 +1,33 @@
-# $NetBSD: Makefile,v 1.10 2002/10/13 12:01:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/15 23:34:40 dillo Exp $
 #
 
-DISTNAME=	pilrc-2.8p4
-PKGNAME=	pilrc-2.8.4
-PKGREVISION=	1
-WRKSRC=		${WRKDIR}/pilrc-2.8p4
+DISTNAME=	pilrc-2.9p9
+PKGNAME=	pilrc-2.9.10
+DIFFS=		pilrc-2.9p10.diff
+EXTRACT_SUFFIX=	.tgz
+DISTFILES=	${DISTNAME}${EXTRACT_SUFFIX} ${DIFFS}
 CATEGORIES=	devel
-MASTER_SITES=	http://www.ardiri.com/download/palm/pilrc/patch/
+MASTER_SITES=	http://www.ardiri.com/download/files/palm/
 #MASTER_SITES=	http://www.ardiri.com/download/palm/pilrc/archive/
-#EXTRACT_SUFX=	.zip
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFFIX}
 
-#PATCH_SITES=	http://www.ardiri.com/download/palm/pilrc/patch/
-#PATCHFILES=	pilrc-2.8p0.diff pilrc-2.8p1.diff pilrc-2.8p2.diff
-#PATCHFILES+=	pilrc-2.8p3.diff
+# we can't use this, since pilrc's maintainer won't create patches with
+# unix line endings
+#PATCH_SITES=	${MASTER_SITES}
+#PATCHFILES=	pilrc-2.9p10.diff
 #PATCH_DIST_STRIP+=-p1
-#
+
 MAINTAINER=	dillo@netbsd.org
 HOMEPAGE=	http://www.ardiri.com/index.cfm?redir=palm&cat=pilrc
 COMMENT=	generate resources for PalmOS applications from textual description
 
 #EXTRACT_CMD=	unzip -aq ${DOWNLOADED_DISTFILE}
 
-USE_BUILDLINK2=		YES
-GNU_CONFIGURE=		YES
+USE_GMAKE=	YES
+USE_BUILDLINK2=	YES
+GNU_CONFIGURE=	YES
 
+#WRKSRC=		${WRKDIR}/pilrc-2.9p9
 DOCDIR=		${PREFIX}/share/doc/html/pilrc
 
 .include "../../mk/bsd.prefs.mk"
@@ -38,10 +42,13 @@ CONFIGURE_ARGS+=--disable-pilrcui
 PLIST_SUBST+=	PILRCUI='@comment '
 .endif
 
-post-extract:
-	${CHMOD} +x ${WRKSRC}/configure
-	${CHMOD} +x ${WRKSRC}/missing
+#post-extract:
+#	${CHMOD} +x ${WRKSRC}/configure
+#	${CHMOD} +x ${WRKSRC}/missing
 
+pre-patch:
+	cd ${WRKSRC} && tr -d '\015' < ${DISTDIR}/${DIFFS} \
+		| ${PATCH} --quiet -p1
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${DOCDIR}/images
 	cd ${WRKSRC}/doc &&						\
