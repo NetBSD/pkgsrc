@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9771 2005/04/06 05:30:59 epg Exp $
+$NetBSD: CHANGES,v 1.9772 2005/04/06 14:15:29 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1919,3 +1919,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sr to 2.3.3nb6 [is 2005-04-05]
 	Updated getmail to 4.3.5 [schmonz 2005-04-06]
 	Updated clearsilver to 0.9.14 [epg 2005-04-06]
+	Updated mysql4-client to 4.1.11 [xtraeme 2005-04-06]
+	Updated mysql4-server to 4.1.11 [xtraeme 2005-04-06]
