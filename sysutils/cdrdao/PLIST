@@ -1,17 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:52:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/29 16:47:52 drochner Exp $
 bin/cdrdao
+bin/toc2cue
 man/man1/cdrdao.1
 share/cdrdao/drivers
 share/doc/cdrdao/COPYING
 share/doc/cdrdao/CREDITS
 share/doc/cdrdao/INSTALL
 share/doc/cdrdao/README
-share/doc/cdrdao/README.edc_ecc
 share/doc/cdrdao/README.FreeBSD
 share/doc/cdrdao/README.PlexDAE
 share/doc/cdrdao/Release-1.1.2
 share/doc/cdrdao/Release-1.1.3
-share/doc/cdrdao/crc.txt
 share/doc/cdrdao/testtocs/cdtext.toc
 share/doc/cdrdao/testtocs/data1.toc
 share/doc/cdrdao/testtocs/data2.toc
@@ -20,6 +19,8 @@ share/doc/cdrdao/testtocs/data4.toc
 share/doc/cdrdao/testtocs/data5.toc
 share/doc/cdrdao/testtocs/data6.toc
 share/doc/cdrdao/testtocs/data7.toc
+share/doc/cdrdao/testtocs/mode1_rw.toc
+share/doc/cdrdao/testtocs/mode1_rw_raw.toc
 share/doc/cdrdao/testtocs/t1.toc
 share/doc/cdrdao/testtocs/t2.toc
 share/doc/cdrdao/testtocs/t3.toc
@@ -30,7 +31,6 @@ share/doc/cdrdao/testtocs/t7.toc
 share/doc/cdrdao/testtocs/t8.toc
 share/doc/cdrdao/testtocs/t9.toc
 share/examples/cdrdao/mp32dao.pl
-share/examples/cdrdao/README.mp32dao
 share/examples/cdrdao/psxcopy/Makefile
 share/examples/cdrdao/psxcopy/README
 share/examples/cdrdao/psxcopy/cdjob.c
