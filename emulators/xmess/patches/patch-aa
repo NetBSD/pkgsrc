@@ -1,5 +1,5 @@
---- makefile.unix.orig	Fri Jun  5 09:49:04 1998
-+++ makefile.unix	Thu Jul  9 08:14:27 1998
+--- makefile.unix.orig	Fri Jun  5 15:49:04 1998
++++ makefile.unix	Tue Jul 21 14:23:01 1998
 @@ -13,7 +13,7 @@
  # GNU MAKE is MANDATORY !!!
  # so please give me the path...
@@ -90,7 +90,7 @@
  ######## Sparc/SunOS/X11 ( no sound )
  # ARCH  = sunos
  ######## ix86/Solaris/X11
-@@ -277,17 +282,17 @@
+@@ -277,17 +282,22 @@
  		-fomit-frame-pointer -Wall
  INST.FREEBSD   = doinstall
  
@@ -102,10 +102,15 @@
  #set STIM=-DUSE_TIMER above
  #
 -DEFS.netbsd_i386   = -DX86_ASM -DLSB_FIRST -DUNIX -Dnetbsd_i386 -DNETBSD \
++ifeq (${MACHINE},i386)
 +DEFS.netbsd   = -DX86_ASM -DLSB_FIRST -DUNIX -DNETBSD \
  		-DHAVE_GETTIMEOFDAY -DUSE_AUDIO -DSIGNED_SAMPLES
 -LIBS.netbsd_i386   = $(X11LIB) -lX11 -lXext -lm
 -CFLAGS.netbsd_i386 = $(X11INC) -m486 -fstrength-reduce -funroll-loops \
++else
++DEFS.netbsd   =	-DLSB_FIRST -DUNIX -DNETBSD \
++		-DHAVE_GETTIMEOFDAY -DUSE_AUDIO -DSIGNED_SAMPLES
++endif
 +LIBS.netbsd   = $(X11LIB) -lX11 -lXext -lm
 +CFLAGS.netbsd = $(X11INC) -O3 -fstrength-reduce -funroll-loops \
  		-fomit-frame-pointer -Wall
