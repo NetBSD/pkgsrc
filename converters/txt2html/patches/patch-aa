@@ -1,15 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/10/20 14:53:08 wennmach Exp $
+$NetBSD: patch-aa,v 1.2 2001/11/30 17:29:26 jlam Exp $
 
 Adopt to pkgsrc path conventions.
 
 --- txt2html.pl.orig	Fri Oct 20 15:28:58 2000
 +++ txt2html.pl	Fri Oct 20 15:32:10 2000
-@@ -1,4 +1,4 @@
--#!/usr/bin/perl
-+#!@PREFIX@/bin/perl
- #
- # txt2html.pl
- # Convert raw text to something with a little HTML formatting
 @@ -222,7 +222,7 @@
                                  # 2: The code that will make the links
                                  # 4: When each rule matches something
