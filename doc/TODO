@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2539 2004/11/27 22:37:35 jdolecek Exp $
+$NetBSD: TODO,v 1.2540 2004/11/27 22:45:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -641,7 +641,6 @@ Suggested package updates
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.3
 	o jakarta-tomcat-3.3.1a
-	o jamjar-0.7.1
 	o jdb-1.13
 	o jessie-1.0.0
 	o jftpgw-0.13.5
@@ -774,7 +773,6 @@ Suggested package updates
 	o netramet-50
 	o netscape7-7.2
 	o neverball-1.4.0
-	o newfile-1.0.9
 	o newmail-1.0.2
 	o newscache-1.1.92
 	o ng-1.4.4
@@ -1071,7 +1069,6 @@ Suggested package updates
 	o py-xmltools-1.4.0
 	o py-zconfig-2.1
 	o pygtk-2.4.1
-	o pyslsk-1.2.5
 	o pysol-4.82
 	o qDecoder-7.1
 	o qmail-qfilter-2.0
