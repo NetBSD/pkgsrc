@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.4 2000/08/29 11:37:17 rh Exp $
+
+--- configure.orig	Mon Aug 28 20:05:57 2000
++++ configure
+@@ -4805,7 +4805,7 @@
+   cat conftest.$ac_ext >&5
+   rm -rf conftest*
+   CATOBJEXT=.mo
+-		   DATADIRNAME=lib
++		   DATADIRNAME=share
+ fi
+ rm -f conftest*
+ 		INSTOBJEXT=.mo
+@@ -5067,7 +5067,7 @@
+ 		 USE_INCLUDED_LIBINTL=yes
+ 		 CATOBJEXT=.cat
+ 		 INSTOBJEXT=.cat
+-		 DATADIRNAME=lib
++		 DATADIRNAME=share
+ 		 INTLDEPS='$(top_builddir)/intl/libintl.a'
+ 		 INTLLIBS=$INTLDEPS
+ 		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
