@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/09/29 15:40:29 fredb Exp $
+# $NetBSD: Makefile,v 1.16 2000/10/02 11:26:28 fredb Exp $
 #
 
 DISTNAME=		coda-4.6.6
@@ -16,7 +16,7 @@ DEPENDS+=		readline>=4.0:../../devel/readline
 
 # Requires "lwp" plus "filesystem CODA" to operate. Should build on
 # any NetBSD-*-m68k, though.
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-sparc*
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-m68k
 
 ALL_TARGET=		coda
 INSTALL_TARGET=		client-install
