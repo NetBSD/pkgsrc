@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.2 1998/08/07 10:40:36 agc Exp $
+$NetBSD: patch-al,v 1.3 1999/11/27 21:24:47 rh Exp $
 
---- configure.in.orig	Sun Jun 14 16:46:00 1998
-+++ configure.in	Thu Jun 18 21:57:10 1998
-@@ -73,6 +73,8 @@
+--- configure.in.orig	Fri Dec 11 14:26:26 1998
++++ configure.in	Sat Nov 27 22:21:24 1999
+@@ -83,6 +83,8 @@
  
  dnl Check for -li386 for NetBSD and OpenBSD
  AC_CHECK_LIB(i386,i386_set_ldt)
@@ -10,8 +10,8 @@ $NetBSD: patch-al,v 1.2 1998/08/07 10:40:36 agc Exp $
 +AC_CHECK_LIB(ossaudio,main)
  dnl Check for -lw for Solaris
  AC_CHECK_LIB(w,iswalnum)
- dnl Check for XFree86 DGA extension
-@@ -96,7 +98,13 @@
+ dnl Check for -lnsl for Solaris
+@@ -132,7 +134,13 @@
  #if !defined(SNDCTL_DSP_STEREO)
  #error No open sound system
  #endif
@@ -26,7 +26,7 @@ $NetBSD: patch-al,v 1.2 1998/08/07 10:40:36 agc Exp $
  
  if test "$ac_cv_c_opensoundsystem" = "yes"
  then
-@@ -178,23 +186,40 @@
+@@ -214,23 +222,40 @@
  dnl **** Check for working dll ****
  
  DLLFLAGS=""
@@ -70,5 +70,5 @@ $NetBSD: patch-al,v 1.2 1998/08/07 10:40:36 agc Exp $
  AC_SUBST(DLLFLAGS)
 +AC_SUBST(LDSHARE)
  
- dnl **** Check for reentrant X libraries ****
+ dnl **** Check for reentrant libc ****
  dnl
