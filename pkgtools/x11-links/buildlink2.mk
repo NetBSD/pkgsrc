@@ -1,10 +1,12 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/24 16:29:49 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.4 2002/06/24 16:43:40 jlam Exp $
 
 .if defined(_FOR_X11_LINKS_ONLY)
 .if !defined(X11_LINKS_BUILDLINK_MK)
 X11_LINKS_BUILDLINK_MK=	# defined
 
 BUILDLINK_PREFIX.X11=	${X11BASE}
+
+.include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} != SunOS)
 # The files listed below are the union of the sets of files installed by
