@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2000/11/30 05:16:40 mycroft Exp $
+
+--- logview/log_repaint.c.orig	Thu Apr 27 03:32:02 2000
++++ logview/log_repaint.c	Thu Nov 30 05:09:19 2000
+@@ -480,7 +480,7 @@
+ 
+   tdm = &curlog->curmark->fulldate;
+   sprintf (status_text, "%02d/%02d/%02d", 
+-	   tdm->tm_mday, tdm->tm_mon, tdm->tm_year);
++	   tdm->tm_mday, tdm->tm_mon, tdm->tm_year + 1900);
+   gtk_label_get ( date_label, (char **)&buffer);
+   if (strcmp (status_text, buffer) != 0)
+     gtk_label_set_text (date_label, status_text);
