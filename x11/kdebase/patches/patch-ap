@@ -1,0 +1,18 @@
+$NetBSD: patch-ap,v 1.3 1999/07/15 08:46:23 tron Exp $
+
+--- po/cs/kcminfo.po.orig	Sat Jan 30 01:04:03 1999
++++ po/cs/kcminfo.po	Sat Jan 30 00:53:33 1999
+@@ -205,6 +205,13 @@
+ msgid "Buffer memory"
+ msgstr "Vyrovnávací pamì»"
+ 
++#: memory.cpp: NetBSD-specific memory types
++msgid "Active memory"
++msgstr "Aktivní pamì»"
++
++msgid "Inactive memory"
++msgstr "Neaktivní pamì»"
++
+ #: memory.cpp:49
+ msgid "Swap memory"
+ msgstr "Swapovací pamì»"
