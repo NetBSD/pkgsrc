@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/18 00:49:02 ben Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/18 14:34:19 ben Exp $
 
 DISTNAME=	gmodplay-0.08
 PKGREVISION=	3
@@ -21,7 +21,17 @@ USE_LANGUAGES=		c c++
 
 # for libslang and ossaudio
 CFLAGS+=	-DAUDIO_DEV="\"\\\"$(DEVOSSAUDIO)\\\"\""
-LDFLAGS+=	${LIBOSSAUDIO} -lcurses
+LDFLAGS+=	${LIBOSSAUDIO}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+LDFLAGS+=	-lcurses
+.endif
+
+.if ${OPSYS} == "Linux"
+LDFLAGS+=	-lncurses -ldl
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gmodplay ${PREFIX}/bin/gmodplay
