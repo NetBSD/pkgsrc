@@ -1,46 +1,50 @@
 # New ports collection makefile for:	lesstif
-# Version required:	0.81
+# Version required:	0.82
 # Date created:		December 10, 1996
 # Whom:			1wardd@airmail.net
 #
-# $NetBSD: Makefile,v 1.4 1997/12/22 07:52:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/16 17:07:12 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
-DISTNAME=	lesstif-0.81
+DISTNAME=	lesstif-0.82
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.lesstif.org/pub/hungry/lesstif/  \
 		ftp://ftp.hungry.com/pub/hungry/lesstif/
 
 MAINTAINER=	ports@FreeBSD.org
 
-#	see below for shared lib version information
-
 GNU_CONFIGURE=  yes
 USE_X11=	yes
 # change this and remove the strip statement in post-install for debugging
-CONFIGURE_ENV+=	CCFLAGS="-O -pipe"
+CONFIGURE_ENV=	CCFLAGS="-O -pipe"
 
-.if defined(HAVE_MOTIF)
+# this is worst case, when you're about to overwrite real Motif with Lesstif
 IS_INTERACTIVE=	yes
-pre-extract:
-	@echo "***********************************************************"
-	@echo "*                      W a r n i n g                      *"
-	@echo "* This port will overwrite your Motif installation.       *"
-	@echo "***********************************************************"
-	@echo -n "Is this ok? (y/n) ==> "
-	@(read ans; \
-	  case x"$$ans" in \
-	    xy*|xY*) \
-	        return 0; \
-	        ;; \
-	    *) \
-	        echo "Okay, I won't install it then...."; \
-	        echo "(Don't worry about the following \"*** Error code 1\"s)"; \
-	        return 1; \
-	        ;; \
-	  esac)
-.endif
+
+pre-fetch:
+	@if [ -d ${X11BASE}/include/Xm ]; then \
+		if [ -d ${X11BASE}/lib/X11/lesstif ]; then \
+			echo "Upgrading a previous Lesstif installation"; \
+			return 0; \
+		fi; \
+		echo "***********************************************************"; \
+		echo "*                      W a r n i n g                      *"; \
+		echo "* This port will overwrite your Motif installation.       *"; \
+		echo "***********************************************************"; \
+		echo -n "Is this ok? (y/n) ==> "; \
+		(read ans; \
+		  case x"$$ans" in \
+		    xy*|xY*) \
+			return 0; \
+			;; \
+		    *) \
+			echo "Okay, I won't install it then...."; \
+			echo "(Don't worry about the following \"*** Error code 1\"s)"; \
+			return 1; \
+			;; \
+		  esac) \
+	fi
 
 
 post-install:
@@ -54,11 +58,3 @@ post-install:
 	${LDCONFIG} -m ${PREFIX}/lib
 
 .include <bsd.port.mk>
-
-
-#	Shared lib versions
-#	dist version		BSD shared lib version
-#	------------		----------------------
-#	0.78			0.0
-#	0.79			0.1
-#	0.80			0.1

@@ -1,15 +1,15 @@
---- configure.orig	Fri Sep  5 19:47:03 1997
-+++ configure	Mon Sep  8 10:07:36 1997
-@@ -2556,7 +2556,7 @@
+--- configure.orig	Wed Nov 19 16:32:40 1997
++++ configure	Thu Nov 27 15:23:19 1997
+@@ -2672,7 +2672,7 @@
  
  
  major_shared=0
--minor_shared=81
+-minor_shared=82
 +minor_shared=1
  pico_version=
  
  
-@@ -2591,7 +2591,7 @@
+@@ -2708,7 +2708,7 @@
  
  lexicographic_readdir=1
  
