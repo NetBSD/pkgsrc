@@ -1,9 +1,16 @@
 #!/bin/sh
 #
-#	$NetBSD: soffice,v 1.1.1.1 1999/11/22 21:23:49 rh Exp $
+#	$NetBSD: soffice,v 1.2 2000/03/15 07:00:52 rh Exp $
 #
 SOINST=@@PREFIX@@/Office51
 [ "$SOFFICE" = "" ] && SOFFICE=$HOME/Office51
+
+if [ "`/sbin/mount | grep 'on /proc' | cut -d ' ' -f 5`" != "procfs" ]; then
+	echo "-----------------------------------------------------------------"
+	echo "StarOffice needs procfs to be mounted on /proc in order to work. "
+	echo "-----------------------------------------------------------------"
+	exit 1
+fi
 
 if [ ! -d "$SOFFICE" ]; then
 	echo ""
