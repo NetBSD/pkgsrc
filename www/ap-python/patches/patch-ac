@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/02/05 20:43:08 drochner Exp $
+$NetBSD: patch-ac,v 1.1.1.1 2002/02/05 21:05:58 drochner Exp $
 --- src/mod_python.c.orig	Sat Nov 10 13:06:57 2001
 +++ src/mod_python.c	Sat Nov 10 13:07:53 2001
 @@ -474,11 +474,13 @@
