@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/06/26 20:18:50 recht Exp $
+@comment $NetBSD: PLIST,v 1.9 2005/03/27 10:27:20 recht Exp $
 bin/derb
 bin/genbrk
 bin/gencnval
@@ -48,8 +48,6 @@ include/unicode/numfmt.h
 include/unicode/parseerr.h
 include/unicode/parsepos.h
 include/unicode/platform.h
-include/unicode/pmacos.h
-include/unicode/pos400.h
 include/unicode/putil.h
 include/unicode/pwin32.h
 include/unicode/rbbi.h
@@ -122,6 +120,7 @@ include/unicode/utf16.h
 include/unicode/utf32.h
 include/unicode/utf8.h
 include/unicode/utf_old.h
+include/unicode/utmscale.h
 include/unicode/utrace.h
 include/unicode/utrans.h
 include/unicode/utypes.h
@@ -129,27 +128,27 @@ include/unicode/uversion.h
 lib/icu/${PKGVERSION}/Makefile.inc
 lib/icu/Makefile.inc
 lib/icu/current
-lib/libicudata.so
-lib/libicudata.so.30
-lib/libicudata.so.30.0
-lib/libicui18n.so
-lib/libicui18n.so.30
-lib/libicui18n.so.30.0
-lib/libicuio.so
-lib/libicuio.so.30
-lib/libicuio.so.30.0
-lib/libicule.so
-lib/libicule.so.30
-lib/libicule.so.30.0
-lib/libiculx.so
-lib/libiculx.so.30
-lib/libiculx.so.30.0
-lib/libicutu.so
-lib/libicutu.so.30
-lib/libicutu.so.30.0
-lib/libicuuc.so
-lib/libicuuc.so.30
-lib/libicuuc.so.30.0
+lib/libicudata.dylib
+lib/libicudata.dylib.32
+lib/libicudata.dylib.32.0
+lib/libicui18n.dylib
+lib/libicui18n.dylib.32
+lib/libicui18n.dylib.32.0
+lib/libicuio.dylib
+lib/libicuio.dylib.32
+lib/libicuio.dylib.32.0
+lib/libicule.dylib
+lib/libicule.dylib.32
+lib/libicule.dylib.32.0
+lib/libiculx.dylib
+lib/libiculx.dylib.32
+lib/libiculx.dylib.32.0
+lib/libicutu.dylib
+lib/libicutu.dylib.32
+lib/libicutu.dylib.32.0
+lib/libicuuc.dylib
+lib/libicuuc.dylib.32
+lib/libicuuc.dylib.32.0
 lib/libsicudata.a
 lib/libsicui18n.a
 lib/libsicuio.a
@@ -165,6 +164,7 @@ man/man1/makeconv.1
 man/man1/pkgdata.1
 man/man1/uconv.1
 man/man8/decmn.8
+man/man8/gencase.8
 man/man8/genccode.8
 man/man8/gencmn.8
 man/man8/gennames.8
@@ -173,6 +173,7 @@ man/man8/genprops.8
 man/man8/gensprep.8
 man/man8/genuca.8
 sbin/decmn
+sbin/gencase
 sbin/genccode
 sbin/gencmn
 sbin/gennames
