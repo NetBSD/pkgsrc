@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5832 2004/05/06 09:10:00 jmmv Exp $
+$NetBSD: CHANGES,v 1.5833 2004/05/06 10:05:23 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2368,3 +2368,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added antonym-1.9 [tv 2004-05-05]
 	Updated ion to 20040407 [cube 2004-05-06]
 	Updated metacity to 2.8.1 [jmmv 2004-05-06]
+	Updated evolution to 1.4.6 [recht 2004-05-06]
