@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5309 2004/03/28 17:43:23 minskim Exp $
+$NetBSD: CHANGES,v 1.5310 2004/03/28 19:46:35 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1531,3 +1531,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated zsh to 4.2.0 [recht 2004-03-28]
 	Removed zsh-4.1.1 [uebayasi 2004-03-28]
 	Updated tcl-fbsql to 1.06 [minskim 2004-03-28]
+	Added jabberd2-2.0s2 [xtraeme 2004-03-28]
