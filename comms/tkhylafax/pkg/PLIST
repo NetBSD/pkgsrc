@@ -1,21 +1,21 @@
-@comment $NetBSD: PLIST,v 1.3 1999/08/13 14:06:56 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/08/31 23:21:45 jwise Exp $
 bin/tkhylafax
-lib/${PKGNAME}/entryDialog.t
-lib/${PKGNAME}/extract.t
-lib/${PKGNAME}/faxIt.t
-lib/${PKGNAME}/fileSelect.t
-lib/${PKGNAME}/listBatches.t
-lib/${PKGNAME}/mkCover.t
-lib/${PKGNAME}/mkWidgets.t
-lib/${PKGNAME}/options.t
-lib/${PKGNAME}/preferences.t
-lib/${PKGNAME}/rolodex.t
-lib/${PKGNAME}/searchEntries.t
-lib/${PKGNAME}/sendBatch.t
-lib/${PKGNAME}/svrStatus.t
-lib/${PKGNAME}/tkhylafax.xbm
-lib/${PKGNAME}/trace.t
-lib/${PKGNAME}/viewBatch.t
-lib/${PKGNAME}/tclIndex
+share/${PKGNAME}/entryDialog.t
+share/${PKGNAME}/extract.t
+share/${PKGNAME}/faxIt.t
+share/${PKGNAME}/fileSelect.t
+share/${PKGNAME}/listBatches.t
+share/${PKGNAME}/mkCover.t
+share/${PKGNAME}/mkWidgets.t
+share/${PKGNAME}/options.t
+share/${PKGNAME}/preferences.t
+share/${PKGNAME}/rolodex.t
+share/${PKGNAME}/searchEntries.t
+share/${PKGNAME}/sendBatch.t
+share/${PKGNAME}/svrStatus.t
+share/${PKGNAME}/tkhylafax.xbm
+share/${PKGNAME}/trace.t
+share/${PKGNAME}/viewBatch.t
+share/${PKGNAME}/tclIndex
 man/man1/tkhylafax.1
-@dirrm lib/${PKGNAME}
+@dirrm share/${PKGNAME}
