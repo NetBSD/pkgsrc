@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/02/11 00:53:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/12 13:06:32 jmmv Exp $
 
 DISTNAME=		libbonobo-2.4.3
 CATEGORIES=		devel gnome
@@ -38,5 +38,6 @@ post-install:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
