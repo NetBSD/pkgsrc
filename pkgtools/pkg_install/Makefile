@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2003/01/11 07:54:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.69 2003/01/11 11:59:35 wiz Exp $
 
 # Notes to package maintainers:
 #
@@ -57,7 +57,7 @@ post-install:
 .include "../../databases/db/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
 
-PREFIX:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||
+PREFIX:=		${PKG_TOOLS_BIN:C|/[^/]?bin$||}
 .if ${PREFIX} == "/usr"
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/share/man
 .else
