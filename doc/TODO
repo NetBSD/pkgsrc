@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1828 2004/06/11 14:46:36 jmmv Exp $
+$NetBSD: TODO,v 1.1829 2004/06/11 17:55:39 minskim Exp $
 
 Suggested new packages
 ======================
@@ -279,7 +279,8 @@ Suggested package updates
 	o larswm-7.4.8
 	o latex2rtf-1.9.15
 	o lavaps-2.4
-	o leafnode-1.9.54
+	o leafnode-1.10.0
+	o libbonobo-2.6.2
 	o libcaca-0.9
 	o libggi-2.0.5
 	o libgii-0.8.5
