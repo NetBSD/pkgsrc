@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5100 2004/03/05 19:42:06 jlam Exp $
+$NetBSD: CHANGES,v 1.5101 2004/03/05 22:34:27 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1177,3 +1177,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated postfix to 2.0.18nb1 [grant 2004-03-05]
 	Added cln-1.1.6 [adam 2004-03-05]
 	Updated createbuildlink to 3.2 [jlam 2004-03-05]
+	Added libmodplug-0.7 [ben 2004-03-05]
