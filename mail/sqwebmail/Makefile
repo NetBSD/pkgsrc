@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/02/24 00:14:33 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/02/24 00:22:45 jlam Exp $
 
 DISTNAME=	sqwebmail-3.6.2
 CATEGORIES=	www
@@ -10,6 +10,7 @@ DEPENDS+=	courier-maildirmake>=${BASE_VERS}:../../mail/courier-maildirmake
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
+USE_DB185=		yes
 USE_PERL5=		yes
 REPLACE_PERL=		sysconftool
 
@@ -85,9 +86,7 @@ CONF_FILES_PERMS+=	${DATADIR}/sqwebmail/${FILE}			\
 .endfor
 RCD_SCRIPTS=		pcpd sqwebmaild
 
-.if ${OPSYS} == "SunOS"
-.  include "../../databases/db/buildlink3.mk"
-.endif
+.include "../../databases/db/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 
 pre-configure:

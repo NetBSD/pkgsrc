@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.authdaemond,v 1.8 2004/02/22 01:52:05 jlam Exp $
+# $NetBSD: Makefile.authdaemond,v 1.9 2004/02/24 00:22:45 jlam Exp $
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
@@ -7,6 +7,7 @@ USE_LANGUAGES=		c c++
 
 PERL5_REQD+=		5.6.0
 USE_PERL5?=		build
+USE_DB185=		yes
 
 # These are files needed by the configure scripts or are needed by the
 # build process.
@@ -48,9 +49,7 @@ BUILD_DIRS=		${WRKSRC_SUBDIRS:S/^/${WRKSRC}\//}
 
 FILES_SUBST+=		SYSCONFTOOL=${SYSCONFTOOL:Q}
 
-.if ${OPSYS} == "SunOS"
-.  include "../../databases/db/buildlink3.mk"
-.endif
+.include "../../databases/db/buildlink3.mk"
 .if defined(USE_PAM)
 BUILD_DEFS+=		USE_PAM
 .  include "../../security/PAM/buildlink3.mk"
