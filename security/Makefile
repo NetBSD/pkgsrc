@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.61 2001/02/16 15:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2001/03/05 23:21:34 hubertf Exp $
 #
 
 COMMENT=	Security tools
 
 SUBDIR+=	PAM
 SUBDIR+=	aide
+SUBDIR+=	apg
 SUBDIR+=	amavis
 SUBDIR+=	audit-packages
 SUBDIR+=	crack
