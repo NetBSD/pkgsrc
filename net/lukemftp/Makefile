@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 22:51:22 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/21 17:10:51 martti Exp $
 #
 
 DISTNAME=		lukemftp-1.6-beta2
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.fi.NetBSD.org/pub/NetBSD/misc/lukemftp/ \
 			ftp://ftp.NetBSD.org/pub/NetBSD/misc/lukemftp/
 
 MAINTAINER=		lukem@NetBSD.org
-COMMENT=		the enhanced ftp client in NetBSD
+COMMENT=		The enhanced ftp client in NetBSD
 
 GNU_CONFIGURE=		yes
 

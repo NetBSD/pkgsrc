@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/13 13:52:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 17:10:40 martti Exp $
 
 DISTNAME=		gkrellmwireless-0.2.2
 PKGNAME=		gkrellm-wireless-0.2.2
@@ -8,7 +8,7 @@ MASTER_SITES=		http://gkrellm.luon.net/files/
 
 MAINTAINER=		jasper@pointless.net
 HOMEPAGE=		http://gkrellm.luon.net/gkrellmwireless.phtml
-COMMENT=		wavelan signal strength monitor for gkrellm
+COMMENT=		Wavelan signal strength monitor for gkrellm
 
 ONLY_FOR_PLATFORM=	*BSD-*-* Linux-*-*
 

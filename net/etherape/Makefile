@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:51:08 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 17:10:35 martti Exp $
 #
 
 DISTNAME=	etherape-0.9.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=etherape/}
 
 MAINTAINER=	damon@NetBSD.org
 HOMEPAGE=	http://etherape.sourceforge.net/
-COMMENT=	graphical network monitor
+COMMENT=	Graphical network monitor
 
 USE_GMAKE=		YES
 USE_X11=		YES

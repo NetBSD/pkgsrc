@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:51:52 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 17:11:17 martti Exp $
 #
 
 DISTNAME=		soup-0.7.10
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		callback-based mechanism for sending and servicing SOAP requests
+COMMENT=		Callback-based mechanism for sending and servicing SOAP requests
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:52:37 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 17:16:27 martti Exp $
 #
 
 DISTNAME=	pnm2ppa-1.04
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pnm2ppa/}
 
 MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://pnm2ppa.sourceforge.net/
-COMMENT=	filter to convert PNM file to PPA used by some HP DJ printer
+COMMENT=	Filter to convert PNM file to PPA used by some HP DJ printer
 
 USE_PKGINSTALL=	yes
 CONF_FILES+=	${PREFIX}/share/examples/pnm2ppa/pnm2ppa.conf.default	\

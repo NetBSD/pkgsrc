@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/17 22:51:21 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/21 17:10:50 martti Exp $
 #
 
 DISTNAME=		linc-1.0.1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		network client/server library
+COMMENT=		Network client/server library
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES

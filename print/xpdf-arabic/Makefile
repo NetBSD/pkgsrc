@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:52:44 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/21 17:16:29 martti Exp $
 #
 
 DISTNAME=	xpdf-arabic
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
-COMMENT=	xpdf support files for Arabic
+COMMENT=	Xpdf support files for Arabic
 
 DEPENDS+=	xpdf>=2.02:../../print/xpdf
 

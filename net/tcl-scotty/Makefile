@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:51:53 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 17:11:20 martti Exp $
 #
 
 DISTNAME=	scotty-2.1.11
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/
 
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://wwwhome.cs.utwente.nl/~schoenw/scotty/
-COMMENT=	network management extensions to TCL
+COMMENT=	Network management extensions to TCL
 
 DEPENDS+=	tcl>=8.3.2:../../lang/tcl
 
