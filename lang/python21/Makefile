@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2004/01/27 18:55:30 abs Exp $
+# $NetBSD: Makefile,v 1.15 2004/08/02 16:59:22 recht Exp $
 #
 
 PKGNAME=	python21-2.1.3
-PKGREVISION=	2
+PKGREVISION=	3
 
 CONFIGURE_ARGS+=	--without-threads
 
