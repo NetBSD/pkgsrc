@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.27 2000/10/04 20:08:55 martin Exp $
+# $NetBSD: Makefile,v 1.28 2000/11/25 10:47:15 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
-DISTNAME=	xemacs-21.1.9
+DISTNAME=	xemacs-21.1.12
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-21.1/ \
 		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/xemacs-21.1/ \
 		ftp://ftp.usyd.edu.au/pub/Xemacs/xemacs-21.1/ \
 		ftp://ftp.lab.kdd.co.jp/xemacs/xemacs-21.1/ \
 		ftp://ftp.th-darmstadt.de/pub/editors/xemacs/xemacs-21.1/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}-elc${EXTRACT_SUFX} ${DISTNAME}-info${EXTRACT_SUFX}
+EXTRACT_SUFX=	.tar.bz2
+DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}
 
-MAINTAINER=	martin@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.xemacs.org/
-
-USE_XAW=	yes
 
 DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
 DEPENDS+=	png>=1.0.6:../../graphics/png
@@ -23,16 +22,23 @@ DEPENDS+=	jpeg-*:../../graphics/jpeg
 NOT_FOR_PLATFORM=	*-*-mips*	#fails purespace dumping
 
 HAS_CONFIGURE=	YES
+USE_XAW=	YES
 USE_XPM=	YES
 
-DIST_SUBDIR=	xemacs
-
 BUILD_DEFS+=	USE_LDAP USE_XFACE
+DIST_SUBDIR=	xemacs
+EXTRA_FILES=	${DISTNAME}-elc.tar.gz ${DISTNAME}-info.tar.gz
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 .include "../../mk/bsd.prefs.mk"
 
-XAW_TYPE?=	3d
+.if defined(MANZ)
+PLIST_SUBST+=	ELSUFX=.gz
+.else
+PLIST_SUBST+=	ELSUFX=
+.endif
 
+XAW_TYPE?=	3d
 .if (${XAW_TYPE} == "standard")
 WITH_DIALOGS=	--with-dialogs=athena
 .else
@@ -65,7 +71,11 @@ CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM} --prefix=${PREFIX} \
 CFLAGS+=		-Dunix
 MAKE_ENV+=		INSTALL_MAN="${INSTALL_MAN}" \
 			INSTALL_SCRIPT="${INSTALL_SCRIPT}"
-PLIST_SRC=		${WRKDIR}/PLIST.tmp
+
+post-extract:
+	for FILE in ${EXTRA_FILES}; do \
+	  ${GTAR} xzCf ${WRKDIR} ${DISTDIR}/${DIST_SUBDIR}/$$FILE; \
+	done
 
 post-patch:
 	@${RM} -f ${WRKSRC}/etc/ctags.1.orig
@@ -81,8 +91,6 @@ post-install:
 	@${MKDIR} ${PREFIX}/lib/xemacs
 	@if [ "X${MANZ}" != X"" ]; then \
 		${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/${DISTNAME}; \
-		GZSUFFIX=.gz; \
-	fi; \
-	${SED} -e 's|@.GZ@|'$$GZSUFFIX'|g' ${PKGDIR}/PLIST >${PLIST_SRC}
+	fi
 
 .include "../../mk/bsd.pkg.mk"
