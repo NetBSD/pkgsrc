@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/07/21 22:26:53 kim Exp $
+$NetBSD: patch-ab,v 1.2 2003/12/28 06:33:26 kim Exp $
 
---- tcptraceroute.c.orig	Tue Jul 30 17:51:27 2002
-+++ tcptraceroute.c	Mon Jul 21 18:14:11 2003
+--- tcptraceroute.c.orig	2002-07-30 17:51:27.000000000 -0400
++++ tcptraceroute.c	2003-12-28 00:58:09.000000000 -0500
 @@ -209,7 +209,7 @@
  #define AF_LINK AF_INET /* BSD defines some AF_INET network interfaces as AF_LINK */
  #endif
@@ -11,6 +11,21 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/07/21 22:26:53 kim Exp $
  #define HASSALEN /* Awful, awful hack to make subinterfaces work on BSD. */
  #endif
  
+@@ -391,10 +391,10 @@
+ void usage(void)
+ {
+ 	printf("\n%s\n%s\n", VERSION, BANNER);
+-    fatal("Usage: %s [-nNFSAE] [-i <interface>] [-f <first ttl>]
+-       [-l <packet length>] [-q <number of queries>] [-t <tos>]
+-       [-m <max ttl>] [-pP] <source port>] [-s <source address>]
+-       [-w <wait time>] <host> [destination port] [packet length]\n\n", name);
++    fatal("Usage: %s [-nNFSAE] [-i <interface>] [-f <first ttl>]\n"
++"       [-l <packet length>] [-q <number of queries>] [-t <tos>]\n"
++"       [-m <max ttl>] [-pP] <source port>] [-s <source address>]\n"
++"       [-w <wait time>] <host> [destination port] [packet length]\n\n", name);
+ }
+ 
+ void about(void)
 @@ -724,8 +724,7 @@
  		}
  #endif
@@ -21,18 +36,32 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/07/21 22:26:53 kim Exp $
  		{
  			debug("Ignoring non-AF_INET address on interface %s\n",
  				sprintable(ifr.ifr_name));
-@@ -1783,8 +1782,13 @@
+@@ -1182,9 +1181,9 @@
+ 	if (! (pcap = pcap_open_live(device, offset + SNAPLEN, 0, 10, errbuf)))
+ 		fatal("pcap_open_live failed: %s", errbuf);
+ 
+-	safe_snprintf(filter, TEXTSIZE, "
+-		(tcp and src host %s and src port %d and dst host %s)
+-		or ((icmp[0] == 11 or icmp[0] == 3) and dst host %s)",
++	safe_snprintf(filter, TEXTSIZE,
++		"(tcp and src host %s and src port %d and dst host %s)"
++		" or ((icmp[0] == 11 or icmp[0] == 3) and dst host %s)",
+ 			iptos(dst_ip), dst_prt, iptos(src_ip), iptos(src_ip));
+ 
+ 	if (o_nofilter)
+@@ -1783,9 +1782,14 @@
  	o_dontfrag = 0;
  	o_timeout = 3;
  	o_nofilter = 0;
 -	o_noselect = 0;
  	o_nogetinterfaces = 0;
-+
+ 
 +#if defined(__NetBSD__)
 +	o_noselect = 1;
 +#else
 +	o_noselect = 0;
 +#endif
- 
++
  #if defined (__SVR4) && defined (__sun)
  	o_trackport = 1; /* --track-port should be the default for Solaris */
+ #else
