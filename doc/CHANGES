@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2343 2003/05/28 03:28:46 jlam Exp $
+$NetBSD: CHANGES,v 1.2344 2003/05/28 07:24:33 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2182,3 +2182,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cups to 1.1.19 [jlam 2003-05-28]
 	Updated ghostscript-esp to 7.05.6 [jlam 2003-05-28]
 	Updated ghostscript-esp-nox11 to 7.05.6 [jlam 2003-05-28]
+	Added mbmon-201 [agc 2003-05-28]
