@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.11 2002/10/18 11:50:28 martti Exp $
+$NetBSD: patch-ad,v 1.11.2.1 2003/03/23 01:24:13 jmc Exp $
 
---- Makefile.in.orig	Wed Oct  9 22:27:15 2002
-+++ Makefile.in	Fri Oct 18 13:04:01 2002
-@@ -89,6 +89,8 @@
+--- Makefile.in.orig	Fri Feb 28 15:56:06 2003
++++ Makefile.in	Sun Mar 16 09:02:19 2003
+@@ -91,6 +91,8 @@
  FLAGS  = $(ISA) $(FLAGS5) $(PASSWD_FLAGS)
  FLAGS32  = $(ISA32) $(FLAGS5) $(PASSWD_FLAGS)
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.11 2002/10/18 11:50:28 martti Exp $
  WINBIND_PROGS = @WINBIND_TARGETS@
  WINBIND_SPROGS = @WINBIND_STARGETS@
  WINBIND_PAM_PROGS = @WINBIND_PAM_TARGETS@
-@@ -654,7 +656,7 @@
+@@ -658,7 +660,7 @@
  
  bin/pam_smbpass.@SHLIBEXT@: $(PAM_SMBPASS_OBJ) bin/.dummy
  	@echo Linking shared library $@
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.11 2002/10/18 11:50:28 martti Exp $
  		@SONAMEFLAG@`basename $@`
  
  nsswitch/libnss_wins.so: $(NSS_OBJ)
-@@ -678,7 +680,7 @@
+@@ -682,7 +684,7 @@
  
  nsswitch/pam_winbind.so: $(PAM_WINBIND_OBJ)
  	@echo Linking $@
