@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2843 2003/07/20 23:39:36 sjg Exp $
+$NetBSD: CHANGES,v 1.2844 2003/07/21 06:21:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2879,3 +2879,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mplayer-share to 0.90nb4 [dillo 2003-07-20]
 	Updated bmake to 20030714 [sjg 2003-07-20]
 	Updated mk-files to 20030714 [sjg 2003-07-20]
+	Updated squid to squid-2.5.3nb2 [taca 2003-07-21]
