@@ -1,0 +1,20 @@
+$NetBSD: patch-ag,v 1.3 2004/05/17 01:17:46 danw Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=142338
+
+--- vicious-extensions/ve-misc.h.orig	Sun Apr 11 21:38:02 2004
++++ vicious-extensions/ve-misc.h
+@@ -86,10 +86,10 @@ gboolean ve_locale_exists (const char *l
+ #define ve_setenv g_setenv
+ #define ve_unsetenv g_unsetenv
+ #else
+-int ve_setenv (const char *name, const char *value, gboolean overwrite);
+-void ve_unsetenv (const char *name);
++#define ve_setenv gnome_setenv
++#define ve_unsetenv gnome_unsetenv
+ #endif
+-void ve_clearenv (void);
++#define ve_clearenv gnome_clearenv
+ 
+ /* just like gnome_i18n_get_language_list (in fact if you link to
+    gnome it uses that */

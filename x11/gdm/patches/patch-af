@@ -1,0 +1,113 @@
+$NetBSD: patch-af,v 1.10 2004/05/17 01:17:46 danw Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=142338
+
+--- vicious-extensions/ve-misc.c.orig	Sun Apr 11 21:37:56 2004
++++ vicious-extensions/ve-misc.c
+@@ -342,106 +342,6 @@ ve_locale_exists (const char *loc)
+ 	return ret;
+ }
+ 
+-/**
+- * ve_setenv:
+- * @name: An environment variable name.
+- * @value: The value to assign to the environment variable.
+- * @overwrite: If %TRUE, overwrite the existing @name variable in the
+- * environment.
+- * 
+- * Adds "@name=@value" to the environment. Note that on systems without setenv,
+- * this leaks memory so please do not use inside a loop or anything like that.
+- * The semantics are the same as the glibc setenv() (if setenv() exists, it is
+- * used).
+- *
+- * If @overwrite is %FALSE and the variable already exists in the environment,
+- * then %0 is returned and the value is not changed.
+- *
+- * Returns: %0 on success, %-1 on error
+- * 
+- **/
+-#if ! GLIB_CHECK_VERSION(2,3,1)
+-int
+-ve_setenv (const char *name, const char *value, gboolean overwrite)
+-{
+-#if defined (HAVE_SETENV)
+-	return setenv (name, value != NULL ? value : "", overwrite);
+-#else
+-	char *string;
+-	
+-	if (! overwrite && g_getenv (name) != NULL) {
+-		return 0;
+-	}
+-	
+-	/* This results in a leak when you overwrite existing
+-	 * settings. It would be fairly easy to fix this by keeping
+-	 * our own parallel array or hash table.
+-	 */
+-	string = g_strconcat (name, "=", value, NULL);
+-	return putenv (string);
+-#endif
+-}
+-#endif
+-
+-/**
+- * ve_unsetenv:
+- * @name: The environment variable to unset.
+- * 
+- * Description: Removes @name from the environment.
+- * In case there is no native implementation of unsetenv,
+- * this could cause leaks depending on the implementation of
+- * environment.
+- * 
+- **/
+-#if ! GLIB_CHECK_VERSION(2,3,1)
+-void
+-ve_unsetenv (const char *name)
+-{
+-#if defined (HAVE_SETENV)
+-	unsetenv (name);
+-#else
+-	extern char **environ;
+-	int i, len;
+-
+-	len = strlen (name);
+-	
+-	/* Mess directly with the environ array.
+-	 * This seems to be the only portable way to do this.
+-	 */
+-	for (i = 0; environ[i] != NULL; i++) {
+-		if (strncmp (environ[i], name, len) == 0
+-		    && environ[i][len + 1] == '=') {
+-			break;
+-		}
+-	}
+-	while (environ[i] != NULL) {
+-		environ[i] = environ[i + 1];
+-		i++;
+-	}
+-#endif
+-}
+-#endif
+-
+-/**
+- * ve_clearenv:
+- * 
+- * Description: Clears out the environment completely.
+- * In case there is no native implementation of clearenv,
+- * this could cause leaks depending on the implementation
+- * of environment.
+- * 
+- **/
+-void
+-ve_clearenv (void)
+-{
+-#ifdef HAVE_CLEARENV
+-	clearenv ();
+-#else
+-	extern char **environ;
+-	environ[0] = NULL;
+-#endif
+-}
+-
+ char *
+ ve_find_prog_in_path (const char *prog, const char *path)
+ {
