@@ -1,19 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/04 23:46:49 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/14 19:43:50 jmmv Exp $
 bin/ior-decode-2
+bin/linc-cleanup-sockets
 bin/orbit-idl-2
 bin/orbit2-config
 bin/typelib-dump
 include/orbit-2.0/ORBitservices/CosNaming.h
 include/orbit-2.0/ORBitservices/CosNaming_impl.h
+include/orbit-2.0/ORBitservices/orbit-imodule.h
 include/orbit-2.0/orbit-idl/orbit-idl-backend.h
-include/orbit-2.0/orbit/GIOP/giop-basics.h
-include/orbit-2.0/orbit/GIOP/giop-connection.h
-include/orbit-2.0/orbit/GIOP/giop-endian.h
-include/orbit-2.0/orbit/GIOP/giop-recv-buffer.h
-include/orbit-2.0/orbit/GIOP/giop-send-buffer.h
-include/orbit-2.0/orbit/GIOP/giop-server.h
-include/orbit-2.0/orbit/GIOP/giop-types.h
-include/orbit-2.0/orbit/GIOP/giop.h
 include/orbit-2.0/orbit/dynamic/dynamic-defs.h
 include/orbit-2.0/orbit/dynamic/dynamic.h
 include/orbit-2.0/orbit/orb-core/allocators.h
@@ -60,6 +54,11 @@ lib/libORBit-2.la
 lib/libORBit-2.so
 lib/libORBit-2.so.0
 lib/libORBit-2.so.0.0
+lib/libORBit-imodule-2.a
+lib/libORBit-imodule-2.la
+lib/libORBit-imodule-2.so
+lib/libORBit-imodule-2.so.0
+lib/libORBit-imodule-2.so.0.0
 lib/libORBitCosNaming-2.a
 lib/libORBitCosNaming-2.la
 lib/libORBitCosNaming-2.so
@@ -69,21 +68,30 @@ lib/libname-server-2.a
 lib/orbit-2.0/Everything_module.a
 lib/orbit-2.0/Everything_module.la
 lib/orbit-2.0/Everything_module.so
-lib/orbit-2.0/Everything_module.so.0
-lib/orbit-2.0/Everything_module.so.0.0
 lib/pkgconfig/ORBit-2.0.pc
 lib/pkgconfig/ORBit-CosNaming-2.0.pc
 lib/pkgconfig/ORBit-idl-2.0.pc
+lib/pkgconfig/ORBit-imodule-2.0.pc
 share/aclocal/ORBit2.m4
+share/doc/html/ORBit2/ORBit2-orbit2-allocators.html
+share/doc/html/ORBit2/ORBit2-orbit2-small.html
+share/doc/html/ORBit2/ORBit2.devhelp
+share/doc/html/ORBit2/general.html
+share/doc/html/ORBit2/home.png
+share/doc/html/ORBit2/index.html
+share/doc/html/ORBit2/index.sgml
+share/doc/html/ORBit2/left.png
+share/doc/html/ORBit2/right.png
+share/doc/html/ORBit2/up.png
 share/idl/orbit-2.0/CosNaming.idl
 @dirrm share/idl/orbit-2.0
 @unexec ${RMDIR} %D/share/idl 2>/dev/null || ${TRUE}
+@dirrm share/doc/html/ORBit2
 @dirrm lib/orbit-2.0
 @dirrm include/orbit-2.0/orbit/util
 @dirrm include/orbit-2.0/orbit/poa
 @dirrm include/orbit-2.0/orbit/orb-core
 @dirrm include/orbit-2.0/orbit/dynamic
-@dirrm include/orbit-2.0/orbit/GIOP
 @dirrm include/orbit-2.0/orbit-idl
 @dirrm include/orbit-2.0/orbit
 @dirrm include/orbit-2.0/ORBitservices
