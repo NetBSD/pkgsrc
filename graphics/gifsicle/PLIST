@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:01 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/25 19:39:53 snj Exp $
 bin/gifdiff
-bin/gifview
 bin/gifsicle
+bin/gifview
 man/man1/gifdiff.1
-man/man1/gifview.1
 man/man1/gifsicle.1
+man/man1/gifview.1
