@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/11 16:51:54 abs Exp $
+include/whoson.h
+lib/libwhoson.la
+man/man3/whoson.3
+man/man3/wso_login.3
+man/man3/wso_logout.3
+man/man3/wso_query.3
+man/man3/wso_version.3
+man/man5/whoson.conf.5
+man/man8/whoson.8
+man/man8/whosond.8
+sbin/whoson
+sbin/whosond
