@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.33 2003/08/30 14:23:27 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.34 2003/08/31 06:59:39 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -53,12 +53,17 @@ PATH:=		${BUILDLINK_DIR}/bin:${PATH}
 BUILDLINK_DEPENDS?=	${BUILDLINK_PACKAGES}
 
 X11_LINKS_SUBDIR=		share/x11-links
-.if defined(USE_X11) && empty(PKGPATH:Mpkgtools/x11-links)
+.if defined(USE_X11)
+USE_X11_LINKS?=			YES
+.  if empty(USE_X11_LINKS:M[nN][oO])
 BUILDLINK_DEPENDS+=		x11-links
-BUILDLINK_DEPENDS.x11-links=	x11-links>=0.13
+_BLNK_X11_LINKS_PACKAGE=	x11-links
+.  else
+_BLNK_X11_LINKS_PACKAGE=	# empty
+.  endif
+BUILDLINK_DEPENDS.x11-links=	x11-links>=0.12
 BUILDLINK_DEPMETHOD.x11-links=	build
 BUILDLINK_PKGSRCDIR.x11-links=	../../pkgtools/x11-links
-_BLNK_X11_LINKS_PACKAGE=	x11-links
 _BLNK_X11_LINKS_DIR=	${BUILDLINK_PREFIX.x11-links}/${X11_LINKS_SUBDIR}
 .else
 _BLNK_X11_LINKS_PACKAGE=	# empty
@@ -241,14 +246,16 @@ LDFLAGS+=	${_flag_}
 do-buildlink: buildlink-directories
 buildlink-directories:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}
-.if defined(USE_X11) && empty(PKGPATH:Mpkgtools/x11-links)
+.if defined(USE_X11)
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILDLINK_X11_DIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11_DIR}
-.  if exists(${_BLNK_X11_LINKS_DIR})
+.  if empty(USE_X11_LINKS:M[nN][oO])
+.    if exists(${_BLNK_X11_LINKS_DIR})
 	${_PKG_SILENT}${_PKG_DEBUG}${CP} -R ${_BLNK_X11_LINKS_DIR}/* ${BUILDLINK_X11_DIR}
-.  else
+.    else
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "x11-links doesn't seem to be installed."
 	${_PKG_SILENT}${_PKG_DEBUG}${FALSE}
+.    endif
 .  endif
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${BUILDLINK_DIR}/include
