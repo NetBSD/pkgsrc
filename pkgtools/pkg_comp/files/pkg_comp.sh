@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.13 2003/12/19 09:51:55 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.14 2004/01/03 10:45:50 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
-# Copyright (c) 2002, 2003, Julio M. Merino Vidal <jmmv@NetBSD.org>
+# Copyright (c) 2002, 2003, 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -560,7 +560,7 @@ check_pkg_install()
 #!/bin/sh
 cd /usr/pkgsrc/pkgtools/pkg_comp
 fail=\$(make show-var VARNAME=PKG_FAIL_REASON)
-if echo \$fail | grep "package tools need to be updated" >/dev/null; then
+if echo \$fail | grep "package tools installed on this system are out of date" >/dev/null; then
     echo "PKG_COMP ==> pkg_install is out of date; rebuilding"
     cd /usr/pkgsrc/pkgtools/pkg_install
     make && make install && make clean
