@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 1999/06/04 06:00:11 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.7 1999/11/14 22:51:21 frueauf Exp $
 bin/lyx
 bin/noweb2lyx
 bin/reLyX
 man/man1/lyx.1
 man/man1/reLyX.1
+share/locale/ca/LC_MESSAGES/lyx.mo
 share/locale/cs/LC_MESSAGES/lyx.mo
 share/locale/da/LC_MESSAGES/lyx.mo
 share/locale/de/LC_MESSAGES/lyx.mo
@@ -32,11 +33,13 @@ share/lyx/bind/hu_menus.bind
 share/lyx/bind/math.bind
 share/lyx/bind/menus.bind
 share/lyx/bind/pt_menus.bind
+share/lyx/bind/sciword.bind
 share/lyx/bind/sv_menus.bind
 share/lyx/bind/xemacs.bind
 share/lyx/chkconfig.ltx
 share/lyx/clipart/platypus.eps
 share/lyx/configure
+share/lyx/configure.cmd
 share/lyx/doc/BUGS.lyx
 share/lyx/doc/Customization.lyx
 share/lyx/doc/DocStyle.lyx
@@ -44,6 +47,7 @@ share/lyx/doc/Extended.lyx
 share/lyx/doc/Intro.lyx
 share/lyx/doc/LaTeXConfig.lyx
 share/lyx/doc/LaTeXConfig.lyx.in
+share/lyx/doc/README.Documentation
 share/lyx/doc/Reference.lyx
 share/lyx/doc/Tutorial.lyx
 share/lyx/doc/UserGuide.lyx
@@ -56,16 +60,20 @@ share/lyx/doc/de_Tutorial.lyx
 share/lyx/doc/de_UserGuide.lyx
 share/lyx/doc/es_Intro.lyx
 share/lyx/doc/es_Tutorial.lyx
-share/lyx/doc/es_splash.lyx
 share/lyx/doc/escher-lsd.eps
 share/lyx/doc/fr_Intro.lyx
 share/lyx/doc/fr_Tutorial.lyx
+share/lyx/doc/it_Intro.lyx
+share/lyx/doc/it_Tutorial.lyx
 share/lyx/doc/mobius.eps
+share/lyx/doc/nl_Intro.lyx
+share/lyx/doc/nl_Tutorial.lyx
 share/lyx/doc/pl_Intro.lyx
 share/lyx/doc/pl_Tutorial.lyx
 share/lyx/doc/platypus.eps
 share/lyx/doc/pt_Intro.lyx
 share/lyx/doc/sl_Intro.lyx
+share/lyx/doc/sl_Tutorial.lyx
 share/lyx/doc/sv_Intro.lyx
 share/lyx/doc/sv_Tutorial.lyx
 share/lyx/examples/Foils.lyx
@@ -77,11 +85,14 @@ share/lyx/examples/Minipage.lyx
 share/lyx/examples/TableExamples.lyx
 share/lyx/examples/aa_head.lyx
 share/lyx/examples/aa_paper.lyx
+share/lyx/examples/aas_sample.lyx
 share/lyx/examples/amsart-test.lyx
 share/lyx/examples/amsbook-test.lyx
 share/lyx/examples/beispiel_gelyxt.lyx
 share/lyx/examples/beispiel_roh.lyx
+share/lyx/examples/ca_splash.lyx
 share/lyx/examples/de_splash.lyx
+share/lyx/examples/docbook_example.lyx
 share/lyx/examples/ejemplo_con_lyx.lyx
 share/lyx/examples/ejemplo_sin_lyx.lyx
 share/lyx/examples/es_splash.lyx
@@ -90,12 +101,15 @@ share/lyx/examples/example_raw.lyx
 share/lyx/examples/exemple_brut.lyx
 share/lyx/examples/exemple_lyxifie.lyx
 share/lyx/examples/fr_splash.lyx
+share/lyx/examples/it_splash.lyx
 share/lyx/examples/landslide.lyx
+share/lyx/examples/nl_splash.lyx
 share/lyx/examples/noweb2lyx.lyx
 share/lyx/examples/pl_splash.lyx
 share/lyx/examples/primer_lyxan.lyx
 share/lyx/examples/primer_surov.lyx
 share/lyx/examples/pt_splash.lyx
+share/lyx/examples/ru_splash.lyx
 share/lyx/examples/scriptone.lyx
 share/lyx/examples/sl_splash.lyx
 share/lyx/examples/splash.lyx
@@ -126,6 +140,7 @@ share/lyx/kbd/greek.kmap
 share/lyx/kbd/iso8859-1.cdef
 share/lyx/kbd/iso8859-2.cdef
 share/lyx/kbd/iso8859-7.cdef
+share/lyx/kbd/koi8-r.kmap
 share/lyx/kbd/magyar-2.kmap
 share/lyx/kbd/magyar-3.kmap
 share/lyx/kbd/magyar.kmap
@@ -142,6 +157,7 @@ share/lyx/kbd/turkish.kmap
 share/lyx/layouts/IEEEtran.layout
 share/lyx/layouts/aapaper.inc
 share/lyx/layouts/aapaper.layout
+share/lyx/layouts/aastex.layout
 share/lyx/layouts/amsart-plain.layout
 share/lyx/layouts/amsart-seq.layout
 share/lyx/layouts/amsart.layout
@@ -155,9 +171,12 @@ share/lyx/layouts/article.layout
 share/lyx/layouts/book.layout
 share/lyx/layouts/broadway.layout
 share/lyx/layouts/dinbrief.layout
+share/lyx/layouts/docbook.layout
 share/lyx/layouts/egs.layout
 share/lyx/layouts/ejour2.layout
 share/lyx/layouts/foils.layout
+share/lyx/layouts/g-brief-de.layout
+share/lyx/layouts/g-brief-en.layout
 share/lyx/layouts/hollywood.layout
 share/lyx/layouts/iletter.layout
 share/lyx/layouts/latex8.layout
@@ -173,6 +192,7 @@ share/lyx/layouts/obsolete.inc
 share/lyx/layouts/paper.layout
 share/lyx/layouts/report.layout
 share/lyx/layouts/revtex.layout
+share/lyx/layouts/revtex4.layout
 share/lyx/layouts/scrartcl.layout
 share/lyx/layouts/scrbook.layout
 share/lyx/layouts/scrclass.inc
@@ -206,13 +226,18 @@ share/lyx/lyxrc.defaults
 share/lyx/lyxrc.example
 share/lyx/packages.lst
 share/lyx/templates/aapaper.lyx
+share/lyx/templates/aastex.lyx
 share/lyx/templates/dinbrief.lyx
+share/lyx/templates/docbook_template.lyx
+share/lyx/templates/g-brief-de.lyx
+share/lyx/templates/g-brief-en.lyx
 share/lyx/templates/hollywood.lyx
 share/lyx/templates/iletter.lyx
 share/lyx/templates/latex8.lyx
 share/lyx/templates/letter.lyx
 share/lyx/templates/linuxdoctemplate.lyx
 share/lyx/templates/revtex.lyx
+share/lyx/templates/revtex4.lyx
 share/lyx/templates/slides.lyx
 share/lyx/tex/broadway.cls
 share/lyx/tex/ejour2.cls
@@ -220,6 +245,10 @@ share/lyx/tex/hollywood.cls
 share/lyx/tex/iletter.cls
 share/lyx/tex/revtex.cls
 share/lyx/textclass.lst
+share/texmf/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk
+share/texmf/fonts/tfm/jknappen/ec/ecrm1000.tfm
+@exec %D/bin/texhash
+@unexec %D/bin/texhash
 @dirrm share/lyx/bind
 @dirrm share/lyx/clipart
 @dirrm share/lyx/doc
@@ -232,3 +261,7 @@ share/lyx/textclass.lst
 @dirrm share/lyx/templates
 @dirrm share/lyx/tex
 @dirrm share/lyx
+@dirrm share/texmf/fonts/tfm/jknappen/ec
+@dirrm share/texmf/fonts/tfm/jknappen
+@dirrm share/texmf/fonts/pk/ljfour/jknappen/ec
+@dirrm share/texmf/fonts/pk/ljfour/jknappen
