@@ -1,10 +1,11 @@
---- ./Makefile.in.org	Sun Aug 25 10:29:31 1996
-+++ ./Makefile.in	Wed Oct 16 00:43:03 1996
-@@ -214,6 +214,7 @@
- 	else \
- 	    $(INSTALL) -o $(install_uid) -g $(install_gid) -m 0440 $(srcdir)/sudoers $(sudoersdir)/sudoers; \
- 	fi
-+	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0440 $(srcdir)/sudoers $(sudoersdir)/sudoers.sample
+--- check.c.orig        Sat Nov 29 23:32:37 1997
++++ check.c     Sat Nov 29 23:32:51 1997
+@@ -733,7 +733,7 @@
+        (void) fclose(user_skey->keyfile);
  
- install-man:
- 	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 $(srcdir)/sudo.$(mantype) $(mandir8)/sudo.$(mansect8)
+     /* get the skey part of the prompt */
+-    if ((rval = skeychallenge(user_skey, user_name, challenge)) != 0) {
++    if ((rval = skeychallenge(user_skey, user_name, challenge, sizeof(challenge))) != 0) {
+ #ifdef OTP_ONLY
+        (void) fprintf(stderr,
+                       "%s: You do not exist in the s/key database.\n",
