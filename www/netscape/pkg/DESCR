@@ -1,0 +1,3 @@
+If Navigator or Communicator are already running 'netscape' will use
+'ns-open' (part of ns-remote) to open a new netscape window, otherwise
+it starts a new process.
