@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.169 2001/06/30 21:10:43 jlam Exp $
+# $NetBSD: Packages.txt,v 1.170 2001/07/01 23:03:17 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1555,6 +1555,8 @@ Please see the comments at the top of bsd.buildlink.mk for complete
 documentation on how to use the file.  A simple example of a buildlink.mk
 for a mythical package foo follows:
 
+> .include "../../mk/bsd.buildlink.mk"
+> 
 > BUILDLINK_PREFIX.foo=		${LOCALBASE}
 > BUILDLINK_FILES.foo=		include/foo.h
 > BUILDLINK_FILES.foo+=		include/bar.h
@@ -1567,8 +1569,6 @@ for a mythical package foo follows:
 > 
 > pre-configure: foo-buildlink
 > foo-buildlink: _BUILDLINK_USE
-> 
-> .include "../../mk/bsd.buildlink.mk"
 
 
  8.3 Converting packages to use buildlink.mk files
