@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: config.SunOS.sh,v 1.2 1999/09/20 19:23:16 kim Exp $
+# $NetBSD: config.SunOS.sh,v 1.3 2004/04/07 13:56:43 cube Exp $
 #
 # config.sh
 # This file was produced by running the Configure script.
@@ -49,7 +49,7 @@ strncasecmp='define'
 strcasecmp='define'
 seteuid='define'
 sitename=''
-hostfile='@PREFIX@/etc/nntp/domainname'
+hostfile='@PKGSYSCONFDIR@/domainname'
 domain=''
 isadmin='undef'
 newsadmin='root'
@@ -71,11 +71,11 @@ gethostname='undef'
 douname='undef'
 phostname='undef'
 hostcmd=''
-serverfile='@PREFIX@/etc/nntp/server'
+serverfile='@PKGSYSCONFDIR@/etc/nntp/server'
 auth='define'
 authsimple='define'
 authold='define'
-passfile='@PREFIX@/etc/nntp/server.auth'
+passfile='@PKGSYSCONFDIR@/etc/nntp/server.auth'
 decnet='undef'
 datakit='undef'
 CONFIG=true
