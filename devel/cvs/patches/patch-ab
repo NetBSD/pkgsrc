@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.11 2004/04/15 22:28:36 wiz Exp $
+$NetBSD: patch-ab,v 1.12 2004/05/22 10:38:06 wiz Exp $
 
---- doc/cvs.texinfo.orig	Wed Apr  7 02:46:57 2004
+--- doc/cvs.texinfo.orig	2004-05-14 20:50:08.000000000 +0200
 +++ doc/cvs.texinfo
-@@ -13450,6 +13450,11 @@ CPU intensive but is not recommended for
+@@ -13500,6 +13500,11 @@ CPU intensive but is not recommended for
  
  @xref{verifymsg}, for more information on how verifymsg
  may be used.
