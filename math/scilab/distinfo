@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2001/07/11 15:16:21 dmcmahill Exp $
+$NetBSD: distinfo,v 1.4 2001/11/28 04:21:46 dmcmahill Exp $
 
-SHA1 (scilab-2.6.src.tar.gz) = fa4e0df9e0500488f59e488ea20214c200add4d7
-Size (scilab-2.6.src.tar.gz) = 6729707 bytes
+SHA1 (scilab-2.6.src.tar.gz) = a91d9a33e849844ec8d6ce98657ded085c5928e0
+Size (scilab-2.6.src.tar.gz) = 6725259 bytes
 SHA1 (patch-aa) = a4028254852fb938eb9e3a64b9964526195e13ab
 SHA1 (patch-ab) = 8896079c2b11e41faf1760d5e88cfc2771a30120
 SHA1 (patch-ac) = f1f5f90b7f0c3ca2cf5dd0e602395a0b4c56cd1b
