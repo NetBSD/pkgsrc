@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4653 2004/01/31 22:15:19 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4654 2004/01/31 22:19:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -538,3 +538,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ccache to 2.3 [jlam 2004-01-31]
 	Updated x11-links to 0.20 [recht 2004-01-31]
 	Updated libxml2 to 2.6.5 [xtraeme 2004-01-31]
+	Updated py-libxml2 to 2.6.5 [xtraeme 2004-01-31]
