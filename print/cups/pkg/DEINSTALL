@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.4 2000/12/09 22:18:24 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.5 2000/12/15 21:57:38 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -16,14 +16,15 @@ LOGDIR=/var/log/cups
 REQUESTDIR=/var/spool/cups
 SAMPLECONFDIR=${PKG_PREFIX}/share/examples/cups
 CONFDIR=/etc/cups
-CONFFILES="classes.conf client.conf cupsd.conf mime.convs mime.types printers.conf"
+CONFFILES="client.conf cupsd.conf"
+NONCONFFILES="classes.conf mime.convs mime.types printers.conf"
 
 case ${STAGE} in
 DEINSTALL)
 	# Remove configuration files if they don't differ from the default
 	# config file.
 	#
-	for file in ${CONFFILES}
+	for file in ${CONFFILES} ${NONCONFFILES}
 	do
 		FILE=${CONFDIR}/${file}
 		SAMPLEFILE=${SAMPLECONFDIR}/${file}
@@ -36,7 +37,7 @@ DEINSTALL)
 
 POST-DEINSTALL)
 	modified_files=''
-	for file in ${CONFFILES}
+	for file in ${CONFFILES} ${NONCONFFILES}
 	do
 		FILE=${CONFDIR}/${file}
 		if [ -f ${FILE} ]
