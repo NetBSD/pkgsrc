@@ -1,0 +1,11 @@
+==========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2001/02/01 12:31:43 agc Exp $
+
+If the idea of divulging package or operating system version
+information is distasteful to you, or does not conform to your site's
+policy, then please feel free to delete pkgsurvey from your system: 
+as root, type
+
+	pkg_delete -v pkgsurvey
+
+==========================================================================
