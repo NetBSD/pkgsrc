@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/05/02 03:19:50 snj Exp $
+# $NetBSD: Makefile,v 1.18 2004/05/03 15:57:06 wiz Exp $
 
 DISTNAME=		guile-1.4.1
 PKGNAME=		guile14-1.4.1
@@ -12,14 +12,15 @@ COMMENT=		GNU's Ubiquitous Intelligent Language for Extension
 
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
+GNU_CONFIGURE_PREFIX=	${LOCALBASE}/guile/1.4
 USE_GNU_TOOLS+=		make
-NO_MTREE=		YES
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
 
+INFO_DIR=		guile/1.4/info
 INFO_FILES=		guile.info
 
-BUILDLINK_PASSTHRU_DIRS=${PREFIX}/guile/1.4/lib
+BUILDLINK_PASSTHRU_DIRS=	${LOCALBASE}/guile/1.4
 
 # Link the native thread so that Guile processes won't die when libpthread.so
 # is dl_open(3)'ed.
@@ -30,5 +31,3 @@ CFLAGS+=		${PTHREAD_CFLAGS}
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-PREFIX=			${LOCALBASE}/guile/1.4
