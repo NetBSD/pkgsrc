@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.616 2005/02/26 22:51:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.617 2005/03/03 04:39:09 epg Exp $
 #
 
 COMMENT=	Development utilities
@@ -316,6 +316,7 @@ SUBDIR+=	p5-Cache-Cache
 SUBDIR+=	p5-Cache-Simple-TimedExpiry
 SUBDIR+=	p5-Carp-Assert
 SUBDIR+=	p5-Class-Accessor
+SUBDIR+=	p5-Class-Autouse
 SUBDIR+=	p5-Class-Container
 SUBDIR+=	p5-Class-Data-Inheritable
 SUBDIR+=	p5-Class-Factory
@@ -352,6 +353,7 @@ SUBDIR+=	p5-Error
 SUBDIR+=	p5-Event
 SUBDIR+=	p5-Exception-Class
 SUBDIR+=	p5-Expect
+SUBDIR+=	p5-ExtUtils-AutoInstall
 SUBDIR+=	p5-ExtUtils-Depends
 SUBDIR+=	p5-ExtUtils-F77
 SUBDIR+=	p5-ExtUtils-PkgConfig
