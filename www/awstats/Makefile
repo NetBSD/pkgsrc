@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/01/12 23:58:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/12 21:50:54 recht Exp $
 #
 
-DISTNAME=	awstats-5.9
+DISTNAME=	awstats-6.0
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=awstats/}
 EXTRACT_SUFX=	.tgz
