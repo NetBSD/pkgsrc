@@ -1,0 +1,13 @@
+$NetBSD: patch-ct,v 1.1 2001/12/20 09:20:04 tron Exp $
+
+--- lib/libxview/textsw/es_attr.c.orig	Tue Jun 29 07:17:31 1993
++++ lib/libxview/textsw/es_attr.c	Thu Dec 20 10:09:17 2001
+@@ -22,7 +22,7 @@
+ 
+ Pkg_private int
+ #ifdef ANSI_FUNC_PROTO
+-es_set(register Es_handle esh, ...)
++es_set(Es_handle esh, ...)
+ #else
+ es_set(esh, va_alist)
+     register Es_handle esh;

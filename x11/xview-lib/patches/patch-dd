@@ -1,0 +1,13 @@
+$NetBSD: patch-dd,v 1.1 2001/12/20 09:20:06 tron Exp $
+
+--- lib/libxview/textsw/txt_selsvc.c.orig	Sun Jun 26 03:05:23 1994
++++ lib/libxview/textsw/txt_selsvc.c	Thu Dec 20 10:09:17 2001
+@@ -24,6 +24,8 @@
+ #include <stdlib.h>
+ #endif /* SVR4 */
+ 
++static int textsw_should_ask_seln_svc();
++
+ extern int      errno;
+ 
+ Pkg_private Es_status es_copy();

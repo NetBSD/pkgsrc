@@ -1,0 +1,12 @@
+$NetBSD: patch-br,v 1.1 2001/12/20 09:20:00 tron Exp $
+
+--- lib/libxview/notice/notice_get.c.orig	Tue Jun 29 07:16:39 1993
++++ lib/libxview/notice/notice_get.c	Thu Dec 20 10:10:28 2001
+@@ -29,7 +29,6 @@
+ va_list			valist;
+ {
+     Notice_info	*notice = NOTICE_PRIVATE(notice_public);
+-    Attr_avlist     avlist = (Attr_avlist) valist;
+     Xv_opaque	v = (Xv_opaque)NULL;
+ 
+     switch (attr)  {

@@ -1,11 +1,28 @@
-$NetBSD: patch-ao,v 1.1 1999/12/15 23:51:04 dmcmahill Exp $
+$NetBSD: patch-ao,v 1.2 2001/12/20 09:19:55 tron Exp $
 
---- ./lib/libxview/textsw/txt_filter.c.orig	Tue Jun 29 01:17:39 1993
-+++ ./lib/libxview/textsw/txt_filter.c	Mon Dec 13 09:38:22 1999
-@@ -32,5 +32,5 @@
- #include <string.h>
+--- lib/libxview/io_stream/str_strms.c.orig	Tue Jun 29 07:15:06 1993
++++ lib/libxview/io_stream/str_strms.c	Thu Dec 20 10:09:16 2001
+@@ -17,7 +17,11 @@
  
--#ifdef sparc
-+#if defined(sparc) && !(defined(BSD) && (BSD >= 199306))
- #ifdef SVR4
- #include <unistd.h>
+ #define GetSISData struct string_input_stream_data	*data = (struct string_input_stream_data*) in->client_data
+ 
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ static struct string_input_stream_data {
++#else
++struct string_input_stream_data {
++#endif
+     char           *string;
+     int             charpos;
+ };
+@@ -148,7 +152,11 @@
+ 
+ #define GetSOSData struct string_output_stream_data *data = (struct string_output_stream_data*) out->client_data
+ 
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ static struct string_output_stream_data {
++#else
++struct string_output_stream_data {
++#endif
+     char           *string;
+     int             charpos;
+ };

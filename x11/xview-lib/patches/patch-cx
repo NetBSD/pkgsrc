@@ -1,0 +1,35 @@
+$NetBSD: patch-cx,v 1.1 2001/12/20 09:20:05 tron Exp $
+
+--- lib/libxview/textsw/txt_e_menu.c.orig	Tue Jun 29 07:17:42 1993
++++ lib/libxview/textsw/txt_e_menu.c	Thu Dec 20 10:09:17 2001
+@@ -50,8 +50,12 @@
+ #define	ERROR	-1
+ 
+ #define	MAX_FILES	40
++#ifndef MAXPATHLEN
+ #define MAXPATHLEN	1024
++#endif
++#ifndef EXTRASMENU
+ #define	EXTRASMENU	"text_extras_menu"
++#endif
+ #define	MAXSTRLEN	256
+ #define	MAXARGS		20
+ 
+@@ -78,6 +82,8 @@
+ 
+ extern int      EXTRASMENU_FILENAME_KEY;
+ 
++static any_shell_meta();
++
+ Pkg_private char *
+ textsw_get_extras_filename(mi)
+     Menu_item       mi;
+@@ -136,7 +142,7 @@
+ 	            goto found;
+ 	}
+ 
+-#ifdef notdef
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ 	/* Gee, still?... We will try the old fashioned way */
+         (void) sprintf(tmp, "%s/lib/.%s",
+ 		       filename, EXTRASMENU);

@@ -1,0 +1,15 @@
+$NetBSD: patch-dx,v 1.1 2001/12/20 09:20:09 tron Exp $
+
+--- lib/libolgx/ol_init.c.orig	Tue Jun 29 07:18:28 1993
++++ lib/libolgx/ol_init.c	Thu Dec 20 10:09:16 2001
+@@ -9,7 +9,10 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <sys/param.h>
++#if !(defined(BSD) && (BSD >= 199103))
+ #include <malloc.h>
++#endif
+ #include <X11/Xlib.h>
+ #include "olgx_impl.h"
+ #include "busy.h"

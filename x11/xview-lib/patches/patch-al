@@ -1,26 +1,34 @@
-$NetBSD: patch-al,v 1.1 1999/12/15 23:51:04 dmcmahill Exp $
+$NetBSD: patch-al,v 1.2 2001/12/20 09:19:55 tron Exp $
 
---- ./lib/libxview/misc/expandname.c.orig	Tue Jun 29 01:16:30 1993
-+++ ./lib/libxview/misc/expandname.c	Sun Dec 12 21:41:40 1999
-@@ -24,4 +24,7 @@
- #include <sgtty.h>
+--- lib/libxview/font/font_get.c.orig	Tue Jun 29 07:15:00 1993
++++ lib/libxview/font/font_get.c	Thu Dec 20 10:10:24 2001
+@@ -43,7 +43,6 @@
+     XFontStruct		*x_font_info = (XFontStruct *)font->x_font_info;
+     Xv_opaque       v;
+     int             attr_is_char_width = 0;
+-    Attr_avlist     avlist = (Attr_avlist) args;
  
-+#if defined(BSD) && (BSD >= 199306)
-+#include <unistd.h>
-+#else
- #ifdef sparc
- #ifdef SVR4
-@@ -31,4 +34,5 @@
- #endif SVR4
- #endif
-+#endif
+ #ifdef OW_I18N
+     if (font->type == FONT_TYPE_TEXT)  {
+@@ -138,8 +137,8 @@
+ 	}
  
- #ifdef SVR4
-@@ -121,5 +125,7 @@
-     (void) close(pivec[0]);
- #ifndef SVR4
-+#if !(defined(BSD) && (BSD >= 199103))
-     while (wait((union wait *) & status) != pid);
-+#endif
- #else SVR4
-     while (wait( & status) != pid);
+       case FONT_STRING_DIMS:{
+-	    char           *string = (char *) avlist[0];
+-	    Font_string_dims *size = (Font_string_dims *) avlist[1];
++	    char *string = (char *)va_arg(args, Attr_attribute);
++	    Font_string_dims *size = (Font_string_dims *)va_arg(args, Attr_attribute);
+ 	    struct pr_size  my_pf_size;
+ 	    if (string) {
+ 		my_pf_size = xv_pf_textwidth(strlen(string), font_public, string);
+@@ -264,8 +263,8 @@
+ 
+ #ifdef OW_I18N
+       case FONT_STRING_DIMS_WC:{
+-            wchar_t             *ws = (wchar_t *) avlist[0];
+-            Font_string_dims    *size = (Font_string_dims *) avlist[1];
++            wchar_t *ws = (wchar_t *) va_arg(args, Attr_attribute);
++            Font_string_dims *size = (Font_string_dims *) va_arg(args, Attr_attribute);
+             struct pr_size      my_pf_size;
+ 
+             if (ws) {
