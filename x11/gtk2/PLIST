@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2002/11/15 17:12:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2002/11/29 17:25:22 wiz Exp $
 bin/gdk-pixbuf-csource
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
@@ -253,22 +253,22 @@ lib/libgdk-x11-2.0.a
 lib/libgdk-x11-2.0.la
 lib/libgdk-x11-2.0.so
 lib/libgdk-x11-2.0.so.0
-lib/libgdk-x11-2.0.so.0.8
+lib/libgdk-x11-2.0.so.0.9
 lib/libgdk_pixbuf-2.0.a
 lib/libgdk_pixbuf-2.0.la
 lib/libgdk_pixbuf-2.0.so
 lib/libgdk_pixbuf-2.0.so.0
-lib/libgdk_pixbuf-2.0.so.0.8
+lib/libgdk_pixbuf-2.0.so.0.9
 lib/libgdk_pixbuf_xlib-2.0.a
 lib/libgdk_pixbuf_xlib-2.0.la
 lib/libgdk_pixbuf_xlib-2.0.so
 lib/libgdk_pixbuf_xlib-2.0.so.0
-lib/libgdk_pixbuf_xlib-2.0.so.0.8
+lib/libgdk_pixbuf_xlib-2.0.so.0.9
 lib/libgtk-x11-2.0.a
 lib/libgtk-x11-2.0.la
 lib/libgtk-x11-2.0.so
 lib/libgtk-x11-2.0.so.0
-lib/libgtk-x11-2.0.so.0.8
+lib/libgtk-x11-2.0.so.0.9
 lib/pkgconfig/gdk-2.0.pc
 lib/pkgconfig/gdk-pixbuf-2.0.pc
 lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
@@ -305,7 +305,7 @@ share/gtk-2.0/demo/sizegroup.c
 share/gtk-2.0/demo/stock_browser.c
 share/gtk-2.0/demo/textview.c
 share/gtk-2.0/demo/tree_store.c
-share/gtk-doc/html/gdk-pixbuf/a4110.html
+share/gtk-doc/html/gdk-pixbuf/a4187.html
 share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-animation.html
 share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-creating.html
 share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-file-loading.html
@@ -328,8 +328,8 @@ share/gtk-doc/html/gdk-pixbuf/index.html
 share/gtk-doc/html/gdk-pixbuf/index.sgml
 share/gtk-doc/html/gdk-pixbuf/license.html
 share/gtk-doc/html/gdk-pixbuf/r27.html
-share/gtk-doc/html/gdk-pixbuf/x4129.html
-share/gtk-doc/html/gdk-pixbuf/x4177.html
+share/gtk-doc/html/gdk-pixbuf/x4206.html
+share/gtk-doc/html/gdk-pixbuf/x4254.html
 share/gtk-doc/html/gdk/X_cursor.png
 share/gtk-doc/html/gdk/arrow.png
 share/gtk-doc/html/gdk/based_arrow_down.png
@@ -436,7 +436,7 @@ share/gtk-doc/html/gdk/watch.png
 share/gtk-doc/html/gdk/xterm.png
 share/gtk-doc/html/gtk/abstractobjects.html
 share/gtk-doc/html/gtk/buttonwidgets.html
-share/gtk-doc/html/gtk/c17120.html
+share/gtk-doc/html/gtk/c17328.html
 share/gtk-doc/html/gtk/deprecatedobjects.html
 share/gtk-doc/html/gtk/displaywidgets.html
 share/gtk-doc/html/gtk/gtk-accelerator-maps.html
@@ -451,7 +451,11 @@ share/gtk-doc/html/gtk/gtk-feature-test-macros.html
 share/gtk-doc/html/gtk/gtk-framebuffer.html
 share/gtk-doc/html/gtk/gtk-general.html
 share/gtk-doc/html/gtk/gtk-graphics-contexts.html
+share/gtk-doc/html/gtk/gtk-gtkcelleditable.html
+share/gtk-doc/html/gtk/gtk-gtkeditable.html
 share/gtk-doc/html/gtk/gtk-gtktextiter.html
+share/gtk-doc/html/gtk/gtk-gtktreemodel.html
+share/gtk-doc/html/gtk/gtk-gtktreesortable.html
 share/gtk-doc/html/gtk/gtk-gtktreeview-drag-and-drop.html
 share/gtk-doc/html/gtk/gtk-keyboard-accelerators.html
 share/gtk-doc/html/gtk/gtk-question-index.html
@@ -479,7 +483,6 @@ share/gtk-doc/html/gtk/gtkbox.html
 share/gtk-doc/html/gtk/gtkbutton.html
 share/gtk-doc/html/gtk/gtkbuttonbox.html
 share/gtk-doc/html/gtk/gtkcalendar.html
-share/gtk-doc/html/gtk/gtkcelleditable.html
 share/gtk-doc/html/gtk/gtkcellrenderer.html
 share/gtk-doc/html/gtk/gtkcellrendererpixbuf.html
 share/gtk-doc/html/gtk/gtkcellrenderertext.html
@@ -495,7 +498,6 @@ share/gtk-doc/html/gtk/gtkctree.html
 share/gtk-doc/html/gtk/gtkcurve.html
 share/gtk-doc/html/gtk/gtkdialog.html
 share/gtk-doc/html/gtk/gtkdrawingarea.html
-share/gtk-doc/html/gtk/gtkeditable.html
 share/gtk-doc/html/gtk/gtkentry.html
 share/gtk-doc/html/gtk/gtkeventbox.html
 share/gtk-doc/html/gtk/gtkfileselection.html
@@ -572,10 +574,8 @@ share/gtk-doc/html/gtk/gtktoolbar.html
 share/gtk-doc/html/gtk/gtktooltips.html
 share/gtk-doc/html/gtk/gtktree.html
 share/gtk-doc/html/gtk/gtktreeitem.html
-share/gtk-doc/html/gtk/gtktreemodel.html
 share/gtk-doc/html/gtk/gtktreemodelsort.html
 share/gtk-doc/html/gtk/gtktreeselection.html
-share/gtk-doc/html/gtk/gtktreesortable.html
 share/gtk-doc/html/gtk/gtktreestore.html
 share/gtk-doc/html/gtk/gtktreeview.html
 share/gtk-doc/html/gtk/gtktreeviewcolumn.html
@@ -674,6 +674,7 @@ share/gtk-doc/html/gtk/textwidgetobjects.html
 share/gtk-doc/html/gtk/treewidget.html
 share/gtk-doc/html/gtk/treewidgetobjects.html
 share/gtk-doc/html/gtk/windowwidgets.html
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gtk20.mo
@@ -740,9 +741,10 @@ share/themes/Emacs/gtk-2.0-key/gtkrc
 @unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || ${TRUE}
 @dirrm share/gtk-2.0/demo
 @dirrm share/gtk-2.0
+@unexec ${RMDIR} %D/share/gnome/apps/Internet 2>/dev/null || ${TRUE}
 @exec ${MKDIR} %D/lib/gtk-2.0/modules 2>/dev/null || ${TRUE}
-@dirrm lib/gtk-2.0/include
 @dirrm lib/gtk-2.0/modules
+@dirrm lib/gtk-2.0/include
 @dirrm lib/gtk-2.0/2.0.0/loaders
 @dirrm lib/gtk-2.0/2.0.0/immodules
 @dirrm lib/gtk-2.0/2.0.0
