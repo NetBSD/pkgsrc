@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2444 2004/11/25 14:26:05 adam Exp $
+$NetBSD: TODO,v 1.2445 2004/11/25 14:53:12 adam Exp $
 
 Suggested new packages
 ======================
@@ -632,7 +632,6 @@ Suggested package updates
 	o libcdaudio-0.99.12
 	o libcomprex-0.3.3
 	o libdnet-1.8
-	o libdv-0.103
 	o libetpan-0.34
 	o libfwbuilder-2.0.3
 	o libhydrogen-0.9.0

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7982 2004/11/25 14:26:05 adam Exp $
+$NetBSD: CHANGES,v 1.7983 2004/11/25 14:53:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5418,3 +5418,4 @@ Changes to the packages collection and infrastructure in 2004:
         Updated gimp-print-escputil to 4.2.7 [adam 2004-11-25]
 	Updated libmm to 1.3.1 [adam 2004-11-25]
 	Updated librsync to 0.9.7 [adam 2004-11-25]
+	Updated libdv to 0.103 [adam 2004-11-25]
