@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7509 2004/10/21 06:30:39 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7510 2004/10/21 06:36:39 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4800,3 +4800,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nano to 1.2.4 [xtraeme 2004-10-21]
 	Updated libxml2 to 2.6.14 [xtraeme 2004-10-21]
 	Updated abiword to 2.0.11 [xtraeme 2004-10-21]
+	Added abiword-plugins-2.0.11 [xtraeme 2004-10-21]
