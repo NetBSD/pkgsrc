@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2003/06/11 13:26:05 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/18 02:07:57 jmc Exp $
 
 DISTNAME=	sqsh-1.7-src
 PKGNAME=	sqsh-1.7
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.voicenet.com/~gray/
 
