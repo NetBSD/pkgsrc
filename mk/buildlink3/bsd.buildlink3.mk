@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.52 2004/01/21 07:54:50 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.53 2004/01/21 08:04:29 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -745,6 +745,11 @@ _BLNK_TRANSFORM+=	rpath:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}:${X11BASE}
 .for _dir_ in ${_BLNK_PASSTHRU_DIRS} ${_BLNK_PASSTHRU_RPATHDIRS}
 _BLNK_TRANSFORM+=	rpath:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 .endfor
+#
+# Protect /usr/lib/* as they're all allowed to be specified for the
+# runtime library search path.
+#
+_BLNK_TRANSFORM+=	sub-rpath:/usr/lib:${_BLNK_MANGLE_DIR./usr/lib}
 #
 # Change references to ${DEPOTBASE}/<pkg> into ${LOCALBASE} so that
 # "overwrite" packages think headers and libraries for "pkgviews" packages
