@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.581 2004/12/03 14:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.582 2004/12/03 15:40:09 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -174,6 +174,7 @@ SUBDIR+=	guile-oops
 SUBDIR+=	guile-slib
 SUBDIR+=	guile-www
 SUBDIR+=	guile14-gtk
+SUBDIR+=	guile14-slib
 SUBDIR+=	haskell-mode
 SUBDIR+=	hdf
 SUBDIR+=	hdf5
