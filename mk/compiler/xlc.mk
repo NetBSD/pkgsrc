@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.2 2004/10/06 13:56:46 grant Exp $
+# $NetBSD: xlc.mk,v 1.2.2.1 2004/11/23 20:54:12 tv Exp $
 
 .if !defined(COMPILER_XLC_MK)
 COMPILER_XLC_MK=	defined
@@ -11,8 +11,8 @@ XLCBASE?=	/opt/ibmcmp/vacpp/6.0
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the ones
 # requested by the package in USE_LANGUAGES.
 #
-LANGUAGES.xlc=	c c++
-_LANGUAGES.xlc=	# empty
+LANGUAGES.xlc=		c c++
+_LANGUAGES.xlc=		# empty
 .for _lang_ in ${USE_LANGUAGES}
 _LANGUAGES.xlc+=	${LANGUAGES.xlc:M${_lang_}}
 .endfor
@@ -24,16 +24,18 @@ _XLC_CC=	${_XLC_DIR}/bin/xlc
 _XLC_LINKS+=	_XLC_CC
 PKG_CC=		${_XLC_CC}
 CC=		${PKG_CC:T}
+CCPATH=		${XLCBASE}/bin/xlc
 .endif
 .if exists(${XLCBASE}/bin/xlc++)
 _XLC_CXX=	${_XLC_DIR}/bin/xlc++
 _XLC_LINKS+=	_XLC_CXX
 PKG_CXX=	${_XLC_CXX}
 CXX=		${PKG_CXX:T}
+CXXPATH=	${XLCBASE}/bin/xlc++
 .endif
 
-.if exists(${XLCBASE}/bin/xlc)
-CC_VERSION_STRING!=	${XLCBASE}/bin/xlc -V 2>&1 | ${GREP} 'IBM XL C.*for' | ${SED} -e 's/^ *//' || ${TRUE}
+.if exists(${CCPATH})
+CC_VERSION_STRING!=	${CCPATH} -V 2>&1 | ${GREP} 'IBM XL C.*for' | ${SED} -e 's/^ *//' || ${TRUE}
 CC_VERSION=		${CC_VERSION_STRING}
 .else
 CC_VERSION_STRING?=	${CC_VERSION}
