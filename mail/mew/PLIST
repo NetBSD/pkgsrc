@@ -1,12 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2003/07/21 23:57:13 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/03/07 20:53:25 seb Exp $
 bin/mewcat
 bin/mewdecode
 bin/mewencode
 bin/mewls
-info/mew.info
-info/mew.info-1
-info/mew.info-2
-info/mew.info-3
 share/mew/Mew.img
 share/mew/Mew.png
 share/mew/Mew.xbm
