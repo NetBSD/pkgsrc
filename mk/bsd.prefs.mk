@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.68 2001/12/24 19:29:32 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.69 2001/12/26 19:16:59 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -12,6 +12,14 @@
 # Let mk.conf know that this is pkgsrc.
 BSD_PKG_MK=1 
 __PREFIX_SET__:=${PREFIX}
+
+# Define a symbol BSD_PREFS_MK that may be checked by Makefile fragments to
+# test whether they are being included from within bsd.prefs.mk or from
+# without.
+#
+.ifndef BSD_PREFS_MK
+BSD_PREFS_MK=1
+.endif
 
 .if exists(/usr/bin/uname)
 UNAME=/usr/bin/uname
@@ -280,6 +288,10 @@ MAKEFLAGS+=		ZOULARIS_VERSION="${ZOULARIS_VERSION}"
 
 .if defined(USE_PTHREAD)
 .include "../../mk/pthread.buildlink.mk"
+.endif
+
+.ifdef BSD_PREFS_MK
+.undef BSD_PREFS_MK
 .endif
 
 .endif	# BSD_PKG_MK
