@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2000/11/26 14:41:12 mycroft Exp $
+
+--- gnome-stones/Makefile.am.orig	Tue Apr  6 08:39:55 1999
++++ gnome-stones/Makefile.am	Sun Nov 26 14:38:30 2000
+@@ -37,6 +37,7 @@
+ 	view.c                                  \
+ 	view.h
+ 
++gnome_stones_LDFLAGS = -export-dynamic
+ gnome_stones_LDADD =				\
+ 	$(GNOME_LIBDIR)				\
+ 	$(GNOMEUI_LIBS)				\
