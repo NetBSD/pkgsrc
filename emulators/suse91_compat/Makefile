@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/07/31 10:41:30 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2004/07/31 10:46:25 jdolecek Exp $
 
-PKGNAME=		suse_compat-${SUSE_VERSION}
+DISTNAME=		suse_compat-${SUSE_VERSION}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
-DISTNAME=		${RPMFILES}
+DISTFILES=		${RPMFILES}
 
 MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
