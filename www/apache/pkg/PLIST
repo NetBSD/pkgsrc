@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 1999/05/11 20:26:23 tron Exp $
+@comment $NetBSD: PLIST,v 1.12 1999/11/21 22:09:29 tron Exp $
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
@@ -19,7 +19,9 @@ include/httpd/ap_ctype.h
 include/httpd/ap_hook.h
 include/httpd/ap_include_extern.h
 include/httpd/ap_md5.h
+include/httpd/ap_mm.h
 include/httpd/ap_mmn.h
+include/httpd/ap_sha1.h
 include/httpd/buff.h
 include/httpd/compat.h
 include/httpd/conf.h
@@ -44,7 +46,19 @@ include/httpd/util_date.h
 include/httpd/util_md5.h
 include/httpd/util_script.h
 include/httpd/util_uri.h
+include/httpd/xml/asciitab.h
+include/httpd/xml/xmltok.h
+include/httpd/xml/xmlrole.h
+include/httpd/xml/xmlparse.h
+include/httpd/xml/xmldef.h
+include/httpd/xml/utf8tab.h
+include/httpd/xml/nametab.h
+include/httpd/xml/latin1tab.h
+include/httpd/xml/iasciitab.h
+include/httpd/xml/hashtable.h
+include/httpd/xml/xmltok_impl.h
 lib/httpd/mod_proxy.so
+lib/httpd/httpd.exp
 libexec/cgi-bin/printenv
 libexec/cgi-bin/test-cgi
 man/man1/dbmmanage.1
@@ -126,6 +140,7 @@ share/httpd/htdocs/manual/mod/mod_asis.html
 share/httpd/htdocs/manual/mod/mod_auth.html
 share/httpd/htdocs/manual/mod/mod_auth_anon.html
 share/httpd/htdocs/manual/mod/mod_auth_db.html
+share/httpd/htdocs/manual/mod/mod_auth_digest.html
 share/httpd/htdocs/manual/mod/mod_auth_dbm.html
 share/httpd/htdocs/manual/mod/mod_autoindex.html
 share/httpd/htdocs/manual/mod/mod_browser.html
@@ -161,6 +176,7 @@ share/httpd/htdocs/manual/mod/mod_status.html
 share/httpd/htdocs/manual/mod/mod_unique_id.html
 share/httpd/htdocs/manual/mod/mod_userdir.html
 share/httpd/htdocs/manual/mod/mod_usertrack.html
+share/httpd/htdocs/manual/mod/mod_vhost_alias.html
 share/httpd/htdocs/manual/multilogs.html
 share/httpd/htdocs/manual/new_features_1_0.html
 share/httpd/htdocs/manual/new_features_1_1.html
@@ -300,15 +316,18 @@ share/httpd/icons/uu.gif
 share/httpd/icons/uuencoded.gif
 share/httpd/icons/world1.gif
 share/httpd/icons/world2.gif
-@exec mkdir -p /var/log/httpd /var/spool/httpd/proxy %D/lib/httpd %D/etc/httpd/ssl.crt %D/etc/httpd/ssl.csr %D/etc/httpd/ssl.key
+@exec mkdir -p /var/log/httpd /var/spool/httpd/proxy %D/lib/httpd %D/etc/httpd/ssl.crl %D/etc/httpd/ssl.crt %D/etc/httpd/ssl.csr %D/etc/httpd/ssl.key %D/etc/httpd/ssl.prm
 @unexec rmdir /var/log/httpd /var/spool/httpd/proxy /var/spool/httpd 2>/dev/null || true
+@dirrm etc/httpd/ssl.crl
 @dirrm etc/httpd/ssl.crt
 @dirrm etc/httpd/ssl.csr
 @dirrm etc/httpd/ssl.key
+@dirrm etc/httpd/ssl.prm
 @unexec rmdir %D/etc/httpd 2>/dev/null || true
+@dirrm include/httpd/xml
 @dirrm include/httpd
 @dirrm lib/httpd
-@dirrm libexec/cgi-bin
+@unexec rmdir %D/libexec/cgi-bin 2>/dev/null || true
 @dirrm share/httpd/htdocs/manual/images
 @dirrm share/httpd/htdocs/manual/misc
 @dirrm share/httpd/htdocs/manual/mod
