@@ -1,6 +1,5 @@
-diff -ur /usr/pkgsrc/devel/mit-pthreads/work/pthreads-1_60_beta6/stdlib/system.c pmpthreads-1.8.7/stdlib/system.c
---- /usr/pkgsrc/devel/mit-pthreads/work/pthreads-1_60_beta6/stdlib/system.c	Wed Apr 24 20:18:56 1996
-+++ pmpthreads-1.8.7/stdlib/system.c	Thu Nov 13 11:27:43 1997
+--- pthreads-1_60_beta6/stdlib/system.c	Wed Apr 24 20:18:56 1996
++++ pthreads-1_60_beta6/stdlib/system.c	Thu Nov 13 11:27:43 1997
 @@ -62,7 +62,7 @@
  	argp[2] = (char *) command;
  	sigemptyset(&tmp_mask);
