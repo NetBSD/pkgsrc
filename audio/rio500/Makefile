@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 13:30:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/15 15:44:29 dmcmahill Exp $
 #
 
 DISTNAME=	rio500-0.7
@@ -9,6 +9,7 @@ MAINTAINER=	ad@netbsd.org
 HOMEPAGE=	http://rio500.sourceforge.net/
 COMMENT=	Utilities to manage your Diamond Rio 500 MP3 player
 
+BUILD_DEPENDS+=	automake-*:../../devel/automake
 DEPENDS+=	glib>=1.2.0:../../devel/glib
 
 USE_GMAKE=	yes
