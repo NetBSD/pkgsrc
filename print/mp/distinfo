@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:41:52 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/09/21 21:33:10 kim Exp $
 
-SHA1 (mpdist-3.5.2.tar.gz) = eb8351537db25ac8567ed063428b7d532121a2b4
-Size (mpdist-3.5.2.tar.gz) = 335386 bytes
-SHA1 (patch-aa) = 1ebba95d444215bbed70c99ab3d454b9620aa7db
+SHA1 (mpdist-3.7.1.tar.gz) = fbc133240e4135d157df79ec7a345c927bb3dfa0
+Size (mpdist-3.7.1.tar.gz) = 402291 bytes
+SHA1 (patch-aa) = 9aa51c8ac443122b972087a7b74390abbc9d5253
