@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/06/26 00:37:26 zuntum Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/06/29 16:10:46 nra Exp $
 #
 # This Makefile fragment is included by packages that use libproplist.
 #
@@ -16,7 +16,7 @@
 LIBPROPLIST_BUILDLINK_MK=	# defined
 
 BUILDLINK_DEPENDS.libproplist?=	libproplist>=0.10.1
-DEPENDS+=	${BUILDLINK_DEPENDS.libproplist}:../../databases/libproplist
+DEPENDS+=	${BUILDLINK_DEPENDS.libproplist}:../../devel/libproplist
 
 BUILDLINK_PREFIX.libproplist=	${LOCALBASE}
 BUILDLINK_FILES.libproplist=	include/proplist.h
