@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2004/06/13 14:11:16 tron Exp $
+$NetBSD: distinfo,v 1.7 2004/12/12 00:14:13 tron Exp $
 
-SHA1 (milter-greylist-1.4.tgz) = 683c19eb510f5222714003cdd7596acd7207aef8
-Size (milter-greylist-1.4.tgz) = 93239 bytes
+SHA1 (milter-greylist-1.6.tgz) = 1c35cd74f3145332d8e0d519a46d10e8f34c38d6
+Size (milter-greylist-1.6.tgz) = 105679 bytes
