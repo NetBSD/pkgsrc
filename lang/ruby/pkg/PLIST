@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/09/17 03:43:24 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/10/05 07:22:46 sakamoto Exp $
 bin/ruby
 lib/libruby.so.${RUBY_VERSION}
 lib/ruby/${RUBY_VERSION}/English.rb
@@ -49,7 +49,6 @@ lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/st.h
 lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/util.h
 lib/ruby/${RUBY_VERSION}/${MACHINE_ARCH}-${LOWER_OPSYS}/version.h
 lib/ruby/${RUBY_VERSION}/importenv.rb
-lib/ruby/${RUBY_VERSION}/irb/bind.rb
 lib/ruby/${RUBY_VERSION}/irb/completion.rb
 lib/ruby/${RUBY_VERSION}/irb/frame.rb
 lib/ruby/${RUBY_VERSION}/irb/input-method.rb
@@ -60,6 +59,8 @@ lib/ruby/${RUBY_VERSION}/irb/ruby-lex.rb
 lib/ruby/${RUBY_VERSION}/irb/ruby-token.rb
 lib/ruby/${RUBY_VERSION}/irb/slex.rb
 lib/ruby/${RUBY_VERSION}/irb/version.rb
+lib/ruby/${RUBY_VERSION}/irb/workspace-binding-2.rb
+lib/ruby/${RUBY_VERSION}/irb/workspace-binding.rb
 lib/ruby/${RUBY_VERSION}/irb/xmp.rb
 lib/ruby/${RUBY_VERSION}/jcode.rb
 lib/ruby/${RUBY_VERSION}/kconv.rb
