@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2344 2004/11/09 15:18:24 adam Exp $
+$NetBSD: TODO,v 1.2345 2004/11/09 16:39:02 adam Exp $
 
 Suggested new packages
 ======================
@@ -373,7 +373,6 @@ Suggested package updates
 	o ices-2.0.0
 	o id3v2-0.1.11
 	o idesk-0.5.6
-	o imp-3.2.6
 	o inform-6.30 [pkg/24631]
 	o intercal-0.24 [dillo]
 	o iozone-3.226
