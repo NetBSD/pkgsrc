@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2002/03/29 10:47:58 kent Exp $
+# $NetBSD: Makefile,v 1.11 2002/04/05 19:20:53 kent Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
-PKGNAME=		gcc-ssp-2.95.3.4
+PKGNAME=		gcc-ssp-2.95.3.5
 PKGVERSION=		${GCC_VERSION}
 PKGREVISION=
 PKGBASENAME=		gcc-ssp
@@ -13,9 +13,9 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.trl.ibm.com/projects/security/ssp/
 COMMENT=		GNU Compiler Collection with Stack-smashing protection
 
-SSP_PATCH=		protector-2.95.3-4.tar.gz
+SSP_PATCH=		protector-2.95.3-5.tar.gz
 DISTFILES+=		${DISTNAME}.tar.gz ${SSP_PATCH}
-SITES_protector-2.95.3-4.tar.gz=	http://www.trl.ibm.com/projects/security/ssp/gcc2_95_3/
+SITES_protector-2.95.3-5.tar.gz=	http://www.trl.ibm.com/projects/security/ssp/gcc2_95_3/
 PATCHDIR=		../gcc/patches
 GCC_FILESDIR=		${FILESDIR}/../../gcc/files
 
@@ -95,7 +95,7 @@ post-build:
 	${WRKSRC}/gcc/xgcc -B${WRKSRC}/gcc/ -O2 -o ${WRKDIR}/buffer ${FILESDIR}/buffer.c
 	ulimit -c 0 && ${WRKDIR}/buffer abcdefghijklmnopqrstuvwxyz  2> ${WRKDIR}/output || true
 	@if [ x"`/bin/cat ${WRKDIR}/output`" = "x: stack smashing attack in function main" ]; then \
-	    echo "---- Stack protection succeeded."; \
+	    echo "===> Stack protection succeeded."; \
 	    exit 0; \
 	else \
 	    echo "**** Stack protection failed."; \
