@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2002/06/27 19:05:00 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/08/12 11:42:29 agc Exp $
 
 SHA1 (yrolo-1.1.tar.gz) = 3d2f6f36ad57a41dca940a28a6139a381e5f7a33
 Size (yrolo-1.1.tar.gz) = 79332 bytes
-SHA1 (patch-aa) = 1e4d2fdcf0ee9c4a68785f1c1ce78482193cf8b1
+SHA1 (patch-aa) = a8edd2449d9e7d53fbef96445096cc4f5641759a
