@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2176 2003/05/07 20:55:25 seb Exp $
+$NetBSD: CHANGES,v 1.2177 2003/05/07 21:37:29 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1886,3 +1886,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added phoenix-bin-acroread3-1.0 [kei 2003-05-07]
 	Added phoenix-bin-acroread5-1.0 [kei 2003-05-07]
 	Added rtptools-1.18 [seb 2003-05-07]
+	Updated wol to 0.6.0nb1 [seb 2003-05-07]
