@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2003/03/01 11:08:35 jmc Exp $
+$NetBSD: patch-ac,v 1.2 2004/03/12 06:07:12 minskim Exp $
 
---- support.cc.orig	Sat Mar  1 11:02:55 2003
-+++ support.cc	Sat Mar  1 11:03:12 2003
-@@ -46,7 +46,7 @@
+--- support.cc.orig	2004-01-12 03:06:18.000000000 -0600
++++ support.cc
+@@ -78,7 +78,7 @@ extern char *chop(char *string) {
    return string;
  }
  
