@@ -1,0 +1,4 @@
+From now on, the crxvt program in xcin-2.3.X package will be separated
+out and maintained independently. The version number, 2.10, is adopted
+from the "src/ChangeLog" file, and "-2" means the minor changes or bug 
+fixes by me. So this is the "crxvt-2.10-2" package.

@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/14 12:14:18 wiz Exp $
+
+--- script/config.status.orig	Tue Sep 28 03:41:04 1999
++++ script/config.status	Tue Sep 28 03:41:43 1999
+@@ -10,5 +10,5 @@
+ PATH_CRXVT_BIN=/usr/local/bin
+ PATH_CRXVT_MAN=/usr/local/man
+ 
+-OPT_CRXVT_CFONT=-twmoe-kai-medium-r-normal--16-160-75-75-c-160-big5-1
++OPT_CRXVT_CFONT=-eten-fixed-medium-r-normal--16-150-75-75-c-160-big5.eten-0
+ OPT_CRXVT_EFONT=8x16
