@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:47:45 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/02 13:27:27 seb Exp $
 
 DISTNAME=	mcsim-4.2.0
 WRKSRC=		${WRKDIR}/mcsim
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=mcsim/}
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Monte Carlo Simulation software
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
 INFO_FILES=	mcsim
 
 post-build:
@@ -25,5 +27,4 @@ do-install:
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} mcsim mcsim-1 mcsim-2 	\
 		mcsim-3	${PREFIX}/info/
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
