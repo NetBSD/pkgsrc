@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:13:28 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:47 skrll Exp $
 
-MD5 (web500gw-2.1b3.tar.gz) = 8e411a94f79bad75a3e8deeea3d05050
+SHA1 (web500gw-2.1b3.tar.gz) = 417533e1bdecac8437119d49622c8e030937c6c0
+Size (web500gw-2.1b3.tar.gz) = 143463 bytes
 SHA1 (patch-aa) = 99c1975f54efdd4b9236d1a6e2b34878ba76c363
 SHA1 (patch-ab) = 51ed9b0d944c37b8a12ef0c8744f7a49ec001999
