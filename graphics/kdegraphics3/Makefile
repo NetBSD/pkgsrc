@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/02/09 14:01:22 seb Exp $
+# $NetBSD: Makefile,v 1.31 2004/03/01 11:37:15 markd Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
 PKGREVISION=	1
@@ -19,6 +19,14 @@ CONFIGURE_ARGS+=	--with-imlib-config=${X11PREFIX}/bin
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && !exists(${X11BASE}/lib/libXxf86vm.so)
+PLIST_SUBST+=		KGAMMA_SUFFIX="a"
+.else
+PLIST_SUBST+=		KGAMMA_SUFFIX="so"
+.endif
 
 .include "../../converters/fribidi/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
