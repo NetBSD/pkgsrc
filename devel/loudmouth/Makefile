@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/02 07:27:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/03 09:48:44 xtraeme Exp $
 #
 
-DISTNAME=	loudmouth-${VERSION}
+DISTNAME=	loudmouth-0.14
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/${DIST_VER}/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/0.14/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	xtraeme@NetBSD.org
@@ -18,11 +18,7 @@ USE_GMAKE=		yes
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/loudmouth-1.0.pc.in
 
-CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--disable-debug
-
-DIST_VER=		0.13
-VERSION=		0.13.2
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,6 +26,8 @@ BUILD_DEFS+=	LOUDMOUTH_USE_SSL
 
 .if defined(LOUDMOUTH_USE_SSL) && !empty(LOUDMOUTH_USE_SSL:M[Yy][Ee][Ss])
 .include "../../security/gnutls/buildlink2.mk"
+.else
+CONFIGURE_ARGS+=	--with-ssl=no
 .endif
 
 .include "../../devel/glib2/buildlink2.mk"
