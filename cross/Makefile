@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2000/06/29 10:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2000/07/13 22:15:40 wiz Exp $
 
 #    SUBDIR += arm-netbsd
+#    SUBDIR += armv2-netbsd
 #    SUBDIR += bfd-crunchide
 #    SUBDIR += bfd-mdsetimage
 #    SUBDIR += binutils
