@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.21 2004/02/25 17:15:42 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/29 17:54:13 minskim Exp $
 
 DISTNAME=	mlterm-2.8.0
 PKGNAME=	${DISTNAME}pl1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
-PATCHFILES=	${PKGNAME}.tar.gz
+PATCHFILES=	${DISTNAME}pl1.tar.gz
 PATCH_SITES=	${MASTER_SITES}
 
 MAINTAINER=	uebayasi@NetBSD.org
@@ -29,16 +30,17 @@ CONFIGURE_ARGS+=	--enable-anti-alias
 .endif
 CONFIGURE_ARGS+=	--without-libiconv-prefix
 
-post-patch:
-	@${FIND} ${WRKSRC} -name Makefile.in -print | \
-	while read f; do \
-		${MV} $$f $${f}.orig; \
-		${SED} \
-		    -e 's|\(-[IL]\)/usr/local|\1${BUILDLINK_DIR}|g' \
-		    -e 's|\(-[IL]\)/usr/X11R6|\1${BUILDLINK_X11_DIR}|g' \
-		    -e 's|\(-[R]\)/usr/local[^[:space:]][^[:space:]]*||g' \
-		    $${f}.orig > $$f; \
-	done
+SUBST_CLASSES+=		link
+SUBST_MESSAGE.link=	"Fixing hardcoded paths and link options."
+SUBST_STAGE.link=	post-patch
+SUBST_FILES.link=	Makefile.in */Makefile.in \
+			*/*/Makefile.in */*/*/Makefile.in \
+			xwindow/x_screen.c xwindow/x_sb_view_factory.c \
+			mlterm/ml_config_menu.c man/mlterm.1
+SUBST_SED.link=		-e 's|-module|-R${X11BASE}/lib -module|g' \
+			-e 's|\(-[R]\)/usr/local/lib||g' \
+			-e 's|/usr/local/|${PREFIX}/|g' \
+			-e 's|/usr/X11R6/|${X11BASE}/|g'
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
