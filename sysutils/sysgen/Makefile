@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:42:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:47 agc Exp $
 #
 
 DISTNAME=	sysgen
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	abs@netbsd.org
 COMMENT=	assign DEC Qbus or UNIBUS standard CSR and vector addresses
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 ALL_TARGET=	sysgen
 
 do-install:

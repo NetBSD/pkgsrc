@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2001/07/15 12:56:58 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2001/09/09 20:36:42 agc Exp $
 #
 
 DISTNAME=		pkglint-3.07
@@ -15,7 +15,7 @@ DEPENDS+=		digest-2001*:../../pkgtools/digest
 USE_PERL5=		YES
 
 EXTRACT_ONLY=	# empty
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_PATCH=	yes
 NO_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/04/21 13:28:09 kei Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/09 20:36:53 agc Exp $
 #
 
 DISTNAME=	htmllint
@@ -14,7 +14,7 @@ COMMENT=	Another HTML-Lint program
 DEPENDS+=	p5-Jcode>=0.68:../../japanese/p5-Jcode
 
 USE_PERL5=	# defined
-NO_WRKSUBDIR=	# defined
+WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
 

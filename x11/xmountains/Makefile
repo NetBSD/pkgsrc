@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/11 06:34:59 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/09/09 20:36:54 agc Exp $
 #
 
 DISTNAME=	xmountains_2.5
@@ -13,7 +13,7 @@ MAINTAINER=	fredb@netsd.org
 HOMEPAGE=	http://www.epcc.ed.ac.uk/~spb/xmountains/
 COMMENT=	fractal terrain generator
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 USE_IMAKE=	yes
 
 DIST_SUBDIR=	xmountains

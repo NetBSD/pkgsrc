@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 09:07:26 agc Exp $
+# $NetBSD: Makefile,v 1.11 2001/09/09 20:36:32 agc Exp $
 #
 
 DISTNAME=	html-2.0
@@ -13,7 +13,7 @@ COMMENT=	HTML Documentation for Python
 
 DIST_SUBDIR=	python
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

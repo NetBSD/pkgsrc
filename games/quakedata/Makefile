@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/27 03:19:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:28 agc Exp $
 # Based on FreeBSD ports/games/quakeserver
 # FreeBSD: ports/games/quakeserver/Makefile,v 1.20 1999/08/31 06:44:23 mharo Exp
 #
@@ -22,7 +22,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EXTRACT_CMD=	unzip -q -o ${DOWNLOADED_DISTFILE} -d ${WRKDIR} resource.*
-NO_WRKSUBDIR=	YES
+WRKSRC=		${WRKDIR}
 NO_BUILD=	YES
 
 post-extract:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:18:35 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/09/09 20:36:37 agc Exp $
 #
 
 DISTNAME=	bind-4.9.8-REL
@@ -10,7 +10,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.isc.org/
 COMMENT=	The BIND name server, version 4, as an alternative to BIND 8
 
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 .if !exists(/usr/sbin/named-bootconf)
 IGNORE=		"${PKGNAME} is intended for NetBSD 1.4 or higher"

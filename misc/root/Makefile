@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/03/27 03:20:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:37 agc Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
-NO_WRKSUBDIR=		yes
 CATEGORIES=		misc
 MASTER_SITES=		ftp://root.cern.ch/root/
 
@@ -17,6 +16,8 @@ USE_XPM=		YES
 
 ALL_TARGET=		netbsd
 MAKE_ENV=		LD_LIBRARY_PATH=${WRKDIR}/lib ROOTSYS=${WRKDIR}
+
+WRKSRC=			${WRKDIR}
 
 do-configure:
 	${CP} ${FILESDIR}/Makefile.netbsd ${WRKDIR}/src

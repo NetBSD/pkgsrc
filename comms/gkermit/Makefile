@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/08/19 03:53:48 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/09/09 20:36:16 agc Exp $
 #
 
 DISTNAME=	gkermit
@@ -14,7 +14,7 @@ USE_BUILDLINK_ONLY=	yes
 ALL_TARGET=	posix
 MAKEFILE=	makefile
 MAKE_FLAGS+=	CC="${CC}" KFLAGS="${CFLAGS}"
-NO_WRKSUBDIR=	yes
+WRKSRC=		${WRKDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gkermit ${PREFIX}/bin/gkermit; \

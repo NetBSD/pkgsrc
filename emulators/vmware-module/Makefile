@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/07 14:40:07 veego Exp $
+# $NetBSD: Makefile,v 1.2 2001/09/09 20:36:23 agc Exp $
 
 DISTNAME=	vmware-netbsd-1.0
 PKGNAME=	vmware-module-1.0
@@ -12,7 +12,7 @@ COMMENT=	Kernel modules for the VMware emulator
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-NO_WRKSUBDIR=	# defined
+WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	# defined
 
 NO_SRC_ON_FTP=		${RESTRICTED}
