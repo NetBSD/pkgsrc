@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/08/12 22:57:00 jdolecek Exp $
+# $NetBSD: Makefile,v 1.25 2004/08/14 14:02:26 tron Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
 PKGREVISION=	# empty
@@ -34,11 +34,7 @@ OPERA_VER_DATE=		20040803
 OPERA_PKG_VERSION=	7.54
 
 .if (${OPSYS} == NetBSD)
-DEPENDS+=	suse_freetype2>=7.3:../../emulators/${SUSE_DIR_PREFIX}_freetype2
-DEPENDS+=	suse_libjpeg>=7.3:../../emulators/${SUSE_DIR_PREFIX}_libjpeg
-DEPENDS+=	suse_libpng>=7.3:../../emulators/${SUSE_DIR_PREFIX}_libpng
 DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
-DEPENDS+=	suse_openmotif>=7.3:../../emulators/${SUSE_DIR_PREFIX}_openmotif
 
 # we need the DIST_SUBDIR=. because of the inclusion of suse's Makefile.common
 DIST_SUBDIR=	.
