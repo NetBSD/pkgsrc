@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/24 16:51:33 manu Exp $
+$NetBSD: distinfo,v 1.2 2004/12/27 01:00:28 minskim Exp $
 
 SHA1 (mdd-20041224.tgz) = 2d66bdea10779a80e5b5eb0be325a18035dbbdd5
 Size (mdd-20041224.tgz) = 6993 bytes
+SHA1 (patch-aa) = 50adeddaa2757106e74e9e043b44e86b10ae5d21
