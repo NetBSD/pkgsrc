@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/10/29 00:33:46 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2004/06/08 18:01:14 jmmv Exp $
 
---- config.h.in.orig	Mon Oct 28 13:10:53 2002
-+++ config.h.in	Mon Oct 28 13:13:41 2002
+--- config.h.orig	Mon Oct 28 13:10:53 2002
++++ config.h
 @@ -54,13 +54,13 @@
    double quotes and should be all one one line.  This list is used to
    find X11, tcl and tk.
