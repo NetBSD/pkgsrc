@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/12/12 15:16:49 adam Exp $
+# $NetBSD: Makefile,v 1.13 2003/12/12 15:38:16 jschauma Exp $
 
 DISTNAME=	j2re-1_4_2_03-linux-i586
 PKGNAME=	sun-jre14-2.3
@@ -40,7 +40,8 @@ _FETCH_MESSAGE= \
 	${ECHO} " into:"; \
 	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; \
 	${ECHO} " from:"; \
-	${ECHO} "	${DOWNLOAD}"; \
+	${ECHO} "	${DOWNLOAD} or"; \
+	${ECHO} "	${ARCHIVE}"; \
 	${ECHO} ; \
 	${ECHO} " Choose 'Linux self-extracting file' from the 'JRE' column."; \
 	${ECHO} ; \
