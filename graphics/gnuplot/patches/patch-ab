@@ -1,0 +1,15 @@
+--- syscfg.h.orig	Wed Mar  3 21:34:37 1999
++++ syscfg.h	Wed Mar  3 21:40:43 1999
+@@ -190,6 +190,12 @@
+ # endif
+ #endif /* MSDOS */
+ 
++/* symbol unix is no longer defined under NetBSD after 1.3 */
++#ifdef __NetBSD__
++# undef unix
++# define unix
++#endif
++
+ /* Note: may not catch all IBM AIX compilers or SCO compilers */
+ #if defined(__unix__)|| defined(unix) || defined(_AIX) || defined(SCO)
+ # ifndef unix
