@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.11 1999/09/03 19:44:36 tron Exp $
+@comment $NetBSD: PLIST,v 1.12 1999/10/23 11:52:07 tron Exp $
 bin/mc
 bin/mcedit
 bin/mcmfmt
 bin/mcserv
 etc/mc.global
 lib/mc/FAQ
+lib/mc/bin/mc.csh
+lib/mc/bin/mc.sh
 lib/mc/bin/mcfn_install
 lib/mc/desktop-scripts/README.desktop
 lib/mc/desktop-scripts/startup.links
@@ -31,12 +33,14 @@ lib/mc/extfs/urar
 lib/mc/extfs/uzip
 lib/mc/extfs/uzoo
 lib/mc/mc-gnome.ext
+lib/mc/mc.csh
 lib/mc/mc.ext
 lib/mc/mc.hint
 lib/mc/mc.hint.es
 lib/mc/mc.hlp
 lib/mc/mc.lib
 lib/mc/mc.menu
+lib/mc/mc.sh
 lib/mc/syntax/ada95.syntax
 lib/mc/syntax/c.syntax
 lib/mc/syntax/changelog.syntax
@@ -81,8 +85,10 @@ share/locale/hu/LC_MESSAGES/mc.mo
 share/locale/it/LC_MESSAGES/mc.mo
 share/locale/ja/LC_MESSAGES/mc.mo
 share/locale/ko/LC_MESSAGES/mc.mo
+share/locale/nl/LC_MESSAGES/mc.mo
 share/locale/no/LC_MESSAGES/mc.mo
 share/locale/pl/LC_MESSAGES/mc.mo
+share/locale/pt_BR/LC_MESSAGES/mc.mo
 share/locale/ro/LC_MESSAGES/mc.mo
 share/locale/ru/LC_MESSAGES/mc.mo
 share/locale/sv/LC_MESSAGES/mc.mo
