@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/27 01:14:09 cjones Exp $
-@unexec ${INSTALL_INFO} --delete %D/info/guile-pg.info %D/info/dir
+@comment $NetBSD: PLIST,v 1.2 2003/06/29 13:11:19 seb Exp $
 share/guile/database/postgres.scm
 @dirrm share/guile/database
 info/guile-pg.info
@@ -7,4 +6,3 @@ lib/libpostgres.a
 lib/libpostgres.la
 lib/libpostgres.so.2.0
 bin/guile-pg
-@exec ${INSTALL_INFO} %D/info/guile-pg.info %D/info/dir
