@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/08/08 11:59:36 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2002/08/08 12:04:45 wiz Exp $
 #
 
 DISTNAME=		vice-1.9
@@ -13,7 +13,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			kernal.sx.251104-04.bin
 
 MAINTAINER=		kristerw@netbsd.org
-HOMEPAGE=		http://www.cs.cmu.edu/~dsladic/vice/vice.html
+HOMEPAGE=		http://viceteam.bei.t-online.de/
 COMMENT=		Emulator for C64, C128, CBM-II, PET, and VIC20
 
 RESTRICTED=		"ROM image copyright is questionable"
