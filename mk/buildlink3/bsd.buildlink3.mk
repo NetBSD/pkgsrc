@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.167 2005/02/16 23:08:16 seb Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.168 2005/02/17 12:15:44 seb Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -100,8 +100,6 @@ PREPEND_PATH+=	${BUILDLINK_BINDIR}
 # dependencies.
 #
 BUILDLINK_DEPENDS?=	# empty
-
-WRAPPER_VARS+=	${BUILDLINK_VARS}
 
 # For each package we use, check whether we are using the built-in
 # version of the package or if we are using the pkgsrc version.
