@@ -1,18 +1,24 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:22:20 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/19 11:14:51 minskim Exp $
 #
 
-DISTNAME=	overnet0.51.2
-PKGNAME=	overnet-0.51.2
+DISTNAME=	overnetclc-1.0.1
+PKGNAME=	${DISTNAME:C/clc//}
 CATEGORIES=	net
-MASTER_SITES=	http://download.overnet.com/
+MASTER_SITES=	http://www.zen18864.zen.co.uk/overnet/1.0.1/
+DISTFILES=	${DISTNAME}-1.i386_compat.rpm
 
 MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://www.overnet.com/
 COMMENT=	Peer-to-peer file sharing client (binary pkg)
 
 WRKSRC=		${WRKDIR}
+EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
+PLIST_SRC+=	${WRKDIR}/PLIST_DYNAMIC
+PLIST_SUBST+=	EMULSUBDIR=${EMULSUBDIR}
+
+RPMFILES=	${DISTFILES}
 
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 
@@ -22,7 +28,10 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 .endif
 
-do-install:
+post-install:
+	${LN} -fs ../${EMULSUBDIR}/usr/bin/overnetclc ${PREFIX}/bin
+
+no-do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/overnet
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/overnet
 	${INSTALL_DATA_DIR} ${PREFIX}/share/overnet
