@@ -1,0 +1,7 @@
+The Distributed Queueing System is designed as a management tool to
+aid in computational resource distribution across a network.  DQS
+provides architecture transparency for both users and administration
+across a heterogeneous environment, allowing for seamless interaction
+for multiple architectures.  Highly mutable custom site configurations
+are possible under DQS.  This abilty to customize DQS leads to
+effective resource distribution and increased network throughput.

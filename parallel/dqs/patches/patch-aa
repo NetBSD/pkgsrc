@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/26 20:23:42 agc Exp $
+
+--- Makefile	2002/09/18 11:06:36	1.1
++++ Makefile	2002/09/18 11:08:07
+@@ -1,10 +1,10 @@
+-INSTALL_DIR=/usr/local/DQS/bin
+-BIN_DIR=/usr/local/DQS/bin
+-CONF_DIR=/usr/local/DQS/common/conf
+-DOC_DIR=/usr/local/DQS/common/doc
+-LIB_DIR=/usr/local/DQS/local/lib
+-MAN1_DIR=/usr/local/DQS/man/man1
+-MAN3_DIR=/usr/local/DQS/man/man3
++INSTALL_DIR=${PREFIX}/bin
++BIN_DIR=${PREFIX}/bin
++CONF_DIR=${PREFIX}/share/examples/dqs
++DOC_DIR=${PREFIX}/share/doc
++LIB_DIR=${PREFIX}/lib
++MAN1_DIR=${PREFIX}/man/man1
++MAN3_DIR=${PREFIX}/man/man3
+ ROOT=0
+ DQS_ROOT=0
+ SYSGRP=0
+@@ -17,7 +17,7 @@
+ # sets up an arc dependant subdirectory under DQS/ARCS
+ # ans builds the default distribution
+ 
+-default	:
++all default	:
+ 	UTIL/make_arcs make CC=$(CC) -f Makefile
+ 
+ #******************************************************
+@@ -76,7 +76,7 @@
+ #******************************************************
+ # installall
+ 
+-installall: installbin installconf
++install: installbin installconf
+ 
+ 
+ #******************************************************

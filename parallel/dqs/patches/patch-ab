@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/06/26 20:23:42 agc Exp $
+
+--- SRC/globals.h	2000/12/12 07:24:12	1.8
++++ SRC/globals.h	2002/09/18 11:13:49
+@@ -246,7 +246,7 @@
+  *--------------------------------------------------*/
+ 
+ extern int errno;
+-#if !(defined(__linux__) && defined (__GLIBC__) && __GLIBC__ >=2) && !(defined(__FreeBSD__) & defined(__GNUC__) && __GNUC__ >=2)
++#if !(defined(__linux__) && defined (__GLIBC__) && __GLIBC__ >=2) && !(defined(__FreeBSD__) & defined(__GNUC__) && __GNUC__ >=2) && !defined(__NetBSD__)
+ extern char *sys_errlist[];
+ #endif
+ #ifdef MAINPROGRAM
