@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2000/07/13 18:25:32 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/11 20:20:38 jlam Exp $
 
 DISTNAME=		boost_all
-PKGNAME=		boost-1.16.1
+PKGNAME=		boost-1.17.0
 CATEGORIES=		devel
 MASTER_SITES=		http://www.boost.org/
 EXTRACT_SUFX=		.zip
@@ -19,6 +19,10 @@ NO_WRKSUBDIR=		# defined
 
 BOOST_VERS=		0:0
 MAKE_ENV+=		BOOST_VERS="${BOOST_VERS}"
+
+LIBDIR=			${PREFIX}/lib
+INCDIR=			${PREFIX}/include/boost
+HTMLDIR=		${PREFIX}/share/doc/html/boost
 
 # 2-step extraction process:
 #
@@ -38,29 +42,27 @@ post-extract:
 		libs/pri_queue/boost-heap-1.0.zip "boost/*"
 	${RM} -rf ${WRKSRC}/libs/dir_it
 
+do-configure:
+	${CP} ${FILESDIR}/Makefile ${WRKSRC}
+
 post-build:
 	${FIND} ${WRKSRC}/libs \
 		\( -name "*.zip" -or -name "*.tgz" \
 		   -or -name "*.orig" -or -name "*.bak" \
 		   -or -name "c++boost.gif" \) \
-		-exec ${RM} {} \;
-
-do-configure:
-	cd ${FILESDIR}; ${CP} Makefile ${WRKSRC}
+		-exec ${RM} -f {} \;
 
 do-install:
 	cd ${WRKSRC}; ${LIBTOOL} ${INSTALL_DATA} libboost.la ${LIBDIR}
 	${CP} -R ${WRKSRC}/boost ${PREFIX}/include
-	${MKDIR} ${PREFIX}/share/doc/html/boost
+	${MKDIR} ${HTMLDIR}
 	${INSTALL_DATA} \
 		${WRKSRC}/c++boost.gif \
 		${WRKSRC}/index.htm \
 		${WRKSRC}/libraries.htm \
-		${PREFIX}/share/doc/html/boost
-	${CP} -R ${WRKSRC}/libs ${WRKSRC}/more ${PREFIX}/share/doc/html/boost
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} \
-		${PREFIX}/include/boost ${PREFIX}/share/doc/html/boost
-	${CHMOD} -R a+r-w \
-		${PREFIX}/include/boost ${PREFIX}/share/doc/html/boost
+		${HTMLDIR}
+	${CP} -R ${WRKSRC}/libs ${WRKSRC}/more ${HTMLDIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INCDIR} ${HTMLDIR}
+	${CHMOD} -R a+r-w ${INCDIR} ${HTMLDIR}
 
 .include "../../mk/bsd.pkg.mk"
