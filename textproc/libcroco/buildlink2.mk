@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/09/26 08:55:05 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/01/04 18:00:28 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use libcroco.
 #
@@ -9,21 +9,21 @@
 LIBCROCO_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libcroco
-BUILDLINK_DEPENDS.libcroco?=		libcroco>=0.2.0
+BUILDLINK_DEPENDS.libcroco?=		libcroco>=0.4.0
 BUILDLINK_PKGSRCDIR.libcroco?=		../../textproc/libcroco
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libcroco=libcroco
 BUILDLINK_PREFIX.libcroco_DEFAULT=	${LOCALBASE}
+BUILDLINK_FILES.libcroco+=	include/libcroco/*.h
 BUILDLINK_FILES.libcroco+=	include/libcroco/layeng/*.h
-BUILDLINK_FILES.libcroco+=	include/libcroco/libcroco.h
 BUILDLINK_FILES.libcroco+=	include/libcroco/parser/*.h
 BUILDLINK_FILES.libcroco+=	include/libcroco/seleng/*.h
 BUILDLINK_FILES.libcroco+=	lib/libcrlayeng.*
 BUILDLINK_FILES.libcroco+=	lib/libcroco.*
 BUILDLINK_FILES.libcroco+=	lib/libcrseleng.*
-BUILDLINK_FILES.libcroco+=	lib/pkgconfig/libcroco.pc
 
 .include "../../devel/glib2/buildlink2.mk"
+.include "../../devel/libgnomeui/buildlink2.mk"
 .include "../../devel/pango/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
