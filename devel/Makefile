@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2001/05/25 12:34:37 agc Exp $
+# $NetBSD: Makefile,v 1.212 2001/05/25 12:42:06 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -15,6 +15,7 @@ SUBDIR+=	automake
 SUBDIR+=	avltree
 SUBDIR+=	bcc
 SUBDIR+=	bison
+SUBDIR+=	bmake
 SUBDIR+=	boehm-gc
 SUBDIR+=	bonobo
 SUBDIR+=	boost
