@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2004/02/14 18:16:03 snj Exp $
+# $NetBSD: Makefile,v 1.54 2004/03/17 16:46:02 danw Exp $
 
 DISTNAME=	tetex-src-${TETEX_BIN_VERS}
 PKGNAME=	teTeX-bin-${TETEX_BIN_VERS}
@@ -28,14 +28,18 @@ REPLACE_PERL=	texk/xdvik/t1mapper \
 CONFLICTS+=	coreutils-[0-9]*
 .endif
 
-post-install:
-	@${RM} ${PREFIX}/share/texmf/web2c/*.log
 .if defined(PAPERSIZE)
-	${LOCALBASE}/bin/texconfig dvips paper ${PAPERSIZE:tl}
+LOWER_PAPERSIZE!=	${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'
+.endif
+
+post-install:
+	@${RM} -f ${PREFIX}/share/texmf/web2c/*.log
+.if defined(PAPERSIZE)
+	${LOCALBASE}/bin/texconfig dvips paper ${LOWER_PAPERSIZE}
 .  if ${PAPERSIZE} == "Letter"
 	${LOCALBASE}/bin/texconfig xdvi us
 .  else
-	${LOCALBASE}/bin/texconfig xdvi ${PAPERSIZE:tl}
+	${LOCALBASE}/bin/texconfig xdvi ${LOWER_PAPERSIZE}
 .  endif
 .endif
 	${LOCALBASE}/bin/texconfig font ro
