@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/29 11:51:23 grant Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/29 11:52:51 grant Exp $
 ${PERL5_SITELIB}/Module/Build.pm
 ${PERL5_SITELIB}/Module/Build/Base.pm
 ${PERL5_SITELIB}/Module/Build/PPMMaker.pm
 ${PERL5_SITELIB}/Module/Build/Cookbook.pm
 ${PERL5_SITELIB}/Module/Build/Compat.pm
+${PERL5_SITELIB}/Module/Build/Platform/cygwin.pm
 ${PERL5_SITELIB}/Module/Build/Platform/darwin.pm
 ${PERL5_SITELIB}/Module/Build/Platform/VMS.pm
 ${PERL5_SITELIB}/Module/Build/Platform/EBCDIC.pm
