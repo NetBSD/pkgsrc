@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.1 1999/05/30 18:18:31 tron Exp $
+$NetBSD: patch-ac,v 1.2 2000/04/27 01:05:07 kim Exp $
 
---- bounce/Makefile.orig	Sun May 30 18:49:12 1999
-+++ bounce/Makefile	Sun May 30 18:49:12 1999
+--- bounce/Makefile.orig	Wed Apr 26 20:25:53 2000
++++ bounce/Makefile	Wed Apr 26 20:38:14 2000
 @@ -0,0 +1,15 @@
-+#	$NetBSD: patch-ac,v 1.1 1999/05/30 18:18:31 tron Exp $
++#	$NetBSD: patch-ac,v 1.2 2000/04/27 01:05:07 kim Exp $
 +.include "../conf/main.cf"
 +PROG=	bounce
 +BINDIR=${daemon_directory}
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.1 1999/05/30 18:18:31 tron Exp $
 +	bounce_cleanup.c
 +
 +DPADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
-+LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL}
++LDADD+= ${LIBPMASTER} ${LIBPGLOBAL} ${LIBPUTIL} ${AUXLIBS}
 +
 +# XXX
 +NOMAN=1

@@ -1,17 +1,42 @@
-# $NetBSD: Makefile,v 1.18 2000/04/10 00:19:15 bad Exp $
+# $NetBSD: Makefile,v 1.19 2000/04/27 01:05:06 kim Exp $
 
 DISTNAME=	postfix-19991231-pl06
 PKGNAME=	postfix-19991231pl06
 CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/official/
 
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(POSTFIX_VERP) && ${POSTFIX_VERP} == YES
+PATCHFILES=		postfix-19991231-pl06-verp.patch.gz
+PATCH_SITES=		ftp://ftp.gw.com/pub/people/kim/patches/
+PATCH_DIST_STRIP=	-p1
+.endif
+
 MAINTAINER=	christos@netbsd.org
 HOMEPAGE=	http://www.postfix.org/
 
 MIRROR_DISTFILE= no
 MANCOMPRESSED_IF_MANZ=	yes
+DIST_SUBDIR=	postfix
 
 POSTFIX_SPOOL=	/var/spool/postfix
+
+.if defined(POSTFIX_PCRE) && ${POSTFIX_PCRE} == YES
+DEPENDS+=	pcre-2.08:../../devel/pcre
+CFLAGS+=	-DHAS_PCRE -I${LOCALBASE}/include
+AUXLIBS=	-lpcre
+MAKE_ENV+=	AUXLIBS="${AUXLIBS}"
+.endif
+
+MANINSTALL?=	maninstall catinstall
+
+BUILD_DEFS+=	POSTFIX_PCRE POSTFIX_VERP MANINSTALL
+
+PLIST_SRC=	${PKGDIR}/PLIST
+.for i in ${MANINSTALL}
+PLIST_SRC+=	${PKGDIR}/PLIST.$i
+.endfor
 
 pre-patch:
 	${CP} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.dist
