@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2004/11/19 13:01:46 adam Exp $
+$NetBSD: distinfo,v 1.12 2005/02/24 09:03:11 agc Exp $
 
 SHA1 (smalltalk-2.1.9.tar.gz) = e068f993d2fba93138e68c23c73e357541ade416
+RMD160 (smalltalk-2.1.9.tar.gz) = fdee6fb13b5663bffcae5df7c57c0a5096e621c2
 Size (smalltalk-2.1.9.tar.gz) = 3354139 bytes
 SHA1 (patch-aa) = 84d2cd463aee940ca123c5de2aab43d6a1d25582
 SHA1 (patch-ab) = 43421fda6d712d581f10bb37c3e79b9203e51757
