@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.9 2001/05/04 20:59:45 zuntum Exp $
+$NetBSD: TODO,v 1.10 2001/05/05 08:48:31 zuntum Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -39,6 +39,10 @@ packages TODO (Suggested new packages)
 	SquirrelMail has a plugings features and several plugins exist.
 	http://www.squirrelmail.org/index.php3?page=15
 
+	cvsup.nogui
+	cvsup daemon and client
+	Split cvsup packages to cvsup and cvsup.nogui, per pkg/12531
+
 
 package update TODO (Suggested package updates)
 ^^^^^^^^^^^^^^^^^^^
@@ -52,6 +56,9 @@ package update TODO (Suggested package updates)
 		(jlam has these packages ready, will update after freeze)
 	o update editors/manedit to recent version
 		(zuntum will do that)
+	o update sysutils/gkrellm to 1.0.8
+		(zuntum will do that)
+	
 	
 
 pksgrc TODO (Suggested pkgsrc features and enhancements)
@@ -63,3 +70,5 @@ pksgrc TODO (Suggested pkgsrc features and enhancements)
 	o Add a USE_PTHREADS variable with ALT_PTHREADS override.
 
 	o Add a sort check to pkglint for PLISTs.
+
+	o Add a method to provide distfile-specific MASTER_SITES  [PR pkg/7471]
