@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/12 19:05:18 wiz Exp $
+
+--- automake.texi.orig	Thu Jul 10 22:30:17 2003
++++ automake.texi
+@@ -9,12 +10,12 @@
+ 
+ @dircategory Software development
+ @direntry
+-* automake: (automake).		Making Makefile.in's.
++* Automake-1.7: (automake).		Making Makefile.in's.
+ @end direntry
+ 
+ @dircategory Individual utilities
+ @direntry
+-* aclocal: (automake)Invoking aclocal.          Generating aclocal.m4.
++* Aclocal-1.7: (automake)Invoking aclocal.          Generating aclocal.m4.
+ @end direntry
+ 
+ @ifinfo
