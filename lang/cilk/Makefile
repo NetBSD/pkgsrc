@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/10 13:16:20 jtb Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/11 07:28:12 jtb Exp $
 
 DISTNAME=		cilk-5.3.1
 PKGREVISION=		2
@@ -17,10 +17,8 @@ USE_BUILDLINK2=	 	# defined
 USE_GMAKE=		# defined
 USE_PERL5=		yes
 USE_LIBTOOL=		yes
-PTHREAD_OPTS+=		require
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 LTCONFIG_OVERRIDE= 	${WRKSRC}/ltconfig
+PTHREAD_OPTS+=		require
 
 USE_NEW_TEXINFO=	YES
 INFO_FILES=		cilk-faq.info
@@ -37,5 +35,5 @@ post-install:
 		${PREFIX}/share/examples/cilk
 	${INSTALL_DATA} ${WRKSRC}/FAQ/cilk-faq.info ${PREFIX}/info
 
-.include "../../devel/pth/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
