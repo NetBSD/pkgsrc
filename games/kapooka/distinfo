@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/24 17:05:04 wiz Exp $
+$NetBSD: distinfo,v 1.2 2004/11/29 20:16:59 wiz Exp $
 
 SHA1 (kapooka_0.2.tar.bz2) = b61080370ccb47ca7320e812fdcdea39a1589aca
 Size (kapooka_0.2.tar.bz2) = 322009 bytes
 SHA1 (patch-aa) = 429e7ae7e70854bef13a860db8699376b203c158
+SHA1 (patch-ab) = 71fdeda51180b5bcf6c372c5c62bd50da73de825
