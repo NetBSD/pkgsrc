@@ -1,0 +1,16 @@
+$NetBSD: patch-ap,v 1.1 1998/09/04 02:28:54 tron Exp $
+
+--- man/gnus.texi.orig	Sat May 16 20:50:27 1998
++++ man/gnus.texi	Fri Sep  4 01:56:10 1998
+@@ -5,6 +5,11 @@
+ @synindex fn cp
+ @synindex vr cp
+ @synindex pg cp
++@dircategory The Emacs editor and associated tools
++@direntry
++* GNUS: (gnus).			The news reader GNUS.
++@end direntry
++
+ @iftex
+ @finalout
+ @end iftex

@@ -1,5 +1,11 @@
+@comment $NetBSD: PLIST,v 1.14 1998/09/04 02:28:55 tron Exp $
 bin/emacs
 bin/emacs-20.3
+bin/emacs-etags
+bin/emacs-ctags
+bin/emacsclient
+bin/emacs-b2m
+bin/emacs-rcs-checkin
 @unexec %D/bin/install-info --delete %D/info/widget %D/info/dir
 info/widget
 @exec   %D/bin/install-info          %D/info/widget %D/info/dir
@@ -38,9 +44,6 @@ info/mh-e
 @unexec %D/bin/install-info --delete %D/info/message %D/info/dir
 info/message
 @exec   %D/bin/install-info          %D/info/message %D/info/dir
-@unexec %D/bin/install-info --delete %D/info/info %D/info/dir
-info/info
-@exec   %D/bin/install-info          %D/info/info %D/info/dir
 info/gnus-9
 info/gnus-8
 info/gnus-7
@@ -1370,16 +1373,16 @@ share/emacs/site-lisp/subdirs.el
 @dirrm share/emacs/20.3/lisp/gnus
 @dirrm share/emacs/20.3/lisp/emulation
 @dirrm share/emacs/20.3/lisp/emacs-lisp
-@exec   f=%D/share/emacs/20.3/site-lisp ; [ ! -d $f ] && mkdir $f
-@dirrm share/emacs/20.3/site-lisp
-@exec   f=%D/share/emacs/20.3/leim ; [ ! -d $f ] && mkdir $f
+@exec mkdir -p %D/share/emacs/20.3/site-lisp
+@unexec rm -rf %D/share/emacs/20.3/site-lisp
+@exec mkdir -p %D/share/emacs/20.3/leim
 @dirrm share/emacs/20.3/leim
 @dirrm share/emacs/20.3/lisp
 @dirrm share/emacs/20.3/etc/e
 @dirrm share/emacs/20.3/etc
 @dirrm share/emacs/20.3
-@exec   f=%D/share/emacs/site-lisp ; [ ! -d $f ] && mkdir $f
-@dirrm share/emacs/site-lisp
+@exec mkdir -p %D/share/emacs/site-lisp
+@unexec rm -rf %D/share/emacs/site-lisp
 @dirrm share/emacs
 @dirrm libexec/emacs/20.3/${MACHINE_GNU_ARCH}--netbsd
 @dirrm libexec/emacs/20.3

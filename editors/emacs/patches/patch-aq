@@ -1,0 +1,16 @@
+$NetBSD: patch-aq,v 1.1 1998/09/04 02:28:54 tron Exp $
+
+--- man/message.texi.orig	Sat May 16 20:50:48 1998
++++ man/message.texi	Fri Sep  4 01:56:09 1998
+@@ -2,6 +2,11 @@
+ 
+ @setfilename ../info/message
+ @settitle Message 5.5 Manual
++@dircategory The Emacs editor and associated tools
++@direntry
++* Message: (message).		Emacs message composition mode.
++@end direntry
++
+ @synindex fn cp
+ @synindex vr cp
+ @synindex pg cp
