@@ -1,0 +1,89 @@
+$NetBSD: patch-aa,v 1.1 2001/06/11 17:40:48 bouyer Exp $
+
+--- koncd/cddata.cpp.orig	Mon Jun 11 19:01:08 2001
++++ koncd/cddata.cpp	Mon Jun 11 19:02:38 2001
+@@ -17,14 +17,18 @@
+ struct DEVICES *CurDev;
+ 
+ CDdata::CDdata( QObject * , const char * ) {
++	int i;
++	char prog2[128];
+ 	Devices = NULL;
+-	strncpy( prog, "cdrecord", sizeof( prog ) - 1);	
+-	proc << prog << "-scanbus";
+- 	connect( &proc, SIGNAL(receivedStderr (KProcess *, char *, int) ),
+- 		this, SLOT(slotOutput (KProcess *, char *, int) ));
+- 	connect( &proc, SIGNAL(receivedStdout (KProcess *, char *, int) ),
++	strncpy( prog, "scsictl", sizeof( prog ) - 1);	
++	connect( &proc, SIGNAL(receivedStdout (KProcess *, char *, int) ),
+  		this, SLOT(slotOutput (KProcess *, char *, int) ));		
+-	proc.start( KProcess::Block, KProcess::AllOutput );
++	for (i = 0; i < 8; i++) {
++  		proc.clearArguments();
++		snprintf(prog2, sizeof( prog2 ) - 1, "/dev/rcd%dd",i);	
++		proc << prog << prog2 << "identify";
++		proc.start( KProcess::Block, KProcess::AllOutput );
++	}
+   sprintf( dummystr,"dev=unknown" );
+ 		
+ 	struct DEVICES *d;
+@@ -105,40 +109,34 @@
+ 		return;
+ 	}
+ 	bzero( buf, sizeof( buf ) );
+-	strncpy( buf, s, n > (int) sizeof( buf ) ? sizeof(buf) - 1 : n );
++	strncpy( buf, s, n >= (int) sizeof( buf ) ? sizeof(buf) - 1 : n );
+ 	output += buf;
+ 
+-	c = strtok( buf, "\n" );
+-	while( c ) {
+-  	if( (b = strstr( c, "scsibus" )) ) {
+-  		CurBus = c[7] - 0x30;
+-  	}
+-  	if( (b = strstr( c, ") " )) ) {
+-  		if( b - 1 >= c && isdigit( *(b-1) ) && b[2] != '*' ) {
++	if (strncmp(buf, "/dev/rcd", 8) != 0)
++		return;
++  	if( (b = strstr( buf, "<" )) && (c = strstr( buf, ">" ))) {
+     		dev = (struct DEVICES *) calloc( sizeof( struct DEVICES ), 1 );		
+     		dev -> next = Devices;
+     		Devices = dev;
+-    		dev -> bus = CurBus;
+-    		dev -> dev = *(b-1) - 0x30;
+-    		sprintf( dev -> devstr, "dev=%d,%d,0",
+-    					(CurBus < 32) ? CurBus:0, (dev -> dev < 32) ? dev -> dev:0 );
+-    		for( ; *b && *b != '\''; b++ ); // point to '
++    		dev -> dev = buf[8] - 0x30;
++    		sprintf( dev -> devstr, "dev=/dev/rcd%dd",
++    					(dev -> dev < 32) ? dev -> dev:0 );
+     		if( *b ) b++;	// point to next character
+-    		for( i = 0; *b && *b != '\'' && i < sizeof(dev->vendor)-1; b++, i++ )
++    		for( i = 0; *b && *b != ',' && i < sizeof(dev->vendor)-1; b++, i++ )
+     			dev -> vendor[i] = *b;
+-    		for( i = 0; *b && i < 2; b++ ) if( *b == '\'' ) i++;
+-    		for( i = 0; *b && *b != '\'' && i < sizeof(dev->name)-1; b++, i++ )
++		while(*b != ',' && *b != 0) // points to next ","
++			b++;
++		if (*b == ',') b++; // next char
++    		for( i = 0; *b && *b != ',' && i < sizeof(dev->name)-1;
++		    b++, i++ )
+     			dev -> name[i] = *b;
+-    		for( i = 0; *b && i < 2; b++ ) if( *b == '\'' ) i++;
+-    		for( i = 0; *b && *b != '\'' && i < sizeof(dev->version)-1; b++, i++ )
++		while(*b != ',' && *b != 0) // points to next ","
++			b++;
++		if (*b == ',') b++; // next char
++    		for( i = 0; *b && *b != '>' && i < sizeof(dev->version)-1; b++, i++ )
+     			dev -> version[i] = *b;
+-    		for( i = 0; *b && i < 1; b++ ) if( *b == '\'' ) i++;
+-    		for( i = 0; *b && *b != '\'' && i < sizeof(dev->desc)-1; b++, i++ )
+-    			dev -> desc[i] = *b;
+-			}
+-  	}
+-		c = strtok( NULL, "\n" );	
+-  }
++    		dev -> desc[0] = 0;
++	}
+ }
+ 
+ void CDdata::slotOutput1(KProcess *, char *s, int n) {
