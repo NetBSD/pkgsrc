@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1922 2004/07/13 14:06:08 wiz Exp $
+$NetBSD: TODO,v 1.1923 2004/07/13 16:45:47 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -278,7 +278,6 @@ Suggested package updates
 	o libcaca-0.9
 	o libggi-2.0.5
 	o libgii-0.8.5
-	o libidn-0.5.1
 	o libmpeg3-1.5.4
 	o libnet-1.1.1
 	o libole2-2.2.8

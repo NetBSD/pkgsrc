@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6543 2004/07/13 14:48:15 recht Exp $
+$NetBSD: CHANGES,v 1.6544 2004/07/13 16:45:47 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3378,3 +3378,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lsof to 4.72 [atatat 2004-07-13]
 	Updated boehm-gc to 6.3nb1 [recht 2004-07-13]
 	Updated mono to 1.0nb1 [recht 2004-07-13]
+	Updated libidn to 0.5.1 [xtraeme 2004-07-13]
