@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/10/31 23:17:04 hwr Exp $
+# $NetBSD: Makefile,v 1.13 1999/02/02 23:14:32 tron Exp $
 # FreeBSD Id: Makefile,v 1.44 1997/09/13 20:19:28 chuckr Exp
 #
 
@@ -26,7 +26,7 @@
 #    SUBDIR += uzap
     SUBDIR += vile
     SUBDIR += vim
-#    SUBDIR += xcoral
+    SUBDIR += xcoral
 #    SUBDIR += xed
 #    SUBDIR += xemacs
     SUBDIR += xemacs20
