@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:17:50 tv Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/21 20:53:18 hubertf Exp $
 #
 
-DISTNAME=	dhisd-5.0
-PKGREVISION=	2
+DISTNAME=	dhisd-5.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.dhis.org/pub/dhis/
 
