@@ -1,17 +1,30 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.3 2004/08/23 03:47:48 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.4 2004/12/29 16:18:41 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
 
 # PROVIDE: qmailpop3d mail
 
+name="qmailpop3d"
+
+# User-settable rc.conf variables and their default values:
+: ${qmailpop3d_postenv:=""}
+: ${qmailpop3d_tcpflags:="-v -R -H -l 0"}
+: ${qmailpop3d_tcphost:="0"}
+: ${qmailpop3d_tcpport:="110"}
+: ${qmailpop3d_datalimit:="2000000"}
+: ${qmailpop3d_pretcpserver:=""}
+: ${qmailpop3d_prepop3d:=""}
+: ${qmailpop3d_checkpassword:="@LOCALBASE@/bin/checkpassword"}
+: ${qmailpop3d_maildirname:="Maildir"}
+: ${qmailpop3d_logcmd:="@LOCALBASE@/bin/setuidgid qmaill @LOCALBASE@/bin/splogger nb${name}"}
+
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
-name="qmailpop3d"
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/me"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencypop3"
@@ -24,18 +37,6 @@ stat_cmd="qmailpop3d_stat"
 pause_cmd="qmailpop3d_pause"
 cont_cmd="qmailpop3d_cont"
 cdb_cmd="qmailpop3d_cdb"
-
-# User-settable rc.conf variables and their default values:
-qmailpop3d_postenv=${qmailpop3d_postenv-""}
-qmailpop3d_tcpflags=${qmailpop3d_tcpflags-"-v -R -H -l 0"}
-qmailpop3d_tcphost=${qmailpop3d_tcphost-"0"}
-qmailpop3d_tcpport=${qmailpop3d_tcpport-"110"}
-qmailpop3d_datalimit=${qmailpop3d_datalimit-"2000000"}
-qmailpop3d_pretcpserver=${qmailpop3d_pretcpserver-""}
-qmailpop3d_prepop3d=${qmailpop3d_prepop3d-""}
-qmailpop3d_checkpassword=${qmailpop3d_checkpassword-"@LOCALBASE@/bin/checkpassword"}
-qmailpop3d_maildirname=${qmailpop3d_maildirname-"Maildir"}
-qmailpop3d_logcmd=${qmailpop3d_logcmd-"@LOCALBASE@/bin/setuidgid qmaill @LOCALBASE@/bin/splogger nb${name}"}
 
 qmailpop3d_precmd()
 {
