@@ -1,4 +1,4 @@
-# $NetBSD: xfree.buildlink2.mk,v 1.10 2003/01/13 09:47:47 grant Exp $
+# $NetBSD: xfree.buildlink2.mk,v 1.11 2003/01/14 09:31:20 jlam Exp $
 
 .if !defined(XFREE_BUILDLINK2_MK)
 XFREE_BUILDLINK2_MK=	# defined
@@ -335,7 +335,6 @@ BUILDLINK_FILES.XFree+=	include/X11/extensions/Xdbeproto.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/Xext.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/Xinerama.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/Xrandr.h
-BUILDLINK_FILES.XFree+=	include/X11/extensions/Xrender.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/Xv.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/XvMC.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/XvMClib.h
@@ -345,7 +344,6 @@ BUILDLINK_FILES.XFree+=	include/X11/extensions/Xvproto.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/bigreqstr.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/dpms.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/dpmsstr.h
-BUILDLINK_FILES.XFree+=	include/X11/extensions/extutil.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/fontcache.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/fontcacheP.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/fontcachstr.h
@@ -365,8 +363,6 @@ BUILDLINK_FILES.XFree+=	include/X11/extensions/randr.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/randrproto.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/record.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/recordstr.h
-BUILDLINK_FILES.XFree+=	include/X11/extensions/render.h
-BUILDLINK_FILES.XFree+=	include/X11/extensions/renderproto.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/saver.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/saverproto.h
 BUILDLINK_FILES.XFree+=	include/X11/extensions/scrnsaver.h
@@ -550,17 +546,6 @@ BUILDLINK_FILES.XFree+=	lib/libXrandr.1.dylib
 BUILDLINK_FILES.XFree+=	lib/libXrandr.1.0.dylib
 BUILDLINK_FILES.XFree+=	lib/libXrandr.2.dylib
 BUILDLINK_FILES.XFree+=	lib/libXrandr.2.0.dylib
-BUILDLINK_FILES.XFree+=	lib/libXrender.a
-BUILDLINK_FILES.XFree+=	lib/libXrender.so
-BUILDLINK_FILES.XFree+=	lib/libXrender.so.1
-BUILDLINK_FILES.XFree+=	lib/libXrender.so.1.0
-BUILDLINK_FILES.XFree+=	lib/libXrender.so.1.1
-BUILDLINK_FILES.XFree+=	lib/libXrender.so.1.2
-BUILDLINK_FILES.XFree+=	lib/libXrender.dylib
-BUILDLINK_FILES.XFree+=	lib/libXrender.1.dylib
-BUILDLINK_FILES.XFree+=	lib/libXrender.1.0.dylib
-BUILDLINK_FILES.XFree+=	lib/libXrender.1.1.dylib
-BUILDLINK_FILES.XFree+=	lib/libXrender.1.2.dylib
 BUILDLINK_FILES.XFree+=	lib/libXss.a
 BUILDLINK_FILES.XFree+=	lib/libXt.a
 BUILDLINK_FILES.XFree+=	lib/libXt.so
@@ -625,6 +610,7 @@ BUILDLINK_TARGETS+=	XFree-buildlink
 .include "../../graphics/glu/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/Xrender/buildlink2.mk"
 
 XFree-buildlink: _BUILDLINK_USE
 

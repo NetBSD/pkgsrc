@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2003/01/13 09:47:47 grant Exp $
+# $NetBSD: Makefile,v 1.28 2003/01/14 09:31:20 jlam Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in mk/buildlink2/bsd.buildlink2.mk to the
 #	correct version, usually the most recent.
 
-DISTNAME=	x11-links-0.11
+DISTNAME=	x11-links-0.12
 CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -26,6 +26,7 @@ _REQUIRE_BUILTIN_MESALIB=	YES
 _REQUIRE_BUILTIN_GLU=		YES
 _REQUIRE_BUILTIN_FREETYPE2=	YES
 _REQUIRE_BUILTIN_XPM=		YES
+_REQUIRE_BUILTIN_XRENDER=	YES
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 BUILDLINK_X11_SUBDIR=	share/x11-links
