@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.4 2001/02/09 13:12:23 simonb Exp $
+$NetBSD: md5,v 1.5 2001/02/13 06:10:11 simonb Exp $
 
-MD5 (mad-0.12.4b.tar.gz) = 7724c8a8f2a5b076152e359bdd33a95d
+MD5 (mad-0.12.5b.tar.gz) = b156bec0dc7d134bf1a5acdb4216a36d
