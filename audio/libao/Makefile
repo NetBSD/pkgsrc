@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/27 03:19:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/28 10:21:55 wiz Exp $
 
 DISTNAME=	libao-0.6.0
 PKGNAME=	${DISTNAME}nb1
@@ -11,6 +11,7 @@ COMMENT=	cross-platform audio library
 BUILD_DEPENDS+=	automake-1.4:../../devel/automake
 BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
+PLIST_SUBST+=	VERSION="${DISTNAME}"
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
