@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: cleanup,v 1.5 2004/03/31 23:46:14 jschauma Exp $
+# $NetBSD: cleanup,v 1.6 2004/05/25 02:25:21 jschauma Exp $
 #
 
 wrkdir=${1:-work}
@@ -9,7 +9,7 @@ if [ -d /usr/ccs/bin -a -x /usr/ccs/bin/make ]; then
         PATH=/usr/ccs/bin:$PATH; export PATH
 fi
 
-(cd $wrkdir/bmake; rm -f *.o lst.lib/*.o bmake bmake.boot Makefile confdefs.h config.h config.log config.status config.cache makefile.boot lst.lib/makefile.boot; \
+(cd $wrkdir/bmake && rm -f *.o lst.lib/*.o bmake bmake.boot Makefile confdefs.h config.h config.log config.status config.cache makefile.boot lst.lib/makefile.boot; \
 	[ -f mk/bsd.man.mk.orig ] && mv -f mk/bsd.man.mk.orig mk/bsd.man.mk; \
 	[ -f mk/bsd.lib.mk.orig ] && mv -f mk/bsd.lib.mk.orig mk/bsd.lib.mk; )
 for d in libnbcompat digest tnftp pax pkg_install mtree sed; do
