@@ -1,15 +1,15 @@
-$NetBSD: patch-ao,v 1.4 2003/05/22 02:57:14 markd Exp $
+$NetBSD: patch-ao,v 1.5 2003/07/30 14:24:51 markd Exp $
 
---- configure.orig	Thu May  8 00:08:48 2003
+--- configure.orig	2003-07-15 22:19:29.000000000 +1200
 +++ configure
-@@ -26402,62 +26402,6 @@ _ACEOF
+@@ -26411,62 +26411,6 @@ _ACEOF
  
  
  
 -  echo "$as_me:$LINENO: checking sizeof(size_t) == sizeof(unsigned long)" >&5
 -echo $ECHO_N "checking sizeof(size_t) == sizeof(unsigned long)... $ECHO_C" >&6
 -  cat >conftest.$ac_ext <<_ACEOF
--#line $LINENO "configure"
+-/* #line $LINENO "configure" */
 -/* confdefs.h.  */
 -_ACEOF
 -cat confdefs.h >>conftest.$ac_ext
