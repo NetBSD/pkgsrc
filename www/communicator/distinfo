@@ -1,16 +1,16 @@
-$NetBSD: distinfo,v 1.7 2001/07/23 20:09:30 tron Exp $
+$NetBSD: distinfo,v 1.8 2001/11/27 14:11:50 abs Exp $
 
-SHA1 (netscape/communicator-v478-us.x86-unknown-linux2.2.tar.gz) = 3d630683e55b05f03ea3bf5343f1b6d20676886f
-Size (netscape/communicator-v478-us.x86-unknown-linux2.2.tar.gz) = 17495932 bytes
-SHA1 (netscape/communicator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = a0d44122101972df47b4f6605c3c7fbca5e71270
-Size (netscape/communicator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = 16054991 bytes
+SHA1 (netscape/communicator-v479-us.x86-unknown-linux2.2.tar.gz) = 7c2fb22de33c9e7ea057a498d6d0f0f97b533ccd
+Size (netscape/communicator-v479-us.x86-unknown-linux2.2.tar.gz) = 17504329 bytes
+SHA1 (netscape/communicator-v479-us.sparc-sun-solaris2.5.1.tar.gz) = 6b3d2fae729a1d7674443f448bd33a323bae8b4d
+Size (netscape/communicator-v479-us.sparc-sun-solaris2.5.1.tar.gz) = 12005257 bytes
+SHA1 (netscape/communicator-v479-us.sparc-sun-solaris2.8.tar.gz) = e82b8b0d517916fc31a8aedac702660c209fca8e
+Size (netscape/communicator-v479-us.sparc-sun-solaris2.8.tar.gz) = 12343559 bytes
 SHA1 (netscape/communicator-v478-us.alpha-dec-osf4.0.tar.gz) = adb38589d88bf159a9c681899192d7a6e88cec45
 Size (netscape/communicator-v478-us.alpha-dec-osf4.0.tar.gz) = 13637883 bytes
-SHA1 (netscape/communicator-v478-us.sparc-sun-solaris2.5.1.tar.gz) = 15b46843f6dd4119f21ac9492271cbbf6fbaca2b
-Size (netscape/communicator-v478-us.sparc-sun-solaris2.5.1.tar.gz) = 12000287 bytes
-SHA1 (netscape/communicator-v478-us.sparc-sun-solaris2.8.tar.gz) = a5adfb9a371eaf0f1e0a53004dfaaf1606a470c6
-Size (netscape/communicator-v478-us.sparc-sun-solaris2.8.tar.gz) = 12338462 bytes
 SHA1 (netscape/communicator-v475-us.x86-bsdi-bsd2.tar.gz) = dfb381f315896dd91c8f6ef1db7502d84b5b048c
 Size (netscape/communicator-v475-us.x86-bsdi-bsd2.tar.gz) = 11158353 bytes
 SHA1 (netscape-4.7-3.ppc.rpm) = 92bfc3a7068b2575fa3814a45203631599a4c3f9
 Size (netscape-4.7-3.ppc.rpm) = 10071049 bytes
+SHA1 (netscape/communicator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = a0d44122101972df47b4f6605c3c7fbca5e71270
+Size (netscape/communicator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = 16054991 bytes
