@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/05/22 02:57:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/07/30 14:19:38 markd Exp $
 bin/ical2vcal
 bin/kabc2mutt
 bin/kaddressbook
@@ -199,6 +199,7 @@ share/kde/applnk/Utilities/kpilot.desktop
 share/kde/applnk/Utilities/kpilotdaemon.desktop
 share/kde/apps/kaddressbook/csv-templates/kaddressbook.desktop
 share/kde/apps/kaddressbook/csv-templates/outlook2000.desktop
+share/kde/apps/kaddressbook/csv-templates/outlookxp.desktop
 share/kde/apps/kaddressbook/icons/crystalsvg/16x16/actions/ldap_lookup.png
 share/kde/apps/kaddressbook/icons/crystalsvg/16x16/actions/smallcal.png
 share/kde/apps/kaddressbook/icons/crystalsvg/32x32/actions/gohome.png
