@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/09/02 20:13:28 wiz Exp $
+
+--- man/reed.1.orig	Fri Dec  1 01:26:02 2000
++++ man/reed.1
+@@ -106,7 +106,7 @@
+ .IP r
+ Clear and redraw the screen.
+ .IP v
+-Start a text editor opened to the current file. Reed first tried $EDITOR,
++Start a text editor opened to the current file. Reed first tries $EDITOR,
+ then $VISUAL, and defaults to /bin/ed.
+ .IP :n
+ Go to the next buffer in the file list.
