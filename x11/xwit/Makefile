@@ -1,18 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/16 14:15:53 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/16 14:09:26 seb Exp $
 #
 
 DISTNAME=	xwit-3.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 
-MAINTAINER=	seb@pbox.org
+MAINTAINER=	seb@netbsd.org
 COMMENT=	Utility for calling X11 functions from the shell
 
 USE_IMAKE=	yes
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xwit ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/xwit.man ${PREFIX}/man/man1/xwit.1
-	${INSTALL_MAN} ${WRKSRC}/xwit.0 ${PREFIX}/man/cat1/xwit.0
 
 .include "../../mk/bsd.pkg.mk"
