@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:14:56 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/27 15:42:53 wiz Exp $
 #
 
 DISTNAME=		aranym-0.8.9beta
-PKGREVISION=	1
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aranym/}
 
