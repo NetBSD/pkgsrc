@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:48:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/30 12:22:02 salo Exp $
 bin/oregano
 bin/pspice2oregano
 share/gnome/apps/Applications/oregano.desktop
@@ -6,11 +6,11 @@ share/gnome/help/oregano/C/editing.html
 share/gnome/help/oregano/C/oregano.html
 share/gnome/help/oregano/C/simulation.html
 share/gnome/help/oregano/C/topic.dat
-share/locale/de/LC_MESSAGES/oregano.mo
-share/locale/fr/LC_MESSAGES/oregano.mo
-share/locale/it/LC_MESSAGES/oregano.mo
-share/locale/ja/LC_MESSAGES/oregano.mo
-share/locale/sv/LC_MESSAGES/oregano.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/oregano.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/oregano.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/oregano.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/oregano.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/oregano.mo
 share/mime-info/oregano.keys
 share/mime-info/oregano.mime
 share/oregano/glade/part-browser.glade
