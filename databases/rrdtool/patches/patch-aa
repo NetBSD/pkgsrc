@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2000/12/05 11:15:42 wulf Exp $
+$NetBSD: patch-aa,v 1.4 2000/12/15 19:20:18 wiz Exp $
 
 --- Makefile.in.orig	Thu Sep 14 15:27:45 2000
 +++ Makefile.in	Tue Dec  5 20:54:28 2000
@@ -20,12 +20,12 @@ $NetBSD: patch-aa,v 1.3 2000/12/05 11:15:42 wulf Exp $
 -	$(INSTALL) -m 644 perl-shared/RRDs.pm $(DESTDIR)$(prefix)/lib/perl
 -	$(INSTALL) -m 644 perl-shared/blib/arch/auto/RRDs/RRDs.bs $(DESTDIR)$(prefix)/lib/perl/auto/RRDs
 -	$(INSTALL) -m 755 perl-shared/blib/arch/auto/RRDs/RRDs.@SO_EXT@ $(DESTDIR)$(prefix)/lib/perl/auto/RRDs
-+       $(INSTALL) -d -m 755 $(prefix)/share/rrdtool/lib/perl/auto/RRDs
-+       $(INSTALL) -m 644 perl-piped/RRDp.pm $(prefix)/share/rrdtool/lib/perl
-+       $(INSTALL) -m 644 perl-shared/RRDs.pm $(prefix)/share/rrdtool/lib/perl
-+       $(INSTALL) -m 644 perl-shared/blib/arch/auto/RRDs/RRDs.bs $(prefix)/share/rrdtool/lib/perl/auto/RRDs
-+       $(INSTALL) -m 755 perl-shared/blib/arch/auto/RRDs/RRDs.@SO_EXT@ $(prefix)/share/rrdtool/lib/perl/auto/RRDs
-+       gmake site-perl-inst
++	$(INSTALL) -d -m 755 $(prefix)/share/rrdtool/lib/perl/auto/RRDs
++	$(INSTALL) -m 644 perl-piped/RRDp.pm $(prefix)/share/rrdtool/lib/perl
++	$(INSTALL) -m 644 perl-shared/RRDs.pm $(prefix)/share/rrdtool/lib/perl
++	$(INSTALL) -m 644 perl-shared/blib/arch/auto/RRDs/RRDs.bs $(prefix)/share/rrdtool/lib/perl/auto/RRDs
++	$(INSTALL) -m 755 perl-shared/blib/arch/auto/RRDs/RRDs.@SO_EXT@ $(prefix)/share/rrdtool/lib/perl/auto/RRDs
++	gmake site-perl-inst
  
  # rules for building the perl module
  perl_piped: perl-piped/Makefile
