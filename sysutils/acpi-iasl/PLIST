@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/28 17:09:21 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/06/04 03:36:18 uebayasi Exp $
 bin/acpi-iasl
-share/doc/acpi-iasl/README
+bin/acpisrc
 share/doc/acpi-iasl/LICENSE
+share/doc/acpi-iasl/README
 @dirrm share/doc/acpi-iasl
