@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/04/05 18:41:14 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2004/04/12 23:17:46 salo Exp $
 
 DISTNAME=	transcode-0.6.12
 PKGREVISION=	1
@@ -45,21 +45,21 @@ post-install:
 .include "../../archivers/liblzo/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
-.include "../../audio/libogg/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/libmpeg3/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../multimedia/libdvdread/buildlink3.mk"
 # depends on a much later avifile than the one in pkgsrc
 #.include "../../multimedia/avifile/buildlink3.mk"
+.include "../../multimedia/libdvdread/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
