@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.691 2003/07/10 19:53:12 jmmv Exp $
+$NetBSD: TODO,v 1.692 2003/07/11 08:48:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -95,14 +95,14 @@ Suggested package updates
 	o ddd-3.3.5
 	o disc-cover-1.5.2
 	o distcc-2.8
-	o dmalloc-5.2.0 [pkg/21951]
+	o dmalloc-5.2.1 [pkg/21951]
 	o dopewars-1.5.9
 	o dvdrip-0.50.14
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o echoping-5.0.1
 	o elm-me-2.4pl102
-	o ettercap-0.6.a
+	o ettercap-0.6.b
 	o evolution-1.4
 	o exim-4.12 [pkg/19850|ad]
 	o exim-4.20
@@ -139,6 +139,7 @@ Suggested package updates
 	o gpa-0.6.1
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
+	o grepmail-5.00
 	o gtetrinet-0.7.3
 	o gtk-gnutella-0.92 [pkg/21551]
 	o gtkglext-1.0.0
@@ -263,6 +264,7 @@ Suggested package updates
 	o tkman-2.2
 	o top-3.5b12.5
 	o ttf2pt1-3.4.3
+	o transcode-0.6.8
 	o tuxpaint-0.9.11
 	o vfu-4.03
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
