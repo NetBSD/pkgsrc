@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:35 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/06/26 20:24:03 recht Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBPIXMAN_BUILDLINK3_MK:=	${LIBPIXMAN_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibpixman}
 BUILDLINK_PACKAGES+=	libpixman
 
 .if !empty(LIBPIXMAN_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libpixman+=	libpixman>=0.1.0
+BUILDLINK_DEPENDS.libpixman+=	libpixman>=0.1.1
 BUILDLINK_PKGSRCDIR.libpixman?=	../../graphics/libpixman
 .endif	# LIBPIXMAN_BUILDLINK3_MK
 
