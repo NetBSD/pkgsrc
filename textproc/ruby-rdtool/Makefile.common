@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2003/08/30 05:56:26 taca Exp $
+# $NetBSD: Makefile.common,v 1.7 2003/09/10 15:57:31 taca Exp $
 #
 
 # USE_RUBY_RD		- Says that the package uses rd to generate documents.
@@ -10,7 +10,7 @@
 # RUBY_RD_VERSION	- rdtool version required.
 #
 RUBY_RD=		${LOCALBASE}/bin/rd2
-RUBY_RD_VERSION =	0.6.13
+RUBY_RD_VERSION =	0.6.14
 RUBY_RD_REQD =		0.6.7
 
 .if defined(USE_RUBY_RD)
