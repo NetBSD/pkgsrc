@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/03/15 20:53:06 wiz Exp $
+
+--- ../vorbis-tools-1.0beta4.orig/ogg123/ogg123.c	Fri Feb 23 16:52:22 2001
++++ ogg123/ogg123.c	Thu Mar 15 10:40:21 2001
+@@ -170,7 +170,9 @@
+     if (temp_driver_id < 0) {
+ 	temp_driver_id = get_default_device();
+ 	if(temp_driver_id < 0) {
+-		temp_driver_id = ao_get_driver_id(NULL);
++/*		temp_driver_id = ao_get_driver_id(NULL); */
++/* For the NetBSD package, I am assuming that audio is desired. */
++		temp_driver_id = ao_get_driver_id("oss");
+ 	}
+ 	if (temp_driver_id < 0) {
+ 	    fprintf(stderr,
