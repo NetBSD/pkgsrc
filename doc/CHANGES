@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7442 2004/10/15 05:38:36 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7443 2004/10/15 08:45:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4725,7 +4725,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated epiphany to 1.4.4 [jmmv 2004-10-14]
 	Added libltdl-1.5.10 [tv 2004-10-14]
 	Updated dcraw to 1.211 [kristerw 2004-10-14]
-	Updated verilog to 0.8 [dmcmahill 20040-10-14]
+	Updated verilog to 0.8 [dmcmahill 2004-10-14]
 	Updated evolution14 to 1.4.6nb2 [grant 2004-10-15]
 	Added inkscape-0.39nb1 [reed 2004-10-15]
 	Added starfighter-1.1-1 [xtraeme 2004-10-15]
