@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.46 2004/02/08 03:29:16 jlam Exp $
+# $NetBSD: gcc.mk,v 1.47 2004/02/08 03:34:20 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
@@ -347,6 +347,7 @@ ${${_target_}}:
 	(${ECHO} '#!${BUILDLINK_SHELL}';				\
 	 ${ECHO} 'exec ${_GCCBINDIR}/${${_target_}:T} "$$@"';		\
 	) > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .      endif
 .    endfor
 .  endif # COMPILER_GCC_MK
