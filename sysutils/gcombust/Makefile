@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/10/15 12:41:10 rh Exp $
+# $NetBSD: Makefile,v 1.21 2000/11/12 15:17:33 tron Exp $
 #
 
 DISTNAME=	gcombust-0.1.36
@@ -17,5 +17,6 @@ DEPENDS+=	gtk+>=1.2.4:../../x11/gtk
 CONFLICTS=	cdrecord-1.9a*	# won't work with old alpha versions
 
 GNU_CONFIGURE=	YES
+USE_LIBINTL=	YES
 
 .include "../../mk/bsd.pkg.mk"
