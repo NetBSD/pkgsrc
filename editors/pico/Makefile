@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/06/07 19:48:47 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/06/22 12:27:09 agc Exp $
 #
 
 DISTNAME=	pine3.96
@@ -10,8 +10,6 @@ MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/
 MAINTAINER=	root@garbled.net
 
 CONFLICTS=	pine-3.96
-
-MAN1= 		pico.1
 
 do-build:
 	cd ${WRKSRC} && ./build neb

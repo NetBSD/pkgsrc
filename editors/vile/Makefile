@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/06/02 12:06:29 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/06/22 12:27:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:55:09 gj Exp
 #
 
@@ -15,7 +15,6 @@ GNU_CONFIGURE=	yes
 USE_PERL5=	yes
 WRKSRC=		${WRKDIR}/${PKGNAME}
 INSTALL_TARGET=	install install-perl
-MAN1=		vile.1
 
 post-install:
 	@echo "You might want to copy the *.rc files from the source tree before"
