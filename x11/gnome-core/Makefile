@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 1999/10/23 11:01:43 tron Exp $
+# $NetBSD: Makefile,v 1.31 1999/10/27 11:05:21 tron Exp $
 
 DISTNAME=		gnome-core-1.0.53
 CATEGORIES=		x11 gnome
@@ -7,7 +7,6 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=gnome-1.0.53/sources/}
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
-DEPENDS+=		esound-*:../../audio/esound
 DEPENDS+=		libghttp-*:../../www/libghttp
 DEPENDS+=		gnome-libs-*:../../x11/gnome-libs
 DEPENDS+=		libgtop-*:../../devel/libgtop
