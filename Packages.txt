@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.211 2001/11/08 08:54:04 jlam Exp $
+# $NetBSD: Packages.txt,v 1.212 2001/11/19 16:28:03 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -2112,7 +2112,12 @@ commit of that file, it should be copied to
  10.22 What's the proper way to create an account from a package?
  ================================================================
 
-Look at what e.g. pkgsrc/sysutils/amanda-common/{Makefile,INSTALL} do.
+Define PKG_USER and PKG_GROUP to the user and group, and optionally
+PKG_USERID and PKG_GROUPID to the userid and groupid, that need to be created
+for the package, and include "../../mk/bsd.pkg.install.mk" in the package
+Makefile prior to the inclusion of bsd.pkg.mk.  This will cause the user
+and group to be created at pre-install time, and the admin will be prompted
+to remove them at post-deinstall time.
 
 
  11 Submitting & Committing
