@@ -1,38 +1,33 @@
-*** kcontrol/info/processor_fbsd.cpp~	Thu Nov 27 00:06:35 1997
---- kcontrol/info/processor_fbsd.cpp	Thu Nov 27 00:05:41 1997
-***************
-*** 1,4 ****
---- 1,5 ----
-  #include <sys/types.h>
-  #include <sys/sysctl.h>
-+ #include <stdlib.h>
+--- kvt/command.c.orig	Thu Dec 18 00:28:32 1997
++++ kvt/command.c	Thu Dec 18 00:35:56 1997
+@@ -169,10 +169,12 @@
+  */
+ static struct termios ttmode;
+ #ifndef __FreeBSD__
++#ifndef __NetBSD__
+ #ifndef CINTR
+ #ifndef _POSIX_VDISABLE
+ #define _POSIX_VDISABLE 0
+ #endif
++#endif
   
-  /* stdio.h has NULL, but also a lot of extra cruft */
-***************
-*** 9,13 ****
-  /* Again avoid the cruft in stdlib.h since malloc() isn't gonna change 
-     too often */
-! void    *malloc __P((size_t));
+ #undef CTRL
+ #define CTRL(c) ((c) - '@')
+@@ -404,7 +406,7 @@
+       }
   
-  KProcessorWidget::KProcessorWidget(QWidget *parent, const char *name)
---- 10,14 ----
-  /* Again avoid the cruft in stdlib.h since malloc() isn't gonna change 
-     too often */
-! /* void    *malloc __P((size_t)); */
+       /* init of termios structure		*/
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+       ioctl(0,TIOCGETA,(char *)&ttmode);
+ #else
+ #   ifdef _HPUX_SOURCE
+@@ -472,7 +474,7 @@
   
-  KProcessorWidget::KProcessorWidget(QWidget *parent, const char *name)
-*** kcontrol/Makefile.in~	Thu Nov 27 00:13:06 1997
---- kcontrol/Makefile.in	Thu Nov 27 00:13:10 1997
-***************
-*** 308,312 ****
-  install-data-local: 
-  	$(mkinstalldirs) $(kde_bindir)
-! 	$(INSTALL_PROGRAM) kcontrol $(kde_bindir)/kcontrol
-  
-  uninstall-local:
---- 308,312 ----
-  install-data-local: 
-  	$(mkinstalldirs) $(kde_bindir)
-! 	$(INSTALL_SCRIPT) kcontrol $(kde_bindir)/kcontrol
-  
-  uninstall-local:
+       if(mask == 0x7f)
+ 	ttmode.c_cflag = B9600 | PARENB | CS7 | CREAD;
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+       ioctl(0,TIOCSETA,(char *)&ttmode);
+ #else
+ #   ifdef _HPUX_SOURCE
