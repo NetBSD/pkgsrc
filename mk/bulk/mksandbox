@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.8 2002/08/15 10:42:19 seb Exp $
+# $NetBSD: mksandbox,v 1.9 2002/08/22 08:21:30 jlam Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.

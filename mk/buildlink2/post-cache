@@ -1,0 +1,61 @@
+# $NetBSD: post-cache,v 1.2 2002/08/22 08:21:29 jlam Exp $
+
+*)
+	case $arg in
+	*[\`\"\$\\])
+		arg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
+		case $arg in
+		*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
+			arg="\"$arg\""
+			;;
+		esac
+		case $updatecache in
+		yes)
+			newarg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
+			@ECHO@ "$arg) arg=\"$newarg\" ;; #1" >> $cache
+			cacheupdated=yes
+			;;
+		esac
+		;;
+	*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
+		arg="\"$arg\""
+		case $updatecache in
+		yes)
+			newarg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
+			@ECHO@ "$arg) arg=\"$newarg\" ;; #2" >> $cache
+			cacheupdated=yes
+			;;
+		esac
+		;;
+	-D*)
+		arg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
+		case $arg in
+		*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
+			arg="\"$arg\""
+			;;
+		esac
+		case $updatecache in
+		yes)
+			newarg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
+			@ECHO@ "$arg) arg=\"$newarg\" ;; #3" >> $cache
+			cacheupdated=yes
+			;;
+		esac
+		;;
+        -[ILl]*|-Wl,*|@LOCALBASE@/*/lib*|@X11BASE@/*/lib*)
+		newarg=`@ECHO@ "X$arg" | $Xsed \
+			@_BLNK_TRANSFORM_SED.1@ \
+			@_BLNK_TRANSFORM_SED.2@ \
+			@_BLNK_TRANSFORM_SED.3@ \
+		`
+		case $updatecache in
+		yes)
+			@ECHO@ "$arg) arg=\"$newarg\" ;; #4" >> $cache
+			cacheupdated=yes
+			;;
+		esac
+		arg="$newarg"
+		;;
+	esac
+	;;
+esac

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printindex,v 1.9 2002/08/07 10:56:12 agc Exp $
+# $NetBSD: printindex,v 1.10 2002/08/22 08:21:31 jlam Exp $
 #
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.24 2002/08/12 14:20:59 agc Exp $
+# $NetBSD: build,v 1.25 2002/08/22 08:21:30 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>

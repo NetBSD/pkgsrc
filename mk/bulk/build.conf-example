@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.12 2002/08/20 02:17:56 hubertf Exp $
+# $NetBSD: build.conf-example,v 1.13 2002/08/22 08:21:30 jlam Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #

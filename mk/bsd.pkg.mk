@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1031 2002/08/11 16:56:51 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1032 2002/08/22 08:21:26 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -167,17 +167,19 @@ X11PREFIX=		${X11BASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 .endif
 
-# Set the default BUILDLINK_DIR and BUILDLINK_X11_DIR so that if no
-# buildlink.mk files are included, then they still points to a where headers
-# and libraries for installed packages and X11R6 may be found, respectively.
+# Set the default BUILDLINK_DIR, BUILDLINK_X11PKG_DIR,  BUILDLINK_X11_DIR so
+# that if no buildlink.mk files are included, then they still point to
+# where headers and libraries for installed packages and X11R6 may be found.
 #
 BUILDLINK_DIR?=		${LOCALBASE}
+BUILDLINK_X11PKG_DIR?=	${X11BASE}
 BUILDLINK_X11_DIR?=	${X11BASE}
 
 .if defined(USE_IMAKE) || defined(USE_X11BASE)
 .  if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
       exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 BUILD_DEPENDS+=		xpkgwedge>=1.5:../../pkgtools/xpkgwedge
+BUILDLINK_X11PKG_DIR=	${LOCALBASE}
 .  endif
 PREFIX=			${X11PREFIX}
 .elif defined(USE_CROSSBASE)
@@ -352,13 +354,14 @@ CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 LIBTOOL_REQD=		1.4.20010614nb9
 .if defined(USE_LIBTOOL)
 LIBTOOL=		${LOCALBASE}/bin/libtool
+PKGLIBTOOL=		${LIBTOOL}
 .  if defined(USE_LTDL)
 DEPENDS+=		libtool>=${LIBTOOL_REQD}:../../devel/libtool
 .  else
 BUILD_DEPENDS+=		libtool-base>=${LIBTOOL_REQD}:../../devel/libtool-base
 .  endif
-CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
-MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
+CONFIGURE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
+MAKE_ENV+=		LIBTOOL="${PKGLIBTOOL} ${LIBTOOL_FLAGS}"
 .endif
 
 .if defined(USE_XAW)
@@ -381,6 +384,7 @@ BUILD_DEPENDS+=		{gettext-0.10.35nb1,gettext-m4-[0-9]*}:../../devel/gettext-m4
 .endif
 
 EXTRACT_COOKIE=		${WRKDIR}/.extract_done
+BUILDLINK_COOKIE=	${WRKDIR}/.buildlink_done
 CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
 INSTALL_COOKIE=		${WRKDIR}/.install_done
 BUILD_COOKIE=		${WRKDIR}/.build_done
@@ -1019,6 +1023,7 @@ PKGREPOSITORYSUBDIR?=	All
 PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
 
+CONFIGURE_DIRS?=	${WRKSRC}
 CONFIGURE_SCRIPT?=	./configure
 CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
 
@@ -1068,6 +1073,18 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 
 .if defined(BATCH)
 SCRIPTS_ENV+=	BATCH=yes
+.endif
+
+.if defined(USE_BUILDLINK2)
+.  if (${USE_BUILDLINK2} == "NO") || (${USE_BUILDLINK2} == "no")
+NO_BUILDLINK2=		# defined
+.  endif
+.else
+NO_BUILDLINK2=		# defined
+.endif
+
+.if !defined(NO_BUILDLINK2)
+.  include "../../mk/buildlink2/bsd.buildlink2.mk"
 .endif
 
 .MAIN: all
@@ -1239,9 +1256,15 @@ patch: extract
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${PATCH_COOKIE}
 .endif
 
+# Disable buildlink
+.if defined(NO_BUILDLINK2) && !target(configure)
+buildlink: patch
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_COOKIE}
+.endif
+
 # Disable configure
 .if defined(NO_CONFIGURE) && !target(configure)
-configure: patch
+configure: buildlink
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
 .endif
 
@@ -1911,7 +1934,7 @@ do-ltconfig-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${ltconfig} ]; then					\
 		${RM} -f ${ltconfig};					\
-		${ECHO} "${RM} -f libtool; ${LN} -s ${LIBTOOL} libtool"	\
+		${ECHO} "${RM} -f libtool; ${LN} -s ${PKGLIBTOOL} libtool" \
 			> ${ltconfig};					\
 		${CHMOD} +x ${ltconfig};				\
 	fi
@@ -2007,7 +2030,8 @@ automake-post-override:
 .if !target(do-configure)
 do-configure: ${_CONFIGURE_PREREQ}
 .  if defined(HAS_CONFIGURE)
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} \
+.    for DIR in ${CONFIGURE_DIRS}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${DIR} && ${SETENV} \
 	    CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" \
 	    CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" FC="${FC}" F77="${FC}" FFLAGS="${FFLAGS}" \
 	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
@@ -2016,6 +2040,7 @@ do-configure: ${_CONFIGURE_PREREQ}
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 	    ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
+.    endfor
 .  endif
 .  if defined(USE_IMAKE)
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC} && ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF}
@@ -2029,7 +2054,7 @@ do-libtool-override:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${libtool} ]; then					\
 		${RM} -f ${libtool};					\
-		${LN} -sf ${LIBTOOL} ${libtool};			\
+		${LN} -sf ${PKGLIBTOOL} ${libtool};		\
 	fi
 .  endfor
 .else
@@ -2518,6 +2543,8 @@ acquire-extract-lock:
 	${_ACQUIRE_LOCK}
 acquire-patch-lock:
 	${_ACQUIRE_LOCK}
+acquire-buildlink-lock:
+	${_ACQUIRE_LOCK}
 acquire-configure-lock:
 	${_ACQUIRE_LOCK}
 acquire-build-lock:
@@ -2526,6 +2553,8 @@ acquire-build-lock:
 release-extract-lock:
 	${_RELEASE_LOCK}
 release-patch-lock:
+	${_RELEASE_LOCK}
+release-buildlink-lock:
 	${_RELEASE_LOCK}
 release-configure-lock:
 	${_RELEASE_LOCK}
@@ -2554,8 +2583,12 @@ extract: checksum ${WRKDIR} acquire-extract-lock ${EXTRACT_COOKIE} release-extra
 patch: extract acquire-patch-lock ${PATCH_COOKIE} release-patch-lock
 .endif
 
+.if !target(buildlink)
+buildlink: patch acquire-buildlink-lock ${BUILDLINK_COOKIE} release-buildlink-lock
+.endif
+
 .if !target(configure)
-configure: patch acquire-configure-lock ${CONFIGURE_COOKIE} release-configure-lock
+configure: buildlink acquire-configure-lock ${CONFIGURE_COOKIE} release-configure-lock
 .endif
 
 .if !target(build)
@@ -2582,6 +2615,8 @@ ${EXTRACT_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET}
 ${PATCH_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch
+${BUILDLINK_COOKIE}:
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-buildlink
 ${CONFIGURE_COOKIE}:
 .if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
 	@${ECHO} "*** The configuration stage of this package requires user interaction"
@@ -2619,6 +2654,8 @@ extract-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Extracting for ${PKGNAME}"
 patch-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Patching for ${PKGNAME}"
+buildlink-message:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Buildlinking for ${PKGNAME}"
 configure-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Configuring for ${PKGNAME}"
 build-message:
@@ -2628,6 +2665,8 @@ extract-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${EXTRACT_COOKIE}
 patch-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${PATCH_COOKIE}
+buildlink-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_COOKIE}
 configure-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
 build-cookie:
@@ -2636,6 +2675,7 @@ build-cookie:
 .ORDER: pre-fetch do-fetch post-fetch
 .ORDER: extract-message install-depends pre-extract do-extract post-extract extract-cookie
 .ORDER: patch-message pre-patch do-patch post-patch patch-cookie
+.ORDER: buildlink-message pre-buildlink do-buildlink post-buildlink buildlink-cookie
 .ORDER: configure-message pre-configure do-configure post-configure configure-cookie
 .ORDER: build-message pre-build do-build post-build build-cookie
 
@@ -2645,6 +2685,7 @@ build-cookie:
 real-fetch: pre-fetch do-fetch post-fetch
 real-extract: extract-message install-depends pre-extract do-extract post-extract extract-cookie
 real-patch: patch-message pre-patch do-patch post-patch patch-cookie
+real-buildlink: buildlink-message pre-buildlink do-buildlink post-buildlink buildlink-cookie
 real-configure: configure-message pre-configure do-configure post-configure configure-cookie
 real-build: build-message pre-build do-build post-build build-cookie
 real-install: do-su-install
@@ -2715,7 +2756,7 @@ do-su-undo-replace:
 
 # Empty pre-* and post-* targets
 
-.for name in fetch extract patch configure build install-script install package
+.for name in fetch extract patch buildlink configure build install-script install package
 
 .  if !target(pre-${name})
 pre-${name}:

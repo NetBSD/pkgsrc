@@ -1,4 +1,4 @@
-# $NetBSD: xaw.buildlink.mk,v 1.2 2002/08/02 20:14:34 jlam Exp $
+# $NetBSD: xaw.buildlink.mk,v 1.3 2002/08/22 08:21:27 jlam Exp $
 #
 # This Makefile fragment is included by packages that use Xaw.
 #
