@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.9 2001/04/07 12:43:48 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.10 2001/04/09 01:44:39 dmcmahill Exp $
 
 Much cleanup of the script.  Added various options such as
 -O    for optimization
@@ -261,10 +261,10 @@ Much cleanup of the script.  Added various options such as
 -	-O)	case $2 in -1) O=-O1;; -2) O=-O2;; -3) O=-O3;; *) O=-O;; esac
 -		case $O in -O);; *) shift;; esac
 -		CFLAGS="$CFLAGS $O -Olimit 2000"
-+#	-N)	F2CFLAGS="$F2CFLAGS $1""$2"
-+#		shift 2
-+#		;;
-+# can't seem to find out what -N is supposed to do.
++
++	-N)	F2CFLAGS="$F2CFLAGS $1""$2"
++		shift 2
++		;;
 +
 +	-O|-O1|-O2|-O3)	
 +		CFLAGS="$CFLAGS $1"

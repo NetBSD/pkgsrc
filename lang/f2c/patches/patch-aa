@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.8 2001/04/07 12:47:46 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.9 2001/04/09 01:44:39 dmcmahill Exp $
 
 Add a top level Makefile
 
 --- /dev/null	Thu Apr  5 17:09:09 2001
 +++ Makefile	Thu Apr  5 18:31:35 2001
-@@ -0,0 +1,48 @@
+@@ -0,0 +1,62 @@
 +# Top level Makefile for f2c, libF77, and libI77
 +
-+all: f2c libf2c.a f2c-f77 man
++all: f2c libf2c/libf2c.a f2c-f77 man
 +
 +
 +f2c:
@@ -23,9 +23,19 @@ Add a top level Makefile
 +	@echo Making all in 'libI77'
 +	cd libI77 &&  ${MAKE} all
 +
-+libf2c.a: libI77/libI77.a libF77/libF77.a
-+	ar ruv libf2c.a libF77/libF77.a libI77/libI77.a
-+	ranlib libf2c.a
++libf2c/libf2c.a: libI77/libI77.a libF77/libF77.a
++	-mkdir libf2c
++	if [ -f libF77/libF77.a ]; then  cd libf2c && ar x ../libF77/libF77.a ; fi
++	if [ -f libF77/libF77_p.a ]; then cd libf2c && ar x ../libF77/libF77_p.a ; fi
++	if [ -f libF77/libF77_pic.a ]; then cd libf2c && ar x ../libF77/libF77_pic.a ; fi
++	if [ -f libI77/libI77.a ]; then cd libf2c && ar x ../libI77/libI77.a ; fi
++	if [ -f libI77/libI77_p.a ]; then cd libf2c && ar x ../libI77/libI77_p.a ; fi
++	if [ -f libI77/libI77_pic.a ]; then cd libf2c && ar x ../libI77/libI77_pic.a ; fi
++	if [ -f libF77/libF77.a ]; then cd libf2c && ar cruv libf2c.a *.o ; fi
++	if [ -f libF77/libF77_p.a ]; then cd libf2c && ar cruv libf2c_p.a *.po ; fi
++	if [ -f libF77/libF77_pic.a ]; then cd libf2c && ar cruv libf2c_pic.a *.so ; fi
++	if [ -f libF77/libF77_pic.a ]; then cd libf2c && \
++		ld -Bshareable -soname f2c.${F2CMAJOR} -o libf2c.so.${F2CMAJOR}.${F2CMINOR} *.so ; fi
 +
 +man: f2c.0
 +
@@ -42,7 +52,11 @@ Add a top level Makefile
 +	-@mkdir -p ${PREFIX}/lib
 +	@cd libI77 && ${MAKE} install LIBDIR=${PREFIX}/lib
 +	@cd libF77 && ${MAKE} install LIBDIR=${PREFIX}/lib
-+	${BSD_INSTALL_DATA} ./libf2c.a ${PREFIX}/lib
++	${BSD_INSTALL_DATA} ./libf2c/libf2c.a ${PREFIX}/lib
++	if [ -f ./libf2c/libf2c_p.a ]; then ${BSD_INSTALL_DATA} ./libf2c/libf2c_p.a ${PREFIX}/lib ; fi
++	if [ -f ./libf2c/libf2c_pic.a ]; then ${BSD_INSTALL_DATA} ./libf2c/libf2c_pic.a ${PREFIX}/lib ; fi
++	if [ -f ./libf2c/libf2c.so.${F2CMAJOR}.${F2CMINOR} ]; then \
++		${BSD_INSTALL_DATA} ./libf2c/libf2c.so.${F2CMAJOR}.${F2CMINOR} ${PREFIX}/lib ; fi
 +	-@mkdir -p ${PREFIX}/include
 +	${BSD_INSTALL_DATA} ./f2c.h ${PREFIX}/include
 +	-@mkdir -p ${PREFIX}/share/doc/f2c
