@@ -1,0 +1,25 @@
+$NetBSD: patch-au,v 1.1 2003/05/19 19:43:17 jschauma Exp $
+
+--- tools/wml/Uil.y.orig	Mon May 19 13:57:46 2003
++++ tools/wml/Uil.y	Mon May 19 13:58:48 2003
+@@ -396,6 +396,7 @@
+     | WIDE_CHARACTER		{ $$ = $1; $$.b_type = sym_k_wchar_string_value; }
+     | FONTSET			{ $$ = $1; $$.b_type = sym_k_fontset_value; }
+     | WIDGET			{ $$ = $1; $$.b_type = sym_k_widget_ref_value; }
++    ;
+ /* End for fixing CR 5888 */
+ 
+ string_table_type
+@@ -1058,10 +1059,11 @@
+  									sar_private_error( &$$ );
+  								  }
+  								}  
++	;
+   
+  non_export_value
+      : COLOR_TABLE LEFT_PAREN color_list RIGHT_PAREN		{ sar_make_color_table( &$$, &$3, &$1); }
+- 
++     ; 
+  /* END HaL fix CR 5427 */
+  
+ 

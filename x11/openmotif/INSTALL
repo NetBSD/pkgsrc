@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.3 2003/05/06 17:43:11 jmmv Exp $
+# $NetBSD: INSTALL,v 1.4 2003/05/19 19:43:17 jschauma Exp $
 
 X11BASE=@X11BASE@
 MOTIF_RULES=${PKG_PREFIX}/lib/X11/config/Motif.rules
@@ -13,8 +13,8 @@ PRE-INSTALL)
 POST-INSTALL)
 	if [ ${PKG_PREFIX} = ${X11BASE} ]
 	then
-		${MV} -f ${MOTIF_RULES} ${MOTIF_RULES}.openmotif.bak
-		${MV} -f ${MOTIF_TMPL} ${MOTIF_TMPL}.openmotif.bak
+		${MV} -f ${MOTIF_RULES} ${MOTIF_RULES}.openmotif.bak 2>/dev/null
+		${MV} -f ${MOTIF_TMPL} ${MOTIF_TMPL}.openmotif.bak 2>/dev/null
 	fi
 	${LN} -sf OpenMotif.rules ${MOTIF_RULES}
 	${LN} -sf OpenMotif.tmpl ${MOTIF_TMPL}
