@@ -1,10 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:34 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/28 05:57:21 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/gtk.so
 ${RUBY_EXAMPLESDIR}/gtk/calendar.rb
 ${RUBY_EXAMPLESDIR}/gtk/doc/rbbr.rb
 @dirrm ${RUBY_EXAMPLESDIR}/gtk/doc
+${RUBY_EXAMPLESDIR}/gtk/cursor.rb
+${RUBY_EXAMPLESDIR}/gtk/dnd.rb
 ${RUBY_EXAMPLESDIR}/gtk/drawing.rb
 ${RUBY_EXAMPLESDIR}/gtk/helloworld.rb
+${RUBY_EXAMPLESDIR}/gtk/item_factory.rb
+${RUBY_EXAMPLESDIR}/gtk/keyboard_grab.rb
+${RUBY_EXAMPLESDIR}/gtk/pointer_grab.rb
+${RUBY_EXAMPLESDIR}/gtk/t-gtkplug.rb
+${RUBY_EXAMPLESDIR}/gtk/t-gtksocket.rb
 ${RUBY_EXAMPLESDIR}/gtk/test/test.rb
 ${RUBY_EXAMPLESDIR}/gtk/test/test.xpm
 ${RUBY_EXAMPLESDIR}/gtk/test/test0.rb
@@ -43,6 +50,7 @@ ${RUBY_EXAMPLESDIR}/gtk/testgtk/dialog.rb
 ${RUBY_EXAMPLESDIR}/gtk/testgtk/dnd.rb
 ${RUBY_EXAMPLESDIR}/gtk/testgtk/entry.rb
 ${RUBY_EXAMPLESDIR}/gtk/testgtk/filesel.rb
+${RUBY_EXAMPLESDIR}/gtk/testgtk/fontselection.rb
 ${RUBY_EXAMPLESDIR}/gtk/testgtk/gammacurve.rb
 ${RUBY_EXAMPLESDIR}/gtk/testgtk/graypreview.rb
 ${RUBY_EXAMPLESDIR}/gtk/testgtk/handlebox.rb
@@ -90,4 +98,5 @@ ${RUBY_EXAMPLESDIR}/gtk/testgtk/wmhints.rb
 ${RUBY_EXAMPLESDIR}/gtk/testim.rb
 ${RUBY_EXAMPLESDIR}/gtk/text.rb
 ${RUBY_EXAMPLESDIR}/gtk/texthook.rb
+${RUBY_EXAMPLESDIR}/gtk/xbm_cursor.rb
 @dirrm ${RUBY_EXAMPLESDIR}/gtk
