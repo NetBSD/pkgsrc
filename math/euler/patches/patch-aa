@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/04 01:49:11 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2002/06/27 00:35:31 jtb Exp $
 
 --- main.c.orig	Wed Feb 20 08:59:59 2002
 +++ main.c	Thu Apr 25 10:42:10 2002
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/04 01:49:11 jtb Exp $
  	return (t.tv_sec+t.tv_nsec/1000000000.0);
  #else
 -	return ((double)(times(NULL)))/CLK_TCK;
-+	return (double)(clock());
++	return ((double)(times()))/CLK_TCK;
  #endif
  }
  
