@@ -1,27 +1,45 @@
-$NetBSD: patch-aa,v 1.6 2000/08/15 21:01:52 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2001/04/19 03:03:24 dmcmahill Exp $
 
---- configure.orig	Sun Jan 30 03:26:06 2000
-+++ configure	Tue Aug 15 02:50:10 2000
-@@ -786,7 +786,7 @@
- 
+--- configure.orig	Sat Jan 29 21:26:06 2000
++++ configure	Wed Apr 18 19:12:58 2001
+@@ -787,5 +787,5 @@
  
  
 -LIBKPATHSEA='$(TOPDIR)/kpathsea/libkpathsea.$(LIBEXT)'
 +LIBKPATHSEA='$(TOPDIR)/kpathsea/STATIC/libkpathsea.$(LIBEXT)'
  
  
- ### Make it possible to have Octave's array and matrix classes do bounds
-@@ -5180,7 +5180,7 @@
+@@ -2439,5 +2439,5 @@
+ #if defined (sun)
+ int MAIN_ () { return 0; }
+-#elif defined (linux) && defined (__ELF__)
++#elif (defined (linux) && defined (__ELF__)) || defined(__NetBSD__)
+ int MAIN__ () { return 0; }
+ #endif
+@@ -2708,10 +2708,9 @@
+ fi
  
+-FORTRAN_MAIN_FLAG=
+-case "$canonical_host_type" in
+-  *-linux-*)
+-    FORTRAN_MAIN_FLAG="-u MAIN__"
+-  ;;
+-esac
++if test "${OBJECT_FMT}" = "ELF"; then
++FORTRAN_MAIN_FLAG="-u MAIN__"
++else
++FORTRAN_MAIN_FLAG="-Wl,-u_MAIN__"
++fi
+ if test -n "$FORTRAN_MAIN_FLAG"; then
+   echo "$ac_t""defining FORTRAN_MAIN_FLAG to be $FORTRAN_MAIN_FLAG" 1>&6
+@@ -5181,5 +5180,5 @@
  
  TERMLIBS=""
 -for termlib in ncurses curses termcap terminfo termlib; do
 +for termlib in termcap terminfo termlib; do
    echo $ac_n "checking for tputs in -l${termlib}""... $ac_c" 1>&6
  echo "configure:5186: checking for tputs in -l${termlib}" >&5
- ac_lib_var=`echo ${termlib}'_'tputs | sed 'y%./+-%__p_%'`
-@@ -5232,12 +5232,10 @@
- 
+@@ -5233,10 +5232,8 @@
  if test "$ac_cv_lib_termcap_tputs" = yes \
    || test "$ac_cv_lib_terminfo_tputs" = yes \
 -  || test "$ac_cv_lib_ncurses_tputs" = yes \
@@ -33,4 +51,3 @@ $NetBSD: patch-aa,v 1.6 2000/08/15 21:01:52 wiz Exp $
 +  warn_termlibs="I couldn't find -ltermcap, -lterminfo, or -ltermlib!"
    echo "configure: warning: $warn_termlibs" 1>&2
  fi
- 
