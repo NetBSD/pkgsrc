@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/13 12:06:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/14 09:26:18 tron Exp $
 
 DISTNAME=	scummvm-0.4.0
 CATEGORIES=	games
@@ -13,6 +13,8 @@ USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 USE_X11=	yes
 HAS_CONFIGURE=	yes
+
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/scummvm
