@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/11/25 14:13:42 rh Exp $
+$NetBSD: md5,v 1.4 2001/04/07 21:41:06 rh Exp $
 
-MD5 (libole2-0.1.7.tar.gz) = 2e719211feea43b4b18b6ab7c37786f1
+SHA1 (libole2-0.2.1.tar.gz) = dd8e3a81006dfb71649e7a1e9736a5293ce6b69d
