@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 1999/09/24 00:33:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.115 1999/09/28 00:58:21 simonb Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -111,6 +111,7 @@
     SUBDIR += x2x
     SUBDIR += x3270
 #    SUBDIR += xalarm
+    SUBDIR += xaniroc
 #    SUBDIR += xantfarm
     SUBDIR += xautolock
     SUBDIR += xbanner
