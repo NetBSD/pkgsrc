@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/03/23 22:44:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2005/03/30 20:29:19 hira Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
@@ -14,6 +14,17 @@ COMMENT=		X.org Libraries
 BUILD_DEPENDS=		xorg-imake>=${XORG_VER}:../../x11/xorg-imake
 
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_SRC=		${WRKDIR}/.PLIST_SRC
+XORG_PLIST_ENTRY=	${OPSYS}
+.if ${OPSYS} == "NetBSD"
+.  if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
+XORG_PLIST_ENTRY+=	NetBSD-i386
+.  endif
+.endif
+.if ${OPSYS} != "Darwin"
+XORG_PLIST_ENTRY+=	i18n
+.endif
 
 .include "../../meta-pkgs/xorg/Makefile.common"
 
@@ -39,8 +50,9 @@ SUBST_FILES.mkstrs=	config/cf/Library.tmpl
 SUBST_SED.mkstrs=	-e 's,@MAKESTRS@,${X11ROOT}/bin/makestrs,g'
 SUBST_MESSAGE.mkstrs=	"Fixing path of makestrs."
 
-.if ${OPSYS} == "Linux"
 post-install:
+	@${SED} ${XORG_PLIST_SED} ${PKGDIR}/PLIST > ${PLIST_SRC}
+.if ${OPSYS} == "Linux"
 	@${LDCONFIG} ${X11ROOT}/lib || ${TRUE}
 .endif
 
@@ -54,20 +66,6 @@ pre-install:
 		${FILESDIR}/${f} > ${WRKSRC}/${f}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${X11BASE}/lib/pkgconfig/${f}
 .endfor
-
-.if ${OPSYS} == "NetBSD"
-.  if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
-PLIST_SRC+=	${.CURDIR}/PLIST.${OPSYS}
-PLIST_SRC+=	${.CURDIR}/PLIST.${OPSYS}.i386
-.  endif
-.else
-PLIST_SRC+=     ${.CURDIR}/PLIST.${OPSYS}
-.endif
-PLIST_SRC+=	${.CURDIR}/PLIST.common
-.if ${OPSYS} != "Darwin"
-PLIST_SRC+=	${.CURDIR}/PLIST.common_i18n
-.endif
-PLIST_SRC+=	${.CURDIR}/PLIST.common_end
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
