@@ -1,30 +1,34 @@
-$NetBSD: patch-ag,v 1.4 2002/11/26 21:42:49 skrll Exp $
+$NetBSD: patch-ag,v 1.5 2003/05/02 11:49:48 wiz Exp $
 
---- pth_lib.c.orig	Sun Jan 27 11:03:40 2002
+--- pth_lib.c.orig	Wed Jan  1 15:45:06 2003
 +++ pth_lib.c
-@@ -37,28 +37,25 @@ long pth_version(void)
+@@ -37,10 +37,11 @@ long pth_version(void)
  
  /* implicit initialization support */
  intern int pth_initialized = FALSE;
 +intern int pth_explicit_initialize = FALSE;
-+
  #if cpp
  #define pth_implicit_init() \
      if (!pth_initialized) \
 -        pth_init();
-+        pth__init(); 
++        pth__init();
+ #endif
+ 
+ #ifdef PTH_EX
+@@ -55,19 +56,13 @@ static void pth_ex_terminate(ex_t *ex)
+ }
  #endif
  
 -/* initialize the package */
 -int pth_init(void)
-+intern int pth__init(void)
++int pth__init(void)
  {
      pth_attr_t t_attr;
  
 -    /* support for implicit initialization calls
 -       and to prevent multiple explict initialization, too */
 -    if (pth_initialized)
--        return_errno(FALSE, EPERM);
+-        return pth_error(FALSE, EPERM);
 -    else
 -        pth_initialized = TRUE;
 +    pth_initialized = TRUE;
@@ -32,14 +36,9 @@ $NetBSD: patch-ag,v 1.4 2002/11/26 21:42:49 skrll Exp $
 -    pth_debug1("pth_init: enter");
 +    pth_debug1("pth__init: enter");
  
-     /* initialize the scheduler */
--    pth_scheduler_init();
-+    if (!pth_scheduler_init())
-+        return_errno(FALSE, EAGAIN);
- 
-     /* spawn the scheduler thread */
-     t_attr = pth_attr_new();
-@@ -105,10 +102,29 @@ int pth_init(void)
+     /* initialize syscall wrapping */
+     pth_syscall_init();
+@@ -131,10 +126,29 @@ int pth_init(void)
      pth_mctx_switch(&pth_main->mctx, &pth_sched->mctx);
  
      /* came back, so let's go home... */
@@ -58,7 +57,7 @@ $NetBSD: patch-ag,v 1.4 2002/11/26 21:42:49 skrll Exp $
 +    if (pth_initialized) {
 +        /* if we've already explicitly initialized then error */
 +        if (pth_explicit_initialize)
-+            return_errno(FALSE, EPERM);
++            return pth_error(FALSE, EPERM);
 +        rv = TRUE;
 +    } else {
 +        rv = pth__init();
@@ -70,19 +69,11 @@ $NetBSD: patch-ag,v 1.4 2002/11/26 21:42:49 skrll Exp $
  /* kill the package internals */
  int pth_kill(void)
  {
-@@ -118,6 +134,7 @@ int pth_kill(void)
+@@ -144,6 +158,7 @@ int pth_kill(void)
      pth_thread_cleanup(pth_main);
      pth_scheduler_kill();
      pth_initialized = FALSE;
 +    pth_explicit_initialize = FALSE;
      pth_tcb_free(pth_sched);
      pth_tcb_free(pth_main);
-     pth_debug1("pth_kill: leave");
-@@ -182,6 +199,7 @@ static void pth_spawn_trampoline(void)
-     /* no return! */
-     abort();
- }
-+
- pth_t pth_spawn(pth_attr_t attr, void *(*func)(void *), void *arg)
- {
-     pth_t t;
+     pth_syscall_kill();

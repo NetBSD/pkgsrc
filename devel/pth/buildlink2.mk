@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/11/01 06:09:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/05/02 11:49:47 wiz Exp $
 
 .if !defined(PTH_BUILDLINK2_MK)
 PTH_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		pth
-BUILDLINK_DEPENDS.pth?=		pth>=1.4.1.nb5
+BUILDLINK_DEPENDS.pth?=		pth>=2.0.0
 BUILDLINK_PKGSRCDIR.pth?=	../../devel/pth
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.pth=pth
