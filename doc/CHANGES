@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6034 2004/05/26 15:09:17 wiz Exp $
+$NetBSD: CHANGES,v 1.6035 2004/05/26 15:16:25 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2657,3 +2657,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lwm to 1.2.0 [adam 2004-05-26]
 	Updated libidn to 0.4.6 [wiz 2004-05-26]
 	Updated chkrootkit to 0.43nb1 [wiz 2004-05-26]
+	Updated jakarta-tomcat to 5.0.24 [xtraeme 2004-05-26]
