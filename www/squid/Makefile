@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2002/07/24 19:45:32 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2002/08/26 06:42:12 grant Exp $
 
 DISTNAME=	squid-2.4.STABLE7-src
 PKGNAME=	squid-2.4.7
@@ -13,19 +13,22 @@ COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 
 USE_PERL5=	build
 
+# Configuration directory location which can be overwritten by the user.
+PKG_SYSCONFSUBDIR?=	squid
+
 .include "../../mk/bsd.prefs.mk"
+
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+= --sysconfdir=${SQUID_SYSCONFDIR} \
+CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR} \
 		--localstatedir=/var/squid \
 		${SQUID_CONFIGURE_ARGS}
 CONFIGURE_ENV+=	PERL=${PERL5}
 
-BUILD_DEFS+=	SQUID_CONFIGURE_ARGS SQUID_SYSCONFDIR
+BUILD_DEFS+=	SQUID_CONFIGURE_ARGS
 MAKEFILE=	makefile
 MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}" PKG_PREFIX="${PREFIX}"
 INSTALL_FILE=	${WRKDIR}/INSTALL
 PLIST_SRC=	${WRKDIR}/PLIST
-PLIST_SUBST+=	SQUID_SYSCONFDIR=${SQUID_SYSCONFDIR}
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 # Configuration options which can be overwritten by the user.
@@ -38,19 +41,15 @@ SQUID_CONFIGURE_ARGS?=	--disable-internal-dns \
 			--enable-underscores \
 			--enable-storeio=ufs,diskd
 
-# Configuration directory location which can be overwritten by the user.
-PKG_SYSCONFSUBDIR?=	squid
-SQUID_SYSCONFDIR?=	${PKG_SYSCONFDIR}
-
 OPTIONAL_FILES=	libexec/diskd libexec/dnsserver libexec/pinger libexec/unlinkd
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKDIR}/squid.sh
-	${SED} s#@SYSCONFDIR@#${SQUID_SYSCONFDIR}#g <${PKGDIR}/INSTALL \
+	${SED} s#@SYSCONFDIR@#${PKG_SYSCONFDIR}#g <${PKGDIR}/INSTALL \
 	  >${WRKDIR}/INSTALL
 
 pre-install:
-	@${INSTALL_DATA_DIR} ${SQUID_SYSCONFDIR}
+	@${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/errors
