@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.depends,v 1.11 2003/02/27 17:03:12 grant Exp $
+# $NetBSD: Makefile.depends,v 1.12 2003/05/24 17:27:10 salo Exp $
 
 DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../graphics/mplayer-share
 
@@ -8,9 +8,10 @@ DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../graphics/mplayer-share
 
 .if ${MACHINE_ARCH} == "i386"
 DEPENDS+=	win32-codecs>=011227:../../graphics/win32-codecs
-.  if ${MPLAYER_USE_REALMEDIA} == "YES"
-DEPENDS+=	realplayer>=8:../../audio/realplayer
-.  endif
+.endif
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "alpha"
+DEPENDS+=	realplayer-codecs>=8nb2:../../graphics/realplayer-codecs
 .endif
 
 USE_X11=	# defined
