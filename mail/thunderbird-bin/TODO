@@ -1,6 +1,0 @@
-This currently doesn't work on NetBSD because it needs a Linux GTK+
-2.x. I intend to build x11/gtk2 on Linux and package it so that this
-package can depend on it.
-
-This is completely untested except that it installs and uninstalls
-cleanly on NetBSD.
