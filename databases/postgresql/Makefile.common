@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2002/10/19 03:03:49 jlam Exp $
+# $NetBSD: Makefile.common,v 1.32 2003/01/05 20:12:08 jlam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -25,54 +25,46 @@ HOMEPAGE?=		http://www.postgresql.org/
 
 CONFLICTS+=		postgresql-[0-6]* postgresql-7.0*
 
-DISTINFO_FILE?=		${.CURDIR}/../../databases/postgresql/distinfo
-COMMON_FILESDIR?=	${.CURDIR}/../../databases/postgresql/files
-PATCHDIR?=		${.CURDIR}/../../databases/postgresql/patches
+DISTINFO_FILE?=		${.CURDIR}/../postgresql/distinfo
+COMMON_FILESDIR?=	${.CURDIR}/../postgresql/files
+PATCHDIR?=		${.CURDIR}/../postgresql/patches
 
 # Version numbering scheme:
 #
 # DIST_VERS		version number on the postgresql distfile
 # BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
-DIST_VERS?=		7.2.3
+DIST_VERS?=		7.3.1
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_DEPENDS.postgresql-lib?=	postgresql-lib>=${BASE_VERS}
 BUILDLINK_DEPENDS.tcl-postgresql?=	tcl-postgresql>=${BASE_VERS}
 
+USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
+PKG_SYSCONFSUBDIR=	postgresql
 
 .include "../../mk/bsd.prefs.mk"
 
-# PG_MB_ENCODING may be set to any of:
-#
-# SQL_ASCII, EUC_JP, EUC_CN, EUC_KR, EUC_TW, UNICODE, MULE_INTERNAL,
-# LATIN1, LATIN2, LATIN3, LATIN4, LATIN5, KOI8, WIN, ALT
-#
-# This variable controls the language encoding on the backend process.
-
-.if defined(PG_MB_ENCODING)
-CONFIGURE_ARGS+=	--enable-multibyte=${PG_MB_ENCODING}
-.else
-CONFIGURE_ARGS+=	--enable-multibyte	# accept default
+PGSQL_TEMPLATE.SunOS=		solaris
+.if !defined(PGSQL_TEMPLATE.${OPSYS})
+PGSQL_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 .endif
 
-CONFIGURE_ARGS+=	--disable-odbc
+CONFIGURE_ARGS+=	--with-template="${PGSQL_TEMPLATE.${OPSYS}}"
+CONFIGURE_ARGS+=	--without-readline
+CONFIGURE_ARGS+=	--without-zlib
+
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/postgresql
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/html/postgresql
+
 CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ARGS+=	--without-tk
-
-CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/pgsql
-CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/html/postgresql
-
-CONFIGURE_ARGS+=	--disable-readline
-CONFIGURE_ARGS+=	--enable-locale
-CONFIGURE_ARGS+=	--enable-syslog
-CONFIGURE_ARGS+=	--with-CXX
-CONFIGURE_ARGS+=	--with-template="${LOWER_OPSYS}"
 
 post-extract:
 	if [ -d ${WRKSRC}/src ]; then					\
@@ -85,3 +77,13 @@ post-extract:
 		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpq		\
 			${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
 	fi
+	if [ -d ${WRKSRC}/src/interfaces/libpgtcl ]; then		\
+		${RM} -f ${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpgtcl	\
+			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+	fi
+
+pre-configure:
+	cd ${WRKSRC} && ${AUTOCONF}
+
+.include "../../mk/autoconf.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2002/10/19 19:03:59 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2003/01/05 20:12:27 jlam Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 COMMENT=		PostgreSQL database server programs
@@ -8,9 +8,7 @@ DEPENDS+=		postgresql-client>=${BASE_VERS}:../../databases/postgresql-client
 # mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-mips
 
-USE_BUILDLINK2=		# defined
-
-.include "../../databases/postgresql/Makefile.common"
+.include "../postgresql/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 BUILD_DIRS=		${WRKSRC}/src/backend
@@ -64,6 +62,6 @@ post-install:
 	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz		\
 		`${SED} -e "s|^#.*||" ${FILESDIR}/man.server`
 
-.include "../../databases/postgresql-lib/buildlink2.mk"
+.include "../postgresql-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
