@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:18:36 agc Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/24 13:40:43 grant Exp $
 #
 
 DISTNAME=	dpbox-60000
@@ -11,7 +11,7 @@ HOMEPAGE=	http://home.snafu.de/wahlm/dl8hbs/dpbox.html
 COMMENT=	Multi-Protocol Amateur Packet Radio BBS
 
 WRKSRC=		${WRKDIR}/dpbox-6.00.00/source
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 MAKEFILE=	Makefile.netbsd
 
 MAKE_ENV+=	prefix="${PREFIX}"

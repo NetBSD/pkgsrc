@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/08 15:24:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/24 13:30:56 grant Exp $
 #
 
 DISTNAME=	openmortal-0.4
@@ -12,7 +12,7 @@ COMMENT=	Parody of Mortal Kombat with real characters
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
 USE_X11=		yes
 

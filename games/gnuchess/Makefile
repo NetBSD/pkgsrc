@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/20 12:15:40 agc Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/24 13:30:56 grant Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/27 07:41:12 fenner Exp
 #
 
@@ -18,7 +18,7 @@ COMMENT=	GNU chess engine
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 ALL_TARGET=	gnuchess
 
 BOOKDIR=	${PREFIX}/lib/gnuchess

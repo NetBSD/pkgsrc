@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/10/21 01:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/24 13:30:55 grant Exp $
 #
 
 DISTNAME=	crossfire-1.0.0
@@ -19,7 +19,7 @@ CF_MAPS=	crossfire-1.0.0-maps.tar.bz2
 
 USE_BUILDLINK2=	yes
 USE_X11=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	yes
 USE_PERL5=	yes
 CONFIGURE_ARGS+=	--with-includes=-I${LOCALBASE}/include

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/05/05 16:27:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/24 13:30:55 grant Exp $
 
 DISTNAME=		clanbomber-1.01
 PKGREVISION=		3
@@ -12,7 +12,7 @@ COMMENT=		Bomberman clone using the ClanLib graphics system
 USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/20 12:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/24 13:30:57 grant Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	doomsrc.zip
 EXTRACT_CMD=	unzip -qo ${DISTDIR}/${EXTRACT_ONLY}
 USE_X11BASE=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 MAKE_ENV+=	X11BASE=${X11BASE} INSTALL_PREFIX=${X11PREFIX}
 
 post-extract:

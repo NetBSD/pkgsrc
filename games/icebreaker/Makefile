@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/12/08 14:41:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/24 13:30:56 grant Exp $
 #
 
 DISTNAME=	icebreaker-1.9.7
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.mattdm.org/icebreaker/
 COMMENT=	Penguin capturing simulation
 
 USE_BUILDLINK2=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 USE_X11=	yes
 MAKE_ENV+=	mandir="${PREFIX}/man" highscoredir="/var/games"
 MAKE_ENV+=	prefix="${PREFIX}"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:15:42 agc Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/24 13:30:57 grant Exp $
 
 DISTNAME=	xfreecell-1.0.5b
 CATEGORIES=	games
@@ -10,7 +10,7 @@ HOMEPAGE= 	http://www2.giganet.net/~nakayama/
 COMMENT=	Popular freecell card game for X
 
 USE_X11BASE=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 MAKEFILE=	makefile
 
 WRKSRC=		${WRKDIR}/xfreecell

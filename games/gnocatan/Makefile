@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/23 21:50:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/24 13:30:56 grant Exp $
 #
 
 DISTNAME=	gnocatan-0.8.0.0
@@ -12,7 +12,7 @@ COMMENT=	GNOME version of the Settlers of Catan board game
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	YES
