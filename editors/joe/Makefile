@@ -3,7 +3,10 @@
 # Date created:		01 Jul 1995
 # Whom:			torstenb@FreeBSD.ORG
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/29 19:48:28 explorer Exp $
+# Imported into NetBSD by explorer@flame.org
+#
+# $NetBSD: Makefile,v 1.2 1997/10/29 19:56:55 explorer Exp $
+# FreeBSD Id: Makefile,v 1.3 1996/11/17 07:01:28 obrien Exp
 #
 
 DISTNAME=	joe2.8
