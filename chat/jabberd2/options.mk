@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.options,v 1.1 2004/07/31 00:01:04 xtraeme Exp $
+# $NetBSD: options.mk,v 1.1 2004/08/07 14:29:20 xtraeme Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.jabberd2
