@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/12/04 04:24:49 grant Exp $
+
+SHA1 (exim-3.36.tar.bz2) = 2a06a2858ebf8cdedf2e41fa3f258b5e468e270d
+Size (exim-3.36.tar.bz2) = 982104 bytes
+SHA1 (patch-ab) = 3650487acdc2b0e67ab0dee08a6715e90b2a4205
+SHA1 (patch-ac) = 39122ca045ca7bb61500acae2abf5683c8ec4530
+SHA1 (patch-ae) = 24009dd4807f0215e79cc0a86582297bf310c913
+SHA1 (patch-af) = ac3bea9fe84bc760fec21858bc818c1b01dd34a4

@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/04 04:24:49 grant Exp $
+etc/rc.d/exim
+man/man8/exim.8
+sbin/exicyclog
+sbin/exigrep
+sbin/exim
+sbin/exim_dbmbuild
+sbin/exim_dumpdb
+sbin/exim_fixdb
+sbin/exim_lock
+sbin/exim_newaliases
+sbin/exim_tidydb
+sbin/eximstats
+sbin/exinext
+sbin/exiqsumm
+sbin/exiwhat
+share/examples/exim/configure
+share/examples/exim/mailer.conf
+@unexec ${RMDIR} /var/log/exim 2>/dev/null || true
+@dirrm share/examples/exim

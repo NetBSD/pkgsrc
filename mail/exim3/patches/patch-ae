@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/12/04 04:24:51 grant Exp $
+
+--- src/configure.default.orig	Fri Sep 17 21:19:39 1999
++++ src/configure.default	Fri Sep 17 21:19:55 1999
+@@ -252,8 +252,8 @@
+ 
+ system_aliases:
+   driver = aliasfile
+-  file = /etc/aliases
+-  search_type = lsearch
++  file = /etc/aliases.db
++  search_type = dbm
+ # user = exim
+   file_transport = address_file
+   pipe_transport = address_pipe
