@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1 1999/10/07 17:23:01 jlam Exp $
+
+--- ./Imakefile.orig	Wed Sep 16 11:56:00 1998
++++ ./Imakefile	Thu Oct  7 01:28:40 1999
+@@ -1,5 +1,5 @@
+ 
+-XPMLIB = -L/usr/lib/X11 -lXpm   
++XPMLIB = -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXpm   
+ DEPLIBS = $(DEPXLIB) 
+ 
+ LOCAL_LIBRARIES = $(XPMLIB) $(XLIB)  
