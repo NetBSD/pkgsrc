@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2003/03/16 19:44:30 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.12 2003/03/24 14:49:37 taca Exp $
 # FreeBSD: ports/Mk/bsd.ruby.mk,v 1.11 2000/11/16 17:59:40 knu Exp
 # Makefile.common: ruby common makefile, based on FreeBSD's bsd.ruby.mk.
 
@@ -65,7 +65,7 @@ RUBY_VER?=		1.6
 RUBY?=			${LOCALBASE}/bin/${RUBY_NAME}
 
 .if ${RUBY_VER} < 1.7
-RUBY_VERSION?=		1.6.7
+RUBY_VERSION?=		1.6.8
 RUBY_SUFFIX?=		# empty
 .else
 RUBY_VERSION?=		1.7			# current, not tested.
@@ -75,7 +75,7 @@ RUBY_SUFFIX?=		${_RUBY_SUFFIX}
 .if ${OPSYS} == "Linux"
 RUBY_ARCH?=		${LOWER_ARCH}-${LOWER_OPSYS}
 .else
-RUBY_ARCH?=		${MACHINE_GNU_PLATFORM:S/--/-/}
+RUBY_ARCH?=		${LOWER_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
 .endif
 RUBY_NAME?=		ruby${RUBY_SUFFIX}
 
@@ -83,17 +83,22 @@ RUBY_DISTNAME?=		ruby-${RUBY_VERSION}
 RUBY_WRKSRC?=		${WRKDIR}/${RUBY_DISTNAME}
 
 .if ${OPSYS} == "Linux"
-RUBY_COMMENT=		"@comment "
+RUBY_NOEXT_CURSES=	"@comment "
+RUBY_NOEXT_DBM=		"@comment "
 _RUBY_SUFFIX=		${RUBY_VER}
 .else
 _RUBY_SUFFIX=		${RUBY_VER:S/.//}
 .endif
 
+.if ${OPSYS} == "SunOS"
+RUBY_NOSHLIBMAJOR=	"@comment "
+.endif
+
 RUBY_PKGNAMEPREFIX?=	ruby${RUBY_SUFFIX}-	# could be rb${RUBY_SUFFIX}-
-.if ${OPSYS} == "Linux"
-RUBY_SHLIBVER?=		${RUBY_VERSION}
-.else
+.if ${OPSYS} == "NetBSD"
 RUBY_SHLIBVER?=		${RUBY_VERSION:S/.//}
+.else
+RUBY_SHLIBVER?=		${RUBY_VERSION}
 .endif
 RUBY_SHLIBMAJOR?=	${_RUBY_SUFFIX}
 
@@ -126,6 +131,9 @@ PLIST_SUBST+=		RUBY_VERSION="${RUBY_VERSION}" \
 			_RUBY_SUFFIX="${_RUBY_SUFFIX}" \
 			RUBY_SUFFIX="${RUBY_SUFFIX}" \
 			RUBY_NAME="${RUBY_NAME}" \
+			RUBY_NOEXT_CURSES=${RUBY_NOEXT_CURSES} \
+			RUBY_NOEXT_DBM=${RUBY_NOEXT_DBM} \
+			RUBY_NOSHLIBMAJOR=${RUBY_NOSHLIBMAJOR} \
 			RUBY_COMMENT=${RUBY_COMMENT} \
 			${PLIST_RUBY_DIRS:S,DIR="${LOCALBASE}/,DIR=",}
 
