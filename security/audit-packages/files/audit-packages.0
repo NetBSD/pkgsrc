@@ -1,4 +1,4 @@
-AUDIT-PACKAGES(8)       NetBSD System Manager's Manual       AUDIT-PACKAGES(8)
+AUDIT-PACKAGES(8)           System Manager's Manual          AUDIT-PACKAGES(8)
 
 NNAAMMEE
      aauuddiitt--ppaacckkaaggeess, ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt - show vulnerabilities in
@@ -13,7 +13,8 @@ DDEESSCCRRIIPPTTIIOONN
      _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file and reports any known security issues to stan-
      dard output.  This output contains the name and version of the package,
      the type of vulnerability, and an URL for further information for each
-     vulnerable package.
+     vulnerable package.  If the --vv option is specified, aauuddiitt--ppaacckkaaggeess will
+     warn when the vulnerabilities file is more than a week old.
 
      The ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt program downloads this file from
      _f_t_p_:_/_/_f_t_p_._N_e_t_B_S_D_._o_r_g_/_p_u_b_/_N_e_t_B_S_D_/_p_a_c_k_a_g_e_s_/_d_i_s_t_f_i_l_e_s_/_p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s
@@ -99,4 +100,4 @@ HHIISSTTOORRYY
      September 19, 2000.  The original idea came from Roland Dowdeswell and
      Bill Sommerfeld.
 
-NetBSD 1.6                      January 1, 2004                     NetBSD 1.6
+pkgsrc                             May 12, 2004                         pkgsrc
