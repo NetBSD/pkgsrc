@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2001/12/14 17:09:49 itojun Exp $
+# $NetBSD: Makefile,v 1.46 2002/04/15 01:55:05 itojun Exp $
 #
 
 DISTNAME=	racoon-20011215a
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=--enable-ipv6
 CONFIGURE_ARGS+=--disable-ipv6
 .endif
 CONFIGURE_ARGS+=--sysconfdir=/etc/racoon
-CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20011026a
+CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20011215a
 
 pre-configure:
 	(cd ${WRKSRC}/../libipsec; ${MAKE})
