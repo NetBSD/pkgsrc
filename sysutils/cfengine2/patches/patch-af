@@ -1,24 +1,16 @@
-$NetBSD: patch-af,v 1.3 2003/05/29 21:08:27 seb Exp $
+$NetBSD: patch-af,v 1.4 2004/08/10 14:18:44 ben Exp $
 
---- configure.orig	2003-05-28 16:53:58.000000000 +0000
-+++ configure
-@@ -7611,6 +7611,19 @@ echo "$as_me: error: Cannot find Berkele
-         echo "$as_me:$LINENO: result: $BERKELEY_DB_DIR" >&5
- echo "${ECHO_T}$BERKELEY_DB_DIR" >&6
-     else
-+	d="$BERKELEY_DB_DIR"
-+	for v in db-4 db4 db3 db; do
-+	    if test -f "$d/include/$v/db.h" ; then
-+		test "x$d" != "x/usr" && BERKELEY_DB_LDFLAGS="-L$d/lib"
-+		BERKELEY_DB_CFLAGS="-I$d/include/$v"
-+		BERKELEY_DB_LIB="-l$v"
-+		echo "$as_me:$LINENO: result: $d" >&5
-+echo "${ECHO_T}$d" >&6
+--- configure.orig	2004-08-09 21:14:27.000000000 -0400
++++ configure	2004-08-09 21:14:59.000000000 -0400
+@@ -8447,4 +8447,5 @@
+             if test -f "$BERKELEY_DB_DIR/include/$v/db.h"; then
+                 BERKELEY_DB_CFLAGS="-I$BERKELEY_DB_DIR/include/$v"
 +		break
-+	    fi
-+	done
-+    fi
-+    if test x"$BERKELEY_DB_LIB" = "x"; then
-         { { echo "$as_me:$LINENO: error: Cannot find BerkeleyDB" >&5
- echo "$as_me: error: Cannot find BerkeleyDB" >&2;}
-    { (exit 1); exit 1; }; }
+             fi
+         done
+@@ -8454,4 +8455,5 @@
+             if test -f "$BERKELEY_DB_DIR/lib/lib$v.so"; then
+                 BERKELEY_DB_LIB="-l$v"
++		break
+             fi
+         done
