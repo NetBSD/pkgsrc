@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2003/12/28 15:40:14 zuntum Exp $
+# $NetBSD: Makefile,v 1.16 2003/12/28 16:21:35 zuntum Exp $
 #
 
 DISTNAME=	devtodo-0.1.17
 CATEGORIES=	time
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=devtodo/}
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=devtodo/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/devtodo/
+HOMEPAGE=	http://devtodo.sourceforge.net/
 COMMENT=	Display and manage a list of items that are outstanding
 
 USE_LIBTOOL=		# defined
