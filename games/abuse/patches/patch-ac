@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 1998/08/27 12:54:56 garbled Exp $
+--- abuse/Makefile.in.orig	Wed Jul  9 00:55:21 1997
++++ abuse/Makefile.in	Sat Jul 25 01:29:21 1998
+@@ -39,6 +39,6 @@
+ 
+-INSTALL = @INSTALL@
+-INSTALL_PROGRAM = @INSTALL_PROGRAM@
+-INSTALL_DATA = @INSTALL_DATA@
+-INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL = /usr/bin/install -c
++INSTALL_PROGRAM = $(INSTALL) -s -o bin -g games -m 2755 
++INSTALL_DATA = $(INSTALL) -o bin -g games -m 0664
++INSTALL_SCRIPT = $(INSTALL) -o bin -g games -m 0755
+ transform = @program_transform_name@
