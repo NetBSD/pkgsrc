@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2002/11/11 12:36:40 uebayasi Exp $
+$NetBSD: distinfo,v 1.7 2002/12/10 08:26:43 uebayasi Exp $
 
 SHA1 (dictd-1.8.0.tar.gz) = c8318ae83a540d336405db126ff04bfc60b60ffc
 Size (dictd-1.8.0.tar.gz) = 574796 bytes
@@ -21,3 +21,5 @@ SHA1 (patch-ah) = d3453553e15858054bce4943a0316d485938806a
 SHA1 (patch-ai) = 21b2c9ace814e005139c64c4b6890e8b7e249f29
 SHA1 (patch-aj) = 76527be1d4ff89aeec72606d9575a99e6a8e2d3b
 SHA1 (patch-ak) = 4167c9007ed7b31ff9a29b368d82154bc95893cf
+SHA1 (patch-al) = 548956d7eba7ebd937128fb8eb53fb0f70cd64fb
+SHA1 (patch-am) = 4ba0be52fcd42d8b2f4ebb3bb499ad507966c678
