@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2001/11/06 03:05:14 tron Exp $
+# $NetBSD: Makefile,v 1.54 2001/11/06 07:22:13 tron Exp $
 
 DISTNAME=	squid-2.4.STABLE2-src
 PKGNAME=	squid-2.4.2
@@ -33,7 +33,7 @@ SQUID_CONFIGURE_ARGS?=	--enable-cachemgr-hostname=localhost \
 			--enable-ipf-transparent \
 			--enable-snmp \
 			--enable-underscores \
-			--enable-storeio="diskd"
+			--enable-storeio=ufs,diskd
 
 OPTIONAL_FILES=	libexec/diskd libexec/pinger libexec/unlinkd
 
