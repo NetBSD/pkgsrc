@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/23 09:14:03 tron Exp $
+include/ghttp.h
+include/ghttp_constants.h
+lib/libghttp.a
+lib/libghttp.so.1.0
