@@ -1,0 +1,422 @@
+--- vfontcap.orig	Wed Jan 20 12:33:39 1999
++++ vfontcap	Mon Aug 30 18:50:34 1999
+@@ -39,8 +39,8 @@
+ #min:\
+ #	:ft=freetype:\
+-#	:ff=/usr/local/share/fonts/DynaFont-Premium30/win95/futt/dfhsmw3.ttc:
++#	:ff=${PREFIX}/share/fonts/DynaFont-Premium30/win95/futt/dfhsmw3.ttc:
+ #goth:\
+ #	:ft=freetype:\
+-#	:ff=/usr/local/share/fonts/DynaFont-Premium30/win95/futt/dfhsgw5.ttc:
++#	:ff=${PREFIX}/share/fonts/DynaFont-Premium30/win95/futt/dfhsgw5.ttc:
+ 
+ ###--------------------------
+@@ -51,191 +51,191 @@
+ r-sony-mincho|Sony Vector Font (Mincho):\
+ 	:ft=sony:\
+-	:ff=/usr/local/share/fonts/devnwp533/Mincho.vfont:
++	:ff=${PREFIX}/share/fonts/devnwp533/Mincho.vfont:
+ r-sony-gothic|Sony Vector Font (Gothic):\
+ 	:ft=sony:\
+-	:ff=/usr/local/share/fonts/devnwp533/Gothic.vfont:
++	:ff=${PREFIX}/share/fonts/devnwp533/Gothic.vfont:
+ 
+ ### TRUETYPE FONT (RICOH TrueTypeWorld)
+ r-ricoh-ttw-heisei-mincho-w3|Ricoh TrueTypeWorld Heisei Mincho W3:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/hgrhm3sj:
++	:ff=${PREFIX}/share/fonts/truetype/hgrhm3sj:
+ r-ricoh-ttw-heisei-mincho-w9|Ricoh TrueTypeWorld Heisei Mincho W9:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/hgrhm9sj:
++	:ff=${PREFIX}/share/fonts/truetype/hgrhm9sj:
+ r-ricoh-ttw-heisei-kaku-gothic-w3|Ricoh TrueTypeWorld Heisei Kaku Gothic W3:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/hgrhg3sj:
++	:ff=${PREFIX}/share/fonts/truetype/hgrhg3sj:
+ r-ricoh-ttw-heisei-kaku-gothic-w5|Ricoh TrueTypeWorld Heisei Kaku Gothic W5:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/hgrhg5sj:
++	:ff=${PREFIX}/share/fonts/truetype/hgrhg5sj:
+ r-ricoh-ttw-hg-sei-kaisyo|Ricoh TrueTypeWorld HG Sei Kaisyo:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/hgrsksj:
++	:ff=${PREFIX}/share/fonts/truetype/hgrsksj:
+ r-ricoh-ttw-hg-souei-kaku-pop|Ricoh TrueTypeWorld HG Souei Kaku Pop:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/hgrpp1sj:
++	:ff=${PREFIX}/share/fonts/truetype/hgrpp1sj:
+ # fonts included dp/NOTE by OMRON software
+ r-ricoh-ttw-hg-mincho-l-pro|Ricoh TrueTypeWorld HG Mincho L PRO:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/lib/dp/font/truetype/hgrmlpsj
++	:ff=${PREFIX}/lib/dp/font/truetype/hgrmlpsj
+ r-ricoh-ttw-hg-gothic-b-pro|Ricoh TrueTypeWorld HG Gothic B PRO:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/lib/dp/font/truetype/hgrgbpsj:
++	:ff=${PREFIX}/lib/dp/font/truetype/hgrgbpsj:
+ 
+ ### TRUETYPE FONT (Windows fonts)
+ r-microsoft-mincho|MicroSoft mincho:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/msmincho:
++	:ff=${PREFIX}/share/fonts/truetype/msmincho:
+ r-microsoft-gothic|Microsoft gothic:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/msgothic:
++	:ff=${PREFIX}/share/fonts/truetype/msgothic:
+ 
+ ### TRUETYPE FONT (Dynalab Dynafont 30 fonts)
+ r-dynalab-df-heisei-mincho-w3|Dynalab Dynafont 30fonts Heisei Mincho W3:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfhsmw3:
++        :ff=${PREFIX}/share/fonts/truetype/dfhsmw3:
+ r-dynalab-df-heisei-mincho-w5|Dynalab Dynafont 30fonts Heisei Mincho W5:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfhsmw5:
++        :ff=${PREFIX}/share/fonts/truetype/dfhsmw5:
+ r-dynalab-df-heisei-mincho-w7|Dynalab Dynafont 30fonts Heisei Mincho W7:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfhsmw7:
++        :ff=${PREFIX}/share/fonts/truetype/dfhsmw7:
+ r-dynalab-df-heisei-mincho-w9|Dynalab Dynafont 30fonts Heisei Mincho W9:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfhsmw9:
++        :ff=${PREFIX}/share/fonts/truetype/dfhsmw9:
+ r-dynalab-df-gokufuto-mincho|Dynalab Dynafont 30fonts Gokufuto Mincho:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfminub:
++        :ff=${PREFIX}/share/fonts/truetype/dfminub:
+ r-dynalab-df-heisei-gothic-w3|Dynalab Dynafont 30fonts Heisei Gothic W3:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfhsgw3:
++        :ff=${PREFIX}/share/fonts/truetype/dfhsgw3:
+ r-dynalab-df-heisei-gothic-w5|Dynalab Dynafont 30fonts Heisei Gothic W5:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfhsgw5:
++        :ff=${PREFIX}/share/fonts/truetype/dfhsgw5:
+ r-dynalab-df-heisei-gothic-w7|Dynalab Dynafont 30fonts Heisei Gothic W7:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfhsgw7:
++        :ff=${PREFIX}/share/fonts/truetype/dfhsgw7:
+ r-dynalab-df-heisei-gothic-w9|Dynalab Dynafont 30fonts Heisei Gothic W9:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfhsgw9:
++        :ff=${PREFIX}/share/fonts/truetype/dfhsgw9:
+ r-dynalab-df-gokufuto-gothic|Dynalab Dynafont 30fonts Gokufuto Gothic:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfgoteb:
++        :ff=${PREFIX}/share/fonts/truetype/dfgoteb:
+ r-dynalab-df-tokufuto-gothic|Dynalab Dynafont 30fonts Tokufuto Gothic:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfgotub:
++        :ff=${PREFIX}/share/fonts/truetype/dfgotub:
+ r-dynalab-df-heisei-maru-gothic-w4|Dynalab Dynafont 30fonts Heisei Maru Gothic W4:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfhsrw4:
++        :ff=${PREFIX}/share/fonts/truetype/dfhsrw4:
+ r-dynalab-df-hosomaru-gothic|Dynalab Dynafont 30fonts Hosomaru Gothic:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfmrglt:
++        :ff=${PREFIX}/share/fonts/truetype/dfmrglt:
+ r-dynalab-df-chumaru-gothic|Dynalab Dynafont 30fonts Chumaru Gothic:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfmrgmd:
++        :ff=${PREFIX}/share/fonts/truetype/dfmrgmd:
+ r-dynalab-df-chufutomaru-gothic|Dynalab Dynafont 30fonts Chufutomaru Gothic:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfmrgbd:
++        :ff=${PREFIX}/share/fonts/truetype/dfmrgbd:
+ r-dynalab-df-hosokaisyo|Dynalab Dynafont 30fonts Hosokaisyo:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfkailt:
++        :ff=${PREFIX}/share/fonts/truetype/dfkailt:
+ r-dynalab-df-chukaisyo|Dynalab Dynafont 30fonts Chukaisyo:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfkaimd:
++        :ff=${PREFIX}/share/fonts/truetype/dfkaimd:
+ r-dynalab-df-chufutokaisyo|Dynalab Dynafont 30fonts Chufutokaisyo:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfkaisb:
++        :ff=${PREFIX}/share/fonts/truetype/dfkaisb:
+ r-dynalab-df-futokaisyo|Dynalab Dynafont 30fonts Futokaisyo:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfkaibd:
++        :ff=${PREFIX}/share/fonts/truetype/dfkaibd:
+ r-dynalab-df-gyosyo|Dynalab Dynafont 30fonts Gyosyo:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfgyomd:
++        :ff=${PREFIX}/share/fonts/truetype/dfgyomd:
+ r-dynalab-df-leisyo|Dynalab Dynafont 30fonts Leisyo:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfleimd:
++        :ff=${PREFIX}/share/fonts/truetype/dfleimd:
+ r-dynalab-df-kanteiryu|Dynalab Dynafont 30fonts Kanteiryu:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfktrxb:
++        :ff=${PREFIX}/share/fonts/truetype/dfktrxb:
+ r-dynalab-df-pop1-w3|Dynalab Dynafont 30fonts Pop1 W3:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfpopw3:
++        :ff=${PREFIX}/share/fonts/truetype/dfpopw3:
+ r-dynalab-df-pop1-w5|Dynalab Dynafont 30fonts Pop1 W5:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfpopw5:
++        :ff=${PREFIX}/share/fonts/truetype/dfpopw5:
+ r-dynalab-df-pop1-w9|Dynalab Dynafont 30fonts Pop1 W9:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfpopw9:
++        :ff=${PREFIX}/share/fonts/truetype/dfpopw9:
+ r-dynalab-df-pop1|Dynalab Dynafont 30fonts Pop1:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfpop1:
++        :ff=${PREFIX}/share/fonts/truetype/dfpop1:
+ r-dynalab-df-maru-w3|Dynalab Dynafont 30fonts Marumoji W3:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfmrmw3:
++        :ff=${PREFIX}/share/fonts/truetype/dfmrmw3:
+ r-dynalab-df-maru-w7|Dynalab Dynafont 30fonts Marumoji W7:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfmrmw7:
++        :ff=${PREFIX}/share/fonts/truetype/dfmrmw7:
+ r-dynalab-df-maru-w9|Dynalab Dynafont 30fonts Marumoji W9:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfmrmw9:
++        :ff=${PREFIX}/share/fonts/truetype/dfmrmw9:
+ r-dynalab-df-maru|Dynalab Dynafont 30fonts Marumoji:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfmrmmd:
++        :ff=${PREFIX}/share/fonts/truetype/dfmrmmd:
+ r-dynalab-df-koinji|Dynalab Dynafont 30fonts Koinji:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfkoimd:
++        :ff=${PREFIX}/share/fonts/truetype/dfkoimd:
+ r-dynalab-df-gihi|Dynalab Dynafont 30fonts Gihitai:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/dfgihbd:
++        :ff=${PREFIX}/share/fonts/truetype/dfgihbd:
+ 
+ ### TRUETYPE FONT (Fujitsu Fontcity)
+ r-fujitsu-fc-mincho-l|Fujitsu Fontcity mincho-L:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajcfm2:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajcfm2:
+ r-fujitsu-fc-mincho-b|Fujitsu Fontcity mincho-B:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajcfm8:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajcfm8:
+ r-fujitsu-fc-kaku-gothic-l|Fujitsu Fontcity kaku gothic-L:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajcfg3:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajcfg3:
+ r-fujitsu-fc-kaku-gothic-b|Fujitsu Fontcity kaku gothic-B:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajcfg7:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajcfg7:
+ r-fujitsu-fc-maru-gothic-l|Fujitsu Fontcity maru gothic-L:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajcfr3:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajcfr3:
+ r-fujitsu-fc-maru-gothic-b|Fujitsu Fontcity maru gothic-B:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajcfr7:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajcfr7:
+ r-fujitsu-fc-kyokasyo-l|Fujitsu Fontcity Kyokasyotai-L:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajcky1:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajcky1:
+ r-fujitsu-fc-kyokasyo-b|Fujitsu Fontcity Kyokasyotai-M:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajcky2:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajcky2:
+ r-fujitsu-fc-gyokaisyo|Fujitsu Fontcity Gyokaisyotai:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajcgyk:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajcgyk:
+ r-fujitsu-fc-reisyo|Fujitsu Fontcity Reisyotai:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajcrei:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajcrei:
+ r-fujitsu-fc-hikki|Fujitsu Fontcity Hikktai:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajchik:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajchik:
+ r-fujitsu-fc-ima-108|Fujitsu Fontcity Ima 108:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajci18:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajci18:
+ r-fujitsu-fc-ima-205|Fujitsu Fontcity Ima 205:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajci25:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajci25:
+ r-fujitsu-fc-ima-310|Fujitsu Fontcity Ima 310:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajci3a:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajci3a:
+ r-fujitsu-fc-ima-407|Fujitsu Fontcity Ima 407:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajci47:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajci47:
+ r-fujitsu-fc-ima-513|Fujitsu Fontcity Ima 513:\
+         :ft=truetype:\
+-        :ff=/usr/local/share/fonts/truetype/f5ajci5d:
++        :ff=${PREFIX}/share/fonts/truetype/f5ajci5d:
+ 
+ ### TRUETYPE FONT (DynaFont RYOBI)
+@@ -243,79 +243,79 @@
+ rf-hon-mincho-l|DynaFont RYOBI PREMIUM PACK RF Hon Mincho-L:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfhml
++	:ff=${PREFIX}/share/fonts/truetype/rfhml
+ rf-hon-mincho-m|DynaFont RYOBI PREMIUM PACK RF Hon Mincho-M:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfhmm
++	:ff=${PREFIX}/share/fonts/truetype/rfhmm
+ rf-hon-mincho-bii|DynaFont RYOBI PREMIUM PACK RF Hon Mincho-BII:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfhmb
++	:ff=${PREFIX}/share/fonts/truetype/rfhmb
+ rf-hon-mincho-eii|DynaFont RYOBI PREMIUM PACK RF Hon Mincho-EII:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfhme
++	:ff=${PREFIX}/share/fonts/truetype/rfhme
+ rf-gothic-mii|DynaFont RYOBI PREMIUM PACK RF Gothic-MII:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfgtm
++	:ff=${PREFIX}/share/fonts/truetype/rfgtm
+ rf-gothic-b|DynaFont RYOBI PREMIUM PACK RF Gothic-B:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfgtb
++	:ff=${PREFIX}/share/fonts/truetype/rfgtb
+ rf-gothic-eii|DynaFont RYOBI PREMIUM PACK RF Gothic-EII:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfgte
++	:ff=${PREFIX}/share/fonts/truetype/rfgte
+ rf-serious-lii|DynaFont RYOBI PREMIUM PACK RF Serious-LII:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfsrl
++	:ff=${PREFIX}/share/fonts/truetype/rfsrl
+ rf-serious-m|DynaFont RYOBI PREMIUM PACK RF Serious-M:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfsrm
++	:ff=${PREFIX}/share/fonts/truetype/rfsrm
+ rf-serious-b|DynaFont RYOBI PREMIUM PACK RF Serious-B:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfsrb
++	:ff=${PREFIX}/share/fonts/truetype/rfsrb
+ rf-serious-e|DynaFont RYOBI PREMIUM PACK RF Serious-E:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfsre
++	:ff=${PREFIX}/share/fonts/truetype/rfsre
+ rf-hagoromo-m|DynaFont RYOBI PREMIUM PACK RF Hagoromo-M:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfhgm
++	:ff=${PREFIX}/share/fonts/truetype/rfhgm
+ rf-hagoromo-b|DynaFont RYOBI PREMIUM PACK RF Hagoromo-M:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfhgb
++	:ff=${PREFIX}/share/fonts/truetype/rfhgb
+ rf-now-mb|DynaFont RYOBI PREMIUM PACK RF Now-MB:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfnmb
++	:ff=${PREFIX}/share/fonts/truetype/rfnmb
+ rf-now-mu|DynaFont RYOBI PREMIUM PACK RF Now-MU:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfnmu
++	:ff=${PREFIX}/share/fonts/truetype/rfnmu
+ rf-now-gb|DynaFont RYOBI PREMIUM PACK RF Now-GB:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfngb
++	:ff=${PREFIX}/share/fonts/truetype/rfngb
+ rf-now-gu|DynaFont RYOBI PREMIUM PACK RF Now-GU:\
+ 	:ft=truetype:\
+-	:ff=/usr/local/share/fonts/truetype/rfngu
++	:ff=${PREFIX}/share/fonts/truetype/rfngu
+ 
+ ### TRUETYPE FONT by FreeType font class
+ dfhsmw3|:\
+ 	:ft=freetype:\
+-	:ff=/usr/local/share/fonts/DynaFont-Premium30/win95/futt/dfhsmw3.ttc:
++	:ff=${PREFIX}/share/fonts/DynaFont-Premium30/win95/futt/dfhsmw3.ttc:
+ dfhsmw5|:\
+ 	:ft=freetype:\
+-	:ff=/usr/local/share/fonts/DynaFont-Premium30/win95/futt/dfhsmw5.ttc:
++	:ff=${PREFIX}/share/fonts/DynaFont-Premium30/win95/futt/dfhsmw5.ttc:
+ dfhsmw7|:\
+ 	:ft=freetype:\
+-	:ff=/usr/local/share/fonts/DynaFont-Premium30/win95/futt/dfhsmw7.ttc:
++	:ff=${PREFIX}/share/fonts/DynaFont-Premium30/win95/futt/dfhsmw7.ttc:
+ dfhsmw9|:\
+ 	:ft=freetype:\
+-	:ff=/usr/local/share/fonts/DynaFont-Premium30/win95/futt/dfhsmw9.ttc:
++	:ff=${PREFIX}/share/fonts/DynaFont-Premium30/win95/futt/dfhsmw9.ttc:
+ dfhsgw3|:\
+ 	:ft=freetype:\
+-	:ff=/usr/local/share/fonts/DynaFont-Premium30/win95/futt/dfhsgw3.ttc:
++	:ff=${PREFIX}/share/fonts/DynaFont-Premium30/win95/futt/dfhsgw3.ttc:
+ dfhsgw5|:\
+ 	:ft=freetype:\
+-	:ff=/usr/local/share/fonts/DynaFont-Premium30/win95/futt/dfhsgw5.ttc:
++	:ff=${PREFIX}/share/fonts/DynaFont-Premium30/win95/futt/dfhsgw5.ttc:
+ dfhsgw7|:\
+ 	:ft=freetype:\
+-	:ff=/usr/local/share/fonts/DynaFont-Premium30/win95/futt/dfhsgw7.ttc:
++	:ff=${PREFIX}/share/fonts/DynaFont-Premium30/win95/futt/dfhsgw7.ttc:
+ dfhsgw9|:\
+ 	:ft=freetype:\
+-	:ff=/usr/local/share/fonts/DynaFont-Premium30/win95/futt/dfhsgw9.ttc:
++	:ff=${PREFIX}/share/fonts/DynaFont-Premium30/win95/futt/dfhsgw9.ttc:
+ 
+ 
+@@ -323,27 +323,27 @@
+ r-zeit-mincho|Zeit "SYOTAI CLUB" Vector Font (Mincho):\
+ 	:ft=zeit:\
+-	:ff=/usr/local/share/fonts/syotai_club/mincho:
++	:ff=${PREFIX}/share/fonts/syotai_club/mincho:
+ r-zeit-gothic|Zeit "SYOTAI CLUB" Vector Font (gothic):\
+ 	:ft=zeit:\
+-	:ff=/usr/local/share/fonts/syotai_club/gothic:
++	:ff=${PREFIX}/share/fonts/syotai_club/gothic:
+ r-zeit-gothicMH|Zeit "SYOTAI CLUB" Vector Font (maru gothic H):\
+ 	:ft=zeit:\
+-	:ff=/usr/local/share/fonts/syotai_club/mg1r:
++	:ff=${PREFIX}/share/fonts/syotai_club/mg1r:
+ r-zeit-textbook|Zeit "SYOTAI CLUB" Vector Font (textbook):\
+ 	:ft=zeit:\
+-	:ff=/usr/local/share/fonts/syotai_club/aska:
++	:ff=${PREFIX}/share/fonts/syotai_club/aska:
+ 
+ ### WATANABE FONT IN "SYOTAI CLUB" FORMAT
+ r-watanabe-mincho|Watanabe "SYOTAI CLUB" Vector Font (mincho):\
+ 	:ft=zeit:\
+-	:ff=/usr/local/share/fonts/watanabe_font/mincho:
++	:ff=${PREFIX}/share/fonts/watanabe_font/mincho:
+ 
+ ### ZEIT "JG FONT"
+ r-jg-textbook|Zeit "JG FONT" Vector Font (textbook):\
+ 	:ft=jg:\
+-	:ff=/usr/local/share/fonts/jg_font/zkyo0by:
++	:ff=${PREFIX}/share/fonts/jg_font/zkyo0by:
+ r-jg-mouhitsu|Zeit "JG FONT" Vector Font (mouhitsu):\
+ 	:ft=jg:\
+-	:ff=/usr/local/share/fonts/jg_font/zmou0by:
++	:ff=${PREFIX}/share/fonts/jg_font/zmou0by:
+ 
+ ### FontWave
+@@ -534,13 +534,13 @@
+ bdf14:\
+ 	:ft=bdf:\
+-	:ff=/usr/local/share/fonts/bdf/k14:\
++	:ff=${PREFIX}/share/fonts/bdf/k14:\
+ 	:ox#0:oy#0:fx#95:fy#95:
+ bdf16:\
+ 	:ft=bdf:\
+-	:ff=/usr/local/share/fonts/bdf/jiskan16:\
++	:ff=${PREFIX}/share/fonts/bdf/jiskan16:\
+ 	:ox#0:oy#0:fx#95:fy#95:
+ bdf24:\
+ 	:ft=bdf:\
+-	:ff=/usr/local/share/fonts/bdf/jiskan24:\
++	:ff=${PREFIX}/share/fonts/bdf/jiskan24:\
+ 	:ox#0:oy#0:fx#95:fy#95:
+ bdf14sl:sl#20:fc=bdf14:

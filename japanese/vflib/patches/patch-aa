@@ -1,15 +1,13 @@
---- tools/Imakefile.in.orig	Tue Oct 27 17:02:45 1998
-+++ tools/Imakefile.in	Wed Dec 16 23:41:05 1998
-@@ -19,7 +19,11 @@
-  * copies. 
+$NetBSD: patch-aa,v 1.2 1999/09/03 05:43:01 sakamoto Exp $
+
+--- ./tools/Imakefile.in.orig	Tue Oct 27 17:02:45 1998
++++ ./tools/Imakefile.in	Fri Aug 27 15:06:10 1999
+@@ -20,4 +20,8 @@
   */
  
--       LIBTOOL = ../libtool
-+  PREFIX         ?= /usr/local
++  PREFIX         ?= ${PREFIX}
 +  FREETYPELIBDIR ?= ${PREFIX}/lib
 +  FREETYPEINCDIR ?= ${PREFIX}/include
 +
-+  LIBTOOL = ../libtool
+        LIBTOOL = ../libtool
    VFLIB_INCDIR = ../src
-   VFLIB_LIBDIR = ../src
- 
