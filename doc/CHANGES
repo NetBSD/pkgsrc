@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8879 2005/01/23 00:24:33 rh Exp $
+$NetBSD: CHANGES,v 1.8880 2005/01/23 04:36:28 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -502,3 +502,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated socat to 1.4.1.0 [adrianp 2005-01-22]
 	Updated smokeping to 1.37 [adrianp 2005-01-22]
 	Updated cgoban-java to 2.6.9 [rh 2005-01-23]
+	Updated webmin to 1.170 [jlam 2005-01-23]
