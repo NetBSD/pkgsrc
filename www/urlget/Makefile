@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/08/25 21:52:23 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/22 04:14:38 martti Exp $
 #
 
 DISTNAME=		urlget-1.3
@@ -6,7 +6,7 @@ CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.gw.com/pub/people/kim/
 
 MAINTAINER=		kim@tac.nyc.ny.us
-COMMENT=		simple command-line tool to retrieve an HTTP URL
+COMMENT=		Simple command-line tool to retrieve an HTTP URL
 
 USE_BUILDLINK2=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:56:15 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/22 04:14:45 martti Exp $
 #
 
 DISTNAME=	TinyTablePlus-0.9
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/hathawsh/TinyTablePlus/
-COMMENT=	improved TinyTable
+COMMENT=	Improved TinyTable
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-long
 
