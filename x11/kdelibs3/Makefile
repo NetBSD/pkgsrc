@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2004/02/04 13:58:39 markd Exp $
+# $NetBSD: Makefile,v 1.51 2004/02/25 22:11:23 markd Exp $
 
 DISTNAME=	kdelibs-3.2.0
 CATEGORIES=	x11
@@ -10,7 +10,6 @@ CONFLICTS+=	koffice3<=1.1.1
 DEPENDS+=	xdg-dirs>=1.0:../../misc/xdg-dirs
 
 USE_BUILDLINK2=		YES
-USE_LANGUAGES=		c c++
 USE_PKGINSTALL=		YES
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
