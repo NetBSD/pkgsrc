@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.70 2004/03/26 02:27:57 wiz Exp $
+# $NetBSD: Makefile,v 1.71 2004/05/06 19:19:40 wiz Exp $
 #
 
 DISTNAME=	lynx2.8.5
-PKGNAME=	lynx-2.8.5
-PKGREVISION=	1
+PKGNAME=	lynx-2.8.5.2
 CATEGORIES=	www
 MASTER_SITES=	http://lynx.isc.org/${DISTNAME}/ \
 		ftp://ftp.nl.uu.net/pub/unix/www/lynx/${DISTNAME}/ \
 		ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${DISTNAME}/ \
 		ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/WWW/lynx/${DISTNAME}/
 EXTRACT_SUFX=	.tar.bz2
+
+PATCH_SITES=	${MASTER_SITES:=patches/}
+PATCHFILES=	2.8.5rel.2.patch.gz
 
 MAINTAINER=	fredb@NetBSD.org
 HOMEPAGE=	http://lynx.isc.org/
@@ -19,6 +21,7 @@ BUILD_USES_MSGFMT=	yes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+DIST_SUBDIR=		lynx
 WRKSRC=			${WRKDIR}/${DISTNAME:S/./-/g}
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
@@ -111,6 +114,9 @@ CONFIGURE_ARGS+=       --enable-ipv6
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/lynx
+	# gets created when applying 2.8.5.2 patch -- remove on 
+	# patchless update
+	${RM} ${PREFIX}/share/lynx/lynx_doc/CHANGES.orig_dist
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
