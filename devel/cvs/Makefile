@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/01/19 01:04:44 tv Exp $
+# $NetBSD: Makefile,v 1.19 1999/01/19 09:18:52 tron Exp $
 #
 
 DISTNAME=       cvs-1.10
@@ -8,7 +8,7 @@ MASTER_SITES=   ftp://download.cyclic.com/pub/${DISTNAME}/
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.cyclic.com/cvs/info.html
 
-CONFLICTS=	cvs-1.9* cvs-1.10
+CONFLICTS=	cvs-*
 
 GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
