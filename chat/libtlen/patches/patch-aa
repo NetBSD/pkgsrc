@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/22 21:49:42 minskim Exp $
+
+--- lib/Makefile.in.orig	2003-01-16 10:33:32.000000000 +0000
++++ lib/Makefile.in
+@@ -33,7 +33,7 @@ STATIC = libtlen.a
+ HEADERS = *.h
+ libincludedir = /libtlen
+ 
+-all: static shared test-client
++all: static test-client
+ static: $(STATIC)
+ shared: $(SHARED)
+ test-client: testclient
+@@ -49,15 +49,17 @@ static: $(STATIC)
+ shared: $(SHARED)
+ 
+ $(STATIC): $(OBJS)
+-	$(AR) r $(STATIC) $(OBJS)
+-	$(RANLIB) $(STATIC)
++	${LIBTOOL} --mode=link ${CC} -o ${STATIC:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info ${VERSION_MAJOR}:${VERSION_MINOR}
++
++%.o: %.c
++	${LIBTOOL} --mode=compile ${CC} -c ${CPPFLAGS} ${CFLAGS} $< -o $@
+ 
+ $(SHARED): $(OBJS)
+ 	$(CC) -g -O2 -shared -Wl,-soname,libtlen.so.$(VERSION_MAJOR) -o $(SHARED) $(OBJS) $(LIBS) -lc
+ 	$(LN_S) -f $(SHARED) $(SHAREDM)
+ 	$(LN_S) -f $(SHARED) $(SHAREDMM)
+ 
+-install: install-shared install-static install-devel
++install: install-static install-devel
+ 
+ install-shared:
+ 	$(INSTALL) -d $(DESTDIR)$(libdir)
+@@ -66,12 +68,11 @@ install-shared:
+ 	cd $(DESTDIR)$(libdir) && $(LN_S) -f $(SHARED) $(SHAREDMM)
+ 
+ install-static:
+-	$(INSTALL) -d $(DESTDIR)$(libdir)
+-	$(INSTALL) -m 755 $(STATIC) $(DESTDIR)$(libdir)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${STATIC:.a=.la} ${PREFIX}/lib
+ 
+ install-devel:
+ 	$(INSTALL) -d $(DESTDIR)$(includedir)$(libincludedir)
+ 	$(INSTALL) -m 644 $(HEADERS) $(DESTDIR)$(includedir)$(libincludedir)
+ 
+ testclient: $(STATIC) testclient.c
+-	$(CC) -Wall -ggdb -o testclient testclient.c libtlen.a $(LIBS)
++	${LIBTOOL} --mode=link $(CC) -Wall -o testclient testclient.c libtlen.la $(LIBS)
