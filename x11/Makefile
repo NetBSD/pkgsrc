@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2002/07/11 14:32:30 tron Exp $
+# $NetBSD: Makefile,v 1.255 2002/07/11 19:40:55 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -26,7 +26,6 @@ SUBDIR+=	fox
 SUBDIR+=	fvwm-wharf
 SUBDIR+=	gdkxft
 SUBDIR+=	gdm
-SUBDIR+=	gnome
 SUBDIR+=	gnome--
 SUBDIR+=	gnome-applets
 SUBDIR+=	gnome-core
