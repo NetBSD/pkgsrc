@@ -1,11 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2003/07/10 12:43:10 jtb Exp $
+$NetBSD: patch-ae,v 1.2 2003/07/22 14:05:19 wiz Exp $
 
 --- ../testing/Makefile.orig
 +++ ../testing/Makefile
-@@ -11,10 +11,9 @@
- #/ not infringe privately owned rights                                /
- #*********************************************************************/
- #* $Id: patch-ae,v 1.1 2003/07/10 12:43:10 jtb Exp $ */
+@@ -14,7 +14,6 @@
 -CC=cc
 -DIR=..
 -INCLUDE=-I$(DIR)/include 
