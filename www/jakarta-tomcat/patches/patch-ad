@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.2 2002/05/20 19:06:03 cjep Exp $
 --- src/share/org/apache/tomcat/facade/RequestDispatcherImpl.java.orig	Thu Dec 28 14:13:50 2000
 +++ src/share/org/apache/tomcat/facade/RequestDispatcherImpl.java	Sat Aug 11 15:39:18 2001
 @@ -139,6 +139,7 @@
