@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2004/11/22 19:54:47 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2004/11/22 19:56:23 jlam Exp $
 
 PKGNAME=		apache-${APACHE_VERSION}
 PKGREVISION=		2
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ARGS+=	--with-mpm=prefork
+CONFIGURE_ARGS+=	--enable-so
 
 # Apache Portable Runtime library configure options
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
@@ -43,9 +44,11 @@ MAKEFLAGS+=	_APR_OPTIONS=${_APR_OPTIONS:Q}
 DFLT_APACHE_MODULES+=	ldap auth_ldap
 .endif
 
+# APACHE_MODULES are the modules that are linked statically into the
+# apache httpd executable.
+#
 APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 CONFIGURE_ARGS+=	--enable-modules="${APACHE_MODULES}"
-CONFIGURE_ARGS+=	--enable-so
 BUILD_DEFS+=		APACHE_MODULES
 
 APACHE_USER?=	www
