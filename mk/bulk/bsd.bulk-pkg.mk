@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.30 2001/11/07 00:29:20 hubertf Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.31 2001/11/28 10:21:47 abs Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -111,8 +111,8 @@ bulk-check-uptodate:
 	@uptodate=1 ; \
 	if [ -f "${REF}" ]; then \
 		${SHCOMMENT} "Check files of this package" ; \
-		newfiles="`find . -type f -newer "${REF}" -print  | ${EGREP} -v -e ./work -e pkg/COMMENT -e pkg/DESCR -e README.html -e CVS -e '^\./\.' || true`" ; \
-		nnewfiles="`find . -type f -newer "${REF}" -print  | ${EGREP} -v -e ./work -e pkg/COMMENT -e pkg/DESCR -e README.html -e CVS -e '^\./\.' | ${WC} -l`" ; \
+		newfiles="`find . -type f -newer "${REF}" -print  | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' || true`" ; \
+		nnewfiles="`find . -type f -newer "${REF}" -print  | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' | ${WC} -l`" ; \
 		if [ "$$nnewfiles" -gt 0 ]; then \
 			${ECHO_MSG} >&2 "BULK> Package ${PKGNAME} ($$newfiles) modified since last 'make package' re-packaging..." ; \
 			uptodate=0 ; \
