@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/08/25 19:22:13 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2002/08/28 16:36:20 jlam Exp $
 #
 
 DISTNAME=		GConf-1.0.9
@@ -14,13 +14,14 @@ COMMENT=		configuration database system used by GNOME
 BUILD_USES_MSGFMT=	yes
 #DEPENDS+=		guile>=1.3.4:../../lang/guile
 
-USE_BUILDLINK_ONLY=	YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
-USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
 
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-CPPFLAGS+=		-I${BUILDLINK_DIR}/include/db3
+
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.db3}/include/db3
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
 pre-build:
@@ -35,9 +36,9 @@ post-install:
 	    ${CP} -p ${PREFIX}/etc/gconf/1/path.example \
 	    ${PREFIX}/etc/gconf/1/path
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../databases/db3/buildlink.mk"
-.include "../../devel/oaf/buildlink.mk"
-.include "../../devel/popt/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../databases/db3/buildlink2.mk"
+.include "../../devel/oaf/buildlink2.mk"
+.include "../../devel/popt/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
