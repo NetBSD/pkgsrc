@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5726 2004/04/24 09:30:58 jmmv Exp $
+$NetBSD: CHANGES,v 1.5727 2004/04/24 15:44:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2230,3 +2230,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated qmail to 1.03nb6 [schmonz 2004-04-24]
 	Updated gnome-pkgview to 1.0.6 [jmmv 2004-04-24]
 	Updated gaim to 0.77 [jmmv 2004-04-24]
+	Updated mathomatic to 11.0d [minskim 2004-04-24]
