@@ -1,96 +1,64 @@
-# New ports collection makefile for:	X-Emacs
-# Version required:	21.1
-# Date created:		24 Apr 1999
-# Whom:			Michael Elbel (me@FreeBSD.org)
-#
-# FreeBSD Id: Makefile,v 1.28 1999/06/22 22:01:23 gj Exp
-#
+# $NetBSD: Makefile,v 1.3 1999/06/29 23:13:37 tron Exp $
+# FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 
-DISTNAME=	xemacs-21.1.2
-PKGNAME=	xemacs-21.1
+DISTNAME=	xemacs-21.1.3
 CATEGORIES=	editors
-MASTER_SITES=	\
-		ftp://ftp.xemacs.org/pub/xemacs/${PKGNAME}/ \
-		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/${PKGNAME}/ \
-		ftp://ftp.usyd.edu.au/pub/Xemacs/${PKGNAME}/ \
-		ftp://ftp.lab.kdd.co.jp/xemacs/${PKGNAME}/ \
-		ftp://ftp.th-darmstadt.de/pub/editors/xemacs/${PKGNAME}/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}-elc${EXTRACT_SUFX} ${DISTNAME}-info${EXTRACT_SUFX}
+MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs/xemacs-21.1/ \
+		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs/xemacs-21.1/ \
+		ftp://ftp.usyd.edu.au/pub/Xemacs/xemacs-21.1/ \
+		ftp://ftp.lab.kdd.co.jp/xemacs/xemacs-21.1/ \
+		ftp://ftp.th-darmstadt.de/pub/editors/xemacs/xemacs-21.1/
+DISTFILES=	xemacs-21.1.3.tar.gz xemacs-21.1.3-info.tar.gz
 
-MAINTAINER=	me@FreeBSD.org
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.xemacs.org/
 
-RUN_DEPENDS=    ${PREFIX}/lib/xemacs/xemacs-packages/etc/enriched.doc:${PORTSDIR}/editors/xemacs-packages
-#LIB_DEPENDS=	Xpm.4:${PORTSDIR}/graphics/xpm \
-#		jpeg.9:${PORTSDIR}/graphics/jpeg \
-#		png.3:${PORTSDIR}/graphics/png
+DEPENDS+=	Xaw3d-1.5:../../x11/Xaw3d
+DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
+DEPENDS+=	png-1.0.3:../../graphics/png
+DEPENDS+=	tiff-3.4:../../graphics/tiff
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
-XEMACS_VER=	21.1-p2
-DIST_SUBDIR=	xemacs
+NOT_FOR_PLATFORM=	*-*-alpha *-*-mips	#fails purespace dumping
 
-USE_GMAKE=	yes
-STRIP=
 HAS_CONFIGURE=	yes
-XEMACS_ARCH=	${MACHINE_ARCH}--freebsd
-CONFIGURE_ARGS=	${XEMACS_ARCH} --prefix=${PREFIX} \
-		--with-clash-detection \
-		--lockdir=/var/run/emacs/lock \
-		--with-sound=native \
-		--site-includes=${PREFIX}/include \
-		--site-libraries=${PREFIX}/lib \
-		--with-session=yes \
-		${WITH_XFACE} ${WITH_MULE} ${WITH_DIALOGS} ${WITH_OFFIX}
-MAN1=		ctags.1 etags.1 gnuattach.1 gnuclient.1 gnudoit.1 \
-		gnuserv.1 xemacs.1
-ALL_TARGET=	all dist
 
-PLIST_SUB=	XEMACS_VER=${XEMACS_VER} XEMACS_ARCH=${XEMACS_ARCH}
+.include "../../mk/bsd.prefs.mk"
 
-# Have
-pre-fetch:
-.if !defined(USE_MULE)
-	@echo "To compile in the MULE features, set the environment variable USE_MULE"
-.endif
-.if defined(HAVE_MOTIF)
-.if !defined(MOTIF_STATIC)
-	@echo ""
-	@echo "If your MOTIF library is actually lesstif, you might occasionally"
-	@echo "experience locked-up frames."
-	@echo "In this case, set the environment variable MOTIF_STATIC and recompile, "
-	@echo "which will force the use of athena widgets for dialogs."
-.endif
+WITH_DIALOGS=	--with-dialogs=athena3d
+
+.if defined(USE_XFACE)
+WITH_XFACE=	--with-xface=yes
+DEPENDS+=	faces-1.6.1:../../mail/faces
+.else
+WITH_XFACE=	--with-xface=no
 .endif
 
-.if defined(USE_MULE)
-WITH_MULE=	--with-mule
-# MULEDISTFILE=	${DISTNAME}-mule.tar.gz
-# PLIST=		${PKGDIR}/PLIST.mule
-.endif
+CONFIGURE_ARGS+=	${MACHINE_GNU_ARCH}--netbsd --prefix=${PREFIX} \
+			--with-clash-detection --with-mule=yes \
+			--with-ncurses=no --with-session=yes \
+			${WITH_DIALOGS} ${WITH_XFACE} \
+			--infopath="${PREFIX}/info:${X11BASE}/info:/usr/local/info" \
+			--lockdir=/var/tmp/xemacs.lock \
+			--site-includes=${PREFIX}/include \
+			--site-libraries=${PREFIX}/lib
 
-# hack to avoid shipping binaries linked with Motif
-.if defined(MOTIF_STATIC)
-WITH_DIALOGS=	--with-dialogs=athena
-.endif
+MAKE_ENV+=		INSTALL_MAN="${INSTALL_MAN}" \
+			INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+PLIST_SRC=		${WRKDIR}/PLIST.tmp
 
-# Drop faces (libcompface) and offix (libDnd) if building package,
-# autodetect otherwise
-.if defined(PACKAGE_BUILDING)
-WITH_XFACE?=	--with-xface=no
-WITH_OFFIX?=	--with-offix=no
-.endif
+post-patch:
+	@${RM} -f ${WRKSRC}/etc/ctags.1.orig
+
+pre-configure:
+	@${ECHO} "To compile in the support for xface, set the environment variable USE_XFACE."
 
 post-install:
-	ln -s xemacs-${XEMACS_VER} ${PREFIX}/bin/xemacs21
-.for file in b2m ctags etags gnuclient xemacs-${XEMACS_VER}
-	strip ${PREFIX}/bin/${file}
-.endfor
-# ``make install'' does not set the permissions like pkg_add does.
-	chmod 1777 /var/run/emacs/lock
-#	${MKDIR} ${PREFIX}/lib/xemacs
-	${RM} -f ${PREFIX}/bin/send-pr
-# install xemacs21.sh into ${PREFIX}/etc/rc.d
-	@if [ ! -d ${PREFIX}/etc/rc.d ]; then ${MKDIR} ${PREFIX}/etc/rc.d; fi
-	${INSTALL_SCRIPT} ${FILESDIR}/xemacs21.sh ${PREFIX}/etc/rc.d
+	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/xemacs-21.1-p3
+	@if [ "X${MANZ}" != X"" ]; then \
+		${WRKSRC}/lib-src/gzip-el.sh ${PREFIX}/lib/xemacs-21.1-p3; \
+		GZSUFFIX=.gz; \
+	fi; \
+	${SED} -e 's|@.GZ@|'$$GZSUFFIX'|g' ${PKGDIR}/PLIST >${PLIST_SRC}
 
-IGNORE=	package is not ready yet
-
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"
