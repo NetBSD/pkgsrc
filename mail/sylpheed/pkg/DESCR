@@ -1,0 +1,24 @@
+Sylpheed - an X based e-mail client has features (or go for it :-))
+o user-friendly and intuitive interface
+o 3-paned view like many Windoze-based mail client
+o ability of keyboard-only operation
+o Mew/Wanderlust-like key bind
+o multipart MIME
+o unlimited multiple account handling
+o message queueing
+o assortment function
+o XML-based address book
+o APOP support
+o unread message management
+o MH folder support
+o multithread support (experimental)
+o can import mbox
+o drag & drop (partially implemented)
+o fast thread display
+o high-speed message processing
+o lightweight resource usage
+o easily customizable configuration
+o "Attract by subject" faculty, which is convenient when thread is
+  broken on Mailing List and so on.
+o supports automake + autoconf, and internationalization of message by gettext
+o integrated NetNews client (partially implemented)
