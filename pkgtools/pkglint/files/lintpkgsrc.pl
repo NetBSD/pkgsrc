@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.63 2001/12/27 13:31:45 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.64 2001/12/27 19:13:14 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -407,11 +407,12 @@ sub get_default_makefile_vars
 sub invalid_version
     {
     my($pkgmatch) = @_;
-    my($fail);
+    my($fail, $ok);
     my(@pkgmatches, @todo);
 
     @todo = ($pkgmatch);
 
+    # We handle {} here, everything else in package_globmatch
     while ($pkgmatch = shift @todo)
 	{
 	if ($pkgmatch =~ /(.*){([^{}]+)}(.*)/)
@@ -438,7 +439,10 @@ sub invalid_version
 	    else
 		{ $fail .= "Unknown package: '$pkg' version $badver\n"; }
 	    }
+	else
+	    { $ok = 1; } # If we find one match, don't bitch about others
 	}
+    $ok && ($fail = undef);
     $fail;
     }
 
