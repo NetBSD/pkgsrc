@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2003/07/25 12:47:15 adam Exp $
+# $NetBSD: Makefile,v 1.83 2003/08/02 03:57:14 grant Exp $
 #
 
 DISTNAME=		ethereal-0.9.14
@@ -31,9 +31,6 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-net-snmp=${BUILDLINK_PREFIX.net-snmp}
 CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-
-# we need a working sed
-.include "../../textproc/gsed/buildlink2.mk"
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../net/libpcap/buildlink2.mk"
