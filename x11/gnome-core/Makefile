@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.29 1999/10/23 00:12:45 tron Exp $
-#
+# $NetBSD: Makefile,v 1.30 1999/10/23 11:01:43 tron Exp $
 
-DISTNAME=		gnome-core-1.0.9
+DISTNAME=		gnome-core-1.0.53
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=gnome-1.0/sources/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=gnome-1.0.53/sources/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 
 DEPENDS+=		esound-*:../../audio/esound
+DEPENDS+=		libghttp-*:../../www/libghttp
 DEPENDS+=		gnome-libs-*:../../x11/gnome-libs
-# "libgtop" packages is broken at the moment.
-#DEPENDS+=		libgtop-1.0.2:../../devel/libgtop
+DEPENDS+=		libgtop-*:../../devel/libgtop
 
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
@@ -20,9 +19,16 @@ USE_LIBTOOL=		yes
 
 LOCALSTATEDIR=		/var/gnome
 
+ESD_CONFIG=		${LOCALBASE}/bin/esd-config
+ESD_CFLAGS=		`${ESD_CONFIG} --cflags`
+ESD_LIBS=		`${ESD_CONFIG} --libs`
+
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
 CPPFLAGS=		-I${LOCALBASE}/include -I${WRKDIR}
-CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} \
+CONFIGURE_ENV+=		ESD_CFLAGS="${ESD_CFLAGS}" \
+			ESD_CONFIG="${ESD_CONFIG}" \
+			ESD_LIBS="${ESD_LIBS}" \
+			LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} \
 			CPPFLAGS="${CPPFLAGS}"
 
 pre-configure:
