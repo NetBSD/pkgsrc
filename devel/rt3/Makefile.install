@@ -1,0 +1,67 @@
+# $NetBSD: Makefile.install,v 1.1.1.1 2004/08/03 15:33:50 cube Exp $
+
+RT_SHARE_DIR=		${PREFIX}/share/rt3
+RT_EXAMPLE_DIR= 	${PREFIX}/share/examples/rt3
+RT_LIB_DIR=		${PREFIX}/lib/rt3
+RT_VAR_DIR=		${VARBASE}/spool/rt3
+RT_LOCAL_DIR?=		${RT_SHARE_DIR}/local
+RT_HTML_DIR=		${RT_SHARE_DIR}/html
+RT_DOC_DIR=		${PREFIX}/share/doc/rt3
+
+BUILD_DEFS+=		RT_LOCAL_DIR
+
+OWN_DIRS+=		${RT_LOCAL_DIR} ${RT_SHARE_DIR} ${RT_VAR_DIR}
+
+SUBST_CLASSES+=		prefix
+SUBST_FILES.prefix=	config.layout
+SUBST_SED.prefix=	-e s,@PREFIX@,${PREFIX},		\
+			-e s,@PKGSYSCONFDIR@,${PKG_SYSCONFDIR},	\
+			-e s,@RTLIBDIR@,${RT_LIB_DIR},		\
+			-e s,@RTSHAREDIR@,${RT_SHARE_DIR},	\
+			-e s,@RTHTMLDIR@,${RT_HTML_DIR},	\
+			-e s,@RTDOCDIR@,${RT_DOC_DIR},		\
+			-e s,@RTVARDIR@,${RT_VAR_DIR},		\
+			-e s,@RTLOCALDIR@,${RT_LOCAL_DIR},
+SUBST_STAGE.prefix=	pre-configure
+
+RT_CONFIG_FILES=	RT_Config.pm RT_SiteConfig.pm
+RT_SUPPORT_FILES=	acl.Informix acl.Oracle acl.Pg acl.Sybase acl.mysql		\
+			initialdata schema.Informix schema.Oracle schema.Pg		\
+			schema.Sybase schema.mysql
+
+.for _file_ in ${RT_CONFIG_FILES}
+CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
+${ROOT_USER} ${RT_GROUP} 0550
+.endfor
+.for _file_ in ${RT_SUPPORT_FILES}
+CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
+${ROOT_USER} ${RT_GROUP} 0500
+.endfor
+
+INSTALL_EXTRA_TMPL+=	${PKGDIR}/INSTALL
+FILES_SUBST+=		RTVARDIR=${RT_VAR_DIR:Q} RTLOCALDIR=${RT_LOCAL_DIR:Q}
+FILES_SUBST+=		WEBUSER=${APACHE_USER} WEBGROUP=${APACHE_GROUP}
+
+do-install:
+	@${ECHO} "=> Configuration files"
+	${INSTALL_DATA_DIR} ${RT_EXAMPLE_DIR}
+.for _file_ in ${RT_CONFIG_FILES} ${RT_SUPPORT_FILES}
+	${INSTALL_DATA} ${WRKSRC}/etc/${_file_} ${RT_EXAMPLE_DIR}
+.endfor
+	@${ECHO} "=> Libraries"
+	${INSTALL_DATA_DIR} ${RT_LIB_DIR}
+	cd ${WRKSRC}/lib && ${FIND} . -type f ! -name '*.orig' 2>/dev/null | ${PAX} -rw ${RT_LIB_DIR}
+	@${ECHO} "=> Binaries"
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/rt-mailgate ${WRKSRC}/bin/rt-crontool		\
+		${WRKSRC}/bin/mason_handler.fcgi ${WRKSRC}/bin/mason_handler.scgi	\
+		${WRKSRC}/bin/standalone_httpd ${WRKSRC}/bin/mason_handler.svc		\
+		${WRKSRC}/bin/rt ${WRKSRC}/bin/webmux.pl ${WRKSRC}/bin/rt-crontool	\
+		${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/sbin/rt-setup-database				\
+		${WRKSRC}/sbin/rt-test-dependencies ${PREFIX}/sbin
+	@${ECHO} "=> HTML documents"
+	${INSTALL_DATA_DIR} ${RT_HTML_DIR}
+	cd ${WRKSRC}/html && ${FIND} . -type f ! -name '*.orig' 2>/dev/null | ${PAX} -rw ${RT_HTML_DIR}
+	@${ECHO} "=> Documentation"
+	${INSTALL_DATA_DIR} ${RT_DOC_DIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${RT_DOC_DIR}
