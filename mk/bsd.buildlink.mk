@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.49 2001/10/31 14:29:04 tv Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.50 2001/11/30 17:14:14 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -138,7 +138,9 @@ MAKE_ENV+=		BUILDLINK_LDFLAGS="${_BUILDLINK_LDFLAGS}"
 .endif
 
 # Filter out libtool archives from the list of file to link into
-# ${BUILDLINK_DIR}.
+# ${BUILDLINK_DIR}.  Linking against a libtool archive causes the final
+# installed locations of the libraries to be used, which defeats what
+# buildlink tries to accomplish, so we avoid this when we can.
 #
 _LIBTOOL_ARCHIVE_FILTER=						\
 	${SED}	-e 's|[^[:blank:]]*lib/[^[:blank:]]*.la$$||g'		\
@@ -148,7 +150,7 @@ _BUILDLINK_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink//}_buildlink_done; \
 	if [ ! -f $${cookie} ]; then					\
-		${ECHO_MSG} "Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
+		${ECHO_MSG} "=> Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
 		${MKDIR} ${BUILDLINK_DIR};				\
 		files="${BUILDLINK_FILES.${.TARGET:S/-buildlink//}:S/^/${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}\//g}"; \
 		files="`${ECHO} $${files} | ${_LIBTOOL_ARCHIVE_FILTER}`"; \
@@ -187,7 +189,7 @@ USE_CONFIG_WRAPPER=	# defined
 .endif
 
 BUILDLINK_CONFIG_WRAPPER_SED?=		# empty
-BUILDLINK_CONFIG_WRAPPER_POST_SED+=					\
+_BUILDLINK_CONFIG_WRAPPER_POST_SED+=					\
 	-e "s|-I${LOCALBASE}/|-I${BUILDLINK_DIR}/|g"			\
 	-e "s|-L${LOCALBASE}/|-L${BUILDLINK_DIR}/|g"
 
@@ -195,59 +197,75 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink-config-wrapper//}_buildlink_config_wrapper_done; \
 	if [ ! -f $${cookie} ]; then					\
-		${ECHO_MSG} "Creating wrapper script ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}."; \
+		${ECHO_MSG} "=> Creating wrapper script ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}."; \
 		${MKDIR} ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}:H}; \
 		(${ECHO} '#!/bin/sh';					\
 		${ECHO} '';						\
 		${ECHO} '${ECHO} "`${BUILDLINK_CONFIG.${.TARGET:S/-buildlink-config-wrapper//}} $$*`" | ${SED} \'; \
 		${ECHO} '	${BUILDLINK_CONFIG_WRAPPER_SED} \';	\
-		${ECHO} '	${BUILDLINK_CONFIG_WRAPPER_POST_SED} \'; \
+		${ECHO} '	${_BUILDLINK_CONFIG_WRAPPER_POST_SED} \'; \
 		) > ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
 		${CHMOD} +x ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
 		${ECHO} ${BUILDLINK_CONFIG.${.TARGET:S/-buildlink-config-wrapper//}} >> $${cookie}; \
 	fi
 
-.include "../../mk/bsd.prefs.mk"
-
 _CHECK_IS_TEXT_FILE=	${FILE_CMD} $${file} | ${GREP} "text" >/dev/null 2>&1
 
-# _REPLACE_LIBNAMES_SCRIPT runs sed with ${REPLACE_LIBNAMES_SED} as the
-# substitution expression on the files specified in $${replace_files}.
-# The following variables need to be predefined:
+# _BUILDLINK_SUBST_USE is a make macro that executes code to do general text
+# replacement in files.  The following variables are used:
 #
-#	cookie			cookie created after this command is run
-#	replace_files		files on which to run the substitution
-#	message			message to display
+# BUILDLINK_SUBST_MESSAGE.<package>	message to display, noting what is
+#					being substituted
+#					
+# BUILDLINK_SUBST_FILES.<package>	files on which to run the substitution
 #
-_REPLACE_LIBNAMES_SCRIPT=						\
-	${MKDIR} ${BUILDLINK_DIR};					\
-	if [ -n "$${replace_files}" -a -n "${REPLACE_LIBNAMES_SED:Q}" ]; then \
-		${ECHO_MSG} "$${message}";				\
-		cd ${WRKSRC};						\
-		for file in $${replace_files}; do			\
-			if ${_CHECK_IS_TEXT_FILE}; then			\
-				${ECHO_MSG} "	$${file}";		\
-				${SED}	${REPLACE_LIBNAMES_SED}		\
-					$${file} > $${file}.fixed;	\
-				if [ -x $${file} ]; then		\
-					${CHMOD} +x $${file}.fixed;	\
+# BUILDLINK_SUBST_SED.<package>		sed(1) substitution expression to run
+#					on the specified files.
+#
+# The _BUILDLINK_SUBST_USE macro code will try to verify that a file is a text
+# file before attempting any substitutions.
+#
+_BUILDLINK_SUBST_USE: .USE
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink-subst//:S/-/_/g}_buildlink_subst_done; \
+	if [ ! -f $${cookie} ]; then					\
+		${MKDIR} ${BUILDLINK_DIR};				\
+		files="${BUILDLINK_SUBST_FILES.${.TARGET:S/-buildlink-subst//}}"; \
+		if [ -n "$${files}" -a -n "${BUILDLINK_SUBST_SED.${.TARGET:S/-buildlink-subst//}:Q}" ]; then \
+			${ECHO_MSG} "=> "${BUILDLINK_SUBST_MESSAGE.${.TARGET:S/-buildlink-subst//}}; \
+			cd ${WRKSRC};					\
+			for file in $${files}; do			\
+				if ${_CHECK_IS_TEXT_FILE}; then		\
+					${SED}	${BUILDLINK_SUBST_SED.${.TARGET:S/-buildlink-subst//}} \
+						$${file} > $${file}.fixed; \
+					if [ -x $${file} ]; then	\
+						${CHMOD} +x $${file}.fixed; \
+					fi;				\
+					${MV} -f $${file}.fixed $${file}; \
+					${ECHO} $${file} >> $${cookie};	\
 				fi;					\
-				${MV} -f $${file}.fixed $${file};	\
-				${ECHO} $${file} >> $${cookie};		\
-			fi;						\
-		done;							\
+			done;						\
+		fi;							\
 	fi
 
+.include "../../mk/bsd.prefs.mk"
+
+MAKEFILE_PATTERNS+=	${MAKEFILE:T}
 MAKEFILE_PATTERNS+=	Makefile
 MAKEFILE_PATTERNS+=	Makeconf
 MAKEFILE_PATTERNS+=	*.mk
+
+CONFIGURE_PATTERNS+=	${CONFIGURE_SCRIPT:T}
+CONFIGURE_PATTERNS+=	configure
+CONFIGURE_PATTERNS+=	configure.gnu
+CONFIGURE_PATTERNS+=	Configure
 
 .if (${OBJECT_FMT} == "a.out") || defined(BUILDLINK_AOUT_DEBUG)
 REPLACE_LIBNAME_PATTERNS+=	${MAKEFILE_PATTERNS}
 _REPLACE_LIBNAME_PATTERNS_FIND=	\
 	\( ${REPLACE_LIBNAME_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
 _REPLACE_LIBNAME_CONFIGURE_PATTERNS_FIND=	\
-	\( -name "${CONFIGURE_SCRIPT:T}" \)
+	\( ${CONFIGURE_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
 
 REPLACE_LIBNAMES_CONFIGURE+=	\
 	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_LIBNAME_CONFIGURE_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT}`
@@ -256,35 +274,32 @@ REPLACE_LIBNAMES+=	\
 	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_LIBNAME_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT}`
 
 .if defined(HAS_CONFIGURE) || defined(GNU_CONFIGURE)
-_CONFIGURE_PREREQ+=	replace-libnames-configure
+_CONFIGURE_PREREQ+=	libnames-configure-buildlink-subst
 
-# Fix linking on a.out platforms in configure scripts by changing library
-# references to the true library names.
+# Fix linking on a.out platforms in configure scripts and in Makefiles by
+# changing library references to the true library names.
 #
-replace-libnames-configure:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cookie=${BUILDLINK_DIR}/.replace_libnames_configure_done;	\
-	if [ ! -f $${cookie} ]; then					\
-		replace_files="${REPLACE_LIBNAMES_CONFIGURE}";		\
-		message="Fixing library name references in configure scripts:"; \
-		${_REPLACE_LIBNAMES_SCRIPT};				\
-	fi
+BUILDLINK_SUBST_MESSAGE.libnames-configure=	\
+	"Fixing library name references in configure scripts."
+BUILDLINK_SUBST_FILES.libnames-configure=	${REPLACE_LIBNAMES_CONFIGURE}
+BUILDLINK_SUBST_SED.libnames-configure=		${REPLACE_LIBNAMES_SED}
+
+libnames-configure-buildlink-subst: _BUILDLINK_SUBST_USE
 .endif
 
-post-configure: replace-libnames-makefiles
+_CONFIGURE_POSTREQ+=	libnames-makefiles-buildlink-subst
 
 # Fix linking on a.out platforms by changing library references in Makefiles
 # to the true library names.
 #
-replace-libnames-makefiles:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cookie=${BUILDLINK_DIR}/.replace_libnames_makefiles_done;	\
-	if [ ! -f $${cookie} ]; then					\
-		replace_files="${REPLACE_LIBNAMES}";			\
-		message="Fixing library name references in Makefiles:";	\
-		${_REPLACE_LIBNAMES_SCRIPT};				\
-	fi
-.endif	# a.out
+BUILDLINK_SUBST_MESSAGE.libnames-makefiles=	\
+	"Fixing library name references in Makefiles."
+BUILDLINK_SUBST_FILES.libnames-makefiles=	${REPLACE_LIBNAMES}
+BUILDLINK_SUBST_SED.libnames-makefiles=		${REPLACE_LIBNAMES_SED}
+
+libnames-makefiles-buildlink-subst: _BUILDLINK_SUBST_USE
+
+.endif	# a.out || BUILDLINK_AOUT_DEBUG
 
 REPLACE_RPATH_PATTERNS+=	${MAKEFILE_PATTERNS}
 _REPLACE_RPATH_PATTERNS_FIND=	\
@@ -296,32 +311,19 @@ REPLACE_RPATH+=	\
 REPLACE_RPATH_SED+=	\
 	-e "s|-R[ 	]*${BUILDLINK_DIR}/|-R${LOCALBASE}/|g"
 
-post-configure: replace-rpath
+.if defined(_USE_RPATH) && (${_USE_RPATH} == "yes")
+_CONFIGURE_POSTREQ+=	rpath-buildlink-subst
 
-replace-rpath:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cookie=${BUILDLINK_DIR}/.replace_rpath_done;			\
-	if [ ! -f $${cookie} ]; then					\
-		${MKDIR} ${BUILDLINK_DIR};				\
-		replace_files="${REPLACE_RPATH}";			\
-		if [ -n "$${replace_files}" ]; then			\
-			${ECHO_MSG} "Removing rpath references to buildlink directories:"; \
-			cd ${WRKSRC};					\
-			for file in $${replace_files}; do		\
-				if ${_CHECK_IS_TEXT_FILE}; then		\
-					${ECHO_MSG} "	$${file}";	\
-					${SED}	${REPLACE_RPATH_SED}	\
-						$${file} > $${file}.fixed; \
-					if [ -x $${file} ]; then	\
-						${CHMOD} +x $${file}.fixed; \
-					fi;				\
-					${MV} -f $${file}.fixed $${file}; \
-					${ECHO} $${file} >> $${cookie};	\
-				fi;					\
-			done;						\
-		fi;							\
-	fi
+BUILDLINK_SUBST_MESSAGE.rpath=  \
+	"Removing rpath references to buildlink directories."
+BUILDLINK_SUBST_FILES.rpath=    ${REPLACE_RPATH}
+BUILDLINK_SUBST_SED.rpath=      ${REPLACE_RPATH_SED}
 
+rpath-buildlink-subst: _BUILDLINK_SUBST_USE
+.endif
+
+# Fix files by removing buildlink directory references and library names.
+#
 REPLACE_BUILDLINK_PATTERNS+=	*.lai
 REPLACE_BUILDLINK_PATTERNS+=	*-config
 REPLACE_BUILDLINK_PATTERNS+=	*Conf.sh
@@ -332,42 +334,21 @@ _REPLACE_BUILDLINK_PATTERNS_FIND=	\
 REPLACE_BUILDLINK+=	\
 	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_BUILDLINK_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT}`
 
-.if defined(REPLACE_BUILDLINK)
-post-build: replace-buildlink
+post-build: unbuildlink-buildlink-subst
 
 REPLACE_BUILDLINK_SED?=		# empty
-REPLACE_BUILDLINK_POST_SED+=						\
+_REPLACE_BUILDLINK_POST_SED+=						\
 	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"			\
 	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"
 
-REPLACE_BUILDLINK_POST_SED+=	${REPLACE_RPATH_SED}
+BUILDLINK_SUBST_MESSAGE.unbuildlink=	\
+	"Fixing directory and library names in files-to-be-installed."
+BUILDLINK_SUBST_FILES.unbuildlink=	${REPLACE_BUILDLINK}
+BUILDLINK_SUBST_SED.unbuildlink=	${REPLACE_BUILDLINK_SED}	\
+					${_REPLACE_BUILDLINK_POST_SED}	\
+					${REPLACE_LIBNAMES_SED}		\
+					${REPLACE_RPATH_SED}
 
-# Fix files by removing buildlink directory references and library names.
-replace-buildlink:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cookie=${BUILDLINK_DIR}/.replace_buildlink_done;		\
-	if [ ! -f $${cookie} ]; then					\
-		${MKDIR} ${BUILDLINK_DIR};				\
-		replace_files="${REPLACE_BUILDLINK}";			\
-		if [ -n "$${replace_files}" ]; then			\
-			${ECHO_MSG} "Fixing directory references and library names:"; \
-			cd ${WRKSRC};					\
-			for file in $${replace_files}; do		\
-				if ${_CHECK_IS_TEXT_FILE}; then		\
-					${ECHO_MSG} "	$${file}";	\
-					${SED}	${REPLACE_BUILDLINK_SED} \
-						${REPLACE_BUILDLINK_POST_SED} \
-						${REPLACE_LIBNAMES_SED}	\
-						$${file} > $${file}.fixed; \
-					if [ -x $${file} ]; then	\
-						${CHMOD} +x $${file}.fixed; \
-					fi;				\
-					${MV} -f $${file}.fixed $${file}; \
-					${ECHO} $${file} >> $${cookie};	\
-				fi;					\
-			done;						\
-		fi;							\
-	fi
-.endif	# REPLACE_BUILDLINK
+unbuildlink-buildlink-subst: _BUILDLINK_SUBST_USE
 
 .endif	# _BSD_BUILDLINK_MK
