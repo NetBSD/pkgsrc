@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2004/02/10 20:45:01 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2004/02/11 11:30:50 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
@@ -37,6 +37,28 @@ BUILDLINK_IS_BUILTIN.ncurses!=						\
 		${ECHO} "NO";						\
 	fi
 .  endif
+#
+# XXX By default, assume that the builtin curses on NetBSD systems
+# XXX supports ncurses.
+#
+.  if ${OPSYS} == "NetBSD"
+BUILDLINK_USE_BUILTIN.ncurses=	YES
+#
+# These versions of NetBSD didn't have a curses library that was
+# capable of replacing ncurses.
+#
+# XXX In reality, no version of NetBSD has a curses library that can
+# XXX completely replace ncurses; however, some version implement
+# XXX enough of ncurses that some packages are happy.
+#
+_INCOMPAT_CURSES=	NetBSD-0.*-* NetBSD-1.[0123]*-*
+_INCOMPAT_CURSES+=	NetBSD-1.4.*-* NetBSD-1.4[A-X]-*
+.    for _pattern_ in ${_INCOMPAT_CURSES} ${INCOMPAT_CURSES}
+.      if !empty(MACHINE_PLATFORM:M${_pattern_})
+BUILDLINK_IS_BUILTIN.ncurses=	NO
+.      endif
+.    endfor
+.  endif
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.ncurses=${BUILDLINK_IS_BUILTIN.ncurses}
 .endif
 
@@ -56,28 +78,6 @@ BUILDLINK_USE_BUILTIN.ncurses=	YES
 .if !defined(BUILDLINK_USE_BUILTIN.ncurses)
 .  if !empty(BUILDLINK_IS_BUILTIN.ncurses:M[nN][oO])
 BUILDLINK_USE_BUILTIN.ncurses=	NO
-#
-# XXX By default, assume that the builtin curses on NetBSD systems
-# XXX supports ncurses.
-#
-.    if ${OPSYS} == "NetBSD"
-BUILDLINK_USE_BUILTIN.ncurses=	YES
-#
-# These versions of NetBSD didn't have a curses library that was
-# capable of replacing ncurses.
-#
-# XXX In reality, no version of NetBSD has a curses library that can
-# XXX completely replace ncurses; however, some version implement
-# XXX enough of ncurses that some packages are happy.
-#
-_INCOMPAT_CURSES=	NetBSD-0.*-* NetBSD-1.[0123]*-*
-_INCOMPAT_CURSES+=	NetBSD-1.4.*-* NetBSD-1.4[A-X]-*
-.      for _pattern_ in ${_INCOMPAT_CURSES}
-.        if !empty(MACHINE_PLATFORM:M${_pattern_})
-BUILDLINK_USE_BUILTIN.ncurses=	NO
-.        endif
-.      endfor
-.    endif
 .  else
 BUILDLINK_USE_BUILTIN.ncurses=	YES
 #
