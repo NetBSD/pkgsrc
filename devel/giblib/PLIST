@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/20 10:55:40 rh Exp $
+bin/giblib-config
+include/giblib/gib_btree.h
+include/giblib/gib_hash.h
+include/giblib/gib_imlib.h
+include/giblib/gib_list.h
+include/giblib/gib_queue.h
+include/giblib/gib_stack.h
+include/giblib/gib_style.h
+include/giblib/gib_utils.h
+include/giblib/giblib.h
+include/giblib/giblib_config.h
+lib/libgiblib.a
+lib/libgiblib.la
+lib/libgiblib.so
+lib/libgiblib.so.1
+lib/libgiblib.so.1.4
+share/doc/giblib/AUTHORS
+share/doc/giblib/ChangeLog
+share/doc/giblib/README
+share/doc/giblib/TODO
+@dirrm include/giblib
+@dirrm share/doc/giblib
