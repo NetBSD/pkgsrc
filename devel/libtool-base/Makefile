@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.52 2004/12/22 02:46:03 tv Exp $
+# $NetBSD: Makefile,v 1.53 2005/01/01 20:53:19 tv Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
 
 #
 # HEADS UP!  Before changing PKGREVISION:  Did you remember to merge
-# any changes into the m4 manual diffs?  Updating patch-a* is not enough!
+# any changes into the m4 manual diffs?  Updating patch-a[bd] is not enough!
 #
 # See devel/libtool/patches/manual.README for instructions on how to make
 # these patch files properly, so that your changes won't be lost completely
