@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/05/07 01:14:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/15 14:41:13 jmmv Exp $
 #
 
-DISTNAME=		gnome-mag-0.10.10
+DISTNAME=		gnome-mag-0.10.11
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-mag/0.10/}
 EXTRACT_SUFX=		.tar.bz2
