@@ -1,19 +1,8 @@
-$NetBSD: patch-aj,v 1.3 2000/05/30 19:13:18 drochner Exp $
+$NetBSD: patch-aj,v 1.4 2000/07/10 10:52:19 wiz Exp $
 
---- src/IIOP/Makefile.in.orig	Mon Feb 21 19:32:39 2000
-+++ src/IIOP/Makefile.in	Sat May 27 11:58:55 2000
-@@ -91,9 +91,7 @@
- YACC = @YACC@
- pkglibdir = @pkglibdir@
- 
--LIBWRAP_PATH = @LIBWRAP_PATH@
--@HAVE_HOSTS_ACCESS_TRUE@libwrap_files = $(addsuffix .lo, $(basename $(filter %.o, $(shell ar t $(LIBWRAP_PATH)))))
--@HAVE_HOSTS_ACCESS_FALSE@libwrap_files = 
-+libwrap_files = 
- 
- libIIOPincludedir = $(includedir)/IIOP
- 
-@@ -126,10 +124,7 @@
+--- src/IIOP/Makefile.in.orig	Mon Jul  3 21:08:22 2000
++++ src/IIOP/Makefile.in	Mon Jul 10 01:59:14 2000
+@@ -129,10 +129,7 @@
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@

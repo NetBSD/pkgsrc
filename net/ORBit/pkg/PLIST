@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2000/06/20 22:42:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2000/07/10 10:52:20 wiz Exp $
 bin/libIDL-config
 bin/name-client
 bin/old-name-server
@@ -76,19 +76,20 @@ info/libIDL.info
 lib/libIDL-0.6.so.0.0
 lib/libIDL.a
 lib/libIDL.la
+lib/libIDL.so
 lib/libIDLConf.sh
 lib/libIIOP.a
 lib/libIIOP.la
-lib/libIIOP.so.5.1
+lib/libIIOP.so.5.2
 lib/libORBit.a
 lib/libORBit.la
-lib/libORBit.so.5.1
+lib/libORBit.so.5.2
 lib/libORBitCosNaming.a
 lib/libORBitCosNaming.la
-lib/libORBitCosNaming.so.5.1
+lib/libORBitCosNaming.so.5.2
 lib/libORBitutil.a
 lib/libORBitutil.la
-lib/libORBitutil.so.5.1
+lib/libORBitutil.so.5.2
 lib/libname-server.a
 lib/liborbit-c-backend.a
 lib/libpopt.a
