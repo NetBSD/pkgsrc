@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4059 2003/12/12 23:18:40 recht Exp $
+$NetBSD: CHANGES,v 1.4060 2003/12/13 00:46:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3352,3 +3352,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pcre to 4.5 [jmmv 2003-12-12]
 	Updated distcc to 2.11.2 [jmmv 2003-12-12]
 	Updated win32-codecs to 031029 [recht 2003-12-12]
+	Updated atk to 1.4.1 [wiz 2003-12-13]
