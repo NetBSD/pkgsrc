@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5113 2004/03/06 23:02:18 pooka Exp $
+$NetBSD: CHANGES,v 1.5114 2004/03/07 00:09:41 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1195,3 +1195,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated openmortal to 0.6 [xtraeme 2004-03-06]
 	Added gnats-4.0 [recht 2004-03-06]
 	Added py-Gnosis-Utils-1.1.1 [recht 2004-03-06]
+	Updated bomberclone to 0.11.2 [snj 2004-03-07]
