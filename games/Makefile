@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2003/02/15 08:17:52 salo Exp $
+# $NetBSD: Makefile,v 1.161 2003/02/17 15:00:33 zuntum Exp $
 #
 
 COMMENT=	Games
@@ -179,6 +179,7 @@ SUBDIR+=	xskat
 SUBDIR+=	xsoldier
 SUBDIR+=	xtris
 SUBDIR+=	xtux
+SUBDIR+=	xvier
 SUBDIR+=	xworm
 SUBDIR+=	xzip
 SUBDIR+=	zombies
