@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/03/29 12:40:56 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/04/15 15:08:21 wiz Exp $
 
 DISTNAME=	# empty
 CATEGORIES=	fonts
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}
 MASTER_SITES=	ftp://ftp.mirror.ac.uk/sites/ftp.netscape.com/pub/communicator/extras/fonts/windows/ \
 		ftp://ftp.riken.go.jp/pub/net/netscape/communicator/extras/fonts/windows/ \
 		ftp://ftp.man.poznan.pl/mirrors/mirrorsite.netscape.com/netscape/communicator/extras/fonts/windows/ \
-		ftp://ftp.uni-hamburg.de//pub/soft/infosystems/www/clients/netscape/communicator/extras/fonts/windows/ \
+		ftp://ftp.uni-hamburg.de/pub/soft/infosystems/www/clients/netscape/communicator/extras/fonts/windows/ \
 		ftp://ftp-au.netscape.com/pub/communicator/extras/fonts/windows/
 DISTFILES=	${FONT_FILE} ${DOC_FILES}
 
