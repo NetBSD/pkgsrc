@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6382 2004/06/28 18:25:04 jmmv Exp $
+$NetBSD: CHANGES,v 1.6383 2004/06/28 18:36:23 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3160,3 +3160,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgail-gnome to 1.0.4 [jmmv 2004-06-28]
 	Updated libgnomeprint to 2.6.2 [jmmv 2004-06-28]
 	Updated libgnomeprintui to 2.6.2 [jmmv 2004-06-28]
+	Updated libgtkhtml to 2.6.2 [jmmv 2004-06-28]
