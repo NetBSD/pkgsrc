@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.64 2002/02/13 08:42:12 abs Exp $
+# $NetBSD: pkglint.pl,v 1.65 2002/02/27 11:20:59 abs Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -896,7 +896,7 @@ EOF
 				print "OK: non-URL \"$i\" ok.\n"
 					if ($verbose);
 			}
-		if ($tmp !~ /\nDYNAMIC_MASTER_SITES[+?]?=/) {
+		if ($tmp =~ /\nDYNAMIC_MASTER_SITES[+?]?=/) {
 			&perror("WARN: MASTER_SITES and DYNAMIC_MASTER_SITES ".
 				"found. Is this ok?");
 			}
