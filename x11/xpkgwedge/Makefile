@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/06/26 16:39:23 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/06/26 16:41:11 tv Exp $
 #
 
 DISTNAME=	xpkgwedge-0.1
@@ -7,8 +7,7 @@ DISTFILES=	# none
 
 MAINTAINER=	tv@netbsd.org
 
-RESTRICTED=	optional	# NOT for distro as a "binary" pkg
-IS_INTERACTIVE=	yes		# should not be built when batch
+RESTRICTED=	optional package affecting many pkg builds
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
