@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.2 2004/03/11 17:26:02 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2004/04/16 14:44:33 mycroft Exp $
 
---- src/xine-engine/video_decoder.c.orig	2003-12-08 11:36:27.000000000 +0100
-+++ src/xine-engine/video_decoder.c
-@@ -41,6 +41,10 @@
- #include "xineutils.h"
- #include <sched.h>
+--- src/xine-engine/video_decoder.c.orig	2004-04-08 16:03:42.000000000 +0000
++++ src/xine-engine/video_decoder.c	2004-04-16 14:29:15.000000000 +0000
+@@ -43,6 +43,10 @@
+ 
+ #define SPU_SLEEP_INTERVAL (90000/2)
  
 +#ifndef SCHED_OTHER
 +#define SCHED_OTHER 0
 +#endif
 +
+ 
  static void update_spu_decoder (xine_stream_t *stream, int type) {
  
-   int streamtype = (type>>16) & 0xFF;
-@@ -390,7 +394,9 @@ void _x_video_decoder_init (xine_stream_
+@@ -443,7 +447,9 @@
    } else {
       
      pthread_attr_t       pth_attrs;
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.2 2004/03/11 17:26:02 jmmv Exp $
      int		       err, num_buffers;
      /* The fifo size is based on dvd playback where buffers are filled
       * with 2k of data. With 500 buffers and a typical video data rate
-@@ -411,10 +417,12 @@ void _x_video_decoder_init (xine_stream_
+@@ -464,10 +470,12 @@
      stream->spu_track_map_entries = 0;
    
      pthread_attr_init(&pth_attrs);
