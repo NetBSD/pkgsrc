@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/10/10 01:01:10 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/18 21:05:28 jlam Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -14,8 +14,10 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://jakarta.apache.org/
 COMMENT=	Apache Project's Java-Based make(1) replacement
 
-USE_JAVA=	yes
 DEPENDS+=	crimson>=1.1.3:../../textproc/crimson
+
+USE_BUILDLINK2=	# defined
+USE_JAVA=	# defined
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
@@ -40,5 +42,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/java/ant
 	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${PREFIX}/share/doc/java/ant
 
+.include "../../mk/java.mk"
 .include "../../mk/bsd.pkg.mk"
+
 CLASSPATH:=	${CLASSPATH}:${LOCALBASE}/lib/java/crimson.jar
