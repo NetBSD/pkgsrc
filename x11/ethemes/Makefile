@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2000/02/05 15:41:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/03/02 17:58:26 wiz Exp $
 
 DISTNAME=	ethemes-0.1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://themes.org/pub/themes/e/
-DIST_SUBDIR=	ethemes
 DISTFILES=	${E_THEMES}
 
 MAINTAINER=	packages@netbsd.org
@@ -11,6 +10,7 @@ HOMEPAGE=	http://e.themes.org/
 
 DEPENDS+=	enlightenment-0.16.2:../../x11/enlightenment
 
+DIST_SUBDIR=	ethemes
 USE_X11BASE=	yes
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
@@ -24,15 +24,15 @@ E_DATADIR=	share/enlightenment/themes
 .include "../../mk/bsd.prefs.mk"
 
 E_THEMES?=	Absolute_E-DR16-199911060830.etheme \
-	ApplePlatinum-DR16-199910201051.etheme \
+	ApplePlatinum-DR16-200001161300.etheme \
 	BevelFree-DR16-199908221339.etheme Black-DR16-199911201455.etheme \
 	E-Tech_Hydro-DR16-199912241355.etheme Ebench-DR16-199911181110.etheme \
 	Evisio-Green-DR16-199908220707.etheme \
-	FinalE-DR16-199912281649.etheme GTK+-DR16-199911211511.etheme \
+	FinalE-DR16-200001281514.etheme GTK+-DR16-200001090109.etheme \
 	HackerPurple138-DR16-199908131917.etheme \
 	IReX-DR16-199912221118.etheme Industrial-DR16-199910202053.etheme \
 	Sensible-DR16-199908211837.etheme Sunset-DR16-200001061137.etheme \
-	X11-DR16-199910131422.etheme arctic-DR16-199912280920.etheme \
+	X11-DR16-199910131422.etheme arctic-DR16-200003010708.etheme \
 	eMac-DR16-199912101635.etheme small-e-DR16-199908230041.etheme
 
 do-install:
@@ -41,6 +41,11 @@ do-install:
 	${MKDIR} ${PREFIX}/${E_DATADIR}/$$NAME ; \
 	${GTAR} -C ${PREFIX}/${E_DATADIR}/$$NAME \
 		-xzf ${DISTDIR}/${DIST_SUBDIR}/${FILE}
+.endfor
+.for DIR in Absolute_E ApplePlatinum FinalE
+	cd ${PREFIX}/${E_DATADIR}/${DIR} \
+		&& ${CHMOD} go+rx `${FIND} . -type d` \
+		&& ${CHMOD} go+r `${FIND} . -type f`
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
