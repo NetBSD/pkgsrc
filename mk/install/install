@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.35 2005/01/28 07:37:55 jlam Exp $
+# $NetBSD: install,v 1.36 2005/02/02 10:33:01 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -9,9 +9,11 @@ PRE-INSTALL)
 	# installation of the package.
 	#
 	case ${_PKG_CREATE_USERGROUP} in
-	YES)	${TEST} -x ./+USERGROUP && ./+USERGROUP ADD ${PKG_METADATA_DIR} ;;
+	YES)	${TEST} -x ./+USERGROUP &&
+			./+USERGROUP ADD ${PKG_METADATA_DIR} ;;
 	esac
-	if ${TEST} -x ./+USERGROUP && ./+USERGROUP CHECK-ADD ${PKG_METADATA_DIR}; then
+	if ${TEST} -x ./+USERGROUP &&
+	   ./+USERGROUP CHECK-ADD ${PKG_METADATA_DIR}; then
 		:
 	else
 		exit 1
@@ -34,191 +36,37 @@ PRE-INSTALL)
 		fi
 	fi
 	case ${_PKG_CONFIG} in
-        YES)	${TEST} -x ./+DIRS && ./+DIRS ADD ${PKG_METADATA_DIR} ;;
+        YES)	${TEST} -x ./+DIRS &&
+			./+DIRS ADD ${PKG_METADATA_DIR} ;;
         esac
         ;;
 
 POST-INSTALL)
 	#
-	# Note any missing package directories.
+	# Copy configuration/support files into place.
 	#
-	${TEST} -x ./+DIRS && ./+DIRS CHECK-ADD ${PKG_METADATA_DIR}
+	case ${_PKG_CONFIG} in
+        YES)	${TEST} -x ./+FILES &&
+			./+FILES ADD ${PKG_METADATA_DIR} ;;
+        esac
+	case ${_PKG_CONFIG}${_PKG_RCD_SCRIPTS} in
+	YESYES)	${TEST} -x ./+RCD_SCRIPTS &&
+			./+RCD_SCRIPTS ADD ${PKG_METADATA_DIR} ;;
+	esac
+	#
+	# Set special permissions on any files/directories that need them.
+	#
+	${TEST} -x ./+PERMS &&
+		./+PERMS ${PKG_METADATA_DIR}
 
-	msginit
-	if [ "${_PKG_CONFIG}" = "YES" ]; then
-		if [ -n "${CONF_FILES}" -o				\
-		     -n "${CONF_FILES_PERMS}" -o			\
-		     -n "${SUPPORT_FILES}" -o				\
-		     -n "${SUPPORT_FILES_PERMS}" ] ||			\
-		   [ "${_PKG_RCD_SCRIPTS}" = "YES" -a			\
-		     -n "${RCD_SCRIPTS}" ]; then
-			${CAT} << EOF
-
-===> Installing configuration/support files for ${PKGNAME}
-
-EOF
-		fi
-	fi
-	_print_file_header=1
-	eval set -- ${CONF_FILES}
-	while [ $# -gt 0 ]; do
-		samplefile="$1"; file="$2"
-		shift; shift
-
-		if [ "${_PKG_CONFIG}" = "NO" ]; then
-			if [ ${_print_file_header} -gt 0 ]; then
-				_print_file_header=0
-				msgadd ""
-				msgadd "The following files should be created for ${PKGNAME}:"
-				msgadd ""
-			fi
-			msgadd "#${file} (m=@CONF_FILES_MODE@)"
-		elif [ -f "${file}" ]; then
-			if [ ! "${file}" -ef "${samplefile}" ]; then
-				${ECHO} "	${file} already exists, example file is"
-				${ECHO} "           ${samplefile}"
-			fi
-		else
-			if [ -f "${samplefile}" ]; then
-				${ECHO} "	${file}"
-				${CP} "${samplefile}" "${file}"
-				${CHMOD} @CONF_FILES_MODE@ "${file}"
-			fi
-		fi
-	done
-	eval set -- ${SUPPORT_FILES}
-	while [ $# -gt 0 ]; do
-		samplefile="$1"; file="$2"
-		shift; shift
-
-		if [ "${_PKG_CONFIG}" = "NO" ]; then
-			if [ ${_print_file_header} -gt 0 ]; then
-				_print_file_header=0
-				msgadd ""
-				msgadd "The following files should be created for ${PKGNAME}:"
-				msgadd ""
-			fi
-			msgadd "#${file} (m=@SUPPORT_FILES_MODE@)"
-		elif [ -f "${file}" ]; then
-			if [ ! "${file}" -ef "${samplefile}" ]; then
-				${ECHO} "	${file} already exists, example file is"
-				${ECHO} "	    ${samplefile}"
-			fi
-		else
-			if [ -f "${samplefile}" ]; then
-				${ECHO} "	${file}"
-				${CP} "${samplefile}" "${file}"
-				${CHMOD} @SUPPORT_FILES_MODE@ "${file}"
-			fi
-		fi
-	done
-	eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
-	while [ $# -gt 0 ]; do
-		samplefile="$1"; file="$2"
-		owner="$3"; group="$4"; mode="$5"
-		shift; shift; shift; shift; shift
-
-		if [ "${_PKG_CONFIG}" = "NO" ]; then
-			if [ ${_print_file_header} -gt 0 ]; then
-				_print_file_header=0
-				msgadd ""
-				msgadd "The following files should be created for ${PKGNAME}:"
-				msgadd ""
-			fi
-			msgadd "#${file} (o=${owner}, g=${group}, m=${mode})"
-		elif [ -f ${file} ]; then
-			if [ ! "${file}" -ef "${samplefile}" ]; then
-				${ECHO} "	${file} already exists, example file is"
-				${ECHO} "	    ${samplefile}"
-			fi
-		else
-			if [ -f "${samplefile}" ]; then
-				${ECHO} "	${file}"
-				${CP} "${samplefile}" "${file}"
-				${CHOWN} "${owner}" "${file}"
-				${CHGRP} "${group}" "${file}"
-				${CHMOD} ${mode} "${file}"
-			fi
-		fi
-	done
-	eval set -- ${RCD_SCRIPTS}
-	for script; do
-		samplefile="${PKG_PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/${script}"
-		file="${RCD_SCRIPTS_DIR}/${script}"
-
-		if [ "${_PKG_CONFIG}" = "NO" -o				\
-		     "${_PKG_RCD_SCRIPTS}" = "NO" ]; then
-			if [ ${_print_file_header} -gt 0 ]; then
-				_print_file_header=0
-				msgadd ""
-				msgadd "The following files should be created for ${PKGNAME}:"
-				msgadd ""
-			fi
-			msgadd "#${file} (m=@RCD_SCRIPTS_MODE@)"
-		elif [ -f "${file}" ]; then
-			if [ ! "${file}" -ef "${samplefile}" ]; then
-				${ECHO} "	${file} already exists, example file is"
-				${ECHO} "	    ${samplefile}"
-			fi
-		else
-			if [ -f "${samplefile}" ]; then
-				${ECHO} "	${file}"
-				${CP} "${samplefile}" "${file}"
-				${CHMOD} @RCD_SCRIPTS_MODE@ "${file}"
-			fi
-		fi
-	done
-	_print_special_header=1
-	eval set -- ${SPECIAL_PERMS}
-	while [ $# -gt 0 ]; do
-		file="$1"; owner="$2"; group="$3"; mode="$4"
-		shift; shift; shift; shift
-
-		if [ ${_print_special_header} -gt 0 ]; then
-			_print_special_header=0
-			msgadd ""
-			msgadd "The following files and directories have special permissions:"
-			msgadd ""
-		fi
-		msgadd "#${file} (o=${owner}, g=${group}, m=${mode})"
-		${CHOWN} "${owner}" "${file}"
-		${CHGRP} "${group}" "${file}"
-		${CHMOD} ${mode} "${file}"
-	done
-	if ! msgempty; then
-		${ECHO} "==========================================================================="
-		msgprint
-		${ECHO} ""
-		${ECHO} "==========================================================================="
-	fi
-	if [ "${_PKG_CONFIG}" = "YES" ]; then
-		if [ -n "${CONF_FILES}" -o -n "${CONF_FILES_PERMS}" ]; then
-			${CAT} << EOF
-
-===========================================================================
-You may wish to customize the following files for ${PKGNAME}:
-
-EOF
-			eval set -- ${CONF_FILES}
-			while [ $# -gt 0 ]; do
-				samplefile="$1"; file="$2"
-				shift; shift
-
-				${ECHO} "	${file}"
-		       	done
-			eval set -- ${CONF_FILES_PERMS}
-			while [ $# -gt 0 ]; do
-				samplefile="$1"; file="$2"
-				owner="$3"; group="$4"; mode="$5"
-				shift; shift; shift; shift; shift
-
-				${ECHO} "	${file}"
-			done
-			${CAT} << EOF
-===========================================================================
-EOF
-		fi
-	fi
+	# Check for any missing bits after we're finished installing.
+	#
+	${TEST} -x ./+DIRS &&
+		./+DIRS CHECK-ADD ${PKG_METADATA_DIR}
+	${TEST} -x ./+FILES &&
+		./+FILES CHECK-ADD ${PKG_METADATA_DIR}
+	${TEST} -x ./+RCD_SCRIPTS &&
+		./+RCD_SCRIPTS CHECK-ADD ${PKG_METADATA_DIR}
 	;;
 
 VIEW-INSTALL)
@@ -234,13 +82,8 @@ VIEW-INSTALL)
 	# package config files to the proper view.
 	#
 	if [ "${_PKG_CONFIG}" = "YES" -a -n "${PKG_SYSCONFDEPOTBASE}" ]; then
-		if [ -n "${CONF_FILES}" -o				\
-		     -n "${CONF_FILES_PERMS}" -o			\
-		     -n "${SUPPORT_FILES}" -o				\
-		     -n "${SUPPORT_FILES_PERMS}" ]; then
-			${SETENV} PLIST_IGNORE_FILES="${CONF_IGNORE_FILES}" \
-				${LINKFARM} -t ${PKG_SYSCONFVIEWBASE} -d ${PKG_SYSCONFDEPOTBASE} ${PKGNAME}
-		fi
+		${SETENV} PLIST_IGNORE_FILES="${CONF_IGNORE_FILES}" \
+			${LINKFARM} -t ${PKG_SYSCONFVIEWBASE} -d ${PKG_SYSCONFDEPOTBASE} ${PKGNAME}
 	fi
 	;;
 esac
