@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/09/13 08:32:18 adam Exp $
+# $NetBSD: Makefile,v 1.22 2003/09/15 08:48:41 adam Exp $
 #
 
 DISTNAME=	freetype-2.1.5
@@ -26,6 +26,7 @@ CONFIGURE_ENV+=		RPATH_FLAG="${RPATH_FLAG}"
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/builds/unix/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/builds/unix/freetype2.in
 
 .include "../../mk/bsd.prefs.mk"
 
