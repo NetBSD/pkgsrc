@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2003/07/17 21:47:15 grant Exp $
+# $NetBSD: Makefile,v 1.45 2003/12/03 12:05:18 markd Exp $
 
-DISTNAME=		R-1.6.2
+DISTNAME=		R-1.8.1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/}
 EXTRACT_SUFX=		.tgz
@@ -13,11 +13,14 @@ COMMENT=		Statistical language for data analysis and graphics
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-alpha NetBSD-1.5-alpha \
 			NetBSD-1.5.*-alpha NetBSD-1.5[A-U]-alpha
 
+TEST_TARGET=		check
 USE_BUILDLINK2=		# defined
 USE_X11=		# defined
 USE_PERL5=		# defined
 USE_GMAKE=		# defined
 USE_GNU_READLINE=	# uses callback interface
+USE_MAKEINFO=		# defined
+TEXINFO_REQD=		4.0
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-R-shlib
@@ -110,6 +113,7 @@ post-install:
 	${ECHO} "@exec R CMD ${PERL5} %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null" >> ${PLIST_SRC}
 	${ECHO} "@exec ${CAT} %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null" >> ${PLIST_SRC}
 
+.include "../../devel/pcre/buildlink2.mk"
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
