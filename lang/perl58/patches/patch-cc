@@ -1,8 +1,8 @@
-$NetBSD: patch-cc,v 1.3 2005/01/06 06:46:52 tv Exp $
+$NetBSD: patch-cc,v 1.4 2005/01/21 20:23:22 tv Exp $
 
 --- hints/interix.sh.orig	Fri Apr 23 12:29:09 2004
 +++ hints/interix.sh	Fri Apr 23 12:32:55 2004
-@@ -0,0 +1,26 @@
+@@ -0,0 +1,27 @@
 +# hints/interix.sh
 +#
 +# Please check with tech-pkg@netbsd.org before making modifications
@@ -17,6 +17,7 @@ $NetBSD: patch-cc,v 1.3 2005/01/06 06:46:52 tv Exp $
 +lddlflags="-shared $lddlflags"
 +rpathflag='-Wl,-R'
 +sharpbang='#!'
++usemymalloc='false'
 +usenm='false'
 +
 +# This script UU/usethreads.cbu will get 'called-back' by Configure 
