@@ -1,8 +1,4 @@
-# New ports collection makefile for:	bsddip
-# Version required:     1.02
-# Date created:		27 aug 95
-# Whom:			joerg
-#
+# $NetBSD: Makefile,v 1.2 1998/04/16 16:50:33 tron Exp $
 # $FreeBSD Id: Makefile,v 1.5 1997/04/30 03:18:07 asami Exp
 #
 
@@ -16,4 +12,6 @@ EXTRACT_SUFX=   .tar.Z
 
 MAINTAINER=	joerg@FreeBSD.ORG
 
-.include <bsd.port.mk>
+NO_CONFIGURE=	yes
+
+.include <../../mk/bsd.pkg.mk>

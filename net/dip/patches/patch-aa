@@ -1,6 +1,6 @@
 --- Makefile.orig	Sat Jul  1 01:41:05 1995
-+++ Makefile	Sun Aug 27 23:51:53 1995
-@@ -1,123 +1,38 @@
++++ Makefile	Thu Apr 16 18:40:33 1998
+@@ -1,123 +1,39 @@
 -CC	= gcc
 -
 -CCFLAG	= -O2
@@ -29,9 +29,10 @@
 +BINDIR	= ${PREFIX}/sbin
  
 -SMPDIR	= /etc/dip.samples/
-+MAN8	= dip.8
-+MANDIR	= ${PREFIX}/man/man
-+MLINKS	= dip.8 diplogin.8
++MAN		= dip.8
++MANDIR		= ${PREFIX}/man
++MLINKS		= dip.8 diplogin.8
++MANINSTALL	= maninstall catinstall
 +
 +SAMPLES	= samples/dialout.dip.sample  samples/ReadMe.HowTo    \
 +	  samples/sample2.dip         samples/diphosts        \
