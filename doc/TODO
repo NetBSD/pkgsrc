@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.843 2003/09/09 15:16:06 adam Exp $
+$NetBSD: TODO,v 1.844 2003/09/09 19:17:42 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -80,7 +80,6 @@ Suggested package updates
 	o avidemux-2.0.14
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
-	o balsa2-2.0.14
 	o bogofilter-0.14.5.2
 	o bzflag-1.7g2
 	o cervisia-2.0
