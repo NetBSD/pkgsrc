@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2327 2003/05/26 06:55:14 martti Exp $
+$NetBSD: CHANGES,v 1.2328 2003/05/26 08:59:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2163,3 +2163,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sylpheed to 0.9.0 [chris 2003-05-26]
 	Updated cyrus-sasl to 2.1.13 [martti 2003-05-26]
 	Updated cyrus-imapd to 2.1.13 [martti 2003-05-26]
+	Updated mldonkey to 2.5.0 [wiz 2003-05-26]
