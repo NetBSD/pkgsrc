@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9757 2005/04/04 22:05:29 reinoud Exp $
+$NetBSD: CHANGES,v 1.9758 2005/04/05 02:01:52 epg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1906,3 +1906,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated abiword-plugins to 2.2.6 [adam 2005-04-04]
 	Updated postfix to 2.2.2 [martti 2005-04-04]
 	Updated udfclient to 0.4.3 [reinoud 2005-04-04]
+	Updated subversion to 1.1.4 [epg 2005-04-05]
