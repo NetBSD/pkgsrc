@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/08/22 13:47:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2004/08/23 03:30:20 schmonz Exp $
 #
 
 DISTNAME=		qmail-qfilter-1.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
@@ -15,9 +15,6 @@ DEPENDS+=		qmail>=1.03nb9:../../mail/qmail
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
-USE_PKGINSTALL=		yes
-PKG_SYSCONFSUBDIR=	qmail-qfilters
-MAKE_DIRS+=		${PKG_SYSCONFDIR}
 
 REPLACE_PERL=		samples/block-long-dates			\
 			samples/deny-filetypes				\
@@ -31,13 +28,8 @@ do-configure:
 	${ECHO} ${PREFIX}/bin > ${WRKSRC}/conf-bin
 	${ECHO} ${PREFIX}/man > ${WRKSRC}/conf-man
 
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/qmail-qfilter-queue.sh	\
-		> ${WRKDIR}/qmail-qfilter-queue
-
 do-install:
 	cd ${WRKSRC} && ./installer && ./instcheck
-	${INSTALL_SCRIPT} ${WRKDIR}/qmail-qfilter-queue ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/qmail-qfilter
 	for i in ${REPLACE_PERL}; do					\
 		${INSTALL_SCRIPT} ${WRKSRC}/$${i}			\
