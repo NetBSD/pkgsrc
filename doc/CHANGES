@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9533 2005/03/21 22:40:35 wiz Exp $
+$NetBSD: CHANGES,v 1.9534 2005/03/21 22:51:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1436,3 +1436,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Carp-Clan-5.3 [wiz 2005-03-21]
 	Updated p5-Bit-Vector to 6.4nb2 [wiz 2005-03-21]
 	Updated p5-Term-ReadKey to 2.30 [wiz 2005-03-21]
+	Updated monotone to 0.17 [jmmv 2005-03-21]
+	Updated monotone-server to 0.17 [jmmv 2005-03-21]
