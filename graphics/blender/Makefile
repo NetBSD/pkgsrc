@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/04/02 18:41:57 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/04/08 16:22:45 manu Exp $
 #
 
 PKGNAME=	blender-2.11.nb1
@@ -27,6 +27,7 @@ DISTNAME=	blender2.11-linux-glibc2.1.3-alpha-static
 .elif (${MACHINE_ARCH} == "i386")
 DEPENDS+=	suse_linux>=6.4:../../emulators/suse_linux
 DISTNAME=	blender2.11-linux-glibc2.1.2-i386-static
+PLIST_ARCH=	linux-i386
 #
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
@@ -52,6 +53,6 @@ PLIST_SRC=	${PKGDIR}/PLIST.${PLIST_ARCH}
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/blender
 	${CP} -Rp ${WRKSRC}/* ${PREFIX}/lib/blender/
-	${LN} -sf ${PREFIX}/lib/blender/blender ${PREFIX}/bin/blender
+	${LN} -sf ../lib/blender/blender ${PREFIX}/bin/blender
 
 .include "../../mk/bsd.pkg.mk"

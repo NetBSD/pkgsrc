@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-powerpc,v 1.1.1.1 2001/03/16 00:33:18 manu Exp $
+@comment $NetBSD: PLIST.linux-powerpc,v 1.2 2001/04/08 16:22:45 manu Exp $
 lib/blender/python/wrlexport.py
 lib/blender/python/ribexport.py
 lib/blender/python/povexport.py
@@ -26,7 +26,7 @@ lib/blender/plugins/include/util.h
 lib/blender/plugins/include/plugin.h
 lib/blender/plugins/include/iff.h
 lib/blender/plugins/include/floatpatch.h
-lib/blender/plugins/include
+@dirrm lib/blender/plugins/include
 lib/blender/plugins/bmake
 lib/blender/plugins/Makefile
 @dirrm lib/blender/plugins
