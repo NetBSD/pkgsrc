@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2000/09/02 15:59:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/24 18:42:33 he Exp $
 #
 
 DISTNAME=		tcl8.3.2
-PKGNAME=		tcl-8.3.2
+PKGNAME=		tcl-8.3.2nb1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.scriptics.com/pub/tcl/tcl8_3/ \
 			ftp://gd.tuwien.ac.at/languages/tcl/scriptics/tcl8_3/ \
