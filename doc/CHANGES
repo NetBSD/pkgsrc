@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6777 2004/08/03 13:21:16 markd Exp $
+$NetBSD: CHANGES,v 1.6778 2004/08/03 14:13:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3705,3 +3705,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated hexedit to 1.2.10 [adam 2004-08-03]
 	Added gwenview-1.1.4 [markd 2004-08-03]
 	Added krusader-1.40 [markd 2004-08-03]
+	Updated tei to 4nb2 [minskim 2004-08-03]
+	Updated teixsl-html to 3.1nb2 [minskim 2004-08-03]
+	Updated teixsl-fo to 3.1nb2 [minskim 2004-08-03]
