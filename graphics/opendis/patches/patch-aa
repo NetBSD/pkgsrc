@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/12 03:07:40 sommerfeld Exp $
+
+--- src/nss.c.orig	Sat Jan  8 16:09:52 2000
++++ src/nss.c	Thu May 11 22:58:35 2000
+@@ -37,6 +37,10 @@
+ #include <stdlib.h>
+ #include <termios.h>
+ 
++#ifdef __NetBSD__
++#include <sys/ioctl.h>
++#endif
++
+ /*--------------------------------------------------------------------------
+   Local include files */
+ 
+@@ -110,6 +114,9 @@
+ 
+   /* Put it in raw mode */
+   memset(&tty, 0, sizeof(tty));
++#ifdef __NetBSD__
++  memcpy(&tty, &camera->tty_original, sizeof(tty));
++#endif
+   cfmakeraw(&tty);
+ 
+   /* A respondent reports that his camera won't begin talking until
+@@ -135,8 +142,12 @@
+      will initiate beacon phase from the camera. */
+ 
+   /* off... */
++#ifdef __NetBSD__
++  (void) ioctl(camera->fd, TIOCCDTR, 0);
++#else  
+   cfsetospeed(&tty, B0);
+   cfsetispeed(&tty, B0);
++#endif
+ 
+   if (tcsetattr(camera->fd, TCSANOW, &tty) == -1)
+     {
+@@ -157,6 +168,10 @@
+   /* ...on. */
+   cfsetospeed(&tty, B9600);
+   cfsetispeed(&tty, B9600);
++
++#ifdef __NetBSD__
++  (void) ioctl(camera->fd, TIOCSDTR, 0);
++#endif
+ 
+   if (tcsetattr(camera->fd, TCSANOW, &tty) == -1)
+     {
