@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6476 2004/07/06 23:19:42 wiz Exp $
+$NetBSD: CHANGES,v 1.6477 2004/07/07 05:12:25 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3285,6 +3285,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libfwbuilder-1.0.2 [agc 2004-07-06]
 	Updated php4 to 4.3.7 [jdolecek 2004-07-06]
 	Updated cpuflags to 0.72 [abs 2004-07-06]
-	buildlink2: retired in favour of buildlink3 [wiz 2004-07-06]
+	bsd.pkg.mk: buildlink2 retired in favour of buildlink3 [wiz 2004-07-06]
 	Updated pkglint to 3.85 [wiz 2004-07-06]
 	Updated createbuildlink to 3.5 [wiz 2004-07-06]
