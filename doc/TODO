@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1963 2004/07/22 01:16:04 lukem Exp $
+$NetBSD: TODO,v 1.1964 2004/07/22 22:25:40 shannonjr Exp $
 
 Suggested new packages
 ======================
@@ -229,7 +229,6 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o gauche-0.8
 	o gcvs-1.0
-	o gdb-6.1 [pkgsrc-wip]
 	o generator-0.35
 	o getmail-3.2.4
 	o gettext-0.14.1
