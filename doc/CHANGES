@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1084 2003/01/10 20:22:42 jlam Exp $
+$NetBSD: CHANGES,v 1.1085 2003/01/11 00:33:11 taya Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -202,3 +202,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libglade2 to 2.0.1nb4 [jmmv 2003-01-10]
 	Updated feh to 1.2.4 [wiz 2003-01-10]
 	Updated oss to 3.9.7g [jlam 2003-01-10]
+	Updated mozilla-stable to 1.0.2 [taya 2003-01-11]
