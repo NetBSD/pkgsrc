@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1754 2003/03/23 14:51:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.1755 2003/03/23 20:58:57 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1273,3 +1273,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated metamail to 2.7nb1 [jmmv 2003-03-23]
 	Updated sfs to 0.7.2nb1 [lukem 2003-03-23]
 	Removed latex-ttf-fonts [jmmv 2003-03-23]
+	Updated dinotrace to 9.1i [dmcmahill 2003-03-23]
