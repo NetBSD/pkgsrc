@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/01/25 08:57:53 tron Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/28 10:44:39 manu Exp $
 
 DISTNAME=	rpm2pkg-1.0
 CATEGORIES=	pkgtools
@@ -31,5 +31,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rpm2pkg ${PREFIX}/sbin
+	${INSTALL_MAN} ${FILESDIR}/rpm2pkg.8 ${PREFIX}/man/man8
 
 .include "../../mk/bsd.pkg.mk"
