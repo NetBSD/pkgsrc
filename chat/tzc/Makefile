@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/09/16 19:51:21 seb Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/25 00:39:04 wiz Exp $
 #
 
 DISTNAME=	tzc-2.6.15
@@ -12,7 +12,7 @@ COMMENT=	Back-end program for zephyr-mode
 CPPFLAGS+=      -I/usr/include/kerberosIV -I/usr/include/krb5
 LDFLAGS+=       -lroken -lcrypto -lcom_err
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
-.include "../zephyr/buildlink2.mk"
+.include "../zephyr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
