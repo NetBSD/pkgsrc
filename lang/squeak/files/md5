@@ -1,0 +1,5 @@
+$NetBSD: md5,v 1.1.1.1 2000/01/13 16:37:05 agc Exp $
+
+MD5 (squeak/Squeak2.6-src.tar.gz) = 7e0728d338d6464b9689ef69eade1c3f
+MD5 (squeak/Squeak2.6.image.gz) = 434be6aec5e83275e81f7fb05a911763
+MD5 (squeak/Squeak2.6.changes.gz) = 45fbcc0fc9c29b90654896fd38945e2f
