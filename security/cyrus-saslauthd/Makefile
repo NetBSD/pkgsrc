@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/13 09:03:15 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/21 12:40:17 jlam Exp $
 
 DISTNAME=	cyrus-sasl-2.1.17
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -49,10 +49,11 @@ PLIST_SRC+=		${PKGDIR}/PLIST.ldap
 .endif
 
 .if defined(SASL_USE_GSSAPI) && !empty(SASL_USE_GSSAPI:M[yY][eE][sS])
-CONFIGURE_ARGS+=	--enable-gssapi=/usr	# GSSAPI
-.  if exists(/usr/include/krb5/krb5.h)
-CPPFLAGS+=		-I/usr/include/krb5
-.  endif
+.  include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-gssapi=${KRB5BASE}
+CONFIGURE_ARGS+=	--with-gss_impl=${GSSIMPL.${KRB5_TYPE}}
+GSSIMPL.heimdal=	heimdal
+GSSIMPL.mit-krb5=	mit
 .endif
 
 USE_PKGINSTALL=		yes
