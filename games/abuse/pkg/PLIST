@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 1998/08/27 12:54:57 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/08/29 12:22:18 garbled Exp $
 bin/abuse
-lib/abuse/abuse.x11R6
+bin/abuse.x11R6
 share/abuse/abuse.lsp
 share/abuse/light.tbl
 share/abuse/lisp/playwav.lsp
@@ -238,4 +238,3 @@ share/abuse/addon/deathmat/deathmat.lsp
 @dirrm share/abuse/addon/deathmat
 @dirrm share/abuse/addon
 @dirrm share/abuse
-@dirrm lib/abuse
