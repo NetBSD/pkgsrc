@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.14 2002/10/04 23:35:51 jlam Exp $
+# $NetBSD: install,v 1.15 2002/10/04 23:46:27 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -261,6 +261,23 @@ EOF
 				${CHMOD} @RCD_SCRIPTS_MODE@ "${file}"
 			fi
 		fi
+	done
+	_print_special_header=1
+	eval set -- ${SPECIAL_PERMS}
+	while [ $# -gt 0 ]; do
+		file="$1"; owner="$2"; group="$3"; mode="$4"
+		shift; shift; shift; shift
+
+		if [ ${_print_special_header} -gt 0 ]; then
+			_print_special_header=0
+			msgadd ""
+			msgadd "The following files and directories have special permissions:"
+			msgadd ""
+		fi
+		msgadd "#${file} (o=${owner}, g=${group}, m=${mode})"
+		${CHOWN} "${owner}" "${file}"
+		${CHGRP} "${group}" "${file}"
+		${CHMOD} ${mode} "${file}"
 	done
 	if ! msgempty; then
 		${ECHO} "==========================================================================="
