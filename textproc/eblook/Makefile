@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/12 01:31:02 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/12 01:40:05 wiz Exp $
 #
 
 DISTNAME=	eblook-1.5.1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://openlab.ring.gr.jp/edict/eblook/dist/
 
 MAINTAINER=	uebayasi@soum.co.jp
 HOMEPAGE=	http://openlab.ring.gr.jp/edict/eblook/
-COMMENT=	interactive command-line interface for EPWING electirc dictionaries
+COMMENT=	interactive command-line interface for EPWING electric dictionaries
 
 USE_BUILDLINK_ONLY=	# defined
 
