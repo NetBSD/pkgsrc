@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2001/04/09 01:44:39 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.10 2001/04/18 21:43:18 dmcmahill Exp $
 
 Add a top level Makefile
 
@@ -35,7 +35,7 @@ Add a top level Makefile
 +	if [ -f libF77/libF77_p.a ]; then cd libf2c && ar cruv libf2c_p.a *.po ; fi
 +	if [ -f libF77/libF77_pic.a ]; then cd libf2c && ar cruv libf2c_pic.a *.so ; fi
 +	if [ -f libF77/libF77_pic.a ]; then cd libf2c && \
-+		ld -Bshareable -soname f2c.${F2CMAJOR} -o libf2c.so.${F2CMAJOR}.${F2CMINOR} *.so ; fi
++		ld -Bshareable -soname libf2c.so.${F2CMAJOR} -o libf2c.so.${F2CMAJOR}.${F2CMINOR} *.so ; fi
 +
 +man: f2c.0
 +
