@@ -1,14 +1,15 @@
-$NetBSD: patch-ab,v 1.1 1998/09/06 23:47:28 garbled Exp $
---- src/vice.h.orig	Sun Sep  6 11:29:44 1998
-+++ src/vice.h	Sun Sep  6 11:30:14 1998
-@@ -48,8 +48,8 @@
+$NetBSD: patch-ab,v 1.2 1999/05/18 08:45:48 tv Exp $
+
+--- src/arch/unix/archdep.h.orig	Sun Mar 14 09:19:29 1999
++++ src/arch/unix/archdep.h	Tue May 18 02:28:26 1999
+@@ -43,8 +43,8 @@
+ #define MODE_APPEND "w+"
  
- /* Define the default system directory (where the ROMs are). */
- 
--#define LIBDIR		PREFIX "/lib/vice"
+ /* Define the default system directory (where the ROMs are).  */
+-#define LIBDIR          PREFIX "/lib/vice"
 -#define DOCDIR          LIBDIR "/doc"
-+#define LIBDIR		PREFIX "/share/vice"
++#define LIBDIR          PREFIX "/share/vice"
 +#define DOCDIR          PREFIX "/share/doc/vice"
+ #define VICEUSERDIR     ".vice"
  
- /* Sound defaults.  */
- #define SOUND_SAMPLE_RATE 22050
+ int archdep_startup(int *argc, char **argv);
