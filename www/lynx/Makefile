@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.63 2004/01/05 23:46:42 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2004/01/20 12:27:59 agc Exp $
 #
 
 DISTNAME=		lynx2.8.4rel.1
 PKGNAME=		lynx-2.8.4.1.4
 PKGREVISION=		2
-WRKSRC=			${WRKDIR}/lynx2-8-4
 CATEGORIES=		www
 MASTER_SITES=		http://lynx.isc.org/lynx2.8.4/ \
 			ftp://lynx.isc.org/lynx2.8.4/ \
@@ -28,6 +27,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_USES_MSGFMT=	yes
 
+WRKSRC=			${WRKDIR}/lynx2-8-4
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

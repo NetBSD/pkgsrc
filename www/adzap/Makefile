@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2003/12/24 07:24:22 simonb Exp $
+# $NetBSD: Makefile,v 1.42 2004/01/20 12:27:57 agc Exp $
 #
 
 DISTNAME=	adzap-20031105
-WRKSRC=		${WRKDIR}/adzap
 CATEGORIES=	www perl5
 # XXX: should use the following one day:
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=adzapper/}
@@ -12,6 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://adzapper.sourceforge.net/
 COMMENT=	Filter out animated ad banners from web pages
 
+WRKSRC=		${WRKDIR}/adzap
 NO_BUILD=	# defined
 USE_PERL5=	# defined
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/20 12:21:02 agc Exp $
 #
 
 DISTNAME=		routeplanner_0.11
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://routeplanner.sourceforge.net/
 COMMENT=		Highway trip planner written in Python
 
-WRKSRC=	${WRKDIR}/routeplanner-0.11
+WRKSRC=			${WRKDIR}/routeplanner-0.11
 USE_BUILDLINK2=		yes
 NO_BUILD=		yes
 

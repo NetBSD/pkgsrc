@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 22:51:17 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:22:19 agc Exp $
 #
 
 DISTNAME=	ispman-0.5
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/ispman
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ispman/}
 
@@ -21,6 +20,7 @@ DEPENDS+=	{postfix>=20010228,postfix-1.*,postfix-2.*}:../../mail/postfix
 
 USE_PERL5=	YES
 
+WRKSRC=		${WRKDIR}/ispman
 ISPMAN_HTDOCS?=	${PREFIX}/share/ispman/virtual
 ISPMAN_IP?=	127.0.0.1
 

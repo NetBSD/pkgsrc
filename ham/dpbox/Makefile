@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/09/19 23:08:26 dent Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:18:36 agc Exp $
 #
 
 DISTNAME=	dpbox-60000
 PKGNAME=	dpbox-6.00.00
-WRKSRC=		${WRKDIR}/dpbox-6.00.00/source
 CATEGORIES=	ham
 MASTER_SITES=	http://home.snafu.de/wahlm/dl8hbs/
 
@@ -11,6 +10,7 @@ MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://home.snafu.de/wahlm/dl8hbs/dpbox.html
 COMMENT=	Multi-Protocol Amateur Packet Radio BBS
 
+WRKSRC=		${WRKDIR}/dpbox-6.00.00/source
 USE_GMAKE=	yes
 MAKEFILE=	Makefile.netbsd
 

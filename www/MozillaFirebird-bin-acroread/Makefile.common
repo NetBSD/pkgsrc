@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.common,v 1.1 2003/09/27 14:13:08 grant Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/01/20 12:27:57 agc Exp $
 
-WRKSRC=			${WRKDIR}
 CATEGORIES=		www print
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -10,6 +9,7 @@ DEPENDS+=		MozillaFirebird-bin>=0.6.1:../../www/MozillaFirebird-bin
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 PLATFORM=		intellinux
 
+WRKSRC=			${WRKDIR}
 NO_CHECKSUM=		YES
 NO_CONFIGURE=		YES
 NO_BUILD=		YES

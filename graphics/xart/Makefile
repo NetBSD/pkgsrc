@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2004/01/03 18:49:44 reed Exp $
+# $NetBSD: Makefile,v 1.32 2004/01/20 12:18:17 agc Exp $
 #
 
 DISTNAME=       xart19980415
 PKGNAME=	xart-19980415
 PKGREVISION=	4
-WRKSRC=		${WRKDIR}/19980415
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://linux01.gwdg.de/~rhohen/linux/
 EXTRACT_SUFX=	.tgz
@@ -13,6 +12,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://linux01.gwdg.de/~rhohen/linux.html
 COMMENT=	Paint program (enhanced xpaint)
 
+WRKSRC=		${WRKDIR}/19980415
 USE_BUILDLINK2=	YES
 USE_IMAKE=      YES
 

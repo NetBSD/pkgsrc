@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/24 09:25:46 tron Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:19:44 agc Exp $
 
 DISTNAME=       sma-1.3.2
-WRKSRC=         ${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	mail
 MASTER_SITES=   http://www.klake.org/sma/dl/
 
@@ -9,6 +8,7 @@ MAINTAINER=	markus@core.de
 HOMEPAGE=	http://www.klake.org/sma/
 COMMENT=	Sendmail log analyser
 
+WRKSRC=         ${WRKDIR}/${PKGNAME_NOREV}
 NO_CONFIGURE=	yes
 
 MAKEFILE=	Makefile

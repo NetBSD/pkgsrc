@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:56:05 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:28:00 agc Exp $
 #
 
 DISTNAME=	cgi.tcl
 PKGNAME=	tcl-cgi-1.3.0
-WRKSRC=		${WRKDIR}/cgi.tcl-1.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 
@@ -13,6 +12,7 @@ COMMENT=	Library of Tcl procedures to assist in writing CGI scripts
 
 DEPENDS+=	tcl>=8.3.2:../../lang/tcl
 
+WRKSRC=		${WRKDIR}/cgi.tcl-1.3
 DIST_SUBDIR=	${PKGNAME}
 
 GNU_CONFIGURE=	yes

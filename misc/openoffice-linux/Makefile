@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/10/05 14:29:35 mrauch Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/20 12:21:02 agc Exp $
 
 DISTNAME=		OOo_1.0.3.1_LinuxIntel_install
 PKGNAME=		openoffice-linux-1.0.3.1
-WRKSRC=			${WRKDIR}/install
 CATEGORIES=		misc
 MASTER_SITES=		http://mirrors.isc.org/pub/openoffice/stable/1.0.3/ \
 			http://www.fs.tum.de/~mrauch/OpenOffice/download/
@@ -19,6 +18,7 @@ CONFLICTS+=		openoffice-[0-9]*
 ONLY_FOR_PLATFORM=	NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86
 
+WRKSRC=			${WRKDIR}/install
 TEMP?=			${WRKSRC}
 
 .include "../../mk/bsd.prefs.mk"

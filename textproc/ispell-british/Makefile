@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:54:22 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:26:49 agc Exp $
 #
 
 DISTNAME=	ispell-3.1.20
 PKGNAME=	ispell-${DICT_LANG}-3.1.20
-WRKSRC=		${WRKDIR}/ispell-3.1
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.cs.ucla.edu/pub/ispell-3.1/
 
@@ -13,6 +12,7 @@ COMMENT=	British dictionary for interactive spelling checker
 
 DEPENDS+=	ispell-base>=3.1.20:../../textproc/ispell-base
 
+WRKSRC=		${WRKDIR}/ispell-3.1
 ALL_TARGET=	config.sh all-languages
 
 DICT_LANG=	british

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2003/08/23 15:26:24 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:28:00 agc Exp $
 
 DISTNAME=	spfc-0.2.0
-WRKSRC=		${WRKDIR}/spfc-0.2.0/src/
 CATEGORIES=	www java
 MASTER_SITES=	http://java.apache.org/spfc/dist/
 
@@ -14,6 +13,7 @@ DEPENDS+=	jsdk-2.0:../../www/jsdk20
 
 .include "../../mk/bsd.prefs.mk"
 
+WRKSRC=		${WRKDIR}/spfc-0.2.0/src/
 USE_GMAKE=
 NO_CONFIGURE=
 MAKE_ENV+=	CLASSPATH=${CLASSPATH}:${PREFIX}/lib/jsdk.jar

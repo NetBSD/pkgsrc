@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2004/01/07 23:10:17 ben Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/20 12:25:33 agc Exp $
 #
 
 DISTNAME=		fp-netbsd-ws-4.3.1
 PKGNAME=		fprot-workstation-bin-4.3.1
-WRKSRC=			${WRKDIR}/f-prot
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.f-prot.com/pub/bsd/
 
@@ -23,6 +22,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 LICENSE=		fprot-workstation-license
 
+WRKSRC=			${WRKDIR}/f-prot
 NO_BUILD=		yes
 USE_BUILDLINK3=		yes
 

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:53 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:26:16 agc Exp $
 #
 
 DISTNAME=	ROX-Lib-0.1.4
 PKGNAME=	rox-lib-0.1.4
 PKGREVISION=	3
-WRKSRC=		${WRKDIR}/ROX-Lib
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -15,6 +14,7 @@ COMMENT=	Shared code for ROX applications
 
 DEPENDS+=	rox>=1.2.0nb2:../../sysutils/rox
 
+WRKSRC=		${WRKDIR}/ROX-Lib
 DIST_SUBDIR=	rox
 
 NO_CONFIGURE=	yes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2003/11/07 14:48:07 gavan Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/20 12:18:17 agc Exp $
 
 DISTNAME=	pstoedit_3_31
 PKGNAME=	pstoedit-3.31
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/pstoedit_3.31/src
 CATEGORIES=	converters graphics print
 MASTER_SITES=	http://home.t-online.de/home/helga.glunz/wglunz/pstoedit/
 EXTRACT_SUFX=	.zip
@@ -16,6 +15,7 @@ RESTRICTED?=	"The author writes: If you include this program on a CDROM, please 
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+WRKSRC=		${WRKDIR}/pstoedit_3.31/src
 USE_X11=	yes
 USE_LIBTOOL=	yes
 USE_BUILDLINK2=	yes

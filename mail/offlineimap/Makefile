@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/20 12:19:43 agc Exp $
 #
 
 DISTNAME=	offlineimap_${_OFFLINEIMAP_VER}
 PKGNAME=	offlineimap-${_OFFLINEIMAP_VER}
-WRKSRC=		${WRKDIR}/offlineimap
 CATEGORIES=	mail
 MASTER_SITES=	http://gopher.quux.org:70/devel/offlineimap/
 
@@ -11,6 +10,7 @@ MAINTAINER=	seb@NetBSD.org
 HOMEPAGE=	http://gopher.quux.org:70/devel/offlineimap/
 COMMENT=	Powerful IMAP/Maildir synchronization and reader support
 
+WRKSRC=		${WRKDIR}/offlineimap
 USE_BUILDLINK2=	# defined
 
 # This is only to placate pkglint

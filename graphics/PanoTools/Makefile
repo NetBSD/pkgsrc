@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2003/08/23 15:18:00 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:18:15 agc Exp $
 #
 
 DISTNAME=		PanoTools
 PKGNAME=		${DISTNAME}-2.6b1
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/PTLinux
 CATEGORIES=		graphics java
 MASTER_SITES=		http://www.path.unimelb.edu.au/~dersch/
 
@@ -14,6 +13,7 @@ COMMENT=		View, create, edit, and remap panoramic images
 
 ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 
+WRKSRC=			${WRKDIR}/PTLinux
 USE_JAVA=		run
 USE_BUILDLINK2=		YES
 USE_X11=		YES

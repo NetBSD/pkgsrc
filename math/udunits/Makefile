@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:48:17 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:20:05 agc Exp $
 
 DISTNAME=		udunits
 PKGNAME=		udunits-1.11.7
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/src
 CATEGORIES=		math devel
 MASTER_SITES=		http://www.unidata.ucar.edu/packages/udunits/
 EXTRACT_SUFX=		.tar.Z
@@ -12,6 +11,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.unidata.ucar.edu/packages/udunits/
 COMMENT=		Library and program for manipulating units of physical quantities
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/src
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
 USE_BUILDLINK2=		yes

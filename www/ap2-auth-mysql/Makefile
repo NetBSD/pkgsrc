@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/31 13:03:01 cube Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:27:58 agc Exp $
 #
 
 DISTNAME=		mod_auth_mysql.c
 PKGNAME=		ap2-auth-mysql-1.11.12
-WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		www databases
 MASTER_SITES=		ftp://ftp.kcilink.com/pub/
 DISTFILES=		${DISTNAME}.gz mysql-group-auth.txt
@@ -17,6 +16,7 @@ CONFLICTS+=		ap-auth-mysql-*
 DIST_SUBDIR=		ap2-auth-mysql
 EXTRACT_ONLY=		${DISTNAME}.gz
 
+WRKSRC=			${WRKDIR}/${PKGNAME}
 USE_BUILDLINK2=		yes
 NO_CONFIGURE=		yes
 

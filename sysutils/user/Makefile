@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/09/15 16:27:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/20 12:26:16 agc Exp $
 #
 
 # Note to package maintainers:
@@ -6,7 +6,6 @@
 # "tar pzvcf user-`date +%Y%m%d`.tar.gz user" and upload that
 # file to ${MASTER_SITE_LOCAL}.
 DISTNAME=		user-20000509
-WRKSRC=			${WRKDIR}/user
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -20,6 +19,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* # already in Solaris base system
 PKG_SKIP_REASON=	"${PKGNAME} is part of your ${OPSYS} distribution"
 .endif
 
+WRKSRC=			${WRKDIR}/user
 NO_CONFIGURE=		yes
 MANCOMPRESSED_IF_MANZ=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/08/23 15:26:23 jschauma Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/20 12:27:59 agc Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -7,7 +7,6 @@
 
 DISTNAME=	jsdk20-solaris2-sparc
 PKGNAME=	jsdk-2.0
-WRKSRC=		${WRKDIR}/JSDK2.0
 CATEGORIES=	www java
 MASTER_SITES=	# none
 EXTRACT_SUFX=	.tar.Z
@@ -21,6 +20,7 @@ BUILD_DEPENDS+=        urlget>=1.3:../../www/urlget
 LICENSE=	sun-jsdk20-license
 USE_JAVA=	run
 
+WRKSRC=		${WRKDIR}/JSDK2.0
 BUILD_DEFS+=    JSDK_HOME
 NO_CONFIGURE=
 NO_BUILD=

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2003/12/24 09:53:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:26:49 agc Exp $
 #
 
 DISTNAME=		helpdc21
 PKGNAME=		helpdeco-21
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SIMTEL:=win95/winhelp/}
 EXTRACT_SUFX=		.zip
@@ -14,6 +13,8 @@ HOMEPAGE=		http://www.simtel.net/pub/pd/23694.shtml
 COMMENT=		Windows .hlp to .rtf converter
 
 LICENSE=		no-commercial-use
+
+WRKSRC=			${WRKDIR}
 
 # from ftp://ftp.simtel.net/pub/simtelnet/MIRRORS.TXT
 MASTER_SITE_SIMTEL+=	ftp://ftp.cdrom.com/pub/simtelnet/ \

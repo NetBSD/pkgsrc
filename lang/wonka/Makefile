@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/08/23 15:14:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/20 12:19:18 agc Exp $
 #
 
 DISTNAME=	wonka-src-0.9.6-release
 PKGNAME=	wonka-0.9.6
-WRKSRC=		${WRKDIR}/open-wonka
 CATEGORIES=	lang java
 MASTER_SITES=	http://wonka.acunia.com/
 
@@ -19,6 +18,7 @@ BUILD_DEPENDS+=	jamjar-[0-9]*:../../archivers/jamjar
 BUILD_DEPENDS+=	jikes>=1.18:../../lang/jikes
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
+WRKSRC=		${WRKDIR}/open-wonka
 USE_BUILDLINK2=	# defined
 USE_X11=	# defined
 

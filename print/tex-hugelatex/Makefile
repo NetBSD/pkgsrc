@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/12/24 13:02:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:24:29 agc Exp $
 #
 
 DISTNAME=	hugelatex-1.0
 PKGNAME=	tex-${DISTNAME}
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	# none
 DISTFILES=	# nada
@@ -14,6 +13,7 @@ COMMENT=	LaTeX format files with large limits
 
 DEPENDS+=	teTeX-1.0*:../../print/teTeX1
 
+WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# nothing
 NO_CHECKSUM=	yes
 NO_BUILD=	yes

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/09/29 20:02:53 mycroft Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:18:17 agc Exp $
 #
 
 DISTNAME=	xvidcore-0.9.2
-WRKSRC=		${WRKDIR}/${DISTNAME}/build/generic
 CATEGORIES=	graphics
 MASTER_SITES=	http://files.xvid.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +12,7 @@ COMMENT=	ISO MPEG-4 compliant video codec
 
 BUILD_DEPENDS+=	nasm>=0.98.34:../../devel/nasm
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/build/generic
 USE_BUILDLINK2=	YES
 GNU_CONFIGURE=	YES
 

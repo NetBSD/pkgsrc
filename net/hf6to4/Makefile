@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/01/08 12:59:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/20 12:22:19 agc Exp $
 #
 
 DISTNAME=		hf6to4-1.2
-WRKSRC=			${WRKDIR}
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -11,6 +10,7 @@ MAINTAINER=		hubertf@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/packages/net/hf6to4/files/hf6to4.html
 COMMENT=		Enables 6to4 IPv6 automatic tunnels
 
+WRKSRC=			${WRKDIR}
 USE_PKGINSTALL=		YES
 
 # This pkg doesn't regard USE_INET6 (leave this comment for README-IPv6.html!)

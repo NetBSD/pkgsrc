@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:19:43 agc Exp $
 # FreeBSD: ports/mail/distribute/Makefile,v 1.2 1999/08/25 06:50:06 obrien Exp
 #
 
 DISTNAME=	distribute-2.1-pl19
 PKGNAME=	distribute-2.1.26
-WRKSRC=		${WRKDIR}/distribute-pl19
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.foretune.co.jp/pub/network/mail/distribute/
 
@@ -17,6 +16,7 @@ MAINTAINER=	itojun@itojun.org
 HOMEPAGE=	http://www.foretune.co.jp/people/shigeya/distribute/
 COMMENT=	Mail dispatcher for mailing list.  Fits nicely with majordomo
 
+WRKSRC=		${WRKDIR}/distribute-pl19
 USE_PERL5=	YES
 
 MAN1=		distribute.1

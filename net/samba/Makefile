@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2004/01/17 12:19:51 jlam Exp $
+# $NetBSD: Makefile,v 1.112 2004/01/20 12:22:21 agc Exp $
 
 DISTNAME=		samba-3.0.1
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/${DISTNAME}/source
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
 			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
@@ -22,6 +21,7 @@ CONFLICTS+=		pam-smbpass-[0-9]* winbind-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/source
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PERL="${PERL5}"

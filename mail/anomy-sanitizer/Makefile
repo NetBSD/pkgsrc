@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/01/18 23:40:12 kim Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:19:43 agc Exp $
 #
 
 DISTNAME=	anomy-sanitizer-1.66
-WRKSRC=		${WRKDIR}/anomy
 CATEGORIES=	mail
 MASTER_SITES=	http://mailtools.anomy.net/dist/
 
@@ -17,6 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 
+WRKSRC=		${WRKDIR}/anomy
 NO_BUILDLINK=	# defined
 NO_CONFIGURE=	# defined
 USE_PERL5=	# defined

@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2003/10/18 13:17:41 cjep Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/20 12:20:24 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/11 03:54:53 fenner Exp
 #
 
 DISTNAME=	vicsrc-2.8
 PKGNAME=	${DISTNAME:S/src//}
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	mbone tk
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/conferencing/vic/
 
@@ -21,6 +20,7 @@ COMMENT=	MBONE video conferencing tool
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 

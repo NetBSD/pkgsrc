@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.95 2004/01/13 11:24:16 jmmv Exp $
+# $NetBSD: pkglint.pl,v 1.96 2004/01/20 12:23:58 agc Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -959,8 +959,8 @@ EOF
 
 	# check the order of items.
         @tocheck=split(/\s+/, <<EOF);
-DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME WRKSRC NO_WRKSUBDIR CATEGORIES 
-MASTER_SITES DYNAMIC_MASTER_SITES MASTER_SITE_SUBDIR EXTRACT_SUFX DISTFILES
+DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
+DYNAMIC_MASTER_SITES MASTER_SITE_SUBDIR EXTRACT_SUFX DISTFILES
 EOF
 	push(@tocheck,"ONLY_FOR_ARCHS");
 	push(@tocheck,"NO_SRC_ON_FTP");
@@ -1132,7 +1132,7 @@ EOF
 	}
 
 	push(@varnames, split(/\s+/, <<EOF));
-DISTNAME PKGNAME SVR4_PKGNAME WRKSRC CATEGORIES MASTER_SITES MASTER_SITE_SUBDIR
+DISTNAME PKGNAME SVR4_PKGNAME CATEGORIES MASTER_SITES MASTER_SITE_SUBDIR
 EXTRACT_SUFX DISTFILES
 EOF
 

@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:52:00 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:22:22 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
 DISTNAME=       	vnc-3.3.3r2_unixsrc
 PKGNAME=		vncviewer-3.3.3.2
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/vnc_unixsrc
 CATEGORIES=		net x11
 MASTER_SITES=   	http://www.uk.research.att.com/vnc/dist/
 EXTRACT_SUFX=		.tgz
@@ -18,6 +17,7 @@ MAINTAINER=	 	abs@NetBSD.org
 HOMEPAGE=		http://www.uk.research.att.com/vnc/
 COMMENT=		Viewer for remote X and Win32 VNC servers
 
+WRKSRC=			${WRKDIR}/vnc_unixsrc
 CRYPTO=			yes
 NO_INSTALL_MANPAGES=	yes
 USE_IMAKE=		yes

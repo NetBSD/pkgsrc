@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2003/07/17 22:51:22 grant Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/20 12:22:19 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/12/01 01:22:54 obrien Exp
 #
 
 DISTNAME=	mirror-2.9
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	ftp://src.doc.ic.ac.uk/computing/archiving/mirror/
 
@@ -14,6 +13,7 @@ COMMENT=	Mirror packages on remote sites
 
 USE_PERL5=	# defined
 
+WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
 SCRIPTS_ENV+=	PERL5=${PERL5}
 

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:19:16 agc Exp $
 
 DISTNAME=	bwbasic-2.20
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/bwbasic-2.20p2/${PKGNAME_NOREV}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.rahul.net/pub/rhn/
 EXTRACT_SUFX=	.tar.Z
@@ -10,6 +9,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	jspath@bcpl.net
 COMMENT=	The Bywater Basic interpreter
 
+WRKSRC=		${WRKDIR}/bwbasic-2.20p2/${PKGNAME_NOREV}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 

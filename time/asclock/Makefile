@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/09/17 19:41:10 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/20 12:27:15 agc Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
-WRKSRC=		${WRKDIR}/asclock1.0
 CATEGORIES=	x11 time
 MASTER_SITES=	${MASTER_SITE_LOCAL}	# www.asclock.org is no more
 
@@ -11,6 +10,7 @@ COMMENT=	NeXTstep-like clock and calendar
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
+WRKSRC=		${WRKDIR}/asclock1.0
 USE_IMAKE=	YES
 USE_X11BASE=	YES
 USE_BUILDLINK2=	YES

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/09/29 09:54:28 seb Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:27:16 agc Exp $
 
 DISTNAME=	xalarm-3.03
 PKGNAME=	xalarm-3.05
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/xalarm
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=R5contrib-fixes/xalarm/}
 EXTRACT_SUFX=	.tar.Z
@@ -17,6 +16,7 @@ COMMENT=	X11 interactive alarm clock
 
 DEPENDS+=	skill>=4.0:../../sysutils/skill
 
+WRKSRC=		${WRKDIR}/xalarm
 USE_IMAKE=	yes
 
 FORTUNE=	"Sorry, xfortune is unavailable - no fortune!"

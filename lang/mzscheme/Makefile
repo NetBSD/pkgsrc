@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/12/23 23:57:16 pooka Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:19:17 agc Exp $
 
 DISTNAME=		mzscheme-205.src.unix
 PKGNAME=		mzscheme-205
-WRKSRC=			${WRKDIR}/plt/src
 CATEGORIES=		lang
 MASTER_SITES=		http://download.plt-scheme.org/bundles/205/mzscheme/
 
@@ -12,6 +11,7 @@ COMMENT=		R5RS-compliant scheme
 
 CONFLICTS+=		drscheme*:../drscheme
 
+WRKSRC=			${WRKDIR}/plt/src
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./configure
 EXTRACT_USING_PAX=      # defined

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2003/12/30 17:27:31 cjep Exp $
+# $NetBSD: Makefile,v 1.15 2004/01/20 12:19:16 agc Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		3
-WRKSRC=			${WRKDIR}/gcc-2.95.3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 MASTER_SITES+=		http://www.gnu-pascal.de/current/ \
@@ -19,6 +18,7 @@ PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
 
 BUILD_DEPENDS+=		gsed-[0-9]*:../../textproc/gsed
 
+WRKSRC=			${WRKDIR}/gcc-2.95.3
 USE_BUILDLINK2=		# defined
 USE_GMAKE=		# defined
 USE_NCURSES=		# defined

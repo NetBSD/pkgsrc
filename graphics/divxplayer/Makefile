@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/12/30 17:21:55 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:18:15 agc Exp $
 
 DISTNAME=	divx-player-installer
 PKGNAME=	divxplayer-0.2.0
-WRKSRC=		${WRKDIR}/divx-player-installer
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME}/}
 
@@ -15,6 +14,7 @@ DEPENDS+=	suse_x11>=7.3:../../emulators/suse_linux
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386
 
+WRKSRC=		${WRKDIR}/divx-player-installer
 CHECK_SHLIBS=	NO
 NO_BUILD=	YES
 USE_X11BASE=	YES

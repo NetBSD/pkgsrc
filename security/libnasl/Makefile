@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2003/11/12 16:12:22 tron Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:25:34 agc Exp $
 
 DISTNAME=	libnasl-${VERS}
-WRKSRC=		${WRKDIR}/libnasl
 .include	"../nessus/Makefile.common"
 
 COMMENT=	Nessus Attack Scripting Language library
 
+WRKSRC=		${WRKDIR}/libnasl
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
 

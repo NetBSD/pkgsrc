@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:47:48 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:20:05 agc Exp $
 
 DISTNAME=		minpack-20001130
-WRKSRC=			${WRKDIR}/minpack
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -10,6 +9,7 @@ COMMENT=		FORTRAN 77 library for the solution of nonlinear equations
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 USE_FORTRAN=		YES
+WRKSRC=			${WRKDIR}/minpack
 
 pre-build:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}

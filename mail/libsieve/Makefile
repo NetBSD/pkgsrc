@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/07/17 21:46:21 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/20 12:19:43 agc Exp $
 #
 
 DISTNAME=	cyrus-imapd-2.1.12
 PKGNAME=	${DISTNAME:S/cyrus-imapd/libsieve/}
-WRKSRC=		${WRKDIR}/${DISTNAME}/sieve
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/
 
@@ -11,6 +10,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.cyrusoft.com/sieve/
 COMMENT=	RFC3028 sieve library
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/sieve
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 CPPFLAGS+=	-I.

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2003/12/19 11:59:39 sketch Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/20 12:19:17 agc Exp $
 # FreeBSD Id: ports/lang/ruby/Makefile,v 1.39 2000/10/20 19:56:03 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}base-${RUBY_VERSION}
 PKGREVISION=	2
-WRKSRC=		${RUBY_WRKSRC}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -12,6 +11,7 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.ruby-lang.org/en/
 COMMENT= 	Base installation of Ruby
 
+WRKSRC=		${RUBY_WRKSRC}
 DIST_SUBDIR=	ruby
 USE_RUBY=	yes
 RUBY_DEPENDS=	no

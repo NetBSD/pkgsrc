@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:45:07 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:19:17 agc Exp $
 
 DISTNAME=		pfthpc21
 PKGNAME=		pforth-21
-WRKSRC=			${WRKDIR}
 CATEGORIES=		lang
 MASTER_SITES=		http://www.softsynth.com/pforth/
 EXTRACT_SUFX=		.zip
@@ -11,6 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.softsynth.com/pforth/
 COMMENT=		Portable ANS-like Forth
 
+WRKSRC=			${WRKDIR}
 USE_GMAKE=		YES
 MAKEFILE=		${WRKSRC}/makefile
 

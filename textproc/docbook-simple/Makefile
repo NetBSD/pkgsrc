@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2003/12/23 22:25:29 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/20 12:26:49 agc Exp $
 #
 
 DISTNAME=	docbook-simple-1.1b1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
 MASTER_SITES=	http://docbook.org/xml/simple/1.1b1/
 EXTRACT_SUFX=	.zip
@@ -14,6 +13,7 @@ COMMENT=	Simplified DocBook XML DTD
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
+WRKSRC=		${WRKDIR}
 INSTDIR=	${DESTDIR}${PREFIX}/share/xml
 DTDDIR=		${INSTDIR}/docbook-simple
 DTDFILES=	sdbcent.mod sdocbook-custom.dtd sdocbookref-custom.dtd \

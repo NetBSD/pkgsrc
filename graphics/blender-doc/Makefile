@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/10 19:45:39 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:18:15 agc Exp $
 
 DISTNAME=	BlenderManual.html
 PKGNAME=	blender-doc-20030922
-WRKSRC=		${WRKDIR}/doc
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/documentation/
 
@@ -12,6 +11,7 @@ COMMENT=	Documentation for Blender
 
 CONFLICTS=	blender<=2.31
 
+WRKSRC=		${WRKDIR}/doc
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
 

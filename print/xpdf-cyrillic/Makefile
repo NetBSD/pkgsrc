@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/11/11 09:11:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:24:29 agc Exp $
 #
 
 DISTNAME=	xpdf-cyrillic-2003-jun-28
 PKGNAME=	xpdf-cyrillic-20030628
-WRKSRC=		${WRKDIR}/xpdf-cyrillic
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/
 
@@ -15,6 +14,7 @@ DEPENDS+=	xpdf>=2.02:../../print/xpdf
 
 USE_PKGINSTALL=	yes
 
+WRKSRC=		${WRKDIR}/xpdf-cyrillic
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

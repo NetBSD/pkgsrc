@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/10/11 14:23:04 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/20 12:22:19 agc Exp $
 
 DISTNAME=	host_991529
 PKGNAME=	host-991529
-WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.tar.Z
@@ -12,6 +11,8 @@ HOMEPAGE=	http://www.nikhef.nl/user/e07/
 COMMENT=	Powerful DNS query and testing tool
 
 CONFLICTS+=	bind-[0-9]*
+
+WRKSRC=		${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:52:14 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:23:57 agc Exp $
 
 DISTNAME=	distfetch-20020930
-WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,6 +9,7 @@ MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.pkgsrc.org/
 COMMENT=	Script to fetch only required distribution files
 
+WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# defined
 NO_CHECKSUM=	# defined
 NO_CONFIGURE=	# defined

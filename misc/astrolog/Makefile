@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2003/07/17 21:48:42 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/20 12:21:01 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/08/10 22:31:15 fenner Exp
 #
 
 DISTNAME=       ast54unx
 PKGNAME=        astrolog-5.40
-WRKSRC=		${WRKDIR}
 CATEGORIES=     misc
 MASTER_SITES=   http://www.astrolog.org/ftp/ephem/ \
 		http://www.astrolog.org/ftp/ \
@@ -20,6 +19,7 @@ RESTRICTED=	Do not sell or profit from this software in any way
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
+WRKSRC=		${WRKDIR}
 EPHEM=          LRZ5_24 CHI_24 CPJV_24
 EXTRACT_ONLY=	${DISTNAME}.shr
 EXTRACT_CMD=	${EXTRACT_CMD.shar}

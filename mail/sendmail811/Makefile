@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/11/12 03:39:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/20 12:19:44 agc Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
 PKGREVISION=	7
-WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/unix/mail/sendmail/ \
@@ -30,6 +29,7 @@ COMMENT=	The well known Mail Transport Agent
 
 LICENSE=	no-profit
 
+WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
 USE_BUILDLINK2=	# defined
 MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}" \

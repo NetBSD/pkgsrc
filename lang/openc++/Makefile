@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:45:03 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/20 12:19:17 agc Exp $
 #
 
 DISTNAME=	opencxx2512
 PKGNAME=	openc++-2.5.12
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/openc++2.5.12/src/Unix
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opencxx/}
 
@@ -17,6 +16,7 @@ MAKEFILE=	Makefile.SunOSandBSD
 MAKE_FLAGS+=	CXXFLAGS=-I${PREFIX}/include
 MAKE_FLAGS+=	GCLIBDIR=${BUILDLINK_DIR}
 
+WRKSRC=		${WRKDIR}/openc++2.5.12/src/Unix
 USE_BUILDLINK2= YES
 
 OPENCXX_SHAREDIR=	${PREFIX}/share/openc++

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/10/06 11:02:45 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:22:20 agc Exp $
 
 DISTNAME=	ns-src-2.26
 PKGNAME=	${DISTNAME:S/-src//}
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	net
 MASTER_SITES=	http://www.isi.edu/nsnam/dist/
 
@@ -13,6 +12,7 @@ COMMENT=	The UCB/LBNL Network Simulator Version 2
 
 .include "../../mk/bsd.prefs.mk"
 
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
 USE_X11=	yes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2003/10/18 12:25:36 cjep Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/20 12:19:18 agc Exp $
 
 DISTNAME=		pl-lite-5.0.10
 PKGNAME=		swi-prolog-5.0.10
 PKGREVISION=				1
-WRKSRC=			${WRKDIR}/${DISTNAME:S,-lite,,}
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.swi.psy.uva.nl/SWI-Prolog/
 
@@ -12,6 +11,7 @@ HOMEPAGE=		http://www.swi-prolog.org/
 COMMENT=		ISO/Edinburgh-style Prolog compiler
 
 DIST_SUBDIR=		swi-prolog
+WRKSRC=			${WRKDIR}/${DISTNAME:S,-lite,,}
 
 GNU_CONFIGURE=		# defined
 USE_BUILDLINK2=		# defined

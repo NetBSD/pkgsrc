@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:52:43 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:24:29 agc Exp $
 #
 
 DISTNAME=	ocr-b
 PKGNAME=	tex-ocrb-1.0
 # PKGREVISION=	1
-WRKSRC=		${WRKDIR}/ocr-b
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=fonts/${DISTNAME}/}
 
@@ -14,6 +13,7 @@ COMMENT=	OCR-B font for LaTeX
 
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX-bin
 
+WRKSRC=		${WRKDIR}/ocr-b
 DIST_SUBDIR=	${DISTNAME}
 DISTFILES= ocrb10.mf ocrb10e.mf ocrb10f.mf ocrb10g.mf ocrb10l.mf \
 	ocrb10s.mf ocrb10x.mf ocrb5.mf ocrb6.mf ocrb7.mf ocrb8.mf \

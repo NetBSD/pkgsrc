@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2004/01/20 02:48:33 jschauma Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/20 12:18:16 agc Exp $
 
 PKGNAME=		${DISTNAME:S/MesaLib/glut/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
-WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
 MAINTAINER=		rh@NetBSD.org
 COMMENT=		GLUT Graphics library similar to SGI's OpenGL
 
@@ -14,6 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../graphics/Mesa/Makefile.common"
 
+WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
 USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2004/01/05 23:36:32 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2004/01/20 12:25:34 agc Exp $
 #
 
 DISTNAME=		rsaref
 PKGNAME=		rsaref-2.0p3
-WRKSRC=			${WRKDIR}/install
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.spinnaker.com/pub/crypt/rsaref/
 EXTRACT_SUFX=		.tar.Z
@@ -11,6 +10,7 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Encryption/authentication library, RSA/MDX/DES
 
+WRKSRC=			${WRKDIR}/install
 CRYPTO=			yes
 LICENSE=		no-commercial-use
 

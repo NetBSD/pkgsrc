@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:56:00 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:27:59 agc Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
 PKGNAME=	py-pcgi-2.2.2
-WRKSRC=		${WRKDIR}/${DISTNAME}/pcgi
 CATEGORIES=	www
 MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
@@ -12,6 +11,7 @@ MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://starship.python.net/crew/jbauer/persistcgi/
 COMMENT=	Persistent CGI system for Zope and other ZPublisher applications
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/pcgi
 HAS_CONFIGURE=	yes
 EXTRACT_ELEMENTS=	${DISTNAME}/pcgi
 

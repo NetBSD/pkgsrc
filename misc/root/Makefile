@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:49:50 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/20 12:21:02 agc Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
-WRKSRC=			${WRKDIR}
 CATEGORIES=		misc
 MASTER_SITES=		ftp://root.cern.ch/root/
 
@@ -12,6 +11,7 @@ COMMENT=		OO framework for data analysis and visualisation
 
 BUILD_DEPENDS+=		cint-5.14.40:../../lang/cint
 
+WRKSRC=			${WRKDIR}
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GMAKE=		YES

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2003/07/17 22:52:22 grant Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/20 12:24:28 agc Exp $
 
 PKGNAME=	acroread3-3.01
-WRKSRC=		${WRKDIR}
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/3.x/
 
@@ -16,6 +15,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 LICENSE=		adobe-acrobat-license
 
+WRKSRC=		${WRKDIR}
 NO_BUILD=	YES
 
 .include "../../mk/bsd.prefs.mk"

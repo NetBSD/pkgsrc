@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2003/07/17 22:51:45 grant Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/20 12:22:20 agc Exp $
 
 DISTNAME=	rtspd-src-1.0.0.0
 PKGNAME=	ra-rtsp-proxy-1.0.0.0
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/rtspd-1.0.0.0a
 CATEGORIES=	net
 MASTER_SITES=	http://www.scn.rain.com/pub/security/firewalls/
 
@@ -17,6 +16,8 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+WRKSRC=		${WRKDIR}/rtspd-1.0.0.0a
 
 .include "../../mk/bsd.prefs.mk"
 

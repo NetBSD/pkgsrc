@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2004/01/03 18:49:55 reed Exp $
+# $NetBSD: Makefile,v 1.31 2004/01/20 12:27:57 agc Exp $
 #
 
 DISTNAME=	amaya-src-8.2
 PKGNAME=	${DISTNAME:S/-src//}
 PKGREVISION=			1
-WRKSRC=		${WRKDIR}/Amaya/work
 CATEGORIES=	www
 MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
 		ftp://ftp.w3.org/pub/amaya/ \
@@ -17,6 +16,7 @@ COMMENT=	Web browser/editor from the World Wide Web Consortium (W3C)
 
 EXTRACT_ELEMENTS=	Amaya libwww
 
+WRKSRC=		${WRKDIR}/Amaya/work
 USE_BUILDLINK2=	YES
 USE_X11=	YES
 USE_GMAKE=	YES

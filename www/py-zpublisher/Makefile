@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:56:01 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:27:59 agc Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
 PKGNAME=	py-zpublisher-2.2.2
-WRKSRC=		${WRKDIR}/${DISTNAME}/lib/python
 CATEGORIES=	www
 MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
@@ -14,6 +13,7 @@ COMMENT=	Publishes a collection of Python objects as Web resources
 
 DEPENDS+=	py-extclass>=2.2.2:../../lang/py-extclass
 
+WRKSRC=		${WRKDIR}/${DISTNAME}/lib/python
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 EXTRACT_ELEMENTS=	${DISTNAME}/lib/python/ZPublisher
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/03 18:49:54 reed Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:26:50 agc Exp $
 #
 
 DISTNAME=	subtitleripper-0.3-1
@@ -6,7 +6,6 @@ PKGREVISION=	1
 CATEGORIES=	textproc graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=subtitleripper/}
 EXTRACT_SUFX=	.tgz
-WRKSRC=		${WRKDIR}/subtitleripper
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/subtitleripper/
@@ -14,6 +13,7 @@ COMMENT=	Sub title ripping program
 
 DEPENDS+=	gocr-[0-9]*:../../textproc/gocr
 
+WRKSRC=			${WRKDIR}/subtitleripper
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 

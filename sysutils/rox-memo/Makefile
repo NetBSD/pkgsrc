@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:53 reed Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:26:16 agc Exp $
 #
 
 DISTNAME=	Memo-1.0.0
 PKGNAME=	rox-memo-1.0.0
 PKGREVISION=	3
-WRKSRC=		${WRKDIR}/Memo
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz
@@ -16,6 +15,7 @@ COMMENT=	Reminds you about things
 DEPENDS+=	rox-lib>=0.1.4:../../sysutils/rox-lib
 
 DIST_SUBDIR=	rox
+WRKSRC=		${WRKDIR}/Memo
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

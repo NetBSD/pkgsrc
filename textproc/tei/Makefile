@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/03 23:46:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/20 12:26:50 agc Exp $
 
 DISTNAME=	dtd
 PKGNAME=	tei-4
-WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.tei-c.org/P4X/DTD/
 EXTRACT_SUFX=	.zip
@@ -11,6 +10,7 @@ MAINTAINER=	minskim@bawi.org
 HOMEPAGE=	http://www.tei-c.org/
 COMMENT=	DTD of the Text Encoding Initiative
 
+WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
