@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/10/25 16:42:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/14 20:33:39 jmmv Exp $
 #
 
 DISTNAME=	drivel-1.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=drivel/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,6 +28,7 @@ GCONF2_SCHEMAS=		drivel.schemas
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/curl/buildlink3.mk"
