@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1109 2002/12/21 15:06:04 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1110 2002/12/23 01:59:43 cjep Exp $
 #
 # This file is in the public domain.
 #
@@ -1585,6 +1585,7 @@ _EXTRACT_SUFFICES+=	.shar.gz .shar.bz2 .shar.Z .shar
 _EXTRACT_SUFFICES+=	.zip
 _EXTRACT_SUFFICES+=	.lha .lzh
 _EXTRACT_SUFFICES+=	.Z .bz2 .gz
+_EXTRACT_SUFFICES+=	.zoo
 
 # If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
 # pulling in the "bzip2" package if necessary.  [Note: this is only for
@@ -1613,6 +1614,9 @@ BUILD_DEPENDS+=		lha>=114.9:../../archivers/lha
 BUILD_DEPENDS+=         gzip-base:../../archivers/gzip-base
 GZCAT=                  ${LOCALBASE}/bin/zcat
 .  endif
+.endif
+.if !empty(EXTRACT_ONLY:M*.zoo) || !empty(EXTRACT_SUFX:M*.zoo)
+BUILD_DEPENDS+=		unzoo-[0-9]*:../../archivers/unzoo
 .endif
 
 DECOMPRESS_CMD.tar.gz?=		${GZCAT}
@@ -1646,6 +1650,7 @@ DOWNLOADED_DISTFILE=	$${extract_file}
 EXTRACT_CMD.zip?=	${LOCALBASE}/bin/unzip -Laq $${extract_file}
 EXTRACT_CMD.lha?=	${LOCALBASE}/bin/lha xq $${extract_file}
 EXTRACT_CMD.lzh?=	${EXTRACT_CMD.lha}
+EXTRACT_CMD.zoo?=	${LOCALBASE}/bin/unzoo -x $${extract_file}
 
 .for __suffix__ in .gz .bz2 .Z
 EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} > `${BASENAME} $${extract_file} ${__suffix__}`
