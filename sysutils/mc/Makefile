@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/10/04 17:16:21 tv Exp $
+# $NetBSD: Makefile,v 1.13 1998/10/04 17:24:30 tv Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
@@ -13,7 +13,8 @@ HOMEPAGE=		http://www.gnome.org/mc/
 DEPENDS+=		libslang-1.2.2:../../devel/libslang
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-catgets --with-netrc --with-slang \
+# XXX the cat-id-tbl is not up to date, so the catgets is broken.
+CONFIGURE_ARGS+=	--without-catgets --with-netrc --with-slang \
 			--without-x --without-gnome --without-tk
 
 # Funny stuff to get this to use the system libslang.
