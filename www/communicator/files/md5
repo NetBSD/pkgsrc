@@ -1,8 +1,7 @@
-$NetBSD: md5,v 1.15 2000/05/12 16:18:44 tron Exp $
+$NetBSD: md5,v 1.16 2000/07/25 06:44:28 tron Exp $
 
 MD5 (netscape/communicator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = 26d2944a58d6fa8c73ff5a4a2f3d7258
-MD5 (netscape/communicator-v473-export.alpha-dec-osf4.0.tar.gz) = 9489caae0e177e6126b07ec97ee037f5
-MD5 (netscape/communicator-v473-export.sparc-sun-solaris2.5.1.tar.gz) = c710f3af8078fde3f600ddf0eb9b42a5
-MD5 (netscape/communicator-v473-export.x86-bsdi-bsd2.tar.gz) = fd7975f7aeb2c6ebac9ca96724b0afb6
-MD5 (netscape/communicator-v473-export.x86-unknown-linux2.2.tar.gz) = 863345f71da289790401fca0c05ab27b
-MD5 (netscape/communicator-v473-us.x86-unknown-linux2.2.tar.gz) = 2b1aaf95eb6362b7777047e4b90410cb
+MD5 (netscape/communicator-v474-us.alpha-dec-osf4.0.tar.gz) = c38db0f4496f02ac55c52d14e814f58f
+MD5 (netscape/communicator-v474-us.sparc-sun-solaris2.5.1.tar.gz) = e5728854cf8acedb1854e1cfe48ad17b
+MD5 (netscape/communicator-v474-us.x86-bsdi-bsd2.tar.gz) = dbd4f625781dec0fd78c6846279f9fe4
+MD5 (netscape/communicator-v474-us.x86-unknown-linux2.2.tar.gz) = f9004cf09b6147d6f56c7302447bfcfe
