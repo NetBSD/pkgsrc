@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/01/29 07:40:45 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/05/06 08:10:26 rh Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -25,23 +25,50 @@ lib/libexslt.a
 lib/libexslt.la
 lib/libexslt.so
 lib/libexslt.so.7
-lib/libexslt.so.7.2
+lib/libexslt.so.7.8
 lib/libxslt.a
 lib/libxslt.la
 lib/libxslt.so
 lib/libxslt.so.1
-lib/libxslt.so.1.9
+lib/libxslt.so.1.17
 lib/libxsltbreakpoint.a
 lib/libxsltbreakpoint.la
 lib/libxsltbreakpoint.so
 lib/libxsltbreakpoint.so.1
 lib/libxsltbreakpoint.so.1.8
+lib/pkgconfig/libxslt.pc
 lib/xsltConf.sh
 man/man1/xsltproc.1
 man/man4/libexslt.4
 man/man4/libxslt.4
+share/doc/html/libxslt/API.html
+share/doc/html/libxslt/APIchunk0.html
+share/doc/html/libxslt/APIchunk1.html
+share/doc/html/libxslt/APIchunk2.html
+share/doc/html/libxslt/APIchunk3.html
+share/doc/html/libxslt/APIchunk4.html
+share/doc/html/libxslt/APIchunk5.html
+share/doc/html/libxslt/APIchunk6.html
+share/doc/html/libxslt/APIconstructors.html
+share/doc/html/libxslt/APIfiles.html
+share/doc/html/libxslt/APIfunctions.html
+share/doc/html/libxslt/APIsymbols.html
+share/doc/html/libxslt/FAQ.html
 share/doc/html/libxslt/book1.html
+share/doc/html/libxslt/bugs.html
+share/doc/html/libxslt/contexts.gif
+share/doc/html/libxslt/contribs.html
+share/doc/html/libxslt/docbook.html
+share/doc/html/libxslt/docs.html
+share/doc/html/libxslt/downloads.html
+share/doc/html/libxslt/extensions.html
+share/doc/html/libxslt/help.html
+share/doc/html/libxslt/index.html
+share/doc/html/libxslt/index.sgml
+share/doc/html/libxslt/internals.html
+share/doc/html/libxslt/intro.html
 share/doc/html/libxslt/libxslt-attributes.html
+share/doc/html/libxslt/libxslt-extensions.html
 share/doc/html/libxslt/libxslt-functions.html
 share/doc/html/libxslt/libxslt-imports.html
 share/doc/html/libxslt/libxslt-keys.html
@@ -56,9 +83,28 @@ share/doc/html/libxslt/libxslt-variables.html
 share/doc/html/libxslt/libxslt-xslt.html
 share/doc/html/libxslt/libxslt-xsltinternals.html
 share/doc/html/libxslt/libxslt-xsltutils.html
+share/doc/html/libxslt/news.html
+share/doc/html/libxslt/node.gif
+share/doc/html/libxslt/object.gif
+share/doc/html/libxslt/processing.gif
+share/doc/html/libxslt/python.html
+share/doc/html/libxslt/redhat.gif
+share/doc/html/libxslt/smallfootonly.gif
+share/doc/html/libxslt/stylesheet.gif
+share/doc/html/libxslt/templates.gif
 share/doc/html/libxslt/tutorial/libxslt_tutorial.c
 share/doc/html/libxslt/tutorial/libxslttutorial.html
 share/doc/html/libxslt/tutorial/libxslttutorial.xml
+share/doc/html/libxslt/xslt.html
+share/doc/html/libxslt/xsltproc.html
+share/doc/html/libxslt/xsltproc2.html
+share/doc/libxslt-python-${PKGVERSION}/examples/basic.py
+share/doc/libxslt-python-${PKGVERSION}/examples/extfunc.py
+share/doc/libxslt-python-${PKGVERSION}/examples/pyxsltproc.py
+share/doc/libxslt-python-${PKGVERSION}/examples/test.xml
+share/doc/libxslt-python-${PKGVERSION}/examples/test.xsl
+@dirrm share/doc/libxslt-python-1.0.17/examples
+@dirrm share/doc/libxslt-python-1.0.17
 @dirrm share/doc/html/libxslt/tutorial
 @dirrm share/doc/html/libxslt
 @dirrm include/libxslt
