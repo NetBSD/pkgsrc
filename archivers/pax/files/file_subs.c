@@ -1,4 +1,4 @@
-/*	$NetBSD: file_subs.c,v 1.6 2004/06/26 12:42:02 grant Exp $	*/
+/*	$NetBSD: file_subs.c,v 1.7 2004/06/26 13:30:59 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -44,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)file_subs.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: file_subs.c,v 1.6 2004/06/26 12:42:02 grant Exp $");
+__RCSID("$NetBSD: file_subs.c,v 1.7 2004/06/26 13:30:59 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -519,6 +519,12 @@ badlink:
 			syswarn(1, oerrno, "Cannot create %s", nm);
 			return(-1);
 		}
+
+		/*
+		 * it must be a file that exists but we can't create or
+		 * remove, but we must avoid the infinite loop.
+		 */
+		break;
 	}
 
 	/*
