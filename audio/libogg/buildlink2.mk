@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:38:14 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/12/08 14:36:51 wiz Exp $
 
 .if !defined(LIBOGG_BUILDLINK2_MK)
 LIBOGG_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libogg
-BUILDLINK_DEPENDS.libogg?=	libogg>=1.0.0.8
+BUILDLINK_DEPENDS.libogg?=	libogg>=1.0.1
 BUILDLINK_PKGSRCDIR.libogg?=	../../audio/libogg
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libogg=libogg
@@ -13,6 +13,8 @@ BUILDLINK_FILES.libogg=		include/ogg/config_types.h
 BUILDLINK_FILES.libogg+=	include/ogg/ogg.h
 BUILDLINK_FILES.libogg+=	include/ogg/os_types.h
 BUILDLINK_FILES.libogg+=	lib/libogg.*
+
+.include "../../devel/pkgconfig/buildlink2.mk"
 
 BUILDLINK_TARGETS+=		libogg-buildlink
 

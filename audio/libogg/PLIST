@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/25 18:38:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/08 14:36:51 wiz Exp $
 include/ogg/config_types.h
 include/ogg/ogg.h
 include/ogg/os_types.h
 lib/libogg.a
 lib/libogg.la
 lib/libogg.so
-lib/libogg.so.4
-lib/libogg.so.4.0
+lib/libogg.so.5
+lib/libogg.so.5.0
+lib/pkgconfig/ogg.pc
 share/aclocal/ogg.m4
 share/doc/html/${DISTNAME}/framing.html
 share/doc/html/${DISTNAME}/index.html
@@ -72,6 +73,14 @@ share/doc/html/${DISTNAME}/oggstream.html
 share/doc/html/${DISTNAME}/stream.png
 share/doc/html/${DISTNAME}/white-ogg.png
 share/doc/html/${DISTNAME}/white-xifish.png
+share/doc/html/${PKGNAME}/ogg/ogg_stream_packetpeek.html
+share/doc/html/${PKGNAME}/ogg/ogg_stream_reset_serialno.html
+share/doc/html/${PKGNAME}/ogg/oggpack_writealign.html
+share/doc/html/${PKGNAME}/ogg/oggpack_writecopy.html
+share/doc/html/${PKGNAME}/ogg/oggpack_writetrunc.html
+share/doc/html/${PKGNAME}/rfc3533.txt
+share/doc/html/${PKGNAME}/rfc3534.txt
+share/doc/html/${PKGNAME}/vorbisword2.png
 @dirrm share/doc/html/${DISTNAME}/ogg
 @dirrm share/doc/html/${DISTNAME}
 @dirrm include/ogg
