@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/05 03:48:46 tv Exp $
+lib/perl5/man/man3/Apache::ASP.3
+lib/perl5/site_perl/Apache/ASP.pm
+lib/perl5/site_perl/alpha-netbsd/auto/Apache/ASP/.packlist
+@dirrm lib/perl5/site_perl/alpha-netbsd/auto/Apache/ASP
