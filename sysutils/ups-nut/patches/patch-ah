@@ -1,18 +1,23 @@
-$NetBSD: patch-ah,v 1.1 2002/10/02 22:39:00 dillo Exp $
+$NetBSD: patch-ah,v 1.2 2002/12/13 04:23:20 lukem Exp $
 
---- configure.orig	Thu Oct  3 00:37:12 2002
+--- configure.orig	Mon Dec  2 23:08:51 2002
 +++ configure
-@@ -2684,13 +2684,6 @@ fi
+@@ -4741,18 +4741,6 @@
  
+ fi;
  
- 
+-
 -grep "^$RUN_AS_GROUP:" /etc/group >/dev/null 2>/dev/null
 -if (test "$?" = "1")
 -then
 -	# not found, fatal error
--	echo "configure: warning: $RUN_AS_GROUP not found in /etc/group!" 1>&2
--	echo "configure: warning: You might want to rerun configure using --with-group and another group name." 1>&2
--fi  
+-	{ echo "$as_me:$LINENO: WARNING: $RUN_AS_GROUP not found in /etc/group!" >&5
+-echo "$as_me: WARNING: $RUN_AS_GROUP not found in /etc/group!" >&2;}
+-	{ echo "$as_me:$LINENO: WARNING: You might want to rerun configure using --with-group and another group name." >&5
+-echo "$as_me: WARNING: You might want to rerun configure using --with-group and another group name." >&2;}
+-fi
+-
+-
+ echo "$as_me:$LINENO: checking facility for syslog" >&5
+ echo $ECHO_N "checking facility for syslog... $ECHO_C" >&6
  
- 
- echo $ac_n "checking facility for syslog""... $ac_c" 1>&6

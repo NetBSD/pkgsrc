@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2002/10/02 22:38:59 dillo Exp $
+# $NetBSD: Makefile,v 1.25 2002/12/13 04:23:17 lukem Exp $
 #
 
-DISTNAME=		nut-0.50.0
-PKGNAME=		ups-nut-0.50.0
+DISTNAME=		nut-1.2.1
+PKGNAME=		ups-nut-1.2.1
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.exploits.org/nut/release/
+MASTER_SITES=		http://www.exploits.org/nut/release/1.2/
 
 MAINTAINER=		lukem@netbsd.org
 HOMEPAGE=		http://www.exploits.org/nut/
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${NUT_CONFDIR}			\
 			--with-user=${NUT_USER}				\
 			--with-group=${NUT_GROUP}			\
 			--with-statepath=${NUT_STATEDIR}		\
-			--with-modelpath=${LOCALBASE}/sbin/ups-drivers
+			--with-drvpath=${LOCALBASE}/sbin/ups-drivers
 
 PKG_SYSCONFSUBDIR?=	nut
 NUT_CONFDIR=		${PKG_SYSCONFDIR}
@@ -32,24 +32,23 @@ FILES_SUBST+=		NUT_STATEDIR=${NUT_STATEDIR}
 
 MESSAGE_SUBST+=		NUT_CONFDIR=${NUT_CONFDIR}
 MESSAGE_SUBST+=		NUT_EGDIR=${NUT_EGDIR}
+MESSAGE_SUBST+=		NUT_DOCDIR=${NUT_DOCDIR}
 
 PKG_GROUPS=		${NUT_GROUP}
 PKG_USERS=		${NUT_USER}:${NUT_GROUP}::Network\\ UPS\\ Tools::${SH}
 
-CONF_FILES=	${NUT_EGDIR}/hosts.conf.sample ${NUT_CONFDIR}/hosts.conf
-CONF_FILES+=	${NUT_EGDIR}/multimon.conf.sample ${NUT_CONFDIR}/multimon.conf
-CONF_FILES+=	${NUT_EGDIR}/upsset.conf.sample ${NUT_CONFDIR}/upsset.conf
-CONF_FILES+=	${NUT_EGDIR}/upssched.conf.sample ${NUT_CONFDIR}/upssched.conf
-CONF_FILES+=	${NUT_EGDIR}/ups.conf.sample ${NUT_CONFDIR}/ups.conf
+CONF_FILES=		${NUT_EGDIR}/ups.conf.sample ${NUT_CONFDIR}/ups.conf
+CONF_FILES+=		${NUT_EGDIR}/upssched.conf.sample \
+			${NUT_CONFDIR}/upssched.conf
 
-CONF_FILES_PERMS=	${NUT_EGDIR}/upsmon.conf.sample			\
-			${NUT_CONFDIR}/upsmon.conf			\
-			${ROOT_USER} ${ROOT_GROUP} 0600
-CONF_FILES_PERMS+=	${NUT_EGDIR}/upsd.conf.sample			\
+CONF_FILES_PERMS=	${NUT_EGDIR}/upsd.conf.sample			\
 			${NUT_CONFDIR}/upsd.conf			\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 CONF_FILES_PERMS+=	${NUT_EGDIR}/upsd.users.sample			\
 			${NUT_CONFDIR}/upsd.users			\
+			${ROOT_USER} ${ROOT_GROUP} 0600
+CONF_FILES_PERMS+=	${NUT_EGDIR}/upsmon.conf.sample			\
+			${NUT_CONFDIR}/upsmon.conf			\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 RCD_SCRIPTS=		ups upsd upsdriver upslog upsmon
 
@@ -62,7 +61,9 @@ pre-install:
 post-install:
 	${INSTALL_DATA_DIR} ${NUT_DOCDIR}
 	${INSTALL_DATA_DIR} ${NUT_DOCDIR}/cables ${NUT_DOCDIR}/drivers
-	${INSTALL_DATA} ${WRKSRC}/README ${NUT_DOCDIR}
+	for f in CHANGES COPYING CREDITS NEWS README UPGRADING; do \
+		${INSTALL_DATA} ${WRKSRC}/$$f ${NUT_DOCDIR}; \
+	done
 	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${NUT_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/driver.list ${NUT_DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${NUT_DOCDIR}

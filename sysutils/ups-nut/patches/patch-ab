@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2001/11/21 15:50:56 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2002/12/13 04:23:19 lukem Exp $
 
---- conf/Makefile.in.orig	Mon Aug 13 13:12:18 2001
+--- conf/Makefile.in.orig	Tue Sep  3 17:23:02 2002
 +++ conf/Makefile.in
-@@ -1,7 +1,7 @@
- # Network UPS Tools: conf
+@@ -4,7 +4,7 @@
+ prefix		= @prefix@
+ exec_prefix	= @exec_prefix@
  
- prefix     = @prefix@
--CONFPATH   = $(INSTALLROOT)@sysconfdir@
-+CONFPATH   = $(INSTALLROOT)@datadir@/examples/nut
- INSTALLCMD = @INSTALL@
+-CONFPATH	= $(DESTDIR)@sysconfdir@
++CONFPATH	= $(DESTDIR)@datadir@/examples/nut
  
- SECFILES = upsmon.conf upsd.conf upsd.users
+ INSTALLCMD  = @INSTALL@
+ 
