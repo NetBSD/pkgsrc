@@ -24,9 +24,6 @@
 /* Define to 1 if you have the `db1' library (-ldb1). */
 #undef HAVE_LIBDB1
 
-/* Define to 1 if you have the <md5.h> header file. */
-#undef HAVE_MD5_H
-
 /* Define to 1 if you have the <memory.h> header file. */
 #undef HAVE_MEMORY_H
 
