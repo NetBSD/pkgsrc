@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.42 2004/10/03 00:13:25 tv Exp $
+# $NetBSD: Makefile,v 1.43 2004/11/10 19:13:10 snj Exp $
 #
 
 DISTNAME=	gc6.3
-PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/gc/boehm-gc-/}
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/
 COMMENT=	Garbage collection and memory leak detection for C and C++
-
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
