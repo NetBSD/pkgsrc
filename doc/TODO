@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2993 2005/02/04 22:24:23 adrianp Exp $
+$NetBSD: TODO,v 1.2994 2005/02/04 22:35:03 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -667,7 +667,6 @@ Suggested package updates
 	o minicom-2.1
 	o minivmac-2.5.0
 	o mknmz-wwwoffle-0.7.2
-	o mldonkey-2.5.22
 	o mlterm-2.9.1 [pkg/29061]
 	o mlview-0.7.1
 	o mmix-20041014
