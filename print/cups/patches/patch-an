@@ -1,0 +1,93 @@
+$NetBSD: patch-an,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- filter/Makefile.orig	Fri Jul 30 10:57:20 1999
++++ filter/Makefile	Sun Nov 28 21:06:28 1999
+@@ -53,13 +53,10 @@
+ #
+ 
+ install:
+-	-$(MKDIR) $(SERVERROOT)/filter
+-	$(CP) $(TARGETS) $(SERVERROOT)/filter
+-	-$(MKDIR) $(LIBDIR)
+-	$(CP) $(LIBCUPSIMAGE) $(LIBDIR)
+-	-if test $(LIBCUPSIMAGE) != "libcupsimage.a"; then \
+-		$(LN) $(LIBCUPSIMAGE) `basename $(LIBCUPSIMAGE) .1`; \
+-	fi
++	-$(BSD_INSTALL_PROGRAM_DIR) $(EXECDIR)/filter
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) $(TARGETS) $(EXECDIR)/filter
++	-$(BSD_INSTALL_DATA_DIR) $(LIBDIR)
++	$(LIBTOOL) $(BSD_INSTALL_DATA) $(LIBCUPSIMAGE) $(LIBDIR)
+ 
+ #
+ # hpgltops
+@@ -67,10 +64,19 @@
+ 
+ hpgltops:	$(HPGLOBJS) common.o ../Makedefs ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ $(HPGLOBJS) common.o $(LIBS) -lm
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o $@ $(HPGLOBJS) common.o $(LIBS) -lm
+ $(HPGLOBJS):	hpgltops.h
+ 
+ #
++# libcupsimage.la
++#
++libcupsimage.la: $(IMAGEOBJS:.o=.lo)
++	echo Linking $@...
++	$(RM) $@
++	$(LIBTOOL) $(CC) -o $@ $(IMAGEOBJS:.o=.lo) -rpath $(LIBDIR) \
++		-version-info 1:0
++
++#
+ # libcupsimage.so.1, libcupsimage.sl.1
+ #
+ 
+@@ -98,8 +104,8 @@
+ imagetops:	imagetops.o common.o $(LIBCUPSIMAGE) ../Makedefs \
+ 		../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ imagetops.o common.o -L. -lcupsimage \
+-		$(IMGLIBS) $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o $@ imagetops.o common.o \
++		$(LIBCUPSIMAGE) $(IMGLIBS) $(LIBS)
+ imagetops:	common.h image.h
+ 
+ #
+@@ -109,8 +115,8 @@
+ imagetoraster:	imagetoraster.o common.o $(LIBCUPSIMAGE) ../Makedefs \
+ 		../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ imagetoraster.o common.o -L. -lcupsimage \
+-		$(IMGLIBS) $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o $@ imagetoraster.o common.o \
++		$(LIBCUPSIMAGE) $(IMGLIBS) $(LIBS)
+ imagetoraster:	common.h image.h
+ 
+ #
+@@ -119,7 +125,7 @@
+ 
+ pstops:	pstops.o common.o ../Makedefs ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ pstops.o common.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o $@ pstops.o common.o $(LIBS)
+ pstops.o:	common.h
+ 
+ #
+@@ -128,7 +134,7 @@
+ 
+ rastertohp:	rastertohp.o ../Makedefs ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ rastertohp.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o $@ rastertohp.o $(LIBS)
+ rastertohp.o:	../cups/raster.h
+ 
+ #
+@@ -138,7 +144,8 @@
+ texttops:	texttops.o textcommon.o common.o ../Makedefs \
+ 		../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ texttops.o textcommon.o common.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o $@ texttops.o textcommon.o common.o \
++		$(LIBS)
+ texttops.o:	common.h textcommon.h
+ 
+ common.o:	common.h

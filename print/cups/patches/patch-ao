@@ -1,0 +1,15 @@
+$NetBSD: patch-ao,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- fonts/Makefile.orig	Mon May 10 17:33:34 1999
++++ fonts/Makefile	Sun Nov 28 21:06:28 1999
+@@ -60,8 +60,8 @@
+ #
+ 
+ install:
+-	-$(MKDIR) $(DATADIR)/fonts
+-	$(CP) $(FONTS) $(DATADIR)/fonts
++	-$(BSD_INSTALL_DATA_DIR) $(DATADIR)/fonts
++	$(BSD_INSTALL_DATA) $(FONTS) $(DATADIR)/fonts
+ 
+ #
+ # End of "$Id: patch-ao,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $".

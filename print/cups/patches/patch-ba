@@ -1,0 +1,70 @@
+$NetBSD: patch-ba,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- systemv/Makefile.orig	Thu Aug 12 09:11:02 1999
++++ systemv/Makefile	Sun Nov 28 21:06:29 1999
+@@ -45,16 +45,13 @@
+ #
+ 
+ install:
+-	-$(MKDIR) $(BINDIR)
+-	-$(MKDIR) $(LIBDIR)
+-	$(CP) accept lpadmin $(SBINDIR)
++	-$(BSD_INSTALL_PROGRAM_DIR) $(BINDIR)
++	-$(BSD_INSTALL_DATA_DIR) $(LIBDIR)
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) accept lpadmin $(SBINDIR)
+ 	-$(LN) accept $(SBINDIR)/reject
+-	-$(LN) $(SBINDIR)/lpadmin $(LIBDIR)
+-	-$(LN) $(SBINDIR)/accept $(LIBDIR)
+-	-$(LN) $(SBINDIR)/accept $(LIBDIR)/reject
+ 	-$(LN) $(SBINDIR)/accept $(BINDIR)/disable
+ 	-$(LN) $(SBINDIR)/accept $(BINDIR)/enable
+-	$(CP) cancel lp lpstat $(BINDIR)
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) cancel lp lpstat $(BINDIR)
+ 
+ #
+ # accept
+@@ -62,7 +59,7 @@
+ 
+ accept:	accept.o ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o accept accept.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o accept accept.o $(LIBS)
+ 	-$(LN) accept disable
+ 	-$(LN) accept enable
+ 	-$(LN) accept reject
+@@ -75,7 +72,7 @@
+ 
+ cancel:	cancel.o ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o cancel cancel.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o cancel cancel.o $(LIBS)
+ 
+ cancel.o:	../cups/cups.h ../Makedefs
+ 
+@@ -85,7 +82,7 @@
+ 
+ lp:	lp.o ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o lp lp.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o lp lp.o $(LIBS)
+ 
+ lp.o:	../cups/cups.h ../Makedefs
+ 
+@@ -95,7 +92,7 @@
+ 
+ lpadmin:	lpadmin.o ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o lpadmin lpadmin.o $(LIBZ) $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o lpadmin lpadmin.o $(LIBZ) $(LIBS)
+ 
+ lpadmin.o:	../cups/cups.h ../Makedefs
+ 
+@@ -105,7 +102,7 @@
+ 
+ lpstat:	lpstat.o ../cups/$(LIBCUPS)
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o lpstat lpstat.o $(LIBS)
++	$(LIBTOOL) $(CC) $(LDFLAGS) -o lpstat lpstat.o $(LIBS)
+ 
+ lpstat.o:	../cups/cups.h ../Makedefs
+ 

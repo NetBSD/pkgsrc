@@ -1,0 +1,31 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- conf/Makefile.orig	Fri Jul 30 10:18:35 1999
++++ conf/Makefile	Sun Nov 28 21:06:28 1999
+@@ -48,19 +48,19 @@
+ #
+ 
+ install:
+-	-$(MKDIR) $(SERVERROOT)/conf
++	-$(MKDIR) $(CONFDIR)
+ 	for file in $(KEEP); do \
+-		if test -e $(SERVERROOT)/conf/$$file ; then \
+-			$(CP) $$file $(SERVERROOT)/conf/$$file.N ; \
++		if test -e $(CONFDIR)/$$file ; then \
++			$(CP) $$file $(CONFDIR)/$$file.N ; \
+ 		else \
+-			$(CP) $$file $(SERVERROOT)/conf ; \
++			$(CP) $$file $(CONFDIR) ; \
+ 		fi ; \
+ 	done
+ 	for file in $(REPLACE); do \
+-		if test -e $(SERVERROOT)/conf/$$file ; then \
+-			$(MV) $(SERVERROOT)/conf/$$file $(SERVERROOT)/conf/$$file.O ; \
++		if test -e $(CONFDIR)/$$file ; then \
++			$(MV) $(CONFDIR)/$$file $(CONFDIR)/$$file.O ; \
+ 		fi ; \
+-		$(CP) $$file $(SERVERROOT)/conf ; \
++		$(CP) $$file $(CONFDIR) ; \
+ 	done
+ 
+ #

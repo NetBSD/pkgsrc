@@ -1,0 +1,46 @@
+$NetBSD: patch-av,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+
+--- scheduler/client.c.orig	Thu Nov  4 09:56:33 1999
++++ scheduler/client.c	Sun Nov 28 21:06:29 1999
+@@ -474,17 +474,17 @@
+ 
+             if (strncmp(con->uri, "/printers", 9) == 0)
+ 	    {
+-	      snprintf(command, sizeof(command), "%s/cgi-bin/printers.cgi", ServerRoot);
++	      snprintf(command, sizeof(command), "%s/cgi-bin/printers.cgi", ExecRoot);
+ 	      options = con->uri + 9;
+ 	    }
+ 	    else if (strncmp(con->uri, "/classes", 8) == 0)
+ 	    {
+-	      snprintf(command, sizeof(command), "%s/cgi-bin/classes.cgi", ServerRoot);
++	      snprintf(command, sizeof(command), "%s/cgi-bin/classes.cgi", ExecRoot);
+ 	      options = con->uri + 8;
+ 	    }
+ 	    else
+ 	    {
+-	      snprintf(command, sizeof(command), "%s/cgi-bin/jobs.cgi", ServerRoot);
++	      snprintf(command, sizeof(command), "%s/cgi-bin/jobs.cgi", ExecRoot);
+ 	      options = con->uri + 5;
+ 	    }
+ 
+@@ -585,17 +585,17 @@
+ 
+             if (strncmp(con->uri, "/printers", 9) == 0)
+ 	    {
+-	      snprintf(command, sizeof(command), "%s/cgi-bin/printers", ServerRoot);
++	      snprintf(command, sizeof(command), "%s/cgi-bin/printers", ExecRoot);
+ 	      options = con->uri + 9;
+ 	    }
+ 	    else if (strncmp(con->uri, "/classes", 8) == 0)
+ 	    {
+-	      snprintf(command, sizeof(command), "%s/cgi-bin/classes", ServerRoot);
++	      snprintf(command, sizeof(command), "%s/cgi-bin/classes", ExecRoot);
+ 	      options = con->uri + 8;
+ 	    }
+ 	    else
+ 	    {
+-	      snprintf(command, sizeof(command), "%s/cgi-bin/jobs", ServerRoot);
++	      snprintf(command, sizeof(command), "%s/cgi-bin/jobs", ExecRoot);
+ 	      options = con->uri + 5;
+ 	    }
+ 
