@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.45.2.4 2003/08/16 21:14:54 jlam Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.45.2.5 2003/08/17 04:57:17 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -289,8 +289,8 @@ bulk-package:
 				pkgfile=${PACKAGES}/All/$${pkgname}.tgz ;\
 				if ! ${_PKG_INFO} -qe $$pkgname ; then \
 					if [ -f $$pkgfile ]; then \
-						${ECHO_MSG} "BULK>  ${_PKG_ADD} $$pkgfile"; \
-						${DO} ${_PKG_ADD} $$pkgfile || ${ECHO_MSG} "warning:  could not add $$pkgfile." ; \
+						${ECHO_MSG} "BULK>  ${_PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile"; \
+						${DO} ${_PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile || ${ECHO_MSG} "warning:  could not add $$pkgfile." ; \
 					else \
 						${ECHO_MSG} "BULK> warning:  $$pkgfile does not exist.  It will be rebuilt." ;\
 					fi ;\
@@ -378,8 +378,8 @@ bulk-install:
 	@if [ `${MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
 		if ! ${_PKG_INFO} -qe ${PKGNAME} ; then \
 			${DO} ${MAKE} install-depends ; \
-			${ECHO_MSG} "BULK> " ${_PKG_ADD} ${PKGFILE} ; \
-			${DO} ${_PKG_ADD} ${PKGFILE} ; \
+			${ECHO_MSG} "BULK> " ${_PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
+			${DO} ${_PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
 		fi ; \
 	else \
 		${ECHO_MSG} ${MAKE} bulk-package PRECLEAN=no; \

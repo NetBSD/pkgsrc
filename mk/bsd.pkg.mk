@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.20 2003/08/16 21:14:49 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.21 2003/08/17 04:57:14 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -672,7 +672,7 @@ uptodate-digest:
 .if defined(_OPSYS_PKGTOOLS_REQD)
 PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD}
 .else
-PKGTOOLS_REQD=		20030729
+PKGTOOLS_REQD=		20030809
 .endif
 
 # Check that we are using up-to-date pkg_* tools with this file.
@@ -3709,8 +3709,14 @@ checksum: fetch uptodate-digest
 BINPKG_SITES?= \
 	ftp://ftp.netbsd.org/pub/NetBSD/packages/$${rel}/$${arch}
 
-# List of flags to pass to pkg_add(8) for bin-install:
+# List of flags to pass to pkg_add(1) for bin-install:
+
 BIN_INSTALL_FLAGS?= 	# -v
+.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
+PKG_ARGS_ADD=		-W ${LOCALBASE}
+.endif
+_BIN_INSTALL_FLAGS=	${BIN_INSTALL_FLAGS}
+_BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
 
 # Install binary pkg, without strict uptodate-check first
 .PHONY: bin-install
@@ -3725,13 +3731,13 @@ bin-install:
 	fi
 	@if [ -f ${PKGFILE} ] ; then 					\
 		${ECHO_MSG} "Installing from binary pkg ${PKGFILE}" ;	\
-		${_PKG_ADD} ${PKGFILE} ; 				\
+		${_PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGFILE} ;		\
 	else 				 				\
 		rel=`${UNAME} -r | ${SED} 's@\.\([0-9]*\)[\._].*@\.\1@'`; \
 		arch=${MACHINE_ARCH}; 					\
 		for site in ${BINPKG_SITES} ; do 			\
 			${ECHO} Trying `eval ${ECHO} $$site`/All ; 	\
-			${SHCOMMENT} ${ECHO} ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${_PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; \
+			${SHCOMMENT} ${ECHO} ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${_PKG_ADD} ${_BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; \
 			if ${SETENV} PKG_PATH="`eval ${ECHO} $$site`/All" ${_PKG_ADD} ${BIN_INSTALL_FLAGS} ${PKGNAME}${PKG_SUFX} ; then \
 				${ECHO} "${PKGNAME} successfully installed."; \
 				break ; 				\
@@ -4561,7 +4567,7 @@ real-su-build-views:
 			continue ;;					\
 		esac;							\
 		${ECHO} "=> Performing package view overwrite check for ${PKGNAME} in $$viewname view"; \
-		dups=`${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" PKG_DBDIR=${_REAL_PKG_DBDIR} ${PKG_VIEW_CMD} -p ${LOCALBASE} -d ${DEPOTBASE} --view=$$v check ${PKGNAME} || ${TRUE}`; \
+		dups=`${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" PKG_DBDIR=${_REAL_PKG_DBDIR} ${PKG_VIEW_CMD} -W ${LOCALBASE} -d ${DEPOTBASE} --view=$$v check ${PKGNAME} || ${TRUE}`; \
 		case "$$dups" in					\
 		"")	;;						\
 		*)	${ECHO} "***********************************************************"; \
@@ -4573,7 +4579,7 @@ real-su-build-views:
 			;;						\
 		esac;							\
 		${ECHO} "=> Linking package into $$viewname view";	\
-		${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" PKG_DBDIR=${_REAL_PKG_DBDIR} ${PKG_VIEW_CMD} -p ${LOCALBASE} -d ${DEPOTBASE} --view=$$v add ${PKGNAME}; \
+		${SETENV} PLIST_IGNORE_FILES="${_PLIST_IGNORE_FILES}" PKG_DBDIR=${_REAL_PKG_DBDIR} ${PKG_VIEW_CMD} -W ${LOCALBASE} -d ${DEPOTBASE} --view=$$v add ${PKGNAME}; \
 	done
 .  else
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
