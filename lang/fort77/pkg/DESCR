@@ -1,0 +1,4 @@
+Fort77 is a Perl driver script for the f2c Fortran to
+C converter, which makes it possible to use it like
+a compiler.  It's a replacement for the f77 script,
+and includes support for debugging.
