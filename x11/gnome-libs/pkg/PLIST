@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2000/10/17 23:57:46 jlam Exp $
+@comment $NetBSD: PLIST,v 1.32 2000/11/07 04:36:37 rh Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -156,6 +156,7 @@ include/libgnomeui/gnome-startup.h
 include/libgnomeui/gnome-stock.h
 include/libgnomeui/gnome-types.h
 include/libgnomeui/gnome-uidefs.h
+include/libgnomeui/gnome-window.h
 include/libgnomeui/gnome-window-icon.h
 include/libgnomeui/gnome-winhints.h
 include/libgnomeui/gnometypebuiltins.h
@@ -187,7 +188,7 @@ lib/libgnomesupport.la
 lib/libgnomesupport.so.0.0
 lib/libgnomeui.a
 lib/libgnomeui.la
-lib/libgnomeui.so.43.4
+lib/libgnomeui.so.44.1
 lib/libgnorba.a
 lib/libgnorba.la
 lib/libgnorba.so.28.8
@@ -199,7 +200,7 @@ lib/libgtkxmhtml.la
 lib/libgtkxmhtml.so.1.1
 lib/libzvt.a
 lib/libzvt.la
-lib/libzvt.so.4.8
+lib/libzvt.so.4.9
 man/man1/gnome-config.1
 man/man1/gnome.1
 man/man5/gnome-mime.5
@@ -550,6 +551,7 @@ share/locale/ja/LC_MESSAGES/gnome-libs.mo
 share/locale/ko/LC_MESSAGES/gnome-libs.mo
 share/locale/lt/LC_MESSAGES/gnome-libs.mo
 share/locale/nl/LC_MESSAGES/gnome-libs.mo
+share/locale/nn/LC_MESSAGES/gnome-libs.mo
 share/locale/no/LC_MESSAGES/gnome-libs.mo
 share/locale/pl/LC_MESSAGES/gnome-libs.mo
 share/locale/pt/LC_MESSAGES/gnome-libs.mo
@@ -563,6 +565,7 @@ share/locale/sr/LC_MESSAGES/gnome-libs.mo
 share/locale/sv/LC_MESSAGES/gnome-libs.mo
 share/locale/tr/LC_MESSAGES/gnome-libs.mo
 share/locale/wa/LC_MESSAGES/gnome-libs.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/gnome-libs.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/gnome-libs.mo
 share/mime-info/gnome.mime
 share/pixmaps/calculator-font.png
