@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.820 2001/10/04 07:56:06 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.821 2001/10/04 21:48:12 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1296,9 +1296,11 @@ show-downlevel:
 
 .if !target(show-installed-depends)
 show-installed-depends:
-	@for i in ${DEPENDS:C/:.*$//:Q:S/\ / /g} ; do \
-		echo "$$i =>" `pkg_info -e $$i` ; \
+.  if defined(DEPENDS)
+	@for i in ${DEPENDS:C/:.*$//:Q:S/\ / /g} ; do			\
+		echo "$$i =>" `${PKG_INFO} -e $$i` ;			\
 	done
+.  endif
 .endif
 
 .if defined(EVAL_PREFIX)
@@ -2005,7 +2007,7 @@ real-install: do-su-install
 real-package: do-su-package
 
 # sudo or priv are acceptable substitutes
-SU_CMD?=	${SU} root -c
+SU_CMD?=	${SU} - root -c
 PRE_ROOT_CMD?=	${TRUE}
 
 _SU_TARGET=								\
