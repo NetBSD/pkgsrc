@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/01/31 10:07:03 abs Exp $
+
+--- main.c.orig	Tue Jan 30 18:06:21 2001
++++ main.c
+@@ -51,7 +51,7 @@
+ 	init();
+ 	gen();
+ 	computer_side = EMPTY;
+-	max_time = 1000000;
++	max_time = 10000000;
+ 	max_depth = 4;
+ 	for (;;) {
+ 		if (side == computer_side) {  /* computer's turn */
