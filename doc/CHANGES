@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.625 2002/11/28 05:25:04 itojun Exp $
+$NetBSD: CHANGES,v 1.626 2002/11/28 07:14:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3752,3 +3752,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gettext to 0.11.5 [drochner 2002-11-27]
 	Updated mutt to 1.4nb2 [jmmv 2002-11-27]
 	Updated w3m to 0.3.2.1 [itojun 2002-11-28]
+	Added pdksh-5.2.14 [schmonz 2002-11-28]
