@@ -1,0 +1,84 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/29 06:36:00 rh Exp $
+bin/xracer
+bin/xracer-blenderexport.py
+bin/xracer-blender2track.pl
+bin/xracer-mktube.pl
+bin/xracer-mktrack.pl
+bin/xracer-mktrackscenery.pl
+bin/xracer-mkcraft.pl
+bin/xracer-mkmeshnotex.pl
+man/man6/xracer.6
+share/xracer/tracks/libtracksimple2.so.0.0
+share/xracer/tracks/libtracksimple2.so.0
+share/xracer/tracks/libtracksimple2.so
+share/xracer/tracks/libtracksimple2.a
+share/xracer/craft/libcraftsimple.so.0.0
+share/xracer/craft/libcraftsimple.so.0
+share/xracer/craft/libcraftsimple.so
+share/xracer/craft/libcraftsimple.a
+share/xracer/backdrops/mountains4-alpha.jpg
+share/xracer/backdrops/mountains4.jpg
+share/xracer/fonts/crillee14.jpg
+share/xracer/fonts/crillee24.jpg
+share/xracer/fonts/crillee36.jpg
+share/xracer/fonts/crillee48.jpg
+share/xracer/powerups/autopilot-alpha.jpg
+share/xracer/powerups/autopilot.jpg
+share/xracer/powerups/energy-alpha.jpg
+share/xracer/powerups/energy.jpg
+share/xracer/powerups/faster-alpha.jpg
+share/xracer/powerups/faster.jpg
+share/xracer/powerups/shield-alpha.jpg
+share/xracer/powerups/shield.jpg
+share/xracer/sky/clouds2.jpg
+share/xracer/flare-textures/Flare1.jpg
+share/xracer/flare-textures/Flare2.jpg
+share/xracer/flare-textures/Flare3.jpg
+share/xracer/flare-textures/Flare4.jpg
+share/xracer/flare-textures/Flare5.jpg
+share/xracer/flare-textures/Flare6.jpg
+share/xracer/flare-textures/Shine0.jpg
+share/xracer/flare-textures/Shine1.jpg
+share/xracer/flare-textures/Shine2.jpg
+share/xracer/flare-textures/Shine3.jpg
+share/xracer/flare-textures/Shine4.jpg
+share/xracer/flare-textures/Shine5.jpg
+share/xracer/flare-textures/Shine6.jpg
+share/xracer/flare-textures/Shine7.jpg
+share/xracer/flare-textures/Shine8.jpg
+share/xracer/flare-textures/Shine9.jpg
+share/xracer/scene-textures/golgotha/5sqtunnelroaddark.jpg
+share/xracer/scene-textures/golgotha/buldbrickflr2half.jpg
+share/xracer/scene-textures/snow/snow1.jpg
+share/xracer/scene-textures/snow/snow2.jpg
+share/xracer/scene-textures/snow/snowtex1.jpg
+share/xracer/scene-textures/snow/snowtex2.jpg
+share/xracer/scene-textures/snow/snowtex3.jpg
+share/xracer/scene-textures/start_gantry_green.jpg
+share/xracer/track-textures/beestripes1.jpg
+share/xracer/track-textures/egyptsandbig.jpg
+share/xracer/track-textures/solid_grey.jpg
+share/xracer/track-textures/track5.jpg
+share/xracer/.xracer-data-directory
+share/doc/xracer-0.96.9/README.txt
+share/doc/xracer-0.96.9/README.html
+share/doc/xracer-0.96.9/faq.txt
+share/doc/xracer-0.96.9/faq.html
+share/doc/xracer-0.96.9/index.html
+share/doc/xracer-0.96.9/AUTHORS
+lib/perl5/site_perl/i386-netbsd/auto/XRacer/.packlist
+@dirrm lib/perl5/site_perl/i386-netbsd/auto/XRacer
+@dirrm share/doc/xracer-0.96.9
+@dirrm share/xracer/fonts
+@dirrm share/xracer/tracks
+@dirrm share/xracer/craft
+@dirrm share/xracer/backdrops
+@dirrm share/xracer/powerups
+@dirrm share/xracer/sky
+@dirrm share/xracer/track-textures
+@dirrm share/xracer/flare-textures
+@dirrm share/xracer/scene-textures/snow
+@dirrm share/xracer/scene-textures/golgotha
+@dirrm share/xracer/scene-textures
+@dirrm share/xracer/video
+@dirrm share/xracer

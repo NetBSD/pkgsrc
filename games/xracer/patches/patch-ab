@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/05/29 06:36:01 rh Exp $
+
+--- src/Makefile.in.orig	Mon Mar 20 22:13:03 2000
++++ src/Makefile.in	Sat May 27 05:43:16 2000
+@@ -175,7 +175,7 @@
+ 		  video.c \
+ 		  ws.c
+ 
+-xracer_LDADD	= mpeg/libmpeg.a
++xracer_LDADD	= mpeg/libmpeg.a -lintl
+ 
+ EXTRA_DIST	= arch_posix.c \
+ 		  joystick_linux.c joystick_freebsd.c joystick_generic.c \
+@@ -202,8 +202,8 @@
+ track.o utils.o video.o ws.o
+ xracer_DEPENDENCIES =  mpeg/libmpeg.a
+ xracer_LDFLAGS = 
+-COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+-LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
++COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(X_CFLAGS)
++LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(X_CFLAGS)
+ LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+ DIST_COMMON =  Makefile.am Makefile.in
+ 
