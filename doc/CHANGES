@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6090 2004/06/02 06:56:49 itojun Exp $
+$NetBSD: CHANGES,v 1.6091 2004/06/02 07:58:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2746,3 +2746,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed lesstif12 [kristerw 2004-06-01]
 	Updated sylpheed to 0.9.11 [chris 2004-06-01]
 	Updated chicken to 1.51 [itojun 2004-06-02]
+	Updated sylpheed-claws to 0.9.11 [adam 2004-06-01]
