@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4549 2004/01/22 12:42:13 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4550 2004/01/22 12:53:54 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -392,3 +392,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated adns to 1.1 [xtraeme 2004-01-22]
 	Updated file-roller to 2.4.3 [xtraeme 2004-01-22]
 	Added php-jpgraph-1.13 [xtraeme 2004-01-22]
+	Updated gtk2+ to 2.2.4nb3 [jmmv 2004-01-22]
+	Updated librsvg2 to 2.5.0nb4 [jmmv 2004-01-22]
+	Added librsvg2-gtk2-2.5.0 [jmmv 2004-01-22]
+	Updated swfdec to 0.2.1nb7 [jmmv 2004-01-22]
+	Added swfdec-gtk2-0.2.1 [jmmv 2004-01-22]
