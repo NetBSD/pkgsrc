@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2002/06/05 00:29:02 hubertf Exp $
+$NetBSD: patch-aa,v 1.3 2003/01/30 10:46:57 drochner Exp $
 
---- Makefile.in.orig	Fri May 17 15:48:19 2002
-+++ Makefile.in	Tue Jun  4 17:19:35 2002
-@@ -28,7 +28,7 @@
+--- Makefile.in.orig	Wed Jan 22 16:00:38 2003
++++ Makefile.in	Tue Jan 28 11:45:39 2003
+@@ -29,7 +29,7 @@
  
  DEBUG    = @DEBUG@
  CFLAG    = @E_CFLAGS@
--COPTS    = -I. @COPTS@
-+COPTS    = -I. -I${prefix}/include @COPTS@
+-COPTS    = -I. -Isrc/include @COPTS@ @GTK_CFLAGS@
++COPTS    = -I. -Isrc/include -I${prefix}/include @COPTS@ @GTK_CFLAGS@
  
  PROG     = @PROG@
  VERSION  = @VERSION@
