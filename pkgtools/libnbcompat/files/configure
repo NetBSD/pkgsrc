@@ -3167,6 +3167,7 @@ done
 
 
 
+
 for ac_header in arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
 	errno.h fcntl.h fts.h glob.h inttypes.h libutil.h limits.h \
 	machine/endian.h memory.h ndir.h netdb.h netinet/in6_machtypes.h \
@@ -3174,8 +3175,9 @@ for ac_header in arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
 	string.h sys/bitypes.h sys/byteorder.h sys/cdefs.h sys/dir.h \
 	sys/endian.h sys/file.h sys/mkdev.h sys/mount.h sys/ndir.h \
 	sys/param.h sys/poll.h sys/queue.h sys/time.h sys/ttycom.h \
-	sys/stat.h sys/statvfs.h sys/vfs.h sys/types.h sys/vfs.h termcap.h \
-	termios.h time.h tzfile.h unistd.h util.h utmp.h
+	sys/stat.h sys/statfs.h sys/statvfs.h sys/vfs.h sys/types.h \
+	sys/vfs.h termcap.h termios.h time.h tzfile.h unistd.h util.h \
+	utmp.h
 do
 as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
 if eval "test \"\${$as_ac_Header+set}\" = set"; then
