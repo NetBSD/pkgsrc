@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/06/03 19:16:59 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2000/06/05 09:57:58 tron Exp $
 
 DISTNAME=	gnome-1.2.0
 CATEGORIES=	x11 gnome
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.gnome.org/
 DEPENDS+=	control-center>=1.0.51:../controlcenter
 DEPENDS+=	ee>=0.3.11:../../graphics/ee
 DEPENDS+=	gdm>=2.0b4:../gdm
+DEPENDS+=	ggv>=0.95:../../print/ggv
 DEPENDS+=	glade>=0.5.3:../../devel/glade
 DEPENDS+=	gmc>=4.5.42:../../sysutils/gmc
 DEPENDS+=	gnome-audio>=1.0.0:../../audio/gnome-audio
