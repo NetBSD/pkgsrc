@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2003/01/23 06:50:21 martti Exp $
+# $NetBSD: Makefile,v 1.76 2003/01/25 07:22:19 martti Exp $
 
-DISTNAME=	postfix-2.0.2
+DISTNAME=	postfix-2.0.3
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 
@@ -15,14 +15,6 @@ POSTFIX_SPOOL=	/var/spool/postfix
 USE_BUILDLINK2=	yes
 
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"		\
-	|| defined(POSTFIX_USE_LDAP) && ${POSTFIX_USE_LDAP} == "YES"	\
-	|| defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"	\
-	|| defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"	\
-	|| defined(USE_SASL) && ${USE_SASL} == "YES"
-MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
-.endif
 
 #.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
 #PATCHFILES+=		tls+ipv6-1.12-pf-2.0.2.patch.gz
@@ -47,6 +39,8 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.pcre}/lib		\
 		-Wl,-R${BUILDLINK_PREFIX.pcre}/lib	\
 		-lpcre
 BUILD_DEFS+=	POSTFIX_USE_PCRE
+.else
+CCARGS+=	-DNO_PCRE
 .endif
 
 .if defined(POSTFIX_USE_LDAP) && ${POSTFIX_USE_LDAP} == "YES"
@@ -100,6 +94,7 @@ MESSAGE_SRC+=	${PKGDIR}/MESSAGE
 PLIST_SRC+=	${PKGDIR}/PLIST
 ALL_TARGET=	#empty
 MAKE_ENV=	CC="${CC}" OPT="${CFLAGS}"
+MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
 
 pre-configure:
 	${CP} ${WRKSRC}/conf/main.cf ${WRKSRC}/conf/main.cf.dist
@@ -125,8 +120,9 @@ pre-configure:
 	    > ${WRKSRC}/src/global/mail_params.h
 
 do-configure:
-	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} -f Makefile.init makefiles \
-	'CCARGS=${CCARGS}' 'AUXLIBS=${AUXLIBS}' )
+	(cd ${WRKSRC} && \
+	${SETENV} ${MAKE_ENV} ${MAKE} -f Makefile.init makefiles \
+		'CCARGS=${CCARGS}' 'AUXLIBS=${AUXLIBS}')
 
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
