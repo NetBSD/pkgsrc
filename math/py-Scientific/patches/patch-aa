@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2001/03/30 22:23:07 jtb Exp $
+
+--- setup.py.orig	Fri Mar 30 20:58:10 2001
++++ setup.py
+@@ -7,7 +7,7 @@
+ 
+ # If your netCDF installation is in a non-standard place, set the following
+ # variable to the base directory.
+-netcdf_prefix = None
++netcdf_prefix = '@NETCDFPREFIX@'
+ 
+ 
+ if netcdf_prefix is None:
