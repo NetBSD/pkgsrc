@@ -1,15 +1,14 @@
 # New ports collection Makefile for: ctwm
-# Version required:	3.4pl2
-# Date created:         30th November 1997
+# Version required:	3.5
+# Date created:         29th January 1998
 # Whom:                 tron
 #
-# $NetBSD: Makefile,v 1.4 1998/01/29 16:53:58 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/29 20:14:57 tron Exp $
 #
 
-DISTNAME=		ctwm-3.4pl2
+DISTNAME=		ctwm-3.5
 CATEGORIES=		x11
-MASTER_SITES=		${MASTER_SITE_XCONTRIB}
-MASTER_SITE_SUBDIR=	window_managers
+MASTER_SITES=		ftp://slhp1.epfl.ch/pub/
 
 MAINTAINER=		tron@netbsd.org
 
