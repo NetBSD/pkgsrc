@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2005/01/12 23:22:30 kristerw Exp $
+
+--- uncmain.c.orig	Thu Jan 13 00:16:05 2005
++++ uncmain.c	Thu Jan 13 00:16:54 2005
+@@ -45,13 +45,13 @@
+ #define ERR (strerrorwrap(errno))
+ #endif
+ 
+-#define INITERR(s) {(void)strcpy(fbuf, cmdname); (void)strcat(fbuf, ": ");\
++#define INITERR(s) {(void)strcpy(fbuf, cmdname); (void)strcat(fbuf, ": ");\
+ 					(void)strcat(fbuf, (s));}
+ #define ADDERR(s) (void)strcat(fbuf, (s));
+-#define ERROR {(void)strcat(fbuf, "\n");\
++#define ERROR {(void)strcat(fbuf, "\n");\
+ 				(void)write(2, fbuf, strlen(fbuf)); exit(1);}
+-#define INITWARN(s) {(void)strcpy(fbuf, cmdname);\
+-					(void)strcat(fbuf, ": (warning) ");\
++#define INITWARN(s) {(void)strcpy(fbuf, cmdname);\
++					(void)strcat(fbuf, ": (warning) ");\
+ 					(void)strcat(fbuf, (s));}
+ #define ADDWARN(s) (void)strcat(fbuf, (s));
+ #define WARN {(void)strcat(fbuf, "\n"); (void)write(2, fbuf, strlen(fbuf));}

@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/01/10 13:40:02 adam Exp $
+$NetBSD: distinfo,v 1.4 2005/01/12 23:22:30 kristerw Exp $
 
 SHA1 (compface-1.5.tar.gz) = 2a8f2b5251725d0070ab915bf9ecfc8f47041cc1
 Size (compface-1.5.tar.gz) = 18122 bytes
 SHA1 (patch-aa) = 43d8996c8c8f8f72e78a81ae469832224c95c067
+SHA1 (patch-ab) = 17e9948122b39ce284ca64a3aa6b83f67b6f93df
+SHA1 (patch-ac) = ef118806906f8f945e9f4df50c27208d682ce341
