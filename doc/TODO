@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1033 2003/11/16 12:16:17 jmmv Exp $
+$NetBSD: TODO,v 1.1034 2003/11/16 15:21:31 itojun Exp $
 
 Suggested new packages
 ======================
@@ -303,6 +303,7 @@ Suggested package updates
 	o newscache-0.99.22p1
 	o ngrep-1.41
 	o ns-flash-6.0.79
+	o nsd-1.2.3
 	o nut-9.3
 	o nxtvepg-2.6.0
 	o ogle-0.9.2
