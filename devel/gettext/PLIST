@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/06/23 10:58:26 seb Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/02/15 21:38:32 seb Exp $
 bin/autopoint
 bin/gettext
 bin/gettextize
@@ -18,17 +18,6 @@ bin/msgunfmt
 bin/msguniq
 bin/ngettext
 bin/xgettext
-info/gettext.info
-info/gettext.info-1
-info/gettext.info-10
-info/gettext.info-2
-info/gettext.info-3
-info/gettext.info-4
-info/gettext.info-5
-info/gettext.info-6
-info/gettext.info-7
-info/gettext.info-8
-info/gettext.info-9
 lib/gettext/hostname
 lib/gettext/project-id
 lib/gettext/urlget
