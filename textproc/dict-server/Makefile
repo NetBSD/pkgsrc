@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/02/22 16:10:03 adam Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/29 12:16:21 adam Exp $
 
 DISTNAME=	dictd-1.9.15
 PKGNAME=	dict-server-1.9.15
@@ -40,5 +40,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/dictd
 
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
