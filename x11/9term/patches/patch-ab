@@ -1,0 +1,281 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/14 00:57:42 wiz Exp $
+
+--- 9term/9term.c.orig	Fri Jun  3 09:35:39 1994
++++ 9term/9term.c	Fri Sep 26 16:45:48 1997
+@@ -10,7 +10,13 @@
+ #include <frame.h>
+ #include <text.h>
+ 
++#include <sys/param.h>
++
++#if (defined(BSD) && BSD >= 199306)
++#include <sys/termios.h>
++#else
+ #include <sys/termio.h>
++#endif
+ #include <signal.h>
+ #include <sys/stat.h>
+ 
+@@ -153,9 +159,9 @@
+ 		}
+ 	}
+ 
+-	setenv("TERM", "9term", 1);
++	O_setenv("TERM", "9term", 1);
+ 	/* Cope with BSD-oid systems. - cks */
+-	setenv("TERMCAP", "9term: :am:bl=^G:do=^J:nl=^J:", 1);
++	O_setenv("TERMCAP", "9term: :am:bl=^G:do=^J:nl=^J:", 1);
+ 	signal(SIGINT, SIG_IGN);
+ 
+ 	init_display(&argc, argv, cmd, resource);
+@@ -718,7 +724,7 @@
+ 	texthighlight(t, t->length, t->length, F&~D);
+ #ifdef REMOTE
+ 	flushstream();
+-	killpg(r == quitchar ? SIGQUIT : SIGINT);
++	O_killpg(r == quitchar ? SIGQUIT : SIGINT);
+ #else
+ 	sendrunes(&r, 1);
+ #endif
+@@ -804,7 +810,7 @@
+  *	export a name-value pair to environment
+  */
+ int
+-setenv(char *name, char *value, int overwrite)
++O_setenv(char *name, char *value, int overwrite)
+ {
+ 	char *p;
+ 
+--- 9term/9term.h.orig	Thu Dec 15 14:49:15 1994
++++ 9term/9term.h	Wed Oct  1 09:50:47 1997
+@@ -31,7 +31,7 @@
+ extern int		isig;
+ 
+ extern void		specialchars(int);
+-extern int		setenv(char *, char *, int);
++extern int		O_setenv(char *, char *, int);
+ extern void		init_display(int *, char **, char**, char*);
+ #ifdef NEEDVARARG
+ extern void		error();
+@@ -58,13 +58,24 @@
+ extern void		setborder(void);
+ extern void		ctlmsg(Event *);
+ 
++#ifndef MAX
+ #define MAX(x, y)	(((x) > (y)) ? (x) : (y))
++#endif
++#ifndef MIN
+ #define MIN(x, y)	(((x) < (y)) ? (x) : (y))
++#endif
+ #ifndef NULL
+ #define NULL ((void *)0)
+ #endif
+ 
+ #ifdef	SUNOS
++#define	POSIXPTYS
++#define BSDPTYS
++#endif
++
++#include <sys/param.h>
++
++#if (defined(BSD) && BSD >= 199306)
+ #define	POSIXPTYS
+ #define BSDPTYS
+ #endif
+--- 9term/Makefile.orig	Mon Mar 14 04:50:54 1994
++++ 9term/Makefile	Fri Sep 26 16:44:27 1997
+@@ -11,27 +11,29 @@
+ #	Define RISCOS for Mips RISC/os
+ #	Define BSDPTYS for BSD-style pty support
+ #	Define POSIXPTYS for POSIX ptys
+-OS=-DSOLARIS
+ 
+-# where we'll install it
+-BINDIR=/usr/pgrad/matty/bin/$(cputype)
++OS= -D_LIBXG_EXTENSION -DSUNOS
++
++SAMPATH=${PKGSRCDIR}/editors/sam/${WRKDIR:T}
++
++BINDIR=.			# where we'll install it
+ 
+ HEADERFILE=9term.h
+ TARGET=9term
+-INCLUDES=-I. -I../include -I/usr/openwin/include
+-CFLAGS=-g $(OS) $(INCLUDES) -fno-builtin -D_LIBXG_EXTENSION
+-LDFLAGS=-g -R/usr/openwin/lib -L/usr/openwin/lib -R/usr/ucblib -L/usr/ucblib
++INCLUDES=-I. -I../libtext -I$(SAMPATH)/include -I/usr/X11R6/include
++CFLAGS= -O2 $(OS) $(INCLUDES)
++LDFLAGS?=
+ CC=gcc
+ 
+ # change this if your X11 libraries are in different places
+ # or if you need extra libraries to load with X11 applications
+-LIBS=../libtext/libtext.a ../libframe/libframe.a ../libXg/libXg.a
+-XLIBS=-lXt -lX11
++LIBS=../libtext/libtext.a $(SAMPATH)/libframe/libframe.a $(SAMPATH)/libXg/libXg.a
++XLIBS= -L/usr/X11R6/lib -lXt -lX11
+ 
+ OBJECTS=9term.o command.o display.o pty.o
+ 
+ $(TARGET): $(OBJECTS)
+-	$(CC) $(LDFLAGS) -o $(TARGET) $(OBJECTS) $(LIBS) $(XLIBS) -lm -lucb
++	$(CC) $(LDFLAGS) -o $(TARGET) $(OBJECTS) $(LIBS) $(XLIBS) -lm
+ 
+ wloc: wloc.o
+ 	$(CC) $(LDFLAGS) -o wloc wloc.o $(LIBS) $(XLIBS) -lm
+@@ -39,21 +41,17 @@
+ label: wloc
+ 	ln wloc label
+ 
+-unicode: unicode.o
+-	$(CC) $(LDFLAGS) -o unicode unicode.o $(LIBS) $(XLIBS) -lm
+-
+ install: $(TARGET) wloc label
+ 	cp $(TARGET) $(BINDIR)
+ 	chown root $(BINDIR)/$(TARGET)
+ 	chmod 04755 $(BINDIR)/$(TARGET)
+ 	mv wloc $(BINDIR)
+ 	mv label $(BINDIR)
+-	mv unicode $(BINDIR)
+ 
+ clean:
+ 	rm -f *.o core
+ 
+ nuke: clean
+-	rm -f $(TARGET) wloc label unicode
++	rm -f $(TARGET) wloc label
+ 
+ $(OBJECTS): 9term.h
+--- 9term/command.c.orig	Mon Mar  7 01:50:51 1994
++++ 9term/command.c	Fri Sep 26 16:46:53 1997
+@@ -13,7 +13,12 @@
+ #include <sys/wait.h>
+ #include <signal.h>
+ #include <grp.h>
++#include <sys/param.h>
++#if (defined(BSD) && BSD >= 199306)
++#include <termios.h>
++#else
+ #include <termio.h>
++#endif
+ #ifdef SOLARIS
+ #include <sys/stropts.h>
+ #endif
+@@ -204,7 +209,7 @@
+  */
+ 
+ void
+-killpg(int sig)
++O_killpg(int sig)
+ {
+ 	if (comm_pid)
+ 		kill(-comm_pid, sig);
+--- 9term/display.c.orig	Thu Dec 15 14:48:28 1994
++++ 9term/display.c	Fri Sep 26 16:44:28 1997
+@@ -114,7 +114,7 @@
+ delwin(Widget w, XEvent *event, String *params, Cardinal *n)
+ {
+   if (w == _toplevel)
+-	killpg(SIGHUP);
++	O_killpg(SIGHUP);
+ }
+ 
+ /*
+@@ -185,7 +185,7 @@
+ 		else if (!strcasecmp(s, "plan9"))
+ 			kbdmode = PLAN9;
+ 	if (s = get_resource(resource, class, "p9font", "P9font"))
+-		setenv("font", s, 1);
++		O_setenv("font", s, 1);
+ 	if (s = get_resource(resource, class, "highwater", "Highwater"))
+ 		highwater = atoi(s);
+ 	if (s = get_resource(resource, class, "lowwater", "Lowwater"))
+@@ -230,7 +230,7 @@
+ #endif
+ 		/* export window id to environment */
+ 	sprintf(id, "%d", XtWindow(_toplevel));
+-	setenv("WINDOWID", id, 1);
++	O_setenv("WINDOWID", id, 1);
+ 
+ 		/* register mouse and keyboard events */
+ 	einit(Ekeyboard | Emouse);
+--- 9term/pty.c.orig	Fri Jul 22 16:47:29 1994
++++ 9term/pty.c	Fri Sep 26 16:49:08 1997
+@@ -12,7 +12,18 @@
+ 
+ #include <utmp.h>
+ #include <errno.h>
+-#ifdef SUNOS
++
++#include <sys/param.h>
++
++#if (defined(BSD) && BSD >= 199306)
++#	include <termios.h>
++
++/* #	include <stropts.h> */
++	/* Isn't POSIX and portability so much fun? */
++#	define VRPRNT	VREPRINT
++#endif
++
++#if defined(SUNOS) && !(defined(BSD) && BSD >= 199306)
+ #	undef _POSIX_SOURCE
+ #	include <sys/termio.h>
+ #	include <stropts.h>
+@@ -41,7 +52,7 @@
+ #	define 	VEOL2	_VEOL2
+ #endif
+ 
+-#ifdef	RISCOS
++#ifdef RISCOS
+ #	include <sys/stat.h>
+ #	include </usr/include/ctype.h>		/* to defeat posix version */
+ #	define  VLNEXT V_LNEXT
+@@ -49,10 +60,12 @@
+ #	define	VRPRNT V_RPRNT
+ #	define	VWERASE V_WERAS
+ #else
++#if !(defined(BSD) && BSD >= 199306)
+ #	include <ctype.h>
+ #endif
++#endif
+ 
+-#ifdef	OSF1
++#if defined(OSF1)
+ #	define 	V_START VSTART
+ #	define 	V_STOP VSTOP
+ #	define 	V_SUSP VSUSP
+@@ -115,7 +128,7 @@
+ 	char udef, p9def;
+ };
+ 
+-#if defined(SUNOS) || defined(IRIX) || defined(SOLARIS)
++#if defined(SUNOS) || defined(IRIX) || defined(SOLARIS) || (defined(BSD) && BSD >= 199306)
+ #	define V_START VSTART
+ #	define V_STOP VSTOP
+ #	define V_SUSP VSUSP
+@@ -139,7 +152,7 @@
+ #ifndef _POSIX_SOURCE
+ 	{ "eol2",	4, VEOL2,	0,		0 },
+ #endif
+-#if	!defined(_OSF_SOURCE) && !defined(_POSIX_SOURCE)
++#if	!defined(_OSF_SOURCE) && !defined(_POSIX_SOURCE) && !(defined(BSD) && BSD >= 199306)
+ 	{ "swtch", 	5, VSWTCH,	0,		0 },
+ #endif
+ 	{ "start",	5, V_START,	ctrl('q'),	ctrl('q') },
+@@ -292,10 +305,16 @@
+ 		/* Insure some sanity. */
+ 		ttmode.c_lflag |= ECHO;
+ 		ttmode.c_oflag &= ~(ONLCR);
++#if !(defined(BSD) && BSD >= 199306)
+ 		ttmode.c_oflag |= ONLRET;
++#endif
+ 	} else {
+ 		ttmode.c_iflag = BRKINT | IGNPAR | ICRNL | IXON;
++#if (defined(BSD) && BSD >= 199306)
++		ttmode.c_oflag = OPOST;
++#else
+ 		ttmode.c_oflag = OPOST | ONLRET;
++#endif
+ 		ttmode.c_cflag = B9600 | PARENB | CS8 | CREAD;
+ 		ttmode.c_lflag = ISIG | ICANON | ECHO | ECHOK;
+ #ifdef	__ultrix

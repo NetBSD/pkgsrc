@@ -1,0 +1,56 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/12/14 00:57:42 wiz Exp $
+
+--- libtext/scroll.c.orig	Fri Nov 19 08:14:25 1993
++++ libtext/scroll.c	Wed Oct 29 10:33:41 1997
+@@ -6,7 +6,9 @@
+ 
+ static Bitmap	*_dkgrey;
+ 
++#ifndef MAX
+ #define MAX(x, y) ((x) > (y) ? (x) : (y))
++#endif
+ 
+ static
+ Rectangle
+Return-Path: <sam-fans-owner@hawkwind.utcs.toronto.edu>
+Received: by juno.ccc.amdahl.com (/\==/\ Smail #25.1)
+	id <m0xQKVA-0000M6C@juno.ccc.amdahl.com>; Tue, 28 Oct 97 14:52 PST
+Received: from orpheus.amdahl.com by minerva.amdahl.com with smtp
+	(Smail3.1.29.1 #5) id m0xQKT5-0000oPC; Tue, 28 Oct 97 14:50 PST
+Received: from hawkwind.utcs.utoronto.ca by orpheus.amdahl.com with smtp
+	(Smail3.1.29.1 #3) id m0xQKU5-0001EkC; Tue, 28 Oct 97 14:51 PST
+Received: from finch.cse.psu.edu ([130.203.12.29]) by hawkwind.utcs.utoronto.ca with SMTP id <24684>; Tue, 28 Oct 1997 17:43:51 -0500
+Received: (qmail 21504 invoked by uid 991); 28 Oct 1997 06:32:35 -0000
+Message-ID: <19971028063235.21502.qmail@finch.cse.psu.edu>
+To:	sam-fans@hawkwind.utcs.toronto.edu
+Subject: 9term bug
+Date:	Tue, 28 Oct 1997 01:32:35 -0500
+From:	Scott Schwartz <schwartz@finch.cse.psu.edu>
+
+Hi all,
+
+I don't recall if this has been reported or not, but libtext from fails
+to initialize everything in a newly allocated Text.  (bcheck is your
+friend.)
+
+--- libtext/text.c.orig	Thu Dec 15 15:01:45 1994
++++ libtext/text.c	Wed Oct 29 10:32:55 1997
+@@ -4,7 +4,10 @@
+ #include <frame.h>
+ #include <text.h>
+ 
++#ifndef MAX
+ #define MAX(x, y) ((x > y) ? x : y)
++#endif
++
+ #define	BUTTON(n)	(1<<(n-1))
+ 
+ static Menu	edit;
+@@ -47,6 +50,7 @@
+ 		berror("textalloc: calloc");
+ 	t->length = 0;
+ 	t->base = 0;
++	t->end = 0;
+ 	t->p0 = 0;
+ 	t->p1 = 0;
+ 	t->pout = 0;
