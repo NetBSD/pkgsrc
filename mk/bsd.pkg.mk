@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1286 2003/09/15 16:14:16 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1287 2003/09/16 11:45:42 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -4469,7 +4469,7 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		${MKDIR} ${_PKG_DBDIR};					\
 	fi
 .  if defined(FORCE_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -O ${PKGNAME}
+	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} delete ${PKGNAME}
 .    if ${PKG_INSTALLATION_TYPE} == "overwrite"
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${_PKG_DBDIR}/${PKGNAME}
 .    endif
