@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2003/09/26 15:03:36 jmmv Exp $
+$NetBSD: distinfo,v 1.32 2003/09/30 17:50:05 mycroft Exp $
 
-SHA1 (gaim-0.69.tar.gz) = c9ba4f15f19ad5eebed5a98c956d8a05475d3b4d
-Size (gaim-0.69.tar.gz) = 4479717 bytes
+SHA1 (gaim-0.70.tar.gz) = 36eff37c86abcaaf7a78bdefacf8e4b84738d085
+Size (gaim-0.70.tar.gz) = 4490202 bytes
