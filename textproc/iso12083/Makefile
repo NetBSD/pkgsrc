@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/01/11 22:06:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/01/29 21:15:08 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/06/27 05:19:39 asami Exp
 #
 
 DISTNAME=	iso12083-1993
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://info.ex.ac.uk/pub/SGML/ISO-12083/ \
 		ftp://ftp.ifi.uio.no/pub/SGML/ISO12083/ \
@@ -24,6 +24,8 @@ USE_BUILDLINK2=	yes
 
 INSTDIR=	${PREFIX}/share/sgml/iso12083
 
+SGML_CATALOGS=	${INSTDIR}/catalog
+
 pre-install:
 	${INSTALL_DATA_DIR} ${INSTDIR}
 
@@ -32,8 +34,6 @@ do-install:
 		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$i ${INSTDIR}/$$i; \
 	done
 	@${INSTALL_DATA} ${FILESDIR}/catalog ${INSTDIR}/catalog
-	${PREFIX}/bin/xmlcatmgr -c ${PREFIX}/share/sgml/catalog add \
-		CATALOG ${INSTDIR}/catalog
 
-.include "../../textproc/xmlcatmgr/buildlink2.mk"
+.include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"

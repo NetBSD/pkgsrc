@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/11 22:06:44 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/29 21:15:08 jmmv Exp $
 share/sgml/iso12083/article.dtd
 share/sgml/iso12083/book.dtd
 share/sgml/iso12083/maths.dtd
 share/sgml/iso12083/serial.dtd
 share/sgml/iso12083/catalog
-@exec %D/bin/xmlcatmgr -c %D/share/sgml/catalog add CATALOG %D/share/sgml/iso12083/catalog
-@unexec %D/bin/xmlcatmgr -c %D/share/sgml/catalog remove %D/share/sgml/iso12083/catalog
 @dirrm share/sgml/iso12083
 @comment in xmlcatmgr: @dirrm share/sgml
