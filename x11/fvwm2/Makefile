@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 1999/03/01 01:40:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 1999/03/01 23:19:02 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
 DISTNAME=	fvwm-2.2
+PKGNAME=	${DISTNAME:S/fvwm/fvwm2/}
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.hpc.uh.edu/pub/fvwm/version-2/ \
 		ftp://ftp.ics.es.osaka-u.ac.jp/pub/CFAN/sources/2.0.x/ \
@@ -17,6 +18,8 @@ HOMEPAGE=	http://www.fvwm.org/
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	xpmroot-2.2:../../x11/xpmroot
+
+CONFLICTS=	fvwm-2.*
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
