@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/16 08:03:26 rh Exp $
+libexec/netsaint/check_cluster
