@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2004/04/14 19:30:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.60 2004/04/21 04:29:19 snj Exp $
 
 DISTNAME=		control-center-1.4.0.4
 PKGREVISION=		6
@@ -11,7 +11,7 @@ COMMENT=		GNOME control-center development library
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
 USE_X11BASE=		YES
 USE_GNU_TOOLS+=		make
@@ -30,11 +30,11 @@ post-patch:
 post-install:
 	${MKDIR} ${PREFIX}/share/control-center/capplets
 
-.include "../../devel/popt/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../sysutils/gnome-vfs/buildlink2.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
