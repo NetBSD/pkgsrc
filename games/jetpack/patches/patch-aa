@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1 1998/08/23 11:24:53 garbled Exp $
+*** erase.c.orig	Wed Mar 25 17:19:41 1992
+--- erase.c	Thu Mar 26 11:19:35 1992
+***************
+*** 11,16 ****
+--- 11,17 ----
+  
+  #ifndef BLIT
+  
++ #define MAXTOUCH 10
+  #define MAXOBJECTS 6+MAXLINES+MAXFIREBALLS+MAXSWEEPERS+MAXFUELPODS+MAXGUARDS+MAXHIGHSCORES/5
+  
+  /*	Structure for eraseable zones that minimize flicker
+***************
+*** 19,25 ****
+  	int	type, num;
+  	int	x, y, w, h;
+  	int	numtouch;
+! 	int	touch[MAXOBJECTS];
+  	int	erased, drawn;
+  };
+  
+--- 20,26 ----
+  	int	type, num;
+  	int	x, y, w, h;
+  	int	numtouch;
+! 	int	touch[MAXTOUCH];
+  	int	erased, drawn;
+  };
+  
+***************
+*** 57,62 ****
+--- 58,67 ----
+  		if(zone_intersect(numzones,j)) {
+  			zones[j].touch[zones[j].numtouch] = numzones;
+  			zones[j].numtouch++;
++ 			if (zones[j].numtouch == MAXTOUCH) {
++ 				zones[j].numtouch = -1;
++ 				printf("Reached maxtouch for zone %d\n", numzones);
++ 			}
+  			break;
+  		}
+  	}
