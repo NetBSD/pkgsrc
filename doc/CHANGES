@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1656 2003/03/16 03:58:42 rh Exp $
+$NetBSD: CHANGES,v 1.1657 2003/03/16 05:45:28 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1155,3 +1155,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated jisx0208fonts to 20301316 [kei 2003-03-16]
 	Updated ircII to 20030315 [mrg 2003-03-16]
 	Added ccgo-0.3.1 [rh 2003-03-16]
+	Updated emacs-packages to 0.2 [dmcmahill 2003-03-16]
