@@ -1,11 +1,11 @@
-$NetBSD: patch-ao,v 1.1.1.1 2002/08/27 08:07:07 seb Exp $
+$NetBSD: patch-ao,v 1.2 2003/09/01 18:21:13 seb Exp $
 
 --- indep-utils/webtrace-conv/nlanr/Makefile.in.orig	Wed Feb 16 18:08:27 2000
 +++ indep-utils/webtrace-conv/nlanr/Makefile.in
-@@ -35,7 +35,7 @@ BINDEST = @prefix@/bin
+@@ -36,7 +36,7 @@ BINDEST = @prefix@/bin
  CC = @CXX@
  INCLUDE = -I. -I../../.. @V_INCLUDES@
- CFLAGS = @V_CCOPT@
+ CFLAGS = @V_CCOPT@ -DSTL_NAMESPACE=@STL_NAMESPACE@
 -LDFLAGS = @V_STATIC@
 +LDFLAGS = @LDFLAGS@
  LIBS = @V_LIB_TCL@ @V_LIB@ @LIBS@

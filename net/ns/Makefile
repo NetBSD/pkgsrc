@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:51:29 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/01 18:21:12 seb Exp $
 
-DISTNAME=	ns-src-2.1b9a
-PKGREVISION=	1
-PKGNAME=	${DISTNAME:S/b/rc/:S/-src//}
+DISTNAME=	ns-src-2.26
+PKGNAME=	${DISTNAME:S/-src//}
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	net
 MASTER_SITES=	http://www.isi.edu/nsnam/dist/
@@ -26,19 +25,14 @@ CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tcl-tclcl}
 
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
 
-# Yes there is object files and executables in the source tarball.
+# Remove a left over executable in the source tarball.
 post-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}			\
-	cd ${WRKSRC} &&					\
-	${FIND} . -name "*.o" -exec ${RM} {} \;
-	${_PKG_SILENT}${_PKG_DEBUG}			\
-	cd ${WRKSRC}/indep-utils &&			\
-	${RM} cmu-scen-gen/setdest/setdest		\
-	   cmu-scen-gen/setdest/calcdest		\
-	   webtrace-conv/dec/dec-tr-stat		\
-	   webtrace-conv/epa/epa-tr-stat		\
-	   webtrace-conv/nlanr/nlanr-tr-stat		\
-	   webtrace-conv/ucb/ucb-tr-stat
+	${RM} ${WRKSRC}/indep-utils/cmu-scen-gen/setdest/calcdest
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/ns
+	${INSTALL_DATA} ${WRKSRC}/CHANGES.html ${PREFIX}/share/doc/html/ns
 
 .include  "../../net/libpcap/buildlink2.mk"
 .include  "../../devel/tcl-tclcl/buildlink2.mk"
