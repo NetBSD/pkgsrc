@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2001/05/15 23:27:42 jlam Exp $
+# $NetBSD: Makefile,v 1.136 2001/05/16 02:12:40 jlam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -13,6 +13,7 @@ SUBDIR+=	ap-auth-cookie
 SUBDIR+=	ap-auth-ldap
 SUBDIR+=	ap-auth-postgresql
 SUBDIR+=	ap-csacek
+SUBDIR+=	ap-dav
 SUBDIR+=	ap-dtcl
 SUBDIR+=	ap-fastcgi
 SUBDIR+=	ap-jk
