@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/10/17 19:20:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/10/17 20:12:06 jmmv Exp $
 #
 
 DISTNAME=		fam-2.7.0
@@ -41,13 +41,13 @@ PKG_SUPPORTED_OPTIONS=	kqueue
 
 .if !empty(PKG_OPTIONS:Mkqueue) && ${OPSYS} == "NetBSD"
 CPPFLAGS+=		-DHAVE_KQUEUE
-LIBS+=			-lpthread
 
 SUBST_CLASSES+=		kqueue
 SUBST_MESSAGE.kqueue=	"Enabling kqueue monitoring."
 SUBST_STAGE.kqueue=	pre-configure
-SUBST_FILES.kqueue=	configure
-SUBST_SED.kqueue=	-e 's,IMonNone,IMonKQueue,g'
+SUBST_FILES.kqueue=	src/Makefile.in
+SUBST_SED.kqueue=	-e 's,@MONITOR_FUNCS@,IMonKQueue,g'
+SUBST_SED.kqueue+=	-e 's,@LIBS@,@LIBS@ -lpthread,g'
 
 MESSAGE_SRC=		${.CURDIR}/MESSAGE ${.CURDIR}/MESSAGE.kqueue
 
