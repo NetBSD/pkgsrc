@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:32:09 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/25 04:11:59 minskim Exp $
 
 DISTNAME=	Class-ObjectTemplate-0.4
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.oreilly.com/catalog/advperl/
 COMMENT=	Perl extension for optimized template builder base class
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Class/ObjectTemplate/.packlist
 
 .include "../../lang/perl5/module.mk"
