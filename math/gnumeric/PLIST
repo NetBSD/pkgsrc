@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2003/01/09 12:41:11 rh Exp $
+@comment $NetBSD: PLIST,v 1.18 2003/01/12 05:45:02 rh Exp $
 bin/gnumeric
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.la
@@ -16,10 +16,6 @@ lib/gnumeric/${PKGVERSION}-bonobo/plugins/excel/excel.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/excel/excel.la
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/excel/excel.so
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/excel/plugin.xml
-lib/gnumeric/${PKGVERSION}-bonobo/plugins/guile/guile.a
-lib/gnumeric/${PKGVERSION}-bonobo/plugins/guile/guile.la
-lib/gnumeric/${PKGVERSION}-bonobo/plugins/guile/guile.so
-lib/gnumeric/${PKGVERSION}-bonobo/plugins/guile/plugin.xml
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/html/html.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/html/html.la
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/html/html.so
@@ -871,8 +867,6 @@ share/gnumeric/${PKGVERSION}-bonobo/glade/tabulate.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/variance-tests.glade
 share/gnumeric/${PKGVERSION}-bonobo/glade/workbook-attr.glade
 share/gnumeric/${PKGVERSION}-bonobo/gnome/ui/GNOME_Gnumeric.xml
-share/gnumeric/${PKGVERSION}-bonobo/guile/functions.scm
-share/gnumeric/${PKGVERSION}-bonobo/guile/gnumeric_startup.scm
 share/gnumeric/${PKGVERSION}-bonobo/idl/GNOME_Gnumeric.idl
 share/gnumeric/${PKGVERSION}-bonobo/idl/GNOME_Gnumeric_Graph.idl
 share/gnumeric/${PKGVERSION}-bonobo/templates/invoice.gnumeric
@@ -980,7 +974,6 @@ share/pixmaps/gnumeric/top_border
 @dirrm share/omf/gnumeric
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/templates
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/idl
-@dirrm share/gnumeric/${PKGVERSION}-bonobo/guile
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/gnome/ui
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/gnome
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/glade
@@ -1007,7 +1000,6 @@ share/pixmaps/gnumeric/top_border
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/mps
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/lotus
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/html
-@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/guile
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/excel
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/dif
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/derivatives
