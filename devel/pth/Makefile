@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2000/07/30 19:55:52 rh Exp $
+# $NetBSD: Makefile,v 1.31 2000/10/06 09:03:17 jlam Exp $
 #
 
 DISTNAME=		pth-1.3.7
@@ -17,6 +17,9 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-pthread
 PLIST_SUBST+=		VERS=${VERS}
+
+test:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pth/
