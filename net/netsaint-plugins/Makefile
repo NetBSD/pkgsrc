@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/05/12 10:16:48 abs Exp $
+# $NetBSD: Makefile,v 1.11 2002/06/17 11:10:22 wiz Exp $
 #
 
 DISTNAME=		netsaint-plugins-1.2.9-4
@@ -19,8 +19,6 @@ DEPENDS+=		netsaint-base-[0-9]*:../../net/netsaint-base
 DEPENDS+=		{ssh{,6}-[0-9]*,openssh-[0-9]*}:../../security/ssh
 .endif
 
-USE_SSL=		YES
-
 .include "../../net/netsaint-base/Makefile.common"
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,4 +33,5 @@ pre-configure:
 	${LOCALBASE}/bin/automake -a --foreign -i;	\
 	${LOCALBASE}/bin/autoconf
 
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
