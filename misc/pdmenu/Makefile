@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/01/19 13:13:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/21 23:56:09 hubertf Exp $
 # FreeBSD Id: ports/misc/pdmenu/Makefile,v 1.11 2001/01/16 17:31:42 sobomax Exp
 
 DISTNAME=	${PKGNAME:S|-|_|}
@@ -16,8 +16,8 @@ USE_GMAKE=	YES
 USE_PERL5=	YES
 WRKSRC=		${WRKDIR}/pdmenu
 
-CONFIGURE_ENV=	SLANG_LIB_LOC='${PREFIX}/lib' \
-		SLANG_H_LOC='${PREFIX}/include/slang.h'
+CONFIGURE_ENV=	SLANG_LIB_LOC='${LOCALBASE}/lib' \
+		SLANG_H_LOC='${LOCALBASE}/include/slang.h'
 
 post-patch:
 		${SED} "s,@LOCALBASE@,${LOCALBASE},g" \
