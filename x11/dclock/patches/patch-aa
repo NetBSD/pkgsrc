@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/03 17:52:48 tron Exp $
+
+--- Makefile.orig	1999/02/27 20:32:36	1.1
++++ Makefile	1999/03/01 19:53:45
+@@ -3,12 +3,18 @@
+ OBJS= Dclock.o dclock.o
+ HFILES= Dclock.h DclockP.h patchlevel.h
+ 
+-CFLAGS= -O
+-LDFLAGS= 
++CFLAGS= -O -I$(X11BASE)/include
++LDFLAGS= -L$(X11BASE)/lib -Wl,-R$(X11BASE)/lib
+ LIBS= -lXt -lX11
+ 
++all: dclock
++
+ dclock: ${OBJS}
+ 	cc ${LDFLAGS} ${OBJS} ${LIBS} -o dclock
++
++install: dclock
++	install -c -m 555 -o root -g wheel dclock $(X11BASE)/bin
++	install -c -m 444 -o root -g wheel dclock.man $(X11BASE)/man/man1/dclock.1
+ 
+ clean: ; rm -f ${OBJS} core dclock
+ 
