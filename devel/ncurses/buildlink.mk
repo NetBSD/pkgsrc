@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2001/07/27 13:33:25 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.9 2001/07/27 14:31:44 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ncurses.
 #
@@ -73,10 +73,10 @@ BUILDLINK_FILES.ncurses+=	include/unctrl.h
 BUILDLINK_FILES.ncurses+=	lib/libcurses.*
 BUILDLINK_FILES.ncurses+=	lib/libform.*
 BUILDLINK_FILES.ncurses+=	lib/libmenu.*
-.endif
-
 BUILDLINK_TRANSFORM.ncurses=	-e "s|libcurses\.|libncurses.|g"
 BUILDLINK_TRANSFORM.ncurses+=	-e "s|/curses.h|/ncurses.h|g"
+REPLACE_LIBNAMES_SED+=		-e "s|-lncurses|-lcurses|g"
+.endif
 
 BUILDLINK_TARGETS.ncurses+=	ncurses-buildlink
 .if ${_NEED_NCURSES} == "NO"
