@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/11 23:42:11 kristerw Exp $
+# $NetBSD: Makefile,v 1.15 2004/04/11 17:04:29 xtraeme Exp $
 
 DISTNAME=	gmodplay-0.08
 PKGREVISION=	3
@@ -15,7 +15,7 @@ ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \
 			*-*-hpcmips *-*-hpcsh *-*-i386 *-*-pc532 *-*-pmax \
 			*-*-vax
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_LANGUAGES=		c c++
 
@@ -29,7 +29,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gmodplay
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/gmodplay
 
-.include "../../devel/libslang/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
+.include "../../devel/libslang/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
