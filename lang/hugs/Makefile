@@ -3,7 +3,7 @@
 # Date created:		22-Mar-98
 # Whom:			nathanw@mit.edu
 #
-# $NetBSD: Makefile,v 1.1 1998/04/03 21:14:22 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/04/03 22:11:43 tron Exp $
 
 DISTNAME=	hugs-January1998-source
 PKGNAME=	hugs-1.4
@@ -17,15 +17,10 @@ MAINTAINER=	nathanw@mit.edu
 WRKSRC=		${WRKDIR}/hugs/src
 GNU_CONFIGURE=	yes
 ALL_TARGET=	default
+MAKE_ENV=	INSTALL="${INSTALL}" INSTALL_DATA="${INSTALL_DATA}" \
+		INSTALL_PROGRAM="${INSTALL_PROGRAM}"
 
-# The hugs distribution puts configure and friends in a subdirectory 
-# below the sources, and insists that configure be run from that directory,
-# which is awkward for bsd.port.mk.
-do-configure:
-	@(cd ${WRKSRC}/unix && CC="${CC}" ac_cv_path_CC="${CC}" \
-	    CFLAGS="${CFLAGS}" \
-	    INSTALL="${INSTALL_DATA}" \
-	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-	    ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
+post-extract:
+	@${LN} -s ${FILESDIR}/configure ${WRKSRC}
 
 .include <bsd.port.mk>
