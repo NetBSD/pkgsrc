@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/10/06 20:00:42 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2002/08/31 00:15:41 wiz Exp $
 
---- zip/unzip.h.orig	Wed Apr 18 04:12:26 2001
+--- zip/unzip.h.orig	Thu May 23 02:03:08 2002
 +++ zip/unzip.h
-@@ -49,6 +49,10 @@
- #include "zlib.h"
- #endif
+@@ -47,6 +47,10 @@ extern "C" {
+ 
+ #include <zlib.h>
  
 +#ifndef OF
 +# define OF(args)	args
