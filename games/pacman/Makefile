@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2003/05/02 11:55:04 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2003/05/05 16:27:49 jmmv Exp $
 
 DISTNAME=		Pacman-0.3-CVS-00-11-17
 PKGNAME=		Pacman-0.3
-PKGREVISION=	2
+PKGREVISION=		2
 CATEGORIES=		games x11
 MASTER_SITES=		http://dark.x.dtu.dk/~mbn/clanlib/download/snapshots/Games/
 
