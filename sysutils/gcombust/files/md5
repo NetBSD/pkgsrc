@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.16 2001/01/05 19:59:49 rh Exp $
+$NetBSD: md5,v 1.17 2001/03/10 11:46:53 drochner Exp $
 
-MD5 (gcombust-0.1.39.tar.gz) = 7c364be7e3d4ebff58ace64f9481e4e0
+SHA1 (gcombust-0.1.42.tar.gz) = bc6782ae48338fa709eb70f3352c6764180f4b35

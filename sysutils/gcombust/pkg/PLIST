@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2001/01/05 19:59:49 rh Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/03/10 11:46:54 drochner Exp $
 bin/gcombust
+share/gnome/apps/Applications/gcombust.desktop
 share/locale/sv/LC_MESSAGES/gcombust.mo
 share/locale/es/LC_MESSAGES/gcombust.mo
 share/locale/de/LC_MESSAGES/gcombust.mo
@@ -11,3 +12,4 @@ share/locale/ko/LC_MESSAGES/gcombust.mo
 share/locale/ru/LC_MESSAGES/gcombust.mo
 share/locale/da/LC_MESSAGES/gcombust.mo
 share/locale/it/LC_MESSAGES/gcombust.mo
+share/pixmaps/gcombust.xpm
