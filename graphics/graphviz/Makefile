@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2004/12/03 11:42:57 seb Exp $
+# $NetBSD: Makefile,v 1.27 2004/12/24 18:26:56 seb Exp $
 #
 
-DISTNAME=	graphviz-1.16
+DISTNAME=	graphviz-2.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
@@ -23,7 +23,6 @@ PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFIGURE_ARGS+=	--with-mylibgd
 CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH}
 CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH}
 CONFIGURE_ENV+=		X11PREFIX=${X11PREFIX} X11BASE=${X11BASE}
@@ -40,10 +39,12 @@ post-extract:
 pre-build:
 	${TOUCH} ${WRKSRC}/Makefile
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
