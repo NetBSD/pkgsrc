@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1596 2004/04/10 06:26:35 snj Exp $
+$NetBSD: TODO,v 1.1597 2004/04/10 23:06:42 salo Exp $
 
 Suggested new packages
 ======================
@@ -140,9 +140,6 @@ Suggested package updates
 	o avidemux-2.0.20
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
-	o blib-1.1.6
-	o blinkensim-2.8
-	o blinkentools-2.7
 	o boehm-gc-6.3alpha2
 	o boost-1.31.0
 	o capc-calc-2.11.9.3
