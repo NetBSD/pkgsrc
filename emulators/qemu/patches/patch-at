@@ -1,0 +1,12 @@
+$NetBSD: patch-at,v 1.1 2004/12/14 01:02:19 dbj Exp $
+
+--- target-ppc/exec.h.orig	Sun Nov 14 15:51:33 2004
++++ target-ppc/exec.h
+@@ -20,6 +20,7 @@
+ #if !defined (__PPC_H__)
+ #define __PPC_H__
+ 
++#include "config.h"
+ #include "dyngen-exec.h"
+ 
+ register struct CPUPPCState *env asm(AREG0);

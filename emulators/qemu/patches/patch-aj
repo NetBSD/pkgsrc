@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1.1.1 2004/11/09 13:05:33 xtraeme Exp $
+$NetBSD: patch-aj,v 1.2 2004/12/14 01:02:19 dbj Exp $
 
---- Makefile.target.orig	2004-11-09 13:20:37.000000000 +0100
-+++ Makefile.target	2004-11-09 13:22:17.000000000 +0100
-@@ -7,8 +7,8 @@
+--- Makefile.target.orig	Sun Nov 14 15:51:33 2004
++++ Makefile.target
+@@ -7,8 +7,8 @@ ifdef CONFIG_USER_ONLY
  VPATH+=:$(SRC_PATH)/linux-user
  DEFINES+=-I$(SRC_PATH)/linux-user -I$(SRC_PATH)/linux-user/$(TARGET_ARCH)
  endif
@@ -13,7 +13,17 @@ $NetBSD: patch-aj,v 1.1.1.1 2004/11/09 13:05:33 xtraeme Exp $
  LIBS=
  HELPER_CFLAGS=$(CFLAGS)
  DYNGEN=../dyngen$(EXESUF)
-@@ -340,7 +340,7 @@
+@@ -181,6 +181,9 @@ endif
+ 
+ DEFINES+=-D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
+ LIBS+=-lm
++ifdef CONFIG_DARWIN
++LIBS+=-lmx
++endif
+ ifndef CONFIG_USER_ONLY
+ LIBS+=-lz
+ endif
+@@ -397,7 +400,7 @@ clean:
  
  install: all 
  ifneq ($(PROGS),)
