@@ -1,4 +1,16 @@
-@comment $NetBSD: PLIST,v 1.6 2004/07/01 00:00:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/07/29 00:50:59 tv Exp $
+bin/jdk11-appletviewer
+bin/jdk11-jar
+bin/jdk11-java
+bin/jdk11-javac
+bin/jdk11-javadoc
+bin/jdk11-javah
+bin/jdk11-javakey
+bin/jdk11-javap
+bin/jdk11-jdb
+bin/jdk11-rmic
+bin/jdk11-rmiregistry
+bin/jdk11-serialver
 java/jdk-1.1.8/CHANGES
 java/jdk-1.1.8/COPYRIGHT
 java/jdk-1.1.8/LICENSE
@@ -577,4 +589,3 @@ java/jdk-1.1.8/src.zip
 @dirrm java/jdk-1.1.8/bin/i386
 @dirrm java/jdk-1.1.8/bin
 @dirrm java/jdk-1.1.8
-@unexec ${RMDIR} %D/java 2>/dev/null || ${TRUE}
