@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/04/09 21:39:24 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2002/07/16 13:11:13 agc Exp $
 
 DISTNAME=		control-center-1.4.0.4
 CATEGORIES=		x11 gnome
@@ -8,7 +8,6 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME control-center development library
 
-DEPENDS+=			scrollkeeper-[0-9]*:../../textproc/scrollkeeper
 BUILD_USES_MSGFMT=	YES
 
 BUILDLINK_DEPENDS.gnome-libs=	gnome-libs>=1.4.1.2nb1
@@ -43,6 +42,7 @@ post-patch:
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../graphics/gdk-pixbuf/buildlink.mk"
 .include "../../sysutils/gnome-vfs/buildlink.mk"
+.include "../../textproc/scrollkeeper/buildlink.mk"
 .include "../../x11/gnome-libs/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
