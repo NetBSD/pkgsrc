@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/10/27 17:47:01 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/12/16 01:57:01 wiz Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
@@ -11,10 +11,10 @@ HOMEPAGE=		http://librep.sourceforge.net/
 
 DEPENDS+=		gmp>=3.0:../../devel/gmp
 DEPENDS+=		gdbm>=1.8.0:../../databases/gdbm
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 DEPENDS+=		readline>=4.0:../../devel/readline
 
 USE_GMAKE=		# defined
+USE_LIBINTL=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
@@ -22,7 +22,6 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-gmp-prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-gdbm-prefix=${LOCALBASE}
-CONFIGURE_ENV+=		LIBS="-lintl"
 
 PLIST_SUBST+=		REP_VERS=${REP_VERS}
 
