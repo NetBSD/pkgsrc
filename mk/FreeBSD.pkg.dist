@@ -1,4 +1,4 @@
-#	$NetBSD: FreeBSD.pkg.dist,v 1.49 2004/09/21 16:32:35 jmmv Exp $
+#	$NetBSD: FreeBSD.pkg.dist,v 1.50 2004/10/04 20:47:41 cube Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -234,6 +234,52 @@
             mann
             ..
         ..
+        fi 
+            cat1            
+            ..
+            cat2            
+            ..
+            cat3            
+            ..
+            cat4            
+            ..
+            cat5            
+            ..
+            cat6            
+            ..
+            cat7            
+            ..
+            cat8            
+            ..
+            cat9            
+            ..
+            catl            
+            ..
+            catn            
+            ..
+            man1
+            ..
+            man2
+            ..
+            man3
+            ..
+            man4
+            ..
+            man5
+            ..
+            man6
+            ..
+            man7
+            ..
+            man8
+            ..
+            man9
+            ..
+            manl
+            ..
+            mann
+            ..
+	..
         fr 
             cat1            
             ..
