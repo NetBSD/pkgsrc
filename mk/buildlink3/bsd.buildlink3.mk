@@ -1,28 +1,36 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.20 2003/09/28 12:51:46 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.21 2003/09/30 00:32:57 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
 # -------------8<-------------8<-------------8<-------------8<-------------
-# BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+		# push
+# BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+#
+# .if !defined(FOO_BUILDLINK3_MK)
+# FOO_BUILDLINK3_MK=	YES
 #
 # BUILDLINK_DEPENDS.foo?=	foo-lib>=1.0
 # BUILDLINK_PKGSRCDIR.foo?=	../../category/foo-lib
+# .endif # FOO_BUILDLINK3_MK
 #
 # .if !empty(BUILDLINK_DEPTH:M\+)
 # BUILDLINK_DEPENDS+=	foo
 # .endif
 #
-# .if !defined(BUILDLINK_PACKAGES) || empty(BUILDLINK_PACKAGES:Mfoo)
+# .if !defined(FOO_BUILDLINK3_MK)
 # BUILDLINK_PACKAGES+=		foo
 #
 # # We want "-lbar" to eventually resolve to "-lfoo".
 # BUILDLINK_TRANSFORM+=		l:bar:foo
-# .endif
 #
-# .include "../../category/baz/buildlink3.mk"
+# .  include "../../category/baz/buildlink3.mk"
+# .endif # FOO_BUILDLINK3_MK
 #
-# BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}	# pop
+# BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
 # -------------8<-------------8<-------------8<-------------8<-------------
+#
+# Most of the buildlink3.mk file is protected against multiple inclusion,
+# except for the parts related to manipulating BUILDLINK_DEPTH and adding
+# to BUILDLINK_DEPENDS.
 #
 # Note that if a buildlink3.mk file is included, then the package Makefile
 # has the expectation that it can use the value of BUILDLINK_PREFIX.<pkg>.
