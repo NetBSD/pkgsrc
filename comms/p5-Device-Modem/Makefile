@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/04/11 06:55:52 snj Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/22 13:42:08 grant Exp $
 #
 
-DISTNAME=	Device-Modem-1.24
+DISTNAME=	Device-Modem-1.36
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5dmd
 CATEGORIES=	comms perl5
