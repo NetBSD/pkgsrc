@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/26 01:30:42 snj Exp $
 
 DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
 PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
@@ -25,7 +25,7 @@ DEPENDS+=	ja-ptex-bin>=3.1.2:../../print/ja-ptex-bin
 
 XDVI_DIR=	${WRKDIR}/${DISTNAME}/texk/xdvik
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES
@@ -73,12 +73,12 @@ do-install:
 	cd ${XDVI_DIR} && ${MAKE_PROGRAM} install
 
 .if defined(USE_TEXFAMILY)
-.include "../../print/teTeX1-bin/kpathsea.buildlink2.mk"
+.include "../../print/teTeX1-bin/kpathsea.buildlink3.mk"
 .else
-.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
+.include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
 .endif
-.include "../../www/libwww/buildlink2.mk"
-.include "../../print/ja-vflib-lib/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../fonts/t1lib/buildlink2.mk"
+.include "../../www/libwww/buildlink3.mk"
+.include "../../print/ja-vflib-lib/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../fonts/t1lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

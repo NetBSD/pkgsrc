@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/03/26 02:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/26 01:30:41 snj Exp $
 
 DISTNAME=	dvipdfmx-20031116
 PKGNAME=	${DISTNAME:S/-/-0.0.0./}
@@ -16,7 +16,7 @@ DEPENDS+=	teTeX-bin>=2.0.2:../../print/teTeX-bin
 CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
@@ -24,8 +24,8 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 GNU_CONFIGURE=		YES
 #CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 
-.include "../../graphics/png/buildlink2.mk"
-.include "../../print/teTeX-bin/kpathsea.buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../print/teTeX-bin/kpathsea.buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
