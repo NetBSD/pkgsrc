@@ -1,8 +1,7 @@
-$NetBSD: patch-al,v 1.2 1999/10/01 07:49:20 simonb Exp $
+$NetBSD: patch-al,v 1.3 2000/07/08 12:47:07 tron Exp $
 
-diff -ur ../faces-DIST/filters/ikon2xbm ./filters/ikon2xbm
---- ../faces-DIST/filters/ikon2xbm	Tue May  7 08:51:50 1991
-+++ ./filters/ikon2xbm	Fri Oct  1 14:32:09 1999
+--- filters/ikon2xbm.orig	Tue May  7 00:51:50 1991
++++ filters/ikon2xbm	Sat Jul  8 14:25:27 2000
 @@ -26,7 +26,7 @@
  \2\
  \3/' > $tmp

@@ -1,8 +1,7 @@
-$NetBSD: patch-af,v 1.2 1999/10/01 07:49:20 simonb Exp $
+$NetBSD: patch-af,v 1.3 2000/07/08 12:47:05 tron Exp $
 
-diff -ur ../faces-DIST/compface/uncmain.c ./compface/uncmain.c
---- ../faces-DIST/compface/uncmain.c	Thu Oct 24 12:28:07 1991
-+++ ./compface/uncmain.c	Fri Oct  1 14:32:06 1999
+--- compface/uncmain.c.orig	Thu Oct 24 03:28:07 1991
++++ compface/uncmain.c	Sat Jul  8 14:25:27 2000
 @@ -18,6 +18,8 @@
  #include <fcntl.h>
  #include "compface.h"
