@@ -1,0 +1,31 @@
+$NetBSD: patch-ag,v 1.1.1.1 2004/11/09 13:05:34 xtraeme Exp $
+
+--- configure.orig	2004-07-10 21:20:09.000000000 +0300
++++ configure
+@@ -241,7 +241,7 @@ aa="no"
+ `$sdl_config --static-libs | grep \\\-laa > /dev/null` && aa="yes"
+ sdl_static_libs=`$sdl_config --static-libs`
+ if [ "$aa" = "yes" ] ; then
+-  sdl_static_libs="$sdl_static_libs `aalib-config --static-libs`"
++  sdl_static_libs="$sdl_static_libs `aalib-x11-config --static-libs`"
+ fi
+ 
+ if $cc -o $TMPE `$sdl_config --cflags 2> /dev/null` $TMPC $sdl_static_libs 2> /dev/null; then
+@@ -293,7 +293,7 @@ else
+ if test -z "$prefix" ; then
+     prefix="/usr/local"
+ fi
+-mandir="$prefix/share/man"
++mandir="$prefix/man"
+ datadir="$prefix/share/qemu"
+ docdir="$prefix/share/doc/qemu"
+ bindir="$prefix/bin"
+@@ -529,7 +529,7 @@ if test "$target_user_only" = "no"; then
+     fi
+     echo -n "SDL_CFLAGS=`$sdl_config --cflags`" >> $config_mak
+     if [ "${aa}" = "yes" ] ; then
+-        echo -n " `aalib-config --cflags`" >> $config_mak ;
++        echo -n " `aalib-x11-config --cflags`" >> $config_mak ;
+     fi
+     echo "" >> $config_mak
+ fi

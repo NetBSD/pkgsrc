@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/11/09 13:05:34 xtraeme Exp $
+
+--- oss.c.orig	2004-07-10 21:20:09.000000000 +0300
++++ oss.c
+@@ -23,7 +23,7 @@
+  */
+ #include "vl.h"
+ 
+-#if !defined(_WIN32) && !defined(__APPLE__)
++#if !defined(_WIN32) && !defined(__APPLE__) && !defined(_BSD)
+ #include <ctype.h>
+ #include <fcntl.h>
+ #include <errno.h>

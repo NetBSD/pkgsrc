@@ -1,0 +1,41 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/11/09 13:05:34 xtraeme Exp $
+
+--- dyngen-exec.h.orig	2004-07-10 21:20:09.000000000 +0300
++++ dyngen-exec.h
+@@ -43,7 +43,7 @@ typedef signed long int64_t;
+ #else
+ typedef signed long long int64_t;
+ #endif
+-
++/*
+ #define INT8_MIN		(-128)
+ #define INT16_MIN		(-32767-1)
+ #define INT32_MIN		(-2147483647-1)
+@@ -56,13 +56,17 @@ typedef signed long long int64_t;
+ #define UINT16_MAX		(65535)
+ #define UINT32_MAX		(4294967295U)
+ #define UINT64_MAX		((uint64_t)(18446744073709551615))
+-
++*/
++#ifdef __NetBSD__
++typedef	struct __sFILE FILE;
++#else
+ typedef struct FILE FILE;
++#endif
+ extern int fprintf(FILE *, const char *, ...);
+ extern int printf(const char *, ...);
+ #undef NULL
+ #define NULL 0
+-#if defined(_BSD) && !defined(__APPLE__)
++#if defined(_BSD) || !defined(__APPLE__)
+ #include <ieeefp.h>
+ 
+ #define FE_TONEAREST   FP_RN
+@@ -70,6 +74,7 @@ extern int printf(const char *, ...);
+ #define FE_UPWARD      FP_RP
+ #define FE_TOWARDZERO  FP_RZ
+ #define fesetround(x)  fpsetround(x)
++#define fegetround()  fpgetround()
+ #else
+ #include <fenv.h>
+ #endif

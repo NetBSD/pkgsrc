@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2004/11/09 13:05:34 xtraeme Exp $
+
+--- slirp/slirp_config.h.orig	2004-07-10 21:20:09.000000000 +0300
++++ slirp/slirp_config.h
+@@ -61,7 +61,7 @@
+ #define HAVE_STDLIB_H
+ 
+ /* Define if you have sys/ioctl.h */
+-#undef HAVE_SYS_IOCTL_H
++#define HAVE_SYS_IOCTL_H
+ 
+ /* Define if you have sys/filio.h */
+ #undef HAVE_SYS_FILIO_H
+@@ -162,7 +162,7 @@
+ #define HAVE_MEMMOVE
+ 
+ /* Define if you have <termios.h> */
+-#undef HAVE_TERMIOS_H
++#define HAVE_TERMIOS_H
+ 
+ /* Define if you have gethostid */
+ #undef HAVE_GETHOSTID
