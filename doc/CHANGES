@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4869 2004/02/16 23:37:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.4870 2004/02/16 23:39:37 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -879,3 +879,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nsd to 2.0.0nb1 [itojun 2004-02-16]
 	Updated gconf-editor to 2.4.0nb3 [jmmv 2004-02-16]
 	Updated ggv to 2.4.1nb2 [jmmv 2004-02-16]
+	Updated x11-links to 0.21 [jlam 2004-02-16]
