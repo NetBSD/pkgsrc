@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2278 2004/10/29 22:18:41 xtraeme Exp $
+$NetBSD: TODO,v 1.2279 2004/10/29 23:02:17 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -140,10 +140,6 @@ Suggested new packages
 	Helix Player
 	http://player.helixcommunity.org/2004/downloads/
 	RealNetwork's open source audio/video player
-
-	Putty [Already in pkgsrc-wip, wip/putty]
-	http://www.chiark.greenend.org.uk/~sgtatham/putty/
-	SSH client
 
 	Exult
 	http://exult.sourceforge.net/
