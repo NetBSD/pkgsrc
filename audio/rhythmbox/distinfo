@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2004/05/02 09:19:32 jmmv Exp $
+$NetBSD: distinfo,v 1.9 2004/05/04 21:14:12 jmmv Exp $
 
-SHA1 (rhythmbox-0.8.2.tar.bz2) = dc65583a65aa64979f384ba0cd34ecff5dd86b91
-Size (rhythmbox-0.8.2.tar.bz2) = 1777689 bytes
+SHA1 (rhythmbox-0.8.3.tar.bz2) = 1500685be4b219599418de050cc69cd5015d00f0
+Size (rhythmbox-0.8.3.tar.bz2) = 1778132 bytes
