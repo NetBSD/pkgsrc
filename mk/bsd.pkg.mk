@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.869 2001/11/30 03:19:04 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.870 2001/11/30 03:48:14 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1507,22 +1507,28 @@ do-patch: uptodate-digest
 			fi;						\
 		fi;							\
 	fi
+.endif
 
-.  if defined(REPLACE_PERL)
-.    for f in ${REPLACE_PERL}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; if [ -f ${f} ]; then	\
+# Configure
+
+_CONFIGURE_PREREQ+=	replace-perl
+replace-perl:
+.if defined(REPLACE_PERL)
+.  for f in ${REPLACE_PERL}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${WRKSRC};							\
+	if [ -f ${f} ]; then						\
 		${SED} "s,#!.*/bin/perl,#!${PERL5},"			\
-				${f} > ${f}.new;			\
+			${f} > ${f}.new;				\
 		if [ -x ${f} ]; then					\
 			${CHMOD} a+x ${f}.new;				\
 		fi;							\
 		${MV} -f ${f}.new ${f};					\
 	fi
-.    endfor
-.  endif
+.  endfor
+.else
+	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
 .endif
-
-# Configure
 
 _CONFIGURE_PREREQ+=	do-ltconfig-override
 do-ltconfig-override:
