@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 1999/08/17 11:18:40 agc Exp $
+$NetBSD: patch-aa,v 1.2 1999/08/19 10:50:07 agc Exp $
 
 *** doc/man/elk.1.orig	Thu Apr  6 14:40:07 1995
 --- doc/man/elk.1	Thu Apr  6 14:41:02 1995
@@ -51,27 +51,3 @@ $NetBSD: patch-aa,v 1.1 1999/08/17 11:18:40 agc Exp $
   This interpreter, together with the standard Scheme toplevel,
   .I Elk
   can be used as an ordinary, stand-alone implementation of the
---- Makefile.orig	Mon Jul 31 13:56:26 1995
-+++ Makefile	Tue Mar 31 11:44:51 1998
-@@ -16,9 +16,9 @@
- 	 lib/unix\
- 	 lib/xlib\
- 	 lib/xt\
--	 lib/xaw\
--	 lib/xm\
--	 lib/xm/xt
-+	 lib/xaw
-+#	 lib/xm\
-+#	 lib/xm/xt
- 
- # ----------------------------------------------------------------------
- 
-@@ -37,7 +37,7 @@
- 	done
- 
- install:
--	@for i in $(SUBDIRS) ;\
-+	@for i in $(SUBDIRS) doc/man;\
- 	do \
- 	    echo Installing $$i...; \
- 	    ( cd $$i ; $(MAKE) install ) || exit $$?; \
