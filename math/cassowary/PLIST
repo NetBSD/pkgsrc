@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/25 05:26:36 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/05/03 16:03:24 wiz Exp $
 bin/cassowary-config
 include/Cl.h
 include/ClC.h
@@ -61,5 +61,5 @@ share/doc/cassowary/cassowary-tr.ps.gz
 @dirrm lib/cassowary
 @dirrm include/cassowary
 @dirrm ${GUILE14_SUBDIR}/lib/guile/site/cassowary
-@unexec ${RMDIR} -fr %D/${GUILE14_SUBDIR}/lib/guile/site 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -fr %D/${GUILE14_SUBDIR}/lib/guile 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${GUILE14_SUBDIR}/lib/guile/site 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${GUILE14_SUBDIR}/lib/guile 2>/dev/null || ${TRUE}
