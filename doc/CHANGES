@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2541 2003/06/19 17:13:16 taya Exp $
+$NetBSD: CHANGES,v 1.2542 2003/06/19 17:15:33 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2498,4 +2498,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added rc.subr-20030619 [grant 2003-06-19]
 	Updated dovecot to 0.99.10beta14 [salo 2003-06-19]
 	Added majesty-demo-20030310 [wiz 2003-06-19]
+	Updated xmame to 0.70.1 [kristerw 2003-06-19]
+	Updated xmess to 0.70.1 [kristerw 2003-06-19]
 	Updated galeon to 1.2.11 [taya 2003-06-19]
