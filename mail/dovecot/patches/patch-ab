@@ -1,8 +1,20 @@
-$NetBSD: patch-ab,v 1.4 2004/05/28 22:20:43 xtraeme Exp $
+$NetBSD: patch-ab,v 1.5 2004/05/29 15:42:51 cube Exp $
 
---- dovecot-example.conf.orig	2004-05-29 00:13:10.000000000 +0200
-+++ dovecot-example.conf	2004-05-29 00:15:24.000000000 +0200
-@@ -11,7 +11,7 @@
+--- dovecot-example.conf.orig	2003-12-20 05:14:19.000000000 +0100
++++ dovecot-example.conf
+@@ -1,17 +1,15 @@
+ ## Dovecot 1.0 configuration file
+ 
+ # Default values are shown after each value, it's not required to uncomment
+-# any of the lines. Exception to this are paths, they're just examples
+-# with real defaults being based on configure options. The paths listed here
+-# are for configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+-# --with-ssldir=/etc/ssl
++# any of the lines. Exception to this are paths, they're just examples with
++# real defaults being based on configure options.
+ 
+ # Base directory where to store runtime data.
+ #base_dir = /var/run/dovecot/
  
  # Protocols we want to be serving:
  #  imap imaps pop3 pop3s
@@ -38,6 +50,15 @@ $NetBSD: patch-ab,v 1.4 2004/05/28 22:20:43 xtraeme Exp $
  
  ##
  ## Mail processes
+@@ -318,7 +316,7 @@ login = pop3
+ ##
+ 
+ # Executable location
+-#imap_executable = /usr/libexec/dovecot/imap
++imap_executable = @PREFIX@/libexec/dovecot/imap
+ 
+ # Set max. process size in megabytes. Most of the memory goes to mmap()ing
+ # files, so it shouldn't harm much even if this limit is set pretty high.
 @@ -326,14 +326,14 @@
  
  # Support for dynamically loadable modules.
