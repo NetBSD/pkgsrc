@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/04 02:47:02 hubertf Exp $
+bin/emiclock
+lib/X11/app-defaults/EmiClock
+man/cat1/emiclock.0
