@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 09:32:44 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/02/21 12:12:49 wiz Exp $
 
-SHA1 (unzip542.tar.gz) = 713d498975ff03dec702cbb2a07d3d46fa4267f5
-Size (unzip542.tar.gz) = 1070770 bytes
+SHA1 (unzip550.tar.gz) = 2e7aef29b3865f0bf9a7b9d01b376155727b1f8b
+Size (unzip550.tar.gz) = 1068379 bytes
 SHA1 (patch-aa) = a90ed5bb96f5b1c1be4ef5ddc952edb364fa7a05
 SHA1 (patch-ab) = f1763f9ccc61eafa6719cfe55584ddf1088a14be
