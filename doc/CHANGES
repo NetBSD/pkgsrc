@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2895 2003/07/25 20:42:07 tron Exp $
+$NetBSD: CHANGES,v 1.2896 2003/07/25 23:11:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2958,3 +2958,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sketch to 0.6.15 [drochner 2003-07-25]
 	Updated balsa2 to 2.0.12 [drochner 2003-07-25]
 	Updated intlfonts to 1.2.1nb1 [tron 2003-07-25]
+	Updated kde to 1.1.2nb3 [wiz 2003-07-25]
