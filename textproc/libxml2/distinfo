@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.46 2005/01/16 22:28:34 recht Exp $
+$NetBSD: distinfo,v 1.47 2005/02/12 16:27:47 recht Exp $
 
 SHA1 (libxml2-2.6.17.tar.bz2) = 52325ef86a6b3c7e611daea1f7519df8df764479
 Size (libxml2-2.6.17.tar.bz2) = 3067503 bytes
 SHA1 (patch-aa) = a8eb8928330f8bf6827a9d06a07f5e88d6963457
 SHA1 (patch-ab) = e4c782df227b40e2cc70e60695d97952444ea088
+SHA1 (patch-ac) = b704e360662978558694aaab3c4672f26765c5c7
+SHA1 (patch-ad) = 8d0559b439091f66d248a8cce83126fb11c3d574
