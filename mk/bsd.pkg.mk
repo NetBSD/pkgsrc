@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1316 2003/12/07 22:47:16 grant Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1317 2003/12/09 13:14:02 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -761,9 +761,10 @@ uptodate-pkgtools:
 .endif
 .	if !defined(NO_PKGTOOLS_REQD_CHECK)
 .		if ${PKGTOOLS_VERSION} < ${PKGTOOLS_REQD}
-PKG_FAIL_REASON+='Your package tools need to be updated to ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} versions.'
-PKG_FAIL_REASON+='The installed package tools were last updated on ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|}.'
-PKG_FAIL_REASON+='To fix this, use the following command:'
+PKG_FAIL_REASON+='Error: The package tools installed on this system are out of date.'
+PKG_FAIL_REASON+='The installed package tools are dated ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|} and you must update'
+PKG_FAIL_REASON+='them to at least ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} using the following command:'
+PKG_FAIL_REASON+=''
 PKG_FAIL_REASON+='	cd ${_PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} install'
 .		endif
 .	endif
