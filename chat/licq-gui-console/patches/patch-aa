@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2003/07/12 12:05:01 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/28 04:54:50 minskim Exp $
 
 --- src/window.cpp.orig	Mon Dec 10 15:05:49 2001
 +++ src/window.cpp
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.1 2003/07/12 12:05:01 wiz Exp $
 -//#else
 -//         wcolor_set(win, va_arg(argp, short), NULL);
 -//#endif
-+	 wattr_set(win, save & ~A_COLOR, va_arg(argp, short), NULL);
++	 wattr_set(win, save & ~A_COLOR, va_arg(argp, int), NULL);
           while((formatIn[i]) && (formatIn[i] != '%') && j < 1022)  formatOut[j++] = formatIn[i++];
           formatOut[j] = '\0';
           *this << formatOut;
