@@ -1,0 +1,18 @@
+--- src/runtime/rmisc.r.orig	Sat Nov  4 00:26:32 1995
++++ src/runtime/rmisc.r	Sat Nov  2 16:48:35 1996
+@@ -125,15 +125,6 @@
+    return buf;
+ #endif					/* OS2EMX */
+ 
+-#if FreeBSD
+-#define ecvt(w,x,y,z) 0
+-
+-   sprintf(buf, "%f", number);
+-   for(i=strlen(buf); i>1 && buf[i-1]=='0' && buf[i-2]!='.'; i--)
+-      buf[i-1] = '\0';
+-   return buf;
+-#endif					/* FreeBSD */
+-
+    p1 = ecvt(number, ndigit, &decpt, &sign);
+    p2 = buf;
+    if (sign)

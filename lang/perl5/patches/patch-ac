@@ -1,0 +1,29 @@
+--- hints/freebsd.sh.orig	Wed Apr 23 16:01:37 1997
++++ hints/freebsd.sh	Tue Jun  3 14:29:50 1997
+@@ -63,6 +63,7 @@
+ 	d_setreuid='define'
+ 	d_setegid='undef'
+ 	d_seteuid='undef'
++	d_dosuid='define'
+ 	test -r ./broken-db.msg && . ./broken-db.msg
+ 	;;
+ #
+@@ -76,12 +77,18 @@
+ 	d_setreuid='define'
+ 	d_setegid='undef'
+ 	d_seteuid='undef'
++	d_dosuid='define'
+ 	;;
+ #
+ # Guesses at what will be needed after 2.2
+ *)	usevfork='true'
+ 	usemymalloc='n'
+ 	libswanted=`echo $libswanted | sed 's/ malloc / /'`
++	d_setregid='define'
++	d_setreuid='define'
++	d_setegid='undef'
++	d_seteuid='undef'
++	d_dosuid='define'
+ 	;;
+ esac
+ 
