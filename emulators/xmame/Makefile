@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1998/12/15 10:34:34 mycroft Exp $
+# $NetBSD: Makefile,v 1.27 1998/12/28 13:46:12 hubertf Exp $
 #
 
 DISTNAME=		xmame-0.34b8.1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		mycroft@NetBSD.ORG
 HOMEPAGE=		http://xmame.retrogames.com/
 
-DEPENDS=		unzip-5.32:../../archivers/unzip
+DEPENDS=		unzip-5.40:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 CONFLICTS=		xmame-0.30.1 xmame-0.33b6.1 xmame-0.34b1.1 \
