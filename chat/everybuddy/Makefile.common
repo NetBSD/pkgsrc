@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2003/08/15 22:48:04 jmc Exp $
+# $NetBSD: Makefile.common,v 1.11 2003/09/02 18:20:34 seb Exp $
 
 DISTNAME=	everybuddy-0.2.0
 CATEGORIES=	chat
@@ -31,8 +31,3 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/wrapper ${PREFIX}/bin/everybuddy
 
 .include "../../converters/libiconv/buildlink2.mk"
-
-_ICONV_LIB=     ${BUILDLINK_LIBICONV_LDADD:M-l*:C/-l//}
-.if empty(_ICONV_LIB)
-BUILDLINK_TRANSFORM+=   S:-liconv:
-.endif
