@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.500 2003/04/26 06:47:48 rh Exp $
+$NetBSD: TODO,v 1.501 2003/04/26 07:05:43 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -37,8 +37,6 @@ Suggested new packages
 	nautilus
 	Full featured file manager for GNOME. FreeBSD has a port
 	  mostly working now.
-	  [jmmv: I am working on this package. It mostly works, but still
-	         has some annoying problems that need to be fixed]
 	  [rh: I have checked in a mostly-working package into wip,
                  which might be a good starting point]
 	http://cvs.gnome.org/lxr/source/nautilus/
