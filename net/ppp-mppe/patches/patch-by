@@ -1,7 +1,7 @@
-$NetBSD: patch-by,v 1.1.1.1 1999/10/08 04:34:43 dbj Exp $
+$NetBSD: patch-by,v 1.2 1999/12/08 13:57:44 rh Exp $
 
---- netbsd-1.4/sha1dgst.c.orig	Wed Sep 29 23:42:05 1999
-+++ netbsd-1.4/sha1dgst.c	Wed Sep 29 23:43:55 1999
+--- netbsd-1.4/sha1dgst.c.orig	Wed Dec  8 14:56:15 1999
++++ netbsd-1.4/sha1dgst.c	Wed Dec  8 14:56:26 1999
 @@ -56,8 +56,6 @@
   * [including the GNU Public Licence.]
   */
@@ -10,4 +10,4 @@ $NetBSD: patch-by,v 1.1.1.1 1999/10/08 04:34:43 dbj Exp $
 -#include <string.h>
  #undef  SHA_0
  #define SHA_1
- #include "sha.h"
+ #include <openssl/sha.h>
