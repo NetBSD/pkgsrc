@@ -8460,20 +8460,7 @@ if test $ac_cv_header_poll_h = no && test $ac_cv_header_sys_poll_h = no; then
 fi
 
 if test $pkg_use_nbcompat_poll = yes; then
-	cat >>confdefs.h <<\_ACEOF
-#define HAVE_NBCOMPAT_POLL 1
-_ACEOF
-
-
-
-	case $LIBOBJS in
-    "poll.$ac_objext"   | \
-  *" poll.$ac_objext"   | \
-    "poll.$ac_objext "* | \
-  *" poll.$ac_objext "* ) ;;
-  *) LIBOBJS="$LIBOBJS poll.$ac_objext" ;;
-esac
-
+	pkg_cv_POLL_NATIVE=no
 else
 	echo "$as_me:$LINENO: checking for poll" >&5
 echo $ECHO_N "checking for poll... $ECHO_C" >&6
@@ -8570,7 +8557,7 @@ if test $ac_cv_func_poll = yes; then
 
 	echo "$as_me:$LINENO: checking if poll() is implemented natively" >&5
 echo $ECHO_N "checking if poll() is implemented natively... $ECHO_C" >&6
-if test "${pkg_cv_POLL_COMPAT+set}" = set; then
+if test "${pkg_cv_POLL_NATIVE+set}" = set; then
   echo $ECHO_N "(cached) $ECHO_C" >&6
 else
 
@@ -8620,22 +8607,39 @@ if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
   ac_status=$?
   echo "$as_me:$LINENO: \$? = $ac_status" >&5
   (exit $ac_status); }; }; then
-   pkg_cv_POLL_COMPAT=yes
+   pkg_cv_POLL_NATIVE=yes
 else
   echo "$as_me: failed program was:" >&5
 sed 's/^/| /' conftest.$ac_ext >&5
 
- pkg_cv_POLL_COMPAT=no
+ pkg_cv_POLL_NATIVE=no
 fi
 rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
 
 fi
-echo "$as_me:$LINENO: result: $pkg_cv_POLL_COMPAT" >&5
-echo "${ECHO_T}$pkg_cv_POLL_COMPAT" >&6
-	if test "x$pkg_cv_POLL_COMPAT" = "xyes"; then
+echo "$as_me:$LINENO: result: $pkg_cv_POLL_NATIVE" >&5
+echo "${ECHO_T}$pkg_cv_POLL_NATIVE" >&6
+	if test "x$pkg_cv_POLL_NATIVE" = "xyes"; then
 		:
 	else
-		case $LIBOBJS in
+		:
+		:
+	fi
+
+
+fi
+
+fi
+
+if test $pkg_cv_POLL_NATIVE = yes; then
+	cat >>confdefs.h <<\_ACEOF
+#define HAVE_POLL 1
+_ACEOF
+
+
+
+else
+	case $LIBOBJS in
     "poll.$ac_objext"   | \
   *" poll.$ac_objext"   | \
     "poll.$ac_objext "* | \
@@ -8643,11 +8647,11 @@ echo "${ECHO_T}$pkg_cv_POLL_COMPAT" >&6
   *) LIBOBJS="$LIBOBJS poll.$ac_objext" ;;
 esac
 
-		:
-	fi
+	cat >>confdefs.h <<\_ACEOF
+#define HAVE_NBCOMPAT_POLL 1
+_ACEOF
 
 
-fi
 
 fi
 
