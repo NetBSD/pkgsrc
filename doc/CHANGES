@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1446 2003/02/21 11:34:28 jmmv Exp $
+$NetBSD: CHANGES,v 1.1447 2003/02/21 11:45:33 mycroft Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -778,3 +778,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated php4 to 4.2.3nb2 [lukem 2003-02-21]
 	Updated fetchmail to 6.2.1 [mycroft 2003-02-21]
 	Added gnome-common-1.2.4 [jmmv 2003-02-21]
+	Updated libdvdcss to 1.2.5 [mycroft 2003-02-21]
