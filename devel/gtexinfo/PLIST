@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/07/02 05:27:04 grant Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/07/02 16:09:58 grant Exp $
 bin/info
 bin/infokey
 bin/install-info
@@ -6,28 +6,11 @@ bin/makeinfo
 bin/texi2dvi
 bin/texindex
 info/info-stnd.info
-info/info-stnd.info-1
-info/info-stnd.info-2
-info/info-stnd.info-3
 info/info.info
-info/info.info-1
-info/info.info-2
 info/texinfo
 info/texinfo-1
-info/texinfo-10
-info/texinfo-11
-info/texinfo-12
-info/texinfo-13
-info/texinfo-14
-info/texinfo-15
 info/texinfo-2
 info/texinfo-3
-info/texinfo-4
-info/texinfo-5
-info/texinfo-6
-info/texinfo-7
-info/texinfo-8
-info/texinfo-9
 man/man1/info.1
 man/man1/install-info.1
 man/man1/makeinfo.1
