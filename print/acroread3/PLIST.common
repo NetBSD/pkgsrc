@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.pre,v 1.1 2001/10/31 23:31:15 zuntum Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2005/02/21 21:26:15 veego Exp $
 Acrobat3/Browsers/netscape
 Acrobat3/Browsers/${PLATFORM}/nppdf.so
 Acrobat3/Fonts/AcroRead.upr
