@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2000/04/15 07:56:16 simonb Exp $
+@comment $NetBSD: PLIST,v 1.16 2000/08/02 06:35:45 jlam Exp $
 bin/ali
 bin/anno
 bin/burst
@@ -148,6 +148,4 @@ share/doc/nmh/README
 share/doc/nmh/TODO
 @dirrm libexec/nmh
 @dirrm share/doc/nmh
-@exec if [ ! -f %D/etc/nmh/mhn.defaults ]; then cp -p %D/etc/nmh/mhn.defaults.dist %D/etc/nmh/mhn.defaults; fi
-@exec if [ ! -f %D/etc/nmh/mts.conf ]; then cp -p %D/etc/nmh/mts.conf.dist %D/etc/nmh/mts.conf; fi
 @unexec rmdir %D/etc/nmh 2>/dev/null || true
