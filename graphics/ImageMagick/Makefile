@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2000/06/21 02:45:15 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2000/08/10 08:57:23 tron Exp $
 
-DISTNAME=		ImageMagick-5.1.1
+DISTNAME=		ImageMagick-5.2.2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,9 +15,9 @@ DEPENDS+=		tiff-*:../../graphics/tiff
 
 MIRROR_DISTFILE=	no
 
-GNU_CONFIGURE=		# defined
-USE_X11=		# defined
-USE_LIBTOOL=		# defined
+GNU_CONFIGURE=		YES
+USE_X11=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 # Avoid compiler bug on "arm32"
@@ -30,7 +30,8 @@ CFLAGS=			-O
 # any of these manually as desired (PerlMagick should probably be a separate
 # pkg, however).
 CONFIGURE_ARGS+=	--without-perl --without-dps --without-fpx \
-			--without-hdf --without-jbig --without-ttf
+			--without-hdf --without-jbig --without-threads \
+			--without-ttf --without-xml
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Copyright.txt ${WRKSRC}/QuickStart.txt \
