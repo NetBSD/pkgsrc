@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/12/03 18:30:23 tv Exp $
+# $NetBSD: Makefile,v 1.9 1998/12/03 22:27:57 tv Exp $
 #
 # There are a few more mod_auth_cookie's out there doing slightly
 # different things.  This one pkg would be a good place to dump them all in
@@ -14,7 +14,7 @@ EXTRACT_SUFX=	.gz
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	ftp://ftp.kciLink.com/pub/mod_auth_cookie.txt
 
-DEPENDS+=	apache-1.3.3.0:../../www/apache
+DEPENDS+=	apache-1.3.3.1:../../www/apache
 # For "apxs":
 BUILD_DEPENDS=	${PREFIX}/bin/perl:../../lang/perl5
 
