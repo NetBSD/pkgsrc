@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1772 2004/05/24 15:03:08 jmmv Exp $
+$NetBSD: TODO,v 1.1773 2004/05/25 07:10:35 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -237,7 +237,6 @@ Suggested package updates
 	o gmp-4.1.3
 	o gnomeicu-0.99.5
 	o gnucash-1.8.9
-	o gnumeric-1.2.12
 	o gnunet-0.6.2a
 	o gnuplot-4.0.0 [pkg/25450]
 	o gogo-3.11p1
