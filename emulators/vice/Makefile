@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/25 19:35:52 kristerw Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/26 22:13:34 tron Exp $
 
 DISTNAME=		vice-1.6
 CATEGORIES=		emulators
@@ -12,6 +12,8 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=		kristerw@netbsd.org
 HOMEPAGE=		http://www.cs.cmu.edu/~dsladic/vice/vice.html
 COMMENT=		Emulator for C64, C128, CBM-II, PET, and VIC20
+
+DEPENDS+=		esound>=0.2.18:../../audio/esound
 
 RESTRICTED=		"ROM image copyright is questionable"
 NO_BIN_ON_CDROM=	${RESTRICTED}
