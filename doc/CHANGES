@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3889 2003/12/01 17:25:05 cube Exp $
+$NetBSD: CHANGES,v 1.3890 2003/12/02 03:59:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4706,3 +4706,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wine to 20031118 [adam 2003-12-01]
 	Updated spamassassin to 2.60nb2 [heinz 2003-12-01]
 	Updated ppp-mppe to 2.3.9nb2 [cube 2003-12-01]
+	Updated naim to 0.11.6.4 [xtraeme 2003-12-02]
