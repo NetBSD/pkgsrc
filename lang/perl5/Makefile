@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2002/08/25 18:39:26 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2002/10/23 23:33:21 grant Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -6,7 +6,7 @@ PKGREVISION=		7
 CATEGORIES+=		lang devel
 
 MAINTAINER=		jlam@netbsd.org
-HOMEPAGE=		http://language.perl.com/index.html
+HOMEPAGE=		http://www.perl.com/
 COMMENT=		Practical Extraction and Report Language
 
 CONFLICTS=		perl-5.00* perl-base-[0-9]* \
