@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 2002/05/31 13:00:27 seb Exp $
+
+--- server/main.c.orig	Mon Mar 23 19:48:03 1998
++++ server/main.c	Mon Aug  2 19:26:45 1999
+@@ -215,9 +215,11 @@
+ 	(void) setlocale(LC_CTYPE, "ja_JP.EUC");
+ #endif
+ 	opening();
++#ifndef __NetBSD__
+ 	if (setuid(geteuid())) {
+ 		fprintf(stderr, "error at setuid.\r\n"); exit(1);
+ 	}
++#endif
+ 
+ 	parse_arg(argc, argv);		
+ 	read_runcmd();			
