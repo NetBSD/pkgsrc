@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/10/24 22:11:04 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/12/11 22:35:07 jlam Exp $
 
 DISTNAME=		R-1.3.0
 CATEGORIES=		math
@@ -18,8 +18,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.R-project.org/
 COMMENT=		Statistical language for data analysis and graphics
-
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 
 USE_BUILDLINK_ONLY=	# defined
 USE_X11=		# defined
@@ -79,9 +77,6 @@ INSTALL_DIRS=		${R_LIBDIR}
 
 REPLACE_BUILDLINK=	src/scripts/R.fe
 REPLACE_BUILDLINK_SED=	-e "s|${BUILDLINK_DIR}/|${LOCALBASE}/|g"
-
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf --force
 
 # Generate the PLIST dynamically as it changes in each version only in a
 # specific subtree.  This will make maintaining this package a little easier
