@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: slpd.sh,v 1.9 2002/10/20 07:57:57 jlam Exp $
+# $NetBSD: slpd.sh,v 1.10 2004/11/27 04:41:12 jlam Exp $
 #
 # Service Location Protocol daemon
 #
@@ -15,7 +15,7 @@ fi
 name="slpd"
 rcvar=${name}
 command="@PREFIX@/sbin/${name}"
-pidfile="/var/run/${name}.pid"
+pidfile="@VARBASE@/run/${name}.pid"
 required_files="@PKG_SYSCONFDIR@/slp.conf"
 
 if [ -f /etc/rc.subr ]
