@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/05/05 00:38:07 danw Exp $
+# $NetBSD: Makefile,v 1.11 2004/11/13 22:04:52 jlam Exp $
 #
 
 DISTNAME=       bonnie++-1.03a
@@ -12,10 +12,10 @@ COMMENT=	Enhanced performance Test of Filesystem I/O
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LANGUAGES=		c c++
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS=		make
-USE_GCC_SHLIB=		YES
 REPLACE_PERL=		bon_csv2txt.in bon_csv2html.in
 
 INSTALLATION_DIRS=	bin man/man1 man/man8 sbin
