@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.332 2004/02/18 18:06:24 jlam Exp $
+# $NetBSD: Packages.txt,v 1.333 2004/04/07 22:57:16 dmcmahill Exp $
 ###########################################################################
 
 			==========================
@@ -598,6 +598,27 @@ At the end of the build, mail will be sent with the results of the build.
 Created binary pkgs will be in /usr/sandbox/usr/pkgsrc/packages (wherever
 that points/mounts to/from).
 
+ 3.2.7 Building a partial set of packages
+ ========================================
+
+In addition to building a complete set of all packages in pkgsrc, the
+pkgsrc/mk/bulk/build script may be used to build a subset of the
+packages contained in pkgsrc.  By setting defining SPECIFIC_PKGS
+in /etc/mk.conf, the variables 
+
+	SITE_SPECIFIC_PKGS
+	HOST_SPECIFIC_PKGS
+	GROUP_SPECIFIC_PKGS
+	USER_SPECIFIC_PKGS
+
+will define the set of packages which should be built.  The bulk build
+code will also include any packages which are needed as dependencies
+for the explicitly listed packages.
+
+One use is to do a bulk build with SPECIFIC_PKGS in a chroot sandbox
+periodically to have a complete set of the binary packages needed for
+your site available without the overhead of building extra packages
+that are not needed.
 
  3.3 Creating a multiple CD-ROM packages collection
  ==================================================
