@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/23 21:23:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/05/22 14:36:06 wiz Exp $
 include/security/_pam_aconf.h
 include/security/_pam_compat.h
 include/security/_pam_macros.h
@@ -11,17 +11,17 @@ include/security/pam_modules.h
 lib/libpam.a
 lib/libpam.so
 lib/libpam.so.0
-lib/libpam.so.0.77
+lib/libpam.so.${PKGVERSION}
 lib/libpam_misc.a
 lib/libpam_misc.so
 lib/libpam_misc.so.0
-lib/libpam_misc.so.0.77
+lib/libpam_misc.so.${PKGVERSION}
 lib/libpamc.a
 lib/libpamc.so
 lib/libpamc.so.0
-lib/libpamc.so.0.77
+lib/libpamc.so.${PKGVERSION}
 lib/security/pam_access.so
-lib/security/pam_cracklib.so
+${USE_LIBCRACK}lib/security/pam_cracklib.so
 lib/security/pam_debug.so
 lib/security/pam_deny.so
 lib/security/pam_env.so
@@ -31,6 +31,7 @@ lib/security/pam_ftp.so
 lib/security/pam_group.so
 lib/security/pam_issue.so
 lib/security/pam_lastlog.so
+${PAM_LIMITS}lib/security/pam_limits.so
 lib/security/pam_listfile.so
 lib/security/pam_mail.so
 lib/security/pam_mkhomedir.so
@@ -70,6 +71,7 @@ sbin/pam_tally
 sbin/unix_chkpwd
 share/examples/${PKGBASE}/access.conf
 share/examples/${PKGBASE}/group.conf
+${PAM_LIMITS}share/examples/${PKGBASE}/limits.conf
 share/examples/${PKGBASE}/pam.conf
 share/examples/${PKGBASE}/pam_env.conf
 share/examples/${PKGBASE}/time.conf
