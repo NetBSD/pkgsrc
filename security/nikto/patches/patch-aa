@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/05 17:45:24 xtraeme Exp $
+
+--- plugins/nikto_core.plugin.orig	Mon Sep 15 00:09:43 2003
++++ plugins/nikto_core.plugin	Mon Sep 15 00:10:51 2003
+@@ -859,7 +859,7 @@
+   print "+ Retrieving 'CHANGES.txt'\n";
+   (my $RES, $CONTENT) = fetch("$serverdir/CHANGES.txt","GET");
+   if (($CONTENT ne "") && ($RES eq 200)) {
+-   open(OUT,">$NIKTO{plugindir}/../docs/CHANGES.txt") || die print "+ ERROR: Unable to open '$NIKTO{plugindir}/../CHANGES.txt' for write: $@\n";
++   open(OUT,">$NIKTO{plugindir}/../docs/CHANGES.txt") || die print "+ ERROR: Unable to open '$NIKTO{plugindir}/../docs/CHANGES.txt' for write: $@\n";
+    print OUT $CONTENT;
+    close(OUT); 
+   }
