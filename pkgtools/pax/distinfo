@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:19:48 agc Exp $
+
+SHA1 (pax-19980903.tar.gz) = dbbc6672b86ec4d371cda997bf40e64aa6cab0d1
+Size (pax-19980903.tar.gz) = 107929 bytes
+SHA1 (patch-aa) = e9674773062b4a1460cbaae6a17470cae842d74d
+SHA1 (patch-ab) = bdce9379355a311753b9b18c3a711073fad7914d
