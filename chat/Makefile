@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2002/12/30 18:05:11 sommerfeld Exp $
+# $NetBSD: Makefile,v 1.63 2003/02/16 16:00:52 jmmv Exp $
 #
 
 COMMENT=	communication programs
@@ -67,6 +67,7 @@ SUBDIR+=	vicq
 SUBDIR+=	xaric
 SUBDIR+=	xchat
 SUBDIR+=	xchat-gnome
+SUBDIR+=	xchat2
 SUBDIR+=	ymessenger
 SUBDIR+=	ysm
 SUBDIR+=	zenicb
