@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 18:38:16 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/16 15:54:56 agc Exp $
 #
 
 DISTNAME=		doscmd-19960502-2
@@ -10,6 +10,8 @@ MAINTAINER=		packages@netbsd.org
 COMMENT=		MS-DOS emulator (NetBSD/i386 only)
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+BROKEN=			mmap() portability (No MAP_FIXED), and objcopy problems
 
 WRKSRC=			${WRKDIR}/doscmd
 
