@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/19 18:15:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/06/20 18:43:26 xtraeme Exp $
 bin/vlc
 bin/vlc-config
 bin/wxvlc
@@ -59,6 +59,7 @@ lib/vlc/codec/liba52_plugin.so
 lib/vlc/codec/libadpcm_plugin.so
 lib/vlc/codec/libaraw_plugin.so
 lib/vlc/codec/libcinepak_plugin.so
+lib/vlc/codec/libcmml_plugin.so
 lib/vlc/codec/libcvdsub_plugin.so
 lib/vlc/codec/libdts_plugin.so
 lib/vlc/codec/libdvbsub_plugin.so
@@ -67,7 +68,6 @@ lib/vlc/codec/liblibmpeg2_plugin.so
 lib/vlc/codec/liblpcm_plugin.so
 lib/vlc/codec/libmpeg_audio_plugin.so
 lib/vlc/codec/librawvideo_plugin.so
-lib/vlc/codec/libspeex_plugin.so
 lib/vlc/codec/libspudec_plugin.so
 lib/vlc/codec/libsubsdec_plugin.so
 lib/vlc/codec/libsvcdsub_plugin.so
@@ -76,6 +76,7 @@ lib/vlc/control/libgestures_plugin.so
 lib/vlc/control/libhotkeys_plugin.so
 lib/vlc/control/libhttp_plugin.so
 lib/vlc/control/librc_plugin.so
+lib/vlc/control/libtelnet_plugin.so
 lib/vlc/demux/liba52sys_plugin.so
 lib/vlc/demux/libaac_plugin.so
 lib/vlc/demux/libaiff_plugin.so
@@ -87,6 +88,7 @@ lib/vlc/demux/libdemuxdump_plugin.so
 lib/vlc/demux/libdemuxsub_plugin.so
 lib/vlc/demux/libdtssys_plugin.so
 lib/vlc/demux/libflac_plugin.so
+lib/vlc/demux/libh264_plugin.so
 lib/vlc/demux/libid3_plugin.so
 lib/vlc/demux/libid3tag_plugin.so
 lib/vlc/demux/libm3u_plugin.so
@@ -103,11 +105,13 @@ lib/vlc/demux/libps_plugin.so
 lib/vlc/demux/libpva_plugin.so
 lib/vlc/demux/librawdv_plugin.so
 lib/vlc/demux/libreal_plugin.so
+lib/vlc/demux/libsgimb_plugin.so
 lib/vlc/demux/libts2_plugin.so
 lib/vlc/demux/libts_dvbpsi_plugin.so
 lib/vlc/demux/libts_plugin.so
 lib/vlc/demux/libwav_plugin.so
 lib/vlc/gui/libwxwindows_plugin.so
+lib/vlc/libffmpeg.a
 lib/vlc/libi420_rgb_mmx.a
 lib/vlc/libi420_ymga_mmx.a
 lib/vlc/libi420_yuy2_mmx.a
@@ -115,10 +119,11 @@ lib/vlc/libi422_yuy2_mmx.a
 lib/vlc/libmemcpy3dn.a
 lib/vlc/libmemcpymmx.a
 lib/vlc/libmemcpymmxext.a
+lib/vlc/libmkv.a
+lib/vlc/libstream_out_transcode.a
 lib/vlc/misc/libdummy_plugin.so
 lib/vlc/misc/libexport_plugin.so
 lib/vlc/misc/libfreetype_plugin.so
-lib/vlc/misc/libhttpd_plugin.so
 lib/vlc/misc/libipv4_plugin.so
 lib/vlc/misc/libipv6_plugin.so
 lib/vlc/misc/liblogger_plugin.so
@@ -134,6 +139,7 @@ lib/vlc/mux/libmux_ps_plugin.so
 lib/vlc/mux/libmux_ts_dvbpsi_plugin.so
 lib/vlc/mux/libmux_ts_plugin.so
 lib/vlc/packetizer/libpacketizer_copy_plugin.so
+lib/vlc/packetizer/libpacketizer_h264_plugin.so
 lib/vlc/packetizer/libpacketizer_mpeg4audio_plugin.so
 lib/vlc/packetizer/libpacketizer_mpeg4video_plugin.so
 lib/vlc/packetizer/libpacketizer_mpegvideo_plugin.so

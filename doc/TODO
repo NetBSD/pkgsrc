@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1839 2004/06/20 01:25:09 xtraeme Exp $
+$NetBSD: TODO,v 1.1840 2004/06/20 18:43:26 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -400,7 +400,6 @@ Suggested package updates
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
 	o vfu-4.03
-	o vlc-0.7.2 [xtraeme]
 	o vnc-3.3.7 [http://www.realvnc.com/download.html]
 	o vttest-20030301
 	o w3m-0.5.1
