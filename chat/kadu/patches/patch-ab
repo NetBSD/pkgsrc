@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/04/28 13:55:22 adam Exp $
+
+--- modules/dsp_sound/dsp_sound.cpp.orig	2004-04-28 14:47:44.000000000 +0000
++++ modules/dsp_sound/dsp_sound.cpp
+@@ -174,7 +174,7 @@ void DirectPlayThread::run()
+ 				continue;
+ 			}
+ 			
+-			if (ioctl(fd, SNDCTL_DSP_RESET)<0)
++			if (ioctl(fd, SNDCTL_DSP_RESET, NULL)<0)
+ 			{
+ 				qWarning("ioctl: %s", strerror(errno));
+ 				close(fd);
