@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:26 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/02 08:05:06 jlam Exp $
 #
 # This Makefile fragment is included by packages that use xpm.
 #
@@ -15,29 +15,26 @@ XPM_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-USE_XPM=		# defined
+BUILDLINK_DEPENDS.xpm?=	xpm-3.4k
+CHECK_XPM=		# defined
 
-# We double-list because we're not sure if the files are in ${X11BASE}
-# or in ${LOCALBASE}.
+.include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_PREFIX.xpm-x11base=	${X11BASE}
-BUILDLINK_FILES.xpm-x11base=	include/X11/X11/xpm.h	# for OpenWindows
-BUILDLINK_FILES.xpm-x11base+=	include/X11/xpm.h
-BUILDLINK_FILES.xpm-x11base+=	lib/libXpm.*
+.if ${HAVE_BUILTIN_XPM} == "NO"
+DEPENDS+=		${BUILDLINK_DEPENDS.xpm}:../../graphics/xpm
+BUILDLINK_PREFIX.xpm=	${X11PREFIX}
+.else
+BUILDLINK_PREFIX.xpm=	${X11BASE}
+.endif
 
-BUILDLINK_TARGETS.xpm=		xpm-x11base-buildlink
+BUILDLINK_FILES.xpm=	include/X11/X11/xpm.h		# for OpenWindows
+BUILDLINK_FILES.xpm+=	include/X11/xpm.h
+BUILDLINK_FILES.xpm+=	lib/libXpm.*
 
-BUILDLINK_PREFIX.xpm-localbase=	${LOCALBASE}
-BUILDLINK_FILES.xpm-localbase=	include/X11/X11/xpm.h	# for OpenWindows
-BUILDLINK_FILES.xpm-localbase+=	include/X11/xpm.h
-BUILDLINK_FILES.xpm-localbase+=	lib/libXpm.*
-
-BUILDLINK_TARGETS.xpm+=		xpm-localbase-buildlink
-
-BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.xpm}
+BUILDLINK_TARGETS.xpm=	xpm-buildlink
+BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.xpm}
 
 pre-configure: ${BUILDLINK_TARGETS.xpm}
-xpm-x11base-buildlink: _BUILDLINK_USE
-xpm-localbase-buildlink: _BUILDLINK_USE
+xpm-buildlink: _BUILDLINK_USE
 
 .endif	# XPM_BUILDLINK_MK
