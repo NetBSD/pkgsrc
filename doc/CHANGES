@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3134 2003/08/29 16:25:57 kei Exp $
+$NetBSD: CHANGES,v 1.3135 2003/08/29 18:53:01 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3378,3 +3378,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated php4-xslt to 4.2.3nb2 [xtraeme 2003-08-29]
 	Updated ap-xslt to 1.1nb7 [xtraeme 2003-08-29]
 	Updated kterm to 6.2.0nb5 [kei 2003-08-29]
+	Added free-1.0 [hubertf 2003-08-29]
