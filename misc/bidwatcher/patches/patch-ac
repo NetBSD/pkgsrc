@@ -1,0 +1,66 @@
+$NetBSD: patch-ac,v 1.8 2003/07/16 13:52:15 tron Exp $
+
+--- helpers.cpp.orig	Thu Jul 10 05:37:25 2003
++++ helpers.cpp	Wed Jul 16 15:48:26 2003
+@@ -1337,19 +1337,21 @@
+ //  calculates the difference between ebay time and local time, returning
+ //  the value in seconds.
+ //////////////////////////////////////////////////////////////////////////////
++#define CHLEN 0x40
++#define CHBUF 0x1000
+ int calcTimeDiff ( char * buffer)
+ {  
+    struct timeval time_tt;
+    //time_t new_time_t = time(NULL);
+    gettimeofday(&time_tt, 0);
+    time_t new_time_t = time_tt.tv_sec;
+-   char chHr[9];
+-   char chMin[9];
+-   char chSec[9];
+-   char chYear[9];
+-   char chMonth[9];
+-   char chDay[9];
+-   char lineBuff[1024];
++   char chHr[CHLEN];
++   char chMin[CHLEN];
++   char chSec[CHLEN];
++   char chYear[CHLEN];
++   char chMonth[CHLEN];
++   char chDay[CHLEN];
++   char lineBuff[CHBUF];
+    char * scratch;
+ #ifdef HAVE_SSTREAM
+    std::istringstream streamBuff(buffer);
+@@ -1359,7 +1361,7 @@
+    struct tm ebay_time;
+    ebay_time.tm_isdst = -1;
+    while(streamBuff) {
+-     streamBuff.getline(lineBuff, 1024, '\n');
++     streamBuff.getline(lineBuff, CHBUF, '\n');
+      /*
+      if (strstr(lineBuff, "Look here to see what time eBay thinks it is")) {
+        scratch = strtok(lineBuff, ">");
+@@ -1379,17 +1381,17 @@
+      if (scratch) {
+        scratch = strtok(scratch, " "); 
+        if (scratch) scratch = strtok(0, " ");
+-       if (scratch) strcpy(chMonth, scratch);
++       if (scratch) strncpy(chMonth, scratch, CHLEN);
+        scratch = strtok(0, " ");
+-       if (scratch) strcpy(chDay, scratch);
++       if (scratch) strncpy(chDay, scratch, CHLEN);
+        scratch = strtok(0, " ");
+-       if (scratch) strcpy(chYear, scratch);
++       if (scratch) strncpy(chYear, scratch, CHLEN);
+        scratch = strtok(0,": ");
+-       if (scratch) strcpy(chHr, scratch);
++       if (scratch) strncpy(chHr, scratch, CHLEN);
+        scratch = strtok(0,":");
+-       if (scratch) strcpy(chMin, scratch);
++       if (scratch) strncpy(chMin, scratch, CHLEN);
+        scratch = strtok(0, " ");
+-       if (scratch) strcpy(chSec, scratch);
++       if (scratch) strncpy(chSec, scratch, CHLEN);
+        scratch = strtok(0, "<");
+        break;
+      }
