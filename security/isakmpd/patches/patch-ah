@@ -1,0 +1,24 @@
+$NetBSD: patch-ah,v 1.1 2003/09/21 08:02:23 jmc Exp $
+
+--- crypto.h.orig	2003-09-21 02:42:10.000000000 +0000
++++ crypto.h	2003-09-21 02:44:47.000000000 +0000
+@@ -49,6 +49,7 @@
+ 
+ #else
+ 
++#include <openssl/opensslv.h>
+ #include <des.h>
+ #ifdef USE_BLOWFISH
+ #include <blf.h>
+@@ -106,7 +107,11 @@
+   u_int8_t	iv2[MAXBLK];
+   u_int8_t	*riv, *liv;
+   union {
++#if OPENSSL_VERSION_NUMBER >= 0x0090702fL
++    DES_key_schedule desks[3];
++#else
+     des_key_schedule desks[3];
++#endif
+ #ifdef USE_BLOWFISH
+     blf_ctx blfks;
+ #endif
