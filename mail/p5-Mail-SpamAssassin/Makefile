@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/31 10:57:52 simonb Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/08 12:34:20 wiz Exp $
 #
 
-DISTNAME=	Mail-SpamAssassin-2.01
+DISTNAME=	Mail-SpamAssassin-2.11
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5msa
 CATEGORIES=	mail
@@ -32,7 +32,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/$d
 .endfor
 .for f in README procmailrc.example sample-nonspam.txt sample-spam.txt \
-    sql/README sql/spamassassin.sql spamd/README
+    sql/README sql/spamassassin.sql spamd/README.spamd
 	${INSTALL_DATA} ${WRKSRC}/$f ${PREFIX}/share/doc/spamassassin/$f
 .endfor
 
