@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/07/20 01:54:47 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/07/22 23:20:59 jlam Exp $
 #
 # This Makefile fragment is included by packages that use VFlib.
 #
@@ -20,7 +20,7 @@ VFLIB_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.vflib?=	ja-vflib-lib>=2.24.2
 DEPENDS+=	${BUILDLINK_DEPENDS.vflib}:../../japanese/vflib-lib
 
-EVAL_PREFIX+=			BUILDLINK_PREFIX.vflib=vflib-lib
+EVAL_PREFIX+=			BUILDLINK_PREFIX.vflib=ja-vflib-lib
 BUILDLINK_FILES.vflib=		include/VF.h
 BUILDLINK_FILES.vflib+=		lib/libVFlib2.*
 
