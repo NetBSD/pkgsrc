@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2000/01/02 22:57:25 fredb Exp $
+# $NetBSD: Makefile,v 1.20 2000/01/04 01:49:13 fredb Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
 DISTNAME=	cku196
-PKGNAME=        kermit-7.0.196.beta11
+PKGNAME=        kermit-7.0.196
 CATEGORIES=	comms
-MASTER_SITES=	ftp://kermit.columbia.edu/kermit/test/tar/
-#MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/ \
-#		ftp://ftp.th-darmstadt.de/pub/networking/kermit/
+MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.columbia.edu/kermit/
