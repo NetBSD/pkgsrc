@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2002/12/28 02:43:54 kei Exp $
+$NetBSD: patch-aa,v 1.7 2003/07/18 10:26:05 uebayasi Exp $
 
 Index: AUTHORS
 ===================================================================
@@ -6807,7 +6807,6 @@ diff -N egg-sim-old.el
 -	    (setq j (1+ j)))
 -	  (insert (format "\n")))
 -	(setq i (1+ i))))))
-\ No newline at end of file
 Index: egg-sim.el
 ===================================================================
 RCS file: /cvs/tamago/tamago/egg-sim.el,v
@@ -6894,7 +6893,6 @@ diff -N egg-simv.el
 -"Y" ",2O(B" ",2V(B" ",2[(B" ",2}(B" ",2\(B" 
 -
 -",2p(B" ",1p(B"
-\ No newline at end of file
 Index: egg-util.el
 ===================================================================
 RCS file: egg-util.el
