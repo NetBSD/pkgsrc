@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/10/29 23:14:22 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/22 07:21:54 grant Exp $
 #
 
 DISTNAME=	geda-symbols-${PKGVERSION}
@@ -18,7 +18,6 @@ DIST_SUBDIR=	geda
 PKGVERSION=	20030901
 
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
-USE_GNU_TOOLS+=	sed
+USE_GNU_TOOLS+=	make sed
 
 .include "../../mk/bsd.pkg.mk"

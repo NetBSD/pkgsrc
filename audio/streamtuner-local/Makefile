@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/03 18:49:34 reed Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/22 07:15:01 grant Exp $
 #
 
 DISTNAME=	streamtuner-local-0.2.1
@@ -13,7 +13,7 @@ COMMENT=	Streamtuner plugin providing access to your local MP3 repository
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_X11=	YES
 
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
