@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/03/07 11:31:47 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/03/07 12:52:40 tron Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -178,24 +178,24 @@ lib/libgtkxmhtml.a
 lib/libgtkxmhtml.so.1.1
 lib/libzvt.a
 lib/libzvt.so.3.2
-lib/locale/de/LC_MESSAGES/gnome-libs.mo
-lib/locale/fr/LC_MESSAGES/gnome-libs.mo
-lib/locale/nl/LC_MESSAGES/gnome-libs.mo
-lib/locale/pt/LC_MESSAGES/gnome-libs.mo
-lib/locale/ja/LC_MESSAGES/gnome-libs.mo
-lib/locale/sv/LC_MESSAGES/gnome-libs.mo
-lib/locale/pl/LC_MESSAGES/gnome-libs.mo
-lib/locale/no/LC_MESSAGES/gnome-libs.mo
-lib/locale/ko/LC_MESSAGES/gnome-libs.mo
-lib/locale/ca/LC_MESSAGES/gnome-libs.mo
-lib/locale/cs/LC_MESSAGES/gnome-libs.mo
-lib/locale/da/LC_MESSAGES/gnome-libs.mo
-lib/locale/es/LC_MESSAGES/gnome-libs.mo
-lib/locale/fi/LC_MESSAGES/gnome-libs.mo
-lib/locale/ga/LC_MESSAGES/gnome-libs.mo
-lib/locale/it/LC_MESSAGES/gnome-libs.mo
-lib/locale/ru/LC_MESSAGES/gnome-libs.mo
-lib/locale/hu/LC_MESSAGES/gnome-libs.mo
+share/locale/de/LC_MESSAGES/gnome-libs.mo
+share/locale/fr/LC_MESSAGES/gnome-libs.mo
+share/locale/nl/LC_MESSAGES/gnome-libs.mo
+share/locale/pt/LC_MESSAGES/gnome-libs.mo
+share/locale/ja/LC_MESSAGES/gnome-libs.mo
+share/locale/sv/LC_MESSAGES/gnome-libs.mo
+share/locale/pl/LC_MESSAGES/gnome-libs.mo
+share/locale/no/LC_MESSAGES/gnome-libs.mo
+share/locale/ko/LC_MESSAGES/gnome-libs.mo
+share/locale/ca/LC_MESSAGES/gnome-libs.mo
+share/locale/cs/LC_MESSAGES/gnome-libs.mo
+share/locale/da/LC_MESSAGES/gnome-libs.mo
+share/locale/es/LC_MESSAGES/gnome-libs.mo
+share/locale/fi/LC_MESSAGES/gnome-libs.mo
+share/locale/ga/LC_MESSAGES/gnome-libs.mo
+share/locale/it/LC_MESSAGES/gnome-libs.mo
+share/locale/ru/LC_MESSAGES/gnome-libs.mo
+share/locale/hu/LC_MESSAGES/gnome-libs.mo
 sbin/gnome-pty-helper
 share/aclocal/libart.m4
 share/doc/gnome-libs/adding-file-manager-new-items.txt
@@ -249,21 +249,3 @@ share/type-convert/postscript.convert
 @dirrm share/type-convert
 @exec mkdir -p @@LOCALSTATEDIR@@
 @unexec rm -rf @@LOCALSTATEDIR@@
-@dirrm lib/locale/ca/LC_MESSAGES
-@dirrm lib/locale/ca
-@dirrm lib/locale/cs/LC_MESSAGES
-@dirrm lib/locale/cs
-@dirrm lib/locale/da/LC_MESSAGES
-@dirrm lib/locale/da
-@dirrm lib/locale/es/LC_MESSAGES
-@dirrm lib/locale/es
-@dirrm lib/locale/fi/LC_MESSAGES
-@dirrm lib/locale/fi
-@dirrm lib/locale/ga/LC_MESSAGES
-@dirrm lib/locale/ga
-@dirrm lib/locale/it/LC_MESSAGES
-@dirrm lib/locale/it
-@dirrm lib/locale/ru/LC_MESSAGES
-@dirrm lib/locale/ru
-@dirrm lib/locale/hu/LC_MESSAGES
-@dirrm lib/locale/hu
