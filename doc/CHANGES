@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4693 2004/02/06 10:29:07 markd Exp $
+$NetBSD: CHANGES,v 1.4694 2004/02/06 10:38:55 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -644,3 +644,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added kde3-i18n-hi-3.2.0 [markd 2004-02-06]
 	Added kde3-i18n-mn-3.2.0 [markd 2004-02-06]
 	Added kde3-i18n-ms-3.2.0 [markd 2004-02-06]
+	Updated gimp-print-escputil to 4.2.5nb3 [tron 2004-02-06]
