@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/01/03 00:49:12 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/01/16 05:39:42 tron Exp $
 bin/gmenu
 bin/gnome-session
 bin/save-session
@@ -10,7 +10,6 @@ bin/gnome-help-browser
 bin/gnome-terminal
 bin/panel
 bin/gen_util_applet
-bin/batmon_applet
 bin/asclock_applet
 bin/netload_applet
 bin/dialer_applet
@@ -31,7 +30,6 @@ bin/multiload_applet
 etc/CORBA/servers/help-browser.gnorba
 etc/CORBA/servers/panel.gnorba
 etc/CORBA/servers/gen_util.gnorba
-etc/CORBA/servers/batmon_applet.gnorba
 etc/CORBA/servers/asclock_applet.gnorba
 etc/CORBA/servers/fish_applet.gnorba
 etc/CORBA/servers/dialer_applet.gnorba
@@ -50,6 +48,7 @@ etc/CORBA/servers/netload_applet.gnorba
 etc/CORBA/servers/modemlights_applet.gnorba
 etc/sound/events/panel.soundlist
 include/applet-widget.h
+include/gnome-panel.h
 include/panel-types.h
 lib/libfish_applet.so.0.0
 lib/libfish_applet.a
@@ -80,6 +79,7 @@ lib/locale/es_SV/LC_MESSAGES/gnome-core.cat
 lib/locale/ru/LC_MESSAGES/gnome-core.cat
 lib/locale/pl/LC_MESSAGES/gnome-core.cat
 lib/locale/hu/LC_MESSAGES/gnome-core.cat
+lib/locale/nl/LC_MESSAGES/gnome-core.cat
 share/applets/Monitors/cpumemusage_applet.desktop
 share/applets/Monitors/diskusage_applet.desktop
 share/applets/Monitors/cpuload_applet.desktop
@@ -91,7 +91,6 @@ share/applets/Amusements/.directory
 share/applets/Amusements/fish_applet.desktop
 share/applets/Amusements/fifteen_applet.desktop
 share/applets/Monitors/.directory
-share/applets/Monitors/batmon_applet.desktop
 share/applets/Monitors/battery_applet.desktop
 share/applets/Multimedia/.directory
 share/applets/Network/.directory
@@ -134,12 +133,18 @@ share/apps/Utilities/gnome-terminal.desktop
 share/apps/.order
 share/apps/gnome-help.desktop
 share/default.session
+share/gnome/help/help-browser/C/gnome-logo-large.png
 share/gnome/help/help-browser/C/help-browser.html
 share/gnome/help/help-browser/C/topic.dat
 share/gnome/help/help-browser/C/default-page.html
-share/gnome/help/help-browser/C/bg.png
-share/gnome/help/help-browser/C/gnome-logo2.png
 share/gnome/help/help-browser/C/index.html
+share/gnome/help/help-browser/es/help-browser.html
+share/gnome/help/help-browser/es/topic.dat
+share/gnome/help/help-browser/es/default-page.html
+share/gnome/help/help-browser/es/index.html
+share/gnome/help/help-browser/fr/topic.dat
+share/gnome/help/help-browser/fr/default-page.html
+share/gnome/help/help-browser/fr/index.html
 share/gnome/help/gnome-intro/C/pix/terminal.gif
 share/gnome/help/gnome-intro/C/pix/gedit-2files.gif
 share/gnome/help/gnome-intro/C/pix/ghex-2files.gif
@@ -188,6 +193,25 @@ share/gnome/help/gnome-intro/C/c93127.html
 share/gnome/help/gnome-intro/C/c93412.html
 share/gnome/help/gnome-intro/C/c93175.html
 share/gnome/help/gnome-intro/C/docbook.css
+share/gnome/help/mini-commander/C/change-log.html
+share/gnome/help/mini-commander/C/faq.html
+share/gnome/help/mini-commander/C/legal-notice.html
+share/gnome/help/mini-commander/C/features.html
+share/gnome/help/mini-commander/C/macros.html
+share/gnome/help/mini-commander/C/clock.html
+share/gnome/help/mini-commander/C/feedback.html
+share/gnome/help/mini-commander/C/screenshot01.gif
+share/gnome/help/mini-commander/C/command-completion.html
+share/gnome/help/mini-commander/C/gpl2.html
+share/gnome/help/mini-commander/C/screenshots.html
+share/gnome/help/mini-commander/C/command-history.html
+share/gnome/help/mini-commander/C/history.html
+share/gnome/help/mini-commander/C/todo.html
+share/gnome/help/mini-commander/C/customization.html
+share/gnome/help/mini-commander/C/index.html
+share/gnome/help/mini-commander/C/docbook.css
+share/gnome/help/mini-commander/C/introduction.html
+share/gnome/help/mini-commander/C/download.html
 share/panelrc
 share/pixmaps/emacs.png
 share/pixmaps/gnome-aorta.png
@@ -225,6 +249,8 @@ share/pixmaps/gnome-networktool.png
 share/pixmaps/gnome-note.png
 share/pixmaps/gnome-qeye.png
 share/pixmaps/gnome-talk.png
+share/pixmaps/tiles/tile-blue-up.png
+share/pixmaps/tiles/tile-blue-down.png
 share/pixmaps/tiles/tile-normal-up.png
 share/pixmaps/tiles/tile-normal-down.png
 share/pixmaps/tiles/tile-purple-up.png
@@ -239,7 +265,7 @@ share/pixmaps/gnome-term.png
 share/pixmaps/gnome-tigert.png
 share/pixmaps/gnome-unknown.png
 share/pixmaps/gnome-word.png
-share/pixmaps/kterm.png
+share/pixmaps/kterm.xpm
 share/pixmaps/launcher-program.png
 share/pixmaps/monitor.png
 share/pixmaps/netscape.png
@@ -256,8 +282,6 @@ share/pixmaps/panel-menu-main.png
 share/pixmaps/mailcheck/email.png
 share/pixmaps/mailcheck/email-e.png
 share/pixmaps/mailcheck/tux-anim.png
-share/pixmaps/batmon-ac.png
-share/pixmaps/batmon-bat.png
 share/pixmaps/fish/fishanim.png
 share/pixmaps/gnome-color-browser.png
 share/pixmaps/tiles/tile-coral-up.png
@@ -276,6 +300,10 @@ share/idl/help-browser.idl
 @dirrm share/pixmaps/tiles
 @dirrm share/pixmaps/mailcheck
 @dirrm share/pixmaps/fish
+@dirrm share/gnome/help/mini-commander/C
+@dirrm share/gnome/help/mini-commander
+@dirrm share/gnome/help/help-browser/fr
+@dirrm share/gnome/help/help-browser/es
 @dirrm share/gnome/help/help-browser/C
 @dirrm share/gnome/help/help-browser
 @dirrm share/gnome/help/gnome-intro/C/pix
@@ -299,5 +327,19 @@ share/idl/help-browser.idl
 @dirrm share/applets/Network
 @dirrm share/applets/Utility
 @dirrm share/applets
+@dirrm lib/locale/es_DO/LC_MESSAGES
+@dirrm lib/locale/es_DO
+@dirrm lib/locale/es_GT/LC_MESSAGES
+@dirrm lib/locale/es_GT
+@dirrm lib/locale/es_HN/LC_MESSAGES
+@dirrm lib/locale/es_HN
+@dirrm lib/locale/es_MX/LC_MESSAGES
+@dirrm lib/locale/es_MX
+@dirrm lib/locale/es_PA/LC_MESSAGES
+@dirrm lib/locale/es_PA
+@dirrm lib/locale/es_PE/LC_MESSAGES
+@dirrm lib/locale/es_PE
+@dirrm lib/locale/es_SV/LC_MESSAGES
+@dirrm lib/locale/es_SV
 @dirrm etc/CORBA/servers
 @dirrm etc/CORBA
