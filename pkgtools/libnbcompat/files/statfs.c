@@ -1,4 +1,4 @@
-/*	$NetBSD: statfs.c,v 1.1 2003/09/01 15:31:21 jlam Exp $	*/
+/*	$NetBSD: statfs.c,v 1.2 2003/09/02 02:05:22 jlam Exp $	*/
 /*-
  * Copyright (c) 1998 The NetBSD Foundation, Inc.
  * All rights reserved.
@@ -53,6 +53,10 @@
 
 #if HAVE_SYS_STATVFS_H
 #include <sys/statvfs.h>
+#endif
+
+#if HAVE_SYS_VFS_H
+#include <sys/vfs.h>
 #endif
 
 #define	MFSNAMELEN	16	/* length of fs type name, including nul */
