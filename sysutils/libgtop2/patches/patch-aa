@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/02 12:09:16 jmmv Exp $
+
+--- configure.orig	2003-12-13 08:32:17.000000000 +0100
++++ configure	2003-12-13 08:33:16.000000000 +0100
+@@ -19717,13 +19717,13 @@
+ 	  libgtop_sysdeps_dir=freebsd
+ 	  libgtop_use_machine_h=yes
+ 	  libgtop_need_server=yes
+-	  libgtop_postinstall='chgrp kmem $(bindir)/libgtop_server && chmod 2755 $(bindir)/libgtop_server'
++	  libgtop_postinstall='chgrp kmem $(bindir)/libgtop_server2 && chmod 2755 $(bindir)/libgtop_server'
+ 	  ;;
+ 	solaris*)
+ 	  libgtop_sysdeps_dir=solaris
+ 	  libgtop_use_machine_h=yes
+ 	  libgtop_need_server=yes
+-	  libgtop_postinstall='chgrp sys $(bindir)/libgtop_server && chmod 2755 $(bindir)/libgtop_server'
++	  libgtop_postinstall='chgrp sys $(bindir)/libgtop_server2 && chmod 2755 $(bindir)/libgtop_server'
+ 	  ;;
+         aix*)
+ 	  libgtop_sysdeps_dir=aix
