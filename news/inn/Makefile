@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/07/03 13:44:53 veego Exp $
+# $NetBSD: Makefile,v 1.18 2000/08/17 14:00:27 wiz Exp $
 
 DISTNAME=		inn-2.2.2
 CATEGORIES=		news
@@ -14,7 +14,7 @@ CONFLICTS+=		nntpclnt-*
 INN_DATA_DIR?=		/var/news
 
 USE_PERL5=		yes
-USE_PKGLIBTOOL=		yes
+USE_LIBTOOL=		yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}/inn \
 			--mandir=${PREFIX}/man \
@@ -25,7 +25,6 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}/inn \
 			--with-run-dir=${INN_DATA_DIR}/run \
 			--with-spool-dir=${INN_DATA_DIR}/spool
 CONFIGURE_ENV+=		_PATH_PERL=${LOCALBASE}/bin/perl
-
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -49,6 +48,14 @@ post-build:
 	       -e 's#@@PREFIX@@#${PREFIX}#g' \
 	        ${PKGDIR}/${FILE} >${WRKDIR}/${FILE}
 .endfor
+	for DIR in backends expire frontends innd innfeed lib nnrpd	\
+		storage; do \
+		${SED} -e 's#-b .OLD##' -e 's#-G#-g#' -e 's#-O#-o#'	\
+			${WRKSRC}/$$DIR/Makefile			\
+			> ${WRKSRC}/$$DIR/Makefile.patch;		\
+		${MV} ${WRKSRC}/$$DIR/Makefile.patch			\
+			${WRKSRC}/$$DIR/Makefile;			\
+	done
 
 pre-install:
 	${MKDIR} ${INN_DATA_DIR} ${PREFIX}/etc/nntp ${PREFIX}/inn
