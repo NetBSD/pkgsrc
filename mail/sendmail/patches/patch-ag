@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.6 2003/09/15 11:47:28 markd Exp $
+
+--- include/sm/conf.h.orig	2003-09-15 22:16:32.000000000 +1200
++++ include/sm/conf.h
+@@ -890,6 +890,9 @@ extern unsigned int sleepX __P((unsigned
+ #  if defined(__NetBSD__) && ((__NetBSD_Version__ > 102070000) || (NetBSD1_2 > 8) || defined(NetBSD1_4) || defined(NetBSD1_3))
+ #   define HASURANDOMDEV	1	/* has /dev/urandom(4) */
+ #  endif /* defined(__NetBSD__) && ((__NetBSD_Version__ > 102070000) || (NetBSD1_2 > 8) || defined(NetBSD1_4) || defined(NetBSD1_3)) */
++#  if defined(__NetBSD__)
++#   define SMRSH_CMDDIR		"/usr/libexec/sm.bin"
++#  endif /* defined(__NetBSD__) */
+ #  if defined(__FreeBSD__)
+ #   define HASSETLOGIN	1	/* has setlogin(2) */
+ #   if __FreeBSD_version >= 227001
