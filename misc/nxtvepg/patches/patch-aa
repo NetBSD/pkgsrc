@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2001/08/26 14:15:32 magick Exp $
+$NetBSD: patch-aa,v 1.6 2001/09/09 13:00:14 magick Exp $
 
---- Makefile.orig	Sat Aug 25 15:22:17 2001
+--- Makefile.orig	Fri Sep  7 22:31:54 2001
 +++ Makefile
-@@ -33,36 +33,41 @@
+@@ -33,36 +33,42 @@
  else
  
  ROOT    =
@@ -31,8 +31,8 @@ $NetBSD: patch-aa,v 1.5 2001/08/26 14:15:32 magick Exp $
  # path to Tcl/Tk script library (Tk is usually in X11/lib/tk#.#)
 -DEFS   += -DTK_LIBRARY_PATH=\"/usr/lib/tk8.3\"
 -DEFS   += -DTCL_LIBRARY_PATH=\"/usr/lib/tcl8.3\"
-+-DEFS   += -DTK_LIBRARY_PATH=\"/usr/lib/tk8.3\"
-+-DEFS   += -DTCL_LIBRARY_PATH=\"/usr/lib/tcl8.3\"
++#DEFS   += -DTK_LIBRARY_PATH=\"/usr/lib/tk8.3\"
++#DEFS   += -DTCL_LIBRARY_PATH=\"/usr/lib/tcl8.3\"
 +DEFS   += -DTK_LIBRARY_PATH=\"$(LOCALBASE)/lib/tk8.3\"
 +DEFS   += -DTCL_LIBRARY_PATH=\"$(LOCALBASE)/lib/tcl8.3\"
  
@@ -41,6 +41,7 @@ $NetBSD: patch-aa,v 1.5 2001/08/26 14:15:32 magick Exp $
 -DEFS   += -DEPG_DB_DIR=\"$(DB_DIR)\"
 +#DB_DIR  = /usr/tmp/nxtvdb
 +DB_DIR  = _PATH_TMP\"nxtvdb\"
++#DEFS   += -DEPG_DB_DIR=\"$(DB_DIR)\"
 +DEFS   += -DEPG_DB_DIR=$(DB_DIR)
  INST_DB_DIR = $(ROOT)$(DB_DIR)
  
@@ -48,13 +49,19 @@ $NetBSD: patch-aa,v 1.5 2001/08/26 14:15:32 magick Exp $
  #          -Werror -Wstrict-prototypes -Wmissing-prototypes
  WARN    = -Wall
  CC      = gcc
--CFLAGS  = -pipe $(WARN) $(INCS) $(DEFS) -O2
+-CFLAGS  = -pipe $(WARN) $(INCS) $(DEFS) -O3
 +CFLAGS  = -pipe $(WARN) $(INCS) $(DEFS)
  
  # ----- don't change anything below ------------------------------------------
  
-@@ -91,7 +96,7 @@
- 	chmod 0777 $(INST_DB_DIR)
+@@ -87,11 +93,11 @@
+ install: nxtvepg nxtvepg.1
+ 	test -d $(bindir) || mkdirhier $(bindir)
+ 	test -d $(mandir) || mkdirhier $(mandir)
+-	test -d $(INST_DB_DIR) || mkdirhier $(INST_DB_DIR)
+-	chmod 0777 $(INST_DB_DIR)
++#	test -d $(INST_DB_DIR) || mkdirhier $(INST_DB_DIR)
++#	chmod 0777 $(INST_DB_DIR)
  	install -c -m 0755 nxtvepg     $(bindir)
  	install -c -m 0644 nxtvepg.1   $(mandir)
 -	rm -f $(mandir)/nxtvepg.1x

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2001/08/26 14:15:32 magick Exp $
+# $NetBSD: Makefile,v 1.10 2001/09/09 13:00:14 magick Exp $
 
-DISTNAME=	nxtvepg-0.6.0
+DISTNAME=	nxtvepg-0.6.2
 CATEGORIES=	misc
 MASTER_SITES=	http://www.nefkom.net/tomzo/prj/nxtvepg/src/
 
@@ -14,7 +14,7 @@ ONLY_FOR_PLATFORM=      NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
 USE_PERL5=	yes
 USE_GMAKE=	yes
 USE_X11=	yes
-
+USE_BUILDLINK_ONLY= yes
 pre-configure:
 	cd ${WRKSRC};							\
 	${MV} -f pod2help.pl pod2help.pl.orig;				\
