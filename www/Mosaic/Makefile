@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/01/20 12:27:57 agc Exp $
+# $NetBSD: Makefile,v 1.40 2004/05/03 23:30:00 wiz Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -17,7 +17,7 @@ LICENSE=		mosaic-license
 NOT_FOR_PLATFORM=	*-*-alpha	#LP64 problems
 
 WRKSRC=			${WRKDIR}/Mosaic-src
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11BASE=		YES
 USE_MOTIF12=		YES
 
@@ -26,7 +26,9 @@ CONFIGURE_ARGS+=	--with-jpegdir=${BUILDLINK_PREFIX.jpeg}
 CONFIGURE_ARGS+=	--with-pngdir=${BUILDLINK_PREFIX.png}
 CONFIGURE_ARGS+=	--with-zdir=${BUILDLINK_PREFIX.zlib}
 
-CPPFLAGS+=		-Dunix
+CPPFLAGS+=		-Dunix -I${LOCALBASE}/LessTif/Motif1.2/include
+LDFLAGS+=		-L${LOCALBASE}/LessTif/Motif1.2/lib
+LDFLAGS+=		-Wl,-R${LOCALBASE}/LessTif/Motif1.2/lib
 
 post-configure:
 	@${ECHO} '' >>${WRKSRC}/config.h
@@ -39,9 +41,9 @@ do-install:
 		${PREFIX}/lib/X11/app-defaults/Mosaic
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mosaic
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
-.include "../../mk/motif.buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
+.include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
