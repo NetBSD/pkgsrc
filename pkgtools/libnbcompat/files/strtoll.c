@@ -1,4 +1,4 @@
-/*	$NetBSD: strtoll.c,v 1.6 2004/08/23 03:49:05 jlam Exp $	*/
+/*	$NetBSD: strtoll.c,v 1.7 2004/08/31 17:55:17 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -39,14 +39,16 @@
 #if 0
 static char sccsid[] = "from: @(#)strtoq.c	8.1 (Berkeley) 6/4/93";
 #else
-__RCSID("$NetBSD: strtoll.c,v 1.6 2004/08/23 03:49:05 jlam Exp $");
+__RCSID("$NetBSD: strtoll.c,v 1.7 2004/08/31 17:55:17 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
-#if 0
+#ifdef _LIBC
+#undef _LIBC
+#endif
+
 #ifdef _LIBC
 #include "namespace.h"
-#endif
 #endif
 
 #include <nbcompat/assert.h>
@@ -57,11 +59,9 @@ __RCSID("$NetBSD: strtoll.c,v 1.6 2004/08/23 03:49:05 jlam Exp $");
 #include <nbcompat/limits.h>
 #include <nbcompat/stdlib.h>
 
-#if 0
 #ifdef _LIBC
 #ifdef __weak_alias
 __weak_alias(strtoll, _strtoll)
-#endif
 #endif
 #endif
 
@@ -74,7 +74,7 @@ __weak_alias(strtoll, _strtoll)
  */
 /* LONGLONG */
 long long int
-#if defined(_LIBC) && 0
+#ifdef _LIBC
 _strtoll(nptr, endptr, base)
 #else
 strtoll(nptr, endptr, base)
