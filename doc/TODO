@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.565 2003/05/19 12:58:55 wiz Exp $
+$NetBSD: TODO,v 1.566 2003/05/19 23:18:13 grant Exp $
 
 Suggested new packages
 ======================
@@ -162,6 +162,7 @@ Suggested package updates
 	o joe-2.9.8
 	o jove-4.16.0.58 [pkg/19924]
 	o jove-4.16.0.61
+	o kde-3.1.2
 	o lcms-1.0.9
 	o leafnode-1.9.40
 	o lesstif-0.93.41
