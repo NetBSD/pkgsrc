@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2004/10/11 20:47:12 tv Exp $
+# $NetBSD: Makefile,v 1.119 2004/11/09 05:49:11 minskim Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -6,6 +6,7 @@ COMMENT=	Emulators for other operating systems
 SUBDIR+=	BasiliskII
 SUBDIR+=	Cygne-SDL
 SUBDIR+=	NeoPop-SDL
+SUBDIR+=	aliados
 SUBDIR+=	aranym
 SUBDIR+=	arcem
 SUBDIR+=	arnold
