@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2002/10/05 21:11:03 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.16 2002/10/16 04:30:53 kent Exp $
 
 DISTNAME=		gcc-2.95.3
 GCC_VERSION=		2.95.3
-PKGNAME=		gcc-ssp-2.95.3.5
+PKGNAME=		gcc-ssp-2.95.3.12
 PKGVERSION=		${GCC_VERSION}
 PKGREVISION=
 PKGBASENAME=		gcc-ssp
@@ -16,20 +16,19 @@ COMMENT=		GNU Compiler Collection with Stack-smashing protection
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		gcc-2.95.3-diff-2002-08-29.gz
 
-SSP_PATCH=		protector-2.95.3-5.tar.gz
+SSP_PATCH=		protector-2.95.3-12.tar.gz
 DISTFILES+=		${DISTNAME}.tar.gz ${SSP_PATCH}
-SITES_protector-2.95.3-5.tar.gz=	http://www.trl.ibm.com/projects/security/ssp/gcc2_95_3/
+SITES_protector-2.95.3-12.tar.gz=	http://www.trl.ibm.com/projects/security/ssp/gcc2_95_3/
 PATCHDIR=		../gcc/patches
 GCC_FILESDIR=		${FILESDIR}/../../gcc/files
 
-# Please let me know what platforms this package works or doesn't work on.
 #ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc
 #
 # Build error for NetBSD/alpha
-NOT_FOR_PLATFORM=	NetBSD-*-alpha \
-			NetBSD-*-powerpc NetBSD-*-macppc \
-			NetBSD-*-prep NetBSD-*-bebox NetBSD-*-ofppc \
-			NetBSD-*-amigappc NetBSD-*-sandpoint
+#NOT_FOR_PLATFORM=	NetBSD-*-alpha \
+#			NetBSD-*-powerpc NetBSD-*-macppc \
+#			NetBSD-*-prep NetBSD-*-bebox NetBSD-*-ofppc \
+#			NetBSD-*-amigappc NetBSD-*-sandpoint
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
