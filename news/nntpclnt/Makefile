@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/07/14 10:56:16 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1999/07/29 22:37:35 tron Exp $
 #
 
 DISTNAME=	nntpclnt-1.6.1
@@ -6,6 +6,8 @@ CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.uu.net/networking/news/nntp/
 
 MAINTAINER=	tv@netbsd.org
+
+CONFLICTS+=	inn-*
 
 ALL_TARGET=	inews
 
