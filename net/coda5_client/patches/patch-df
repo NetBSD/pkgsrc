@@ -1,0 +1,90 @@
+$NetBSD: patch-df,v 1.1 1999/04/28 23:57:04 rvb Exp $
+
+diff -u /usr/pkgsrc/net/coda-5.2.2/coda-src/venus/comm.cc ./coda-src/venus/comm.cc
+--- /usr/pkgsrc/net/coda-5.2.2/coda-src/venus/comm.cc	Mon Apr 19 20:02:53 1999
++++ ./coda-src/venus/comm.cc	Wed Apr 28 13:01:26 1999
+@@ -172,13 +172,6 @@
+     if (gethostname(myHostName, MAXHOSTNAMELEN) < 0)
+ 	CHOKE("CommInit: gethostname failed");
+ 
+-    /* Hostid is needed for storeid generation. */
+-#ifdef DJGPP
+-    myHostId = __djgpp_get_my_host(); /* this needs MYHOST in the cwd */
+-#else
+-    myHostId = gethostid();
+-#endif
+-
+     /* Initialize Connections. */
+     connent::conntab = new olist;
+ 
+@@ -1074,6 +1067,7 @@
+     probeme = 0;
+     EventCounter = 0;
+     userbw = 0;
++    isweak = 0;
+     bw     = INIT_BW;
+     bwvar  = 0;
+     timerclear(&lastobs);
+@@ -1353,6 +1347,7 @@
+ long srvent::GetBandwidth(unsigned long *Bandwidth) {
+     long rc = 0;
+     unsigned long oldbw = bw;
++    unsigned long bwmin, bwmax;
+ 
+     LOG(1, ("srvent::GetBandwidth (%s) lastobs %ld.%06ld\n", 
+ 	      name, lastobs.tv_sec, lastobs.tv_usec));
+@@ -1371,9 +1366,9 @@
+     }
+ 
+     /* retrieve the bandwidth information from RPC2 */
+-    if ((rc = RPC2_GetBandwidth(connid, &bw, &bwvar)) != RPC2_SUCCESS)
++    if ((rc = RPC2_GetBandwidth(connid, &bwmin, &bw, &bwmax)) != RPC2_SUCCESS)
+ 	return(rc);
+-    
++
+     LOG(1, ("srvent:GetBandWidth: --> new BW %d bytes/sec\n", bw));
+ 
+     /* update last observation time */
+@@ -1383,20 +1378,22 @@
+      * Signal if we've crossed the weakly-connected threshold. Note
+      * that the connection is considered strong until proven otherwise.
+      */
+-    if (oldbw > WCThresh && bw <= WCThresh) {
++    if (!isweak && bwmax < WCThresh) {
++	isweak = 1;
+ 	MarinerLog("connection::weak %s\n", name);
+ 	VSGDB->WeakEvent(host);
+         NotifyUsersOfServerWeakEvent(name);
+     }
+-    else if (oldbw <= WCThresh && bw > WCThresh) {
++    else if (isweak && bwmin > WCThresh) {
++	isweak = 0;
+ 	MarinerLog("connection::strong %s\n", name);
+ 	VSGDB->StrongEvent(host);
+         NotifyUsersOfServerStrongEvent(name);
+     }
+ 	
+     *Bandwidth = bw;
++    MarinerLog("connection::bandwidth %s %d %d %d\n", name,bwmin,bw,bwmax);
+     if (bw != oldbw) {
+-	MarinerLog("connection::bandwidth %s %d\n", name, bw);
+         NotifyUsersOfServerBandwidthEvent(name,*Bandwidth);
+     }
+     LOG(1, ("srvent::GetBandwidth (%s) returns %d bytes/sec\n",
+@@ -1430,12 +1427,14 @@
+      */
+     bw    = userbw ? b : INIT_BW;
+     bwvar = 0;
+-    if (oldbw > WCThresh && bw <= WCThresh) {
++    if (!isweak && bw <= WCThresh) {
++	isweak = 1;
+ 	MarinerLog("connection::weak %s\n", name);
+ 	VSGDB->WeakEvent(host);
+         NotifyUsersOfServerWeakEvent(name);
+     }
+-    else if (oldbw <= WCThresh && bw > WCThresh) {
++    else if (isweak && bw > WCThresh) {
++	isweak = 0;
+ 	MarinerLog("connection::strong %s\n", name);
+ 	VSGDB->StrongEvent(host);
+         NotifyUsersOfServerStrongEvent(name);
