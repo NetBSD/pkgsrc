@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/01/13 22:14:53 jwise Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/01/14 01:21:04 jwise Exp $
 tomcat/lib/ant.jar
 tomcat/lib/xml.jar
 tomcat/lib/servlet.jar
@@ -305,7 +305,7 @@ tomcat/FAQ
 tomcat/webserver.jar
 tomcat/Tomcat+Apache-HOWTO
 @unexec rm -rf %D/tomcat/work
-@unexec rm -rf %D/tomcat/work
+@unexec rm -rf %D/tomcat/serverlog.txt
 @dirrm tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use
 @dirrm tomcat/webpages/docs/api/javax/servlet/jsp/tagext
 @dirrm tomcat/webpages/docs/api/javax/servlet/jsp/class-use
