@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/05 21:12:35 wiz Exp $
+
+SHA1 (libvisual-bmp-0.1.0.tar.gz) = aeaeb0ed431bdc0255067bad016df33a5d72e647
+Size (libvisual-bmp-0.1.0.tar.gz) = 368244 bytes
+SHA1 (patch-aa) = 4b0f49c1d864364d1c2f6730444d8685f718cef7
