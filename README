@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.7 1998/08/21 19:11:10 perry Exp $
+$NetBSD: README,v 1.8 1998/09/01 11:03:23 agc Exp $
 
 Welcome to the NetBSD Packages Collection
 =========================================
@@ -13,7 +13,7 @@ NetBSD, and build it.  Any prerequisite software will also be built
 and installed for you.  Installation and de-installation of software
 is managed by the packaging utilities.
 
-The packages collection is made weekly into a tar_file: 
+The packages collection is made into a tar_file every week: 
 
 	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-current/tar_files/pkgsrc.tar.gz
 
@@ -40,9 +40,10 @@ type "pkg_info".
 clean-depends" will clean up any working directories for other
 packages that are built in the process of making your package.
 
-+ To find out what variables exists to customize some behaviour of
-pkgsrc (e.g. where it installs to) have a look at
-pkgsrc/mk/mk.conf.example. You can set those in /etc/mk.conf.
++ You can set variables to customise the behaviour (where packages are
+installed, various options for individual packages etc), by setting
+variables in /etc/mk.conf.  The pkgsrc/mk/mk.conf.example file
+provides some examples for customisation.
 
 The best way to find out what packages are in the collection is to
 move to the top-level pkgsrc directory (this will usually be
@@ -51,13 +52,13 @@ README.html in the top-level pkgsrc directory, and also in all
 category and package directories.  You can then see what packages are
 available, along with a short (one-line) comment about the function of
 the package, and a pointer to a fuller description, by using a browser
-like lynx (see pkgsrc/www/lynx) or something like Mozilla
-(pkgsrc/www/mozilla), or Communicator. This is also available online
-as ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/README.html.
+like lynx (see pkgsrc/www/lynx) or Mozilla (pkgsrc/www/mozilla), or
+Communicator.  This is also available online as
+ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/README.html.
 
 Another way to find out what packages are in the collection is to
 move to the top-level pkgsrc directory and type "make index". This
-will create pksrc/INDEX which can be watched via "make print-index | more".
+will create pksrc/INDEX which can be viewed via "make print-index | more".
 You can also search for particular packages or keywords via
 "make search key=<somekeyword>".
 
