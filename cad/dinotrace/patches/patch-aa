@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/03/14 19:52:48 dmcmahill Exp $
+
+LDFLAGS is defined correctly and not used, LINKFLAGS isn't defined.
+
+--- src/Makefile.in.orig	Tue Jan 25 16:38:29 2000
++++ src/Makefile.in	Tue Mar  7 20:54:10 2000
+@@ -92,5 +92,5 @@
+ 
+ ../dinotrace: $(OBJS) Makefile
+-	$(LINK) $(LINKFLAGS) -o ../dinotrace $(LINKOPT) $(OBJS) $(LIBS)
++	$(LINK) $(LDFLAGS) -o ../dinotrace $(LINKOPT) $(OBJS) $(LIBS)
+ 
+ #### Derrived files
