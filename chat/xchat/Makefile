@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/07/31 09:48:53 tron Exp $
+# $NetBSD: Makefile,v 1.8 2001/08/12 08:26:56 tron Exp $
 
 DISTNAME=	xchat-1.8.2
 CATEGORIES=	chat x11 gnome
@@ -24,7 +24,7 @@ MAKE_ENV+=	PKGLOCALEDIR="${PKGLOCALEDIR}"
 pre-configure:
 	@cd ${WRKSRC} && \
 	${RM} -f po/zh_TW.Big5.po && \
-	${TOUCH} aclocal.m4 stamp-h.in && \
+	${TOUCH} aclocal.m4 stamp-h.in config.status && \
 	${FIND} . -name Makefile.in | ${XARGS} ${TOUCH}
 
 post-install:
