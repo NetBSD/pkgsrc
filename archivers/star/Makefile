@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/21 16:24:41 martti Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/22 07:18:44 grant Exp $
 #
 
 DISTNAME=	star-1.4.3
@@ -9,7 +9,7 @@ MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/star.html
 COMMENT=	The fastest tar like archiver for UNIX
 
-USE_GMAKE=	# defined
+USE_GNU_TOOLS+=	make
 MAKE_FLAGS+=	INS_BASE=${PREFIX}
 
 pre-build:
