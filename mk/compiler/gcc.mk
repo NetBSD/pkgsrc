@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.25 2004/02/04 00:11:07 jlam Exp $
+# $NetBSD: gcc.mk,v 1.26 2004/02/04 00:27:24 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -37,6 +37,7 @@ _GCC_VERSION!=	${_CC} -dumpversion
 _GCC_VERSION=	0
 .  endif
 .endif
+_GCC_PKG=	gcc-${_GCC_VERSION}
 
 .if !empty(_CC:M${LOCALBASE}/*)
 _IS_BUILTIN_GCC=	NO
@@ -169,7 +170,6 @@ _USE_PKGSRC_GCC=	NO
 _USE_PKGSRC_GCC=	YES
 .  else
 _GCC_TEST_DEPENDS=	gcc>=${_GCC_REQD}
-_GCC_PKG=		gcc-${_GCC_VERSION}
 _USE_PKGSRC_GCC!=	\
 	if ${PKG_ADMIN} pmatch '${_GCC_TEST_DEPENDS}' ${_GCC_PKG}; then	\
 		${ECHO} "NO";						\
