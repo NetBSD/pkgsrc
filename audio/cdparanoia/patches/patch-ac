@@ -1,8 +1,33 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
+$NetBSD: patch-ac,v 1.2 2000/10/06 06:40:35 jlam Exp $
 
---- configure.orig	Mon Aug 16 07:29:42 1999
-+++ configure	Mon Jan 17 23:05:54 2000
-@@ -1272,6 +1272,62 @@
+--- configure.orig	Sun Aug 15 18:29:42 1999
++++ configure
+@@ -835,6 +835,12 @@
+ 	i?86-*-linux*)
+ 		DEBUG="-g -Wall -fsigned-char"
+ 		OPT="-O20 -ffast-math -fsigned-char -finline-functions";;
++	i?86-*-netbsd*)
++		DEBUG="-g -Wall -fsigned-char"
++		OPT="-O2 -ffast-math -fsigned-char -finline-functions";; 
++	*-netbsd*)
++		DEBUG="-g -Wall"
++		OPT="-O";;
+ 	*)
+ 		DEBUG="-g -Wall -fsigned-char"
+ 		OPT="-O20 -fsigned-char";;
+@@ -1007,7 +1013,10 @@
+ fi
+ 
+ 
+-CFLAGS=""
++# Uncomment the following if you don't want to honor CFLAGS passed in from
++# the environment.
++#
++# CFLAGS=""
+ 
+ TYPESIZES="" 
+ 
+@@ -1272,6 +1281,62 @@
  done
  
  
@@ -65,7 +90,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/01/19 08:03:00 itohy Exp $
  echo $ac_n "checking whether ${MAKE-make} sets \${MAKE}""... $ac_c" 1>&6
  echo "configure:1277: checking whether ${MAKE-make} sets \${MAKE}" >&5
  set dummy ${MAKE-make}; ac_make=`echo "$2" | sed 'y%./+-%__p_%'`
-@@ -1537,6 +1593,7 @@
+@@ -1537,6 +1602,7 @@
  s%@SET_MAKE@%$SET_MAKE%g
  s%@SBPCD_H@%$SBPCD_H%g
  s%@UCDROM_H@%$UCDROM_H%g
