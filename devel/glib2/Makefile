@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/11/15 16:31:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2002/11/30 14:28:07 grant Exp $
 #
 
 DISTNAME=		glib-2.0.7
@@ -25,9 +25,9 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/gmodule-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gobject-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gthread-2.0.pc.in
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		# defined
+USE_PKGLOCALEDIR=	# defined
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
-MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../mk/bsd.prefs.mk"
 
