@@ -1,0 +1,14 @@
+--- kmidi/config.h.orig	Wed Oct 27 18:33:40 1999
++++ kmidi/config.h	Wed Oct 27 18:34:21 1999
+@@ -17,6 +17,11 @@
+     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ */
+ 
++#ifdef __NetBSD__
++#include <sys/types.h> 
++#include <machine/endian.h>
++#endif /* __NetBSD__ */
++
+ #include "../config.h"
+ 
+ #ifdef ADAGIO
