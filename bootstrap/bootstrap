@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.14 2004/04/21 20:35:18 tv Exp $
+# $NetBSD: bootstrap,v 1.15 2004/04/23 02:03:18 tv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -167,7 +167,7 @@ run_cmd()
 mkdir_p()
 {
 	for dir in $@; do
-		run_cmd "($shprog ./files/install-sh -d -o $user -g $group $dir)"
+		run_cmd "$shprog $wrkdir/install-sh -d -o $user -g $group $dir"
 	done
 }
 
@@ -297,6 +297,7 @@ Interix)
 	mkdir_p () {
 		mkdir -p "$@" # allows umask to take effect
 	}
+	default_install_mode=0775
 	root_user=`id -un`
 	root_group=+Administrators
 	need_pax=yes
@@ -346,6 +347,7 @@ if [ "x${PRESERVE_PATH}" != "xyes" ]; then
 fi
 
 check_prog awkprog awk
+check_prog chmodprog chmod
 check_prog cpprog cp
 check_prog idprog id
 check_prog groupsprog groups
@@ -387,6 +389,11 @@ else
 	exit 1
 fi
 echo "Working directory is: ${wrkdir}"
+
+if [ ! -x ${wrkdir}/install-sh ]; then
+	run_cmd "$sedprog -e 's|@DEFAULT_INSTALL_MODE@|'${default_install_mode-0755}'|' files/install-sh.in > $wrkdir/install-sh"
+	run_cmd "$chmodprog +x $wrkdir/install-sh"
+fi
 
 is_root
 if [ $? = 1 ]; then
@@ -512,18 +519,18 @@ esac
 
 if [ "$need_bsd_install" = "yes" ]; then
 	echo_msg "Installing BSD compatible install script"
-	run_cmd "(cd files; $shprog ./install-sh -c -o $user -g $group -m 755 install-sh $prefix/bin/install-sh)"
+	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/install-sh $prefix/bin/install-sh"
 	BSTRAP_ENV="INSTALL='$prefix/bin/install-sh -c' $BSTRAP_ENV"
 fi
 
 if [ "$need_fixed_strip" = "yes" ] ; then
 	echo_msg "Installing fixed strip script"
-	run_cmd "(cd files; $shprog ./install-sh -c -o $user -g $group -m 755 strip-sh $prefix/bin/strip)"
+	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 files/strip-sh $prefix/bin/strip"
 fi
 
 if [ "$need_mkdir" = "yes" ]; then
 	echo_msg "Installing fixed mkdir script \"mkdir-sh\""
-	run_cmd "(cd files; $shprog ./install-sh -c -o $user -g $group -m 755 mkdir-sh $prefix/sbin/mkdir-sh)"
+	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 files/mkdir-sh $prefix/sbin/mkdir-sh"
 fi
 
 echo_msg "Installing bmake"
@@ -606,7 +613,7 @@ run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat -I.
 
 # all's ready, install the man page
 echo_msg "Installing packages(7) man page"
-(cd files; run_cmd "$shprog ./install-sh -c -m 444 packages.cat7 $prefix/man/cat7/packages.0")
+run_cmd "$shprog $wrkdir/install-sh -c -m 444 files/packages.cat7 $prefix/man/cat7/packages.0"
 
 # opsys specific fiddling
 opsys_finish
