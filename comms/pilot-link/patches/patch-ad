@@ -1,34 +1,29 @@
-$NetBSD: patch-ad,v 1.1 2001/08/09 08:49:47 dillo Exp $
+$NetBSD: patch-ad,v 1.2 2003/01/10 04:30:19 rh Exp $
 
---- libsock/unixserial.c.orig	Mon Aug  6 11:39:00 2001
-+++ libsock/unixserial.c	Mon Aug  6 11:42:01 2001
-@@ -156,6 +156,13 @@
- 
- 	int i;
- 
-+	/* Here we need a workaround for NetBSD USB device used with newer
-+	   Handspring devices (namely Platinum, Prism and Edge) */
-+
+--- libpisock/unixserial.c.orig	Tue Dec  3 00:32:47 2002
++++ libpisock/unixserial.c
+@@ -178,13 +178,23 @@ s_open(struct pi_socket *ps, struct pi_s
+ 		i;
+ 	char 	*tty 	= addr->pi_device;
+ 	struct pi_serial_data *data = (struct pi_serial_data *)ps->device->data;
 +#define maxretries 100
-+	int retries;
-+	int rc;
-+
++	int	retries;
+ 	
  #ifndef SGTTY
  	struct termios tcn;
  #else
-@@ -166,6 +173,15 @@
- 		tty = getenv("PILOTPORT");
- 	if (!tty)
- 		tty = "<Null>";
+ 	struct sgttyb tcn;
+ #endif
+-	if ((fd = open(tty, O_RDWR | O_NONBLOCK)) == -1) {
 +
 +	for (retries = 0 ; retries <= maxretries ; retries++ ) {
-+	  if ((rc = open(tty, O_RDWR | O_NONBLOCK)) == -1) {
-+	    usleep(50000);
-+	  } else {
-+	    ps->mac->fd = rc;
-+	    break;
-+	  }
++		if ((fd = open(tty, O_RDWR | O_NONBLOCK)) != -1) {
++			break;
++		}
++		usleep(50000);
 +	}
- 
- 	if ((ps->mac->fd = open(tty, O_RDWR | O_NONBLOCK)) == -1) {
++
++	if (fd == -1) {
  		return -1;	/* errno already set */
+ 	}
+ 

@@ -1,32 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2001/06/27 18:04:39 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2003/01/10 04:30:19 rh Exp $
 
---- libsock/Makefile.in.orig	Tue Jun 19 12:25:26 2001
-+++ libsock/Makefile.in
-@@ -25,7 +25,7 @@
- top_builddir = ..
+--- bindings/Makefile.in.orig	Mon Jan  6 09:45:18 2003
++++ bindings/Makefile.in
+@@ -420,7 +420,7 @@ python-clean: Python/setup.py
+ #
  
- CC = @CC@
--CFLAGS = -I../include -I$(srcdir)/../include @CFLAGS@ @CWFLAG@
-+CFLAGS = -I../include -I$(srcdir)/../include @CFLAGS@ @CWFLAG@ $(ICONV_CFLAGS)
- # -DPADP_TRACE
- # -DDEBUG
- # -DNO_DLP_TRACE
-@@ -36,6 +36,9 @@
- RM = rm -f
- LIBTOOL = @LIBTOOL@
+ Perl/Makefile: Perl/Makefile.PL
+-	cd Perl && $(PERL) Makefile.PL INSTALLDIRS=vendor
++	cd Perl && $(PERL) Makefile.PL INSTALLDIRS=site
  
-+ICONV_CFLAGS = @ICONV_CFLAGS@
-+ICONV_LIBS = @ICONV_LIBS@
-+
- .SUFFIXES: .c .lo .o
- 
- .c.o:
-@@ -54,7 +57,7 @@
- libpisock.la: $(OBJS)
- 	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) \
- 		-export-dynamic -rpath $(libdir) -version-info 4:0:0 \
--		-o libpisock.la $(OBJS)
-+		-o libpisock.la $(OBJS) $(LDFLAGS) $(ICONV_LIBS)
- 
- # OS/2 dll build rules,  This is somewhat of a hack.
- # This target creates the OS/2 linker .def file dynanmically.
+ perl-build: Perl/Makefile
+ 	cd Perl && $(MAKE)
