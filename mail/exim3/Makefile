@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/04 04:24:49 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/04 04:28:16 grant Exp $
 
 DISTNAME=	exim-3.36
 CATEGORIES=	mail net
@@ -15,7 +15,7 @@ USE_PERL5=	YES
 USE_PKGINSTALL=	YES
 
 BUILD_DEFS+=		EXIM_USER EXIM_GROUP
-BUILD_DEFS+=		EXIM_DB.mysql EXIM_DB.pgsql
+BUILD_DEFS+=		EXIM_DB.db1 EXIM_DB.mysql EXIM_DB.pgsql
 
 PKG_SYSCONFSUBDIR?=	exim
 EGDIR=			${PREFIX}/share/examples/exim
@@ -39,18 +39,29 @@ FILES_SUBST+=		GZCAT="${GZCAT}"
 
 _LOOKUP_LIBS+=		${LDFLAGS}
 
+# default to using db1 on platforms which have it.
+EXIM_DB.db1?=		YES
+.if ${EXIM_DB.db1} == "YES"
+USE_DB185=		YES
+.endif
+
 .if defined(EXIM_DB.mysql) && ${EXIM_DB.mysql} == "YES"
-_EXIM_DB+=		mysql
-_LOOKUP_INCLUDE+=	-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
-_LOOKUP_LIBS+=		${BUILDLINK_LDFLAGS.mysql-client} -lmysqlclient
+LOOKUP_INCLUDE+=	-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
+LOOKUP_LIBS+=		${BUILDLINK_LDFLAGS.mysql-client} -lmysqlclient
+MAKE_ENV+=		LOOKUP_MYSQL=YES
 .  include "../../databases/mysql-client/buildlink2.mk"
 .endif
 .if defined(EXIM_DB.pgsql) && ${EXIM_DB.pgsql} == "YES"
-_EXIM_DB+=		pgsql
-_LOOKUP_INCLUDE+=	-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
-_LOOKUP_LIBS+=		-lpq
+LOOKUP_INCLUDE+=	-I${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
+LOOKUP_LIBS+=		-lpq
+MAKE_ENV+=		LOOKUP_PGSQL=YES
 .  include "../../databases/postgresql-lib/buildlink2.mk"
 .endif
+
+# buildlink2 decides which libdb to use on this platform.
+MAKE_ENV+=		DBMLIB="${BUILDLINK_LDFLAGS.db} ${BUILDLINK_LIBS.db}"
+MAKE_ENV+=		LOOKUP_INCLUDE="${_LOOKUP_INCLUDE}"
+MAKE_ENV+=		LOOKUP_LIBS="${_LOOKUP_LIBS}"
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
@@ -59,20 +70,11 @@ pre-patch:
 pre-configure:
 	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/Local/Makefile.netbsd \
 		> ${WRKSRC}/Local/Makefile
-	for f in ${WRKSRC}/OS/Makefile-*; do \
-		${SED} -e 's/^CFLAGS.*/& $$(CPPFLAGS)/' $$f > $$f.cppsubst; \
-		${MV} -f $$f.cppsubst $$f; \
+	@for f in ${WRKSRC}/OS/Makefile-*; do \
+		${SED} -e 's/^CFLAGS.*/& $$(CPPFLAGS)/' \
+		-e '/^DBMLIB/d' $$f > $$f.subst; \
+		${MV} -f $$f.subst $$f; \
 	done
-.if defined(_EXIM_DB)
-	@${ECHO} LOOKUP_INCLUDE=${_LOOKUP_INCLUDE} >> ${WRKSRC}/Local/Makefile
-	@${ECHO} LOOKUP_LIBS=${_LOOKUP_LIBS} >> ${WRKSRC}/Local/Makefile
-.  if !empty(_EXIM_DB:Mmysql)
-	@${ECHO} LOOKUP_MYSQL=yes >> ${WRKSRC}/Local/Makefile
-.  endif
-.  if !empty(_EXIM_DB:Mpgsql)
-	@${ECHO} LOOKUP_PGSQL=yes >> ${WRKSRC}/Local/Makefile
-.  endif
-.endif
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -88,4 +90,5 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
 	${CP} ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
 
+.include "../../databases/db/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
