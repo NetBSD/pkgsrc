@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/04/27 05:44:22 snj Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/21 14:27:12 kristerw Exp $
 #
 
 DISTNAME=	Digest-Nilsimsa-0.06
@@ -11,9 +11,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Digest-Nilsimsa/
 COMMENT=	Perl5 extension module for Nilsimsa signatures
 
-# _might_ work with earlier version but author says, it was only tested
-# with 5.6.1 :-/
-BUILDLINK_DEPENDS.perl=	perl>=5.6.1
 USE_BUILDLINK3=		YES
 
 PERL5_CONFIGURE=	YES
