@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/05/02 14:50:33 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/08/06 22:49:24 rh Exp $
 bin/glade
 share/doc/glade/README
 share/doc/glade/TODO
@@ -6,13 +6,49 @@ share/doc/glade/developer.txt
 share/doc/glade/file_format.txt
 share/doc/glade/generic.txt
 share/doc/glade/manual.txt
-share/doc/glade/portability.txt
 share/doc/glade/notes.txt
+share/doc/glade/portability.txt
 share/doc/glade/source_code.txt
 share/locale/de/LC_MESSAGES/glade.mo
 share/locale/es/LC_MESSAGES/glade.mo
 share/locale/fr/LC_MESSAGES/glade.mo
+share/locale/it/LC_MESSAGES/glade.mo
 share/locale/ja/LC_MESSAGES/glade.mo
+share/locale/no/LC_MESSAGES/glade.mo
+share/locale/pl/LC_MESSAGES/glade.mo
 share/locale/ru/LC_MESSAGES/glade.mo
 share/locale/pt_BR/LC_MESSAGES/glade.mo
+share/gnome/apps/Development/glade.desktop
+share/pixmaps/glade/glade_logo.png
+share/glade/gtk/autogen.sh
+share/glade/gnome/Makefile.am
+share/glade/gnome/autogen.sh
+share/glade/gnome/aclocal-include.m4
+share/glade/gnome/compiler-flags.m4
+share/glade/gnome/curses.m4
+share/glade/gnome/gnome-bonobo-check.m4
+share/glade/gnome/gnome-common.m4
+share/glade/gnome/gnome-fileutils.m4
+share/glade/gnome/gnome-gettext.m4
+share/glade/gnome/gnome-ghttp-check.m4
+share/glade/gnome/gnome-gnorba-check.m4
+share/glade/gnome/gnome-guile-checks.m4
+share/glade/gnome/gnome-libgtop-check.m4
+share/glade/gnome/gnome-objc-checks.m4
+share/glade/gnome/gnome-orbit-check.m4
+share/glade/gnome/gnome-print-check.m4
+share/glade/gnome/gnome-pthread-check.m4
+share/glade/gnome/gnome-support.m4
+share/glade/gnome/gnome-undelfs.m4
+share/glade/gnome/gnome-vfs.m4
+share/glade/gnome/gnome-x-checks.m4
+share/glade/gnome/gnome-xml-check.m4
+share/glade/gnome/gnome.m4
+share/glade/gnome/linger.m4
+share/glade/gnome/need-declaration.m4
+@dirrm share/gnome/apps/Development
+@dirrm share/pixmaps/glade
 @dirrm share/doc/glade
+@dirrm share/glade/gnome
+@dirrm share/glade/gtk
+@dirrm share/glade
