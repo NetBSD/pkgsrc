@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.6 1999/06/23 16:32:04 kleink Exp $
+$NetBSD: patch-ab,v 1.7 1999/11/24 13:49:03 hubertf Exp $
 
---- Makefile.orig	Sun May 26 05:26:46 1996
-+++ Makefile	Sat Mar  7 13:55:24 1998
+--- Makefile.orig	Sun May 26 11:26:46 1996
++++ Makefile	Wed Nov 24 14:50:18 1999
 @@ -24,22 +24,23 @@
  # But where to change without revealing my secret identity?
  
@@ -129,7 +129,7 @@ $NetBSD: patch-ab,v 1.6 1999/06/23 16:32:04 kleink Exp $
  
  tclIndex: $(TCLF)
 -	echo 'auto_mkindex . *.tcl; exit' | wish
-+	echo 'auto_mkindex . *.tcl; exit' | wish8.0
++	echo 'auto_mkindex . *.tcl; exit' | tclsh8.0
  
  ########## Some special targets
  
