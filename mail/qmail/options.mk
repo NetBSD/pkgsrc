@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2004/11/28 19:19:52 jlam Exp $
+# $NetBSD: options.mk,v 1.5.2.1 2004/12/28 23:32:35 salo Exp $
 
 .if ${OPSYS} == "Darwin"
 PKG_DEFAULT_OPTIONS+=	darwin
@@ -10,7 +10,7 @@ PKG_DEFAULT_OPTIONS+=	netqmail	# for the errno patches
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS=	badrcptto bigdns darwin nullenvsender netqmail
-PKG_SUPPORTED_OPTIONS+=	outgoingip qregex realrcptto sasl syncdir tls
+PKG_SUPPORTED_OPTIONS+=	outgoingip qregex realrcptto sasl syncdir tls viruscan
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -135,4 +135,20 @@ SUBST_SED.load=		-e '$$s|$$| ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.syncdir}/l
 SUBST_SED.load+=	-e '$$s|$$| -bind_at_load|'
 .  endif
 SUBST_MESSAGE.load=	"Setting linker flags for syncdir."
+.endif
+
+###
+### reject messages with MIME attachments that match certain signatures
+###
+.if !empty(PKG_OPTIONS:Mviruscan)
+VIRUSCAN_PATCH=		qmail-smtpd-viruscan-1.3.patch
+VIRUSCAN_LOG_PATCH=	qmail-smtpd-viruscan-logging.patch
+PATCHFILES+=		${VIRUSCAN_PATCH} ${VIRUSCAN_LOG_PATCH}
+SITES_${VIRUSCAN_PATCH}=http://www.qmail.org/
+SITES_${VIRUSCAN_LOG_PATCH}=	http://scriptkitchen.com/qmail/
+PATCH_DIST_STRIP.${VIRUSCAN_PATCH}=	-p1
+PATCH_DIST_STRIP.${VIRUSCAN_LOG_PATCH}=	-p1
+VIRUSCAN_SIGS_SRCFILE=	${DISTDIR}/${VIRUSCAN_PATCH}
+.else
+VIRUSCAN_SIGS_SRCFILE=	# undefined
 .endif
