@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.368 2005/02/02 21:33:45 drochner Exp $
+# $NetBSD: Makefile,v 1.369 2005/02/16 22:18:30 jschauma Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -241,6 +241,7 @@ SUBDIR+=	py-piddle
 SUBDIR+=	qcamview
 SUBDIR+=	qiv
 SUBDIR+=	qvplay
+SUBDIR+=	radiance
 SUBDIR+=	rayshade
 SUBDIR+=	refocus-it
 SUBDIR+=	resize_image
