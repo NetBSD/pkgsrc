@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2002/10/21 16:09:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2002/10/23 10:38:37 bouyer Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -35,6 +35,12 @@ CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 LIBS+=			-lm -ltermcap		# -lslang
 CPPFLAGS+=		-Dunix
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CFLAGS+= -DSunOS
+.endif
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
