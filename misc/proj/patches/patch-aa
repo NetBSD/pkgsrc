@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/01/20 02:18:04 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/29 02:48:11 jtb Exp $
 
 --- src/Makefile.in.orig	Sun Sep 24 17:07:52 1995
 +++ src/Makefile.in
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/20 02:18:04 jtb Exp $
  SHELL = /bin/sh
  
 -L = libproj.a
-+L = libproj
++L = libproj.la
  
  .PRECIOUS: $L
  
@@ -107,7 +107,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/20 02:18:04 jtb Exp $
 -proj:	$(PROJ.o) $L
 -	$(CC) -o $@ $(PROJ.o) $L $(LIBS)
 +proj:	$(PROJ) $L
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $(PROJ:.o=.lo) $L.la $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(PROJ:.o=.lo) $L $(LIBS)
  
 -NAD2NAD.o = nad2nad.o nad_cvt.o nad_init.o nad_intr.o emess.o
 +NAD2NAD = nad2nad.o nad_cvt.o nad_init.o nad_intr.o emess.o
@@ -115,7 +115,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/20 02:18:04 jtb Exp $
 -nad2nad:	$(NAD2NAD.o) $L
 -	$(CC) -o $@ $(NAD2NAD.o) $L $(LIBS)
 +nad2nad:	$(NAD2NAD) $L
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $(NAD2NAD:.o=.lo) $L.la $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(NAD2NAD:.o=.lo) $L $(LIBS)
  
  nad2nad: nad_list.h
  
@@ -126,9 +126,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/20 02:18:04 jtb Exp $
 -RLIB = $L(pj_release.o)
 +RLIB = pj_release.o
  
- libproj:	$(RLIB) $(LLIST) $(PJ_ADDL)
+-libproj:	$(RLIB) $(LLIST) $(PJ_ADDL)
 -	$(RANLIB) $L
-+	$(LIBTOOL) --mode=link $(CC) -O -o libproj.la \
++libproj.la:	$(RLIB) $(LLIST) $(PJ_ADDL)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ \
 +	$(RLIB:.o=.lo) $(LLIST:.o=.lo) $(PJ_ADDL:.o=.lo) -lm \
 +	-rpath $(libdir) --version-info 0:0
  
@@ -138,7 +139,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/20 02:18:04 jtb Exp $
 -geod:	$(GEOD.o) $L
 -	$(CC) -o $@ $(GEOD.o) $L $(LIBS)
 +geod:	$(GEOD) $L
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $(GEOD:.o=.lo) $L.la $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) -o $@ $(GEOD:.o=.lo) $L $(LIBS)
  
  install:	all
 -	cp proj geod nad2nad $(bindir)
@@ -148,9 +149,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/01/20 02:18:04 jtb Exp $
 -	cp libproj.a $(libdir)
 -	chmod 644 $(libdir)/libproj.a
 -	$(RANLIB) $(libdir)/libproj.a
-+	$(LIBTOOL) --mode=install install -c libproj.la $(libdir)
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $L $(libdir)
 +	@for i in proj geod nad2nad ; do \
-+		c="$(LIBTOOL) --mode=install install -c $$i $(bindir)" ; \
++		c="$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $$i $(bindir)" ; \
 +		echo $$c; $$c; \
 +	done
  
