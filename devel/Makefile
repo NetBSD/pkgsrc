@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.236 2001/08/11 13:46:48 rh Exp $
+# $NetBSD: Makefile,v 1.237 2001/08/11 14:16:28 rh Exp $
 #
 
 COMMENT=	Development utilities
@@ -181,6 +181,7 @@ SUBDIR+=	pccts
 SUBDIR+=	pcre
 SUBDIR+=	pedisassem
 SUBDIR+=	pilrc
+SUBDIR+=	pkgconfig
 SUBDIR+=	popt
 SUBDIR+=	prc-tools
 SUBDIR+=	prc-tools-base
