@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/29 13:10:23 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/03/24 14:24:29 ben Exp $
 bin/jadetex
 bin/pdfjadetex
 man/man1/jadetex.1
@@ -20,5 +20,7 @@ share/texmf/tex/jadetex/dsssl.def
 share/texmf/tex/jadetex/jadetex.ltx
 share/texmf/web2c/jadetex.fmt
 share/texmf/web2c/pdfjadetex.fmt
+@exec %D/bin/mktexlsr
+@unexec %D/bin/mktexlsr
 @dirrm share/texmf/tex/jadetex
 @dirrm share/doc/jadetex
