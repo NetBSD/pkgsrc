@@ -1,0 +1,28 @@
+diff -ru ../mozilla-current.orig/mozilla/nsprpub/pr/src/linking/prlink.c ./nsprpub/pr/src/linking/prlink.c
+--- ../mozilla-current.orig/mozilla/nsprpub/pr/src/linking/prlink.c	Sat Apr 22 06:39:27 2000
++++ ./nsprpub/pr/src/linking/prlink.c	Sun Jun  4 14:06:25 2000
+@@ -64,7 +64,7 @@
+  * On these platforms, symbols have a leading '_'.
+  */
+ #if defined(SUNOS4) || defined(RHAPSODY) || defined(NEXTSTEP) \
+-    || defined(OPENBSD) || defined(WIN16) || defined(NETBSD)
++    || defined(OPENBSD) || defined(WIN16) || (defined(NETBSD) && !defined(__ELF__))
+ #define NEED_LEADING_UNDERSCORE
+ #endif
+ 
+@@ -191,6 +191,7 @@
+ #elif defined(XP_UNIX)
+ #ifdef HAVE_DLL
+ #ifdef USE_DLFCN
++#ifndef NETBSD
+     h = dlopen(0, RTLD_LAZY);
+     if (!h) {
+         char *error;
+@@ -203,6 +204,7 @@
+         PR_DELETE(error);
+         abort();/* XXX */
+     }
++#endif
+ #elif defined(USE_HPSHL)
+     h = NULL;
+     /* don't abort with this NULL */

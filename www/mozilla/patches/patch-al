@@ -1,0 +1,27 @@
+diff -ru ../mozilla-current.orig/mozilla/nsprpub/pr/src/md/unix/unix.c ./nsprpub/pr/src/md/unix/unix.c
+--- ../mozilla-current.orig/mozilla/nsprpub/pr/src/md/unix/unix.c	Tue Nov  2 07:59:01 1999
++++ ./nsprpub/pr/src/md/unix/unix.c	Sun Jun  4 14:06:25 2000
+@@ -100,7 +100,11 @@
+ /*
+  * _nspr_noclock - if set clock interrupts are disabled
+  */
++#ifdef NETBSD
++int _nspr_noclock = 0;
++#else
+ int _nspr_noclock = 1;
++#endif
+ 
+ #ifdef IRIX
+ extern PRInt32 _nspr_terminate_on_error;
+@@ -2059,7 +2063,11 @@
+ #endif /* HPUX9 */
+ 
+ /* # of milliseconds per clock tick that we will use */
++#ifdef NETBSD
++#define MSEC_PER_TICK    100
++#else
+ #define MSEC_PER_TICK    50
++#endif
+ 
+ 
+ void _MD_StartInterrupts()
