@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1822 2004/06/07 02:53:22 wiz Exp $
+$NetBSD: TODO,v 1.1823 2004/06/07 02:59:09 snj Exp $
 
 Suggested new packages
 ======================
@@ -246,7 +246,6 @@ Suggested package updates
 	o gogo-3.11p1
 	o gqmpeg-0.91.1
 	o grace-5.1.15
-	o grepmail-5.23
 	o grhino-0.12.0
 	o groff-1.19.1
 	o gsasl-0.1.0
