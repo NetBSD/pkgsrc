@@ -1,0 +1,18 @@
+--- ckufio.c.orig	Thu Jun 18 05:15:10 1998
++++ ckufio.c	Thu Jun 18 05:19:26 1998
+@@ -2961,6 +2961,14 @@
+ 	}
++#ifdef __NetBSD__
++	time_stamp = localtime((time_t *)&tmx);
++#else
+ 	time_stamp = localtime(&tmx);
++#endif
+ 	if (!time_stamp)
+ 	  return(-1);
++#ifdef __NetBSD__
++	if (localtime((time_t *)&tmx)->tm_isdst)
++#else
+ 	if (localtime(&tmx)->tm_isdst)
++#endif
+ 	  tmx -= 60L * 60L;		/* Adjust for daylight savings time */
+
