@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 2001/01/24 22:44:13 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2001/02/12 15:15:44 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -15,7 +15,8 @@ MKDIR="@MKDIR@"
 USER=nobody
 GROUP=nobody
 
-SMDIR=${PKG_PREFIX}/@SM_SUBDIR@
+CONFDIR=${PKG_PREFIX}/etc/httpd
+SMDIR=${PKG_PREFIX}/@SMDIR@
 DATADIR=/var/spool/squirrelmail
 
 case ${STAGE} in
@@ -41,6 +42,16 @@ POST-INSTALL)
 		${CP} ${SAMPLEFILE} ${FILE}
 		${CHMOD} 644 ${FILE}
 	fi
+	FILE=${CONFDIR}/squirrelmail.conf
+	SAMPLEFILE=${FILE}.dist
+	if [ -f ${FILE} ]
+	then
+		echo "    ${FILE} already exists"
+	else
+		echo "    ${FILE}"
+		${CP} ${SAMPLEFILE} ${FILE}
+		${CHMOD} 644 ${FILE}
+	fi
 	${CAT} << EOF
 
 ===========================================================================
@@ -48,7 +59,10 @@ Please run the SquirrelMail configuration script:
 
 	cd ${SMDIR}/config && ./conf.pl
 
-to customize the SquirrelMail webmail system for your site.
+to customize the SquirrelMail webmail system for your site.  You may also
+wish to customize:
+
+	${CONFDIR}/squirrelmail.conf
 ===========================================================================
 EOF
 	;;
