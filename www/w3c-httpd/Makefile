@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/08/29 15:40:03 recht Exp $
+# $NetBSD: Makefile,v 1.13 2004/09/18 13:34:28 uebayasi Exp $
 # FreeBSD Id: Makefile,v 1.19 1999/01/08 19:59:26 fenner Exp
 
 DISTNAME=	w3c-httpd-3.0A
@@ -11,6 +11,14 @@ HOMEPAGE=	http://www.w3.org/pub/WWW/Daemon/
 COMMENT=	WWW server from the W3 Consortium (W3C)
 
 WRKSRC=		${WRKDIR}
+
+SUBST_CLASSES+=		strcasestr
+SUBST_STAGE.strcasestr=	post-patch
+SUBST_FILES.strcasestr=	Daemon/Implementation/HTWild.c \
+	Library/Implementation/HTString.c \
+	Library/Implementation/HTString.h \
+	Library/Implementation/HTString.h
+SUBST_SED.strcasestr=	-e "s,\([[:blank:]]\)\(strcasestr\),\1x\2,g"
 
 pre-configure:
 .if !defined(MD5_PW)
