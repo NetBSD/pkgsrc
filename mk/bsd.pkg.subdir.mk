@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.18 1998/07/07 15:08:10 hubertf Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.19 1998/07/13 20:39:32 hubertf Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp 
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -112,7 +112,7 @@ readmes: readme _SUBDIRUSE
 
 .if !target(readme)
 readme:
-	@rm -f README.html
+	@if [ -f README.html ]; then  mv -f README.html README.html.BAK ; fi
 	@${MAKE} README.html
 .endif
 
@@ -125,7 +125,6 @@ README=	../templates/README.category
 HTMLIFY=	sed -e 's/&/\&amp;/g' -e 's/>/\&gt;/g' -e 's/</\&lt;/g'
 
 README.html: .PRECIOUS
-	@echo "===>  Creating README.html for ${_THISDIR_}${.CURDIR:T}"
 	@> $@.tmp
 .for entry in ${SUBDIR}
 .if defined(PKGSRCTOP)
@@ -151,7 +150,15 @@ README.html: .PRECIOUS
 			-e '/%%DESCR%%/d' \
 			-e '/%%SUBDIR%%/r$@.tmp2' \
 			-e '/%%SUBDIR%%/d' \
-		> $@
+		> $@.tmp4
+	@if cmp -s $@.tmp4 $@.BAK ; then \
+		mv $@.BAK $@ ; \
+		rm $@.tmp4 ; \
+	else \
+		${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${.CURDIR:T}" ; \
+		mv $@.tmp4 $@ ; \
+		rm -f $@.BAK ; \
+	fi
 	@rm -f $@.tmp $@.tmp2 $@.tmp3
 .for subdir in ${SUBDIR}
 	@cd ${subdir} && ${MAKE} "_THISDIR_=${_THISDIR_}${.CURDIR:T}/" readme
