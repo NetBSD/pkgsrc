@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/23 03:10:58 itohy Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/02 08:07:07 itohy Exp $
 
-DISTNAME=	X.V11R3
+DISTNAME=	X.V11R3uwm
 PKGNAME=	uwm-19881027
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.x.org/pub/R3/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	packages@netbsd.org
 #HOMEPAGE=	http://www.x.org/
 
-EXTRACT_ELEMENTS= X.V11R3/clients/uwm X.V11R3/X11
 WRKSRC=		${WRKDIR}/X.V11R3/clients/uwm
 USE_IMAKE=	yes
 
