@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7899 2004/11/18 16:49:23 adam Exp $
+$NetBSD: CHANGES,v 1.7900 2004/11/18 19:38:32 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5328,3 +5328,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated povray to 3.6.1 [adam 2004-11-18]
 	Updated tcl-expect to 5.42.1 [adam 2004-11-18]
 	Updated tk-expect to 5.42.1 [adam 2004-11-18]
+	Removed fortify [jlam 2004-11-18]
