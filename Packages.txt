@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.232 2002/02/15 09:33:43 skrll Exp $
+# $NetBSD: Packages.txt,v 1.233 2002/02/18 16:40:34 seb Exp $
 ###########################################################################
 
 			==========================
@@ -632,17 +632,8 @@ Please pay attention to the following gotchas:
  - Add MANCOMPRESSED (if not already there) if manpages are installed in
    compressed form by the package; see comment in bsd.pkg.mk
  - Replace /usr/local by ${PREFIX} in all files  (see patches below)
- - If the package installs any info files, the main info directory file
-   needs to be updated to reflect this fact. NetBSD has an INFO_FILES
-   definition, which is used to do this. For example, to install the
-   indent.info entry into the info directory file, simply use the
-
-	INFO_FILES=	indent.info
-
-   definition in the package Makefile. If the package does this insertion
-   for you, you should specify USE_GTEXINFO in the package Makefile, to
-   ensure that the pre-requisite GNU texinfo package is installed on your
-   system.
+ - If the package installs any info files, see the section `Packages providing
+   info files' in this document.
  - Adjust MAINTAINER to be either yourself, if you plan to maintain the
    package for future updates, or set it to the default MAINTAINER
    packages@netbsd.org.
@@ -2177,6 +2168,51 @@ version, disabling optimisation for that file/MACHINE_ARCH/compiler
 combination, and documenting it in doc/HACKS. See doc/HACKS for
 examples.
 
+ 10.24 Packages providing info files
+ ===================================
+
+Some packages install info files or use the makeinfo or install-info
+commands. In such cases, the makefile fragment mk/texinfo.mk should be included
+in the package Makefile before the inclusion of mk/bsd.pkg.mk.
+Newer versions of texinfo (version 4 and above) are, unfortunately,
+incompatible, at the command line level, from previous versions and some
+extensions were introduced in the TeXinfo macro set. So the package creator
+should ensure that the correct binaries are selected, rather than relying on
+the contents of the PATH variable in the shell.
+
+The main info directory file needs to be updated to reflect the installation
+of the info files. Some package's installation process take care of this
+for you. Otherwise the NetBSD Packages Collection has an INFO_FILES 
+definition which can be used to do this. Simply use the
+
+	INFO_FILES=	ident.info
+
+definition in the package Makefile, where "ident.info" is the name of the info
+file which installs an info dir entry.
+
+A package creator should also take care that the package build and
+install process uses correct version of the makeinfo and install-info commands.
+Some Makefiles and configure scripts from recent software packages include the
+pathnames to the makeinfo and install-info commands. Unfortunately, older
+software packages tend not to do this, and, should this be the case, further
+action is required of the package creator.
+
+The mk/texinfo.mk makefile fragment will ensure that proper makeinfo and
+install-info commands are available on the system as well as help to the
+configure and build process of the package to use known binaries for these
+commands.
+
+If a minimum version of makeinfo and install-info commands are required
+define TEXINFO_REQD in the package's Makefile to this mininum version.
+
+If a package is not well behaved (i.e. it does not pick MAKEINFO or
+INSTALL_INFO in the environment at configure or build time) you should
+- whatever is more appropriate:
+ a) patch the package files so MAKEINFO or INSTALL_INFO are picked from the
+    environment at configure or build time and get used instead of
+    relying on makeinfo or install-info being accessible in PATH;
+ b) put TEXINFO_OVERRIDE=YES in the package Makefile to let some
+    sed manipulation on some packages source files (see mk/texinfo.mk content).
 
  11 Submitting & Committing
  ==========================
@@ -2297,6 +2333,7 @@ The file contents in this section must be used without the "> " prefix.
 	GNU_CONFIGURE=  yes
 	INFO_FILES=     bison.info
 	 
+	.include "../../mk/texinfo.mk"
 	.include "../../mk/bsd.pkg.mk"
 
 
