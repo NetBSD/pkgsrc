@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.7 1998/05/06 07:56:35 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/02 12:06:29 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:55:09 gj Exp
 #
 
 DISTNAME=	vile
-PKGNAME=	vile-7.3
+PKGNAME=	vile-8.0
 CATEGORIES=	editors
-# agc - vile-7.4 is on the MASTER_SITES now, so grab the 7.3 distfile
-#	from ftp.netbsd.org. We'll do a 7.4 package ASAP, when circumstances
-#	permit.
-# MASTER_SITES=   ftp://ftp.clark.net/pub/dickey/vile/ \
-#		ftp://id.wing.net/pub/pgf/vile/
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/
+MASTER_SITES=   ftp://ftp.clark.net/pub/dickey/vile/ \
+		ftp://id.wing.net/pub/pgf/vile/
 
 MAINTAINER=	packages@netbsd.org
 
 MAKEFILE=	makefile
 GNU_CONFIGURE=	yes
+USE_PERL5=	yes
 WRKSRC=		${WRKDIR}/${PKGNAME}
+INSTALL_TARGET=	install install-perl
 MAN1=		vile.1
 
 post-install:
