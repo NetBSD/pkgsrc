@@ -2,6 +2,9 @@ This package provides personal information management applications that are
 part of the standard KDE environment:
 
 * kmail: a full-featured email client
+* kmailcvt: converts addressbooks to kmail format
+* knode: online newsreader
+* korn: new mail notification tool
 * kandy: sync phone book entries between your cell phone and computer
          ("kandy" comes from "Handy", the german word used for a cellular)
 * korganizer: a calendar-of-events and todo-list manager
