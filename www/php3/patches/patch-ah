@@ -1,3 +1,4 @@
+$NetBSD: patch-ah,v 1.8 2000/09/03 13:41:08 wiz Exp $
 --- configure.in	Mon Apr  3 20:24:29 2000
 +++ configure.in	Fri May 26 15:35:01 2000
 @@ -106,7 +106,7 @@

@@ -1,3 +1,4 @@
+$NetBSD: patch-ai,v 1.2 2000/09/03 13:41:08 wiz Exp $
 --- configure	Wed Apr  5 01:32:58 2000
 +++ configure	Fri May 26 15:26:58 2000
 @@ -1624,7 +1624,7 @@
