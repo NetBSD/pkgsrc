@@ -1,13 +1,15 @@
-$NetBSD: patch-aa,v 1.2 2003/01/03 22:22:10 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2003/09/24 10:53:36 jmmv Exp $
 
---- makefile.unx.orig	Mon Mar  4 22:36:27 1996
-+++ makefile.unx
-@@ -8,7 +8,7 @@
+--- makefile.unx.orig	Mon Mar  4 21:36:27 1996
++++ makefile.unx	Wed Sep 24 11:37:37 2003
+@@ -7,8 +7,8 @@
+ # To use, enter "make -f makefile.unx"
  
  RM=rm -f
- CC=gcc
+-CC=gcc
 -CFLAGS=-O -Wall -DUNIX -DUSE_REMINDER
-+CFLAGS+=-O -Wall -DUNIX -DUSE_REMINDER
++#CC=gcc
++CFLAGS+=-DUNIX -DUSE_REMINDER
  
  BINDIR=/usr/bin
  MANDIR=/usr/man
