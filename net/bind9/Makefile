@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/11/13 04:43:23 itojun Exp $
+# $NetBSD: Makefile,v 1.15 2000/11/13 16:12:49 toshii Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -25,8 +25,7 @@ CONFIGURE_ARGS+=--with-mit-pthreads \
 		--with-libtool=yes \
 		--sysconfdir=/etc \
 		--localstatedir=/var
-CONFIGURE_ENV+=	CC=${LOCALBASE}/pthreads/bin/pgcc \
-		CXX=${LOCALBASE}/pthreads/bin/pg++
+LDFLAGS+=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/bind9
