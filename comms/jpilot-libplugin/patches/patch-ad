@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/06/15 21:19:40 rh Exp $
+
+--- libplugin.c.orig	Tue Feb 15 21:08:21 2000
++++ libplugin.c	Thu Jun 15 22:13:01 2000
+@@ -97,18 +97,21 @@
+ static int get_next_unique_pc_id(unsigned int *next_unique_id);
+ static FILE *open_file(char *filename, char *mode);  
+ 
++#if 0
+ int jp_logf(int level, char *format, ...)
+ {
+    jpilot_logf(level, format);
+    return 0;
+ }
++#endif
+ 
+-/*
+ int null_logf(int level, char *format, ...)
+ {
+    return 0;
+ }
+ 
++int (*jp_logf)(int level, char *format, ...) = null_logf;
++
+ void plugin_set_jpilot_logf(int (*Pjpilot_logf)(int level, char *format, ...))
+ {
+    if (Pjpilot_logf==NULL) {
+@@ -118,7 +121,6 @@
+    jp_logf=Pjpilot_logf;
+    jp_logf(LOG_DEBUG, "I got the log function pointer\n");
+ }
+-*/
+ 
+ void plugin_version(int *major_version, int *minor_version)
+ {

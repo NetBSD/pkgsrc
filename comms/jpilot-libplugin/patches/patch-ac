@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/06/15 21:19:40 rh Exp $
+
+--- libplugin.h.orig	Tue Feb 15 21:07:28 2000
++++ libplugin.h	Thu Jun 15 22:10:43 2000
+@@ -51,9 +51,9 @@
+ #define LOG_GUI    1024 /*messages always go to the gui window */
+ 
+ int jpilot_logf(int level, char *format, ...);
+-/* int (*jp_logf)(int level, char *format, ...); */
+-int jp_logf(int level, char *format, ...);
+-/* void plugin_set_jpilot_logf(int (*Pjpilot_logf)(int level, char *format, ...));*/
++extern int (*jp_logf)(int level, char *format, ...);
++/* int jp_logf(int level, char *format, ...); */
++void plugin_set_jpilot_logf(int (*Pjpilot_logf)(int level, char *format, ...));
+ 
+ #define SPENT_PC_RECORD_BIT 256
+ 

@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/06/15 21:19:40 rh Exp $
+
+--- Makefile.in.orig	Thu Mar  2 03:00:14 2000
++++ Makefile.in	Thu Jun 15 17:22:41 2000
+@@ -145,11 +145,15 @@
+ libplugin: libplugin.o  libplugin.h
+ 	./libtool --mode=link \
+ 	$(CC) $(OPTIONS) $(GTKFLAGS) -o libplugin.la libplugin.lo \
+-	-static \
+-	-rpath /home/mouse/jpilot;
++	-rpath ${PREFIX}/lib;
++
++libplugin-install:
+ 	./libtool --mode=install ./install-sh \
+-	libplugin.la $(PWD)
+-#	./libtool --mode=finish /home/mouse/jpilot/Expense;
++	libplugin.la ${PREFIX}/lib
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/include/jpilot
++.for hdr in libplugin.h prefs.h utils.h
++	${BSD_INSTALL_DATA} ${hdr} ${PREFIX}/include/jpilot
++.endfor
+ 	
+ jpilot-dump: jpilot-dump.o datebook.o log.o utils.o prefs.o todo.o plugins.o
+ 	$(CC) $(OPTIONS) $(GTKFLAGS) \

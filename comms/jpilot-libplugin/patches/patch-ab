@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/06/15 21:19:40 rh Exp $
+
+--- configure.orig	Mon Feb 28 23:30:09 2000
++++ configure	Thu Jun 15 18:05:22 2000
+@@ -3779,7 +3779,6 @@
+       echo $ac_n "checking for dlopen""... $ac_c" 1>&6
+ echo "configure:3781: checking for dlopen" >&5
+    save_LIBS="$LIBS"
+-   LIBS="$LIBS -ldl"
+    cat > conftest.$ac_ext <<EOF
+ #line 3785 "configure"
+ #include "confdefs.h"
