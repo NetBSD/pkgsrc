@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/31 01:24:37 jtb Exp $
+
+SHA1 (camlimages-2.11.tgz) = 487fa871e3cf81864979bbbddb9abf86f4c9fbab
+Size (camlimages-2.11.tgz) = 1354100 bytes
+SHA1 (patch-aa) = 89889b3af5bd314bdef5328ea9880a315f879240
