@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 22:51:49 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/04 14:12:58 seb Exp $
 #
 
 DISTNAME=		scli-0.2.12
@@ -20,6 +20,9 @@ BUILDLINK_DEPENDS.readline?=    readline>=4.0
 
 CONFIGURE_ARGS+=	--with-xml-prefix=${BUILDLINK_PREFIX.libxml2}
 
+USE_NEW_TEXINFO=	YES
+INFO_FILES=		scli.info
+
 .for _p_ in ncurses readline
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.${_p_}}/include
 LDFLAGS+=		-Wl,${RPATH_FLAG}${BUILDLINK_PREFIX.${_p_}}/lib
@@ -30,5 +33,4 @@ LDFLAGS+=		-L${BUILDLINK_PREFIX.${_p_}}/lib
 .include "../../devel/glib/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../devel/ncurses/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
