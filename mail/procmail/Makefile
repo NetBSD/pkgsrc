@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/01/05 12:01:14 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2004/01/06 18:57:29 abs Exp $
 #
 
 DISTNAME=	procmail-3.22
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_BUILDLINK3=	YES
 MAKE_ENV+=	SHELL=${SH} CHMOD=${CHMOD}
 INSTALL_TARGET=	install-suid install.man
+UNLIMIT_RESOURCES=      datasize
 
 .include "../../mk/bsd.prefs.mk"
 
