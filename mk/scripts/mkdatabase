@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkdatabase,v 1.1 2003/01/04 21:03:08 dmcmahill Exp $
+# $NetBSD: mkdatabase,v 1.2 2003/01/04 22:27:46 dmcmahill Exp $
 #
 # Script for generating a database with complete dependency information
 # for a particular package
@@ -44,6 +44,7 @@ TMPDIR=${TMPDIR:-/tmp}
 BMAKE=${BMAKE:-make}
 AWK=${AWK:-/usr/bin/awk}
 DATABASE=${DATABASE:-${TMPDIR}/pkgdb.$$}
+EXPR=${EXPR:-expr}
 
 # as of 2003-01-04, metapkgs/gnome gets to pass #6 so
 # it is very likely that if you reach 25, something is broken
@@ -164,7 +165,7 @@ while [ ! -z "$dirs" -a $pass -lt ${MAX_PASS} ]; do
 		cd $here
 	done
 	dirs=`${AWK} -f ../../mk/scripts/chkdatabase.awk debug=${DEBUG} ${DATABASE}`
-	pass=`expr $pass + 1`
+	pass=`${EXPR} $pass + 1`
 done
 
 if [ $pass -eq ${MAX_PASS} ]; then
