@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/03/13 13:57:40 rh Exp $
+# $NetBSD: Makefile,v 1.2 1999/03/22 16:38:11 rh Exp $
 #
 
 DISTNAME=	sp-1.3
@@ -13,6 +13,8 @@ MASTER_SITES=   ftp://ftp.jclark.com/pub/sp/ \
 
 MAINTAINER=	mjl@emsi.priv.at
 HOMEPAGE=	http://www.jclark.com/sp/
+
+CONFLICTS+=	jade-*
 
 MAKE_ENV+=	INSTALL="${INSTALL}"
 
