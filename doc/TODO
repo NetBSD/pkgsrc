@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2371 2004/11/15 13:51:07 adrianp Exp $
+$NetBSD: TODO,v 1.2372 2004/11/15 17:03:32 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -307,7 +307,6 @@ Suggested package updates
 	o dctc-0.85.9
 	o dict-client-1.9.11
 	o dict-server-1.9.11
-	o distcc-2.18.2
 	o dmalloc-5.3.0
 	o docbook-4.3
 	o docsis-0.9.1
