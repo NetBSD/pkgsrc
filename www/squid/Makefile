@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.113 2004/06/19 22:07:52 taca Exp $
+# $NetBSD: Makefile,v 1.114 2004/08/22 15:11:07 taca Exp $
 
-DISTNAME=	squid-2.5.STABLE5
-PKGNAME=	squid-2.5.5
-PKGREVISION=	5
+DISTNAME=	squid-2.5.STABLE6
+PKGNAME=	squid-2.5.6
+PKGREVISION=	# empty
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -10,38 +10,23 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE5-ntlm_assert.patch \
-		squid-2.5.STABLE5-ldap.patch \
-		squid-2.5.STABLE5-helper_warning.patch \
-		squid-2.5.STABLE5-pkgconfig.patch \
-		squid-2.5.STABLE5-vary.patch \
-		squid-2.5.STABLE5-lin22_poll.patch \
-		squid-2.5.STABLE5-version.patch \
-		squid-2.5.STABLE5-deny_info.patch \
-		squid-2.5.STABLE5-CONNECT_timeout.patch \
-		squid-2.5.STABLE5-cache_swap_log.patch \
-		squid-2.5.STABLE5-ntlm_warning.patch \
-		squid-2.5.STABLE5-rfc1035NameUnpack.patch \
-		squid-2.5.STABLE5-digest_blank.patch \
-		squid-2.5.STABLE5-post_assert.patch \
-		squid-2.5.STABLE5-spelling.patch \
-		squid-2.5.STABLE5-digest_ERR.patch \
-		squid-2.5.STABLE5-turkish_ERR_DNS_FAIL.patch \
-		squid-2.5.STABLE5-vary_negatively.patch \
-		squid-2.5.STABLE5-range_offset_limit.patch \
-		squid-2.5.STABLE5-large_cache_mem.patch \
-		squid-2.5.STABLE5-least-load.patch \
-		squid-2.5.STABLE5-cacheCurrentUnlinkRequests.patch \
-		squid-2.5.STABLE5-debug_client_ip.patch \
-		squid-2.5.STABLE5-openbsd_m88k.patch \
-		squid-2.5.STABLE5-ftp_html_doctype.patch \
-		squid-2.5.STABLE5-dns_localhost.patch \
-		squid-2.5.STABLE5-msnt_auth_doc.patch \
-		squid-2.5.STABLE5-va_copy.patch \
-		squid-2.5.STABLE5-CONNECT_log_size.patch \
-		squid-2.5.STABLE5-proxy_abuse.patch \
-		squid-2.5.STABLE5-sasl_auth_SASL2.patch \
-		squid-2.5.STABLE5-ntlm_auth_overflow.patch
+PATCHFILES=	squid-2.5.STABLE6-ufs_no_valid_dir.patch \
+		squid-2.5.STABLE6-ldap_helpers.patch \
+		squid-2.5.STABLE6-concurrent_dns_lookups.patch \
+		squid-2.5.STABLE6-request_header_max_size.patch \
+		squid-2.5.STABLE6-partial_hit_is_miss.patch \
+		squid-2.5.STABLE6-HEAD.patch \
+		squid-2.5.STABLE6-ufs_create_error.patch \
+		squid-2.5.STABLE6-basic_auth_caseinsensitive.patch \
+		squid-2.5.STABLE6-active_requests_delaypool.patch \
+		squid-2.5.STABLE6-client_db_gc.patch \
+		squid-2.5.STABLE6-ntlmtruncated.patch \
+		squid-2.5.STABLE6-grammar.patch \
+		squid-2.5.STABLE6-errorpage_quote.patch \
+		squid-2.5.STABLE6-heap_segfault.patch \
+		squid-2.5.STABLE6-initgroups.patch \
+		squid-2.5.STABLE6-external_acl_newlines.patch \
+		squid-2.5.STABLE6-ntlm_fetch_string.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
