@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2004/01/22 07:20:07 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/10 18:37:48 wiz Exp $
 
-DISTNAME=	nut-9.5
+DISTNAME=	nut-9.11
 CATEGORIES=	biology
 MASTER_SITES=	http://www.lafn.org/~av832/
 
