@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/01/19 15:03:36 drochner Exp $
+$NetBSD: distinfo,v 1.4 2002/06/15 06:54:00 sjg Exp $
 
 SHA1 (ExpectPy-1.9b1.tar.gz) = f43fcd53901f327dc8acf0650dbfe45b274a8d7d
 Size (ExpectPy-1.9b1.tar.gz) = 149580 bytes
@@ -7,3 +7,4 @@ SHA1 (patch-ab) = 751f56a7a71822dbb93530dd9396bc92f9def05b
 SHA1 (patch-ac) = 0ff7162129a84fbc913a8b1240209387b922c2a8
 SHA1 (patch-ad) = 267c2e93f89f786b415c7fa2645913c40541bc38
 SHA1 (patch-ae) = 0f5190724d3b17e7b7f06f6408e1c9e7a3e66868
+SHA1 (patch-af) = 130de0f91370a49db5c9236445d2cb258303b190
