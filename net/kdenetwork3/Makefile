@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2003/07/13 13:52:55 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/30 13:58:35 markd Exp $
 
-DISTNAME=	kdenetwork-3.1.2
-PKGREVISION=	1
+DISTNAME=	kdenetwork-3.1.3
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
-.include "../../x11/kde3/Makefile.kde3"
+.include "../../meta-pkgs/kde3/Makefile.kde3"
 
 USE_BUILDLINK2=		yes
 PTHREAD_OPTS+=		require
@@ -22,11 +21,11 @@ REPLACE_PERL=		ksirc/dsirc
 CONFIGURE_ENV+=		ac_cv_sys_file_offset_bits=no
 .endif
 
-.include "../../x11/kde3/Makefile.foo_main"
+.include "../../meta-pkgs/kde3/Makefile.foo_main"
 
 .include "../../converters/uulib/buildlink2.mk"
 .include "../../databases/gdbm/buildlink2.mk"
-.include "../../x11/kde3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
 
