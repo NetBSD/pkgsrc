@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/08/17 18:28:41 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/09/03 20:02:52 tron Exp $
 bin/gmc
 bin/mc
 bin/mcedit
@@ -37,9 +37,11 @@ lib/mc/layout
 lib/mc/mc-gnome.ext
 lib/mc/mc.ext
 lib/mc/mc.hint
+lib/mc/mc.hint.es
 lib/mc/mc.hlp
 lib/mc/mc.lib
 lib/mc/mc.menu
+lib/mc/syntax/ada95.syntax
 lib/mc/syntax/c.syntax
 lib/mc/syntax/changelog.syntax
 lib/mc/syntax/diff.syntax
@@ -48,6 +50,7 @@ lib/mc/syntax/html.syntax
 lib/mc/syntax/java.syntax
 lib/mc/syntax/latex.syntax
 lib/mc/syntax/lsm.syntax
+lib/mc/syntax/mail.syntax
 lib/mc/syntax/makefile.syntax
 lib/mc/syntax/ml.syntax
 lib/mc/syntax/nroff.syntax
@@ -56,6 +59,9 @@ lib/mc/syntax/perl.syntax
 lib/mc/syntax/python.syntax
 lib/mc/syntax/sh.syntax
 lib/mc/syntax/smalltalk.syntax
+lib/mc/syntax/swig.syntax
+lib/mc/syntax/texinfo.syntax
+lib/mc/syntax/unknown.syntax
 lib/mc/term/README.xterm
 lib/mc/term/ansi.ti
 lib/mc/term/linux.ti
@@ -68,11 +74,13 @@ man/man1/mcedit.1
 man/man8/mcserv.8
 share/idl/FileManager.idl
 share/idl/Makefile.in
+share/gnome/help/gmc/C/figs
 share/gnome/help/gmc/C/topic.dat
 share/locale/ca/LC_MESSAGES/mc.mo
 share/locale/cs/LC_MESSAGES/mc.mo
 share/locale/da/LC_MESSAGES/mc.mo
 share/locale/de/LC_MESSAGES/mc.mo
+share/locale/el/LC_MESSAGES/mc.mo
 share/locale/es/LC_MESSAGES/mc.mo
 share/locale/es_ES/LC_MESSAGES/mc.mo
 share/locale/fi/LC_MESSAGES/mc.mo
@@ -85,6 +93,7 @@ share/locale/no/LC_MESSAGES/mc.mo
 share/locale/pl/LC_MESSAGES/mc.mo
 share/locale/ro/LC_MESSAGES/mc.mo
 share/locale/ru/LC_MESSAGES/mc.mo
+share/locale/sv/LC_MESSAGES/mc.mo
 share/locale/wa/LC_MESSAGES/mc.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
 share/mime-info/mc.keys
@@ -105,6 +114,7 @@ share/pixmaps/mc/gnome-audio-x-voc.png
 share/pixmaps/mc/gnome-audio-x-wav.png
 share/pixmaps/mc/i-zipdisk.png
 share/pixmaps/mc/i-zipdisk2.png
+share/pixmaps/mc/gnome-application-pdf.png
 share/pixmaps/mc/gnome-audio.png
 share/pixmaps/mc/gnome-compressed.png
 share/pixmaps/mc/gnome-core.png
@@ -158,7 +168,6 @@ share/pixmaps/mc/i-symlink.png
 share/pixmaps/mc/makefile.xpm
 share/pixmaps/mc/sound.xpm
 share/pixmaps/mc/trash.xpm
-@dirrm share/gnome/help/gmc/C/images
 @dirrm share/gnome/help/gmc/C
 @dirrm share/gnome/help/gmc
 @dirrm share/pixmaps/mc
