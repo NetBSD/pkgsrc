@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/09 12:33:00 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/25 03:44:24 minskim Exp $
 #
 
 DISTNAME=	IPC-SharedCache-1.3
@@ -11,7 +11,9 @@ COMMENT=	Cache data in shared memory
 
 DEPENDS+=	p5-IPC-ShareLite>=0.06:../../devel/p5-IPC-ShareLite
 
-USE_BUILDLINK2=	YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/IPC/SharedCache/.packlist
 
 .include "../../lang/perl5/module.mk"
