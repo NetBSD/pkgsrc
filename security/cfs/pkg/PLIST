@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2001/06/05 22:19:11 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/06/07 15:35:15 jlam Exp $
 bin/cfs_attach
 bin/cfs_cat
 bin/cfs_detach
@@ -18,6 +18,5 @@ man/man8/cfs_cat.8
 man/man8/cfs_name.8
 man/man8/cfsd.8
 sbin/cfsd
-share/doc/cfs/README.netbsd
 share/doc/cfs/notes.ms
 @dirrm share/doc/cfs
