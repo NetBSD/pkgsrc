@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.19 2003/07/17 22:52:40 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/12/24 12:51:31 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
-DISTNAME=	teTeX-texmfsrc-1.0.1
-PKGNAME=	teTeX-sharesrc-1.0.1
-PKGREVISION=	1
+DISTNAME=	tetex-texmfsrc-2.0.2
+PKGNAME=	teTeX-sharesrc-2.0.2
 WRKSRC=		${WRKDIR}
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
+MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/2.0/distrib/}
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
-COMMENT=	Sources for machine-independent part of teTeX
+COMMENT=	Sources for machine-independent part of teTeX, version 2
 
-DEPENDS+=	teTeX-share>=1.0.2nb1:../teTeX-share
+CONFLICTS+=	teTeX2-sharesrc-[0-9]*
+
+DEPENDS+=	teTeX-share>=2.0.2:../teTeX-share
 
 DIST_SUBDIR=	teTeX
 USE_BUILDINK2=	yes
@@ -22,16 +23,12 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
 
-FILESDIR=	${.CURDIR}/../../print/teTeX-share/files
-EXTRA_PATCH=	${FILESDIR}/latex.ltx.diff
-
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
+.if defined(EXTRACT_USING_PAX)
 	cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${PAX} -O -r
-
-post-install:
-	@cd ${PREFIX}/share/texmf/source/latex/base && \
-	  ${PATCH} ${_PATCH_BACKUP_ARG} .orig < ${EXTRA_PATCH} && \
-	  ${RM} latex.ltx.orig
+.else
+	cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${GTAR} -xpf -
+.endif
 
 .include "../../mk/bsd.pkg.mk"
