@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.45 2001/10/24 19:01:00 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.46 2001/10/24 19:46:45 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -245,14 +245,17 @@ MAKEFILE_PATTERNS+=	*.mk
 REPLACE_LIBNAME_PATTERNS+=	${MAKEFILE_PATTERNS}
 _REPLACE_LIBNAME_PATTERNS_FIND=	\
 	${REPLACE_LIBNAME_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1}
+_REPLACE_LIBNAME_CONFIGURE_PATTERNS_FIND=	\
+	-name "${CONFIGURE_SCRIPT:T}"
+
+REPLACE_LIBNAMES_CONFIGURE+=	\
+	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_LIBNAME_CONFIGURE_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
 
 REPLACE_LIBNAMES+=	\
 	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_LIBNAME_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
-.endif
 
-.if defined(REPLACE_LIBNAMES) || defined(REPLACE_LIBNAME_PATTERNS)
 .if defined(HAS_CONFIGURE) || defined(GNU_CONFIGURE)
-pre-configure: replace-libnames-configure
+_CONFIGURE_PREREQ+=	replace-libnames-configure
 
 # Fix linking on a.out platforms in configure scripts by changing library
 # references to the true library names.
@@ -261,11 +264,11 @@ replace-libnames-configure:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.replace_libnames_configure_done;	\
 	if [ ! -f $${cookie} ]; then					\
-		replace_files="${CONFIGURE_SCRIPT}";			\
+		replace_files="${REPLACE_LIBNAMES_CONFIGURE}";		\
 		message="Fixing library name references in configure scripts:"; \
 		${_REPLACE_LIBNAMES_SCRIPT};				\
 	fi
-.endif	# HAS_CONFIGURE
+.endif
 
 post-configure: replace-libnames-makefiles
 
@@ -280,7 +283,7 @@ replace-libnames-makefiles:
 		message="Fixing library name references in Makefiles:";	\
 		${_REPLACE_LIBNAMES_SCRIPT};				\
 	fi
-.endif	# REPLACE_LIBNAMES
+.endif	# a.out
 
 REPLACE_RPATH_PATTERNS+=	${MAKEFILE_PATTERNS}
 _REPLACE_RPATH_PATTERNS_FIND=	\
