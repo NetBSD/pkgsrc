@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1999/08/29 20:34:13 tron Exp $
+
+--- gncal/Makefile.in.orig	Sun Aug 29 22:27:09 1999
++++ gncal/Makefile.in	Sun Aug 29 22:28:20 1999
+@@ -517,7 +517,7 @@
+ 
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)$(help_base)/C
++#	$(mkinstalldirs) $(DESTDIR)$(help_base)/C
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
