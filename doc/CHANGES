@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3868 2003/11/27 16:14:43 grant Exp $
+$NetBSD: CHANGES,v 1.3869 2003/11/27 16:31:40 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4654,3 +4654,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated galeon to 1.2.13 [abs 2003-11-27]
 	Updated mozilla-bin to 1.5 [grant 2003-11-27]
 	Updated MozillaFirebird-bin to 0.7 [grant 2003-11-27]
+	Updated aegis to 4.15 [recht 2003-11-27]
+	Updated tightvncviewer to 1.2.9 [recht 2003-11-27]
