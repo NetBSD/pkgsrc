@@ -3,7 +3,7 @@
 # Date created:         18 August 1997
 # Whom:                 Chuck Robey (chuckr@freebsd.org)
 #
-# $NetBSD: Makefile,v 1.2 1998/02/16 17:43:24 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/02/16 23:06:40 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/15 21:24:42 steve Exp
 #
 
@@ -20,6 +20,7 @@ MAN1=		a2ps.1 ogonkify.1
 PAPER_SIZE?=
 STRIP=
 CONFIGURE_ARGS+=	--with-medium=${PAPER_SIZE}
+CONFIGURE_ENV+=		LPR=lpr
 
 ALL_TARGET=	all PAPERSIZE=${PAPER_SIZE}
 
