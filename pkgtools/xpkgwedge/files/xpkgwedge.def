@@ -1,4 +1,4 @@
-/*	$NetBSD: xpkgwedge.def,v 1.4 2000/12/31 14:17:09 jlam Exp $	*/
+/*	$NetBSD: xpkgwedge.def,v 1.5 2001/06/16 08:53:49 veego Exp $	*/
 
 #ifdef AfterVendorCF
 
@@ -32,6 +32,25 @@ X11_ROOT = ProjectRoot
  * X11 root, and one for the user-set prefix.
  */
 #define X11ProjectRoot $(X11_ROOT)
+
+/* 
+ * InstallAppDefaultsLong - general rule to install application default file
+ * if the InstallAppDefFiles configuration parameter is set.
+ *
+ * This is the same as the one in X11.tmpl, but without the LinkConfDirectory.
+ * LinkConfDirectory removes the app-defaults directory in $(PREFIX)/lib/X11
+ * and creates a link to the real X11 app-defaults directory and moves the old
+ * app-defaults files into it. This is not what we want for pkgsrc.
+ */
+#ifndef InstallAppDefaultsLong
+#if InstallAppDefFiles
+#define InstallAppDefaultsLong(file,class)				@@\
+InstallNamedTarget(install,file.ad,$(INSTAPPFLAGS),$(XAPPLOADDIR),class)
+#else
+#define InstallAppDefaultsLong(file,class)				@@\
+InstallNamedTargetNoClobber(install,file.ad,$(INSTAPPFLAGS),$(XAPPLOADDIR),class)
+#endif /* InstallAppDefFiles */
+#endif /* InstallAppDefaultsLong */
 
 #ifdef UseInstalled
 /*
