@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2001/01/11 07:03:04 tron Exp $
+# $NetBSD: Makefile.common,v 1.27 2001/02/25 04:18:23 hubertf Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -105,7 +105,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.pre \
 PLIST_SUBST+=	NS_VERS=${NS_VERS} LDAP_VERS=${LDAP_VERS} BINNAME=${BINNAME}
 
 do-install:
-	${MKDIR} ${MOZILLA_HOME}/java/classes
+	${INSTALL_DATA_DIR} ${MOZILLA_HOME}/java/classes
 	${INSTALL_SCRIPT} ${WRKSRC}/vreg ${MOZILLA_HOME}
 .for file in ifc11.jar iiop10.jar jae40.jar java40.jar jio40.jar jsd10.jar \
     ldap${LDAP_VERS}.jar resource.jar scd10.jar

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/16 15:11:01 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/25 04:17:50 hubertf Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10nb1
@@ -32,7 +32,7 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME}/linux/linuxxdoom ${PREFIX}/bin/xdoom
 	${INSTALL_PROGRAM} ${WRKSRC}/sndserv/linux/sndserver ${PREFIX}/bin/sndserver
-	${MKDIR} ${PREFIX}/share/doom
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doom
 	${GUNZIP_CMD} -c ${DISTDIR}/doom-1.8.wad.gz > ${PREFIX}/share/doom/doom1.wad
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/17 17:06:46 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/25 04:18:27 hubertf Exp $
 # FreeBSD Id: ports/x11-toolkits/rubytk/Makefile,v 1.3 1999/08/31 02:59:34 peter Exp
 
 DISTNAME=	ruby-1.4.6
@@ -52,7 +52,7 @@ do-install:
 .for dir in ${EXTS}
 	@${ECHO_MSG} "Installing in ${dir}..."
 	@cd ${WRKSRC}/${dir}; ${SETENV} ${MAKE_ENV} ${MAKE} ${INSTALL_TARGET}
-	${MKDIR} ${PREFIX}/share/examples/ruby/${dir}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ruby/${dir}
 	${INSTALL_DATA} ${WRKSRC}/${dir}/sample/* ${PREFIX}/share/examples/ruby/${dir}
 .endfor
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 09:07:02 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:17:55 hubertf Exp $
 
 DISTNAME=		cint5.14
 PKGNAME=		cint-5.14.40
@@ -23,7 +23,7 @@ do-build:
 	esac
 
 do-install:
-	${MKDIR} ${PREFIX}/cint
+	${INSTALL_DATA_DIR} ${PREFIX}/cint
 	${INSTALL_PROGRAM} ${WRKDIR}/cint ${PREFIX}/cint
 	${INSTALL_PROGRAM} ${WRKDIR}/makecint ${PREFIX}/cint
 	${SED} "s;XXXPREFIXXXX;${PREFIX};g" <${FILESDIR}/cint.sh >${PREFIX}/bin/cint
@@ -32,7 +32,7 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/MAKEINFO ${PREFIX}/cint
 	${CP} -r ${WRKDIR}/include ${WRKDIR}/stl ${PREFIX}/cint
 	${RM} ${PREFIX}/cint/include/Makeit ${PREFIX}/cint/include/make*
-	${MKDIR} ${PREFIX}/cint/lib
+	${INSTALL_DATA_DIR} ${PREFIX}/cint/lib
 	${CP} -r ${WRKDIR}/lib/prec_stl ${PREFIX}/cint/lib
 	${INSTALL_DATA} ${WRKDIR}/G__ci.h ${PREFIX}/cint
 

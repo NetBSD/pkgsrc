@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/17 17:49:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/25 04:18:12 hubertf Exp $
 # FreeBSD Id: ports/security/crack/Makefile,v 1.11 1999/09/04 19:24:50 obrien Exp
 
 DISTNAME=	crack5.0
@@ -31,18 +31,20 @@ do-build:
 	(cd ${WRKSRC} ; ./Crack -makeonly)
 
 do-install:
-	@${MKDIR} ${PREFIX}/libexec/crack
+	@${INSTALL_DATA_DIR} ${PREFIX}/libexec/crack
 	@${CHMOD} go-rwx ${PREFIX}/libexec/crack
-	@${MKDIR} ${PREFIX}/share/crack/conf
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/conf
 	@${CHMOD} go-rwx ${PREFIX}/share/crack
-	@${MKDIR} ${PREFIX}/share/crack/dict
-	@${MKDIR} ${PREFIX}/share/doc/crack
-	@${MKDIR} ${PREFIX}/share/crack/extra ${PREFIX}/share/crack/run
-	@${MKDIR} ${PREFIX}/share/crack/scripts
-	@${MKDIR} ${PREFIX}/share/crack/dict/1 ${PREFIX}/share/crack/dict/2 \
-		${PREFIX}/share/crack/dict/3
-	@${MKDIR} ${PREFIX}/share/crack/run
-	@${MKDIR} ${PREFIX}/crack/run/dict
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/dict
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/crack
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/extra \
+			     ${PREFIX}/share/crack/run
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/scripts
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/dict/1\
+			     ${PREFIX}/share/crack/dict/2 \
+		             ${PREFIX}/share/crack/dict/3
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/crack/run
+	@${INSTALL_DATA_DIR} ${PREFIX}/crack/run/dict
 	${INSTALL_SCRIPT} ${WRKSRC}/Crack ${PREFIX}/sbin
 	@${SED} 's|@@PREFIX@@|${PREFIX}|g' < ${WRKSRC}/Reporter > \
 	    ${PREFIX}/sbin/Reporter

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2001/02/17 17:06:24 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2001/02/25 04:18:26 hubertf Exp $
 
 DISTNAME=		gnome-libs-1.2.8
 CATEGORIES=		x11 gnome
@@ -62,9 +62,9 @@ pre-build:
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} gnomesupport.h
 
 post-install:
-	${MKDIR} ${PREFIX}/etc/CORBA/servers
+	${INSTALL_DATA_DIR} ${PREFIX}/etc/CORBA/servers
 	${TOUCH} ${PREFIX}/etc/CORBA/servers/.directory
-	${MKDIR} ${LOCALSTATEDIR}
+	${INSTALL_DATA_DIR} ${LOCALSTATEDIR}
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/libart.m4 \
 		${LOCALBASE}/share/aclocal/libart.m4

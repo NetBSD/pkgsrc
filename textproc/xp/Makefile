@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:37:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:18 hubertf Exp $
 #
 
 DISTNAME=	xp
@@ -24,9 +24,9 @@ post-extract:
 	${RM} -r ${WRKDIR}/docs/api/CVS ${WRKDIR}/docs/api/images/CVS
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/java
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKDIR}/xp.jar ${PREFIX}/lib/java
-	${MKDIR} ${PREFIX}/share/doc/java/xp
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/xp
 	cd ${WRKDIR}/docs ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/xp ; ${GTAR} pvxf - )
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java/xp
 

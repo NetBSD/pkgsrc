@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 13:56:13 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:38 hubertf Exp $
 #
 
 DISTNAME=	gkermit
@@ -17,7 +17,7 @@ NO_WRKSUBDIR=	yes
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gkermit ${PREFIX}/bin/gkermit; \
 	${INSTALL_MAN} ${WRKSRC}/gkermit.nr ${PREFIX}/man/man1/gkermit.1; \
-	${MKDIR} ${PREFIX}/share/doc/gkermit
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gkermit
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/gkermit
 
 .include "../../mk/bsd.pkg.mk"

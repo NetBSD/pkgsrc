@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 09:07:34 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:17:56 hubertf Exp $
 #
 
 DISTNAME=		tcl8.3.2
@@ -24,9 +24,9 @@ INSTALL_TARGET=		install
 
 post-install:
 	cd ${PREFIX}/bin && ${LN} -s tclsh8.3 tclsh
-	${MKDIR} ${PREFIX}/include/tcl
-	${MKDIR} ${PREFIX}/include/tcl/unix
-	${MKDIR} ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl
+	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl/unix
+	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl/generic
 	${INSTALL_DATA} ${WRKSRC}/tclUnixPort.h ${PREFIX}/include/tcl/unix
 	${INSTALL_DATA} ${WRKSRC}/../generic/tcl.h ${PREFIX}/include/tcl/generic
 	${INSTALL_DATA} ${WRKSRC}/../generic/tclCompile.h ${PREFIX}/include/tcl/generic

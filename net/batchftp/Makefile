@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:18:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:04 hubertf Exp $
 
 DISTNAME=	batchftp102
 PKGNAME=	batchftp-1.02
@@ -14,6 +14,6 @@ post-extract:
 	${LN} -fs ${FILESDIR}/Makefile ${WRKSRC}
 
 pre-install:
-	${MKDIR} ${PREFIX}/share/doc/batchftp
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/batchftp
 
 .include "../../mk/bsd.pkg.mk"

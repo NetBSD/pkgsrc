@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:25:03 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/25 04:17:59 hubertf Exp $
 # FreeBSD: ports/mail/rblcheck/Makefile,v 1.6 1999/08/25 06:50:47 obrien Exp
 #
 
@@ -17,7 +17,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rblcheck ${PREFIX}/bin
 .if !defined(NOPORTDOCS)
 	dst=${PREFIX}/share/doc/rblcheck; \
-	${MKDIR} $$dst; \
+	${INSTALL_DATA_DIR} $$dst; \
 	for i in ${DOCS}; do \
 		${INSTALL_DATA} ${WRKSRC}/docs/$$i $$dst; \
 	done

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/02/17 18:18:46 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/02/25 04:18:05 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
 #
 
@@ -39,7 +39,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/delegate
 	${INSTALL_DATA} ${WRKSRC}/doc/Manual.htm \
 	   ${PREFIX}/share/doc/delegate/manual.html
-	@${MKDIR} ${PREFIX}/share/doc/delegate
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/delegate
 	${INSTALL_DATA} ${WRKSRC}/doc/tutor-en.htm \
 	   ${PREFIX}/share/doc/delegate/tutorial-en.html
 	${INSTALL_DATA} ${WRKSRC}/doc/tutor-jp.htm \

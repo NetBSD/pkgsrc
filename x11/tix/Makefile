@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/17 17:06:48 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/25 04:18:27 hubertf Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/03/17 07:55:17 tg Exp
 
 DISTNAME=	Tix4.1.0.006
@@ -30,11 +30,10 @@ pre-configure:
 post-install:
 	@(cd ${WRKSRC}/.. && \
 	    ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET})
-	@${MKDIR} ${PREFIX}/man/man1
 	@${MV} ${PREFIX}/man/mann/tixwish.1 ${PREFIX}/man/man1
 	@${LN} -sf ${PREFIX}/bin/tixwish4.1.8.0 ${PREFIX}/bin/tixwish
 .for dir in generic unix
-	@${MKDIR} ${PREFIX}/include/tix/${dir}
+	@${INSTALL_DATA_DIR} ${PREFIX}/include/tix/${dir}
 	${INSTALL_DATA} ${WRKSRC}/../../${dir}/*.h ${PREFIX}/include/tix/${dir}
 .endfor
 	${RM} ${PREFIX}/include/tix/generic/tix.h

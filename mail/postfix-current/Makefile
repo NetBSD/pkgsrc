@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/17 18:25:01 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/25 04:17:58 hubertf Exp $
 
 DISTNAME=	snapshot-20010204
 PKGNAME=	postfix-20010204
@@ -56,7 +56,7 @@ post-build:
 	    <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.postfix
 
 pre-install:
-	${MKDIR} /etc/postfix ${PREFIX}/share/postfix \
+	${INSTALL_DATA_DIR} /etc/postfix ${PREFIX}/share/postfix \
 	    ${PREFIX}/share/doc/postfix ${PREFIX}/libexec/postfix
 	${CHOWN} root:wheel ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	${CHMOD} 755 ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
@@ -65,7 +65,7 @@ pre-install:
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${PREFIX}/etc
 	${LN} -sf ${PREFIX}/share/postfix/postfix-script /etc/postfix
-	-${MKDIR} ${POSTFIX_SPOOL}
+	-${INSTALL_DATA_DIR} ${POSTFIX_SPOOL}
 	${CHMOD} 755 ${POSTFIX_SPOOL}
 	${TEST} -f /etc/postfix/main.cf || \
 		${INSTALL_DATA} ${PREFIX}/share/postfix/main.cf /etc/postfix

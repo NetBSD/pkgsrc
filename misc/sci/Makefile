@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 18:09:23 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/25 04:18:02 hubertf Exp $
 #
 
 DISTNAME=	sci-0.5.6
@@ -12,7 +12,7 @@ COMMENT=	Curses based data entry via templates
 GNU_CONFIGURE=	# Yupp
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/sci ${PREFIX}/share/examples/sci
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sci ${PREFIX}/share/examples/sci
 	for i in COPYING README INSTALL NEWS ; do \
 		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/sci ; \
 	   done

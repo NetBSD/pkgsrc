@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 18:19:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:06 hubertf Exp $
 #
 
 DISTNAME=	openh323_1.1beta3
@@ -37,7 +37,7 @@ do-build:
 post-install:
 		cd ${WRKSRC}/include; for f in \*.h ; \
 			do ${BSD_INSTALL_DATA} $$f ${PREFIX}/include; done
-		-${MKDIR} ${PREFIX}/share/openh323
+		-${INSTALL_DATA_DIR} ${PREFIX}/share/openh323
 		cd ${WRKSRC}; ${BSD_INSTALL_DATA} openh323u.mak ${PREFIX}/share/openh323
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/02/17 18:09:22 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2001/02/25 04:18:02 hubertf Exp $
 #
 
 DISTNAME=	rpm-2.5.4
@@ -17,7 +17,7 @@ USE_GMAKE=	yes
 USE_LIBINTL=	yes
 
 pre-install:
-	${MKDIR} ${PREFIX}/include/rpm
+	${INSTALL_DATA_DIR} ${PREFIX}/include/rpm
 
 post-install:
 	${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL

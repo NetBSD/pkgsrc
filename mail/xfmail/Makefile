@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/17 18:25:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/25 04:18:00 hubertf Exp $
 #
 
 DISTNAME=		xfmail-1.3
@@ -24,7 +24,7 @@ USE_XPM=		YES
 GNU_CONFIGURE=		YES
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/xfmail
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xfmail
 	${INSTALL_DATA} ${WRKSRC}/Copyright ${PREFIX}/share/doc/xfmail
 
 .include "../../mk/bsd.pkg.mk"
