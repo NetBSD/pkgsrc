@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2004/05/09 22:04:30 fredb Exp $
+$NetBSD: patch-aa,v 1.14 2004/06/07 17:01:50 cube Exp $
 
---- src/sysdeps/bsd-common.c.orig	2004-01-13 13:32:34.000000000 -0600
+--- src/sysdeps/bsd-common.c.orig	2004-05-01 19:46:38.000000000 +0200
 +++ src/sysdeps/bsd-common.c
-@@ -255,7 +255,11 @@
+@@ -255,7 +255,11 @@ void
  gkrellm_sys_fs_get_mounts_list(void)
  	{
  	gchar		*s, *dev, *dir, *type;
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.13 2004/05/09 22:04:30 fredb Exp $
  	gint		mntsize, i;
  
  	if ((mntsize = getmntinfo(&mntbuf, MNT_NOWAIT)) == 0)
-@@ -281,12 +285,24 @@
+@@ -281,12 +285,24 @@ gkrellm_sys_fs_get_mounts_list(void)
  void
  gkrellm_sys_fs_get_fsusage(gpointer fs, gchar *dir)
  	{

@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/05/09 20:47:04 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/07 17:01:50 cube Exp $
 .include "../../sysutils/gkrellm/Makefile.common"
+
+PKGREVISION=		1
 
 GKRELLM_PKGBASE=	gkrellm-server
 COMMENT=		Monitoring daemon remotely accessible by a GKrellM client
@@ -13,7 +15,7 @@ CONF_FILES=		${PREFIX}/share/examples/gkrellm-server/gkrellmd.conf ${PREFIX}/etc
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD")
+.if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD")
 SPECIAL_PERMS+=         ${PREFIX}/bin/gkrellmd ${ROOT_USER} kmem 2711
 .endif
 
