@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2001/06/16 19:59:54 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2001/06/19 07:08:06 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 
 DISTNAME=		gqmpeg-0.8.3
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--enable-japanese
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
+USE_BUILDLINK_ONLY=	YES
 USE_CONFIG_WRAPPER=	YES
 
 .include "../../devel/gettext-lib/buildlink.mk"
