@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.44 2004/10/14 09:56:52 grant Exp $
+# $NetBSD: tools.mk,v 1.45 2004/10/14 11:41:40 grant Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -174,6 +174,7 @@ _TOOLS_OPSYS_INCOMPAT.yacc+=	# empty
 
 # Default to not requiring GNU tools.
 .for _tool_ in ${_TOOLS}
+_TOOLS_HAS_GNU.${_tool_}?=	NO
 _TOOLS_NEED_GNU.${_tool_}?=	NO
 _TOOLS_REPLACE.${_tool_}?=	NO
 _TOOLS_OVERRIDE.${_tool_}?=	NO
