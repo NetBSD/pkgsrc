@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/15 15:16:02 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/14 12:08:00 abs Exp $
 bin/rdiff-backup
 lib/python2.2/site-packages/rdiff_backup/C.so
 lib/python2.2/site-packages/rdiff_backup/FilenameMapping.py
@@ -9,25 +9,23 @@ lib/python2.2/site-packages/rdiff_backup/Hardlink.py
 lib/python2.2/site-packages/rdiff_backup/Hardlink.pyc
 lib/python2.2/site-packages/rdiff_backup/Main.py
 lib/python2.2/site-packages/rdiff_backup/Main.pyc
-lib/python2.2/site-packages/rdiff_backup/MiscStats.py
-lib/python2.2/site-packages/rdiff_backup/MiscStats.pyc
 lib/python2.2/site-packages/rdiff_backup/Rdiff.py
 lib/python2.2/site-packages/rdiff_backup/Rdiff.pyc
 lib/python2.2/site-packages/rdiff_backup/Security.py
 lib/python2.2/site-packages/rdiff_backup/Security.pyc
 lib/python2.2/site-packages/rdiff_backup/SetConnections.py
 lib/python2.2/site-packages/rdiff_backup/SetConnections.pyc
+lib/python2.2/site-packages/rdiff_backup/TempFile.py
+lib/python2.2/site-packages/rdiff_backup/TempFile.pyc
 lib/python2.2/site-packages/rdiff_backup/Time.py
 lib/python2.2/site-packages/rdiff_backup/Time.pyc
 lib/python2.2/site-packages/rdiff_backup/__init__.py
 lib/python2.2/site-packages/rdiff_backup/__init__.pyc
 lib/python2.2/site-packages/rdiff_backup/_librsync.so
+lib/python2.2/site-packages/rdiff_backup/backup.py
+lib/python2.2/site-packages/rdiff_backup/backup.pyc
 lib/python2.2/site-packages/rdiff_backup/connection.py
 lib/python2.2/site-packages/rdiff_backup/connection.pyc
-lib/python2.2/site-packages/rdiff_backup/destructive_stepping.py
-lib/python2.2/site-packages/rdiff_backup/destructive_stepping.pyc
-lib/python2.2/site-packages/rdiff_backup/highlevel.py
-lib/python2.2/site-packages/rdiff_backup/highlevel.pyc
 lib/python2.2/site-packages/rdiff_backup/increment.py
 lib/python2.2/site-packages/rdiff_backup/increment.pyc
 lib/python2.2/site-packages/rdiff_backup/iterfile.py
@@ -40,10 +38,12 @@ lib/python2.2/site-packages/rdiff_backup/log.py
 lib/python2.2/site-packages/rdiff_backup/log.pyc
 lib/python2.2/site-packages/rdiff_backup/manage.py
 lib/python2.2/site-packages/rdiff_backup/manage.pyc
+lib/python2.2/site-packages/rdiff_backup/metadata.py
+lib/python2.2/site-packages/rdiff_backup/metadata.pyc
+lib/python2.2/site-packages/rdiff_backup/regress.py
+lib/python2.2/site-packages/rdiff_backup/regress.pyc
 lib/python2.2/site-packages/rdiff_backup/restore.py
 lib/python2.2/site-packages/rdiff_backup/restore.pyc
-lib/python2.2/site-packages/rdiff_backup/rlist.py
-lib/python2.2/site-packages/rdiff_backup/rlist.pyc
 lib/python2.2/site-packages/rdiff_backup/robust.py
 lib/python2.2/site-packages/rdiff_backup/robust.pyc
 lib/python2.2/site-packages/rdiff_backup/rorpiter.py
