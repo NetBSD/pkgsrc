@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/09/03 14:52:50 wiz Exp $
+$NetBSD: md5,v 1.4 2001/02/28 13:06:58 wiz Exp $
 
-MD5 (Net-SNMP-3.50.tar.gz) = 03b57f94c8d2fc2a37326924a5bb29a2
+MD5 (Net-SNMP-3.60.tar.gz) = 9b416095aec3615b60c527eb2cb1c449
