@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.441 2000/05/30 22:00:48 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.442 2000/05/30 22:36:53 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -19,26 +19,6 @@
 
 ##### Include any preferences, if not already included, and common definitions
 .include "../../mk/bsd.prefs.mk"
-
-##### Define __PLATFORM_OK only if the OS matches the pkg's allowed list.
-.if defined(ONLY_FOR_PLATFORM) && !empty(ONLY_FOR_PLATFORM)
-.for __tmp__ in ${ONLY_FOR_PLATFORM}
-.if ${MACHINE_PLATFORM:M${__tmp__}} != ""
-__PLATFORM_OK?=
-.endif	# MACHINE_PLATFORM
-.endfor	# __tmp__
-.else	# ONLY_FOR_PLATFORM
-__PLATFORM_OK?=
-.endif	# ONLY_FOR_PLATFORM
-
-.for __tmp__ in ${NOT_FOR_PLATFORM}
-.if ${MACHINE_PLATFORM:M${__tmp__}} != ""
-.undef __PLATFORM_OK
-.endif	# MACHINE_PLATFORM
-.endfor	# __tmp__
-.if !defined(__PLATFORM_OK)
-IGNORE=			"is not available for ${MACHINE_PLATFORM}"
-.endif
 
 ##### Some overrides of defaults below on a per-OS basis.
 .if (${OPSYS} == "NetBSD")
@@ -940,6 +920,25 @@ IGNORE=	"Unacceptable license: ${LICENSE}." \
 	"	To build this package, add this line to your /etc/mk.conf:" \
 	"	ACCEPTABLE_LICENSES+=${LICENSE}"
 .endif	# _ACCEPTABLE
+.else	# This can't be in an "elif":
+# Define __PLATFORM_OK only if the OS matches the pkg's allowed list.
+. if defined(ONLY_FOR_PLATFORM) && !empty(ONLY_FOR_PLATFORM)
+.  for __tmp__ in ${ONLY_FOR_PLATFORM}
+.   if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+__PLATFORM_OK?=	yes
+.   endif	# MACHINE_PLATFORM
+.  endfor	# __tmp__
+. else	# !ONLY_FOR_PLATFORM
+__PLATFORM_OK?=	yes
+. endif	# ONLY_FOR_PLATFORM
+. for __tmp__ in ${NOT_FOR_PLATFORM}
+.  if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+.   undef __PLATFORM_OK
+.  endif	# MACHINE_PLATFORM
+. endfor	# __tmp__
+. if !defined(__PLATFORM_OK)
+IGNORE=			"is not available for ${MACHINE_PLATFORM}"
+. endif	# !__PLATFORM_OK
 .endif	# .elif row
 
 .if defined(IGNORE)
