@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/05 12:39:55 xtraeme Exp $
+
+SHA1 (glaxium_0.5.tar.gz) = 42526a009a377a6fede7b7d343a0cd57c2f8e23e
+Size (glaxium_0.5.tar.gz) = 1692219 bytes
+SHA1 (patch-aa) = 9b8299ed10aaea1e862c929b6f20eef0811cae35
