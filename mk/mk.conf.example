@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.166 2000/12/11 00:03:07 jlam Exp $
+# $NetBSD: mk.conf.example,v 1.167 2001/01/07 19:39:26 skrll Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -858,11 +858,11 @@ PAPERSIZE=	A4
 
 # United Kingdom
 #
-#MASTER_SITE_XCONTRIB=	ftp://sunsite.org.uk/pub/Mirrors/ftp.x.org/contrib/
-#MASTER_SITE_GNU=	ftp://sunsite.org.uk/pub/packages/gnu/
-#MASTER_SITE_PERL_CPAN=	ftp://sunsite.org.uk/pub/packages/perl/CPAN/modules/by-module/
-#MASTER_SITE_TEX_CTAN=	ftp://sunsite.org.uk/pub/packages/tex/uk-tex/
-#MASTER_SITE_SUNSITE=	ftp://sunsite.org.uk/pub/Mirrors/sunsite.unc.edu/pub/Linux/
-#MASTER_SITE_BACKUP=	ftp://sunsite.org.uk/pub/packages/NetBSD/packages/distfiles/
+#MASTER_SITE_XCONTRIB=	ftp://sunsite.org.uk/Mirrors/ftp.x.org/contrib/
+#MASTER_SITE_GNU=	ftp://sunsite.org.uk/packages/gnu/
+#MASTER_SITE_PERL_CPAN=	ftp://sunsite.org.uk/packages/perl/CPAN/modules/by-module/
+#MASTER_SITE_TEX_CTAN=	ftp://sunsite.org.uk/packages/tex/uk-tex/
+#MASTER_SITE_SUNSITE=	ftp://sunsite.org.uk/Mirrors/sunsite.unc.edu/pub/Linux/
+#MASTER_SITE_BACKUP=	ftp://sunsite.org.uk/packages/NetBSD/packages/distfiles/
 
 .endif # BSD_PKG_MK
