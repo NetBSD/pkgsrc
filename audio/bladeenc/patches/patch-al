@@ -1,0 +1,80 @@
+$NetBSD: patch-al,v 1.1 1999/09/13 03:33:36 simonb Exp $
+
+--- l3side.h.orig	Sat Jul 24 07:50:33 1999
++++ l3side.h	Mon Sep 13 12:53:43 1999
+@@ -56,8 +56,8 @@
+ typedef	char	C192_3[192][3];
+ 
+ typedef struct {
+-	unsigned cbl_max;
+-	unsigned cbs_start;
++	unsigned int cbl_max;
++	unsigned int cbs_start;
+ } III_cb_info;
+ 
+ 
+@@ -81,39 +81,39 @@
+ 	} III_input3; /* ch */
+ 
+ typedef struct {
+-	unsigned part2_3_length;
+-	unsigned big_values;
+-	unsigned count1;
+- 	unsigned global_gain;
+-	unsigned scalefac_compress;
+-	unsigned window_switching_flag;
+-	unsigned block_type;
+-	unsigned mixed_block_flag;
+-	unsigned table_select[3];
++	unsigned int part2_3_length;
++	unsigned int big_values;
++	unsigned int count1;
++ 	unsigned int global_gain;
++	unsigned int scalefac_compress;
++	unsigned int window_switching_flag;
++	unsigned int block_type;
++	unsigned int mixed_block_flag;
++	unsigned int table_select[3];
+ int /*	unsigned */ subblock_gain[3];
+-	unsigned region0_count;
+-	unsigned region1_count;
+-	unsigned preflag;
+-	unsigned scalefac_scale;
+-	unsigned count1table_select;
+-
+-	unsigned part2_length;
+-	unsigned sfb_lmax;
+-	unsigned sfb_smax;
+-	unsigned address1;
+-	unsigned address2;
+-	unsigned address3;
++	unsigned int region0_count;
++	unsigned int region1_count;
++	unsigned int preflag;
++	unsigned int scalefac_scale;
++	unsigned int count1table_select;
++
++	unsigned int part2_length;
++	unsigned int sfb_lmax;
++	unsigned int sfb_smax;
++	unsigned int address1;
++	unsigned int address2;
++	unsigned int address3;
+ 	double quantizerStepSize;
+ 	/* added for LSF */
+-	unsigned *sfb_partition_table;
+-	unsigned slen[4];
++	unsigned int *sfb_partition_table;
++	unsigned int slen[4];
+ } gr_info;
+ 
+ typedef struct {
+ 	int main_data_begin; /* unsigned -> int */
+-	unsigned private_bits;
++	unsigned int private_bits;
+ 	int resvDrain;
+-	unsigned scfsi[2][4];
++	unsigned int scfsi[2][4];
+ 	struct {
+ 		struct gr_info_s {
+ 			gr_info tt;

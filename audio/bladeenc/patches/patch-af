@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 1999/09/13 03:33:35 simonb Exp $
+
+--- encode.c.orig	Sat Jul 24 07:50:33 1999
++++ encode.c	Mon Sep 13 12:52:31 1999
+@@ -25,7 +25,7 @@
+ 
+ /*____ rebuffer_audio() __________________________________________________*/
+ 
+-void rebuffer_audio( short buffer[2][1152], short * insamp, unsigned long samples_read, int stereo )
++void rebuffer_audio( short buffer[2][1152], short * insamp, unsigned int samples_read, int stereo )
+ {
+   int j;
+ 

@@ -1,0 +1,24 @@
+$NetBSD: patch-ai,v 1.1 1999/09/13 03:33:35 simonb Exp $
+
+--- huffman.h.orig	Sat Jul 24 07:50:33 1999
++++ huffman.h	Mon Sep 13 12:53:13 1999
+@@ -41,7 +41,7 @@
+  *				removed				      *
+  *********************************************************************/	
+  
+-#define HUFFBITS unsigned long int
++#define HUFFBITS unsigned int
+ #define HTN	34
+ #define MXOFF	250
+  
+@@ -53,8 +53,8 @@
+   unsigned int linmax;	/*max number to be stored in linbits	*/
+   int ref;		/*a positive value indicates a reference*/
+   HUFFBITS *table;	/*pointer to array[xlen][ylen]		*/
+-  unsigned char *hlen;	/*pointer to array[xlen][ylen]		*/
+-  unsigned char(*val)[2];/*decoder tree				*/ 
++  u_int8_t *hlen;	/*pointer to array[xlen][ylen]		*/
++  u_int8_t(*val)[2];/*decoder tree				*/ 
+   unsigned int treelen;	/*length of decoder tree		*/
+ };
+ 
