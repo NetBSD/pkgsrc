@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2644 2004/12/03 17:43:27 wiz Exp $
+$NetBSD: TODO,v 1.2645 2004/12/03 22:53:27 lukem Exp $
 
 Suggested new packages
 ======================
@@ -252,6 +252,14 @@ Suggested new packages
 	ices-mp3-v2
 	Major version 2 of ices-mp3
 	http://www.icecast.org/ices.php
+
+	cricket 1.0.5
+	http://cricket.sourceforge.net
+	Monitoring & graphing system based on RRDtool
+
+	The Ur-Quan Masters
+	http://sc2.sourceforge.net
+	Open source version of the classic game "Star Control 2"
 
 
 Suggested package updates
