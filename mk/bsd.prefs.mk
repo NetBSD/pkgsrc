@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.47 2001/07/03 02:20:38 mjl Exp $
+# $NetBSD: bsd.prefs.mk,v 1.48 2001/07/05 21:11:07 abs Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -92,6 +92,17 @@ MACHINE_GNU_PLATFORM?=	${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
 NEED_OWN_INSTALL_TARGET=no
 
 .include <bsd.own.mk>
+
+# /usr/share/mk/bsd.own.mk on NetBSD 1.3 does not define OBJECT_FMT
+.if ${MACHINE_PLATFORM:MNetBSD-1.3*} != ""
+.if ${MACHINE_ARCH} == "alpha" || \
+${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
+${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc64"
+OBJECT_FMT?=ELF
+.else
+OBJECT_FMT?=a.out
+.endif
+.endif
 
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS") || (${OPSYS} == "Linux")
 SHAREOWN?=		${DOCOWN}
