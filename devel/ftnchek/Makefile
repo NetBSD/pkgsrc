@@ -1,21 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:38:24 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.4 2001/03/15 23:48:22 jtb Exp $
 
-DISTNAME=		ftnchek
-PKGNAME=		ftnchek-3.0.0
-CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.netlib.org/fortran/ \
-			ftp://netlib.bell-labs.com/netlib/fortran/ \
-			ftp://www.hensa.ac.uk/mirrors/netlib/fortran/
-EXTRACT_SUFX=		.tgz
+DISTNAME=	ftnchek-3.0.3
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_SUNSITE:=devel/lang/fortran/}
 
-MAINTAINER=		jasontd@indigo.ie
-HOMEPAGE=		http://www.dsm.fordham.edu/~ftnchek
-COMMENT=		Static analyzer for Fortran programs
+MAINTAINER=	jtb@netbsd.org
+HOMEPAGE=	http://www.dsm.fordham.edu/~ftnchek
+COMMENT=	Static analyzer for Fortran programs
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--libdir=${PREFIX}/libexec
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--libdir=${PREFIX}/libexec
+
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ftnchek

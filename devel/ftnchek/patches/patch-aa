@@ -1,31 +1,29 @@
-$NetBSD: patch-aa,v 1.1 2000/12/08 21:00:57 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/15 23:48:23 jtb Exp $
 
---- Makefile.in.orig	Mon Oct  2 12:56:30 2000
-+++ Makefile.in
-@@ -89,7 +89,7 @@
- manext		= .1
- sgimansubdir	= @sgimansubdir@
- libdir		= @libdir@/ftnchek
--lispdir		= @lispdir@
-+lispdir		= $(prefix)/share/emacs/site-lisp
+--- configure.orig	Mon Mar  5 18:56:11 2001
++++ configure
+@@ -2510,6 +2510,8 @@
+     else
+       OS_FLAGS="-O2";
+     fi;;
++  netbsd*)
++    ;;
+   next*)
+     OS_FLAGS="-O2";;
  
- # Define suffix for executables, for non-unix systems which have one.
- EXE		= @EXE@
-@@ -470,14 +470,9 @@
+@@ -2574,13 +2576,13 @@
+ fi
  
- #  The emacs lisp file will be installed only if lispdir exists.
- install-lisp:
--	@if test -d "$(lispdir)" ; \
--	then \
--	  echo $(CP) ftnchek.el $(lispdir)/ftnchek.el ; \
--	  if $(CP) ftnchek.el $(lispdir)/ftnchek.el ; \
--	  then \
--	     echo "If desired, use emacs to byte-compile $(lispdir)/ftnchek.el"; \
--	  fi \
--	fi
-+	-mkdir -p $(lispdir)
-+	-cp ftnchek.el $(lispdir)/ftnchek.el
-+	-echo "If desired, use emacs to byte-compile $(lispdir)/ftnchek.el"
  
- # Remove everything that the install target installed.
- uninstall:
+-CFLAGS="-DUNIX $OS_FLAGS $PROTOFLAG \$(OPTIONS)"
++CFLAGS="$CFLAGS -DUNIX $OS_FLAGS $PROTOFLAG \$(OPTIONS)"
+ echo "$ac_t""Compile command is $CC $CFLAGS" 1>&6
+ if test $GCC; then
+ echo "$ac_t""If you prefer using cc, setenv CC cc; rm config.cache and re-run" 1>&6
+ fi
+ 
+-LDFLAGS=
++
+ 
+ 
+ EXE=
