@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:18:40 tv Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/09 09:32:19 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
-PKGREVISION=	1
+PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG}
 DISTFILES=		X11R${XORG_VER}-src1.tar.gz X11R${XORG_VER}-src2.tar.gz \
@@ -45,6 +45,17 @@ SUBST_MESSAGE.mkstrs=	"Fixing path of makestrs."
 post-install:
 	@${LDCONFIG} ${X11ROOT}/lib || ${TRUE}
 .endif
+
+pre-install:
+.if !exists(${X11ROOT}/lib/pkgconfig)
+	${INSTALL_DATA_DIR} ${X11BASE}/lib/pkgconfig
+.endif
+.for f in fixesext.pc compositeext.pc
+	@${SED} -e "s,@X11BASE@,${X11BASE},g"		\
+		-e "s,@LOCALBASE@,${LOCALBASE},g"	\
+		${FILESDIR}/${f} > ${WRKSRC}/${f}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${X11BASE}/lib/pkgconfig/${f}
+.endfor
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
