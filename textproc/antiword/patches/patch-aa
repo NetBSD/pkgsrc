@@ -1,16 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/07/05 13:53:50 rh Exp $
+$NetBSD: patch-aa,v 1.2 2000/08/04 13:11:41 agc Exp $
 
---- Makefile.orig	Mon Nov  1 20:21:36 1999
-+++ Makefile	Wed Jul  5 15:46:26 2000
-@@ -2,7 +2,6 @@
- # Makefile for antiword (Linux version)
- #
- 
--CC	= gcc
- LD	= gcc
- 
- # must be equal to DEBUG or NDEBUG
-@@ -10,7 +9,7 @@
+--- Makefile	2000/08/02 10:33:55	1.1
++++ Makefile	2000/08/02 10:34:31
+@@ -10,7 +10,7 @@
  
  LDLIBS	=
  
@@ -19,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/07/05 13:53:50 rh Exp $
  LDFLAGS	=
  
  OBJS	=\
-@@ -22,12 +21,16 @@
+@@ -22,12 +22,16 @@
  PROGS =\
  	antiword
  
