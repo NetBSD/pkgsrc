@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/11/05 08:22:12 agc Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/07 02:21:16 jlam Exp $
 #
 
 DISTNAME=	spread-src-3.17.1
@@ -38,8 +38,8 @@ RUNTIME_DIR=	/var/run/spread
 RCD_SCRIPTS=	spread
 PKG_GROUPS=	${SPREAD_USER}
 PKG_USERS=	${SPREAD_USER}:${SPREAD_GROUP}
-CONF_FILES=	${EXAMPLEDIR}/spread.access_ip.sample ${PKG_SYSCONFBASE}/spread.access_ip
-CONF_FILES+=	${EXAMPLEDIR}/spread.conf.sample ${PKG_SYSCONFBASE}/spread.conf
+CONF_FILES=	${EXAMPLEDIR}/spread.access_ip.sample ${PKG_SYSCONFDIR}/spread.access_ip
+CONF_FILES+=	${EXAMPLEDIR}/spread.conf.sample ${PKG_SYSCONFDIR}/spread.conf
 
 OWN_DIRS_PERMS=	${RUNTIME_DIR} ${SPREAD_USER} ${SPREAD_GROUP} 0750
 

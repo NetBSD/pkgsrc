@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 17:34:03 martti Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/07 02:21:17 jlam Exp $
 #
 
 DISTNAME=	ion-20020207
@@ -25,8 +25,8 @@ CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 .endfor
 .undef f
 
-# ion's sources will append "ion/" to PKG_SYSCONFBASE, that is, the
+# ion's sources will append "ion/" to PKG_SYSCONFBASEDIR, that is, the
 # PKG_SYSCONFSUBDIR we are currently using.
-MAKE_ENV=		PKG_SYSCONFBASE="${PKG_SYSCONFBASE}"
+MAKE_ENV=		PKG_SYSCONFBASEDIR="${PKG_SYSCONFBASEDIR}"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.13 2003/11/27 05:19:58 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.14 2004/01/07 02:21:16 jlam Exp $
 
 .if !defined(OPENSSL_BUILDLINK2_MK)
 OPENSSL_BUILDLINK2_MK=	# defined
@@ -145,7 +145,7 @@ SSLCERTS=		${PKG_SYSCONFDIR.openssl}/certs
 .elif ${OPSYS} == "NetBSD"
 SSLCERTS=		/etc/openssl/certs
 .else
-SSLCERTS=		${PKG_SYSCONFBASE}/openssl/certs
+SSLCERTS=		${PKG_SYSCONFBASEDIR}/openssl/certs
 .endif
 BUILD_DEFS+=		SSLCERTS
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/07/22 18:25:09 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/01/07 02:21:17 jlam Exp $
 #
 # This Makefile fragment is included by packages that use xmlcatmgr.
 #
@@ -32,8 +32,8 @@ XMLCATMGR=	${BUILDLINK_PREFIX.xmlcatmgr}/bin/xmlcatmgr
 SGML_DEFAULT_CATALOG=	${PKG_SYSCONFDIR.xmlcatmgr}/sgml/catalog
 XML_DEFAULT_CATALOG=	${PKG_SYSCONFDIR.xmlcatmgr}/xml/catalog
 .else
-SGML_DEFAULT_CATALOG=	${PKG_SYSCONFBASE}/sgml/catalog
-XML_DEFAULT_CATALOG=	${PKG_SYSCONFBASE}/xml/catalog
+SGML_DEFAULT_CATALOG=	${PKG_SYSCONFBASEDIR}/sgml/catalog
+XML_DEFAULT_CATALOG=	${PKG_SYSCONFBASEDIR}/xml/catalog
 .endif
 
 xmlcatmgr-buildlink: _BUILDLINK_USE

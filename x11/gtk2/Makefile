@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2004/01/03 18:49:57 reed Exp $
+# $NetBSD: Makefile,v 1.38 2004/01/07 02:21:17 jlam Exp $
 #
 
 DISTNAME=		gtk+-2.2.4
@@ -23,7 +23,7 @@ USE_GMAKE=		yes
 
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
-CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFBASE}"
+CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFBASEDIR}"
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
