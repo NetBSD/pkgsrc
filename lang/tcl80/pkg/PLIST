@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1998/07/15 11:50:09 agc Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/04/01 13:41:11 agc Exp $
 bin/tclsh8.0
 lib/libtcl80.a
 lib/libtcl80.so.1.0
@@ -6,6 +6,7 @@ include/tcl8.0/tcl.h
 include/tcl8.0/unix/tclUnixPort.h
 include/tcl8.0/generic/tcl.h
 include/tcl8.0/generic/tclCompile.h
+include/tcl8.0/generic/tclInitScript.h
 include/tcl8.0/generic/tclInt.h
 include/tcl8.0/generic/tclMath.h
 include/tcl8.0/generic/tclPort.h
@@ -426,9 +427,8 @@ man/man3/Tcl_VarTraceInfo2.3.gz
 man/man3/Tcl_WaitForEvent.3.gz
 man/man3/Tcl_Write.3.gz
 man/man3/Tcl_WrongNumArgs.3.gz
-man/mann/Base.n.gz
 man/mann/Http.n.gz
-man/mann/Safe.n.gz
+man/mann/SafeBase.n.gz
 man/mann/pkg_mkIndex.n.gz
 @dirrm include/tcl8.0/generic
 @dirrm include/tcl8.0/unix
