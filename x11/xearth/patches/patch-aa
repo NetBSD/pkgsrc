@@ -1,43 +1,4 @@
-Received: (qmail 12134 invoked from network); 22 May 1999 21:21:46 -0000
-Received: from c460058-a.frmt1.sfba.home.com (HELO capsicum.wsrcc.com) (24.1.65.208)
-  by redmail.netbsd.org with SMTP; 22 May 1999 21:21:46 -0000
-Received: (from wolfgang@localhost)
-	by capsicum.wsrcc.com (8.9.3/8.9.3) id OAA12827;
-	Sat, 22 May 1999 14:21:43 -0700 (PDT)
-Message-Id: <199905222121.OAA12827@capsicum.wsrcc.com>
-Date: Sat, 22 May 1999 14:21:43 -0700 (PDT)
-From: Wolfgang Rupprecht <wolfgang@wsrcc.com>
-Reply-To: wolfgang@wsrcc.com
-To: gnats-bugs@gnats.netbsd.org
-Subject: xearth loses on a 24bit depth frame buffer
-X-Send-Pr-Version: 3.95
-
->Number:         7626
->Category:       pkg
->Synopsis:       xearth loses on a 24bit depth frame buffer
->Confidential:   no
->Severity:       non-critical
->Priority:       low
->Responsible:    pkg-manager (NetBSD software packages system bug manager)
->State:          open
->Class:          sw-bug
->Submitter-Id:   net
->Arrival-Date:   Sat May 22 14:35:01 1999
->Last-Modified:  
->Originator:     Wolfgang Rupprecht
->Organization:
-W S Rupprecht Computer Consulting, Fremont CA
->Release:        current 5/12/99
->Environment:
-	
-System: NetBSD capsicum.wsrcc.com 1.4 NetBSD 1.4 (WSRCC) #0: Wed May 12 11:24:36 PDT 1999 root@capsicum.wsrcc.com:/v/src/netbsd/NetBSD-current/usr/src/sys/arch/i386/compile/WSRCC i386
-
-
->Description:
-	xearth loses on a 24-bit depth visual
->How-To-Repeat:
-	xearth &
->Fix:
+$NetBSD: patch-aa,v 1.2 1999/05/26 23:11:41 tron Exp $
 
 --- x11.c.orig	Tue Nov 11 09:14:40 1997
 +++ x11.c	Tue Nov 11 09:23:59 1997
@@ -172,8 +133,4 @@ System: NetBSD capsicum.wsrcc.com 1.4 NetBSD 1.4 (WSRCC) #0: Wed May 12 11:24:36
    case COLOR_32:
 
 
-
-# eof
->Audit-Trail:
->Unformatted:
 
