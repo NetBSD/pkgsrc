@@ -1,16 +1,9 @@
-X-Mame the UNIX/X11 port of Mame project.  It makes Mame arcade emulator
-available on *ix machines using the X11R6 X-Window system ( and Linux ones
-using SVGAlib too )
+X-MAME is the X11 port of the MAME arcade game emulator.
 
-Mame is a virtual machine emulator: it includes a Z80, 6502 and lastly I86
-uP emulators, joined to several arcade machine hardware emulators. Each
-arcade emulator contains a full description about hardware, mem maps,
-video, sounds and so, making possible that if you have original ROM images
-of a supported arcade game, you can play the game. 
+MAME is a virtual machine emulator; it includes emulators for numerous
+CPUs, sound and video chips used in arcade games, as well as special
+purpose decoding PALs and detailed information about the memory layout of
+each game.
 
-You NEED the rom images to play a game: this is not a game emulator, just
-an arcade machine one. 
-
-About ROM images: They are under copyrights of their authors, and CANNOT
-be distributed in the same package as Mame. Download them at your
-responsability
+To play games in X-MAME you must have a copy of the original ROMs from
+the arcade games.
