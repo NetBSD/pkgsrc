@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2004/09/22 08:10:05 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18 2004/10/13 11:47:51 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -2460,6 +2460,7 @@ share/kde/config/kthemestylerc
 share/kde/config/language.codes
 share/kde/config/ui/kprintpreviewui.rc
 share/kde/config/ui/ui_standards.rc
+share/kde/icons/crystalsvg/128x128/actions/player_playlist.png
 share/kde/icons/crystalsvg/128x128/apps/password.png
 share/kde/icons/crystalsvg/128x128/devices/blockdevice.png
 share/kde/icons/crystalsvg/128x128/devices/chardevice.png
@@ -2739,6 +2740,7 @@ share/kde/icons/crystalsvg/16x16/actions/player_end.png
 share/kde/icons/crystalsvg/16x16/actions/player_fwd.png
 share/kde/icons/crystalsvg/16x16/actions/player_pause.png
 share/kde/icons/crystalsvg/16x16/actions/player_play.png
+share/kde/icons/crystalsvg/16x16/actions/player_playlist.png
 share/kde/icons/crystalsvg/16x16/actions/player_rew.png
 share/kde/icons/crystalsvg/16x16/actions/player_start.png
 share/kde/icons/crystalsvg/16x16/actions/player_stop.png
@@ -3124,6 +3126,7 @@ share/kde/icons/crystalsvg/22x22/actions/player_end.png
 share/kde/icons/crystalsvg/22x22/actions/player_fwd.png
 share/kde/icons/crystalsvg/22x22/actions/player_pause.png
 share/kde/icons/crystalsvg/22x22/actions/player_play.png
+share/kde/icons/crystalsvg/22x22/actions/player_playlist.png
 share/kde/icons/crystalsvg/22x22/actions/player_rew.png
 share/kde/icons/crystalsvg/22x22/actions/player_start.png
 share/kde/icons/crystalsvg/22x22/actions/player_stop.png
@@ -3393,6 +3396,7 @@ share/kde/icons/crystalsvg/32x32/actions/player_end.png
 share/kde/icons/crystalsvg/32x32/actions/player_fwd.png
 share/kde/icons/crystalsvg/32x32/actions/player_pause.png
 share/kde/icons/crystalsvg/32x32/actions/player_play.png
+share/kde/icons/crystalsvg/32x32/actions/player_playlist.png
 share/kde/icons/crystalsvg/32x32/actions/player_rew.png
 share/kde/icons/crystalsvg/32x32/actions/player_start.png
 share/kde/icons/crystalsvg/32x32/actions/player_stop.png
@@ -3624,6 +3628,7 @@ share/kde/icons/crystalsvg/48x48/actions/gear.png
 share/kde/icons/crystalsvg/48x48/actions/indent.png
 share/kde/icons/crystalsvg/48x48/actions/lock.png
 share/kde/icons/crystalsvg/48x48/actions/misc.png
+share/kde/icons/crystalsvg/48x48/actions/player_playlist.png
 share/kde/icons/crystalsvg/48x48/actions/share.png
 share/kde/icons/crystalsvg/48x48/actions/unindent.png
 share/kde/icons/crystalsvg/48x48/actions/up.png
@@ -3797,6 +3802,7 @@ share/kde/icons/crystalsvg/48x48/mimetypes/wordprocessing.png
 share/kde/icons/crystalsvg/48x48/mimetypes/zip.png
 share/kde/icons/crystalsvg/64x64/actions/favorites.png
 share/kde/icons/crystalsvg/64x64/actions/knewstuff.png
+share/kde/icons/crystalsvg/64x64/actions/player_playlist.png
 share/kde/icons/crystalsvg/64x64/apps/password.png
 share/kde/icons/crystalsvg/64x64/devices/3floppy_mount.png
 share/kde/icons/crystalsvg/64x64/devices/3floppy_unmount.png
@@ -4226,6 +4232,7 @@ share/kde/mimelnk/application/x-iso.desktop
 share/kde/mimelnk/application/x-jar.desktop
 share/kde/mimelnk/application/x-java-applet.desktop
 share/kde/mimelnk/application/x-java.desktop
+share/kde/mimelnk/application/x-javascript.desktop
 share/kde/mimelnk/application/x-karbon.desktop
 share/kde/mimelnk/application/x-kchart.desktop
 share/kde/mimelnk/application/x-kcsrc.desktop
