@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1997/12/17 10:16:01 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/08/10 15:45:08 tv Exp $
 bin/gendiff
 bin/rpm
 bin/find-requires
@@ -8,8 +8,8 @@ include/rpm/rpmlib.h
 include/rpm/dbindex.h
 include/rpm/header.h
 lib/librpm.a
-man/man8/rpm.8.gz
-man/man8/rpm2cpio.8.gz
+man/man8/rpm.8
+man/man8/rpm2cpio.8
 share/misc/rpmrc
 share/misc/rpmpopt
 @dirrm include/rpm
