@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/17 14:27:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/07 01:14:48 xtraeme Exp $
 #
 
 DISTNAME=	${DISTFILES}
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://urban.worldonline.nl/files/linux/
 DISTFILES=	urban-1.5.2${EXTRACT_SUFX} sound${EXTRACT_SUFX}
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://urban.worldonline.nl/
 COMMENT=	U.R.B.A.N The Cyborg Project
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/07 22:45:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/07 01:14:47 xtraeme Exp $
 #
 
 DISTNAME=	loudmouth-0.15.1
@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/0.15/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://loudmouth.imendio.org/
 COMMENT=	Lightweight Jabber client library
 

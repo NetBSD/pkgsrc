@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/11 22:56:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/05/07 01:14:50 xtraeme Exp $
 #
 
 DISTNAME=	waimea-0.4.0
@@ -6,7 +6,7 @@ PKGREVISION=	7
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=waimea/}
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.waimea.org/
 COMMENT=	Fast and highly customizable virtual window manager
 

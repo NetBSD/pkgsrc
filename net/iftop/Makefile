@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2004/03/20 19:36:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/07 01:14:49 xtraeme Exp $
 #
 
 DISTNAME=	iftop-0.16
 CATEGORIES=	net
 MASTER_SITES=	http://www.ex-parrot.com/~pdw/iftop/download/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ex-parrot.com/~pdw/iftop/download/
 COMMENT=	Display bandwidth usage on an interface
 
