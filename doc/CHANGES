@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6846 2004/08/11 14:46:28 tv Exp $
+$NetBSD: CHANGES,v 1.6847 2004/08/11 15:44:21 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3787,3 +3787,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated spamassassin to 2.64 [heinz 2004-08-10]
 	Updated p5-Sendmail-PMilter to 0.95 [tv 2004-08-10]
 	Updated java-wrapper to 1.1 [tv 2004-08-11]
+	Updated xorg-libs to 6.7.0nb1 [recht 2004-08-11]
+	Updated xorg-server to 6.7.0nb1 [recht 2004-08-11]
