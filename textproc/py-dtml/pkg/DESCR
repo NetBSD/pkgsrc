@@ -1,0 +1,20 @@
+This package contains the DTML and StructruedText facilities from Zope.
+They are also useful independent of Zope for other Python programs.
+
+The Zope Document Template Markup Language (DTML) is a facility for
+generating textual information using a template document and application
+information.  It is used in Zope primarily to generate Hypertext Markup
+Language (HTML) files, but it can also be used to create other types of
+textual information.  For example, it is used to generate Structured
+Query Language (SQL) commands in Zope SQL Methods.
+
+The DTML facility is used to convert from document template source text
+to rendered text.  Document template source text consists of ordinary
+text interspersed with DTML's SSI-like (server side includes) "markup"
+tags.
+
+Structured text is text that uses indentation and simple symbology to
+indicate the structure of a document.  StructuredText format text files
+are generally quite readbale by themselves, or they can be converted to
+HTML, MML, or other formats using the StructuredText module included in
+this package.
