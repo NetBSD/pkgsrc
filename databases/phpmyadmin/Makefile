@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2004/11/06 13:28:32 jdolecek Exp $
+# $NetBSD: Makefile,v 1.20 2004/11/08 19:06:19 jdolecek Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}
 PKGNAME=	phpmyadmin-${DIST_VERSION}
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -60,6 +61,7 @@ do-install:
 	done
 	${INSTALL_DATA_DIR} ${PMDIR}/scripts
 
+	${RM} -f ${CONF_INC_PHP}	# just in case
 	${INSTALL_DATA} ${WRKSRC}/*.php ${PMDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.css ${PMDIR}
 	${MV} ${CONF_INC_PHP} ${EXDIR}
