@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 1998/09/17 12:02:54 agc Exp $
+$NetBSD: patch-aa,v 1.9 1998/09/17 16:38:21 agc Exp $
 
 --- Makefile.in.orig	Tue Nov 25 16:31:41 1997
-+++ Makefile.in	Thu Sep 17 12:09:59 1998
++++ Makefile.in	Thu Sep 17 17:24:53 1998
 @@ -55,7 +55,9 @@
  BIN_INSTALL_DIR =	$(INSTALL_ROOT)$(exec_prefix)/bin
  
@@ -70,7 +70,8 @@ $NetBSD: patch-aa,v 1.8 1998/09/17 12:02:54 agc Exp $
 -	@chmod 555 $(LIB_INSTALL_DIR)/$(TCL_LIB_FILE)
 +	@${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${TCL_LIB_FILE:.a=.la} ${LIB_INSTALL_DIR}
  	@echo "Installing tclsh"
- 	@$(INSTALL_PROGRAM) tclsh $(BIN_INSTALL_DIR)/tclsh$(VERSION)
+-	@$(INSTALL_PROGRAM) tclsh $(BIN_INSTALL_DIR)/tclsh$(VERSION)
++	@${LIBTOOL} --mode=install $(INSTALL_PROGRAM) tclsh $(BIN_INSTALL_DIR)/tclsh$(VERSION)
  	@echo "Installing tclConfig.sh"
 -	@$(INSTALL_DATA) tclConfig.sh $(LIB_INSTALL_DIR)/tclConfig.sh
 +	@mkdir -p $(SCRIPT_INSTALL_DIR)
