@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2002/12/25 22:44:53 mjl Exp $
+$NetBSD: distinfo,v 1.4 2003/02/12 15:29:24 yyamano Exp $
 
 SHA1 (pstree-2.17.tar.gz) = 0cdb4693e72bc62cd5bdd50b0848f93f1b6b415a
 Size (pstree-2.17.tar.gz) = 7750 bytes
+SHA1 (patch-aa) = 188502437f7f6c0bd593f8be6d8f5719e73e6221
