@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/07 02:06:19 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/10/18 15:25:37 wiz Exp $
 bin/nighthawk
 bin/nighthawk_sound
+share/doc/nighthawk/README
 share/nighthawk/data/Mearkat/chars
 share/nighthawk/data/Mearkat/map.xpm
 share/nighthawk/data/Mearkat/Hull.f
@@ -241,3 +242,4 @@ share/nighthawk/data/fx/alert_siren.8
 @dirrm share/nighthawk/data/Anoyle
 @dirrm share/nighthawk/data
 @dirrm share/nighthawk
+@dirrm share/doc/nighthawk
