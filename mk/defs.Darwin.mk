@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.81 2004/10/03 00:13:01 tv Exp $
+# $NetBSD: defs.Darwin.mk,v 1.82 2004/10/06 09:49:53 grant Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -84,7 +84,9 @@ TYPE?=		type				# Shell builtin
 WC?=		/usr/bin/wc
 XARGS?=		/usr/bin/xargs
 
+.if !defined(PKGSRC_COMPILER) || !empty(PKGSRC_COMPILER:Mgcc)
 CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	# use the GNU cpp, not the OS X cpp
+.endif
 DEF_UMASK?=		0022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
