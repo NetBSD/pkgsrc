@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9143 2005/02/14 22:49:26 chris Exp $
+$NetBSD: CHANGES,v 1.9144 2005/02/15 00:42:12 grant Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -878,3 +878,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnome2-games to 2.8.3 [jmmv 2005-02-14]
 	Updated xterm to 200 [minskim 2005-02-14]
 	Updated taglib to 1.3.1 [chris 2005-02-14]
+	Updated p5-Mail-ClamAV to 0.13 [grant 2005-02-15]
