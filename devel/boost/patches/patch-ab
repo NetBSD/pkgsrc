@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/06/06 23:51:37 tv Exp $
+
+--- boost/config/requires_threads.hpp.orig	Sun Jun  6 00:06:40 2004
++++ boost/config/requires_threads.hpp
+@@ -11,6 +11,8 @@
+ #  include <boost/config.hpp>
+ #endif
+ 
++#include <boost/config/thread_user.hpp>
++
+ #if defined(BOOST_DISABLE_THREADS)
+ 
+ //

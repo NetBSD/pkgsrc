@@ -1,49 +1,38 @@
-# $NetBSD: Makefile,v 1.19 2004/06/04 15:07:17 tv Exp $
+# $NetBSD: Makefile,v 1.20 2004/06/06 23:51:36 tv Exp $
 #
 
-DISTNAME=		boost-1.30.2
-PKGREVISION=		1
-CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=boost/}
-EXTRACT_SUFX=		.tar.bz2
-
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.boost.org/
 COMMENT=		Free, portable libraries that integrate with the ISO C++ Stdlib
 
-# Need working <limits> and <memory> not present in older gcc.
-# Other compilers are left alone to use their own STL.
-GCC_REQD+=		3.0
-
-USE_LANGUAGES+=		c++
-USE_LIBTOOL=		# defined
-BOOST_VERS=		0:0
-MAKE_ENV+=		BOOST_VERS="${BOOST_VERS}"
-
-LIBDIR=			${PREFIX}/lib
-INCDIR=			${PREFIX}/include/boost
+BJAM=			${WRKSRC}/tools/build/jam_src/bin.*/bjam
+BJAM_ARGS+=		--without-python
+BJAM_ARGS+=		--without-thread
+BJAM_BUILD+=		<threading>single
 HTMLDIR=		${PREFIX}/share/doc/html/boost
 
-do-configure:
-	${CP} ${FILESDIR}/Makefile ${WRKSRC}
+.include "../boost/Makefile.common"
 
-post-build:
-	${FIND} ${WRKSRC}/libs \
-		\( -name "*.zip" -or -name "*.tgz" \
-		   -or -name "*.orig" -or -name "*.bak" \
-		   -or -name "c++boost.gif" \) \
-		-exec ${RM} -f {} \;
+do-configure: userhpp-configure
+
+do-build:
+	@cd ${WRKSRC}/tools/build/jam_src && ${SETENV} ${MAKE_ENV} ${SH} ./build.sh
+	@cd ${WRKSRC} && ${BJAM_CMD} stage
 
 do-install:
-	cd ${WRKSRC}; ${LIBTOOL} ${INSTALL_DATA} libboost.la ${LIBDIR}
-	${CP} -R ${WRKSRC}/boost ${PREFIX}/include
+	@cd ${WRKSRC} && ${BJAM_CMD} install
+	${FIND} ${WRKSRC}/libs \
+		\( -name "*.zip" -or -name "*.tgz" \
+		   -or -name "*.orig" -or -name "*.bak" \) \
+		-exec ${RM} -f {} \;
+	${INSTALL_PROGRAM} ${BJAM} ${PREFIX}/bin/bjam
 	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${INSTALL_DATA} \
-		${WRKSRC}/c++boost.gif \
-		${WRKSRC}/index.htm \
-		${HTMLDIR}
-	${CP} -R ${WRKSRC}/libs ${WRKSRC}/more ${HTMLDIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INCDIR} ${HTMLDIR}
-	${CHMOD} -R a+r-w ${INCDIR} ${HTMLDIR}
+	cd ${WRKSRC} && ${PAX} -rw -pm \
+		-s':^.*/build$$::' \
+		-s':^.*/build/.*$$::' \
+		-s':^libs/.*/test$$::' \
+		-s':^libs/.*/test/.*$$::' \
+		*.gif *.css *.htm libs more ${HTMLDIR}
+	${FIND} ${HTMLDIR} -type f -print | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
+	${FIND} ${HTMLDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${PREFIX}/include/boost-1_31 -type f -print | ${XARGS} ${TOUCH}
 
 .include "../../mk/bsd.pkg.mk"
