@@ -1,0 +1,34 @@
+$NetBSD: patch-al,v 1.1 2002/04/13 21:35:54 jlam Exp $
+
+--- include/httpd.h.orig	Fri Mar 29 03:17:19 2002
++++ include/httpd.h
+@@ -146,9 +146,9 @@
+ /* The name of the log files */
+ #ifndef DEFAULT_ERRORLOG
+ #if defined(OS2) || defined(WIN32)
+-#define DEFAULT_ERRORLOG "logs/error.log"
++#define DEFAULT_ERRORLOG DEFAULT_REL_LOGFILEDIR "/error.log"
+ #else
+-#define DEFAULT_ERRORLOG "logs/error_log"
++#define DEFAULT_ERRORLOG DEFAULT_REL_LOGFILEDIR "/error.log"
+ #endif
+ #endif /* DEFAULT_ERRORLOG */
+ 
+@@ -164,7 +164,7 @@
+ 
+ /* The name of the server config file */
+ #ifndef SERVER_CONFIG_FILE
+-#define SERVER_CONFIG_FILE "conf/httpd.conf"
++#define SERVER_CONFIG_FILE DEFAULT_REL_SYSCONFDIR "/httpd.conf"
+ #endif
+ 
+ /* Whether we should enable rfc1413 identity checking */
+@@ -255,7 +255,7 @@
+ 
+ /** The name of the MIME types file */
+ #ifndef AP_TYPES_CONFIG_FILE
+-#define AP_TYPES_CONFIG_FILE "conf/mime.types"
++#define AP_TYPES_CONFIG_FILE DEFAULT_REL_SYSCONFDIR "/mime.types"
+ #endif
+ 
+ /*
