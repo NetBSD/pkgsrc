@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/01/26 06:51:17 martti Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/06 22:31:11 seb Exp $
 
 DISTNAME=		Net-IRC-0.73
 PKGNAME=		p5-${DISTNAME}
@@ -10,11 +10,8 @@ MAINTAINER=		damon@brodiefamily.org
 HOMEPAGE=		http://theoryx5.uwinnipeg.ca/CPAN/data/Net-IRC/Connection.html
 COMMENT=		Net::IRC - Perl Internet Relay Chat (IRC) Module
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/IRC/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

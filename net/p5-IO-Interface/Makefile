@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/15 12:16:10 he Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/06 22:33:18 seb Exp $
 #
 
 DISTNAME=		IO-Interface-0.97
@@ -10,11 +10,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=IO/}
 MAINTAINER=		he@netbsd.org
 COMMENT=		IO-Interface - get and set interface characteristics
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/IO/Interface/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

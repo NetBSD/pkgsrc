@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/26 06:50:12 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/06 22:31:10 seb Exp $
 
 DISTNAME=	SNMP_Session-0.83
 PKGNAME=	p5-SNMP_Session-0.83
@@ -10,16 +10,13 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.switch.ch/misc/leinen/snmp/perl/
 COMMENT=	perl5 module providing rudimentary access to remote SNMP agents
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SNMP_Session/.packlist
 
 CONFLICTS+=	mrtg-[0-9]*
 
-do-configure:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PERL5_SITELIB}/README.SNMP_Session
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
