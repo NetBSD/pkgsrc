@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/04/26 18:47:56 garbled Exp $
+# $NetBSD: Makefile,v 1.7 1999/10/08 21:12:49 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 #
 
@@ -14,7 +14,7 @@ PATCH_DIST_STRIP=-p1
 
 MAINTAINER=	packages@netbsd.org
 
-DEPENDS+=	tiff-3.4:../../graphics/tiff
+DEPENDS+=	tiff-*:../../graphics/tiff
 BUILD_DEPENDS+=	${BUILD_ROOT}/graphics/netpbm/${WRKDIR:T}/netpbm:../../graphics/netpbm:build
 
 EXTRACT_ONLY=	urt-3.1b.tar.Z

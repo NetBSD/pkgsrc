@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1999/10/07 17:41:54 tron Exp $
+# $NetBSD: Makefile,v 1.30 1999/10/08 21:12:49 jlam Exp $
 #
 
 DISTNAME=	netpbm
@@ -14,7 +14,7 @@ DISTFILES=	netpbm-1mar1994.tar.gz \
 
 MAINTAINER=	packages@netbsd.org
 
-DEPENDS+=	tiff-3.4:../../graphics/tiff
+DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.3:../../graphics/png
 
