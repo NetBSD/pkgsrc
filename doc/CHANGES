@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.264 2002/10/15 15:38:43 cjep Exp $
+$NetBSD: CHANGES,v 1.265 2002/10/15 16:19:29 tsarna Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3268,3 +3268,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added librsync-0.9.5.1 [agc 2002-10-15]
 	Added rdiff-backup-0.10.1 [agc 2002-10-15]
 	Added p5-DNS-ZoneParse-0.82 [cjep 2002-10-15]
+	Updated python22 to 2.2.2 [tsarna 2002-10-15]
