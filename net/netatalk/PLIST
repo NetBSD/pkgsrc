@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/01/04 12:57:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2005/01/31 09:53:11 markd Exp $
 bin/achfile
 bin/acleandir.rc
 bin/adv1tov2
@@ -106,7 +106,7 @@ libexec/netatalk/timelord
 libexec/netatalk/uams/uams_clrtxt.so
 libexec/netatalk/uams/uams_dhx.so
 libexec/netatalk/uams/uams_dhx_passwd.la
-libexec/netatalk/uams/uams_gss.la
+${GSSAPI}libexec/netatalk/uams/uams_gss.la
 libexec/netatalk/uams/uams_guest.la
 libexec/netatalk/uams/uams_passwd.la
 libexec/netatalk/uams/uams_randnum.la
