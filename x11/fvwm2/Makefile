@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/08/05 03:51:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.21 1999/11/01 09:02:05 rh Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -10,13 +10,13 @@ MASTER_SITES=	ftp://ftp.hpc.uh.edu/pub/fvwm/version-2/ \
 		ftp://ftp.ics.es.osaka-u.ac.jp/pub/CFAN/fvwm-users-jp/kits/ \
 		ftp://ftp.TokyoNet.AD.JP/pub/X/fvwm/sources/2.0.x/ \
 		ftp://ftp.TokyoNet.AD.JP/pub/X/fvwm/fvwm-users-jp/kits/
-	
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fvwm.org/
 
-DEPENDS+=	xpmroot-2.2:../../x11/xpmroot
+DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
+DEPENDS+=	readline-*:../../devel/readline
+DEPENDS+=	rplay-3.*:../../devel/readline
 
 CONFLICTS=	fvwm-2.*
 
@@ -25,6 +25,9 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-extras
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/lib/X11/fvwm2
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib/X11
+CONFIGURE_ARGS+=	--with-xpm-includes=${PREFIX}/include
+CONFIGURE_ARGS+=	--with-readline-includes=${LOCALBASE}/include
+CONFIGURE_ARGS+=	--with-rplay-includes=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-iconpath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11ROOT}/include/bitmaps:${X11ROOT}/include/pixmaps
 
 post-install:
