@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8664 2005/01/09 00:09:28 schmonz Exp $
+$NetBSD: CHANGES,v 1.8665 2005/01/09 03:24:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -186,3 +186,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnome-spell to 1.0.5nb5 [jmmv 2005-01-08]
 	Updated rioutil to 1.4.7 [schmonz 2005-01-08]
 	Updated prayer to 1.0.12 [schmonz 2005-01-09]
+	Added dbmail-2.0.1 [schmonz 2005-01-09]
