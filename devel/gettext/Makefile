@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/12/02 22:17:43 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2002/12/11 22:26:07 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -29,6 +29,5 @@ post-install:
 	cd ${WRKSRC}/intl; ${MAKE_PROGRAM} install-data
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
