@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2001/02/28 16:50:58 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2001/03/07 16:07:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
@@ -35,7 +35,7 @@ MAKE_ENV+=		CPPFLAGS=
 post-extract:
 	@(cd ${WRKDIR} ; \
 	EXPMD5=`${GREP} MD5 README.${SRCBALL_NAME} | ${SED} 's/^[ ]*//'` ; \
-	CALCMD5=`${MD5} ${SRCBALL_NAME}.tar` ; \
+	CALCMD5=`${DIGEST} MD5 ${SRCBALL_NAME}.tar` ; \
 	if [ "$${EXPMD5}"X != "$${CALCMD5}"X ]; then \
 		${ECHO} "Expected and calculated MD5 signatures don't agree." ; \
 		${ECHO} "($$EXPMD5 != $$CALCMD5)" ; \
