@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2001/11/26 06:49:44 jlam Exp $
+
+--- Makefile.PL.orig	Thu Oct 29 07:06:10 1998
++++ Makefile.PL
+@@ -5,16 +5,6 @@
+     'VERSION_FROM'   => 'AppConfig.pm', # finds $VERSION
+     'PMLIBDIRS'      => [ 'AppConfig' ],
+     'PREREQ_PM'      => { 'Getopt::Long' => 2.17 },
+-    'MAN3PODS'       => { 
+-	# We must explicitly name AppConfig.pm et al as manifyable files.
+-	# MakeMaker ignores files that match  /(config|setup).*\.pm/i;
+-	'AppConfig.pm'        => '$(INST_MAN3DIR)/AppConfig.$(MAN3EXT)',
+-	'AppConfig/Args.pm'   => '$(INST_MAN3DIR)/AppConfig::Args.$(MAN3EXT)',
+-	'AppConfig/File.pm'   => '$(INST_MAN3DIR)/AppConfig::File.$(MAN3EXT)',
+-	'AppConfig/Getopt.pm' => '$(INST_MAN3DIR)/AppConfig::Getopt.$(MAN3EXT)',
+-	'AppConfig/State.pm'  => '$(INST_MAN3DIR)/AppConfig::State.$(MAN3EXT)',
+-	'AppConfig/Sys.pm'    => '$(INST_MAN3DIR)/AppConfig::Sys.$(MAN3EXT)',
+-    },
+     'dist'           => { 
+ 	'COMPRESS'   => 'gzip', 
+ 	'SUFFIX'     => 'gz',

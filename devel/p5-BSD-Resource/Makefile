@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/10/18 15:20:12 veego Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/26 06:49:45 jlam Exp $
 
 DISTNAME=		BSD-Resource-1.10
 PKGNAME=		p5-${DISTNAME}
@@ -10,10 +10,11 @@ MAINTAINER=		packages@NetBSD.org
 HOMEPAGE=		http://iki.fi/jhi/
 COMMENT=		BSD::Resource - Perl interface to BSD process resources library
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/BSD/Resource/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

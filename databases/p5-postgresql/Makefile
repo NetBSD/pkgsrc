@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/10/18 15:20:10 veego Exp $
+# $NetBSD: Makefile,v 1.6 2001/11/26 06:49:43 jlam Exp $
 
 DISTNAME=	pgsql_perl5-1.9.0
 PKGNAME=	p5-postgresql-1.9.0
@@ -10,17 +10,17 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.pobox.com/~gbarr/perl-ldap/
 COMMENT=	Perl interface class for PostgreSQL
 
-DEPENDS+=	postgresql-{6.5.3*,7.0*,lib-[0-9]*}:../../databases/postgresql-lib
-
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Pg/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Pg/.packlist
 
 # Until the source catches up to the current Perl API, we need PERL_POLLUTE
 # to look like an older perl.
 MAKE_PARAMS=	DEFINE="-DPERL_POLLUTE=1"
-MAKE_ENV+=	POSTGRES_HOME="${LOCALBASE}"
+MAKE_ENV+=	POSTGRES_HOME="${BUILDLINK_DIR}"
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
+.include "../../databases/postgresql-lib/buildlink.mk"
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

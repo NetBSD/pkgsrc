@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/10/18 15:20:45 veego Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/26 06:50:27 jlam Exp $
 
 DISTNAME=	libxml-perl-0.07
 PKGNAME=	p5-libxml-0.07
@@ -12,10 +12,11 @@ COMMENT=	perl module collection for working with XML
 
 DEPENDS+=	p5-XML-Parser>=2.29:../../textproc/p5-XML-Parser
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/libxml-perl/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/libxml-perl/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

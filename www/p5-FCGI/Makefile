@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/10/18 15:20:48 veego Exp $
+# $NetBSD: Makefile,v 1.9 2001/11/26 06:50:33 jlam Exp $
 #
 
 PKGVER=			0.58
@@ -12,10 +12,11 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.fastcgi.com/
 COMMENT=		perl5 library for FastCGI, a fast startup alternative to CGI
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/FCGI/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

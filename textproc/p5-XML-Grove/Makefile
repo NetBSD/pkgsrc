@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/10/18 15:20:43 veego Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/26 06:50:25 jlam Exp $
 #
 
 DISTNAME=	XML-Grove-0.46alpha
@@ -11,10 +11,11 @@ MAINTAINER=	explorer@netbsd.org
 #HOMEPAGE=	
 COMMENT=	Perl 5 module providing simple objects for parsed XML documents
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/XML/Grove/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/Grove/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

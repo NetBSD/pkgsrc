@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/10/18 15:20:14 veego Exp $
+# $NetBSD: Makefile,v 1.7 2001/11/26 06:49:48 jlam Exp $
 #
 
 DISTNAME=     	DateManip-5.39
@@ -11,10 +11,11 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.cpan.org/
 COMMENT=	perl5 module for date calculations
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Date/Manip/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Date/Manip/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

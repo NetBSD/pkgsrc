@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/10/18 15:20:46 veego Exp $
+# $NetBSD: Makefile,v 1.4 2001/11/26 06:50:29 jlam Exp $
 #
 
 DISTNAME=	Apache-DBILogConfig-0.01
@@ -13,10 +13,11 @@ COMMENT=	A database-independent Apache database logger
 DEPENDS+=	ap-DBI-[0-9]*:../../www/ap-DBI
 DEPENDS+=	p5-TimeDate-[0-9]*:../../devel/p5-TimeDate
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Apache/DBILogConfig/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Apache/DBILogConfig/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

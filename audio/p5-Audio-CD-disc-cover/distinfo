@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 12:14:36 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/11/26 06:49:37 jlam Exp $
 
 SHA1 (Audio-CD-0.04-disc-cover-1.1.0.tar.gz) = 356fbd565dcd284b79f9233e88d4e9e9e6dbf7ce
 Size (Audio-CD-0.04-disc-cover-1.1.0.tar.gz) = 6714 bytes
-SHA1 (patch-aa) = 4835ff0b34d0ab252f122f4184dcfc00446bd2b0

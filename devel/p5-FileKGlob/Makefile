@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/10/18 15:20:16 veego Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/26 06:49:50 jlam Exp $
 #
 
 DISTNAME=	FileKGlob
@@ -11,8 +11,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Expand a Unix file glob into a list of matching file names
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/File/KGlob/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/File/KGlob/.packlist
 
 DIST_SUBDIR=	${PKGNAME}
 
@@ -22,4 +22,5 @@ pre-configure:
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

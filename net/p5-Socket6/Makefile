@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/10/18 15:20:32 veego Exp $
+# $NetBSD: Makefile,v 1.8 2001/11/26 06:50:12 jlam Exp $
 #
 
 DISTNAME=		Socket6-0.08
@@ -11,10 +11,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/libnet/FAQ.html
 COMMENT=		perl5 module to support getaddrinfo() and getnameinfo()
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Socket6/.packlist
-
-.include "../../mk/bsd.prefs.mk"
 
 # supports IPv6 (actually, af independent)
 BUILD_DEFS+=		USE_INET6
@@ -24,4 +22,5 @@ MAKE_ENV+=		CCFLAGS="${CFLAGS} ${CPPFLAGS}"
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/10/25 14:43:22 taca Exp $
+# $NetBSD: Makefile,v 1.9 2001/11/26 06:50:01 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1999/01/17 10:56:40 vanilla Exp $
 
 DISTNAME=	jcode.pl-2.13
@@ -13,7 +13,8 @@ MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	# not available
 COMMENT=	Perl library for Japanese character code conversion
 
-USE_PERL5=	yes
+USE_BUILDLINK_ONLY=	YES
+
 WRKSRC=		${WRKDIR}
 NO_BUILD=	# defined
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} .
@@ -22,4 +23,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PERL5_SITELIB}
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME} ${PERL5_SITELIB}/jcode.pl
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

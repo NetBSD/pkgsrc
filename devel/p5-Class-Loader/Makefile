@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/10/18 15:20:13 veego Exp $
+# $NetBSD: Makefile,v 1.3 2001/11/26 06:49:45 jlam Exp $
 #
 
 DISTNAME=		Class-Loader-2.02
@@ -12,10 +12,11 @@ MAINTAINER=		mcr@netbsd.org
 #HOMEPAGE=	
 COMMENT=		perl5 module for module loading and on-demand object creation
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Class/Loader/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

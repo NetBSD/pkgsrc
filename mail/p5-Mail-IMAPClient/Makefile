@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/10/18 15:20:26 veego Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/26 06:50:04 jlam Exp $
 #
 
 DISTNAME=       Mail-IMAPClient-1.07
@@ -10,11 +10,12 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 MAINTAINER=	packages@netbsd.org
 COMMENT=	perl5 module for talking to RFC-2060 IMAP servers
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Mail/IMAPClient/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mail/IMAPClient/.packlist
 
 do-configure:
-	@cd ${WRKSRC} && ${ECHO} >.test && \
+	@cd ${WRKSRC} && ${TOUCH} ${TOUCH_ARGS} .test && \
 		${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

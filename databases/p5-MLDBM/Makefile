@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/10/18 15:20:09 veego Exp $
+# $NetBSD: Makefile,v 1.6 2001/11/26 06:49:42 jlam Exp $
 #
 
 DISTNAME=		MLDBM-2.00
@@ -13,7 +13,7 @@ COMMENT=		perl5 module for storing arbitrary data in tied hashes
 
 DEPENDS+= 		{p5-Data-Dumper-[0-9]*,perl>=5.6.1nb2}:../../lang/perl5
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MLDBM/.packlist
 
 post-patch:
@@ -22,4 +22,5 @@ post-patch:
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/10/18 15:20:23 veego Exp $
+# $NetBSD: Makefile,v 1.7 2001/11/26 06:50:00 jlam Exp $
 
 DISTNAME=		Text-ChaSen-1.03
 PKGNAME=		p5-${DISTNAME}nb1
@@ -13,11 +13,12 @@ MAINTAINER=		kei@netbsd.org
 HOMEPAGE=		http://www.daionet.gr.jp/~knok/chasen/
 COMMENT=		perl5 module to use ChaSen
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/ChaSen/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../japanese/chasen/buildlink.mk"
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/10/18 15:20:49 veego Exp $
+# $NetBSD: Makefile,v 1.15 2001/11/26 06:50:35 jlam Exp $
 #
 
 DISTNAME=		HTML-Parser-3.25
@@ -12,10 +12,11 @@ COMMENT=		perl5 module to parse HTML text documents
 
 DEPENDS+=		p5-HTML-Tagset>=3.0:../../www/p5-HTML-Tagset
 
-USE_PERL5=		# defined
+USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/HTML/Parser/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/10/18 15:20:42 veego Exp $
+# $NetBSD: Makefile,v 1.5 2001/11/26 06:50:23 jlam Exp $
 #
 
 DISTNAME=	Text-CSV_XS-0.22
@@ -11,10 +11,11 @@ MAINTAINER=	packages@netbsd.org
 # HOMEPAGE=	http://
 COMMENT=	Routines for composition and decomposition of comma-separated values
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Text/CSV_XS/.packlist
+USE_BUILDLINK_ONLY=	YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/CSV_XS/.packlist
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
