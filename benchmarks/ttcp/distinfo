@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:54:16 agc Exp $
+$NetBSD: distinfo,v 1.1 2001/04/17 11:57:41 tron Exp $
 
 MD5 (ttcp.tar.Z) = 3688ca186d5da6fd83ade7c6a0150b1d
 SHA1 (patch-aa) = 19d81ba1e6bfaf6527eb8fce29f2276c89f9a35e
