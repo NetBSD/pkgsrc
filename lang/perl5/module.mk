@@ -1,18 +1,22 @@
-# $NetBSD: module.mk,v 1.1 2002/09/23 08:56:13 jlam Exp $
+# $NetBSD: module.mk,v 1.2 2002/09/26 12:31:28 seb Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
 #
 # The following targets are provided by this file:
 #
-# do-configure		runs the standard perl configuration in
+# perl5-configure	runs the standard perl configuration in
 #			each of the directories specified in
 #			${PERL5_CONFIGURE_DIRS}.
 #
+# do-configure		runs the perl5-configure target; if PERL5_CONFIGURE
+#			is set to "YES", then this target overrides the
+#			default do-configure provided by bsd.pkg.mk.
+#
 # The following variables may be set prior to including this file:
 #
-# PERL5_CONFIGURE	if "YES", then run the standard perl
-#			configuration assuming Makefile.PL exists;
+# PERL5_CONFIGURE	if "YES", then for do-configure, run the standard
+#			perl configuration assuming Makefile.PL exists;
 #			defaults to "YES".
 #
 # PERL5_CONFIGURE_DIRS	list of directories in which to run the
@@ -34,8 +38,7 @@ _PERL5_MODULE_MK=	# defined
 PERL5_CONFIGURE?=	YES
 PERL5_CONFIGURE_DIRS?=	${CONFIGURE_DIRS}
 
-.if defined(PERL5_CONFIGURE) && !empty(PERL5_CONFIGURE:M[yY][eE][sS])
-do-configure:
+perl5-configure:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
 		if [ -f $$dir/Makefile.PL ]; then			\
@@ -43,6 +46,10 @@ do-configure:
 			  ${PERL5} Makefile.PL ${MAKE_PARAMS});		\
 		fi;							\
 	done
+
+.if defined(PERL5_CONFIGURE) && !empty(PERL5_CONFIGURE:M[yY][eE][sS])
+do-configure: perl5-configure
+	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .endif
 
 # OTHERLDFLAGS is the hook provided by the perl5 MakeMaker module to allow
