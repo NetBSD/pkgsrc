@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.189 2003/05/03 05:48:23 dan Exp $
+# $NetBSD: Makefile,v 1.190 2003/05/08 03:35:58 uebayasi Exp $
 
 COMMENT=	System utilities
 
@@ -77,7 +77,6 @@ SUBDIR+=	lavaps
 SUBDIR+=	libirman
 SUBDIR+=	logrot
 SUBDIR+=	lsof
-SUBDIR+=	nautilus
 SUBDIR+=	mc
 SUBDIR+=	medusa
 SUBDIR+=	memconf
@@ -87,6 +86,7 @@ SUBDIR+=	mksunbootcd
 SUBDIR+=	mktemp
 SUBDIR+=	mtools
 SUBDIR+=	mtoolsfm
+SUBDIR+=	nautilus
 SUBDIR+=	osname
 SUBDIR+=	p5-Unix-Syslog
 SUBDIR+= 	pciutils
