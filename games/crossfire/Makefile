@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:54 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1998/09/17 14:03:49 agc Exp $
 #
 
 DISTNAME=	crossfire-0.94.2
@@ -22,30 +22,33 @@ USE_IMAKE=	yes
 USE_PERL5=	yes
 SCRIPTS_ENV+=	${SCRIPTSDIR}
 
+INSTALL_FILE=	${WRKDIR}/.INSTALL
+DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
+
 post-patch:
 	@${MV} ${WRKSRC}/config/crosssite.def \
 		${WRKSRC}/config/crosssite.def-orig
 	@${SED} -e 's|@X11BASE@|${X11BASE}|g' \
 		-e 's|@LOCALBASE@|${LOCALBASE}|g' \
-		< ${WRKSRC}/config/crosssite.def-orig \
+		${WRKSRC}/config/crosssite.def-orig \
 		> ${WRKSRC}/config/crosssite.def
 	@${MV} ${WRKSRC}/lib/sounds ${WRKSRC}/lib/sound_list
 	@${SED} -e 's|XXXLOCALBASEXXX|${LOCALBASE}|' \
 		-e 's|XXXDBXXX|${PKG_DBDIR}/${DISTNAME}|' \
-		< ${PKGDIR}/deinstall >${PKGDIR}/DEINSTALL
+		${PKGDIR}/deinstall > ${DEINSTALL_FILE}
 	@${SED} -e 's|XXXLOCALBASEXXX|${LOCALBASE}|' \
 		-e 's|XXXX11BASEXXX|${X11BASE}|' \
-		< ${PKGDIR}/install >${PKGDIR}/INSTALL
+		${PKGDIR}/install > ${INSTALL_FILE}
 
 post-install:
 	${EXTRACT_CMD} -xzmf ${DISTDIR}/${CF_MAPS} -C ${X11BASE}/lib/crossfire
 	${EXTRACT_CMD} -xzmf ${DISTDIR}/${CF_SOUND} -C ${X11BASE}/lib/crossfire
 	@/usr/bin/find ${X11BASE}/lib/crossfire/sounds -name \*.au -type f \
-		> ${PKGDIR}/RPLAY
-	@${CAT} ${PKGDIR}/RPLAY >> ${LOCALBASE}/etc/rplay.conf
-	@${CAT} ${PKGDIR}/RPLAY >> ${PKGDIR}/DEINSTALL
-	@${CAT} ${PKGDIR}/RPLAY >> ${PKGDIR}/INSTALL
-	@${ECHO} "EOF" >> ${PKGDIR}/INSTALL
+		> ${WRKDIR}/.RPLAY
+	@${CAT} ${WRKDIR}/.RPLAY >> ${LOCALBASE}/etc/rplay.conf
+	@${CAT} ${WRKDIR}/.RPLAY >> ${DEINSTALL_FILE}
+	@${CAT} ${WRKDIR}/.RPLAY >> ${INSTALL_FILE}
+	@${ECHO} "EOF" >> ${INSTALL_FILE}
 	@chown root:games ${X11BASE}/bin/crossfire
 	@chmod 2755 ${X11BASE}/bin/crossfire
 	@chown -R root:games ${X11BASE}/lib/crossfire
@@ -54,6 +57,6 @@ post-install:
 	@chmod 664 ${X11BASE}/lib/crossfire/highscore
 
 pre-clean:
-	@${RM} -f ${PKGDIR}/DEINSTALL ${PKGDIR}/INSTALL ${PKGDIR}/RPLAY
+	@${RM} -f ${DEINSTALL_FILE} ${INSTALL_FILE} ${WRKDIR}/.RPLAY
 
 .include "../../mk/bsd.pkg.mk"
