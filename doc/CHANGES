@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2281 2003/05/22 15:16:49 jschauma Exp $
+$NetBSD: CHANGES,v 1.2282 2003/05/22 15:40:25 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2076,3 +2076,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated glade2 to 2.0.0nb2 [wiz 2003-05-22]
 	Updated phoenix to 0.6 [taya 2003-05-22]
 	Updated xdvipresent to 0.6.1.14 [jschauma 2003-05-22]
+	Updated bbkeys tp 0.8.6 [jschauma 2003-05-22]
