@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.3 2002/05/31 15:51:44 dmcmahill Exp $
+
+needs GNU m4
+
+--- scheme/gnet-PCBboard.scm.orig	Sun Jan 27 13:48:35 2002
++++ scheme/gnet-PCBboard.scm
+@@ -151,7 +151,7 @@
+ ;; Original pipe command commented out by AVH (bugfix by Rich Walker)
+ ;;  (let ((pipe (open-output-pipe (string-append "m4 " *m4-pcbdir* "/common.m4 - >> " output-filename))))
+ ;; Fixed pipe command (AVH 1/27/02)
+-   (let ((pipe (open-output-pipe (string-append "m4 -d -I" *m4-pcbdir* " " *m4-pcbdir* "/common.m4 - >> " output-filename))))
++   (let ((pipe (open-output-pipe (string-append "gm4 -d -I" *m4-pcbdir* " " *m4-pcbdir* "/common.m4 - >> " output-filename))))
+ 
+ 
+        ;; packages is a list with the different uref value
