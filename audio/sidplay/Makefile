@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 13:30:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/14 10:30:37 pooka Exp $
 #
 
-DISTNAME=	sidplay-base-1_0_4
+DISTNAME=	sidplay-base-1.0.4
 PKGNAME=	sidplay-1.0.4
-WRKSRC=		${WRKDIR}/sidplay-base-1.0.4
 CATEGORIES=	audio
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/
 EXTRACT_SUFX=	.tgz
