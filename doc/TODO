@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3250 2005/03/22 09:25:17 adam Exp $
+$NetBSD: TODO,v 1.3251 2005/03/22 09:48:29 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -461,7 +461,6 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
-	o gaim-1.2.0 [pkg/29752]
 	o galeon-1.3.20
 	o gap-4r4p3
 	o garmin-utils-2.2
