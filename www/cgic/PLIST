@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/20 21:44:29 jmmv Exp $
+include/cgic.h
+lib/libcgic.a
+lib/libcgic.la
+lib/libcgic.so
+lib/libcgic.so.0
+lib/libcgic.so.0.0
+libexec/cgi-bin/capture
+libexec/cgi-bin/cgictest
+share/doc/html/cgiclib/cgic.html
+share/examples/cgiclib/capture.c
+share/examples/cgiclib/cgictest.c
+@dirrm share/examples/cgiclib
+@dirrm share/doc/html/cgiclib
