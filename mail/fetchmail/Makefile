@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2004/03/26 02:27:43 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2004/03/31 02:22:04 jlam Exp $
 
 DISTNAME=	fetchmail-6.2.5
 PKGREVISION=	2
@@ -26,15 +26,14 @@ LDFLAGS+=		${CFLAGS}
 .include "../../mk/bsd.prefs.mk"
 
 FETCHMAIL_USE_SSL?=	YES
+BUILD_DEFS+=		FETCHMAIL_USE_SSL
 
-.if defined(FETCHMAIL_USE_SSL) && ${FETCHMAIL_USE_SSL} == YES
+.if defined(FETCHMAIL_USE_SSL) && !empty(FETCHMAIL_USE_SSL:M[yY][eE][sS])
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 .else
 CONFIGURE_ARGS+=	--without-ssl
 .endif
-
-BUILD_DEFS+=		FETCHMAIL_USE_SSL
 
 .if defined(KERBEROS)
 PKG_USE_KERBEROS=	yes
@@ -46,7 +45,7 @@ REPLACE_KERBEROS_LIBS=	# defined
 CONFIGURE_ARGS+=	--with-kerberos=no
 .endif
 
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--enable-inet6
 .endif
 
@@ -58,8 +57,9 @@ post-extract:
 .if ${OPSYS} == "NetBSD"
 	@${RM} -f ${WRKSRC}/md5.h
 .endif
-	@${MV} ${WRKSRC}/fetchmail.man ${WRKSRC}/fetchmail.tbl
+
 .if defined(REPLACE_KERBEROS_LIBS)
+post-configure:
 	cd ${WRKSRC} && \
 	for F in configure.in configure; do \
 		${SED} -e "s/-lkrb -ldes/-lkrb -ldes -lcom_err -lroken/" \
@@ -70,7 +70,10 @@ post-extract:
 .endif
 
 post-build:
-	tbl ${WRKSRC}/fetchmail.tbl >${WRKSRC}/fetchmail.man
+	for file in ${WRKSRC}/fetchmail.man; do				\
+		${MV} -f $$file $$file.tbl;				\
+		tbl $$file.tbl > $$file;				\
+	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${FDOC}
