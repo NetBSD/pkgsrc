@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2002/01/21 13:59:46 dmcmahill Exp $
+
+needed on alpha
+
+--- src/main.c.orig	Wed Dec 19 01:52:37 2001
++++ src/main.c	Sun Jan 20 14:04:26 2002
+@@ -240,5 +240,5 @@
+ 		syslog(LOG_INFO,
+ 		       "No battery low status checking, "
+-		       "use default timeout %ld seconds", ups->fail_timeout);
++		       "use default timeout %lld seconds", (long long) ups->fail_timeout);
+ 	}
+ 
