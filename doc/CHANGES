@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3302 2003/09/10 00:13:24 recht Exp $
+$NetBSD: CHANGES,v 1.3303 2003/09/10 05:14:06 epg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3601,3 +3601,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated balsa2 to 2.0.14 [xtraeme 2003-09-09]
 	Updated python23 to 2.3nb1 [recht 2003-09-10]
 	Updated python23-pth to 2.3nb1 [recht 2003-09-10]
+	Updated neon 0.24.1 [epg 2003-09-10]
