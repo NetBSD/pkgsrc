@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2001/10/22 03:41:19 mycroft Exp $
+$NetBSD: patch-aa,v 1.7 2002/07/12 13:48:09 wiz Exp $
 
---- Local.config.orig	Sat Oct  6 13:46:11 2001
-+++ Local.config	Mon Oct 22 03:23:14 2001
+--- Local.config.orig	Sun Apr 21 22:42:12 2002
++++ Local.config
 @@ -36,12 +36,12 @@
  #define	LocalGuru xpilot@xpilot.org	/* The one to contact for problems */
  #endif /* LocalGuru */
  
--PREFIX = /usr/local/games
-+/* PREFIX = /usr/local/games */
+-PREFIX = /usr/local
++/* PREFIX = /usr/local */
  
  /* Manual pages for games usually go to section 6. */
  MANSUFFIX = 6
