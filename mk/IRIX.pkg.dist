@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.pkg.dist,v 1.9 2003/03/10 13:20:34 wiz Exp $
+# $NetBSD: IRIX.pkg.dist,v 1.10 2003/03/10 23:05:59 dmcmahill Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -191,6 +191,10 @@
                 LC_MESSAGES
                 ..
             ..
+            de_DE
+                LC_MESSAGES
+                ..
+            ..
             dk
                 LC_MESSAGES
                 ..
@@ -291,6 +295,10 @@
                 LC_MESSAGES
                 ..
             ..
+            ja_JP
+                LC_MESSAGES
+                ..
+            ..
             kn
                 LC_MESSAGES
                 ..
@@ -320,6 +328,10 @@
                 ..
             ..
             nl
+                LC_MESSAGES
+                ..
+            ..
+            nl_NL
                 LC_MESSAGES
                 ..
             ..
