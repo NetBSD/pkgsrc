@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.12 2004/03/10 11:53:37 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.1 2004/03/10 11:53:37 xtraeme Exp $
 
-.include "Makefile.common"
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+XFCE4_BUILDLINK3_MK:=	${XFCE4_BUILDLINK3_MK}+
 
-DISTNAME=	xfce4-${XFCE4_VERSION}
-PKGREVISION=	1
-DISTFILES=	# empty
-CATEGORIES=	meta-pkgs
-COMMENT=	XFce4
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	xfce4
+.endif
 
-NO_CHECKSUM=	# defined
-NO_CONFIGURE=	# defined
-NO_BUILD=	# defined
-NO_MTREE=	# defined
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4}
+BUILDLINK_PACKAGES+=	xfce4
 
-do-install:	# empty
+.if !empty(XFCE4_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.xfce4+=	xfce4>=4.0.4nb1
+BUILDLINK_PKGSRCDIR.xfce4?=	../../meta-pkgs/xfce4
 
-# Basic stuff
 .include "../../graphics/xfce4-iconbox/buildlink3.mk"
 .include "../../print/xfce4-print/buildlink3.mk"
 .include "../../sysutils/xfce4-fm/buildlink3.mk"
@@ -24,8 +22,6 @@ do-install:	# empty
 .include "../../x11/xfce4-gtk2-engines/buildlink3.mk"
 .include "../../x11/xfce4-utils/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
-
-# Extras
 .include "../../audio/xfce4-mixer/buildlink3.mk"
 .include "../../sysutils/xfce4-fm-icons/buildlink3.mk"
 .include "../../sysutils/xfce4-systray/buildlink3.mk"
@@ -33,5 +29,8 @@ do-install:	# empty
 .include "../../x11/xfce4-themes/buildlink3.mk"
 .include "../../x11/xfce4-toys/buildlink3.mk"
 .include "../../x11/xfce4-trigger-launcher/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 
-.include "../../mk/bsd.pkg.mk"
+.endif	# XFCE4_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
