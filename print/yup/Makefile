@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/06/04 14:32:55 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/19 12:18:37 grant Exp $
 #
 
 DISTNAME=		yup-r1-rel
@@ -7,7 +7,7 @@ CATEGORIES=		print
 MASTER_SITES=		http://redback.spyda.net/~mjch/yup/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		grant@grunta.com
+MAINTAINER=		grant@netbsd.org
 COMMENT=		print multiple PostScript/ASCII pages per sheet
 
 USE_PERL5=		# defined
