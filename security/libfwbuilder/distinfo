@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/10/14 15:21:25 tv Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 10:59:56 bad Exp $
 
-SHA1 (libfwbuilder-1.0.2.tar.gz) = 3564a255850d4880d69a7d8c1aa4a35bc4e0b4c5
-Size (libfwbuilder-1.0.2.tar.gz) = 403462 bytes
-SHA1 (patch-aa) = f307aaaa7059f5eb82314bb9a3430d915056082a
-SHA1 (patch-ab) = 6d2875e2b5ce2872d3463b1e88b30859860fde4c
-SHA1 (patch-ac) = 56837990a7ec3302437cd016aad8495e2af43b1e
-SHA1 (patch-ad) = 7da478913712773d8663ef65928f88a1dcbb1515
+SHA1 (libfwbuilder-2.0.5.tar.gz) = 64175782b897f8211e50e10b1a2daa81a2b03d5c
+Size (libfwbuilder-2.0.5.tar.gz) = 280821 bytes
+SHA1 (patch-aa) = d4a33ea81aebb695814534c9258a60df1945dcfb
+SHA1 (patch-ab) = dc7270976ccf09cefdca11cdba60b20b9cfe1b55
