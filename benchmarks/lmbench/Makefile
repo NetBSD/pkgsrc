@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/04/11 03:42:21 snj Exp $
+# $NetBSD: Makefile,v 1.18 2004/05/07 15:25:13 cjep Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -36,7 +36,7 @@ do-install:
 	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} \
 		INSTALL_PROGRAM=${INSTALL} ${FILESDIR}/do-install
 
-.include "../../mk/bsd.prefs.mk" 
+.include "../../mk/bsd.prefs.mk"
 benchmark:
 	if [ ! -f ${PREFIX}/bin/lmbench/hello ]; then \
 		@${ECHO} "*** This benchmark must be installed to run" ; \
