@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/09/17 15:08:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/10/13 11:39:46 jmmv Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	1
+PKGREVISION=	2
 
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
