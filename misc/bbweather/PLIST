@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/19 00:20:04 wiz Exp $
+bin/GrabWeather
+bin/bbweather
+man/man1/GrabWeather.1
+man/man1/bbweather.1
+share/bbtools/README.bbweather
+share/bbtools/bbtoolsrc.in
+share/bbtools/bbweather.conf
+share/bbtools/bbweather.nobb
+share/bbtools/bbweather.style
+share/doc/bbweather/index-1.html
+share/doc/bbweather/index-2.html
+share/doc/bbweather/index-3.html
+share/doc/bbweather/index-4.html
+share/doc/bbweather/index-5.html
+share/doc/bbweather/index.html
+@dirrm share/doc/bbweather
+@unexec ${RMDIR} %D/share/bbtools 2>/dev/null || true
