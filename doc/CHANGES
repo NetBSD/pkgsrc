@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.389 2002/10/28 12:45:58 agc Exp $
+$NetBSD: CHANGES,v 1.390 2002/10/28 13:10:47 agc Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3422,3 +3422,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added qt3-psql-3.0.6 [drochner 2002-10-28]
 	Updated py-amkCrypto to 1.9a4 [drochner 2002-10-28]
 	Moved mousetar from sysutils to archivers [agc 2002-10-28]
+	Added libargparse-0.1.0000 [agc 2002-10-28]
