@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/10/16 16:20:08 jlam Exp $
+
+--- ../sqlite/configure.orig	Thu Sep 27 21:34:44 2001
++++ ../sqlite/configure
+@@ -13341,7 +13341,7 @@
+ rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
+ if test "$ac_cv_search_readline" = no; then
+   for ac_lib in readline; do
+-    LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
++    LIBS="-l$ac_lib -ltermcap $ac_func_search_save_LIBS"
+     cat >conftest.$ac_ext <<_ACEOF
+ #line 13346 "configure"
+ #include "confdefs.h"
+@@ -13373,7 +13373,7 @@
+   ac_status=$?
+   echo "$as_me:13374: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_search_readline="-l$ac_lib"
++  ac_cv_search_readline="${LDFLAGS} -l$ac_lib -ltermcap"
+ break
+ else
+   echo "$as_me: failed program was:" >&5
