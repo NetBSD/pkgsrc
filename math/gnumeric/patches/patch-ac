@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.5 2000/11/25 14:21:24 rh Exp $
+$NetBSD: patch-ac,v 1.6 2001/03/18 03:05:08 mjl Exp $
 
---- plugins/gb/excel-gb-range.c.orig	Sat Nov 18 12:08:03 2000
-+++ plugins/gb/excel-gb-range.c
+--- plugins/gb/excel-gb-range.c.orig	Thu Feb 15 02:27:06 2001
++++ plugins/gb/excel-gb-range.c	Sun Mar 18 02:04:05 2001
 @@ -15,7 +15,6 @@
- #include "rendered-value.h"
+ #include "cell.h"
  #include "parse-util.h"
  #include "commands.h"
 -#include "command-context-corba.h"
