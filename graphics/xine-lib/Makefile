@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/22 16:03:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/01/26 12:31:03 jmmv Exp $
 #
 
 .include "Makefile.common"
@@ -6,7 +6,7 @@
 PKGREVISION=		3
 
 .if ${MACHINE_ARCH} == "i386"
-DEPENDS+=       	win32-codecs>=011227:../../graphics/win32-codecs
+DEPENDS+=       	win32-codecs>=011227:../../multimedia/win32-codecs
 PLIST_SRC=		${PKGDIR}/PLIST.i386
 .endif
 PLIST_SRC+=		${PKGDIR}/PLIST
