@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3842 2003/11/18 17:57:50 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3843 2003/11/18 18:18:18 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4624,3 +4624,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated zebra to 0.93bnb1 [wiz 2003-11-18]
 	Updated quagga to 0.96.3nb1 [wiz 2003-11-18]
 	Updated psi to 0.9nb3 [xtraeme 2003-11-18]
+	Updated silc-client to 0.9.16 [salo 2003-11-18]
+	Updated silc-client-icb to 0.14nb5 [salo 2003-11-18]
