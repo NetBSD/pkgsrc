@@ -1,125 +1,78 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:40:32 agc Exp $
+$NetBSD: patch-aa,v 1.4 2001/05/22 11:37:16 wiz Exp $
 
-*** Makefile.orig	Mon Jan 23 01:01:28 1995
---- Makefile	Mon Apr  6 16:29:17 1998
-***************
-*** 9,17 ****
-  # to go and where you want the man page
-  # to go:
-  
-! WHEREJOE = /usr/local/bin
-! WHERERC = /usr/local/lib
-! WHEREMAN = /usr/man/man1
-  
-  # If you want to use TERMINFO, you have to set
-  # the following variable to 1.  Also you have to
---- 9,17 ----
-  # to go and where you want the man page
-  # to go:
-  
-! WHEREJOE = ${PREFIX}/bin
-! WHERERC = ${PREFIX}/lib
-! WHEREMAN = ${PREFIX}/man/man1
-  
-  # If you want to use TERMINFO, you have to set
-  # the following variable to 1.  Also you have to
-***************
-*** 27,33 ****
-  
-  # C compiler options: make's built-in rules use this variable
-  
-! CFLAGS = -O
-  
-  # C compiler to use: make's built-in rules use this variable
-  
---- 27,33 ----
-  
-  # C compiler options: make's built-in rules use this variable
-  
-! # CFLAGS = -O
-  
-  # C compiler to use: make's built-in rules use this variable
-  
-***************
-*** 45,51 ****
-  # add '-ltinfo', '-lcurses' or '-ltermlib',
-  # depending on the system.
-  
-! EXTRALIBS =
-  
-  # Object files
-  
---- 45,51 ----
-  # add '-ltinfo', '-lcurses' or '-ltermlib',
-  # depending on the system.
-  
-! EXTRALIBS = -ltermcap
-  
-  # Object files
-  
-***************
-*** 84,100 ****
-  
-  # Install proceedure
-  
-! install: joe termidx
-  	strip joe
-! 	strip termidx
-  	if [ ! -d $(WHEREJOE) ]; then mkdir $(WHEREJOE); chmod a+rx $(WHEREJOE); fi
-! 	rm -f $(WHEREJOE)/joe $(WHEREJOE)/jmacs $(WHEREJOE)/jstar $(WHEREJOE)/jpico $(WHEREJOE)/rjoe $(WHEREJOE)/termidx
-  	mv joe $(WHEREJOE)
-  	ln $(WHEREJOE)/joe $(WHEREJOE)/jmacs
-  	ln $(WHEREJOE)/joe $(WHEREJOE)/jstar
-  	ln $(WHEREJOE)/joe $(WHEREJOE)/rjoe
-  	ln $(WHEREJOE)/joe $(WHEREJOE)/jpico
-! 	mv termidx $(WHEREJOE)
-  	if [ ! -d $(WHERERC) ]; then mkdir $(WHERERC); chmod a+rx $(WHERERC); fi
-  	rm -f $(WHERERC)/joerc $(WHERERC)/jmacsrc $(WHERERC)/jstarrc $(WHERERC)/jpicorc $(WHERERC)/rjoerc $(WHEREMAN)/joe.1
-  	cp joerc $(WHERERC)
---- 84,100 ----
-  
-  # Install proceedure
-  
-! install: joe # termidx
-  	strip joe
-! #	strip termidx
-  	if [ ! -d $(WHEREJOE) ]; then mkdir $(WHEREJOE); chmod a+rx $(WHEREJOE); fi
-! 	rm -f $(WHEREJOE)/joe $(WHEREJOE)/jmacs $(WHEREJOE)/jstar $(WHEREJOE)/jpico $(WHEREJOE)/rjoe # $(WHEREJOE)/termidx
-  	mv joe $(WHEREJOE)
-  	ln $(WHEREJOE)/joe $(WHEREJOE)/jmacs
-  	ln $(WHEREJOE)/joe $(WHEREJOE)/jstar
-  	ln $(WHEREJOE)/joe $(WHEREJOE)/rjoe
-  	ln $(WHEREJOE)/joe $(WHEREJOE)/jpico
-! #	mv termidx $(WHEREJOE)
-  	if [ ! -d $(WHERERC) ]; then mkdir $(WHERERC); chmod a+rx $(WHERERC); fi
-  	rm -f $(WHERERC)/joerc $(WHERERC)/jmacsrc $(WHERERC)/jstarrc $(WHERERC)/jpicorc $(WHERERC)/rjoerc $(WHEREMAN)/joe.1
-  	cp joerc $(WHERERC)
-***************
-*** 114,126 ****
-  	chmod a+r $(WHERERC)/rjoerc
-  	chmod a+r $(WHERERC)/jpicorc
-  	chmod a+r $(WHEREMAN)/joe.1
-! 	chmod a+x $(WHEREJOE)/termidx
-! 	rm -f $(WHERERC)/termcap
-! 	cp termcap $(WHERERC)/termcap
-! 	chmod a+r $(WHERERC)/termcap
-! 	rm -f $(WHERERC)/terminfo
-! 	cp terminfo $(WHERERC)/terminfo
-! 	chmod a+r $(WHERERC)/terminfo
-  
-  # Cleanup proceedure
-  
---- 114,126 ----
-  	chmod a+r $(WHERERC)/rjoerc
-  	chmod a+r $(WHERERC)/jpicorc
-  	chmod a+r $(WHEREMAN)/joe.1
-! #	chmod a+x $(WHEREJOE)/termidx
-! #	rm -f $(WHERERC)/termcap
-! #	cp termcap $(WHERERC)/termcap
-! #	chmod a+r $(WHERERC)/termcap
-! #	rm -f $(WHERERC)/terminfo
-! #	cp terminfo $(WHERERC)/terminfo
-! #	chmod a+r $(WHERERC)/terminfo
-  
-  # Cleanup proceedure
-  
+--- Makefile.orig	Mon Jan 23 07:01:28 1995
++++ Makefile
+@@ -9,9 +9,9 @@
+ # to go and where you want the man page
+ # to go:
+ 
+-WHEREJOE = /usr/local/bin
+-WHERERC = /usr/local/lib
+-WHEREMAN = /usr/man/man1
++WHEREJOE = ${PREFIX}/bin
++WHERERC = ${PREFIX}/lib
++WHEREMAN = ${PREFIX}/man/man1
+ 
+ # If you want to use TERMINFO, you have to set
+ # the following variable to 1.  Also you have to
+@@ -27,7 +27,7 @@
+ 
+ # C compiler options: make's built-in rules use this variable
+ 
+-CFLAGS = -O
++# CFLAGS = -O
+ 
+ # C compiler to use: make's built-in rules use this variable
+ 
+@@ -45,7 +45,7 @@
+ # add '-ltinfo', '-lcurses' or '-ltermlib',
+ # depending on the system.
+ 
+-EXTRALIBS =
++EXTRALIBS = -ltermcap
+ 
+ # Object files
+ 
+@@ -84,17 +84,17 @@
+ 
+ # Install proceedure
+ 
+-install: joe termidx
++install: joe # termidx
+ 	strip joe
+-	strip termidx
++#	strip termidx
+ 	if [ ! -d $(WHEREJOE) ]; then mkdir $(WHEREJOE); chmod a+rx $(WHEREJOE); fi
+-	rm -f $(WHEREJOE)/joe $(WHEREJOE)/jmacs $(WHEREJOE)/jstar $(WHEREJOE)/jpico $(WHEREJOE)/rjoe $(WHEREJOE)/termidx
++	rm -f $(WHEREJOE)/joe $(WHEREJOE)/jmacs $(WHEREJOE)/jstar $(WHEREJOE)/jpico $(WHEREJOE)/rjoe # $(WHEREJOE)/termidx
+ 	mv joe $(WHEREJOE)
+ 	ln $(WHEREJOE)/joe $(WHEREJOE)/jmacs
+ 	ln $(WHEREJOE)/joe $(WHEREJOE)/jstar
+ 	ln $(WHEREJOE)/joe $(WHEREJOE)/rjoe
+ 	ln $(WHEREJOE)/joe $(WHEREJOE)/jpico
+-	mv termidx $(WHEREJOE)
++#	mv termidx $(WHEREJOE)
+ 	if [ ! -d $(WHERERC) ]; then mkdir $(WHERERC); chmod a+rx $(WHERERC); fi
+ 	rm -f $(WHERERC)/joerc $(WHERERC)/jmacsrc $(WHERERC)/jstarrc $(WHERERC)/jpicorc $(WHERERC)/rjoerc $(WHEREMAN)/joe.1
+ 	cp joerc $(WHERERC)
+@@ -114,13 +114,13 @@
+ 	chmod a+r $(WHERERC)/rjoerc
+ 	chmod a+r $(WHERERC)/jpicorc
+ 	chmod a+r $(WHEREMAN)/joe.1
+-	chmod a+x $(WHEREJOE)/termidx
+-	rm -f $(WHERERC)/termcap
+-	cp termcap $(WHERERC)/termcap
+-	chmod a+r $(WHERERC)/termcap
+-	rm -f $(WHERERC)/terminfo
+-	cp terminfo $(WHERERC)/terminfo
+-	chmod a+r $(WHERERC)/terminfo
++#	chmod a+x $(WHEREJOE)/termidx
++#	rm -f $(WHERERC)/termcap
++#	cp termcap $(WHERERC)/termcap
++#	chmod a+r $(WHERERC)/termcap
++#	rm -f $(WHERERC)/terminfo
++#	cp terminfo $(WHERERC)/terminfo
++#	chmod a+r $(WHERERC)/terminfo
+ 
+ # Cleanup proceedure
+ 
