@@ -1,0 +1,13 @@
+$NetBSD: patch-av,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/libs/rmon/rmon_semaph.c	2003-10-02 14:25:47.000000000 +0200
++++ source/libs/rmon/rmon_semaph.c	2003-09-30 16:14:54.000000000 +0200
+@@ -56,7 +56,7 @@
+ /*
+  * Define the semaphore operation arrays for the semop() calls.
+  */
+-#if defined(bsd4_2) || defined(MACH) || defined(__hpux) || defined(_AIX) || defined(SOLARIS) || defined(SINIX) || (defined(LINUX) && defined(_SEM_SEMUN_UNDEFINED))
++#if defined(bsd4_2) || defined(MACH) || defined(__hpux) || defined(_AIX) || defined(SOLARIS) || defined(SINIX) || (defined(LINUX) && defined(_SEM_SEMUN_UNDEFINED)) || defined(NETBSD)
+ union semun {
+    int val;                     /* value for SETVAL */
+    struct semid_ds *buf;        /* buffer for IPC_STAT & IPC_SET */

@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/daemons/execd/exec_job.c	2003-10-02 14:25:31.000000000 +0200
++++ source/daemons/execd/exec_job.c	2003-09-30 16:19:23.000000000 +0200
+@@ -472,7 +472,7 @@
+    return "LIBPATH";
+ #elif defined(HP10) || defined(HP11)
+    return "SHLIB_PATH";
+-#elif defined(ALPHA) || defined(IRIX6) || defined(IRIX65) || defined(LINUX) || defined(SOLARIS) || defined(FREEBSD)
++#elif defined(ALPHA) || defined(IRIX6) || defined(IRIX65) || defined(LINUX) || defined(SOLARIS) || defined(FREEBSD) || defined(NETBSD)
+    return "LD_LIBRARY_PATH";
+ #elif defined(DARWIN)
+    return "DYLD_LIBRARY_PATH";

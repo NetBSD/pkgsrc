@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/libs/uti/sge_loadmem.h	2003-10-02 14:25:50.000000000 +0200
++++ source/libs/uti/sge_loadmem.h	2003-10-01 15:15:34.000000000 +0200
+@@ -32,7 +32,7 @@
+  ************************************************************************/
+ /*___INFO__MARK_END__*/
+ 
+-#if defined(CRAY) || defined(SOLARIS) || defined(HP10) || defined(HP11) || defined(ALPHA) || defined(LINUX) || defined(IRIX6) || defined(NECSX4) || defined(NECSX5) || defined(DARWIN) || defined(FREEBSD)
++#if defined(CRAY) || defined(SOLARIS) || defined(HP10) || defined(HP11) || defined(ALPHA) || defined(LINUX) || defined(IRIX6) || defined(NECSX4) || defined(NECSX5) || defined(DARWIN) || defined(FREEBSD) || defined(NETBSD)
+ 
+ #define SGE_LOADMEM
+ 

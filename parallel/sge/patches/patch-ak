@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/3rdparty/remote/rlogin.c	2003-10-02 14:25:26.000000000 +0200
++++ source/3rdparty/remote/rlogin.c	2003-09-30 16:36:41.000000000 +0200
+@@ -64,7 +64,7 @@
+ #include <string.h>
+ #include <unistd.h>
+ 
+-#if !defined(FREEBSD) && !defined(DARWIN)
++#if !defined(FREEBSD) && !defined(DARWIN) && !defined(NETBSD)
+ #include <values.h>
+ #endif
+ 

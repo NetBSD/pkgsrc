@@ -1,0 +1,22 @@
+$NetBSD: patch-ar,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/daemons/shepherd/setrlimits.c.orig	2004-03-03 13:10:00.000000000 +0000
++++ source/daemons/shepherd/setrlimits.c
+@@ -34,7 +34,7 @@
+ #include <stdlib.h>
+ #include <errno.h>
+ 
+-#if defined(SUN4) || defined(DARWIN) || defined(FREEBSD)
++#if defined(SUN4) || defined(DARWIN) || defined(FREEBSD) || defined(NETBSD)
+ #   include <sys/time.h>
+ #endif
+ 
+@@ -406,7 +406,7 @@ int trace_rlimit 
+ 
+ #if defined(ALINUX) || defined(LINUX5) || ( defined(SOLARIS) && !defined(SOLARIS64) ) || defined(NECSX4) || defined(NECSX5)
+ #  define limit_fmt "%ld"
+-#elif defined(LINUX6) || defined(IRIX6) || defined(HP11) || defined(HP10) || defined(DARWIN) || defined(FREEBSD)
++#elif defined(LINUX6) || defined(IRIX6) || defined(HP11) || defined(HP10) || defined(DARWIN) || defined(FREEBSD) || defined(NETBSD)
+ #  define limit_fmt "%lld"
+ #elif defined(ALPHA) || defined(SOLARIS64) || defined(IA64LINUX) || defined(LINUXAMD64)
+ #  define limit_fmt "%lu"

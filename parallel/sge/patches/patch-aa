@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/05/03 00:38:34 dmcmahill Exp $
+
+--- source/3rdparty/qmake/configure.orig	2001-07-18 11:05:54.000000000 +0000
++++ source/3rdparty/qmake/configure
+@@ -4457,7 +4457,7 @@ else
+ fi
+ 
+ 
+- REMOTE=stub
++ REMOTE=${REMOTE:-stub}
+ make_try_customs=no
+ # Check whether --with-customs or --without-customs was given.
+ if test "${with_customs+set}" = set; then

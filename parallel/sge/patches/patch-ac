@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/05/03 00:38:34 dmcmahill Exp $
+
+--- source/3rdparty/qtcsh/configure.in.orig	2004-03-03 13:09:22.000000000 +0000
++++ source/3rdparty/qtcsh/configure.in
+@@ -259,9 +259,9 @@ AC_ARG_WITH(grd,
+             [  --with-grd=ARCH         SGE/SGEEE ARCH (LINUX5/LINUX6...)],
+             [grd="$withval"], [grd=no])
+ if test "$grd" != no; then
+-   GRDDEF="-I../../apilib"
+-   GRDLIB="-L../../$grd -lcodine -L/home/codine/zlib/$grd -lz -lm"
+-   CFLAGS="$CFLAGS -DPROG_NAME='\"qtcsh\"'"
++   GRDDEF="-I../../../libs/gdi"
++   GRDLIB="-L../../../$grd -R${SGE_ROOT}/lib/${SGE_ARCH} \$(SGE_LIBS) ${LDFLAGS}"
++   CFLAGS="$CFLAGS -DPROG_NAME='\"qtcsh\"' -D$grd"
+ fi
+ AC_SUBST(GRDDEF)
+ AC_SUBST(GRDLIB)

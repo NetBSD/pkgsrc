@@ -1,0 +1,34 @@
+$NetBSD: patch-az,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/libs/uti/sge_loadmem.c	2003-10-02 14:25:50.000000000 +0200
++++ source/libs/uti/sge_loadmem.c	2003-10-01 16:36:46.000000000 +0200
+@@ -812,3 +812,29 @@
+    return 0;
+ }
+ #endif /* FREEBSD */
++
++#if defined(NETBSD)
++
++#include <sys/param.h>
++#include <sys/sysctl.h>
++
++int loadmem(sge_mem_info_t *mem_info) {
++  int mib[2];
++  size_t size;
++  struct uvmexp_sysctl uvmexp;
++
++  mib[0] = CTL_VM; mib[1] = VM_UVMEXP2;
++  size = sizeof(uvmexp);
++  sysctl(mib, 2, &uvmexp, &size, NULL, 0);
++
++  /* Memory */
++  mem_info->mem_total = (uvmexp.npages * uvmexp.pagesize) / (1024 * 1024);
++  mem_info->mem_free = (uvmexp.free * uvmexp.pagesize) / (1024 * 1024);
++
++  /* Swap */
++  mem_info->swap_total = (uvmexp.swpages * uvmexp.pagesize) / (1024 * 1024);
++  mem_info->swap_free = ((uvmexp.swpages - uvmexp.swpginuse) * uvmexp.pagesize) / (1024 * 1024);
++
++  return 0; }
++
++#endif /* NETBSD */

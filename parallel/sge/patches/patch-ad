@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/05/03 00:38:34 dmcmahill Exp $
+
+--- source/3rdparty/qtcsh/configure.orig	2004-03-03 13:09:22.000000000 +0000
++++ source/3rdparty/qtcsh/configure
+@@ -1500,9 +1500,9 @@ else
+ fi
+ 
+ if test "$grd" != no; then
+-   GRDDEF="-I../../apilib"
+-   GRDLIB="-L../../$grd -lcodine -L/home/codine/zlib/$grd -lz -lm"
+-   CFLAGS="$CFLAGS -DPROG_NAME='\"qtcsh\"'"
++   GRDDEF="-I../../../libs/gdi"
++   GRDLIB="-L../../../$grd -R${SGE_ROOT}/lib/${SGE_ARCH} \$(SGE_LIBS) ${LDFLAGS}"
++   CFLAGS="$CFLAGS -DPROG_NAME='\"qtcsh\"' -D$grd"
+ fi
+ 
+ 
