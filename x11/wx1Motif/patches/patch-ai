@@ -1,0 +1,25 @@
+$NetBSD: patch-ai,v 1.1.1.1 2002/06/17 02:24:58 dmcmahill Exp $
+
+--- utils/image/src/wx_imgx.h.orig	Thu Jul 24 12:14:56 1997
++++ utils/image/src/wx_imgx.h
+@@ -48,10 +48,7 @@
+ #include <math.h>
+ #include <ctype.h>
+ #include <string.h>
+-extern int   errno;             /* this SHOULD be in errno.h */
+-#ifndef __FreeBSD__
+-extern char *sys_errlist[];     /* this SHOULD be in errno.h */
+-#endif
++#include <errno.h>
+ 
+ #if !defined(__convexc__) && !defined(VMS) && !defined(__GNUG__) /* Convex doesn't have <memory.h> */
+ #include <memory.h>             /* for 'memset()' prototype */
+@@ -126,7 +123,7 @@
+ 
+ 
+ #ifdef i386
+-#define UNCOMPRESS    "/usr/local/bin/uncompress"   /* uncompress program */
++#define UNCOMPRESS    "/usr/bin/uncompress"   /* uncompress program */
+ #undef  HOLD_SIG
+ #define HOLD_SIG      /* don't know how to handle signals  MWS 10/18/90 */
+ #undef  RELEASE_SIG
