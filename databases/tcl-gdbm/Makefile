@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2000/06/13 10:40:25 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/29 21:05:46 jwise Exp $
 #
 
-DISTNAME=	Tclgdbm0.6
-PKGNAME=	tcl-gdbm-0.6
-CATEGORIES=	databases
-MASTER_SITES=	http://www.tcltk.com/ftp/ellson/
+DISTNAME=	tclgdbm-0.8
+PKGNAME=	tcl-gdbm-0.8
+CATEGORIES=	databases tcl
+MASTER_SITES=	http://www.graphviz.org/pub/tclgdbm/
 
 MAINTAINER=	bouyer@netbsd.org
 
-DEPENDS+=	tcl-8.0.5:../../lang/tcl80
+DEPENDS+=	tcl-8.3.2:../../lang/tcl80
 DEPENDS+=	gdbm>=1.7.3:../../databases/gdbm
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.pkg.mk"
