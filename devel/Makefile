@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2000/03/07 23:19:32 jwise Exp $
+# $NetBSD: Makefile,v 1.112 2000/03/30 14:12:36 rh Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -56,6 +56,7 @@
     SUBDIR += libscsi
     SUBDIR += libslang
     SUBDIR += libsmi
+    SUBDIR += libstash
     SUBDIR += libstroke
     SUBDIR += libtool
     SUBDIR += lwp
