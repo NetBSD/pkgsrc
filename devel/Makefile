@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.299 2002/07/23 17:40:12 agc Exp $
+# $NetBSD: Makefile,v 1.300 2002/07/23 18:29:40 agc Exp $
 #
 
 COMMENT=	Development utilities
@@ -100,6 +100,7 @@ SUBDIR+=	guile-fcgi
 SUBDIR+=	guile-gtk
 SUBDIR+=	guile-oops
 SUBDIR+=	guile-slib
+SUBDIR+=	guile-www
 SUBDIR+=	haskell-mode
 SUBDIR+=	hdf
 SUBDIR+=	hdf5
