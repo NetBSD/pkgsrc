@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2001/07/01 21:24:26 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2001/07/02 21:10:39 jlam Exp $
 
 --- cda_d/Imakefile.orig	Sat Feb  5 01:26:38 2000
 +++ cda_d/Imakefile	Sun Feb 13 08:20:52 2000
@@ -11,21 +11,12 @@ $NetBSD: patch-ab,v 1.6 2001/07/01 21:24:26 jlam Exp $
  #else
  #if defined(__bsdi__)
  .if exists(/usr/include/ncurses.h)
-@@ -90,7 +90,7 @@
- #endif	/* LinuxArchitecture */
- #endif	/* SunArchitecture */
- 
--INCLUDES=-I..
-+INCLUDES=-I.. -I${BUILDLINK_DIR}/include
- 
- 
- /*
 @@ -109,7 +109,7 @@
  .endif
  #else
  #if defined(NetBSDArchitecture)
 -LOCAL_LIBRARIES=
-+LOCAL_LIBRARIES=-L${BUILDLINK_DIR}/lib -Wl,-R${LOCALBASE}/lib -lncurses
++LOCAL_LIBRARIES=-lncurses
  #else
  #if defined(__bsdi__)
  .if exists(/usr/include/ncurses.h)
