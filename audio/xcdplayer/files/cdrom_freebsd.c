@@ -32,8 +32,13 @@ static int c;
 # include "cdrom_freebsd.h"
 
 extern char	*device;
+#ifdef __NetBSD__
+static char     cdrom[] =       "/dev/rcd0d";
+static char     cdrom1[] =      "/dev/rmcd0d";
+#else
 static char     cdrom[] =       "/dev/rcd0c";
 static char     cdrom1[] =      "/dev/rmcd0c";
+#endif
 
 cdrom_info	cdi;
 char		info_filename[256];
