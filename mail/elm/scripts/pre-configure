@@ -1,7 +1,7 @@
 #!/bin/sh -
 #
 #	pre-configure script for Elm port to FreeBSD 2.0
-#	$NetBSD: pre-configure,v 1.3 1998/03/11 12:57:32 hubertf Exp $
+#	$NetBSD: pre-configure,v 1.4 1998/08/23 21:11:00 frueauf Exp $
 #	FreeBSD: pre-configure,v 1.16 1996/12/23 06:08:21 ache Exp
 
 PortsDir=$PORTSDIR
@@ -310,4 +310,3 @@ EOF
 
 exit 0
 # END
-
