@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/26 22:48:15 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2000/12/07 07:40:17 jtb Exp $
 
 --- src/Makefile.orig	Wed Oct 18 03:30:08 2000
 +++ src/Makefile
@@ -87,7 +87,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/11/26 22:48:15 jtb Exp $
 -		$(RANLIB) libpsl.a
 +libpsl:		pslib.o
 +		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -O -o libpsl.la \
-+		pslib.lo -rpath $(libdir)
++		pslib.lo -rpath $(libdir) --version-info 0:0
  
  pslib.o:	pslib.c $(PS_H)
 -		$(CC) $(CFLAGS) -c pslib.c
@@ -105,7 +105,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/11/26 22:48:15 jtb Exp $
 +libgmt:		$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
 +		@$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -O -o libgmt.la \
 +		$(LIB_O:.o=.lo) $(TRIANGLE_O:.o=.lo) $(ALPHA_SINCOS_O.o=.lo) \
-+		-rpath $(libdir)
++		-rpath $(libdir) --version-info 0:0
  
  #-------------------------------------------------------------------------------
  #	program dependencies
