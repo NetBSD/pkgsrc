@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.15 2002/03/24 19:53:41 rh Exp $
+# $NetBSD: buildlink.mk,v 1.16 2002/03/26 05:39:34 rh Exp $
 #
 # This Makefile fragment is included by packages that use gnome-libs.
 #
@@ -21,7 +21,7 @@ BUILDLINK_DEPENDS.gnome-libs?=	gnome-libs>=1.4.1.4
 DEPENDS+=	${BUILDLINK_DEPENDS.gnome-libs}:../../x11/gnome-libs
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gnome-libs=gnome-libs
-BUILDLINK_PREFIX.gnome-libs_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.gnome-libs_DEFAULTS=	${X11PREFIX}
 BUILDLINK_FILES.gnome-libs=	include/gnome-1.0/gnome.h
 BUILDLINK_FILES.gnome-libs+=	include/gnome-1.0/gtk-xmhtml/*
 BUILDLINK_FILES.gnome-libs+=	include/gnome-1.0/libart_lgpl/*
@@ -41,9 +41,11 @@ BUILDLINK_FILES.gnome-libs+=	lib/libgtkxmhtml.*
 BUILDLINK_FILES.gnome-libs+=	lib/libzvt.*
 
 REPLACE_BUILDLINK_SED+=	\
-	-e "s|-I${BUILDLINK_DIR}/\(lib/gnome-libs/\)|-I${BUILDLINK_PREFIX.gnome-libs}/\1|g"
+	-e "s|-I${BUILDLINK_DIR}/\(lib/gnome-libs/\)|-I${BUILDLINK_PREFIX.gnome-libs}/\1|g" \
+	-e "s|-I${BUILDLINK_DIR}/\(include/gnome-1.0\)|-I${BUILDLINK_PREFIX.gnome-libs}/\1|g"
 BUILDLINK_CONFIG_WRAPPER_SED+=	\
-	-e "s|-I${BUILDLINK_PREFIX.gnome-libs}/\(lib/gnome-libs/\)|-I${BUILDLINK_DIR}/\1|g"
+	-e "s|-I${BUILDLINK_PREFIX.gnome-libs}/\(lib/gnome-libs/\)|-I${BUILDLINK_DIR}/\1|g" \
+	-e "s|-I${BUILDLINK_PREFIX.gnome-libs}/\(include/gnome-1.0\)|-I${BUILDLINK_DIR}/\1|g"
 
 .include "../../audio/esound/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
