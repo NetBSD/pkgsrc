@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/06 11:06:01 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/11 09:19:53 rh Exp $
 bin/xine-config
 include/xine.h
 include/xine/attributes.h
@@ -37,8 +37,8 @@ include/xine/xmlparser.h
 lib/libxine.a
 lib/libxine.la
 lib/libxine.so
-lib/libxine.so.5
-lib/libxine.so.5.0
+lib/libxine.so.6
+lib/libxine.so.6.0
 lib/pkgconfig/libxine.pc
 lib/xine/plugins/1.0.0/post/xineplug_post_goom.a
 lib/xine/plugins/1.0.0/post/xineplug_post_goom.la
@@ -91,6 +91,9 @@ lib/xine/plugins/1.0.0/xineplug_decode_gsm610.so
 lib/xine/plugins/1.0.0/xineplug_decode_idcinvideo.a
 lib/xine/plugins/1.0.0/xineplug_decode_idcinvideo.la
 lib/xine/plugins/1.0.0/xineplug_decode_idcinvideo.so
+lib/xine/plugins/1.0.0/xineplug_decode_image.a
+lib/xine/plugins/1.0.0/xineplug_decode_image.la
+lib/xine/plugins/1.0.0/xineplug_decode_image.so
 lib/xine/plugins/1.0.0/xineplug_decode_interplayaudio.a
 lib/xine/plugins/1.0.0/xineplug_decode_interplayaudio.la
 lib/xine/plugins/1.0.0/xineplug_decode_interplayaudio.so
@@ -187,6 +190,9 @@ lib/xine/plugins/1.0.0/xineplug_dmx_fli.so
 lib/xine/plugins/1.0.0/xineplug_dmx_games.a
 lib/xine/plugins/1.0.0/xineplug_dmx_games.la
 lib/xine/plugins/1.0.0/xineplug_dmx_games.so
+lib/xine/plugins/1.0.0/xineplug_dmx_image.a
+lib/xine/plugins/1.0.0/xineplug_dmx_image.la
+lib/xine/plugins/1.0.0/xineplug_dmx_image.so
 lib/xine/plugins/1.0.0/xineplug_dmx_mng.a
 lib/xine/plugins/1.0.0/xineplug_dmx_mng.la
 lib/xine/plugins/1.0.0/xineplug_dmx_mng.so
@@ -241,9 +247,6 @@ lib/xine/plugins/1.0.0/xineplug_inp_dvd.so
 lib/xine/plugins/1.0.0/xineplug_inp_file.a
 lib/xine/plugins/1.0.0/xineplug_inp_file.la
 lib/xine/plugins/1.0.0/xineplug_inp_file.so
-lib/xine/plugins/1.0.0/xineplug_inp_gnome_vfs.a
-lib/xine/plugins/1.0.0/xineplug_inp_gnome_vfs.la
-lib/xine/plugins/1.0.0/xineplug_inp_gnome_vfs.so
 lib/xine/plugins/1.0.0/xineplug_inp_http.a
 lib/xine/plugins/1.0.0/xineplug_inp_http.la
 lib/xine/plugins/1.0.0/xineplug_inp_http.so
@@ -305,6 +308,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libxine1.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libxine1.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libxine1.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libxine1.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libxine1.mo
 ${PKGLOCALEDIR}/locale/pl_PL/LC_MESSAGES/libxine1.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libxine1.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libxine1.mo
