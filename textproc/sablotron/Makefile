@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2001/10/05 07:27:48 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/01 03:11:18 jlam Exp $
 
-DISTNAME=		Sablot-0.60
-PKGNAME=		sablotron-0.60
+DISTNAME=		Sablot-0.71
+PKGNAME=		sablotron-0.71
 CATEGORIES=		textproc
-MASTER_SITES=		http://www.gingerall.com/perl/rd?url=sablot/
+MASTER_SITES=		http://download-2.gingerall.cz/download/sablot/
 
 MAINTAINER=		uithuis@dds.nl
-HOMEPAGE=		http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act
-COMMENT=		XSL processor fully implemented in C++
+HOMEPAGE=		http://www.gingerall.com/charlie/ga/xml/p_sab.xml
+COMMENT=		XML toolkit implementing XSLT, DOM, and XPath
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=  	YES
