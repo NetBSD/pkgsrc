@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/03/18 17:45:12 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/20 19:35:31 jlam Exp $
 
 PKGNAME=		tcl-${DISTNAME}
 
-DEPENDS+=		postgresql-6.5.3:../../databases/postgresql
+DEPENDS+=		postgresql-${PG_VERS}:../../databases/postgresql
 DEPENDS+=		tcl-8.0.5:../../lang/tcl80
 
 TCLSH=			${LOCALBASE}/bin/tclsh8.0
@@ -34,5 +34,8 @@ do-install:
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
 .endfor
 	strip ${PREFIX}/bin/pgtclsh
+	${GTAR} zxCf ${PREFIX}/man \
+		${WRKDIR}/${DISTNAME}/doc/man.tar.gz \
+		`${SED} -e "s/#.*//" ${FILESDIR}/man.tcl`
 
 .include "../../databases/postgresql/Makefile.common"
