@@ -3,7 +3,7 @@
 # Date created:         02 Aug 1996
 # Whom:                 shanee@augusta.de
 #
-# $NetBSD: Makefile,v 1.2 1998/02/25 15:48:11 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/10 13:50:10 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:24 jseger Exp
 #
 
@@ -24,13 +24,13 @@ post-extract:
 	${CP} ${WRKSRC}/tkdiff/tkdiff.n ${WRKSRC}/tkdiff/tkdiff.1
 
 do-install:
-	(cd $(WRKSRC)/tkcvs; ${SETENV} ${MAKE_ENV} sh ./doinstall)
+	(cd ${WRKSRC}/tkcvs; ${SETENV} ${MAKE_ENV} sh ./doinstall)
 
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/tkcvs
-	${INSTALL_DATA} ${WRKSRC}/README.tkcvs $(PREFIX)/share/doc/tkcvs/
-	${INSTALL_DATA} ${WRKSRC}/tkdiff/README $(PREFIX)/share/doc/tkcvs/README.tkdiff
+	${INSTALL_DATA} ${WRKSRC}/README.tkcvs ${PREFIX}/share/doc/tkcvs/
+	${INSTALL_DATA} ${WRKSRC}/tkdiff/README ${PREFIX}/share/doc/tkcvs/README.tkdiff
 .endif
 
 .include <bsd.port.mk>
