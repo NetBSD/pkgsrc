@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2002/08/25 21:48:58 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/21 12:52:57 grant Exp $
 #
 
 DISTNAME=		bicom101
 PKGNAME=		bicom-1.01
 CATEGORIES=		archivers
-MASTER_SITES=		http://www3.sympatico.ca/mtimmerm/bicom/
+MASTER_SITES=		http://www3.sympatico.ca/mt0000/bicom/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		collver@linuxfreemail.com
-HOMEPAGE=		http://www3.sympatico.ca/mtimmerm/bicom/
+HOMEPAGE=		http://www3.sympatico.ca/mt0000/bicom/bicom.html
 COMMENT=		data compressor in the PPM family
 
 LICENSE=		no-commercial-use
