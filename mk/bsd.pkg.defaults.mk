@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.119 2002/12/25 09:21:42 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.120 2002/12/26 04:29:21 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1510,6 +1510,11 @@ USE_IDEA?=	NO
 # package to provide "inews" binary.
 # Possible: not defined, YES
 # Default: not defined
+
+USE_MMX?=	NO
+# Used in imlib2 to specify if the i386 MMX extensions should be used.
+# Possible: YES, NO
+# Default: NO
 
 #USE_OSS=
 #
