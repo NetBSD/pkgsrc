@@ -1,4 +1,4 @@
-/*	$NetBSD: err.h,v 1.1 2003/07/31 22:40:27 jschauma Exp $	*/
+/*	$NetBSD: err.h,v 1.1 2003/09/03 13:35:50 jlam Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993
