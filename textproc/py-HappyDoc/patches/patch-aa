@@ -1,4 +1,4 @@
-@NetBSD@
+$NetBSD: patch-aa,v 1.2 2002/05/20 19:16:34 cjep Exp $
 
 --- setup.py.orig	Tue Jan 29 16:46:18 2002
 +++ setup.py	Tue Jan 29 16:47:05 2002
