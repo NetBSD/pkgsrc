@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 1999/07/13 00:56:13 jlam Exp $
+$NetBSD: patch-ae,v 1.5 2000/07/19 09:31:45 jlam Exp $
 
---- Makefile.in.orig	Thu Feb 18 12:24:11 1999
-+++ Makefile.in	Tue Jul  6 13:18:52 1999
-@@ -67,11 +67,11 @@
+--- Makefile.in.orig	Wed Dec 29 17:02:40 1999
++++ Makefile.in	Sun Jul 16 23:22:30 2000
+@@ -69,11 +69,11 @@
  
  .c.o:
  	${RM} $@
@@ -17,7 +17,7 @@ $NetBSD: patch-ae,v 1.4 1999/07/13 00:56:13 jlam Exp $
  
  # The C code source files for this library.
  CSOURCES = $(srcdir)/readline.c $(srcdir)/funmap.c $(srcdir)/keymaps.c \
-@@ -117,18 +117,16 @@
+@@ -121,18 +121,17 @@
  
  static: $(STATIC_LIBS)
  
@@ -35,17 +35,18 @@ $NetBSD: patch-ae,v 1.4 1999/07/13 00:56:13 jlam Exp $
 -	-test -n "$(RANLIB)" && $(RANLIB) $@
 +	${LIBTOOL} --mode=link cc -o $@ ${HISTOBJ:.o=.lo} xmalloc.lo -rpath ${PREFIX}/lib -version-info ${READLINE_MAJOR}:${READLINE_MINOR}
  
--readline: $(OBJECTS) readline.h rldefs.h chardefs.h
--	$(CC) $(CCFLAGS) -o $@ ./examples/rl.c ./libreadline.a -ltermcap
-+readline: libreadline.la readline.h rldefs.h chardefs.h
+-readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.a
+-	$(CC) $(CCFLAGS) -o $@ ./examples/rl.c ./libreadline.a ${TERMCAP_LIB}
++
++readline: $(OBJECTS) readline.h rldefs.h chardefs.h ./libreadline.la
 +	${LIBTOOL} --mode=link $(CC) $(CCFLAGS) ${LDFLAGS} -o $@ ./examples/rl.c libreadline.la -ltermcap
  
  Makefile makefile: config.status $(srcdir)/Makefile.in
  	CONFIG_FILES=Makefile CONFIG_HEADERS= $(SHELL) ./config.status
-@@ -169,12 +167,8 @@
- 	for f in ${INSTALLED_HEADERS}; do \
- 		$(INSTALL_DATA) $(srcdir)/$$f $(includedir)/readline ; \
- 	done
+@@ -181,12 +180,8 @@
+ maybe-uninstall-headers: uninstall-headers
+ 
+ install: installdirs $(STATIC_LIBS) install-headers
 -	-$(MV) $(libdir)/libreadline.a $(libdir)/libreadline.old
 -	$(INSTALL_DATA) libreadline.a $(libdir)/libreadline.a
 -	-test -n "$(RANLIB)" && $(RANLIB) -t $(libdir)/libreadline.a

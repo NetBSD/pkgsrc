@@ -1,26 +1,26 @@
-$NetBSD: patch-aa,v 1.5 1999/07/13 00:56:13 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2000/07/19 09:31:45 jlam Exp $
 
---- display.c.orig	Thu Dec 17 15:36:30 1998
-+++ display.c	Tue Jul  6 05:21:00 1999
-@@ -652,7 +652,7 @@
- 	      _rl_last_c_pos <= last_invisible && local_prompt)
- 	    {
+--- display.c.orig	Thu Sep 16 11:19:40 1999
++++ display.c	Sun Jul 16 22:30:13 2000
+@@ -688,7 +688,7 @@
+ 	      putc ('\r', rl_outstream);
+ #else
  	      if (term_cr)
 -		tputs (term_cr, 1, _rl_output_character_function);
 +		tputs (term_cr, 1, (void *)_rl_output_character_function);
+ #endif
  	      _rl_output_some_chars (local_prompt, nleft);
  	      _rl_last_c_pos = nleft;
- 	    }
-@@ -899,7 +899,7 @@
-       term_cr && lendiff > visible_length && _rl_last_c_pos > 0 &&
-       od > lendiff && _rl_last_c_pos < last_invisible)
-     {
+@@ -945,7 +945,7 @@
+ #if defined (__MSDOS__)
+       putc ('\r', rl_outstream);
+ #else
 -      tputs (term_cr, 1, _rl_output_character_function);
 +      tputs (term_cr, 1, (void *)_rl_output_character_function);
+ #endif
        _rl_output_some_chars (local_prompt, lendiff);
        _rl_last_c_pos = lendiff;
-     }
-@@ -1069,7 +1069,7 @@
+@@ -1168,7 +1168,7 @@
  #if defined (__MSDOS__)
        putc ('\r', rl_outstream);
  #else
@@ -29,8 +29,8 @@ $NetBSD: patch-aa,v 1.5 1999/07/13 00:56:13 jlam Exp $
  #endif /* !__MSDOS__ */
        _rl_last_c_pos = 0;
      }
-@@ -1090,7 +1090,7 @@
- 
+@@ -1187,7 +1187,7 @@
+ #if defined (HACK_TERMCAP_MOTION)
        if (term_forward_char)
  	for (i = _rl_last_c_pos; i < new; i++)
 -	  tputs (term_forward_char, 1, _rl_output_character_function);
@@ -38,42 +38,43 @@ $NetBSD: patch-aa,v 1.5 1999/07/13 00:56:13 jlam Exp $
        else
  	for (i = _rl_last_c_pos; i < new; i++)
  	  putc (data[i], rl_outstream);
-@@ -1127,14 +1127,14 @@
-     {
-       for (i = 0; i < delta; i++)
- 	putc ('\n', rl_outstream);
+@@ -1218,7 +1218,7 @@
+ #if defined (__MSDOS__)
+       putc ('\r', rl_outstream);
+ #else
 -      tputs (term_cr, 1, _rl_output_character_function);
 +      tputs (term_cr, 1, (void *)_rl_output_character_function);
+ #endif
        _rl_last_c_pos = 0;
      }
-   else
+@@ -1226,7 +1226,7 @@
      {			/* delta < 0 */
        if (term_up && *term_up)
  	for (i = 0; i < -delta; i++)
 -	  tputs (term_up, 1, _rl_output_character_function);
 +	  tputs (term_up, 1, (void *)_rl_output_character_function);
      }
- #endif /* !__GO32__ */
+ 
    _rl_last_v_pos = to;		/* Now TO is here */
-@@ -1346,7 +1346,7 @@
+@@ -1437,7 +1437,7 @@
+      int count;
  {
- #if !defined (__GO32__)
    if (term_clreol)
 -    tputs (term_clreol, 1, _rl_output_character_function);
 +    tputs (term_clreol, 1, (void *)_rl_output_character_function);
    else if (count)
- #endif /* !__GO32__ */
      space_to_eol (count);
-@@ -1371,7 +1371,7 @@
+ }
+@@ -1460,7 +1460,7 @@
+ _rl_clear_screen ()
  {
- #if !defined (__GO32__)
    if (term_clrpag)
 -    tputs (term_clrpag, 1, _rl_output_character_function);
 +    tputs (term_clrpag, 1, (void *)_rl_output_character_function);
    else
- #endif /* !__GO32__ */
      crlf ();
-@@ -1402,7 +1402,7 @@
+ }
+@@ -1476,7 +1476,7 @@
      {
        char *buffer;
        buffer = tgoto (term_IC, 0, count);
@@ -82,7 +83,7 @@ $NetBSD: patch-aa,v 1.5 1999/07/13 00:56:13 jlam Exp $
        _rl_output_some_chars (string, count);
      }
    else
-@@ -1411,14 +1411,14 @@
+@@ -1485,14 +1485,14 @@
  
        /* If we have to turn on insert-mode, then do so. */
        if (term_im && *term_im)
@@ -99,16 +100,16 @@ $NetBSD: patch-aa,v 1.5 1999/07/13 00:56:13 jlam Exp $
  	}
  
        /* Print the text. */
-@@ -1427,7 +1427,7 @@
+@@ -1501,7 +1501,7 @@
        /* If there is a string to turn off insert mode, we had best use
  	 it now. */
        if (term_ei && *term_ei)
 -	tputs (term_ei, 1, _rl_output_character_function);
 +	tputs (term_ei, 1, (void *)_rl_output_character_function);
      }
- #endif /* !__GO32__ */
  }
-@@ -1456,13 +1456,13 @@
+ 
+@@ -1517,13 +1517,13 @@
      {
        char *buffer;
        buffer = tgoto (term_DC, count, count);
@@ -122,24 +123,29 @@ $NetBSD: patch-aa,v 1.5 1999/07/13 00:56:13 jlam Exp $
 -	  tputs (term_dc, 1, _rl_output_character_function);
 +	  tputs (term_dc, 1, (void *)_rl_output_character_function);
      }
- #endif /* !__GO32__ */
  }
-@@ -1503,7 +1503,7 @@
- {
-   if (term_cr)
-     {
+ 
+@@ -1570,7 +1570,7 @@
+ #if defined (__MSDOS__)
+       putc ('\r', rl_outstream);
+ #else
 -      tputs (term_cr, 1, _rl_output_character_function);
 +      tputs (term_cr, 1, (void *)_rl_output_character_function);
+ #endif
        _rl_last_c_pos = 0;
      }
- }
-@@ -1518,14 +1518,14 @@
-      the right thing happens if we have wrapped to a new screen line. */
-   if (term_cr)
-     {
+@@ -1620,7 +1620,7 @@
+ #if defined (__MSDOS__)
+       putc ('\r', rl_outstream);
+ #else
 -      tputs (term_cr, 1, _rl_output_character_function);
 +      tputs (term_cr, 1, (void *)_rl_output_character_function);
+ #endif
        _rl_last_c_pos = 0;
+ #if defined (__MSDOS__)
+@@ -1628,11 +1628,11 @@
+       putc ('\r', rl_outstream);
+ #else
        if (term_clreol)
 -	tputs (term_clreol, 1, _rl_output_character_function);
 +	tputs (term_clreol, 1, (void *)_rl_output_character_function);
@@ -149,5 +155,5 @@ $NetBSD: patch-aa,v 1.5 1999/07/13 00:56:13 jlam Exp $
 -	  tputs (term_cr, 1, _rl_output_character_function);
 +	  tputs (term_cr, 1, (void *)_rl_output_character_function);
  	}
+ #endif
        if (_rl_last_v_pos > 0)
- 	_rl_move_vert (0);
