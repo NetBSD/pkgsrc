@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3004 2003/08/07 04:14:29 gson Exp $
+$NetBSD: CHANGES,v 1.3005 2003/08/07 11:31:45 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3214,3 +3214,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated grhino to 0.7.1 [wiz 2003-08-06]
 	Updated kde to 3.1.3nb1 [tron 2003-08-06]
 	Added p5-XML-Twig [gson 2003-08-06]
+	Updated cpuflags to 0.56 [abs 2003-08-06]
+
