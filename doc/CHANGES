@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1984 2003/04/20 10:46:39 rh Exp $
+$NetBSD: CHANGES,v 1.1985 2003/04/20 13:00:27 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1667,3 +1667,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gnome1-session-1.4.2 [rh 2003-04-20]
 	Added gnome1-panel-1.4.2 [rh 2003-04-20]
 	Updated gnome-core to 1.4.2nb4 [rh 2003-04-20]
+	Updated cvsync to 0.19.5 [gehenna 2003-04-20]
