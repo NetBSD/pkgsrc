@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.11 1999/04/14 21:13:24 tron Exp $
+# $NetBSD: Makefile,v 1.12 1999/04/14 21:31:44 tron Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 
 DISTNAME=	${PKGNAME}.src
 PKGNAME=	minicom-1.82.1
 CATEGORIES=	comms
-MASTER_SITES=	http://www.pp.clinet.fi/~walker/
+MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/dialout/} \
+		http://www.pp.clinet.fi/~walker/
 
 MAINTAINER=     tron@netbsd.org
 HOMEPAGE=	http://www.clinet.fi/~walker/minicom.html
