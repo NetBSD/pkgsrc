@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.9 1999/12/28 14:08:56 tron Exp $
+$NetBSD: patch-ab,v 1.10 2000/03/01 05:07:41 minoura Exp $
 
 --- configure.orig	Fri Dec  3 16:41:15 1999
-+++ configure	Fri Dec 17 15:23:49 1999
-@@ -715,9 +715,12 @@
++++ configure	Tue Feb 29 15:36:45 2000
+@@ -21,6 +21,9 @@
+   --with-x-toolkit=KIT    use an X toolkit (KIT = yes/lucid/athena/motif/no)"
+ ac_help="$ac_help
+   --with-x                use the X Window System"
++ac_help="$ac_help
++  --without-ipv6          disable IPv6 support"
++
+ 
+ # Initialize some variables set by options.
+ # The variables have the same names as the options, with
+@@ -715,9 +718,12 @@
  			machine=hp9000s300 ;;
        powerpc-apple-netbsd*) machine=macppc ;;
        mips-*-netbsd*)	machine=pmax ;;
@@ -15,12 +25,68 @@ $NetBSD: patch-ab,v 1.9 1999/12/28 14:08:56 tron Exp $
      esac
    ;;
  
-@@ -4277,7 +4280,7 @@
- rename closedir mkdir rmdir sysinfo \
- random lrand48 bcopy bcmp logb frexp fmod rint cbrt ftime res_init setsid \
- strerror fpathconf select mktime euidaccess getpagesize tzset setlocale \
--utimes setrlimit setpgid getcwd shutdown strftime
-+utimes setrlimit setpgid getcwd shutdown strftime getaddrinfo
- do
- echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
- echo "configure:4284: checking for $ac_func" >&5
+@@ -4690,6 +4696,64 @@
+   cat >> confdefs.h <<\EOF
+ #define HAVE_AIX_SMT_EXP 1
+ EOF
++
++fi
++
++if test "x$with_ipv6" = xyes; then
++  for ac_func in getaddrinfo
++do
++echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
++echo "configure:4796: checking for $ac_func" >&5
++if eval "test \"`echo '$''{'ac_cv_func_$ac_func'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  cat > conftest.$ac_ext <<EOF
++#line 4801 "configure"
++#include "confdefs.h"
++/* System header to define __stub macros and hopefully few prototypes,
++    which can conflict with char $ac_func(); below.  */
++#include <assert.h>
++/* Override any gcc2 internal prototype to avoid an error.  */
++/* We use char because int might match the return type of a gcc2
++    builtin and then its argument prototype would still apply.  */
++char $ac_func();
++
++int main() {
++
++/* The GNU C library defines this for functions which it implements
++    to always fail with ENOSYS.  Some functions are actually named
++    something starting with __ and the normal name is an alias.  */
++#if defined (__stub_$ac_func) || defined (__stub___$ac_func)
++choke me
++#else
++$ac_func();
++#endif
++
++; return 0; }
++EOF
++if { (eval echo configure:4824: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
++  rm -rf conftest*
++  eval "ac_cv_func_$ac_func=yes"
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  eval "ac_cv_func_$ac_func=no"
++fi
++rm -f conftest*
++fi
++
++if eval "test \"`echo '$ac_cv_func_'$ac_func`\" = yes"; then
++  echo "$ac_t""yes" 1>&6
++    ac_tr_func=HAVE_`echo $ac_func | tr 'abcdefghijklmnopqrstuvwxyz' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'`
++  cat >> confdefs.h <<EOF
++#define $ac_tr_func 1
++EOF
++ 
++else
++  echo "$ac_t""no" 1>&6
++fi
++done
+ 
+ fi
+ 
