@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2003/07/13 13:50:51 wiz Exp $
-# FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
-#
+# $NetBSD: Makefile,v 1.35 2003/07/14 08:25:40 tron Exp $
 
-DISTNAME=	${PKGNAME}.src
-PKGNAME=	minicom-1.83.1
-PKGREVISION=			1
+DISTNAME=	minicom-1.83.1.src
+PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/src
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_BACKUP}
