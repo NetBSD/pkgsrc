@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2004/07/15 04:05:40 atatat Exp $
+# $NetBSD: Makefile,v 1.54 2004/10/11 23:46:15 tv Exp $
 
 DISTNAME=	screen-4.0.2
 PKGREVISION=	1
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.gnu.org/software/screen/screen.html
 COMMENT=	Multi-screen window manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+NOT_FOR_PLATFORM=	Interix-*-* # user auth and username size fixes needed
 
 USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
