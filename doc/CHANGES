@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1762 2003/03/24 15:28:30 bouyer Exp $
+$NetBSD: CHANGES,v 1.1763 2003/03/25 01:06:58 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1291,3 +1291,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fping to 2.4b2 [bouyer 2003-03-24]
 	Added fping6-2.4b2 [bouyer 2003-03-24]
 	Added smokeping-1.19 [bouyer 2003-03-24]
+	Updated cvsync to 0.15.1 [gehenna 2003-03-25]
