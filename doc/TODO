@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2491 2004/11/26 21:59:09 snj Exp $
+$NetBSD: TODO,v 1.2492 2004/11/26 22:00:38 snj Exp $
 
 Suggested new packages
 ======================
@@ -359,7 +359,6 @@ Suggested package updates
 	o cdrtools-2.01
 	o cdrtools-ossdvd-2.01a32
 	o ce-4.5
-	o centericq-4.12.0
 	o cfengine2-2.1.11
 	o cfengine2-doc-2.1.11
 	o cgdb-0.5.0
