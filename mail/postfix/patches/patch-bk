@@ -1,4 +1,4 @@
-$NetBSD: patch-bk,v 1.1 1999/05/30 18:18:33 tron Exp $
+$NetBSD: patch-bk,v 1.2 1999/06/26 16:55:28 christos Exp $
 
 --- util/sys_defs.h.orig	Sat Mar 20 02:16:34 1999
 +++ util/sys_defs.h	Sun May 30 18:49:15 1999
@@ -7,7 +7,7 @@ $NetBSD: patch-bk,v 1.1 1999/05/30 18:18:33 tron Exp $
  #define ALIAS_DB_MAP	"hash:/etc/aliases"
  #define GETTIMEOFDAY(t)	gettimeofday(t,(struct timezone *) 0)
 -#define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin"
-+#define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin:/usr/pkg/sbin:/usr/pkg/bin"
++#define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin:__PREFIX/sbin:__PREFIX/bin"
  #define USE_STATFS
  #define STATFS_IN_SYS_MOUNT_H
  #endif
