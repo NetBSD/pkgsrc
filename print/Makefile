@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2001/10/16 06:21:35 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2001/12/24 09:24:12 mjl Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -38,6 +38,7 @@ SUBDIR+=	pcps
 SUBDIR+=	pdflib
 SUBDIR+=	php4-pdflib
 SUBDIR+=	pnm2ppa
+SUBDIR+=	pscal
 SUBDIR+=	psify
 SUBDIR+=	psutils
 SUBDIR+=	py-reportlab
