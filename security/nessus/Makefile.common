@@ -1,13 +1,12 @@
-# $NetBSD: Makefile.common,v 1.19 2003/11/08 07:40:17 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.20 2004/05/19 16:22:28 adam Exp $
 #
 # Common Makefile for:
 #  * nessus-core
 #  * nessus-libraries
 #  * nessus-plugins
 #  * libnasl
-#
 
-VERS=		2.0.9
+VERS=		2.0.10a
 
 CATEGORIES=	security x11 net
 MASTER_SITES?=	ftp://ftp.nessus.org/pub/nessus/nessus-${VERS}/src/ \
