@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 02:08:38 wiz Exp $
+$NetBSD: distinfo,v 1.3 2001/07/27 11:05:58 abs Exp $
 
 SHA1 (doomsrc.zip) = ffd07e0bd95b7c6ba0cd003fb6ff5ebd535d6f99
 Size (doomsrc.zip) = 362698 bytes
 SHA1 (doom-1.8.wad.gz) = e43334e5f31d93cadaf8f1ede6cd432f9b0aca68
 Size (doom-1.8.wad.gz) = 1756050 bytes
-SHA1 (patch-aa) = 5e5091bd2451e8ae5b8316231da99cab3ac5849c
+SHA1 (patch-aa) = 6b9927779c14d2a91238c531e7429a86835656df
 SHA1 (patch-ab) = 32d4389a7fc2413d19fe8f66d6da9205effa710a
 SHA1 (patch-ac) = d47c6e1388f3d2d7ea5dbc074c5bec34adf14f1f
 SHA1 (patch-ad) = cb8e892e9fa561960da46c0bfea61bcf65246458
