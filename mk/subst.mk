@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.2 2003/09/02 06:59:47 jlam Exp $
+# $NetBSD: subst.mk,v 1.3 2003/10/07 10:19:09 jlam Exp $
 #
 # This Makefile fragment implements a general text replacement facility
 # for different classes of files in ${WRKSRC}.  For each class of files,
@@ -19,6 +19,10 @@
 #
 # SUBST_SED.<class>
 #	sed(1) substitution expression to run on the specified files
+#
+# SUBST_FILTER_CMD.<class>
+#	filter used to perform the actual substitution on the specified
+#	files.  Defaults to ${SED} ${SUBST_SED.<class>}.
 
 ECHO_SUBST_MSG?=	${ECHO}
 
@@ -29,6 +33,12 @@ _SUBST_IS_TEXT_FILE?= \
 .for _class_ in ${SUBST_CLASSES}
 _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
+.if defined(SUBST_SED.${_class_}) && !empty(SUBST_SED.${_class_})
+SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
+.else
+SUBST_FILTER_CMD.${_class_}?=	# empty
+.endif
+
 SUBST_TARGETS+=			subst-${_class_}
 _SUBST_TARGETS.${_class_}=	subst-${_class_}-message
 _SUBST_TARGETS.${_class_}+=	${_SUBST_COOKIE.${_class_}}
@@ -36,9 +46,9 @@ _SUBST_TARGETS.${_class_}+=	subst-${_class_}-cookie
 
 .ORDER: ${_SUBST_TARGETS.${_class_}}
 
-.if defined(SUBST_STAGE.${_class_})
+.  if defined(SUBST_STAGE.${_class_})
 ${SUBST_STAGE.${_class_}}: subst-${_class_}
-.endif
+.  endif
 
 .PHONY: subst-${_class_}
 subst-${_class_}: ${_SUBST_TARGETS.${_class_}}
@@ -54,7 +64,7 @@ subst-${_class_}: ${_SUBST_TARGETS.${_class_}}
 	${TOUCH} ${TOUCH_FLAGS} ${_SUBST_COOKIE.${_class_}}
 
 ${_SUBST_COOKIE.${_class_}}:
-.  if !empty(SUBST_SED.${_class_})
+.  if !empty(SUBST_FILTER_CMD.${_class_})
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${WRKSRC};							\
 	files="${SUBST_FILES.${_class_}}";				\
@@ -63,8 +73,9 @@ ${_SUBST_COOKIE.${_class_}}:
 	*)	for file in $${files}; do				\
 			if ${_SUBST_IS_TEXT_FILE}; then			\
 				${MV} -f $$file $$file.subst.sav;	\
-				${SED}  ${SUBST_SED.${_class_}}		\
-					$$file.subst.sav > $$file;	\
+				${CAT} $$file.subst.sav 		\
+					| ${SUBST_FILTER_CMD.${_class_}} \
+					> $$file;			\
 				if [ -x $$file.subst.sav ]; then	\
 					${CHMOD} +x $$file;		\
 				fi;					\
