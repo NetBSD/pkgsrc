@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1403 2004/02/19 14:27:35 minskim Exp $
+$NetBSD: TODO,v 1.1404 2004/02/19 16:51:24 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -208,7 +208,6 @@ Suggested package updates
 	o grepmail-5.23
 	o gsasl-0.0.14
 	o gtetrinet-0.7.4
-	o gtk-doc-1.2
 	o gtkglext-1.0.5
 	o gtksee-0.5.5.1
 	o guile-pg-0.16 [pkg/24039]
