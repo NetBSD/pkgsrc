@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/12/03 15:14:57 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2005/03/07 09:48:36 uebayasi Exp $
 
 DISTNAME=		crafty-18.15
 CATEGORIES=		games
@@ -39,8 +39,8 @@ BUILD_TARGET=		solaris-gcc
 BUILD_TARGET=		generic
 .endif
 
-CRAFTY_OPTS=		-DBOOKDIR=\\\"${BOOKDIR}\\\"
-CRAFTY_OPTS+=		-DTBDIR=\\\"${TBDIR}\\\"
+CRAFTY_OPTS=		-DBOOKDIR="\"${BOOKDIR}\""
+CRAFTY_OPTS+=		-DTBDIR="\"${TBDIR}\""
 MAKE_ENV+=		opt="${CRAFTY_OPTS}"
 
 BOOKDIR=		${PREFIX}/lib/crafty
