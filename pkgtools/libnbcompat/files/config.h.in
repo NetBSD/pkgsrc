@@ -1,17 +1,4 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
-/* $Id: config.h.in,v 1.7 2003/07/15 05:33:04 grant Exp $ */
-
-/* Define if *printf() uses %qd to print `long long' (otherwise uses %lld) */
-#undef HAVE_PRINTF_QD
-
-/* Define if `long long' is supported and sizeof(off_t) >= 8 */
-#undef HAVE_QUAD_SUPPORT
-
-/* Define if optarg is declared in <stdlib.h> or <unistd.h> */
-#undef HAVE_OPTARG_D
-
-/* Define if optind is declared in <stdlib.h> or <unistd.h> */
-#undef HAVE_OPTIND_D
 
 /* Define to 1 if the `getpgrp' function requires zero arguments. */
 #undef GETPGRP_VOID
@@ -416,6 +403,18 @@
 #undef size_t
 
 
+
+/* Define if *printf() uses %qd to print `long long' (otherwise uses %lld) */
+#undef HAVE_PRINTF_QD
+
+/* Define if `long long' is supported and sizeof(off_t) >= 8 */
+#undef HAVE_QUAD_SUPPORT
+
+/* Define if optarg is declared in <stdlib.h> or <unistd.h> */
+#undef HAVE_OPTARG_D
+
+/* Define if optind is declared in <stdlib.h> or <unistd.h> */
+#undef HAVE_OPTIND_D
 
 #ifndef HAVE___ATTRIBUTE__
 # define __attribute__(x)
