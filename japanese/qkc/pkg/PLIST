@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/10/09 18:43:30 nra Exp $
+bin/qkc
+man/ja_JP.EUC/man1/qkc.1
