@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 1999/08/13 19:37:42 tron Exp $
+# $NetBSD: Makefile,v 1.105 1999/08/23 14:18:18 agc Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -75,6 +75,7 @@
     SUBDIR += qwspritefield
     SUBDIR += rclock
     SUBDIR += rxvt
+    SUBDIR += scwm
 #    SUBDIR += sliderule
 #    SUBDIR += slingshot
     SUBDIR += sunclock
