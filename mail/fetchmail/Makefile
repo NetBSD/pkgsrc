@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2001/07/29 07:30:59 tron Exp $
+# $NetBSD: Makefile,v 1.102 2001/07/31 16:19:08 tron Exp $
 
 DISTNAME=       fetchmail-5.8.14
 CATEGORIES=	mail
@@ -54,6 +54,7 @@ CONFIGURE_ARGS+=	--enable-inet6
 FDOC=	${PREFIX}/share/doc/fetchmail
 
 post-extract:
+	@${RM} -f ${WRKSRC}/intl/libintl.h
 .if ${OPSYS} == "NetBSD"
 	@${RM} -f ${WRKSRC}/md5.h
 .endif
