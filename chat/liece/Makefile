@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:26:03 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/09 10:33:29 seb Exp $
 
 DISTNAME=	liece-1.4.10
 CATEGORIES=	chat
@@ -21,7 +21,6 @@ CONFIGURE_ARGS+=--with-xemacs=${EMACS_BIN}
 CONFIGURE_ARGS+=--with-lispdir=${EMACS_LISPPREFIX}
 USE_GMAKE=	# defined
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	liece.info
 
 .include "../../mk/bsd.pkg.mk"
