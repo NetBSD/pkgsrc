@@ -1,0 +1,14 @@
+$NetBSD: patch-ax,v 1.4 2003/08/02 19:33:23 mrg Exp $
+
+--- kioslave/man/man2html.cpp.orig	2002-10-28 01:22:07.000000000 +1100
++++ kioslave/man/man2html.cpp	2003-08-03 04:29:18.000000000 +1000
+@@ -105,7 +105,8 @@
+ 
+ 
+ #include <stdio.h>
+-#include <iostream.h>
++#include <iostream>
++using namespace std;
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
