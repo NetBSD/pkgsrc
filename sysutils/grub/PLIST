@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/07/20 12:42:36 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/20 13:27:33 tron Exp $
 bin/mbchk
 @unexec install-info --delete --info-dir=%D/info %D/info/grub.info
 info/grub.info
@@ -14,6 +14,7 @@ man/man8/grub.8
 sbin/grub
 sbin/grub-install
 sbin/grub-md5-crypt
+${NETBOOT}share/doc/grub/README.netboot
 share/grub/${MACHINE_ARCH}-/e2fs_stage1_5
 share/grub/${MACHINE_ARCH}-/fat_stage1_5
 share/grub/${MACHINE_ARCH}-/ffs_stage1_5
@@ -30,3 +31,4 @@ share/grub/${MACHINE_ARCH}-/xfs_stage1_5
 @exec install-info --info-dir=%D/info %D/info/multiboot.info
 @dirrm share/grub/${MACHINE_ARCH}-
 @dirrm share/grub
+${NETBOOT}@dirrm share/doc/grub
