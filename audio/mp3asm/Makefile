@@ -1,0 +1,25 @@
+# $NetBSD: Makefile,v 1.1.1.1 2002/04/28 16:51:05 zuntum Exp $
+#
+
+DISTNAME=	mp3asm-0.1.3
+CATEGORIES=	audio
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3asm/}
+
+MAINTAINER=	rxg@netbsd.org
+HOMEPAGE=	http://mp3asm.sourceforge.net/
+COMMENT=	mpeg 1/2/2.5 audio layer 1,2,3 frame level editor
+
+GNU_CONFIGURE=	yes
+
+WRKSRC=		${WRKDIR}/mp3asm-0.1
+
+post-patch:
+	${MV} ${WRKSRC}/src/mp3asm.c ${WRKSRC}/src/mp3asm.c.orig
+	${SED} "s/getprogname/_getprogname/g" ${WRKSRC}/src/mp3asm.c.orig	\
+		> ${WRKSRC}/src/mp3asm.c
+
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mp3asm
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/mp3asm
+
+.include "../../mk/bsd.pkg.mk"
