@@ -9,8 +9,8 @@ untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
 #       I:src:dst		translates "-Isrc" into "-Idst"
 #       L:src:dst		translates "-Lsrc" into "-Ldst"
 #       l:foo:bar		translates "-lfoo" into "-lbar"
-#	p:path			translates "/usr/pkg/lib/libfoo.{a,so}" into
-#					"-L/usr/pkg/lib -lfoo"
+#	p:path			translates "path/*/libfoo.so" into
+#					"-Lpath/* -lfoo"
 #       r:dir			removes "dir" and "dir/*"
 #       S:foo:bar		translates word "foo" into "bar"
 #       s:foo:bar		translates "foo" into "bar"
@@ -70,6 +70,7 @@ EOF
 		transform|untransform)
 			@CAT@ >> $sedfile << EOF
 s|\($2/[^ 	"':;]*\)/lib\([^ 	/"':;]*\)\.so|-L\1 -l\2|g
+s|\($2\)/lib\([^ 	/"':;]*\)\.so|-L\1 -l\2|g
 EOF
 			;;
 		esac
