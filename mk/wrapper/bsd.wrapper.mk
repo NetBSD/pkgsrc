@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.12.2.1 2004/11/22 22:48:05 tv Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.12.2.2 2004/11/23 18:25:35 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -48,14 +48,6 @@ _WRAP_VARS_MK=		${WRAPPER_DIR}/vars.mk
 .endif
 
 .PHONY: do-wrapper
-
-# USE_BUILDLINK3 == "no" implies NO_BUILDLINK
-.if !empty(USE_BUILDLINK3:M[nN][oO])
-NO_BUILDLINK=	yes
-.endif
-.if !defined(NO_BUILDLINK)
-.  include "../../mk/buildlink3/bsd.buildlink3.mk"
-.endif
 
 # Create the saved variables Makefile fragment to pass variables
 # through to sub-make processes invoked on the same Makefile.
