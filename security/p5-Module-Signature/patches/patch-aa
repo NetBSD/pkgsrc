@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/11/11 18:11:58 seb Exp $
+
+--- Makefile.PL.orig	2004-07-01 12:13:51.000000000 +0000
++++ Makefile.PL
+@@ -88,11 +88,6 @@ sub locate_gpg {
+ 
+     if ($has_gpg) {
+ 	print "GnuPG found ($gpg).\n";
+-	if (prompt("Import PAUSE and author keys to GnuPG?", 'y') =~ /^y/i) {
+-	    print "Importing... ";
+-	    system('gpg', '--quiet', '--import', <*.pub>);
+-	    print "done.\n";
+-	}
+ 	return 1;
+     }
+ 
