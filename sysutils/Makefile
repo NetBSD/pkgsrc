@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2004/01/14 15:03:54 wiz Exp $
+# $NetBSD: Makefile,v 1.214 2004/01/21 05:03:49 grant Exp $
 
 COMMENT=	System utilities
 
@@ -51,6 +51,7 @@ SUBDIR+=	etcupdate
 SUBDIR+=	extipl
 SUBDIR+=	fakeroot
 SUBDIR+=	fam
+SUBDIR+=	fastfs
 SUBDIR+=	fdgw
 SUBDIR+=	file
 SUBDIR+=	findutils
