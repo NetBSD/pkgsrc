@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.44 2004/03/26 02:27:43 wiz Exp $
+# $NetBSD: Makefile,v 1.44.2.1 2004/05/30 08:54:13 grant Exp $
 
 DISTNAME=	exim-${EXIM_VERSION}
 PKGREVISION=	5
 CATEGORIES=	mail net
 
-MAINTAINER=	ad@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.exim.org/
 COMMENT=	The Exim mail transfer agent, a replacement for sendmail
 
