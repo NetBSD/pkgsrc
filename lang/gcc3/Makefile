@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/07/03 18:19:18 drochner Exp $
+# $NetBSD: Makefile,v 1.31 2003/07/04 16:11:57 seb Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -26,9 +26,9 @@ CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX}
 UNLIMIT_RESOURCES=	datasize
 
-# as this is named gcc3, use DISTNAME instead.
-FILES_SUBST+=		PKGNAME_NOREV=${DISTNAME} GCC_PREFIX=${GCC_PREFIX}
-MESSAGE_SUBST+=		PKGNAME_NOREV=${DISTNAME}
+FILES_SUBST+=		DISTNAME=${DISTNAME} GCC_PREFIX=${GCC_PREFIX}
+MESSAGE_SUBST+=		DISTNAME=${DISTNAME}
+PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 TEXINFO_REQD=		4.2
 
@@ -97,8 +97,8 @@ post-install:
 .if ${OPSYS} == "SunOS"
 	-cd ${GCC_ARCHDIR}/include && ${RM} -f fixed && ${RMDIR} v7 v9
 .endif
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gcc
-	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${PREFIX}/share/examples/gcc/mk.conf
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${DISTNAME}
+	${INSTALL_DATA} ${WRKDIR}/gcc3.mk ${PREFIX}/share/examples/${DISTNAME}/mk.conf
 	${LN} -f ${GCC_PREFIX}/bin/gcc ${GCC_PREFIX}/bin/cc
 #	${LN} -f ${GCC_PREFIX}/bin/g77 ${GCC_PREFIX}/bin/f77
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
