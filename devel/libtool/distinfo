@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.46 2004/10/04 19:48:09 tv Exp $
+$NetBSD: distinfo,v 1.47 2004/10/08 17:37:50 tv Exp $
 
 SHA1 (libtool-1.5.10.tar.gz) = bb2cab7f405c5eb08ab8ba193cbac59ebe6e6e9e
 Size (libtool-1.5.10.tar.gz) = 2699923 bytes
 SHA1 (patch-aa) = 173b8f40ebb067e3bcea798b87e822a445d5688e
-SHA1 (patch-ab) = 7b6db6dc7f57bd5425542e156308793a52729c58
+SHA1 (patch-ab) = 18e8a4ebf8bc165d3eb94a3e9856a672239dab7c
 SHA1 (patch-ac) = e5cb5ca2303ebb82bb17db6c785580c23db2c6d3
-SHA1 (patch-ad) = a2d0742ff45539b06c346b8bee8e04645441e266
+SHA1 (patch-ad) = e9ad9e7c5cfb3b7c9a966a1909f2ffba5e8b493e
