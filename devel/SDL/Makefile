@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/06/11 06:34:25 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/06/26 03:29:17 jlam Exp $
 #
 
 DISTNAME=	SDL-1.2.0
@@ -9,48 +9,63 @@ MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://www.libsdl.org/
 COMMENT=	Simple DirectMedia Layer, a cross-platform multimedia library
 
-BUILD_DEPENDS+= autoconf>=2.13:../../devel/autoconf
-BUILD_DEPENDS+= automake>=1.4:../../devel/automake
-BUILD_DEPENDS+= nasm>=0.98:../../devel/nasm
-DEPENDS+=	pth>=1.4.0:../../devel/pth
-#DEPENDS+=	unproven-pthreads>=0.16
-DEPENDS+=	esound>=0.2.18:../../audio/esound
+BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
+BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
+BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
+BUILDLINK_DEPENDS.pth=	pth>=1.4.0
 
-GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
-USE_MESA=	YES
-USE_X11=	YES
-USE_LIBTOOL=	YES
+USE_BUILDLINK_ONLY=	YES
+USE_CONFIG_WRAPPER=	YES
+
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
+#USE_MESA=		YES
+USE_X11=		YES
+
+USE_LIBTOOL=		YES
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OBJECT_FMT} == "ELF"
-NASMFLAGS=	-f elf
+NASMFLAGS=		-f elf
 .else
-NASMFLAGS=	-f aoutb
+NASMFLAGS=		-f aoutb
 .endif
 
 .ifdef SDL_USE_NAS
-DEPENDS+=		nas>=1.4:../../audio/nas
+.include "../../audio/nas/buildlink.mk"
 .else
 CONFIGURE_ARGS+=	--disable-nas
 .endif
 
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--disable-pthread-sem
 CONFIGURE_ENV+=		NASMFLAGS="${NASMFLAGS}"
 MAKE_ENV+=		NASMFLAGS="${NASMFLAGS}"
-CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
-LDFLAGS+=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
-#CC=			${LOCALBASE}/pthreads/bin/pgcc
 
 pre-patch:
 	cd ${WRKSRC} && ${MKDIR} src/audio/netbsd
 
 pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf --force
 
 post-configure:
 	cd ${WRKSRC}/src/audio && ${CP} *.[ch] netbsd/
 
+# Fix config scripts by removing buildlink directory references.
+post-build:
+	@cd ${WRKSRC};							\
+	config_scripts="sdl-config";					\
+	for file in $${config_scripts}; do				\
+		${MV} -f $${file} $${file}.fixme;			\
+		${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
+			-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\
+			$${file}.fixme > $${file};			\
+		${RM} -f $${file}.fixme;				\
+		${CHMOD} +x $${file};					\
+	done
+
+.include "../../audio/esound/buildlink.mk"
+.include "../../devel/pth/buildlink.mk"
+.include "../../graphics/Mesa/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
