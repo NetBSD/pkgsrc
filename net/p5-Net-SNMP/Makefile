@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2003/07/21 17:11:01 martti Exp $
-# FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
+# $NetBSD: Makefile,v 1.13 2003/09/18 19:09:52 wiz Exp $
 #
 
-DISTNAME=	Net-SNMP-4.0.1
+DISTNAME=	Net-SNMP-4.1.2
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5nsn
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-#HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/libnet/FAQ.html
+HOMEPAGE=	http://search.cpan.org/author/DTOWN/Net-SNMP-4.1.2/
 COMMENT=	Perl5 module for SNMP queries
 
 DEPENDS+=	p5-Crypt-DES>=2.03:../../security/p5-Crypt-DES
