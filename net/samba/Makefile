@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.134 2004/11/13 21:48:11 kim Exp $
+# $NetBSD: Makefile,v 1.135 2004/11/30 15:24:43 xtraeme Exp $
 
-DISTNAME=		samba-3.0.8
-PKGREVISION=		1
+DISTNAME=		samba-3.0.9
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/old-versions/ \
 			ftp://ring.asahi-net.or.jp/pub/net/samba/old-versions/ \
