@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.18 2002/09/21 01:40:13 rh Exp $
+$NetBSD: CHANGES,v 1.19 2002/09/21 08:27:51 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2921,3 +2921,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Added gail-0.17 [rh 2002-09-21]
 	Added libgtkhtml-2.0.2 [rh 2002-09-21]
 	Updated gtk2+ to 2.0.6nb2 [rh 2002-09-21]
+	Updated xpmroot to 2.4.11 [martti 2002-09-21]
+	Updated fvwm2 to 2.4.11 [martti 2002-09-21]
