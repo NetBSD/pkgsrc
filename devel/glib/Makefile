@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2003/03/04 19:23:17 nathanw Exp $
+# $NetBSD: Makefile,v 1.54 2003/03/04 19:53:26 salo Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
 DISTNAME=		glib-1.2.10
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.2/ \
@@ -24,19 +24,23 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/gmodule.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/gthread.pc.in
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 
-# Force the result of this configure test, bescause the testing technique
-# breaks with NetBSD's native libpthread.so.
-CONFIGURE_ENV+=		glib_cv_rtldglobal_broken=no
-
 INFO_FILES=		glib.info
 TEXINFO_OVERRIDE=	YES
 
-# XXX egcs is still broken on arm32.
-.if (${MACHINE_ARCH} == arm32)
-CFLAGS=		-O0
+PTHREAD_OPTS+=		require
+
+.include "../../mk/bsd.prefs.mk"
+
+# Force the result of this configure test, because the testing technique
+# breaks with NetBSD's native libpthread.so.
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=		glib_cv_rtldglobal_broken=no
 .endif
 
-PTHREAD_OPTS+=		require
+# XXX egcs is still broken on arm32.
+.if ${MACHINE_ARCH} == "arm32"
+CFLAGS=		-O0
+.endif
 
 GLIB_VERSION=		${DISTNAME:S/glib-//}
 GLIB_MAJOR_VERSION=	${GLIB_VERSION:C/\..*//}
@@ -51,31 +55,31 @@ GLIB_MICRO_VERSION=	${GLIB_VERSION:C/.*\.//}
 pre-configure:
 	@cd ${WRKSRC};							\
 	files="glib-config.in docs/glib-config.1.in glib.pc.in gmodule.pc.in gthread.pc.in"; \
-	for file in $${files}; do					\
+	for f in $${files}; do					\
 		${SED}	-e "s|@GLIB_VERSION@|${GLIB_VERSION}|g"		\
 			-e "s|@VERSION@|${GLIB_VERSION}|g"		\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
+			$${f} > $${f}.fixed;			\
+		${MV} -f $${f}.fixed $${f};			\
 	done
 
 post-configure:
 	@cd ${WRKSRC};							\
 	files="config.status config.h glibconfig.h";			\
-	for file in $${files}; do					\
+	for f in $${files}; do					\
 		${SED}	-e "s|^\(#define.*GLIB_MAJOR_VERSION\).*|\1	${GLIB_MAJOR_VERSION}|" \
 			-e "s|^\(#define.*GLIB_MINOR_VERSION\).*|\1	${GLIB_MINOR_VERSION}|" \
 			-e "s|^\(#define.*GLIB_MICRO_VERSION\).*|\1	${GLIB_MICRO_VERSION}|" \
-			$${file} > $${file}.fixed;			\
-		${MV} $${file}.fixed $${file};				\
+			$${f} > $${f}.fixed;			\
+		${MV} $${f}.fixed $${f};				\
 	done;								\
 	${CHMOD} +x config.status
 .if exists(/usr/include/sys/null.h)
 	@cd ${WRKSRC};							\
 	files="glib.h";							\
-	for file in $${files}; do					\
+	for f in $${files}; do					\
 		${SED}	-e "s|^#define.NULL.*|#include <sys/null.h>|"	\
-			$${file} > $${file}.fixed;			\
-		${MV} $${file}.fixed $${file};				\
+			$${f} > $${f}.fixed;			\
+		${MV} $${f}.fixed $${f};				\
 	done
 .endif
 
