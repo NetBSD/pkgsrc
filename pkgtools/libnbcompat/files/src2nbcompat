@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: src2nbcompat,v 1.3 2003/10/12 08:58:04 jlam Exp $
+#	$NetBSD: src2nbcompat,v 1.4 2003/12/08 13:39:11 grant Exp $
 #
 # Copyright (c) 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -88,23 +88,23 @@ for f in $files; do
 		#
 		awk '							\
 			BEGIN { config = 0; nbcompat = 0 }		\
-			/^\#[ 	]*include[ 	]+/ {			\
+			/^#[ 	]*include[ 	]+/ {			\
 				if (config == 0) {			\
-					print "\#if HAVE_CONFIG_H";	\
-					print "\#include \"config.h\"";	\
-					print "\#endif";		\
+					print "#if HAVE_CONFIG_H";	\
+					print "#include \"config.h\"";	\
+					print "#endif";			\
 					config = 1;			\
 				}					\
 			}						\
-			/^\#[ 	]*include[ 	]+<[^ 	]*>/ {		\
-				guard = toupper(gensub("[-/.]", "_", "g", gensub("\#[ 	]*include[ 	]+<\([^ 	]*\)>", "HAVE_\\1", "g"))); \
+			/^#[ 	]*include[ 	]+<[^ 	]*>/ {		\
+				guard = toupper(gensub("[-/.]", "_", "g", gensub("#[ 	]*include[ 	]+<([^ 	]*)>", "HAVE_\\1", "g"))); \
 				if (nbcompat == 0) {			\
-					print "\#include <nbcompat.h>";	\
+					print "#include <nbcompat.h>";	\
 					nbcompat = 1;			\
 				};					\
-				print "\#if " guard;			\
+				print "#if " guard;			\
 				print $0;				\
-				print "\#endif";			\
+				print "#endif";				\
 				next;					\
 			}						\
 			{ print }					\
