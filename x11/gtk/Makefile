@@ -3,7 +3,7 @@
 # Date created:				29 January 1998
 # Whom:					bsieker@techfak.uni-bielefeld.de
 #
-# $NetBSD: Makefile,v 1.1 1998/02/03 10:07:45 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/02/05 09:45:32 tron Exp $
 
 DISTNAME=	gtk+-0.99.3
 CATEGORIES=	x11
@@ -19,7 +19,5 @@ GNU_CONFIGURE=  yes
 USE_X11=	yes
 
 CFLAGS=		-pipe -O2
-
-USE_GMAKE=	yes
 
 .include <bsd.port.mk>
