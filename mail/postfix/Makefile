@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2001/12/03 04:47:41 kent Exp $
+# $NetBSD: Makefile,v 1.51 2001/12/03 05:36:47 kent Exp $
 
 DISTNAME=	postfix-20010228-pl08
 PKGNAME=	postfix-20010228pl8
@@ -25,8 +25,6 @@ PATCH_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
 BUILD_DEFS+=	POSTFIX_USE_INET6
 .endif
 
-POSTFIX_USE_PCRE=YES
-POSTFIX_USE_SASL_AUTH=YES
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES" \
 	|| defined(POSTFIX_USE_SASL_AUTH) && ${POSTFIX_USE_SASL_AUTH} == "YES"
 CCARGS=		-I${LOCALBASE}/include
