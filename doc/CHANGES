@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4809 2004/02/13 13:43:59 adam Exp $
+$NetBSD: CHANGES,v 1.4810 2004/02/13 14:44:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -806,3 +806,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libspectrum to 0.2.1 [adam 2004-02-13]
 	Updated fuse to 0.6.2 [adam 2004-02-13]
 	Updated fuse-utils to 0.6.2 [adam 2004-02-13]
+	Updated html2text to 1.3.2 [minskim 2004-02-13]
