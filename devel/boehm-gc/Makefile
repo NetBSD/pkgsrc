@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/12/03 00:14:16 recht Exp $
+# $NetBSD: Makefile,v 1.34 2004/01/05 23:22:51 jlam Exp $
 #
 
 DISTNAME=		gc6.2
@@ -11,11 +11,14 @@ MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://www.hpl.hp.com/personal/Hans_Boehm/gc/
 COMMENT=		Garbage collection and memory leak detection for C and C++
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+INSTALLATION_DIRS=	man/man3
 
 MAKE_ENV+=		COPTS="${CFLAGS}"
 

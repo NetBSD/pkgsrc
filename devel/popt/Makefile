@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/11/24 19:13:19 gson Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/05 23:22:51 jlam Exp $
 #
 
 DISTNAME=	popt-1.7
@@ -12,16 +12,18 @@ MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.1.x/		\
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Command line option parsing library
 
-BUILD_USES_MSGFMT=	yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS=		ORBit<=0.5.3
 
-USE_BUILDLINK2=		yes
+BUILD_USES_MSGFMT=	yes
+
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
