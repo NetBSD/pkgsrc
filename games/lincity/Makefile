@@ -1,27 +1,25 @@
-# $NetBSD: Makefile,v 1.10 2002/09/23 10:03:24 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/02 16:43:49 adam Exp $
 #
 
-DISTNAME=		lincity-1.11
-CATEGORIES=		games x11
-MASTER_SITES=		${MASTER_SITE_SUNSITE:=games/strategy/} \
-			ftp://ftp.demon.co.uk/pub/unix/linux/games/
+DISTNAME=	lincity-1.12.0
+CATEGORIES=	games x11
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lincity/} \
+		http://www.ibiblio.org/pub/Linux/games/strategy/
 
-MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.floot.demon.co.uk/lincity.html
-COMMENT=		Free clone of SimCity for X11
+MAINTAINER=	root@garbled.net
+HOMEPAGE=	http://lincity.sourceforge.net/
+COMMENT=	Free clone of SimCity for X11
 
-USE_BUILDLINK2=		# defined
-USE_X11BASE=		# defined
+BUILD_USES_MSGFMT=	yes
 
-ALL_TARGET=		xlincity
-INSTALL_TARGET=		install-xlincity install-lib install-man
-
-MAKE_ENV+=		EXTRA_OPTS="${CFLAGS}"
-
-pre-build:
-	${LN} -sf lincity.man ${WRKSRC}/xlincity.man
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
+USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 
 post-install:
 	${LN} -sf lincity.6 ${PREFIX}/man/man6/xlincity.6
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
