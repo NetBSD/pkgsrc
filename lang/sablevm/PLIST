@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 20:42:07 jmmv Exp $
+bin/java-sablevm
+bin/sablevm
+include/jni.h
+include/jni_system_specific.h
+lib/libsablevm.a
+lib/libsablevm.la
+lib/libsablevm.so
+lib/libsablevm.so.1
+lib/libsablevm.so.1.9
+lib/sablevm/sablevm-classpath
+man/man1/java-sablevm.1
+man/man1/sablevm.1
+share/sablevm/AUTHORS
+share/sablevm/COPYING.LIB
+share/sablevm/LICENSE
+share/sablevm/sablevm-classpath
+@dirrm share/sablevm
+@dirrm lib/sablevm

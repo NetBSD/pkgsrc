@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/03/28 20:42:08 jmmv Exp $
+
+--- src/libsablevm/invoke_interface.c.orig	2004-03-20 23:02:04.000000000 +0100
++++ src/libsablevm/invoke_interface.c
+@@ -220,6 +220,7 @@ JNI_CreateJavaVM (JavaVM **pvm, void **p
+     }
+ 
+   _svmf_set_current_env (env);
++  _svmm_cond_init (vm->threads.vm_destruction_cond);
+   vm->threads.user = env;
+   vm->threads.next_thread_id = 1;	/* thread IDs must start at 1
+ 					   (i.e. no ID == 0) */

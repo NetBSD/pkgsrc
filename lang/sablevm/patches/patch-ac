@@ -1,0 +1,42 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/03/28 20:42:08 jmmv Exp $
+
+Index: src/libsablevm/error.c
+===================================================================
+--- src/libsablevm/error.c	(revision 1888)
++++ src/libsablevm/error.c	(working copy)
+@@ -78,6 +78,8 @@
+ ----------------------------------------------------------------------
+ */
+ 
++#if defined(HAVE_SIGINFO)
++
+ static void
+ _svmf_internal_sigaction (int signo, siginfo_t * info, void *ignored)
+ {
+@@ -306,6 +308,8 @@
+     }
+ }
+ 
++#endif /* HAVE_SIGINFO */
++
+ /*
+ ----------------------------------------------------------------------
+ _svmf_error_init
+@@ -386,6 +390,8 @@
+ 
+ #endif /* _SABLEVM_INLINABILITY_TESTING */
+ 
++#if defined(HAVE_SIGINFO)
++
+   /* use extended info version */
+   sa.sa_flags = SA_SIGINFO;
+   sa.sa_sigaction = _svmf_internal_sigaction;
+@@ -448,6 +454,8 @@
+ 
+ #endif /* _SABLEVM_INLINABILITY_TESTING */
+ 
++#endif /* HAVE_SIGINFO */
++
+   return JNI_OK;
+ 
+ error:
