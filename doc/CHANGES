@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2771 2003/07/13 14:36:48 dillo Exp $
+$NetBSD: CHANGES,v 1.2772 2003/07/13 14:47:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2793,3 +2793,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libiconv to 1.9.1 [wiz 2003-07-13]
 	Updated gnocatan to 0.7.1 [wiz 2003-07-13]
 	Updated clisp to 2.30 [dillo 2003-07-13]
+	Updated fontconfig to 2.1nb5 [wiz 2003-07-13]
