@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.615 2003/06/04 16:43:50 wiz Exp $
+$NetBSD: TODO,v 1.616 2003/06/04 16:44:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -265,7 +265,6 @@ Suggested package updates
 	o wwwoffle-2.7h
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
-	o xemacs-current-21.5.14
 	o xerces-c-2.2.0 [heinz]
 	o xine-lib-0.9.21 [pkg/21625]
 	o xine-ui-0.9.21 [pkg/21625]
