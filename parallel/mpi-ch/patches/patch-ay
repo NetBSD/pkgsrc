@@ -1,0 +1,54 @@
+$NetBSD: patch-ay,v 1.1.2.2 2003/12/07 16:36:49 agc Exp $
+
+"rm -rf" with no arguments causes "usage" error messages; avoid this.
+
+--- MPI-2-C++/configure.orig	Wed Nov 26 23:33:22 2003
++++ MPI-2-C++/configure	Wed Nov 26 23:33:37 2003
+@@ -3249,15 +3249,13 @@
+ ; return 0; }
+ EOF
+ if { (eval echo configure:3232: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+-  rm -rf conftest*
+   libmpi_found=yes
+ else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+   libmpi_found=no
+ fi
+-rm -f conftest*
++rm -rf conftest*
+ if test "$libmpi_found" = "yes"; then
+     echo "$ac_t""yes" 1>&6
+ else
+@@ -3465,12 +3463,10 @@
+ ; return 0; }
+ EOF
+ if { (eval echo configure:3448: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
+-  rm -rf conftest*
+   use_pending=yes
+ else
+   echo "configure: failed program was:" >&5
+   cat conftest.$ac_ext >&5
+-  rm -rf conftest*
+   use_pending=no
+ fi
+ rm -f conftest*
+@@ -3976,7 +3972,7 @@
+ EOF
+ 
+ fi
+-/bin/rm -f conftest*
++rm -f conftest*
+ 
+ # Don't ask.  It's an AIX thing.  <sob>
+ if test "$?host" = "0"; then
+@@ -4052,7 +4048,7 @@
+ EOF
+ 
+ fi
+-/bin/rm -f conftest*
++rm -f conftest*
+ 
+ LDFLAGS=$SAVE_LDFLAGS
+ LIBS=$SAVE_LIBS

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2003/03/27 21:07:05 jschauma Exp $
+$NetBSD: distinfo,v 1.3.2.1 2003/12/07 16:36:49 agc Exp $
 
 SHA1 (mpich-1.2.5-1a.tar.gz) = 28d9316601196169a8576ace94daf23f1b673c01
 Size (mpich-1.2.5-1a.tar.gz) = 12381275 bytes
 SHA1 (mpich-docs.tgz) = fb7a9c7459998b9b74584d2afc4553027d94ad10
 Size (mpich-docs.tgz) = 326405 bytes
-SHA1 (patch-aa) = 2575ea0e7c8fd41850432fc6a32dc8999c59828a
+SHA1 (patch-aa) = fa6d5f16cbc88b850906a7cc970ad73e62bee50d
 SHA1 (patch-ak) = 8ad7340a9a95087649a96c823e5d0965922e209b
 SHA1 (patch-al) = 0f889dba558d9bd5122610f2ce2aecda6d6c5323
 SHA1 (patch-am) = ebebecac0ee222284ba75ea300d0fedc99c7fea8
@@ -16,3 +16,5 @@ SHA1 (patch-at) = faeec80f8e35546e830873886d00e4332444a29a
 SHA1 (patch-au) = 00a6f439d2bb65269780f2141dbd588b147e890d
 SHA1 (patch-av) = 5d4330ea9ff8e4fe09879f092b0e4032fba54c13
 SHA1 (patch-aw) = a1a98f08743cd1d33187b37ceb24ff5c4fcd731a
+SHA1 (patch-ax) = 4f11502bf24b69f3aa8994a175529dd5cfda3be1
+SHA1 (patch-ay) = 72ac437696041c4771913e8f36a6b379c9e1057a
