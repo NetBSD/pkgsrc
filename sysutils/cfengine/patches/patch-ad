@@ -1,45 +1,20 @@
-$NetBSD: patch-ad,v 1.3 1999/11/09 19:29:57 abs Exp $
---- src/misc.c.orig	Tue Sep 14 09:46:53 1999
-+++ src/misc.c	Tue Nov  9 16:27:25 1999
-@@ -652,3 +652,41 @@
+$NetBSD: patch-ad,v 1.4 2000/10/02 16:43:45 abs Exp $
+
+--- src/image.c.orig	Tue Sep 14 09:28:09 1999
++++ src/image.c
+@@ -193,9 +193,12 @@
+    DeleteItemList(namecache);
+    }
+  
+-DeleteCompressedArray(ip->inode_cache);
+-
+-ip->inode_cache = NULL;
++	/* Only flush when exiting initial call to RecursiveImage() */
++if (strcmp(from,ip->path) == 0)
++   {
++   DeleteCompressedArray(ip->inode_cache);
++   ip->inode_cache = NULL;
++   }
  
- AddClassToHeap(CanonifyName(VDOMAIN)); 
+ cfclosedir(dirh);
  }
-+
-+/*********************************************************************/
-+
-+AddNetworkClass(netmask)
-+
-+const char *netmask;
-+
-+{
-+struct in_addr	ip,
-+		nm;
-+char		*sp,
-+		nmbuf[maxvarsize],
-+		ipbuf[maxvarsize];
-+
-+    /*
-+     * Has to differentiate between cases such as:
-+     *		192.168.101.1/24 -> 192.168.101  	and
-+     *		192.168.101.1/26 -> 192.168.101.0 
-+     * We still have the, um... 'interesting' Class C default Network Class
-+     * set by GetNameInfo()
-+     */
-+
-+    /* This is also a convenient method to ensure valid dotted quad */
-+if ( (nm.s_addr = inet_addr(netmask)) != -1 &&
-+	    (ip.s_addr = inet_addr(VIPADDRESS)) != -1 )
-+    {
-+    ip.s_addr &= nm.s_addr;	/* Will not work with IPv6 */
-+    strcpy(ipbuf,inet_ntoa(ip));
-+
-+    strcpy(nmbuf,inet_ntoa(nm));
-+    while( (sp = strrchr(nmbuf,'.')) && strcmp(sp,".0") == 0 )
-+	{
-+	*sp = 0;
-+	*strrchr(ipbuf,'.') = 0;
-+	}
-+    AddClassToHeap(CanonifyName(ipbuf)); 
-+    }
-+}

@@ -1,11 +1,13 @@
-$NetBSD: patch-ac,v 1.1 1999/11/05 13:52:52 abs Exp $
---- src/install.c.orig	Fri Nov  5 06:44:50 1999
-+++ src/install.c	Fri Nov  5 10:38:31 1999
-@@ -153,6 +153,7 @@
-                      FatalError("Redefinition of basic system variable");
-                      }
-                   strcpy(VNETMASK,value);
-+		  AddNetworkClass(VNETMASK);
-                   break;
- 
+$NetBSD: patch-ac,v 1.2 2000/10/02 16:43:45 abs Exp $
+
+--- src/encrypt.c.orig	Wed Aug 11 10:32:33 1999
++++ src/encrypt.c
+@@ -39,6 +39,8 @@
+ #ifdef HAVE_LIBCRYPTO  /* must be des.h from OpenSSL */
+ # ifdef HAVE_OPENSSL_DES_H
+ #  include <openssl/des.h>
++# else
++#  undef HAVE_LIBCRYPTO
+ # endif
+ #endif
  

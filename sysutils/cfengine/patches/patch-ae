@@ -1,19 +1,12 @@
-$NetBSD: patch-ae,v 1.1 1999/11/09 16:14:59 abs Exp $
---- src/image.c.orig	Tue Sep 14 09:28:09 1999
-+++ src/image.c	Tue Nov  9 15:37:00 1999
-@@ -193,9 +193,12 @@
-    DeleteItemList(namecache);
-    }
-  
--DeleteCompressedArray(ip->inode_cache);
--
--ip->inode_cache = NULL;
-+	/* Only flush when exiting initial call to RecursiveImage() */
-+if (strcmp(from,ip->path) == 0)
-+   {
-+   DeleteCompressedArray(ip->inode_cache);
-+   ip->inode_cache = NULL;
-+   }
+$NetBSD: patch-ae,v 1.2 2000/10/02 16:43:45 abs Exp $
+
+--- src/install.c.orig	Fri Sep 24 14:00:03 1999
++++ src/install.c
+@@ -153,6 +153,7 @@
+                      FatalError("Redefinition of basic system variable");
+                      }
+                   strcpy(VNETMASK,value);
++		  AddNetworkClass(VNETMASK);
+                   break;
  
- cfclosedir(dirh);
- }
+ 
