@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.61 2004/06/25 13:45:00 dmcmahill Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.62 2004/07/25 08:40:46 grant Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -323,7 +323,7 @@ bulk-package:
 			for pkgdir in `${GREP} "^${PKGPATH} " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'` ${BULK_PREREQ} ; do \
 				pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ; \
 				if [ -z "$$pkgname" ]; then continue ; fi ;\
-				pkgfile=${PACKAGES}/All/$${pkgname}.tgz ;\
+				pkgfile=${PACKAGES}/All/$${pkgname}${PKG_SUFX} ;\
 				if ${PKG_INFO} -qe $$pkgname ; then \
 					${ECHO_MSG} "BULK> Required package $$pkgname ($$pkgdir) is already installed" ; \
 				else \
