@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.77 2005/02/01 01:31:10 taca Exp $
+$NetBSD: distinfo,v 1.78 2005/02/01 10:22:20 taca Exp $
 
 SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7.tar.bz2) = 24f29e28ec62d7ab5888cd594ac7a1975ee6aa36
 Size (squid-2.5.7-2005020100/squid-2.5.STABLE7.tar.bz2) = 1051830 bytes
@@ -22,8 +22,8 @@ SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-cachemgr_vmobjects.patch) = f6f65
 Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-cachemgr_vmobjects.patch) = 6238 bytes
 SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-empty_acls.patch) = 0f6f4538c34f10d156572b2d16ffee24a5d762c1
 Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-empty_acls.patch) = 4432 bytes
-SHA1 (squid-2.5.7-2005020100/squid-2.5.STABEL7-close_other.patch) = cf73d7bd44567efa65941f2aa186711e3f1f9f8a
-Size (squid-2.5.7-2005020100/squid-2.5.STABEL7-close_other.patch) = 945 bytes
+SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-close_other.patch) = cf73d7bd44567efa65941f2aa186711e3f1f9f8a
+Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-close_other.patch) = 945 bytes
 SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-fakeauth_auth.patch) = 7323e05403f34c2c582cb2b910337a6017686096
 Size (squid-2.5.7-2005020100/squid-2.5.STABLE7-fakeauth_auth.patch) = 7967 bytes
 SHA1 (squid-2.5.7-2005020100/squid-2.5.STABLE7-gopher_html_parsing.patch) = 5da5a8b3b24eded8552d09b45f329ee927c66b3e
