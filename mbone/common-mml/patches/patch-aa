@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/17 09:46:00 hubertf Exp $
+
+--- config_unix.h.orig	Sat Dec 16 07:55:38 2000
++++ config_unix.h
+@@ -41,8 +41,6 @@
+ #ifndef _CONFIG_UNIX_H
+ #define _CONFIG_UNIX_H
+ 
+-#include "uclconf.h"
+-
+ #include <limits.h>
+ #include <sys/types.h>
+ #include <sys/time.h>
+@@ -71,6 +69,8 @@
+ #include <sys/ioctl.h>
+ #include <netdb.h>
+ #include <arpa/inet.h>
++
++#include "uclconf.h"
+ 
+ #ifdef HAVE_SYS_WAIT_H
+ #include <sys/wait.h>
