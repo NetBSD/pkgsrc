@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2003/11/11 09:17:53 abs Exp $
+$NetBSD: patch-ac,v 1.9 2003/12/04 10:11:27 abs Exp $
 
 --- mserv/mserv.c.orig	Sun Aug  3 15:57:20 2003
 +++ mserv/mserv.c
@@ -121,17 +121,17 @@ $NetBSD: patch-ac,v 1.8 2003/11/11 09:17:53 abs Exp $
 +    *bitrate_ret = vi->bitrate_nominal/1024;
 +
 +  for (comment = vc->user_comments ; *comment ; ++comment) {
-+    if (strncmp(*comment, "title=", 6) == 0) {
++    if (strncasecmp(*comment, "title=", 6) == 0) {
 +	strlcpy(id3tag->title, *comment + 6, MP3ID3_TITLELEN+1);
 +        id3tag->present = 1;
 +    }
-+    else if (strncmp(*comment, "artist=", 7) == 0)
++    else if (strncasecmp(*comment, "artist=", 7) == 0)
 +	strlcpy(id3tag->artist, *comment + 7, MP3ID3_ARTISTLEN+1);
-+    else if (strncmp(*comment, "album=", 6) == 0)
++    else if (strncasecmp(*comment, "album=", 6) == 0)
 +	strlcpy(id3tag->album, *comment + 6, MP3ID3_ALBUMLEN+1);
-+    else if (strncmp(*comment, "date=", 5) == 0)
++    else if (strncasecmp(*comment, "date=", 5) == 0)
 +	strlcpy(id3tag->year, *comment + 5, MP3ID3_YEARLEN+1);
-+    else if (strncmp(*comment, "genre=", 6) == 0)
++    else if (strncasecmp(*comment, "genre=", 6) == 0)
 +	strlcpy(id3tag->genre, *comment + 6, 31);
 +    /* tracknumber ignored */
 +  }
