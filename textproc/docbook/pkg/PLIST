@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/06/07 20:32:02 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/06/27 00:51:42 hubertf Exp $
 share/sgml/docbook/2.4.1/241chg.txt
 share/sgml/docbook/2.4.1/announce.txt
 share/sgml/docbook/2.4.1/calstbl.mod
@@ -48,6 +48,22 @@ share/sgml/docbook/4.0/docbook.cat
 share/sgml/docbook/4.0/docbook.dcl
 share/sgml/docbook/4.0/docbook.dtd
 share/sgml/docbook/4.0/readme.txt
+share/sgml/docbook/4.1/40chg.txt
+share/sgml/docbook/4.1/41chg.txt
+share/sgml/docbook/4.1/50issues.txt
+share/sgml/docbook/4.1/ChangeLog
+share/sgml/docbook/4.1/cals-tbl.dtd
+share/sgml/docbook/4.1/catalog
+share/sgml/docbook/4.1/dbcent.mod
+share/sgml/docbook/4.1/dbgenent.mod
+share/sgml/docbook/4.1/dbhier.mod
+share/sgml/docbook/4.1/dbnotn.mod
+share/sgml/docbook/4.1/dbpool.mod
+share/sgml/docbook/4.1/docbook.cat
+share/sgml/docbook/4.1/docbook.dcl
+share/sgml/docbook/4.1/docbook.dtd
+share/sgml/docbook/4.1/readme.txt
+@dirrm share/sgml/docbook/4.1
 @dirrm share/sgml/docbook/4.0
 @dirrm share/sgml/docbook/3.1
 @dirrm share/sgml/docbook/3.0
