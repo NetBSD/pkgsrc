@@ -16,4 +16,6 @@ features:
     o  filename filter
 
 The VR series offers a number of enhancements and bug fixes not
-available in the base beta-18 version.
+available in the base wu-ftpd version.  Detailled lists of fixes
+and enhancements for the VR series are available from
+ftp://ftp.vr.net/pub/wu-ftpd/
