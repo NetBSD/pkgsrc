@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/02 05:33:59 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/02 08:06:16 jlam Exp $
 #
 # This Makefile fragment is included by packages that use freetype2.
 #
@@ -17,10 +17,18 @@ FREETYPE2_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.0.3
-DEPENDS+=	${BUILDLINK_DEPENDS.freetype2}:../../graphics/freetype2
+BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.0.1
+CHECK_FREETYPE2=		# defined
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${HAVE_BUILTIN_FREETYPE2} == "NO"
+DEPENDS+=	${BUILDLINK_DEPENDS.freetype2}:../../graphics/freetype2
 BUILDLINK_PREFIX.freetype2=	${LOCALBASE}
+.else
+BUILDLINK_PREFIX.freetype2=	${X11BASE}
+.endif
+
 BUILDLINK_FILES.freetype2=	include/ft2build.h
 BUILDLINK_FILES.freetype2+=	include/freetype2/freetype/*
 BUILDLINK_FILES.freetype2+=	include/freetype2/freetype/cache/*
@@ -28,13 +36,13 @@ BUILDLINK_FILES.freetype2+=	include/freetype2/freetype/config/*
 BUILDLINK_FILES.freetype2+=	include/freetype2/freetype/internal/*
 BUILDLINK_FILES.freetype2+=	lib/libfreetype.*
 
-.include "../../devel/gettext-lib/buildlink.mk"
-
-BUILDLINK_TARGETS.freetype2=	freetype2-buildlink
-BUILDLINK_TARGETS.freetype2+=	freetype2-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.freetype2}
+BUILDLINK_TARGETS.freetype2=	freetype2-buildlink
 
-BUILDLINK_CONFIG.freetype2=	${LOCALBASE}/bin/freetype-config
+.if ${HAVE_BUILTIN_FREETYPE2} == "NO"
+BUILDLINK_TARGETS.freetype2+=	freetype2-buildlink-config-wrapper
+
+BUILDLINK_CONFIG.freetype2=		${LOCALBASE}/bin/freetype-config
 BUILDLINK_CONFIG_WRAPPER.freetype2=	${BUILDLINK_DIR}/bin/freetype-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
@@ -42,8 +50,10 @@ FREETYPE_CONFIG?=	${BUILDLINK_CONFIG_WRAPPER.freetype2}
 CONFIGURE_ENV+=		FREETYPE_CONFIG="${FREETYPE_CONFIG}"
 .endif
 
+freetype2-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
+.endif	# HAVE_BUILTIN_FREETYPE
+
 pre-configure: ${BUILDLINK_TARGETS.freetype2}
 freetype2-buildlink: _BUILDLINK_USE
-freetype2-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
 
 .endif	# FREETYPE2_BUILDLINK_MK
