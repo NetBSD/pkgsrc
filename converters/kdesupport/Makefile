@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 1999/02/19 21:56:25 tron Exp $
+# $NetBSD: Makefile,v 1.22 1999/03/23 23:30:23 tron Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -11,19 +11,13 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
-DEPENDS+=	qt-1.42:../../x11/qt
-
-USE_X11BASE=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
-		"--with-qt-includes=${PREFIX}/include/qt" \
-		"--with-qt-libraries=${PREFIX}/lib" \
-		"--without-gnu-ld" \
+CONFIGURE_ARGS=	"--without-gnu-ld" \
 		"--without-libjpeg" \
 		"--without-libgif" \
 		"--without-libgdbm" \
-		"--without-libuulib"
-LIBTOOL_FLAGS=	--install-la
+		"--without-libuulib" \
+		"--without-sprite-field"
 
 .include "../../mk/bsd.pkg.mk"
