@@ -1,0 +1,10 @@
+JED is a freely available text editor for Unix, VMS, MSDOS, OS/2, and
+MS Windows.
+
+Features include:
+     * Color syntax highlighting on color terminals.
+     * Folding support (New for 0.98!)  
+     * Extensible in a language resembling C. Completely customizable.
+     * Capable of read GNU info files from within JED's info browser
+     * A variety of programming modes (with syntax highlighting) are
+       available including C, C++, FORTRAN, TeX, HTML, SH, IDL, DCL, NROFF...
