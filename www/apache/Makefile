@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2001/10/20 17:46:50 jlam Exp $
+# $NetBSD: Makefile,v 1.81 2001/10/22 18:02:51 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -38,12 +38,6 @@ CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		OPTIM="${APACHE_CUSTOM_CFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-ROOT_GROUP?=	root
-.else
-ROOT_GROUP?=	wheel
-.endif
 
 APACHE_SYSCONFDIR?=	${LOCALBASE}/etc/httpd
 BUILD_DEFS+=		APACHE_SYSCONFDIR
@@ -143,9 +137,10 @@ pre-patch:
 	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-patch:
-	${SED} -e "s|@ROOT_GROUP@|${ROOT_GROUP}|" < ${WRKSRC}/src/support/apxs.pl > \
-		${WRKSRC}/src/support/apxs.pl.sed
-	${MV} ${WRKSRC}/src/support/apxs.pl.sed ${WRKSRC}/src/support/apxs.pl
+	cd ${WRKSRC}/src/support;					\
+	${SED}	-e "s|@INSTALL@|"`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'`" -c -o ${LIBOWN} -g ${LIBGRP}|" \
+		apxs.pl > apxs.pl.sed;					\
+	${MV} apxs.pl.sed apxs.pl
 
 pre-configure:
 	${SED} ${FILES_SUBST_SED}					\
@@ -169,8 +164,7 @@ post-install:
 	done
 	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
-	${CHOWN} -R root ${PREFIX}/share/httpd
-	${CHGRP} -R ${ROOT_GROUP} ${PREFIX}/share/httpd
+	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/httpd
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../textproc/expat/buildlink.mk"

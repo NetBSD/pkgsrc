@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.6 2001/10/19 09:52:23 veego Exp $
+$NetBSD: patch-ai,v 1.7 2001/10/22 18:02:53 jlam Exp $
 
 --- src/support/apxs.pl.orig	Sat Jun  9 01:06:57 2001
 +++ src/support/apxs.pl	Sat Jun  9 01:11:28 2001
@@ -8,7 +8,7 @@ $NetBSD: patch-ai,v 1.6 2001/10/19 09:52:23 veego Exp $
              if ($opt_i) {
 -                push(@cmds, "cp $f $CFG_LIBEXECDIR/$t");
 -                push(@cmds, "chmod 755 $CFG_LIBEXECDIR/$t");
-+                push(@cmds, "install -c -m 555 -o root -g @ROOT_GROUP@ $f $CFG_LIBEXECDIR/$t");
++                push(@cmds, "@INSTALL@ $f $CFG_LIBEXECDIR/$t");
              }
          }
  	else {
