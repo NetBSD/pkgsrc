@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/26 14:25:33 minoura Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/03 14:15:39 minoura Exp $
 #
 
-DISTNAME=	xcruise-0.2
+DISTNAME=	xcruise-0.22
 CATEGORIES=	x11 graphics
 MASTER_SITES=	http://tanaka-www.cs.titech.ac.jp/%7Eeuske/prog/
 
