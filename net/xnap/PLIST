@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/28 22:15:14 hubertf Exp $
+bin/xnap
+share/doc/xnap/README
+share/xnap/xnap.jar
+@dirrm share/doc/xnap
+@dirrm share/xnap
