@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/10/27 08:06:00 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/11/17 14:38:50 wiz Exp $
 #
 
 DISTNAME=		rep-gtk-0.14
@@ -21,7 +21,6 @@ GNU_CONFIGURE=		# defined
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 REPEXECDIR=		${PREFIX}/libexec/rep/${MACHINE_GNU_PLATFORM}
 INSTALL_ALIASES=	${REPEXECDIR}/install-aliases
-
 
 post-install:
 	${INSTALL_ALIASES} -c ${FILESDIR} ${REPEXECDIR}
