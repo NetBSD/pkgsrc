@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 1998/08/27 14:06:09 garbled Exp $
+$NetBSD: patch-aa,v 1.5 2001/07/04 02:23:27 jlam Exp $
 
---- source/Makefile.orig	Thu Feb 22 23:01:18 1996
-+++ source/Makefile	Fri Jul 31 00:43:52 1998
+--- source/Makefile.orig	Thu Feb 22 17:01:18 1996
++++ source/Makefile
 @@ -10,7 +10,7 @@
  ##
  
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.4 1998/08/27 14:06:09 garbled Exp $
  irix:
  	$(MAKE) \
  	  GRAF=MOTIF \
-@@ -138,13 +146,13 @@
+@@ -138,7 +146,7 @@
  ###########################################################################
  
  LD=$(CC)
@@ -35,20 +35,14 @@ $NetBSD: patch-aa,v 1.4 1998/08/27 14:06:09 garbled Exp $
  
  XVLIBS=-L$(OPENWINHOME)/lib -lxview -lolgx -lX11
  XVINCLUDES=-I$(OPENWINHOME)/include
- 
--MOTIFLIBS=-lXm -lXt -lX11
--MOTIFINCLUDES=
-+MOTIFLIBS=-L$(X11BASE)/lib -lXm -lXt -lX11
-+MOTIFINCLUDES=-I$(X11BASE)/include
- 
- GRAFLIBS=$($(GRAF)LIBS)
- GRAFINCLUDES=$($(GRAF)INCLUDES)
-@@ -152,7 +160,7 @@
+@@ -152,8 +160,8 @@
  
  GRAF=NONE
  
 -LDFLAGS=
-+LDFLAGS= -Wl,-R$(X11BASE)/lib
- CFLAGS=$(GRAFINCLUDES) $(COPT) $(DEFINES) $(SYSDEFS)
+-CFLAGS=$(GRAFINCLUDES) $(COPT) $(DEFINES) $(SYSDEFS)
++#LDFLAGS=
++CFLAGS+=$(GRAFINCLUDES) $(COPT) $(DEFINES) $(SYSDEFS)
  
  # bis hier Optionen eintragen
+ ###########################################################################
