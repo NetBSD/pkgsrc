@@ -1,0 +1,68 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
+
+--- libcruft/Makefile.in.orig	Fri Apr  7 09:31:53 2000
++++ libcruft/Makefile.in	Fri Apr  7 14:44:03 2000
+@@ -54,39 +54,14 @@
+ CRUFT_OBJ1 := $(patsubst %.f, %.o, $(CRUFT_OBJ2))
+ CRUFT_OBJ := $(CRUFT_OBJ1) $(MISC_OBJ)
+ 
+-ifeq ($(SHARED_LIBS), true)
+-  ifdef FPICFLAG
+-    CRUFT_OBJ_DIR := $(dir $(CRUFT_OBJ))
+-    CRUFT_OBJ_PICDIR := $(addsuffix pic/, $(CRUFT_OBJ_DIR))
+-    CRUFT_OBJ_NOTDIR := $(notdir $(CRUFT_OBJ))
+-    CRUFT_PICOBJ := $(join $(CRUFT_OBJ_PICDIR), $(CRUFT_OBJ_NOTDIR))
+-  else
+-    CRUFT_PICOBJ := $(CRUFT_OBJ)
+-  endif
+-endif
+-
+-ifeq ($(SHARED_LIBS), true)
+-  ifeq ($(STATIC_LIBS), true)
+-    LIBRARIES = libcruft.$(LIBEXT) libcruft.$(SHLEXT)
+-  else
+-    LIBRARIES = libcruft.$(SHLEXT)
+-  endif
+-else
+-  ifeq ($(STATIC_LIBS), true)
+-    LIBRARIES = libcruft.$(LIBEXT)
+-  else
+-    LIBRARIES =
+-  endif
+-endif
++LIBRARIES = libcruft.$(LIBEXT)
+ 
+ libraries: $(SUBDIRS)
+ 	$(MAKE) $(LIBRARIES)
+ .PHONY: libraries
+ 
+ libcruft.$(LIBEXT): $(CRUFT_OBJ)
+-	rm -f $@
+-	$(AR) $(ARFLAGS) $@ $^
+-	$(RANLIB) $@
++	${LIBTOOL} --mode=link cc -o libcruft.${LIBEXT} ${CRUFT_OBJ:.o=.lo} -rpath ${PREFIX}/lib -version-info ${version:2.1.%=2:%}
+ 
+ libcruft.$(SHLEXT): libcruft.$(SHLEXT_VER)
+ 	rm -f $@
+@@ -106,20 +81,7 @@
+ 
+ install::
+ 	$(top_srcdir)/mkinstalldirs $(octlibdir)
+-	if $(STATIC_LIBS); then \
+-	  rm -f $(octlibdir)/libcruft.$(LIBEXT) ; \
+-	  $(INSTALL_DATA) libcruft.$(LIBEXT) \
+-	    $(octlibdir)/libcruft.$(LIBEXT) ; \
+-	  $(RANLIB) $(octlibdir)/libcruft.$(LIBEXT) ; \
+-	fi
+-	if $(SHARED_LIBS); then \
+-	  rm -f $(octlibdir)/libcruft.$(SHLEXT_VER); \
+-	  $(INSTALL_PROGRAM) \
+-	    libcruft.$(SHLEXT_VER) $(octlibdir)/libcruft.$(SHLEXT_VER); \
+-	  cd $(octlibdir); \
+-	  rm -f libcruft.$(SHLEXT); \
+-	  $(LN_S) libcruft.$(SHLEXT_VER) libcruft.$(SHLEXT); \
+-	fi
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libcruft.${LIBEXT} ${PREFIX}/lib
+ 	$(mk-libdir-link)
+ 
+ install-strip::

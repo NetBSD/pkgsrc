@@ -1,0 +1,95 @@
+$NetBSD: patch-ag,v 1.1.1.1 2001/03/27 12:06:55 wennmach Exp $
+
+--- src/Makefile.in.orig	Sat Dec  9 07:42:21 2000
++++ src/Makefile.in	Mon Mar 26 21:44:49 2001
+@@ -143,13 +143,7 @@
+ OBJECTS_1 := $(patsubst %.c, %.o, $(OBJECTS_2))
+ OBJECTS := $(patsubst %.cc, %.o, $(OBJECTS_1))
+ 
+-ifeq ($(SHARED_LIBS), true)
+-  ifdef CXXPICFLAG
+-    PICOBJ := $(addprefix pic/, $(OBJECTS))
+-  else
+-    PICOBJ := $(OBJECTS)
+-  endif
+-endif
++PICOBJ := $(OBJECTS)
+ 
+ # Ugh.
+ 
+@@ -184,8 +178,8 @@
+ 
+ DOC_FILES := $(sort $(DEF_FILES) $(patsubst %, %.df, $(VAR_FILES)))
+ 
+-OCTAVE_LFLAGS = -L$(TOPDIR)/liboctave -L$(TOPDIR)/libcruft \
+-  -L$(TOPDIR)/src $(RLD_FLAG)
++OCTAVE_LFLAGS = -L$(TOPDIR)/liboctave/.libs -L$(TOPDIR)/libcruft/.libs \
++  -L$(TOPDIR)/src/.libs $(RLD_FLAG)
+ 
+ OCTAVE_LIBS = $(LIBOCTINTERP) $(LIBOCTAVE) $(SPECIAL_MATH_LIB) $(LIBCRUFT) \
+   $(LIBPLPLOT) $(LIBREADLINE) $(LIBKPATHSEA) $(LIBGLOB) $(LIBDLFCN)
+@@ -210,30 +204,13 @@
+ 
+ XERBLA = ../libcruft/blas-xtra/xerbla.o
+ 
+-ifeq ($(SHARED_LIBS), true)
+-  ifeq ($(STATIC_LIBS), true)
+-    LIBRARIES = liboctinterp.$(LIBEXT) liboctinterp.$(SHLEXT)
+-  else
+-    LIBRARIES = liboctinterp.$(SHLEXT)
+-    XERBLA = ../libcruft/blas-xtra/pic/xerbla.o
+-  endif
+-else
+-  ifeq ($(STATIC_LIBS), true)
+-    LIBRARIES = liboctinterp.$(LIBEXT)
+-  else
+-    ## This is not going to work, but hey, you asked for it...
+-    LIBRARIES =
+-    XERBLA =
+-  endif
+-endif
++LIBRARIES = liboctinterp.$(LIBEXT)
+ 
+ libraries: $(LIBRARIES)
+ .PHONY: libraries
+ 
+ liboctinterp.$(LIBEXT): $(OBJECTS)
+-	rm -f $@
+-	$(AR) $(ARFLAGS) $@ $^
+-	$(RANLIB) $@
++	${LIBTOOL} --mode=link cc -o liboctinterp.la ${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib -version-info ${version:2.1.%=2:%}
+ 
+ liboctinterp.$(SHLEXT): liboctinterp.$(SHLEXT_VER)
+ 	rm -f $@
+@@ -259,7 +236,7 @@
+ 	octave.o builtins.o ops.o $(XERBLA) $(DLD_STATIC_OBJ) \
+ 	$(OCTAVE_LFLAGS) \
+ 	$(OCTAVE_LIBS) \
+-	$(LEXLIB) $(TERMLIBS) $(BLAS_LIBS) $(LIBS) $(FLIBS)
++	$(LEXLIB) $(TERMLIBS) $(BLAS_LIBS) $(LIBS) $(FLIBS) -lg2c
+ 
+ stmp-pic: pic
+ 	@if [ -f stmp-pic ]; then \
+@@ -343,21 +320,7 @@
+ .PHONY: install-oct
+ 
+ install-lib:
+-	$(top_srcdir)/mkinstalldirs $(octlibdir)
+-	if $(STATIC_LIBS); then \
+-	  rm -f $(octlibdir)/liboctinterp.$(LIBEXT); \
+-	  $(INSTALL_DATA) liboctinterp.$(LIBEXT) \
+-	    $(octlibdir)/liboctinterp.$(LIBEXT); \
+-	  $(RANLIB) $(octlibdir)/liboctinterp.$(LIBEXT); \
+-	fi
+-	if $(SHARED_LIBS); then \
+-	  rm -f $(octlibdir)/liboctinterp.$(SHLEXT_VER); \
+-	  $(INSTALL_PROGRAM) liboctinterp.$(SHLEXT_VER) \
+-	    $(octlibdir)/liboctinterp.$(SHLEXT_VER); \
+-	  cd $(octlibdir); \
+-	  rm -f liboctinterp.$(SHLEXT); \
+-	  $(LN_S) liboctinterp.$(SHLEXT_VER) liboctinterp.$(SHLEXT); \
+-	fi
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} liboctinterp.la ${PREFIX}/lib
+ 	$(mk-libdir-link)
+ .PHONY: install-lib
+ 
