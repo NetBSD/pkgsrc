@@ -1,4 +1,4 @@
-# $NetBSD: transform-xlc-cc,v 1.4 2004/12/05 09:26:59 grant Exp $
+# $NetBSD: transform-xlc-cc,v 1.5 2004/12/05 09:27:23 grant Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -52,9 +52,9 @@ case $arg in
 # xlc uses -qmkshrobj to create shared objects, and we also need to
 # tell the linker to use a flat namespace and allow undefined symbols.
 -dynamiclib)
-        arg="-qmkshrobj -Wl,-flat_namespace -Wl,-undefined -Wl,suppress"
-        msg_log $wrapperlog "   (transform-xlc-cc) to: $arg"
-        addtocache=yes
+	arg="-qmkshrobj -Wl,-flat_namespace -Wl,-undefined -Wl,suppress"
+	msg_log $wrapperlog "   (transform-xlc-cc) to: $arg"
+	addtocache=yes
 	split_arg=yes
         ;;
 # -qnocommon is the xlc argument to allocate uninitialized globals in
