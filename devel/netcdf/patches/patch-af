@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 1999/01/14 20:28:54 frueauf Exp $
+$NetBSD: patch-af,v 1.2 2005/02/25 09:52:47 adam Exp $
 
---- libsrc/Makefile.orig	Mon Dec  8 23:04:42 1997
-+++ libsrc/Makefile	Sun Sep 27 20:23:07 1998
-@@ -7,7 +7,7 @@
+--- libsrc/Makefile.orig	2004-12-18 18:08:01.000000000 +0000
++++ libsrc/Makefile
+@@ -7,7 +7,7 @@ include ../macros.make
  
  INCLUDES = -I.
  
@@ -11,9 +11,9 @@ $NetBSD: patch-af,v 1.1.1.1 1999/01/14 20:28:54 frueauf Exp $
  ld_netcdf	= -L. -lnetcdf
  
  HEADER	= netcdf.h
-@@ -54,7 +54,23 @@
+@@ -54,7 +54,23 @@ PACKING_LIST = \
  	t_ncxx.c \
- 	t_ncx.c
+ 	t_ncx.c install-sh
  
 -LIB_OBJS = $(LIB_CSRCS:.c=.o)
 +FLIB_OBJS = \

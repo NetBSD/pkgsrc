@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2003/03/02 08:26:10 jtb Exp $
+$NetBSD: patch-ab,v 1.4 2005/02/25 09:52:47 adam Exp $
 
---- macros.make.in.orig	Tue Mar 13 17:42:50 2001
+--- macros.make.in.orig	2004-12-18 16:32:32.000000000 +0000
 +++ macros.make.in
 @@ -29,10 +29,10 @@ CXXCPPFLAGS	= $(CPPFLAGS)
  
@@ -16,8 +16,8 @@ $NetBSD: patch-ab,v 1.3 2003/03/02 08:26:10 jtb Exp $
 +F90		= $(LIBTOOL) --mode=compile @F90@
  CFLAGS		= @CFLAGS@
  CXXFLAGS	= @CXXFLAGS@
- FFLAGS		= @FFLAGS@
-@@ -54,11 +54,11 @@ FLIBS		= @FLIBS@
+ FFLAGS		= @FFLAGS@ @IGNORE_FPE@
+@@ -53,11 +53,11 @@ FLIBS		= @FLIBS@
  F90LIBS		= @F90LIBS@
  LIBS		= @LIBS@
  F90LDFLAGS	= $(LDFLAGS)
@@ -34,7 +34,7 @@ $NetBSD: patch-ab,v 1.3 2003/03/02 08:26:10 jtb Exp $
  
  
  # Manual pages:
-@@ -69,9 +69,9 @@ MAKEWHATIS_CMD	= @MAKEWHATIS_CMD@
+@@ -68,9 +68,9 @@ MAKEWHATIS_CMD	= @MAKEWHATIS_CMD@
  
  
  # Misc. Utilities:
@@ -42,7 +42,7 @@ $NetBSD: patch-ab,v 1.3 2003/03/02 08:26:10 jtb Exp $
 -ARFLAGS		= @ARFLAGS@
 -RANLIB		= @RANLIB@
 +AR		= $(LIBTOOL) --mode=link @CC@
-+ARFLAGS		= -rpath $(LIBDIR) -version-info 3:5
++ARFLAGS		= -rpath $(LIBDIR) -version-info 3:6
 +RANLIB		= echo
  TARFLAGS	= -chf
  
