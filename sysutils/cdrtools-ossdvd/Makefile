@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/30 02:19:16 snj Exp $
+# $NetBSD: Makefile,v 1.8 2004/07/09 13:04:52 drochner Exp $
 
 DISTNAME=	cdrtools-2.01a24
 PKGNAME=	cdrtools-ossdvd-2.01.1.24
@@ -13,14 +13,13 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://crashrecovery.org/oss-dvd.html
 COMMENT=	Software for creating ISO9660 images and writing CDs/CD-RWs/DVDs
 
-CONFLICTS=	mkisofs-[0-9]* cdrecord-* cdrtools-*
+CONFLICTS=	mkisofs-[0-9]* cdrecord-[0-9]* cdrtools-*
 
 .include "../../mk/bsd.prefs.mk"
 
 WRKSRC=			${WRKDIR}/cdrtools-2.01
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-TBL?=			tbl
 
 .if ${LOCALBASE} != "/opt/schily"
 BUILDLINK_TRANSFORM=	r:/opt/schily
@@ -94,5 +93,6 @@ do-install:
 		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
 		${INSTALL_MAN} readcd.1 ${PREFIX}/man/man1
 
+.include "../../textproc/groff/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
