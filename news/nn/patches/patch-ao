@@ -1,7 +1,7 @@
-$NetBSD: patch-ao,v 1.1 1999/07/26 21:19:29 tron Exp $
+$NetBSD: patch-ao,v 1.2 1999/08/22 22:55:46 kim Exp $
 
---- expire.c.orig	Tue Aug 31 23:05:40 1993
-+++ expire.c	Mon Jul 26 23:11:38 1999
+--- expire.c.orig	Wed Aug 14 23:16:10 1996
++++ expire.c	Sun Aug 22 18:05:19 1999
 @@ -95,7 +95,7 @@
  register group_header *gh;
  {
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.1 1999/07/26 21:19:29 tron Exp $
      register article_number *list;
      article_number old_last_article;
      long count;
-@@ -149,9 +149,9 @@
+@@ -148,9 +148,9 @@
      old_last_article = gh->last_db_article;
      gh->last_db_article = 0;
  
@@ -23,7 +23,7 @@ $NetBSD: patch-ao,v 1.1 1999/07/26 21:19:29 tron Exp $
  
      gh->master_flag &= ~M_EXPIRE;
      gh->master_flag |= M_BLOCKED;
-@@ -269,7 +269,7 @@
+@@ -268,7 +268,7 @@
  {
      FILE *old_x, *old_d;
      FILE *new;
@@ -32,7 +32,7 @@ $NetBSD: patch-ao,v 1.1 1999/07/26 21:19:29 tron Exp $
      long count, expire_count;
      char *err_message;
  
-@@ -336,7 +336,7 @@
+@@ -333,7 +333,7 @@
       *	calculate the number of entries to copy
       */
  
@@ -41,7 +41,7 @@ $NetBSD: patch-ao,v 1.1 1999/07/26 21:19:29 tron Exp $
  
      /*
       *	data offset is the offset into the old data file for the
-@@ -345,7 +345,7 @@
+@@ -342,7 +342,7 @@
       *	offset 'index_offset'.
       */
  
@@ -50,7 +50,7 @@ $NetBSD: patch-ao,v 1.1 1999/07/26 21:19:29 tron Exp $
  
      /*
       *	read 'count' entries from the old index file starting from
-@@ -359,7 +359,7 @@
+@@ -356,7 +356,7 @@
  	if (!db_read_offset(old_x, &new_offset))
  	    expire_error("INDEX: too short");
  

@@ -1,36 +1,8 @@
-$NetBSD: patch-ap,v 1.1 1999/07/26 21:19:30 tron Exp $
+$NetBSD: patch-ap,v 1.2 1999/08/22 22:55:46 kim Exp $
 
---- global.h.orig	Fri Feb 18 03:15:48 1994
-+++ global.h	Mon Jul 26 23:11:38 1999
-@@ -8,7 +8,9 @@
- #define _NN_GLOBAL_H 1
- 
- #include <stdlib.h>
-+#ifdef USE_MALLOC_H
- #include <malloc.h>
-+#endif
- /*
-  *	Marks for global/external variables
-  */
-@@ -88,13 +90,16 @@
- 
- /* define types of library functions */
- 
-+#ifndef __NetBSD__
- char 	*getenv(), *ctime();
- #ifndef MALLOC_FUNC_CHECK
- char 	*strchr(), *strrchr();
- #endif
--off_t 	lseek(), ftell(), tell();
-+off_t   lseek(), tell();
-+long    ftell();
- int	atoi();
- long	atol();
-+#endif
- 
- 
- /* define types of own functions */
-@@ -387,12 +392,12 @@
+--- global.h.orig	Tue Jul 14 09:48:40 1998
++++ global.h	Sun Aug 22 18:08:37 1999
+@@ -387,12 +387,12 @@
  void	db_read_group	__APROTO((group_header *gh));
  #endif
  void	db_write_group	__APROTO((group_header *gh));
@@ -48,12 +20,3 @@ $NetBSD: patch-ap,v 1.1 1999/07/26 21:19:30 tron Exp $
  
  /* decode.c */
  
-@@ -650,7 +655,7 @@
- int	nntp_set_group		__APROTO((group_header *gh));
- int	nntp_get_active		__APROTO((void));
- FILE *	nntp_get_newsgroups	__APROTO((void));
--struct novgroup *nntp_get_overview	__APROTO((group_header *gh, int low, int high));
-+struct novgroup *nntp_get_overview      __APROTO((group_header *gh, article_number low, article_number high));
- FILE *	nntp_fopen_list		__APROTO((char *cmd));
- char *	nntp_fgets		__APROTO((char *buf, int size));
- article_number *nntp_get_article_list	__APROTO((group_header *gh));
