@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.1 1998/04/23 09:03:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/04/23 15:11:47 hubertf Exp $
 #
 
 DISTNAME=       xjig-2.4
 CATEGORIES=	games x11
-MASTER_SITES=	http://www.cqi.com/~humbubba/linux/
+MASTER_SITES=           ${MASTER_SITE_XCONTRIB}
+MASTER_SITE_SUBDIR=     games/multiplayer
+
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
