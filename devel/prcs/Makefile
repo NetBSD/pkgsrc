@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/06/25 16:43:54 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2004/06/27 22:09:27 kristerw Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/10/13 05:11:40 jmacd Exp
 #
 
@@ -20,5 +20,7 @@ CONFIGURE_ENV+=		lispdir=${PREFIX}/share/examples/prcs
 INFO_FILES=		prcs.info
 USE_LANGUAGES=		c c++
 CONFIGURE_ENV+=		EMACS=no
+
+GCC_REQD=		3.0
 
 .include "../../mk/bsd.pkg.mk"
