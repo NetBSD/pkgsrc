@@ -1,35 +1,19 @@
-$NetBSD: patch-ac,v 1.11 2004/07/20 13:59:12 tron Exp $
+$NetBSD: patch-ac,v 1.12 2004/09/21 07:43:10 tron Exp $
 
---- helpers.cpp.orig	2004-04-23 22:23:28.000000000 +0200
-+++ helpers.cpp	2004-07-20 15:48:50.000000000 +0200
-@@ -319,7 +319,25 @@
-   // strip the html tags
-   for (u = 0; u < buffLength; u++) {
-     c = stringToStrip[u];
--    if (c == '<') IncludeFlag=5;
-+    if (u+7<buffLength && 
-+        ( 0 == strncmp(&stringToStrip[u],"<script",7) ||
-+        0 == strncmp(&stringToStrip[u],"<SCRIPT",7) ) )
-+      IncludeFlag = 6;
-+    else if (u+8<buffLength &&
-+        ( 0 == strncmp(&stringToStrip[u],"</script",8) ||
-+        0 == strncmp(&stringToStrip[u],"</SCRIPT",8) ) )
-+      IncludeFlag = 5;
-+    else if (IncludeFlag == 6 && (c == '>' || c == '<') )
-+      IncludeFlag = 6;
-+    else if (c == '<') {
-+      IncludeFlag=5;
-+      if (u+4<buffLength &&
-+        ( 0 == strncmp(&stringToStrip[u],"<br",3) 
-+        || 0 == strncmp(&stringToStrip[u],"<td",3) 
-+        || 0 == strncmp(&stringToStrip[u],"<tr",3) )
-+        && Buff[BuffIdx-1] != '\n' )
-+        Buff[BuffIdx++] = '\n';
-+    }
-     else if (c == '>') IncludeFlag=10;
-     else if (IncludeFlag==10) {
-       if ((BuffIdx > 0) && (c == ' ') &&
-@@ -530,7 +548,8 @@
+--- helpers.cpp.orig	2004-08-31 02:40:13.000000000 +0200
++++ helpers.cpp	2004-09-21 09:40:39.000000000 +0200
+@@ -120,9 +120,7 @@
+ 
+ bool strToFloat(const char *str, float &x)
+ {
+-  char *end = 0;
+-  x = strtof(str, &end);
+-  return end != str && *end == 0;
++  return (sscanf(str, "%f", &x) == 1);
+ }
+ 
+ float calculateBidIncrement(float currentBid,  const char *currency)
+@@ -580,7 +578,8 @@
  	  return PB_OUTBID;
  	else if (strstr(Buff, "You have been outbid"))
  	  return PB_OUTBID;
