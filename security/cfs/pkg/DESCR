@@ -1,10 +1,13 @@
-CFS is an encrypting file system for Unix-like OSs.  It uses NFS as
-its interface, and so is reasonably portable.  The FS code dates back
-to 1989, and the crypto to 1992, so it is showing signs of age.  This
-code should be regarded as completely unsupported; a complete rewrite
-will follow eventually. 
-
-Please don't download this code if you're in a place that's forbidden
-(under US or local law) to export cryptographic software from the US
-to, or if you're on the State Department's "Denied Persons List." If
-you aren't sure, ask a good lawyer. 
+CFS pushes encryption services into the UN*X file system.  It supports
+secure storage at the system level through a standard UN*X file system
+interface to encrypted files.  Users associate a cryptographic key with the
+directories they wish to protect.  Files in these directories (as well as
+their pathname components) are transparently encrypted and decrypted with
+the specified key without further user intervention; cleartext is never
+stored on a  disk or sent to a remote file server.  CFS employs a novel
+combination of DES stream and codebook cipher modes to provide high
+security with good performance on a modern workstation.  CFS can use any
+available file system for its underlying storage without modification,
+including remote file servers such as NFS.  System management functions,
+such as file backup, work in a normal manner and without knowledge of the
+key.
