@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/31 16:47:04 tron Exp $
+
+--- Makefile.in.orig	Fri Feb  4 04:11:21 2000
++++ Makefile.in	Mon Jul 31 18:38:07 2000
+@@ -21,11 +21,11 @@
+ 
+ SHELL =		/bin/sh
+ RANLIB =	@RANLIB@
+-CC =		@CC@
++CC =		${LIBTOOL} @CC@
+ CFLAGS =	@CFLAGS@
+ FC =		@FC@
+ LDFLAGS =	$(CFLAGS)
+-DEFS =		@DEFS@
++DEFS =		@DEFS@ -Dunix
+ LIBS =		@LIBS@
+ FLEX =		flex
+ BISON =		bison
+@@ -72,11 +72,10 @@
+ all-nofitsio:
+ 		${MAKE} stand_alone "FITSIO_SRC="
+ 
+-stand_alone:	libcfitsio.a
++stand_alone:	libcfitsio.la
+ 
+-libcfitsio.a:	${OBJECTS}
+-		ar rv libcfitsio.a ${OBJECTS}; \
+-		${RANLIB} libcfitsio.a;
++libcfitsio.la:	${OBJECTS}
++		${LIBTOOL} --mode=link @CC@ -o $@ ${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib -version-info 2:0
+ 
+ install:	libcfitsio.a
+ 		/bin/mv libcfitsio.a ${FTOOLS_LIB}
+@@ -86,7 +85,7 @@
+ 		${CC} $(CFLAGS) $(DEFS) -o smem smem.o -L. -lcfitsio -lm
+ 
+ testprog:	testprog.o libcfitsio.a ${OBJECTS}
+-		${CC} $(CFLAGS) $(DEFS) -o testprog testprog.o -L. -lcfitsio -lm ${LIBS}
++		${CC} $(CFLAGS) $(DEFS) -o testprog testprog.o libcfitsio.la -lm ${LIBS}
+ 
+ fitscopy:	fitscopy.o libcfitsio.a ${OBJECTS}
+ 		${CC} $(CFLAGS) $(DEFS) -o fitscopy fitscopy.o -L. -lcfitsio -lm ${LIBS}
