@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.12 1998/08/20 15:17:02 tsarna Exp $
+# $NetBSD: Makefile,v 1.13 1999/03/19 08:43:55 rh Exp $
 #
 
-DISTNAME=       xanim27070
-PKGNAME=        xanim-2.70.7.0
+DISTNAME=       xanim2800
+PKGNAME=        xanim-2.80.0
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://xanim.va.pubnix.com/\
-		ftp://xanim.va.pubnix.com/modules/
+		ftp://xanim.va.pubnix.com/modules/ \
+		http://xanim.resnet.gatech.edu/files/
 DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}
 
 MAINTAINER=	packages@netbsd.org
@@ -32,10 +33,14 @@ MIRROR_DISTFILE=	no
 USE_IMAKE=	yes
 
 post-extract:
-	ln -s docs/xanim.man ${WRKSRC}
+	@${MKDIR} ${WRKSRC}/mods
 	@for file in ${EXTRA_FILES}; do \
-	  ${CP} ${DISTDIR}/$$file ${WRKSRC}; \
-	  ${GUNZIP_CMD} ${WRKSRC}/$$file; \
+	  ${CP} ${DISTDIR}/$$file ${WRKSRC}/mods; \
+	  ${GUNZIP_CMD} ${WRKSRC}/mods/$$file; \
 	done
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/xanim ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/xanim.0 ${PREFIX}/man/cat1
 
 .include "../../mk/bsd.pkg.mk"
