@@ -1,13 +1,29 @@
-$NetBSD: patch-ad,v 1.2 1999/11/30 13:24:47 rh Exp $
-
---- Makefile.conf.in.orig	Mon Nov 29 16:59:33 1999
-+++ Makefile.conf.in	Mon Nov 29 17:02:28 1999
-@@ -13,7 +13,7 @@
- BIN_PREFIX = @bindir@
- TARGET_PREFIX = @libdir@/ClanLib
+$NetBSD: patch-ad,v 1.3 2000/12/15 03:13:05 garbled Exp $
+--- Sources/Core/System/Unix/init_linux.cpp.orig	Thu Dec 14 18:25:57 
+2000 +++ Sources/Core/System/Unix/init_linux.cpp	Thu Dec 14 18:21:25 2000
+@@ -531,19 +531,20 @@
+ {
+ 	struct timeval tv;
+ 	// select doesn't modify timeval if interrupted on non Linux systems
+-#ifndef linux 
+-	int then, now, elapsed;
+-	then = CL_System::get_time();
+-#else
++
++#if defined(linux) || defined(__NetBSD__)
+ 	tv.tv_sec = millis/ 1000;
+ 	tv.tv_usec = (millis%1000)*1000;
++#else
++	int then, now, elapsed;
++	then = CL_System::get_time();
+ #endif
  
--INCLUDE_DIRS =	-I . -I Layer1 -I Layer2 -I Layer2/StreamSoundProviders/mikmod/include @x_includes@
-+INCLUDE_DIRS =	-I . -I Layer1 -I Layer2 -I Layer2/StreamSoundProviders/mikmod/include @x_includes@ -I${LOCALBASE}/include
- 
- COMP_OPTIONS =	-Wall $(INCLUDE_DIRS) -fPIC @DEFS@ @comp_mode@
- 
+ 	int was_error;	
+ 	do
+ 	{
+ 		errno = 0;
+-#ifndef linux
++#if !defined(linux) && !defined(__NetBSD__)
+ 		now = CL_System::get_time();
+ 		elapsed = now - then;
+ 		then = now;
