@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 20:40:15 jmmv Exp $
+lib/sablevm-classpath/libgtkpeer.a
+lib/sablevm-classpath/libgtkpeer.la
+lib/sablevm-classpath/libgtkpeer.so
+lib/sablevm-classpath/libgtkpeer.so.0
+lib/sablevm-classpath/libgtkpeer.so.0.0
+@comment in sablevm-classpath: @dirrm lib/sablevm-classpath
