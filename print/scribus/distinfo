@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2003/10/29 20:54:51 reed Exp $
+$NetBSD: distinfo,v 1.3 2003/11/19 11:54:48 agc Exp $
 
 SHA1 (scribus-1.1.1.tar.gz) = 640e1007fd0b16c1b4f797910d8628b2be0923a2
 Size (scribus-1.1.1.tar.gz) = 2053257 bytes
 SHA1 (patch-aa) = 74c57344608436ab449f042016495d6895c80f76
 SHA1 (patch-ab) = d2430e5b81c2ff00390f8135a753ce6a40653af7
+SHA1 (patch-ac) = c874f71ca7d93ece073a11e73cb6ef54c62f968d
