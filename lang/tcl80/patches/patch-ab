@@ -1,6 +1,6 @@
---- configure.orig	Sun Nov 16 15:37:27 1997
-+++ configure	Sun Nov 16 15:38:46 1997
-@@ -3744,7 +3744,7 @@
+--- configure.orig	Tue Nov 25 11:31:42 1997
++++ configure	Mon Feb  9 07:20:00 1998
+@@ -3781,7 +3781,7 @@
  if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
    echo "$ac_t""yes" 1>&6
    
