@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/06 04:08:34 jlam Exp $
+
+--- Makefile.in.orig	Mon Nov  5 01:26:27 2001
++++ Makefile.in
+@@ -384,7 +384,7 @@
+ install-data: install-data-recursive
+ 
+ install-am: all-am
+-	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
++	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am
+ install: install-recursive
+ uninstall-am:
+ uninstall: uninstall-recursive
