@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2001/06/16 19:51:51 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2001/08/03 17:07:25 wiz Exp $
 
---- Makefile.orig	Thu Oct 26 15:18:35 2000
-+++ Makefile	Fri Jun 15 02:04:42 2001
-@@ -11,17 +11,14 @@
+--- Makefile.orig	Tue Jul 17 18:56:02 2001
++++ Makefile
+@@ -14,16 +14,14 @@
  
  
  # Installation prefix dirctory:
@@ -10,21 +10,21 @@ $NetBSD: patch-aa,v 1.5 2001/06/16 19:51:51 jlam Exp $
  BINDIR	= $(PREFIX)/bin
  
  
--CC	= gcc
--GLIBS	= `gtk-config --libs`
--GFLAGS	= `gtk-config --cflags` $(NLS) -DLOCALE=\"${LOCALEDIR}\" $(DATA_DIR)
--OPT	= -g -Wall -O2
+-CC        = gcc
+-GLIBS     = `gtk-config --libs`
+-GFLAGS    = `gtk-config --cflags` $(NLS) -DLOCALE=\"${LOCALEDIR}\" $(DATA_DIR)
+-OPT       = -g -Wall -O2 #-mpentium #-pedantic
+-MAKE      = make
+-LOCALEDIR = $(PREFIX)/share/locale
 +GLIBS = ${LDFLAGS} `${GTK_CONFIG} --libs` -lintl
 +GFLAGS	= ${CFLAGS} `${GTK_CONFIG} --cflags` $(NLS) -DLOCALE=\"${LOCALEDIR}\" $(DATA_DIR)
 +OPT   = -Wall
- #ID3_LIB = -lid3
--MAKE	= make
--LOCALEDIR = $(PREFIX)/share/locale
++#ID3_LIB = -lid3
 +LOCALEDIR = $(PREFIX)/${PKGLOCALEDIR}/locale
  
- # The dir where are located pixmaps, logo
+ # The directory where are located pixmaps, logo
  DATA_DIR = -DPACKAGE_DATA_DIR=\"${PACKAGE_DATA_DIR}\"
-@@ -37,10 +34,12 @@
+@@ -39,10 +37,12 @@
  install:
  	$(MAKE) install -C src
  	[ -z "$(NLS)" ] || $(MAKE) install -C po
