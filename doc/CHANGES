@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.694 2002/12/05 15:46:10 tron Exp $
+$NetBSD: CHANGES,v 1.695 2002/12/05 19:11:51 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3828,3 +3828,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated kdelibs2 to 2.2.2nb4 [tron 2002-12-05]
 	Added GutenMark-20020724 [wiz 2002-12-05]
 	Added GutenMark-words-20021124 [wiz 2002-12-05]
+	Updated lesstif to 0.93.36 [drochner 2002-12-05]
