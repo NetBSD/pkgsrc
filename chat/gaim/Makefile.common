@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2002/09/28 03:49:18 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.5 2002/10/29 18:52:01 wiz Exp $
 #
 
 DISTNAME=	gaim-0.59.3
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--disable-artsc
 CONFIGURE_ARGS+=	--disable-nas
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-screensaver
-CONFIGURE_ARGS+=	--with-libiconv-prefix=/nonexistant
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.libiconv}
 
 CONFIGURE_ARGS+=	--enable-esd
 CONFIGURE_ARGS+=	--enable-perl
@@ -38,3 +38,5 @@ CONFIGURE_ARGS+=	--enable-pixbuf
 #
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libc=yes
+
+.include "../../converters/libiconv/buildlink2.mk"
