@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/07/24 08:39:58 wennmach Exp $
+$NetBSD: distinfo,v 1.4 2003/10/21 14:19:37 wennmach Exp $
 
 SHA1 (gdb-5.3.tar.gz) = 24a6c9da6e89b1b82b7508f27f94098d989ff662
+SHA1 (patch-ab) = b74ff228047ccb45267e1302e4bef20716b255f4
