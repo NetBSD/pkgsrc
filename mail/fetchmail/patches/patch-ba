@@ -1,0 +1,30 @@
+$NetBSD: patch-ba,v 1.7 1999/07/07 23:28:13 itojun Exp $
+
+--- socket.c.orig	Tue Feb  2 18:33:38 1999
++++ socket.c	Mon Jun  7 23:12:27 1999
+@@ -96,6 +96,7 @@
+     void *request = NULL;
+     int requestlen;
+ #endif /* NET_SECURITY */
++    int i;
+ 
+ #ifdef HAVE_SOCKETPAIR
+     if (plugin)
+@@ -122,7 +123,17 @@
+ 
+  ret:
+ #else /* NET_SECURITY */
++#if 0
+     i = inner_connect(ai, NULL, 0, NULL, NULL, "fetchmail", NULL);
++#else
++    i = socket(ai->ai_family, ai->ai_socktype, 0);
++    if (i < 0)
++	return -1;
++    if (connect(i, (struct sockaddr *) ai->ai_addr, ai->ai_addrlen) < 0) {
++	close(i);
++	return -1;
++    }
++#endif
+ #endif /* NET_SECURITY */
+ 
+     freeaddrinfo(ai);
