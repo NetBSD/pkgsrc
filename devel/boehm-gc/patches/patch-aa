@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.13 2003/02/14 18:50:51 wiz Exp $
+$NetBSD: patch-aa,v 1.14 2003/05/22 16:46:50 jmmv Exp $
 
---- Makefile.direct.orig	Thu Aug  1 05:19:26 2002
-+++ Makefile.direct	Thu Jan 23 09:19:39 2003
+--- Makefile.direct.orig	2003-03-07 20:08:44.000000000 +0100
++++ Makefile.direct	2003-05-14 00:27:50.000000000 +0200
 @@ -20,8 +20,8 @@
  # executables.
  
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.13 2003/02/14 18:50:51 wiz Exp $
  #  The above doesn't work with gas, which doesn't run cpp.
  #  Define AS as `gcc -c -x assembler-with-cpp' instead.
  
-@@ -335,16 +335,23 @@
+@@ -359,16 +359,23 @@
  
  all: gc.a gctest
  
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.13 2003/02/14 18:50:51 wiz Exp $
  
  pcr: PCR-Makefile include/private/gc_private.h include/private/gc_hdrs.h \
  include/private/gc_locks.h include/gc.h include/private/gcconfig.h \
-@@ -420,7 +427,6 @@
+@@ -444,7 +451,6 @@
  	./if_mach M68K AMIGA $(AR) -vrus gc.a gc_cpp.o
  	./if_not_there dont_ar_4 $(AR) ru gc.a gc_cpp.o
  	./if_not_there dont_ar_4 $(RANLIB) gc.a || cat /dev/null
