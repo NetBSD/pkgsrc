@@ -1,9 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2002/05/14 18:00:55 jschauma Exp $
-COPYRIGHT
-LICENSE
-README
+@comment $NetBSD: PLIST,v 1.2 2002/07/27 22:21:05 jschauma Exp $
 README.html
-bin/ControlPanel
 bin/HtmlConverter
 bin/appletviewer
 bin/extcheck
@@ -11,22 +7,14 @@ bin/idlj
 bin/jar
 bin/jarsigner
 bin/java-rmi.cgi
-bin/java_vm
 bin/javac
 bin/javadoc
 bin/javah
 bin/javap
 bin/jdb
-bin/keytool
 bin/native2ascii
-bin/orbd
-bin/policytool
 bin/rmic
-bin/rmid
-bin/rmiregistry
 bin/serialver
-bin/servertool
-bin/tnameserv
 demo/applets/Animator/Animation.class
 demo/applets/Animator/AnimationFrame.class
 demo/applets/Animator/Animator.class
@@ -903,57 +891,36 @@ lib/htmlconverter.jar
 lib/ir.idl
 lib/orb.idl
 lib/tools.jar
-man/ja
 man/ja_JP.eucJP/man1/appletviewer.1
 man/ja_JP.eucJP/man1/extcheck.1
 man/ja_JP.eucJP/man1/idlj.1
 man/ja_JP.eucJP/man1/jar.1
 man/ja_JP.eucJP/man1/jarsigner.1
-man/ja_JP.eucJP/man1/java.1
 man/ja_JP.eucJP/man1/javac.1
 man/ja_JP.eucJP/man1/javadoc.1
 man/ja_JP.eucJP/man1/javah.1
 man/ja_JP.eucJP/man1/javap.1
 man/ja_JP.eucJP/man1/jdb.1
-man/ja_JP.eucJP/man1/keytool.1
-man/ja_JP.eucJP/man1/orbd.1
-man/ja_JP.eucJP/man1/policytool.1
 man/ja_JP.eucJP/man1/native2ascii.1
 man/ja_JP.eucJP/man1/rmic.1
-man/ja_JP.eucJP/man1/rmid.1
-man/ja_JP.eucJP/man1/rmiregistry.1
 man/ja_JP.eucJP/man1/serialver.1
-man/ja_JP.eucJP/man1/servertool.1
-man/ja_JP.eucJP/man1/tnameserv.1
 man/man1/appletviewer.1
 man/man1/extcheck.1
 man/man1/idlj.1
 man/man1/jar.1
 man/man1/jarsigner.1
-man/man1/java.1
 man/man1/javac.1
 man/man1/javadoc.1
 man/man1/javah.1
 man/man1/javap.1
 man/man1/jdb.1
-man/man1/keytool.1
 man/man1/native2ascii.1
-man/man1/orbd.1
-man/man1/policytool.1
 man/man1/rmic.1
-man/man1/rmid.1
-man/man1/rmiregistry.1
 man/man1/serialver.1
-man/man1/servertool.1
-man/man1/tnameserv.1
 src.zip
-@dirrm man/ja_JP.eucJP/man1
-@dirrm man/ja_JP.eucJP
-@dirrm man/man1
-@dirrm man
 @dirrm include/linux
 @dirrm include
-@dirrm lib
+@unexec ${RMDIR} %D/lib 2>/dev/null || ${TRUE}
 @dirrm demo/plugin/jfc/TableExample/src
 @dirrm demo/plugin/jfc/TableExample
 @dirrm demo/plugin/jfc/SwingSet2/src
@@ -1109,3 +1076,4 @@ src.zip
 @dirrm demo/applets/Animator
 @dirrm demo/applets
 @dirrm demo
+@unexec ${RMDIR} %D 2>/dev/null || ${TRUE}
