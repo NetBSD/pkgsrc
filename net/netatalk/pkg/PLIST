@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/08/23 23:37:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/08/23 23:45:12 wiz Exp $
 bin/aecho
 bin/getzones
 bin/hqx2bin
@@ -91,4 +91,5 @@ share/psffilters/tfwmpaprev
 share/psffilters/tfwpap
 share/psffilters/tfwpaprev
 @dirrm share/psffilters
+@dirrm share/examples/netatalk
 @dirrm include/atalk
