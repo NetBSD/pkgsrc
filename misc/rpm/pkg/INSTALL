@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2000/09/10 12:02:48 wiz Exp $
+#
+
+case $2 in
+    PRE-INSTALL)
+        ;;
+    POST-INSTALL)
+	# create database dir
+	mkdir -p /var/pkg/lib/rpm
+	echo ==============================================================
+	echo
+	echo If this is your first use of rpm, please initialize the
+	echo database with:
+	echo '        rpm --initdb'
+	echo
+	echo If you are unsure, try
+	echo '        rpm -qa'
+	echo If this produces an error like
+	echo '        failed to open //var/pkg/lib/rpm/packages.rpm'
+	echo then you should initialize the database.
+	echo
+	echo ==============================================================
+	;;
+    *)
+	echo "Unexpected argument $2!"
+	exit 1
+	;;
+esac
+
+exit 0
