@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/01/31 23:52:01 tron Exp $
+# $NetBSD: Makefile,v 1.9 1998/02/03 10:18:57 tron Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -16,8 +16,7 @@
 #    SUBDIR += gifmerge
 #    SUBDIR += giftool
 #    SUBDIR += giftrans
-#    SUBDIR += gimp
-#    SUBDIR += gimp-devel
+    SUBDIR += gimp
     SUBDIR += gnuplot
 #    SUBDIR += hobbes-icons-xpm
 #    SUBDIR += hpscan
