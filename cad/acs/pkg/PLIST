@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2000/11/22 21:15:13 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/07/05 12:01:33 dmcmahill Exp $
 bin/acs
 share/doc/acs/acs-tutorial
 share/doc/acs/contents.gif
+share/doc/acs/contents.png
+share/doc/acs/contents_motif.gif
 share/doc/acs/images.aux
 share/doc/acs/images.idx
 share/doc/acs/images.log
 share/doc/acs/images.pl
-share/doc/acs/images.tex
+share/doc/acs/images.tex,v
 share/doc/acs/img1.png
 share/doc/acs/img10.png
 share/doc/acs/img11.png
@@ -67,7 +69,11 @@ share/doc/acs/man.css
 share/doc/acs/man.html
 share/doc/acs/man.pdf
 share/doc/acs/next.gif
+share/doc/acs/next.png
 share/doc/acs/next_g.gif
+share/doc/acs/next_g.png
+share/doc/acs/next_motif.gif
+share/doc/acs/next_motif_gr.gif
 share/doc/acs/node1.html
 share/doc/acs/node10.html
 share/doc/acs/node100.html
@@ -76,6 +82,10 @@ share/doc/acs/node102.html
 share/doc/acs/node103.html
 share/doc/acs/node104.html
 share/doc/acs/node105.html
+share/doc/acs/node106.html
+share/doc/acs/node107.html
+share/doc/acs/node108.html
+share/doc/acs/node109.html
 share/doc/acs/node11.html
 share/doc/acs/node12.html
 share/doc/acs/node13.html
@@ -174,9 +184,17 @@ share/doc/acs/node97.html
 share/doc/acs/node98.html
 share/doc/acs/node99.html
 share/doc/acs/prev.gif
+share/doc/acs/prev.png
 share/doc/acs/prev_g.gif
+share/doc/acs/prev_g.png
+share/doc/acs/previous_motif.gif
+share/doc/acs/previous_motif_gr.gif
 share/doc/acs/up.gif
+share/doc/acs/up.png
 share/doc/acs/up_g.gif
+share/doc/acs/up_g.png
+share/doc/acs/up_motif.gif
+share/doc/acs/up_motif_gr.gif
 share/doc/acs/whatisit
 share/examples/acs/README
 share/examples/acs/eq.doc
