@@ -1,0 +1,31 @@
+$NetBSD: patch-ba,v 1.1 2004/04/20 22:11:48 drochner Exp $
+
+--- src/exec/libdx/memory.c.orig	2004-04-20 20:55:28.000000000 +0000
++++ src/exec/libdx/memory.c	2004-04-20 21:05:24.000000000 +0000
+@@ -70,7 +70,7 @@
+ #include <sys/sysinfo.h>
+ #endif
+ 
+-#if freebsd
++#if defined(freebsd) || defined(__NetBSD__)
+ #include <sys/types.h>
+ #include <sys/sysctl.h>
+ #endif
+@@ -1073,7 +1073,7 @@
+ #define LARGE(x) ((ulong)x>=(ulong)large)
+ #endif
+ 
+-#ifdef freebsd
++#if defined(freebsd) || defined(__NetBSD__)
+ #define initvalues
+ #define SMALL_BASE    0               /* use data segment */
+ #define SMALL_GET     _dxfgetmem      /* expand by using DosSetMem */
+@@ -1449,7 +1449,7 @@
+ 	}
+ #endif
+ 
+-#if freebsd
++#if defined(freebsd) || defined(__NetBSD__)
+   int mib[2],hw_physmem;
+   size_t len;
+   

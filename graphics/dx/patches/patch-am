@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.4 2002/12/05 21:44:31 drochner Exp $
+$NetBSD: patch-am,v 1.5 2004/04/20 22:11:48 drochner Exp $
 
---- src/uipp/dxuilib/PacketIF.C.orig	Sat Mar  2 06:04:55 2002
-+++ src/uipp/dxuilib/PacketIF.C	Thu Dec  5 20:29:34 2002
-@@ -1429,7 +1429,7 @@
+--- src/uipp/dxuilib/PacketIF.C.orig	2003-09-26 17:38:11.000000000 +0000
++++ src/uipp/dxuilib/PacketIF.C	2004-04-20 19:26:00.000000000 +0000
+@@ -1418,7 +1418,7 @@
      int fd;
      int sts;
      int oldPort;
