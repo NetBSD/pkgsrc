@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:20:05 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/24 02:01:53 kristerw Exp $
 
 DISTNAME=		udunits
-PKGNAME=		udunits-1.11.7
-PKGREVISION=		1
+PKGNAME=		udunits-1.12.1
 CATEGORIES=		math devel
 MASTER_SITES=		http://www.unidata.ucar.edu/packages/udunits/
 EXTRACT_SUFX=		.tar.Z
