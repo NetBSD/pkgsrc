@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1593 2005/02/21 20:12:01 veego Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1594 2005/02/22 21:01:10 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -129,7 +129,7 @@ CONFIGURE_DIRS?=	${WRKSRC}
 CONFIGURE_SCRIPT?=	./configure
 DEPENDS?=		# empty
 DESCR_SRC?=		${PKGDIR}/DESCR
-DIGEST_ALGORITHM?=	SHA1
+DIGEST_ALGORITHMS?=	SHA1 RMD160
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 DISTINFO_FILE?=		${PKGDIR}/distinfo
 EXTRACT_ONLY?=		${DISTFILES}
@@ -141,6 +141,7 @@ INTERACTIVE_STAGE?=	none
 MAINTAINER?=		tech-pkg@NetBSD.org
 MAKE_FLAGS?=		# empty
 MAKEFILE?=		Makefile
+PATCH_DIGEST_ALGORITHM?=SHA1
 PKG_SUFX?=		.tgz
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
 PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
@@ -1275,7 +1276,7 @@ _FETCH_FILE=								\
 				if [ -n "${FAILOVER_FETCH}" -a -f ${DISTINFO_FILE} -a -f ${_DISTDIR}/$$bfile ]; then \
 					alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DISTINFO_FILE}`; \
 					if [ -z "$$alg" ]; then		\
-						alg=${DIGEST_ALGORITHM};\
+						alg=${PATCH_DIGEST_ALGORITHM};\
 					fi;				\
 					CKSUM=`${DIGEST} $$alg < ${_DISTDIR}/$$bfile`; \
 					CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')" {print $$4;}' <${DISTINFO_FILE}`; \
@@ -3691,12 +3692,18 @@ makesum: fetch uptodate-digest
 	cd ${DISTDIR};							\
 	for sumfile in "" ${_CKSUMFILES}; do				\
 		if [ "X$$sumfile" = "X" ]; then continue; fi;		\
-		${DIGEST} ${DIGEST_ALGORITHM} $$sumfile >> $$newfile;	\
+		for a in "" ${DIGEST_ALGORITHMS}; do			\
+			if [ "X$$a" = "X" ]; then continue; fi;		\
+			${DIGEST} $$a $$sumfile >> $$newfile;		\
+		done;							\
 		${WC} -c $$sumfile | ${AWK} '{ print "Size (" $$2 ") = " $$1 " bytes" }' >> $$newfile; \
 	done;								\
 	for ignore in "" ${_IGNOREFILES}; do				\
 		if [ "X$$ignore" = "X" ]; then continue; fi;		\
-		${ECHO} "${DIGEST_ALGORITHM} ($$ignore) = IGNORE" >> $$newfile; \
+		for a in "" ${DIGEST_ALGORITHMS}; do			\
+			if [ "X$$a" = "X" ]; then continue; fi;		\
+			${ECHO} "$$a ($$ignore) = IGNORE" >> $$newfile; \
+		done;							\
 	done;								\
 	if [ -f ${DISTINFO_FILE} ]; then				\
 		${AWK} '$$2 ~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
@@ -3729,7 +3736,7 @@ makepatchsum mps: uptodate-digest
 			case $$sumfile in				\
 				patch-local-*) ;;			\
 				*.orig|*.rej|*~) continue ;;		\
-				*)	${ECHO} "${DIGEST_ALGORITHM} ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${DIGEST} ${DIGEST_ALGORITHM}`" >> $$newfile;; \
+				*)	${ECHO} "${PATCH_DIGEST_ALGORITHM} ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${DIGEST} ${PATCH_DIGEST_ALGORITHM}`" >> $$newfile;; \
 			esac;						\
 		done);							\
 	fi;								\
@@ -3762,23 +3769,25 @@ checksum: fetch uptodate-digest
 		  for file in "" ${_CKSUMFILES}; do			\
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
 			alg=`${AWK} 'NF == 4 && $$2 == "('$$file')" && $$3 == "=" {print $$1;}' ${DISTINFO_FILE}`; \
-			if [ "X$$alg" = "X" ]; then			\
-				${ECHO_MSG} "=> No checksum recorded for $$file."; \
-				OK="false";				\
-			else						\
-				CKSUM=`${DIGEST} $$alg < $$file`;	\
-				CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')"{print $$4;}' ${DISTINFO_FILE}`; \
-				if [ "$$CKSUM2" = "IGNORE" ]; then	\
-					${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in checksum file even though"; \
-					${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
+			for a in $$alg; do				\
+				if [ "X$$alg" = "X" ]; then		\
+					${ECHO_MSG} "=> No checksum recorded for $$file."; \
 					OK="false";			\
-				elif [ "$$CKSUM" = "$$CKSUM2" ]; then	\
-					${ECHO_MSG} "=> Checksum OK for $$file."; \
 				else					\
-					${ECHO_MSG} "=> Checksum mismatch for $$file."; \
-					OK="false";			\
+					CKSUM=`${DIGEST} $$a < $$file`;	\
+					CKSUM2=`${AWK} '$$1 == "'$$a'" && $$2 == "('$$file')"{print $$4;}' ${DISTINFO_FILE}`; \
+					if [ "$$CKSUM2" = "IGNORE" ]; then \
+						${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in checksum file even though"; \
+						${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
+						OK="false";		\
+					elif [ "$$CKSUM" = "$$CKSUM2" ]; then	\
+						${ECHO_MSG} "=> Checksum $$a OK for $$file."; \
+					else				\
+						${ECHO_MSG} "=> Checksum $$a mismatch for $$file."; \
+						OK="false";		\
+					fi;				\
 				fi;					\
-			fi;						\
+			done;						\
 		  done;							\
 		  for file in "" ${_IGNOREFILES}; do			\
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
