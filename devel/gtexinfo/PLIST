@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2001/11/01 01:31:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.1 2001/12/25 14:48:34 wiz Exp $
 @unexec install-info --delete --info-dir=%D/info %D/info/info-stnd.info
 @unexec install-info --delete --info-dir=%D/info %D/info/info.info
 @unexec install-info --delete --info-dir=%D/info %D/info/texinfo
@@ -8,12 +8,15 @@ bin/texindex
 bin/install-info
 bin/info
 info/info-stnd.info
+info/info-stnd.info-1
+info/info-stnd.info-2
 info/info.info
 info/texinfo
 info/texinfo-1
 info/texinfo-10
 info/texinfo-11
 info/texinfo-12
+info/texinfo-13
 info/texinfo-2
 info/texinfo-3
 info/texinfo-4
@@ -25,3 +28,18 @@ info/texinfo-9
 @exec install-info --info-dir=%D/info %D/info/info-stnd.info
 @exec install-info --info-dir=%D/info %D/info/info.info
 @exec install-info --info-dir=%D/info %D/info/texinfo
+man/man1/info.1
+man/man1/install-info.1
+man/man1/makeinfo.1
+man/man1/texi2dvi.1
+man/man1/texindex.1
+man/man5/info.5
+man/man5/texinfo.5
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/de_AT/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/texinfo.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/texinfo.mo
