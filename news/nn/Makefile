@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.17 2002/07/08 02:21:18 kim Exp $
+# $NetBSD: Makefile,v 1.18 2003/04/25 20:34:10 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
 DISTNAME=	nn-6.6.4
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.gw.com/pub/unix/news/nn/nn-6.6/ \
-		ftp://ftp.gw.com/pub/unix/news/nn/nn-6.6/old/ \
 		ftp://ftp.nndev.org/pub/nn-6.6/ \
 		ftp://ftp.nndev.org/pub/nn-6.6/old/
+# slightly different 6.6.4 distfile (4 bytes off in tar)
+#		ftp://ftp.gw.com/pub/unix/news/nn/nn-6.6/old/
 
 MAINTAINER=	packages@netbsd.org
 COMMENT=	NN newsreader
