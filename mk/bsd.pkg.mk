@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.146 1998/08/20 15:17:16 tsarna Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.147 1998/08/22 20:12:04 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1163,7 +1163,9 @@ _PORT_USE: .USE
 	fi)
 .if exists(${PKGDIR}/MESSAGE)
 	@${ECHO_MSG} "===>   Please note the following:"
+	@${ECHO_MSG} ""
 	@${CAT} ${PKGDIR}/MESSAGE
+	@${ECHO_MSG} ""
 .endif
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} fake-pkg
 .endif
