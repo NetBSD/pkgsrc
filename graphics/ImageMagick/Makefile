@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2001/06/21 22:53:30 jlam Exp $
+# $NetBSD: Makefile,v 1.73 2001/06/26 16:30:57 jlam Exp $
 
 DISTNAME=		ImageMagick-5.2.8
 CATEGORIES=		graphics
@@ -16,6 +16,9 @@ DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 USE_BUILDLINK_ONLY=	YES
+REPLACE_BUILDLINK=	Magick++/bin/Magick++-config
+REPLACE_BUILDLINK+=	magick/Magick-config
+
 GNU_CONFIGURE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
@@ -39,19 +42,6 @@ CFLAGS=			-O
 CONFIGURE_ARGS+=	--without-perl --without-dps --without-fpx \
 			--without-hdf --without-jbig --without-threads \
 			--without-ttf --without-wmf --without-xml
-
-# Fix config scripts by removing buildlink directory references.
-post-build:
-	@cd ${WRKSRC};							\
-	config_scripts="Magick++/bin/Magick++-config magick/Magick-config"; \
-	for file in $${config_scripts}; do				\
-		${MV} -f $${file} $${file}.fixme;			\
-		${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
-			-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\
-			$${file}.fixme > $${file};			\
-		${RM} -f $${file}.fixme;				\
-		${CHMOD} +x $${file};					\
-	done
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Copyright.txt ${WRKSRC}/QuickStart.txt \
