@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2001/09/08 21:53:57 zuntum Exp $
+$NetBSD: patch-aa,v 1.5 2001/10/30 13:31:48 damon Exp $
 
---- Makefile.top.orig	Sun Jun 17 17:28:19 2001
+--- Makefile.top.orig	Sat Oct 20 11:51:29 2001
 +++ Makefile.top
-@@ -30,7 +30,7 @@
- #
- # Default
- #--------
--GTK_CONFIG = gtk-config
-+#GTK_CONFIG = gtk-config
- BINMODE = 755
- 
- # FreeBSD 2.X
 @@ -74,11 +74,11 @@
  GTOP_LIBS = -L$(GTOP_PREFIX)/lib -lgtop -lgtop_common -lgtop_sysdeps -lXau
  
@@ -29,11 +20,11 @@ $NetBSD: patch-aa,v 1.4 2001/09/08 21:53:57 zuntum Exp $
 @@ -127,8 +127,8 @@
  
  netbsd:
- 	(cd locale && ${MAKE} all)
+ 	(cd po && ${MAKE} all)
 -	(cd src && ${MAKE} GTK_CONFIG=gtk-config GTOP_LIBS= GTOP_INCLUDE= \
 -		PTHREAD_INC=-I/usr/local/include SYS_LIBS="-lkvm" gkrellm )
 +	(cd src && ${MAKE} GTK_CONFIG=${GTK_CONFIG} GTOP_LIBS= GTOP_INCLUDE= \
 +		PTHREAD_INC=-I$(BUILDLINK_DIR)/include SYS_LIBS="-lkvm" gkrellm )
  
  openbsd:
- 	(cd locale && ${MAKE} all)
+ 	(cd po && ${MAKE} all)
