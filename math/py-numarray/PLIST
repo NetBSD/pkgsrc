@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/09 15:50:25 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/02/09 12:16:02 markd Exp $
 ${PYINC}/numarray/arraybase.h
 ${PYINC}/numarray/arrayobject.h
 ${PYINC}/numarray/cfunc.h
@@ -166,6 +166,9 @@ ${PYSITELIB}/numarray/memory.so
 ${PYSITELIB}/numarray/memorytest.py
 ${PYSITELIB}/numarray/memorytest.pyc
 ${PYSITELIB}/numarray/memorytest.pyo
+${PYSITELIB}/numarray/mlab/__init__.py
+${PYSITELIB}/numarray/mlab/__init__.pyc
+${PYSITELIB}/numarray/mlab/__init__.pyo
 ${PYSITELIB}/numarray/nd_image/__init__.py
 ${PYSITELIB}/numarray/nd_image/__init__.pyc
 ${PYSITELIB}/numarray/nd_image/__init__.pyo
@@ -258,6 +261,7 @@ ${PYSITELIB}/numarray/ufunc.pyc
 ${PYSITELIB}/numarray/ufunc.pyo
 @dirrm ${PYSITELIB}/numarray/random_array
 @dirrm ${PYSITELIB}/numarray/nd_image
+@dirrm ${PYSITELIB}/numarray/mlab
 @dirrm ${PYSITELIB}/numarray/ma
 @dirrm ${PYSITELIB}/numarray/linear_algebra
 @dirrm ${PYSITELIB}/numarray/image
