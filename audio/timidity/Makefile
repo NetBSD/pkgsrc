@@ -1,11 +1,8 @@
-# New ports collection makefile for:    timidity
-# Homepage: http://www.cgs.fi/~tt/timidity/
+# Makefile for:		timidity
+# Homepage:		http://www.cgs.fi/~tt/timidity/
 # Version required:     0.2i
-# Date created:         17 Nov 1996
-# Whom:                 ache
 #
-# $NetBSD: Makefile,v 1.8 1998/03/11 18:13:22 mycroft Exp $
-# FreeBSD Id: Makefile,v 1.5 1997/09/07 22:08:13 ache Exp 
+# $NetBSD: Makefile,v 1.9 1998/03/20 07:07:31 mycroft Exp $
 #
 
 DISTNAME=       timidity-0.2i
