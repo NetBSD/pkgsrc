@@ -1,0 +1,38 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/30 17:35:58 garbled Exp $
+bin/int
+bin/arithoh
+bin/byte.logo
+bin/cleanup.sh
+bin/context1
+bin/dhry2
+bin/dhry2reg
+bin/double
+bin/execl
+bin/float
+bin/fs.awk
+bin/fstime
+bin/hanoi
+bin/index.awk
+bin/index.base
+bin/index.sh
+bin/long
+bin/looper
+bin/loopm.awk
+bin/loops.awk
+bin/multi.sh
+bin/pipe
+bin/register
+bin/report.awk
+bin/report.sh
+bin/short
+bin/spawn
+bin/syscall
+bin/tst.sh
+bin/run-byte
+share/doc/bytebench/bench.doc
+share/doc/bytebench/bench3.doc
+share/bytebench/cctest.c
+share/bytebench/dc.dat
+share/bytebench/sort.src
+@dirrm share/doc/bytebench
+@unexec rm -rf %D/share/bytebench
