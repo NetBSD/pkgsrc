@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/03/22 03:15:09 kim Exp $
+$NetBSD: patch-aa,v 1.2 1999/04/24 23:19:05 tron Exp $
 
---- Makefile.orig	Sun Mar 21 19:50:53 1999
-+++ Makefile	Sun Mar 21 19:51:44 1999
+--- Makefile.orig	Sun Apr 25 01:03:24 1999
++++ Makefile	Sun Apr 25 01:08:39 1999
 @@ -51,11 +51,11 @@
  # Where the configuration files live.
  RADDB		= ./raddb
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/03/22 03:15:09 kim Exp $
 +DAEMON_INSDIR	= ${PREFIX}/sbin
 +BIN_INSDIR	= ${PREFIX}/sbin
 +MAN_INSDIR	= ${PREFIX}/man
-+RADDB_INSDIR	= /etc/raddb
++RADDB_INSDIR	= ${PREFIX}/share/examples/radius
 +RADACCT_INSDIR	= /var/log
  # The server does not need to be owned by root, unless some shadow password
  # scheme needs it.  You might create a user id "radius" for just this purpose.
