@@ -1,20 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/13 08:27:10 martti Exp $
 bin/sms
 bin/smsaddr
-share/sms/doc/README
 share/sms/contrib/mimecut
 share/sms/contrib/procmailrc
 share/sms/contrib/sms.cgi
 share/sms/contrib/sms.html
-share/sms/doc/old_solaris
-share/sms/doc/NetBSD
-share/sms/doc/solaris
-share/sms/doc/plusmail
 share/sms/doc/FreeBSD
-share/sms/doc/qmail
-share/sms/doc/eranet
-share/sms/doc/podziel_sms
+share/sms/doc/${OPSYS}
+share/sms/doc/README
 share/sms/doc/eragsm.asp
-@dirrm share/sms/contrib
+share/sms/doc/eranet
+share/sms/doc/old_solaris
+share/sms/doc/plusmail
+share/sms/doc/podziel_sms
+share/sms/doc/qmail
+share/sms/doc/solaris
 @dirrm share/sms/doc
+@dirrm share/sms/contrib
 @dirrm share/sms
