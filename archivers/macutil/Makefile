@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/11/12 15:19:59 agc Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/01 14:07:52 agc Exp $
 
 DISTNAME=		macutil2.0b3
 PKGNAME=		macutil-2.0b3
@@ -9,9 +9,7 @@ EXTRACT_SUFX=		.shar.Z
 MAINTAINER=		mycroft@NetBSD.ORG
 
 MAKEFILE=		makefile
-EXTRACT_CMD=		zcat
-EXTRACT_BEFORE_ARGS=
-EXTRACT_AFTER_ARGS=	|sh
+EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
 
 WRKSRC=			${WRKDIR}/macutil
 

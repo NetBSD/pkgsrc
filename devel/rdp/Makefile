@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/08/20 15:16:50 tsarna Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/01 14:07:53 agc Exp $
 
 DISTNAME=		rdp1_5
 PKGNAME=		rdp-1.5
@@ -11,8 +11,7 @@ HOMEPAGE=		http://www.dcs.rhbnc.ac.uk/research/languages/rdp.shtml
 
 BUILD_DEPENDS=		unzip:../../archivers/unzip
 
-EXTRACT_CMD=		unzip
-EXTRACT_BEFORE_ARGS=	-Laqo
+EXTRACT_CMD=		unzip -Laqo ${DOWNLOADED_DISTFILE}
 
 WRKSRC=			${WRKDIR}/rdp
 MAKEFILE=		makefile

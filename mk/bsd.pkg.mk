@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.239 1999/04/01 07:29:14 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.240 1999/04/01 14:07:55 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -266,31 +266,35 @@ PATCH_ARGS+=	-C
 PATCH_DIST_ARGS+=	-C
 .endif
 
+# New decompress and extract definitions
+
 # If the archive has a .bz2 suffix, use bzip2 to extract information
 # If EXTRACT_USING_PAX is defined, use pax in preference to (GNU) tar,
 # and append 2 tar blocks of zero bytes on the end, in case the archive
 # was written with a buggy version of GNU tar.
 
 EXTRACT_SUFX?=		.tar.gz
-.if (${EXTRACT_SUFX} == ".tar.bz2")
+
+.if ${EXTRACT_SUFX} == ".tar.bz2"
 .if exists(/usr/bin/bzcat)
 BZCAT=			/usr/bin/bzcat
 .else
 BZCAT=			${LOCALBASE}/bin/bzcat
 BUILD_DEPENDS+=		${BZCAT}:${PKGSRCDIR}/archivers/bzip2
 .endif # !exists bzcat
-EXTRACT_CMD?=		${EXTRACT_SUBSHELL_OPEN} ${BZCAT}
-EXTRACT_BEFORE_ARGS?=	<
-.else # suffix != .tar.bz2
-EXTRACT_CMD?=		${EXTRACT_SUBSHELL_OPEN} ${GZCAT}
-EXTRACT_BEFORE_ARGS?=	<
-.if defined(EXTRACT_USING_PAX)
-EXTRACT_SUBSHELL_OPEN=	(
-EXTRACT_AFTER_ARGS?=	; dd if=/dev/zero bs=10k count=2 ) | ${PAX} -r
+DECOMPRESS_CMD?=	${BZCAT}
 .else
-EXTRACT_AFTER_ARGS?=	| /usr/bin/tar -xf -
-.endif # !pax
-.endif # suffix != .tar.bz2
+DECOMPRESS_CMD?=	${GZCAT}
+.endif
+
+# If this is empty, then everything gets extracted.
+EXTRACT_ELEMENTS?=	
+
+.if defined(EXTRACT_USING_PAX)
+EXTRACT_CMD?=		(${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2) | ${PAX} -r ${EXTRACT_ELEMENTS}
+.else
+EXTRACT_CMD?=		${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | /usr/bin/tar xf - ${EXTRACT_ELEMENTS}
+.endif
 
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE)
@@ -1020,6 +1024,8 @@ mirror-distfiles:
 
 # Extract
 
+DOWNLOADED_DISTFILE=	${_DISTDIR}/$$file
+
 .if !target(do-extract)
 do-extract:
 .ifndef NO_WRKDIR
@@ -1036,7 +1042,7 @@ do-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for file in "" ${EXTRACT_ONLY}; do				\
 		if [ "X$$file" = X"" ]; then continue; fi;		\
-		(cd ${WRKDIR} && ${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS} ${_DISTDIR}/$$file ${EXTRACT_AFTER_ARGS}); \
+		(cd ${WRKDIR} && ${EXTRACT_CMD});			\
 	done
 .endif
 

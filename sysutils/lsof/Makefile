@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/03/28 17:29:53 christos Exp $
+# $NetBSD: Makefile,v 1.15 1999/04/01 14:07:56 agc Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
@@ -31,7 +31,11 @@ post-extract:
 		${ECHO} "($$EXPMD5 != $$CALCMD5)" ; \
 		${FALSE} ; \
 	fi ; \
-	${EXTRACT_CMD} ${EXTRACT_BEFORE_ARGS:S/z//} ${SRCBALL_NAME}.tar \
+	if [ "X${EXTRACT_USING_PAX}" = "X" ]; then \
+		${GTAR} -xf ${SRCBALL_NAME}.tar; \
+	else \
+		${PAX} -r < ${SRCBALL_NAME}.tar}; \
+	fi
 	)
 	@( cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1 )
 
