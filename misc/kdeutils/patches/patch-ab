@@ -37,26 +37,6 @@
  
  prefix       = @prefix@
  BINDIR       = $(prefix)/bin
---- kedit/Makefile.in.orig	Thu Dec 18 17:29:26 1997
-+++ kedit/Makefile.in	Thu Dec 18 17:32:11 1997
-@@ -6,6 +6,8 @@
- #  $Id: patch-ab,v 1.1 1997/12/29 03:31:47 hubertf Exp $
- #
- 
-+SHELL=/bin/sh
-+
- # this variables are needed for rpath support
- kde_libraries = @kde_libraries@
- qt_libraries = @qt_libraries@
-@@ -23,7 +25,7 @@
- 
- INSTALL = @INSTALL@ -m 0755
- INSTALL_DATA = @INSTALL@ -m 0644
--INSTALL_DIR = @INSTALL@ -d -m 0755
-+INSTALL_DIR = $(SHELL) @top_srcdir@/mkinstalldirs
- 
- prefix = @prefix@
- BINDIR = $(prefix)/bin
 --- kjots/Makefile.in.orig	Thu Dec 18 17:29:26 1997
 +++ kjots/Makefile.in	Thu Dec 18 17:32:42 1997
 @@ -1,3 +1,4 @@
@@ -73,25 +53,6 @@
  INSTALL_DIR_PRIVATE = $(install) -d -m 0700
  
  prefix = @prefix@
---- knotes/Makefile.in.orig	Thu Dec 18 17:29:26 1997
-+++ knotes/Makefile.in	Thu Dec 18 17:33:11 1997
-@@ -1,5 +1,7 @@
- # $Id: patch-ab,v 1.1 1997/12/29 03:31:47 hubertf Exp $
- 
-+SHELL=/bin/sh
-+
- # this variables are needed for rpath support
- kde_libraries = @kde_libraries@
- qt_libraries = @qt_libraries@
-@@ -18,7 +20,7 @@
- install = @INSTALL@
- INSTALL = $(install) -m 0755
- INSTALL_DATA = $(install) -m 0644
--INSTALL_DIR = $(install) -d -m 0755   
-+INSTALL_DIR = $(SHELL) @top_srcdir@/mkinstalldirs
- 
- ###################################################################
- 
 --- kedit/docs/Makefile.in.orig	Thu Dec 18 17:29:26 1997
 +++ kedit/docs/Makefile.in	Thu Dec 18 17:33:40 1997
 @@ -1,9 +1,11 @@
