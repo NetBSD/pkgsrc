@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2572 2004/11/29 05:24:07 taca Exp $
+$NetBSD: TODO,v 1.2573 2004/11/29 09:08:08 adam Exp $
 
 Suggested new packages
 ======================
@@ -281,7 +281,6 @@ Suggested package updates
 	o GUIlib-1.1.1
 	o GridSim-3.1
 	o GutenMark-20040320
-	o ImageMagick-6.1.5.5
 	o Ngraph-6.3.30
 	o ORBit-0.5.17
 	o PAM-0.78
@@ -384,7 +383,6 @@ Suggested package updates
 	o clanlib-0.7.8
 	o classpath-0.12
 	o clisp-2.33.2
-	o cln-1.1.9
 	o cmake-2.0.5
 	o cmp3-2.0pre6
 	o cocoon-2.1.6
@@ -1222,7 +1220,7 @@ Suggested package updates
 	o weechat-0.0.8
 	o wesnoth-0.8.7
 	o windowlab-1.24
-	o wine-20041019
+	o wine-20041019 [nmap problem on NetBSD]
 	o wmbiff-0.4.26
 	o wmmemmon-1.0.1
 	o wmweather-2.4.3
