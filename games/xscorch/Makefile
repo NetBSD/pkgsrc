@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/02 11:55:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/05/31 20:11:20 salo Exp $
 #
 
 DISTNAME=	xscorch-0.1.15
@@ -11,7 +11,10 @@ HOMEPAGE=	http://chaos2.org/xscorch/
 COMMENT=	Multiplayer tank shoot-em-up
 
 USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--without-gnome
 
