@@ -1,0 +1,6 @@
+w32api is a free set of headers and import libraries for the Win32
+API.  The library differs from the GNU Windows32 library in that I
+have tried to use a file structure that mirrors Microsoft's.  I
+don't like having *all* definitions in one single header as in the
+GNU Windows32 library, I want a clean separation between different
+parts of the API.
