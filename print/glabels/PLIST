@@ -1,0 +1,73 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/17 12:58:27 wiz Exp $
+bin/glabels
+bin/glabels-batch
+include/libglabels/libglabels.h
+include/libglabels/paper.h
+include/libglabels/template.h
+include/libglabels/xml-paper.h
+include/libglabels/xml-template.h
+include/libglabels/xml.h
+lib/libglabels.a
+lib/libglabels.la
+lib/libglabels.so
+lib/libglabels.so.1
+lib/libglabels.so.1.1
+man/man1/glabels.1
+share/application-registry/glabels.applications
+share/applications/glabels.desktop
+share/glabels/dtd/glabels-2.0.dtd
+share/glabels/glade/object-editor.glade
+share/glabels/glade/prefs-dialog.glade
+share/glabels/glade/template-designer.glade
+share/glabels/templates/avery-iso-templates.xml
+share/glabels/templates/avery-other-templates.xml
+share/glabels/templates/avery-us-templates.xml
+share/glabels/templates/misc-iso-templates.xml
+share/glabels/templates/misc-other-templates.xml
+share/glabels/templates/misc-us-templates.xml
+share/glabels/templates/paper-sizes.xml
+share/glabels/templates/zweckform-iso-templates.xml
+share/glabels/ui/glabels-ui.xml
+share/gnome/help/glabels/C/figures/glabels-template-cd.png
+share/gnome/help/glabels/C/figures/glabels-template-label.png
+share/gnome/help/glabels/C/figures/glabels-template-layout.png
+share/gnome/help/glabels/C/figures/main-window-empty.png
+share/gnome/help/glabels/C/figures/object-editor-sidebar.png
+share/gnome/help/glabels/C/figures/print-copies.png
+share/gnome/help/glabels/C/figures/print-merge.png
+share/gnome/help/glabels/C/glabels.xml
+share/gnome/help/glabels/C/legal.xml
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/glabels.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/glabels.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/glabels.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/glabels.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/glabels.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/glabels.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/glabels.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/glabels.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/glabels.mo
+${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/glabels.mo
+share/mime-info/glabels.keys
+share/mime-info/glabels.mime
+share/mime/packages/glabels.xml
+share/omf/glabels/glabels-C.omf
+share/pixmaps/glabels.png
+share/pixmaps/glabels/ex-1layout.png
+share/pixmaps/glabels/ex-2layouts.png
+share/pixmaps/glabels/ex-cd-size.png
+share/pixmaps/glabels/ex-rect-size.png
+share/pixmaps/glabels/ex-round-size.png
+share/pixmaps/glabels/glabels-about-logo.png
+share/pixmaps/glabels/glabels-icon.png
+share/pixmaps/glabels/glabels-logo.png
+@dirrm share/pixmaps/glabels
+@dirrm share/omf/glabels
+@dirrm share/gnome/help/glabels/C/figures
+@dirrm share/gnome/help/glabels/C
+@dirrm share/gnome/help/glabels
+@dirrm share/glabels/ui
+@dirrm share/glabels/templates
+@dirrm share/glabels/glade
+@dirrm share/glabels/dtd
+@dirrm share/glabels
+@dirrm include/libglabels
