@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/22 18:29:17 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/23 02:02:08 cjep Exp $
 #
 
 DISTNAME=	lag-2.1
@@ -11,9 +11,6 @@ MAINTAINER=	cjep@netbsd.org
 HOMEPAGE=	http://www.gap-system.org/Share/lag.html
 COMMENT=	GAP Bracket Lie Algebra functions
 
-BUILD_DEPENDS+= zoo-[0-9]*:../../archivers/zoo
-
-EXTRACT_CMD=    ${LOCALBASE}/bin/zoo -extract ${DOWNLOADED_DISTFILE}
 WRKSRC=		${WRKDIR}/lag
 
 NO_BUILD=	YES
