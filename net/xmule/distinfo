@@ -1,11 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/07/25 09:09:02 jmmv Exp $
+$NetBSD: distinfo,v 1.4 2003/08/26 09:53:38 jmmv Exp $
 
-SHA1 (xmule-1.4.2.tar.bz2) = 2f9057f708d04ca0de37c80430662458f35e1802
-Size (xmule-1.4.2.tar.bz2) = 1269761 bytes
-SHA1 (patch-aa) = 750edb86b7c1deef6ee3dfabec2168b1cfea6b0f
-SHA1 (patch-ab) = 6d7d08396f873acb67fc9596a310124f4698da5b
-SHA1 (patch-ac) = 170dd665068f8f45cc06bf3afc226eb8c4128c69
-SHA1 (patch-ad) = b0bb4748b5b688b6eca2058a33b951bfb2fe0580
-SHA1 (patch-ae) = a388f39c176cbfa577fa567c527dee0939f4f984
-SHA1 (patch-ag) = 3a14fc689adc2a9f46958bc6d881b8d14163dbc8
-SHA1 (patch-ah) = 81c53bbe3cb585351892f19c64d410a251285fdc
+SHA1 (xmule-1.4.3.tar.bz2) = 95adb480f361d86a61068b40972c030a636e7f80
+Size (xmule-1.4.3.tar.bz2) = 1263047 bytes
