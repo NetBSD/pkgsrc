@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2003/07/30 13:45:24 wiz Exp $
+$NetBSD: distinfo,v 1.5 2003/12/28 11:36:02 wiz Exp $
 
-SHA1 (gif2png-2.4.7.tar.gz) = 5136dc37f11c80d465481397600e91d144b21f9e
-Size (gif2png-2.4.7.tar.gz) = 109521 bytes
+SHA1 (gif2png-2.5.0.tar.gz) = bef2d02336ee671988c063861d7057849bfaf29a
+Size (gif2png-2.5.0.tar.gz) = 105879 bytes
