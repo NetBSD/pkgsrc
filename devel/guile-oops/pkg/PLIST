@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/29 18:28:30 wiz Exp $
+bin/guile-oops
+include/goops-snarf.h
+include/goops.h
+include/goops/versiondat.h
+@unexec install-info --delete --info-dir=%D/info %D/info/goops.info
+info/goops.info
+info/goops.info-1
+info/goops.info-2
+info/goops.info-3
+@exec install-info --info-dir=%D/info %D/info/goops.info
+lib/libgoopscore.a
+lib/libgoopscore.la
+lib/libgoopscore.so.4.0
+share/guile/oop/goops.scm
+share/guile/oop/goops/active-slot.scm
+share/guile/oop/goops/compile.scm
+share/guile/oop/goops/composite-slot.scm
+share/guile/oop/goops/describe.scm
+share/guile/oop/goops/dispatch.scm
+share/guile/oop/goops/internal.scm
+share/guile/oop/goops/save.scm
+share/guile/oop/goops/stklos.scm
+share/guile/oop/goops/util.scm
+@dirrm share/guile/oop/goops
+@dirrm share/guile/oop
+@dirrm include/goops
