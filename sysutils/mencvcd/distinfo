@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2005/01/28 09:11:13 tron Exp $
+$NetBSD: distinfo,v 1.2 2005/02/01 22:57:52 tron Exp $
 
 SHA1 (mencvcd-0.3/mencvcd) = a3ace9d50e0722946286b8704b800ccbce86233b
 Size (mencvcd-0.3/mencvcd) = 13038 bytes
+SHA1 (patch-aa) = 22b7bd5e21889ed0f8238e0ef9264baed64b6da2
