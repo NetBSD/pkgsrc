@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/07/22 08:21:59 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2000/07/28 17:52:09 jlam Exp $
 #
 
 DISTNAME=		openssh-2.1.1p4
@@ -26,13 +26,13 @@ OPENSSL_VERSION!=	awk '/.*OPENSSL_VERSION_NUMBER.*/ { print $$3 }' \
 				${OPENSSLV_H}
 OPENSSL_VERSION_095a=	0x0090581fL
 .if (${OPENSSL_VERSION} != ${OPENSSL_VERSION_095a})
-DEPENDS+=		openssl>=0.9.5:../../security/openssl
+DEPENDS+=		openssl>=0.9.5a:../../security/openssl
 SSLBASE=		${LOCALBASE}
 .else
 SSLBASE=		/usr
 .endif
 .else
-DEPENDS+=		openssl>=0.9.5:../../security/openssl
+DEPENDS+=		openssl>=0.9.5a:../../security/openssl
 SSLBASE=		${LOCALBASE}
 .endif
 
