@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/01/25 14:15:59 tron Exp $
+# $NetBSD: Makefile,v 1.21 2002/01/30 23:05:47 jlam Exp $
 
 DISTNAME=		mutt-1.3.27i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -17,7 +17,8 @@ BUILD_USES_MSGFMT=	YES
 
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/mutt \
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR} \
+			--with-docdir=${PREFIX}/share/doc/mutt \
 			--without-included-gettext \
 			--enable-pop --enable-imap
 
@@ -27,13 +28,11 @@ WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(MUTT_USE_SLANG) && ${MUTT_USE_SLANG} != NO
-CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_DIR}
-
 .include "../../devel/libslang/buildlink.mk"
+CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_DIR}
 .else
-CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_DIR}
-
 .include "../../devel/ncurses/buildlink.mk"
+CONFIGURE_ARGS+=	--with-curses=${BUILDLINK_DIR}
 .endif
 
 # There seems to be a problem using NetBSD's /bin/sh, so use /bin/ksh instead.
@@ -51,26 +50,17 @@ CONFIGURE_ARGS+=	--without-ssl
 .endif
 
 BUILD_DEFS+=		MUTT_USE_SLANG MUTT_USE_SSL
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
-FILES_SUBST=		CAT=${CAT:Q}
-FILES_SUBST+=		CHMOD=${CHMOD:Q}
-FILES_SUBST+=		CMP=${CMP:Q}
-FILES_SUBST+=		CP=${CP:Q}
-FILES_SUBST+=		RM=${RM:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
-
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
+EGDIR=			${PREFIX}/share/doc/mutt/samples
+CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
+SUPPORT_FILES=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Muttrc ${PREFIX}/share/doc/mutt/samples
 	${INSTALL_DATA} ${WRKSRC}/mime.types ${PREFIX}/share/doc/mutt/samples
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../converters/libiconv/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
