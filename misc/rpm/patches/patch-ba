@@ -1,8 +1,19 @@
-$NetBSD: patch-ba,v 1.1 1998/11/05 01:34:02 mycroft Exp $
+$NetBSD: patch-ba,v 1.2 2004/07/24 04:43:10 grant Exp $
 
---- Makefile.in.orig	Sat Sep 12 09:16:32 1998
-+++ Makefile.in	Wed Nov  4 20:08:24 1998
-@@ -124,21 +124,19 @@
+--- Makefile.in.orig	1998-09-12 23:16:32.000000000 +1000
++++ Makefile.in
+@@ -30,8 +30,8 @@ ETCDIR=$(ROOT)/etc
+ 
+ # -----------------------------------------------------------------------
+ 
+-SUBDIRS = popt @MISCDIR@ lib build tools @PO@
+-ALLSUBDIRS = popt misc lib build tools po
++SUBDIRS = @MISCDIR@ lib build tools @PO@
++ALLSUBDIRS = misc lib build tools po
+ INSTSUBDIRS = lib scripts @PO@
+ OTHERSUBDIRS = docs autodeps
+ OBJS = rpm.o query.o install.o verify.o checksig.o ftp.o url.o build.o \
+@@ -124,21 +124,19 @@ install: all
  	[ -d $(installprefix)/$(RPMCONFIGDIR) ] ||  \
  		$(mkinstalldirs) $(installprefix)/$(RPMCONFIGDIR)
  	if [ -x ./rpm ]; then \

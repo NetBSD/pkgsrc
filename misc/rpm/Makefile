@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2004/04/25 11:46:54 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2004/07/24 04:43:10 grant Exp $
 
 DISTNAME=	rpm-2.5.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-2.5.x/
 
@@ -15,13 +15,15 @@ CONFLICTS+=		rpm2cpio<1.0nb1
 
 USE_BUILDLINK3=		yes
 USE_DB185=		yes
-USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+
+# this is needed instead of USE_PKGLOCALEDIR
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/${PKGLOCALEDIR}
 
 # The rpm databases are kept under ${RPM_DB_PREFIX}/lib/rpm.
 CONFIGURE_ENV+=		varprefix="${RPM_DB_PREFIX}"
@@ -38,6 +40,7 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/rpm
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
 .include "../../mk/bdb.buildlink3.mk"
