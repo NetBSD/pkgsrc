@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2005/03/25 02:56:42 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2005/03/25 03:10:23 wiz Exp $
 #
 
-DISTNAME=	${DISTFILES}
-PKGNAME=	urban-1.5.2
-PKGREVISION=	2
+DISTNAME=	urban-1.5.3
 CATEGORIES=	games
 MASTER_SITES=	http://urban.bengburken.net/files/linux/
-DISTFILES=	urban-1.5.2${EXTRACT_SUFX} sound${EXTRACT_SUFX}
+DISTFILES=	urban-1.5.3${EXTRACT_SUFX} sound${EXTRACT_SUFX}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://urban.bengburken.net/eng/
