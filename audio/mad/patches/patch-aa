@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/19 10:26:20 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/10/20 14:53:29 wiz Exp $
 
---- libmad/Makefile.in.orig	Mon Dec  4 17:38:24 2000
+--- libmad/Makefile.in.orig	Fri Oct 19 01:47:47 2001
 +++ libmad/Makefile.in
-@@ -110,7 +110,7 @@
+@@ -108,7 +108,7 @@
  # The API for MAD is not yet stable enough to use versioning, so we use
  # release numbering instead.
  
