@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.269 2003/02/15 12:01:51 jmmv Exp $
+$NetBSD: TODO,v 1.270 2003/02/15 20:03:08 fredb Exp $
 
 Suggested new packages
 ======================
@@ -201,7 +201,6 @@ Suggested package updates
 	o naim-0.11.5.4
 	o napshare-1.2
 	o net-snmp-5.0.7 [pkg/19939]
-	o netatalk-1.6.0
 	o netpbm-10.8
 	o netscape-7.01
 	o neXtaw-0.13.0
