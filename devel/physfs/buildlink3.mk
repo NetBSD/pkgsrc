@@ -1,9 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/06 22:37:40 snj Exp $
-# XXX
-# XXX This file was created automatically using createbuildlink-3.3.
-# XXX After this file as been verified as correct, the comment lines
-# XXX beginning with "XXX" should be removed.  Please do not commit
-# XXX unverified buildlink[23].mk files.
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/07 00:30:04 snj Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PHYSFS_BUILDLINK3_MK:=	${PHYSFS_BUILDLINK3_MK}+
