@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/09/16 21:59:27 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/15 13:49:48 zuntum Exp $
 #
 
 DISTNAME=		dot-forward-0.71
@@ -13,6 +13,8 @@ DEPENDS+=		qmail>=1.03:../../mail/qmail
 
 ALL_TARGET=		it
 INSTALL_TARGET=		setup check
+
+IS_INTERACTIVE=		YES
 
 RESTRICTED=		"unsure of djb's license"
 NO_BIN_ON_CDROM=	${RESTRICTED}
