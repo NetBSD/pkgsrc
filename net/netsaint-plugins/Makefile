@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/06/17 11:10:22 wiz Exp $
+# $NetBSD: Makefile,v 1.11.2.1 2002/07/22 17:21:36 agc Exp $
 #
 
 DISTNAME=		netsaint-plugins-1.2.9-4
@@ -27,10 +27,10 @@ CONFIGURE_ARGS+=      --with-df-command="/bin/df -Pklt nokernfs,procfs,fdesc"
 .endif
 
 pre-configure:
-	cd ${WRKSRC};	\
-	${LOCALBASE}/bin/aclocal;	\
-	${LOCALBASE}/bin/autoheader;	\
-	${LOCALBASE}/bin/automake -a --foreign -i;	\
+	cd ${WRKSRC};							\
+	${LOCALBASE}/bin/aclocal --acdir=${LOCALBASE}/share/aclocal;	\
+	${LOCALBASE}/bin/autoheader;					\
+	${LOCALBASE}/bin/automake -a --foreign -i;			\
 	${LOCALBASE}/bin/autoconf
 
 .include "../../security/openssl/buildlink.mk"
