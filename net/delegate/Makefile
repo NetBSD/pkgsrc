@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2000/03/16 13:53:26 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2000/04/16 15:19:14 rh Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
 #
 
-DISTNAME=	delegate5.9.13
-PKGNAME=	delegate-5.9.13
+DISTNAME=	delegate6.1.7
+PKGNAME=	delegate-6.1.7
 CATEGORIES=	net
 MASTER_SITES=	ftp://etlport.etl.go.jp/pub/DeleGate/ \
 		ftp://ftp.kyushu-u.ac.jp/pub/Net/WWW/server/delegate/ \
@@ -24,22 +24,23 @@ DEPENDS+=	readline-4.0:../../devel/readline
 DELEGATE_MANAGER?=	root@localhost
 
 pre-build:
-	@${ECHO} "MANAGER=${DELEGATE_MANAGER}" >> ${WRKSRC}/DELEGATE_CONF
+	@${ECHO} "ADMIN=${DELEGATE_MANAGER}" >> ${WRKSRC}/DELEGATE_CONF
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/delegated ${PREFIX}/sbin
 	${SED} -e 's:__PREFIX__:${PREFIX}:g' \
-	    -e 's:__MANAGER__:${DELEGATE_MANAGER}:g' \
+	    -e 's:__ADMIN__:${DELEGATE_MANAGER}:g' \
 	    ${WRKSRC}/delegated.sh.template \
 	    > ${WRKSRC}/delegated.sh.sample
 	${INSTALL_SCRIPT} ${WRKSRC}/delegated.sh.sample \
 	   ${PREFIX}/etc/rc.d
-	${INSTALL_DATA} ${WRKSRC}/doc/Manual.txt \
-	   ${PREFIX}/man/cat8/delegated.0
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/delegate
+	${INSTALL_DATA} ${WRKSRC}/doc/Manual.htm \
+	   ${PREFIX}/share/doc/delegate/manual.html
 	@${MKDIR} ${PREFIX}/share/doc/delegate
-	${INSTALL_DATA} ${WRKSRC}/tutor-en.htm \
+	${INSTALL_DATA} ${WRKSRC}/doc/tutor-en.htm \
 	   ${PREFIX}/share/doc/delegate/tutorial-en.html
-	${INSTALL_DATA} ${WRKSRC}/tutor-jp.htm \
+	${INSTALL_DATA} ${WRKSRC}/doc/tutor-jp.htm \
 	   ${PREFIX}/share/doc/delegate/tutorial-jp.html
 
 .include "../../mk/bsd.pkg.mk"
