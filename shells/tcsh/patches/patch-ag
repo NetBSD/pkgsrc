@@ -1,11 +1,12 @@
-$NetBSD: patch-ag,v 1.5 1998/10/03 07:06:24 kim Exp $
+$NetBSD: patch-ag,v 1.6 1999/08/16 23:01:22 kim Exp $
 
---- Makefile.in.orig	Wed Sep  9 06:29:11 1998
-+++ Makefile.in	Sun Sep 13 13:45:25 1998
-@@ -464,15 +464,10 @@
- 	@vgrind -t -x -h Index index >/crp/bill/csh/index.t
+--- Makefile.in.orig	Tue Nov 24 13:17:08 1998
++++ Makefile.in	Mon Aug 16 18:48:47 1999
+@@ -463,17 +463,10 @@
+ install-strip: install
  
  install: tcsh 
+-	mkdir -p ${DESTBIN}
 -	-mv -f ${DESTBIN}/tcsh  ${DESTBIN}/tcsh.old
 -	cp tcsh ${DESTBIN}/tcsh
 -	-strip ${DESTBIN}/tcsh
@@ -13,6 +14,7 @@ $NetBSD: patch-ag,v 1.5 1998/10/03 07:06:24 kim Exp $
 +	${BSD_INSTALL_PROGRAM} tcsh ${DESTBIN}/tcsh
  
  install.man: tcsh.man
+-	mkdir -p ${DESTMAN}
 -	-rm -f ${DESTMAN}/tcsh.${MANSECT}
 -	cp $(srcdir)/tcsh.man ${DESTMAN}/tcsh.${MANSECT}
 -	chmod 444 ${DESTMAN}/tcsh.${MANSECT}
