@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/12/25 23:15:15 jlam Exp $
+$NetBSD: distinfo,v 1.2 2005/01/25 18:20:52 xtraeme Exp $
 
-SHA1 (Kwiki-0.36.tar.gz) = a77eaa72f95bd904e4b2d4cf81def5482225da63
-Size (Kwiki-0.36.tar.gz) = 40059 bytes
+SHA1 (Kwiki-0.37.tar.gz) = 84d8bb823783fde28fb829c42ea872d33c126184
+Size (Kwiki-0.37.tar.gz) = 40870 bytes
