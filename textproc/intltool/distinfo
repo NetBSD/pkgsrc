@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2004/06/27 17:27:12 jmmv Exp $
+$NetBSD: distinfo,v 1.12 2004/09/01 13:35:10 jmmv Exp $
 
-SHA1 (intltool-0.31.tar.bz2) = de9faf90350b93581e56b42413a0977556d016cc
-Size (intltool-0.31.tar.bz2) = 118172 bytes
+SHA1 (intltool-0.31.2.tar.bz2) = 1c19e2965af80468bff71610aea1f9d294bfd5e4
+Size (intltool-0.31.2.tar.bz2) = 124192 bytes
