@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8690 2005/01/11 04:35:19 kim Exp $
+$NetBSD: CHANGES,v 1.8691 2005/01/11 05:12:56 hamajima Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -227,3 +227,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gsymcheck to 20041228 [dmcmahill 2005-01-10]
 	Updated libgeda to 20041228 [dmcmahill 2005-01-10]
 	Updated leafnode to 1.10.7 [kim 2005-01-11]
+	Updated netbsd32_compat14 to 1.4.3.1nb1 [hamajima 2005-01-11]
+	Updated netbsd32_compat16 to 1.0nb1 [hamajima 2005-01-11]
