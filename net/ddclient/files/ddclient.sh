@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: ddclient.sh,v 1.1 2001/12/09 19:55:36 jlam Exp $
+# $NetBSD: ddclient.sh,v 1.2 2001/12/09 21:44:52 jlam Exp $
 #
 # Dynamic DNS update client
 #
@@ -14,10 +14,18 @@ fi
 
 name="ddclient"
 rcvar=${name}
-command="@PREFIX@/sbin/${name}"
+command="@PERL5@"
+daemon="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
-required_files="@PERL5@ @PKG_SYSCONFDIR@/${name}.conf"
+required_files="${daemon} @PKG_SYSCONFDIR@/${name}.conf"
+start_cmd="ddclient_start"
 extra_commands="reload"
+
+ddclient_start()
+{
+	@ECHO@ "Starting ${name}."
+	${daemon} ${ddclient_flags} ${command_args}
+}
 
 if [ -e /etc/rc.subr ]
 then
@@ -25,5 +33,5 @@ then
 	run_rc_command "$1"
 else
 	@ECHO@ -n " ${name}"
-	${command} ${ddclient_flags} ${command_args}
+	${daemon} ${ddclient_flags} ${command_args}
 fi
