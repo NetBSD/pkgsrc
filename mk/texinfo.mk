@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.13 2003/07/01 14:56:25 seb Exp $
+# $NetBSD: texinfo.mk,v 1.14 2003/07/02 16:07:02 grant Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk when INFO_FILES and
 # USE_NEW_TEXINFO are defined.
@@ -79,6 +79,15 @@ USE_MAKEINFO?=		NO
 
 .if empty(USE_MAKEINFO:M[nN][oO])
 
+# Argument to specify maximum info files size for newer versions
+# of makeinfo. This argument is supported since makeinfo 4.1.
+_MAKEINFO_SPLIT_SIZE_ARG+=	--split-size=50000
+
+# The minimum version of makeinfo for which the default info files size
+# was bumped from 50000.
+_MAKEINFO_SPLIT_SIZE_VERSION=	4.6
+
+# Add OPSYS specific flags if any.
 MAKEINFO_ARGS+=         ${_OPSYS_MAKEINFO_ARGS}
 
 # Does the system has a makeinfo command?
@@ -116,8 +125,13 @@ _NEED_TEXINFO=		NO
 BUILD_DEPENDS+=		gtexinfo>=${TEXINFO_REQD}:../../devel/gtexinfo
 _GTEXINFO_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		_GTEXINFO_PREFIX=gtexinfo
+# assume devel/gtexinfo version is >= ${_MAKEINFO_SPLIT_SIZE_VERSION}
+MAKEINFO_ARGS+=		${_MAKEINFO_SPLIT_SIZE_ARG}
 MAKEINFO=		${_GTEXINFO_PREFIX}/bin/makeinfo ${MAKEINFO_ARGS}
 .  else
+.    if defined(MAKEINFO_VERSION) && ${MAKEINFO_VERSION} >= ${_MAKEINFO_SPLIT_SIZE_VERSION}
+MAKEINFO_ARGS+=		${_MAKEINFO_SPLIT_SIZE_ARG}
+.    endif
 MAKEINFO=		${_MAKEINFO} ${MAKEINFO_ARGS}
 .  endif
 
