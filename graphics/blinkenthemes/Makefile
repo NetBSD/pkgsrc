@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/03 18:49:42 reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/15 12:42:56 wiz Exp $
 #
 
 DISTNAME=	blinkenthemes-0.8
@@ -10,10 +10,10 @@ MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.blinkenlights.de/
 COMMENT=	Blinkenlights simulator themes
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
-.include "../../devel/blib/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/blib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
