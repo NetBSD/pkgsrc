@@ -1,50 +1,21 @@
-$NetBSD: patch-aa,v 1.4 2003/01/20 09:55:10 salo Exp $
+$NetBSD: patch-aa,v 1.5 2004/04/21 08:42:34 salo Exp $
 
---- Makefile.pre.orig	Sat Jan 11 22:07:22 2003
-+++ Makefile.pre	Mon Jan 20 09:35:21 2003
-@@ -5,7 +5,7 @@
- 
- cwl_files = sk.cwl sk-misc.cwl  sk-skratky.cwl
- data_files = sk.dat 
--doc_files = AUTHORS CHANGELOG COPYING Copyright gnu.sk.txt README sample.aspell.conf
-+doc_files = AUTHORS CHANGELOG COPYING Copyright gnu.sk.txt README
- extra_files = configure info Makefile.pre
- multi_files = sk.multi slovak.alias
- rws_files = sk.rws sk-extend.rws
-@@ -16,21 +16,16 @@
+--- Makefile.pre.in	2004-03-20 19:36:01.000000000 +0100
++++ Makefile.pre	2004-04-18 01:04:21.000000000 +0200
+@@ -16,12 +16,10 @@
  all: ${rws_files} ${data_files}
  
- install: all install-doc
+ install: all
 -	mkdir -p ${DESTDIR}${dictdir}/
 -	cp ${rws_files} ${multi_files} ${DESTDIR}${dictdir}/
 -	cd ${DESTDIR}${dictdir}/ && chmod 644 ${rws_files} ${multi_files}
 -	mkdir -p ${DESTDIR}${datadir}/
 -	cp ${data_files} ${DESTDIR}${datadir}/
 -	cd ${DESTDIR}${datadir}/ && chmod 644 ${data_files}
--	rm -f ${DESTDIR}${datadir}/slovak.dat
--	rm -f ${DESTDIR}${dictdir}/slovak.multi
--	ln -s ${DESTDIR}${datadir}/sk.dat ${DESTDIR}${datadir}/slovak.dat
--	ln -s ${DESTDIR}${dictdir}/sk.multi  ${DESTDIR}${dictdir}/slovak.multi 
--
 +	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${dictdir}/
-+	${BSD_INSTALL_DATA} ${rws_files} ${multi_files} ${DESTDIR}${dictdir}/
++	${BSD_INSTALL_DATA}  ${rws_files} ${multi_files} ${DESTDIR}${dictdir}/
 +	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${datadir}/
 +	${BSD_INSTALL_DATA} ${data_files} ${DESTDIR}${datadir}/
  
- install-doc:
--	mkdir -p ${docdir}/${distdir}/
--	cp -f ${doc_files} $(docdir)/${distdir}/
-+	${BSD_INSTALL_DATA_DIR} ${docdir}/aspell-slovak
-+	${BSD_INSTALL_DATA} ${doc_files} $(docdir)/aspell-slovak
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/examples/aspell-slovak
-+	${BSD_INSTALL_DATA} sample.aspell.conf ${PREFIX}/share/examples/aspell-slovak/aspell.conf
- 
  clean:
  	rm -f ${rws_files}
-@@ -72,5 +67,5 @@
- sk-extend.rws: sk-misc.cwl  sk-skratky.cwl
- 	${WORD_LIST_COMPRESS} d < sk-misc.cwl >tmp.dat
- 	${WORD_LIST_COMPRESS} d < sk-skratky.cwl >>tmp.dat
--	sort -uf <tmp.dat | ${ASPELL} ${ASPELL_FLAGS} --lang=sk create master ./sk-extend.rws
-+	${SORT} -uf <tmp.dat | ${ASPELL} ${ASPELL_FLAGS} --lang=sk create master ./sk-extend.rws
- 
