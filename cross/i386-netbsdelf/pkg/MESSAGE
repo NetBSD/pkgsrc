@@ -1,0 +1,12 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 1999/02/14 10:06:09 mrg Exp $
+
+This pkg DOES NOT install headers or runtime link libraries.  Only the
+compilers are installed.
+
+In order to have a complete development setup, you need to install
+includes and libraries in ${CROSSBASE}/i386-netbsdelf/include and
+${CROSSBASE}/i386-netbsdelf/lib respectively, or symlink these paths to
+the appropriate places.
+
+=============================================================================
