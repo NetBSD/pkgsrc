@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:16 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/10/05 01:22:07 groo Exp $
 #
 
 DISTNAME=		plt.src.x
@@ -21,6 +21,7 @@ CFLAGS=			-I${LOCALBASE}/include
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 WRKSRC=                 ${WRKDIR}/plt/src
+DIST_SUBDIR=		drscheme/103p1
 
 post-patch:
 	@for patchee in ${WRKDIR}/plt/man/man1/mzscheme.1 \
@@ -51,8 +52,12 @@ do-install:
 	@${INSTALL_SCRIPT} ${WRKDIR}/plt/bin/drscheme-jr ${PREFIX}/bin
 	@${INSTALL_SCRIPT} ${WRKDIR}/plt/bin/help-desk ${PREFIX}/bin
 	@${INSTALL_SCRIPT} ${WRKDIR}/plt/bin/mred ${PREFIX}/bin
+	@${INSTALL_SCRIPT} ${WRKDIR}/plt/bin/mzscheme ${PREFIX}/bin
+	@${INSTALL_SCRIPT} ${WRKDIR}/plt/bin/mzc ${PREFIX}/bin
 	@${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/plt/bin
 	@${INSTALL_PROGRAM} ${WRKDIR}/plt/src/mred/mred \
+		${PREFIX}/lib/plt/bin
+	@${INSTALL_PROGRAM} ${WRKDIR}/plt/src/mzscheme/mzscheme \
 		${PREFIX}/lib/plt/bin
 	@${INSTALL_MAN} ${WRKDIR}/plt/man/man1/drscheme.1 \
 		${PREFIX}/man/man1
