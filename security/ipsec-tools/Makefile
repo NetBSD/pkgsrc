@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/11 11:51:12 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/11 12:13:24 grant Exp $
 #
 
 DISTNAME=		ipsec-tools-0.5.pre20041109
@@ -24,6 +24,7 @@ PKG_SUPPORTED_OPTIONS+=	radius
 .if !empty(PKG_OPTIONS:Mradius)
 .  include "../../net/libradius/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libradius
+LIBS+=			${BUILDLINK_LDADD.libradius}
 .endif
 
 CONFIGURE_ARGS+=	--enable-frag --enable-hybrid
