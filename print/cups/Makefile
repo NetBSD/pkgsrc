@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2000/12/28 00:09:38 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/01/11 19:00:42 jlam Exp $
 #
 
-DISTNAME=		cups-${VERS}-1-source
-PKGNAME=		cups-${VERS}.1
+DISTNAME=		cups-${VERS}-2-source
+PKGNAME=		cups-${VERS}.2
 VERS=			1.1.5
 WRKSRC=			${WRKDIR}/cups-${VERS}
 CATEGORIES=		print
@@ -29,8 +29,6 @@ GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--sysconfdir=/etc
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--enable-libtool-unsupported="${LIBTOOL}"
-CONFIGURE_ARGS+=	--with-cups-user="${CUPS_USER}"
-CONFIGURE_ARGS+=	--with-cups-group="${CUPS_GROUP}"
 
 USE_SSL=		# defined
 CONFIGURE_ARGS+=	--enable-ssl
@@ -84,6 +82,9 @@ pre-configure:
 	cd ${WRKSRC} && autoconf
 
 post-build:
+	${SED}	-e "s,@CUPS_USER@,${CUPS_USER},g" \
+		-e "s,@CUPS_GROUP@,${CUPS_GROUP},g" \
+		< ${WRKSRC}/conf/cupsd.conf.in > ${WRKSRC}/conf/cupsd.conf
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
 		< ${FILESDIR}/cupsd.sh > ${WRKDIR}/cupsd.sh
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
