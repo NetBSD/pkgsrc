@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2004/05/13 18:29:54 adam Exp $
+# $NetBSD: Makefile,v 1.89 2004/05/14 09:31:17 tron Exp $
 
 DISTNAME=       pine4.60
 PKGNAME=        pine-4.60
@@ -19,7 +19,7 @@ USE_PKGINSTALL=	YES
 
 CONF_FILES=    ${PREFIX}/share/examples/pine/pine.conf ${PKG_SYSCONFDIR}/pine.conf
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "SunOS"
 BUILDNAME= so5
@@ -33,6 +33,10 @@ BUILDFILE= osx
 .else
 BUILDNAME= neb
 BUILDFILE= neb
+.endif
+
+.if !empty(CC_VERSION:Mgcc-3*)
+UNLIMIT_RESOURCES+=	datasize
 .endif
 
 .if defined(USE_OPENLDAP) && (${USE_OPENLDAP} == "YES")
@@ -56,7 +60,8 @@ do-configure:
 	@${LN} -sf ${BUILDLINK_DIR}/include/pico ${WRKSRC}/pico
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./build ${BUILDNAME}	\
+	cd ${WRKSRC} && ${_ULIMIT_CMD} &&				\
+	${SETENV} ${MAKE_ENV} ./build ${BUILDNAME}			\
 		${LDAPCFLAGS} ${LDAPLIBS}				\
 		PREFIX=${PREFIX}					\
 		CC="${CC} ${CFLAGS} ${LDFLAGS}"
