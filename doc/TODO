@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.751 2003/07/30 10:29:31 wiz Exp $
+$NetBSD: TODO,v 1.752 2003/07/30 13:38:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -99,7 +99,6 @@ Suggested package updates
 	o dvdrip-0.50.14
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
-	o easytag-0.28.1
 	o echoping-5.0.1
 	o elm-me-2.4pl102
 	o ettercap-0.6.b
