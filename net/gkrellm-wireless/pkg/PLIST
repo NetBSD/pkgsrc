@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/10/31 00:30:21 damon Exp $
+lib/gkrellm/plugins/wireless.so
