@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.3 2004/05/13 18:29:54 adam Exp $
+$NetBSD: patch-ap,v 1.4 2004/08/11 14:15:18 markd Exp $
 
---- pine/makefile.so5.orig	2004-04-02 23:16:17.000000000 +0000
+--- pine/makefile.so5.orig	2004-04-03 11:16:17.000000000 +1200
 +++ pine/makefile.so5
 @@ -49,9 +49,11 @@ LN=          ln -s
  MAKE=        make
@@ -16,9 +16,12 @@ $NetBSD: patch-ap,v 1.3 2004/05/13 18:29:54 adam Exp $
  PICODIR=     ../pico
  
  # Only need to uncomment next two lines if you run make from this directory
-@@ -69,14 +71,14 @@ LDAPOFILES=   addrbook.o adrbkcmd.o args
+@@ -67,16 +69,16 @@ LDAPOFILES=   addrbook.o adrbkcmd.o args
+ # it only has /usr/ucb/cc) then change LDCC to the following line and
+ # give that a try.  This is still using the Solaris compiler but
  # leaving out the UCB compatibility includes and libraries.
- LDCC= $(PICODIR)/cc5.sol
+-LDCC= $(PICODIR)/cc5.sol
++LDCC= $(CC)
  
 -STDLIBS=     -ltermlib
 -LOCLIBS=     $(PICODIR)/libpico.a $(CCLIENTDIR)/c-client.a
