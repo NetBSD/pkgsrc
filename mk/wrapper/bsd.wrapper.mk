@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.7 2004/10/06 09:49:53 grant Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.8 2004/10/09 03:49:13 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -254,6 +254,9 @@ _WRAP_TRANSFORM_SED.IMAKE=	# empty
 # XXX This section is ${OPSYS}-specific and shouldn't be here.
 # XXX
 .if ${OPSYS} == "Interix"
+_WRAP_EXTRA_ARGS.CC+=	-D_ALL_SOURCE
+_WRAP_EXTRA_ARGS.CXX+=	-D_ALL_SOURCE
+_WRAP_EXTRA_ARGS.CPP+=	-D_ALL_SOURCE
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-interix-gcc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-interix-ld
