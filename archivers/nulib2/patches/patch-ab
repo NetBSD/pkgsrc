@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/11 03:01:02 tv Exp $
+
+--- Makefile.in.orig	Mon May 22 20:42:57 2000
++++ Makefile.in	Sat Mar 10 21:48:59 2001
+@@ -64,7 +64,11 @@
+ # Build stuff
+ #
+ 
+-all: $(PRODUCT)
++# XXX - until pkgsrc has a sane way to invoke multiple "build" targets
++../nufxlib-101/libnufx.a:
++	cd ../nufxlib-101 && $(MAKE)
++
++all: ../nufxlib-101/libnufx.a $(PRODUCT)
+ 	@true
+ 
+ install: $(PRODUCT)
