@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/10/02 03:42:06 rh Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/05 11:51:14 jlam Exp $
 #
 
 DISTNAME=	pan-0.11.4
@@ -12,13 +12,13 @@ COMMENT=	Newsreader for Gnome
 
 BUILD_USES_MSGFMT=	YES
 
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LOCALEDIR="${PKGLOCALEDIR}"
-CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
 LIBS=			-lcompat
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../x11/gnome-core/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../x11/gnome-core/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
