@@ -2317,6 +2317,10 @@ following files:
 
   * PLIST.${OPSYS}
 
+  * PLIST.${MACHINE_ARCH}
+
+  * PLIST.${OPSYS}-${MACHINE_ARCH}
+
   * PLIST.common_end
 
 8.8. Sharing directories between packages
