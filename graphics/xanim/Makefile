@@ -3,7 +3,7 @@
 # Date created:         Sat Nov 5 11:43:03 PST 1994
 # Whom:                 piero
 #
-# $NetBSD: Makefile,v 1.5 1998/02/12 13:35:22 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/14 16:55:10 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/09 22:27:11 max Exp
 #
 
@@ -13,6 +13,8 @@ CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://xanim.va.pubnix.com/\
 		ftp://xanim.va.pubnix.com/modules/
 DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}
+
+MAINTAINER=	packages@netbsd.org
 
 EXTRACT_ONLY=   ${DISTNAME}.tar.gz
 
