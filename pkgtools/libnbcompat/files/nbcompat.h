@@ -121,6 +121,10 @@ struct {								\
 
 #include "ftpglob.h"
 
+#if HAVE_SYS_MKDEV_H
+# include <sys/mkdev.h>
+#endif
+
 #if HAVE_SYS_MOUNT_H
 # include <sys/mount.h>
 #endif
@@ -159,6 +163,10 @@ int	 tgetflag(const char *);
 int	 tgetnum(const char *);
 char	*tgoto(const char *, int, int);
 void	 tputs(const char *, int, int (*)(int));
+#endif
+
+#if HAVE_TZFILE_H
+# include <tzfile.h>
 #endif
 
 #if HAVE_UTIL_H

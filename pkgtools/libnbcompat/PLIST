@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/31 05:02:18 grant Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/23 11:33:07 grant Exp $
 include/libnbcompat/extern.h
 include/libnbcompat/ftpglob.h
 include/libnbcompat/fts.h
+include/libnbcompat/getopt.h
 include/libnbcompat/md5.h
 include/libnbcompat/mtree.h
 include/libnbcompat/namespace.h
