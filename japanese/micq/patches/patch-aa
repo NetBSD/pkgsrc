@@ -1,14 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/03/30 07:56:04 garbled Exp $
---- Makefile.orig	Tue Jan 12 14:13:46 1999
-+++ Makefile	Tue Jan 12 14:13:53 1999
+$NetBSD: patch-aa,v 1.2 2000/02/06 01:08:30 wiz Exp $
+
+--- ./Makefile.orig	Sun Feb  6 01:56:32 2000
++++ ./Makefile	Sun Feb  6 01:57:20 2000
 @@ -1,8 +1,8 @@
  # Anyone who knows how to make Makefiles please help out.
  # I have no clue but this appears to work fairly well
  # be sure to use gmake
 -CC = gcc
--CFLAGS = -O2 -Wall -DUNIX -DANSI_COLOR 
-+# CC = gcc
-+CFLAGS = -DUNIX -DANSI_COLOR 
- # Uncomment the below line for humorous messages
- #CFLAGS += -DFUNNY_MSGS 
- # uncomment the line below for debuging info
+-CFLAGS = -O4 -Wall -DUNIX -DANSI_COLOR 
++#CC = gcc
++CFLAGS += -Wall -DUNIX -DANSI_COLOR 
+ CFLAGS += -DMAX_CONTACTS=255
+ CFLAGS += -DUSE_MREADLINE
+ #CFLAGS += -DCOLOR_SCHEME_A
