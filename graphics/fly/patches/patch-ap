@@ -1,0 +1,14 @@
+$NetBSD: patch-ap,v 1.1 1999/11/01 03:31:46 jlam Exp $
+
+--- examples/perl.example.orig	Thu Jan 14 17:37:31 1999
++++ examples/perl.example	Sun Oct 31 00:27:45 1999
+@@ -1,7 +1,7 @@
+-#!/usr/local/bin/perl
++#!/usr/pkg/bin/perl
+ 
+ $flyprog = "../fly";
+-$outfile = "temp.gif";
++$outfile = "temp.png";
+ 
+ $infile = "/tmp/fly.$$";
+ 
