@@ -1,4 +1,4 @@
-/*	$NetBSD: path.c,v 1.5 2003/09/23 07:13:53 grant Exp $	*/
+/*	$NetBSD: path.c,v 1.6 2004/12/29 12:16:56 agc Exp $	*/
 
 /*-
  * Copyright (c)2002 YAMAMOTO Takashi,
@@ -34,7 +34,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: path.c,v 1.5 2003/09/23 07:13:53 grant Exp $");
+__RCSID("$NetBSD: path.c,v 1.6 2004/12/29 12:16:56 agc Exp $");
 #endif
 
 #if HAVE_ERR_H
@@ -120,7 +120,7 @@ path_new_entry(const char *cp, size_t len)
 	if (!IS_FULLPATH(cp) && !IS_URL(cp)) {
 		/* this is a relative path */
 		size_t total;
-		char cwd[MAXPATHLEN];
+		char cwd[MaxPathSize];
 		size_t cwdlen;
 
 		if (getcwd(cwd, sizeof(cwd)) == NULL)

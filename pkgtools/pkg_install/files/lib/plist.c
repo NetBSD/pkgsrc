@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.11 2004/11/02 00:10:15 erh Exp $	*/
+/*	$NetBSD: plist.c,v 1.12 2004/12/29 12:16:56 agc Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.11 2004/11/02 00:10:15 erh Exp $");
+__RCSID("$NetBSD: plist.c,v 1.12 2004/12/29 12:16:56 agc Exp $");
 #endif
 #endif
 
@@ -243,7 +243,7 @@ int
 plist_cmd(char *s, char **arg)
 {
 	const cmd_t *cmdp;
-	char    cmd[FILENAME_MAX + 20];	/* 20 == fudge for max cmd len */
+	char    cmd[MaxPathSize + 20];	/* 20 == fudge for max cmd len */
 	char   *cp;
 	char   *sp;
 
@@ -270,12 +270,12 @@ plist_cmd(char *s, char **arg)
 void
 read_plist(package_t *pkg, FILE * fp)
 {
-	char    pline[FILENAME_MAX];
+	char    pline[MaxPathSize];
 	char   *cp;
 	int     cmd;
 	int     len;
 
-	while (fgets(pline, FILENAME_MAX, fp) != (char *) NULL) {
+	while (fgets(pline, MaxPathSize, fp) != (char *) NULL) {
 		for (len = strlen(pline); len &&
 		    isspace((unsigned char) pline[len - 1]);) {
 			pline[--len] = '\0';
@@ -341,7 +341,7 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg, Boolean NoDele
 	char   *Where = ".", *last_file = "";
 	int     fail = SUCCESS;
 	Boolean preserve;
-	char    tmp[FILENAME_MAX], *name = NULL;
+	char    tmp[MaxPathSize], *name = NULL;
 
 	if (!pkgdb_open(ReadWrite)) {
 		err(EXIT_FAILURE, "cannot open pkgdb");
@@ -401,7 +401,7 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg, Boolean NoDele
 							}
 						}
 					} else if (strncmp(p->next->name, SYMLINK_HEADER, SymlinkHeaderLen) == 0) {
-						char	buf[FILENAME_MAX + SymlinkHeaderLen];
+						char	buf[MaxPathSize + SymlinkHeaderLen];
 						int	cc;
 
 						(void) strlcpy(buf, SYMLINK_HEADER,
@@ -440,9 +440,9 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg, Boolean NoDele
 					if (delete_hierarchy(tmp, ign_err, nukedirs))
 						fail = FAIL;
 					if (preserve && name) {
-						char    tmp2[FILENAME_MAX];
+						char    tmp2[MaxPathSize];
 
-						if (make_preserve_name(tmp2, FILENAME_MAX, name, tmp)) {
+						if (make_preserve_name(tmp2, MaxPathSize, name, tmp)) {
 							if (fexists(tmp2)) {
 								if (rename(tmp2, tmp))
 									warn("preserve: unable to restore %s as %s",

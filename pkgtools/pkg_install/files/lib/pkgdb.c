@@ -1,4 +1,4 @@
-/*	$NetBSD: pkgdb.c,v 1.21 2004/08/20 20:09:53 jlam Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.22 2004/12/29 12:16:56 agc Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: pkgdb.c,v 1.21 2004/08/20 20:09:53 jlam Exp $");
+__RCSID("$NetBSD: pkgdb.c,v 1.22 2004/12/29 12:16:56 agc Exp $");
 #endif
 
 /*
@@ -80,7 +80,7 @@ __RCSID("$NetBSD: pkgdb.c,v 1.21 2004/08/20 20:09:53 jlam Exp $");
 static DB   *pkgdbp;
 #endif
 static char *pkgdb_dir = NULL;
-static char  pkgdb_cache[FILENAME_MAX];
+static char  pkgdb_cache[MaxPathSize];
 
 #if HAVE_DBOPEN
 /*
@@ -93,7 +93,7 @@ int
 pkgdb_open(int mode)
 {
 	BTREEINFO info;
-	char	cachename[FILENAME_MAX];
+	char	cachename[MaxPathSize];
 
 	/* try our btree format first */
 	info.flags = 0;
@@ -142,7 +142,7 @@ pkgdb_store(const char *key, const char *val)
 	vald.data = (void *) val;
 	vald.size = strlen(val) + 1;
 
-	if (keyd.size > FILENAME_MAX || vald.size > FILENAME_MAX)
+	if (keyd.size > MaxPathSize || vald.size > MaxPathSize)
 		return -1;
 
 	return (*pkgdbp->put) (pkgdbp, &keyd, &vald, R_NOOVERWRITE);
@@ -214,7 +214,7 @@ pkgdb_remove(const char *key)
 
 	keyd.data = (char *) key;
 	keyd.size = strlen(key) + 1;
-	if (keyd.size > FILENAME_MAX)
+	if (keyd.size > MaxPathSize)
 		return -1;
 
 	return (*pkgdbp->del) (pkgdbp, &keyd, 0);
@@ -234,7 +234,7 @@ pkgdb_remove_pkg(const char *pkg)
 	int	type;
 	int	ret;
 	int	cc;
-	char	cachename[FILENAME_MAX];
+	char	cachename[MaxPathSize];
 
 	if (pkgdbp == NULL) {
 		return 0;
