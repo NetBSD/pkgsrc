@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/27 03:19:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2001/07/02 16:46:02 jlam Exp $
 #
 
 DISTNAME=		gmp-3.1.1
@@ -11,6 +11,7 @@ COMMENT=		Library for arbitrary precision arithmetic
 
 BUILD_DEPENDS+=		m4-1.4:../../devel/m4
 
+USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
