@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2001/10/18 11:46:31 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2003/07/02 18:43:13 jmc Exp $
 
---- Makefile.orig	Fri Mar 16 20:08:18 2001
-+++ Makefile
+--- Makefile.orig	Fri Mar 16 19:08:18 2001
++++ Makefile	Wed Jul  2 13:09:19 2003
 @@ -12,10 +12,10 @@
  # SO          Extension for shared libs.
  
@@ -11,13 +11,13 @@ $NetBSD: patch-aa,v 1.1 2001/10/18 11:46:31 wiz Exp $
 -GCC = gcc
 -CFLAGS = -Wall -fpic -O2
 +INC_DIRS = -I${GDCHART_INCLUDE} -I$(GD_INCLUDE) -I$(PYTHON_INCLUDE)
-+LIB_DIRS = -L${LOCALBASE}/lib -L/usr/lib -Wl,-R${LOCALBASE}/lib
++LIB_DIRS = -L${LOCALBASE}/lib -L/usr/lib ${RPATH_FLAG}${LOCALBASE}/lib -L${X11PREFIX}/lib ${RPATH_FLAG}${X11PREFIX}/lib
 +GCC = ${CC}
 +CFLAGS ?= -Wall -fpic -O2
  
  # Linux
  LD = $(GCC) -shared
-@@ -31,20 +31,14 @@
+@@ -31,21 +31,19 @@
  
  # Shouldn't need to touch anything below this point.
  
@@ -30,17 +30,24 @@ $NetBSD: patch-aa,v 1.1 2001/10/18 11:46:31 wiz Exp $
  DEFS =
  ifeq ($(HAVE_JPEG),1)
      DEFS += -DHAVE_JPEG
-     LIBJPEG = -ljpeg
+-    LIBJPEG = -ljpeg
++    LIBS = -ljpeg
++endif
++ifeq ($(HAVE_LIBFREETYPE),1)
++    DEFS += -DHAVE_LIBFREETYPE
++    LIBS += -lfreetype
  endif
  
 -CFLAGS += -I$(GDCHART) $(PY_INCLUDE) $(DEFS)
 -LDFLAGS = -L$(GDCHART) -L$(GD) $(LIB_DIRS)
+-LDLIBS = -lgdchart -lgd -lpng -lz $(LIBJPEG)
 +CFLAGS += ${INC_DIRS} $(DEFS)
 +LDFLAGS = $(LIB_DIRS)
- LDLIBS = -lgdchart -lgd -lpng -lz $(LIBJPEG)
++LDLIBS = -lgdchart -lgd -lpng -lz $(LIBS)
  
  TARGET = gdchart$(SO)
-@@ -53,19 +47,11 @@
+ PY_SRC = gdc_py.c
+@@ -53,19 +51,11 @@
  
  all: $(TARGET)
  

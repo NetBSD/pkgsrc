@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/06/02 01:19:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/02 18:43:12 jmc Exp $
 #
 
 DISTNAME=	gdchart-py-0.6
@@ -16,6 +16,7 @@ USE_GMAKE=	yes
 MAKE_ENV=	GD_INCLUDE=${LOCALBASE}/include \
 		GDCHART_INCLUDE=${LOCALBASE}/include \
 		PYTHON_INCLUDE=${LOCALBASE}/${PYINC} \
+		HAVE_LIBFREETYPE=1 \
 		LOCALBASE=${LOCALBASE}
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 MODULE_FILES=	chart.py gdchart.so
