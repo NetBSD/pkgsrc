@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1473 2003/02/23 17:54:38 salo Exp $
+$NetBSD: CHANGES,v 1.1474 2003/02/23 19:20:22 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -819,3 +819,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated freeciv-share to 1.14.0 [salo 2003-02-23]
 	Updated freeciv-server to 1.14.0 [salo 2003-02-23]
 	Updated wdm to 1.22.1 [salo 2003-02-23]
+	Updated netatalk to 1.6.1 [fredb 2003-02-23]
