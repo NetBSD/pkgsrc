@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2001/12/16 07:39:11 jmc Exp $
+$NetBSD: patch-aa,v 1.7 2002/03/31 14:37:30 abs Exp $
 
 --- configure.in.orig	Wed Jan 12 20:15:36 2000
-+++ configure.in	Sun Dec 16 07:16:49 2001
++++ configure.in
 @@ -580,7 +580,7 @@
  TK_LIB_DIR=${TK_EXEC_PREFIX}/lib
  
  case $target in
 -  *-sunos4*|NetBSD-*|FreeBSD-*|OpenBSD-*)
-+  *-sunos4*|*-*-netbsd|FreeBSD-*|OpenBSD-*)
++  *-sunos4*|*-*-netbsd*|FreeBSD-*|OpenBSD-*)
      TCL_LIB_SPEC="-ltcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
      TK_LIB_SPEC="-ltk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
      ;;
