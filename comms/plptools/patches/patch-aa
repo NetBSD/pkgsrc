@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/14 05:41:47 sakamoto Exp $
+
+--- ./ncpd/mp_serial.c.orig	Tue Jul  6 06:48:56 1999
++++ ./ncpd/mp_serial.c	Wed Jul 14 11:50:58 1999
+@@ -183,5 +183,5 @@
+ {
+ 	struct termios ti;
+-	if (ioctl(fd, TCGETS, (caddr_t) & ti) < 0)
++	if (tcgetattr(fd, &ti) < 0)
+ 		perror("TCGETSW");
+ 	ti.c_cflag &= ~CRTSCTS;
