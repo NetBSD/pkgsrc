@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:03 seb Exp $
-etc/fidogate/fidogate.conf.dist
-@dirrm etc/fidogate
+@comment $NetBSD: PLIST,v 1.3 2002/07/06 20:15:51 tv Exp $
 etc/rc.d/fidogate
 @unexec ${INSTALL_INFO} --delete %D/info/fidogate.info %D/info/dir
 info/fidogate.info
@@ -96,6 +94,7 @@ share/doc/fidogate/msgid-6.html
 share/doc/fidogate/msgid-7.html
 share/doc/fidogate/msgid.html
 @dirrm share/doc/fidogate
+share/examples/fidogate/fidogate.conf
 share/examples/fidogate/morannon/aliases
 share/examples/fidogate/morannon/areas
 share/examples/fidogate/morannon/bounce.down

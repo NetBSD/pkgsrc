@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.5 2001/03/09 19:06:19 tv Exp $
+$NetBSD: patch-ai,v 1.6 2002/07/06 20:15:52 tv Exp $
 
---- fidogate.conf.orig	Thu Feb 22 09:58:02 2001
-+++ fidogate.conf	Thu Feb 22 09:58:13 2001
+--- fidogate.conf.dist.orig	Thu Feb 22 09:58:02 2001
++++ fidogate.conf.dist	Thu Feb 22 09:58:13 2001
 @@ -15,30 +15,30 @@
  ##############################################################################
  
