@@ -1,0 +1,3 @@
+urlget retrieves an URL specified on the command line and
+outputs it to the standard output.  It uses the HTTP 1.0
+GET query by default, but can also do HEAD and POST.
