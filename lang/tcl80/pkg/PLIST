@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.12 2000/01/06 21:14:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2000/08/11 21:44:37 jlam Exp $
 bin/tclsh8.0
 lib/libtcl80.a
+lib/libtcl80.la
 lib/libtcl80.so.1.0
 include/tcl8.0/tcl.h
 include/tcl8.0/unix/tclUnixPort.h
