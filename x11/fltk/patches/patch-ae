@@ -1,28 +1,13 @@
-$NetBSD: patch-ae,v 1.2 2001/05/26 06:37:46 jlam Exp $
+$NetBSD: patch-ae,v 1.3 2004/02/18 05:07:34 ben Exp $
 
---- fluid/Makefile.orig	Mon Jan 22 10:13:38 2001
+--- fluid/Makefile.orig	2003-08-02 14:17:30.000000000 -0700
 +++ fluid/Makefile
-@@ -49,9 +49,9 @@
- 
- include ../makeinclude
- 
--$(PROGRAM) : $(OBJECTS) ../lib/$(LIBNAME)
-+$(PROGRAM) : $(OBJECTS) $(LIBFLTK)
- 	echo Linking $@...
--	$(CXX) -L../lib $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) -lfltk $(LDLIBS)
-+	$(CXX) $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) $(LINKFLTK) $(LDLIBS)
- 
- clean :
- 	-@ rm -f *.o $(PROGRAM) $(CLEAN) core *~ makedepend
-@@ -63,9 +63,9 @@
- 
- install: $(PROGRAM)
- 	echo "Installing FLUID..."
--	strip $(PROGRAM)
- 	-mkdir -p $(bindir)
--	cp $(PROGRAM) $(bindir)/$(PROGRAM)
-+	$(INSTALL_BIN) $(PROGRAM) $(bindir)/$(PROGRAM)
-+	strip $(bindir)/$(PROGRAM)
- 	chmod 755 $(bindir)/$(PROGRAM)
- 
- uninstall:
+@@ -75,7 +75,7 @@ include makedepend
+ install: all
+ 	echo "Installing FLUID in $(bindir)..."
+ 	-$(MKDIR) $(bindir)
+-	$(CP) $(FLUID) $(bindir)/fluid$(EXEEXT)
++	$(INSTALL_BIN) $(FLUID) $(bindir)/fluid$(EXEEXT)
+ 	$(STRIP) $(bindir)/fluid$(EXEEXT)
+ 	$(bindir)/fltk-config --post $(bindir)/fluid$(EXEEXT)
+ 	$(CHMOD) 755 $(bindir)/fluid$(EXEEXT)

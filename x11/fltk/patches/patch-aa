@@ -1,21 +1,20 @@
-$NetBSD: patch-aa,v 1.4 2001/05/26 06:37:46 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2004/02/18 05:07:34 ben Exp $
 
---- Makefile.orig	Wed Mar 14 12:20:01 2001
+--- Makefile.orig	2003-06-14 22:39:12.000000000 -0700
 +++ Makefile
 @@ -25,7 +25,7 @@
  
- SHELL=/bin/sh
+ include makeinclude
  
--DIRS	=	src fluid test
-+DIRS	=	src fluid
+-DIRS	=	src fluid test documentation
++DIRS	=	src fluid documentation
  
  all: makeinclude
- 	@for dir in $(DIRS); do\
-@@ -35,6 +35,14 @@
- 		fi;\
+ 	for dir in $(DIRS); do\
+@@ -33,6 +33,14 @@ all: makeinclude
  		(cd $$dir; $(MAKE) $(MFLAGS)) || break;\
  	done
-+
+ 
 +test: makeinclude
 +	dir=test;\
 +	echo "=== making $$dir ===";\
@@ -23,6 +22,7 @@ $NetBSD: patch-aa,v 1.4 2001/05/26 06:37:46 jlam Exp $
 +		touch $$dir/makedepend;\
 +	fi;\
 +	(cd $$dir; $(MAKE) $(MFLAGS)) || break;\
- 
++
  install: makeinclude
- 	@for dir in $(DIRS); do\
+ 	-mkdir -p $(bindir)
+ 	$(RM) $(bindir)/fltk-config
