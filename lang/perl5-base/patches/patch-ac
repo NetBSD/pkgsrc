@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/09/05 09:18:21 jlam Exp $
+
+--- ext/POSIX/Makefile.PL.orig	Wed Mar 22 11:23:03 2000
++++ ext/POSIX/Makefile.PL
+@@ -6,7 +6,7 @@
+ 	@libs = ('LIBS' => ["-lm -lc -lposix -lcposix"]);
+     }
+     else {
+-	@libs = ('LIBS' => ["-lm -lposix -lcposix"]);
++	@libs = ('LIBS' => ["-lm"]);
+     }
+ }
+ WriteMakefile(
