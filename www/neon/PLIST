@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/05/09 15:44:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/09/10 04:34:09 epg Exp $
 bin/neon-config
 include/neon/ne_207.h
 include/neon/ne_acl.h
@@ -17,6 +17,7 @@ include/neon/ne_redirect.h
 include/neon/ne_request.h
 include/neon/ne_session.h
 include/neon/ne_socket.h
+include/neon/ne_ssl.h
 include/neon/ne_string.h
 include/neon/ne_uri.h
 include/neon/ne_utils.h
@@ -24,15 +25,15 @@ include/neon/ne_xml.h
 lib/libneon.a
 lib/libneon.la
 lib/libneon.so
-lib/libneon.so.23
-lib/libneon.so.23.9
+lib/libneon.so.24
+lib/libneon.so.24.1
+lib/pkgconfig/neon.pc
 man/man1/neon-config.1
 man/man3/ne_add_request_header.3
 man/man3/ne_addr_destroy.3
 man/man3/ne_addr_error.3
 man/man3/ne_addr_first.3
 man/man3/ne_addr_next.3
-man/man3/ne_addr_print.3
 man/man3/ne_addr_resolve.3
 man/man3/ne_addr_result.3
 man/man3/ne_buffer.3
@@ -51,6 +52,10 @@ man/man3/ne_close_connection.3
 man/man3/ne_forget_auth.3
 man/man3/ne_get_error.3
 man/man3/ne_get_status.3
+man/man3/ne_iaddr_cmp.3
+man/man3/ne_iaddr_free.3
+man/man3/ne_iaddr_make.3
+man/man3/ne_iaddr_print.3
 man/man3/ne_malloc.3
 man/man3/ne_oom_callback.3
 man/man3/ne_print_request_header.3
@@ -73,12 +78,27 @@ man/man3/ne_set_server_auth.3
 man/man3/ne_set_useragent.3
 man/man3/ne_shave.3
 man/man3/ne_sock_init.3
-man/man3/ne_ssl_certificate.3
-man/man3/ne_ssl_dname.3
-man/man3/ne_ssl_load_ca.3
-man/man3/ne_ssl_load_default_ca.3
+man/man3/ne_ssl_cert_cmp.3
+man/man3/ne_ssl_cert_export.3
+man/man3/ne_ssl_cert_free.3
+man/man3/ne_ssl_cert_identity.3
+man/man3/ne_ssl_cert_import.3
+man/man3/ne_ssl_cert_issuer.3
+man/man3/ne_ssl_cert_read.3
+man/man3/ne_ssl_cert_signedby.3
+man/man3/ne_ssl_cert_subject.3
+man/man3/ne_ssl_cert_write.3
+man/man3/ne_ssl_clicert_decrypt.3
+man/man3/ne_ssl_clicert_encrypted.3
+man/man3/ne_ssl_clicert_free.3
+man/man3/ne_ssl_clicert_name.3
+man/man3/ne_ssl_clicert_owner.3
+man/man3/ne_ssl_clicert_read.3
+man/man3/ne_ssl_dname_cmp.3
 man/man3/ne_ssl_readable_dname.3
 man/man3/ne_ssl_set_verify.3
+man/man3/ne_ssl_trust_cert.3
+man/man3/ne_ssl_trust_default_ca.3
 man/man3/ne_status.3
 man/man3/ne_strdup.3
 man/man3/ne_strndup.3
@@ -86,6 +106,7 @@ man/man3/ne_token.3
 man/man3/ne_version_match.3
 man/man3/ne_version_string.3
 man/man3/neon.3
+share/doc/${PKGNAME}/html/apas01.html
 share/doc/${PKGNAME}/html/apas02.html
 share/doc/${PKGNAME}/html/apas03.html
 share/doc/${PKGNAME}/html/apas04.html
@@ -97,18 +118,13 @@ share/doc/${PKGNAME}/html/apas09.html
 share/doc/${PKGNAME}/html/apas10.html
 share/doc/${PKGNAME}/html/apas11.html
 share/doc/${PKGNAME}/html/apas12.html
-share/doc/${PKGNAME}/html/auth.html
-share/doc/${PKGNAME}/html/basic.html
-share/doc/${PKGNAME}/html/ch01s02.html
-share/doc/${PKGNAME}/html/ch01s03.html
-share/doc/${PKGNAME}/html/ch02.html
+share/doc/${PKGNAME}/html/api.html
+share/doc/${PKGNAME}/html/biblio.html
 share/doc/${PKGNAME}/html/compliance.html
+share/doc/${PKGNAME}/html/features.html
 share/doc/${PKGNAME}/html/gfdl.html
 share/doc/${PKGNAME}/html/index.html
 share/doc/${PKGNAME}/html/intro.html
-share/doc/${PKGNAME}/html/locking.html
-share/doc/${PKGNAME}/html/lowlevel.html
-share/doc/${PKGNAME}/html/props.html
 share/doc/${PKGNAME}/html/ref.html
 share/doc/${PKGNAME}/html/refalloc.html
 share/doc/${PKGNAME}/html/refauth.html
@@ -117,9 +133,12 @@ share/doc/${PKGNAME}/html/refbufapp.html
 share/doc/${PKGNAME}/html/refbufcr.html
 share/doc/${PKGNAME}/html/refbufdest.html
 share/doc/${PKGNAME}/html/refbufutil.html
+share/doc/${PKGNAME}/html/refcert.html
+share/doc/${PKGNAME}/html/refclicert.html
 share/doc/${PKGNAME}/html/refconfig.html
 share/doc/${PKGNAME}/html/referr.html
 share/doc/${PKGNAME}/html/refgetst.html
+share/doc/${PKGNAME}/html/refiaddr.html
 share/doc/${PKGNAME}/html/refneon.html
 share/doc/${PKGNAME}/html/refopts.html
 share/doc/${PKGNAME}/html/refreq.html
@@ -130,14 +149,14 @@ share/doc/${PKGNAME}/html/refsess.html
 share/doc/${PKGNAME}/html/refshave.html
 share/doc/${PKGNAME}/html/refsockinit.html
 share/doc/${PKGNAME}/html/refsslca.html
-share/doc/${PKGNAME}/html/refsslcert.html
+share/doc/${PKGNAME}/html/refsslcert2.html
+share/doc/${PKGNAME}/html/refsslcertio.html
 share/doc/${PKGNAME}/html/refssldname.html
 share/doc/${PKGNAME}/html/refsslvfy.html
 share/doc/${PKGNAME}/html/refstatus.html
 share/doc/${PKGNAME}/html/reftok.html
 share/doc/${PKGNAME}/html/refvers.html
-share/doc/${PKGNAME}/html/ssl.html
-share/doc/${PKGNAME}/html/utils.html
+share/doc/${PKGNAME}/html/using.html
 share/doc/${PKGNAME}/html/xml.html
 @dirrm share/doc/${PKGNAME}/html
 @dirrm share/doc/${PKGNAME}
