@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/10 05:11:31 jtb Exp $
+lib/libminpack.a
+share/examples/minpack/file01
+share/examples/minpack/file02
+share/examples/minpack/file03
+share/examples/minpack/file04
+share/examples/minpack/file05
+share/examples/minpack/file06
+share/examples/minpack/file07
+share/examples/minpack/file08
+share/examples/minpack/file09
+share/examples/minpack/file10
+share/examples/minpack/file11
+share/examples/minpack/file12
+share/examples/minpack/file13
+share/examples/minpack/file14
+share/examples/minpack/file15
+share/examples/minpack/file16
+share/examples/minpack/file17
+share/examples/minpack/file18
+share/examples/minpack/file19
+share/examples/minpack/file20
+share/examples/minpack/file21
+share/examples/minpack/file22
+share/examples/minpack/file23
+share/examples/minpack/index
+share/examples/minpack/index.html
+@dirrm share/examples/minpack
