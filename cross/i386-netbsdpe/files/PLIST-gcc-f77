@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST-gcc-f77,v 1.1 2001/01/30 03:08:57 minoura Exp $
-${TARGET_ARCH}/bin/f77
-${TARGET_ARCH}/bin/fort77
-${TARGET_ARCH}/bin/g77
-bin/${TARGET_ARCH}-f77
-bin/${TARGET_ARCH}-fort77
-bin/${TARGET_ARCH}-g77
-lib/gcc-lib/${TARGET_ARCH}/${GCC_INTVERSION}/f771

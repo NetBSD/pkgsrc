@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST-gcc-f77-runtime,v 1.1 2001/01/30 03:08:57 minoura Exp $
-lib/gcc-lib/${TARGET_ARCH}/${GCC_INTVERSION}/include/g2c.h
-lib/gcc-lib/${TARGET_ARCH}/${GCC_INTVERSION}/libg2c.a
