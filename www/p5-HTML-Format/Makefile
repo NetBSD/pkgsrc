@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/04 02:19:12 tv Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:22:22 wiz Exp $
 
 DISTNAME=		HTML-Format-1.23
 PKGNAME=		p5-${DISTNAME}
@@ -6,6 +6,7 @@ CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=		packages@netbsd.org
+COMMENT=		perl5 modules for converting HTML to other text formats
 
 DEPENDS+=		p5-Font-AFM>=1.18:../../print/p5-Font-AFM
 DEPENDS+=		p5-HTML-Tree>=3.04:../../www/p5-HTML-Tree

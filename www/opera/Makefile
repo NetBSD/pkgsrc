@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/01/06 10:09:24 jdolecek Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 17:22:18 wiz Exp $
 
 DISTNAME=	opera-4.0-b5-20010103.014-static.i386
 PKGNAME=	opera-4.0b5
@@ -11,6 +11,7 @@ MASTER_SITES=	http://opera.online.no/linux/tgz/ \
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.opera.com/
+COMMENT=	Small, fast and customizable WWW client
 
 DEPENDS+=	suse_compat>=6.4:../../emulators/suse_compat
 DEPENDS+=	suse_libjpeg>=6.4:../../emulators/suse_libjpeg

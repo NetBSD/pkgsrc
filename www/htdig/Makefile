@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/08 14:43:56 kei Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 17:22:07 wiz Exp $
 #
 
 DISTNAME=	htdig-3.1.5
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.htdig.org/files/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://htdig.sourceforge.net/
+COMMENT=	WWW indexing and searching system
 
 DEPENDS+=	db-2.7.7:../../databases/db
 

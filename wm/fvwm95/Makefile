@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:39 wiz Exp $
 # FreeBSD: Makefile,v 1.17 1997/12/24 01:21:18 alex Exp
 #
 
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	ftp://mitac11.uia.ac.be/html-test/fvwm95.html
+COMMENT=	Win95 lookalike version of the fvwm2 window manager
 
 DEPENDS+=	rplay-3.*:../../audio/rplay
 DEPENDS+=	xpmroot-2.*:../../x11/xpmroot

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/01/06 03:32:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 17:22:13 wiz Exp $
 #
 
 DISTNAME=	links-0.95
@@ -11,6 +11,7 @@ MASTER_SITES=	http://artax.karlin.mff.cuni.cz/~mikulas/links/download/ \
 
 MAINTAINER=	wiz@netbsd.org
 HOMEPAGE=	http://artax.karlin.mff.cuni.cz/~mikulas/links/
+COMMENT=	Lynx-like text WWW browser
 
 GNU_CONFIGURE=	YES
 USE_SSL=	YES

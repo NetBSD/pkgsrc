@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/05 14:32:21 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:22:03 wiz Exp $
 
 DISTNAME=	curl-7.6
 CATEGORIES=	www
@@ -6,6 +6,7 @@ MASTER_SITES=	http://curl.haxx.se/download/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://curl.haxx.se/
+COMMENT=	client that groks URLs
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes

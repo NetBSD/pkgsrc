@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/10/29 20:22:09 tsarna Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 17:22:04 wiz Exp $
 #
 
 DISTNAME=	grail-06
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://grail.sourceforge.net/
+COMMENT=	Grail(TM) is a web browser written in Python
 
 DEPENDS+=	py-Tk-2.0*:../../x11/py-Tk
 

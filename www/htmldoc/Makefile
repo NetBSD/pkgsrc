@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/03/21 22:40:58 tron Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 17:22:07 wiz Exp $
 #
 
 DISTNAME=		${PKGNAME}-source
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.easysw.com/pub/htmldoc/1.7/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.easysw.com/~mike/htmldoc/
+COMMENT=		Converts HTML to indexed HTML, PDF and/or PostScript
 
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png>=1.0.6:../../graphics/png

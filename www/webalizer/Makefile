@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/11/14 00:01:27 briggs Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/17 17:22:46 wiz Exp $
 #
 
 DISTNAME=	webalizer-2.01-06-src
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	mjl@netbsd.org
 HOMEPAGE=	http://www.mrunix.net/webalizer/
+COMMENT=	Web server log file analysis program
 
 DEPENDS+=	gd-1.*:../../graphics/gd
 DEPENDS+=	freetype-lib>=1.3.1:../../graphics/freetype-lib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/01/01 23:42:04 veego Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:21:37 wiz Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -13,6 +13,7 @@ MASTER_SITES=	ftp://ftp.hpc.uh.edu/pub/fvwm/version-2/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fvwm.org/
+COMMENT=	Newer version of X11 Virtual window manager
 
 DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 DEPENDS+=	readline-*:../../devel/readline

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/09/05 09:33:17 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/17 17:21:46 wiz Exp $
 #
 
 DISTNAME=	csacek-2.1.4
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jdolecek@netbsd.org
 # Note the homepage is in czech language only
 HOMEPAGE=	http://www.csacek.cz/
+COMMENT=	on-fly code set recoder
 
 DEPENDS+=	apache*-1.3*:../../www/apache
 # For "apxs":

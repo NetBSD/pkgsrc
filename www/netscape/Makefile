@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/09/02 23:13:58 abs Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:22:16 wiz Exp $
 #
+
+COMMENT=	Open new communicator or navigator window
 
 BINNAME=	netscape
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/12/17 22:21:44 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/17 17:22:41 wiz Exp $
 
 DISTNAME=	thttpd-2.20b
 CATEGORIES=	www
@@ -8,6 +8,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 
 MAINTAINER=	mike@ethmoid.org
 HOMEPAGE=	http://www.acme.com/software/thttpd/
+COMMENT=	tiny/turbo/throttling HTTP server
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 GNU_CONFIGURE=	# defined

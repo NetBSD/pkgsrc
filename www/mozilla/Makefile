@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2001/02/17 11:03:27 taya Exp $
+# $NetBSD: Makefile,v 1.57 2001/02/17 17:22:15 wiz Exp $
 
 MOZ_VER=	0.8
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mozilla.org/
+COMMENT=	The open-source version of the Netscape browser
 
 BUILD_DEPENDS+=	${PERL5}:../../lang/perl5-base
 BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf

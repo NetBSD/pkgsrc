@@ -1,5 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/22 11:05:21 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:22:17 wiz Exp $
 #
+
+COMMENT=	streaming multimedia plugin for Netscape (navigator)
+
 BINNAME=	navigator
 COMMONDIR=	../ns-plugger-common
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/05/30 12:49:54 rh Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/17 17:22:11 wiz Exp $
 #
 
 DISTNAME=	gateway-0.8
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.kannel.org/download/0.8/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.kannel.org/
+COMMENT=	open source WAP and SMS gateway
 
 DEPENDS+=	libxml>=1.8.7:../../textproc/libxml
 DEPENDS+=	pth>=1.3.5:../../devel/pth

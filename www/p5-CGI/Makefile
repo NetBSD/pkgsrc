@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/02/02 17:52:25 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 17:22:20 wiz Exp $
 #
 
 DISTNAME=       	CGI.pm-2.75
@@ -9,6 +9,7 @@ MASTER_SITES=		http://stein.cshl.org/WWW/software/CGI/ \
 
 MAINTAINER=		christos@netbsd.org
 HOMEPAGE=		http://stein.cshl.org/WWW/software/CGI/
+COMMENT=		perl5 module for writing forms-based CGI programs
 
 # Some perl packages install their own versions of this module.
 # Can't simply define USE_PERL5.

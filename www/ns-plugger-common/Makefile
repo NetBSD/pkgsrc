@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/12/17 14:32:33 tron Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/17 17:22:17 wiz Exp $
 #
 
 DISTNAME=		plugger-3.2-linux-x86-glibc
@@ -9,6 +9,7 @@ MASTER_SITES=		http://fredrik.hubbe.net/plugger/
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://fredrik.hubbe.net/plugger.html
+COMMENT=		streaming multimedia plugin for Netscape
 
 BINNAME?=		common
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/06 22:05:56 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/17 17:22:05 wiz Exp $
 
 DISTNAME=	haskell-cgi-20001206
 CATEGORIES=	www
@@ -6,6 +6,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://www.informatik.uni-muenchen.de/~Sven.Panne/haskell_libs/CGI.html
+COMMENT=	CGI module for the Hugs Haskell 98 interpreter
 
 DEPENDS+=	hugs98-[0-9]*:../../lang/hugs
 

@@ -1,1 +1,0 @@
-event register/unregister functions that use the glib event loop

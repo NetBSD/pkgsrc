@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/12/18 20:20:10 kim Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:22:42 wiz Exp $
 # FreeBSD Id: ports/www/tidy/Makefile,v 1.15 2000/02/16 00:08:36 mharo Exp
 
 DISTNAME=	tidy4aug00
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.w3c.org/People/Raggett/tidy/
+COMMENT=	Fixes and tidies up HTML files
 
 ALL_TARGET=	tidy
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/11/11 17:49:28 tron Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/17 17:22:39 wiz Exp $
 #
 
 DISTNAME=	surfraw-1.0.2
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=surfraw/}
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://surfraw.sourceforge.net/
+COMMENT=	Shell Users' Revolutionary Front Rage Against the Web
 
 CONFLICTS+=	surfaw-*
 
