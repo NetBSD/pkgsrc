@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.139 2003/12/28 11:23:28 agc Exp $
+# $NetBSD: bsd.prefs.mk,v 1.140 2004/01/21 18:13:27 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -237,6 +237,20 @@ SHAREMODE?=		${DOCMODE}
 .else exists(${.CURDIR}/mk/defs.NetBSD.mk)
 .  include "${.CURDIR}/mk/defs.NetBSD.mk"
 .endif
+
+PKG_PHASE?=		none
+#
+# The PHASES_AFTER_<phase> variables list every phase "greater than or
+# equal to" <phase>.
+#
+PHASES_AFTER_EXTRACT=	extract ${PHASES_AFTER_PATCH}
+PHASES_AFTER_PATCH=	patch ${PHASES_AFTER_TOOLS}
+PHASES_AFTER_TOOLS=	tools ${PHASES_AFTER_BUILDLINK}
+PHASES_AFTER_BUILDLINK=	buildlink ${PHASES_AFTER_CONFIGURE}
+PHASES_AFTER_CONFIGURE=	configure ${PHASES_AFTER_BUILD}
+PHASES_AFTER_BUILD=	build ${PHASES_AFTER_INSTALL}
+PHASES_AFTER_INSTALL=	install ${PHASES_AFTER_PACKAGE}
+PHASES_AFTER_PACKAGE=	package
 
 # if the system is IPv6-ready, compile with IPv6 support turned on.
 .if defined(USE_INET6)
