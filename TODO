@@ -1,7 +1,4 @@
-$NetBSD: TODO,v 1.29 2001/05/12 12:32:36 kleink Exp $
-
-This file will eventually hold a current 'TODO' list for people
-working on pkgsrc.
+$NetBSD: TODO,v 1.30 2001/05/13 02:44:13 wiz Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -102,7 +99,7 @@ pksgrc TODO (Suggested pkgsrc features and enhancements)
 
 	o Add a method to provide distfile-specific MASTER_SITES  [PR pkg/7471]
 
-	o Make pkgsrc work under HP-UX. (10.20, I mean)  I (IMHO) finised the
-	  modifying for bsd.pkg.mk and will commit that after freeze.  The
+	o Make pkgsrc work under HP-UX. (10.20, I mean)  I (IMHO) finished the
+	  modifications for bsd.pkg.mk and will commit them after freeze.  The
 	  remaining and harder part is to make the cross-environment for HP-UX.
 	  [kei]
