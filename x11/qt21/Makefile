@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2000/06/01 11:23:47 rh Exp $
+# $NetBSD: Makefile,v 1.5 2000/06/30 10:42:56 skrll Exp $
 #
 
-DISTNAME=	qt-x11-2.1.0
-PKGNAME=	qt21-2.1.0
-WRKSRC=		${WRKDIR}/qt-2.1.0
+DISTNAME=	qt-x11-2.1.1
+PKGNAME=	qt21-2.1.1
+WRKSRC=		${WRKDIR}/qt-2.1.1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.troll.no/qt/source/ \
 		ftp://ftp.fu-berlin.de/unix/X11/gui/Qt/source/
@@ -20,13 +20,15 @@ NOT_FOR_PLATFORM=    *-*-alpha	# builds, but programs linked to qt crash
 HAS_CONFIGURE=		yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
-USE_PKGLIBTOOL=		yes
+USE_LIBTOOL=		yes
 CONFIGURE_ENV+=		QTDIR=${WRKSRC}
 CONFIGURE_ARGS+=	-static -sm -system-zlib \
 			-system-libpng -system-jpeg \
 			-I${LOCALBASE}/include -L${LOCALBASE}/lib
 
-MAKE_ENV+=	QTDIR=${WRKSRC}
+QTPREFIX=	${PREFIX}/qt21
+
+MAKE_ENV+=	QTDIR=${WRKSRC} QTPREFIX=${QTPREFIX}
 ALL_TARGET=	src
 
 .include "../../mk/bsd.prefs.mk"
@@ -39,8 +41,6 @@ CONFIGURE_ARGS+=	-gif
 DEPENDS+=	egcs-1.1.2:../../lang/egcs
 CXX=		${LOCALBASE}/egcs/bin/g++
 .endif
-
-QTPREFIX=	${PREFIX}/qt21
 
 do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}
