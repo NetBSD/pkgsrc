@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/09/17 16:40:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/29 20:02:53 mycroft Exp $
 #
 
-DISTNAME=	xvidcore-0.9.1
+DISTNAME=	xvidcore-0.9.2
 WRKSRC=		${WRKDIR}/${DISTNAME}/build/generic
 CATEGORIES=	graphics
 MASTER_SITES=	http://files.xvid.org/downloads/
