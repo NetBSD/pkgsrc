@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/20 09:36:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/12/29 13:53:31 adrianp Exp $
 
-DISTNAME=	oinkmaster-0.8
+DISTNAME=	oinkmaster-1.1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.it.su.se/pub/users/andreas/oinkmaster/ \
-		http://www.algonet.se/~nitzer/oinkmaster/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oinkmaster/}
 
-MAINTAINER=	adrianp@stindustries.net
-HOMEPAGE= 	http://www.algonet.se/~nitzer/oinkmaster/
+MAINTAINER=	adrianp@NetBSD.org
+HOMEPAGE= 	http://oinkmaster.sourceforge.net/
 COMMENT=	Manage snort rule updates
 
 DEPENDS+=	wget>=1.00:../../net/wget
@@ -18,25 +17,32 @@ NO_BUILD=	yes
 
 CONF_FILES=	${PREFIX}/share/examples/oinkmaster/oinkmaster.conf \
 		${PKG_SYSCONFDIR}/oinkmaster.conf
+PERL5_REQD+=	5.6.1
+EGDIR=		${PREFIX}/share/examples/oinkmaster	
+DOCDIR=		${PREFIX}/share/doc/oinkmaster
+DOCS=		INSTALL LICENSE README README.templates UPGRADING FAQ
 
 REPLACE_PERL+=	${WRKSRC}/oinkmaster.pl
+
+SUBST_CLASSES=	    pub
+SUBST_STAGE.pub=    post-patch
+SUBST_FILES.pub=    oinkmaster.pl oinkmaster.conf oinkmaster.1
+SUBST_SED.pub=	    -e "s|/usr/local|${PREFIX}|g" \
+		    -e "s|/usr/local/etc|${PKG_SYSCONFDIR}|g"
+SUBST_MESSAGE.pub=  "Fixing harcoded paths."
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/oinkmaster
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/oinkmaster
 
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/oinkmaster
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/oinkmaster
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/oinkmaster
-	${INSTALL_DATA} ${WRKSRC}/oinkmaster.conf \
-		${PREFIX}/share/examples/oinkmaster
-	${INSTALL_SCRIPT} ${WRKSRC}/oinkmaster.pl ${PREFIX}/bin/oinkmaster
+.	for f in ${DOCS}                  
+		${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}/${f}
+.	endfor                               
+.	undef f
 
-SUBST_CLASSES=	    pub
-SUBST_STAGE.pub=    post-patch
-SUBST_FILES.pub=    oinkmaster.pl oinkmaster.conf
-SUBST_SED.pub=	    -e "s|/usr/local|${PREFIX}|g" \
-		    -e "s|/usr/local/etc|${PKG_SYSCONFDIR}|g"
-SUBST_MESSAGE.pub=  "Fixing harcoded PATH."
+	${INSTALL_DATA} ${WRKSRC}/oinkmaster.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/template-examples.conf ${EGDIR}
+	${INSTALL_MAN} ${WRKSRC}/oinkmaster.1 ${PREFIX}/man/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/oinkmaster.pl ${PREFIX}/bin/oinkmaster
 
 .include "../../mk/bsd.pkg.mk"
