@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/12/10 12:20:47 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/21 02:04:56 jtb Exp $
 
 DISTNAME=		stalin
 PKGNAME=		stalin-0.8
@@ -21,44 +21,44 @@ ALL_TARGET=		all-alpha
 ALL_TARGET=		all-32
 .endif
 
-STALIN="${PREFIX}/bin/stalin -I ${PREFIX}/lib/stalin -I ${PREFIX}/include -I ${PREFIX}/lib -I ${GC_PREFIX}/include -I ${GC_PREFIX}/lib"
+post-extract:
+	@${MKDIR} ${WRKSRC}/scripts
 
 post-patch:
 	@${RM} -f ${WRKSRC}/benchmarks/*.orig
-	@for i in stalin.sc stalin-32.c stalin-alpha.c stalin.1 \
-	stalinc benchmarks/make-define-application-example \
-	benchmarks/benchmark benchmarks/compile-and-run-stalin-benchmark \
+	@for i in stalin.sc stalin-32.c stalin-alpha.c \
+	stalinc stalin.1 benchmarks/benchmark \
+	benchmarks/compile-and-run-stalin-benchmark \
 	benchmarks/compile-stalin-benchmark \
 	benchmarks/make-define-application-example \
-	benchmarks/make-hello benchmarks/make-xhello ; do \
-	${SED} -e 's:%%PREFIX%%:'${PREFIX}':g' \
-	-e 's:%%GC_PREFIX%%:'${GC_PREFIX}':g' \
-	-e 's:%%MESA_PREFIX%%:'${MESA_PREFIX}':g' \
-	-e 's:%%X11BASE%%:'${X11BASE}':g' \
-	-e 's:%%STALIN%%:'${STALIN}':g' < ${WRKSRC}/$$i > \
-	${WRKSRC}/$$i.tmp && ${MV} -f ${WRKSRC}/$$i.tmp ${WRKSRC}/$$i ; done
+	benchmarks/make-hello benchmarks/make-xhello; do \
+	${SED} -e 's:@PREFIX@:'${PREFIX}':g' \
+	-e 's:@GC_PREFIX@:'${GC_PREFIX}':g' \
+	-e 's:@MESA_PREFIX@:'${MESA_PREFIX}':g' \
+	-e 's:@X11BASE@:'${X11BASE}':g' < ${WRKSRC}/$$i > \
+	${WRKSRC}/$$i.tmp && ${MV} ${WRKSRC}/$$i.tmp ${WRKSRC}/$$i ; done
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/stalin ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/stalin ${PREFIX}/bin/stalin
 	${INSTALL_SCRIPT} ${WRKSRC}/stalinc ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/libstalin.a ${PREFIX}/lib
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/stalin
-	${INSTALL_DATA} ${WRKSRC}/gl-c.o ${WRKSRC}/xlib-c.o \
-	${PREFIX}/lib/stalin
-	${INSTALL_DATA} ${WRKSRC}/include/*.sc ${PREFIX}/lib/stalin
+	${INSTALL_DATA} ${WRKSRC}/libstalin.a ${PREFIX}/lib/stalin
+	${INSTALL_DATA} ${WRKSRC}/gl-c.o ${PREFIX}/lib/stalin
+	${INSTALL_DATA} ${WRKSRC}/xlib-c.o ${PREFIX}/lib/stalin
+	@for s in ${WRKSRC}/include/*.sc; do \
+	c="${INSTALL_DATA} $$s ${PREFIX}/lib/stalin/"; \
+	${ECHO} $$c; $$c; \
+	done
 	${INSTALL_MAN} ${WRKSRC}/stalin.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/stalin
 	@for f in ANNOUNCEMENT COPYING README stalin.el ; do \
-	${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/stalin ; done
+	c="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/stalin/"; \
+	${ECHO} $$c; $$c; \
+	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/stalin/benchmarks
-	${INSTALL_DATA} ${WRKSRC}/benchmarks/*.sc \
-	${WRKSRC}/benchmarks/*.sed ${WRKSRC}/benchmarks/*.sed \
-	${WRKSRC}/benchmarks/*.tst ${WRKSRC}/benchmarks/*.pgm \
-	${WRKSRC}/benchmarks/*.cform ${WRKSRC}/benchmarks/*.c \
-	${PREFIX}/share/stalin/benchmarks
-	${INSTALL_SCRIPT} ${WRKSRC}/benchmarks/compile-* \
-	${WRKSRC}/benchmarks/benchmark \
-	${WRKSRC}/benchmarks/make-* ${WRKSRC}/benchmarks/run-* \
-	${PREFIX}/share/stalin/benchmarks
+	@for b in ${WRKSRC}/benchmarks/*; do \
+	c="${INSTALL_DATA} $$b ${PREFIX}/share/stalin/benchmarks/"; \
+	${ECHO} $$c; $$c; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
