@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2004/02/10 11:06:25 grant Exp $
+# $NetBSD: Makefile.common,v 1.11 2004/02/10 11:45:13 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -18,8 +18,8 @@ MOZ_DIR=		${MOZ_VER}
 
 MASTER_SITES?=		http://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/${MOZ_CONTRIB} \
 			ftp://ftp.mozilla.org/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/${MOZ_CONTRIB} \
-			http://public.planetmirror.com.au/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/${MOZ_CONTRIB} \
-			ftp://public.planetmirror.com.au/pub/mozilla.org/${MOZILLA_SHORT}/releases/${MOZ_DIR}/${MOZ_CONTRIB}
+			http://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/${MOZ_CONTRIB} \
+			ftp://public.planetmirror.com.au/pub/${MOZILLA_SHORT}/releases/${MOZ_DIR}/${MOZ_CONTRIB}
 
 MAINTAINER=		grant@NetBSD.org
 HOMEPAGE?=		http://www.mozilla.org/
