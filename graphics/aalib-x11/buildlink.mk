@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2002/08/27 18:18:33 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2002/08/27 18:20:27 jlam Exp $
 #
 # This Makefile fragment is included by packages that use aalib-x11.
 #
@@ -17,7 +17,7 @@ AALIB_X11_BUILDLINK_MK= # defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.aalib-x11?= aalib-x11>=1.4.0.4
+BUILDLINK_DEPENDS.aalib-x11?= aalib-x11>=1.4.0.4nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.aalib-x11}:../../graphics/aalib-x11
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.aalib-x11=aalib-x11
