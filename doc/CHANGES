@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.989 2003/01/03 05:21:29 rh Exp $
+$NetBSD: CHANGES,v 1.990 2003/01/03 05:38:33 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -50,3 +50,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnustep-examples to 0.9.7nb1 [rh 2003-01-03]
 	Updated GNUMail to 1.0.3nb1 [rh 2003-01-03]
 	Updated gnustep-preferences to 1.2.0nb1 [rh 2003-01-03]
+	Added gnustep-1.5.1 [rh 2003-01-03]
