@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8276 2004/12/05 11:18:46 adam Exp $
+$NetBSD: CHANGES,v 1.8277 2004/12/05 11:44:09 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5779,3 +5779,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ImageMagick to 6.1.6.0 [adam 2004-12-05]
 	Updated png to 1.2.8 [wiz 2004-12-05]
 	Updated octave-current to 2.1.64 [adam 2004-12-05]
+	Updated leafpad to 0.7.8 [jmmv 2004-12-05]
