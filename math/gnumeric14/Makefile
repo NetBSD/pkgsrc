@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/01/01 16:37:55 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2005/01/20 21:35:07 drochner Exp $
 #
 
-DISTNAME=		gnumeric-1.4.1
-PKGREVISION=		1
+DISTNAME=		gnumeric-1.4.2
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,8 +20,8 @@ USE_PERL5=		YES
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
-# XXX Python doesn't work yet
-CONFIGURE_ARGS+=	--with-python=python2p3
+CONFIGURE_ARGS+=	--with-python
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 PYTHON_VERSION_REQD=	23pth
 GCONF2_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 			gnumeric-plugins.schemas
