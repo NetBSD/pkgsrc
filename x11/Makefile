@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 1998/08/23 07:36:22 garbled Exp $
+# $NetBSD: Makefile,v 1.51 1998/08/25 11:02:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -35,6 +35,7 @@
     SUBDIR += fvwm-wharf
 #    SUBDIR += getbdf
     SUBDIR += gtk
+#    SUBDIR += gtk10
 #    SUBDIR += gwm
 #    SUBDIR += iv
     SUBDIR += kde
