@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 1998/06/18 15:25:24 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/08/14 07:45:26 tron Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
 DISTNAME=	exmh-2.0.2
 CATEGORIES=	mail tk80
-MASTER_SITES=	ftp://ftp.sunlabs.com/pub/tcl/exmh/
+MASTER_SITES=	http://sunscript.sun.com/dist/
 EXTRACT_SUFX=	.tar.Z
 
 PATCH_SITES=	http://sunscript.sun.com/exmh/patches/2.0.1/
