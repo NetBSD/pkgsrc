@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/03/13 17:37:32 fredb Exp $
+# $NetBSD: Makefile,v 1.39 2002/10/21 12:55:34 wiz Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0
@@ -10,14 +10,10 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.matematik.su.se/~kjj/
 COMMENT=	X11 newsreader with support for threading and MIME
 
-DEPENDS+=	faces>=1.6.1:../../mail/faces
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.2.1:../../graphics/png
-
 CONFLICTS=	knews-1.0b0
 
+USE_BUILDLINK2=	YES
 USE_IMAKE=	YES
-USE_XPM=	YES
 
 BUILD_DEFS+=	KNEWS_DOMAIN_NAME KNEWS_DOMAIN_FILE
 
@@ -46,4 +42,8 @@ post-patch:
 	${ECHO} >>${WRKSRC}/configure.h "#define USE_INET6 YES"
 .endif
 
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mail/faces/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

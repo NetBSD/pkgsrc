@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/06/08 07:47:09 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/21 12:59:57 wiz Exp $
 #
 
 DISTNAME=		memtest86-2.9
@@ -11,6 +11,7 @@ COMMENT=		thorough, stand alone memory test for x86 arch
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
 post-patch:
@@ -22,5 +23,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/memtest
 	${CP} ${WRKSRC}/README ${PREFIX}/share/doc/memtest
 
-.include "../../devel/binutils/buildlink.mk"
+.include "../../devel/binutils/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
