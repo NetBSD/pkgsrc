@@ -1,25 +1,27 @@
-# $NetBSD: Makefile,v 1.6 2004/10/03 00:12:58 tv Exp $
-#
-
-.include "../../misc/celestia/Makefile.common"
+# $NetBSD: Makefile,v 1.7 2004/11/10 16:42:40 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
-PKGREVISION=	3
 
 COMMENT=	GNOME frontend for free real-time 3D space simulator
 
 DEPENDS=	celestia-${CELESTIA_VERS}*:../../misc/celestia
 
 CONFIGURE_ARGS+=	--with-gnome
-CONFIGURE_ARGS+=	--without-kde
 
 BUILD_DIRS=	${WRKSRC}/src
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/celestia/celestia ${PREFIX}/bin/gcelestia
+	${INSTALL_PROGRAM} ${WRKSRC}/src/celestia/celestia \
+		${PREFIX}/bin/gcelestia
+	${INSTALL_DATA} ${WRKSRC}/src/celestia/gtk/data/celestia.schemas \
+		${PREFIX}/etc/gconf/schemas
+	${INSTALL_DATA} ${WRKSRC}/src/celestia/gtk/data/celestia.desktop \
+		${PREFIX}/share/applications/
+	${INSTALL_DATA} ${WRKSRC}/src/celestia/gtk/data/celestia.png \
+		${PREFIX}/share/pixmaps
 
-.include "../../graphics/glut/buildlink3.mk"
-.include "../../x11/gnome-libs/buildlink3.mk"
-.include "../../x11/gtkglarea/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/gtkglext/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../misc/celestia/Makefile.common"
