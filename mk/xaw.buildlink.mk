@@ -1,4 +1,4 @@
-# $NetBSD: xaw.buildlink.mk,v 1.1 2001/08/23 04:24:21 jlam Exp $
+# $NetBSD: xaw.buildlink.mk,v 1.2 2002/08/02 20:14:34 jlam Exp $
 #
 # This Makefile fragment is included by packages that use Xaw.
 #
@@ -18,6 +18,8 @@ XAW_TYPE?=	standard
 .include "../../x11/Xaw-Xpm/buildlink.mk"
 .elif ${XAW_TYPE} == "3d"
 .include "../../x11/Xaw3d/buildlink.mk"
+.elif ${XAW_TYPE} == "neXtaw"
+.include "../../x11/neXtaw/buildlink.mk"
 .else
 LIBXAW?=	-L${BUILDLINK_X11_DIR}/lib -lXaw
 MAKE_ENV+=	LIBXAW="${LIBXAW}"
