@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1589 2004/04/07 11:58:35 salo Exp $
+$NetBSD: TODO,v 1.1590 2004/04/08 13:03:09 ben Exp $
 
 Suggested new packages
 ======================
@@ -248,7 +248,6 @@ Suggested package updates
 	o marbles-1.0.6
 	o matchbox-0.8
 	o mathomatic-11.0
-	o memtest86-3.1
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o mimedefang-2.42
