@@ -1,6 +1,6 @@
 # -*- makefile -*-
 #
-# $NetBSD: Setup.in,v 1.1.1.1 2002/01/16 18:40:48 drochner Exp $
+# $NetBSD: Setup.in,v 1.2 2002/01/28 11:51:24 drochner Exp $
 #
 # The file Setup is used by the makesetup script to construct the files
 # Makefile and config.c, from Makefile.pre and config.c.in,
@@ -130,11 +130,11 @@ GLHACK=-Dclear=__GLclear
 # Modules that should always be present (non UNIX dependent):
 
 array arraymodule.c	# array objects
-cmath cmathmodule.c # -lm # complex math library functions
-math mathmodule.c # -lm # math library functions, e.g. sin()
+cmath cmathmodule.c -lm # complex math library functions
+math mathmodule.c -lm # math library functions, e.g. sin()
 strop stropmodule.c	# fast string operations implemented in C
 struct structmodule.c	# binary structure packing/unpacking
-time timemodule.c # -lm # time operations and variables
+time timemodule.c -lm # time operations and variables
 operator operator.c	# operator.add() and similar goodies
 _codecs _codecsmodule.c	# access to the builtin codecs and codec registry
 
@@ -181,9 +181,9 @@ resource resource.c	# Jeremy Hylton's rlimit interface
 # These don't work for 64-bit platforms!!!
 # These represent audio samples or images as strings:
 
-@NO64BIT@audioop audioop.c	# Operations on audio samples
-@NO64BIT@imageop imageop.c	# Operations on images
-@NO64BIT@rgbimg rgbimgmodule.c   # Read SGI RGB image files (but coded portably)
+#audioop audioop.c	# Operations on audio samples
+#imageop imageop.c	# Operations on images
+#rgbimg rgbimgmodule.c   # Read SGI RGB image files (but coded portably)
 
 
 # The md5 module implements the RSA Data Security, Inc. MD5

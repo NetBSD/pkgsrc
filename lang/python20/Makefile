@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/01/28 09:07:23 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/28 11:51:23 drochner Exp $
 #
 
 DISTNAME=	Python-2.0.1
@@ -39,21 +39,17 @@ SSLFLAGS=	-DUSE_SSL -I/usr/include/openssl -lssl -lcrypto
 
 .include "../../mk/bsd.prefs.mk"
 
-# don't build modules which don't work on all platforms
-NO64BIT=\#
 .if ${OPSYS} == "SunOS"
 ZOULARIS?=	${PREFIX}/bsd
 MODADD=		-I${ZOULARIS}/include -L${ZOULARIS}/lib -R${ZOULARIS}/lib
 .endif
 
 pre-configure:
-	${SED}  -e 's,@NO64BIT@,${NO64BIT},g' \
-		-e 's,@NOSHARED@,${NOSHARED},g' \
+	${SED}  -e 's,@NOSHARED@,${NOSHARED},g' \
 		-e 's,@MODADD@,${MODADD},g' \
 		-e 's,@SSLFLAGS@,${SSLFLAGS},g' \
 		${FILESDIR}/Setup.in >${WRKSRC}/Modules/Setup.in
-	${SED}  -e 's,@NO64BIT@,${NO64BIT},g' \
-		-e 's,@NOSHARED@,${NOSHARED},g' \
+	${SED}  -e 's,@NOSHARED@,${NOSHARED},g' \
 		-e 's,@MODADD@,${MODADD},g' \
 		${FILESDIR}/Setup.config.in >${WRKSRC}/Modules/Setup.config.in
 
