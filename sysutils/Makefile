@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.209 2003/12/23 09:14:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.210 2003/12/29 00:51:13 xtraeme Exp $
 
 COMMENT=	System utilities
 
@@ -66,6 +66,7 @@ SUBDIR+=	gmc
 SUBDIR+=	gnome-acme
 SUBDIR+=	gnome-vfs
 SUBDIR+=	gnome-vfs2
+SUBDIR+=	gnome2-system-monitor
 SUBDIR+=	gnometoaster
 SUBDIR+=	gpart
 SUBDIR+=	grub
