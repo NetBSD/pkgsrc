@@ -1,21 +1,19 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 11:18:28 agc Exp $
-
---- makefile.orig	Wed Jul 14 06:05:14 1993
-+++ makefile	Tue Apr  8 11:49:27 1997
+--- makefile.orig	Wed Jul 14 04:05:14 1993
++++ makefile	Tue Apr 25 21:02:22 2000
 @@ -7,19 +7,19 @@
  #I 	= -I/usr/include
  
  #------------------------------------------
 -#  OPTIONEN SUN
-+#  OPTIONEN FreeBSD
++#  OPTIONEN FreeBSD / NetBSD
  #------------------------------------------
 -O	= -O
 -I 	= -I/usr/local/X11R5/include
 +O	= -O2
-+I 	= -I/usr/X11R6/include
++I 	= -I${X11BASE}/include
  
 -L 	= -L/usr/local/X11R5/lib -lXaw -lXmu -lXt -lXext -lX11 -lm
-+L 	= -L/usr/X11R6/lib -lXaw -lXmu -lXt -lXext -lX11 -lm
++L 	= -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXaw -lXmu -lXt -lXext -lX11 -lm
  
  
  #------------------------------------------
