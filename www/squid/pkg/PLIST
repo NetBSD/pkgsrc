@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/26 04:56:14 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/04/14 10:05:02 tron Exp $
 etc/rc.d/squid
 libexec/cachemgr.cgi
-libexec/dnsserver
 libexec/pinger
 libexec/unlinkd
 sbin/RunAccel
