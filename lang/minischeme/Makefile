@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 09:07:20 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:17:56 hubertf Exp $
 
 DISTNAME=	minischeme
 PKGNAME=	minischeme-0.85
@@ -13,7 +13,7 @@ post-extract:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/miniscm ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/minischeme
+	${INSTALL_DATA_DIR} ${PREFIX}/share/minischeme
 	for i in init.scm nextleaf.scm tools.scm; do \
 		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/minischeme; \
 	done

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 17:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:28 hubertf Exp $
 
 DISTNAME=	tk8.3.2
 PKGNAME=	tk-8.3.2
@@ -23,9 +23,9 @@ USE_LIBTOOL=	yes
 post-install:
 	${RM} -f ${PREFIX}/bin/wish
 	cd ${PREFIX}/bin && ${LN} -s wish8.3 wish
-	${MKDIR} ${PREFIX}/include/tk
-	${MKDIR} ${PREFIX}/include/tk/generic
-	${MKDIR} ${PREFIX}/include/tk/unix
+	${INSTALL_DATA_DIR} ${PREFIX}/include/tk
+	${INSTALL_DATA_DIR} ${PREFIX}/include/tk/generic
+	${INSTALL_DATA_DIR} ${PREFIX}/include/tk/unix
 	${INSTALL_DATA} ${WRKSRC}/../generic/default.h ${PREFIX}/include/tk/generic
 	${INSTALL_DATA} ${WRKSRC}/../generic/tk.h ${PREFIX}/include/tk/generic
 	${INSTALL_DATA} ${WRKSRC}/../generic/tk3d.h ${PREFIX}/include/tk/generic

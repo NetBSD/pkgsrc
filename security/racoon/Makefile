@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/02/22 02:12:32 itojun Exp $
+# $NetBSD: Makefile,v 1.32 2001/02/25 04:18:13 hubertf Exp $
 #
 
 DISTNAME=	racoon-20010222a
@@ -43,11 +43,11 @@ pre-configure:
 	(cd ${WRKSRC}/../libipsec; ${MAKE})
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/racoon
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/racoon
 	for i in FAQ README.certificate; do \
 		${INSTALL_DATA} ${WRKSRC}/doc/$$i ${PREFIX}/share/doc/racoon; \
 	done
-	${MKDIR} ${PREFIX}/share/examples/racoon
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/racoon
 	${INSTALL_DATA} ${WRKSRC}/samples/racoon.conf.sample \
 		${PREFIX}/share/examples/racoon
 

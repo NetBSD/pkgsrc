@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/02/16 14:38:42 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2001/02/25 04:17:42 hubertf Exp $
 #
 
 DISTNAME=		pthreads-1_60_beta6
@@ -30,7 +30,7 @@ post-configure:
 	@${ECHO} "#define HAVE_SYSCALL_SIGSUSPEND 1" >> ${WRKSRC}/config.h
 
 pre-install:
-	${MKDIR} ${PREFIX}/pthreads
+	${INSTALL_DATA_DIR} ${PREFIX}/pthreads
 
 post-install:
 	@${RM} -f ${PREFIX}/pthreads/lib/libpthread_pic.a

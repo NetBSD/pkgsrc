@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 14:39:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:43 hubertf Exp $
 
 DISTNAME=	stooop-4.1.1
 CATEGORIES=	x11 tcl
@@ -15,11 +15,11 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/tcl/stooop
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/tcl/stooop
 	${INSTALL_DATA} ${WRKSRC}/pkgIndex.tcl ${PREFIX}/lib/tcl/stooop
 	${INSTALL_DATA} ${WRKSRC}/stooop.tcl ${PREFIX}/lib/tcl/stooop
 	${INSTALL_DATA} ${WRKSRC}/switched.tcl ${PREFIX}/lib/tcl/stooop
-	${MKDIR} ${PREFIX}/share/doc/tcl/stooop
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcl/stooop
 	${INSTALL_DATA} ${WRKSRC}/stooop.htm ${PREFIX}/share/doc/tcl/stooop
 	${INSTALL_DATA} ${WRKSRC}/switched.htm ${PREFIX}/share/doc/tcl/stooop
 

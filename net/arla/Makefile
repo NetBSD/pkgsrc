@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/02/24 02:09:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/25 04:18:03 hubertf Exp $
 #
 
 DISTNAME=		arla-0.34.5
@@ -93,7 +93,7 @@ post-install:
 		${ECHO} "Arla cache dir (${CACHEDIR}) already exists";        \
 	else                                                                  \
 		${ECHO} "Creating arla cache directory ${CACHEDIR}";          \
-		${MKDIR} ${CACHEDIR};                                         \
+		${INSTALL_DATA_DIR} ${CACHEDIR};                              \
 		${CHMOD} 700 ${CACHEDIR};                                     \
 		${CHOWN} root ${CACHEDIR};                                    \
 	fi
@@ -103,7 +103,7 @@ post-install:
 		${ECHO} "Creating /sbin/mount_xfs";                           \
 		${LN} -s ${PREFIX}/bin/mount_xfs /sbin/mount_xfs;             \
 	fi
-	@-${MKDIR} ${PREFIX}/share/examples/arla
+	@-${INSTALL_DATA_DIR} ${PREFIX}/share/examples/arla
 	@${SED} -e 's|@PREFIX@|${PREFIX}|g'                                   \
 		< ${FILESDIR}/lkm.conf                                        \
 		> ${PREFIX}/share/examples/arla/lkm.conf

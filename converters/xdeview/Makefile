@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/02/16 13:59:32 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/25 04:17:39 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/02/24 21:43:45 jseger Exp
 #
 
@@ -25,13 +25,13 @@ CONFIGURE_ENV=	LDFLAGS=-s\
 ALL_TARGET=	xdeview
 INSTALL_TARGET=	install-tcl
 
-PORTDOCDIR?=	share/doc/xdeview
+PORTDOCDIR=	${PREFIX}/share/doc/xdeview
 DOCFILES=	${FILESDIR}/porting.notes ${WRKSRC}/HOWTO
 
 post-install:
-	@${ECHO_MSG} "===>  Copying documents to ${PREFIX}/${PORTDOCDIR}"
-	@${MKDIR} ${PREFIX}/${PORTDOCDIR}
-	${INSTALL_MAN} ${DOCFILES} ${PREFIX}/${PORTDOCDIR}
-	${INSTALL_MAN} ${WRKSRC}/man/xdeview.1 ${PREFIX}/man/man1
+	@${ECHO_MSG} "===>  Copying documents to ${PORTDOCDIR}"
+	@${INSTALL_DATA_DIR} ${PORTDOCDIR}
+	${INSTALL_DATA} ${DOCFILES} ${PORTDOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/man/xdeview.1 ${PREFIX}/man/man1
 
 .include "../../mk/bsd.pkg.mk"

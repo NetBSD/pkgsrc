@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/02/17 18:38:25 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2001/02/25 04:17:46 hubertf Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}nb2
 CATEGORIES=		emulators
@@ -33,7 +33,7 @@ do-install:
 	for FILE in ${WRKDIR}/*.sh; do \
 	  ${INSTALL_SCRIPT} $$FILE ${PREFIX}/sbin/`basename $$FILE .sh`; \
 	done
-	${MKDIR} ${EMULDIR}/dev
+	${INSTALL_DATA_DIR} ${EMULDIR}/dev
 	${LN} -fs /dev/sound ${EMULDIR}/dev/dsp
 	${LN} -fs /dev/null ${EMULDIR}/dev/null
 	@${CP} ${WRKDIR}/PLIST ${PLIST_SRC}

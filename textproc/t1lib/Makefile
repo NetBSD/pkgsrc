@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/17 17:37:43 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/25 04:18:17 hubertf Exp $
 #
 
 DISTNAME=	t1lib-1.0.1
@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/T1-1.0.1
 ALL_TARGET=	without_doc
 
 post-install:
-	${MKDIR} ${PREFIX}/share/t1lib
+	${INSTALL_DATA_DIR} ${PREFIX}/share/t1lib
 	cd ${WRKSRC}; \
 	  ${PAX} -rw Fonts ${PREFIX}/share/t1lib; \
 	  ${CHMOD} go+r ${PREFIX}/share/t1lib/Fonts/enc/IsoLatin2.enc; \

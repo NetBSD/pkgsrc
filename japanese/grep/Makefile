@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 15:25:16 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:53 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1999/01/27 07:41:16 fenner Exp $
 
 DISTNAME=	grep-2.0
@@ -14,7 +14,7 @@ GNU_CONFIGURE=	yes
 PATCH_STRIP=	-p1
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/ja-grep
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ja-grep
 	${INSTALL_DATA} ${WRKSRC}/README.MB ${PREFIX}/share/doc/ja-grep
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/17 18:19:07 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/25 04:18:05 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/12/01 01:22:54 obrien Exp 
 #
 
@@ -19,7 +19,7 @@ SCRIPTS_ENV+=	PERL5=${PERL5}
 # on the files, please look at scripts/configure first.
 
 pre-install:
-	${MKDIR} ${PREFIX}/lib/mirror
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/mirror
 
 post-install:
 	@if [ ! -f ${PREFIX}/lib/mirror/mirror.defaults ]; then \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/02/17 17:54:47 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2001/02/25 04:18:10 hubertf Exp $
 
 DISTNAME=		inn-2.3.1
 CATEGORIES=		news
@@ -70,12 +70,12 @@ post-build:
 	done
 
 pre-install:
-	${MKDIR} ${INN_DATA_DIR} ${PREFIX}/etc/nntp ${PREFIX}/inn
+	${INSTALL_DATA_DIR} ${INN_DATA_DIR} ${PREFIX}/etc/nntp ${PREFIX}/inn
 
 post-install:
 	${RM} -f ${PREFIX}/bin/inews
 	${LN} -s ../inn/bin/inews ${PREFIX}/bin/inews
-	${MKDIR} ${PREFIX}/share/examples/inn
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/inn
 	for FILE in `ls -1 ${WRKSRC}/samples/* | \
 		     ${EGREP} -v '(Makefile|.*\.(in|orig)$$)'`; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/examples/inn; \

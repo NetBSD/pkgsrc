@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2001/02/17 17:50:09 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2001/02/25 04:18:14 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -192,7 +192,7 @@ post-build:
 	fi
 
 post-install:
-	@${MKDIR} ${PREFIX}/share/examples/ssh
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ssh
 	@${MKDIR} ${WRKDIR}${SSH_CONF_DIR}
 	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} \
 		-f ${MAKEFILE} install_prefix=${WRKDIR} install-configs)

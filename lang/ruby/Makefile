@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/02/17 09:07:27 agc Exp $
+# $NetBSD: Makefile,v 1.19 2001/02/25 04:17:56 hubertf Exp $
 #
 
 DISTNAME=	ruby-1.4.6
@@ -40,9 +40,9 @@ post-patch:
 
 post-install:
 	strip ${PREFIX}/bin/ruby
-	${MKDIR} ${PREFIX}/share/examples/ruby
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ruby
 	${INSTALL_DATA} ${WRKSRC}/sample/* ${PREFIX}/share/examples/ruby
-	${MKDIR} ${PREFIX}/share/examples/ruby/misc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ruby/misc
 	${INSTALL_DATA} ${WRKSRC}/misc/* ${PREFIX}/share/examples/ruby/misc
 
 .include "../../mk/bsd.pkg.mk"

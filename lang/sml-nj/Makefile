@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/17 09:07:30 agc Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/25 04:17:56 hubertf Exp $
 # FreeBSD Id: ports/lang/sml-nj/Makefile,v 1.9 1999/08/25 06:35:27 obrien Exp
 
 DISTNAME=	${SML_VERSION}-bin.${BOX}-unix
@@ -74,7 +74,7 @@ do-build:
 # 6. copy the aliases in ./lib changing WRKDIR to SML_LIBDIR
 # 7. install links to executables in $PREFIX/bin
 do-install:
-	${MKDIR} ${SML_BASE} ${SML_BINDIR} ${SML_LIBDIR}
+	${INSTALL_DATA_DIR} ${SML_BASE} ${SML_BINDIR} ${SML_LIBDIR}
 	${GTAR} -C ${WRKDIR} -cf - bin | ${GTAR} -C ${SML_BASE} -xf -
 	${RM} -f ${SML_BINDIR}/.run-sml
 	${SED} -e "s,^BIN_DIR=.*\$$,BIN_DIR=${SML_BINDIR}," \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/17 17:50:02 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/25 04:18:13 hubertf Exp $
 #
 
 DISTNAME=	pgp50i-unix-src
@@ -49,7 +49,7 @@ post-patch:
 	${MV} ${WRKSRC}/man/pgp.1 ${WRKSRC}/man/pgp5.1
 
 post-install:
-	-${MKDIR} ${PGPLIB}
+	${INSTALL_DATA_DIR} ${PGPLIB}
 	${INSTALL_DATA} ${WRKSRC}/language50.txt ${PGPLIB}
 
 .include "../../mk/bsd.pkg.mk"

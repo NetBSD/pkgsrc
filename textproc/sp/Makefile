@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:37:42 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/25 04:18:17 hubertf Exp $
 #
 
 DISTNAME=	sp-1.3.4
@@ -21,7 +21,7 @@ CONFLICTS+=	opensp-*
 MAKE_ENV+=	INSTALL="${INSTALL}"
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/sp ${PREFIX}/share/sgml/dtd
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sp ${PREFIX}/share/sgml/dtd
 	cd ${WRKSRC}/doc; for n in *.htm ; do ${INSTALL_DATA} $$n ${PREFIX}/share/doc/sp/$n ; done
 	cd ${WRKSRC}/pubtext; for n in * ; do ${INSTALL_DATA} $$n ${PREFIX}/share/sgml/dtd/$n ; done
 	cd ${WRKSRC}/lib; ${INSTALL_DATA} libsp.a ${PREFIX}/lib/libsp.a

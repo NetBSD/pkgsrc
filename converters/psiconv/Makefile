@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 13:59:27 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/25 04:17:39 hubertf Exp $
 #
 
 DISTNAME=	psiconv-0.6.1
@@ -25,7 +25,7 @@ CONFIGURE_ENV+=	CPPFLAGS="`${MAGICK_CONFIG} --cppflags` -DIMAGEMAGICK" \
 		LIBS="${LIBS} `${MAGICK_CONFIG} --libs`"
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/psiconv
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/psiconv
 .for file in ascii html html4
 	${INSTALL_DATA} ${WRKSRC}/docs/${file} ${PREFIX}/share/doc/psiconv
 .endfor

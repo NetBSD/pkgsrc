@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:21:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 04:18:21 hubertf Exp $
 
 DISTNAME=	X.V11R3uwm
 PKGNAME=	uwm-19881027
@@ -20,7 +20,7 @@ post-patch:
 		>${WRKSRC}/uwm.man
 
 post-install:
-	${MKDIR} ${PREFIX}/lib/X11/uwm
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/uwm
 	${INSTALL_DATA} ${WRKSRC}/default.uwmrc ${PREFIX}/lib/X11/uwm/system.uwmrc
 
 .include "../../mk/bsd.pkg.mk"

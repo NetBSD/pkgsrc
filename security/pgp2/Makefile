@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/02/22 07:43:08 tron Exp $
+# $NetBSD: Makefile,v 1.30 2001/02/25 04:18:12 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -82,7 +82,7 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pgp ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/doc/pgp.1 ${PREFIX}/man/man1
-	-${MKDIR} ${PGPLIB}
+	${INSTALL_DATA_DIR} ${PGPLIB}
 	cd ${WRKDIR}/doc && ${INSTALL_DATA} pgpdoc1.txt pgpdoc2.txt ${PGPLIB}
 	cd ${WRKDIR} && \
 		${INSTALL_DATA} de.hlp en.hlp es.hlp fr.hlp pgp.hlp ${PGPLIB}

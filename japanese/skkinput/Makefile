@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 15:25:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/25 04:17:54 hubertf Exp $
 
 DISTNAME=	skkinput-2.03
 CATEGORIES=	japanese
@@ -25,7 +25,7 @@ post-build:
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/skkinput.man ${PREFIX}/man/ja_JP.EUC/man1/skkinput.1
-	${MKDIR} ${PREFIX}/share/doc/skkinput
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/skkinput
 	${INSTALL_DATA} ${WRKSRC}/README.jis	${PREFIX}/share/doc/skkinput
 	${INSTALL_DATA} ${WRKSRC}/FAQ.jis	${PREFIX}/share/doc/skkinput
 	${INSTALL_DATA} ${WRKSRC}/BUGS.jis	${PREFIX}/share/doc/skkinput

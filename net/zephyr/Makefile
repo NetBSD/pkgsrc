@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/02/17 18:20:01 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/02/25 04:18:10 hubertf Exp $
 #
 
 DISTNAME=	zephyr-2.0.4
@@ -27,10 +27,10 @@ ZEPHYR_DOCDIR=	${PREFIX}/share/doc/zephyr
 ZEPHYR_DOCS=	INSTALL NOTES OPERATING README USING
 
 post-install:
-	${MKDIR} ${ZEPHYR_RCDIR}
+	${INSTALL_DATA_DIR} ${ZEPHYR_RCDIR}
 	${SED} -e 's|@prefix@|'${PREFIX}'|g' < ${FILESDIR}/zhm.sh > ${WRKDIR}/zhm.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/zhm.sh ${ZEPHYR_RCDIR}/zhm
-	${MKDIR} ${ZEPHYR_DOCDIR}
+	${INSTALL_DATA_DIR} ${ZEPHYR_DOCDIR}
 	for file in ${ZEPHYR_DOCS} ; do \
 	    ${INSTALL_DATA} ${WRKSRC}/$$file ${ZEPHYR_DOCDIR} ; \
 	    done

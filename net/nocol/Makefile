@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/17 18:19:18 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/25 04:18:06 hubertf Exp $
 #
 
 DISTNAME=		nocol-4.3.1
@@ -41,7 +41,7 @@ post-patch:
 post-install:
 	# Ensure webnocol audio and images files are available if needed
 	#
-	${MKDIR} ${PREFIX}/share/nocol/gifs
+	${INSTALL_DATA_DIR} ${PREFIX}/share/nocol/gifs
 
 	for f in critical.wav error.wav warning.wav ; do		\
 	    ${INSTALL_DATA} ${WRKSRC}/webnocol/$$f ${PREFIX}/share/nocol; \

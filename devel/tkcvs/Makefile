@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/02/16 14:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/25 04:17:43 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:24 jseger Exp
 #
 
@@ -22,7 +22,7 @@ do-install:
 	(cd ${WRKSRC}/tkcvs; ${SETENV} ${MAKE_ENV} ${SH} ./doinstall)
 
 post-install:
-	${MKDIR} ${PREFIX}/share/doc/tkcvs
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tkcvs
 	${INSTALL_DATA} ${WRKSRC}/README.tkcvs ${PREFIX}/share/doc/tkcvs/
 	${INSTALL_DATA} ${WRKSRC}/tkdiff/README ${PREFIX}/share/doc/tkcvs/README.tkdiff
 
