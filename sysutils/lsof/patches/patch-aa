@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.8 1999/05/05 17:32:45 bad Exp $
+$NetBSD: patch-aa,v 1.9 1999/06/02 16:14:53 christos Exp $
 
---- Configure.orig	Sat Feb 27 16:40:33 1999
-+++ Configure	Wed May  5 18:46:07 1999
-@@ -1482,6 +1482,9 @@
-       1.3*)
+--- Configure.orig	Tue May 11 07:40:20 1999
++++ Configure	Mon May  3 11:53:20 1999
+@@ -1575,6 +1575,9 @@
+       1.4*)
  	LSOF_VERS="1030"
  	;;
 +      1.4*)
@@ -12,16 +12,7 @@ $NetBSD: patch-aa,v 1.8 1999/05/05 17:32:45 bad Exp $
        *)
  	echo Unknown NetBSD release: `uname -r`
  	echo Assuming NetBSD 1.0
-@@ -1493,7 +1496,7 @@
-     # Test for legal NetBSD version.
- 
-     case $LSOF_VERS in	# {
--    1000|1010|1020|1030)
-+    1000|1010|1020|1030|1040)
-       ;;
-     *)
-       echo "Unsupported NetBSD version: $LSOF_VERS"
-@@ -1575,7 +1578,13 @@
+@@ -1668,7 +1671,13 @@
  	if test $? -eq 0	# {
  	then
  	  NETBSD_UVM="Y"
@@ -34,9 +25,9 @@ $NetBSD: patch-aa,v 1.8 1999/05/05 17:32:45 bad Exp $
 +	  esac				# }
 +	fi		# }
        fi	# }
-     fi	# }
-     rm -rf dialects/n+obsd/uvm_include
-@@ -2921,7 +2930,7 @@
+       if test "X$NETBSD_UVM" = "X"	# {
+       then
+@@ -3037,7 +3046,7 @@
    then
      echo "AR=	$LSOF_AR" >> ${LSOF_LIB}/$LSOF_LIBMKF
    fi	# }

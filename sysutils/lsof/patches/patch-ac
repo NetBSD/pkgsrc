@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 1999/05/20 10:32:37 kleink Exp $
+$NetBSD: patch-ac,v 1.3 1999/06/02 16:14:53 christos Exp $
 
---- dialects/n+obsd/dproc.c.orig	Tue Nov 24 02:11:24 1998
-+++ dialects/n+obsd/dproc.c	Thu May 20 10:45:27 1999
+--- dialects/n+obsd/dproc.c.orig	Sun May  9 15:56:13 1999
++++ dialects/n+obsd/dproc.c	Mon May  3 12:03:10 1999
 @@ -150,6 +150,9 @@
  gather_proc_info()
  {
@@ -10,9 +10,9 @@ $NetBSD: patch-ac,v 1.2 1999/05/20 10:32:37 kleink Exp $
 +	struct cwdinfo cwdi;
 +#endif
  	int i, nf;
- 	static int nofb = 0;
+ 	MALLOC_S nb;
  	static struct file **ofb = NULL;
-@@ -208,23 +211,53 @@
+@@ -215,23 +218,53 @@
  		(UID_ARG)uid, p->P_COMM, (int)pss, (int)sf);
  	    Plf = (struct lfile *)NULL;
  	    Kpa = (KA_T)p->P_ADDR;
@@ -66,7 +66,7 @@ $NetBSD: patch-ac,v 1.2 1999/05/20 10:32:37 kleink Exp $
  		if (Lf->sf)
  		    link_lfile();
  	    }
-@@ -394,11 +427,11 @@
+@@ -422,11 +455,11 @@
  	int i, j;
  	KA_T ka;
  	int n = 0;
