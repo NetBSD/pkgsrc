@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/03/26 02:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2004/05/10 02:10:14 snj Exp $
 #
 
 DISTNAME=		krb4-1.2.1
@@ -21,7 +21,7 @@ CONFLICTS+=		libdes-[0-9]*
 
 CRYPTO=			yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -80,5 +80,5 @@ post-install:
 
 # Enable line below once it's needed
 #.include "../../mk/automake.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

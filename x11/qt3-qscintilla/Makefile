@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/24 15:30:34 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/10 02:10:14 snj Exp $
 #
 
 DISTNAME=		qscintilla-1.54-x11-gpl-1.2
@@ -16,7 +16,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/qt
 BUILD_DEPENDS+=		qt3-tools-3.*:../../x11/qt3-tools
 
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 
 MAKE_ENV+=	QTPREFIX=${QTDIR}
@@ -29,5 +29,5 @@ do-install:
 		${INSTALL_DATA} libqscintilla.la ${QTDIR}/lib)
 	(cd ${WRKSRC} && ${CP} qextscintilla*.h ${QTDIR}/include)
 
-.include "../../x11/qt3-libs/buildlink2.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
