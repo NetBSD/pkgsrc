@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/24 00:32:03 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/24 11:15:52 agc Exp $
 
 DISTNAME=	shmux-0.10a
 CATEGORIES=	sysutils
@@ -9,9 +9,9 @@ MAINTAINER=	shmux@taranis.org
 HOMEPAGE=	http://web.taranis.org/shmux/
 COMMENT=	Shell Multiplexor
 
-DEPENDS+=	pcre-[0-9]*:../../devel/pcre
-
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 ALL_TARGET=	shmux
 
+.include "../../devel/pcre/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
