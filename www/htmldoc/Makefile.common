@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.7 2003/07/17 22:55:36 grant Exp $
+# $NetBSD: Makefile.common,v 1.8 2004/01/20 12:27:58 agc Exp $
 #
 
 HTMLDOC_VERSION=	1.8.23
 DISTNAME=		htmldoc-${HTMLDOC_VERSION}-source
-WRKSRC=			${WRKDIR}/htmldoc-${HTMLDOC_VERSION}
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.easysw.com/pub/htmldoc/${HTMLDOC_VERSION}/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,6 +16,7 @@ DISTINFO_FILE=		${.CURDIR}/../htmldoc/distinfo
 PATCHDIR=		${.CURDIR}/../htmldoc/patches
 PLIST_SRC=		${.CURDIR}/../htmldoc/PLIST
 
+WRKSRC=			${WRKDIR}/htmldoc-${HTMLDOC_VERSION}
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 

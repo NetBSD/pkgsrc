@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/09/02 23:14:44 jmc Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:22:19 agc Exp $
 
 DISTNAME=		LambdaMOO-1.8.1
 PKGNAME=		lambdamoo-1.8.1
-WRKSRC=			${WRKDIR}/MOO-1.8.1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.place.org/pub/moo/ \
 			${MASTER_SITE_SOURCEFORGE:=lambdamoo/} \
@@ -29,6 +28,7 @@ _PKG_USER_SHELL=	${SH}
 
 FILES_SUBST+=		LAMBDAMOO_HOME=${LAMBDAMOO_HOME}
 
+WRKSRC=			${WRKDIR}/MOO-1.8.1
 ALL_TARGET=
 GNU_CONFIGURE=		yes
 

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2004/01/07 02:21:16 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:22:22 agc Exp $
 #
 
 DISTNAME=	spread-src-3.17.1
 PKGNAME=	${DISTNAME:S/-src//}
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://www.cnds.jhu.edu/download/noformdown/
 
@@ -12,6 +11,7 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.spread.org/
 COMMENT=	Group communication system providing a number of messaging services
 
+WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_PERL5=	build
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES

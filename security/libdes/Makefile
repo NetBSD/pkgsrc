@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:42:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:25:34 agc Exp $
 
 DISTNAME=	libdes-4.04b
-WRKSRC=         ${WRKDIR}/des
 CATEGORIES=	security
 MASTER_SITES=   ftp://ftp.psy.uq.oz.au/pub/Crypto/DES/
 
 MAINTAINER=	refling@comet.lbl.gov
 COMMENT=	Small DES (Data Encryption Standard) lib & standalone program
 
+WRKSRC=         ${WRKDIR}/des
 CRYPTO=		YES
 
 .include "../../mk/bsd.pkg.mk"

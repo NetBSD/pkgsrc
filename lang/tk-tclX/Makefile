@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:45:34 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/20 12:19:18 agc Exp $
 #
 
 DISTNAME=	tclX8.2.0
 PKGNAME=	tk-tclX-8.2.0
-WRKSRC=		${WRKDIR}/tclX8.2.0/unix
 CATEGORIES=	lang tcl tk
 MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/TclX/
 
@@ -16,6 +15,7 @@ DEPENDS+=	tcl-tclX-8.2.0:../../lang/tcl-tclX
 
 CONFLICTS+=	tclX-[0-9]*
 
+WRKSRC=		${WRKDIR}/tclX8.2.0/unix
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared --with-tcl=${PREFIX}/lib \

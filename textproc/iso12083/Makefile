@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:42:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:26:49 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/06/27 05:19:39 asami Exp
 #
 
 DISTNAME=	iso12083-1993
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://info.ex.ac.uk/pub/SGML/ISO-12083/ \
 		ftp://ftp.ifi.uio.no/pub/SGML/ISO12083/ \
@@ -17,6 +16,7 @@ COMMENT=	SGML DTDs from the The Electronic Publishing Special Interest Group
 
 DIST_SUBDIR=	iso12083
 
+WRKSRC=		${WRKDIR}
 NO_MTREE=	yes
 NO_BUILD=	yes
 EXTRACT_ONLY=	# empty

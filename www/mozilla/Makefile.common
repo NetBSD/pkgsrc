@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.26 2004/01/17 00:04:49 taya Exp $
+# $NetBSD: Makefile.common,v 1.27 2004/01/20 12:27:59 agc Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
 PKGNAME=	${MOZILLA}-${MOZ_VER}
-WRKSRC=		${WRKDIR}/mozilla
 MASTER_SITES?=	${MASTER_SITE_MOZILLA:=mozilla${MOZ_DIST_VER}/src/}
 CATEGORIES=	www
 
@@ -14,6 +13,7 @@ FILESDIR=	"../../www/mozilla/files"
 
 BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
 
+WRKSRC=		${WRKDIR}/mozilla
 USE_BUILDLINK2=	yes
 USE_GCC_SHLIB=	yes
 USE_PERL5=	build

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2003/12/09 12:54:13 abs Exp $
+# $NetBSD: Makefile,v 1.50 2004/01/20 12:23:57 agc Exp $
 
 DISTNAME=	pkgchk-1.45
-WRKSRC=		${WRKDIR}
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,6 +9,7 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=	Check installed package versions against pkgsrc
 
+WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
 

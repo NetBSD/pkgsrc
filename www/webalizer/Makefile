@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2003/07/17 22:56:07 grant Exp $
+# $NetBSD: Makefile,v 1.29 2004/01/20 12:28:00 agc Exp $
 #
 
 DISTNAME=	webalizer-2.01-10-src
 PKGNAME=	webalizer-2.1.10
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mrunix.net/pub/webalizer/ \
 		ftp://webalizer.dexa.org/pub/webalizer/ \
@@ -15,6 +14,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mrunix.net/webalizer/
 COMMENT=	Web server log file analysis program
 
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 USE_X11=		YES

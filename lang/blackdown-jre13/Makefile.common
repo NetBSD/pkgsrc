@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.13 2003/08/23 15:13:56 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.14 2004/01/20 12:19:16 agc Exp $
 #
 
 RELVERSION=	1.3.1
 BLACKDOWN_REL=	FCS-02b
 RELNAME=	${RELVERSION}-02b-FCS-linux
 EXTNAME=	${BASENAME}-${RELNAME}
-WRKSRC=		${WRKDIR}/${BASENAME}${RELVERSION}
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
 
@@ -39,6 +38,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
+WRKSRC=		${WRKDIR}/${BASENAME}${RELVERSION}
 CHECK_SHLIBS=	NO	# This would use NetBSD ldd on Linux shlibs.
 
 .include "../../mk/bsd.prefs.mk"

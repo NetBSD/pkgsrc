@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:51:50 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:18:17 agc Exp $
 #
 
 DISTNAME=	qvplay-0.94
-WRKSRC=		${WRKDIR}/QVplay094/src
 CATEGORIES=    	graphics
 MASTER_SITES=	http://www.asahi-net.or.jp/~xg2k-hys/
 
@@ -14,6 +13,7 @@ RESTRICTED=	Undistributable development version.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
+WRKSRC=		${WRKDIR}/QVplay094/src
 GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.pkg.mk"

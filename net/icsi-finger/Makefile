@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:51:14 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:22:19 agc Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.27
-WRKSRC=		${WRKDIR}/finger
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.icsi.berkeley.edu/pub/ai/stolcke/software/
 EXTRACT_SUFX=	.tar.Z
@@ -10,6 +9,7 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	is@NetBSD.org
 COMMENT=	Distributed finger service
 
+WRKSRC=		${WRKDIR}/finger
 USE_X11=	yes
 
 XMPLD=		${PREFIX}/share/examples/icsi-finger
