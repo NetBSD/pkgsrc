@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.15 2001/03/04 07:53:35 tron Exp $
+@comment $NetBSD: PLIST,v 1.16 2001/05/21 21:39:14 wiz Exp $
 include/png.h
 include/pngconf.h
 lib/libpng.a
 lib/libpng.la
 lib/libpng.so
-lib/libpng.so.1
-lib/libpng.so.1.4
+lib/libpng.so.2
+lib/libpng.so.2.0
 man/man3/libpng.3
 man/man3/libpngpf.3
 man/man5/png.5
