@@ -1,16 +1,4 @@
-#!/bin/sh
-#
-# $NetBSD: INSTALL,v 1.1 2001/10/31 22:11:16 zuntum Exp $
-
-PKGNAME=$1
-STAGE=$2
-
-CP="@CP@"
-ECHO="@ECHO@"
-GREP="@GREP@"
-LN="@LN@"
-MV="@MV@"
-RM="@RM@"
+# $NetBSD: INSTALL,v 1.2 2002/01/10 12:10:45 jlam Exp $
 
 X11BASE=@X11BASE@
 MOTIF_RULES=${PKG_PREFIX}/lib/X11/config/Motif.rules
@@ -56,4 +44,3 @@ POST-INSTALL)
 	exit 1
 	;;
 esac
-exit 0
