@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/05/09 21:14:42 snj Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/06/04 00:10:34 reed Exp $
 
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/exim4/ \
 		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim4/ \
@@ -16,7 +16,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS=		EXIM_USER EXIM_GROUP
+BUILD_DEFS=	EXIM_USER EXIM_GROUP EXIM_DB
 
 PKG_GROUPS=	${EXIM_GROUP}
 PKG_USERS=	${EXIM_USER}:${EXIM_GROUP}:8:Exim\\ mail\\ server\\ user:/var/mail:/sbin/nologin
@@ -37,6 +37,30 @@ OWN_DIRS_PERMS+=	/var/spool/exim ${EXIM_USER} ${EXIM_GROUP} 0750
 # XXX: The following will be handled by buildlink2 at some point.
 CFLAGS+=		${_STRIPFLAG_CC}
 
+.if defined(EXIM_DB) && ${EXIM_DB} == "gdbm"
+.  include "../../databases/gdbm/buildlink3.mk"
+EXIM_USE_DB_CONFIG=	USE_GDBM=yes
+EXIM_DBMLIB=		DBMLIB=-lgdbm
+EXIM_INCLUDE=		-I${PREFIX}/include
+.else # use native or Berkeley DB as defined by BDB_DEFAULT and BDB_ACCEPTED
+.  include "../../mk/bdb.buildlink3.mk"
+EXIM_USE_DB_CONFIG=	USE_DB=yes	# the default
+.  if ${BDB_TYPE} == "db4"
+EXIM_DBMLIB=		DBMLIB=-ldb4
+EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db4}
+.  elif ${BDB_TYPE} == "db3"
+EXIM_DBMLIB=		DBMLIB=-ldb3
+EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db3}
+.  elif ${BDB_TYPE} == "db2"
+EXIM_DBMLIB=		DBMLIB=-ldb2
+EXIM_INCLUDE=		-I${PREFIX}/${BUILDLINK_INCDIRS.db2}
+.  else # using native
+EXIM_DBMLIB=		# empty so use defaults
+EXIM_USE_DB_CONFIG=	# empty so use defaults
+EXIM_INCLUDE=		# empty so use defaults
+.  endif
+.endif
+
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
 	${CP} ${WRKSRC}/src/EDITME ${WRKSRC}/Local/Makefile.pkgsrc
@@ -47,6 +71,9 @@ pre-configure:
 		-e 's:@PKG_SYSCONFDIR@:${PKG_SYSCONFDIR}:' \
 		-e 's:@EXIM_USER@:${EXIM_USER}:' \
 		-e 's:@EXIM_GROUP@:${EXIM_GROUP}:' \
+		-e 's:@EXIM_USE_DB_CONFIG@:${EXIM_USE_DB_CONFIG}:' \
+		-e 's:@EXIM_DBMLIB@:${EXIM_DBMLIB}:' \
+		-e 's:@EXIM_INCLUDE@:${EXIM_INCLUDE}:' \
 		-e 's:@CHOWN@:${CHOWN}:' \
 		-e 's:@CHGRP@:${CHGRP}:' \
 		-e 's:@MV@:${MV}:' \
