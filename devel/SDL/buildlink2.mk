@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.8 2003/07/26 23:05:34 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.9 2003/12/03 01:37:57 reed Exp $
 
 .if !defined(SDL_BUILDLINK2_MK)
 SDL_BUILDLINK2_MK=	# defined
@@ -9,7 +9,8 @@ BUILDLINK_PKGSRCDIR.SDL?=	../../devel/SDL
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.SDL=SDL
 BUILDLINK_PREFIX.SDL_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.SDL=	include/SDL/*
+BUILDLINK_FILES.SDL=	bin/sdl-config
+BUILDLINK_FILES.SDL+=	include/SDL/*
 BUILDLINK_FILES.SDL+=	lib/libSDL.*
 BUILDLINK_FILES.SDL+=	lib/libSDLmain.*
 
