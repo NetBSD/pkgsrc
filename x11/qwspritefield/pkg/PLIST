@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/03/23 21:08:02 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/03/28 00:12:32 dmcmahill Exp $
 lib/libQwSpriteField.a
 lib/libQwSpriteField.so.6.0
-include/qt/Pix.h
-include/qt/QwCluster.h
-include/qt/QwPublicList.h
-include/qt/QwSpriteField.h
+qt1/include/Pix.h
+qt1/include/QwCluster.h
+qt1/include/QwPublicList.h
+qt1/include/QwSpriteField.h
