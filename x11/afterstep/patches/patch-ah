@@ -1,0 +1,36 @@
+$NetBSD: patch-ah,v 1.1 1998/08/23 07:28:45 garbled Exp $
+--- afterdoc/afterstepdoc.orig	Tue Aug 18 16:55:29 1998
++++ afterdoc/afterstepdoc	Tue Aug 18 16:57:48 1998
+@@ -6,23 +6,23 @@
+ 
+-if [ -x /usr/X11R6/bin/netscape ]
++if [ -x ###x11###/bin/netscape ]
+ then
+-  /usr/X11R6/bin/netscape /usr/share/afterstep/doc/afterstep.html
++  ###x11###/bin/netscape ###x11###/share/afterstep/doc/afterstep.html
+ elif [ -x /usr/local/bin/netscape ]
+   then
+-   /usr/local/bin/netscape /usr/share/afterstep/doc/afterstep.html
++   /usr/local/bin/netscape ###x11###/share/afterstep/doc/afterstep.html
+ elif [ -x /usr/local/netscape/netscape ]
+   then
+-  /usr/local/netscape/netscape /usr/share/afterstep/doc/afterstep.html
++  /usr/local/netscape/netscape ###x11###/share/afterstep/doc/afterstep.html
+ elif [ -x /opt/netscape/netscape ]
+   then
+-  /opt/netscape/netscape /usr/share/afterstep/doc/afterstep.html
++  /opt/netscape/netscape ###x11###/share/afterstep/doc/afterstep.html
+ elif [ -x /usr/bin/lynx ]
+   then
+-  xiterm -bg black -fg peachpuff -sl 500 -vb -e "/usr/bin/lynx /usr/share/afterstep/doc/afterstep.html"
++  xiterm -bg black -fg peachpuff -sl 500 -vb -e "/usr/bin/lynx ###x11###/share/afterstep/doc/afterstep.html"
+ elif [ -x /usr/local/bin/lynx ]
+   then
+-  xiterm -bg black -fg peachpuff -sl 500 -vb -e "/usr/local/bin/lynx /usr/share/afterstep/doc/afterstep.html"
+-elif [ -x /bin/lynx ]
++  xiterm -bg black -fg peachpuff -sl 500 -vb -e "/usr/local/bin/lynx ###x11###/share/afterstep/doc/afterstep.html"
++elif [ -x /usr/pkg/bin/lynx ]
+   then
+-  xiterm -bg black -fg peachpuff -sl 500 -vb -e "/bin/lynx /usr/share/afterstep/doc/afterstep.html"
++  xiterm -bg black -fg peachpuff -sl 500 -vb -e "/usr/pkg/bin/lynx ###x11###/share/afterstep/doc/afterstep.html"
+ fi

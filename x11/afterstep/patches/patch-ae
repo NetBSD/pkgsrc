@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 1998/08/23 07:28:45 garbled Exp $
+--- apps/asmix/asmix.c.orig	Tue Aug 18 16:21:04 1998
++++ apps/asmix/asmix.c	Tue Aug 18 16:31:24 1998
+@@ -12,3 +12,7 @@
+ #else
+-#  include <linux/soundcard.h>
++ #ifdef __NetBSD__
++ #  include <soundcard.h>
++ #else
++ #  include <linux/soundcard.h>
++ #endif
+ #endif

@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1 1998/08/23 07:28:45 garbled Exp $
+--- apps/ascd/plat_freebsd.c.orig	Tue Aug 18 16:15:06 1998
++++ apps/ascd/plat_freebsd.c	Tue Aug 18 16:18:41 1998
+@@ -32,4 +32,4 @@
+ #define MSF_FRAMES 3
+-#include "/sys/scsi/scsi_all.h"
+-#include "/sys/scsi/scsi_cd.h"
++/*#include "/sys/scsi/scsi_all.h"*/
++/*#include "/sys/scsi/scsi_cd.h"*/
+ #else
+@@ -108,3 +108,3 @@
+ 
+-#ifdef __NetBSD__
++#ifdef __NetBSDBROKE__
+ 	*startframe = toc_buffer.addr[MSF_MINUTES]*60*75 +
+@@ -186,3 +186,3 @@
+ dopos:
+-#ifdef __NetBSD__
++#ifdef __NetBSDBROKE__
+ 		*pos = scd.what.position.absaddr[MSF_MINUTES] * 60 * 75 +
