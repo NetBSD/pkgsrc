@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.36 2003/06/03 10:17:48 salo Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.37 2003/06/03 20:41:16 salo Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -168,6 +168,7 @@ if [ -n "$FLAGS" ]; then
 3.2	-march=pentium2		-march=pentiumpro
 3.2	-march=pentium3		-march=pentiumpro
 3.2	-march=pentium4		-march=pentiumpro
+3.0	-march=athlon		-march=pentiumpro
 EOD
 `
 fi
