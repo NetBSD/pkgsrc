@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:01:06 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/09/25 12:56:34 jmmv Exp $
 
 SHA1 (vilearn-1.0.shar.Z) = 08aed424df46f30c93c604f3dc79d2affe1ec70e
 Size (vilearn-1.0.shar.Z) = 25787 bytes
-SHA1 (patch-aa) = 50b90ae9c4902c14b4129e274f8bf7175a5679f4
+SHA1 (patch-aa) = 8410d97ecf7d764af139878476663a4e484a8352
