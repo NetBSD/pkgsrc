@@ -1,22 +1,32 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/05/04 02:03:26 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2002/12/25 13:18:25 jmmv Exp $
 
---- main.cpp.orig	Thu Apr 25 16:28:51 2002
-+++ main.cpp	Thu Apr 25 16:32:49 2002
-@@ -106,7 +106,7 @@
+--- main.cpp.orig	Sat Apr  6 13:07:24 2002
++++ main.cpp
+@@ -106,7 +106,7 @@ string configure_prog(bool reread) {
  
    if (!prog_config.found_rcfile) {
  
 -    rcfile = "/usr/local/etc/";
-+    rcfile = "@RCDIR@";
++    rcfile = RCDIR "/";
      rcfile += RC_FILE;
  
  #ifdef HAVE_IOS_NOCREATE
-@@ -140,7 +140,7 @@
+@@ -123,7 +123,7 @@ string configure_prog(bool reread) {
  
    if (!prog_config.found_rcfile) {
-     return_val = "Can't find or open file /etc/" RC_FILE ",\n"
+ 
+-    rcfile = "/etc/";
++    rcfile = RCDIR "/";
+     rcfile += RC_FILE;
+ 
+ #ifdef HAVE_IOS_NOCREATE
+@@ -139,8 +139,7 @@ string configure_prog(bool reread) {
+   }
+ 
+   if (!prog_config.found_rcfile) {
+-    return_val = "Can't find or open file /etc/" RC_FILE ",\n"
 -                 "/usr/local/etc/" RC_FILE;
-+                 "@RCDIR@/" RC_FILE;
++    return_val = "Can't find or open file " RCDIR "/" RC_FILE;
      if (!prog_config.homedir.empty()) {
        return_val +=  " or ";
        return_val += prog_config.homedir + "/." RC_FILE;
