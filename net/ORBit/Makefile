@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2002/04/25 12:17:04 agc Exp $
+# $NetBSD: Makefile,v 1.76 2002/04/29 18:27:17 wiz Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -15,9 +15,9 @@ BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
 
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE+=	${WRKSRC}/ltconfig
-LTCONFIG_OVERRIDE+=	${WRKSRC}/popt/ltconfig
-LTCONFIG_OVERRIDE+=	${WRKSRC}/libIDL/ltconfig
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/popt/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libIDL/libtool
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK_ONLY=	YES
