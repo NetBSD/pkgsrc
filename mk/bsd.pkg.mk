@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.960 2002/04/09 22:15:40 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.961 2002/04/10 12:03:10 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -3595,19 +3595,21 @@ print-PLIST:
 	*)		genlinks=0 ;;					\
 	esac;								\
 	${FIND} ${PREFIX}/. -newer ${EXTRACT_COOKIE} \! -type d 	\
+	 | ( ${GREP} -v emul/linux/proc || ${TRUE} )			\
+	 | ${SORT}							\
 	 | ${SED}							\
 		-e  's@${PREFIX}/./@@' 					\
 		-e  's@${OPSYS}@\$${OPSYS}@' 				\
 		-e  's@${OS_VERSION:S/./\./}@\$${OS_VERSION}@'		\
+		-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@' \
 		-e  's@${MACHINE_ARCH}@\$${MACHINE_ARCH}@' 		\
 		-e  's@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@'	\
-		-e  's@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@' \
 		-e  's@${LOWER_VENDOR}@\$${LOWER_VENDOR}@' 		\
 		-e  's@${LOWER_OPSYS}@\$${LOWER_OPSYS}@' 		\
 		-e  's@${LOWER_OS_VERSION}@\$${LOWER_OS_VERSION}@' 	\
 		-e  's@${PKGNAME}@\$${PKGNAME}@' 			\
-	 | ( ${GREP} -v emul/linux/proc || ${TRUE} )			\
-	 | ${SORT}							\
+		-e  's@${PKGVERSION}@\$${PKGVERSION}@'			\
+		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@' \
 	 | ${AWK} '							\
 		/^@/ { print $$0; next }				\
 		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { 	\
@@ -3649,17 +3651,19 @@ print-PLIST:
 		fi ;							\
 		${ECHO} @dirrm $$i ;					\
 	done								\
+	| ${GREP} -v emul/linux/proc || ${TRUE}				\
 	| ${SED}							\
 		-e  s@${OPSYS}@\$${OPSYS}@ 				\
 		-e  s@${OS_VERSION}@\$${OS_VERSION}@ 			\
+		-e  s@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@ \
 		-e  s@${MACHINE_ARCH}@\$${MACHINE_ARCH}@ 		\
 		-e  s@${MACHINE_GNU_ARCH}@\$${MACHINE_GNU_ARCH}@	\
-		-e  s@${MACHINE_GNU_PLATFORM}@\$${MACHINE_GNU_PLATFORM}@ \
 		-e  s@${LOWER_VENDOR}@\$${LOWER_VENDOR}@ 		\
 		-e  s@${LOWER_OPSYS}@\$${LOWER_OPSYS}@ 			\
 		-e  s@${LOWER_OS_VERSION}@\$${LOWER_OS_VERSION}@ 	\
 		-e  s@${PKGNAME}@\$${PKGNAME}@ 				\
-	 | ${GREP} -v emul/linux/proc || ${TRUE}
+		-e  s@${PKGVERSION}@\$${PKGVERSION}@			\
+		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@'
 .endif # target(print-PLIST)
 
 
