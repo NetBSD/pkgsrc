@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 1999/07/23 16:01:28 frueauf Exp $
+
+--- hacks/webcollage-orig	Fri Jul 16 07:20:44 1999
++++ hacks/webcollage	Wed Jul 21 22:33:52 1999
+@@ -76,7 +76,7 @@
+ my $urls_only_p = 0;
+ my $delay = 0;
+ 
+-my $wordlist = "/usr/dict/words";
++my $wordlist = "/usr/share/dict/words";
+ 
+ if (!-r $wordlist) {
+     $wordlist = "/usr/share/lib/dict/words";    # irix
