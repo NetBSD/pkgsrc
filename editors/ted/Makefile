@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/06/02 01:20:03 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/06 11:46:22 jmmv Exp $
 
 DISTNAME=	ted-2.14.src
 PKGNAME=	ted-2.14
@@ -18,6 +18,20 @@ AFMDIR=		${PREFIX}/share/Ted/afm
 INDDIR=		${PREFIX}/share/Ted/ind
 INFODIR=	${PREFIX}/share/doc/Ted
 
+CONFIGURE_ENV+=	ac_jpeg_includes="${BUILDLINK_PREFIX.jpeg}/include"
+CONFIGURE_ENV+=	ac_jpeg_libraries="${BUILDLINK_PREFIX.jpeg}/lib"
+CONFIGURE_ENV+=	ac_png_includes="${BUILDLINK_PREFIX.png}/include"
+CONFIGURE_ENV+=	ac_png_libraries="${BUILDLINK_PREFIX.png}/lib"
+CONFIGURE_ENV+=	ac_tiff_includes="${BUILDLINK_PREFIX.tiff}/include"
+CONFIGURE_ENV+=	ac_tiff_libraries="${BUILDLINK_PREFIX.tiff}/lib"
+CONFIGURE_ENV+=	ac_xm_includes="${BUILDLINK_PREFIX.openmotif}/include"
+CONFIGURE_ENV+=	ac_xm_libraries="${BUILDLINK_PREFIX.openmotif}/lib"
+CONFIGURE_ENV+=	ac_xpm_includes="${BUILDLINK_PREFIX.xpm}/include"
+CONFIGURE_ENV+=	ac_xpm_libraries="${BUILDLINK_PREFIX.xpm}/lib"
+CONFIGURE_ENV+=	ac_zlib_includes="${BUILDLINK_PREFIX.zlib}/include"
+CONFIGURE_ENV+=	ac_zlib_libraries="${BUILDLINK_PREFIX.zlib}/lib"
+
+MAKE_ENV+=	${CONFIGURE_ENV}
 MAKE_ENV+=	DEF_PKGDIR='-DPKGDIR=\"${PREFIX}\"' \
 		DEF_AFMDIR='-DAFMDIR=\"${AFMDIR}\"' \
 		DEF_INDDIR='-DINDDIR=\"${INDDIR}\"' \
@@ -60,6 +74,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/Ted/TedDocument-en_US.rtf ${INFODIR}
 	${INSTALL_DATA}	${WRKSRC}/Ted/Ted.ad ${PREFIX}/lib/X11/app-defaults/Ted
 
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
