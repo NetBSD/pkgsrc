@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2001/09/27 23:17:56 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2001/11/27 21:03:07 tron Exp $
 
 DISTNAME=		libgtop-1.0.12
+PKGNAME=		${DISTNAME}nb1
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/libgtop/}
 
