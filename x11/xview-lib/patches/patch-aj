@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.1 1998/12/28 18:52:05 tron Exp $
+
+--- lib/libxview/textsw/txt_file.c~	Sun Dec  6 18:45:10 1998
++++ lib/libxview/textsw/txt_file.c	Sat Dec 19 13:56:47 1998
+@@ -52,7 +52,11 @@
+ #endif /* SVR4 */
+ extern int      errno, sys_nerr;
+ #if (defined(BSD) && (BSD >= 199306))
++#if __NetBSD_Version__ > 103080000
++#include <errno.h>
++#else
+ extern const char *const sys_errlist[];
++#endif
+ #else
+ extern char    *sys_errlist[];
+ #endif
