@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2000/04/02 16:07:06 pooka Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/06/09 07:53:04 jlam Exp $
+bin/libmikmod-config
 include/mikmod.h
-lib/libmikmod.so.2.2
-lib/libmikmod.a
 @unexec install-info --delete %D/info/mikmod.info %D/info/dir
 info/mikmod.info
 @exec install-info %D/info/mikmod.info %D/info/dir
-bin/libmikmod-config
-share/aclocal/libmikmod.m4
+lib/libmikmod.a
+lib/libmikmod.la
+lib/libmikmod.so.2.2
 man/man1/libmikmod-config.1
+share/aclocal/libmikmod.m4
