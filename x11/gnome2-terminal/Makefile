@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/01/23 21:50:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2004/01/24 15:30:32 grant Exp $
 #
 
 DISTNAME=		gnome-terminal-2.4.2
@@ -21,7 +21,7 @@ USE_PERL5=		build
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/01/23 21:50:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.27 2004/01/24 15:30:34 grant Exp $
 #
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
@@ -10,7 +10,7 @@ CONFLICTS+=	xscreensaver<4.14 xscreensaver-demo-[0-9]*
 .include "../../x11/xscreensaver/Makefile.common"
 
 # so that the screensaver.desktop rule in ``configure'' works
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=		make
 
 CONFIGURE_ARGS+=	--with-gtk=${BUILDLINK_PREFIX.gtk}
 CONFIGURE_ARGS+=	--with-pixbuf=${BUILDLINK_PREFIX.gdk-pixbuf}
