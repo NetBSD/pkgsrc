@@ -1,28 +1,41 @@
-$NetBSD: patch-aa,v 1.6 2003/05/31 16:10:53 thorpej Exp $
+$NetBSD: patch-aa,v 1.7 2004/12/22 21:07:01 skrll Exp $
 
---- Makefile.orig	2003-03-02 15:44:14.000000000 -0800
-+++ Makefile	2003-05-31 08:55:03.000000000 -0700
-@@ -3,24 +3,24 @@
+--- Makefile.orig	2004-10-30 18:32:50.000000000 +0100
++++ Makefile
+@@ -3,28 +3,30 @@
  # Note: -O2 is sometimes broken in GCC when setjump/longjump is being
  # used. Try -O2 only with released simulators.
  #
 -ifeq ($(WIN32),)
 +#ifeq ($(WIN32),)
  #Unix Environments
- CC = gcc -O2 -lm -I . 
- #CC = gcc -O2 -g -lm -I . 
+-ifeq ($(OSTYPE),solaris)
+-OS_CCDEFS = -lsocket -lnsl -lpthread -D_GNU_SOURCE
+-else
+-OS_CCDEFS = -D_GNU_SOURCE
+-endif
+-CC = gcc -std=c99 -O2 -U__STRICT_ANSI__ -g -lm $(OS_CCDEFS) -I .
 -ifeq ($(USE_NETWORK),)
 -else
-+#ifeq ($(USE_NETWORK),)
-+#else
- NETWORK_OPT = -DUSE_NETWORK -lpcap
+-NETWORK_OPT = -DUSE_NETWORK -isystem /usr/local/include /usr/local/lib/libpcap.a
 -endif
 -else
++#ifeq ($(OSTYPE),solaris)
++#OS_CCDEFS = -lsocket -lnsl -lpthread -D_GNU_SOURCE
++#else
++#OS_CCDEFS = -D_GNU_SOURCE
++#endif
++#CC = gcc -std=c99 -O2 -U__STRICT_ANSI__ -g -lm $(OS_CCDEFS) -I .
++CC = gcc -O2 -g -lm -I . -DDONT_USE_PCAP_FINDALLDEVS -DNEED_PCAP_SENDPACKET
++#ifeq ($(USE_NETWORK),)
++#else
++#NETWORK_OPT = -DUSE_NETWORK -isystem /usr/local/include /usr/local/lib/libpcap.a
++NETWORK_OPT = -DUSE_NETWORK -lpcap
 +#endif
 +#else
  #Win32 Environments
 -LDFLAGS = -lm -lwsock32
--CC = gcc -O0 -I.
+-CC = gcc -std=c99 -U__STRICT_ANSI__ -O0 -I.
 -EXE = .exe
 -ifeq ($(USE_NETWORK),)
 -else
@@ -30,7 +43,7 @@ $NetBSD: patch-aa,v 1.6 2003/05/31 16:10:53 thorpej Exp $
 -endif
 -endif
 +#LDFLAGS = -lm -lwsock32
-+#CC = gcc -O0 -I.
++#CC = gcc -std=c99 -U__STRICT_ANSI__ -O0 -I.
 +#EXE = .exe
 +#ifeq ($(USE_NETWORK),)
 +#else
@@ -40,7 +53,7 @@ $NetBSD: patch-aa,v 1.6 2003/05/31 16:10:53 thorpej Exp $
  
  
  #
-@@ -223,11 +223,11 @@
+@@ -252,11 +254,11 @@ ALL = ${BIN}pdp1${EXE} ${BIN}pdp4${EXE} 
  all : ${ALL}
  
  clean :
