@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5466 2004/04/06 14:54:17 manu Exp $
+$NetBSD: CHANGES,v 1.5467 2004/04/06 15:50:50 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1821,3 +1821,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gst-plugins-theora-0.8.0 [jmmv 2004-04-06]
 	Added gst-player-0.8.0 [jmmv 2004-04-06]
 	Updated bind9 to 9.2.3nb3 [manu 2004-04-06]
+	Updated gnome2-games to 2.6.0nb1 [jmmv 2004-04-06]
