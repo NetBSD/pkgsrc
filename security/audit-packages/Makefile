@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 17:49:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/20 10:36:18 agc Exp $
 
-DISTNAME=	audit-packages-1.3
+DISTNAME=	audit-packages-1.4
 CATEGORIES=	security pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,7 +14,7 @@ NO_BUILD=	yes
 NO_MTREE=	yes
 
 do-configure:
-	@for f in audit-packages download-vulnerability-list; do		\
+	@for f in audit-packages download-vulnerability-list; do	\
 		${SED} -e 's|\$${DISTDIR}|${DISTDIR}|g' 		\
 			-e 's|\$${AWK}|${AWK}|g'			\
 			-e 's|\$${FETCH_CMD}|${FETCH_CMD}|g'		\
@@ -24,7 +24,7 @@ do-configure:
 	done
 
 do-install:
-	@for f in audit-packages download-vulnerability-list; do		\
+	@for f in audit-packages download-vulnerability-list; do	\
 		${BSD_INSTALL_SCRIPT} ${WRKSRC}/$$f ${PREFIX}/sbin;	\
 	done
 
