@@ -1,9 +1,9 @@
-$NetBSD: MESSAGE,v 1.4 2001/08/21 14:01:19 taca Exp $
+$NetBSD: MESSAGE,v 1.5 2001/09/24 03:56:03 taca Exp $
 
 *WARNING*:
 
-1. Index file format has changed since namazu 2.0.  If you upgrade
-   from namazu 1.X, you need to rebuild index files.
+1. Since index file format is differnet from namazu 1.X, you need to
+   rebuild index files if you upgrade from namazu 1.X.
 
 2. In order to processing Japanese, you need to set "LC_ALL", "LANG"
    or "LC_CTYPE" environment to "ja".  Or use --indexing-lang option
@@ -16,3 +16,10 @@ $NetBSD: MESSAGE,v 1.4 2001/08/21 14:01:19 taca Exp $
    for perl to stop the warning on NetBSD 1.5.X and before.
    On NetBSD current (1.6 or later), you don't need to set
    "PERL_BADLANG" but "LC_LANG" environment.
+
+This package includes some bug fixes after namazu 2.0.7 release.  Here
+is referenced URLs and modified files in source tree.
+
+http://www.namazu.org/ml/namazu-users-ja/msg02073.html	pl/util.pl
+http://www.namazu.org/ml/namazu-devel-ja/msg02024.html	pl/htmlsplit.pl
+http://www.namazu.org/ml/namazu-devel-ja/msg02030.html	scripts/mknmz.in

@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2001/09/24 03:56:02 taca Exp $
+
+--- scripts/mknmz.in.orig	Wed Aug 22 15:16:20 2001
++++ scripts/mknmz.in
+@@ -179,6 +179,8 @@
+     my $processed_num = 0;
+     my $file_size = util::filesize($cfile);
+ 
++    return ($file_size, $processed_num) unless $file_size;
++
+     if ($var::Opt{'htmlsplit'} && $cfile =~ $conf::HTML_SUFFIX) {
+ 	my @parts = htmlsplit::split($cfile, "NMZ.partial");
+ 	if (@parts > 1) {
