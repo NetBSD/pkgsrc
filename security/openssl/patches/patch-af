@@ -1,44 +1,35 @@
-$NetBSD: patch-af,v 1.12 2004/12/19 02:48:32 grant Exp $
+$NetBSD: patch-af,v 1.13 2004/12/24 22:02:38 jlam Exp $
 
---- Makefile.org.orig	2003-07-04 07:43:50.000000000 +1000
+--- Makefile.org.orig	2004-09-28 16:52:14.000000000 -0400
 +++ Makefile.org
-@@ -169,7 +169,7 @@ SDIRS=  \
- MAKEFILE= Makefile.ssl
- MAKE=     make -f Makefile.ssl
+@@ -28,6 +28,7 @@ INSTALLTOP=/usr/local/ssl
+ 
+ # Do not edit this manually. Use Configure --openssldir=DIR do change this!
+ OPENSSLDIR=/usr/local/ssl
++EXAMPLEDIR=$(INSTALLTOP)/share/examples/openssl
+ 
+ # NO_IDEA - Define to build without the IDEA algorithm
+ # NO_RC4  - Define to build without the RC4 algorithm
+@@ -194,7 +195,7 @@ TESTS = alltests
+ 
+ MAKEFILE= Makefile
  
 -MANDIR=$(OPENSSLDIR)/man
 +MANDIR=$(INSTALLTOP)/man
  MAN1=1
  MAN3=3
- SHELL=/bin/sh
-@@ -262,8 +262,7 @@ do_gnu-shared:
- 	libs='-L. ${SHLIBDEPS}'; for i in ${SHLIBDIRS}; do \
+ MANSUFFIX=
+@@ -306,8 +307,7 @@ do_gnu-shared:
+ 	fi; \
  	( set -x; ${CC} ${SHARED_LDFLAGS} \
  		-shared -o lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
 -		-Wl,-soname=lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
 -		-Wl,-Bsymbolic \
-+		-Wl,-h,lib$$i.so.${SHLIB_MAJOR} \
++		-Wl,-h,lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \
  		-Wl,--whole-archive lib$$i.a \
  		-Wl,--no-whole-archive $$libs ${EX_LIBS} -lc ) || exit 1; \
- 	libs="$$libs -l$$i"; \
-@@ -277,8 +276,14 @@ DETECT_GNU_LD=${CC} -v 2>&1 | grep '^gcc
- # For Darwin AKA Mac OS/X (dyld)
- do_darwin-shared: 
- 	libs='-L. ${SHLIBDEPS}'; for i in ${SHLIBDIRS}; do \
--	( set -x ; ${CC} --verbose -dynamiclib -o lib$$i${SHLIB_EXT} \
--		lib$$i.a $$libs -all_load -current_version ${SHLIB_MAJOR}.${SHLIB_MINOR} \
-+	( set -x ; \
-+		  find . -name "*.o" -print > allobjs ; \
-+		  OBJS= ; export OBJS ; \
-+		  for obj in `ar t lib$$i.a` ; do \
-+		    OBJS="$${OBJS} `grep /$$obj allobjs`" ; \
-+		  done ; \
-+		${CC} -dynamiclib -o lib$$i${SHLIB_EXT} \
-+		$$libs $${OBJS} -current_version ${SHLIB_MAJOR}.${SHLIB_MINOR} \
- 		-compatibility_version ${SHLIB_MAJOR}.`echo ${SHLIB_MINOR} | cut -d. -f1` \
- 		-install_name ${INSTALLTOP}/lib/lib$$i${SHLIB_EXT} ) || exit 1; \
- 	libs="$$libs -l`basename $$i${SHLIB_EXT} .dylib`"; \
-@@ -449,7 +454,7 @@ do_hpux64-shared:
+ 	libs="-l$$i $$libs"; \
+@@ -548,7 +548,7 @@ do_hpux64-shared:
  #  HP/UX-64bit: +forceload
  #  AIX:		-bnogc
  # SHAREDFLAGS would be:
@@ -47,22 +38,22 @@ $NetBSD: patch-af,v 1.12 2004/12/19 02:48:32 grant Exp $
  #  Tru64 Unix:  -shared \
  #		-set_version "${SHLIB_VERSION_HISTORY}${SHLIB_VERSION_NUMBER}"
  #  Solaris:     -G -h lib$$i.so.${SHLIB_MAJOR}.${SHLIB_MINOR}
-@@ -636,14 +641,14 @@ dist:   
+@@ -790,16 +790,14 @@ dist:   
  dist_pem_h:
  	(cd crypto/pem; $(MAKE) CC='${CC}' SDIRS='${SDIRS}' CFLAG='${CFLAG}' pem.h; $(MAKE) clean)
  
--install: all install_docs
-+install: install_docs
+-install: all install_docs install_sw
++install: install_docs install_sw
+ 
+ install_sw:
  	@$(PERL) $(TOP)/util/mkdir-p.pl $(INSTALL_PREFIX)$(INSTALLTOP)/bin \
  		$(INSTALL_PREFIX)$(INSTALLTOP)/lib \
+ 		$(INSTALL_PREFIX)$(INSTALLTOP)/lib/pkgconfig \
  		$(INSTALL_PREFIX)$(INSTALLTOP)/include/openssl \
 -		$(INSTALL_PREFIX)$(OPENSSLDIR)/misc \
-+		$(INSTALL_PREFIX)$(INSTALLTOP)/share/examples/openssl \
-+		$(INSTALL_PREFIX)$(OPENSSLDIR) \
- 		$(INSTALL_PREFIX)$(OPENSSLDIR)/certs \
--		$(INSTALL_PREFIX)$(OPENSSLDIR)/private \
--		$(INSTALL_PREFIX)$(OPENSSLDIR)/lib
-+		$(INSTALL_PREFIX)$(OPENSSLDIR)/private
+-		$(INSTALL_PREFIX)$(OPENSSLDIR)/certs \
+-		$(INSTALL_PREFIX)$(OPENSSLDIR)/private
++		$(INSTALL_PREFIX)$(EXAMPLEDIR)
  	@for i in $(EXHEADER) ;\
  	do \
  	(cp $$i $(INSTALL_PREFIX)$(INSTALLTOP)/include/openssl/$$i; \

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8425 2004/12/24 18:28:51 seb Exp $
+$NetBSD: CHANGES,v 1.8426 2004/12/24 22:02:37 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6523,3 +6523,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated advi to 1.4.0nb5 [jmmv 2004-12-24]
 	Updated swiftsurf to 1.2.5nb2 [jmmv 2004-12-24]
 	Updated graphviz to 2.0 [seb 2004-12-24]
+	Updated openssl to 0.9.7e [jlam 2004-12-24]
