@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2002/07/23 20:30:34 jonb Exp $
+# $NetBSD: Makefile,v 1.155 2002/08/02 01:55:35 jschauma Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -43,6 +43,7 @@ SUBDIR+=	iso12083
 SUBDIR+=	iso8879
 SUBDIR+=	ispell-base
 SUBDIR+=	ispell-british
+SUBDIR+=	ispell-catalan
 SUBDIR+=	ispell-francais
 SUBDIR+=	ispell-gaeilge
 SUBDIR+=	ispell-german
