@@ -1,41 +1,27 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:56:24 grant Exp $
-# FreeBSD Id: ports/x11-toolkits/fox/Makefile,v 1.14 2001/02/23 19:00:05 knu Exp
+# $NetBSD: Makefile,v 1.13 2003/08/29 10:16:11 xtraeme Exp $
+#
 
-DISTNAME=	fox-0.99.174
-PKGREVISION=	2
+DISTNAME=	fox-1.0.43
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.cfdrc.com/pub/FOX/ \
-		ftp://SunSITE.Informatik.RWTH-Aachen.DE/pub/Linux/fox/
+MASTER_SITES=	http://www.fox-toolkit.org/ftp/
 
 MAINTAINER=	sakamoto@NetBSD.org
-HOMEPAGE=	http://www.cfdrc.com/FOX/fox.html
+HOMEPAGE=	http://www.fox-toolkit.org/
 COMMENT=	Fast and extensive C++ GUI toolkit
 
-.if !defined(FOX_USE_XUNICODE) || ${FOX_USE_XUNICODE} == "YES"
-
-MASTER_SITES+=	http://www.ab.wakwak.com/~tino/jatk/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xunicode-0.3.3${EXTRACT_SUFX}
-
-PATCH_SITES=	http://www.ab.wakwak.com/~tino/jatk/fox/
-PATCHFILES=	${DISTNAME:C/-/-unicode-/}.diff
-PATCH_DIST_STRIP=-p1
-
-CPPFLAGS+=	-I..
-X_CFLAGS=	-DUSE_UNICODE
-CONFIGURE_ENV+=	X_CFLAGS="${X_CFLAGS}"
-
-.endif
-
 USE_BUILDLINK2=	# defined
-USE_X11BASE=	# defined
+USE_X11=	# defined
 USE_LIBTOOL=	# defined
-LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
-
 GNU_CONFIGURE=	# defined
-CONFIGURE_ARGS+=--with-opengl=mesa --with-x --with-shm=yes --enable-release
+
+CONFIGURE_ARGS+=	--with-opengl=mesa 
+CONFIGURE_ARGS+=	--with-x
+CONFIFURE_ARGS+=	--with-shm=yes
+CONFIGURE_ARGS+=	--enable-release
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../graphics/glu/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
