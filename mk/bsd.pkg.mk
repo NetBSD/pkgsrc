@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.744 2001/05/20 01:58:20 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.745 2001/05/22 11:43:36 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2067,6 +2067,7 @@ package: uptodate-pkgtools install ${PACKAGE_COOKIE}
 
 ${EXTRACT_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${EXTRACT_COOKIE}
 ${PATCH_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch
 ${CONFIGURE_COOKIE}:
@@ -2097,6 +2098,15 @@ SU_CMD?=	${SU} - root -c
 PRE_ROOT_CMD?=	${TRUE}
 
 do-su-install: 
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	extractname=`${CAT} ${EXTRACT_COOKIE}`;				\
+	case "$$extractname" in						\
+	"")	${ECHO_MSG} "*** Warning: ${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
+	"${PKGNAME}")	;;						\
+	*)	${ECHO_MSG} "*** Error: Package version $$extractname in ${WRKDIR}, current version ${PKGNAME} in pkgsrc directory"; \
+		${ECHO_MSG} "*** Please rebuild the package using the newer version: \"make clean && make\""; \
+		exit 1 ;; \
+	esac
 	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ `${ID} -u` = 0 ]; then					\
