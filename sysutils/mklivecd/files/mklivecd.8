@@ -1,4 +1,4 @@
-.\" $NetBSD: mklivecd.8,v 1.8 2004/11/04 16:29:56 xtraeme Exp $
+.\" $NetBSD: mklivecd.8,v 1.9 2004/11/04 17:01:11 wiz Exp $
 .\"
 .\" mklivecd - Build a NetBSD Live CD for i386 machines
 .\" Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd April 26, 2004
+.Dd November 4, 2004
 .Dt MKLIVECD 8
 .Os
 .Sh NAME
@@ -144,7 +144,7 @@ Sets used by default are:
 .It CHROOT_SHELL
 Default shell to use with the chroot target.
 Defaults to
-.Sy /bin/ksh 
+.Sy /bin/ksh
 .It ENABLE_X11
 If set to
 .Sy yes
@@ -345,6 +345,18 @@ You should copy your own kernel config file into
 The
 .Sy BOOTKERN
 variable should point at it.
+.Sh EXAMPLES
+Below are the minimal steps to create your own Live CD:
+.Bd -literal -offset indent
+$ mklivecd config
+  [edit the config file]
+$ mklivecd kernel
+$ mklivecd base
+$ mklivecd chroot
+  [edit what you like in there, e.g. config files]
+$ mklivecd iso
+$ mklivecd burn
+.Ed
 .Sh SEE ALSO
 .Xr packages 7 ,
 .Xr mount_null 8
