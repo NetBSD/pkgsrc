@@ -1,14 +1,5 @@
 --- scripts/RunCache.in.orig	Thu Oct 31 08:28:58 1996
 +++ scripts/RunCache.in	Sun May 24 21:53:01 1998
-@@ -4,7 +4,7 @@
- 
- prefix=@prefix@
- exec_prefix=@exec_prefix@
--logdir=@localstatedir@
-+logdir=/var/run
- PATH=@bindir@:/bin:/usr/bin
- export PATH
- 
 @@ -16,9 +16,9 @@
  
  failcount=0
