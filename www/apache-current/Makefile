@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/08 10:55:21 itojun Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/18 21:04:42 jlam Exp $
 
 DISTNAME=		httpd-2_0_16-beta
 PKGNAME=		apache-2.0.16
@@ -39,17 +39,17 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/srclib/pcre/ltconfig \
 
 WRKSRC=			${WRKDIR}/httpd-2_0_16
 
-LIBS=	srclib/apr/shmem/unix/mm/libmm.la \
-	srclib/apr/libapr.la \
-	srclib/apr-util/xml/expat/lib/libexpat.la \
-	srclib/apr-util/libaprutil.la
+AP_LIBS=	srclib/apr/shmem/unix/mm/libmm.la \
+		srclib/apr/libapr.la \
+		srclib/apr-util/xml/expat/lib/libexpat.la \
+		srclib/apr-util/libaprutil.la
 
 post-patch:
 	${RM} ${WRKSRC}/docs/conf/*.orig
 	(cd ${WRKSRC}; ${LN} -s ${LOCALBASE}/bin/libtool)
 
 pre-install:
-	for i in ${LIBS}; do \
+	for i in ${AP_LIBS}; do \
 		${SH} ${WRKSRC}/libtool ${INSTALL_DATA} \
 			${WRKSRC}/$$i ${PREFIX}/lib; \
 	done
