@@ -1,10 +1,15 @@
-$NetBSD: patch-aa,v 1.3 2000/08/31 12:37:02 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.4 2001/04/23 19:25:47 dmcmahill Exp $
 
---- png.c.orig	Wed Jan 26 08:03:29 2000
-+++ png.c	Thu Aug 31 08:08:48 2000
-@@ -5,4 +5,5 @@
- #include "to_png.h"
- #include <png.h>
-+#include <stdlib.h>
+--- to_eps.c.orig	Thu Feb  1 10:05:30 2001
++++ to_eps.c	Mon Apr 23 15:12:26 2001
+@@ -144,8 +144,8 @@
+ {
+ int len;
+-long t;
++time_t t;
+ char *p;
  
- #define PDNCOL 8 
+-  t = time((long *) 0);
++  t = time(NULL);
+   p = ctime(&t);
+   len = strlen(p);
