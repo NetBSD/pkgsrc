@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgdepgraph.1,v 1.6 2003/03/25 18:21:20 atatat Exp $
+.\"	$NetBSD: pkgdepgraph.1,v 1.7 2003/04/16 09:50:01 wiz Exp $
 .\"
 .\" Copyright (c) 2002, 2003 by Andrew Brown <atatat@netbsd.org>
 .\" Absolutely no warranty.
@@ -36,7 +36,7 @@ in order to gather its data.
 will also read any files passed to it as arguments (or stdin if it
 is not connected to a tty), in search of output that resembles that
 of either
-.Xr lintpkgsrc 1 
+.Xr lintpkgsrc 1
 .Fl i ,
 .Xr audit-packages 1 ,
 or the output from a previous incantation of this program.
@@ -145,11 +145,11 @@ packages.
 .It Fl K Ar packages
 The base location or url from which to install binary packages.
 This defaults to the value of PKG_PATH, or to PACKAGES with
-.Pf \\*q Dv /All Ns \\*q
+.Dq Dv /All
 added to the end, or to the value determined for pkgsrcdir (see the
 .Fl P
 option) with
-.Pf \\*q Dv /packages/All Ns \\*q
+.Dq Dv /packages/All
 appended to it.
 .It Fl L
 Limit the graph to those packages that are out of date
