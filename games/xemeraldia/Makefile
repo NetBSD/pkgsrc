@@ -1,10 +1,5 @@
-# New ports collection makefile for:	xemeraldia
-# Version required:	0.31
-# Date created:		22 Mar 1995
-# Whom:			asami
-#
-# $FreeBSD: ports/games/xemeraldia/Makefile,v 1.17 1999/12/10 19:24:55 steve Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/12/14 01:49:32 sakamoto Exp $
+# FreeBSD Id: ports/games/xemeraldia/Makefile,v 1.17 1999/12/10 19:24:55 steve Exp
 
 DISTNAME=	xemeraldia-0.3
 PKGNAME=	xemeraldia-0.31
@@ -15,14 +10,18 @@ PATCH_SITES=	ftp://ftp.lab.kdd.co.jp/Usenet/fj.sources/1995/apr/
 PATCHFILES=	xemeraldia-0.3to0.31.patch.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	sakamoto@netbsd.org
 
 USE_IMAKE=	yes
-NO_INSTALL_MANPAGES=	yes
+ALL_TARGET=	xemeraldia
+
+GAMES_DIR=	share/games
+MAKE_ENV+=	GAMES_DIR="${GAMES_DIR}"
+PLIST_SUBST=	GAMES_DIR="${GAMES_DIR}"
 
 post-install:
-	@${MKDIR} ${PREFIX}/lib/X11/xemeraldia
-	@${TOUCH} ${PREFIX}/lib/X11/xemeraldia/xemeraldia.scores
-	@${CHMOD} 666 ${PREFIX}/lib/X11/xemeraldia/xemeraldia.scores
+	@${MKDIR} ${PREFIX}/${GAMES_DIR}/xemeraldia
+	@${TOUCH} ${PREFIX}/${GAMES_DIR}/xemeraldia/xemeraldia.scores
+	@${CHMOD} 666 ${PREFIX}/${GAMES_DIR}/xemeraldia/xemeraldia.scores
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,11 @@
+$NetBSD: patch-aa,v 1.2 1999/12/14 01:49:33 sakamoto Exp $
+
 --- Imakefile.orig	Thu Dec  9 19:16:34 1999
 +++ Imakefile	Thu Dec  9 19:27:40 1999
 @@ -1,5 +1,4 @@
 -BIN_DIR=          /usr/local/bin
 -HIGH_SCORE_DIR=   /usr/local/lib
-+HIGH_SCORE_DIR=   ${LIBDIR}/xemeraldia
++HIGH_SCORE_DIR=   ${PREFIX}/${GAMES_DIR}/xemeraldia
  
  /*---------------------------------------------------------------------*/
  
