@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.865 2003/09/15 15:23:43 adam Exp $
+$NetBSD: TODO,v 1.866 2003/09/16 13:40:16 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -188,7 +188,6 @@ Suggested package updates
 	o mailsync-5.1.0
 	o memtest86-3.0
 	o mgetty-1.1.30
-	o mhonarc-2.6.8 [pkg/22753]
 	o midnight-commander-4.6.0
 	o mimedefang-2.37
 	o minicom-2.1
