@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.86 1998/05/25 00:04:30 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.87 1998/05/29 09:21:43 agc Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -145,6 +145,7 @@ NetBSD_MAINTAINER=	agc@netbsd.org
 # NOCLEANDEPENDS - Don't clean dependent packages
 # BROKEN		- Port is broken.  Set this string to the reason why.
 # RESTRICTED	- Port is restricted.  Set this string to the reason why.
+# PASSIVE_FETCH		- Uses passive ftp(1) to retrieve distribution files
 # USE_GMAKE		- Says that the port uses gmake.
 # USE_PERL5		- Says that the port uses perl5 for building and running.
 # USE_IMAKE		- Says that the port uses imake.
@@ -682,6 +683,11 @@ INSTALL_TARGET?=	install
 
 .if defined(USE_IMAKE) && !defined(NO_INSTALL_MANPAGES)
 INSTALL_TARGET+=	install.man
+.endif
+
+# If this host is behind a filtering firewall, use passive ftp(1)
+.if defined(PASSIVE_FETCH)
+FETCH_BEFORE_ARGS += -p
 .endif
 
 # Popular master sites
