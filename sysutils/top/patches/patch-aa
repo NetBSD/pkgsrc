@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 1998/08/07 11:14:09 agc Exp $
+$NetBSD: patch-aa,v 1.6 1998/12/03 20:02:53 thorpej Exp $
 
 diff -1 -uBbNr commands.c commands.c
 --- commands.c	Tue Aug 27 16:13:57 1996
@@ -616,15 +616,17 @@ diff -1 -uBbNr utils.c utils.c
 +#include <errno.h>
 +
  int atoiwi(str)
-*** Configure	1997/10/22 10:00:59	1.1
---- Configure	1997/10/22 10:01:15
-***************
-*** 352,358 ****
-         set group = sys
-     else
-         set t_mode = 4711
--        set mode = 4711
-      endif
-  else if (-e /dev/kmem) then
-     $ls /dev/kmem >/tmp/$$.b
---- 352,357 ----
+@@ -334,5 +336,5 @@
+ extern char *sys_errlist[];
+-#endif
+ 
+ extern int sys_nerr;
++#endif
+
+diff -1 -uBbNr Configure Configure
+--- Configure	Thu Dec  3 11:56:33 1998
++++ Configure	Thu Dec  3 11:57:30 1998
+@@ -355,3 +355,2 @@
+        set t_mode = 4711
+-       set mode = 4711
+     endif
