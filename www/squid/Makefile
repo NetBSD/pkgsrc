@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2000/10/10 10:28:39 tron Exp $
+# $NetBSD: Makefile,v 1.34 2000/10/15 20:17:44 veego Exp $
 
-DISTNAME=	squid-2.3.STABLE3-src
-PKGNAME=	squid-2.3s3
+DISTNAME=	squid-2.3.STABLE4-src
+PKGNAME=	squid-2.3s4
 CATEGORIES=	www
 MASTER_SITES=	\
 	http://www.squid-cache.org/Versions/v2/2.3/ \
@@ -12,8 +12,10 @@ MASTER_SITES=	\
 	ftp://ftp.kpnqwest.de/pub/mirror.squid/squid-2/STABLE/
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.3/bugs/
-PATCHFILES=	squid-2.3.stable3-carp_compile.patch \
-		squid-2.3.stable3-storeExpiredReferenceAge.patch
+PATCHFILES=	squid-2.3.stable4-invalid_ip_acl_entry.patch \
+		squid-2.3.stable4-ipfw_configure.patch \
+		squid-2.3.stable4-internal_dns_rcode_table_formatting.patch \
+		squid-2.3.stable4-ftp_icon_not_found.patch
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.squid-cache.org/
@@ -50,11 +52,11 @@ DEPENDS+=	egcs-1.1.2:../../lang/egcs
 MAKE_ENV+=	CPPFLAGS= CFLAGS=
 .endif
 
-pre-patch:
-	@cd ${WRKSRC}/src && \
-	${MV} client_side.c client_side.c.prepatch && \
-	${SED} -e 's#1\.459\.2\.36#1\.459\.2\.37#' <client_side.c.prepatch \
-	  >client_side.c
+post-configure:
+	@cd ${WRKSRC}/include && \
+	${MV} autoconf.h autoconf.h.prepatch && \
+	${SED} -e 's%#define fd_mask int%/* #undef fd_mask */%' <autoconf.h.prepatch \
+	 >autoconf.h
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/squid.sh >${WRKDIR}/squid.sh
