@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2002/08/25 21:50:43 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/09/30 13:52:55 taca Exp $
 #
 
-DISTNAME=		rats-1.4
+DISTNAME=		rats-2.1
 CATEGORIES=		security
 MASTER_SITES=		http://www.securesw.com/rats/
 
@@ -11,7 +11,7 @@ COMMENT=		Rough Auditing Tool for Security
 
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--libdir=${LOCALBASE}/share/rats
+CONFIGURE_ARGS+=	--datadir=${LOCALBASE}/share/rats
 ALL_TARGET=		rats
 
 .include "../../textproc/expat/buildlink2.mk"
