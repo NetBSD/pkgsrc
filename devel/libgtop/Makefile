@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/04/04 21:05:59 tron Exp $
+# $NetBSD: Makefile,v 1.17 1999/05/20 20:09:50 tron Exp $
 #
 
 DISTNAME=	libgtop-1.0.1
@@ -26,8 +26,6 @@ IGNORE=		"got broken by removal of Mach VM"
 CONFIGURE_ARGS+=	--with-glib-prefix=${LOCALBASE} \
 			--with-libgtop-guile --with-catgets
 CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include"  \
-			INSTALL_DATA="${INSTALL_DATA}" \
-			INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 			LOCALBASE=${LOCALBASE} \
 			X11BASE=${X11BASE}
 
