@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2004/01/15 11:01:07 markd Exp $
+$NetBSD: distinfo,v 1.12 2004/02/04 20:51:46 markd Exp $
 
-SHA1 (kdeartwork-3.1.5.tar.bz2) = 2d826562198044a2f7500b045b855b4cbc0faa12
-Size (kdeartwork-3.1.5.tar.bz2) = 13858582 bytes
+SHA1 (kdeartwork-3.2.0.tar.bz2) = 634bcb306feb84f446b62ed2cf897eb5b9475fea
+Size (kdeartwork-3.2.0.tar.bz2) = 17155976 bytes
 SHA1 (patch-aa) = 03e56d80ae4d4d7588b93f6dc6a7e47d78d4018d
