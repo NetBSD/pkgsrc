@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:44 zuntum Exp $
-lib/python2.0/site-packages/_mysqlmodule.so
-lib/python2.0/site-packages/MySQLdb.py
-lib/python2.0/site-packages/MySQLdb.pyc
-lib/python2.0/site-packages/MySQLdb.pyo
+@comment $NetBSD: PLIST,v 1.2 2002/01/19 17:13:20 drochner Exp $
+${PYSITELIB}/_mysqlmodule.so
+${PYSITELIB}/MySQLdb.py
+${PYSITELIB}/MySQLdb.pyc
+${PYSITELIB}/MySQLdb.pyo
