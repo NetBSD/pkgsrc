@@ -1,19 +1,19 @@
-# $NetBSD: Makefile.common,v 1.4 2004/08/02 17:28:10 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/08/02 20:05:42 schmonz Exp $
 #
 
-QMAIL_VERS=	qmail-1.03
-DISTNAME=	netqmail-1.05
-MASTER_SITES=	http://qmail.org/
+QMAIL_VERS=		qmail-1.03
+DISTNAME=		netqmail-1.05
+MASTER_SITES=		http://qmail.org/
 
-DEPENDS+=	checkpassword-[0-9]*:../../sysutils/checkpassword
-DEPENDS+=	daemontools-[0-9]*:../../sysutils/daemontools
-DEPENDS+=	qmail-users>=1.0:../../mail/qmail-users
-DEPENDS+=	ucspi-tcp-[0-9]*:../../net/ucspi-tcp
+DEPENDS+=		checkpassword-[0-9]*:../../sysutils/checkpassword
+DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
+DEPENDS+=		qmail-users>=1.0:../../mail/qmail-users
+DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 
-CONFLICTS+=	courier-maildirmake-[0-9]*
-CONFLICTS+=	mirrordir-[0-9]*
-CONFLICTS+=	mutt<=1.4.2.1nb1
-CONFLICTS+=	pulsar<=0.1.1
+CONFLICTS+=		courier-maildirmake-[0-9]*
+CONFLICTS+=		mirrordir-[0-9]*
+CONFLICTS+=		mutt<=1.4.2.1nb1
+CONFLICTS+=		pulsar<=0.1.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
