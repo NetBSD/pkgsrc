@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/03/11 18:03:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2004/05/29 12:00:28 minskim Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/08/10 22:31:36 fenner Exp
 #
 
@@ -12,10 +12,15 @@ COMMENT=	Manipulate archives of files in compressed form
 
 LICENSE=	zoo-license
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=	yes
+NO_CONFIGURE=	yes
 
 ALL_TARGET=     bsdansi
 MAKEFILE=       makefile
+
+INSTALLATION_DIRS=	bin man/man1
 
 .include "../../mk/bsd.pkg.mk"
