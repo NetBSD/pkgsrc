@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/01/05 22:44:04 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/01/10 05:46:44 jlam Exp $
 #
 
 DISTNAME=	SDL-1.2.6
@@ -23,7 +23,7 @@ USE_LIBTOOL=		YES
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"
-.include "../../devel/binutils/buildlink2.mk"
+.  include "../../devel/binutils/buildlink3.mk"
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 NASMFLAGS_ELF=		-f elf
 NASMFLAGS_a.out=	-f aoutb
