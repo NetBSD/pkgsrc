@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/01/15 01:05:14 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/01/24 13:49:59 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libpspell.
 #
@@ -17,7 +17,7 @@ LIBPSPELL_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libpspell?=	libpspell>=0.12.2
+BUILDLINK_DEPENDS.libpspell?=	libpspell>=0.12.2nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.libpspell}:../../textproc/libpspell
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libpspell=libpspell
