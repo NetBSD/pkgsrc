@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2003/01/11 23:57:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2003/01/29 21:38:48 jmmv Exp $
 
 DISTNAME=	jade-1.2.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.jclark.com/pub/jade/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.jclark.com/pub/jade/ \
@@ -23,9 +23,9 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
-JADE_CATALOG_DIR=	${PREFIX}/share/sgml/jade/catalog
+SGML_CATALOGS=		${PREFIX}/share/sgml/jade/catalog
 
-CONFIGURE_ARGS=		--enable-default-catalog=${JADE_CATALOG_DIR}
+CONFIGURE_ARGS=		--enable-default-catalog=${PREFIX}/share/sgml/jade/catalog
 CONFIGURE_ARGS+=	--enable-mif
 
 CXXFLAGS+=		${CFLAGS}
@@ -46,13 +46,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/jadedoc/*.htm ${PREFIX}/share/doc/jade
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sgml/jade
 	${INSTALL_DATA} ${WRKSRC}/dsssl/* ${PREFIX}/share/sgml/jade
-	${PREFIX}/bin/xmlcatmgr -c ${PREFIX}/share/sgml/catalog add \
-		CATALOG ${PREFIX}/share/sgml/jade/catalog
 # Installed by print/tex-jadetex
 	${RM} ${PREFIX}/share/sgml/jade/*jadetex.*
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../textproc/xmlcatmgr/buildlink2.mk"
+.include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # Turn off C++ optimization as there seem to be problems with the generated
