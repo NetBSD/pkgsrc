@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.5 2004/04/01 18:37:09 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/05/15 12:01:07 jmmv Exp $
 #
 
-DISTNAME=	librsvg-2.6.3
+DISTNAME=	librsvg-2.6.5
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +21,7 @@ PKGCONFIG_OVERRIDE=	librsvg-2.0.pc.in
 
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--with-gimp=no
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/librsvg2
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/librsvg2
+CONFIGURE_ARGS+=	--with-tags=
 
 .include "../../x11/gtk2/buildlink3.mk"
