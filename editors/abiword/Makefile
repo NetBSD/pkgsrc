@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.82 2004/11/22 13:31:46 adam Exp $
+# $NetBSD: Makefile,v 1.83 2004/12/28 01:56:41 reed Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	abiword-${ABIWORD_DIST_VERSION}
+PKGREVISION=	1
 COMMENT=	Open Source cross-platform word processor
 
 # GTK1 version and previous name of the GTK2 version
@@ -22,6 +23,12 @@ PKG_SUPPORTED_OPTIONS=	gucharmap
 CONFIGURE_ARGS+=	--enable-gucharmap
 .endif
 CONFIGURE_ARGS+=	--with-sys-wv
+.if ${OPSYS} == "Darwin"
+# hardcode relative install path in libwv (MacOS X only)
+CONFIGURE_ARGS+=	--without-epath
+# Use X11 instead of Cocoa API
+CONFIGURE_ARGS+=	--disable-Cocoa
+.endif
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 
 post-install:
@@ -38,6 +45,7 @@ SUBST_MESSAGE.docs=	"Fixing docs Makefile."
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/wv/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
 
 .if !empty(PKG_OPTIONS:Mgucharmap)
 .include "../../fonts/gucharmap/buildlink3.mk"
