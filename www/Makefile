@@ -1,4 +1,4 @@
-# $NetSD$
+# $NetBSD: Makefile,v 1.3 1997/11/26 15:36:59 agc Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -23,7 +23,7 @@
 #    SUBDIR += libwww
 #    SUBDIR += linemode
 #    SUBDIR += linux-netscape4
-#    SUBDIR += lynx
+    SUBDIR += lynx
 #    SUBDIR += mapedit
 #    SUBDIR += mhonarc
 #    SUBDIR += mmm
