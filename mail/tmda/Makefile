@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2002/05/14 14:38:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/23 20:05:47 schmonz Exp $
 #
 
-DISTNAME=	tmda-0.55
+DISTNAME=	tmda-0.58
 CATEGORIES=	mail python
-MASTER_SITES=	http://software.libertine.org/tmda/releases/ \
-		http://software.libertine.org/tmda/releases/old/
+MASTER_SITES=	http://tmda.net/releases/ \
+		http://tmda.net/releases/old/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	schmonz@netbsd.org
-HOMEPAGE=	http://tmda.sourceforge.net/
+HOMEPAGE=	http://tmda.net/
 COMMENT=	Python-based SPAM reduction system
 
 PY_PATCHPLIST=		# defined
@@ -28,6 +28,7 @@ TMDA_PROGRAMS+=	bin/tmda-check-address
 TMDA_PROGRAMS+=	bin/tmda-filter
 TMDA_PROGRAMS+=	bin/tmda-inject
 TMDA_PROGRAMS+=	bin/tmda-keygen
+TMDA_PROGRAMS+=	bin/tmda-ofmipd
 TMDA_PROGRAMS+=	bin/tmda-pending
 TMDA_PROGRAMS+=	bin/tmda-rfilter
 TMDA_PROGRAMS+=	bin/tmda-sendmail
@@ -44,8 +45,8 @@ do-build:
 	cd ${WRKSRC}; ${PYTHONBIN} ./compileall
 
 do-install:
-	for file in ${TMDA_PROGRAMS}; do \
-		${INSTALL_SCRIPT} ${WRKSRC}/$${file} ${PREFIX}/bin; \
+	for f in ${TMDA_PROGRAMS}; do \
+		${INSTALL_SCRIPT} ${WRKSRC}/$${f} ${PREFIX}/bin; \
 	done
 
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/${PYSITELIB}/TMDA
@@ -55,8 +56,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/templates/*.txt ${PREFIX}/${SHAREDIR}
 
 	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
-	for file in ${TMDA_DOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${file} ${PREFIX}/${DOCDIR}; \
+	for f in ${TMDA_DOCS}; do \
+		${INSTALL_DATA} ${WRKSRC}/$${f} ${PREFIX}/${DOCDIR}; \
 	done
 
 	${INSTALL_DATA_DIR} ${PREFIX}/${CONTRIBDIR}
