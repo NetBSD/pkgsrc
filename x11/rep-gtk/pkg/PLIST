@@ -1,4 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/17 14:56:28 mellon Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/07/01 03:40:20 danw Exp $
 @comment rep/ and rep/xxx--netbsd/ are required by librep.
-libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgtk.la
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/gnome-canvas.la
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/gnomelib.la
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/gnomeui.la
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/gtk.la
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libglade-gnome.a
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libglade-gnome.la
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libglade-gnome.so.0.0
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libglade.a
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libglade.la
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libglade.so.0.0
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgnome-canvas.a
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgnome-canvas.so.0.0
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgnomelib.a
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgnomelib.so.0.0
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgnomeui.a
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgnomeui.so.0.0
 libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgtk.a
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libgtk.so.0.0
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libsgtk-types.a
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/libsgtk-types.so.0.0
+libexec/rep/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/sgtk-types.la
