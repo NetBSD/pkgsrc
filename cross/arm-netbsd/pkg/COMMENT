@@ -1,1 +1,1 @@
-Cross-compile environment for NetBSD/arm32
+Cross-compile environment for NetBSD/arm32 (only support static binaries)
