@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.108 2004/03/11 00:54:51 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.109 2004/03/11 05:13:31 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -105,23 +105,36 @@ USE_BUILTIN.${_pkg_}?=	no
 .  endif
 .endfor
 
-# _BLNK_PACKAGES contains all of the unique elements of BUILDLINK_PACKAGES.
+# Set IGNORE_PKG.<pkg> if <pkg> is the current package we're building.
+# We can then check for this value to avoid build loops.
+#
+.for _pkg_ in ${BUILDLINK_PACKAGES}
+.  if !defined(IGNORE_PKG.${_pkg_}) && \
+      (${BUILDLINK_PKGSRCDIR.${_pkg_}:C|.*/([^/]*/[^/]*)$|\1|} == ${PKGPATH})
+IGNORE_PKG.${_pkg_}=	yes
+MAKEFLAGS+=		IGNORE_PKG.${_pkg_}=${IGNORE_PKG.${_pkg_}}
+.  endif
+.endfor
+
+# _BLNK_PACKAGES contains all of the unique elements of BUILDLINK_PACKAGES
+# that shouldn't be skipped.
 #
 _BLNK_PACKAGES=		# empty
 .for _pkg_ in ${BUILDLINK_PACKAGES}
-.  if empty(_BLNK_PACKAGES:M${_pkg_})
+.  if empty(_BLNK_PACKAGES:M${_pkg_}) && !defined(IGNORE_PKG.${_pkg_})
 _BLNK_PACKAGES+=	${_pkg_}
 .  endif
 .endfor
 
 # _BLNK_DEPENDS contains all of the elements of BUILDLINK_DEPENDS that
-# name packages for which we aren't using the built-in software and hence
-# need to add a dependency.
+# that shouldn't be skipped and that name packages for which we aren't
+# using the built-in software and hence need to add a dependency.
 #
 _BLNK_DEPENDS=	# empty
 .for _pkg_ in ${BUILDLINK_DEPENDS}   
 USE_BUILTIN.${_pkg_}?=	no
-.  if empty(_BLNK_DEPENDS:M${_pkg_}) && !empty(USE_BUILTIN.${_pkg_}:M[nN][oO])
+.  if empty(_BLNK_DEPENDS:M${_pkg_}) && !defined(IGNORE_PKG.${_pkg_}) && \
+      !empty(USE_BUILTIN.${_pkg_}:M[nN][oO])
 _BLNK_DEPENDS+=	${_pkg_}
 .    endif
 .endfor
