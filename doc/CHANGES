@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.467 2002/11/06 07:58:21 tron Exp $
+$NetBSD: CHANGES,v 1.468 2002/11/06 08:39:31 thorpej Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3537,3 +3537,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated LaBrea to 2.3 [wiz 2002-11-05]
 	Updated kannel to 1.2.1 [martti 2002-11-05]
 	libxml2: Downgraded to 2.4.25 [tron 2002-11-06]
+	Updated simh to 2.10-beta2nb2 (xq beta5) [thorpej 2002-11-06]
