@@ -1,14 +1,19 @@
-# $NetBSD: Makefile,v 1.4 2004/09/18 04:52:22 taca Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/29 05:09:42 taca Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/02/10 18:13:21 motoyuki Exp $
 
-DISTNAME=	mh-6.8.4-JP-3.03
-PKGNAME=	ja-mh6-3.03
+DISTNAME=	mh-6.8.4-JP-3.05
+PKGNAME=	ja-mh6-3.05
 CATEGORIES=	japanese mail
-MASTER_SITES=	ftp://ports.jp.freebsd.org/pub/FreeBSD-jp/ports-jp/LOCAL_PORTS/ \
-		ftp://komadori.planet.sci.kobe-u.ac.jp/pub/MH/ \
-		ftp://ftp.chem.eng.himeji-tech.ac.jp/pub/net/mh/
+MASTER_SITES=	ftp://ftp.chem.eng.himeji-tech.ac.jp/pub/net/mh/
+
+PATCH_SITES=	ftp://ftp.chem.eng.himeji-tech.ac.jp/pub/net/mh/mh-6.8.4-JP-3.05-patch/
+PATCHFILES=	mh-6.8.4-JP-3.05-20030114.patch.gz \
+		mh-6.8.4-JP-3.05-20030326.patch.gz \
+		mh-6.8.4-JP-3.05-20031023.patch.gz \
+		mh-6.8.4-JP-3.05-20031106.patch.gz
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
+HOMEPAGE=	http://www.chem.eng.himeji-tech.ac.jp/mh-plus/
 COMMENT=	Rand MH mail handling system + Japanese patches
 
 DEPENDS=	ja-less>=332:../../misc/ja-less
@@ -19,7 +24,6 @@ CONFLICTS=	nmh-[0-9]* ja-mh-*_JP_*
 
 MANCOMPRESSED=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	OBJECT_FMT=${OBJECT_FMT}
 CONFIGURE_ARGS= --enable-batchmode \
 		--libexecdir=${PREFIX}/libexec/mh \
 		--enable-jmandir=${PREFIX}/man/ja_JP.EUC \

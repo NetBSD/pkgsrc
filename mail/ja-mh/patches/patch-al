@@ -1,39 +1,153 @@
-$NetBSD: patch-al,v 1.1.1.1 2002/05/31 13:01:20 seb Exp $
+$NetBSD: patch-al,v 1.2 2004/11/29 05:09:43 taca Exp $
 
---- ./uip/vmh.c.orig	Tue Feb  9 20:30:00 1999
-+++ ./uip/vmh.c	Tue Feb 29 23:19:05 2000
-@@ -23,6 +23,9 @@
- 	If curses ever gets fixed, then XYZ code can be removed
-  */
+--- uip/vmh.c.orig	2004-10-12 16:02:00.000000000 +0900
++++ uip/vmh.c
+@@ -113,6 +113,9 @@ void     __cputchar __P((int));
+ #define	SMALLMOVE	1
+ #define	LARGEMOVE	10
  
-+#ifdef	UNISTD
-+#include <unistd.h>
++#ifndef A_CHARTEXT
++#define	A_CHARTEXT	0xff
 +#endif
- #ifdef __osf__
- #define _BSD
+ 
+ #define	XYZ			/* XXX */
+ 
+@@ -222,6 +225,15 @@ static struct ltchars ltc;
  #endif
-@@ -85,9 +88,15 @@
- #define	_maxy	maxy
- #define	_curx	curx		/* curses.h */
- #define	_cury	cury
-+#ifndef __NetBSD__
- void     __cputchar __P((int));
+ #endif	/* TIOCGLTC */
+ 
++#ifdef __NetBSD__
++static char *tc_CE, *tc_CM, *tc_SO, *tc_SE, *tc_US, *tc_UE;
++#define	CE	tc_CE
++#define	CM	tc_CM
++#define	SO	tc_SO
++#define	SE	tc_SE
++#define	US	tc_US
++#define	UE	tc_UE
 +#endif
- #undef	_putchar
-+#ifdef	BSD44
-+#define	_putchar	__cputchar
+ 
+ #if !defined(SYS5) && !defined(BSD44) && !defined(TERMINFO)
+ int	_putchar ();
+@@ -348,7 +360,11 @@ static  vmh () {
+ 	wclrtoeol (Command);
+ 	wrefresh (Command);
+ 
+-	switch (WINgetstr (Command, buffer)) {
++#ifndef JAPAN
++	switch (WINgetstr (Command, buffer, sizeof(buffer))) {
 +#else
- #define	_putchar	(int (*)()) __cputchar
++	switch (WINgetstr (Command, (unsigned char *)buffer, sizeof(buffer))) {
 +#endif
- #include <sys/ioctl.h>		/* sgttyb */
- #endif /* !__NCURSES_H && (BSD44 || linux) */
+ 	    case NOTOK: 
+ 		break;
  
-@@ -1509,7 +1518,7 @@
-             tpgrp;
-     TYPESIG     (*tstat) ();
+@@ -808,6 +824,9 @@ static int  WINinit (nprog) {
+     sideground ();
  
--    if ((pgrp = getpgrp (0)) == NOTOK)
-+    if ((pgrp = getpgrp (/*0*/)) == NOTOK)
- 	adios ("process group", "unable to determine");
+ #ifndef	TERMINFO
++#ifdef __NetBSD__
++    CM = getcap("cm");
++#endif
+     if (CM == NULL)
+ #else	/* TERMINFO */
+     if (cursor_address == NULL)	/* assume mtr wanted "cm", not "CM" */
+@@ -822,6 +841,15 @@ static int  WINinit (nprog) {
+ #ifndef	TERMINFO
+     if (tgetflag ("xt") || tgetnum ("sg") > 0)
+ 	SO = SE = US = UE = NULL;
++#ifdef __NetBSD__
++    else {
++	SO = getcap("so");
++	SE = getcap("se");
++	US = getcap("us");
++	UE = getcap("ue");
++    }
++    CE = getcap("ce");
++#endif
+ #else	/* TERMINFO */
+ /*
+  * If termcap mapped directly to terminfo, we'd use the following:
+@@ -862,21 +890,36 @@ static int  WINinit (nprog) {
+ 
+ /*  */
+ 
+-static int WINgetstr (w, buffer)
++static int WINgetstr (w, buffer, size)
+ register WINDOW *w;
++#ifndef JAPAN
+ char   *buffer;
++#else	/* JAPAN */
++unsigned char   *buffer;
++#endif	/* JAPAN */
++size_t    size;
+ {
+     register int    c;
++#ifndef JAPAN
+     register char  *bp;
++#else	/* JAPAN */
++    register unsigned char  *bp;
++#endif	/* JAPAN */
+ 
+     bp = buffer;
+     *bp = 0;
++    --size;
+ 
      for (;;) {
- 	if (ioctl (fileno (stdin), TIOCGPGRP, (char *) &tpgrp) == NOTOK)
+-	switch (c = wgetch (w) & 0xff) {
+-	    case ERR: 
+-		adios (NULLCP, "wgetch lost");
++	c = wgetch(w);
++	if (c == ERR)
++	    adios (NULLCP, "wgetch lost");
++	if (bp - buffer >= size &&
++	    !(c == intrc || c == EOFC || c == ERASE || c == KILL ||
++	      c == WERASC || c == '\r' || c == '\n'))
++	    continue;
+ 
++	switch (c &= A_CHARTEXT) {
+ 	    case '\f':
+ 		wrefresh (curscr);
+ 		break;
+@@ -1382,7 +1425,7 @@ WINDOW *w;
+ 	    lp -> l_buf[i] = w -> lines[getcury(w)] -> line[i].ch;
+ #else
+ 	    wmove(w, getcury(w), i);
+-	    lp -> l_buf[i] = winch(w); /* 8bit ?? */
++	    lp -> l_buf[i] = winch(w) & A_CHARTEXT;
+ #endif
+ 	}
+ 	lp -> l_buf[getmaxx(w)] = '\0';
+@@ -1413,8 +1456,12 @@ WINDOW *w;
+     }
+ #endif /* __NCURSES_H */
+     for (cp = lp -> l_buf + strlen (lp -> l_buf) - 1; cp >= lp -> l_buf; cp--)
++#ifndef JAPAN
+ 	if (isspace (*cp))
+-	    *cp = 0;
++#else	/* JAPAN */
++	if (isspace ((unsigned char)(*cp)))
++#endif	/* JAPAN */
++	    *cp = '\0';
+ 	else
+ 	    break;
+ 
+@@ -1579,7 +1626,9 @@ static	TTYoff () {
+ 
+     INTR = intrc;
+ #ifndef	SYS5
++#ifndef __NetBSD__
+     (void) ioctl (fileno (stdin), TIOCSETC, (char *) &tc);
++#endif
+ #else	/* SYS5 */
+ #if defined(TCGETATTR) && !defined(TCSETA) && defined(TCSANOW)
+     (void) tcsetattr (fileno (stdin), TCSANOW, &sg);
+@@ -1591,6 +1640,9 @@ static	TTYoff () {
+     leaveok (curscr, TRUE);
+     mvcur (0, COLS - 1, LINES - 1, 0);
+     endwin ();
++#ifdef __NetBSD__
++    (void) ioctl (fileno (stdin), TIOCSETC, (char *) &tc);
++#endif
+     if (tty_ready == DONE) {
+ #ifndef	TERMINFO
+ 	if (CE)
