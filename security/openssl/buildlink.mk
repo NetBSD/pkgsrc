@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.16 2002/08/09 17:12:51 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.17 2002/08/10 05:27:30 itojun Exp $
 #
 # This Makefile fragment is included by packages that use OpenSSL.
 #
@@ -24,9 +24,11 @@ OPENSSL_VERSION_096A=		0x0090601fL
 OPENSSL_VERSION_096B=		0x0090602fL
 OPENSSL_VERSION_096D=		0x0090604fL
 OPENSSL_VERSION_096E=		0x0090605fL
+OPENSSL_VERSION_096F=		0x0090606fL
+OPENSSL_VERSION_096G=		0x0090607fL
 
 # Check for a usable installed version of OpenSSL. Version must be greater
-# than 0.9.6e, or else contain a fix for the 2002-07-30 security advisory.
+# than 0.9.6f, or else contain a fix for the 2002-07-30 security advisory.
 # If a usable version isn't present, then use the pkgsrc OpenSSL package.
 #
 .include "../../mk/bsd.prefs.mk"
@@ -42,13 +44,13 @@ _NEED_OPENSSL=		YES
 .if exists(${_OPENSSLV_H}) && exists(${_SSL_H})
 _IN_TREE_OPENSSL_HAS_FIX!=					\
 		${AWK} 'BEGIN { ans = "NO" }			\
-		/SSL_R_KEY_ARG_TOO_LONG/ { ans = "YES" }	\
+		/SSL_R_SSL2_CONNECTION_ID_TOO_LONG/ { ans = "YES" }	\
 		END { print ans; exit 0 }' ${_SSL_H}
 
 . if ${_IN_TREE_OPENSSL_HAS_FIX} == "YES"
-USE_OPENSSL_VERSION?=		${OPENSSL_VERSION_095A}
+USE_OPENSSL_VERSION?=		${OPENSSL_VERSION_096F}
 . else
-USE_OPENSSL_VERSION?=		${OPENSSL_VERSION_096E}
+USE_OPENSSL_VERSION?=		${OPENSSL_VERSION_096G}
 . endif
 
 _OPENSSL_VERSION!=	${AWK} '/.*OPENSSL_VERSION_NUMBER.*/ { print $$3 }' \
@@ -84,6 +86,18 @@ _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096D}
 _VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096E}
 . else
 _VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096E}
+. endif
+
+. if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096F}	# OpenSSL 0.9.6f
+_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096F}
+. else
+_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096F}
+. endif
+
+. if ${USE_OPENSSL_VERSION} == ${OPENSSL_VERSION_096G}	# OpenSSL 0.9.6g
+_VALID_SSL_VERSIONS=	${OPENSSL_VERSION_096G}
+. else
+_VALID_SSL_VERSIONS+=	${OPENSSL_VERSION_096G}
 . endif
 
 . for PATTERN in ${_VALID_SSL_VERSIONS}
