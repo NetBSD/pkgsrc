@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.149 2001/07/23 14:05:16 wiz Exp $
+# $NetBSD: Makefile,v 1.150 2001/07/27 09:36:43 zuntum Exp $
 #
 
 COMMENT=	Graphics tools and libraries
 
 SUBDIR+=	CompuPic
 SUBDIR+=	GMT
+SUBDIR+=	GUIlib
 SUBDIR+=	ImageMagick
 SUBDIR+=	Mesa
 SUBDIR+=	Mesa-glx
