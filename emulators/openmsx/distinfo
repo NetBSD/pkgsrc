@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/05/29 11:28:46 xtraeme Exp $
+
+SHA1 (openmsx-0.4.0.tar.gz) = ed1f30b0d34581f6364a5e59a7a08bc5ae09255a
+Size (openmsx-0.4.0.tar.gz) = 853981 bytes
+SHA1 (patch-aa) = 9a418f63fef096b7a575a57a636b29538eb2bf82
+SHA1 (patch-ab) = 20173313a729bbdc978d7d8edfb642167a51ec16
