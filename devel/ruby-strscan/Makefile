@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/30 23:23:59 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/30 17:03:35 taca Exp $
 # FreeBSD: ports/devel/ruby-strscan/Makefile,v 1.13 2001/01/27 09:41:20 knu Exp
 
-DISTNAME=	strscan-0.6.3
+DISTNAME=	strscan-0.6.5
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://www9.xdsl.ne.jp/~aamine/soft/
+MASTER_SITES=	http://www.loveruby.net/archive/
 
 MAINTAINER=	taca@netbsd.org
-HOMEPAGE=	http://www1.u-netsurf.ne.jp/~brew/mine/
+HOMEPAGE=	http://www.loveruby.net/en/strscan.html
 COMMENT=	Fast string scanner class library for Ruby
 
 DIST_SUBDIR=	ruby
 USE_RUBY_SETUP=	yes
+RUBY_SETUP=	install.rb
 
 DOCS_EN=	README.en doc.en/changes.html doc.en/index.html \
 		doc.en/reference.html doc.en/usage.html
