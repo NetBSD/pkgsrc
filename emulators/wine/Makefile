@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:24 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/04 07:20:44 hubertf Exp $
 
 DISTNAME=	wine980215
 PKGNAME=	wine-980215
@@ -8,6 +8,8 @@ DISTFILES=	Wine-980215.tar.gz
 ONLY_FOR_ARCHS=	i386
 
 MAINTAINER=	mycroft@NetBSD.ORG
+
+DEPENDS+=       xpm-3.4j:../../graphics/xpm
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-dll
