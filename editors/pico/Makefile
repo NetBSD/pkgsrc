@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/06/02 01:20:07 jschauma Exp $
+# $NetBSD: Makefile,v 1.38 2003/06/18 00:58:12 jschauma Exp $
 
 DISTNAME=	pine4.53
 PKGNAME=	pico-4.4
@@ -23,6 +23,8 @@ USE_LIBTOOL=	YES
 BUILDNAME= so5
 .elif ${OPSYS} == "Darwin"
 BUILDNAME= osx
+.elif ${OPSYS} == "Linux"
+BUILDNAME= lnx
 .else
 BUILDNAME= neb
 .endif
@@ -45,4 +47,5 @@ do-install:
 	cd ${WRKSRC}/pico && \
 	${INSTALL_DATA} *.h ${PREFIX}/include/pico
 
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
