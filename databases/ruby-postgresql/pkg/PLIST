@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/08 15:24:05 mjl Exp $
-${RUBY_SITELIBDIR}/postgres.so
+@comment $NetBSD: PLIST,v 1.2 2001/07/08 17:36:10 mjl Exp $
+${RUBY_SITEARCHLIBDIR}/postgres.so

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/08 15:24:05 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/08 17:36:10 mjl Exp $
 
 DISTNAME=	ruby-postgres-0.6.4
 PKGNAME=	${RUBY_PKGNAMEPREFIX}postgresql-0.6.4
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=--with-pgsql-include-dir=${PREFIX}/include/pgsql \
 		--with-pgsql-lib-dir=${PREFIX}/lib
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/postgres.so ${RUBY_SITELIBDIR}/postgres.so
+	${INSTALL_DATA} ${WRKSRC}/postgres.so ${RUBY_SITEARCHLIBDIR}/postgres.so
 
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
