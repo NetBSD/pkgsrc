@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 1999/02/10 15:18:51 frueauf Exp $
+
 --- src/plugins/mountd_overflow/mountd_overflow.c.BAK	Thu Feb  4 15:58:15 1999
 +++ src/plugins/mountd_overflow/mountd_overflow.c	Thu Feb  4 15:58:41 1999
 @@ -31,6 +31,7 @@
