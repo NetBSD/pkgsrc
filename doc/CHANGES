@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3786 2003/11/05 05:21:23 itojun Exp $
+$NetBSD: CHANGES,v 1.3787 2003/11/05 16:05:44 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4309,3 +4309,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated prboom to 2.2.4 [xtraeme 2003-11-05]
 	Updated fetchmail to 6.2.5 [itojun 2003-11-05]
 	Updated fetchmailconf to 6.2.5 [itojun 2003-11-05]
+	Updated skampi to 4.0.1 [jschauma 2003-11-05]
