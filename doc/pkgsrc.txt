@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright (C) 1994-2004 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.txt,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
+$NetBSD: pkgsrc.xml,v 1.3 2004/10/22 00:24:48 hubertf Exp $
 
 Abstract
 
@@ -293,11 +293,11 @@ platforms:
 
   * NetBSD (of course)
 
+  * Tru64 (Digital UNIX, OSF1)
+
   * OpenBSD
 
   * Solaris
-
-  * Tru64 (Digital UNIX/OSF1)
 
 1.2. Overview
 
@@ -1333,8 +1333,17 @@ available without the overhead of building extra packages that are not needed.
 This section describes how pkgsrc developers can upload binary pkgs built by
 bulk builds to ftp.NetBSD.org.
 
-First, make sure that you have RSYNC_DST set properly in your mk/bulk/
-build.conf file, i.e. adjust it to something like one of the following:
+If you would like to automatically create checksum files for the binary
+packages you intend to upload, remember to set MKSUMS=yes in your mk/bulk/
+build.conf.
+
+If you would like to PGP sign the checksum files (highly recommended!),
+remember to set SIGN_AS=username@NetBSD.org in your mk/bulk/build.conf. This
+will prompt you for your gpg password to sign the files before uploading
+everything.
+
+Then, make sure that you have RSYNC_DST set properly in your mk/bulk/build.conf
+file, i.e. adjust it to something like one of the following:
 
 RSYNC_DST=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload
 
@@ -1364,7 +1373,7 @@ chroot-# ssh-keygen -t dsa
 chroot-# cat $HOME/.ssh/id-dsa.pub
 
 Now take the output of id-dsa.pub and append it to your ~/.ssh/authorized_keys
-file on ftp.netBSD.org. You can remove the key after the upload is done!
+file on ftp.NetBSD.org. You can remove the key after the upload is done!
 
 Next, test if your ssh connection really works:
 
@@ -1772,7 +1781,7 @@ The following message is displayed as part of the audit-packages installation
 procedure:
 
 ===========================================================================
-$NetBSD: pkgsrc.txt,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
+$NetBSD: faq.xml,v 1.4 2005/01/11 16:05:20 wiz Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
@@ -2188,7 +2197,7 @@ the PLIST file (or files, see below!).
 
 Be sure to add a RCS ID line as the first thing in any PLIST file you write:
 
-@comment $NetBSD: pkgsrc.txt,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
+@comment $NetBSD$
 
 8.2. Semi-automatic PLIST generation
 
@@ -2463,7 +2472,7 @@ following command will generate a good starting point for buildlink3.mk files:
 The following real-life example buildlink3.mk is taken from pkgsrc/graphics/
 tiff:
 
-# $NetBSD: pkgsrc.txt,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
@@ -3449,7 +3458,7 @@ version numbers recognised by pkg_info(1).
     security problems" for more information.
 
  4. If your package needs some executable to be able to run correctly and if
-    there's agail no buildlink3.mk file, this is specified using the DEPENDS
+    there's no buildlink3.mk file, this is specified using the DEPENDS
     variable. The print/lyx package needs to be able to execute the latex
     binary from the teTeX package when it runs, and that is specified:
 
@@ -3900,7 +3909,7 @@ pkgsrc/licenses for displaying. A list of known licenses can be seen in this
 directory as well as by looking at the list of (commented out)
 ACCEPTABLE_LICENSES variable settings in pkgsrc/mk/defaults/mk.conf.
 
-Is there is a really pressing need to accept all licenses at once, like when
+If there is a really pressing need to accept all licenses at once, like when
 trying to download or mirror all distfiles or doing a bulk build to test if all
 packages in pkgsrc build, this can be done by setting _ACCEPTABLE=yes.
 
@@ -4426,7 +4435,7 @@ A.1. files
 
 A.1.1. Makefile
 
-# $NetBSD: pkgsrc.txt,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
+# $NetBSD$
 #
 
 DISTNAME=       bison-1.25
@@ -4450,7 +4459,7 @@ of the NetBSD source tree is beyond me.
 
 A.1.3. PLIST
 
-@comment $NetBSD: pkgsrc.txt,v 1.15 2005/01/11 16:34:44 xtraeme Exp $
+@comment $NetBSD$
 bin/bison
 man/man1/bison.1.gz
 share/bison.simple
