@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3538 2003/09/26 10:23:07 wiz Exp $
+$NetBSD: CHANGES,v 1.3539 2003/09/26 11:03:16 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3947,3 +3947,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tits to 1.1.1 [agc 2003-09-26]
 	Updated maradns to 1.0.18 [xtraeme 2003-09-26]
 	Added fix-mime-charset-0.4.0 [wiz 2003-09-26]
+	Added xfce4-4.0.0 [martti 2003-09-26]
