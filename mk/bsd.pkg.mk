@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1172 2003/04/25 20:05:18 jmmv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1173 2003/04/29 14:34:19 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -572,7 +572,7 @@ uptodate-pkgtools:
 .		if ${PKGTOOLS_VERSION} < ${PKGTOOLS_REQD}
 PKG_FAIL_REASON+='Your package tools need to be updated to ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} versions.'
 PKG_FAIL_REASON+='The installed package tools were last updated on ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|}.'
-PKG_FAIL_REASON+='Please "${MAKE} install" in ../../pkgtools/pkg_install.'
+PKG_FAIL_REASON+='Please "${MAKE} install" in ${_PKGSRCDIR}/pkgtools/pkg_install.'
 .		endif
 .	endif
 
