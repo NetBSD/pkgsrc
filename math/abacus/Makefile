@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/09/01 17:58:04 jwise Exp $
+# $NetBSD: Makefile,v 1.7 2000/09/03 23:08:33 wiz Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/09/25 10:07:44 asami Exp
 #
 
@@ -7,16 +7,18 @@ CATEGORIES=	math x11
 MASTER_SITES=	http://www-cad.eecs.berkeley.edu/HomePages/aml/abacus/ \
 		http://tahoe.inesc.pt/~aml/abacus/
 
-BROKEN=		This package has not yet been updated to work with tcl-8.3.2.
-
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www-cad.eecs.berkeley.edu/HomePages/aml/abacus/abacus.html
 
-DEPENDS+=	tcl-8.0.5:../../lang/tcl80
-DEPENDS+=	tk-8.0.5:../../x11/tk80
+DEPENDS+=	tcl-8.3.2:../../lang/tcl
+DEPENDS+=	tk-8.3.2:../../x11/tk
+
+BROKEN=		This package has been updated to compile with tcl-8.3.2, but dumps core on startup.
 
 USE_GMAKE=	yes
 USE_X11BASE=	yes
+
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 pre-patch:
 	@for d in `${FIND} ${WRKSRC} -name RCS -type d -print`; do	\
@@ -24,9 +26,12 @@ pre-patch:
 	done
 
 # Until we have tcl 8.0.3 in pkgsrc
-pre-build:
-	@ ${RM} -f ${WRKSRC}/canvas
-	@ ${LN} -fs ${WRKSRC}/canvas-tcl8.0.0 ${WRKSRC}/canvas
+#pre-build:
+#	@ ${RM} -f ${WRKSRC}/canvas
+#	@ ${LN} -fs ${WRKSRC}/canvas-tcl8.0.0 ${WRKSRC}/canvas
+
+pre-install:
+	${SED} -e "s_@PREFIX@_${PREFIX}_" < ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
 
 do-install:
 	@ ${SED} s!@PREFIX@!${PREFIX}!g ${WRKSRC}/abacus >${WRKSRC}/abacus.sh
