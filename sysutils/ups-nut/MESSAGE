@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2002/09/24 12:30:37 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2002/12/13 04:23:17 lukem Exp $
 
  ${NUT_CONFDIR}/upsd.users has a new format from version 0.45.5.
  You will need to update this before restarting upsd(8).
@@ -9,5 +9,9 @@ $NetBSD: MESSAGE,v 1.4 2002/09/24 12:30:37 wiz Exp $
  The network port used by nut changed in version 0.50.0,
  to the IANA assigned 3493, from 3305 in previous versions.
  You will need to update all clients.
+
+ Various changes occurred in version 1.0.
+ If upgrading from a prior version, refer to
+ ${NUT_DOCDIR}/UPGRADING for more information.
 
 ===========================================================================
