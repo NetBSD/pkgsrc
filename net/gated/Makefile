@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/04/05 16:58:49 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/10/25 20:16:53 agc Exp $
 # FreeBSD Id: Makefile,v 1.17 1998/04/26 18:47:12 peter Exp 
 #
 
@@ -25,10 +25,16 @@ post-extract:
 	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/gated \
 		> ${WRKDIR}/gated
 
+do-configure:
+	cd ${WRKSRC}/src; 						\
+		obj=obj.`util/archtype`;				\
+		${MKDIR} $$obj;						\
+		${CP} configs/${LOWER_OPSYS} $$obj/Config;		\
+		${RM} -f Config
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gated
-	cd ${WRKSRC}/doc ; \
-	${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/gated ; ${GTAR} pvxf - )
+	cd ${WRKSRC}/doc; ${PAX} -rwpe . ${PREFIX}/share/doc/gated
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/doc/gated
 	${CHGRP} -R ${SHAREGRP} ${PREFIX}/share/doc/gated
 	${INSTALL_SCRIPT} ${WRKDIR}/gated ${PREFIX}/etc/rc.d
