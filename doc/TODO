@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.808 2003/08/31 11:14:25 wiz Exp $
+$NetBSD: TODO,v 1.809 2003/08/31 11:29:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -229,7 +229,6 @@ Suggested package updates
 	o p5-Net-Server-0.85 [pkg/22542]
 	o p5-XML-LibXML-1.54
 	o p5-libapreq-1.2 [pkg/22584]
-	o pcre-4.4
 	o pdmenu-1.2.81
 	o php4-4.3.3
 	o plib-1.6.0 [pkg/19015,pkg/22612]
