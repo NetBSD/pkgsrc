@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/16 01:07:05 tsarna Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/22 05:28:24 jlam Exp $
 bin/sqsh
+man/man1/sqsh.1
