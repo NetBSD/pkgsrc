@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1523 2004/03/22 18:06:30 wiz Exp $
+$NetBSD: TODO,v 1.1524 2004/03/22 20:55:33 minskim Exp $
 
 Suggested new packages
 ======================
@@ -185,6 +185,7 @@ Suggested package updates
 	o ethereal-0.10.2
 	o evolution-1.5.2
 	o exim-4.24
+	o fam-2.7.0
 	o festival-1.4.3
 	o ffmpeg-0.4.8
 	o findutils-4.1.20
