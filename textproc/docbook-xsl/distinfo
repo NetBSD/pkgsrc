@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/02/28 20:52:04 jmmv Exp $
+$NetBSD: distinfo,v 1.8 2004/11/09 21:20:49 jmmv Exp $
 
-SHA1 (docbook-xsl-1.65.0.tar.gz) = 7593dc48d4aeefca7979d3059ddf2e2f84a8be80
-Size (docbook-xsl-1.65.0.tar.gz) = 1538674 bytes
+SHA1 (docbook-xsl-1.67.0.tar.gz) = 2fc43f6f2258fc604e295fef9f72ecf6bc31965c
+Size (docbook-xsl-1.67.0.tar.gz) = 1541050 bytes
