@@ -1,0 +1,40 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/07 18:47:00 ben Exp $
+bin/f-prot
+lib/fprot-workstation-bin/f-prot
+lib/fprot-workstation-bin/ENGLISH.TX0
+man/man8/check-updates.pl.8
+man/man1/f-prot.1
+sbin/check-updates.pl
+share/doc/fprot-workstation-bin/LICENSE
+share/doc/fprot-workstation-bin/README
+share/doc/fprot-workstation-bin/CHANGES
+share/doc/html/fprot-workstation-bin/add_info.html
+share/doc/html/fprot-workstation-bin/auto_updt.html
+share/doc/html/fprot-workstation-bin/comm_scan.html
+share/doc/html/fprot-workstation-bin/index.html
+share/doc/html/fprot-workstation-bin/inf_eicar.gif
+share/doc/html/fprot-workstation-bin/inst_pro.html
+share/doc/html/fprot-workstation-bin/license.html
+share/doc/html/fprot-workstation-bin/loc_files.html
+share/doc/html/fprot-workstation-bin/macro_scanning_options.html
+share/doc/html/fprot-workstation-bin/main_feat.html
+share/doc/html/fprot-workstation-bin/man_updt.html
+share/doc/html/fprot-workstation-bin/norm_scan.gif
+share/doc/html/fprot-workstation-bin/per_scan.html
+share/doc/html/fprot-workstation-bin/reporting_options.html
+share/doc/html/fprot-workstation-bin/scanning_options.html
+share/doc/html/fprot-workstation-bin/screenshot.jpg
+share/doc/html/fprot-workstation-bin/sys_req.html
+share/doc/html/fprot-workstation-bin/test_eicar.html
+share/doc/html/fprot-workstation-bin/test_inst.html
+share/doc/html/fprot-workstation-bin/updater.html
+share/doc/html/fprot-workstation-bin/updater_req.html
+share/doc/html/fprot-workstation-bin/updt_macro.gif
+share/doc/html/fprot-workstation-bin/updt_sign.gif
+share/doc/html/fprot-workstation-bin/updt_signature.gif
+@unexec ${RM} %D/lib/fprot-workstation-bin/MACRO.DEF
+@unexec ${RM} %D/lib/fprot-workstation-bin/SIGN.DEF
+@unexec ${RM} %D/lib/fprot-workstation-bin/SIGN2.DEF
+@dirrm lib/fprot-workstation-bin
+@dirrm share/doc/fprot-workstation-bin
+@dirrm share/doc/html/fprot-workstation-bin
