@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:55 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/12/15 13:09:58 taca Exp $
 bin/adnmz
 bin/bnamazu
 bin/gcnmz
@@ -12,8 +12,6 @@ bin/nmzgrep
 bin/nmzmerge
 bin/rfnmz
 bin/vfnmz
-@exec ${MKDIR} %D/etc/namazu 2>/dev/null|| /usr/bin/true
-@dirrm etc/namazu
 include/namazu/codeconv.h
 include/namazu/field.h
 include/namazu/hlist.h
@@ -32,10 +30,6 @@ include/namazu/var.h
 include/namazu/wakati.h
 @dirrm include/namazu
 lib/libnmz.la
-@exec ${MKDIR} %D/libdata/namazu 2>/dev/null|| /usr/bin/true
-@exec ${MKDIR} %D/libdata/namazu/index 2>/dev/null || /usr/bin/true
-@dirrm libdata/namazu/index
-@dirrm libdata/namazu
 libexec/cgi-bin/namazu.cgi
 man/man1/mknmz.1
 man/man1/namazu.1
@@ -68,6 +62,9 @@ share/namazu/etc/THANKS
 share/namazu/etc/TODO
 share/namazu/etc/namazu.png
 @dirrm share/namazu/etc
+share/examples/namazu/mknmzrc
+share/examples/namazu/namazurc
+@dirrm share/examples/namazu
 share/namazu/filter/apachecache.pl
 share/namazu/filter/bzip2.pl
 share/namazu/filter/compress.pl
@@ -96,8 +93,6 @@ share/namazu/filter/taro56.pl
 share/namazu/filter/taro7_10.pl
 share/namazu/filter/tex.pl
 @dirrm share/namazu/filter
-share/namazu/mknmzrc.example
-share/namazu/namazurc.example
 share/namazu/pl/codeconv.pl
 share/namazu/pl/conf.pl
 share/namazu/pl/gettext.pl

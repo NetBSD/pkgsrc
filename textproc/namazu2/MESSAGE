@@ -1,22 +1,13 @@
-#!/bin/sh
-#
-# $NetBSD: INSTALL,v 1.4 2004/05/06 13:40:21 taca Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2004/12/15 13:09:58 taca Exp $
 
-PKGNAME=$1
-STAGE=$2
+Here is general notes for namazu2 package by pkgsrc.
 
-case ${STAGE} in
-POST-INSTALL)
-	cat <<EOF
+1. If you customize namazu configuration, please edit "mknmzrc" file
+   in ${PKG_SYSCONFDIR} directory.
 
-=============================================================
-1. If you customize namazu configuration, copy
-   @EXAMPLEDIR@/share/namazu/namazurc.default and
-   @EXAMPLEDIR@/mknmzrc.default to @CONFDIR@,
-   and edit them.
-
-2. Since index file format is differnet from namazu 1.X, you need to
-   rebuild index files if you upgrade from namazu 1.X.
+2. if you upgrade from namazu 1.X, you need to rebuild index files
+   since index file format was changed from namazu prior to 2.0.
 
 3. In order to processing Japanese, you need to set "LC_ALL", "LANG"
    or "LC_CTYPE" environment to "ja".  Or use --indexing-lang option
@@ -25,8 +16,8 @@ POST-INSTALL)
 4. In order to display Japanese message, you need to set "LANGUAGE",
    "LC_ALL", "LC_MESSAGES" or "LANG" environment to "ja".
 
-5. Because of lack of locale support, you need to set "PERL_BADLANG"
-   for perl to stop the warning.
+5. If perl display locale related warnings, you need to set
+   "PERL_BADLANG" environment.
 
 6. Special notes for perl 5.8.1 users:  Please set environment
    PERL_HASH_SEED as 0.
@@ -50,9 +41,4 @@ POST-INSTALL)
    DocCat is a commercial product from Dehenken Limited.
    See http://www.dehenken.co.jp/products/doccat/doccat.html in detail.
 
-=============================================================
-
-EOF
-	;;
-esac
-exit 0
+===========================================================================

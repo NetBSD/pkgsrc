@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2004/12/15 13:09:58 taca Exp $
+
+--- nmz/idxname.c.orig	2004-03-21 00:25:10.000000000 +0900
++++ nmz/idxname.c
+@@ -153,7 +153,8 @@ nmz_complete_idxnames(void)
+     int i;
+ 
+     for (i = 0; i < indices.num; i++) {
+- 	if (*indices.names[i] == '+' && isalnum(*(indices.names[i] + 1))) {
++ 	if (*indices.names[i] == '+' &&
++	    isalnum((unsigned char)*(indices.names[i] + 1))) {
+ 	    char *tmp;
+ 	    tmp = malloc(strlen(defaultidx) 
+ 				  + 1 + strlen(indices.names[i]) + 1);
