@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2004/03/08 19:40:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/09 13:56:22 minskim Exp $
 
-DISTNAME=		ed2k-gtk-gui-0.6.1
-PKGREVISION=		1
+DISTNAME=		ed2k-gtk-gui-0.6.2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ed2k-gtk-gui/}
 
@@ -21,6 +20,12 @@ SUBST_MESSAGE.shell=	"Fixing hardcoded shell."
 SUBST_STAGE.shell=	post-patch
 SUBST_FILES.shell=	ed2k_gui/misc.c
 SUBST_SED.shell=	-e 's,/bin/bash,/bin/sh,g'
+
+SUBST_CLASSES+=		gtk24
+SUBST_MESSAGE.gtk24=	"Fixing build with GTK+ 2.4."
+SUBST_STAGE.gtk24=	post-patch
+SUBST_FILES.gtk24=	ed2k_gui/Makefile.in
+SUBST_SED.gtk24=	-e 's|-D.*_DISABLE_DEPRECATED||g'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
