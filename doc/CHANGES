@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5728 2004/04/24 16:53:38 minskim Exp $
+$NetBSD: CHANGES,v 1.5729 2004/04/24 18:10:27 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2232,3 +2232,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gaim to 0.77 [jmmv 2004-04-24]
 	Updated mathomatic to 11.0d [minskim 2004-04-24]
 	Updated Xrandr to 1.0.2 [minskim 2004-04-24]
+	Updated bbweather to 0.6.2 [jschauma 2004-04-24]
