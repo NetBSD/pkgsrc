@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2003/03/29 12:40:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2003/05/02 11:54:41 wiz Exp $
 #
 
 DISTNAME=		pwlib_1.4.4
 PKGNAME=		pwlib-1.4.4
-PKGREVISION=		2
+PKGREVISION=	3
 WRKSRC=			${WRKDIR}/pwlib
 CATEGORIES=		devel
 MASTER_SITES=		http://www.openh323.org/bin/

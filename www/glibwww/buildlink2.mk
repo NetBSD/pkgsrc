@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:25 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:56:41 wiz Exp $
 
 .if !defined(GLIBWWW_BUILDLINK2_MK)
 GLIBWWW_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		glibwww
-BUILDLINK_DEPENDS.glibwww?=	glibwww>=0.2nb1
+BUILDLINK_DEPENDS.glibwww?=	glibwww>=0.2nb3
 BUILDLINK_PKGSRCDIR.glibwww?=	../../www/glibwww
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.glibwww=glibwww

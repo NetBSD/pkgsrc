@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/12/24 06:09:54 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/02 11:54:28 wiz Exp $
 #
 # This Makefile fragment is included by packages that use gnome2-libole2.
 #
@@ -9,7 +9,7 @@
 GNOME2_LIBOLE2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome2-libole2
-BUILDLINK_DEPENDS.gnome2-libole2?=		gnome2-libole2>=2.2.8nb1
+BUILDLINK_DEPENDS.gnome2-libole2?=		gnome2-libole2>=2.2.8nb2
 BUILDLINK_PKGSRCDIR.gnome2-libole2?=		../../devel/gnome2-libole2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome2-libole2=gnome2-libole2

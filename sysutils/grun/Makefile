@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/08/25 21:51:01 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/02 11:56:24 wiz Exp $
 
 DISTNAME=	grun-0.9.2
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.geocities.com/ResearchTriangle/Facility/1468/sg/
 

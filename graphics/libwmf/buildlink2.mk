@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.6 2002/12/24 06:10:08 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/05/02 11:55:25 wiz Exp $
 
 .if !defined(LIBWMF_BUILDLINK2_MK)
 LIBWMF_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libwmf
-BUILDLINK_DEPENDS.libwmf?=	libwmf>=0.2.7nb1
+BUILDLINK_DEPENDS.libwmf?=	libwmf>=0.2.8nb1
 BUILDLINK_PKGSRCDIR.libwmf?=	../../graphics/libwmf
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libwmf=libwmf

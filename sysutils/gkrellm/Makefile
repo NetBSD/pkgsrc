@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2003/02/15 09:33:03 salo Exp $
+# $NetBSD: Makefile,v 1.24 2003/05/02 11:56:22 wiz Exp $
 #
 
 DISTNAME=	gkrellm-1.2.13
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://web.wt.net/~billw/gkrellm/
 EXTRACT_SUFX=	.tar.bz2

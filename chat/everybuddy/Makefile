@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/01/27 12:54:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/02 11:54:00 wiz Exp $
 
 .include "Makefile.common"
-PKGREVISION=	2
+PKGREVISION=	3
 
 USE_BUILDLINK2=	yes
 CONFLICTS+=	everybuddy-gnome-[0-9]*

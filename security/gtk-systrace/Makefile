@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/18 03:49:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/02 11:56:17 wiz Exp $
 #
 
 DISTNAME=	gtk-systrace-2002-12-01
+PKGREVISION=	1
 PKGNAME=	gtk-systrace-20021201
 WRKSRC=		${WRKDIR}/notification-0.1
 CATEGORIES=	security x11
