@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2005/02/01 21:51:12 jschauma Exp $
+
+--- cmd/platlibs.mk.orig	Thu Jan 20 06:55:35 2005
++++ cmd/platlibs.mk	Thu Jan 20 06:56:07 2005
+@@ -216,6 +216,7 @@
+ 	-L$(DIST)/lib \
+ 	-lssl3 \
+ 	-lsmime3 \
++	-lsoftokn3 \
+ 	-lnss3 \
+ 	-lplc4 \
+ 	-lplds4 \
