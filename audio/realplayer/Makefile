@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/07/17 21:23:10 grant Exp $
+# $NetBSD: Makefile,v 1.22 2003/11/15 00:20:28 dmcmahill Exp $
 
 PKGNAME=		realplayer-8.0.1
 WRKSRC=			${WRKDIR}/RealPlayer8
@@ -7,9 +7,9 @@ MASTER_SITES=		# empty
 EXTRACT_SUFX=		.bin
 
 .include "../../mk/bsd.prefs.mk"
-.if ${MACHINE} == "i386"
+.if ${MACHINE_ARCH} == "i386"
 DISTNAME=		rp8_linux20_libc6_i386_cs2
-.elif ${MACHINE} == "sparc"
+.elif ${MACHINE_ARCH} == "sparc"
 DISTNAME=		rp8_solaris27_sparc_cs2
 .else
 DISTNAME=		must_be_defined
@@ -20,9 +20,9 @@ HOMEPAGE=		http://www.real.com/products/player/
 COMMENT=		RealAudio and RealVideo player
 
 .if ${OPSYS} == "NetBSD"
-. if ${MACHINE} == "i386"
+. if ${MACHINE_ARCH} == "i386"
 DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-. elif ${MACHINE} == "sparc"
+. elif ${MACHINE_ARCH} == "sparc"
 .  if !exists(/emul/svr4/usr/lib/ld.so)
 PKG_FAIL_REASON= "${PKGNAME} requires Solaris libraries - see compat_svr4(8)"
 .  endif
@@ -96,5 +96,7 @@ post-install:
 	${INSTALL_DATA} ${REALPLAYER_HOME}/raclass.zip ${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${REALPLAYER_HOME}/rpnp.so ${NS_PLUGINS_DIR}
 
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "i386"
 .include "../../emulators/suse_linux/Makefile.application"
+.endif
 .include "../../mk/bsd.pkg.mk"
