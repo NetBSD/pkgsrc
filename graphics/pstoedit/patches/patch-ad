@@ -1,21 +1,21 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/07/18 07:46:40 itohy Exp $
+$NetBSD: patch-ad,v 1.2 2002/05/07 13:18:27 itohy Exp $
 
---- miscutil.cpp.orig	Mon Jul  3 02:18:37 2000
-+++ miscutil.cpp	Thu Jul 13 21:23:57 2000
+--- miscutil.cpp.orig	Mon Dec 31 05:35:25 2001
++++ miscutil.cpp	Fri Mar 22 12:37:42 2002
 @@ -28,6 +28,10 @@
  
- #if defined(unix) || defined(__unix__) || defined(_unix) || defined(__unix) || defined(__EMX__)
+ #if defined(unix) || defined(__unix__) || defined(_unix) || defined(__unix) || defined(__EMX__) || defined (NetBSD) 
  #include <unistd.h>
 +#include <sys/param.h>
 +#if defined(BSD) && BSD >= 199306
 +#define HAVE_MKSTEMP
 +#endif
- #else
- #include <direct.h>
- #endif
-@@ -113,6 +117,17 @@
  
- char * full_qualified_tempnam(const char * pref)
+ #ifdef __hpux
+ // HP-UX does not define getcwd in unistd.h
+@@ -134,6 +138,17 @@
+ 
+ char *full_qualified_tempnam(const char *pref)
  {
 +#ifdef HAVE_MKSTEMP
 +	char buf[80];
@@ -30,23 +30,23 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/07/18 07:46:40 itohy Exp $
 +#else
  #if defined (__BCPLUSPLUS__) || defined (__TCPLUSPLUS__)
  /* borland has a prototype that expects a char * as second arg */
- 	char * filename = tempnam(0,(char *) pref);
-@@ -141,6 +156,7 @@
+ 	char *filename = tempnam(0, (char *) pref);
+@@ -161,6 +176,7 @@
  		return filename;
  	}
  #endif
 +#endif
  }
  
- // a strdup which uses new instead of malloc
-@@ -280,7 +296,11 @@
+ unsigned short hextoint(const char hexchar) 
+@@ -374,7 +390,11 @@
  
- TempFile::TempFile()  
- { 
+ TempFile::TempFile()
+ {
 +#if 1
 +	tempFileName = full_qualified_tempnam("pstmp");
 +#else
- 	tempFileName = tempnam(0,"pstmp"); 
+ 	tempFileName = tempnam(0, "pstmp");
 +#endif
  	// cout << "constructed " << tempFileName << endl; 
  }
