@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.432 2000/05/02 18:44:37 danw Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.433 2000/05/07 01:58:41 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -574,11 +574,13 @@ TYPE?=		type
 
 .if (defined(DESTDIR) && defined(PKGTOOLS_VERSION))
 PKG_ADD?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_add
+PKG_ADMIN?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_admin
 PKG_CREATE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_create
 PKG_DELETE?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_delete
 PKG_INFO?=	PKG_DBDIR=${PKG_DBDIR} ${PKG_TOOLS_BIN}/pkg_info
 .else
 PKG_ADD?=	${PKG_TOOLS_BIN}/pkg_add
+PKG_ADMIN?=	${PKG_TOOLS_BIN}/pkg_admin
 PKG_CREATE?=	${PKG_TOOLS_BIN}/pkg_create
 PKG_DELETE?=	${PKG_TOOLS_BIN}/pkg_delete
 PKG_INFO?=	${PKG_TOOLS_BIN}/pkg_info
