@@ -1,4 +1,4 @@
-# $NetBSD: java.mk,v 1.6 2002/11/25 18:16:33 schmonz Exp $
+# $NetBSD: java.mk,v 1.7 2002/12/19 12:45:48 abs Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -35,7 +35,8 @@ PKG_JVM_DEFAULT?=	# empty
 PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 
 # This is a list of all of the JVMs that may be used with java.mk.
-_PKG_JVMS?=		jdk sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe
+# Note: The wonka configuration is still under development
+_PKG_JVMS?=		jdk sun-jdk13 sun-jdk14 blackdown-jdk13 kaffe wonka
 
 # To be deprecated: if PKG_JVM is explicitly set, then use it as the
 # default JVM.  Note that this has lower precedence than PKG_JVM_DEFAULT.
@@ -80,6 +81,8 @@ _ONLY_FOR_PLATFORMS.sun-jdk14= \
 	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 Linux-*-i[3-6]86
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
+_ONLY_FOR_PLATFORMS.wonka= \
+	*-*-arm32 *-*-i386
 
 # Set the accepted JVMs for this platform.
 .for _jvm_ in ${_PKG_JVMS}
@@ -95,6 +98,7 @@ _JAVA_PKGBASE.sun-jdk13=	sun-jdk13
 _JAVA_PKGBASE.sun-jdk14=	sun-jdk14
 _JAVA_PKGBASE.blackdown-jdk13=	blackdown-jdk13
 _JAVA_PKGBASE.kaffe=		kaffe
+_JAVA_PKGBASE.wonka=		wonka
 
 # Mark the acceptable JVMs and check which JVM packages are installed.
 .for _jvm_ in ${_PKG_JVMS_ACCEPTED}
@@ -169,6 +173,7 @@ BUILDLINK_DEPENDS.sun-jdk13?=		sun-jdk13-[0-9]*
 BUILDLINK_DEPENDS.sun-jdk14?=		sun-jdk14-[0-9]*
 BUILDLINK_DEPENDS.blackdown-jdk13?=	blackdown-jdk13-[0-9]*
 BUILDLINK_DEPENDS.kaffe?=		kaffe-[0-9]*
+BUILDLINK_DEPENDS.wonka?=		wonka-[0-9]*
 
 .if ${_PKG_JVM} == "jdk"
 _JDK_PKGSRCDIR=		../../lang/jdk
@@ -201,6 +206,12 @@ _JDK_PKGSRCDIR=		../../lang/kaffe
 _JRE_PKGSRCDIR=		../../lang/kaffe
 _JRE_DEPENDENCY=	kaffe-[0-9]*:${_JRE_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/kaffe
+.elif ${_PKG_JVM} == "wonka"
+_JDK_PKGSRCDIR=		../../lang/wonka
+_JRE_PKGSRCDIR=		../../lang/wonka
+_JRE_DEPENDENCY=	wonka-[0-9]*:${_JRE_PKGSRCDIR}
+_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/wonka
+SCRIPTS_ENV+=		JAVAC="jikes"
 .endif
 _JDK_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_JVM}}:${_JDK_PKGSRCDIR}
 
