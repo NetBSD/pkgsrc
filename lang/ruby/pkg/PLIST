@@ -1,0 +1,99 @@
+@comment $NetBSD: PLIST,v 1.1 1999/08/17 02:16:45 sakamoto Exp $
+bin/ruby
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/config.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/curses.so
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/dbm.so
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/defines.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/dln.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/env.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/etc.so
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/fcntl.so
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/intern.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/libruby.a
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/md5.so
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/nkf.so
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/node.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/pty.so
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/rbconfig.rb
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/re.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/regex.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/ruby.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/rubyio.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/rubysig.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/sdbm.so
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/socket.so
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/st.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/tkutil.so
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/util.h
+lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}/version.h
+lib/ruby/1.4/English.rb
+lib/ruby/1.4/Env.rb
+lib/ruby/1.4/base64.rb
+lib/ruby/1.4/cgi-lib.rb
+lib/ruby/1.4/complex.rb
+lib/ruby/1.4/date.rb
+lib/ruby/1.4/date2.rb
+lib/ruby/1.4/debug.rb
+lib/ruby/1.4/delegate.rb
+lib/ruby/1.4/e2mmap.rb
+lib/ruby/1.4/eregex.rb
+lib/ruby/1.4/expect.rb
+lib/ruby/1.4/final.rb
+lib/ruby/1.4/finalize.rb
+lib/ruby/1.4/find.rb
+lib/ruby/1.4/ftools.rb
+lib/ruby/1.4/ftplib.rb
+lib/ruby/1.4/getoptlong.rb
+lib/ruby/1.4/getopts.rb
+lib/ruby/1.4/importenv.rb
+lib/ruby/1.4/jcode.rb
+lib/ruby/1.4/kconv.rb
+lib/ruby/1.4/mailread.rb
+lib/ruby/1.4/mathn.rb
+lib/ruby/1.4/matrix.rb
+lib/ruby/1.4/mkmf.rb
+lib/ruby/1.4/monitor.rb
+lib/ruby/1.4/mutex_m.rb
+lib/ruby/1.4/observer.rb
+lib/ruby/1.4/open3.rb
+lib/ruby/1.4/ostruct.rb
+lib/ruby/1.4/parsearg.rb
+lib/ruby/1.4/parsedate.rb
+lib/ruby/1.4/ping.rb
+lib/ruby/1.4/profile.rb
+lib/ruby/1.4/pstore.rb
+lib/ruby/1.4/rational.rb
+lib/ruby/1.4/readbytes.rb
+lib/ruby/1.4/shellwords.rb
+lib/ruby/1.4/singleton.rb
+lib/ruby/1.4/sync.rb
+lib/ruby/1.4/telnet.rb
+lib/ruby/1.4/tempfile.rb
+lib/ruby/1.4/thread.rb
+lib/ruby/1.4/thwait.rb
+lib/ruby/1.4/timeout.rb
+lib/ruby/1.4/tk.rb
+lib/ruby/1.4/tkafter.rb
+lib/ruby/1.4/tkbgerror.rb
+lib/ruby/1.4/tkcanvas.rb
+lib/ruby/1.4/tkclass.rb
+lib/ruby/1.4/tkdialog.rb
+lib/ruby/1.4/tkentry.rb
+lib/ruby/1.4/tkfont.rb
+lib/ruby/1.4/tkmenubar.rb
+lib/ruby/1.4/tkmngfocus.rb
+lib/ruby/1.4/tkpalette.rb
+lib/ruby/1.4/tkscrollbox.rb
+lib/ruby/1.4/tktext.rb
+lib/ruby/1.4/tkvirtevent.rb
+lib/ruby/1.4/tracer.rb
+lib/ruby/1.4/weakref.rb
+man/man1/ruby.1
+@exec mkdir -p %D/lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}
+@exec mkdir -p %D/lib/ruby/1.4/site_ruby/${MACHINE_ARCH}-${LOWER_OPSYS}
+@unexec mkdir -p %D/lib/ruby/1.4/site_ruby/${MACHINE_ARCH}-${LOWER_OPSYS} 2> /dev/null || true
+@dirrm lib/ruby/1.4/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/ruby/1.4/site_ruby/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/ruby/1.4/site_ruby
+@dirrm lib/ruby/1.4
+@dirrm lib/ruby
