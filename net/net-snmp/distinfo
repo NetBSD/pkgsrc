@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2003/12/30 05:29:45 christos Exp $
+$NetBSD: distinfo,v 1.5 2003/12/30 19:30:48 kim Exp $
 
 SHA1 (net-snmp-5.0.9.tar.gz) = bb27bdf38da96833a3fa55f8c6a14732ab2c1991
 Size (net-snmp-5.0.9.tar.gz) = 2345822 bytes
 SHA1 (patch-aa) = 40ef03e182f8e8bb4f01f67f97c200c6e82f3d82
 SHA1 (patch-ab) = 94146deb60a3923481c52dc66a64a269641a1265
-SHA1 (patch-ac) = 8f4eb73296e817f7bbcb4c9d9ac6f2495d339798
+SHA1 (patch-ac) = 23696f87cf5669e52ca9c70d4a7f30f649574083
