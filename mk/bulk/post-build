@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.48 2004/11/23 19:31:46 jlam Exp $
+# $NetBSD: post-build,v 1.49 2005/01/13 19:29:28 tv Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -7,140 +7,174 @@
 #
 
 use File::Basename;
-use POSIX ();
+use POSIX qw(strftime);
+use strict;
+use warnings;
+
+my %vars;
+my $verbose = 1; # set to 2 to see more command execution detail
+
+sub my_system (@) {
+	print STDERR '> '.join(' ', @_)."\n" if ($verbose >= 2);
+	system(@_);
+}
 
 # Where config vars are stored (/bin/sh syntax)
 
-if (-f $ENV{"BULK_BUILD_CONF"}) {
-	$BULK_BUILD_CONF=$ENV{"BULK_BUILD_CONF"};
-} else {
-	$BULK_BUILD_CONF=dirname("$0")."/build.conf";
-}
+my $BULK_BUILD_CONF = $ENV{BULK_BUILD_CONF} || (dirname($0).'/build.conf');
+$BULK_BUILD_CONF = "./$BULK_BUILD_CONF" if ($BULK_BUILD_CONF !~ m:^/:);
 
 # Dig given variable out of config file, and set it
-sub getconf {
-	local($var)=@_;
-	local($val);
+sub getconf (@) {
+	open(I, ". $BULK_BUILD_CONF; for var in ".join(' ', @_)."; do eval echo \\\${\$var}; done |") || die 'cannot open pipe';
+	
+	foreach my $var (@_) {
+		$vars{$var} = <I>;
+		chomp $vars{$var};
+		die "\$$var not defined by $BULK_BUILD_CONF" if ($vars{$var} eq '');
 
-	if ($BULK_BUILD_CONF =~ /^\//) {
-		chomp($val=`. $BULK_BUILD_CONF ; echo \$$var`);
-	} else {
-		chomp($val=`. ./$BULK_BUILD_CONF ; echo \$$var`);
+		print STDERR "> $var=$vars{$var}\n" if ($verbose >= 2);
 	}
-	eval "\$$var=\"$val\";";
 }
 
-getconf("ADMINSIG");		# "-Your Name"
-getconf("FTPURL");		# "pub/NetBSD/pkgstat/`date +%Y%m%d.%H%M`"
-getconf("FTP");			# "/disk1/ftp/${FTPURL}"
-getconf("FTPHOST");		# ftp://ftp.machi.ne/
-getconf("REPORT");		# "broken.html"
-getconf("USR_PKGSRC");		# "/usr/pkgsrc"
-getconf("osrev");	       	# `uname -r`
-getconf("arch"); 		# `uname -m`
-$reportf=basename($REPORT);
+getconf(
+	'ADMINSIG',		# "-Your Name"
+	'FTPURL',		# "pub/NetBSD/pkgstat/`date +%Y%m%d.%H%M`"
+	'FTP',			# "/disk1/ftp/${FTPURL}"
+	'FTPHOST',		# ftp://ftp.machi.ne/
+	'REPORT',		# "broken.html"
+	'USR_PKGSRC',		# "/usr/pkgsrc"
+	'arch', 		# `uname -m`
+	'osrev',	       	# `uname -r`
+);
 
-chomp($os=`uname -s`);
+my $reportf = basename($vars{REPORT});
+
+my $os = `uname -s`;
+chomp $os;
+
+my $BMAKE = $ENV{BMAKE} || die '$BMAKE not defined in environment';
+
+sub getmakevars (@) {
+	open(I, "cd $vars{USR_PKGSRC}/pkgtools/pkglint && $BMAKE show-vars BATCH=1 VARNAMES='".join(' ', @_)."' |") || die 'cannot open pipe';
+
+	foreach my $var (@_) {
+		$vars{$var} = <I>;
+		chomp $vars{$var};
+		die "\${$var} not defined by $BMAKE" if ($vars{$var} eq '');
+
+		print STDERR "> $var=$vars{$var}\n" if ($verbose >= 2);
+	}
+}
 
 # Extract the names of the files used for the build log and broken build logs.
 # These have defaults set by bsd.bulk-pkg.mk and may be overridden in
 # /etc/mk.conf
-chomp($BROKENFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=BROKENFILE )`);
-chomp($BROKENWRKLOG=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=BROKENWRKLOG )`);
+getmakevars(qw(
+	BROKENFILE
+	BROKENWRKLOG
+	BULK_DBFILE
+	DEPENDSFILE
+	DEPENDSTREEFILE
+	FIND
+	GTAR
+	INDEXFILE
+	LOCALBASE
+	ORDERFILE
+	PKG_DBDIR
+	STARTFILE
+	SUPPORTSFILE
+	X11BASE
+));
 
-# Also extract the names of the cache files used during the bulk build.  We'll
-# save a copy of those to help debug if the build messed up.
-chomp($BULK_DBFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=BULK_DBFILE )`);
-chomp($DEPENDSTREEFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=DEPENDSTREEFILE )`);
-chomp($DEPENDSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=DEPENDSFILE )`);
-chomp($SUPPORTSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=SUPPORTSFILE )`);
-chomp($INDEXFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=INDEXFILE )`);
-chomp($ORDERFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=ORDERFILE )`);
-chomp($STARTFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=STARTFILE )`);
-chomp($LOCALBASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=LOCALBASE )`);
-chomp($X11BASE=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=X11BASE )`);
-chomp($FIND=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=FIND )`);
-chomp($GTAR=`( cd $USR_PKGSRC/pkgtools/pkglint ; $ENV{"BMAKE"} show-var VARNAME=GTAR )`);
-$bulkdbfile=basename($BULK_DBFILE);
-$dtfile=basename($DEPENDSTREEFILE);
-$depfile=basename($DEPENDSFILE);
-$supfile=basename($SUPPORTSFILE);
-$indfile=basename($INDEXFILE);
-$ordfile=basename($ORDERFILE);
-$startfile=basename($STARTFILE);
+my $bulkdbfile = basename($vars{BULK_DBFILE});
+my $dtfile = basename($vars{DEPENDSTREEFILE});
+my $depfile = basename($vars{DEPENDSFILE});
+my $supfile = basename($vars{SUPPORTSFILE});
+my $indfile = basename($vars{INDEXFILE});
+my $ordfile = basename($vars{ORDERFILE});
 
-$startdate = (stat($STARTFILE))[9];
+my $startdate = (stat($vars{STARTFILE}))[9];
+my $enddate = '';
 if ($startdate == 0) {
 	$startdate = "unknown";
 } else {
 	local $ENV{TZ} = "UTC";
-	$startdate = POSIX::strftime("%c %Z", gmtime($startdate));
-	$enddate = POSIX::strftime("%c %Z", gmtime(time()));
+	$startdate = strftime("%c %Z", gmtime($startdate));
+	$enddate = strftime("%c %Z", gmtime(time()));
 }
 
-$verbose=1;
-
-$report_head = <<EOF;
+my $report_head = <<EOF;
 Package                    Breaks  Maintainer
 --------------------------------------------------------------
 EOF
-$report_form = <<EOF;
+my $report_form = <<EOF;
 @<<<<<<<<<<<<<<<<<<<<<<<<< @<<<<<< @<<<<<<<<<<<<<<<<<<<<<<<<
-$pkg                       $nbrokenby  $maintainer
 EOF
+# $pkg, $nbrokenby, $maintainer
 
-system("mkdir -p ${FTP}");
+
+my_system("mkdir -p $vars{FTP}");
 
 # Copy over the output from the build process
-chdir($USR_PKGSRC);
-system("find . -name $BROKENFILE -print -o -name $BROKENWRKLOG -print | $GTAR -T - -plcf - | (cd $FTP; $GTAR -plxf -)");
+chdir($vars{USR_PKGSRC});
+my_system("/bin/ls -1 $vars{BROKENFILE} $vars{BROKENWRKLOG} */*/$vars{BROKENFILE} */*/$vars{BROKENWRKLOG} 2>/dev/null | $vars{GTAR} -T - -plcf - | (cd $vars{FTP}; $vars{GTAR} -plxf -)");
 
 # Copy over the cache files used during the build
-foreach my $f ($BULK_DBFILE, $DEPENDSTREEFILE, $DEPENDSFILE, $SUPPORTSFILE, $INDEXFILE, $ORDERFILE) {
-	system("cp ${f} ${FTP}") if -f ${f};
+foreach my $f qw(BULK_DBFILE DEPENDSTREEFILE DEPENDSFILE SUPPORTSFILE INDEXFILE ORDERFILE) {
+	my_system("cp $vars{$f} $vars{FTP}") if -f $vars{$f};
 }
 
-chdir($FTP);
+chdir($vars{FTP});
 writeReport();
 
 #
 # Adjust "last" symlink
 #
 {
-	local($base, $dir) = $FTP=~m|^(.*)/([^/]*)$|;
+	my ($base, $dir) = ($vars{FTP} =~ m|^(.*)/([^/]*)$|);
 
 	unlink("$base/last");
 	symlink($dir, "$base/last");
 }
 
 #
-# Generate leftovers-${arch}.html: files not deleted
-# Leftover files are copied to leftovers-${arch} dir, and linked from
-# leftovers-${arch}.html
+# Generate leftovers-$vars{arch}.html: files not deleted
+# Leftover files are copied to leftovers-$vars{arch} dir, and linked from
+# leftovers-$vars{arch}.html
 #
 {
-	chdir($FTP);
-	system("mkdir -p leftovers-${arch}");
+	chdir($vars{FTP});
+	my_system("mkdir -p leftovers-$vars{arch}");
 
 	# Find files since last build:
-	$leftovers_txt = "leftovers-${arch}.txt";
-	$leftovers_html = "leftovers-${arch}.html";
-	system("${FIND} ${LOCALBASE} -newer ${USR_PKGSRC}/${startfile} -type f -print >>$leftovers_txt");
-	system("${FIND} ${X11BASE} -newer ${USR_PKGSRC}/${startfile} -type f -print >>$leftovers_txt");
+	my $leftovers_txt = "leftovers-$vars{arch}.txt";
+	my $leftovers_html = "leftovers-$vars{arch}.html";
+
+	my_system("$vars{FIND} $vars{LOCALBASE}/ -newer $vars{STARTFILE} -type f -print >>$leftovers_txt");
+	my_system("$vars{FIND} $vars{X11BASE}/ -newer $vars{STARTFILE} -type f -print >>$leftovers_txt");
 
 	# Strip perl-files:
+	my $perlfiles;
 	{
 		local $/;
 		undef $/;
 		$perlfiles = `pkg_info -qL perl*`;
 	}
-	($perlfiles_pattern = $perlfiles) =~ s/\n/|/g;
+
+	my $perlfiles_pattern = $perlfiles;
+	$perlfiles_pattern =~ s/\n/|/g;
 	$perlfiles_pattern =~ s/|$//;
 
 	open (LEFT, $leftovers_txt) or die "can't read $leftovers_txt: $!";
-	@left = <LEFT>;
+	my @left = <LEFT>;
 	close (LEFT);
-	@leftovers = grep(!/^(${perlfiles_pattern})$/, @left);
+	my @leftovers = grep(!/^(?:${perlfiles_pattern})$/, @left);
+
+	if (index($vars{PKG_DBDIR}, $vars{LOCALBASE}) == 0) {
+		# If PKG_DBDIR is inside LOCALBASE, exclude it from the leftovers.
+		@leftovers = grep { index($_, $vars{PKG_DBDIR}) != 0 } @leftovers;
+	}
 
 	open (LEFT, ">$leftovers_txt") or die "can't write $leftovers_txt: $!";
 	print LEFT @leftovers;
@@ -148,7 +182,7 @@ writeReport();
 
 	if (scalar(@leftovers)) {
 		# Store leftovers, for easier identification:
-		system("$GTAR -T $leftovers_txt -plcf - | (cd leftovers-${arch}; $GTAR -plxf -)");
+		my_system("$vars{GTAR} -T $leftovers_txt -plcf - | (cd leftovers-$vars{arch}; $vars{GTAR} -plxf -)");
 	}
 
 	# Add links to leftover list:
@@ -161,7 +195,7 @@ writeReport();
 EOOUT
 	foreach (@leftovers) {
 		chomp;
-	    	print OUT "<a href=\"${FTPHOST}/${FTPURL}/leftovers-${arch}$_\">$_</a>\n";
+	    	print OUT "<a href=\"$vars{FTPHOST}/$vars{FTPURL}/leftovers-$vars{arch}$_\">$_</a>\n";
 	}
 	print OUT <<EOOUT2;
 </pre>
@@ -172,17 +206,17 @@ EOOUT2
 }
 
 # print the result of a single broken package
-sub pkgResult {
+sub pkgResult ($$) {
 	my ($pinfo, $state) = @_;
 	my $pkg = $pinfo->{pkg};
 	my $nbrokenby = $pinfo->{nbrokenby};
 	my $nerrors = $pinfo->{nerrors};
 
-	@idents = `${FIND} ${USR_PKGSRC}/${pkg} -type f -print | xargs grep \\\$NetBSD`;
-	$datetime = "";
-	$file = "";
-	$ver = "";
-	foreach $ident (@idents) {
+	my @idents = `$vars{FIND} $vars{USR_PKGSRC}/$pkg -type f -print | xargs grep \\\$NetBSD`;
+	my $datetime = "";
+	my $file = "";
+	my $ver = "";
+	foreach my $ident (@idents) {
 		$ident =~ /\$[N]etBSD: ([^ ]*),v ([^ ]*) ([^ ]*) ([^ ]*) ([^ ]*) Exp \$/;
 		if ("$3 $4" gt $datetime) {
 			$datetime = "$3 $4";
@@ -191,7 +225,7 @@ sub pkgResult {
 		}
 	}
 
-	$maintainer = `grep ^MAINTAINER $USR_PKGSRC/$pkg/Makefile`;
+	my $maintainer = `grep ^MAINTAINER $vars{USR_PKGSRC}/$pkg/Makefile`;
 	$maintainer =~ s/MAINTAINER=[ \t]*//;
 	$maintainer =~ s/</&lt;/g;
 	$maintainer =~ s/>/&gt;/g;
@@ -199,7 +233,7 @@ sub pkgResult {
 
 	(my $state_style = $state) =~ s/ //g;
 
-	$nbrokenby_html = '<td>&nbsp;</td>'; 
+	my $nbrokenby_html = '<td>&nbsp;</td>'; 
 	$nbrokenby_html =
 		'<td align="right" class="pkg-'.$state_style.'">'.$nbrokenby.'</td>'
 		if $nbrokenby > 0;
@@ -222,14 +256,14 @@ EOHTML
 # write the build report
 sub writeReport {
 	my $broken = getBroken();
-	$nbroken = scalar(@{$broken->{"broken"}});
-	$nbrokendep = scalar(@{$broken->{"broken depends"}});
-	$nunpackaged = scalar(@{$broken->{"not packaged"}});
-	$nbrokentot = $nbroken + $nbrokendep;
-	$ntotal = $nunpackaged + $nbroken + $nbrokendep;
+	my $nbroken = scalar(@{$broken->{"broken"}});
+	my $nbrokendep = scalar(@{$broken->{"broken depends"}});
+	my $nunpackaged = scalar(@{$broken->{"not packaged"}});
+	my $nbrokentot = $nbroken + $nbrokendep;
+	my $ntotal = $nunpackaged + $nbroken + $nbrokendep;
 
 	# determine the number of packages attempted, and then successful
-	open(ORDER, $ordfile) || die "can't open $ordfile: $!";
+	open(ORDER, $vars{ORDERFILE}) || die "can't open $vars{ORDERFILE}: $!";
 	my @order = <ORDER>;
 	close(ORDER);
 	my $nattempted = scalar(@order);
@@ -238,7 +272,7 @@ sub writeReport {
 	if ($verbose) {
 		print <<EOF;
 pkgsrc bulk build results
-$os $osrev/$arch
+$os $vars{osrev}/$vars{arch}
 
 Summary:
 
@@ -248,7 +282,7 @@ EOF
 EOF
 		print swrite($summary_form, "Build started:", $startdate);
 		print swrite($summary_form, "Build ended:", $enddate);
-		print swrite($summary_form);
+		print swrite($summary_form, '', '');
 		print swrite($summary_form, "Successfully packaged:", $nsuccessful);
 		print swrite($summary_form, "Packages really broken:", $nbroken);
 		print swrite($summary_form, "Pkgs broken due to them:", $nbrokendep);
@@ -260,15 +294,15 @@ EOF
 Packages not listed here resulted in a binary package. The build
 report, including logs of failed/not-packaged is available from:
 
-$FTPHOST/$FTPURL/$reportf
+$vars{FTPHOST}/$vars{FTPURL}/$reportf
 EOF
 	}
 
-	open(HTML,">$REPORT") or die "Can't write $REPORT: $!\n";
+	open(HTML, ">$vars{REPORT}") or die "Can't write $vars{REPORT}: $!\n";
 	print HTML <<EOHTML;
 <html>
 <head>
-<title>$os $osrev/$arch bulk package build</title>
+<title>$os $vars{osrev}/$vars{arch} bulk package build</title>
 <style type="text/css">
 <!--
 
@@ -362,9 +396,9 @@ tt.filename {
 
 <body bgcolor="white" text="black" link="#3535c5" vlink="#700080" alink="#3535c5">
 
-<a name="top"/>
+<a name="top"></a>
 <h1>pkgsrc bulk build results</h1>
-<h2>$os $osrev/$arch</h2>
+<h2>$os $vars{osrev}/$vars{arch}</h2>
 
 <h3>Summary</h3>
 
@@ -400,13 +434,13 @@ tt.filename {
 
 <p>
   Packages not listed here resulted in a <a
-  href="../../packages/" title="binary packages for $os $osrev/$arch">binary
+  href="../../packages/" title="binary packages for $os $vars{osrev}/$vars{arch}">binary
   package</a>. Results of failed packages are available below.
 </p>
 
 <p>
   Files leftover from the build (because of broken PLISTs, etc.) can be
-  found in <a href="leftovers-${arch}.html" title="leftover files">this
+  found in <a href="leftovers-$vars{arch}.html" title="leftover files">this
   list</a>.
 </p>
 
@@ -438,7 +472,7 @@ EOHTML
 
 		print HTML <<EOHTML;
 
-<a name="$state"/>
+<a name="$state"></a>
 <h2>$state_head{$state}</h2>
 <table width="100%">
 <tr align="left">
@@ -478,7 +512,6 @@ The following cache files were used during the build:
 
 <p>    
 <ul>
-<!-- <li>View the <a href="$prog">progress</a> of the build. -->
 <!-- <li>See the list of <a href="../index.html">all log files</a>. -->
 <li>Visit the <a href="http://www.NetBSD.org">NetBSD web site</a>.
 <li>Learn more about
@@ -492,25 +525,28 @@ EOHTML
 	close(HTML);
 
 	if ($verbose) {
-		print "\n\n$ADMINSIG\n\n";
+		print "\n\n$vars{ADMINSIG}\n\n";
 		print "[* This message was created by the Packages Collection bulk build software *]\n";
 	}
 }
 
 # get and sort the broken packages
 sub getBroken {
-	if (!open (BF, $BROKENFILE)) {
-		return undef;
-	}
-		
+	my $res = {
+		'broken' => [],
+		'broken depends' => [],
+		'not packaged' => [],
+	};
+
+	open (BF, $vars{BROKENFILE}) || return $res;
 	my @in = <BF>;
 	close (BF);
 
-	my $res = {};
 	foreach (@in) {
 		chomp;
 		my ($nerrors, $bf, $nbrokenby) = split;
-		(my $pkg = $bf) =~ s,/$BROKENFILE,,;
+		my $pkg = $bf;
+		$pkg =~ s,/$vars{BROKENFILE},,;
 		my %tmp = (
 			bf => $bf,
 			pkg => $pkg,
