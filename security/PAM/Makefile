@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/01/28 22:04:03 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/02/09 16:16:56 dmcmahill Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
@@ -29,6 +29,11 @@ CONFIGURE_ENV+=		ac_cv_prog_HAVE_SGML2PS=no
 CONFIGURE_ENV+=		ac_cv_prog_HAVE_PS2PDF=no
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(LDCONFIG) && !exists(${LDCONFIG})
+LDCONFIG=
+.endif
+MAKE_ENV+=	PKG_LDCONFIG=${LDCONFIG}
 
 .if !empty(OPSYS:M*BSD)
 CFLAGS+=		-DUSE_GETLOGIN=1
