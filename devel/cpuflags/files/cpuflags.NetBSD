@@ -1,21 +1,6 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.51 2004/07/06 23:00:10 abs Exp $
-
-if [ -x /sbin/sysctl ] ;then
-    SYSCTL=/sbin/sysctl
-else
-    SYSCTL=/usr/sbin/sysctl	# NetBSD 1.3
-fi
-
-hw_machine=`$SYSCTL -n hw.machine`
-hw_machine_arch=`$SYSCTL -n hw.machine_arch`
-hw_model=`$SYSCTL -n hw.model`
-
-# We're almost certainly crosscompiling
-if [ -n "$MACHINE" -a $hw_machine != "$MACHINE" ]; then
-    echo
-    exit
-fi
+# $NetBSD: cpuflags.NetBSD,v 1.52 2004/07/27 19:25:44 abs Exp $
+PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 if [ -n "$1" ]; then
     CC=$1
@@ -23,12 +8,22 @@ else
     CC=gcc
 fi
 
+hw_model=$(sysctl -n hw.model)
+hw_machine=$(sysctl -n hw.machine)
+hw_machine_arch=$(sysctl -n hw.machine_arch)
+
+# We're almost certainly crosscompiling
+if [ -n "$MACHINE" -a $hw_machine != "$MACHINE" ]; then
+    echo
+    exit
+fi
+
 # When adding $hw_model tests use maximum context (such as trailing space)
 case $hw_machine_arch in
 
     alpha)
 	# cpu0 at mainbus0: ID 0 (primary), 21164A-0 (unknown ...
-	case "`egrep '^cpu0 ' /var/run/dmesg.boot`" in
+	case "$(egrep '^cpu0 ' /var/run/dmesg.boot)" in
 	    *[\(\ ]2106[46][-A\ \)]*)	FLAGS="-mcpu=21064"	;;
 	    *[\(\ ]21164[-\ \)]*)	FLAGS="-mcpu=21164"	;;
 	    *[\(\ ]21164A[-\ \)]*)	FLAGS="-mcpu=21164a"	;;
@@ -94,7 +89,7 @@ case $hw_machine_arch in
 	*\(68040*|*\ MC68040\ *) FLAGS='-m68040'	;; # Untested
 	*\(68060*|*\ MC68060\ *) FLAGS='-m68060'	;; # Upgr amiga 3000
     esac
-    case "`egrep '^fpu0 ' /var/run/dmesg.boot`" in
+    case "$(egrep '^fpu0 ' /var/run/dmesg.boot)" in
 	*\(emulator\)*)		FLAGS="$FLAGS -msoft-float" ;; 
 	*\(no\ math\ support\)*) FLAGS="$FLAGS -msoft-float" ;; 
     esac
@@ -102,7 +97,7 @@ case $hw_machine_arch in
 
     mipseb|mipsel)
 	# cpu0 at mainbus0: QED R4600 Orion CPU (0x2020) Rev. 2.0 with ...
-	case "`egrep '^cpu0 ' /var/run/dmesg.boot`" in
+	case "$(egrep '^cpu0 ' /var/run/dmesg.boot)" in
 	    *\ MIPS\ R2000\ *)	FLAGS="-march=r2000"	   ;;
 	    *\ MIPS\ R3000\ *)	FLAGS="-march=r3000"	   ;;
 	    *\ MIPS\ R3000A\ *) FLAGS="-march=r3000"	   ;;
@@ -176,8 +171,8 @@ fi
 #   gcc_version_in_which_option_was_introduced	new_option  old_option
 
 if [ -n "$FLAGS" ]; then
-    gcc_ver=`${CC} -dumpversion | sed 's/^egcs-//'`
-    FLAGS=`awk -F: -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
+    gcc_ver=$(${CC} -dumpversion | sed 's/^egcs-//')
+    FLAGS=$(awk -F: -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
 	{ if (gcc_ver < $1){map[$2] = ""$3} }
 	END { while (flags in map) {flags = map[flags]} print flags }
 	' <<EOD
@@ -231,7 +226,7 @@ if [ -n "$FLAGS" ]; then
 3.1:-mtune=r8000:-cpu=r8000
 3.3:-march=c3:-march=i586
 EOD
-`
+)
 fi
 
 echo $FLAGS
