@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/10 17:08:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/18 07:33:30 snj Exp $
 #
 
 DISTNAME=	tcpflow-0.20
@@ -9,8 +9,8 @@ MAINTAINER=	adrianp@stindustries.net
 HOMEPAGE= 	http://www.circlemud.org/~jelson/software/tcpflow/
 COMMENT=	Captures data transmitted as part of TCP connections
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
-.include "../../net/libpcap/buildlink2.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2004/03/22 08:26:24 martti Exp $
+# $NetBSD: Makefile,v 1.43 2004/04/18 07:40:15 snj Exp $
 #
 
 DISTNAME=       fvwm-${PKG_VERSION}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.fvwm.org/generated/manpages/xpmroot.html
 COMMENT=	Sets the root window to an Xpm pixmap
 
 PKG_VERSION=	2.4.18
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 
@@ -29,5 +29,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/utils/xpmroot ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/utils/xpmroot.1 ${PREFIX}/man/man1
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
