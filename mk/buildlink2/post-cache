@@ -1,12 +1,34 @@
+# $NetBSD: post-cache,v 1.1.2.2 2002/06/21 21:43:20 jlam Exp $
+
 *)
-        newarg=`echo "X$arg" | $Xsed					\
-		-e "$sed_quote_subst"					\
-		-e "$sed_whitespace_subst"				\
-		@_BLNK_TRANSFORM_SED.1@					\
-		@_BLNK_TRANSFORM_SED.2@					\
-		@_BLNK_TRANSFORM_SED.3@`
-	@ECHO@ "'$arg') newarg='$newarg' ;;" >> $cache
-	cacheupdated=yes
+	case $arg in
+	*[\`\"\$\\])
+		arg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
+		case $arg in
+		*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
+			arg="\"$arg\""
+			;;
+		esac
+		newarg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
+		@ECHO@ "$arg) arg=\"$newarg\" ;; #1" >> $cache
+		cacheupdated=yes
+		;;
+	*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
+		arg="\"$arg\""
+		newarg=`@ECHO@ X$arg | $Xsed -e "$sed_quote_subst"`
+		@ECHO@ "$arg) arg=\"$newarg\" ;; #2" >> $cache
+		cacheupdated=yes
+		;;
+        -[ILl]*|@LOCALBASE@/*/lib*|@X11BASE@/*/lib*)
+		newarg=`@ECHO@ "X$arg" | $Xsed \
+			@_BLNK_TRANSFORM_SED.1@ \
+			@_BLNK_TRANSFORM_SED.2@ \
+			@_BLNK_TRANSFORM_SED.3@ \
+		`
+		@ECHO@ "$arg) arg=\"$newarg\" ;; #3" >> $cache
+		arg="$newarg"
+		cacheupdated=yes
+		;;
+	esac
 	;;
 esac
-args="$args $newarg"

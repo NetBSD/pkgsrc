@@ -1,1 +1,5 @@
-case "$arg" in
+# $NetBSD: pre-cache,v 1.1.2.2 2002/06/21 21:43:20 jlam Exp $
+
+case $arg in
+-[IL]@BUILDLINK_DIR@*|-[IL]@BUILDLINK_X11_DIR@*|-[IL]@_BLNK_X11PKG_DIR@*)
+	;;
