@@ -1,24 +1,21 @@
-$NetBSD: patch-af,v 1.1 1999/11/20 00:56:17 ross Exp $
+$NetBSD: patch-af,v 1.2 1999/12/20 03:52:24 briggs Exp $
 
---- mkisofs-1.12b5/mkisofs.c.orig	Wed Nov  3 14:56:49 1999
-+++ mkisofs-1.12b5/mkisofs.c	Fri Nov 19 16:48:02 1999
-@@ -879,19 +879,6 @@
- 
- parse_input_files:
- 
--#ifdef __NetBSD__
--    {
--	int resource;
--    struct rlimit rlp;
--	if (getrlimit(RLIMIT_DATA,&rlp) == -1) 
--		perror("Warning: getrlimit");
--	else {
--		rlp.rlim_cur=33554432;
--		if (setrlimit(RLIMIT_DATA,&rlp) == -1)
--			perror("Warning: setrlimit");
--		}
--	}
--#endif
- #ifdef HAVE_SBRK
-   mem_start = (unsigned long) sbrk(0);
- #endif
+*** RULES/i386-netbsd-gcc.rul.orig	Sat Dec 18 17:50:19 1999
+--- RULES/i386-netbsd-gcc.rul	Sat Dec 18 17:50:41 1999
+***************
+*** 26,32 ****
+  CPPFLAGS=	$(CPPOPTS) $(CPPOPTX)
+  CFLAGS=		$(COPTS) $(CWARNOPTS) $(COPTOPT) $(COPTX)
+  
+! OSDEFS=		-DIS_UNIX
+  CPPOPTS=	-I. -I$(ARCHDIR) -I$(OINCSDIR) $(INCDIRS:%=-I%) $(OSDEFS)
+  COPTS=
+  CWOPTS=		-Wall -Wtraditional \
+--- 26,32 ----
+  CPPFLAGS=	$(CPPOPTS) $(CPPOPTX)
+  CFLAGS=		$(COPTS) $(CWARNOPTS) $(COPTOPT) $(COPTX)
+  
+! OSDEFS=
+  CPPOPTS=	-I. -I$(ARCHDIR) -I$(OINCSDIR) $(INCDIRS:%=-I%) $(OSDEFS)
+  COPTS=
+  CWOPTS=		-Wall -Wtraditional \
