@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/03/07 00:41:51 kim Exp $
+# $NetBSD: Makefile,v 1.4 1999/05/03 23:39:22 tv Exp $
 
 DISTNAME=	cyrus-imapd-v1.5.14
 CATEGORIES=	mail
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--with-tcl=/usr/local/tcl
 
 PKGNAME!=	${ECHO} "${DISTNAME}" | ${SED} -e 's/-imapd-v/-/'
 
-.if exists(/usr/lib/libkrb.a) && \
-    (defined(MAKE_EBONES) || defined(MAKE_KERBEROS4))
+.if defined(USE_KERBEROS4)
 CONFIGURE_ARGS+=	--with-login=krb
+RESTRICTED=		uses Kerberos encryption code
 .endif

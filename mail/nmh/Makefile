@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/03/07 01:16:25 kim Exp $
+# $NetBSD: Makefile,v 1.26 1999/05/03 23:39:22 tv Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/04 06:51:28 markm Exp
 #
 
@@ -35,8 +35,9 @@ CONFIGURE_ARGS+= --with-editor=${NMH_EDITOR}
 CONFIGURE_ARGS+= --with-pager=${NMH_PAGER}
 .endif
 
-.if exists(/usr/lib/libkrb.a) && (defined(MAKE_EBONES) || defined(MAKE_KERBEROS4))
-CONFIGURE_ARGS+= --with-krb4=yes
+.if defined(USE_KERBEROS4)
+CONFIGURE_ARGS+=--with-krb4=yes
+RESTRICTED=	uses Kerberos encryption code
 .endif
 
 DOCDIR=		share/doc/nmh
