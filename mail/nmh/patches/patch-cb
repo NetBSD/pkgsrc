@@ -1,18 +1,52 @@
-$NetBSD: patch-cb,v 1.2 1999/03/05 01:56:43 kim Exp $
+$NetBSD: patch-cb,v 1.3 1999/03/06 23:17:34 kim Exp $
 
 --- config.h.in.orig	Sat Jan 23 21:27:49 1999
-+++ config.h.in	Thu Mar  4 20:33:42 1999
-@@ -37,9 +37,10 @@
++++ config.h.in	Sat Mar  6 17:50:41 1999
+@@ -1,5 +1,12 @@
+ /* config.h.in.  Generated automatically from configure.in by autoheader.  */
+ 
++/* Define if you have the <sys/param.h> header file.  */
++#undef HAVE_SYS_PARAM_H
++
++#ifdef HAVE_SYS_PARAM_H
++# include <sys/param.h>
++#endif
++
+ /****** BEGIN USER CONFIGURATION SECTION *****/
+ 
+ /*
+@@ -37,9 +44,12 @@
   *  OpenBSD 2.x
   *  BSD/OS 2.x
   */
 -/* #define BIND     1 */
 -/* #define BSD42    1 */
 -/* #define BSD44    1 */
++#ifdef BSD4_4
 +#define BIND     1
 +#define BSD42    1
 +#define BSD44    1
 +#define GCOS_HACK 1
++#endif
  
  /*
   *  SCO 4.x
+@@ -154,7 +164,7 @@
+  * The prefix which is prepended to the name of messages when they
+  * are "removed" by rmm.  This should typically be `,' or `#'
+  */
+-#define BACKUP_PREFIX ","
++#define BACKUP_PREFIX "#"
+ 
+ /*
+  * Name of link to file to which you are replying.
+@@ -399,9 +409,6 @@
+ 
+ /* Define if you have the <sys/ndir.h> header file.  */
+ #undef HAVE_SYS_NDIR_H
+-
+-/* Define if you have the <sys/param.h> header file.  */
+-#undef HAVE_SYS_PARAM_H
+ 
+ /* Define if you have the <sys/time.h> header file.  */
+ #undef HAVE_SYS_TIME_H
