@@ -1,2 +1,3 @@
-cat ${FILESDIR}/Makefile.freebsd ${WRKSRC}/src/Makefile.template > ${WRKSRC}/freebsd/Makefile
+mkdir ${WRKSRC}/netbsd
+cat ${FILESDIR}/Makefile.netbsd ${WRKSRC}/src/Makefile.template > ${WRKSRC}/netbsd/Makefile
 cp ${FILESDIR}/Makefile.work ${WRKSRC}/Makefile
