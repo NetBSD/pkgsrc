@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: sshd.sh,v 1.3 2000/07/24 16:44:53 jlam Exp $
+# $NetBSD: sshd.sh,v 1.4 2000/08/28 08:52:59 abs Exp $
 #
 
 name="sshd"
@@ -14,10 +14,7 @@ start)
 	then
 		@PREFIX@/bin/ssh-keygen -b 1024 -N "" -f /etc/ssh_host_key
 	fi
-	if [ ! -f @SSH_CONF_DIR@/ssh_host_dsa_key ]
-	then
-		/usr/pkg/bin/ssh-keygen -d -N "" -f /etc/ssh_host_dsa_key
-	fi
+	# No DSA key for ssh-1.x
 	if [ -x @PREFIX@/sbin/sshd -a -f @SSH_CONF_DIR@/sshd_config ]
 	then
 		echo "Starting ${name}."
