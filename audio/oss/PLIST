@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/07/23 21:52:29 jmc Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/11/08 14:50:14 wiz Exp $
 bin/ossplay
 bin/ossmixer
 bin/ossmplay
@@ -54,6 +54,8 @@ lib/oss/docs/programming.txt
 lib/oss/docs/using_oss.txt
 lib/oss/drums.o3
 lib/oss/drums.sb
+lib/oss/emu10k.bin1
+lib/oss/emu10k.bin2
 lib/oss/errors.cat
 lib/oss/include/sys/awe_voice.h
 lib/oss/include/sys/dm.h
@@ -61,6 +63,7 @@ lib/oss/include/sys/soundcard.h
 lib/oss/include/sys/ultrasound.h
 lib/oss/install.sh
 lib/oss/install2.sh
+lib/oss/ld10k
 lib/oss/libOSSlib.a
 lib/oss/license.asc.eval
 lib/oss/mixer
@@ -78,6 +81,7 @@ lib/oss/ossxmix
 lib/oss/play
 lib/oss/record
 lib/oss/savemixer
+lib/oss/sfxload
 lib/oss/sndconf
 lib/oss/soundcard.h
 lib/oss/soundconf
