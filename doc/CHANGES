@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8844 2005/01/20 23:34:53 adrianp Exp $
+$NetBSD: CHANGES,v 1.8845 2005/01/21 00:37:26 salo Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -456,3 +456,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated tcpreplay to 2.3.2 [adrianp 2005-01-20]
 	Added packit-1.0 [adrianp 2005-01-20]
 	Updated isic to 0.06 [adrianp 2005-01-20]
+	Updated ethereal to 0.10.9 [salo 2005-01-21]
