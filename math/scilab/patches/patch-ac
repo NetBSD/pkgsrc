@@ -1,11 +1,27 @@
-$NetBSD: patch-ac,v 1.3 1999/12/22 13:25:41 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.4 2001/04/08 16:25:28 dmcmahill Exp $
 
---- ./routines/pvm/pvm_info.c.orig	Thu Apr 23 10:56:21 1998
-+++ ./routines/pvm/pvm_info.c	Mon Nov 22 21:40:22 1999
-@@ -16,5 +16,5 @@
- #include <stdlib.h>
- #include <string.h>
--#include "../../pvm3/include/pvm3.h"
-+#include "pvm3.h"
- #include "../machine.h"
+check for the fortran libs.  We need to check this way
+to keep compatibility with both f2c and f77 rather than
+hard coding something like "-lg2c".
+
+--- configure.in.orig	Mon Mar 26 07:08:33 2001
++++ configure.in	Fri Mar 30 06:08:18 2001
+@@ -112,4 +112,12 @@
+ fi
  
++##################################################
++## Fortran libraries required for creating fortran
++## shared libraries.  In particular this is needed
++## for the lapack examples when using f2c.  This
++## will set the FLIBS variable.
++##################################################
++AC_F77_LIBRARY_LDFLAGS
++
+ #############################################
+ ## Compilers and options according to machine
+@@ -1339,4 +1347,5 @@
+ AC_SUBST(LDFLAGS)
+ AC_SUBST(LIBS)
++AC_SUBST(FLIBS)
+ #AC_SUBST(CC)
+ AC_SUBST(CFLAGS)
