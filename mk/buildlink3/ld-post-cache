@@ -1,0 +1,6 @@
+# $NetBSD: ld-post-cache,v 1.1.2.1 2003/08/14 13:16:49 jlam Exp $
+
+-Wl,*)
+	skipcache=yes
+	;;
+esac
