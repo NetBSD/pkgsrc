@@ -1,0 +1,25 @@
+$NetBSD: patch-ai,v 1.1 2000/03/21 10:06:42 he Exp $
+
+--- ../tnm/snmp/straps.c.dist	Fri Sep 13 19:57:46 1996
++++ ../tnm/snmp/straps.c	Tue Mar 21 10:49:20 2000
+@@ -126,6 +126,20 @@
+     }
+ 
+     /*
++     * Close any "leftover" FDs from the parent.  There is a relatively
++     * high probability that the parent will be scotty, and that the client
++     * side of the scotty-straps connection is among the open FDs.  This
++     * is bad news if the parent scotty goes away, since this will eventually
++     * cause straps to "block against itself" in the "forward data to client"
++     * write() calls below, since straps itself is not consuming data from
++     * the client side of the leftover open socket.
++     */
++
++    for (i = 3; i < FD_SETSIZE; i++) {
++	(void) close(i);
++    }
++
++    /*
+      * Open and bind the normal trap socket:
+      */
+ 
