@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/04/27 02:06:56 rh Exp $
+$NetBSD: patch-ac,v 1.2 2004/04/01 18:38:03 jmmv Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=106227
 
 --- libnautilus-private/nautilus-thumbnails.c.orig	2003-03-26 00:47:25.000000000 +1000
 +++ libnautilus-private/nautilus-thumbnails.c
