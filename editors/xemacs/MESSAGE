@@ -1,8 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2002/07/15 22:57:28 heinz Exp $
+$NetBSD: MESSAGE,v 1.4 2003/02/26 00:33:48 uebayasi Exp $
 
-Copy ${PREFIX}/lib/${DISTNAME}/etc/sample.emacs to ~/.xemacs/init.el.
-You need to install xemacs-package for a basic set of
-support packages.
+* See ${PREFIX}/lib/${DISTNAME}/etc/sample.init.el for a sample user
+  configuration.  Copying it to ~/.xemacs/init.el is an easy start.
+
+* See ${PREFIX}/lib/${DISTNAME}/etc/sample.Xdefaults for a sample X
+  resource setting.
+
+* Install `xemacs-packages' for a full set of support packages.
 
 ===========================================================================
