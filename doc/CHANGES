@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7452 2004/10/15 22:58:13 ben Exp $
+$NetBSD: CHANGES,v 1.7453 2004/10/15 23:48:58 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4742,3 +4742,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtkhtml3 to 3.2.3 [jmmv 2004-10-15]
 	Updated evolution to 2.0.2 [jmmv 2004-10-15]
 	Updated xmms-flac to 1.1.1 [ben 2004-10-15]
+	Updated gqview to 1.4.5 [snj 2004-10-15]
