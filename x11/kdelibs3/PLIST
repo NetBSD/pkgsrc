@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2004/12/14 10:58:30 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2005/03/06 12:48:09 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -58,7 +58,6 @@ bin/make_driver_db_lpr
 bin/makekdewidgets
 bin/meinproc
 bin/preparetips
-etc/xdg/menus/applications.menu
 include/arts/artskde.h
 include/arts/kartsdispatcher.h
 include/arts/kartsfloatwatch.h
@@ -885,6 +884,7 @@ share/doc/kde/HTML/en/kdelibs-apidocs/common
 share/doc/kde/HTML/en/kspell/common
 share/doc/kde/HTML/en/kspell/index.cache.bz2
 share/doc/kde/HTML/en/kspell/index.docbook
+share/examples/kdelibs3/applications.menu
 share/kde/apps/LICENSES/ARTISTIC
 share/kde/apps/LICENSES/BSD
 share/kde/apps/LICENSES/GPL_V2
@@ -4801,6 +4801,7 @@ ${PKGLOCALEDIR}/locale/all_languages
 @dirrm share/kde/apps/LICENSES
 @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde
+@dirrm share/examples/kdelibs3
 @dirrm share/doc/kde/HTML/en/kspell
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
@@ -4887,4 +4888,3 @@ ${PKGLOCALEDIR}/locale/all_languages
 @dirrm include/kabc
 @dirrm include/dom
 @comment in arts: @dirrm include/arts
-@comment dirrm etc/xdg/menus
