@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/26 12:50:45 jmmv Exp $
+
+--- bfb/bfb_io.c.orig	2003-04-11 12:34:10.000000000 +0200
++++ bfb/bfb_io.c
+@@ -272,8 +272,10 @@ void bfb_io_close(fd_t fd, int force)
+ 		/* Send a break to get out of OBEX-mode */
+ #ifdef _WIN32
+ 		if(SetCommBreak(fd) != TRUE)	{
+-#else
++#elif defined(TCSBRKP)
+ 		if(ioctl(fd, TCSBRKP, 0) < 0)	{
++#else
++		if(tcsendbreak(fd, 0) == -1)    {
+ #endif
+ 			DEBUG(1, "Unable to send break!\n");
+ 		}

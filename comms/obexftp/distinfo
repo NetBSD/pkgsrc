@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/26 12:50:43 jmmv Exp $
+
+SHA1 (obexftp-0.10.3.tar.gz) = 7f8756597e4660f71147a60fd5a5dc79a55e6cc6
+Size (obexftp-0.10.3.tar.gz) = 286083 bytes
+SHA1 (patch-aa) = a00bd78a2fe83d7758b7b4b42cf8a09e4167d854
+SHA1 (patch-ab) = 75005d57e2ef1ae2594b2513ab5235018dab0b4f
+SHA1 (patch-ac) = e41b1d6b1ede9c27f3e238b708b17acbab953e28
+SHA1 (patch-ad) = cf3ce3b10d4f35cb01f52b89c1d0636bd23ec1f6
+SHA1 (patch-ae) = 8f97189137675fb6ba34ec8253f6e34bf72e111f
+SHA1 (patch-af) = a18813e45590ecdc5b7402320f1e3c08daadd788
+SHA1 (patch-ag) = 6183be32c1485854be6732d28b1c87cf73e48211
