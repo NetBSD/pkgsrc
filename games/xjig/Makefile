@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2001/02/23 00:46:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2003/02/26 04:07:49 jschauma Exp $
 #
 
 DISTNAME=		xjig-2.4
+PKGREVISION=		1
 CATEGORIES=		games x11
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 EXTRACT_SUFX=		.tgz

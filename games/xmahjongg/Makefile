@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2001/12/30 03:39:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2003/02/26 04:07:50 jschauma Exp $
 
 DISTNAME=	xmahjongg
 PKGNAME=	xmahjongg-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 # Most Usenet archive sites don't store it as a .tar.gz, but Slackware
 # and its mirrors do.
