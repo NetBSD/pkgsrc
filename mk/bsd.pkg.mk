@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.231 1999/03/22 09:38:22 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.232 1999/03/29 11:22:29 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -625,30 +625,26 @@ DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 PKGNAME?=		${DISTNAME}
 
 # Latest version of pkgtools required for this file.
-# XXX There's a conditional hack for "pkg_delete -O" for
-#     _PKGTOOLS_VER>=19990302 below which should be backed out if this
-#     is bumped beyond 19990302.  - HF
 PKGTOOLS_REQD=		19990119
 
+# Version of pkgtools which use the pkgdb cache
+PKGTOOLS_PKGDB_VERSION=	19990302
+
 # Check that we're using up-to-date pkg_* tools with this file.
-.ifndef _PKGTOOLS_VER
-_PKGTOOLS_VER!= ${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ { gsub("/", "", $$4); print $$4 }' | sort | ${TAIL} -n 1
 uptodate-pkgtools:
-.if ${_PKGTOOLS_VER} < ${PKGTOOLS_REQD}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	case ${PKGNAME} in						\
-	pkg_install-*)							\
-		;;							\
-	*)								\
-		${ECHO} "Your package tools need to be updated to `${ECHO} ${PKGTOOLS_REQD} | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'` versions."; \
-		${ECHO} "The installed package tools were last updated on `${ECHO} ${_PKGTOOLS_VER} | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'`."; \
-		${ECHO} "Please make and install the pkgsrc/pkgtools/pkg_install package."; \
-		${FALSE} ;;						\
-	esac
-.else
-	@${DO_NADA}
-.endif # bad version date
-.endif # !defined _PKGTOOLS_VER
+	pkgtools_version=`${MAKE} show-pkgtools-version`;		\
+	if [ $$pkgtools_version -lt ${PKGTOOLS_REQD} ]; then		\
+		case ${PKGNAME} in					\
+		pkg_install-*)						\
+			;;						\
+		*)							\
+			${ECHO} "Your package tools need to be updated to `${ECHO} ${PKGTOOLS_REQD} | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'` versions."; \
+			${ECHO} "The installed package tools were last updated on `${ECHO} $$pkgtools_version | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'`."; \
+			${ECHO} "Please make and install the pkgsrc/pkgtools/pkg_install package."; \
+			${FALSE} ;;					\
+		esac							\
+	fi
 
 MAINTAINER?=		packages@netbsd.org
 
@@ -833,7 +829,7 @@ package:
 
 # Add these defs to the ones dumped into +BUILD_DEFS
 BUILD_DEFS+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
-BUILD_DEFS+=	CPPFLAGS CFLAGS LDFLAGS _PKGTOOLS_VER LICENSE
+BUILD_DEFS+=	CPPFLAGS CFLAGS LDFLAGS LICENSE
 BUILD_DEFS+=	CONFIGURE_ENV CONFIGURE_ARGS
 
 .if !defined(__ARCH_OK) || !defined(__OPSYS_OK)
@@ -2080,7 +2076,7 @@ README.html:
 
 .if !target(show-pkgtools-version)
 show-pkgtools-version:
-	@${ECHO} _PKGTOOLS_VER = ${_PKGTOOLS_VER}
+	@${IDENT} ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ { gsub("/", "", $$4); print $$4 }' | sort | ${TAIL} -n 1
 .endif
 
 .if !target(print-depends-list)
@@ -2116,9 +2112,11 @@ fake-pkg: ${PLIST} ${DESCR}
 		${MKDIR} ${PKG_DBDIR};					\
 	fi
 .if defined(FORCE_PKG_REGISTER)
-.if ${_PKGTOOLS_VER} >= 19990302
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_DELETE} -O ${PKGNAME}
-.endif 
+	${_PKG_SILENT}${_PKG_DEBUG};					\
+	pkgtools_version=`${MAKE} show-pkgtools-version`;		\
+	if [ $$pkgtools_version -gt ${PKGTOOLS_PKGDB_VERSION} ]; then	\
+		${PKG_DELETE} -O ${PKGNAME};				\
+	fi
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
@@ -2149,6 +2147,7 @@ fake-pkg: ${PLIST} ${DESCR}
 .ifdef USE_GMAKE
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
 .endif
+	@${ECHO} "_PKGTOOLS_VER= `${MAKE} show-pkgtools-version`" >> ${BUILD_INFO_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
 		${ECHO_MSG} "===>  Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
