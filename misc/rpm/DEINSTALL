@@ -1,21 +1,26 @@
-#!/bin/sh
+# DEINSTALL_TMPL replacement
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/11/01 01:29:25 zuntum Exp $
-#
+# $NetBSD: DEINSTALL,v 1.2 2002/10/20 23:09:27 jlam Exp $
 
-PKGNAME=$1
-STAGE=$2
-
-CAT="@CAT@"
-
-RPMDIR=/var/pkg/lib/rpm
+RPMDIR="@RPMDIR@"
 
 case ${STAGE} in
 DEINSTALL)
 	;;
 
 POST-DEINSTALL)
-	${CAT} << EOF
+	for db in ${RPMDIR}/*.rpm; do
+		if [ ${RPMDIR}/.pre-timestamp -ot $db ] && \
+		   [ ${RPMDIR}/.post-timestamp -nt $db ]; then
+			${RM} -f $db
+		fi
+	done
+	${RM} -f ${RPMDIR}/.pre-timestamp
+	${RM} -f ${RPMDIR}/.post-timestamp
+
+	${RMDIR} -p ${RPMDIR} 2>/dev/null || ${TRUE}
+	if [ -d ${RPMDIR} ]; then
+		${CAT} << EOF
 ===========================================================================
 
 If you won't be using ${PKGNAME} any longer, you may want to remove:
@@ -29,11 +34,11 @@ packages!
 
 ===========================================================================
 EOF
+	fi
 	;;
 
 *)
-	echo "Unexpected argument: ${STAGE}"
+	${ECHO} "Unexpected argument: ${STAGE}"
 	exit 1
 	;;
 esac
-exit 0
