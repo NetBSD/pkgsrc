@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 1999/09/13 18:40:52 jlam Exp $
+
+--- src/Makefile.bsd.in.orig	Fri Aug 27 21:37:56 1999
++++ src/Makefile.bsd.in	Mon Sep 13 11:38:07 1999
+@@ -81,7 +81,10 @@
+ FORCE_LOCALHOST=@FORCE_LOCALHOST@
+ PERMS=@PERMS@
+ 
+-CFLAGS:= @CPPFLAGS@ @CFLAGS@ @DEFS@ -DLOCALEDIR=\"$(localedir)\"
++CFLAGS:= @CPPFLAGS@ @CFLAGS@ @DEFS@ -DLOCALEDIR=\"$(localedir)\" \
++	 -DFILTER_LD_PATH=\"${FILTER_LD_PATH}\" \
++	 -DFILTER_PATH=\"${FILTER_PATH}\" \
++	 -DLPD_PRINTCAP_PATH=\"${LPD_PRINTCAP_PATH}\"
+ LDFLAGS:= @LDFLAGS@
+ 
+ #********************** End of configure modifiable settings ************
