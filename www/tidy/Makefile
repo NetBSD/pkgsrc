@@ -1,19 +1,24 @@
-# $NetBSD: Makefile,v 1.5 2001/02/25 04:18:25 hubertf Exp $
-# FreeBSD Id: ports/www/tidy/Makefile,v 1.15 2000/02/16 00:08:36 mharo Exp
+# $NetBSD: Makefile,v 1.6 2002/03/07 13:33:52 wiz Exp $
+#
 
-DISTNAME=	tidy4aug00
-PKGNAME=	tidy-20000804
+DISTNAME=	tidy_src_020301
+PKGNAME=	tidy-20020301
+WRKSRC=		${WRKDIR}/tidy
 CATEGORIES=	www
-MASTER_SITES=	http://www.w3.org/People/Raggett/
+MASTER_SITES=	http://tidy.sourceforge.net/src/ \
+		http://tidy.sourceforge.net/docs/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.w3c.org/People/Raggett/tidy/
 COMMENT=	Fixes and tidies up HTML files
 
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} tidy_docs_000804${EXTRACT_SUFX}
 ALL_TARGET=	tidy
+CFLAGS+=	-DPRESERVE_FILE_TIMES=0
 
-DOCFILES=	Overview.html tidy.gif release-notes.html grid.gif
+DOCFILES=	htmldoc/Overview.html htmldoc/tidy.gif \
+		htmldoc/release-notes.html htmldoc/grid.gif
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/tidy ${PREFIX}/bin/tidy
