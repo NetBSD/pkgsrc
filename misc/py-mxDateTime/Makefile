@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/10/29 19:59:27 tsarna Exp $
+# $NetBSD: Makefile,v 1.5 2000/12/12 16:51:40 jlam Exp $
 
 DISTNAME=	mxDateTime-1.3.0
 PKGNAME=	py-mxDateTime-1.3.0
@@ -38,8 +38,8 @@ do-install:
 	@${INSTALL_DATA} ${WRKSRC}/mxDateTime/*.so \
 		${WRKSRC}/mxDateTime/__init__.py* \
 		 ${PREFIX}/lib/python2.0/site-packages/DateTime/mxDateTime
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/py-mxDateTime
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/py-mxDateTime
 	@${INSTALL_SCRIPT} ${WRKSRC}/Doc/*.html \
-		${PREFIX}/share/doc/py-mxDateTime/
+		${PREFIX}/share/doc/html/py-mxDateTime/
 
 .include "../../mk/bsd.pkg.mk"
