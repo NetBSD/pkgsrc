@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/01 10:42:19 jmc Exp $
 #
 
 DISTNAME=	tv_scope-0.0.2
@@ -14,6 +14,8 @@ USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=	YES
+
+ONLY_FOR_PLATFORM=	SunOS-*-* Linux-*-* Darwin-*-* NetBSD-1.6[N-Z]-* NetBSD-1.6Z[A-Z]-* NetBSD-1.[7-9]*
 
 .include "../../audio/xmms/buildlink2.mk"
 .include "../../devel/SDL/buildlink2.mk"
