@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2004/03/26 02:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2004/04/01 18:21:20 jmmv Exp $
 #
 
-DISTNAME=		gnome-vfs-2.4.2
+DISTNAME=		gnome-vfs-2.6.0
 PKGNAME=		${DISTNAME:S/vfs/vfs2/}
-PKGREVISION=		4
 CATEGORIES=		sysutils gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -13,6 +12,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME Virtual File System (v2)
 
 BUILD_USES_MSGFMT=	YES
+DEPENDS+=		shared-mime-info>=0.13:../../databases/shared-mime-info
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK3=		YES
@@ -24,13 +24,16 @@ USE_PKGINSTALL=		YES
 PKGCONFIG_OVERRIDE=	gnome-vfs-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gnome-vfs-module-2.0.pc.in
 
-CONFIGURE_ARGS= 	--enable-gtk-doc=no
+CONFIGURE_ARGS= 	--disable-gtk
+CONFIGURE_ARGS+= 	--disable-samba
 CONFIGURE_ARGS+=	--enable-platform-gnome-2
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ENV+=		openssl_libs="yes"
 
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.cdparanoia}/include/cdparanoia
+CPPFLAGS+=		-DPREFIX=\"\\\"${PREFIX}\\\"\"
+CPPFLAGS+=		-DPKGLOCALEDIR=\"\\\"${PKGLOCALEDIR}\\\"\"
 
 PKG_SYSCONFSUBDIR=	gnome-vfs-2.0
 OWN_DIRS=		${PKG_SYSCONFDIR}/modules ${PKG_SYSCONFDIR}/vfolders
@@ -52,7 +55,9 @@ CONF_FILES+=	${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
 .undef f
 
 GCONF2_SCHEMAS=		desktop_default_applications.schemas
+GCONF2_SCHEMAS+=	desktop_gnome_url_handlers.schemas
 GCONF2_SCHEMAS+=	system_http_proxy.schemas
+GCONF2_SCHEMAS+=	system_smb.schemas
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/cdparanoia/buildlink3.mk"

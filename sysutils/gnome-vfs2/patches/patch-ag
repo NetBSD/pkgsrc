@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.4 2003/12/14 19:47:26 jmmv Exp $
+$NetBSD: patch-ag,v 1.5 2004/04/01 18:21:20 jmmv Exp $
 
---- modules/Makefile.in.orig	2003-10-26 01:28:22.000000000 +0000
-+++ modules/Makefile.in	2003-10-26 01:28:46.000000000 +0000
-@@ -208,7 +208,7 @@
+--- modules/Makefile.in.orig	2004-01-30 11:09:38.000000000 +0000
++++ modules/Makefile.in
+@@ -270,7 +270,7 @@ modules_LTLIBRARIES = \
+ 
  # Not currently supported
  #	libnfs.la
- 
 -modulesconfdir = $(sysconfdir)/gnome-vfs-2.0/modules
 +modulesconfdir = $(datadir)/examples/gnome-vfs-2.0/modules
  @HAVE_CDDA_TRUE@CDDA_CONF = cdda-module.conf
+ @HAVE_SAMBA_TRUE@SMB_CONF = smb-module.conf
  @HAVE_SSL_TRUE@SSL_CONF = ssl-modules.conf
- @BUILD_CDEMENU_MODULE_TRUE@CDE_CONF = cdemenu-module.conf
