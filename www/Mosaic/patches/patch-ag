@@ -1,8 +1,16 @@
-$NetBSD: patch-ag,v 1.2 1998/08/07 11:14:18 agc Exp $
+$NetBSD: patch-ag,v 1.3 1999/06/07 21:40:20 tron Exp $
 
---- ./src/gui.c.org	Tue Apr  9 21:47:32 1996
-+++ ./src/gui.c	Tue Apr  9 22:01:26 1996
-@@ -3623,7 +3623,7 @@
+--- src/gui.c.orig	Thu Jul 18 21:26:56 1996
++++ src/gui.c	Mon Jun  7 23:25:44 1999
+@@ -173,6 +173,7 @@
+ 
+ 
+ #include "libhtmlw/HTML.h"
++#include "config.h"
+ #include "xresources.h"
+ #include "cci.h"
+ 
+@@ -3963,7 +3964,7 @@
      return 0;
    else 
      {
