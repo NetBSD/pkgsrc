@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.178 2005/01/27 04:05:08 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.179 2005/01/27 04:16:47 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -280,8 +280,9 @@ SHAREMODE?=		${DOCMODE}
 # the NetBSD ones if an OS-specific file doesn't exist.
 .if exists(${_PKGSRC_TOPDIR}/mk/platform/${OPSYS}.mk)
 .  include "${_PKGSRC_TOPDIR}/mk/platform/${OPSYS}.mk"
-.elif exists(${_PKGSRC_TOPDIR}/mk/platform/NetBSD.mk)
+.else
 .  include "${_PKGSRC_TOPDIR}/mk/platform/NetBSD.mk"
+PKG_FAIL_REASON+=	"missing mk/platform/${OPSYS}.mk"
 .endif
 
 PKGDIRMODE?=		755
@@ -540,8 +541,6 @@ PKG_OPTIONS?=		# empty
 PREPEND_PATH+=		${LOCALBASE}/bin ${USE_IMAKE:D${X11BASE}/bin}
 
 # Wrapper framework definitions
-.if exists(${PKGSRCDIR}/mk/wrapper/wrapper-defs.mk)
-.  include "${PKGSRCDIR}/mk/wrapper/wrapper-defs.mk"
-.endif
+.include "${PKGSRCDIR}/mk/wrapper/wrapper-defs.mk"
 
 .endif	# BSD_PKG_MK
