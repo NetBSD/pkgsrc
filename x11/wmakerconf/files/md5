@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 1999/05/03 17:28:23 rh Exp $
+$NetBSD: md5,v 1.2 1999/05/23 08:40:27 rh Exp $
 
-MD5 (wmakerconf-1.99.4.tar.bz2) = ebceaf0a3442bde3aa31677220b59b8c
-MD5 (wmakerconf-data-0.53.0.tar.bz2) = a2a5e11f058139930e64a58e8e5666c0
+MD5 (wmakerconf-2.1.tar.bz2) = 326e8fcfd38a86fffabdb53962dcbffd
+MD5 (wmakerconf-data-0.53.0p2.tar.bz2) = 7b6013f3b56113283250e2ad8f7e50af
