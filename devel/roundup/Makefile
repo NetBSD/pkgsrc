@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2005/02/12 17:32:25 recht Exp $
+# $NetBSD: Makefile,v 1.23 2005/02/21 23:00:56 recht Exp $
 
-DISTNAME=	roundup-0.7.11
+DISTNAME=	roundup-0.8.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundup/}
 
@@ -15,9 +15,14 @@ USE_LANGUAGES=
 
 PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 
-PYTHON_PATCH_SCRIPTS=	cgi-bin/roundup.cgi demo.py roundup/admin.py
-PYTHON_PATCH_SCRIPTS+=	roundup/backends/locking.py roundup/version_check.py
-PYTHON_PATCH_SCRIPTS+=	run_tests.py scripts/add-issue scripts/copy-user.py
+PYTHON_PATCH_SCRIPTS+=	cgi-bin/roundup.cgi demo.py roundup/admin.py
+PYTHON_PATCH_SCRIPTS+=	roundup/backends/locking.py
+PYTHON_PATCH_SCRIPTS+=	roundup/cgi/TAL/talgettext.py
+PYTHON_PATCH_SCRIPTS+=	roundup/msgfmt.py
+PYTHON_PATCH_SCRIPTS+=	roundup/scripts/roundup_demo.py
+PYTHON_PATCH_SCRIPTS+=	roundup/scripts/roundup_gettext.py
+PYTHON_PATCH_SCRIPTS+=	roundup/version_check.py run_tests.py
+PYTHON_PATCH_SCRIPTS+=	scripts/add-issue scripts/copy-user.py
 PYTHON_PATCH_SCRIPTS+=	scripts/roundup-reminder scripts/schema_diagram.py
 PYTHON_PATCH_SCRIPTS+=	tools/load_tracker.py tools/migrate-queries.py
 PYTHON_PATCH_SCRIPTS+=	tools/pygettext.py
@@ -26,6 +31,7 @@ ROUNDUPDOCDIR=	${PREFIX}/share/doc/roundup
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/roundup-admin.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/roundup-demo.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/roundup-mailgw.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/roundup-server.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${ROUNDUPDOCDIR}
