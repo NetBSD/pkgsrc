@@ -1,0 +1,44 @@
+#!/bin/sh
+
+HOME=@HOME@
+MAJORDOMO_USER=@MAJORDOMO_USER@
+MAJORDOMO_GROUP=@MAJORDOMO_GROUP@
+ADDNERD=@LOCALBASE@/sbin/addnerd
+
+
+PKG=$1
+STAGE=$2
+
+if [ "$STAGE" != "INSTALL" ];
+then
+	exit 0
+fi
+
+
+# use finger to be able to use NIS, ...
+if finger ${MAJORDOMO_USER} 2>&1 | grep >/dev/null "no such user"
+then
+	echo "Creating '$MAJORDOMO_USER' user ..."
+	${ADDNERD} -h ${HOME} -g ${MAJORDOMO_GROUP} ${MAJORDOMO_USER}
+	echo Done.
+else
+	echo "User '$MAJORDOMO_USER' already exists, proceeding."
+fi
+
+
+# Group... the default's shipped with NetBSD
+#
+if grep "^${MAJORDOMO_GROUP}:" /etc/group 2>&1 >/dev/null
+then
+	echo "Group '$MAJORDOMO_GROUP' already exists, proceeding."
+else
+	echo "Please add group '$MAJORDOMO_GROUP' to /etc/group, then restart."
+	exit 1
+fi
+
+# Home... in case the login exists but not the home directory
+#
+install -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${HOME}/${MAJORDOMO_USER}
+install -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${HOME}/${MAJORDOMO_USER}/archives
+install -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${HOME}/${MAJORDOMO_USER}/digests
+install -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${HOME}/${MAJORDOMO_USER}/lists

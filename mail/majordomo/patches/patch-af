@@ -1,0 +1,10 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/06/08 17:51:26 bad Exp $
+
+--- ./majordomo.orig	Wed Aug 27 08:55:29 1997
++++ ./majordomo	Tue Jun  8 10:55:13 1999
+@@ -59,4 +59,5 @@
+ 
+ # All these should be in the standard PERL library
++unshift(@INC, $bindir);
+ unshift(@INC, $homedir);
+ require "ctime.pl";		# To get MoY definitions for month abbrevs
