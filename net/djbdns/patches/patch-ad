@@ -1,0 +1,31 @@
+$NetBSD: patch-ad,v 1.1 2003/09/24 03:28:14 schmonz Exp $
+
+--- query.c.orig	Wed Sep 17 11:42:42 2003
++++ query.c
+@@ -13,6 +13,8 @@
+ #include "response.h"
+ #include "query.h"
+ 
++extern stralloc ignoreip;
++
+ static int flagforwardonly = 0;
+ 
+ void query_forwardonly(void)
+@@ -193,6 +195,7 @@ static int doit(struct query *z,int stat
+   int k;
+   int p;
+   int q;
++  unsigned int ii;
+ 
+   errno = error_io;
+   if (state == 1) goto HAVEPACKET;
+@@ -795,6 +798,9 @@ static int doit(struct query *z,int stat
+         pos = dns_packet_copy(buf,len,pos,header,10); if (!pos) goto DIE;
+         if (byte_equal(header + 8,2,"\0\4")) {
+           pos = dns_packet_copy(buf,len,pos,header,4); if (!pos) goto DIE;
++          if (ignoreip.len)
++	    for(ii = 0; ii < ignoreip.len; ii+= 4)
++	      if (byte_equal(header,4,ignoreip.s+ii)) goto NXDOMAIN;
+           save_data(header,4);
+           log_rr(whichserver,t1,DNS_T_A,header,4,ttl);
+         }

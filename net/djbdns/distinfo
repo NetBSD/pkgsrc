@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2003/03/29 21:55:19 salo Exp $
+$NetBSD: distinfo,v 1.8 2003/09/24 03:28:13 schmonz Exp $
 
 SHA1 (djbdns-1.05.tar.gz) = 2efdb3a039d0c548f40936aa9cb30829e0ce8c3d
 Size (djbdns-1.05.tar.gz) = 85648 bytes
@@ -12,3 +12,5 @@ SHA1 (djbdns-1.05-ipv6.diff.bz2) = 225484ea34f8cdefa501e22640c67d093d2f5169
 Size (djbdns-1.05-ipv6.diff.bz2) = 7306 bytes
 SHA1 (patch-aa) = 9b16d6a7fc2aec2483ca4c90100dc4bae92392fc
 SHA1 (patch-ab) = bd709644fbf55d67d5ad56beb5c545729432b727
+SHA1 (patch-ac) = 412a921af1bd0011c2355af648bcadc2645f9dcb
+SHA1 (patch-ad) = 85bf15f630c8c285175d490d9fe2ba8859279852
