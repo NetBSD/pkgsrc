@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1293 2004/01/10 20:26:27 jschauma Exp $
+$NetBSD: TODO,v 1.1294 2004/01/10 23:08:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -140,6 +140,7 @@ Suggested package updates
 	o courier-imap-2.0 [pkg/22374]
 	o courier-imap-2.1
 	o crafty-19.5
+	o crimsonfields-0.3.8
 	o crossfire-1.5.0
 	o cssc-0.16alpha.pl0
 	o cvs-1.12.3
@@ -150,12 +151,13 @@ Suggested package updates
 	o dante-1.1.14
 	o dctc-0.85.8
 	o ddd-3.3.8
+	o distcc-2.12.1
 	o dnetc-2.9004-482 [pkg/22390]
 	o dvipdfmx-0.0.0.20031116 [pkg/23961]
 	o dylan-compiler-2.3.11
 	o dylan-interpreter-2.3.11
 	o eclipse-2.1.2
-	o efax-gtk-2.2.3
+	o efax-gtk-2.2.4
 	o elinks-0.9.0
 	o elk-3.99.6
 	o elm-me-2.4pl110a
@@ -191,7 +193,8 @@ Suggested package updates
 	o gnuchess-5.06
 	o gnumeric-1.2.4
 	o gpsim-0.21.0 [bouyer]
-	o grace-5.1.12
+	o grace-5.1.14
+	o gsed-4.0.9
 	o gstreamer-0.6.4
 	o gtetrinet-0.7.4
 	o gtk-gnutella-0.93
@@ -212,8 +215,8 @@ Suggested package updates
 	o koffice-1.2.94 [pkg/23412|kleink]
 	o lavaps-2.4
 	o lcms-1.0.9
-	o leafnode-1.9.47 [cjep]
-	o libcaca-0.6
+	o leafnode-1.9.48 [cjep]
+	o libcaca-0.7
 	o libesmtp-1.0.2
 	o libidn-0.3.6
 	o libmpeg3-1.5.3
@@ -250,12 +253,13 @@ Suggested package updates
 	o newscache-0.99.22p1
 	o ngrep-1.41
 	o ns-flash-6.0.79
-	o nsd-1.2.3
+	o nsd-1.2.3 [pkg/24034]
 	o nut-9.7
 	o openh323-1.11.2
 	o openldap-2.1.25
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
+	o opera-7.23
 	o oss-3.9.8c
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
@@ -290,7 +294,7 @@ Suggested package updates
 	o skill-4.1.1
 	o smarteiffel-1.1 [replacing smalleiffel]
 	o sml-nj-110.44
-	o snd-7.0
+	o snd-7.1
 	o snes9x-1.42
 	o sqlite-2.8.9
 	o squeak-3.2 [fredb|pkg/17950]
@@ -309,6 +313,7 @@ Suggested package updates
 	o tkcvs-7.2
 	o tkman-2.2
 	o top-3.5b12.10
+	o transcode-0.6.12
 	o ttf2pt1-3.4.3
 	o tuxpaint-0.9.13
 	o tuxpaint-stamps-2003.12.23
