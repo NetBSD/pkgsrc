@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2003/09/15 15:02:54 jschauma Exp $
+$NetBSD: distinfo,v 1.5 2003/10/08 03:01:32 danw Exp $
 
 SHA1 (dialog-0.6z.tar.gz) = 3c9483554bbb63bb8838e1f7b31f2600a33198ad
 Size (dialog-0.6z.tar.gz) = 50901 bytes
-SHA1 (patch-aa) = 267ffec46c4c7ae070df8eb78ac7db77310a2bad
+SHA1 (patch-aa) = 39dddd7e772d2d0e796ba80eb9309db8b5c679f5
 SHA1 (patch-ab) = 39318c50019277ffa1cecdb33f16e16c11ad37af
 SHA1 (patch-ac) = 5862dd0163f2979b8071d8dbc6388c466a162042
 SHA1 (patch-ad) = 90a88a838923423cfe3bdbfc5d9de6d40bd10cee
