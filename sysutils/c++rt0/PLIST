@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:52:56 zuntum Exp $
-lib/c++rt0/c++rt0.o.PIC
-lib/c++rt0/c++rt0.o.pic
-lib/c++rt0/README
-@dirrm lib/c++rt0
