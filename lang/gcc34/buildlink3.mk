@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/07/01 08:18:07 shannonjr Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/07/28 07:37:19 shannonjr Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCC34_BUILDLINK3_MK:=  ${GCC34_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ngcc34}
 BUILDLINK_PACKAGES+=    gcc34
 
 .if !empty(GCC34_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gcc34+=	gcc34>=3.4.1
+BUILDLINK_DEPENDS.gcc34+=	gcc34>=3.4.1nb2
 BUILDLINK_PKGSRCDIR.gcc34?=	../../lang/gcc34
 .  if exists(${BUILDLINK_PREFIX.gcc34}/bin/gcc)
 _GNAT1!=${BUILDLINK_PREFIX.gcc34}/bin/gcc -print-prog-name=gnat1
@@ -39,6 +39,6 @@ BUILDLINK_TRANSFORM.gcc34=	-e s:\buildlink:buildlink/gcc34:
 BUILDLINK_DEPMETHOD.gcc34?=	full
 
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
