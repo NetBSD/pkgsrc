@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/07/30 14:55:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/08/24 12:17:35 markd Exp $
 bin/aktion
 bin/artsbuilder
 bin/artscontrol
@@ -203,15 +203,15 @@ lib/libaktion.la
 lib/libaktion.so
 lib/libaktion.so.1
 lib/libaktion.so.1.0
-lib/libarts_mpeglib-0.3.0.so
-lib/libarts_mpeglib-0.3.0.so.0
-lib/libarts_mpeglib-0.3.0.so.0.3
+${XV_WORKAROUND}lib/libarts_mpeglib-0.3.0.so
+${XV_WORKAROUND}lib/libarts_mpeglib-0.3.0.so.0
+${XV_WORKAROUND}lib/libarts_mpeglib-0.3.0.so.0.3
 lib/libarts_mpeglib.la
-lib/libarts_mpeglib.so
+${XV_WORKAROUND}lib/libarts_mpeglib.so
 lib/libarts_splay.la
-lib/libarts_splay.so
-lib/libarts_splay.so.0
-lib/libarts_splay.so.0.0
+${XV_WORKAROUND}lib/libarts_splay.so
+${XV_WORKAROUND}lib/libarts_splay.so.0
+${XV_WORKAROUND}lib/libarts_splay.so.0.0
 lib/libarts_xine.la
 lib/libarts_xine.so
 lib/libartsbuilder.la
@@ -258,9 +258,9 @@ lib/libkmixctrl_main.la
 lib/libkmixctrl_main.so
 lib/libkmixctrl_main.so.0
 lib/libkmixctrl_main.so.0.0
-lib/libmpeg-0.3.0.so
+${XV_WORKAROUND}lib/libmpeg-0.3.0.so
 lib/libmpeg.la
-lib/libmpeg.so
+${XV_WORKAROUND}lib/libmpeg.so
 lib/libnoatun_core.la
 lib/libnoatun_core.so
 lib/libnoatun_core.so.0
@@ -286,13 +286,13 @@ lib/libworkman.so
 lib/libworkman.so.5
 lib/libworkman.so.5.3
 lib/libyafcore.la
-lib/libyafcore.so
-lib/libyafcore.so.0
-lib/libyafcore.so.0.0
+${XV_WORKAROUND}lib/libyafcore.so
+${XV_WORKAROUND}lib/libyafcore.so.0
+${XV_WORKAROUND}lib/libyafcore.so.0.0
 lib/libyafxplayer.la
-lib/libyafxplayer.so
-lib/libyafxplayer.so.0
-lib/libyafxplayer.so.0.0
+${XV_WORKAROUND}lib/libyafxplayer.so
+${XV_WORKAROUND}lib/libyafxplayer.so.0
+${XV_WORKAROUND}lib/libyafxplayer.so.0.0
 lib/mcop/Arts/ArtsBuilderLoader.mcopclass
 lib/mcop/Arts/Button.mcopclass
 lib/mcop/Arts/Effect_WAVECAPTURE.mcopclass
