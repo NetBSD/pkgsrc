@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/08/04 12:15:19 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/09/16 09:24:57 agc Exp $
 bin/jwhois
 info/jwhois.info
 man/man1/jwhois.1
@@ -6,7 +6,12 @@ man/sv/man1/jwhois.1
 share/examples/jwhois/jwhois.conf.default
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/jwhois.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/jwhois.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/jwhois.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/jwhois.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/jwhois.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/jwhois.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/jwhois.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/jwhois.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/jwhois.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/jwhois.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/jwhois.mo
