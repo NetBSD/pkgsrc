@@ -3,12 +3,13 @@
 # Whom:			pst
 # Version required:	5.25
 #
+# $NetBSD: Makefile,v 1.2 1998/01/27 17:36:19 agc Exp $
 # FreeBSD Id: Makefile,v 1.29 1998/01/27 01:11:47 fenner Exp
 #
 
 DISTNAME=	expect
 PKGNAME=	expect-5.25
-CATEGORIES=	lang tcl80 tk80
+CATEGORIES=	lang
 MASTER_SITES=	http://expect.nist.gov/
 
 MAINTAINER=	ports@freebsd.org
