@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.363 1999/11/01 11:15:20 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.364 1999/11/10 10:36:05 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -75,6 +75,16 @@ PATCHDIR?=		${.CURDIR}/patches
 SCRIPTDIR?=		${.CURDIR}/scripts
 FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}/pkg
+
+.if defined(USE_MOTIF)
+.if defined(USE_LOCALBASE_FOR_X11)
+MOTIFBASE?=		${LOCALBASE}
+.elif ${OPSYS} == "SunOS"
+MOTIFBASE?=		/usr/dt
+.else
+MOTIFBASE?=		${X11BASE}
+.endif
+.endif # USE_MOTIF
 
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 .if defined(USE_LOCALBASE_FOR_X11)
@@ -162,7 +172,7 @@ MD5_FILE?=		${FILESDIR}/md5
 PATCH_SUM_FILE?=	${FILESDIR}/patch-sum
 
 .if defined(USE_MOTIF) || defined(USE_X11BASE) || defined(USE_X11)
-LDFLAGS+=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
+LDFLAGS+=		-Wl,-R${MOTIFBASE}/lib -L${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 .endif
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
 MAKE_ENV+=		LDFLAGS="${LDFLAGS}"
@@ -398,7 +408,7 @@ PKG_SUFX?=		.tgz
 PKG_DBDIR?=		/var/db/pkg
 
 # shared/dynamic motif libs
-MOTIFLIB?=	-L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm
+MOTIFLIB?=	-L${MOTIFBASE}/lib -L${X11BASE}/lib -L${LOCALBASE}/lib -Wl,-R${MOTIFBASE}/lib -Wl,-R${X11BASE}/lib -Wl,-R${LOCALBASE}/lib -lXm
 
 .if (${OPSYS} == "SunOS")
 AWK?=		/usr/bin/nawk
@@ -555,8 +565,8 @@ FETCH_BEFORE_ARGS += -p
 
 # Check if we got a real Motif, Lesstif or no Motif at all.
 .if defined(USE_MOTIF)
-.if exists(${X11BASE}/include/Xm/Xm.h)
-IS_LESSTIF!=	${EGREP} -c LESSTIF ${X11BASE}/include/Xm/Xm.h || ${TRUE}
+.if exists(${MOTIFBASE}/include/Xm/Xm.h)
+IS_LESSTIF!=	${EGREP} -c LESSTIF ${MOTIFBASE}/include/Xm/Xm.h || ${TRUE}
 .if (${IS_LESSTIF} != "0")
 DEPENDS+=	lesstif-*:${PKGSRCDIR}/x11/lesstif
 .endif
