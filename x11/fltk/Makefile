@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23.2.1 2002/06/30 06:24:41 jlam Exp $
+# $NetBSD: Makefile,v 1.23.2.2 2002/08/25 17:57:06 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME}-source
@@ -24,7 +24,7 @@ USE_LIBTOOL=		# defined
 USE_BUILDLINK2=		# defined
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL}
+CONFIGURE_ARGS+=	--enable-libtool=${PKGLIBTOOL}
 
 test:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}				\
