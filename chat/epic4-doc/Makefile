@@ -1,22 +1,33 @@
-# $NetBSD: Makefile,v 1.4 2004/03/26 02:27:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/04 09:10:50 wiz Exp $
 #
 
-DISTNAME=	epic4pre2-help
-PKGNAME=	epic4-doc-1.0
-PKGREVISION=	1
+DISTNAME=	epic4-help-20050315
+PKGNAME=	epic4-doc-1.0.20050315
 CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.epicsol.org/pub/epic/EPIC4-BETA/	\
-		ftp://ftp.icm.edu.pl/pub/unix/irc/EPIC/EPIC4-BETA/
+MASTER_SITES=	ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/ \
+		ftp://ftp.freenet.de/pub/ftp.prbh.org/pub/epic/EPIC4-PRODUCTION/ \
+		http://ftp.freenet.de/pub/ftp.prbh.org/pub/epic/EPIC4-PRODUCTION/ \
+		ftp://totem.fix.no/pub/mirrors/epic/EPIC4-PRODUCTION/ \
+		ftp://ftp.eu.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/ \
+		ftp://ftp.irc.org/irc/clients/unix/epic/EPIC4-PRODUCTION/ \
+		ftp://ftp.parodius.com/pub/epic/EPIC4-PRODUCTION/ \
+		ftp://ftp.icm.edu.pl/pub/unix/irc/EPIC/EPIC4-PRODUCTION/ \
+		ftp://ftp.archive.de.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/ \
+		ftp://ftp.nl.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/
 
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.epicsol.org/
 COMMENT=	Additional documentation for epic4 package
 
-DEPENDS+=	epic4>=1.0.1:../../chat/epic4
+DEPENDS+=	epic4>=2.0:../../chat/epic4
 
 NO_BUILD=	YES
 
 do-install:
 	${CP} -R ${WRKDIR}/help/* ${PREFIX}/share/epic/help
+	${RM} -r ${PREFIX}/share/epic/help/Makefile
+	${RM} -r ${PREFIX}/share/epic/help/CVS
+	${RM} -r ${PREFIX}/share/epic/help/*/CVS
+	${RM} -r ${PREFIX}/share/epic/help/*/*/CVS
 
 .include "../../mk/bsd.pkg.mk"
