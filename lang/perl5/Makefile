@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2002/10/23 23:33:21 grant Exp $
+# $NetBSD: Makefile,v 1.58 2002/12/23 16:10:45 grant Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -14,6 +14,8 @@ CONFLICTS=		perl-5.00* perl-base-[0-9]* \
 			p5-Data-Dumper-2.1[0-9][0-9] p5-Data-Dumper-[0-9][0-9] \
 			p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
 			perl-mk-[0-9]*
+
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 USE_BUILDLINK2=		# defined
 HAS_CONFIGURE=		# defined
