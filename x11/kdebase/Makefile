@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2001/04/02 20:06:15 wiz Exp $
+# $NetBSD: Makefile,v 1.81 2001/08/26 11:36:02 skrll Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -51,6 +51,14 @@ KDE_DIRS=	share/doc/kde/HTML/cs share/doc/kde/HTML/da \
 		share/doc/kde/HTML/sv
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${HAVE_BUILTIN_MESA} == "NO"
+EVAL_PREFIX+=	MESABASE=Mesa
+.else
+MESABASE=	${X11BASE}
+.endif
+
+CONFIGURE_ENV+= GL_INCLUDE="${MESABASE}/include"
 
 .if ${OPSYS} == "SunOS"
 PLIST_INIT=	${PKGDIR}/PLIST-${OPSYS}
