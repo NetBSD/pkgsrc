@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/03 18:49:34 reed Exp $
+# $NetBSD: Makefile,v 1.18 2004/03/07 03:41:45 minskim Exp $
 
 DISTNAME=	WSoundPrefs-1.1.1
 PKGNAME=	wsoundprefs-1.1.1
@@ -10,10 +10,10 @@ MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://shadowmere.student.utwente.nl/
 COMMENT=	WSoundServer configuration utility
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_IMAKE=		YES
 USE_X11BASE=		YES
 
-.include "../../audio/wsoundserver/buildlink2.mk"
-.include "../../wm/windowmaker/buildlink2.mk"
+.include "../../audio/wsoundserver/buildlink3.mk"
+.include "../../wm/windowmaker/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
