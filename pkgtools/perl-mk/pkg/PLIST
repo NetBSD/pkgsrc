@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/20 16:23:55 wiz Exp $
+${MKPATH}/bsd.perl.mk
