@@ -1,0 +1,27 @@
+$NetBSD: patch-am,v 1.1 1999/11/01 22:21:25 tron Exp $
+
+--- zvt/gnome-pty-helper.c.orig	Mon Sep 27 20:35:40 1999
++++ zvt/gnome-pty-helper.c	Mon Nov  1 22:50:19 1999
+@@ -398,13 +398,6 @@
+ #endif
+ 	  ;
+ 	term.c_cflag = 0
+-#ifdef EXTB
+-	  | EXTB
+-#else
+-# ifdef B9600
+-	  | B9600
+-# endif
+-#endif /* EXTB */
+ #ifdef CREAD
+ 	  | CREAD
+ #endif
+@@ -443,6 +436,8 @@
+ 	/* should really be a check for c_line, but maybe this is good enough */
+ 	term.c_line = N_TTY;
+ #endif
++	cfsetispeed(&term, B9600);
++	cfsetospeed(&term, B9600);
+ 
+ 	/* These two may overlap so set them first */
+ 	term.c_cc[VTIME] =  0;
