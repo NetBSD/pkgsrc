@@ -32,7 +32,7 @@ die "Invalid command line" unless GetOptions(
 
 ###########################################################################
 
-die "Usage: $0 [-d] [-o outfile] -f kernel-config\n" unless $kernel;
+die "Usage: $0 [-debug] [-mesg dmesg-file] [-outfile new-config]\n\t\t[-remove] -file kernel-config\n" unless $kernel;
 
 $| = 1 if $debug;
 
