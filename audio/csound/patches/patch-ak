@@ -1,0 +1,29 @@
+$NetBSD: patch-ak,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
+
+--- new-src/scheduler.c.orig	Sat Dec 12 12:16:30 1998
++++ new-src/scheduler.c
+@@ -4,24 +4,6 @@
+  * Written by Fred Floberg <emng@geocities.com>
+  *
+  */
+-#include <sched.h>
+-#include <stdio.h>
+-#include "cs.h"
+ void setscheduler(void)
+ {
+-        struct sched_param sched_param;
+-	extern int scheduler_priority;
+-
+-	if(!scheduler_priority) return; /* Check commandline option */
+-        if (sched_getparam(0, &sched_param)<0) {
+-                err_printf("Scheduler getparam failed...\n");
+-                return;
+-        }
+-        sched_param.sched_priority = sched_get_priority_max(SCHED_RR);
+-        if (!sched_setscheduler(0, SCHED_RR, &sched_param)) {
+-                err_printf("Scheduler set to Round Robin with priority %i...\n", sched_param.sched_priority);
+-                fflush(stderr);
+-                return;
+-        }
+-        err_printf("!!!Scheduler set to Round Robin with priority %i FAILED!!!\n", sched_param.sched_priority);
+ }

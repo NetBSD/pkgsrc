@@ -1,0 +1,48 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/03/13 13:18:24 wiz Exp $
+
+--- configure.in.orig	Sun Oct 29 00:25:07 2000
++++ configure.in
+@@ -327,6 +327,9 @@
+ dnl It provides an interface between Csound realtime record/play calls
+ dnl and the device-driver code that controls the actual hardware.
+ dnl
++
++dnl Some systems require libossaudio.a
++AC_CHECK_LIB(ossaudio, _oss_ioctl, [LIBOSS="-lossaudio"], [ LIBOSS=""])
+ AC_ARG_ENABLE(OSS_RTAUDIO,
+   [  --enable-OSS-RTAUDIO	  enable OSS-RTAUDIO (default: no)],
+   [case "${enable_OSS_RTAUDIO}" in
+@@ -341,6 +344,7 @@
+ 	CSOUND_CONF_MESSAGE(enable the OSS-RTAUDIO feature...)
+ 	RTAUDIO_DRIVER=["LINUXaudio.c \${LINUX_DISTRIB_DIR}/OSSrtaudio.c"]
+ 	DEFS=["${DEFS} -DOSSRTAUDIO"]
++	LIBS=["-lossaudio ${LIBOSS}"]
+ fi
+ 
+ dnl
+@@ -575,8 +579,8 @@
+ dnl
+ 
+ case $host in
+-	*linux)
+-		local_defines="-DRTAUDIO -DLINUX ${DEFS}"
++	*linux|*bsd)
++		local_defines="-DRTAUDIO -DLINUX -DBSD ${DEFS}"
+ 		;;
+ 	*)
+ 		;;
+@@ -610,10 +614,10 @@
+ 	changequote(<<, >>)dnl
+ 	csound_version_full=`(cat ${version_file}; echo VERSIONSTRING) | ${CPP} - | ${AWK} '/^" v"/ { gsub(/[" v]/,""); print $0; }'`
+ 	changequote([, ])dnl
+-	csound_version_major=`echo ${csound_version_full} | cut -d '.' -f 1 -`
+-	csound_version_minor=`echo ${csound_version_full} | cut -d '.' -f 2 -`
+-	csound_patchlevel=`echo ${csound_version_full} | cut -d '.' -f 3 -`
+-	csound_betalevel=`echo ${csound_version_full} | cut -d '.' -f 4 -`
++	csound_version_major=`echo ${csound_version_full} | cut -d '.' -f 1`
++	csound_version_minor=`echo ${csound_version_full} | cut -d '.' -f 2`
++	csound_patchlevel=`echo ${csound_version_full} | cut -d '.' -f 3`
++	csound_betalevel=`echo ${csound_version_full} | cut -d '.' -f 4`
+ 
+ 	CSOUND_CONF_MESSAGE(almost done configuring for csound version ${csound_version_major}.${csound_version_minor}.${csound_patchlevel}.${csound_betalevel}...)
+ else
