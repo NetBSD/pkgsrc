@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/14 02:30:00 hubertf Exp $
+
+--- configure.orig	Sun Jan 14 02:20:09 2001
++++ configure
+@@ -1808,7 +1808,7 @@
+ 
+   # It would also be nice to do this for all -L options, not just this one.
+   if test -n "$x_libraries"; then
+-    X_LIBS="$X_LIBS -L$x_libraries"
++    X_LIBS="$X_LIBS -L$x_libraries -Wl,-R$x_libraries"
+     # For Solaris; some versions of Sun CC require a space after -R and
+     # others require no space.  Words are not sufficient . . . .
+     case "`(uname -sr) 2>/dev/null`" in
+@@ -1836,9 +1836,9 @@
+ rm -f conftest*
+       if test $ac_R_nospace = yes; then
+ 	echo "$ac_t""no" 1>&6
+-	X_LIBS="$X_LIBS -R$x_libraries"
++	X_LIBS="$X_LIBS -R$x_libraries -Wl,-R$x_libraries"
+       else
+-	LIBS="$ac_xsave_LIBS -R $x_libraries"
++	LIBS="$ac_xsave_LIBS -R $x_libraries -Wl,-R$x_libraries"
+ 	cat > conftest.$ac_ext <<EOF
+ #line 1844 "configure"
+ #include "confdefs.h"
+@@ -1859,7 +1859,7 @@
+ rm -f conftest*
+ 	if test $ac_R_space = yes; then
+ 	  echo "$ac_t""yes" 1>&6
+-	  X_LIBS="$X_LIBS -R $x_libraries"
++	  X_LIBS="$X_LIBS -R $x_libraries -Wl,-R$x_libraries"
+ 	else
+ 	  echo "$ac_t""neither works" 1>&6
+ 	fi
