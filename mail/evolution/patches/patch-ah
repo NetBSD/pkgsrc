@@ -1,16 +1,23 @@
-$NetBSD: patch-ah,v 1.2 2001/08/11 18:39:26 rh Exp $
+$NetBSD: patch-ah,v 1.3 2002/03/16 07:31:26 rh Exp $
 
---- camel/camel-tcp-stream-openssl.c.orig	Mon Jul  9 00:15:30 2001
-+++ camel/camel-tcp-stream-openssl.c
-@@ -20,6 +20,11 @@
-  *
-  */
+--- shell/e-setup.c.orig	Sat Mar 16 14:26:48 2002
++++ shell/e-setup.c
+@@ -210,6 +210,18 @@
+ 		retval = TRUE;
+ 	}
  
-+#ifdef	_POSIX_THREAD_SYSCALL_SOFT
-+#undef	_POSIX_THREAD_SYSCALL_SOFT
-+#endif
-+#define	_POSIX_THREAD_SYSCALL_SOFT	0
++	command = g_strconcat ("chmod -R u+w ",
++			       evolution_directory,
++			       NULL);
 +
- #ifdef HAVE_CONFIG_H
- #include <config.h>
- #endif
++	if (system (command) != 0) {
++		e_notice (NULL, GNOME_MESSAGE_BOX_ERROR,
++			  _("An error occurred changing mode of\n`%s'."), evolution_directory);
++		retval = FALSE;
++	} else {
++		retval = TRUE;
++	}
++
+ 	/* Temporary block of code to keep it from using the older
+            shortcuts.xml that exists for current users in
+            $GNOME/share/evolution/default_user.  Remove this by 1.0 */

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2002/03/13 17:37:22 fredb Exp $
+# $NetBSD: Makefile,v 1.16 2002/03/16 07:31:25 rh Exp $
 
-DISTNAME=		evolution-0.15
-PKGREVISION=		1
+DISTNAME=		evolution-1.0.2
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/evolution/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/evolution/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@netbsd.org
@@ -12,6 +11,7 @@ COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 DEPENDS+=		bonobo-conf>=0.14nb1:../../devel/bonobo-conf
+DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
 
 BUILDLINK_DEPENDS.gdk-pixbuf=		gdk-pixbuf>=0.11.0nb1
@@ -27,6 +27,13 @@ USE_LIBTOOL=		YES
 YACC=			${PREFIX}/bin/bison -y
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+REPLACE_PERL+=		libical/scripts/mkderivedvalues.pl
+REPLACE_PERL+=		libical/scripts/mkparameterrestrictions.pl
+REPLACE_PERL+=		libical/scripts/mkrestrictionrecords.pl
+REPLACE_PERL+=		libical/scripts/mkrestrictiontable.pl
+REPLACE_PERL+=		tools/csv2vcard
+REPLACE_PERL+=		tools/evolution-addressbook-clean.in
+REPLACE_PERL+=		tools/killev
 CONFIGURE_ARGS+=	--enable-ldap=no
 CONFIGURE_ARGS+=	--with-db3-includes=${LOCALBASE}/include/db3
 CONFIGURE_ARGS+=	--with-db3-libs=${LOCALBASE}/lib
