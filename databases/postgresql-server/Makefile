@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/11/21 15:44:22 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/11/26 20:38:31 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
@@ -27,13 +27,12 @@ DIRS_TO_BUILD=		src/backend
 PGUSER?=		pgsql
 PGGROUP?=		pgsql
 PGHOME?=		${PREFIX}/${PGUSER}
+FILES_SUBST+=		PGUSER=${PGUSER}
+FILES_SUBST+=		PGHOME=${PGHOME}
 BUILD_DEFS=		PGUSER PGROUP PGHOME
 
-PKG_USER=		${PGUSER}
-PKG_USER_DESCR=		PostgreSQL database administrator
-PKG_USER_HOME=		${PGHOME}
-PKG_USER_SHELL=		${SH}
-PKG_GROUP=		${PGGROUP}
+PKG_USERS=		${PGUSER}:${PGGROUP}::PostgreSQL\\ database\\ administrator:${PGHOME}:${SH}
+PKG_GROUPS=		${PGGROUP}
 
 RCD_SCRIPTS=		pgsql
 OWN_DIRS_PERMS=		${PGHOME} ${PGUSER} ${PGGROUP} 0755

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/11/25 18:59:47 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2001/11/26 20:38:32 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.24
 PKGNAME=		${DISTNAME}nb3
@@ -27,6 +27,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 #
 CYRUS_USER?=		cyrus
 CYRUS_GROUP?=		mail
+FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-sasl
 PWCHECKDIR=		/var/pwcheck
@@ -76,11 +77,10 @@ CONFIGURE_ARGS+=	--with-pam=${PREFIX}
 .include "../../security/PAM/buildlink.mk"
 .endif
 
-PKG_USER=		${CYRUS_USER}
-PKG_USER_SHELL=		${SH}
-PKG_GROUP=		${CYRUS_GROUP}
+PKG_GROUPS=		${CYRUS_GROUP}
+PKG_USERS=		${CYRUS_USER}:${CYRUS_GROUP}::::${SH}
 RCD_SCRIPTS=		sasl_pwcheck
-OWN_DIRS_PERMS=		${PWCHECKDIR} ${PKG_USER} ${ROOT_GROUP} 0700
+OWN_DIRS_PERMS=		${PWCHECKDIR} ${CYRUS_USER} ${ROOT_GROUP} 0700
 
 DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 
