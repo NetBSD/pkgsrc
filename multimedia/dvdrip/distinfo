@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/07/30 20:51:47 recht Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 11:24:02 agc Exp $
 
 SHA1 (Video-DVDRip-0.50.18.tar.gz) = 6b60d4afe9048387a9f684bfb372280b07809a79
+RMD160 (Video-DVDRip-0.50.18.tar.gz) = 2a53e10b5209a6c1447f0bd2563cecba924bc546
 Size (Video-DVDRip-0.50.18.tar.gz) = 233184 bytes

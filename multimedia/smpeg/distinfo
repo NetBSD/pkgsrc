@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2004/06/26 09:16:10 grant Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 11:24:04 agc Exp $
 
 SHA1 (smpeg-0.4.4.tar.gz) = 6d7f4449472e6270ab435b2224f3fad951c35259
+RMD160 (smpeg-0.4.4.tar.gz) = d55249ad53417fa0df3d925aed0e83d2204e28b7
 Size (smpeg-0.4.4.tar.gz) = 315054 bytes
 SHA1 (patch-aa) = 0a691663e1966dbd5d37225b11b6f5f6d9ad0bf0
 SHA1 (patch-ab) = dd6517226c672ce24aded66dd07e8e54ab7e0bb3

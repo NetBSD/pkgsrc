@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/26 11:39:14 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 11:24:04 agc Exp $
 
 SHA1 (xawtv_3.90.tar.gz) = 6a1a0ba506ff5ec46e3d8c2d0721a2833ec5941d
+RMD160 (xawtv_3.90.tar.gz) = 947af40ca341bf724a9c5a4afa44419201d6276e
 Size (xawtv_3.90.tar.gz) = 555935 bytes
 SHA1 (patch-aa) = 926173ec69b3acb8fd3b32143c9a03ef2f59cdf6
 SHA1 (patch-ab) = bd6e07044155ba7fbfc45c3cab5c4ea2c57ac2e5
