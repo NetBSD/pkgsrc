@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1 2004/04/26 03:29:22 snj Exp $
+
+--- Makefile.orig	2004-04-21 17:57:27.000000000 -0700
++++ Makefile	2004-04-21 17:58:41.000000000 -0700
+@@ -1,12 +1,10 @@
+ # Makefile for swiggle
+ #
+ # $Id: patch-aa,v 1.1 2004/04/26 03:29:22 snj Exp $
+-CC = gcc
+ PROGRAM = swiggle
+ OBJS = swiggle.o resize.o html.o
+ HEADER = swiggle.h
+-CFLAGS += -Wall -g -I/usr/local/include -I/usr/local/include/libexif -O3
+-LDFLAGS += -L/usr/local/lib -ljpeg -lexif
++LDFLAGS += -ljpeg -lexif
+ 
+ .if defined(DEBUG)
+ CFLAGS += -DDEBUG
+@@ -15,12 +13,12 @@ CFLAGS += -DDEBUG
+ all: ${PROGRAM}
+ 
+ ${PROGRAM}: ${OBJS}
+-	gcc ${CFLAGS} ${LDFLAGS} -o ${PROGRAM} ${OBJS}
++	${CC} ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -o ${PROGRAM} ${OBJS}
+ 
+ ${OBJS}: ${HEADER}
+ 
+ install:
+-	install -c -o 0 -g 0 -s swiggle /usr/local/bin
++	${BSD_INSTALL_PROGRAM} swiggle ${PREFIX}/bin/
+ 
+ clean:
+ 	rm -f *.o *.core ${PROGRAM}
