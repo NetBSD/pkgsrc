@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/25 18:59:46 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/04 03:40:50 snj Exp $
 #
 
 PKGNAME=		amanda-client-${VERS}
@@ -8,13 +8,13 @@ COMMENT=		Client part of Amanda, a network backup system
 
 DEPENDS+=		amanda-common-${VERS}:../../sysutils/amanda-dev-common
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-dev-common/Makefile.common"
-.include "../../sysutils/amanda-dev-common/buildlink2.mk"
-#.include "../../devel/readline/buildlink2.mk"
+.include "../../sysutils/amanda-dev-common/buildlink3.mk"
+#.include "../../devel/readline/buildlink3.mk"
 
 .if ${OPSYS} != "Linux"
 DEPENDS+=		{gtar,gtar-base}>=1.12:../../archivers/gtar
