@@ -1,37 +1,29 @@
-$NetBSD: patch-ac,v 1.3 1999/01/16 05:39:42 tron Exp $
+$NetBSD: patch-ac,v 1.4 1999/03/07 21:17:50 tron Exp $
 
---- applets/modemlights/modemlights.c.orig	Wed Jan 13 00:44:49 1999
-+++ applets/modemlights/modemlights.c	Sat Jan 16 06:07:41 1999
-@@ -226,21 +226,24 @@
+--- applets/modemlights/modemlights.c.orig	Mon Feb  8 17:20:52 1999
++++ applets/modemlights/modemlights.c	Sun Mar  7 21:02:05 1999
+@@ -249,13 +249,13 @@
  	struct 	ppp_stats stats;
  
  	memset(&ifreq, 0, sizeof(ifreq));
--#ifndef __FreeBSD__
--	strncpy(ifreq.ifr_ifrn.ifrn_name, device_name, IFNAMSIZ);
--#else
-+#if (defined(BSD) && BSD >= 199506) || defined(__NetBSD__)
+-#if defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
  	strncpy(ifreq.ifr_name, device_name, IFNAMSIZ);
-+#else
-+	strncpy(ifreq.ifr_ifrn.ifrn_name, device_name, IFNAMSIZ);
- #endif /* __FreeBSD__ */
- 	ifreq.ifr_ifru.ifru_data = (caddr_t)&stats;
--#ifndef __FreeBSD__
-+#if defined(__FreeBSD__)
-+	if ((ioctl(ip_socket,SIOCGPPPSTATS,(caddr_t)&ifreq) < 0))
-+#else
-+#if defined(__NetBSD__)
-+	if ((ioctl(ip_socket,SIOCGIFFLAGS,(caddr_t)&ifreq) < 0))
-+#else
- #ifdef SIOCDEVPRIVATE
- 	if ((ioctl(ip_socket,SIOCDEVPRIVATE,(caddr_t)&ifreq) < 0))
  #else
--	*in = *out = 0;
--	return FALSE;
-+	if (0)
+ 	strncpy(ifreq.ifr_ifrn.ifrn_name, device_name, IFNAMSIZ);
+ #endif /* FreeBSD or OpenBSD */
+ 	ifreq.ifr_ifru.ifru_data = (caddr_t)&stats;
+-#if defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
+ 		if ((ioctl(ip_socket,SIOCGPPPSTATS,(caddr_t)&ifreq) < 0))
+ #else
+ #ifdef SIOCDEVPRIVATE
+@@ -264,7 +264,7 @@
+ 	*in = *out = 0;
+ 	return FALSE;
  #endif
--#else
--		if ((ioctl(ip_socket,SIOCGPPPSTATS,(caddr_t)&ifreq) < 0))
-+#endif /* NetBSD */
- #endif /* __FreeBSD__ */
+-#endif /* FreeBSD or OpenBSD */
++#endif /* FreeBSD or NetBSD or OpenBSD */
  			{
  				/* failure means ppp is not up */
+ 				*in = *out = 0;

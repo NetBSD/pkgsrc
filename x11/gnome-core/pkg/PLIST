@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 1999/02/19 01:29:08 tv Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/03/07 21:17:50 tron Exp $
 bin/gmenu
+bin/jbc_applet
+bin/gnome-edit
 bin/gnome-session
 bin/save-session
-bin/session-properties
 bin/gnome-smproxy
 bin/gnome-man2html
 bin/gnome-info2html
@@ -11,10 +12,8 @@ bin/gnome-terminal
 bin/panel
 bin/gen_util_applet
 bin/asclock_applet
-bin/netload_applet
 bin/dialer_applet
 bin/webcontrol_applet
-bin/wmpager_applet
 bin/drivemount_applet
 bin/clockmail_applet
 bin/fifteen_applet
@@ -33,7 +32,6 @@ etc/CORBA/servers/gen_util.gnorba
 etc/CORBA/servers/asclock_applet.gnorba
 etc/CORBA/servers/fish_applet.gnorba
 etc/CORBA/servers/dialer_applet.gnorba
-etc/CORBA/servers/wmpager_applet.gnorba
 etc/CORBA/servers/drivemount_applet.gnorba
 etc/CORBA/servers/clockmail_applet.gnorba
 etc/CORBA/servers/fifteen_applet.gnorba
@@ -44,16 +42,20 @@ etc/CORBA/servers/mini-commander_applet.gnorba
 etc/CORBA/servers/cpumemusage_applet.gnorba
 etc/CORBA/servers/diskusage_applet.gnorba
 etc/CORBA/servers/multiload_applet.gnorba
-etc/CORBA/servers/netload_applet.gnorba
 etc/CORBA/servers/modemlights_applet.gnorba
+etc/CORBA/servers/webcontrol_applet.gnorba
+etc/CORBA/servers/gkb_applet.gnorba
+etc/CORBA/servers/jbc_applet.gnorba
 etc/sound/events/panel.soundlist
 include/applet-widget.h
 include/gnome-panel.h
 include/panel-types.h
-lib/libfish_applet.so.0.0
 lib/libfish_applet.a
-lib/libpanel_applet.so.0.0
+lib/libfish_applet.so.0.0
+lib/libgkb_applet.a
+lib/libgkb_applet.so.0.0
 lib/libpanel_applet.a
+lib/libpanel_applet.so.0.0
 lib/appletsConf.sh
 share/applets/Monitors/cpumemusage_applet.desktop
 share/applets/Monitors/diskusage_applet.desktop
@@ -62,6 +64,8 @@ share/applets/Monitors/memload_applet.desktop
 share/applets/Monitors/swapload_applet.desktop
 share/applets/Utility/gnomepager_applet.desktop
 share/applets/Utility/mini-commander_applet.desktop
+share/applets/Utility/gkb_applet.desktop
+share/applets/Utility/jbc_applet.desktop
 share/applets/Amusements/.directory
 share/applets/Amusements/fish_applet.desktop
 share/applets/Amusements/fifteen_applet.desktop
@@ -70,7 +74,6 @@ share/applets/Monitors/battery_applet.desktop
 share/applets/Multimedia/.directory
 share/applets/Network/.directory
 share/applets/Network/mailcheck_applet.desktop
-share/applets/Network/netload_applet.desktop
 share/applets/Network/dialer_applet.desktop
 share/applets/Network/webcontrol_applet.desktop
 share/applets/Network/modemlights_applet.desktop
@@ -78,36 +81,70 @@ share/applets/Utility/.directory
 share/applets/Utility/clock_applet.desktop
 share/applets/Utility/printer.desktop
 share/applets/Utility/asclock_applet.desktop
-share/applets/Utility/wmpager_applet.desktop
 share/applets/Utility/drivemount_applet.desktop
 share/applets/Utility/clockmail_applet.desktop
 share/applets/Utility/charpick_applet.desktop
-share/apps/System/session.desktop
-share/apps/System/Imlib_config.desktop
-share/apps/System/.directory
-share/apps/System/gmenu.desktop
-share/apps/Administration/.directory
-share/apps/Applications/Emacs.desktop
-share/apps/Applications/Netscape.desktop
-share/apps/Applications/.directory
-share/apps/Audio/.directory
-share/apps/Games/.directory
-share/apps/Graphics/GIMP.desktop
-share/apps/Graphics/.directory
-share/apps/Network/Balsa.desktop
-share/apps/Network/Tkrat.desktop
-share/apps/Network/.directory
-share/apps/Productivity/.directory
-share/apps/Gmc.desktop
-share/apps/Utilities/UNIX.desktop
-share/apps/Utilities/UNIX-regular.desktop
-share/apps/Utilities/Eterm.desktop
-share/apps/Utilities/Kterm.desktop
-share/apps/Utilities/.directory
-share/apps/Utilities/gnome-terminal.desktop
-share/apps/.order
-share/apps/gnome-help.desktop
+share/gnome/apps/Internet/Balsa.desktop
+share/gnome/apps/Internet/Tkrat.desktop
+share/gnome/apps/Internet/.directory
+share/gnome/apps/Multimedia/.directory
+share/gnome/apps/Settings/Imlib_config.desktop
+share/gnome/apps/Settings/.order
+share/gnome/apps/Settings/.directory
+share/gnome/apps/Settings/gmenu.desktop
+share/gnome/apps/Utilities/Vnterm.desktop
+share/gnome/apps/System/.directory
+share/gnome/apps/Applications/Emacs.desktop
+share/gnome/apps/Applications/Netscape.desktop
+share/gnome/apps/Applications/.directory
+share/gnome/apps/Games/.directory
+share/gnome/apps/Graphics/GIMP.desktop
+share/gnome/apps/Graphics/.directory
+share/gnome/apps/Gmc.desktop
+share/gnome/apps/Utilities/UNIX.desktop
+share/gnome/apps/Utilities/UNIX-regular.desktop
+share/gnome/apps/Utilities/Eterm.desktop
+share/gnome/apps/Utilities/Kterm.desktop
+share/gnome/apps/Utilities/.directory
+share/gnome/apps/Utilities/gnome-terminal.desktop
+share/gnome/apps/.order
+share/gnome/apps/gnome-help.desktop
 share/default.session
+share/gnome/help/gnome-terminal/C/docbook.css
+share/gnome/help/gnome-terminal/C/topic.dat
+share/gnome/help/help-browser/fr/help-browser.html
+share/gnome/help/help-browser/hu/default-page.html
+share/gnome/help/help-browser/hu/gnome-logo-large.png
+share/gnome/help/help-browser/hu/help-browser.html
+share/gnome/help/help-browser/hu/topic.dat
+share/gnome/help/help-browser/hu/index.html
+share/gnome/help/help-browser/it/default-page.html
+share/gnome/help/help-browser/it/help-browser.html
+share/gnome/help/help-browser/it/index.html
+share/gnome/help/help-browser/it/topic.dat
+share/gnome/help/help-browser/no/index.html
+share/gnome/help/help-browser/no/default-page.html
+share/gnome/help/help-browser/no/help-browser.html
+share/gnome/help/help-browser/no/topic.dat
+share/gnome/help/mini-commander_applet/C/change-log.html
+share/gnome/help/mini-commander_applet/C/clock.html
+share/gnome/help/mini-commander_applet/C/command-completion.html
+share/gnome/help/mini-commander_applet/C/command-history.html
+share/gnome/help/mini-commander_applet/C/docbook.css
+share/gnome/help/mini-commander_applet/C/download.html
+share/gnome/help/mini-commander_applet/C/faq.html
+share/gnome/help/mini-commander_applet/C/features.html
+share/gnome/help/mini-commander_applet/C/feedback.html
+share/gnome/help/mini-commander_applet/C/gpl2.html
+share/gnome/help/mini-commander_applet/C/history.html
+share/gnome/help/mini-commander_applet/C/index.html
+share/gnome/help/mini-commander_applet/C/introduction.html
+share/gnome/help/mini-commander_applet/C/legal-notice.html
+share/gnome/help/mini-commander_applet/C/macros.html
+share/gnome/help/mini-commander_applet/C/properties-0.html
+share/gnome/help/mini-commander_applet/C/screenshot01.gif
+share/gnome/help/mini-commander_applet/C/screenshots.html
+share/gnome/help/mini-commander_applet/C/todo.html
 share/gnome/help/help-browser/C/gnome-logo-large.png
 share/gnome/help/help-browser/C/help-browser.html
 share/gnome/help/help-browser/C/topic.dat
@@ -168,25 +205,6 @@ share/gnome/help/gnome-intro/C/c93127.html
 share/gnome/help/gnome-intro/C/c93412.html
 share/gnome/help/gnome-intro/C/c93175.html
 share/gnome/help/gnome-intro/C/docbook.css
-share/gnome/help/mini-commander/C/change-log.html
-share/gnome/help/mini-commander/C/faq.html
-share/gnome/help/mini-commander/C/legal-notice.html
-share/gnome/help/mini-commander/C/features.html
-share/gnome/help/mini-commander/C/macros.html
-share/gnome/help/mini-commander/C/clock.html
-share/gnome/help/mini-commander/C/feedback.html
-share/gnome/help/mini-commander/C/screenshot01.gif
-share/gnome/help/mini-commander/C/command-completion.html
-share/gnome/help/mini-commander/C/gpl2.html
-share/gnome/help/mini-commander/C/screenshots.html
-share/gnome/help/mini-commander/C/command-history.html
-share/gnome/help/mini-commander/C/history.html
-share/gnome/help/mini-commander/C/todo.html
-share/gnome/help/mini-commander/C/customization.html
-share/gnome/help/mini-commander/C/index.html
-share/gnome/help/mini-commander/C/docbook.css
-share/gnome/help/mini-commander/C/introduction.html
-share/gnome/help/mini-commander/C/download.html
 share/locale/it/LC_MESSAGES/gnome-core.mo
 share/locale/ko/LC_MESSAGES/gnome-core.mo
 share/locale/fr/LC_MESSAGES/gnome-core.mo
@@ -201,18 +219,47 @@ share/locale/fi/LC_MESSAGES/gnome-core.mo
 share/locale/cs/LC_MESSAGES/gnome-core.mo
 share/locale/ca/LC_MESSAGES/gnome-core.mo
 share/locale/da/LC_MESSAGES/gnome-core.mo
-share/locale/es_DO/LC_MESSAGES/gnome-core.mo
-share/locale/es_GT/LC_MESSAGES/gnome-core.mo
-share/locale/es_HN/LC_MESSAGES/gnome-core.mo
-share/locale/es_MX/LC_MESSAGES/gnome-core.mo
-share/locale/es_PA/LC_MESSAGES/gnome-core.mo
-share/locale/es_PE/LC_MESSAGES/gnome-core.mo
-share/locale/es_SV/LC_MESSAGES/gnome-core.mo
 share/locale/ru/LC_MESSAGES/gnome-core.mo
 share/locale/pl/LC_MESSAGES/gnome-core.mo
 share/locale/hu/LC_MESSAGES/gnome-core.mo
 share/locale/nl/LC_MESSAGES/gnome-core.mo
+share/locale/es_MX/LC_MESSAGES/gnome-core.mo
+share/mc/templates/GIMP.desktop
 share/panelrc
+share/pixmaps/gkb.xpm
+share/pixmaps/gkb/be.xpm
+share/pixmaps/gkb/bg.xpm
+share/pixmaps/gkb/ca.xpm
+share/pixmaps/gkb/ch.xpm
+share/pixmaps/gkb/cz.xpm
+share/pixmaps/gkb/de.xpm
+share/pixmaps/gkb/dk.xpm
+share/pixmaps/gkb/es.xpm
+share/pixmaps/gkb/fi.xpm
+share/pixmaps/gkb/fr.xpm
+share/pixmaps/gkb/gb.xpm
+share/pixmaps/gkb/gr.xpm
+share/pixmaps/gkb/hu.xpm
+share/pixmaps/gkb/il.xpm
+share/pixmaps/gkb/is.xpm
+share/pixmaps/gkb/it.xpm
+share/pixmaps/gkb/jp.xpm
+share/pixmaps/gkb/nl.xpm
+share/pixmaps/gkb/no.xpm
+share/pixmaps/gkb/pl.xpm
+share/pixmaps/gkb/pt.xpm
+share/pixmaps/gkb/qc.xpm
+share/pixmaps/gkb/ru.xpm
+share/pixmaps/gkb/se.xpm
+share/pixmaps/gkb/si.xpm
+share/pixmaps/gkb/sk.xpm
+share/pixmaps/gkb/th.xpm
+share/pixmaps/gkb/tr.xpm
+share/pixmaps/gkb/us.xpm
+share/pixmaps/gkb/yu.xpm
+share/pixmaps/mini-commander/browser-mini.xpm
+share/pixmaps/mini-commander/history-mini.xpm
+share/pixmaps/vnterm.xpm
 share/pixmaps/emacs.png
 share/pixmaps/gnome-aorta.png
 share/pixmaps/gnome-audio2.png
@@ -297,30 +344,76 @@ share/pixmaps/tiles/tile-drc-2-down.png
 share/pixmaps/fish/oldwanda.png
 share/idl/gnome-panel.idl
 share/idl/help-browser.idl
+share/xmodmap/xmodmap.be
+share/xmodmap/xmodmap.bg
+share/xmodmap/xmodmap.ch
+share/xmodmap/xmodmap.cz
+share/xmodmap/xmodmap.de
+share/xmodmap/xmodmap.dk
+share/xmodmap/xmodmap.dvorak
+share/xmodmap/xmodmap.es
+share/xmodmap/xmodmap.fi
+share/xmodmap/xmodmap.fr
+share/xmodmap/xmodmap.gr
+share/xmodmap/xmodmap.hu
+share/xmodmap/xmodmap.hu.old
+share/xmodmap/xmodmap.il
+share/xmodmap/xmodmap.is
+share/xmodmap/xmodmap.it
+share/xmodmap/xmodmap.la
+share/xmodmap/xmodmap.nl
+share/xmodmap/xmodmap.no
+share/xmodmap/xmodmap.pl
+share/xmodmap/xmodmap.pt
+share/xmodmap/xmodmap.pt-dead
+share/xmodmap/xmodmap.qc
+share/xmodmap/xmodmap.ru
+share/xmodmap/xmodmap.ru_koi8
+share/xmodmap/xmodmap.se
+share/xmodmap/xmodmap.sf
+share/xmodmap/xmodmap.sg
+share/xmodmap/xmodmap.si
+share/xmodmap/xmodmap.sk
+share/xmodmap/xmodmap.th
+share/xmodmap/xmodmap.tr_f
+share/xmodmap/xmodmap.tr_q
+share/xmodmap/xmodmap.uk
+share/xmodmap/xmodmap.us
+share/xmodmap/xmodmap.us.old
+share/xmodmap/xmodmap.yu
+@dirrm share/xmodmap
 @dirrm share/pixmaps/tiles
+@dirrm share/pixmaps/mini-commander
 @dirrm share/pixmaps/mailcheck
+@dirrm share/pixmaps/gkb
 @dirrm share/pixmaps/fish
-@dirrm share/gnome/help/mini-commander/C
-@dirrm share/gnome/help/mini-commander
-@dirrm share/gnome/help/help-browser/fr
-@dirrm share/gnome/help/help-browser/es
-@dirrm share/gnome/help/help-browser/C
-@dirrm share/gnome/help/help-browser
+@dirrm share/mc/templates
+@dirrm share/mc
 @dirrm share/gnome/help/gnome-intro/C/pix
 @dirrm share/gnome/help/gnome-intro/C
 @dirrm share/gnome/help/gnome-intro
+@dirrm share/gnome/help/gnome-terminal/C
+@dirrm share/gnome/help/gnome-terminal
+@dirrm share/gnome/help/help-browser/fr
+@dirrm share/gnome/help/help-browser/es
+@dirrm share/gnome/help/help-browser/C
+@dirrm share/gnome/help/help-browser/no
+@dirrm share/gnome/help/help-browser/it
+@dirrm share/gnome/help/help-browser/hu
+@dirrm share/gnome/help/help-browser
+@dirrm share/gnome/help/mini-commander_applet/C
+@dirrm share/gnome/help/mini-commander_applet
 @dirrm share/gnome/help
+@dirrm share/gnome/apps/System
+@dirrm share/gnome/apps/Applications
+@dirrm share/gnome/apps/Games
+@dirrm share/gnome/apps/Graphics
+@dirrm share/gnome/apps/Internet
+@dirrm share/gnome/apps/Multimedia
+@dirrm share/gnome/apps/Settings
+@dirrm share/gnome/apps/Utilities
+@dirrm share/gnome/apps
 @dirrm share/gnome
-@dirrm share/apps/System
-@dirrm share/apps/Administration
-@dirrm share/apps/Applications
-@dirrm share/apps/Audio
-@dirrm share/apps/Games
-@dirrm share/apps/Graphics
-@dirrm share/apps/Network
-@dirrm share/apps/Productivity
-@dirrm share/apps/Utilities
-@dirrm share/apps
 @dirrm share/applets/Amusements
 @dirrm share/applets/Monitors
 @dirrm share/applets/Multimedia
