@@ -1,7 +1,16 @@
-$NetBSD: patch-by,v 1.1.1.1 2002/02/13 18:09:22 mrauch Exp $
+$NetBSD: patch-by,v 1.2 2002/02/26 21:25:28 mrauch Exp $
 
---- ../solenv/inc/tg_ext.mk.orig	Tue Jan  1 14:11:58 2002
+--- ../solenv/inc/tg_ext.mk.orig	Sun Feb 24 14:08:59 2002
 +++ ../solenv/inc/tg_ext.mk
+@@ -107,7 +107,7 @@
+ 	
+ $(MISC)$/%.unpack : $(PRJ)$/download$/%.tar.gz
+ 	@+-$(RM) $@
+-	@+echo $(assign UNPACKCMD := gunzip -c $(BACK_PATH)download$/$(TARFILE_NAME).tar.gz | tar $(TAR_EXCLUDE_SWITCH) -xvf - ) > $(NULLDEV)
++	@+echo $(assign UNPACKCMD := sh -c "gunzip -c $(BACK_PATH)download$/$(TARFILE_NAME).tar.gz | tar $(TAR_EXCLUDE_SWITCH) -xvf -" ) > $(NULLDEV)
+ 	@+$(COPY) $(mktmp $(UNPACKCMD)) $@
+ 
+ $(MISC)$/%.unpack : $(PRJ)$/download$/%.tar
 @@ -145,7 +145,11 @@
  .IF "$(GUI)"=="WNT"
  	+cd $(PACKAGE_DIR) && $(TYPE) $(BACK_PATH)$(PATCH_FILE_NAME) | tr -d "\015" | patch -b -p2 && $(TOUCH) $(PATCH_FLAG_FILE)
