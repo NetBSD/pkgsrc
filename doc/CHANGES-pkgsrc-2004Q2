@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.8 2004/07/06 22:36:56 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.9 2004/07/06 22:39:37 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -10,4 +10,5 @@ Pullup ticket 40, requested by Grant Beattie [agc 2004-07-06]
 Pullup ticket 41, requested by Matthias Drochner [agc 2004-07-06]
 Pullup ticket 42, requested by Dieter Baron [agc 2004-07-06]
 Pullup ticket 43, requested by Gavan Fantom [agc 2004-07-06]
+Pullup ticket 44, requested by Grant Beattie [agc 2004-07-06]
 
