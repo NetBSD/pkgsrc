@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.3 2004/12/20 20:46:00 tv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.1.2.4 2004/12/31 20:25:30 tv Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -194,6 +194,7 @@ ${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
 .endif
 
 .if defined(USE_PERL5) && (${USE_PERL5} == "run")
+CONFIGURE_ENV+=		PERL=${PERL5:Q}
 .  if !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
 .    if exists(${PERL5})
 PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; \

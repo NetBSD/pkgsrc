@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.26 2004/04/27 18:31:08 tv Exp $
+# $NetBSD: header,v 1.26.6.1 2004/12/31 20:25:30 tv Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -112,6 +112,9 @@ case "${PKG_CREATE_USERGROUP:-@PKG_CREATE_USERGROUP@}" in
 	_PKG_CREATE_USERGROUP=NO
 	;;
 esac
+if [ -z "${USERADD}" -o -z "${GROUPADD}" ]; then
+	_PKG_CREATE_USERGROUP=NO
+fi
 
 case "${PKG_CONFIG:-@PKG_CONFIG@}" in
 [Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)

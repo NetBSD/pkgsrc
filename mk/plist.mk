@@ -1,4 +1,4 @@
-#	$NetBSD: plist.mk,v 1.1.2.1 2004/11/23 17:15:22 tv Exp $
+#	$NetBSD: plist.mk,v 1.1.2.2 2004/12/31 20:25:30 tv Exp $
 #
 # PLIST generation logic, invoked from the "install" target in bsd.pkg.mk.
 # This file should only be ".include"d from bsd.pkg.mk.
@@ -513,15 +513,15 @@ _PLIST_AWK_MANINSTALL=							\
 
 # plist awk pattern-action statement to strip '.gz' from man
 # entries
-_PLIST_AWK_STRIP_MANZ=						              \
+_PLIST_AWK_STRIP_MANZ=							\
 /^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*0)\.gz$$/ { \
-	$$0 = substr($$0, 1, length($$0) - 3);				      \
+	$$0 = substr($$0, 1, length($$0) - 3);				\
 }
 
 # plist awk pattern-action statement to add '.gz' to man entries
-_PLIST_AWK_ADD_MANZ=							  \
+_PLIST_AWK_ADD_MANZ=							\
 /^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*0)$$/ { \
-	$$0 = $$0 ".gz";						  \
+	$$0 = $$0 ".gz";						\
 }
 
 # plist awk pattern-action statement to handle PLIST_SUBST substitutions
