@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/15 20:35:58 wiz Exp $
+
+--- configure.orig	Sun Feb 25 20:58:48 2001
++++ configure	Wed Mar 14 22:03:19 2001
+@@ -2086,6 +2086,8 @@
+   HAVE_OSS_TRUE='#'
+   HAVE_OSS_FALSE=
+ fi
++HAVE_OSS_TRUE=
++HAVE_OSS_FALSE='#'
+ 
+ 
+ echo $ac_n "checking for snd_pcm_open in -lasound""... $ac_c" 1>&6
