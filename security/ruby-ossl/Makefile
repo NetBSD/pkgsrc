@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/21 17:04:27 taca Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/21 17:21:30 taca Exp $
 
-DISTNAME=		ossl-0.1.3
-PKGNAME=		${RUBY_PKGNAMEPREFIX}ossl-0.1.3
+DISTNAME=		ossl-0.1.4a
+PKGNAME=		${RUBY_PKGNAMEPREFIX}ossl-0.1.4.1
 WRKSRC=			${WRKDIR}/ossl
 CATEGORIES=		security
 MASTER_SITES=		http://freesoftware.fsf.org/download/rubypki/
@@ -15,6 +15,7 @@ USE_RUBY_EXTCONF=	yes
 RUBY_REQD=		1.6.4
 USE_BUILDLINK2=		# defined
 USE_OPENSSL_VERSION=	${OPENSSL_VERSION_096}
+CONFLICTS=		ruby-openssl-*
 
 CONFIGURE_ARGS=		--with-ssl-include="${BUILDLINK_PREFIX.openssl}/include" \
 			--with-ssl-lib="${BUILDLINK_PREFIX.openssl}/lib"
