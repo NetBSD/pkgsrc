@@ -1,4 +1,4 @@
-# $NetBSD: STATUS,v 1.1 2003/04/10 04:02:14 grant Exp $
+# $NetBSD: STATUS,v 1.2 2003/04/10 20:34:09 grant Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.
@@ -42,8 +42,8 @@ audio/mpg123                                 Y      Y                  Y
 devel/cvs               Y        Y           Y      Y                  Y
 devel/gettext           Y        Y           Y      Y                  Y
 devel/libtool           Y        Y           Y      Y                  Y
-devel/ncurses                                                           
-editors/vim             Y        Y           Y      Y
+devel/ncurses                                                          Y
+editors/vim             Y        Y           Y      Y                  Y
 editors/xemacs                                      Y
 editors/emacs                                       Y
 graphics/xfig                                       Y
@@ -74,10 +74,10 @@ Linux/xpdf: depends on openmotif, see PR
 ---------------------------------------------------------------------------
 Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris 
 ---------------------------------------------------------------------------
-audio/xmms
+audio/xmms                                                             X
 devel/gdb                                           Y                  N
 editors/abiword
-graphics/mplayer
+graphics/mplayer                                                       N
 lang/gcc                N/A                                            Y
 lang/gcc3               N/A                                            X
 lang/python22                                Y      Y
@@ -89,6 +89,12 @@ misc/openoffice
 www/mozilla
 www/opera
 ---------------------------------------------------------------------------
+notes:
+
+Solaris/xmms: runtime linker warning on startup, libvorbisfile.so can't
+find __floatdidf from libgcc.
+
+Solaris/mplayer: depends on cdparanoia.
 
 ---------------------------------------------------------------------------
 'yowza'
