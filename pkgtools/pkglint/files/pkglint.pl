@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.48 2001/04/23 14:49:45 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.49 2001/05/03 19:18:55 abs Exp $
 #
 # This version contains some changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -42,13 +42,14 @@ $manstrict = 0;
 $manchapters = '123456789ln';
 $localbase = "/usr/local";
 
-getopts('habcINB:v');
+getopts('habcINB:vV');
 
 if ($opt_h) {
 		($prog) = ($0 =~ /([^\/]+)$/);
 		print STDERR <<EOF;
 usage: $prog [-vIN] [-B#] [package_directory]
 	-v	verbose mode
+	-V	version (@DISTVER@)
 	-I	show Makefile (with all included files)
 	-N	writing a new package
 	-B#	allow # contiguous blank lines (default: $contblank line)
@@ -64,6 +65,10 @@ $contblank = $opt_B	if $opt_B;
 
 $portdir = shift || ".";
 
+if ($opt_V) {
+	print "@DISTVER@\n";
+	exit;
+}
 
 # OS dependent configs
 # os    portsdir        rcsid   mplist  ldcfg   plist-rcsid mancompresss strict localbase
