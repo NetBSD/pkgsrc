@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/01/22 12:25:59 grant Exp $
+# $NetBSD: Makefile,v 1.47 2004/04/05 14:06:00 xtraeme Exp $
 
 DISTNAME=	unzip550
 PKGNAME=	unzip-5.50
@@ -21,6 +21,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK3=	yes
+USE_GNU_TOOLS+=	make
 
 .include "../../mk/bsd.prefs.mk"
 
