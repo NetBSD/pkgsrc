@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/11/19 21:44:06 christos Exp $
+# $NetBSD: Makefile,v 1.22 2000/11/20 15:06:36 christos Exp $
 #
 
 DISTNAME=	tcsh-6.10
@@ -31,7 +31,6 @@ LOWER_OPSYS=	solaris${OS_VERSION}
 .endif
 
 # XXX: For now we don't install the ukrainian, because there is no directory.
-#	    ukrainian:ISO_8859-1:uk:UA
 post-install:
 	@${ECHO} "Installing message catalogues"
 	@${INSTALL_DATA} ${WRKSRC}/tcsh.C.cat ${PREFIX}/${NLSDIR}/C/tcsh.cat
@@ -44,6 +43,7 @@ post-install:
 	    italian:ISO_8859-1:it:CH:IT				\
 	    ja:EUC:ja:JP					\
 	    spanish:ISO_8859-1:es:ES				\
+	    ukrainian:ISO_8859-1:uk:UA				\
 	    ;							\
 	do							\
 	    OIFS="${IFS}";					\
