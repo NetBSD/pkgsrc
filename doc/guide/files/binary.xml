@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.2 2004/12/23 18:57:03 ben Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.3 2005/01/05 14:11:07 agc Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -232,13 +232,24 @@ fi</programlisting>
     <sect2>
       <title>Setting up a sandbox for chroot'ed builds</title>
 
-      <para>If you don't want all the pkgs nuked from a machine (rendering it useless
+      <para>If you don't want all the packages nuked from a machine (rendering it useless
 	for anything but pkg compiling), there is the possibility of doing the pkg
 	bulk build inside a chroot environment.</para>
 
-      <para>The first step to do so is setting up a chroot
+      <para>The first step is to set up a chroot
 	sandbox, e.g. <filename>/usr/sandbox</filename>.
-	After extracting all the sets from a &os; installation or doing a
+	This can be done by using null mounts, or manually.</para>
+
+      <para>There is a shell script
+	called <filename>pkgsrc/bulk/mksandbox</filename> which will set up the sandbox
+	environment using null mounts. It will also create a script
+	called <filename>sandbox</filename> in the root of the sandbox
+	environment, which will allow the null mounts to be activated
+	using the <command>sandbox mount</command> and deactivated using
+	the <command>sandbox umount</command>.</para>
+
+      <para>To set up a sandbox environment by hand,
+	after extracting all the sets from a &os; installation or doing a
 	<command>make distribution DESTDIR=/usr/sandbox</command> in
 	<filename>/usr/src/etc</filename>, be sure the following
 	items are present and properly configured:</para>
