@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.523 2004/08/05 05:40:51 schmonz Exp $
+# $NetBSD: Makefile,v 1.524 2004/08/15 00:46:58 schmonz Exp $
 #
 
 COMMENT=	Development utilities
@@ -478,6 +478,7 @@ SUBDIR+=	swig
 #SUBDIR+=	swig-build	# conflicts with swig (soon to change)
 SUBDIR+=	swig-perl
 SUBDIR+=	swig-python
+SUBDIR+=	syncdir
 SUBDIR+=	tavrasm
 SUBDIR+=	tcl-tclcl
 SUBDIR+=	tet3
