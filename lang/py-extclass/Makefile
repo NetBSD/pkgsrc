@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2000/01/02 03:12:20 tsarna Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/08 22:35:32 tsarna Exp $
 #
 
-DISTNAME=	Zope-2.1.1-src
-PKGNAME=	py-extclass-2.1.1
+DISTNAME=	Zope-2.1.2-src
+PKGNAME=	py-extclass-2.1.2
 CATEGORIES=	lang
-MASTER_SITES=   http://www.zope.org/Products/Zope/2.1.1/
+MASTER_SITES=   http://www.zope.org/Products/Zope/2.1.2/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
@@ -15,9 +15,9 @@ DEPENDS+=	python-1.5.2:../../lang/python
 ALL_TARGET=	default
 PYTHON_LIBDIR=		${LOCALBASE}/lib/python1.5/site-packages
 PYTHON_CONFIGDIR=	${LOCALBASE}/lib/python1.5/config
-EXTRACT_ELEMENTS=       Zope-2.1.1-src/lib/Components/ExtensionClass
+EXTRACT_ELEMENTS=       ${DISTNAME}/lib/Components/ExtensionClass
 
-WRKSRC=		${WRKDIR}/Zope-2.1.1-src/lib/Components/ExtensionClass
+WRKSRC=		${WRKDIR}/${DISTNAME}/lib/Components/ExtensionClass
 
 do-configure:
 	( cd ${WRKSRC} ;\
