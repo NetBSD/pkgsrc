@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.861 2003/09/14 21:30:00 bouyer Exp $
+$NetBSD: TODO,v 1.862 2003/09/15 09:43:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -65,6 +65,7 @@ Suggested package updates
 
 	o Amaya-8.1a
 	o ImageViewer-0.6.3
+	o Ngraph-6.3.20 [pkg/22800]
 	o Mesa-5.0.2
 	o R-1.7.1
 	o TeXmacs-1.0.1.22
@@ -101,8 +102,8 @@ Suggested package updates
 	o dante-1.1.14
 	o dctc-0.85.5
 	o dnetc-2.9004-482 [pkg/22390]
-	o dylan-compiler-2.3.9
-	o dylan-interpreter-2.3.9
+	o dylan-compiler-2.3.11
+	o dylan-interpreter-2.3.11
 	o easytag-0.30
 	o echoping-5.0.1
 	o elm-me-2.4pl107
@@ -133,7 +134,7 @@ Suggested package updates
 	o gnats-4.0
 	o gnome-core-2.4
 	o gnomeicu-0.99
-	o gnucash-1.8.5
+	o gnucash-1.8.7
 	o gnuchess-5.06
 	o gnustep-0.8.9
 	o gpa-0.6.1
