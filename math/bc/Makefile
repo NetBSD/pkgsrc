@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/29 23:57:38 reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/09 07:04:40 reed Exp $
 
 DISTNAME=	bc-1.06
 CATEGORIES=	math
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.gnu.org/software/bc/bc.html
 COMMENT=	Arbitrary precision calculator language
 # this provides dc(1) which is essential for pkgsrc installations
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 INFO_FILES=	bc.info dc.info
 
@@ -19,6 +19,6 @@ INFO_FILES=	bc.info dc.info
 BUILD_DEPENDS+=	flex-[0-9]*:../../devel/flex
 .endif
 
-.include "../../devel/ncurses/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
