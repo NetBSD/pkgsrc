@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2001/05/18 11:40:35 rh Exp $
+# $NetBSD: Makefile,v 1.220 2001/05/19 13:01:04 drochner Exp $
 #
 
 COMMENT=	Networking tools
@@ -119,6 +119,8 @@ SUBDIR+=	poptop
 SUBDIR+=	ppp
 SUBDIR+=	ppp-mppe
 SUBDIR+=	pptp
+SUBDIR+=	py-soaplib
+SUBDIR+=	py-xmlrpclib
 SUBDIR+=	ra-pna-proxy
 SUBDIR+=	ra-rtsp-proxy
 SUBDIR+=	radius
