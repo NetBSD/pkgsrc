@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.34 2001/07/13 07:09:23 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2001/08/02 03:37:39 jlam Exp $
 
-DISTNAME=		cups-${VERS}-source
+DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
-VERS=			1.1.8
-WRKSRC=			${WRKDIR}/cups-${VERS}
+BASE_VERS=		1.1.9
+DIST_VERS=		${BASE_VERS}-1
+VERS=			${DIST_VERS:S/-/./g}
+WRKSRC=			${WRKDIR}/cups-${BASE_VERS}
 CATEGORIES=		print
-MASTER_SITES=		ftp://ftp.easysw.com/pub/cups/${VERS}/ \
-			ftp://ftp2.easysw.com/pub/cups/${VERS}/ \
-			ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${VERS}/ \
-			ftp://ftp.mpg.goe.ni.schule.de/pub/internet/printing/cups/${VERS}/ \
-			ftp://ftp.ntua.gr/pub/gnu/cups/${VERS}/ \
-			ftp://ftp.fisek.com.tr/pub/cups/${VERS}/
+MASTER_SITES=		ftp://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
+			ftp://ftp2.easysw.com/pub/cups/${BASE_VERS}/ \
+			ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${BASE_VERS}/ \
+			ftp://ftp.mpg.goe.ni.schule.de/pub/internet/printing/cups/${BASE_VERS}/ \
+			ftp://ftp.ntua.gr/pub/gnu/cups/${BASE_VERS}/ \
+			ftp://ftp.fisek.com.tr/pub/cups/${BASE_VERS}/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@netbsd.org
@@ -27,16 +29,12 @@ CONFIGURE_ARGS+=	--sysconfdir=/etc
 CONFIGURE_ARGS+=	--localstatedir=/var
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/cups
 CONFIGURE_ARGS+=	--enable-libtool-unsupported="${LIBTOOL}"
-
-#USE_SSL=		# defined
+CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER}
+CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP}
 CONFIGURE_ARGS+=	--enable-ssl
+CONFIGURE_ENV+=		DSOFLAGS="${LDFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
 
 .if defined(USE_PAM)
 .include "../../security/PAM/buildlink.mk"
@@ -95,15 +93,8 @@ FILES_SUBST+=		TOUCH=${TOUCH:Q}
 FILES_SUBST+=		TRUE=${TRUE:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
-post-extract:
-	cd ${WRKSRC}/conf; ${MV} -f cupsd.conf cupsd.conf.in
-
-post-build:
-	cd ${WRKSRC}; \
-	${SED} ${FILES_SUBST_SED} conf/cupsd.conf.in > conf/cupsd.conf
-	${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
-
 pre-install:
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
@@ -120,4 +111,9 @@ post-install:
 .endif
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.include "../../devel/zlib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
