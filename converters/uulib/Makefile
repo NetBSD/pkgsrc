@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2004/04/23 22:49:12 snj Exp $
+# $NetBSD: Makefile,v 1.29 2004/08/09 19:00:55 recht Exp $
 #
 
 DISTNAME=       uudeview-0.5.20
 PKGNAME=        uulib-0.5.20
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 
@@ -28,7 +29,7 @@ DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 
 do-install:
 	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libuu.la ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/uudeview.h ${PREFIX}/include/uu.h
+	${INSTALL_DATA} ${WRKSRC}/uudeview.h ${PREFIX}/include
 	${SED} -e 's|FUNKYTOKENHERE|${PREFIX}|g' \
 		< ${FILESDIR}/uulib.3 > ${WRKSRC}/uulib.3
 	${INSTALL_MAN} ${WRKSRC}/uulib.3 ${PREFIX}/man/man3
