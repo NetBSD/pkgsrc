@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2003/11/22 08:24:40 grant Exp $
+# $NetBSD: Makefile,v 1.34 2003/12/30 23:40:12 cjep Exp $
 #
 
 PKGNAME=		ap-php-${PHP_BASE_VERS}
@@ -23,7 +23,7 @@ do-install:
 	elif [ -f ${WRKSRC}/libs/libphp4.so ]; then		\
 		${INSTALL_DATA} ${WRKSRC}/libs/libphp4.so	\
 			${PREFIX}/lib/httpd/mod_php4.so;	\
-	fi	
+	fi
 
 
 .include "../../mk/apache.mk"
