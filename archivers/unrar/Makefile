@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/08/25 21:49:25 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/08/29 11:13:56 abs Exp $
 
 DISTNAME=	unrarsrc
 PKGNAME=	unrar-3.0
@@ -21,9 +21,6 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 USE_BUILDLINK2=	# defined
-
-do-build:
-	cd ${WRKSRC} && ${BUILDLINK_CC} ${CFLAGS} -o unrar -D_UNIX unrar.c
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unrar
