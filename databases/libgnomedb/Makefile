@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/02/24 19:17:10 drochner Exp $
+# $NetBSD: Makefile,v 1.32 2005/03/03 16:39:28 drochner Exp $
 #
 
 DISTNAME=		libgnomedb-1.2.0
@@ -14,6 +14,7 @@ BUILD_USES_MSGFMT=	yes
 
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
+GCC_REQD=		3.3
 USE_LIBTOOL=		YES
 USE_BUILDLINK3=		YES
 USE_DIRS+=		gnome2-1.5
