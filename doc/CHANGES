@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1773 2003/03/26 08:24:46 gehenna Exp $
+$NetBSD: CHANGES,v 1.1774 2003/03/26 12:56:38 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1315,3 +1315,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkgdepgraph to 2.3 [atatat 2003-03-25]
 	Updated pkgdepgraph to 2.4 [atatat 2003-03-26]
 	Updated cvsync to 0.16.0 [gehenna 2003-03-26]
+	Added phoenix-linux-nightly [grant 2003-03-26]
