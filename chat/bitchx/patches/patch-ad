@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2002/09/09 18:04:19 wiz Exp $
+
+--- source/screen.c.orig	Mon Jan  8 07:24:22 2001
++++ source/screen.c
+@@ -2971,6 +2971,8 @@ static 	char 	retbuf[512];
+ 
+ 	if (back == 58)
+ 		strcat(retbuf, current_term->TI_sgrstrs[TERM_SGR_BLINK_ON - 1]);
++	if (fore > 57)
++		fore = last_fore;
+ 	if (fore > -1)
+ 		strcat(retbuf, current_term->TI_forecolors[fore_conv[fore]]);
+ 	if (back > -1 && back < 58)
