@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/21 09:44:10 jun Exp $
+
+SHA1 (rats-0.9.tar.gz) = 810abed8d4b90f4e767298fd01a82f2734923d0c
+Size (rats-0.9.tar.gz) = 94991 bytes
+SHA1 (patch-aa) = 7d3502edccb5beaaebeed658d55b632b2ecf9c42
