@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2004/02/12 01:59:38 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2004/02/12 02:35:06 jlam Exp $
 
 .if !defined(HESIOD_BUILDLINK2_MK)
 HESIOD_BUILDLINK2_MK=	# defined
@@ -20,8 +20,18 @@ _NEED_HESIOD=	NO
 _NEED_HESIOD=	YES
 .endif
 
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mhesiod)
+.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+    ${_BUILTIN_HESIOD} == "YES"
+_NEED_HESIOD=	NO
+.endif
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+_NEED_HESIOD=	YES
+.endif
+.if !empty(PREFER_NATIVE:Mhesiod) && \
+    ${_BUILTIN_HESIOD} == "YES"
+_NEED_HESIOD=	NO
+.endif
+.if !empty(PREFER_PKGSRC:Mhesiod)
 _NEED_HESIOD=	YES
 .endif
 

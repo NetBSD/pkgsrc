@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.19 2004/02/12 01:59:37 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.20 2004/02/12 02:35:06 jlam Exp $
 #
 # Optionally define:
 #
@@ -62,14 +62,24 @@ MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.ncurses=${BUILDLINK_IS_BUILTIN.ncurses}
 .endif
 
 .if !empty(BUILDLINK_IS_BUILTIN.ncurses:M[yY][eE][sS])
-_NEED_NCURSES=		NO
+_NEED_NCURSES=	NO
 .else
-_NEED_NCURSES=		YES
+_NEED_NCURSES=	YES
 .endif
 
-.if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
-    !empty(PREFER_PKGSRC:Mncurses)
-_NEED_NCURSES=		YES
+.if !empty(PREFER_NATIVE:M[yY][eE][sS]) && \
+    ${_BUILTIN_NCURSES} == "YES"
+_NEED_NCURSES=	NO
+.endif
+.if !empty(PREFER_PKGSRC:M[yY][eE][sS])
+_NEED_NCURSES=	YES
+.endif
+.if !empty(PREFER_NATIVE:Mncurses) && \
+    ${_BUILTIN_NCURSES} == "YES"
+_NEED_NCURSES=	NO
+.endif
+.if !empty(PREFER_PKGSRC:Mncurses)
+_NEED_NCURSES=	YES
 .endif
 
 .if ${_NEED_NCURSES} == "YES"

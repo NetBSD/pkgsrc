@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.213 2004/02/07 15:21:52 uebayasi Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.214 2004/02/12 02:35:06 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -120,13 +120,18 @@ PKGSRC_RUN_TEST?=	no
 # Default: no
 
 PREFER_PKGSRC?=		no
+PREFER_NATIVE?=		yes
 #
-# When building packages, whether or not to prefer the pkgsrc versions of
-# software that's also part of the base system.  Its value can be either
-# yes/no, or a list of packages as named in the BUILDLINK_PACKAGES line
-# in a package's buildlink[23].mk file.
+# When building packages, whether to prefer the pkgsrc or native
+# versions of software that's also part of the base system.  Its value
+# can be either yes/no, or a list of packages as named in the
+# BUILDLINK_PACKAGES line in a package's buildlink[23].mk file.
+# Preferences are determined by the most specific instance of the
+# package in either PREFER_PKGSRC or PREFER_NATIVE.  If a package is
+# specified in neither or in both variables, then PREFER_PKGSRC has
+# precedence over PREFER_NATIVE.
+#
 # Possible: yes, no, or a list of packages
-# Default: no
 
 #WRKOBJDIR=	/usr/tmp
 # build here instead of in pkgsrc
