@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/02/13 14:51:03 agc Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2003/03/07 07:50:04 jmc Exp $
 #
 
 DISTNAME=	Device-SerialPort-0.12
@@ -11,12 +11,12 @@ MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	http://members.aol.com/Bbirthisel/alpha.html
 COMMENT=	POSIX-based Perl module to control your serial port
 
+DEPENDS+=	p5-perl-headers-[0-9]*:../../devel/p5-perl-headers
+
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Device/SerialPort/.packlist
 
 MAKE_PARAMS=	${DEFAULT_SERIAL_DEVICE}
-
-BROKEN=		Device::Serial could not find ioctl definitions
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
