@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2003/05/02 11:56:05 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/30 15:41:51 jmmv Exp $
 #
 
 DISTNAME=	iplog-2.2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ojnk/}
 
@@ -11,16 +11,21 @@ HOMEPAGE=	http://ojnl.sourceforge.net
 COMMENT=	Iplog is a tool using pcap to log ip traffic
 
 USE_BUILDLINK2=	YES
+USE_GMAKE=	YES
+USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
 CFLAGSTMP="-I${PREFIX}/include -Wall"
 LDFLAGSTMP="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib"
 LIBSTMP="-lpthread"
 
-USE_GMAKE= YES
+RCD_SCRIPTS=	iplog
+
+EGDIR=		${PREFIX}/share/examples/iplog
 
 post-patch:
-	cd ${WRKSRC}/src && ${SED} s,%PREFIX%/etc,${PKG_SYSCONFBASE},g < iplog.h > iplog.h.patched && ${MV} iplog.h.patched iplog.h
+	cd ${WRKSRC}/src && ${SED} s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g \
+		< iplog.h > iplog.h.patched && ${MV} iplog.h.patched iplog.h
 
 do-configure:
 	cd ${WRKSRC} && CFLAGS=${CFLAGSTMP} \
@@ -32,14 +37,9 @@ do-configure:
 do-build:
 	cd ${WRKSRC} && ${GMAKE} all
 
-post-build:
-	${SED} \
-	-e 's|%PREFIX%|${PREFIX}|' \
-	<${FILESDIR}/iplog >${WRKDIR}/iplog
-
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/iplog ${PREFIX}/etc/rc.d/iplog
-	${INSTALL_DATA} ${WRKSRC}/example-iplog.conf ${PREFIX}/etc/iplog.conf.sample
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/example-iplog.conf ${EGDIR}/iplog.conf
 
 .include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
