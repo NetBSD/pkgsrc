@@ -1,9 +1,0 @@
-CXX      = g++
-CXXFLAGS = -Wall -DUSE_UNICODE
-AR       = ar cru
-RANLIB   = ranlib
-STRIP    = strip
-INCLUDE  = ${CPPFLAGS} -I${X11BASE}/include
-LIBDIR   = ${LDFLAGS}
-LINK     = -lFOX
-INSTDIR  = ${PREFIX}/bin
