@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6640 2004/07/23 00:34:04 reed Exp $
+$NetBSD: CHANGES,v 1.6641 2004/07/23 00:35:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3510,3 +3510,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gtklife-3.0 [drochner 2004-07-22]
 	Updated jakarta-tomcat to 5.0.27 [erh 2004-07-22]
 	Updated ucblogo to 5.3 [reed 2004-07-23]
+	Added alee-ttf-0.3 [minskim 2004-07-23]
