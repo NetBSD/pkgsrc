@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:40:33 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/23 19:27:09 wiz Exp $
 
 .if !defined(GTK_BUILDLINK2_MK)
 GTK_BUILDLINK2_MK=	# defined
@@ -11,7 +11,7 @@ EVAL_PREFIX+=		BUILDLINK_PREFIX.gtk=gtk
 BUILDLINK_PREFIX.gtk_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.gtk=	include/gdk/*
 BUILDLINK_FILES.gtk+=	include/gtk/*
-BUILDLINK_FILES.gtk+=	include/gtk-*/*/*
+BUILDLINK_FILES.gtk+=	include/gtk-1*/*/*
 BUILDLINK_FILES.gtk+=	lib/libgdk.*
 BUILDLINK_FILES.gtk+=	lib/libgtk.*
 
