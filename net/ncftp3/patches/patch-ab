@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2001/12/25 20:38:01 wiz Exp $
+
+--- configure.orig	Tue Dec 25 21:10:50 2001
++++ configure
+@@ -1598,7 +1598,7 @@
+ echo "$ac_t""" 1>&6
+ b1=`cd .. ; pwd`
+ b2=`cd ../.. ; pwd`
+-exdirs="$HOME $j $b1 $b2 $prefix /usr/local /usr/ccs"
++exdirs="$HOME $j $b1 $b2 /usr/ccs"
+ if test -x "$HOME/bin/OS" ; then
+ 	b3=`$HOME/bin/OS`
+ 	b3="$HOME/$b3"
