@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/16 15:57:07 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/16 15:59:32 jlam Exp $
 
 PKGNAME=	oss-${OSS_VERSION}
 CATEGORIES=	audio sysutils
@@ -31,10 +31,17 @@ USE_BUILDLINK2=		# defined
 NO_CONFIGURE=		# defined
 NO_BUILD=		# defined
 
+.if ${OPSYS} == "NetBSD"
+MODSTAT=		/usr/bin/modstat
+.else
+MODSTAT=		${TRUE}
+.endif
+
 CHROOT?=		/usr/sbin/chroot
 WRKSRC=			${WRKDIR}
 OSSLIBDIR=		${PREFIX}/lib/oss
 FILES_SUBST+=		OSSLIBDIR=${OSSLIBDIR}
+FILES_SUBST+=		MODSTAT=${MODSTAT}
 
 # OSS needs to find certain files in /etc, so this package can't be
 # made to honor ${PKG_SYSCONFDIR}.
