@@ -1,4 +1,4 @@
-# $NetBSD: sunpro-cc-post-cache,v 1.2 2003/09/02 07:00:02 jlam Exp $
+# $NetBSD: sunpro-cc-post-cache,v 1.3 2004/01/06 08:48:29 jlam Exp $
 #
 # This file implements the default action of the "cc" private cache
 # for the SunPro suite of compilers, and tells the wrapper to skip the
@@ -6,7 +6,7 @@
 # can't handle; they will instead by handled directly by
 # sunpro-cc-post-logic.
 
--W*)
+-[OW]*)
 	skipcache=yes
 	;;
 esac
