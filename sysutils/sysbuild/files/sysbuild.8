@@ -1,4 +1,4 @@
-.\" $NetBSD: sysbuild.8,v 1.2 2002/11/30 15:50:17 jmmv Exp $
+.\" $NetBSD: sysbuild.8,v 1.3 2002/12/01 19:39:51 jmmv Exp $
 .\"
 .\" sysbuild - Automatic NetBSD system builds
 .\" Copyright (c) 2002, Julio Merino <jmmv@netbsd.org>
@@ -37,7 +37,7 @@
 release and kernel builds
 .Sh SYNOPSIS
 .Nm
-.Op Fl ms
+.Op Fl fms
 .Op Fl c Ar conf
 .Ar target
 .Op Ar target_args ...
@@ -64,6 +64,14 @@ This is not a full name; it is just a symbolic name.
 See
 .Sx CONFIGURATION
 for for information.
+.It Fl f
+Run in fast mode.
+This option passes the
+.Fl u
+flag to the build.sh script; this way build directories are not
+cleaned during builds.
+While building kernels, it avoids the config, clean and depend
+steps.
 .It Fl m
 Capture all output and send it by mail to the
 .Va MAILTO
@@ -179,10 +187,24 @@ This command is interactive, so output cannot be captured with
 This target requires
 .Ql root
 privileges.
+.It config-kernel Ar kernel
+Edit a kernel configuration file interactively, located inside
+.Pa @SYSBUILD_HOMEDIR@ .
+If the configuration file is not found, the
+.Pa GENERIC
+kernel for your platform is copied as a template.
+.Pp
+This target requires
+.Ql root
+privileges.
 .It destroy
 Completely remove the work area specified by
 .Va BUILDDIR .
 You should run this target before deinstalling this program.
+.Pp
+This target requires
+.Ql root
+privileges.
 .It etcupdate
 Extract the compressed
 .Pa etc.tgz
