@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8964 2005/01/28 16:20:26 veego Exp $
+$NetBSD: CHANGES,v 1.8965 2005/01/28 22:53:36 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -646,3 +646,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ruby-webrick to 1.3.1nb1 [taca 2005-01-28]
         Updated bittornado to 0.3.10 [veego 2005-01-28]
         Updated bittornado-gui to 0.3.10 [veego 2005-01-28]
+	Removed snort-contrib [adrianp 2005-01-28]
