@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/08/04 12:06:24 itojun Exp $
+
+--- smime.c	2003-07-09 18:07:01.000000000 +0900
++++ smime.c	2003-08-04 21:00:15.000000000 +0900
+@@ -962,7 +962,7 @@
+ 		xalg->parameter = ASN1_TYPE_new();
+ 	BIO_ctrl(p7bio, BIO_C_GET_CIPHER_CTX, 1, (char *)&ctx);
+ 	if (EVP_CIPHER_CTX_nid(ctx) == NID_rc2_cbc) {
+-		EVP_CIPHER *cipher;
++		const EVP_CIPHER *cipher;
+ 		STACK *rsk;
+ 		PKCS7_RECIP_INFO *ri;
+ 		u_char key[EVP_MAX_KEY_LENGTH];
