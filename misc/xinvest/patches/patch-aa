@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/12/26 16:03:00 garbled Exp $
+--- portfolio.c.orig	Mon Sep 22 16:50:40 1997
++++ portfolio.c	Tue Dec 22 13:08:26 1998
+@@ -32,7 +32,7 @@
+ #include <monetary.h>
+ #endif
+ 
+-#ifndef NeXT
++#if !defined(NeXT) && !defined(__NetBSD__)
+ #include <values.h>
+ #endif
+ 
