@@ -1,2 +1,5 @@
+$NetBSD: md5,v 1.1 2001/02/24 16:56:55 sakamoto Exp $
+
 MD5 (fox-0.99.157.tar.gz) = 7f717dc23fb8f03904e9cc3a7e141ad7
+MD5 (xunicode-0.3.1.tar.gz) = 4149f569fcab08a3b51de7171fded4d9
 MD5 (fox-xunicode-0.99.157.diff) = 40332576f9a24434ae7201fb1531bb11
