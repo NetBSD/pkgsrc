@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2001/07/27 20:40:00 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2001/11/01 09:41:14 jlam Exp $
 
 DISTNAME=	wmx-6
 WMX_VERS=	6.0
@@ -16,7 +16,7 @@ ALL_TARGET=	depend all
 
 DISTINFO_FILE=	${.CURDIR}/../../wm/wmx/distinfo
 PATCHDIR=	${.CURDIR}/../../wm/wmx/patches
-PLIST_SRC=	${.CURDIR}/../../wm/wmx/pkg/PLIST
+PLIST_SRC=	${.CURDIR}/../../wm/wmx/PLIST
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmx ${PREFIX}/bin

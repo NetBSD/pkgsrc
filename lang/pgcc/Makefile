@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/09/27 23:18:17 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2001/11/01 09:41:13 jlam Exp $
 
 DISTNAME=		gcc-2.95.2
 PKGNAME=		pgcc-2.95.2.1
@@ -24,9 +24,9 @@ ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
 
 FILESDIR=		${.CURDIR}/../../lang/gcc/files
 PATCHDIR=		${.CURDIR}/../../lang/gcc/patches
-PKGDIR=			${.CURDIR}/../../lang/gcc/pkg
+PKGDIR=			${.CURDIR}/../../lang/gcc
 
-DESCR_SRC=		${.CURDIR}/pkg/DESCR
+DESCR_SRC=		${.CURDIR}/DESCR
 
 .if (${OPSYS} == "NetBSD") && (${OBJECT_FMT} == "ELF")
 MACHINE_GCC_PLATFORM=	${MACHINE_GNU_PLATFORM}elf
