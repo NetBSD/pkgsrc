@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.4 2001/02/22 15:28:57 tv Exp $
+$NetBSD: patch-ai,v 1.5 2001/03/09 19:06:19 tv Exp $
 
 --- fidogate.conf.orig	Thu Feb 22 09:58:02 2001
 +++ fidogate.conf	Thu Feb 22 09:58:13 2001
@@ -55,16 +55,4 @@ $NetBSD: patch-ai,v 1.4 2001/02/22 15:28:57 tv Exp $
  
  # facility, level when using syslog support (LOGFILE = "syslog")
  # NOT YET SUPPORTED by FIDOGATE C programs (used by Perl scripts)
-@@ -57,10 +57,10 @@
- 
- 
- # AREAS.BBS EchoMail distribution list
--AreasBBS	%V/areas.bbs
-+AreasBBS	%C/areas.bbs
- 
- # FAREAS.BBS file distribution list
--FAreasBBS	%V/fareas.bbs
-+FAreasBBS	%C/fareas.bbs
- 
- 
  
