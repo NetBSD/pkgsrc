@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/17 15:57:05 jmmv Exp $
+
+--- src/arch/bsd/bsd_dsp.c.orig	2003-01-07 02:37:11.000000000 +0000
++++ src/arch/bsd/bsd_dsp.c
+@@ -15,7 +15,13 @@
+ 
+ #include <assert.h>
+ #include <fcntl.h>
++#if defined(__FreeBSD__)
++#include <machine/soundcard.h>
++#elif defined(__NetBSD__) || defined(__OpenBSD__)
++#include <soundcard.h>
++#else
+ #include <sys/soundcard.h>
++#endif
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -212,7 +218,11 @@ void release_native(void *handle) {
+ 
+ 	handle_fd = *(int *) handle;
+ 
++#if defined(__NetBSD__) || defined(__OpenBSD__)
++	if(ioctl(handle_fd, SNDCTL_DSP_RESET, NULL) < 0) {
++#else
+ 	if(ioctl(handle_fd, SNDCTL_DSP_RESET) < 0) {
++#endif
+ #ifdef DEBUG_MAXIMUS
+ 		fprintf(stderr, "Couldn't reset dsp\n");
+ #endif
