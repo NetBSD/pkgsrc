@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/07/04 23:49:42 salo Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/09 20:33:07 grant Exp $
 #
 
 DISTNAME=	nmap-3.30
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.insecure.org/nmap/
 COMMENT=	Network/port scanner with OS detection
 
 USE_BUILDLINK2=	YES
+USE_GCC_SHLIB=	YES
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
