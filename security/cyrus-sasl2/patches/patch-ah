@@ -1,0 +1,30 @@
+$NetBSD: patch-ah,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
+
+--- lib/Makefile.am.orig	Fri Oct 11 22:19:04 2002
++++ lib/Makefile.am	Sun Oct 27 14:32:57 2002
+@@ -51,10 +51,7 @@
+ libsasl2_a_SOURCES=
+ 
+ common_headers = saslint.h
+-common_sources = auxprop.c canonusr.c checkpw.c client.c common.c config.c external.c md5.c saslutil.c server.c seterror.c dlopen.c
+-
+-LTLIBOBJS = @LTLIBOBJS@ plugin_common.lo
+-LIBOBJS = @LIBOBJS@ plugin_common.o
++common_sources = auxprop.c canonusr.c checkpw.c client.c common.c config.c external.c md5.c saslutil.c server.c seterror.c dlopen.c plugin_common.c
+ 
+ lib_LTLIBRARIES = libsasl2.la
+ 
+@@ -63,11 +60,8 @@
+ libsasl2_la_DEPENDENCIES = $(LTLIBOBJS)
+ libsasl2_la_LIBADD = $(LTLIBOBJS) $(SASL_DL_LIB) $(LIB_SOCKET)
+ 
+-plugin_common.lo: plugin_common.o
+-	ln -s $(top_builddir)/plugins/plugin_common.lo plugin_common.lo
+-
+-plugin_common.o:
+-	ln -s $(top_builddir)/plugins/plugin_common.o plugin_common.o
++plugin_common.c:
++	ln -s $(top_builddir)/plugins/plugin_common.c plugin_common.c
+ 
+ if MACOSX
+ framedir = /Library/Frameworks/SASL2.framework

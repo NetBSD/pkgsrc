@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
+
+--- plugins/gssapi.c.orig	Sun Oct 27 14:18:03 2002
++++ plugins/gssapi.c	Sun Oct 27 14:18:25 2002
+@@ -51,6 +51,11 @@
+ #include <gssapi/gssapi.h>
+ #endif
+ 
++/* Heimdal has this, but MIT Kerberos doesn't */
++#ifndef GSS_C_NO_NAME
++#define GSS_C_NO_NAME  ((gss_name_t) 0)
++#endif
++
+ #ifdef WIN32
+ #  include <winsock.h>
+ 

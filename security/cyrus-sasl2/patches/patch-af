@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2002/10/27 15:09:00 chris Exp $
+
+--- plugins/cram.c.orig	Sun Oct 27 14:17:33 2002
++++ plugins/cram.c	Sun Oct 27 14:17:47 2002
+@@ -235,7 +235,7 @@
+     HMAC_MD5_STATE md5state;
+     int clear_md5state = 0;
+     char *digest_str = NULL;
+-    UINT4 digest[4];
++    uint32_t digest[4];
+     
+     /* extract userid; everything before last space */
+     pos = clientinlen-1;
