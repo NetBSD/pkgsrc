@@ -1,7 +1,16 @@
-$NetBSD: patch-af,v 1.4 2004/11/16 07:46:57 jlam Exp $
+$NetBSD: patch-af,v 1.5 2004/11/19 14:54:55 jlam Exp $
 
 --- libpamc/Makefile.orig	2001-02-10 02:17:53.000000000 -0500
 +++ libpamc/Makefile
+@@ -15,7 +15,7 @@ endif
+ VERSION=.$(MAJOR_REL)
+ MODIFICATION=.$(MINOR_REL)
+ 
+-CFLAGS += $(MOREFLAGS) $(DYNAMIC) $(STATIC)
++CFLAGS += $(MOREFLAGS) $(DYNAMIC) $(STATIC) $(LTCFLAGS)
+ 
+ # dynamic library names
+ 
 @@ -27,6 +27,10 @@ LIBNAMEDFULL = $(LIBNAMEDNAME)$(MODIFICA
  
  LIBNAMEDSTATIC = $(LIBNAME).a
