@@ -1,14 +1,14 @@
-$NetBSD: patch-ae,v 1.4 2002/03/04 19:56:53 magick Exp $
+$NetBSD: patch-ae,v 1.5 2002/11/24 17:23:41 magick Exp $
 
---- epgui/epgmain.c.orig	Sun Feb 17 13:38:00 2002
+--- epgui/epgmain.c.orig	Sun Nov 24 17:35:46 2002
 +++ epgui/epgmain.c
-@@ -111,6 +111,9 @@
+@@ -116,6 +116,9 @@
  static const char * const defaultRcFile = "nxtvepg.ini";
  static const char * const defaultDbDir  = ".";
  #else
 +#ifdef __NetBSD__
 +#include <paths.h>
 +#endif
- static const char * defaultRcFile = "~/.nxtvepgrc";
- static const char * defaultDbDir  = EPG_DB_DIR;
+ static char * defaultRcFile = "~/.nxtvepgrc";
+ static char * defaultDbDir  = NULL;
  #endif
