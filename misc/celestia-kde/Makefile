@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/05/20 00:49:33 jmc Exp $
+# $NetBSD: Makefile,v 1.3 2003/05/22 09:39:08 salo Exp $
 #
 
 .include "../../misc/celestia/Makefile.common"
@@ -11,7 +11,6 @@ DEPENDS=	celestia-${CELESTIA_VERS}:../../misc/celestia
 
 CONFIGURE_ARGS+=	--without-gtk
 CONFIGURE_ARGS+=	--with-kde
-USE_GMAKE=		yes
 
 BUILD_DIRS=	${WRKSRC}/src
 
