@@ -1,4 +1,4 @@
-# $NetBSD: xfree.buildlink2.mk,v 1.1.2.1 2002/08/22 21:24:56 jlam Exp $
+# $NetBSD: xfree.buildlink2.mk,v 1.1.2.2 2002/08/22 21:35:15 jlam Exp $
 
 .if defined(_FOR_X11_LINKS_ONLY)
 .if !defined(X11_LINKS_BUILDLINK_MK)
@@ -531,16 +531,16 @@ BUILDLINK_FILES.XFree+=	lib/libxkbui.a
 BUILDLINK_TARGETS+=	XFree-buildlink
 
 _REQUIRE_BUILTIN_MESALIB=	YES
-.include "../../graphics/MesaLib/buildlink.mk"
+.include "../../graphics/MesaLib/buildlink2.mk"
 
 _REQUIRE_BUILTIN_GLU=		YES
-.include "../../graphics/glu/buildlink.mk"
+.include "../../graphics/glu/buildlink2.mk"
 
 _REQUIRE_BUILTIN_FREETYPE2=	YES
-.include "../../graphics/freetype2/buildlink.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
 
 _REQUIRE_BUILTIN_XPM=		YES
-.include "../../graphics/xpm/buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 
 XFree-buildlink: _BUILDLINK_USE
 
