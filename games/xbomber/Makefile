@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/07/24 10:36:09 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/07/24 11:54:56 frueauf Exp $
 #
 
 DISTNAME=	xbomber.0.8
@@ -14,5 +14,9 @@ USE_X11=	yes
 
 post-patch:
 	@${MV} ${WRKSRC}/makefile ${WRKSRC}/Makefile
+
+pre-install:
+	${MKDIR} ${PREFIX}/share/doc/xbomber
+	${CP} ${WRKSRC}/README.txt ${PREFIX}/share/doc/xbomber
 
 .include "../../mk/bsd.pkg.mk"
