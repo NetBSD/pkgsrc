@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.9 2001/12/17 22:11:46 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/06/26 15:42:55 dmcmahill Exp $
 #
 
 DISTNAME=		cvsweb-1.112
@@ -17,6 +17,10 @@ PKG_SYSCONFSUBDIR?=	httpd
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=	${EGDIR}/cvsweb.conf.default ${PKG_SYSCONFDIR}/cvsweb.conf
+
+.if !exists(/usr/bin/rlog)
+DEPENDS+=	rcs-[0-9]*:../../devel/rcs
+.endif
 
 do-build:
 	${MV} ${WRKSRC}/cvsweb.cgi ${WRKSRC}/cvsweb.cgi.bak
