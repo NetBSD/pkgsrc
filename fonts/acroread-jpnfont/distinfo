@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:14:14 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 21:20:31 wiz Exp $
 
-MD5 (jpnfont.tar.gz) = 1fd03daeea66705b5399f1d0162d3acf
+SHA1 (jpnfont.tar.gz) = c15c36f81dc1907b7a993eba72fc2eaf9bc976f2
+Size (jpnfont.tar.gz) = 6550221 bytes
