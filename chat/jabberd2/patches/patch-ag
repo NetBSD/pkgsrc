@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/03/28 19:44:12 xtraeme Exp $
+$NetBSD: patch-ag,v 1.2 2004/07/14 00:25:11 xtraeme Exp $
 
---- etc/c2s.xml.in.orig	2003-11-05 01:21:31.000000000 +0100
-+++ etc/c2s.xml.in	2003-11-05 01:23:03.000000000 +0100
+--- etc/c2s.xml.in.orig	2004-07-13 18:56:31.000000000 +0200
++++ etc/c2s.xml.in	2004-07-13 18:58:39.000000000 +0200
 @@ -6,7 +6,7 @@
    <!-- The process ID file. comment this out if you don't need to know
         to know the process ID from outside the process (eg for control
@@ -37,8 +37,8 @@ $NetBSD: patch-ag,v 1.1.1.1 2004/03/28 19:44:12 xtraeme Exp $
 +    <pemfile>@SSLCERTS@/server.pem</pemfile>
      -->
  
-     <!-- Older versions of jabberd support encrypted client connections
-@@ -282,7 +282,7 @@
+     <!-- Require STARTTLS. If this is enabled, clients must do STARTTLS
+@@ -289,7 +289,7 @@
      <!-- Berkeley DB module configuration -->
      <db>
        <!-- Directory to store database files under -->
@@ -47,7 +47,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2004/03/28 19:44:12 xtraeme Exp $
        
        <!-- Synchronize the database to disk after each write. If you
             disable this, database accesses may be faster, but data may
-@@ -316,7 +316,7 @@
+@@ -342,7 +342,7 @@
      <!-- Pipe module configuration -->
      <pipe>
        <!-- Program to execute -->
