@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8251 2004/12/04 17:36:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.8252 2004/12/04 20:30:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5755,3 +5755,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnucash to 1.8.9nb5 [wiz 2004-12-04]
 	Added ruby-DBD-sqlite-0.0.21 [taya 2004-12-04]
 	Updated drivel to 1.2.3 [jmmv 2004-12-04]
+	Added libmusepack-1.0.3 [wiz 2004-12-04]
