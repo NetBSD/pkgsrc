@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2002/04/20 08:20:16 rh Exp $
+# $NetBSD: Makefile,v 1.28 2002/07/29 09:16:37 junyoung Exp $
 
-DISTNAME=		Wine-20020411
+DISTNAME=		Wine-20020710
 PKGNAME=		${DISTNAME:S/W/w/}
 WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		emulators
