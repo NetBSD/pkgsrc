@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/15 12:15:01 itojun Exp $
+
+--- fea/fticonfig_table_parse_rtm.cc-	2003-07-15 20:55:57.000000000 +0900
++++ fea/fticonfig_table_parse_rtm.cc	2003-07-15 20:56:22.000000000 +0900
+@@ -67,8 +67,14 @@
+ 	    continue;
+ 	if (! (rtm->rtm_flags & RTF_UP))
+ 	    continue;
++#ifdef RTF_WASCLONED
+ 	if (rtm->rtm_flags & RTF_WASCLONED)
+ 	    continue;		// XXX: ignore cloned entries
++#endif
++#ifdef RTF_CLONED
++	if (rtm->rtm_flags & RTF_CLONED)
++	    continue;		// XXX: ignore cloned entries
++#endif
+ #ifdef RTF_MULTICAST
+ 	if (rtm->rtm_flags & RTF_MULTICAST)
+ 	    continue;		// XXX: ignore multicast entries
