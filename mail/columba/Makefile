@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/08 15:04:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/09 17:09:58 jmmv Exp $
 #
 
 DISTNAME=	columba-unix-1.0_M2-bin
@@ -11,18 +11,16 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://columba.sourceforge.net/
 COMMENT=	Graphical Email Client written in JAVA (TM)
 
-USE_BUILDLINK2=	yes
-NO_BUILD=	yes
-USE_JAVA2=	yes
-PKG_JVMS_ACCEPTED=  sun-jdk13 sun-jdk14 jdk13
+NO_BUILD=		yes
+USE_BUILDLINK2=		yes
+USE_JAVA2=		yes
+PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk13
 
-COLUMBA_BIN=	    ${PREFIX}/share/${PKGBASE}/columba.jar
-
-SUBST_CLASSES=	    foo
-SUBST_STAGE.foo=    post-patch
-SUBST_FILES.foo=    run.sh
-SUBST_SED.foo=	    -e "s,columba.jar,${COLUMBA_BIN},"
-SUBST_MESSAGE.foo=  "Fixing columba\'s executable path."
+SUBST_CLASSES=		columba
+SUBST_STAGE.columba=	pre-configure
+SUBST_MESSAGE.columba=	"Fixing path to columba\'s executable."
+SUBST_FILES.columba=	run.sh
+SUBST_SED.columba=	-e 's,columba.jar,${PREFIX}/share/${PKGBASE}/columba.jar,'
 
 INSTALLATION_DIRS=	bin
 
