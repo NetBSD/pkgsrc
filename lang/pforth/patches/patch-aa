@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2001/06/20 06:53:41 jtb Exp $
+$NetBSD: patch-aa,v 1.3 2004/05/20 18:54:23 wiz Exp $
 
---- makefile.orig	Mon Apr  6 17:13:12 1998
+--- makefile.orig	1998-04-06 17:13:12.000000000 +0200
 +++ makefile
-@@ -12,7 +12,7 @@
+@@ -12,7 +12,7 @@ SOURCEDIR = csrc
  OBJECTDIR = objects
  EMBOBJECTDIR = embobjects
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2001/06/20 06:53:41 jtb Exp $
          -fsigned-char \
          -fno-builtin \
          -fno-unroll-loops \
-@@ -26,8 +26,9 @@
+@@ -26,8 +26,9 @@ FULL_WARNINGS =  -O2 \
          -Wmissing-prototypes \
          -Wmissing-declarations
          
@@ -23,12 +23,12 @@ $NetBSD: patch-aa,v 1.2 2001/06/20 06:53:41 jtb Exp $
  
  EMBCCOPTS = -DPF_NO_INIT -DPF_NO_MALLOC -DPF_NO_FILEIO \
      -DPF_NO_CLIB -DPF_STATIC_DIC
-@@ -41,13 +42,13 @@
+@@ -41,13 +42,13 @@ PFTEMP     = ${PFSOURCE:%.c=%.o}
  PFOBJS     = ${PFTEMP:${SOURCEDIR}/%=${OBJECTDIR}/%}
  PFEMBOBJS  = ${PFTEMP:${SOURCEDIR}/%=${EMBOBJECTDIR}/%}
  
 -COMPILE = $(COMPILER) $(CCOPTS) $(CDEFS)
-+COMPILE = $(CC) $(CPPFLAGS) $(CFLAGS) $(CDEFS)
++COMPILE = $(CXX) $(CPPFLAGS) $(CFLAGS) $(CDEFS)
  
  ${OBJECTDIR}/%.o:  $(PFINCLUDES)  ${SOURCEDIR}/%.c
 -	$(COMPILE) -O -o ${OBJECTDIR}/$*.o -c ${SOURCEDIR}/$*.c
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.2 2001/06/20 06:53:41 jtb Exp $
  
  all: pforth pforth.dic
  
-@@ -62,26 +63,26 @@
+@@ -62,26 +63,26 @@ pffiles:
  	echo ${PFOBJS}
  	echo "EMBEDDED OBJECT FILES ------------------"
  	echo ${PFEMBOBJS}
@@ -50,7 +50,7 @@ $NetBSD: patch-aa,v 1.2 2001/06/20 06:53:41 jtb Exp $
  # build pforth by compiling 'C' source
  pforth: $(PFINCLUDES) $(PFOBJS)
 -	$(COMPILER) $(PFOBJS) -lm -o pforth
-+	$(CC) $(PFOBJS) -lm -o pforth
++	$(CXX) $(PFOBJS) -lm -o pforth
  
  # build basic dictionary by running newly built pforth and including system.fth
  pforth.dic: pforth
@@ -69,7 +69,7 @@ $NetBSD: patch-aa,v 1.2 2001/06/20 06:53:41 jtb Exp $
  pfemb: $(PFINCLUDES) $(PFEMBOBJS)
 -	$(COMPILER) $(PFEMBOBJS) -lm -o pfemb
 -	
-+	$(CC) $(PFEMBOBJS) -lm -o pfemb
++	$(CXX) $(PFEMBOBJS) -lm -o pfemb
 +
  clean:
  	rm -f $(PFOBJS) $(PFEMBOBJS) pforth *.dic core ${SOURCEDIR}/pfdicdat.h pfemb
