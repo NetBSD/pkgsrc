@@ -99,7 +99,7 @@
   install:	sam
 ! 	$(INSTALL) -c sam $(SAMDIR)/$(RSAMNAME)
 ! 	$(INSTALL) -c samsave $(SAMSAVEDIR)/samsave
-! 	$(INSTALL) -c B.rc $(SAMDIR)/B
+! 	$(INSTALL) -c B.sh $(SAMDIR)/B
 ! 	chmod +x $(SAMSAVEDIR)/samsave
   
   $(OBJ):	sam.h ../include/u.h ../include/libc.h errors.h mesg.h
