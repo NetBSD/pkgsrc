@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2004/04/22 05:57:29 minskim Exp $
+# $NetBSD: Makefile,v 1.98 2004/05/03 06:46:01 adam Exp $
 #
 
 DISTNAME=	gimp-2.0.1
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME_NOREV}
+CONFIGURE_ARGS+=	--with-gimpprint-prefix=${BUILDLINK_PREFIX.gimp-print-lib}
 
 EGDIR=			${PREFIX}/share/examples/gimp-2.0
 .for f in gimprc gtkrc ps-menurc sessionrc templaterc unionrc
