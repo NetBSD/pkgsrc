@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2004/12/28 01:56:41 reed Exp $
+# $NetBSD: Makefile,v 1.84 2005/01/01 03:31:38 minskim Exp $
 
 .include "Makefile.common"
 
@@ -10,6 +10,7 @@ COMMENT=	Open Source cross-platform word processor
 CONFLICTS=	abiword-personal-[0-9]* abiword2-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/abi
+USE_PERL5=	run
 
 REPLACE_PERL=	user/wp/scripts/abw2html.pl
 
