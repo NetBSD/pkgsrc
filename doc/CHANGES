@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3189 2003/09/01 16:02:22 wiz Exp $
+$NetBSD: CHANGES,v 1.3190 2003/09/01 16:27:07 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3447,3 +3447,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated apel to 10.6 [minoura 2003-09-01]
 	Updated libnbcompat to 20020823 [jlam 2003-09-01]
 	Updated grhino to 0.8.3 [wiz 2003-09-01]
+	Updated pkg_install to 20020823 [jlam 2003-09-01]
