@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5504 2004/04/10 12:29:29 salo Exp $
+$NetBSD: CHANGES,v 1.5505 2004/04/10 12:48:52 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1876,3 +1876,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mplayer to 1.0rc3nb5 [salo 2004-04-10]
 	Updated gmplayer to 1.0rc3nb5 [salo 2004-04-10]
 	Updated mencoder to 1.0rc3nb5 [salo 2004-04-10]
+	Added mkvtoolnix-0.8.6 [salo 2004-04-10]
