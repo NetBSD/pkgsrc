@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5862 2004/05/07 20:42:53 kleink Exp $
+$NetBSD: CHANGES,v 1.5863 2004/05/08 00:27:16 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2405,4 +2405,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated exim-html to 4.30 [abs 2004-05-07]
 	Deleted exim-user [abs 2004-05-07]
 	Updated jwhois to 3.2.2nb4 [kleink 2004-05-07]
-
+	Updated gdm to 2.6.0.2 [xtraeme 2004-05-08]
