@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1864 2003/04/07 17:41:29 tron Exp $
+$NetBSD: CHANGES,v 1.1865 2003/04/07 18:11:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1484,3 +1484,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated samba to 2.2.8a [cjep 2003-04-07]
 	Updated xemacs-current to 21.5.11 [magick 2003-04-07]
 	Updated dialog to 0.6znb1 [jdc 2003-04-07]
+	Updated ja-samba to 2.2.7.1.1.1nb1 [taca 2003-04-07]
