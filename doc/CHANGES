@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9417 2005/03/04 15:31:45 uebayasi Exp $
+$NetBSD: CHANGES,v 1.9418 2005/03/04 15:32:35 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1270,3 +1270,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ROMInfo-2.3 [wiz 2005-03-04]
 	Added ZIPIdent-2.4 [wiz 2005-03-04]
 	Updated p5-Curses to 1.08b [wiz 2005-03-04]
+	Updated mew to 4.2 [uebayasi 2005-03-04]
