@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/23 03:33:26 schmonz Exp $
+bin/xanalyser
+man/man1/xanalyser.1

@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/04/23 03:33:26 schmonz Exp $
+
+--- src/DSP.cc.orig	Sat Dec  1 20:05:15 2001
++++ src/DSP.cc
+@@ -10,12 +10,12 @@
+ #include <stdlib.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+-#include <sys/soundcard.h>
++#include <soundcard.h>
+ #include <math.h>
+ #include <errno.h>
+ #include <string.h>
+-#include <values.h>
+-#include <byteswap.h>
++#include <limits.h>
++#include <machine/byte_swap.h>
+ 
+ #include "DSP.h"
+ 
+@@ -168,7 +168,7 @@
+     int n = count / 2;
+ 
+     for (int i = n; i != 0; i--) {
+-	*tmp_buffer = bswap_16 (*tmp_buffer);
++	*tmp_buffer = bswap16 (*tmp_buffer);
+ 	tmp_buffer++;
+     }
+ }

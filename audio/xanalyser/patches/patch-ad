@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/04/23 03:33:27 schmonz Exp $
+
+--- src/Makefile.in.orig	Wed Jan 23 14:49:25 2002
++++ src/Makefile.in
+@@ -73,7 +73,7 @@
+ xanalyser_SOURCES =  	Analyser.cc Analyser.h			DSP.cc DSP.h				Sample.cc Sample.h			Scope.cc Scope.h			XAnalyser.ad.h				control.cc control.h			fft.cc fft.h				help.cc help.h help.txt.h		main.cc main.h				utils.cc utils.h			Trans.h
+ 
+ 
+-xanalyser_LDADD = -lXext -lXm -lXt -lSM -lICE -lXmu -lXpm -lX11 # -ldfftw -ldrfftw
++xanalyser_LDADD = -lXext -lXm -lXt -lSM -lICE -lXmu -lXpm -lX11 -lossaudio# -ldfftw -ldrfftw
+ 
+ EXTRA_DIST = XAnalyser.ad help.txt *.xpm
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -302,8 +302,8 @@
+ 
+ main.cc: XAnalyser.ad.h
+ 
+-XAnalyser.ad.h: XAnalyser.ad
+-	ad2c XAnalyser.ad > XAnalyser.ad.h
++#XAnalyser.ad.h: XAnalyser.ad
++#	ad2c XAnalyser.ad > XAnalyser.ad.h
+ 
+ help.cc: help.txt.h
+ 
