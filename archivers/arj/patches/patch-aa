@@ -1,9 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2004/07/27 13:03:39 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2005/03/22 16:24:13 minskim Exp $
 
---- environ.c.orig	2004-06-18 18:19:36.000000000 +0200
+--- environ.c.orig	Fri Jun 18 11:19:36 2004
 +++ environ.c
-@@ -61,7 +61,7 @@
-  #elif defined(__FreeBSD__)||defined(__NetBSD__)
+@@ -58,10 +58,10 @@
+   #include <sys/ioctl.h>
+   #include <sys/statfs.h>
+   #include <sys/statvfs.h>
+- #elif defined(__FreeBSD__)||defined(__NetBSD__)
++ #elif defined(__FreeBSD__)||defined(__NetBSD__)||defined(__APPLE__)
    #include <sys/param.h>
    #include <sys/mount.h>
 - #elif defined(__QNXNTO__)
