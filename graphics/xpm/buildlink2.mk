@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/10/27 18:00:07 bouyer Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/11/15 11:32:38 jlam Exp $
 
 .if !defined(XPM_BUILDLINK2_MK)
 XPM_BUILDLINK2_MK=	# defined
@@ -13,12 +13,12 @@ BUILDLINK_PKGSRCDIR.xpm?=	../../graphics/xpm
 #
 _REQUIRE_BUILTIN_XPM?=	NO
 .if (${OPSYS} != SunOS) || (${X11BASE} != "/usr/openwin")
-.if exists(${X11BASE}/include/X11/xpm.h) && \
-    exists(${X11BASE}/lib/X11/config/X11.tmpl)
+.  if exists(${X11BASE}/include/X11/xpm.h) && \
+      exists(${X11BASE}/lib/X11/config/X11.tmpl)
 _IS_BUILTIN_XPM!=	${EGREP} -c NormalLibXpm ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
-.else
+.  else
 _IS_BUILTIN_XPM=	0
-.endif
+.  endif
 .else
 _IS_BUILTIN_XPM!=	(/usr/sbin/pkgchk -l SUNWxwinc | ${EGREP} -c xpm.h) || ${TRUE}
 .endif
