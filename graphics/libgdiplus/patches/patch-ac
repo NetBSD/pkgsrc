@@ -1,0 +1,34 @@
+$NetBSD: patch-ac,v 1.1 2004/06/26 20:19:42 recht Exp $
+
+--- configure.in.orig	2004-06-26 19:11:38.000000000 +0200
++++ configure.in	2004-06-26 19:13:36.000000000 +0200
+@@ -6,24 +6,25 @@
+ AM_MAINTAINER_MODE
+ AM_PROG_LIBTOOL
+ 
++AC_PATH_PROG(FREETYPE_CONFIG, freetype-config, no)
+ AC_PATH_PROG(PKG_CONFIG, pkg-config, no)
+ if test "x$PKG_CONFIG" = "xno"; then
+ 	AC_MSG_ERROR([You need to install pkg-config])
+ fi
+-if pkg-config --atleast-version 2.2.3 glib-2.0; then
++if $PKG_CONFIG --atleast-version 2.2.3 glib-2.0; then
+ 	echo GLIB 2.0 installation OK
+ else
+ 	AC_MSG_ERROR("Did not find Glib >= 2.2.3");
+ fi
+ 
+-if pkg-config --atleast-version 0.1.22 cairo; then
++if $PKG_CONFIG --atleast-version 0.1.22 cairo; then
+ 	echo Cairo installation OK
+ else
+ 	AC_MSG_ERROR("Did not find Cairo 0.1.22");
+ fi
+ 
+-GDIPLUS_LIBS="`pkg-config --libs cairo glib-2.0 ` `freetype-config --libs`"
+-GDIPLUS_CFLAGS="`pkg-config --cflags cairo glib-2.0 ` `freetype-config --cflags`"
++GDIPLUS_LIBS="`$PKG_CONFIG --libs cairo glib-2.0 ` `$FREETYPE_CONFIG --libs`"
++GDIPLUS_CFLAGS="`$PKG_CONFIG --cflags cairo glib-2.0 ` `$FREETYPE_CONFIG --cflags`"
+ AC_CHECK_HEADERS(byteswap.h)
+ 
+ # sigsetjmp is a macro on some platforms, so can't use AC_CHECK_FUNCS
