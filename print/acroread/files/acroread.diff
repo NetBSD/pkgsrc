@@ -5,7 +5,7 @@
      export ACRO_CONFIG
      ;;
 -  Linux)
-+  FreeBSD|Linux)
++  *BSD|Linux)
      ACRO_CONFIG=intellinux
      export ACRO_CONFIG
      ;;
