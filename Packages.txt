@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.213 2001/11/25 19:10:27 jlam Exp $
+# $NetBSD: Packages.txt,v 1.214 2001/11/26 22:06:58 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -2138,12 +2138,32 @@ commit of that file, it should be copied to
  10.22 What's the proper way to create an account from a package?
  ================================================================
 
-Define PKG_USER and PKG_GROUP to the user and group, and optionally
-PKG_USERID and PKG_GROUPID to the userid and groupid, that need to be created
-for the package, and include "../../mk/bsd.pkg.install.mk" in the package
-Makefile prior to the inclusion of bsd.pkg.mk.  This will cause the user
-and group to be created at pre-install time, and the admin will be prompted
-to remove them at post-deinstall time.
+There are two make variables used to control the creation of package-specific
+groups and users at pre-install time.  The first is PKG_GROUPS, which is a
+list of group[:groupid] elements, where the groupid is optional.  The second
+is PKG_USERS, which is a list of elements of the form:
+
+	user:group[:[userid][:[description][:[home][:shell]]]]
+
+where only the user and group are required, the rest being optional.  A
+simple example is:
+
+	PKG_GROUPS=	foogroup
+	PKG_USERS=	foouser:foogroup
+
+A more complex example is that creates two groups and two users is:
+
+	PKG_GROUPS=	group1 group2:1005
+	PKG_USERS=	first:group1::First\\ User			\
+			second:group2::Second\\ User:/home/second:${SH}
+
+By default, a new user will have home directory /nonexistent, and login shell
+/sbin/nologin unless they are specified as part of the user element.
+
+The package Makefile must also include "../../mk/bsd.pkg.install.mk" prior to
+the inclusion of bsd.pkg.mk.  This will cause the users and groups to be
+created at pre-install time, and the admin will be prompted to remove them at
+post-deinstall time.
 
 
  11 Submitting & Committing
