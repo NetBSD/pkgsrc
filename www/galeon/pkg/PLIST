@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2001/10/06 16:48:25 taya Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/10/11 16:21:31 abs Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
@@ -315,11 +315,12 @@ share/sounds/galeon/clicked.wav
 @exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults %D/bin/gconftool --makefile-install-rule %D/etc/gconf/schemas/galeon.schemas
 @dirrm share/sounds/galeon
 @dirrm share/sounds
-@exec /bin/mkdir -p /usr/X11R6/share/omf/galeon
+@exec /bin/mkdir -p %D/share/omf/galeon
+@unexec rm -f %D/share/omf/galeon/galeon-manual-C.omf
 @dirrm share/omf/galeon
-@exec /bin/mkdir -p /usr/X11R6/share/gnome/help/galeon-manual/C/stylesheet-images
+@exec /bin/mkdir -p %D/share/gnome/help/galeon-manual/C/stylesheet-images
 @dirrm share/gnome/help/galeon-manual/C/stylesheet-images
-@exec /bin/mkdir -p /usr/X11R6/share/gnome/help/galeon-manual/C/figures
+@exec /bin/mkdir -p %D/share/gnome/help/galeon-manual/C/figures
 @dirrm share/gnome/help/galeon-manual/C/figures
 @dirrm share/gnome/help/galeon-manual/C
 @dirrm share/gnome/help/galeon-manual
