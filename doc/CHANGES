@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9514 2005/03/19 15:33:28 jmmv Exp $
+$NetBSD: CHANGES,v 1.9515 2005/03/19 16:28:57 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1416,3 +1416,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated nrg2iso to 0.4 [wiz 2005-03-19]
 	Updated ratpoison to 1.3.0 [wiz 2005-03-19]
 	Updated irssi to 0.8.9nb3 [jmmv 2005-03-19]
+	Updated fltk to 1.1.6nb1 [ben 2005-03-19]
