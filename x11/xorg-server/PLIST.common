@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.8 2005/03/01 19:00:11 xtraeme Exp $
+@comment $NetBSD: PLIST.common,v 1.9 2005/03/02 02:12:55 hira Exp $
 ${X11ROOT_PREFIX}/bin/X
 ${X11ROOT_PREFIX}/bin/XFree86
 ${X11ROOT_PREFIX}/bin/Xnest
@@ -1051,6 +1051,7 @@ ${CARDDRIVER.rendition}${X11ROOT_PREFIX}/lib/modules/v10002d.uc
 ${CARDDRIVER.rendition}${X11ROOT_PREFIX}/lib/modules/v20002d.uc
 ${X11ROOT_PREFIX}/${MAN_DIR}/Xnest.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/Xorg.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/Xprt.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/Xserver.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/Xvfb.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/getconfig.${MAN_SUFFIX}
