@@ -1,13 +1,26 @@
-#	$NetBSD: bsd.own.mk,v 1.11 1999/02/10 21:35:36 hubertf Exp $
+#	$NetBSD: bsd.own.mk,v 1.12 1999/03/08 17:26:54 agc Exp $
 # From:  NetBSD: bsd.own.mk,v 1.113 1999/02/07 17:21:09 hubertf Exp 
 
-.if !defined(_BSD_OWN_MK_)
-_BSD_OWN_MK_=1
+.if !defined(_PKGSRC_BSD_OWN_MK_)
+_PKGSRC_BSD_OWN_MK_=1
 
 .if defined(MAKECONF) && exists(${MAKECONF})
 .include "${MAKECONF}"
 .elif exists(/etc/mk.conf)
 .include "/etc/mk.conf"
+.endif
+
+# set the default local base.
+LOCALBASE?=	/usr/pkg
+
+.if ${OS} == "SunOS.5"
+BSDDIR=${LOCALBASE}/bsd
+.if exists(${BSDDIR}/lib/libbsdcompat.so.1.0)
+LDADD+=-L${BSDDIR}/lib -R${BSDDIR}/lib -lbsdcompat -lposix4 -lsocket -lnsl
+.else
+LDADD+=-L${BSDDIR}/lib -R${BSDDIR}/lib -lposix4 -lsocket -lnsl
+.endif
+BINDIR=${BSDDIR}/bin
 .endif
 
 # Defining `SKEY' causes support for S/key authentication to be compiled in.
@@ -24,7 +37,15 @@ SKEY=		yes
 BSDSRCDIR?=	/usr/src
 BSDOBJDIR?=	/usr/obj
 
-BINGRP?=	wheel
+.if ${OS} == "SunOS.5"
+WHEEL?=		sys
+_OWN_PREFIX?=	${BSDDIR}
+.else
+WHEEL?=		wheel
+_OWN_PREFIX?=	/usr
+.endif
+
+BINGRP?=	${WHEEL}
 BINOWN?=	root
 BINMODE?=	555
 NONBINMODE?=	444
@@ -32,32 +53,38 @@ NONBINMODE?=	444
 # Define MANZ to have the man pages compressed (gzip)
 #MANZ=		1
 
+.if ${OS} == "SunOS.5"
+MANDIR?=	${BSDDIR}/man
+.else
 MANDIR?=	/usr/share/man
-MANGRP?=	wheel
+.endif
+MANGRP?=	${WHEEL}
 MANOWN?=	root
 MANMODE?=	${NONBINMODE}
 MANINSTALL?=	maninstall catinstall
 
-LIBDIR?=	/usr/lib
-LINTLIBDIR?=	/usr/libdata/lint
+LIBDIR?=	${_OWN_PREFIX}/lib
+LINTLIBDIR?=	${_OWN_PREFIX}/libdata/lint
 LIBGRP?=	${BINGRP}
 LIBOWN?=	${BINOWN}
 LIBMODE?=	${NONBINMODE}
 
-DOCDIR?=        /usr/share/doc
-DOCGRP?=	wheel
+DOCDIR?=        ${_OWN_PREFIX}/share/doc
+DOCGRP?=	${WHEEL}
 DOCOWN?=	root
 DOCMODE?=       ${NONBINMODE}
 
-NLSDIR?=	/usr/share/nls
-NLSGRP?=	wheel
+NLSDIR?=	${_OWN_PREFIX}/share/nls
+NLSGRP?=	${WHEEL}
 NLSOWN?=	root
 NLSMODE?=	${NONBINMODE}
 
-KMODDIR?=	/usr/lkm
-KMODGRP?=	wheel
+KMODDIR?=	${_OWN_PREFIX}/lkm
+KMODGRP?=	${WHEEL}
 KMODOWN?=	root
 KMODMODE?=	${NONBINMODE}
+
+TMACDIR?=	${_OWN_PREFIX}/share/tmac
 
 COPY?=		-c
 .if defined(UPDATE)
@@ -76,10 +103,14 @@ STRIPFLAG?=	-s
 # XXX The next two are temporary until the transition to UVM is complete.
 
 
+.if ${OS} == "SunOS.5"
+OBJECT_FMT?=	ELF
+SHLIB_TYPE?=    ${OBJECT_FMT}
+.else
 # The NETBSD_CURRENT checks are to make sure that UVM is defined only
 # if the user is running a NetBSD-current, as well as the right platform
-# I'm told that 1.3C was the first version with UVM	XXX - agc
 # It's also used to find out about SHLIB_TYPE.
+# I'm told that 1.3C was the first version with UVM	XXX - agc
 NETBSD_CURRENT!= /usr/bin/uname -r | /usr/bin/sed -e 's|^1\.3[C-Z]$$|yes|'
 
 .if !defined(UVM)
@@ -145,9 +176,9 @@ OBJECT_FMT?=a.out
 SHLIB_TYPE?=    "" 
 .else   
 SHLIB_TYPE?=    ${OBJECT_FMT}
-.endif  
-
-.endif # NetBSD-current
+.endif  # vax || powerpc
+.endif	# !NetBSD-current
+.endif	# NetBSD
 
 
 # GNU sources and packages sometimes see architecture names differently.
@@ -191,7 +222,7 @@ beforeinstall:	.NOTMAIN
 subdir-install:	.NOTMAIN beforeinstall
 realinstall:	.NOTMAIN beforeinstall
 afterinstall:	.NOTMAIN subdir-install realinstall
-.endif
-.endif
+.endif #! install target
+.endif #! NEED_OWN_INSTALL_TARGET
 
-.endif		# _BSD_OWN_MK_
+.endif		# _PKGSRC_BSD_OWN_MK_
