@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2002/08/26 19:38:05 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/09/29 06:32:02 jlam Exp $
 
 DISTNAME=	aalib-${DIST_VERS}
 CATEGORIES+=	graphics
@@ -20,10 +20,7 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .if (${MACHINE_ARCH} == arm32)
-GCC_VERSION!=		gcc --version
-.  if (${GCC_VERSION:C/-.*$$//} == egcs)
-.    include "../../lang/gcc/Makefile.gcc"
-.  endif
+.  include "../../lang/gcc/buildlink2.mk"
 .endif
 
 .include "../../mk/texinfo.mk"
