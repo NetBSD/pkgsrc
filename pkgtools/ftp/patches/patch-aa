@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1 1998/09/30 10:27:53 hubertf Exp $
+
+--- util.c.orig	Sat Aug  8 13:18:50 1998
++++ util.c	Wed Sep 30 09:05:46 1998
+@@ -912,10 +912,16 @@
+ 		HistEvent ev;
+ 		int editmode;
+ 
++#ifdef EL_EDITMODE /* hack */
+ 		el = el_init(__progname, stdin, ttyout, stderr);
++#else
++		el = el_init(__progname, stdin, ttyout);
++#endif /* EL_EDITMODE */
+ 		/* init editline */
+ 		hist = history_init();		/* init the builtin history */
++#ifdef H_SETSIZE
+ 		history(hist, &ev, H_SETSIZE, 100);/* remember 100 events */
++#endif
+ 		el_set(el, EL_HIST, history, hist);	/* use history */
+ 
+ 		el_set(el, EL_EDITOR, "emacs");	/* default editor is emacs */
+@@ -927,12 +933,20 @@
+ 		    complete);
+ 		el_set(el, EL_BIND, "^I", "ftp-complete", NULL);
+ 		el_source(el, NULL);	/* read ~/.editrc */
++#ifdef EL_EDITMODE
+ 		if ((el_get(el, EL_EDITMODE, &editmode) != -1) && editmode == 0)
+ 			editing = 0;	/* the user doesn't want editing,
+ 					 * so disable, and let statement
+ 					 * below cleanup */
+ 		else
+ 			el_set(el, EL_SIGNAL, 1);
++#else
++		if (editmode == 0) {
++			editing = 0;
++		} else {
++			el_set(el, EL_SIGNAL, 1);
++		}
++#endif
+ 	}
+ 	if (!editing) {
+ 		if (hist) {
