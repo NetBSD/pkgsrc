@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2004/10/15 12:41:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.38 2004/12/24 10:09:31 jmmv Exp $
 #
 
-DISTNAME=	metacity-2.8.6
+DISTNAME=	metacity-2.8.8
 CATEGORIES=	wm x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/metacity/2.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,7 @@ COMMENT=	GNOME-compliant window manager
 BUILD_USES_MSGFMT=	YES
 
 USE_BUILDLINK3=		YES
-USE_DIRS+=		gnome2-1.5
+USE_DIRS+=		gnome2-1.5 theme-1.0
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
