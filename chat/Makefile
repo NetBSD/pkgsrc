@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/05/03 15:50:31 zuntum Exp $
+# $NetBSD: Makefile,v 1.36 2002/05/31 10:21:14 uebayasi Exp $
 #
 
 COMMENT=	communication programs
@@ -31,6 +31,7 @@ SUBDIR+=	kxicq
 SUBDIR+=	kyahoo
 SUBDIR+=	libirc
 SUBDIR+=	libyahoo
+SUBDIR+=	lmme
 SUBDIR+=	micq
 SUBDIR+=	naim
 SUBDIR+=	p5-Net-AIM
