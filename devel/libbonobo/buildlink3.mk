@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/04/01 18:18:00 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/04/13 21:29:27 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBBONOBO_BUILDLINK3_MK:=	${LIBBONOBO_BUILDLINK3_MK}+
@@ -16,6 +16,9 @@ BUILDLINK_PKGSRCDIR.libbonobo?=	../../devel/libbonobo
 
 BUILDLINK_FILES.libbonobo+=	share/idl/bonobo-2.0/*
 BUILDLINK_FILES.libbonobo+=	share/idl/bonobo-activation-2.0/*
+
+PRINT_PLIST_AWK+=	/^@dirrm lib\/bonobo\/(monikers|servers)$$/ \
+				{ print "@comment in libbonobo: " $$0; next; }
 .endif	# LIBBONOBO_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
