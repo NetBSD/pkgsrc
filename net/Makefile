@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.474 2004/06/05 07:47:38 hamajima Exp $
+# $NetBSD: Makefile,v 1.475 2004/06/05 19:04:42 nathanw Exp $
 #
 
 COMMENT=	Networking tools
@@ -114,6 +114,7 @@ SUBDIR+=	gtm
 SUBDIR+=	hesiod
 SUBDIR+=	hf6to4
 SUBDIR+=	host
+SUBDIR+=	howl
 SUBDIR+=	hping
 SUBDIR+=	httptunnel
 SUBDIR+=	icsi-finger
