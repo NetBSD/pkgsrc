@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/03/08 21:30:07 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/08/04 18:49:28 martin Exp $
 bin/gnuattach
 bin/gnuclient
 bin/gnudoit
@@ -1030,6 +1030,7 @@ lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/gzip-el.sh
 lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/add-big-package.sh
 lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/DOC
 lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}/config.values
+lib/xemacs
 man/man1/gnuattach.1
 man/man1/gnuclient.1
 man/man1/gnudoit.1
@@ -1143,6 +1144,5 @@ man/man1/xemacs-etags.1
 @dirrm lib/${PKGNAME}/etc
 @dirrm lib/${PKGNAME}/${MACHINE_GNU_PLATFORM}
 @dirrm lib/${PKGNAME}
-@dirrm lib/xemacs
 @exec mkdir -p /var/tmp/xemacs.lock && chmod 1777 /var/tmp/xemacs.lock
 @unexec rm -rf /var/tmp/xemacs.lock
