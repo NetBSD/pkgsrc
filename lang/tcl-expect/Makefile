@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2004/10/03 00:15:03 tv Exp $
+# $NetBSD: Makefile,v 1.18 2004/10/30 05:21:42 minskim Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=	tcl-expect-${EXPECT_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 
 MAINTAINER=	jwise@NetBSD.org
