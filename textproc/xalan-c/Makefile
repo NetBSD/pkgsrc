@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:16:23 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/03 13:15:28 wiz Exp $
 #
 
 DISTNAME=	Xalan-C_1_0-linux
@@ -12,7 +12,7 @@ HOMEPAGE=	http://xml.apache.org/xalan-c/
 COMMENT=	the Apache Project's XSLT implementation
 
 DEPENDS+=	icu>=1.7:../../textproc/icu
-DEPENDS+=	xerces-c-1.3.*:../../textproc/xerces-c
+DEPENDS+=	xerces-c>=1.3.0:../../textproc/xerces-c
 
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
