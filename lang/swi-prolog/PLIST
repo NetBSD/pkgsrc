@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:05 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/03/18 06:16:37 fredb Exp $
 bin/${SWIPL}
 bin/plld
 bin/plrc
 include/SWI-Prolog.h
 include/SWI-Stream.h
-lib/${SWILIBDIR}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}/${SWIPL}
-lib/${SWILIBDIR}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}/plld
-lib/${SWILIBDIR}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}/plrc
+lib/${SWILIBDIR}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/${SWIPL}
+lib/${SWILIBDIR}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/plld
+lib/${SWILIBDIR}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/plrc
 lib/${SWILIBDIR}/bin/swipl
 lib/${SWILIBDIR}/boot/apply.pl
 lib/${SWILIBDIR}/boot/autoload.pl
@@ -67,20 +67,20 @@ lib/${SWILIBDIR}/man/${SWIPL}.1
 lib/${SWILIBDIR}/man/plld.1
 lib/${SWILIBDIR}/man/plrc.1
 lib/${SWILIBDIR}/man/readline.3
-lib/${SWILIBDIR}/runtime/${MACHINE_ARCH}-${LOWER_OPSYS}/libpl.a
+lib/${SWILIBDIR}/runtime/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}/libpl.a
 lib/${SWILIBDIR}/swipl
 man/man1/${SWIPL}.1
 man/man1/plld.1
 man/man1/plrc.1
-@dirrm lib/${SWILIBDIR}/runtime/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/${SWILIBDIR}/runtime/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
 @dirrm lib/${SWILIBDIR}/runtime
 @dirrm lib/${SWILIBDIR}/man
 @dirrm lib/${SWILIBDIR}/library
-@exec ${MKDIR} -p /usr/pkg/lib/${SWILIBDIR}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}
-@dirrm lib/${SWILIBDIR}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}
+@exec ${MKDIR} -p /usr/pkg/lib/${SWILIBDIR}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
+@dirrm lib/${SWILIBDIR}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
 @dirrm lib/${SWILIBDIR}/lib
 @dirrm lib/${SWILIBDIR}/include
 @dirrm lib/${SWILIBDIR}/boot
-@dirrm lib/${SWILIBDIR}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}
+@dirrm lib/${SWILIBDIR}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
 @dirrm lib/${SWILIBDIR}/bin
 @dirrm lib/${SWILIBDIR}
