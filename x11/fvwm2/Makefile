@@ -3,7 +3,7 @@
 # Date created:		20 Jan 1996
 # Whom:			peter
 #
-# $NetBSD: Makefile,v 1.5 1998/01/30 13:57:42 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/03/24 23:18:40 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -19,13 +19,14 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} fvwm-users-jp-kits.97Oct04.tar.gz
 MAINTAINER=	matusita@jp.freebsd.org
 
 LIB_DEPENDS=	Xpm.4.:${PORTSDIR}/graphics/xpm
+RUN_DEPENDS=	xpmroot:${PORTSDIR}/x11/xpmroot
 
 USE_IMAKE=	yes
 CAT1= 		FvwmAudio.0 FvwmAuto.0 FvwmBacker.0 FvwmBanner.0 \
 		FvwmButtons.0 FvwmCascade.0 FvwmCpp.0 FvwmForm.0 \
 		FvwmIconBox.0 FvwmIconMan.0 FvwmIdent.0 FvwmM4.0 FvwmPager.0 \
 		FvwmSave.0 FvwmSaveDesk.0 FvwmScroll.0 FvwmTalk.0 FvwmTile.0 \
-		FvwmWinList.0 fvwm2.0 xpmroot.0
+		FvwmWinList.0 fvwm2.0
 
 # filenames.
 PATCH_FIXIT=	kits/patch/fix-2.0.46
