@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST-md.shared,v 1.1.1.1 1999/12/02 14:31:00 rh Exp $
+lib/perl5/site_perl/i386-netbsd/auto/Digest/MD5/MD5.so
+lib/perl5/site_perl/i386-netbsd/auto/Digest/MD5/MD5.bs
+lib/perl5/site_perl/i386-netbsd/auto/Digest/MD2/MD2.so
+lib/perl5/site_perl/i386-netbsd/auto/Digest/MD2/MD2.bs
+lib/perl5/site_perl/i386-netbsd/auto/Digest/SHA1/SHA1.so
+lib/perl5/site_perl/i386-netbsd/auto/Digest/SHA1/SHA1.bs
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Digest/MD5
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Digest/MD2
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Digest/SHA1
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Digest
