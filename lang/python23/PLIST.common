@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2004/06/02 12:29:28 recht Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2004/11/24 20:45:10 jschauma Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 include/python${PY_VER_SUFFIX}/Python.h
@@ -72,8 +72,8 @@ include/python${PY_VER_SUFFIX}/tupleobject.h
 include/python${PY_VER_SUFFIX}/ucnhash.h
 include/python${PY_VER_SUFFIX}/unicodeobject.h
 include/python${PY_VER_SUFFIX}/weakrefobject.h
-lib/libpython${PY_VER_SUFFIX}.so
-lib/libpython${PY_VER_SUFFIX}.so.1.0
+${NOSHLIB}lib/libpython${PY_VER_SUFFIX}.so
+${NOSHLIB}lib/libpython${PY_VER_SUFFIX}.so.1.0
 lib/python${PY_VER_SUFFIX}/BaseHTTPServer.py
 lib/python${PY_VER_SUFFIX}/BaseHTTPServer.pyc
 lib/python${PY_VER_SUFFIX}/BaseHTTPServer.pyo
@@ -1128,7 +1128,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_weakref.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/array.so
 ${EXTRA_SO}lib/python${PY_VER_SUFFIX}/lib-dynload/audioop.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/binascii.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb185.so
+${BSDDBMODULE}lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb185.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/bz2.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cPickle.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cStringIO.so
@@ -1144,7 +1144,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/itertools.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/math.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/md5.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/mmap.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so
+${NISMODULE}lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/operator.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/parser.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/pcre.so
