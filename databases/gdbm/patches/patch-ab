@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2000/12/11 03:45:18 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2001/01/18 18:05:53 wiz Exp $
 
 --- Makefile.in.orig	Tue May 18 23:16:06 1999
 +++ Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.5 2000/12/11 03:45:18 jlam Exp $
  
  # SunOS 4 users might wish to add '-fpcc-struct-return' to CFLAGS. see INSTALL.
 -CFLAGS = -O
-+CFLAGS += -O
++#CFLAGS =
  LDFLAGS =
  
  # Common prefix for installation directories
