@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:01 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/28 13:44:51 kleink Exp $
 bin/snort
 man/man8/snort.8
 share/doc/snort/AUTHORS
@@ -23,7 +23,9 @@ share/doc/snort/SnortUsersManual.pdf
 share/doc/snort/USAGE
 share/snort/MIBS/SnortCommonMIB.txt
 share/snort/MIBS/SnortIDAlertMIB.txt
+share/snort/attack-responses.rules
 share/snort/backdoor.rules
+share/snort/bad-traffic.rules
 share/snort/classification.config
 share/snort/ddos.rules
 share/snort/dns.rules
@@ -32,11 +34,13 @@ share/snort/exploit.rules
 share/snort/finger.rules
 share/snort/ftp.rules
 share/snort/icmp.rules
+share/snort/icmp-info.rules
 share/snort/info.rules
 share/snort/local.rules
 share/snort/misc.rules
 share/snort/netbios.rules
 share/snort/policy.rules
+share/snort/porn.rules
 share/snort/rpc.rules
 share/snort/rservices.rules
 share/snort/scan.rules
@@ -45,6 +49,9 @@ share/snort/smtp.rules
 share/snort/snort.conf
 share/snort/sql.rules
 share/snort/telnet.rules
+share/snort/tftp.rules
+share/snort/virus.rules
+share/snort/web-attacks.rules
 share/snort/web-cgi.rules
 share/snort/web-coldfusion.rules
 share/snort/web-frontpage.rules
