@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/05/05 16:49:49 salo Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/06/13 03:18:20 itojun Exp $
 bin/editcap
 bin/ethereal
 bin/idl2eth
@@ -21,6 +21,8 @@ lib/ethereal/plugins/${PKGVERSION}/mgcp.la
 lib/ethereal/plugins/${PKGVERSION}/mgcp.so
 lib/ethereal/plugins/${PKGVERSION}/pcli.la
 lib/ethereal/plugins/${PKGVERSION}/pcli.so
+lib/ethereal/plugins/${PKGVERSION}/rtnet.la
+lib/ethereal/plugins/${PKGVERSION}/rtnet.so
 man/man1/editcap.1
 man/man1/ethereal.1
 man/man1/idl2eth.1
