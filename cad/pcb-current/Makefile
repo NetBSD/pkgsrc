@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/10/03 00:13:13 tv Exp $
+# $NetBSD: Makefile,v 1.12 2005/01/28 11:53:50 dmcmahill Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
 PKGNAME=	pcb-current-${SNAPDATE}
-PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcb/}
 
@@ -19,7 +18,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	pcb-[0-9]*
 
-SNAPDATE=	20040903
+SNAPDATE=	20050127
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	lex make
 USE_X11=	yes
