@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/24 15:06:58 grant Exp $
+# $NetBSD: Makefile,v 1.25 2004/04/18 23:13:00 snj Exp $
 
 DISTNAME=	xps-3.14
 CATEGORIES=	sysutils
@@ -8,12 +8,11 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.netwinder.org/~rocky/xps-home/
 COMMENT=	Displays the Unix process list as a hierarchical tree
 
-USE_PERL5=	build
+GNU_CONFIGURE=	# defined
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
+USE_PERL5=	build
 USE_X11BASE=	# defined
 
-USE_BUILDLINK2=	# defined
-GNU_CONFIGURE=	# defined
-
-.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
