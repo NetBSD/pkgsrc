@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/04/02 16:29:22 uebayasi Exp $
+# $NetBSD: Makefile,v 1.9 2002/04/04 16:03:16 uebayasi Exp $
 #
 
 DISTNAME=	Canna35b2
@@ -18,7 +18,8 @@ COMMENT=	Kana-Kanji conversion system (library)
 
 INSTALL_TARGET=	install install.man
 
-USE_IMAKE=	# defined
+# XXX USE_IMAKE can't pass MAKE_FLAGS to XMKMF.
+#USE_IMAKE=	# defined
 BUILD_DEFS+=	USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
@@ -29,7 +30,7 @@ INET6=		# empty
 .endif
 CANNAOWNER?=    daemon
 CANNAGROUP?=    daemon
-DICT_DIR?=	${DISTDIR}/var/dict
+DICT_DIR?=	${DESTDIR}/var/dict
 MAKE_ENV+=      CANNAOWNER=${CANNAOWNER} CANNAGROUP=${CANNAGROUP} \
 		DICT_DIR=${DICT_DIR} INET6=${INET6}
 PLIST_SUBST=	CANNAOWNER=${CANNAOWNER}	\
@@ -37,6 +38,10 @@ PLIST_SUBST=	CANNAOWNER=${CANNAOWNER}	\
 		DICT_DIR=${DICT_DIR}		\
 		PREFIX=${PREFIX}
 
+# (1) Change SUBDIRS.
+# (2) Don't install `forcpp', `kpdic'.
+# (3) Include ${FILESDIR}/LinkFileList.rules just after including Canna.conf
+#     in Imakefiles.
 post-patch:
 	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
 	@${SED}	-e 's|\(SUBDIRS = lib canna\).*\( misc\)|\1 cmd/forcpp cmd/kpdic dic/phono\2|' \
@@ -47,6 +52,19 @@ post-patch:
 	@${SED} -e '/InstallProgram/d' ${WRKSRC}/cmd/${f}/Imakefile.orig \
 		> ${WRKSRC}/cmd/${f}/Imakefile
 .endfor
+	@${FIND} ${WRKSRC} -name Imakefile -print | \
+	while read f; do \
+		${CP} $$f $${f}.orig; \
+		{ \
+			${ECHO} '/#include ".*\/Canna.conf"$$/a\';
+			${ECHO} '#include "${FILESDIR}/LinkFileList.rules"'; \
+		} | ${SED} -f /dev/stdin $${f}.orig >$$f; \
+	done
+
+# We need to pass ${MAKE_ENV} to ${XMKMF}
+do-configure:
+	@cd ${WRKSRC} && \
+	    ${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${MAKE_ENV} ${XMKMF}
 
 post-configure:
 	@${LN} -s ${WRKSRC}/server/*.h ${WRKSRC}/include
