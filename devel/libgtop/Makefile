@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/03/14 23:48:08 tron Exp $
+# $NetBSD: Makefile,v 1.14 1999/03/16 22:11:23 tron Exp $
 #
 
 DISTNAME=	libgtop-1.0.1
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
-DEPENDS+=	gnome-libs-1.0.1:../../x11/gnome-libs
+DEPENDS+=	gnome-libs-1.0.3:../../x11/gnome-libs
 DEPENDS+=	guile-1.3:../../lang/guile
 
 NOT_FOR_ARCHS=	alpha	# problems with gtk
