@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.372 1999/11/23 14:31:24 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.373 1999/11/29 19:48:15 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -173,6 +173,7 @@ PATCH_COOKIE=		${WRKDIR}/.patch_done
 PACKAGE_COOKIE=		${WRKDIR}/.package_done
 
 # Miscellaneous overridable commands:
+SHCOMMENT?=		${ECHO_MSG} >/dev/null '***'
 XMKMF?=			xmkmf -a
 .if exists(/sbin/md5)
 MD5?=			/sbin/md5
@@ -393,13 +394,44 @@ REQ_FILE=		${PKGDIR}/REQ
 MESSAGE_FILE=		${PKGDIR}/MESSAGE
 .endif
 
+# Latest version of pkgtools required for this file.
+# XXX See below for a few test on PKGTOOLS_REQD > 19990909
+#     that can be removed when this is bumped. (size code - HF)
+PKGTOOLS_REQD=		19990909
+
+# Check that we're using up-to-date pkg_* tools with this file.
+uptodate-pkgtools:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	pkgtools_version=`${MAKE} show-pkgtools-version`;		\
+	if [ $$pkgtools_version -lt ${PKGTOOLS_REQD} ]; then		\
+		case ${PKGNAME} in					\
+		pkg_install-*)						\
+			;;						\
+		*)							\
+			${ECHO} "Your package tools need to be updated to `${ECHO} ${PKGTOOLS_REQD} | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'` versions."; \
+			${ECHO} "The installed package tools were last updated on `${ECHO} $$pkgtools_version | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'`."; \
+			${ECHO} "Please make and install the pkgsrc/pkgtools/pkg_install package."; \
+			${FALSE} ;;					\
+		esac							\
+	fi
+
 # Files to create for versioning and build information
 BUILD_VERSION_FILE=	${WRKDIR}/BuildVersion
 BUILD_INFO_FILE=	${WRKDIR}/BuildInfo
 
+# Files containing size of pkg w/o and w/ all required pkgs
+SIZE_PKG_FILE=		${WRKDIR}/SizePkg
+SIZE_ALL_FILE=		${WRKDIR}/SizeAll
+
 .ifndef PKG_ARGS
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -l
 PKG_ARGS+=		-b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
+.if ${PKGTOOLS_REQD} > 19990909
+# Size storing options, only available since 19991123 or so
+# I don't want to force people using this.
+# This .if block should be removed next time PKGTOOLS_REQD is bumped.
+PKG_ARGS+=		-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
+.endif 	# ${PKGTOOLS_REQD) > 19990909
 PKG_ARGS+=		-p ${PREFIX} -P "`${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=false|sort -u`"
 .ifdef CONFLICTS
 PKG_ARGS+=		-C "${CONFLICTS}"
@@ -659,25 +691,6 @@ PATCH_SITES:=	${MASTER_SITE_OVERRIDE} ${PATCH_SITES}
 # Derived names so that they're easily overridable.
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 PKGNAME?=		${DISTNAME}
-
-# Latest version of pkgtools required for this file.
-PKGTOOLS_REQD=		19990909
-
-# Check that we're using up-to-date pkg_* tools with this file.
-uptodate-pkgtools:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	pkgtools_version=`${MAKE} show-pkgtools-version`;		\
-	if [ $$pkgtools_version -lt ${PKGTOOLS_REQD} ]; then		\
-		case ${PKGNAME} in					\
-		pkg_install-*)						\
-			;;						\
-		*)							\
-			${ECHO} "Your package tools need to be updated to `${ECHO} ${PKGTOOLS_REQD} | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'` versions."; \
-			${ECHO} "The installed package tools were last updated on `${ECHO} $$pkgtools_version | ${SED} -e 's|\(....\)\(..\)\(..\)|\1/\2/\3|'`."; \
-			${ECHO} "Please make and install the pkgsrc/pkgtools/pkg_install package."; \
-			${FALSE} ;;					\
-		esac							\
-	fi
 
 MAINTAINER?=		packages@netbsd.org
 
@@ -2393,6 +2406,42 @@ print-package-depends:
 .endif
 .endif
 
+
+# Stat all the files of a pkg and sum the sizes up. If SIZEDEPENDS is
+# set, also sum up all depending packages, giving a rough overview of
+# what this package really needs to run. (When installed alone - 
+# intersection of dependencies with other pkgs may result in less
+# diskspace usage)
+# 
+# XXX This is intended to be run before pkg_create is called, so the
+# existance of ${PLIST} can be assumed as granted.
+print-pkg-size:
+	@(								\
+	${SHCOMMENT} "This pkg's files" ;				\
+	${SED} -n							\
+		-e 's,^[^@],${PREFIX}/&,'				\
+		-e '/^\//p'						\
+		<${PLIST} ;						\
+	${SHCOMMENT} "Any depending pkgs' files" ;			\
+	if [ "${SIZEDEPENDS}" != "" ]; then				\
+		for p in ${DEPENDS:C/:.*//} ; do			\
+			${SHCOMMENT} direct depends ;			\
+			pkg_info -qL "$$p" ;				\
+			${SHCOMMENT} "depends of depends (XXX complete!)"; \
+			dps=`pkg_info -qf "$$p" | grep '@pkgdep' | awk '{ print $$2; }'` ; \
+			for dp in $$dps ; do				\
+				pkg_info -qL "$$dp" ;			\
+			done ;						\
+		done ;							\
+	fi ;							 	\
+	)								\
+	| sort -u							\
+	| xargs ls -ld							\
+	| awk 'BEGIN { sum=0; }						\
+	       { sum+=$$5; }						\
+	       END { print sum; }'
+
+
 # Fake installation of package so that user can pkg_delete it later.
 # Also, make sure that an installed package is recognized correctly in
 # accordance to the @pkgdep directive in the packing lists
@@ -2412,6 +2461,9 @@ fake-pkg: ${PLIST} ${DESCR}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
+.if ${PKGTOOLS_REQD} > 19990909
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
+.endif # ${PKGTOOLS_REQD} > 19990909
 	${_PKG_SILENT}${_PKG_DEBUG}files="";				\
 	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
 		if [ -f $$f ]; then					\
@@ -2447,6 +2499,10 @@ fake-pkg: ${PLIST} ${DESCR}
 	@${ECHO} "GMAKE=	`${GMAKE} --version | ${GREP} version`" >> ${BUILD_INFO_FILE}
 .endif
 	@${ECHO} "_PKGTOOLS_VER= `${MAKE} show-pkgtools-version`" >> ${BUILD_INFO_FILE}
+.if ${PKGTOOLS_REQD} > 19990909
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size                       >${SIZE_PKG_FILE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} print-pkg-size SIZEDEPENDS=yesplease >${SIZE_ALL_FILE}
+.endif # ${PKGTOOLS_REQD} > 19990909
 	${_PKG_SILENT}${_PKG_DEBUG}if [ ! -d ${PKG_DBDIR}/${PKGNAME} ]; then			\
 		${ECHO_MSG} "===>  Registering installation for ${PKGNAME}"; \
 		${MKDIR} ${PKG_DBDIR}/${PKGNAME};			\
@@ -2455,6 +2511,12 @@ fake-pkg: ${PLIST} ${DESCR}
 		${CP} ${COMMENT} ${PKG_DBDIR}/${PKGNAME}/+COMMENT;	\
 		${CP} ${BUILD_VERSION_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_VERSION; \
 		${CP} ${BUILD_INFO_FILE} ${PKG_DBDIR}/${PKGNAME}/+BUILD_INFO; \
+		if ${TEST} -e ${SIZE_PKG_FILE}; then \
+			${CP} ${SIZE_PKG_FILE} ${PKG_DBDIR}/${PKGNAME}/+SIZE_PKG; \
+		fi ; \
+		if ${TEST} -e ${SIZE_ALL_FILE}; then \
+			${CP} ${SIZE_ALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+SIZE_ALL; \
+		fi ; \
 		if [ -n "${INSTALL_FILE}" ]; then			\
 			if ${TEST} -e ${INSTALL_FILE}; then		\
 				${CP} ${INSTALL_FILE} ${PKG_DBDIR}/${PKGNAME}/+INSTALL; \
