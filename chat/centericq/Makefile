@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/05/12 12:03:12 uebayasi Exp $
+# $NetBSD: Makefile,v 1.17 2003/05/22 13:27:45 wiz Exp $
 #
 
 DISTNAME=	centericq-4.9.2
@@ -12,7 +12,6 @@ COMMENT=	Instant Messenger interface (ICQ2000, Yahoo!, and MSN support)
 
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
-USE_NCURSES=		# mvaddchnstr()
 USE_CXX=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
@@ -20,6 +19,9 @@ LIBS=			${LDFLAGS}
 USE_PERL5=		run
 
 REPLACE_PERL=		${WRKSRC}/misc/cicqconf
+
+INCOMPAT_CURSES+=	NetBSD-1.[45]*-* NetBSD-1.6-* NetBSD-1.6.[1-9]-*
+INCOMPAT_CURSES+=	NetBSD-1.6[A-T]-*
 
 .include "../../devel/glib/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
