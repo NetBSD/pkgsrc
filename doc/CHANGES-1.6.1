@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.1 2003/03/08 13:23:56 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.2 2003/03/10 18:29:21 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -196,3 +196,20 @@ mail/hypermail/patches/patch-ac			1.1 (new)
 Update to 2.1.7: Many bug and security fixes; you should upgrade.
 	[bouyer, ticket #1201]
 
+lang/wonka/Makefile				1.5
+
+Restrict to x86 and arm as no other ports are done ATM
+	[skrll, ticket #1203]
+
+net/ethereal/Makefile				1.71
+net/ethereal/PLIST				1.7
+net/ethereal/distinfo				1.17
+
+Updated to version 0.9.10.
+
+This release fixes a security hole discovered by Georgi Guninski in
+the SOCKS dissector.  All users of previous versions are encouraged
+to upgrade.  For more details see
+
+  http://www.ethereal.com/appnotes/enpa-sa-00008.html
+	[salo, ticket #1204]
