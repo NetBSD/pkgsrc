@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.173 2001/07/17 21:19:37 jlam Exp $
+# $NetBSD: Packages.txt,v 1.174 2001/07/20 02:00:47 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1557,7 +1557,10 @@ for a mythical package foo follows:
 
 > .include "../../mk/bsd.buildlink.mk"
 > 
-> BUILDLINK_PREFIX.foo=		${LOCALBASE}
+> BUILDLINK_DEPENDS.foo?=	foo>=1.0
+> DEPENDS+=			${BUILDLINK_DEPENDS.foo}:../../category/foo
+> 
+> EVAL_PREFIX+=			BUILDLINK_PREFIX.foo=foo
 > BUILDLINK_FILES.foo=		include/foo.h
 > BUILDLINK_FILES.foo+=		include/bar.h
 > BUILDLINK_FILES.foo+=		lib/libfoo.*
