@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/08/16 14:28:34 dillo Exp $
+
+--- configure.orig	Sat Oct 19 23:18:01 2002
++++ configure
+@@ -7564,7 +7564,8 @@ if test "${ac_cv_lib_Xft_XftInit+set}" =
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lXft  $LIBS"
++LIBS="`xft-config --libs`  $LIBS"
++CFLAGS="$CFLAGS `xft-config --cflags`"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line 7569 "configure"
+ #include "confdefs.h"
