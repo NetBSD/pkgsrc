@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/10/18 11:22:42 rh Exp $
+# $NetBSD: Makefile,v 1.9 2001/02/16 13:30:52 wiz Exp $
 # FreeBSD: ports/audio/xamp/Makefile,v 1.5 1999/08/25 04:36:22 obrien Exp
 #
 
@@ -13,6 +13,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${SKIN_DATA}
 
 MAINTAINER=	rxg@ms25.url.com.tw
 HOMEPAGE=	http://andrej.co.ru/~andrej/programs/xamp/
+COMMENT=	Version of amp (stands for `Audio Mpeg Player') plus a Qt GUI
 
 DEPENDS+=	qt1-1.44:../../x11/qt1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/03/16 12:16:51 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 13:37:48 wiz Exp $
 
 DISTNAME=		flops
 PKGNAME=		flops-2.0
@@ -8,6 +8,7 @@ DISTFILES=		${DISTNAME}.c ${DISTNAME}.doc
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://performance.netlib.org/performance/html/flops.html
+COMMENT=		Floating point benchmark to give your MFLOPS rating
 
 NO_WRKSUBDIR=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/06 06:40:33 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 13:30:34 wiz Exp $
 
 DISTNAME=	cdparanoia-III-alpha9.7
 PKGNAME=	cdparanoia-3.a9.7
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.src.tgz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.xiph.org/paranoia/
+COMMENT=	CDDA reading utility with extra data verification features
 
 GNU_CONFIGURE=	YES
 ALL_TARGET=	static

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/06/08 22:37:01 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/02/16 13:30:42 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/07/17 15:12:39 max Exp 
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.cs.tu-berlin.de/pub/local/kbs/tubmik/gsm/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://kbs.cs.tu-berlin.de/~jutta/toast.html
+COMMENT=	Audio converter and library for converting u-law to gsm encoding
 
 USE_LIBTOOL=	# defined
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/23 04:34:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 13:30:34 wiz Exp $
 #
 
 DISTNAME=	cs4235-20001009
@@ -7,6 +7,7 @@ MASTER_SITES=	http://invisible.yi.org/~jmcneill/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://invisible.yi.org/~jmcneill/
+COMMENT=	Modifies the 3D mode on Crystal CS4235 sound cards
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/01/05 17:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 13:30:35 wiz Exp $
 
 DISTNAME=	festdoc-1.4.0.1
 PKGNAME=	festival-doc-1.4.0.1
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
+COMMENT=	Festival documentation, in (text)info, html, dvi and ps formats
 
 NO_BUILD=	yes
 
