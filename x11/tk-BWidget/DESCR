@@ -1,0 +1,13 @@
+The BWidget Toolkit is a high-level Widget Set for Tcl/Tk built using
+native Tcl/Tk 8.x namespaces.
+
+The BWidgets have a professional look&feel as in other well known
+Toolkits (Tix or Incr Widgets), but the concept is radically different
+because everything is pure Tcl/Tk.  No platform dependencies, and no
+compiling required.  The code is 100% Pure Tcl/Tk.
+
+The BWidget library was originally developed by UNIFIX Online, and
+released under both the GNU Public License and the Tcl license.
+BWidget is now maintained as a community project, hosted by
+Sourceforge.  Scores of fixes and enhancements have been added by
+community developers.  See the ChangeLog file for details.
