@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/07/10 22:21:40 kim Exp $
+$NetBSD: patch-aa,v 1.6 2005/01/23 18:26:39 kim Exp $
 
---- lib/Apache/Gallery.pm.orig	2003-09-07 13:28:42.000000000 -0400
-+++ lib/Apache/Gallery.pm	2004-07-10 18:10:49.000000000 -0400
-@@ -206,9 +206,28 @@
+--- lib/Apache/Gallery.pm.orig	2005-01-23 12:02:39.000000000 -0500
++++ lib/Apache/Gallery.pm	2005-01-23 12:06:13.000000000 -0500
+@@ -253,9 +253,28 @@
  
  		# Combine directories and files to one listing
  		my @listing;
@@ -34,7 +34,7 @@ $NetBSD: patch-aa,v 1.5 2004/07/10 22:21:40 kim Exp $
  		
  		if (@listing) {
  
-@@ -272,7 +291,7 @@
+@@ -319,7 +338,7 @@
  				if (-d $thumbfilename) {
  					my $dirtitle = '';
  					if (-e $thumbfilename . ".folder") {
@@ -42,8 +42,8 @@ $NetBSD: patch-aa,v 1.5 2004/07/10 22:21:40 kim Exp $
 +						$dirtitle = get_filecontent($thumbfilename . ".folder", 1);
  					}
  
- 					$tpl->assign(FILEURL => uri_escape($fileurl, $escape_rule), FILE => ($dirtitle ? $dirtitle : $file));
-@@ -1041,6 +1060,7 @@
+ 					$dirtitle = $dirtitle ? $dirtitle : $file;
+@@ -1226,6 +1245,7 @@
  
  sub get_filecontent {
  	my $file = shift;
@@ -51,15 +51,15 @@ $NetBSD: patch-aa,v 1.5 2004/07/10 22:21:40 kim Exp $
  	open(FH, $file) or return undef;
  	my $content = '';
  	{
-@@ -1048,6 +1068,7 @@
- 	$content = <FH>;
+@@ -1233,6 +1253,7 @@
+ 		$content = <FH>;
  	}
  	close(FH);
 +	$content =~ s/\n/<BR>\n/g if $fold;
  	return $content;
  }
  
-@@ -1145,7 +1166,7 @@
+@@ -1333,7 +1354,7 @@
  			$dirname = File::Spec->catdir($dirname, $link);
  
  			if (-e $dirname . ".folder") {
