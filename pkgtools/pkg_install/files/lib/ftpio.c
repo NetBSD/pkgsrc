@@ -1,4 +1,4 @@
-/*	$NetBSD: ftpio.c,v 1.8 2003/12/20 04:23:05 grant Exp $	*/
+/*	$NetBSD: ftpio.c,v 1.9 2004/08/13 14:35:24 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: ftpio.c,v 1.8 2003/12/20 04:23:05 grant Exp $");
+__RCSID("$NetBSD: ftpio.c,v 1.9 2004/08/13 14:35:24 jlam Exp $");
 #endif
 
 /*-
@@ -106,6 +106,9 @@ __RCSID("$NetBSD: ftpio.c,v 1.8 2003/12/20 04:23:05 grant Exp $");
 #endif
 #if HAVE_FCNTL_H
 #include <fcntl.h>
+#endif
+#if HAVE_NETDB_H
+#include <netdb.h>
 #endif
 #if HAVE_REGEX_H
 #include <regex.h>
