@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.28 2003/11/23 07:14:43 jlam Exp $
+# $NetBSD: install,v 1.29 2003/12/21 01:21:52 grant Exp $
 
 if [ -z "${CONF_FILES}" -a -z "${CONF_FILES_PERMS}" -a			\
      -z "${SUPPORT_FILES}" -a -z "${SUPPORT_FILES_PERMS}" -o		\
@@ -221,7 +221,8 @@ POST-INSTALL)
 		   [ "${_PKG_RCD_SCRIPTS}" = "YES" -a			\
 		     -n "${RCD_SCRIPTS}" ]; then
 			${CAT} << EOF
-Installing configuration files for ${PKGNAME}:
+
+===> Installing configuration/support files for ${PKGNAME}
 
 EOF
 		fi
@@ -242,12 +243,12 @@ EOF
 			msgadd "#${file} (m=@CONF_FILES_MODE@)"
 		elif [ -e "${file}" ]; then
 			if [ ! "${file}" -ef "${samplefile}" ]; then
-				${ECHO} "    ${file} already exists, example file is"
-				${ECHO} "        ${samplefile}"
+				${ECHO} "	${file} already exists, example file is"
+				${ECHO} "           ${samplefile}"
 			fi
 		else
 			if [ -e "${samplefile}" ]; then
-				${ECHO} "    ${file}"
+				${ECHO} "	${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHMOD} @CONF_FILES_MODE@ "${file}"
 			fi
@@ -268,12 +269,12 @@ EOF
 			msgadd "#${file} (m=@SUPPORT_FILES_MODE@)"
 		elif [ -e "${file}" ]; then
 			if [ ! "${file}" -ef "${samplefile}" ]; then
-				${ECHO} "    ${file} already exists, example file is"
-				${ECHO} "        ${samplefile}"
+				${ECHO} "	${file} already exists, example file is"
+				${ECHO} "	    ${samplefile}"
 			fi
 		else
 			if [ -e "${samplefile}" ]; then
-				${ECHO} "    ${file}"
+				${ECHO} "     ${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHMOD} @SUPPORT_FILES_MODE@ "${file}"
 			fi
@@ -295,12 +296,12 @@ EOF
 			msgadd "#${file} (o=${owner}, g=${group}, m=${mode})"
 		elif [ -e ${file} ]; then
 			if [ ! "${file}" -ef "${samplefile}" ]; then
-				${ECHO} "    ${file} already exists, example file is"
-				${ECHO} "        ${samplefile}"
+				${ECHO} "	${file} already exists, example file is"
+				${ECHO} "	    ${samplefile}"
 			fi
 		else
 			if [ -e "${samplefile}" ]; then
-				${ECHO} "    ${file}"
+				${ECHO} "	${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHOWN} "${owner}" "${file}"
 				${CHGRP} "${group}" "${file}"
@@ -324,12 +325,12 @@ EOF
 			msgadd "#${file} (m=@RCD_SCRIPTS_MODE@)"
 		elif [ -e "${file}" ]; then
 			if [ ! "${file}" -ef "${samplefile}" ]; then
-				${ECHO} "    ${file} already exists, example file is"
-				${ECHO} "        ${samplefile}"
+				${ECHO} "	${file} already exists, example file is"
+				${ECHO} "	    ${samplefile}"
 			fi
 		else
 			if [ -e "${samplefile}" ]; then
-				${ECHO} "    ${file}"
+				${ECHO} "	${file}"
 				${CP} "${samplefile}" "${file}"
 				${CHMOD} @RCD_SCRIPTS_MODE@ "${file}"
 			fi
@@ -352,6 +353,7 @@ EOF
 		${CHGRP} "${group}" "${file}"
 		${CHMOD} ${mode} "${file}"
 	done
+	echo ""
 	if ! msgempty; then
 		${ECHO} "==========================================================================="
 		msgprint
