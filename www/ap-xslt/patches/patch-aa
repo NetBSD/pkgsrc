@@ -1,0 +1,17 @@
+--- Makefile.orig	Wed Aug 23 22:30:50 2000
++++ Makefile	Tue Sep 25 15:12:22 2001
+@@ -1,12 +1,12 @@
+ #   the used tools
+-APXS=/usr/local/lib/httpd/bin/apxs
++APXS=${PREFIX}/sbin/apxs
+ 
+ #   the default target
+ all: mod_xslt.so
+ 
+ #   compile the shared object file
+ mod_xslt.so: mod_xslt.c
+-	$(APXS) -c mod_xslt.c -o mod_xslt.so
++	$(APXS) -c -I${LOCALBASE}/include mod_xslt.c -o mod_xslt.so -L${LOCALBASE}/lib -R${LOCALBASE}/lib -lsablot -lstdc++ -lm
+ 
+ #   cleanup
+ clean:

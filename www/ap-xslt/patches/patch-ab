@@ -1,0 +1,11 @@
+--- mod_xslt.c.orig	Tue Sep 25 15:15:15 2001
++++ mod_xslt.c	Tue Sep 25 15:15:42 2001
+@@ -43,7 +43,7 @@
+ #include "http_protocol.h"
+ #include "ap_config.h"
+ #include "util_uri.h"
+-#include "alloc.h"
++#include "ap_alloc.h"
+ #include "http_core.h"
+ #include "sablot.h"
+ #include "http_log.h"
