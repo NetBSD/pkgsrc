@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 2004/05/25 19:05:12 kristerw Exp $
+
+--- src/gl_engine.c.orig	2004-05-25 20:59:41.000000000 +0200
++++ src/gl_engine.c	2004-05-25 21:00:20.000000000 +0200
+@@ -734,7 +734,7 @@
+        //       if (!LoadRGBMipmaps(HHModel[i].Texture_File, GL_RGBA)) 
+        if (!LoadRGBMipmaps(w.Texture_File, 3)) 
+ 	 {
+-	   printf("Sorry, couldn't find a texture file (#%i). \n
++	   printf("Sorry, couldn't find a texture file (#%i). \n\
+                  Please check the maps directory\n", i);
+ 	 }
+ 
+@@ -793,7 +793,7 @@
+ 	    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+ 	    glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE); */
+        if (!LoadRGBMipmaps( milky_way_file, 3 )) 
+-	 printf("Sorry, couldn't find milky way texture file. \n
++	 printf("Sorry, couldn't find milky way texture file. \n\
+                  Please check the maps directory\n");
+      }
+ 
+@@ -808,7 +808,7 @@
+        glBindTexture( GL_TEXTURE_2D, HaloTex[j] );
+ 
+        if (!LoadRGBMipmaps( SUNSHINE_PATH, 3 )) 
+-	 printf("Sorry, couldn't find sunshine texture file. \n
++	 printf("Sorry, couldn't find sunshine texture file. \n\
+                  Please check the maps directory\n");
+      }
+ 
