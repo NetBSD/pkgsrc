@@ -1,25 +1,26 @@
-# $NetBSD: Makefile,v 1.5 2001/05/08 23:58:44 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/18 11:50:40 martti Exp $
 #
 
 DISTNAME=	citrix_ica-client
 .if (${MACHINE_ARCH} == "i386")
 DISTNAME=	linuxx86
-PKGNAME=	citrix_ica-6.0.908
+PKGNAME=	citrix_ica-6.20.973
 .endif
 .if (${MACHINE_ARCH} == "sparc")
 DISTNAME=	solaris
-PKGNAME=	citrix_ica-6.0.915
+PKGNAME=	citrix_ica-6.20.976
 EXTRACT_SUFX=	.tar.Z
 .endif
 CATEGORIES=	net
-MASTER_SITES=	http://download2.citrix.com/FILES/en/products/client/ica/current/
+MASTER_SITES=	http://download2.citrix.com/files/en/products/nfr/ica/ \
+		http://download2.citrix.com/FILES/en/products/client/ica/current/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.citrix.com/products/clients/ica/technology.asp
 COMMENT=	Citrix(R) client for the Microsoft Windows Terminal Server
 
 .if (${MACHINE_ARCH} == "i386")
-DEPENDS=	suse_x11>=6.4:../../emulators/suse_base
+DEPENDS=	suse_x11>=6.4:../../emulators/suse_x11
 .endif
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc
