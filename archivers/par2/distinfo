@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/29 19:36:07 tv Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 14:45:25 agc Exp $
 
 SHA1 (par2cmdline-0.3.tar.gz) = 4202ffec5d5fa1e9d83da8e0c6e936832082f17d
+RMD160 (par2cmdline-0.3.tar.gz) = d4bd5a5c8f3bd1218f1e61fa1b981c5b22c26ed1
 Size (par2cmdline-0.3.tar.gz) = 227545 bytes

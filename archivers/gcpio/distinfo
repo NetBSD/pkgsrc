@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2005/01/18 16:04:39 tv Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 14:45:23 agc Exp $
 
 SHA1 (cpio-2.5.tar.gz) = d5908ee20484f092e591a430620feec33060528c
+RMD160 (cpio-2.5.tar.gz) = 92ab8152b03eae064f24909d76bad31a331d283d
 Size (cpio-2.5.tar.gz) = 185480 bytes
 SHA1 (patch-aa) = 2d6b714be46f26782b1a6e6af47710c6e20f50b8
 SHA1 (patch-ab) = e3529142851ebe87b6df37ab33571209512b0f17

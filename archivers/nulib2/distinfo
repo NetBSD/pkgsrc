@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/11/29 04:50:35 tv Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 14:45:24 agc Exp $
 
 SHA1 (nulibdist-203.tar.gz) = c7a9bde218e0a115424dfc2e3d7234ee7faa9b8e
+RMD160 (nulibdist-203.tar.gz) = 84c6eadd64749cfdc11fda74a552072bce1b04db
 Size (nulibdist-203.tar.gz) = 394129 bytes
 SHA1 (patch-aa) = a8c05f177ec5e08dc1bb8968be3febb3586d57a1
 SHA1 (patch-ab) = 013f1e8681f0ac5d7f5757df7ed703bb27a3216c

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/01/24 16:22:51 tv Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 14:45:23 agc Exp $
 
 SHA1 (dact-0.8.3.tar.gz) = 850aec889be4174e9f42a3314bf29b1fc5181090
+RMD160 (dact-0.8.3.tar.gz) = 2778e64d3c456fc63b1739b31773f7ff2d84ee9c
 Size (dact-0.8.3.tar.gz) = 84301 bytes
 SHA1 (patch-aa) = f0040ac3f13305a33943407759d52454dd6d7d37
 SHA1 (patch-ab) = 75235c19ea8fbfac87eebcbe88dd9273136c08c5
