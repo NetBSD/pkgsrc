@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/02/18 01:28:29 minskim Exp $
+
+--- src/liteamp.c.orig	2004-01-07 10:10:48.000000000 -0600
++++ src/liteamp.c
+@@ -320,7 +320,9 @@ void liteamp_main()
+     liteamp_update_ui_layout();
+ 
+ 	// main event loop
++    gdk_threads_enter();
+     gtk_main();
++    gdk_threads_leave();
+ }
+ 
+ 
