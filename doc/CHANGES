@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9712 2005/04/01 11:35:13 adam Exp $
+$NetBSD: CHANGES,v 1.9713 2005/04/01 13:52:50 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1851,3 +1851,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated octave-current  to 2.9.1 [adam 2005-04-01]
 	Updated octave-forge to 2004.11.16nb1 [adam 2005-04-01]
 	Updated xplanet to 1.1.2 [adam 2005-04-01]
+	Renamed jakarta-tomcat to jakarta-tomcat55 [abs 2005-04-01]
+	Added jakarta-tomcat-5.5.7 [abs 2005-04-01]
+
