@@ -3,7 +3,7 @@
 # Date created:		Nov 1997
 # Whom:			soren@t.dk
 #
-# $NetBSD: Makefile,v 1.3 1998/01/15 16:53:53 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/01/19 11:30:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -14,7 +14,7 @@ MASTER_SITES=	ftp://thep.physik.uni-mainz.de/pub/gv/unix/
 MAINTAINER=	ports@freebsd.org
 
 LIB_DEPENDS=	Xaw3d\\.6\\.:${PORTSDIR}/x11/Xaw3d
-RUN_DEPENDS=	gs:${PORTSDIR}/print/ghostscript5
+RUN_DEPENDS=	${LOCALBASE}/bin/gs:${PORTSDIR}/print/ghostscript5
 
 USE_IMAKE=	yes
 
