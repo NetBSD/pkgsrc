@@ -3,7 +3,7 @@
 # Date created:        28 October 1997
 # Whom:                Stefan Eßer <se@freebsd.org>
 #
-# $NetBSD: Makefile,v 1.2 1997/12/29 03:22:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/24 03:38:26 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 04:19:46 asami Exp
 #
 
@@ -18,10 +18,10 @@ EXTRACT_SUFX=	.src.tgz
 MAINTAINER=	se@freebsd.org
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--prefix=$(PREFIX)" \
-		"--x-inc=$(X11BASE)/include -I$(PREFIX)/include -I$(PREFIX)/include/giflib" \
-		"--x-lib=$(X11BASE)/lib -L$(PREFIX)/lib" \
-		"--datadir=$(PREFIX)/share/kde" \
+CONFIGURE_ARGS=	"--prefix=${PREFIX}" \
+		"--x-inc=${X11BASE}/include -I${PREFIX}/include -I${PREFIX}/include/giflib" \
+		"--x-lib=${X11BASE}/lib -L${PREFIX}/lib" \
+		"--datadir=${PREFIX}/share/kde" \
 		"--without-gnu-ld" \
 		"--without-libjpeg" \
 		"--without-libgif" \
