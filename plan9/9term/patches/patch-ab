@@ -1,0 +1,415 @@
+*** 9term/9term.c.orig	Fri Jun  3 03:35:39 1994
+--- 9term/9term.c	Mon Jul 31 15:56:10 1995
+***************
+*** 10,16 ****
+--- 10,20 ----
+  #include <frame.h>
+  #include <text.h>
+  
++ #ifdef __FreeBSD__
++ #include <sys/termios.h>
++ #else
+  #include <sys/termio.h>
++ #endif
+  #include <signal.h>
+  #include <sys/stat.h>
+  
+***************
+*** 153,161 ****
+  		}
+  	}
+  
+! 	setenv("TERM", "9term", 1);
+  	/* Cope with BSD-oid systems. - cks */
+! 	setenv("TERMCAP", "9term: :am:bl=^G:do=^J:nl=^J:", 1);
+  	signal(SIGINT, SIG_IGN);
+  
+  	init_display(&argc, argv, cmd, resource);
+--- 157,165 ----
+  		}
+  	}
+  
+! 	O_setenv("TERM", "9term", 1);
+  	/* Cope with BSD-oid systems. - cks */
+! 	O_setenv("TERMCAP", "9term: :am:bl=^G:do=^J:nl=^J:", 1);
+  	signal(SIGINT, SIG_IGN);
+  
+  	init_display(&argc, argv, cmd, resource);
+***************
+*** 718,724 ****
+  	texthighlight(t, t->length, t->length, F&~D);
+  #ifdef REMOTE
+  	flushstream();
+! 	killpg(r == quitchar ? SIGQUIT : SIGINT);
+  #else
+  	sendrunes(&r, 1);
+  #endif
+--- 722,728 ----
+  	texthighlight(t, t->length, t->length, F&~D);
+  #ifdef REMOTE
+  	flushstream();
+! 	O_killpg(r == quitchar ? SIGQUIT : SIGINT);
+  #else
+  	sendrunes(&r, 1);
+  #endif
+***************
+*** 804,810 ****
+   *	export a name-value pair to environment
+   */
+  int
+! setenv(char *name, char *value, int overwrite)
+  {
+  	char *p;
+  
+--- 808,814 ----
+   *	export a name-value pair to environment
+   */
+  int
+! O_setenv(char *name, char *value, int overwrite)
+  {
+  	char *p;
+  
+*** 9term/9term.h.orig	Thu Dec 15 08:49:15 1994
+--- 9term/9term.h	Mon Jul 31 15:56:10 1995
+***************
+*** 31,37 ****
+  extern int		isig;
+  
+  extern void		specialchars(int);
+! extern int		setenv(char *, char *, int);
+  extern void		init_display(int *, char **, char**, char*);
+  #ifdef NEEDVARARG
+  extern void		error();
+--- 31,37 ----
+  extern int		isig;
+  
+  extern void		specialchars(int);
+! extern int		O_setenv(char *, char *, int);
+  extern void		init_display(int *, char **, char**, char*);
+  #ifdef NEEDVARARG
+  extern void		error();
+***************
+*** 65,70 ****
+--- 65,75 ----
+  #endif
+  
+  #ifdef	SUNOS
++ #define	POSIXPTYS
++ #define BSDPTYS
++ #endif
++ 
++ #ifdef	__FreeBSD__
+  #define	POSIXPTYS
+  #define BSDPTYS
+  #endif
+*** 9term/Makefile.orig	Sun Mar 13 22:50:54 1994
+--- 9term/Makefile	Mon Jul 31 16:02:02 1995
+***************
+*** 11,37 ****
+  #	Define RISCOS for Mips RISC/os
+  #	Define BSDPTYS for BSD-style pty support
+  #	Define POSIXPTYS for POSIX ptys
+- OS=-DSOLARIS
+  
+! # where we'll install it
+! BINDIR=/usr/pgrad/matty/bin/$(cputype)
+  
+  HEADERFILE=9term.h
+  TARGET=9term
+! INCLUDES=-I. -I../include -I/usr/openwin/include
+! CFLAGS=-g $(OS) $(INCLUDES) -fno-builtin -D_LIBXG_EXTENSION
+! LDFLAGS=-g -R/usr/openwin/lib -L/usr/openwin/lib -R/usr/ucblib -L/usr/ucblib
+  CC=gcc
+  
+  # change this if your X11 libraries are in different places
+  # or if you need extra libraries to load with X11 applications
+! LIBS=../libtext/libtext.a ../libframe/libframe.a ../libXg/libXg.a
+! XLIBS=-lXt -lX11
+  
+  OBJECTS=9term.o command.o display.o pty.o
+  
+  $(TARGET): $(OBJECTS)
+! 	$(CC) $(LDFLAGS) -o $(TARGET) $(OBJECTS) $(LIBS) $(XLIBS) -lm -lucb
+  
+  wloc: wloc.o
+  	$(CC) $(LDFLAGS) -o wloc wloc.o $(LIBS) $(XLIBS) -lm
+--- 11,39 ----
+  #	Define RISCOS for Mips RISC/os
+  #	Define BSDPTYS for BSD-style pty support
+  #	Define POSIXPTYS for POSIX ptys
+  
+! OS= -D_LIBXG_EXTENSION -DSUNOS
+! 
+! SAMPATH=../../../sam/work
+! 
+! BINDIR=.			# where we'll install it
+  
+  HEADERFILE=9term.h
+  TARGET=9term
+! INCLUDES=-I. -I../libtext -I$(SAMPATH)/include -I/usr/X11R6/include
+! CFLAGS= -O2 $(OS) $(INCLUDES)
+! LDFLAGS=
+  CC=gcc
+  
+  # change this if your X11 libraries are in different places
+  # or if you need extra libraries to load with X11 applications
+! LIBS=../libtext/libtext.a $(SAMPATH)/libframe/libframe.a $(SAMPATH)/libXg/libXg.a
+! XLIBS= -L/usr/X11R6/lib -lXt -lX11
+  
+  OBJECTS=9term.o command.o display.o pty.o
+  
+  $(TARGET): $(OBJECTS)
+! 	$(CC) $(LDFLAGS) -o $(TARGET) $(OBJECTS) $(LIBS) $(XLIBS) -lm
+  
+  wloc: wloc.o
+  	$(CC) $(LDFLAGS) -o wloc wloc.o $(LIBS) $(XLIBS) -lm
+***************
+*** 39,59 ****
+  label: wloc
+  	ln wloc label
+  
+- unicode: unicode.o
+- 	$(CC) $(LDFLAGS) -o unicode unicode.o $(LIBS) $(XLIBS) -lm
+- 
+  install: $(TARGET) wloc label
+  	cp $(TARGET) $(BINDIR)
+  	chown root $(BINDIR)/$(TARGET)
+  	chmod 04755 $(BINDIR)/$(TARGET)
+  	mv wloc $(BINDIR)
+  	mv label $(BINDIR)
+- 	mv unicode $(BINDIR)
+  
+  clean:
+  	rm -f *.o core
+  
+  nuke: clean
+! 	rm -f $(TARGET) wloc label unicode
+  
+  $(OBJECTS): 9term.h
+--- 41,57 ----
+  label: wloc
+  	ln wloc label
+  
+  install: $(TARGET) wloc label
+  	cp $(TARGET) $(BINDIR)
+  	chown root $(BINDIR)/$(TARGET)
+  	chmod 04755 $(BINDIR)/$(TARGET)
+  	mv wloc $(BINDIR)
+  	mv label $(BINDIR)
+  
+  clean:
+  	rm -f *.o core
+  
+  nuke: clean
+! 	rm -f $(TARGET) wloc label
+  
+  $(OBJECTS): 9term.h
+*** 9term/command.c.orig	Sun Mar  6 19:50:51 1994
+--- 9term/command.c	Mon Jul 31 15:56:11 1995
+***************
+*** 13,19 ****
+--- 13,23 ----
+  #include <sys/wait.h>
+  #include <signal.h>
+  #include <grp.h>
++ #ifdef __FreeBSD__
++ #include <termios.h>
++ #else
+  #include <termio.h>
++ #endif
+  #ifdef SOLARIS
+  #include <sys/stropts.h>
+  #endif
+***************
+*** 204,210 ****
+   */
+  
+  void
+! killpg(int sig)
+  {
+  	if (comm_pid)
+  		kill(-comm_pid, sig);
+--- 208,214 ----
+   */
+  
+  void
+! O_killpg(int sig)
+  {
+  	if (comm_pid)
+  		kill(-comm_pid, sig);
+*** 9term/display.c.orig	Thu Dec 15 08:48:28 1994
+--- 9term/display.c	Mon Jul 31 15:56:11 1995
+***************
+*** 114,120 ****
+  delwin(Widget w, XEvent *event, String *params, Cardinal *n)
+  {
+    if (w == _toplevel)
+! 	killpg(SIGHUP);
+  }
+  
+  /*
+--- 114,120 ----
+  delwin(Widget w, XEvent *event, String *params, Cardinal *n)
+  {
+    if (w == _toplevel)
+! 	O_killpg(SIGHUP);
+  }
+  
+  /*
+***************
+*** 185,191 ****
+  		else if (!strcasecmp(s, "plan9"))
+  			kbdmode = PLAN9;
+  	if (s = get_resource(resource, class, "p9font", "P9font"))
+! 		setenv("font", s, 1);
+  	if (s = get_resource(resource, class, "highwater", "Highwater"))
+  		highwater = atoi(s);
+  	if (s = get_resource(resource, class, "lowwater", "Lowwater"))
+--- 185,191 ----
+  		else if (!strcasecmp(s, "plan9"))
+  			kbdmode = PLAN9;
+  	if (s = get_resource(resource, class, "p9font", "P9font"))
+! 		O_setenv("font", s, 1);
+  	if (s = get_resource(resource, class, "highwater", "Highwater"))
+  		highwater = atoi(s);
+  	if (s = get_resource(resource, class, "lowwater", "Lowwater"))
+***************
+*** 230,236 ****
+  #endif
+  		/* export window id to environment */
+  	sprintf(id, "%d", XtWindow(_toplevel));
+! 	setenv("WINDOWID", id, 1);
+  
+  		/* register mouse and keyboard events */
+  	einit(Ekeyboard | Emouse);
+--- 230,236 ----
+  #endif
+  		/* export window id to environment */
+  	sprintf(id, "%d", XtWindow(_toplevel));
+! 	O_setenv("WINDOWID", id, 1);
+  
+  		/* register mouse and keyboard events */
+  	einit(Ekeyboard | Emouse);
+*** 9term/pty.c.orig	Fri Jul 22 10:47:29 1994
+--- 9term/pty.c	Mon Jul 31 16:03:07 1995
+***************
+*** 12,18 ****
+  
+  #include <utmp.h>
+  #include <errno.h>
+! #ifdef SUNOS
+  #	undef _POSIX_SOURCE
+  #	include <sys/termio.h>
+  #	include <stropts.h>
+--- 12,27 ----
+  
+  #include <utmp.h>
+  #include <errno.h>
+! 
+! #ifdef __FreeBSD__
+! #	include <termios.h>
+! 
+! /* #	include <stropts.h> */
+! 	/* Isn't POSIX and portability so much fun? */
+! #	define VRPRNT	VREPRINT
+! #endif
+! 
+! #if defined(SUNOS) && !defined(__FreeBSD__)
+  #	undef _POSIX_SOURCE
+  #	include <sys/termio.h>
+  #	include <stropts.h>
+***************
+*** 41,47 ****
+  #	define 	VEOL2	_VEOL2
+  #endif
+  
+! #ifdef	RISCOS
+  #	include <sys/stat.h>
+  #	include </usr/include/ctype.h>		/* to defeat posix version */
+  #	define  VLNEXT V_LNEXT
+--- 50,56 ----
+  #	define 	VEOL2	_VEOL2
+  #endif
+  
+! #ifdef RISCOS
+  #	include <sys/stat.h>
+  #	include </usr/include/ctype.h>		/* to defeat posix version */
+  #	define  VLNEXT V_LNEXT
+***************
+*** 49,58 ****
+  #	define	VRPRNT V_RPRNT
+  #	define	VWERASE V_WERAS
+  #else
+  #	include <ctype.h>
+  #endif
+  
+! #ifdef	OSF1
+  #	define 	V_START VSTART
+  #	define 	V_STOP VSTOP
+  #	define 	V_SUSP VSUSP
+--- 58,69 ----
+  #	define	VRPRNT V_RPRNT
+  #	define	VWERASE V_WERAS
+  #else
++ #ifndef __FreeBSD__
+  #	include <ctype.h>
+  #endif
++ #endif
+  
+! #if defined(OSF1)
+  #	define 	V_START VSTART
+  #	define 	V_STOP VSTOP
+  #	define 	V_SUSP VSUSP
+***************
+*** 115,121 ****
+  	char udef, p9def;
+  };
+  
+! #if defined(SUNOS) || defined(IRIX) || defined(SOLARIS)
+  #	define V_START VSTART
+  #	define V_STOP VSTOP
+  #	define V_SUSP VSUSP
+--- 126,132 ----
+  	char udef, p9def;
+  };
+  
+! #if defined(SUNOS) || defined(IRIX) || defined(SOLARIS) || defined(__FreeBSD__)
+  #	define V_START VSTART
+  #	define V_STOP VSTOP
+  #	define V_SUSP VSUSP
+***************
+*** 139,145 ****
+  #ifndef _POSIX_SOURCE
+  	{ "eol2",	4, VEOL2,	0,		0 },
+  #endif
+! #if	!defined(_OSF_SOURCE) && !defined(_POSIX_SOURCE)
+  	{ "swtch", 	5, VSWTCH,	0,		0 },
+  #endif
+  	{ "start",	5, V_START,	ctrl('q'),	ctrl('q') },
+--- 150,156 ----
+  #ifndef _POSIX_SOURCE
+  	{ "eol2",	4, VEOL2,	0,		0 },
+  #endif
+! #if	!defined(_OSF_SOURCE) && !defined(_POSIX_SOURCE) && !defined(__FreeBSD__)
+  	{ "swtch", 	5, VSWTCH,	0,		0 },
+  #endif
+  	{ "start",	5, V_START,	ctrl('q'),	ctrl('q') },
+***************
+*** 292,301 ****
+--- 303,318 ----
+  		/* Insure some sanity. */
+  		ttmode.c_lflag |= ECHO;
+  		ttmode.c_oflag &= ~(ONLCR);
++ #ifndef __FreeBSD__
+  		ttmode.c_oflag |= ONLRET;
++ #endif
+  	} else {
+  		ttmode.c_iflag = BRKINT | IGNPAR | ICRNL | IXON;
++ #ifdef __FreeBSD__
++ 		ttmode.c_oflag = OPOST;
++ #else
+  		ttmode.c_oflag = OPOST | ONLRET;
++ #endif
+  		ttmode.c_cflag = B9600 | PARENB | CS8 | CREAD;
+  		ttmode.c_lflag = ISIG | ICANON | ECHO | ECHOK;
+  #ifdef	__ultrix
