@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7438 2004/10/14 20:01:43 kristerw Exp $
+$NetBSD: CHANGES,v 1.7439 2004/10/14 22:30:10 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4725,3 +4725,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated epiphany to 1.4.4 [jmmv 2004-10-14]
 	Added libltdl-1.5.10 [tv 2004-10-14]
 	Updated dcraw to 1.211 [kristerw 2004-10-14]
+	Updated verilog to 0.8 [dmcmahill 20040-10-14]
