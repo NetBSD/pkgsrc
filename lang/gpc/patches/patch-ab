@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/02/17 18:47:25 jtb Exp $
+
+from revision 1.5 of patch-ae:
+
+Hand edit the alpha/netbsd.h patch. -current gcc relies on a new linker script
+which only differs in setting the entry point. Let this use the default
+linker script for alpha but force the entry point so this will work on older
+NetBSD installs for alpha.
+
+--- ../gcc-2.95.3/gcc/config/alpha/netbsd.h.orig	Sun Aug 11 19:38:42 2002
++++ ../gcc-2.95.3/gcc/config/alpha/netbsd.h
+@@ -59,7 +59,8 @@ Boston, MA 02111-1307, USA.  */
+ 
+ #undef LINK_SPEC
+ #define LINK_SPEC \
+- "-m elf64alpha_nbsd \
++ "-m elf64alpha \
++  -e __start \
+   %{O*:-O3} %{!O*:-O1} \
+   %{assert*} %{R*} \
+   %{shared:-shared} \
