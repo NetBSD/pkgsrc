@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.1.1.1 2002/05/31 13:16:46 skrll Exp $
+
+--- kded/kbuildsycoca.cpp.orig	Tue May 21 15:37:35 2002
++++ kded/kbuildsycoca.cpp
+@@ -494,7 +494,9 @@
+ static const char *appName = "kbuildsycoca";
+ static const char *appVersion = "1.0";
+ 
+-int main(int argc, char **argv)
++extern "C" int kdemain(int argc, char **argv);
++
++int kdemain(int argc, char **argv)
+ {
+    KLocale::setMainCatalogue("kdelibs");
+    KAboutData d(appName, I18N_NOOP("KBuildSycoca"), appVersion,

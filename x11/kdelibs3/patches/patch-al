@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1.1.1 2002/05/31 13:16:46 skrll Exp $
+
+--- kconf_update/kconf_update.cpp.orig	Wed May  8 19:27:22 2002
++++ kconf_update/kconf_update.cpp
+@@ -666,8 +666,9 @@
+    m_bOverwrite = false;
+ }
+ 
++extern "C" int kdemain(int argc, char **argv);
+ 
+-int main(int argc, char **argv)
++int kdemain(int argc, char **argv)
+ {
+    KAboutData aboutData("kconf_update", I18N_NOOP("KConf Update"),
+                         "1.0.2",

@@ -1,0 +1,15 @@
+$NetBSD: patch-bt,v 1.1.1.1 2002/05/31 13:16:48 skrll Exp $
+
+--- kioslave/http/kcookiejar/main.cpp.orig	Wed Dec 27 18:59:18 2000
++++ kioslave/http/kcookiejar/main.cpp
+@@ -46,7 +46,9 @@
+  { 0, 0, 0 }
+ };
+ 
+-int main(int argc, char *argv[])
++extern "C" int kdemain(int, char *[]);
++
++int kdemain(int argc, char *argv[])
+ {
+    KLocale::setMainCatalogue("kdelibs");
+    KCmdLineArgs::init(argc, argv, "kcookiejar", description, version);
