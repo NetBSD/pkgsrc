@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/01/11 15:21:19 uebayasi Exp $
+# $NetBSD: Makefile,v 1.6 2003/04/13 03:55:51 uebayasi Exp $
 
 DISTNAME=	semi-1.14.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/semi/semi-1.14-for-flim-1.14/
 
@@ -10,20 +11,30 @@ COMMENT=	Emacs lisp library to provide MIME feature
 
 DEPENDS+=	apel>=10.3:../../devel/apel
 DEPENDS+=	flim>=1.6:../../devel/flim
-#BUILD_DEPENDS+=	w3-[0-9]*:../../www/w3
+BUILD_DEPENDS+=	qkc-*:../../converters/qkc
 
 .include "../../mk/emacs.mk"
 
 .if ${EMACS_FLAVOR} == "emacs"
 ALL_TARGET=     elc
 INSTALL_TARGET= install
-#PLIST_SRC=      ${PKGDIR}/PLIST.emacs
 .else   # ${EMACS_FLAVOR} == "xemacs"
 ALL_TARGET=     package
 INSTALL_TARGET= install-package
-#PLIST_SRC=      ${PKGDIR}/PLIST.xemacs
 MAKEFLAGS+=     PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 .endif
-DOCDIR=         ${PREFIX}/share/doc/apel
 
+INFO_FILES=	mime-ui-en.info mime-ui-ja.info
+
+pre-build:
+	${RM} -f ${WRKSRC}/mime-ui-*.info
+	${LOCALBASE}/bin/qkc -eu ${WRKSRC}/mime-ui-*.texi
+	cd ${WRKSRC} && ${MAKEINFO} --no-validate --no-split mime-ui-en.texi
+	cd ${WRKSRC} && ${MAKEINFO} --no-validate --no-split mime-ui-ja.texi
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/mime-ui-en.info ${PREFIX}/info
+	${INSTALL_DATA} ${WRKSRC}/mime-ui-ja.info ${PREFIX}/info
+
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
