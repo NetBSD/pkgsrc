@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/11/14 03:53:02 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2002/12/24 20:19:21 wiz Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -16,7 +16,7 @@ MAINTAINER=		mrauch@netbsd.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite
 
-NO_BUILDLINK2=		# arcane build procedure causes buildlink2 to not work
+USE_BUILDLINK2=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -107,7 +107,7 @@ do-install:
 	    <${FILESDIR}/soffice >${PREFIX}/bin/soffice
 	${CHMOD} +x ${PREFIX}/bin/soffice
 
-.include "../../devel/pth/buildlink.mk"
-.include "../../lang/perl5/buildlink.mk"
+.include "../../devel/pth/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/java.mk"
 .include "../../mk/bsd.pkg.mk"
