@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/04/02 10:13:43 adam Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/11 20:49:46 kristerw Exp $
 #
 
 DISTNAME=	libsndfile-1.0.9
@@ -14,8 +14,8 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	sndfile.pc.in
 
-# Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE}
+# This package needs a C99 compiler
+GCC_REQD+=		3.1
 
 .include "../../mk/bsd.prefs.mk"
 
