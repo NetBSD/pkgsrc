@@ -1,0 +1,23 @@
+--- src/compose.php.orig	Wed Jun  2 20:38:45 2004
++++ src/compose.php	Wed Jun  2 20:38:19 2004
+@@ -14,7 +14,7 @@
+  *    - Send mail
+  *    - Save As Draft
+  *
+- * $Id: patch-ab,v 1.3 2004/06/02 18:50:27 bouyer Exp $
++ * $Id: patch-ab,v 1.3 2004/06/02 18:50:27 bouyer Exp $
+  */
+ 
+ /* Path for SquirrelMail required files. */
+@@ -757,9 +757,9 @@
+               sqWordWrap($rewrap_body[$i], ($editor_size));
+                 if (preg_match("/^(>+)/", $rewrap_body[$i], $matches)) {
+                     $gt = $matches[1];
+-                    $body .= $body .= '>' . str_replace("\n", "\n>$gt ", rtrim($rewrap_body[$i])) ."\n";
++                    $body .= '>' . str_replace("\n", "\n>$gt ", rtrim($rewrap_body[$i])) ."\n";
+                 } else {
+-                    $body .= $body .= '> ' . str_replace("\n", "\n> ", rtrim($rewrap_body[$i])) . "\n";
++                    $body .= '> ' . str_replace("\n", "\n> ", rtrim($rewrap_body[$i])) . "\n";
+                 }
+                 unset($rewrap_body[$i]);
+             }
