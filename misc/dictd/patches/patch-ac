@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/10/04 09:05:27 uebayasi Exp $
+
+--- decl.h.orig	Mon Jan  1 06:14:18 2001
++++ decl.h
+@@ -35,7 +35,7 @@
+ extern long   random( void );
+ extern char   *index( const char *, int c );
+ 
+-#if defined(__svr4__)
++#if defined(__svr4__) || defined(__NetBSD__)
+ 				/* Just Solaris */
+ extern int    gethostname(char *name, int namelen);
+ extern int    getdtablesize(void);
+@@ -79,7 +79,7 @@
+ extern int    socket( int, int, int );
+ extern int    bind( int, struct sockaddr *, int );
+ extern int    listen( int, int );
+-extern int    wait3( union wait *, int, struct rusage * );
++extern int    wait3( int *, int, struct rusage * );
+ extern int    getdtablesize( void );
+ extern int    ioctl( int, int, caddr_t );
+ extern caddr_t mmap( caddr_t, size_t, int, int, int, off_t );
