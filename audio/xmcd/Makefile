@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 1999/07/06 07:55:21 jlam Exp $
+# $NetBSD: Makefile,v 1.18 1999/08/08 22:56:13 tron Exp $
 #
 
 DISTNAME=	xmcd-2.5
 CATEGORIES=	audio
-MASTER_SITES=	http://mercury.hypersurf.com/~amb/download/xmcd/src/
+MASTER_SITES=	http://metalab.unc.edu/tkan/download/xmcd/src/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://metalab.unc.edu/tkan/xmcd/
