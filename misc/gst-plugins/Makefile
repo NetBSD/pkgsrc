@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/11/12 01:31:50 salo Exp $
+# $NetBSD: Makefile,v 1.10 2003/11/26 23:18:34 wiz Exp $
 #
 
 DISTNAME=		gst-plugins-0.6.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gst-plugins/0.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -50,6 +50,7 @@ pre-install:
 .include "../../graphics/aalib/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/hermes/buildlink2.mk"
+.include "../../graphics/mjpegtools/buildlink2.mk"
 .include "../../graphics/openquicktime/buildlink2.mk"
 .include "../../graphics/swfdec/buildlink2.mk"
 .include "../../misc/gstreamer/buildlink2.mk"
