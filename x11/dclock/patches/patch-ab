@@ -1,7 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/06/03 17:52:48 tron Exp $
+$NetBSD: patch-ab,v 1.2 1999/10/20 11:01:18 agc Exp $
 
---- Dclock.c.orig	1999/02/27 20:35:01	1.1
-+++ Dclock.c	1999/02/27 20:41:17
+Patch from Robert Elz to make the clock behave as a clock,
+rather than a sundial.
+
+--- Dclock.c.orig	Fri Sep 10 16:51:04 1999
++++ Dclock.c	Fri Sep 10 17:06:19 1999
 @@ -21,8 +21,6 @@
  #define CLOCK_WIDTH	256
  #define CLOCK_HEIGHT	80
@@ -112,7 +115,17 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/06/03 17:52:48 tron Exp $
  	winwidth, w->dclock.font->ascent + w->dclock.font->descent);
  
      XDrawString(XtDisplay(w), XtWindow(w), w->dclock.foreGC,
-@@ -960,8 +966,8 @@
+@@ -924,7 +930,8 @@
+ {
+     Boolean alarm_went_off = show_time(w);
+     w->dclock.interval_id =
+-	XtAddTimeOut((unsigned long)((alarm_went_off || w->dclock.seconds)? 1000 : 60000),
++	XtAddTimeOut((unsigned long)((alarm_went_off || w->dclock.seconds) ?
++			1000 : 60000 - ((time(0L) % 60) * 1000)),
+ 			timeout, (XtPointer)w);
+ }
+ 
+@@ -960,8 +967,8 @@
      ||  new->dclock.tails != current->dclock.tails
      ||  new->dclock.fade != current->dclock.fade
      ||  new->dclock.miltime != current->dclock.miltime) {
@@ -123,7 +136,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/06/03 17:52:48 tron Exp $
  	GetGC(new);
  	Resize(new); /* pixmaps need to be redrawn */
  	do_redraw = True;
-@@ -1024,7 +1030,7 @@
+@@ -1024,7 +1031,7 @@
      Arg arg;
  
      XtSetArg(arg, XtNreverseVideo, !w->dclock.reverse);
@@ -132,7 +145,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/06/03 17:52:48 tron Exp $
  }
  
  static void
-@@ -1038,7 +1044,7 @@
+@@ -1038,7 +1045,7 @@
  	return;
      }
      XtSetArg(arg, XtNmilitaryTime, !w->dclock.miltime);
@@ -141,7 +154,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/06/03 17:52:48 tron Exp $
  }
  
  static void
-@@ -1052,7 +1058,7 @@
+@@ -1052,7 +1059,7 @@
  	return;
      }
      XtSetArg(arg, XtNseconds, !w->dclock.seconds);
@@ -150,7 +163,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/06/03 17:52:48 tron Exp $
  }
  
  static void
-@@ -1062,7 +1068,7 @@
+@@ -1062,7 +1069,7 @@
      Arg arg;
  
      XtSetArg(arg, XtNfade, !w->dclock.fade);
@@ -159,7 +172,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/06/03 17:52:48 tron Exp $
      if (w->dclock.fade && w->dclock.scroll)
  	toggle_scroll(w);
  }
-@@ -1074,7 +1080,7 @@
+@@ -1074,7 +1081,7 @@
      Arg arg;
  
      XtSetArg(arg, XtNtails, !w->dclock.tails);
@@ -168,7 +181,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/06/03 17:52:48 tron Exp $
  }
  
  static void
-@@ -1084,7 +1090,7 @@
+@@ -1084,7 +1091,7 @@
      Arg arg;
  
      XtSetArg(arg, XtNalarm, !w->dclock.alarm);
@@ -177,7 +190,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/06/03 17:52:48 tron Exp $
  }
  
  static void
-@@ -1124,20 +1130,24 @@
+@@ -1124,20 +1131,24 @@
  		    int digit = w->dclock.alarm_time[i>1?i+1:i] - '0';
  		    int mod;
  		    switch (i) {
