@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.779 2003/08/11 07:26:51 wiz Exp $
+$NetBSD: TODO,v 1.780 2003/08/11 12:01:19 recht Exp $
 
 Suggested new packages
 ======================
@@ -234,7 +234,6 @@ Suggested package updates
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snd-6.8
 	o snes9x-1.40
-	o soappy-0.9.8 [pkg/20787]
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
