@@ -1,7 +1,39 @@
-$NetBSD: patch-aa,v 1.3 2001/04/29 19:29:37 skrll Exp $
+$NetBSD: patch-aa,v 1.4 2001/07/05 23:41:27 jlam Exp $
 
---- configure.orig	Thu Feb 22 13:17:34 2001
+--- configure.orig	Thu Feb 22 08:17:34 2001
 +++ configure
+@@ -4460,7 +4460,7 @@
+    for dir in $kde_use_extra_libs; do
+      kde_extra_libs="$kde_extra_libs $dir"
+      KDE_EXTRA_RPATH="$KDE_EXTRA_RPATH -R $dir"
+-     USER_LDFLAGS="$USER_LDFLAGS -L$dir"
++     #USER_LDFLAGS="$USER_LDFLAGS -L$dir"	# buildlink.mk
+    done
+    IFS=$ac_save_ifs
+    kde_use_extra_libs="added"
+@@ -5654,7 +5654,7 @@
+ if test "$qt_libraries" = "$x_libraries" || test -z "$qt_libraries"; then
+  QT_LDFLAGS=""
+ else
+- QT_LDFLAGS="-L$qt_libraries"
++ QT_LDFLAGS="-L${QTDIR}/lib"			# buildlink.mk
+  all_libraries="$all_libraries $QT_LDFLAGS"
+ fi
+ 
+@@ -5981,11 +5981,11 @@
+ if test "$kde_includes" = "$x_includes" || test "$kde_includes" = "$qt_includes" ; then
+  KDE_INCLUDES=""
+ else
+- KDE_INCLUDES="-I$kde_includes"
++ KDE_INCLUDES="-I${BUILDLINK_DIR}/include"	# buildlink.mk
+  all_includes="$KDE_INCLUDES $all_includes"
+ fi
+  
+-KDE_LDFLAGS="-L$kde_libraries"
++KDE_LDFLAGS="-L${BUILDLINK_DIR}/lib"		# buildlink.mk
+ if test ! "$kde_libraries" = "$x_libraries" && test ! "$kde_libraries" = "$qt_libraries" ; then 
+  all_libraries="$all_libraries $KDE_LDFLAGS"
+ fi
 @@ -9944,7 +9944,9 @@
  
  
