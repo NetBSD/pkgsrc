@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/03/15 08:48:16 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/03/29 13:33:31 hubertf Exp $
 bin/sx
 bin/nsgmls
 bin/spam
@@ -142,9 +142,13 @@ include/sp/sptchar.h
 include/sp/types.h
 include/sp/xnew.h
 lib/libsp.a
+lib/libsp.la
 lib/libgrove.a
+lib/libgrove.la
 lib/libspgrove.a
+lib/libspgrove.la
 lib/libstyle.a
+lib/libstyle.la
 share/doc/jade/archform.htm
 share/doc/jade/build.htm
 share/doc/jade/catalog.htm
