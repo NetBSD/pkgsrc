@@ -1,3 +1,7 @@
-#!/bin/sh
-# $NetBSD: phoenix.sh,v 1.1 2003/04/14 20:11:49 grant Exp $
-exec @PREFIX@/lib/phoenix-linux/phoenix "$@"
+#!@SH@
+# $NetBSD: phoenix.sh,v 1.2 2003/04/14 21:28:11 grant Exp $
+
+LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:@PREFIX@/lib/phoenix-@PLATFORM@"
+export LD_LIBRARY_PATH
+
+exec @PREFIX@/lib/phoenix-@PLATFORM@/phoenix "$@"

@@ -1,0 +1,9 @@
+# $NetBSD: Makefile.SunOS.sparc,v 1.1 2003/04/14 21:28:10 grant Exp $
+#
+
+DISTNAME=	phoenix-sparc-sun-solaris2.7-static
+
+DEPENDS+=	gtk+>=1.2:../../x11/gtk
+
+PLATFORM=	${LOWER_OPSYS}
+PHOENIX_LIB=	${PREFIX}/lib/phoenix-${PLATFORM}
