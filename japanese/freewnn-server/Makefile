@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/03/16 18:32:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/02/28 13:22:50 wiz Exp $
 #
 
 PKGNAME=	ja-FreeWnn-server-1.10
@@ -11,8 +11,7 @@ WNNDIR=		Wnn
 WNN_TARGET=	SERVER
 WNN_LANG=	ja_JP
 
-MASTERDIR=	${.CURDIR}/../../misc/freewnn-common
-FILESDIR=	${MASTERDIR}/files
-PATCHDIR=	${MASTERDIR}/patches
+FILESDIR=	${.CURDIR}/../../misc/freewnn-common/files
+PATCHDIR=	${.CURDIR}/../../misc/freewnn-common/patches
 
-.include "${MASTERDIR}/Makefile"
+.include "../../misc/freewnn-common/Makefile"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/11 16:19:46 tron Exp $
+# $NetBSD: Makefile,v 1.8 2002/02/28 13:29:46 wiz Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
@@ -12,9 +12,8 @@ COMMENT=	Japanese input method (server)
 
 DEPENDS+=	sj3-lib-2.0.1.20:../../japanese/sj3-lib
 
-MASTERDIR=	${.CURDIR}/../../japanese/sj3-lib
-FILESDIR=	${MASTERDIR}/files
-PATCHDIR=	${MASTERDIR}/patches
+FILESDIR=	${.CURDIR}/../../japanese/sj3-lib/files
+PATCHDIR=	${.CURDIR}/../../japanese/sj3-lib/patches
 
 .include "../../mk/bsd.prefs.mk"
 SJ3OWNER?=	daemon
