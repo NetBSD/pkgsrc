@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/06/05 01:47:36 jschauma Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/03 18:41:28 jschauma Exp $
 #
 
 DISTNAME=		blender-2.27
@@ -20,7 +20,6 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 LDFLAGS+=		-lcrypto
-CFLAGS+=		-DGLX_GLXEXT_LEGACY
 
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --without-ode
