@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8489 2004/12/28 09:10:05 martti Exp $
+$NetBSD: CHANGES,v 1.8490 2004/12/28 11:26:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6607,3 +6607,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated anthy to 5900nb1 [taya 2004-12-28]
 	Added anthy-elisp-5900 [taya 2004-12-28]
 	Updated stunnel to 4.06 [martti 2004-12-28]
+	Removed koncd [wiz 2004-12-28]
