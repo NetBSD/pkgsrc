@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.1.1.1 1999/09/10 00:39:25 tron Exp $
+$NetBSD: md5,v 1.2 2000/05/18 22:51:42 itohy Exp $
 
 MD5 (oneko-1.1b.tar.gz) = 245dc70338104d56477a2d1189174021
+MD5 (oneko-1.2.diff.gz) = a110827ba993ab377e4f0c75fb426df6
