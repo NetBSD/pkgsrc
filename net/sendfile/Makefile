@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/06/15 18:34:26 hwr Exp $
+# $NetBSD: Makefile,v 1.3 2000/09/09 19:51:38 wiz Exp $
 #
 
 DISTNAME=	sendfile-2.1
@@ -8,8 +8,12 @@ MASTER_SITES=	ftp://ftp.uni-stuttgart.de/pub/unix/comm/sendfile/current/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.belwue.de/aktivitaeten/projekte/saft/
 
-IS_INTERACTIVE=	yes
-
 WRKSRC=	${WRKDIR}/${DISTNAME}
+
+post-patch:
+	cd ${WRKSRC} && \
+	${SED} -e 's,@PREFIX@,${PREFIX},' < makeconfig > makeconfig.new; \
+	${MV} makeconfig.new makeconfig; \
+	${CHMOD} +x makeconfig
 
 .include "../../mk/bsd.pkg.mk"
