@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 12:16:00 agc Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/11 08:42:50 snj Exp $
 #
 
 DISTNAME=		gpsutils-0.4.0
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.wombat.ie/gps/
 COMMENT=		Capture and convert data from a Garmin GPS receiver
 
 WRKSRC=			${WRKDIR}/gpsutils-0.4.0/src
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 do-install:
 .for PROGRAM in capture switchmode gbindiff
