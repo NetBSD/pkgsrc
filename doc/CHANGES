@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8980 2005/01/30 21:57:44 wiz Exp $
+$NetBSD: CHANGES,v 1.8981 2005/01/30 23:18:37 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -670,3 +670,16 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated python24 to 2.4nb3 [jmmv 2005-01-30]
 	Removed python [jmmv 2005-01-30]
 	Updated mixminion to 0.0.7.1nb1 [wiz 2005-01-30]
+	Updated fastjar to 0.93nb2 [jmmv 2005-01-30]
+	Updated jdk to 1.1.8nb8 [jmmv 2005-01-30]
+	Updated jikes to 1.22nb2 [jmmv 2005-01-30]
+	Updated kaffe to 1.1.4nb6 [jmmv 2005-01-30]
+	Updated sablevm to 1.1.3nb5 [jmmv 2005-01-30]
+	Updated sun-jdk13 to 1.0.15nb1 [jmmv 2005-01-30]
+	Updated sun-jdk14 to 2.7nb1 [jmmv 2005-01-30]
+	Updated sun-jdk15 to 5.0.1nb1 [jmmv 2005-01-30]
+	Updated sun-jre13 to 1.0.15nb1 [jmmv 2005-01-30]
+	Updated sun-jre14 to 2.7nb1 [jmmv 2005-01-30]
+	Updated sun-jre15 to 5.0.1nb2 [jmmv 2005-01-30]
+	Updated win32-jdk to 0.1nb1 [jmmv 2005-01-30]
+	Removed java-wrapper [jmmv 2005-01-30]
