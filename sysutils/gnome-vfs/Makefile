@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/25 13:57:09 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/27 16:13:16 tron Exp $
 #
 
 DISTNAME=	gnome-vfs-0.4.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=unstable/sources/gnome-vfs/}
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 
-DEPENDS+=	GConf-*:../../devel/GConf
+DEPENDS+=	GConf>=0.11:../../devel/GConf
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
