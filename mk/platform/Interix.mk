@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.21 2005/01/24 21:47:00 tv Exp $
+# $NetBSD: Interix.mk,v 1.22 2005/01/25 18:15:58 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -195,7 +195,7 @@ CONFIGURE_ENV+=		${GNU_CONFIGURE:Dac_cv_header_poll_h=no ac_cv_func_poll=no}
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-_OPSYS_MAX_CMDLEN=	262144
+_OPSYS_MAX_CMDLEN_CMD=	${ECHO} 262144
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
 # (it defaults to 'no' as per bsd.pkg.defaults.mk).
