@@ -1,12 +1,47 @@
-$NetBSD: patch-ab,v 1.27 2004/04/01 20:15:54 tron Exp $
+$NetBSD: patch-ab,v 1.28 2004/04/29 04:19:22 atatat Exp $
 
---- Configure.orig	2004-03-11 00:41:04.000000000 +0100
-+++ Configure	2004-04-01 22:12:30.000000000 +0200
-@@ -2210,6 +2210,6 @@
- 	LSOF_VERS="1050"
+Make lsof compile on and properly report 2.0.  Make lsof use statvfs
+on NetBSD where available.
+
+--- Configure.orig	2004-03-10 18:41:04.000000000 -0500
++++ Configure
+@@ -2218,6 +2218,15 @@ return(0); }
+ 	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
+ 	echo "!!!WARNING!!!  Configuring for NetBSD 1.6"
  	;;
--      1.6*)
-+      1.6*|2.0*)
- 	LSOF_TSTBIGF=" "
- 	LSOF_VERS="1060"
- 	;;
++      2.0*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="2000"
++	;;
++      2*)
++	LSOF_VERS=2000
++	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
++	echo "!!!WARNING!!!  Configuring for NetBSD 2.0"
++	;;
+       *)
+ 	echo "Unknown NetBSD release: $LSOF_VSTR"
+ 	echo Assuming NetBSD 1.0
+@@ -2229,7 +2238,7 @@ return(0); }
+     # Test for legal NetBSD version.
+ 
+     case $LSOF_VERS in	# {
+-    1000|1010|1020|1030|1040|1050|1060)
++    1000|1010|1020|1030|1040|1050|1060|2000)
+       ;;
+     *)
+       echo "Unknown NetBSD version: $LSOF_VERS"
+@@ -2505,6 +2514,14 @@ return(0); }
+     then
+       LSOF_CFGF="$LSOF_CFGF -DHAS_SYS_PIPEH"
+     fi	# }
++    if test -r ${LSOF_INCLUDE}/sys/statvfs.h   # {
++    then
++      grep -q '^struct statvfs {' ${LSOF_INCLUDE}/sys/statvfs.h
++      if test $? -eq 0	# {
++      then
++	LSOF_CFGF="$LSOF_CFGF -DHASSTATVFS"
++      fi	# }
++    fi	# }
+     if test -r ${LSOF_INCLUDE}/kvm.h	# {
+     then
+       grep -q kvm_getproc2 ${LSOF_INCLUDE}/kvm.h
