@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.5 1999/02/23 00:38:04 tv Exp $
+# $NetBSD: Makefile,v 1.6 1999/03/10 14:05:40 rh Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/02/01 03:04:11 itojun Exp
 #
 
 DISTNAME=		nntpcache-2.3.3
 CATEGORIES=		news
 MASTER_SITES=		ftp://nntpcache.org/pub/nntpcache/ \
-			ftp://ftp.ntnu.no/pub/unix/news/ \
-			ftp://ftp.nethelp.no/pub/news/ \
+			ftp://ftp.fu-berlin.de/unix/news/nntpcache/ \
+			ftp://ftp.contrib.com/pub/software/unix/news/nntpcache/ \
+			ftp://ftp.eu.net/news/transport/nntpcache/ \
+			ftp://ftp.belgium.eu.net/pub/news/transport/nntpcache/ \
+			ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/news/nntpcache/ \
+			ftp://ftp.faho.rwth-aachen.de/pub/linux/nntpcache/ \
+			ftp://ftp.hway.ru/pub/news/nntpcache/ \
 			ftp://suburbia.net/pub/nntpcache/
 
 MAINTAINER=		packages@netbsd.org
