@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/24 02:09:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/04/19 19:11:59 jlam Exp $
 #
 
 DISTNAME=	freetype-2.0.1
@@ -15,11 +15,18 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.freetype.org/
 COMMENT=	font rendering engine and library API
 
-USE_GMAKE=	YES
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+CHECK_FREETYPE2=	YES
+USE_GMAKE=		YES
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/builds/unix/ltconfig
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${HAVE_BUILTIN_FREETYPE2} != "NO"
+IGNORE=		"FreeType2 has already been installed as part of XFree86-4.x"
+.endif
 
 post-patch:
 	${RM} -f ${LTCONFIG_OVERRIDE} ;				\
