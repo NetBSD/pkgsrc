@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2003/07/13 13:52:40 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/30 14:04:37 markd Exp $
 
-DISTNAME=	kdeaddons-3.1.2
-PKGREVISION=	1
+DISTNAME=	kdeaddons-3.1.3
 CATEGORIES=	misc
 COMMENT=	Add ons for the KDE integrated X11 desktop
 
-.include "../../x11/kde3/Makefile.kde3"
+.include "../../meta-pkgs/kde3/Makefile.kde3"
 
 USE_BUILDLINK2=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
-.include "../../x11/kde3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
