@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2003/07/09 21:14:26 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.27 2003/07/16 07:41:33 tron Exp $
 
 DISTNAME=		icewm-1.2.9
 CATEGORIES=		x11 wm
@@ -11,7 +11,6 @@ GNU_CONFIGURE=		# defined
 USE_BUILDLINK2=		yes
 USE_X11=		# defined
 USE_GMAKE=		# defined
-USE_GNU_ICONV=		yes
 USE_PKGINSTALL=		yes
 USE_PKGLOCALEDIR=	# defined
 BUILD_USES_MSGFMT=	# defined
@@ -32,6 +31,9 @@ PKG_SYSCONFSUBDIR=	icewm
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 CPPFLAGS+=		-DSTART_PIXMAP=\"\\\"bsd-daemon.xpm\\\"\"
+.endif
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+= --with-unicode-set=utf-32
 .endif
 
 DOCDIR=			${PREFIX}/share/doc/icewm
