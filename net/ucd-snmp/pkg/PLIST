@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/05/24 12:31:13 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/08/03 19:36:01 frueauf Exp $
 bin/snmpbulkwalk
 bin/snmpcheck
 bin/snmpdelta
@@ -23,6 +23,7 @@ include/ucd-snmp/snmp_client.h
 include/ucd-snmp/snmp_impl.h
 lib/libsnmp.a
 man/man1/snmpbulkwalk.1.gz
+man/man1/snmpcmd.1.gz
 man/man1/snmpd.1.gz
 man/man1/snmpdelta.1.gz
 man/man1/snmpget.1.gz
@@ -52,6 +53,7 @@ share/snmp/mibs/HOST-RESOURCES-MIB.txt
 share/snmp/mibs/IANAifType-MIB.txt
 share/snmp/mibs/IF-MIB.txt
 share/snmp/mibs/IP-MIB.txt
+share/snmp/mibs/IPFWACC-MIB.txt
 share/snmp/mibs/RFC1155-SMI.txt
 share/snmp/mibs/RFC1213-MIB.txt
 share/snmp/mibs/RFC1271-MIB.txt
