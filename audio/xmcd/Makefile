@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xmcd
-# Version required:	2.2 (pl1)
-# Date created:		21 December 1997
-# Whom:			hubertf@netbsd.org
-#
-# $NetBSD: Makefile,v 1.6 1998/03/20 08:43:44 mycroft Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:15 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/09/08 13:20:10 tg Exp 
 #
 
@@ -30,4 +25,4 @@ post-install:
 	${MV} ${PREFIX}/man/cat1/cda.1 ${PREFIX}/man/man1/cda.1
 	${MV} ${PREFIX}/man/cat1/wm2xmcd.1 ${PREFIX}/man/man1/wm2xmcd.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
