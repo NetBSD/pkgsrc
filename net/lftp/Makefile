@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2003/01/28 22:03:52 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/31 17:01:57 salo Exp $
+#
 
-DISTNAME=	lftp-2.5.2
+DISTNAME=	lftp-2.6.4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/ \
 		ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/old/
@@ -10,23 +11,20 @@ MAINTAINER=	michal@pasternak.w.lub.pl
 HOMEPAGE=	http://lftp.yar.ru/
 COMMENT=	powerful command line ftp client
 
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE} \
-			--sysconfdir=${PKG_SYSCONFDIR}
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
+USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_GNU_READLINE=	# uses GNU readline internal _rl_mark_modified_lines
+GNU_CONFIGURE=		YES
 
-# uses GNU readline internal variables (_rl_mark_modified_lines)
-USE_GNU_READLINE=	YES
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-modules
 
-PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-
-EGDIR=		${PREFIX}/share/examples/lftp
-CONF_FILES=	${EGDIR}/lftp.conf ${PKG_SYSCONFDIR}/lftp.conf
-OWN_DIRS=	${PREFIX}/lib/lftp
-OWN_DIRS+=	${PREFIX}/lib/lftp/${PKG_VERSION}
+CONF_FILES=	${PREFIX}/share/examples/lftp/lftp.conf	\
+		${PKG_SYSCONFDIR}/lftp.conf
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/lftp
