@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2000/03/16 22:21:24 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/06/01 16:10:56 rh Exp $
 bin/gcalc
+bin/gcharmap
 bin/gcolorsel
 bin/gdialog
+bin/gdict
 bin/gdiskfree
 bin/gfontsel
 bin/gless
-bin/gnome-run
-bin/grun
 bin/gsearchtool
 bin/gshutdown
 bin/gstripchart
@@ -14,29 +14,81 @@ bin/gstripchart_applet
 bin/gtt
 bin/guname
 bin/gw
+bin/logview
 bin/splac
 bin/splash
 etc/CORBA/servers/gstripchart_applet.gnorba
-man/man1/gtt.1
+etc/CORBA/servers/gdict.gnorba
 share/applets/Monitors/gstripchart_applet.desktop
+share/applets/Utility/gdict.desktop
 share/gnome/apps/Applications/gtt.desktop
 share/gnome/apps/System/gshutdown.desktop
+share/gnome/apps/System/logview.desktop
+share/gnome/apps/System/gdiskfree.desktop
+share/gnome/apps/System/guname.desktop
+share/gnome/apps/System/gw.desktop
+share/gnome/apps/Utilities/gcharmap.desktop
+share/gnome/apps/Utilities/GDict.desktop
 share/gnome/apps/Utilities/gcalc.desktop
 share/gnome/apps/Utilities/gcolorsel.desktop
-share/gnome/apps/Utilities/gdiskfree.desktop
 share/gnome/apps/Utilities/gfontsel.desktop
 share/gnome/apps/Utilities/gless.desktop
 share/gnome/apps/Utilities/gsearchtool.desktop
 share/gnome/apps/Utilities/gstripchart.desktop
-share/gnome/apps/Utilities/guname.desktop
-share/gnome/apps/Utilities/gw.desktop
-share/gnome/apps/gnome-run.desktop
+share/gnome/help/gcharmap/C/index.html
+share/gnome/help/gcharmap/C/authors.html
+share/gnome/help/gcharmap/C/bugs.html
+share/gnome/help/gcharmap/C/usage.html
+share/gnome/help/gcharmap/C/topic.dat
+share/gnome/help/gcharmap/C/license.html
+share/gnome/help/gcharmap/C/ln7.html
+share/gnome/help/gcharmap/C/images/gcharmap.png
+share/gnome/help/gcharmap/C/images/gcharmap_insertascii.png
+share/gnome/help/gcharmap/C/docbook.css
+share/gnome/help/gcolorsel/C/index.html
+share/gnome/help/gcolorsel/C/usage.html
+share/gnome/help/gcolorsel/C/simple.html
+share/gnome/help/gcolorsel/C/search.html
+share/gnome/help/gcolorsel/C/topic.dat
+share/gnome/help/gcolorsel/C/authors.html
+share/gnome/help/gcolorsel/C/bugs.html
+share/gnome/help/gcolorsel/C/license.html
+share/gnome/help/gcolorsel/C/ln7.html
+share/gnome/help/gcolorsel/C/menus.html
+share/gnome/help/gcolorsel/C/properties.html
+share/gnome/help/gcolorsel/C/xcolors.html
+share/gnome/help/gcolorsel/C/docbook.css
+share/gnome/help/gcolorsel/C/favorites.png
+share/gnome/help/gcolorsel/C/search.png
+share/gnome/help/gcolorsel/C/simple.png
+share/gnome/help/gdict/C/index.html
+share/gnome/help/gdict/C/authors.html
+share/gnome/help/gdict/C/usage.html
+share/gnome/help/gdict/C/topic.dat
+share/gnome/help/gdict/C/license.html
+share/gnome/help/gdict/C/ln7.html
+share/gnome/help/gdict/C/prefs.html
+share/gnome/help/gdict/C/docbook.css
+share/gnome/help/gdict/C/gdict-prefs.png
+share/gnome/help/gdict/C/gdict-spell.png
+share/gnome/help/gdict/C/gdictmain.png
+share/gnome/help/gdiskfree/C/images/gdiskfree-prefs.png
+share/gnome/help/gdiskfree/C/ln7.html
+share/gnome/help/gdiskfree/C/prefs.html
 share/gnome/help/gdiskfree/C/index.html
 share/gnome/help/gdiskfree/C/authors.html
 share/gnome/help/gdiskfree/C/usage.html
 share/gnome/help/gdiskfree/C/topic.dat
 share/gnome/help/gdiskfree/C/images/gdiskfree.png
 share/gnome/help/gdiskfree/C/docbook.css
+share/gnome/help/gless/C/index.html
+share/gnome/help/gless/C/authors.html
+share/gnome/help/gless/C/usage.html
+share/gnome/help/gless/C/topic.dat
+share/gnome/help/gless/C/docbook.css
+share/gnome/help/gless/C/gless-main.png
+share/gnome/help/gfontsel/C/license.html
+share/gnome/help/gfontsel/C/filterwin.png
 share/gnome/help/gfontsel/C/index.html
 share/gnome/help/gfontsel/C/filter.html
 share/gnome/help/gfontsel/C/fontinfo.html
@@ -60,20 +112,79 @@ share/gnome/help/gsearchtool/C/locate.html
 share/gnome/help/gsearchtool/C/topic.dat
 share/gnome/help/gshutdown/C/index.html
 share/gnome/help/gshutdown/C/topic.dat
-share/gnome/help/gshutdown/es/index.html
-share/gnome/help/gshutdown/es/topic.dat
-share/gnome/help/gshutdown/no/index.html
-share/gnome/help/gshutdown/no/topic.dat
+share/gnome/help/gshutdown/C/authors.html
+share/gnome/help/gshutdown/C/usage.html
+share/gnome/help/gshutdown/C/docbook.css
+share/gnome/help/gshutdown/C/gshutdown-advanced.png
+share/gnome/help/gshutdown/C/gshutdown-preferences.png
+share/gnome/help/gshutdown/C/gshutdown.png
+share/gnome/help/gstripchart/C/authors.html
+share/gnome/help/gstripchart/C/usage.html
+share/gnome/help/gstripchart/C/bugs.html
+share/gnome/help/gstripchart/C/license.html
+share/gnome/help/gstripchart/C/ln7.html
+share/gnome/help/gstripchart/C/prefs.html
+share/gnome/help/gstripchart/C/docbook.css
 share/gnome/help/gstripchart/C/index.html
 share/gnome/help/gstripchart/C/topic.dat
+share/gnome/help/gtt/C/authors.html
+share/gnome/help/gtt/C/usage.html
+share/gnome/help/gtt/C/bugs.html
+share/gnome/help/gtt/C/dialogs.html
+share/gnome/help/gtt/C/license.html
+share/gnome/help/gtt/C/ln10.html
+share/gnome/help/gtt/C/preferences.html
+share/gnome/help/gtt/C/docbook.css
+share/gnome/help/gtt/C/gtt_mainwin.png
+share/gnome/help/gtt/C/gtt_prefswin.png
 share/gnome/help/gtt/C/index.html
 share/gnome/help/gtt/C/topic.dat
-share/gnome/help/gtt/de/index.html
-share/gnome/help/gtt/de/topic.dat
-share/gnome/help/gtt/es/index.html
-share/gnome/help/gtt/es/topic.dat
+share/gnome/help/guname/C/index.html
+share/gnome/help/guname/C/authors.html
+share/gnome/help/guname/C/usage.html
+share/gnome/help/guname/C/topic.dat
+share/gnome/help/guname/C/license.html
+share/gnome/help/guname/C/docbook.css
+share/gnome/help/guname/C/guname-cpuinfo.png
+share/gnome/help/guname/C/guname-diskinfo.png
+share/gnome/help/guname/C/guname-main.png
+share/gnome/help/guname/C/guname-memoryinfo.png
+share/gnome/help/gw/C/index.html
+share/gnome/help/gw/C/authors.html
+share/gnome/help/gw/C/usage.html
+share/gnome/help/gw/C/topic.dat
+share/gnome/help/gw/C/bugs.html
+share/gnome/help/gw/C/license.html
+share/gnome/help/gw/C/ln7.html
+share/gnome/help/gw/C/prefs.html
+share/gnome/help/gw/C/docbook.css
+share/gnome/help/gw/C/gw-main.png
+share/gnome/help/gw/C/gw-menuitems.png
 share/gstripchart/gstripchart.conf
+share/logview/logview-descript.db
+share/logview/logview-regexp.db
+share/logview/logview-actions.db
+share/gcolorsel/glade/dialog-new-doc.glade
+share/gcolorsel/glade/dialog-new-doc.glade.h
+share/gcolorsel/glade/dialog-new-view.glade
+share/gcolorsel/glade/dialog-new-view.glade.h
+share/gcolorsel/glade/dialog-prefs.glade
+share/gcolorsel/glade/dialog-prefs.glade.h
+share/gcolorsel/glade/mdi-color-generic-properties.glade
+share/gcolorsel/glade/mdi-color-generic-properties.glade.h
+share/gcolorsel/glade/mdi-color-file-properties.glade
+share/gcolorsel/glade/mdi-color-file-properties.glade.h
+share/gcolorsel/glade/view-color-edit.glade
+share/gcolorsel/glade/view-color-edit.glade.h
+share/gcolorsel/glade/view-color-generic-properties.glade
+share/gcolorsel/glade/view-color-generic-properties.glade.h
+share/gcolorsel/glade/view-color-grid-properties.glade
+share/gcolorsel/glade/view-color-grid-properties.glade.h
+share/gcolorsel/glade/view-color-list-properties.glade
+share/gcolorsel/glade/view-color-list-properties.glade.h
 share/idl/gsu.idl
+share/pixmaps/logview/logview.xpm
+share/pixmaps/gdict.png
 share/pixmaps/gnome-fontsel.png
 share/pixmaps/gnome-searchtool.png
 share/pixmaps/gnome-shutdown.png
@@ -82,19 +193,41 @@ share/pixmaps/gnome-who.png
 @dirrm share/gstripchart
 @dirrm share/gnome/help/gsearchtool/C
 @dirrm share/gnome/help/gsearchtool
-@dirrm share/gnome/help/gtt/es
-@dirrm share/gnome/help/gtt/de
-@dirrm share/gnome/help/gtt/C
-@dirrm share/gnome/help/gtt
-@dirrm share/gnome/help/gstripchart/C
-@dirrm share/gnome/help/gstripchart
-@dirrm share/gnome/help/gshutdown/no
-@dirrm share/gnome/help/gshutdown/es
+@dirrm share/gnome/help/gshutdown/C/images
 @dirrm share/gnome/help/gshutdown/C
 @dirrm share/gnome/help/gshutdown
 @dirrm share/gnome/help/gfontsel/C/stylesheet-images
 @dirrm share/gnome/help/gfontsel/C
 @dirrm share/gnome/help/gfontsel
+@dirrm share/gnome/help/gdiskfree/C/stylesheet-images
 @dirrm share/gnome/help/gdiskfree/C/images
 @dirrm share/gnome/help/gdiskfree/C
 @dirrm share/gnome/help/gdiskfree
+@dirrm share/gnome/help/gcharmap/C/stylesheet-images
+@dirrm share/gnome/help/gcharmap/C/images
+@dirrm share/gnome/help/gcharmap/C
+@dirrm share/gnome/help/gcharmap
+@dirrm share/gnome/help/gstripchart/C/stylesheet-images
+@dirrm share/gnome/help/gstripchart/C/images
+@dirrm share/gnome/help/gstripchart/C
+@dirrm share/gnome/help/gstripchart
+@dirrm share/gnome/help/gtt/C/stylesheet-images
+@dirrm share/gnome/help/gtt/C/images
+@dirrm share/gnome/help/gtt/C
+@dirrm share/gnome/help/gtt
+@dirrm share/gnome/help/guname/C/images
+@dirrm share/gnome/help/guname/C
+@dirrm share/gnome/help/guname
+@dirrm share/gnome/help/gw/C/images
+@dirrm share/gnome/help/gw/C
+@dirrm share/gnome/help/gw
+@dirrm share/gnome/help/gless/C/images
+@dirrm share/gnome/help/gless/C
+@dirrm share/gnome/help/gless
+@dirrm share/gnome/help/gcolorsel/C/stylesheet-images
+@dirrm share/gnome/help/gcolorsel/C
+@dirrm share/gnome/help/gcolorsel
+@dirrm share/pixmaps/logview
+@dirrm share/logview
+@dirrm share/gcolorsel/glade
+@dirrm share/gcolorsel

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2000/03/16 22:21:21 tron Exp $
+# $NetBSD: Makefile,v 1.17 2000/06/01 16:10:52 rh Exp $
 
-DISTNAME=	gnome-utils-1.0.51
+DISTNAME=	gnome-utils-1.2.0
 CATEGORIES=	misc x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/gnome-utils/}
 
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.gnome.org/
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
-DEPENDS+=	gnome-core>=1.0.55.1:../../x11/gnome-core
+DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
