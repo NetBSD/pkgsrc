@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.2 2004/11/15 11:15:42 hira Exp $
+$NetBSD: patch-ac,v 1.2.2.1 2004/12/27 18:30:52 snj Exp $
 
---- config/cf/NetBSD.cf.in.orig	2004-08-15 09:03:36.000000000 +0900
-+++ config/cf/NetBSD.cf.in	2004-11-03 16:54:50.000000000 +0900
+--- config/cf/NetBSD.cf.in.orig	2004-08-15 02:03:36.000000000 +0200
++++ config/cf/NetBSD.cf.in	2004-12-20 15:33:15.000000000 +0100
+@@ -123,7 +123,7 @@
+ # define ThreadedX		YES
+ # define HasThreadSafeAPI	YES
+ # define ThreadsLibraries	-lpthread
+-# define LibraryMTDefines	-DUSE_NBSD_THREADLIB
++# define LibraryMTDefines	@@NETBSD_THREADLIB@@
+ # define SystemMTDefines	-D_REENTRANT
+ # define MTSafeAPIDefines	-DXUSE_MTSAFE_API -DXNO_MTSAFE_PWDAPI
+ #else 
 @@ -146,7 +146,7 @@
  #define MkdirHierCmd		mkdir -p
  
