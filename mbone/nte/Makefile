@@ -1,9 +1,4 @@
-# New ports collection makefile for:	nte
-# Version required:	1.5a23
-# Date created:		5 September 1996
-# Whom:	      		mycroft
-#
-# $NetBSD: Makefile,v 1.2 1998/03/20 07:22:05 mycroft Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:32 agc Exp $
 #
 
 DISTNAME=	nt.1.5a23
@@ -29,15 +24,15 @@ MAKE_ENV=	TK_SRC=${TK_SRC}
 do-configure:
 	cd ${WRKSRC}/netbsd && sh configure
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
 
 #DISGUSTING HACK ALERT
 #Although nte includes an hsearch.c for those who don't have it in
 # libc, there's no way to get the default Makefile to build it.
 # So we build it here.
-#This is below the .include <bsd.port.mk> since variable names in
+#This is below the .include "../../mk/bsd.pkg.mk" since variable names in
 # targets or dependencies are evaluated when they are read so
-# bsd.port.mk must have defined ${WRKSRC} already.
+# bsd.pkg.mk must have defined ${WRKSRC} already.
 pre-build:	${WRKSRC}/netbsd/hsearch.o
 
 ${WRKSRC}/netbsd/hsearch.o:	${WRKSRC}/src/hsearch.c

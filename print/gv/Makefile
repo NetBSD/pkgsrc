@@ -1,9 +1,4 @@
-# New ports collection makefile for:	gv
-# Version required:	gv-3.5.8
-# Date created:		Nov 1997
-# Whom:			soren@t.dk
-#
-# $NetBSD: Makefile,v 1.6 1998/02/11 07:29:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:46 agc Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -26,4 +21,4 @@ post-install:
 .endif
 	@${SH} ${PKGDIR}/INSTALL ${PKGNAME} POST-INSTALL
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

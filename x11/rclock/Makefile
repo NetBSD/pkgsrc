@@ -1,10 +1,4 @@
-# ex:ts=8
-# Ports collection Makefile for:  rclock
-# Version required:		  2.19
-# Date created:			  24th Feburary 1997
-# Whom:				  obrien@NUXI.com
-#
-# $NetBSD: Makefile,v 1.3 1998/01/25 00:11:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:55 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/03/03 16:27:10 obrien Exp
 #
 
@@ -25,4 +19,4 @@ GNU_CONFIGURE=  yes
 ALL_TARGET=	clock
 MAN1=		rclock.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

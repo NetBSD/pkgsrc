@@ -1,9 +1,4 @@
-# New ports collection makefile for:	fvwm95-2
-# Version required:	2.0.43a
-# Date created:		Sa   1 Feb 1997 14:46:05 MET
-# Whom:			Andreas Klemm <andreas@klemm.gtn.com>
-#
-# $NetBSD: Makefile,v 1.6 1998/03/24 23:32:14 tron Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:53 agc Exp $
 # FreeBSD: Makefile,v 1.17 1997/12/24 01:21:18 alex Exp
 #
 
@@ -30,4 +25,4 @@ post-install:
 		@${INSTALL_MAN}	${WRKSRC}/fvwm/fvwm95.man \
 			${PREFIX}/man/man1/fvwm95.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:   kdelibs
-# Version required:    Beta3
-# Date created:        28 October 1997
-# Whom:                Stefan Eßer <se@freebsd.org>
-#
-# $NetBSD: Makefile,v 1.6 1998/03/21 01:53:36 tron Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:54 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -34,4 +29,4 @@ CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}"
 
 WRKSRC=		${WRKDIR}/kdelibs
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

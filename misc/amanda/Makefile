@@ -1,9 +1,4 @@
-# New ports collection makefile for:	amanda
-# Version required:			2.3.0
-# Date created:				28th Feb 1995
-# Whom:					gpalmer
-#
-# $NetBSD: Makefile,v 1.5 1998/01/24 20:52:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:33 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -29,4 +24,4 @@ post-install:
 	${MKDIR}  ${PREFIX}/share/examples/amanda
 	${CP} -R ${WRKSRC}/example/* ${PREFIX}/share/examples/amanda
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

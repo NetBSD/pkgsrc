@@ -1,9 +1,4 @@
-# New packages collection makefile for:	autoconf
-# Version required:     2.12
-# Date created:		7 October 1995
-# Whom:			torstenb@FreeBSD.ORG
-#
-# $NetBSD: Makefile,v 1.12 1998/03/16 11:02:22 frueauf Exp $
+# $NetBSD: Makefile,v 1.13 1998/04/15 10:38:19 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -25,4 +20,4 @@ post-install:
 	@install-info ${PREFIX}/info/autoconf.info ${PREFIX}/info/dir
 	@install-info ${PREFIX}/info/standards.info ${PREFIX}/info/dir
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

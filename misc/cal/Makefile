@@ -1,9 +1,4 @@
-# New ports collection makefile for:	cal
-# Version required:			3.5
-# Date created:				2 April 1997
-# Whom:	Andrey Zakhvatov <andy@icc.surw.chel.su>
-#
-# $NetBSD: Makefile,v 1.2 1997/10/24 00:47:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:34 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/05/12 06:33:23 max Exp
 #
 
@@ -27,4 +22,4 @@ do-install:
 	if [ ! -f ${PREFIX}/etc/cal/calcol ]; then ${INSTALL_DATA} ${WRKDIR}/cal-3.5/cal.col ${PREFIX}/etc/cal/calcol; fi
 	if [ ! -f ${PREFIX}/etc/cal/caldat ]; then ${INSTALL_DATA} ${WRKDIR}/cal-3.5/cal.dat ${PREFIX}/etc/cal/caldat; fi
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

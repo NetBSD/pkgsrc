@@ -1,10 +1,4 @@
-# New ports collection makefile for:	faces-1.6.1
-# Version required:	1.6.1
-# Date created:		09 December 96
-# Whom:			Lars Koeller <Lars_Koeller@odie.physik2.uni-rostock.de>
-#			Andreas Klemm <andreas@FreeBSD.ORG>
-#
-# $NetBSD: Makefile,v 1.6 1998/03/10 14:32:54 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:30 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/17 18:47:53 max Exp
 #
 
@@ -36,4 +30,4 @@ post-install:
 	@${SED} -e 's|@localbase@|'${LOCALBASE}'|g' \
 		-e 's|@x11base@|'${X11BASE}'|g' < ${PKGDIR}/PLIST > ${PLIST_SRC}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

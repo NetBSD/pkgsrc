@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xlockmore
-# Version required:     4.08
-# Date created:		2 March 1998
-# Whom:			hubertf
-#
-# $NetBSD: Makefile,v 1.11 1998/03/24 07:54:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.12 1998/04/15 10:38:58 agc Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
@@ -23,4 +18,4 @@ CONFIGURE_ARGS+= --with-mesagl --without-motif --without-sx \
 USE_X11=	yes
 MAN1=		xlock.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

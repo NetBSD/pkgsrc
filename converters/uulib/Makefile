@@ -1,9 +1,4 @@
-# New ports collection makefile for:	uulib
-# Version Required:     0.5.9
-# Date Created:		04 Aug 1996
-# Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
-#
-# $NetBSD: Makefile,v 1.3 1998/03/01 22:56:24 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:18 agc Exp $
 # $FreeBSD Id: Makefile,v 1.14 1998/02/18 22:20:02 hoek Exp
 #
 
@@ -42,4 +37,4 @@ do-install:
 .endfor
 .endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	perl5
-# Version required:	5.004_01
-# Date created:		16 April 1995
-# Whom:			markm
-#
-# $NetBSD: Makefile,v 1.7 1998/03/16 06:56:19 mycroft Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:29 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -74,4 +69,4 @@ post-install:
 	@strip ${PREFIX}/bin/suidperl
 .endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

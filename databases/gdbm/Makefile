@@ -1,9 +1,4 @@
-# New ports collection makefile for: gdbm
-# Version required:	1.7.3
-# Date created:		8 Apr 1996
-# Whom:			Brent J. Nordquist <bjn@visi.com>
-#
-# $NetBSD: Makefile,v 1.3 1998/01/24 03:42:02 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:18 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/01/28 08:11:23 asami Exp 
 #
 
@@ -26,4 +21,4 @@ post-build:
 post-install:
 	@install-info ${PREFIX}/info/gdbm.info ${PREFIX}/info/dir
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

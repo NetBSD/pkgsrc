@@ -1,9 +1,4 @@
-# New ports collection makefile for:	wget
-# Version required:	1.4.5
-# Date created:		31 December 1996
-# Whom:			Thomas Gellekum <tg@FreeBSD.ORG>
-#
-# $NetBSD: Makefile,v 1.3 1998/03/10 15:30:38 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:40 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/05/22 07:53:29 tg Exp
 #
 
@@ -25,4 +20,4 @@ post-install:
 	fi
 	-install-info ${PREFIX}/info/wget.info ${PREFIX}/info/dir
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	mc
-# Version required:	4.1
-# Date created:		24 Oct 1997
-# Whom:			hubertf@netbsd.org
-#
-# $NetBSD: Makefile,v 1.4 1998/01/24 21:18:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:36 agc Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
@@ -22,4 +17,4 @@ MAN8=		mcserv.8
 post-install:
 	@ ${RMDIR} ${PREFIX}/lib/mc/icons
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

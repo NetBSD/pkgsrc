@@ -1,16 +1,5 @@
-# Packages collection makefile for:	sdr
-# Version required:			2.3a1
-# Date created:				18 November 1997
-# By:	      Ignatios Souvatzis <is@netbsd.org>
-#
-# $NetBSD: Makefile,v 1.5 1998/01/30 13:57:55 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:33 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/10/15 20:35:20 fenner Exp 
-#
-# Based on:
-# New ports collection makefile for:	sdr
-# Version required:			2.3a1
-# Date created:				5 September 1996
-# Whom:	      Bill Fenner <fenner@FreeBSD.ORG>
 #
 
 DISTNAME=	sdr.V2.3a1
@@ -33,4 +22,4 @@ USE_X11=	yes
 post-extract:
 	-@rm ${WRKSRC}/src/libs.tcl
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

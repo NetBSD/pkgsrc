@@ -1,9 +1,4 @@
-# New ports collection makefile for:	dxpc
-# Version required:			3.7.0
-# Date created:				2 Januar 1998
-# Whom:					frueauf@ira.uka.de
-#
-# $NetBSD: Makefile,v 1.3 1998/03/20 08:35:59 mycroft Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:53 agc Exp $
 #
 
 DISTNAME=	dxpc-3.7.0
@@ -21,4 +16,4 @@ MAN1=		dxpc.1
 post-install:
 	@strip ${PREFIX}/bin/dxpc
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

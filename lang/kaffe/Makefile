@@ -1,9 +1,4 @@
-# New ports collection makefile for:    kaffe
-# Version required:     0.9.2
-# Date created:         20 February 1995
-# Whom:                 Tim Wilkinson <tim@sarc.city.ac.uk>
-#
-# $NetBSD: Makefile,v 1.5 1998/02/02 08:59:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:29 agc Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/08 09:37:16 obrien Exp
 #
 
@@ -30,4 +25,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ENVIRONMENT ${WRKSRC}/license.terms ${PREFIX}/share/kaffe
 	${LDCONFIG} || ${TRUE}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

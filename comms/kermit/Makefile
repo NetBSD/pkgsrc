@@ -1,9 +1,4 @@
-# New ports collection makefile for:	kermit
-# Version required:     6.0.192
-# Date created:		Oct 27, 1994
-# Whom:			pst
-#
-# $NetBSD: Makefile,v 1.6 1998/03/20 22:04:08 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:16 agc Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -27,4 +22,4 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/dot.kermrc ${PREFIX}/share/examples/kermit
 	@${CAT} ${PKGDIR}/DESCR
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New packages collection makefile for:	ncurses
-# Version required:     		1.9.9g
-# Date created:				Tue Oct 28 00:12:41 CET 1997
-# Whom:					Hubert Feyrer (hubertf@netbsd.org)
-#
-# $NetBSD: Makefile,v 1.12 1998/03/16 11:06:07 frueauf Exp $
+# $NetBSD: Makefile,v 1.13 1998/04/15 10:38:21 agc Exp $
 
 DISTNAME=	ncurses-1.9.9g
 CATEGORIES=	devel
@@ -65,4 +60,4 @@ post-install:
 	  ${MV} $$i.BAK $$i ; done )
 	${LDCONFIG} || ${TRUE}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

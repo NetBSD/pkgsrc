@@ -1,9 +1,4 @@
-# New ports collection makefile for:    sirc
-# Version required:     2.21
-# Date created:         1997/11/11
-# Whom:                 hubertf@netbsd.org
-#
-# $NetBSD: Makefile,v 1.4 1998/01/24 21:42:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:40 agc Exp $
 
 DISTNAME=	sirc-2.21
 CATEGORIES=	net
@@ -41,4 +36,4 @@ do-install:
 		${ECHO} "" ; \
 	) | ./install
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

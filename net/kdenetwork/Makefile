@@ -1,9 +1,4 @@
-# New ports collection makefile for:   kdenetwork
-# Version required:    Beta3
-# Date created:        28 October 1997
-# Whom:                Stefan Eßer <se@freebsd.org>
-#
-# $NetBSD: Makefile,v 1.6 1998/03/21 01:54:50 tron Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -46,4 +41,4 @@ CONFIGURE_ENV=	INSTALL_DATA="${INSTALL_DATA}" \
 
 WRKSRC=		${WRKDIR}/kdenetwork
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

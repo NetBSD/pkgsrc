@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/02/08 23:42:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:24 agc Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -98,4 +98,4 @@
 #    SUBDIR += yamsweeper
 #    SUBDIR += ztrack
 
-.include <bsd.port.subdir.mk>
+.include "../mk/bsd.pkg.subdir.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:    depot
-# Version required:     5.14
-# Date created:         10 Feb 1998
-# Whom:                 tv@netbsd.org
-#
-# $NetBSD: Makefile,v 1.2 1998/02/15 10:51:56 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:49 agc Exp $
 #
 
 DISTNAME=       depot-5.14
@@ -22,4 +17,4 @@ do-install:
 	@cd ${WRKSRC}/man/man1 && ${MAKE} DESTDIR=${PREFIX} install
 	@cd ${WRKSRC}/man/man5 && ${MAKE} DESTDIR=${PREFIX} install
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

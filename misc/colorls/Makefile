@@ -1,9 +1,4 @@
-# New ports collection makefile for:	colorls
-# Version required:	FreeBSD-current (around January '97)
-# Date created:		8 March 1995
-# Whom:			Satoshi Asami
-#
-# $NetBSD: Makefile,v 1.4 1998/02/23 15:25:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:34 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/04/30 03:18:06 asami Exp
 #
 
@@ -23,4 +18,4 @@ CAT1=		colorls.0
 pre-patch:
 	${CP} ${WRKSRC}/ls.1 ${WRKSRC}/colorls.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	Xfinans
-# Version required:			5.9
-# Date Created:				30 January 1998
-# Whom:					root@garbled.futureone.com
-#
-# $NetBSD: Makefile,v 1.1 1998/02/08 23:48:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1998/04/15 10:38:57 agc Exp $
 #
 
 DISTNAME=		xfinans-5.9
@@ -37,4 +32,4 @@ post-install:
 	${CP} ${WRKSRC}/../category_engine ${PREFIX}/share/examples/Xfinans
 	${RM} ${PREFIX}/man/cat1/xfinans.0
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	readline
-# Version required:    			2.1
-# Date created:        			Fri Mar  6 19:07:28 GMT 1998
-# Whom:                			Alistair Crooks (agc@netbsd.org)
-#
-# $NetBSD: Makefile,v 1.4 1998/03/28 21:24:40 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:21 agc Exp $
 #
 
 DISTNAME=	readline-2.1
@@ -28,4 +23,4 @@ do-build:
 post-install:
 	@${LDCONFIG} || ${TRUE}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
