@@ -11,5 +11,5 @@ Important features of the GnuTLS library include:
 - Support for TLS Extension mechanism
 - Support for TLS Compression Methods
 
-Additionaly GnuTLS provides an emulation API for the widely used OpenSSL
+Additionally GnuTLS provides an emulation API for the widely used OpenSSL
 library, to ease integration with existing applications.
