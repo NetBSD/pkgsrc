@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.2 1999/02/02 23:14:04 tron Exp $
+
+--- bm_search.c.orig	Sun Sep 20 18:49:08 1998
++++ bm_search.c	Wed Feb  3 00:00:27 1999
+@@ -57,7 +57,6 @@
+ #include <X11/Xutil.h>
+ #include <sys/types.h>
+ #define const
+-#include "regex.h"
+ 
+ #include "main_text.h"
+ #include "bm_search.h"
+@@ -69,6 +68,8 @@
+ #include "dial_box.h"
+ #include "ie_func.h"
+ #include "selection.h"
++/* Put this at the end since it overrides system includes */
++#include "regex.h"
+ 
+ static char *str_save = 0;
+ static char *str_old = 0;
