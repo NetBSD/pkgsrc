@@ -1,0 +1,13 @@
+--- kghostview/kaccel.cpp.orig	Wed Apr  8 01:38:58 1998
++++ kghostview/kaccel.cpp	Sun Jul  5 23:42:12 1998
+@@ -497,7 +497,9 @@
+ 	uint keyCode = 0;
+ 	int j, nb_toks = 0;
+ 	char sKey[200];
+-	
++
++	if ( key == NULL ) return keyCode;
++
+ 	strncpy(sKey, (const char *)key, 200);
+ 	
+ 	if ( strcmp( sKey, "" ) == -1  ) return keyCode;
