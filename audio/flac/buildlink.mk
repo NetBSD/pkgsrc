@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/08/13 18:46:10 nra Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/09/04 19:34:14 jlam Exp $
 #
 # This Makefile fragment is included by packages that use flac.
 #
@@ -17,7 +17,7 @@ FLAC_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.flac?=	flac>=1.0
+BUILDLINK_DEPENDS.flac?=	flac>=1.0.3
 DEPENDS+=	${BUILDLINK_DEPENDS.flac}:../../audio/flac
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.flac=flac
