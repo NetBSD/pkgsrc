@@ -1,0 +1,57 @@
+$NetBSD: patch-ba,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+
+--- tkspline/Makefile.in.orig	Fri Mar  1 22:35:43 2002
++++ tkspline/Makefile.in
+@@ -185,13 +185,7 @@
+ Z_INCLUDES = @Z_INCLUDES@
+ Z_LIBS = @Z_LIBS@
+ 
+-INCLUDES = @X_CFLAGS@ \
+-	@TCL_CFLAGS@ \
+-	@TK_CFLAGS@ @TK_DEFS@ \
+-	@TCLINT_INCLUDES@ \
+-	@TKINT_INCLUDES@ \
+-	-I@TK_EXEC_PREFIX@/include \
+-	-I@TCLSH_EXEC_PREFIX@/include
++INCLUDES = @X_CFLAGS@ 	@TCL_CFLAGS@ 	@TK_CFLAGS@ @TK_DEFS@ 	@TCLINT_INCLUDES@ 	@TKINT_INCLUDES@
+ 
+ 
+ LIBS = 
+@@ -205,9 +199,7 @@
+ 
+ libtkspline_la_SOURCES = tkspline.c
+ 
+-libtkspline_la_LIBADD = \
+-	../tkstubs/libtkstubs.la \
+-	../tclstubs/libtclstubs.la 
++libtkspline_la_LIBADD =  	${TK_STUB_LIB_SPEC} 	${TCL_STUB_LIB_SPEC}
+ 
+ 
+ CLEANFILES = pkgIndex.tcl
+@@ -227,8 +219,7 @@
+ X_EXTRA_LIBS = @X_EXTRA_LIBS@
+ X_PRE_LIBS = @X_PRE_LIBS@
+ libtkspline_la_LDFLAGS = 
+-libtkspline_la_DEPENDENCIES =  ../tkstubs/libtkstubs.la \
+-../tclstubs/libtclstubs.la
++libtkspline_la_DEPENDENCIES = 
+ libtkspline_la_OBJECTS =  tkspline.lo
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+@@ -244,7 +235,7 @@
+ 
+ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = gtar
++TAR = tar
+ GZIP_ENV = --best
+ SOURCES = $(libtkspline_la_SOURCES)
+ OBJECTS = $(libtkspline_la_OBJECTS)
+@@ -485,7 +476,6 @@
+ 	      || exit 1; \
+ 	  fi; \
+ 	done
+-
+ info-am:
+ info: info-recursive
+ dvi-am:

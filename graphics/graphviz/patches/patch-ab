@@ -1,0 +1,71 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+
+--- configure.in.orig	Fri Mar  1 03:47:55 2002
++++ configure.in
+@@ -144,12 +144,11 @@
+ 
+ # Some systems don't have Tcl.  Don't build
+ # the Tcl products if we don't have the library.
+-TCLCONFIG=${TCLSH_EXEC_PREFIX}/lib/tclConfig.sh
+ if test -f $TCLCONFIG; then
+     AC_MSG_RESULT([using $TCLCONFIG])
+     file=${TCLCONFIG}
+     . $file
+-    TCL_SUBDIRS="tclstubs tclhandle gdtclft tcldot tcldgr tcldgl tclpathplan"
++    TCL_SUBDIRS="tclhandle gdtclft tcldot tcldgr tcldgl tclpathplan"
+     TCL_PKGINDEX="gdtclft/pkgIndex.tcl tcldot/pkgIndex.tcl tcldgr/pkgIndex.tcl tcldgl/pkgIndex.tcl tclpathplan/pkgIndex.tcl"
+ else
+     AC_MSG_WARN([Unable to find tclConfig.sh. The packages: "gdtclft tcldot tcldgr tcldgl tclpathplan" will not be built])
+@@ -220,12 +219,11 @@
+ 
+ # Some systems have Tcl, but not TK.  Don't build
+ # the Tk products if we don't have the library.
+-TKCONFIG=${WISH_EXEC_PREFIX}/lib/tkConfig.sh
+ if test -f $TKCONFIG; then
+     AC_MSG_RESULT([using $TKCONFIG])
+     file=${TKCONFIG}
+     . $file
+-    TK_SUBDIRS="tkstubs tkspline"
++    TK_SUBDIRS="tkspline"
+     TK_PKGINDEX="tkspline/pkgIndex.tcl"
+ else
+     AC_MSG_WARN([Unable to find tkConfig.sh. The package "tkspline" will not be built])
+@@ -529,36 +527,12 @@
+ 
+ # -----------------------------------
+ # tclInt.h
+-if test -f "$TCL_SRC_DIR/generic/tclInt.h"; then
+-TCLINT_INCLUDES="-I$TCL_SRC_DIR/generic"
+-else
+-if test -f "/usr/include/tclInt.h"; then
+-TCLINT_INCLUDES="-I/usr/include"
+-else
+-if test -f "/usr/local/include/tclInt.h"; then
+-TCLINT_INCLUDES="-I/usr/local/include"
+-else
+-TCLINT_INCLUDES="-I$TOP_DIR/tclstubs"
+-fi
+-fi
+-fi
++TCLINT_INCLUDES="-I${BUILDLINK_DIR}/include/tcl/generic"
+ AC_SUBST(TCLINT_INCLUDES)
+ 
+ # -----------------------------------
+ # tkInt.h
+-if test -f "$TK_SRC_DIR/generic/tkInt.h"; then
+-TKINT_INCLUDES="-I$TK_SRC_DIR/generic"
+-else
+-if test -f "/usr/include/tkInt.h"; then
+-TKINT_INCLUDES="-I/usr/include"
+-else
+-if test -f "/usr/local/include/tkInt.h"; then
+-TKINT_INCLUDES="-I/usr/local/include"
+-else
+-TKINT_INCLUDES="-I$TOP_DIR/tkstubs"
+-fi
+-fi
+-fi
++TKINT_INCLUDES="-I${BUILDLINK_DIR}/include/tk/generic"
+ AC_SUBST(TKINT_INCLUDES)
+ 
+ # -----------------------------------

@@ -1,0 +1,62 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+
+--- gdtclft/Makefile.in.orig	Fri Mar  1 22:35:34 2002
++++ gdtclft/Makefile.in
+@@ -187,17 +187,10 @@
+ 
+ AUTOMAKE_OPTIONS = 1.4
+ 
+-INCLUDES = @TCL_CFLAGS@ \
+-	-I$(top_srcdir)/tclhandle \
+-	-I$(top_srcdir)/gd \
+-	-I@TCLSH_EXEC_PREFIX@/include
++INCLUDES = @TCL_CFLAGS@ 	-I$(top_srcdir)/tclhandle 	-I$(top_srcdir)/gd
+ 
+ 
+-LIBS = ${FT_LIBS} \
+-	${PNG_LIBS} \
+-	${JPEG_LIBS} \
+-	${XPM_LIBS} \
+-	${Z_LIBS} -lc
++LIBS = ${FT_LIBS} 	${PNG_LIBS} 	${JPEG_LIBS} 	${XPM_LIBS} 	${Z_LIBS} -lc
+ 
+ 
+ SUBDIRS = demo
+@@ -207,10 +200,7 @@
+ 
+ libgdtclft_la_SOURCES = gdtclft.c
+ 
+-libgdtclft_la_LIBADD = \
+-	../tclhandle/libtclhandle.la \
+-	../gd/libgd.la \
+-	../tclstubs/libtclstubs.la
++libgdtclft_la_LIBADD =  	../tclhandle/libtclhandle.la 	../gd/libgd.la 	${TCL_STUB_LIB_SPEC}
+ 
+ 
+ CLEANFILES = pkgIndex.tcl
+@@ -231,7 +221,7 @@
+ X_PRE_LIBS = @X_PRE_LIBS@
+ libgdtclft_la_LDFLAGS = 
+ libgdtclft_la_DEPENDENCIES =  ../tclhandle/libtclhandle.la \
+-../gd/libgd.la ../tclstubs/libtclstubs.la
++../gd/libgd.la
+ libgdtclft_la_OBJECTS =  gdtclft.lo
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+@@ -247,7 +237,7 @@
+ 
+ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = gtar
++TAR = tar
+ GZIP_ENV = --best
+ SOURCES = $(libgdtclft_la_SOURCES)
+ OBJECTS = $(libgdtclft_la_OBJECTS)
+@@ -488,7 +478,6 @@
+ 	      || exit 1; \
+ 	  fi; \
+ 	done
+-
+ info-am:
+ info: info-recursive
+ dvi-am:

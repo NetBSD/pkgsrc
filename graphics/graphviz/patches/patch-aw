@@ -1,0 +1,22 @@
+$NetBSD: patch-aw,v 1.1.1.1 2002/03/05 13:37:29 seb Exp $
+
+--- tclpathplan/demo/Makefile.in.orig	Fri Mar  1 22:35:41 2002
++++ tclpathplan/demo/Makefile.in
+@@ -189,7 +189,7 @@
+ 
+ SUBDIRS = pathplan_data
+ 
+-demodir = $(libdir)/@PACKAGE@/demo
++demodir = $(prefix)/share/examples/@PACKAGE@
+ demo_SCRIPTS = pathplan
+ demo_DATA = pathplan.README 
+ 
+@@ -206,7 +206,7 @@
+ 
+ DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+ 
+-TAR = gtar
++TAR = tar
+ GZIP_ENV = --best
+ all: all-redirect
+ .SUFFIXES:
