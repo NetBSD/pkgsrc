@@ -1,9 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 1999/02/11 19:17:31 tv Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/03/06 04:28:03 hubertf Exp $
 bin/prcs
-man/man1/prcs.1.gz
 @unexec install-info --delete --info-dir=%D/info %D/info/prcs.info
 info/prcs.info
 info/prcs.info-1
 info/prcs.info-2
 info/prcs.info-3
 @exec install-info --info-dir=%D/info %D/info/prcs.info
+man/man1/prcs.1
+share/examples/prcs/prcs-ediff.el
+share/examples/prcs/prcs-ediff.elc
+share/examples/prcs/prcs-minor.el
+share/examples/prcs/prcs-minor.elc
+share/examples/prcs/prcs.el
+share/examples/prcs/prcs.elc
+@dirrm share/examples/prcs

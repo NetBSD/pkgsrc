@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:28 agc Exp $
+$NetBSD: patch-aa,v 1.3 2000/03/06 04:28:02 hubertf Exp $
 
---- configure	1998/05/08 12:09:36	1.1
-+++ configure	1998/05/08 12:12:48
-@@ -3726,7 +3726,7 @@
+--- configure.orig	Sun Sep 13 23:49:17 1998
++++ configure	Mon Mar  6 04:20:09 2000
+@@ -4068,7 +4068,7 @@
    ;;
  esac
  fi
@@ -11,14 +11,3 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 10:40:28 agc Exp $
  if test -n "$EMACS"; then
    echo "$ac_t""$EMACS" 1>&6
  else
---- emacs/Makefile.in	1998/05/08 12:35:17	1.1
-+++ emacs/Makefile.in	1998/05/08 12:36:49
-@@ -165,7 +165,7 @@
- install-data: install-lispLISP
- 	@$(NORMAL_INSTALL)
- 
--install: install-exec install-data all
-+install: install-exec all
- 	@:
- 
- uninstall: uninstall-lispLISP
