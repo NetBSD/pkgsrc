@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.11 2004/04/22 14:40:29 tv Exp $
+$NetBSD: patch-ad,v 1.12 2004/05/25 15:17:07 grant Exp $
 
---- libltdl/configure.orig	Thu Apr 22 10:23:13 2004
+--- libltdl/configure.orig	2004-04-11 15:36:50.000000000 +1000
 +++ libltdl/configure
 @@ -3652,10 +3652,13 @@ beos*)
    lt_cv_deplibs_check_method=pass_all
@@ -153,6 +153,15 @@ $NetBSD: patch-ad,v 1.11 2004/04/22 14:40:29 tv Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
+@@ -8389,7 +8434,7 @@ openbsd*)
+   version_type=sunos
+   need_lib_prefix=no
+   need_version=yes
+-  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
+   finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+   shlibpath_var=LD_LIBRARY_PATH
+   if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
 @@ -8434,7 +8479,7 @@ sco3.2v5*)
    ;;
  
@@ -304,6 +313,15 @@ $NetBSD: patch-ad,v 1.11 2004/04/22 14:40:29 tv Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
+@@ -12091,7 +12169,7 @@ openbsd*)
+   version_type=sunos
+   need_lib_prefix=no
+   need_version=yes
+-  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
+   finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+   shlibpath_var=LD_LIBRARY_PATH
+   if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
 @@ -12136,7 +12214,7 @@ sco3.2v5*)
    ;;
  
@@ -435,6 +453,15 @@ $NetBSD: patch-ad,v 1.11 2004/04/22 14:40:29 tv Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
+@@ -15240,7 +15356,7 @@ openbsd*)
+   version_type=sunos
+   need_lib_prefix=no
+   need_version=yes
+-  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
+   finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+   shlibpath_var=LD_LIBRARY_PATH
+   if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
 @@ -15285,7 +15401,7 @@ sco3.2v5*)
    ;;
  
@@ -566,6 +593,15 @@ $NetBSD: patch-ad,v 1.11 2004/04/22 14:40:29 tv Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
+@@ -17591,7 +17745,7 @@ openbsd*)
+   version_type=sunos
+   need_lib_prefix=no
+   need_version=yes
+-  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
+   finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+   shlibpath_var=LD_LIBRARY_PATH
+   if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
 @@ -17636,7 +17790,7 @@ sco3.2v5*)
    ;;
  
