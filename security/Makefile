@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/03/19 14:26:28 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:46 agc Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
@@ -27,4 +27,4 @@
 #    SUBDIR += vscan
 #    SUBDIR += xinetd
 
-.include <bsd.port.subdir.mk>
+.include "../mk/bsd.pkg.subdir.mk"

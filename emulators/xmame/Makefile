@@ -1,7 +1,4 @@
-# Makefile for:		xmame
-# Version required:	0.30.1
-#
-# $NetBSD: Makefile,v 1.3 1998/03/20 07:02:51 mycroft Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:24 agc Exp $
 #
 
 DISTNAME=		xmame-0.30.1_src
@@ -34,4 +31,4 @@ post-install:
 	${CP} ${WRKSRC}/doc/xmamerc ${PREFIX}/lib/mame/xmamerc
 	@echo Remember to set MAMEDIR to ${PREFIX}/lib/mame.
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	pgp2
-# Version required:     2.6.3(i)a
-# Date created:         8 Jul 1995 (ache@FreeBSD.ORG)
-# Whom:                 tv@NetBSD.ORG
-#
-# $NetBSD: Makefile,v 1.4 1998/03/26 10:48:32 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:47 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -91,4 +86,4 @@ do-install:
 	[ -f ${PGPLIB}/pgp.hlp ] || \
 		${INSTALL_DATA} ${WRKDIR}/en.hlp ${PGPLIB}/pgp.hlp
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

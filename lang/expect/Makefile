@@ -1,9 +1,4 @@
-# New ports collection makefile for:	expect
-# Date created:		20 November 1994
-# Whom:			pst
-# Version required:	5.25
-#
-# $NetBSD: Makefile,v 1.7 1998/02/02 08:59:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:28 agc Exp $
 # FreeBSD Id: Makefile,v 1.29 1998/01/27 01:11:47 fenner Exp
 #
 
@@ -41,4 +36,4 @@ test:
 post-install:
 	${LDCONFIG} || ${TRUE}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

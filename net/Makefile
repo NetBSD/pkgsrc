@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1998/03/30 10:07:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.21 1998/04/15 10:38:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -86,4 +86,4 @@
 #    SUBDIR += zircon
     SUBDIR += zephyr
 
-.include <bsd.port.subdir.mk>
+.include "../mk/bsd.pkg.subdir.mk"

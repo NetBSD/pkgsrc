@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xmix
-# Version required:	2.1
-# Date created:		30 June 1995
-# Whom:			janek@gaja.ipan.lublin.pl
-#
-# $NetBSD: Makefile,v 1.3 1998/01/19 01:21:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:15 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/11/18 13:56:53 asami Exp 
 #
 
@@ -27,4 +22,4 @@ pre-configure:
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/XMix ${PREFIX}/lib/X11/app-defaults
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:   indent
-# Version required:    1.9.1
-# Date created:        28 August 1997
-# Whom:                Kapil Chowksey <kchowksey@hss.hns.com>
-#
-# $NetBSD: Makefile,v 1.6 1998/01/25 00:42:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:20 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/29 09:20:00 obrien Exp
 #
 
@@ -41,4 +36,4 @@ post-install:
 	fi
 	@install-info ${PREFIX}/info/indent.info ${PREFIX}/info/dir
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# Ports collection makefile for:	xautolock
-# Version required:	1pl10
-# Date created:		20 Jul 1996
-# Whom:			Eric Blood <eblood@cs.unr.edu>
-#
-# $NetBSD: Makefile,v 1.4 1998/01/25 00:29:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:56 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1996/11/18 09:55:42 asami Exp
 #
 
@@ -21,4 +16,4 @@ WRKSRC=		${WRKDIR}/xautolock.pl10
 
 CAT1=		xautolock.0
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	giflib
-# Version required:	3.0
-# Date created:		03 May 1997
-# Whom:			Thomas Gellekum <tg@FreeBSD.ORG>
-#
-# $NetBSD: Makefile,v 1.5 1998/02/02 08:59:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/09/24 06:55:01 tg Exp
 #
 
@@ -20,4 +15,4 @@ post-install:
 .endif
 	@${LDCONFIG} || ${TRUE}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

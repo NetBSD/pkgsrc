@@ -1,9 +1,4 @@
-# New ports collection makefile for:    xosview
-# Version required:     		1.5.1
-# Date created:         		Fri Oct 24 10:03:55 BST 1997
-# Whom:                 		Alistair Crooks (agc@netbsd.org)
-#
-# $NetBSD: Makefile,v 1.8 1998/03/18 13:42:15 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:50 agc Exp $
 #
 
 DISTNAME=       xosview-1.5.1
@@ -19,4 +14,4 @@ MAN1=		xosview.1
 MAKE_ENV+=	UVM=${UVM}
 MAKE_FLAGS=	ARCH=${ARCH} -f
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

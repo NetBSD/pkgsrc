@@ -1,9 +1,4 @@
-# New ports collection makefile for:    cdrecord
-# Version required:     1.5
-# Date created:         2 November 1997
-# Whom:                 jmz
-#
-# $NetBSD: Makefile,v 1.7 1998/03/10 16:26:34 frueauf Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:49 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 23:55:31 asami Exp
 #
 
@@ -34,4 +29,4 @@ do-install:
 	@${INSTALL_MAN} ${WRKSRC}/cdrecord/cdrecord.1 ${PREFIX}/man/man1
 #	@cd /dev && ${LN} -sf /dev/rworm0.ctl sgx
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:    sudo
-# Version required:     1.5.3
-# Date created:         Sun Dec 14 23:01:32 MET 1997
-# Whom:                 soren@t.dk
-#
-# $NetBSD: Makefile,v 1.4 1998/01/24 22:52:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:47 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
@@ -24,4 +19,4 @@ MAN8=		sudo.8 visudo.8
 post-install:
 	cd ${WRKSRC} ; ${CP} sample.sudoers ${PREFIX}/etc/sudoers.example
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

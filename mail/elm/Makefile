@@ -1,10 +1,4 @@
-# New ports collection makefile for:    elm
-# See also: http://www.ozone.fmi.fi/KEH/
-# Version required:     2.4.25.ME+32
-# Date created:         26 June 1995
-# Whom:                 ache
-#
-# $NetBSD: Makefile,v 1.4 1998/03/10 14:29:45 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:30 agc Exp $
 # FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
 #
 
@@ -43,4 +37,4 @@ post-install:
 			${FILESDIR}/elm.mimetypes ${PREFIX}/lib; \
 	fi
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

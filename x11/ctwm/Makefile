@@ -1,9 +1,4 @@
-# New ports collection Makefile for: ctwm
-# Version required:	3.5
-# Date created:         29th January 1998
-# Whom:                 tron
-#
-# $NetBSD: Makefile,v 1.7 1998/03/12 10:12:10 tron Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:52 agc Exp $
 #
 
 DISTNAME=	ctwm-3.5
@@ -18,4 +13,4 @@ USE_IMAKE=	yes
 
 CAT1=		ctwm.0
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

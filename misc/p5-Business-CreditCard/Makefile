@@ -1,9 +1,4 @@
-# New ports collection makefile for:	p5-Business-CreditCard
-# Version required:			0.1
-# Date created:				October 20th 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $NetBSD: Makefile,v 1.2 1998/01/24 21:22:55 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:37 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:06 jfitz Exp
 #
 
@@ -25,4 +20,4 @@ do-install:
 		@ ${INSTALL_DATA} ${WRKSRC}/CreditCard-0.1.pm ${PREFIX}/lib/perl5/site_perl/Business/
 		@ ln -sf ${PREFIX}/lib/perl5/site_perl/Business/CreditCard-0.1.pm ${PREFIX}/lib/perl5/site_perl/Business/CreditCard.pm
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

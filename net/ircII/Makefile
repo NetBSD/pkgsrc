@@ -1,9 +1,4 @@
-# New ports collection makefile for:	IrcII Client
-# Version required:	2.9
-# Date created:		18 Oct 1994
-# Whom:			torstenb
-#
-# $NetBSD: Makefile,v 1.11 1998/03/10 15:25:43 frueauf Exp $
+# $NetBSD: Makefile,v 1.12 1998/04/15 10:38:38 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -34,4 +29,4 @@ post-install:
 		find ${PREFIX}/lib/irc/help -type f -print | xargs ${GZIP_CMD}; \
 	fi
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:    kp
-# Version required:     0.96
-# Date created:         8 May 1995
-# Whom:                 asami
-#
-# $NetBSD: Makefile,v 1.3 1998/01/24 21:10:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:36 agc Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/04/20 13:19:32 wosch Exp
 #
 
@@ -24,4 +19,4 @@ pre-configure:
 	done
 	${RM} ${WRKDIR}/prefix-list
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

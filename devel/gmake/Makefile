@@ -1,9 +1,4 @@
-# New ports collection makefile for:	GNU make
-# Version required:     3.76.1
-# Date created:		11 September 1994
-# Whom:			jkh
-#
-# $NetBSD: Makefile,v 1.8 1998/01/30 20:47:23 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/15 10:38:20 agc Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/06/13 20:00:47 max Exp
 #
 
@@ -29,4 +24,4 @@ post-install:
 	cd ${WRKSRC} && \
 		${INSTALL_MAN} ${WRKSRC}/make.man ${PREFIX}/man/man1/${MAN1}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xmove
-# Version required:	2.0b2
-# Date created:		Tue Mar 10 22:45:33 GMT 1998
-# Whom:			Alistair Crooks agc@netbsd.org
-#
-# $NetBSD: Makefile,v 1.2 1998/03/16 12:36:33 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:58 agc Exp $
 #
 
 DISTNAME=	xmove.2.0beta2
@@ -30,4 +25,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/limitations.txt ${XMOVEDOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/using_xmove.txt ${XMOVEDOCDIR}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

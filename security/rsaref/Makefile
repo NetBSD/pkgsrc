@@ -1,9 +1,4 @@
-# New ports collection makefile for: rsaref
-# Version required:     2.0
-# Date created:         17 Feb 1998
-# Whom:                 tv@netbsd.org
-#
-# $NetBSD: Makefile,v 1.5 1998/04/12 22:03:05 tv Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:47 agc Exp $
 #
 
 DISTNAME=		rsaref20
@@ -53,4 +48,4 @@ do-install:
 	cd ${WRKDIR}/doc && \
 		${INSTALL_DATA} info.txt rsaref.txt ${PREFIX}/share/doc/rsaref
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	screen
-# Version required:     3.7.4
-# Date created:         25 Nov 1994
-# Whom:                 ache
-#
-# $NetBSD: Makefile,v 1.6 1998/02/16 08:52:01 frueauf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:37 agc Exp $
 # FreeBSD Id: Makefile,v 1.17 1997/06/16 06:39:51 max Exp
 #
 
@@ -25,4 +20,4 @@ post-install:
 	@${MKDIR} ${PREFIX}/share/examples/screen
 	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc ${PREFIX}/share/examples/screen/screenrc
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

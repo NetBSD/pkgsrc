@@ -1,9 +1,4 @@
-# New ports collection makefile for: dotfile
-# Version required:  2.0
-# Date created:      11/12/96
-# Whom:              oly@world.std.com
-#
-# $NetBSD: Makefile,v 1.4 1998/01/30 13:57:21 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:34 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/20 13:19:30 wosch Exp
 #
 
@@ -25,4 +20,4 @@ do-build:
 post-install:
 	@${CAT} ${PKGDIR}/MESSAGE
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

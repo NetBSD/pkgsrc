@@ -1,9 +1,4 @@
-# New ports collection makefile for:	p5-Data-Dumper
-# Version required:			2.07
-# Date created:				October 17th 1996
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.org>
-#
-# $NetBSD: Makefile,v 1.3 1998/01/24 04:37:15 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:21 agc Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:11 jfitz Exp
 #
 
@@ -24,4 +19,4 @@ MANPREFIX=	${PREFIX}/lib/perl5
 do-configure:
 		@ cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

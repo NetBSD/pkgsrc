@@ -1,9 +1,4 @@
-# New ports collection makefile for:    vile
-# Version required:     		7.3
-# Date created:         		Wed Nov 26, 1996
-# Whom:                 		pgf
-#
-# $NetBSD: Makefile,v 1.4 1998/01/24 04:53:06 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:22 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:55:09 gj Exp
 #
 
@@ -24,4 +19,4 @@ post-install:
 	@echo "You might want to copy the *.rc files from the source tree before"
 	@echo "doing \`make clean'."
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

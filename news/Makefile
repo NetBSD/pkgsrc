@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/03/25 19:56:13 tv Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:41 agc Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/06/27 23:02:54 brian Exp 
 #
 
@@ -24,4 +24,4 @@
 #    SUBDIR += trn
 #    SUBDIR += xvnews
 
-.include <bsd.port.subdir.mk>
+.include "../mk/bsd.pkg.subdir.mk"

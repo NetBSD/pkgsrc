@@ -1,9 +1,4 @@
-# New ports collection makefile for:	fvwm (version 1)
-# Version required:	1.24r
-# Date created:		17 March 1997
-# Whom:			cjs@netbsd.org
-#
-# $NetBSD: Makefile,v 1.4 1998/03/25 18:32:00 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:53 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -38,4 +33,4 @@ post-install:
 		${WRKSRC}/fvwm_icons/*.bitmap ${WRKSRC}/fvwm_icons/*.icon \
 		${PREFIX}/lib/X11/fvwm/bitmaps
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

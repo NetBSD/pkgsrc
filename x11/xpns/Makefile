@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xpns
-# Version required:     1.0
-# Date created:         6 Apr 97
-# Whom:                 Pedro Giffuni <pgiffuni@fps.biblos.unal.edu.co>
-#
-# $NetBSD: Makefile,v 1.2 1998/01/25 00:49:21 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:58 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/29 09:38:20 obrien Exp
 #
 
@@ -33,4 +28,4 @@ post-install:
 	${CP} ${WRKSRC}/*.net ${PREFIX}/share/doc/xpns/
 .endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

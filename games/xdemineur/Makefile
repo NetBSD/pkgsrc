@@ -1,9 +1,4 @@
-# New ports collection makefile for:    xdemineur
-# Version required:     2.0
-# Date created:         29 Jan 1998
-# Whom:                 bouyer
-#
-# $NetBSD: Makefile,v 1.4 1998/02/11 12:35:26 bouyer Exp $
+# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:24 agc Exp $
 #
 
 DISTNAME=       xdemineur-2.1
@@ -20,4 +15,4 @@ USE_IMAKE=	yes
 
 CAT1=		xdemineur.0
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	xpm
-# Version required:     3.4j
-# Date created:		14 September 1994
-# Whom:			jkh
-#
-# $NetBSD: Makefile,v 1.7 1998/02/02 08:59:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1998/04/15 10:38:27 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/17 15:12:45 max Exp
 #
 
@@ -20,4 +15,4 @@ CAT1= 		sxpm.0
 post-install:
 	${LDCONFIG} || ${TRUE}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/02/17 15:48:54 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:18 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
@@ -16,4 +16,4 @@
     SUBDIR += postgresql
 #    SUBDIR += typhoon
 
-.include <bsd.port.subdir.mk>
+.include "../mk/bsd.pkg.subdir.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	glimpse
-# Version required:	3.6
-# Date created:		25 August 1996
-# Whom:			chuckr@freebsd.org
-#
-# $NetBSD: Makefile,v 1.2 1997/10/30 01:40:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/07/17 19:29:07 andreas Exp
 #
 
@@ -28,4 +23,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/glimpse
 	${INSTALL_PROGRAM} ${WRKSRC}/index/wgconvert ${PREFIX}/bin
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

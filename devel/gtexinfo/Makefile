@@ -1,9 +1,4 @@
-# New ports collection makefile for:	GNU texinfo
-# Version required:     3.11
-# Date created:		14 November 1997
-# Whom:			lamj@stat.cmu.edu
-#
-# $NetBSD: Makefile,v 1.5 1998/03/09 08:09:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:20 agc Exp $
 #
 
 DISTNAME=       texinfo-3.12
@@ -24,4 +19,4 @@ post-install:
 	strip ${PREFIX}/bin/${file}
 .endfor
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

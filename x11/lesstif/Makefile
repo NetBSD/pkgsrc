@@ -1,9 +1,4 @@
-# New ports collection makefile for:	lesstif
-# Version required:	0.83
-# Date created:		December 10, 1996
-# Whom:			1wardd@airmail.net
-#
-# $NetBSD: Makefile,v 1.15 1998/03/26 22:58:37 frueauf Exp $
+# $NetBSD: Makefile,v 1.16 1998/04/15 10:38:54 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -53,4 +48,4 @@ pre-fetch:
 post-install:
 	${LDCONFIG} || ${TRUE}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:    wily
-# Version required:     		0.13.36
-# Date created:         		Tue Oct 21 16:06:30 BST 1997
-# Whom:                 		agc@netbsd.org (Alistair Crooks)
-#
-# $NetBSD: Makefile,v 1.2 1998/01/24 22:30:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:45 agc Exp $
 #
 
 DISTNAME=	wily-0.13.36
@@ -16,4 +11,4 @@ MAINTAINER=	agc@netbsd.org
 GNU_CONFIGURE=	yes
 MAN1=		wily.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

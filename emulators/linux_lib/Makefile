@@ -1,9 +1,4 @@
-# New ports collection makefile for:    linux_lib
-# Version required:	2.1
-# Date created:         1997/12/04
-# Whom:                 erich@FreeBSD.org
-#
-# $NetBSD: Makefile,v 1.6 1998/03/05 12:22:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/04/15 10:38:23 agc Exp $
 # FreeBSD Id: Makefile,v 1.19 1997/12/04 17:34:28 asami Exp
 #
 
@@ -38,4 +33,4 @@ post-install:
 	${MKDIR} ${PREFIX}/dev
 	ln -s /dev/sound ${PREFIX}/dev/dsp
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

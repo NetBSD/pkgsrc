@@ -1,9 +1,4 @@
-# New ports collection makefile for:    xgas
-# Version required:     1.0
-# Date created:         20 Oct 1996
-# Whom:                 Yukihiro Nakai <nakai@mlab.t.u-tokyo.ac.jp>
-#
-# $NetBSD: Makefile,v 1.2 1998/01/25 00:31:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1996/11/15 09:55:44 asami Exp
 #
 
@@ -20,4 +15,4 @@ post-install:
 	@chmod 755 ${PREFIX}/bin/xgas
 	@chown bin.bin ${PREFIX}/bin/xgas
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

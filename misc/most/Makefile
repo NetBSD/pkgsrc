@@ -1,9 +1,4 @@
-# New ports collection makefile for:	most
-# Version required:	4.7
-# Date created:		31 May 1997
-# Whom:			rhwang@bigpanda.com
-#
-# $NetBSD: Makefile,v 1.3 1998/01/30 13:57:23 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:36 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/03 21:52:01 asami Exp
 #
 
@@ -21,4 +16,4 @@ GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/most
 MAN1=		most.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:	jpeg
-# Version required:     6a
-# Date created:		6 November 1994
-# Whom:			smace
-#
-# $NetBSD: Makefile,v 1.5 1998/02/02 08:59:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:26 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/17 15:12:43 max Exp
 #
 
@@ -22,4 +17,4 @@ MAN1=		cjpeg.1 djpeg.1 jpegtran.1 rdjpgcom.1 wrjpgcom.1
 post-install:
 	${LDCONFIG} || ${TRUE}
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

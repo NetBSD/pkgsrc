@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/09 08:30:17 frueauf Exp $
+# $NetBSD: Makefile,v 1.6 1998/04/15 10:38:51 agc Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -54,4 +54,4 @@
 #    SUBDIR += wwwcount
 #    SUBDIR += wwwstat
 
-.include <bsd.port.subdir.mk>
+.include "../mk/bsd.pkg.subdir.mk"

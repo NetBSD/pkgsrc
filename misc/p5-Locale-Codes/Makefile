@@ -1,9 +1,4 @@
-# New ports collection makefile for:    p5-Locale-Codes
-# Version required:			0.003
-# Date created:				June 26th 1997
-# Whom:	      				James FitzGibbon <jfitz@FreeBSD.ORG>
-#
-# $NetBSD: Makefile,v 1.2 1998/01/24 21:23:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:37 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/06/27 01:51:12 jfitz Exp
 #
 
@@ -23,4 +18,4 @@ MAN3=		Locale::Country.3 Locale::Language.3
 do-configure:
 		@cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${PREFIX}/bin/perl Makefile.PL
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,4 @@
-# New ports collection makefile for:   xfishtank
-# Version required:    2.2
-# Date created:        24th April 1997
-# Whom:                jacs
-#
-# $NetBSD: Makefile,v 1.3 1998/01/25 00:30:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/04/15 10:38:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/17 07:45:12 asami Exp
 #
 
@@ -20,4 +15,4 @@ NO_INSTALL_MANPAGES=yes
 post-patch:
 	cd  ${WRKDIR}/xfishtank2.0; make clean
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

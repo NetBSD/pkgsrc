@@ -1,9 +1,4 @@
-# New packages collection Makefile for: xxgdb
-# Version required:     1.12
-# Date created:         17-Feb-98
-# Whom:                 rh@trapdoor.vip.at
-#
-# $NetBSD: Makefile,v 1.2 1998/03/01 21:30:05 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:22 agc Exp $
 #
 
 DISTNAME=	xxgdb-1.12
@@ -23,4 +18,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/XDbx.ad ${PREFIX}/lib/X11/app-defaults/XDbx
 	${INSTALL_DATA} ${WRKSRC}/xxgdb.man ${PREFIX}/man/man1/xxgdb.1
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"

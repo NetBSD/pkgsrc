@@ -1,9 +1,4 @@
-# New ports collection makefile for:    guavac
-# Version required:     1.0
-# Date created:         07-02-98
-# Whom:                 mjl@emsi.priv.at
-#
-# $NetBSD: Makefile,v 1.2 1998/02/14 16:57:55 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:28 agc Exp $
 #
 
 DISTNAME=	guavac-1.0
@@ -23,4 +18,4 @@ CAT1=		guavac.0
 post-install:
 	${MV} ${PREFIX}/man/cat1/guavac.man ${PREFIX}/man/cat1/guavac.0
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
