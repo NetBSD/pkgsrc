@@ -1,4 +1,4 @@
-# $NetBSD: libtool-post-logic,v 1.5 2004/04/01 21:21:13 jlam Exp $
+# $NetBSD: libtool-post-logic,v 1.6 2004/04/22 22:28:19 snj Exp $
 
 case $arg in
 #
@@ -72,7 +72,7 @@ case $arg in
 	ladir=`$dirname $arg`
 	ldir=`cd $ladir; $pwd`
 	buildlibdir=`. $ladir/$labase; $echo $buildlibdir`
-	if $test -n "$buildlibdir" -a "$ldir" != "$buildlibdir"; then
+	if $test -n "$buildlibdir" -a "$ldir" != "$buildlibdir" -a -e "$buildlibdir/$labase"; then
 		arg="$buildlibdir/$labase"
 		$echo "*** [buildlink3] Warning: libtool replaced $ladir/$labase with $arg" >> $wrapperlog
 		$echo "*** [buildlink3] Warning: libtool replaced $ladir/$labase with $arg" 1>&2
