@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1587 2004/04/07 07:11:35 xtraeme Exp $
+$NetBSD: TODO,v 1.1588 2004/04/07 11:52:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -133,6 +133,7 @@ Suggested package updates
 	o SDL-1.2.7
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
+	o abcde-2.1.16
 	o afio-2.5
 	o amanda-2.4.4p2 [pkg/24550, bouyer]
 	o ap-python-2.7.10
@@ -141,7 +142,7 @@ Suggested package updates
 	o avifile-devel-0.7.34-20030319
 	o balsa-1.4.4
 	o blib-1.1.6
-	o blinkensim-2.7
+	o blinkensim-2.8
 	o blinkentools-2.7
 	o boehm-gc-6.3alpha2
 	o boost-1.31.0
@@ -226,8 +227,9 @@ Suggested package updates
 	o larswm-7.3
 	o lavaps-2.4
 	o leafnode-1.9.52
-	o lftp-3.0.0
+	o lftp-3.0.1
 	o libcaca-0.9
+	o libcdaudio-0.99.10
 	o libebml-0.6.4
 	o libesmtp-1.0.2
 	o libevent-0.8
@@ -246,6 +248,7 @@ Suggested package updates
 	o mailsync-5.1.0
 	o marbles-1.0.6
 	o matchbox-0.8
+	o mathomatic-11.0
 	o memtest86-3.1
 	o micq-0.4.11
 	o midnight-commander-4.6.0
@@ -355,7 +358,7 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.6.2
 	o xisp-2.7 [pkg/19566]
-	o xmcd-3.2.1
+	o xmcd-3.3.0
 	o xmms-1.2.10
 	o xmms-alarm-0.3.5
 	o xmms-crossfade-0.3.4
