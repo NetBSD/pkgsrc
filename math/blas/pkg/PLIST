@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/06 17:55:12 wennmach Exp $
+lib/libblas.a
+lib/libblas.la
+lib/libblas.so.0.0
