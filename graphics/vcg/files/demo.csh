@@ -1,7 +1,7 @@
 #!/bin/csh
 #
 # SCCS-info %W% %E%
-# $Id: demo.csh,v 1.1.1.1 1999/06/13 12:47:19 sakamoto Exp $
+# $Id: demo.csh,v 1.2 1999/06/13 12:54:19 sakamoto Exp $
 #
 # ====================== Change area ============================
 
