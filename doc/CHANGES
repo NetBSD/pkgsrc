@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4442 2004/01/13 01:09:04 jlam Exp $
+$NetBSD: CHANGES,v 1.4443 2004/01/13 02:44:21 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -200,3 +200,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnutls to 1.0.4 [xtraeme 2004-01-12]
 	Updated awstats to 5.9 [xtraeme 2004-01-12]
 	Updated perl5 to 5.6.1nb10 [jlam 2004-01-12]
+	Updated p5-MIME-Base64 to 2.23 [grant 2004-01-13]
