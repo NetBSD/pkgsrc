@@ -1,27 +1,29 @@
-# $NetBSD: Makefile,v 1.5 2003/01/28 22:03:29 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/21 14:43:16 jlam Exp $
 
-PKGNAME=		courier-authpgsql-${BASE_VERS}
-PKGREVISION=		1
-COMMENT=		Courier PostgreSQL authentication module
+PKGNAME=	courier-authpgsql-${BASE_VERS}
+COMMENT=	Courier PostgreSQL authentication module
 
-DEPENDS+=		courier-auth>=${BASE_VERS}:../../mail/courier-auth
+DEPENDS+=	courier-auth-${BASE_VERS}{,nb*}:../../mail/courier-auth
 
-.include "../../mail/courier-auth/Makefile.authdaemond"
+.include "../courier-auth/Makefile.authdaemond"
 
 USE_PKGINSTALL=		yes
+INSTALL_EXTRA_TMPL=	${.CURDIR}/../courier-auth/INSTALL
+
 CONFIGURE_ARGS+=	--with-authpgsql
 CONFIGURE_ARGS+=	--with-pgsql-includes=${BUILDLINK_PREFIX.postgresql-lib}/include/postgresql
 CONFIGURE_ARGS+=	--with-pgsql-libs=${BUILDLINK_PREFIX.postgresql-lib}/lib
 
 GEN_FILES=		authpgsqlrc
+FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
+
 CONF_FILES_PERMS=	# empty
 .for FILE in ${GEN_FILES}
 CONF_FILES_PERMS+=	${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}	\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .endfor
 
-INSTALL_EXTRA_TMPL=	${.CURDIR}/../../mail/courier-auth/INSTALL
-FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
+.include "../../databases/postgresql-lib/buildlink3.mk"
 
 post-build:
 	cd ${WRKSRC}/authlib;						\
@@ -37,5 +39,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/authlib/README.authpgsql.html		\
 		${PREFIX}/share/doc/html/courier
 
-.include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

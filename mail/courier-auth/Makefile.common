@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.7 2004/01/24 13:55:30 grant Exp $
+# $NetBSD: Makefile.common,v 1.8 2004/02/21 14:43:15 jlam Exp $
 
 DISTNAME?=	courier-${DIST_VERS}
 CATEGORIES+=	mail
 MASTER_SITES?=	${MASTER_SITE_SOURCEFORGE:=courier/}
+EXTRACT_SUFX?=	.tar.bz2
 
 MAINTAINER?=	jlam@NetBSD.org
 HOMEPAGE?=	http://www.courier-mta.org/
@@ -12,7 +13,7 @@ HOMEPAGE?=	http://www.courier-mta.org/
 # DIST_VERS	version number on the distfile
 # BASE_BERS	pkgsrc-manged version number
 #
-DIST_VERS=	0.37.1
+DIST_VERS=	0.44.2
 BASE_VERS=	${DIST_VERS}
 
 USE_GNU_TOOLS+=		make
@@ -26,7 +27,8 @@ EGDIR=			${PREFIX}/share/examples/courier
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR}
@@ -51,13 +53,5 @@ CONFIGURE_ARGS+=	--without-authldap
 CONFIGURE_ARGS+=	--without-authmysql
 CONFIGURE_ARGS+=	--without-authpgsql
 
-CONFIGURE_ENV+=		EXPECT="${LOCALBASE}/bin/expect"
-
-.if ${OPSYS} == "SunOS"
-.  include "../../databases/db/buildlink2.mk"
-CPPFLAGS+=		${BUILDLINK_CPPFLAGS.db}
-.endif
-
-configure-init:
-	${MKDIR} ${WRKSRC}/courier
-	${TOUCH} ${TOUCH_ARGS} ${WRKSRC}/courier/courier.c
+CONFIGURE_ENV+=		EXPECT=${LOCALBASE}/bin/expect
+CONFIGURE_ENV+=		PERL=${PERL5}
