@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.123 2003/01/02 05:55:11 hubertf Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.124 2003/01/02 20:12:15 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -567,7 +567,7 @@ DEFANG_SPOOLDIR?=	/var/spool/MIMEDefang
 # Used to provide a default setting for the serial device for
 # various packages which communicate over the serial port.
 # Possible:  /dev/your_favorite_serial_device
-# Default: defaults for various machine_archs are set in mk/bsd.prefs.mk
+# Default: defaults for various machine_archs are set in mk/defs.${OPSYS}.mk
 
 DELIVER_SUID?=	NO
 # Used to decide if deliver should be installed suid root.
@@ -1509,6 +1509,11 @@ USE_DB2?= NO
 # Possible: defined, not defined
 # Default: not defined
 
+USE_I586?=	NO
+# Use assembler routines optimized for i586 in gnupg.
+# Possible: YES, or NO.
+# Default: NO
+
 USE_IDEA?=	NO
 # Used in gnupg, speakfreely, and ssh to choose whether to compile using
 # the patented IDEA encryption algorithm.
@@ -1535,6 +1540,11 @@ USE_MMX?=	NO
 # Used in eterm, imlib2, libast, and snes9x to specify if the i386 MMX
 # extensions should be used.
 # Possible: YES, NO
+# Default: NO
+
+USE_OPENLDAP?=	NO
+# Enable openldap support in gnupg.
+# Possible: YES, or NO.
 # Default: NO
 
 #USE_OSS=
