@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2000/10/13 23:36:39 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2000/10/14 00:01:58 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -15,7 +15,9 @@ POST-INSTALL)
 	# Only create the symlink on certain platform/object combinations.
 	#
 	create_emul_symlink=0
-	if [ "${MACHINE_ARCH}" = "i386" -a "${OBJECT_FMT}" = "ELF" ]
+	if [ "${OBJECT_FMT}" = "ELF" -a \
+	     "${MACHINE_ARCH}" = "i386" -o \
+	     "${MACHINE_ARCH}" = "sparc" ]
 	then
 		create_emul_symlink=1
 	fi
@@ -47,6 +49,11 @@ EOF
 			fi
 		fi
 	fi
+
+	# Regenerate the shared library cache.  This should work on either
+	# a.out or on ELF with the 1.5 release.
+	#
+	( @LDCONFIG@ || true ) >/dev/null 2>&1
 	;;
 *)
 	echo "Unexpected argument: ${STAGE}"

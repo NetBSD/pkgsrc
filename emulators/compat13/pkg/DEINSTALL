@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2000/10/13 23:36:40 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2000/10/14 00:01:58 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -19,6 +19,11 @@ POST-DEINSTALL)
 	fi
 
 	rmdir -p ${PKG_PREFIX}/${COMPAT_LIBDIR} 2>/dev/null || true
+
+	# Regenerate the shared library cache.  This should work on either
+	# a.out or on ELF with the 1.5 release.
+	#
+	( @LDCONFIG@ || true ) >/dev/null 2>&1
 	;;
 *)
 	echo "Unexpected argument: ${STAGE}"
