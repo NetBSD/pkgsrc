@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:12:53 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/20 12:02:38 skrll Exp $
 
-MD5 (links-0.95.tar.gz) = fcc0a036f68d76350d2723f5bb7f1a84
+SHA1 (links-0.95.tar.gz) = 9de91722ed5247f54afd5f4e147fbe967fa3fa89
+Size (links-0.95.tar.gz) = 449795 bytes
