@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/04/20 07:03:55 itojun Exp $
+$NetBSD: patch-aa,v 1.2 2000/04/20 07:06:30 itojun Exp $
 Index: common/constants.h
 ===================================================================
 RCS file: /cvsroot/cscope/cscope/common/constants.h,v
@@ -27,15 +27,13 @@ retrieving revision 1.1.1.1
 diff -u -r1.1.1.1 display.c
 --- common/display.c	2000/04/18 13:16:42	1.1.1.1
 +++ common/display.c	2000/04/20 06:59:58
-@@ -43,6 +43,9 @@
+@@ -43,4 +43,7 @@
  #endif
  #include <curses.h>	/* LINES, COLS */
  #include <setjmp.h>	/* jmp_buf */
 +#ifdef __NetBSD__
 +#include <errno.h>
 +#endif
- 
- static char const rcsid[] = "$Id: patch-aa,v 1.1.1.1 2000/04/20 07:03:55 itojun Exp $";
  
 Index: common/exec.c
 ===================================================================
@@ -44,7 +42,7 @@ retrieving revision 1.1.1.1
 diff -u -r1.1.1.1 exec.c
 --- common/exec.c	2000/04/18 13:16:42	1.1.1.1
 +++ common/exec.c	2000/04/20 06:59:59
-@@ -37,7 +37,11 @@
+@@ -37,6 +37,10 @@
  
  #include "global.h"
  #include <stdarg.h>
@@ -55,7 +53,6 @@ diff -u -r1.1.1.1 exec.c
 +#endif
  #include <curses.h>
  
- static char const rcsid[] = "$Id: patch-aa,v 1.1.1.1 2000/04/20 07:03:55 itojun Exp $";
 @@ -46,7 +50,9 @@
  static	SIGTYPE	(*oldsighup)();		/* old value of hangup signal */
  static	SIGTYPE	(*oldsigstp)();
@@ -110,15 +107,13 @@ retrieving revision 1.1.1.1
 diff -u -r1.1.1.1 input.c
 --- common/input.c	2000/04/18 13:16:43	1.1.1.1
 +++ common/input.c	2000/04/20 06:59:59
-@@ -38,6 +38,9 @@
+@@ -38,4 +38,7 @@
  #include "global.h"
  #include <curses.h>
  #include <setjmp.h>	/* jmp_buf */
 +#ifdef __NetBSD__
 +#include <termios.h>
 +#endif
- 
- static char const rcsid[] = "$Id: patch-aa,v 1.1.1.1 2000/04/20 07:03:55 itojun Exp $";
  
 Index: common/library.h
 ===================================================================
