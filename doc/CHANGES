@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1618 2003/03/11 08:35:46 wiz Exp $
+$NetBSD: CHANGES,v 1.1619 2003/03/11 11:25:29 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1028,3 +1028,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvsync to 0.14.4 [gehenna 2003-03-11]
 	Updated etherape to 0.9.0 [salo 2003-03-11]
 	Updated popa3d to 0.6.2 [wiz 2003-03-11]
+	Added p5-DBD-SQLite-0.25 [mjl 2003-03-11]
