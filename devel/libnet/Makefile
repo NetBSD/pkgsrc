@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:31:37 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/08/31 10:08:24 seb Exp $
 #
 
 DISTNAME=	libnet-1.0.1b
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${DISTNAME:C/l/L/}
 CATEGORIES=	devel net
 MASTER_SITES=	http://www.packetfactory.net/libnet/dist/
@@ -18,22 +18,14 @@ GNU_CONFIGURE=	# defined
 CONFIGURE_ENV+=	LIBNET_CONFIG_CFLAGS="-I${PREFIX}/include" \
 		LIBNET_CONFIG_LIBS="${LDFLAGS}"
 
-PLIST_SRC=	${WRKDIR}/PLIST
-DOCDIR=		share/doc/libnet
-
 post-extract:
 	${CHMOD} -R a+r ${WRKSRC}/doc
 
 post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libnet
-	@(cd ${WRKSRC}/doc/html; ${GTAR} cf - *.html *.gif */*.c | \
-		(cd ${PREFIX}/${DOCDIR};${GTAR} xf -))
-	@${LN} -s ${PREFIX}/share/doc/libnet/examples \
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/libnet
+	@cd ${WRKSRC}/doc/html && ${PAX} -rw *.html *.gif */*.c	\
+		${PREFIX}/share/doc/html/libnet
+	@${LN} -s ${PREFIX}/share/doc/html/libnet/examples \
 		${PREFIX}/share/examples/libnet
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	@(cd ${PREFIX};	\
-	  ${FIND} ${DOCDIR} -type f >> ${PLIST_SRC}; \
-	  ${FIND} ${DOCDIR} -type d| ${SED} -e 's|^|@dirrm |' | ${SORT} -r \
-		>> ${PLIST_SRC})
 
 .include "../../mk/bsd.pkg.mk"
