@@ -1,0 +1,38 @@
+# $NetBSD: Makefile,v 1.1 2003/07/31 07:52:53 lukem Exp $
+#
+
+DISTNAME=		tnftp-20030731
+PKGNAME=		tnftp-20030731
+SVR4_PKGNAME=		tnftp
+CATEGORIES=		net
+MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
+
+MAINTAINER=		lukem@NetBSD.org
+COMMENT=		The enhanced ftp client in NetBSD
+
+GNU_CONFIGURE=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+# Include SOCKS firewall support
+.if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
+.if ${USE_SOCKS} == 4
+DEPENDS+=		socks4-2.2:../../net/socks4
+CONFIGURE_ARGS+=	--with-socks4
+.else
+DEPENDS+=		socks5-1.0.2:../../net/socks5
+CONFIGURE_ARGS+=	--with-socks5
+.endif
+.endif
+
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if ${OPSYS} == "SunOS"
+MAKE_ENV+=		CPPFLAGS=""
+.endif
+
+.include "../../mk/bsd.pkg.mk"
