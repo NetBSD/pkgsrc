@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2001/11/18 15:03:39 itohy Exp $
+$NetBSD: distinfo,v 1.6 2002/09/25 06:37:20 jlam Exp $
 
 SHA1 (xwave2.tar.gz) = 7ace9911c9425eab4907a34694cd208d21a6dac2
 Size (xwave2.tar.gz) = 269942 bytes
@@ -13,7 +13,7 @@ SHA1 (patch-ah) = 61449264babde8d304f93084dbfa194d9a8b07c8
 SHA1 (patch-ai) = 34cd50fc75d5dd604349d5f694a993f23d87a24a
 SHA1 (patch-aj) = 6fbd9f8643d9557b3b4ae1df5db45235a531584b
 SHA1 (patch-ak) = cab81a7ad665ecabf09cae3908b13cef17f3ca17
-SHA1 (patch-al) = e3a5d69144484ceede51016c6c5242f21da437b0
+SHA1 (patch-al) = 8b0decd012d84f425805e577ff02ef56faa9ee17
 SHA1 (patch-am) = 401677317560d7e0bbacee977d02c23871dd550f
 SHA1 (patch-an) = 10ffb81b79da56bb2087924b645eefb56a1d1fc3
 SHA1 (patch-ao) = 3cf9f51939be5f02ad423d79103e7faeab13a3fd
