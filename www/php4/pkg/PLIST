@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2001/05/02 22:22:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/05/14 14:12:31 jlam Exp $
 bin/pear
 bin/php
 bin/php-config
 bin/phpextdist
 bin/phpize
-include/php/acconfig.h
-include/php/php_version.h
 include/php/TSRM/TSRM.h
 include/php/TSRM/acconfig.h
 include/php/TSRM/readdir.h
@@ -16,7 +14,6 @@ include/php/TSRM/tsrm_strtok_r.h
 include/php/TSRM/tsrm_virtual_cwd.h
 include/php/Zend/FlexLexer.h
 include/php/Zend/acconfig.h
-include/php/Zend/modules.h
 include/php/Zend/zend.h
 include/php/Zend/zend_API.h
 include/php/Zend/zend_alloc.h
@@ -39,15 +36,18 @@ include/php/Zend/zend_indent.h
 include/php/Zend/zend_ini.h
 include/php/Zend/zend_ini_parser.h
 include/php/Zend/zend_ini_scanner.h
+include/php/Zend/zend_istdiostream.h
 include/php/Zend/zend_language_parser.h
 include/php/Zend/zend_language_scanner.h
 include/php/Zend/zend_list.h
 include/php/Zend/zend_llist.h
+include/php/Zend/zend_modules.h
 include/php/Zend/zend_operators.h
 include/php/Zend/zend_ptr_stack.h
 include/php/Zend/zend_stack.h
 include/php/Zend/zend_static_allocator.h
 include/php/Zend/zend_variables.h
+include/php/acconfig.h
 include/php/ext/standard/base64.h
 include/php/ext/standard/basic_functions.h
 include/php/ext/standard/credits.h
@@ -115,7 +115,7 @@ include/php/ext/xml/php_xml.h
 include/php/main/SAPI.h
 include/php/main/build-defs.h
 include/php/main/config.w32.h
-include/php/main/fopen-wrappers.h
+include/php/main/fopen_wrappers.h
 include/php/main/internal_functions_registry.h
 include/php/main/logos.h
 include/php/main/php.h
@@ -139,6 +139,7 @@ include/php/main/rfc1867.h
 include/php/main/safe_mode.h
 include/php/main/snprintf.h
 include/php/main/win95nt.h
+include/php/php_version.h
 include/php/regex/cclass.h
 include/php/regex/cname.h
 include/php/regex/regex.h
@@ -147,6 +148,17 @@ include/php/regex/regex_extra.h
 include/php/regex/utils.h
 lib/php/Benchmark/Iterate.php
 lib/php/Benchmark/Timer.php
+lib/php/Cache.php
+lib/php/Cache/Container.php
+lib/php/Cache/Container/db.php
+lib/php/Cache/Container/file.php
+lib/php/Cache/Container/phplib.php
+lib/php/Cache/Container/shm.php
+lib/php/Cache/Function.php
+lib/php/Cache/Graphics.php
+lib/php/Cache/Output.php
+lib/php/Console/Getopt.php
+lib/php/Crypt/CBC.php
 lib/php/Crypt/HCEMD5.php
 lib/php/DB.php
 lib/php/DB/common.php
@@ -160,19 +172,41 @@ lib/php/DB/pgsql.php
 lib/php/DB/storage.php
 lib/php/DB/sybase.php
 lib/php/Date/Calc.php
+lib/php/Date/Human.php
 lib/php/File/Find.php
+lib/php/File/Passwd.php
 lib/php/File/SearchReplace.php
 lib/php/HTML/Form.php
+lib/php/HTML/IT.php
+lib/php/HTML/ITX.php
+lib/php/HTML/Processor.php
 lib/php/HTTP.php
+lib/php/HTTP/Compress.php
+lib/php/Image/Remote.php
+lib/php/Log.php
+lib/php/Log/composite.php
+lib/php/Log/file.php
+lib/php/Log/mcal.php
+lib/php/Log/observer.php
+lib/php/Log/sql.php
+lib/php/Log/syslog.php
 lib/php/Mail.php
+lib/php/Mail/RFC822.php
 lib/php/Mail/sendmail.php
 lib/php/Mail/smtp.php
+lib/php/Math/Fraction.php
+lib/php/Math/Util.php
+lib/php/Net/Curl.php
+lib/php/Net/Dig.php
 lib/php/Net/SMTP.php
 lib/php/Net/Socket.php
+lib/php/Numbers/Roman.php
 lib/php/PEAR.php
 lib/php/PEAR/Installer.php
 lib/php/Payment/Verisign.php
+lib/php/Schedule/At.php
 lib/php/XML/Parser.php
+lib/php/XML/RPC.php
 lib/php/build/acinclude.m4
 lib/php/build/dynlib.m4
 lib/php/build/dynlib.mk
@@ -186,26 +220,35 @@ lib/php/build/rules.mk
 lib/php/build/rules_common.mk
 lib/php/build/rules_pear.mk
 lib/php/build/shtool
-lib/php/extensions/no-debug-non-zts-20001214/.directory
+lib/php/extensions/no-debug-non-zts-20001222/.directory
 libexec/cgi-bin/php
 share/examples/php/php.ini-dist
 share/examples/php/php.ini-optimized
 share/php/php4.gif
 @dirrm share/php
 @dirrm share/examples/php
-@dirrm lib/php/extensions/no-debug-non-zts-20001214
+@dirrm lib/php/extensions/no-debug-non-zts-20001222
 @dirrm lib/php/extensions
 @dirrm lib/php/build
 @dirrm lib/php/XML
+@dirrm lib/php/Schedule
 @dirrm lib/php/Payment
 @dirrm lib/php/PEAR
+@dirrm lib/php/Numbers
 @dirrm lib/php/Net
+@dirrm lib/php/Math
 @dirrm lib/php/Mail
+@dirrm lib/php/Log
+@dirrm lib/php/Image
+@dirrm lib/php/HTTP
 @dirrm lib/php/HTML
 @dirrm lib/php/File
 @dirrm lib/php/Date
 @dirrm lib/php/DB
 @dirrm lib/php/Crypt
+@dirrm lib/php/Console
+@dirrm lib/php/Cache/Container
+@dirrm lib/php/Cache
 @dirrm lib/php/Benchmark
 @dirrm lib/php
 @dirrm include/php/regex

@@ -1,11 +1,11 @@
-$NetBSD: patch-af,v 1.1 2001/01/25 17:18:08 jlam Exp $
+$NetBSD: patch-af,v 1.2 2001/05/14 14:12:30 jlam Exp $
 
---- Makefile.in.orig	Sun Jun 11 14:51:17 2000
+--- Makefile.in.orig	Tue Mar 20 13:15:10 2001
 +++ Makefile.in
 @@ -19,7 +19,7 @@
  PROGRAM_NAME         = php
  PROGRAM_SOURCES      = stub.c
- PROGRAM_LDADD        = libphp4.la
+ PROGRAM_LDADD        = libphp4.la $(EXT_PROGRAM_LDADD)
 -PROGRAM_LDFLAGS      = -export-dynamic	
 +PROGRAM_LDFLAGS      = -static -export-dynamic	
  PROGRAM_DEPENDENCIES = $(PROGRAM_LDADD)
