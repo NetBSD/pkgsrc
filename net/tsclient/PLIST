@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2003/09/18 10:12:22 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/12/17 08:14:18 xtraeme Exp $
 bin/tsclient
 lib/bonobo/servers/GNOME_TSClientApplet.server
 libexec/tsclient-applet
 share/application-registry/tsclient.applications
-share/gnome/apps/Internet/tsclient.desktop
+share/applications/tsclient.desktop
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/tsclient.mo
 ${PKGLOCALEDIR}/locale/da_DK/LC_MESSAGES/tsclient.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tsclient.mo
@@ -23,6 +23,7 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/tsclient.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/tsclient.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/tsclient.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/tsclient.mo
+share/man/man1/tsclient.1
 share/mime-info/tsclient.keys
 share/mime-info/tsclient.mime
 share/pixmaps/tsclient.png

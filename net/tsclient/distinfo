@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2003/11/16 21:23:04 agc Exp $
+$NetBSD: distinfo,v 1.5 2003/12/17 08:14:18 xtraeme Exp $
 
-SHA1 (tsclient-0.124/tsclient-0.124.tar.gz) = 4e718a113027bc16b4ccf4a13ed9a102681a7d9a
-Size (tsclient-0.124/tsclient-0.124.tar.gz) = 387870 bytes
+SHA1 (tsclient-0.132.tar.gz) = 9299d7bb3834a59f77760c85a841586121eab233
+Size (tsclient-0.132.tar.gz) = 357984 bytes
