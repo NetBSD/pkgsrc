@@ -1,0 +1,36 @@
+$NetBSD: patch-ae,v 1.1 1999/11/30 01:54:16 sakamoto Exp $
+
+--- ./Makefile.orig	Sun Aug 29 01:36:34 1999
++++ ./Makefile	Tue Nov 30 10:33:28 1999
+@@ -11,23 +11,21 @@
+ #-----------------------------------------------------------------------
+ 
+-SHELL=/bin/sh
+-MAKE = make
++SHELL=${SH}
++#MAKE = make
+ 
+ #CC			= cc
+-CC			= gcc
+-SWITCHES	= -DNEED_INCREMENTAL_INDICATOR \
+- -DTMP_FILENAME_TEMPLATE="\"/tmp/lhXXXXXX\""
++#CC			= gcc
++SWITCHES	= -DNEED_INCREMENTAL_INDICATOR -DEUC -DSUPPORT_LH6
+ 
+ #MACHINE     = -DSYSTIME_HAS_NO_TM -DFTIME -DEUC
+ #MACHINE     = -DSYSTIME_HAS_NO_TM -DEUC -DHAVE_TM_ZONE -DSYSV_SYSTEM_DIR
+-MACHINE     = -DSYSTIME_HAS_NO_TM -DEUC -DSYSV_SYSTEM_DIR -DMKTIME
++MACHINE	= -DSYSTIME_HAS_NO_TM -DSYSV_SYSTEM_DIR -DMKTIME -DUSESTRCASECMP
+ 
+-#OPTIMIZE	= -O2 -fstrength-reduce -fomit-frame-pointer
+-OPTIMIZE	= -O2 -DSUPPORT_LH6
++OPTIMIZE	= ${CFLAGS}
+ 
+-BINDIR = /usr/local/bin
+-MANDIR = /usr/local/man
+-MANSECT = n
++BINDIR = ${PREFIX}/bin
++MANDIR = ${PREFIX}/man/ja_JP.EUC
++MANSECT = 1
+ 
+ INSTALL = install
