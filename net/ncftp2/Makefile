@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2001/06/11 06:34:46 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2001/07/27 19:11:29 jlam Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -10,6 +10,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.ncftp.com/ncftp/
 COMMENT=		FTP replacement with advanced user interface
 
+USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-extra-dirs
 CONFIGURE_ARGS+=	--disable-ncurses
@@ -22,17 +23,16 @@ CONFIGURE_ENV+=		ac_cv_lib_intl_strftime=no
 BUILD_DEFS+=		USE_SOCKS
 .if ${USE_SOCKS} == 4
 CONFIGURE_ARGS+= 	--enable-socks
-DEPENDS+=		socks4-2.2:../../net/socks4
+.include "../../net/socks4/buildlink.mk"
 .else
 CONFIGURE_ARGS+= 	--enable-socks5
-DEPENDS+=		socks5-1.0.2:../../net/socks5
+.include "../../net/socks5/buildlink.mk"
 .endif
 .endif
-
-.include "../../devel/readline/buildlink.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ncftp ${PREFIX}/bin/ncftp2
 	${INSTALL_MAN} ${WRKSRC}/ncftp.1 ${PREFIX}/man/man1/ncftp2.1
 
+.include "../../devel/readline/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
