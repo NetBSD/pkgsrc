@@ -1,28 +1,43 @@
-# $NetBSD: Makefile,v 1.2 1999/04/15 20:39:47 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/24 01:00:03 fredb Exp $
 #
 
-DISTNAME=		t1lib-0.8-beta
-PKGNAME=		t1lib-0.8
-CATEGORIES=		textproc
-MASTER_SITES=		${MASTER_SITE_SUNSITE:=libs/graphics/}
+DISTNAME=	t1lib-0.9.2
+CATEGORIES=	textproc devel graphics
+MASTER_SITES=	${MASTER_SITE_SUNSITE:=libs/graphics/}
 
-MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.neuroinformatik.ruhr-uni-bochum.de/ini/PEOPLE/rmz/t1lib.html
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.neuroinformatik.ruhr-uni-bochum.de/ini/PEOPLE/rmz/t1lib.html
 
-BUILD_DEPENDS=		latex:../../print/teTeX
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_LIBTOOL=	yes
+USE_X11BASE=	yes
 
-WRKSRC=			${WRKDIR}/T1-0.8-beta
-USE_GMAKE=		yes
-GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
-CONFIGURE_ARGS=		--without-x
+WRKSRC=		${WRKDIR}/T1-0.9.2
+MESSAGE_FILE=	${WRKDIR}/MESSAGE
+ALL_TARGET=	without_doc
+
+post-build:
+	${SED} s^@@PREFIX@@^${PREFIX}^g < ${PKGDIR}/MESSAGE > ${WRKDIR}/MESSAGE
 
 post-install:
-	${MKDIR} ${LOCALBASE}/share/examples/t1lib
-	${CP} ${WRKSRC}/examples/Makefile ${LOCALBASE}/share/examples/t1lib
-	${CP} ${WRKSRC}/examples/t1example1.c ${LOCALBASE}/share/examples/t1lib
-	${CP} ${WRKSRC}/examples/t1lib.config ${LOCALBASE}/share/examples/t1lib
-	${CP} ${WRKSRC}/examples/README.t1example1 ${LOCALBASE}/share/examples/t1lib
-	${CP} ${WRKSRC}/examples/FontDataBase ${LOCALBASE}/share/examples/t1lib
+	${MKDIR} ${PREFIX}/share/t1lib
+	cd ${WRKSRC}; \
+	  ${PAX} -r -w Fonts ${PREFIX}/share/t1lib; \
+	  ${PAX} -r -w -s "/doc/t1lib/" doc ${PREFIX}/share/doc
+	${MKDIR} ${PREFIX}/share/examples/t1lib
+	cd ${WRKSRC}/examples; \
+	  ${PAX} -r -w FontDataBase README.t1example1 t1example1.c t1lib.config \
+	      ${PREFIX}/share/examples/t1lib
+	${SED} -e s^@@X11BASE@@^${X11BASE}^g -e s^@@LOCALBASE@@^${LOCALBASE}^g \
+	    -e s^@@PREFIX@@^${PREFIX}^g < ${FILESDIR}/t1lib.config.netbsd \
+	    > ${PREFIX}/share/examples/t1lib/t1lib.config.netbsd
+	if [ ! -f ${PREFIX}/share/t1lib/t1lib.config ]; then \
+	  ${CP} ${PREFIX}/share/examples/t1lib/t1lib.config.netbsd \
+	      ${PREFIX}/share/t1lib/t1lib.config; \
+	fi
+	if [ ! -f ${PREFIX}/share/t1lib/FontDataBase ]; then \
+	  ${CP} ${PREFIX}/share/examples/t1lib/FontDataBase ${PREFIX}/share/t1lib; \
+	fi
 
 .include "../../mk/bsd.pkg.mk"

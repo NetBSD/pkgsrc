@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ "$2" = "POST-DEINSTALL" ]; then
+echo Please note:
+echo
+echo If you do not intend to re-install t1lib, you may wish
+echo to manually remove the ${PKG_PREFIX}/share/t1lib directory.
+fi

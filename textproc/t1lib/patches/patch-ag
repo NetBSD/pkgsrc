@@ -1,17 +1,13 @@
-$NetBSD: patch-ag,v 1.1.1.1 1998/11/05 08:26:03 garbled Exp $
---- doc/Makefile.in.orig	Thu Nov  5 00:43:43 1998
-+++ doc/Makefile.in	Thu Nov  5 00:45:26 1998
-@@ -77,9 +77,10 @@
- install: dummy
- 	if (test -f t1lib_doc.dvi) \
- 	then \
--	  $(MKINSTALLDIRS) $(datadir)/t1lib-$(t1lib_version).$(t1lib_revision)/doc; \
--	  $(INSTALL_DATA) t1lib_doc.dvi $(datadir)/t1lib-$(t1lib_version).$(t1lib_revision)/doc; \
--	  $(INSTALL_DATA) t1_data.eps $(datadir)/t1lib-$(t1lib_version).$(t1lib_revision)/doc; \
-+	  $(MKINSTALLDIRS) $(datadir)/t1lib; \
-+	  $(MKINSTALLDIRS) $(datadir)/doc/t1lib; \
-+	  $(INSTALL_DATA) t1lib_doc.dvi $(datadir)/doc/t1lib; \
-+	  $(INSTALL_DATA) t1_data.eps $(datadir)/doc/t1lib; \
- 	fi;
+$NetBSD: patch-ag,v 1.2 1999/09/24 01:00:04 fredb Exp $
+
+--- xglyph/Makefile.in.orig	Wed Aug  4 06:06:36 1999
++++ xglyph/Makefile.in	Mon Sep 13 08:15:30 1999
+@@ -15,7 +15,7 @@
+ #
+ # Modified by H.Kakugawa to use libtool
  
- 
+-LIBTOOL   = ../libtool
++LIBTOOL   = @LIBTOOL@
+ SHELL     = /bin/sh
+ CC        = @CC@
+ CPP       = @CPP@

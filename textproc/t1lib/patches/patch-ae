@@ -1,4 +1,5 @@
-$NetBSD: patch-ae,v 1.1.1.1 1998/11/05 08:26:03 garbled Exp $
+$NetBSD: patch-ae,v 1.2 1999/09/24 01:00:04 fredb Exp $
+
 --- lib/t1lib/Makefile.in.orig	Wed Nov  4 16:23:04 1998
 +++ lib/t1lib/Makefile.in	Wed Nov  4 16:23:24 1998
 @@ -14,7 +14,7 @@
