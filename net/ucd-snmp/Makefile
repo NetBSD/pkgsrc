@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2002/08/25 18:39:39 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2002/10/02 21:10:10 wiz Exp $
 
 DISTNAME=	ucd-snmp-4.2.4
 CATEGORIES=	net
@@ -12,8 +12,6 @@ HOMEPAGE=	http://www.net-snmp.org/
 COMMENT=	Extensible SNMP implementation
 
 CONFLICTS+=	net-snmp-[0-9]*
-
-BUILD_DEPENDS+=	autoconf-2.13:../../devel/autoconf
 
 BUILD_DEFS+=	USE_INET6
 
@@ -73,7 +71,6 @@ pre-configure:
 	${LN} -s ${FILESDIR}/disklabel.h ${BUILDLINK_DIR}/include/sys
 .  endif
 .endif
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 #
 # Adapt for the fact that the default I've seen of ac_max_sed_cmds=90
 # will not work w/ built-in sed on Solaris.
