@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2003/12/16 11:10:47 adam Exp $
+$NetBSD: patch-ad,v 1.7 2005/01/14 13:00:05 adam Exp $
 
---- dlls/iphlpapi/ifenum.c.orig	2003-11-30 06:03:21.000000000 +0000
+--- dlls/iphlpapi/ifenum.c.orig	2004-12-23 18:41:05.000000000 +0000
 +++ dlls/iphlpapi/ifenum.c
-@@ -56,6 +56,7 @@
+@@ -55,6 +55,7 @@
  #endif
  
  #include <sys/types.h>
