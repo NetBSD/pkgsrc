@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2003/08/03 20:44:28 jdolecek Exp $
+# $NetBSD: Makefile,v 1.13 2003/11/01 13:18:44 cube Exp $
 
-DISTNAME=	cdlabelgen-2.6.1
+DISTNAME=	cdlabelgen-2.7.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.aczone.com/pub/tools/
 EXTRACT_SUFX=	.tgz
@@ -16,6 +16,6 @@ MAKE_ENV+=	SED="${SED}"
 MAKE_ENV+=	MV="${MV}"
 
 post-extract:
-	cd ${WRKSRC} && chmod go+r *
+	cd ${WRKSRC} && ${CHMOD} go+r *
 
 .include "../../mk/bsd.pkg.mk"
