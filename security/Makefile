@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2002/01/29 22:37:44 jlam Exp $
+# $NetBSD: Makefile,v 1.102 2002/02/14 00:43:38 abs Exp $
 #
 
 COMMENT=	Security tools
@@ -37,6 +37,7 @@ SUBDIR+=	logcheck
 SUBDIR+=	mcrypt
 SUBDIR+=	mhash
 SUBDIR+=	mirrordir
+SUBDIR+=	msu
 SUBDIR+=	nessus
 SUBDIR+=	nessus-core
 SUBDIR+=	nessus-libraries
