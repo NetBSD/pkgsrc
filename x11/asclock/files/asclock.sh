@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: asclock.sh,v 1.1 1999/10/28 19:04:57 jlam Exp $
+# $NetBSD: asclock.sh,v 1.2 1999/11/03 04:24:59 jlam Exp $
 
 args=''
 while [ $# -gt 0 ]
@@ -21,7 +21,7 @@ do
 	shift
 done
 
-ASCLOCKDIR=@PREFIX@/share/asclock
+ASCLOCKDIR=@PREFIX@/share/asclock-classic
 
 # default to American English
 if [ -z "${LANG}" -o ! -d ${ASCLOCKDIR}/${LANG} ]
@@ -33,4 +33,4 @@ monthxpm=${ASCLOCKDIR}/${LANG}/month.xpm
 weekdayxpm=${ASCLOCKDIR}/${LANG}/weekday.xpm
 
 args="${args} -monthxpm ${monthxpm} -weekdayxpm ${weekdayxpm}"
-exec @PREFIX@/libexec/asclock ${args}
+exec @PREFIX@/libexec/asclock-classic ${args}
