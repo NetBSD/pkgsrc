@@ -1,4 +1,4 @@
-/* $NetBSD: stab-elf.c,v 1.2 2000/10/06 11:08:31 agc Exp $ */
+/* $NetBSD: stab-elf.c,v 1.3 2000/10/22 20:42:48 agc Exp $ */
 
 /*
  * Copyright (c) 2000 Alistair G. Crooks.  All rights reserved.
@@ -36,7 +36,7 @@
 __COPYRIGHT(
 	"@(#) Copyright (c) 2000 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: stab-elf.c,v 1.2 2000/10/06 11:08:31 agc Exp $");
+__RCSID("$NetBSD: stab-elf.c,v 1.3 2000/10/22 20:42:48 agc Exp $");
 #endif
 
 #include <sys/types.h>
@@ -74,7 +74,7 @@ Open_File_And_Snarf_Symbols (name)
 	SYM	**nextp;
 	SYM	*sp;
 
-	(void) snprintf(cmd, sizeof(cmd), "%s -g %s | %s '$2 == \"T\" { printf(\"%s %s\n\", $1 $3) }'", NM, name, AWK);
+	(void) snprintf(cmd, sizeof(cmd), "%s -g %s | %s '$2 == \"T\" { printf(\"%%s %%s\\n\", $1 $3) }'", NM, name, AWK);
 	if ((pp = popen(cmd, "r")) == NULL) {
 		Primitive_Error("can't open a.out file");
 	}
