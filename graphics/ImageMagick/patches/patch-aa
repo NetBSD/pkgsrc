@@ -1,11 +1,12 @@
---- Magick.tmpl.orig	Tue Dec  9 05:08:48 1997
-+++ Magick.tmpl	Thu Dec 11 01:43:36 1997
-@@ -33,12 +33,12 @@
- XCOMM HasShape if your X server supports the Shape Extension and
- XCOMM HasSharedMemory for the Shared Memory Extension.
- XCOMM
+--- Magick.tmpl.orig	Thu Jan  8 07:16:35 1998
++++ Magick.tmpl	Sat Jan 24 19:15:35 1998
+@@ -36,13 +36,13 @@
+ #ifdef RsArchitecture
+ XCOMM EXTENSIONS_DEFINES= -DHasLZW -DHasShape
+ #else
 -XCOMM EXTENSIONS_DEFINES= -DHasLZW -DHasShape -DHasSharedMemory
 +EXTENSIONS_DEFINES= -DHasLZW -DHasShape -DHasSharedMemory
+ #endif
  
  XCOMM Set DoSharedLib to HasSharedLibraries to build ImageMagick with shared
  XCOMM libraries.
@@ -15,7 +16,7 @@
  
  XCOMM By default, the maximum color value is 255.  To increase the maximum to
  XCOMM 65535 define:
-@@ -56,10 +56,10 @@
+@@ -60,10 +60,10 @@
  XCOMM #define HasFPX
  XCOMM #define HasHDF
  XCOMM #define HasJBIG
@@ -30,7 +31,7 @@
  XCOMM #define HasTTF
  
  #ifdef HasDPS
-@@ -92,29 +92,29 @@
+@@ -96,29 +96,29 @@
  
  #ifdef HasJPEG
  JPEG_DEFINES= -DHasJPEG
@@ -51,7 +52,7 @@
  #endif
  
  #ifdef HasPNG
- PNG_DEFINES= -DHasPNG
+ PNG_DEFINES= -DHasPNG -DHasZLIB
 -PNG_INCLUDES= -I$(TOP)/png -I$(TOP)/zlib
 -PNG_FLAGS= -L$(TOP)/png -L$(TOP)/zlib
 +PNG_INCLUDES= -I${LOCALBASE}/include
@@ -68,7 +69,7 @@
  TIFF_LIBRARIES= -ltiff
  #endif
  
-@@ -136,10 +136,10 @@
+@@ -140,10 +140,12 @@
  XCOMM ImageMagick has an include file named X.h.  Do not set LOCALINC to
  XCOMM the top level X11 include directory or X11/X.h will be overwritten.
  
@@ -79,7 +80,9 @@
 +LOCALDIR= $(PREFIX)/bin
 +LOCALINC= $(PREFIX)/include/magick
 +LOCALLIB= $(PREFIX)/lib
-+LOCALMAN= $(PREFIX)/man/cat1
++LOCALMAN1= $(PREFIX)/man/cat1
++LOCALMAN4= $(PREFIX)/man/cat4
++LOCALMAN5= $(PREFIX)/man/cat5
  
  MAGICKDIR= $(TOP)/magick
  MAGICK_INCLUDES= -I$(TOP)/magick
