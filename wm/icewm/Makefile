@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2001/06/30 10:25:01 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2001/08/24 05:35:17 jlam Exp $
 #
 
 COMMENT=		small, fast and light-weight window manager
 
 CONFLICTS+=		icewm-gnome-[0-9]*
 
-.include "../../graphics/xpm/buildlink.mk"
 .include "../../wm/icewm/Makefile.common"
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/bsd.pkg.mk"
