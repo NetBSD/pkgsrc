@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/01/20 12:27:58 agc Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/27 18:56:43 abs Exp $
 
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}-src
 PKGNAME=	ap-jk-${TOMCAT_VERSION}
@@ -13,7 +13,7 @@ COMMENT=	Apache connector for accessing Jakarta Tomcat or Apache JServ
 # XXX workaround for pax-as-tar problem in -current:
 # tar: Invalid header, starting valid header search.
 #
-BUILD_DEPENDS+=	gtar-base:../../archivers/gtar-base
+BUILD_DEPENDS+=	gtar-base-[0-9]*:../../archivers/gtar-base
 GTAR=		${LOCALBASE}/bin/gtar
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/native/apache1.3
