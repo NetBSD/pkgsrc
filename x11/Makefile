@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2000/01/24 15:03:52 agc Exp $
+# $NetBSD: Makefile,v 1.143 2000/02/04 10:51:47 drochner Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -8,6 +8,7 @@
 #    SUBDIR += XFree86-contrib
     SUBDIR += Xaw-Xpm
     SUBDIR += Xaw3d
+    SUBDIR += Xbae
     SUBDIR += XmHTML
     SUBDIR += afterstep
     SUBDIR += amiwm
