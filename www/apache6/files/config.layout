@@ -1,4 +1,4 @@
-# $NetBSD: config.layout,v 1.1 2001/04/29 21:21:14 jlam Exp $
+# $NetBSD: config.layout,v 1.2 2001/10/17 07:47:53 martti Exp $
 
 <Layout pkgsrc>
 prefix: @PREFIX@
@@ -11,6 +11,7 @@ sysconfdir: @APACHE_SYSCONFDIR@
 datadir: ${prefix}/share/httpd
 iconsdir: ${prefix}/share/httpd/icons
 htdocsdir: ${prefix}/share/httpd/htdocs
+manualdir: ${prefix}/share/httpd/htdocs/manual
 cgidir: ${exec_prefix}/libexec/cgi-bin
 includedir: ${prefix}/include/httpd
 localstatedir: /var/run
