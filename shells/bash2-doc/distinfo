@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/09/26 22:08:12 jlam Exp $
+
+SHA1 (bash-doc-2.05.tar.gz) = c07174e6f59730a925634a173541b4dbfcd5fdc1
+Size (bash-doc-2.05.tar.gz) = 880715 bytes
+SHA1 (patch-ab) = ea7d1d5e063a839445cb4c7937ba79234a0596bf
+SHA1 (patch-ac) = 41248ac10e116980aee59a790c73a71b91829e9e
+SHA1 (patch-ad) = 5e3207818583a7c93a65ccebf6c77cfe5fd9be5a
+SHA1 (patch-ae) = f55a728f9f8ce8896a7097100de80db1d1cf752f
