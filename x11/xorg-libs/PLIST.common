@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2004/08/11 15:40:49 recht Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2004/09/21 17:38:53 xtraeme Exp $
 ${X11ROOT_PREFIX}/include/DPS/ColorSB.h
 ${X11ROOT_PREFIX}/include/DPS/ColorSBP.h
 ${X11ROOT_PREFIX}/include/DPS/DPSScrollW.h
@@ -111,6 +111,8 @@ ${X11ROOT_PREFIX}/include/X11/Xaw/Panner.h
 ${X11ROOT_PREFIX}/include/X11/Xaw/PannerP.h
 ${X11ROOT_PREFIX}/include/X11/Xaw/Porthole.h
 ${X11ROOT_PREFIX}/include/X11/Xaw/PortholeP.h
+${X11ROOT_PREFIX}/include/X11/Xaw/Print.h
+${X11ROOT_PREFIX}/include/X11/Xaw/PrintSP.h
 ${X11ROOT_PREFIX}/include/X11/Xaw/Repeater.h
 ${X11ROOT_PREFIX}/include/X11/Xaw/RepeaterP.h
 ${X11ROOT_PREFIX}/include/X11/Xaw/Reports.h
@@ -179,6 +181,8 @@ ${X11ROOT_PREFIX}/include/X11/Xmu/WidgetNode.h
 ${X11ROOT_PREFIX}/include/X11/Xmu/WinUtil.h
 ${X11ROOT_PREFIX}/include/X11/Xmu/Xct.h
 ${X11ROOT_PREFIX}/include/X11/Xmu/Xmu.h
+${X11ROOT_PREFIX}/include/X11/XprintAppUtil/xpapputil.h
+${X11ROOT_PREFIX}/include/X11/XprintUtil/xprintutil.h
 ${X11ROOT_PREFIX}/include/X11/Xos.h
 ${X11ROOT_PREFIX}/include/X11/Xos_r.h
 ${X11ROOT_PREFIX}/include/X11/Xosdefs.h
@@ -262,6 +266,19 @@ ${X11ROOT_PREFIX}/include/X11/cursorfont.h
 ${X11ROOT_PREFIX}/include/X11/extensions/MITMisc.h
 ${X11ROOT_PREFIX}/include/X11/extensions/Print.h
 ${X11ROOT_PREFIX}/include/X11/extensions/Printstr.h
+${X11ROOT_PREFIX}/include/X11/extensions/Xcomposite.h
+${X11ROOT_PREFIX}/include/X11/extensions/Xdamage.h
+${X11ROOT_PREFIX}/include/X11/extensions/Xevie.h
+${X11ROOT_PREFIX}/include/X11/extensions/Xeviestr.h
+${X11ROOT_PREFIX}/include/X11/extensions/composite.h
+${X11ROOT_PREFIX}/include/X11/extensions/compositeproto.h
+${X11ROOT_PREFIX}/include/X11/extensions/damage.h
+${X11ROOT_PREFIX}/include/X11/extensions/damageproto.h
+${X11ROOT_PREFIX}/include/X11/extensions/damagewire.h
+${X11ROOT_PREFIX}/include/X11/extensions/xevieplaceholder.h
+${X11ROOT_PREFIX}/include/X11/extensions/xfixesproto.h
+${X11ROOT_PREFIX}/include/X11/extensions/xfixeswire.h
+${X11ROOT_PREFIX}/include/X11/extensions/Xfixes.h
 ${X11ROOT_PREFIX}/include/X11/extensions/XEVI.h
 ${X11ROOT_PREFIX}/include/X11/extensions/XEVIstr.h
 ${X11ROOT_PREFIX}/include/X11/extensions/XI.h
@@ -303,9 +320,6 @@ ${X11ROOT_PREFIX}/include/X11/extensions/bigreqstr.h
 ${X11ROOT_PREFIX}/include/X11/extensions/dpms.h
 ${X11ROOT_PREFIX}/include/X11/extensions/dpmsstr.h
 ${X11ROOT_PREFIX}/include/X11/extensions/extutil.h
-${X11ROOT_PREFIX}/include/X11/extensions/fontcache.h
-${X11ROOT_PREFIX}/include/X11/extensions/fontcacheP.h
-${X11ROOT_PREFIX}/include/X11/extensions/fontcachstr.h
 ${X11ROOT_PREFIX}/include/X11/extensions/lbxbuf.h
 ${X11ROOT_PREFIX}/include/X11/extensions/lbxbufstr.h
 ${X11ROOT_PREFIX}/include/X11/extensions/lbxdeltastr.h
@@ -359,12 +373,6 @@ ${X11ROOT_PREFIX}/include/X11/extensions/xtrapproto.h
 ${X11ROOT_PREFIX}/include/X11/fonts/FS.h
 ${X11ROOT_PREFIX}/include/X11/fonts/FSlib.h
 ${X11ROOT_PREFIX}/include/X11/fonts/FSproto.h
-${X11ROOT_PREFIX}/include/X11/fonts/codeconv/cconvversion.h
-${X11ROOT_PREFIX}/include/X11/fonts/codeconv/xttcap.h
-${X11ROOT_PREFIX}/include/X11/fonts/codeconv/xttcconv.h
-${X11ROOT_PREFIX}/include/X11/fonts/codeconv/xttcconvP.h
-${X11ROOT_PREFIX}/include/X11/fonts/codeconv/xttcommon.h
-${X11ROOT_PREFIX}/include/X11/fonts/codeconv/xttversion.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fontenc.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fsmasks.h
 ${X11ROOT_PREFIX}/include/X11/keysym.h
@@ -372,6 +380,10 @@ ${X11ROOT_PREFIX}/include/X11/keysymdef.h
 ${X11ROOT_PREFIX}/include/X11/xpm.h
 ${X11ROOT_PREFIX}/include/xf86Optrec.h
 ${X11ROOT_PREFIX}/include/xf86Parser.h
+${X11ROOT_PREFIX}/lib/pkgconfig/xcomposite.pc
+${X11ROOT_PREFIX}/lib/pkgconfig/xdamage.pc
+${X11ROOT_PREFIX}/lib/pkgconfig/xevie.pc
+${X11ROOT_PREFIX}/lib/pkgconfig/xfixes.pc
 ${X11ROOT_PREFIX}/lib/X11/XErrorDB
 ${X11ROOT_PREFIX}/lib/X11/XKeysymDB
 ${X11ROOT_PREFIX}/lib/X11/Xcms.txt
@@ -519,11 +531,8 @@ ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW.big5/XLC_LOCALE
 ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW/Compose
 ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW/XI18N_OBJS
 ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW/XLC_LOCALE
-${X11ROOT_PREFIX}/${LIBMAN_DIR}/FontCacheChangeCacheSettings.${LIBMAN_SUFFIX}
-${X11ROOT_PREFIX}/${LIBMAN_DIR}/FontCacheGetCacheSettings.${LIBMAN_SUFFIX}
-${X11ROOT_PREFIX}/${LIBMAN_DIR}/FontCacheGetCacheStatistics.${LIBMAN_SUFFIX}
-${X11ROOT_PREFIX}/${LIBMAN_DIR}/FontCacheQueryExtension.${LIBMAN_SUFFIX}
-${X11ROOT_PREFIX}/${LIBMAN_DIR}/FontCacheQueryVersion.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/Xevie.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/Xfixes.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XDGA.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XDGAChangePixmapMode.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XDGACloseFramebuffer.${LIBMAN_SUFFIX}
@@ -562,5 +571,4 @@ ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XScreenSaverSetAttributes.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XScreenSaverUnregister.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XScreenSaverUnsetAttributes.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/Xaw.${LIBMAN_SUFFIX}
-${X11ROOT_PREFIX}/${LIBMAN_DIR}/Xfontcache.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/Xss.${LIBMAN_SUFFIX}

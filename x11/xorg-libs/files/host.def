@@ -1,9 +1,15 @@
-/* $NetBSD: host.def,v 1.1.1.1 2004/07/29 04:50:58 xtraeme Exp $ */
+/* $NetBSD: host.def,v 1.2 2004/09/21 17:38:53 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 
 #define MakeCmd @MAKE@
+
+/* To avoid stupid warnings on Linux */
+
+#ifndef LinuxArchitecture
 #define HasGnuMake	NO
+#endif
+
 #define ImakeCmd @IMAKE@
 #define RmanCmd @RMAN@
 #define HtmlIndexCmd @MKHTMLINDEX@
@@ -56,7 +62,6 @@
 #define BuildFreetype2Library NO
 #define BuildFontconfigLibrary NO
 #define BuildXftLibrary NO
-#define BuildXft1Library NO
 #define BuildRandRLibrary NO
 
 #define HasFreetype2 YES

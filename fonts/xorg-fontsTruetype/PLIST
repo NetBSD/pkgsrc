@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/29 04:59:30 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/09/21 17:38:53 xtraeme Exp $
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/Vera.ttf
+${X11ROOT_PREFIX}/lib/X11/fonts/TTF/VeraIt.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/VeraBI.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/VeraBd.ttf
 ${X11ROOT_PREFIX}/lib/X11/fonts/TTF/VeraMoBI.ttf

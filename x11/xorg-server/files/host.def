@@ -1,13 +1,17 @@
-/* $NetBSD: host.def,v 1.4 2004/08/27 06:29:11 jlam Exp $ */
+/* $NetBSD: host.def,v 1.5 2004/09/21 17:38:53 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
 
 /* Workaround */
-#define XorgVersion 670
+#define XorgVersion 681
 
 #define MakeCmd @MAKE@
+
+#ifndef LinuxArchitecture
 #define HasGnuMake      NO
+#endif
+
 #define ImakeCmd @IMAKE@
 #define RmanCmd @RMAN@
 #define HtmlIndexCmd @MKHTMLINDEX@
@@ -26,6 +30,17 @@
 #define BuildGLXLibrary YES
 #define BuildXFree86ConfigTools YES
 #define UseInstalledPrograms YES
+
+#ifndef LinuxArchitecture
+#define HasNcurses		NO
+#define BuildGISWxprintglue	NO
+#define BuildGISWxprint		NO
+#define BuildDebianXprintPackage NO
+#endif
+
+#ifndef OpenBSDArchitecture
+#define ProPoliceSupport NO
+#endif
 
 #define BuildFontCache YES
 #define BuiltFontLib NO
