@@ -1,0 +1,24 @@
+In contrast to Graphviz and other graph optimizers, graphopt does
+not use a heuristic approach to layout optimization.  Instead, it
+uses basic principles of physics to iteratively determine optimal
+layout.  Each node is given mass and an electric charge, and each
+edge is represented as a spring.  Node mass, electric charge,
+optimal spring length, and the spring constant are tweakable in
+the gui in realtime.
+
+For most graphs, this is all that is needed - hit 'go' and the
+graph organizes itself much as the analagous real-life system would
+if constrained to two dimensions.  For more complex graphs, some
+fiddling with the physical parameters at different stages of
+optimization usually does the trick.
+
+To accomodate very large graphs, an additional mechanism called
+layering was added.  When a graph is loaded, nodes are assigned to
+layers based on their relative positions.  During optimization,
+you can choose to hide any number of layers.  Any nodes assigned
+to a layer lower than the selected layer are not only hidden, but
+neither their electric charges nor the forces of the springs attached
+to them are figured into the forces acting on the visible nodes.
+In effect, those nodes cease to exist, and a smaller graph is
+allowed to lay itself out without being constrained by an excessive
+number of nodes.

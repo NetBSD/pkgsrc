@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/01/23 19:27:12 wiz Exp $
+bin/graphopt
+share/doc/graphopt/README
+@dirrm share/doc/graphopt
