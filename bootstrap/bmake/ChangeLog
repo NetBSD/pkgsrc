@@ -1,0 +1,219 @@
+Tue Oct 16 12:18:42 2001  Simon J. Gerraty  <sjg@zen.crufty.net>
+
+	* Merge with NetBSD make
+	pick up fix for .END failure in compat mode.
+	pick up fix for extra va_end() in ParseVErrorInternal.
+
+Thu Oct 11 13:20:06 2001  Simon J. Gerraty  <sjg@zen.crufty.net>
+
+	* configure.in: for systems that have sys/cdefs.h check if it is
+	compatible.  If not, include the one under missing, but tell it to
+	include the native one too - necessary on Linux.
+
+	* missing/sys/cdefs.h: if NEED_HOST_CDEFS_H is defined, use
+	include_next (for gcc) to get the native sys/cdefs.h
+
+Tue Aug 21 02:29:34 2001  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* job.c (JobFinish): Fix an earlier merge bug that resulted in
+	leaking descriptors when using -jN.
+	
+	* job.c (JobPrintCommand): See if "curdir" exists before
+	attempting to chdir().  Doing the chdir directly in make (when in
+	compat mode) fails silently, so let the -jN version do the same.
+	This can happen when building kernels in an object tree and
+	playing clever games to reset .CURDIR.
+
+	* Merged with NetBSD make
+	pick up .USEBEFORE
+
+Tue Jun 26 23:45:11 2001  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* makefile.boot.in: Give bmake.boot a MAKESYSPATH that might work.
+
+Tue Jun 12 16:48:57 2001  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* var.c (Var_Set): Add 4th (flags) arg so VarLoopExpand can tell
+	us not to export the iterator variable when using VAR_CMD context.
+
+Sun Jun 10 21:55:21 2001  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* job.c (Job_CatchChildren): don't call Job_CatchOutput() here,
+	its the wrong "fix".
+
+Sat Jun  9 00:11:24 2001  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* Redesigned export of VAR_CMD's via MAKEFLAGS.
+	We now simply append the variable names to .MAKEOVERRIDES, and
+	handle duplicate suppression and quoting in ExportMAKEFLAGS using:
+	${.MAKEOVERRIDES:O:u:@v@$v=${$v:Q}@}
+	Apart from fixing quoting bugs in previous version, this allows us
+	to export vars to the environment by simply doing:
+	.MAKEOVERRIDES+= PATH 
+	Merged again with NetBSD make, but the above is the only change.
+
+	* configure.in: added
+	--disable-pwd-override		disable $PWD overriding getcwd()
+	--disable-check-make-chdir	disable make trying to guess 
+		when it should automatically cd ${.CURDIR}
+
+	* Merge with NetBSD make, changes include:
+	parse.c (ParseDoDependency): Spot that the syntax error is
+	caused by an unresolved cvs/rcs conflict and say so.
+	var.c: most of Var* functions now take a ctxt as 1st arg.
+	now does variable substituion on rhs of sysv style modifiers.
+	
+	* var.c (Var_Set): exporting of command line variables (VAR_CMD)
+	is now done here.  We append the name='value' to .MAKEOVERRIDES
+	rather than directly into MAKEFLAGS as this allows a Makefile to
+	use .MAKEOVERRIDES= to disable this behaviour.  GNU make uses a
+	very similar mechanism.  Note that in adding name='value' to
+	.MAKEOVERRIDES we do the moral equivalent of:
+	.MAKEOVERRIDES:= ${.MAKEOVERRIDES:Nname=*} name='val'
+
+Fri Jun  1 14:08:02 2001  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* make-conf.h (USE_IOVEC): make it conditional on HAVE_SYS_UIO_H
+
+	* Merged with NetBSD make
+	make -dx can now be used to run commands via sh -x
+	better error messages on exec failures.
+
+Thu May 31 01:44:54 2001  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* Makefile.in (main.o): depends on ${SRCS} ${MAKEFILE} so that
+	MAKE_VERSION gets updated.  Also don't use ?= for MAKE_VERSION,
+	MACHINE etc otherwise they propagate from the previous bmake.
+
+	* configure.in (machine): allow --with-machine=generic to make
+	configure use machine.sh to set MACHINE. 
+
+	* job.c (JobInterrupt): convert to using WAIT_T and friends.
+
+	* Makefile.in: mention in bmake.1 that we use autoconf.
+
+	* make.1: mention MAKE_PRINT_VAR_ON_ERROR.
+
+Wed May 30 23:17:18 2001  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* main.c (ReadMakefile): don't set MAKEFILE if reading ".depend"
+	as that rather defeats the usefulness of ${MAKEFILE}.
+
+	* main.c (MainParseArgs): append command line variable assignments
+	to MAKEFLAGS so that they get propagated to child make's.
+	Apparently this is required POSIX behaviour?  Its useful anyway.
+
+Tue May 29 02:20:07 2001  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* compat.c (CompatRunCommand): don't use perror() since stdio may
+	cause problems in child of vfork().
+
+	* compat.c, main.c: Call PrintOnError() when we are going to bail.
+	This routine prints out the .curdir where we stopped and will also
+	display any vars listed in ${MAKE_PRINT_VAR_ON_ERROR}.
+
+	* main.c: add ${.newline} to hold a "\n" - sometimes handy in
+	:@ expansion.
+
+	* var.c: VarLoopExpand: ignore addSpace if a \n is present.
+
+	* Added RCSid's for the files we've touched.
+	
+Thu May 24 15:41:37 2001  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* configure.in:	Thanks to some clues from mdb@juniper.net,
+	added autoconf magic to control setting of MACHINE, MACHINE_ARCH
+	as well as what ends up in _PATH_DEFSYSPATH.  We now have:
+
+  --with-machine=MACHINE  explicitly set MACHINE
+  --with-force-machine=MACHINE  set FORCE_MACHINE
+  --with-machine_arch=MACHINE_ARCH  explicitly set MACHINE_ARCH
+  --with-default-sys-path=PATH:DIR:LIST  use an explicit _PATH_DEFSYSPATH
+  --with-prefix-sys-path=PATH:DIR:LIST  prefix _PATH_PREFIX_SYSPATH
+  --with-path-objdirprefix=PATH  override _PATH_OBJDIRPREFIX
+ 	
+	If _PATH_OBJDIRPREFIX is set to "no" we won't define it.
+
+	* makefile: added a pathetically simple makefile to drive
+	bootstrapping.  Running configure by hand is more useful.
+
+	* Makefile.in: added MAKE_VERSION, and reworked things to be less
+	dependent on NetBSD bsd.*.mk
+	
+	* pathnames.h: allow NO_PATH_OBJDIRPREFIX to stop us defining
+	_PATH_OBJDIRPREFIX for those that don't want a default.
+	construct _PATH_DEFSYSPATH from the info we get from configure.
+
+	* main.c: allow for no _PATH_OBJDIRPREFIX, set ${MAKE_VERSION}
+	if MAKE_VERSION is defined.
+	
+	* compat.c: when we bail, print out the .CURDIR we were in.
+	
+Sat May 12 00:34:12 2001  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* Merged with NetBSD make
+
+	* var.c: fixed a bug in the handling of the modifier :P
+	if the node as found but the path was null, we segfault trying to
+	duplicate it.
+
+Mon Mar  5 16:20:33 2001  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* Merged with NetBSD make
+	
+	* make.c: Make_OODate's test for a library out of date was using
+	cmtime where it should have used mtime (my bug).
+
+	* compat.c: Use perror() to tell us what really went wrong when we
+	cannot exec a command.
+	
+Fri Dec 15 10:11:08  2000  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* Merged with NetBSD make
+	
+Sat Jun 10 10:11:08  2000  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* Merged with NetBSD make
+	
+Thu Jun  1 10:11:08  2000  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* Merged with NetBSD make
+	
+Tue May 30 10:11:08  2000  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* Merged with NetBSD make
+	
+Thu Apr 27 00:07:47 2000  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* util.c: don't provide signal() since we use sigcompat.c
+
+	* Makefile.in: added a build target.
+
+	* var.c (Var_Parse): added ODE modifiers :U, :D, :L, :P, :@ and :!
+	These allow some quite clever magic.
+
+	* main.c (main): added support for getenv(MAKESYSPATH).
+
+Mon Apr  2 16:25:13 2000  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* Disable $PWD overriding getcwd() if MAKEOBJDIRPREFIX is set.
+	This avoids objdir having a different value depending on how a
+	directory was reached (via command line, or subdir.mk).
+
+	* If FORCE_MACHINE is defined, ignore getenv("MACHINE").
+	
+Mon Apr  2 23:15:31 2000  Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* Do a chdir(${.CURDIR}) before invoking ${.MAKE} or ${.MAKE:T} if
+	MAKEOBJDIRPREFIX is set and NOCHECKMAKECHDIR is not.
+	I've been testing this in NetBSD's make for some weeks.
+
+	* Turn Makefile into Makefile.in and make it useful.
+	
+Tue Feb 29 22:08:00 2000 Simon J. Gerraty  <sjg@zen.quick.com.au>
+
+	* Imported NetBSD's -current make(1) and resolve conflicts.
+	
+	* Applied autoconf patches from bmake v2
+
+	* Imported clean code base from NetBSD-1.0

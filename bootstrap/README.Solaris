@@ -1,0 +1,56 @@
+$NetBSD: README.Solaris,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+
+You will need a working C compiler. Both gcc 2.95.3 and Sun
+WorkShop 5 have been tested.
+
+The following packages are required on Solaris 8 for the bootstrap
+process and to build packages.
+
+	- SUNWsprot
+	- SUNWarc
+	- SUNWbtool
+	- SUNWtoo
+	- SUNWlibm
+
+Please note the use of GNU binutils on Solaris is not supported.
+
+If you are using gcc
+--------------------
+It makes life much simpler if you only use the same gcc consistently
+for building all packages.
+
+See http://www.netbsd.org/Documentation/software/packages.html for
+binary kits and initial packages, including gcc.
+
+It is recommended that an external gcc be used only for bootstrapping,
+then remove gcc and install the pkgsrc binary package.
+
+Binary packages of gcc can be found through
+http://www.sun.com/bigadmin/common/freewareSearch.html
+
+If you are using Sun WorkShop
+-----------------------------
+You will need at least the following packages installed (from WorkShop
+5.0):
+
+	SPROcc		Sun WorkShop Compiler C 5.0
+	SPROcpl		Sun WorkShop Compiler C++ 5.0
+	SPROild		Sun WorkShop Incremental Linker
+	SPROlang	Sun WorkShop Compilers common components
+
+You should set CC and CXX in /etc/mk.conf, eg.
+
+	CC=		cc
+	CXX=		CC
+
+You may also want to build 64-bit binaries, eg.
+
+	CFLAGS=		-xtarget=ultra -xarch=v9
+
+
+Whichever compiler you use, please ensure the compiler tools and
+your $prefix are in your PATH. This includes /usr/ccs/{bin,lib}
+and eg. /usr/pkg/{bin,sbin}.
+
+bootstrap-pkgsrc has been tested on Solaris 2.6 -> 9.
+
