@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2002/08/26 12:09:36 grant Exp $
+# $NetBSD: Makefile,v 1.45 2002/10/06 16:44:53 seb Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -17,12 +17,12 @@ DIST_SUBDIR=	bind/${BIND_VERSION}
 BUILD_DEFS+=	USE_INET6
 # No need to set USE_INET6, will auto-detect.
 
+USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
 LIBTOOL_OVERRIDE+=	${WRKSRC}/lib/bind/libtool
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--disable-threads	# Until we have real threads
 CONFIGURE_ARGS+=--with-libtool=yes \
 		--sysconfdir=/etc \
 		--localstatedir=/var
@@ -30,6 +30,8 @@ CONFIGURE_ARGS+=--with-libtool=yes \
 # use external OpenSSL.  comment out the following line and the buildlink
 # include at the bottom to use OpenSSL shipped with BIND9.
 CONFIGURE_ARGS+=--with-openssl=${SSLBASE}
+
+PTHREAD_OPTS+=	native
 
 post-build:
 	${SED} \
@@ -66,5 +68,12 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/named ${PREFIX}/etc/rc.d/named9
 	${INSTALL_SCRIPT} ${WRKDIR}/lwresd ${PREFIX}/etc/rc.d/lwresd
 
-.include "../../security/openssl/buildlink.mk"
+.include "../../mk/pthread.buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
+CONFIGURE_ARGS+=	--disable-threads
+.else
+CONFIGURE_ARGS+=	--enable-threads
+.endif
