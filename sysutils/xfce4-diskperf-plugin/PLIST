@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 05:07:32 martti Exp $
+lib/xfce4/panel-plugins/libdiskperf.a
+lib/xfce4/panel-plugins/libdiskperf.la
+lib/xfce4/panel-plugins/libdiskperf.so
