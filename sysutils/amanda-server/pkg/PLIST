@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2001/03/12 11:23:08 skrll Exp $
-lib/libamserver-2.4.2.so
+@comment $NetBSD: PLIST,v 1.9 2001/06/26 03:15:17 christos Exp $
+lib/libamserver-2.4.2p2.so
 lib/libamserver.a
 lib/libamserver.la
 lib/libamserver.so
