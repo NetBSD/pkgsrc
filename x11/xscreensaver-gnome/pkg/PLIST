@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2000/09/11 20:46:41 fredb Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/02/08 11:46:47 fredb Exp $
+bin/screensaver-properties-capplet
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
+bin/xscreensaver-gl-helper
 bin/xscreensaver.kss
+lib/X11/app-defaults/XScreenSaver
 libexec/xscreensaver/ant
 libexec/xscreensaver/atlantis
 libexec/xscreensaver/attraction
@@ -36,6 +39,7 @@ libexec/xscreensaver/flow
 libexec/xscreensaver/forest
 libexec/xscreensaver/galaxy
 libexec/xscreensaver/gears
+libexec/xscreensaver/gflux
 libexec/xscreensaver/glplanet
 libexec/xscreensaver/goop
 libexec/xscreensaver/grav
@@ -43,6 +47,7 @@ libexec/xscreensaver/greynetic
 libexec/xscreensaver/halo
 libexec/xscreensaver/helix
 libexec/xscreensaver/hopalong
+libexec/xscreensaver/hyperball
 libexec/xscreensaver/hypercube
 libexec/xscreensaver/ifs
 libexec/xscreensaver/imsmap
@@ -90,11 +95,13 @@ libexec/xscreensaver/slip
 libexec/xscreensaver/sonar
 libexec/xscreensaver/sphere
 libexec/xscreensaver/spiral
-libexec/xscreensaver/sproingies
 libexec/xscreensaver/spotlight
+libexec/xscreensaver/sproingies
 libexec/xscreensaver/squiral
 libexec/xscreensaver/stairs
 libexec/xscreensaver/starfish
+libexec/xscreensaver/starwars
+libexec/xscreensaver/stonerview
 libexec/xscreensaver/strange
 libexec/xscreensaver/superquadrics
 libexec/xscreensaver/swirl
@@ -105,16 +112,18 @@ libexec/xscreensaver/vidwhacker
 libexec/xscreensaver/vines
 libexec/xscreensaver/wander
 libexec/xscreensaver/webcollage
+libexec/xscreensaver/whirlwindwarp
 libexec/xscreensaver/worm
 libexec/xscreensaver/xflame
 libexec/xscreensaver/xjack
 libexec/xscreensaver/xlyap
 libexec/xscreensaver/xmatrix
-libexec/xscreensaver/xroger
+libexec/xscreensaver/xrayswarm
+libexec/xscreensaver/xscreensaver-gl-helper
 libexec/xscreensaver/xspirograph
 libexec/xscreensaver/xsublim
 libexec/xscreensaver/xteevee
-lib/X11/app-defaults/XScreenSaver
+libexec/xscreensaver/zoom
 man/man1/attraction.1
 man/man1/blitspin.1
 man/man1/bouboule.1
@@ -131,12 +140,14 @@ man/man1/flag.1
 man/man1/flame.1
 man/man1/forest.1
 man/man1/galaxy.1
+man/man1/gflux.1
 man/man1/goop.1
 man/man1/grav.1
 man/man1/greynetic.1
 man/man1/halo.1
 man/man1/helix.1
 man/man1/hopalong.1
+man/man1/hyperball.1
 man/man1/hypercube.1
 man/man1/ifs.1
 man/man1/imsmap.1
@@ -171,22 +182,26 @@ man/man1/spiral.1
 man/man1/spotlight.1
 man/man1/squiral.1
 man/man1/starfish.1
+man/man1/starwars.1
 man/man1/strange.1
 man/man1/swirl.1
 man/man1/t3d.1
 man/man1/vidwhacker.1
 man/man1/vines.1
 man/man1/webcollage.1
+man/man1/whirlwindwarp.1
 man/man1/xflame.1
 man/man1/xjack.1
 man/man1/xlyap.1
 man/man1/xmatrix.1
-man/man1/xroger.1
 man/man1/xscreensaver-command.1
 man/man1/xscreensaver-demo.1
+man/man1/xscreensaver-gl-helper.1
 man/man1/xscreensaver.1
 man/man1/xsublim.1
 man/man1/xteevee.1
+man/man1/zoom.1
 share/control-center/Desktop/screensaver-properties.desktop
 share/gnome/apps/Settings/Desktop/screensaver-properties.desktop
+share/pixmaps/xscreensaver.xpm
 @dirrm libexec/xscreensaver
