@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2004/01/03 18:49:59 reed Exp $
+# $NetBSD: Makefile,v 1.46 2004/01/23 21:50:52 jmmv Exp $
 
 DISTNAME=	kdebase-2.2.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 2 integrated X11 desktop
 

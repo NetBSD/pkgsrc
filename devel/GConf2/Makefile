@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2004/01/23 17:52:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/23 21:50:43 jmmv Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/GConf/GConf2/}
-PKGREVISION=	3
+PKGREVISION=	4
 
 USE_PKGINSTALL=	YES
 
