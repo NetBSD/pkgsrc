@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2004/10/08 22:09:55 mjl Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/10/08 22:49:56 mjl Exp $
 bin/asnparser
+include/ptbuildopts.h
+include/ptbuildopts.h.in
 include/ptclib/asnber.h
 include/ptclib/asner.h
 include/ptclib/asnper.h
