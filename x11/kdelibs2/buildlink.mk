@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/15 11:06:10 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/20 01:54:54 jlam Exp $
 #
 # This Makefile fragment is included by packages that use kdelibs2.
 #
@@ -22,7 +22,7 @@ DEPENDS+=	${BUILDLINK_DEPENDS.kdelibs2}:../../x11/kdelibs2
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_PREFIX.kdelibs2=	${X11PREFIX}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.kdelibs2=kdelibs
 BUILDLINK_FILES.kdelibs2!=	${GREP} "^\(include\|lib\)" ${.CURDIR}/../../x11/kdelibs2/pkg/PLIST
 BUILDLINK_FILES.kdelibs2+=	bin/dcopserver
 
@@ -42,10 +42,10 @@ BUILDLINK_TARGETS.kdelibs2+=	kdelibs2-buildlink-config-wrapper
 BUILDLINK_TARGETS.kdelibs2+=	kdelibs2-artsc-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.kdelibs2}
 
-BUILDLINK_CONFIG.kdelibs2=		${X11PREFIX}/bin/kde-config
+BUILDLINK_CONFIG.kdelibs2=		${BUILDLINK_PREFIX.kdelibs2}/bin/kde-config
 BUILDLINK_CONFIG_WRAPPER.kdelibs2=	${BUILDLINK_DIR}/bin/kde-config
 
-BUILDLINK_CONFIG.kdelibs2-artsc=	 ${X11PREFIX}/bin/artsc-config
+BUILDLINK_CONFIG.kdelibs2-artsc=	 ${BUILDLINK_PREFIX.kdelibs2}/bin/artsc-config
 BUILDLINK_CONFIG_WRAPPER.kdelibs2-artsc= ${BUILDLINK_DIR}/bin/artsc-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)

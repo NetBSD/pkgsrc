@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/02 05:34:00 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/20 01:54:52 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libxml.
 #
@@ -20,7 +20,7 @@ LIBXML_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.libxml?=	libxml>=1.8.11
 DEPENDS+=	${BUILDLINK_DEPENDS.libxml}:../../textproc/libxml
 
-BUILDLINK_PREFIX.libxml=	${LOCALBASE}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.libxml=libxml
 BUILDLINK_FILES.libxml=		include/gnome-xml/*
 BUILDLINK_FILES.libxml+=	lib/libxml.*
 BUILDLINK_FILES.libxml+=	lib/xmlConf.sh
@@ -31,8 +31,8 @@ BUILDLINK_TARGETS.libxml=	libxml-buildlink
 BUILDLINK_TARGETS.libxml+=	libxml-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.libxml}
 
-BUILDLINK_CONFIG.libxml=		${LOCALBASE}/bin/xml-config
-BUILDLINK_CONFIG_WRAPPER.libxml=	${BUILDLINK_DIR}/bin/xml-config
+BUILDLINK_CONFIG.libxml=	${BUILDLINK_PREFIX.libxml}/bin/xml-config
+BUILDLINK_CONFIG_WRAPPER.libxml=${BUILDLINK_DIR}/bin/xml-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
 XML_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.libxml}
