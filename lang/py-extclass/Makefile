@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2000/01/09 01:20:33 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/02/15 01:11:56 tsarna Exp $
 #
 
-DISTNAME=	Zope-2.1.2-src
-PKGNAME=	py-extclass-2.1.2
+DISTNAME=	Zope-2.1.4-src
+PKGNAME=	py-extclass-2.1.4
 CATEGORIES=	lang
-MASTER_SITES=   http://www.zope.org/Products/Zope/2.1.2/
+MASTER_SITES=   http://www.zope.org/Products/Zope/2.1.4/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
