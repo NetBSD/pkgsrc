@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2003/02/28 22:15:31 grant Exp $
+
+--- libcharset/lib/Makefile.in.orig	Thu Jun 28 09:02:48 2001
++++ libcharset/lib/Makefile.in
+@@ -71,7 +71,7 @@ ref-del.sed : $(srcdir)/ref-del.sin
+ # $(libdir) and $(includedir) - don't use $(prefix) and $(exec_prefix) here.
+ install-lib : all force
+ 	$(MKINSTALLDIRS) $(libdir)
+-	$(LIBTOOL_INSTALL) $(INSTALL_DATA) libcharset.la $(libdir)/libcharset.la
++#	$(LIBTOOL_INSTALL) $(INSTALL_DATA) libcharset.la $(libdir)/libcharset.la
+ 	test -f $(libdir)/charset.alias && orig=$(libdir)/charset.alias \
+ 	                                || orig=charset.alias; \
+ 	sed -f ref-add.sed $$orig > $(libdir)/t-charset.alias; \
