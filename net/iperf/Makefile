@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2003/11/07 15:48:24 gavan Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/19 10:00:40 adam Exp $
 #
 
-DISTNAME=	iperf-1.6.5-source
+DISTNAME=	iperf-1.7.0-source
 PKGNAME=	${DISTNAME:C/-source//}
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	net
@@ -13,12 +13,12 @@ COMMENT=	TCP and UDP bandwidth performance measurement tool
 
 NOT_FOR_PLATFORM=	*-*-sparc64	# internal g++ error
 
-USE_BUILDLINK2=	YES
-CONFIGURE_DIRS=	${WRKSRC}/cfg
-INSTALL_DIRS=	${WRKSRC}/src
-GNU_CONFIGURE=	YES
-MAKE_ENV+=	INSTALL_DIR=${PREFIX}/bin
-USE_GCC_SHLIB=	YES
+USE_BUILDLINK2=		YES
+CONFIGURE_DIRS=		${WRKSRC}/cfg
+INSTALL_DIRS=		${WRKSRC}/src
+GNU_CONFIGURE=		YES
+MAKE_ENV+=		INSTALL_DIR=${PREFIX}/bin
+USE_GCC_SHLIB=		YES
 
 PTHREAD_OPTS=	native optional
 .include "../../mk/pthread.buildlink2.mk"
