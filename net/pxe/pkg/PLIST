@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/08/06 09:46:47 rh Exp $
+etc/rc.d/pxe
+sbin/pxe
+share/examples/pxe/pxe.conf
+@dirrm share/examples/pxe
