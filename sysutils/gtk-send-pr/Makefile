@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.9 2004/11/02 00:23:53 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/21 14:14:10 ben Exp $
 #
 
-DISTNAME=		gtk-send-pr-0.3.5
+DISTNAME=		gtk-send-pr-0.4
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.energyhq.es.eu.org/files/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		flynn@energyhq.es.eu.org
 HOMEPAGE=		http://www.energyhq.es.eu.org/gtk-send-pr.html
 COMMENT=		GTK+ based problem report tool
 
 USE_BUILDLINK3=		yes
 USE_X11=		yes
-
-BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../mail/libesmtp/buildlink3.mk"
