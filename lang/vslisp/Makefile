@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/04 23:47:35 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2001/01/24 21:07:29 wiz Exp $
 
 DISTNAME=		vslisp-4.0-1
 PKGNAME=		vslisp-4.0.1
@@ -12,7 +12,6 @@ WRKSRC=			${WRKDIR}/vslisp-4.0
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE= 	${WRKSRC}/ltconfig
-LIBTOOL_OVERRIDE= 	${WRKSRC}/libtool
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vslisp
