@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1999/05/09 21:12:33 tron Exp $
 bin/htadm
 etc/all.conf
 etc/caching.conf
@@ -32,3 +33,5 @@ www/icons/unknown.doc.xbm
 www/icons/unknown.old.xbm
 www/icons/unknown.xbm
 www/icons/uu.xbm
+@dirrm www/htbin
+@dirrm www/icons
