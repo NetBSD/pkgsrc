@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/01/29 06:45:47 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/30 08:04:50 jmc Exp $
 
 DISTNAME=	psi-0.8.7
 CATEGORIES=	chat
@@ -22,7 +22,12 @@ BUILD_DIRS=	${WRKSRC}/src
 
 CONFIGURE_ARGS+= -p ${PREFIX}
 
-.include "../../graphics/freetype2/buildlink2.mk"
+post-configure:
+	${SED} -e 's:^CHK_DIR_EXISTS *= *$$:CHK_DIR_EXISTS=test -d:' -e "s:^MKDIR *= *$$:MKDIR=${MKDIR}:" -e "s:/bin/true:${TRUE}:" < ${BUILD_DIRS}/Makefile > ${BUILD_DIRS}/Makefile.orig
+	${MV} ${BUILD_DIRS}/Makefile.orig ${BUILD_DIRS}/Makefile
+
+# This order is needed to pickup any freetype version dependencies from qt3
 .include "../../x11/qt3-libs/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
