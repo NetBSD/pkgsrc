@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/06/29 23:13:43 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/06/30 00:11:29 tron Exp $
 bin/gnuattach
 bin/gnuclient
 bin/gnudoit
@@ -10,6 +10,7 @@ bin/xemacs-b2m
 bin/xemacs-ctags
 bin/xemacs-etags
 bin/xemacs-rcs-checkin
+@exec mkdir -p %D/lib/xemacs
 lib/xemacs-21.1-p3/etc/BETA
 lib/xemacs-21.1-p3/etc/CHARSETS
 lib/xemacs-21.1-p3/etc/CODING-STANDARDS
@@ -954,5 +955,6 @@ man/man1/xemacs-etags.1
 @dirrm lib/xemacs-21.1-p3/lisp/term
 @dirrm lib/xemacs-21.1-p3/lisp
 @dirrm lib/xemacs-21.1-p3
+@dirrm lib/xemacs
 @exec mkdir -p /var/tmp/xemacs.lock && chmod 1777 /var/tmp/xemacs.lock
 @unexec rm -rf /var/tmp/xemacs.lock
