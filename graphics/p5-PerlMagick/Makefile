@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/03/14 00:44:48 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/07/02 12:49:48 wiz Exp $
 
 DISTNAME=		ImageMagick-5.3.9
 PKGNAME=		p5-PerlMagick-5.3.9
@@ -13,16 +13,14 @@ HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
 COMMENT=		Object-oriented Perl interface to ImageMagick
 
 # restore following line on next update
-#DEPENDS+=		${DISTNAME}:../../${MAGICK}
-DEPENDS+=		ImageMagick-5.3.9nb1:../../${MAGICK}
+#DEPENDS+=		${DISTNAME}:../../graphics/ImageMagick
+DEPENDS+=		ImageMagick-5.3.9nb1:../../graphics/ImageMagick
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
-MAGICK=			graphics/ImageMagick
-MAGICKDIR=		${_PKGSRCDIR}/${MAGICK}
-DISTINFO_FILE=		${MAGICKDIR}/distinfo
-FILESDIR=		${MAGICKDIR}/files
-PATCHDIR=		${MAGICKDIR}/patches
+DISTINFO_FILE=		../../graphics/ImageMagick/distinfo
+FILESDIR=		../../graphics/ImageMagick/files
+PATCHDIR=		../../graphics/ImageMagick/patches
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
