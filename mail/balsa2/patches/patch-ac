@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2004/08/22 17:52:50 recht Exp $
+$NetBSD: patch-ac,v 1.5 2004/11/25 09:33:41 adam Exp $
 
---- sounds/Makefile.in.orig	2004-08-15 20:16:56.000000000 +0200
-+++ sounds/Makefile.in	2004-08-22 16:05:47.000000000 +0200
-@@ -213,7 +213,7 @@
+--- sounds/Makefile.in.orig	2004-11-20 20:58:54.000000000 +0000
++++ sounds/Makefile.in
+@@ -227,7 +227,7 @@ target_alias = @target_alias@
  balsa_SOUNDS = startup.wav newmail.wav
  balsasoundsdir = $(datadir)/sounds/balsa
  balsasounds_DATA = $(balsa_SOUNDS)
 -soundlistdir = $(sysconfdir)/sound/events
 +soundlistdir = ${prefix}/share/examples/balsa
- soundlist_in_files = balsa.soundlist.in email.soundlist.in
+ soundlist_in_files = balsa.soundlist.in
  soundlist_DATA = $(soundlist_in_files:.soundlist.in=.soundlist)
  EXTRA_DIST = $(balsa_SOUNDS) $(soundlist_in_files)
