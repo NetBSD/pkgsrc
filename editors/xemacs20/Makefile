@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.18 1998/02/23 13:05:52 frueauf Exp $
+# $NetBSD: Makefile,v 1.19 1998/02/24 23:37:55 tron Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -67,6 +67,7 @@ pre-install:
 	${SED} -e 's|@.GZ@|'$$GZSUFFIX'|g' ${PKGDIR}/PLIST > ${PLIST_SRC})
 
 post-install:
+	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/${DISTNAME}
 .for file in xemacs-b2m xemacs-ctags xemacs-etags gnuclient xemacs-20.3
 	strip ${PREFIX}/bin/${file}
 .endfor
