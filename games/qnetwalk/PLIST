@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/07 11:14:10 wiz Exp $
+bin/qnetwalk
+man/man6/qnetwalk.6
+share/games/qnetwalk/click.wav
+share/games/qnetwalk/connect.wav
+share/games/qnetwalk/qnetwalk_fr.qm
+share/games/qnetwalk/qnetwalk_nl.qm
+share/games/qnetwalk/qnetwalk_ru.qm
+share/games/qnetwalk/start.wav
+share/games/qnetwalk/turn.wav
+share/games/qnetwalk/win.wav
+@dirrm share/games/qnetwalk

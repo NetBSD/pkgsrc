@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2005/01/07 11:14:10 wiz Exp $
+
+--- mainwindow.cpp.orig	2004-12-15 00:28:42.000000000 +0600
++++ mainwindow.cpp
+@@ -36,10 +36,7 @@ MainWindow::MainWindow() : QMainWindow(0
+     contrdirs[Cell::D] = Cell::U;
+     contrdirs[Cell::L] = Cell::R;
+ 
+-    QString appdir = qApp->applicationDirPath();
+-    soundpath = appdir + "/sounds/";
+-    if(!QFile::exists(soundpath))
+-	soundpath = appdir + "/../share/qnetwalk/sounds/";
++    soundpath = "@QNETWALK_DATA@";
+ 
+     winsound     = new QSound(soundpath + "win.wav");
+     turnsound    = new QSound(soundpath + "turn.wav");
