@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/09 19:59:40 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/22 10:11:00 jlam Exp $
 
 .if !defined(BINUTILS_BUILDLINK2_MK)
 BINUTILS_BUILDLINK2_MK=	# defined
@@ -14,7 +14,7 @@ _NEED_BINUTILS=		YES
 .else
 _NEED_BINUTILS=		NO
 #
-# These versions of NetBSD didn't have a curses library that was capable of
+# These versions of NetBSD didn't have a toolchain that was capable of
 # replacing binutils.
 #
 _INCOMPAT_BINUTILS=	NetBSD-0.*-* NetBSD-1.[01234]*-*
