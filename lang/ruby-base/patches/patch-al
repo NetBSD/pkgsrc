@@ -1,0 +1,14 @@
+$NetBSD: patch-al,v 1.1 2004/03/12 04:59:20 taca Exp $
+
+--- eval.c.orig	2002-12-16 16:34:22.000000000 +0900
++++ eval.c
+@@ -3531,7 +3531,8 @@ rb_jump_tag(tag)
+ int
+ rb_block_given_p()
+ {
+-    if (ruby_frame->iter) return Qtrue;
++    if (ruby_frame->iter && ruby_block)
++	return Qtrue;
+     return Qfalse;
+ }
+ 
