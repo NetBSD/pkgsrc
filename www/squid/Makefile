@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2000/08/27 02:46:08 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2000/09/03 13:42:22 wiz Exp $
 
 DISTNAME=	squid-2.3.STABLE3-src
 PKGNAME=	squid-2.3s3
@@ -13,7 +13,7 @@ MASTER_SITES=	\
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.3/bugs/
 PATCHFILES=	squid-2.3.stable3-carp_compile.patch \
-		squid-2.3.stable3-storeExpiredReferenceAge.patch 
+		squid-2.3.stable3-storeExpiredReferenceAge.patch
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.squid-cache.org/
