@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/10/28 11:04:54 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2002/12/16 12:07:22 wiz Exp $
 
 --- Makefile.orig	Sun Jun 23 18:59:38 2002
 +++ Makefile
@@ -7,6 +7,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/10/28 11:04:54 wiz Exp $
  
  CC = gcc
  
+@@ -12,7 +11,7 @@ CFLAGS = -g -O2 -Wall \
+ #LIBS = `gtk-config --libs` \
+ #	-L$(LIBMNG_PREFIX)/lib -lmng -ljpeg -lz
+ LIBS = `gdk-pixbuf-config --libs` \
+-	-L$(LIBMNG_PREFIX)/lib -lmng -ljpeg -llcms -lz
++	-L$(LIBMNG_PREFIX)/lib -lmng -ljpeg -llcms -lz -lm
+ 
+ OBJ = dummy.o \
+       gtk-mng-view.o
 @@ -29,7 +28,7 @@ $(EXE_BASENAME): $(OBJ)
  $(EXE_BASENAME)-static: $(OBJ)
  	$(CC) -static -o $(EXE_BASENAME)-static $(OBJ) $(LIBS)
