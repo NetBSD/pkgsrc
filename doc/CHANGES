@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7164 2004/09/18 21:48:01 jmmv Exp $
+$NetBSD: CHANGES,v 1.7165 2004/09/19 00:19:54 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4263,3 +4263,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xerces-c to 2.3.0nb1 [minskim 2004-09-18]
 	Updated tvtwm to 11nb2 [blymn 2004-09-18]
 	Updated gtk2 to 2.4.10 [jmmv 2004-09-18]
+	Updated subversion to 1.0.7 [epg 2004-09-19]
