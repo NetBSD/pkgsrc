@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/09/25 04:00:15 fredb Exp $
+$NetBSD: md5,v 1.4 2001/02/14 13:27:33 itojun Exp $
 
-MD5 (isakmpd-000915-snap.tar.gz) = ec7d6e283b5eb33fedf407ca01e9731f
+MD5 (isakmpd-20010214.tar.gz) = 8eee0802125e7dfc5b678eb007c4596e
