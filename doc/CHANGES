@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6115 2004/06/03 23:29:52 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6116 2004/06/04 01:22:11 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2403,7 +2403,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated exim to 4.33nb1 [abs 2004-05-07]
 	Updated exim-exiscan to 4.33_20nb1 [abs 2004-05-07]
 	Updated exim-html to 4.30 [abs 2004-05-07]
-	Deleted exim-user [abs 2004-05-07]
+	Removed exim-user [abs 2004-05-07]
 	Updated jwhois to 3.2.2nb4 [kleink 2004-05-07]
 	Updated gdm to 2.6.0.2 [xtraeme 2004-05-08]
 	Added un-ttf-20030907 [minskim 2004-05-08]
@@ -2489,11 +2489,11 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated amanda-client to 2.4.4p2 [bouyer 2004-05-12]
 	Updated amanda-server to 2.4.4p2 [bouyer 2004-05-12]
 	Updated amanda-plot to 2.4.4p2 [bouyer 2004-05-12]
-	Deleted amanda-dev [bouyer 2004-05-12]
-	Deleted amanda-dev-common [bouyer 2004-05-12]
-	Deleted amanda-dev-client [bouyer 2004-05-12]
-	Deleted amanda-dev-server [bouyer 2004-05-12]
-	Deleted amanda-dev-plot [bouyer 2004-05-12]
+	Removed amanda-dev [bouyer 2004-05-12]
+	Removed amanda-dev-common [bouyer 2004-05-12]
+	Removed amanda-dev-client [bouyer 2004-05-12]
+	Removed amanda-dev-server [bouyer 2004-05-12]
+	Removed amanda-dev-plot [bouyer 2004-05-12]
 	Updated cvs2svn to 0.947 [seb 2004-05-12]
 	Updated xine-lib to 1-rc4 [drochner 2004-05-12]
 	Updated xine-ui to 0.99.1 [drochner 2004-05-12]
