@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2005/01/12 15:32:01 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2005/01/13 15:41:53 adam Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGNAME=	octave-current-${OCTAVE_VER}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/bleeding-edge/ \
 		ftp://ftp.eos.hokudai.ac.jp/pub/GNU/misc/octave/bleeding-edge/ \
@@ -85,7 +86,7 @@ post-install:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
-.include "../../math/fftw2/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
