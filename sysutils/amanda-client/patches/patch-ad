@@ -1,18 +1,15 @@
-$NetBSD: patch-ad,v 1.3 1999/09/04 01:07:29 bad Exp $
+$NetBSD: patch-ad,v 1.4 2001/01/16 21:59:30 cjones Exp $
 
---- man/Makefile.in.old	Tue Feb 23 11:12:23 1999
-+++ man/Makefile.in	Tue Feb 23 11:12:46 1999
-@@ -158,12 +158,7 @@
- 
- transform =	s,x,x,;
- 
--man_MANS =	amadmin.8	amanda.8	amcheck.8	\
--		amcheckdb.8	amcleanup.8	amdump.8	\
--		amflush.8	amlabel.8	amoverview.8	\
--		amplot.8	amrecover.8	amrestore.8	\
--		amrmtape.8	amtape.8	amtoc.8		\
--		amverify.8	amstatus.8	amreport.8
-+man_MANS =	amrecover.8
- 
+--- man/Makefile.in.orig	Sat Nov 25 07:02:01 2000
++++ man/Makefile.in	Mon Jan 15 16:59:05 2001
+@@ -176,9 +176,7 @@
+ # not autoconf-generated:
  EXTRA_DIST = amplot.8 amrestore.8 amtape.8
- mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
+ 
+-man_MANS = $(AMPLOT_MAN_PAGES) \
+-	   $(COMMON_MAN_PAGES) \
+-	   $(SERVER_MAN_PAGES) \
++man_MANS = $(SERVER_MAN_PAGES) \
+ 	   $(RECOVER_MAN_PAGES) \
+ 	   $(RESTORE_MAN_PAGES)
+ 

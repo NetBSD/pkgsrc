@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2000/09/15 15:59:34 skrll Exp $
+$NetBSD: patch-aa,v 1.5 2001/01/16 21:59:31 cjones Exp $
 
---- client-src/Makefile.in.orig	Sat Nov 21 17:33:45 1998
-+++ client-src/Makefile.in
-@@ -285,9 +285,8 @@
- getfsent_LDFLAGS = 
+--- client-src/Makefile.in.orig	Sat Nov 25 07:01:56 2000
++++ client-src/Makefile.in	Thu Jan 11 12:40:19 2001
+@@ -284,9 +284,8 @@
+ sendsize_LDFLAGS = 
  versionsuffix_SOURCES = versionsuffix.c
- versionsuffix_OBJECTS =  versionsuffix.o
+ versionsuffix_OBJECTS =  versionsuffix.$(OBJEXT)
 -versionsuffix_LDADD = $(LDADD)
 -versionsuffix_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) \
 -../common-src/libamanda.$(LIB_EXTENSION)

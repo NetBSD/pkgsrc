@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2000/08/17 02:26:26 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/01/16 21:59:29 cjones Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
-DISTNAME=		amanda-2.4.1p1
-PKGNAME=		amanda-client-2.4.1p1
+DISTNAME=		amanda-2.4.2
+PKGNAME=		amanda-client-2.4.2
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.amanda.org/
 
 DEPENDS+=		readline>=4.0:../../devel/readline
 DEPENDS+=		gtar-1.12:../../archivers/gtar
-DEPENDS+=		amanda-common-2.4.1p1:../../sysutils/amanda-common
+DEPENDS+=		amanda-common-2.4.2:../../sysutils/amanda-common
 
 GNU_CONFIGURE=		yes
 

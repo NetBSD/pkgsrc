@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.1 2001/01/16 21:59:40 cjones Exp $
+
+--- man/Makefile.in~	Sat Nov 25 07:02:01 2000
++++ man/Makefile.in	Mon Jan 15 17:07:08 2001
+@@ -177,7 +177,6 @@
+ EXTRA_DIST = amplot.8 amrestore.8 amtape.8
+ 
+ man_MANS = $(AMPLOT_MAN_PAGES) \
+-	   $(COMMON_MAN_PAGES) \
+ 	   $(SERVER_MAN_PAGES) \
+ 	   $(RECOVER_MAN_PAGES) \
+ 	   $(RESTORE_MAN_PAGES)

@@ -1,21 +1,23 @@
-@comment $NetBSD: PLIST,v 1.5 2000/11/29 22:28:31 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/01/16 21:59:41 cjones Exp $
+lib/libamserver-2.4.2.so
 lib/libamserver.a
 lib/libamserver.la
-lib/libamserver-2.4.1p1.so
+libexec/amcleanupdisk
 libexec/amidxtaped
 libexec/amindexd
+libexec/amlogroll
 libexec/amtrmidx
-libexec/chg-scsi
-libexec/chg-zd-mtx
+libexec/amtrmlog
 libexec/chg-chio
 libexec/chg-chs
 libexec/chg-manual
 libexec/chg-mtx
 libexec/chg-multi
 libexec/chg-rth
+libexec/chg-scsi
+libexec/chg-zd-mtx
 libexec/driver
 libexec/dumper
-libexec/getconf
 libexec/planner
 libexec/taper
 man/man8/amadmin.8
@@ -24,6 +26,7 @@ man/man8/amcheckdb.8
 man/man8/amcleanup.8
 man/man8/amdump.8
 man/man8/amflush.8
+man/man8/amgetconf.8
 man/man8/amlabel.8
 man/man8/amoverview.8
 man/man8/amreport.8
@@ -39,6 +42,7 @@ sbin/amcheckdb
 sbin/amcleanup
 sbin/amdump
 sbin/amflush
+sbin/amgetconf
 sbin/amlabel
 sbin/amoverview
 sbin/amreport
@@ -48,6 +52,10 @@ sbin/amstatus
 sbin/amtape
 sbin/amtoc
 sbin/amverify
+share/doc/amanda/COPYRIGHT
+share/doc/amanda/COPYRIGHT-APACHE
+share/doc/amanda/COPYRIGHT-REGEX
+share/doc/amanda/DUMPER-API
 share/doc/amanda/FAQ
 share/doc/amanda/INDEXING
 share/doc/amanda/INSTALL
@@ -66,12 +74,14 @@ share/doc/amanda/WHATS.NEW
 share/doc/amanda/WISHLIST
 share/doc/amanda/YEAR2000
 share/doc/amanda/ZFTAPE
+share/examples/amanda/3hole.ps
 share/examples/amanda/8.5x11.ps
 share/examples/amanda/DIN-A4.ps
 share/examples/amanda/DLT.ps
 share/examples/amanda/EXB-8500.ps
 share/examples/amanda/HP-DAT.ps
 share/examples/amanda/amanda.conf
+share/examples/amanda/amanda.conf.chg-scsi
 share/examples/amanda/chg-multi.conf
 share/examples/amanda/chg-scsi.conf
 share/examples/amanda/config.site

@@ -1,16 +1,27 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/09/06 18:11:22 bad Exp $
+$NetBSD: patch-ab,v 1.2 2001/01/16 21:59:33 cjones Exp $
 
---- Makefile.in.orig	Sat Nov 21 18:32:54 1998
-+++ Makefile.in	Sat Sep  4 02:53:32 1999
-@@ -157,10 +157,7 @@
- AUTOCONF = @AUTOCONF@ --localdir=config
+--- Makefile.in.orig	Sat Nov 25 07:01:53 2000
++++ Makefile.in	Mon Jan 15 16:32:14 2001
+@@ -162,20 +162,14 @@
+ # order is significant, don't change it arbitrarily
+ SUBDIRS = \
+ 	config \
+-	common-src \
+ 	$(CLIENT_SUBDIRS) \
+-	$(TAPE_SUBDIRS) \
+-	$(SERVER_SUBDIRS) \
+ 	$(RESTORE_SUBDIRS) \
+ 	$(RECOVER_SUBDIRS) \
+ 	$(PLOT_SUBDIRS) \
+-	man docs example
++	man
  
- SUBDIRS=config		\
--	common-src	client-src	tape-src	\
--	server-src	restore-src	recover-src	\
--	changer-src	amplot		man		\
--	example
-+	amplot		man
  
- EXTRA_DIST = \
- 	COPYRIGHT			\
+-pkgdata_DATA = \
+-	COPYRIGHT			\
+-	COPYRIGHT-APACHE		\
+-	COPYRIGHT-REGEX
++pkgdata_DATA =
+ 
+ 
+ EXTRA_DIST = $(SNAPSHOT_STAMP) \
