@@ -1,0 +1,199 @@
+$NetBSD: patch-aa,v 1.1 2003/10/08 04:21:38 rtr Exp $
+
+--- src/checksum.c.orig	2000-06-20 23:06:32.000000000 +0200
++++ src/checksum.c
+@@ -29,62 +29,62 @@ csum_partial(const u_char * buff, int le
+ 	movl 16(%esp),%ecx	# Function arg: int len
+         movl 12(%esp),%esi	# Function arg: u_char *buff*/
+ 
+-       "testl $2, %%esi		
+-	jz 2f			
+-	subl $2, %%ecx		
+-	jae 1f			
+-	addl $2, %%ecx		
+-	jmp 4f
+-1:	movw (%%esi), %%bx
+-	addl $2, %%esi
+-	addw %%bx, %%ax
+-	adcl $0, %%eax
+-2:
+-	movl %%ecx, %%edx
+-	shrl $5, %%ecx
+-	jz 2f
+-	testl %%esi, %%esi
+-1:	movl (%%esi), %%ebx
+-	adcl %%ebx, %%eax
+-	movl 4(%%esi), %%ebx
+-	adcl %%ebx, %%eax
+-	movl 8(%%esi), %%ebx
+-	adcl %%ebx, %%eax
+-	movl 12(%%esi), %%ebx
+-	adcl %%ebx, %%eax
+-	movl 16(%%esi), %%ebx
+-	adcl %%ebx, %%eax
+-	movl 20(%%esi), %%ebx
+-	adcl %%ebx, %%eax
+-	movl 24(%%esi), %%ebx
+-	adcl %%ebx, %%eax
+-	movl 28(%%esi), %%ebx
+-	adcl %%ebx, %%eax
+-	lea 32(%%esi), %%esi
+-	dec %%ecx
+-	jne 1b
+-	adcl $0, %%eax
+-2:	movl %%edx, %%ecx
+-	andl $0x1c, %%edx
+-	je 4f
+-	shrl $2, %%edx		
+-3:	adcl (%%esi), %%eax
+-	lea 4(%%esi), %%esi
+-	dec %%edx
+-	jne 3b
+-	adcl $0, %%eax
+-4:	andl $3, %%ecx
+-	jz 7f
+-	cmpl $2, %%ecx
+-	jb 5f
+-	movw (%%esi),%%cx
+-	leal 2(%%esi),%%esi
+-	je 6f
+-	shll $16,%%ecx
+-5:	movb (%%esi),%%cl
+-6:	addl %%ecx,%%eax
+-	adcl $0, %%eax
+-7: "
++       "testl $2, %%esi		\n"
++"	jz 2f			\n"
++"	subl $2, %%ecx		\n"
++"	jae 1f			\n"
++"	addl $2, %%ecx		\n"
++"	jmp 4f\n"
++"1:	movw (%%esi), %%bx\n"
++"	addl $2, %%esi\n"
++"	addw %%bx, %%ax\n"
++"	adcl $0, %%eax\n"
++"2:\n"
++"	movl %%ecx, %%edx\n"
++"	shrl $5, %%ecx\n"
++"	jz 2f\n"
++"	testl %%esi, %%esi\n"
++"1:	movl (%%esi), %%ebx\n"
++"	adcl %%ebx, %%eax\n"
++"	movl 4(%%esi), %%ebx\n"
++"	adcl %%ebx, %%eax\n"
++"	movl 8(%%esi), %%ebx\n"
++"	adcl %%ebx, %%eax\n"
++"	movl 12(%%esi), %%ebx\n"
++"	adcl %%ebx, %%eax\n"
++"	movl 16(%%esi), %%ebx\n"
++"	adcl %%ebx, %%eax\n"
++"	movl 20(%%esi), %%ebx\n"
++"	adcl %%ebx, %%eax\n"
++"	movl 24(%%esi), %%ebx\n"
++"	adcl %%ebx, %%eax\n"
++"	movl 28(%%esi), %%ebx\n"
++"	adcl %%ebx, %%eax\n"
++"	lea 32(%%esi), %%esi\n"
++"	dec %%ecx\n"
++"	jne 1b\n"
++"	adcl $0, %%eax\n"
++"2:	movl %%edx, %%ecx\n"
++"	andl $0x1c, %%edx\n"
++"	je 4f\n"
++"	shrl $2, %%edx		\n"
++"3:	adcl (%%esi), %%eax\n"
++"	lea 4(%%esi), %%esi\n"
++"	dec %%edx\n"
++"	jne 3b\n"
++"	adcl $0, %%eax\n"
++"4:	andl $3, %%ecx\n"
++"	jz 7f\n"
++"	cmpl $2, %%ecx\n"
++"	jb 5f\n"
++"	movw (%%esi),%%cx\n"
++"	leal 2(%%esi),%%esi\n"
++"	je 6f\n"
++"	shll $16,%%ecx\n"
++"5:	movb (%%esi),%%cl\n"
++"6:	addl %%ecx,%%eax\n"
++"	adcl $0, %%eax\n"
++"7: "
+        : "=a"(sum)
+        : "0"(sum), "c"(len), "S"(buff)
+        : "bx", "dx");
+@@ -103,25 +103,24 @@ inline u_short ip_fast_csum(u_char * iph
+ {
+   u_int sum;
+   
+-  __asm__ __volatile__("
+-	    movl (%1), %0
+-	    subl $4, %2
+-	    jbe 2f
+-	    addl 4(%1), %0
+-	    adcl 8(%1), %0
+-	    adcl 12(%1), %0
+-1:	    adcl 16(%1), %0
+-	    lea 4(%1), %1
+-	    decl %2
+-	    jne	1b
+-	    adcl $0, %0
+-	    movl %0, %2
+-	    shrl $16, %0
+-	    addw %w2, %w0
+-	    adcl $0, %0
+-	    notl %0
+-2:
+-	    "
++  __asm__ __volatile__(
++"	    movl (%1), %0\n"
++"	    subl $4, %2\n"
++"	    jbe 2f\n"
++"	    addl 4(%1), %0\n"
++"	    adcl 8(%1), %0\n"
++"	    adcl 12(%1), %0\n"
++"1:	    adcl 16(%1), %0\n"
++"	    lea 4(%1), %1\n"
++"	    decl %2\n"
++"	    jne	1b\n"
++"	    adcl $0, %0\n"
++"	    movl %0, %2\n"
++"	    shrl $16, %0\n"
++"	    addw %w2, %w0\n"
++"	    adcl $0, %0\n"
++"	    notl %0\n"
++"2:\n"
+ 	/*
+ 	  Since the input registers which are loaded with iph and ipl
+ 	  are modified, we must also specify them as outputs, or gcc
+@@ -137,10 +136,9 @@ inline u_short ip_fast_csum(u_char * iph
+ static inline u_int
+ csum_fold(u_int sum)
+ {
+-  __asm__("
+-	addl %1, %0
+-	adcl $0xffff, %0
+-	"
++  __asm__(
++"	addl %1, %0\n"
++"	adcl $0xffff, %0"
+ 	: "=r" (sum)
+ 	: "r" (sum << 16), "0" (sum & 0xffff0000)
+ 	  );
+@@ -155,12 +153,11 @@ static inline u_short
+ csum_tcpudp_magic(u_int saddr, u_int daddr, u_short len,
+ 		  u_short proto, u_int sum)
+ {
+-  __asm__("
+-	addl %1, %0
+-	adcl %2, %0
+-	adcl %3, %0
+-	adcl $0, %0
+-	"
++  __asm__(
++"	addl %1, %0\n"
++"	adcl %2, %0\n"
++"	adcl %3, %0\n"
++"	adcl $0, %0"
+ 	: "=r" (sum)
+ 	: "g" (daddr), "g"(saddr), "g"((ntohs(len) << 16) + proto * 256), "0"(sum));
+   return (csum_fold(sum));
