@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:51:22 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/24 14:50:05 grant Exp $
 #
 
 DISTNAME=	lopster-1.2.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://lopster.sourceforge.net/
 COMMENT=	Yet another Gtk+ Napster clone
 
 USE_BUILDLINK2=	yes
-USE_GMAKE=	yes
+USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	# defined
 
 post-extract:
