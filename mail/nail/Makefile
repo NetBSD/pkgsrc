@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:35 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/04/27 20:38:36 cjep Exp $
 
-DISTNAME=	nail-10.4
+DISTNAME=	nail-10.5
 CATEGORIES=	mail
 MASTER_SITES=	http://omnibus.ruf.uni-freiburg.de/~gritter/archive/nail/
 
