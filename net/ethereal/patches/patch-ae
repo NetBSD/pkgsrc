@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1.2.2 2003/06/19 00:04:05 grant Exp $
+
+--- plugins/megaco/Makefile.in.orig	2003-05-02 03:11:01.000000000 +0200
++++ plugins/megaco/Makefile.in	2003-05-05 18:12:38.000000000 +0200
+@@ -179,7 +179,7 @@
+ # add them here.
+ LIBS = 
+ 
+-megaco_la_DEPENDENCIES = packet-megaco-static.o
++@ENABLE_STATIC_TRUE@megaco_la_DEPENDENCIES = packet-megaco-static.o
+ 
+ CLEANFILES = \
+ 	megaco \
+@@ -444,8 +444,8 @@
+ 	uninstall-am uninstall-info-am uninstall-pluginLTLIBRARIES
+ 
+ 
+-packet-megaco-static.o:	packet-megaco.c moduleinfo.h
+-	$(LTCOMPILE) -c -o packet-megaco-static.o -D__ETHEREAL_STATIC__ $(srcdir)/packet-megaco.c 
++@ENABLE_STATIC_TRUE@packet-megaco-static.o:	packet-megaco.c moduleinfo.h
++@ENABLE_STATIC_TRUE@	$(LTCOMPILE) -c -o packet-megaco-static.o -D__ETHEREAL_STATIC__ $(srcdir)/packet-megaco.c 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

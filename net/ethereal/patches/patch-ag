@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.1.2.2 2003/06/19 00:04:29 grant Exp $
+
+--- plugins/pcli/Makefile.in.orig	2003-05-02 03:11:01.000000000 +0200
++++ plugins/pcli/Makefile.in	2003-05-05 18:13:59.000000000 +0200
+@@ -180,7 +180,7 @@
+ # add them here.
+ LIBS = 
+ 
+-pcli_la_DEPENDENCIES = packet-pcli-static.o
++@ENABLE_STATIC_TRUE@pcli_la_DEPENDENCIES = packet-pcli-static.o
+ 
+ CLEANFILES = \
+ 	pcli \
+@@ -445,8 +445,8 @@
+ 	uninstall-am uninstall-info-am uninstall-pluginLTLIBRARIES
+ 
+ 
+-packet-pcli-static.o:	packet-pcli.c moduleinfo.h
+-	$(LTCOMPILE) -c -o packet-pcli-static.o -D__ETHEREAL_STATIC__ $(srcdir)/packet-pcli.c 
++@ENABLE_STATIC_TRUE@packet-pcli-static.o:	packet-pcli.c moduleinfo.h
++@ENABLE_STATIC_TRUE@	$(LTCOMPILE) -c -o packet-pcli-static.o -D__ETHEREAL_STATIC__ $(srcdir)/packet-pcli.c 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
