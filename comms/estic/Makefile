@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/08/29 22:41:06 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/09/21 07:06:41 jlam Exp $
 
 DISTNAME=	estic-1.61
 CATEGORIES=	comms
@@ -16,7 +16,8 @@ RESTRICTED=	"Only free distribution permitted"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=	# defined
+USE_X11=	# defined
 
 ALL_TARGET=	depend all
 ESTICPATCH=	${DISTNAME}-patch-from-1.60${EXTRACT_SUFX}
@@ -43,5 +44,4 @@ do-install:
 	cd ${WRKSRC}/samples && \
 	${INSTALL_DATA} * ${PREFIX}/share/examples/estic
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
