@@ -1,0 +1,11 @@
+--- configure.orig	Tue Aug 25 19:55:01 1998
++++ configure	Tue Aug 25 19:55:58 1998
+@@ -4281,7 +4281,7 @@
+ 		 USE_INCLUDED_LIBINTL=yes
+ 		 CATOBJEXT=.cat
+ 		 INSTOBJEXT=.cat
+-		 DATADIRNAME=lib
++		 DATADIRNAME=share
+ 		 INTLDEPS='$(top_builddir)/intl/libintl.a'
+ 		 INTLLIBS=$INTLDEPS
+ 		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
