@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/12/19 12:45:47 grant Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/26 04:30:41 wiz Exp $
 #
 
 DISTNAME=		imlib2-1.0.3
@@ -19,11 +19,10 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../mk/bsd.prefs.mk"
 
-IMLIB2_USE_MMX?=	NO
-
-.if ${MACHINE_ARCH} == "i386" && ${IMLIB2_USE_MMX} != "NO"
+.if ${MACHINE_ARCH} == "i386" && ${USE_MMX} != "NO"
 CONFIGURE_ARGS+=	--enable-mmx
 .endif
+BUILD_DEFS+=		USE_MMX
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/freetype-lib/buildlink2.mk"
