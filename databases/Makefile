@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2004/02/22 01:40:44 minskim Exp $
+# $NetBSD: Makefile,v 1.119 2004/02/26 22:55:01 minskim Exp $
 #
 
 COMMENT=	Databases
@@ -87,6 +87,7 @@ SUBDIR+=	postgresql-pltcl
 SUBDIR+=	postgresql-server
 SUBDIR+=	pxtools
 SUBDIR+=	py-PgSQL
+SUBDIR+=	py-IndexedCatalog
 SUBDIR+=	py-ZODB
 SUBDIR+=	py-bsddb3
 SUBDIR+=	py-dbxml
