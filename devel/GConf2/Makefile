@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2003/01/05 22:12:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/25 16:29:49 jmmv Exp $
 #
 
 DISTNAME=		GConf-1.2.1
 PKGNAME=		${DISTNAME:S/GConf/GConf2/}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/1.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -32,5 +32,4 @@ CONFIGURE_ARGS+=	--enable-gtk-doc=no
 .include "../../net/ORBit2/buildlink2.mk"
 .include "../../net/linc/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
