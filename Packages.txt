@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.235 2002/03/11 19:12:07 fredb Exp $
+# $NetBSD: Packages.txt,v 1.236 2002/03/11 19:19:18 fredb Exp $
 ###########################################################################
 
 			==========================
@@ -2163,6 +2163,7 @@ version, disabling optimisation for that file/MACHINE_ARCH/compiler
 combination, and documenting it in doc/HACKS. See doc/HACKS for
 examples.
 
+
  10.24 Packages providing info files
  ===================================
 
@@ -2210,7 +2211,8 @@ one of the following, whichever is more appropriate:
     manipulation happen on some packages source files (see contents of
     mk/texinfo.mk).
 
- 10.24 Packages whose distfiles aren't available for plain downloading
+
+ 10.25 Packages whose distfiles aren't available for plain downloading
  =====================================================================
 
 If you need to download from a dynamic URL you can set DYNAMIC_MASTER_SITES
@@ -2314,7 +2316,6 @@ included in pkgsrc - development or beta packages are not really the
 best thing for most places in which pkgsrc is used. Please use your
 judgement about what should go into pkgsrc, and bear in mind that
 stability is to be preferred above new and possibly untested features.
-
 
 
  12 A simple example of a package: bison
