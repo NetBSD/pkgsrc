@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2004/06/01 15:34:16 jschauma Exp $
+$NetBSD: patch-aa,v 1.8 2004/12/07 15:15:25 wiz Exp $
 
---- Makefile.orig	Mon Aug 21 13:59:52 2000
+--- Makefile.orig	2000-08-21 19:59:52.000000000 +0200
 +++ Makefile
 @@ -44,7 +44,7 @@ what:
  #REAL_DAEMON_DIR=/usr/etc
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/01 15:34:16 jschauma Exp $
  
  # This is good for many SYSV+BSD hybrids with NIS, probably also for HP-UX 7.x.
  hpux hpux8 hpux9 hpux10:
-@@ -602,7 +603,7 @@ ACCESS	= -DHOSTS_ACCESS
+@@ -602,7 +602,7 @@ ACCESS	= -DHOSTS_ACCESS
  # look for access control information. Watch out for the quotes and
  # backslashes when you make changes.
  
@@ -29,16 +29,16 @@ $NetBSD: patch-aa,v 1.7 2004/06/01 15:34:16 jschauma Exp $
  
  ####################################################
  # Optional: dealing with host name/address conflicts
-@@ -669,7 +670,7 @@ HOSTNAME= -DALWAYS_HOSTNAME
+@@ -669,7 +669,7 @@ HOSTNAME= -DALWAYS_HOSTNAME
  # Protection against weird shells or weird make programs.
  
  SHELL	= /bin/sh
 -.c.o:;	$(CC) $(CFLAGS) -c $*.c
-+.c.o:;	$(LIBTOOL) $(CC) $(CFLAGS) -c $*.c
++.c.o:;	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $*.c
  
  CFLAGS	= -O -DFACILITY=$(FACILITY) $(ACCESS) $(PARANOID) $(NETGROUP) \
  	$(BUGS) $(SYSTYPE) $(AUTH) $(UMASK) \
-@@ -696,7 +697,7 @@ KIT	= README miscd.c tcpd.c fromhost.c h
+@@ -696,7 +696,7 @@ KIT	= README miscd.c tcpd.c fromhost.c h
  	refuse.c tcpdchk.8 setenv.c inetcf.c inetcf.h scaffold.c \
  	scaffold.h tcpdmatch.8 README.NIS
  
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.7 2004/06/01 15:34:16 jschauma Exp $
  
  all other: config-check tcpd tcpdmatch try-from safe_finger tcpdchk
  
-@@ -713,31 +714,29 @@ config-check:
+@@ -713,31 +713,29 @@ config-check:
  cflags: config-check
  
  $(LIB):	$(LIB_OBJ)
@@ -58,31 +58,31 @@ $NetBSD: patch-aa,v 1.7 2004/06/01 15:34:16 jschauma Exp $
  
  tcpd:	tcpd.o $(LIB)
 -	$(CC) $(CFLAGS) -o $@ tcpd.o $(LIB) $(LIBS)
-+	$(LIBTOOL) $(CC) $(CFLAGS) -o $@ tcpd.o $(LIB) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ tcpd.o $(LIB) $(LIBS)
  
  miscd:	miscd.o $(LIB)
 -	$(CC) $(CFLAGS) -o $@ miscd.o $(LIB) $(LIBS)
-+	$(LIBTOOL) $(CC) $(CFLAGS) -o $@ miscd.o $(LIB) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ miscd.o $(LIB) $(LIBS)
  
  safe_finger: safe_finger.o $(LIB)
 -	$(CC) $(CFLAGS) -o $@ safe_finger.o $(LIB) $(LIBS)
-+	$(LIBTOOL) $(CC) $(CFLAGS) -o $@ safe_finger.o $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ safe_finger.o $(LIBS)
  
  TCPDMATCH_OBJ = tcpdmatch.o fakelog.o inetcf.o scaffold.o
  
  tcpdmatch: $(TCPDMATCH_OBJ) $(LIB)
 -	$(CC) $(CFLAGS) -o $@ $(TCPDMATCH_OBJ) $(LIB) $(LIBS)
-+	$(LIBTOOL) $(CC) $(CFLAGS) -o $@ $(TCPDMATCH_OBJ) $(LIB) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $(TCPDMATCH_OBJ) $(LIB) $(LIBS)
  
  try-from: try-from.o fakelog.o $(LIB)
 -	$(CC) $(CFLAGS) -o $@ try-from.o fakelog.o $(LIB) $(LIBS)
-+	$(LIBTOOL) $(CC) $(CFLAGS) -o $@ try-from.o fakelog.o $(LIB) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ try-from.o fakelog.o $(LIB) $(LIBS)
  
  TCPDCHK_OBJ = tcpdchk.o fakelog.o inetcf.o scaffold.o
  
  tcpdchk: $(TCPDCHK_OBJ) $(LIB)
 -	$(CC) $(CFLAGS) -o $@ $(TCPDCHK_OBJ) $(LIB) $(LIBS)
-+	$(LIBTOOL) $(CC) $(CFLAGS) -o $@ $(TCPDCHK_OBJ) $(LIB) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $(TCPDCHK_OBJ) $(LIB) $(LIBS)
  
  shar:	$(KIT)
  	@shar $(KIT)
