@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.61 2004/01/27 02:32:56 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.62 2004/01/27 08:39:24 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -108,7 +108,7 @@ _BLNK_PACKAGES+=	${_pkg_}
 # use the dependency information.
 #
 _BLNK_PHASES_SKIP_DEPENDS=	fetch patch tools buildlink configure build
-.if !(_BLNK_PHASES_SKIP_DEPENDS:M${PKG_PHASE})
+.if empty(_BLNK_PHASES_SKIP_DEPENDS:M${PKG_PHASE})
 _BLNK_ADD_TO.DEPENDS=		# empty
 _BLNK_ADD_TO.BUILD_DEPENDS=	# empty
 _BLNK_ADD_TO.RECOMMENDED=	# empty
