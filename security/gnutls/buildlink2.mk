@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/12/18 06:04:10 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/12/21 10:17:30 xtraeme Exp $
 #
 # This Makefile fragment is included by packages that use gnutls.
 #
@@ -20,6 +20,7 @@ BUILDLINK_FILES.gnutls+=	lib/libgnutls-openssl.*
 BUILDLINK_FILES.gnutls+=	lib/libgnutls.*
 
 .include "../../archivers/liblzo/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../security/libgcrypt/buildlink2.mk"
 .include "../../security/libtasn1/buildlink2.mk"
