@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/03/26 21:19:53 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2004/05/02 04:59:23 snj Exp $
 
 DISTNAME=		nhc98src-1.16
 PKGNAME=		nhc98-1.16
@@ -14,8 +14,7 @@ COMMENT=		Portable Haskell 98 compiler
 NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64 *-*-x86_64
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK2=		YES
-BUILDLINK_SETENV.CC=	CC=gcc
+USE_BUILDLINK3=		YES
 
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*
@@ -36,5 +35,5 @@ PLIST_SUBST+=		HARCH=${HARCH}
 post-extract:
 	@${FIND} ${WRKSRC}/docs -type d -name \*CVS\* -print | ${XARGS} ${RM} -rf
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
