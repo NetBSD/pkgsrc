@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/13 16:39:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/31 02:06:17 wiz Exp $
 #
 
 DISTNAME=	rioutil-1.1.2alpha
@@ -10,8 +10,7 @@ MAINTAINER=	schmonz@netbsd.org
 HOMEPAGE=	http://rioutil.sourceforge.net/
 COMMENT=	program and library to interface with Rio 600, 800, Nike psa[play
 
-USE_BUILDLINK_ONLY=	# defined
-
+USE_BUILDLINK2=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		# defined
@@ -21,6 +20,6 @@ CONFIGURE_ARGS+=	--with-libusb
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z-* NetBSD-1.5Z[A-Z]-* NetBSD-1.[6-9]*-* \
 			Darwin-*-* Linux-*-*
 
-.include "../../audio/id3lib/buildlink.mk"
-.include "../../devel/libusb/buildlink.mk"
+.include "../../audio/id3lib/buildlink2.mk"
+.include "../../devel/libusb/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
