@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/12/15 00:42:17 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/02/17 17:06:22 wiz Exp $
 
 DISTNAME=	gnome-1.2.4
 CATEGORIES=	x11 gnome
@@ -7,6 +7,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
+COMMENT=	"meta-package" for the GNU Network Object Model Environment
 
 DEPENDS+=	control-center>=1.2.2:../controlcenter
 DEPENDS+=	ee>=0.3.12:../../graphics/ee

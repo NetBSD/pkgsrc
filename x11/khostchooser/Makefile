@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/09/18 20:52:56 skrll Exp $
+# $NetBSD: Makefile,v 1.13 2001/02/17 17:06:34 wiz Exp $
 #
 
 DISTNAME=	khostchooser-0.3
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.1.2/apps/network/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	root@garbled.net
+COMMENT=	KDE Chooser replacement for X
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/msgfmt:../../devel/gettext
 DEPENDS+=	kdelibs-1.1.2:../../x11/kdelibs

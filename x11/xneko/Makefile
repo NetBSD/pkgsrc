@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/07/05 00:34:09 kim Exp $
+# $NetBSD: Makefile,v 1.10 2001/02/17 17:07:20 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/03/12 08:21:35 asami Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	x11 games
 MASTER_SITES=	ftp://ftp.cdrom.com/pub/bsd-sources/4.4BSD-Lite/usr/src/games/
 
 MAINTAINER=	packages@netbsd.org
+COMMENT=	Classic BSD4.4 cat-and-mouse
 
 USE_X11BASE=	yes
 IGNOREFILES=	${DISTFILES}
