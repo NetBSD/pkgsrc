@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/04/11 20:49:46 kristerw Exp $
+# $NetBSD: Makefile,v 1.19 2004/04/24 23:04:28 wiz Exp $
 #
 
 DISTNAME=	libsndfile-1.0.9
@@ -20,7 +20,7 @@ GCC_REQD+=		3.1
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_OSS)
-.  include "../../mk/ossaudio.buildlink2.mk"
+.  include "../../mk/ossaudio.buildlink3.mk"
 OSS_DEFS=		-DDEV_DSP=\\\"${DEVOSSAUDIO}\\\" -DUSE_OSS=1
 MAKE_ENV+=		AM_CFLAGS="${OSS_DEFS}"
 .endif
