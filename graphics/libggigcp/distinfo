@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/21 09:56:35 wiz Exp $
+
+SHA1 (libggigcp-0.8.2.src.tar.bz2) = 1319add16a48da4528b05bd478652b2c8cb4f714
+Size (libggigcp-0.8.2.src.tar.bz2) = 245574 bytes
+SHA1 (patch-aa) = 15d6c86cbfc0a3f9c45a3f82eb93b0eb46a8ecd1
+SHA1 (patch-ab) = 9a8bb0053cddba4ef01ae75f23f69df9b8959770
+SHA1 (patch-ac) = 7242cd7dd5095d61c0e1f40e5d14ea406a40d32f

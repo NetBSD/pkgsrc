@@ -1,0 +1,4 @@
+LibGGIGCP is a generic color and palette management extension. It
+supports conversion between different color spaces such as RGBA,
+YUV, HSV, and CMYK. Furthermore it supports a generic color-blending,
+which can also be used for translucency effects.

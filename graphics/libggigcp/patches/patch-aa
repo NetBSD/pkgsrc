@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/21 09:56:35 wiz Exp $
+
+--- Makefile.in.orig	Mon Jul 21 08:29:45 2003
++++ Makefile.in
+@@ -99,7 +99,7 @@ AUTOMAKE_OPTIONS = 1.4 foreign
+ 
+ SUBDIRS = include gcp default demos doc m4
+ 
+-ggiconfdatadir = $(sysconfdir)/$(ggi_subdir)
++ggiconfdatadir = $(datadir)/examples/libggigcp
+ ggiconfdata_DATA = libggigcp.conf
+ 
+ DISTCLEANFILES = libggigcp.conf
