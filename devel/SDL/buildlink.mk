@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/14 13:17:00 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/07/14 15:51:47 jlam Exp $
 #
 # This Makefile fragment is included by packages that use SDL.
 #
@@ -31,7 +31,7 @@ REPLACE_BUILDLINK_SED+=	\
 	-e "s|${BUILDLINK_CONFIG_WRAPPER.SDL}|${BUILDLINK_CONFIG.SDL}|g"
 
 .if defined(SDL_USE_NAS)
-.include "../../audio/nas/buildlink.mk
+.include "../../audio/nas/buildlink.mk"
 .endif
 .include "../../audio/esound/buildlink.mk"
 .include "../../devel/pth/buildlink.mk"
