@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/03/28 23:22:43 minskim Exp $
+
+If you have Twisted installed, Textile can automatically colorize your
+Python code if you specify its language as Python. 
+
+Twisted package is available at:
+
+	wip/py-twisted
+
+===========================================================================
