@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1389 2004/02/12 13:16:02 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1390 2004/02/12 13:30:04 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2452,6 +2452,18 @@ do-config-status-override:
 		( ${ECHO} '#!${SH}'; ${ECHO} 'exit 0' ) > ${WRKSRC}/${file}; \
 		${CHMOD} +x ${WRKSRC}/${file};				\
 	fi
+.  endfor
+.endif
+
+.if defined(GNU_MISSING_OVERRIDE)
+_CONFIGURE_POSTREQ+=	do-gnu-missing-override
+.PHONY: do-gnu-missing-override
+do-gnu-missing-override:
+.  for file in ${GNU_MISSING_OVERRIDE}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKSRC}/${file}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${CP} ${_PKGSRCDIR}/mk/gnu-config/missing ${WRKSRC}/${file}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${WRKSRC}/${file}
 .  endfor
 .endif
 
