@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/11/13 01:25:12 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1999/01/14 13:57:05 frueauf Exp $
 #
 
 DISTNAME=	scilab-2.4-src
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/
 MAINTAINER=	mcmahill@alum.mit.edu
 HOMEPAGE=	http://www-rocq.inria.fr/scilab/
 
-DEPENDS+=	f2c-19980516p1:../../lang/f2c
+DEPENDS+=	f2c-19980913:../../lang/f2c
 DEPENDS+=	xless-1.7:../../x11/xless
 
 NOT_FOR_ARCHS=	alpha #LP64 problems
