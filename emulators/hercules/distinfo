@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/05/11 09:21:37 wiz Exp $
+$NetBSD: distinfo,v 1.5 2001/05/11 11:17:39 dmcmahill Exp $
 
 SHA1 (hercules-2.11.tar.gz) = ec84388e29cfd070055afa5fc11a33c896f2333a
 Size (hercules-2.11.tar.gz) = 616554 bytes
@@ -15,3 +15,5 @@ SHA1 (patch-aj) = b4beda52ced42d6d58f02b24c0eaf56109eab092
 SHA1 (patch-ak) = b727b0fad00ee546854cfbc4342e4c759fe7b0d2
 SHA1 (patch-al) = 60d90ed9c1476b8fcf0a905a8316f3aec9108169
 SHA1 (patch-am) = 4626f39156ac2beccd9911f795aff6f9fe7b997b
+SHA1 (patch-an) = 3c36e9745316ef84caf60ba66b541b7cc3007377
+SHA1 (patch-ao) = 4d389c21d36ab44565f8e90f90dad8acff24e747
