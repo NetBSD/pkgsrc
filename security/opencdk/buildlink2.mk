@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/05/14 03:16:23 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/14 03:17:22 salo Exp $
 #
 # This Makefile fragment is included by packages that use opencdk.
 #
@@ -10,7 +10,7 @@ OPENCDK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			opencdk
 BUILDLINK_DEPENDS.opencdk?=		opencdk>=0.4.5
-BUILDLINK_PKGSRCDIR.opencdk?=		../../wip/opencdk
+BUILDLINK_PKGSRCDIR.opencdk?=		../../security/opencdk
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.opencdk=opencdk
 BUILDLINK_PREFIX.opencdk_DEFAULT=	${LOCALBASE}
