@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1735 2003/03/22 06:23:01 salo Exp $
+$NetBSD: CHANGES,v 1.1736 2003/03/22 06:47:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1252,3 +1252,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated molden to 3.8 [salo 2003-03-22]
 	Updated cscope to 15.3nb1 [wiz 2003-03-22]
 	Added libicq2000-0.3.2 [salo 2003-03-22]
+	Updated amaya to 7.2 [wiz 2003-03-22]
