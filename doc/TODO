@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.901 2003/09/25 14:57:24 jmmv Exp $
+$NetBSD: TODO,v 1.902 2003/09/25 15:49:34 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -104,7 +104,6 @@ Suggested package updates
 	o bzflag-1.7g2
 	o cervisia-2.0
 	o clisp-2.31
-	o conglomerate-0.7.4
 	o courier-0.42.2 [pkg/22373]
 	o courier-0.43.2
 	o courier-auth-0.42.2 [pkg/22371]
