@@ -1,24 +1,20 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:18:15 agc Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/22 13:02:33 adam Exp $
+#
 
-PKGNAME=		MesaDemos-${MESA_VERSION}
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		${DISTNAME:S/MesaLib/MesaDemos/}${EXTRACT_SUFX}
-MAINTAINER=		jschauma@NetBSD.org
-COMMENT=		OpenGL examples and Demos
+PKGNAME=	MesaDemos-${MESA_VERSION}
+COMMENT=	OpenGL examples and Demos
 
 PATCHDIR=		${.CURDIR}/patches
 DISTINFO_FILE=		${.CURDIR}/distinfo
 
 .include "../Mesa/Makefile.common"
 
-WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
 USE_BUILDLINK2=		yes
-USE_X11=		yes
 
 MAKE_FLAGS+=		LIB_DEP=""
 
 pre-build:
-	${RM} -fr ${WRKSRC}/src
+	cd ${WRKSRC} && ${RM} -fr src
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PKGNAME_NOREV}/${dir}

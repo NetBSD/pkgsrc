@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2004/01/20 02:48:33 jschauma Exp $
+$NetBSD: patch-ab,v 1.7 2004/01/22 13:02:33 adam Exp $
 
 --- Make-config.orig	2004-01-15 09:23:54.000000000 -0500
 +++ Make-config	2004-01-19 18:29:14.000000000 -0500
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.6 2004/01/20 02:48:33 jschauma Exp $
 -	"CXXFLAGS = -O2 -fPIC"  \
 -	"GLUT_CFLAGS = -fexceptions" \
 -	"APP_LIB_DEPS = -L/usr/X11R6/lib -lXext -lXmu -lXi -lX11 -lm"
-+	"APP_LIB_DEPS = -L${PREFIX}/lib -L${X11PREFIX}/lib -lXext -lXmu -lXi -lX11 -lm"
++	"APP_LIB_DEPS = -L${PREFIX}/lib -L${X11PREFIX}/lib -Wl,-R${PREFIX}/lib -Wl,-R${X11PREFIX}/lib -lXext -lXmu -lXi -lX11 -lm"
  
  openbsd:
  	$(MAKE) $(MFLAGS) -f Makefile.X11 targets \
