@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/23 17:35:41 wulf Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/29 16:15:15 dmcmahill Exp $
 # FreeBSD: ports/devel/sdcc/Makefile,v 1.5 2000/04/15 15:13:38 knu Exp
 
 DISTNAME=	sdcc-2.2.1-src
@@ -19,6 +19,9 @@ WRKSRC=		${WRKDIR}/${PKGNAME}
 # Use of bison fixes this problem for now.
 #
 BUILD_DEPENDS+=	bison-*:../../devel/bison
+# we link to the static boehm-gc library so we only
+# need this at compile time
+BUILD_DEPENDS+=	boehm-gc-*:../../devel/boehm-gc
 YACC=		bison
 
 GNU_CONFIGURE=	yes
@@ -34,6 +37,7 @@ CONFIGURE_ENV+=	CPPFLAGS=-I${WRKDIR}/include
 post-extract:
 	${MKDIR} ${WRKDIR}/include
 	${LN} -fs /usr/include/sys/endian.h ${WRKDIR}/include
+	${RM} -f ${WRKSRC}/as/mcs51/string.h ${WRKSRC}/as/z80/string.h
 .endif
 
 post-install:
