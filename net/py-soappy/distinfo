@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/08/11 22:07:17 recht Exp $
+$NetBSD: distinfo,v 1.4 2003/08/16 16:54:26 recht Exp $
 
-SHA1 (SOAPpy-0.10.1.tar.gz) = af432aa1d75806655ea02f8674e2d33ea3cd7aab
-Size (SOAPpy-0.10.1.tar.gz) = 106384 bytes
+SHA1 (SOAPpy-0.10.2.tar.gz) = a7cfd577f0dd70f2542284ef50fd0ba23a1ad6fd
+Size (SOAPpy-0.10.2.tar.gz) = 119380 bytes
