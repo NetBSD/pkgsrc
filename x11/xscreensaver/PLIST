@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2004/02/02 23:55:00 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.18 2004/02/02 23:56:03 xtraeme Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -556,8 +556,8 @@ man/man1/xsublim.1
 man/man1/xteevee.1
 man/man1/zoom.1
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xscreensaver.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xscreensaver.mo
-${AVAILABLE}${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xscreensaver.mo
+${AVAILABLE}${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xscreensaver.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xscreensaver.mo
 ${AVAILABLE}${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xscreensaver.mo
