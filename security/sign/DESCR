@@ -1,0 +1,5 @@
+sign is a file signing and signature verification utility.
+
+It's main purpose is to be a simple and convenient extension to a tar/gz/bzip2
+line of tools that performs file integrity and authenticity checks. It's small
+and simple, it does just one thing and hopenfully does it well.
