@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2004/03/08 19:40:41 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/04/05 02:45:45 xtraeme Exp $
 
 DISTNAME=	gftp-${VERSION}
 CATEGORIES=	net
-MASTER_SITES=	http://gftp.seul.org/					\
+MASTER_SITES=	http://gftp.seul.org/	\
 		ftp://gftp.seul.org/
 EXTRACT_SUFX=	.tar.bz2
 
@@ -20,7 +20,7 @@ PTHREAD_OPTS=		require
 
 CONFIGURE_ARGS+=	--with-readline
 
-VERSION=		2.0.16
+VERSION=		2.0.17
 
 .include "../../mk/bsd.prefs.mk"
 
