@@ -1,13 +1,37 @@
-$NetBSD: patch-ac,v 1.1 2002/01/05 06:16:36 taca Exp $
+$NetBSD: patch-ac,v 1.2 2004/12/16 13:22:23 taca Exp $
 
---- configure.rb.orig	Mon Jul 23 12:24:09 2001
+--- configure.rb.orig	2003-02-10 12:18:10.000000000 +0900
 +++ configure.rb
-@@ -426,7 +426,7 @@
-     $LIBERUBY_ALIASES = "liberuby.so.$(MAJOR).$(MINOR) liberuby.so"
+@@ -443,27 +443,22 @@ $LIBERUBY_A = "liberuby.a"
+ $LIBERUBY = "${LIBERUBY_A}"
+ $LIBERUBYARG="$(LIBERUBY_A)"
+ 
+-$LIBERUBY_SO = "liberuby.#{CONFIG['DLEXT']}.$(MAJOR).$(MINOR).$(TEENY)"
+-$LIBERUBY_ALIASES = "liberuby.#{CONFIG['DLEXT']}"
++$LIBERUBY_SO = "liberuby.#{CONFIG['DLEXT']}.$(MAJOR_MINOR)"
++$LIBERUBY_ALIASES = "liberuby.so.$(MAJOR_MINOR).$(TEENY) liberuby.so"
+ 
+ if $ENABLE_SHARED
+   $LIBERUBY = "${LIBERUBY_SO}"
+   $LIBERUBYARG = "-L. -leruby"
+   case PLATFORM
+-  when /-sunos4/
+-    $LIBERUBY_ALIASES = "liberuby.so.$(MAJOR).$(MINOR) liberuby.so"
+   when /-linux/
+-    $DLDFLAGS = '-Wl,-soname,liberuby.so.$(MAJOR).$(MINOR)'
+-    $LIBERUBY_ALIASES = "liberuby.so.$(MAJOR).$(MINOR) liberuby.so"
++    $DLDFLAGS = '-Wl,-soname,liberuby.so.$(MAJOR_MINOR)'
    when /-(freebsd|netbsd)/
-     $LIBERUBY_SO = "liberuby.so.$(MAJOR).$(MINOR)"
+-    $LIBERUBY_SO = "liberuby.so.$(MAJOR).$(MINOR)"
 -    if PLATFORM =~ /elf/ || PLATFORM =~ /-freebsd[3-9]/
 +    if PLATFORM =~ /elf/ and PLATFORM =~ /-freebsd[3-9]/
        $LIBERUBY_SO = "liberuby.so.$(MAJOR_MINOR)"
        $LIBERUBY_ALIASES = "liberuby.so"
-     else
+-    else
+-      $LIBERUBY_ALIASES = "liberuby.so.$(MAJOR) liberuby.so"
+     end
+   when /-solaris/
++    $DLDFLAGS = "$DLDFLAGS "'-Wl,-h,liberuby.so.$(MAJOR_MINOR)'
+     $XLDFLAGS = "-R$(prefix)/lib"
+   when /-hpux/
+     $XLDFLAGS = "-Wl,+s,+b,$(prefix)/lib"
