@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8804 2005/01/18 14:18:02 adam Exp $
+$NetBSD: CHANGES,v 1.8805 2005/01/18 16:36:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -405,3 +405,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ImageMagick to 6.1.8-8 [drochner 2005-01-18]
 	Updated awstats to 6.3 [minskim 2005-01-08]
 	Updated netpbm to 10.26.1 [adam 2005-01-08]
+	Updated amaya to 9.0 [adam 2005-01-08]
