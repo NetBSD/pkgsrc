@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2002/10/05 22:54:10 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2002/11/01 16:34:39 wiz Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
 REP_VERS=		0.15.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=librep/}
 
@@ -11,7 +11,6 @@ MAINTAINER=		danw@netbsd.org
 HOMEPAGE=		http://librep.sourceforge.net/
 COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
 
-BUILDLINK_DEPENDS.gdbm=	gdbm>=1.8.0
 USE_GNU_READLINE=	# uses rl_basic_quote_characters
 
 USE_BUILDLINK2=		# defined
