@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/06/24 16:44:01 danw Exp $
+# $NetBSD: Makefile,v 1.22 2000/06/25 16:03:23 rh Exp $
 
 DISTNAME=	gnome-utils-1.2.0
 CATEGORIES=	misc x11 gnome
@@ -11,6 +11,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	gnome-core>=1.2.0:../../x11/gnome-core
 DEPENDS+=	libgtop>=1.0.9:../../devel/libgtop
+DEPENDS+=	libglade>=0.13:../../devel/libglade
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
