@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.10 2001/05/22 09:32:28 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/23 19:35:27 jlam Exp $
 #
-USE_MESA=	yes
+#USE_MESA=		yes
 
 .include "../qt2-libs/Makefile.common"
 
-PKGNAME=	qt2-libs-${QTVERSION}
+PKGNAME=		qt2-libs-${QTVERSION}
+COMMENT=		C++ X GUI toolkit
 
-COMMENT=	C++ X GUI toolkit
+USE_BUILDLINK_ONLY=	yes
+CONFIGURE_ARGS+=	-I${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+=	-L${BUILDLINK_DIR}/lib
 
-DEPENDS+=	png>=1.0.11:../../graphics/png
-DEPENDS+=	mng-1.0.0:../../graphics/mng
-DEPENDS+=	jpeg-*:../../graphics/jpeg
-
-CONFIGURE_ENV+=	QTDIR=${WRKSRC}
-MAKE_ENV+=	QTDIR=${WRKSRC}
+CONFIGURE_ENV+=		QTDIR="${WRKSRC}"
+MAKE_ENV+=		QTDIR="${WRKSRC}"
 
 ALL_TARGET=		sub-src
 
@@ -26,4 +25,9 @@ do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}/include
 	${INSTALL_DATA} ${WRKSRC}/include/* ${QTPREFIX}/include
 
+.include "../../devel/zlib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/Mesa/buildlink.mk"
+.include "../../graphics/mng/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
