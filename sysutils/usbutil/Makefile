@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.3 1999/10/27 17:14:10 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/10/27 18:19:09 augustss Exp $
 #
 
-DISTNAME=       usbutil-0.2
+DISTNAME=       usbutil-0.3
 CATEGORIES=	sysutils
 MASTER_SITES=   ftp://ftp.augustsson.net/pub/netbsd/
 
 MAINTAINER=	lennart@augustsson.net
-
-BROKEN=		Compilation problems
 
 .include "../../mk/bsd.prefs.mk"
 
