@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2000/01/17 16:02:34 jlam Exp $
 
 --- Makefile.orig	Sat Sep 18 11:29:44 1999
-+++ Makefile	Mon Oct 11 01:40:13 1999
++++ Makefile	Sat Jan 15 12:34:29 2000
 @@ -3,16 +3,19 @@
  
  # Debugging options
@@ -67,21 +67,25 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
  
  # If your audio hardware is half duplex, uncomment the next line.
  # You can also, if you wish, define this on the CCFLAGS definition
-@@ -267,23 +282,63 @@
+@@ -267,23 +282,67 @@
  
  CARGS = -DInternet_Port=$(INTERNET_PORT)
  
 +# Crypto
-+.if defined(CRYPTO) && $(CRYPTO) == "yes"
-+.if defined(HAVE_LIBCRYPTO) && $(HAVE_LIBCRYPTO) == "yes"
-+CRYPTOFLAGS =	-Iidea -I$(OPENSSLDIR)/include/openssl
-+CRYPTOLIBS =	idea/idea.a des/des.a \
-+		-Wl,-R$(OPENSSLDIR)/lib -L$(OPENSSLDIR)/lib -lcrypto
-+CRYPTOOBJS =	idealib.o deslib.o
++.if defined(USE_CRYPTO) && $(USE_CRYPTO) == "YES"
++.if defined(HAVE_LIBCRYPTO) && $(HAVE_LIBCRYPTO) == "YES"
++CRYPTOFLAGS =	-I$(OPENSSLDIR)/include/openssl
++CRYPTOLIBS =	des/des.a -Wl,-R$(OPENSSLDIR)/lib -L$(OPENSSLDIR)/lib -lcrypto
++CRYPTOOBJS =	deslib.o
 +.else
-+CRYPTOFLAGS =	-Iidea -Ilibdes -Iblowfish
-+CRYPTOLIBS =	blowfish/libblowfish.a des/des.a idea/idea.a libdes/libdes.a
-+CRYPTOOBJS =	libblowfish.o deslib.o idealib.o libdes.o
++CRYPTOFLAGS =	-Ilibdes -Iblowfish
++CRYPTOLIBS =	blowfish/libblowfish.a des/des.a libdes/libdes.a
++CRYPTOOBJS =	libblowfish.o deslib.o libdes.o
++.if defined(USE_IDEA) && $(USE_IDEA) == "YES"
++CRYPTOFLAGS +=	-DUSE_IDEA -Iidea
++CRYPTOLIBS +=	idea/idea.a
++CRYPTOOBJS +=	idealib.o
++.endif
 +.endif
 +.else
 +CCFLAGS +=	-DNOCRYPTO
@@ -90,7 +94,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
 +CRYPTOOBJS =
 +.endif
 +
-+.if defined(HAVE_GSM) && ${HAVE_GSM} == "yes"
++.if defined(HAVE_GSM) && ${HAVE_GSM} == "YES"
 +GSMFLAGS =	-I${LOCALBASE}/include
 +GSMLIBS =	-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -lgsm
 +GSMOBJS =
@@ -100,7 +104,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
 +GSMOBJS =	gsmlib.o
 +.endif
 +
-+.if defined(HAVE_MD5) && $(HAVE_MD5) == "yes"
++.if defined(HAVE_MD5) && $(HAVE_MD5) == "YES"
 +MD5FLAGS =	-I/usr/include
 +MD5LIBS =
 +MD5OBJS =
@@ -138,7 +142,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
  
  LAUNCHOBJS = launch.o soundbyte.o usleep.o g711.o
  
-@@ -302,13 +357,13 @@
+@@ -302,13 +361,13 @@
  
  ECHOOBJS = echo.o codecs.o g711.o rtpacket.o ulaw.o xdsub.o
  
@@ -156,7 +160,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
  
  #	Configure the voice on demand server for the platform's
  #	location of Perl and network constant definitions.
-@@ -402,8 +457,8 @@
+@@ -402,8 +461,8 @@
  
  speakfree.h:	audio_descr.h rtp.h rtpacket.h ulaw2linear.h types.h
  
@@ -167,7 +171,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
  
  manpage:
  	nroff -man sfmike.1 | $(PAGER)
-@@ -442,7 +497,7 @@
+@@ -442,7 +501,7 @@
  #	Clean everything
  
  clean:
@@ -176,7 +180,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
  	( cd adpcm; make clean )
  	( cd blowfish; make clean )
  	( cd libdes; make clean )
-@@ -456,11 +511,12 @@
+@@ -456,11 +515,12 @@
  #	Clean only the main directory, not the libraries
  
  dusty:
