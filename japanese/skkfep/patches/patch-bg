@@ -1,0 +1,70 @@
+$NetBSD: patch-bg,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
+
+--- skkfep.1.orig	Tue Jul  7 00:31:16 1998
++++ skkfep.1	Tue Dec 21 00:44:13 1999
+@@ -21,12 +21,13 @@
+ EUC (or DEC code).  
+ .IP \fBsj\fR 
+ MS-Kanji (Shift-JIS) code.  
+-.IP \fBjis\fIIO\fR 
++.IP \fBjis\fIIO\fR
+ JIS code. \fII\fR and \fIO\fR are characters which
+-represent shift-in/out escape sequence respectively.  For shift-in,
+-\fBA,@\fR(ESC $ @) or \fBB\fR(ESC $ B) can be specified; for
+-shift-out, \fBH\fR(ESC ( H), \fBJ\fR(ESC ( J) or \fBB\fR(ESC ( B) can
++represent kanji/ASCII escape sequences respectively.  For kanji sequence,
++\fBA\fR, \fB@\fR (ESC $ @) or \fBB\fR (ESC $ B) can be specified; for
++ASCII sequence, \fBH\fR (ESC ( H), \fBJ\fR (ESC ( J) or \fBB\fR (ESC ( B) can
+ be specified.  
++If the \fIIO\fR characters are omitted, the character is default to \fBBB\fR.
+ .RE
+ .TP 
+ .BI -f kanjicode 
+@@ -34,7 +35,7 @@
+ .TP 
+ .BI -udic \0dictionary 
+ Specifies the user dictionary file.
+-Default is $(HOME)/.skk-jisyo.  
++Default is $HOME/.skk-jisyo.  
+ .TP 
+ .B -bs 
+ Toggle BS behavior when the
+@@ -46,12 +47,12 @@
+ Choose the mode of learning words got from skk server. 
+ \fImode\fR is one of following:
+ .RS
+-.IP \fBnone\fR or \fBoff\fR or \fB0\fR
++.IP "\fBnone\fR or \fBoff\fR or \fB0\fR"
+ Do not learn the words at all.
+-.IP \fBtemporal\fR or \fB1\fR
++.IP "\fBtemporal\fR or \fB1\fR"
+ Learn the words while the skkfep process is alive, but do not record
+ the learned information.
+-.IP \fBpermanent\fR or \fB2\fR
++.IP "\fBpermanent\fR or \fB2\fR"
+ Learn the words and record them on the user dictionary.
+ .RE
+ .TP
+@@ -61,12 +62,20 @@
+ .TP
+ .BI -k char 
+ Specify the kanji toggle key. A control character is
+-expressed as ^ followed by an alphabet (for example, ^t).  Default is
+-^T.  
++expressed as ^ followed by an alphabet (for example, ^j).  Default is
++^J.  
+ .TP
+ .B -esc
+ With this option, ESC key becomes `RETUEN-TO-SKK-MODE' key.
+ This option is useful for vi-users.
++.TP
++.B -viesc
++With this option, ESC key becomes `RETUEN-TO-SKK-MODE' key and
++one of i, a, o, I, A, S, and R key restores the last mode.
++.TP
++.B -emacsesc
++With this option, control characters go though to the shell and disables
++conversion temporarily.
+ .TP
+ .B -rs
+ Reverse status line.

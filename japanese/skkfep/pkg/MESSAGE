@@ -1,0 +1,4 @@
+    To use skkfep, the dictionary server (skkserv) is almost
+required.  Use "skkserv" pkg, or, if you have another machine
+running skkserv, put the hostname in @PKGBASE@/etc/skk.conf
+file, and skkfep will connect to the host.

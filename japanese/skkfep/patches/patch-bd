@@ -1,0 +1,21 @@
+$NetBSD: patch-bd,v 1.1.1.1 1999/12/24 03:21:10 itohy Exp $
+
+--- fep.c.orig	Tue Jul  7 00:31:16 1998
++++ fep.c	Tue Dec 21 00:42:53 1999
+@@ -219,7 +219,6 @@
+ 	/* Initialize */
+ 	setKanaKey();
+ 	getTCstr();
+-	tty_ready();
+ 	get_winsize();
+ 	set_tty();
+ 	set_int();
+@@ -308,7 +307,7 @@
+ 			break;
+ 		}
+ 	}
+-	return jisAJ;	/* default */
++	return jisBB;	/* default */
+ }
+ 
+ flushOut(minchar)
