@@ -5511,6 +5511,9 @@ cat >>conftest.$ac_ext <<_ACEOF
 #if HAVE_SYS_MOUNT_H
 #include <sys/mount.h>
 #endif
+#if HAVE_SYS_VFS_H
+#include <sys/vfs.h>
+#endif
 
 int
 main ()

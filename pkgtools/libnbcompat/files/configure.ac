@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.37 2004/03/11 13:28:45 grant Exp $
+dnl $NetBSD: configure.ac,v 1.38 2004/03/11 18:35:29 sketch Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -123,6 +123,9 @@ AC_CHECK_TYPES([fsid_t],[],[],
 #endif
 #if HAVE_SYS_MOUNT_H
 #include <sys/mount.h>
+#endif
+#if HAVE_SYS_VFS_H
+#include <sys/vfs.h>
 #endif])
 AC_C_BIGENDIAN
 AC_CHECK_SIZEOF(off_t, 0)
