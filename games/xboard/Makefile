@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2001/02/06 03:16:57 fredb Exp $
-#
+# $NetBSD: Makefile,v 1.7 2001/02/07 06:11:23 jlam Exp $
 
-DISTNAME=		xboard-4.1.0
+DISTNAME=		xboard-4.2.2
 CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_GNU:=xboard/}
+MASTER_SITES=		${MASTER_SITE_GNU:=xboard/} \
+			http://www.research.compaq.com/SRC/personal/mann/xboard/
 
 MAINTAINER=		simonb@NetBSD.ORG
 HOMEPAGE=		http://www.research.compaq.com/SRC/personal/mann/xboard.html
