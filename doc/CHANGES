@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9116 2005/02/12 00:12:00 jlam Exp $
+$NetBSD: CHANGES,v 1.9117 2005/02/12 00:38:54 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -851,3 +851,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated audit-packages to 1.33 [agc 2005-02-11]
 	Updated p5-Kwiki-Scode to 0.03 [jlam 2005-02-11]
 	Added p5-Kwiki-PagePrivacy-0.10 [jlam 2005-02-11]
+	Added logfinder-0.1 [jschauma 2005-02-11]
