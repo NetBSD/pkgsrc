@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/03/24 20:03:34 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/04/10 20:22:39 jlam Exp $
 bin/deskguide_applet
 bin/gmenu
 bin/gnome-about
@@ -1276,7 +1276,7 @@ share/pixmaps/vnterm.xpm
 @dirrm share/applets/Amusements
 @dirrm share/applets
 @exec ${MKDIR} %D/etc/gnome/panel-config/panel.d/default
-@unexec ${RMDIR} %D/etc/gnome/panel-config/panel.d/default
-@unexec ${RMDIR} %D/etc/gnome/panel-config/panel.d
-@unexec ${RMDIR} %D/etc/gnome/panel-config
-@unexec ${RMDIR} %D/etc/gnome
+@unexec ${RMDIR} %D/etc/gnome/panel-config/panel.d/default 2>/dev/null || true
+@unexec ${RMDIR} %D/etc/gnome/panel-config/panel.d 2>/dev/null || true
+@unexec ${RMDIR} %D/etc/gnome/panel-config 2>/dev/null || true
+@unexec ${RMDIR} %D/etc/gnome 2>/dev/null || true
