@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2004/01/20 12:19:18 agc Exp $
+# $NetBSD: Makefile,v 1.27 2004/03/13 16:54:06 kristerw Exp $
 
 DISTNAME=		pl-lite-5.0.10
 PKGNAME=		swi-prolog-5.0.10
-PKGREVISION=				1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.swi.psy.uva.nl/SWI-Prolog/
 
@@ -27,7 +27,8 @@ PLIST_SUBST+=		APPEND_ELF=${APPEND_ELF}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == sparc64
+.if ${MACHINE_ARCH} == alpha || ${MACHINE_ARCH} == sparc64 || \
+	${MACHINE_ARCH} == x86_64
 PLIST_SUBST+=		BITS=64
 .else
 PLIST_SUBST+=		BITS=32
