@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.227 2004/07/25 16:15:26 minskim Exp $
+# $NetBSD: Makefile,v 1.228 2004/08/06 17:06:16 drochner Exp $
 #
 
 COMMENT=	Games
@@ -23,6 +23,7 @@ SUBDIR+=	cbzone
 SUBDIR+=	ccgo
 SUBDIR+=	cgoban
 SUBDIR+=	cgoban-java
+SUBDIR+=	circuslinux
 SUBDIR+=	civctp-demo
 SUBDIR+=	clanbomber
 SUBDIR+=	cmatrix
