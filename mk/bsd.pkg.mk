@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.876 2001/12/07 09:52:57 abs Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.877 2001/12/08 02:12:38 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -860,7 +860,7 @@ PATCH_SITES:=	${_MASTER_SITE_OVERRIDE} ${PATCH_SITES}
 
 # Derived names so that they're easily overridable.
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
-.if defined(PKGREVISION) && ${PKGREVISION} != ""
+.if defined(PKGREVISION) && ${PKGREVISION} != "" && ${PKGREVISION} != "0"
 .  if defined(PKGNAME)
 PKGNAME:=		${PKGNAME}nb${PKGREVISION}
 .  else
