@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/02/20 02:02:51 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/06/26 07:54:40 simonb Exp $
 #
 # The version number for skill does not match the @P number.
 # This is normal.
@@ -12,13 +12,12 @@ EXTRACT_SUFX=	_tar.Z
 
 MAINTAINER=	kim@tac.nyc.ny.us
 
-BINMODE=	02555
-
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-MAKE_ENV+=	OSTYPE=bsd-44 BINGRP=kmem COPTS=-DUVM
+MAKE_ENV+=	OSTYPE=bsd-44
 .elif ${OPSYS} == "SunOS"
+BINMODE=	02555
 MAKE_ENV+=	OSTYPE=sys-5r4 BINGRP=sys CPPFLAGS=
 .endif
 
