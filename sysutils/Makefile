@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.222 2004/02/29 05:58:52 uebayasi Exp $
+# $NetBSD: Makefile,v 1.223 2004/03/06 11:39:31 grant Exp $
 
 COMMENT=	System utilities
 
@@ -46,7 +46,6 @@ SUBDIR+=	dog
 SUBDIR+=	dptutil
 SUBDIR+=	dvd+rw-tools
 SUBDIR+=	dvdrecord
-SUBDIR+=	dvdrip
 SUBDIR+=	e2fsprogs
 SUBDIR+=	easydiskpasswd
 SUBDIR+=	etcupdate

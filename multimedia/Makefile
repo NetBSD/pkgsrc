@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/03/06 11:10:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.28 2004/03/06 11:39:31 grant Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -9,6 +9,7 @@ SUBDIR+=	avidemux
 SUBDIR+=	avifile
 SUBDIR+=	avifile-devel
 SUBDIR+=	divxplayer
+SUBDIR+=	dvdrip
 SUBDIR+=	flashplayer
 SUBDIR+=	fxtv
 SUBDIR+=	gmencoder
