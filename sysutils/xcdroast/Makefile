@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/01/10 11:24:51 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/23 16:12:43 drochner Exp $
 
 DISTNAME=	xcdroast-0.98alpha13
 PKGNAME=	xcdroast-0.98a13
@@ -9,7 +9,7 @@ MAINTAINER=	frueauf@netbsd.org
 HOMEPAGE=	http://www.xcdroast.org/
 COMMENT=	graphical user interface for the command-line cdrecord-tools
 
-DEPENDS+=	cdrecord-xcdroast098a13-[0-9]*:../../sysutils/cdrecord-xcdroast
+DEPENDS+=	cdrecord-xcdroast-0.98a13.*:../cdrecord-xcdroast
 
 .include "../../mk/bsd.prefs.mk"
 
