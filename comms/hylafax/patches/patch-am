@@ -1,0 +1,31 @@
+$NetBSD: patch-am,v 1.1.1.1 1999/08/11 06:04:30 rh Exp $
+
+--- hfaxd/User.c++.orig	Sat Feb 14 11:50:15 1998
++++ hfaxd/User.c++	Mon Apr 12 18:14:53 1999
+@@ -218,7 +218,7 @@
+     if (id == uid)				// user currently logged in
+ 	return (const char*) the_user;
+     if (id == FAXUID_ANON)			// anonymous user
+-	return "fax";
++	return FAX_USER;
+     if (idcache == NULL)			// load cache from file
+ 	fillIDCache();
+     const fxStr* hit = idcache->find(id);	// check cache
+@@ -237,7 +237,7 @@
+ {
+     if (name == the_user)
+ 	id = uid;
+-    else if (strcmp(name, "fax") == 0)
++    else if (strcmp(name, FAX_USER) == 0)
+ 	id = FAXUID_ANON;
+     else {
+ 	if (idcache == NULL)
+@@ -324,7 +324,7 @@
+     if (faxuid < FAXUID_MAX)
+ 	SetBit(FAXUID_RESV);			// reserved uid
+     else
+-	logError("Internal error, \"fax\" UID (%u) too large.", faxuid);
++	logError("Internal error, \"" FAX_USER "\" UID (%u) too large.", faxuid);
+     SetBit(FAXUID_ANON);			// anonymous uid is reserved
+     while (nextRecord(db, line, sizeof (line))) {
+ 	if (line[0] == '!')

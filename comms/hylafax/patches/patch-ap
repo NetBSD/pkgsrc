@@ -1,0 +1,24 @@
+$NetBSD: patch-ap,v 1.1.1.1 1999/08/11 06:04:30 rh Exp $
+
+--- etc/Makefile.in.orig	Fri Jan 22 08:02:49 1999
++++ etc/Makefile.in	Mon Aug  9 23:11:44 1999
+@@ -78,14 +78,15 @@
+ 		-src ${SRCDIR}/faxsetup.$$i -O faxsetup.$$i; \
+ 	done
+ 	${PUTSERVER} -F ${SBIN} -m 755 -src probemodem.sh -O probemodem
+-	${PUTSAMPLE} -F ${SPOOL}/etc -m 644 -o xferfaxlog
+-	${PUTSAMPLE} -F ${SPOOL}/etc -m 600 -o hosts
++	-${MKDIR} -m 755 ${PREFIX}/etc/hylafax
++	${PUTSAMPLE} -F ${PREFIX}/etc/hylafax -m 644 -o xferfaxlog
++	${PUTSAMPLE} -F ${PREFIX}/etc/hylafax -m 600 -o hosts
+ 	for i in ${DIALRULES}; do \
+-	    ${PUTSERVER} -F ${SPOOL}/etc -m 444 -src ${SRCDIR}/$$i \
++	    ${PUTSERVER} -F ${PREFIX}/etc/hylafax -m 444 -src ${SRCDIR}/$$i \
+ 		-idb "config(update)" -O $$i; \
+ 	done
+ 	${PUTSERVER} -F ${LIBEXEC} -m 755 -O lockname ondelay
+-	${PUTSAMPLE} -F ${SPOOL}/etc -m 644 -idb nostrip \
++	${PUTSAMPLE} -F ${PREFIX}/etc/hylafax -m 644 -idb nostrip \
+ 	    -src ${SRCDIR}/lutRS18.pcf -O lutRS18.pcf
+ 
+ #

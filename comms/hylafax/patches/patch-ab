@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/08/11 06:04:28 rh Exp $
+
+--- faxd/Getty.c++.orig	Sun Jun 13 09:41:03 1999
++++ faxd/Getty.c++	Mon Aug  9 21:54:26 1999
+@@ -218,7 +218,7 @@
+     // NB: this is executed in the parent
+     fxStr device = fxStr::format("%s/" | line, _PATH_DEV);
+     Sys::chown(device, UUCPLock::getUUCPUid(), UUCPLock::getUUCPGid());
+-    Sys::chmod(device, 0600);			// reset protection
++    Sys::chmod(device, 0660);			// reset protection
+ }
+ 
+ extern void vlogError(const char* fmt, va_list ap);
