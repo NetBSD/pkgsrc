@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/08/14 13:29:55 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/14 14:20:55 wiz Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.0.1
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+= --without-gnome
 CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" \
 		XML_CONFIG="${LOCALBASE}/bin/xml-config"
+LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.prefs.mk"
 
