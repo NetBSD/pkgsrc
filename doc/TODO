@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.258 2003/02/15 00:57:45 jlam Exp $
+$NetBSD: TODO,v 1.259 2003/02/15 02:03:49 salo Exp $
 
 Suggested new packages
 ======================
@@ -282,7 +282,6 @@ Suggested package updates
 	o teTeX-2.0
 	o texmacs-1.0.1.4
 	o tightvnc-1.2.7
-	o tspc-0.9.7 [pkg/20166]
 	o ttf2pt1-3.4.3
 	o tuxpaint-0.9.7
 	o tuxpaint-stamps-2003.01.28
