@@ -1,8 +1,15 @@
-# $NetBSD: Makefile,v 1.63 2004/01/06 03:35:26 uebayasi Exp $
+# $NetBSD: Makefile,v 1.64 2004/01/24 09:04:43 xtraeme Exp $
 #
 
 COMMENT=	Fonts
 
+SUBDIR+=	XFree86-fonts75dpi
+SUBDIR+=	XFree86-fonts100dpi
+SUBDIR+=	XFree86-fontsCyrillic
+SUBDIR+=	XFree86-fontsEncodings
+SUBDIR+=	XFree86-fontsMisc
+SUBDIR+=	XFree86-fontsScalable
+SUBDIR+=	XFree86-fontserver
 SUBDIR+=	Xft2
 SUBDIR+=	Xg
 SUBDIR+=	acroread-chsfont
