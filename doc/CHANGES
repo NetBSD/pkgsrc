@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2711 2003/07/09 21:15:43 jmmv Exp $
+$NetBSD: CHANGES,v 1.2712 2003/07/10 08:07:38 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2713,3 +2713,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated icewm to 1.2.9 [jmmv 2003-07-09]
 	Updated icewm-gnome to 1.2.9 [jmmv 2003-07-09]
 	Updated icewm-imlib to 1.2.9 [jmmv 2003-07-09]
+	Updated xcircuit to 3.1.16 [jtb 2003-07-09]
