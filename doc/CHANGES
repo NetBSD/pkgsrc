@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2335 2003/05/27 15:46:01 jmmv Exp $
+$NetBSD: CHANGES,v 1.2336 2003/05/27 16:00:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2172,3 +2172,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmame to 0.69.1 [kristerw 2003-05-27]
 	Updated xmess to 0.69.1 [kristerw 2003-05-27]
 	Updated gtetrinet to 0.7.1 [jmmv 2003-05-27]
+	Updated ja-samba to 2.2.8.1.1.0 [taca 2003-05-27]
