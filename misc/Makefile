@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2001/02/24 05:10:44 itojun Exp $
+# $NetBSD: Makefile,v 1.89 2001/03/12 10:24:31 zuntum Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -42,6 +42,7 @@ SUBDIR+=	less
 SUBDIR+=	libutf
 SUBDIR+=	lile
 SUBDIR+=	linuxls
+SUBDIR+=	loco
 SUBDIR+=	logsurfer
 SUBDIR+=	lv
 SUBDIR+=	most
