@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2004/10/28 08:37:40 cjep Exp $
+$NetBSD: distinfo,v 1.17 2004/11/11 10:37:15 cjep Exp $
 
-SHA1 (nail-11.13.tar.bz2) = 651946875cf1be8cbcec22d09bcdf0e27016b18e
-Size (nail-11.13.tar.bz2) = 267119 bytes
+SHA1 (nail-11.15.tar.bz2) = 3dbdad0542a1c3784056187a5e3822ab92647e34
+Size (nail-11.15.tar.bz2) = 261766 bytes
 SHA1 (patch-aa) = bfc4198c427e664aeea17b9a7648d3ed969ce692
 SHA1 (patch-ab) = fc028d32fb268e89ade8a5fba09611b3eb73bc29
 SHA1 (patch-ac) = f6d130cd5fa5d5ef0e8a500d2d60fdf5a5bbecc2
