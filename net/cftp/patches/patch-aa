@@ -1,0 +1,87 @@
+$NetBSD: patch-aa,v 1.1 2001/12/10 16:05:27 dillo Exp $
+
+--- ftp.c	2001/09/11 18:13:09	1.57
++++ ftp.c	2001/10/05 13:13:49	1.58
+@@ -956,7 +956,8 @@
+ ftp_cat(FILE *fin, FILE *fout, long start, long size, int upload)
+ {
+     char buf[4096], buf2[8192], *p;
+-    int nread, nwritten, err, trail_cr;
++    int nread, nwritten, err, trail_cr, errno_copy;
++    enum { ERR_NONE, ERR_FIN, ERR_FOUT } error_cause;
+     int old_alarm;
+     long got;
+     struct itimerval itv;
+@@ -983,6 +984,7 @@
+ 	ret=fcntl(fileno(fout), F_SETFL, flags);
+     }
+ 
++    error_cause = ERR_NONE;
+     trail_cr = 0;
+     do_read = 1;
+     for (;;) {
+@@ -993,7 +995,6 @@
+ 	    ret=select(fileno(fin)+1, &fds, NULL, NULL, NULL);
+ 	    
+ 	    if (ret != -1 && FD_ISSET(fileno(fin), &fds)) {
+-		errno = 0;
+ 		if ((nread=fread(buf, 1, 4096, fin)) > 0) {
+ 		    do_read = 0;
+ 		    nwritten = 0;
+@@ -1009,8 +1010,13 @@
+ 						    &trail_cr);
+ 		    }
+ 		}
+-		else if (errno != EAGAIN)
++		else {
++		    if (nread < 0 && errno != EAGAIN) {
++			errno_copy = errno;
++			error_cause = ERR_FIN;
++		    }
+ 		    break;
++		}
+ 	    }
+ 	}
+ 	else {
+@@ -1018,10 +1024,12 @@
+ 	    ret=select(fileno(fin)+1, &fds, NULL, NULL, NULL);
+ 	    
+ 	    if (ret != -1 && FD_ISSET(fileno(fin), &fds)) {
+-		errno = 0;
+ 		if ((err=fwrite(p+nwritten, 1, nread-nwritten,
+-				fout)) < 0 && errno != EAGAIN)
++				fout)) < 0 && errno != EAGAIN) {
++		    errno_copy = errno;
++		    error_cause = ERR_FOUT;
+ 		    break;
++		}
+ 		nwritten += err;
+ 		got += err;
+ 		
+@@ -1046,17 +1054,17 @@
+ 
+     _ftp_transfer_stats_cleanup(&trstat);
+ 
+-    if (ferror(fin) || sig_intr) {
+-	errno = 0;
++    if (error_cause || sig_intr) {
+ 	sig_intr = 0;
+-	ftp_abort(fin);
+-	return -1;
+-    }
+-    else if (ferror(fout)) {
+-	err = errno;
+-	errno = 0;
+ 	ftp_abort(fin);
+-	disp_status("write error: %s", strerror(err));
++	switch (error_cause) {
++	case ERR_FIN:
++	    disp_status("read error: %s", strerror(errno_copy));
++	    break;
++	case ERR_FOUT:
++	    disp_status("write error: %s", strerror(errno_copy));
++	    break;
++	}
+ 	return -1;
+     }
+ 
