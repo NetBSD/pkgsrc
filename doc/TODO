@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2990 2005/02/04 21:58:21 adrianp Exp $
+$NetBSD: TODO,v 1.2991 2005/02/04 22:10:37 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -334,7 +334,6 @@ Suggested package updates
 	o btparse-0.34
 	o bzflag-2.0.0
 	o c4-1.10
-	o camlimages-2.12
 	o catdoc-0.93.4
 	o catdoc-tk-0.93.4
 	o cbmconvert-2.1.2
