@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2001/12/14 16:26:03 mrg Exp $
+$NetBSD: patch-ab,v 1.8.2.1 2002/08/25 21:22:18 jlam Exp $
 
---- bozohttpd.8.in.orig	Sat Sep 22 20:10:00 2001
-+++ bozohttpd.8.in	Sat Dec 15 03:15:41 2001
-@@ -172,8 +172,8 @@
+--- bozohttpd.8.in.orig	Fri Aug 23 15:43:44 2002
++++ bozohttpd.8.in	Fri Aug 23 15:48:04 2002
+@@ -197,8 +197,8 @@
  .Xr inetd.conf 5
  entry would be:
  .Bd -literal
@@ -13,3 +13,12 @@ $NetBSD: patch-ab,v 1.8 2001/12/14 16:26:03 mrg Exp $
  .Ed
  .Pp
  This would serve web pages from
+@@ -218,7 +218,7 @@
+ .Pp
+ To configure set of virtual hosts, one would use an entry like:
+ .Bd -literal
+-www stream tcp  nowait:600 httpd /usr/pkg/libexec/bozohttpd bozohttpd -v /var/vroot /var/www
++www stream tcp  nowait:600 httpd @PREFIX@/libexec/bozohttpd bozohttpd -v /var/vroot /var/www
+ .Ed
+ .Pp
+ and inside

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6.2.2 2002/06/30 06:24:32 jlam Exp $
+# $NetBSD: Makefile,v 1.6.2.3 2002/08/25 21:22:26 jlam Exp $
 #
 
-DISTNAME=	dillo-0.6.5
-PKGREVISION=	1
+DISTNAME=	dillo-0.6.6
 CATEGORIES=	www
 MASTER_SITES=	http://dillo.cipsga.org.br/download/
 

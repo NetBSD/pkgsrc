@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7.2.1 2002/07/01 17:45:03 jlam Exp $
+# $NetBSD: Makefile,v 1.7.2.2 2002/08/25 21:20:35 jlam Exp $
 
 DISTNAME=		samba-2.0.10
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -10,8 +10,6 @@ MASTER_SITES=		ftp://ftp.samba.org/pub/samba/old-versions/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX
-
-#IGNORE=			"${PKGNAME} has been superseded samba>=2.2.3"
 
 BUILD_USES_MSGFMT=	# defined
 GNU_CONFIGURE=		# defined

@@ -1,66 +1,24 @@
-# $NetBSD: Makefile,v 1.82.2.2 2002/06/30 06:24:08 jlam Exp $
+# $NetBSD: Makefile,v 1.82.2.3 2002/08/25 21:20:26 jlam Exp $
 
-DISTNAME=		samba-2.2.5
-WRKSRC=			${WRKDIR}/${DISTNAME}/source
-CATEGORIES=		net
-MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
-			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
-			ftp://samba.anu.edu.au/pub/samba/ \
-			http://de.samba.org/samba/ftp/ \
-			ftp://ftp.sunet.se/pub/unix/utilities/samba/
-COUNTRY_MIRRORS=	au1 ca fi fr de it pl ru sg se us1 us6
-.for COUNTRY in ${COUNTRY_MIRRORS}
-MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/
-.endfor
-EXTRACT_SUFX=		.tar.bz2
+.include "Makefile.common"
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX
 
-GNU_CONFIGURE=		# defined
-USE_LIBTOOL=		# defined
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
 USE_BUILDLINK2=		# defined
+
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
-
-.include "../../mk/bsd.prefs.mk"
-
-PKG_SYSCONFSUBDIR?=	samba
-
-VARDIR?=		/var
-SAMBA_ETCDIR?=		${PKG_SYSCONFDIR}
-SAMBA_DATADIR=		${PREFIX}/share
-SAMBA_LOCKDIR?=		${VARDIR}/db/samba
-SAMBA_LOGDIR?=		${VARDIR}/log
-SAMBA_PIDDIR?=		${VARDIR}/run
-SAMBA_PRIVATE?=		${SAMBA_ETCDIR}/private
-
-CONFIGURE_ARGS+=	--localstatedir=${VARDIR}
-CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
-CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
-CONFIGURE_ARGS+=	--with-codepagedir=${SAMBA_DATADIR}/samba/codepages
-CONFIGURE_ARGS+=	--with-datadir=${SAMBA_DATADIR}
-CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
-CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR}
-CONFIGURE_ARGS+=	--with-piddir=${SAMBA_PIDDIR}
-CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE}
-CONFIGURE_ARGS+=	--with-swatdir=${SAMBA_DATADIR}/samba/swat
-
 CONFIGURE_ARGS+=	--with-readline
+
 CONFIGURE_ARGS+=	--with-ssl
 CONFIGURE_ARGS+=	--with-sslinc=${SSLBASE}
 CFLAGS+=		-I${SSLBASE}/include/openssl	# ssl.h, err.h
-
-CONFIGURE_ENV+=		ac_cv_lib_curses_tgetent=no
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
 .include "../../print/cups/buildlink2.mk"
 BUILD_DEFS+=		USE_CUPS
 CONFIGURE_ARGS+=	--enable-cups
-.else
-CONFIGURE_ARGS+=	--disable-cups
 .endif
 
 .if defined(USE_PAM)
@@ -81,24 +39,13 @@ SMBPASSWD_FILE=		/dev/null ${SAMBA_PRIVATE}/smbpasswd		\
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .endif
 
-# The following are Linux-only options.
-CONFIGURE_ARGS+=	--without-smbwrapper
-CONFIGURE_ARGS+=	--without-smbmount
-
-# Explicitly disable winbind until it may be properly handled by pkgsrc.
-CONFIGURE_ARGS+=	--without-winbind
-
-DOCDIR=			${PREFIX}/share/doc/samba
-HTMLDIR=		${PREFIX}/share/doc/html/samba
-EXAMPLESDIR=		${PREFIX}/share/examples/samba
-
-FILES_SUBST=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
-FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
-FILES_SUBST+=		SAMBA_LOGDIR=${SAMBA_LOGDIR}
-FILES_SUBST+=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
 MESSAGE_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
 MESSAGE_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
 MESSAGE_SUBST+=		ROOT_USER=${ROOT_USER}
+
+DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
+HTMLDIR=		${PREFIX}/share/doc/html/${PKGBASE}
+EXAMPLESDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 CONF_FILES=		${EXAMPLESDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
 SUPPORT_FILES_PERMS=	${SMBPASSWD_FILE}

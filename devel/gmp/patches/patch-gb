@@ -1,0 +1,33 @@
+$NetBSD: patch-gb,v 1.1.2.2 2002/08/25 21:20:08 jlam Exp $
+
+This is a patch for 4.1 from the GNU MP Homepage, it should be
+removed in future versions
+
+--- mpz/powm_ui.c.~1.16.~	Thu May 16 09:20:49 2002
++++ mpz/powm_ui.c	Sat Jun  1 10:41:34 2002
+@@ -115,6 +115,17 @@
+ 
+   /* Main loop. */
+ 
++  /* If m is already normalized (high bit of high limb set), and b is the
++     same size, but a bigger value, and e==1, then there's no modular
++     reductions done and we can end up with a result out of range at the
++     end. */
++  if (c == 0)
++    {
++      if (xn == mn && mpn_cmp (xp, mp, mn) >= 0)
++        mpn_sub_n (xp, xp, mp, mn);
++      goto finishup;
++    }
++
+   while (c != 0)
+     {
+       mpn_sqr_n (tp, xp, xn);
+@@ -149,6 +160,7 @@
+       c--;
+     }
+ 
++ finishup:
+   /* We shifted m left m_zero_cnt steps.  Adjust the result by reducing
+      it with the original MOD.  */
+   if (m_zero_cnt != 0)

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15.2.2 2002/07/01 17:45:00 jlam Exp $
+# $NetBSD: Makefile,v 1.15.2.3 2002/08/25 21:20:22 jlam Exp $
 
 DISTNAME=	lftp-2.5.2
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/
+MASTER_SITES=	ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/ \
+		ftp://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/old/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	michal@pasternak.w.lub.pl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49.2.2 2002/06/30 06:24:31 jlam Exp $
+# $NetBSD: Makefile,v 1.49.2.3 2002/08/25 21:22:09 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -7,8 +7,10 @@
 # sanity fixes in apache module API (for example, avoid u_long for IPv4 addrs)
 #
 
-DISTNAME=		apache_1.3.26
-PKGNAME=		apache6-1.3.26
+DISTNAME=		apache_${APACHE_VERSION}
+PKGNAME=		apache6-${APACHE_VERSION}
+APACHE_VERSION=		1.3.26
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
 			http://www.apache.de/dist/httpd/ \
@@ -23,9 +25,9 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		itojun@netbsd.org
 HOMEPAGE=		http://httpd.apache.org/
-COMMENT=		HTTP (Web) server with IPv6 support
+COMMENT=		Apache HTTP (Web) server with IPv6 support
 
-CONFLICTS=		apache-[0-9]* apache-*modssl-[0-9]* apache6-[0-9]*
+CONFLICTS=		apache-[0-9]* apache-*ssl-[0-9]* apache6-[0-9]*
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif:N*.diff.gz}
 USE_BUILDLINK2=		YES
@@ -38,6 +40,7 @@ CONFIGURE_ARGS+=	--enable-module=most \
 			--enable-rule=INET6
 # proxy module is broken with the IPv6 patch
 CONFIGURE_ARGS+=	--disable-module=proxy
+CONFIGURE_ARGS+=	--without-confadjust
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		OPTIM="${APACHE_CUSTOM_CFLAGS}"
@@ -50,20 +53,30 @@ BUILD_DEFS+=		USE_INET6
 IGNORE=			"IPv6 only build"
 .endif
 
+.if empty(STRIPFLAG)
+CONFIGURE_ARGS+=	--without-execstrip
+.endif
+
 PKG_SYSCONFSUBDIR?=	httpd
 
+APACHE_USER?=		www
+APACHE_GROUP?=		www
+BUILD_DEFS+=		APACHE_USER
+BUILD_DEFS+=		APACHE_GROUP
+
+CONFIGURE_ARGS+=	--server-uid=${APACHE_USER}
+CONFIGURE_ARGS+=	--server-gid=${APACHE_GROUP}
+
 .if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
-APACHE_SUEXEC_USER?=	www
 APACHE_SUEXEC_DOCROOT?=	${PREFIX}/share/httpd/htdocs
 APACHE_SUEXEC_PATH=	/bin:/usr/bin:${PREFIX}/bin:/usr/local/bin
 APACHE_SUEXEC_CONFIGURE_ARGS+=						\
-			--suexec-caller=${APACHE_SUEXEC_USER}		\
+			--suexec-caller=${APACHE_USER}			\
 			--suexec-safepath='${APACHE_SUEXEC_PATH}'	\
 			--suexec-docroot=${APACHE_SUEXEC_DOCROOT}
 CONFIGURE_ARGS+=	--enable-suexec 				\
 			${APACHE_SUEXEC_CONFIGURE_ARGS:M--suexec-*}
 PLIST_SRC=		${PKGDIR}/PLIST.suexec
-PKG_USERS=		${APACHE_SUEXEC_USER}:nogroup::Apache\\ suEXEC\\ user
 BUILD_DEFS+=		APACHE_SUEXEC_CONFIGURE_ARGS
 .endif
 
@@ -72,6 +85,12 @@ BUILD_DEFS+=		APACHE_SUEXEC_CONFIGURE_ARGS
 # using the "apxs" program.  See apxs(8).
 
 PLIST_SRC+=		${PKGDIR}/PLIST
+
+.if defined(NOPIC)
+PLIST_SUBST+=		SHLIBS="@comment "
+.else
+PLIST_SUBST+=		SHLIBS=""
+.endif
 
 APACHE_CUSTOM_CFLAGS?=	# empty
 
@@ -101,6 +120,9 @@ BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS
 BUILD_DEFS+=		APACHE_PERF_TUNING
 BUILD_DEFS+=		APACHE_SUEXEC
 
+PKG_GROUPS=		${APACHE_GROUP}
+PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\\ user
+
 EGDIR=		${PREFIX}/share/examples/httpd
 
 CONF_FILES=	${EGDIR}/httpd.conf.default ${PKG_SYSCONFDIR}/httpd.conf
@@ -108,8 +130,9 @@ SUPPORT_FILES=	${EGDIR}/magic.default ${PKG_SYSCONFDIR}/magic
 SUPPORT_FILES+=	${EGDIR}/mime.types.default ${PKG_SYSCONFDIR}/mime.types
 RCD_SCRIPTS=	apache
 
-OWN_DIRS=		/var/log/httpd
-OWN_DIRS+=		/var/spool/httpd
+OWN_DIRS+=		${PREFIX}/lib/httpd
+OWN_DIRS+=		/var/httpd
+OWN_DIRS+=		/var/log/httpd
 
 pre-patch:
 	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1.2.3 2002/06/30 06:24:45 jlam Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.4 2002/08/25 21:22:50 jlam Exp $
 #
 
 DISTNAME=	ttmkfdir

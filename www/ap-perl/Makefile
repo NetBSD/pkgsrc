@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.19.2.1 2002/06/30 15:31:15 jlam Exp $
+# $NetBSD: Makefile,v 1.19.2.2 2002/08/25 21:22:05 jlam Exp $
 #
 
-DISTNAME=	mod_perl-1.25
-PKGNAME=	ap-perl-1.25
-PKGREVISION=	1
-CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/} \
-		http://perl.apache.org/dist/
+DISTNAME=		mod_perl-1.25
+PKGNAME=		ap-perl-1.25
+PKGREVISION=		1
+CATEGORIES=		www perl5
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/} \
+			http://perl.apache.org/dist/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://perl.apache.org/
-COMMENT=	Module that embeds a Perl interpreter into Apache
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://perl.apache.org/
+COMMENT=		Module that embeds a Perl interpreter into Apache
 
-DEPENDS+=	{perl>=5.8.0rc2,libperl>=${LIBPERL5_REQD}}:../../lang/libperl
-DEPENDS+=	p5-BSD-Resource>=1.10:../../devel/p5-BSD-Resource
+DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
+DEPENDS+=		{libperl>=${LIBPERL5_REQD},perl>=5.8.0}:../../lang/libperl
+DEPENDS+=		p5-BSD-Resource>=1.10:../../devel/p5-BSD-Resource
 
 USE_BUILDLINK2=		YES
 APACHE_MODULE=		YES

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11.2.1 2002/06/30 06:24:22 jlam Exp $
+# $NetBSD: Makefile,v 1.11.2.2 2002/08/25 21:21:49 jlam Exp $
 #
 
 DISTNAME=		texi2html-1.64
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.mathematik.uni-kl.de/~obachman/Texi2html/Distrib/
 
-MAINTAINER=		tv@netbsd.org
+MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.mathematik.uni-kl.de/~obachman/Texi2html/
 COMMENT=		Texinfo-to-HTML direct translator
 

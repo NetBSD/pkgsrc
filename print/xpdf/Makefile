@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7.2.2 2002/07/01 17:45:07 jlam Exp $
+# $NetBSD: Makefile,v 1.7.2.3 2002/08/25 21:21:03 jlam Exp $
 # 
 
 DISTNAME=	xpdf-1.00
@@ -30,8 +30,8 @@ MAKE_ENV+=		SED="${SED}" ECHO="${ECHO}"
 CONFIGURE_ARGS+=	--enable-a4-paper
 .endif
 
+.include "../../fonts/t1lib/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
-.include "../../textproc/t1lib/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

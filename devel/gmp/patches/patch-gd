@@ -1,0 +1,30 @@
+$NetBSD: patch-gd,v 1.1.2.2 2002/08/25 21:20:11 jlam Exp $
+
+This is a patch for 4.1 from the GNU MP Homepage, it should be
+removed in future versions
+
+--- gmpxx.h.old	Wed Jul  3 10:45:48 2002
++++ gmpxx.h	Wed Jul  3 10:49:28 2002
+@@ -2633,10 +2633,18 @@
+   }
+ 
+   // conversion functions
+-  const mpz_classref get_num() const { return mpz_classref(mpq_numref(mp)); }
+-  mpz_classref get_num() { return mpz_classref(mpq_numref(mp)); }
+-  const mpz_classref get_den() const { return mpz_classref(mpq_denref(mp)); }
+-  mpz_classref get_den() { return mpz_classref(mpq_denref(mp)); }
++
++  // casting a reference to an mpz_t to mpz_class & is a dirty hack,
++  // but works because the internal representation of mpz_class is
++  // exactly an mpz_t
++  const mpz_class & get_num() const
++  { return reinterpret_cast<const mpz_class &>(*mpq_numref(mp)); }
++  mpz_class & get_num()
++  { return reinterpret_cast<mpz_class &>(*mpq_numref(mp)); }
++  const mpz_class & get_den() const
++  { return reinterpret_cast<const mpz_class &>(*mpq_denref(mp)); }
++  mpz_class & get_den()
++  { return reinterpret_cast<mpz_class &>(*mpq_denref(mp)); }
+ 
+   mpq_srcptr get_mpq_t() const { return mp; }
+   mpq_ptr get_mpq_t() { return mp; }
