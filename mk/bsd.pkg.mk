@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.132 1998/08/04 10:28:08 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.133 1998/08/04 15:05:38 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -997,16 +997,15 @@ _PORT_USE: .USE
 .if make(real-install)
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
-	@for i in ${CONFLICTS}; do \
+	@(/bin/sh -f -c 'for i in ${CONFLICTS}; do \
 		if /usr/sbin/pkg_info -e "$$i" >${WRKDIR}/.CONFLICT.$$$$; then \
-			${ECHO_MSG} "===>  ${PKGNAME} conflicts with already installed pkg(s) "`${CAT} ${WRKDIR}/.CONFLICT.$$$$`.; \
-			${ECHO_MSG} "      They install the same files into the same place, its therefor not"; \
-			${ECHO_MSG} "      usefull to install ${PKGNAME}. Please remove "`${CAT} ${WRKDIR}/.CONFLICT.$$$$`" first with"; \
-			${ECHO_MSG} "      pkg_delete(1)."; \
+			${ECHO_MSG} "===>  ${PKGNAME} conflicts with installed package: $$i - "`${CAT} ${WRKDIR}/.CONFLICT.$$$$`" found."; \
+			${ECHO_MSG} "      They install the same files into the same place."; \
+			${ECHO_MSG} "      Please remove "`${CAT} ${WRKDIR}/.CONFLICT.$$$$`" first with pkg_delete(1)."; \
 			exit 1; \
 		fi; \
 		${RM} ${WRKDIR}/.CONFLICT.$$$$ ; \
-	done
+	done')
 .endif
 	@if [ -d ${PKG_DBDIR}/${PKGNAME} ]; then \
 		${ECHO_MSG} "===>  ${PKGNAME} is already installed - perhaps an older version?"; \
