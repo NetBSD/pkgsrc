@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2002/08/29 09:59:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/01/02 09:34:50 wulf Exp $
 #
 
-DISTNAME=	geneweb-4.06
+DISTNAME=	geneweb-4.09
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/cristal/geneweb/Src/
 
@@ -16,6 +16,10 @@ USE_GMAKE=	yes
 .if !exists(${LOCALBASE}/bin/ocamlc.opt)
 ALL_TARGET=	out
 .endif
+
+# Stripped OCAML binaries don't seem to work nolonger
+# Installing unstripped binaries until this is fixed
+INSTALL_PROGRAM =  ${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 
 pre-configure:
 		if ! ${TEST} -x ${LOCALBASE}/bin/ocamlc.opt; then \
