@@ -1,0 +1,12 @@
+$NetBSD: patch-as,v 1.1 2004/07/28 08:05:32 agc Exp $
+
+--- snd-utils.c	2004/07/28 07:57:26	1.1
++++ snd-utils.c	2004/07/28 07:58:23
+@@ -1,6 +1,6 @@
+ #include "snd.h"
+ 
+-int round(float x)
++int snd_round(float x)
+ {
+   int i;
+   i=x;
