@@ -1,0 +1,4 @@
+bin/scheme48
+include/scheme48.h
+lib/scheme48
+man/man1/scheme48.1.gz
