@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/02/16 15:59:23 fredb Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/16 16:03:22 fredb Exp $
 #
 
 DISTNAME=	Squeak2.6-src
@@ -20,7 +20,7 @@ USE_GMAKE=	yes
 NO_WRKSUBDIR=	yes
 
 ALL_TARGET=	squeak
-MAKE_ENV+=	LIBS="-R${X11BASE}/lib -L${X11BASE}/lib"
+MAKE_ENV+=	LIBS="-Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
 
 do-install:
 	${MKDIR} ${PREFIX}/share/squeak
