@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2003/06/10 09:56:17 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2003/08/11 11:41:51 markd Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -96,10 +96,10 @@ post-install:
 	${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
 .endif
 .if defined(USE_MILTER) && ${USE_MILTER} == "YES"
-	${INSTALL_DATA} ${WRKSRC}/obj.`uname -srm | ${TR} \  .`/libsm/libsm.a \
+	${INSTALL_DATA} ${WRKSRC}/obj.`uname -srm | ${TR} \  . | ${SED} s/sun4./sun4/`/libsm/libsm.a \
 		${PREFIX}/lib
 	${INSTALL_DATA} \
-		${WRKSRC}/obj.`uname -srm | ${TR} \  .`/libsmutil/libsmutil.a \
+		${WRKSRC}/obj.`uname -srm | ${TR} \  . | ${SED} s/sun4./sun4/`/libsmutil/libsmutil.a \
 		${PREFIX}/lib
 	${ECHO} "lib/libsm.a" >> ${WRKDIR}/.PLIST_SRC
 	${ECHO} "lib/libsmutil.a" >> ${WRKDIR}/.PLIST_SRC
