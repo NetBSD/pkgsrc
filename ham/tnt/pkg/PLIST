@@ -1,0 +1,57 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/06/06 19:31:42 frueauf Exp $
+bin/tnt
+bin/tntc
+include/tntrun.h
+sbin/tnt_setup
+share/tnt/conf/autostrt.tnt
+share/tnt/conf/boxender.tnt
+share/tnt/conf/ctext.tnt
+share/tnt/conf/extrem.tnt
+share/tnt/conf/f6fbb.box
+share/tnt/conf/fkeys.tnt
+share/tnt/conf/flchk.tnt
+share/tnt/conf/names.tnt
+share/tnt/conf/netpass.tnt
+share/tnt/conf/news.tnt
+share/tnt/conf/norem.tnt
+share/tnt/conf/notown.tnt
+share/tnt/conf/pw.tnt
+share/tnt/conf/qtext.tnt
+share/tnt/conf/routes.tnt
+share/tnt/conf/sounds.tnt
+share/tnt/conf/sys.tnt
+share/tnt/conf/telltexte.tnt
+share/tnt/conf/termcap.tnt
+share/tnt/conf/tnt.dwn
+share/tnt/conf/tnt.ini
+share/tnt/conf/tntc.ini
+share/tnt/conf/tnt.up
+share/tnt/conf/tntrem.inf
+share/tnt/sounds/connect.au
+share/tnt/sounds/disc.au
+share/tnt/sounds/reset.au
+share/tnt/sounds/busy.au
+share/tnt/sounds/failure.au
+share/tnt/sounds/play
+share/tnt/sounds/ring.au
+share/tnt/doc/CHANGES
+share/tnt/doc/COPYING
+share/tnt/doc/FILES
+share/tnt/doc/ax25krnl.doc
+share/tnt/doc/iface.doc
+share/tnt/doc/tnt.doc
+share/tnt/doc/tnt.hlp
+share/tnt/doc/tntdoc.html
+share/tnt/doc/tntdoc.texinfo
+share/tnt/doc/tntrem.hlp
+share/tnt/doc/Readme1
+share/tnt/doc/Readme2
+share/tnt/doc/Readme3
+share/tnt/doc/Readme4
+share/tnt/doc/Readme5
+share/tnt/doc/Readme6
+@dirrm share/tnt/conf
+@dirrm share/tnt/doc
+@dirrm share/tnt/sounds
+@dirrm share/tnt
+@unexec rm -rf /var/spool/tnt
