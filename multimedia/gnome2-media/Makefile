@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/06/06 08:09:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2004/09/21 17:13:35 jmmv Exp $
 
-DISTNAME=		gnome-media-2.6.2
-PKGREVISION=		1
+DISTNAME=		gnome-media-2.8.0
 CATEGORIES=		multimedia gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.8/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -11,8 +10,9 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of audio/multimedia applications for GNOME2
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gst-plugins-esound>=0.8.1:../../audio/gst-plugins-esound
-DEPENDS+=		gst-plugins-oss>=0.8.1:../../audio/gst-plugins-oss
+DEPENDS+=		gst-plugins-cdparanoia>=0.8.4:../../audio/gst-plugins-cdparanoia
+DEPENDS+=		gst-plugins-esound>=0.8.4:../../audio/gst-plugins-esound
+DEPENDS+=		gst-plugins-oss>=0.8.4:../../audio/gst-plugins-oss
 
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
@@ -24,7 +24,7 @@ USE_GNU_TOOLS+=		make
 USE_PERL5=		build
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ENV+=		XGETTEXT="${LOCALBASE}/bin/xgettext"
 
 .include "../../mk/bsd.prefs.mk"
