@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/04/09 13:56:22 minskim Exp $
+$NetBSD: distinfo,v 1.3 2004/11/25 20:02:46 minskim Exp $
 
-SHA1 (ed2k-gtk-gui-0.6.2.tar.gz) = 8efc986435633692c31ec7ea2e8c6ba199a9bad1
-Size (ed2k-gtk-gui-0.6.2.tar.gz) = 1787696 bytes
+SHA1 (ed2k-gtk-gui-0.6.3.tar.gz) = b5474717b1b9cdeddae8cc707fe9809608138dc1
+Size (ed2k-gtk-gui-0.6.3.tar.gz) = 1993079 bytes
