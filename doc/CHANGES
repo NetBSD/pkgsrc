@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2301 2003/05/24 07:53:15 uebayasi Exp $
+$NetBSD: CHANGES,v 1.2302 2003/05/24 09:33:29 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2114,3 +2114,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated easytag to 0.27.1nb1 [wiz 2003-05-23]
 	Updated opera7 to 7.11 [jdolecek 2003-05-23]
 	Updated zenicb to 19981202nb1 [uebayasi 2003-05-24]
+	Updated p5-XML-Simple to 2.07 [mjl 2003-05-24]
