@@ -1,10 +1,15 @@
-# $NetBSD: bsd.prefs.mk,v 1.146 2004/02/01 00:32:38 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.147 2004/02/05 03:37:47 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
 # statements or modifications to "passed" variables (CFLAGS, LDFLAGS, ...),
 # to make sure any variables defined in /etc/mk.conf, $MAKECONF, or
 # the system defaults (sys.mk and bsd.own.mk) are used.
+
+# If empty(BSD_PREFS_MK:M+*), then we are _not_ being included from
+# within bsd.prefs.mk.
+#
+BSD_PREFS_MK:=	${BSD_PREFS_MK}+
 
 # Do not recursively include mk.conf, redefine OPSYS, include bsd.own.mk, etc.
 .ifndef BSD_PKG_MK
@@ -463,6 +468,7 @@ WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
 #
 WRKLOG?=		${WRKDIR}/.work.log
 
+# Include bsd.compiler.mk for CC_VERSION.
 .if exists(${.CURDIR}/../../mk/compiler/bsd.compiler.mk)
 .  include "../../mk/compiler/bsd.compiler.mk"
 .elif exists(${.CURDIR}/../mk/compiler/bsd.compiler.mk)
@@ -470,3 +476,5 @@ WRKLOG?=		${WRKDIR}/.work.log
 .endif
 
 .endif	# BSD_PKG_MK
+
+BSD_PREFS_MK:=	${BSD_PREFS_MK:S/+$//}
