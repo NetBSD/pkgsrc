@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1521 2004/10/21 17:00:10 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1522 2004/10/21 17:18:44 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -4962,13 +4962,13 @@ BEGIN {									\
 #
 .if ${PLIST_TYPE} == "dynamic"
 _PLIST_AWK_LIBTOOL?=	# empty
+.elif empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
+BROKEN+=		"USE_LIBTOOL requires LIBTOOLIZE_PLIST=yes for proper PLIST generation"
 .else
-.  if !empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
 _PLIST_AWK_LIBTOOL?=							\
 /^[^@].*\.la$$/ {							\
 	system("cd ${PREFIX} && ${_PRINT_LA_LIBNAMES} " $$0)		\
 }
-.  endif
 .endif
 
 # _PLIST_AWK_SCRIPT hold the complete awk script for plist target.
