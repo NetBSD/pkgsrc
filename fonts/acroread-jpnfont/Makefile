@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 14:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/02/26 21:28:49 fredb Exp $
 #
 
 DISTNAME=	jpnfont
@@ -11,16 +11,22 @@ DEPENDS+=	acroread-font-share-4.0:../../fonts/acroread-font-share
 WRKSRC=		${WRKDIR}/JPNKIT
 TAR_FILE=	${WRKSRC}/LANGJPN.TAR
 
+_FETCH_MESSAGE= \
+	${ECHO} "======================================================="; \
+	${ECHO} "  Be required to register with Adobe"; \
+	${ECHO} "  before downloading the Japanese font pack."; \
+	${ECHO} "  You should manual-fetch Japanese pack of \"Asian Font Packs\""; \
+	${ECHO} "  to ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} from"; \
+	${ECHO} "    http://www.adobe.com/prodindex/acrobat/readstep.html"; \
+	${ECHO} "======================================================="
+
 do-fetch:
 	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
-		${ECHO_MSG} "==============================================================="; \
-		${ECHO_MSG} "  Be required to register with Adobe"; \
-		${ECHO_MSG} "  before downloading the Japanese font pack."; \
-		${ECHO_MSG} "  You should manual-fetch Japanese pack of \"Asian Font Packs\""; \
-		${ECHO_MSG} "  to ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} from"; \
-		${ECHO_MSG} "    http://www.adobe.com/prodindex/acrobat/readstep.html"; \
-		${ECHO_MSG} "==============================================================="; \
+		${_FETCH_MESSAGE}; \
 		${FALSE}; \
 	 fi
+
+fetch-list-one-pkg:
+	@${ECHO} ${_FETCH_MESSAGE:Q}
 
 .include "../acroread-font-share/Makefile.common"
