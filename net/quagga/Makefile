@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/13 07:26:57 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/16 21:49:13 itojun Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -15,7 +15,7 @@ COMMENT=	Free multithreaded routing daemon software (fork of zebra)
 AUTOMAKE_REQD=		1.6.2
 USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
-PKG_SYSCONFSUBDIR?=	quagga
+PKG_SYSCONFSUBDIR?=	zebra
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 # you might need debugging, it's a developer release !
 #CFLAGS+=	-g
