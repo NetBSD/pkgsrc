@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/05/18 12:44:05 recht Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:48:48 agc Exp $
 
 SHA1 (Lupy-0.2.1.tar.gz) = 764b217c77d951de0c2e6d895c3d7a15ac7af007
+RMD160 (Lupy-0.2.1.tar.gz) = 93d743dedb8d854549bd3ea977270966c3a25041
 Size (Lupy-0.2.1.tar.gz) = 52269 bytes
