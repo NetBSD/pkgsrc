@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/09/17 05:40:06 zuntum Exp $
+$NetBSD: patch-ad,v 1.2 2002/07/08 14:25:05 jschauma Exp $
 
---- xsetup/makefile.in.orig	Thu Aug 30 15:39:30 2001
-+++ xsetup/makefile.in
-@@ -25,7 +25,7 @@
- 	   ../commonfuncs.o ../image/imload.o ../xdndclass.o ../xncdebug.o
-            CXXINCLUDES=$(XINC) -I../xbitmaps
+--- xsetup/makefile.in.orig	Sun Jul  7 12:59:01 2002
++++ xsetup/makefile.in	Sun Jul  7 12:59:34 2002
+@@ -45,7 +45,7 @@
+ 
+            CXXINCLUDES=$(XINC) -I../image2 -I../xbitmaps
             CXXOPT=$(DEFS) $(DEB) $(CFLAGS)
--           LOCAL_LIBRARIES=$(IMAGEOBJS) $(JLIB) $(TLIB) $(XLIBS) -L../image $(PNGLIB) $(ZLIB) $(LIBS)
-+           LOCAL_LIBRARIES=$(IMAGEOBJS) $(JLIB) $(TLIB) $(XLIBS) -L../image $(PNGLIB) $(ZLIB) $(LIBS) $(LDFLAGS)
+-           LOCAL_LIBRARIES=$(IMAGEOBJS) $(JLIB) $(TLIB) $(XLIBS) $(PNGLIB) $(ZLIB) $(LIBS)
++           LOCAL_LIBRARIES=$(IMAGEOBJS) $(JLIB) $(TLIB) $(XLIBS) $(PNGLIB) $(ZLIB) $(LIBS) $(LDFLAGS)
  
   PROGRAM =xncsetup
  
