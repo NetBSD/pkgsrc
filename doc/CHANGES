@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9224 2005/02/19 21:20:33 wiz Exp $
+$NetBSD: CHANGES,v 1.9225 2005/02/19 21:34:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -783,7 +783,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated vice to 1.16 [kristerw 2005-02-06]
 	Updated ProjectCenter to 0.4.2 [adam 2005-02-07]
 	Updated Gorm to 0.9.0 [adam 2005-02-07]
-	Updatex texi2html to 1.76 [wiz 2005-02-07]
+	Updated texi2html to 1.76 [wiz 2005-02-07]
 	Updated xcursor to 1.1.2 [wiz 2005-02-07]
 	Updated magicpoint to 1.10anb5 [hira 2005-02-07]
 	Updated abiword-plugins to 2.2.3nb1 [adam 2005-02-07]
