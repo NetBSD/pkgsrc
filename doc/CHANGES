@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6761 2004/08/02 12:59:13 cube Exp $
+$NetBSD: CHANGES,v 1.6762 2004/08/02 13:05:51 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3686,3 +3686,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-DBIx-SearchBuilder to 1.01 [cube 2004-08-02]
 	Updated freetype2 to 2.1.9 [adam 2004-08-02]
 	Added p5-Apache-Test-1.12 [cube 2004-08-02]
+	Updated nail to 11.0 [cjep 2004-08-02]
