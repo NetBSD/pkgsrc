@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2003/04/25 17:16:52 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2003/05/21 17:36:03 jmmv Exp $
 bin/gaim
 bin/gaim-remote
 lib/gaim/autorecon.a
@@ -22,9 +22,6 @@ lib/gaim/idle.so
 lib/gaim/libgg.a
 lib/gaim/libgg.la
 lib/gaim/libgg.so
-lib/gaim/libicq.a
-lib/gaim/libicq.la
-lib/gaim/libicq.so
 lib/gaim/libirc.a
 lib/gaim/libirc.la
 lib/gaim/libirc.so
@@ -55,6 +52,9 @@ lib/gaim/notify.so
 lib/gaim/spellchk.a
 lib/gaim/spellchk.la
 lib/gaim/spellchk.so
+lib/gaim/statenotify.a
+lib/gaim/statenotify.la
+lib/gaim/statenotify.so
 lib/gaim/ticker.a
 lib/gaim/ticker.la
 lib/gaim/ticker.so
