@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.48 2004/02/09 00:37:32 jlam Exp $
+# $NetBSD: gcc.mk,v 1.49 2004/02/09 05:22:43 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
@@ -102,16 +102,23 @@ _NEED_GCC3=	yes
 .    endif
 .  endfor
 
+# Assume by default that GCC will only provide a C compiler.
+LANGUAGES.gcc?=	c
+.  if !empty(_NEED_GCC2:M[yY][eE][sS])
+LANGUAGES.gcc=	c c++ fortran objc
+.  elif !empty(_NEED_GCC3:M[yY][eE][sS])
+LANGUAGES.gcc=	c c++ fortran java objc
+.  endif
+_LANGUAGES.gcc=		# empty
+.  for _lang_ in ${USE_LANGUAGES}
+_LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
+.  endfor
+
 .  if !empty(_NEED_GCC2:M[yY][eE][sS])
 #
 # We require gcc-2.x in the lang/gcc directory.
 #
 _GCC_PKGBASE=		gcc
-LANGUAGES.gcc=		c c++ fortran objc
-_LANGUAGES.gcc=		# empty
-.    for _lang_ in ${USE_LANGUAGES}
-_LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
-.    endfor
 .    if !empty(PKGPATH:Mlang/gcc)
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
@@ -128,11 +135,6 @@ USE_GCC_SHLIB?=		yes
 # We require gcc-3.x in the lang/gcc3-* directories.
 #
 _GCC_PKGBASE=		gcc3-c
-LANGUAGES.gcc=		c c++ fortran java objc
-_LANGUAGES.gcc=		# empty
-.    for _lang_ in ${USE_LANGUAGES}
-_LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
-.    endfor
 .    if !empty(PKGPATH:Mlang/gcc3-c)
 _IGNORE_GCC=		yes
 MAKEFLAGS+=		_IGNORE_GCC=yes
@@ -170,9 +172,8 @@ _USE_PKGSRC_GCC=	NO
 .  endif
 
 .  if !defined(_USE_PKGSRC_GCC)
-.    if !empty(_IS_BUILTIN_GCC:M[nN][oO])
 _USE_PKGSRC_GCC=	YES
-.    else
+.    if !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
 _GCC_TEST_DEPENDS=	gcc>=${_GCC_REQD}
 _USE_PKGSRC_GCC!=	\
 	if ${PKG_ADMIN} pmatch '${_GCC_TEST_DEPENDS}' ${_GCC_PKG}; then	\
