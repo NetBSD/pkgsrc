@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4120 2003/12/14 23:42:24 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4121 2003/12/14 23:55:10 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5168,3 +5168,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome2-control-center to 2.4.0 [xtraeme 2003-12-14]
 	Updated gnome-panel to 2.4.1 [xtraeme 2003-12-14]
 	Updated gnome2-utils to 2.4.1 [xtraeme 2003-12-14]
+	Updated bug-buddy to 2.4.0 [xtraeme 2003-12-14]
