@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:26:14 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/27 21:44:00 jdolecek Exp $
 
-DISTNAME=	psi-0.8.7
-PKGREVISION=	1
+DISTNAME=	psi-0.9
 CATEGORIES=	chat
 MASTER_SITES=	http://belnet.dl.sourceforge.net/sourceforge/psi/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,8 +9,7 @@ MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://psi.affinix.com/
 COMMENT=	PSI Jabber Client
 
-# need qt3 3.0.4nb2, for qmake
-BUILD_DEPENDS+=	qt3-tools>=3.0.4nb2:../../x11/qt3-tools
+DEPENDS+=	psi-ssl>=2.0:../../chat/psi-ssl
 
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
@@ -19,16 +17,21 @@ USE_LIBTOOL=	yes
 USE_X11BASE=	yes
 HAS_CONFIGURE=	yes
 
-BUILD_DIRS=	${WRKSRC}/src
-
 CONFIGURE_ARGS+= -p ${PREFIX}
 
 post-configure:
 	${SED} -e 's:^CHK_DIR_EXISTS *= *$$:CHK_DIR_EXISTS=test -d:' -e "s:^MKDIR *= *$$:MKDIR=${MKDIR}:" -e "s:/bin/true:${TRUE}:" < ${BUILD_DIRS}/Makefile > ${BUILD_DIRS}/Makefile.orig
 	${MV} ${BUILD_DIRS}/Makefile.orig ${BUILD_DIRS}/Makefile
 
-# This order is needed to pickup any freetype version dependencies from qt3
+do-install:
+	cd ${WRKSRC} && ${QTDIR}/bin/lrelease psi.pro
+	cd ${WRKSRC} && ${CP} -f -pR image iconsets sound certs lang/*.qm \
+		README COPYING \
+		${X11BASE}/share/psi/
+	cd ${WRKSRC} && ${CP} -f psi ${X11BASE}/bin/psi
+
 .include "../../x11/qt3-libs/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
+BUILDLINK_DEPENDS.qt3-tools=	qt3-tools>=3.1.2nb2	# need lrelease
+.include "../../x11/qt3-tools/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"

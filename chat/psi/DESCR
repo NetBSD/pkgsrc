@@ -4,9 +4,8 @@ from the ground up, not relying upon central servers.
 
 Psi is a client for the Jabber system. Written in C++ and based on
 the Qt library, there are versions available for NetBSD, Linux (and
-other flavors of unix/X11), Microsoft Windows, and Apple MacOS X.
-Psi is released under the GNU General Public License, so you know
-that it's truly free, and will remain so.
+other flavors of Unix/X11), Microsoft Windows, and Apple MacOS X.
+Psi is released under the GNU General Public License.
 
 Features:
 * Message (ICQ-style) and Chat (AIM-style) modes
@@ -21,3 +20,5 @@ Features:
 * Auto-away after a configurable amount of time
 * Tray/dock icon for KDE/GNOME environments
 * Language plugins
+* OpenPGP integration (via GnuPG)
+* Groupchat invites / private-messaging
