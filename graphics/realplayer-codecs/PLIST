@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/01 08:02:48 mrg Exp $
+lib/RealPlayer8/Codecs/14_4.so.6.0
+lib/RealPlayer8/Codecs/28_8.so.6.0
+lib/RealPlayer8/Codecs/atrc.so.6.0
+lib/RealPlayer8/Codecs/cook.so.6.0
+lib/RealPlayer8/Codecs/ddnt.so.6.0
+lib/RealPlayer8/Codecs/dnet.so.6.0
+lib/RealPlayer8/Codecs/drv2.so.6.0
+lib/RealPlayer8/Codecs/drv3.so.6.0
+lib/RealPlayer8/Codecs/dspr.so.6.0
+lib/RealPlayer8/Codecs/sipr.so.6.0
+lib/RealPlayer8/Codecs/tokr.so.6.0
