@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.7 2004/12/08 03:51:54 minskim Exp $
+
+--- src/resource.c.orig	Sun Nov 14 02:16:12 2004
++++ src/resource.c
+@@ -126,6 +126,7 @@ XrmDatabase resource_buildDatabase(displ
+ #ifdef VMS
+   int b;
+ #endif
++    String rpath;
+ 
+   BEGINMESSAGE(resource_buildDatabase)
+ 
+@@ -150,7 +151,7 @@ XrmDatabase resource_buildDatabase(displ
+     //  s = XtResolvePathname(display,"app-defaults",NULL,NULL,NULL,NULL,0,NULL);
+     /* #endif */
+ 
+-    String rpath = GV_XtNewString(GV_LIBDIR);
++    rpath = GV_XtNewString(GV_LIBDIR);
+     if (rpath) {
+       INFSMESSAGE(merging system resource file into database,rpath)
+ 	XrmCombineFileDatabase(rpath,&db,True);
