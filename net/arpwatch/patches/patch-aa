@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2001/08/24 11:37:07 abs Exp $
+$NetBSD: patch-aa,v 1.5 2004/12/10 23:32:34 minskim Exp $
 
 --- Makefile.in.orig	Thu Jun 15 01:39:55 2000
 +++ Makefile.in
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.4 2001/08/24 11:37:07 abs Exp $
 +ETCDEST = $(prefix)/etc
  # Pathname of directory to install database file
 -ARPDIR = $(prefix)/arpwatch
-+ARPDIR = /var/db/arpwatch
++ARPDIR = ${VARBASE}/db/arpwatch
  
  # VPATH
  srcdir = @srcdir@

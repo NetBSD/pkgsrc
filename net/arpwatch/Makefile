@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/11/03 10:59:40 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/12/10 23:32:34 minskim Exp $
 #
 
 DISTNAME=	arpwatch-2.1a11
@@ -14,6 +14,14 @@ GNU_CONFIGURE=	yes
 
 LIBS+=		${BUILDLINK_LDADD.libpcap}
 
+PLIST_SUBST+=	VARBASE=${VARBASE}
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	arpsnmp.8 arpwatch.8
+SUBST_SED.paths=	-e 's,/usr/operator/arpwatch,${VARBASE}/db/arpwatch,g'
+
 pre-patch:
 	f=arpwatch.h;							\
 	${MV} ${WRKSRC}/$$f ${WRKSRC}/$$f-prepatch;			\
@@ -22,8 +30,8 @@ pre-patch:
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/arpwatch.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/arpsnmp.8 ${PREFIX}/man/man8
-	@${INSTALL_DATA_DIR} /var/db/arpwatch
-	${TOUCH} /var/db/arpwatch/arp.dat
+	@${INSTALL_DATA_DIR} ${VARBASE}/db/arpwatch
+	${TOUCH} ${VARBASE}/db/arpwatch/arp.dat
 	${INSTALL_DATA} ${WRKSRC}/ethercodes.dat ${PREFIX}/etc
 
 .include "../../net/libpcap/buildlink3.mk"
