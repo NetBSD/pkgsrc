@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.311 2002/10/19 18:09:54 martti Exp $
+$NetBSD: CHANGES,v 1.312 2002/10/19 20:08:45 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3331,3 +3331,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated p5-XML-Node to 0.10nb2 [seb 2002-10-19]
 	Added phoenix-0.3 [taya 2002-10-19]
 	Updated popt to 1.7nb1 [martti 2002-10-19]
+	Updated rocksndiamonds to 2.1.1 [heinz 2002-10-19]
