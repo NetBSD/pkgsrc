@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2398 2003/06/02 13:26:55 abs Exp $
+$NetBSD: CHANGES,v 1.2399 2003/06/02 14:12:16 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2274,3 +2274,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mad to 0.14.2bnb1 [is 2003-06-02]
 	Added bftpd-1.0.24 [jmmv 2003-06-02]
 	Updated ap-throttle to 3.1.2nb1 [abs 2003-06-02]
+	Added vms-empire-1.4 [jmmv 2003-06-02]
