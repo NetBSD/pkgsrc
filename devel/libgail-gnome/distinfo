@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/04/01 18:46:57 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2004/06/28 17:56:16 jmmv Exp $
 
-SHA1 (libgail-gnome-1.0.3.tar.gz) = 2e75a7173f65844f36a399fd1343662fca7cfbbd
-Size (libgail-gnome-1.0.3.tar.gz) = 286901 bytes
+SHA1 (libgail-gnome-1.0.4.tar.gz) = 265c9899b86217d9f72d2bb2f582eb99f06cb6d0
+Size (libgail-gnome-1.0.4.tar.gz) = 286811 bytes

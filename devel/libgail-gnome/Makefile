@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/01 18:46:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/28 17:56:16 jmmv Exp $
 #
 
-DISTNAME=	libgail-gnome-1.0.3
+DISTNAME=	libgail-gnome-1.0.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgail-gnome/1.0/}
 
