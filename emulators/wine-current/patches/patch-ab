@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.2 1999/12/29 01:47:59 wiz Exp $
 --- configure.orig	Mon Apr 12 22:40:50 1999
 +++ configure	Mon Apr 12 22:41:23 1999
 @@ -3487,13 +3487,13 @@
