@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2924 2003/07/29 19:48:43 jmmv Exp $
+$NetBSD: CHANGES,v 1.2925 2003/07/29 21:14:41 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3058,3 +3058,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ircd-hybrid to 6.2nb1 [jmmv 2003-07-29]
 	Updated zephyr-current to 20010518nb1 [jmmv 2003-07-29]
 	Updated canna-server-bin to 3.6pl3nb1 [jmmv 2003-07-29]
+	Updated ja-freewnn-server-bin to 1.10nb2 [jmmv 2003-07-29]
