@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/03/14 16:30:08 skrll Exp $
+# $NetBSD: Makefile,v 1.28 2001/05/14 13:25:27 agc Exp $
 #
 
 COMMENT=	Character code converters
@@ -22,5 +22,6 @@ SUBDIR+=	uudeview
 SUBDIR+=	uulib
 SUBDIR+=	wv
 SUBDIR+=	xdeview
+SUBDIR+=	xlHtml
 
 .include "../mk/bsd.pkg.subdir.mk"
