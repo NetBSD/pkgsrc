@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/08/10 11:35:31 rh Exp $
+$NetBSD: distinfo,v 1.6 2003/12/05 10:29:17 adam Exp $
 
-SHA1 (Gorm-0.3.0.tar.gz) = 9e4761e9427c77c6dc211afb8e0781595fd75896
-Size (Gorm-0.3.0.tar.gz) = 362392 bytes
+SHA1 (Gorm-0.4.0.tar.gz) = b89d152e056ba063292c2b04c7f5fcef88c60854
+Size (Gorm-0.4.0.tar.gz) = 375933 bytes
