@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/21 11:12:51 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/30 23:32:20 salo Exp $
 #
 
 DISTNAME=	cooledit-3.17.5
@@ -10,7 +10,9 @@ HOMEPAGE=	http://cooledit.sourceforge.net/
 COMMENT=	full-featured text editor
 
 BUILD_USES_MSGFMT=	# defined
+
 USE_BUILDLINK2=		# defined
+USE_PKGLOCALEDIR=	# defined
 USE_X11BASE=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
