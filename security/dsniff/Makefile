@@ -1,22 +1,17 @@
-# $NetBSD: Makefile,v 1.23 2005/02/05 16:11:48 adrianp Exp $
-# $OpenBSD: Makefile,v 1.13 2000/06/19 18:38:55 dugsong Exp $
+# $NetBSD: Makefile,v 1.24 2005/03/22 01:07:07 wiz Exp $
 
-DISTNAME=	dsniff-2.3
-PKGREVISION=	3
-CATEGORIES=	security
-MASTER_SITES+=	http://monkey.org/~dugsong/dsniff/
+.include "Makefile.common"
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://monkey.org/~dugsong/dsniff/
-COMMENT=	Password sniffer
+PKGREVISION=	4
+COMMENT=	Password sniffer (webspy)
 
-USE_BUILDLINK3=	yes
-GNU_CONFIGURE=	yes
+DEPENDS+=	dsniff-nox11-[0-9]*:../../security/dsniff-nox11
+
 USE_X11=	yes
+BUILD_TARGET=	libmissing.a webspy
 
-BUILDLINK_DEPENDS.libnet+=	libnet-1.0.*
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/webspy ${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/webspy.8 ${PREFIX}/man/man8
 
-.include "../../net/libpcap/buildlink3.mk"
-.include "../../devel/libnet/buildlink3.mk"
-.include "../../net/libnids/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
