@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/21 16:03:39 kent Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/09 12:21:58 kent Exp $
 cross/i386-netbsdpe/include/GL/gl.h
 cross/i386-netbsdpe/include/GL/glext.h
 cross/i386-netbsdpe/include/GL/glu.h
 cross/i386-netbsdpe/include/accctrl.h
 cross/i386-netbsdpe/include/aclapi.h
+cross/i386-netbsdpe/include/afxres.h
 cross/i386-netbsdpe/include/basetsd.h
 cross/i386-netbsdpe/include/basetyps.h
 cross/i386-netbsdpe/include/cderr.h
@@ -94,8 +95,10 @@ cross/i386-netbsdpe/include/ddk/winnt4.h
 cross/i386-netbsdpe/include/ddk/winxp.h
 cross/i386-netbsdpe/include/ddk/ws2san.h
 cross/i386-netbsdpe/include/ddk/xfilter.h
+cross/i386-netbsdpe/include/dhcpcsdk.h
 cross/i386-netbsdpe/include/dlgs.h
 cross/i386-netbsdpe/include/docobj.h
+cross/i386-netbsdpe/include/errorrep.h
 cross/i386-netbsdpe/include/exdisp.h
 cross/i386-netbsdpe/include/exdispid.h
 cross/i386-netbsdpe/include/httpext.h
@@ -211,8 +214,10 @@ cross/i386-netbsdpe/include/sspi.h
 cross/i386-netbsdpe/include/subauth.h
 cross/i386-netbsdpe/include/svcguid.h
 cross/i386-netbsdpe/include/tlhelp32.h
+cross/i386-netbsdpe/include/tmschema.h
 cross/i386-netbsdpe/include/unknwn.h
 cross/i386-netbsdpe/include/userenv.h
+cross/i386-netbsdpe/include/uxtheme.h
 cross/i386-netbsdpe/include/vfw.h
 cross/i386-netbsdpe/include/w32api.h
 cross/i386-netbsdpe/include/winable.h
@@ -221,6 +226,7 @@ cross/i386-netbsdpe/include/winber.h
 cross/i386-netbsdpe/include/wincon.h
 cross/i386-netbsdpe/include/wincrypt.h
 cross/i386-netbsdpe/include/windef.h
+cross/i386-netbsdpe/include/windns.h
 cross/i386-netbsdpe/include/windows.h
 cross/i386-netbsdpe/include/windowsx.h
 cross/i386-netbsdpe/include/winerror.h
