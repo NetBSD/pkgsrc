@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/20 17:59:12 tv Exp $
+bin/bsfilt
+bin/cawf
+man/man1/bsfilt.1
+man/man1/cawf.1
+share/cawf/DIFFS
+share/cawf/device.cf
+share/cawf/dumb.dev
+share/cawf/man.mac
+share/cawf/me.mac
+share/cawf/ms.mac
+@dirrm share/cawf
