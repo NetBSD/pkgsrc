@@ -1,8 +1,7 @@
-A Standard ML implementation from Bell-Labs.  Implements the SML '97 definition
-including the new Basis library with a few minor omissions and discrepancies.
+A Standard ML implementation from Bell-Labs.  Implements the SML '97
+definition including the new Basis library with a few minor omissions
+and discrepancies.
 
-If you are interested in a lighter weight implementation of ML, 
-the Moscow-ML port is recommended.
+If you are interested in a lighter weight implementation of ML, the
+Moscow-ML port is recommended.
 
-- Joseph Koshy  <jkoshy@freebsd.org>
-- Julian Assange <proff@iq.org>

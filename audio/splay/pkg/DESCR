@@ -10,5 +10,3 @@ You can use this program under GPL.
 You can use these libraries under Library GPL.
 
 * This version of splay was not compiled with pthread library.
---
-Port by Choi Jun Ho <junker@jazz.snu.ac.kr>
