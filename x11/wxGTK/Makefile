@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/06/15 16:53:27 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/29 08:53:17 jlam Exp $
 #
 
 DISTNAME=		wxGTK-2.2.7
@@ -9,10 +9,8 @@ MAINTAINER=		tsarna@netbsd.org
 HOMEPAGE=		http://www.freiburg.linux.de/~wxxt/
 COMMENT=		GTK-based implementation of the wxWindows GUI library
 
-DEPENDS+=		gtk+>=1.2.7:../../x11/gtk
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png>=1.0.11:../../graphics/png
-DEPENDS+=		tiff>=3.5.2:../../graphics/tiff
+USE_BUILDLINK_ONLY=	# defined
+REPLACE_BUILDLINK=	wxgtk-config
 
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
@@ -24,7 +22,8 @@ CONFIGURE_ARGS+=	--with-libpng=sys
 CONFIGURE_ARGS+=	--with-libtiff=sys
 CONFIGURE_ARGS+=	--disable-threads
 
-CPPFLAGS+=		-I${LOCALBASE}/include
+MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+CPPFLAGS+=		-Dunix=1	# src/common/unzip.c needs this
 
 DOCDIR=			${PREFIX}/share/doc/wx/gtk
 
@@ -33,4 +32,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENCE.txt ${DOCDIR}/LICENSE
 	${INSTALL_DATA} ${WRKSRC}/SYMBOLS.txt ${DOCDIR}/SYMBOLS
 
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
