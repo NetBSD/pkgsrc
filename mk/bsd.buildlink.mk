@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.19 2001/06/29 04:17:19 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.20 2001/07/01 22:56:01 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -62,6 +62,8 @@
 #
 # Example package buildlink.mk file:
 #
+# .include "../../mk/bsd.buildlink.mk"
+#
 # BUILDLINK_PREFIX.foo=		${LOCALBASE}
 # BUILDLINK_FILES.foo=		include/foo.h
 # BUILDLINK_FILES.foo+=		include/bar.h
@@ -74,8 +76,6 @@
 #
 # pre-configure: foo-buildlink
 # foo-buildlink: _BUILDLINK_USE
-#
-# .include "../../mk/bsd.buildlink.mk"
 
 .if !defined(_BSD_BUILDLINK_MK)
 _BSD_BUILDLINK_MK=	# defined
@@ -134,7 +134,8 @@ _BUILDLINK_USE: .USE
 USE_CONFIG_WRAPPER=	# defined
 .endif
 
-BUILDLINK_CONFIG_WRAPPER_SED=						\
+BUILDLINK_CONFIG_WRAPPER_SED?=		# empty
+BUILDLINK_CONFIG_WRAPPER_POST_SED=					\
 		-e "s|-I${LOCALBASE}/|-I${BUILDLINK_DIR}/|g"		\
 		-e "s|-L${LOCALBASE}/|-L${BUILDLINK_DIR}/|g"
 
@@ -147,8 +148,8 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 		(${ECHO} '#!/bin/sh';					\
 		${ECHO} '';						\
 		${ECHO} '${ECHO} "`${BUILDLINK_CONFIG.${.TARGET:S/-buildlink-config-wrapper//}} $$*`" | ${SED} \'; \
-		${ECHO} '	${BUILDLINK_CONFIG_WRAPPER_SED.${.TARGET:S/-buildlink-config-wrapper//}} \'; \
 		${ECHO} '	${BUILDLINK_CONFIG_WRAPPER_SED} \';	\
+		${ECHO} '	${BUILDLINK_CONFIG_WRAPPER_POST_SED} \'; \
 		) > ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
 		${CHMOD} +x ${BUILDLINK_CONFIG_WRAPPER.${.TARGET:S/-buildlink-config-wrapper//}}; \
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
@@ -157,7 +158,9 @@ _BUILDLINK_CONFIG_WRAPPER_USE: .USE
 .if defined(USE_LIBTOOL)
 post-build: buildlink-fix-libtool-archives
 
-BUILDLINK_FIX_LIBTOOL_SED+=	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"
+BUILDLINK_FIX_LIBTOOL_SED?=	# empty
+BUILDLINK_FIX_LIBTOOL_POST_SED+=					\
+	-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"
 
 # Note: This target _MUST_ know something about libtool internals to correctly
 #       fix the references to ${BUILDLINK_DIR} into ${LOCALBASE}.
@@ -170,7 +173,8 @@ buildlink-fix-libtool-archives:
 		lai_files=`${FIND} ${WRKSRC} -name "*.lai"`;		\
 		for file in $${lai_files}; do				\
 			${MV} -f $${file} $${file}.fixme;		\
-			${SED} ${BUILDLINK_FIX_LIBTOOL_SED}		\
+			${SED}	${BUILDLINK_FIX_LIBTOOL_SED}		\
+				${BUILDLINK_FIX_LIBTOOL_POST_SED}	\
 				$${file}.fixme > $${file};		\
 			${RM} -f $${file}.fixme;			\
 		done;							\
