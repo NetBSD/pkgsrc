@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/06/20 16:28:18 agc Exp $
+
+--- Makefile.orig	Mon Jun  4 15:39:34 2001
++++ Makefile	Mon Jun  4 15:39:43 2001
+@@ -1,6 +1,6 @@
+ all: arirang
+ CC= 		cc
+-CFLAGS=		-Wall -pedantic
++CFLAGS+=	-Wall -pedantic
+ TARGET=		arirang
+ SRCS=		arirang.c grabhead.c osfinger.c rule.c screen.c
+ OBJS=		$(SRCS:.c=.o)
