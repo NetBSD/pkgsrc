@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/09 13:03:21 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/09/25 16:05:21 recht Exp $
 bin/cilc
 bin/cilc.exe
-bin/genmdesc
 bin/ilasm
 bin/ilasm.exe
 bin/mbas
@@ -12,12 +11,15 @@ bin/mint
 bin/mono
 bin/monodis
 bin/monograph
+bin/monoresgen
 bin/monoresgen.exe
 bin/monosn
-bin/oldmono
 bin/pedump
+bin/secutil
 bin/secutil.exe
-bin/sqlsharp.exe
+bin/sqlsharp
+bin/xsd
+bin/xsd.exe
 include/mono/cil/opcode.def
 include/mono/io-layer/access.h
 include/mono/io-layer/atomic.h
@@ -44,7 +46,6 @@ include/mono/io-layer/versioninfo.h
 include/mono/io-layer/wait.h
 include/mono/io-layer/wapi.h
 include/mono/jit/jit.h
-include/mono/jit/regset.h
 include/mono/metadata/appdomain.h
 include/mono/metadata/assembly.h
 include/mono/metadata/blob.h
@@ -75,14 +76,14 @@ include/mono/metadata/threads-types.h
 include/mono/metadata/threads.h
 include/mono/metadata/tokentype.h
 include/mono/metadata/verify.h
-include/mono/mini/mini-ops.h
-include/mono/mini/mini.h
-include/mono/mini/regalloc.h
+include/mono/private/libgc-mono-debugger.h
 include/mono/utils/mono-digest.h
 include/mono/utils/mono-hash.h
+include/mono/utils/mono-logger.h
 include/mono/utils/monobitset.h
 lib/Accessibility.dll
 lib/ByteFX.Data.dll
+lib/Commons.Xml.Relaxng.dll
 lib/Cscompmgd.dll
 lib/I18N.CJK.dll
 lib/I18N.MidEast.dll
@@ -93,7 +94,9 @@ lib/I18N.dll
 lib/ICSharpCode.SharpZipLib.dll
 lib/Microsoft.VisualBasic.dll
 lib/Microsoft.VisualC.dll
+lib/Microsoft.Vsa.dll
 lib/Mono.CSharp.Debugger.dll
+lib/Mono.Cairo.dll
 lib/Mono.Data.DB2Client.dll
 lib/Mono.Data.MySql.dll
 lib/Mono.Data.PostgreSqlClient.dll
@@ -101,9 +104,13 @@ lib/Mono.Data.SqliteClient.dll
 lib/Mono.Data.SybaseClient.dll
 lib/Mono.Data.Tds.dll
 lib/Mono.Data.TdsClient.dll
+lib/Mono.Directory.LDAP.dll
 lib/Mono.GetOptions.dll
+lib/Mono.Http.dll
 lib/Mono.PEToolkit.dll
 lib/Mono.Posix.dll
+lib/Mono.Security.Win32.dll
+lib/Mono.Security.dll
 lib/NUnit.Framework.dll
 lib/NUnit.Util.dll
 lib/Npgsql.dll
@@ -112,27 +119,37 @@ lib/System.Configuration.Install.dll
 lib/System.Data.OracleClient.dll
 lib/System.Data.dll
 lib/System.Design.dll
+lib/System.DirectoryServices.dll
+lib/System.Drawing.Design.dll
 lib/System.Drawing.dll
 lib/System.EnterpriseServices.dll
+lib/System.Management.dll
+lib/System.Messaging.dll
 lib/System.Runtime.Remoting.dll
 lib/System.Runtime.Serialization.Formatters.Soap.dll
 lib/System.Security.dll
+lib/System.ServiceProcess.dll
 lib/System.Web.Services.dll
 lib/System.Web.dll
 lib/System.Windows.Forms.dll
 lib/System.Xml.dll
 lib/System.dll
 lib/corlib.dll
+lib/libmono-profiler-cov.a
+lib/libmono-profiler-cov.la
+lib/libmono-profiler-cov.so
+lib/libmono-profiler-cov.so.0
+lib/libmono-profiler-cov.so.0.0
 lib/libmono.a
 lib/libmono.la
 lib/libmono.so
 lib/libmono.so.0
 lib/libmono.so.0.0
-lib/liboldmono.a
-lib/liboldmono.la
-lib/liboldmono.so
-lib/liboldmono.so.0
-lib/liboldmono.so.0.0
+lib/libmonogc.a
+lib/libmonogc.la
+lib/libmonogc.so
+lib/libmonogc.so.1
+lib/libmonogc.so.1.1
 lib/pkgconfig/mono.pc
 man/man1/cert2spc.1
 man/man1/cilc.1
@@ -153,7 +170,7 @@ share/mono/cil/cil-opcodes.xml
 @dirrm share/mono
 @dirrm share/examples/mono
 @dirrm include/mono/utils
-@dirrm include/mono/mini
+@dirrm include/mono/private
 @dirrm include/mono/metadata
 @dirrm include/mono/jit
 @dirrm include/mono/io-layer
