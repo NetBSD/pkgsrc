@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2002/08/25 19:22:54 jlam Exp $
+$NetBSD: distinfo,v 1.11 2002/12/16 17:59:05 tron Exp $
 
-SHA1 (sane-backends-1.0.8.tar.gz) = b442f500e6aa21184abeb74dc6b83246e01b383a
-Size (sane-backends-1.0.8.tar.gz) = 2169657 bytes
-SHA1 (patch-aa) = ace1112377c0a330d80183193bf15b8ffbff2da3
+SHA1 (sane-backends-1.0.9.tar.gz) = cbfcf4abb805065821f4c9aef64765b0563255aa
+Size (sane-backends-1.0.9.tar.gz) = 2289976 bytes
+SHA1 (patch-aa) = 32070ca6afef7f96a1fa291857598cf116cbeeae

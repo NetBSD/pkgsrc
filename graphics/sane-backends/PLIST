@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2002/09/22 17:14:59 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/12/16 17:59:05 tron Exp $
+bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
 bin/scanimage
@@ -41,6 +42,8 @@ etc/sane.d/sp15c.conf
 etc/sane.d/st400.conf
 etc/sane.d/tamarack.conf
 etc/sane.d/teco1.conf
+etc/sane.d/teco2.conf
+etc/sane.d/teco3.conf
 etc/sane.d/test.conf
 etc/sane.d/umax.conf
 etc/sane.d/umax1220u.conf
@@ -257,6 +260,16 @@ lib/sane/libsane-teco1.la
 lib/sane/libsane-teco1.so
 lib/sane/libsane-teco1.so.${SANE_MAJOR}
 lib/sane/libsane-teco1.so.${SANE_MAJOR}.${SANE_MICRO}
+lib/sane/libsane-teco2.a
+lib/sane/libsane-teco2.la
+lib/sane/libsane-teco2.so
+lib/sane/libsane-teco2.so.${SANE_MAJOR}
+lib/sane/libsane-teco2.so.${SANE_MAJOR}.${SANE_MICRO}
+lib/sane/libsane-teco3.a
+lib/sane/libsane-teco3.la
+lib/sane/libsane-teco3.so
+lib/sane/libsane-teco3.so.${SANE_MAJOR}
+lib/sane/libsane-teco3.so.${SANE_MAJOR}.${SANE_MICRO}
 lib/sane/libsane-test.a
 lib/sane/libsane-test.la
 lib/sane/libsane-test.so
@@ -277,9 +290,14 @@ lib/sane/libsane-umax_pp.la
 lib/sane/libsane-umax_pp.so
 lib/sane/libsane-umax_pp.so.${SANE_MAJOR}
 lib/sane/libsane-umax_pp.so.${SANE_MAJOR}.${SANE_MICRO}
+man/man1/gamma4scanimage.1
+man/man1/sane-config.1
 man/man1/sane-find-scanner.1
 man/man1/saned.1
 man/man1/scanimage.1
+man/man5/sane-hpsj5s.5
+man/man5/sane-teco2.5
+man/man5/sane-teco3.5
 man/man5/sane-abaton.5
 man/man5/sane-agfafocus.5
 man/man5/sane-apple.5
@@ -344,8 +362,13 @@ share/doc/sane-${SANE_VERSION}/PROBLEMS
 share/doc/sane-${SANE_VERSION}/PROJECTS
 share/doc/sane-${SANE_VERSION}/README
 share/doc/sane-${SANE_VERSION}/README.aix
+share/doc/sane-${SANE_VERSION}/README.beos
+share/doc/sane-${SANE_VERSION}/README.darwin
 share/doc/sane-${SANE_VERSION}/README.hp-ux
 share/doc/sane-${SANE_VERSION}/README.linux
+share/doc/sane-${SANE_VERSION}/README.freebsd
+share/doc/sane-${SANE_VERSION}/README.netbsd
+share/doc/sane-${SANE_VERSION}/README.openbsd
 share/doc/sane-${SANE_VERSION}/README.os2
 share/doc/sane-${SANE_VERSION}/README.solaris
 share/doc/sane-${SANE_VERSION}/README.unixware2
@@ -360,6 +383,8 @@ share/doc/sane-${SANE_VERSION}/mustek_usb/mustek_usb.CHANGES
 share/doc/sane-${SANE_VERSION}/mustek_usb/mustek_usb.TODO
 share/doc/sane-${SANE_VERSION}/sceptre/s1200.txt
 share/doc/sane-${SANE_VERSION}/teco/teco1.txt
+share/doc/sane-${SANE_VERSION}/teco/teco2.txt
+share/doc/sane-${SANE_VERSION}/teco/teco3.txt
 share/doc/sane-${SANE_VERSION}/umax/sane-logo.jpg
 share/doc/sane-${SANE_VERSION}/umax/sane-logo2.jpg
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-advanced-options-doc.html
