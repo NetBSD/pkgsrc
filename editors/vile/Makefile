@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/12/26 17:57:50 tron Exp $
+# $NetBSD: Makefile,v 1.17 2000/01/01 05:03:59 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:55:09 gj Exp
 
 DISTNAME=	vile-9.0
@@ -10,17 +10,21 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
 
-DEPENDS+=	ncurses-4.2:../../devel/ncurses
-
 MAKEFILE=		makefile
 GNU_CONFIGURE=		yes
-CFLAGS+=		-DHAVE_NCURSES_H
 CONFIGURE_ARGS+=	--with-perl \
-			--with-libdir-path=${PREFIX}/libexec \
-			--with-screen=ncurses
+			--with-libdir-path=${PREFIX}/libexec
 USE_PERL5=		yes
 
 INSTALL_TARGET=	install install-perl
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+DEPENDS+=		ncurses-4.2:../../devel/ncurses
+CFLAGS+=		-DHAVE_NCURSES_H
+CONFIGURE_ARGS+=	--with-screen=ncurses
+.endif
 
 post-install:
 	-@${MKDIR} -p ${PREFIX}/share/examples/vile
