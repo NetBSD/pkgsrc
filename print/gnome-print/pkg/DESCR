@@ -1,0 +1,15 @@
+  Gnome is in need of a unified printing architecture. This package is an
+attempt for such an architecture, geared towards heavily graphics-intensive
+applications. 
+
+    The goals of this architecture include: 
+
+      - Absolutely uncompromised output quality 
+      - Speed, memory efficiency, and other related performance goals 
+      - Ability to work smoothly with PostScript printers, fonts, and
+        other resources 
+      - A screen display derived from the Caanvas 
+      - An extension path for a wide variety of Unicode scripts 
+      - An extension path for a richer set of graphics operators than
+        PostScript supports, especially transparency 
+      - To make life as easy as possible for application developers 
