@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2004/07/29 06:36:33 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2004/07/29 09:06:20 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	imake-${XF_VER}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
-DISTFILES=	XFree86-4.4.0-src-1.tgz XFree86-4.4.0-src-3.tgz
+DISTFILES=	XFree86-${XF_VER}-src-1.tgz XFree86-${XF_VER}-src-3.tgz
 
 MAINTAINER=	xfree86@blef.org
 HOMEPAGE=	http://www.xfree86.org/
