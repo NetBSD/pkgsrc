@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.151 2003/01/07 16:52:25 wiz Exp $
+$NetBSD: TODO,v 1.152 2003/01/08 06:32:45 uebayasi Exp $
 
 Suggested new packages
 ======================
@@ -81,6 +81,7 @@ Suggested package updates
 	o adobe-cmaps-1.5 [pkg/19646]
 	o amaya-7.0
 	o aspell-0.50.3
+	o ast-ksh-20021221
 	o auctex-11.14
 	o aumix-2.8
 	o autotrace-0.31.1
