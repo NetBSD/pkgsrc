@@ -1,4 +1,4 @@
-.\"     $NetBSD: hf6to4.8,v 1.1.1.1 2003/08/23 13:30:35 hubertf Exp $
+.\"     $NetBSD: hf6to4.8,v 1.2 2003/09/16 13:05:58 hubertf Exp $
 .Dd August 23, 2003
 .Dt hf6to4 8
 .Os
@@ -56,7 +56,9 @@ network interface is assigned an address.
 .It Sy stop
 Stops 6to4 IPv6. All addresses are removed from the
 .Xr stf 4
-device, and the default route is removed.
+device, and the default route is removed. If
+.Sy in_if
+is set, the 6to4 adresses are removed from that interface too.
 .It Sy rtadvd-start
 Starts router advertizement and IPv6 packet forwarding,
 turning the machine into a IPv6 router.
@@ -206,3 +208,5 @@ Hubert Feyrer <hubert@feyrer.de>.
 On systems running past-1.5, the
 .Dq ifconfig stf0 create
 should be run automatically.
+.Pp
+Might be good to use /etc/rc.d/rtadvd for rtadvd handling.

@@ -171,6 +171,22 @@ then
 		run ifconfig stf0 inet6 -alias $adr
 	done
 
+	# remove v6 addresses from internal interface
+	if [ "$in_if" != "" ]
+	then
+		adrs=`ifconfig $in_if inet6 \
+		      | grep inet6 \
+		      | grep "2002:.*:$v6_innernet:$hostbits6" \
+		      | sed -e 's/inet6//' \
+			    -e 's/prefix.*//g' \
+			    -e 's/^[ 	]*//' \
+			    -e 's/[ 	]*\$//'`
+		for adr in $adrs
+		do
+			run ifconfig $in_if inet6 -alias $adr
+		done
+	fi
+
 	# remove default route:
 	run route delete -inet6 default
 fi
@@ -180,7 +196,7 @@ fi
 if [ "$1" = "start" ]
 then
 	run ifconfig stf0 inet6 $localadr6:$hostbits6 prefixlen $v6_prefixlen alias
-	run route add -inet6 default $remoteadr6
+	run route add -inet6 default $remoteadr6 >/dev/null
 	if [ "$in_if" != "" ]
 	then
 	    run ifconfig $in_if inet6 $prefix:$v6_innernet:$hostbits6
@@ -188,6 +204,8 @@ then
 fi
 
 # rtadvd-stop:
+#
+# XXX maybe better do this via rc.conf & rc.d/rtadvd?
 if [ "$1" = "rtadvd-stop" -o "$1" = "stop-rtadvd" ]
 then
     if [ -f "/var/run/rtadvd.pid" ]
@@ -201,6 +219,8 @@ then
 fi
 
 # rtadvd-start:
+#
+# XXX maybe better do this via rc.conf & rc.d/rtadvd?
 if [ "$1" = "rtadvd-start" -o "$1" = "start-rtadvd" ]
 then
     if [ -f "/var/run/rtadvd.pid" ]
