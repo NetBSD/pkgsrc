@@ -1,0 +1,13 @@
+$NetBSD: patch-be,v 1.1 2004/04/22 09:18:42 tron Exp $
+
+--- otherlibs/labltk/frx/Makefile.orig	Fri Apr 26 14:16:00 2002
++++ otherlibs/labltk/frx/Makefile	Thu Apr 22 10:34:37 2004
+@@ -20,7 +20,7 @@
+ 	$(CAMLOPTLIBR) -o frxlib.cmxa $(OBJSX)
+ 
+ install: frxlib.cma
+-	cp *.cmi *.mli frxlib.cma $(INSTALLDIR)
++	${BSD_INSTALL_DATA} *.cmi *.mli frxlib.cma $(INSTALLDIR)
+ 
+ installopt: frxlib.cmxa
+ 	cp frxlib.cmxa frxlib.a $(INSTALLDIR)

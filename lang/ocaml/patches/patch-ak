@@ -1,13 +1,27 @@
-$NetBSD: patch-ak,v 1.1 2003/07/10 07:44:02 jtb Exp $
+$NetBSD: patch-ak,v 1.2 2004/04/22 09:18:37 tron Exp $
 
---- asmcomp/i386/emit.mlp.orig
-+++ asmcomp/i386/emit.mlp
-@@ -734,7 +734,7 @@
-       `	movl	%esp, %ebp\n`;
-       `	pushl	%ecx\n`;
-       `	pushl	%edx\n`;
--      `	call	.mcount\n`;
-+      `	call	__mcount\n`;
-       `	popl	%edx\n`;
-       `	popl	%ecx\n`;
-       `	popl	%eax\n`
+--- camlp4/etc/Makefile.orig	Fri Jul 19 16:53:45 2002
++++ camlp4/etc/Makefile	Thu Apr 22 10:34:37 2004
+@@ -52,14 +52,14 @@
+ get_promote:
+ 
+ install:
+-	-$(MKDIR) $(LIBDIR)/camlp4 $(BINDIR)
+-	cp $(OBJS) $(LIBDIR)/camlp4/.
+-	cp $(INTF) $(LIBDIR)/camlp4/.
+-	cp lib.sml $(LIBDIR)/camlp4/.
+-	cp camlp4o$(EXE) $(BINDIR)/.
+-	if test -f $(COPT); then cp $(COPT) $(BINDIR)/.; fi
+-	cp mkcamlp4.sh $(BINDIR)/mkcamlp4
+-	chmod a+x $(BINDIR)/mkcamlp4
++	-${BSD_INSTALL_DATA_DIR} $(LIBDIR)/camlp4
++	-${BSD_INSTALL_PROGRAM_DIR}  $(BINDIR)
++	${BSD_INSTALL_DATA} $(OBJS) $(LIBDIR)/camlp4/.
++	${BSD_INSTALL_DATA} $(INTF) $(LIBDIR)/camlp4/.
++	${BSD_INSTALL_DATA} lib.sml $(LIBDIR)/camlp4/.
++	${BSD_INSTALL_SCRIPT} camlp4o$(EXE) $(BINDIR)/.
++	if test -f $(COPT); then ${BSD_INSTALL_PROGRAM} $(COPT) $(BINDIR)/.; fi
++	${BSD_INSTALL_SCRIPT} mkcamlp4.sh $(BINDIR)/mkcamlp4
+ 
+ pa_lisp.cmo: pa_lispr.cmo
+ pa_ocamllex.cmo: pa_o.cmo
