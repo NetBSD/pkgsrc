@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/03/08 20:27:15 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2005/01/12 21:13:22 minskim Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/04/20 13:19:32 wosch Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=   ftp://stampede.cs.berkeley.edu/pub/kp/
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	The Keyboard Practicer, touch-type training program
 
-DEPENDS=	tk>=8.3.2:../../x11/tk83
+DEPENDS=	tk>=8.3.2:../../x11/tk
 
 USE_X11=	yes
 

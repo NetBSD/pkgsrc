@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/03/08 20:27:15 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2005/01/12 21:12:17 minskim Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/20 13:19:30 wosch Exp
 #
 
@@ -10,7 +10,7 @@ MAINTAINER=	oly@world.std.com
 HOMEPAGE=	http://www.blackie.dk/dotfile/
 COMMENT=	GUI dotfile generator program to create .config files
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk83
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 BUILD_DEFS+=	DOTFILE_LANG
 
