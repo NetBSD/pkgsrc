@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/09/02 05:03:23 cjs Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/03 11:32:07 grant Exp $
 #
 
 DISTNAME=		xlhtml-0.5
@@ -14,5 +14,8 @@ COMMENT=		Microsoft xls/ppt to HTML converter
 USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
+
+# fabs
+LIBS.SunOS+=		-lm
 
 .include "../../mk/bsd.pkg.mk"
