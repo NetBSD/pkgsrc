@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.144 2004/06/04 15:00:15 jschauma Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.145 2004/06/22 23:23:36 xtraeme Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -694,11 +694,6 @@ _BLNK_TARGETS+=	${BUILDLINK_TARGETS}
 .for _target_ in ${_BLNK_TARGETS}
 do-buildlink: ${_target_}
 .endfor
-
-# The configure process usually tests for outlandish or missing things
-# that we don't want polluting the argument cache.
-#
-CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
 
 # There are three different parts we can add to the common transforming
 # cache to speed things up:
