@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2000/03/02 00:23:16 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.13 2000/03/02 02:04:07 hubertf Exp $
 bin/ali
 bin/mhn
 bin/anno
@@ -38,7 +38,6 @@ bin/folders
 bin/prev
 bin/next
 bin/sendfiles
-man/man1/repl.1
 man/man1/ali.1
 man/man1/anno.1
 man/man1/burst.1
@@ -72,6 +71,7 @@ man/man1/rcvpack.1
 man/man1/rcvstore.1
 man/man1/rcvtty.1
 man/man1/refile.1
+man/man1/repl.1
 man/man1/rmf.1
 man/man1/rmm.1
 man/man1/scan.1
@@ -128,33 +128,9 @@ etc/nmh/replcomps
 etc/nmh/replgroupcomps
 etc/nmh/MailAliases
 etc/nmh/mhn.defaults.dist
+etc/nmh/mts.conf.dist
 etc/nmh/tmac.h
 etc/nmh/mhn.defaults
-etc/nmh/mts.conf.dist
-etc/nmh/mhl.body.old
-etc/nmh/mhl.digest.old
-etc/nmh/mhl.format.old
-etc/nmh/mhl.forward.old
-etc/nmh/mhl.headers.old
-etc/nmh/mhl.reply.old
-etc/nmh/scan.default.old
-etc/nmh/scan.mailx.old
-etc/nmh/scan.nomime.old
-etc/nmh/scan.size.old
-etc/nmh/scan.time.old
-etc/nmh/scan.timely.old
-etc/nmh/scan.unseen.old
-etc/nmh/components.old
-etc/nmh/digestcomps.old
-etc/nmh/distcomps.old
-etc/nmh/forwcomps.old
-etc/nmh/rcvdistcomps.old
-etc/nmh/rcvdistcomps.outbox.old
-etc/nmh/replcomps.old
-etc/nmh/replgroupcomps.old
-etc/nmh/MailAliases.old
-etc/nmh/mhn.defaults.old
-etc/nmh/mts.conf.old
 libexec/nmh/ap
 libexec/nmh/conflict
 libexec/nmh/dp
