@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/01/09 17:23:10 cjep Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/13 07:33:34 wiz Exp $
 #
 
-DISTNAME=	grep-2.5
+DISTNAME=	grep-2.5.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=grep/}
 EXTRACT_SUFX=	.tar.bz2
