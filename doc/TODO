@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1974 2004/07/27 13:42:48 xtraeme Exp $
+$NetBSD: TODO,v 1.1975 2004/07/27 14:11:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -166,6 +166,7 @@ Suggested package updates
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0.9
+	o ald-0.1.6 [pkg/26431]
 	o anjuta-1.2.2
 	o apache-ant-1.6.2
 	o ap-jk-5.0.25
@@ -186,6 +187,7 @@ Suggested package updates
 	o clisp-2.33.2
 	o cocoon-2.1.5
 	o conserver-8.1.8
+	o cooledit-3.17.8
 	o crafty-19.5
 	o crimsonfields-0.4.3
 	o crossfire-1.5.0
@@ -227,7 +229,7 @@ Suggested package updates
 	o gauche-0.8
 	o gcvs-1.0
 	o generator-0.35
-	o getmail-4.0.0
+	o getmail-4.0.1
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
@@ -255,6 +257,7 @@ Suggested package updates
 	o gtranslator-1.0.1
 	o guile-pg-0.16 [pkg/24039]
 	o guile-gtk-0.40.90 [in wip]
+	o hatari-0.50
 	o heimdal-0.6.2
 	o host-20031203 [cjep, in wip, awaiting greg woods response on 1 issue]
 	o hp2xx-3.4.4
@@ -305,6 +308,7 @@ Suggested package updates
 	o msmtp-1.2.0 [pkg/26425]
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.2
+	o musicpd-0.11.4
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
@@ -376,7 +380,7 @@ Suggested package updates
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
 	o stella-1.4
-	o streamtuner-0.12.2
+	o streamtuner-0.12.4
 	o sweep-0.8.3
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
