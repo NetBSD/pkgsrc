@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/12/24 09:53:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/10 19:00:41 kristerw Exp $
 #
 
 DISTNAME=	ser-0.8.10_src
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.berlios.de/pub/ser/latest/src/
 
-MAINTAINER=	packages@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.iptel.org/ser/
 COMMENT=	SIP express router
 
