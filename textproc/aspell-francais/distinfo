@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/01/17 03:51:36 salo Exp $
+
+SHA1 (aspell-fr-0.50-3.tar.bz2) = 4712f81069eb20763aaf855f73b2819f4805f132
+Size (aspell-fr-0.50-3.tar.bz2) = 283086 bytes
+SHA1 (patch-aa) = df35f94688de5a020875e2c3d1a6557e92923799
