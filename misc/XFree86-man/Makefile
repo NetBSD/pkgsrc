@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2004/03/28 22:06:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/29 09:06:19 xtraeme Exp $
 
-DISTNAME=	XFree86-4.4.0-src-1
+DISTNAME=	XFree86-${XF_VER}-src-1
 PKGNAME=	XFree86-man-${XF_VER}
 CATEGORIES=	misc x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
@@ -10,7 +10,7 @@ MAINTAINER=	xfree86@blef.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 Manuals
 
-DEPENDS=	imake>=4.4.0:../../x11/imake
+DEPENDS=	imake>=${XF_VER}:../../x11/imake
 
 USE_LANGUAGES=		# empty
 NO_BUILDLINK=		# defined

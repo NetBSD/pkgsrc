@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2004/07/29 06:36:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/07/29 09:06:19 xtraeme Exp $
 
-DISTNAME=	XFree86-4.4.0-src-4
+DISTNAME=	XFree86-${XF_VER}-src-4
 PKGNAME=	XFree86-fonts100dpi-${XF_VER}
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
