@@ -1,0 +1,30 @@
+Speedbar is an Emacs Lisp program which allows you to create a special
+skinny frame with a specialized directory listing in it. This listing
+will have both directories and filtered files in it. You can then load
+files into your emacs frame, or expand the files to display all the
+tags that are in them and jump to those tags. You can also expand
+multiple directories into your speedbar frame.
+
+Using Shift with the mouse is considered a "power click" which will
+ignore any cached data that might be related to the navigation
+desired. When loading a file, a power click will pull that file into a
+new frame.
+
+For PC users with two button mice, a button1 double click acts as the
+mouse-2 click most emacs users are familiar with.
+
+Additional keyboard commands are available for friendly file IO
+functions such as Rename/Copy/Delete, Loading lisp files, and
+compiling lisp files.
+
+Speedbar is more than just file browsing, however. Speedbar is a
+generalized browser. Speedbar supports:
+
+* multiple tagging methods for files (such as etags, imenu, and
+  semantic)
+
+* multiple major display modes (such as buffer lists, project lists,
+  and EIEIO class browsing,)
+
+* multiple minor display modes that appear when you view special
+  files, such as Info pages, or read mail with RMAIL.

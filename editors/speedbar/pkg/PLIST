@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/08 20:50:11 cjones Exp $
+${LISPDIR}/dframe.el
+${LISPDIR}/dframe.elc
+${LISPDIR}/sb-dir-minus.xpm
+${LISPDIR}/sb-dir-plus.xpm
+${LISPDIR}/sb-dir.xpm
+${LISPDIR}/sb-image.el
+${LISPDIR}/sb-mail.xpm
+${LISPDIR}/sb-pg-minus.xpm
+${LISPDIR}/sb-pg-plus.xpm
+${LISPDIR}/sb-pg.xpm
+${LISPDIR}/sb-tag-gt.xpm
+${LISPDIR}/sb-tag-minus.xpm
+${LISPDIR}/sb-tag-plus.xpm
+${LISPDIR}/sb-tag-type.xpm
+${LISPDIR}/sb-tag-v.xpm
+${LISPDIR}/sb-tag.xpm
+${LISPDIR}/speedbar.el
+${LISPDIR}/speedbar.elc
+info/speedbar.info
+@unexec rmdir %D/${LISPDIR} 2>/dev/null || true
