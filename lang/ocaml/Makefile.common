@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2004/12/24 17:16:04 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2005/01/19 17:43:59 tv Exp $
 
 DISTNAME=	ocaml-3.06
 CATEGORIES=	lang
@@ -24,9 +24,13 @@ CONFIGURE_ARGS+=	-with-pthread
 INSTALL_UNSTRIPPED=	yes
 .endif
 
-post-extract: cp-power-bsd
+post-extract: cp-power-bsd cp-gnu-config
 
 cp-power-bsd:
 	${CP} ${WRKSRC}/asmrun/power-elf.S ${WRKSRC}/asmrun/power-bsd.S
+
+cp-gnu-config:
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/config/gnu/
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/config/gnu/
 
 .include "../../mk/pthread.buildlink3.mk"
