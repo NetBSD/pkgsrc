@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/09/09 20:36:49 agc Exp $
+# $NetBSD: Makefile,v 1.10 2001/11/14 14:47:55 agc Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 # because although FOP runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -34,7 +34,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/build/fop.jar ${PREFIX}/lib/java/fop.jar
 	${INSTALL_DATA} ${WRKSRC}/lib/w3c.jar ${PREFIX}/lib/java/fop-w3c.jar
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/fop
-	cd ${WRKSRC}/docs; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/fop ; ${GTAR} pvxf - )
+	cd ${WRKSRC}/docs && ${PAX} -rwpe . ${PREFIX}/share/doc/java/fop
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java/fop
 
 .include "../../mk/bsd.pkg.mk"

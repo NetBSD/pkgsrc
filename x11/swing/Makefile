@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/09/27 20:27:33 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/14 14:47:57 agc Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -72,13 +72,13 @@ do-install:
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/swing.jar ${PREFIX}/lib/java/swing
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/windows.jar ${PREFIX}/lib/java/swing
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/swing
-	cd ${WRKSRC}/doc ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/doc/java/swing ; ${GTAR} pvxf - )
+	cd ${WRKSRC}/doc && ${PAX} -rwpe . ${PREFIX}/share/doc/java/swing
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/CHANGES.txt ${PREFIX}/share/doc/java/swing
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/LICENSE.txt ${PREFIX}/share/doc/java/swing
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/README.html ${PREFIX}/share/doc/java/swing
 	${INSTALL_DATA} -c -m 644 ${WRKSRC}/README.txt ${PREFIX}/share/doc/java/swing
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/swing
-	cd ${WRKSRC}/examples ; ${GTAR} pcf - . | ( cd ${PREFIX}/share/examples/java/swing ; ${GTAR} pvxf - )
+	cd ${WRKSRC}/examples && ${PAX} -rwpe . ${PREFIX}/share/examples/java/swing
 	${CHOWN} -R root:${ROOT_GROUP} ${PREFIX}/share/doc/java/swing \
 		${PREFIX}/share/examples/java/swing
 
