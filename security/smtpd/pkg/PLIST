@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/21 10:57:33 mjl Exp $
+sbin/smtpd
+sbin/smtpfwdd
