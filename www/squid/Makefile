@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2003/05/24 12:31:34 taca Exp $
+# $NetBSD: Makefile,v 1.85 2003/05/25 14:58:16 taca Exp $
 
-DISTNAME=	squid-2.5.STABLE2
-PKGNAME=	squid-2.5.2
-PKGREVISION=	4
+DISTNAME=	squid-2.5.STABLE3
+PKGNAME=	squid-2.5.3
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
@@ -11,37 +10,7 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE2-concurrent_external_acl.patch \
-		squid-2.5.STABLE2-external_acl_crash.patch \
-		squid-2.5.STABLE2-shutdown.patch \
-		squid-2.5.STABLE2-external_acl_overload.patch \
-		squid-2.5.STABLE2-cache_effective_user_docs.patch \
-		squid-2.5.STABLE2-cache_peer_docs.patch \
-		squid-2.5.STABLE2-header_access_paranoid.patch \
-		squid-2.5.STABLE2-dns_root_label.patch \
-		squid-2.5.STABLE2-aix5.patch \
-		wb_group-1.1.patch \
-		squid-2.5.STABLE2-snmp_gauges.patch \
-		squid-2.5.STABLE2-redhat9-ssl.patch \
-		squid-2.5.STABLE2-reconfig_logs.patch \
-		squid-2.5.STABLE2-ldap_auth_unavail.patch \
-		squid-2.5.STABLE2-msntauth.patch \
-		squid-2.5.STABLE2-ident_REQUIRED.patch \
-		squid-2.5.STABLE2-reply_body_max_size.patch \
-		squid-2.5.STABLE2-acl_lookup_loop.patch \
-		squid-2.5.STABLE2-squid_ldap_auth.patch \
-		squid-2.5.STABLE2-external_lookup.patch \
-		wb_group-1.2.patch \
-		squid-2.5.STABLE2-comm-select.patch \
-		squid-2.5.STABLE2-unreachcode.patch \
-		squid-2.5.STABLE2-authdebug.patch \
-		squid-2.5.STABLE2-aclregression.patch \
-		squid-2.5.STABLE2-smb_auth.patch \
-		squid-2.5.STABLE2-smb_auth_pl.patch \
-		squid-2.5.STABLE2-external_acl_ttl0.patch \
-		squid-2.5.STABLE2-digest_nonce_count.patch \
-		squid-2.5.STABLE2-digestcomma.patch \
-		squid-2.5.STABLE2-deny_info_reset.patch
+PATCHFILES=	squid-2.5.STABLE3-Lithuanian.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@netbsd.org
@@ -49,7 +18,7 @@ HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 
 USE_PERL5=	build
-DIST_SUBDIR=	squid-2.5.2
+DIST_SUBDIR=	squid-2.5.3
 DOCDIR=		${PREFIX}/share/doc/squid
 EXAMPLESDIR=	${PREFIX}/share/examples/squid
 
@@ -101,14 +70,6 @@ OPTIONAL_FILES+= libexec/digest_pw_auth libexec/getpwname_auth
 OPTIONAL_FILES+= libexec/ip_user_check libexec/smb_auth libexec/smb_auth.sh
 OPTIONAL_FILES+= libexec/squid_unix_group libexec/wb_auth libexec/wb_group
 OPTIONAL_FILES+= libexec/wb_ntlmauth man/man8/squid_unix_group.8
-
-# workaround for wb_group-1.1.patch.
-# using somewhat redundant regexp for preventing RCS Id's substitution.
-pre-patch:
-	cd ${WRKSRC}/helpers/external_acl/winbind_group; \
-		${MV} wb_check_group.c wb_check_group.c.ORIG; \
-		${SED} -e 's/\$$\Id:.*\$$/\$$\Id\$$/' wb_check_group.c.ORIG > \
-			wb_check_group.c
 
 pre-install:
 	@${INSTALL_DATA_DIR} ${EXAMPLESDIR}
