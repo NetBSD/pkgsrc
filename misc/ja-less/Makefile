@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/07/21 17:01:15 martti Exp $
+# $NetBSD: Makefile,v 1.3 2004/12/12 23:33:29 recht Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/07/17 20:36:13 steve Exp
 #
 
@@ -15,6 +15,8 @@ MAINTAINER=	komine@cc.meisei-u.ac.jp
 HOMEPAGE=	http://www.io.com/~kazushi/less/
 COMMENT=	Less + zcat + ISO-2022 - a pager similar to more and pg
 
+USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
