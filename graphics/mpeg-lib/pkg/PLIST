@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2001/01/04 15:10:43 agc Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/08/02 13:28:47 jlam Exp $
 include/mpeg.h
-lib/libmpeg.a
-lib/libmpeg.la
-lib/libmpeg.so
-lib/libmpeg.so.1
-lib/libmpeg.so.1.2
+lib/libmpeg_lib.a
+lib/libmpeg_lib.la
+lib/libmpeg_lib.so
+lib/libmpeg_lib.so.1
+lib/libmpeg_lib.so.1.3
