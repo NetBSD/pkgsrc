@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1287 2003/09/16 11:45:42 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1288 2003/09/17 02:38:22 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -633,6 +633,15 @@ USE_MAKEINFO?=	no		# default to not using makeinfo
 . include "../../mk/texinfo.mk"
 .endif
 
+# CONF_DEPENDS notes a dependency where the config directory for the
+# package matches the dependency's config directory.  CONF_DEPENDS is
+# only meaningful if ${PKG_INSTALLATION_TYPE} == "pkgviews".
+#
+CONF_DEPENDS?=		# empty
+.if !empty(CONF_DEPENDS)
+USE_PKGINSTALL=		yes
+.endif
+
 .if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
 .  include "../../mk/bsd.pkg.install.mk"
 .endif
@@ -1243,6 +1252,9 @@ PKG_SYSCONFBASEDIR=	${PKG_SYSCONFBASE}
         !empty(PKG_SYSCONFBASE:M${PREFIX}/*)
 PKG_SYSCONFDEPOTBASE=	# empty
 PKG_SYSCONFBASEDIR=	${PKG_SYSCONFBASE}
+.      if !empty(CONF_DEPENDS)
+_PLIST_IGNORE_FILES+=  ${PKG_SYSCONFDIR:S,^${PREFIX}/,,}
+.      endif
 .    else
 PKG_SYSCONFDEPOTBASE=	${PKG_SYSCONFBASE}/${DEPOT_SUBDIR}
 PKG_SYSCONFBASEDIR=	${PKG_SYSCONFDEPOTBASE}/${PKGNAME}
@@ -1257,7 +1269,7 @@ PKG_SYSCONFDIR=		${PKG_SYSCONFBASEDIR}/${PKG_SYSCONFSUBDIR}
 
 CONFIGURE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
 MAKE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
-BUILD_DEFS+=		PKG_SYSCONFDIR
+BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 
 # Passed to most of script invocations
 SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \

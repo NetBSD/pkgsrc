@@ -1,6 +1,6 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.21 2003/09/13 10:06:36 jlam Exp $
+# $NetBSD: deinstall,v 1.22 2003/09/17 02:38:29 jlam Exp $
 
 eval set -- ${PKG_USERS}
 for userset; do
@@ -116,7 +116,7 @@ DEINSTALL)
 			samplefile="$1"; file="$2"
 			shift; shift
 
-			if [ "${file}" != "${samplefile}" -a		\
+			if [ ! "${file}" -ef "${samplefile}" -a		\
 			     -e "${file}" -a -e "${samplefile}" ]; then
 				if ${CMP} -s "${file}" "${samplefile}"; then
 					${RM} -f "${file}"
@@ -137,6 +137,14 @@ POST-DEINSTALL)
 			modified_files="${modified_files} \"${file}\""
 		fi
 	done
+
+	if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" -a			\
+	     "${_PKG_CONFIG}" = "YES" -a -n "${CONF_DEPENDS}" ]; then
+		if [ -h ${PKG_SYSCONFDIR} ]; then
+			${RM} -f ${PKG_SYSCONFDIR}
+		fi
+		${RMDIR} -p `${DIRNAME} ${PKG_SYSCONFDIR}` 2>/dev/null || ${TRUE}
+	fi
 
 	existing_dirs=''
 	eval set -- ${ALL_DIRS}
