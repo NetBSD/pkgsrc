@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/23 04:59:31 kei Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/15 08:17:08 kei Exp $
 
-DISTNAME=	tetex-texmf-2.0.1
-PKGNAME=	teTeX2-share-2.0.1
+DISTNAME=	tetex-texmf-2.0.2
+PKGNAME=	teTeX2-share-2.0.2
 PKGREVISION=	# empty
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/2.0/distrib/}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/23 04:59:25 kei Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/15 08:17:08 kei Exp $
 @comment There are three files in this package that teTeX-share installs
 @comment and that teTeX-bin modifies. Take care of this:
 bin/MakeTeXPK
@@ -188,29 +188,30 @@ include/kpathsea/types.h
 include/kpathsea/variable.h
 include/kpathsea/xopendir.h
 include/kpathsea/xstat.h
-@unexec ${INSTALL_INFO} --delete %D/info/latex.info %D/info/dir
 @unexec ${INSTALL_INFO} --delete %D/info/dvips.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/web2c.info %D/info/dir
 @unexec ${INSTALL_INFO} --delete %D/info/kpathsea.info %D/info/dir
-info/latex.info-3
-info/latex.info-2
-info/latex.info-1
-info/latex.info
-info/dvips.info-4
-info/dvips.info-3
-info/dvips.info-2
-info/dvips.info-1
+@unexec ${INSTALL_INFO} --delete %D/info/latex.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/web2c.info %D/info/dir
 info/dvips.info
-info/web2c.info-4
-info/web2c.info-3
-info/web2c.info-2
-info/web2c.info-1
-info/web2c.info
+info/dvips.info-1
+info/dvips.info-2
+info/dvips.info-3
+info/dvips.info-4
 info/kpathsea.info
-@exec ${INSTALL_INFO} %D/info/latex.info %D/info/dir
+info/latex.info
+info/latex.info-1
+info/latex.info-2
+info/latex.info-3
+info/web2c.info
+info/web2c.info-1
+info/web2c.info-2
+info/web2c.info-3
+info/web2c.info-4
 @exec ${INSTALL_INFO} %D/info/dvips.info %D/info/dir
-@exec ${INSTALL_INFO} %D/info/web2c.info %D/info/dir
 @exec ${INSTALL_INFO} %D/info/kpathsea.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/latex.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/web2c.info %D/info/dir
+lib/libkpathsea.a
 man/man1/MakeTeXPK.1
 man/man1/access.1
 man/man1/afm2tfm.1
@@ -251,9 +252,11 @@ man/man1/inimf.1
 man/man1/inimpost.1
 man/man1/iniomega.1
 man/man1/initex.1
+man/man1/kpsepath.1
 man/man1/kpsestat.1
 man/man1/kpsetool.1
 man/man1/kpsewhich.1
+man/man1/kpsexpand.1
 man/man1/lambda.1
 man/man1/latex.1
 man/man1/mag.1

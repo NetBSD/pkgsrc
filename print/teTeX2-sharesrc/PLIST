@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/23 04:59:37 kei Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/15 08:17:09 kei Exp $
 share/texmf/LICENSE.texmfsrc
 share/texmf/source/README
 share/texmf/source/amstex/README
@@ -1628,12 +1628,6 @@ share/texmf/source/latex/fp/fp.sty
 share/texmf/source/latex/fp/fp.tex
 share/texmf/source/latex/fp/lfp.sty
 share/texmf/source/latex/fp/readme.fp
-share/texmf/source/latex/g-brief/Makefile.tetex
-share/texmf/source/latex/g-brief/beispiel.tex
-share/texmf/source/latex/g-brief/g-brief.dtx
-share/texmf/source/latex/g-brief/g-brief.dvi
-share/texmf/source/latex/g-brief/g-brief.ins
-share/texmf/source/latex/g-brief/tetex.ins
 share/texmf/source/latex/geometry/ChangeLog
 share/texmf/source/latex/geometry/Makefile
 share/texmf/source/latex/geometry/Makefile.tetex
@@ -1796,6 +1790,16 @@ share/texmf/source/latex/jknappen/ubbold.fd
 share/texmf/source/latex/jknappen/ursfs.fd
 share/texmf/source/latex/jknappen/ustmary.fd
 share/texmf/source/latex/jknappen/young.sty
+share/texmf/source/latex/jurabib/Makefile.tetex
+share/texmf/source/latex/jurabib/faq.tex
+share/texmf/source/latex/jurabib/jb-bibtex-ref.html
+share/texmf/source/latex/jurabib/jb-com-ref.html
+share/texmf/source/latex/jurabib/jb-opt-ref.html
+share/texmf/source/latex/jurabib/jbendoc.tex
+share/texmf/source/latex/jurabib/jbgerdoc.tex
+share/texmf/source/latex/jurabib/jurabib.dtx
+share/texmf/source/latex/jurabib/jurabib.ins
+share/texmf/source/latex/jurabib/tetex.ins
 share/texmf/source/latex/koma-script/00CONTEN
 share/texmf/source/latex/koma-script/00README
 share/texmf/source/latex/koma-script/ChangeLog
@@ -1967,6 +1971,15 @@ share/texmf/source/latex/lettrine/lettrine.cfg
 share/texmf/source/latex/lettrine/lettrine.dtx
 share/texmf/source/latex/lettrine/lettrine.ins
 share/texmf/source/latex/lettrine/tetex.ins
+share/texmf/source/latex/listings/Makefile.tetex
+share/texmf/source/latex/listings/README
+share/texmf/source/latex/listings/README.comment-on-license
+share/texmf/source/latex/listings/listings.dtx
+share/texmf/source/latex/listings/listings.ins
+share/texmf/source/latex/listings/listings.sty
+share/texmf/source/latex/listings/lstdrvrs.dtx
+share/texmf/source/latex/listings/lstpatch.sty
+share/texmf/source/latex/listings/tetex.ins
 share/texmf/source/latex/lkurz/Makefile.tetex
 share/texmf/source/latex/lkurz/l2k1.tex
 share/texmf/source/latex/lkurz/l2k2.tex
@@ -2195,7 +2208,6 @@ share/texmf/source/latex/misc/url.sty
 share/texmf/source/latex/misc/version.sty
 share/texmf/source/latex/misc/vertbars.sty
 share/texmf/source/latex/misc/vpage.sty
-share/texmf/source/latex/misc/wrapfig.sty
 share/texmf/source/latex/misc/ziffer.sty
 share/texmf/source/latex/mltex/Makefile.tetex
 share/texmf/source/latex/mltex/README
@@ -2211,6 +2223,10 @@ share/texmf/source/latex/moreverb/README
 share/texmf/source/latex/moreverb/moreverb.dtx
 share/texmf/source/latex/moreverb/moreverb.ins
 share/texmf/source/latex/moreverb/tetex.ins
+share/texmf/source/latex/mparhack/Makefile.tetex
+share/texmf/source/latex/mparhack/mparhack.dtx
+share/texmf/source/latex/mparhack/mparhack.ins
+share/texmf/source/latex/mparhack/tetex.ins
 share/texmf/source/latex/ms/Makefile.tetex
 share/texmf/source/latex/ms/contrib/README
 share/texmf/source/latex/ms/contrib/eso-ex1.tex
@@ -2244,6 +2260,7 @@ share/texmf/source/latex/ms/prelim2e.dtx
 share/texmf/source/latex/ms/prelim2e.ins
 share/texmf/source/latex/ms/ragged2e.dtx
 share/texmf/source/latex/ms/ragged2e.ins
+share/texmf/source/latex/ms/ragged2e.xml
 share/texmf/source/latex/ms/tetex.ins
 share/texmf/source/latex/mt11p/0readme
 share/texmf/source/latex/mt11p/mt11p.dtx
@@ -2390,7 +2407,6 @@ share/texmf/source/latex/pb-diagram/pb-lams.sty
 share/texmf/source/latex/pb-diagram/pb-manual.tex
 share/texmf/source/latex/pb-diagram/pb-xy.sty
 share/texmf/source/latex/pdfpages/Makefile.tetex
-share/texmf/source/latex/pdfpages/README
 share/texmf/source/latex/pdfpages/dummy-l.pdf
 share/texmf/source/latex/pdfpages/dummy.pdf
 share/texmf/source/latex/pdfpages/pdf-toc.tex
@@ -3028,6 +3044,9 @@ share/texmf/source/latex/wasysym/wasysym.drv
 share/texmf/source/latex/wasysym/wasysym.dtx
 share/texmf/source/latex/wasysym/wasysym.ins
 share/texmf/source/latex/wasysym/wasysym.upl
+share/texmf/source/latex/wrapfig/Makefile.tetex
+share/texmf/source/latex/wrapfig/multiple-span.txt
+share/texmf/source/latex/wrapfig/wrapfig.sty
 share/texmf/source/latex/xtab/Makefile.tetex
 share/texmf/source/latex/xtab/README
 share/texmf/source/latex/xtab/tetex.ins
@@ -3071,6 +3090,7 @@ share/texmf/source/plain/graphics/psfrag.tex
 @dirrm share/texmf/source/pdftex
 @dirrm share/texmf/source/latex/yfonts
 @dirrm share/texmf/source/latex/xtab
+@dirrm share/texmf/source/latex/wrapfig
 @dirrm share/texmf/source/latex/wasysym
 @dirrm share/texmf/source/latex/was
 @dirrm share/texmf/source/latex/vmargin
@@ -3155,6 +3175,7 @@ share/texmf/source/plain/graphics/psfrag.tex
 @dirrm share/texmf/source/latex/mt11p
 @dirrm share/texmf/source/latex/ms/contrib
 @dirrm share/texmf/source/latex/ms
+@dirrm share/texmf/source/latex/mparhack
 @dirrm share/texmf/source/latex/moreverb
 @dirrm share/texmf/source/latex/mltex
 @dirrm share/texmf/source/latex/misc
@@ -3169,6 +3190,7 @@ share/texmf/source/plain/graphics/psfrag.tex
 @dirrm share/texmf/source/latex/localloc
 @dirrm share/texmf/source/latex/local
 @dirrm share/texmf/source/latex/lkurz
+@dirrm share/texmf/source/latex/listings
 @dirrm share/texmf/source/latex/lettrine/doc
 @dirrm share/texmf/source/latex/lettrine
 @dirrm share/texmf/source/latex/leftidx
@@ -3183,6 +3205,7 @@ share/texmf/source/plain/graphics/psfrag.tex
 @dirrm share/texmf/source/latex/koma-script/contrib/briefkopf
 @dirrm share/texmf/source/latex/koma-script/contrib
 @dirrm share/texmf/source/latex/koma-script
+@dirrm share/texmf/source/latex/jurabib
 @dirrm share/texmf/source/latex/jknappen
 @dirrm share/texmf/source/latex/hyphenat
 @dirrm share/texmf/source/latex/hyperref/test
@@ -3194,7 +3217,6 @@ share/texmf/source/plain/graphics/psfrag.tex
 @dirrm share/texmf/source/latex/german
 @dirrm share/texmf/source/latex/geometry/test
 @dirrm share/texmf/source/latex/geometry
-@dirrm share/texmf/source/latex/g-brief
 @dirrm share/texmf/source/latex/fp
 @dirrm share/texmf/source/latex/footnpag/src/test
 @dirrm share/texmf/source/latex/footnpag/src
