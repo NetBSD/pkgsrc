@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2003/04/16 06:37:20 salo Exp $
+$NetBSD: patch-aa,v 1.10 2003/04/16 15:51:23 salo Exp $
 
 --- src/snort.c.orig	2003-04-03 23:10:52.000000000 +0200
 +++ src/snort.c	2003-04-16 08:03:06.000000000 +0200
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.9 2003/04/16 06:37:20 salo Exp $
      struct stat st;
      int i;
 -    char *conf_files[]={"/etc/snort.conf", "./snort.conf", NULL};
-+    char *conf_files[]={ PREFIX "/etc/snort.conf", "./snort.conf", NULL};
++    char *conf_files[]={ PKG_SYSCONFDIR "/snort.conf", "./snort.conf", NULL};
      char *fname = NULL;
      char *home_dir = NULL;
      char *rval = NULL;

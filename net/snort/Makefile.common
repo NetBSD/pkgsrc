@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/04/16 06:37:19 salo Exp $
+# $NetBSD: Makefile.common,v 1.9 2003/04/16 15:51:22 salo Exp $
 #
 
 DISTNAME=	snort-2.0.0
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.snort.org/
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libpcap-includes=${BUILDLINK_PREFIX.libpcap}/include
 CONFIGURE_ARGS+=	--with-libpcap-libraries=${BUILDLINK_PREFIX.libpcap}/lib
 
