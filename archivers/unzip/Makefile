@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/08/20 15:16:35 tsarna Exp $
+# $NetBSD: Makefile,v 1.13 1998/10/21 09:21:04 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp 
 #
 
@@ -13,7 +13,8 @@ HOMEPAGE=	http://www.cdrom.com/pub/infozip/
 
 MAKEFILE=	unix/Makefile
 ALL_TARGET=	unzips
-MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -DUNIX -DUSE_UNSHRINK -DUSE_ZLIB" LF2=-lz
+MAKE_FLAGS=	CF="${CFLAGS} -I. -DBSD -Dunix -DUSE_UNSHRINK -DUSE_ZLIB" \
+		LF2=-lz
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,17 +27,17 @@ MIRROR_DISTFILE=no
 # This bootstrap is ugly, but zcrypt is only shipped as a zipfile.
 pre-build:
 	@cd ${WRKSRC}; test -f README.CR || ( \
-		echo '*** Building stage 1 of 2--unzip without encryption.' && \
+		${ECHO} '*** Building stage 1 of 2--unzip without encryption.' && \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} unzip && \
 		./unzip -qo ${DISTDIR}/zcrypt27.zip && \
 		${RM} -f *.o unzip )
-	@echo '*** Building stage 2 of 2--unzip with encryption.'
+	@${ECHO} '*** Building stage 2 of 2--unzip with encryption.'
 .endif
 
 do-install:
 	cd ${WRKSRC} && \
 		${INSTALL_PROGRAM} unzip funzip unzipsfx ${PREFIX}/bin
-	ln -sf unzip ${PREFIX}/bin/zipinfo
+	${LN} -sf unzip ${PREFIX}/bin/zipinfo
 	cd ${WRKSRC}/unix && \
 		${INSTALL_SCRIPT} zipgrep ${PREFIX}/bin
 	cd ${WRKSRC}/unix && \
