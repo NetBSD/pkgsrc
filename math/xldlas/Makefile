@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.9 2000/09/28 20:34:04 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2001/01/12 12:21:04 dent Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/09/26 23:18:07 steve Exp
 #
 
 DISTNAME=		xldlas-0.85
 WRKSRC=			${WRKDIR}/xldlas
 CATEGORIES=		math
-MASTER_SITES=		http://a42.com/~thor/xldlas/			\
-			http://sunsite.math.klte.hu/mirrors/xldlas/	\
+MASTER_SITES=		http://sunsite.math.klte.hu/mirrors/xldlas/	\
 			${MASTER_SITE_SUNSITE:=X11/xapps/math/}
 EXTRACT_SUFX=		-source.tgz
 
 MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://a42.com/~thor/xldlas/
+HOMEPAGE=		http://sunsite.math.klte.hu/mirrors/xldlas/
 
 DEPENDS=		xforms>=0.88nb1:../../x11/xforms
 
