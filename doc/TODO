@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1871 2004/06/26 21:23:43 minskim Exp $
+$NetBSD: TODO,v 1.1872 2004/06/26 22:05:46 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -339,7 +339,6 @@ Suggested package updates
 	o p5-CGI-Application-3.1
 	o p5-Devel-StackTrace-1.05
 	o p5-Exception-Class-1.17
-	o p5-Socket6-0.16
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
 	o physfs-1.0.0
