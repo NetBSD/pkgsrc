@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 1998/09/06 20:45:35 tron Exp $
+bin/clisp
+lib/lisp/lisp.run
+lib/lisp/lispinit.mem
+@dirrm lib/lisp
+man/man1/clisp.1
+man/man3/clreadline.3
+share/doc/clisp/clisp.html
+share/doc/clisp/clreadline.html
+@dirrm share/doc/clisp
+share/locale/en/LC_MESSAGES/clisp.mo
+share/locale/de/LC_MESSAGES/clisp.mo
+share/locale/fr/LC_MESSAGES/clisp.mo
+share/locale/es/LC_MESSAGES/clisp.mo
