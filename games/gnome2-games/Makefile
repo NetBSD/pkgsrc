@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2005/01/24 11:08:04 hira Exp $
+# $NetBSD: Makefile,v 1.42 2005/01/24 15:39:15 jmmv Exp $
 
 DISTNAME=		gnome-games-2.8.2
 PKGREVISION=		1
@@ -60,6 +60,8 @@ GCONF2_SCHEMAS+=	gtali.schemas
 GCONF2_SCHEMAS+=	iagno.schemas
 GCONF2_SCHEMAS+=	mahjongg.schemas
 GCONF2_SCHEMAS+=	same-gnome.schemas
+
+BUILDLINK_DEPENDS.libgnome+=	libgnome>=2.8.0nb2
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/GConf2-ui/buildlink3.mk"
