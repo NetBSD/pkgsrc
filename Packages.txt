@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.336 2004/04/19 17:20:23 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.337 2004/05/02 10:37:48 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -2853,6 +2853,7 @@ This tracks intltool's build-time dependencies and uses the latest available
 version; this way, the package benefits of any bug fixes that may have appeared
 since it was released.
 
+
  10.43 How can I use XFree86 from pkgsrc?
  =======================================================
 
@@ -2864,6 +2865,14 @@ lines into /etc/mk.conf:
     X11BASE=/usr/pkg/X11R6
 
 `LOCALBASE' by default is `/usr/pkg'.
+
+
+ 10.44 Where's the pkgviews documentation?
+ =========================================
+
+Pkgviews is tightly integrated with buildlink. You can find a
+pkgviews User's Guide in pkgsrc/mk/buildlink3/PKGVIEWS_UG.
+
 
  11 Submitting & Committing
  ==========================
