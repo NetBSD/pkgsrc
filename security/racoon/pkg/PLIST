@@ -1,11 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/04 03:01:12 itojun Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/06/12 10:45:53 itojun Exp $
 sbin/racoon
 man/man8/racoon.8
 man/man5/racoon.conf.5
-etc/racoon/basic.conf.dist
-etc/racoon/policy.conf.dist
-etc/racoon/psk.txt.dist
-etc/racoon/racoon.conf.dist
-etc/racoon/remote.conf.dist
-etc/racoon/sa.conf.dist
-@dirrm etc/racoon
+share/examples/racoon/racoon.conf.sample
+@dirrm share/examples/racoon

@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2000/06/12 10:45:53 itojun Exp $
+--- samples/racoon.conf.sample-	Mon Jun 12 00:27:22 2000
++++ samples/racoon.conf.sample	Mon Jun 12 00:27:58 2000
+@@ -2,15 +2,15 @@
+ 
+ # "path" must be placed before it should be used.
+ # You can overwrite which you defined, but it should not use due to confusing.
+-#path include "/usr/local/v6/etc" ;
++#path include "/etc/racoon" ;
+ #include "remote.conf" ;
+ 
+ # search this file for pre_shared_key with various ID key.
+-path pre_shared_key "/usr/local/v6/etc/psk.txt" ;
++path pre_shared_key "/etc/racoon/psk.txt" ;
+ 
+ # racoon will search this directory if the certificate or certificate request
+ # is received.
+-#path certificate "/usr/local/openssl/certs" ;
++#path certificate "/usr/pkg/certs" ;
+ 
+ # personal information.
+ identifier user_fqdn "foo@kame.net";
