@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2002/09/25 00:06:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2002/12/07 15:38:48 cjep Exp $
 bin/aklog
 bin/amon
 bin/bos
@@ -81,18 +81,18 @@ man/man1/kalog.1
 man/man1/klog.1
 man/man1/pts.1
 man/man1/rxdebug.1
-man/man1/themis.1 
+man/man1/themis.1
 man/man1/tokens.1
-man/man1/udebug.1   
+man/man1/udebug.1
 man/man1/unlog.1
 man/man3/cmd.3
 man/man5/CellServDB.5
 man/man5/DynRootDB.5
-man/man5/SuidCells.5  
+man/man5/SuidCells.5
 man/man5/ThisCell.5
 man/man8/arla-cli.8
 man/man8/arlad.8
-man/man8/bos.8   
+man/man8/bos.8
 man/man8/mount_xfs.8
 man/man8/umount_xfs.8
 man/man8/vos.8
