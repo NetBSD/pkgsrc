@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.34 2001/07/09 14:42:10 tv Exp $
+# $NetBSD: Makefile,v 1.35 2001/10/11 15:34:50 martti Exp $
 
-DISTNAME=       imap-2000c
-PKGNAME=        imap-uw-2000.0.3nb1
+DISTNAME=       imap-2001.FINAL
+PKGNAME=        imap-uw-2001.0
 CATEGORIES=     mail
-MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/old/
+MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.washington.edu/imap/
 COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
+
+WRKSRC=		${WRKDIR}/imap-2001.RELEASE-CANDIDATE.1
 
 USE_BUILDLINK_ONLY=	# defined
 USE_LIBTOOL=		# defined

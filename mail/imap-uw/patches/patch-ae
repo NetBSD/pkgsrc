@@ -1,8 +1,26 @@
-$NetBSD: patch-ae,v 1.12 2001/02/08 19:11:37 jlam Exp $
+$NetBSD: patch-ae,v 1.13 2001/10/11 15:34:51 martti Exp $
 
---- src/osdep/unix/Makefile.orig	Tue Feb  6 15:03:59 2001
-+++ src/osdep/unix/Makefile
-@@ -67,14 +67,14 @@
+--- src/osdep/unix/Makefile.orig	Thu Oct 11 16:15:24 2001
++++ src/osdep/unix/Makefile	Thu Oct 11 16:20:54 2001
+@@ -28,8 +28,6 @@
+ 
+ # Extended flags needed for SSL.  You may need to modify.
+ 
+-SSLDIR=/usr/local/ssl
+-SSLCERTS=$(SSLDIR)/certs
+ SSLINCLUDE=$(SSLDIR)/include
+ SSLLIB=$(SSLDIR)/lib
+ 
+@@ -46,7 +44,7 @@
+ 
+ SSLCFLAGS= -I$(SSLINCLUDE) -I$(SSLINCLUDE)/openssl\
+  -DSSL_CERT_DIRECTORY=\"$(SSLCERTS)\"
+-SSLLDFLAGS= -L$(SSLLIB) -lssl $(SSLCRYPTO) $(SSLRSA)
++SSLLDFLAGS= -lssl $(SSLCRYPTO) $(SSLRSA)
+ 
+ 
+ # Extended flags needed for non-standard passwd types.  You may need to modify.
+@@ -90,14 +88,14 @@
  # set certain other formats (e.g. mbx and mx) as the EMPTYPROTO since these
  # formats can never be empty files.
  
@@ -19,7 +37,7 @@ $NetBSD: patch-ae,v 1.12 2001/02/08 19:11:37 jlam Exp $
  LN=ln -s
  RANLIB=ranlib
  
-@@ -336,9 +336,9 @@
+@@ -380,9 +378,9 @@
  	 SPOOLDIR=/var/spool MAILSPOOL=/var/mail \
  	 ACTIVEFILE=/usr/share/news/active \
  	 RSHPATH=/usr/bin/rsh \
@@ -31,7 +49,7 @@ $NetBSD: patch-ae,v 1.12 2001/02/08 19:11:37 jlam Exp $
  
  gsu:	# GCC SUN-OS
  	$(BUILD) `$(CAT) SPECIALS` OS=sun \
-@@ -428,9 +428,9 @@
+@@ -472,9 +470,9 @@
  	$(BUILD) `$(CAT) SPECIALS` OS=bsi \
  	 CRXTYPE=nfs \
  	 SPOOLDIR=/var \
@@ -43,7 +61,7 @@ $NetBSD: patch-ae,v 1.12 2001/02/08 19:11:37 jlam Exp $
  	 BASELDFLAGS="-lcrypt"
  
  nec:	# NEC UX
-@@ -823,7 +823,7 @@
+@@ -871,7 +869,7 @@
  	 -DACTIVEFILE=\"$(ACTIVEFILE)\" -DNEWSSPOOL=\"$(NEWSSPOOL)\" \
  	 -DRSHPATH=\"$(RSHPATH)\" -DLOCKPGM=\"$(LOCKPGM)\" > OSCFLAGS
  	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS
