@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 09:07:36 agc Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/27 09:16:19 skrll Exp $
 #
 
 DISTNAME=	tclX8.2.0
@@ -20,6 +20,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared --with-tcl=${PREFIX}/lib \
 			--with-tk=${PREFIX}/lib
 
+CONFIGURE_ENV+=		\
+	PKGSRC_TCL_SRC_DIR="${BUILD_ROOT}/lang/tcl/${WRKDIR:T}/tcl8.3.2" \
+	PKGSRC_TK_SRC_DIR="${BUILD_ROOT}/x11/tk/${WRKDIR:T}/tk8.3.2"
+
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
 			SHAREGRP=${SHAREGRP}
@@ -31,6 +35,16 @@ PATCHDIR=	${.CURDIR}/../../lang/tcl-tclX/patches
 
 post-extract:
 	${MV} ${WRKSRC}/../doc/Memory.n ${WRKSRC}/../doc/TclXMemory.n
+	@if [ ! -e ${BUILD_ROOT}/lang/tcl/${WRKDIR:T}/tcl8.3.2 ]; then	\
+		cd ../../lang/tcl && ${MAKE} extract;			\
+	fi
+	@if [ ! -e ${BUILD_ROOT}/x11/tk/${WRKDIR:T}/tk8.3.2 ]; then	\
+		cd ../../x11/tk && ${MAKE} extract;			\
+	fi
+
+pre-clean:
+	@cd ../../lang/tcl && ${MAKE} clean
+	@cd ../../x11/tk && ${MAKE} clean
 
 do-build:
 	@cd ${WRKSRC}/../tk/unix && ${MAKE_ENV} ${MAKE}

@@ -1,6 +1,7 @@
-$NetBSD: patch-af,v 1.2 2000/09/06 16:47:32 jwise Exp $
---- ../tk/unix/Makefile.in.orig	Sun Feb  6 19:54:01 2000
-+++ ../tk/unix/Makefile.in	Wed Sep  6 11:52:31 2000
+$NetBSD: patch-af,v 1.3 2001/04/27 09:16:19 skrll Exp $
+
+--- ../tk/unix/Makefile.in.orig	Mon Feb  7 00:54:01 2000
++++ ../tk/unix/Makefile.in
 @@ -65,8 +65,8 @@
  
  STANDALONE_OBJS = tkx.o
@@ -44,8 +45,8 @@ $NetBSD: patch-af,v 1.2 2000/09/06 16:47:32 jwise Exp $
 -	    ${TK_BUILD_STUB_LIB_SPEC} ${TCLX_BUILD_LIB_SPEC} \
 -	    ${TCL_BUILD_STUB_LIB_SPEC} ${TCL_SHLIB_LD_LIBS}
 +	${LIBTOOL} --mode=link @CC@ -o ${TKX_SHLIB_NAME:C/\.so.*/.la/} ${SOBJS:.o=.lo} \
-+		-Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib -rpath ${PREFIX}/lib:${X11BASE}/lib \
-+		-L${PREFIX} -L${X11BASE} -ltclx82 -ltk83 -ltcl83 -lX11 -lm -version-info 1:0
++		-Wl,-R${PREFIX}/lib -Wl,-R${X11BASE}/lib -rpath ${PREFIX}/lib \
++		-L${PREFIX}/lib -L${X11BASE}/lib -ltclx82 -ltk83 -ltcl83 -lX11 -lm -version-info 1:0
  
  hello:	hello.c
 -	${CC} ${LD_SWITCHES} -o $@ hello.c ${STATIC_LIBS}

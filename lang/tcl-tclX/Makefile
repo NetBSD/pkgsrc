@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/04/26 07:17:40 skrll Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/27 09:16:18 skrll Exp $
 #
 
 DISTNAME=	tclX8.2.0
@@ -18,6 +18,9 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared --with-tcl=${PREFIX}/lib --enable-tk=NO
 
+CONFIGURE_ENV+=		\
+	PKGSRC_TCL_SRC_DIR="${BUILD_ROOT}/lang/tcl/${WRKDIR:T}/tcl8.3.2"
+
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
 			SHAREGRP=${SHAREGRP}
@@ -29,12 +32,6 @@ post-extract:
 	@if [ ! -e ${BUILD_ROOT}/lang/tcl/${WRKDIR:T}/tcl8.3.2 ]; then	\
 		cd ../../lang/tcl && ${MAKE} extract;			\
 	fi
-
-post-patch:
-	@${MV} ${WRKSRC}/configure ${WRKSRC}/configure.tmp
-	@${SED} -e 's:@PKGSRC_TCL_SRC_DIR@:${BUILD_ROOT}/lang/tcl/${WRKDIR:T}/tcl8.3.2:g' \
-		${WRKSRC}/configure.tmp > ${WRKSRC}/configure
-	@${CHMOD} a+x ${WRKSRC}/configure
 
 post-build:
 	cd ${WRKSRC}/../tcl/unix && ${MAKE_ENV} ${MAKE} buildhelp
