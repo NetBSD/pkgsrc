@@ -1,0 +1,4125 @@
+This is Info file pcb.info, produced by Makeinfo version 1.68 from the
+input file pcb.texi.
+
+INFO-DIR-SECTION PCB Layout Tool
+START-INFO-DIR-ENTRY
+* Pcb: (pcb).         PCB Layout Tool.
+END-INFO-DIR-ENTRY
+
+   This file documents how to use Pcb, the interactive printed circuit
+board layout system for `X11'.
+
+   Copyright (C) 1994,1995,1996 Thomas Nau
+
+   This program is free software; you may redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or (at
+your option) any later version.
+
+   This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANT-ABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+
+File: pcb.info,  Node: Top,  Next: Copying,  Prev: (dir),  Up: (dir)
+
+Pcb
+***
+
+   This document is a manual for `Pcb', the interactive printed circuit
+board layout system for `X11'.
+
+* Menu:
+
+* Copying::                `Pcb' is freely redistributable!
+* History::                How it all began.
+* Intro::                  A short description of the basic objects.
+* Getting Started::        Introduction to `Pcb'.
+* User Commands::          User commands of `Pcb'.
+* Command-Line Options::   Calling `Pcb' from a shell.
+* X11 Interface::          Action routines, resources and default translation.
+* File Formats::           Description of `ASCII' files used by `Pcb'.
+* Installation::           Compiling, installing and troubleshooting.
+
+
+File: pcb.info,  Node: Copying,  Next: History,  Prev: Top,  Up: Top
+
+Copying
+*******
+
+   Copyright (C) 1994,1995,1996,1997 Thomas Nau
+
+   This program is free software; you may redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or (at
+your option) any later version.
+
+   This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANT-ABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.
+
+
+File: pcb.info,  Node: History,  Next: Intro,  Prev: Copying,  Up: Top
+
+History
+*******
+
+   `Pcb' is a handy tool for laying out printed circuit boards.  It was
+first written for an Atari ST in 1990 and ported to `UNIX' and `X11' in
+1994.  I never had the intention to create another professional layout
+system, but to write a tool which supports people like you who do some
+home-developing of hardware. For this reason it has no auto-router nor
+auto-placement code.
+
+   The second release 1.2 included menus for the first time. This made
+`PCB' easier to use and thus a more important tool.
+
+   Release 1.3 introduced undo for highly-destructive commands, more
+straightforward action handling and scalable fonts. Layer-groups were
+introduced to group signal-layers together.
+
+   Release 1.4 provided support for add-on device drivers.  Two layers
+(the solder and the component side) were added to support SMD elements.
+The handling of libraries was also improved in 1.4.1. Support for
+additional devices like GERBER plotters started in 1.4.4. The undo
+feature was expanded and the redo-feature added in 1.4.5.
+
+   Release 1.5 provides support for rats-nest generation from simple net
+lists.  It also allows for automatic clearances around pins that pierce
+a polygon.  A variety of other enhancments including a Gerber RS274X
+driver and NC drill file generation have also been added.  harry eaton
+(haceaton@aplcomm.jhuapl.edu) was responsible for most of the changes
+found in this release.
+
+   Release 1.6 provides automatic screen updates of changed regions.
+This should elliminate most of the need for the redraw (r) key.  Also
+some changes to what order items under the cursor are selected were
+made for better consistancy - it is no longer possible to accidentally
+move a line or line point that is completely obscured by a polygon
+laying over top of it.  Larger objects on the upper most layers can be
+selected ahead of smaller objects on lower layers.  These changes make
+operations more intuitive.  A new mode of line creation was added that
+creates two line on 45 degree angles with a single click. The actual
+outline of the prospective line(s) are now shown during line creation.
+An arc creation mode was added.  Drawn arcs are quarter circles and can
+be useful for high frequency controlled impedance lines.  (You can have
+eighth circle arc if the source is compiled with -DARC45, but be aware
+that the ends of such arcs can never intersect a grid point).  Two new
+flags for pins and vias were created - one indicates that the pin or
+via is purely a drill hole and has no copper annulus.  You can only
+toggle this flag for vias - for elements, it must be an integral part
+of the element definition.  The other flag controls whether the pad
+will be round or octagonal.  There is also now a feature for converting
+the contents of a buffer into an element.  Vias become the pins (or
+mounting holes), lines and arcs on the solder layer become silkscreen,
+and lines on the component layer become the pads. Action commands
+entered via the colon command entry are no longer proceeded with "a ",
+just type the command directly. Several bugs have also been fixed.  New
+ones were probably introduced since extensive changes were made.  harry
+eaton was responsible for these changes.
+
+   Release 1.6.1 adds the ability to make groups of action commands
+bound to a single X11 event to be undone by a single undo. Also a
+simple design rule checker was added - it checks for minimum spacing
+and overlap rules. Plus many fixes for bugs introduced with the many
+changes of 1.6 harry is responsible for these changes too.
+
+   Special thanks goes to:
+     Bernhard Daeubler (Bernhard.Daeubler@physik.uni-ulm.de)
+     Harald Daeubler (Harald.Daeubler@physik.uni-ulm.de)
+     Roland Merk (merk@faw.uni-ulm.de)
+     Erland Unruh (Erland.Unruh@malmo.trab.se)
+     Albert John FitzPatrick III (ajf_nylorac@acm.org)
+     Boerge Strand (borges@ifi.uio.no)
+     harry eaton (haceaton@aplcomm.jhuapl.edu)
+     Andre M. Hedrick (hedrick@Astro.Dyer.Vanderbilt.Edu)
+
+   who did most of the alpha and beta testing, helped to port `PCB' to
+   several operating systems and platforms and corrected several typos
+in the manuals. In addition to these, many others donated time for
+bug-fixing and other important work. Some of them can be identified in
+the source code files.  Thanks to all of them.
+
+
+File: pcb.info,  Node: Intro,  Next: Getting Started,  Prev: History,  Up: Top
+
+Introduction
+************
+
+   Each layout consists of several, mostly independent, objects. This
+chapter gives an overview of the object types and their relationship to
+each other.  For a complete description of how to use `Pcb', refer to
+*Note Getting Started::.  The layout is generated on-screen on a grid
+that has its origin in the upper left corner of the screen.  The x
+coordinate increases to the right, y increases down to the bottom.  All
+distances and sizes in `Pcb' are measured in mils (0.001 inch).  One
+unit on the display grid is one mil in distance on the board.  The
+sections in this chapter are sorted by the order of appearance of the
+objects within a layout file.
+
+* Menu:
+
+* Symbol Objects::         Information about fonts and symbols.
+* Via Objects::            Vias and pins connect layers.
+* Element Objects::        Element, the basic type of circuits.
+* Layer Objects::          A `container' for lines, text...
+* Line Objects::
+* Arc Objects::
+* Polygon Objects::
+* Text Objects::           Objects to add symbols to your board.
+
+
+File: pcb.info,  Node: Symbol Objects,  Next: Via Objects,  Up: Intro
+
+Symbols
+=======
+
+   The top object is the layout itself. It uses a set of symbols that
+resides at the first logical level. Each symbol is uniquely identified
+by a seven bit `ASCII' code. All layout objects share the same set of
+symbols. These symbols are used to form text objects on the silkscreen
+and copper layers.  Undefined symbols are drawn as filled rectangles.
+
+   Every font file is preprocessed by a user-defined command when it is
+loaded.  For details see `fontCommand', *Note Resources::.
+
+
+File: pcb.info,  Node: Via Objects,  Next: Element Objects,  Prev: Symbol Objects,  Up: Intro
+
+Vias
+====
+
+   Vias are identical to the pins used by elements except that they can
+be added or removed individually.  The purpose of vias is to provide
+connections between different layers.  Don't use vias for adding
+elements to the layout, even if that seems easier than creating a new
+element.  Vias are useful for defining arbitrary drill points such as
+those used for mounting a board.  You can assign a name to a via even
+though you probably won't ever want to.  Vias reside at the first
+logical level; therefore, each via exists on all layers. (*i.e.* blind
+vias are not supported)
+
+
+File: pcb.info,  Node: Element Objects,  Next: Layer Objects,  Prev: Via Objects,  Up: Intro
+
+Elements
+========
+
+   Elements represent the components on a board.  Elements are loaded
+from `ASCII' coded files in a similar manner to the layout file itself.
+They are composed of lines and arcs on the silk-screen layer (used to
+define the package outline) , pins (or pads for SMD) and three labels
+that define the description, the element's layout-name (which also
+appears on the silk- screen layer) and its value.  Element pins are
+contained on the first logical level and so reside on all layers.  A
+mark is used to position the element with respect to the cursor
+cross-hair during pasting.  SMD elements use pads instead of pins.
+Pads are handled similarly to lines on a layer but they must be oriented
+either vertically or horizontally.  Pads can have either rounded or
+square ends.  All parts of an element are treated as one unit.  It is
+not possible to delete a single pin or break an element into pieces on
+the layout.  You can resize separate pieces of an element, but doing so
+is usually a bad idea.
+
+   Elements are supported by several special layers: *silk*,
+*pins/pads* and *far-side*.  The *silk* layer shows the package outline
+and also holds legend text and element names. The *pins/pads* layer is
+used to toggle whether the element's pins and pads are displayed. The
+*far-side* layer controls visibility of objects (silkscreen and pads)
+that are on the far (*i.e.* not currently viewed) side of the board.
+
+   Every element file is preprocessed by a user-defined command when
+the file is read.  For details see `elementCommand', *Note Resources::.
+`m4', the default value of `elementCommand', allows you to create
+libraries for package definitions that are shared by all elements.  The
+element libraries distributed with `Pcb' expect `m4' or an equivalent
+to be the *elementCommand*.
+
+   `Pcb' can create a list of all connections from one (or all)
+elements to the others or a list of unconnected pins.  It can also
+verify the layout connections against a netlist file.  The element's
+`layout-name' is the name used to identify an element in a netlist file.
+The pin numbering for an element is defined by unique strings assigned
+to each pin.  In addition to the "pin number" string, each pin has a
+"name" which describes its function.  Previously element pin number was
+established by the order of appearance of the pin definitions in the
+layout or element file. Since the "number" strings for each pin are a
+new feature, if they are absent then the numbering is again established
+by the order of pin appearance in the file.  In other words, the first
+pin appearing in the file is pin one, the next pin is pin two and so on.
+Usually the names assigned to pins are simply numbers, but they don't
+have to be.  It is only necessary that the "number" string for the pin
+matches exactly the "number" string in the netlist file.  Be aware that
+a few of the library parts may still be incorrectly implemented
+regarding pin-numbering.  All of the DIL (Dual- Inline-Pins) parts are
+correct and most of the others are too, but you should verify the pin
+numbering of any non-DIL part (use the *Report Menu* to see what `Pcb'
+thinks a pin's number is) before using the rats nest feature with a
+library part. Hopefully sometime soon someone will volunteer to
+cross-check all of the element libraries and make fixes available as
+necessary.  `Pcb' can also check a layout to see that it meets minimum
+spacing and overlap rules.
+
+   You can make your own quick-and-dirty element definitions
+graphically now.  Simply draw vias for the pins and lines and arcs on a
+solder layer for the silkscreen outline. You should name each via with
+the pin number.  If you want to create a SMD device, draw lines for the
+pads on a component side layer (You must draw these in pin number order
+since lines can't be named). They must be either horizontal or vertical
+or they will not be recognized as pads. Once you are happy with the
+geometry, select everything that is to become part of the element, then
+choose "cut to buffer" from the menu.  Now select "convert buffer to
+element" from the menu.  Viola'!  Afterwards you can make pin one
+square (or pads) if you like, and give the element its various names.
+Note that the element mark corresponds to the cut position when
+everything was put into the buffer. If the vias are not named, then the
+pin numbering will correspond to the order in which the vias were
+placed.
+
+
+File: pcb.info,  Node: Layer Objects,  Next: Line Objects,  Prev: Element Objects,  Up: Intro
+
+Layers
+======
+
+   Every layout consists of several layers that can be used
+independently or treated as a group.  Layer groups can be used to
+logically separate (and color-code) different traces (*e.g.* power and
+signal); however, all layers within a group reside on the same physical
+copper layer of a board, so using different layers within the same
+group won't provide electrical separation where they touch or overlap.
+For details, see `layerGroups', *Note Resources::.  Each layer is drawn
+in a color defined in the resource file (for details see `layerColor',
+*Note Resources::) and identified by a name that you can change.
+Layers are really just containers for line, polygon, and text objects.
+The component and solder layers contain SMD elements as well, but the
+file structure doesn't reflect that fact directly.  Each layer group
+represents a physical layer on the printed circuit board.  If you want
+to make a four layer board, you'll need to have four layer groups.
+Connections between layer groups are established only through element
+pins and vias.  The relationship between a specific layer and the board
+itself is configureable from the `Edit layer groups' option in the
+`Objects' menu.  The layer groups corresponding to the physical layers
+*component-side* and *solder-side* are always defined, and you must map
+at least one logical layer to each.  Of course, you are not obligated
+to put tracks on either of them.  SMD-elements always reside on either
+the component-side or the solder-side layer group.  You can swap which
+side of the board you are viewing by pressing *<Key>Tab*.  You can
+decide which layer group will be the solder side and which will be the
+component side.  The layers groups just have a name or number
+associated with them - where they are sandwiched in the board is left
+to the manufacturing processes.
+
+
+File: pcb.info,  Node: Line Objects,  Next: Arc Objects,  Prev: Layer Objects,  Up: Intro
+
+Lines
+=====
+
+   Lines are used to draw tracks on the pc board.  When in the line
+mode, each *<Btn1>* press establishes one end of a line.  Once the
+second point is defined, the line is drawn and a new line started where
+the first one ended.  You can abondon the new starting point in favor
+of another by pressing *Ctrl<Btn1>*.  The undo function (*<Key>u*) will
+take you back point by point if you use it while in the line mode.  New
+lines can be restricted to 45 degree angles if desired. You can toggle
+this restriction on and off while creating lines by pressing *<Key>.*
+(that is the *period* key). If the 45 degree restriction is turned on,
+then the *<Key>/* can be used to cylce through three different modes of
+45 degree line creation.  One mode just creates a single line forced to
+the nearest 45 degree vector.  The next mode creates two lines from the
+start to end points such that the first line leaves the start point at
+a 90 degree vector, and the second line enters the end point on a 45
+degree vector. The next mode creates two lines such that the first line
+leaves the start point on a 45 degree vector and arrives at the end
+point on a 90 degree vector.  You can temporarily swap between the last
+two modes by holding the shift key down.  It is simple to edit a line
+type object by breaking it into pieces (insert point mode), moving an
+end point (or the whole line) (*<Btn2Down><drag><Btn2Up>*), or changing
+the layer it resides on (*<Key>m* moves the line under the pointer to
+the active layer).  In the case when two line segments meet at exactly
+the same point you can delete the intermediate point, otherwise the
+delete mode removes an entire line.  Feel free to experiment since
+`Pcb' will allow you to undo anything that materially affects your work.
+If you switch active layers in the midst of placing lines a via will
+automatically be placed, when necessary, in order to continue the
+connection.
+
+
+File: pcb.info,  Node: Arc Objects,  Next: Polygon Objects,  Prev: Line Objects,  Up: Into
+
+Arcs
+====
+
+   With version 1.6 it is possible to draw copper arcs.  The arcs are
+restricted to be quarter circles.  This means they always bend a right
+angle.  They are very similar to lines otherwise.  They are created on
+the current layer and have the same thickness that new lines will have.
+The various clicks for creating lines work pretty much the same way
+for creating arcs. The start point for the arc is at the first *<Btn1>*
+position.  In order to make the arc curve in the direction desired,
+drag the mouse along the tangent line from the starting position
+towards the end position.  If the grid is too coarse, it may not be
+possible to distinguish whether you've moved over then up, or up then
+over, so if you can't seem to make the arc go the direction you want,
+you should decrease the grid spacing.  Alternatively you could drawn
+the wrong arc, then rotate and move it where you want. Like the line
+tool, after an arc is drawn a new starting point is established at the
+end point.  Whenever a start point is established by either the line or
+arc tools it will be retained if you switch directly between the tools
+(e.g. *<Key>F2* for Lines, *<Key>F8* for Arcs. Of course connection
+searches, undo and all the other features you'd expect work with arcs
+now.
+
+
+File: pcb.info,  Node: Polygon Objects,  Next: Text Objects,  Prev: Arc Objects,  Up: Intro
+
+Polygons
+========
+
+   Sometimes it's useful to fill large areas with solid copper.  The
+way to do this is with polygons.  Polygons can be created in either the
+polygon mode or the rectangle mode.  In the polygon mode, you'll have
+to define each corner of the polygon with a mouse click (*<Btn1>*).
+When the last point is clicked exactly on top of the starting point,
+the polygon is finished.  Since this can be hard to do, the
+*Shift<Key>p* will enter the final point for you, closing the polygon.
+If the 45 degree angle restriction is turned on and you try to close
+the polygon when it is not possible, you'll get a warning instead. If
+you haven't finished entering a polygon, but want to undo one (or more)
+of the points that you've already defined, use the undo command
+(*<Key>u*).  With the rectangle tool, defining the two opposite corners
+is sufficient, but of course the resulting polygon is a rectangle.
+Like lines, a polygon can by edited by deleting, inserting and moving
+the points that define it.  `Pcb' is capable of handling complex
+polygons, but using a number of simpler ones improves performance of
+the connection tracing code.
+
+   A new feature in version 1.5 of `Pcb' automatically creates clearance
+regions around pins and vias that pierce a polygon. This means that they
+aren't electrically connected to the polygon unless you add "thermals"
+to cross the clearance region.  Thermals can be added and removed by
+selecting the thermal mode and clicking *<Btn1>* on the pin or via.
+Remember that this only creates connections to the polygon on the
+active layer.  The great advantage to this new polygon behavior is that
+simple or complex ground and/or power planes can be easily made with
+polygons and seen on the screen.  If you don't want this auto-clearance
+behavior, or you load a layout created by an earlier version of `Pcb',
+the old behavior (shorts to all piercing pins and vias) is available.
+A `ChangeSize' operation (*<Key>s*) toggles a polygon between the new
+and old polygon/pin behavior.
+
+
+File: pcb.info,  Node: Text Objects,  Prev: Polygon Objects,  Up: Intro
+
+Text
+====
+
+   Text objects should be used to label a layout or to put additional
+information on the board, but not to identify elements because elements
+have their own labels.  Text is always horizontal when first created,
+but the rotate mode can align it along 0, 90, 180 and 270 degree angles.
+Text can be moved from any layer to the silk-screen layer with a
+command in the `selection menu'.  Text that is moved to the silk-screen
+layer will appear on the solder-side silk-screen if it originating on a
+solder-side layer.  Otherwise moving it to the silk-screen layer will
+put it on the component-side silk-screen.  To move text back to a
+copper layer from the silk-screen, use the `MoveToCurrentLayer'
+(*<Key>m*) command.  Text on the far side of the board will
+automatically appear mirror-imaged.
+
+   TEXT OBJECTS ON A COPPER LAYER CREATE COPPER LINES BUT THEY ARE NOT
+SCANNED FOR CONNECTIONS OR TESTED FOR CREATING SHORTS VS. THE NETLIST.
+NEITHER ARE TEXT OBJECTS TESTED AGAINST ANY DESIGN RULES.
+
+
+File: pcb.info,  Node: Getting Started,  Next: User Commands,  Prev: Intro,  Up: Top
+
+Getting Started
+***************
+
+   The goal of this chapter is to give you enough information to learn
+how `Pcb' works and how to develop your layouts to make the best use of
+`Pcb''s features. All event translations (*i.e.* the buttons and keys
+you press) refer to the default application resource file shipped with
+`Pcb'.  There is probably no need to change them unless your window
+manager uses some of the button events itself; however, if you *want*
+to customize the behavior of `Pcb' then changing the resource file is
+usually the best way to do it.
+
+   Get yourself a printout of this chapter and *User Commands*, if you
+haven't already done so, and follow the examples.  An example layout
+may be found in `example/68HC11'.  An example illustrating some version
+1.5 features is found in `example/LED' along with its corresponding
+netlist file `example/LED.NET'.
+
+   Start `Pcb' (the actual command will use all lower-case letters)
+without any additional options.  If you get the error message:
+
+         can't find default font-symbol-file 'default_font'
+
+   then the font searchpath or filename in the application resource
+   file is wrong. Be sure that your `m4' program supports searchpaths.
+If not, get `GNU m4'.  For other messages, see *Note problems::.
+Another quick-start is provided by `pcbtest.sh' in the `src' directory.
+
+* Menu:
+
+* Application Window::     The elements of the main window.
+* Log Window::             The optional logging window
+* Library Window::         The circuit selection window
+* Drawing and Removing::
+* Moving and Copying::
+* Loading and Saving::
+* Printing::
+* Connection Lists::       How to get a list of all or some connections.
+* Selection::              Commands which handle more than one object.
+* Rats Nest::		   Helps you place and route tracks against a netlist.
+* Design Rule Checking::
+
+
+File: pcb.info,  Node: Application Window,  Next: Log Window,  Up: Getting Started
+
+The Application Window
+======================
+
+   The main window consists of five areas: the menu at the top, the
+control panel in the upper left corner, the mode buttons located below
+the control panel, the drawing area to the right of these, and the
+status line at the bottom of the window.
+
+* Menu:
+
+* Status-line and Input-field::    What is the program configuration.
+* Control Panel::                Switch layers on/off; change current one.
+* Mode Selectors::               Select an operation mode.
+* Drawing Area::		 Where the layout is drawn.
+* Menu::
+
+
+File: pcb.info,  Node: Status-line and Input-field,  Next: Control Panel,  Up: Application Window
+
+The Status-line and Input-field
+-------------------------------
+
+   The status-line is located at the bottom edge of the main window.
+During normal operation the status information is visible there.  When
+a selected menu operation requires an additional button click, the
+status-line is replaced by a message telling you to position the cursor
+and click.  When a text input is required, the status-line is replaced
+by the Input-field which has a prompt for the typed input.
+
+   The status-line shows, from left to right, the side of the board
+that you are viewing (*<Key>Tab* changes this), if an absolute (abs) or
+relative (rel) grid is used, if new lines are restricted to 45 degrees,
+which type of 45 degree line mode is active, whether rubberband move and
+rotate mode is on (R), the current grid values, and the zoom factor.
+This information is followed by the line-width, via-size and drilling
+hole in mil, text scaling, the active buffer number and the name of the
+layout. An asterisk appearing at the left edge indicates the layout has
+been modified since the last save.  Note that the name of the layout is
+not the same thing as the filename of the layout.
+
+   The input-field pops up (temporarily replacing the status-line)
+whenever user input is required. Two keys are bound to the input field:
+*<Key>Escape* aborts the input, *<Key>Return* finishes it.
+
+   The present cursor position is displayed in the upper right corner
+of the window.  Normally this position is an absolute coordinate, but
+with version 1.5 of `Pcb' you can anchor a marker at the current cursor
+location by pressing *Ctrl<Key>m* then the display will read both the
+absolute cursor position as well as the difference between it and the
+marker. Pressing *Ctrl<Key>m* again turns the marker off.
+
+
+File: pcb.info,  Node: Control Panel,  Next: Mode Selectors,  Prev: Status-line and Input-field,  Up: Application Window
+
+The Control Panel
+-----------------
+
+   The control panel, located at the left side of the window, is used
+to turn on and off the display of layer groups and to select the active
+drawing layer.  If a layer hasn't been named, the label "*(unknown)*"
+is used as the defualt.
+
+   The upper control box is used to switch layers on and off. Click
+*<Btn1Down>* on one or more of them. Each click toggles the setting.
+The currently active layer can't be switched off.  The layout is
+refreshed when the pointer reenters the drawing area. This prevents
+excessive redrawing when the visibility of several layers is changed.
+When the layers are grouped, clicking on these fields will toggle the
+visibility of all layers in the same group. This is a good idea because
+layers in the same group reside on the same physical layer of the
+actual board.  Use the `Edit layer groups' option in the `Objects' menu
+to change the layer groupings.  Grouping layers is only useful for
+helping you to color-code signals in your layout. Note that grouping
+layers actually reduces the number of different physical layers
+available for your board, thus to make an eight layer board, you cannot
+group any layers.
+
+   *far side* turns on and off the visibility of elements (including
+SMD pads) on the opposite board side, as well as silk screening on that
+side. It does not automatically hide the x-ray view of the other copper
+layers, these must be turned off separately if desired.  Use the *tab*
+key to view the entire board from the other side.  To see a view of
+what the back side of the board will actually look like, make the
+solder layer the active layer then press *tab* until the status line
+says "solder" on the right, then turn off the visibility of all other
+layers except pins/pads, vias, and silk.
+
+   The lower control menu, named *active*, is used to change the active
+drawing layer. *<Btn1Down>* pops up a menu to select a one.  Each entry
+is labeled with the layer's name and drawn in its color.  The new
+drawing layer is automatically made visible.  Try changing the active
+layer's name to *ABC* by selecting `set name of layer' from the `File'
+menu.  Changing the active layer also is available with *<Key>1..8*.
+
+
+File: pcb.info,  Node: Mode Selectors,  Next: Drawing Area,  Prev: Control Panel,  Up: Application Window
+
+The Mode Selectors
+------------------
+
+   The mode selector buttons reside below the control panel.  They are
+used to select the operation mode of `Pcb'. A mode can be thought of as
+a tool that gets used when *<Btn1>* is pressed.  Each mode causes the
+cursor to take on a unique shape that identifies the tool.  The buttons
+themselves are icons that illustrate their function.  The drawing modes
+can also be selected from the keyboard:
+         *<Key>Escape*   reset mode
+         *<Key>F1*       via-mode
+         *<Key>F2*       line-mode
+         *<Key>F3*       pastebuffer-mode
+         *<Key>F4*       rectangle-mode
+         *<Key>F5*       text-mode
+         *<Key>F6*       polygon-mode
+         *<Key>Insert*   insert-point-mode
+         *<Key>F7*       thermal-mode
+         *<Key>F8*       arc-mode
+   The *<Key>Space* cycles through all of the modes in the mode button
+palette.
+
+   Reset-mode is really no mode, and *<Btn1>* has no effect with this
+setting.  Some of the modes are very simple, such as the via-mode.
+Clicking *<Btn1>* while in this mode creates a via at the cross-hair
+position.  The pastebuffer-mode is similar.  With this mode, *<Btn1>*
+copies the contents of the active buffer to the layout, but only those
+parts that reside on visible layers are copied.  The rotate-mode allows
+you to rotate elements and text objects 90 degrees counter-clockwise
+with each click.  The line-mode is explained in detail in *Note Line
+Objects::.  The arc-mode is explained in detainl in *Note Arc Objects::.
+Rectangle-mode, polygon-mode and thermal-mode are explained in detail in
+*Note Polygon Objects::.  Remember that the thermal-mode will only
+create and destroy thermals to polygons on the active layer.
+
+   The insert-point-mode is an editing tool that allows you to add
+points into lines or polygons.  With version 1.5 of `Pcb', the
+insert-point-mode enforces the 45 degree line rule.  You can force only
+the shorter line segment to 45 degrees by holding the shift key down
+while inserting the point.  The delete-mode deletes the smallest object
+beneath the cursor with each *<Btn1>* click.  If you use click at an
+end-point that two lines have in common, it will replace the two lines
+with a single line spanning the two remaining points.  This can be used
+to delete an "inserted" point in a line, restoring the previous line.
+
+
+File: pcb.info,  Node: Drawing Area,  Next: Menu,  Prev: Mode Selectors,  Up: Application Window
+
+Drawing Area
+------------
+
+   The drawing area is made from a viewport widget that also includes
+two scrollbars. The cursor changes shape depending on the current
+operation mode when the pointer is moved into the drawing area.  A
+crosshair follows the X11 pointer with respect to the grid setting.
+Move around and watch the cursor position displayed in the upper right
+of the window.  Now select a new grid from the *Display* menu.  The new
+value is updated in the statusline.  Now move again and watch the
+difference. A different way to change the grid is *Shift<Key>g* to
+decrease or *<Key>g* to increase it. The grid setting is saved along
+with the data when you save a pcb layout.  For homemade layouts a value
+around 50 is a good setting.  The cursor also may be moved with the
+cursor keys or, for larger distances, by pressing the *shift* modifier
+together with a cursor key.
+
+
+File: pcb.info,  Node: Menu,  Prev: Drawing Area,  Up: Application Window
+
+Menu
+----
+
+   The menus are located at the top of the drawing area. Most, but not
+all, of their functions are also available from the keyboard.  Some of
+the entries such as *center* require a certain cursor position.  In
+this case a statusline will popup at the bottom with wording similar to
+the following:
+         move pointer to the appropriate screen position and press a button
+   Any mouse button will do the job, whereas any key except the cursor
+keys will cancel the operation. For details see *Note Actions::.
+
+`About'
+     There is no menu hiding behind this button, but a small
+     information box will pop up.
+
+`File'
+     This menu offers a choice of loading, saving and printing data,
+     saving connection information to a file or quitting the
+     application.  You also may change the layout's or the active
+     layer's name. Selecting *print layout* pops up a printer control
+     dialog which is, hopefully, self explaining. This box contains a
+     panner widget (only `X11R5' and later) which simplifies adjusting
+     the offsets. With earlier releases the printout will always appear
+     in the upper left corner with respect to the media margins.
+
+     A selection of several device drivers is available from the
+     printer control dialog. Presently *PostScript*, *encapsulated
+     PostScript*, and *GerberX* are supported. *GerberD* support may be
+     forthcoming.  It requires a rastering engine that pcb presently
+     lacks.
+
+`Display'
+     The display menu supports the most needed functions related to
+     screen output. The entries are used to change the grid to some
+     popular values, the zoom factor, the displayed element name and
+     also are used to center or refresh the output.  You also may
+     switch grid-displaying on or off and select between absolute grid
+     (origin at (0,0)) or relative grid (origin at the position where
+     the grid has been changed). The relative grid position is now
+     established at the actual pointer position, NOT necessarily the
+     same as the crosshair position.  This allows you to shift the grid
+     without changing the grid spacing.  I recommend that you zoom in
+     as close as possible before setting a relative grid so that you're
+     sure the grid lines fall where you want.  The clipping to
+     45-degree lines is selected in this menu, as well as enabling
+     rubberband mode (see description of *Mode*).
+
+`Sizes'
+     This menu allows you to select a group of line thickness, via
+     diameter and via drill size (collectively called a "routing
+     style") to be coppied to the "active" sizes.  You can also change
+     the names given to these styles and adjust their values from this
+     menu.  You can also edit the "active" sizes (the initial size of
+     new vias, drilling holes, lines, text-objects and the current
+     maximum size of the layout) from this menu.
+
+`Objects'
+     Displaying the pinout of an element and changing its names, the one
+     that is currently selected by the *Display* menu, as well as
+     editing a text object is offered by this menu. The latter two
+     selections require an additional pointer button click at the
+     object's position.  A dialog for changing the layer groupings is
+     also reached from this menu.
+
+`Selection'
+     This menu covers most of the operations that work with selected
+     objects.  You may either (un)select all visible objects of a
+     layout or only the ones which have been found by the last
+     connection scan. The mouse can also be used to change which things
+     are and are not selected: toggle the selection of a single object
+     by pressing *<Btn3Down>* and releasing without moving the mouse.
+     Pressing *Mod1<Btn3Down>*, moving and releasing the button selects
+     all visible objects inside the rectangle. Pressing the modifier
+     key *Shift* too, unselects all objects in the area. You can delete
+     all selected objects from this menu, and also move selected text
+     objects to the silk-screen layer.  The other entries change the
+     sizes of visible and selected objects.
+
+`Buffer'
+     This menu handles pastebuffer related actions. You may select one
+     out of five (per viewing side) buffers to use, rotate or clear its
+     contents and paste it to the layout. You can also gather objects
+     in the buffer into an element definition from this menu.  Note:
+     only visible objects are pasted to the layout.
+
+`Connections'
+     The entries available through the connections menu button allow
+     the user to find connections from pins or vias and to manipulate
+     these.  The connection lists may be saved by selecting entries
+     from the *File* menu. In many cases it is desireable to use the
+     ratsnest function to check connections against a netlist file
+     instead of using the connections menu to generate text connection
+     lists.
+
+`Undo'
+     This menu is a frontend for managing the reversing of operations
+     such as remove, copy, move, name changes, etc. The number of
+     operations is unlimited (depending on memory). The list is cleared
+     if new layout data is loaded or by selecting the appropriate entry
+     from this menu. The inverse operation, redo, is also available.
+
+`Report'
+     This menu allows you to generate a dialog that summerizes
+     information about an object such as sizes and coordinates. You can
+     also get a report about all of the drills that are used on the
+     board.
+
+
+File: pcb.info,  Node: Log Window,  Next: Library Window,  Prev: Application Window,  Up: Getting Started
+
+Log Window
+==========
+
+   This optional window is used to display all kind of messages
+including the ones written to *stderr* by external commands. The main
+advantage is that its contents are saved in a scrolling list until the
+program exits. Disabling this feature by setting the resource
+*useLogWindow* to *false* will generate popup windows to display
+messages. The *stderr* of external commands will appear on `Pcb's
+*stderr* which normally is the parent shell. I suggest you iconify the
+window after startup for example by setting **log.iconic* to *true*. If
+*raiseLogWindow* is set *true*, the window will deiconify and raise
+itself whenever new messages are to be displayed.
+
+
+File: pcb.info,  Node: Library Window,  Next: Drawing and Removing,  Prev: Log Window,  Up: Getting Started
+
+Library Window
+==============
+
+   First appearing in 1.4.1 the library window is one of the best new
+features in my opinion. It simplifies loading circuits quiet a lot just
+by selecting the appropriate type from the menu at the top. A circuit
+is then selected by simply double-clicking on the text line. For
+details on libraries check-out *Note Library File:: and *Note Library
+Contents File::.
+
+
+File: pcb.info,  Node: Drawing and Removing,  Next: Moving and Copying,  Prev: Library Window,  Up: Getting Started
+
+Drawing and Removing Basic Objects
+==================================
+
+   There are several ways of creating new objects: you may draw them
+yourself, you may copy an existing object or you may load an element
+from a file or library. Creating new objects is normally related to a
+special mode depending on the object type.  The notation of key and
+button events is the same as described in the X11 Intrinsics manual.
+
+   The operation mode may be selected by one of the mode selectors in
+the bottom left corner, by one of the function keys listed earlier in
+this chapter, or by pressing the space bar to cycle through the modes.
+*<Btn1Down>* sends a notify request to the application which responds
+by creating or changing the appropriate object or at least takes the
+first step to do so. Switching to a mode causes the cursor to take on a
+unique shape and also causes the cooresponding mode selector button to
+be drawn with thick lines. You can use either cue to see which mode is
+currently selected.
+
+   Removing objects is possible using *<Key>BackSpace* (or *<Key>Delete*
+on some machines) which deletes the object at the cursor location. If
+more than one object is located at the same position, the smallest
+matching type will be chosen.  If two or more of the same type are the
+smallest at the position, then the newest one will be deleted.  You
+also may change to *remove-mode* and click *<Btn1Down>* at the location
+of the objects which are to be removed. If you "remove" the end-point
+where two lines connect, it will remove the point of connection leaving
+a single line that spans the far end points.
+
+   Rotating works in a similar fashion. Change the mode and press
+*<Btn1Down>* at the object's location. Remember only text, elements and
+arcs can be rotated. (Anything including groups of objects may be
+rotated inside a buffer using the rotate buffer menu option.)
+
+   Insert mode provides the capability of inserting new points into
+existing polygons or lines. The 45 degree line clipping is now enforced
+when selected.  Press and hold the shift key while positioning the new
+point to only clip the line segment to the nearer of the two existing
+points to 45 degrees.  You can also toggle the 45-degree clipping in
+the middle of a point insertion by pressing the *<Key>.* If the shift
+key is not depressed and the 45 degree line clipping mode is on, both
+new line segments must be on 45 degree angles - greatly restricting
+where the new point may be placed. In some cases this can cause
+confusion as to whether an insertion has been started since the two new
+lines may be forced to lie parallel on top of the original line until
+the pointer is moved far from the end points.
+
+   Removing objects, changing their size or moving them only applies to
+objects that are visible when the command is executed.
+
+* Menu:
+
+* Common::           Keystrokes common to some objects.
+* Lines::
+* Arcs::
+* Polygons::         Drawing polygons and rectangles.
+* Text::
+* Vias::
+* Elements::
+* Pastebuffer::      A multi-purpose buffer.
+
+
+File: pcb.info,  Node: Common,  Next: Lines,  Up: Drawing and Removing
+
+   There are several keystrokes and button events refering to an
+*object* without identifying its type. Here's a list of them:
+
+   *<Btn1Down>* creates (or deletes)  an object depending on the
+current mode.
+
+   *<Key>BackSpace* or *<Key>Delete* removes the visible object at the
+cursor location. When more than one object exists at the location, the
+order of removal is: via, line, text, polygon and element. The drawn
+layer order also affects the search - whatever is top - most (except
+elements) is affected before lower items.  Basically all this means
+that what is removed is probably just what you expect.  If for some
+reason it isn't, undo and try again.  Only one object is removed for
+each keystroke. If two or more of the same type match, the newest one
+is removed.
+
+   Use *<Key>s* and *Shift<Key>s* to change the size (width) of lines,
+arcs, text objects, pins, pads and vias, or to toggle the style of
+polygons (whether pins and vias automatically have clearances).
+
+   *<Key>n* changes the name of pins, pads, vias, the string of a text
+object, or the currently displayed label of an element.
+
+   *<Key>m* moves the line, arc, or polygon under the crosshair to the
+active layer if it wasn't on that layer already.
+
+   *<Key>u* (undo) recovers from an unlimited number of operations such
+as creating, removing, moving, copying, selecting etc. It works like
+you'd expect even if you're in the midst of creating something.
+
+   *Shift<Key>r* restores the last undone operation provided no other
+changes have been made since the undo was performed.
+
+   *<Key>tab* changes the board side you are viewing.
+
+   For a complete list of keystrokes and button events see *Note
+Translations::.
+
+
+File: pcb.info,  Node: Lines,  Next: Arcs,  Prev: Common,  Up: Drawing and Removing
+
+Lines
+-----
+
+   To draw new lines you have to be in *line-mode*. Get there either by
+selecting it from the *Tool palette* or by pressing *<Key>F2*.  Each
+successive *notify* event creates a new line. The adjustment to 45
+degree lines is done automatically if it is selected from the *Display*
+menu. You can toggle the 45 degree mode setting by pressing the
+*<Key>.* (That is the period key). When 45 degree enforcement is turned
+on there are three distinct modes of line creation: a single line on
+the closest 45 degree vector towards the crosshair (but not necessarily
+actually ending at the crosshair), two lines created such that the
+first leaves the start point on a 90 degree vector and the second
+arrives at the crosshair on a 45 degree vector, and finally two lines
+created such that the first leaves the start point on a 45 degree
+vector and the second arrives at the crosshair on a 90 degree vector.
+These last two modes always connect all the way from the start and end
+points, and all lines have angles in 45 degree multiples.  The *<Key>/*
+cycles through the three modes.  The status line shows a text icon to
+indicate which of the modes is active and the lines following the
+crosshair motion show the outline of the line(s) that will actually be
+created.  Press *<Key>Escape* to leave line-mode.
+
+   *<Key>l*, *Shift<Key>l* and the entries in the *Sizes* menu change
+the initial width of new lines.  This width is also displayed in the
+status line.
+
+
+File: pcb.info,  Node: Arcs,  Next: Polygons,  Prev: Lines,  Up: Drawing and Removing
+
+Arcs
+----
+
+   An Arc is drawn  with the *arc-tool*. Get there either by selecting
+it from the *Tool palette* or by pressing *<Key>F8*. Press *Btn1* to
+define the starting point for the arc.  Drag the mouse towards the
+desired end point along the path you want the arc to follow.  The
+outline of the arc that will be created is shown on the screen as you
+move the mouse.  Arcs are always forced to be 90 degrees and have
+symmetrical length and width ( i.e. they are a quarter circle).  The
+next *Btn1* click creates the arc.  It will have the same width as new
+lines (displayed in the status line) and appear on the active layer.
+The arc leaves the starting point towards the crosshair along the axis
+whose distance from the crosshair is largest.  Normally this means that
+if you drag along the path you want the arc to follow, you'll get what
+you want.  If the grid is set to the arc radius, then the two distances
+will be equal and you won't be able to get all of the possible
+directions.  If this is thwarting your desires, reduce the grid spacing
+(*!Shift<Key>G*) and try again.
+
+
+File: pcb.info,  Node: Polygons,  Next: Text,  Prev: Arcs,  Up: Drawing and Removing
+
+Polygons and Rectangles
+-----------------------
+
+   A polygon is drawn by defining all of its segments as a series of
+consecutive line segments. If the first point matches a new one and if
+the number of points is greater than two, then the polygon is closed.
+Since matching up with the first point may be difficult, you may use
+*Shift<Key>p* to close the polygon. The *Shift<Key>p* won't work if
+clipping to 45 degree lines is selected and the final segment cannot
+match this condition.  I suggest you create simple convex polygons in
+order to avoid a strong negative impact on the performance of the
+connection scanning routines.  The *rectangle-mode* is just an easy way
+to generate rectangular polygons.  *Polygon-mode* also is selected by
+*<Key>F6* whereas *rectangle-mode* uses *<Key>F4*.  Pressing a
+*<Btn1Down>* at two locations creates a rectangle by defining two of
+its corners.  *<Key>Insert* brings you to *insert-point-mode* which
+lets you add additional points to an already existing polygon.  Single
+points may be removed by moving the crosshair to them and selecting one
+of the delete actions *(remove-mode, BackSpace, or Delete*. This only
+works if the remaining polygon will still have three or more corners.
+Pressing *<Key>u*  or *<Key>p* while entering a new polygon brings you
+back to the previous corner. Removing a point does not force clipping
+to 45 degree angles (because it's not generally possible).  Newly
+created polygons will not connect to pins or vias that pierce it unless
+you create a thermal (using the thermal mode) to make the connection.
+If the edge of a polygon gets too close to a pin or via that lies
+outside of it, a warning will be issued and the pin will be given a
+special color. Increasing the distance between them will remove the
+warning color.
+
+
+File: pcb.info,  Node: Text,  Next: Vias,  Prev: Polygons,  Up: Drawing and Removing
+
+Text
+----
+
+   Pressing *<Key>F5* or clicking one of the text selector buttons
+changes to *text-mode*.  Each successive notify event (*<Btn1Down>*)
+pops up the input line at the bottom and queries for a string.  Enter
+it and press *<Key>Return* to confirm or *<Key>Escape* to abort.  The
+text object is created with its upper left corner at the current pointer
+location.  The initial scaling is changed by *<Key>t* and *Shift<Key>t*
+or from the *Sizes* menu.
+
+   Now switch to *rotate-mode* and press *<Btn1Down>* at the
+text-objects location. Text objects on the solder side of the layout
+are automatically mirrored and flipped so that they are seen correctly
+when viewing the solder-side.
+
+   Use *<Key>n* to edit the string.
+
+   TEXT OBJECTS ON COPPER LAYERS CREATE COPPER LINES BUT THEY ARE NOT
+SCANNED FOR CONNECTIONS. If they are moved to the silkscreen layer, they
+no longer create copper.
+
+
+File: pcb.info,  Node: Vias,  Next: Elements,  Prev: Text,  Up: Drawing and Removing
+
+Vias
+----
+
+   The initial size of new vias may be changed by *<Key>v* and
+*Shift<Key>v* or by selecting the appropriate entry from the *Sizes*
+menu. *Mod1<Key>v* and *Mod1 Shift<Key>v* do the same for the drilling
+hole of the via.  The statusline is updated with the new values.
+Creating a via is similar to the other objects. Switch to *via-mode* by
+using either the selector button or *<Key>F1* then press *<Key>]* or
+*<Btn1Down>* to create one.  *<Key>n* changes the name of a via. If you
+want to create a mounting hole for your board, then you can place a via
+where you want the hole to be then convert the via into a hole.  The
+conversion is done by pressing *!Ctrl<Key>h* with the crosshair over
+the via.  Conceptually it is still a via, but it has no copper annulus.
+If you create such a hole in the middle of two polygons on different
+layers, it will short the layers.  Theoretically you could arrange for
+such a hole not to be plated, but a metal screw inserted in the hole
+would still risk shorting the layers.  A good rule is to realize that
+holes in the board really are vias between the layers and so place them
+where they won't interfere with connectivity.  You can convert a hole
+back into a normal via with the same keystroke used to convery it in
+the first place.
+
+
+File: pcb.info,  Node: Elements,  Next: Pastebuffer,  Prev: Vias,  Up: Drawing and Removing
+
+Elements
+--------
+
+   Some of the functions related to elements only work if both the
+package layer and the pin layer are switched on.
+
+   Now that you're familiar with many of the basic commands, it is time
+to put the first element on the layout.  First of all, you have to load
+data into the paste buffer.  There are four ways to do this:
+        1) load the data from a library
+        2) load the data from a file
+        3) copy data from an already existing element
+        4) convert objects in the buffer into an element
+   We don't have any elements on the screen yet nor anything in the
+buffer, so we use number one.
+
+   Select *lsi* from the menu in the library window press *<Btn1Down>*
+twice at the appropriate text-line to get the MC68030 CPU.  The data is
+loaded and the mode is switched to *pastebuffer-mode*.  Each notify
+event now creates one of these beasts. Leave the mode by selecting a
+different one or by *<Key>Escape* which resets all modes..  The
+crosshair is located at the *mark* position as defined by the data
+file. Rotating the buffer contents is done by selecting the *rotate*
+entry of the *Buffer* menu or by pressing *Shift<Key>F3*. The contents
+of the buffer are valid until new data is loaded into it either by a
+cut-to-buffer operation, copy-to-buffer operation or by loading a new
+data file.  There are 5 buffers available. Switching between them is
+done by selecting a menu entry or by *Shift<Key>1..5*.  Each of the two
+board sides has its own buffers.
+
+   The release includes all data files for the circuits that are used
+by the demo layout. The elements in the LED example are not found in
+the library, but you can lift them from the example itself if you want.
+If you have problems with the color of the crosshair, change the
+resource *crosshairColor* setting to a different one.
+
+   Now load a second circuit, the MC68882 FPU for example.  Create the
+circuit as explained above. You now have two different unnamed
+elements. Unnamed means that the layout-name of the element hasn't been
+set yet. Selecting *description* from the *Display* menu displays the
+description string of the two circuits which are CPU and FPU. The
+values of the circuits are set to MC68030 and MC68882.  Each of the
+names of an element may be changed by *<Key>n* at the elements location
+and editing the old name in the bottom input line. Naming pins and vias
+is similar to elements.  You can hide the element name so that it won't
+appear on the board silkscreen by pressing *<key>h* with the cursor
+over the element.  Doing so again un-hides the element name.
+
+   Entering `:le' and selecting an element data file is the second way
+to load circuits.
+
+   The third way to create a new element is to copy an existing one.
+Please refer to *Note Moving and Copying::.
+
+   The fourth way to create a new element is to convert a buffer's
+contents into an element.  Here's how it's done: Select the Via-tool
+from the *Tool pallette*.  Set the grid spacing to something
+appropriate for the element pin spacing.  Now create a series of vias
+where the pins go.  Create them in pin number order. It is often handy
+to place a reference point (*!Ctrl<Key>m*) in the center of the first
+pin in order to measure the location of the other pins.  Next make a
+solder-side layer the active layer from the *active-layer* popup menu.
+Now draw the outline of the element using lines and arcs.  When you're
+done, select everything that makes up the element with a box selection
+(*<Btn3Down> drag, <Btn3Up>*). Now select "cut selection to buffer"
+from the *Buffer* menu. Position the cursor over the center of pin 1
+and press the left button to load the data into the buffer.  Finally
+select "convert buffer to element" from the *Buffer* menu.  You'll only
+want to create elements this way if they aren't already in the library.
+It's also probably a good idea to do this before starting any of the
+other aspects of a layout, but it isn't necessary.
+
+   To display the pinout of a circuit move to it and press *Shift<Key>d*
+or select *show pinout* from the *Objects* menu. A new window pops up
+and displays the complete pinout of the element. This display can be
+difficult to read if the component has been rotated 90 degrees :-(
+therefore, the new window will show an un-rotated view so the pin names
+are readable.  *<Key>d* displays the name of one or all pins/pads
+inside the drawing area, this is only for display on-screen, it has no
+effect on any printing of the layout.
+
+   You also may want to change a pin's or pad's current size by pressing
+*<Key>s* to increase or *Shift<Key>s* to decrease it. While this is
+possible, it is not recommended since care was probably taken to define
+the element structure in the first place. You can also change the
+thickness of the element's silkscreen outline with the same keys. You
+can change whether a pin or SMD pad is rounded or square with the
+*<Key>q*.  SMD pads should usually have squared ends. Finally, you can
+change whether the non-square pins are round or octagonal with the
+*!Ctrl<Key>o*.
+
+   SMD elements and silkscreen objects are drawn in the "invisible
+object" color if they are located on the opposite side of the board.
+
+   For information on element connections refer to *Note Connection
+Lists::.
+
+
+File: pcb.info,  Node: Pastebuffer,  Prev: Elements,  Up: Drawing and Removing
+
+Pastebuffer
+-----------
+
+   The linestack and element-buffer of former releases have been
+replaced by 5 multi-purpose buffers that are selected by
+*Shift<Key>1..5*. The status line shows which buffer is the active one.
+You may load data from a file or layout into them.  Cut-and-paste works
+too.  If you followed the instructions earlier in this chapter you
+should now have several objects on the screen. Move the crosshair to
+one of them and press *<Btn3Down>* to toggle its selection flag. (If
+you drag the mouse while the button is down, a box selection will be
+attempted instead of toggling the selection.)  The object is redrawn in
+a different color. You also may want to try moving the pointer while
+holding the third button down and release it on a different location.
+This selects all objects inside the rectangle and unselects everything
+else.  If you want to add a box selection to an existing selection,
+drag with *Mod1<Btn3Down>* instead.  Dragging *Shift Mod1<Btn3Down>*
+unselects objects in a box.  Now change to *pastebuffer-mode* and
+select some operations from the *Buffer* menu. Copying objects to the
+buffer is available as *Mod1<Key>c* while cutting them uses
+*Mod1<Key>x* as shortcut. Both clear the buffer before new data is
+added.  If you use the menu entries, you have to supply a crosshair
+position by pressing a mouse button. The objects are attached to the
+pastebuffer relative to that crosshair location.  Element data or PCB
+data may be merged into an existing layout by loading the datafiles
+into the pastebuffer. Both operations are available from the *File*
+menu or as user commands.
+
+
+File: pcb.info,  Node: Moving and Copying,  Next: Loading and Saving,  Prev: Drawing and Removing,  Up: Getting Started
+
+Moving and Copying
+==================
+
+   All objects can be moved including element-names, by *<Btn2Down>*,
+draging the pointer while holding the button down and releasing it at
+the new location of the object. If you use *Mod1<Btn2Down>* instead,
+the object is copied. Copying does not work for element-names of
+course. You can move all selected objects with *Shift <Btn1Down>*.
+This uses the Pastebuffer, so it will remove whatever was previously in
+the Pastebuffer.  Please refer to *Note Pastebuffer::.  If you want to
+give a small nudge to an object, but you don't think that the mouse
+will give you the fine level of control that you want, you can position
+the cursor over the object, press *<Key>[*, move it with the arrow
+keys, then press *<Key>]* when it's at the desired position.  Remember
+that all movements are forced onto grid coordinates, so you may want to
+change the grid spacing first.
+
+
+File: pcb.info,  Node: Loading and Saving,  Next: Printing,  Prev: Moving and Copying,  Up: Getting Started
+
+Loading and Saving
+==================
+
+   After your first experience with `Pcb' you will probably want to save
+your work. `:s name' passes the data to an external program which is
+responsible for saving it. For details see *saveCommand* in *Note
+Resources::.  Saving also is available from the *File* menu, either
+with or without supplying a filename. `Pcb' reuses the last filename if
+you do not pass a new one to the save routine.
+
+   To load an existing layout either select *load layout data* from the
+*File* menu or use `:l filename'. A file select box pops up if you
+don't specify a filename. Merging existing layouts into the new one is
+supported either by the *File* menu or by `:m filename'.
+
+   `Pcb' saves a backup of the current layout depending on the resource
+*backup*. The file is named `/tmp/PCB.%i.backup'. During critical
+sections of the program or when data would be lost it is saved as
+`/tmp/PCB.%i.save'.  *%i* is replaced by the process ID.
+
+
+File: pcb.info,  Node: Printing,  Next: Connection Lists,  Prev: Loading and Saving,  Up: Getting Started
+
+Printing
+========
+
+   `Pcb' now has support for device drivers, `PostScript',
+*encapsulated PostScript*, and *Gerber X* drivers are available so far.
+The *Gerber X* driver generates a NC drill file for automated drilling.
+I recommend the use of `GhostScript' if you don't have a `PostScript'
+printer for handling the PostScript output. Printing always generates a
+complete set of files for a specified driver.  See the page about the
+*Print()* action for addtional information about the filenames.  The
+control panel offers a number of options. Most of them are not avilable
+for Gerber output because it wouldn't make sense, for example,  to
+scale the gerber output (you'd get an incorrectly made board!)  The
+options are:
+
+`device'
+     The top menu button selects from the available device drivers.
+
+`rotate'
+     Rotate layout 90 degrees counter-clockwise before printing
+     (default).
+
+`mirror'
+     Mirror layout before printing. Use this option depending on your
+     production line.
+
+`color'
+     Created colored output. All colors will be converted to black if
+     this option is inactive.
+
+`outline'
+     Add a board outline to the output file. The size is determined by
+     the maximum boardsize changeable from the *sizes* menu. The
+     outline appears on the top and bottom sides of the board, but not
+     on the internal layers.  An outline can be useful for determining
+     where to shear the board from the panel, but be aware that it
+     creates a copper line.  Thus it has the potential to cause short
+     circuits if you don't leave enough room from your wiring to the
+     board edge.  Use a viewer to see what the output outline looks like
+     if you want to know what it looks like.
+
+`alignment'
+     Additional alignement targets are added to the output. The
+     distances between the board outline is set by the resource
+     *alignmentDistance*.  Alignment targets should only be used if you
+     know for certain that YOU WILL BE USING THEM YOURSELF.  It is
+     extremely unlikely that you will want to have alignment targets if
+     you send gerber files to a commercial pcb manufacture to be made.
+
+`scaling'
+     It's quite useful to enlarge your printout for checking the layout.
+     Use the scrollbar to adjust the scaling factor to your needs.
+
+`media'
+     Select the size of the output media from this menu. The user
+     defined size may be set by the resource *media* either from one of
+     the well known paper sizes or by a `X11' geometry specification.
+     This entry is only available if you use `X11R5' or later.  For
+     earlier releases the user defined size or, if not available, *A4*
+     is used.  Well known size are:
+          	A3
+          	A4
+          	A5
+          	letter
+          	tabloid
+          	ledger
+          	legal
+          	executive
+
+`offset'
+     Adjust the offsets of the printout by using the panner at the
+     right side of the dialog box.  This entry is only available if you
+     use `X11R5' or later. A zero offset is used for earlier releases.
+
+`8.3 filenames'
+     Select this button to generate DOS compatible filenames for the
+     output files.  The *command* input area will disappear if selected.
+
+`commandline'
+     Use this line to enter a command (starts with `|') or a filename.
+     A %f is replaced by the current filename.  The default is set by
+     the resource *printCommand*.
+
+   The created file includes some labels which are guaranteed to stay
+unchanged
+`PCBMIN'
+     identifies the lowest x and y coordinates in mil.
+
+`PCBMAX'
+     identifies the highest x and y coordinates in mil.
+
+`PCBOFFSET'
+     is set to the x and y offset in mil.
+
+`PCBSCALE'
+     is a floating point value which identifies the scaling factor.
+
+`PCBSTARTDATA'
+`PCBENDDATA'
+     all layout data is included between these two marks. You may use
+     them with an `awk' script to produce several printouts on one
+     piece of paper by duplicating the code and putting some
+     `translate' commands in front.  Note, the normal `PostScript'
+     units are 1/72 inch.
+
+
+File: pcb.info,  Node: Connection Lists,  Next: Selection,  Prev: Printing,  Up: Getting Started
+
+Connection Lists
+================
+
+   After completing parts of your layout you may want to check if all
+drawn connections match the ones you have in mind. This is probably
+best done in conjunction with a net-list file: see *Note Rats Nest::.
+The following examples give more rudimentary ways to examine the
+connections.
+         1) create at least two elements and name them
+         2) create some connections between their pins
+         3) optionally add some vias and connections to them
+
+   Now select *lookup connection* from the *Connections* menu, move the
+cursor to a pin or via and press any mouse button. `Pcb' will look for
+all other pins and/or vias connected to the one you have selected and
+display the objects in a different color.  Now try some of the reset
+options available from the same menu.
+
+   There also is a way to scan all connections of one element. Select
+*a single element* from the menu and press any button at the element's
+location. All connections of this element will be saved to the
+specified file.  Either the layout name of the element or its canonical
+name is used to identify pins depending on the one which is displayed
+on the screen (may be changed by *Display* menu).
+
+   An automatic scan of all elements is initiated by choosing *all
+elements*. It behaves in a similar fashion to scanning a single element
+except the resource *resetAfterElement* is used to determine if
+connections should be reset before a new element is scanned. Doing so
+will produce very long lists because the power lines are rescanned for
+every element. By default the resource is set to *false* for this
+reason.
+
+   To scan for unconnected pins select *unused pins* from the same menu.
+
+
+File: pcb.info,  Node: Selection,  Next: Rats Nest,  Prev: Connection Lists,  Up: Getting Started
+
+Selection
+=========
+
+   Some commands mentioned earlier in this chapter also are able to
+operate on all selected and visible objects.  Now go back to the layout
+and toggle the selection flag of a single one by *<Btn3Down>*. Try
+*<Btn3Down>*, move the pointer while holding the button down and
+release it on a different location.  This selects all objects inside
+the rectangle and unselects everything else.  Dragging with
+*Mod1<Btn3Down>* adds everything in the box to the existing selection.
+Dragging *Shift <Btn3Down>* unselects objects in the box.
+
+   The entries of the *Selection* menu are hopefully self-explanatory.
+Many of the *Action Commands* can take various key words that make them
+function on all or some of the selected items.
+
+
+File: pcb.info,  Node: Rats Nest,  Next: Design Rule Checking,  Prev: Selection,  Up: Getting Started
+
+Rats Nest
+=========
+
+   If you have a netlist that corresponds to the layout you are working
+on, you can use the rats-nest feature to add rat-lines to the layout.
+First you will need to load a netlist file (see *:rn*, *Note User
+Commands::).  *<Key>w* adds rat-lines on the active layer using the
+current line thickness shown in the status line (usually you'll want
+them to be thin lines).  Only those rat-lines that fill in missing
+connectivity (since you have probably routed some connections already)
+are added.  If the layout is already completely wired, nothing will be
+added, and you will get a message that the wiring is complete.
+
+   Rat-lines are lines having the special property that they only
+connect to pins and pads at their end points.  Rat-lines are drawn on
+the screen with a stippled pattern to make them easier to identify
+since they have special behavior and cannot remain in a completed
+layout.  Rat-lines are added in the minimum length straight-line tree
+pattern (always ending on pins or pads) that satisfies the missing
+connectivity in the circuit.  Used in connection with moves and rotates
+of the elements, they are extremely useful for deciding where to place
+elements on the board. The rat-lines will always automatically
+rubberband to the elements whether or not the rubberband mode is on.
+The only way for you to move them is by moving the parts they connect
+to.  This is because it is never desireable to have the rat-lines
+disconnected from their element pins.  Rat-lines will normally
+criss-cross all over which gives rise to the name "rats nest"
+describing a layout connected with them.  If a SMD pad is unreachable
+on the active layer, a warning will be issued about it and the rat-line
+to that pad will not be generated.
+
+   A common way to use rats nests is to place some elements on the
+board, add the rat-lines, and then use a series of moves/rotates of the
+elements until the rats nest appears to have minimum tangling.  You may
+want to iterate this step several times. Don't worry if the layout
+looks messy - as long as you can get a sense for whether the
+criss-crossing is better or worse as you move things, you're fine.
+After moving some elements arround, you may want to optimize the rats
+nest *<Key>o* so that the lines are drawn between the closest points
+(this can change once you've moved components).  Adding rat-lines only
+to selected pads/pins (*Shift<Key>w*) is often useful to layout a
+circuit a little bit at a time.  Sometimes you'll want to delete all
+the rat-lines (*<Key>e*) or selected rat-lines (*Shift<Key>e*) in order
+to reduce confusion.  With a little practice you'll be able to achieve
+a near optimal component placement with the use of a rats nest.
+
+   Rat-lines are not only used for assisting your element placement,
+they can also help you to route traces on the board.  Use the *<Key>m*
+to convert a rat-line under the cursor into a normal line on the active
+layer.  Inserting a point into a rat-line will also cause the two new
+lines to be normal lines on the board.  Another way that you can use
+rat-lines is to use the *<Key>f* with the cursor over a pad or pin.
+All of the pins and pads and rat-lines belonging to that net will be
+highlighted. This is a helpful way to distinguish one net from the rest
+of the rats nest.  You can then route those tracks, turn off the
+highlighting (*Shift<Key>f*) and repeat the process. This will work even
+if the layer that the rat-lines reside on is made invisible - so only
+the pins and pads are highlighted.  Be sure to erase the rat-lines
+(*<Key>e* erases them all) once you've duplicated their connectivity by
+adding your own lines.  When in doubt, the *<Key>o* will delete only
+those rat-lines that are no longer needed.
+
+   If connections exist on the board that are not listed in the netlist
+when *<Key>w* is pressed, warning messages are issued and the affected
+pins and pads are drawn in a special *warnColor* until the next
+*Notify()* event.  If the entire layout agrees completely with the
+netlist, a message informs you that the layout is complete and no
+rat-lines will be added (since none are needed).  If the layout is
+complete, but still has rat-lines then you will be warned that
+rat-lines remain. If you get no message at all it's probably because
+some elements listed in the net list can't be found and where reported
+in an earlier message.  There shouldn't be any rat-lines left in a
+completed layout, only normal lines.
+
+   The *Shift<Key>w* is used to add rat-lines to only those missing
+connections among the selected pins and pads.  This can be used to add
+rat-lines in an incremental manner, or to force a rat-line to route
+between two points that are not the closest points within the net.
+Often it is best to add the rats nest in an incremental fashion, laying
+out a sub-section of the board before going further. This is easy to
+accomplish since new rat-lines are never added where routed
+connectivity already makes the necessary connections.
+
+
+File: pcb.info,  Node: Design Rule Checking,  Prev: Rats Nest,  Up: Getting Started
+
+Design Rule Checking
+====================
+
+   After you've finished laying out a board, you may want to check to
+be certain that none of your interconnections are too closely spaced or
+too tenuously touching to be reliably fabricated. The design rule
+checking (DRC) function does this for you. Use the command ":DRC()"
+(without the quotes of course) to invoke the checker.  If there are no
+problem areas, you'll get a message to that effect.  If any problem is
+encountered, you will get a message about it and the affected traces
+will be highlighted. One part of the tracks of concern will be
+selected, while the other parts of concern will have the
+"FindConnection" highlighting. The screen will automatically be
+centered in the middle of the object having the "FindConnection"
+(Green) highlighting.  The middle of the object is also the coordinates
+reported to be "near" the problem.  The actual trouble region will be
+somewhere on the boundary of this object.  If the two parts are from
+different nets then there is some place where they approach each other
+closer than the minimum rule.  If the parts are from the same net, then
+there is place where they are only barely connected. Find that place
+and connect them better.
+
+   After a DRC error is found and corrected you must run the DRC again
+because the search for errors is halted as soon as the first problem is
+found. Unless you've been extremely careless there should be no more
+than a few design rule errors in your layout.  The DRC checker does not
+check for minimum spacing rules to copper text, so always be very
+careful when adding copper text to a layout.  The rules for the DRC are
+specified in the application resource file.  The minimum spacing value
+(in mils) is given by the *Settings.Bloat* value. The default is 7
+mils. The minimum touching overlap (in mils) is given by the
+*Settings.Shrink* value. This value defaults to 5 mils. Check with your
+fabrication process people to determine the values that are right for
+you.
+
+   If you want to turn off the highlighting produced by the DRC,
+perform an undo (assuming no other changes have been made).  To restore
+the highlighting, use redo.  The redo will restore the highlighting
+quickly without re-running the DRC checker.
+
+
+File: pcb.info,  Node: User Commands,  Next: Command-Line Options,  Prev: Getting Started,  Up: Top
+
+User Commands
+*************
+
+   The entering of user-commands is initiated by the action routine
+*Command()* (the `(":")' character) and finished by either *<Key>Return*
+or *<Key>Escape* to confirm or to abort. These two keybindings cannot
+be changed from the resource file.  The triggering event, normally a
+key press, is ignored.  The input area will replace the bottom
+statusline. It pops up when *Command()* is called. The arguments of the
+user-commands are passed to the external commands without modification.
+See also, the resource *saveInTMP*.
+
+   There are simple *usage* dialogs for each command and one for the
+complete set of commands.
+
+`l [filename]'
+     Loads a new datafile (layout) and, if confirmed, overwrites any
+     existing unsaved data.  The filename and the searchpath
+     (*filePath*) are passed to the command defined by *fileCommand*.
+     If no filename is specified a file select box will popup.
+
+`le [filename]'
+     Loads an element description into the paste buffer.  The filename
+     and the searchpath (*elementPath*) are passed to the command
+     defined by *elementCommand*.  If no filename is specified a file
+     select box will popup.
+
+`m [filename]'
+     Loads an layout file into the paste buffer.  The filename and the
+     searchpath (*filePath*) are passed to the command defined by
+     *fileCommand*.  If no filename is specified a file select box will
+     popup.
+
+`q[!]'
+     Quits the program without saving any data (after confirmation).
+     q! doesn't ask for confirmation, it just quits.
+
+`s [filename]'
+     Data and the filename are passed to the command defined by the
+     resource *saveCommand*. It must read the layout data from *stdin*.
+     If no filename is entered, either the last one is used again or,
+     if it is not available, a file select box will pop up.
+
+`rn [filename]'
+     Reads in a netlist file.  If no filename is given a file select
+     box will pop up.  The file is read via the command defined by the
+     *RatCommand* resource. The command must send its output to
+     *stdout*.  The netlist received by pcb must have this simple text
+     form:
+
+     netname NAME-PINNUM NAME2-PINNUM2 NAME3-PINNUM3 ... [\]
+
+     where "netname" is the name of the net (currently its value is
+     ignored but it must be present nonetheless), NAME is the
+     layout-name given to an element, and PINNUM is the (usually
+     numeric) pin number of the element that is part of the net (see
+     *Note Element Objects:: for details on pin numbering).  Spaces or
+     tabs separate the fields.  If the line ends with a "\" the net
+     continues on the next line and the "\" is treated exactly as if it
+     were a space.  If the NAME ends with a lower-case letter, all
+     lower-case letters are stripped from end of the NAME to determine
+     the matching name-on-board name.  For example:
+
+     Data U1-3 U2abc-4 FLOP1a-7 Uabc3-A9
+
+     would specifiy that pin 3 of U1 be connected to pin 4 of U2, to
+     pin 7 of FLOP1 and to pin A9 of Uabc3.  Note that if pin numbers
+     contain alphabetic characters, they must match the case contained
+     in the "number" string defining the pin number on the
+     cooresponding element.  It is up to you to name the elements so
+     that their layout-names agrees with the netlist.  Netlists are
+     used for generating rats nest (see *Note Rats Nest::) and for
+     verifying the board layout (which is also accomplished by the
+     *Ratsnest* command.
+
+`w[q] [filename]'
+     These commands have been added for the convenience of `vi' users
+     and have the same functionality as *s* combined with *q*.
+
+`actionCommand'
+     Causes the actionCommand to be executed.  This allows you to
+     initiate actions for which no bindings exist in the resource file.
+     It can be used to initiate any action with whatever arguments you
+     enter.  This makes it possible to do things that otherwise would
+     be extremely tedious.  For example, to change the drilling hole
+     diameter of all vias in the layout to 32 mils, you could select
+     everything using the selection menu, then type
+     "*:ChangeDrillSize(SelectedVias, 32)*".  (This will only work
+     provided the via's diameter is sufficiently large to accomodate a
+     32 mil hole).  Another example might be to set the grid to 1 mil
+     by typing "*:SetValue(Grid, 1)*".  Note that some actions use the
+     current cursor location, so be sure to place the cursor where you
+     want before entering the command.  This is one of my favorite new
+     features in 1.5 and can be a powerful tool. Study the *Note
+     Actions:: section to see what actions are available.
+
+
+File: pcb.info,  Node: Command-Line Options,  Next: X11 Interface,  Prev: User Commands,  Up: Top
+
+Command-Line Options
+********************
+
+   There are several resources which may be set or reset in addition to
+the standard toolkit command-line options. For a complete list refer to
+*Note Resources::.
+
+   The synopsis is:
+
+   `pcb [-option ...] [-toolkit_option ...] [layout-file]'
+
+   or
+
+   `pcb -specialoption'
+
+* Menu:
+
+* Options::                `Pcb' command-line options.
+* Special Options::        Version and copyright information.
+
+
+File: pcb.info,  Node: Options,  Next: Special Options,  Up: Command-Line Options
+
+Options
+=======
+
+`-alldirections/+alldirections'
+     Disables or enables line clipping to 45 degree angles. Overwrites
+     the resource *allDirectionLines*.
+
+`-backup value'
+     Time between two backups in seconds. Passing zero disables the
+     backup feature.  Overwrites the resource *backupInterval*.
+
+`-c value'
+     Number of characters per output line. The resource
+     *charactersPerLine* is overwritten.
+
+`-fontfile filename'
+     The default set of symbols (font) for a new layout is read from
+     this file.  All directories as defined by the resource *fontPath*
+     are scanned for the file. The scan is only performed if the
+     filename doesn't contain a directory component. The *fontFile*
+     resource is changed.
+
+`-lelement command-line'
+     Sets the command to be executed when an element is loaded from a
+     file to the paste buffer. The command may contain %f and %p to
+     pass the requested filename and the searchpath to the command. It
+     must write the data to its standard output. The related resource
+     is *elementCommand*.
+
+`-lfile command-line'
+     Sets the command to be executed when a new layout is loaded from a
+     file.  The command may contain %f and %p to pass the requested
+     filename and the searchpath to the command. It must write the data
+     to its standard output. The related resource is *fileCommand*.
+
+`-lfont command-line'
+     Sets the command to be executed when a font is loaded from a file.
+     The command may contain %f and %p to pass the requested filename
+     and the searchpath to the command. It must write the data to its
+     standard output. The related resource is *fontCommand*.
+
+`-lg layergroups'
+     This option overwrites the resource *layerGroups*. See its
+     description for more information. The value is used for new
+     layouts only.
+
+`-libname filename'
+     The default filename for the library. Overwrites the resource
+     *libraryFilename*.
+
+`-libpath path'
+     The default search path for the the library. Overwrites the
+     resource *libraryPath*.
+
+`-llib command-line'
+     Sets the command to be executed when an element is loaded from the
+     library.  The command may contain %f and %p to pass the requested
+     filename and the searchpath to the command. %a is replaces by the
+     three arguments *template*, *value* and *package*. The command
+     must write the data to its standard output. The related resource
+     is *libraryCommand*.
+
+`-llibcont command-line'
+     The command lists the contents of the library.  The command may
+     contain %f and %p to pass the library filename and the searchpath
+     to the command. Also refer to *Note Library File:: and *Note
+     Library Contents File::.  The related resource is
+     *libraryContentsCommand*.
+
+`-loggeometry geometry'
+     Determines the geometry of the log window.
+
+`-pnl value'
+     Restricts the displayed length of the name of a pin in the pinout
+     window to the passed value. See also, the resource
+     *pinoutNameLength*.
+
+`-pz value'
+     Sets the zoom factor for the pinout window according to the
+     formula: scale = 1:(2 power value). The related resource is
+     *pinoutZoom*.
+
+`-reset/+reset'
+     If enabled, all connections are reset after each element is
+     scanned.  This feature is only used while scanning connections to
+     all elements.  See also, *resetAfterElement*.
+
+`-ring/+ring'
+     Overrides the resource *ringBellWhenFinished*. If enabled, the bell
+     sounds when connection searching has finished.
+
+`-rs string'
+     Overrides the resource *routeStyle*. The string defines a colon
+     separated list of route styles. The route styles consist of a
+     comma separated list of name, line thickness, via diameter, and
+     via drill size.  e.g.
+     "Fat,50,100,40:Skinny,8,35,20:75Ohm,110,110,20"
+
+`-s/+s'
+     Enables/Disables the saving of the previous commandline. Overrides
+     the *saveLastCommand* resource.
+
+`-save/+save'
+     See the resource description of *saveInTMP* for details.
+
+`-sfile command-line'
+     Sets the command to be executed when an layout file is saved.  The
+     command may contain %f which is replaced by the filename. The
+     command must read its data from the standard input.  The resource
+     *saveCommand* is overwritten.
+
+`-size <width>x<height>'
+     Overrides the resource *size* which determines the maximum size of
+     a layout.
+
+`-v value'
+     Sets the volume of the X speaker. The value is passed to `XBell()'
+     and must be in the range -100..100.
+
+
+File: pcb.info,  Node: Special Options,  Prev: Options,  Up: Command-Line Options
+
+Special Options
+===============
+
+   There are some special options available in addition to normal
+command line options. Each of these must be the only option specified
+on a command line.  The available special options are:
+
+`-copyright'
+     Prints out the copyright notice and terminates.
+
+`-version'
+     Prints out the version ID and terminates.
+
+`-help'
+     Prints out the usage message and terminates.
+
+
+File: pcb.info,  Node: X11 Interface,  Next: File Formats,  Prev: Command-Line Options,  Up: Top
+
+X11 Interface
+*************
+
+   This chapter gives an overview about the additional `X11' resources
+which are defined by `Pcb' as well as the defined action routines.
+
+* Menu:
+
+* Resources::      Non-standard `X11' application resources.
+* Actions::        A list of available action routines.
+* Translations::   A list of the default key translations (as shipped).
+
+
+File: pcb.info,  Node: Resources,  Next: Actions,  Up: X11 Interface
+
+Non-Standard X11 Application Resources
+======================================
+
+   In addition to the toolkit resources, `Pcb' defines the following
+resources:
+
+`absoluteGrid (boolean)'
+     Selects if either the grid is relative to the position where it
+     has changed last or absolute, the default, to the origin (0,0).
+
+`alignmentDistance (dimension)'
+     Specifies the distance between the boards outline to the alignment
+     targets.
+
+`allDirectionLines (boolean)'
+     Enables (default) or disables clipping of new lines to 45 degree
+     angles.
+
+`backupInterval (int)'
+     `Pcb' has an automatic backup feature which saves the current data
+     every n seconds. The default is *300* seconds. A value of zero
+     disables the feature. The backup file is named
+     `/tmp/PCB.%i.backup'.  *%i* is replaced by the process ID.  See
+     also, the command-line option *-backup*.
+
+`Bloat (dimension)'
+     Specifies the minimum spacing design rule in mils.
+
+`charactersPerLine (int)'
+     `Pcb' uses this value to determine the page width when creating
+     lists.  N, the number of characters per line, defaults to *80*.
+     See also, the command-line option *-c*.
+
+`connectedColor (color)'
+     All pins, vias, lines and rectangles which are selected during a
+     connection search are drawn with this color. The default value is
+     determined by *XtDefaultForeground*.
+
+`crosshairColor (color)'
+     This color is used to draw the crosshair cursor. The color is a
+     result of a *XOR* operation with the contents of the drawing area.
+     The result also depends on the default colormap of the `X11'
+     server because only the colormap index is used in the boolean
+     operation and `Pcb' doesn't create its own colormap. The default
+     setting is *XtDefaultForeground*.
+
+`elementColor (color)'
+`elementSelectedColor (color)'
+     The elements package part is drawn in these colors, for normal and
+     selected mode, respectively, which both default to
+     *XtDefaultForeground*.
+
+`elementCommand (string)'
+     `Pcb' uses a user defined command to read element files. This
+     resources is used to set the command which is executed by the
+     users default shell.  Two escape sequences are defined to pass the
+     selected filename (%f) and the current search path (%p). The
+     command must write the element data to its standard output. The
+     default value is
+              M4PATH="%p";export M4PATH;echo 'include(%f)' | m4
+     Using the GNU version of `m4' is highly recommended.  See also,
+     the command-line option *-lelement*.
+
+`elementPath (string)'
+     A colon separated list of directories or commands (starts with
+     '|').  The path is passed to the program specified in
+     *elementCommand* together with the selected elementname. A
+     specified command will be executed in order to create entries for
+     the fileselect box. It must write its results to *stdout* one
+     entry per line.  See also, the user-command *le[!]*.
+
+`fileCommand (string)'
+     The command is executed by the user's default shell whenever
+     existing layout files are loaded. Data is read from the command's
+     standard output.  Two escape sequences may be specified to pass
+     the selected filename (%f) and the current search path (%p). The
+     default value is:
+              cat %f
+     See also, the command-line option *-lfile*.
+
+`filePath (string)'
+     A colon separated list of directories or commands (starts with
+     '|').  The path is passed to the program specified in
+     *fileCommand* together with the selected filename. A specified
+     command will be executed in order to create entries for the
+     fileselect box. It must write its results to *stdout* one entry
+     per line.  See also, the user-command *l[!]*.
+
+`fontCommand (string)'
+     Loading new symbol sets also is handled by an external command.
+     You again may pass the selected filename and the current search
+     path by passing %f and %p in the command string. Data is read from
+     the commands standard output. This command defaults to
+              cat %f
+     See also, the command-line option *-lfont*.
+
+`fontFile (string)'
+     The default font for new layouts is read from this file which is
+     searched in the directories as defined by the resource *fontPath*.
+     Searching is only performed if the filename does not contain a
+     directory component.  The default filename is `default_font'.  See
+     also, the command-line option *-fontfile*.
+
+`fontPath (string)'
+     This resource, a colon separated list of directories, defines the
+     searchpath for font files. See also, the resource *fontFile*.
+
+`grid (int)'
+     This resources defines the initial value of one cursor step. It
+     defaults to *100 mil* and any changes are saved together with the
+     layout data.
+
+`gridColor (color)'
+     This color is used to draw the grid. The color is a result of a
+     *INVERT* operation with the contents of the drawing area. The
+     result also depends on the default colormap of the `X11' server
+     because only the colormap index is used in the boolean operation
+     and `Pcb' doesn't create its own colormap. The default setting is
+     *XtDefaultForeground*.
+
+`elementColor (color)'
+     Elements localted on the opposite side of the board are drawn in
+     this color.  The default is *XtDefaultForeground*.
+
+`layerColor1..8 (color)'
+`layerSelectedColor1..8 (color)'
+     These resources define the drawing colors of the different layers
+     in normal and selected state. All values are preset to
+     *XtDefaultForeground*.
+
+`layerGroups (string)'
+     The argument to this resource is a colon separated list of comma
+     separated layernumbers (1..8). All layers within one group are
+     switched on/off together. The default setting is *1:2:3:...:8*
+     which means all layers are handled separatly. Grouping layers one
+     to three looks like *1,2,3:4:...:8* See also, the command-line
+     option *-lg*.
+
+`layerName1..8 (string)'
+     The default name of the layers in a new layout are determined by
+     these resources. The defaults are empty strings.
+
+`libraryCommand (string)'
+     `Pcb' uses a command to read element data from libraries.  The
+     resources is used to set the command which is executed by the users
+     default shell.  Three escape sequences are defined to pass the
+     selected filename (%f), the current search path (%p) as well (%a)
+     as the three parameters *template*, *value* and *package* to the
+     command.  It must write the element data to its standard output.
+     The default value is
+              /usr/X11R6/lib/X11/pcb/QueryLibrary.sh %p %f %a
+
+`libraryContentsCommand (string)'
+     Similar to *libraryCommand*, `Pcb' uses the command specified by
+     this resource to list the contents of a library.
+          	/usr/X11R6/lib/X11/pcb/ListLibraryContents.sh %p %f
+     is the default.
+
+`libraryFilename (string)'
+     The resource specifies the name of the library. The default value
+     is *pcblib*.
+
+`libraryPath (string)'
+     A colon separated list of directories that will be passed to the
+     commands specified by *elementCommand* and
+     *elementContentsCommand*.
+
+`lineThickness (dimension)'
+     The value, int the range [1..250], defines the initial thickness
+     of new lines. The value is preset to *ten mil*.
+
+`media (<predefined> | <width>x<height>+-<left_margin>+-<top_margin>)'
+     The default (user defined) media of the `PostScript' device.
+     Predefined values are *a3*, *a4*, *a5*, *letter*, *tabloit*,
+     *ledger*, *legal*, and *executive*.  The second way is to specify
+     the medias width, height and margins in mil.  The resource
+     defaults to *a4* size.
+
+`offLimitColor (color)'
+     The area outside the current maximum settings for width and height
+     is drawn with this color. The default value is determined by
+     *XtDefaultBackground*.
+
+`pinColor (color)'
+`pinSelectedColor(color)'
+     This resource defines the drawing color of pins and pads in both
+     states.  The values are preset to *XtDefaultForeground*.
+
+`pinoutFont (string)'
+     This fonts are used to display pin names. There is one font for
+     each zoom value. The values are preset to *XtdefaultFont*.
+
+`pinoutNameLength (int)'
+     This resource limits the number of characters which are displayed
+     for pin names in the pinout window. By default the string length
+     is limited to *eight* characters per name.  See also, the
+     command-line option *-pnl*.
+
+`pinoutOffsetX (int)'
+`pinoutOffsetY (int)'
+     These resources determine the offset in *mil* of the circuit from
+     the upper left corner of the window when displaying pinout
+     information.  Both default to *100 mil*.
+
+`pinoutTextOffsetX (int)'
+`pinoutTextOffsetY (int)'
+     The resources determine the distance in mil between the drilling
+     hole of a pin to the location where its name is displayed in the
+     pinout window.  They default to *X:50* and *Y:0*.
+
+`pinoutZoom (int)'
+     Sets the zoom factor for the pinout window according to the
+     formula: scale = 1:(2 power value). Its default value is *two*
+     which results in a *1:4* scale.  See also, the command-line option
+     *-pz*.
+
+`printCommand (string)'
+     Default file for printouts. If the name starts with a '|' the
+     output is piped through the command. A %f is replaced by the
+     current filename.  There is no default file or command.
+
+`raiseLogWindow (boolean)'
+     The log window will be raised when new messages arrive if this
+     resource is set *true*, the default.
+
+`ratCommand (string)'
+     Default command for reading a netlist. A %f is replaced by the
+     netlist filename. Its default value is "*cat %f*".
+
+`ratPath (string)'
+     Default path to look for netlist files. It's default value is "."
+
+`resetAfterElement (boolean)'
+     If set to *true*, all found connections will be reset before a new
+     element is scanned. This will produce long lists when scanning the
+     whole layout for connections. The resource is set to *false* by
+     default.  The feature is only used while looking up connections of
+     all elements.  See also, the command-line option *-reset, +reset*.
+
+`ringBellWhenFinished (boolean)'
+     Whether to ring the bell (the default) when a possibly lengthy
+     operation has finished or not.  See also, the command-line option
+     *-ring, +ring*.
+
+`routeStyle (string)'
+     Default values for the menu of routing styles (seen in the sizes
+     menu).  The string is a comma separated list of name, line
+     thickness, via diameter, and via drill size.  e.g.
+     "Fat,50,100,40:Skinny,8,35,20:75Ohm,110,110,20" See also, the
+     command-line option *-rs* and *Sizes Menu*
+
+`rubberBandMode (boolean)'
+     Whether rubberband move and rotate (attached lines stretch like
+     rubberbands) is enabled (the default).
+
+`saveCommand (string)'
+     This command is used to save data to a layout file. The filename
+     may be indicated by placing `%f' in the string. It must read the
+     data from its standard input.  The default command is:
+              cat - > %f
+     See also, the command-line option *-sfile*.
+
+`saveInTMP (boolean)'
+     Enabling this resource will save all data which would otherwise be
+     lost in a temporary file `/tmp/PCB.%i.save'.  *%i* is replaced by
+     the process ID.  As an example, loading a new layout when the old
+     one hasn't been saved would use this resource.  See also, the
+     command-line option *-save, +save*.
+
+`saveLastCommand (boolean)'
+     Enables the saving of the last entered user command. The option is
+     *disabled* by default.  See also, the command-line option *-s, +s*.
+
+`Shrink (dimension)'
+     Specifies the minimum overlap (touching) design rule in mils.
+
+`size (<width>x<height>)'
+     Defines the width and height of a new layout. The default is
+     *7000x5000*.
+
+`stipllePolygons (boolean)'
+     Determines whether to display polygons on the screen with a
+     stippled pattern.  Stippling can create some amount of
+     transperency so that you can still (to some extent) see layers
+     beneath polygons.  It defaults to False.
+
+`textScale (dimension)'
+     The font scaling in percent is defined by this resource. The
+     default is *100* percent.
+
+`useLogWindow (boolean)'
+     Several subroutines send messages to the user if an error occurs.
+     This resource determines if they appear inside the log window or
+     as a separate dialog box. See also, the resource *raiseLogWindow*
+     and the command line option *-loggeometry*.  The default value is
+     *true*.
+
+`viaColor (color)'
+
+`viaSelectedColor (color)'
+     This resource defines the drawing color of vias in both states.
+     The values are preset to *XtDefaultForeground*.
+
+`viaThickness (dimension)'
+`viaDrillingHole (dimension)'
+     The initial thickness and drilling hole of new vias. The values
+     must be in the range [30..250] with at least 20 mil of copper.
+     The default thickness is *40 mil* and the default drilling hole is
+     *20 mil*.
+
+`volume (int)'
+     The value is passed to `XBell()' which sets the volume of the `X'
+     speaker.  The value lies in the range -100..100 and it defaults to
+     the maximum volume of *100*.
+
+`warnColor (color)'
+     This resources defines the color to be used for drawing pins and
+     pads when a warning has been issued about them.
+
+`zoom (int)'
+     The initial value for output scaling is set according to the
+     following formula: scale = 1:(2 power value). It defaults to
+     *three* which results in an output scale of *1:8*.
+
+   Refer also to *Note Command-Line Options::.
+
+
+File: pcb.info,  Node: Actions,  Next: Translations,  Prev: Resources,  Up: X11 Interface
+
+Actions
+=======
+
+   All user accessible commands may be bound to almost any `X' event.
+Almost no default binding for commands is done in the binaries, so it
+is vital for the application that at least a system-wide application
+resource file exists.  This file normally resides in the
+`X11/lib/app-defaults' directory and is called `Pcb'. The bindings to
+which the manual refers to are the ones as defined by the shipped
+resource file. Besides binding an action to an X11 event, you can also
+execute any action command using a ":" command (see *Note User
+Commands::).
+
+   Take special care about translations related to the functions keys
+and the pointer buttons because most of the window managers use them
+too.  Change the file according to your hardware/software environment.
+You may have to replace all occurances of *baseTranslations* to
+*translations* if you use a `X11R4' server.
+
+   Passing *Object* as an argument to an action routine causes the
+object at the cursor location to be changed, removed or whatever. If
+more than one object is located at the crosshair position the smallest
+type is used.  If there are two of the same type the newer one is taken.
+*SelectedObjects* will handle all selected and visible objects.
+
+`AddRats(AllRats|SelectedRats)'
+     Adds rat-lines to the layout using the loaded netlist file (see
+     the *:rn*, *Note User Commands::.). Rat lines are added on the
+     active layer using the current line thickness shown in the status
+     line.  Only missing connectivity is added by the AddRats command
+     so if, for example, the layout is complete nothing will be added.
+     Rat lines are drawn on the screen with a stippled pattern to make
+     them easier to identify since they cannot appear in a completed
+     layout.  The rat-lines are added in the minimum length
+     straight-line tree pattern (always ending on pins or pads) that
+     satisfies the missing connectivity in the circuit.  If a SMD pad
+     is unreachable on the active layer, a warning will be issued about
+     it and the rat-line to that pad will not be generated.  If
+     connections exist on the board which are not listed in the netlist
+     while AllRats are being added, warning messages will be issued and
+     the affected pins and pads will be drawn in a special *warnColor*
+     until the next *Notify()* event.  If the entire layout agrees
+     completely with the net-list a message informs you that the layout
+     is complete and no rat-lines are added (since none are needed).
+     If *SelectedRats* is passed as the argument, only those missing
+     connections that might connect among the selected pins and pads
+     are drawn.  Default:
+          None<Key>w:	AddRats(AllRats)
+          !Shift<Key>w:	AddRats(SelectedRats)
+          None<Key>o:	DeleteRats(AllRats) AddRats(AllRats)
+          !Shift<Key>o:	DeleteRats(SelectedRats) AddRats(SelectedRats)
+
+`Atomic(Save|Restore|Block|Close)'
+     Controls the undo grouping of sequences of actions. Before the
+     first action in a group, Atomic(Save) should be issued.  After
+     each action that might be undoable, Atomic(Restore) should be
+     issued.  Atomic(Block) concludes and save the undo grouping if
+     there was anything in the group to undo.  Atomic(Close) concludes
+     and save the undo grouping even if nothing was actually done.
+     Thus it might produce an "empty" undo.  This can be useful when
+     you want to use undo in a group of actions.
+
+`Bell([-100..100])'
+     Rings the bell of your display. If no value is passed the setting
+     of the resource *volume* will be used.
+
+`ChangeDrillSize(Object, value)'
+`ChangeDrillSize(SelectedPins|SelectedVias, value)'
+     This action routine changes the drilling hole of pins and vias.
+     If *value* starts with + or -, then it adds (or subtracts) *value*
+     from the current hole diameter, otherwise it sets the diameter to
+     the value.  Default:
+          !Mod1<Key>s:       Change2ndSize(Object, +5)
+          !Mod1 Shift<Key>s: Change2ndSize(Object, -5)
+
+`ChangeHole(Object|SelectedVias)'
+     This action routine converts a via to and from a hole.  A hole is
+     a via that has no copper annulus. The drill size for the via
+     determines the hole diameter.
+          !Ctrl<Key>h:	ChangeHole(Object)
+
+`ChangeName(Object)'
+`ChangeName(Layer|Layout)'
+     Changes the name of the visible object at the cursor location. A
+     text object doesn't have a name therefore the text string itself
+     is changed.  The element name currently used for display is always
+     the one changed with this command.  See
+     *Display(Description|NameOnPCB|Value)* for details.  Passing
+     *Layer* changes the current layers name.  Default:
+          None<Key>n: ChangeName(Object)
+
+`ChangeOctagon(Object|SelectElements|SelectedPins|SelectedVias|Selected)'
+     Toggles what shape the affected pin(s) or via(s) will be drawn
+     when they are not square. The shape will either be round or
+     octagonal.  Default:
+          !Ctrl<Key>o: ChangeOctagon(Object)
+
+`ChangeSize(Object, value)'
+`ChangeSize(SelectedLines|SelectedPins|SelectedVias, value)'
+`ChangeSize(SelectedPads|SelectedTexts|SelectedNames, value)'
+`ChangeSize(SelectedElements, value)'
+     To change the size of an object you have to bind these action to
+     some `X' event (or use :ChangeSize(...)).  If *value* begins with
+     a + or - then the value will be added (or subtracted) from the
+     current size, otherwise the size is set equal to *value*. Range
+     checking is done to insure that none of the maximum/minimums of
+     any size are violated.  If *Object* is passed then a single object
+     at the cursor location is changed. If any of the *Selected*
+     arguments are passed then all selected and visible objects of that
+     type are changed. If the type being modified is an element, then
+     the thickness of the silkscreen lines defining the element is
+     changed.  Default:
+          None<Key>s:   ChangeSize(Object, +5)
+          !Shift<Key>s: ChangeSize(Object, -5)
+
+`ChangeSquare(Object|SelectedElements|SelectedPins)'
+     Toggles the setting of the square flag. The flag is used to
+     identify a certain pin, normally the first one, of circuits. It is
+     also used to make SMD pads have square ends.
+          None<Key>q:   ChangeSquare(Object)
+
+`Command()'
+     Calling *Command()* pops up an input line at the bottom of the
+     window which allows you to enter commands. Including all action
+     commands!  The dialog ends when *None<Key>Return* to confirm or
+     *None<Key>Escape* to abort is entered.  Default:
+          <Key>colon: Command()
+
+`Connection(Find)'
+`Connection(ResetFoundLinesAndRectangles|ResetPinsViasAndPads|Reset)'
+     The *Connection()* action is used to mark all connections from one
+     pin, line or via to others.  The *ResetFoundLinesAndRectangles,
+     ResetFoundPinsAndVias* and *Reset* arguments may be used to reset
+     all marked lines and rectangles, vias and pins or all of them. The
+     search starts with the pin or via at the cursor position. All
+     found objects are drawn with the color defined by the resource
+     *connectedColor*.  See also,
+     *Display(Description|NameOnPCB|Value)*.  Default:
+          !Shift<Key>c: Connection(Reset)
+          None<Key>f:   Connection(Find)
+          !Shift<Key>f: Connection(Reset)
+
+`DeleteRats(AllRats|SelectedRats)'
+     This routine deletes either all rat-lines in the layout, or only
+     the selected and visible ones. Non-rat-lines and other layout
+     objects are unaffected.  Default:
+          None<Key>e:   DeleteRats(AllRats)
+          !Shift<Key>e: DeleteRats(SelectedRats)
+
+`Display(Description|NameOnPCB|Value)'
+`Display(Toggle45Degree|CycleClip)'
+`Display(Grid|ToggleGrid)'
+`Display(ToggleRubberBandMode)'
+`Display(Center|ClearAndRedraw|Redraw)'
+`Display(Pinout|PinOrPadName)'
+     This action routines handles some output related settings. It is
+     used to center the display around the cursor location and to
+     redraw the output area optionally after clearing the window.
+     Centering is done with respect to the *grid* setting. Displaying
+     the grid itself may be switched on and off by *Grid* but only if
+     the distance between two pixels exceeds 1_DISTANCE pixels.  `Pcb'
+     is able to handle several labels of an element. One of them is a
+     description of the functionality (eg resistor), the second should
+     be a unique identifier (R1) whereas the last one is a value (100k).
+     The *Display()* action selects which of the names is displayed.
+     It also controls which name will be affected by the *ChangeName*
+     command.  If *ToggleGrid* is passed, `Pcb' changes between relative
+     ('rel' in the statusline) and absolute grid (an 'abs' in the
+     statusline).  Relative grid means the pointer position when the
+     command is issued is used as the grid origin; while (0,0) is used
+     in the absolute grid case.  Passing *Pinout* displays the pinout
+     of the element at the current cursor location whereas
+     *PinOrPadName* toggles displaying of the pins or pads name under
+     the cursor. If none of them matches but the cursor is inside of an
+     element, the flags is toggled for all of its pins and pads.  For
+     details about rubberbands see also the details about *Mode*.
+     Default:
+          None<Key>c:  Display(Center)
+          None<Key>d:  Display(PinOrPadName)
+          !Shift<Key>d: Display(Pinout)
+          None<Key>r:  Display(ClearAndRedraw)
+          None<Key>.:  Display(Toggle45Degree)
+          None<Key>/:  Display(CycleClip)
+
+`DRC()'
+     Initiates design rule checking of the entire layout. Must be
+     repeated until no errors are found.
+
+`EditLayerGroups()'
+     Pops up a dialog box to edit the layergroup setting. The function
+     is also available from the *Objects* menu.  There are no defaults.
+
+`Load(ElementToBuffer|Layout|LayoutToBuffer|Nelist)'
+     This routine pops up a fileselect box to load layout, element data,
+     or netlist.  The passed filename for layout data is saved and may
+     be reused.  *ElementToBuffer* and *LayoutToBuffer* load the data
+     into the current buffer.  There are no defaults.
+
+`MarkCrosshair()'
+     This routine marks the current cursor location with an X, and then
+     the cursor display shows both absolute position and position
+     relative to the mark.  If a mark is already present, this routine
+     removes it and stops displaying relative cursor coordinates.
+     Defaults:
+          !Ctrl<key>m:	MarkCrosshair()
+
+`Mode(Copy|InsertPoint|Line|Move|None|PasteBuffer|Polygon|Thermal)'
+`Mode(Remove|Rectangle|RubberbandMove|Text|Via)'
+`Mode(Cycle)'
+`Mode(Notify)'
+`Mode(Save|Restore)'
+     Switches to a new mode of operation. The active mode is displayed
+     by a thick line around the matching mode selector button.  Most of
+     the functionality of `Pcb' is implemented by selecting a mode and
+     calling *Mode(Notify)*. The arguments *Line*, *Polygon*,
+     *Rectangle*, *Text* and *Via* are used to create the appropriate
+     object whenever *Mode(Notify)* is called. Some of them, such as
+     *Polygon*, need more than one call for one object to be created.
+     *InsertPoint* adds points to existing polygons or lines.  *Save*
+     and *Restore* are used to temporarily save the mode, switch to
+     another one, call *Mode(Notify)* and restore the saved one. Have a
+     look at the application resource file for examples.  *Copy* and
+     *Move* modes are used to change an object's location and,
+     optionally, to create a new one. The first call of *Mode(Notify)*
+     attaches the object at the pointer location to the crosshair
+     whereas the second one drops it to the layout. The *rubberband*
+     version of move performs the move while overriding the current
+     rubberband mode.  Passing *PasteBuffer* attaches the contents of
+     the currently selected buffer to the crosshair. Each call to
+     *Mode(Notify)* pastes this contents to the layout. *Mode(Cycle)*
+     cycles through the modes available in the mode-button pallete.
+     *Mode(None)* switches all modes off.  Default:
+          <Key>Escape:             Mode(None)
+          <Key>space:              Mode(Cycle)
+          None<Key>BackSpace:      Mode(Save) Mode(Remove) Mode(Notify) Mode(Restore)
+          None<Key>Delete:         Mode(Save) Mode(Remove) Mode(Notify) Mode(Restore)
+          None<Key>F1:             Mode(Via)
+          None<Key>F2:             Mode(Line)
+          None<Key>F3:             Mode(PasteBuffer)
+          None<Key>F4:             Mode(Rectangle)
+          None<Key>F5:             Mode(Text)
+          None<Key>F6:             Mode(Polygon)
+          None<Key>F7:             Mode(Thermal)
+          None<Key>F8:		 Mode(Arc)
+          None<Key>Insert:         Mode(InsertPoint)
+          None<Key>[:              Mode(Save) Mode(Move) Mode(Notify)
+          None<Key>]:              Mode(Notify) Mode(Restore)
+          None<Btn1Down>:          Mode(Notify)
+          !Shift Ctrl<Btn1Down>:   Mode(Save) Mode(Remove) Mode(Notify) Mode(Restore)
+          None<Btn2Down>:          Mode(Save) Mode(Move) Mode(Notify)
+          None<Btn2Up>:            Mode(Notify) Mode(Restore)
+          !Mod1<Btn2Down>:       Mode(Save) Mode(Copy) Mode(Notify)
+          !Mod1<Btn2Up>:         Mode(Notify) Mode(Restore)
+          Shift Mod1<Btn2Down>: Mode(Save) Mode(RubberbandMove) Mode(Notify)
+
+`MovePointer(delta_x, delta_y)'
+     With this function it is possible to move the crosshair cursor by
+     using the cursor keys. The `X' server's pointer follows because
+     the necessary events are generated by `Pcb'. All movements are
+     performed with respect to the currently set grid value.  Default:
+          None<Key>Up:      MovePointer(0, -1)
+          !Shift<Key>Up:    MovePointer(0, -10)
+          None<Key>Down:    MovePointer(0, 1)
+          !Shift<Key>Down:  MovePointer(0, 10)
+          None<Key>Right:   MovePointer(1, 0)
+          !Shift<Key>Right: MovePointer(10, 0)
+          None<Key>Left:    MovePointer(-1, 0)
+          !Shift<Key>Left:  MovePointer(-10, 0)
+
+`MoveToCurrentLayer(Object|SelectedObjects)'
+     The function moves a single object at the crosshair location or
+     all selected objects to the current layer. Elements are not
+     moveable by this function.  They have to be deleted and replaced
+     on the other side.  If a line segment is moved and the movement
+     would result in a loss of connectivity to another segment then
+     via(s) are automatically added to maintain the connectivity.
+          None<Key>m:       MoveToCurrentLayer(Object)
+          !Shift<Key>m:     MoveToCurrentLayer(SelectedObjects)
+
+`New()'
+     Clear the current layout and starts a new one after entering its
+     name.  Refer to the resource *backup* for more information.  No
+     defaults.
+
+`PasteBuffer(AddSelected|Clear|1..5)'
+`PasteBuffer(Rotate, 1..3)'
+`PasteBuffer(Convert)'
+     This action routine controls and selects the pastebuffer as well
+     as all cut-and-paste operations. Passing a buffer number selects
+     one in of the range 1..5. The statusline is updated with the new
+     number.  *Rotate* performs a number of 90 degree counter clockwise
+     rotations of the buffer contents. *AddSelected* as first argument
+     copies all selected and visible objects into the buffer. Passing
+     *Clear* removes all objects from the currently selected buffer.
+     *Convert* causes the contents of the buffer (lines, arc, vias) to
+     be converted into an element definition. Refer to *Note
+     Pastebuffer:: for examples.  Default:
+          !Ctrl<Key>x:       PasteBuffer(Clear) PasteBuffer(AddSelected)
+                             Mode(PasteBuffer)
+          !Shift Ctrl<Key>x: PasteBuffer(Clear) PasteBuffer(AddSelected)
+                             RemoveSelected() Mode(PasteBuffer)
+          !Mod1<Key>c:       PasteBuffer(Clear) PasteBuffer(AddSelected)
+          !Mod1<key>x:       PasteBuffer(Clear) PasteBuffer(AddSelected)
+          		   RemoveSelected()
+          !Shift<Key>1:      PasteBuffer(1)
+          !Shift<Key>2:      PasteBuffer(2)
+          !Shift<Key>3:      PasteBuffer(3)
+          !Shift<Key>4:      PasteBuffer(4)
+          !Shift<Key>5:      PasteBuffer(5)
+          None<Key>F3:       Mode(PasteBuffer)
+
+`Polygon((Close|PreviousPoint)'
+     Polygons need a special action routine to make life easier. Calling
+     *Polygon(PreviousPoint)* resets the newly entered corner to the
+     previous one. The Undo action will call Polygon(PreviousPoint)
+     when appropriate to do so.  *Close* creates the final segment of
+     the polygon.  This may fail if clipping to 45 degree lines is
+     switched on, in which case a warning is issued.  Default:
+          None<Key>p:             Polygon(Close)
+          !Shift<Key>p:           Polygon(Close)
+
+`Print()'
+     Pops up a print control box that lets you select the output
+     device, scaling and many more options. Each run creates all files
+     that are supported by the selected device. These are mask files as
+     well as drilling files, silk screens and so on. The table shows
+     the filenames for all possible files:
+                  POSIX (extention)             8.3 filename
+          		---------------------------------------------
+          		*_componentmask.*             cmsk.*
+          		*_componentsilk.*             cslk.*
+          		*_soldermask.*                smsk.*
+          		*_soldersilk.*                sslk.*
+          		*_drill.*                     dril.*
+          		*_groundplane.*               gpl.*
+          		*_group[1..8].*       [..8].*
+     The output may be sent to a postprocessor by starting the filename
+     with the *pipe* `("|")' character. Any `"%f"' in a command is
+     replaced with the current filename. The function is available from
+     the *file* menu.  There are no defaults.
+
+`Quit()'
+     Quits the application after confirming the operation.  Default:
+          <Message>WM_PROTOCOLS: Quit()
+
+`Redo()'
+     This routine allows you to recover from the last undo command.
+     You might want to do this if you thought that undo was going to
+     revert something other than what it actually did (in case you are
+     confused about which operations are un-doable), or if you have
+     been backing up through a long undo list and over-shoot your
+     stopping point.  Any change that is made since the undo in
+     question will trim the redo list.  For example if you add ten
+     lines, then undo three of them you could use redo to put them
+     back, but if you move a line on the board before performing the
+     redo, you will lose the ability to "redo" the three "undone" lines.
+     Default:
+          !Shift<Key>r:	Redo()
+
+`RemoveSelected()'
+     This routine removes all visible and selected objects.  There are
+     no defaults.
+
+`Report(Object|DrillReport)'
+     This routine pops up a dialog box describing the various
+     characteristics of an object (or piece of an object such as a pad
+     or pin) in the layout at the cursor position, or a report about
+     all of the drill holes in the layout.  There are no defaults.
+
+`RouteStyle(1|2|3|4)'
+     This routine copies the sizes corresponding to the numbered route
+     style into the active line thicknes, via diameter, and via drill
+     size.  Defaults:
+          !Ctrl<Key>1: RouteStyle(1)
+          ...
+          !Ctrl<Key>4: RouteStyle(4)
+
+`Save(Layout|LayoutAs)'
+`Save(AllConnections|AllUnusedPins|ElementConnections)'
+     Passing *Layout* saves the layout using the file from which it was
+     loaded or, if it is a new layout, calls *Save(LayoutAs)* which
+     queries the user for a filename.  The values: *AllConnections*,
+     *AllUnusedPins* and *ElementConnections* start a connection scan
+     and save all connections, all unused pins or the connections of a
+     single element to a file.  There are no defaults.
+
+`Select(All|Block|Connection|ToggleObject)'
+`Select(ElementByName|ObjectByName|PadByName|PinByName)'
+`Select(TextByName|ViaByName)'
+     Toggles either the selection flag of the object at the crosshair
+     position (*ToggleObject*) or selects all visible objects, all
+     inside a rectangle or all objects which have been found during the
+     last connection scan. The *ByName* functions use a regular
+     expression search, always case insensitive, to select the objects.
+     Default:
+          None<Btn3Down>:  Select(ToggleObject)
+          None<Btn3Down>,None<Btn3Motion>: See resource file - this is complex
+
+`SetValue(Grid|LineSize|TextScale|ViaDrillingHole|ViaSize|Zoom, value)'
+     Some internal values may be changed online by this function.  The
+     first parameter specifies which data has to be changed. The other
+     one determines if the resource is set to the passed value, if
+     *value* is specified without sign, or increments/decrements if it
+     is specified with a plus or minus sign.  The function doesn't
+     change any existing object only the initial values of new objects.
+     Use the *ChangeSize()* and *ChangeDrillSize()* to change existing
+     objects.  Default:
+          None<Key>g:        SetValue(Grid, +5)
+          !Shift<Key>g:      SetValue(Grid, -5)
+          None<Key>l:        SetValue(LineSize, +5)
+          !Shift<Key>l:      SetValue(LineSize, -5)
+          None<Key>t:        SetValue(TextScale, +10)
+          !Shift<Key>t:      SetValue(TextScale, -10)
+          None<Key>v:        SetValue(ViaSize, +5)
+          !Shift<Key>v:      SetValue(ViaSize, -5)
+          !Mod1<Key>v:       SetValue(ViaDrillingHole, +5)
+          !Mod1 Shift<Key>v: SetValue(ViaDrillingHole, -5)
+          None<Key>z:        SetValue(Zoom, -1)
+          !Shift<Key>z:      SetValue(Zoom, +1)
+
+`SwapSides()'
+     This routine changes the board side you are viewing.  Default:
+          None<Key>Tab:      SwapSides()
+
+`SwitchDrawingLayer(value)'
+     Makes layer numer 1..8 the current one.  Default:
+          None<Key>1:        SwitchDrawingLayer(1)
+          ...
+          None<Key>8:        SwitchDrawingLayer(8)
+
+`ToggleHideName(Object|SelectedElements)'
+     Toggles whether the element's name is displayed or hidden. If it
+     is hidden you won't see it on the screen and it will not appear on
+     the silk layer when you print the layout.
+          None<Key>h:	ToggleHideName(Object)
+          !Shift<Key>h:	ToggleHideName(SelectedElements)
+
+`Undo()'
+`Undo(ClearList)'
+     The unlimited undo feature of `Pcb' allows you to recover from
+     most operations that materially affect you work.  Calling *Undo()*
+     without any parameter recovers from the last (non-undo) operation.
+     *ClearList* is used to release the allocated memory. *ClearList*
+     is called whenever a new layout is started or loaded. See also
+     *Redo*.  Default:
+          None<Key>u:        Undo()
+          !Shift Ctrl<Key>u: Undo(ClearList)
+
+`Unselect(All|Block|Connection)'
+     Unselects all visible objects, all inside a rectangle or all
+     objects which have been found during the last connection scan.
+     Default:
+          !Shift <Btn3Down>: Mode(Save) Mode(None) Unselect(Block)
+          !Shift <Btn3Up>:   Unselect(Block) Mode(Restore)
+
+
+File: pcb.info,  Node: Translations,  Prev: Actions,  Up: X11 Interface
+
+Default Translations
+====================
+
+   This section covers some default translations of key and button
+events as defined in the shipped default application resource file.
+Most of them have already been listed in *Note Actions::. `Pcb' makes
+use of a nice `X11' feature; calling several action routines for one
+event.
+
+`None<Key>BackSpace:'
+
+`None<key>Delete:'
+`!Shift<Key>BackSpace:'
+`!Shift Ctrl<Btn1Down>:'
+     The object at the cursor location is removed by
+     *None<Key>BackSpace* or *Shift Ctrl<Btn1Down>* whereas
+     *Shift<Key>BackSpace* also removes all other objects that are
+     fully-connected to the one at the cursor location.
+
+`!Mod1 Ctrl<Key>Left:'
+`!Mod1 Ctrl<Key>Right:'
+`!Mod1 Ctrl<Key>Up:'
+`!Mod1 Ctrl<Key>Down:'
+     Scroll one page in one of the four directions.
+
+`None<Key>Left:, !Shift<Key>Left:'
+`None<Key>Right:, !Shift<Key>Right:'
+`None<Key>Up:, !Shift<Key>Up:'
+`None<Key>Down:, !Shift<Key>Down:'
+     Move crosshair either one or ten points in grid.
+
+`None<Key>Return:'
+     Finished user input, selects the 'default' button of dialogs.
+
+`None<Key>Escape:'
+     *Mode(Reset)*, aborts user input, selects the 'abort' button of
+     dialogs or resets all modes.
+
+`None<Btn2Down>, Btn2<Motion>, None<Btn2Up>:'
+`!Mod1<Btn2Down>, Btn2<Motion>, !Mod1<Btn2Up>:'
+     The first sequence moves the object or element name at the cursor
+     location.  The second one copies the objects. Copying isn't
+     available for element names.
+
+
+File: pcb.info,  Node: File Formats,  Next: Installation,  Prev: X11 Interface,  Up: Top
+
+File Formats
+************
+
+   All files used by `Pcb' are read from the standard output of a
+command or written to the standard input of one as plain seven bit
+`ASCII'. This makes it possible to use any editor to change the
+contents of a layout file.  It is the only way for element or font
+description files to be created.  To do so you'll need to study the
+example files `example/*' and `default_font' which are shipped with
+`Pcb'.  For an overview refer to *Note Intro::.
+
+   The following sections provide the necessary information about the
+syntax of the files.  Netlist files are not created by `Pcb', but it
+does use them. For information on the format of a netlist file see the
+*:rn*, *Note User Commands::. Rat lines are added on the current layer
+using the current The commands described allow you to add almost any
+additional functionality you may need. Examples are compressed read and
+write access as well as archives. The commands themselves are defined
+by the resources *elementCommand*, *fileCommand*, *fontCommand*,
+*libraryCommand*, *libraryContentsCommand* and *saveCommand*.  Note
+that the commands are not saved along with the data.  It is considered
+an advantage to have the layout file contain all necessary information,
+independent of any other files.
+
+   One thing common to all files is they may include comments, newlines,
+and carriage returns at any place except within quoted strings.
+
+* Menu:
+
+* Basic Types::            Basic types used by all data files.
+* Layout File::
+* Element File::
+* Font File::
+* Library Contents File::
+* Library File::
+
+
+File: pcb.info,  Node: Basic Types,  Next: Layout File,  Up: File Formats
+
+Basic Types
+===========
+
+   Here are the basic type definitions used in the other sections of
+this chapter.
+
+     Description     = Name
+     DeltaAngle      = Number
+     DrillingHole    = Number
+     Flags           = Number
+     FontPosition    = Number
+     Grid            = Number
+     GridOffsetX     = Number
+     GridOffsetY     = Number
+     Group           = GroupMember [,GroupMember]...
+     GroupMember     = decimal | [cs]
+     GroupString     = """ Group [:Group]... """
+     StyleString	= """ Style [:Style]... """
+     Height          = Number
+     LayerNumber     = Number
+     LayoutName      = Name
+     Name            = quoted_string
+     Number          = decimal | hex
+     PinNumber	= quoted_string
+     Spacing         = Number
+     StartAngle      = Number
+     SymbolID        = Number | charconst
+     Thickness       = Number
+     TextData        = quoted_string
+     TextFlags       = Flags
+     TextScale       = scale
+     TextX           = Number
+     TextY           = Number
+     Value           = Name
+     Width           = Number
+     X               = Number
+     X1              = Number
+     X2              = Number
+     Y               = Number
+     Y1              = Number
+     Y2              = Number
+     charconst       = "'" <any character> "'"
+     comment         = "#" {<any character up to a newline>}...
+     decimal         = [0-9]+
+     direction       = [0-3]
+     hex             = 0x[0-9a-fA-F]+
+     scale           = [1-<positive integer>]
+     quoted_string   = """ <anything except \n and \r> """
+     zoom            = [0-MAX]
+
+
+File: pcb.info,  Node: Layout File,  Next: Element File,  Prev: Basic Types,  Up: File Formats
+
+Layout File Format
+==================
+
+   The layout file describes a complete layout including symbols, vias,
+elements and layers with lines, rectangles and text. This is the most
+complex file of all.
+
+     File            = Header Font PCBData
+     Header          = PCBName [GridData] [CursorData] [PCBFlags] [Groups]
+     PCBName         = "PCB(" Name Width Height ")"
+     GridData        = "Grid(" Grid GridOffsetX GridOffsetY ")"
+     CursorData      = "Cursor(" X Y zoom ")"
+     PCBFlags        = "Flags(" Flags ")"
+     Groups          = "Groups(" GroupString ")"
+     Styles		= "Styles(" StyleString ")"
+     Font            = {FontData}...
+     FontData        = {Symbol}...
+     Symbol          = "Symbol(" SymbolID Spacing ")"
+                           "(" {SymbolData}... ")"
+     SymbolData      = {SymbolLine}...
+     SymbolLine      = "SymbolLine(" X1 Y1 X2 Y2 Thickness ")"
+     PCBData         = {Via | Layer | Element}...
+     
+     Via             = "Via(" X Y Thickness DrillingHole Name Flags ")"
+     
+     Element         = "Element(" Flags Description LayoutName Value \
+                           TextX TextY direction scale TextFlags")"
+                           "(" {ElementData}... [Mark] ")"
+     ElementData     = {ElementLine | Pad | Pin | ElementArc }...
+     ElementArc      = "ElementArc(" X Y Width Height
+                           StartAngle DeltaAngle Thickness ")"
+     ElementLine     = "ElementLine(" X1 Y1 X2 Y2 Thickness ")"
+     Mark            = "Mark(" X Y ")"
+     Pad             = "Pad(" X1 Y1 X2 Y2 Thickness Name PinNumber Flags")"
+     Pin             = "Pin(" X Y Thickness DrillingHole Name PinNumber Flags ")"
+     
+     Layer           = "Layer(" LayerNumber Name ")"
+                           "(" {LayerData}... ")"
+     LayerData       = {Line | Polygon | Text}...
+     Line            = "Line(" X1 Y1 X2 Y2 Thickness Flags")"
+     Arc		= "Arc(" X Y Width Height StartAngle DeltaAngle Thickness Flags")"
+     Polygon         = "Polygon(" Flags ")" \
+                           "(" {Points}... ")"
+     Points          = "(" X Y ")"
+     Text            = "Text(" X Y direction scale TextData Flags")"
+
+`PCBName'
+     is used to define the layout's name which is independent of its
+     filename.  It is displayed in the lower left corner of the main
+     window.
+
+`GridData'
+     is optional and is used to save the grid setting and offset which
+     were set at the time the layout was saved.
+
+`CursorData'
+     also is an optional parameter to save the last cursor location and
+     zoom value.  The real zoom factor is calculated by scale = 1:(2
+     power value).
+
+`PCBFlags'
+     determine how to draw lines and which name of the elements should
+     be displayed.
+              bit 4:  do rubberband moves and rotates if set
+              bit 5:  display description of elements if set
+              bit 6:  display unique name of an element if set
+              bit 7:  use absolute grid if set
+              bit 8:  don't clip lines to 45 degrees
+
+`Groups'
+     Layergroups are saved by using this optional parameter. The only
+     way of changing them is to use an editor and alter the appropriate
+     line. The characters *c,s* idenify the component- and solder-side
+     for SMD objects.
+
+`Symbol'
+     See the description of font files in this chapter.
+
+`Via'
+     Vias are always connected to all layers which also means vias are
+     one logical level ahead of layers. Vias are defined by position,
+     size, name and by some flags.
+              bit 0:  always clear
+              bit 1:  always set
+              bit 2:  set if via was found during a connection search
+              bit 4:  set if via is a hole (has no copper annulus)
+              bit 5:  display the vias name
+              bit 6:  via has been selected
+              bit 12: set if via has octagonal shape
+              Other bits have special meaning and should not be changed
+              by the user.  See const.h for more information
+
+`Element'
+     See the description of element files in this chapter.
+
+`Layer'
+     A layer is the central object from the user's point of view. It
+     holds all connections and all text objects. Up to 8 may be used
+     individually.  Its number, starting with one, and its name are
+     read as arguments.
+
+    `Line'
+          All lines are identified by their start and endpoints
+          together with their thickness and some flags. They have to
+          fit a 45 degree scheme.
+                   bit 2:  set if line was found during a connection search
+                   bit 4:  line is a rat-line
+                   bit 6:  line has been selected
+
+    `Polygon'
+          used to fill a larger area with `copper'. The coordinates
+          specify the corners. The flags are:
+                   bit 2:  set if polygon was found during a connection search
+                   bit 4:  polygon is a 1.5 style polygon that automatically clears pins
+                   bit 6:  polygon has been selected
+
+    `Text'
+          You may use text objects to add information to your board. An
+          example would be naming a connector or marking pin one of it.
+          The position marks the lower left corner of the string which
+          is also a fixpoint for rotations.  Text directions are
+          independent to those of lines. They are counted from zero to
+          three with a meaning of zero to 270 degree rotations
+          counter-clockwise.  The scaling value is a positive integer
+          which determines a zoom factor in percent.
+                   bit 6:  the text has been selected
+                   bit 7:  the text is on the solder (back) side of the board
+                   bit 10: the text is on the silkscreen layer
+
+
+File: pcb.info,  Node: Element File,  Next: Font File,  Prev: Layout File,  Up: File Formats
+
+Element File Format
+===================
+
+   Element files are used to describe one component which then may be
+used several times within one or more layouts. You will normally split
+the file into two parts, one for the pinout and one for the package
+description.  Using `m4' allows you to define pin names as macros in
+one file and include a package description file which evaluates the
+macros. See the resource *elementCommand* for more information. The
+pins (and pads) must appear in squential order in the element file (new
+in 1.5) so that pin 1 must be the first PIN(...) in the file.
+
+   Doing things this way makes it possible to use one package file for
+several different circuits. See the sample files `dil*'.
+
+   The lowest x and y coordinates of all subobjects of an element are
+used as an attachment point for the crosshair cursor of the main window.
+
+     File            = {Element}...
+     Element         = "Element(" Flags Description LayoutName Value \
+                           TextX TextY direction scale TextFlags")"
+                           "(" {ElementData}... [Mark] ")"
+     ElementData     = {ElementLine | Pad | Pin | ElementArc }...
+     ElementArc      = "ElementArc(" X Y Width Height
+                           StartAngle DeltaAngle Thickness ")"
+     ElementLine     = "ElementLine(" X1 Y1 X2 Y2 Thickness ")"
+     Mark            = "Mark(" X Y ")"
+     Pad             = "Pad(" X1 Y1 X2 Y2 Thickness Name PinNumber Flags ")"
+     Pin             = "Pin(" X Y Thickness DrillingHole Name PinNumber Flags ")"
+
+`Element'
+     Objects of type element are determined by flags,  some names, a
+     canonical and a layout name as well as a value. Additional fields
+     are text position, their direction counted from zero to three (n *
+     90 degrees counter-clockwise) and element data.
+
+    `Flags'
+          The flag field determines the state of an element.  The bit
+          values are:
+                   bit 4:  the element name is hidden
+                   bit 6:  element has been selected
+                   bit 7:  element is located on the solder side
+
+    `TextFlags'
+    `scale'
+    `direction'
+          See the description of text object earlier in this chapter.
+
+    `ElementLine'
+          A line is defined by its start and end points and by its
+          size, or width.
+
+    `ElementArc'
+          Defines an arc by its center, width, height, startangle, its
+          length in degrees and its size. Remember the y axis on the
+          screen grows downwards.
+
+    `Mark'
+          is just a hint to make positioning easier. The crosshair will
+          be positioned here. Its center is passed as the two arguments.
+
+    `Pad'
+          A pad is very similar to a line except it may not be
+          disconnected from its element and it has an associated name.
+          Is is defined by two end point position, size, name and by
+          some flags.
+                   bit 2:  set if pad was found during a connection search
+                   bit 5:  display the pads name
+                   bit 6:  pad has been selected
+                   bit 7:  pad is located on the solder side
+
+    `Pin'
+          A pin is very similar to a via except it may not be
+          disconnected from its element.
+                   bit 0:  always set
+                   bit 1:  always clear
+                   bit 2:  set if pin was found during a connection search
+                   bit 3:  set if pin is only a mounting hole (no copper annulus)
+                   bit 5:  display the pins name
+                   bit 6:  pin has been selected
+                   bit 8:  pin is drawn as a square
+                   bit 12: set if pin is drawn with an octagonal shape
+
+
+File: pcb.info,  Node: Font File,  Next: Library Contents File,  Prev: Element File,  Up: File Formats
+
+Font File Format
+================
+
+   A number of user defined symbols are called a font. There is only
+one per layout. All symbols are made of lines. See the file
+`default_font' as an example.
+
+   The lowest x and y coordinates of all lines of a font are
+transformed to (0,0).
+
+     File            = Font
+     Font            = {FontData}...
+     FontData        = {Symbol}...
+     Symbol          = "Symbol(" SymbolID FontPosition ")"
+                           "(" {SymbolData}... ")"
+     SymbolData      = {SymbolLine}...
+
+`Symbol'
+     The two arguments are the `ASCII' code of the symbol and its
+     distance to the next symbol. Undefined symbols are drawn as filled
+     rectangles.  The `ASCII' code may be passed as a character
+     constant or as a hexadecimal value.
+
+    `SymbolLine'
+          The symbol data itself is made up of several entries of type
+          *SymbolLine*.
+
+
+File: pcb.info,  Node: Library Contents File,  Next: Library File,  Prev: Font File,  Up: File Formats
+
+Library Contents File Format
+============================
+
+   There is nothing like a special library format. The ones that have
+been introduced in 1.4.1 just use some nice (and time consuming)
+fetures of GNU `m4'. The only predefined format is the one of the
+contents file which is read during startup. It is made up of two basic
+line types:
+
+     menu entry      = "TYPE="name
+     contents line   = template":"package":"value":"description
+     name            = String
+     template        = String
+     package         = String
+     value           = String
+     description     = String
+     String          = <anything except ":", "\n" and "\r">
+
+   No leading whitespaces or comments are allowed in this file. If you
+need either one, define a command that removes them before loading.
+Have a look to the *libraryContentsCommand* resource.
+
+   The menu entry will appear in the selection menu at the top and of
+the library window.
+
+
+File: pcb.info,  Node: Library File,  Prev: Library Contents File,  Up: File Formats
+
+Library File Format
+===================
+
+   This section provides an overview about the existing `m4' definitions
+of the elements. There are basically two different types of files. One
+to define element specific data like the pinout, package and so on, the
+other to define the values. For example the static RAM circuits 43256
+and 62256 are very similar. They therefore share a common definition in
+the macro file but are defined with two different value labels.
+
+   The macro file entry:
+     define(`Description_43256_dil', `SRAM 32Kx8')
+     define(`Param1_43256_dil', 28)
+     define(`Param2_43256_dil', 600)
+     define(`PinList_43256_dil', ``pin1', `pin2', ...')
+
+   And the list file:
+     43256_dil:N:43256:62256
+
+   The macro must define a description, the pin list and up to two
+additional parameters that are passed to the package definitions. The
+first one is the number of pins whereas the second one defines for
+example the width of a package.
+
+   It is very important to select a unique identifier for each macro. In
+the example this would be *43256_dil* which is also the templates name.
+It is required by some low-level macros that *Description_, Param1_,
+Param2_* and *PinList_* are prepended.
+
+   The list file uses a syntax:
+     template:package:value[:more values]
+
+   This means that the shown example will create two element entries
+with the sam package and pinout but with different names.
+
+   A number of packages are defined in `common.m4'. Included are:
+
+     DIL packages with suffix D, DW, J, JD, JG, N, NT, P
+     PLCC
+     TO3
+     generic connectors
+     DIN 41.612 connectors
+     zick-zack (SD suffix)
+     15 pin multiwatt
+
+   If you are going to start your own library please take care about
+`m4' functions. Be aware of quoting and so on and, most important check
+your additional entry by calling the macro:
+
+     CreateObject(`template', `value', `package suffix')
+
+   If quoting is incorrect an endless loop may occur (broken by a
+out-of-memory message).
+
+   The scripts in the `lib' directory handle the creation of libraries
+as well as of their contents files. Querying is also supported.
+
+   I know quite well that this description of the library
+implementation is not what some out there expect. But in my opinion
+it's much more useful to look at the comments and follow the macros
+step by step.
+
+
+File: pcb.info,  Node: Installation,  Prev: File Formats,  Up: Top
+
+Installation and Troubleshooting
+********************************
+
+   Compiling and installing the package should be straightforward. If
+any problems occur, please contact the author
+(Thomas.Nau@rz.uni-ulm.de) to find a solution and include it into the
+next release.
+
+* Menu:
+
+* compiling::     Compiling and installing.
+* problems::      Troubleshooting.
+
+
+File: pcb.info,  Node: compiling,  Next: problems,  Up: Installation
+
+Compiling and Installing
+========================
+
+   This section covers the steps which are necessary to compile the
+package.
+
+* Menu:
+
+* config.h::      Editing `config.h' options.
+* manuals::       Creating the man page, info file and this manual.
+* make::          Creating the `Makefile', compiling and installing.
+
+
+File: pcb.info,  Node: config.h,  Next: manuals,  Up: compiling
+
+Editing config.h
+----------------
+
+   Most `X11' related options are automatically covered by `imake'
+which is called from `xmkmf'. The ones special to `Pcb' have to be
+edited in `config.h'.  In order of appearance:
+
+`INFOLIBDIR'
+     must be set to the directory where your GNU info files are located.
+
+`/usr/X11R6/lib/X11/pcb'
+     is the path of a directory where the font files will be installed.
+
+`DEFAULTFONT'
+     the name of the default font file.
+
+`DEFAULTLIBRARY'
+     the name of the default library.
+
+`gm4'
+     the name of GNUs m4 version.
+
+`Mod1'
+     If your window manager has already bound *Mod1* together with some
+     function keys you may want to change this setting. This is true
+     for HP-VUE.
+
+`EXTRA_INCLUDES'
+     Some systems do not have the Athena Widget include files in their
+     normal place as configured by `X11's config files. Define this as
+     follows:
+              EXTRA_INCLUDES = -I/usr/openwin/share/include
+     This is probably true for Suns which use `OpenWindows'.
+
+`PATCHES'
+     This symbol is passed to the compiler. Use it to define additional
+     compiler flags.  Add the *-DNEED_STRDUP* flag, if your system does
+     not have a strdup() library function.
+
+`HAS_REGEX'
+     Set to *-DHAS_REGEX* if your system supports regular expressions.
+     This enables the actions *Select(*ByName)*.
+
+`EXITCALL'
+     The symbol *EXITCALL* should be defined according to the *call on
+     exit* functions supported by your system. There are three choices:
+              EXITCALL = -DHAS_ATEXIT    if atexit() is supported (SYSV)
+              EXITCALL = -DHAS_ON_EXIT   if on_exit() and no atexit() is supported
+              EXITCALL =                 if none of them is supported
+     Please check your manpages for details.
+
+`SYS_LIBRARIES'
+     This symbol is used to pass additional libraries to the linker.
+     The only additional libraries which are used are the math and lex
+     library.
+
+   If you have to make system dependent changes please include them
+into a *#ifdef Architecture* ...  *#endif* construct and mail a copy to
+the author (Thomas.Nau@rz.uni-ulm.de).
+
+   Now run `xmkmf -a' which creates the `Makefiles' and runs `make
+depend'. This should finish without any problems except some systems
+which complain about missing include files. Don't worry about any such
+warnings at this time, the package should compile without any problems.
+
+
+File: pcb.info,  Node: manuals,  Next: make,  Prev: config.h,  Up: compiling
+
+Manuals
+-------
+
+   After `xmkmf -a' has created the new `Makefile' you are able to
+create the manpages, the application resource, the info file, the `TeX'
+output and a reference card by executing
+     	(cd doc; make)
+     	(cd src; make Pcb.ad)
+   You'll need `TeX', `texindex' and, if you want `PostScript', `dvips'
+to build the manuals. Preformatted documentation for the default
+configuration may be found in the `./doc.ps' directory.  A simple
+*make* builds everything.  Generate a printed copy to make your life
+easier.  `TeX-3.0' failed, `TeX-3.14' worked just fine.
+
+
+File: pcb.info,  Node: make,  Prev: manuals,  Up: compiling
+
+Compiling the Package
+---------------------
+
+   After reaching this point, it is time for `make'. It should build
+everything without any errors.  If it doesn't refer to *Note problems::.
+
+   You have to be root to install the package or at least a user with
+the appropriate priveleges in some `X11' directories. Set the umask to
+*022* or else some files will not be found because the directory isn't
+world readable.
+
+   If you do not have the appropriate permissions you should run
+`./pcbtest.sh' in the `src' directory to run `Pcb' from the
+installation directory.
+
+   `make install' and `make install.man' install the program, the
+fonts, the application default resource file, all element and package
+data as well as the manpage into the `X11' directories.  `make
+install.info' does the same for the `GNU' info file.
+
+
+File: pcb.info,  Node: problems,  Prev: compiling,  Up: Installation
+
+Troubleshooting
+===============
+
+   There are some known problems. Most of them are related to missing
+parts of a standard `X11' distribution. Some others are caused by third
+party applications such as `X' servers. To make this list more complete
+please mail your problems and, if available, solutions to the author.
+The mail address may be found at the beginning of this chapter.  In any
+case, read *Note X11::.
+
+   By the way, you `MUST HAVE AN ANSI COMPILER' to make `Pcb' work.
+
+   If the shell script `create_sed_script.sh' fails with an error of
+`awk' check your system for `nawk' or get the `GNU gawk'.  See the
+script for details.
+
+   Another source of problems are older versions of `flex' and `bison'.
+`Pcb' definitely works with `flex-2.4.7' and `bison-1.22' or later. The
+problems will result in a *syntax error* while parsing files.  You will
+have to add *-lfl* to the SYS_LIBRARIES identifier in `Imakefile'. See
+also, *Note FreeBSD::.
+
+   The following list gives you just an idea because I'm not able to
+test all `Pcb' releases on all platforms.
+
+* Menu:
+
+* HP::              Hewlett-Packard series 700 and 800 running HP-UX 10.*
+* Sun::             Sun, Solaris 2.5
+* SGI::             SGI, IRIX 5.3 and 6.*
+* DEC Alpha::       DEC Alpha, DEC UNIX 3.2c and 4.0
+* SCO::             SCO Unix ODT 3.0, PC hardware
+* Linux::           Linux 0.99pl14 and later
+* FreeBSD::         FreeBSD, NetBSD ...
+* X11::             Refers to `X11R4', `X11R5', and `OpenWindows'
+* TeX and Manuals:: Problems creating the `pcb.dvi'
+
+
+File: pcb.info,  Node: HP,  Next: Sun,  Up: problems
+
+HP Series 700 and 800
+---------------------
+
+   You have to install several `X11' tools (`imake') and include files
+or, better, install a complete `X11R5' release. Hewlett-Packard doesn't
+support the Athena Widgets. So the header files and libraries are
+missing from the application media, but they are available as a patch.
+They also do not ship the `ANSI' compiler with the normal operating
+system release so you have to buy one or use `GCC'.  Some of the tools
+are available as patches.
+
+   In addition, `Pcb' has been successfully tested on these platforms
+with `HPUX 9.*, 10.*' running self-compiled `X11R5'.
+
+
+File: pcb.info,  Node: Sun,  Next: SGI,  Prev: HP,  Up: problems
+
+Sun SPARC architecture
+----------------------
+
+   There are no known problems with Sun machines if they use `X11R5'
+instead of `OpenWindows'. `Pcb' compiled successfully with all kinds of
+SPARCstations `Solaris-2.[345]'.
+
+   For problems with `OpenWindows' refer to *Note X11::.
+
+   If `xmkmf' is missing, try
+         /usr/openwin/bin/imake -DUseInstalled -I/usr/openwin/lib/config
+         make Makefile
+         make includes
+         make depend
+   instead. I got it compiled but the linker complained about missing
+symbols.  The problem may be related to the mixed `OpenWindows' -
+`X11R5' environment which is installed on the test machine.  Anyway the
+code was executable and I haven't got a core yet.
+
+
+File: pcb.info,  Node: SGI,  Next: DEC Alpha,  Prev: Sun,  Up: problems
+
+Silicon Graphics
+----------------
+
+   `Pcb' has been tested on some boxes running either `IRIX-4.0.5' or
+`IRIX-5.3'. The former one uses a `X11R4' server.  There are no
+problems except some additionally needed compiler flags. For known
+problems with `X11R4', see *Note X11::. Check `Imakefile', too.
+
+
+File: pcb.info,  Node: DEC Alpha,  Next: SCO,  Prev: SGI,  Up: problems
+
+DEC Alpha
+---------
+
+   `Pcb' compiled and runs without problems on `DEC UNIX V3.2c' if you
+do the following instead of calling `xmkmf -a':
+         xmkmf
+         make Makefiles
+         make includes
+         make depend
+
+
+File: pcb.info,  Node: SCO,  Next: Linux,  Prev: DEC Alpha,  Up: problems
+
+SCO Unix
+--------
+
+   John DuBois <spcecdt@deeptht.armory.com> wrote:
+     `SCO-ODT-3.0' requires the latest version of tls003, the Athena
+     widget library (available from sosco.sco.com). The main problems
+     I have encountered are it core dumps fairly often, especially
+     while loading/dropping elements...
+   I'll see what I am able to do as soon as I have access to an `SCO'
+system.
+
+
+File: pcb.info,  Node: Linux,  Next: FreeBSD,  Prev: SCO,  Up: problems
+
+Linux
+-----
+
+   Since the `X11' version of `Pcb' has been developed on a Linux
+system here are no known problems.
+
+
+File: pcb.info,  Node: FreeBSD,  Next: X11,  Prev: Linux,  Up: problems
+
+FreeBSD and NetBSD
+------------------
+
+   If `Pcb' complains about syntax errors even in the demo files get
+rid of your `lex' and `yacc' implementation. Replace them by `GNU flex'
+and `bison'. Don't forget to change the SYS_LIBRARIES in `Imakefile'
+from *-ll* to *-lfl*. You also need to define:
+         YACC = bison -y
+         LEX = flex
+
+
+File: pcb.info,  Node: X11,  Next: TeX and Manuals,  Prev: FreeBSD,  Up: problems
+
+Problems related to X11
+-----------------------
+
+   There are a some problems related to `X11R4' or systems derived from
+`X11' such as `OpenWindows'. *Note Sun::. You at least have to change
+all occurances of *baseTranslations* in the resource files to
+*translations* if you are using a `X11R4' server. Look at the `X11R5'
+*Intrinsics* manual for details.
+
+   The panner widget (print dialog box) appears only in release `X11R5'
+and later. It really simplifies adjusting the offsets.  With earlier
+releases the printout will always appear in the center of the page.
+
+   You may have some problems in a mixed `X11-OpenWindows' environment.
+If you want to try it anyway you have to add an additional path for
+include files and define another symbol in `Imakefile',
+         EXTRA_INCLUDES = -I/usr/openwin/include
+
+   `Pcb' has been tested successfully with `X11R6' under Linux 1.1.59
+and later.
+
+
+File: pcb.info,  Node: TeX and Manuals,  Prev: X11,  Up: problems
+
+Problems related to TeX
+-----------------------
+
+   If your `TeX' installation complains about a missing `texinfo.tex'
+file copy the one included in this release (directory `doc' to your
+`TeX' macro directory.  Note, there are probably newer versions of this
+file available from some FTP sites.  `TeX-3.0' failed, `TeX-3.14'
+worked just fine. Check our FTP server *ftp.uni-ulm.de* for
+ready-to-print versions of the manuals.
+
+Index of Resources
+******************
+
+* Menu:
+
+* /usr/X11R6/lib/X11/pcb:                config.h.
+* absoluteGrid:                          Resources.
+* alignmentDistance:                     Resources.
+* allDirectionLines <1>:                 Resources.
+* allDirectionLines:                     Options.
+* backupInterval <1>:                    Resources.
+* backupInterval:                        Options.
+* bloat:                                 Resources.
+* charactersPerLine <1>:                 Resources.
+* charactersPerLine:                     Options.
+* connectedColor:                        Resources.
+* crosshairColor:                        Resources.
+* default font:                          Options.
+* DEFAULTFONT:                           config.h.
+* DEFAULTLIBRARY:                        config.h.
+* elementColor:                          Resources.
+* elementCommand <1>:                    File Formats.
+* elementCommand <2>:                    Resources.
+* elementCommand:                        Options.
+* elementContentsCommand:                Resources.
+* elementPath:                           Resources.
+* elementSelectedColor:                  Resources.
+* EXITCALL:                              config.h.
+* EXTRA_INCLUDES:                        config.h.
+* fileCommand <1>:                       Options.
+* fileCommand <2>:                       File Formats.
+* fileCommand:                           Resources.
+* filePath:                              Resources.
+* fontCommand <1>:                       Options.
+* fontCommand <2>:                       File Formats.
+* fontCommand:                           Resources.
+* fontFile <1>:                          Options.
+* fontFile:                              Resources.
+* fontPath:                              Resources.
+* gm4:                                   config.h.
+* grid:                                  Resources.
+* gridColor:                             Resources.
+* HAS_REGEX:                             config.h.
+* INFOLIBDIR:                            config.h.
+* invisibleObjectsColor:                 Resources.
+* layerColor:                            Resources.
+* layerGroups <1>:                       Options.
+* layerGroups:                           Resources.
+* layerName:                             Resources.
+* layerSelectedColor:                    Resources.
+* libraryCommand <1>:                    Options.
+* libraryCommand <2>:                    File Formats.
+* libraryCommand:                        Resources.
+* libraryContentsCommand <1>:            File Formats.
+* libraryContentsCommand:                Options.
+* libraryFilename <1>:                   Options.
+* libraryFilename:                       Resources.
+* libraryPath <1>:                       Options.
+* libraryPath:                           Resources.
+* lineThickness:                         Resources.
+* media:                                 Resources.
+* Mod1:                                  config.h.
+* offLimitColor:                         Resources.
+* PATCHES:                               config.h.
+* pinColor:                              Resources.
+* pinoutFont0..4:                        Resources.
+* pinoutNameLength <1>:                  Options.
+* pinoutNameLength:                      Resources.
+* pinoutOffsetX:                         Resources.
+* pinoutOffsetY:                         Resources.
+* pinoutTextOffsetX:                     Resources.
+* pinoutTextOffsetY:                     Resources.
+* pinoutZoom <1>:                        Resources.
+* pinoutZoom:                            Options.
+* pinSelectedColor:                      Resources.
+* printCommand:                          Resources.
+* raiseLogWindow:                        Resources.
+* ratCommand:                            Resources.
+* ratPath:                               Resources.
+* resetAfterElement <1>:                 Options.
+* resetAfterElement:                     Resources.
+* ringBellWhenFinished <1>:              Resources.
+* ringBellWhenFinished:                  Options.
+* routeStyle <1>:                        Resources.
+* routeStyle:                            Options.
+* rubberBandMode:                        Resources.
+* saveCommand <1>:                       Options.
+* saveCommand <2>:                       File Formats.
+* saveCommand:                           Resources.
+* saveInTMP <1>:                         Options.
+* saveInTMP:                             Resources.
+* saveLastCommand <1>:                   Resources.
+* saveLastCommand:                       Options.
+* shrink:                                Resources.
+* size <1>:                              Options.
+* size:                                  Resources.
+* stipplePolygons:                       Resources.
+* SYS_LIBRARIES:                         config.h.
+* textScale:                             Resources.
+* useLogWindow:                          Resources.
+* viaColor:                              Resources.
+* viaDrillingHole:                       Resources.
+* viaSelectedColor:                      Resources.
+* viaThickness:                          Resources.
+* volume <1>:                            Options.
+* volume:                                Resources.
+* warnColor:                             Resources.
+* zoom:                                  Resources.
+
+Index of Actions, Commands and Options
+**************************************
+
+* Menu:
+
+* +alldirections:                        Options.
+* +reset:                                Options.
+* +ring:                                 Options.
+* +s:                                    Options.
+* +save:                                 Options.
+* -alldirections:                        Options.
+* -backup:                               Options.
+* -c:                                    Options.
+* -copyright:                            Special Options.
+* -fontfile:                             Options.
+* -help:                                 Special Options.
+* -lelement:                             Options.
+* -lfile:                                Options.
+* -lfont:                                Options.
+* -lg:                                   Options.
+* -libname:                              Options.
+* -libpath:                              Options.
+* -llib:                                 Options.
+* -llibcont:                             Options.
+* -loggeometry:                          Options.
+* -pnl:                                  Options.
+* -pz:                                   Options.
+* -reset:                                Options.
+* -ring:                                 Options.
+* -rs:                                   Options.
+* -s:                                    Options.
+* -save:                                 Options.
+* -sfile:                                Options.
+* -size:                                 Options.
+* -v:                                    Options.
+* -version:                              Special Options.
+* :actionCommand():                      User Commands.
+* :l:                                    User Commands.
+* :le:                                   User Commands.
+* :m:                                    User Commands.
+* :q:                                    User Commands.
+* :rn:                                   User Commands.
+* :s:                                    User Commands.
+* :w[q]:                                 User Commands.
+* AddRats():                             Actions.
+* Atomic():                              Actions.
+* Bell():                                Actions.
+* ChangeDrillSize():                     Actions.
+* ChangeHole():                          Actions.
+* ChangeName():                          Actions.
+* ChangeOctagon():                       Actions.
+* ChangeSize():                          Actions.
+* ChangeSquare():                        Actions.
+* Command():                             Actions.
+* Connection():                          Actions.
+* DeleteRats():                          Actions.
+* Display():                             Actions.
+* DRC():                                 Actions.
+* EditLayerGroups():                     Actions.
+* Load():                                Actions.
+* MarkCrosshair():                       Actions.
+* Mode():                                Actions.
+* MovePointer():                         Actions.
+* MoveToCurrentLayer():                  Actions.
+* New():                                 Actions.
+* PasteBuffer():                         Actions.
+* Polygon():                             Actions.
+* Print():                               Actions.
+* Quit():                                Actions.
+* Redo():                                Actions.
+* RemoveSelected():                      Actions.
+* Report():                              Actions.
+* RouteStyle():                          Actions.
+* Save():                                Actions.
+* Select():                              Actions.
+* SetValue():                            Actions.
+* SwapSides():                           Actions.
+* SwitchDrawingLayer():                  Actions.
+* ToggleHideName():                      Actions.
+* Undo():                                Actions.
+* Unselect():                            Actions.
+
+Index of Concepts
+*****************
+
+* Menu:
+
+* /tmp <1>:                              Options.
+* /tmp <2>:                              Loading and Saving.
+* /tmp:                                  Resources.
+* about, command button:                 Menu.
+* action command:                        User Commands.
+* actions:                               Actions.
+* Actions, initiating:                   User Commands.
+* alignment:                             Resources.
+* alignment targets:                     Printing.
+* Alpha:                                 DEC Alpha.
+* arc:                                   Arc Objects.
+* arc, an example:                       Arcs.
+* architecture <1>:                      SCO.
+* architecture <2>:                      Linux.
+* architecture <3>:                      Sun.
+* architecture <4>:                      DEC Alpha.
+* architecture <5>:                      SGI.
+* architecture:                          HP.
+* ASCII files, format of:                File Formats.
+* Atari version:                         History.
+* atomic:                                Actions.
+* backup <1>:                            Options.
+* backup <2>:                            Loading and Saving.
+* backup <3>:                            Resources.
+* backup <4>:                            Options.
+* backup:                                Resources.
+* basic types:                           Basic Types.
+* bell:                                  Actions.
+* bloat:                                 Resources.
+* buffer, an example:                    Pastebuffer.
+* buffer, convert contents to element:   Elements.
+* buffer, popup menu:                    Menu.
+* buffer, selecting a:                   Actions.
+* button translations:                   Actions.
+* cat:                                   Resources.
+* centering:                             Actions.
+* change active layer:                   Control Panel.
+* change drawing layer:                  Actions.
+* change object name:                    Actions.
+* change settings:                       Actions.
+* change sizes:                          Actions.
+* change square flag:                    Actions.
+* change viewing side:                   Actions.
+* characters per line <1>:               Resources.
+* characters per line:                   Options.
+* clipping lines to 45 degree <1>:       Resources.
+* clipping lines to 45 degree:           Actions.
+* clipping of lines:                     Options.
+* closing a polygon:                     Actions.
+* color printout:                        Printing.
+* color, warning:                        Resources.
+* colors:                                Resources.
+* command-line options:                  Command-Line Options.
+* compile, how to:                       compiling.
+* config.h:                              config.h.
+* connection, removing an:               Translations.
+* connections, colors:                   Resources.
+* connections, creating list of:         Connection Lists.
+* connections, popup menu:               Menu.
+* connections, reseting:                 Actions.
+* connections, reseting after element <1>: Resources.
+* connections, reseting after element:   Options.
+* connections, searching for:            Actions.
+* control panel:                         Control Panel.
+* copy an object:                        Translations.
+* copying objects:                       Actions.
+* copying, an example:                   Moving and Copying.
+* copyright:                             Special Options.
+* creating objects:                      Common.
+* cursor color:                          Resources.
+* cursor movements:                      Actions.
+* cursor position:                       Actions.
+* cursor steps:                          Resources.
+* cutting objects:                       Actions.
+* DEC:                                   DEC Alpha.
+* default font <1>:                      Options.
+* default font:                          Resources.
+* default layout size:                   Resources.
+* default library:                       Resources.
+* default text scaling:                  Resources.
+* default translations:                  Translations.
+* design rule checking <1>:              Actions.
+* design rule checking:                  Design Rule Checking.
+* device, selecting an output:           Printing.
+* directory /tmp <1>:                    Options.
+* directory /tmp <2>:                    Loading and Saving.
+* directory /tmp:                        Resources.
+* display:                               Resources.
+* display, popup menu:                   Menu.
+* displaying element names <1>:          Actions.
+* displaying element names:              Menu.
+* displaying pinout:                     Actions.
+* displaying status information:         Status-line and Input-field.
+* DOS filenames:                         Printing.
+* drawing objects:                       Drawing and Removing.
+* drc <1>:                               Resources.
+* drc <2>:                               Actions.
+* drc:                                   Design Rule Checking.
+* drill:                                 Actions.
+* drilling hole, changing of objects:    Actions.
+* drilling hole, setting of initial size: Actions.
+* DVI format of manual:                  manuals.
+* element name, hiding:                  Actions.
+* element name, removing from silk-screen: Actions.
+* element, an example:                   Elements.
+* element, an overview:                  Element Objects.
+* element, color:                        Resources.
+* element, command <1>:                  Resources.
+* element, command:                      Options.
+* element, creating a new package:       Elements.
+* element, display names of <1>:         Menu.
+* element, display names of:             Actions.
+* element, fileformat:                   Element File.
+* element, files <1>:                    Options.
+* element, files:                        Resources.
+* element, loading to buffer:            User Commands.
+* element, move name of:                 Translations.
+* entering user commands:                User Commands.
+* erasing objects:                       Drawing and Removing.
+* example files:                         Elements.
+* example of buffer handling:            Pastebuffer.
+* example of connection lists:           Connection Lists.
+* example of copying:                    Moving and Copying.
+* example of creating an element:        Elements.
+* example of element handling:           Elements.
+* example of line handling:              Lines.
+* example of loading:                    Loading and Saving.
+* example of loading an element file:    Elements.
+* example of moving:                     Moving and Copying.
+* example of pastebuffer handling:       Pastebuffer.
+* example of pin handling:               Elements.
+* example of polygon handling:           Polygons.
+* example of printing:                   Printing.
+* example of rectangle handling:         Polygons.
+* example of saving:                     Loading and Saving.
+* example of text handling:              Text.
+* example of via handling:               Vias.
+* exit <1>:                              Actions.
+* exit:                                  User Commands.
+* file format, element data:             Element File.
+* file format, font data:                Font File.
+* file format, layout data:              Layout File.
+* file format, libraries:                Library File.
+* file format, library contents:         Library Contents File.
+* file formats:                          File Formats.
+* file formats, basic types:             Basic Types.
+* file load command <1>:                 Resources.
+* file load command:                     Options.
+* file save command <1>:                 Resources.
+* file save command:                     Options.
+* file, popup menu:                      Menu.
+* font command <1>:                      Options.
+* font command:                          Resources.
+* font file, format of:                  Font File.
+* font files <1>:                        Resources.
+* font files <2>:                        Options.
+* font files:                            Resources.
+* font, an overview:                     Symbol Objects.
+* font, used for pin names:              Resources.
+* format of element files:               Element File.
+* format of font files:                  Font File.
+* format of layout files:                Layout File.
+* format of libraries:                   Library File.
+* format of library contents:            Library Contents File.
+* FreeBSD:                               FreeBSD.
+* grid <1>:                              Resources.
+* grid:                                  Drawing Area.
+* grid color:                            Resources.
+* grid, absolute and relative <1>:       Actions.
+* grid, absolute and relative:           Menu.
+* grid, display <1>:                     Actions.
+* grid, display:                         Menu.
+* grid, setting of:                      Actions.
+* groups <1>:                            Resources.
+* groups:                                Options.
+* groups, editing of:                    Actions.
+* Hewlett Packard:                       HP.
+* hide element name:                     Actions.
+* how to start:                          Getting Started.
+* HP:                                    HP.
+* info file:                             manuals.
+* information about objects:             Actions.
+* input-field, position of:              Status-line and Input-field.
+* inputfield, saving entered command-line <1>: Options.
+* inputfield, saving entered command-line: Resources.
+* inputfield, start user input:          Actions.
+* install, how to:                       compiling.
+* key translations:                      Actions.
+* keyboard bell <1>:                     Resources.
+* keyboard bell:                         Options.
+* layer, change active:                  Actions.
+* layer, name of:                        Resources.
+* layers, an overview:                   Layer Objects.
+* layers, changing active one:           Control Panel.
+* layers, colors:                        Resources.
+* layers, editing of groups:             Actions.
+* layers, groups <1>:                    Resources.
+* layers, groups:                        Options.
+* layers, switching on/off:              Control Panel.
+* layout files <1>:                      Resources.
+* layout files <2>:                      Options.
+* layout files <3>:                      Resources.
+* layout files:                          Options.
+* layout files, format of:               Layout File.
+* layout files, saving of:               User Commands.
+* layout objects, an overview:           Intro.
+* layout size:                           Options.
+* layout, default size of:               Resources.
+* layout, loading a:                     User Commands.
+* layout, loading to buffer:             User Commands.
+* layout, merging a:                     User Commands.
+* layout, printing a:                    Actions.
+* layout, start a new:                   Actions.
+* layout-name <1>:                       Element Objects.
+* layout-name:                           User Commands.
+* length of a pin name <1>:              Resources.
+* length of a pin name:                  Options.
+* length of outputline:                  Options.
+* library command <1>:                   Options.
+* library command:                       Resources.
+* library contents command <1>:          Options.
+* library contents command:              Resources.
+* library contents file, format of:      Library Contents File.
+* library file, format of:               Library File.
+* library name <1>:                      Resources.
+* library name:                          Options.
+* library search path:                   Options.
+* library searchpath:                    Resources.
+* library window:                        Library Window.
+* line clipping:                         Options.
+* linelength:                            Resources.
+* lines, an example:                     Lines.
+* lines, an overview:                    Line Objects.
+* lines, clipping to 45 degree <1>:      Resources.
+* lines, clipping to 45 degree:          Actions.
+* lines, setting of initial size:        Actions.
+* lines, size:                           Resources.
+* Linux:                                 Linux.
+* list of connections:                   Resources.
+* listing libraries:                     Options.
+* listing library contents:              Resources.
+* loading a layout to buffer:            User Commands.
+* loading elements <1>:                  Resources.
+* loading elements:                      Options.
+* loading elements to buffer:            User Commands.
+* loading files:                         Actions.
+* loading fonts <1>:                     Resources.
+* loading fonts:                         Options.
+* loading layouts <1>:                   User Commands.
+* loading layouts <2>:                   Options.
+* loading layouts:                       Resources.
+* loading symbols <1>:                   Resources.
+* loading symbols:                       Options.
+* loading, an example:                   Loading and Saving.
+* log window <1>:                        Options.
+* log window <2>:                        Resources.
+* log window:                            Log Window.
+* m4:                                    Resources.
+* m4, preprocessing example files:       Elements.
+* make:                                  make.
+* Makefile:                              config.h.
+* manuals:                               manuals.
+* mark:                                  Actions.
+* media:                                 Resources.
+* media margin:                          Resources.
+* media, size of:                        Printing.
+* menus:                                 Menu.
+* merging layouts:                       User Commands.
+* messages <1>:                          Resources.
+* messages <2>:                          Options.
+* messages:                              Log Window.
+* mirroring printout:                    Printing.
+* mode selection:                        Mode Selectors.
+* mode, selecting of:                    Actions.
+* mounting holes:                        Actions.
+* move:                                  Resources.
+* move an object:                        Translations.
+* moving objects to current layer:       Actions.
+* moving, an example:                    Moving and Copying.
+* name of an element:                    Actions.
+* name, change an objects:               Actions.
+* namelength of pins <1>:                Options.
+* namelength of pins:                    Resources.
+* NetBSD:                                FreeBSD.
+* netlist <1>:                           Actions.
+* netlist <2>:                           Resources.
+* netlist <3>:                           User Commands.
+* netlist <4>:                           Rats Nest.
+* netlist:                               Actions.
+* object, change name of:                Actions.
+* object, changing the size of an:       Common.
+* object, copy an:                       Translations.
+* object, creating an:                   Common.
+* object, drawing and removing:          Drawing and Removing.
+* object, move an:                       Translations.
+* object, removing an <1>:               Translations.
+* object, removing an:                   Common.
+* object, selecting an:                  Menu.
+* objects, moving to current layer:      Actions.
+* objects, popup menu:                   Menu.
+* octagonal pins and vias:               Actions.
+* off limit color:                       Resources.
+* offset of pinnames:                    Resources.
+* offset of pinout:                      Resources.
+* offset of printout:                    Printing.
+* OpenWindows:                           Sun.
+* operation modes, selecting of:         Actions.
+* outline printout:                      Printing.
+* output device:                         Printing.
+* outputline, length of:                 Options.
+* overlap, minimum:                      Design Rule Checking.
+* pastebuffer, an example:               Pastebuffer.
+* pastebuffer, convert contents to element: Elements.
+* pastebuffer, popup menu:               Menu.
+* pastebuffer, selecting a:              Actions.
+* path for element files:                Resources.
+* path for font files:                   Resources.
+* path for layout files:                 Resources.
+* path for libraries:                    Resources.
+* PC UNIX <1>:                           SCO.
+* PC UNIX <2>:                           Linux.
+* PC UNIX:                               FreeBSD.
+* pin color:                             Resources.
+* pin, name of <1>:                      Options.
+* pin, name of:                          Resources.
+* pinout of elements:                    Menu.
+* pinout, display of:                    Actions.
+* pinout, font to display pin names:     Resources.
+* pinout, zoomfactor of display <1>:     Resources.
+* pinout, zoomfactor of display:         Options.
+* pins, an example:                      Elements.
+* pins, changing shape of:               Actions.
+* pointer, moving of:                    Actions.
+* polygon:                               Resources.
+* polygon point, go back to previous:    Actions.
+* polygon, an example:                   Polygons.
+* polygon, an overview:                  Polygon Objects.
+* polygon, closing a:                    Actions.
+* popping up menus:                      Menu.
+* postprocessing layout data <1>:        Resources.
+* postprocessing layout data:            Options.
+* preprocessing element data <1>:        Options.
+* preprocessing element data:            Resources.
+* preprocessing font data <1>:           Options.
+* preprocessing font data:               Resources.
+* preprocessing layout data <1>:         Options.
+* preprocessing layout data:             Resources.
+* preventing loss of data <1>:           Loading and Saving.
+* preventing loss of data <2>:           Options.
+* preventing loss of data:               Resources.
+* print command:                         Printing.
+* print media <1>:                       Printing.
+* print media:                           Resources.
+* print offset:                          Printing.
+* printing:                              Resources.
+* printing a layout:                     Actions.
+* printing, an example:                  Printing.
+* problems:                              problems.
+* quit <1>:                              Actions.
+* quit:                                  User Commands.
+* rat-line <1>:                          Actions.
+* rat-line:                              Rats Nest.
+* rats nest <1>:                         User Commands.
+* rats nest <2>:                         Actions.
+* rats nest <3>:                         Resources.
+* rats nest <4>:                         Actions.
+* rats nest:                             Rats Nest.
+* recover:                               Actions.
+* rectangle, an example:                 Polygons.
+* redo:                                  Actions.
+* redrawing layout:                      Actions.
+* refreshing layout:                     Actions.
+* release, current:                      Special Options.
+* removing connections:                  Translations.
+* removing objects <1>:                  Translations.
+* removing objects <2>:                  Drawing and Removing.
+* removing objects:                      Common.
+* removing selected objects:             Actions.
+* report:                                Actions.
+* report, popup menu:                    Menu.
+* reseting found connections <1>:        Actions.
+* reseting found connections <2>:        Options.
+* reseting found connections:            Resources.
+* resources:                             Resources.
+* rotate:                                Resources.
+* rotating a buffer:                     Actions.
+* rotating printout:                     Printing.
+* routing style <1>:                     Options.
+* routing style <2>:                     Resources.
+* routing style:                         Actions.
+* rubberband <1>:                        Actions.
+* rubberband:                            Resources.
+* saving connections:                    Actions.
+* saving files:                          Actions.
+* saving found connections:              Actions.
+* saving last entered user command <1>:  Resources.
+* saving last entered user command:      Options.
+* saving layouts <1>:                    Loading and Saving.
+* saving layouts <2>:                    Options.
+* saving layouts <3>:                    Resources.
+* saving layouts <4>:                    Options.
+* saving layouts:                        User Commands.
+* saving, an example:                    Loading and Saving.
+* scaling a printout:                    Printing.
+* scanning connections:                  Actions.
+* SCO:                                   SCO.
+* scrolling:                             Translations.
+* searching connections:                 Actions.
+* searchpath for element files:          Resources.
+* searchpath for font files:             Resources.
+* searchpath for layout files:           Resources.
+* searchpath for libraries:              Resources.
+* selected object, removing an:          Actions.
+* selected objects, changing size:       Menu.
+* selected objects, removing:            Menu.
+* selecting a buffer:                    Actions.
+* selecting a new mode:                  Mode Selectors.
+* selecting objects <1>:                 Actions.
+* selecting objects:                     Menu.
+* selection:                             Actions.
+* selection, an example:                 Selection.
+* selection, popup menu:                 Menu.
+* SGI:                                   SGI.
+* shrink:                                Resources.
+* signal:                                Actions.
+* Silicon Graphics:                      SGI.
+* size of a layout:                      Options.
+* size of lines:                         Resources.
+* size of lines and vias:                Actions.
+* size of vias:                          Resources.
+* sizes, changing of objects:            Actions.
+* sizes, popup menu:                     Menu.
+* Solaris:                               Sun.
+* spacing, minimum:                      Design Rule Checking.
+* speaker volume <1>:                    Resources.
+* speaker volume:                        Options.
+* square flag, changing of objects:      Actions.
+* start user input:                      Actions.
+* starting a new layout:                 Actions.
+* starting Pcb:                          Command-Line Options.
+* status information:                    Status-line and Input-field.
+* strings, an example:                   Text.
+* strings, an overview:                  Text Objects.
+* Sun:                                   Sun.
+* symbols <1>:                           Options.
+* symbols:                               Resources.
+* symbols, an overview:                  Symbol Objects.
+* temporary files <1>:                   Resources.
+* temporary files <2>:                   Options.
+* temporary files:                       Loading and Saving.
+* TeX, problems:                         TeX and Manuals.
+* texinfo file:                          manuals.
+* text, an example:                      Text.
+* text, an overview:                     Text Objects.
+* text, default scaling:                 Resources.
+* text, editing:                         Menu.
+* thickness of lines:                    Resources.
+* thickness of objects:                  Common.
+* thickness of vias:                     Resources.
+* thickness, changing of objects:        Actions.
+* translations <1>:                      Actions.
+* translations:                          Translations.
+* troubleshooting:                       problems.
+* undo:                                  Actions.
+* undo, multi-action resources:          Actions.
+* undo, popup menu:                      Menu.
+* unix command <1>:                      Options.
+* unix command <2>:                      Resources.
+* unix command <3>:                      Options.
+* unix command <4>:                      Resources.
+* unix command <5>:                      Options.
+* unix command <6>:                      Resources.
+* unix command <7>:                      Options.
+* unix command:                          Resources.
+* unselect objects:                      Actions.
+* user commands:                         User Commands.
+* user input:                            Translations.
+* version, current:                      Special Options.
+* vias, an example:                      Vias.
+* vias, an overview:                     Via Objects.
+* vias, changing shape of:               Actions.
+* vias, color:                           Resources.
+* vias, converting to mounting hole:     Actions.
+* vias, setting of initial size:         Actions.
+* vias, size:                            Resources.
+* viewing side, changing of:             Actions.
+* volume of speaker <1>:                 Options.
+* volume of speaker:                     Resources.
+* X11:                                   X11 Interface.
+* X11 default translations:              Translations.
+* X11 resources:                         Resources.
+* X11 translations:                      Actions.
+* X11, problems:                         X11.
+* xmkmf:                                 config.h.
+* zoom of drawing window:                Resources.
+* zoom of pinout window <1>:             Options.
+* zoom of pinout window:                 Resources.
+* zoom, setting:                         Menu.
+* zoom, setting of:                      Actions.
+
+
+
+Tag Table:
+Node: Top723
+Node: Copying1468
+Node: History2088
+Node: Intro6464
+Node: Symbol Objects7604
+Node: Via Objects8179
+Node: Element Objects8865
+Node: Layer Objects13372
+Node: Line Objects15314
+Node: Arc Objects17330
+Node: Polygon Objects18696
+Node: Text Objects20812
+Node: Getting Started21890
+Node: Application Window23822
+Node: Status-line and Input-field24472
+Node: Control Panel26349
+Node: Mode Selectors28678
+Node: Drawing Area31137
+Node: Menu32120
+Node: Log Window37656
+Node: Library Window38448
+Node: Drawing and Removing38955
+Node: Common42106
+Node: Lines43875
+Node: Arcs45425
+Node: Polygons46597
+Node: Text48478
+Node: Vias49463
+Node: Elements50833
+Node: Pastebuffer56184
+Node: Moving and Copying57883
+Node: Loading and Saving58911
+Node: Printing59987
+Node: Connection Lists64148
+Node: Selection65952
+Node: Rats Nest66796
+Node: Design Rule Checking71884
+Node: User Commands74218
+Node: Command-Line Options78975
+Node: Options79523
+Node: Special Options84130
+Node: X11 Interface84625
+Node: Resources85092
+Node: Actions98785
+Node: Translations122057
+Node: File Formats123597
+Node: Basic Types125267
+Node: Layout File126939
+Node: Element File132784
+Node: Font File136592
+Node: Library Contents File137593
+Node: Library File138638
+Node: Installation141066
+Node: compiling141493
+Node: config.h141887
+Node: manuals144357
+Node: make145012
+Node: problems145895
+Node: HP147499
+Node: Sun148170
+Node: SGI148947
+Node: DEC Alpha149323
+Node: SCO149622
+Node: Linux150094
+Node: FreeBSD150284
+Node: X11150701
+Node: TeX and Manuals151681
+
+End Tag Table

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/08 07:39:24 rh Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/31 14:55:29 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/10/31 18:05:31 jseger Exp
 #
 
@@ -9,12 +9,20 @@ MASTER_SITES=	ftp://ftp.linuxppc.org/pub/linuxppc/users/harry/PCB/ \
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://bach.ece.jhu.edu/~haceaton/pcb/
 
 DEPENDS+=	m4-1.4:../../devel/m4
-.if make(install-run-depends)
-DEPENDS+=	teTeX>=1.0.7:../../print/teTeX
-.endif
 
 USE_IMAKE=	yes
+
+INFO_FILES=	pcb.info
+
+post-install:
+	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/pcb/
+	${INSTALL_MAN} ${FILESDIR}/index.html ${PREFIX}/share/doc/pcb/
+	${INSTALL_MAN} ${FILESDIR}/pcb.html ${PREFIX}/share/doc/pcb/
+	${INSTALL_MAN} ${FILESDIR}/pcb.info ${PREFIX}/info/
+	${INSTALL_MAN} ${FILESDIR}/pcb.ps ${PREFIX}/share/doc/pcb/
+	${INSTALL_MAN} ${FILESDIR}/refcard.ps ${PREFIX}/share/doc/pcb/
 
 .include "../../mk/bsd.pkg.mk"
