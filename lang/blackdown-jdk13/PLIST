@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/01/29 11:02:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/02/11 04:23:15 jlam Exp $
 README.html
 bin/HtmlConverter
 bin/${BLACKDOWN_ARCH}/green_threads/appletviewer
@@ -594,6 +594,8 @@ include/jvmdi.h
 include/jvmpi.h
 include/linux/jawt_md.h
 include/linux/jni_md.h
+@exec	${LN} -sf . %D/jre
+@unexec	${RM} -f %D/jre
 lib/dt.jar
 lib/htmlconverter.jar
 lib/${BLACKDOWN_ARCH}/libdt_socket.so
