@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.1 2002/06/23 23:04:29 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/08/22 20:37:34 jlam Exp $
 
 .if !defined(CANNA_BUILDLINK2_MK)
 CANNA_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		canna
 BUILDLINK_DEPENDS.canna?=	Canna-lib>=3.5.2
-BUILDLINK_DEPENDS.canna?=	../../inputmethod/canna-lib
+BUILDLINK_PKGSRCDIR.canna?=	../../inputmethod/canna-lib
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.canna=canna-lib
 BUILDLINK_PREFIX.canna_DEFAULT=	${LOCALBASE}
