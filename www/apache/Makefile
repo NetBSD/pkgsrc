@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2001/05/17 16:32:26 abs Exp $
+# $NetBSD: Makefile,v 1.71 2001/05/18 02:19:07 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -35,7 +35,6 @@ CONFIGURE_ARGS+=	--enable-rule=EAPI				\
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		OPTIM="${OPTIM}"
-CONFIGURE_ENV+=		MAKE="${MAKE}"	# Needed on Linux
 
 .include "../../mk/bsd.prefs.mk"
 
