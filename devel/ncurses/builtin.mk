@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2004/03/29 05:43:30 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2004/10/13 20:10:31 tv Exp $
 
 .if !defined(_BLNK_LIBNCURSES_FOUND)
 _BLNK_LIBNCURSES_FOUND!=	\
@@ -99,7 +99,8 @@ CHECK_BUILTIN.ncurses?=	no
 .if !empty(CHECK_BUILTIN.ncurses:M[nN][oO])
 
 .if !empty(USE_BUILTIN.ncurses:M[yY][eE][sS])
-.  if !empty(_BLNK_LIBNCURSES_FOUND:M[nN][oO])
+.  include "../../mk/bsd.prefs.mk"
+.  if !empty(_BLNK_LIBNCURSES_FOUND:M[nN][oO]) || ${OPSYS} == "Interix"
 BUILDLINK_TRANSFORM.ncurses+=	-e "s|/curses\.h|/ncurses.h|g"
 BUILDLINK_TRANSFORM+=		l:ncurses:curses
 .  endif
