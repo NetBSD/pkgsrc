@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3093 2003/08/24 18:42:02 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.3094 2003/08/24 23:06:37 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3326,3 +3326,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated vmware-module3 to 3.2.1.3 [jdolecek 2003-08-24]
 	Added nbgrep-20030824 [cjep 2003-08-24]
 	Added covered-0.2.1 [dmcmahill 2003-08-24]
+	Added level9-3.0 [dillo 2003-08-24]
