@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2003/06/06 21:27:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2003/06/23 10:39:51 adam Exp $
 
 DISTNAME=	fly-1.6.5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics www
 MASTER_SITES=	ftp://www.unimelb.edu.au/pub/www/tools/unix/fly/
 
@@ -36,6 +36,7 @@ do-install:
 	${RM} -f ${WRKSRC}/examples/*.orig
 	cd ${WRKSRC}/examples; ${INSTALL_DATA} * ${PREFIX}/share/examples/fly
 
+.include "../../graphics/freetype-lib/buildlink2.mk"
 .include "../../graphics/gd/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
