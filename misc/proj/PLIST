@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:16 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/05/03 22:20:06 jtb Exp $
 bin/cs2cs
 bin/geod
 bin/invgeod
@@ -12,8 +12,8 @@ include/projects.h
 lib/libproj.a
 lib/libproj.la
 lib/libproj.so
-lib/libproj.so.2
-lib/libproj.so.2.0
+lib/libproj.so.3
+lib/libproj.so.3.1
 man/man1/cs2cs.1
 man/man1/geod.1
 man/man1/nad2nad.1
@@ -23,12 +23,25 @@ share/doc/proj/OF90-284.pdf
 share/doc/proj/PROJ.4.3.I2.pdf
 share/doc/proj/PROJ.4.3.pdf
 share/doc/proj/SWISS.pdf
+share/proj/FL
 share/proj/GL27
+share/proj/MD
+share/proj/TN
+share/proj/WI
+share/proj/WO
+share/proj/alaska
+share/proj/conus
 share/proj/epsg
+share/proj/hawaii
 share/proj/nad.lst
 share/proj/nad27
 share/proj/nad83
+share/proj/ntv1_can.dat
 share/proj/proj_def.dat
+share/proj/prvi
+share/proj/stgeorge
+share/proj/stlrnc
+share/proj/stpaul
 share/proj/world
 @dirrm share/doc/proj
 @dirrm share/proj
