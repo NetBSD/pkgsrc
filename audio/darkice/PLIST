@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/09 17:23:45 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/16 09:51:47 xtraeme Exp $
 bin/darkice
 man/man1/darkice.1
 man/man5/darkice.conf.5
+share/doc/html/darkice/AlsaDspSource.html
+share/doc/html/darkice/AlsaDspSource_h.html
 share/doc/html/darkice/AudioEncoder.html
 share/doc/html/darkice/AudioEncoder_h.html
 share/doc/html/darkice/AudioSource.html
@@ -62,6 +64,7 @@ share/doc/html/darkice/aflibConverter_h.html
 share/doc/html/darkice/aflibDebug.html
 share/doc/html/darkice/aflibDebug_h.html
 share/doc/html/darkice/all-globals.html
+share/doc/html/darkice/full-list-AlsaDspSource.html
 share/doc/html/darkice/full-list-AudioEncoder.html
 share/doc/html/darkice/full-list-AudioSource.html
 share/doc/html/darkice/full-list-BufferedSink.html
