@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9681 2005/03/29 20:53:49 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9682 2005/03/29 22:09:57 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1817,3 +1817,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated posh to 0.3.14 [jmmv 2005-03-29]
 	Updated uim to 0.4.6 [wiz 2005-03-29]
 	Added mdf2iso-0.2.2 [xtraeme 2005-03-29]
+	Updated tor to 0.0.9.6 [jschauma 2005-03-29]
