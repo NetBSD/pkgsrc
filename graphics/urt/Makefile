@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/24 16:55:35 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/15 17:05:05 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/02/11 08:48:26 tg Exp
 #
 
@@ -10,8 +10,16 @@ DISTFILES=	urt-3.1b.tar.Z urt-doc.tar urt-img.tar
 
 MAINTAINER=	packages@netbsd.org
 
+.include "../../mk/bsd.prefs.mk"
+
+.ifdef WRKOBJDIR
+BUILD_ROOT=	${WRKOBJDIR}
+.else
+BUILD_ROOT=	${PKGSRCDIR}
+.endif
+
 DEPENDS+=	tiff-3.4:../../graphics/tiff
-BUILD_DEPENDS+=	../../graphics/netpbm/${WRKDIR:T}/netpbm:../../graphics/netpbm:build
+BUILD_DEPENDS+=	${BUILD_ROOT}/graphics/netpbm/${WRKDIR:T}/netpbm:../../graphics/netpbm:build
 
 EXTRACT_ONLY=	urt-3.1b.tar.Z
 PATCH_SITES=	ftp://ptolemy.berkeley.edu/pub/misc/urt/
@@ -23,7 +31,7 @@ CONFIGURE_SCRIPT=Configure
 CONFIGURE_ARGS=	config/urt
 HAS_CONFIGURE=	yes
 MAKEFILE=	makefile
-MAKE_ENV+=	PKGSRCDIR=${.CURDIR}/../.. WORKINGDIRNAME=${WRKDIR:T}
+MAKE_ENV+=	PKGSRCDIR=${BUILD_ROOT} WORKINGDIRNAME=${WRKDIR:T}
 ALL_TARGET=
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/09/09 12:29:48 agc Exp $
+# $NetBSD: Makefile,v 1.14 1998/09/15 17:05:07 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -10,15 +10,18 @@ MASTER_SITES=   ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.psrg.cs.usyd.edu.au/~matty/9term/index.html
 
+.include "../../mk/bsd.prefs.mk"
+
 # needs library and private header, but not during runtime
-BUILD_DEPENDS=	${PKGSRCDIR}/plan9/sam/${WRKDIR:T}/libframe/libframe.a:../../plan9/sam
-
-OPSYS!= 	uname -s
-.if (${OPSYS} == "NetBSD")
-MANCOMPRESSED=	yes
+.ifdef WRKOBJDIR
+BUILD_ROOT=	${WRKOBJDIR}
+.else
+BUILD_ROOT=	${PKGSRCDIR}
 .endif
+BUILD_DEPENDS=	${BUILD_ROOT}/plan9/sam/${WRKDIR:T}/libframe/libframe.a:../../plan9/sam
 
+MANCOMPRESSED=	yes
 NO_WRKSUBDIR=	yes
-MAKE_ENV+=	WRKDIR=${WRKDIR} PKGSRCDIR=${PKGSRCDIR}
+MAKE_ENV+=	WRKDIR=${WRKDIR} PKGSRCDIR=${BUILD_ROOT}
 
 .include "../../mk/bsd.pkg.mk"
