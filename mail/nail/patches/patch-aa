@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2004/08/16 15:34:25 cjep Exp $
+$NetBSD: patch-aa,v 1.7 2004/09/06 08:20:54 cjep Exp $
 
---- Makefile.orig	2004-08-15 21:00:40.000000000 +0100
+--- Makefile.orig	2004-09-05 11:48:39.000000000 +0100
 +++ Makefile
 @@ -6,14 +6,14 @@
  # See the file INSTALL if you need help.
@@ -30,4 +30,4 @@ $NetBSD: patch-aa,v 1.6 2004/08/16 15:34:25 cjep Exp $
 +			-DMIMEPATH='"$(SYSCONFDIR)/mime.types"'
  
  OBJ = aux.o base64.o cache.o cmd1.o cmd2.o cmd3.o cmdtab.o collect.o \
- 	dotlock.o edit.o fio.o getname.o getopt.o head.o hmac.o imap.o \
+ 	dotlock.o edit.o fio.o getname.o getopt.o head.o hmac.o \
