@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2003/04/09 09:12:09 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/06/11 20:15:14 wiz Exp $
 
-SHA1 (proxycheck-0.42.tar.gz) = 5fb6f02c82ee069d76b8bf0bba77f7c825202b76
-Size (proxycheck-0.42.tar.gz) = 29395 bytes
+SHA1 (proxycheck-0.45.tar.gz) = 09ed8e9dab5364a6c384a41943c0ebd7be2a568f
+Size (proxycheck-0.45.tar.gz) = 31087 bytes
