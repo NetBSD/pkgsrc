@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2002/12/05 05:51:19 grant Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/09 00:24:51 grant Exp $
 #
 
-DISTNAME=		phoenix-0.4-i686-pc-linux-gnu
-PKGNAME=		phoenix-linux-0.4
+DISTNAME=		phoenix-0.5-i686-pc-linux-gnu
+PKGNAME=		phoenix-linux-0.5
 CATEGORIES=		www
-MASTER_SITES=		http://ftp.mozilla.org/pub/phoenix/releases/0.4/
+MASTER_SITES=		http://ftp.mozilla.org/pub/phoenix/releases/0.5/
 
 MAINTAINER=		grant@netbsd.org
 HOMEPAGE=		http://www.mozilla.org/projects/phoenix/
