@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.1 1999/07/26 21:19:33 tron Exp $
+$NetBSD: patch-ay,v 1.2 2002/07/08 02:21:20 kim Exp $
 
---- save.c.orig	Mon Sep 13 19:42:52 1993
-+++ save.c	Mon Jul 26 23:11:39 1999
-@@ -514,7 +514,7 @@
+--- save.c.orig	Thu Jul 12 01:18:34 2001
++++ save.c	Sun Jul  7 21:39:15 2002
+@@ -521,7 +521,7 @@
  		return 0;
  	    }
  	    current_folder_type = -1;
@@ -11,16 +11,16 @@ $NetBSD: patch-ay,v 1.1 1999/07/26 21:19:33 tron Exp $
  		if (mode != NO_HEADER) set_folder_type(save_name);
  		save_mode &= ~FILE_IS_NEW;
  	    }
-@@ -531,7 +531,7 @@
+@@ -538,7 +538,7 @@
  	mailbox_format(save_file, 1);
  
-     if (mode == FULL_HEADER) {
+     if (mode == FULL_HEADER || mode == HEADER_ONLY) {
 -	off_t cnt = ah->fpos - ah->hpos;
 +	long cnt = ah->fpos - ah->hpos;
  	while (--cnt >= 0) {
  	    if ((c = getc(art)) == EOF) break;
  	    putc(c, save_file);
-@@ -647,7 +647,7 @@
+@@ -656,7 +656,7 @@
  char *dir, *file;
  {
      register int c;
@@ -29,7 +29,7 @@ $NetBSD: patch-ay,v 1.1 1999/07/26 21:19:33 tron Exp $
      FILE *h;
  
      if (dir != (char *)NULL && file[0] != '/')
-@@ -656,7 +656,7 @@
+@@ -665,7 +665,7 @@
  	msg("Cannot open %s", file);
  	return;
      }

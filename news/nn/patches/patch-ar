@@ -1,7 +1,7 @@
-$NetBSD: patch-ar,v 1.1 1999/07/26 21:19:31 tron Exp $
+$NetBSD: patch-ar,v 1.2 2002/07/08 02:21:20 kim Exp $
 
---- kill.c.orig	Mon Sep 13 19:42:28 1993
-+++ kill.c	Mon Jul 26 23:11:38 1999
+--- kill.c.orig	Mon Jun 17 23:58:08 2002
++++ kill.c	Sun Jul  7 21:33:10 2002
 @@ -424,7 +424,7 @@
  typedef struct {
      long		ckh_magic;
@@ -29,7 +29,7 @@ $NetBSD: patch-ar,v 1.1 1999/07/26 21:19:31 tron Exp $
  
      now = cur_time();
  
-@@ -844,7 +844,7 @@
+@@ -850,7 +850,7 @@
  
      if (header.ckh_pattern_size > 0) {
  	kill_patterns = newstr(header.ckh_pattern_size);
@@ -38,7 +38,7 @@ $NetBSD: patch-ar,v 1.1 1999/07/26 21:19:31 tron Exp $
  	if (fread(kill_patterns, sizeof(char), (int)header.ckh_pattern_size, killf)
  	    !=  header.ckh_pattern_size) goto err;
      } else
-@@ -856,7 +856,7 @@
+@@ -862,7 +862,7 @@
  
      tb = group_regexp_table;
  

@@ -1,10 +1,10 @@
-$NetBSD: patch-am,v 1.1 1999/07/26 21:19:29 tron Exp $
+$NetBSD: patch-am,v 1.2 2002/07/08 02:21:20 kim Exp $
 
---- decode.c.orig	Tue Aug 31 23:05:37 1993
-+++ decode.c	Mon Jul 26 23:11:38 1999
-@@ -351,7 +351,7 @@
- {
-     int mode, onedone, len, lead_check = 0;
+--- decode.c.orig	Thu Jan 31 23:28:20 2002
++++ decode.c	Sun Jul  7 21:33:09 2002
+@@ -357,7 +357,7 @@
+     mode_t mode;
+     int onedone, len, lead_check = 0;
      char buf[LINELEN], part[2], *line;
 -    off_t real_size, start_offset;
 +    long real_size, start_offset;

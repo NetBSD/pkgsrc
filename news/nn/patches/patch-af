@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.4 1999/08/22 22:55:46 kim Exp $
+$NetBSD: patch-af,v 1.5 2002/07/08 02:21:19 kim Exp $
 
---- articles.c.orig	Fri Jul  3 13:44:35 1998
-+++ articles.c	Sun Aug 22 18:21:23 1999
+--- articles.c.orig	Wed Oct  3 03:01:08 2001
++++ articles.c	Sun Jul  7 21:33:09 2002
 @@ -264,7 +264,7 @@
      int dbstatus;
  #else /* NOV */
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.4 1999/08/22 22:55:46 kim Exp $
  #endif /* NOV */
      cross_post_number cross_post;
      attr_type leave_attr;
-@@ -292,7 +292,7 @@
+@@ -286,7 +286,7 @@
      data = open_data_file(gh, 'd', OPEN_READ);
      if (data == NULL) return -10;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-af,v 1.4 1999/08/22 22:55:46 kim Exp $
  	return -11;
  #endif /* NOV */
  
-@@ -361,7 +361,7 @@
+@@ -355,7 +355,7 @@
  	}
  	data_offset += data_size;
  #endif /* NOV */
@@ -29,7 +29,7 @@ $NetBSD: patch-af,v 1.4 1999/08/22 22:55:46 kim Exp $
  	    continue;	/* article not accessible */
  
  	if (db_hdr.dh_number > gh->last_db_article
-@@ -427,7 +427,7 @@
+@@ -421,7 +421,7 @@
  	}
  
  	ah->hpos = db_hdr.dh_hpos;

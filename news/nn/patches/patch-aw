@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.1 1999/07/26 21:19:32 tron Exp $
+$NetBSD: patch-aw,v 1.2 2002/07/08 02:21:20 kim Exp $
 
---- newsrc.c.orig	Thu Sep 23 04:11:10 1993
-+++ newsrc.c	Mon Jul 26 23:11:38 1999
-@@ -379,7 +379,7 @@
+--- newsrc.c.orig	Sun Jun 16 00:22:19 2002
++++ newsrc.c	Sun Jul  7 21:33:10 2002
+@@ -378,7 +378,7 @@
  
      rc = open_file(newsrc_file, OPEN_READ);
      if (rc != NULL) {
