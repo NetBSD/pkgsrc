@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:42 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/02 19:47:27 jschauma Exp $
 bin/xli
 bin/xlito
 bin/xview
 bin/xsetbg
 lib/X11/app-defaults/Xloadimage
-man/cat1/xli.0
-man/cat1/xlito.0
+${IMAKE_MAN_DIR}/xli.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xlito.${IMAKE_MANNEWSUFFIX}

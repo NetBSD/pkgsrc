@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:59 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/02 19:47:23 jschauma Exp $
 bin/mgp
 bin/mgp2ps
 bin/mgpembed
@@ -8,11 +8,11 @@ lib/X11/mgp/default.mgp
 lib/X11/mgp/mgp1.jpg
 lib/X11/mgp/mgp2.jpg
 lib/X11/mgp/mgp3.jpg
-man/cat1/mgp.0
-man/cat1/mgp2ps.0
-man/cat1/mgpembed.0
-man/cat1/mgpnet.0
-man/cat1/xwintoppm.0
+${IMAKE_MAN_DIR}/mgp.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/mgp2ps.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/mgpembed.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/mgpnet.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xwintoppm.${IMAKE_MANNEWSUFFIX}
 share/doc/mgp/COPYRIGHT
 share/doc/mgp/COPYRIGHT.jp
 share/doc/mgp/FAQ

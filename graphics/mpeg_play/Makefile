@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2001/02/16 15:22:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/02 19:47:24 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/10/05 03:13:32 steve Exp
 #
 
 DISTNAME=	mpeg_play-2.4-patched
 PKGNAME=	mpeg_play-2.4patched
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://mm-ftp.cs.berkeley.edu/pub/multimedia/mpeg/play/
 EXTRACT_SUFX=	-src.tar.gz

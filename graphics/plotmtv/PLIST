@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:06 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/02 19:47:24 jschauma Exp $
 bin/ctr2mtv
 bin/drawplot2mtv
 bin/mtv2mtv
 bin/pdraw2mtv
 bin/plotmtv
-man/cat1/plotmtv.0
+${IMAKE_MAN_DIR}/plotmtv.${IMAKE_MANNEWSUFFIX}
 share/examples/plotmtv/run.csh
 share/examples/plotmtv/run.sh
 share/examples/plotmtv/test_abs.mtv
