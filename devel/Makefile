@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.423 2003/09/14 20:31:01 gson Exp $
+# $NetBSD: Makefile,v 1.424 2003/09/17 16:42:04 jmmv Exp $
 #
 
 COMMENT=	Development utilities
@@ -217,7 +217,6 @@ SUBDIR+=	mk-files
 SUBDIR+=	mrproject
 SUBDIR+=	nana
 SUBDIR+=	nasm
-SUBDIR+=	nasm-devel
 SUBDIR+=	nbitools
 SUBDIR+=	ncurses
 SUBDIR+=	netcdf
