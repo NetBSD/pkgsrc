@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/09/29 03:27:57 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/10/02 18:18:29 dillo Exp $
 #
 
 DISTNAME=		cheesetracker-0.5.5
@@ -10,22 +10,21 @@ MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://www.reduz.com.ar/cheesetracker/
 COMMENT=		impulse tracker clone
 
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
-
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV=		CXXFLAGS="${CXXFLAGS}"
 CXXFLAGS+=		-O
 
+AUTOMAKE_REQD=		1.4
 PTHREAD_OPTS+=		require
 
 post-extract:
 	${RM} -f ${WRKSRC}/install-sh
 	${RM} -f ${WRKSRC}/mkinstalldirs
-	${CP} ${LOCALBASE}/share/automake/install-sh ${WRKSRC}/install-sh
-	${CP} ${LOCALBASE}/share/automake/mkinstalldirs ${WRKSRC}/mkinstalldirs
+	${AUTOMAKE} --missing
 
+.include "../../mk/automake.mk"
 .include "../../lang/gcc/buildlink2.mk"
 .include "../../x11/gtk--/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
