@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/11/29 19:32:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/28 23:18:17 reed Exp $
 #
 
 DISTNAME=		mapserver-4.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		geography www
 MASTER_SITES=		http://cvs.gis.umn.edu/dist/
 

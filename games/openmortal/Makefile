@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:14:46 tv Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/28 23:18:18 reed Exp $
 #
 
 DISTNAME=	openmortal-0.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openmortal/}
 EXTRACT_SUFX=	.tar.bz2
