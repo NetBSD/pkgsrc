@@ -1,0 +1,50 @@
+# $NetBSD: fonts,v 1.1.2.2 2003/02/16 12:14:33 jmmv Exp $
+#
+# Handle font databases; used by fonts.mk.
+#
+
+FONTS_TTF="@FONTS_TTF@"
+FONTS_TTF_DIRS="@FONTS_TTF_DIRS@"
+FONTS_TYPE1="@FONTS_TYPE1@"
+FONTS_TYPE1_DIRS="@FONTS_TYPE1_DIRS@"
+FONTS_X11="@FONTS_X11@"
+FONTS_X11_DIRS="@FONTS_X11_DIRS@"
+TTMKFDIR="@TTMKFDIR@"
+TYPE1INST="@TYPE1INST@"
+MKFONTDIR="@MKFONTDIR@"
+
+case ${STAGE} in
+POST-INSTALL|POST-DEINSTALL)
+	${ECHO} "===> Updating font databases"
+	if [ "${FONTS_TTF}" = "YES" ]; then
+		for d in ${FONTS_TTF_DIRS}; do
+			if [ -z "`cd $d ; ls | grep -v ^fonts | grep -v ^Fontmap`" ]; then
+				rm -f $d/fonts* $d/Fontmap*
+				rmdir $d >/dev/null 2>&1
+			else
+				( cd $d && ${TTMKFDIR} >fonts.dir 2>/dev/null )
+			fi
+		done
+	fi
+	if [ "${FONTS_TYPE1}" = "YES" ]; then
+		for d in ${FONTS_TYPE1_DIRS}; do
+			if [ -z "`cd $d ; ls | grep -v ^fonts | grep -v ^Fontmap`" ]; then
+				rm -f $d/fonts* $d/Fontmap*
+				rmdir $d >/dev/null 2>&1
+			else
+				( cd $d && ${TYPE1INST} >/dev/null 2>&1 )
+			fi
+		done
+	fi
+	if [ "${FONTS_X11}" = "YES" ]; then
+		for d in ${FONTS_X11_DIRS}; do
+			if [ -z "`cd $d ; ls | grep -v ^fonts | grep -v ^Fontmap`" ]; then
+				rm -f $d/fonts* $d/Fontmap*
+				rmdir $d >/dev/null 2>&1
+			else
+				( cd $d && ${MKFONTDIR} >/dev/null 2>&1 )
+			fi
+		done
+	fi
+	;;
+esac
