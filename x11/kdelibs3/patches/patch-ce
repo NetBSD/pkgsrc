@@ -1,0 +1,49 @@
+$NetBSD: patch-ce,v 1.1 2003/02/08 11:13:13 dmcmahill Exp $
+
+--- kioslave/file/Makefile.in.orig	Fri Feb  7 14:51:42 2003
++++ kioslave/file/Makefile.in
+@@ -336,7 +336,7 @@ SOURCES = $(kio_file_la_SOURCES)
+ all: docs-am  all-am
+ 
+ .SUFFIXES:
+-.SUFFIXES: .cc .lo .o .obj
++.SUFFIXES: .cpp .cc .lo .o .obj
+ 
+ mostlyclean-libtool:
+ 	-rm -f *.lo
+@@ -658,3 +658,35 @@ kde-rpo-clean:
+ #>+ 3
+ file.lo: file.moc 
+ file.o: file.moc 
++
++# no optimization rules
++
++CXXCOMPILE_NOOPT=${CXXCOMPILE:-O%=}
++LTCXXCOMPILE_NOOPT=${LTCXXCOMPILE:-O%=}
++
++.cpp.o:
++@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
++@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
++@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(CXXCOMPILE_NOOPT) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
++.cpp.obj:
++@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
++@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
++@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(CXXCOMPILE_NOOPT) -c -o $@ `cygpath -w $<`
++
++.cpp.lo:
++@AMDEP_TRUE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
++@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
++@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++	$(LTCXXCOMPILE_NOOPT) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
++
++.cc.cpp:
++	cp -f $< $@
++
++# problem files when compiled with optimization
++
++file.lo: file.cpp
++file.o: file.cpp
++
