@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1175 2003/04/29 20:31:52 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1176 2003/04/30 03:05:06 atatat Exp $
 #
 # This file is in the public domain.
 #
@@ -122,6 +122,9 @@ CONFIGURE_ENV+=		MAKE="${MAKE_PROGRAM}"
 RESTRICTED?=		uses Kerberos encryption code
 BUILD_DEFS+=		KERBEROS
 .endif
+
+# Used by packages depending on an OpenGL implementation
+MESA_REQD?=		5.0
 
 PERL5_REQD?=		5.0
 PERL5_PKGSRCDIR?=	../../lang/perl5
@@ -1412,7 +1415,7 @@ check-vulnerable:
 			  PKGBASE="${PKGBASE}"				\
 			${AWK} '/^$$/ { next }				\
 				/^#.*/ { next }				\
-				$$1 !~ ENVIRON["PKGBASE"]) { next }	\
+				$$1 !~ ENVIRON["PKGBASE"] { next }	\
 				{ s = sprintf("${PKG_ADMIN} pmatch \"%s\" %s && ${ECHO} \"*** WARNING - %s vulnerability in %s - see %s for more information ***\"", $$1, ENVIRON["PKGNAME"], $$2, ENVIRON["PKGNAME"], $$3); system(s); }' < ${PKGVULNDIR}/vulnerabilities || ${FALSE}; \
 	fi
 
