@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.1 2004/04/02 09:37:56 jmmv Exp $
+$NetBSD: patch-af,v 1.2 2004/06/28 08:14:03 adam Exp $
 
---- src/ms_adpcm.c.orig	2004-03-03 09:23:12.000000000 +0100
+--- src/ms_adpcm.c.orig	2004-06-16 10:17:04.000000000 +0000
 +++ src/ms_adpcm.c
-@@ -43,7 +43,7 @@ typedef struct
- 	sf_count_t			samplecount ;
+@@ -44,7 +44,7 @@ typedef struct
  	short			*samples ;
  	unsigned char	*block ;
--	unsigned short	dummydata [] ; /* ISO C99 struct hack */
-+	unsigned short	*dummydata ; /* ISO C99 struct hack */
- } MSADPCM_PRIVATE ;
- 
- /*============================================================================================
+ #if HAVE_FLEXIBLE_ARRAY
+-	unsigned short	dummydata [] ; /* ISO C99 struct flexible array. */
++	unsigned short	*dummydata ; /* ISO C99 struct flexible array. */
+ #else
+ 	unsigned short	dummydata [1] ; /* This is a hack an might not work. */
+ #endif
