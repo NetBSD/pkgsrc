@@ -3,7 +3,7 @@
 # Date created:		8 March 1995
 # Whom:			Satoshi Asami
 #
-# $NetBSD: Makefile,v 1.3 1998/01/27 16:23:52 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/02/23 15:25:19 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/04/30 03:18:06 asami Exp
 #
 
@@ -17,7 +17,6 @@ MAINTAINER=	asami@FreeBSD.ORG
 
 WRKSRC=		${WRKDIR}/ls
 
-MANCOMPRESSED=	yes
 MAN1=		colorls.1
 CAT1=		colorls.0
 
