@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.2.2.2 2002/10/09 17:34:47 agc Exp $
+
+--- lib/parser_inst.m4.orig	Fri Aug 20 03:05:33 1999
++++ lib/parser_inst.m4
+@@ -166,7 +166,7 @@ __instantiate(Vector<Transition>)
+ __instantiate(Vector<LeafContentToken*>)
+ __instantiate(Vector<size_t>)
+  // we really just want to test if size_t == unsigned int
+-#if !defined(SIZEOF_SIZE_T) || !defined(SIZEOF_UNSIGNED_INT) || (SIZEOF_SIZE_T != SIZEOF_UNSIGNED_INT)
++#if defined(__NetBSD__)
+ __instantiate(Vector<unsigned int>)
+ #endif
+ 
