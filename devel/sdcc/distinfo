@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2001/11/28 04:49:01 jlam Exp $
+$NetBSD: distinfo,v 1.7 2003/03/06 23:03:22 jmc Exp $
 
 SHA1 (sdcc-2.2.1-src.tar.gz) = c0d448bbdc86620d87b781f62635c51ab44b2235
 Size (sdcc-2.2.1-src.tar.gz) = 2015592 bytes
@@ -23,7 +23,7 @@ SHA1 (patch-ar) = 71dd271f7ad7a506a54b116d083eb77f34a23f2c
 SHA1 (patch-as) = 79a1234f35a8e072ba42e89e86989a7efe54d836
 SHA1 (patch-at) = 3a41e9e1fc8d26baa6cbef1b666481d9977a2f98
 SHA1 (patch-au) = 36e6e5470112ba8c813b98f6e2283accb9d4f115
-SHA1 (patch-av) = 617d0b03b5b27124a1cff549189f73dc492bbd48
+SHA1 (patch-av) = e66ac84551bdcea100ff598fdbae051c7b28931a
 SHA1 (patch-aw) = 8429c7adf50e82629c6638a0f722ffc08eccfd3c
 SHA1 (patch-ax) = 9729ccb4b42412ea189d55a916d0b6093fe6cba6
 SHA1 (patch-ay) = e48cff86a76fe9225e5461b29288f94e7a44f308
