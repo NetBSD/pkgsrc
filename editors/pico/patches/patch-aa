@@ -1,16 +1,13 @@
-$NetBSD: patch-aa,v 1.12 2002/12/14 10:28:42 tron Exp $
+$NetBSD: patch-aa,v 1.13 2003/07/28 14:35:34 adam Exp $
 
---- pico/makefile.neb.orig	Tue Oct 23 22:19:07 2001
-+++ pico/makefile.neb	Fri Dec 14 19:07:19 2001
-@@ -30,18 +30,14 @@
- RM=          rm -f
- LN=          ln -s
+--- pico/makefile.neb.orig	2001-10-24 00:19:07.000000000 +0200
++++ pico/makefile.neb	2003-07-28 14:04:16.000000000 +0200
+@@ -32,16 +32,12 @@
  MAKE=        make
--OPTIMIZE=    # -O
-+OPTIMIZE=    -O2
+ OPTIMIZE=    # -O
  PROFILE=     # -pg
 -DEBUG=       -g -DDEBUG
-+DEBUG=       -g
++DEBUG=       # -g -DDEBUG
  
  STDCFLAGS=	-Dneb -DJOB_CONTROL -DPOSIX -DMOUSE
  CFLAGS=         $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(STDCFLAGS)
