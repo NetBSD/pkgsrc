@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9563 2005/03/22 17:23:35 wiz Exp $
+$NetBSD: CHANGES,v 1.9564 2005/03/22 17:51:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1570,3 +1570,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnome to 2.10.0 [jmmv 2005-03-22]
 	Updated DatLib to 2.3 [wiz 2005-03-22]
 	Updated DatUtil to 2.15 [wiz 2005-03-22]
+	Updated gnupg to 1.4.1 [wiz 2005-03-22]
