@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2004/12/03 15:14:52 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2005/03/24 14:07:02 wiz Exp $
 #
 
-DISTNAME=	gkermit
+DISTNAME=	gku100
 PKGNAME=	gkermit-1.00
 PKGREVISION=	1
 CATEGORIES=	comms
@@ -10,8 +10,6 @@ MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
 MAINTAINER=	fredb@NetBSD.org
 HOMEPAGE=	http://www.columbia.edu/kermit/gkermit.html
 COMMENT=	Minimal implementation of the ``kermit'' protocol (GPL'd)
-
-DIST_SUBDIR=	gkermit-1.00
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
