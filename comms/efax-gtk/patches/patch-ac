@@ -1,49 +1,42 @@
-$NetBSD: patch-ac,v 1.2 2002/12/25 13:18:25 jmmv Exp $
+$NetBSD: patch-ac,v 1.3 2005/03/30 13:49:28 adam Exp $
 
---- settings.cpp.orig	Sat Apr  6 13:07:24 2002
-+++ settings.cpp
-@@ -1040,13 +1040,11 @@ void SettingsDialog::read_config(bool se
-   if (!get_rcfile_path(search_localfile)) {
-     string message;
-     if (search_localfile) {
--      message = "Can't find or open file /etc/" RC_FILE ",\n"
--	        "/usr/local/etc/" RC_FILE " or ";
-+      message = "Can't find or open file " RCDIR "/" RC_FILE " or ";
-       message += prog_config.homedir + "/." RC_FILE "\n";
-     }
-     else {
--      message = "Can't find or open file /etc/" RC_FILE "\n"
--	        "or /usr/local/etc/" RC_FILE;
-+      message = "Can't find or open file " RCDIR "/" RC_FILE;
-       message += prog_config.homedir + "/." RC_FILE "\n";
-     }
-     write_error(message.c_str());
-@@ -1172,8 +1170,7 @@ void SettingsDialog::read_config(bool se
+--- src/fax_list.cpp.orig	2005-03-30 15:43:12.000000000 +0000
++++ src/fax_list.cpp
+@@ -533,7 +533,7 @@ std::pair<const char*, char* const*> Fax
+   std::vector<std::string> efix_parms;
+   std::string temp;
+     
+-  efix_parms.push_back("efix-0.9a");
++  efix_parms.push_back("efix");
+   // shut up efix (comment out next line and uncomment following one if errors to be reported)
+   efix_parms.push_back("-v");
+   //efix_parms.push_back("-ve");
+@@ -679,8 +679,8 @@ std::pair<const char*, char* const*> Fax
+   
+   *temp_pp = 0;
+ 
+-  char* prog_name = new char[std::strlen("efix-0.9a") + 1];
+-  std::strcpy(prog_name, "efix-0.9a");
++  char* prog_name = new char[std::strlen("efix") + 1];
++  std::strcpy(prog_name, "efix");
+ 
+   return std::pair<const char*, char* const*>(prog_name, exec_parms);
  }
+@@ -886,7 +886,7 @@ void FaxListDialog::print_fax_thread(voi
  
- void SettingsDialog::get_reset_settings_prompt(void) {
--  PromptDialog* dialog_p = new PromptDialog("Enter settings from /etc/efax-gtkrc or\n"
--					    "/usr/local/etc/efax-gtkrc?",
-+  PromptDialog* dialog_p = new PromptDialog("Enter settings from " RCDIR "/efax-gtkrc?",
- 					    "Reset settings", standard_size, *this);
-   if (!dialog_p) {
-     cerr << "Memory allocation error in SettingsDialog::get_reset_settings_prompt()" << endl;
-@@ -1248,17 +1245,11 @@ bool SettingsDialog::get_rcfile_path(boo
+       // if we reached this point, then the execvp() call must have failed
+       // report error and then end process - use _exit(), not exit()
+-      write_error("Can't find the efix-0.9a program - please check your installation\n"
++      write_error("Can't find the efix program - please check your installation\n"
+ 		  "and the PATH environmental variable\n");
+       _exit(0);
+     }
+@@ -1004,7 +1004,7 @@ void FaxListDialog::view_fax_thread(void
  
-   if (!found_rcfile) {
- 
--    rcfile = "/usr/local/etc/";
-+    rcfile = RCDIR "/";
-     rcfile += RC_FILE;
-     if (!access(rcfile.c_str(), F_OK)) found_rcfile = true;
+     // if we reached this point, then the execvp() call must have failed
+     // report error and then end process - use _exit(), not exit()
+-    write_error("Can't find the efix-0.9a program - please check your installation\n"
++    write_error("Can't find the efix program - please check your installation\n"
+ 		"and the PATH environmental variable\n");
+     _exit(0);
    }
- 
--  if (!found_rcfile) {
--
--    rcfile = "/etc/";
--    rcfile += RC_FILE;
--    if (!access(rcfile.c_str(), F_OK)) found_rcfile = true;
--  }
-   if (!found_rcfile) rcfile = "";
-   return found_rcfile;
- }
