@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/12/13 00:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/12/28 23:37:06 jmmv Exp $
 #
 
 DISTNAME=		gstreamer-0.6.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gstreamer/0.6/}
 EXTRACT_SUFX=		.tar.bz2
