@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 19:11:02 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/30 15:24:02 adrianp Exp $
 bin/wistumbler2
 man/man1/wistumbler2.1
+share/examples/wistumbler2/wistumbler2.conf
+@dirrm share/examples/wistumbler2
