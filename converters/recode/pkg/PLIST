@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:23 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/08/20 03:34:29 jlam Exp $
 bin/recode
 include/recode.h
 include/recodext.h
@@ -16,12 +16,12 @@ lib/librecode.so
 lib/librecode.so.0
 lib/librecode.so.0.0
 man/man1/recode.1
-share/locale/fr/LC_MESSAGES/recode.mo
-share/locale/sv/LC_MESSAGES/recode.mo
-share/locale/es/LC_MESSAGES/recode.mo
-share/locale/da/LC_MESSAGES/recode.mo
-share/locale/nl/LC_MESSAGES/recode.mo
-share/locale/pt/LC_MESSAGES/recode.mo
-share/locale/pl/LC_MESSAGES/recode.mo
-share/locale/de/LC_MESSAGES/recode.mo
-share/locale/sl/LC_MESSAGES/recode.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/recode.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/recode.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/recode.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/recode.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/recode.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/recode.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/recode.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/recode.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/recode.mo
