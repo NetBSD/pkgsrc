@@ -1,15 +1,14 @@
-$NetBSD: patch-aa,v 1.12 2004/07/27 13:40:36 adam Exp $
+$NetBSD: patch-aa,v 1.13 2005/01/04 13:41:53 adam Exp $
 
---- Makefile.orig	2004-04-12 12:50:21.000000000 +0000
+--- Makefile.orig	2004-07-27 15:33:15.000000000 +0000
 +++ Makefile
-@@ -2,3 +2,3 @@
- 
--CXX     := c++
-+#CXX     := c++
- AR      := ar cru
-@@ -35,4 +35,3 @@ include config.mak
+@@ -21,8 +21,7 @@ include config.mak
+ # Uncomment this for stricter compile time code verification
+ # CXXFLAGS+= -Werror
  
 -CXXFLAGS:= -Wall $(CXXFLAGS)
 -CXXFLAGS+= -O -Wuninitialized
 +CXXFLAGS+= -Wall -Wuninitialized
  CXXFLAGS+= -Wno-long-long -Wno-multichar -Wno-unknown-pragmas
+ # Even more warnings...
+ CXXFLAGS+= -pedantic -Wpointer-arith -Wcast-qual -Wconversion
