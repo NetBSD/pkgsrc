@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.95 1998/06/05 12:45:53 mrg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.96 1998/06/05 20:31:55 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -318,10 +318,9 @@ PKG_CMD?=		/usr/sbin/pkg_create
 .if !defined(PKG_ARGS)
 PKG_ARGS=		-v -c ${COMMENT} -d ${DESCR} -f ${PLIST} -p ${PREFIX} -P "`${MAKE} package-depends|sort -u`"
 .if defined(CONFLICTS)
-# The NETBSD_13X_REL check is to make sure that pkg_create really has the
-# -C switch. This should be true for NetBSD > 1.3.2.
-NETBSD_13X_REL!= /usr/bin/uname -r | /usr/bin/sed -e 's|^1\.3$$|yes|' -e 's|^1\.3\.[1-9]$$|yes|'
-.if (${NETBSD_13X_REL} != "yes")
+# Only use -C if the pkg_create command supports it.
+__PKG_CMD_C__!= ${PKG_CMD} -C 2>&1 | /usr/bin/egrep 'illegal option' ; echo
+.if (${__PKG_CMD_C__} == "")
 PKG_ARGS+=		-C "${CONFLICTS}"
 .endif
 .endif
