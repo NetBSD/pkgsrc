@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2002/08/28 07:43:56 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2002/09/28 03:49:19 hubertf Exp $
 
---- configure.orig	Mon Aug 26 10:41:07 2002
-+++ configure	Wed Aug 28 13:39:51 2002
-@@ -12254,8 +12254,6 @@
+--- configure.orig	Sun Sep 15 00:28:06 2002
++++ configure
+@@ -10798,8 +10798,6 @@
  fi
  rm -f conftest.$ac_objext conftest.$ac_ext
  
