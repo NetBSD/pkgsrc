@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.15 2000/08/10 08:59:04 tron Exp $
+$NetBSD: patch-aa,v 1.16 2001/09/17 15:17:32 tron Exp $
 
---- magick/magick.c.orig	Wed Aug  2 00:09:23 2000
-+++ magick/magick.c	Thu Aug 10 10:19:28 2000
-@@ -433,6 +433,7 @@
-       LiberateMemory((void **) &filename);
-     }
+--- magick/magick.c.orig	Mon Sep 17 01:36:12 2001
++++ magick/magick.c	Mon Sep 17 16:39:26 2001
+@@ -421,6 +421,7 @@
+ #endif
+   SetClientName(filename);
    (void) setlocale(LC_ALL,"");
 +  (void) setlocale(LC_CTYPE,"C");
    (void) setlocale(LC_NUMERIC,"C");
-   *magick='\0';
-   (void) SetImageMagic(magick,MaxTextExtent,magic);
+ }
+ 
