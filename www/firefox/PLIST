@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/12/03 16:45:54 taya Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/02/27 13:20:43 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -59,6 +59,7 @@ lib/${MOZILLA}/components/libpippki.${SO_SUFFIX}
 lib/${MOZILLA}/components/libpref.${SO_SUFFIX}
 lib/${MOZILLA}/components/librdf.${SO_SUFFIX}
 lib/${MOZILLA}/components/libspellchecker.${SO_SUFFIX}
+lib/${MOZILLA}/components/libsystem-pref.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtoolkitcomps.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtransformiix.${SO_SUFFIX}
 lib/${MOZILLA}/components/libtxmgr.${SO_SUFFIX}
@@ -69,7 +70,7 @@ lib/${MOZILLA}/components/libwallet.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwalletviewers.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwebbrwsr.${SO_SUFFIX}
 lib/${MOZILLA}/components/libwebsrvcs.${SO_SUFFIX}
-lib/${MOZILLA}/components/libwidget_gtk.${SO_SUFFIX}
+lib/${MOZILLA}/components/libwidget_gtk2.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxmlextras.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpcom_compat_c.${SO_SUFFIX}
 lib/${MOZILLA}/components/libxpconnect.${SO_SUFFIX}
@@ -80,7 +81,6 @@ lib/${MOZILLA}/ipc/modules/liblockmodule.${SO_SUFFIX}
 lib/${MOZILLA}/ipc/modules/libtransmgr.${SO_SUFFIX}
 lib/${MOZILLA}/libgkgfx.${SO_SUFFIX}
 lib/${MOZILLA}/libgtkembedmoz.${SO_SUFFIX}
-lib/${MOZILLA}/libgtksuperwin.${SO_SUFFIX}
 lib/${MOZILLA}/libgtkxtbin.${SO_SUFFIX}
 lib/${MOZILLA}/libjsj.${SO_SUFFIX}
 lib/${MOZILLA}/libldap50.${SO_SUFFIX}
@@ -114,12 +114,14 @@ lib/${MOZILLA}/chrome/content-packs.jar
 lib/${MOZILLA}/chrome/embed-sample.jar
 lib/${MOZILLA}/chrome/en-US.jar
 lib/${MOZILLA}/chrome/help.jar
+lib/${MOZILLA}/chrome/icons/default/default.xpm
 lib/${MOZILLA}/chrome/inspector.jar
 lib/${MOZILLA}/chrome/installed-chrome.txt
 lib/${MOZILLA}/chrome/modern.jar
 lib/${MOZILLA}/chrome/pipnss.jar
 lib/${MOZILLA}/chrome/pippki.jar
 lib/${MOZILLA}/chrome/toolkit.jar
+lib/${MOZILLA}/components/accessibility-atk.xpt
 lib/${MOZILLA}/components/accessibility.xpt
 lib/${MOZILLA}/components/appshell.xpt
 lib/${MOZILLA}/components/autocomplete.xpt
@@ -182,6 +184,7 @@ lib/${MOZILLA}/components/migration.xpt
 lib/${MOZILLA}/components/mimetype.xpt
 lib/${MOZILLA}/components/mozbrwsr.xpt
 lib/${MOZILLA}/components/mozfind.xpt
+lib/${MOZILLA}/components/mozgnome.xpt
 lib/${MOZILLA}/components/mozldap.xpt
 lib/${MOZILLA}/components/myspell/en-US.aff
 lib/${MOZILLA}/components/myspell/en-US.dic
@@ -313,6 +316,7 @@ lib/${MOZILLA}/res/entityTables/html40Symbols.properties
 lib/${MOZILLA}/res/entityTables/htmlEntityVersions.properties
 lib/${MOZILLA}/res/entityTables/mathml20.properties
 lib/${MOZILLA}/res/entityTables/transliterate.properties
+lib/${MOZILLA}/res/fonts/fontEncoding.properties
 lib/${MOZILLA}/res/fonts/mathfont.properties
 lib/${MOZILLA}/res/fonts/mathfontCMEX10.properties
 lib/${MOZILLA}/res/fonts/mathfontCMSY10.properties
@@ -473,17 +477,25 @@ lib/${MOZILLA}/searchplugins/yahoo.src
 include/${MOZILLA}/accessibility/nsAccessNode.h
 include/${MOZILLA}/accessibility/nsAccessNodeWrap.h
 include/${MOZILLA}/accessibility/nsAccessibleEventData.h
+include/${MOZILLA}/accessibility/nsAccessibleText.h
 include/${MOZILLA}/accessibility/nsAccessibleWrap.h
 include/${MOZILLA}/accessibility/nsDocAccessibleWrap.h
 include/${MOZILLA}/accessibility/nsIAccessNode.h
 include/${MOZILLA}/accessibility/nsIAccessibilityService.h
 include/${MOZILLA}/accessibility/nsIAccessible.h
+include/${MOZILLA}/accessibility/nsIAccessibleAction.h
 include/${MOZILLA}/accessibility/nsIAccessibleCaret.h
 include/${MOZILLA}/accessibility/nsIAccessibleDocument.h
+include/${MOZILLA}/accessibility/nsIAccessibleEditableText.h
 include/${MOZILLA}/accessibility/nsIAccessibleEvent.h
+include/${MOZILLA}/accessibility/nsIAccessibleHyperLink.h
+include/${MOZILLA}/accessibility/nsIAccessibleHyperText.h
 include/${MOZILLA}/accessibility/nsIAccessibleProvider.h
 include/${MOZILLA}/accessibility/nsIAccessibleRetrieval.h
 include/${MOZILLA}/accessibility/nsIAccessibleSelectable.h
+include/${MOZILLA}/accessibility/nsIAccessibleTable.h
+include/${MOZILLA}/accessibility/nsIAccessibleText.h
+include/${MOZILLA}/accessibility/nsIAccessibleValue.h
 include/${MOZILLA}/accessibility/nsPIAccessNode.h
 include/${MOZILLA}/accessibility/nsPIAccessible.h
 include/${MOZILLA}/accessibility/nsPIAccessibleDocument.h
@@ -714,8 +726,11 @@ include/${MOZILLA}/docshell/nsIDocShell.h
 include/${MOZILLA}/docshell/nsIDocShellHistory.h
 include/${MOZILLA}/docshell/nsIDocShellLoadInfo.h
 include/${MOZILLA}/docshell/nsIDocShellTreeItem.h
+include/${MOZILLA}/docshell/nsIDocShellTreeItemTmp.h
 include/${MOZILLA}/docshell/nsIDocShellTreeNode.h
+include/${MOZILLA}/docshell/nsIDocShellTreeNodeTmp.h
 include/${MOZILLA}/docshell/nsIDocShellTreeOwner.h
+include/${MOZILLA}/docshell/nsIDocShellTreeOwnerTmp.h
 include/${MOZILLA}/docshell/nsIEditorDocShell.h
 include/${MOZILLA}/docshell/nsIGlobalHistory.h
 include/${MOZILLA}/docshell/nsIGlobalHistory2.h
@@ -1319,6 +1334,8 @@ include/${MOZILLA}/mimetype/nsMimeTypes.h
 include/${MOZILLA}/mork/mdb.h
 include/${MOZILLA}/mork/nsIMdbFactoryFactory.h
 include/${MOZILLA}/mork/nsMorkCID.h
+include/${MOZILLA}/mozgnome/nsIGConfService.h
+include/${MOZILLA}/mozgnome/nsIGnomeVFSService.h
 include/${MOZILLA}/mozilla-config.h
 include/${MOZILLA}/mozldap/nsILDAPBERValue.h
 include/${MOZILLA}/mozldap/nsILDAPConnection.h
@@ -1773,6 +1790,8 @@ include/${MOZILLA}/string/nsXPIDLString.h
 include/${MOZILLA}/string/string-template-def-char.h
 include/${MOZILLA}/string/string-template-def-unichar.h
 include/${MOZILLA}/string/string-template-undef.h
+include/${MOZILLA}/system-pref/nsSystemPrefLog.h
+include/${MOZILLA}/system-pref/nsSystemPrefService.h
 include/${MOZILLA}/toolkitcomps/nsToolkitCompsCID.h
 include/${MOZILLA}/txmgr/nsITransaction.h
 include/${MOZILLA}/txmgr/nsITransactionList.h
@@ -1904,9 +1923,8 @@ include/${MOZILLA}/websrvcs/nsIWSDLSOAPBinding.h
 include/${MOZILLA}/websrvcs/nsIWSPInterfaceInfoService.h
 include/${MOZILLA}/websrvcs/nsIWebScriptsAccessService.h
 include/${MOZILLA}/websrvcs/nsIWebServiceProxy.h
-include/${MOZILLA}/widget/gdksuperwin.h
-include/${MOZILLA}/widget/gtkmozarea.h
-include/${MOZILLA}/widget/gtkmozbox.h
+include/${MOZILLA}/widget/mozcontainer.h
+include/${MOZILLA}/widget/mozdrawingarea.h
 include/${MOZILLA}/widget/nsEvent.h
 include/${MOZILLA}/widget/nsGUIEvent.h
 include/${MOZILLA}/widget/nsIAppShell.h
@@ -2215,7 +2233,10 @@ include/${MOZILLA}/zlib/zlib.h
 @comment end INCLUDE
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regchrome
-@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/firefox-bin -register
+@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/${MOZILLA_BIN} -register
+@unexec ${RM} %D/lib/${MOZILLA}/extensions/Extensions.rdf
+@unexec ${RM} %D/lib/${MOZILLA}/extensions/installed-extensions-processed.txt
+@unexec ${RM} %D/lib/${MOZILLA}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/chrome.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/browser/content/overlays.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/communicator/content/overlays.rdf
@@ -2224,6 +2245,9 @@ include/${MOZILLA}/zlib/zlib.h
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/navigator/content/overlays.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
 @unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
+@unexec ${RM} %D/lib/${MOZILLA}/components.ini
+@dirrm lib/${MOZILLA}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
+@dirrm lib/${MOZILLA}/extensions
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/navigator/content
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/navigator
 @dirrm lib/${MOZILLA}/chrome/overlayinfo/messenger/content
@@ -2263,7 +2287,10 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm lib/${MOZILLA}/defaults
 @dirrm lib/${MOZILLA}/components/myspell
 @dirrm lib/${MOZILLA}/components
+@dirrm lib/${MOZILLA}/chrome/icons/default
+@dirrm lib/${MOZILLA}/chrome/icons
 @dirrm lib/${MOZILLA}/chrome
+@dirrm lib/${MOZILLA}
 @dirrm include/${MOZILLA}/zlib
 @dirrm include/${MOZILLA}/xultmpl
 @dirrm include/${MOZILLA}/xuldoc
@@ -2303,11 +2330,13 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/txtsvc
 @dirrm include/${MOZILLA}/txmgr
 @dirrm include/${MOZILLA}/toolkitcomps
+@dirrm include/${MOZILLA}/system-pref
 @dirrm include/${MOZILLA}/string
 @dirrm include/${MOZILLA}/spellchecker
 @dirrm include/${MOZILLA}/sidebar
 @dirrm include/${MOZILLA}/shistory
 @dirrm include/${MOZILLA}/shellservice
+@dirrm include/${MOZILLA}/seccmd
 @dirrm include/${MOZILLA}/satchel
 @dirrm include/${MOZILLA}/rdfutil
 @dirrm include/${MOZILLA}/rdf
@@ -2332,6 +2361,7 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm include/${MOZILLA}/necko2
 @dirrm include/${MOZILLA}/necko
 @dirrm include/${MOZILLA}/mozldap
+@dirrm include/${MOZILLA}/mozgnome
 @dirrm include/${MOZILLA}/mork
 @dirrm include/${MOZILLA}/mimetype
 @dirrm include/${MOZILLA}/migration
