@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.278 2003/01/04 16:04:06 wiz Exp $
+# $NetBSD: Packages.txt,v 1.279 2003/01/10 11:58:02 agc Exp $
 ###########################################################################
 
 			==========================
@@ -2479,6 +2479,16 @@ set PKG_FAIL_REASON to a descriptive message.
 
 IGNORE is deprecated because it didn't provide enough information
 to determine whether the build should fail.
+
+
+ 10.32 Packages which should not be deleted, once installed
+ ==========================================================
+
+To ensure that a package may not be deleted, once it has been installed,
+the PKG_PRESERVE definition should be set in the package Makefile. This
+will be carried into any binary package that is made from this pkgsrc
+entry. A "preserved" package will not be deleted using pkg_delete(1),
+unless the "-f" option is used.
 
 
  11 Submitting & Committing
