@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/06/05 04:08:28 jtb Exp $
+
+--- configure.orig	Fri Jun  1 14:52:49 2001
++++ configure
+@@ -6771,7 +6771,7 @@
+     DLLDARG=""
+   fi
+   if test -n "$GCC"; then
+-    DLCFLAGS="${DLCFLAGS=-fpic}"
++    DLCFLAGS="${DLCFLAGS=-fPIC}"
+   else
+     case "$host_os" in
+       hpux*)                 DLCFLAGS="${DLCFLAGS=+z}" ;;
