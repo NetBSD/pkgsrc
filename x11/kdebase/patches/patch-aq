@@ -1,0 +1,18 @@
+$NetBSD: patch-aq,v 1.3 1999/07/15 08:46:25 tron Exp $
+
+--- po/kcminfo.pot.orig	Sat Jan 30 00:45:46 1999
++++ po/kcminfo.pot	Sat Jan 30 00:53:47 1999
+@@ -200,6 +200,13 @@
+ msgid "Buffer memory"
+ msgstr ""
+ 
++#: memory.cpp: NetBSD-specific memory types
++msgid "Active memory"
++msgstr ""
++
++msgid "Inactive memory"
++msgstr ""
++
+ #: memory.cpp:49
+ msgid "Swap memory"
+ msgstr ""

@@ -1,0 +1,16 @@
+$NetBSD: patch-am,v 1.3 1999/07/15 08:46:23 tron Exp $
+
+--- kcontrol/info/memory.h.orig	Fri Jan 29 19:43:25 1999
++++ kcontrol/info/memory.h	Fri Jan 29 19:45:18 1999
+@@ -26,7 +26,11 @@
+ 
+ private:
+ 
++#ifdef __NetBSD__
++  QLabel *freeMem, *totalMem, *activeMem, *inactiveMem, *swapMem, *freeSwapMem;
++#else
+   QLabel *freeMem, *totalMem, *sharedMem, *bufferMem, *swapMem, *freeSwapMem;
++#endif
+   QTimer *timer;
+   
+ public slots:
