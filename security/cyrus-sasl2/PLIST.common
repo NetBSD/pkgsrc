@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2002/11/14 22:21:13 seb Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2002/12/11 23:48:58 chris Exp $
 etc/rc.d/saslauthd
 include/sasl/hmac-md5.h
 include/sasl/md5.h
@@ -11,7 +11,7 @@ lib/libsasl2.a
 lib/libsasl2.la
 lib/libsasl2.so
 lib/libsasl2.so.2
-lib/libsasl2.so.2.9
+lib/libsasl2.so.2.10
 man/cat8/saslauthd.8
 man/man3/sasl.3
 man/man3/sasl_authorize_t.3
