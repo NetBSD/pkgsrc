@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/06/01 11:23:38 rh Exp $
+# $NetBSD: Makefile,v 1.17 2000/07/03 13:44:53 veego Exp $
 
 DISTNAME=		inn-2.2.2
 CATEGORIES=		news
@@ -19,13 +19,21 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}/inn \
 			--mandir=${PREFIX}/man \
 			--with-perl --with-tmp-path=/tmp \
-			--with-sendmail=/usr/sbin/sendmail \
 			--with-db-dir=${INN_DATA_DIR}/db \
 			--with-etc-dir=${INN_DATA_DIR}/etc \
 			--with-log-dir=${INN_DATA_DIR}/log \
 			--with-run-dir=${INN_DATA_DIR}/run \
 			--with-spool-dir=${INN_DATA_DIR}/spool
 CONFIGURE_ENV+=		_PATH_PERL=${LOCALBASE}/bin/perl
+
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--with-sendmail=/usr/lib/sendmail
+.else
+CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
+.endif
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
