@@ -1,0 +1,13 @@
+The Dictionary Server Protocol (DICT) is a TCP transaction based
+query/response protocol that allows a client to access dictionary
+definitions from a set of natural language dictionary databases.
+
+dictd(8) is a server which supports the DICT protocol.
+
+dictzip(1) is a compression program which creates compressed files in the
+gzip format (see RFC 1952).  However, unlike gzip(1), dictzip(1) compresses
+the file in pieces and stores an index to the pieces in the gzip header.
+This allows random access to the file at the granularity of the compressed
+pieces (currently about 64kB) while maintaining good compression ratios
+(within 5% of the expected ratio for dictionary data).  dictd(8) uses files
+stored in this format.

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/12/27 02:43:47 uebayasi Exp $
+
+--- dict-gazetteer-1.3/format.c.orig	Mon Jul 21 00:21:24 1997
++++ dict-gazetteer-1.3/format.c
+@@ -22,7 +22,7 @@
+                                    This is usually clearer when
+                                    searching. */
+ 
+-#ifdef __sparc__
++#if defined(__sparc__) && !defined(__NetBSD__)
+ extern int    atoi(char *);
+ extern int    printf( char *, ... );
+ extern int    fprintf( FILE *, char *, ... );
