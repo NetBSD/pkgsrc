@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/07/25 18:49:55 tv Exp $
+# $NetBSD: Makefile,v 1.20 2004/07/25 18:55:43 tv Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -32,7 +32,7 @@ NO_BUILD=		yes
 
 # this package is only for Sun 1.3 JVMs built for x86 Linux
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
-PKG_JVMS_ACCEPTED=	sun-jdk13 blackdown-jdk13
+PKG_JVMS_ACCEPTED=	blackdown-jdk13
 
 post-extract:
 	@cd ${WRKDIR} && ${GTAR} -xzf ${EXTRACT_ELEMENTS}
