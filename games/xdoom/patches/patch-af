@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2000/02/03 16:01:15 abs Exp $
+$NetBSD: patch-af,v 1.5 2002/08/19 14:49:48 mycroft Exp $
 
 --- linuxdoom-1.10/g_game.c.orig	Mon Dec 22 20:35:29 1997
 +++ linuxdoom-1.10/g_game.c	Thu Feb  3 01:33:47 2000
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.4 2000/02/03 16:01:15 abs Exp $
      {
 -      fprintf( stderr, "Demo is from a different game version!\n");
 +      fprintf( stderr, "Demo is from a different game version (%.2f / %.2f)!\n",
-+				    demo_p[-1]/(float)100, VERSION/(float)100);
++				    *demo_p/100.0, VERSION/100.0);
        gameaction = ga_nothing;
        return;
      }
