@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/01/26 13:18:07 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2005/01/06 17:22:52 drochner Exp $
 
---- src/desktop_integration.c.orig	Mon Nov 25 22:19:27 2002
+--- src/desktop_integration.c.orig	2004-11-10 02:43:13.000000000 +0100
 +++ src/desktop_integration.c
-@@ -30,7 +30,9 @@
+@@ -31,7 +31,9 @@
  #include <stdlib.h>
  #include <stdio.h>
  #include <dlfcn.h>
@@ -11,4 +11,4 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/01/26 13:18:07 jmmv Exp $
 +#endif
  #include <string.h>
  
- #include "globals.h"
+ #include "utils.h"
