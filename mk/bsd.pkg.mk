@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.973.2.3 2002/05/11 01:32:58 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.973.2.4 2002/06/21 21:27:36 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -299,6 +299,7 @@ BUILD_DEPENDS+=		{gettext-0.10.35nb1,gettext-m4-[0-9]*}:../../devel/gettext-m4
 # Don't change these!!!  These names are built into the _TARGET_USE macro,
 # there is no way to refer to them cleanly from within the macro AFAIK.
 EXTRACT_COOKIE=		${WRKDIR}/.extract_done
+BUILDLINK_COOKIE=	${WRKDIR}/.buildlink_done
 CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
 INSTALL_COOKIE=		${WRKDIR}/.install_done
 BUILD_COOKIE=		${WRKDIR}/.build_done
@@ -938,7 +939,9 @@ CONFIGURE_ARGS+=        --x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/inc
 .  endif
 .endif
 
-.include "../../mk/bsd.post-buildlink2.mk"
+.if defined(USE_BUILDLINK2)
+.  include "../../mk/buildlink2/bsd.buildlink2.mk"
+.endif
 
 # PKG_SYSCONFDIR is where the configuration files for a package may be found.
 # This value may be customized in various ways:
@@ -1176,9 +1179,15 @@ patch: extract
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${PATCH_COOKIE}
 .endif
 
+# Disable buildlink
+.if !defined(USE_BUILDLINK2) && !target(configure)
+buildlink: patch
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_COOKIE}
+.endif
+
 # Disable configure
 .if defined(NO_CONFIGURE) && !target(configure)
-configure: patch
+configure: buildlink
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
 .endif
 
@@ -2317,6 +2326,8 @@ acquire-extract-lock:
 	${_ACQUIRE_LOCK}
 acquire-patch-lock:
 	${_ACQUIRE_LOCK}
+acquire-buildlink-lock:
+	${_ACQUIRE_LOCK}
 acquire-configure-lock:
 	${_ACQUIRE_LOCK}
 acquire-build-lock:
@@ -2325,6 +2336,8 @@ acquire-build-lock:
 release-extract-lock:
 	${_RELEASE_LOCK}
 release-patch-lock:
+	${_RELEASE_LOCK}
+release-buildlink-lock:
 	${_RELEASE_LOCK}
 release-configure-lock:
 	${_RELEASE_LOCK}
@@ -2353,8 +2366,12 @@ extract: checksum ${WRKDIR} acquire-extract-lock ${EXTRACT_COOKIE} release-extra
 patch: extract acquire-patch-lock ${PATCH_COOKIE} release-patch-lock
 .endif
 
+.if !target(buildlink)
+buildlink: patch acquire-buildlink-lock ${BUILDLINK_COOKIE} release-buildlink-lock
+.endif
+
 .if !target(configure)
-configure: patch acquire-configure-lock ${CONFIGURE_COOKIE} release-configure-lock
+configure: buildlink acquire-configure-lock ${CONFIGURE_COOKIE} release-configure-lock
 .endif
 
 .if !target(build)
@@ -2381,6 +2398,8 @@ ${EXTRACT_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET}
 ${PATCH_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch
+${BUILDLINK_COOKIE}:
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-buildlink
 ${CONFIGURE_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-configure
 ${BUILD_COOKIE}:
@@ -2394,6 +2413,8 @@ extract-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Extracting for ${PKGNAME}"
 patch-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Patching for ${PKGNAME}"
+buildlink-message:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Buildlinking for ${PKGNAME}"
 configure-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Configuring for ${PKGNAME}"
 build-message:
@@ -2403,6 +2424,8 @@ extract-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${EXTRACT_COOKIE}
 patch-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${PATCH_COOKIE}
+buildlink-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_COOKIE}
 configure-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${CONFIGURE_COOKIE}
 build-cookie:
@@ -2411,6 +2434,7 @@ build-cookie:
 .ORDER: pre-fetch do-fetch post-fetch
 .ORDER: extract-message install-depends pre-extract do-extract post-extract extract-cookie
 .ORDER: patch-message pre-patch do-patch post-patch patch-cookie
+.ORDER: buildlink-message pre-buildlink do-buildlink post-buildlink buildlink-cookie
 .ORDER: configure-message pre-configure do-configure post-configure configure-cookie
 .ORDER: build-message pre-build do-build post-build build-cookie
 
@@ -2420,6 +2444,7 @@ build-cookie:
 real-fetch: pre-fetch do-fetch post-fetch
 real-extract: extract-message install-depends pre-extract do-extract post-extract extract-cookie
 real-patch: patch-message pre-patch do-patch post-patch patch-cookie
+real-buildlink: buildlink-message pre-buildlink do-buildlink post-buildlink buildlink-cookie
 real-configure: configure-message pre-configure do-configure post-configure configure-cookie
 real-build: build-message pre-build do-build post-build build-cookie
 real-install: do-su-install
@@ -2490,7 +2515,7 @@ do-su-undo-replace:
 
 # Empty pre-* and post-* targets
 
-.for name in fetch extract patch configure build install-script install package
+.for name in fetch extract patch buildlink configure build install-script install package
 
 .  if !target(pre-${name})
 pre-${name}:
