@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/03/13 03:25:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2005/03/23 00:51:09 schmonz Exp $
 #
 
 DISTNAME=		qmail-conf-0.60
@@ -20,16 +20,11 @@ DEPENDS+=		ucspi-tcp>=0.86:../../net/ucspi-tcp
 
 USE_BUILDLINK3=		yes
 
-BUILD_TARGET=		it
-INSTALL_TARGET= 	setup check
-
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	${ECHO} ${LOCALBASE} > ${WRKSRC}/conf-ucspi-tcp
-	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
+DJB_RESTRICTED=		NO
+DJB_CONFIG_CMDS=	${ECHO} ${LOCALBASE} > ${WRKSRC}/conf-ucspi-tcp
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} -f Makefile.ini djbdns="../djbdns-1.05"
 
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

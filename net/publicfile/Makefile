@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/03/13 03:25:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/23 00:51:10 schmonz Exp $
 #
 
 DISTNAME=		publicfile-0.52
@@ -12,16 +12,8 @@ COMMENT=		Secure read-only HTTP and FTP servers
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 
-BUILD_TARGET=		it
-INSTALL_TARGET=		setup check
+DJB_RESTRICTED=		YES
+DJB_CONFIG_PREFIX=	${PREFIX}/publicfile
 
-RESTRICTED=		"unsure of djb's license"
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	${ECHO} ${PREFIX}/publicfile > ${WRKSRC}/conf-home
-
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/03/13 03:25:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2005/03/23 00:51:10 schmonz Exp $
 #
 
 DISTNAME=	qtools-0.56
@@ -14,14 +14,8 @@ DEPENDS+=	qmail>=1.03:../../mail/qmail
 
 USE_BUILDLINK3=	yes
 
-BUILD_TARGET=	it
-INSTALL_TARGET=	setup check
+DJB_RESTRICTED=	NO
+DJB_CONFIG_CMDS=${ECHO} ${LOCALBASE} > ${WRKSRC}/conf-ezmlm
 
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	${ECHO} ${QMAILDIR} > ${WRKSRC}/conf-qmail
-	${ECHO} ${PREFIX} > ${WRKSRC}/conf-ezmlm
-	${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
-
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

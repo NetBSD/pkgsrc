@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/13 03:25:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/23 00:51:10 schmonz Exp $
 #
 
 DISTNAME=		queue-fix
@@ -14,16 +14,13 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 USE_BUILDLINK3=		yes
 
-BUILD_TARGET=		it
-
 INSTALLATION_DIRS=	bin share/doc/queue-fix
 
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
+DJB_RESTRICTED=		NO
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/queue-fix ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/queue-fix
 
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/03/13 03:25:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2005/03/23 00:51:10 schmonz Exp $
 # FreeBSD Id: ports/sysutils/daemontools/Makefile,v 1.8 2000/12/03 05:16:41 steve Exp
 
 DISTNAME=	daemontools-0.76
@@ -13,15 +13,12 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/daemontools.html
 COMMENT=	Service monitoring and logging utilities by djb
 
-RESTRICTED=	"modified source and binaries may not be distributed"
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
+DJB_RESTRICTED=	YES
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=	yes
 
-BUILD_TARGET=	it
 SAMPLERC=	svscan.sh.sample
 SERVICEDIR?=	${VARBASE}/spool/service
 WRKSRC=		${WRKDIR}/admin/${DISTNAME}
@@ -32,10 +29,7 @@ DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
 
 INSTALLATION_DIRS=	bin man man/man8 share/examples/daemontools
 
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/src/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/src/conf-ld
-	${ECHO} ${PREFIX} > ${WRKSRC}/src/conf-home
+DJB_CONFIG_DIR=	${WRKSRC}/src
 
 do-build:
 	cd ${WRKSRC} && package/compile
@@ -63,4 +57,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${SERVICEDIR}
 	cd ${WRKDIR}/${PKGBASE}-man && ${INSTALL_MAN} *.8 ${PREFIX}/man/man8
 
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

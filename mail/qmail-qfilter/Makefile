@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/13 03:25:44 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/23 00:51:10 schmonz Exp $
 #
 
 DISTNAME=		qmail-qfilter-2.0
@@ -30,18 +30,16 @@ SUBST_MESSAGE.paths=	"Fixing paths."
 
 INSTALLATION_DIRS=	bin man man/man1 share/examples/qmail-qfilter
 
+BUILD_TARGET=		all
+
+DJB_RESTRICTED=		NO
+BGWARE_INSTALLER=	YES
+DJB_CONFIG_CMDS=	${ECHO} ${PREFIX}/include/bglibs > ${WRKSRC}/conf-bgincs;
+DJB_CONFIG_CMDS+=	${ECHO} ${PREFIX}/lib/bglibs > ${WRKSRC}/conf-bglibs
+
 .include "../../mk/bsd.prefs.mk"
 
-do-configure:
-	${ECHO} ${CC:Q} ${CFLAGS:Q} > ${WRKSRC}/conf-cc
-	${ECHO} ${CC:Q} ${_STRIPFLAG_CC} > ${WRKSRC}/conf-ld
-	${ECHO} ${PREFIX}/bin > ${WRKSRC}/conf-bin
-	${ECHO} ${PREFIX}/man > ${WRKSRC}/conf-man
-	${ECHO} ${PREFIX}/include/bglibs > ${WRKSRC}/conf-bgincs
-	${ECHO} ${PREFIX}/lib/bglibs > ${WRKSRC}/conf-bglibs
-
-do-install:
-	cd ${WRKSRC} && ./installer && ./instcheck
+post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/qmail-qfilter
 	for i in ${REPLACE_PERL}; do					\
 		${INSTALL_SCRIPT} ${WRKSRC}/$${i}			\
@@ -49,4 +47,5 @@ do-install:
 	done
 
 .include "../../devel/bglibs/buildlink3.mk"
+.include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
