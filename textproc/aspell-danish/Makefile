@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2003/01/19 06:35:45 salo Exp $
+# $NetBSD: Makefile,v 1.3 2003/04/20 19:26:17 cjep Exp $
 #
 
 DISTNAME=	aspell-da-0.50-2
 PKGNAME=	${DISTNAME:C/da-(.*)-(.*)$/danish-\1.\2/}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNU:=aspell/}
+MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/da/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
