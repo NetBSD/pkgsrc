@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5635 2004/04/18 14:02:35 jmmv Exp $
+$NetBSD: CHANGES,v 1.5636 2004/04/18 15:52:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2053,3 +2053,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added neverball-1.2.2 [xtraeme 2004-04-18]
 	Updated bind8 to 8.4.4 [seb 2004-04-18]
 	Updated gnome2-terminal to 2.6.1 [jmmv 2004-04-18]
+	Updated ggv2 to 2.6.1 [jmmv 2004-04-18]
