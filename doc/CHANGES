@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6972 2004/08/22 16:52:09 gson Exp $
+$NetBSD: CHANGES,v 1.6973 2004/08/22 17:56:50 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4019,3 +4019,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ivtools to 1.2.1 [markd 2004-08-22]
 	Updated squid to 2.5.6 [taca 2004-08-22]
 	Updated libstree to 0.4.0 [gson 2004-08-22]
+	Updated gpgme to 0.9.0 [recht 2004-08-22]
+	Updated balsa2 to 2.2.3 [recht 2004-08-22]
