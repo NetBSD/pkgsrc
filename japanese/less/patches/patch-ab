@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1 2000/04/11 07:44:10 sakamoto Exp $
+
+--- configure.in.orig	Tue Apr 11 15:20:54 2000
++++ configure.in	Tue Apr 11 15:25:23 2000
+@@ -15,5 +15,4 @@
+ 
+ dnl Checks for libraries.
+-AC_CHECK_LIB(ncurses, initscr, [have_ncurses=yes], [have_ncurses=no])
+ AC_CHECK_LIB(curses, initscr, [have_curses=yes], [have_curses=no])
+ AC_CHECK_LIB(termcap, tgetent, [have_termcap=yes], [have_termcap=no])
+@@ -31,14 +30,9 @@
+ AC_MSG_CHECKING(for working terminal libraries)
+ TERMLIBS=
+-if test $have_ncurses = yes; then
+-  TERMLIBS="$TERMLIBS -lncurses"
+-  dnl Don't use -ltermcap with -lncurses (Linux doesn't like it).
+-else
+-  if test $have_curses = yes; then
+-    TERMLIBS="$TERMLIBS -lcurses"
+-  fi
+-  if test $have_termcap = yes; then
+-    TERMLIBS="$TERMLIBS -ltermcap"
+-  fi
++if test $have_curses = yes; then
++  TERMLIBS="$TERMLIBS -lcurses"
++fi
++if test $have_termcap = yes; then
++  TERMLIBS="$TERMLIBS -ltermcap"
+ fi
+ 
