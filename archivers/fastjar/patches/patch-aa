@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2001/07/15 11:23:25 jlam Exp $
+
+--- Makefile.in.orig	Mon Dec  6 01:42:00 1999
++++ Makefile.in
+@@ -1,4 +1,5 @@
+ CFLAGS = @CFLAGS@ @CPPFLAGS@ @DEFS@
++LDFLAGS = @LDFLAGS@
+ CC = @CC@
+ INSTALL = @INSTALL@
+ prefix = @prefix@
+@@ -8,7 +9,7 @@
+ all: fastjar
+ 
+ fastjar: jartool.o dostime.o compress.o pushback.o
+-	$(CC) -o $@ jartool.o dostime.o compress.o pushback.o @LIBS@
++	$(CC) $(LDFLAGS) -o $@ jartool.o dostime.o compress.o pushback.o @LIBS@
+ 
+ install: fastjar
+ 	@INSTALL_PROGRAM@ -s -m 755 fastjar $(BINARY)
