@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 1999/06/28 00:35:33 thorpej Exp $
+$NetBSD: patch-aa,v 1.11 1999/07/10 10:39:03 tron Exp $
 
 --- Makefile.orig	Tue Jan 26 06:35:18 1999
 +++ Makefile	Wed Jun 23 19:45:35 1999
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.10 1999/06/28 00:35:33 thorpej Exp $
 +
 +netbsd-i386-elf:
 +	$(MAKE) CC=cc LDFLAGS= \
-+		OBJECTS='decode_i386.o dct64_i386.o getbits.o decode_i586.o \
++		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
 +			audio_sun.o' \
 +		CFLAGS='-Wall -ansi -pedantic -O4 -m486 -fomit-frame-pointer \
 +			-funroll-all-loops -ffast-math -DROT_I386 \
