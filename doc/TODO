@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1940 2004/07/17 11:37:24 wiz Exp $
+$NetBSD: TODO,v 1.1941 2004/07/17 14:54:33 snj Exp $
 
 Suggested new packages
 ======================
@@ -178,7 +178,6 @@ Suggested package updates
 	o bind-9.3
 	o bitchx-1.1
 	o blender-2.33
-	o bogofilter-0.92.2
 	o boson-0.10
 	o cdrtools-ossdvd-2.01.1.27
 	o centericq-4.10.0
