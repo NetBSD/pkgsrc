@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.587 2004/12/25 03:56:47 jlam Exp $
+# $NetBSD: Makefile,v 1.588 2004/12/25 05:12:32 jlam Exp $
 #
 
 COMMENT=	Development utilities
@@ -408,6 +408,7 @@ SUBDIR+=	p5-Proc-Daemon
 SUBDIR+=	p5-Regexp-Shellish
 SUBDIR+=	p5-SDL
 SUBDIR+=	p5-Spiffy
+SUBDIR+=	p5-Spoon
 SUBDIR+=	p5-SVN-Mirror
 SUBDIR+=	p5-SVN-Simple
 SUBDIR+=	p5-Safe-Hole
