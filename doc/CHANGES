@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4014 2003/12/07 19:18:51 wiz Exp $
+$NetBSD: CHANGES,v 1.4015 2003/12/08 13:56:18 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5013,3 +5013,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated squid to 2.5.4nb3 [taca 2003-12-07]
 	Updated crimsonfields to 0.3.7 [wiz 2003-12-07]
 	Updated popa3d to 0.6.4 [wiz 2003-12-07]
+	Updated pkg_install to 20031121 [grant 2003-12-08]
