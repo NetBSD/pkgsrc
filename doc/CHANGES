@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5218 2004/03/11 20:06:44 minskim Exp $
+$NetBSD: CHANGES,v 1.5219 2004/03/11 21:07:57 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1421,3 +1421,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-expect to 1.9b1nb1 [minskim 2004-03-11]
 	Updated cross-i386-mingw32 to 3.2 [kent 2004-03-11]
 	Updated grace to 5.1.14 [minskim 2004-03-11]
+	Updated kmplayer to 0.8.2nb2 [markd 2004-03-11]
+	Updated R to 1.8.1nb2 [markd 2004-03-11]
