@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.204 1999/01/19 23:40:09 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.205 1999/01/26 22:03:18 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -192,7 +192,7 @@ MD5?=			md5
 .endif
 MD5_FILE?=		${FILESDIR}/md5
 
-.if defined(USE_MOTIF) || defined(USE_X11)
+.if defined(USE_MOTIF) || defined(USE_X11) || defined(BUILD_USES_X11)
 LDFLAGS+=		-Wl,-R${X11BASE}/lib
 .endif
 LDFLAGS+=		-Wl,-R${LOCALBASE}/lib
@@ -673,7 +673,8 @@ IGNORE=	"is not an interactive port"
 IGNORE=	"may not be placed on a CDROM: ${NO_CDROM}"
 .elif (defined(RESTRICTED) && defined(NO_RESTRICTED))
 IGNORE=	"is restricted: ${RESTRICTED}"
-.elif ((defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11)) && \
+.elif ((defined(USE_IMAKE) || defined(USE_MOTIF) || \
+	defined(USE_X11) || defined(BUILD_USES_X11)) && \
        !exists(${X11BASE}))
 IGNORE=	"uses X11, but ${X11BASE} not found"
 .elif defined(BROKEN)
