@@ -1,0 +1,6 @@
+gethost does hostname and IP lookups. It supports IPv6.
+It uses standard libraries and it doesn't necessarily
+use DNS resolver only. So it is useful for troubleshooting
+/etc/hosts, for example. gethost can also time each lookup
+to show the elapsed time in seconds. Multiple lookups
+can be done on one command-line.
