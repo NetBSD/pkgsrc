@@ -1,0 +1,42 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/25 22:04:48 jmmv Exp $
+bin/mlv
+lib/libmlview.a
+lib/libmlview.la
+lib/libmlview.so
+lib/libmlview.so.4
+lib/libmlview.so.4.0
+share/applications/mlview.desktop
+share/gconf/schemas/mlview.schemas
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/mlview.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/mlview.mo
+share/mlview/mlview-dtd-choice-dtd-not-resolved.glade
+share/mlview/mlview-dtd-choice.glade
+share/mlview/mlview-preferences.glade
+share/mlview/tree-view-find-dialog.glade
+share/pixmaps/mlview-app-icon.png
+share/pixmaps/mlview-app-icon.xpm
+share/pixmaps/xml-comment-node.png
+share/pixmaps/xml-element-node-open.png
+share/pixmaps/xml-element-node.png
+share/pixmaps/xml-pi-node.png
+share/pixmaps/xml-root-open.png
+share/pixmaps/xml-root.png
+share/pixmaps/xml-text-node.png
+@dirrm share/mlview
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
