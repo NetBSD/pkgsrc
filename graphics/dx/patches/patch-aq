@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2002/02/05 22:23:32 drochner Exp $
+$NetBSD: patch-aq,v 1.1 2002/02/05 22:23:33 drochner Exp $
 
---- src/exec/libdx/message.c.orig	Tue Feb  5 12:56:40 2002
-+++ src/exec/libdx/message.c	Tue Feb  5 13:05:08 2002
-@@ -21,20 +21,18 @@
+--- src/exec/libdx/edfio.c.orig	Tue Feb  5 13:06:47 2002
++++ src/exec/libdx/edfio.c	Tue Feb  5 13:08:55 2002
+@@ -16,20 +16,18 @@
+ #include <stdarg.h>
  #include <stdlib.h>
- #include <string.h>
  
 -#if defined(HAVE_SYS_ERRNO_H)
 -#include <sys/errno.h>
@@ -27,4 +27,4 @@ $NetBSD: patch-aa,v 1.2 2002/02/05 22:23:32 drochner Exp $
 +#endif
  #endif
  
- #if defined(HAVE_IO_H)
+ #if defined(HAVE_SYS_FILE_H)
