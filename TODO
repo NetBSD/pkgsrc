@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.11 2001/05/05 10:10:08 wiz Exp $
+$NetBSD: TODO,v 1.12 2001/05/06 08:53:46 zuntum Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -59,6 +59,7 @@ package update TODO (Suggested package updates)
 	o update sysutils/lsof to 4.56 [atatat has new version ready]
 	o update www/php4 and assorted php4 module packages to 4.0.5
 		(jlam has a new package ready, will update after freeze)
+	o update x11/xfce to 3.8.3
 
 
 pksgrc TODO (Suggested pkgsrc features and enhancements)
