@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.72 1999/11/23 16:38:22 dmcmahill Exp $
+# $NetBSD: Packages.txt,v 1.73 1999/11/26 18:06:21 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -911,7 +911,8 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    compared with the checksums stored in the files/md5 file. If the
    checksums don't match, the build is aborted. This is to ensure the same
    distfile is used for building, and that the distfile wasn't changed,
-   e.g. by some malign force or network lossage. 
+   e.g. by some malign force, deliberately changed distfiles on the master
+   distribution site or network lossage. 
 
  * extract:
    When the distfiles are present on the local system, they need to be
@@ -1379,6 +1380,19 @@ include the URL for that page in the HOMEPAGE variable. The definition
 of the variable should be placed immediately after the MAINTAINER
 variable.
 
+ 9.15 How to handle modified distfiles with the 'old' name
+ =========================================================
+
+Sometimes authors of a software package make some modifications after the
+software was released, and they put up a new distfile without changing the
+package's version number. If a package is already in pkgsrc at that time, 
+the md5 checksum will no longer match. The correct way to work around this
+is to update the package's md5 checksum to match the package on the master
+site (beware, any mirrors may not be upto date yet!), and to remove the 
+old distfile from ftp.netbsdorg's /pub/NetBSD/packages/distfiles directory.
+Furthermore, a mail to the package's author seems appropriate making sure
+the distfile was really updated on purpose, and that no troja horse or so
+crept in.
 
  10 Submitting
  =============
