@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/05/23 08:40:27 rh Exp $
+# $NetBSD: Makefile,v 1.4 1999/06/21 04:53:15 jlam Exp $
 #
 
 DISTNAME=	wmakerconf-2.1
@@ -12,7 +12,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www-info2.informatik.uni-wuerzburg.de/staff/ulli/wmakerconf/
 
-DEPENDS+=	windowmaker-0.53.0:../../x11/windowmaker
+DEPENDS+=	windowmaker-0.60.0:../../x11/windowmaker
 DEPENDS+=	imlib-1.9.4:../../graphics/imlib
 DEPENDS+=	libproplist-0.8.3:../../devel/libproplist
 DEPENDS+=	gtk+-1.2.2:../../x11/gtk
