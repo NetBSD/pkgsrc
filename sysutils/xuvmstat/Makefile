@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/01/20 12:26:16 agc Exp $
+# $NetBSD: Makefile,v 1.11 2005/03/30 21:08:30 kristerw Exp $
 #
 
 DISTNAME=	${PKGNAME:S/-//}
@@ -10,7 +10,7 @@ MAINTAINER=	wiz@NetBSD.org
 COMMENT=	Graphical display for the current UVM status
 
 WRKSRC=		${WRKDIR}/xuvmstat
-MAKE_ENV+=	X11BASE=${X11BASE}
+USE_X11=	YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xuvmstat ${PREFIX}/bin
