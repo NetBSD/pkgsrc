@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/03/13 17:36:37 fredb Exp $
+# $NetBSD: Makefile,v 1.35 2002/08/31 13:01:59 wiz Exp $
 #
 
 DISTNAME=	TiMidity++-2.11.3
@@ -18,10 +18,9 @@ CONFIGURE_ARGS+=--enable-vt100 --enable-audio=sun,vorbis --disable-debug \
 		--with-ogg-prefix="${BUILDLINK_DIR}/include" \
 		--with-vorbis-prefix="${BUILDLINK_DIR}/include"
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=	yes
 
-.include "../../audio/libvorbis/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../x11/gtk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../audio/libvorbis/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
