@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9692 2005/03/30 15:14:24 wiz Exp $
+$NetBSD: CHANGES,v 1.9693 2005/03/30 15:24:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1829,3 +1829,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated efax-gtk to 2.2.15 [adam 2005-03-30]
         Updated mklivecd to 0.11 [xtraeme 2005-03-30]
 	Added openttd-0.3.6 [wiz 2005-03-30]
+	Updated glpk to 4.8nb1 [adam 2005-03-30]
