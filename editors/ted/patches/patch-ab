@@ -1,11 +1,12 @@
-$NetBSD: patch-ab,v 1.5 2002/05/20 17:46:32 cjep Exp $
---- Ted/configure.orig	Sun Mar  3 23:24:16 2002
-+++ Ted/configure	Tue Apr  9 12:13:32 2002
-@@ -1946,7 +1946,6 @@
- 
-     # Includes
-     for ac_dir in		\
--	/usr/include		\
- 	/usr/local/include	\
- 	/usr/pkg/include	\
- 	/usr/local/include/zlib	\
+$NetBSD: patch-ab,v 1.6 2003/04/09 13:26:46 markd Exp $
+
+--- Ted/configure.orig	Sat Apr  5 00:46:46 2003
++++ Ted/configure
+@@ -3392,7 +3392,6 @@ EOF
+     then
+ 	# Includes
+ 	for ac_dir in		\
+-	    /usr/include		\
+ 	    /usr/local/include	\
+ 	    /usr/pkg/include	\
+ 	    /usr/local/include/zlib	\
