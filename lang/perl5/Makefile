@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2003/02/17 15:28:00 dillo Exp $
+# $NetBSD: Makefile,v 1.61 2003/02/21 14:42:14 grant Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	-Dscriptdir="${PREFIX}/bin"
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
 CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
 CONFIGURE_ARGS+=	-Dcc="${CC:T}"
+CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
 TEST_TARGET=		test
