@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2003/10/18 08:10:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/06 00:52:21 xtraeme Exp $
 #
 
-DISTNAME=	gnutls-0.8.7
-PKGREVISION=	1
+DISTNAME=	gnutls-1.0.0
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/
 
@@ -13,10 +12,6 @@ COMMENT=	GNU Transport Layer Security library
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
-
-# The security/libtasn1 package provides a version that is too new to work
-# fine with this version of gnutls.
-CONFIGURE_ARGS+=	--with-included-libtasn
 
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
@@ -32,6 +27,9 @@ post-install:
 
 .include "../../archivers/liblzo/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
+.include "../../security/libgcrypt/buildlink2.mk"
+.include "../../security/libtasn1/buildlink2.mk"
 .include "../../security/opencdk/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
