@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5280 2004/03/20 04:40:31 taca Exp $
+$NetBSD: CHANGES,v 1.5281 2004/03/20 15:35:38 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated eblook to 1.6 [uebayasi 2004-03-19]
 	Updated lookup to 1.4 [uebayasi 2004-03-19]
 	Updated ruby-base to 1.6.8.nb4 [taca 2004-03-20]
+	Updated xfe to 0.54.2nb3 [xtraeme 2004-03-20]

@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/30 16:09:22 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/20 15:35:38 xtraeme Exp $
 bin/xfe
 bin/xfq
 bin/xfv
-lib/charset.alias
 lib/foxicons/a_32x32.gif
 lib/foxicons/bak_16x16.gif
 lib/foxicons/bak_32x32.gif
