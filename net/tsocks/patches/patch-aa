@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/03 12:57:20 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2005/02/27 22:06:10 jschauma Exp $
 
---- Makefile.in.orig	2001-03-13 23:59:42.000000000 +0100
-+++ Makefile.in
-@@ -38,19 +38,19 @@ TARGETS= ${SHLIB} ${UTIL_LIB} ${SAVE} ${
+--- Makefile.in.orig	Tue Mar 13 17:59:42 2001
++++ Makefile.in	Sun Feb 27 16:18:25 2005
+@@ -38,22 +38,22 @@
  all: ${TARGETS}
  
  ${COMMON}.o: ${COMMON}.c
@@ -26,8 +26,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/03 12:57:20 jmmv Exp $
 +	${SHCC} ${CFLAGS} ${INCLUDES} -static -o ${SAVE} ${SAVE}.c
  
  ${SHLIB}: ${SHOBJS} ${COMMON}.o ${PARSER}.o
- 	${SHCC} ${CFLAGS} ${SPECIALLIBS} ${LIBS} ${INCLUDES} -nostdlib -shared -o ${SHLIB} ${SHOBJS} ${COMMON}.o ${PARSER}.o ${DYNLIB_FLAGS}
-@@ -65,19 +65,19 @@ ${SHLIB}: ${SHOBJS} ${COMMON}.o ${PARSER
+-	${SHCC} ${CFLAGS} ${SPECIALLIBS} ${LIBS} ${INCLUDES} -nostdlib -shared -o ${SHLIB} ${SHOBJS} ${COMMON}.o ${PARSER}.o ${DYNLIB_FLAGS}
++	${LD} ${LDFLAGS} ${SPECIALLIBS} ${LIBS} ${INCLUDES} -nostdlib -shared -o ${SHLIB} ${SHOBJS} ${COMMON}.o ${PARSER}.o ${DYNLIB_FLAGS}
+ 	ln -sf ${SHLIB} ${LIB_NAME}.so
+ 
+ %.so: %.c
+@@ -65,19 +65,19 @@
  install: ${TARGETS} installlib installman
  
  installlib:
