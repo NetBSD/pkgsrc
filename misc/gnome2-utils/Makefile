@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2004/02/14 21:26:37 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2004/02/22 15:50:14 jmmv Exp $
 #
 
 DISTNAME=		gnome-utils-2.4.1
@@ -32,9 +32,9 @@ GCONF2_SCHEMAS+=	logview.schemas
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
+.include "../../curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
