@@ -1,0 +1,28 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/01/21 19:15:59 bouyer Exp $
+
+--- apcupsd.c.orig	Wed Apr  7 18:06:41 1999
++++ apcupsd.c	Fri Jan  7 18:55:53 2000
+@@ -100,7 +100,9 @@
+ 
+ #include <stdio.h>
+ #include <unistd.h>
++#ifndef __NetBSD__
+ #include <getopt.h>
++#endif /* __NetBSD__ */
+ #include <stdlib.h>
+ #include <stdarg.h>
+ #include <fcntl.h>
+@@ -290,13 +292,6 @@
+  * it should close them.
+  *********************************************************************/
+ void terminate (int sig) {
+-	/*
+-	 * XXX - Is someone able to explain me why here we find a sleep for 10
+-	 * seconds ?
+-	 *
+-	 * -RF
+-	 */
+-	sleep(10);
+ #ifdef NEW_THREADS
+ 	restore_signals();
+ #endif /* NEW_THREADS */
