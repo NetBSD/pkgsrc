@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.158 2000/10/15 12:14:57 rh Exp $
+# $NetBSD: mk.conf.example,v 1.159 2000/10/20 02:05:15 hubertf Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -135,6 +135,7 @@
 # kermit-license -- the redistribution license for ckermit
 # sun-jsdk20-license -- the download license for Sun's JSDK distribution
 # sun-swing-license -- the download license for Sun's Swing (JFC) toolkit
+# adobe-acrobat-license -- usage policy for Adobe Acrobat
 #
 # Default: none
 
