@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.163.2.1 2004/11/22 22:48:05 tv Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.163.2.2 2004/11/23 18:25:35 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -184,7 +184,7 @@ BUILDLINK_DEPMETHOD.${_pkg_}?=	full
 # use the dependency information.
 #
 #_BLNK_DEPENDS_LIST=	${_BLNK_RECURSIVE_DEPENDS} # XXXTV PR 24721
-.if !empty(PKG_PHASES:Mextract)
+.if !empty(PKG_PHASES:Mdepends)
 _BLNK_DEPENDS_LIST=	${_BLNK_DEPENDS}
 .else
 _BLNK_DEPENDS_LIST=	# empty
