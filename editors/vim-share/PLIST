@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/24 19:39:08 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/03/16 08:02:39 martti Exp $
 bin/vimtutor
 bin/xxd
 man/man1/evim.1
@@ -71,6 +71,7 @@ share/vim/${VIM_SUBDIR}/doc/mbyte.txt
 share/vim/${VIM_SUBDIR}/doc/message.txt
 share/vim/${VIM_SUBDIR}/doc/mlang.txt
 share/vim/${VIM_SUBDIR}/doc/motion.txt
+share/vim/${VIM_SUBDIR}/doc/netbeans.txt
 share/vim/${VIM_SUBDIR}/doc/options.txt
 share/vim/${VIM_SUBDIR}/doc/os_390.txt
 share/vim/${VIM_SUBDIR}/doc/os_amiga.txt
@@ -189,6 +190,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/xslt.vim
 share/vim/${VIM_SUBDIR}/ftplugof.vim
 share/vim/${VIM_SUBDIR}/gvimrc_example.vim
 share/vim/${VIM_SUBDIR}/indent.vim
+share/vim/${VIM_SUBDIR}/indent/README.txt
 share/vim/${VIM_SUBDIR}/indent/ada.vim
 share/vim/${VIM_SUBDIR}/indent/automake.vim
 share/vim/${VIM_SUBDIR}/indent/c.vim
@@ -259,6 +261,7 @@ share/vim/${VIM_SUBDIR}/plugin/netrw.vim
 share/vim/${VIM_SUBDIR}/plugin/rrhelper.vim
 share/vim/${VIM_SUBDIR}/procset.ps
 share/vim/${VIM_SUBDIR}/scripts.vim
+share/vim/${VIM_SUBDIR}/synmenu.vim
 share/vim/${VIM_SUBDIR}/syntax/2html.vim
 share/vim/${VIM_SUBDIR}/syntax/README.txt
 share/vim/${VIM_SUBDIR}/syntax/abaqus.vim
