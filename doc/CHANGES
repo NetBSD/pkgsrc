@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6051 2004/05/28 23:00:13 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6052 2004/05/28 23:05:38 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2674,3 +2674,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dovecot to 0.99.10.5 [xtraeme 2004-05-28]
 	Updated jikes to 1.21 [xtraeme 2004-05-28]
 	Updated libesmtp to 1.0.3 [xtraeme 2004-05-28]
+	Updated cyrus-imapd22 to 2.2.5 [recht 2004-05-28]
