@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.15 2005/01/18 18:22:56 tv Exp $
+# $NetBSD: Interix.mk,v 1.16 2005/01/18 19:37:08 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -19,6 +19,7 @@
 #
 # pkg		start		end		slotsize	#slots
 #
+# <bsd.lib.mk>	0x50000000	0x6fffffff	0x00040000	2048
 # libtool-base	0x50000000	0x6fffffff	0x00040000	2048
 # netpbm	0x6b000000	0x6cffffff	0x00100000	32
 # openssl	0x5e000000	0x5fffffff	0x00100000	32
