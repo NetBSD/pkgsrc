@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1092 2003/01/11 09:01:13 uebayasi Exp $
+$NetBSD: CHANGES,v 1.1093 2003/01/11 11:24:32 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -213,3 +213,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated jde to 2.3.2 [uebayasi 2003-01-11]
 	Updated eieio to 0.17 [uebayasi 2003-01-11]
 	Updated semantic to 1.4.2 [uebayasi 2003-01-11]
+	Updated libgtop2 to 2.0.0nb2 [jmmv 2003-01-11]
