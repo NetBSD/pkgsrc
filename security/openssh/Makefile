@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2001/06/18 19:54:14 tron Exp $
+# $NetBSD: Makefile,v 1.53 2001/06/28 23:12:16 jlam Exp $
 
 DISTNAME=		openssh-2.9p2
 CATEGORIES=		security
@@ -13,37 +13,11 @@ HOMEPAGE=		http://www.openssh.com/
 COMMENT=		Open Source Secure shell client and server (remote login program)
 
 CONFLICTS=		sftp-*
+CONFLICTS+=		ssh-[0-9]* ssh6-[0-9]*
 
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
-BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 
 CRYPTO=			yes
-
-# Check for a usable installed version of OpenSSL.  Version must be greater
-# than 0.9.5a.  If a usable version isn't present, then use the pkgsrc
-# OpenSSL package.
-#
-.if exists(/usr/include/openssl/rsa.h)
-OPENSSLV_H=		/usr/include/openssl/opensslv.h
-OPENSSL_VERSION!=	awk '/.*OPENSSL_VERSION_NUMBER.*/ { print $$3 }' \
-				${OPENSSLV_H}
-OPENSSL_VERSION_095a=	0x0090581fL
-OPENSSL_VERSION_096=	0x0090600fL
-OPENSSL_VERSION_096a=	0x0090601fL
-.if (${OPENSSL_VERSION} != ${OPENSSL_VERSION_095a}) && \
-    (${OPENSSL_VERSION} != ${OPENSSL_VERSION_096}) && \
-    (${OPENSSL_VERSION} != ${OPENSSL_VERSION_096a})
-DEPENDS+=		openssl-0.9.6:../../security/openssl
-SSLBASE=		${LOCALBASE}
-.else
-SSLBASE=		/usr
-.endif
-.else
-DEPENDS+=		openssl-0.9.6:../../security/openssl
-SSLBASE=		${LOCALBASE}
-.endif
-
-CONFLICTS=		ssh-[0-9]* ssh6-[0-9]*
 
 # retain the following line, for IPv6-ready pkgsrc webpage 
 BUILD_DEFS+=		USE_INET6
@@ -64,18 +38,21 @@ SSH_CONF_DIR?=		/etc
 
 MESSAGE_SUBST+=		SSH_CONF_DIR=${SSH_CONF_DIR}
 
+USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${SSH_CONF_DIR}
-CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE}
+CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_DIR}
 
 # The ssh-askpass program is in ${X11BASE}/bin or ${X11PREFIX}/bin depending
 # on if it's part of the X11 distribution, or if it's installed from pkgsrc
-# (security/ssh-askpass).
+# (security/ssh-askpass).  The configure process will lie about the compiled
+# location of the ssh-askpass program.  In reality, it uses what we give it
+# below.
 #
 .if exists(${X11BASE}/bin/ssh-askpass)
-MAKE_ENV+=		ASKPASS_LOCATION=${X11BASE}/bin
+MAKE_ENV+=		ASKPASS_PROGRAM=${X11BASE}/bin/ssh-askpass
 .else
-MAKE_ENV+=		ASKPASS_LOCATION=${X11PREFIX}/bin
+MAKE_ENV+=		ASKPASS_PROGRAM=${X11PREFIX}/bin/ssh-askpass
 .endif
 
 CHECK_FILES=	bin/slogin man/man1/slogin.1 \
@@ -83,13 +60,8 @@ CHECK_FILES=	bin/slogin man/man1/slogin.1 \
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 
 .if (${OPSYS} == SunOS)
-DEPENDS+=		zlib-*:../../devel/zlib
-
 INSTALL_FILE=		${WRKDIR}/INSTALL.SunOS
 .endif
-
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 
 post-build:
 	for FILE in \
@@ -120,4 +92,6 @@ post-install:
 	  fi; \
 	done
 
+.include "../../devel/zlib/buildlink.mk"
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
