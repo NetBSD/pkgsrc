@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:40 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/11 02:29:27 taya Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
 etc/gconf/schemas/galeon.schemas
 etc/sound/events/galeon.soundlist
+lib/galeon/components/libgaleon-npl.la
+lib/galeon/components/libgaleon-npl.so
 man/man1/galeon.1
 share/galeon/BackHistory.png
 share/galeon/ForwardHistory.png
@@ -12,10 +14,6 @@ share/galeon/babelfish.png
 share/galeon/bookmarks.glade
 share/galeon/bookmarks.png
 share/galeon/bug.png
-share/galeon/components/libgaleon-npl.la
-share/galeon/components/libgaleon-npl.so
-share/galeon/components/libgaleon-npl.so.0
-share/galeon/components/libgaleon-npl.so.0.0
 share/galeon/crash.png
 share/galeon/debian.png
 share/galeon/default.xpm
@@ -132,13 +130,6 @@ share/galeon/tb_drag_arrow_down.xpm
 share/galeon/tb_drag_arrow_left.xpm
 share/galeon/tb_drag_arrow_right.xpm
 share/galeon/tb_drag_arrow_up.xpm
-share/galeon/themes/Glass/Back.png
-share/galeon/themes/Glass/Forward.png
-share/galeon/themes/Glass/Home.png
-share/galeon/themes/Glass/New.png
-share/galeon/themes/Glass/Refresh.png
-share/galeon/themes/Glass/Stop.png
-share/galeon/themes/Glass/Up.png
 share/galeon/themes/GnomeLarge/Back.png
 share/galeon/themes/GnomeLarge/Forward.png
 share/galeon/themes/GnomeLarge/Go.png
@@ -147,11 +138,6 @@ share/galeon/themes/GnomeLarge/New.png
 share/galeon/themes/GnomeLarge/Refresh.png
 share/galeon/themes/GnomeLarge/Stop.png
 share/galeon/themes/GnomeLarge/Up.png
-share/galeon/themes/Konqueror/Back.png
-share/galeon/themes/Konqueror/Forward.png
-share/galeon/themes/Konqueror/Home.png
-share/galeon/themes/Konqueror/Refresh.png
-share/galeon/themes/Konqueror/Stop.png
 share/galeon/themes/Micro/Back-prelight.png
 share/galeon/themes/Micro/Back.png
 share/galeon/themes/Micro/Forward-prelight.png
@@ -166,59 +152,6 @@ share/galeon/themes/Micro/Stop-prelight.png
 share/galeon/themes/Micro/Stop.png
 share/galeon/themes/Micro/Up-prelight.png
 share/galeon/themes/Micro/Up.png
-share/galeon/themes/MozillaModern/Back.png
-share/galeon/themes/MozillaModern/Forward.png
-share/galeon/themes/MozillaModern/Go.png
-share/galeon/themes/MozillaModern/Home.png
-share/galeon/themes/MozillaModern/Print.png
-share/galeon/themes/MozillaModern/Refresh.png
-share/galeon/themes/MozillaModern/Stop.png
-share/galeon/themes/MozillaModern/Up.png
-share/galeon/themes/MozillaModern/default.xpm
-share/galeon/themes/MozillaModern/default_open.xpm
-share/galeon/themes/MozillaModern/dir.xpm
-share/galeon/themes/MozillaModern/dir_open.xpm
-share/galeon/themes/MozillaModern/i-bookmark.xpm
-share/galeon/themes/MozillaModernSmall/Back.png
-share/galeon/themes/MozillaModernSmall/Forward.png
-share/galeon/themes/MozillaModernSmall/Go.png
-share/galeon/themes/MozillaModernSmall/Home.png
-share/galeon/themes/MozillaModernSmall/New.png
-share/galeon/themes/MozillaModernSmall/Print.png
-share/galeon/themes/MozillaModernSmall/Refresh.png
-share/galeon/themes/MozillaModernSmall/Stop.png
-share/galeon/themes/MozillaModernSmall/Up.png
-share/galeon/themes/MozillaModernSmall/default.xpm
-share/galeon/themes/MozillaModernSmall/default_open.xpm
-share/galeon/themes/MozillaModernSmall/dir.xpm
-share/galeon/themes/MozillaModernSmall/dir_open.xpm
-share/galeon/themes/MozillaModernSmall/i-bookmark.xpm
-share/galeon/themes/Netscape/Back.png
-share/galeon/themes/Netscape/Forward.png
-share/galeon/themes/Netscape/Home.png
-share/galeon/themes/Netscape/Refresh.png
-share/galeon/themes/Netscape/Stop.png
-share/galeon/themes/Orion/Back.png
-share/galeon/themes/Orion/Forward.png
-share/galeon/themes/Orion/Home.png
-share/galeon/themes/Orion/New.png
-share/galeon/themes/Orion/Refresh.png
-share/galeon/themes/Orion/Stop.png
-share/galeon/themes/Orion/Up.png
-share/galeon/themes/Plastik/Back.png
-share/galeon/themes/Plastik/Forward.png
-share/galeon/themes/Plastik/Home.png
-share/galeon/themes/Plastik/New.png
-share/galeon/themes/Plastik/Refresh.png
-share/galeon/themes/Plastik/Stop.png
-share/galeon/themes/Plastik/Up.png
-share/galeon/themes/PlastikLarge/Back.png
-share/galeon/themes/PlastikLarge/Forward.png
-share/galeon/themes/PlastikLarge/Home.png
-share/galeon/themes/PlastikLarge/New.png
-share/galeon/themes/PlastikLarge/Refresh.png
-share/galeon/themes/PlastikLarge/Stop.png
-share/galeon/themes/PlastikLarge/Up.png
 share/galeon/themes/Remembrance/Back.png
 share/galeon/themes/Remembrance/Forward.png
 share/galeon/themes/Remembrance/Go.png
@@ -229,13 +162,6 @@ share/galeon/themes/Remembrance/Refresh.png
 share/galeon/themes/Remembrance/Stop.png
 share/galeon/themes/Remembrance/Up.png
 share/galeon/themes/Remembrance/empty.png
-share/galeon/themes/Ska/Back.png
-share/galeon/themes/Ska/Forward.png
-share/galeon/themes/Ska/Home.png
-share/galeon/themes/Ska/New.png
-share/galeon/themes/Ska/Refresh.png
-share/galeon/themes/Ska/Stop.png
-share/galeon/themes/Ska/Up.png
 share/galeon/toc.css
 share/galeon/toolbars.png
 share/galeon/windows.png
@@ -246,52 +172,38 @@ share/gnome/help/galeon-manual/C/apx-bugs.sgml
 share/gnome/help/galeon-manual/C/apx-command-line.sgml
 share/gnome/help/galeon-manual/C/apx-compiling.sgml
 share/gnome/help/galeon-manual/C/apx-troubleshooting.sgml
-share/gnome/help/galeon-manual/C/authors.html
-share/gnome/help/galeon-manual/C/bookmarks-aliases.html
-share/gnome/help/galeon-manual/C/bookmarks-context-menus.html
-share/gnome/help/galeon-manual/C/bookmarks-importing.html
-share/gnome/help/galeon-manual/C/bookmarks-my-portal.html
-share/gnome/help/galeon-manual/C/bookmarks-nicks.html
-share/gnome/help/galeon-manual/C/bookmarks-smart-bookmarks.html
-share/gnome/help/galeon-manual/C/bookmarks-toolbars.html
-share/gnome/help/galeon-manual/C/bookmarks-with-images.html
-share/gnome/help/galeon-manual/C/bookmarks.html
 share/gnome/help/galeon-manual/C/bookmarks.sgml
 share/gnome/help/galeon-manual/C/browser-window.html
 share/gnome/help/galeon-manual/C/browser-window.sgml
-share/gnome/help/galeon-manual/C/bugs.html
-share/gnome/help/galeon-manual/C/command-line-options.html
-share/gnome/help/galeon-manual/C/compiling-from-source.html
-share/gnome/help/galeon-manual/C/context-menus.html
-share/gnome/help/galeon-manual/C/find.html
-share/gnome/help/galeon-manual/C/full-screen-mode.html
 share/gnome/help/galeon-manual/C/galeon-manual.sgml
 share/gnome/help/galeon-manual/C/getting-started.html
 share/gnome/help/galeon-manual/C/getting-started.sgml
-share/gnome/help/galeon-manual/C/history.html
 share/gnome/help/galeon-manual/C/index.html
 share/gnome/help/galeon-manual/C/introduction.html
 share/gnome/help/galeon-manual/C/ln23.html
-share/gnome/help/galeon-manual/C/other-tools.html
 share/gnome/help/galeon-manual/C/other-tools.sgml
 share/gnome/help/galeon-manual/C/plugins.sgml
 share/gnome/help/galeon-manual/C/preface.sgml
-share/gnome/help/galeon-manual/C/preferences.html
 share/gnome/help/galeon-manual/C/preferences.sgml
-share/gnome/help/galeon-manual/C/prefs-advanced.html
-share/gnome/help/galeon-manual/C/prefs-gnome-url-handlers.html
-share/gnome/help/galeon-manual/C/prefs-handlers.html
-share/gnome/help/galeon-manual/C/prefs-rendering.html
-share/gnome/help/galeon-manual/C/prefs-user-interface.html
-share/gnome/help/galeon-manual/C/statusbar.html
-share/gnome/help/galeon-manual/C/tabbed-browsing.html
-share/gnome/help/galeon-manual/C/toolbar.html
+share/gnome/help/galeon-manual/C/stylesheet-images/caution.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/home.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/important.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/next.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/note.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/prev.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/tip.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/toc-blank.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/toc-minus.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/toc-plus.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/up.gif
+share/gnome/help/galeon-manual/C/stylesheet-images/warning.gif
 share/locale/az/LC_MESSAGES/galeon.mo
 share/locale/bg/LC_MESSAGES/galeon.mo
 share/locale/ca/LC_MESSAGES/galeon.mo
 share/locale/cs/LC_MESSAGES/galeon.mo
 share/locale/da/LC_MESSAGES/galeon.mo
 share/locale/de/LC_MESSAGES/galeon.mo
+share/locale/el/LC_MESSAGES/galeon.mo
 share/locale/es/LC_MESSAGES/galeon.mo
 share/locale/et/LC_MESSAGES/galeon.mo
 share/locale/fi/LC_MESSAGES/galeon.mo
@@ -326,7 +238,6 @@ share/sounds/galeon/clicked.wav
 @exec %D/bin/gconftool --shutdown
 @exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults %D/bin/gconftool --makefile-install-rule %D/etc/gconf/schemas/galeon.schemas
 @dirrm share/sounds/galeon
-@dirrm share/sounds
 @exec /bin/mkdir -p %D/share/omf/galeon
 @unexec rm -f %D/share/omf/galeon/galeon-manual-C.omf
 @dirrm share/omf/galeon
@@ -336,25 +247,17 @@ share/sounds/galeon/clicked.wav
 @dirrm share/gnome/help/galeon-manual/C/figures
 @dirrm share/gnome/help/galeon-manual/C
 @dirrm share/gnome/help/galeon-manual
-@dirrm share/galeon/themes/Ska
 @dirrm share/galeon/themes/Remembrance
-@dirrm share/galeon/themes/PlastikLarge
-@dirrm share/galeon/themes/Plastik
-@dirrm share/galeon/themes/Orion
-@dirrm share/galeon/themes/Netscape
-@dirrm share/galeon/themes/MozillaModernSmall
-@dirrm share/galeon/themes/MozillaModern
 @dirrm share/galeon/themes/Micro
-@dirrm share/galeon/themes/Konqueror
 @dirrm share/galeon/themes/GnomeLarge
-@dirrm share/galeon/themes/Glass
 @dirrm share/galeon/themes
 @dirrm share/galeon/spinners/pipeon
 @dirrm share/galeon/spinners/galeon
 @dirrm share/galeon/spinners/crashcut
 @dirrm share/galeon/spinners
-@dirrm share/galeon/components
 @dirrm share/galeon
+@dirrm lib/galeon/components
+@dirrm lib/galeon
 @unexec %D/bin/gconftool --shutdown
 @unexec /bin/rm -rf %D/etc/gconf/gconf.xml.defaults/apps/galeon
 @unexec /bin/rm -rf %D/etc/gconf/gconf.xml.defaults/schemas/apps/galeon
