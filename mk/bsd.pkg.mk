@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.860 2001/11/25 18:59:50 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.861 2001/11/25 19:04:19 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -73,6 +73,9 @@ PKG_SYSCONFSUBDIR?=	# empty
 PKG_SYSCONFBASE?=	${PREFIX}/etc
 PKG_SYSCONFDIR?=	${PKG_SYSCONFBASE}/${PKG_SYSCONFSUBDIR}
 .endif
+
+CONFIGURE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
+MAKE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
 
 .if defined(USE_JAVA)
 BUILD_DEFS+=		PKG_JVM JAVA_HOME
