@@ -1,0 +1,43 @@
+$NetBSD: patch-am,v 1.1 2000/10/22 16:55:20 rh Exp $
+
+--- src/cdrom/openbsd/SDL_syscdrom.c.orig	Thu Mar 16 16:20:38 2000
++++ src/cdrom/openbsd/SDL_syscdrom.c
+@@ -35,6 +35,7 @@
+ #include <string.h>
+ #include <errno.h>
+ #include <unistd.h>
++#include <sys/ioctl.h>
+ #include <sys/cdio.h>
+ 
+ #include "SDL_error.h"
+@@ -63,7 +64,8 @@
+ 
+ /* Some ioctl() errno values which occur when the tray is empty */
+ #define ERRNO_TRAYEMPTY(errno)	\
+-	((errno == EIO) || (errno == ENOENT) || (errno == EINVAL))
++	((errno == EIO) || (errno == ENOENT) || (errno == EINVAL) || \
++	 (errno == ENODEV))
+ 
+ /* Check a drive to see if it is a CD-ROM */
+ static int CheckDrive(char *drive, struct stat *stbuf)
+@@ -95,6 +97,8 @@
+ 			}
+ 			close(cdfd);
+ 		}
++		else if (ERRNO_TRAYEMPTY(errno))
++			is_cd = 1;
+ 	}
+ 	return(is_cd);
+ }
+@@ -136,7 +140,11 @@
+ int  SDL_SYS_CDInit(void)
+ {
+ 	static char *checklist[] = {
++#ifdef __NetBSD__
++		"?0 cd?a", "cdrom", NULL
++#else
+ 		"?0 cd?c", "?0 acd?c", "cdrom", NULL
++#endif
+ 	};
+ 	char *SDLcdrom;
+ 	int i, j, exists;
