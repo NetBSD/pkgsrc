@@ -1,10 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/07/14 07:57:25 jlam Exp $
+$NetBSD: MESSAGE,v 1.2 2001/07/14 08:02:35 jlam Exp $
 
 To use ${PKGNAME}, the following things must exist on the system:
 
-	(1) a kernel configured with the PROCFS and KERNFS options,
-	(2) a procfs filesystem mounted on /proc, and
-	(3) a kernfs filesystem mounted on /kern.
+	(1) a kernel configured with the PROCFS option, and
+	(2) a procfs filesystem mounted on /proc.
 
 ===========================================================================
