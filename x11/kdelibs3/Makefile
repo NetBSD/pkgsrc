@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2004/10/13 11:47:51 markd Exp $
+# $NetBSD: Makefile,v 1.70 2004/12/10 06:02:57 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -19,30 +20,31 @@ SGML_CATALOGS=		${PREFIX}/share/kde/apps/ksgmltools2/customization/catalog
 SGML_CATALOGS+=		${PREFIX}/share/kde/apps/ksgmltools2/docbook/xml-dtd-4.1.2/docbook.cat
 SGML_CATALOGS+=		${PREFIX}/share/kde/apps/ksgmltools2/docbook/xml-dtd-4.2/docbook.cat
 
+.include "dirs.mk"
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-LIBS+=			${EXPORT_SYMBOLS_LDFLAGS}
-.endif
+LIBS.NetBSD+=			${EXPORT_SYMBOLS_LDFLAGS}
+
+_SORTED!=	${ECHO} ${KDE3_DIRS} | ${TR} -s ' \t' '\n' | ${SORT}
+MAKE_DIRS+=	${_SORTED:S/^/${PREFIX}\//}
 
 REPLACE_PERL= \
 	kio/proxytype.pl \
 	kio/useragent.pl \
+	kio/misc/fileshareset \
 	kdeui/preparetips
 
-PLIST_SRC=		${WRKDIR}/PLIST
 UNLIMIT_RESOURCES=	datasize memorysize
 
-FIXUP_FILES= \
+SUBST_CLASSES+=			kdelibsfix
+SUBST_STAGE.kdelibsfix=		pre-configure
+SUBST_MESSAGE.kdelibsfix=	"Fixing hardcoded paths."
+SUBST_FILES.kdelibsfix= \
+	kdecore/kstandarddirs.cpp \
 	kdeui/ksconfig.cpp \
 	kio/kssl/kopenssl.cc
-
-pre-configure:
-	@for i in ${FIXUP_FILES}; do \
-		${SED} -e 's:@LOCALBASE@:${LOCALBASE}:g' \
-		     ${WRKSRC}/$${i} > ${WRKSRC}/$${i}.fixup && \
-		${MV} ${WRKSRC}/$${i}.fixup ${WRKSRC}/$${i}; \
-	done
+SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g' \
+	-e 's:@PKGLOCALEDIR@:${PKGLOCALEDIR}:g'
 
 .if defined(USE_CUPS) && (${USE_CUPS} == "YES")
 PKG_DEFAULT_OPTIONS+=	cups
@@ -72,38 +74,14 @@ PLIST_SUBST+=		KDED_WORKAROUND=""
 .include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gssapi=yes
 
-# We will create the complete icon directory tree for use by other KDE3
-# packages at post-install time.
-#
-ICONCOLORS=	crystalsvg hicolor locolor
-ICONSIZES=	16x16 22x22 32x32 48x48 64x64 128x128
-ICONDIRS=	actions/kde actions apps devices filesystems mimetypes
+
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/kde/locale
 .if ${OPSYS} == "NetBSD"
 .  if ${OS_VERSION:M1.5.[12]*} || ${OS_VERSION:M1.[0-4]*}
 	@${RM} ${PREFIX}/lib/kded.*
 .  endif
 .endif
-	@( ${CAT} ${PKGDIR}/PLIST;					\
-	   for color in ${ICONCOLORS}; do				\
-		colordir=share/kde/icons/$${color};			\
-		for size in ${ICONSIZES}; do				\
-			sizedir=$${colordir}/$${size};			\
-			for dir in ${ICONDIRS}; do			\
-				icondir=$${sizedir}/$${dir};		\
-				${INSTALL_DATA_DIR} ${PREFIX}/$${icondir}; \
-				${ECHO} "@exec ${MKDIR} %D/$${icondir}"; \
-				${ECHO} "@dirrm $${icondir}";		\
-			done;						\
-			${ECHO} "@dirrm $${sizedir}";			\
-		done;							\
-		${ECHO} "@dirrm $${colordir}";				\
-	  done;								\
-	  ${ECHO} "@dirrm share/kde/icons";				\
-	  ${ECHO} "@dirrm share/kde";					\
-	) > ${PLIST_SRC}
 
 .if ${MACHINE_ARCH} == "alpha"
 GCC_REQD+=		2.95
@@ -147,6 +125,7 @@ CONFIGURE_ENV+= CFLAGS="${CFLAGS}"
 # Configure finds these but apparently they are not ready for primetime
 # and build will blow up as declarations in netdb.h are not visible
 CONFIGURE_ENV+= ac_cv_func_getservbyname_r='no'
+CONFIGURE_ENV+= ac_cv_func_getservbyport_r='no'
 CONFIGURE_ENV+= ac_cv_func_getprotobyname_r='no'
 .endif
 
