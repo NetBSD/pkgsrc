@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:41:54 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/12/24 12:51:32 jmmv Exp $
 
-SHA1 (teTeX/teTeX-texmfsrc-1.0.1.tar.gz) = 2f2d6735cc98a7e2aa38c55ae12829b20e3abe8f
-Size (teTeX/teTeX-texmfsrc-1.0.1.tar.gz) = 12241774 bytes
+SHA1 (teTeX/tetex-texmfsrc-2.0.2.tar.gz) = 59c5a328800225c44beec9a9baf0f4223ac633c3
+Size (teTeX/tetex-texmfsrc-2.0.2.tar.gz) = 22909537 bytes
