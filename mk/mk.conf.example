@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.30 1998/10/19 07:41:23 frueauf Exp $
+# $NetBSD: mk.conf.example,v 1.31 1998/10/19 11:23:31 agc Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection.
@@ -60,13 +60,13 @@ MANZ=		1		# gzip manual pages at installation time
                                 # Possible: defined, not defined
                                 # Default: not defined
 
-#ACCEPTABLE_LICENSES=	shareware no-commercial-use
+#ACCEPTABLE_LICENSES=	shareware no-commercial-use fee-based-commercial-use
                                 # Whitespace-delimited list of the types of
                                 # license which are acceptable for installation.
                                 # (apart from standard "free" licenses such as
                                 # Berkeley/CMU and GPL).
-                                # Possible: shareware, no-commercial-use
-                                # 
+                                # Possible: shareware, no-commercial-use,
+                                # 	fee-based-commercial-use 
                                 # Default: none
 
 #FAILOVER_FETCH= yes            # Perform a checksum at "make fetch" time.
