@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/26 11:32:28 jlam Exp $
+
+--- Makefile.orig	Wed Aug 25 22:08:08 1999
++++ Makefile	Thu Aug 26 07:21:46 1999
+@@ -1,7 +1,7 @@
+-PREFIX = /usr/local
++#PREFIX = /usr/local
+ 
+ CFLAGS = `get-wraster-flags --cflags` -Wall
+-LDFLAGS = `get-wraster-flags --ldflags`
++LDFLAGS += `get-wraster-flags --ldflags`
+ LIBS = `get-wraster-flags --libs`
+ CC = gcc
+ 
+@@ -10,10 +10,9 @@
+ wmessage: wmessage.o panel.o
+ 	$(CC) -o wmessage wmessage.o panel.o \
+ 		$(CFLAGS) $(LDFLAGS) $(LIBS) -lWMaker -lWINGs -lPropList
+-	strip wmessage
+ 
+ install: wmessage
+-	install -c wmessage $(PREFIX)/bin/wmessage
++	${BSD_INSTALL_PROGRAM} wmessage $(PREFIX)/bin/wmessage
+ 
+ uninstall:
+ 	rm -f $(PREFIX)/bin/wmessage
