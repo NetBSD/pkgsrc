@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2002/05/16 02:27:04 grant Exp $
+# $NetBSD: Makefile,v 1.45 2003/03/06 20:44:13 salo Exp $
+#
 
-DISTNAME=	rsync-2.5.5
+DISTNAME=	rsync-2.5.6
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 		ftp://rsync.samba.org/pub/rsync/ \
@@ -14,13 +15,17 @@ MAINTAINER=     tron@netbsd.org
 HOMEPAGE=	http://rsync.samba.org/
 COMMENT=	Network file distribution/synchronisation utility
 
+USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-included-popt
 
-post-install:
-	@strip ${PREFIX}/bin/rsync
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rsync
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/rsync
-	${INSTALL_DATA} ${WRKSRC}/tech_report.tex ${PREFIX}/share/doc/rsync
+PKG_SYSCONFSUBDIR=	rsync
+
+post-patch:
+	@cd ${WRKSRC} && \
+	for f in rsync.h rsync.1 rsyncd.conf.5 ; do \
+		${MV} $${f} $${f}.orig;			\
+		${SED} ${FILES_SUBST_SED} $${f}.orig > $${f};	\
+	done
 
 .include "../../mk/bsd.pkg.mk"
