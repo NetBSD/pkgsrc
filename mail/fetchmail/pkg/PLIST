@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2000/01/24 08:22:20 itojun Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/01/24 08:22:46 itojun Exp $
 bin/fetchmail
+bin/fetchmailconf
 man/man1/fetchmail.1
 man/man1/fetchmailconf.1
 share/doc/fetchmail/README
