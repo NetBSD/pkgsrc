@@ -1,15 +1,7 @@
-$NetBSD: patch-ab,v 1.7 1999/04/01 13:36:56 agc Exp $
+$NetBSD: patch-ab,v 1.8 2000/06/21 16:23:24 hubertf Exp $
 
-Use -fPIC on NetBSD
-On Solaris, fix up the tcl library name, so it's the same as NetBSD
-for pkgsrc internal use (PLIST entries)
-On Solaris, do not use dots in version names for the library (same
-reason as previous)
-Use -fPIC on Solaris too, otherwise we overflow a 2048 entry table.
-Set TCL_SHARED_BUILD to 1.
-
---- configure.orig	Tue Mar  9 06:51:26 1999
-+++ configure	Thu Apr  1 14:12:15 1999
+--- configure.orig	Tue Mar  9 07:51:26 1999
++++ configure	Wed Jun 21 18:01:00 2000
 @@ -4096,7 +4096,7 @@
  if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -38,12 +30,23 @@ Set TCL_SHARED_BUILD to 1.
  	;;
      ULTRIX-4.*)
  	SHLIB_CFLAGS="-G 0"
-@@ -4679,6 +4682,8 @@
-     eval "TCL_LIB_FILE=libtcl${TCL_UNSHARED_LIB_SUFFIX}"
+@@ -4680,6 +4683,8 @@
      MAKE_LIB="ar cr \${TCL_LIB_FILE} \${OBJS}"
  fi
-+
-+TCL_SHARED_BUILD=1
  
++TCL_SHARED_BUILD=1
++
  # Note:  in the following variable, it's important to use the absolute
  # path name of the Tcl directory rather than "..":  this is because
+ # AIX remembers this path and will attempt to use it at run-time to look
+@@ -4690,8 +4695,8 @@
+ else
+     TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
+ fi
+-TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
+-TCL_LIB_SPEC="-L${exec_prefix}/lib ${TCL_LIB_FLAG}"
++TCL_BUILD_LIB_SPEC="-Wl,-R`pwd` -L`pwd` ${TCL_LIB_FLAG}"
++TCL_LIB_SPEC="-Wl,-R${exec_prefix}/lib -L${exec_prefix}/lib ${TCL_LIB_FLAG}"
+ 
+ # tclConfig.sh needs a version of the _LIB_SUFFIX that has been eval'ed
+ # so that the backslashes quoting the DBX braces are dropped.
