@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/02/22 14:02:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2005/03/22 09:24:29 adam Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -71,8 +71,6 @@ include/octave-${PKGVERSION}/octave/ODE.h
 include/octave-${PKGVERSION}/octave/ODEFunc.h
 include/octave-${PKGVERSION}/octave/ODES.h
 include/octave-${PKGVERSION}/octave/ODESFunc.h
-include/octave-${PKGVERSION}/octave/ODESSA-opts.h
-include/octave-${PKGVERSION}/octave/ODESSA.h
 include/octave-${PKGVERSION}/octave/Objective.h
 include/octave-${PKGVERSION}/octave/QP.h
 include/octave-${PKGVERSION}/octave/Quad-opts.h
@@ -614,8 +612,6 @@ libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/max.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/min.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/minmax.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/mktime.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/odessa.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/odessa_options.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/pinv.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/qr.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/quad.oct
@@ -642,7 +638,6 @@ share/doc/html/octave/Octave-FAQ_1.html
 share/doc/html/octave/Octave-FAQ_10.html
 share/doc/html/octave/Octave-FAQ_11.html
 share/doc/html/octave/Octave-FAQ_12.html
-share/doc/html/octave/Octave-FAQ_13.html
 share/doc/html/octave/Octave-FAQ_2.html
 share/doc/html/octave/Octave-FAQ_3.html
 share/doc/html/octave/Octave-FAQ_4.html
