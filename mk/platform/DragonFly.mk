@@ -1,8 +1,6 @@
-# $NetBSD: DragonFly.mk,v 1.1 2004/10/31 22:05:02 wiz Exp $
+# $NetBSD: DragonFly.mk,v 1.2 2004/11/02 22:24:35 wiz Exp $
 #
 # Variable definitions for the DragonFly operating system.
-
-_IGNORE_USE_GNU_TOOLS=patch
 
 AWK?=		/usr/bin/awk
 BASENAME?=	/usr/bin/basename
