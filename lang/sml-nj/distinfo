@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:00:57 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/05/04 12:49:40 agc Exp $
 
+SHA1 (sml-nj/110.9.1-bin.sparc-unix.tar.Z) = bb13f7b44512cc5981089e8ee182c801fcd1b559
+Size (sml-nj/110.9.1-bin.sparc-unix.tar.Z) = 4122275 bytes
 SHA1 (sml-nj/110.9.1-bin.x86-unix.tar.Z) = 9ef76e50e2e37ed21a20e921fbc65b3fa1eae045
 Size (sml-nj/110.9.1-bin.x86-unix.tar.Z) = 2913567 bytes
 SHA1 (sml-nj/110.9.1-cm.tar.Z) = ccc203b905417d3776f2479c630d598b59855e1d
