@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.1.1.1 2004/10/21 14:27:43 grant Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.2 2004/11/20 13:25:22 hubertf Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
   <title>Frequently Asked Questions</title>
@@ -31,7 +31,7 @@
 </sect1>
 
 
-<sect1>
+<sect1 id="faq-pkgtools">
     <title>Utilities for package management (pkgtools)</title>
 
     <para>
@@ -91,8 +91,22 @@
         </para>
       </listitem>
       <listitem>
+        <para> <pkg>pkgtools/dfdisk</pkg>:
+          adds extra functionality to pkgsrc, allowing it to fetch
+          distfiles from multiple locations. It currently supports the
+          following methods: multiple CD-ROMs and network FTP/HTTP
+          connections. 
+        </para>
+      </listitem>
+      <listitem>
         <para> <pkg>pkgtools/xpkgwedge</pkg>:
           put X11 packages someplace else (enabled by default)
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>devel/cpuflags</pkg>:
+          will determine the best compiler flags to optimise code for
+          your current CPU and compiler. 
         </para>
       </listitem>
     </itemizedlist>
@@ -510,7 +524,7 @@ CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc</programlisting>
 
     <screen>
 ===========================================================================
-$NetBSD: faq.xml,v 1.1.1.1 2004/10/21 14:27:43 grant Exp $
+$NetBSD: faq.xml,v 1.2 2004/11/20 13:25:22 hubertf Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
