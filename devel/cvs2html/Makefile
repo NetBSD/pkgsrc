@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/24 13:30:17 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/24 13:43:48 zuntum Exp $
 #
 
 DISTNAME=	cvs2html-1.82
@@ -13,7 +13,7 @@ NO_BUILD=	YES
 USE_PERL5=	YES
 
 post-patch:
-	${SED} "s,/usr/bin/perl,${PERL5}," ${WRKSRC}/cvs2html ${WRKSRC}/cvs2html.done
+	${SED} "s,/usr/bin/perl,${PERL5}," ${WRKSRC}/cvs2html > ${WRKSRC}/cvs2html.done
 	${MV} ${WRKSRC}/cvs2html.done ${WRKSRC}/cvs2html
 
 do-install:
