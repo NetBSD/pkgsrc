@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/01/11 02:56:33 garbled Exp $
+--- main.c.orig	Thu Apr  8 11:28:57 1999
++++ main.c	Mon Jan 10 16:07:45 2000
+@@ -23,15 +23,32 @@
+ #include "food.h"
+ #include "db.h"
+ #include <stdlib.h>
++#include <string.h>
++#include <stdio.h>
++#include <sys/errno.h>
++#include <sys/types.h>
++#include <sys/stat.h>
+ 
+ void main(int argc, char *argv[])
+ {
++
++char pathname[256];
++extern int errno;
++
+ food_root.next = NULL;
+ meal_root.next = NULL;
+ recipe_root.next = NULL;
+ make_filenames();
+ if ( ! read_food_db() )
+  {
++ sprintf(pathname, "%s/%s", getenv("HOME"), NUTDIR);
++  if (mkdir(pathname, S_IRWXU|S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH) != 0) {
++	if (errno != EEXIST) {
++		printf("Cannot create %s/%s: %s\n", getenv("HOME"), NUTDIR,
++			strerror(errno));
++		exit(1);
++	}
++  }
+  read_raw_food_db();
+  read_nut_raw_food_file();
+  }
