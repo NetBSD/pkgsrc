@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1998/09/10 14:22:32 agc Exp $
+# $NetBSD: Makefile,v 1.21 1999/01/26 21:36:06 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/10/01 09:20:31 tg Exp
 #
 
@@ -18,6 +18,18 @@ GNU_CONFIGURE=	yes
 # let libtool look after shared libraries
 USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--disable-shared
+
+# If the build system supports shared objects, enable them in tk.
+# libtermcap was chosen as it doesn't change version numbers frequently.
+.if exists(/usr/lib/libtermcap.so.0.0)
+post-configure:
+	@${ECHO} "Enabling shared object support in ${PKGNAME}"
+	cd ${WRKSRC};							\
+		${MV} tkConfig.sh tkConfig.sh.orig;			\
+		${SED} -e 's/TK_SHARED_BUILD=.*/TK_SHARED_BUILD=1/'	\
+			-e 's/TK_LIB_FILE=.*/TK_LIB_FILE=libtk80.so.1.0/' \
+			tkConfig.sh.orig > tkConfig.sh
+.endif
 
 test:
 	cd ${WRKSRC}; ${SETENV} LIBTOOL=${LIBTOOL} PREFIX=${PREFIX} ${MAKE} test
