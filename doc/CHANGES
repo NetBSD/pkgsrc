@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3896 2003/12/02 23:31:35 recht Exp $
+$NetBSD: CHANGES,v 1.3897 2003/12/02 23:44:34 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4714,3 +4714,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ogmtools to 1.2 [cube 2003-12-02]
 	Renamed arch to tla [recht 2003-12-02]
 	Updated tla to 1.1.0.8 [recht 2003-12-02]
+	Updated py-checker to 0.8.13 [recht 2003-12-02]
+	Updated roundup to 0.6.3.1 [recht 2003-12-02]
