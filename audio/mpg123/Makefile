@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2002/02/22 13:17:53 simonb Exp $
-#
+# $NetBSD: Makefile,v 1.31 2002/02/23 09:20:37 tron Exp $
 
 DISTNAME=	mpg123-0.59r
+PKGREVISION=	1
 PKGNAME=	mpg123-0.59.18
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mpg123.de/mpg123/ \
