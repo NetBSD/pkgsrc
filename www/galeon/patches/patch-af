@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2001/08/29 14:02:29 taya Exp $
+
+diff -ru ../Orig/galeon-0.12/src/BaseProtocolHandler.cpp ./src/BaseProtocolHandler.cpp
+--- ../Orig/galeon-0.12/src/BaseProtocolHandler.cpp	Sun Aug 19 11:52:33 2001
++++ ./src/BaseProtocolHandler.cpp	Fri Aug 24 14:22:54 2001
+@@ -92,7 +92,7 @@
+ 	nsresult rv = NS_OK;
+ 	nsCOMPtr <nsIURI> newUri;
+ 
+-	rv = nsComponentManager::CreateInstance(kSimpleURICID, NULL,
++	rv = nsComponentManager::CreateInstance(kSimpleURICID, (nsISupports *)NULL,
+ 						NS_GET_IID(nsIURI),
+ 						getter_AddRefs(newUri));
+ 
