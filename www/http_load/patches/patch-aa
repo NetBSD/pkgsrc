@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2002/07/02 16:26:32 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2002/10/25 09:33:37 wiz Exp $
 
---- Makefile.orig	Fri Jan  4 05:54:43 2002
+--- Makefile.orig	Fri Jan  4 06:54:43 2002
 +++ Makefile
 @@ -9,14 +9,14 @@
  # http://www.openssl.org/  Make sure the SSL_TREE definition points to the
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.2 2002/07/02 16:26:32 wiz Exp $
 +SSL_TREE =	${SSLBASE}
 +SSL_DEFS =	-DUSE_SSL
 +SSL_INC =	-I$(SSL_TREE)/include
-+SSL_LIBS =	-L$(SSL_TREE)/lib -lssl -lcrypto
++SSL_LIBS =	-L$(SSL_TREE)/lib -Wl,-R$(SSL_TREE)/lib -lssl -lcrypto
  
  
 -BINDIR =	/usr/local/bin
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.2 2002/07/02 16:26:32 wiz Exp $
  CC =		gcc -Wall
  CFLAGS =	-O $(SRANDOM_DEFS) $(SSL_DEFS) $(SSL_INC)
  #CFLAGS =	-g $(SRANDOM_DEFS) $(SSL_DEFS) $(SSL_INC)
-@@ -35,10 +35,9 @@
+@@ -35,10 +35,9 @@ timers.o:	timers.c timers.h
  	$(CC) $(CFLAGS) -c timers.c
  
  install:	all
