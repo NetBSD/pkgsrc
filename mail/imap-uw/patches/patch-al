@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.4 2003/07/30 09:29:59 adam Exp $
+$NetBSD: patch-al,v 1.5 2004/05/13 18:14:34 adam Exp $
 
---- src/c-client/auth_gss.c.orig	2003-03-05 06:24:17.000000000 +0100
-+++ src/c-client/auth_gss.c	2003-07-30 10:54:54.000000000 +0200
+--- src/c-client/auth_gss.c.orig	2004-03-15 19:59:22.000000000 +0000
++++ src/c-client/auth_gss.c
 @@ -18,6 +18,16 @@
   * CPYRIGHT, included with this Distribution.
   */
@@ -19,7 +19,7 @@ $NetBSD: patch-al,v 1.4 2003/07/30 09:29:59 adam Exp $
  
  long auth_gssapi_valid (void);
  long auth_gssapi_client (authchallenge_t challenger,authrespond_t responder,
-@@ -53,15 +63,32 @@
+@@ -56,15 +66,32 @@ long auth_gssapi_valid (void)
    OM_uint32 smn;
    gss_buffer_desc buf;
    gss_name_t name;
