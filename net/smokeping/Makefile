@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2004/12/28 02:47:48 reed Exp $
+# $NetBSD: Makefile,v 1.10 2005/01/22 21:50:54 adrianp Exp $
 
-DISTNAME=	smokeping-1.30
-PKGREVISION=	1
+DISTNAME=	smokeping-1.37
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/smokeping/pub/
 
@@ -17,6 +16,7 @@ DEPENDS+=	p5-libwww>=5.64:../../www/p5-libwww
 USE_PERL5=	YES
 PERL5_REQD+=	5.6.0
 USE_PKGINSTALL=	YES
+NO_BUILD=	YES
 
 BUILD_DEFS+=	USE_INET6
 
@@ -32,6 +32,7 @@ REPLACE_PERL=	bin/smokeping.dist
 BUILD_DEFS+=	USE_SPEEDY
 
 .include "../../mk/bsd.prefs.mk"
+
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
 DEPENDS+=	p5-Socket6-*:../../net/p5-Socket6
 .endif
@@ -43,23 +44,26 @@ INTERP=		speedy
 INTERP=		perl
 .endif
 
-do-build:
-	${SED} -e s#@PREFIX@#${PREFIX}#g \
-	     -e s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g \
-	     <${WRKSRC}/bin/smokeping.dist >${WRKDIR}/smokeping.pl
-	${SED} -e s#@PREFIX@#${PREFIX}#g \
-	     -e s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g \
-	     -e s#@INTERP@#${INTERP}#g \
-	    <${WRKSRC}/htdocs/smokeping.cgi.dist >${WRKDIR}/smokeping.cgi
-	${SED} -e s#@PREFIX@#${PREFIX}#g \
-	     -e s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g \
-	    <${WRKSRC}/etc/config.dist >${WRKDIR}/config.dist
+SUBST_CLASSES+=		files
+SUBST_STAGE.files=	post-patch
+SUBST_FILES.files=	bin/smokeping.dist htdocs/smokeping.cgi.dist \
+			etc/config.dist etc/smokemail.dist
+SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g" \
+			-e "s|@VARBASE@|${VARBASE}|g" \
+			-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
+			-e "s|@INTERP@|${INTERP}|g" \
+			-e "s|perl-5.8.0|perl|g" \
+			-e "s|/usr/bin/perl|${PERL5}|g"
+SUBST_MESSAGE.files=	"Fixing configuration files."
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/ISG
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/matchers
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/probes
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smokeping
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smokeping/matchers
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smokeping/probes
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/smokeping
 	for FILE in CHANGES CONTRIBUTORS COPYING COPYRIGHT README TODO; do \
 	  ${INSTALL_DATA} ${WRKSRC}/$$FILE ${PREFIX}/share/doc/smokeping; \
@@ -67,8 +71,16 @@ do-install:
 	for FILE in ${WRKSRC}/doc/*.txt; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/doc/smokeping; \
 	done
-	${INSTALL_SCRIPT} ${WRKDIR}/smokeping.pl ${PREFIX}/bin/smokeping
-	${INSTALL_SCRIPT} ${WRKDIR}/smokeping.cgi ${PREFIX}/libexec/cgi-bin/
+	for FILE in ${WRKSRC}/doc/matchers/*.txt; do \
+	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/doc/smokeping/matchers; \
+	done
+	for FILE in ${WRKSRC}/doc/probes/*.txt; do \
+	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/doc/smokeping/probes; \
+	done
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/smokeping.dist \
+		${PREFIX}/bin/smokeping
+	${INSTALL_SCRIPT} ${WRKSRC}/htdocs/smokeping.cgi.dist \
+		${PREFIX}/libexec/cgi-bin/smokeping.cgi
 	for FILE in ${WRKSRC}/lib/*.pm; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping; \
 	done
@@ -78,7 +90,10 @@ do-install:
 	for FILE in ${WRKSRC}/lib/probes/*.pm; do \
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/probes; \
 	done
-	for FILE in ${WRKDIR}/config.dist \
+	for FILE in ${WRKSRC}/lib/matchers/*.pm; do \
+	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/matchers; \
+	done
+	for FILE in ${WRKSRC}/etc/config.dist \
 	    ${WRKSRC}/etc/basepage.html.dist \
 	    ${WRKSRC}/etc/config-echoping.dist \
 	    ${WRKSRC}/etc/smokemail.dist; do \
