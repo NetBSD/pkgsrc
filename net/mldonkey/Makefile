@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2004/12/28 02:47:47 reed Exp $
+# $NetBSD: Makefile,v 1.27 2005/02/04 22:33:34 adrianp Exp $
 #
 
 .include "Makefile.common"
-
-PKGREVISION=		4
 
 USE_PKGINSTALL=		YES
 
