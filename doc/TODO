@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.504 2003/04/27 02:08:52 rh Exp $
+$NetBSD: TODO,v 1.505 2003/04/27 17:05:57 cjep Exp $
 
 Suggested new packages
 ======================
@@ -279,6 +279,11 @@ Suggested pkgsrc enhancements
 
 	o Add a sort check to pkglint for PLISTs.
 
+	o Allow tokens in Makefiles, etc to silence pkglint WARNS.
+	  e.g. # ABS_PATH could silence an absolute path warning
+	  such as
+	  WARN: possible use of absolute pathname "/usr", in Makefile.
+
 	o Make pkgsrc work on more operating systems.
 
 	o Permit cross-building of packages which are capable of
@@ -306,7 +311,8 @@ Suggested cleanups in pkgsrc
 	o Make packages install honour PKGLOCALEDIR by setting
 	  USE_PKGLOCALEDIR=YES where appropriate (for eg. Solaris).
 
-	o Deprecate LTCONFIG_OVERRIDE -- replace with appropriate LIBTOOL_OVERRIDE
+	o Deprecate LTCONFIG_OVERRIDE -- replace with appropriate 
+	  LIBTOOL_OVERRIDE
 
 	o Fix remaining packages to install documentation into share/doc
 	  instead of share/gtk-doc (usually,
