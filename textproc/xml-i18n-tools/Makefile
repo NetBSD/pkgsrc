@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/08/27 19:15:55 tron Exp $
+# $NetBSD: Makefile,v 1.4 2001/11/29 13:27:47 jlam Exp $
 
 DISTNAME=	xml-i18n-tools-0.9
 CATEGORIES=	textproc gnome
@@ -8,14 +8,17 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://news.gnome.org/gnome-news/979851911/
 COMMENT=	XML internationalisation tools
 
-GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
-USE_PERL5=	YES
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
+
+DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xml-i18n-tools
-.for doc in ABOUT-NLS AUTHORS COPYING ChangeLog NEWS README
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/xml-i18n-tools
-.endfor
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	for file in ABOUT-NLS AUTHORS COPYING ChangeLog NEWS README; do	\
+		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR};		\
+	done
 
+.include "../../lang/perl5/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
