@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.19 2004/03/22 04:09:51 kristerw Exp $
+# $NetBSD: java-vm.mk,v 1.20 2004/04/02 17:26:21 abs Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -79,9 +79,9 @@ _PKG_JVM_DEFAULT?=	kaffe
 _ONLY_FOR_PLATFORMS.jdk= \
 	NetBSD-*-i386 Linux-*-i[3-6]86
 _ONLY_FOR_PLATFORMS.jdk12= \
-	NetBSD-1.[6-9]*-i386 NetBSD-2*-i386
+	NetBSD-1.[6-9]*-i386 NetBSD-2.*-i386
 _ONLY_FOR_PLATFORMS.jdk13= \
-	NetBSD-1.[6-9]*-i386 NetBSD-2*-i386
+	NetBSD-1.[6-9]*-i386 NetBSD-2.*-i386
 _ONLY_FOR_PLATFORMS.blackdown-jdk13= \
 	NetBSD-*-i386 NetBSD-*-powerpc NetBSD-*-sparc \
 	Linux-*-i[3-6]86 Linux-*-powerpc Linux-*-sparc
@@ -92,7 +92,7 @@ _ONLY_FOR_PLATFORMS.blackdown-jdk13+= \
 _ONLY_FOR_PLATFORMS.sun-jdk13= \
 	NetBSD-*-i386 Linux-*-i[3-6]86 Darwin-*-*
 _ONLY_FOR_PLATFORMS.sun-jdk14= \
-	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 NetBSD-2*-i386 \
+	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 NetBSD-2.*-i386 \
 	Linux-*-i[3-6]86
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
@@ -134,7 +134,7 @@ _PKG_JVM_INSTALLED.${_jvm_}!= \
 #
 .if ${_PKG_JVM_DEFAULT} == "sun-jdk"
 .  if !empty(MACHINE_PLATFORM:MNetBSD-1.6[M-Z]*-i386) || \
-      !empty(MACHINE_PLATFORM:MNetBSD-1.[7-9]*-i386) || \
+      !empty(MACHINE_PLATFORM:MNetBSD-2.*-i386) || \
       !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86)
 .    if defined(_PKG_JVM_INSTALLED.sun-jdk14) && \
 	(${_PKG_JVM_INSTALLED.sun-jdk14} == "yes")
