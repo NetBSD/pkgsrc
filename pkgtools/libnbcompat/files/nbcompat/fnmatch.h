@@ -1,4 +1,4 @@
-/*	$NetBSD: fnmatch.h,v 1.1 2004/08/06 16:55:09 jlam Exp $	*/
+/*	$NetBSD: fnmatch.h,v 1.2 2004/08/10 18:47:55 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -34,6 +34,11 @@
 #ifndef	_NBCOMPAT_FNMATCH_H_
 #define	_NBCOMPAT_FNMATCH_H_
 
+#if HAVE_FNMATCH_H
+# include <fnmatch.h>
+#endif
+
+#if !HAVE_FNMATCH
 #define	FNM_NOMATCH	1	/* Match failed. */
 #define	FNM_NOSYS	2	/* Function not implemented. */
 
@@ -44,5 +49,6 @@
 #define	FNM_LEADING_DIR	0x10	/* Ignore /<tail> after Imatch. */
 
 int	 fnmatch(const char *, const char *, int);
+#endif
 
 #endif /* !_NBCOMPAT_FNMATCH_H_ */

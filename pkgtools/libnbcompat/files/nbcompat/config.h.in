@@ -3,9 +3,6 @@
 /* Define to 1 if the `getpgrp' function requires zero arguments. */
 #undef GETPGRP_VOID
 
-/* Define to 1 if you have the <arpa/nameser.h> header file. */
-#undef HAVE_ARPA_NAMESER_H
-
 /* Define to 1 if you have the <assert.h> header file. */
 #undef HAVE_ASSERT_H
 
@@ -81,6 +78,9 @@
 
 /* Define to 1 if you have the `group_from_gid' function. */
 #undef HAVE_GROUP_FROM_GID
+
+/* Define to 1 if you have the <grp.h> header file. */
+#undef HAVE_GRP_H
 
 /* Define to 1 if the system has the type `int16_t'. */
 #undef HAVE_INT16_T
@@ -179,17 +179,11 @@
 /* Define to 1 if the `SHA1*' functions are built into the library. */
 #undef HAVE_NBCOMPAT_SHA1
 
-/* Define to 1 if the `statvfs' function is built into the library. */
-#undef HAVE_NBCOMPAT_STATVFS
-
 /* Define to 1 if the `vis' function is built into the library. */
 #undef HAVE_NBCOMPAT_VIS
 
 /* Define to 1 if you have the <ndir.h> header file. */
 #undef HAVE_NDIR_H
-
-/* Define to 1 if you have the <netdb.h> header file. */
-#undef HAVE_NETDB_H
 
 /* Define to 1 if you have the <netinet/in6_machtypes.h> header file. */
 #undef HAVE_NETINET_IN6_MACHTYPES_H
@@ -231,9 +225,6 @@
 /* Define to 1 if you have the `setenv' function. */
 #undef HAVE_SETENV
 
-/* Define to 1 if you have the `setgrent' function. */
-#undef HAVE_SETGRENT
-
 /* Define to 1 if you have the `setgroupent' function. */
 #undef HAVE_SETGROUPENT
 
@@ -249,17 +240,20 @@
 /* Define to 1 if you have the `setprogname' function. */
 #undef HAVE_SETPROGNAME
 
-/* Define to 1 if you have the `setpwent' function. */
-#undef HAVE_SETPWENT
-
 /* Define to 1 if you have the <sha1.h> header file. */
 #undef HAVE_SHA1_H
 
 /* Define to 1 if you have the `snprintf' function. */
 #undef HAVE_SNPRINTF
 
+/* Define to 1 if you have the `statvfs' function. */
+#undef HAVE_STATVFS
+
 /* Define to 1 if you have the <stdint.h> header file. */
 #undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdio.h> header file. */
+#undef HAVE_STDIO_H
 
 /* Define to 1 if you have the <stdlib.h> header file. */
 #undef HAVE_STDLIB_H

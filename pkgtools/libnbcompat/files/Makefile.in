@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.23 2004/08/06 16:55:09 jlam Exp $
+# $NetBSD: Makefile.in,v 1.24 2004/08/10 18:47:55 jlam Exp $
 #
 
 srcdir=		@srcdir@
@@ -19,11 +19,33 @@ RANLIB=		@RANLIB@
 
 LIB=		libnbcompat.a
 
-INCS=		nbcompat.h nbcompat/err.h nbcompat/fnmatch.h nbcompat/fts.h \
-		nbcompat/getopt.h nbcompat/glob.h nbcompat/md5.h \
-		nbcompat/nbconfig.h nbcompat/nbtypes.h nbcompat/poll.h \
-		nbcompat/queue.h nbcompat/rmd160.h nbcompat/sha1.h \
-		nbcompat/statvfs.h nbcompat/vis.h
+INCS=		nbcompat.h \
+		nbcompat/err.h \
+		nbcompat/fnmatch.h \
+		nbcompat/fts.h \
+		nbcompat/getopt.h \
+		nbcompat/glob.h \
+		nbcompat/grp.h \
+		nbcompat/limits.h \
+		nbcompat/md5.h \
+		nbcompat/nbconfig.h \
+		nbcompat/nbtypes.h \
+		nbcompat/paths.h \
+		nbcompat/poll.h \
+		nbcompat/pwd.h \
+		nbcompat/queue.h \
+		nbcompat/rmd160.h \
+		nbcompat/sha1.h \
+		nbcompat/stat.h \
+		nbcompat/statvfs.h \
+		nbcompat/stdio.h \
+		nbcompat/stdlib.h \
+		nbcompat/string.h \
+		nbcompat/time.h \
+		nbcompat/tzfile.h \
+		nbcompat/unistd.h \
+		nbcompat/util.h \
+		nbcompat/vis.h
 
 # always use our local glob() implementation.
 OBJS=		glob.o @LIBOBJS@

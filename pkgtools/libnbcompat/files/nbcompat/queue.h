@@ -1,4 +1,4 @@
-/*	$NetBSD: queue.h,v 1.1 2004/08/06 16:55:09 jlam Exp $	*/
+/*	$NetBSD: queue.h,v 1.2 2004/08/10 18:47:55 jlam Exp $	*/
 
 /*
  * Copyright (c) 1991, 1993
@@ -37,6 +37,14 @@
 
 #ifndef _NBCOMPAT_QUEUE_H
 #define _NBCOMPAT_QUEUE_H
+
+#if HAVE_SYS_QUEUE_H
+# include <sys/queue.h>
+#endif
+
+/*
+ * Provide any macros missing from <sys/queue.h>.
+ */
 
 #ifndef LIST_HEAD
 #define LIST_HEAD(name, type)						\
