@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2002/03/30 08:27:26 tron Exp $
+$NetBSD: patch-af,v 1.2 2003/12/25 18:49:56 fredb Exp $
 
---- ffmpeg.c.orig	Mon Aug 13 23:24:19 2001
-+++ ffmpeg.c	Sat Mar 30 09:25:11 2002
-@@ -31,11 +31,18 @@
+--- ffmpeg.c.orig	2001-08-13 16:24:19.000000000 -0500
++++ ffmpeg.c
+@@ -31,11 +31,22 @@
  #include <sys/time.h>
  #include <sys/resource.h>
  #include <ctype.h>
@@ -11,11 +11,15 @@ $NetBSD: patch-af,v 1.1 2002/03/30 08:27:26 tron Exp $
  
  #include "avformat.h"
  
++#ifdef INT64_MAX
++#define MAXINT64 INT64_MAX
++#else
 +#ifdef INT64_C
  #define MAXINT64 INT64_C(0x7fffffffffffffff)
 +#else
-+#ifdef __NetBSD__
++#ifdef QUAD_MAX
 +#define MAXINT64 QUAD_MAX
++#endif
 +#endif
 +#endif
  
