@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/11/20 00:49:12 epg Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/29 00:01:34 epg Exp $
 #
 
 DISTNAME=	trac-0.8
@@ -9,7 +9,7 @@ MAINTAINER=	epg@NetBSD.org
 HOMEPAGE=	http://www.edgewall.com/products/trac/
 COMMENT=	Enhanced wiki and issue tracking system
 
-DEPENDS+=	clearsilver>=0.9.7:../../www/clearsilver
+DEPENDS+=	${PYPKGPREFIX}-clearsilver>=0.9.7:../../www/py-clearsilver
 DEPENDS+=	${PYPKGPREFIX}-sqlite>=0.4.3:../../databases/py-sqlite
 DEPENDS+=	${PYPKGPREFIX}-subversion>=0.37:../../devel/py-subversion
 
