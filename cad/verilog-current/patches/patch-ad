@@ -1,17 +1,10 @@
-$NetBSD: patch-ad,v 1.4 2000/04/30 18:15:18 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.5 2000/05/11 01:33:51 dmcmahill Exp $
 
 don't use -O2 on parse.cc because of compiler bugs on sparc and pmax
 (maybe others).
 
 --- Makefile.in.orig	Fri Apr 28 12:50:53 2000
 +++ Makefile.in	Sat Apr 29 08:39:00 2000
-@@ -104,5 +104,5 @@
- 
- iverilog: iverilog.c
--	$(CC) $(CPPFLAGS) -o iverilog -DIVL_ROOT='"@libdir@/ivl"' iverilog.c
-+	$(CC) $(CPPFLAGS) -o iverilog -DCXX='"@CXX@"' -DIVL_ROOT='"@libdir@/ivl"' -DIVL_INC='"@includedir@"' -DIVL_LIB='"@libdir@"' -DDLLIB='"@DLLIB@"' iverilog.c
- 
- %.o dep/%.d: %.cc
 @@ -115,4 +115,6 @@
  
  parse.o dep/parse.d: parse.cc
