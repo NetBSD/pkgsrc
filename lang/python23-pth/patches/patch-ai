@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2003/08/04 08:29:32 drochner Exp $
+
+--- Makefile.pre.in.orig	2003-08-03 12:01:02.000000000 +0200
++++ Makefile.pre.in	2003-08-03 12:01:55.000000000 +0200
+@@ -305,7 +305,7 @@
+ $(BUILDPYTHON):	Modules/$(MAINOBJ) $(LIBRARY) $(LDLIBRARY)
+ 		$(LINKCC) $(LDFLAGS) $(LINKFORSHARED) -o $@ \
+ 			Modules/$(MAINOBJ) \
+-			$(BLDLIBRARY) $(LIBS) $(MODLIBS) $(SYSLIBS) $(LDLAST)
++			$(BLDLIBRARY) $(LIBS) $(MODLIBS) $(SYSLIBS) $(LDLAST) ${LINK_ALL_LIBGCC_HACK}
+ 
+ platform: $(BUILDPYTHON)
+ 	$(RUNSHARED) ./$(BUILDPYTHON) -E -c 'import sys ; from distutils.util import get_platform ; print get_platform()+"-"+sys.version[0:3]' >platform
