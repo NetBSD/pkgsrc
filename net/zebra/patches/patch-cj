@@ -1,0 +1,10 @@
+$NetBSD: patch-cj,v 1.1 2002/08/03 12:27:26 itojun Exp $
+
+diff -u1 ospf6d/ospf6d.h /home/itojun/work/zebra/zebra/ospf6d/ospf6d.h
+--- ospf6d/ospf6d.h	Mon Jul  8 22:31:04 2002
++++ /home/itojun/work/zebra/zebra/ospf6d/ospf6d.h	Sat Aug  3 21:06:15 2002
+@@ -76,3 +76,3 @@
+ 
+-#define OSPF6_DAEMON_VERSION    "0.9.6i"
++#define OSPF6_DAEMON_VERSION    "0.9.6k"
+ 
