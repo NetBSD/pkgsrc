@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.2 2000/10/05 14:11:57 hubertf Exp $
+#	$NetBSD: Makefile,v 1.3 2000/10/12 19:07:07 skrll Exp $
 #
 
 DISTNAME=	c++rt0-1.0
@@ -22,7 +22,5 @@ do-install:
 	${INSTALL_DATA}	${_DISTDIR}/c++rt0.o.pic ${PREFIX}/lib/c++rt0
 	${INSTALL_DATA}	${_DISTDIR}/c++rt0.o.PIC ${PREFIX}/lib/c++rt0
 	${INSTALL_DATA}	${_DISTDIR}/README	${PREFIX}/lib/c++rt0
-	${MV} /usr/lib/c++rt0.o /usr/lib/c++rt0.o.unPKGd
-	${INSTALL} -c -m 444 -o root -g wheel ${PREFIX}/lib/c++rt0/c++rt0.o.PIC /usr/lib/c++rt0.o
 
 .include "../../mk/bsd.pkg.mk"
