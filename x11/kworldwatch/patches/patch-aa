@@ -1,0 +1,54 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/04 00:50:35 hubertf Exp $
+
+--- configure.orig	Sun Jul  4 01:46:17 1999
++++ configure	Sun Jul  4 01:46:57 1999
+@@ -503,9 +503,9 @@
+ # Prefer explicitly selected file to automatically selected ones.
+ if test -z "$CONFIG_SITE"; then
+   if test "x$prefix" != xNONE; then
+-    CONFIG_SITE="$prefix/share/config.site $prefix/etc/config.site"
++    CONFIG_SITE="$prefix/share/kde/config.site $prefix/etc/config.site"
+   else
+-    CONFIG_SITE="$ac_default_prefix/share/config.site $ac_default_prefix/etc/config.site"
++    CONFIG_SITE="$ac_default_prefix/share/kde/config.site $ac_default_prefix/etc/config.site"
+   fi
+ fi
+ for ac_site_file in $CONFIG_SITE; do
+@@ -2533,27 +2533,27 @@
+ 
+ 
+ 
+-kde_htmldir="\$(prefix)/share/doc/HTML"
++kde_htmldir="\$(prefix)/share/kde/doc/HTML"
+ 
+-kde_appsdir="\$(prefix)/share/applnk"
++kde_appsdir="\$(prefix)/share/kde/applnk"
+ 
+-kde_icondir="\$(prefix)/share/icons"
++kde_icondir="\$(prefix)/share/kde/icons"
+ 
+-kde_minidir="\$(prefix)/share/icons/mini"
++kde_minidir="\$(prefix)/share/kde/icons/mini"
+ 
+-kde_datadir="\$(prefix)/share/apps"
++kde_datadir="\$(prefix)/share/kde/apps"
+ 
+-kde_locale="\$(prefix)/share/locale"
++kde_locale="\$(prefix)/share/kde/locale"
+ 
+ kde_cgidir="\$(exec_prefix)/cgi-bin"
+ 
+-kde_confdir="\$(prefix)/share/config"
++kde_confdir="\$(prefix)/share/kde/config"
+ 
+-kde_mimedir="\$(prefix)/share/mimelnk"
++kde_mimedir="\$(prefix)/share/kde/mimelnk"
+ 
+-kde_toolbardir="\$(prefix)/share/toolbar"
++kde_toolbardir="\$(prefix)/share/kde/toolbar"
+ 
+-kde_wallpaperdir="\$(prefix)/share/wallpapers"
++kde_wallpaperdir="\$(prefix)/share/kde/wallpapers"
+ 
+ kde_kccmodules="\$(prefix)/lib/kcc/modules"
+ 
