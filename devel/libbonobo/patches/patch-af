@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2004/04/14 20:21:49 adam Exp $
+
+--- bonobo-activation/Makefile.in.orig	Wed Apr 14 21:30:19 2004
++++ bonobo-activation/Makefile.in
+@@ -223,7 +223,6 @@ INCLUDES = \
+ AM_LDFLAGS = \
+ 	$(LIBBONOBO_LIBS)			\
+ 	$(BONOBO_ACTIVATION_LT_VERSION_INFO)	\
+-	-no-undefined				\
+ 	$(NULL)
+ 
+ 
