@@ -1,0 +1,11 @@
+--- src/unlinkd.c.dist	Tue Apr 29 02:14:17 1997
++++ src/unlinkd.c	Sun Jul  6 00:58:56 1997
+@@ -148,7 +148,7 @@
+     close(rfd1);		/* close FD since we dup'd it */
+     close(wfd2);		/* close parent's FD */
+     commSetCloseOnExec(fileno(debug_log));
+-    execlp(Config.Program.unlinkd, "(unlinkd)", NULL);
++    execlp(Config.Program.unlinkd, Config.Program.unlinkd, NULL);
+     debug(50, 0, "unlinkdCreate: %s: %s\n",
+ 	Config.Program.unlinkd, xstrerror());
+     _exit(1);

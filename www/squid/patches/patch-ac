@@ -1,0 +1,14 @@
+--- src/dns.c.dist	Wed Jun  4 00:25:44 1997
++++ src/dns.c	Sun Jul  6 01:00:27 1997
+@@ -202,9 +202,9 @@
+     close(fd);
+     close(cfd);
+     if (Config.Options.res_defnames)
+-	execlp(command, "(dnsserver)", "-D", NULL);
++	execlp(command, command, "-D", NULL);
+     else
+-	execlp(command, "(dnsserver)", NULL);
++	execlp(command, command, NULL);
+     debug(50, 0, "dnsOpenServer: %s: %s\n", command, xstrerror());
+     _exit(1);
+     return 0;
