@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/05/09 12:22:41 agc Exp $
+
+--- Makefile	2001/01/24 03:22:10	1.7
++++ Makefile	2002/05/09 11:54:49
+@@ -35,13 +35,13 @@
+ # User Configurable
+ #
+ INSTALL_PREFIX=
+-PREFIX=/usr/local
++#PREFIX=/usr/local
+ #PREFIX=/pkgs/proj-clock-$(VERSION)
+ BINDIR=$(PREFIX)/bin
+ LIBDIR=$(PREFIX)/lib/pclock
+-DOCDIR=$(PREFIX)/doc/pclock
+-WISHX=wishx
+-#WISHX=wish
++DOCDIR=$(PREFIX)/share/doc/pclock
++#WISHX=wishx
++WISHX=wish
+ TCLSH=tclsh
+ 
+ #
