@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/01/22 13:31:44 itojun Exp $
+# $NetBSD: Makefile,v 1.10 2000/02/02 04:07:36 wiz Exp $
 #
 
 DISTNAME=	ruby-1.4.3
@@ -26,9 +26,9 @@ BUILD_DEFS+=    USE_INET6
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --enable-shared
 .if defined(USE_INET6) && ${USE_INET6} == YES
-CONFIGURE_ARGS= --enable-ipv6
+CONFIGURE_ARGS+= --enable-ipv6
 .else
-CONFIGURE_ARGS= --disable-ipv6
+CONFIGURE_ARGS+= --disable-ipv6
 .endif
 MAKE_ENV+=	DLDFLAGS="-L${LOCALBASE}/lib -R${LOCALBASE}/lib -L${X11BASE}/lib -R${X11BASE}/lib"
 
