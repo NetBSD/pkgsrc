@@ -1,5 +1,7 @@
---- mkisofs.c.orig	Mon Feb  2 06:01:40 1998
-+++ mkisofs.c	Thu May 13 05:30:27 1999
+$NetBSD: patch-af,v 1.2 1999/05/15 07:27:50 hubertf Exp $
+
+--- mkisofs.c.orig	Tue Apr 27 15:16:03 1999
++++ mkisofs.c	Sat May 15 09:06:35 1999
 @@ -57,11 +57,6 @@
  
  #include "exclude.h"
@@ -11,11 +13,11 @@
 -
  struct directory * root = NULL;
  
- static char version_string[] = "mkhybrid v1.11.1";
-@@ -521,19 +516,6 @@
- 	usage();
- 	exit(1);
-       }
+ #ifdef APPLE_HYB
+@@ -1136,19 +1131,6 @@
+ 
+ parse_input_files:
+ 
 -#ifdef __NetBSD__
 -    {
 -	int resource;

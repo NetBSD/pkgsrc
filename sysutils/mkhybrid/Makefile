@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 1999/05/07 07:11:16 ross Exp $
+# $NetBSD: Makefile,v 1.7 1999/05/15 07:27:49 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/06/16 16:50:06 dburr Exp
 #
 
-DISTNAME=	mkhybrid-1.11.1
+DISTNAME=	mkhybrid-1.12b5.2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.ge.ucl.ac.uk/pub/mkhfs/
 
