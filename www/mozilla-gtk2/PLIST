@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/25 15:39:42 taya Exp $
+@comment $NetBSD: PLIST,v 1.5.2.1 2005/03/27 05:32:19 snj Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -911,8 +911,11 @@ include/${MOZILLA}/docshell/nsIDocShell.h
 include/${MOZILLA}/docshell/nsIDocShellHistory.h
 include/${MOZILLA}/docshell/nsIDocShellLoadInfo.h
 include/${MOZILLA}/docshell/nsIDocShellTreeItem.h
+include/${MOZILLA}/docshell/nsIDocShellTreeItemTmp.h
 include/${MOZILLA}/docshell/nsIDocShellTreeNode.h
+include/${MOZILLA}/docshell/nsIDocShellTreeNodeTmp.h
 include/${MOZILLA}/docshell/nsIDocShellTreeOwner.h
+include/${MOZILLA}/docshell/nsIDocShellTreeOwnerTmp.h
 include/${MOZILLA}/docshell/nsIEditorDocShell.h
 include/${MOZILLA}/docshell/nsIGlobalHistory.h
 include/${MOZILLA}/docshell/nsIGlobalHistory2.h
