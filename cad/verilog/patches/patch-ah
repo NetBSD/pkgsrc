@@ -1,0 +1,24 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/01/26 15:28:41 dmcmahill Exp $
+
+--- ./vvm/vvm_calltf.cc.orig	Sun Nov 28 13:05:37 1999
++++ ./vvm/vvm_calltf.cc	Sun Jan 23 12:35:21 2000
+@@ -21,4 +21,5 @@
+ #endif
+ 
++# include "../machine.h"
+ # include  "vvm_calltf.h"
+ # include  <vpi_user.h>
+@@ -100,5 +101,13 @@
+       }
+ 
++#if defined(WLU) && defined(WTU)
++      void*table = dlsym(mod, "_vlog_startup_routines_");
++#elif defined(WLU)
++      void*table = dlsym(mod, "_vlog_startup_routines");
++#elif defined(WTU)
++      void*table = dlsym(mod, "vlog_startup_routines_");
++#else
+       void*table = dlsym(mod, "vlog_startup_routines");
++#endif 
+       vlog_startup_routines_t*routines = (vlog_startup_routines_t*)table;
+       if (routines == 0) {

@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/01/26 15:28:41 dmcmahill Exp $
+
+--- ./vpi/sys_vcd.c.orig	Thu Jan 20 01:04:55 2000
++++ ./vpi/sys_vcd.c	Sat Jan 22 14:05:12 2000
+@@ -26,5 +26,5 @@
+  */
+ 
+-# include  <vpi_user.h>
++# include  "vpi_user.h"
+ # include  <stdio.h>
+ # include  <stdlib.h>

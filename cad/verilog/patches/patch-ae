@@ -1,0 +1,11 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/01/26 15:28:41 dmcmahill Exp $
+
+--- ./verilog.sh.orig	Fri Jan 21 00:41:51 2000
++++ ./verilog.sh	Sun Jan 23 12:59:52 2000
+@@ -117,5 +117,5 @@
+     "xnf") mv ${tmpCCFile} ${outputFile} ;;
+ 
+-    "vvm")  ${execCpp} -rdynamic -I${includedir} -L${libdir} ${tmpCCFile} -o ${outputFile} -lvvm -ldl ;
++    "vvm")  ${execCpp} -rdynamic -I${includedir} -L${libdir} ${tmpCCFile} -o ${outputFile} -Wl,--export-dynamic -lvvm @dllib@ ;
+ 	    if test $? -ne 0 ; then
+ 	     echo "C++ compilation failed. Terminating compilation."

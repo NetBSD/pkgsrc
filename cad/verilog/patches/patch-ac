@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/01/26 15:28:41 dmcmahill Exp $
+
+--- ./vpi/sys_readmem_lex.h.orig	Tue Dec 14 23:01:14 1999
++++ ./vpi/sys_readmem_lex.h	Sat Jan 22 14:07:07 2000
+@@ -24,5 +24,5 @@
+ 
+ # include  <stdio.h>
+-# include  <vpi_user.h>
++# include  "vpi_user.h"
+ 
+ # define MEM_ADDRESS 257
