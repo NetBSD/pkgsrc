@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9775 2005/04/06 15:23:34 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9776 2005/04/06 16:02:07 taya Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1924,3 +1924,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ruby-RMagick-1.7.4 [minskim 2005-04-06]
 	Updated dbh to 1.0.24 [adam 2005-04-06]
 	Added pkg_select-20050403 [xtraeme 2005-04-06]
+	Updated firefox to 1.0.2nb1 [taya 2005-04-06]
+	Updated firefox-gtk1 to 1.0.2nb1 [taya 2005-04-06]
