@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2003/07/17 22:52:22 grant Exp $
+# $NetBSD: Makefile,v 1.39 2004/12/21 15:32:03 xtraeme Exp $
 
 DISTNAME=	acroread	# Overridden below
 PKGNAME=	acroread-4.05
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/4.x/
 
@@ -75,9 +76,8 @@ post-install:
 	@cd ${PREFIX}/Acrobat4/bin && \
 	  ${BIN_PATCH} <${FILESDIR}/acroread.diff && \
 	  ${INSTALL_SCRIPT} ${PREFIX}/Acrobat4/bin/acroread \
-	     ${PREFIX}/bin/acroread && ${RM} -f acroread.orig
-	${CHMOD} +x ${PREFIX}/bin/acroread
-	${LN} -f ${PREFIX}/bin/acroread ${PREFIX}/bin/acroread4
+	     ${PREFIX}/bin/acroread4 && ${RM} -f acroread.orig
+	${CHMOD} +x ${PREFIX}/bin/acroread4
 	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
 	${INSTALL_DATA} ${PREFIX}/Acrobat4/Browsers/${PLATFORM}/nppdf.so \
 		${NS_PLUGINS_DIR}
