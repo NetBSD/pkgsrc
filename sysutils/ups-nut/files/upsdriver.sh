@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: upsdriver.sh,v 1.7 2002/12/13 04:23:18 lukem Exp $
+# $NetBSD: upsdriver.sh,v 1.8 2004/02/15 13:14:25 lukem Exp $
 #
 # PROVIDE: upsdriver
 # REQUIRE: NETWORK syslogd mountcritremote
@@ -31,12 +31,12 @@ fi
 
 if [ "${upsdriver_type:-upsdrvctl}" = "upsdrvctl" ]
 then
-	ctl_command="@PREFIX@/sbin/ups-drivers/upsdrvctl"
+	ctl_command="@PREFIX@/libexec/nut/upsdrvctl"
 	required_files="@NUT_CONFDIR@/ups.conf"
 	start_cmd="${ctl_command} start"
 	stop_cmd="${ctl_command} stop"
 else
-	command="@PREFIX@/sbin/ups-drivers/${upsdriver_type}"
+	command="@PREFIX@/libexec/nut/${upsdriver_type}"
 	#
 	# XXX - We need a way to easily determine the pidfile, which is of
 	# XXX - the form @NUT_STATEDIR@/${updriver_type}-${tty}.pid
