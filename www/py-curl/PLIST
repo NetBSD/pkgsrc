@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/20 02:53:04 shell Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/10/22 14:21:04 drochner Exp $
 ${PYSITELIB}/pycurl.so
-doc/pycurl/COPYING
-doc/pycurl/ChangeLog
-doc/pycurl/INSTALL
-doc/pycurl/README
-doc/pycurl/TODO
-doc/pycurl/examples/basicfirst.py
-doc/pycurl/examples/curl.py
-doc/pycurl/examples/gtkhtml_demo.py
-doc/pycurl/examples/retriever.py
-doc/pycurl/examples/sfquery.py
-doc/pycurl/examples/xmlrpc_curl.py
-@dirrm doc/pycurl/examples
-@dirrm doc/pycurl
+share/doc/pycurl${PYVERSSUFFIX}/COPYING
+share/doc/pycurl${PYVERSSUFFIX}/ChangeLog
+share/doc/pycurl${PYVERSSUFFIX}/INSTALL
+share/doc/pycurl${PYVERSSUFFIX}/README
+share/doc/pycurl${PYVERSSUFFIX}/TODO
+share/doc/pycurl${PYVERSSUFFIX}/examples/basicfirst.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/curl.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/gtkhtml_demo.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/retriever.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/sfquery.py
+share/doc/pycurl${PYVERSSUFFIX}/examples/xmlrpc_curl.py
+@dirrm share/doc/pycurl${PYVERSSUFFIX}/examples
+@dirrm share/doc/pycurl${PYVERSSUFFIX}
