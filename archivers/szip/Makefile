@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/20 18:03:29 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/28 02:47:35 minskim Exp $
 #
 
 DISTNAME=		szip1.1
@@ -10,8 +10,12 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://hdf.ncsa.uiuc.edu/doc_resource/SZIP/
 COMMENT=		Extended-Rice lossless compression
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 LICENSE=		no-commercial-use
+
+INSTALLATION_DIRS=	include lib
 
 .include "../../mk/bsd.pkg.mk"

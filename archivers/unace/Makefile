@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/03/11 18:03:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2004/07/28 02:47:35 minskim Exp $
 #
 
 DISTNAME=	unace-1.2b
@@ -10,10 +10,14 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 
 ALL_TARGET=	clean unace
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/unace ${PREFIX}/bin
