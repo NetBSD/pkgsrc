@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/03/13 17:37:39 fredb Exp $
+# $NetBSD: Makefile,v 1.4 2002/03/14 00:49:43 wiz Exp $
 #
 
 DISTNAME=	jadetex-2.20
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	hubertf@netbsd.org
 COMMENT=	Process tex files produced by the TeX backend of Jade
 
-DEPENDS+=	tex-hugelatex-1.0:../tex-hugelatex
+DEPENDS+=	tex-hugelatex-1.0nb1:../tex-hugelatex
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
