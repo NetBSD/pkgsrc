@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: clamd.sh,v 1.8 2004/10/30 12:09:12 recht Exp $
+# $NetBSD: clamd.sh,v 1.9 2004/11/09 10:08:06 salo Exp $
 #
 # clamd does anti-virus checking.
 #
