@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/09 16:41:15 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/05/09 18:06:57 tron Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/03/15 02:01:27 steve Exp
 
 DISTNAME=       analog3.2
@@ -34,6 +34,8 @@ do-install:
 	cd ${WRKSRC} && \
 	${INSTALL_DATA} -m 644 ${_DISTDIR}/ukdom.tab \
 	  ${PREFIX}/lib/analog/domains.tab
+	${INSTALL_DATA} -m 644 ${_DISTDIR}/ukdom.tab \
+	  ${PREFIX}/lib/analog/domains.tab.default
 	${INSTALL_DATA} -m 644 ${WRKSRC}/analog.cfg ${PREFIX}/etc/analog.cfg
 	${INSTALL_DATA} -m 644 ${WRKSRC}/analog.cfg \
 	  ${PREFIX}/etc/analog.cfg.default
