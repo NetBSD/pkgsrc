@@ -1,4 +1,4 @@
-# $NetBSD: ext.mk,v 1.4 2004/11/27 12:36:35 jdolecek Exp $
+# $NetBSD: ext.mk,v 1.5 2004/12/12 09:13:56 jdolecek Exp $
 #
 # PHP extension package framework, for both PECL and bundled PHP extensions.
 #
@@ -45,7 +45,7 @@ USE_LIBTOOL=		YES
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS="${EXPORT_SYMBOLS_LDFLAGS}"
 
-PLIST_SRC=		${.CURDIR}/../../lang/php/PLIST.module
+PLIST_SRC+=		${.CURDIR}/../../lang/php/PLIST.module
 MESSAGE_SRC=		${.CURDIR}/../../lang/php/MESSAGE.module
 MESSAGE_SUBST+=		MODNAME=${PKGMODNAME}
 MESSAGE_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR}
