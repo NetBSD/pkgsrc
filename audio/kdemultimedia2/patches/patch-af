@@ -1,0 +1,42 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/03/14 16:14:08 skrll Exp $
+
+--- kscd/libwm/plat_freebsd.c.orig	Sun Feb 18 15:30:03 2001
++++ kscd/libwm/plat_freebsd.c
+@@ -34,3 +34,3 @@
+ 
+-#if defined(__FreeBSD__) || defined(__FreeBSD) || defined(__NetBSD__) || defined (__NetBSD)
++#if defined(__FreeBSD__) || defined(__FreeBSD) || defined(__NetBSD__)
+ 
+@@ -52,3 +52,3 @@
+ 
+-#if defined(__NetBSD__) || defined(__OpenBSD__) 
++#if defined(__OpenBSD__) 
+ # define MSF_MINUTES 1
+@@ -65,3 +65,2 @@
+ # endif
+-#endif
+ 
+@@ -232,7 +231,2 @@
+     dopos:
+-#ifdef __NetBSD__
+-      *pos = scd.what.position.absaddr[MSF_MINUTES] * 60 * 75 +
+-	scd.what.position.absaddr[MSF_SECONDS] * 75 +
+-	scd.what.position.absaddr[MSF_FRAMES];
+-#else
+       *pos = scd.what.position.absaddr.msf.minute * 60 * 75 +
+@@ -240,3 +234,2 @@
+ 	scd.what.position.absaddr.msf.frame;
+-#endif
+       *track = scd.what.position.track_number;
+@@ -307,7 +300,2 @@
+   
+-#ifdef __NetBSD__
+-  *startframe = toc_buffer.addr[MSF_MINUTES]*60*75 +
+-    toc_buffer.addr[MSF_SECONDS] * 75 +
+-    toc_buffer.addr[MSF_FRAMES];
+-#else
+   *startframe = toc_buffer.addr.msf.minute*60*75 +
+@@ -315,3 +303,2 @@
+     toc_buffer.addr.msf.frame;
+-#endif
+   

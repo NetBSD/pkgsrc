@@ -1,0 +1,65 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/03/14 16:14:04 skrll Exp $
+
+--- configure.orig	Wed Feb 21 11:01:31 2001
++++ configure
+@@ -7906,7 +7906,7 @@
+       au_enable_sun=yes
+       ;;
+     *-*-netbsd*)
+-      au_enable_sun=yes
++      au_enable_oss=yes
+       ;;
+     *)
+       echo "configure: warning: No --enable-audio=default audio for $target" 1>&2
+@@ -11339,7 +11339,7 @@
+ #include "confdefs.h"
+ #include <$ac_hdr>
+ EOF
+-ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
++ac_try="$ac_cpp $all_includes conftest.$ac_ext >/dev/null 2>conftest.out"
+ { (eval echo configure:11344: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+ ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
+ if test -z "$ac_err"; then
+@@ -11366,7 +11366,7 @@
+ fi
+ done
+ 
+-for ac_hdr in sys/soundcard.h machine/soundcard.h linux/soundcard.h
++for ac_hdr in soundcard.h sys/soundcard.h machine/soundcard.h linux/soundcard.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+ echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
+@@ -11879,13 +11879,16 @@
+ 
+ 
+ case "$ARCH_TYPE" in
+-  i?86)
+-    echo "$ac_t""Found Intel enable MMX support" 1>&6
+-    cat >> confdefs.h <<\EOF
+-#define INTEL 1
+-EOF
+-
+-    ;; 
++#
++# The MMS code won't compile on NetBSD :-(
++#
++#  i?86)
++#    echo "$ac_t""Found Intel enable MMX support" 1>&6
++#    cat >> confdefs.h <<\EOF
++##define INTEL 1
++#EOF
++#
++#    ;; 
+ 
+   *)
+     echo "$ac_t""Non Intel." 1>&6
+@@ -11897,6 +11900,9 @@
+ kde_mpeglib_compiles=no
+ 
+ case "$OS_TYPE" in
++  NetBSD)
++    kde_mpeglib_compiles=yes
++    ;;
+   Linux)
+     kde_mpeglib_compiles=yes
+     ;;
