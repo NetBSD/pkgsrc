@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2003/01/02 23:15:45 jmmv Exp $
+
+--- Makefile.in.orig	Sun May 16 22:48:52 1999
++++ Makefile.in
+@@ -93,7 +93,7 @@ AUTOMAKE_OPTIONS = foreign
+ 
+ SUBDIRS = include gg gii input filter demos doc
+ 
+-giiconfdatadir = @gii_confdir@
++giiconfdatadir = @datadir@/examples/ggi
+ giiconfdata_DATA = libgii.conf
+ 
+ DISTCLEANFILES = libgii.conf
