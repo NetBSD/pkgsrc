@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2125 2004/09/16 16:01:14 snj Exp $
+$NetBSD: TODO,v 1.2126 2004/09/16 17:42:27 minskim Exp $
 
 Suggested new packages
 ======================
@@ -302,6 +302,7 @@ Suggested package updates
 	o inform-6.30 [pkg/24631]
 	o intercal-0.24 [dillo]
 	o iozone-3.221
+	o ipcheck-0.218
 	o ispman-1.1.1
 	o jakarta-tomcat-3.3.1a
 	o john-1.6.37
