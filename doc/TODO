@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.311 2003/02/23 17:54:39 salo Exp $
+$NetBSD: TODO,v 1.312 2003/02/24 08:09:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -101,12 +101,14 @@ Suggested package updates
 	o cyrus-sasl2-2.1.12
 	o db4-4.1.25 [pkg/20289]
 	o dillo-0.7.0
+	o distcc-1.2
 	o drac [pkg/20449]
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o elm-me-2.4pl100
 	o exim-4.12 [pkg/19850]
 	o exmh-2.6.1
+	o feh-1.2.5
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
 	o fox-1.0.31
@@ -144,6 +146,7 @@ Suggested package updates
 	o horde-2.2
 	o icewm-1.2.5
 	o icu-2.4 [heinz]
+	o id3v2-0.1.8
 	o imp-3.1 [pkg/19497]
 	o inform-6.21.3 [pkg/19298]
 	o inn 2.3.4 [waiting for IPv6 patch]
@@ -156,7 +159,7 @@ Suggested package updates
 	o jikes-1.18 [pkg/19979]
 	o joe-2.9 [pkg/18022]
 	o jove-4.16.0.58 [pkg/19924]
-	o jpilot-0.99.4
+	o jpilot-0.99.5
 	o jpilot-syncmal-0.71.2
 	o kdbg-1.2.7
 	o kde-3.1 [skrll]
@@ -191,8 +194,9 @@ Suggested package updates
 	o mowitz-0.2.2
 	o mpgtx-1.3 [pkg/19082]
 	o mrproject-0.9
+	o mrtg-2.9.27
 	o mysql-3.23.54
-	o naim-0.11.5.4
+	o naim-0.11.5.5
 	o napshare-1.2
 	o net-snmp-5.0.7 [pkg/19939]
 	o netpbm-10.8
@@ -229,19 +233,18 @@ Suggested package updates
 	o sablotron-0.97
 	o sane-backends-1.0.11
 	o sane-frontends-1.0.10
-	o scilab-2.7
 	o scmxx-0.6.3.5 [pkg/20017]
 	o scribus-0.8
 	o scsh-0.6.3
 	o sendfile-20010424
 	o sendmail-8.12.7 [pkg/20324]
 	o shorten-3.5.1
-	o siag-3.5.5
+	o siag-3.5.6
 	o sketch-0.6.15
 	o smalltalk-2.0.11
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snes9x-1.39a
-	o sodipodi-0.30
+	o sodipodi-0.31
 	o spamassassin-2.50 [heinz]
 	o speex-1.0rc2
 	o sqlite-2.7.5 [pkg/19719]
@@ -249,6 +252,7 @@ Suggested package updates
 	o squeak-3.2 [fredb|pkg/17950]
 	o srp_client-1.7.5 [jlam]
 	o stella-1.3
+	o subversion-0.18
 	o sun-jdk14-1.4.1_01 [pkg/19853]
 	o sun-jre14-1.4.1_01 [pkg/19853]
 	o sweep-0.8.1
@@ -259,8 +263,8 @@ Suggested package updates
 	o texmacs-1.0.1.5
 	o tightvnc-1.2.8
 	o ttf2pt1-3.4.3
-	o tuxpaint-0.9.7
-	o tuxpaint-stamps-2003.01.28
+	o tuxpaint-0.9.10
+	o tuxpaint-stamps-2003.02.22
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o webalizer-2.01-10 [pkg/20445]
