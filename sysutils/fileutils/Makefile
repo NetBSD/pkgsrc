@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/03/11 19:17:44 tron Exp $
+# $NetBSD: Makefile,v 1.18 2002/03/11 19:35:05 tron Exp $
 
 DISTNAME=		fileutils-4.1.7
 CATEGORIES=		sysutils
@@ -12,14 +12,7 @@ COMMENT=		GNU file management utilities
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--program-prefix=g \
 			--with-libiconv-prefix=${BUILDLINK_DIR}
-
-CHARSET_FILE=		${PREFIX}/lib/charset.alias
-
-pre-install:
-	@${CP} -p ${CHARSET_FILE} ${CHARSET_FILE}.preserve
-
-post-install:
-	@${MV} ${CHARSET_FILE}.preserve ${CHARSET_FILE}
+MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
 
 .include "../../converters/libiconv/buildlink.mk"
 .include "../../devel/gettext-lib/buildlink.mk"

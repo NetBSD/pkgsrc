@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.3 2002/03/11 19:17:44 tron Exp $
+$NetBSD: distinfo,v 1.4 2002/03/11 19:35:05 tron Exp $
 
 SHA1 (fileutils-4.1.7.tar.bz2) = 94c7979d3ce64f62bde4e677282b338a1bfada72
 Size (fileutils-4.1.7.tar.bz2) = 1663871 bytes
+SHA1 (patch-aa) = a0586d09dff967fb3f9c10ae7b3d32aa842af3dc
+SHA1 (patch-ab) = a1327a674d05bc6fd7adb234b72da5b3ee5ddd28
