@@ -3,7 +3,7 @@
 # Date created:		16 April 1995
 # Whom:			markm
 #
-# $NetBSD: Makefile,v 1.6 1998/02/14 17:54:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/03/16 06:56:19 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -67,6 +67,7 @@ test:
 	@(cd ${WRKSRC}; make test)
 
 post-install:
+	@strip ${PREFIX}/bin/a2p
 	@strip ${PREFIX}/bin/perl
 .if (${OPSYS} != "NetBSD")
 # agc - no suidperl???
