@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/11 17:07:23 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2004/08/22 23:24:56 jschauma Exp $
 
---- Makefile.orig	1992-11-05 22:03:14.000000000 +0000
-+++ Makefile
-@@ -3,10 +3,8 @@ MAKE=make
+--- Makefile.orig	1992-11-05 17:03:14.000000000 -0500
++++ Makefile	2004-08-22 18:59:36.000000000 -0400
+@@ -3,10 +3,8 @@
  FILES=README Makefile nettest.h nettest.c nettestd.c nettest.8
  
  all:
@@ -15,10 +15,22 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/11 17:07:23 cjep Exp $
  	else \
  		echo You must specify what machine you are on,;\
  		echo e.g. \"make sun\", \"make cray2\", \"make pyramid\", \"make xmp\";\
-@@ -33,6 +31,12 @@ unicos60 unicos61:
+@@ -33,6 +31,24 @@
  		DEFINES="-DWAIT3CODE -DNO_ISO" \
  		LIBS="" OPT="-O"
  
++IRIX IRIX64:
++	$(MAKE) objs \
++		INCLUDE="-I." \
++		DEFINES="-DWAIT3CODE -DNONVOID_SETPGRP -DNO_ISO -DNAMEDPIPES -DNO_ISO" \
++		LIBS="" OPT="-O"
++
++Linux:
++	$(MAKE) objs \
++		INCLUDE="-I." \
++		DEFINES="-DWAIT3CODE -DNAMEDPIPES -DNO_ISO" \
++		LIBS="" OPT="-O"
++
 +NetBSD:
 +	$(MAKE) objs \
 +		INCLUDE="" \
