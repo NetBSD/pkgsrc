@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/04/24 09:20:35 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/05/08 21:28:52 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/11 03:54:43 fenner Exp 
 #
 
@@ -9,7 +9,7 @@ DISTFILES=	vatsrc-4.0b2.tar.gz
 
 MAINTAINER=	mycroft@NetBSD.ORG
 
-GSM_DIR=	../../audio/gsm
+GSM_DIR=	${PKGSRCDIR}/audio/gsm
 GSM_WORK=	${GSM_DIR}/${WRKDIR:T}/gsm-1.0-pl10
 
 # If configure is changed to look for libgsm.a in ${PREFIX}/lib, then
