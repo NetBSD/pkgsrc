@@ -1,12 +1,25 @@
-$NetBSD: patch-aa,v 1.1 2000/12/28 03:54:58 fredb Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/23 17:07:35 wiz Exp $
 
---- file.c.orig	Mon Nov 20 18:20:39 2000
-+++ file.c	Wed Dec 27 20:25:21 2000
-@@ -24,6 +24,7 @@
- */
+--- Imakefile.orig	2004-05-01 16:45:28.000000000 +0200
++++ Imakefile
+@@ -13,16 +13,16 @@ XCOMM price communication.
  
- #include <errno.h>
-+#include <stdio.h>
- #include <sys/stat.h>
+ DEFINES = -DSHAPE -DXQUOTE
+ INCLUDES = -I$(INCROOT)/X11
+-SYS_LIBRARIES = -lXm -lXpm $(XMULIB) $(XTOOLLIB) -lXext $(XLIB) -lm
++SYS_LIBRARIES = -lXbae -lXm -lXpm $(XMULIB) $(XTOOLLIB) -lXext $(XLIB) -lm
+ DEPLIBS = 
  
- #include <Xm/XmAll.h>
+ SRCS =  about.c color.c fileXq.c help.c optdetail.c option.c optnet.c \
+ 	opttick.c optupdate.c parse.c pixmap.c remoteXq.c server.c session.c \
+-	sessionXq.c status.c tape.c util.c view.c xquote.c xutil.c
++	sessionXi.c status.c tape.c util.c view.c xquote.c xutil.c
+ 
+ OBJS =  about.o color.o fileXq.o help.o optdetail.o option.o optnet.o \
+ 	opttick.o optupdate.o parse.o pixmap.o remoteXq.o server.o session.o \
+-	sessionXq.o status.o tape.o util.o view.o xquote.o xutil.o
++	sessionXi.o status.o tape.o util.o view.o xquote.o xutil.o
+ 
+-ComplexProgramTarget(Xquote)
++ComplexProgramTargetNoMan(Xquote)
+ InstallAppDefaults(Xquote)
