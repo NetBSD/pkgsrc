@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5976 2004/05/17 00:09:43 markd Exp $
+$NetBSD: CHANGES,v 1.5977 2004/05/17 09:29:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2581,3 +2581,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added wmi-7 [xtraeme 2004-05-16]
 	Updated p5-SOAP-Lite to 0.60a [grant 2004-05-16]
 	Updated kdelibs3 to 3.2.2nb2 [markd 2004-05-17]
+	Added bitchbot-1.0.2 [minskim 2004-05-17]
