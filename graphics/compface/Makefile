@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/19 01:13:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/21 12:03:28 jlam Exp $
 
 DISTNAME=	compface-1.4
 CATEGORIES=	graphics
@@ -8,8 +8,8 @@ MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://freshmeat.net/projects/compface/
 COMMENT=	48x48x1 image compression and decompression (X-face utility)
 
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-CONFIGURE_ARGS+=--prefix=${LOCALBASE}
+USE_BUILDLINK2=		# defined
+GNU_CONFIGURE=		# defined
+USE_GMAKE=		# defined
 
 .include "../../mk/bsd.pkg.mk"
