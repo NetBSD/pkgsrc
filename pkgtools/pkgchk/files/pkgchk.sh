@@ -1,8 +1,10 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.3 2001/07/05 21:00:54 abs Exp $
+# $Id: pkgchk.sh,v 1.4 2001/07/07 12:17:35 abs Exp $
 #
 # TODO: Handle and as well as or tags (eg: i386+x11)
+# TODO: Order updates based on DEPENDENCIES.
+# TODO: Handle updates with dependencies via binary packages
 
 extract_variables()
     {
@@ -45,22 +47,30 @@ pkg_install()
     INSTALL=$3
     if [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
 	if [ $INSTALL = U ];then
-	    if pkg_delete $PKGNAME ; then
-		echo "Deleted $PKGNAME"
-	    else
-		echo "Can only update packages with dependencies via -s"
+	    echo "pkg_delete $PKGNAME"
+	    if [ -z "$opt_n" ];then
+		if pkg_delete $PKGNAME ; then
+		    echo "Deleted $PKGNAME"
+		else
+		    echo "Can only update packages with dependencies via -s"
+		    exit 1
+		fi
 	    fi
 	fi
-	echo "Installing binary package $PKGNAME.tgz"
-	pkg_add $PACKAGES/All/$PKGNAME.tgz
+	echo "pkg_add $PKGNAME.tgz"
+	if [ -z "$opt_n" ];then
+	    pkg_add $PACKAGES/All/$PKGNAME.tgz
+	fi
     elif [ -n "$opt_s" ]; then
-	echo "Building $PKGNAME"
+	echo "make update for $PKGNAME"
 	cd $PKGSRCDIR/$PKGDIR
-	make update
+	if [ -z "$opt_n" ];then
+	    make update
+	fi
     fi
     }
 
-args=`getopt D:IU:abchisuv $*`
+args=`getopt D:IU:abchinsuv $*`
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -74,6 +84,7 @@ while [ $# != 0 ]; do
 	-c )	opt_c=1 ;;
 	-h )	opt_h=1 ;;
 	-i )	opt_i=1 ;;
+	-n )	opt_n=1 ;;
 	-s )	opt_s=1 ;;
 	-u )	opt_u=1 ;;
 	-v )	opt_v=1 ;;
@@ -101,6 +112,7 @@ if [ -n "$opt_h" -o $# != 1 ];then
 	-c      Check installed packages against pkgchk.conf
 	-h      This help
 	-i	Check versions of installed packages (ignore pkgchk.conf)
+	-n	Display actions that would be taken, but do not perform them
 	-s      Limit installations to building from source
 	-u      Update all mismatched packages
 	-v      Verbose
@@ -199,22 +211,75 @@ for pkgdir in $PKGDIRLIST ; do
 	if [ -n "$pkginstalled" ];then
 	    echo -n "version mismatch - $pkginstalled"
 	    if [ -n "$opt_u" ]; then
-		INSTALL=U
+		DO_UPDATE="$DO_UPDATE $pkgname $pkgdir"
 	    fi
 	else
 	    echo -n "missing"
 	    if [ -n "$opt_a" ] ; then
-		INSTALL=I
+		DO_INSTALL="$DO_INSTALL $pkgname $pkgdir"
 	    fi
 	fi
 	if [ -f $PACKAGES/All/$pkgname.tgz ] ;then
 	    echo -n " (binary package available)"
 	fi
 	echo
-	if [ -n "$INSTALL" ];then
-	    pkg_install $pkgname $pkgdir $INSTALL
-	fi
     elif [ -n "$opt_v" ];then
 	echo "$pkgname: OK"
     fi
 done
+
+if [ -n "$DO_UPDATE" ];then
+    echo "Updating..."
+
+    # Generate list including packages which depend on updates
+    #
+    set -- $DO_UPDATE
+    while [ $# != 0 ]; do
+	PKGNAME=`echo $1 | sed 's/-[0-9].*//'`
+	if [ -f /var/db/pkg/$PKGNAME-[0-9]*/+REQUIRED_BY ];then
+	    LIST="$LIST$1|$2|`cat /var/db/pkg/$PKGNAME-[0-9]*/+REQUIRED_BY`\n"
+	else
+	    LIST="$LIST$1|$2\n"
+	fi
+	shift ; shift;
+    done
+
+    # drop any packages whose 'parents' are also to be updated
+    #
+    DO_UPDATE=`printf "$LIST" | awk -F '|' '
+    {
+    pkg2dir[$1] = $2
+    split($3, deplist, " ")
+    for (pkg in deplist)
+	{
+	dep = deplist[pkg]
+	sub("-[0-9].*", "", dep) # Strip version
+	covered[dep] = 1
+	}
+    }
+    END {
+    for (pkg in pkg2dir)
+	{
+	chk = pkg
+	sub("-[0-9].*", "", chk); # Strip version
+	if (!covered[chk])
+	    print pkg" "pkg2dir[pkg]
+	}
+    }
+    '`
+
+    set -- $DO_UPDATE
+    while [ $# != 0 ]; do
+	pkg_install $1 $2 U
+	shift ; shift;
+    done
+fi
+
+if [ -n "$DO_INSTALL" ];then
+    echo "Installing..."
+    set -- $DO_INSTALL
+    while [ $# != 0 ]; do
+	pkg_install $1 $2 I
+	shift ; shift;
+    done
+fi
