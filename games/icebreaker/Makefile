@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/24 13:30:56 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/07 07:05:50 snj Exp $
 #
 
 DISTNAME=	icebreaker-1.9.7
@@ -11,7 +11,7 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.mattdm.org/icebreaker/
 COMMENT=	Penguin capturing simulation
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
 USE_X11=	yes
 MAKE_ENV+=	mandir="${PREFIX}/man" highscoredir="/var/games"
@@ -26,7 +26,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/icebreaker.6 ${PREFIX}/man/man6
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/icebreaker
 
-.include "../../audio/SDL_mixer/buildlink2.mk"
-.include "../../devel/smpeg/buildlink2.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/smpeg/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
