@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2003/03/05 14:26:25 agc Exp $
+# $NetBSD: Makefile,v 1.82 2003/03/23 10:11:04 jmmv Exp $
 #
 
 COMMENT=	Editors
@@ -32,6 +32,8 @@ SUBDIR+=	jove
 SUBDIR+=	kile
 SUBDIR+=	leim
 SUBDIR+=	leim21
+SUBDIR+=	lyx-qt
+SUBDIR+=	lyx-xforms
 SUBDIR+=	manedit
 SUBDIR+=	matlab-mode
 SUBDIR+=	mg2a
