@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/03/29 09:42:51 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2002/04/10 13:51:23 jlam Exp $
 
 DISTNAME=		bison-1.35
 CATEGORIES=		devel
@@ -14,6 +14,8 @@ BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK_ONLY=	# defined
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--without-included-gettext
+CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_DIR}
+
 # We set the timezone to "GMT" below to avoid rebuilds of the info files
 # which fail under NetBSD 1.5.
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}" TZ=GMT
