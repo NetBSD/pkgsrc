@@ -1,0 +1,152 @@
+<!-- $NetBSD: options.xml,v 1.1.1.1 2004/10/21 14:27:40 grant Exp $ -->
+
+<chapter id="options">
+  <title>Options handling</title>
+
+  <para> Many packages have the ability to be built to support
+    different sets of features.  <filename>bsd.options.mk</filename>
+    is a framework in pkgsrc that provides generic handling of those
+    options that determine different ways in which the packages can be
+    built.  It's possible for the user to specify exactly which sets
+    of options will be built into a package or to allow a set of
+    global default options apply. </para>
+
+    <sect1>
+      <title>Global default options</title>
+
+      <para> Global default options are listed in
+        <varname>PKG_DEFAULT_OPTIONS</varname>, which is a list of the
+        options that should be built into every package if that option
+        is supported.  This variable should be set in
+        <filename>/etc/mk.conf</filename>. </para>
+    </sect1>
+
+    <sect1>
+      <title>Converting packages to use <filename>bsd.options.mk</filename></title>
+
+      <para> The following example shows how
+        <filename>bsd.options.mk</filename> should be use in a package
+        <filename>Makefile</filename>, or in a file,
+        e.g. <filename>options.mk</filename>, that is included by the
+        main package <filename>Makefile</filename>.
+	</para>
+
+      <programlisting>
+# Global and legacy options
+.if defined(WIBBLE_USE_OPENLDAP) && !empty(WIBBLE_USE_OPENLDAP:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	ldap
+.endif
+.if defined(USE_SASL2) && !empty(USE_SASL2:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	sasl
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.wibble
+PKG_SUPPORTED_OPTIONS=	ldap sasl
+#
+# Default options for "wibble" package.
+#
+.if !defined(PKG_OPTIONS.wibble)
+PKG_DEFAULT_OPTIONS+=	sasl
+endif
+.include "../../mk/bsd.options.mk"
+
+# Package-specific option-handling
+
+###
+### LDAP support
+###
+.if !empty(PKG_OPTIONS:Mldap)
+.  include "../../databases/openldap/buildlink3.mk"
+CONFIGURE_ARGS+=      --enable-ldap=${BUILDLINK_PREFIX.openldap}
+.endif
+
+###
+### SASL authentication
+###
+.if !empty(PKG_OPTIONS:Msasl)
+.  include "../../security/cyrus-sasl2/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-sasl=${BUILDLINK_PREFIX.sasl}
+.endif
+      </programlisting>
+
+      <para> The first section only exists if you are converting a
+        package that had its own ad-hoc options handling to use
+        <filename>bsd.options.mk</filename>.  It converts global or
+        legacy options variables into an equivalent
+        <varname>PKG_OPTIONS.<replaceable>pkg</replaceable></varname> 
+        value.  These sections will be removed over time as the old
+        options are in turn deprecated and removed. </para>
+
+      <para> The second section contains the information about which
+        build options are supported by the package, and any default
+        options settings if needed. </para>
+
+      <orderedlist>
+        <listitem>
+	  <para> <varname>PKG_OPTIONS_VAR</varname> is a list of the
+            name of the &man.make.1; variables that contain the options the
+            user wishes to select.  The recommended value is
+            <quote>PKG_OPTIONS.<replaceable>pkg</replaceable></quote>
+            but any package-specific value may be 
+            used.  This variable should be set in a package Makefile.
+	    </para>
+	</listitem>
+
+        <listitem>
+	  <para> <varname>PKG_SUPPORTED_OPTIONS</varname> is a list of
+            build options supported by the package.  This variable
+            should be set in a package Makefile. </para>
+        </listitem>
+
+        <listitem>
+	  <para> <varname>${PKG_OPTIONS_VAR}</varname> (the variables
+            named in <varname>PKG_OPTIONS_VAR</varname>) are variables
+            that list the selected build options and override any
+            default options given in
+            <varname>PKG_DEFAULT_OPTIONS</varname>.  If any of the
+            options begin with a <quote>-</quote>, then that option is
+            always removed from the selected build options, e.g.
+	    </para>
+
+	  <programlisting>
+	PKG_DEFAULT_OPTIONS=	kerberos ldap sasl
+	PKG_OPTIONS_VAR=	WIBBLE_OPTIONS
+	WIBBLE_OPTIONS=		${PKG_DEFAULT_OPTIONS} -sasl
+	# implies PKG_OPTIONS == "kerberos ldap"
+	  </programlisting>
+
+          <para>or</para>
+
+	  <programlisting>
+	PKG_OPTIONS_VAR=	WIBBLE_OPTIONS
+	WIBBLE_OPTIONS=		kerberos -ldap ldap
+	# implies PKG_OPTIONS == "kerberos"
+	  </programlisting>
+
+	  <para> This variable should be set in
+            <filename>/etc/mk.conf</filename>. </para>
+        </listitem>
+      </orderedlist>
+
+      <para> After the inclusion of bsd.options.mk, the following
+        variables are set: </para>
+
+      <itemizedlist>
+        <listitem>
+	  <para> <varname>PKG_OPTIONS</varname> contains the list of
+            the selected build options, properly filtered to remove
+            unsupported and duplicate options.
+	  </para>
+	</listitem>
+      </itemizedlist>
+
+      <para> The remaining sections contain the logic that is specific
+        to each option.  There should be a check for every option
+        listed in <varname>PKG_SUPPORTED_OPTIONS</varname>, and there
+        should be clear documentation on what turning on the option
+        will do in the comments preceding each section. The correct
+        way to check for an option is to check whether it is listed in
+        <varname>PKG_OPTIONS</varname>.
+	</para>
+  </sect1>	  
+</chapter>
