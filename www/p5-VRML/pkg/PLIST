@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/06 09:47:32 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/04/20 04:08:54 mbw Exp $
 lib/perl5/site_perl/VRML/Color.pm
 lib/perl5/site_perl/VRML/VRML1/Standard.pm
 lib/perl5/site_perl/VRML/VRML1.pm
@@ -13,7 +13,7 @@ lib/perl5/man/man3/VRML::VRML1::Standard.3
 lib/perl5/man/man3/VRML::Base.3
 lib/perl5/man/man3/VRML::VRML2.3
 lib/perl5/man/man3/VRML::VRML2::Standard.3
-lib/perl5/site_perl/i386-netbsd/auto/VRML/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/VRML/.packlist
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/VRML
 @dirrm lib/perl5/site_perl/VRML/VRML1
 @dirrm lib/perl5/site_perl/VRML/VRML2
