@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2531 2004/11/27 17:53:48 dmcmahill Exp $
+$NetBSD: TODO,v 1.2532 2004/11/27 17:56:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1212,7 +1212,6 @@ Suggested package updates
 	o swish-e-2.4.2
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sysinfo-4.2.2
-	o tc-2.3.1
 	o tcl-itcl-3.2.1
 	o tcl83-8.3.5
 	o tcm-2.20

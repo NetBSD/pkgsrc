@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8081 2004/11/27 17:53:40 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.8082 2004/11/27 17:56:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5522,9 +5522,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-digest to 1.8.1 [taca 2004-11-27]
 	Updated ruby-openssl to 1.0.0 [taca 2004-11-27]
 	Added ruby-openssl-0.1.4a [taca 2004-11-27]
-	Updated ruby-tcltk to 1.8.1 [taca 2004-11-27]
+	Updated ruby-tcltklib to 1.8.1 [taca 2004-11-27]
 	Updated ruby-tk to 1.8.1 [taca 2004-11-27]
-	Added ruby16-tcltk-1.6.8 [taca 2004-11-27]
+	Added ruby16-tcltklib-1.6.8 [taca 2004-11-27]
 	Added ruby16-tk-1.6.8 [taca 2004-11-27]
 	Updated ruby-mode to 1.8.1 [taca 2004-11-27]
 	Updated ruby to 1.8.1 [taca 2004-11-27]
@@ -5537,7 +5537,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated fillets-ng to 0.6.0 [salo 2004-11-27]
 	Updated fillets-ng-data to 0.6.1 [salo 2004-11-27]
 	Updated fillets-ng-data-cs to 0.6.0 [salo 2004-11-27]
-	Updated ruby-bigfloag to 1.2.1 [taca 2004-11-27]
+	Updated ruby-bigfloat to 1.2.1 [taca 2004-11-27]
 	Updated ruby-bitvector to 0.1.7 [taca 2004-11-27]
 	Updated ruby-gsl to 0.2.0 [taca 2004-11-27]
 	Updated covered-current to 20040325 [dmcmahill 2004-11-27]
+	Updated tc to 2.3.1 [wiz 2004-11-27]
