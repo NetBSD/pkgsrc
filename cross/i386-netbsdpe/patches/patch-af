@@ -1,0 +1,23 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/11/06 03:15:15 minoura Exp $
+
+--- gcc/configure.in.dist	Sun Oct  1 07:58:07 2000
++++ gcc/configure.in	Sun Oct  1 08:36:41 2000
+@@ -869,6 +869,18 @@
+ 		fixincludes=fixinc.wrap
+ 		tmake_file=t-netbsd
+ 		;;
++	i[[34567]]86-*-netbsdpe* )
++		xm_file="${xm_file} i386/xm-cygwin32.h"
++		tmake_file=i386/t-cygwin32
++		tm_file=i386/netbsd-pe.h
++		xmake_file=i386/x-cygwin32
++		extra_objs=winnt.o
++		fixincludes=Makefile.in
++ 		if [[ x$enable_threads = xyes ]]; then
++			thread_file='win32'
++		fi
++		exeext=.exe
++		;;
+ 	i[[34567]]86-*-netbsd*)
+ 		tm_file=i386/netbsd.h
+ 		xm_file=i386/xm-netbsd.h
