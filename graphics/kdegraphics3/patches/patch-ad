@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
+$NetBSD: patch-ad,v 1.6 2004/01/15 10:50:34 markd Exp $
 
---- kview/Makefile.in.orig	2003-07-15 22:10:06.000000000 +1200
+--- kview/Makefile.in.orig	2003-12-29 11:27:02.000000000 +1300
 +++ kview/Makefile.in
-@@ -299,7 +299,7 @@ INCLUDES = -I$(top_srcdir)/kview $(all_i
+@@ -300,7 +300,7 @@ INCLUDES = -I$(top_srcdir)/kview $(all_i
  #>- METASOURCES = AUTO
  
  bin_PROGRAMS = kview
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
  
  noinst_HEADERS = kview.h kpreferencesdialog.h kpreferencesmodule.h kpluginselector.h kviewconfmodules.h
  
-@@ -307,13 +307,17 @@ libkviewsupport_la_SOURCES = kpreference
+@@ -308,13 +308,17 @@ libkviewsupport_la_SOURCES = kpreference
  libkviewsupport_la_LDFLAGS = $(all_libraries) -no-undefined -version-info 0:0
  libkviewsupport_la_LIBADD = $(LIB_KDEUI)
  
@@ -33,7 +33,7 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
  
  lnkdir = $(kde_appsdir)/Graphics
  lnk_DATA = kview.desktop
-@@ -328,14 +332,19 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -330,14 +334,19 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -59,7 +59,7 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
  libkviewsupport_la_DEPENDENCIES =
  am_libkviewsupport_la_OBJECTS = kpreferencesdialog.lo \
  	kpreferencesmodule.lo kpluginselector.lo
-@@ -349,35 +358,35 @@ libkviewsupport_la_nofinal_OBJECTS = kpr
+@@ -351,35 +360,35 @@ libkviewsupport_la_nofinal_OBJECTS = kpr
  bin_PROGRAMS = kview$(EXEEXT)
  PROGRAMS = $(bin_PROGRAMS)
  
@@ -107,7 +107,7 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kviewconfmodules.Plo \
  @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/main.Plo
  
-@@ -399,8 +408,8 @@ CXXLD = $(CXX)
+@@ -401,8 +410,8 @@ CXXLD = $(CXX)
  #>+ 2
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -118,7 +118,7 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
  DATA = $(lnk_DATA) $(rc_DATA)
  
  HEADERS = $(noinst_HEADERS)
-@@ -413,7 +422,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -415,7 +424,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  	check-recursive installcheck-recursive
  DIST_COMMON = $(noinst_HEADERS) AUTHORS Makefile.am Makefile.in TODO
  DIST_SUBDIRS = $(SUBDIRS)
@@ -127,7 +127,7 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -460,6 +469,8 @@ clean-libLTLIBRARIES:
+@@ -462,6 +471,8 @@ clean-libLTLIBRARIES:
  	done
  kview.la: $(kview_la_OBJECTS) $(kview_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kview_la_LDFLAGS) $(kview_la_OBJECTS) $(kview_la_LIBADD) $(LIBS)
@@ -136,7 +136,7 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
  #>- libkviewsupport.la: $(libkviewsupport_la_OBJECTS) $(libkviewsupport_la_DEPENDENCIES) 
  #>+ 2
  @KDE_USE_CLOSURE_TRUE@libkviewsupport.la: libkviewsupport.la.closure $(libkviewsupport_la_OBJECTS) $(libkviewsupport_la_DEPENDENCIES) 
-@@ -504,11 +515,12 @@ mostlyclean-compile:
+@@ -506,11 +517,12 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -150,16 +150,16 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kviewconfmodules.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  
-@@ -713,7 +725,7 @@ distclean-tags:
+@@ -721,7 +733,7 @@ distclean-tags:
  	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=kviewui.rc cr48-app-kview.png cr16-app-kview.png cr32-app-kview.png kview.desktop version.h 
+-KDE_DIST=kview.desktop cr16-app-kview.png cr48-app-kview.png kviewui.rc cr32-app-kview.png version.h 
 +KDE_DIST=kview.desktop cr48-app-kview.png kviewui.rc version.h Makefile.in.rej cr16-app-kview.png cr32-app-kview.png 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -879,20 +891,11 @@ uninstall-info: uninstall-info-recursive
+@@ -887,9 +899,6 @@ uninstall-info: uninstall-info-recursive
  messages: rc.cpp
  	$(EXTRACTRC) kviewviewer/*.rc kviewviewer/*.ui >> rc.cpp
  	$(XGETTEXT) kviewviewer/*.cpp kviewcanvas/*.cpp *.cpp *.h -o $(podir)/kview.pot
@@ -169,7 +169,9 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
- 
+@@ -901,12 +910,6 @@ kpluginselector.moc: $(srcdir)/kpluginse
+ #>+ 1
+ mocs: kpluginselector.moc
  #>+ 3
 -kviewconfmodules.moc: $(srcdir)/kviewconfmodules.h
 -	$(MOC) $(srcdir)/kviewconfmodules.h -o kviewconfmodules.moc
@@ -177,10 +179,10 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
 -#>+ 1
 -mocs: kviewconfmodules.moc
 -#>+ 3
- kpluginselector.moc: $(srcdir)/kpluginselector.h
- 	$(MOC) $(srcdir)/kpluginselector.h -o kpluginselector.moc
+ kpreferencesmodule.moc: $(srcdir)/kpreferencesmodule.h
+ 	$(MOC) $(srcdir)/kpreferencesmodule.h -o kpreferencesmodule.moc
  
-@@ -911,6 +914,12 @@ kview.moc: $(srcdir)/kview.h
+@@ -919,6 +922,12 @@ kview.moc: $(srcdir)/kview.h
  #>+ 1
  mocs: kview.moc
  #>+ 3
@@ -193,16 +195,16 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
  kpreferencesdialog.moc: $(srcdir)/kpreferencesdialog.h
  	$(MOC) $(srcdir)/kpreferencesdialog.h -o kpreferencesdialog.moc
  
-@@ -927,7 +936,7 @@ libkviewsupport.la.closure: $(libkviewsu
+@@ -935,7 +944,7 @@ libkviewsupport.la.closure: $(libkviewsu
  
  #>+ 3
  clean-metasources:
--	-rm -f  kviewconfmodules.moc kpluginselector.moc kpreferencesmodule.moc kview.moc kpreferencesdialog.moc
+-	-rm -f  kpluginselector.moc kviewconfmodules.moc kpreferencesmodule.moc kview.moc kpreferencesdialog.moc
 +	-rm -f  kpluginselector.moc kpreferencesmodule.moc kview.moc kviewconfmodules.moc kpreferencesdialog.moc
  
  #>+ 3
  clean-closures:
-@@ -958,16 +967,16 @@ force-reedit:
+@@ -966,16 +975,16 @@ force-reedit:
  
  
  #>+ 11
@@ -227,7 +229,7 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
  
  #>+ 11
  libkviewsupport_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/kpreferencesdialog.cpp $(srcdir)/kpreferencesmodule.cpp $(srcdir)/kpluginselector.cpp  kpluginselector.moc kpreferencesmodule.moc kpreferencesdialog.moc
-@@ -983,20 +992,20 @@ libkviewsupport_la.all_cpp.cpp: $(srcdir
+@@ -991,20 +1000,20 @@ libkviewsupport_la.all_cpp.cpp: $(srcdir
  
  #>+ 3
  clean-final:
@@ -253,21 +255,22 @@ $NetBSD: patch-ad,v 1.5 2003/07/30 14:30:16 markd Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1007,12 +1016,12 @@ kde-rpo-clean:
+@@ -1014,13 +1023,13 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
  
  #>+ 11
- kpreferencesdialog.o: kpreferencesdialog.moc 
--kview.o: kview.moc 
 -kview.lo: kview.moc 
- kviewconfmodules.o: kviewconfmodules.moc 
--kpreferencesdialog.lo: kpreferencesdialog.moc 
--kviewconfmodules.lo: kviewconfmodules.moc 
-+kview.o: kview.moc 
++kpreferencesdialog.o: kpreferencesdialog.moc 
++kviewconfmodules.o: kviewconfmodules.moc 
+ kview.o: kview.moc 
 +kpreferencesmodule.o: kpreferencesmodule.moc 
  kpluginselector.lo: kpluginselector.moc 
+-kpreferencesdialog.o: kpreferencesdialog.moc 
  kpreferencesmodule.lo: kpreferencesmodule.moc 
-+kpreferencesdialog.lo: kpreferencesdialog.moc 
-+kviewconfmodules.lo: kviewconfmodules.moc 
- kpluginselector.o: kpluginselector.moc 
 -kpreferencesmodule.o: kpreferencesmodule.moc 
++kpreferencesdialog.lo: kpreferencesdialog.moc 
+ kviewconfmodules.lo: kviewconfmodules.moc 
+ kpluginselector.o: kpluginselector.moc 
+-kviewconfmodules.o: kviewconfmodules.moc 
+-kpreferencesdialog.lo: kpreferencesdialog.moc 
 +kview.lo: kview.moc 
