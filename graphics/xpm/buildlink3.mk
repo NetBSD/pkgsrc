@@ -1,11 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.5 2003/09/28 12:54:52 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2003/09/30 00:42:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 
 .include "../../mk/bsd.prefs.mk"
 
+.if !defined(XPM_BUILDLINK3_MK)
+XPM_BUILDLINK3_MK=	YES
+
 BUILDLINK_DEPENDS.xpm?=		xpm>=3.4k
 BUILDLINK_PKGSRCDIR.xpm?=	../../graphics/xpm
+.endif	# XPM_BUILDLINK3_MK
 
 BUILDLINK_CHECK_BUILTIN.xpm?=	NO
 
@@ -36,6 +40,10 @@ BUILDLINK_IS_BUILTIN.xpm=	NO
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.xpm=${BUILDLINK_IS_BUILTIN.xpm}
 .endif
 
+.if !empty(BUILDLINK_CHECK_BUILTIN.xpm:M[yY][eE][sS])
+_NEED_XPM=	NO
+.endif
+
 .if !defined(_NEED_XPM)
 .  if !empty(BUILDLINK_IS_BUILTIN.xpm:M[nN][oO])
 _NEED_XPM=	YES
@@ -62,21 +70,21 @@ _NEED_XPM!=	\
 		${ECHO} "YES";						\
 	fi
 .  endif
+MAKEFLAGS+=	_NEED_XPM="${_NEED_XPM}"
 .endif	# _NEED_XPM
-
-.if !empty(BUILDLINK_CHECK_BUILTIN.xpm:M[yY][eE][sS])
-_NEED_XPM=	NO
-.endif
 
 .if ${_NEED_XPM} == "YES"
 .  if !empty(BUILDLINK_DEPTH:M\+)
 BUILDLINK_DEPENDS+=	xpm
 .  endif
-.  if !defined(BUILDLINK_PACKAGES) || empty(BUILDLINK_PACKAGES:Mxpm)
-BUILDLINK_PACKAGES+=	xpm
-.  endif
-.else
-BUILDLINK_PREFIX.xpm=	${X11BASE}
 .endif
+
+.if !defined(XPM_BUILDLINK3_MK)
+.  if ${_NEED_XPM} == "YES"
+BUILDLINK_PACKAGES+=	xpm
+.  else
+BUILDLINK_PREFIX.xpm=	${X11BASE}
+.  endif
+.endif	# XPM_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
