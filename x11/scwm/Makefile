@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/08/01 02:35:07 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/17 14:15:49 wiz Exp $
 #
 
 DISTNAME=	scwm-0.9
@@ -24,6 +24,6 @@ CONFIGURE_ARGS+=	--with-guile-prefix=${LOCALBASE}	\
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
 
 .include "../../mk/bsd.pkg.mk"
