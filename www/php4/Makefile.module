@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.11 2001/10/16 12:33:46 tron Exp $
+# $NetBSD: Makefile.module,v 1.12 2001/10/16 12:44:16 tron Exp $
 #
 # This Makefile is provided to ease creating PHP4 packages for the extension
 # modules distributed in the PHP4 sources.
@@ -11,13 +11,13 @@
 # of the PHP4 module package that don't affect other PHP4 modules.  It is
 # typically left empty.
 
-.include "../php4/Makefile.common"
+.include "../../www/php4/Makefile.common"
 
 PKGNAME=		php-${MODNAME}-${PHP_VERS}
 PHP_PKG_VERS?=		# empty
 
 BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
-DEPENDS+=		php>=${PHP_BASE_VERS}:../php4
+DEPENDS+=		php>=${PHP_BASE_VERS}:../../www/php4
 
 PKGMODNAME=		${MODNAME:S/-/_/}
 MODULESDIR=		${WRKSRC}/modules
@@ -59,4 +59,4 @@ do-module-install:
 	${INSTALL_DATA} ${MODULESDIR}/${PKGMODNAME}.so \
 		${PREFIX}/${PHP_EXTENSION_DIR}
 
-.include "../php4/buildlink.mk"
+.include "../../www/php4/buildlink.mk"
