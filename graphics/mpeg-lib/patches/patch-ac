@@ -1,11 +1,15 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 10:40:48 agc Exp $
+$NetBSD: patch-ac,v 1.3 2001/08/02 13:28:46 jlam Exp $
 
---- 24bit.c.orig	Mon Sep 25 10:22:04 1995
-+++ 24bit.c	Sat Jun 20 00:33:26 1998
-@@ -32,2 +32,6 @@
+--- 24bit.c.orig	Fri Jul 23 23:59:25 1999
++++ 24bit.c
+@@ -30,6 +30,10 @@
+ #include "dither.h"
+ #include "proto.h"
  #include <time.h>
 +#ifdef __NetBSD__
 +#include <stdlib.h>
 +#endif
 +
+ #include <malloc.h>
+ #include "my_dmalloc.h"
  
