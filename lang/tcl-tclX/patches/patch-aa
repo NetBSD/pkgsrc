@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/09/06 16:40:03 jwise Exp $
---- Common.mk.in.orig	Sun Feb  6 19:54:02 2000
-+++ Common.mk.in	Tue Sep  5 16:28:43 2000
+$NetBSD: patch-aa,v 1.2 2001/04/26 07:17:41 skrll Exp $
+
+--- Common.mk.in.orig	Mon Feb  7 00:54:02 2000
++++ Common.mk.in
 @@ -36,7 +36,8 @@
  #------------------------------------------------------------------------------
  # Programs and options used by build
