@@ -1,14 +1,11 @@
-$NetBSD: patch-aa,v 1.7 2000/05/31 15:32:44 itojun Exp $
+$NetBSD: patch-aa,v 1.8 2000/07/02 22:07:56 itojun Exp $
 
---- configure.in	Tue May 30 11:57:47 2000
-+++ configure.in	Wed May 31 18:31:52 2000
-@@ -447,3 +447,5 @@
- 		[
-+#include <sys/types.h>
- #include <netinet/in.h>
-+#include <sys/socket.h>
- 		],
-@@ -461,2 +463,3 @@
- 		[
-+#include <sys/types.h>
- #include <netinet/in.h>
+--- configure.in.orig	Sat Jul  1 15:52:55 2000
++++ configure.in	Mon Jul  3 06:49:00 2000
+@@ -647,2 +647,6 @@
+ 
++OSSH_CHECK_HEADER_FOR_FIELD(ut_name, utmp.h, HAVE_NAME_IN_UTMP)
++OSSH_CHECK_HEADER_FOR_FIELD(ut_name, utmpx.h, HAVE_NAME_IN_UTMPX)
++OSSH_CHECK_HEADER_FOR_FIELD(ut_user, utmp.h, HAVE_USER_IN_UTMP)
++OSSH_CHECK_HEADER_FOR_FIELD(ut_user, utmpx.h, HAVE_USER_IN_UTMPX)
+ OSSH_CHECK_HEADER_FOR_FIELD(ut_host, utmp.h, HAVE_HOST_IN_UTMP)
