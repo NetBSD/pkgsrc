@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.125 2003/09/13 05:55:15 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.126 2003/09/16 08:09:04 grant Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -152,36 +152,36 @@ OBJECT_FMT?=		Mach-O
 
 # /usr/share/mk/bsd.own.mk on NetBSD 1.3 does not define OBJECT_FMT
 .if ${MACHINE_PLATFORM:MNetBSD-1.3*} != ""
-.if ${MACHINE_ARCH} == "alpha" || \
-${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
-${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc64"
+.  if ${MACHINE_ARCH} == "alpha" || \
+      ${MACHINE_ARCH} == "mipsel" || ${MACHINE_ARCH} == "mipseb" || \
+      ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc64"
 OBJECT_FMT?=		ELF
-.else
+.  else
 OBJECT_FMT?=		a.out
-.endif
+.  endif
 .endif
 
 # include the defaults file
 .if exists(${.CURDIR}/../../mk/bsd.pkg.defaults.mk)
-.include "${.CURDIR}/../../mk/bsd.pkg.defaults.mk"
+.  include "${.CURDIR}/../../mk/bsd.pkg.defaults.mk"
 .elif exists(${.CURDIR}/../mk/bsd.pkg.defaults.mk)
-.include "${.CURDIR}/../mk/bsd.pkg.defaults.mk"
+.  include "${.CURDIR}/../mk/bsd.pkg.defaults.mk"
 .elif exists(${.CURDIR}/mk/bsd.pkg.defaults.mk)
-.include "${.CURDIR}/mk/bsd.pkg.defaults.mk"
+.  include "${.CURDIR}/mk/bsd.pkg.defaults.mk"
 .endif
 
 .if ${OPSYS} == "NetBSD"
-. if ${OBJECT_FMT} == "ELF" && \
-    (${MACHINE_GNU_ARCH} == "arm" || \
-     ${MACHINE_ARCH} == "i386" || \
-     ${MACHINE_ARCH} == "m68k" || \
-     ${MACHINE_ARCH} == "m68000" || \
-     ${MACHINE_GNU_ARCH} == "sh" || \
-     ${MACHINE_GNU_ARCH} == "shle" || \
-     ${MACHINE_ARCH} == "sparc" || \
-     ${MACHINE_ARCH} == "vax")
+.  if ${OBJECT_FMT} == "ELF" && \
+   (${MACHINE_GNU_ARCH} == "arm" || \
+    ${MACHINE_ARCH} == "i386" || \
+    ${MACHINE_ARCH} == "m68k" || \
+    ${MACHINE_ARCH} == "m68000" || \
+    ${MACHINE_GNU_ARCH} == "sh" || \
+    ${MACHINE_GNU_ARCH} == "shle" || \
+    ${MACHINE_ARCH} == "sparc" || \
+    ${MACHINE_ARCH} == "vax")
 APPEND_ELF=		elf
-. endif
+.  endif
 .endif
 
 SHAREOWN?=		${DOCOWN}
@@ -202,17 +202,17 @@ SHAREMODE?=		${DOCMODE}
 # Load the OS-specific definitions for program variables.  Default to loading
 # the NetBSD ones if an OS-specific file doesn't exist.
 .if exists(${.CURDIR}/../../mk/defs.${OPSYS}.mk)
-.include "${.CURDIR}/../../mk/defs.${OPSYS}.mk"
+.  include "${.CURDIR}/../../mk/defs.${OPSYS}.mk"
 .elif exists(${.CURDIR}/../mk/defs.${OPSYS}.mk)
-.include "${.CURDIR}/../mk/defs.${OPSYS}.mk"
+.  include "${.CURDIR}/../mk/defs.${OPSYS}.mk"
 .elif exists(${.CURDIR}/mk/defs.${OPSYS}.mk)
-.include "${.CURDIR}/mk/defs.${OPSYS}.mk"
+.  include "${.CURDIR}/mk/defs.${OPSYS}.mk"
 .elif exists(${.CURDIR}/../../mk/defs.NetBSD.mk)
-.include "${.CURDIR}/../../mk/defs.NetBSD.mk"
+.  include "${.CURDIR}/../../mk/defs.NetBSD.mk"
 .elif exists(${.CURDIR}/../mk/defs.NetBSD.mk)
-.include "${.CURDIR}/../mk/defs.NetBSD.mk"
+.  include "${.CURDIR}/../mk/defs.NetBSD.mk"
 .else exists(${.CURDIR}/mk/defs.NetBSD.mk)
-.include "${.CURDIR}/mk/defs.NetBSD.mk"
+.  include "${.CURDIR}/mk/defs.NetBSD.mk"
 .endif
 
 # if the system is IPv6-ready, compile with IPv6 support turned on.
@@ -348,11 +348,11 @@ MAKEFLAGS+=		PKGTOOLS_VERSION="${PKGTOOLS_VERSION}"
 .endif
 
 .if (${OPSYS} == SunOS) && !defined(ZOULARIS_VERSION)
-.if !exists(${ZOULARISBASE}/share/mk/zoularis.mk)
+.  if !exists(${ZOULARISBASE}/share/mk/zoularis.mk)
 ZOULARIS_VERSION=	20000522
-.else
-.include "${ZOULARISBASE}/share/mk/zoularis.mk"
-.endif
+.  else
+.    include "${ZOULARISBASE}/share/mk/zoularis.mk"
+.  endif
 MAKEFLAGS+=		ZOULARIS_VERSION="${ZOULARIS_VERSION}"
 .endif
 
