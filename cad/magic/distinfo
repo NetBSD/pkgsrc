@@ -1,6 +1,20 @@
-$NetBSD: distinfo,v 1.2 2002/07/14 03:47:46 dmcmahill Exp $
+$NetBSD: distinfo,v 1.3 2004/01/23 11:43:33 agc Exp $
 
 SHA1 (magic-7.1.tar.gz) = 176eb4c6a0ff33c6e265e61360c02da4f454f101
 Size (magic-7.1.tar.gz) = 3860487 bytes
-SHA1 (patch-aa) = bb18e6672441e404b0969cd1f5cb387ef4f97386
-SHA1 (patch-ab) = c4b516d71ec012593f0559e8d0d1b5bad69d736a
+SHA1 (patch-aa) = bfd5101deed8e5626311798f7dd4e8c80c3d63e7
+SHA1 (patch-ab) = 4168f956b665672ec79e11875f7b948a5be715ba
+SHA1 (patch-ac) = 270cbb68cb3b1ff5e635490ac1dfe13e3dcfc0d0
+SHA1 (patch-ad) = e9db83580fc1b34906d9f5e151479e46f7da444a
+SHA1 (patch-ae) = 27555db8f06d1f8a7a6f002e7dfccf14a4db2765
+SHA1 (patch-af) = 415c0252b38dab9460697e2b3d87af83518ea980
+SHA1 (patch-ag) = b8dcf69daab42dfd24bdb2038733f88f269cc7dc
+SHA1 (patch-ah) = 31654bb19cf41bbd07d8ecd3d8b5c529684638a2
+SHA1 (patch-ai) = 14c2896f98b4dcf3fef08047c947b03cd589f643
+SHA1 (patch-aj) = 81a27ad988cdd6423040939c32abc329efeaa69b
+SHA1 (patch-ak) = 18c5a23f334c9878160c104d12be4f4e71da6d59
+SHA1 (patch-al) = 1ef7780a48da86d690b9cf8a31bd9dc416087a09
+SHA1 (patch-am) = c4e695c370db01775b321970a327ea0851fdf437
+SHA1 (patch-an) = 83e9e5242b483f398962a6237551b860749e70f0
+SHA1 (patch-ao) = 747c18b5e997d652054d17acbdb1fee0748d77a8
+SHA1 (patch-ap) = b2b9e1c45dbefd1d93205bcc15ea713c38181598
