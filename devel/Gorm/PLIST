@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/08/18 14:02:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/09/27 01:23:13 rh Exp $
 share/GNUstep/System/Applications/Gorm.app/Gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/0Menus
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/GormMenuAttributesInspector.gorm/data.classes
@@ -11,6 +11,7 @@ share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/Me
 share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette/Resources/palette.table
 share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/1Windows
 share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowSizeInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowSizeInspector.gorm/objects.gorm
@@ -19,56 +20,76 @@ share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/
 share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/WindowsPalette.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/palette.table
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/2Controls
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/ControlsPalette.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/ControlsPalette.gorm/data.info
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/ControlsPalette.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/ControlsPalette.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSBoxInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSBoxInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSBoxInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSButtonInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSButtonInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSButtonInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSCellInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSCellInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSColorWellInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSColorWellInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSFormInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSFormInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSFormInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSMatrixInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSMatrixInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSMatrixInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSPopUpButtonInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSPopUpButtonInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSPopUpButtonInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSProgressIndicatorInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSProgressIndicatorInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSProgressIndicatorInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSSliderInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSSliderInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSStepperInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSStepperInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSStepperInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSTextFieldInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSTextFieldInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSTextFieldInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/palette.table
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/3Containers
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/ContainersPalette.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSBrowserInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSBrowserInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSBrowserInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnSizeInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableColumnSizeInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableViewInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableViewInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormNSTableViewInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTabViewInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTabViewInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/GormTabViewInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/Gorm.app/Resources/3Containers.palette/Resources/palette.table
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/4Data
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/DataPalette.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSComboBoxInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSComboBoxInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSComboBoxInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSDateFormatterInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSDateFormatterInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSDateFormatterInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSImageViewInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSImageViewInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSImageViewInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSNumberFormatterInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSNumberFormatterInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSNumberFormatterInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSTextViewInspector.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSTextViewInspector.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/GormNSTextViewInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/Gorm.app/Resources/4Data.palette/Resources/palette.table
@@ -87,6 +108,7 @@ share/GNUstep/System/Applications/Gorm.app/Resources/GormClassInspector.gorm/obj
 share/GNUstep/System/Applications/Gorm.app/Resources/GormCustomClassInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/GormCustomClassInspector.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/GormDocument.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/GormDocument.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/GormDocument.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/GormEHCoil.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormEHLine.tiff
@@ -118,7 +140,11 @@ share/GNUstep/System/Applications/Gorm.app/Resources/GormPrefGeneral.gorm/data.c
 share/GNUstep/System/Applications/Gorm.app/Resources/GormPrefGeneral.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/GormPrefHeaders.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/GormPrefHeaders.gorm/objects.gorm
+share/GNUstep/System/Applications/Gorm.app/Resources/GormPrefPalettes.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/GormPrefPalettes.gorm/data.info
+share/GNUstep/System/Applications/Gorm.app/Resources/GormPrefPalettes.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/GormPreferences.gorm/data.classes
+share/GNUstep/System/Applications/Gorm.app/Resources/GormPreferences.gorm/data.info
 share/GNUstep/System/Applications/Gorm.app/Resources/GormPreferences.gorm/objects.gorm
 share/GNUstep/System/Applications/Gorm.app/Resources/GormScrollViewAttributesInspector.gorm/data.classes
 share/GNUstep/System/Applications/Gorm.app/Resources/GormScrollViewAttributesInspector.gorm/objects.gorm
@@ -138,6 +164,7 @@ share/GNUstep/System/Applications/Gorm.app/Resources/GormSoundInspector.gorm/rw.
 share/GNUstep/System/Applications/Gorm.app/Resources/GormSoundInspector.gorm/stop.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormSourceTag.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormTargetTag.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/GormTesting.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormUnknown.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormView.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/GormViewSizeInspector.gorm/data.classes
@@ -147,6 +174,7 @@ share/GNUstep/System/Applications/Gorm.app/Resources/Info-gnustep.plist
 share/GNUstep/System/Applications/Gorm.app/Resources/LeftArr.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/RightArr.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/Sunday_seurat.tiff
+share/GNUstep/System/Applications/Gorm.app/Resources/VersionProfiles.plist
 share/GNUstep/System/Applications/Gorm.app/Resources/bezel_nib.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/button_nib.tiff
 share/GNUstep/System/Applications/Gorm.app/Resources/centeralign_nib.tiff
@@ -200,7 +228,9 @@ share/GNUstep/System/Library/Headers/InterfaceBuilder/IBViewAdditions.h
 share/GNUstep/System/Library/Headers/InterfaceBuilder/InterfaceBuilder.h
 share/GNUstep/System/Library/Libraries/libGorm.so
 share/GNUstep/System/Library/Libraries/libGorm.so.0.0.1
+@comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Libraries
 @dirrm share/GNUstep/System/Library/Headers/InterfaceBuilder
+@comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Headers
 @dirrm share/GNUstep/System/Applications/GormTest.app/Resources/GormTest.gorm
 @dirrm share/GNUstep/System/Applications/GormTest.app/Resources
 @dirrm share/GNUstep/System/Applications/GormTest.app
@@ -210,6 +240,7 @@ share/GNUstep/System/Library/Libraries/libGorm.so.0.0.1
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormSetName.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormScrollViewAttributesInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormPreferences.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormPrefPalettes.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormPrefHeaders.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormPrefGeneral.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/GormPrefColors.gorm
@@ -245,6 +276,7 @@ share/GNUstep/System/Library/Libraries/libGorm.so.0.0.1
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSCellInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSButtonInspector.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/GormNSBoxInspector.gorm
+@dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources/ControlsPalette.gorm
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette/Resources
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/2Controls.palette
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/1Windows.palette/Resources/GormNSWindowSizeInspector.gorm
@@ -257,3 +289,4 @@ share/GNUstep/System/Library/Libraries/libGorm.so.0.0.1
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources/0Menus.palette
 @dirrm share/GNUstep/System/Applications/Gorm.app/Resources
 @dirrm share/GNUstep/System/Applications/Gorm.app
+@comment in devel/gnustep-make: @dirrm share/GNUstep/System/Applications
