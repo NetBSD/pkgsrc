@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2001/07/13 04:49:11 kei Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/08/25 02:12:05 jlam Exp $
+bin/make_epses.sh
 bin/wv-incconfig
 bin/wv-libconfig
+bin/wvAbw
 bin/wvCleanLatex
 bin/wvConvert
 bin/wvDVI
@@ -9,13 +11,17 @@ bin/wvLatex
 bin/wvMime
 bin/wvPDF
 bin/wvPS
+bin/wvRTF
 bin/wvSimpleCLX
 bin/wvSummary
 bin/wvText
 bin/wvVersion
 bin/wvWare
+bin/wvWml
 include/wv.h
+include/wvexporter.h
 lib/libwv.a
+man/man1/wvAbw.1
 man/man1/wvCleanLatex.1
 man/man1/wvConvert.1
 man/man1/wvDVI.1
@@ -24,10 +30,12 @@ man/man1/wvLatex.1
 man/man1/wvMime.1
 man/man1/wvPDF.1
 man/man1/wvPS.1
+man/man1/wvRTF.1
 man/man1/wvSummary.1
 man/man1/wvText.1
 man/man1/wvVersion.1
 man/man1/wvWare.1
+man/man1/wvWml.1
 share/doc/wv/COPYING
 share/doc/wv/CREDITS
 share/doc/wv/INSTALL
