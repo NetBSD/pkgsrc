@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/11 14:49:31 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/11/07 16:31:26 agc Exp $
 #
 
 DISTNAME=	LaBrea
@@ -14,11 +14,11 @@ COMMENT=	builds tarpits/honeypots for scanners
 post-extract:
 	cd ${WRKSRC};							\
 		${MV} LaBrea.c LaBrea.c.in &&				\
-		${SED} -e 's/.$$//' -e 's|LaBrea.README|${PREFIX}/doc/LaBrea|g' LaBrea.c.in > LaBrea.c
+		${SED} -e 's/.$$//' -e 's|LaBrea.README|${PREFIX}/share/doc/LaBrea|g' LaBrea.c.in > LaBrea.c
 
 do-install:
 	${BSD_INSTALL_PROGRAM} ${WRKSRC}/LaBrea ${PREFIX}/sbin
-	${BSD_INSTALL_DATA} ${WRKSRC}/LaBrea.README ${PREFIX}/doc/LaBrea
+	${BSD_INSTALL_DATA} ${WRKSRC}/LaBrea.README ${PREFIX}/share/doc/LaBrea
 
 .include "../../devel/libnet/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
