@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/11/26 20:38:31 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2001/12/02 06:56:39 jlam Exp $
 #
 
 DISTNAME=	gale-0.99a
@@ -38,14 +38,10 @@ OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/auth/cache			\
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/auth/local			\
 			${SHAREOWN} ${SHAREGRP} 1777
 
-pre-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
-
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/kutils/ROOT ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${EGDIR}
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../devel/boehm-gc/buildlink.mk"
 .include "../../devel/glib/buildlink.mk"

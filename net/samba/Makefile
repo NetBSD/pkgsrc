@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2001/11/26 23:55:06 taca Exp $
+# $NetBSD: Makefile,v 1.72 2001/12/02 06:56:43 jlam Exp $
 
 DISTNAME=		samba-2.2.2
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -116,8 +116,6 @@ post-install:
 	${SED} ${FILES_SUBST_SED}					\
 		${FILESDIR}/smb.conf.sample > ${WRKDIR}/smb.conf.sample
 	${INSTALL_DATA} ${WRKDIR}/smb.conf.sample ${EXAMPLESDIR}
-
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../devel/readline/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"

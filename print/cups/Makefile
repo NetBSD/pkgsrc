@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/11/26 20:38:31 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2001/12/02 06:56:43 jlam Exp $
 
 DISTNAME=		cups-${DIST_VERS}-source
 PKGNAME=		cups-${VERS}
@@ -84,7 +84,6 @@ OWN_DIRS_PERMS+=	/var/spool/cups/tmp ${CUPS_USER} ${CUPS_GROUP} 1700
 pre-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/cups.pam > ${WRKDIR}/cups.pam
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/cupsd.sh > ${WRKDIR}/cupsd.sh
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/cupsd.sh ${PREFIX}/etc/rc.d/cupsd
@@ -97,7 +96,6 @@ post-install:
 .if defined(USE_PAM)
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${EGDIR}
 .endif
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../devel/zlib/buildlink.mk"
 .include "../../graphics/jpeg/buildlink.mk"
