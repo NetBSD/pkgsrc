@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2003/07/17 22:56:50 grant Exp $
+# $NetBSD: Makefile,v 1.24 2003/09/03 18:22:51 xtraeme Exp $
 #
 
-DISTNAME=		wxGTK-2.4.0
-PKGREVISION=		3
+DISTNAME=		wxGTK-2.4.1
 CATEGORIES=		x11
-MASTER_SITES=		ftp://biolpc22.york.ac.uk/pub/2.4.0/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wxwindows/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tsarna@NetBSD.org
 HOMEPAGE=		http://www.wxwindows.org
