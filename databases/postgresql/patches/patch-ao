@@ -1,0 +1,24 @@
+$NetBSD: patch-ao,v 1.1 2000/03/05 19:12:44 kleink Exp $
+
+--- include/port/bsd.h.orig	Tue May 25 18:14:29 1999
++++ include/port/bsd.h	Sun Mar  5 16:54:42 2000
+@@ -1,16 +1,16 @@
+ #define USE_POSIX_TIME
+ 
+-#if defined(i386)
++#if defined(__i386__)
+ #define NEED_I386_TAS_ASM
+ #define HAS_TEST_AND_SET
+ #endif
+ 
+-#if defined(sparc)
++#if defined(__sparc__)
+ #define NEED_SPARC_TAS_ASM
+ #define HAS_TEST_AND_SET
+ #endif
+ 
+-#if defined(vax)
++#if defined(__vax__)
+ #define NEED_VAX_TAS_ASM
+ #define HAS_TEST_AND_SET
+ #endif
