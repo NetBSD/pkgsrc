@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/03 06:25:32 sakamoto Exp $
+bin/cvs2cl
