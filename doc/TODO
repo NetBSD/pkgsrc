@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.499 2003/04/26 06:03:13 rh Exp $
+$NetBSD: TODO,v 1.500 2003/04/26 06:47:48 rh Exp $
 
 Suggested new packages
 ======================
@@ -9,6 +9,8 @@ Suggested new packages
 	balsa-2
 	GNOME2 version of balsa
 	http://balsa.gnome.org/
+	[there currently is a balsa2 package in wip,
+        which might be a good starting point]
 
 	figfonts
 	More fonts for figlet.
@@ -37,6 +39,8 @@ Suggested new packages
 	  mostly working now.
 	  [jmmv: I am working on this package. It mostly works, but still
 	         has some annoying problems that need to be fixed]
+	  [rh: I have checked in a mostly-working package into wip,
+                 which might be a good starting point]
 	http://cvs.gnome.org/lxr/source/nautilus/
 
 	resin
