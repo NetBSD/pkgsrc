@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/07/13 13:51:20 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2004/02/01 11:29:45 tron Exp $
 #
 # This Makefile fragment is included by packages that use libgtop2.
 #
@@ -13,12 +13,12 @@ BUILDLINK_DEPENDS.libgtop2?=		libgtop2>=2.0.0nb4
 BUILDLINK_PKGSRCDIR.libgtop2?=		../../devel/libgtop2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libgtop2=libgtop2
+BUILDLINK_FILES.libgtop2+=	include/gnome/gnomesupport.h
 BUILDLINK_PREFIX.libgtop2_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libgtop2+=	include/libgtop-2.0/*.h
 BUILDLINK_FILES.libgtop2+=	include/libgtop-2.0/glibtop/*.h
 BUILDLINK_FILES.libgtop2+=	lib/libgnomesupport-2.0.*
 BUILDLINK_FILES.libgtop2+=	lib/libgtop-2.0.*
-BUILDLINK_FILES.libgtop2+=	lib/libgtop/include/gnomesupport.h
 BUILDLINK_FILES.libgtop2+=	lib/libgtop_common-2.0.*
 BUILDLINK_FILES.libgtop2+=	lib/libgtop_names-2.0.*
 BUILDLINK_FILES.libgtop2+=	lib/libgtop_suid_common-2.0.*
