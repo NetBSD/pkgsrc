@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/11/02 21:54:47 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2001/11/26 23:09:30 hubertf Exp $
 
---- kapm/apm.cpp.orig	Tue Nov  2 06:27:01 1999
-+++ kapm/apm.cpp	Tue Nov  2 06:27:49 1999
+--- kapm/apm.cpp.orig	Wed Oct 20 06:19:57 1999
++++ kapm/apm.cpp
 @@ -10,6 +10,13 @@
  	 6) Its packaged as an object
  */
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/11/02 21:54:47 hubertf Exp $
  	FILE *str;
  	char buffer[64];
  
-@@ -71,21 +89,59 @@
+@@ -71,21 +89,60 @@
  
  	sscanf( buffer, "%s %d.%d %x %x %x %x %d%% %d %s\n",
  	   (char *)i.driver_version,
@@ -85,6 +85,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/11/02 21:54:47 hubertf Exp $
 +
 +	fd = open(APM_PROC, O_RDONLY);
 +	assert(fd != -1);
++	memset(&apm_pi, 0, sizeof(apm_pi));
 +	rc = ioctl(fd, APM_IOC_GETPOWER, &apm_pi);
 +	assert(rc != -1);
 +	close(fd);
