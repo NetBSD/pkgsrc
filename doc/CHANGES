@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9121 2005/02/12 17:34:14 recht Exp $
+$NetBSD: CHANGES,v 1.9122 2005/02/12 17:59:03 kim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -856,3 +856,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gnetman to 20041222 [dmcmahill 2005-02-11]
 	Updated pkglint to 4.02 [rillig 2005-02-12]
 	Updated roundup to 0.7.11 [recht 2005-02-12]
+	Added cisco-mibs-20050210 [kim 2005-02-12]
