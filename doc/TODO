@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3175 2005/03/02 17:58:54 wiz Exp $
+$NetBSD: TODO,v 1.3176 2005/03/02 18:20:17 rxg Exp $
 
 Suggested new packages
 ======================
@@ -364,7 +364,6 @@ Suggested package updates
 	o classpath-0.13
 	o classpath-gui-0.13
 	o clisp-2.33.2
-	o cmp3-2.0pre6 [pkg/29036]
 	o cocoon-2.1.6
 	o columba-1.0RC1
 	o common-mml-1.2.16
