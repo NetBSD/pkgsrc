@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2001/01/04 15:10:44 agc Exp $
+@comment $NetBSD: PLIST,v 1.11 2001/06/08 21:30:36 tron Exp $
 bin/cxpm
 bin/sxpm
 lib/libXpm.a
 lib/libXpm.so
 lib/libXpm.so.4
 lib/libXpm.so.4.11
-include/X11/xpm.h
+${INCDIR}/xpm.h
 man/cat1/cxpm.0.gz
 man/cat1/sxpm.0.gz
