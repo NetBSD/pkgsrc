@@ -1,16 +1,17 @@
-$NetBSD: patch-af,v 1.2 1998/12/19 12:31:47 tron Exp $
+$NetBSD: patch-af,v 1.3 1999/03/05 00:25:10 tron Exp $
 
---- src/idl-compiler/orbit-c-backend.c.orig	Wed Dec 16 02:17:18 1998
-+++ src/idl-compiler/orbit-c-backend.c	Sat Dec 19 12:54:49 1998
-@@ -18,9 +18,9 @@
- #ifndef HAVE_INDENT
- #define INDENT "cat"
- #elif HAVE_INDENT_KR
--#define INDENT "indent -npro -kr -i8 -bad -fca -sc -sob"
-+#define INDENT "gindent -npro -kr -i8 -bad -fca -sc -sob"
+--- src/idl-compiler/orbit-c-backend.c.orig	Mon Feb 22 17:27:40 1999
++++ src/idl-compiler/orbit-c-backend.c	Thu Mar  4 23:05:25 1999
+@@ -16,10 +16,10 @@
+    Output: (in files) header, skeletons, stubs, and common code.
+ */
+ #ifdef HAVE_INDENT_KR
+-#  define INDENT "indent -npro -kr -i8 -bad -fca -sc -sob"
++#  define INDENT "gindent -npro -kr -i8 -bad -fca -sc -sob"
  #else
--#define INDENT "indent -npro -bad -bap -bc -sob -br -ce -cli2 -npcs -di1 -psl -i3 -lp"
-+#define INDENT "gindent -npro -bad -bap -bc -sob -br -ce -cli2 -npcs -di1 -psl -i3 -lp"
- #endif /* HAVE_INDENT */
- 
- void
+ #  ifdef HAVE_INDENT
+-#    define INDENT "indent -npro -bad -bap -bc -sob -br -ce -cli2 -npcs -di1 -psl -i3 -lp"
++#    define INDENT "gindent -npro -bad -bap -bc -sob -br -ce -cli2 -npcs -di1 -psl -i3 -lp"
+ #  else
+ #    define INDENT "cat"
+ #  endif

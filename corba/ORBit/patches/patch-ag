@@ -1,13 +1,19 @@
-$NetBSD: patch-ag,v 1.2 1998/12/19 12:31:47 tron Exp $
+$NetBSD: patch-ag,v 1.3 1999/03/05 00:25:10 tron Exp $
 
---- src/daemons/interface_repository/Makefile.in.orig	Wed Dec 16 03:41:51 1998
-+++ src/daemons/interface_repository/Makefile.in	Sat Dec 19 12:56:24 1998
-@@ -439,7 +439,7 @@
- 
- 
- $(orbit_ird_built): interface_repository.idl $(IDL)
--	$(IDL) $<
-+	$(IDL) interface_repository.idl
- 
- dist-hook:
- 	cd $(distdir); rm -f $(BUILD_SOURCES)
+--- src/IIOP/connection.c.orig	Sun Feb 21 19:56:43 1999
++++ src/IIOP/connection.c	Thu Mar  4 23:34:25 1999
+@@ -1,3 +1,6 @@
++#include <sys/types.h>
++#include <sys/param.h>
++#include <stdio.h>
+ #include "config.h"
+ #ifndef _XOPEN_SOURCE_EXTENDED
+ #   define _XOPEN_SOURCE_EXTENDED
+@@ -13,7 +16,6 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <errno.h>
+-#include <sys/types.h>
+ #include <fcntl.h>
+ #include <sys/socket.h>
+ #include <sys/un.h>
