@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1319 2003/12/13 00:34:39 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1320 2003/12/13 22:15:11 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -4410,19 +4410,16 @@ print-pkg-size-depends:
 ###
 ### Automatic PLIST generation
 ###  - files & symlinks first
-###  - @exec/@unexec calls are added for info files
 ###  - @dirrm statements last
 ###  - empty directories are handled properly
 ###  - dirs from mtree files are excluded
+###  - substitute for platform or package specifics substrings
 ###
 ### Usage:
 ###  - make install
 ###  - make print-PLIST | brain >PLIST
 ###
 
-# Common (system) directories not to generate @dirrm statements for
-# Reads MTREE_FILE and extracts a list of sed commands that will
-# sort out which directories NOT to include into the PLIST @dirrm list
 SUBST_PLIST_REPLACEMENT1=						\
 		-e  's@${OPSYS}@\$${OPSYS}@' 				\
 		-e  's@${OS_VERSION:S/./\./g}@\$${OS_VERSION}@'		\
@@ -4437,6 +4434,9 @@ SUBST_PLIST_REPLACEMENT2=						\
 		-e  's@${PKGVERSION:S/./\./g}@\$${PKGVERSION}@'		\
 		-e  's@${PKGLOCALEDIR}/locale@\$${PKGLOCALEDIR}/locale@'
 
+# Common (system) directories not to generate @dirrm statements for
+# Reads MTREE_FILE and generate an awk script that will
+# sort out which directories NOT to include into the PLIST @dirrm list
 .if make(print-PLIST)
 COMMON_DIRS!= 	${AWK} 'BEGIN  { 					\
 			i=0; 						\
