@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.169 2003/01/10 12:42:03 jmmv Exp $
+$NetBSD: TODO,v 1.170 2003/01/10 17:34:52 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -75,7 +75,6 @@ Suggested package updates
 	o aspell-0.50.3
 	o auctex-11.14
 	o aumix-2.8
-	o autotrace-0.31.1
 	o balsa-1.4.2
 	o binutils-2.13.2.1
 	o bitchx-1.0c19 [pkg/19296]
