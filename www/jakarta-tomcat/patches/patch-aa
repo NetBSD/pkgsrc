@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2001/03/28 02:46:08 jwise Exp $
+$NetBSD: patch-aa,v 1.6 2001/03/29 22:22:13 jwise Exp $
 --- build.xml.orig	Tue Dec 12 14:51:36 2000
 +++ build.xml	Tue Mar 27 17:17:22 2001
 @@ -6,11 +6,11 @@
@@ -32,7 +32,7 @@ $NetBSD: patch-aa,v 1.5 2001/03/28 02:46:08 jwise Exp $
 +      <!-- <mapper type="glob" from="*.xml" to="*.xml.default"/> -->
      </copy>
 +    <move todir="${tomcat.build}/conf/">
-+      <fileset dir="${tomcat.build}/conf/" includes="jni_server.xml,server.xml,tomcat.policy,tomcat-users.xml,web.xml"/>
++      <fileset dir="${tomcat.build}/conf/" includes="jni_server.xml,server.xml,tomcat.policy,tomcat-users.xml,web.xml,workers.properties"/>
 +      <mapper type="glob" from="*" to="*.default"/>
 +    </move>
      <copy tofile="${tomcat.build}/conf/build.xml"

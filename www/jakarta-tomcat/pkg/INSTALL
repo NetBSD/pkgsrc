@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2001/03/28 02:46:09 jwise Exp $
+# $NetBSD: INSTALL,v 1.2 2001/03/29 22:22:14 jwise Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -11,7 +11,7 @@ CP="@CP@"
 SERVERROOT=${PKG_PREFIX}/tomcat/conf
 SAMPLECONFDIR=${SERVERROOT}
 CONFDIR=${SERVERROOT}
-CONFFILES="server.xml web.xml tomcat-users.xml jni_server.xml tomcat.policy"
+CONFFILES="server.xml web.xml tomcat-users.xml jni_server.xml tomcat.policy workers.properties"
 
 case ${STAGE} in
 PRE-INSTALL)
