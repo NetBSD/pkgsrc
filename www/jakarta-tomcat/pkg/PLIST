@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/12/13 03:49:31 jwise Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/03/06 13:33:41 abs Exp $
 jakarta/tomcat/LICENSE
 jakarta/tomcat/bin/ant
 jakarta/tomcat/bin/antRun
@@ -378,9 +378,11 @@ jakarta/tomcat/webapps/test.war
 @unexec rm -rf %D/jakarta/tomcat/logs
 @unexec rm -f %D/jakarta/tomcat/conf/tomcat-apache.conf
 @comment the war files get expanded at runtime -- they're not there at install
-@comment time, so they don;t get registered, but they're there after you've run
+@comment time, so they don't get registered, but they're there after you've run
 @comment once.
-@unexec rm -rf %D/jakarta/tomcat/webapps
+@unexec rm -rf %D/jakarta/tomcat/webapps/ROOT
+@unexec rm -rf %D/jakarta/tomcat/webapps/examples
+@unexec rm -rf %D/jakarta/tomcat/webapps/test
 @dirrm jakarta/tomcat/src/org/apache/tomcat/util/xml
 @dirrm jakarta/tomcat/src/org/apache/tomcat/util/pattern
 @dirrm jakarta/tomcat/src/org/apache/tomcat/util
