@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.570 2003/05/21 10:12:13 wiz Exp $
+$NetBSD: TODO,v 1.571 2003/05/21 22:56:21 heinz Exp $
 
 Suggested new packages
 ======================
@@ -244,7 +244,7 @@ Suggested package updates
 	o snes9x-1.39a
 	o soappy-0.9.8 [pkg/20787]
 	o source-highlight-1.7
-	o spamassassin-2.54 [heinz]
+	o spamassassin-2.55 [heinz]
 	o sqlite-2.7.5 [pkg/19719]
 	o sqlite-2.7.6
 	o squeak-3.2 [fredb|pkg/17950]
