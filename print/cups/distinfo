@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2002/10/20 18:57:37 jlam Exp $
+$NetBSD: distinfo,v 1.18 2002/10/25 10:49:03 bouyer Exp $
 
 SHA1 (cups-1.1.16-source.tar.bz2) = 648beac667f0757d046840b8a812252aa8667487
 Size (cups-1.1.16-source.tar.bz2) = 3394088 bytes
@@ -8,3 +8,4 @@ SHA1 (patch-ai) = b2d4d3d8d916c0ef3c22b93fe3b93a7d11f77632
 SHA1 (patch-aj) = cfdb158f11ad55236cbc68e49447c4ee2f9585b8
 SHA1 (patch-ak) = 7884b204e0b21226bb9159c712d8b3e5f0fc107c
 SHA1 (patch-al) = 3928fd2348678b25b1607eb7317576d86eaf35df
+SHA1 (patch-am) = 9209b5366315951b4e5663f9d5e52d940faaf145

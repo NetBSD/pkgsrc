@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/10/20 18:57:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/10/25 10:49:03 bouyer Exp $
 bin/cancel
 bin/cups-config
 bin/disable
@@ -429,27 +429,27 @@ share/examples/cups/cupsd.conf
 share/examples/cups/mime.convs
 share/examples/cups/mime.types
 share/examples/cups/printers.conf
-share/locale/C/cups_C
-share/locale/be/cups_be
-share/locale/cs/cups_cs
-share/locale/de/cups_de
-share/locale/en/cups_en
-share/locale/es/cups_es
-share/locale/fr/cups_fr
-share/locale/he/cups_he
-share/locale/it/cups_it
-share/locale/ru_RU.cp1251/cups_ru_RU.cp1251
-share/locale/ru_RU.koi8r/cups_ru_RU.koi8r
-share/locale/sv/cups_sv
-share/locale/uk/cups_uk
-share/locale/uk_UA.cp1251/cups_uk_UA.cp1251
-share/locale/zh_CN/cups_zh_CN
+${PKGLOCALEDIR}/locale/C/cups_C
+${PKGLOCALEDIR}/locale/be/cups_be
+${PKGLOCALEDIR}/locale/cs/cups_cs
+${PKGLOCALEDIR}/locale/de/cups_de
+${PKGLOCALEDIR}/locale/en/cups_en
+${PKGLOCALEDIR}/locale/es/cups_es
+${PKGLOCALEDIR}/locale/fr/cups_fr
+${PKGLOCALEDIR}/locale/he/cups_he
+${PKGLOCALEDIR}/locale/it/cups_it
+${PKGLOCALEDIR}/locale/ru_RU.cp1251/cups_ru_RU.cp1251
+${PKGLOCALEDIR}/locale/ru_RU.koi8r/cups_ru_RU.koi8r
+${PKGLOCALEDIR}/locale/sv/cups_sv
+${PKGLOCALEDIR}/locale/uk/cups_uk
+${PKGLOCALEDIR}/locale/uk_UA.cp1251/cups_uk_UA.cp1251
+${PKGLOCALEDIR}/locale/zh_CN/cups_zh_CN
 share/cups/charsets/windows-874
-@unexec ${RMDIR} %D/share/locale/uk_UA.cp1251 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/locale/ru_RU.koi8r 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/locale/ru_RU.cp1251 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/locale/be 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/locale/C 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/uk_UA.cp1251 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/ru_RU.koi8r 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/ru_RU.cp1251 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/be 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/C 2>/dev/null || ${TRUE}
 @dirrm share/examples/cups
 @dirrm share/doc/html/cups/images
 @dirrm share/doc/html/cups/fr/images
