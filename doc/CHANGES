@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6889 2004/08/15 15:17:07 minskim Exp $
+$NetBSD: CHANGES,v 1.6890 2004/08/15 16:51:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3845,3 +3845,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libcaca to 0.9 [wiz 2004-08-15]
 	Updated libevent to 0.9 [wiz 2004-08-15]
 	Updated alee-ttf to 1.4 [minskim 2004-08-15]
+	Updated esound to 0.2.35 [wiz 2004-08-15]
