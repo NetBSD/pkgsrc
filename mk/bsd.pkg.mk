@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.65 1998/04/19 02:49:46 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.66 1998/04/19 12:48:07 hubertf Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -1114,7 +1114,7 @@ do-fetch:
 # re-distributed freely
 mirror-distfiles:
 .if (${MIRROR_DISTFILE} == "yes")
-	@make fetch __ARCH_OK=yes NO_IGNORE=yes
+	@${MAKE} fetch __ARCH_OK=yes NO_IGNORE=yes
 .endif
 
 # Extract
@@ -1292,18 +1292,18 @@ _PORT_USE: .USE
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 	@if [ -d ${PKG_DBDIR}/${PKGNAME} ]; then \
 		${ECHO_MSG} "===>  ${PKGNAME} is already installed - perhaps an older version?"; \
-		${ECHO_MSG} "      If so, you may wish to \`\`make deinstall'' and install"; \
-		${ECHO_MSG} "      this port again by \`\`make reinstall'' to upgrade it properly."; \
+		${ECHO_MSG} "      If so, you may wish to \`\`${MAKE} deinstall'' and install"; \
+		${ECHO_MSG} "      this port again by \`\`${MAKE} reinstall'' to upgrade it properly."; \
 		${ECHO_MSG} "      If you really wish to overwrite the old port of ${PKGNAME}"; \
 		${ECHO_MSG} "      without deleting it first, set the variable \"FORCE_PKG_REGISTER\""; \
-		${ECHO_MSG} "      in your environment or the \"make install\" command line."; \
+		${ECHO_MSG} "      in your environment or the \"${MAKE} install\" command line."; \
 		exit 1; \
 	fi
 .endif
 	@if [ `${SH} -c umask` != ${DEF_UMASK} ]; then \
 		${ECHO_MSG} "===>  Warning: your umask is \"`${SH} -c umask`"\".; \
 		${ECHO_MSG} "      If this is not desired, set it to an appropriate value"; \
-		${ECHO_MSG} "      and install this port again by \`\`make reinstall''."; \
+		${ECHO_MSG} "      and install this port again by \`\`${MAKE} reinstall''."; \
 	fi
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} run-depends lib-depends
 .endif
@@ -1639,7 +1639,7 @@ checksum: fetch
 		  if [ "$$OK" != "true" ]; then \
 			${ECHO_MSG} "Make sure the Makefile and md5 file (${MD5_FILE})"; \
 			${ECHO_MSG} "are up to date.  If you want to override this check, type"; \
-			${ECHO_MSG} "\"make NO_CHECKSUM=yes [other args]\"."; \
+			${ECHO_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
 			exit 1; \
 		  fi) ; \
 	fi
@@ -1889,12 +1889,12 @@ describe:
 	${ECHO} -n "|${MAINTAINER}|${CATEGORIES}|"; \
 	case "A${FETCH_DEPENDS}B${BUILD_DEPENDS}C${LIB_DEPENDS}D${DEPENDS}E" in \
 		ABCDE) ;; \
-		*) cd ${.CURDIR} && ${ECHO} -n `make depends-list|sort -u`;; \
+		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} depends-list|sort -u`;; \
 	esac; \
 	${ECHO} -n "|"; \
 	case "A${RUN_DEPENDS}B${LIB_DEPENDS}C${DEPENDS}D" in \
 		ABCD) ;; \
-		*) cd ${.CURDIR} && ${ECHO} -n `make package-depends|sort -u`;; \
+		*) cd ${.CURDIR} && ${ECHO} -n `${MAKE} package-depends|sort -u`;; \
 	esac; \
 	${ECHO} -n "|"; \
 	if [ "${ONLY_FOR_ARCHS}" = "" ]; then \
@@ -1912,7 +1912,7 @@ readmes:	readme
 .if !target(readme)
 readme:
 	@rm -f README.html
-	@cd ${.CURDIR} && make README.html
+	@cd ${.CURDIR} && ${MAKE} README.html
 .endif
 
 .if (${OPSYS} == "NetBSD")
@@ -1946,7 +1946,7 @@ print-depends-list:
 .if defined(FETCH_DEPENDS) || defined(BUILD_DEPENDS) || \
 	defined(LIB_DEPENDS) || defined(DEPENDS)
 	@${ECHO} -n 'This port requires package(s) "'
-	@${ECHO} -n `make depends-list | sort -u`
+	@${ECHO} -n `${MAKE} depends-list | sort -u`
 	@${ECHO} '" to build.'
 .endif
 .endif
@@ -1955,7 +1955,7 @@ print-depends-list:
 print-package-depends:
 .if defined(RUN_DEPENDS) || defined(LIB_DEPENDS) || defined(DEPENDS)
 	@${ECHO} -n 'This port requires package(s) "'
-	@${ECHO} -n `make package-depends | sort -u`
+	@${ECHO} -n `${MAKE} package-depends | sort -u`
 	@${ECHO} '" to run.'
 .endif
 .endif
@@ -1989,7 +1989,7 @@ fake-pkg: ${PLIST}
 		if [ -f ${PKGDIR}/MESSAGE ]; then \
 			${CP} ${PKGDIR}/MESSAGE ${PKG_DBDIR}/${PKGNAME}/+DISPLAY; \
 		fi; \
-		for dep in `make package-depends ECHO_MSG=${TRUE} | sort -u`; do \
+		for dep in `${MAKE} package-depends ECHO_MSG=${TRUE} | sort -u`; do \
 			if [ -d ${PKG_DBDIR}/$$dep ]; then \
 				if ! ${GREP} ^${PKGNAME}$$ ${PKG_DBDIR}/$$dep/+REQUIRED_BY \
 					>/dev/null 2>&1; then \
@@ -2002,7 +2002,7 @@ fake-pkg: ${PLIST}
 
 # Depend is generally meaningless for arbitrary ports, but if someone wants
 # one they can override this.  This is just to catch people who've gotten into
-# the habit of typing `make depend all install' as a matter of course.
+# the habit of typing `${MAKE} depend all install' as a matter of course.
 #
 .if !target(depend)
 depend:
