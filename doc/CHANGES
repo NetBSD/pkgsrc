@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2716 2003/07/10 09:16:22 jtb Exp $
+$NetBSD: CHANGES,v 1.2717 2003/07/10 09:19:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2717,4 +2717,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gri to 2.12.5 [jtb 2003-07-10]
 	Updated plplot to 5.2.1 [jtb 2003-07-10]
 	Updated nsd to 1.2.0 [itojun 2003-07-10]
+	Updated mad to 0.15.0b [adam 2003-07-10]
+	Added libmad-0.15.0b [adam 2003-07-10]
+	Added libid3tag-0.15.0b [adam 2003-07-10]
+	Added madplay-0.15.0b [adam 2003-07-10]
 	Updated yplot to 1.1.2 [jtb 2003-07-10]
