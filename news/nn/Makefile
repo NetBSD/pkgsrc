@@ -1,8 +1,4 @@
-# New ports collection makefile for:	nn
-# Version required:	6.5.0
-# Date created:		24 September 1994
-# Whom:			adam
-#
+# $NetBSD: Makefile,v 1.2 1998/05/19 22:26:39 tron Exp $
 # $FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
@@ -10,24 +6,27 @@ DISTNAME=	nn-6.5.0.b3
 PKGNAME=	nn-6.5.0
 CATEGORIES=	news
 MASTER_SITES=	ftp://uniwa.uwa.edu.au/pub/nn/old/beta/
-MAINTAINER=     ports@FreeBSD.ORG
+
+MAINTAINER=     tron@netbsd.org
 
 MAN1=		nn.1 nncheck.1 nngoback.1 nngrab.1  nngrep.1 nnpost.1 \
 		nntidy.1 nnacct.1 nnadmin.1 nnstats.1 nnusage.1
 MAN8=		nnmaster.8 nnspew.8
 
-pre-patch:
-	@${CP} ${WRKSRC}/config.h-dist ${WRKSRC}/config.h
+post-extract:
+	@${MV} ${WRKSRC}/config.h-dist ${WRKSRC}/config.h
+	@${SED} -e 's#@@PREFIX@@#${PREFIX}#; \
+	  s#@@BINOWN@@#${BINOWN}#; \
+	  s#@@BINGRP@@#${BINGRP}#' \
+	  <${FILESDIR}/s-netbsd.h >${WRKSRC}/conf/s-netbsd.h
 
-pre-build:
-	@${CP} ${FILESDIR}/s-freebsd.h ${WRKSRC}/conf
+post-build:
+	(cd ${WRKSRC}/inews; ${MAKE} all)
 
 pre-install:
-	${MKDIR} ${PREFIX}/news
-	[ -r ${PREFIX}/news/lib/inews ] || ( cd ${WRKSRC}/inews; ${MAKE} all )
-	[ -r ${PREFIX}/news/lib/inews ] || ( cd ${WRKSRC}/inews; ${MAKE} install )
+	(cd ${WRKSRC}/inews; ${MAKE} install)
 
 post-install:
-	@${ECHO} Put your NNTP host into ${PREFIX}/etc/nntpserver file
+	@${ECHO} "Put your NNTP host into \"${PREFIX}/etc/nntp_server\" file."
 
-.include <bsd.port.mk>
+.include <../../mk/bsd.pkg.mk>

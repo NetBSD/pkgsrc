@@ -157,3 +157,6 @@ typedef struct dirent Direntry;		/* POSIX */
 
 #define HAVE_WORKING_COLLATE
 
+#define PREFIX		"@@PREFIX@@"
+#define BINOWN		"@@BINOWN@@"
+#define BINGRP		"@@BINGRP@@"

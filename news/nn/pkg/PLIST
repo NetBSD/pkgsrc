@@ -1,5 +1,4 @@
-lib/nn
-news/lib/inews
+@comment $NetBSD: PLIST,v 1.2 1998/05/19 22:26:40 tron Exp $
 bin/nn
 bin/nnusage
 bin/nngrab
@@ -11,16 +10,41 @@ bin/nngoback
 bin/nngrep
 bin/nnpost
 bin/nnbatch
-man/man1/nn.1.gz
-man/man1/nncheck.1.gz
-man/man1/nngoback.1.gz
-man/man1/nngrab.1.gz
-man/man1/nngrep.1.gz
-man/man1/nnpost.1.gz
-man/man1/nntidy.1.gz
-man/man1/nnacct.1.gz
-man/man1/nnadmin.1.gz
-man/man1/nnstats.1.gz
-man/man1/nnusage.1.gz
-man/man8/nnmaster.8.gz
-man/man8/nnspew.8.gz
+lib/nn/aux
+lib/nn/upgrade_rc
+lib/nn/conf
+lib/nn/inews
+lib/nn/help/adm.upgrade1
+lib/nn/help/adm.upgrade2
+lib/nn/help/adm.upgrade3
+lib/nn/help/adm.upgrade4
+lib/nn/help/adm.welcome
+lib/nn/help/help.attr
+lib/nn/help/help.commands
+lib/nn/help/help.extended
+lib/nn/help/help.help
+lib/nn/help/help.map
+lib/nn/help/help.menu
+lib/nn/help/help.more
+lib/nn/help/help.read
+lib/nn/help/help.set
+lib/nn/help/help.show
+lib/nn/help/help.sort
+lib/nn/help/help.variables
+lib/nn/help/Manual
+man/man1/nn.1
+man/man1/nncheck.1
+man/man1/nngoback.1
+man/man1/nngrab.1
+man/man1/nngrep.1
+man/man1/nnpost.1
+man/man1/nntidy.1
+man/man1/nnacct.1
+man/man1/nnadmin.1
+man/man1/nnstats.1
+man/man1/nnusage.1
+man/man8/nnmaster.8
+man/man8/nnspew.8
+@unexec rm -f %D/etc/nntp_server
+@dirrm lib/nn/help
+@dirrm lib/nn
