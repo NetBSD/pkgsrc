@@ -1,4 +1,4 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.20 2001/12/03 19:03:23 wiz Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.21 2002/07/11 09:59:01 wiz Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -53,10 +53,10 @@ PACKAGES=${PKGSRCDIR}/packages
 \&.else
 PACKAGES=${PKGSRCDIR}/packages/${OS_VERSION}/${MACHINE_ARCH}
 \&.endif
+.Ed
 .Pp
 Which would be an alternative to
 .Fl K .
-.Ed
 .It Fl L
 List the filenames of Makefiles as they are parsed (for debugging).
 .It Fl M Ar DISTDIR
