@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2000/06/16 12:54:25 tron Exp $
+# $NetBSD: Makefile,v 1.6 2001/01/30 11:24:01 kleink Exp $
 #
 
-DISTNAME=	vtun-2.3
+DISTNAME=	vtun-2.4
 CATEGORIES=	net
 MASTER_SITES=	http://vtun.sourceforge.net/
 
