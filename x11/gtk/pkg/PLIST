@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2001/03/10 10:50:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.31 2001/04/26 17:42:55 rh Exp $
 bin/gtk-config
 etc/gtk/gtkrc.az
 etc/gtk/gtkrc.be
@@ -173,12 +173,12 @@ include/gtk-1.2/gtk/gtksocket.h
 include/gtk-1.2/gtk/gtkthemes.h
 lib/libgdk.so
 lib/libgdk.so.12
-lib/libgdk.so.12.9
+lib/libgdk.so.12.10
 lib/libgdk.a
 lib/libgdk.la
 lib/libgtk.so
 lib/libgtk.so.12
-lib/libgtk.so.12.9
+lib/libgtk.so.12.10
 lib/libgtk.a
 lib/libgtk.la
 lib/pkgconfig/gdk.pc
@@ -234,6 +234,7 @@ ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gtk+.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gtk+.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gtk+.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gtk+.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gtk+.mo
 share/themes/Default/gtk/gtkrc
 @exec test %D = ${LOCALBASE} || ln -s %D/share/aclocal/gtk.m4 ${LOCALBASE}/share/aclocal/gtk.m4
 @unexec test %D = ${LOCALBASE} || rm ${LOCALBASE}/share/aclocal/gtk.m4
