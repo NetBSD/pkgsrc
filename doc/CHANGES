@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2624 2003/06/29 22:59:22 jtb Exp $
+$NetBSD: CHANGES,v 1.2625 2003/06/29 23:07:32 gson Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2615,3 +2615,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cweb to 3.64 [jtb 2003-06-29]
 	Updated grap to 1.30 [jtb 2003-06-29]
 	Updated hevea to 1.06 [jtb 2003-06-29]
+	Added p5-Geography-Countries [gson 2003-06-29]
