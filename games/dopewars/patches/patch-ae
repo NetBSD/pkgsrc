@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2003/07/12 10:07:35 wiz Exp $
+$NetBSD: patch-ae,v 1.6 2004/11/05 09:44:33 adam Exp $
 
---- configure.orig	Fri Jun  6 21:19:19 2003
+--- configure.orig	2004-10-25 07:05:30.000000000 +0000
 +++ configure
-@@ -8755,8 +8755,8 @@ echo "${ECHO_T}Configuring for Unix bina
+@@ -9249,8 +9249,8 @@ echo "${ECHO_T}Configuring for Unix bina
  
        if test "$CURSES_CLIENT" != "no" ; then
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.5 2003/07/12 10:07:35 wiz Exp $
  if test "${ac_cv_lib_ncurses_newterm+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -8776,11 +8776,11 @@ extern "C"
+@@ -9269,11 +9269,11 @@ extern "C"
  #endif
  /* We use char because int might match the return type of a gcc2
     builtin and then its argument prototype would still apply.  */
@@ -27,7 +27,7 @@ $NetBSD: patch-ae,v 1.5 2003/07/12 10:07:35 wiz Exp $
    ;
    return 0;
  }
-@@ -15091,7 +15091,10 @@ cat >>confdefs.h <<_ACEOF
+@@ -16157,7 +16157,10 @@ cat >>confdefs.h <<_ACEOF
  #define DPDATADIR "$DPDATADIR"
  _ACEOF
  
@@ -39,9 +39,9 @@ $NetBSD: patch-ae,v 1.5 2003/07/12 10:07:35 wiz Exp $
  
  localedir=${datadir}/locale
  
-@@ -15973,6 +15976,7 @@ s,@PLUGOBJS@,$PLUGOBJS,;t t
- s,@PLUGINS_TRUE@,$PLUGINS_TRUE,;t t
+@@ -17053,6 +17056,7 @@ s,@PLUGINS_TRUE@,$PLUGINS_TRUE,;t t
  s,@PLUGINS_FALSE@,$PLUGINS_FALSE,;t t
+ s,@DPSCOREDIR@,$DPSCOREDIR,;t t
  s,@DPDATADIR@,$DPDATADIR,;t t
 +s,@DPLOCALSTATEDIR@,$DPLOCALSTATEDIR,;t t
  s,@localedir@,$localedir,;t t
