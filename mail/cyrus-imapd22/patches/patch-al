@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1.1.1 2004/01/18 12:42:11 recht Exp $
+
+--- imtest/imtest.c~	2003-10-22 20:50:10.000000000 +0200
++++ imtest/imtest.c	2003-11-03 11:09:41.000000000 +0100
+@@ -72,6 +72,10 @@
+ #include <netinet/in.h>
+ #include <netdb.h>
+ 
++#ifdef HAVE_SYS_PARAM_H
++#include <sys/param.h>
++#endif
++
+ #include <sasl/sasl.h>
+ #include <sasl/saslutil.h>
+ 
