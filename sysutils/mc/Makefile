@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 1999/07/22 07:10:49 mycroft Exp $
+# $NetBSD: Makefile,v 1.25 1999/08/17 18:26:01 rh Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/11/30 19:37:48 vanilla Exp
 #
 
-DISTNAME=	mc-4.5.33
+DISTNAME=	mc-4.5.37
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.gnome.org/pub/GNOME/gnome-1.0/sources/ \
 		ftp://ftp.sunet.se/pub/X11/GNOME/gnome-1.0/sources/ \
