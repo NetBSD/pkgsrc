@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/19 14:14:23 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/05/04 17:16:26 jmmv Exp $
 bin/epiphany
 bin/epiphany-bin
 include/epiphany-1.2/epiphany/ephy-bookmarks.h
@@ -43,6 +43,7 @@ share/doc/html/epiphany/index.html
 share/doc/html/epiphany/index.sgml
 share/doc/html/epiphany/left.png
 share/doc/html/epiphany/right.png
+share/doc/html/epiphany/style.css
 share/doc/html/epiphany/up.png
 share/epiphany/art/epiphany-bookmarks.png
 share/epiphany/art/epiphany-download.png
@@ -69,9 +70,15 @@ share/epiphany/nautilus-epiphany-view.xml
 share/gconf/schemas/epiphany-lockdown.schemas
 share/gconf/schemas/epiphany.schemas
 share/gnome/help/epiphany/C/epiphany.xml
+share/gnome/help/epiphany/C/figures/ephy-addressbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/C/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
 share/gnome/help/epiphany/C/figures/ephy-history-window-screenshot.png
 share/gnome/help/epiphany/C/figures/ephy-screenshot.png
 share/gnome/help/epiphany/C/legal.xml
+share/gnome/help/epiphany/eu/epiphany.xml
+share/gnome/help/epiphany/eu/figures/ephy-history-window-screenshot.png
+share/gnome/help/epiphany/eu/figures/ephy-screenshot.png
+share/gnome/help/epiphany/eu/legal.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/epiphany.mo
@@ -131,10 +138,13 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/epiphany.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/epiphany.mo
 share/omf/epiphany/epiphany-C.omf
+share/omf/epiphany/epiphany-eu.omf
 share/pixmaps/epiphany-bookmarks.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/epiphany
 @comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gnome/help/epiphany/eu/figures
+@dirrm share/gnome/help/epiphany/eu
 @dirrm share/gnome/help/epiphany/C/figures
 @dirrm share/gnome/help/epiphany/C
 @dirrm share/gnome/help/epiphany
