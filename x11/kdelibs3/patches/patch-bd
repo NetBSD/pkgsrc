@@ -1,4 +1,4 @@
-$NetBSD: patch-bd,v 1.2 2002/08/15 08:22:10 skrll Exp $
+$NetBSD: patch-bd,v 1.3 2002/08/25 19:23:53 jlam Exp $
 
 --- kio/kssl/kopenssl.cc.orig	Wed Aug 14 15:37:35 2002
 +++ kio/kssl/kopenssl.cc

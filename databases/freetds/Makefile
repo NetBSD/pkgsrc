@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/06/23 03:38:21 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2002/08/25 19:22:05 jlam Exp $
 
 DISTNAME=	freetds-0.53
 CATEGORIES=	databases

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2002/05/11 11:56:59 rh Exp $
+# $NetBSD: buildlink.mk,v 1.5 2002/08/25 19:22:47 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gdk-pixbuf-gnome.
 #

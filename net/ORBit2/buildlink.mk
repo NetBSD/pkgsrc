@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2002/07/12 15:33:13 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.5 2002/08/25 19:23:09 jlam Exp $
 #
 # This Makefile fragment is included by packages that use orbit2.
 #

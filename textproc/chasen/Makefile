@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:00:56 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/25 19:23:24 jlam Exp $
 #
 
 DISTNAME=	chasen-${CHASEN_VERSION}

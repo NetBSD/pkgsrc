@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:29:39 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/08/25 19:22:37 jlam Exp $
 bin/pkg-config
 man/man1/pkg-config.1
 share/aclocal/pkg.m4

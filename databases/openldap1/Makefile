@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/06/15 21:20:00 cjep Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/25 19:22:08 jlam Exp $
 #
 
 DISTNAME=	openldap-1.2.13

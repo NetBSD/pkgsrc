@@ -1,4 +1,4 @@
-$NetBSD: patch-bu,v 1.1.1.1 2002/05/31 13:16:48 skrll Exp $
+$NetBSD: patch-bu,v 1.2 2002/08/25 19:23:55 jlam Exp $
 
 --- libkmid/sndcard.h.orig	Sat Jun 24 14:35:18 2000
 +++ libkmid/sndcard.h

@@ -1,4 +1,4 @@
-$NetBSD: patch-ce,v 1.1.1.1 2002/05/31 13:19:01 skrll Exp $
+$NetBSD: patch-ce,v 1.2 2002/08/25 19:23:41 jlam Exp $
 
 --- kmenuedit/kmenuedit_main.cpp.orig	Thu May 30 09:59:53 2002
 +++ kmenuedit/kmenuedit_main.cpp

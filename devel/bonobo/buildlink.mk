@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2002/07/14 00:58:27 rh Exp $
+# $NetBSD: buildlink.mk,v 1.9 2002/08/25 19:22:24 jlam Exp $
 #
 # This Makefile fragment is included by packages that use bonobo.
 #

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/05/11 11:56:58 rh Exp $
+# $NetBSD: Makefile,v 1.16 2002/08/25 19:22:47 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/gdk-pixbuf-/gdk-pixbuf-gnome-/}
 COMMENT=	the GNOME image loading library GNOME canvas support add-on

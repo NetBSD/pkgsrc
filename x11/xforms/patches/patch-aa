@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2002/08/08 10:37:12 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2002/08/25 19:24:01 jlam Exp $
 
 --- Imakefile.orig	Tue Apr  2 19:05:09 2002
 +++ Imakefile

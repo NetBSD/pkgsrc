@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2002/06/17 02:24:56 dmcmahill Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/08/25 19:23:59 jlam Exp $
 #
 # This Makefile fragment is included by packages that use wx1Motif.
 #

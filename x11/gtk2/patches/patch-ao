@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.3 2002/07/18 02:19:29 rh Exp $
+$NetBSD: patch-ao,v 1.4 2002/08/25 19:23:32 jlam Exp $
 
 --- gdk-pixbuf-2.0.pc.in.orig	Wed Mar  6 07:03:49 2002
 +++ gdk-pixbuf-2.0.pc.in

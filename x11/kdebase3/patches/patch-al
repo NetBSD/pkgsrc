@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1.1.1 2002/05/31 13:18:42 skrll Exp $
+$NetBSD: patch-al,v 1.2 2002/08/25 19:23:37 jlam Exp $
 
 --- kcontrol/ebrowsing/Makefile.am.orig	Tue Feb 19 13:43:23 2002
 +++ kcontrol/ebrowsing/Makefile.am

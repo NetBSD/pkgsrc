@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/06/10 10:21:25 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/25 19:23:00 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1998/11/28 05:08:27 asami Exp $
 
 DISTNAME=	sj3-2.0.1.20

@@ -1,4 +1,4 @@
-$NetBSD: patch-bu,v 1.1.1.1 2002/05/31 13:19:01 skrll Exp $
+$NetBSD: patch-bu,v 1.2 2002/08/25 19:23:40 jlam Exp $
 
 --- kicker/proxy/appletproxy_main.cpp.orig	Thu May 30 09:59:50 2002
 +++ kicker/proxy/appletproxy_main.cpp
