@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.815 2002/12/17 19:41:17 wiz Exp $
+$NetBSD: CHANGES,v 1.816 2002/12/17 19:46:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3985,3 +3985,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated dctc to 0.83.9 [wiz 2002-12-17]
 	Updated dc_gui to 0.66 [wiz 2002-12-17]
 	Updated easytag to 0.25.0.2 [wiz 2002-12-17]
+	Updated fam to 2.6.9 [jmmv 2002-12-17]
