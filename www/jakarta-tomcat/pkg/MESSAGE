@@ -1,15 +1,15 @@
 ======================================================================
-$NetBSD: MESSAGE,v 1.5 2001/01/29 11:34:46 wiz Exp $
+$NetBSD: MESSAGE,v 1.6 2001/03/28 02:46:09 jwise Exp $
 
 For detailed instructions on how to run Tomcat, either as a
 standalone server or in conjunction with Apache (using the
 www/ap-jserv package), see:
 
-	${TOMCAT_HOME}/doc/uguide/tomcat_ug.html
+	${PREFIX}/tomcat/doc/uguide/tomcat_ug.html
 
 For more information on application development with Tomcat, see
 
-	${TOMCAT_HOME}/doc/appdev/index.html
+	${PREFIX}/tomcat/doc/appdev/index.html
 
 Note also that in order for Tomcat to start up, ${JAVA_HOME}
 must point to your JVM installation.
