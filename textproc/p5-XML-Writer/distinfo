@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/03/29 01:39:45 minskim Exp $
+$NetBSD: distinfo,v 1.3 2005/02/19 19:40:56 wiz Exp $
 
-SHA1 (XML-Writer-0.500.tar.gz) = 790fd9a411cb857525cce8f94cd9b2dcc5f0a4c1
-Size (XML-Writer-0.500.tar.gz) = 17251 bytes
+SHA1 (XML-Writer-0.530.tar.gz) = 15761e299e36e0eb57a62b8f5fc27a3006fea7d6
+Size (XML-Writer-0.530.tar.gz) = 19725 bytes
