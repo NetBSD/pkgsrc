@@ -1,0 +1,7 @@
+Netmaze is a multiplayer combat game (like the Atari Midi Maze game)
+
+You play in a virtual maze and the goal of the game is to hunt down your
+opponents.  The view is full animated 3D.  On fast machines, you can even
+run it with texture mapping for the walls and floor.
+
+There are also three robot players of varying ability.

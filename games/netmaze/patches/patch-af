@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/08/29 10:09:44 jdc Exp $
+
+--- robot.c.dist	Tue Mar 22 11:06:17 1994
++++ robot.c	Fri Jan  7 11:38:30 2000
+@@ -97,7 +97,7 @@
+  #ifdef RS6000 /* ibm rs/6000 */
+    sigemptyset(&vec.sa_mask);
+  #else
+-  vec.sa_mask = 0;
++   (void)sigprocmask (SIG_SETMASK, 0, NULL);
+  #endif
+   vec.sa_flags = 0;
+   if ( sigaction(SIGIO, &vec, (struct sigaction *) 0) == -1)

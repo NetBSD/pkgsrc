@@ -1,0 +1,65 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/08/29 10:09:43 jdc Exp $
+
+--- /dev/null	Fri Mar  3 10:11:40 2000
++++ netserv.man	Fri Mar  3 14:45:52 2000
+@@ -0,0 +1,60 @@
++.Th NETSERV 6 "08 January 2000" "X Version 11"
++.SH NAME
++
++netserv \- server for X windows multiplayer combat game
++
++.SH SYNOPSIS
++
++.B netserv
++[ -h|-help ]
++[ -exmenu external-menu-program ]
++[ -nowait ]
++
++.SH DESCRIPTION
++.I netserv
++is the server for the multiplayer combat game.
++.PP
++The program options are:
++.DT
++
++.ta \w'-h!-help\ \ \ 'u
++.It Option	Meaning
++.br
++-h!-help
++Display the help message
++.br
++-exmenu
++Control with an external menu the combat name
++.br
++-nowait
++server shouldn't wait for clients (for very slow lines)
++.El
++.PP
++The keys to control the server are:
++.DT
++.ta \w'1\ \ \ 'u
++.br
++1	Reinit/Load a maze (rndmaze: 1 <size> <maxlen>)
++.br
++2	Start game (with teams)
++.br
++3	Stop a running game
++.br
++4	List connections
++.br
++5	Shutdown connection
++.br
++6	Enable extended gamemode
++.br
++7	Change 'beat' divider (default: 1)
++.br
++9	Quit
++.El
++
++.SH SEE ALSO
++
++betterbot (6), dummy (6), follower (6), netmaze (6)
++
++.SH AUTHOR
++
++.An M.Hipp

@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/08/29 10:09:43 jdc Exp $
+
+--- config.h.dist	Fri Apr 15 21:51:44 1994
++++ config.h	Tue Feb 29 14:28:44 2000
+@@ -4,12 +4,16 @@
+  */
+ 
+ /* #define HPUX 1  */
+-#define SunOS4 1
++/* #define SunOS4 1 */
+ /* #define IRIX 1 */
+ /* #define Linux 1 */
+ /* #define RS6000 1 */  /* look at CREDITS */
+ /* #define NeXT 1   */  /* look at CREDITS */
+ 
++#if (sun && SVR4)
++#define Solaris2 1
++#endif
++
+ /* #define USE_SOUND 1 */
+ 
+ /* set the paths, according to your environment: */
+@@ -20,7 +24,7 @@
+  * Setup machinedepend configuration
+  */
+ 
+-#if (IRIX || SunOS4 || HPUX || Linux || RS6000 || NeXT)
++#if (IRIX || SunOS4 || HPUX || Linux || RS6000 || NeXT || BSD || Solaris2)
+ #  define ITIMERVAL
+ #else
+ #  undef ITIMERVAL  /* not on all machines available */
+@@ -39,7 +43,7 @@
+ #  define HAVE_FDSET
+ #  define USE_IPC
+ #else
+-#  if (IRIX)
++#  if (IRIX || BSD || Solaris2)
+ #    define HAVE_FDSET
+ #  else
+ #    undef HAVE_FDSET
