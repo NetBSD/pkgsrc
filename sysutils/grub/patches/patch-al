@@ -1,0 +1,18 @@
+$NetBSD: patch-al,v 1.1 2003/10/26 12:28:50 mrauch Exp $
+
+--- stage2/char_io.c.orig	2002-12-03 00:49:07.000000000 +0100
++++ stage2/char_io.c
+@@ -1257,6 +1257,13 @@ grub_memset (void *start, int c, int len
+   return errnum ? NULL : start;
+ }
+ 
++#undef memcpy
++void *
++memcpy (void *to, const void *from, int len)
++{
++return grub_memmove (to, from, len);
++} 
++
+ #ifndef STAGE1_5
+ char *
+ grub_strcpy (char *dest, const char *src)

@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2003/10/26 12:28:50 mrauch Exp $
+
+--- stage2/fsys_reiserfs.c.orig	2002-11-29 18:46:01.000000000 +0100
++++ stage2/fsys_reiserfs.c
+@@ -112,7 +112,7 @@ struct reiserfs_journal_header {
+   /* offset in the log of where to start replay after a crash */
+   __u32 j_first_unflushed_offset;
+   /* mount id to detect very old transactions */
+-  __u32 long j_mount_id;
++  __u32 j_mount_id;
+ };
+ 
+ /* magic string to find desc blocks in the journal */
