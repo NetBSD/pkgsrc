@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2004/03/08 19:40:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.82 2004/03/31 16:18:53 reed Exp $
 #
 
 DISTNAME=		gnumeric-1.0.13
@@ -14,6 +14,7 @@ DEPENDS+=		gnome1-dirs>=1.5:../../misc/gnome1-dirs
 # for Python support a shared libpython is required but not provided yet
 #BUILD_DEPENDS+=		python>=2.0:../../lang/python
 
+BUILD_USES_MSGFMT=	YES
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11BASE=		YES
