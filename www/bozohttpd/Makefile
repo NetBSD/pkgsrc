@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/04/23 11:23:58 zuntum Exp $
+# $NetBSD: Makefile,v 1.15 2002/04/23 11:25:12 zuntum Exp $
 #
 
 DISTNAME=	bozohttpd-5.09
@@ -20,7 +20,6 @@ USE_BUILDLINK_ONLY=	YES
 CPPFLAGS+=	-DINET6
 .endif
 
-CFLAGS+=	-DDEBUG=1
 pre-patch:
 	${MV} ${WRKSRC}/bozohttpd.8 ${WRKSRC}/bozohttpd.8.in
 
