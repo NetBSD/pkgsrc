@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/06/11 10:01:35 cjep Exp $
-# FreeBSD Id: ports/shells/osh/Makefile,v 1.3 2002/01/29 11:58:43 knu Exp
+# $NetBSD: Makefile,v 1.9 2004/12/27 21:13:01 wiz Exp $
+#
 
-DISTNAME=	osh-040421
+DISTNAME=	osh-041028
 CATEGORIES=	shells
 MASTER_SITES=	http://jneitzel.sdf1.org/osh/src/
 
