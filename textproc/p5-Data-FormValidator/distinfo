@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/13 04:31:05 erh Exp $
+$NetBSD: distinfo,v 1.2 2004/12/05 17:50:41 he Exp $
 
-SHA1 (Data-FormValidator-3.59.tar.gz) = 7385191aae3591d2217403bb0afd772957e85372
-Size (Data-FormValidator-3.59.tar.gz) = 61514 bytes
+SHA1 (Data-FormValidator-3.63.tar.gz) = 317c6c734ce6956033c127e053d50ccb024b1e30
+Size (Data-FormValidator-3.63.tar.gz) = 62970 bytes
