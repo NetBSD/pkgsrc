@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/06/23 13:48:33 agc Exp $
+
+--- src/conf_yacc.y	2003/06/17 14:53:45	1.1
++++ src/conf_yacc.y	2003/06/17 14:54:11
+@@ -142,7 +142,7 @@
+ 	    conferror("Error in expression");
+ 	    YYABORT;
+ 	  }
+-	  }
++	  } ;
+ 
+ other : TRIGHTS { $$ =$1 ;} | TUSER {$$ =$1 ;} 
+         | TGROUP {$$ =$1 ;} | TINODE {$$ =$1 ;}
