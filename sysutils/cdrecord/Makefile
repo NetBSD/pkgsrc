@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2002/08/25 21:50:55 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2002/09/26 11:32:02 jlam Exp $
 
 DISTNAME=	cdrtools-1.10
 PKGNAME=	cdrecord-1.10
+WRKSRC=		${WRKDIR}/${DISTNAME:C/a.*//}
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/
 
@@ -10,44 +11,50 @@ HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/pr
 COMMENT=	This program allows you to create CD's on a CD-Recorder
 
 CONFLICTS=	mkisofs-[0-9]*
-USE_GMAKE=	yes
-USE_BUILDLINK2=	yes
 
-WRKSRC=		${WRKDIR}/${DISTNAME:C/a.*//}
-TARGET_ARCH=	${MACHINE_ARCH}-netbsd-cc
-TARGET_DIR=	OBJ/${TARGET_ARCH}
-#override ARCH to avoid picking up a bad ${ARCH} during the build
+.include "../../mk/bsd.prefs.mk"
+
+USE_BUILDLINK2=		# defined
+USE_GMAKE=		# defined
+TBL?=			tbl
+
+.if ${LOCALBASE} != "/opt/schily"
+BUILDLINK_TRANSFORM=	r:-I/opt/schily
+BUILDLINK_TRANSFORM+=	r:-L/opt/schily
+.endif
+
+# avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=      ARCH=""
-TBL?=		tbl
-
-post-extract:
-	@cd ${WRKSRC}; \
-	    ${MV} mkisofs/mkisofs.8 mkisofs/mkisofs.tbl
+MAKE_ENV+=      MAKEPROG="gmake"
 
 do-configure:
-	${MKDIR} ${WRKSRC}/include/sys
-	${LN} -fs /usr/include/soundcard.h ${WRKSRC}/include/sys
-	cd ${WRKSRC}/RULES; \
-	${TEST} -f netbsd-cc.rul || ${MV} i386-netbsd-cc.rul netbsd-cc.rul; \
-	${TEST} -f netbsd-gcc.rul || ${MV} i386-netbsd-gcc.rul netbsd-gcc.rul; \
-	${LN} -sf netbsd-gcc.rul ${MACHINE}-netbsd-gcc.rul; \
-	${LN} -sf netbsd-cc.rul ${TARGET_ARCH}.rul
+	cd ${WRKSRC}/RULES;						\
+	for suffix in netbsd-cc.rul netbsd-gcc.rul; do			\
+		if [ ! -f ${MACHINE}-$$suffix ]; then			\
+			${LN} -sf i386-$$suffix ${MACHINE}-$$suffix;	\
+		fi;							\
+	done
 
 post-build:
-	${TBL} ${WRKSRC}/mkisofs/mkisofs.tbl > ${WRKSRC}/mkisofs/mkisofs.8
+	cd ${WRKSRC};							\
+	for file in cdda2wav/cdda2wav.1 mkisofs/mkisofs.8; do		\
+		${TBL} $${file} > $${file}.tmp;				\
+		${MV} -f $${file}.tmp $${file};				\
+	done
 
 do-install:
-	cd ${WRKSRC}/cdda2wav; \
-	    ${INSTALL_PROGRAM} ${TARGET_DIR}/cdda2wav ${PREFIX}/bin; \
-	    ${INSTALL_MAN} cdda2wav.1 ${PREFIX}/man/man1
-	cd ${WRKSRC}/cdrecord; \
-	    ${INSTALL_PROGRAM} ${TARGET_DIR}/cdrecord ${PREFIX}/bin; \
-	    ${INSTALL_MAN} cdrecord.1 ${PREFIX}/man/man1
-	cd ${WRKSRC}/mkisofs; \
-	    ${INSTALL_PROGRAM} ${TARGET_DIR}/mkisofs ${PREFIX}/bin; \
-	    ${INSTALL_MAN} mkisofs.8 ${PREFIX}/man/man8
-	cd ${WRKSRC}/misc; \
-	    ${INSTALL_PROGRAM} ${TARGET_DIR}/readcd ${PREFIX}/bin; \
-	    ${INSTALL_MAN} readcd.1 ${PREFIX}/man/man1
+	cd ${WRKSRC}/cdda2wav;						\
+		${INSTALL_PROGRAM} OBJ/*/cdda2wav ${PREFIX}/bin;	\
+		${INSTALL_MAN} cdda2wav.1 ${PREFIX}/man/man1
+	cd ${WRKSRC}/cdrecord;						\
+		${INSTALL_PROGRAM} OBJ/*/cdrecord ${PREFIX}/bin;	\
+		${INSTALL_MAN} cdrecord.1 ${PREFIX}/man/man1
+	cd ${WRKSRC}/mkisofs;						\
+		${INSTALL_PROGRAM} OBJ/*/mkisofs ${PREFIX}/bin;		\
+		${INSTALL_MAN} mkisofs.8 ${PREFIX}/man/man8
+	cd ${WRKSRC}/misc;						\
+		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
+		${INSTALL_MAN} readcd.1 ${PREFIX}/man/man1
 
+.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
