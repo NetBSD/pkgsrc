@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/03/28 23:55:42 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2005/04/05 10:20:05 wiz Exp $
 
 DISTNAME=	libgii-0.9.0.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -30,6 +30,8 @@ CONF_FILES=		${EGDIR}/libgii.conf ${PKG_SYSCONFDIR}/libgii.conf
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/filter
 CONF_FILES+=		${EGDIR}/filter/keytrans ${PKG_SYSCONFDIR}/filter/keytrans
 CONF_FILES+=		${EGDIR}/filter/mouse ${PKG_SYSCONFDIR}/filter/mouse
+
+PTHREAD_OPTS+=		native
 
 .include "../../mk/pthread.buildlink3.mk"
 
