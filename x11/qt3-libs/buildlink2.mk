@@ -15,6 +15,9 @@ BUILDLINK_FILES.qt3-libs+=	qt3/lib/libqt-mt.*
 
 QTDIR=		${BUILDLINK_PREFIX.qt3-libs}/qt3
 
+BUILDLINK_CPPFLAGS.qt3-libs=	-I${QTDIR}/include
+BUILDLINK_LDFLAGS.qt3-libs=	-L${QTDIR}/lib -Wl,-R${QTDIR}/lib
+
 PTHREAD_OPTS+=	require
 
 .include "../../devel/zlib/buildlink2.mk"
