@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 1999/02/11 19:17:31 tv Exp $
+@comment $NetBSD: PLIST,v 1.20 1999/02/25 18:43:56 sommerfe Exp $
 bin/emacs
 bin/emacs-20.3
 bin/emacs-etags
@@ -1360,7 +1360,6 @@ share/emacs/20.3/lisp/emacs-lisp/sregex.elc
 share/emacs/20.3/lisp/emacs-lisp/tq.elc
 share/emacs/20.3/lisp/emacs-lisp/trace.elc
 share/emacs/20.3/lisp/COPYING
-share/emacs/20.3/lisp/site-load.el
 share/emacs/20.3/site-lisp/subdirs.el
 share/emacs/site-lisp/subdirs.el
 @dirrm share/emacs/20.3/lisp/calendar
