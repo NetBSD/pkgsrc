@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/28 10:36:07 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/29 19:03:51 jlam Exp $
 #
 
 DISTNAME=	csacek-2.1.4
@@ -12,6 +12,8 @@ MAINTAINER=	jdolecek@netbsd.org
 HOMEPAGE=	http://www.csacek.cz/
 
 DEPENDS+=	apache*-1.3*:../../www/apache
+# For "apxs":
+BUILD_DEPENDS=	${PERL5}:../../lang/perl5
 
 HAS_CONFIGURE=	yes
 
