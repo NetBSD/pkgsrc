@@ -1,0 +1,14 @@
+$NetBSD: patch-am,v 1.1.1.1 2004/04/11 18:11:06 jmmv Exp $
+
+--- beep/textbox.c.orig	Wed Dec 24 14:03:17 2003
++++ beep/textbox.c
+@@ -143,8 +143,8 @@ static gboolean textbox_should_scroll(Te
+ void textbox_set_text(TextBox * tb, gchar * text)
+ {
+ 
+-    lock_widget(tb);
+     gchar *utf8text;
++    lock_widget(tb);
+     if (tb->tb_text) {
+ 	if (!strcmp(text, tb->tb_text)) {
+ 	    unlock_widget(tb);

@@ -1,0 +1,17 @@
+$NetBSD: patch-al,v 1.1.1.1 2004/04/11 18:11:14 jmmv Exp $
+
+--- beep/softvolume.c.orig	Wed Dec 24 14:03:17 2003
++++ beep/softvolume.c
+@@ -27,11 +27,11 @@ gint soft_volume_right;
+ void soft_volume_load(char *section, SoftVolumeConfig * c)
+ {
+     ConfigFile *cfgfile;
++    char *sec = (section == NULL ? "xmms" : section);
+ 
+     if (c == NULL)
+ 	return;
+ 
+-    char *sec = (section == NULL ? "xmms" : section);
+ 
+     c->enabled = FALSE;
+     c->volume_left = 0;

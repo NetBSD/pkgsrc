@@ -1,0 +1,61 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/04/11 18:11:06 jmmv Exp $
+#
+
+DISTNAME=	bmp-0.9.6
+CATEGORIES=	audio
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beepmp/}
+
+MAINTAINER=	jmmv@NetBSD.org
+HOMEPAGE=	http://beepmp.sourceforge.net/
+COMMENT=	Beep Media Player (fork of XMMS to work with GTK+ 2.x)
+
+DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
+
+DISTINFO_FILE=		${.CURDIR}/../../audio/bmp/distinfo
+FILESDIR=		${.CURDIR}/../../audio/xmms/files
+PATCHDIR=		${.CURDIR}/../../audio/bmp/patches
+
+GNU_CONFIGURE=		yes
+USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_X11=		yes
+
+CONFIGURE_ARGS+=	--disable-alsa
+CONFIGURE_ARGS+=	--disable-esd
+CONFIGURE_ARGS+=	--disable-opengl
+CONFIGURE_ARGS+=	--disable-oss
+CONFIGURE_ARGS+=	--disable-vorbis
+
+PKGCONFIG_OVERRIDE+=	beep.pc
+
+.include "../../mk/bsd.prefs.mk"
+
+PTHREAD_OPTS+=		require
+
+.if ${OPSYS} == "NetBSD"
+RAWPART!=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
+CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}           \
+			--with-cdda-device=/dev/rcd0${RAWPART}  \
+			--with-cdda-dir=/cdrom/
+
+.  if ${MACHINE_ARCH} == "i386"
+post-patch:
+.    if ${OBJECT_FMT} == "a.out"
+	${CP} ${FILESDIR}/decode_i586_.s ${WRKSRC}/Input/mpg123/decode_i586.s
+.    endif
+	cd ${WRKSRC}/Input/mpg123 && \
+	    ${MV} decode_i586.s decode_i586.s.orig && \
+	    ${SED} -e 's@^/@#/@g' <decode_i586.s.orig >decode_i586.s
+.  endif
+.endif
+
+.include "../../audio/libmikmod/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"

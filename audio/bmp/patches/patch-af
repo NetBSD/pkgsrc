@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/04/11 18:11:06 jmmv Exp $
+
+--- beep/about.c.orig	Wed Dec 24 17:30:09 2003
++++ beep/about.c
+@@ -249,7 +249,7 @@ void show_about_window(void)
+     if (!beep_logo_pmap)
+ 	beep_logo_pmap =
+ 	    gdk_pixmap_create_from_xpm_d(about_window->window,
+-					 &beep_logo_mask, NULL, beep_logo);
++					 &beep_logo_mask, NULL, beep_logo_xpm);
+ 
+     about_credits_logo_box = gtk_hbox_new(TRUE, 0);
+     gtk_box_pack_start(GTK_BOX(about_vbox), about_credits_logo_box,

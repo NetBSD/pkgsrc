@@ -1,0 +1,73 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/04/11 18:11:06 jmmv Exp $
+
+--- Input/vorbis/fileinfo.c.orig	Wed Dec 24 13:57:29 2003
++++ Input/vorbis/fileinfo.c
+@@ -494,6 +494,11 @@ void vorbis_file_info_box(char *fn)
+     if (!window) {
+ 	GtkWidget *hbox, *label, *filename_hbox, *vbox, *left_vbox;
+ 	GtkWidget *table, *bbox, *cancel_button;
++	GtkWidget *pixmapwid, *test_table, *boxx;
++	GtkImage *img;
++	GdkPixbuf *pixbuf;
++	PangoAttrList *attrs;
++	PangoAttribute *attr;
+ 
+ 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+ 	gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, FALSE);
+@@ -508,16 +513,13 @@ void vorbis_file_info_box(char *fn)
+ 	filename_hbox = gtk_hbox_new(FALSE, 5);
+ 	gtk_box_pack_start(GTK_BOX(vbox), filename_hbox, FALSE, TRUE, 0);
+ 
+-	GtkWidget *pixmapwid;
+-	GdkPixbuf *pixbuf = gdk_pixbuf_new_from_xpm_data((const char **)
++	pixbuf = gdk_pixbuf_new_from_xpm_data((const char **)
+ 							 gnome_mime_audio_ogg_xpm);
+ 	pixmapwid = gtk_image_new_from_pixbuf(pixbuf);
+ 	gtk_misc_set_alignment(GTK_MISC(pixmapwid), 0, 0);
+ 	gtk_box_pack_start(GTK_BOX(filename_hbox), pixmapwid, FALSE, FALSE,
+ 			   0);
+ 
+-	PangoAttrList *attrs;
+-	PangoAttribute *attr;
+ 
+ 	attrs = pango_attr_list_new();
+ 
+@@ -722,7 +724,6 @@ void vorbis_file_info_box(char *fn)
+ 			 GTK_FILL | GTK_EXPAND | GTK_SHRINK, 0, 5);
+ #endif
+ 
+-	GtkWidget *boxx;
+ 	boxx = gtk_hbutton_box_new();
+ 	gtk_hbutton_box_set_layout_default(GTK_BUTTONBOX_SPREAD);
+ 
+@@ -739,7 +740,7 @@ void vorbis_file_info_box(char *fn)
+ 	gtk_table_attach(table, boxx, 0, 5, 6, 7, GTK_FILL, 0, 0, 8);
+ 
+ 	rg_show_button = gtk_toggle_button_new();
+-	GtkImage *img = gtk_image_new_from_stock(GTK_STOCK_GO_FORWARD,
++	img = gtk_image_new_from_stock(GTK_STOCK_GO_FORWARD,
+ 						 GTK_ICON_SIZE_MENU);
+ 	gtk_container_add(rg_show_button, img);
+ 	g_signal_connect(G_OBJECT(rg_show_button), "toggled",
+@@ -832,7 +833,7 @@ void vorbis_file_info_box(char *fn)
+ 	gtk_box_set_spacing(GTK_BOX(info_box), 0);
+ 
+ 	// FIXME: Obvious...
+-	GtkWidget *test_table = gtk_table_new(2, 10, FALSE);
++	test_table = gtk_table_new(2, 10, FALSE);
+ 	gtk_container_set_border_width(GTK_CONTAINER(test_table), 0);
+ 	gtk_container_add(GTK_CONTAINER(info_box), test_table);
+ 
+@@ -1073,10 +1074,12 @@ void vorbis_file_info_box(char *fn)
+     gtk_window_set_title(GTK_WINDOW(window), tmp);
+ //      rg_show_cb(rg_show_button, NULL);
+ 
++    {
+     struct stat mstat;
+     stat(fn, &mstat);
+     gtk_widget_set_sensitive(tag_frame,
+ 			     ((mstat.st_mode & S_IWRITE) == S_IWRITE));
++    }
+ 
+     g_signal_connect_swapped(title_entry, "changed", change_buttons,
+ 			     save_button);

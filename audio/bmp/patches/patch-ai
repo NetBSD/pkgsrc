@@ -1,0 +1,21 @@
+$NetBSD: patch-ai,v 1.1.1.1 2004/04/11 18:11:14 jmmv Exp $
+
+--- beep/playlist_list.c.orig	Wed Dec 24 14:03:17 2003
++++ beep/playlist_list.c
+@@ -449,6 +449,7 @@ void playlist_list_draw(Widget * w)
+ 	    guint t_width;
+ 	    guint len_tail;
+ 	    guint len;
++	    gchar **frags;
+ 
+ 	    tail = g_strdup_printf("%s%s", qstr, length);
+ 
+@@ -507,7 +508,7 @@ void playlist_list_draw(Widget * w)
+ 
+ 
+ 
+-	    gchar **frags = g_strsplit(tail, ":", 0);
++	    frags = g_strsplit(tail, ":", 0);
+ 
+ 	    layout =
+ 		gtk_widget_create_pango_layout(GTK_WIDGET(playlistwin),
