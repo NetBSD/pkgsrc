@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
+share/nut/cgi/multimon.cgi
+share/nut/cgi/upsimage.cgi
+share/nut/cgi/upsset.cgi
+share/nut/cgi/upsstats.cgi
+@dirrm share/nut/cgi
+@dirrm share/nut
