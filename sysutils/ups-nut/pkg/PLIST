@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/28 16:06:13 martin Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/03/11 13:46:12 martin Exp $
 etc/rc.d/upsd
 etc/nut/hosts.conf.sample
 etc/nut/multimon.conf.sample
@@ -37,8 +37,10 @@ share/doc/nut/big-servers.txt
 share/doc/nut/commands.txt
 share/doc/nut/configure.txt
 share/doc/nut/data-room.txt
+share/doc/nut/design.txt
 share/doc/nut/dummyups.txt
 share/doc/nut/generic-ups.txt
+share/doc/nut/mge-ellipse.txt
 share/doc/nut/new-modules.txt
 share/doc/nut/pager.txt
 share/doc/nut/powercom.txt
