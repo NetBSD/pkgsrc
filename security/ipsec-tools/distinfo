@@ -1,12 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/12/12 23:51:10 kleink Exp $
+$NetBSD: distinfo,v 1.5 2005/02/18 09:53:40 manu Exp $
 
-SHA1 (ipsec-tools-0.5.pre20041109.tar.bz2) = 2e91a2b1adea46facdbdfe70dfcc4aca3cc01913
-Size (ipsec-tools-0.5.pre20041109.tar.bz2) = 618629 bytes
-SHA1 (patch-aa) = fadc2685847af19288782a0fd911dc5accee0fc9
-SHA1 (patch-ab) = dd5293512228a02ce8f37f8d1a10fb865cc79aa5
-SHA1 (patch-ac) = 28cbaa97ab1853bb03202c46718c0c72bc4b8fb6
-SHA1 (patch-ad) = 091a41782511f40c2ee1bd64502dc2073675ed84
-SHA1 (patch-ae) = 4059050714af8acbf7bc8fc242cc09a6890b5687
-SHA1 (patch-af) = bffe225378e211baf1e0b0a7afb85dae6c41e89c
-SHA1 (patch-ag) = 77bcd3a9a90eca65a9fe270f4cfb6db4f6d7eb97
-SHA1 (patch-ah) = 97e84d26fe9fa895294722172d457e37e6d9ad53
+SHA1 (ipsec-tools-0.5.tar.bz2) = d52e75156b89c4a589ef014aaec07d0be2248710
+Size (ipsec-tools-0.5.tar.bz2) = 646397 bytes
