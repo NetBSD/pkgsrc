@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.97 2002/12/18 06:18:14 schmonz Exp $
+# $NetBSD: bsd.prefs.mk,v 1.98 2003/01/05 22:48:12 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -12,14 +12,6 @@
 # Let mk.conf know that this is pkgsrc.
 BSD_PKG_MK=1
 __PREFIX_SET__:=${PREFIX}
-
-# Define a symbol BSD_PREFS_MK that may be checked by Makefile fragments to
-# test whether they are being included from within bsd.prefs.mk or from
-# without.
-#
-.ifndef BSD_PREFS_MK
-BSD_PREFS_MK=1
-.endif
 
 .if exists(/usr/bin/uname)
 UNAME=/usr/bin/uname
@@ -323,9 +315,5 @@ WRKDIR_BASENAME?=	work
 .endif
 
 WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
-
-.ifdef BSD_PREFS_MK
-.undef BSD_PREFS_MK
-.endif
 
 .endif	# BSD_PKG_MK
