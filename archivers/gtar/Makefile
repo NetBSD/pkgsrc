@@ -1,0 +1,29 @@
+# New ports collection makefile for:	gtar
+# Version required:     
+# Date created:		1 March 1998
+# Whom:			tv@netbsd.org
+#
+# $NetBSD: Makefile,v 1.1.1.1 1998/03/04 14:57:13 tv Exp $
+#
+
+DISTNAME=       tar-1.12
+PKGNAME=	gtar-1.12
+CATEGORIES=	devel
+MASTER_SITES=   ${MASTER_SITE_GNU}
+
+MAINTAINER=	packages@netbsd.org
+
+OPSYS!= uname -s
+.if (${OPSYS} == "NetBSD")
+BUILD_DEPENDS=	${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+.endif
+
+GNU_CONFIGURE=yes
+CONFIGURE_ARGS= --program-prefix=g
+
+MAN1=	gtar.1
+
+post-install:
+	${INSTALL_DATA} files/gtar.1 ${PREFIX}/man/man1/
+
+.include <bsd.port.mk>
