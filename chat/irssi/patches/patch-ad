@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2001/11/27 16:10:10 wiz Exp $
+
+--- src/fe-text/Makefile.in.orig	Sun Mar 18 14:34:53 2001
++++ src/fe-text/Makefile.in
+@@ -121,7 +121,6 @@
+ INCLUDES =  	$(GLIB_CFLAGS) 	-I$(top_srcdir)/src 	-I$(top_srcdir)/src/core/ 	-I$(top_srcdir)/src/irc/core/ 	-I$(top_srcdir)/src/fe-common/core/ 	-I$(top_srcdir)/src/fe-common/irc/ 	$(CURSES_INCLUDEDIR) 	-DLOCALEDIR=\""$(datadir)/locale"\"
+ 
+ 
+-irssi_DEPENDENCIES = @COMMON_LIBS@
+ 
+ irssi_LDADD =  	@COMMON_LIBS@ 	@PERL_LINK_LIBS@ 	@PERL_FE_LINK_LIBS@ 	$(PROG_LIBS)         $(CURSES_LIBS)
+ 
