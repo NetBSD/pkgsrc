@@ -1,0 +1,26 @@
+$NetBSD: patch-aj,v 1.1.1.1 2002/09/07 20:22:53 jschauma Exp $
+
+--- /dev/null	Sat Sep  7 13:47:40 2002
++++ net_apm.cc	Sat Sep  7 14:08:07 2002
+@@ -0,0 +1,21 @@
++#include "net_apm.h"
++
++int apm_desc = -1;
++
++void apm_init() {
++       if ( (apm_desc = open( "/dev/apm", O_RDONLY ) ) == -1 ) {
++               printf("Error: cannot open APM device: /dev/apm: %s\n",
++				strerror( errno ) );
++               exit( 1 );
++       }
++}
++
++int apm_read( apm_info* a_info ) {
++       if( apm_desc < 0 )
++               return -1;
++
++       if ( ioctl( apm_desc,  APM_IOC_GETPOWER, a_info ) == -1 )
++               return -1;
++       else
++               return 0;
++}
