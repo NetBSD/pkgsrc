@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2001/09/17 05:40:06 zuntum Exp $
+
+--- launch/makefile.in.orig	Thu Aug 30 15:46:12 2001
++++ launch/makefile.in
+@@ -28,7 +28,7 @@
+            STYLE=-DOLD_STYLE
+ 
+            CXXOPT=$(DEFS) $(CFLAGS)
+-           LOCAL_LIBRARIES=$(TLIB) $(XLIBS) -L../image $(PNGLIB) $(ZLIB) $(LIBS)
++           LOCAL_LIBRARIES=$(TLIB) $(XLIBS) -L../image $(PNGLIB) $(ZLIB) $(LIBS) $(LDFLAGS)
+ 
+  PROGRAM =xnlaunch $(IMAGEOBJS) $(JDEP)
+ 
