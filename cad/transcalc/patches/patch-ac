@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/03/23 12:25:03 dmcmahill Exp $
+
+--- src/setup_body.c.orig	Mon Jul 15 07:38:37 2002
++++ src/setup_body.c
+@@ -68,6 +68,11 @@ transtype_int ()
+     if ((strcmp(text,"Rectangular Waveguide")) == 0) return RECTWAVEGUIDE;
+     if ((strcmp(text,"Coaxial Line")) == 0) return COAX;
+     if ((strcmp(text,"Coupled Microstrip")) == 0) return C_MICROSTRIP;
++    fprintf(stderr, "Error:  transtype_int().  Unknown line type \"%s\"\n", text);
++    exit(1);
++  } else {
++    fprintf(stderr, "Error:  transtype_int().  gtk_entry_get_text returned NULL pointer\n");
++    exit(1);
+   }
+ }
+ 
