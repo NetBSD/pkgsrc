@@ -1,8 +1,20 @@
-$NetBSD: patch-ah,v 1.2 2001/06/28 20:55:54 jlam Exp $
-
---- configure.in.orig	Thu Dec 14 05:49:06 2000
-+++ configure.in
-@@ -307,7 +307,10 @@
+--- configure.in.orig	Thu Dec 14 11:49:06 2000
++++ configure.in	Tue Aug 28 17:09:57 2001
+@@ -213,7 +213,12 @@
+ 		getlogin getpass fcntl readdir sysinfo ioctl chdir tempnam \
+ 		getsockopt setsockopt \
+ 		gettimeofday mktime timegm tzset)
+-AC_CHECK_FUNC(unlink, , AC_CHECK_FUNC(remove, AC_DEFINE(unlink, remove)))
++AC_CHECK_FUNC(unlink)
++if test "$ac_cv_func_unlink" != yes; then
++  AC_CHECK_FUNC(remove)
++fi
++
++dnl AC_CHECK_FUNC(unlink, , AC_CHECK_FUNC(remove, AC_DEFINE(unlink, remove)))
+ 
+ dnl Checks for configuration arguments
+ AC_MSG_CHECKING(whether to support direct WAIS access.)
+@@ -307,7 +312,10 @@
      AC_MSG_RESULT(yes)
      AC_DEFINE(HT_POSIX_REGEX)
      if test "x$withval" = "xyes"; then
@@ -14,7 +26,7 @@ $NetBSD: patch-ah,v 1.2 2001/06/28 20:55:54 jlam Exp $
      else
        AC_ADDLIB($withval)
        AC_TRY_LINK([],
-@@ -532,31 +535,9 @@
+@@ -532,31 +540,9 @@
  AC_SUBST(LWWWMD5)
  AC_SUBST(LIBWWWMD5)
  
@@ -48,7 +60,7 @@ $NetBSD: patch-ah,v 1.2 2001/06/28 20:55:54 jlam Exp $
  LWWWSSL=""
  LIBWWWSSL=""
  WWWSSLEX=""
-@@ -568,14 +549,39 @@
+@@ -568,14 +554,39 @@
      ;;
    *)
      if test "x$withval" = "xyes"; then
@@ -91,7 +103,7 @@ $NetBSD: patch-ah,v 1.2 2001/06/28 20:55:54 jlam Exp $
      AC_MSG_RESULT(yes)
      WWWSSL="libwwwssl.la"
      LWWWSSL="-lwwwssl" 
-@@ -586,6 +592,7 @@
+@@ -586,6 +597,7 @@
  [ AC_MSG_RESULT(no) ])
  AC_SUBST(WWWSSL)
  AC_SUBST(SSLINC)
@@ -99,3 +111,11 @@ $NetBSD: patch-ah,v 1.2 2001/06/28 20:55:54 jlam Exp $
  AC_SUBST(LWWWSSL)
  AC_SUBST(LIBWWWSSL)
  AC_SUBST(WWWSSLEX)
+@@ -1006,7 +1018,6 @@
+ Library/Makefile Library/User/Makefile Library/User/Patch/Makefile
+ Library/User/Architecture/Makefile Library/User/Using/Makefile Library/User/Guide/Makefile
+ Library/User/Style/Makefile Library/User/Platform/Makefile
+-Library/Test/Makefile Library/Test/User/Makefile Library/Test/src/Makefile
+ Library/src/Makefile Library/src/windows/Makefile Library/src/vms/Makefile 
+ Library/src/SSL/Makefile Library/src/SSL/windows/Makefile
+ Library/Examples/Makefile
