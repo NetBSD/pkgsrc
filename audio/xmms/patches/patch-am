@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2000/08/14 14:20:59 wiz Exp $
+
+--- Output/OSS/Makefile.in.orig	Mon Jan 31 19:44:33 2000
++++ Output/OSS/Makefile.in	Mon Aug 14 16:01:15 2000
+@@ -136,7 +136,7 @@
+ libdir = $(plugindir)/$(OUTPUT_PLUGIN_DIR)
+ 
+ libOSS_la_LDFLAGS = $(ossldflags)
+-libOSS_la_LIBADD = @GTK_LIBS@ @PTHREAD_LIBS@
++libOSS_la_LIBADD = @GTK_LIBS@ @PTHREAD_LIBS@ -lossaudio
+ libOSS_la_SOURCES = $(osssources)
+ INCLUDES = @GTK_CFLAGS@ @OSS_CFLAGS@
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
