@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.6 2004/04/26 04:42:12 jlam Exp $
+$NetBSD: patch-ah,v 1.7 2004/11/07 16:20:11 wiz Exp $
 
---- perl.c.orig	Tue Apr 20 11:34:24 2004
-+++ perl.c	Sun Apr 25 03:06:15 2004
-@@ -4245,12 +4245,33 @@
+--- perl.c.orig	2004-06-23 12:35:46.000000000 +0200
++++ perl.c
+@@ -4280,12 +4280,33 @@ S_init_perllib(pTHX)
      }
  
  /* Use the ~-expanded versions of APPLLIB (undocumented),
@@ -37,12 +37,10 @@ $NetBSD: patch-ah,v 1.6 2004/04/26 04:42:12 jlam Exp $
  #ifdef ARCHLIB_EXP
      incpush(ARCHLIB_EXP, FALSE, FALSE, TRUE);
  #endif
-@@ -4282,27 +4303,6 @@
-     incpush(PRIVLIB_EXP, TRUE, FALSE, TRUE);
- #else
+@@ -4319,27 +4340,6 @@ S_init_perllib(pTHX)
      incpush(PRIVLIB_EXP, FALSE, FALSE, TRUE);
--#endif
--
+ #endif
+ 
 -#ifdef SITEARCH_EXP
 -    /* sitearch is always relative to sitelib on Windows for
 -     * DLL-based path intuition to work correctly */
@@ -62,6 +60,8 @@ $NetBSD: patch-ah,v 1.6 2004/04/26 04:42:12 jlam Exp $
 -
 -#ifdef SITELIB_STEM /* Search for version-specific dirs below here */
 -    incpush(SITELIB_STEM, FALSE, TRUE, TRUE);
- #endif
- 
+-#endif
+-
  #ifdef PERL_VENDORARCH_EXP
+     /* vendorarch is always relative to vendorlib on Windows for
+      * DLL-based path intuition to work correctly */
