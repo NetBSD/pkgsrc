@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# Copyright (c) 2003 Hubert Feyrer <hubertf@netbsd.org>
+#
+
+tmp=/tmp/dmesg2gif.$$
+
+if [ -t 0 -o -t 1 ]
+then
+	echo 2>&1 "Usage: cat /var/run/dmesg.boot | $0 | xv -"
+	exit 1
+fi
+
+if ! pkg_info -qe graphviz >/dev/null
+then
+	echo 2>&1 "Please install pkgsrc/graphics/graphviz for dot!"
+	exit 1
+fi
+
+(
+	echo "digraph dmesg { "
+	cat \
+	| grep -v ^# \
+	| perl -ne 'if(/^(\S*) at (\S*) *.*/){
+			$from=$1; 
+			$to=$2; 
+			$to=~s/://; 
+			print "\t$from -> $to\n"; 
+		}'
+	echo "}"
+) > $tmp.dot
+dot -Tgif $tmp.dot

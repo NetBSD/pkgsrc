@@ -1,0 +1,4 @@
+Read dmesg(8) output (e.g. from /var/run/dmesg.boot), and output the
+device tree as GIF image to stdout.
+
+Usage: cat /var/run/dmesg.boot | /usr/pkg/bin/dmesg2gif | xv -
