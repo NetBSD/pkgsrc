@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2001/08/16 22:45:37 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2001/09/16 22:00:12 zuntum Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -13,6 +13,7 @@ SUBDIR+=	cue
 SUBDIR+=	cyrus-imapd
 SUBDIR+=	deliver
 SUBDIR+=	distribute
+SUBDIR+=	dot-forward
 SUBDIR+=	drac
 SUBDIR+=	elm
 SUBDIR+=	elm-me
