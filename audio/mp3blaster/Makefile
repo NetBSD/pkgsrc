@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2002/08/31 13:05:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/11/22 17:02:03 jschauma Exp $
 
-DISTNAME=	mp3blaster-3.1.1
+DISTNAME=	mp3blaster-3.1.3
 CATEGORIES=	audio
 MASTER_SITES=	ftp://mud.stack.nl/pub/mp3blaster/ \
 		http://mp3blaster.linuxave.net/src/
