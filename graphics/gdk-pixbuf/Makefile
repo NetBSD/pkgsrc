@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/08/25 18:39:03 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2002/09/02 13:10:08 drochner Exp $
 #
 
 PKGNAME=	${DISTNAME}
@@ -8,8 +8,9 @@ USE_BUILDLINK2=	# defined
 
 .include "Makefile.common"
 
+# XXX hopefully there is no x.gnome-config.x in PATH
 post-patch:
-	${SED} -e 's/BUILD_CANVAS=yes/BUILD_CANVAS=no/g' \
+	${SED} -e 's/gnome-config/x.gnome-config.x/g' \
 	  ${WRKSRC}/configure.in >${WRKSRC}/.tmp && \
 	${MV} ${WRKSRC}/.tmp ${WRKSRC}/configure.in
 
