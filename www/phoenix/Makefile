@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/05/23 03:35:49 taya Exp $
+# $NetBSD: Makefile,v 1.14 2003/05/30 03:38:44 grant Exp $
 
 MOZILLA=	phoenix
 MOZILLA_BIN=	MozillaFirebird-bin
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 DISTNAME=       mozilla-phoenix-${MOZ_VER}
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
-HOMEPAGE=	http://www.mozilla.org/projects/phoenix/
+HOMEPAGE=	http://www.mozilla.org/projects/firebird/
 COMMENT=	Lightweight gecko-based web browser
 
 CONFIGURE_ENV+=	MOZ_PHOENIX=1
