@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/10/01 11:10:29 drochner Exp $
+Patch pulled up to KDE tree. (jdolecek 1999/11/15)
+
+$NetBSD: patch-ac,v 1.2 1999/11/15 23:01:52 jdolecek Exp $
 --- kscd/plat_freebsd.c.orig	Sun Sep 26 02:18:22 1999
 +++ kscd/plat_freebsd.c	Sun Sep 26 02:27:36 1999
 @@ -41,15 +41,6 @@
