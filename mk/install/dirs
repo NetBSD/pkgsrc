@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: dirs,v 1.4 2005/01/31 20:32:58 jlam Exp $
+# $NetBSD: dirs,v 1.5 2005/01/31 21:41:06 jlam Exp $
 #
 # +DIRS - reference-counted directory management script
 #
@@ -203,7 +203,7 @@ CHECK-REMOVE)
 
 *)
 	${ECHO} "Usage: ./+DIRS ADD|REMOVE [metadatadir]"
-	${ECHO} "       ./+DIRS CHECK-ADD|CHECK-REMOVE"
+	${ECHO} "       ./+DIRS CHECK-ADD|CHECK-REMOVE [metadatadir]"
 	;;
 esac
 exit $exitcode
