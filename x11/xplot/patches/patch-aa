@@ -1,0 +1,12 @@
+*** Makefile.in.orig	Mon Aug 18 15:12:14 1997
+--- Makefile.in	Wed Dec 10 20:28:35 1997
+***************
+*** 67,72 ****
+--- 67,73 ----
+  
+  install: all
+  	$(INSTALL_PROGRAM) xplot $(bindir)/xplot
++ 	$(INSTALL_PROGRAM) tcpdump2xplot.pl $(bindir)/tcpdump2xplot.pl
+  
+  clean:
+  	rm -f ${PROG} ${PROG}.old *.o version_string.c
