@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/11/02 02:59:28 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2002/06/16 21:46:17 wiz Exp $
 #
 
 .include "../mysql-client/Makefile.common"
@@ -7,7 +7,7 @@ PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
 COMMENT=		MySQL, a free SQL database (server)
 
-DEPENDS+=		${DISTNAME:S/-/-client-/}:../../databases/mysql-client
+DEPENDS+=		${DISTNAME:S/-/-client>=/}:../../databases/mysql-client
 
 USE_BUILDLINK_ONLY=	YES
 
