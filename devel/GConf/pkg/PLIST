@@ -1,0 +1,65 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/30 06:19:08 rh Exp $
+bin/gconf-config
+bin/gconf-config-1
+bin/gconfd-1
+bin/gconftool
+bin/gconftool-1
+etc/gconf/1/path.example
+etc/gconf/gconf.xml.defaults/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/standard/%gconf.xml
+etc/gconf/schemas/desktop.schemas
+include/gconf/1/gconf/gconf-backend.h
+include/gconf/1/gconf/gconf-changeset.h
+include/gconf/1/gconf/gconf-client.h
+include/gconf/1/gconf/gconf-engine.h
+include/gconf/1/gconf/gconf-error.h
+include/gconf/1/gconf/gconf-listeners.h
+include/gconf/1/gconf/gconf-schema.h
+include/gconf/1/gconf/gconf-value.h
+include/gconf/1/gconf/gconf.h
+lib/GConf/1/libgconfbackend-xml.a
+lib/GConf/1/libgconfbackend-xml.la
+lib/GConf/1/libgconfbackend-xml.so.0.0
+lib/libgconf-1.a
+lib/libgconf-1.la
+lib/libgconf-1.so.0.1
+lib/libgconf-gtk-1.a
+lib/libgconf-gtk-1.la
+lib/libgconf-gtk-1.so.0.1
+lib/libgconf-gtk.so
+lib/libgconf-gtk.so.1
+lib/libgconf.so
+lib/libgconf.so.8
+share/aclocal/gconf-1.m4
+share/locale/ca/LC_MESSAGES/GConf.mo
+share/locale/cs/LC_MESSAGES/GConf.mo
+share/locale/da/LC_MESSAGES/GConf.mo
+share/locale/de/LC_MESSAGES/GConf.mo
+share/locale/el/LC_MESSAGES/GConf.mo
+share/locale/fi/LC_MESSAGES/GConf.mo
+share/locale/fr/LC_MESSAGES/GConf.mo
+share/locale/ga/LC_MESSAGES/GConf.mo
+share/locale/ja/LC_MESSAGES/GConf.mo
+share/locale/no/LC_MESSAGES/GConf.mo
+share/locale/pt_BR/LC_MESSAGES/GConf.mo
+share/locale/ru/LC_MESSAGES/GConf.mo
+share/locale/sv/LC_MESSAGES/GConf.mo
+share/locale/tr/LC_MESSAGES/GConf.mo
+share/locale/uk/LC_MESSAGES/GConf.mo
+share/oaf/gconfd-1.oafinfo
+@dirrm lib/GConf/1
+@dirrm lib/GConf
+@dirrm include/gconf/1/gconf
+@dirrm include/gconf/1
+@dirrm include/gconf
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/standard
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop
+@dirrm etc/gconf/gconf.xml.defaults/schemas
+@dirrm etc/gconf/gconf.xml.defaults
+@dirrm etc/gconf/schemas
+@dirrm etc/gconf/1
+@dirrm etc/gconf
+lib/GConf/1/libgconfbackend-xml.so
+lib/GConf/1/libgconfbackend-xml.so.0
