@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:50:56 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/12/14 22:17:36 xtraeme Exp $
 
 .if !defined(GNOME_MIME_DATA_BUILDLINK2_MK)
 GNOME_MIME_DATA_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-mime-data
-BUILDLINK_DEPENDS.gnome-mime-data?=	gnome-mime-data>=2.2.0nb3
+BUILDLINK_DEPENDS.gnome-mime-data?=	gnome-mime-data>=2.4.0
 BUILDLINK_PKGSRCDIR.gnome-mime-data?=	../../databases/gnome-mime-data
 #BUILDLINK_DEPMETHOD.gnome-mime-data?=	build
 
