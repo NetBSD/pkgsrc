@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.13 2000/12/22 17:26:19 jlam Exp $
+$NetBSD: patch-af,v 1.14 2001/06/30 19:08:23 jlam Exp $
 
---- clients/Motif-2.0/mwm/Makefile.am.orig	Tue Dec 19 05:47:42 2000
+--- clients/Motif-2.0/mwm/Makefile.am.orig	Tue May  1 08:37:20 2001
 +++ clients/Motif-2.0/mwm/Makefile.am
 @@ -4,8 +4,12 @@
  
@@ -8,20 +8,23 @@ $NetBSD: patch-af,v 1.13 2000/12/22 17:26:19 jlam Exp $
  bin_PROGRAMS=	mwm
 -endif
 +if DefaultVersion20
-+bindir = $(prefix)/bin
++bindir = $(exec_prefix)/bin
 +else
- bindir = $(prefix)/LessTif/Motif2.0/bin
+ bindir = $(exec_prefix)/LessTif/Motif2.0/bin
 +endif
 +endif
  
  MAINTAINERCLEANFILES=Makefile.in mwmlex.c mwmparse.c mwmparse.h
  
-@@ -59,10 +63,12 @@
- LDADD=		../../../lib/Xm-2.0/libXm.la \
- 		$(X_LIBS) -lXt $(X_PRE_LIBS) -lXext -lX11 $(X_EXTRA_LIBS)
+@@ -34,6 +38,7 @@
+ # non-local stuff
+ BUILT_SOURCES =	$(HDRS_1_2) $(SRCS_1_2) $(mwmd_DATA) Mwm.ad
  
 +if Version_2_0
- appdir=		$(libdir)/X11/app-defaults
+ mwm_SOURCES =   $(HDRS_1_2) $(SRCS_1_2) $(HDRS_2_0) $(SRCS_2_0)
+ 
+ $(SRCS_1_2) $(HDRS_1_2):
+@@ -63,6 +68,7 @@
  
  mwmddir=	$(libdir)/X11/mwm
  mwmd_DATA=	system.mwmrc alt.map README
@@ -36,8 +39,8 @@ $NetBSD: patch-af,v 1.13 2000/12/22 17:26:19 jlam Exp $
 -
 -install-data-hook:
 -if DefaultVersion20
--	-rm -f $(DESTDIR)$(prefix)/bin/$(bin_PROGRAMS)
--	(cd $(DESTDIR)$(prefix)/bin && $(LN_S) ../LessTif/Motif2.0/bin/$(bin_PROGRAMS) .)
+-	-rm -f $(DESTDIR)$(exec_prefix)/bin/$(bin_PROGRAMS)
+-	(cd $(DESTDIR)$(exec_prefix)/bin && $(LN_S) ../LessTif/Motif2.0/bin/$(bin_PROGRAMS) .)
 -endif
  
  install-data-local:

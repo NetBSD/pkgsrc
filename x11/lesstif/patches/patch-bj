@@ -1,45 +1,43 @@
-$NetBSD: patch-bj,v 1.1 2000/12/22 17:26:21 jlam Exp $
+$NetBSD: patch-bj,v 1.2 2001/06/30 19:08:27 jlam Exp $
 
---- lib/Xm-2.0/Makefile.am.orig	Thu Nov  2 16:32:08 2000
+--- lib/Xm-2.0/Makefile.am.orig	Sat May 12 06:35:15 2001
 +++ lib/Xm-2.0/Makefile.am
-@@ -66,10 +66,13 @@
- #
- # Install headers
- #
--# Lets put the headers in a sub directory to avoid
--# poluting /usr/local with more directories for default installs.
-+# Let's put the headers in a sub directory if not a default install.
- #
+@@ -4,7 +4,13 @@
+ MAINTAINERCLEANFILES=Makefile.in
+ 
+ libXm_la_LDFLAGS=	-version-info 2:0
++if Version_2_0
 +if DefaultVersion20
-+libdir = $(prefix)/lib
++libdir = $(exec_prefix)/lib
 +else
- libdir = $(prefix)/LessTif/Motif2.0/lib
+ libdir = $(exec_prefix)/LessTif/Motif2.0/lib
++endif
 +endif
  
- lib_LTLIBRARIES=	libXm.la
- 
-@@ -87,24 +90,4 @@
+ #
+ # Sources in this directory
+@@ -91,24 +97,4 @@
  	      rm $$i; \
  	   fi ; \
  	  done
 -endif
 -
--install-data-hook:
+-install-data-hook:	libXm.la
 -if Version_2_0
 -if LibtoolShared
--	-rm -f $(DESTDIR)$(prefix)/lib/libXm.so.2*
--	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.so.2* .)
+-	-rm -f $(DESTDIR)$(exec_prefix)/lib/libXm.so.2*
+-	(cd $(DESTDIR)$(exec_prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.so.2* .)
 -endif
 -if DefaultVersion20
--	-rm -f $(DESTDIR)$(prefix)/lib/libXm.la
--	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.la .)
+-	-rm -f $(DESTDIR)$(exec_prefix)/lib/libXm.la
+-	(cd $(DESTDIR)$(exec_prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.la .)
 -if LibtoolShared
--	-rm -f $(DESTDIR)$(prefix)/lib/libXm.so
--	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.so .)
+-	-rm -f $(DESTDIR)$(exec_prefix)/lib/libXm.so
+-	(cd $(DESTDIR)$(exec_prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.so .)
 -endif
 -if LibtoolStatic
--	-rm -f $(DESTDIR)$(prefix)/lib/libXm.a
--	(cd $(DESTDIR)$(prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.a .)
+-	-rm -f $(DESTDIR)$(exec_prefix)/lib/libXm.a
+-	(cd $(DESTDIR)$(exec_prefix)/lib && $(LN_S) ../LessTif/Motif2.0/lib/libXm.a .)
 -endif
 -endif
  endif

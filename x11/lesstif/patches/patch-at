@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.8 2000/12/22 17:26:19 jlam Exp $
+$NetBSD: patch-at,v 1.9 2001/06/30 19:08:25 jlam Exp $
 
 --- include/Motif-1.2/Xm/Makefile.am.orig	Wed Oct 11 15:36:18 2000
 +++ include/Motif-1.2/Xm/Makefile.am
@@ -19,10 +19,11 @@ $NetBSD: patch-at,v 1.8 2000/12/22 17:26:19 jlam Exp $
  xm_HEADERS = $(xm_both_h)
  #
  # Note Xm.h is built by configure, therefore it's not necessarily in
-@@ -91,17 +90,4 @@
+@@ -90,18 +89,4 @@
+ # tree which may be elsewhere.
  #
  xm_DATA = Xm.h
- 
+-
 -else
 -#
 -# Not Version_1_2

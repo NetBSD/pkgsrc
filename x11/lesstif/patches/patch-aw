@@ -1,24 +1,20 @@
-$NetBSD: patch-aw,v 1.1 2000/12/22 17:26:20 jlam Exp $
+$NetBSD: patch-aw,v 1.2 2001/06/30 19:08:25 jlam Exp $
 
 --- include/Motif-2.0/Xm/Makefile.am.orig	Tue Dec  5 11:19:25 2000
 +++ include/Motif-2.0/Xm/Makefile.am
-@@ -6,10 +6,13 @@
- #
- # Install headers
- #
--# Lets put the headers in a sub directory to avoid
--# poluting /usr/local with more directories for default installs.
-+# Let's put the headers in a sub directory if not a default install.
+@@ -9,7 +9,11 @@
+ # Lets put the headers in a sub directory to avoid
+ # poluting /usr/local with more directories for default installs.
  #
 +if DefaultVersion20
-+xmdir=	$(includedir)/Xm
++xmdir=	$(prefix)/include/Xm
 +else
  xmdir=	$(prefix)/LessTif/Motif2.0/include/Xm
 +endif
  
  HEADERS1_2 = \
  	ArrowB.h ArrowBG.h AtomMgr.h \
-@@ -68,9 +71,3 @@
+@@ -68,9 +72,3 @@
  	      rm $$i; \
  	   fi ; \
  	  done

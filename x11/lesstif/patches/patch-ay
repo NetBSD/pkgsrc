@@ -1,24 +1,20 @@
-$NetBSD: patch-ay,v 1.1 2000/12/22 17:26:20 jlam Exp $
+$NetBSD: patch-ay,v 1.2 2001/06/30 19:08:25 jlam Exp $
 
 --- include/Motif-2.1/Mrm/Makefile.am.orig	Mon Nov 27 05:36:00 2000
 +++ include/Motif-2.1/Mrm/Makefile.am
-@@ -7,10 +7,13 @@
- #
- # Install headers
- #
--# Lets put the headers in a sub directory to avoid
--# poluting /usr/local with more directories for default installs.
-+# Let's put the headers in a sub directory if not a default install.
+@@ -10,7 +10,11 @@
+ # Lets put the headers in a sub directory to avoid
+ # poluting /usr/local with more directories for default installs.
  #
 +if DefaultVersion21
-+mrmdir =	$(includedir)/Mrm
++mrmdir =	$(prefix)/include/Mrm
 +else
  mrmdir =	$(prefix)/LessTif/Motif2.1/include/Mrm
 +endif
  
  HEADERS1_2 =	MrmAppl.h MrmDecls.h MrmPrivate.h MrmPublic.h
  HEADERS2_0 =
-@@ -33,12 +36,3 @@
+@@ -33,12 +37,3 @@
  	  done
  
  endif

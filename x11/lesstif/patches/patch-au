@@ -1,4 +1,4 @@
-$NetBSD: patch-au,v 1.6 2000/12/22 17:26:19 jlam Exp $
+$NetBSD: patch-au,v 1.7 2001/06/30 19:08:25 jlam Exp $
 
 --- include/Motif-1.2/uil/Makefile.am.orig	Wed Oct 25 06:16:07 2000
 +++ include/Motif-1.2/uil/Makefile.am

@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.12 2000/12/22 17:26:18 jlam Exp $
+$NetBSD: patch-ac,v 1.13 2001/06/30 19:08:22 jlam Exp $
 
 --- clients/Motif-1.2/mwm/system.mwmrc.orig	Sun Jan 16 06:06:11 2000
 +++ clients/Motif-1.2/mwm/system.mwmrc

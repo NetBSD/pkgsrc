@@ -1,13 +1,13 @@
-$NetBSD: patch-am,v 1.9 2000/12/22 17:26:19 jlam Exp $
+$NetBSD: patch-am,v 1.10 2001/06/30 19:08:24 jlam Exp $
 
---- doc/Makefile.am.orig	Fri Jan  7 11:57:44 2000
+--- doc/Makefile.am.orig	Tue May  1 08:37:20 2001
 +++ doc/Makefile.am
 @@ -6,7 +6,7 @@
  
  SUBDIRS	= www.lesstif.org lessdox
  
--rootdir=	$(exec_prefix)/LessTif/doc
+-rootdir=	$(prefix)/LessTif/doc
 +rootdir=	$(htmldir)
  root_DATA=	All.html Clipboard.txt DragAndDrop.txt Form.txt \
  		GeoUtils.txt Geometry.html SyntheticResources.txt \
- 		UIL.txt XmStrings.txt thread.html INSTALL.html
+ 		UIL.txt XmStrings.txt thread.html

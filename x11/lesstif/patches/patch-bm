@@ -1,4 +1,4 @@
-$NetBSD: patch-bm,v 1.1 2000/12/22 17:26:21 jlam Exp $
+$NetBSD: patch-bm,v 1.2 2001/06/30 19:08:27 jlam Exp $
 
 --- lib/config/Makefile.am.orig	Wed Aug 30 09:45:04 2000
 +++ lib/config/Makefile.am
