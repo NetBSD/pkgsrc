@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2004/09/14 22:09:40 dmcmahill Exp $
+$NetBSD: distinfo,v 1.11 2004/09/15 12:27:26 dmcmahill Exp $
 
 SHA1 (f2c-20001205.tar.gz) = f3cc1653eb962fee45d850df50890fc53448a17f
 Size (f2c-20001205.tar.gz) = 988607 bytes
@@ -7,6 +7,7 @@ SHA1 (patch-ab) = 97c676fa452daa674e11348412ccb26d38a7baa4
 SHA1 (patch-ac) = 6fc52f9257cdecd3784e7f8897cce8b5656b73e4
 SHA1 (patch-ad) = 7f204a45891e3632589ea8fb0e4e379a0a792dea
 SHA1 (patch-ae) = 037cc8aed72a3088771ab24077ff19b009e63ebf
+SHA1 (patch-af) = fe24139c21862e85c576118166b7deab8e421572
 SHA1 (patch-ag) = 5f294e491ba4730aa7047ad53fa710a0698c2649
 SHA1 (patch-ai) = 641d3720c80cfb7d1c23981bb845b0a9bee3e6d7
 SHA1 (patch-aj) = c58361fbbfc06e033b2a47e1d1e370716c4b185c
