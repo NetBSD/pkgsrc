@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/01/13 04:58:34 rh Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/13 21:28:26 jmmv Exp $
 #
 
 DISTNAME=		soup-0.7.10
@@ -16,6 +16,8 @@ USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/soup.pc.in
+
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
