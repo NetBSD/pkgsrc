@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.316 2002/07/11 21:41:30 agc Exp $
+# $NetBSD: Makefile,v 1.317 2002/07/12 16:56:34 agc Exp $
 #
 
 COMMENT=	Networking tools
@@ -211,6 +211,7 @@ SUBDIR+=	sitescooper
 SUBDIR+=	smb2www
 SUBDIR+=	sniffit
 SUBDIR+=	snort
+SUBDIR+=	snort-mysql
 SUBDIR+=	snort-pgsql
 SUBDIR+=	socks4
 SUBDIR+=	socks5
