@@ -1,0 +1,4 @@
+This is a package, mainly for Interix, that provides basic Cygwin
+functionality for emulation purposes.  This allows some Cygwin binaries to
+provide gatewaying services to Interix processes where "native" Interix
+services are unavailable.
