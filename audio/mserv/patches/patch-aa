@@ -1,19 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2002/10/03 15:46:56 abs Exp $
+$NetBSD: patch-aa,v 1.6 2003/09/03 12:35:12 martin Exp $
 
---- Makefile.orig	Sat Jul 15 19:29:10 2000
-+++ Makefile
-@@ -2,11 +2,11 @@ PWD = ${shell pwd}
- BASE = ${shell basename ${PWD}}
+--- mserv/Makefile.in.orig	2003-08-03 16:57:19.000000000 +0200
++++ mserv/Makefile.in	2003-09-03 14:01:16.000000000 +0200
+@@ -130,7 +130,7 @@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
  
- default:
--	(cd mserv; ./configure)
-+	(cd mserv; ./configure --prefix=${PREFIX} --datadir=${PREFIX}/share)
- 	(cd mserv; make DEFS=${DEFS})
--	(cd mservcli; ./configure)
-+	(cd mservcli; ./configure --prefix=${PREFIX} --datadir=${PREFIX}/share)
- 	(cd mservcli; make DEFS=${DEFS})
--	(cd mservutils; ./configure)
-+	(cd mservutils; ./configure --prefix=${PREFIX} --datadir=${PREFIX}/share)
- 	(cd mservutils; make DEFS=${DEFS})
+-INCLUDES = -I../hdr -DDATADIR=\"${datadir}\"
++INCLUDES = -I../hdr -DDATADIR=\"${datadir}\" -DBINDIR=\"${prefix}/bin\"
  
- install:
+ bin_PROGRAMS = mserv
+ 
