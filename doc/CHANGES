@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5927 2004/05/13 18:32:34 adam Exp $
+$NetBSD: CHANGES,v 1.5928 2004/05/13 22:06:03 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2516,3 +2516,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated imap-uw to 2004 [adam 2004-05-13]
 	Updated pico to 4.7 [adam 2004-05-13]
 	Updated pine to 4.60 [adam 2004-05-13]
+	Updated tcl-tclX to 8.3.5 [minskim 2004-05-13]
+	Updated tk-tclX to 8.3.5 [minskim 2004-05-13]
