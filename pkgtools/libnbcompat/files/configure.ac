@@ -69,7 +69,7 @@ AC_FUNC_VPRINTF
 
 AC_REPLACE_FUNCS([err fgetln fseeko getenv glob inet_ntop \
 		inet_pton lchflags lchmod lchown lutimes mkstemp setenv \
-		setprogname sl_init snprintf strdup strerror strlcat \
+		setmode setprogname sl_init snprintf strdup strerror strlcat \
 		strlcpy strptime strsep strtoll timegm usleep])
 
 AC_CHECK_FUNCS([MD5File RMD160File SHA1File])
