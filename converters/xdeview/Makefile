@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/06/11 06:34:23 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2001/12/26 11:12:53 tron Exp $
 #
 
 DISTNAME=	uudeview-0.5.15
@@ -17,7 +17,7 @@ USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-tcl="${LOCALBASE}" --enable-tk="${LOCALBASE}"
 # Season to taste --- anything over tcl7.5
-LDFLAGS+=	-s
+LDFLAGS+=	-s -lX11
 CPPFLAGS+=	-I${LOCALBASE}/include
 
 ALL_TARGET=	xdeview
