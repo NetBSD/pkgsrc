@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/24 16:52:18 agc Exp $
+
+--- master.ini	1998/11/16 17:04:56	1.1
++++ master.ini	1998/11/16 17:05:21
+@@ -1,5 +1,5 @@
+ [parameters]
+-id=explorer-rc5@flame.org
++id=rc5-team@netbsd.org
+ threshold=10:10
+ threshold2=10:10
+ count=0
