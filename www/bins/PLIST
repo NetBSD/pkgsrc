@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2003/04/08 11:00:05 martti Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/04/12 14:45:08 martti Exp $
 bin/bins
+bin/bins_cleanupgallery
 bin/bins_edit
 man/man1/bins.1
 man/man1/bins_edit.1
