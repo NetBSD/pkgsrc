@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6110 2004/06/03 19:13:40 minskim Exp $
+$NetBSD: CHANGES,v 1.6111 2004/06/03 20:20:54 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2762,9 +2762,11 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated aterm to 0.4.2b5 [recht 2004-06-02]
 	Updated ngrep to 1.42nb1 [recht 2004-06-02]
 	Added florist [shannonjr 2004-06-03]
-	Added jdbc-postgresql74 [abs 2004-06-02]
+	Added jdbc-postgresql74 [abs 2004-06-03]
 	Added gdbada [shannonjr 2004-06-03]
 	Updated joe to 3.1 [adam 2004-06-03]
 	Updated exctags to 5.5.4 [uebayasi 2004-06-03]
 	Updated libstroke to 0.5.1 [minskim 2004-06-03]
 	Updated gaim to 0.78nb1 [minskim 2004-06-03]
+	Updated rconfig to 0.32 [abs 2004-06-03]
+
