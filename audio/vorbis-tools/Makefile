@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/03/19 07:48:43 lukem Exp $
+# $NetBSD: Makefile,v 1.13.4.1 2002/07/22 18:02:29 agc Exp $
 
 DISTNAME=	vorbis-tools-1.0rc3
 PKGNAME=	vorbis-tools-1.0.0.7
@@ -23,7 +23,8 @@ USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--with-ogg-prefix=${BUILDLINK_DIR}		\
 			--with-vorbis-prefix=${BUILDLINK_DIR}		\
-			--with-ao-prefix=${BUILDLINK_DIR}
+			--with-ao-prefix=${BUILDLINK_DIR}		\
+			--with-curl=${LOCALBASE}
 
 PLIST_SUBST+=	DISTNAME="${DISTNAME}"
 
