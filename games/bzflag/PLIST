@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/24 12:49:10 blymn Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/08 11:24:25 mrg Exp $
 bin/bzflag
 bin/bzfls
 bin/bzfrelay
 bin/bzfs
+man/man6/bzflag.6
+man/man6/bzfls.6
+man/man6/bzfrelay.6
+man/man6/bzfs.6
 share/bzflag/Bzflag.fti
 share/bzflag/Bzflag.ftr
 share/bzflag/Bzfs.fti
