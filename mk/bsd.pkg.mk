@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1090 2002/11/26 08:59:04 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1091 2002/11/26 15:00:55 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -1745,7 +1745,7 @@ do-patch: uptodate-digest
 		patchlist=`${ECHO} $${patchlist} ${_LOCALPATCHFILES}`;	\
 	fi;								\
 	if [ -n "$${patchlist}" ]; then					\
-		${ECHO_MSG} "${_PKGSRC_IN}> Applying ${OPSYS} patches for ${PKGNAME}" ; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Applying patches for ${PKGNAME}" ; \
 		fail="";						\
 		for i in $${patchlist}; do				\
 			if [ ! -f "$$i" ]; then				\
@@ -1788,7 +1788,7 @@ do-patch: uptodate-digest
 				;;					\
 			esac;						\
 			if [ ${PATCH_DEBUG_TMP} = yes ]; then		\
-				${ECHO_MSG} "${_PKGSRC_IN}> Applying ${OPSYS} patch $$i" ; \
+				${ECHO_MSG} "${_PKGSRC_IN}> Applying patch $$i" ; \
 			fi;						\
 			fuzz="";					\
 			${PATCH} -v > /dev/null 2>&1 && fuzz="${PATCH_FUZZ_FACTOR}"; \
