@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.7 2002/08/25 18:38:35 jlam Exp $
+$NetBSD: patch-ag,v 1.8 2003/09/25 02:09:03 danw Exp $
 
 --- ltcf-cxx.sh.orig	Wed May 23 05:05:06 2001
 +++ ltcf-cxx.sh
@@ -15,7 +15,7 @@ $NetBSD: patch-ag,v 1.7 2002/08/25 18:38:35 jlam Exp $
 +	  allow_undefined_flag='-flat_namespace -undefined suppress'
 +	  ;;
 +	esac
-+    archive_cmds='$CC $(if test .$module = .yes; then echo -bundle; else echo -dynamiclib; fi) $allow_undefined_flag -o $lib $libobjs $deplibs $linkopts -install_name $rpath/$soname $verstring'
++    archive_cmds='$CC $(if test .$module = .yes; then echo -bundle; else echo -dynamiclib; fi) $allow_undefined_flag -o $lib $libobjs $deplibs $linker_flags -install_name $rpath/$soname $verstring'
 +    # We need to add '_' to the symbols in $export_symbols first 
 +    #archive_expsym_cmds="$archive_cmds"' && strip -s $export_symbols $lib'
 +    hardcode_direct=yes

@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.5 2003/01/31 20:33:52 skrll Exp $
+$NetBSD: patch-am,v 1.6 2003/09/25 02:09:03 danw Exp $
 
 --- ltcf-c.sh.orig	2001-04-25 04:05:02.000000000 +0000
 +++ ltcf-c.sh
@@ -41,7 +41,7 @@ $NetBSD: patch-am,v 1.5 2003/01/31 20:33:52 skrll Exp $
 +      allow_undefined_flag='-flat_namespace -undefined suppress'
 +      ;;
 +    esac
-+    archive_cmds='$CC $(if test .$module = .yes; then echo -bundle; else echo -dynamiclib; fi) $allow_undefined_flag -o $lib $libobjs $deplibs $linkopts -install_name $rpath/$soname $verstring'
++    archive_cmds='$CC -r ${wl}-bind_at_load -keep_private_externs -nostdlib -o ${lib}-master.o $libobjs && $CC $(test .$module = .yes && echo -bundle || echo -dynamiclib) $allow_undefined_flag -o $lib ${lib}-master.o $deplibs $linker_flags $(test .$module != .yes && echo -install_name $rpath/$soname $verstring)'
 +    # We need to add '_' to the symbols in $export_symbols first
 +    #archive_expsym_cmds="$archive_cmds"' && strip -s $export_symbols $lib'
 +    hardcode_direct=yes
