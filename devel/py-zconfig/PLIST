@@ -1,0 +1,45 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/25 16:04:09 drochner Exp $
+${PYSITELIB}/ZConfig/Config.py
+${PYSITELIB}/ZConfig/Config.pyc
+${PYSITELIB}/ZConfig/Context.py
+${PYSITELIB}/ZConfig/Context.pyc
+${PYSITELIB}/ZConfig/__init__.py
+${PYSITELIB}/ZConfig/__init__.pyc
+${PYSITELIB}/ZConfig/cfgparser.py
+${PYSITELIB}/ZConfig/cfgparser.pyc
+${PYSITELIB}/ZConfig/cmdline.py
+${PYSITELIB}/ZConfig/cmdline.pyc
+${PYSITELIB}/ZConfig/datatypes.py
+${PYSITELIB}/ZConfig/datatypes.pyc
+${PYSITELIB}/ZConfig/info.py
+${PYSITELIB}/ZConfig/info.pyc
+${PYSITELIB}/ZConfig/loader.py
+${PYSITELIB}/ZConfig/loader.pyc
+${PYSITELIB}/ZConfig/matcher.py
+${PYSITELIB}/ZConfig/matcher.pyc
+${PYSITELIB}/ZConfig/schema.py
+${PYSITELIB}/ZConfig/schema.pyc
+${PYSITELIB}/ZConfig/substitution.py
+${PYSITELIB}/ZConfig/substitution.pyc
+${PYSITELIB}/ZConfig/tests/__init__.py
+${PYSITELIB}/ZConfig/tests/__init__.pyc
+${PYSITELIB}/ZConfig/tests/runtests.py
+${PYSITELIB}/ZConfig/tests/runtests.pyc
+${PYSITELIB}/ZConfig/tests/support.py
+${PYSITELIB}/ZConfig/tests/support.pyc
+${PYSITELIB}/ZConfig/tests/test_cmdline.py
+${PYSITELIB}/ZConfig/tests/test_cmdline.pyc
+${PYSITELIB}/ZConfig/tests/test_config.py
+${PYSITELIB}/ZConfig/tests/test_config.pyc
+${PYSITELIB}/ZConfig/tests/test_datatypes.py
+${PYSITELIB}/ZConfig/tests/test_datatypes.pyc
+${PYSITELIB}/ZConfig/tests/test_loader.py
+${PYSITELIB}/ZConfig/tests/test_loader.pyc
+${PYSITELIB}/ZConfig/tests/test_schema.py
+${PYSITELIB}/ZConfig/tests/test_schema.pyc
+${PYSITELIB}/ZConfig/tests/test_subst.py
+${PYSITELIB}/ZConfig/tests/test_subst.pyc
+${PYSITELIB}/ZConfig/url.py
+${PYSITELIB}/ZConfig/url.pyc
+@dirrm ${PYSITELIB}/ZConfig/tests
+@dirrm ${PYSITELIB}/ZConfig
