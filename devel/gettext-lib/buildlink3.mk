@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/05 09:31:31 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/05 09:37:05 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
@@ -99,7 +99,6 @@ BUILDLINK_DEPENDS.gettext=	${_GETTEXT_ICONV_DEPENDS}
 _BLNK_LIBINTL+=			${BUILDLINK_LDADD.iconv}
 .    endif
 .  else
-BUILDLINK_PREFIX.gettext=	/usr
 .    if ${_BLNK_LIBINTL_FOUND} == "YES"
 _BLNK_LIBINTL=		-lintl
 .    else
