@@ -1,0 +1,51 @@
+--- menubox.c.orig	Fri Jan 23 17:37:12 1998
++++ menubox.c	Fri Jan 23 18:15:46 1998
+@@ -53,12 +53,32 @@
+ dialog_menu (const char *title, const char *prompt, int height, int width,
+ 		int menu_height, int item_no, const char * const * items)
+ {
+-    int i, x, y, cur_x, cur_y, box_x, box_y;
++    int i, j, x, y, cur_x, cur_y, box_x, box_y;
+     int key = 0, button = 0, choice = 0, scroll = 0, max_choice;
+     WINDOW *dialog, *menu;
+ 
+     max_choice = MIN (menu_height, item_no);
+ 
++    /* Find length of longest item in order to center menu */
++    tag_x = 0;
++    item_x = 0;
++    for (i = 0; i < item_no; i++) {
++        tag_x = MAX (tag_x,
++                     strlen (items[i * 2]) + strlen (items[i * 2 + 1]) + 2);
++        item_x = MAX (item_x, strlen (items[i * 2]));
++    }
++
++    /* Choose useful default height and width if they are negative */
++    if (height < 0)
++        height = strheight(prompt) + menu_height + 4 + 2;
++    if (width < 0) {
++        i = strwidth(prompt);
++        j = ((title != NULL) ? strwidth(title) : 0);
++        width = MAX (i, j);
++        width = MAX (width, tag_x + 4) + 4;
++    }
++    width = MAX (width, MIN_DIALOG_WIDTH);
++
+     /* center dialog box on screen */
+     x = (COLS - width) / 2;
+     y = (LINES - height) / 2;
+@@ -107,14 +127,6 @@
+     draw_box (dialog, box_y, box_x, menu_height + 2, menu_width + 2,
+ 	      menubox_border_attr, menubox_attr);
+ 
+-    tag_x = 0;
+-    item_x = 0;
+-    /* Find length of longest item in order to center menu */
+-    for (i = 0; i < item_no; i++) {
+-	tag_x = MAX (tag_x,
+-		     strlen (items[i * 2]) + strlen (items[i * 2 + 1]) + 2);
+-	item_x = MAX (item_x, strlen (items[i * 2]));
+-    }
+     tag_x = (menu_width - tag_x) / 2;
+     item_x = tag_x + item_x + 2;
+ 

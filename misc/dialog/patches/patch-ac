@@ -1,0 +1,33 @@
+--- dialog.h.orig	Fri Jan 23 17:37:12 1998
++++ dialog.h	Fri Jan 23 18:14:38 1998
+@@ -28,8 +28,12 @@
+ #ifdef ultrix
+ #include <cursesX.h>
+ #else
++#ifdef __NetBSD__
++#include <ncurses.h>
++#else
+ #include <curses.h>
+ #endif
++#endif
+ 
+ /*
+  * Change these if you want
+@@ -42,6 +46,7 @@
+ #define TAB 9
+ #define MAX_LEN 2048
+ #define BUF_SIZE (10*1024)
++#define MIN_DIALOG_WIDTH 24
+ #define MIN(x,y) (x < y ? x : y)
+ #define MAX(x,y) (x > y ? x : y)
+ 
+@@ -150,6 +155,9 @@
+ #ifdef HAVE_NCURSES
+ void draw_shadow (WINDOW * win, int y, int x, int height, int width);
+ #endif
++
++int strheight (const char *p);
++int strwidth (const char *p);
+ 
+ int dialog_yesno (const char *title, const char *prompt, int height, int width);
+ int dialog_msgbox (const char *title, const char *prompt, int height,
