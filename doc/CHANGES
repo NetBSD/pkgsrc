@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8373 2004/12/20 22:47:13 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8374 2004/12/20 23:16:55 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6433,3 +6433,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated perl58 to 5.8.5nb6 [grant 2004-12-20]
 	Updated a2ps to 4.13.0.2nb5 [wiz 2004-12-20]
 	Updated firefox-bin-flash to 7.0r25 [xtraeme 2004-12-20]
+	Updated mips64emul to 0.2.3 [xtraeme 2004-12-20]
