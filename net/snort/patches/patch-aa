@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2001/11/07 03:03:06 hubertf Exp $
+$NetBSD: patch-aa,v 1.5 2001/11/28 13:44:52 kleink Exp $
 
---- snort.c.orig	Fri Aug 10 22:39:52 2001
-+++ snort.c
+--- snort.c.orig	Fri Nov  2 07:18:29 2001
++++ snort.c	Wed Nov 28 14:04:21 2001
 @@ -43,6 +43,9 @@
  
  /*  I N C L U D E S  **********************************************************/
@@ -10,9 +10,9 @@ $NetBSD: patch-aa,v 1.4 2001/11/07 03:03:06 hubertf Exp $
 +#include <sys/param.h>
 +#endif
  
+ 
  /*  G L O B A L S  ************************************************************/
- extern OutputFuncNode *AlertList;
-@@ -1386,6 +1389,19 @@
+@@ -1413,6 +1416,19 @@
  
              break;
  
