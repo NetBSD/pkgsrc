@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1068 2002/10/19 20:33:59 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1069 2002/10/20 11:47:04 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -746,14 +746,6 @@ DEPENDS+=		Mesa>=3.2.1:../../graphics/Mesa
 .  endif
 .  undef __BUILTIN_MESA
 .endif	# USE_MESA
-
-# If USE_FREETYPE2 is set, depend on freetype2.
-.if defined(USE_FREETYPE2)
-.  if ${HAVE_BUILTIN_FREETYPE2} == "NO"
-DEPENDS+=		freetype2>=2.0.1:../../graphics/freetype2
-.  endif
-.  undef __BUILTIN_FREETYPE2
-.endif	# USE_FREETYPE2
 
 # Check if we got "rman" with XFree86, for packages that need "rman". 
 .if defined(USE_RMAN)

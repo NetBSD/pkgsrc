@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.82 2002/10/19 20:33:59 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.83 2002/10/20 11:47:05 wiz Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -245,23 +245,6 @@ HAVE_BUILTIN_GLU=	YES
 .undef __BUILTIN_MESA
 .undef __BUILTIN_GLU
 .endif	# CHECK_MESA
-
-# Check if we got FreeType2 distributed with XFree86 4.x or if we need to
-# depend on the freetype2 package.
-.if (defined(CHECK_FREETYPE2) || defined(USE_FREETYPE2))
-X11BASE?=		/usr/X11R6
-.if exists(${X11BASE}/include/freetype2/freetype/freetype.h)
-__BUILTIN_FREETYPE2!=	${EGREP} -c BuildFreetype2Library ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
-.else
-__BUILTIN_FREETYPE2=	0
-.endif
-.if ${__BUILTIN_FREETYPE2} == "0"
-HAVE_BUILTIN_FREETYPE2=	NO
-.else
-HAVE_BUILTIN_FREETYPE2=	YES
-.endif
-.undef __BUILTIN_FREETYPE2
-.endif	# CHECK_FREETYPE2
 
 # Check if we got Xpm distributed with XFree86 4.x or Solaris 9 or if we need
 # to depend on the Xpm package.
