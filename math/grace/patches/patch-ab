@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/02/03 19:47:41 drochner Exp $
+
+--- auxiliary/Makefile.orig	Fri Sep 24 23:23:51 1999
++++ auxiliary/Makefile	Thu Feb  3 12:00:25 2000
+@@ -9,7 +9,8 @@
+ include $(TOP)/Make.conf
+ 
+ AUXILIARIES = README convcal.c magic.grace
+-PROGRAMS = fdf2fit convcal$(EXE)
++PROGRAMS = convcal$(EXE)
++SCRIPTS = fdf2fit
+ 
+ all : convcal$(EXE)
+ 
+@@ -26,6 +27,7 @@
+ 	$(MKINSTALLDIRS) $(GRACE_HOME)/auxiliary
+ 	for i in $(AUXILIARIES); do $(INSTALL_DATA) $$i $(GRACE_HOME)/auxiliary; done
+ 	for i in $(PROGRAMS); do $(INSTALL_PROGRAM) $$i $(GRACE_HOME)/bin; done
++	for i in $(SCRIPTS); do $(INSTALL_SCRIPT) $$i $(GRACE_HOME)/bin; done
+ 
+ tests : dummy
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/02/03 19:47:41 drochner Exp $
+
+--- examples/Makefile.orig	Sat Oct 23 00:36:31 1999
++++ examples/Makefile	Thu Feb  3 11:52:37 2000
+@@ -32,7 +32,7 @@
+ install : $(EXAMPLES) $(DOTEST)
+ 	$(MKINSTALLDIRS) $(GRACE_HOME)/examples
+ 	for i in $(EXAMPLES); do $(INSTALL_DATA) $$i $(GRACE_HOME)/examples; done
+-	$(INSTALL_PROGRAM) $(DOTEST) $(GRACE_HOME)/examples/$(DOTEST)
++	$(INSTALL_SCRIPT) $(DOTEST) $(GRACE_HOME)/examples/$(DOTEST)
+ 
+ links : dummy
+ 
