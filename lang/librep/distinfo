@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2004/09/05 16:59:28 danw Exp $
+$NetBSD: distinfo,v 1.10 2005/02/24 09:03:09 agc Exp $
 
 SHA1 (librep-0.17.tar.gz) = 00ae330eca0fdfb117797036f499dec61f868431
+RMD160 (librep-0.17.tar.gz) = 2239837386700ed4893fa91b684192cb8721a2d1
 Size (librep-0.17.tar.gz) = 1195890 bytes
 SHA1 (patch-ac) = 562f8a25b2da564fa4372101bfa1199b0c755ee3

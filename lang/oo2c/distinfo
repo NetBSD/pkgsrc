@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2003/09/01 06:38:12 jtb Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 09:03:09 agc Exp $
 
 SHA1 (oo2c_32-2.0.11.tar.bz2) = b8962b7fdf9505dc1769602ade44d8e56eda8d45
+RMD160 (oo2c_32-2.0.11.tar.bz2) = c51dc82ec09c9d2f82cb1f10ee7814b3cce38502
 Size (oo2c_32-2.0.11.tar.bz2) = 1500827 bytes
 SHA1 (oo2c_64-2.0.11.tar.bz2) = 047992978c584cdd8c47ff07c40dfba79ea97ebe
 Size (oo2c_64-2.0.11.tar.bz2) = 1504997 bytes

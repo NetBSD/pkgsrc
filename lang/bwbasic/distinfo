@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2004/08/09 21:41:23 cube Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 09:03:05 agc Exp $
 
 SHA1 (bwbasic-2.20pl2/bwbasic-2.20.tar.Z) = b96ff440c573b9aac17dfd90830e3defa46a5592
+RMD160 (bwbasic-2.20pl2/bwbasic-2.20.tar.Z) = a6ae5cdde2aa18228258314a34b776d3681cb0e8
 Size (bwbasic-2.20pl2/bwbasic-2.20.tar.Z) = 485971 bytes
 SHA1 (patch-aa) = e397e2e5b88ccccb44750702bff6d65054d96641
 SHA1 (patch-ac) = e316d334098ba1919239959333804973619dbc81

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2004/11/30 20:30:19 adam Exp $
+$NetBSD: distinfo,v 1.11 2005/02/24 09:03:12 agc Exp $
 
 SHA1 (expect-5.42.1.tar.gz) = 84ca72f0abd2b7a31ee332049b34575a286e8f27
+RMD160 (expect-5.42.1.tar.gz) = d354d5d3ffa941d89e668fb4ad1ccbb59be4f341
 Size (expect-5.42.1.tar.gz) = 524882 bytes
 SHA1 (patch-aa) = 81f45deba61affb5d2e0d3d0f91a67217e543b8e
 SHA1 (patch-ab) = 642e714e58bfe72b332cb89559e1f55df9b6052f

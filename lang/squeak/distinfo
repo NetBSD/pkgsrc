@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.9 2004/04/26 07:10:16 fredb Exp $
+$NetBSD: distinfo,v 1.10 2005/02/24 09:03:11 agc Exp $
 
 SHA1 (squeak/Squeak-3.6-3.src.tar.gz) = 9631fd9778bea45bedddc878a7132d46936d8148
+RMD160 (squeak/Squeak-3.6-3.src.tar.gz) = 61b7758afce0182fd5f7295204854a6636449b49
 Size (squeak/Squeak-3.6-3.src.tar.gz) = 2552981 bytes
 SHA1 (squeak/Squeak-3.6-5429.image.tar.gz) = 60900eafcd755bd1a898758615045b806f27bd48
+RMD160 (squeak/Squeak-3.6-5429.image.tar.gz) = 7d74b7128a833c3ba736d86ccf16c25383406c90
 Size (squeak/Squeak-3.6-5429.image.tar.gz) = 7756686 bytes
 SHA1 (squeak/Squeak-3.sources.tar.gz) = 0a265f5c631970fe39a483967dab39c26304092c
+RMD160 (squeak/Squeak-3.sources.tar.gz) = 9045f144270fddfc65704cfb73a846bc8635710b
 Size (squeak/Squeak-3.sources.tar.gz) = 4184537 bytes
 SHA1 (patch-aa) = fdb5b9c06e02056d1c52344c1e5577ac9d09a5e6
 SHA1 (patch-ab) = ae371a47efb513721b19990ebd2a8ebec78bd89e
