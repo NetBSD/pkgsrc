@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/12/18 11:24:00 rh Exp $
+# $NetBSD: Makefile,v 1.14 2003/12/24 09:53:48 jmmv Exp $
 #
 
 DISTNAME=	cgoban-unix-2.5.5
@@ -8,7 +8,7 @@ CATEGORIES=	games java
 MASTER_SITES=	http://kgs.kiseido.com/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://kgs.kiseido.com/en_US/download.html
 COMMENT=	Java Go server client and SGF viewer/editor
 
