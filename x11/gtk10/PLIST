@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/06/27 08:14:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/03/11 16:00:04 seb Exp $
 bin/gtk10-config
 include/gtk10/gdk/gdk.h
 include/gtk10/gdk/gdkcursors.h
@@ -103,14 +103,6 @@ include/gtk10/gtk/gtkvscrollbar.h
 include/gtk10/gtk/gtkvseparator.h
 include/gtk10/gtk/gtkwidget.h
 include/gtk10/gtk/gtkwindow.h
-info/gdk10.info
-info/glib10.info
-info/gtk10.info
-info/gtk10.info-1
-info/gtk10.info-2
-info/gtk10.info-3
-info/gtk10.info-4
-info/gtk10.info-5
 lib/libgdk10.a
 lib/libgdk10.la
 lib/libgdk10.so
