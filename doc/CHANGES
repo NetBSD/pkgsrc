@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6483 2004/07/07 15:20:25 recht Exp $
+$NetBSD: CHANGES,v 1.6484 2004/07/07 16:51:26 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3295,3 +3295,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gsed to 4.1.1 [seb 2004-07-07]
 	Updated distcc to 2.15 [martti 2004-07-07]
 	Updated dspam to 3.0.0nb1 [recht 2004-07-07]
+	Updated p5-GD to 2.11nb2 [xtraeme 2004-07-07]
