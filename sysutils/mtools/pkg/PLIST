@@ -1,0 +1,57 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/01/22 15:44:44 is Exp $
+bin/mattrib
+bin/mcd
+bin/mcopy
+bin/mdel
+bin/mdeltree
+bin/mdir
+bin/mformat
+bin/minfo
+bin/mlabel
+bin/mmd
+bin/mtools
+bin/mmount
+bin/mmove
+bin/mpartition
+bin/mrd
+bin/mread
+bin/mren
+bin/mtype
+bin/mwrite
+bin/mtoolstest
+bin/mbadblocks
+bin/mzip
+bin/mcheck
+bin/mxtar
+bin/uz
+bin/tgz
+bin/xcopy
+bin/mcomp
+bin/lz
+bin/mkmanifest
+@unexec install-info --delete %D/info/mtools.info %D/info/dir
+info/mtools.info
+@exec [ -f %D/info/dir ] || sed -ne '1,/Menu:/p' /usr/share/info/dir > %D/info/dir
+@exec install-info %D/info/mtools.info %D/info/dir
+man/man1/mattrib.1
+man/man1/mbadblocks.1
+man/man1/mcd.1
+man/man1/mcopy.1
+man/man1/mdel.1
+man/man1/mdeltree.1
+man/man1/mdir.1
+man/man1/mformat.1
+man/man1/mkmanifest.1
+man/man1/mlabel.1
+man/man1/mmd.1
+man/man1/mmount.1
+man/man1/mmove.1
+man/man1/mrd.1
+man/man1/mread.1
+man/man1/mren.1
+man/man1/mtoolstest.1
+man/man1/mtools.1
+man/man1/mtype.1
+man/man1/mwrite.1
+man/man1/mzip.1
+man/man5/mtools.5
