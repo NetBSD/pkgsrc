@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4037 2003/12/10 07:22:43 grant Exp $
+$NetBSD: CHANGES,v 1.4038 2003/12/10 16:04:23 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5048,3 +5048,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tnftpd to 20031210 [lukem 2003-12-10]
 	Updated squid to 2.5.4nb4 [taca 2003-12-10]
 	Updated libnbcompat to 20031210 [grant 2003-12-10]
+	Updated py-pyrex to 0.9 [recht 2003-12-10]
