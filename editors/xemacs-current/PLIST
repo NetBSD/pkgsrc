@@ -1,21 +1,406 @@
-@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:29:41 seb Exp $
-bin/xemacs-b2m
-bin/xemacs-ctags
+@comment $NetBSD: PLIST,v 1.5 2002/10/06 11:40:07 magick Exp $
+bin/${EMACSVER}
 bin/ellcc
-bin/xemacs-etags
 bin/gnuattach
 bin/gnuclient
 bin/gnudoit
 bin/ootags
-bin/xemacs-rcs-checkin
 bin/xemacs
-bin/${EMACSVER}
+bin/xemacs-b2m
+bin/xemacs-ctags
+bin/xemacs-etags
+bin/xemacs-rcs-checkin
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/DOC
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/add-big-package.sh
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/config.values
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/cvtmail
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/digest-doc
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/fakemail
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/gnuserv
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/gzip-el.sh
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/hexl
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/Emacs.ad.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/EmacsFrame.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/EmacsFrameP.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/EmacsManager.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/EmacsManagerP.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/EmacsShell.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/EmacsShellP.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ExternalClient.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ExternalClientP.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ExternalShell.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ExternalShellP.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/backtrace.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/balloon_help.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/bitmaps.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/blocktype.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/broken-sun.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/buffer.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/bufslots.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/bytecode.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/casetab.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/charset.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/chartab.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/cm.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/commands.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/config.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/conslots.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-gtk-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-gtk.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-msw-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-msw.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-stream-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-stream.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-tty-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-tty.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-x-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-x.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/database.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/debug.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/device-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/device.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/devslots.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/dragdrop.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/dumper.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/eldap.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/elhash.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/emodules.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/event-gtk.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/events.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/extents-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/extents.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/extw-Xlib.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/extw-Xt.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/faces.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/file-coding.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/frame-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/frame.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/frameslots.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gccache-gtk.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/general-slots.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/getpagesize.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gifrlib.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/glyphs-gtk.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/glyphs-msw.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/glyphs-x.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/glyphs.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gpmevent.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gtk-xemacs.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gui-gtk.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gui-x.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gui.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gutter.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/hash.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/imgproc.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/insdel.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/intl-auto-encap-win32.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/keymap.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/libinterface.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/libsst.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/libst.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/line-number.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/lisp-disunion.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/lisp-union.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/lisp.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/lrecord.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/lstream.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/7300.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/README
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/acorn.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/alliant-2800.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/alliant.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/alliant1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/alliant4.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/alpha.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/altos.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/amdahl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/apollo.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/arm.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/att3b.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/aviion.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/celerity.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/clipper.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/cnvrgnt.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/convex.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/cydra5.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/delta.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/delta88k.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/dpx2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/dual.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/elxsi.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ews4800r.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/gec63.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/gould-np1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/gould.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/hp300bsd.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/hp800.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/hp9000s300.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/i860.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ibm370aix.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ibmps2-aix.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ibmrs6000.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ibmrt-aix.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ibmrt.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/intel386.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/iris4d.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/iris5d.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/iris6d.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/irist.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/is386.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/isi-ov.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/luna88k.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/m68k.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/masscomp.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/mega68.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/mg1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/mips-nec.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/mips-siemens.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/mips.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/mips4.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ncr386.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/news-risc.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/news.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/next.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/nh3000.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/nh4000.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ns16000.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ns32000.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/nu.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/orion.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/orion105.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/paragon.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/pfa50.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/plexus.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/pmax.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/powerpc.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/pyramid.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/pyrmips.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sequent-ptx.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sequent.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sgi-challenge.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sgi3000.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sparc.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sps7.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/stride.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun3-68881.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun3-fpa.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun3-soft.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun3.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun386.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/symmetry.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tad68k.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tahoe.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tandem-s2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/targon31.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tek4300.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tekxd88.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/template.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tower32.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tower32v3.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ustation.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/vax.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/wicat.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/windowsnt.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/xps100.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/macros.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/mem-limits.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/menubar-msw.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/menubar.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/miscplay.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/mule-ccl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ndir.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/nt.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-gtk-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-gtk.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-msw-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-msw.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-tty-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-tty.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-x-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-x.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/offix-cursors.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/offix-types.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/offix.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/opaque.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/paths.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/postgresql.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/process.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/procimpl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/rangetab.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/redisplay.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/regex.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/3700.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/386-ix.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/386bsd.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/README
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/aix3-1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/aix3-2-5.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/aix3-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/aix4-1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/aix4-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/aix4.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/alliant-2800.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/alliant.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/altos.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/amdahl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsd386.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsd4-1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsd4-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsd4-3.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsdos2-1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsdos2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsdos3.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsdos4.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/cxux.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/cxux7.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/cygwin32.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/darwin.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/decosf1-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/decosf1-3.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/decosf3-1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/decosf3-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/decosf4-0.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/dgux.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/dgux5-4r2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/dgux5-4r3.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/dgux5-4r4.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/domain.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/esix.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/esix5r4.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/ewsux5r4.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/freebsd.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/gnu.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux10-shr.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux10.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux11-shr.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux11.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux8-shr.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux8.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux9-shr.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux9-x11r4.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux9.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux9shxr4.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/iris3-5.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/iris3-6.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix3-3.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix4-0.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix5-0.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix5-1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix5-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix5-3.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix6-0.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/isc2-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/isc3-0.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/isc4-0.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/isc4-1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/linux.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/mach-bsd4-3.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/mingw32.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/netbsd.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/newsos5.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/nextstep.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/openbsd.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/osf1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/ptx.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/riscix1-1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/riscix1-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/riscos5.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/rtu.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sco4.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sco5-shr.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sco5.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sco7.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sol2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-0-shr.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-0.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-2-shr.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-3-shr.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-3.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-4-shr.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-4.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-shr.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/template.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/ultrix.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/ultrix4-3.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/umax.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/umips.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/unipl5-0.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/unipl5-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/usg5-0.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/usg5-2-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/usg5-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/usg5-3.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/usg5-4-2.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/usg5-4.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/win32-common.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/win32-native.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/windowsnt.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/xenix.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/scrollbar-gtk.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/scrollbar-msw.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/scrollbar-x.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/scrollbar.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/select-common.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/select.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sheap-adjust.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sound.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/specifier.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/symeval.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/symsinit.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/syntax.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sysdep.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sysdir.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sysdll.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sysfile.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sysfloat.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sysproc.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/syspwd.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/syssignal.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/systime.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/systty.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/syswait.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/syswindows.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/text.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/toolbar-common.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/toolbar.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/tooltalk.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ui-gtk.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/universe.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/window-impl.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/window.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/winslots.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xgccache.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xintrinsic.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xintrinsicp.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmmanagerp.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmprimitivep.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmu.h
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/make-docfile
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/mmencode
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/movemail
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/profile
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/rcs2log
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/sorted-doc
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/vcdiff
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/wakeup
+lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/yow
 lib/${EMACSVER}/etc/BETA
 lib/${EMACSVER}/etc/CHARSETS
 lib/${EMACSVER}/etc/CODING-STANDARDS
 lib/${EMACSVER}/etc/CODINGS
 lib/${EMACSVER}/etc/COPYING
 lib/${EMACSVER}/etc/COPYING.LIB
+lib/${EMACSVER}/etc/ChangeLog
 lib/${EMACSVER}/etc/DEBUG
 lib/${EMACSVER}/etc/DISTRIB
 lib/${EMACSVER}/etc/Emacs.ad
@@ -41,16 +426,21 @@ lib/${EMACSVER}/etc/README.OO-BROWSER
 lib/${EMACSVER}/etc/SERVICE
 lib/${EMACSVER}/etc/TERMS
 lib/${EMACSVER}/etc/TUTORIAL
+lib/${EMACSVER}/etc/TUTORIAL.cs
 lib/${EMACSVER}/etc/TUTORIAL.de
+lib/${EMACSVER}/etc/TUTORIAL.es
 lib/${EMACSVER}/etc/TUTORIAL.fr
 lib/${EMACSVER}/etc/TUTORIAL.hr
 lib/${EMACSVER}/etc/TUTORIAL.ja
 lib/${EMACSVER}/etc/TUTORIAL.ko
+lib/${EMACSVER}/etc/TUTORIAL.nl
 lib/${EMACSVER}/etc/TUTORIAL.no
 lib/${EMACSVER}/etc/TUTORIAL.pl
 lib/${EMACSVER}/etc/TUTORIAL.ro
 lib/${EMACSVER}/etc/TUTORIAL.ru
 lib/${EMACSVER}/etc/TUTORIAL.se
+lib/${EMACSVER}/etc/TUTORIAL.sk
+lib/${EMACSVER}/etc/TUTORIAL.sl
 lib/${EMACSVER}/etc/TUTORIAL.th
 lib/${EMACSVER}/etc/VEGETABLES
 lib/${EMACSVER}/etc/XKeysymDB
@@ -128,8 +518,8 @@ lib/${EMACSVER}/etc/idd/drop
 lib/${EMACSVER}/etc/idd/dropmsk
 lib/${EMACSVER}/etc/ms-kermit
 lib/${EMACSVER}/etc/ms-kermit-7bit
-lib/${EMACSVER}/etc/package-index.LATEST.pgp
 lib/${EMACSVER}/etc/package-index.LATEST.gpg
+lib/${EMACSVER}/etc/package-index.LATEST.pgp
 lib/${EMACSVER}/etc/photos/adrian.png
 lib/${EMACSVER}/etc/photos/adrianm.png
 lib/${EMACSVER}/etc/photos/ajc.png
@@ -379,6 +769,93 @@ lib/${EMACSVER}/etc/toolbar/workshop-cap-xx.xpm
 lib/${EMACSVER}/etc/toolbar/workshop-up.xpm
 lib/${EMACSVER}/etc/toolbar/workshop-xx.xpm
 lib/${EMACSVER}/etc/trash.xpm
+lib/${EMACSVER}/etc/unicode/README
+lib/${EMACSVER}/etc/unicode/ibm/glibc-BIG5-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-EUC_CN-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-EUC_JP-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-EUC_KR-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-EUC_TW-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_1-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_10-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_11-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_13-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_14-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_15-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_2-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_3-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_4-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_5-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_6-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_7-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_8-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-ISO_8859_9-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-JOHAB-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-KOI8_R-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-KOI8_U-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-KOI_8-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-SJIS-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/ibm/glibc-TIS_620-2.1.2.ucm
+lib/${EMACSVER}/etc/unicode/mule-ucs/README
+lib/${EMACSVER}/etc/unicode/mule-ucs/chinese-cns11643-1.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/chinese-cns11643-2.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/chinese-cns11643-3.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/chinese-cns11643-4.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/chinese-cns11643-5.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/chinese-cns11643-6.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/chinese-cns11643-7.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/chinese-sisheng.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/ethiopic.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/indian-is13194.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/ipa.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/japanese-jisx0213-1.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/japanese-jisx0213-2.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/thai-tis620.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/tibetan.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/vietnamese-viscii-lower.txt
+lib/${EMACSVER}/etc/unicode/mule-ucs/vietnamese-viscii-upper.txt
+lib/${EMACSVER}/etc/unicode/other/lao.txt
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-1.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-10.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-13.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-14.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-15.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-16.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-2.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-3.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-4.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-5.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-6.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-7.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-8.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/8859-9.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/BIG5.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CNS11643.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP1250.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP1251.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP1252.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP1253.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP1254.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP1255.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP1256.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP1257.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP1258.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP874.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP932.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP936.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP949.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/CP950.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/GB12345.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/GB2312.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/HANGUL.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/JIS0201.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/JIS0208.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/JIS0212.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/JOHAB.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/KOI8-R.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/KSC5601.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/KSX1001.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/OLD5601.TXT
+lib/${EMACSVER}/etc/unicode/unicode-consortium/SHIFTJIS.TXT
 lib/${EMACSVER}/etc/xemacs-beta.xpm
 lib/${EMACSVER}/etc/xemacs-enhanced.png
 lib/${EMACSVER}/etc/xemacs-fe.sh
@@ -389,373 +866,6 @@ lib/${EMACSVER}/etc/xemacs-icon3.xpm
 lib/${EMACSVER}/etc/xemacs.1
 lib/${EMACSVER}/etc/xemacs.xbm
 lib/${EMACSVER}/etc/xemacs.xpm
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/DOC
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/add-big-package.sh
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/config.values
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/cvtmail
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/digest-doc
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/fakemail
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/gnuserv
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/gzip-el.sh
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/hexl
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/Emacs.ad.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/EmacsFrame.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/EmacsFrameP.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/EmacsManager.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/EmacsManagerP.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/EmacsShell.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/EmacsShellP.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ExternalClient.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ExternalClientP.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ExternalShell.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ExternalShellP.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/backtrace.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/balloon_help.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/bitmaps.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/blocktype.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/broken-sun.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/buffer.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/bufslots.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/bytecode.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/casetab.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/chartab.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/cm.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/commands.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/config.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/conslots.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-gtk.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-msw.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-stream.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-tty.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console-x.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/console.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/database.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/debug.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/device.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/devslots.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/dragdrop.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/dumper.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/eldap.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/elhash.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/emodules.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/events-mod.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/events.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/extents.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/extw-Xlib.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/extw-Xt.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/faces.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/file-coding.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/frame.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/frameslots.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gccache-gtk.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/general-slots.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/getpagesize.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gifrlib.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/glyphs-gtk.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/glyphs-msw.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/glyphs-x.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/glyphs.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gpmevent.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gtk-xemacs.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gui-gtk.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gui-x.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gui.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/gutter.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/hash.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/imgproc.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/insdel.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/iso-wide.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/keymap.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/libsst.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/libst.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/line-number.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/lisp-disunion.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/lisp-union.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/lisp.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/lrecord.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/lstream.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/7300.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/README
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/acorn.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/alliant-2800.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/alliant.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/alliant1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/alliant4.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/alpha.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/altos.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/amdahl.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/apollo.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/arm.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/att3b.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/aviion.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/celerity.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/clipper.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/cnvrgnt.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/convex.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/cydra5.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/delta.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/delta88k.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/dpx2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/dual.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/elxsi.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ews4800r.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/gec63.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/gould-np1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/gould.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/hp300bsd.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/hp800.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/hp9000s300.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/i860.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ibm370aix.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ibmps2-aix.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ibmrs6000.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ibmrt-aix.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ibmrt.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/intel386.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/iris4d.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/iris5d.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/iris6d.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/irist.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/is386.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/isi-ov.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/luna88k.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/m68k.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/masscomp.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/mega68.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/mg1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/mips-nec.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/mips-siemens.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/mips.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/mips4.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ncr386.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/news-risc.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/news.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/next.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/nh3000.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/nh4000.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ns16000.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ns32000.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/nu.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/orion.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/orion105.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/paragon.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/pfa50.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/plexus.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/pmax.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/powerpc.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/pyramid.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/pyrmips.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sequent-ptx.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sequent.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sgi-challenge.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sgi3000.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sparc.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sps7.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/stride.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun3-68881.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun3-fpa.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun3-soft.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun3.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/sun386.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/symmetry.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tad68k.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tahoe.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tandem-s2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/targon31.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tek4300.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tekxd88.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/template.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tower32.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/tower32v3.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/ustation.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/vax.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/wicat.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/windowsnt.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m/xps100.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/macros.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/mem-limits.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/menubar-msw.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/menubar.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/miscplay.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/mule-ccl.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/mule-charset.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ndir.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/nt.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ntheap.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-gtk.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-msw.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-tty.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects-x.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/objects.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/offix-cursors.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/offix-types.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/offix.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/opaque.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/paths.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/postgresql.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/process.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/procimpl.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/rangetab.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/redisplay.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/regex.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/3700.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/386-ix.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/386bsd.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/README
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/aix3-1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/aix3-2-5.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/aix3-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/aix4-1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/aix4-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/aix4.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/alliant-2800.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/alliant.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/altos.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/amdahl.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsd386.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsd4-1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsd4-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsd4-3.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsdos2-1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsdos2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsdos3.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/bsdos4.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/cxux.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/cxux7.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/cygwin32.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/darwin.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/decosf1-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/decosf1-3.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/decosf3-1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/decosf3-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/decosf4-0.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/dgux.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/dgux5-4r2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/dgux5-4r3.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/dgux5-4r4.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/domain.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/esix.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/esix5r4.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/ewsux5r4.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/freebsd.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/gnu.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux10-shr.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux10.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux11-shr.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux11.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux8-shr.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux8.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux9-shr.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux9-x11r4.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux9.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/hpux9shxr4.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/iris3-5.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/iris3-6.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix3-3.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix4-0.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix5-0.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix5-1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix5-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix5-3.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/irix6-0.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/isc2-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/isc3-0.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/isc4-0.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/isc4-1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/linux.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/mach-bsd4-3.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/mingw32.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/netbsd.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/newsos5.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/nextstep.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/openbsd.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/osf1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/ptx.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/riscix1-1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/riscix1-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/riscos5.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/rtu.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sco4.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sco5-shr.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sco5.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sco7.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sol2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-0-shr.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-0.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-2-shr.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-3-shr.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-3.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-4-shr.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-4.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1-shr.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/sunos4-1.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/template.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/ultrix.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/ultrix4-3.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/umax.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/umips.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/unipl5-0.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/unipl5-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/usg5-0.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/usg5-2-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/usg5-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/usg5-3.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/usg5-4-2.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/usg5-4.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/windowsnt.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/s/xenix.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/scrollbar-gtk.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/scrollbar-msw.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/scrollbar-x.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/scrollbar.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/select-common.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/select.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sheap-adjust.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sound.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/specifier.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/symeval.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/symsinit.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/syntax.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/syscommctrl.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sysdep.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sysdir.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sysdll.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sysfile.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sysfloat.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/sysproc.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/syspwd.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/syssignal.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/systime.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/systty.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/syswait.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/syswindows.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/toolbar.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/toolbar-common.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/tooltalk.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/ui-gtk.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/universe.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/window.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/winslots.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xgccache.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xintrinsic.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xintrinsicp.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmmanagerp.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmprimitivep.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/xmu.h
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/make-docfile
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/mmencode
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/movemail
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/profile
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/rcs2log
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/sorted-doc
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/vcdiff
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/wakeup
-lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/yow
 lib/${EMACSVER}/info/cl.info
 lib/${EMACSVER}/info/cl.info-1
 lib/${EMACSVER}/info/cl.info-2
@@ -770,6 +880,7 @@ lib/${EMACSVER}/info/external-widget.info
 lib/${EMACSVER}/info/info.info
 lib/${EMACSVER}/info/internals.info
 lib/${EMACSVER}/info/internals.info-1
+lib/${EMACSVER}/info/internals.info-10
 lib/${EMACSVER}/info/internals.info-2
 lib/${EMACSVER}/info/internals.info-3
 lib/${EMACSVER}/info/internals.info-4
@@ -887,7 +998,6 @@ lib/${EMACSVER}/info/xemacs.info-6
 lib/${EMACSVER}/info/xemacs.info-7
 lib/${EMACSVER}/info/xemacs.info-8
 lib/${EMACSVER}/info/xemacs.info-9
-lib/${EMACSVER}/lisp/.cvsignore
 lib/${EMACSVER}/lisp/ChangeLog
 lib/${EMACSVER}/lisp/ChangeLog.1
 lib/${EMACSVER}/lisp/ChangeLog.GTK
@@ -948,6 +1058,8 @@ lib/${EMACSVER}/lisp/code-cmds.el
 lib/${EMACSVER}/lisp/code-cmds.elc
 lib/${EMACSVER}/lisp/code-files.el
 lib/${EMACSVER}/lisp/code-files.elc
+lib/${EMACSVER}/lisp/code-init.el
+lib/${EMACSVER}/lisp/code-init.elc
 lib/${EMACSVER}/lisp/code-process.el
 lib/${EMACSVER}/lisp/code-process.elc
 lib/${EMACSVER}/lisp/coding.el
@@ -978,6 +1090,8 @@ lib/${EMACSVER}/lisp/derived.el
 lib/${EMACSVER}/lisp/derived.elc
 lib/${EMACSVER}/lisp/device.el
 lib/${EMACSVER}/lisp/device.elc
+lib/${EMACSVER}/lisp/diagnose.el
+lib/${EMACSVER}/lisp/diagnose.elc
 lib/${EMACSVER}/lisp/dialog-gtk.el
 lib/${EMACSVER}/lisp/dialog-gtk.elc
 lib/${EMACSVER}/lisp/dialog-items.el
@@ -1003,8 +1117,6 @@ lib/${EMACSVER}/lisp/extents.el
 lib/${EMACSVER}/lisp/extents.elc
 lib/${EMACSVER}/lisp/faces.el
 lib/${EMACSVER}/lisp/faces.elc
-lib/${EMACSVER}/lisp/files-nomule.el
-lib/${EMACSVER}/lisp/files-nomule.elc
 lib/${EMACSVER}/lisp/files.el
 lib/${EMACSVER}/lisp/files.elc
 lib/${EMACSVER}/lisp/fill.el
@@ -1089,8 +1201,6 @@ lib/${EMACSVER}/lisp/hash-table.el
 lib/${EMACSVER}/lisp/hash-table.elc
 lib/${EMACSVER}/lisp/help-macro.el
 lib/${EMACSVER}/lisp/help-macro.elc
-lib/${EMACSVER}/lisp/help-nomule.el
-lib/${EMACSVER}/lisp/help-nomule.elc
 lib/${EMACSVER}/lisp/help.el
 lib/${EMACSVER}/lisp/help.elc
 lib/${EMACSVER}/lisp/hyper-apropos.el
@@ -1166,14 +1276,24 @@ lib/${EMACSVER}/lisp/mule/auto-autoloads.el
 lib/${EMACSVER}/lisp/mule/auto-autoloads.elc
 lib/${EMACSVER}/lisp/mule/canna-leim.el
 lib/${EMACSVER}/lisp/mule/canna-leim.elc
+lib/${EMACSVER}/lisp/mule/china-util.el
+lib/${EMACSVER}/lisp/mule/china-util.elc
 lib/${EMACSVER}/lisp/mule/chinese.el
 lib/${EMACSVER}/lisp/mule/chinese.elc
 lib/${EMACSVER}/lisp/mule/custom-load.el
 lib/${EMACSVER}/lisp/mule/custom-load.elc
+lib/${EMACSVER}/lisp/mule/cyril-util.el
+lib/${EMACSVER}/lisp/mule/cyril-util.elc
 lib/${EMACSVER}/lisp/mule/cyrillic.el
 lib/${EMACSVER}/lisp/mule/cyrillic.elc
+lib/${EMACSVER}/lisp/mule/devan-util.el
+lib/${EMACSVER}/lisp/mule/devan-util.elc
+lib/${EMACSVER}/lisp/mule/devanagari.el
+lib/${EMACSVER}/lisp/mule/devanagari.elc
 lib/${EMACSVER}/lisp/mule/english.el
 lib/${EMACSVER}/lisp/mule/english.elc
+lib/${EMACSVER}/lisp/mule/ethio-util.el
+lib/${EMACSVER}/lisp/mule/ethio-util.elc
 lib/${EMACSVER}/lisp/mule/ethiopic.el
 lib/${EMACSVER}/lisp/mule/ethiopic.elc
 lib/${EMACSVER}/lisp/mule/european.el
@@ -1182,12 +1302,22 @@ lib/${EMACSVER}/lisp/mule/greek.el
 lib/${EMACSVER}/lisp/mule/greek.elc
 lib/${EMACSVER}/lisp/mule/hebrew.el
 lib/${EMACSVER}/lisp/mule/hebrew.elc
+lib/${EMACSVER}/lisp/mule/indian.el
+lib/${EMACSVER}/lisp/mule/indian.elc
+lib/${EMACSVER}/lisp/mule/japan-util.el
+lib/${EMACSVER}/lisp/mule/japan-util.elc
 lib/${EMACSVER}/lisp/mule/japanese.el
 lib/${EMACSVER}/lisp/mule/japanese.elc
 lib/${EMACSVER}/lisp/mule/kinsoku.el
 lib/${EMACSVER}/lisp/mule/kinsoku.elc
+lib/${EMACSVER}/lisp/mule/korea-util.el
+lib/${EMACSVER}/lisp/mule/korea-util.elc
 lib/${EMACSVER}/lisp/mule/korean.el
 lib/${EMACSVER}/lisp/mule/korean.elc
+lib/${EMACSVER}/lisp/mule/lao-util.el
+lib/${EMACSVER}/lisp/mule/lao-util.elc
+lib/${EMACSVER}/lisp/mule/lao.el
+lib/${EMACSVER}/lisp/mule/lao.elc
 lib/${EMACSVER}/lisp/mule/latin.el
 lib/${EMACSVER}/lisp/mule/latin.elc
 lib/${EMACSVER}/lisp/mule/misc-lang.el
@@ -1202,22 +1332,31 @@ lib/${EMACSVER}/lisp/mule/mule-cmds.el
 lib/${EMACSVER}/lisp/mule/mule-cmds.elc
 lib/${EMACSVER}/lisp/mule/mule-coding.el
 lib/${EMACSVER}/lisp/mule/mule-coding.elc
-lib/${EMACSVER}/lisp/mule/mule-help.el
-lib/${EMACSVER}/lisp/mule/mule-help.elc
-lib/${EMACSVER}/lisp/mule/mule-init.el
-lib/${EMACSVER}/lisp/mule/mule-init.elc
-lib/${EMACSVER}/lisp/mule/mule-misc.el
-lib/${EMACSVER}/lisp/mule/mule-misc.elc
+lib/${EMACSVER}/lisp/mule/mule-composite-stub.el
+lib/${EMACSVER}/lisp/mule/mule-composite-stub.elc
+lib/${EMACSVER}/lisp/mule/mule-composite.el
+lib/${EMACSVER}/lisp/mule/mule-composite.elc
+lib/${EMACSVER}/lisp/mule/mule-locale.txt
+lib/${EMACSVER}/lisp/mule/mule-msw-init-late.el
+lib/${EMACSVER}/lisp/mule/mule-msw-init-late.elc
+lib/${EMACSVER}/lisp/mule/mule-msw-init.el
+lib/${EMACSVER}/lisp/mule/mule-msw-init.elc
 lib/${EMACSVER}/lisp/mule/mule-tty-init.el
 lib/${EMACSVER}/lisp/mule/mule-tty-init.elc
 lib/${EMACSVER}/lisp/mule/mule-x-init.el
 lib/${EMACSVER}/lisp/mule/mule-x-init.elc
-lib/${EMACSVER}/lisp/mule/thai-xtis-chars.el
-lib/${EMACSVER}/lisp/mule/thai-xtis-chars.elc
+lib/${EMACSVER}/lisp/mule/thai-util.el
+lib/${EMACSVER}/lisp/mule/thai-util.elc
 lib/${EMACSVER}/lisp/mule/thai-xtis.el
 lib/${EMACSVER}/lisp/mule/thai-xtis.elc
-lib/${EMACSVER}/lisp/mule/viet-chars.el
-lib/${EMACSVER}/lisp/mule/viet-chars.elc
+lib/${EMACSVER}/lisp/mule/thai.el
+lib/${EMACSVER}/lisp/mule/thai.elc
+lib/${EMACSVER}/lisp/mule/tibet-util.el
+lib/${EMACSVER}/lisp/mule/tibet-util.elc
+lib/${EMACSVER}/lisp/mule/tibetan.el
+lib/${EMACSVER}/lisp/mule/tibetan.elc
+lib/${EMACSVER}/lisp/mule/viet-util.el
+lib/${EMACSVER}/lisp/mule/viet-util.elc
 lib/${EMACSVER}/lisp/mule/vietnamese.el
 lib/${EMACSVER}/lisp/mule/vietnamese.elc
 lib/${EMACSVER}/lisp/multicast.el
@@ -1247,6 +1386,8 @@ lib/${EMACSVER}/lisp/paragraphs.elc
 lib/${EMACSVER}/lisp/paths.el
 lib/${EMACSVER}/lisp/picture.el
 lib/${EMACSVER}/lisp/picture.elc
+lib/${EMACSVER}/lisp/post-gc.el
+lib/${EMACSVER}/lisp/post-gc.elc
 lib/${EMACSVER}/lisp/printer.el
 lib/${EMACSVER}/lisp/printer.elc
 lib/${EMACSVER}/lisp/process.el
@@ -1257,6 +1398,8 @@ lib/${EMACSVER}/lisp/register.el
 lib/${EMACSVER}/lisp/register.elc
 lib/${EMACSVER}/lisp/replace.el
 lib/${EMACSVER}/lisp/replace.elc
+lib/${EMACSVER}/lisp/resize-minibuffer.el
+lib/${EMACSVER}/lisp/resize-minibuffer.elc
 lib/${EMACSVER}/lisp/scrollbar.el
 lib/${EMACSVER}/lisp/scrollbar.elc
 lib/${EMACSVER}/lisp/select.el
@@ -1349,6 +1492,8 @@ lib/${EMACSVER}/lisp/tty-init.el
 lib/${EMACSVER}/lisp/tty-init.elc
 lib/${EMACSVER}/lisp/undo-stack.el
 lib/${EMACSVER}/lisp/undo-stack.elc
+lib/${EMACSVER}/lisp/unicode.el
+lib/${EMACSVER}/lisp/unicode.elc
 lib/${EMACSVER}/lisp/update-elc-2.el
 lib/${EMACSVER}/lisp/update-elc.el
 lib/${EMACSVER}/lisp/userlock.el
@@ -1393,119 +1538,30 @@ lib/${EMACSVER}/lisp/x-win-sun.el
 lib/${EMACSVER}/lisp/x-win-sun.elc
 lib/${EMACSVER}/lisp/x-win-xfree86.el
 lib/${EMACSVER}/lisp/x-win-xfree86.elc
-man/man1/xemacs-ctags.1
-man/man1/xemacs-etags.1
 man/man1/gnuattach.1
 man/man1/gnuclient.1
 man/man1/gnudoit.1
 man/man1/gnuserv.1
+man/man1/xemacs-ctags.1
+man/man1/xemacs-etags.1
 man/man1/xemacs.1
-@dirrm lib/${EMACSVER}/etc/app-defaults/fr
-@dirrm lib/${EMACSVER}/etc/app-defaults/ja
-@dirrm lib/${EMACSVER}/etc/app-defaults
-@dirrm lib/${EMACSVER}/etc/e
-@dirrm lib/${EMACSVER}/etc/auctex/style
-@dirrm lib/${EMACSVER}/etc/auctex
 @dirrm lib/${EMACSVER}/etc/custom/example-themes
 @dirrm lib/${EMACSVER}/etc/custom
 @dirrm lib/${EMACSVER}/etc/eos
-@dirrm lib/${EMACSVER}/etc/frame-icon
-@dirrm lib/${EMACSVER}/etc/gnats
-@dirrm lib/${EMACSVER}/etc/gnus
-@dirrm lib/${EMACSVER}/etc/gnusrefcard
 @dirrm lib/${EMACSVER}/etc/idd
-@dirrm lib/${EMACSVER}/etc/message
-@dirrm lib/${EMACSVER}/etc/mine
-@dirrm lib/${EMACSVER}/etc/mule
-@dirrm lib/${EMACSVER}/etc/ns
 @dirrm lib/${EMACSVER}/etc/photos
-@dirrm lib/${EMACSVER}/etc/sgml/ISO_8879=1986/entities
-@dirrm lib/${EMACSVER}/etc/sgml/ISO_8879=1986
-@dirrm lib/${EMACSVER}/etc/sgml/cdtd
-@dirrm lib/${EMACSVER}/etc/sgml
-@dirrm lib/${EMACSVER}/etc/skk
-@dirrm lib/${EMACSVER}/etc/smilies
-@dirrm lib/${EMACSVER}/etc/sounds
 @dirrm lib/${EMACSVER}/etc/sparcworks
 @dirrm lib/${EMACSVER}/etc/tests/external-widget
 @dirrm lib/${EMACSVER}/etc/tests
-@dirrm lib/${EMACSVER}/etc/time
 @dirrm lib/${EMACSVER}/etc/toolbar
 @dirrm lib/${EMACSVER}/etc/unicode/ibm
+@dirrm lib/${EMACSVER}/etc/unicode/mule-ucs
+@dirrm lib/${EMACSVER}/etc/unicode/other
 @dirrm lib/${EMACSVER}/etc/unicode/unicode-consortium
 @dirrm lib/${EMACSVER}/etc/unicode
-@dirrm lib/${EMACSVER}/etc/vm
-@dirrm lib/${EMACSVER}/etc/w3
 @dirrm lib/${EMACSVER}/etc
-@dirrm lib/${EMACSVER}/lisp/apel
-@dirrm lib/${EMACSVER}/lisp/cl
-@dirrm lib/${EMACSVER}/lisp/efs
-@dirrm lib/${EMACSVER}/lisp/egg
-@dirrm lib/${EMACSVER}/lisp/eos
-@dirrm lib/${EMACSVER}/lisp/iso
-@dirrm lib/${EMACSVER}/lisp/auctex/style
-@dirrm lib/${EMACSVER}/lisp/auctex
-@dirrm lib/${EMACSVER}/lisp/bytecomp
-@dirrm lib/${EMACSVER}/lisp/calendar
-@dirrm lib/${EMACSVER}/lisp/cc-mode
-@dirrm lib/${EMACSVER}/lisp/comint
-@dirrm lib/${EMACSVER}/lisp/its
-@dirrm lib/${EMACSVER}/lisp/custom
-@dirrm lib/${EMACSVER}/lisp/dired
-@dirrm lib/${EMACSVER}/lisp/edebug
-@dirrm lib/${EMACSVER}/lisp/ediff
-@dirrm lib/${EMACSVER}/lisp/electric
-@dirrm lib/${EMACSVER}/lisp/emulators
-@dirrm lib/${EMACSVER}/lisp/energize
-@dirrm lib/${EMACSVER}/lisp/epoch
-@dirrm lib/${EMACSVER}/lisp/eterm
-@dirrm lib/${EMACSVER}/lisp/games
-@dirrm lib/${EMACSVER}/lisp/gnats
-@dirrm lib/${EMACSVER}/lisp/gnus
-@dirrm lib/${EMACSVER}/lisp/hm--html-menus
-@dirrm lib/${EMACSVER}/lisp/hyperbole/kotl
-@dirrm lib/${EMACSVER}/lisp/hyperbole
-@dirrm lib/${EMACSVER}/lisp/ilisp
-@dirrm lib/${EMACSVER}/lisp/language
-@dirrm lib/${EMACSVER}/lisp/leim/quail
-@dirrm lib/${EMACSVER}/lisp/leim
-@dirrm lib/${EMACSVER}/lisp/locale/ja
-@dirrm lib/${EMACSVER}/lisp/locale
-@dirrm lib/${EMACSVER}/lisp/mailcrypt
-@dirrm lib/${EMACSVER}/lisp/mel
-@dirrm lib/${EMACSVER}/lisp/mh-e
-@dirrm lib/${EMACSVER}/lisp/modes
-@dirrm lib/${EMACSVER}/lisp/mu
 @dirrm lib/${EMACSVER}/lisp/mule
-@dirrm lib/${EMACSVER}/lisp/ns
-@dirrm lib/${EMACSVER}/lisp/oobr/tree-nx/English.lproj/DocWindow.nib
-@dirrm lib/${EMACSVER}/lisp/oobr/tree-nx/English.lproj/InfoPanel.nib
-@dirrm lib/${EMACSVER}/lisp/oobr/tree-nx/English.lproj/TreeView.nib
-@dirrm lib/${EMACSVER}/lisp/oobr/tree-nx/English.lproj
-@dirrm lib/${EMACSVER}/lisp/oobr/tree-nx
-@dirrm lib/${EMACSVER}/lisp/oobr/tree-x
-@dirrm lib/${EMACSVER}/lisp/oobr
-@dirrm lib/${EMACSVER}/lisp/packages
-@dirrm lib/${EMACSVER}/lisp/pcl-cvs
-@dirrm lib/${EMACSVER}/lisp/prim
-@dirrm lib/${EMACSVER}/lisp/psgml
-@dirrm lib/${EMACSVER}/lisp/quail
-@dirrm lib/${EMACSVER}/lisp/rmail
-@dirrm lib/${EMACSVER}/lisp/skk
-@dirrm lib/${EMACSVER}/lisp/sunpro
 @dirrm lib/${EMACSVER}/lisp/term
-@dirrm lib/${EMACSVER}/lisp/tl
-@dirrm lib/${EMACSVER}/lisp/tm
-@dirrm lib/${EMACSVER}/lisp/tooltalk
-@dirrm lib/${EMACSVER}/lisp/ui
-@dirrm lib/${EMACSVER}/lisp/url
-@dirrm lib/${EMACSVER}/lisp/utils
-@dirrm lib/${EMACSVER}/lisp/viper
-@dirrm lib/${EMACSVER}/lisp/vm
-@dirrm lib/${EMACSVER}/lisp/vms
-@dirrm lib/${EMACSVER}/lisp/w3
-@dirrm lib/${EMACSVER}/lisp/w32
-@dirrm lib/${EMACSVER}/lisp/x11
 @dirrm lib/${EMACSVER}/lisp
 @dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/modules
 @dirrm lib/${EMACSVER}/${MACHINE_GNU_PLATFORM}/include/m
