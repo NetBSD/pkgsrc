@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/04/15 20:39:43 tron Exp $
+# $NetBSD: Makefile,v 1.19 1999/08/25 13:37:35 agc Exp $
 #
 
 DISTNAME=		xfig.3.2.2
@@ -13,9 +13,13 @@ HOMEPAGE=		http://epb1.lbl.gov/BVSmith/xfig/
 DEPENDS+=		transfig-3.2.1:../../print/transfig
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		Xaw3d-1.5:../../x11/Xaw3d
 
 USE_IMAKE=		yes
+USE_XAW=		yes
+
+.include "../../mk/bsd.prefs.mk"
+
+XAW_TYPE?=		3d
 
 post-install:
 	@${MKDIR} ${X11BASE}/share/examples/xfig

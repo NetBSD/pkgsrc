@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.323 1999/08/24 19:03:08 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.324 1999/08/25 13:37:34 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -122,6 +122,15 @@ LIBTOOL=		${LOCALBASE}/bin/pkglibtool-${OBJECT_FMT}-1.2p2
 BUILD_DEPENDS+=		${LIBTOOL}:${PKGSRCDIR}/pkgtools/pkglibtool
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
+.endif
+
+.if defined(USE_XAW)
+XAW_TYPE?=		standard
+.if ${XAW_TYPE} == "xpm"
+DEPENDS+=		Xaw-Xpm-1.1:${PKGSRCDIR}/x11/Xaw-Xpm
+.elif ${XAW_TYPE} == "3d"
+DEPENDS+=		Xaw3d-1.5:${PKGSRCDIR}/x11/Xaw3d
+.endif
 .endif
 
 # Don't change these!!!  These names are built into the _TARGET_USE macro,

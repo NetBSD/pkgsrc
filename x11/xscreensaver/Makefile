@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 1999/07/23 16:01:27 frueauf Exp $
+# $NetBSD: Makefile,v 1.29 1999/08/25 13:37:37 agc Exp $
 #
 
 DISTNAME=	xscreensaver-3.17
@@ -9,7 +9,6 @@ MAINTAINER=	frueauf@netbsd.org
 HOMEPAGE=	http://www.jwz.org/xscreensaver/
 
 DEPENDS=	xpm-3.4k:../../graphics/xpm	\
-		Xaw3d-1.5:../../x11/Xaw3d	\
 		Mesa-3.0:../../graphics/Mesa	\
 		gtk+-1.2.2:../../x11/gtk
 
@@ -21,5 +20,10 @@ CONFIGURE_ENV+=	INSTALL=/usr/bin/install
 USE_X11BASE=	yes
 USE_MOTIF=	yes
 USE_PERL5=	yes
+USE_XAW=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+XAW_TYPE?=	3d
 
 .include "../../mk/bsd.pkg.mk"
