@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/12/12 00:57:15 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2002/12/12 01:56:23 grant Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -26,8 +26,19 @@ CONFIGURE_ARGS+=	--without-included-gettext
 INFO_FILES=		gettext.info
 TEXINFO_OVERRIDE=	YES
 
+PLIST_SRC=		${WRKDIR}/PLIST
+OPTIONAL_FILES+=	share/gettext/gettext.jar
+
 post-install:
 	cd ${WRKSRC}/intl; ${MAKE_PROGRAM} install-data
+	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	@(							\
+	for FILE in ${OPTIONAL_FILES}; do			\
+	  ${TEST} ! -e ${PREFIX}/$$FILE || ${ECHO} $$FILE;	\
+	done;							\
+	${ECHO} "@dirrm share/gettext";				\
+	) >>${PLIST_SRC}
+
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/texinfo.mk"
