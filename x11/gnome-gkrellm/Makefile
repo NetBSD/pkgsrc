@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:56:27 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/03 18:49:56 reed Exp $
 
 DISTNAME=	gkrellm-gnome
 PKGNAME=	gnome-gkrellm-0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	gnome sysutils
 MASTER_SITES=	http://web.wt.net/~billw/gkrellm/Plugins/
 

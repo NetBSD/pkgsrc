@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/12/13 00:45:22 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2004/01/03 18:49:36 reed Exp $
 
 .if !defined(JPILOT_BUILDLINK2_MK)
 JPILOT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		jpilot
-BUILDLINK_DEPENDS.jpilot?=	jpilot>=0.99.5nb3
+BUILDLINK_DEPENDS.jpilot?=	jpilot>=0.99.5nb4
 BUILDLINK_PKGSRCDIR.jpilot?=	../../comms/jpilot
 BUILDLINK_DEPMETHOD.jpilot?=	build
 

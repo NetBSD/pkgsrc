@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2003/12/08 14:41:40 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/01/03 18:49:47 reed Exp $
 #
 # This Makefile fragment is included by packages that use koffice.
 #
@@ -9,7 +9,7 @@
 KOFFICE_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			koffice
-BUILDLINK_DEPENDS.koffice?=		koffice>=1.2.1nb6
+BUILDLINK_DEPENDS.koffice?=		koffice>=1.2.1nb7
 BUILDLINK_PKGSRCDIR.koffice?=		../../misc/koffice
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.koffice=koffice

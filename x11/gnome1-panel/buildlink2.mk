@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/11/12 01:31:52 salo Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/01/03 18:49:56 reed Exp $
 #
 # This Makefile fragment is included by packages that use gnome-panel.
 #
@@ -9,7 +9,7 @@
 GNOME_PANEL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			gnome-panel
-BUILDLINK_DEPENDS.gnome-panel?=		gnome-panel>=1.4.2nb3
+BUILDLINK_DEPENDS.gnome-panel?=		gnome-panel>=1.4.2nb5
 BUILDLINK_PKGSRCDIR.gnome-panel?=		../../x11/gnome1-panel
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gnome-panel=gnome-panel

@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/12/13 00:45:24 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2004/01/03 18:49:43 reed Exp $
 #
 
 .if !defined(LIBEXIF_GTK_BUILDLINK2_MK)
 LIBEXIF_GTK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libexif-gtk
-BUILDLINK_DEPENDS.libexif-gtk?=		libexif-gtk>=0.3.3nb6
+BUILDLINK_DEPENDS.libexif-gtk?=		libexif-gtk>=0.3.3nb7
 BUILDLINK_PKGSRCDIR.libexif-gtk?=	../../graphics/libexif-gtk
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libexif-gtk=libexif-gtk

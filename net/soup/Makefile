@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2003/11/12 03:39:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/03 18:49:51 reed Exp $
 #
 
 DISTNAME=		soup-0.7.10
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		net gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/soup/0.7/}
 EXTRACT_SUFX=		.tar.bz2

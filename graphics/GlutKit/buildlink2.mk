@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/07/13 13:51:56 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2004/01/03 18:49:41 reed Exp $
 #
 # This Makefile fragment is included by packages that use GlutKit.
 #
@@ -9,7 +9,7 @@
 GLUTKIT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			GlutKit
-BUILDLINK_DEPENDS.GlutKit?=		GlutKit>=0.3.1r2nb2
+BUILDLINK_DEPENDS.GlutKit?=		GlutKit>=0.3.1r2nb4
 BUILDLINK_PKGSRCDIR.GlutKit?=		../../graphics/GlutKit
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.GlutKit=GlutKit
