@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1093 2003/12/02 22:37:43 recht Exp $
+$NetBSD: TODO,v 1.1094 2003/12/02 23:26:38 cube Exp $
 
 Suggested new packages
 ======================
@@ -333,7 +333,6 @@ Suggested package updates
 	o nxtvepg-2.6.0
 	o oggenc-1.0.1
 	o ogle-0.9.2
-	o ogmtools-1.2
 	o openbox-3.0 [pkgsrc-wip]
 	o opencdk-0.5.3 [pkg/23322]
 	o openh323-1.11.2
