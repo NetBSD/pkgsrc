@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2000/10/22 20:01:48 tsarna Exp $
+# $NetBSD: Makefile,v 1.20 2000/12/05 15:04:32 drochner Exp $
 #
 
 DISTNAME=	BeOpen-Python-2.0
 PKGNAME=	python-2.0
 CATEGORIES=	lang
-MASTER_SITES=	http://www.pythonlabs.com/products/python2.0/downloads/
+MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0/
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/
