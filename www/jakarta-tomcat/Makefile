@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2002/06/19 09:10:00 abs Exp $
+# $NetBSD: Makefile,v 1.31 2002/10/10 01:01:12 jlam Exp $
 
 DISTNAME=	jakarta-tomcat-3.2.4-src
 PKGNAME=	jakarta-tomcat-3.2.4
@@ -18,7 +18,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 
 CLASSPATH:=	${LOCALBASE}/lib/java/servlet.jar:${LOCALBASE}/lib/jaxp.jar:${LOCALBASE}/lib/parser.jar:${CLASSPATH}
 MAKEFILE=	build.xml
-MAKE_ENV+=	JAVA_HOME=${JAVA_HOME} CLASSPATH=${CLASSPATH}
 ALL_TARGET=	main
 INSTALL_TARGET=	dist
 
@@ -27,7 +26,7 @@ INSTALL_FILE=		${WRKDIR}/INSTALL
 
 post-patch:
 	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		-e "s|@JAVA_HOME@|${JAVA_HOME}|g"			\
+		-e "s|@JAVA_HOME@|${PKG_JAVA_HOME}|g"			\
 		${WRKSRC}/src/etc/workers.properties > ${WRKSRC}/src/etc/workers.properties.tmp
 		${MV} ${WRKSRC}/src/etc/workers.properties.tmp ${WRKSRC}/src/etc/workers.properties
 	${RM} -f ${WRKSRC}/src/etc/workers.properties.orig
