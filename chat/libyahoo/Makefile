@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/20 09:51:43 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/21 06:59:15 jlam Exp $
 
 DISTNAME=	libyahoo-0.18.4
 CATEGORIES=	chat
@@ -12,5 +12,8 @@ USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/libyahoo-authors.h ${PREFIX}/include/libyahoo
 
 .include "../../mk/bsd.pkg.mk"
