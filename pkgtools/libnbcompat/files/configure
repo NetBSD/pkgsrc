@@ -5733,7 +5733,7 @@ done
 
 for ac_func in err fgetln fseeko getenv glob inet_ntop \
 		inet_pton lchflags lchmod lchown lutimes mkstemp setenv \
-		setprogname sl_init snprintf strdup strerror strlcat \
+		setmode setprogname sl_init snprintf strdup strerror strlcat \
 		strlcpy strptime strsep strtoll timegm usleep
 do
 as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
