@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:07 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/06/12 19:08:34 wiz Exp $
 
 .if !defined(LAPACK_BUILDLINK2_MK)
 LAPACK_BUILDLINK2_MK=	# defined
@@ -12,7 +12,7 @@ EVAL_PREFIX+=			BUILDLINK_PREFIX.lapack=lapack
 BUILDLINK_PREFIX.lapack_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.lapack=		lib/liblapack.*
 
-BUILDLINK_TARGETS==		lapack-buildlink
+BUILDLINK_TARGETS+=		lapack-buildlink
 
 lapack-buildlink: _BUILDLINK_USE
 
