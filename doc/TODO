@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3140 2005/02/28 00:44:39 wiz Exp $
+$NetBSD: TODO,v 1.3141 2005/02/28 04:54:20 ben Exp $
 
 Suggested new packages
 ======================
@@ -581,7 +581,6 @@ Suggested package updates
 	o ispell-russian-0.99f8
 	o ispman-1.2
 	o isync-1.0.0
-	o ivan-0.50
 	o ivtools-1.2.2
 	o ja-ptex-bin-3.1.8
 	o ja-ptex-share-2.2
