@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/13 21:51:08 jlam Exp $
+
+SHA1 (openpam-20040210.tar.gz) = 99967a06cba98736d8999bf31aec80592f4718b2
+Size (openpam-20040210.tar.gz) = 212523 bytes
+SHA1 (patch-aa) = a24f8ccd0da01358b4d1015fe54e21c4e78e659e
+SHA1 (patch-ab) = 9e5149c20b1ea0c0b937e7d90e5c6b609d5b4796
