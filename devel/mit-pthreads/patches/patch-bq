@@ -1,0 +1,12 @@
+diff -ur include/arpa/nameser.h include/arpa/nameser.h
+--- include/arpa/nameser.h	Tue May 30 07:33:39 1995
++++ include/arpa/nameser.h	Wed Nov  3 12:00:57 1999
+@@ -56,7 +56,7 @@
+ #ifndef _NAMESER_H_
+ #define	_NAMESER_H_
+ 
+-#include <endian.h>				
++#include <sys/endian.h>				
+ #include <sys/types.h>
+ #include <pthread/types.h>
+ 
