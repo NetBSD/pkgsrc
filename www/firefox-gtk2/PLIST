@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/20 08:03:42 taya Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/11/09 20:10:14 xtraeme Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -106,7 +106,6 @@ ${SUNOSLIB}lib/${MOZILLA}/libfreebl_hybrid_3.${SO_SUFFIX}
 lib/${MOZILLA}/LICENSE
 lib/${MOZILLA}/README.txt
 lib/${MOZILLA}/bloaturls.txt
-lib/${MOZILLA}/chrome/US.jar
 lib/${MOZILLA}/chrome/browser.jar
 lib/${MOZILLA}/chrome/chromelist.txt
 lib/${MOZILLA}/chrome/classic.jar
@@ -122,7 +121,6 @@ lib/${MOZILLA}/chrome/modern.jar
 lib/${MOZILLA}/chrome/pipnss.jar
 lib/${MOZILLA}/chrome/pippki.jar
 lib/${MOZILLA}/chrome/toolkit.jar
-lib/${MOZILLA}/chrome/venkman.jar
 lib/${MOZILLA}/components/accessibility-atk.xpt
 lib/${MOZILLA}/components/accessibility.xpt
 lib/${MOZILLA}/components/appshell.xpt
@@ -247,7 +245,6 @@ lib/${MOZILLA}/components/uconv.xpt
 lib/${MOZILLA}/components/unicharutil.xpt
 lib/${MOZILLA}/components/update.xpt
 lib/${MOZILLA}/components/uriloader.xpt
-lib/${MOZILLA}/components/venkman-service.js
 lib/${MOZILLA}/components/wallet.xpt
 lib/${MOZILLA}/components/walleteditor.xpt
 lib/${MOZILLA}/components/walletpreview.xpt
