@@ -1,36 +1,35 @@
-# $NetBSD: Makefile,v 1.3 2000/07/28 17:25:49 tsarna Exp $
+# $NetBSD: Makefile,v 1.4 2000/10/22 20:30:05 tsarna Exp $
 #
 
-DISTNAME=	Zope-2.2.0-src
-PKGNAME=	py-pcgi-2.2.0
+DISTNAME=	Zope-2.2.2-src
+PKGNAME=	py-pcgi-2.2.2
 CATEGORIES=	www
-MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.0/
+MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://starship.python.net/crew/jbauer/persistcgi/
 
-DEPENDS+=	python-1.5.2:../../lang/python
-
 HAS_CONFIGURE=	yes
-SITE_PKG=		lib/python1.5/site-packages
-PYTHON_LIBDIR=		${LOCALBASE}/${SITE_PKG}
 EXTRACT_ELEMENTS=	${DISTNAME}/pcgi
+
+ALL_TARGET=	all
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/pcgi
 
 post-build:
-	(cd ${WRKSRC}; ${LOCALBASE}/bin/python ${PREFIX}/lib/python1.5/compileall.py .)
-	(cd ${WRKSRC}; ${LOCALBASE}/bin/python -O ${PREFIX}/lib/python1.5/compileall.py .)
+	(cd ${WRKSRC}; ${PY_PROG} ${PY_LIBDIR}/compileall.py .)
+	(cd ${WRKSRC}; ${PY_PROG} -O ${PY_LIBDIR}/compileall.py .)
 	(cd ${WRKSRC}/Util; \
 		${SED} -e s,/usr/local,${PREFIX}, <pcgifile.py >pcgifile; \
 		${SED} -e s,/usr/local,${PREFIX}, <killpcgi.py >killpcgi )
 
 do-install:
-	${INSTALL_SCRIPT_DIR} ${PYTHON_LIBDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/pcgi_publisher.py* ${PYTHON_LIBDIR}
+	${INSTALL_SCRIPT_DIR} ${PY_SITEPKG}
+	${INSTALL_SCRIPT} ${WRKSRC}/pcgi_publisher.py* ${PY_SITEPKG}
 	${INSTALL_PROGRAM} ${WRKSRC}/pcgi-wrapper ${PREFIX}/libexec
 	${INSTALL_SCRIPT} ${WRKSRC}/Util/pcgifile ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/Util/killpcgi ${PREFIX}/bin
 
+.include "../../lang/python/Makefile.inc"
 .include "../../mk/bsd.pkg.mk"
