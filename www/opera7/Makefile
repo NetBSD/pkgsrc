@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:55:45 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/10/24 22:00:08 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION}
-PKGREVISION=	1
+PKGREVISION=	# empty
 CATEGORIES=	www
 MASTER_SITES=	http://www.panix.com/opera/files/linux/${OPERA_DIR}/ \
 		ftp://ftp.hu-berlin.de/pub/www/opera/linux/${OPERA_DIR}/ \
@@ -31,7 +31,7 @@ USE_BUILDLINK2=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 # A default so lintpkgsrc is happy
-OPERA_PKG_VERSION=	7.11
+OPERA_PKG_VERSION=	7.0
 
 .if (${MACHINE_ARCH} == i386)
 DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
@@ -42,9 +42,9 @@ DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=	suse_openmotif>=7.3:../../emulators/${SUSE_DIR_PREFIX}_openmotif
 
 OPERA_ARCH=		i386
-OPERA_PKG_VERSION=	7.11
+OPERA_PKG_VERSION=	7.21
 OPERA_DIR=		${OPERA_PKG_VERSION:S/.//g:C/beta.*//}/final/en/i386/static
-OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//}-20030515.1-static-qt
+OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//}-20031013.1-static-qt
 .endif
 
 RPMFILES=	${DISTFILES}
