@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/01/24 07:23:44 jlam Exp $
+$NetBSD: MESSAGE,v 1.2 2002/01/24 20:54:40 jlam Exp $
 
 You must create a cron job that runs at regular intervals to clean the
 SqWebMail user cache that executes the following script:
@@ -8,10 +8,7 @@ SqWebMail user cache that executes the following script:
 
 You will need to make SqWebMail accessible through your HTTP server by
 making URLs with path "/images/sqwebmail/" resolve to the images in
-${IMAGEDIR}.
-
-If you are running Apache, then you may add the following snippet into
-httpd.conf:
+${IMAGEDIR}, e.g. for Apache, add the following to httpd.conf:
 
     <IfModule mod_alias.c>
         Alias /images/sqwebmail/ "${IMAGEDIR}/"
