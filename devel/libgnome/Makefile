@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/11 01:04:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/13 11:53:59 jmmv Exp $
 #
 
 DISTNAME=	libgnome-2.4.0
@@ -63,6 +63,7 @@ GCONF2_SCHEMAS+=	desktop_gnome_url_handlers.schemas
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
