@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.206 2003/01/21 07:44:31 grant Exp $
+$NetBSD: TODO,v 1.207 2003/01/21 10:03:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -149,7 +149,7 @@ Suggested package updates
 	o iozone-3.147
 	o jakarta-ant-1.5 [pkg/18322]
 	o jed-0.99.16 [pkg/18937]
-	o jikes-1.18
+	o jikes-1.18 [pkg/19979]
 	o joe-2.9 [pkg/18022]
 	o jove-4.16.0.58 [pkg/19924]
 	o jpilot-0.99.4
