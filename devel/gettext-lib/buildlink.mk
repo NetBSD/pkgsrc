@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/06/10 00:09:29 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/06/11 01:59:34 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gettext.
 #
@@ -6,10 +6,9 @@
 #
 # (1) Optionally define GETTEXT_REQD to the version of gettext desired.
 # (2) Include this Makefile fragment in the package Makefile,
-# (3) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
-# (4) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+# (3) Add ${BUILDLINK_DIR}/include to the front of the C preprocessor's header
 #     search path, and
-# (5) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+# (4) Add ${BUILDLINK_DIR}/lib to the front of the linker's library search
 #     path.
 
 .if !defined(GETTEXT_BUILDLINK_MK)
@@ -27,15 +26,16 @@ _NEED_GNU_GETTEXT=	YES
 
 .if ${_NEED_GNU_GETTEXT} == "YES"
 DEPENDS+=		gettext-lib>=${GETTEXT_REQD}:../../devel/gettext-lib
-GETTEXT_HEADERS=	${LOCALBASE}/include/libintl.h
-GETTEXT_LIBS=		${LOCALBASE}/lib/libintl.*
+BUILDLINK_PREFIX.gettext=	${LOCALBASE}
 .else
-GETTEXT_HEADERS=	/usr/include/libintl.h
-GETTEXT_LIBS=		/usr/lib/libintl.*
+BUILDLINK_PREFIX.gettext=	/usr
 .endif
 
-BUILDLINK_INCDIR?=	${WRKDIR}/include
-BUILDLINK_LIBDIR?=	${WRKDIR}/lib
+BUILDLINK_FILES.gettext=	include/libintl.h
+BUILDLINK_FILES.gettext+=	lib/libintl.*
+
+BUILDLINK_TARGETS.gettext=	gettext-buildlink
+BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.gettext}
 
 .if defined(GNU_CONFIGURE)
 #
@@ -46,48 +46,15 @@ BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 #
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
-CFLAGS+=		-I${BUILDLINK_INCDIR}
-CPPFLAGS+=		-I${BUILDLINK_INCDIR}
-LDFLAGS+=		-L${BUILDLINK_LIBDIR}
+CFLAGS+=		-I${BUILDLINK_DIR}/include
+CPPFLAGS+=		-I${BUILDLINK_DIR}/include
+LDFLAGS+=		-L${BUILDLINK_DIR}/lib
 LIBS+=			-lintl
 .endif
 
-GETTEXT_BUILDLINK_COOKIE=	${WRKDIR}/.gettext_buildlink_done
-GETTEXT_BUILDLINK_TARGETS=	link-gettext-headers
-GETTEXT_BUILDLINK_TARGETS+=	link-gettext-libs
-BUILDLINK_TARGETS+=		${GETTEXT_BUILDLINK_COOKIE}
+pre-configure: ${BUILDLINK_TARGETS.gettext}
+gettext-buildlink: _BUILDLINK_USE
 
-pre-configure: ${GETTEXT_BUILDLINK_COOKIE}
-
-${GETTEXT_BUILDLINK_COOKIE}: ${GETTEXT_BUILDLINK_TARGETS}
-	@${TOUCH} ${TOUCH_FLAGS} ${GETTEXT_BUILDLINK_COOKIE}
-
-# This target links the headers into ${BUILDLINK_INCDIR}, which should
-# be searched first by the C preprocessor.
-#
-link-gettext-headers:
-	@${ECHO} "Linking gettext headers into ${BUILDLINK_INCDIR}."
-	@${MKDIR} ${BUILDLINK_INCDIR}
-	@for inc in ${GETTEXT_HEADERS}; do				\
-		dest=${BUILDLINK_INCDIR}/`${BASENAME} $${inc}`;		\
-		if [ -f $${inc} ]; then					\
-			${RM} -f $${dest};				\
-			${LN} -sf $${inc} $${dest};			\
-		fi;							\
-	done
-
-# This target links the libraries into ${BUILDLINK_LIBDIR}, which should
-# be searched first by the linker.
-#
-link-gettext-libs:
-	@${ECHO} "Linking gettext libraries into ${BUILDLINK_LIBDIR}."
-	@${MKDIR} ${BUILDLINK_LIBDIR}
-	@for lib in ${GETTEXT_LIBS}; do					\
-		dest=${BUILDLINK_LIBDIR}/`${BASENAME} $${lib}`;		\
-		if [ -f $${lib} ]; then					\
-			${RM} -f $${dest};				\
-			${LN} -sf $${lib} $${dest};			\
-		fi;							\
-	done
+.include "../../mk/bsd.buildlink.mk"
 
 .endif	# GETTEXT_BUILDLINK_MK
