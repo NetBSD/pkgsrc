@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/06/11 20:50:54 abs Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/07/03 13:09:47 seb Exp $
 
 DISTNAME=	aalib-${DIST_VERS}
 WRKSRC=		${WRKDIR}/aalib-1.4.0
@@ -22,5 +22,4 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 .  include "../../mk/gcc.buildlink2.mk"
 .endif
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
