@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2003/01/06 09:15:49 martti Exp $
+# $NetBSD: Makefile,v 1.73 2003/01/14 13:05:14 martti Exp $
 
 DISTNAME=	postfix-2.0.0.2
 CATEGORIES=	mail
@@ -16,14 +16,6 @@ USE_BUILDLINK2=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-# XXX No IPv6 patch available yet!
-#
-# .if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
-# PATCHFILES+=	postfix-20010228pl04-v6-20010809a.diff.gz
-# PATCH_SITES+=	ftp://ftp.kame.net/pub/kame/misc/
-# BUILD_DEFS+=	POSTFIX_USE_INET6
-# .endif
-
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"		\
 	|| defined(POSTFIX_USE_LDAP) && ${POSTFIX_USE_LDAP} == "YES"	\
 	|| defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"	\
@@ -31,6 +23,22 @@ USE_BUILDLINK2=	yes
 	|| defined(USE_SASL) && ${USE_SASL} == "YES"
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
 .endif
+
+#.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
+#PATCHFILES+=		tls+ipv6-1.11-pf-2.0.0.2.patch.gz
+#PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.11/
+#PATCH_DIST_STRIP=	-p1
+#BUILD_DEFS+=		POSTFIX_USE_INET6
+#
+#CCARGS+=		-DHAS_SSL
+#AUXLIBS+=		-L${BUILDLINK_PREFIX.openssl}/lib	\
+#			-Wl,-R${BUILDLINK_PREFIX.openssl}/lib	\
+#			-lssl -lcrypto
+#BUILD_DEFS+=		POSTFIX_USE_TLS
+#
+#PLIST_SRC+=		${PKGDIR}/PLIST.tls
+#MESSAGE_SRC+=		${PKGDIR}/MESSAGE.tls
+#.endif
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"
 .include "../../devel/pcre/buildlink2.mk"
