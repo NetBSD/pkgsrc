@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/10 14:16:06 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/16 11:56:45 agc Exp $
 
 DISTNAME=	gabber-0.8.7
 CATEGORIES=	chat
@@ -17,6 +17,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-xmms
 
+.include "../../textproc/scrollkeeper/buildlink.mk"
 .include "../../x11/gnome-libs/buildlink.mk"
 .include "../../devel/libglade/buildlink.mk"
 .include "../../devel/libsigc++/buildlink.mk"
