@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/11 15:17:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/12/04 17:20:47 taca Exp $
 bin/eruby
 include/eruby.h
 lib/liberuby.so.${ERUBY_MAJOR}.${ERUBY_MINOR}
 lib/liberuby.so.${ERUBY_MAJOR}
 lib/liberuby.so
 lib/liberuby.a
-${RUBY_SITEARCHLIBDIR}/eruby.so
+${RUBY_SITEARCHLIBDIR}/eruby.${RUBY_DLEXT}
 man/man1/eruby.1
 ${RUBY_DOCDIR}/eruby/ChangeLog
 ${RUBY_DOCDIR}/eruby/README.en
