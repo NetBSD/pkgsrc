@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/03/10 12:32:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/04/13 16:13:36 wulf Exp $
 bin/gtkextra-config
 include/gtkextra/gtkbordercombo.h
 include/gtkextra/gtkcheckitem.h
@@ -6,6 +6,7 @@ include/gtkextra/gtkcolorcombo.h
 include/gtkextra/gtkcombobox.h
 include/gtkextra/gtkdirtree.h
 include/gtkextra/gtkextra.h
+include/gtkextra/gtkextrafeatures.h
 include/gtkextra/gtkfileicons.h
 include/gtkextra/gtkfilelist.h
 include/gtkextra/gtkfontcombo.h
@@ -30,8 +31,8 @@ include/gtkextra/gtkpsfont.h
 include/gtkextra/gtksheet.h
 include/gtkextra/gtktogglecombo.h
 lib/libgtkextra.so
-lib/libgtkextra.so.13
-lib/libgtkextra.so.13.0
+lib/libgtkextra.so.14
+lib/libgtkextra.so.14.0
 lib/libgtkextra.a
 lib/libgtkextra.la
 @dirrm include/gtkextra
