@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.65 2004/05/12 21:31:50 jschauma Exp $
+# $NetBSD: gcc.mk,v 1.66 2004/05/17 03:12:46 jschauma Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -136,8 +136,9 @@ CFLAGS+=	-Wno-import
 # accordingly.
 
 .if defined(ABI)
-CFLAGS+=	-mabi=${ABI:C/^32$/n&/}
-LDFLAGS+=	-mabi=${ABI:C/^32$/n&/}
+MABIFLAG=	-mabi=${ABI:C/^32$/n&/}
+CFLAGS+=	${MABIFLAG}
+LDFLAGS+=	${MABIFLAG}
 .endif
 
 .if !empty(_NEED_GCC2:M[yY][eE][sS])
@@ -270,13 +271,18 @@ _GCC_SUBPREFIX!=	\
 _GCC_PREFIX=		${LOCALBASE}/${_GCC_SUBPREFIX}
 _GCC_ARCHDIR!=		\
 	if [ -x ${_GCC_PREFIX}bin/gcc ]; then				\
-		${DIRNAME} `${_GCC_PREFIX}bin/gcc --print-libgcc-file-name`; \
+			${DIRNAME} `${_GCC_PREFIX}bin/gcc ${MABIFLAG} --print-libgcc-file-name`; \
 	else								\
 		${ECHO} "_GCC_ARCHDIR_not_found";			\
 	fi
 .  if empty(_GCC_ARCHDIR:M*not_found*)
+.    if !empty(MABIFLAG)
+_GCC_PREFIX:=		${_GCC_ARCHDIR:H:H:H:H:H}/
+_GCC_SUBPREFIX:=	${_GCC_ARCHDIR:H:H:H:H:H:T}/
+.    else
 _GCC_PREFIX:=		${_GCC_ARCHDIR:H:H:H:H}/
 _GCC_SUBPREFIX:=	${_GCC_ARCHDIR:H:H:H:H:T}/
+.    endif
 .  endif
 _GCC_LIBDIRS=	${_GCC_ARCHDIR} ${_GCC_PREFIX}lib
 _GCC_LDFLAGS=	# empty
