@@ -1,0 +1,49 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/06/15 09:29:15 shell Exp $
+
+--- server/Makefile.in.orig	Mon May 22 18:32:04 2000
++++ server/Makefile.in
+@@ -1,7 +1,7 @@
+ prefix=@prefix@
+-CFLAGS = @CFLAGS@
++CFLAGS = -Wall -I. -I../include @CFLAGS@
+ APP_PROG = imm_server
+-DLIB_PROG = libimm_server.so
++DLIB_PROG = libimm_server.a
+ 
+ APP_OBJS = TLS_HzInput.o TLS_ImmOp.o TLS_TcpipMain.o  TLS_MemFile.o \
+        TLS_PthSocket.o TLS_Debug.o \
+@@ -14,16 +14,16 @@
+ LIBS = /usr/local/lib/libpth.so -ldl
+ 
+ # CFLAGS = -g -D__IMM_DEBUG__ -Wall -I. -I/usr/local/include -I../include 
+-CFLAGS = -g -Wall -I. -I/usr/local/include -I../include 
+-CC=g++
++CC = $(LIBTOOL) --mode=compile $(CXX)
+ 
+-all: $(DLIB_PROG)
++all: $(DLIB_OBJS)
++	$(LIBTOOL) --mode=link $(CXX) -o $(DLIB_PROG:.a=.la) $(DLIB_OBJS:.o=.lo) -rpath $(prefix)/lib -version-info 1:2
+ 
+ libimm_server.so: $(DLIB_OBJS)
+ 	$(CC) $(DLIB_OBJS) -shared -o $(DLIB_PROG)
+ 
+ TLS_LibMain.o : TLS_LibMain.cpp
+-	$(CC) $(CFLAGS) -DUNICON2_LIB=\"$(prefix)/lib/unicon2\" -c TLS_LibMain.cpp -o TLS_LibMain.o
++	$(CC) $(CFLAGS) -DUNICON2_LIB=\"$(prefix)/lib/unicon\" -c TLS_LibMain.cpp -o TLS_LibMain.o
+ 
+ app: $(APP_OBJS) 
+ 	$(CC) $(APP_OBJS) $(LIBS) -o $(APP_PROG)
+@@ -44,11 +44,8 @@
+ TLS_AsciiConvertor.o : TLS_AsciiConvertor.cpp
+ 	$(CC) $(CFLAGS) -c TLS_AsciiConvertor.cpp -o TLS_AsciiConvertor.o
+ 
+-install: all
+-	mkdir -p $(prefix)/bin
+-	mkdir -p $(prefix)/lib/unicon2
+-	if [ -f $(APP_PROG) ]; then  cp -f $(APP_PROG) $(prefix)/bin; fi
+-	if [ -f $(DLIB_PROG) ]; then  cp -f $(DLIB_PROG) $(prefix)/lib/unicon2; fi
++install:
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(DLIB_PROG:.a=.la) $(prefix)/lib
+ 
+ clean:
+ 	if test -e $(PROG); then rm -f $(PROG); fi
