@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 1999/03/02 02:25:52 simonb Exp $
+# $NetBSD: Makefile,v 1.42 1999/04/19 06:33:20 abs Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -97,7 +97,7 @@ fetch-depends:
 	@${ECHO}
 	@${ECHO} The variable USE_RSAREF2 must be set to either YES or NO
 	@${ECHO} in order to build this package.  USA residents that are
-	@${ECHO} no licensees of the RSA algorithm MUST set this variable
+	@${ECHO} not licensees of the RSA algorithm MUST set this variable
 	@${ECHO} to YES.  Users outside the USA MUST set this variable to
 	@${ECHO} NO.  Licensees may choose -- NO is faster.
 	@${ECHO}
