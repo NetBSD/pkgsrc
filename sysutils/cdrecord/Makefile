@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2001/02/17 17:42:11 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2001/08/07 11:23:56 drochner Exp $
 
-DISTNAME=	cdrecord-1.9
-PKGNAME=	cdrecord-1.9nb1
+DISTNAME=	cdrtools-1.10
+PKGNAME=	cdrecord-1.10
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/unix/cdrecord/
 
