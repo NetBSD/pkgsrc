@@ -1,0 +1,60 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/22 16:21:55 jmmv Exp $
+share/gnome-background-properties/gnome-branded.xml
+share/gnome-background-properties/gnome-tiles.xml
+share/gnome-background-properties/gnome-translucent.xml
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-backgrounds.mo
+share/pixmaps/backgrounds/gnome/branded/GNOME-Aqua.jpg
+share/pixmaps/backgrounds/gnome/branded/GNOME-FraserIsland.jpg
+share/pixmaps/backgrounds/gnome/branded/GNOME-Redblurred.jpg
+share/pixmaps/backgrounds/gnome/branded/GNOME-Weirdcolours.jpg
+share/pixmaps/backgrounds/gnome/tiles/alien-artifact-trans.png
+share/pixmaps/backgrounds/gnome/tiles/cow-trans.png
+share/pixmaps/backgrounds/gnome/tiles/tiles-trans.png
+share/pixmaps/backgrounds/gnome/translucent/ellipsis.png
+share/pixmaps/backgrounds/gnome/translucent/rects.png
+share/pixmaps/backgrounds/gnome/translucent/tentacles.png
+@dirrm share/pixmaps/backgrounds/gnome/translucent
+@dirrm share/pixmaps/backgrounds/gnome/tiles
+@dirrm share/pixmaps/backgrounds/gnome/branded
+@dirrm share/pixmaps/backgrounds/gnome
+@dirrm share/pixmaps/backgrounds
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/gnome-background-properties
