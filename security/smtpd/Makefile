@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 22:53:15 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/08 14:27:35 grant Exp $
 #
 
 DISTNAME=	smtpd-2.0
@@ -14,16 +14,38 @@ COMMENT=	Store and forward SMTP proxy
 
 SPOOL=		/var/spool/smtpd
 
-pre-install:
-		-${INSTALL_DATA_DIR} ${SPOOL}/etc
-		for f in antirelay_check_rules_example antispam_check_rules.example smtpd_check_rules.example ; do ${INSTALL_DATA} ${WRKSRC}/$$f ${SPOOL}/etc; done
-		${CHOWN} -R uucp.mail ${SPOOL}
-		${CHMOD} -R g=,o= ${SPOOL}
-		${CP} /etc/localtime /etc/resolv.conf ${SPOOL}/etc
+# taken directly from the Makefile.
+CFLAGS.NetBSD=	-DUSE_FLOCK -DUSE_MKSTEMP
+CFLAGS.SunOS=	-DUSE_LOCKF -DNEEDS_FCNTL_H -DNEEDS_STRINGS_H -DBROKEN_SUN_INCLUDES
+CFLAGS.IRIX=	-DGETOPT_EOF -DUSE_FLOCK -DNEEDS_FCNTL_H -DNEEDS_BSTRING_H -DIRIX_BROKEN_INCLUDES
+CFLAGS.AIX=	-DGETOPT_EOF -DUSE_LOCKF -DNEEDS_FCNTL_H -DNEEDS_LOCKF_H -DNEEDS_STRINGS_H -DNEEDS_SELECT_H
+OPSYSVARS=	LD_LIBS
+LD_LIBS.SunOS=	-lnsl -lsocket -lresolv
+MAKE_ENV+=	LD_LIBS="${LD_LIBS}"
 
-post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smtpd
+.include "../../mk/bsd.prefs.mk"
+
+do-install:
+	-${INSTALL_DATA_DIR} ${SPOOL}/etc
+	${INSTALL} -m 500 ${WRKSRC}/smtpd ${PREFIX}/sbin/smtpd
+	${INSTALL} -m 500 ${WRKSRC}/smtpfwdd ${PREFIX}/sbin/smtpfwdd
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smtpd
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/smtpd
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/smtpd
+
+post-install:
+.for f in antirelay_check_rules_example antispam_check_rules.example \
+	smtpd_check_rules.example
+	${INSTALL_DATA} ${WRKSRC}/${f} ${SPOOL}/etc
+.endfor
+	${CHOWN} -R uucp ${SPOOL}
+	${CHGRP} -R mail ${SPOOL}
+	${CHMOD} -R g=,o= ${SPOOL}
+	${CP} /etc/resolv.conf ${SPOOL}/etc
+.if ${OPSYS} == "SunOS"
+	${CP} /etc/TIMEZONE ${SPOOL}/etc
+.else
+	${CP} /etc/localtime ${SPOOL}/etc
+.endif
 
 .include "../../mk/bsd.pkg.mk"
