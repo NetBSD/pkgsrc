@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1999/03/23 21:16:06 mjl Exp $
+$NetBSD: patch-aa,v 1.3 1999/05/08 01:08:53 tv Exp $
 
 --- Makefile.orig	Tue Mar  2 08:37:06 1999
 +++ Makefile	Tue Mar 23 21:49:01 1999
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.2 1999/03/23 21:16:06 mjl Exp $
 -CFLAGS = -O2 -Wall -fsigned-char
 -LIBS   = -lgd -lm
 +CFLAGS = -O2 -Wall -fsigned-char -DPREFIX=\"${PREFIX}\"
-+LIBS   = -L${PREFIX}/lib -lgd -lm
++LIBS   = -L${PREFIX}/lib -lgd -lm ${LDFLAGS}
  
  # where are the GD header files?
 -GDLIB  = /usr/local/include/gd
