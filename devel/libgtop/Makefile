@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/09/03 07:22:53 rh Exp $
+# $NetBSD: Makefile,v 1.23 1999/10/22 07:54:15 agc Exp $
 #
 
 DISTNAME=		libgtop-1.0.2
@@ -11,8 +11,6 @@ HOMEPAGE=		http://www.home-of-linux.org/gnome/libgtop/
 DEPENDS+=		gettext-0.10.35:../../devel/gettext
 DEPENDS+=		gnome-libs-1.0.16:../../x11/gnome-libs
 DEPENDS+=		guile-1.3.2:../../lang/guile
-
-NOT_FOR_PLATFORM=	*-*-alpha	# problems with gtk
 
 IGNORE=			"got broken by removal of Mach VM"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 1999/10/07 17:42:00 tron Exp $
+# $NetBSD: Makefile,v 1.33 1999/10/22 07:54:17 agc Exp $
 #
 
 DISTNAME=		gnome-libs-1.0.16
@@ -11,8 +11,6 @@ HOMEPAGE=		http://www.gnome.org/
 DEPENDS+=		ORBit-0.4.3:../../corba/ORBit
 DEPENDS+=		imlib-1.9.4:../../graphics/imlib
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
-
-NOT_FOR_PLATFORM=	*-*-alpha	# problems with gtk
 
 GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
@@ -28,6 +26,19 @@ CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include" \
 LOCALSTATEDIR=		/var/gnome
 
 PLIST_SRC=		${WRKDIR}/PLIST
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+DEPENDS+=		db-*:../../databases/db
+
+CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include -I${LOCALBASE}/include/db2"
+
+pre-configure:
+	${MV} ${WRKSRC}/configure ${WRKSRC}/configure-pre-db-sub && \
+		${SED} -e 's|-ldb|-ldb2|g' ${WRKSRC}/configure-pre-db-sub > ${WRKSRC}/configure && \
+		${CHMOD} 0755 ${WRKSRC}/configure
+.endif
 
 pre-build:
 	(cd ${WRKSRC}/support; ${GMAKE} gnomesupport.h)
