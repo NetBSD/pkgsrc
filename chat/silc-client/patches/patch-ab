@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.6 2002/12/04 17:26:49 salo Exp $
+
+--- irssi/Makefile.in.orig	Fri Nov 29 08:50:58 2002
++++ irssi/Makefile.in	Wed Dec  4 16:20:05 2002
+@@ -332,15 +332,6 @@
+ 	-rm -f libtool
+ uninstall-info-am:
+ confDATA_INSTALL = $(INSTALL_DATA)
+-install-confDATA: $(conf_DATA)
+-	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(confdir)
+-	@list='$(conf_DATA)'; for p in $$list; do \
+-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+-	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(confDATA_INSTALL) $$d$$p $(DESTDIR)$(confdir)/$$f"; \
+-	  $(confDATA_INSTALL) $$d$$p $(DESTDIR)$(confdir)/$$f; \
+-	done
+ 
+ uninstall-confDATA:
+ 	@$(NORMAL_UNINSTALL)
