@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/02/03 19:41:04 drochner Exp $
+
+--- configure.orig	Mon Sep  6 23:19:12 1999
++++ configure	Thu Feb  3 17:17:28 2000
+@@ -2011,6 +2011,7 @@
+ echo "$ac_t""$NM" 1>&6
+ 
+ 
++if false; then
+ 
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+@@ -2169,6 +2170,8 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++
++fi
+ 
+ echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
+ echo "configure:2175: checking whether to enable maintainer-specific portions of Makefiles" >&5
