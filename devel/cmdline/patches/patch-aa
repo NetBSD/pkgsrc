@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/08/25 16:15:52 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2000/10/12 16:58:57 jlam Exp $
 
 --- Config.mk.orig	Thu Jan  2 13:33:36 1997
 +++ Config.mk
@@ -51,6 +51,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/08/25 16:15:52 jlam Exp $
  
     ## option to specify other include directories to search
  INC=-I
+@@ -158,7 +158,7 @@
+ DEF=-D
+ 
+    ## option to produce optimized code
+-OPT=-O
++#OPT=-O
+ 
+    ## option to produce debugging information
+ DBG=-g
 @@ -183,7 +183,8 @@
  FLAG=$(OPT)
  # FLAG=$(DBG)
