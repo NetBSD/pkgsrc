@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/20 14:41:57 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2002/09/11 18:18:21 wiz Exp $
 
 --- Makefile.orig	Sun Jun 10 14:35:06 2001
 +++ Makefile
@@ -25,17 +25,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/20 14:41:57 wiz Exp $
  
  ######################################################################
  
-@@ -58,8 +58,8 @@
- 	    -fcaller-saves -ffast-math -fno-strength-reduce \
- 	    -fthread-jumps #-march=pentium #-DSTAT_MACROS_BROKEN
- 
--INCLUDES  = `imlib-config --cflags-gdk`
--LIBS      = `imlib-config --libs-gdk`
-+INCLUDES  = `${IMLIB_CONFIG} --cflags-gdk`
-+LIBS      = `${IMLIB_CONFIG} --libs-gdk`
- 
- PROGRAM   = qiv
- OBJS      = main.o image.o event.o options.o utils.o
 @@ -112,13 +112,13 @@
  
  install: $(PROGRAM)
