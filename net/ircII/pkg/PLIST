@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2000/08/31 13:54:04 mrg Exp $
+@comment $NetBSD: PLIST,v 1.31 2000/09/01 17:15:06 veego Exp $
 bin/irc
 bin/irc-4.4Z
 bin/ircbug
@@ -499,7 +499,6 @@ share/irc/help/window/unbind@.GZ@
 share/irc/help/window/window@.GZ@
 share/irc/help/xecho@.GZ@
 share/irc/help/xtype@.GZ@
-share/irc/help/disconnect@.GZ@
 share/irc/script/2.8script
 share/irc/script/2.9script
 share/irc/script/action
