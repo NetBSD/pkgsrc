@@ -1,0 +1,23 @@
+$NetBSD: patch-ag,v 1.1 2000/04/07 10:11:55 itojun Exp $
+--- configure-	Fri Apr  7 18:48:12 2000
++++ configure	Fri Apr  7 18:48:26 2000
+@@ -1021,7 +1021,7 @@
+ fi
+ echo "$ac_t""$CPP" 1>&6
+ 
+-for ac_hdr in fcntl.h grp.h memory.h paths.h poll.h sys/poll.h netinet6/in6.h
++for ac_hdr in fcntl.h grp.h memory.h paths.h poll.h sys/poll.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+ echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
+@@ -2378,9 +2378,7 @@
+ 
+ #	include <sys/types.h>
+ #	include <sys/socket.h>
+-#	ifdef HAVE_NETINET6_IN6_H
+-#	include <netinet6/in6.h>
+-#	endif
++#	include <netinet/in.h>
+ int main() {
+ struct sockaddr_in6 sa6
+ ; return 0; }
