@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2000/12/17 09:19:32 jlam Exp $
+$NetBSD: MESSAGE,v 1.2 2000/12/17 21:33:55 jlam Exp $
 
 Example configuration files suitable as a basis for a custom php.ini may
 be found at:
@@ -7,6 +7,7 @@ be found at:
 	@PREFIX@/etc/php.ini-dist
 	@PREFIX@/etc/php.ini-optimized
 
-To process PHP scripts, you will need a PHP-enabled HTTP server, e.g.
-www/ap-php4.
+To process PHP scripts, you will need a PHP-enabled HTTP server.  You may
+either configure the HTTP server to use PHP as a CGI program, or install a
+PHP module for your HTTP server, e.g. ap-php4.
 ===========================================================================
