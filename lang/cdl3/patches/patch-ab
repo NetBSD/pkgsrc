@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/07/23 02:04:23 minskim Exp $
+
+--- docs/Makefile.in.orig	Sun Sep 14 15:33:36 2003
++++ docs/Makefile.in
+@@ -83,7 +83,7 @@ am__include = @am__include@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+ 
+-docdir = $(prefix)/doc
++docdir = $(prefix)/share/doc/cdl3
+ doc_DATA = $(PACKAGE)-manual-$(VERSION).ps
+ 
+ SUBDIRS = tek

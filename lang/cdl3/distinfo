@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/23 02:04:23 minskim Exp $
+
+SHA1 (cdl3-1.2.4.tgz) = 2e3525f46963da64caea500ed50eef5dbc8f4d20
+Size (cdl3-1.2.4.tgz) = 933616 bytes
+SHA1 (patch-aa) = bfae91d27c52f7dd0cb3b264e6d6b7abb3f7ba56
+SHA1 (patch-ab) = 229d9d7c4204ee59b59632b8fcfc84dac4b1ce8a
