@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.358 2002/12/13 20:44:13 cjep Exp $
+# $NetBSD: Makefile,v 1.359 2002/12/14 00:19:50 cjep Exp $
 #
 
 COMMENT=	Development utilities
@@ -232,6 +232,7 @@ SUBDIR+=	p5-FileKGlob
 SUBDIR+=	p5-FreezeThaw
 SUBDIR+=	p5-Graph
 SUBDIR+=	p5-Heap
+SUBDIR+=	p5-IO-Null
 SUBDIR+=	p5-IO-String
 SUBDIR+=	p5-IO-Stty
 SUBDIR+=	p5-IO-Tty
