@@ -1,14 +1,10 @@
-$NetBSD: TODO,v 1.66 2001/09/12 19:36:59 jlam Exp $
+$NetBSD: TODO,v 1.67 2001/09/14 13:49:36 hubertf Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
 	compat_solaris8
 	Solaris and Intel compat libraries
 	http://www.sun.com/software/solaris/binaries/download.html
-
-	cvsup.nogui
-	cvsup daemon and client
-	Split cvsup packages to cvsup and cvsup.nogui, per pkg/12531
 
 	driftnet
 	listens to network traffic and picks out images from TCP streams
