@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2001/09/27 23:19:00 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2001/10/15 08:02:23 rh Exp $
 
-DISTNAME=	gnome-1.4.0.1
+DISTNAME=	gnome-1.4.0.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -9,10 +9,10 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	"meta-package" for the GNU Network Object Model Environment
 
-DEPENDS+=	gnome-core>1.4.0:../gnome-core
+DEPENDS+=	gnome-core>=1.4.0.4:../gnome-core
 DEPENDS+=	ee>=0.3.12:../../graphics/ee
 DEPENDS+=	gdm>=2.2.0:../gdm
-DEPENDS+=	ggv>=1.0:../../print/ggv
+DEPENDS+=	ggv>=1.0.1:../../print/ggv
 DEPENDS+=	glade>=0.6.2:../../devel/glade
 DEPENDS+=	gmc>=4.5.42:../../sysutils/gmc
 DEPENDS+=	gnome-applets>1.4.0:../gnome-applets
@@ -23,13 +23,13 @@ DEPENDS+=	gnome-media>=1.2.0:../../audio/gnome-media
 DEPENDS+=	gnome-pim>=1.4.0:../../misc/gnome-pim
 DEPENDS+=	gnome-python>=1.4.0:../gnome-python
 DEPENDS+=	gnome-users-guide>=1.2:../gnome-users-guide
-DEPENDS+=	gnome-utils>=1.4.0:../../misc/gnome-utils
-DEPENDS+=	gnumeric>=0.64:../../math/gnumeric
-DEPENDS+=	evolution-[0-9]*:../../mail/evolution
+DEPENDS+=	gnome-utils>=1.4.1:../../misc/gnome-utils
+DEPENDS+=	gnumeric>=0.70:../../math/gnumeric
+DEPENDS+=	evolution>=0.15:../../mail/evolution
 DEPENDS+=	gtk-->=1.2.5:../gtk--
-DEPENDS+=	gtk-engines>=0.10:../gtk-engines
+DEPENDS+=	gtk-engines>=0.12:../gtk-engines
 DEPENDS+=	gtop>=1.0.13:../../sysutils/gtop
-DEPENDS+=	pan>=0.9.6:../../news/pan
+DEPENDS+=	pan>0.10.0:../../news/pan
 DEPENDS+=	xchat>=1.6.2:../../chat/xchat
 
 USE_X11=	yes
