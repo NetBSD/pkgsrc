@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/09 20:14:21 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/30 19:18:18 snj Exp $
 
 DISTNAME=	dspam-3.0.0
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
 
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.nuclearelephant.com/projects/dspam/
-COMMENT=	extremely scalable, statistical-hybrid anti-spam filter
+COMMENT=	Extremely scalable, statistical-hybrid anti-spam filter
 
 USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE+=	dspam.pc.in
 
 SUBST_CLASSES=		cgi
 SUBST_STAGE.cgi=	post-patch
-SUBST_FILES.cgi=	cgi/dspam.cgi cgi/admin.cgi 
+SUBST_FILES.cgi=	cgi/dspam.cgi cgi/admin.cgi
 SUBST_SED.cgi=		-e "s|/usr/local/bin/dspam|${PREFIX}/bin/dspam|g" \
 			-e "s|/var/dspam|${DSPAM_HOME}|g"		\
 			-e "s|/usr/local|${PREFIX}|g"			\
