@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.110 1998/07/09 18:18:43 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.111 1998/07/10 05:24:19 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -976,7 +976,7 @@ _PORT_USE: .USE
 			${ECHO_MSG} "      pkg_delete(1)."; \
 			exit 1; \
 		fi; \
-		${RM} ${CAT} ${WRKDIR}/.CONFLICT.$$$$ ; \
+		${RM} ${WRKDIR}/.CONFLICT.$$$$ ; \
 	done
 .endif
 	@if [ -d ${PKG_DBDIR}/${PKGNAME} ]; then \
