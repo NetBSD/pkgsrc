@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 1999/05/15 07:27:50 hubertf Exp $
+
+--- Makefile.in.orig	Sat May 15 09:16:08 1999
++++ Makefile.in	Sat May 15 09:16:21 1999
+@@ -68,7 +68,7 @@
+ apple_driver.o: apple_driver.c mac_label.h
+ 	$(CC) -c $(CFLAGS) $(srcdir)/apple_driver.c
+ 
+-install: mkisofs mkisofs.8
++install: mkhybrid mkhybrid.8
+ 	[ -d $(bindir) ] || mkdir $(bindir)
+ 	[ -d $(mandir) ] || mkdir $(mandir)
+ 	$(INSTALL_PROGRAM) mkhybrid $(bindir)/mkhybrid
