@@ -3,7 +3,7 @@
 # Date created:        28 October 1997
 # Whom:                Stefan Eßer <se@freebsd.org>
 #
-# $NetBSD: Makefile,v 1.2 1997/12/29 03:11:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/25 00:04:06 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -23,13 +23,13 @@ LIB_DEPENDS=	qt\\.1\\.3[0-9]:${PORTSDIR}/x11/qt \
 		jpeg\\.[67]\\.:${PORTSDIR}/graphics/jpeg
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--prefix=$(PREFIX)" \
-		"--x-inc=$(X11BASE)/include -I$(PREFIX)/include -I$(PREFIX)/include/giflib" \
-		"--x-lib=$(X11BASE)/lib -L$(PREFIX)/lib" \
-		"--datadir=$(PREFIX)/share/kde" \
-		"--with-qt-dir=$(PREFIX)" \
-		"--with-qt-includes=$(PREFIX)/include/qt"
-CONFIGURE_ENV=	CXXFLAGS="$(CFLAGS)"
+CONFIGURE_ARGS=	"--prefix=${PREFIX}" \
+		"--x-inc=${X11BASE}/include -I${PREFIX}/include -I${PREFIX}/include/giflib" \
+		"--x-lib=${X11BASE}/lib -L${PREFIX}/lib" \
+		"--datadir=${PREFIX}/share/kde" \
+		"--with-qt-dir=${PREFIX}" \
+		"--with-qt-includes=${PREFIX}/include/qt"
+CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}"
 
 WRKSRC=		${WRKDIR}/kdelibs
 
