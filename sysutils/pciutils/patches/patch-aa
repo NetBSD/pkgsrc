@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/02/26 00:12:43 kristerw Exp $
+
+--- Makefile.orig	2003-01-04 13:53:01.000000000 +0100
++++ Makefile
+@@ -10,13 +10,15 @@ VERSION=2.1.11
+ #SUFFIX=-pre2
+ DATE=2003-01-04
+ 
+-PREFIX=/usr/local
++#PREFIX=/usr/local
+ SBINDIR=$(PREFIX)/sbin
+-SHAREDIR=$(PREFIX)/share
+-MANDIR=$(shell if [ -d $(PREFIX)/share/man ] ; then echo $(PREFIX)/share/man ; else echo $(PREFIX)/man ; fi)
++SHAREDIR=$(PREFIX)/share/pciutils
++MANDIR=$(PREFIX)/man
+ INSTALL=install
+-DIRINSTALL=install -d
++DIRINSTALL=$(INSTALL) -d
+ PCILIB=libpci.a
++LIBDIR=$(PREFIX)/lib
++INCLUDEDIR=$(PREFIX)/include/pciutils
+ 
+ ifeq ($(shell uname),NetBSD)
+ PCILIB=libpciutils.a
+@@ -58,11 +60,14 @@ clean:
+ 
+ install: all
+ # -c is ignored on Linux, but required on FreeBSD
+-	$(DIRINSTALL) -m 755 $(SBINDIR) $(SHAREDIR) $(MANDIR)/man8
++	$(DIRINSTALL) -m 755 $(SBINDIR) $(SHAREDIR) $(MANDIR)/man8 $(LIBDIR) $(INCLUDEDIR)
+ 	$(INSTALL) -c -m 755 -s lspci setpci $(SBINDIR)
+ 	$(INSTALL) -c -m 755 update-pciids $(SBINDIR)
+ 	$(INSTALL) -c -m 644 pci.ids $(SHAREDIR)
++	$(INSTALL) -c -m 644 README $(SHAREDIR)
+ 	$(INSTALL) -c -m 644 lspci.8 setpci.8 update-pciids.8 $(MANDIR)/man8
++	$(INSTALL) -c -m 444 lib/$(PCILIB) $(LIBDIR)
++	$(INSTALL) -c -m 644 lib/pci.h lib/header.h lib/config.h $(INCLUDEDIR)
+ 
+ uninstall: all
+ 	rm -f $(SBINDIR)/lspci $(SBINDIR)/setpci $(SBINDIR)/update-pciids
