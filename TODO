@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2 2001/05/04 09:30:43 skrll Exp $
+$NetBSD: TODO,v 1.3 2001/05/04 12:59:30 zuntum Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -13,6 +13,20 @@ packages TODO (Suggested new packages)
 
     kde-i18n		Internationalisation package for KDE 2.
     ftp://ftp.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src
+
+    qmail		SECURE, reliable, efficient, simple, and FAST MTA for UNIX systems
+    http://www.qmail.org/
+		zuntum already has pkg for this one, but it needs to be fixed first
+
+
+packages TODO (Suggested package updates)
+^^^^^^^^^^^^^
+	o update www/ap-php4 to 4.0.5
+	o update sysutils/lsof to 4.56
+	o update IPv6 patch in net/wget to 20010418
+	o update devel/pcre to 3.0.8
+		(zuntum has the patch, will update after freeze)
+	
 
 pksgrc TODO (Suggested pkgsrc features and enhancements)
 ^^^^^^^^^^^
