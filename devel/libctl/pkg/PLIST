@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/21 04:49:45 jtb Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/01/21 05:01:08 jtb Exp $
 bin/gen-ctl-io
 include/ctl.h
 include/ctlgeom.h
@@ -6,7 +6,7 @@ lib/libctl.a
 lib/libctl.la
 lib/libctl.so
 lib/libctl.so.0
-lib/libctl.so.0.1
+lib/libctl.so.0.0
 man/man1/gen-ctl-io.1
 share/doc/libctl/COPYING
 share/doc/libctl/COPYRIGHT
