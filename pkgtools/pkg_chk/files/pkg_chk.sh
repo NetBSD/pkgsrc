@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.4 2004/04/13 14:36:23 abs Exp $
+# $Id: pkg_chk.sh,v 1.5 2004/05/09 17:56:17 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -473,7 +473,7 @@ if [ -n "$opt_c" -o -n "$opt_l" ];then
 	taglist["*"] = "*"
     }
     function and_expr_with_dict(expr, dict, ary, i, r) {
-	split(expr,ary,/\\+/);
+	split(expr,ary,/\+/);
 	r = 1;
 	for (i in ary)
 		if (! (ary[i] in dict))
@@ -487,7 +487,7 @@ if [ -n "$opt_c" -o -n "$opt_l" ];then
     need = 0;
     for (f = 1 ; f<=NF ; ++f) {			# For each word on the line
 	if (sub("^-", "", $f)) { 	# If it begins with a '-'
-		if ($f ~ /\\+/) {	# If it is a ANDed tag expression
+		if ($f ~ /\+/) {	# If it is a ANDed tag expression
 			if (and_expr_with_dict($f, taglist))
 				next;		# If it is true, discard
 		} else {			# If it is a simple tag
@@ -495,7 +495,7 @@ if [ -n "$opt_c" -o -n "$opt_l" ];then
 				next;
 		}
 	} else {
-		if ($f ~ /\\+/) {	# If it is a ANDed tag expression
+		if ($f ~ /\+/) {	# If it is a ANDed tag expression
 			if (and_expr_with_dict($f, taglist))
 				need = 1;	# If it is true, note needed
 		} else {			# If it is a simple tag
