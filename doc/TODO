@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.63 2002/12/15 14:58:05 grant Exp $
+$NetBSD: TODO,v 1.64 2002/12/15 18:02:26 tron Exp $
 
 Suggested new packages
 ======================
@@ -192,7 +192,6 @@ Suggested package updates
 	o pan-0.13.2
 	o pen-0.9.5 [pkg/19216]
 	o pilot-link-0.11.4 [dillo]
-	o pine-4.50
 	o plib-1.6.0
 	o polsms-1.9.0 [pkg/19235]
 	o postgresql-7.3
