@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 1999/08/31 19:26:41 jlam Exp $
+$NetBSD: patch-ab,v 1.5 1999/12/30 22:51:29 jlam Exp $
 
---- check.c.orig	Sat May 29 14:34:02 1999
-+++ check.c	Sun Aug 29 05:42:50 1999
-@@ -1078,7 +1078,7 @@
- 	(void) fclose(user_skey->keyfile);
- 
-     /* get the skey part of the prompt */
--    if ((rval = skeychallenge(user_skey, user_name, challenge)) != 0) {
-+    if ((rval = skeychallenge(user_skey, user_name, challenge, sizeof(challenge))) != 0) {
- #ifdef OTP_ONLY
- 	(void) fprintf(stderr,
- 		       "%s: You do not exist in the s/key database.\n",
+--- auth/rfc1938.c.orig	Thu Oct  7 17:21:07 1999
++++ auth/rfc1938.c	Thu Dec 30 17:23:44 1999
+@@ -109,7 +109,7 @@
+      * If the user is not in the OTP db, only post a fatal error if
+      * we are running alone (since they may just use a normal passwd).
+      */
+-    if (rfc1938challenge(&rfc1938, pw->pw_name, challenge) != 0) {
++    if (rfc1938challenge(&rfc1938, pw->pw_name, challenge, sizeof(challenge)) != 0) {
+ 	if (IS_ONEANDONLY(auth)) {
+ 	    (void) fprintf(stderr,
+ 			   "%s: You do not exist in the %s database.\n",

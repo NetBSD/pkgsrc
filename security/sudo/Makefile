@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.18 1999/09/14 02:32:26 kim Exp $
+# $NetBSD: Makefile,v 1.19 1999/12/30 22:51:28 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/12 03:24:41 obrien Exp
 #
 
-DISTNAME=	cu-sudo.v1.5.9p4
-PKGNAME=	sudo-1.5.9p4
-WRKSRC=		${WRKDIR}/sudo.v1.5.9p4
+DISTNAME=	sudo-1.6.1
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.cs.colorado.edu/pub/sudo/
+MASTER_SITES=	ftp://ftp.cs.colorado.edu/pub/sudo/ \
+		ftp://ftp.uu.net/pub/security/sudo/ \
+		ftp://ftp.tux.org/pub/security/sudo/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.courtesan.com/sudo/
@@ -37,7 +37,12 @@ CONFIGURE_ARGS+=--with-kerb5
 CONFIGURE_ARGS+=--without-kerb5
 .endif
 
-CONFIGURE_ARGS+=--with-C2 --with-nbsdops --disable-path-info
+CONFIGURE_ARGS+=--with-nbsdops --disable-path-info
+
+# The UPGRADE file has important information on upgrading from a previous
+# version of sudo.
+#
+MESSAGE_FILE=	${WRKSRC}/UPGRADE
 
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
