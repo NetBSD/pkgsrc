@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/09/17 17:02:30 abs Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/08 11:48:11 abs Exp $
 #
 
 DISTNAME=	cpuburn_1_4
@@ -12,7 +12,7 @@ MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://users.ev1.net/~redelm/
 COMMENT=	CPU load testing utilities for Pentium pro and later
 
-ONLY_FOR_PLATFORM= *-*-i386
+ONLY_FOR_PLATFORM= *-*-i[3456]86
 EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf -
 WRKSRC=         ${WRKDIR}/${PKGNAME_NOREV}
 
