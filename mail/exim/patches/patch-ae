@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.6 2004/05/07 17:47:32 abs Exp $
+$NetBSD: patch-ae,v 1.7 2004/08/27 10:46:52 abs Exp $
 
---- scripts/exim_install.orig	Wed May  5 11:08:35 2004
+--- scripts/exim_install.orig	2004-08-26 15:09:59.000000000 +0100
 +++ scripts/exim_install
 @@ -79,6 +79,8 @@ if [ "${SYSTEM_ALIASES_FILE}" = "" ] ; t
    SYSTEM_ALIASES_FILE=/etc/aliases
