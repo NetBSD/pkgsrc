@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2004/04/10 14:15:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2004/04/24 05:29:36 schmonz Exp $
 #
 
 DISTNAME=	qmail-1.03
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	http://cr.yp.to/software/			\
 		ftp://ftp.ntnu.no/pub/unix/mail/qmail/		\
@@ -13,8 +13,11 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://www.qmail.org/
 COMMENT=	Secure, reliable, efficient, simple, and fast MTA for UNIX systems
 
+DEPENDS+=	checkpassword-[0-9]*:../../sysutils/checkpassword
 DEPENDS+=	qmail-users>=1.0:../../mail/qmail-users
 DEPENDS+=	ucspi-tcp-[0-9]*:../../net/ucspi-tcp
+
+USE_BUILDLINK3=	yes
 
 ALL_TARGET= 	it man
 INSTALL_TARGET=	setup check
@@ -29,11 +32,11 @@ USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 OWN_DIRS+=		${QMAILDIR}
 
-EVAL_PREFIX+=		LOCALBASE_UCSPI_TCP=ucspi-tcp
+EVAL_PREFIX+=		LOCALBASE_NORMAL=ucspi-tcp
 
 FILES_SUBST+=		QMAILDIR=${QMAILDIR}
-FILES_SUBST+=		LOCALBASE_UCSPI_TCP=${LOCALBASE_UCSPI_TCP}
-RCD_SCRIPTS=		qmail qmailsmtpd
+FILES_SUBST+=		LOCALBASE_NORMAL=${LOCALBASE_NORMAL}
+RCD_SCRIPTS=		qmail qmailsmtpd qmailpop3d
 RCD_SCRIPTS_EXAMPLEDIR=	${QMAILDIR}/etc/rc.d
 
 .include "../../mk/bsd.prefs.mk"
