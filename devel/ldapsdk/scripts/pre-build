@@ -1,0 +1,16 @@
+#!/bin/sh
+# $NetBSD: pre-build,v 1.1.1.1 1999/05/18 21:22:27 hwr Exp $
+
+cd ${WRKSRC}
+
+MOZILLA_CLIENT=1
+NO_MDUPDATE=1
+MOZ_LDAP_SDK=1
+export MOZILLA_CLIENT NO_MDUPDATE MOZ_LDAP_SDK
+unset MOZ_LI 
+unset MOZ_LITE 
+unset MOZ_MEDIUM 
+unset NO_SECURITY
+
+gmake -f directory/ldapsdk.mk build
+
