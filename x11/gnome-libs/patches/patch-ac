@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 1999/03/07 11:31:47 tron Exp $
+$NetBSD: patch-ac,v 1.7 1999/07/14 20:45:29 tron Exp $
 
---- gnome-data/Makefile.in.orig	Mon Mar  1 20:57:13 1999
-+++ gnome-data/Makefile.in	Sun Mar  7 11:57:57 1999
-@@ -159,7 +159,7 @@
+--- gnome-data/Makefile.in.orig	Tue Jun  1 22:08:52 1999
++++ gnome-data/Makefile.in	Wed Jul 14 21:45:30 1999
+@@ -160,7 +160,7 @@
  EXTRA_DIST =  	gnome.soundlist 		gtk-events.soundlist		mime-magic 			gnome.mime 			paper.config			type.convert			postscript.convert		gnome-make-postscript-mimes
  
  
@@ -11,14 +11,14 @@ $NetBSD: patch-ac,v 1.6 1999/03/07 11:31:47 tron Exp $
  sysconf_DATA = paper.config mime-magic
  
  soundlistdir = $(sysconfdir)/sound/events
-@@ -377,8 +377,8 @@
+@@ -378,8 +378,8 @@
  	$(SHELL) $(srcdir)/gnome-make-postscript-mimes > postscript.convert
  
  install-data-local:
--	$(mkinstalldirs) $(scoredir)
--	-chgrp $(GAMES_GROUP) $(scoredir) && chmod g=rwXs $(scoredir)
-+#	$(mkinstalldirs) $(scoredir)
-+#	-chgrp $(GAMES_GROUP) $(scoredir) && chmod g=rwXs $(scoredir)
+-	$(mkinstalldirs) $(DESTDIR)$(scoredir)
+-	-chgrp $(GAMES_GROUP) $(scoredir) && chmod g=rwXs $(DESTDIR)$(scoredir)
++#	$(mkinstalldirs) $(DESTDIR)$(scoredir)
++#	-chgrp $(GAMES_GROUP) $(scoredir) && chmod g=rwXs $(DESTDIR)$(scoredir)
  	$(top_builddir)/libgnome/gnome-gen-mimedb $(DESTDIR)$(sysconfdir)/mime-magic
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
