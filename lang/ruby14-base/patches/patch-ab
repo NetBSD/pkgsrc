@@ -1,0 +1,137 @@
+$NetBSD: patch-ab,v 1.1 2002/01/22 17:06:21 taca Exp $
+
+--- configure.orig	Tue Aug  1 15:33:52 2000
++++ configure
+@@ -613,6 +613,42 @@
+ host_os=`echo $host | sed 's/^\([^-]*\)-\([^-]*\)-\(.*\)$/\3/'`
+ echo "$ac_t""$host" 1>&6
+ 
++echo $ac_n "checking target system type""... $ac_c" 1>&6
++echo "configure:618: checking target system type" >&5
++
++target_alias=$target
++case "$target_alias" in
++NONE)
++  case $nonopt in
++  NONE) target_alias=$host_alias ;;
++  *) target_alias=$nonopt ;;
++  esac ;;
++esac
++
++target=`${CONFIG_SHELL-/bin/sh} $ac_config_sub $target_alias`
++target_cpu=`echo $target | sed 's/^\([^-]*\)-\([^-]*\)-\(.*\)$/\1/'`
++target_vendor=`echo $target | sed 's/^\([^-]*\)-\([^-]*\)-\(.*\)$/\2/'`
++target_os=`echo $target | sed 's/^\([^-]*\)-\([^-]*\)-\(.*\)$/\3/'`
++echo "$ac_t""$target" 1>&6
++
++echo $ac_n "checking build system type""... $ac_c" 1>&6
++echo "configure:636: checking build system type" >&5
++
++build_alias=$build
++case "$build_alias" in
++NONE)
++  case $nonopt in
++  NONE) build_alias=$host_alias ;;
++  *) build_alias=$nonopt ;;
++  esac ;;
++esac
++
++build=`${CONFIG_SHELL-/bin/sh} $ac_config_sub $build_alias`
++build_cpu=`echo $build | sed 's/^\([^-]*\)-\([^-]*\)-\(.*\)$/\1/'`
++build_vendor=`echo $build | sed 's/^\([^-]*\)-\([^-]*\)-\(.*\)$/\2/'`
++build_os=`echo $build | sed 's/^\([^-]*\)-\([^-]*\)-\(.*\)$/\3/'`
++echo "$ac_t""$build" 1>&6
++
+ 
+ fat_binary=no
+ # Check whether --enable-fat-binary or --disable-fat-binary was given.
+@@ -3143,7 +3179,7 @@
+ 	      truncate chsize times utimes fcntl lockf setitimer\
+ 	      setruid seteuid setreuid setrgid setegid setregid\
+ 	      getpgrp setpgrp getpgid setpgid getgroups getpriority\
+-	      dlopen sigprocmask sigaction _setjmp setsid
++	      dlopen sigprocmask sigaction _setjmp setsid mkstemp
+ do
+ echo $ac_n "checking for $ac_func""... $ac_c" 1>&6
+ echo "configure:3150: checking for $ac_func" >&5
+@@ -4094,12 +4130,7 @@
+     human*)	;;
+     bsdi*)	;;
+     cygwin*)	;;
+-    netbsd*) CCDLFLAGS=-fpic
+-     case "$host_cpu" in
+-     mips*) CCDLFLAGS=-fPIC ;;
+-     sparc) CCDLFLAGS=-fPIC ;;
+-     *) ;;
+-     esac ;;
++    netbsd*) CCDLFLAGS=-fPIC;;
+     *) CCDLFLAGS=-fPIC;;
+     esac
+   else
+@@ -4144,10 +4175,8 @@
+ 			  test "$GCC" = yes && `$CC --print-prog-name=ld` -v 2>&1 | grep "GNU ld" > /dev/null || LDSHARED="ld -Bshareable"
+ 			fi
+ 			rb_cv_dlopen=yes ;;
+-	netbsd*)	LDSHARED="ld -shared"
+-			if test "$rb_cv_binary_elf" = yes; then
+-                          LDFLAGS="-export-dynamic"
+-			fi
++	netbsd*)	LDSHARED='${CC} -shared'
++			LDFLAGS=""
+ 			rb_cv_dlopen=yes ;;
+ 	openbsd*) 	LDSHARED="ld -Bforcearchive -Bshareable"
+ 			rb_cv_dlopen=yes ;;
+@@ -4643,11 +4672,14 @@
+ 	fi
+ 	;;
+     netbsd*)
+-	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR).$(MINOR)'
++	LIBRUBY_SO='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
++	LIBRUBY_DLDFLAGS='-Wl,-soname,lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR)'
+ 	if test "$rb_cv_binary_elf" = yes; then # ELF platforms
+-	   LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR) lib$(RUBY_INSTALL_NAME).so'
+-	else
+-	   LIBRUBY_ALIASES=   # a.out platforms
++	   LIBRUBY_ALIASES='lib$(RUBY_INSTALL_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_INSTALL_NAME).so'
++	   LIBRUBYARG='-Wl,--rpath -Wl,${prefix}/lib -L${prefix}/lib -L. -l$(RUBY_INSTALL_NAME) -Wl,--rpath -Wl,${X11BASE}/lib -L${X11BASE}/lib'
++	else	# a.out platforms
++	   LIBRUBY_ALIASES=""
++	   LIBRUBYARG='-Wl,-R${prefix}/lib -L${prefix}/lib -L. -l$(RUBY_INSTALL_NAME) -Wl,-R${X11BASE}/lib -L${X11BASE}/lib'
+ 	fi
+  	;;
+     solaris*)
+@@ -4685,6 +4717,9 @@
+ fi
+ 
+ case "$host_os" in
++	netbsd*)
++    	CFLAGS="$CFLAGS -pipe"
++		;;
+ 	nextstep*)
+     	CFLAGS="$CFLAGS -pipe"
+ 		;;
+@@ -4949,6 +4984,16 @@
+ s%@host_cpu@%$host_cpu%g
+ s%@host_vendor@%$host_vendor%g
+ s%@host_os@%$host_os%g
++s%@target@%$target%g
++s%@target_alias@%$target_alias%g
++s%@target_cpu@%$target_cpu%g
++s%@target_vendor@%$target_vendor%g
++s%@target_os@%$target_os%g
++s%@build@%$build%g
++s%@build_alias@%$build_alias%g
++s%@build_cpu@%$build_cpu%g
++s%@build_vendor@%$build_vendor%g
++s%@build_os@%$build_os%g
+ s%@CC@%$CC%g
+ s%@CPP@%$CPP%g
+ s%@YACC@%$YACC%g
+@@ -4970,6 +5015,7 @@
+ s%@STRIP@%$STRIP%g
+ s%@EXTSTATIC@%$EXTSTATIC%g
+ s%@setup@%$setup%g
++s%@X11BASE@%$X11BASE%g
+ s%@LIBRUBY_LDSHARED@%$LIBRUBY_LDSHARED%g
+ s%@LIBRUBY_DLDFLAGS@%$LIBRUBY_DLDFLAGS%g
+ s%@RUBY_INSTALL_NAME@%$RUBY_INSTALL_NAME%g
