@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/09/05 16:52:33 jwise Exp $
+# $NetBSD: Makefile,v 1.3 2000/09/06 16:33:00 jwise Exp $
 #
 
 DISTNAME=	expect
@@ -10,6 +10,8 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://expect.nist.gov/
 
 DEPENDS+=	tcl-8.3.2:../../lang/tcl
+
+CONFLICTS+=	expect-*
 
 WRKSRC=		${WRKDIR}/expect-5.32
 DIST_SUBDIR=	expect-5.32.1
