@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6093 2004/06/02 11:34:46 shannonjr Exp $
+$NetBSD: CHANGES,v 1.6094 2004/06/02 11:44:30 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2748,3 +2748,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated chicken to 1.51 [itojun 2004-06-02]
 	Updated sylpheed-claws to 0.9.11 [adam 2004-06-01]
 	Added libiberty-1.0 [shannonjr 2004-06-02]
+	Updated inn to 2.4.1 [tron 2004-06-02]
