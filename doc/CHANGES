@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8780 2005/01/16 22:38:34 recht Exp $
+$NetBSD: CHANGES,v 1.8781 2005/01/16 22:40:43 epg Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -344,3 +344,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated subversion to 1.1.3 [epg 2005-01-16]
 	Updated p5-SVN-Mirror to 0.54 [epg 2005-01-16]
 	Updated libxml2 to 2.6.17 [recht 2005-01-16]
+	Updated svk to 0.28 [epg 2005-01-16]
