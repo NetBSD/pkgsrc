@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1 2004/04/27 21:58:15 dmcmahill Exp $
+
+--- configure.in.orig	Sun Jan 25 22:16:53 2004
++++ configure.in
+@@ -12,19 +12,19 @@ AC_CANONICAL_TARGET
+ 
+ dnl cross-compiling support: we're cross compiling if the build system is
+ dnl different from the target one (assume host and target be always the same)
+-if test "$build" != "$host" ; then
+-    CC=$host_alias-gcc
+-    CXX=$host_alias-c++
+-    AR=$host_alias-ar
+-    RANLIB=$host_alias-ranlib
+-    DLLTOOL=$host_alias-dlltool
+-    RESCOMP=$host_alias-windres
+-    LD=$host_alias-ld
+-    NM=$host_alias-nm
+-    STRIP=$host_alias-strip
+-else
++#if test "$build" != "$host" ; then
++#    CC=$host_alias-gcc
++#    CXX=$host_alias-c++
++#    AR=$host_alias-ar
++#    RANLIB=$host_alias-ranlib
++#    DLLTOOL=$host_alias-dlltool
++#    RESCOMP=$host_alias-windres
++#    LD=$host_alias-ld
++#    NM=$host_alias-nm
++#    STRIP=$host_alias-strip
++#else
+     RESCOMP=windres
+-fi
++#fi
+ 
+ AM_INIT_AUTOMAKE
+ AM_MAINTAINER_MODE
