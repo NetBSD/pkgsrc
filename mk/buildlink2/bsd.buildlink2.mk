@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.119 2004/02/18 14:23:43 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.120 2004/02/21 10:35:57 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -195,7 +195,7 @@ do-buildlink: buildlink-wrappers buildlink-${_BLNK_OPSYS}-wrappers
 # buildlink target.  This ensures that the symlinks are created
 # before any configure scripts or build commands are called.
 #
-.for _target_ in ${BUILDLINK_TARGETS}
+.for _target_ in ${BUILDLINK_PRE_TARGETS} ${BUILDLINK_TARGETS}
 do-buildlink: ${_target_}
 .endfor
 
@@ -859,6 +859,7 @@ ${_BLNK_FAKE_LA}: ${.CURDIR}/../../mk/buildlink2/fake-la
 		-e "s|@AWK@|${AWK:Q}|g"					\
 		-e "s|@BASENAME@|${BASENAME:Q}|g"			\
 		-e "s|@CC@|${BUILDLINK_CC:Q}|g"				\
+		-e "s|@LDFLAGS@|${LDFLAGS:N-l*:Q}|g"			\
 		-e "s|@CP@|${CP:Q}|g"					\
 		-e "s|@DIRNAME@|${DIRNAME:Q}|g"				\
 		-e "s|@ECHO@|${ECHO:Q}|g"				\
