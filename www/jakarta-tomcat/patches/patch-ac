@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.5 2001/04/03 11:05:25 wennmach Exp $
+
 --- src/etc/workers.properties.orig	Thu Mar 29 14:16:09 2001
 +++ src/etc/workers.properties	Thu Mar 29 14:16:41 2001
 @@ -40,20 +40,20 @@
