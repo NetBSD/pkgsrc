@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/08 17:55:15 agc Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/15 14:10:51 cube Exp $
 
---- mod.c	2004/01/08 17:33:51	1.1
-+++ mod.c	2004/01/08 17:41:16
-@@ -151,10 +151,19 @@
+--- mod.c.orig	2002-04-08 00:55:20.000000000 +0200
++++ mod.c
+@@ -151,10 +151,19 @@ mod_close(void)
  {
  	struct rule *rule;
  	
-+#ifdef __NetBSD__
++#if defined(FRAGROUTE_SYSTEM_SYS_QUEUE) && defined(__NetBSD__)
 +	TAILQ_FOREACH_REVERSE(rule, &rules, head, next) {
 +		if (rule->mod->close != NULL)
 +			rule->data = rule->mod->close(rule->data);
