@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/16 16:53:14 wiz Exp $
+bin/tavrasm
+share/doc/tavrasm/README
+@dirrm share/doc/tavrasm
