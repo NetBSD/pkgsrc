@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 16:30:43 martti Exp $
+# $NetBSD: Makefile,v 1.6 2003/10/03 02:55:57 explorer Exp $
 
-DISTNAME=	tagged-0.30
-PKGNAME=	p5-MP3-Tag-0.30
+DISTNAME=	tagged-0.40
+PKGNAME=	p5-MP3-Tag-0.40
 SVR4_PKGNAME=	p5mp3
 CATEGORIES=	audio perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MP3/}
