@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/23 07:19:38 mrg Exp $
+
+--- configure.orig	2002-08-13 01:18:53.000000000 +1000
++++ configure	2003-06-21 05:42:36.000000000 +1000
+@@ -946,9 +946,9 @@ else
+ fi
+ 
+ 
+-CPPFLAGS=-I/usr/X11R6/include
++CPPFLAGS="-I${X11BASE}/include -I${LOCALBASE}/include"
+ #LDFLAGS="-L/usr/X11R6/lib -lpbm -lpgm -lppm -lpnm"
+-LDFLAGS="-L/usr/X11R6/lib -L/usr/local/netpbm/lib"
++LDFLAGS="-L${X11BASE}/lib -L${LOCALBASE}/lib"
+ 
+ ## pnm can only be found, if LDFLAGS contains -lpgm -lpnm ... etc. 
+ ## is there a better solution ?

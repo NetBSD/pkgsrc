@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/06/23 07:19:38 mrg Exp $
+
+SHA1 (gocr-0.37.tar.gz) = 41fa2e3f1fc17d27f1f1610441cec4d5f4a6201e
+Size (gocr-0.37.tar.gz) = 672962 bytes
+SHA1 (patch-aa) = cbe18fbaced7a726225e02315a6e157f93c9b2fe
