@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 12:14:05 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/03/26 12:07:56 adrianp Exp $
 
-SHA1 (tcpreplay-2.3.2.tar.gz) = da102c81c55f037adb03a97e1b589f4ca3eb9b63
-RMD160 (tcpreplay-2.3.2.tar.gz) = 13dc9f4cc56257180ad45605ed52bff1bc91566d
-Size (tcpreplay-2.3.2.tar.gz) = 577483 bytes
+SHA1 (tcpreplay-2.3.3.tar.gz) = 52005528c57b5c82983c4491266c0c08385860d0
+RMD160 (tcpreplay-2.3.3.tar.gz) = c523415ed0b2b17ea0bf68e1fa3489e60bc3a240
+Size (tcpreplay-2.3.3.tar.gz) = 585406 bytes
