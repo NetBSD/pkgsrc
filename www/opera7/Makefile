@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/12/29 23:19:34 tron Exp $
+# $NetBSD: Makefile,v 1.28 2005/02/06 12:07:19 jdolecek Exp $
 
 DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
 PKGREVISION=	# empty
@@ -30,10 +30,13 @@ USE_LANGUAGES=          # empty
 .include "../../mk/bsd.prefs.mk"
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20041210
-OPERA_PKG_VERSION=	7.54u1
+OPERA_VER_DATE=		20050131
+OPERA_PKG_VERSION=	7.54u2
 
-.if (${OPSYS} == NetBSD)
+_OPERA_OPSYS?=		${OPSYS}
+_OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}
+
+.if (${_OPERA_OPSYS} == NetBSD)
 DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 # we need the DIST_SUBDIR=. because of the inclusion of suse's Makefile.common
@@ -49,7 +52,7 @@ OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//:C/u.*//}-${OPERA_VER_DATE}.1-
 RPMFILES=	${DISTFILES}
 RPM2PKGSTRIP=	0
 
-.elif (${OPSYS} == FreeBSD)
+.elif (${_OPERA_OPSYS} == FreeBSD)
 EXTRACT_SUFX=		.tar.bz2
 OPERA_ARCH=		.i386.freebsd
 OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION:S/.//g:}/final/${OPERA_LANG}/static
@@ -59,7 +62,7 @@ WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
 
 OWN_DIRS=		${PREFIX}/share/opera/plugins
 
-.elif (${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)
+.elif (${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)
 EXTRACT_SUFX=		.tar.bz2
 OPERA_ARCH=		-sol8-sparc-local
 OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION:S/.//g}/final/${OPERA_LANG}/static
@@ -83,7 +86,7 @@ PLIST_SUBST+=		OPERA_PKG_VERSION=${OPERA_PKG_VERSION}
 
 .endif
 
-.if (((${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)) || (${OPSYS} == FreeBSD))
+.if (((${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)) || (${_OPERA_OPSYS} == FreeBSD))
 NO_BUILD=               YES
 USE_PKGINSTALL=		YES
 
@@ -95,7 +98,7 @@ SUBST_SED.opera7=	-e 's,/usr/,${PREFIX}/,g'
 .endif
 
 do-build:
-.if (${OPSYS} == NetBSD)
+.if (${_OPERA_OPSYS} == NetBSD)
 	@ ${SED} -e 's#@EMULDIR@#${EMULDIR}#g' ${FILESDIR}/opera.sh > \
 		${WRKDIR}/opera
 
@@ -116,7 +119,7 @@ post-install-manpage:
 .  endif
 .endif
 
-.if (((${OPSYS} == SunOS) && (${MACHINE_ARCH} == sparc)) || (${OPSYS} == FreeBSD))
+.if (((${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)) || (${_OPERA_OPSYS} == FreeBSD))
 do-install:
 	@cd ${WRKSRC} && ${ECHO} "n" | ./install.sh --prefix=${PREFIX}
 	@${ECHO} "=> You can ignore any previous lines about opera6rc"
@@ -126,4 +129,16 @@ post-install:
 	@${INSTALL_MAN} ${WRKSRC}/man/opera.1 ${PREFIX}/man/man1
 .endif
 
+# regenerate distinfo for all ports supported by this package
+opera-distinfo:
+	( echo '$$NetBSD: Makefile,v 1.28 2005/02/06 12:07:19 jdolecek Exp $$'; echo ''; \
+	_OPERA_OPSYS=NetBSD make distinfo 1>&2; \
+		${GREP} opera distinfo; \
+	_OPERA_OPSYS=FreeBSD make distinfo 1>&2; \
+		${GREP} opera distinfo; \
+	_OPERA_OPSYS=SunOS _OPERA_MACHINE_ARCH=sparc make distinfo 1>&2; \
+		${GREP} opera distinfo; \
+	) > distinfo.new
+	${MV} -f distinfo.new distinfo
+	
 .include "../../mk/bsd.pkg.mk"
