@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 16:43:15 martti Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/05 15:27:41 jmmv Exp $
 #
 
 DISTNAME=	astyle_1.13.6.1
@@ -12,6 +12,12 @@ HOMEPAGE=	http://astyle.sourceforge.net/
 COMMENT=	Reindenter and reformatter of C++, C and Java source code
 
 HTMLDIR=	${PREFIX}/share/doc/html/astyle
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(CC_VERSION:Mgcc-2*)
+CFLAGS+=	-DASTYLE_GCC2
+.endif
 
 post-extract:
 	${MV} -f ${WRKSRC}/makefile ${WRKSRC}/Makefile

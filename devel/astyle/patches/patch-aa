@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/15 13:32:35 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2003/11/05 15:27:41 jmmv Exp $
 
---- Makefile.orig	Fri Feb 11 12:02:10 2000
-+++ Makefile	Tue Mar 13 14:58:01 2001
-@@ -1,7 +1,12 @@
+--- Makefile.orig	2000-02-11 12:02:10.000000000 +0100
++++ Makefile
+@@ -1,14 +1,19 @@
  # "Artistic Style" Makefile
  
  CPPFLAGS = -Wall -Wno-sign-compare -O2
@@ -15,8 +15,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/15 13:32:35 hubertf Exp $
 +	install -s -c astyle ${LOCALBASE}/bin/
  
  astyle: $(OBJS)
- 	g++ $(CPPFLAGS) -o astyle  $(OBJS)
-@@ -11,4 +16,4 @@
+-	g++ $(CPPFLAGS) -o astyle  $(OBJS)
++	g++ $(CPPFLAGS) $(LDFLAGS) -o astyle  $(OBJS)
+ 
+ .cpp.o:
+-	g++ $(CPPFLAGS) -c $<
++	g++ $(CPPFLAGS) $(CFLAGS) -c $<
  .SUFFIXES: .cpp .c .o
  
  clean:
