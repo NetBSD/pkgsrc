@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2004/03/26 02:27:44 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2004/03/26 16:42:42 seb Exp $
 
-DISTNAME=	Mail-SpamAssassin-${PKGVERSION}
-PKGNAME=	spamassassin-2.63
-PKGREVISION=	# empty
+DISTNAME=	Mail-SpamAssassin-${SPAMASSASSIN_VERSION}
+PKGNAME=	spamassassin-${SPAMASSASSIN_VERSION}
 PKGREVISION=	1
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail
@@ -15,6 +14,8 @@ HOMEPAGE=	http://www.spamassassin.org/
 COMMENT=	Mail filter to identify spam
 
 CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*
+
+SPAMASSASSIN_VERSION=	2.63
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
