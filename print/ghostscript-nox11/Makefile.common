@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2003/09/04 08:27:37 wiz Exp $
+# $NetBSD: Makefile.common,v 1.49 2003/09/17 19:41:03 grant Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -136,8 +136,11 @@ ALL_TARGET=		std
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-.  include "../../mk/gcc.buildlink2.mk"
+GCC_REQD=		2.95.3
+.elif ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
+GCC_REQD=		3.0
 .endif
+
 .if defined(ZOULARISBASE)
 LDFLAGS+=	-L${ZOULARISBASE}/lib -Wl,${RPATH_FLAG}${ZOULARISBASE}/lib
 .endif
@@ -300,8 +303,3 @@ post-install:
 .include "../../graphics/png/buildlink2.mk"
 .include "../../print/ja-vflib-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-USE_GCC3=YES
-.  include "../../mk/gcc.buildlink2.mk"
-.endif
