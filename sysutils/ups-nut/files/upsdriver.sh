@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: upsdriver.sh,v 1.1 2001/11/21 15:50:56 jlam Exp $
+# $NetBSD: upsdriver.sh,v 1.2 2001/11/21 20:39:40 jlam Exp $
 #
 # PROVIDE: upsdriver
 # REQUIRE: NETWORK syslogd mountcritremote
@@ -12,8 +12,9 @@
 #	upsdriver_type="newapc"
 #	upsdriver_flags="-a smartups"
 #
-# Please refer to nutupsdrv(8) for more information about the arguments to
-# pass to the UPS drivers.
+# If "upsdriver_type" is unset, then use "upsdrvctl" to control the UPS
+# drivers.  Please refer to nutupsdrv(8) for more information about the
+# arguments to pass to the UPS drivers.
 
 if [ -d /etc/rc.d -a -f /etc/rc.subr ]
 then
@@ -22,18 +23,36 @@ fi
 
 name="upsdriver"
 rcvar=$name
-command="@PREFIX@/sbin/ups-drivers/${upsdriver_type}"
-#
-# XXX - We need a way to easily determine the pidfile, which is of the form
-# XXX - @NUT_STATEDIR@/${updriver_type}-${tty}.pid
-#
-#pidfile="@NUT_STATEDIR@/${upsdriver_type}-${tty}.pid"
+
+if [ -d /etc/rc.d ]
+then
+	load_rc_config $name
+fi
+
+if [ "${upsdriver_type:-upsdrvctl}" = "upsdrvctl" ]
+then
+	ctl_command="@PREFIX@/sbin/upsdrvctl"
+	required_files="@NUT_CONFDIR@/ups.conf"
+	start_cmd="${ctl_command} start"
+	stop_cmd="${ctl_command} stop"
+else
+	command="@PREFIX@/sbin/ups-drivers/${upsdriver_type}"
+	#
+	# XXX - We need a way to easily determine the pidfile, which is of
+	# XXX - the form @NUT_STATEDIR@/${updriver_type}-${tty}.pid
+	#
+	#pidfile="@NUT_STATEDIR@/${upsdriver_type}-${tty}.pid"
+fi
 
 if [ ! -d /etc/rc.d ]
 then
 	@ECHO@ -n " ${name}"
-	${command} ${upsdriver_flags} ${command_args}
+	if [ -n "${start_cmd}" ]
+	then
+		${start_cmd}
+	else
+		${command} ${upsdriver_flags} ${command_args}
+	fi
 else
-	load_rc_config $name
 	run_rc_command "$1"
 fi
