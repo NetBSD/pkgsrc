@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:12:53 tv Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/20 10:10:47 grant Exp $
 #
 
-DISTNAME=	hypermail-2.1.7
-PKGREVISION=	1
+DISTNAME=	hypermail-2.1.8
 CATEGORIES=	mail www
 MASTER_SITES=	http://www.hypermail.org/dist/
 
@@ -14,9 +13,6 @@ USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gdbm=${BUILDLINK_PREFIX.gdbm}
 CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/html/hypermail
-
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/hypermail/images
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
