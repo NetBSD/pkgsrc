@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/11/13 01:50:22 frueauf Exp $
+# $NetBSD: Makefile,v 1.10 1999/01/09 03:19:02 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -11,27 +11,27 @@ MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.yggdrasil.com/Products/Arena/
 
 DEPENDS=	libwww-5.1m1:../../www/libwww \
-		jpeg-6b:../../graphics/jpeg \
-		png-1.0.2:../../graphics/png \
-		xpm-3.4k:../../graphics/xpm
+		jpeg-6*:../../graphics/jpeg \
+		png-1.*:../../graphics/png \
+		xpm-3.4*:../../graphics/xpm
 
 NOT_FOR_ARCHS=	alpha	#Runs, displays black screen
 
-LDFLAGS+=	-L${PREFIX}/lib -L${X11BASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -L${X11BASE}/lib
 USE_GMAKE=	yes
 MAKEFILE=	makefile
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 CONFIGURE_ARGS+=	--without-debug
-CONFIGURE_ARGS+=	--with-libwww-include=${PREFIX}/include/w3c-libwww
-CONFIGURE_ARGS+=	--with-libwww-libdir=${PREFIX}/lib
-CONFIGURE_ARGS+=	--with-libwww-config-h-dir=${PREFIX}/include/w3c-libwww
-CONFIGURE_ENV+=	CPPFLAGS="-I${PREFIX}/include -I${X11BASE}/include -I${WRKDIR}"
+CONFIGURE_ARGS+=	--with-libwww-include=${LOCALBASE}/include/w3c-libwww
+CONFIGURE_ARGS+=	--with-libwww-libdir=${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--with-libwww-config-h-dir=${LOCALBASE}/include/w3c-libwww
+CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include -I${WRKDIR}"
 
 # Arena requires libwww's "config.h" header - it is installed as "wwwconf.h",
 # so make a symlink in ${WRKDIR} and add it to the -I list.
 pre-configure:
-	@${LN} -sf ${PREFIX}/include/w3c-libwww/wwwconf.h ${WRKDIR}/config.h
+	@${LN} -sf ${LOCALBASE}/include/w3c-libwww/wwwconf.h ${WRKDIR}/config.h
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Arena/netbsd/arena ${PREFIX}/bin/
