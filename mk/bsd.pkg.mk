@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.457 2000/06/03 15:08:35 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.458 2000/06/03 16:52:32 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2225,20 +2225,37 @@ PACKAGE_DEPENDS_WITH_PATTERNS?=true
 PACKAGE_DEPENDS_QUICK?=false
 .if !target(package-depends)
 package-depends:
-.for dep in ${DEPENDS} ${RUN_DEPENDS}
+.for dep in ${DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}\
 	pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://}";					\
-	if [ -d $$dir ]; then						\
+	cd ${.CURDIR};							\
+	if cd $$dir 2>/dev/null; then						\
 		if ${PACKAGE_DEPENDS_WITH_PATTERNS}; then		\
 			${ECHO} "$$pkg";				\
 		else							\
-			(cd $$dir && ${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+			${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
 		fi;							\
 		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
 			${PKG_INFO} -qf "$$pkg" | ${AWK} '/^@pkgdep/ {print $$2}' ; \
 		else 							\
-			(cd $$dir && ${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}); \
+			${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
+		fi ; 							\
+	else								\
+		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
+	fi
+.endfor
+.for dep in ${RUN_DEPENDS}
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	file="${dep:C/:.*//}";						\
+	dir="${.CURDIR}/${dep:C/[^:]*://}";				\
+	cd ${.CURDIR};							\
+	if cd $$dir 2>/dev/null; then						\
+		${MAKE} ${MAKEFLAGS} package-name PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
+		if ${PACKAGE_DEPENDS_QUICK} ; then 			\
+			${PKG_INFO} -qf "$$file" | ${AWK} '/^@pkgdep/ {print $$2}' ; \
+		else 							\
+			${MAKE} ${MAKEFLAGS} package-depends PACKAGE_NAME_TYPE=${PACKAGE_NAME_TYPE}; \
 		fi ; 							\
 	else								\
 		${ECHO_MSG} "Warning: \"$$dir\" non-existent -- @pkgdep registration incomplete" >&2; \
@@ -2424,7 +2441,7 @@ binpkg-list:
 		done ; 							\
 		;;							\
 	*)								\
-		cd ${PACKAGES};						\
+		cd ${PACKAGES}/../..;					\
 		for i in [1-9].*/*; do  				\
 			if cd ${PACKAGES}/$$i/${PKGREPOSITORYSUBDIR}; then \
 				for j in ${PKGNAME:C/-[^-]*$/-[0-9]*/}${PKG_SUFX};	\
@@ -2434,7 +2451,7 @@ binpkg-list:
 					fi;				\
 				done; 					\
 			fi; 						\
-		done | sort | ${AWK} -F/ '				\
+		done | ${AWK} -F/ '					\
 			{						\
 				release = $$1;				\
 				arch = $$2; 				\
@@ -2455,7 +2472,7 @@ binpkg-list:
 					release=ava[3];			\
 					print "<TR><TD>" arch ":<TD>" urls[av] "<TD>(${OPSYS} " release ")"; \
 				}					\
-			}'						\
+			}' | sort					\
 		;;							\
 	esac
 .endif
@@ -2558,7 +2575,7 @@ README.html: .PRECIOUS
 	@${ECHO} ${PKGNAME} | ${HTMLIFY} >> $@.tmp3
 	@${MAKE} ${MAKEFLAGS} binpkg-list  >> $@.tmp4
 	@[ -s $@.tmp4 ] || ${ECHO} "<TR><TD><I>(no precompiled binaries available)</I>" >> $@.tmp4
-	@${SED} -e 's|%%PORT%%|'"`${MAKE} ${MAKEFLAGS} package-path | ${HTMLIFY}`"'|g' \
+	@${SED} -e 's|%%PORT%%|${.CURDIR:C,.*/([^/]*/[^/]*)$,\1,}|g' \
 		-e '/%%PKG%%/r $@.tmp3'					\
 		-e '/%%PKG%%/d'						\
 		${SED_LICENSE_EXPR}					\
@@ -2638,11 +2655,11 @@ print-pkg-size:
 print-pkg-depend-sizes:
 .for dep in ${DEPENDS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	prog="${dep:C/:.*//}";						\
+	pkg="${dep:C/:.*//}";						\
 	${SHCOMMENT} direct depends ;					\
-	${PKG_INFO} -qL "$$prog" ;					\
+	${PKG_INFO} -qL "$$pkg" ;					\
 	${SHCOMMENT} "depends of depends (XXX complete!)"; 		\
-	dps=`${PKG_INFO} -qf "$$prog" | ${AWK} '/^@pkgdep/ {print $$2}'`; \
+	dps=`${PKG_INFO} -qf "$$pkg" | ${AWK} '/^@pkgdep/ {print $$2}'`; \
 	for dp in $$dps ; do						\
 		${PKG_INFO} -qL "$$dp" ;				\
 	done
