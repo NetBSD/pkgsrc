@@ -1,27 +1,13 @@
-$NetBSD: patch-ak,v 1.4 2001/04/23 15:06:17 abs Exp $
+$NetBSD: patch-ak,v 1.5 2003/09/23 21:39:48 abs Exp $
 
---- faxd/UUCPLock.c++.orig	Thu Sep 21 10:24:54 2000
-+++ faxd/UUCPLock.c++
-@@ -37,6 +37,7 @@
- }
- #endif
- #include <pwd.h>
-+#include <grp.h>
- 
+--- faxd/FaxModem.h.orig	Sat Apr 26 08:11:21 2003
++++ faxd/FaxModem.h
+@@ -144,7 +144,7 @@ protected:
  /*
-  * UUCP Device Locking Support.
-@@ -146,8 +147,13 @@
- 	if (!pwd)
- 	    faxApp::fatal("Can not deduce identity of UUCP");
- 	UUCPuid = pwd->pw_uid;
--	UUCPgid = pwd->pw_gid;
- 	endpwent();			// paranoia
-+
-+	const group *grp = getgrnam(FAX_GROUP);
-+	if (!grp)
-+	    faxApp::fatal("Can not deduce group identity of '" FAX_GROUP "'");
-+	UUCPgid = grp->gr_gid;
-+	endgrent();			// paranoia
-     }
- }
- uid_t UUCPLock::getUUCPUid() { setupIDs(); return UUCPuid; }
+  * Correct if neccessary Phase C (T.4) data (remove extra RTC etc.)
+  */
+-    void        correctPhaseCData(u_char* buf, u_long* pBufSize,
++    void        correctPhaseCData(u_char* buf, uint32* pBufSize,
+                                   u_int fillorder, const Class2Params& params);
+ public:
+     enum {			// FaxModem::RTNHandling

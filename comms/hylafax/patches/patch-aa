@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2001/04/23 15:06:12 abs Exp $
+$NetBSD: patch-aa,v 1.8 2003/09/23 21:39:47 abs Exp $
 
---- Makefile.in.orig	Sun Sep  3 04:39:31 2000
+--- Makefile.in.orig	Mon Apr 14 03:44:42 2003
 +++ Makefile.in
-@@ -223,22 +223,13 @@
+@@ -237,22 +237,13 @@ makeClientDirs::
  makeServerDirs::
  	-${INSTALL} -u ${SYSUSER} -g ${SYSGROUP} -m ${DIRMODE} \
  	    -idb hylafax.sw.server -dir ${SBIN};
@@ -26,4 +26,4 @@ $NetBSD: patch-aa,v 1.7 2001/04/23 15:06:12 abs Exp $
 +	${INSTALL} -m 444 -F ${PREFIX}/share/doc/hylafax -idb hylafax.sw.server \
  	    -src ${SRCDIR}/COPYRIGHT -O COPYRIGHT
  	@if [ "@REGEX@" = yes ]; then \
- 	    ${ECHO} "= "regex; cd regex; ${MAKE} install; \
+ 	    ${ECHO} "= "regex; cd regex; ${MAKE} install  ||  exit 1; \
