@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/07/04 03:19:48 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/09/12 16:45:48 jlam Exp $
 @comment There are three files in this package that teTeX-share installs
 @comment and that teTeX-bin modifies. Take care of this:
 lib/libkpathsea.a
@@ -181,7 +181,6 @@ man/man1/allneeded.1
 man/man1/allcm.1
 man/man1/ps2frag.1
 man/man1/texconfig.1
-man/man1/texi2html.1
 man/man1/ps2pk.1
 man/man1/pk2bm.1
 man/man1/pfb2pfa.1
@@ -261,7 +260,6 @@ bin/fontimport
 bin/fontexport
 bin/allneeded
 bin/allcm
-bin/texi2html
 bin/pslatex
 bin/dvired
 bin/texconfig
