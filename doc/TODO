@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1032 2003/11/16 11:22:28 wiz Exp $
+$NetBSD: TODO,v 1.1033 2003/11/16 12:16:17 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,7 @@ Suggested package updates
 	o xmess-0.76.1
 	o xmms-1.2.8
 	o xmms-crossfade-0.3.4
-	o xmule-1.6.1
+	o xmule-1.7.0 [jmmv]
 	o xnc-5.0.2
 	o xpad-1.13
 	o xps-4.2
