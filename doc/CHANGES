@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6443 2004/07/04 22:25:08 jmmv Exp $
+$NetBSD: CHANGES,v 1.6444 2004/07/04 22:41:23 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3244,3 +3244,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated buildtool to 0.16 [jmmv 2004-07-04]
 	Updated buildtool-doc to 0.16 [jmmv 2004-07-04]
 	Updated menu2wm to 0.2nb1 [jmmv 2004-07-04]
+	Added gramofile-1.6 [agc 2004-07-04]
