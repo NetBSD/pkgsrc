@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2004/08/30 19:20:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.59 2004/08/31 11:53:07 jmmv Exp $
 #
 
 DISTNAME=		gtk+-2.4.9
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.4/ \
 			${MASTER_SITE_GNOME:=sources/gtk+/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gtk.org/
 COMMENT=		The GIMP Toolkit - libraries for building X11 user interfaces
 
