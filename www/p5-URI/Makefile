@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2002/05/16 21:24:14 mjl Exp $
+# $NetBSD: Makefile,v 1.17 2002/08/20 14:48:54 wiz Exp $
 #
 
-DISTNAME=	URI-1.19
+DISTNAME=	URI-1.21
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5uri
 CATEGORIES=	www net perl5
