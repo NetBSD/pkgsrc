@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.9 2004/02/26 17:09:08 drochner Exp $
+
+--- longlong.h.orig	2004-02-26 17:07:18.000000000 +0100
++++ longlong.h	2004-02-26 17:49:56.000000000 +0100
+@@ -715,8 +715,10 @@
+   } while (0)
+ #define count_trailing_zeros(count, x)					\
+   do {									\
++    UDItype __cbtmp;							\
+     ASSERT ((x) != 0);							\
+-    __asm__ ("bsfq %1,%0" : "=r" (count) : "rm" ((UDItype)(x)));	\
++    __asm__ ("bsfq %1,%0" : "=r" (__cbtmp) : "rm" ((UDItype)(x)));	\
++    (count) = __cbtmp;							\
+   } while (0)
+ #endif /* x86_64 */
+ 
