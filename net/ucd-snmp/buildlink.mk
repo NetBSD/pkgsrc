@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2002/02/17 21:09:35 tron Exp $
+# $NetBSD: buildlink.mk,v 1.2 2002/04/20 18:46:06 fredb Exp $
 #
 # This Makefile fragment is included by packages that use libraries from
 # ucd-snmp.
@@ -18,7 +18,7 @@ UCD_SNMP_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.ucd-snmp?=		ucd-snmp>=4.2.3nb1
+BUILDLINK_DEPENDS.ucd-snmp?=		ucd-snmp-4.2.4*
 DEPENDS+=	${BUILDLINK_DEPENDS.ucd-snmp}:../../net/ucd-snmp
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.ucd-snmp=ucd-snmp
