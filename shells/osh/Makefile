@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2004/04/25 15:49:57 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/11 10:01:35 cjep Exp $
 # FreeBSD Id: ports/shells/osh/Makefile,v 1.3 2002/01/29 11:58:43 knu Exp
 
 DISTNAME=	osh-040421
 CATEGORIES=	shells
 MASTER_SITES=	http://jneitzel.sdf1.org/osh/src/
 
-HOMEPAGE=	http://jneitzel.sdf1.org/osh/
 MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://jneitzel.sdf1.org/osh/
 COMMENT=	Implementation of the UNIX 6th Edition shell
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
