@@ -1,0 +1,104 @@
+--- configure	Wed Apr  5 01:32:58 2000
++++ configure	Fri May 26 15:26:58 2000
+@@ -1624,7 +1624,7 @@
+   ;;
+   *)
+   IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
+-  ac_dummy="$PATH /usr/bin /usr/sbin /usr/etc /etc /usr/ucblib"
++  ac_dummy="$PATH:/usr/bin:/usr/sbin:/usr/etc:/etc:/usr/ucblib"
+   for ac_dir in $ac_dummy; do 
+     test -z "$ac_dir" && ac_dir=.
+     if test -f $ac_dir/$ac_word; then
+@@ -1651,9 +1651,9 @@
+ 
+ fi
+ 
+-if test -d /usr/pkg/include -a -d /usr/pkg/lib ; then
+-       CFLAGS="$CFLAGS -I/usr/pkg/include"
+-       LDFLAGS="$LDFLAGS -L/usr/pkg/lib"
++if test -d ${PREFIX}/include -a -d ${PREFIX}/lib ; then
++       CFLAGS="$CFLAGS -I${PREFIX}/include"
++       LDFLAGS="$LDFLAGS -L${PREFIX}/lib"
+ fi
+ 
+ echo $ac_n "checking for gethostent""... $ac_c" 1>&6
+@@ -4373,6 +4373,7 @@
+ fi
+ 
+ 
++LDFLAGS_SHLIB_EXPORT=`perl -V:ccdlflags | cut -d\' -f2`
+ 
+ echo $ac_n "checking for Apache module support via DSO through APXS""... $ac_c" 1>&6
+ echo "configure:4379: checking for Apache module support via DSO through APXS" >&5
+@@ -4395,7 +4396,7 @@
+ 	if test "a`$APXS -q LD_SHLIB`" = "a" || test "`$APXS -q LIBEXECDIR`" = "modules"; then
+ 		PHP_APXS_BROKEN=yes
+ 	fi
+-    PHP_LIBS=-L/usr/local/lib
++    PHP_LIBS="-R${PREFIX}/lib -L${PREFIX}/lib"
+     STRONGHOLD=
+     cat >> confdefs.h <<\EOF
+ #define APACHE 1
+@@ -5005,17 +5006,17 @@
+ else
+   echo "$ac_t""no" 1>&6
+ 
+-								echo "$ac_t"""Try /usr/pkg/include/gdbm.h"" 1>&6;
+-				ac_safe=`echo "/usr/pkg/include/gdbm.h" | sed 'y%./+-%__p_%'`
+-echo $ac_n "checking for /usr/pkg/include/gdbm.h""... $ac_c" 1>&6
+-echo "configure:5012: checking for /usr/pkg/include/gdbm.h" >&5
++								echo "$ac_t"""Try ${PREFIX}/include/gdbm.h"" 1>&6;
++				ac_safe=`echo "${PREFIX}/include/gdbm.h" | sed 'y%./+-%__p_%'`
++echo $ac_n "checking for ${PREFIX}/include/gdbm.h""... $ac_c" 1>&6
++echo "configure:5012: checking for ${PREFIX}/include/gdbm.h" >&5
+ if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   cat > conftest.$ac_ext <<EOF
+ #line 5017 "configure"
+ #include "confdefs.h"
+-#include </usr/pkg/include/gdbm.h>
++#include <${PREFIX}/include/gdbm.h>
+ EOF
+ ac_try="$ac_cpp conftest.$ac_ext >/dev/null 2>conftest.out"
+ { (eval echo configure:5022: \"$ac_try\") 1>&5; (eval $ac_try) 2>&5; }
+@@ -6108,14 +6109,14 @@
+ fi
+ 
+       
+-            if test -f /usr/pkg/include/gd/gd.h -a -z "$GD_INCLUDE" ; then
++            if test -f ${PREFIX}/include/gd/gd.h -a -z "$GD_INCLUDE" ; then
+          
+-  if test "/usr/pkg/include/gd" != "/usr/include"; then
++  if test "${PREFIX}/include/gd" != "/usr/include"; then
+     
+-  if test -z "/usr/pkg/include/gd" || echo "/usr/pkg/include/gd" | grep '^/' >/dev/null ; then
+-    ai_p="/usr/pkg/include/gd"
++  if test -z "${PREFIX}/include/gd" || echo "${PREFIX}/include/gd" | grep '^/' >/dev/null ; then
++    ai_p="${PREFIX}/include/gd"
+   else
+-    ai_p="`pwd`//usr/pkg/include/gd"
++    ai_p="`pwd`/${PREFIX}/include/gd"
+   fi
+ 
+     
+@@ -7076,14 +7077,14 @@
+ fi
+ 
+     
+-        if test -f /usr/pkg/include/gd/gd.h -a -z "$GD_INCLUDE" ; then
++        if test -f ${PREFIX}/include/gd/gd.h -a -z "$GD_INCLUDE" ; then
+        
+-  if test "/usr/pkg/include/gd" != "/usr/include"; then
++  if test "${PREFIX}/include/gd" != "/usr/include"; then
+     
+-  if test -z "/usr/pkg/include/gd" || echo "/usr/pkg/include/gd" | grep '^/' >/dev/null ; then
+-    ai_p="/usr/pkg/include/gd"
++  if test -z "${PREFIX}/include/gd" || echo "${PREFIX}/include/gd" | grep '^/' >/dev/null ; then
++    ai_p="${PREFIX}/include/gd"
+   else
+-    ai_p="`pwd`//usr/pkg/include/gd"
++    ai_p="`pwd`/${PREFIX}/include/gd"
+   fi
+ 
+     
