@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7633 2004/10/31 16:23:21 seb Exp $
+$NetBSD: CHANGES,v 1.7634 2004/10/31 21:53:56 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4997,3 +4997,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Test-Builder-Tester-1.01 [seb 2004-10-31]
 	Added p5-Test-Pod-1.20 [seb 2004-10-31]
 	Added p5-NetAddr-IP-3.21 [seb 2004-10-31]
+	Added ap-php5-5.0.2 [jdolecek 2004-10-31]
