@@ -1,20 +1,29 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 11:14:23 agc Exp $
+$NetBSD: patch-ab,v 1.4 1999/10/08 04:43:07 deberg Exp $
 
---- configure.orig	Tue Jul 14 07:36:55 1998
-+++ configure	Tue Jul 14 07:38:11 1998
-@@ -1432,6 +1432,7 @@
-   echo "$ac_t""no" 1>&6
+--- configure.orig	Thu May 27 16:41:53 1999
++++ configure	Thu May 27 16:48:05 1999
+@@ -2014,5 +2014,5 @@
  fi
  
+-
 +if false; then
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -1477,6 +1478,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+ # Check for any special flags to pass to ltconfig.
+ #
+@@ -2242,4 +2242,5 @@
+   libtool_flags="$libtool_flags --disable-lock"
+ fi
 +fi
  
- echo $ac_n "checking whether ${MAKE-make} sets \${MAKE}""... $ac_c" 1>&6
- echo "configure:1483: checking whether ${MAKE-make} sets \${MAKE}" >&5
+ 
+@@ -2293,4 +2294,5 @@
+ 
+ 
++if false; then
+ # Actually configure libtool.  ac_aux_dir is where install-sh is found.
+ CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
+@@ -2316,4 +2318,5 @@
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
