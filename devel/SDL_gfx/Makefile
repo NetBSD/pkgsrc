@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/03/24 20:14:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/03 07:05:23 jmc Exp $
 #
 
 DISTNAME=	SDL_gfx-2.0.3
@@ -14,6 +14,10 @@ GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+.if (${MACHINE_ARCH} != "i386")
+CONFIGURE_ARGS+=	--disable-mmx
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/SDL_gfx/
