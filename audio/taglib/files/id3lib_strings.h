@@ -1,5 +1,5 @@
 // -*- C++ -*-
-// $Id: id3lib_strings.h,v 1.1.1.1 2004/02/09 00:30:25 chris Exp $
+// $Id: id3lib_strings.h,v 1.2 2004/06/07 19:36:40 shannonjr Exp $
 
 // id3lib: a software library for creating and manipulating id3v1/v2 tags
 // Copyright 1999, 2000  Scott Thomas Haug
@@ -197,7 +197,7 @@ namespace dami
   typedef std::basic_string<char>           String;
   typedef std::basic_string<unsigned char> BString;
   typedef std::basic_string<wchar_t>       WString;
-};
+}
 
 #endif /* _ID3LIB_STRINGS_H_ */
 
