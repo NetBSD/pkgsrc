@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9000 2005/02/01 22:58:37 tron Exp $
+$NetBSD: CHANGES,v 1.9001 2005/02/01 23:34:13 agc Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -634,9 +634,9 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated jwhois to 3.2.2nb12 [kleink 2005-01-27]
 	Updated pkgfind to 20050127 [jschauma 2005-01-27]
 	Added mencvcd-0.2.2 [tron 2005-01-27]
-	Update win32-codecs to 050115 [ben 2005-01-27]
-	Update windowmaker-desktop to 1.2 [ben 2005-01-27]
-	Update xlockmore to 5.15 [hubertf 2005-01-28]
+	Updated win32-codecs to 050115 [ben 2005-01-27]
+	Updated windowmaker-desktop to 1.2 [ben 2005-01-27]
+	Updated xlockmore to 5.15 [hubertf 2005-01-28]
 	Added scponly-4.0 [snj 2005-01-28]
 	Updated mencvcd to 0.3 [tron 2005-01-28]
 	Updated pcb-current to 20050127 [dmcmahill 2005-01-28]
