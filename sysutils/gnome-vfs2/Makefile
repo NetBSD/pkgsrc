@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2004/02/06 19:09:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/07 00:07:00 minskim Exp $
 #
 
 DISTNAME=		gnome-vfs-2.4.2
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/vfs/vfs2/}
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.4/}
@@ -28,6 +29,7 @@ CONFIGURE_ARGS= 	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--enable-platform-gnome-2
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ENV+=		openssl_libs="yes"
 
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.cdparanoia}/include/cdparanoia
 
@@ -35,7 +37,9 @@ PKG_SYSCONFSUBDIR=	gnome-vfs-2.0
 OWN_DIRS=		${PKG_SYSCONFDIR}/modules ${PKG_SYSCONFDIR}/vfolders
 
 EGDIR=		${PREFIX}/share/examples/gnome-vfs-2.0
-EGFILES=	modules/default-modules.conf
+EGFILES=	modules/cdda-module.conf
+EGFILES+=	modules/default-modules.conf
+EGFILES+=	modules/ssl-modules.conf
 EGFILES+=	vfolders/applications-all-users.vfolder-info
 EGFILES+=	vfolders/favorites.vfolder-info
 EGFILES+=	vfolders/network.vfolder-info
