@@ -1,18 +1,17 @@
-$NetBSD: patch-an,v 1.4 1999/11/24 17:38:50 hubertf Exp $
+$NetBSD: patch-an,v 1.5 2000/02/01 00:38:14 wiz Exp $
 
-diff -x *.orig -urN ./lib/Mrm-2.0/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/Mrm-2.0/Makefile.in
---- ./lib/Mrm-2.0/Makefile.in	Fri Nov  5 21:14:39 1999
-+++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/Mrm-2.0/Makefile.in	Wed Nov 24 17:30:53 1999
-@@ -128,7 +128,7 @@
- EXTRA_DIST = ${SRCS_2_0}
+--- ./lib/Mrm-2.0/Makefile.in.orig	Fri Jan 14 23:42:19 2000
++++ ./lib/Mrm-2.0/Makefile.in	Mon Jan 31 02:34:52 2000
+@@ -159,7 +159,7 @@
+ @Version_2_0_TRUE@		-DLESSTIFHOME=\"@prefix@\"
  
  @Version_2_0_TRUE@libdir = \
 -@Version_2_0_TRUE@$(prefix)/LessTif/Motif2.0/lib
 +@Version_2_0_TRUE@$(prefix)/lib
  
- #
- # Sources in another directory
-@@ -256,7 +256,7 @@
+ @Version_2_0_TRUE@lib_LTLIBRARIES = \
+ @Version_2_0_TRUE@libMrm.la
+@@ -249,7 +249,7 @@
  maintainer-clean-compile:
  
  .c.lo:
@@ -21,7 +20,7 @@ diff -x *.orig -urN ./lib/Mrm-2.0/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.
  
  mostlyclean-libtool:
  	-rm -f *.lo
-@@ -334,7 +334,6 @@
+@@ -327,7 +327,6 @@
  
  install-data-am:
  	@$(NORMAL_INSTALL)
