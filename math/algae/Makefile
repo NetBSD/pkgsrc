@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/24 16:28:55 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/31 22:58:39 seb Exp $
 
 DISTNAME=		algae-4.1.3
 PKGREVISION=		1
@@ -16,8 +16,8 @@ USE_FORTRAN=		# defined
 USE_BUILDLINK2=		# defined
 USE_GNU_READLINE=	# uses history_truncate_file
 
+USE_NEW_TEXINFO=	YES
 INFO_FILES=		algae.info
 
 .include "../../devel/readline/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
