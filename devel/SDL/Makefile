@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2002/01/03 01:32:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.30 2002/01/31 13:53:41 agc Exp $
 #
 
 DISTNAME=	SDL-1.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -60,7 +60,7 @@ post-configure:
 .include "../../audio/esound/buildlink.mk"
 .include "../../devel/pth/buildlink.mk"
 .include "../../graphics/Mesa/buildlink.mk"
-.include "../../graphics/aalib/buildlink.mk"
+.include "../../graphics/aalib-x11/buildlink.mk"
 .include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
