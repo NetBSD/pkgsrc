@@ -1,0 +1,75 @@
+# $NetBSD: logic,v 1.2.4.2 2003/01/10 09:41:54 jlam Exp $
+
+quotedarg=no
+addtocache=no
+addtoprivatecache=no
+cachesettings='arg="$cachearg"; cachehit=yes'
+
+# $qarg contains a correctly-quoted $arg
+case $arg in
+*[\`\"\$\\]*)
+	qarg=`$echo "X$arg" | $Xsed -e "$sed_quote_subst"`
+	quotedarg=yes
+	;;
+*)
+	qarg="$arg"
+	;;
+esac
+case $qarg in
+	*[\[\~\#\^\&\*\(\)\{\}\|\;\<\>\?\'\ \	]*|*]*|"")
+	qarg="\"$qarg\""
+	quotedarg=yes
+	;;
+esac
+searcharg="$qarg"
+
+case $arg in
+-D*)
+	arg="$qarg"
+	addtocache=yes
+	;;
+-[ILRl]*|-Wl,*|/usr/lib/lib*|@LOCALBASE@/*/lib*|@X11BASE@/*/lib*)
+	arg=`$echo "X$qarg" | $Xsed @_BLNK_TRANSFORM_SED@`
+	addtocache=yes
+	;;
+*)
+	arg="$qarg"
+	addtocache=no
+	;;
+esac
+
+. $post_logic
+
+case $updatecache,$addtocache,$cacheall,$quotedarg in
+yes,yes,yes,*|yes,yes,no,no)
+	case $arg in
+	*[\`\"\$\\]*)
+		cachearg=`$echo "X$arg" | $Xsed -e "$sed_quote_subst"`
+		;;
+	*)
+		cachearg="$arg"
+		;;
+	esac
+	case $addtoprivatecache in
+	yes)
+		pre_cachefile=$private_pre_cache
+		cachefile_add=$private_cache_add
+		cachefile=$private_cache
+		post_cachefile=$private_post_cache
+		;;
+	*)
+		pre_cachefile=$pre_cache
+		cachefile_add=$cache_add
+		cachefile=$cache
+		post_cachefile=$post_cache
+		;;
+	esac
+	$cat >> $cachefile_add << EOF
+$searcharg)
+	cachearg="$cachearg"
+	$cachesettings
+	;;
+EOF
+	$cat $pre_cachefile $cachefile_add $post_cachefile > $cachefile
+	;;
+esac
