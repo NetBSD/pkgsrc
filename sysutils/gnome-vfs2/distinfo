@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2004/04/15 06:25:12 adam Exp $
+$NetBSD: distinfo,v 1.17 2004/04/23 03:29:27 minskim Exp $
 
 SHA1 (gnome-vfs-2.6.0.tar.bz2) = a5cfea7568259fc6fe98322a7a01eb70d8f5f615
 Size (gnome-vfs-2.6.0.tar.bz2) = 1431274 bytes
@@ -7,7 +7,7 @@ SHA1 (patch-ab) = 9fc885b1ef1e9dd05f4b3041963df298dbfba582
 SHA1 (patch-ac) = 6790f1ee67f12690bd648d258e87456c2639b560
 SHA1 (patch-ad) = 326e835c7fd1d2e25ac2ae4736347d38ffe8ea06
 SHA1 (patch-ae) = 5e52bb80ce3070d04c85c363c0ba1360ab7edb37
-SHA1 (patch-af) = c820b7ed8ba0a9b0a5b81d8763b718349566a62b
+SHA1 (patch-af) = 4273d773f8f9701262ab541efc43e9f7eb126001
 SHA1 (patch-ag) = 2d502c6a8550cca7fe8c45969e874d05328dec7e
 SHA1 (patch-ah) = 0b4d5ef53d47a0be87a6b1b529b65fd186525a72
 SHA1 (patch-ai) = 5aebccc7769917d0a9d17136946dbfbfa71d9a06
