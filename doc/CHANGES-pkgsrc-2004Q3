@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.40 2004/12/07 10:11:27 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.41 2004/12/13 10:23:04 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -83,3 +83,5 @@ Pullup ticket 161 - requested by Jan Schaumann
 security update for sun-jre14 and sun-jdk14
 Pullup ticket 165 - requested by Julio M. Merino Vidal
 MASTER_SITES fix for shared-mime-info
+Pullup ticket 168 - requested by Todd Vierling
+security fix for ssmtp
