@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/02 11:59:07 itojun Exp $
+
+--- steering.c-	Thu Nov  2 20:47:38 2000
++++ steering.c	Thu Nov  2 20:47:50 2000
+@@ -61,6 +61,8 @@
+ 
+ #define TOP_LEVEL_PROMPT "\n==> "
+ 
++#include "path.h"
++
+ #ifndef STANDARD_PRELUDE_PATHNAME
+ #define STANDARD_PRELUDE_PATHNAME "/usr/local/lib/prelude.scheme"
+ #endif

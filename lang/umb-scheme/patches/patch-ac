@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/11/02 11:59:07 itojun Exp $
+
+--- scheme.1-	Thu Nov  2 20:51:05 2000
++++ scheme.1	Thu Nov  2 20:51:21 2000
+@@ -321,7 +321,7 @@
+ UMB Scheme does not support nested debugging sessions.  (Keep it simple.)
+ .fi
+ .SH FILES
+-/usr/local/lib/prelude.scheme
++@PREFIX@/lib/umb-scheme/prelude.scheme
+ .SH "SEE ALSO"
+ Release Notes
+ .SH COPYING
