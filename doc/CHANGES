@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6210 2004/06/14 20:27:16 kristerw Exp $
+$NetBSD: CHANGES,v 1.6211 2004/06/15 02:36:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2942,3 +2942,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated priv to 1.0beta2nb1 [uebayasi 2004-06-14]
 	Updated lftp to 3.0.6 [salo 2004-06-14]
 	Updated xpad to 1.12nb4 [kristerw 2004-06-14]
+	Updated xpkgwedge to 1.11 [minskim 2004-06-15]
+	Updated mkfontscale to 20020524nb3 [minskim 2004-06-15]
+	Updated kochi-ttf to 20030809nb2 [minskim 2004-06-15]
