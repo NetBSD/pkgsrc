@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.9 2002/08/20 20:00:14 drochner Exp $
+# $NetBSD: pyversion.mk,v 1.10 2002/09/20 22:32:35 jlam Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -82,24 +82,33 @@ _PYTHON_VERSION=	${_PYTHON_VERSION_FIRSTACCEPTED}
 #               to multiple Python versions
 #
 .if ${_PYTHON_VERSION} == "22"
-PYDEPENDENCY=	${BUILDLINK_DEPENDS.python22}:../../lang/python22
+PYPKGSRCDIR=	../../lang/python22
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python22}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2.2
 PYPKGPREFIX=	py22
 .elif ${_PYTHON_VERSION} == "21"
-PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21}:../../lang/python21
+PYPKGSRCDIR=	../../lang/python21
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2.1
 PYPKGPREFIX=	py21
 .elif ${_PYTHON_VERSION} == "21pth"
-PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21pth}:../../lang/python21-pth
+PYPKGSRCDIR=	../../lang/python21pth
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21pth}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2p1
 PYPKGPREFIX=	py21pth
-.include "../../devel/pth/buildlink.mk"
+.  if defined(USE_BUILDLINK2)
+.    include "../../devel/pth/buildlink2.mk"
+.  else
+.    include "../../devel/pth/buildlink.mk"
+.  endif
 .elif ${_PYTHON_VERSION} == "20"
-PYDEPENDENCY=	${BUILDLINK_DEPENDS.python20}:../../lang/python20
+PYPKGSRCDIR=	../../lang/python20
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python20}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2.0
 PYPKGPREFIX=	py20
 .elif ${_PYTHON_VERSION} == "15"
-PYDEPENDENCY=	${BUILDLINK_DEPENDS.python15}:../../lang/python15
+PYPKGSRCDIR=	../../lang/python15
+PYDEPENDENCY=	${BUILDLINK_DEPENDS.python15}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	1.5
 PYPKGPREFIX=	py15
 .if !defined(PYTHON_DISTUTILS_BOOTSTRAP)
@@ -111,10 +120,18 @@ BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
 .endif
 
 PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
-.if defined(PYTHON_FOR_BUILD_ONLY)
-BUILD_DEPENDS+=	${PYDEPENDENCY}
+
+.if defined(USE_BUILDLINK2)
+.  if defined(PYTHON_FOR_BUILD_ONLY)
+BUILD_DEPMETHOD.python?=	build
+.  endif
+.  include "${PYPKGSRCDIR}/buildlink2.mk"
 .else
+.  if defined(PYTHON_FOR_BUILD_ONLY)
+BUILD_DEPENDS+=	${PYDEPENDENCY}
+.  else
 DEPENDS+=	${PYDEPENDENCY}
+.  endif
 .endif
 
 .endif	# PYTHON_PYVERSION_MK
