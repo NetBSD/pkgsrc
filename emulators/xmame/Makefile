@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2003/05/23 13:53:33 kristerw Exp $
+# $NetBSD: Makefile,v 1.95 2003/05/27 12:42:38 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.68.1
+DISTNAME=		xmame-0.69.1
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -23,11 +23,6 @@ TARGET=			${PKGBASE}
 UNLIMIT_RESOURCES=	datasize
 
 .include "../../mk/bsd.prefs.mk"
-
-# XXX On arm(32)/sparc, the src/unix/video_drivers/x11_window.c causes problems
-.if (${MACHINE_ARCH} == "arm32" || ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "sparc")
-CFLAGS+=		-DBROKEN_COMPILER
-.endif
 
 ROMPATH=		${PREFIX}/share/${TARGET}
 SPOOLDIR=		/var/games/${TARGET}
@@ -105,6 +100,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
 
 .include "../../audio/esound/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
