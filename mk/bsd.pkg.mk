@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.414 2000/03/09 14:05:26 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.415 2000/03/10 16:07:37 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1004,9 +1004,9 @@ describe:
 # Fetch
 _FETCH_FILE=								\
 	if [ ! -f $$file -a ! -f $$bfile -a ! -h $$bfile ]; then	\
-		${ECHO_MSG} ">> $$bfile doesn't seem to exist on this system."; \
+		${ECHO_MSG} "=> $$bfile doesn't seem to exist on this system."; \
 		for site in $$sites; do					\
-			${ECHO_MSG} ">> Attempting to fetch $$bfile from $${site}."; \
+			${ECHO_MSG} "=> Attempting to fetch $$bfile from $${site}."; \
 			if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
 				if [ -n "${FAILOVER_FETCH}" -a -f ${MD5_FILE} -a -f ${_DISTDIR}/$$bfile ]; then	\
 					CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
@@ -1014,17 +1014,17 @@ _FETCH_FILE=								\
 					if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
 						continue 2;		\
 					else				\
-						${ECHO_MSG} ">> Checksum failure - trying next site."; \
+						${ECHO_MSG} "=> Checksum failure - trying next site."; \
 					fi;				\
 				elif [ ! -f ${_DISTDIR}/$$bfile ]; then \
-					${ECHO_MSG} ">> FTP didn't fetch expected file, trying next site." ; \
+					${ECHO_MSG} "=> FTP didn't fetch expected file, trying next site." ; \
 				else					\
 					continue 2;			\
 				fi;					\
 			fi						\
 		done;							\
-		${ECHO_MSG} ">> Couldn't fetch it - please try to retrieve this";\
-		${ECHO_MSG} ">> file manually into ${_DISTDIR} and try again."; \
+		${ECHO_MSG} "=> Couldn't fetch it - please try to retrieve this";\
+		${ECHO_MSG} "=> file manually into ${_DISTDIR} and try again."; \
 		exit 1;							\
 	fi
 
@@ -1271,7 +1271,7 @@ do-package: ${PLIST} ${DESCR}
 		if [ ! -d ${PKGREPOSITORY} ]; then			\
 			${MKDIR} ${PKGREPOSITORY};			\
 			if [ $$? -ne 0 ]; then				\
-				${ECHO_MSG} ">> Can't create directory ${PKGREPOSITORY}."; \
+				${ECHO_MSG} "=> Can't create directory ${PKGREPOSITORY}."; \
 				exit 1;					\
 			fi;						\
 		fi;							\
@@ -1293,7 +1293,7 @@ package-links:
 		if [ ! -d ${PACKAGES}/$$cat ]; then			\
 			${MKDIR} ${PACKAGES}/$$cat;			\
 			if [ $$? -ne 0 ]; then				\
-				${ECHO_MSG} ">> Can't create directory ${PACKAGES}/$$cat."; \
+				${ECHO_MSG} "=> Can't create directory ${PACKAGES}/$$cat."; \
 				exit 1;					\
 			fi;						\
 		fi;							\
@@ -2027,16 +2027,16 @@ makepatchsum:
 			${ECHO} "whenever the patches directory is empty or missing. Its purpose" >> ${PATCH_SUM_FILE}.new; \
 			${ECHO} "is to ensure that the presence of any obsolete patches will cause" >> ${PATCH_SUM_FILE}.new; \
 			${ECHO} "the proper error to be emitted at build time." >> ${PATCH_SUM_FILE}.new; \
-			${ECHO_MSG} ">> placeholder patch-sum file created"; \
+			${ECHO_MSG} "=> placeholder patch-sum file created"; \
 		else							\
 			${RM} -f ${PATCH_SUM_FILE}.new;			\
-			${ECHO_MSG} ">> no patch-sum file created";	\
+			${ECHO_MSG} "=> no patch-sum file created";	\
 			exit 0;						\
 		fi;							\
 	fi;								\
 	if cmp -s ${PATCH_SUM_FILE}.new ${PATCH_SUM_FILE}; then		\
 		${RM} -f ${PATCH_SUM_FILE}.new;				\
-		${ECHO_MSG} ">> patch-sum file unchanged";		\
+		${ECHO_MSG} "=> patch-sum file unchanged";		\
 	else								\
 		${MV} ${PATCH_SUM_FILE}.new ${PATCH_SUM_FILE};		\
 	fi)
@@ -2046,7 +2046,7 @@ makepatchsum:
 checksum: fetch
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -f ${MD5_FILE} ]; then					\
-		${ECHO_MSG} ">> No MD5 checksum file.";			\
+		${ECHO_MSG} "=> No MD5 checksum file.";			\
 	else								\
 		(cd ${DISTDIR}; OK="true";				\
 		  for file in "" ${_CKSUMFILES}; do			\
@@ -2054,16 +2054,16 @@ checksum: fetch
 			CKSUM=`${MD5} < $$file`;			\
 			CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "('$$file')"{print $$4;}' ${MD5_FILE}`; \
 			if [ "$$CKSUM2" = "" ]; then			\
-				${ECHO_MSG} ">> No checksum recorded for $$file."; \
+				${ECHO_MSG} "=> No checksum recorded for $$file."; \
 				OK="false";				\
 			elif [ "$$CKSUM2" = "IGNORE" ]; then		\
-				${ECHO_MSG} ">> Checksum for $$file is set to IGNORE in md5 file even though"; \
+				${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in md5 file even though"; \
 				${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
 				OK="false";				\
 			elif [ "$$CKSUM" = "$$CKSUM2" ]; then		\
-				${ECHO_MSG} ">> Checksum OK for $$file."; \
+				${ECHO_MSG} "=> Checksum OK for $$file."; \
 			else						\
-				${ECHO_MSG} ">> Checksum mismatch for $$file."; \
+				${ECHO_MSG} "=> Checksum mismatch for $$file."; \
 				OK="false";				\
 			fi;						\
 		  done;							\
@@ -2071,10 +2071,10 @@ checksum: fetch
 		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
 			CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "('$$file')"{print $$4;}' ${MD5_FILE}`; \
 			if [ "$$CKSUM2" = "" ]; then			\
-				${ECHO_MSG} ">> No checksum recorded for $$file, file is in "'$$'"{IGNOREFILES} list."; \
+				${ECHO_MSG} "=> No checksum recorded for $$file, file is in "'$$'"{IGNOREFILES} list."; \
 				OK="false";				\
 			elif [ "$$CKSUM2" != "IGNORE" ]; then		\
-				${ECHO_MSG} ">> Checksum for $$file is not set to IGNORE in md5 file even though"; \
+				${ECHO_MSG} "=> Checksum for $$file is not set to IGNORE in md5 file even though"; \
 				${ECHO_MSG} "   the file is in the "'$$'"{IGNOREFILES} list."; \
 				OK="false";				\
 			fi;						\
@@ -2231,7 +2231,7 @@ _DEPENDS_USE:
 	if [ X"$$found" = Xnot ]; then					\
 		${ECHO_MSG} "===>  Verifying $$target for $$prog in $$dir"; \
 		if [ ! -d "$$dir" ]; then				\
-			${ECHO_MSG} ">> No directory for $$prog.  Skipping.."; \
+			${ECHO_MSG} "=> No directory for $$prog.  Skipping.."; \
 		else							\
 			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target) &&	\
 			${ECHO_MSG} "===>  Returning to build of ${PKGNAME}"; \
@@ -2283,7 +2283,7 @@ misc-depends: uptodate-pkgtools
 		target=${DEPENDS_TARGET};				\
 		${ECHO_MSG} "===>  Verifying $$target for $$dir"; 	\
 		if [ ! -d $$dir ]; then					\
-			${ECHO_MSG} ">> No directory for $$dir.  Skipping.."; \
+			${ECHO_MSG} "=> No directory for $$dir.  Skipping.."; \
 		else							\
 			(cd $$dir && ${MAKE} ${.MAKEFLAGS} $$target) &&	\
 			${ECHO_MSG} "===>  Returning to build of ${PKGNAME}"; \
