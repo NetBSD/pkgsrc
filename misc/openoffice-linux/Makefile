@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/04/26 15:44:16 mrauch Exp $
+# $NetBSD: Makefile,v 1.12 2003/06/24 14:14:17 abs Exp $
 
 DISTNAME=		OOo_1.0.3.1_LinuxIntel_install
 PKGNAME=		openoffice-linux-1.0.3.1
@@ -66,7 +66,7 @@ do-install:
 	${CHMOD} +x ${PREFIX}/bin/soffice
 	${PATCH} ${PATCH_ARGS} ${PREFIX}/OpenOffice.org1.0.3/program/soffice \
 		< ${FILESDIR}/soffice.test.patch
-	${LN} -s ${PKG_JAVA_HOME} ${PKG_JAVA_HOME}/jre
+	${LN} -sf ${PKG_JAVA_HOME} ${PKG_JAVA_HOME}/jre
 
 # everything specific to your OS/Arch goes into it's own Makefile
 # group together i386, i486, i586 and i686 (for Linux)
