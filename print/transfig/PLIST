@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:28:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/01/07 06:19:05 rh Exp $
 bin/fig2dev
 bin/fig2ps2tex
 bin/fig2ps2tex.sh
@@ -25,9 +25,9 @@ lib/X11/xfig/bitmaps/octagons.bmp
 lib/X11/xfig/bitmaps/p13.bmp
 lib/X11/xfig/bitmaps/right30.bmp
 lib/X11/xfig/bitmaps/right45.bmp
+lib/X11/xfig/bitmaps/sp0.bmp
 lib/X11/xfig/bitmaps/rightshingle.bmp
 lib/X11/xfig/bitmaps/small_fishscales.bmp
-lib/X11/xfig/bitmaps/sp0.bmp
 lib/X11/xfig/bitmaps/sp1.bmp
 lib/X11/xfig/bitmaps/sp10.bmp
 lib/X11/xfig/bitmaps/sp11.bmp
@@ -53,18 +53,24 @@ lib/X11/xfig/bitmaps/vert_leftshingle.bmp
 lib/X11/xfig/bitmaps/vert_rightshingle.bmp
 lib/X11/xfig/bitmaps/vert_saw.bmp
 lib/X11/xfig/bitmaps/vertical.bmp
-lib/fig2dev/cs_CZ.ps
+lib/fig2dev/japanese.ps
 lib/fig2dev/ja.ps
-lib/fig2dev/ja_JP.EUC.ps
-lib/fig2dev/ja_JP.eucJP.ps
 lib/fig2dev/ja_JP.ps
 lib/fig2dev/ja_JP.ujis.ps
-lib/fig2dev/japanese.ps
-lib/fig2dev/ko.ps
-lib/fig2dev/ko_KR.EUC.ps
-lib/fig2dev/ko_KR.eucKR.ps
-lib/fig2dev/ko_KR.ps
+lib/fig2dev/ja_JP.eucJP.ps
+lib/fig2dev/ja_JP.EUC.ps
 lib/fig2dev/korean.ps
+lib/fig2dev/ko.ps
+lib/fig2dev/ko_KR.ps
+lib/fig2dev/ko_KR.eucKR.ps
+lib/fig2dev/ko_KR.EUC.ps
+lib/fig2dev/cs_CZ.ps
+lib/fig2dev/hr_HR.ps
+lib/fig2dev/hu_HU.ps
+lib/fig2dev/ro_RO.ps
+lib/fig2dev/pl_PL.ps
+lib/fig2dev/sk_SK.ps
+lib/fig2dev/sl_SI.ps
 man/cat1/fig2dev.0
 man/cat1/fig2ps2tex.0
 man/cat1/pic2tpic.0
