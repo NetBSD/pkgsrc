@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 12:14:40 agc Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/12 02:01:46 snj Exp $
 #
 
 DISTNAME=		arnsrc27012002
@@ -15,7 +15,7 @@ COMMENT=		Amstrad CPC, Amstrad CPC+ and KC Compact emulator
 EXTRACT_CMD_OPTS.zip=	-aqo
 
 WRKSRC=			${WRKDIR}/arnold/src
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 ALL_TARGET=		arnold
 
@@ -42,7 +42,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/../readme.txt ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/../readme.linux ${DOCDIR}
 
-.include "../../mk/ossaudio.buildlink2.mk"
-.include "../../devel/SDL/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
