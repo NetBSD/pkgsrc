@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4242 2003/12/24 07:24:28 simonb Exp $
+$NetBSD: CHANGES,v 1.4243 2003/12/24 09:55:22 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5329,3 +5329,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added xmms-meta-csound-0.1 [ben 2003-12-23]
 	Added xmms-meta-timidity-0.1 [ben 2003-12-23]
 	Updated adzap to 20031105 [simonb 2003-12-24]
+	Updated pkglint to 3.66 [jmmv 2003-12-24]
