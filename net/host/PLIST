@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:36 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/26 05:19:20 christos Exp $
 bin/host
 bin/mxlookup
+bin/nscheck
 bin/rblookup
 man/man1/host.1
