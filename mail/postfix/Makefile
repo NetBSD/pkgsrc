@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/05/30 11:52:39 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/05/30 17:05:28 tron Exp $
 
 DISTNAME=	postfix-19990317-pl05
 PKGNAME=	postfix-19990317p05
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/official/
 
 MAINTAINER=	christos@netbsd.org
-HOMEPAGE=	http://www.postfix.org
+HOMEPAGE=	http://www.postfix.org/
 
 MIRROR_DISTFILE= no
 
@@ -21,10 +21,18 @@ pre-configure:
 	${SED} -e 's:__PREFIX:'${PREFIX}':g'< ${WRKSRC}/util/sys_defs.h.dist \
 	    > ${WRKSRC}/util/sys_defs.h
 
+post-build:
+	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
+	  <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.postfix
+
 pre-install:
+	${MKDIR} /etc/postfix
 	${MKDIR} ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	chown root.wheel ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	chmod 755 ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
+
+post-install:
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${PREFIX}/etc
 
 .include "../../mk/bsd.prefs.mk"
 
