@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1548 2004/12/18 00:14:04 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1549 2004/12/21 17:30:07 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -579,12 +579,12 @@ PKGSRC_PATCH_FAIL=	exit 1
 .else
 PKGSRC_PATCH_FAIL=							\
 if [ -n "${PKG_OPTIONS}" ] || [ -n "${_LOCALPATCHFILES}" ]; then	\
-	${ECHO} "==========================================================================";								\
+	${ECHO} "=========================================================================="; \
 	${ECHO};							\
-	${ECHO} "Some of the selected build options and/or local patches may be incompatible.";								\
+	${ECHO} "Some of the selected build options and/or local patches may be incompatible."; \
 	${ECHO} "Please try building with fewer options or patches.";	\
 	${ECHO};							\
-	${ECHO} "==========================================================================";								\
+	${ECHO} "=========================================================================="; \
 fi; exit 1
 .endif
 
@@ -1185,12 +1185,12 @@ MAKE_ENV+=		PKG_SYSCONFDIR="${PKG_SYSCONFDIR}"
 BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 
 # Passed to most of script invocations
-SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
-	PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin \
-	WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} PATCHDIR=${PATCHDIR} \
-	SCRIPTDIR=${SCRIPTDIR} FILESDIR=${FILESDIR} \
+SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR}			\
+	PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin			\
+	WRKDIR=${WRKDIR} WRKSRC=${WRKSRC} PATCHDIR=${PATCHDIR}		\
+	SCRIPTDIR=${SCRIPTDIR} FILESDIR=${FILESDIR}			\
 	_PKGSRCDIR=${_PKGSRCDIR} PKGSRCDIR=${PKGSRCDIR} DEPENDS="${DEPENDS}" \
-	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} \
+	PREFIX=${PREFIX} LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}	\
 	VIEWBASE=${VIEWBASE}
 
 .if defined(BATCH)
@@ -1346,9 +1346,8 @@ update install-depends:
 .    if defined(SKIP_SILENT)
 	@${DO_NADA}
 .    else
-	@for str in ${PKG_FAIL_REASON} ${PKG_SKIP_REASON} ; \
-	do \
-		${ECHO} "${_PKGSRC_IN}> $$str" ; \
+	@for str in ${PKG_FAIL_REASON} ${PKG_SKIP_REASON}; do		\
+		${ECHO} "${_PKGSRC_IN}> $$str";				\
 	done
 .    endif
 .    if defined(PKG_FAIL_REASON)
@@ -1502,11 +1501,11 @@ _RESUME_TRANSFER=							\
 	tsize=`${AWK} '/^Size/ && $$2 == '"\"($$file)\""' { print $$4 }' ${DISTINFO_FILE}` || ${TRUE}; \
 	if [ ! -f "${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp" ]; then	\
 		${CP} ${DISTDIR}/${DIST_SUBDIR}/$$bfile ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp; \
-	fi;	\
+	fi;								\
 	dsize=`${WC} -c < ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp`;	\
-	if [ "$$dsize" -eq "$$tsize" -a -f "${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp" ]; then	\
+	if [ "$$dsize" -eq "$$tsize" -a -f "${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp" ]; then \
 		${MV} ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp ${DISTDIR}/${DIST_SUBDIR}/$$bfile;	\
-	fi;	\
+	fi;								\
 	case "$$tsize" in						\
 	"")	${ECHO_MSG} "No size in distinfo file (${DISTINFO_FILE})"; \
 		break ;;						\
@@ -1515,33 +1514,33 @@ _RESUME_TRANSFER=							\
 		${ECHO_MSG} "===> Resume is not supported by ftp(1) using http/ftp proxies.";	\
 		break;							\
 	else								\
-		if [ "$$dsize" -lt "$$tsize" ]; then		\
+		if [ "$$dsize" -lt "$$tsize" ]; then			\
 			if [ "${FETCH_CMD:T}" != "ftp" -a -z "${FETCH_RESUME_ARGS}" ]; then \
 				${ECHO_MSG} "=> Resume transfers are not supported, FETCH_RESUME_ARGS is empty."; \
 				break;					\
 			else						\
-				for res_site in $$sites; do			\
-					if [ -z "${FETCH_OUTPUT_ARGS}" ]; then	\
-						${ECHO_MSG} "=> FETCH_OUTPUT_ARGS has to be defined.";	\
+				for res_site in $$sites; do		\
+					if [ -z "${FETCH_OUTPUT_ARGS}" ]; then \
+						${ECHO_MSG} "=> FETCH_OUTPUT_ARGS has to be defined."; \
 						break;			\
 					fi;				\
-					${ECHO_MSG} "=> $$bfile not completed, resuming:";	\
-					${ECHO_MSG} "=> Downloaded: $$dsize Total: $$tsize.";	\
+					${ECHO_MSG} "=> $$bfile not completed, resuming:"; \
+					${ECHO_MSG} "=> Downloaded: $$dsize Total: $$tsize."; \
 					${ECHO_MSG};			\
 					cd ${_DISTDIR};			\
-					${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS}	\
+					${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${FETCH_RESUME_ARGS} \
 						${FETCH_OUTPUT_ARGS} $${bfile}.temp $${res_site}$${bfile}; \
 					if [ $$? -eq 0 ]; then		\
-						ndsize=`${WC} -c < ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp`;	\
-						if [ "$$tsize" -eq "$$ndsize" ]; then	\
-							${MV} ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp ${DISTDIR}/${DIST_SUBDIR}/$$bfile;						\
+						ndsize=`${WC} -c < ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp`; \
+						if [ "$$tsize" -eq "$$ndsize" ]; then \
+							${MV} ${DISTDIR}/${DIST_SUBDIR}/$$bfile.temp ${DISTDIR}/${DIST_SUBDIR}/$$bfile; \
 						fi;			\
 						break;			\
 					fi;				\
 				done;					\
 			fi;						\
 		elif [ "$$dsize" -gt "$$tsize" ]; then			\
-			${ECHO_MSG} "==> Downloaded file larger than the recorded size.";	\
+			${ECHO_MSG} "==> Downloaded file larger than the recorded size."; \
 			break;						\
 		fi;							\
 	fi
@@ -1581,7 +1580,7 @@ _FETCH_FILE=								\
 				fi;					\
 			fi						\
 		done;							\
-		if [ ! -f ${_DISTDIR}/$$bfile ]; then \
+		if [ ! -f ${_DISTDIR}/$$bfile ]; then			\
 			${ECHO_MSG} "=> Couldn't fetch $$bfile - please try to retrieve this";\
 			${ECHO_MSG} "=> file manually into ${_DISTDIR} and try again."; \
 			exit 1;						\
@@ -1590,7 +1589,7 @@ _FETCH_FILE=								\
 
 _CHECK_DIST_PATH=							\
 	if [ "X${DIST_PATH}" != "X" ]; then				\
-		for d in "" ${DIST_PATH:S/:/ /g}; do	\
+		for d in "" ${DIST_PATH:S/:/ /g}; do			\
 			if [ "X$$d" = "X" -o "X$$d" = "X${DISTDIR}" ]; then continue; fi; \
 			if [ -f $$d/${DIST_SUBDIR}/$$bfile ]; then	\
 				${ECHO} "Using $$d/${DIST_SUBDIR}/$$bfile"; \
@@ -1674,7 +1673,7 @@ batch-check-distfiles:
 # Please do not modify the leading "@" here
 .PHONY: check-vulnerable
 check-vulnerable:
-	@if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then			\
+	@if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
 		${SETENV} PKGNAME="${PKGNAME}"				\
 			  PKGBASE="${PKGBASE}"				\
 			${AWK} '/^$$/ { next }				\
@@ -1688,7 +1687,7 @@ check-vulnerable:
 do-fetch:
 .  if !defined(ALLOW_VULNERABLE_PACKAGES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then			\
+	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
 		${ECHO_MSG} "${_PKGSRC_IN}> Checking for vulnerabilities in ${PKGNAME}"; \
 		vul=`${MAKE} ${MAKEFLAGS} check-vulnerable`;		\
 		case "$$vul" in						\
@@ -2351,12 +2350,12 @@ do-configure:
 	    CXX="${CXX}" CXXFLAGS="${CXXFLAGS:M*}" FC="${FC}" F77="${FC}" FFLAGS="${FFLAGS:M*}" \
 	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    ac_given_INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
-	    INSTALL_DATA="${INSTALL_DATA}" \
-	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-	    INSTALL_GAME="${INSTALL_GAME}" \
-	    INSTALL_GAME_DATA="${INSTALL_GAME_DATA}" \
-	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
-	    ${CONFIGURE_ENV} ${CONFIG_SHELL} \
+	    INSTALL_DATA="${INSTALL_DATA}"				\
+	    INSTALL_PROGRAM="${INSTALL_PROGRAM}"			\
+	    INSTALL_GAME="${INSTALL_GAME}"				\
+	    INSTALL_GAME_DATA="${INSTALL_GAME_DATA}"			\
+	    INSTALL_SCRIPT="${INSTALL_SCRIPT}"				\
+	    ${CONFIGURE_ENV} ${CONFIG_SHELL}				\
 	    ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .    endfor
 .  endif
@@ -2673,7 +2672,7 @@ real-su-install: ${MESSAGE}
 		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
 			if [ -h ${PREFIX}/$$manpage ]; then		\
-				set - `${LS} -l ${PREFIX}/$$manpage`; \
+				set - `${LS} -l ${PREFIX}/$$manpage`;	\
 				shift `expr $$# - 1`;			\
 				${RM} -f ${PREFIX}/$$manpage.gz; 	\
 				${LN} -s $${1}.gz ${PREFIX}/$$manpage.gz; \
@@ -3263,7 +3262,7 @@ real-replace: do-su-replace
 real-undo-replace: do-su-undo-replace
 
 _SU_TARGET=								\
-	if [ `${ID} -u` = `${ID} -u ${ROOT_USER}` ]; then					\
+	if [ `${ID} -u` = `${ID} -u ${ROOT_USER}` ]; then		\
 		${MAKE} ${MAKEFLAGS} $$realtarget;			\
 	elif [ "X${BATCH}" != X"" ]; then				\
 		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run $$action for ${PKGNAME}."; \
@@ -3532,7 +3531,7 @@ ${DDIR}: ${DLIST}
 ${DLIST}: ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	{ ${PKG_DELETE} -n "${PKGWILDCARD}" 2>&1 | 			\
-		${GREP} '^	' |						\
+		${GREP} '^	' |					\
 		${AWK} '{ l[NR]=$$0 } END { for (i=NR;i>0;--i) print l[i] }' \
 	|| ${TRUE}; } > ${DLIST}
 
@@ -3562,7 +3561,7 @@ tarup:
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${PACKAGES}/All/${PKGNAME}${PKG_SUFX};			\
-	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}	\
+	${SETENV} PKG_DBDIR=${_PKG_DBDIR} PKG_SUFX=${PKG_SUFX}		\
 		PKGREPOSITORY=${PACKAGES}/All				\
 		${LOCALBASE}/bin/pkg_tarup ${PKGNAME};			\
 	for CATEGORY in ${CATEGORIES}; do				\
@@ -3670,8 +3669,7 @@ clean: pre-clean
 clean-depends:
 .  if defined(BUILD_DEPENDS) || defined(DEPENDS)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for i in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl` ;\
-	do 								\
+	for i in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl`; do 	\
 		cd ${.CURDIR}/../../$$i &&				\
 		${MAKE} ${MAKEFLAGS} CLEANDEPENDS=NO clean;		\
 	done
@@ -3994,7 +3992,7 @@ real-su-bin-install:
 bin-install:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Binary install for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	realtarget="real-su-bin-install";					\
+	realtarget="real-su-bin-install";				\
 	action="binary install";					\
 	${_SU_TARGET}
 
@@ -4295,11 +4293,11 @@ SED_HOMEPAGE_EXPR=       -e 's|%%HOMEPAGE%%||'
 .PHONY: show-vulnerabilities-html
 show-vulnerabilities-html:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then			\
+	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
 		${AWK} '/^${PKGBASE}[-<>=]+[0-9]/ { gsub("\<", "\\&lt;", $$1);	\
 			 gsub("\>", "\\&gt;", $$1);			\
 			 printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$1, $$2, $$3, $$3) }' \
-			${PKGVULNDIR}/pkg-vulnerabilities;			\
+			${PKGVULNDIR}/pkg-vulnerabilities;		\
 	fi
 
 
@@ -4406,10 +4404,10 @@ print-summary-data:
 	fi;
 	@${ECHO} "maintainer ${PKGPATH} ${MAINTAINER}"
 	@${ECHO} "categories ${PKGPATH} ${CATEGORIES}"
-	@if [ -f ${DESCR_SRC} ]; then						\
-		${ECHO}  "descr ${PKGPATH} ${DESCR_SRC:S;${PKGSRCDIR}/;;g}";	\
-	else									\
-		${ECHO}  "descr ${PKGPATH} /dev/null";				\
+	@if [ -f ${DESCR_SRC} ]; then					\
+		${ECHO}  "descr ${PKGPATH} ${DESCR_SRC:S;${PKGSRCDIR}/;;g}"; \
+	else								\
+		${ECHO}  "descr ${PKGPATH} /dev/null";			\
 	fi
 	@${ECHO} "prefix ${PKGPATH} ${PREFIX}"
 .endif
@@ -4962,15 +4960,15 @@ _PLIST_AWK_MANINSTALL=							\
 
 # plist awk pattern-action statement to strip '.gz' from man
 # entries
-_PLIST_AWK_STRIP_MANZ=						              \
+_PLIST_AWK_STRIP_MANZ=							\
 /^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*0)\.gz$$/ { \
-	$$0 = substr($$0, 1, length($$0) - 3);				      \
+	$$0 = substr($$0, 1, length($$0) - 3);				\
 }
 
 # plist awk pattern-action statement to add '.gz' to man entries
-_PLIST_AWK_ADD_MANZ=							  \
+_PLIST_AWK_ADD_MANZ=							\
 /^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*0)$$/ { \
-	$$0 = $$0 ".gz";						  \
+	$$0 = $$0 ".gz";						\
 }
 
 # plist awk pattern-action statement to handle PLIST_SUBST substitutions
