@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2003/08/09 10:29:56 seb Exp $
+# $NetBSD: Makefile,v 1.44 2004/02/22 16:51:07 minskim Exp $
 #
 
 DISTNAME=	rplay-3.3.2
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://rplay.doit.org/
 COMMENT=	Network audio player
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -39,8 +39,8 @@ post-install:
 .endfor
 .undef f
 
-.include "../../audio/gsm/buildlink2.mk"
-.include "../../devel/readline/buildlink2.mk"
-.include "../../devel/rx/buildlink2.mk"
+.include "../../audio/gsm/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/rx/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
