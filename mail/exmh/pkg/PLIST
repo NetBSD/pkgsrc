@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/03/06 10:27:53 wulf Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/03/16 13:07:11 wiz Exp $
 bin/exmh
 bin/exmh-async
 bin/exmh-bg
@@ -124,7 +124,7 @@ lib/${PKGNAME}/ispell.tcl
 lib/${PKGNAME}/labels.tcl
 lib/${PKGNAME}/linethru.bitmap
 lib/${PKGNAME}/loaderror.ppm
-lib/${PKGNAME}/loading.ppm 
+lib/${PKGNAME}/loading.ppm
 lib/${PKGNAME}/mailcap.tcl
 lib/${PKGNAME}/main.tcl
 lib/${PKGNAME}/mbempty.bitmap
