@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.146 2003/01/06 15:05:22 wiz Exp $
+$NetBSD: TODO,v 1.147 2003/01/06 15:22:24 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -261,6 +261,10 @@ Suggested pkgsrc enhancements
 =============================
 
 	o Add a sort check to pkglint for PLISTs.
+
+	o Make packages install their configuration files under the
+	  examples hierarchy, using bsd.pkg.install.mk to copy them
+	  to the PKG_SYSCONFDIR directory when necessary.
 
 	o Make pkgsrc work on more operating systems.
 
