@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.266 2003/07/31 19:24:08 wiz Exp $
+# $NetBSD: Makefile,v 1.267 2003/08/11 15:32:49 drochner Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -218,11 +218,15 @@ SUBDIR+=	zope-confera
 SUBDIR+=	zope25
 SUBDIR+=	zope25-AbracadabraObject
 SUBDIR+=	zope25-BTreeFolder
+SUBDIR+=	zope25-BTreeFolder
+SUBDIR+=	zope25-BackTalk
 SUBDIR+=	zope25-CMF
 SUBDIR+=	zope25-CMFPlone
 SUBDIR+=	zope25-Calendar
+SUBDIR+=	zope25-CookieCrumbler
 SUBDIR+=	zope25-DocumentLibrary
 SUBDIR+=	zope25-EasyImage
+SUBDIR+=	zope25-Epoz
 SUBDIR+=	zope25-ExternalEditor
 SUBDIR+=	zope25-FileSystemSite
 SUBDIR+=	zope25-Formulator
@@ -230,6 +234,7 @@ SUBDIR+=	zope25-Fortune
 SUBDIR+=	zope25-JPicture
 SUBDIR+=	zope25-KnowledgeKit
 SUBDIR+=	zope25-LocalFS
+SUBDIR+=	zope25-MailManager
 SUBDIR+=	zope25-MetaPublisher
 SUBDIR+=	zope25-ParsedXML
 SUBDIR+=	zope25-Photo
@@ -239,6 +244,7 @@ SUBDIR+=	zope25-RDFSummary
 SUBDIR+=	zope25-RenderableCharts
 SUBDIR+=	zope25-Silva
 SUBDIR+=	zope25-Squishdot
+SUBDIR+=	zope25-StripoGram
 SUBDIR+=	zope25-TinyTablePlus
 SUBDIR+=	zope25-XMLWidgets
 SUBDIR+=	zope25-ZMySQLDA
