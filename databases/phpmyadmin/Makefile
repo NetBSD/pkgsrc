@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2003/09/01 12:37:14 tron Exp $
+# $NetBSD: Makefile,v 1.14 2003/09/01 14:00:30 tron Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-php
-PKGNAME=	phpmyadmin-2.3.3.1
-PKGREVISION=	1
+PKGNAME=	phpmyadmin-2.5.3rc3
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-php//}
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
@@ -20,7 +19,7 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} PMCONFFILE=${PMCONFFILE} \
 		PMDIR=${PMDIR} EXDIR=${EXDIR}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	2.3.3pl1
+DIST_VERSION=	2.5.3-rc3
 DOC_FILES=	ANNOUNCE.txt CREDITS ChangeLog \
 		Documentation.txt INSTALL LICENSE README \
 		RELEASE-DATE-${DIST_VERSION} TODO
@@ -42,9 +41,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/lang
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/libraries
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/libraries/auth
+	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/libraries/dbg
+	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/libraries/export
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/libraries/fpdf
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/libraries/fpdf/font
-	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/libraries/xpath
+	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/libraries/transformations
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/scripts
 	${RM} -f ${CONF_INC_PHP}
 	${INSTALL_SCRIPT} ${WRKSRC}/*.php ${PREFIX}/share/phpmyadmin
@@ -57,9 +58,11 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/lang/*.php ${PREFIX}/share/phpmyadmin/lang
 	${INSTALL_SCRIPT} ${WRKSRC}/libraries/*.* ${PREFIX}/share/phpmyadmin/libraries
 	${INSTALL_SCRIPT} ${WRKSRC}/libraries/auth/*.php ${PREFIX}/share/phpmyadmin/libraries/auth
+	${INSTALL_SCRIPT} ${WRKSRC}/libraries/dbg/*.php ${PREFIX}/share/phpmyadmin/libraries/dbg
+	${INSTALL_SCRIPT} ${WRKSRC}/libraries/export/*.php ${PREFIX}/share/phpmyadmin/libraries/export
 	${INSTALL_SCRIPT} ${WRKSRC}/libraries/fpdf/*.php ${PREFIX}/share/phpmyadmin/libraries/fpdf
 	${INSTALL_SCRIPT} ${WRKSRC}/libraries/fpdf/font/*.php ${PREFIX}/share/phpmyadmin/libraries/fpdf/font
-	${INSTALL_SCRIPT} ${WRKSRC}/libraries/xpath/*.php ${PREFIX}/share/phpmyadmin/libraries/xpath
+	${INSTALL_SCRIPT} ${WRKSRC}/libraries/transformations/*.php ${PREFIX}/share/phpmyadmin/libraries/transformations
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/*.* ${PREFIX}/share/phpmyadmin/scripts
 	cd ${WRKSRC}; \
 	${INSTALL_DATA} ${DOC_FILES} ${PREFIX}/share/doc/phpmyadmin
