@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.4 1998/11/30 09:48:10 frueauf Exp $
+
 --- Configure.orig	Sun Nov 29 18:21:14 1998
 +++ Configure	Sun Nov 29 18:31:58 1998
 @@ -195,18 +195,19 @@
