@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:03 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:43 seb Exp $
 bin/xarchon
 man/man6/xarchon.6
 share/xarchon/xarchon.default
@@ -487,9 +487,9 @@ share/xarchon/archon/NAMES
 @dirrm share/xarchon/archon/wav/side/dark
 @dirrm share/xarchon/archon/wav/side
 @dirrm share/xarchon/archon/wav/generic
-@exec ${MKDIR} -p /usr/pkg/share/xarchon/archon/wav/actor/weapon
+@exec ${MKDIR} %D/share/xarchon/archon/wav/actor/weapon
 @dirrm share/xarchon/archon/wav/actor/weapon
-@exec ${MKDIR} -p /usr/pkg/share/xarchon/archon/wav/actor/piece
+@exec ${MKDIR} %D/share/xarchon/archon/wav/actor/piece
 @dirrm share/xarchon/archon/wav/actor/piece
 @dirrm share/xarchon/archon/wav/actor
 @dirrm share/xarchon/archon/wav

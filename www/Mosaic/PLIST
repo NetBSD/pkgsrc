@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:02 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:30:05 seb Exp $
 bin/Mosaic
 bin/mosaic
 lib/X11/app-defaults/Mosaic
-@exec ${MKDIR} -p %D/share/mosaic
+@exec ${MKDIR} %D/share/mosaic
 @unexec ${RM} -rf %D/share/mosaic

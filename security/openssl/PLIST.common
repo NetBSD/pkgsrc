@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2002/02/15 10:12:58 skrll Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2002/06/26 10:30:00 seb Exp $
 bin/CA.pl
 bin/CA.sh
 bin/asn1parse
@@ -326,7 +326,7 @@ share/doc/openssl/ssl/SSL_shutdown.pod
 share/doc/openssl/ssl/SSL_write.pod
 share/doc/openssl/ssl/ssl.pod
 share/doc/openssl/ssleay.txt
-@exec ${MKDIR} -p %D/certs %D/private
+@exec ${MKDIR} %D/certs %D/private
 @unexec ${RMDIR} %D/certs 2>/dev/null || true
 @dirrm include/openssl
 @dirrm private

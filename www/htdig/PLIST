@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/09 21:48:11 fredb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:30:07 seb Exp $
 bin/htfuzzy
 bin/htdig
 bin/htdump
@@ -53,9 +53,9 @@ share/htdig/common/synonyms
 share/htdig/common/synonyms.db
 share/htdig/common/root2word.db
 share/htdig/common/word2root.db
-@exec mkdir -p ${PKG_SYSCONFDIR}/htdig
+@exec ${MKDIR} ${PKG_SYSCONFDIR}/htdig
 @exec if [ ! -f ${PKG_SYSCONFDIR}/htdig/htdig.conf ]; then cp %D/share/examples/htdig/htdig.conf ${PKG_SYSCONFDIR}/htdig/htdig.conf; fi
-@exec mkdir -p /var/db/htdig
+@exec ${MKDIR} /var/db/htdig
 @unexec rmdir ${PKG_SYSCONFDIR}/htdig 2>/dev/null || true
 @unexec rmdir /var/db/htdig 2>/dev/null || true
 @dirrm share/htdig/common

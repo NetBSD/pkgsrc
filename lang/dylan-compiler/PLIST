@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/05 22:39:04 skrll Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/06/26 10:29:45 seb Exp $
 bin/d2c
 bin/dybug
 bin/mindy
@@ -79,9 +79,9 @@ man/man7/dylan.7
 man/man7/gwydion.7
 share/dylan/platforms.descr
 @dirrm share/dylan
-@exec ${MKDIR} -p %D/lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/elisp
+@exec ${MKDIR} %D/lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/elisp
 @dirrm lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/elisp
-@exec ${MKDIR} -p %D/lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan-user
+@exec ${MKDIR} %D/lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan-user
 @dirrm lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc/dylan-user
 @dirrm lib/dylan/${DYLAN_VERSION}/${ALT_ARCH}-${LOWER_OPSYS}-gcc
 @dirrm lib/dylan/${DYLAN_VERSION}

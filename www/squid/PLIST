@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/03/22 14:59:01 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/06/26 10:30:08 seb Exp $
 etc/rc.d/squid
 @unexec ${RMDIR} %D/etc/squid 2>/dev/null || ${TRUE}
 libexec/cachemgr.cgi
@@ -9,5 +9,5 @@ sbin/RunCache
 sbin/client
 sbin/squid
 @dirrm share/examples/squid
-@exec mkdir -p ${SQUID_SYSCONFDIR}
+@exec ${MKDIR} ${SQUID_SYSCONFDIR}
 @unexec rmdir ${SQUID_SYSCONFDIR} 2>/dev/null || true

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:47 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:46 seb Exp $
 etc/mailer.conf.default
 @exec test -e /etc/mailer.conf || ln -sf %F /etc/mailer.conf
 man/cat5/mailer.conf.0.gz
@@ -6,7 +6,7 @@ man/cat8/mailwrapper.0.gz
 man/man5/mailer.conf.5.gz
 man/man8/mailwrapper.8.gz
 sbin/mailwrapper
-@exec ${MKDIR} -p /usr/libexec/sendmail
+@exec ${MKDIR} /usr/libexec/sendmail
 @exec mv -i /usr/sbin/sendmail /usr/libexec/sendmail </dev/null 2>/dev/null || true
 @exec ln -fs %D/sbin/mailwrapper /usr/bin/mailq
 @exec ln -fs %D/sbin/mailwrapper /usr/bin/newaliases

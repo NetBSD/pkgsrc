@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/04/10 14:33:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:37 seb Exp $
 bin/bonobo-application-x-mines
 bin/bonobo-audio-ulaw
 bin/bonobo-echo
@@ -195,15 +195,15 @@ share/oaf/Bonobo_Sample_Mines.oaf
 share/oaf/Bonobo_Sample_Paint.oaf
 share/oaf/Bonobo_Sample_Text.oaf
 share/oaf/Bonobo_Selector.oaf
-@exec ${MKDIR} -p %D/share/gnome/ui
+@exec ${MKDIR} %D/share/gnome/ui
 @dirrm share/gnome/ui
-@exec ${MKDIR} -p %D/share/gnome/bonobo/docs/audio_ulaw/C/images
+@exec ${MKDIR} %D/share/gnome/bonobo/docs/audio_ulaw/C/images
 @dirrm share/gnome/bonobo/docs/audio_ulaw/C/images
 @dirrm share/gnome/bonobo/docs/audio_ulaw/C
 @dirrm share/gnome/bonobo/docs/audio_ulaw
 @dirrm share/gnome/bonobo/docs
 @dirrm share/gnome/bonobo
-@exec ${MKDIR} -p %D/share/bonobo/html/bonobo
+@exec ${MKDIR} %D/share/bonobo/html/bonobo
 @dirrm share/bonobo/html/bonobo
 @dirrm share/bonobo/html
 @dirrm share/bonobo

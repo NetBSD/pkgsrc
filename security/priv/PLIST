@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:58 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:30:01 seb Exp $
 bin/priv
 man/man1/priv.1
-@exec ${MKDIR} -p @PRIV_CONF_DIR@/priv || true
+@exec ${MKDIR} @PRIV_CONF_DIR@/priv || true
 @unexec ${RMDIR} @PRIV_CONF_DIR@/priv || true

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:30 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:35 seb Exp $
 bin/BitchX
 bin/BitchX-1.0c18
 bin/scr-bx
@@ -962,9 +962,9 @@ share/bx/BitchX.quit
 share/bx/BitchX.kick
 share/bx/wserv
 share/bx/BitchX.doc
-@exec ${MKDIR} -p %D/lib/bx/plugins
-@exec ${MKDIR} -p %D/share/bx/help/4_Misc/fset
-@exec ${MKDIR} -p %D/share/bx/help/4_Misc/wset
+@exec ${MKDIR} %D/lib/bx/plugins
+@exec ${MKDIR} %D/share/bx/help/4_Misc/fset
+@exec ${MKDIR} %D/share/bx/help/4_Misc/wset
 @dirrm share/bx/help/1_General/dcc
 @dirrm share/bx/help/1_General/ctcp
 @dirrm share/bx/help/1_General

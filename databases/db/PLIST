@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:32 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:36 seb Exp $
 bin/db_load
 bin/db_dump
 bin/db_deadlock
@@ -463,9 +463,9 @@ share/doc/html/db/utility/db_load.html
 share/doc/html/db/utility/db_recover.html
 share/doc/html/db/utility/db_stat.html
 share/doc/html/db/utility/index.html
-@exec ${MKDIR} -p %D/share/doc/html/db/api_java/special
-@exec ${MKDIR} -p %D/share/doc/html/db/api_cxx/special
-@exec ${MKDIR} -p %D/share/doc/html/db/api_c/special
+@exec ${MKDIR} %D/share/doc/html/db/api_java/special
+@exec ${MKDIR} %D/share/doc/html/db/api_cxx/special
+@exec ${MKDIR} %D/share/doc/html/db/api_c/special
 @dirrm share/doc/html/db/utility
 @dirrm share/doc/html/db/test
 @dirrm share/doc/html/db/sleepycat

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2002/06/09 15:40:37 taya Exp $
+@comment $NetBSD: PLIST,v 1.12 2002/06/26 10:30:07 seb Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
@@ -341,7 +341,7 @@ share/omf/galeon/galeon-manual-C.omf
 share/pixmaps/galeon.png
 share/sounds/galeon/clicked.wav
 @dirrm share/sounds/galeon
-@exec ${MKDIR} -p %D/share/omf/galeon
+@exec ${MKDIR} %D/share/omf/galeon
 @dirrm share/omf/galeon
 @dirrm share/gnome/help/galeon-manual/C/stylesheet-images
 @dirrm share/gnome/help/galeon-manual/C/figures

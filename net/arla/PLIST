@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/02/18 15:14:35 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:51 seb Exp $
 include/arlalib.h
 include/atypes.h
 include/fs_errors.h
@@ -113,7 +113,7 @@ man/man8/bos.8
 @unexec ${INSTALL_INFO} --delete %D/info/arla.info %D/info/dir
 info/arla.info
 @exec ${INSTALL_INFO} %D/info/arla.info %D/info/dir
-@exec if [ ! -e ${ARLA_CACHE} ] ; then ${MKDIR} -p ${ARLA_CACHE}; ${CHMOD} 700 ${ARLA_CACHE}; ${CHOWN} root ${ARLA_CACHE}; fi
+@exec if [ ! -e ${ARLA_CACHE} ] ; then ${MKDIR} ${ARLA_CACHE}; ${CHMOD} 700 ${ARLA_CACHE}; ${CHOWN} root ${ARLA_CACHE}; fi
 @exec if [ ! -e /sbin/mount_xfs ]; then /bin/ln -s %D/sbin/mount_xfs /sbin/mount_xfs; fi
 @unexec /bin/rm -f /sbin/mount_xfs
 @unexec /bin/rm -rf ${ARLA_CACHE}

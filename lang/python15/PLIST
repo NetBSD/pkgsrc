@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/05 22:39:04 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:46 seb Exp $
 bin/python1.5
 include/python1.5/Python.h
 include/python1.5/abstract.h
@@ -937,7 +937,7 @@ lib/python1.5/xmllib.pyo
 @dirrm lib/python1.5/plat-${LOWER_OPSYS}1
 @dirrm lib/python1.5/lib-tk
 @dirrm lib/python1.5/lib-stdwin
-@exec ${MKDIR} -p %D/lib/python1.5/lib-dynload
+@exec ${MKDIR} %D/lib/python1.5/lib-dynload
 @dirrm lib/python1.5/lib-dynload
 @dirrm lib/python1.5/config
 @dirrm lib/python1.5

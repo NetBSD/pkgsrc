@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:58 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:30:01 seb Exp $
 bin/ssh
 bin/ssh1
 bin/scp
@@ -33,7 +33,7 @@ sbin/sshd
 sbin/sshd1
 share/examples/ssh/ssh_config
 share/examples/ssh/sshd_config
-@exec if [ ! -d @SSH_CONF_DIR@ ]; then echo "Creating directory @SSH_CONF_DIR@ for ssh config files.." ; ${MKDIR} -p @SSH_CONF_DIR@; fi
+@exec if [ ! -d @SSH_CONF_DIR@ ]; then echo "Creating directory @SSH_CONF_DIR@ for ssh config files.." ; ${MKDIR} @SSH_CONF_DIR@; fi
 @exec if [ ! -f @SSH_CONF_DIR@/ssh_config ]; then echo "Installing example ssh_config in @SSH_CONF_DIR@.." ; ${INSTALL} -c -o root -g ${ROOT_GROUP} -m 0644 %D/share/examples/ssh/ssh_config @SSH_CONF_DIR@; fi
 @exec if [ ! -f @SSH_CONF_DIR@/sshd_config ]; then echo "Installing example sshd_config in @SSH_CONF_DIR@.." ; ${INSTALL} -c -o root -g ${ROOT_GROUP} -m 0644 %D/share/examples/ssh/sshd_config @SSH_CONF_DIR@; fi
 @exec if [ ! -f @SSH_CONF_DIR@/ssh_host_key ]; then echo "Generating a secret host key in @SSH_CONF_DIR@.." ; %D/bin/ssh-keygen -N "" -f @SSH_CONF_DIR@/ssh_host_key; fi

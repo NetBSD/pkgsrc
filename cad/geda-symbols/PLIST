@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/05/18 18:08:40 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/06/26 10:29:34 seb Exp $
 bin/gesym-config
 share/gEDA/sym/4000/4000-1.sym
 share/gEDA/sym/4000/4001-1.sym
@@ -1164,7 +1164,7 @@ share/gEDA/system-commonrc
 @dirrm share/gEDA/sym/micro
 @dirrm share/gEDA/sym/memory
 @dirrm share/gEDA/sym/maxim
-@exec ${MKDIR} -p %D/share/gEDA/sym/local
+@exec ${MKDIR} %D/share/gEDA/sym/local
 @dirrm share/gEDA/sym/local
 @dirrm share/gEDA/sym/linear
 @dirrm share/gEDA/sym/lattice

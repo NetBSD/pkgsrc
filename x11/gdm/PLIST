@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:13:07 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:30:09 seb Exp $
 bin/gdm
 bin/gdmchooser
 bin/gdmconfig
@@ -21,7 +21,7 @@ share/gnome/help/gdm/C/daemonov.html
 share/gnome/help/gdm/C/docbook.css
 share/gnome/help/gdm/C/f21.html
 share/gnome/help/gdm/C/gdm.html
-@exec ${MKDIR} -p %D/share/gnome/help/gdm/C/images
+@exec ${MKDIR} %D/share/gnome/help/gdm/C/images
 share/gnome/help/gdm/C/index.html
 share/gnome/help/gdm/C/intro.html
 share/gnome/help/gdm/C/ln15.html
