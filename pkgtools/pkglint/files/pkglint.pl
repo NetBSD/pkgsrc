@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.69 2002/09/12 17:03:04 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.70 2002/09/24 12:34:22 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -335,7 +335,6 @@ sub checkdistinfo {
 #
 sub checkmessage {
 	local($file) = @_;
-	local(%maxchars) = ('MESSAGE', 80);
 	local($longlines, $lastline, $tmp) = (0, "", "");
 
 	$shortname = basename($file);
@@ -351,7 +350,7 @@ sub checkmessage {
 		&perror("FATAL: missing RCS Id in MESSAGE file: $file");
 	}
 	while (<IN>) {
-		$longlines++ if ($maxchars{$shortname} < length($_));
+		$longlines++ if (80 < length($_));
 		$lastline = $_;
 		$tmp .= $_;
 	}
@@ -361,7 +360,7 @@ sub checkmessage {
 	}
 	if ($longlines > 0) {
 		&perror("WARN: $file includes lines that exceed ".
-			"$maxchars{$shortname} characters.");
+			"80 characters.");
 	}
 	if ($tmp =~ /[\033\200-\377]/) {
 		&perror("WARN: $file includes iso-8859-1, or ".
