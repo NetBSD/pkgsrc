@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/11/15 08:29:36 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/11/15 10:06:19 tron Exp $
 
 DISTNAME=	gdm-2.0beta4
 PKGNAME=	gdm-2.0b4
@@ -91,7 +91,8 @@ post-install:
 	  ${INSTALL_DATA} $$SOURCE $$TARGET; \
 	fi
 .endfor
-	${INSTALL_DATA} ${DISTDIR}/Daemon.README ${PREFIX}/share/pixmaps
+	${MKDIR} ${PREFIX}/share/doc/gdm
+	${INSTALL_DATA} ${DISTDIR}/Daemon.README ${PREFIX}/share/doc/gdm
 	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/pixmaps
 	${LN} -fs Gnome ${GDMCFGDIR}/Sessions/Default
 
