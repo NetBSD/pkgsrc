@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4319 2004/01/01 21:46:55 cube Exp $
+$NetBSD: CHANGES,v 1.4320 2004/01/01 23:36:42 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -16,3 +16,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added sylpheed-claws-dillo-viewer-0.9.7 [cube 2004-01-01]
 	Added sylpheed-claws-image-viewer-0.9.7 [cube 2004-01-01]
 	Added sylpheed-claws-trayicon-0.9.7 [cube 2004-01-01]
+	Updated audit-packages to 1.28 [agc 2004-01-01]
