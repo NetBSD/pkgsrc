@@ -1,28 +1,39 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/29 16:23:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:54 recht Exp $
 ${PYSITELIB}/aes/__init__.py
 ${PYSITELIB}/aes/__init__.pyc
+${PYSITELIB}/aes/__init__.pyo
 ${PYSITELIB}/aes/aes.py
 ${PYSITELIB}/aes/aes.pyc
+${PYSITELIB}/aes/aes.pyo
 ${PYSITELIB}/cryptsock/__init__.py
 ${PYSITELIB}/cryptsock/__init__.pyc
+${PYSITELIB}/cryptsock/__init__.pyo
 ${PYSITELIB}/cryptsock/cryptsock.py
 ${PYSITELIB}/cryptsock/cryptsock.pyc
+${PYSITELIB}/cryptsock/cryptsock.pyo
 ${PYSITELIB}/ecc/__init__.py
 ${PYSITELIB}/ecc/__init__.pyc
+${PYSITELIB}/ecc/__init__.pyo
 ${PYSITELIB}/ecc/ecc.py
 ${PYSITELIB}/ecc/ecc.pyc
+${PYSITELIB}/ecc/ecc.pyo
 ${PYSITELIB}/ecc/elliptic.py
 ${PYSITELIB}/ecc/elliptic.pyc
+${PYSITELIB}/ecc/elliptic.pyo
 ${PYSITELIB}/ellipticc.so
 ${PYSITELIB}/entropy/__init__.py
 ${PYSITELIB}/entropy/__init__.pyc
+${PYSITELIB}/entropy/__init__.pyo
 ${PYSITELIB}/entropy/entropy.py
 ${PYSITELIB}/entropy/entropy.pyc
+${PYSITELIB}/entropy/entropy.pyo
 ${PYSITELIB}/rijndaelc.so
 ${PYSITELIB}/sha256/__init__.py
 ${PYSITELIB}/sha256/__init__.pyc
+${PYSITELIB}/sha256/__init__.pyo
 ${PYSITELIB}/sha256/sha256.py
 ${PYSITELIB}/sha256/sha256.pyc
+${PYSITELIB}/sha256/sha256.pyo
 ${PYSITELIB}/sha256c.so
 @dirrm ${PYSITELIB}/sha256
 @dirrm ${PYSITELIB}/entropy
