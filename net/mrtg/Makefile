@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2001/02/25 13:44:55 tron Exp $
+# $NetBSD: Makefile,v 1.26 2001/03/06 10:26:48 wiz Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
-DISTNAME=	mrtg-2.9.2
+DISTNAME=	mrtg-2.9.10
 CATEGORIES=	net
 MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		http://gd.tuwien.ac.at/infosys/network/tools/mrtg/pub/ \
