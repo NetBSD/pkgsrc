@@ -1,14 +1,14 @@
-$NetBSD: patch-ac,v 1.1 2003/06/29 11:45:02 jmmv Exp $
+$NetBSD: patch-ac,v 1.2 2004/08/27 09:18:12 adam Exp $
 
---- src/Makefile.in.orig	2003-06-27 06:14:43.000000000 +0200
+--- src/Makefile.in.orig	2004-08-26 22:16:24.000000000 +0000
 +++ src/Makefile.in
-@@ -165,7 +165,8 @@ include_HEADERS = xosd.h
- 
+@@ -217,7 +217,8 @@ osd_cat_LDADD = libxosd/libxosd.la
+ testprog_LDADD = libxosd/libxosd.la
+ include_HEADERS = xosd.h
  AM_CFLAGS = ${GTK_CFLAGS}
- 
 -SUBDIRS = libxosd xmms_plugin
 +@BUILD_NEW_PLUGIN_TRUE@SUBDIRS = libxosd xmms_plugin
 +@BUILD_NEW_PLUGIN_FALSE@SUBDIRS = libxosd
- subdir = src
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ all: all-recursive
+ 
+ .SUFFIXES:
