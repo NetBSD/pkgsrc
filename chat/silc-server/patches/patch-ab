@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2002/03/29 11:34:51 rh Exp $
+$NetBSD: patch-ab,v 1.6 2002/06/21 16:00:14 jschauma Exp $
 
---- doc/example_silcd.conf.in.orig	Sun Mar 17 14:39:17 2002
-+++ doc/example_silcd.conf.in	Wed Mar 27 21:05:25 2002
+--- doc/example_silcd.conf.in.orig	Thu May 30 16:09:43 2002
++++ doc/example_silcd.conf.in	Tue Jun 18 01:27:59 2002
 @@ -36,7 +36,7 @@
  	# This is the default path where to search modules.  If omitted
  	# built-in modules will be used.  Built-in modules will also be
@@ -11,18 +11,33 @@ $NetBSD: patch-ab,v 1.5 2002/03/29 11:34:51 rh Exp $
  
  	# If both passphrase and public key authentication is set for a
  	# connection the public key authentication is the preferred one
-@@ -139,8 +139,8 @@
+@@ -148,14 +148,14 @@
  	#
- 	# Server FQDN and IP address
+ 	# Server name (FQDN)
  	#
 -	hostname = "lassi.kuo.fi.ssh.com";
--	ip = "10.2.1.6";
 +	hostname = "localhost";
-+	ip = "127.0.0.1";
- 	port = 706;
  
  	#
-@@ -152,7 +152,7 @@
+ 	# Primary listener.  Specify the IP address and the port to bind
+ 	# the server.
+ 	#
+ 	Primary {
+-		ip = "10.2.1.6";
++		ip = "127.0.0.1";
+ 		port = 706;
+ 	};
+ 
+@@ -164,7 +164,7 @@
+ 	# several interfaces use the Secondary to specify the listener(s).
+ 	#
+ 	#Secondary { ip = "10.2.1.60"; port = 706; };
+-	#Secondary { ip = "10.2.1.160"; port = 706; };
++	Secondary { ip = "::1"; port = 706; };
+ 
+ 	#
+ 	# ServerType field specifies the purpose of this server
+@@ -175,7 +175,7 @@
  	#
  	# Geographic location
  	#
@@ -31,7 +46,7 @@ $NetBSD: patch-ab,v 1.5 2002/03/29 11:34:51 rh Exp $
  
  	#
  	# Full admin name
-@@ -168,8 +168,8 @@
+@@ -191,8 +191,8 @@
  	# Run SILC server as specific user and group. The server must be 
  	# initially run as root.
  	#
@@ -42,7 +57,7 @@ $NetBSD: patch-ab,v 1.5 2002/03/29 11:34:51 rh Exp $
  
  	#
  	# Public and private keys
-@@ -182,7 +182,7 @@
+@@ -205,7 +205,7 @@
  	#
  	# Specifies the text file displayed on client connection
  	#
@@ -51,7 +66,7 @@ $NetBSD: patch-ab,v 1.5 2002/03/29 11:34:51 rh Exp $
  
  	#
  	# Pid file
-@@ -209,7 +209,7 @@
+@@ -232,7 +232,7 @@
  	# reduces memory usage.  By default it is false and log files are
  	# written with FlushDelay timeout.
  	#
@@ -60,7 +75,7 @@ $NetBSD: patch-ab,v 1.5 2002/03/29 11:34:51 rh Exp $
  
  	# FlushDelay tells log files update delay (seconds) in case you 
  	# have chosen buffering output.  This setting has effect only if
-@@ -368,9 +368,9 @@
+@@ -391,9 +391,9 @@
  # required.
  #
  Admin {
@@ -73,7 +88,7 @@ $NetBSD: patch-ab,v 1.5 2002/03/29 11:34:51 rh Exp $
  	Passphrase = "verysecret";
  	# PublicKey = "/path/to/the/public.key";
  };
-@@ -393,13 +393,13 @@
+@@ -416,13 +416,13 @@
  # to true. For normal connections set it false. If it is set to true then
  # this server will be backup router.
  #
@@ -94,7 +109,7 @@ $NetBSD: patch-ab,v 1.5 2002/03/29 11:34:51 rh Exp $
  
  #
  # Configured router connections
-@@ -426,17 +426,17 @@
+@@ -452,17 +452,17 @@
  # backup router is in our cell then set the "BackupLocal" option to true.
  # If the backup router is in other cell then set it to false.
  #
