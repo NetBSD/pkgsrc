@@ -1,0 +1,2 @@
+A simple stock tickertape, using HTTP requests to fetch quotes. 
+Mailquote emails quotes to an email address.

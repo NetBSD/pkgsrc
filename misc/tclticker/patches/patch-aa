@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/21 12:47:30 agc Exp $
+
+--- tclticker	1999/12/21 12:35:29	1.1
++++ tclticker	1999/12/21 12:38:00
+@@ -43,7 +43,9 @@
+ # authors grant the U.S. Government and others acting in its behalf
+ # permission to use and distribute the software in accordance with the
+ # terms specified in this license. 
+- 
++
++# set this explicitly
++set env(TCLTICKER_LIB) "@PREFIX@/share/tclticker"
+ 
+ if {! [info exists env(TCLTICKER_LIB)]} {
+     lappend auto_path [file join [file dirname $argv0] lib]
