@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 1997/12/22 07:45:44 hubertf Exp $
 # New ports collection makefile for:    scheme48
 # Version required:     0.46
 # Date created:         25 Aug 1997
 # Whom:                 jmacd
 #
+# $NetBSD: Makefile,v 1.4 1998/01/24 20:23:59 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/08/27 19:31:37 jmacd Exp
 #
 
