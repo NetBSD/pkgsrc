@@ -1,20 +1,16 @@
-$NetBSD: distinfo,v 1.7 2002/10/20 16:32:25 lukem Exp $
+$NetBSD: distinfo,v 1.8 2003/11/27 17:27:29 abs Exp $
 
-SHA1 (tightvnc-1.2.6_unixsrc.tar.bz2) = 3ff266a89d12cf49855fbeee3c7c6a8c6c2f07bd
-Size (tightvnc-1.2.6_unixsrc.tar.bz2) = 1717851 bytes
-SHA1 (vnc-3.3.2r2_doc.tgz) = 857b05c4d8de8b00bfd1ab06a408d9d9a5bb4a6b
-Size (vnc-3.3.2r2_doc.tgz) = 1009890 bytes
+SHA1 (tightvnc-1.2.9_unixsrc.tar.bz2) = 62b55237676bbdc7f08771e6ff72c0f70264f4ee
+Size (tightvnc-1.2.9_unixsrc.tar.bz2) = 1738256 bytes
 SHA1 (patch-aa) = 3445af5bc4b85f7a45049378f5806a5c993503f4
-SHA1 (patch-ab) = f31282e99502dc50b53c660472aa297ef25e0772
-SHA1 (patch-ac) = 71f7dcf81e731263b2bc0b9ea87326d1da2ff1a9
-SHA1 (patch-ad) = fa346a71945facf9537a700267ebdfdb3f250453
-SHA1 (patch-ae) = e6c4d10dfdebb9e52636ec93bf78a6c91ae792fc
-SHA1 (patch-af) = 629c054da4003a6811838e90ba3e4ea2a697a51c
-SHA1 (patch-ag) = e8cb0ee74739d05c2f7b376db1026de3b85cc31a
-SHA1 (patch-ba) = 051a6f89ce03fcd6cdd5e6cd87671d171262c94f
-SHA1 (patch-bb) = 5c16b81e57acfcc0dabce4ee3f429dd9be322d89
-SHA1 (patch-bc) = a7f399320d3c06fa5c6ee940a8ede4c6422c7937
-SHA1 (patch-bd) = eea7eb3a690212c54667c68b72ecb1df9c667a68
-SHA1 (patch-be) = 3f26eaebfa2b6d62123676e4d3a4f43bff5592c0
-SHA1 (patch-bf) = f1aa671b82e56cb7f5dfdd3cda70dbf3c4725474
-SHA1 (patch-bg) = 840931f1097780cea5e469b35622f2d401a4922e
+SHA1 (patch-ab) = 1ddbc0fef0f5ea4798537365bafcce15b5698b27
+SHA1 (patch-ac) = 7068947b76270e858c66d1c46a8ebb8675ecdbbd
+SHA1 (patch-ad) = 9606ffc253ea40fa03058cf40c4eab447adafa61
+SHA1 (patch-ae) = f541c3d7f143145798eb2d3eca3d2a1992619a50
+SHA1 (patch-af) = 372b8ca93a93dab938363c6b9408ab82155a172d
+SHA1 (patch-ag) = 675c42780888ff471109521de0a358ba40a6b8f3
+SHA1 (patch-ah) = 013acd16171cdfdc4b97529af60978afb9b4d861
+SHA1 (patch-ai) = c95caf348ad41e2fd0954119d23c17e1c73795af
+SHA1 (patch-aj) = bac4b0703f86f10a8a39a2de255694517330af22
+SHA1 (patch-ak) = ad1b7cec677dec76f2808b4c4ddc550749cf0882
+SHA1 (patch-al) = 4a45378b53b0e550c87ddc0b244b7a03f518bfb4

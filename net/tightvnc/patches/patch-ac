@@ -1,30 +1,27 @@
-$NetBSD: patch-ac,v 1.2 2002/02/19 00:02:29 mycroft Exp $
+$NetBSD: patch-ac,v 1.3 2003/11/27 17:27:29 abs Exp $
 
---- Xvnc/config/imake/imakemdep.h.orig	Sun Jun 11 12:00:51 2000
-+++ Xvnc/config/imake/imakemdep.h	Tue Feb 19 00:00:15 2002
-@@ -253,9 +253,12 @@
- #ifdef _CRAY
- #define DEFAULT_CPP "/lib/pcpp"
- #endif
--#if defined(__386BSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__FreeBSD__)
-+#if defined(__386BSD__)
- #define DEFAULT_CPP "/usr/libexec/cpp"
- #endif
-+#if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__FreeBSD__)
-+#define USE_CC_E
-+#endif
- #if defined(__sgi) && defined(__ANSI_CPP__)
- #define USE_CC_E
- #endif
-@@ -286,6 +289,11 @@
-  *     Note that you may define more than one symbol (useful for platforms 
-  *     that support multiple operating systems).
-  */
-+
-+#ifdef __NetBSD__
-+#undef unix
-+#define unix 42
-+#endif
+--- Xvnc/config/cf/vnc.def.orig	2003-07-31 15:19:37.000000000 +0100
++++ Xvnc/config/cf/vnc.def
+@@ -10,8 +10,6 @@
  
- #define	ARGUMENTS 50	/* number of arguments in various arrays */
- char *cpp_argv[ARGUMENTS] = {
+ #ifdef BeforeVendorCF
+ 
+-#include "platform.def"
+-
+ /*****************************************************************************/
+ /*
+  * First try to switch off all the extras that we don't want.  This includes
+@@ -117,13 +115,7 @@
+  * You may need to change this.
+  */
+ 
+-#ifdef SunArchitecture
+-#define ProjectRoot /usr/openwin
+-#else
+-#ifdef LinuxArchitecture
+ #define ProjectRoot /usr/X11R6
+-#endif
+-#endif
+ 
+ #endif /* BeforeVendorCF */
+ 

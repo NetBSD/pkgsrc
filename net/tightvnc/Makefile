@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2003/10/11 12:20:19 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/11/27 17:27:29 abs Exp $
 #
 
-DISTNAME=		tightvnc-1.2.6
+DISTNAME=		tightvnc-1.2.9
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 CATEGORIES=		net x11
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/} \
-			ftp://ftp.uk.research.att.com/pub/vnc/dist/
-DISTFILES=		tightvnc-1.2.6_unixsrc.tar.bz2 \
-			vnc-3.3.2r2_doc.tgz
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/}
+DISTFILES=		${DISTNAME}_unixsrc.tar.bz2
 
 MAINTAINER=		mycroft@NetBSD.org
 HOMEPAGE=		http://www.tightvnc.com/
@@ -47,10 +45,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/vncserver.local ${PREFIX}/bin/vncserver
 	${INSTALL_MAN} ${WRKSRC}/vncserver.man \
 	    ${PREFIX}/man/man1/vncserver.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vnc
-	cd ${WRKDIR} && \
-		${INSTALL_DATA} *.GIF *.css *.gif *.jpg *.htm *.html *.pdf \
-		    ${PREFIX}/share/doc/vnc
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"

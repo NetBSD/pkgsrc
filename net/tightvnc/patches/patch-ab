@@ -1,12 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2001/09/23 01:34:30 mycroft Exp $
+$NetBSD: patch-ab,v 1.2 2003/11/27 17:27:29 abs Exp $
 
-Sync this with what we shipped with NetBSD-1.5 with the exception that 
-HasXdmAuth is set to NO (since vnc doesn't have the Wraphelp.c file).
-This fixes problems on pmax, alpha, and maybe others.
-
---- Xvnc/config/cf/NetBSD.cf.orig	Sat Jul 26 06:30:39 1997
-+++ Xvnc/config/cf/NetBSD.cf	Sat Sep 22 17:59:51 2001
-@@ -2,9 +2,37 @@
+--- Xvnc/config/cf/NetBSD.cf.orig	2000-06-11 13:00:51.000000000 +0100
++++ Xvnc/config/cf/NetBSD.cf
+@@ -2,9 +2,37 @@ XCOMM platform:  $XConsortium: NetBSD.cf
  
  
  
@@ -45,7 +41,7 @@ This fixes problems on pmax, alpha, and maybe others.
  #ifndef OSName
  #define OSName			DefaultOSName OSBinaryType
  #endif
-@@ -14,24 +42,34 @@
+@@ -14,24 +42,34 @@ XCOMM platform:  $XFree86: xc/config/cf/
  #ifndef OSMinorVersion
  #define OSMinorVersion		DefaultOSMinorVersion
  #endif
@@ -82,7 +78,7 @@ This fixes problems on pmax, alpha, and maybe others.
  #define HasNdbm         	YES
  #define HasPutenv       	YES
  #define HasSnprintf		YES
-@@ -61,7 +99,20 @@
+@@ -61,7 +99,20 @@ XCOMM operating system:  OSName (OSMajor
       (OSMajorVersion == 1 && OSMinorVersion == 2 && OSTeenyVersion < 2))
  #  define HasDlsymBug		YES
  #endif
@@ -104,7 +100,7 @@ This fixes problems on pmax, alpha, and maybe others.
  #if (!(OSMajorVersion == 0 || \
         (OSMajorVersion == 1 && OSMinorVersion < 2))) 
  #define HasMkstemp		YES
-@@ -85,6 +136,7 @@
+@@ -85,6 +136,7 @@ XCOMM operating system:  OSName (OSMajor
  #define NeedVarargsPrototypes	YES
  #define NeedWidePrototypes	NO
  
@@ -112,7 +108,7 @@ This fixes problems on pmax, alpha, and maybe others.
  #define MkdirHierCmd		mkdir -p
  
  #define CppCmd          	/usr/libexec/cpp
-@@ -96,13 +148,15 @@
+@@ -96,13 +148,15 @@ XCOMM operating system:  OSName (OSMajor
  #define CcCmd 			gcc
  #if defined(UseInstalled) && (!defined(XF86LinkKit) || !XF86LinkKit)
  #define DefaultCCOptions 	/**/
@@ -129,7 +125,7 @@ This fixes problems on pmax, alpha, and maybe others.
  /* UseElfFormat defaults to YES if __ELF__ set */
  #ifndef UseElfFormat
  # ifdef __ELF__
-@@ -114,60 +168,234 @@
+@@ -114,60 +168,234 @@ XCOMM operating system:  OSName (OSMajor
  #endif
  
  /*
@@ -386,7 +382,7 @@ This fixes problems on pmax, alpha, and maybe others.
  #endif
  
  #define StandardDefines	-DCSRG_BASED
-@@ -177,7 +405,18 @@
+@@ -177,7 +405,18 @@ XCOMM operating system:  OSName (OSMajor
  #define ExtraLibraries		/**/
  #endif
  #ifndef UseGnuMalloc
@@ -405,7 +401,7 @@ This fixes problems on pmax, alpha, and maybe others.
  #endif
  #ifndef GnuMallocLibrary
  #define GnuMallocLibrary	-lgnumalloc
-@@ -191,6 +430,13 @@
+@@ -191,6 +430,13 @@ XCOMM operating system:  OSName (OSMajor
  #endif
  #endif 
  
@@ -419,7 +415,7 @@ This fixes problems on pmax, alpha, and maybe others.
  #define	AdmDir			/var/log
  
  /*
-@@ -200,8 +446,17 @@
+@@ -200,8 +446,17 @@ XCOMM operating system:  OSName (OSMajor
  #define StripInstalledPrograms	YES
  #define CompressAllFonts	YES
  #define GzipFontCompression	YES
@@ -439,7 +435,7 @@ This fixes problems on pmax, alpha, and maybe others.
  
  #ifdef  InstallCmd
  # undef  InstallCmd
-@@ -212,11 +467,23 @@
+@@ -212,11 +467,23 @@ XCOMM operating system:  OSName (OSMajor
  # define ExtraFilesToClean 	*.core
  #endif
  
@@ -465,7 +461,7 @@ This fixes problems on pmax, alpha, and maybe others.
  #define	EqnCmd 			eqn -Tps
  #define TroffCmd        	groff -Tps
  
-@@ -264,7 +531,10 @@
+@@ -264,7 +531,10 @@ install.man::                           
  	-@if [ -f file.0 ]; \						@@\
  	then \								@@\
  	$(INSTALL) -c $(INSTMANFLAGS) file.0 $(DESTDIR)destdir/dest.0; \@@\
@@ -477,7 +473,7 @@ This fixes problems on pmax, alpha, and maybe others.
  
  #define InstallGenManPageLong(file,destdir,dest,suffix)			@@\
  	InstallManPageLong(file,destdir,dest)
-@@ -281,7 +551,16 @@
+@@ -281,7 +551,16 @@ install.man:: 								@@\
  	done
  
  #define InstallMultipleMan(list,dest)                                   @@\
@@ -495,7 +491,7 @@ This fixes problems on pmax, alpha, and maybe others.
  
  #define InstallManPageAliases(file,destdir,aliases)                     @@\
  install.man:: 								@@\
-@@ -299,13 +578,10 @@
+@@ -299,13 +578,10 @@ install.man:: 								@@\
  /*
   * Shared libraries supported starting in 1.0 on a.out platforms,
   * and on all ELF platforms.
@@ -511,7 +507,7 @@ This fixes problems on pmax, alpha, and maybe others.
  # ifndef HasSharedLibraries
  # define HasSharedLibraries	YES
  # endif
-@@ -327,51 +603,179 @@
+@@ -327,51 +603,179 @@ install.man:: 								@@\
  #include <bsdLib.rules>
  #endif /* HasSharedLibraries */
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-bc,v 1.1 2001/09/23 01:34:31 mycroft Exp $
+$NetBSD: patch-aj,v 1.1 2003/11/27 17:27:29 abs Exp $
 
---- Xvnc/programs/Xserver/hw/vnc/Imakefile.orig	Tue Jan 16 08:16:38 2001
-+++ Xvnc/programs/Xserver/hw/vnc/Imakefile	Sun Sep 23 01:23:34 2001
-@@ -12,7 +12,7 @@
+--- Xvnc/programs/Xserver/hw/vnc/Imakefile.orig	2002-04-30 14:07:31.000000000 +0100
++++ Xvnc/programs/Xserver/hw/vnc/Imakefile
+@@ -12,7 +12,7 @@ OBJS = init.o sockets.o kbdptr.o cmap.o 
  #include <vnclibs.def>
  INCLUDES = -I. -I$(XBUILDINCDIR) -I$(FONTINCSRC) -I$(XINCLUDESRC) \
  	   -I../../cfb -I../../mfb -I../../mi -I../../include -I../../os \
