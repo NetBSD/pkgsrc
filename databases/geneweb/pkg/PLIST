@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2000/08/19 11:26:30 wulf Exp $
-libexec/gwd
+@comment $NetBSD: PLIST,v 1.3 2000/08/28 13:54:38 wiz Exp $
 bin/consang
 bin/ged2gwb
 bin/gwb2ged
 bin/gwc
 bin/gwtp
 bin/gwu
-share/examples/geneweb/a.gwf
-share/examples/geneweb/only.txt
+etc/rc.d/geneweb.sh
+libexec/gwd
+sbin/gwsetup
 share/doc/geneweb/CREDITS.htm
 share/doc/geneweb/LICENSE.htm
 share/doc/geneweb/de/access.htm
@@ -91,16 +91,16 @@ share/doc/geneweb/se/report.htm
 share/doc/geneweb/se/server.htm
 share/doc/geneweb/se/start.htm
 share/doc/geneweb/se/update.htm
+share/examples/geneweb/a.gwf
+share/examples/geneweb/only.txt
 share/geneweb/etc/copyr.txt
 share/geneweb/etc/index.txt
 share/geneweb/etc/redirect.txt
 share/geneweb/etc/renamed.txt
 share/geneweb/etc/robot.txt
 share/geneweb/images/female.gif
-share/geneweb/images/male.gif
 share/geneweb/images/gwback.jpg
 share/geneweb/images/gwlogo.gif
-share/geneweb/images/left.jpg
 share/geneweb/images/l-af.jpg
 share/geneweb/images/l-cn.jpg
 share/geneweb/images/l-cs.jpg
@@ -120,6 +120,8 @@ share/geneweb/images/l-no.jpg
 share/geneweb/images/l-pt.jpg
 share/geneweb/images/l-ru.jpg
 share/geneweb/images/l-se.jpg
+share/geneweb/images/left.jpg
+share/geneweb/images/male.gif
 share/geneweb/images/t-af.gif
 share/geneweb/images/t-cn.gif
 share/geneweb/images/t-cs.gif
@@ -141,8 +143,6 @@ share/geneweb/images/t-ru.gif
 share/geneweb/images/t-se.gif
 share/geneweb/images/up.jpg
 share/geneweb/lang/advanced.txt
-share/geneweb/lang/lexicon.txt
-share/geneweb/lang/version.txt
 share/geneweb/lang/af/start.txt
 share/geneweb/lang/cn/start.txt
 share/geneweb/lang/cs/start.txt
@@ -156,12 +156,14 @@ share/geneweb/lang/fr/start.txt
 share/geneweb/lang/he/start.txt
 share/geneweb/lang/is/start.txt
 share/geneweb/lang/it/start.txt
+share/geneweb/lang/lexicon.txt
 share/geneweb/lang/lv/start.txt
 share/geneweb/lang/nl/start.txt
 share/geneweb/lang/no/start.txt
 share/geneweb/lang/pt/start.txt
 share/geneweb/lang/ru/start.txt
 share/geneweb/lang/se/start.txt
+share/geneweb/lang/version.txt
 share/geneweb/setup/de/backg.htm
 share/geneweb/setup/de/bsi.htm
 share/geneweb/setup/de/bsi_err.htm
