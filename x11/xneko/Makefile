@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/20 11:56:36 frueauf Exp $
+# $NetBSD: Makefile,v 1.5 1998/05/28 08:29:42 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/03/12 08:21:35 asami Exp
 #
 
@@ -13,6 +13,7 @@ USE_X11=	yes
 IGNOREFILES=	${DISTFILES}
 WRKSRC=		${WRKDIR}/pub/bsd-sources/4.4BSD-Lite/usr/src/games/xneko
 
-MAN6=		xneko.6
+# Do not list MAN/CAT pages here. It will confuse if MANZ is set.
+# The pkg uses BSD-style-Makefiles itself, so it does the right thing.
 
 .include "../../mk/bsd.pkg.mk"
