@@ -1,38 +1,16 @@
-$NetBSD: patch-ab,v 1.2 2003/01/04 11:20:14 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2003/07/01 10:12:55 wiz Exp $
 
---- src/roff/nroff/nroff.sh.orig	Thu Feb  7 09:36:54 2002
-+++ src/roff/nroff/nroff.sh
-@@ -5,14 +5,16 @@ prog="$0"
- # Default device.
- # First try the "locale charmap" command, because it's most reliable.
- # On systems where it doesn't exist, look at the environment variables.
--case "`locale charmap 2>/dev/null`" in
--  UTF-8)
--    T=-Tutf8 ;;
--  ISO-8859-1)
--    T=-Tlatin1 ;;
--  IBM-1047)
--    T=-Tcp1047 ;;
--  *)
-+# XXX: commented out because /bin/sh doesn't like not finding "locale",
-+#      and ignores the error redirection in this case.
-+#case "`locale charmap 2>/dev/null`" in
-+#  UTF-8)
-+#    T=-Tutf8 ;;
-+#  ISO-8859-1)
-+#    T=-Tlatin1 ;;
-+#  IBM-1047)
-+#    T=-Tcp1047 ;;
-+#  *)
-     case "${LC_ALL-${LC_CTYPE-${LANG}}}" in
-       *.UTF-8)
-         T=-Tutf8 ;;
-@@ -31,7 +33,7 @@
-           *)
-             T=-Tascii ;;
-           esac ;;
--     esac ;;
-+#     esac ;;
- esac
- opts=
- 
+--- tmac/doc-common.orig	Thu Feb 27 15:51:49 2003
++++ tmac/doc-common
+@@ -554,7 +554,10 @@
+ .    as doc-header-string "\|.\|.\|.
+ .  \}
+ .  tl \*[doc-caption-font]\*[doc-header-string]\f[]\*[doc-caption-font2]\*[doc-volume]\f[]\*[doc-caption-font]\*[doc-header-string]\f[]
+-.  sp \n[doc-header-space]u
++.  ie !\n[cR] \
++.    sp \n[doc-header-space]u
++.  el \
++.    sp 1v
+ .  ev
+ .  ns
+ ..
