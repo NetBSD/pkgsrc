@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/10 23:44:28 rh Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/16 13:32:03 rh Exp $
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/RTFConverter
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/TextConverters/RTFConverter.bundle/stamp.make
@@ -643,7 +643,7 @@ share/GNUstep/System/Library/PostScript/PPD/Swedish.lproj/Linotronic_300.ppd
 share/GNUstep/System/Library/PostScript/Printers
 share/GNUstep/System/Library/Services/GSspell.service/GSspell
 share/GNUstep/System/Library/Services/GSspell.service/Resources/Info-gnustep.plist
-share/GNUstep/System/Tools/gnustep_sndd
+${GSND}share/GNUstep/System/Tools/gnustep_sndd
 share/GNUstep/System/Tools/gopen
 share/GNUstep/System/Tools/make_services
 share/GNUstep/System/Tools/set_show_service
