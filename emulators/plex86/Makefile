@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/12/14 19:45:49 tv Exp $
+# $NetBSD: Makefile,v 1.9 2000/12/15 00:10:32 tv Exp $
 #
 
 DISTNAME=	plex86-20001214.2
@@ -15,8 +15,15 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-NetBSD \
 		--with-netbsd-source=${BSDSRCDIR}/sys
 USE_GMAKE=	yes
-NO_PKG_REGISTER=	yes	# ONLY until we really install files!!!
-NO_PACKAGE=	Incomplete	# ONLY until we really install files!!!
+USE_X11BASE=	yes	# for VGA font
+
+ONLY_FOR_PLATFORM= NetBSD-*-i386
+
+RESTRICTED=	CPU-specific binary code
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+
+MESSAGE_FILE=	${WRKSRC}/.MESSAGE
 
 BSDSRCDIR?=	/nonexistent	# to override <bsd.own.mk>, MUST be
                                 # set this way BEFORE bsd.prefs.mk
@@ -33,9 +40,50 @@ pre-extract:
 	@${FALSE}
 .endif
 
-do-install:
-	@${CAT} ${MESSAGE_FILE}
-	@${ECHO_MSG} Package NOT recorded as installed!
-	@# Remove the NO_PKG_REGISTER/NO_PACKAGE above if this does something!!!
+pre-build:
+	cd ${WRKSRC} && ${GTAR} xzf docs/output.tar.gz
+
+post-build:
+	${GZIP_CMD} -9 ${WRKSRC}/misc/vga.pcf
+
+do-install: do-install-dirs do-install-binaries do-install-bios \
+		do-install-font do-install-conf do-install-docs
+	${SED} -e 's,@PREFIX@,${PREFIX},g' <${PKGDIR}/MESSAGE >${MESSAGE_FILE}
+
+do-install-dirs:
+	${INSTALL_DATA_DIR} ${PREFIX}/lkm \
+		${PREFIX}/lib/plex86 \
+		${PREFIX}/lib/plex86/bios \
+		${PREFIX}/share/examples/plex86 \
+		${PREFIX}/share/doc/html/plex86
+
+do-install-binaries:
+	${INSTALL_PROGRAM} ${WRKSRC}/user/plex86 ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/user/resetmod ${PREFIX}/bin/plex86_reset
+	${INSTALL_DATA} ${WRKSRC}/user/plugins/bochs/plugin-bochs.so ${PREFIX}/lib/plex86/
+	${INSTALL_DATA} ${WRKSRC}/kernel/plex86.o ${PREFIX}/lkm/
+	${INSTALL_SCRIPT} ${WRKSRC}/misc/netbsd_post.sh ${PREFIX}/lib/plex86/
+
+do-install-bios:
+	${INSTALL_DATA} ${WRKSRC}/bios/BIOS-plex86-2000_0817a \
+		${WRKSRC}/bios/VGABIOS-elpin-2.40 \
+		${PREFIX}/lib/plex86/bios/
+
+do-install-font:
+	${INSTALL_DATA} ${WRKSRC}/misc/vga.pcf.gz ${PREFIX}/lib/X11/fonts/local/
+	${X11BASE}/bin/mkfontdir ${PREFIX}/lib/X11/fonts/local
+
+do-install-conf:
+	@cd ${WRKSRC}/conf && for f in freedos linuxhd msdos qnx win95 winnt; do \
+		${SED}	-e 's,\.\./\.\./,/PATH/TO/,' \
+			-e 's,\.\./bios/,${PREFIX}/share/plex86/,' \
+			-e 's,\./plugins/bochs/,${PREFIX}/lib/plex86/,' \
+			$$f >${WRKDIR}/$$f.conf; \
+	done
+	${INSTALL_DATA} ${WRKDIR}/*.conf ${PREFIX}/share/examples/plex86/
+
+do-install-docs:
+	@${INSTALL_DATA} ${WRKSRC}/output/html/* ${WRKSRC}/docs/html/*.* \
+		${PREFIX}/share/doc/html/plex86/
 
 .include "../../mk/bsd.pkg.mk"
