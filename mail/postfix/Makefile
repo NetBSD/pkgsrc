@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2002/07/03 11:11:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.67 2002/07/22 10:39:26 martti Exp $
 
 DISTNAME=	postfix-1.1.11
 PKGREVISION=	1
@@ -25,7 +25,8 @@ POSTFIX_SPOOL=	/var/spool/postfix
 
 .if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES" \
 	|| defined(USE_SASL) && ${USE_SASL} == "YES" \
-	|| defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES"
+	|| defined(POSTFIX_USE_MYSQL) && ${POSTFIX_USE_MYSQL} == "YES" \
+	|| defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"
 CCARGS=		-I${LOCALBASE}/include
 AUXLIBS=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
@@ -56,6 +57,18 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 BUILD_DEFS+=	USE_SASL
 .endif
 
+.if defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"
+PATCH_SITES+=	http://people.arhea.net/dawszy/NetBSD/postfix_tls/
+PATCHFILES+=	pfixtls-1.1.11.diff.gz
+PATCH_DIST_STRIP=	-p1
+CCARGS+=	-DHAS_SSL
+AUXLIBS+=	-lssl -lcrypto
+PLIST_SRC+=	${PKGDIR}/PLIST.tls
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE.tls
+BUILD_DEFS+=	POSTFIX_USE_TLS
+.endif
+
+MESSAGE_SRC+=	${PKGDIR}/MESSAGE
 PLIST_SRC+=	${PKGDIR}/PLIST
 ALL_TARGET=	#empty
 MAKE_ENV=	CC="${CC}" OPT="${CFLAGS}"
@@ -134,4 +147,8 @@ post-install:
 	${TEST} -f /etc/postfix/master.cf || \
 		${INSTALL_DATA} ${PREFIX}/share/postfix/master.cf /etc/postfix
 
+.if defined(POSTFIX_USE_TLS) && ${POSTFIX_USE_TLS} == "YES"
+.include "../../security/openssl/buildlink.mk"
+.endif
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

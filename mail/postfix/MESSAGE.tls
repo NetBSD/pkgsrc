@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE.tls,v 1.1 2002/07/22 10:39:26 martti Exp $
+
+To enable TLS, you might need to reconfigure /etc/postfix/main.cf and
+/etc/postfix/master.cf (See ${PREFIX}/share/postfix/sample-tls.cf.)
+
+master.cf:
+----------
+ tlsmgr    fifo  -       -       y       300     1       tlsmgr
+ smtps     inet  n       -       y       -       -       smtpd -o smtpd_tls_wrappermode=yes -o smtpd_sasl_auth_enable=yes
+ submission inet n       -       y       -       -       smtpd -o smtpd_enforce_tls=yes -o smtpd_sasl_auth_enable=yes
+
+===========================================================================
