@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/07/28 21:30:19 shannonjr Exp $
+# $NetBSD: Makefile,v 1.10 2004/08/01 10:14:16 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -30,7 +30,7 @@ AS_PATH:=	${_dir_}/${AS}
 .    if !empty(AS_PATH:M${LOCALBASE}/*)
 USE_BINUTILS=	YES
 .    else
-AS_VERSION!=	${AS} --version | ${AWK} '{				\
+AS_VERSION!=	${AS_PATH} --version | ${AWK} '{			\
 		    split($$3, v, /[.]/);				\
 		    printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
 		    exit;						\
@@ -43,6 +43,7 @@ MAKEFLAGS+=	USE_BINUTILS=${USE_BINUTILS}
 .if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
 DEPENDS+=	binutils>=2.14:../../devel/binutils
 CONFIGURE_ARGS+=	--with-as=${LOCALBASE}/bin/as
+CONFIGURE_ARGS+=	--with-ld=${LOCALBASE}/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as
 CONFIGURE_ARGS+=	--with-gnu-ld
 .endif
