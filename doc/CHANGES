@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8680 2005/01/10 15:51:36 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8681 2005/01/10 16:15:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -206,3 +206,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gimp to 2.2.2 [adam 2005-01-10]
 	Updated mysql4-client to 4.1.8a [xtraeme 2005-01-10]
 	Updated mysql4-server to 4.1.8a [xtraeme 2005-01-10]
+	Updated wv to 1.0.3 [adam 2005-01-10]
