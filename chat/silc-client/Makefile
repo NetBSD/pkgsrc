@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/02/14 17:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2004/02/18 14:40:35 salo Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
@@ -16,7 +16,7 @@ COMMENT=                Client for the Secure Internet Live Conferencing (SILC) 
 
 .include "../../chat/silc-client/Makefile.common"
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
@@ -63,8 +63,8 @@ CONFIGURE_ARGS+=	--enable-ipv6
 
 .if defined(SILC_CLIENT_WITH_PERL) && !empty(SILC_CLIENT_WITH_PERL:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--with-perl-lib=${PREFIX}/lib/silc/perl5
-.include "../../lang/perl5/buildlink2.mk"
-BUILDLINK_DEPENDS.perl=	perl>=5.6.1nb10
+PERL5_REQD+=		5.6.1nb10
+.include "../../lang/perl5/buildlink3.mk"
 DEPENDS+=		p5-File-MMagic>=1.20:../../misc/p5-File-MMagic
 PLIST_SRC+=		${PKGDIR}/PLIST.perl
 .else
@@ -87,8 +87,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/irssi/config.h ${SILC_CLIENT_CONFIG_H}
 	${INSTALL_DATA} ${WRKSRC}/irssi/irssi-config ${SILC_CLIENT_CONFIG}
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

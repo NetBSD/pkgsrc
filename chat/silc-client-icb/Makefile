@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/14 19:26:44 salo Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/18 14:40:35 salo Exp $
 #
 
 DISTNAME=	irssi-icb-0.14
@@ -16,7 +16,7 @@ DEPENDS+=	silc-client>=${SILC_CLIENT_VERSION}:../../chat/silc-client
 
 .include "../../chat/silc-client/Makefile.common"
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 IRSSI_DIR=	${WRKDIR}/${SILC_CLIENT_DISTNAME}/irssi
@@ -30,6 +30,6 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/silc/README.icb
 
-.include "../../devel/glib/buildlink2.mk"
+.include "../../devel/glib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
