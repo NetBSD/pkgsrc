@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/20 12:09:09 agc Exp $
+# $NetBSD: Makefile,v 1.25 2004/04/12 00:53:46 snj Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
@@ -17,7 +17,7 @@ CONFLICTS=	ng-spice-[0-9]*
 BUILDLINK_DEPENDS.readline=	readline>=4.0
 
 WRKSRC=			${WRKDIR}
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 USE_X11=		# defined
 USE_GNU_READLINE=	uses rl_* interface
 
@@ -65,5 +65,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/spice3
 	${INSTALL_DATA} ${WRKSRC}/examples/*.cir ${PREFIX}/share/examples/spice3
 
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
