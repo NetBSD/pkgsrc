@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.533 2000/08/01 12:00:48 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.534 2000/08/03 15:45:42 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1372,10 +1372,12 @@ do-configure:
 
 .if (defined(USE_LIBTOOL) || defined(USE_PKGLIBTOOL)) && defined(LTCONFIG_OVERRIDE) && !defined(LIBTOOL_OVERRIDE)
 .for ltconfig in ${LTCONFIG_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${ltconfig} ]; then \
+	${_PKG_SILENT}${_PKG_DEBUG}\
+	if [ -f ${ltconfig} ]; then \
 		${RM} -f ${ltconfig}; \
 		${ECHO} "${RM} -f libtool; ${LN} -s ${LIBTOOL} libtool" \
 			> ${ltconfig}; \
+		${CHMOD} +x ${ltconfig} ; \
 	fi
 .endfor
 .endif
