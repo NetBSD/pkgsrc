@@ -1,0 +1,28 @@
+$NetBSD: patch-ag,v 1.8 2004/04/26 11:24:15 markd Exp $
+
+--- kio/kio/global.cpp.orig	2004-04-04 21:08:52.000000000 +1200
++++ kio/kio/global.cpp
+@@ -1390,7 +1390,11 @@ QString KIO::findDeviceMountPoint( const
+ 
+ #ifdef HAVE_GETMNTINFO
+ 
++#ifdef ST_RDONLY
++    struct statvfs *mounted;
++#else
+     struct statfs *mounted;
++#endif
+ 
+     int num_fs = getmntinfo(&mounted, MNT_NOWAIT);
+ 
+@@ -1656,7 +1660,11 @@ static QString get_mount_info(const QStr
+ 
+ #ifdef HAVE_GETMNTINFO
+ 
++#ifdef ST_RDONLY
++    struct statvfs *mounted;
++#else
+     struct statfs *mounted;
++#endif
+     char    realpath_buffer[MAXPATHLEN];
+ 
+     int num_fs = getmntinfo(&mounted, MNT_NOWAIT);
