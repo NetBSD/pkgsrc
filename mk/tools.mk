@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.47 2004/12/18 19:24:26 jlam Exp $
+# $NetBSD: tools.mk,v 1.48 2004/12/22 21:39:25 jlam Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -396,6 +396,9 @@ ${TOOLS_DIR}/bin/make:
 # stat((2)able path to a C preprocessor, then rely on the PATH to
 # find and invoke the real rpcgen.
 #
+RPCGEN?=		rpcgen
+RPCGEN_ARGS.NetBSD=	-b
+RPCGEN_ARGS?=		${RPCGEN_ARGS.${OPSYS}}
 override-tools: ${TOOLS_DIR}/bin/rpcgen
 .if !target(${TOOLS_DIR}/bin/rpcgen)
 ${TOOLS_DIR}/bin/rpcgen:
@@ -406,8 +409,8 @@ ${TOOLS_DIR}/bin/rpcgen:
 	  ${ECHO} 'CPP="${WRAPPER_BINDIR}/cpp"; export CPP';		\
 	  PATH=`${ECHO} "${PATH}" | ${SED} -e "s,.*${.TARGET:H}:,,"`;	\
 	  ${ECHO} "PATH=\"$$PATH\"; export PATH";			\
-	  ${ECHO} '${ECHO} "<.> rpcgen $$*" >> $$wrapperlog';		\
-	  ${ECHO} 'rpcgen "$$@"';					\
+	  ${ECHO} '${ECHO} "<.> ${RPCGEN} ${RPCGEN_ARGS} $$*" >> $$wrapperlog'; \
+	  ${ECHO} '${RPCGEN} ${RPCGEN_ARGS} "$$@"';			\
 	) > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 .endif
