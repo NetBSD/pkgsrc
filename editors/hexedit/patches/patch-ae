@@ -1,0 +1,18 @@
+--- hexedit.h.orig	2003-08-08 13:51:08.000000000 +0100
++++ hexedit.h	2003-08-08 13:52:50.000000000 +0100
+@@ -2,6 +2,7 @@
+ #define HEXEDIT_H
+ 
+ #include "config.h"
++#include <inttypes.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+@@ -26,6 +27,7 @@
+ 
+ 
+ #define INT off_t
++#define INT_FMT PRIX64	/* Modern, Sane OSs have a 64-bit off_t */
+ 
+ /*******************************************************************************/
+ /* Macros */
