@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1999/09/24 04:37:32 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/15 14:29:13 wiz Exp $
 #
 # Makefile using LIBTOOL to generate a shared library from the static one.
 
@@ -46,6 +46,10 @@ install-libs:	libforms.la
 	@if [ -f ${LIBDIR}/libforms.a ]; then \
 		echo "ln -sf libforms.a ${LIBDIR}/libxforms.a"; \
 		ln -sf libforms.a ${LIBDIR}/libxforms.a; \
+	fi
+	@if [ -f ${LIBDIR}/libforms.la ]; then \
+		echo "ln -sf libforms.la ${LIBDIR}/libxforms.la"; \
+		ln -sf libforms.la ${LIBDIR}/libxforms.la; \
 	fi
 	@if [ -f ${LIBDIR}/libforms.so.${SHLIB_MAJOR}.${SHLIB_MINOR} ]; then \
 		echo "ln -sf libforms.so.${SHLIB_MAJOR}.${SHLIB_MINOR} \

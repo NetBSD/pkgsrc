@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2000/08/01 18:03:36 tron Exp $
+# $NetBSD: Makefile,v 1.28 2000/08/15 14:29:13 wiz Exp $
 #
 
 DISTNAME=       bxform-088
@@ -41,7 +41,7 @@ DISTNAME=	bxform-088-ELF
 OBJMACHINE=	yes
 
 USE_X11BASE=	yes
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
 MAKEFILE=	${FILESDIR}/Makefile
 PLIST_SRC=	${PKGDIR}/PLIST.mi ${PKGDIR}/PLIST.shlib
 
