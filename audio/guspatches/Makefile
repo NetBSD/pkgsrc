@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:22:23 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/03 14:20:03 ben Exp $
 #
 
 DISTNAME=	dgguspat
 PKGNAME=	guspatches-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.zip
@@ -11,14 +11,13 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=     tech-pkg@NetBSD.org
 COMMENT=	GUS (Gravis Ultrasound) patches (audio samples) for TiMidity
 
-CONFLICTS=	eawpatches-[0-9]*
-
 RESTRICTED=		"Uses copyrighted patches"
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 do-build:
 	${SED} "s|@PREFIX@|${PREFIX}|" < ${FILESDIR}/gravis.cfg > \
@@ -27,10 +26,10 @@ do-build:
 		${WRKDIR}/timidity.cfg
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/timidity
-	cd ${PREFIX}/share/timidity && unzip -oqL ${DISTDIR}/${DISTFILES}
-	${INSTALL_DATA} ${FILESDIR}/midia.cfg ${PREFIX}/share/timidity
-	${INSTALL_DATA} ${WRKDIR}/gravis.cfg ${PREFIX}/share/timidity
-	${INSTALL_DATA} ${WRKDIR}/timidity.cfg ${PREFIX}/share/timidity
+	${INSTALL_DATA_DIR} ${PREFIX}/share/guspatches
+	cd ${PREFIX}/share/guspatches && unzip -oqL ${DISTDIR}/${DISTFILES}
+	${INSTALL_DATA} ${FILESDIR}/midia.cfg ${PREFIX}/share/guspatches
+	${INSTALL_DATA} ${WRKDIR}/gravis.cfg ${PREFIX}/share/guspatches
+	${INSTALL_DATA} ${WRKDIR}/timidity.cfg ${PREFIX}/share/guspatches
 
 .include "../../mk/bsd.pkg.mk"
