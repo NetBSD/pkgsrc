@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2004/12/20 11:31:11 grant Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/19 19:32:21 wiz Exp $
 #
 
-DISTNAME=	XML-Twig-3.13
+DISTNAME=	XML-Twig-3.16
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5xtw
-PKGREVISION=	1
 CATEGORIES=	textproc perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
+MASTER_SITES=	http://www.xmltwig.com/xmltwig/ \
+		${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.xmltwig.com/
