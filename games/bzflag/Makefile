@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/24 13:30:55 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/25 15:27:42 kristerw Exp $
 
 DISTNAME=	bzflag-1.10.20031209
 PKGNAME=	${DISTNAME:S/20031209/0/}
@@ -15,6 +15,7 @@ USE_NCURSES=	# resize_term()
 USE_X11=	yes
 USE_BUILDLINK2=	yes
 USE_GNU_TOOLS+=	make
+USE_PERL5=	build
 
 .include "../../mk/bsd.prefs.mk"
 
