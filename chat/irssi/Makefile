@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2002/02/19 08:20:45 itojun Exp $
+# $NetBSD: Makefile,v 1.8 2002/03/20 00:39:19 hubertf Exp $
 
-DISTNAME=		irssi-0.8.1
+DISTNAME=		irssi-0.8.4
 CATEGORIES=		chat
 MASTER_SITES=		http://www.irssi.org/files/
 
