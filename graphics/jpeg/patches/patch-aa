@@ -1,0 +1,50 @@
+--- configure.orig	Fri Jul 17 10:11:37 1998
++++ configure	Fri Jul 17 10:12:37 1998
+@@ -1511,38 +1511,12 @@
+ fi
+ 
+ 
+-# Decide whether to use libtool,
+-# and if so whether to build shared, static, or both flavors of library.
+-LTSHARED="no"
+-# Check whether --enable-shared or --disable-shared was given.
+-if test "${enable_shared+set}" = set; then
+-  enableval="$enable_shared"
+-  LTSHARED="$enableval"
+-fi
+-
+-LTSTATIC="no"
+-# Check whether --enable-static or --disable-static was given.
+-if test "${enable_static+set}" = set; then
+-  enableval="$enable_static"
+-  LTSTATIC="$enableval"
+-fi
+-
+-if test "x$LTSHARED" != xno  -o  "x$LTSTATIC" != xno; then
+   USELIBTOOL="yes"
+-  LIBTOOL="./libtool"
+   O="lo"
+   A="la"
+   LN='$(LIBTOOL) --mode=link $(CC)'
+   INSTALL_LIB='$(LIBTOOL) --mode=install ${INSTALL}'
+   INSTALL_PROGRAM="\$(LIBTOOL) --mode=install $INSTALL_PROGRAM"
+-else
+-  USELIBTOOL="no"
+-  LIBTOOL=""
+-  O="o"
+-  A="a"
+-  LN='$(CC)'
+-  INSTALL_LIB="$INSTALL_DATA"
+-fi
+ 
+ 
+ 
+@@ -1550,7 +1524,7 @@
+ 
+ 
+ # Configure libtool if needed.
+-if test $USELIBTOOL = yes; then
++if false; then
+   disable_shared=
+   disable_static=
+   if test "x$LTSHARED" = xno; then
