@@ -1,29 +1,31 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/04/16 14:43:35 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/27 07:10:59 jlam Exp $
 #
 
-DISTNAME=	bioperl-0.04.4
-CATEGORIES=	biology
-MASTER_SITES=	ftp://bio.perl.org/pub/DIST/
+DISTNAME=		bioperl-0.04.4
+CATEGORIES=		biology
+MASTER_SITES=		ftp://bio.perl.org/pub/DIST/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://bio.perl.org/
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://bio.perl.org/
 
-USE_PERL5=	yes
+USE_PERL5=		# defined
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Bio/.packlist
+PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/bp_sw/.packlist
 
 do-configure:
-	cd ${WRKSRC}; perl Makefile.PL
-	cd ${WRKSRC}/Compile/SW; perl Makefile.PL
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
+	cd ${WRKSRC}/Compile/SW; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 pre-build:
-	cd ${WRKSRC}/Compile/SW/libs; make
+	cd ${WRKSRC}/Compile/SW/libs; ${MAKE_PROGRAM}
 
 post-build:
-	cd ${WRKSRC}/Compile/SW; make
-	cd ${WRKSRC}; make test
-	cd ${WRKSRC}/Compile/SW; make test
+	cd ${WRKSRC}/Compile/SW; ${MAKE_PROGRAM}
+	cd ${WRKSRC}; ${MAKE_PROGRAM} test
+	cd ${WRKSRC}/Compile/SW; ${MAKE_PROGRAM} test
 
 post-install:
-	cd ${WRKSRC}/Compile/SW; make install
+	cd ${WRKSRC}/Compile/SW; ${MAKE_PROGRAM} install
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bioperl
 	cd ${WRKSRC}/examples; ${GTAR} cf - . \
 		| (cd ${PREFIX}/share/examples/bioperl; ${GTAR} xf -)

@@ -1,62 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/16 14:43:36 rh Exp $
-lib/perl5/man/man3/Bio::Parse.3
-lib/perl5/man/man3/Bio::Root::Err.3
-lib/perl5/man/man3/Bio::Root::IOManager.3
-lib/perl5/man/man3/Bio::Root::Object.3
-lib/perl5/man/man3/Bio::Root::Utilities.3
-lib/perl5/man/man3/Bio::Root::Vector.3
-lib/perl5/man/man3/Bio::Root::Xref.3
-lib/perl5/man/man3/Bio::Seq.3
-lib/perl5/man/man3/Bio::SimpleAlign.3
-lib/perl5/man/man3/Bio::Tools::AlignFactory.3
-lib/perl5/man/man3/Bio::Tools::Blast.3
-lib/perl5/man/man3/Bio::Tools::Blast::HSP.3
-lib/perl5/man/man3/Bio::Tools::Blast::HTML.3
-lib/perl5/man/man3/Bio::Tools::Blast::Run::LocalBlast.3
-lib/perl5/man/man3/Bio::Tools::Blast::Run::Webblast.3
-lib/perl5/man/man3/Bio::Tools::Blast::Sbjct.3
-lib/perl5/man/man3/Bio::Tools::Fasta.3
-lib/perl5/man/man3/Bio::Tools::RestrictionEnzyme.3
-lib/perl5/man/man3/Bio::Tools::SeqAnal.3
-lib/perl5/man/man3/Bio::Tools::SeqPattern.3
-lib/perl5/man/man3/Bio::Tools::WWW.3
-lib/perl5/man/man3/Bio::Tools::pSW.3
-lib/perl5/man/man3/Bio::UnivAln.3
-lib/perl5/man/man3/bioperl.3
-lib/perl5/site_perl/Bio/Parse.pm
-lib/perl5/site_perl/Bio/Root/Err.pm
-lib/perl5/site_perl/Bio/Root/Global.pm
-lib/perl5/site_perl/Bio/Root/IOManager.pm
-lib/perl5/site_perl/Bio/Root/Object.pm
-lib/perl5/site_perl/Bio/Root/Utilities.pm
-lib/perl5/site_perl/Bio/Root/Vector.pm
-lib/perl5/site_perl/Bio/Root/Xref.pm
-lib/perl5/site_perl/Bio/Seq.pm
-lib/perl5/site_perl/Bio/SimpleAlign.pm
-lib/perl5/site_perl/Bio/Tools/AlignFactory.pm
-lib/perl5/site_perl/Bio/Tools/Blast.pm
-lib/perl5/site_perl/Bio/Tools/Blast/CHANGES
-lib/perl5/site_perl/Bio/Tools/Blast/HSP.pm
-lib/perl5/site_perl/Bio/Tools/Blast/HTML.pm
-lib/perl5/site_perl/Bio/Tools/Blast/Run/LocalBlast.pm
-lib/perl5/site_perl/Bio/Tools/Blast/Run/Makefile.PL
-lib/perl5/site_perl/Bio/Tools/Blast/Run/Webblast.pm
-lib/perl5/site_perl/Bio/Tools/Blast/Run/postclient.pl
-lib/perl5/site_perl/Bio/Tools/Blast/Sbjct.pm
-lib/perl5/site_perl/Bio/Tools/Fasta.pm
-lib/perl5/site_perl/Bio/Tools/RestrictionEnzyme.pm
-lib/perl5/site_perl/Bio/Tools/SeqAnal.pm
-lib/perl5/site_perl/Bio/Tools/SeqPattern.pm
-lib/perl5/site_perl/Bio/Tools/WWW.pm
-lib/perl5/site_perl/Bio/Tools/pSW.pm
-lib/perl5/site_perl/Bio/UnivAln.pm
-lib/perl5/site_perl/auto/bp_sw/autosplit.ix
-lib/perl5/site_perl/bioperl.pod
-lib/perl5/site_perl/bp_sw.pm
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Bio/.packlist
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/bp_sw/.packlist
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/bp_sw/bp_sw.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/bp_sw/bp_sw.so
+@comment $NetBSD: PLIST,v 1.2 2000/08/27 07:10:59 jlam Exp $
 share/examples/bioperl/blast/blast_config.pl
 share/examples/bioperl/blast/blast_seq.pl
 share/examples/bioperl/blast/example.table1
@@ -131,11 +73,3 @@ share/examples/bioperl/simplealign.pl
 @dirrm share/examples/bioperl/blast/out
 @dirrm share/examples/bioperl/blast
 @dirrm share/examples/bioperl
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/bp_sw
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Bio
-@dirrm lib/perl5/site_perl/auto/bp_sw
-@dirrm lib/perl5/site_perl/Bio/Tools/Blast/Run
-@dirrm lib/perl5/site_perl/Bio/Tools/Blast
-@dirrm lib/perl5/site_perl/Bio/Tools
-@dirrm lib/perl5/site_perl/Bio/Root
-@dirrm lib/perl5/site_perl/Bio

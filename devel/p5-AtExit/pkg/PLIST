@@ -1,4 +1,1 @@
-@comment $NetBSD: PLIST,v 1.2 1999/05/12 19:36:03 bad Exp $
-lib/perl5/AtExit.pm
-lib/perl5/man/man3/AtExit.3
-lib/perl5/${MACHINE_ARCH}-${LOWER_OPSYS}/5.00404/auto/AtExit/.packlist
+@comment $NetBSD: PLIST,v 1.3 2000/08/27 07:11:01 jlam Exp $

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/14 08:53:13 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/27 07:11:12 jlam Exp $
 #
 
 DISTNAME=	GD-1.30
@@ -11,9 +11,10 @@ HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/GD/GD.html
 
 DEPENDS+=	gd>=1.8.3:../../graphics/gd
 
-USE_PERL5=	yes
+USE_PERL5=	# defined
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/GD/.packlist
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"

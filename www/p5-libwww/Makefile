@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/07/03 09:49:19 mjl Exp $
+# $NetBSD: Makefile,v 1.15 2000/08/27 07:11:25 jlam Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/14 04:00:11 jfitz Exp
 #
 
@@ -15,9 +15,10 @@ DEPENDS+=	p5-MIME-Base64-*:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-HTML-Parser-*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-URI-*:../../www/p5-URI
 
-USE_PERL5=	YES
+USE_PERL5=	# defined
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/libwww-perl/.packlist
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"

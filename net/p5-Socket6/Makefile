@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/06/04 13:11:45 itojun Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/27 07:11:18 jlam Exp $
 #
 
 DISTNAME=		Socket6-0.07
@@ -9,14 +9,17 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Socket6/}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/libnet/FAQ.html
 
-USE_PERL5=		YES
+USE_PERL5=		# defined
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Socket6/.packlist
+
+.include "../../mk/bsd.prefs.mk"
 
 # supports IPv6 (actually, af independent)
-.include "../../mk/bsd.prefs.mk"
-BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=		USE_INET6
+
+MAKE_ENV+=		CCFLAGS="${CFLAGS} ${CPPFLAGS}"
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL \
-		CCFLAGS="${CFLAGS} ${CPPFLAGS}"
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,1 @@
-@comment $NetBSD: PLIST,v 1.5 1999/04/08 18:51:56 agc Exp $
-lib/perl5/man/man3/Search::Base.3.gz
-lib/perl5/site_perl/Search/Base.pm
-lib/perl5/site_perl/Search/Glimpse.pm
-lib/perl5/site_perl/Search/TextSearch.pm
-@dirrm lib/perl5/site_perl/Search
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Search/Text/.packlist
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Search/Text
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Search
+@comment $NetBSD: PLIST,v 1.6 2000/08/27 07:11:16 jlam Exp $

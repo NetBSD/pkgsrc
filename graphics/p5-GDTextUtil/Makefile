@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/16 20:17:39 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/27 07:11:12 jlam Exp $
 #
 
 DISTNAME=	GDTextUtil-0.75
@@ -11,9 +11,10 @@ HOMEPAGE=	http://theoryx5.uwinnipeg.ca/CPAN/data/GDTextUtil/Text.html
 
 DEPENDS+=	p5-GD>=1.30:../../graphics/p5-GD
 
-USE_PERL5=	yes
+USE_PERL5=	# defined
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/GD/Text/.packlist
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"

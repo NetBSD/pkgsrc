@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.7 2000/03/05 07:35:18 kim Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/08/27 07:11:16 jlam Exp $
 bin/mrtg
 bin/mrtgcfgmaker
 bin/mrtgcfgmaker_ip
 bin/mrtgindexmaker
 etc/mrtg/mrtg.conf.example
-lib/perl5/site_perl/BER.pm
-lib/perl5/site_perl/SNMP_Session.pm
-lib/perl5/site_perl/SNMP_util.pm
-lib/perl5/site_perl/locales_mrtg.pm
+${PERL5_SITELIB}/BER.pm
+${PERL5_SITELIB}/SNMP_Session.pm
+${PERL5_SITELIB}/SNMP_util.pm
+${PERL5_SITELIB}/locales_mrtg.pm
 libexec/netstat2mrtg
 libexec/rateup
 libexec/sys2mrtg

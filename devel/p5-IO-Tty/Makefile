@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/16 17:12:18 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/27 07:11:06 jlam Exp $
 
 DISTNAME=	IO-Tty-0.03
 PKGNAME=	p5-${DISTNAME:C/T/t/}
@@ -7,9 +7,10 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
 MAINTAINER=	packages@netbsd.org
 
-USE_PERL5=	YES
+USE_PERL5=	# defined
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/IO/Tty/.packlist
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"

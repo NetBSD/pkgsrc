@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/18 22:46:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/27 07:11:13 jlam Exp $
 
 DISTNAME=		ImageMagick-5.2.2
 PKGNAME=		p5-PerlMagick-5.2.2
@@ -25,22 +25,23 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/PerlMagick
 
 #EXTRACT_AFTER_ARGS+=	${WRKSRC}
 
-USE_LIBTOOL=		yes
+USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-USE_PERL5=		yes
-GNU_CONFIGURE=		yes
 
-PERL5_BIN=		${LOCALBASE}/bin/perl
+USE_PERL5=		# defined
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Image/Magick/.packlist
+
+GNU_CONFIGURE=		yes
 
 # These need to coordinate with the ImageMagick package.
 # Just leave out "--without-perl".
 
-CONFIGURE_ARGS+=	--with-perl=${PERL5_BIN} \
+CONFIGURE_ARGS+=	--with-perl=${PERL5} \
 			--without-dps --without-fpx \
 			--without-hdf --without-jbig --without-threads \
 			--without-ttf --without-xml
 
 post-configure:
-	cd ${WRKSRC} && ${PERL5_BIN} Makefile.PL
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"

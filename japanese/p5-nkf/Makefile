@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/10/11 06:23:43 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/27 07:11:13 jlam Exp $
 #
 
 DISTNAME=	nkf-1.7
@@ -8,10 +8,12 @@ MASTER_SITES=	ftp://ftp.sra.co.jp/pub/cmd/nkf/
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 
-USE_PERL5=	yes
+USE_PERL5=	# defined
+PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/NKF/.packlist
+
 WRKSRC=		${WRKDIR}/${DISTNAME}/NKF
 
 do-configure:
-	@cd ${WRKSRC} && perl Makefile.PL
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"
