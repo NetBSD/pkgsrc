@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1540.2.1 2004/11/22 22:48:04 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1540.2.2 2004/11/23 15:35:20 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1447,10 +1447,13 @@ _REAL_TARGETS.su-install+=	check-shlibs
 # Recursive invocation support
 ############################################################################
 
+# explicit "-f Makefile" here to work around problems with the MAKEFILE var
+# and case-insensitive filesystems (see PR pkg/28392)
+#
 .for targ in ${_PKG_PHASES_ALL}
 .PHONY: recurse-${targ}
 recurse-${targ}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${PKGDIR} && ${MAKE} ${targ}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${PKGDIR} && ${MAKE} -f Makefile ${targ}
 .endfor
 
 # Find out the PREFIX of dependencies where the PREFIX is needed at build time.
