@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/25 19:02:27 jtb Exp $
+
+--- src/Makefile.orig	Sun Nov  5 19:13:31 2000
++++ src/Makefile
+@@ -32,7 +32,7 @@
+ # explicit linking of JPEG lib is needed as Imlib loads format libs
+ # dynamically (IIRC)
+ xzgv: $(OBJS)
+-	$(CC) $(CFLAGS) -o xzgv $(OBJS) `imlib-config --libs-gdk` -ljpeg -lpng
++	$(CC) $(CPPFLAGS) $(CFLAGS) -o xzgv $(OBJS) `imlib-config --libs-gdk` $(LDFLAGS) -ljpeg -lpng
+ 
+ logoconv: logoconv.o
+ 	$(CC) $(CFLAGS) -o logoconv logoconv.o
