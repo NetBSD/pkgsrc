@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2000/10/02 19:27:54 he Exp $
+$NetBSD: patch-ae,v 1.2 2000/10/13 18:59:31 jwise Exp $
 
 --- tnmUnixSocket.c.orig	Wed Sep 18 23:37:21 1996
 +++ tnmUnixSocket.c	Mon Oct  2 21:07:45 2000
@@ -16,7 +16,7 @@ $NetBSD: patch-ae,v 1.1 2000/10/02 19:27:54 he Exp $
  {
      int s = socket(domain, type, protocol);
 -    return (s < 0) ? TNM_SOCKET_ERROR : s;
-+    return (s < 0) {
++    if (s < 0) {
 +	return TNM_SOCKET_ERROR;
 +    }
 +#ifdef O_NONBLOCK
