@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/03/26 02:27:54 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/02 12:18:09 jmmv Exp $
 
 DISTNAME=		gtop-1.0.13
 PKGREVISION=		8
@@ -24,6 +24,6 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ENV+=		LOCALEDIR=${PKGLOCALEDIR}
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libgtop/buildlink2.mk"
+.include "../../sysutils/libgtop/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

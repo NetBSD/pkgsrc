@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2004/03/26 02:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2004/04/02 12:18:09 jmmv Exp $
 #
 
 DISTNAME=		gnome-applets-1.4.0.4
@@ -26,7 +26,7 @@ BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 
+.include "../../sysutils/libgtop/buildlink2.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
-.include "../../devel/libgtop/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
