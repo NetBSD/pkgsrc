@@ -1,0 +1,32 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/09/17 00:48:27 hubertf Exp $
+
+--- Makefile.in.orig	Wed Feb 11 06:37:20 1998
++++ Makefile.in	Fri Sep 17 02:30:10 1999
+@@ -14,7 +14,8 @@
+ DEFINES = -DOS_@OS_TYPE@ -DARCH_@ARCH_TYPE@
+ CFLAGS = @CFLAGS@ ${DEFINES} ${DEBUG} ${BACK}
+ LDFLAGS = @LDFLAGS@
+-INSTALL= @INSTALL@
++INSTALL= @INSTALL@ -s
++DESTDIR= ${PREFIX}/bin
+ 
+ #
+ # uncomment both of these if you want profiling support
+@@ -37,7 +38,7 @@
+ 	id3.o id3Data.o QLayer.o mid3.o mid3Data.o pixmaps/pixmaps.o \
+ 	backs/backs.o
+ 	
+-LIBS = @QT_LDFLAGS@ -lm -lqt
++LIBS = @QT_LDFLAGS@ -lm -lqt -Wl,-rpath,$(X11BASE)/lib -lX11 -lXext
+ 
+ all: xamp
+ 
+@@ -59,7 +60,7 @@
+ 	cd pixmaps ; make
+ 
+ xamp: images $(OBJ) 
+-	$(CC) -o xamp $(OBJ) $(LDFLAGS) $(LIBS) 
++	$(CXX) -o xamp $(OBJ) $(LDFLAGS) $(LIBS) -lossaudio
+ 	
+ install:
+ 	$(INSTALL) -m 755 xamp $(DESTDIR)
