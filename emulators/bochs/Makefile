@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/02/17 18:38:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/05/15 20:20:07 fredb Exp $
 
 DISTNAME=		bochs-2000_0325a
 PKGNAME=		bochs-2000.03.25a
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		ftp://bochs.com/bochs/
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://www.bochs.com/
+HOMEPAGE=		http://bochs.sourceforge.net/
 COMMENT=		I386 machine emulator capable of running dos/windows
 
 GNU_CONFIGURE=		yes
