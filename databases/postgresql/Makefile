@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2000/12/11 16:43:11 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2000/12/11 20:18:56 jlam Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
@@ -48,6 +48,16 @@ ADDGROUP=		${LOCALBASE}/sbin/groupadd
 ADDUSER=		useradd
 ADDGROUP=		groupadd
 .endif
+
+post-build:
+	${SED}	-e 's|@PATH@|${PATH}|g' \
+		-e 's|@MANPATH@|${MANPATH}|g' \
+		-e 's|@PREFIX@|${PREFIX}|g' \
+		< ${FILESDIR}/profile.pgsql > ${WRKDIR}/profile.pgsql
+	${SED}	-e "s|@PREFIX@|${PREFIX}|g" \
+		-e "s|@PGUSER@|${PGUSER}|g" \
+		-e "s|@SU@|${SU}|g" \
+		< ${FILESDIR}/pgsql.sh > ${WRKDIR}/pgsql.sh
 
 pre-install:
 	@case "X${PGUSER}" in						\
@@ -100,17 +110,10 @@ post-install:
 .for PROG in ecpg pg_dump pg_encoding pg_id pg_passwd pg_version postgres psql
 	strip ${PREFIX}/bin/${PROG}
 .endfor
-	${SED}	-e 's|@PATH@|${PATH}|g' \
-		-e 's|@MANPATH@|${MANPATH}|g' \
-		-e 's|@PREFIX@|${PREFIX}|g' \
-		< ${FILESDIR}/profile.pgsql > ${WRKDIR}/profile.pgsql
 	${INSTALL_DATA} ${WRKDIR}/profile.pgsql ${PGHOME}/.profile.pgsql
 	${INSTALL_DATA} ${FILESDIR}/post-install-notes ${PGHOME}
 	${CHOWN} -R ${PGUSER}:${PGGROUP} ${PGHOME}
 
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g" \
-		-e "s|@PGUSER@|${PGUSER}|g" \
-		< ${FILESDIR}/pgsql.sh.tmpl > ${WRKDIR}/pgsql.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/pgsql.sh ${PREFIX}/etc/rc.d/pgsql
 
 	${CAT} ${FILESDIR}/exclude ${FILESDIR}/man.tcl ${FILESDIR}/man.tk \
