@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/10/28 19:50:19 kim Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/10/07 19:24:16 kim Exp $
 sbin/irr_check
 sbin/irr_notify
 sbin/irr_rpsl_submit
-sbin/irr_submit
 sbin/irrd
+sbin/irrdcacher
+sbin/ripe2rpsl
+sbin/update_source

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2000/10/01 03:25:03 kim Exp $
+# $NetBSD: Makefile,v 1.9 2000/10/07 19:24:13 kim Exp $
 #
 
-DISTNAME=	irrd-1.5-beta-Sept-24-1999
-PKGNAME=	irrd-1.5-beta-19990924
+DISTNAME=	irrd2.0a-Aug22-2000
+PKGNAME=	irrd-2.0.0.20000822
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.merit.edu/radb/irrd/source/ \
 		ftp://ftp.merit.edu/radb/irrd/source/old_releases/
@@ -10,28 +10,49 @@ MASTER_SITES=	ftp://ftp.merit.edu/radb/irrd/source/ \
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.irrd.net/
 
+DEPENDS+=	gdbm-*:../../databases/gdbm
+DEPENDS+=	pgp5-*:../../security/pgp5
+DEPENDS+=	wget-*:../../net/wget
+
+USE_PERL5=	# defined
+
 BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=	bison:../../devel/bison
 
-WRKSRC=		${WRKDIR}/irrd-1.5
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --without-gdbm --with-db1
-CONFIGURE_ARGS+= --disable-thread
+CONFIGURE_ARGS+=--with-gdbm
+CONFIGURE_ARGS+=--disable-thread
 CONFIGURE_ENV+=	YACC=bison
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
+
+CPPFLAGS+=	-I${LOCALBASE}/include
+CFLAGS+=	-g
 
 pre-configure:
 	@(cd ${WRKSRC} && autoreconf)
 
-.include "../../mk/bsd.prefs.mk"
+IRRD_CACHER=	irrdcacher ripe2rpsl update_source
 
-.if defined(IRRD_USE_PGP) && ${IRRD_USE_PGP} == 5
-DEPENDS+=	pgp-5.*:../../security/pgp5
-.elif defined(IRRD_USE_PGP) && ${IRRD_USE_PGP} == 2
-DEPENDS+=	pgp-2.*:../../security/pgp2
-.else
-CONFIGURE_ARGS+= --without-pgp
-.endif
+post-build:
+	@cd ${WRKSRC}/programs/irrdcacher ; \
+	set -x ; \
+	for i in ${IRRD_CACHER} ; \
+	do \
+	    ${MV} $$i $$i.bak ; \
+	    ${SED} -e 's%/usr/local/bin/perl%${PERL5}%' < $$i.bak > $$i ; \
+	done
+
+post-install:
+	@cd ${WRKSRC}/programs/irrdcacher ; \
+	set -x ; \
+	for i in ${IRRD_CACHER} ; \
+	do \
+	    ${INSTALL_SCRIPT} $$i ${PREFIX}/sbin ; \
+	done
+
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
 # default
