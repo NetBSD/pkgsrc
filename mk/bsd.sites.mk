@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.6 2004/07/03 12:35:04 gavan Exp $
+# $NetBSD: bsd.sites.mk,v 1.7 2004/07/27 12:03:28 wiz Exp $
 #
 # Default MASTER_SITES
 
@@ -125,15 +125,17 @@ MASTER_SITE_SOURCEFORGE+=	\
 	http://keihanna.dl.sourceforge.net/sourceforge/ \
 	http://osdn.dl.sourceforge.net/sourceforge/ \
 	http://optusnet.dl.sourceforge.net/sourceforge/ \
+	http://ovh.dl.sourceforge.net/sourceforge/ \
+	http://puzzle.dl.sourceforge.net/sourceforge/ \
 	http://switch.dl.sourceforge.net/sourceforge/ \
 	http://telia.dl.sourceforge.net/sourceforge/ \
-	http://twtelecom.dl.sourceforge.net/sourceforge/ \
 	http://umn.dl.sourceforge.net/sourceforge/ \
 	http://unc.dl.sourceforge.net/sourceforge/ \
 	http://voxel.dl.sourceforge.net/sourceforge/ \
 	ftp://ftp3.sourceforge.net/pub/sourceforge/ \
 	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 #	http://flow.dl.sourceforge.net/sourceforge/
+#	http://twtelecom.dl.sourceforge.net/sourceforge/
 
 MASTER_SITE_SUSE+=	\
 	http://altruistic.lbl.gov/mirrors/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
