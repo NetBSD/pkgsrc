@@ -1,0 +1,17 @@
+$NetBSD: patch-ah,v 1.1 2003/09/23 19:26:02 tron Exp $
+
+--- ddd/sigName.C.orig	Sat May 24 17:27:12 2003
++++ ddd/sigName.C	Tue Sep 23 21:10:37 2003
+@@ -43,6 +43,12 @@
+ #include "strclass.h"
+ #include "sigName.h"
+ 
++#if HAVE_UNISTD_H
++extern "C" {
++#include <unistd.h>
++}
++#endif
++
+ #if HAVE_STRSIGNAL && !HAVE_STRSIGNAL_DECL
+ extern "C" const char *strsignal(int signo);
+ #endif
