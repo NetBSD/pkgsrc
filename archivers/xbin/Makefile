@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/02/08 04:03:15 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/03/11 18:03:50 xtraeme Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
@@ -15,7 +15,7 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	# defined
 
 PRGNAME=	xbin
 EXTRACT_ONLY=	# empty

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:07:06 agc Exp $
+# $NetBSD: Makefile,v 1.8 2004/03/11 18:03:50 xtraeme Exp $
 #
 
 DISTNAME=	jamjar-0.6
@@ -12,7 +12,7 @@ COMMENT=	Acunia version of the jar archiver
 BUILD_DEPENDS+=	acunia-jam>=1.0:../../devel/acunia-jam
 
 WRKSRC=		${WRKDIR}/jamjar
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
 JAM_COMMAND=	\
 	cd ${WRKSRC} &&							\
@@ -27,5 +27,5 @@ do-build:
 do-install:
 	${JAM_COMMAND} install
 
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/10/20 09:37:24 agc Exp $
+# $NetBSD: Makefile,v 1.20 2004/03/11 18:03:49 xtraeme Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Allow packing and unpacking of shell archives
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
@@ -33,5 +33,5 @@ BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 post-patch:
 	@${TOUCH} ${TOUCH_FLAGS} ${WRKSRC}/po/sharutils.pot
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
