@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2003/10/04 19:34:46 agc Exp $
+# $NetBSD: Makefile,v 1.61 2004/01/26 11:32:06 jmmv Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -35,6 +35,7 @@ SUBDIR += math
 SUBDIR += mbone
 SUBDIR += meta-pkgs
 SUBDIR += misc
+SUBDIR += multimedia
 SUBDIR += net
 SUBDIR += news
 SUBDIR += parallel
