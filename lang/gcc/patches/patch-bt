@@ -1,8 +1,19 @@
-$NetBSD: patch-bt,v 1.1 2002/01/03 20:40:48 tron Exp $
+$NetBSD: patch-bt,v 1.2 2002/03/28 10:11:54 jmc Exp $
 
---- ../gcc-2.95.3/gcc/configure.in.orig	Thu Jan 25 15:03:02 2001
-+++ ../gcc-2.95.3/gcc/configure.in	Thu Jan  3 20:37:55 2002
-@@ -510,6 +510,9 @@
+--- ../gcc-2.95.3/gcc/configure.in.orig 2001/04/23 11:58:07 1.1.1.2
++++ ../gcc-2.95.3/gcc/configure.in 2002/03/24 18:05:57 1.18
+@@ -498,7 +498,9 @@
+ 	hppa*-*-*)
+ 		cpu_type=pa
+ 		;;
+-	m68000-*-*)
++changequote(,)dnl
++	m680[01]0-*-*)
++changequote([,])dnl
+ 		cpu_type=m68k
+ 		;;
+ 	mips*-*-*)
+@@ -510,6 +512,9 @@
  	pyramid-*-*)
  		cpu_type=pyr
  		;;
@@ -12,7 +23,7 @@ $NetBSD: patch-bt,v 1.1 2002/01/03 20:40:48 tron Exp $
  	sparc*-*-*)
  		cpu_type=sparc
  		;;
-@@ -518,11 +521,20 @@
+@@ -518,11 +523,20 @@
  	tm_file=${cpu_type}/${cpu_type}.h
  	xm_file=${cpu_type}/xm-${cpu_type}.h
  	
@@ -34,7 +45,7 @@ $NetBSD: patch-bt,v 1.1 2002/01/03 20:40:48 tron Exp $
  	*-*-openbsd*)
  		tm_file=${cpu_type}/openbsd.h
  		tmake_file="t-libc-ok t-openbsd"
-@@ -626,20 +638,15 @@
+@@ -626,20 +640,15 @@
   		fi
  		;;
  	alpha*-*-netbsd*)
@@ -56,23 +67,24 @@ $NetBSD: patch-bt,v 1.1 2002/01/03 20:40:48 tron Exp $
  	alpha*-dec-osf*)
  		if test x$stabs = xyes
  		then
-@@ -742,11 +749,11 @@
+@@ -742,11 +751,12 @@
  		tm_file=arm/semiaof.h
  		tmake_file=arm/t-semiaof
  		;;
-+	arm*-*-netbsdelf*)
-+		gas=yes gnu_ld=yes
-+		;;
- 	arm*-*-netbsd*)
+-	arm*-*-netbsd*)
 -		tm_file=arm/netbsd.h
--		xm_file="arm/xm-netbsd.h ${xm_file}"
++	arm*-*-netbsdelf*)
+ 		xm_file="arm/xm-netbsd.h ${xm_file}"
 -		tmake_file="t-netbsd arm/t-netbsd"
 -       use_collect2=yes
++		gas=yes gnu_ld=yes
++		;;
++	arm*-*-netbsd*)
 +		gas=yes
  		;;
  	arm*-*-linux-gnuaout*)		# ARM GNU/Linux with a.out
  		cpu_type=arm
-@@ -1171,11 +1178,13 @@
+@@ -1171,11 +1181,13 @@
  		tmake_file=t-freebsd
  		;;
  changequote(,)dnl
@@ -89,24 +101,33 @@ $NetBSD: patch-bt,v 1.1 2002/01/03 20:40:48 tron Exp $
  		;;
  changequote(,)dnl
  	i[34567]86-*-openbsd*)
-@@ -2044,11 +2053,12 @@
+@@ -2043,12 +2055,21 @@
+ 		tmake_file=m68k/t-lynx
  		extra_headers=math-68881.h
  		float_format=m68k
++		;;
++	m68*-*-netbsdelf*)
++		case $machine in
++		  m68010-*)
++		    target_cpu_default="0"
++		    ;;
++		  *)
++		    target_cpu_default="MASK_68020|MASK_68881|MASK_BITFIELD"
++		    ;;
++		esac
++		float_format=m68k
++		gas=yes gnu_ld=yes
  		;;
 -	m68k*-*-netbsd*)
 -		tm_file=m68k/netbsd.h
 -		tmake_file=t-netbsd
-+	m68*-*-netbsdelf*)
-+		float_format=m68k
-+		gas=yes gnu_ld=yes
-+		;;
 +	m68*-*-netbsd*)
  		float_format=m68k
 -       use_collect2=yes
  		;;
  	m68k*-*-openbsd*)
  		float_format=m68k
-@@ -2363,10 +2373,12 @@
+@@ -2363,10 +2384,12 @@
  			use_collect2=yes
  	      fi
  	      ;;
@@ -123,7 +144,7 @@ $NetBSD: patch-bt,v 1.1 2002/01/03 20:40:48 tron Exp $
  		;;
         mips*-*-linux*)                         # Linux MIPS, either endian.
  		xmake_file=x-linux
-@@ -2724,11 +2736,6 @@
+@@ -2724,11 +2747,6 @@
  		use_collect2=yes
  		;;
  	ns32k-*-netbsd*)
@@ -135,7 +156,7 @@ $NetBSD: patch-bt,v 1.1 2002/01/03 20:40:48 tron Exp $
  		;;
          pdp11-*-bsd)
  		tm_file="${tm_file} pdp11/2bsd.h"
-@@ -2753,6 +2760,10 @@
+@@ -2753,6 +2771,10 @@
  	romp-*-openbsd*)
  		# Nothing special
  		;;
@@ -146,7 +167,7 @@ $NetBSD: patch-bt,v 1.1 2002/01/03 20:40:48 tron Exp $
  	powerpc-*-openbsd*)
  		tmake_file="${tmake_file} rs6000/t-rs6000 rs6000/t-openbsd"
  		;;
-@@ -3005,6 +3016,13 @@
+@@ -3005,6 +3027,13 @@
  		tm_file=sh/elf.h
  		float_format=sh
  		;;
@@ -160,7 +181,7 @@ $NetBSD: patch-bt,v 1.1 2002/01/03 20:40:48 tron Exp $
  	sh-*-rtemself*)
  		tmake_file="sh/t-sh t-rtems"
  		tm_file=sh/rtemself.h
-@@ -3033,10 +3051,12 @@
+@@ -3033,10 +3062,12 @@
  		tmake_file=sparc/t-sparcbare
  		tm_file="sparc/aout.h libgloss.h"
  		;;
@@ -176,7 +197,7 @@ $NetBSD: patch-bt,v 1.1 2002/01/03 20:40:48 tron Exp $
  		;;
  	sparc-*-openbsd*)
  		# we need collect2 until our bug is fixed...
-@@ -3228,6 +3248,11 @@
+@@ -3228,6 +3259,11 @@
  		extra_parts="crtbegin.o crtbeginS.o crtend.o crtendS.o"
  		gnu_ld=yes
  		;;
@@ -188,7 +209,7 @@ $NetBSD: patch-bt,v 1.1 2002/01/03 20:40:48 tron Exp $
  # This hasn't been upgraded to GCC 2.
  #	tahoe-harris-*)			# Harris tahoe, using COFF.
  #		tm_file=tahoe/harris.h
-@@ -3275,10 +3300,8 @@
+@@ -3275,10 +3311,8 @@
  		float_format=vax
  		;;
  	vax-*-netbsd*)
@@ -200,16 +221,27 @@ $NetBSD: patch-bt,v 1.1 2002/01/03 20:40:48 tron Exp $
  		;;
  	vax-*-openbsd*)
  		tmake_file="${tmake_file} vax/t-openbsd"
-@@ -3568,6 +3591,12 @@
-       enable_haifa=yes;;
+@@ -3569,6 +3603,12 @@
    esac
  fi
-+
+ 
 +case $target in
 +  alpha*|sparc64*)
 +    build_xm_file="${build_xm_file} xm-target64.h"
 +    host_xm_file="${host_xm_file} xm-target64.h";;
 +esac
- 
++
  # Handle cpp installation.
  if test x$enable_cpp != xno
+ then
+@@ -3655,8 +3695,8 @@
+ 	/*) realsrcdir=${srcdir};;
+ 	*) realsrcdir=../${srcdir};;
+ 	esac
+-	CC=${CC_FOR_BUILD} ${realsrcdir}/configure \
+-		--target=$target --host=$build --build=$build
++	CC=${CC_FOR_BUILD} LIBS= ${realsrcdir}/configure \
++		--target=$target --host=$build --build=$build || exit 1
+ 
+ 	# We just finished tests for the build machine, so rename
+ 	# the file auto-build.h in the gcc directory.
