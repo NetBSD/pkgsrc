@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/24 18:06:35 itojun Exp $
+bin/pedisassem
