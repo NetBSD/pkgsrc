@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/26 02:27:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/12 01:51:48 snj Exp $
 #
 
 DISTNAME=	adocman-0.10
@@ -13,7 +13,7 @@ COMMENT=	DocManager operation automation tool
 DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-Crypt-SSLeay>=0.47:../../security/p5-SSLeay
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_PERL5=	YES
 NO_BUILD=	YES
 
@@ -32,5 +32,5 @@ do-install:
 .endfor
 .undef f
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
