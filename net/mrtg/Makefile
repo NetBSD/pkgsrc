@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2003/12/16 19:59:20 martti Exp $
+# $NetBSD: Makefile,v 1.46 2003/12/17 14:22:48 martti Exp $
 
 DISTNAME=	mrtg-2.10.11
 PKGREVISION=	1
@@ -26,9 +26,6 @@ MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 COMMENT=	The Multi-Router Traffic Grapher
-
-DEPENDS+=	p5-Socket6>=0.12:../../net/p5-Socket6
-DEPENDS+=	p5-INET6>=2.00:../../net/p5-INET6
 
 USE_BUILDLINK2=	YES
 USE_PERL5=	YES
@@ -92,4 +89,5 @@ do-install:
 
 .include "../../graphics/freetype-lib/buildlink2.mk"
 .include "../../graphics/gd/buildlink2.mk"
+.include "../../net/p5-INET6/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
