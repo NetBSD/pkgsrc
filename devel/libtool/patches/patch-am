@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.4 2002/08/25 18:38:36 jlam Exp $
+$NetBSD: patch-am,v 1.5 2003/01/31 20:33:52 skrll Exp $
 
---- ltcf-c.sh.orig	Wed Apr 25 00:05:02 2001
+--- ltcf-c.sh.orig	2001-04-25 04:05:02.000000000 +0000
 +++ ltcf-c.sh
-@@ -173,16 +173,6 @@
+@@ -173,23 +173,13 @@ EOF
        $CC $output_objdir/$soname-exp '$lt_cv_cc_dll_switch' -Wl,-e,'$dll_entry' -o $output_objdir/$soname '$ltdll_obj'$libobjs $deplibs $compiler_flags'
      ;;
  
@@ -19,7 +19,16 @@ $NetBSD: patch-am,v 1.4 2002/08/25 18:38:36 jlam Exp $
    netbsd*)
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
        archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -379,6 +369,23 @@
+       wlarc=
+     else
+-      archive_cmds='$CC -shared -nodefaultlibs $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
+-      archive_expsym_cmds='$CC -shared -nodefaultlibs $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
++      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname -o $lib'
++      archive_expsym_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname $wl$soname ${wl}-retain-symbols-file $wl$export_symbols -o $lib'
+     fi
+     ;;
+ 
+@@ -379,6 +369,23 @@ else
      fix_srcfile_path='`cygpath -w "$srcfile"`'
      ;;
  
@@ -43,7 +52,7 @@ $NetBSD: patch-am,v 1.4 2002/08/25 18:38:36 jlam Exp $
    freebsd1*)
      ld_shlibs=no
      ;;
-@@ -644,7 +651,7 @@
+@@ -644,7 +651,7 @@ else
      darwin* | rhapsody*)
        # PIC is the default on this platform
        # Common symbols not allowed in MH_DYLIB files
