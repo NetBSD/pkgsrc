@@ -1,4 +1,4 @@
-# $NetBSD: kde3.mk,v 1.3 2004/09/19 04:17:22 markd Exp $
+# $NetBSD: kde3.mk,v 1.4 2004/12/10 05:59:50 markd Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -37,10 +37,8 @@
 .if !defined(KDE3_MK)
 KDE3_MK=	# defined
 
-# All KDE3 packages satisfy the requirements for USE_X11BASE.  This also
-# forces all KDE3 packages to have a common installation prefix.
-#
 USE_X11=		YES
+USE_PKGLOCALEDIR=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -72,11 +70,7 @@ CONFIGURE_ENV+=		kde_confdir="${KDEDIR}/share/kde/config"
 CONFIGURE_ENV+=		kde_datadir="${KDEDIR}/share/kde/apps"
 CONFIGURE_ENV+=		kde_htmldir="${KDEDIR}/share/doc/kde/HTML"
 CONFIGURE_ENV+=		kde_icondir="${KDEDIR}/share/kde/icons"
-.if defined(USE_PKGLOCALEDIR) && !empty(USE_PKGLOCALEDIR:M[Yy][Ee][Ss])
 CONFIGURE_ENV+=		kde_locale="${KDEDIR}/${PKGLOCALEDIR}/locale"
-.else
-CONFIGURE_ENV+=		kde_locale="${KDEDIR}/share/kde/locale"
-.endif
 CONFIGURE_ENV+=		kde_mimedir="${KDEDIR}/share/kde/mimelnk"
 CONFIGURE_ENV+=		kde_servicesdir="${KDEDIR}/share/kde/services"
 CONFIGURE_ENV+=		kde_servicetypesdir="${KDEDIR}/share/kde/servicetypes"
