@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/11/12 12:27:56 martti Exp $
+# $NetBSD: Makefile,v 1.30 2002/12/10 19:06:13 drochner Exp $
 
 DISTNAME=		xfce-3.8.18
 CATEGORIES=		x11
@@ -14,7 +14,7 @@ USE_BUILDLINK2=		# defined
 USE_X11BASE=		# defined
 
 USE_LIBTOOL=		# defined
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 USE_GMAKE=		# defined
 GNU_CONFIGURE=		# defined
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--disable-libiconv
 CONFIGURE_ARGS+=	--disable-audiofile
 
 # work around bug in configure script
-CONFIGURE_ENV+=		gt_cv_func_gettext_libintl="yes"
+#CONFIGURE_ENV+=		gt_cv_func_gettext_libintl="yes"
 
 CPPFLAGS+=		-I${X11BASE}/include	# dependent includes for xpm.h
 
