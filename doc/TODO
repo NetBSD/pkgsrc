@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.695 2003/07/12 00:37:08 zuntum Exp $
+$NetBSD: TODO,v 1.696 2003/07/12 01:12:25 zuntum Exp $
 
 Suggested new packages
 ======================
@@ -208,7 +208,6 @@ Suggested package updates
 	o openoffice-1.0.3.1 [skrll]
 	o openssl-0.9.7b
 	o oss-3.9.7k
-	o p0f-1.8.3 [zuntum]
 	o p5-Net-SNMP-4.1.0 [pkg/21782]
 	o p5-XML-LibXML-1.54
 	o pcre-4.3
