@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.9 2004/04/20 13:19:56 markd Exp $
+$NetBSD: patch-ao,v 1.10 2004/05/05 23:56:08 markd Exp $
 
 --- configure.orig	2004-04-06 02:55:31.000000000 +1200
 +++ configure
@@ -75,3 +75,11 @@ $NetBSD: patch-ao,v 1.9 2004/04/20 13:19:56 markd Exp $
  # darwin needs this to initialize the environment
  
  for ac_header in crt_externs.h
+@@ -32333,6 +32267,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
+ 
++#include <sys/param.h>
+ #include <sys/mount.h>
+ 
+ 
