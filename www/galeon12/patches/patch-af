@@ -1,0 +1,30 @@
+$NetBSD: patch-af,v 1.1 2005/01/16 05:23:59 taya Exp $
+
+diff -ru ../Orig/galeon-1.2.14/src/mozilla/GlobalHistory.cpp ./src/mozilla/GlobalHistory.cpp
+--- ../Orig/galeon-1.2.14/src/mozilla/GlobalHistory.cpp	2004-03-30 16:42:47.000000000 +0900
++++ ./src/mozilla/GlobalHistory.cpp	2005-01-16 14:01:52.000000000 +0900
+@@ -149,13 +149,13 @@
+ #endif
+ 
+ /* void removePage (in string aURL); */
+-NS_IMETHODIMP GlobalHistory::RemovePage(const char *aURL)
++NS_IMETHODIMP GlobalHistory::RemovePage(nsIURI *aURL)
+ {
+ 	return NS_ERROR_NOT_IMPLEMENTED;
+ }
+ 
+ /* void removePagesFromHost (in string aHost, in boolean aEntireDomain); */
+-NS_IMETHODIMP GlobalHistory::RemovePagesFromHost(const char *aHost, 
++NS_IMETHODIMP GlobalHistory::RemovePagesFromHost(const nsACString& aHost, 
+ 						 PRBool aEntireDomain)
+ {
+ 	return NS_ERROR_NOT_IMPLEMENTED;
+@@ -226,7 +226,7 @@
+ #endif
+ 
+ /* void markPageAsTyped (in string url); */
+-NS_IMETHODIMP GlobalHistory::MarkPageAsTyped(const char *url)
++NS_IMETHODIMP GlobalHistory::MarkPageAsTyped(nsIURI *url)
+ {
+     return NS_ERROR_NOT_IMPLEMENTED;
+ }
