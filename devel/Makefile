@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2001/06/05 12:27:48 zuntum Exp $
+# $NetBSD: Makefile,v 1.215 2001/06/07 10:29:59 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -26,6 +26,7 @@ SUBDIR+=	cervisia
 SUBDIR+=	cfitsio
 SUBDIR+=	chkpt
 SUBDIR+=	cmdline
+SUBDIR+=	cpuflags
 SUBDIR+=	cscope
 SUBDIR+=	cvs
 SUBDIR+=	cvs2cl
