@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.6 1999/04/23 19:55:56 mycroft Exp $
+$NetBSD: patch-aa,v 1.7 2000/06/12 18:40:55 rh Exp $
 
---- Makefile.orig	Sat Jul 25 21:05:46 1998
-+++ Makefile	Wed Apr 14 22:34:08 1999
+--- Makefile.orig	Tue Apr 25 17:42:32 2000
++++ Makefile	Mon Jun 12 20:21:05 2000
 @@ -22,10 +22,10 @@
- #
+ # enochw@scn.org Oct 99: flags for UWIN 2.0 (Unix for Windows)
  
  # Where to install things for Linux sites (FSSTND)
 -BINDIR	= /usr/bin
@@ -22,10 +22,10 @@ $NetBSD: patch-aa,v 1.6 1999/04/23 19:55:56 mycroft Exp $
  # MANDIR = /usr/local/man/man1
  
 +# Where to install things for NetBSD sites.
-+BINDIR	= $(PREFIX)/bin
-+LIBDIR	= $(PREFIX)/etc/minicom
-+DOCDIR	= $(PREFIX)/share/doc/minicom
-+MANDIR	= $(PREFIX)/man/man1
++BINDIR	= ${PREFIX}/bin
++LIBDIR	= ${PREFIX}/etc/minicom
++DOCDIR	= ${PREFIX}/share/doc/minicom
++MANDIR	= ${PREFIX}/man/man1
 +
  # Where to install things for "normal" sites.
  # BINDIR	= /usr/local/bin
@@ -47,10 +47,11 @@ $NetBSD: patch-aa,v 1.6 1999/04/23 19:55:56 mycroft Exp $
  
  # Take these compilation flags for FreeBSD.
  #FLAGS	= -Wall -D_POSIX -D_BSD43 -D_SELECT -D_DCDFLOW
-@@ -153,6 +159,14 @@
+@@ -173,6 +179,14 @@
+ #LFLAGS	= -s
  #PROGS	= minicom runscript ascii-xfr keyserv
  #LIBS	=
- 
++
 +# Take these compilation flags for NetBSD.
 +FLAGS	= -Wall -D_POSIX -D_BSD43 -D_SELECT -D_DCDFLOW -I$(PREFIX)/include -DBINDIR=\"$(BINDIR)\"
 +PROGS	= minicom runscript ascii-xfr
@@ -58,38 +59,6 @@ $NetBSD: patch-aa,v 1.6 1999/04/23 19:55:56 mycroft Exp $
 +INTL	= -Wl,-R$(PREFIX)/lib -L$(PREFIX)/lib -lintl
 +LIBS	= $(INTL) -lcurses -ltermcap
 +CC	= cc
-+
+ 
  # Nothing should have to change beneath this line
  
- SRCS	= minicom.c vt100.c config.c help.c updown.c \
-@@ -188,13 +202,13 @@
- 		$(CC) $(LFLAGS) -o minicom $(MOBJS) $(LIBS)
- 
- po: dummy
--		make -C po
-+		${MAKE} -C po
- 
- keyserv:	$(KOBJS)
- 		$(CC) -o keyserv $(LFLAGS) $(KOBJS) $(LIBS)
- 
- runscript:	$(SOBJS)
--		$(CC) -o runscript $(LFLAGS) $(SOBJS)
-+		$(CC) -o runscript $(LFLAGS) $(SOBJS) $(INTL)
- 
- ascii-xfr:	ascii-xfr.o
- 		$(CC) -s -o ascii-xfr $(LFLAGS) ascii-xfr.o
-@@ -241,12 +255,12 @@
- dummy:
- 
- install:	$(PROGS)
--		make -C po install R=$(R)
-+		${MAKE} -C po install R=$(R)
- 		sh install.sh $(R)$(LIBDIR) $(R)$(BINDIR) $(R)$(MANDIR) $(R)$(DOCDIR)
- 
- clobber:
- 		rm -f *.o *~ minicom keyserv runscript ascii-xfr
--		make -C po clean
-+		${MAKE} -C po clean
- 
- clean:		
- 		rm -f *.o

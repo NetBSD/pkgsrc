@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1999/04/14 21:13:24 tron Exp $
+$NetBSD: md5,v 1.4 2000/06/12 18:40:54 rh Exp $
 
-MD5 (minicom-1.82.1.src.tar.gz) = 67cddf3fc1857608edc2513be6fc58f2
+MD5 (minicom-1.83.1.src.tar.gz) = 54311e7ab398a87088eafbe5e7c09cad
