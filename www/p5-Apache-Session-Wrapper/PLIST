@@ -1,1 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/05 22:24:19 he Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/23 18:01:13 wiz Exp $
+${PERL5_SITELIB}/Apache/Session/Wrapper.pm
+lib/perl5/site_perl/man/man3/Apache::Session::Wrapper.3
