@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.2 1998/08/07 10:36:24 agc Exp $
+$NetBSD: patch-ah,v 1.3 2001/11/17 15:17:42 itohy Exp $
 
---- orig/xwave/src/graphics.c	Mon Nov 25 13:33:43 1996
-+++ src/graphics.c	Sat Sep 13 04:28:37 1997
+--- src/graphics.c.orig	Thu Aug 13 08:27:09 1998
++++ src/graphics.c	Sun Nov 18 00:06:53 2001
 @@ -30,7 +30,7 @@
  
  #ifdef linux
@@ -11,3 +11,13 @@ $NetBSD: patch-ah,v 1.2 1998/08/07 10:36:24 agc Exp $
  #include <machine/endian.h>
  #elif defined (sgi)
  #include <sys/endian.h>
+@@ -2064,6 +2064,9 @@
+ 	if (XPending(dpy)) {
+ 	    XPeekEvent(dpy,&pev);
+ 	    switch (pev.type) {
++	     default:
++		 XNextEvent(dpy,&pev);
++		 break;
+ 	     case MotionNotify: {
+ 		 XMotionEvent *ev;
+ 		 
