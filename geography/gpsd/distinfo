@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/07/26 23:31:56 wiz Exp $
+
+SHA1 (gpsd-1.07.tar.gz) = 00650bec2f516bee671cd21f8f2fdc6c2aea0902
+Size (gpsd-1.07.tar.gz) = 70930 bytes
+SHA1 (patch-aa) = dfe7bbdddb9298f7ea2ac196c121b56233a951d2
