@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2003/12/08 21:13:56 recht Exp $
+$NetBSD: patch-ah,v 1.2 2004/01/26 12:10:24 grant Exp $
 
---- Makefile.pre.in.orig	2003-09-20 12:50:28.000000000 +0200
+--- Makefile.pre.in.orig	2003-11-19 06:54:00.000000000 +1100
 +++ Makefile.pre.in
 @@ -56,7 +56,7 @@ MAKESETUP=      $(srcdir)/Modules/makese
  OPT=		@OPT@
@@ -20,3 +20,12 @@ $NetBSD: patch-ah,v 1.1 2003/12/08 21:13:56 recht Exp $
  
  platform: $(BUILDPYTHON)
  	$(RUNSHARED) ./$(BUILDPYTHON) -E -c 'import sys ; from distutils.util import get_platform ; print get_platform()+"-"+sys.version[0:3]' >platform
+@@ -345,7 +345,7 @@ $(LIBRARY): $(LIBRARY_OBJS)
+ 
+ libpython$(VERSION).so: $(LIBRARY_OBJS)
+ 	if test $(INSTSONAME) != $(LDLIBRARY); then \
+-		$(LDSHARED) -Wl,-soname=$(INSTSONAME) -o $(INSTSONAME) $(LIBRARY_OBJS) $(SHLIBS) $(LIBC) $(LIBM); \
++		$(LDSHARED) -Wl,-h$(INSTSONAME) -o $(INSTSONAME) $(LIBRARY_OBJS) $(SHLIBS) $(LIBC) $(LIBM); \
+ 		$(LN) -f $(INSTSONAME) $@; \
+ 	else\
+ 		$(LDSHARED) -o $@ $(LIBRARY_OBJS) $(SHLIBS) $(LIBC) $(LIBM); \
