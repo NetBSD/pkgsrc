@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.3 2000/09/17 21:51:09 hubertf Exp $
+# $NetBSD: post-build,v 1.4 2000/12/26 16:45:57 dmcmahill Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -34,6 +34,7 @@ getconf("REPORT");		# "broken.html"
 getconf("USR_PKGSRC");		# "/usr/pkgsrc"
 getconf("osrev");	       	# `uname -r`
 getconf("arch"); 		# `uname -m`
+getconf("BROKENFILE");		# ".broken.file"
 chomp($date=`date`);
 
 $verbose=1;
@@ -51,7 +52,7 @@ system("mkdir -p ${FTP}");
 
 # Copy over the output from the build process
 chdir("$USR_PKGSRC");
-system("tar plcf - .broken* */*/.broken* | ( cd ${FTP} ; tar plxf - )");
+system("tar plcf - $BROKENFILE */*/$BROKENFILE | ( cd ${FTP} ; tar plxf - )");
 
 
 open(HTML,">$REPORT") or die;
@@ -83,11 +84,10 @@ EOHTML
 # some nifty postprocessing of $FTP/.broken* -> HTML here
 $nunpackaged = $nbroken = 0;
 chdir("$FTP");
-$bf=".broken.$arch";
-open(BF,"sort +1 $bf |") or die "can't open .broken-file '$bf'";
+open(BF,"sort +1 $BROKENFILE |") or die "can't open .broken-file '$BROKENFILE'";
 while (<BF>) {
-    ($nerrors, $bf) = split;
-    ( $pkg = $bf ) =~ s,/.broken.*$,,;
+    ($nerrors, $pkg) = split;
+    $pkg =~ s,/$BROKENFILE,,;
 
 #    next
 #	if $pkg!~/^a/; # DEBUG! HF
