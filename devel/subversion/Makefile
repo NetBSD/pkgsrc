@@ -1,41 +1,25 @@
-# $NetBSD: Makefile,v 1.10 2003/05/02 11:54:42 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.11 2003/05/25 09:31:28 epg Exp $
 
-DISTNAME=	subversion-0.20.1
-PKGREVISION=	1
-CATEGORIES=	devel
-MASTER_SITES=	http://subversion.tigris.org/files/documents/15/3440/
+PKGNAME=	subversion-${SVNVER}
+COMMENT=	Version control system, meta-package
 
-MAINTAINER=	joelw@unix.se
-HOMEPAGE=	http://subversion.tigris.org
-COMMENT=	Version control system, meant to replace CVS
+DEPENDS+=	subversion-base-${SVNVER}:../../devel/subversion-base
+DEPENDS+=	ap2-subversion-${SVNVER}:../../www/ap2-subversion
+# We depend on subversion-python via its buildlink2.mk so we don't
+# have to worry about which Python version it uses.
 
-BUILDLINK_DEPENDS.apache=	apache>=2.0.44
-# we need apr shared libs at runtime
-BUILDLINK_DEPMETHOD.apache=	full
+.include "Makefile.common"
 
-USE_BUILDLINK2=	YES
-USE_LIBTOOL=	YES
-GNU_CONFIGURE=	YES
+EXTRACT_ONLY=	# empty
+NO_CHECKSUM=	YES
+NO_CONFIGURE=	YES
+NO_BUILD=	YES
 
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+# The NO_PATCH macro is gone so we have to do this to prevent the
+# patches from being applied:
+do-patch:
 
-CONFIGURE_ARGS=		--with-ssl
-CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_PREFIX.db4}/include/db4:${LOCALBASE}
-CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_PREFIX.neon}
+do-install:
 
-PLIST_SUBST=	INSTALL_INFO=${INSTALL_INFO}
-INFO_FILES=	svn-design.info
-
-post-extract:
-	@${RM} -r ${WRKSRC}/neon
-	@${RM} -r ${WRKSRC}/apr
-	@${RM} -r ${WRKSRC}/apr-util
-
-.include "../../databases/db4/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
-.include "../../www/apache2/buildlink2.mk"
-.include "../../www/neon/buildlink2.mk"
-
-.include "../../mk/texinfo.mk"
+.include "../../devel/subversion-python/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.3 2003/05/25 09:31:30 epg Exp $
+
+--- Makefile.in.orig	Wed Apr 16 00:51:46 2003
++++ Makefile.in
+@@ -70,7 +70,8 @@ swig_py_libdir = @libdir@
+ swig_java_libdir = @libdir@
+ 
+ ### these possibly need further discussion
+-swig_pydir = @libdir@/svn-python/svn
++# XXX NetBSD: take swig_pydir from the environment
++#swig_pydir = @libdir@/svn-python/svn
+ swig_javadir = @libdir@/svn-java
+ 
+ ### should search for these...

@@ -1,0 +1,27 @@
+# $NetBSD: Makefile.common,v 1.1 2003/05/25 09:31:28 epg Exp $
+
+DISTNAME=		subversion-${SVNVER}
+CATEGORIES=		devel
+
+MAINTAINER=		epg@pretzelnet.org
+HOMEPAGE=		http://subversion.tigris.org/
+
+.include "../../devel/subversion/Makefile.version"
+
+SVNEXAMPLES=		${PREFIX}/share/examples/subversion
+SVNDOC=			${PREFIX}/share/doc/subversion
+
+DISTINFO_FILE=		${.CURDIR}/../../devel/subversion/distinfo
+COMMON_FILESDIR=	${.CURDIR}/../../devel/subversion/files
+PATCHDIR=		${.CURDIR}/../../devel/subversion/patches
+
+GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
+CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
+CONFIGURE_ARGS+=	--with-berkeley-db=${BUILDLINK_PREFIX.db4}/include/db4:${LOCALBASE}
+CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_PREFIX.neon}
+CONFIGURE_ARGS+=	--with-ssl
