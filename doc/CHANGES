@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2000 2003/04/21 18:36:18 mjl Exp $
+$NetBSD: CHANGES,v 1.2001 2003/04/21 23:32:16 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1684,3 +1684,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-Class-ReturnValue to 0.51 [mjl 2003-04-21]
 	Updated p5-DBIx-SearchBuilder to 0.80 [mjl 2003-04-21]
 	Updated p5-CGI to 2.91 [mjl 2003-04-21]
+	Updated url2pkg to 1.21 [rh 2003-04-22]
