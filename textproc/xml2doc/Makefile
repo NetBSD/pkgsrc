@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/23 08:39:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/29 13:04:00 minskim Exp $
 #
 
 DISTNAME=	xml2doc-20030510
-WRKSRC=         ${WRKDIR}/xml2doc
 CATEGORIES=	textproc
 MASTER_SITES=	http://xml2doc.sourceforge.net/src/
 EXTRACT_SUFX=	.tgz
@@ -11,6 +10,7 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://xml2doc.sourceforge.net/
 COMMENT=	Xml to document formats converter
 
+WRKSRC=			${WRKDIR}/xml2doc
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
