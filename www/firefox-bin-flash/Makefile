@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2004/02/10 12:51:51 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/04 04:26:43 snj Exp $
 
 DISTNAME=		install_flash_player_6_${DISTUNAME}
 PKGNAME=		firefox-bin-flash-${FLASH_VERS:S/r/./}
@@ -28,7 +28,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
