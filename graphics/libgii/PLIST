@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/02 12:03:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/20 22:37:08 wiz Exp $
 bin/mhub
 bin/xsendbut
 include/ggi/errors.h
@@ -62,6 +62,18 @@ lib/libgii.so
 lib/libgii.so.0
 lib/libgii.so.0.8
 man/man1/mhub.1
+man/man3/ggCleanupForceExit.3
+man/man3/ggExit.3
+man/man3/ggGetSwarType.3
+man/man3/ggGetUserDir.3
+man/man3/ggInit.3
+man/man3/ggLock.3
+man/man3/ggLockCreate.3
+man/man3/ggLockDestroy.3
+man/man3/ggRegisterCleanup.3
+man/man3/ggTryLock.3
+man/man3/ggUnlock.3
+man/man3/ggUnregisterCleanup.3
 man/man3/giiAddEventMask.3
 man/man3/giiClose.3
 man/man3/giiEventPoll.3
@@ -110,6 +122,7 @@ man/man7/input-linux-mouse.7
 man/man7/input-lk201.7
 man/man7/input-mouse.7
 man/man7/input-tcp.7
+man/man7/libgg.7
 man/man7/libgii.7
 share/examples/ggi/filter/keytrans
 share/examples/ggi/filter/mouse
