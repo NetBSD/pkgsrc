@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.7 2001/08/23 15:27:50 abs Exp $
+# $NetBSD: defs.Linux.mk,v 1.8 2001/08/23 16:54:09 abs Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -12,7 +12,7 @@ CMP?=		cmp
 CP?=		/bin/cp
 CUT?=		/bin/cut
 DC?=		/usr/bin/dc
-DIRNAME?=	/bin/dirname
+DIRNAME?=	/usr/bin/dirname
 ECHO?=		/bin/echo
 EGREP?=		/bin/egrep
 FALSE?=		/bin/false
