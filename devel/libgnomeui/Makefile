@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/02/09 18:47:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/11 02:12:36 xtraeme Exp $
 #
 
 DISTNAME=	libgnomeui-2.4.0.1
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS=		gnome2-dirs>=1.0:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_TOOLS+=		make
 USE_PERL5=		yes
@@ -37,12 +37,12 @@ post-configure:
 		${PKGCONFIG_BASE}.tmp
 	${MV} ${PKGCONFIG_BASE}.tmp ${PKGCONFIG_BASE}
 
-.include "../../audio/esound/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/GConf2/buildlink2.mk"
-.include "../../devel/libbonoboui/buildlink2.mk"
-.include "../../devel/libgnome/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/popt/buildlink2.mk"
-.include "../../graphics/libgnomecanvas/buildlink2.mk"
+.include "../../audio/esound/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/GConf2/buildlink3.mk"
+.include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
