@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 15:22:46 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/03/31 03:46:29 jmc Exp $
 
 SHA1 (glunix-release-1-0a.tar.gz) = 8c69f5252e00fc4143a088c9b555b5e0c5b350f8
 Size (glunix-release-1-0a.tar.gz) = 1777769 bytes
 SHA1 (makedepend.tar.gz) = 9bbe5fb63d44860114fe4cbc57dbd37cb22aa725
 Size (makedepend.tar.gz) = 29283 bytes
 SHA1 (patch-aa) = a4f4e284ba4a473bc37640e6d5d71441613e97ac
-SHA1 (patch-ab) = 62f9b405aec0a54a39e54da0743357dba5f52ee4
+SHA1 (patch-ab) = 3632ab83e21db22f113c9aeb3a07493076c65303
 SHA1 (patch-ac) = eaa45b9caf6ecec7cd0184c680dc68633120a2a8
 SHA1 (patch-ad) = b0f7cda045433941342731322e05514842e52f4c
 SHA1 (patch-ae) = 4f516f1e53b07105190d3f07495a7dd5c6888ac7
@@ -13,11 +13,11 @@ SHA1 (patch-af) = 5a1b33f647a228858e4e68a94b392e1e2d9b0696
 SHA1 (patch-ag) = 9f84ce0260db01001145d7ca58dcec441736deb1
 SHA1 (patch-ah) = ae0c9f0bbca261922677c0b132a064df059bc9cf
 SHA1 (patch-ai) = d42fa3494eb4c46c334cdd521a64b80e04374dde
-SHA1 (patch-aj) = 4719182688bceeecc0aa42b8e485069bb20cf0da
+SHA1 (patch-aj) = 515c00a86ea1eb8ed9eb402736b6f3270745fec3
 SHA1 (patch-ak) = c20e4c7eb3a93636d30eb06e222c7b3b3584e759
 SHA1 (patch-al) = 275dab35fbcb5a65e1479b95075f2295de961893
 SHA1 (patch-am) = 5640d04dccae4633384c2f04f5e96f15e9919a0f
-SHA1 (patch-an) = e668be1a71c6c2ed0182c2b9d551520644ca2922
+SHA1 (patch-an) = 94013f2f31f1f6687f7696fc90e3de3e0b568b14
 SHA1 (patch-ao) = 842e72bb67ed545429fe33580aab772a0b9247a5
 SHA1 (patch-ap) = d562609a3c3f6d6fe7ccac5eca86a548ad0ec0bf
 SHA1 (patch-aq) = 3f10b837c6b32c59029996f6c79ff07765c930a5
@@ -62,3 +62,4 @@ SHA1 (patch-cc) = 41ab0ad1725e4f3c5121094c392f1340cacf4410
 SHA1 (patch-cd) = 47a673f5e13051399aa2460b767c491774aa42b2
 SHA1 (patch-ce) = b6e1d47e1c1cb326a35808dae36645a6cddbc2fd
 SHA1 (patch-cf) = a1ed01f0ee10975c7be8a695d92c808d9f6bd9f2
+SHA1 (patch-cg) = ebc1351a979be92b44ca7c75f71f532833a437e4
