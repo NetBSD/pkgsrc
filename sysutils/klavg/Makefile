@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:53:39 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/11/14 09:20:13 wiz Exp $
 #
 
 DISTNAME=	klavg-1.1
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=		${WRKDIR}/klavg
 CATEGORIES=	kde sysutils
 MASTER_SITES=	ftp://ftp.crocodile.org/pub/
@@ -11,8 +11,9 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.crocodile.org/software.html
 COMMENT=	Xload for the KDE panel
 
-DEPENDS+=	kdebase-1.1.2nb3:../../x11/kdebase
+USE_BUILDLINK2=	yes
+USE_X11=	yes
+MAKE_ENV+=	KDEDIR=${BUILDLINK_PREFIX.kdebase}
 
-USE_X11BASE=	yes
-
+.include "../../x11/kdebase/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
