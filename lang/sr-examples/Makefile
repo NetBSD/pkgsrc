@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/02/26 18:26:04 is Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/26 22:42:23 is Exp $
 #
 
-DISTNAME=		vs232
-PKGNAME=		sr-examples-2.3.2
+DISTNAME=		vs233
+PKGNAME=		sr-examples-2.3.3
 CATEGORIES=		lang parallel
 MASTER_SITES=		ftp://ftp.cs.arizona.edu/sr/
 EXTRACT_SUFX=		.tar.Z
@@ -16,8 +16,8 @@ WRKSRC= ${WRKDIR}
 ONLY_FOR_PLATFORM=     NetBSD-*-*
 
 ### Use the second line below for installing if you want to make print-PLIST!
-DOMOD=
-#DOMOD=-pm
+#DOMOD=
+DOMOD=-pm
 
 do-extract:
 
