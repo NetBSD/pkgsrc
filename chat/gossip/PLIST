@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/16 15:21:21 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/16 07:48:45 recht Exp $
 bin/gossip
 share/applications/gossip.desktop
 share/gconf/schemas/gossip.schemas
@@ -19,33 +19,43 @@ share/gossip/emoticon-face6.png
 share/gossip/emoticon-face7.png
 share/gossip/emoticon-face8.png
 share/gossip/emoticon-face9.png
+share/gossip/gossip-available.png
 share/gossip/gossip-away.png
 share/gossip/gossip-busy.png
-share/gossip/gossip-chat.png
 share/gossip/gossip-extended-away.png
+share/gossip/gossip-group-message.png
+share/gossip/gossip-log.xsl
+share/gossip/gossip-message.png
 share/gossip/gossip-offline.png
-share/gossip/gossip-online.png
+share/gossip/gossip-typing.png
 share/gossip/group-chat.glade
 share/gossip/main.glade
-share/gossip/message.png
 share/gossip/my-user_48.png
 share/gossip/offline.wav
 share/gossip/online.wav
 share/gossip/query_48.png
 share/gossip/send.wav
-share/gossip/typing.png
 share/gossip/vcard_48.png
 share/gossip/watermark.png
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gossip.mo
 @dirrm share/gossip
