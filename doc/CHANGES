@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5883 2004/05/09 17:59:37 recht Exp $
+$NetBSD: CHANGES,v 1.5884 2004/05/09 22:46:09 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2436,3 +2436,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated muse to 0.9nb1 [minskim 2004-05-09]
 	Updated pkg_chk to 1.48 [abs 2004-05-09]
 	Updated roundup to 0.7.0 [recht 2004-05-09]
+	Updated gtk-thinice-engine to 2.0.2nb5 [snj 2004-05-09]
