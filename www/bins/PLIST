@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/07/21 12:41:13 martti Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/10/05 12:03:33 martti Exp $
 bin/bins
 bin/bins_cleanupgallery
 bin/bins_edit
@@ -43,19 +43,14 @@ share/examples/bins/templates.joi/imagelist.html
 share/examples/bins/templates.joi/imagenavbar.html
 share/examples/bins/templates.joi/navbar.html
 share/examples/bins/templates.joi/path.html
-share/examples/bins/templates.joi/subalbum.html
-share/examples/bins/templates.joi/subjectpath.html
-share/examples/bins/templates.joi/thumbnail.html
-share/examples/bins/templates.joi/thumbnav.html
-share/examples/bins/templates.joi/thumbnavrow.html
-share/examples/bins/templates.joi/tree.html
-share/examples/bins/templates.joi/xlink.html
 share/examples/bins/templates.joi/static/actthumb.png
 share/examples/bins/templates.joi/static/albumtree.png
 share/examples/bins/templates.joi/static/back.png
 share/examples/bins/templates.joi/static/contact.png
 share/examples/bins/templates.joi/static/exit.png
 share/examples/bins/templates.joi/static/home.png
+share/examples/bins/templates.joi/static/huge.png
+share/examples/bins/templates.joi/static/hugeActive.png
 share/examples/bins/templates.joi/static/imagelist.png
 share/examples/bins/templates.joi/static/info.png
 share/examples/bins/templates.joi/static/joi.css
@@ -77,6 +72,13 @@ share/examples/bins/templates.joi/static/smallActive.png
 share/examples/bins/templates.joi/static/subalbum.png
 share/examples/bins/templates.joi/static/thumbnails.png
 share/examples/bins/templates.joi/static/up.png
+share/examples/bins/templates.joi/subalbum.html
+share/examples/bins/templates.joi/subjectpath.html
+share/examples/bins/templates.joi/thumbnail.html
+share/examples/bins/templates.joi/thumbnav.html
+share/examples/bins/templates.joi/thumbnavrow.html
+share/examples/bins/templates.joi/tree.html
+share/examples/bins/templates.joi/xlink.html
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bins.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bins.mo
