@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/03/28 04:39:39 taca Exp $
+# $NetBSD: Makefile,v 1.30 2004/03/29 03:30:17 schmonz Exp $
 # FreeBSD Id: ports/net/djbdns/Makefile,v 1.4 2000/09/28 18:18:41 nbm Exp
 #
 
@@ -23,6 +23,8 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://cr.yp.to/djbdns.html
 COMMENT=	Collection of secure and reliable DNS tools by Dan Bernstein
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 RESTRICTED=	"Redistribution of modified package is forbidden"
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
@@ -40,6 +42,8 @@ MANVERSION=	20021211
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=	3.0
 .endif
+
+INSTALLATION_DIRS=	bin etc man/man1 man/man5 man/man8
 
 post-extract:
 	@${CP} ${DISTDIR}/tinydns-log.pl.txt ${WRKSRC}/tinydns-log.pl
