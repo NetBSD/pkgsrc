@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2002/10/27 23:23:34 seb Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:21:07 jschauma Exp $
 #
 
 DISTNAME=	mytop-0.8
 CATEGORIES=	databases
 MASTER_SITES=	http://public.yahoo.com/~jzawodn/mytop/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://public.yahoo.com/~jzawodn/mytop/
 COMMENT=	console-based tool for monitoring the threads and performance of MySQL
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/05/02 11:55:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2003/06/02 01:19:05 jschauma Exp $
 
 DISTNAME=		otp_src_R9B-1
 PKGNAME=		erlang-9.1
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.erlang.org
 COMMENT=		concurrent functional programming language
 

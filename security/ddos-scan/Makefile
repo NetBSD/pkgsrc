@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/17 17:49:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:17:20 jschauma Exp $
 #
 
 DISTNAME=	ddos_scan
@@ -7,7 +7,7 @@ CATEGORIES=	net security
 MASTER_SITES=	http://staff.washington.edu/dittrich/misc/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://staff.washington.edu/dittrich/
 COMMENT=	scan for a limited set of distributed denial of service (ddos) agents
 

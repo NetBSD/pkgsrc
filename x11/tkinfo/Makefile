@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2001/05/05 19:51:20 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/02 01:15:38 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.15 1997/12/16 09:26:12 tg Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/doctools/info/} \
 		http://math-www.uni-paderborn.de/~axel/tkinfo/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://math-www.uni-paderborn.de/~axel/tkinfo/
 COMMENT=	Tk script to read and display GNU "info" files
 

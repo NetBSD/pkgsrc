@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/05/02 11:55:31 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/06/02 01:19:13 jschauma Exp $
 #
 
 DISTNAME=	tuxpaint-0.9.10
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.newbreedsoftware.com/tuxpaint/
 COMMENT=	drawing program for small children
 

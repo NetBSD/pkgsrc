@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/05 16:32:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:19:25 jschauma Exp $
 #
 
 DISTNAME=		gxine-0.3.3
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://xinehq.de/
 COMMENT=		gtk-based media player
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/05/24 17:06:50 salo Exp $
+# $NetBSD: Makefile,v 1.20 2003/06/02 01:21:34 jschauma Exp $
 
 PKGNAME=		realplayer-8.0.1
 WRKSRC=			${WRKDIR}/RealPlayer8
@@ -15,7 +15,7 @@ DISTNAME=		rp8_solaris27_sparc_cs2
 DISTNAME=		must_be_defined
 .endif
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.real.com/products/player/
 COMMENT=		RealAudio and RealVideo player
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/01/24 12:44:29 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/02 01:19:16 jschauma Exp $
 #
 
 DISTNAME=	gdchart-py-0.6
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	http://www.nullcube.com/software/pygdchart.html
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://athani.pair.com/msteed/software/gdchart/
 COMMENT=	Python interface to GDChart
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/05/03 13:53:09 agc Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:15:57 jschauma Exp $
 # FreeBSD: Makefile,v 1.12 1998/09/28 18:02:05 smace Exp
 
 DISTNAME=       wwwcount2.5
@@ -6,7 +6,7 @@ PKGNAME=        wwwcount-2.5
 CATEGORIES=     www
 MASTER_SITES=   ${MASTER_SITE_BACKUP}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.muquit.com/muquit/software/Count/Count.html
 COMMENT=	Graphical access counter, clock and date indicator for WWW pages
 

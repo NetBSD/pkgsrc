@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/03/29 12:40:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.25 2003/06/02 01:21:26 jschauma Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ircii.warped.com/pub/ircII/ \
 			ftp://ircftp.au.eterna.com.au/pub/ircII/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 COMMENT=		The 'Internet Relay Chat' and 'Internet Citizens Band' Client
 
 CONFLICTS=		blackened-[0-9]*

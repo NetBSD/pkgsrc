@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/01 11:38:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:16:14 jschauma Exp $
 #
 
 DISTNAME=	metacity-setup-0.7.1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=metacity-setup/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.sourceforge.net/projects/metacity-setup/
 COMMENT=	Configuration editor for Metacity
 

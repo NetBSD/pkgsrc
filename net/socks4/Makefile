@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/05/01 22:03:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/06/02 01:17:43 jschauma Exp $
 #
 
 DISTNAME=	export.socks.cstc.4.2.2
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/socks.cstc.4.2
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.nec.com/pub/socks/socks4/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.socks.nec.com/socksv4.html
 COMMENT=	Old library, server and client for using proxy firewall software
 

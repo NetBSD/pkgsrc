@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/01/28 22:03:32 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:18:49 jschauma Exp $
 #
 
 DISTNAME=	demime-0.99d.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME}/}			\
 		http://scifi.squawk.com/
 DISTFILES=	demime.stable demime_junkmail.cf
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://scifi.squawk.com/demime.html
 COMMENT=	Tool to scrub mime from mailing lists
 

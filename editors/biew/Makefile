@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/05/05 17:27:48 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:20:11 jschauma Exp $
 #
 
 DISTNAME=	biew-520
@@ -7,7 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://biew.sourceforge.net/pub/biew/5.x/src/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://biew.sourceforge.net/en/biew.html
 COMMENT=	Binary viewer/editor
 

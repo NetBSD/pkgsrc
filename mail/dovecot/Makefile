@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/14 04:17:31 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:18:48 jschauma Exp $
 #
 
 DISTNAME=	dovecot-0.99.9.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://dovecot.procontrol.fi/
 PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	freebsd.patch fetch.patch
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://dovecot.procontrol.fi/
 COMMENT=	Secure IMAP and POP3 server
 

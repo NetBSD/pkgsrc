@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/11/01 04:25:50 rh Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:21:19 jschauma Exp $
 #
 
 DISTNAME=	bib2xml-10062002
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/bib2xml
 CATEGORIES=	converters textproc
 MASTER_SITES=	http://www.cs.colorado.edu/~henkel/stuff/bib2xml/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.cs.colorado.edu/~henkel/stuff/bib2xml/
 COMMENT=	BibTeX to XML converter
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/03/29 12:40:04 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2003/06/02 01:21:42 jschauma Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.cdrom.com/pub/infozip/src/ \
 		ftp://ftp.icce.rug.nl/infozip/src/
 DISTFILES=	zip11.zip
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/
 COMMENT=	Create/update ZIP files compatible with pkzip version 1
 

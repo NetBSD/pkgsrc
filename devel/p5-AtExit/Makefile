@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/13 22:22:52 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:20:35 jschauma Exp $
 #
 
 DISTNAME=	AtExit-2.01
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5ate
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=AtExit/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Provides an ANSI C style atexit() function to Perl programs
 
 USE_BUILDLINK2=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2003/05/06 17:40:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2003/06/02 01:21:44 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/08/10 22:31:27 fenner Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://rarsoft.ti.sk/pub/rar/ \
 			ftp://ftp.elf.stuba.sk/pub/pc/pack/
 EXTRACT_SUFX=		.sfx
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.rarsoft.com/
 COMMENT=		File archiver (binary port)
 

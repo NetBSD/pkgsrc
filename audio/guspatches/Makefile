@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/28 21:14:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:21:39 jschauma Exp $
 #
 
 DISTNAME=	dgguspat
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=     packages@netbsd.org
+MAINTAINER=     tech-pkg@netbsd.org
 COMMENT=	GUS (Gravis Ultrasound) patches (audio samples) for TiMidity
 
 CONFLICTS=	eawpatches-[0-9]*

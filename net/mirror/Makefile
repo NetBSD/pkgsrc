@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/05/06 17:42:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.20 2003/06/02 01:17:55 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.6 1996/12/01 01:22:54 obrien Exp
 #
 
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	ftp://src.doc.ic.ac.uk/computing/archiving/mirror/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://sunsite.org.uk/packages/mirror/
 COMMENT=	Mirror packages on remote sites
 

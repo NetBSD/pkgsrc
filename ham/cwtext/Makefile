@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2002/09/21 23:46:52 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:19:08 jschauma Exp $
 
 DISTNAME=	cwtext-0.91
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cwtext/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://cwtext.sourceforge.net/
 COMMENT=	Morse Code Generator
 

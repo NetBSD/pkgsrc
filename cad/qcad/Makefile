@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/05/31 14:26:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/02 01:21:28 jschauma Exp $
 
 DISTNAME=		qcad-1.5.4-src
 PKGNAME=		qcad-1.5.4
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=qcad/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.qcad.org/
 COMMENT=		2D CAD System
 

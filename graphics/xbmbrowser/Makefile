@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/03/02 19:47:26 jschauma Exp $
+# $NetBSD: Makefile,v 1.16 2003/06/02 01:19:11 jschauma Exp $
 # FreeBSD: Makefile,v 1.3 1997/08/26 07:12:20 tg Exp
 #
 
@@ -8,7 +8,7 @@ PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=utilities/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 COMMENT=		View complete directories of X bitmaps and X pixmaps
 
 USE_BUILDLINK2=		YES

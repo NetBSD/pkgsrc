@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/05/05 17:54:35 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:19:55 jschauma Exp $
 
 DISTNAME=	stella-1.1-src
 PKGNAME=	stella-1.1
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME}/src/build
 CATEGORIES=	emulators
 MASTER_SITES=	ftp://ftp.eos.ncsu.edu/pub/bsvc/stella/1.1/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://stella.atari.org/
 COMMENT=	Multi-platform Atari 2600 VCS emulator
 

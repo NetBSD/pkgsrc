@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/04/05 05:42:55 jtb Exp $
+# $NetBSD: Makefile,v 1.24 2003/06/02 01:19:02 jschauma Exp $
 
 DISTNAME=       	icon.v941src
 PKGNAME=		icon-9.4.1
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://www.cs.arizona.edu/icon/ftp/packages/unix/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.cs.arizona.edu/icon/index.htm
 COMMENT=		The Icon programming language
 

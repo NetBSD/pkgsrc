@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/04 10:07:58 tron Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:19:53 jschauma Exp $
 
 DISTNAME=		suse_linux-6.4
 CATEGORIES=		emulators
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package collection
 

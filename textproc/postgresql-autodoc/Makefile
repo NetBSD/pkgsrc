@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/04/25 20:20:35 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:16:27 jschauma Exp $
 #
 
 VERS=		1.01
@@ -7,7 +7,7 @@ WRKSRC=         ${WRKDIR}
 CATEGORIES=	textproc databases
 MASTER_SITES=	http://www.rbt.ca/autodoc/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.rbt.ca/autodoc/
 COMMENT=	Generate HTML, DOT, and XML description of database structure
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/04/17 15:42:02 salo Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:19:49 jschauma Exp $
 #
 
 DISTNAME=	dbz
@@ -8,7 +8,7 @@ CATEGORIES=	fonts
 MASTER_SITES=	http://www.andrew.cmu.edu/~twm/fonts/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://fonts.tom7.com/
 COMMENT=	Divide By Zero TrueType fonts created by Tom Murphy 7
 

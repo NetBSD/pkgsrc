@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/05/06 17:40:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/02 01:21:31 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/11/18 13:56:53 asami Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=apps/sound/mixers/}
 PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		xmix-2.1.mixers.patch
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 COMMENT=		Mixer for X Window System
 
 USE_IMAKE=		yes

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2002/08/07 16:28:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:17:47 jschauma Exp $
 
 DISTNAME=	pptp-linux-1.0.2
 PKGNAME=	pptp-1.0.2
 CATEGORIES=	net
 MASTER_SITES= 	http://www.pdos.lcs.mit.edu/~cananian/Synaptics/release/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.pdos.lcs.mit.edu/~cananian/Projects/PPTP/
 COMMENT=	PPTP client package for Microsoft VPN servers (no encryption yet)
 

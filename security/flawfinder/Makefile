@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/03/09 18:11:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:17:18 jschauma Exp $
 #
 
 DISTNAME=	flawfinder-1.22
 CATEGORIES=	security devel
 MASTER_SITES=	http://www.dwheeler.com/flawfinder/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.dwheeler.com/flawfinder/
 COMMENT=	python program to find flaws in C/C++ programs
 

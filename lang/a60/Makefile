@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2002/02/18 15:14:23 seb Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/02 01:19:07 jschauma Exp $
 
 DISTNAME=	a60-0.20a
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/algol60/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Algol 60 interpreter
 
 GNU_CONFIGURE=	yes

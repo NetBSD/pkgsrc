@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/10/13 22:22:53 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:21:05 jschauma Exp $
 #
 
 DISTNAME=	DBIx-DataSource-0.02
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5dxd
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.420.am/dbix-datasource
 COMMENT=	create and drop functions for databases
 

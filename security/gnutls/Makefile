@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/14 03:46:44 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:17:18 jschauma Exp $
 #
 
 DISTNAME=	gnutls-0.8.7
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	GNU Transport Layer Security library
 

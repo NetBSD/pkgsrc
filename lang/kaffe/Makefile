@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2003/01/29 10:58:50 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2003/06/02 01:19:00 jschauma Exp $
 #
 
 DISTNAME=		kaffe-1.0.7
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.0.x-production/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.kaffe.org/
 COMMENT=		Virtual machine capable of running Java(tm) code
 

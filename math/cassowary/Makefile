@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/01/25 05:27:27 uebayasi Exp $
+# $NetBSD: Makefile,v 1.18 2003/06/02 01:18:34 jschauma Exp $
 #
 
 DISTNAME=		cassowary-0.60
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		math
 MASTER_SITES=		http://www.cs.washington.edu/research/constraints/cassowary/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.cs.washington.edu/research/constraints/cassowary/
 COMMENT=		Constraint-solving toolkit for linear equalities and inequalities
 

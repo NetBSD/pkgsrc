@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/05 19:05:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/02 01:19:10 jschauma Exp $
 #
 
 DISTNAME=		xine-lib-1-beta10
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://xinehq.de/
 COMMENT=		multimedia player library
 

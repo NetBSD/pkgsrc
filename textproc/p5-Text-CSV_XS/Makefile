@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/13 22:22:54 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:16:33 jschauma Exp $
 #
 
 DISTNAME=	Text-CSV_XS-0.23
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5tcx
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 # HOMEPAGE=	http://
 COMMENT=	Routines for composition and decomposition of comma-separated values
 

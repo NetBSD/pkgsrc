@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/22 14:45:47 tron Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:18:04 jschauma Exp $
 
 DISTNAME=	${BINNAME}_20
 PKGNAME=	${BINNAME}-2.0
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://edge.mcs.drexel.edu/GICL/people/sevy/airport/
 COMMENT=	Modem (dis)connection utility for Apple's Airport Base Station
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/03 03:23:25 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:16:18 jschauma Exp $
 #
 
 DISTNAME=		titrax-1.98
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		x11 time
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=office/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.alvestrand.no/domen/titrax/TimeTracker.html
 COMMENT=		Little X11 tool to track project times
 

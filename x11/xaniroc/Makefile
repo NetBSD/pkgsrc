@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/03 04:17:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:15:36 jschauma Exp $
 # from FreeBSD: ports/x11/xaniroc/Makefile,v 1.4 1999/08/31 02:50:46 peter Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.freebird.org/unixware/freebird/x11/utils/ \
 		ftp://netlab1.usu.edu/pub/mirror/freebird/x11/utils/
 EXTRACT_SUFX=	.src.tar.Z
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	animate your root-cursor
 
 USE_IMAKE=	yes

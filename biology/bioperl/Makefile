@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2002/10/27 22:51:06 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:21:29 jschauma Exp $
 #
 
 DISTNAME=		bioperl-0.7.0
 CATEGORIES=		biology
 MASTER_SITES=		http://bioperl.org/Core/Latest/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://bioperl.org/
 COMMENT=		Perl tools for computational molecular biology
 

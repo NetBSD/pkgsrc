@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:42:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:17:52 jschauma Exp $
 #
 
 DISTNAME=	check_cluster
@@ -9,7 +9,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://netsaint.sourceforge.net/download/alpha/
 EXTRACT_SUFX=	.c
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://netsaint.sourceforge.net/
 COMMENT=	host and service cluster plugin for NetSaint
 

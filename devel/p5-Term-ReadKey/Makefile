@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/13 22:22:54 seb Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/02 01:20:22 jschauma Exp $
 #
 
 VERS=		2.21
@@ -8,7 +8,7 @@ SVR4_PKGNAME=	p5trk
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Term/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/TermReadKey/
 COMMENT=	Change terminal modes and perform non-blocking reads
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/05/06 17:40:20 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/02 01:21:47 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/08/10 22:31:19 fenner Exp
 #
 
@@ -9,7 +9,7 @@ CATEGORIES=	archivers
 MASTER_SITES=   ftp://ftp.kiarchive.ru/pub/unix/arcers/
 EXTRACT_SUFX=   .tgz
 
-MAINTAINER=     packages@netbsd.org
+MAINTAINER=     tech-pkg@netbsd.org
 COMMENT=	The HA archiver using the HSC compression method
 
 USE_BUILDLINK2=	yes

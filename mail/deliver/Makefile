@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/27 14:06:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:18:49 jschauma Exp $
 
 DISTNAME=	deliver-2.1.14
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=deliver/}
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://deliver.sourceforge.net/
 COMMENT=	Local mail delivery agent with shell-script control
 

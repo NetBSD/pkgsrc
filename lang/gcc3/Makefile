@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/05/26 20:39:10 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/06/02 01:19:03 jschauma Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-3.3/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
 COMMENT=		GNU Compiler Collection
 

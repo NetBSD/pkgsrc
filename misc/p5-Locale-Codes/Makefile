@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/10/07 22:34:23 seb Exp $
+# $NetBSD: Makefile,v 1.14 2003/06/02 01:18:09 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/06/27 01:51:12 jfitz Exp
 #
 
@@ -8,7 +8,7 @@ SVR4_PKGNAME=		p5lco
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Locale/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Locale-Codes/Locale/Country.html
 COMMENT=		perl5 module providing access to ISO3166 and ISO639 Country Codes
 

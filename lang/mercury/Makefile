@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/05/02 17:48:28 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:18:59 jschauma Exp $
 
 DISTNAME=		mercury-compiler-0.11.0
 PKGNAME=		mercury-0.11.0
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/ \
 			${MASTER_SITE_SUNSITE:=devel/lang/mercury/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.cs.mu.oz.au/mercury/
 COMMENT=		modern logic/functional programming language
 

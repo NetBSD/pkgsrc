@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/05/02 11:55:03 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:19:36 jschauma Exp $
 #
 
 DISTNAME=	newvox-1.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.libsdl.org/projects/newvox/src/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.libsdl.org/projects/newvox/index.html
 COMMENT=	voxel-style landscape rendering fly-by
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/13 20:43:39 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:20:12 jschauma Exp $
 #
 
 DISTNAME=	ucl-1.01
 CATEGORIES=	devel archivers
 MASTER_SITES=	http://www.oberhumer.com/opensource/ucl/download/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.oberhumer.com/opensource/ucl/
 COMMENT=	Portable lossless data compression library
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/01/28 22:03:59 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2003/06/02 01:17:32 jschauma Exp $
 
 DISTNAME=		a2ps-4.13b
 PKGNAME=		a2ps-4.13.0.2
@@ -8,7 +8,7 @@ CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNU:=a2ps/} \
 			ftp://ftp.enst.fr/pub/unix/a2ps/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www-inf.enst.fr/~demaille/a2ps/
 COMMENT=		Formats an ascii file for printing on a postscript printer
 

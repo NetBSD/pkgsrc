@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 15:10:51 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/02 01:19:39 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/27 07:41:12 fenner Exp
 #
 
@@ -8,7 +8,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/chess/chess.html
 COMMENT=		the "classic" GNU chess
 

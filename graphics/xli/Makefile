@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/03/29 12:41:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2003/06/02 01:19:10 jschauma Exp $
 
 DISTNAME=	xli-1.16
 PKGREVISION=	4
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 DISTFILES=	xli.1.16.tar.gz \
 		xli-png.tar.gz
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	Version of xloadimage, an X11 Image Loading Utility
 
 #SITES_xli-png.tar.gz=	http://pantransit.reptiles.org/prog/

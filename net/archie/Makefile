@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/02 01:18:03 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/07/21 00:04:13 fenner Exp
 #
 
@@ -9,7 +9,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.uni-stuttgart.de/pub/unix/comm/infosystems/archie/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.bunyip.com/products/archie/
 COMMENT=	Prospero client for the archie service
 

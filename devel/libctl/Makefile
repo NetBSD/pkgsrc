@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2003/01/10 12:02:53 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/06/02 01:20:41 jschauma Exp $
 
 DISTNAME=	libctl-2.2
 CATEGORIES=	devel
 MASTER_SITES=	http://ab-initio.mit.edu/libctl/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://ab-initio.mit.edu/libctl/
 COMMENT=	Guile-based flexible control file library for scientific simulations
 

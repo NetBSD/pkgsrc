@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/04/27 16:38:48 cjep Exp $
+# $NetBSD: Makefile,v 1.25 2003/06/02 01:21:40 jschauma Exp $
 
 DISTNAME=	festival-1.4.1
 PKGREVISION=	1
@@ -14,7 +14,7 @@ DISTFILES=	${DISTNAME}.tar.gz \
 # note that OGIfestpatch above file must be extracted last. it is, however
 # this behavior not defined in pkgsrc at the time of writing
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 COMMENT=	Festival is an advanced multi-lingual speech synthesis system
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2001/03/31 11:14:31 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2003/06/02 01:16:52 jschauma Exp $
 #
 
 DISTNAME=		sysinfo-3.5.1
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.rge.com/pub/admin/sysinfo/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.magnicomp.com/
 COMMENT=		displays system hardware and software information and configuration
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/03/03 04:17:35 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/02 01:15:34 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.2 1996/12/29 00:51:27 obrien Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/} \
 		ftp://ftp.cs.berkeley.edu/ucb/people/dglo/xless/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 COMMENT=	X11 text viewer; useful as an add-on tool for other apps
 
 USE_BUILDLINK2=	yes

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/14 03:16:23 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:17:14 jschauma Exp $
 #
 
 DISTNAME=	opencdk-0.4.5
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/opencdk/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	Open Crypto Development Kit
 

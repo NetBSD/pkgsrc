@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/06 22:31:08 seb Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/02 01:17:12 jschauma Exp $
 #
 
 DISTNAME=		Crypt-DES_EDE3-0.01
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5de3
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 #HOMEPAGE=	
 COMMENT=		perl5 module for Triple-DES EDE encryption/decryption
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2003/03/09 19:17:56 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2003/06/02 01:19:28 jschauma Exp $
 
 DISTNAME=		geomview-1.8.1
 PKGREVISION=		1
 CATEGORIES=		graphics math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=geomview/}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.geomview.org
 COMMENT=		Interactive geometry viewing program
 

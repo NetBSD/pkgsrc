@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/05/05 19:05:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2003/06/02 01:17:51 jschauma Exp $
 #
 
 DISTNAME=	openh323_1.10.4
@@ -13,7 +13,7 @@ MASTER_SITES=	http://www.openh323.org/bin/ \
 		http://www.at.openh323.org/bin/ \
 		http://www.cz.openh323.org/bin/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.openh323.org/
 COMMENT=	Open H.323 library
 

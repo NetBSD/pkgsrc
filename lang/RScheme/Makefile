@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/04/11 02:01:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/02 01:19:07 jschauma Exp $
 
 DISTNAME=		rs-0.7.3.1
 PKGNAME=		RScheme-0.7.3.1
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.rscheme.org/pub/rscheme/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.rscheme.org
 COMMENT=		Scheme implementation
 

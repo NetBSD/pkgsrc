@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/05 12:22:53 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2003/06/02 01:20:12 jschauma Exp $
 #
 
 DISTNAME=	trio-1.3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.contactor.se/~dast/stuff/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.contactor.se/~dast/trio/
 COMMENT=	fully matured and stable set of printf and string functions
 
