@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2002/07/22 19:19:39 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2002/07/31 03:23:06 jlam Exp $
 
 DISTNAME=		cyrus-sasl-1.5.27
 SVR4_PKGNAME=		csasl
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 			ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/
@@ -28,14 +29,16 @@ CYRUS_GROUP?=		mail
 FILES_SUBST+=		CYRUS_USER=${CYRUS_USER}
 
 HTMLDIR=		${PREFIX}/share/doc/html/cyrus-sasl
-PWCHECKDIR=		/var/pwcheck
-FILES_SUBST+=		PWCHECKDIR=${PWCHECKDIR}
+SASLSOCKETDIR=		/var/run/sasl
+FILES_SUBST+=		SASLSOCKETDIR=${SASLSOCKETDIR}
+PLIST_SUBST+=		SASLSOCKETDIR=${SASLSOCKETDIR}
 
 BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
 
 PLIST_SRC=		${.CURDIR}/PLIST.common
 
-CONFIGURE_ARGS+=	--with-pwcheck=${PWCHECKDIR}
+CONFIGURE_ARGS+=	--with-pwcheck=${SASLSOCKETDIR}
+CONFIGURE_ARGS+=	--with-saslauthd=${SASLSOCKETDIR}
 CONFIGURE_ARGS+=	--with-dblib=ndbm
 CONFIGURE_ARGS+=	--with-dbpath=${PKG_SYSCONFDIR}/sasldb
 CONFIGURE_ARGS+=	--with-plugindir=${PREFIX}/lib/sasl
@@ -63,16 +66,17 @@ CONFIGURE_ARGS+=	--disable-gssapi	# --- no GSSAPI
 PLIST_SRC+=		${.CURDIR}/PLIST.plugins
 
 .if defined(USE_PAM)
-.include "../../security/PAM/buildlink.mk"
+.  include "../../security/PAM/buildlink.mk"
 BUILD_DEFS+=		USE_PAM
-CONFIGURE_ARGS+=	--with-pam=${PREFIX}
+CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_DIR}
+.else
+CONFIGURE_ARGS+=	--without-pam
 .endif
 
 PKG_GROUPS=		${CYRUS_GROUP}
 PKG_USERS=		${CYRUS_USER}:${CYRUS_GROUP}::::${SH}
-RCD_SCRIPTS=		sasl_pwcheck
+RCD_SCRIPTS=		sasl_pwcheck saslauthd
 OWN_DIRS=		${PREFIX}/lib/sasl
-OWN_DIRS_PERMS=		${PWCHECKDIR} ${CYRUS_USER} ${ROOT_GROUP} 0700
 
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
@@ -88,12 +92,16 @@ pre-configure:
 	${LOCALBASE}/bin/autoconf
 
 pre-install:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/sasl_pwcheck.sh		\
-		> ${WRKDIR}/sasl_pwcheck.sh
+	@for script in ${RCD_SCRIPTS}; do				\
+		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
+			> ${WRKDIR}/$${script};				\
+	done
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/sasl_pwcheck.sh \
-		${PREFIX}/etc/rc.d/sasl_pwcheck
+	for script in ${RCD_SCRIPTS}; do				\
+		${INSTALL_SCRIPT} ${WRKDIR}/$${script}			\
+			${PREFIX}/etc/rc.d/$${script};			\
+	done
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.txt ${HTMLDIR}
 

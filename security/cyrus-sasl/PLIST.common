@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST.common,v 1.2 2002/01/13 14:23:38 skrll Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2002/07/31 03:23:06 jlam Exp $
 bin/sasl-config
 etc/rc.d/sasl_pwcheck
+etc/rc.d/saslauthd
 include/hmac-md5.h
 include/sasl.h
 include/saslplug.h
@@ -35,9 +36,11 @@ man/man3/sasl_server_start.3
 man/man3/sasl_server_step.3
 man/man3/sasl_setprop.3
 man/man3/sasl_usererr.3
+man/man8/saslauthd.8
 man/man8/sasldblistusers.8
 man/man8/saslpasswd.8
 sbin/pwcheck
+sbin/saslauthd
 sbin/sasldblistusers
 sbin/saslpasswd
 share/doc/html/cyrus-sasl/draft-newman-auth-scram-03.txt
@@ -52,3 +55,4 @@ share/doc/html/cyrus-sasl/rfc2245.txt
 share/doc/html/cyrus-sasl/rfc2831.txt
 share/doc/html/cyrus-sasl/sysadmin.html
 @dirrm share/doc/html/cyrus-sasl
+@unexec ${RM} -rf ${SASLSOCKETDIR}
