@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2000/05/21 11:51:28 wulf Exp $
+$NetBSD: patch-ab,v 1.2 2000/08/16 05:38:36 jlam Exp $
 
 --- Makefile.in.orig	Sun May 21 14:26:55 2000
 +++ Makefile.in	Tue Apr 18 07:01:14 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1 2000/05/21 11:51:28 wulf Exp $
  datadir = @datadir@
  pkgdatadir = @pkgdatadir@
 -pixmapsdir = /usr/share/pixmaps
-+pixmapsdir = @pkgdatadir@
++pixmapsdir = @datadir@/pixmaps
  
  INSTALL = @INSTALL@
  
