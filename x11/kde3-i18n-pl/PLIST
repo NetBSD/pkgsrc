@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/08/21 16:02:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/10/13 13:20:22 markd Exp $
 share/kde/locale/pl/LC_MESSAGES/alarmdaemonctrl.mo
 share/kde/locale/pl/LC_MESSAGES/alsaplayerui.mo
 share/kde/locale/pl/LC_MESSAGES/amor.mo
@@ -269,6 +269,7 @@ share/kde/locale/pl/LC_MESSAGES/khotkeys.mo
 share/kde/locale/pl/LC_MESSAGES/khtmlsettingsplugin.mo
 share/kde/locale/pl/LC_MESSAGES/kicker.mo
 share/kde/locale/pl/LC_MESSAGES/kiconedit.mo
+share/kde/locale/pl/LC_MESSAGES/kig.mo
 share/kde/locale/pl/LC_MESSAGES/kimagemapeditor.mo
 share/kde/locale/pl/LC_MESSAGES/kinetd.mo
 share/kde/locale/pl/LC_MESSAGES/kio.mo
@@ -475,6 +476,7 @@ share/kde/locale/pl/LC_MESSAGES/kwin_quartz_config.mo
 share/kde/locale/pl/LC_MESSAGES/kwin_riscos.mo
 share/kde/locale/pl/LC_MESSAGES/kwin_system.mo
 share/kde/locale/pl/LC_MESSAGES/kwireless.mo
+share/kde/locale/pl/LC_MESSAGES/kwordquiz.mo
 share/kde/locale/pl/LC_MESSAGES/kworldclock.mo
 share/kde/locale/pl/LC_MESSAGES/kwriteconfig.mo
 share/kde/locale/pl/LC_MESSAGES/kxkb.mo

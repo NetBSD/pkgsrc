@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2004/08/21 16:02:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/13 13:20:22 markd Exp $
 share/kde/locale/pa/LC_MESSAGES/appletproxy.mo
 share/kde/locale/pa/LC_MESSAGES/childpanelextension.mo
 share/kde/locale/pa/LC_MESSAGES/clockapplet.mo
@@ -85,6 +85,7 @@ share/kde/locale/pa/LC_MESSAGES/kdmchooser.mo
 share/kde/locale/pa/LC_MESSAGES/kdmconfig.mo
 share/kde/locale/pa/LC_MESSAGES/kdmgreet.mo
 share/kde/locale/pa/LC_MESSAGES/kfile_font.mo
+share/kde/locale/pa/LC_MESSAGES/kfile_mp32.mo
 share/kde/locale/pa/LC_MESSAGES/kfileaudiopreview.mo
 share/kde/locale/pa/LC_MESSAGES/kfindpart.mo
 share/kde/locale/pa/LC_MESSAGES/kfmclient.mo
