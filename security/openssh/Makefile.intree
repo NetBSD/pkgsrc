@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.intree,v 1.8 2004/04/25 23:36:52 wiz Exp $
+# $NetBSD: Makefile.intree,v 1.9 2004/04/27 12:15:48 markd Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -10,7 +10,7 @@ _UPDATE_INTREE_OPENSSH=	YES
 PKG_SYSCONFSUBDIR:=		# empty
 .    endif
 .  endfor
-.  for PATTERN in 1.6*
+.  for PATTERN in 1.6* 2.0*
 .    if ${OS_VERSION:M${PATTERN}}
 _UPDATE_INTREE_OPENSSH=	YES
 PKG_SYSCONFSUBDIR:=		ssh
@@ -24,7 +24,8 @@ PKG_SYSCONFSUBDIR:=		ssh
 #
 # USE_OPENSSL_VERSION:=	${OPENSSL_VERSION_095A}
 .include "../../security/openssl/buildlink3.mk"
-.if ${_NEED_OPENSSL} == "YES"
+.include "../../security/openssl/builtin.mk"
+.if !empty(USE_BUILTIN.openssl:M[nN][oO])
 _UPDATE_INTREE_OPENSSH=		NO
 PKG_FAIL_REASON=	"OpenSSL>=0.9.6m in the base distribution is required."
 .endif
@@ -34,7 +35,7 @@ NO_MTREE=		yes
 NO_PKG_REGISTER=	yes
 NO_PACKAGE=		No package registration is done
 MANCOMPRESSED_IF_MANZ=	yes
-LOCALBASE:=		/usr
+LOCALBASE:=		/usr/.
 PKG_SYSCONFBASE:=	/etc
 MANDIR:=		share/man
 RCD_SCRIPTS_EGDIR:=	share/examples/openssh
