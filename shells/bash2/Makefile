@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32.2.1 2002/06/30 06:18:12 jlam Exp $
+# $NetBSD: Makefile,v 1.32.2.2 2002/06/30 06:31:17 schmonz Exp $
 #
 
 V=		2.05
@@ -76,7 +76,7 @@ post-install:
 CPPFLAGS:=	-I${GETTEXTDIR}/include ${CPPFLAGS}
 CFLAGS:=	-I${GETTEXTDIR}/include ${CFLAGS}
 LDFLAGS=	-L${GETTEXTDIR}/lib
-.if defined(USE_RPATH)
+.if ${_USE_RPATH} == "yes"
 LDFLAGS+=	-Wl,-R${GETTEXT_PREFIX}/lib
 .endif
 LIBS+=		${LDFLAGS} -lintl
