@@ -1,15 +1,60 @@
-$NetBSD: patch-ab,v 1.1 2003/03/06 19:08:11 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2003/11/20 04:46:08 grant Exp $
 
---- configure.orig	Thu Jan 30 02:54:48 2003
+--- configure.orig	2003-10-29 23:49:52.000000000 +1100
 +++ configure
-@@ -220,8 +220,8 @@ case `uname -s` in
+@@ -166,13 +166,6 @@ echo "  includes  $xdir/include"
+ echo "  libraries $xdir/lib"
+ echo
+ 
+-if [ $xdir != "/usr" ]; then
+-    cflags="$cflags -I$xdir/include"
+-    ldflags="$ldflags -L$xdir/lib"
+-    rpath="$rpath:$xdir/lib"
+-fi
+-
+-ldflags="$ldflags"
+ targets="$targets rdesktop"
+ 
+ #withoutopenssl not currently supported
+@@ -205,12 +198,6 @@ targets="$targets rdesktop"
+     
+     	echo "CRYPTOBJ    =" >>Makeconf
+     
+-    	if [ $ssldir != "/usr" ]; then
+-    	    cflags="$cflags -I$ssldir/include"
+-    	    ldflags="$ldflags -L$ssldir/lib"
+-    	    rpath="$rpath:$ssldir/lib"
+-    	fi
+-    
+     	cflags="$cflags -DWITH_OPENSSL"
+     	ldflags="$ldflags -lcrypto"
+     fi
+@@ -259,7 +246,7 @@ fi
+ 
+ # Check for OSS sound support
+ 
+-if [ -f /usr/include/sys/soundcard.h ]; then
++if [ -f /usr/include/sys/soundcard.h -o -f /usr/include/soundcard.h ]; then
+     echo Sound support enabled: Open Sound System
+     echo
+     echo "SOUNDOBJ    = rdpsnd.o rdpsnd_oss.o" >>Makeconf
+@@ -283,16 +270,13 @@ rpath=`echo $rpath |sed 's/^://'`
+ 
+ case `uname -s` in
+   SunOS)
+-    ldflags="$ldflags -lsocket -lnsl -R$rpath"
+-    ;;
+-  OSF1)
+-    ldflags="$ldflags -Wl,-rpath,$rpath"
++    ldflags="$ldflags -lsocket -lnsl"
+     ;;
  esac
  
  
 -echo "CFLAGS      = $cflags" >>Makeconf
 -echo "LDFLAGS     = $ldflags" >>Makeconf
-+echo "CFLAGS      += $cflags" >>Makeconf
-+echo "LDFLAGS     += $ldflags" >>Makeconf
++echo "CFLAGS      = $CFLAGS $cflags" >>Makeconf
++echo "LDFLAGS     = $LDFLAGS $ldflags" >>Makeconf
+ echo "TARGETS     = $targets" >>Makeconf
  
  echo "configure complete - now run make"
- 
