@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/03/05 19:25:40 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/03/18 09:12:14 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NAUTILUS_BUILDLINK3_MK:=	${NAUTILUS_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	nautilus
 .if !empty(NAUTILUS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.nautilus+=	nautilus>=2.4.2nb4
 BUILDLINK_PKGSRCDIR.nautilus?=	../../sysutils/nautilus
+.endif	# NAUTILUS_BUILDLINK3_MK
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
@@ -32,7 +33,5 @@ BUILDLINK_PKGSRCDIR.nautilus?=	../../sysutils/nautilus
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
-
-.endif	# NAUTILUS_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

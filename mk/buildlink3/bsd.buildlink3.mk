@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.123 2004/03/16 18:23:26 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.124 2004/03/18 09:12:13 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -21,10 +21,9 @@
 #
 # # We want "-lbar" to eventually resolve to "-lfoo".
 # BUILDLINK_TRANSFORM+=		l:bar:foo
+# .endif  # FOO_BUILDLINK3_MK
 #
 # .include "../../category/baz/buildlink3.mk"
-#
-# .endif  # FOO_BUILDLINK3_MK
 #
 # BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 # -------------8<-------------8<-------------8<-------------8<-------------
@@ -79,6 +78,103 @@ PKG_FAIL_REASON+=	\
 .  endif
 .endif
 
+.for _pkg_ in ${BUILDLINK_PACKAGES}
+BUILDLINK_PKGBASE.${_pkg_}?=	${_pkg_}
+.endfor
+
+_BLNK_PKGVAR?=		${PKGBASE:S/++$/xx/:S/+$//}
+
+# Try to include buildlink3.mk files for any dependencies that are already
+# installed on the system.  This tries to handle the situation where the
+# installed package and the package as it exists in pkgsrc have differing
+# lists of dependencies.  If the package directory has moved or been
+# removed from pkgsrc, then set BUILDLINK_INSTALLED_PKGSRCDIR.<pkg> to the
+# correct PKGPATH for that package or to the empty value if it has been
+# removed.
+#
+.if !defined(_BLNK_INSTALLED_DEPDIRS.${_BLNK_PKGVAR})
+_BLNK_INSTALLED_DEPS=	# empty
+.  for _pkg_ in ${BUILDLINK_PACKAGES}
+BUILDLINK_DEPMETHOD.${_pkg_}?=	full
+.    if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
+BUILDLINK_PKGBASE.${_pkg_}?=	${_pkg_}
+#
+# XXX This should really recursively walk through the dependency list.
+#
+_BLNK_TMP!=								\
+	pkg="${BUILDLINK_PKGBASE.${_pkg_}}-[0-9]*";			\
+	found=`${PKG_BEST_EXISTS} "$$pkg"`;				\
+	pkgdep=;							\
+	if [ -n "$$found" ]; then					\
+		pkgdep=`${PKG_INFO} -qf "$$found" | ${SED} -n "s/^@pkgdep[ 	]*//p"`; \
+	fi;								\
+	${ECHO} "$$pkgdep"
+_BLNK_INSTALLED_DEPS:=	${_BLNK_INSTALLED_DEPS} ${_BLNK_TMP}
+.      undef _BLNK_TMP
+.    endif
+.  endfor
+_BLNK_INSTALLED_DEPPKGS=	# empty
+.  for _dep_ in ${_BLNK_INSTALLED_DEPS}
+_BLNK_TMP!=	found=`${PKG_BEST_EXISTS} "${_dep_}"`; ${ECHO} "$$found"
+_BLNK_TMP_PKGBASE:=	${_BLNK_TMP:C/-[^-]*$//}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGBASE}
+#                                     
+# Map package names into buildlink package variable equivalents when it
+# differs from the PKGBASE for that package.                            
+#                                     
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/++$/xx/:S/+$//}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^PAM$/pam/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^freetype-lib$/freetype/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^gettext-lib$/gettext/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^libaudiofile$/audiofile/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^libgetopt$/getopt/}
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^libiconv$/iconv/}	
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:S/^libtool-base$/libtool/}	
+_BLNK_TMP_PKGVAR:=	${_BLNK_TMP_PKGVAR:C/^py[0-9][0-9][^-]*-/py-/}	
+_BLNK_INSTALLED_PKGBASE.${_BLNK_TMP_PKGVAR}:=	${_BLNK_TMP_PKGBASE}
+_BLNK_INSTALLED_DEPPKGS:=						\
+	${_BLNK_INSTALLED_DEPPKGS:N${_BLNK_TMP_PKGVAR}}			\
+	${_BLNK_TMP_PKGVAR}
+.    undef _BLNK_TMP
+.    undef _BLNK_TMP_PKGVAR
+.    undef _BLNK_TMP_PKGBASE
+.  endfor
+_BLNK_INSTALLED_DEPDIRS=	# empty
+.  for _pkg_ in ${_BLNK_INSTALLED_DEPPKGS}
+#
+# We are using the pkgsrc-installed dependency, so clearly we must not be
+# using any built-in version of the same software.
+#
+USE_BUILTIN.${_pkg_}=	no
+#
+# If BUILDLINK_PKGSRCDIR.<pkg> is already defined (by a previous inclusion
+# of <pkg>'s buildlink2.mk file), then make that the default value for
+# BUILDLINK_INSTALLED_PKGSRCDIR.<pkg>.  Otherwise, try to dig it out of
+# the +BUILD_INFO file of the installed package.
+#
+.    if defined(BUILDLINK_PKGSRCDIR.${_pkg_})
+BUILDLINK_INSTALLED_PKGSRCDIR.${_pkg_}?=	${BUILDLINK_PKGSRCDIR.${_pkg_}}
+.    endif
+.    if !defined(BUILDLINK_INSTALLED_PKGSRCDIR.${_pkg_})
+BUILDLINK_INSTALLED_PKGSRCDIR.${_pkg_}!=				\
+	dir=`${PKG_INFO} -qB "${_BLNK_INSTALLED_PKGBASE.${_pkg_}}" | ${SED} -n "s/^PKGPATH=//p"`; ${ECHO} "../../$$dir"
+.    endif
+.    if exists(${BUILDLINK_INSTALLED_PKGSRCDIR.${_pkg_}}/buildlink3.mk)
+_BLNK_INSTALLED_DEPDIRS:=						\
+	${_BLNK_INSTALLED_DEPDIRS}					\
+	${BUILDLINK_INSTALLED_PKGSRCDIR.${_pkg_}}
+.    endif
+.  endfor
+_BLNK_INSTALLED_DEPDIRS.${_BLNK_PKGVAR}:=	${_BLNK_INSTALLED_DEPDIRS}
+.  undef _BLNK_INSTALLED_DEPDIRS
+MAKEFLAGS+=	_BLNK_INSTALLED_DEPDIRS.${_BLNK_PKGVAR}=${_BLNK_INSTALLED_DEPDIRS.${_BLNK_PKGVAR}:Q}
+.endif
+.for _dir_ in ${_BLNK_INSTALLED_DEPDIRS.${_BLNK_PKGVAR}}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+.  include "${_dir_}/buildlink3.mk"
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+.endfor
+
 # For each package we use, check whether we are using the built-in
 # version of the package or if we are using the pkgsrc version.  The
 # necessary logic is encapsulated in a package's builtin.mk file, which
@@ -110,7 +206,7 @@ USE_BUILTIN.${_pkg_}?=	no
 #
 .  if defined(BUILDLINK_PKGSRCDIR.${_pkg_})
 .    if exists(${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk)
-.       include "${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk"
+.      include "${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk"
 .    endif
 .  endif
 .endfor
@@ -118,6 +214,14 @@ USE_BUILTIN.${_pkg_}?=	no
 # Default fall-through for packages that don't provide a builtin.mk.
 .for _pkg_ in ${BUILDLINK_PACKAGES}
 USE_BUILTIN.${_pkg_}?=	no
+.endfor
+
+# Default value for BUILDLINK_PKGBASE.<pkg>.  This is here to set the
+# default for any package added to BUILDLINK_PACKAGES by any of the
+# above code.
+#
+.for _pkg_ in ${BUILDLINK_PACKAGES}
+BUILDLINK_PKGBASE.${_pkg_}?=	${_pkg_}
 .endfor
 
 # Set IGNORE_PKG.<pkg> if <pkg> is the current package we're building.

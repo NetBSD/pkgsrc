@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/03/05 19:25:09 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/03/18 09:12:09 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 POSTGRESQL_LIB_BUILDLINK3_MK:=	${POSTGRESQL_LIB_BUILDLINK3_MK}+
@@ -14,9 +14,8 @@ BUILDLINK_PACKAGES+=	postgresql-lib
 BUILDLINK_DEPENDS.postgresql-lib+=	postgresql-lib>=7.3.1
 BUILDLINK_PKGSRCDIR.postgresql-lib?=	../../databases/postgresql-lib
 BUILDLINK_INCDIRS.postgresql-lib?=	include/postgresql
+.endif	# POSTGRESQL_LIB_BUILDLINK3_MK
 
 .include "../../security/openssl/buildlink3.mk"
-
-.endif	# POSTGRESQL_LIB_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

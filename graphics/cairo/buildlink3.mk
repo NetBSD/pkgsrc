@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/03/05 19:25:12 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/03/18 09:12:11 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CAIRO_BUILDLINK3_MK:=	${CAIRO_BUILDLINK3_MK}+
@@ -17,12 +17,11 @@ BUILDLINK_PKGSRCDIR.cairo?=	../../graphics/cairo
 BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
 BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
 BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
+.endif	# CAIRO_BUILDLINK3_MK
 
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libpixman/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
-
-.endif	# CAIRO_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

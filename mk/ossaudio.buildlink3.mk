@@ -1,4 +1,4 @@
-# $NetBSD: ossaudio.buildlink3.mk,v 1.1 2004/01/03 23:06:44 jlam Exp $
+# $NetBSD: ossaudio.buildlink3.mk,v 1.2 2004/03/18 09:12:13 jlam Exp $
 #
 # This file should be included by Makefiles for packages that use OSS.
 # By checking the value of HAVE_OSS after including this file, it's possible
@@ -11,50 +11,50 @@
 #	CONFIGURE_ENV+=		ac_cv_libossaudio__oss_ioctl=no
 #	.endif
 #
-.if !defined(OSSAUDIO_BUILDLINK3_MK)
-OSSAUDIO_BUILDLINK3_MK=	# defined
+OSSAUDIO_BUILDLINK3_MK:=	${OSSAUDIO_BUILDLINK3_MK}+
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(USE_OSS)
+.if !empty(OSSAUDIO_BUILDLINK3_MK:M+)
+.  if defined(USE_OSS)
 BUILD_DEFS+=	USE_OSS
-.endif
-
-.if !defined(_HAVE_OSS)
+.  endif
+.  if !defined(_HAVE_OSS)
 _HAVE_OSS!=	if ${PKG_INFO} -qe oss; then ${ECHO} YES; else ${ECHO} NO; fi
 MAKEFLAGS+=	_HAVE_OSS=${_HAVE_OSS}
-.endif
-
+.  endif
 HAVE_OSS?=	${_HAVE_OSS}
+.endif	# OSSAUDIO_BUILDLINK3_MK
 
 .if defined(HAVE_OSS) && (${HAVE_OSS} == "YES")
 .  include "../../audio/oss/buildlink3.mk"
 .else
-BUILDLINK_PREFIX.oss=		/usr
+BUILDLINK_PREFIX.oss=	/usr
 .  if ${OPSYS} == "NetBSD"
-LIBOSSAUDIO?=			-lossaudio
-DEVOSSAUDIO?=			/dev/audio
-DEVOSSSOUND?=			/dev/sound
+LIBOSSAUDIO?=		-lossaudio
+DEVOSSAUDIO?=		/dev/audio
+DEVOSSSOUND?=		/dev/sound
 .  elif ${OPSYS} == "Linux"
-LIBOSSAUDIO?=			# empty
-DEVOSSAUDIO?=			/dev/dsp
-DEVOSSSOUND?=			/dev/dsp
+LIBOSSAUDIO?=		# empty
+DEVOSSAUDIO?=		/dev/dsp
+DEVOSSSOUND?=		/dev/dsp
 .  else
-LIBOSSAUDIO?=			# empty
-DEVOSSAUDIO?=			/dev/audio
-DEVOSSSOUND?=			/dev/sound
+LIBOSSAUDIO?=		# empty
+DEVOSSAUDIO?=		/dev/audio
+DEVOSSSOUND?=		/dev/sound
 .  endif
 .endif
 
-CONFIGURE_ENV+=			LIBOSSAUDIO="${LIBOSSAUDIO}"
-CONFIGURE_ENV+=			DEVOSSAUDIO="${DEVOSSAUDIO}"
-CONFIGURE_ENV+=			DEVOSSSOUND="${DEVOSSSOUND}"
+.if !empty(OSSAUDIO_BUILDLINK3_MK:M+)
+CONFIGURE_ENV+=		LIBOSSAUDIO="${LIBOSSAUDIO}"
+CONFIGURE_ENV+=		DEVOSSAUDIO="${DEVOSSAUDIO}"
+CONFIGURE_ENV+=		DEVOSSSOUND="${DEVOSSSOUND}"
 
-MAKE_ENV+=			LIBOSSAUDIO="${LIBOSSAUDIO}"
-MAKE_ENV+=			DEVOSSAUDIO="${DEVOSSAUDIO}"
-MAKE_ENV+=			DEVOSSSOUND="${DEVOSSSOUND}"
+MAKE_ENV+=		LIBOSSAUDIO="${LIBOSSAUDIO}"
+MAKE_ENV+=		DEVOSSAUDIO="${DEVOSSAUDIO}"
+MAKE_ENV+=		DEVOSSSOUND="${DEVOSSSOUND}"
 
-BUILDLINK_TARGETS+=		buildlink-ossaudio-soundcard-h
+BUILDLINK_TARGETS+=	buildlink-ossaudio-soundcard-h
 
 # Many programs expect <soundcard.h> to be found as <sys/soundcard.h>.
 # Also include <sys/ioctl.h> prior to include <soundcard.h> since we need
@@ -81,5 +81,4 @@ buildlink-ossaudio-soundcard-h:
 		${MKDIR} `${DIRNAME} $${mach_soundcard_h}`;		\
 		${LN} -s $${sys_soundcard_h} $${mach_soundcard_h};	\
 	fi
-
 .endif	# OSSAUDIO_BUILDLINK3_MK

@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.2 2004/03/11 08:33:52 jlam Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.3 2004/03/18 09:12:13 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB implementation.  db.buildlink3.mk will:
@@ -19,7 +19,7 @@ BDB_BUILDLINK3_MK:=	${BDB_BUILDLINK3_MK}+
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(BDB_BUILDLINK3_MK)
+.if !empty(BDB_BUILDLINK3_MK:M+)
 BDB_DEFAULT?=	# empty
 BDB_ACCEPTED?=	${_BDB_PKGS}
 
@@ -68,21 +68,21 @@ _BDB_TRANSFORM=		l:db:db1
 .    endif
 .  endif
 
-.  if !defined(_BDB)
+.  if !defined(_BDB_TYPE)
 #
 # Prefer the default one if it's accepted,...
 #
 .    if !empty(_BDB_DEFAULT) && \
 	defined(_BDB_OK.${_BDB_DEFAULT}) && \
 	!empty(_BDB_OK.${_BDB_DEFAULT}:M[yY][eE][sS])
-_BDB=		${_BDB_DEFAULT}
+_BDB_TYPE=	${_BDB_DEFAULT}
 .    endif
 #
 # ...otherwise, use one of the installed Berkeley DB packages,...
 #
 .    for _bdb_ in ${_BDB_ACCEPTED}
 .      if !empty(_BDB_INSTALLED.${_bdb_}:M[yY][eE][sS])
-_BDB?=		${_bdb_}
+_BDB_TYPE?=	${_bdb_}
 .      else
 _BDB_FIRSTACCEPTED?=	${_bdb_}
 .      endif
@@ -91,19 +91,21 @@ _BDB_FIRSTACCEPTED?=	${_bdb_}
 # ...otherwise, just use the first accepted Berkeley DB package.
 #
 .    if defined(_BDB_FIRSTACCEPTED)
-_BDB?=		${_BDB_FIRSTACCEPTED}
+_BDB_TYPE?=	${_BDB_FIRSTACCEPTED}
 .    endif
-_BDB?=		none
-MAKEFLAGS+=	_BDB=${_BDB}
+_BDB_TYPE?=	none
+MAKEFLAGS+=	_BDB_TYPE=${_BDB_TYPE}
 .  endif
 
-BDB_TYPE=	${_BDB}
+BDB_TYPE=	${_BDB_TYPE}
 BUILD_DEFS+=	BDB_TYPE
 
-.  if ${BDB_TYPE} == "none"
+.endif	# BDB_BUILDLINK3_MK
+
+.if ${BDB_TYPE} == "none"
 PKG_FAIL_REASON=	"No acceptable Berkeley DB implementation found."
-.  else
-.    if ${BDB_TYPE} == "native"
+.else
+.  if ${BDB_TYPE} == "native"
 IS_BUILTIN.db-native=		yes
 USE_BUILTIN.db-native=		yes
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Ndb-native}
@@ -111,17 +113,15 @@ BUILDLINK_PACKAGES+=		db-native
 BUILDLINK_INCDIRS.db-native?=	${_BDB_INCDIRS}
 BUILDLINK_TRANSFORM?=		${_BDB_TRANSFORM}
 BDBBASE=	${BUILDLINK_PREFIX.db-native}
-.    elif ${BDB_TYPE} == "db4"
+.  elif ${BDB_TYPE} == "db4"
 BDBBASE=	${BUILDLINK_PREFIX.db4}
-.      include "../../databases/db4/buildlink3.mk"
-.    elif ${BDB_TYPE} == "db3"
+.    include "../../databases/db4/buildlink3.mk"
+.  elif ${BDB_TYPE} == "db3"
 BDBBASE=	${BUILDLINK_PREFIX.db3}
-.      include "../../databases/db3/buildlink3.mk"
-.    elif ${BDB_TYPE} == "db"
+.    include "../../databases/db3/buildlink3.mk"
+.  elif ${BDB_TYPE} == "db"
 BDBBASE=	${BUILDLINK_PREFIX.db2}
-.      include "../../databases/db/buildlink3.mk"
-.    endif
+.    include "../../databases/db/buildlink3.mk"
 .  endif
+.endif
 BUILD_DEFS+=	BDBBASE
-
-.endif	# BDB_BUILDLINK3_MK
