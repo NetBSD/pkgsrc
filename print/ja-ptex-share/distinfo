@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/15 20:02:49 kei Exp $
+
+SHA1 (teTeX/ptex-texmf-2.1.tar.gz) = 15668bf657db7b1447004aeb548977e29d0a28a9
+Size (teTeX/ptex-texmf-2.1.tar.gz) = 1864219 bytes
+SHA1 (teTeX/jis.tar.gz) = f71de759a8c518603c6ab612da57f46c3a5b9149
+Size (teTeX/jis.tar.gz) = 347201 bytes
+SHA1 (teTeX/nmin-ngoth.tar.gz) = 3bf7bdcf492b115d333e79d3914ba23a6b84e7f4
+Size (teTeX/nmin-ngoth.tar.gz) = 524406 bytes
+SHA1 (teTeX/standard.tar.gz) = 2654b20b5125a0eea2c22ca4cdc4cbcd459434ca
+Size (teTeX/standard.tar.gz) = 1043476 bytes
+SHA1 (teTeX/morisawa.tar.gz) = 7014f652092b52138588ad1e27d639eb400a9c55
+Size (teTeX/morisawa.tar.gz) = 653674 bytes
