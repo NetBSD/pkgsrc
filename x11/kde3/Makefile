@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 13:15:50 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/05 09:00:51 skrll Exp $
 
 DISTNAME=	kde-3.0.1
 CATEGORIES=	x11 kde
@@ -14,7 +14,7 @@ COMMENT=	"meta-package" for the KDE integrated X11 desktop
 DEPENDS+=	kdeadmin-3.0.1:../../misc/kdeadmin3
 DEPENDS+=	kdeedu-3.0.1:../../misc/kdeedu3
 DEPENDS+=	kdegames-3.0.1:../../games/kdegames3
-#DEPENDS+=	kdegraphics-3.0.1:../../graphics/kdegraphics3
+DEPENDS+=	kdegraphics-3.0.1:../../graphics/kdegraphics3
 DEPENDS+=	kdemultimedia-3.0.1:../../audio/kdemultimedia3
 DEPENDS+=	kdenetwork-3.0.1:../../net/kdenetwork3
 DEPENDS+=	kdepim-3.0.1:../../misc/kdepim3
