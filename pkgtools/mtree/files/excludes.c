@@ -1,4 +1,4 @@
-/*	$NetBSD: excludes.c,v 1.1.1.1 2003/03/31 08:51:11 grant Exp $	*/
+/*	$NetBSD: excludes.c,v 1.2 2003/09/05 04:38:47 grant Exp $	*/
 
 /*
  * Copyright 2000 Massachusetts Institute of Technology
@@ -29,23 +29,40 @@
  * SUCH DAMAGE.
  */
 
-#include "nbcompat.h"
-
-#ifdef HAVE_SYS_CDEFS_H
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#include <nbcompat.h>
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
 #if defined(__RCSID) && !defined(lint)
-__RCSID("$NetBSD: excludes.c,v 1.1.1.1 2003/03/31 08:51:11 grant Exp $");
+__RCSID("$NetBSD: excludes.c,v 1.2 2003/09/05 04:38:47 grant Exp $");
 #endif
 
+#if HAVE_SYS_TYPES_H
 #include <sys/types.h>
+#endif
+#if HAVE_SYS_QUEUE_H
+#include <sys/queue.h>
+#endif
 
+#if HAVE_FNMATCH_H
 #include <fnmatch.h>
+#endif
+#if HAVE_STDIO_H
 #include <stdio.h>
+#endif
+#if HAVE_STDLIB_H
 #include <stdlib.h>
+#endif
+#if HAVE_STRING_H
 #include <string.h>
+#endif
+#if HAVE_TIME_H
 #include <time.h>
+#endif
 
 #include "extern.h"
 
