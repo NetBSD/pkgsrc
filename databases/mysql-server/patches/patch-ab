@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/05/06 23:37:00 tv Exp $
+
+--- dbug/dbug.c.orig	Thu May  6 13:03:41 1999
++++ dbug/dbug.c	Thu May  6 13:03:52 1999
+@@ -317,7 +317,6 @@
+ 
+ #if defined(unix) || defined(xenix) || defined(VMS)
+ # define Delay(A) sleep((uint) A)
+-IMPORT unsigned sleep ();		/* Pause for given number of seconds */
+ #else
+ #if defined(AMIGA)
+ IMPORT int Delay ();			/* Pause for given number of ticks */

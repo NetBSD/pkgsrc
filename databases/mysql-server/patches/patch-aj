@@ -1,0 +1,20 @@
+$NetBSD: patch-aj,v 1.1.1.1 1999/05/06 23:37:01 tv Exp $
+--- mit-pthreads/pthreads/fd.c.orig	Tue Jan 13 06:28:04 1998
++++ mit-pthreads/pthreads/fd.c	Mon Dec 28 23:50:16 1998
+@@ -44,6 +44,7 @@
+ 
+ #include <pthread.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+@@ -702,7 +703,7 @@
+  */
+ off_t lseek(int fd, off_t offset, int whence)
+ {
+-	int ret;
++	off_t ret;
+ 
+ 	 if ((ret = fd_lock(fd, FD_RDWR, NULL)) == OK) {
+      	ret = fd_table[fd]->ops->seek(fd_table[fd]->fd,
