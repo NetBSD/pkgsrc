@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/25 12:19:17 markd Exp $
+bin/kscope
+share/doc/kde/HTML/en/kscope/call_tree.png
+share/doc/kde/HTML/en/kscope/common
+share/doc/kde/HTML/en/kscope/frontend.png
+share/doc/kde/HTML/en/kscope/index.cache.bz2
+share/doc/kde/HTML/en/kscope/index.docbook
+share/doc/kde/HTML/en/kscope/main_window.png
+share/doc/kde/HTML/en/kscope/options.png
+share/doc/kde/HTML/en/kscope/project_files.png
+share/doc/kde/HTML/en/kscope/project_new.png
+share/doc/kde/HTML/en/kscope/project_open.png
+share/doc/kde/HTML/en/kscope/query_dlg.png
+share/kde/applnk/Utilities/kscope.desktop
+share/kde/apps/kscope/kscopeui.rc
+share/kde/apps/kscope/pics/file_ro.png
+share/kde/apps/kscope/pics/file_rw.png
+share/kde/apps/kscope/pics/file_save.png
+share/kde/apps/kscope/pics/query_locked.png
+share/kde/apps/kscope/pics/query_unlocked.png
+share/kde/config/kscoperc
+share/kde/icons/hicolor/16x16/apps/kscope.png
+share/kde/icons/hicolor/32x32/apps/kscope.png
+share/kde/icons/locolor/16x16/apps/kscope.png
+share/kde/icons/locolor/32x32/apps/kscope.png
+@dirrm share/kde/apps/kscope/pics
+@dirrm share/kde/apps/kscope
+@dirrm share/doc/kde/HTML/en/kscope
