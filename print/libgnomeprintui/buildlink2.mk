@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/10/30 07:36:12 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/12/24 06:10:23 wiz Exp $
 
 .if !defined(LIBGNOMEPRINTUI_BUILDLINK2_MK)
 LIBGNOMEPRINTUI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libgnomeprintui
-BUILDLINK_DEPENDS.libgnomeprintui?=	libgnomeprintui>1.116.0
+BUILDLINK_DEPENDS.libgnomeprintui?=	libgnomeprintui>=1.116.0nb2
 BUILDLINK_PKGSRCDIR.libgnomeprintui?=	../../print/libgnomeprintui
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.libgnomeprintui=libgnomeprintui
