@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.938 2002/12/29 15:11:51 veego Exp $
+$NetBSD: CHANGES,v 1.939 2002/12/29 16:27:32 atatat Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4305,3 +4305,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gimp-base to 1.2.3nb4 [jmmv 2002-12-28]
 	Deleted agqt [hubertf 2002-12-29]
 	Updated ethereal to 0.9.8nb1 [veego 2002-12-29]
+	Updated pkgdepgraph to 1.2 [atatat 2002-12-29]
