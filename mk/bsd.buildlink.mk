@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.39 2001/10/05 02:31:18 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.40 2001/10/05 21:32:59 tron Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -121,11 +121,6 @@ BUILDLINK_DIR?=		${WRKDIR}/.buildlink
 .if !defined(BUILDLINK_CPPFLAGS) || !defined(BUILDLINK_LDFLAGS)
 BUILDLINK_CPPFLAGS=	-I${BUILDLINK_DIR}/include
 BUILDLINK_LDFLAGS=	-L${BUILDLINK_DIR}/lib
-
-CFLAGS:=		${BUILDLINK_CPPFLAGS} ${CFLAGS}
-CXXFLAGS:=		${BUILDLINK_CPPFLAGS} ${CXXFLAGS}
-CPPFLAGS:=		${BUILDLINK_CPPFLAGS} ${CPPFLAGS}
-LDFLAGS:=		${BUILDLINK_LDFLAGS} ${LDFLAGS}
 
 CONFIGURE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 CONFIGURE_ENV+=		BUILDLINK_CPPFLAGS="${BUILDLINK_CPPFLAGS}"
