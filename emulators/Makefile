@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.108 2004/07/19 20:30:12 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2004/07/23 19:02:10 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
 
 SUBDIR+=	BasiliskII
+SUBDIR+=	Cygne-SDL
 SUBDIR+=	NeoPop-SDL
 SUBDIR+=	aranym
 SUBDIR+=	arcem
