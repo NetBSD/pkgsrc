@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/17 21:45:06 grant Exp $
+# $NetBSD: Makefile,v 1.18 2003/08/26 02:30:28 jlam Exp $
 
 PERL5_SNAPSHOT=	# empty
 PERL5_VERS=	5.8.0
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	-Dscriptdir="${PREFIX}/bin"
 CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
 CONFIGURE_ARGS+=	-Doptimize="${CFLAGS}"
 CONFIGURE_ARGS+=	-Dcc="${CC:T}"
+CONFIGURE_ARGS+=	-Dinstallstyle="lib/perl5"
 CONFIGURE_ARGS+=	-Ui_malloc
 CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
@@ -215,6 +216,7 @@ post-install:
 		echo PERL5_SITEARCH=$$installsitearch >>${WRKDIR}/bsd.perl.mk
 	eval `${PERL5} -V:installarchlib 2>/dev/null` && \
 		echo PERL5_ARCHLIB=$$installarchlib >>${WRKDIR}/bsd.perl.mk
+	${INSTALL_DATA_DIR} ${PREFIX}/share/mk
 	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
 
 .if ${MACHINE_ARCH} == "alpha"
