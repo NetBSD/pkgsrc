@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/18 17:46:31 peter Exp $
+
+SHA1 (crawl-0.4.tar.gz) = b53be27b572ba6a88ab80243b177873aed0b314b
+Size (crawl-0.4.tar.gz) = 111084 bytes
+SHA1 (patch-aa) = 874cb3b73cbc56e320c58039ecc9fd98ab258a0b
+SHA1 (patch-ab) = 9c934c5c7f03e4acbd02222a30267aded4d01e26
+SHA1 (patch-ac) = 079c792e55fa3e60dead7ff9c1c46132d01a00d4
