@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.13 2000/08/23 21:33:53 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2000/10/22 23:11:48 tsarna Exp $
 #
 
-DISTNAME=	Zope-2.1.4-src
-PKGNAME=	zope-2.1.4
+DISTNAME=	Zope-2.2.2-src
+PKGNAME=	zope-2.2.2
 CATEGORIES=	www
-MASTER_SITES=   http://www.zope.org/Products/Zope/2.1.4/
+MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.zope.org/
 
-DEPENDS+=	python-1.5.2:../../lang/python
-DEPENDS+=	py-extclass>=2.1.4:../../lang/py-extclass
-DEPENDS+=	py-dtml-2.2.0:../../textproc/py-dtml
+DEPENDS+=	py-extclass>=2.2.2:../../lang/py-extclass
+DEPENDS+=	py-dtml>=2.2.2:../../textproc/py-dtml
+
+DIST_SUBDIR=	python
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
@@ -31,7 +32,7 @@ do-install:
 	${MKDIR} ${ZOPEDIR}
 	(cd ${WRKSRC}; ${PAX} -r -w -s'/.*\.[cho]$$//' . ${ZOPEDIR})
 	${PREFIX}/bin/python \
-		${PREFIX}/lib/python1.5/compileall.py ${ZOPEDIR}
+		${PREFIX}/lib/python2.0/compileall.py ${ZOPEDIR}
 	${CHMOD} -R a+rX ${ZOPEDIR}
 	(cd ${PREFIX}; ${FIND} lib/zope \( -type f -o -type l \) -print >>${PLIST_SRC})
 	(cd ${PREFIX}; ${FIND} -d lib/zope -type d -print | \
