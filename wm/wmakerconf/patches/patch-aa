@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/15 23:25:17 wiz Exp $
+
+--- configure.orig	Fri Dec  3 16:34:48 1999
++++ configure	Sun Jan  2 01:48:50 2000
+@@ -1212,8 +1212,8 @@
+ fi
+ 
+ # Add some common include and library path's
+-CPPFLAGS="$CPPFLAGS -I/usr/local/include -I/usr/X11/include/ -I/usr/X11R6/include/ -I/usr/X11R6/include/X11 -I/usr/openwin/include -I$wprefix/include"
+-LDFLAGS="$LDFLAGS -L/usr/local/lib -L/usr/X11/lib -L/usr/X11R6/lib -L/usr/openwin/lib -L$wprefix/lib"
++CPPFLAGS="$CPPFLAGS -I$wprefix/include"
++LDFLAGS="$LDFLAGS -L$wprefix/lib"
+ 
+ # Checks for socket and nsl library, required on Solaris systems
+ # (reported by Peter da Silva <peter@baileynm.com>)
