@@ -1,3 +1,5 @@
+$NetBSD: patch-af,v 1.2 2003/11/01 08:28:47 grant Exp $
+
 --- src/plugin_xmms/Makefile.in.orig	2003-10-31 14:23:56.000000000 +1100
 +++ src/plugin_xmms/Makefile.in	2003-10-31 14:24:25.000000000 +1100
 @@ -169,10 +169,10 @@
