@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2000/10/15 18:08:01 rh Exp $
+# $NetBSD: Makefile,v 1.39 2000/10/15 18:49:02 rh Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
@@ -18,6 +18,7 @@
     SUBDIR += mysql-server
     SUBDIR += openldap
     SUBDIR += oraedit
+    SUBDIR += p5-DBD-Sybase
     SUBDIR += p5-DBD-mysql
     SUBDIR += p5-DBD-postgresql
     SUBDIR += p5-DBI
