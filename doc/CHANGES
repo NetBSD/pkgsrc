@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.265 2002/10/15 16:19:29 tsarna Exp $
+$NetBSD: CHANGES,v 1.266 2002/10/15 23:19:12 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3269,3 +3269,9 @@ Changes to the packages collection and infrastructure in 2002:
 	Added rdiff-backup-0.10.1 [agc 2002-10-15]
 	Added p5-DNS-ZoneParse-0.82 [cjep 2002-10-15]
 	Updated python22 to 2.2.2 [tsarna 2002-10-15]
+	Updated prc-tools to 2.2 [dillo 2002-10-15]
+	Updated palmos-includes to 5.0 [dillo 2002-10-15]
+	Removed prc-tools-base [dillo 2002-10-15]
+	Removed prc-tools-binutils [dillo 2002-10-15]
+	Removed prc-tools-gcc [dillo 2002-10-15]
+	Removed prc-tools-gdb [dillo 2002-10-15]
