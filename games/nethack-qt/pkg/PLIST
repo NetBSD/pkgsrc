@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/27 13:06:51 garbled Exp $
+bin/nethack-qt
+share/nethackdir/tiles.xpm
