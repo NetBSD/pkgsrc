@@ -1,4 +1,4 @@
-# $NetBSD: marshall,v 1.7 2004/01/15 09:59:29 jlam Exp $
+# $NetBSD: marshall,v 1.8 2004/02/09 04:35:12 jlam Exp $
 #
 # Handle cases where multiple consecutive arguments must be processed
 # together, either by merging the arguments or "skipping" the extra
@@ -30,12 +30,17 @@ case $arg in
 	skipargs=1
 	;;
 #
-# Darwin's special GCC uses "-install_name /path/shlib" to indicate
-# the final installed location for the named shared library, and we
-# need to protect the full path from "/path/shlib" -> "-L/path -lshlib"
+# Darwin's special GCC uses:
+#
+#	-dylib_file /path/shlib:/path2/shlib
+#	-dylib_install_name /path/shlib
+#	-install_name /path/shlib
+#
+# to pass the installed locations for the shared libraries to the linker,
+# and we need to protect the full path from "/path/shlib" -> "-L/path -lshlib"
 # transformation.
 #
--install_name)
+-dylib_file|-dylib_install_name|-install_name)
 	skipargs=1
 	;;
 esac
