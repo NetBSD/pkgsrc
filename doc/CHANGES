@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3702 2003/10/18 08:13:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.3703 2003/10/18 08:19:37 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4216,3 +4216,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated loudmouth to 0.14nb1 [jmmv 2003-10-18]
 	Updated dovecot to 0.99.10nb2 [jmmv 2003-10-18]
 	Updated gossip to 0.5nb2 [jmmv 2003-10-18]
+	Updated gaim to 0.71 [jmmv 2003-10-18]
