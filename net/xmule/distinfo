@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.6 2003/10/18 11:16:36 jmmv Exp $
+$NetBSD: distinfo,v 1.7 2003/12/03 13:04:30 jmmv Exp $
 
-SHA1 (xmule-1.6.1.tar.bz2) = 15d9d97b276fba3018deaa47589e19586eb26ba6
-Size (xmule-1.6.1.tar.bz2) = 1250111 bytes
+SHA1 (xmule-1.7.1.tar.bz2) = fe83f7cb540c5aab0cdfe956c455b29a180e85ad
+Size (xmule-1.7.1.tar.bz2) = 1479298 bytes
+SHA1 (patch-aa) = f704fcd8f0e29a825f6f019dffec42da12e0b673
