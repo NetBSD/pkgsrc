@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:05:11 skrll Exp $
+$NetBSD: distinfo,v 1.3 2003/03/31 16:26:20 bouyer Exp $
 
 SHA1 (textutils-2.0.tar.gz) = c36e37f77bac412c6e245e5ba41fc2b2f9ed75ac
 Size (textutils-2.0.tar.gz) = 1532425 bytes
+SHA1 (patch-aa) = 39044295263886354afae87e626094f725bf5fda
 SHA1 (patch-ab) = 73318127866d2026ed70ff7dda60b56e3734ef1f
