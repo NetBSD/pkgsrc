@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: apache.sh,v 1.7 2000/09/20 06:08:42 jlam Exp $
+# $NetBSD: apache.sh,v 1.8 2000/10/13 21:46:32 jlam Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -35,7 +35,7 @@ stop)
 	;;
 restart)
 	( $0 stop )
-	sleep 1
+	sleep 5
 	$0 start
 	;;
 *)
