@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6229 2004/06/19 17:41:31 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6230 2004/06/20 02:36:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2961,3 +2961,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xconq to 7.4.1nb3 [minskim 2004-06-18]
 	Updated t1lib to 5.0.2nb2 [markd 2004-06-19]
 	Updated squid to 2.5.5nb5 [taca 2004-06-19]
+	Updated ffmpeg to 0.4.8nb1 [xtraeme 2004-06-20]
