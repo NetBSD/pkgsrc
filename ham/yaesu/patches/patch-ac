@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
+
+--- config.h.orig	Sat Apr 13 21:06:53 2002
++++ config.h
+@@ -1,10 +1,10 @@
+ /*
+  *  This is the port the interface will be on.
+- *  Remember, ttyS0 is DOS' com1, ttyS1 is com2 and so on.
++ *  Remember, ttyE0 is DOS' com1, ttyE1 is com2 and so on.
+  *  This will be configurable at runtime via a config file.
+  */
+ 
+-/* #define PORT "/dev/ttyS3"  */
++/* #define PORT "/dev/ttyE3"  */
+ 
+ /*
+  *  This should never have to be changed, it is the pacing byte.
