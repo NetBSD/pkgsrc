@@ -1,0 +1,167 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/10 13:56:57 simonb Exp $
+bin/gforth-0.4.0
+bin/gforth
+bin/gforthmi-0.4.0
+bin/gforthmi
+@unexec install-info --delete
+info/gforth.info
+info/gforth.info-1
+info/gforth.info-2
+info/gforth.info-3
+info/gforth.info-4
+info/gforth.info-5
+info/gforth.info-6
+info/gforth.info-7
+info/gforth.info-8
+@exec install-info
+lib/gforth/0.4.0/gforth.fi
+man/man1/gforth.1
+share/gforth/0.4.0/hash.fs
+share/gforth/0.4.0/kernel/aliases0.fs
+share/gforth/0.4.0/kernel/aliases.fs
+share/gforth/0.4.0/kernel/args.fs
+share/gforth/0.4.0/kernel/cond.fs
+share/gforth/0.4.0/kernel/cond-old.fs
+share/gforth/0.4.0/kernel/errore.fs
+share/gforth/0.4.0/kernel/files.fs
+share/gforth/0.4.0/kernel/require.fs
+share/gforth/0.4.0/kernel/paths.fs
+share/gforth/0.4.0/kernel/kernel.fs
+share/gforth/0.4.0/kernel/main.fs
+share/gforth/0.4.0/kernel/prim0.fs
+share/gforth/0.4.0/kernel/special.fs
+share/gforth/0.4.0/kernel/tools.fs
+share/gforth/0.4.0/kernel/toolsext.fs
+share/gforth/0.4.0/kernel/vars.fs
+share/gforth/0.4.0/kernel/accept.fs
+share/gforth/0.4.0/kernel/basics.fs
+share/gforth/0.4.0/kernel/int.fs
+share/gforth/0.4.0/kernel/comp.fs
+share/gforth/0.4.0/kernel/io.fs
+share/gforth/0.4.0/kernel/license.fs
+share/gforth/0.4.0/kernel/nio.fs
+share/gforth/0.4.0/kernel/saccept.fs
+share/gforth/0.4.0/kernel/doers.fs
+share/gforth/0.4.0/kernel/getdoers.fs
+share/gforth/0.4.0/doc/makedoc.fs
+share/gforth/0.4.0/asm/README
+share/gforth/0.4.0/asm/bitmask.fs
+share/gforth/0.4.0/asm/numref.fs
+share/gforth/0.4.0/asm/basic.fs
+share/gforth/0.4.0/asm/generic.fs
+share/gforth/0.4.0/asm/target.fs
+share/gforth/0.4.0/ec/README
+share/gforth/0.4.0/ec/mirror.fs
+share/gforth/0.4.0/ec/mirrors.fs
+share/gforth/0.4.0/ec/shex.fs
+share/gforth/0.4.0/ec/builttag.fs
+share/gforth/0.4.0/ec/dotx.fs
+share/gforth/0.4.0/ec/mirrored.fs
+share/gforth/0.4.0/ec/nesting.fs
+share/gforth/0.4.0/test/tester.fs
+share/gforth/0.4.0/test/coretest.fs
+share/gforth/0.4.0/test/postpone.fs
+share/gforth/0.4.0/test/dbltest.fs
+share/gforth/0.4.0/test/other.fs
+share/gforth/0.4.0/test/checkans.fs
+share/gforth/0.4.0/compat/README
+share/gforth/0.4.0/compat/anslocal.fs
+share/gforth/0.4.0/compat/assert.fs
+share/gforth/0.4.0/compat/control.fs
+share/gforth/0.4.0/compat/defer.fs
+share/gforth/0.4.0/compat/exception.fs
+share/gforth/0.4.0/compat/loops.fs
+share/gforth/0.4.0/compat/required.fs
+share/gforth/0.4.0/compat/struct.fs
+share/gforth/0.4.0/compat/vocabulary.fs
+share/gforth/0.4.0/chains.fs
+share/gforth/0.4.0/cross.fs
+share/gforth/0.4.0/search.fs
+share/gforth/0.4.0/assert.fs
+share/gforth/0.4.0/blocked.fb
+share/gforth/0.4.0/blocks.fs
+share/gforth/0.4.0/bufio.fs
+share/gforth/0.4.0/debug.fs
+share/gforth/0.4.0/debugs.fs
+share/gforth/0.4.0/savesys.fs
+share/gforth/0.4.0/environ.fs
+share/gforth/0.4.0/errors.fs
+share/gforth/0.4.0/extend.fs
+share/gforth/0.4.0/float.fs
+share/gforth/0.4.0/glocals.fs
+share/gforth/0.4.0/history.fs
+share/gforth/0.4.0/intcomp.fs
+share/gforth/0.4.0/locals.fs
+share/gforth/0.4.0/look.fs
+share/gforth/0.4.0/see.fs
+share/gforth/0.4.0/see-ext.fs
+share/gforth/0.4.0/source.fs
+share/gforth/0.4.0/startup.fs
+share/gforth/0.4.0/struct.fs
+share/gforth/0.4.0/stuff.fs
+share/gforth/0.4.0/tasker.fs
+share/gforth/0.4.0/termsize.fs
+share/gforth/0.4.0/vt100.fs
+share/gforth/0.4.0/vt100key.fs
+share/gforth/0.4.0/wordinfo.fs
+share/gforth/0.4.0/lib.fs
+share/gforth/0.4.0/sieve.fs
+share/gforth/0.4.0/add.fs
+share/gforth/0.4.0/ans-report.fs
+share/gforth/0.4.0/ansi.fs
+share/gforth/0.4.0/answords.fs
+share/gforth/0.4.0/code.fs
+share/gforth/0.4.0/colorize.fs
+share/gforth/0.4.0/comp-i.fs
+share/gforth/0.4.0/doskey.fs
+share/gforth/0.4.0/ds2texi.fs
+share/gforth/0.4.0/envos.fs
+share/gforth/0.4.0/envos.dos
+share/gforth/0.4.0/envos.os2
+share/gforth/0.4.0/etags.fs
+share/gforth/0.4.0/filedump.fs
+share/gforth/0.4.0/fi2c.fs
+share/gforth/0.4.0/glosgen.fs
+share/gforth/0.4.0/gray.fs
+share/gforth/0.4.0/mach16b.fs
+share/gforth/0.4.0/mach16l.fs
+share/gforth/0.4.0/mach32b.fs
+share/gforth/0.4.0/mach32l.fs
+share/gforth/0.4.0/mach64b.fs
+share/gforth/0.4.0/mach64l.fs
+share/gforth/0.4.0/machpc.fs
+share/gforth/0.4.0/more.fs
+share/gforth/0.4.0/other.fs
+share/gforth/0.4.0/prims2x.fs
+share/gforth/0.4.0/random.fs
+share/gforth/0.4.0/table.fs
+share/gforth/0.4.0/tt.fs
+share/gforth/0.4.0/sokoban.fs
+share/gforth/0.4.0/unbuffered.fs
+share/gforth/0.4.0/wordsets.fs
+share/gforth/0.4.0/bubble.fs
+share/gforth/0.4.0/siev.fs
+share/gforth/0.4.0/matrix.fs
+share/gforth/0.4.0/fib.fs
+share/gforth/0.4.0/oof.fs
+share/gforth/0.4.0/oofsampl.fs
+share/gforth/0.4.0/prim
+share/gforth/0.4.0/objects.fs
+share/gforth/0.4.0/objexamp.fs
+share/gforth/0.4.0/mini-oof.fs
+share/gforth/0.4.0/moof-exm.fs
+share/gforth/0.4.0/kernl32l.fi
+share/gforth/0.4.0/TAGS
+share/gforth/site-forth/siteinit.fs
+@dirrm lib/gforth
+@dirrm lib/gforth/site-forth
+@dirrm lib/gforth/0.4.0
+@dirrm share/gforth/site-forth
+@dirrm share/gforth/0.4.0/compat
+@dirrm share/gforth/0.4.0/test
+@dirrm share/gforth/0.4.0/ec
+@dirrm share/gforth/0.4.0/asm
+@dirrm share/gforth/0.4.0/doc
+@dirrm share/gforth/0.4.0/kernel
+@dirrm share/gforth/0.4.0
+@dirrm share/gforth
