@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/12/12 12:13:34 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/24 00:16:10 wiz Exp $
 #
 
 DISTNAME=	gtetrinet-0.4.4
@@ -19,7 +19,7 @@ USE_PKGLOCALEDIR=	YES
 .include "../../mk/bsd.prefs.mk"
 
 # IPv6 support
-.if defined(USE_IPV6) && ${USE_IPV6} == YES
+.if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
