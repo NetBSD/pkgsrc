@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1108 2002/12/18 14:19:13 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1109 2002/12/21 15:06:04 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -2928,7 +2928,7 @@ lint:
 tarup:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${PACKAGES}/All/${PKGNAME}${PKG_SUFX};			\
-	${SETENV} PKG_DBDIR=${PKG_DBDIR} PKG_SUFX=${PKG_SUFX:S/.//}	\
+	${SETENV} PKG_DBDIR=${PKG_DBDIR} PKG_SUFX=${PKG_SUFX}		\
 		PKGREPOSITORY=${PACKAGES}/All				\
 		${LOCALBASE}/bin/pkg_tarup ${PKGNAME};			\
 	for CATEGORY in ${CATEGORIES}; do				\
