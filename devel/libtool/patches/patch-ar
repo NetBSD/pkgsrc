@@ -1,0 +1,15 @@
+$NetBSD: patch-ar,v 1.1 2003/12/11 22:15:30 reed Exp $
+
+--- libltdl/aclocal.m4.orig	Mon Dec  8 22:09:34 2003
++++ libltdl/aclocal.m4	Mon Dec  8 22:10:03 2003
+@@ -512,8 +512,8 @@
+   lt_cv_deplibs_check_method=pass_all
+   ;;
+ 
+-bsdi4*)
+-  lt_cv_deplibs_check_method=['file_magic ELF [0-9][0-9]*-bit [ML]SB (shared object|dynamic lib)']
++bsdi*)
++  lt_cv_deplibs_check_method=pass_all
+   lt_cv_file_magic_cmd='/usr/bin/file -L'
+   lt_cv_file_magic_test_file=/shlib/libc.so
+   ;;
