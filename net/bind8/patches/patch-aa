@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/11/12 18:23:53 rh Exp $
+
+--- src/port/netbsd/Makefile.set.orig	Thu Mar 19 14:50:33 1998
++++ src/port/netbsd/Makefile.set	Wed Jul 28 20:02:07 1999
+@@ -1,11 +1,13 @@
+ 'CC=cc'
+ 'CDEBUG=-O2 -g'
+-'DESTBIN=/usr/bin'
+-'DESTSBIN=/usr/sbin'
+-'DESTEXEC=/usr/libexec'
+-'DESTMAN=/usr/share/man'
+-'DESTHELP=/usr/share/misc'
+-'DESTETC=/etc'
++'DESTBIN=${PREFIX}/bin'
++'DESTLIB=${PREFIX}/bind/lib'
++'DESTINC=${PREFIX}/bind/include'
++'DESTSBIN=${PREFIX}/sbin'
++'DESTEXEC=${PREFIX}/libexec'
++'DESTMAN=${PREFIX}/share/man'
++'DESTHELP=${PREFIX}/share/misc'
++'DESTETC=${PREFIX}/etc'
+ 'DESTRUN=/var/run'
+ 'LEX=lex -I'
+ 'YACC=yacc -d'
