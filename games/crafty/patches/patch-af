@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/10/15 02:06:27 jlam Exp $
+
+--- utility.c.orig	Mon Aug 14 14:39:13 2000
++++ utility.c
+@@ -27,7 +27,7 @@
+ #if defined(UNIX)
+ #  include <unistd.h>
+ #  include <sys/types.h>
+-#  if !defined(LINUX) && !defined(ALPHA) && !defined(HP) && !defined(CRAY1) && !defined(FreeBSD) && !defined(__EMX__)
++#  if !defined(LINUX) && !defined(ALPHA) && !defined(HP) && !defined(CRAY1) && !defined(FreeBSD) && !defined(NetBSD) && !defined(__EMX__)
+ #    if defined(AIX)
+ #      include <sys/termio.h>
+ #      include <sys/select.h>

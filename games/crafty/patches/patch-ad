@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/10/15 02:06:27 jlam Exp $
+
+--- init.c.orig	Mon Aug 14 14:00:03 2000
++++ init.c
+@@ -276,7 +276,6 @@
+     position_lrn_file=fopen(log_filename,"r");
+     if (!position_lrn_file) {
+       position_lrn_file=fopen(log_filename,"a");
+-      fprintf(position_lrn_file,"position\n");
+     }
+     else {
+       fclose(position_lrn_file);
