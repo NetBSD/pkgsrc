@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.339 2003/03/05 10:14:21 wiz Exp $
+$NetBSD: TODO,v 1.340 2003/03/05 10:31:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -147,8 +147,7 @@ Suggested package updates
 	o imp-3.2
 	o inform-6.21.3 [pkg/19298]
 	o inn 2.3.4 [waiting for IPv6 patch]
-	o iozone-3.157
-	o iozone-3.147
+	o iozone-3.161
 	o jakarta-ant-1.5 [pkg/18322]
 	o jakarta-tomcat-3.3.1a
 	o jed-0.99.16 [pkg/18937]
@@ -172,7 +171,6 @@ Suggested package updates
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lynx-current-2.8.5dev9
-	o lyx-1.3.0 [pkg/20417]
 	o maildrop-1.5.2
 	o memtest86-3.0
 	o mgetty-1.1.30
