@@ -1,17 +1,22 @@
-$NetBSD: patch-aa,v 1.4 1999/03/14 15:07:21 tron Exp $
+$NetBSD: patch-aa,v 1.5 2001/07/25 07:17:06 tron Exp $
 
---- configure.h.orig	Tue Dec 29 04:47:02 1998
-+++ configure.h	Tue Mar  9 06:26:51 1999
-@@ -14,7 +14,7 @@
+--- configure.h.orig	Tue Dec 29 11:47:02 1998
++++ configure.h	Wed Jul 25 09:14:17 2001
+@@ -14,8 +14,11 @@
   *
   *  If you don't have sendmail, use /bin/false :-).
   */
 -/* #define MAIL_COMMAND "/usr/sbin/sendmail -t" */
+-/* #define MAIL_COMMAND "/usr/lib/sendmail -t"  */
++#ifdef __sun__
++#define MAIL_COMMAND "/usr/lib/sendmail -t"
++#else
 +#define MAIL_COMMAND "/usr/sbin/sendmail -t"
- /* #define MAIL_COMMAND "/usr/lib/sendmail -t"  */
++#endif
  
  
-@@ -84,9 +84,9 @@
+ 
+@@ -84,9 +87,9 @@
   *  libcompface.
   */
  
@@ -24,7 +29,7 @@ $NetBSD: patch-aa,v 1.4 1999/03/14 15:07:21 tron Exp $
  
  
  
-@@ -138,7 +138,7 @@
+@@ -138,7 +141,7 @@
   *
   *  Knews*backgroundPixmap:	~/dir/texture.xpm
   */
