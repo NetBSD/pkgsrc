@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/26 13:46:39 zuntum Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/17 21:16:51 jlam Exp $
 #
 
 DISTNAME=	ketm-0.0.4
@@ -14,8 +14,6 @@ ALL_TARGET=	ketm
 
 USE_BUILDLINK_ONLY=	YES
 USE_GMAKE=		YES
-
-MAKE_ENV+=		SDL_CONFIG=${BUILDLINK_CONFIG_WRAPPER.SDL}
 
 post-patch:
 	cd ${WRKSRC} &&							\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/08/16 04:59:59 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/08/17 21:16:48 jlam Exp $
 #
 
 DISTNAME=	dspectogram-1.2
@@ -13,8 +13,6 @@ COMMENT=	XMMS plugin for dual spectogram
 USE_BUILDLINK_ONLY=	YES
 USE_X11=	yes
 USE_LIBTOOL=	yes
-MAKE_ENV+=	GTK_CONFIG=${BUILDLINK_CONFIG_WRAPPER.gtk}
-MAKE_ENV+=	XMMS_CONFIG=${BUILDLINK_CONFIG_WRAPPER.xmms}
 
 pre-build:
 		cd ${WRKSRC} ; ${MAKE} clean
