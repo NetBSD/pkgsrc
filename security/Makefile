@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2004/02/17 15:36:06 minskim Exp $
+# $NetBSD: Makefile,v 1.167 2004/02/19 01:20:27 minskim Exp $
 #
 
 COMMENT=	Security tools
@@ -132,6 +132,7 @@ SUBDIR+=	pks
 SUBDIR+=	portsentry
 SUBDIR+=	priv
 SUBDIR+=	pscan
+SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-amkCrypto
 SUBDIR+=	py-cryptkit
 SUBDIR+=	py-gnupg
