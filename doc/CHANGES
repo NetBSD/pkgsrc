@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5286 2004/03/20 23:36:33 minskim Exp $
+$NetBSD: CHANGES,v 1.5287 2004/03/21 01:47:55 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1502,3 +1502,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated teixsl-fo to 3.1nb1 [minskim 2004-03-20]
 	Updated swig to 1.1p5nb1 [minskim 2004-03-20]
 	Updated tcl-pdflib to 4.0.3nb2 [minskim 2004-03-20]
+	Updated libnbcompat to 20040321 [grant 2004-03-21]
