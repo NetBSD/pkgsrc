@@ -1,16 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/08/25 19:40:16 gson Exp $
+$NetBSD: patch-ab,v 1.2 2003/04/03 04:02:48 gson Exp $
 
---- examples/Makefile.orig	Sat Nov  3 13:18:42 2001
+--- examples/Makefile.orig	Mon Feb 18 20:26:38 2002
 +++ examples/Makefile
-@@ -38,6 +38,7 @@
- # IRIX_64
- # LINUX
- # LINUX_IA64
-+# NETBSD
- # OPENBSD
- # OSF1
- # SOLARIS
-@@ -58,9 +59,9 @@
+@@ -59,9 +59,9 @@
  OTHER_FLAGS =
  
  OBJDIR      = $(DEPTH)/$(TARGETDIR)
@@ -23,7 +15,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/08/25 19:40:16 gson Exp $
  
  LIBRESOLV   =
  EXTRALIBS   =
-@@ -68,7 +69,7 @@
+@@ -69,7 +69,7 @@
  ifeq ($(OS),)
  EXAMPLES    = unknown
  else
@@ -32,7 +24,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/08/25 19:40:16 gson Exp $
  endif
  
  
-@@ -92,17 +93,17 @@
+@@ -93,17 +93,17 @@
  
  all: $(EXAMPLES)
  
