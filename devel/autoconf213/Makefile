@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/02/24 07:40:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/19 23:38:35 seb Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/06/13 20:00:47 max Exp
 #
 
@@ -22,9 +22,9 @@ CONFIGURE_ENV+=		AWK="${AWK}"
 CONFIGURE_ARGS+=	--program-transform-name='s/$$/-2.13/'
 M4=			${PREFIX}/bin/gm4
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=		YES
 INFO_FILES=		autoconf213.info
-TEXINFO_OVERRIDE=	YES
 
 .include "../../lang/perl5/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
