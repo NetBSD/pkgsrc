@@ -1,0 +1,9 @@
+libsigc++ implements a full callback system for use in widget
+libraries, abstract interfaces, and general programming. Originally
+part of the Gtk-- widget set, libsigc++ is now a seperate library to
+provide for more general use. It is the most complete library of its
+kind with the ablity to connect an abstract callback to a class
+method, function, or function object. It contains adaptor classes for
+connection of dissimilar callbacks and has an ease of use unmatched by
+other C++ callback libraries. Libsigc++ is licensed under the GNU
+Library General Public License, LGPL.
