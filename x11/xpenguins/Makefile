@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/11 22:26:56 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2001/07/09 15:40:41 zuntum Exp $
 #
 
 DISTNAME=	xpenguins-2.1
@@ -9,9 +9,10 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://xpenguins.seul.org/
 COMMENT=	Little penguins walking along the tops of your windows
 
-USE_XPM=	YES
+USE_BUILDLINK_ONLY=	YES
 USE_X11=	YES
 
 GNU_CONFIGURE=	YES
 
+.include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
