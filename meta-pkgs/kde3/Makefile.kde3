@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde3,v 1.7 2004/02/06 00:23:51 xtraeme Exp $
+# $NetBSD: Makefile.kde3,v 1.8 2004/02/06 00:28:09 xtraeme Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
@@ -10,7 +10,6 @@ MASTER_SITES_KDE=	ftp://ftp.kde.org/pub/kde/stable/3.2/src/ \
 		ftp://download.uk.kde.org/pub/kde/stable/3.2/src/ \
 		ftp://download.au.kde.org/pub/kde/stable/3.2/src/ \
 		ftp://mirrors.midco.net/pub/kde/stable/3.2/src/ \
-		ftp://download.uk.kde.org/pub/kde/stable/3.2/src/ \
 		ftp://ftp.eu.uu.net/pub/kde/stable/3.2/src/ \
 		ftp://ftp.tiscali.nl/pub/mirrors/kde/stable/3.2/src/ \
 		ftp://ftp.roedu.net/pub/mirrors/ftp.kde.org/stable/3.2/src/ \
