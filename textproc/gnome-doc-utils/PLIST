@@ -1,0 +1,58 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/22 16:24:11 jmmv Exp $
+bin/gnome-doc-prepare
+bin/xml2po
+lib/pkgconfig/gnome-doc-utils.pc
+lib/pkgconfig/xml2po.pc
+man/man1/xml2po.1
+share/aclocal/gnome-doc-utils.m4
+share/gnome-doc-utils/gnome-doc-utils.make
+share/xml/gnome/xslt/docbook/common/db-chunk.xsl
+share/xml/gnome/xslt/docbook/common/db-common.xsl
+share/xml/gnome/xslt/docbook/common/db-format.xsl
+share/xml/gnome/xslt/docbook/common/db-label.xsl
+share/xml/gnome/xslt/docbook/common/db-title.xsl
+share/xml/gnome/xslt/docbook/common/db-xref.xsl
+share/xml/gnome/xslt/docbook/html/db2html-admon.xsl
+share/xml/gnome/xslt/docbook/html/db2html-autotoc.xsl
+share/xml/gnome/xslt/docbook/html/db2html-block.xsl
+share/xml/gnome/xslt/docbook/html/db2html-callout.xsl
+share/xml/gnome/xslt/docbook/html/db2html-classsynopsis.xsl
+share/xml/gnome/xslt/docbook/html/db2html-cmdsynopsis.xsl
+share/xml/gnome/xslt/docbook/html/db2html-css.xsl
+share/xml/gnome/xslt/docbook/html/db2html-division.xsl
+share/xml/gnome/xslt/docbook/html/db2html-ebnf.xsl
+share/xml/gnome/xslt/docbook/html/db2html-funcsynopsis.xsl
+share/xml/gnome/xslt/docbook/html/db2html-info.xsl
+share/xml/gnome/xslt/docbook/html/db2html-inline.xsl
+share/xml/gnome/xslt/docbook/html/db2html-list.xsl
+share/xml/gnome/xslt/docbook/html/db2html-media.xsl
+share/xml/gnome/xslt/docbook/html/db2html-qanda.xsl
+share/xml/gnome/xslt/docbook/html/db2html-refentry.xsl
+share/xml/gnome/xslt/docbook/html/db2html-suppressed.xsl
+share/xml/gnome/xslt/docbook/html/db2html-table.xsl
+share/xml/gnome/xslt/docbook/html/db2html-title.xsl
+share/xml/gnome/xslt/docbook/html/db2html-xref.xsl
+share/xml/gnome/xslt/docbook/html/db2html.xsl
+share/xml/gnome/xslt/docbook/omf/db2omf.xsl
+share/xml/gnome/xslt/docbook/utils/chunks.xsl
+share/xml/gnome/xslt/docbook/utils/credits.xsl
+share/xml/gnome/xslt/docbook/utils/ids.xsl
+share/xml/gnome/xslt/gettext/format2xsl.xsl
+share/xml/gnome/xslt/gettext/gettext.xsl
+share/xml/gnome/xslt/gettext/l10n.xml
+share/xml/gnome/xslt/xsldoc/xsldoc.xsl
+share/xml2po/docbook.py
+share/xml2po/empty.py
+share/xml2po/gs.py
+@dirrm share/xml2po
+@dirrm share/xml/gnome/xslt/xsldoc
+@dirrm share/xml/gnome/xslt/gettext
+@dirrm share/xml/gnome/xslt/docbook/utils
+@dirrm share/xml/gnome/xslt/docbook/omf
+@dirrm share/xml/gnome/xslt/docbook/html
+@dirrm share/xml/gnome/xslt/docbook/common
+@dirrm share/xml/gnome/xslt/docbook
+@dirrm share/xml/gnome/xslt
+@dirrm share/xml/gnome
+@comment in xmlcatmgr: @dirrm share/xml
+@dirrm share/gnome-doc-utils
