@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/22 09:14:55 garbled Exp $
+--- Makefile.in.orig	Wed Mar 31 16:44:04 1999
++++ Makefile.in	Thu Jul 22 01:57:53 1999
+@@ -54,19 +54,19 @@
+ 	install -d $(prefix)/include/ptc/X11
+ 	install -d $(exec_prefix)/lib
+ 	install -d $(exec_prefix)/bin
+-	install -m 0644 source/ptc.h $(prefix)/include/ptc
++	install -c -m 0644 source/ptc.h $(prefix)/include/ptc
+ 	for incfile in $(CORE_HEADER_FILES); do \
+-	  install -m 0644 source/Core/$$incfile $(prefix)/include/ptc/Core; \
++	  install -c -m 0644 source/Core/$$incfile $(prefix)/include/ptc/Core; \
+ 	done
+ 	for incfile in $(X11_HEADER_FILES); do \
+-	  install -m 0644 source/X11/$$incfile $(prefix)/include/ptc/X11; \
++	  install -c -m 0644 source/X11/$$incfile $(prefix)/include/ptc/X11; \
+ 	done
+-	install -m 0644 $(PTC_LIBRARY_PATH)/$(PTC_LIBRARY_NAME) $(exec_prefix)/lib
++	install -c -m 0644 $(PTC_LIBRARY_PATH)/$(PTC_LIBRARY_NAME) $(exec_prefix)/lib
+ 	@cd $(exec_prefix)/lib ; ln -sf $(PTC_LIBRARY_NAME) libptc.a
+-	install -m 0755 ptc-config $(exec_prefix)/bin
++	install -c -m 0755 ptc-config $(exec_prefix)/bin
+ 	chmod 755 $(exec_prefix)/bin/ptc-config
+ 	if test -e library/$(PTC_LIBRARY_DYN); then \
+-	  install -m 0755 library/$(PTC_LIBRARY_DYN) $(exec_prefix)/lib; \
++	  install -c -m 0755 library/$(PTC_LIBRARY_DYN) $(exec_prefix)/lib; \
+ 	  cd $(exec_prefix)/lib ; ln -sf $(PTC_LIBRARY_DYN) libptc.so ; \
+ 	fi
+ 
