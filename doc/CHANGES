@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8817 2005/01/19 14:55:02 adam Exp $
+$NetBSD: CHANGES,v 1.8818 2005/01/19 14:57:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -421,3 +421,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated radmind to 1.4.0 [wiz 2005-01-19]
 	Updated awstats to 6.3nb1 [minskim 2005-01-19]
 	Updated artist to 1.2.6 [adam 2005-01-19]
+	Updated squid to 2.5.7nb7 [taca 2005-01-19]
