@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2004/12/28 21:52:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2005/03/22 16:27:16 jmmv Exp $
 #
 
-DISTNAME=	zenity-2.8.2
+DISTNAME=	zenity-2.10.0
 CATEGORIES=	x11 gnome2
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/2.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/zenity/2.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -19,9 +19,13 @@ GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
 
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
+
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
