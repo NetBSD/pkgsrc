@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.163 2001/06/19 20:55:01 jlam Exp $
+# $NetBSD: Packages.txt,v 1.164 2001/06/21 11:57:03 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -198,14 +198,14 @@ To do an initial (full) checkout of pkgsrc, do the following steps:
 	% setenv CVSROOT anoncvs@anoncvs.netbsd.org:/cvsroot
 	% setenv CVS_RSH ssh 
 	% cd /usr
-	% cvs checkout pkgsrc
+	% cvs checkout -P pkgsrc
 
 This will create the "pkgsrc" directory in your /usr, and all the package
 source will be stored under /usr/pkgsrc. To update pkgsrc after the initial
 checkout, make sure you have CVS_RSH set as above, then do:
 
 	% cd /usr/pkgsrc
-	% cvs update
+	% cvs -q update -dP
 
 
  2.3 Fetching distfiles
