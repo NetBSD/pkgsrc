@@ -1,16 +1,16 @@
 # New ports collection makefile for:    apache
 # http://www.apache.org
-# Version required:     1.3b3
-# Date created:         Sun Mar  1 13:41:17 PST 1998
+# Version required:     1.3b5
+# Date created:         18 Mar 1998
 # Whom:                 cjs@netbsd.org
 #
-# $NetBSD: Makefile,v 1.3 1998/03/06 13:08:54 frueauf Exp $
+# $NetBSD: Makefile,v 1.4 1998/03/18 19:16:27 cjs Exp $
 # FreeBSD Id: Makefile,v 1.45 1998/02/25 06:23:55 asami Exp
 #
 
-DISTNAME=       apache_1.3b3
-PKGNAME=        apache-1.3b3
-WRKROOT=	${WRKDIR}/apache_1.3b3
+DISTNAME=       apache_1.3b5
+PKGNAME=        apache-1.3b5
+WRKROOT=	${WRKDIR}/apache_1.3b5
 WRKSRC=         ${WRKROOT}/src
 CATEGORIES=	www
 MASTER_SITES=   http://www.apache.org/dist/
@@ -60,7 +60,7 @@ post-patch:
 
 do-install:
 	${INSTALL} -d -m 755 -o bin -g bin ${CONF_DIR} ${HTTP_ROOT}/htdocs \
-		${HTTP_ROOT}/icons ${HTTP_ROOT}/cgi-bin
+		${HTTP_ROOT}/icons ${HTTP_ROOT}/cgi-bin ${HTTP_ROOT}/logs
 	${INSTALL_PROGRAM} ${WRKSRC}/httpd ${PREFIX}/sbin
 	cd ${WRKSRC}/support && \
 		${INSTALL_PROGRAM} htdigest htpasswd dbmmanage logresolve \
