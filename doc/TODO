@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.675 2003/07/02 16:42:33 martti Exp $
+$NetBSD: TODO,v 1.676 2003/07/03 08:19:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -80,22 +80,23 @@ Suggested package updates
 	o biew-5.5.0
 	o bind-8.4.0
 	o binutils-2.14
-	o bogofilter-0.11.2
+	o bogofilter-0.13.6.2
 	o bzflag-1.7g0
 	o cervisia-2.0
 	o clisp-2.30
 	o courier-0.42.2
-	o courier-imap-1.7.0
+	o courier-imap-2.0
 	o crafty-19.1
 	o crossfire-1.5.0
 	o csound-4.24.0
 	o cvs-1.11.6
 	o cyrus-sasl2-2.1.14
+	o cyrus-imapd21-2.1.14
 	o ddd-3.3.5
 	o disc-cover-1.5.2
 	o dmalloc-5.2.0 [pkg/21951]
 	o dopewars-1.5.9
-	o dovecot-0.99.10
+	o dovecot-0.99.10 [pkg/22028]
 	o dvdrip-0.50.14
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
@@ -154,11 +155,13 @@ Suggested package updates
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jove-4.16.0.58 [pkg/19924]
 	o jove-4.16.0.61
+	o jwhois-3.2.2
 	o kdbg-1.2.8
 	o lcms-1.0.9
 	o leafnode-1.9.42
 	o lesstif-0.93.44
 	o libiconv-1.9.1
+	o licq-1.2.7
 	o libmpeg3-1.5.1
 	o libole2-2.2.8
 	o libsigc++-1.2.5
@@ -177,7 +180,7 @@ Suggested package updates
 	o mhonarc-2.6.3 [pkg/21306]
 	o mhonarc-2.6.4
 	o midnight-commander-4.6.0
-	o mimedefang-2.34
+	o mimedefang-2.35
 	o minicom-2.1
 	o mozilla-1.4
 	o mpgtx-1.3 [pkg/19082]
