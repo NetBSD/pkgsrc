@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2002/10/02 22:47:36 wiz Exp $
+
+--- configure.orig	Mon Aug 19 09:41:32 2002
++++ configure
+@@ -2804,12 +2753,12 @@ case "${host}" in
+     CONFIG_CXXOPTIMIZE="-O2"
+     CONFIG_LFLAGS=""
+     CONFIG_LSTATIC="-static"
+-    CONFIG_LSHARED="-shared"
++    CONFIG_LSHARED="-shared ${LDFLAGS}"
+     CONFIG_LPATH="-Wl,-rpath,"
+     CONFIG_LX="$X_LIBS -lXext -lX11"
+     CONFIG_BFLAGS=""
+     CONFIG_BSTATIC="-Wl,-Bstatic"
+-    CONFIG_BSHARED="-Wl,-Bdynamic"
++    CONFIG_BSHARED="-Wl,-Bdynamic ${LDFLAGS}"
+     CONFIG_BPATH="-Wl,-rpath,"
+     CONFIG_BX="$X_LIBS -lXext -lX11"
+     CONFIG_WORD_LENGTH="4"

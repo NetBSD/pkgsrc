@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/09/06 11:59:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/02 22:47:35 wiz Exp $
 
 DISTNAME=	TeXmacs-1.0.0.15-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.texmacs.org
 COMMENT=	GNU TeXmacs (free scientific text editor)
 
 DEPENDS+=	teTeX>=1.0:../../print/teTeX
-BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 ALL_TARGET=	TEXMACS
 
@@ -23,7 +22,6 @@ MANCOMPRESSED=	yes
 LDFLAGS+=	-Wl,-R${LOCALBASE}/libexec/${PKGNAME}/lib
 
 pre-configure:
-	( cd ${WRKSRC} && autoconf )
 	${RM} ${WRKSRC}/misc/scripts/tm_axiom
 
 .include "../../lang/guile/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/08/27 14:35:11 tron Exp $
+# $NetBSD: Makefile,v 1.42 2002/10/02 22:57:14 wiz Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -11,7 +11,6 @@ MAINTAINER=		mycroft@netbsd.org
 HOMEPAGE=		http://www-nrg.ee.lbl.gov/vat/
 COMMENT=		The Visual Audio Tool - multicast audioconferencing
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 DEPENDS+=		tk>=8.3.2:../../x11/tk
 DEPENDS+=		gsm-1.0.10:../../audio/gsm
 
@@ -22,8 +21,5 @@ CONFIGURE_ARGS+=	--with-tcl=${PREFIX} --with-tk=${PREFIX}
 CPPFLAGS+=		-I${LOCALBASE}/include -I${LOCALBASE}/include/gsm
 
 INSTALL_TARGET=		install install-man
-
-pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/08/16 16:55:59 agc Exp $
+$NetBSD: distinfo,v 1.4 2002/10/02 22:53:08 wiz Exp $
 
 SHA1 (vicsrc-2.8.tar.gz) = ec58bf10aed99301f1e0e0828d0f2f32acdafe1d
 Size (vicsrc-2.8.tar.gz) = 605136 bytes
@@ -25,3 +25,4 @@ SHA1 (patch-au) = 55e52deefff784da3e0a10d44405196e66e70d9d
 SHA1 (patch-av) = 683ad2d688fce18757eae090a3d52249897cb922
 SHA1 (patch-aw) = 735e7cda5f1cabe312decdcf992258ac8a895f63
 SHA1 (patch-ax) = 9f7ab611dc426a4f317b46803dbca218be903b10
+SHA1 (patch-ay) = 5c6fe3e6cdbf0544ae1f92cc1f351a0655707af7
