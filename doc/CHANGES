@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8653 2005/01/08 06:25:48 schmonz Exp $
+$NetBSD: CHANGES,v 1.8654 2005/01/08 07:10:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -172,3 +172,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-HTML-Mason to 1.28nb2 [seb 2005-01-07]
 	Updated ezmlm-idx to 0.432nb1 [schmonz 2005-01-08]
 	Updated howl to 0.9.8 [schmonz 2005-01-08]
+	Updated mathomatic to 11.6c [minskim 2005-01-08]
