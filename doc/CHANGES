@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5665 2004/04/19 18:37:27 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5666 2004/04/19 18:52:09 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2095,3 +2095,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xlockmore to 5.12 [hubertf 2004-04-19]
 	Added cgdb-0.4.0 [xtraeme 2004-04-19]
 	Added freeglut-2.2.0 [xtraeme 2004-04-19]
+	Updated gok to 0.10.2 [jmmv 2004-04-19]
