@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2003/07/14 07:12:12 jtb Exp $
+$NetBSD: distinfo,v 1.7 2004/01/14 15:57:09 agc Exp $
 
 SHA1 (grap-1.30.tar.gz) = d8083d75cc4ca7bbfcca1a0958e1da10e54f1c88
 Size (grap-1.30.tar.gz) = 167462 bytes
 SHA1 (patch-aa) = a1663c1f761c21983b38f74a150fcc2c28ebc177
+SHA1 (patch-ab) = 52c30e359b0d63c57c36cfd563e63fdc9b5e099c
