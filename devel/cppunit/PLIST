@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/30 22:29:30 wulf Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/06 11:28:17 wulf Exp $
 bin/DllPlugInTester
 bin/cppunit-config
 bin/simple
@@ -1231,6 +1231,23 @@ share/cppunit/html/cppunit_2ui_2text_2_test_runner_8h__incl.map
 share/cppunit/html/cppunit_2ui_2text_2_test_runner_8h__incl.md5
 share/cppunit/html/cppunit_2ui_2text_2_test_runner_8h__incl.png
 share/cppunit/html/cppunit_cookbook.html
+share/cppunit/html/dir_000000.html
+share/cppunit/html/dir_000001.html
+share/cppunit/html/dir_000002.html
+share/cppunit/html/dir_000003.html
+share/cppunit/html/dir_000004.html
+share/cppunit/html/dir_000005.html
+share/cppunit/html/dir_000006.html
+share/cppunit/html/dir_000007.html
+share/cppunit/html/dir_000008.html
+share/cppunit/html/dir_000009.html
+share/cppunit/html/dir_000010.html
+share/cppunit/html/dir_000011.html
+share/cppunit/html/dir_000012.html
+share/cppunit/html/dir_000013.html
+share/cppunit/html/dir_000014.html
+share/cppunit/html/dir_000015.html
+share/cppunit/html/dirs.html
 share/cppunit/html/deprecated.html
 share/cppunit/html/doxygen.css
 share/cppunit/html/doxygen.png
@@ -1434,3 +1451,4 @@ share/cppunit/html/ui_2text_2_text_test_runner_8h__incl.png
 @dirrm include/cppunit/ui
 @dirrm include/cppunit
 @dirrm share/cppunit/html
+@dirrm share/cppunit
