@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5304 2004/03/28 01:14:56 snj Exp $
+$NetBSD: CHANGES,v 1.5305 2004/03/28 04:40:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1526,3 +1526,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated sendmail to 8.12.11 [tron 2004-03-27]
 	Updated libmilter to 8.12.11 [tron 2004-03-27]
 	Updated naim to 0.11.6.7 [snj 2004-03-28]
+	Updated djbdns to 1.05nb4 [taca 2004-03-28]
