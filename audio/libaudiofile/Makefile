@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2000/06/09 06:41:48 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2000/10/15 03:04:26 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1999/01/27 08:31:48 fenner Exp
 #
 
-DISTNAME=		audiofile-0.1.9
-PKGNAME=		libaudiofile-0.1.9
+DISTNAME=		audiofile-0.1.10
+PKGNAME=		libaudiofile-0.1.10
 CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/audiofile/}
+MASTER_SITES=		ftp://ftp.68k.org./pub/michael/ \
+			${MASTER_SITE_GNOME:=stable/sources/audiofile/}
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://andromeda.68k.org/~michael/audiofile/
@@ -14,9 +15,10 @@ GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+DOCDIR=			${PREFIX}/share/doc/libaudiofile
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libaudiofile
-	cd ${WRKSRC}/docs; ${INSTALL_DATA} af* sf* \
-		${PREFIX}/share/doc/libaudiofile
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	cd ${WRKSRC}/docs; ${INSTALL_DATA} af* sf* ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
