@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2000/08/31 16:07:43 jwise Exp $
+# $NetBSD: Makefile,v 1.27 2000/11/02 03:25:32 wiz Exp $
 #
 
 DISTNAME=       timidity-0.2i
@@ -31,7 +31,7 @@ post-install:
 	cd ${PREFIX}/share/timidity/patch && \
 	unzip -o -q -L ${DISTDIR}/${TIINS}
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(NEED_NCURSES) && ${NEED_NCURSES} == "YES"
 EXTRAINCS+=	-DHAVE_NCURSES_H=1 -I${LOCALBASE}/include
@@ -42,3 +42,5 @@ EXTRALIBS+=	-lcurses -ltermcap
 .endif
 
 MAKE_ENV+=	EXTRALIBS="${EXTRALIBS}"
+
+.include "../../mk/bsd.pkg.mk"
