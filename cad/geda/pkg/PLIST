@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/24 21:11:58 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/12/31 12:05:53 frueauf Exp $
 bin/geda
 bin/gschem
 bin/gnetlist
@@ -60,6 +60,8 @@ share/gEDA/sym/font/6.sym
 share/gEDA/sym/font/7.sym
 share/gEDA/sym/font/8.sym
 share/gEDA/sym/font/9.sym
+share/gEDA/sym/font/A-diaeresis.sym
+share/gEDA/sym/font/A-ring.sym
 share/gEDA/sym/font/A.sym
 share/gEDA/sym/font/B.sym
 share/gEDA/sym/font/C.sym
@@ -76,6 +78,7 @@ share/gEDA/sym/font/L.sym
 share/gEDA/sym/font/M.sym
 share/gEDA/sym/font/N.sym
 share/gEDA/sym/font/O.sym
+share/gEDA/sym/font/O-diaeresis.sym
 share/gEDA/sym/font/P.sym
 share/gEDA/sym/font/Q.sym
 share/gEDA/sym/font/R.sym
@@ -88,6 +91,8 @@ share/gEDA/sym/font/W.sym
 share/gEDA/sym/font/X.sym
 share/gEDA/sym/font/Y.sym
 share/gEDA/sym/font/Z.sym
+share/gEDA/sym/font/a-diaeresis.sym
+share/gEDA/sym/font/a-ring.sym
 share/gEDA/sym/font/a.sym
 share/gEDA/sym/font/amper.sym
 share/gEDA/sym/font/apost.sym
@@ -121,6 +126,7 @@ share/gEDA/sym/font/m.sym
 share/gEDA/sym/font/minus.sym
 share/gEDA/sym/font/more.sym
 share/gEDA/sym/font/n.sym
+share/gEDA/sym/font/o-diaeresis.sym
 share/gEDA/sym/font/o.sym
 share/gEDA/sym/font/p.sym
 share/gEDA/sym/font/percent.sym
@@ -150,6 +156,7 @@ share/gEDA/sym/font/y.sym
 share/gEDA/sym/font/z.sym
 share/gEDA/sym/analog/capacitor-1.sym
 share/gEDA/sym/analog/capacitor-2.sym
+share/gEDA/sym/analog/capacitor-variable-1.sym
 share/gEDA/sym/analog/coil-1.sym
 share/gEDA/sym/analog/coil-2.sym
 share/gEDA/sym/analog/crystal-1.sym
@@ -167,6 +174,9 @@ share/gEDA/sym/analog/pmos-2.sym
 share/gEDA/sym/analog/pnp-1.sym
 share/gEDA/sym/analog/pnp-2.sym
 share/gEDA/sym/analog/resistor-1.sym
+share/gEDA/sym/analog/resistor-variable-1.sym
+share/gEDA/sym/analog/speaker-1.sym
+share/gEDA/sym/analog/speaker-2.sym
 share/gEDA/sym/analog/voltage-1.sym
 share/gEDA/sym/analog/zener-1.sym
 share/gEDA/sym/memory/27256-1.sym
@@ -282,6 +292,17 @@ share/gEDA/sym/IEC417/switch-5port.sym
 share/gEDA/sym/IEC417/termination.sym
 share/gEDA/sym/IEC417/transformer.sym
 share/gEDA/sym/IEC417/up-converter.sym
+share/gEDA/sym/tube/12SA7-1.sym
+share/gEDA/sym/tube/12SK7-1.sym
+share/gEDA/sym/tube/12SQ7-1.sym
+share/gEDA/sym/tube/35Z5GT-1.sym
+share/gEDA/sym/tube/50L6GT-1.sym
+share/gEDA/sym/radio/README
+share/gEDA/sym/radio/af_output_transformer-1.sym
+share/gEDA/sym/radio/if_trans_aircore-1.sym
+share/gEDA/sym/radio/loop_antenna-1.sym
+share/gEDA/sym/radio/loop_antenna-2.sym
+share/gEDA/sym/radio/osc_coil_aircore-1.sym
 share/gEDA/source/68K_reset_1.sch
 share/gEDA/source/7400-1_1.sch
 share/gEDA/source/7400-1_2.sch
@@ -304,5 +325,7 @@ share/gEDA/system-gedarc
 @dirrm share/gEDA/sym/memory
 @dirrm share/gEDA/sym/micro
 @dirrm share/gEDA/sym/misc
+@dirrm share/gEDA/sym/radio
+@dirrm share/gEDA/sym/tube
 @dirrm share/gEDA/sym
 @dirrm share/gEDA
