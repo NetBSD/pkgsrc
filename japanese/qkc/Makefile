@@ -1,0 +1,21 @@
+# $NetBSD: Makefile,v 1.1.1.1 2001/10/09 18:43:30 nra Exp $
+# FreeBSD: ports/japanese/qkc/Makefile,v 1.15 2001/05/10 11:42:23 max Exp
+
+DISTNAME=	qkcc100
+PKGNAME=	qkc-1.0
+CATEGORIES=	japanese
+MASTER_SITES=	http://hp.vector.co.jp/authors/VA000501/
+EXTRACT_SUFX=	.zip
+
+MAINTAINER=	hiramatu@boreas.dti.ne.jp
+HOMEPAGE=	http://hp.vector.co.jp/authors/VA000501/
+COMMENT=	Quick Kanji code Converter
+
+WRKSRC=		${WRKDIR}
+ALL_TARGET=	qkc
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/qkc ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/qkc.1 ${PREFIX}/man/ja_JP.EUC/man1
+
+.include "../../mk/bsd.pkg.mk"
