@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.24 2005/02/18 18:23:31 wiz Exp $
+$NetBSD: distinfo,v 1.25 2005/02/23 16:05:31 agc Exp $
 
 SHA1 (scmxx-0.7.5.tar.bz2) = 382e3791664e11211f073026e8ab7e428f2883b3
+RMD160 (scmxx-0.7.5.tar.bz2) = bf48382fa9b3e21e5e7c4b0d135c361af09141f5
 Size (scmxx-0.7.5.tar.bz2) = 165440 bytes
 SHA1 (patch-aa) = 057bba85618fd5a6b75f147446e3820c86ebf06e
