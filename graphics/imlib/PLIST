@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2002/03/29 18:01:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/11/26 12:32:20 jmmv Exp $
 bin/imlib_config
 bin/imlib-config
-etc/imrc
-etc/im_palette.pal
-etc/im_palette-small.pal
-etc/im_palette-tiny.pal
 include/gdk_imlib.h
 include/gdk_imlib_private.h
 include/gdk_imlib_types.h
@@ -59,6 +55,11 @@ share/doc/imlib/curve1.gif
 share/doc/imlib/curve2.gif
 share/doc/imlib/imlib.gif
 share/doc/imlib/index.html
+share/examples/imlib/imrc
+share/examples/imlib/im_palette.pal
+share/examples/imlib/im_palette-small.pal
+share/examples/imlib/im_palette-tiny.pal
+@dirrm share/examples/imlib
 @dirrm share/doc/imlib
 @exec test %D = ${LOCALBASE} || ln -fs %D/share/aclocal/imlib.m4 ${LOCALBASE}/share/aclocal/imlib.m4
 @unexec test %D = ${LOCALBASE} || ${RM} ${LOCALBASE}/share/aclocal/imlib.m4

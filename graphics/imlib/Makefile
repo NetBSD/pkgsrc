@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2002/10/30 03:09:33 rh Exp $
+# $NetBSD: Makefile,v 1.72 2002/11/26 12:32:20 jmmv Exp $
 #
 
 DISTNAME=		imlib-1.9.14
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/imlib/1.9/}
 
@@ -24,6 +24,18 @@ USE_BUILDLINK2=		yes
 CPPFLAGS+=		-DENABLE_NLS
 CONFIGURE_ENV+=		ac_cv_path_CONVERT_PROG="${LOCALBASE}/bin/convert"
 CONFIGURE_ENV+=		X_LDFLAGS="${X_LDFLAGS}"
+CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
+
+PKG_SYSCONFSUBDIR=	imlib
+
+EGDIR=			${PREFIX}/share/examples/imlib
+CONF_FILES=		${EGDIR}/imrc ${PKG_SYSCONFDIR}/imrc
+CONF_FILES+=		${EGDIR}/im_palette.pal \
+			${PKG_SYSCONFDIR}/im_palette.pal
+CONF_FILES+=		${EGDIR}/im_palette-small.pal \
+			${PKG_SYSCONFDIR}/im_palette-small.pal
+CONF_FILES+=		${EGDIR}/im_palette-tiny.pal \
+			${PKG_SYSCONFDIR}/im_palette-tiny.pal
 
 # The following ensures that `imlib-config --libs' includes the correct
 # linker flags for linking the X11 libs.
@@ -46,4 +58,5 @@ post-install:
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
