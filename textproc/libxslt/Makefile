@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2004/03/13 09:55:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.41 2004/04/01 15:15:19 xtraeme Exp $
 
-DISTNAME=	libxslt-1.1.4
+DISTNAME=	libxslt-1.1.5
 PKGNAME=	${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxslt/1.1/}
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--without-python
 
 TEST_TARGET=		check
 
-BUILDLINK_DEPENDS.libxml2+=	libxml2>=2.6.5
+BUILDLINK_DEPENDS.libxml2+=	libxml2>=2.6.8
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
