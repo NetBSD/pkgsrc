@@ -94,3 +94,10 @@ Note that the context for this next patch is set to 2, to avoid the Id line
  	name=i386-netbsd-1.0
  	sysincludes=netbsd-1.1
  	syscall=i386-netbsd-1.1
+*** /dev/null	Thu Jan  8 12:58:03 1998
+--- shlib_version	Thu Jan  8 15:44:03 1998
+***************
+*** 0 ****
+--- 1,2 ----
++ major=1
++ minor=60
