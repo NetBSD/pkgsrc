@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2003/03/14 19:37:34 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2003/03/24 00:57:47 grant Exp $
 
 DISTNAME=		mysql-3.23.49
 CATEGORIES=		databases
@@ -39,6 +39,13 @@ CONFIGURE_ARGS+=	--without-bench
 CONFIGURE_ARGS+=	--with-low-memory
 
 CPPFLAGS+=		-Dunix
+
+# force HAVE_CURSES_H on Solaris since the configure script is broken
+# and does not properly detect this, breaking the build later on.
+.if ${OPSYS} == "SunOS"
+CFLAGS+=		-DHAVE_CURSES_H
+CXXFLAGS+=		-DHAVE_CURSES_H
+.endif
 
 USE_PERL5=		# defined
 USE_LIBTOOL=		# defined
