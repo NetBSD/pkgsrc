@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/13 01:51:25 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/21 12:55:07 jlam Exp $
 #
 
 DISTNAME=		fkiss-0.32
@@ -9,18 +9,13 @@ MAINTAINER=		collver@linuxfreemail.com
 HOMEPAGE=		http://www.oersted.co.jp/~yav/soft/indexe.html#fkiss
 COMMENT=		kisekae viewer
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
-BUILD_DEPENDS+=		automake>=1.4:../../devel/automake
-DEPENDS+=		lha-*:../../archivers/lha
+DEPENDS+=		lha-[0-9]*:../../archivers/lha
 
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 CFLAGS+=		-DUSE_STDARG -DHAVE_STDARG_H
-
-pre-configure:
-	cd ${WRKSRC} && \
-		automake && \
-		autoreconf --force
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fkiss ${PREFIX}/bin
@@ -35,5 +30,5 @@ do-install:
 			>${PREFIX}/share/doc/fkiss/`${BASENAME} $$i`; \
 	done
 
-.include "../../mk/x11.buildlink.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
