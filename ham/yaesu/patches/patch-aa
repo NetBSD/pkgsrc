@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
+
+--- main.c.orig	Sat Apr 13 21:01:49 2002
++++ main.c
+@@ -5,7 +5,6 @@
+ #include <stdlib.h>
+ #include <termios.h>
+ #include <signal.h>
+-#include <asm/io.h>
+ #include <config.h>
+ float freq_to_change_to;
+ char flag_data_return[5];

@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/05/08 00:02:39 hubertf Exp $
+
+--- README.orig	Sat Apr 13 21:05:20 2002
++++ README
+@@ -34,8 +34,8 @@
+ to make a note of it.  Off to usage...
+ 
+ Using my program is very simple, to execute it you must provide the com port
+-as an argument to the command line.  Remember, com1 is /dev/ttyS0 and com2 
+-is /dev/ttyS1, etc.  As an example, my box is on com4 (/dev/tty3), so I must
++as an argument to the command line.  Remember, com1 is /dev/ttyE0 and com2 
++is /dev/ttyE1, etc.  As an example, my box is on com4 (/dev/ttyE3), so I must
+ type in the following...
+ 
+ 		'yaesu 3'
