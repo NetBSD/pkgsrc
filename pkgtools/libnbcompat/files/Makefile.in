@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.6 2003/06/30 14:48:00 grant Exp $
+# $NetBSD: Makefile.in,v 1.7 2003/07/17 19:36:43 grant Exp $
 #
 
 srcdir	= @srcdir@
@@ -27,13 +27,14 @@ OBJS	= @LIBOBJS@ \
 LINK=   = $(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
 COMPILE = $(CC) $(CPPFLAGS) $(CFLAGS)
 
+all: nbtypes.h ${LIB}
+
 .c.o: nbtypes.h
 	$(COMPILE) $(DEFS) -c $< -o $@
 
-all:	${LIB}
-
 ${LIB}: ${OBJS}
 	${AR} cr $@ ${OBJS}
+	${RANLIB} $@
 
 nbtypes.h: bits
 	./bits nbtypes.h
