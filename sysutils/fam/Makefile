@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/25 19:23:19 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/02 22:30:59 dillo Exp $
 #
 
 DISTNAME=		fam-2.6.7
@@ -11,14 +11,9 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://oss.sgi.com/projects/fam/
 COMMENT=		File Alteration Monitor
 
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
-
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-
-pre-configure:
-	cd ${WRKSRC} && ${LOCALBASE}/bin/autoconf
 
 .include "../../mk/bsd.pkg.mk"

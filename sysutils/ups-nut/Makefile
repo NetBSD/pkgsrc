@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/09/19 09:04:27 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2002/10/02 22:38:59 dillo Exp $
 #
 
 DISTNAME=		nut-0.50.0
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.exploits.org/nut/release/
 MAINTAINER=		lukem@netbsd.org
 HOMEPAGE=		http://www.exploits.org/nut/
 COMMENT=		Network UPS Tools
-
-BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
@@ -57,9 +55,6 @@ RCD_SCRIPTS=		ups upsd upsdriver upslog upsmon
 
 OWN_DIRS=		${NUT_CONFDIR}
 OWN_DIRS_PERMS=		${NUT_STATEDIR} ${NUT_USER} ${NUT_GROUP} 0770
-
-pre-configure:
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf --force
 
 pre-install:
 	@${INSTALL_DATA_DIR} ${NUT_EGDIR}
