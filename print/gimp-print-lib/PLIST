@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/11/27 16:12:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/04/23 17:33:00 drochner Exp $
 bin/gimpprint-config
 include/gimp-print/gimp-print.h
 @unexec install-info --delete --info-dir=%D/info %D/info/gimpprint.info
@@ -12,8 +12,8 @@ info/gimpprint.info-5
 lib/libgimpprint.a
 lib/libgimpprint.la
 lib/libgimpprint.so
-lib/libgimpprint.so.1
-lib/libgimpprint.so.1.4
+lib/libgimpprint.so.2
+lib/libgimpprint.so.2.0
 man/man1/gimpprint-config.1
 man/man3/gimpprint.3
 man/man7/gimpprint-color.7
