@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/09/04 11:23:19 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/04 11:30:18 grant Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -17,6 +17,7 @@ PKGVER!=		${DATE} +%Y%m%d
 DIST_SUBDIR=		${PKGNAME}
 NO_CHECKSUM=		# defined
 NO_CONFIGURE=		# defined
+NO_SRC_ON_FTP=		# defined
 
 USE_PKGINSTALL=		YES
 
