@@ -1,0 +1,23 @@
+#!/bin/sh
+
+echo "Running post-extract"
+
+cd $WRKSRC
+
+# uncompress the top level files
+rm index.html
+gunzip *.gz
+
+# extract the shell archives for libF77 and libI77
+sh libf77
+sh libi77
+
+# copy the f2c.h header needed by the the libraries
+cp f2c.h libF77/f2c.h
+cp f2c.h libI77/f2c.h
+
+# uncompress the main f2c source
+cd src
+rm index.html
+mv .depend depend.orig
+gunzip *.gz

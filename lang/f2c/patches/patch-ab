@@ -1,0 +1,9 @@
+--- src/makefile.orig	Wed Feb 25 08:18:04 1998
++++ src/makefile	Sun Jul 19 23:14:03 1998
+@@ -3,5 +3,5 @@
+ .SUFFIXES: .c .o
+ CC = cc
+-CFLAGS = -O
++CFLAGS = -O2 
+ SHELL = /bin/sh
+ YACC = yacc

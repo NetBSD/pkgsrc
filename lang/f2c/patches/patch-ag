@@ -1,0 +1,19 @@
+--- libI77/makefile.orig	Sun Jul 19 22:58:35 1998
++++ libI77/makefile	Sun Jul 19 23:13:08 1998
+@@ -1,5 +1,5 @@
+ .SUFFIXES: .c .o
+ CC = cc
+-CFLAGS = -O
++CFLAGS = -O2 
+ SHELL = /bin/sh
+ 
+@@ -96,7 +96,7 @@
+ 
+ check:
+-	xsum Notice README Version.c backspace.c close.c dfe.c dolio.c \
++	../src/xsum Notice README Version.c backspace.c close.c dfe.c dolio.c \
+ 	due.c endfile.c err.c f2ch.add fio.h fmt.c fmt.h fmtlib.c fp.h \
+-	ftell_.c iio.c ilnw.c inquire.c lio.h lread.c lwrite.c makefile \
++	ftell_.c iio.c ilnw.c inquire.c lio.h lread.c lwrite.c \
+ 	open.c rawio.h rdfmt.c rewind.c rsfe.c rsli.c rsne.c sfe.c sue.c \
+ 	typesize.c uio.c util.c wref.c wrtfmt.c wsfe.c wsle.c wsne.c \

@@ -1,0 +1,54 @@
+--- /dev/null	Mon Jun 15 02:04:53 1998
++++ Makefile	Mon Jun 15 10:16:05 1998
+@@ -0,0 +1,51 @@
++# Top level Makefile for f2c,libF77, and libI77
++
++all: f2c libf2c.a f77 man
++
++
++f2c:
++	#Making all in 'src'
++	cd src; make all
++	cp src/f2c f2c
++
++libF77.a:
++	#Making all in 'libF77'
++	cd libF77; make check; make all
++	cp libF77/libF77.a libF77.a
++
++libI77.a:
++	#Making all in 'libI77'
++	cd libI77; make check; make libI77.a
++	cp libI77/libI77.a libI77.a
++
++libf2c.a: libI77.a libF77.a
++	cp libF77.a libf2c.a
++	ar ruv libf2c.a libI77/*.o
++	ranlib libf2c.a
++
++man: f2c.0
++
++f2c.0: f2c.1t
++	rm f2c.1
++	sed 's!/usr!${PREFIX}!g' f2c.1t | sed 's!lib/libc.a!usr/lib/libc.a!g' > f2c.1
++	nroff -man f2c.1 > f2c.0
++
++
++install:
++	${BSD_INSTALL_PROGRAM_DIR} ${PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} ./src/f2c ${PREFIX}/bin
++	${BSD_INSTALL_SCRIPT} ./f77 ${PREFIX}/bin
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/lib
++	${BSD_INSTALL_DATA} ./libf2c.a ${PREFIX}/lib
++	${BSD_INSTALL_DATA} ./libF77.a ${PREFIX}/lib
++	${BSD_INSTALL_DATA} ./libI77.a ${PREFIX}/lib
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/include
++	${BSD_INSTALL_DATA} ./f2c.h ${PREFIX}/include
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/doc/f2c
++	${BSD_INSTALL_DATA} ./f2c.ps ${PREFIX}/share/doc/f2c
++	${BSD_INSTALL_DATA} ./changes ${PREFIX}/share/doc/f2c
++	${BSD_INSTALL_MAN} ./f2c.1 ${PREFIX}/man/man1
++	${BSD_INSTALL_MAN} ./f2c.0 ${PREFIX}/man/cat1
++
++f77: fc
++	sed 's!PREFIX!${PREFIX}!g' fc > f77
