@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2002/12/24 06:10:01 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/21 14:25:31 wiz Exp $
 #
 
 DISTNAME=	fcpackage.2_1
 PKGNAME=	fontconfig-2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts gnome
 MASTER_SITES=	http://fontconfig.org/release/
 
@@ -35,6 +35,9 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/fontconfig
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/src/fontconfig.man \
 	    ${PREFIX}/man/man3/fontconfig.3
+.for f in fc-cache fc-list
+	${INSTALL_MAN} ${WRKSRC}/$f/$f.man ${PREFIX}/man/man1/$f.1
+.endfor
 
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
