@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.16 2002/02/18 15:14:19 seb Exp $
+# $NetBSD: Makefile,v 1.17 2002/09/11 11:13:02 jlam Exp $
 
-DISTNAME=		xboard-4.2.3
-CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_GNU:=xboard/}
+DISTNAME=	xboard-4.2.6
+CATEGORIES=	games
+MASTER_SITES=	${MASTER_SITE_GNU:=xboard/}
 
-MAINTAINER=		simonb@NetBSD.ORG
-HOMEPAGE=		http://www.tim-mann.org/xboard.html
-COMMENT=		graphical frontend for chess engines and servers
+MAINTAINER=	simonb@NetBSD.ORG
+HOMEPAGE=	http://www.tim-mann.org/xboard.html
+COMMENT=	graphical frontend for chess engines and servers
 
-INFO_FILES=		xboard.info
+INFO_FILES=	xboard.info
 
-USE_BUILDLINK_ONLY=	YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK2=		# defined
+GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-xpm
 CONFIGURE_ARGS+=	--enable-zippy	# interface to ICS
 
@@ -21,9 +21,9 @@ CONFIGURE_ARGS+=	--enable-zippy	# interface to ICS
 CONFIGURE_ARGS+=	--with-Xaw3d
 .endif
 
-.include "../../lang/perl5/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/xaw.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/xaw.buildlink2.mk"
+
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
