@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5834 2004/05/06 10:09:10 wiz Exp $
+$NetBSD: CHANGES,v 1.5835 2004/05/06 11:08:20 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2371,3 +2371,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated evolution to 1.4.6 [recht 2004-05-06]
 	Updated kanjidic to 20040311 [wiz 2004-05-06]
 	Updated kanjidic2 to 2004.1 [wiz 2004-05-06]
+	Updated p5-Tk to 804.027 [markd 2004-05-06]
