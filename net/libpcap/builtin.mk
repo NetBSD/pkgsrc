@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2005/01/11 20:11:14 xtraeme Exp $
+# $NetBSD: builtin.mk,v 1.8 2005/01/11 20:35:48 xtraeme Exp $
 
 _LIBPCAP_H=	/usr/include/pcap.h
 
@@ -18,7 +18,7 @@ IS_BUILTIN.libpcap!=							\
 # BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc
 # version or if the built-in one is sufficient.
 #
-.      if !defined(_LIPCAP_VERSION)
+.      if !defined(_LIBPCAP_VERSION)
 _LIBPCAP_VERSIONS=	0.8.3  0.7.2
 _LIBPCAP_0.8.3=		NetBSD-2.99.9* NetBSD-2.99.1[0-9]* NetBSD-[3-9]* \
 			FreeBSD-5.[3-9]* FreeBSD-6*
