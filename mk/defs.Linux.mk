@@ -1,9 +1,13 @@
-# $NetBSD: defs.Linux.mk,v 1.45 2003/02/24 19:49:47 jschauma Exp $
+# $NetBSD: defs.Linux.mk,v 1.46 2003/02/27 06:05:21 grant Exp $
 #
 # Variable definitions for the Linux operating system.
 
 AWK?=		/usr/bin/awk
+.if exists(/bin/basename)
 BASENAME?=	/bin/basename
+.elif exists(/usr/bin/basename)
+BASENAME?=	/usr/bin/basename
+.endif
 CAT?=		/bin/cat
 CHMOD?=		/bin/chmod
 CHOWN?=		/bin/chown
@@ -15,14 +19,26 @@ DATE?=		/bin/date
 DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		/bin/echo
+.if exists(/bin/egrep)
 EGREP?=		/bin/egrep
+.elif exists(/usr/bin/egrep)
+EGREP?=		/usr/bin/egrep
+.endif
 EXPR?=		/usr/bin/expr
 FALSE?=		/bin/false
+.if exists(/bin/fgrep)
 FGREP?=		/bin/fgrep
+.elif exists(/usr/bin/fgrep)
+FGREP?=		/usr/bin/fgrep
+.endif
 FILE_CMD?=	/usr/bin/file
 FIND?=		/usr/bin/find
 GMAKE?=		/usr/bin/make
+.if exists(/bin/grep)
 GREP?=		/bin/grep
+.elif exists(/usr/bin/grep)
+GREP?=		/usr/bin/grep
+.endif
 GTAR?=		/bin/tar
 GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/bin/zcat
@@ -45,7 +61,11 @@ PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
+.if exists(/bin/sed)
 SED?=		/bin/sed
+.elif exists(/usr/bin/sed)
+SED?=		/usr/bin/sed
+.endif
 SETENV?=	/usr/bin/env
 SH?=		/bin/sh
 SHLOCK=		${LOCALBASE}/bin/shlock
