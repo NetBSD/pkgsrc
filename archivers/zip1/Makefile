@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/12/03 15:14:51 wiz Exp $
+# $NetBSD: Makefile,v 1.31.4.1 2005/04/01 05:43:51 snj Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -27,7 +27,7 @@ USE_BUILDLINK3=	yes
 .include "../../mk/bsd.prefs.mk"
 
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
-.if ${OPSYS} == "Linux" || ${OPSYS} == "Interix"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "Interix" || ${OPSYS} == "Darwin"
 CFLAGS+=	-DSYSV -DMODERN -DTERMIOS
 .else
 CFLAGS+=	-DDIRENT
