@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3367 2003/09/14 09:10:27 wiz Exp $
+$NetBSD: CHANGES,v 1.3368 2003/09/14 14:08:18 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3680,3 +3680,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cyrus-imapd21 to 2.1.15 [jlam 2003-09-13]
 	Updated pkg_install to 20030914 [jlam 2003-09-14]
 	Updated p5-CGI to 2.98 [kim 2003-09-14]
+	Updated python23 to 2.3nb2 [recht 2003-09-14]
+	Updated python23-pth to 2.3nb2 [recht 2003-09-14]
