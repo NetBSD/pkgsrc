@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/04/22 11:05:04 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/05/06 12:52:07 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -33,6 +33,10 @@ INFO_FILES=	latex kpathsea.info dvips.info fontname.info
 TETEX_SRC=	teTeX-src-0.4pl7.tar.gz
 TETEX_LIB=	teTeX-lib-0.4pl8.tar.gz
 WRKLIB=		${WRKDIR}/teTeX
+
+.if defined(CFLAGS) && ${CFLAGS} == "-O"
+CFLAGS=	-O2
+.endif
 
 pre-install:
 	@${RM} -f ${PREFIX}/share/texmf/ls-R
