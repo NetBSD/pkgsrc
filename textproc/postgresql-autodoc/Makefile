@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/05/05 00:28:50 snj Exp $
+# $NetBSD: Makefile,v 1.14 2005/01/29 10:17:07 mjl Exp $
 #
 
-DISTNAME=	postgresql_autodoc-1.21
-PKGREVISION=	1
+DISTNAME=	postgresql_autodoc-1.24
+# PKGREVISION=	1
 CATEGORIES=	textproc databases
 MASTER_SITES=	http://www.rbt.ca/autodoc/binaries/
 
