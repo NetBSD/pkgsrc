@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2002/12/05 11:31:57 drochner Exp $
+# $NetBSD: Makefile,v 1.172 2002/12/05 22:48:10 jdolecek Exp $
 
 COMMENT=	System utilities
 
@@ -86,6 +86,7 @@ SUBDIR+=	pflogsumm
 SUBDIR+=	psmisc
 SUBDIR+=	pstree
 SUBDIR+=	pv
+SUBDIR+=	pwgen
 SUBDIR+=	qlogtools
 SUBDIR+=	rconfig
 SUBDIR+=	rdiff-backup
