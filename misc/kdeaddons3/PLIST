@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/12/10 06:22:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/03/23 22:18:51 markd Exp $
 bin/atlantikdesigner
 bin/exif.py
 bin/fsview
@@ -10,28 +10,33 @@ bin/noatuntippecanoe.bin
 bin/noatuntyler.bin
 bin/orient.py
 lib/kde3/katecppsymbolviewerplugin.la
+lib/kde3/katefiletemplates.la
 lib/kde3/katefll_initplugin.la
 lib/kde3/katefll_plugin.la
 lib/kde3/katehtmltoolsplugin.la
 lib/kde3/katemodelineplugin.la
 lib/kde3/kateopenheaderplugin.la
 lib/kde3/katepybrowseplugin.la
+lib/kde3/katesnippetsplugin.la
 lib/kde3/katetextfilterplugin.la
 lib/kde3/katexmlcheckplugin.la
 lib/kde3/katexmltoolsplugin.la
 lib/kde3/kbinaryclock_panelapplet.la
 lib/kde3/kcm_kuick.la
 lib/kde3/kcm_vim.la
+lib/kde3/kfile_cert.la
 lib/kde3/kfile_desktop.la
 lib/kde3/kfile_folder.la
 lib/kde3/kfile_html.la
 lib/kde3/kfile_lnk.la
+lib/kde3/kfile_mhtml.la
 lib/kde3/kfile_txt.la
 lib/kde3/kolourpicker_panelapplet.la
 lib/kde3/konq_sidebarnews.la
-lib/kde3/konq_smbmounterplugin.la
 lib/kde3/konqsidebar_mediaplayer.la
 lib/kde3/ktimemon_panelapplet.la
+lib/kde3/libakregatorkonqfeedicon.la
+lib/kde3/libakregatorkonqplugin.la
 lib/kde3/libarkplugin.la
 lib/kde3/libautorefresh.la
 lib/kde3/libbabelfishplugin.la
@@ -40,6 +45,7 @@ lib/kde3/libdirfilterplugin.la
 lib/kde3/libdomtreeviewerplugin.la
 lib/kde3/libfsviewpart.la
 lib/kde3/libkaddrbk_geo_xxport.la
+lib/kde3/libkaddrbk_gmx_xxport.la
 lib/kde3/libkatetabbarextensionplugin.la
 lib/kde3/libkhtmlsettingsplugin.la
 lib/kde3/libkimgallery.la
@@ -56,6 +62,7 @@ lib/kde3/libwebarchiverplugin.la
 lib/kde3/math_panelapplet.la
 lib/kde3/mediacontrol_panelapplet.la
 lib/kde3/noatun_ffrs.la
+lib/kde3/noatun_oblique.la
 lib/kde3/noatunalsaplayer.la
 lib/kde3/noatunblurscope.la
 lib/kde3/noatuncharlatan.la
@@ -74,7 +81,6 @@ lib/libxvim.la
 share/applications/kde/atlantikdesigner.desktop
 share/applications/kde/kcmvim.desktop
 share/applications/kde/ksig.desktop
-share/applications/kde/lnkforward.desktop
 share/doc/kde/HTML/en/kate-plugins/common
 share/doc/kde/HTML/en/kate-plugins/filetemplates.docbook
 share/doc/kde/HTML/en/kate-plugins/htmltools.docbook
@@ -137,39 +143,43 @@ share/doc/kde/HTML/en/konq-plugins/webarchiver/common
 share/doc/kde/HTML/en/konq-plugins/webarchiver/index.cache.bz2
 share/doc/kde/HTML/en/konq-plugins/webarchiver/index.docbook
 share/kde/applnk/.hidden/arkplugin.desktop
-share/kde/applnk/.hidden/babelfishplugin.desktop
-share/kde/applnk/.hidden/crashesplugin.desktop
-share/kde/applnk/.hidden/dirfilterplugin.desktop
-share/kde/applnk/.hidden/domtreeviewerplugin.desktop
 share/kde/applnk/.hidden/katefll.desktop
 share/kde/applnk/.hidden/kcmkuick.desktop
-share/kde/applnk/.hidden/khtmlsettingsplugin.desktop
 share/kde/applnk/.hidden/kimgalleryplugin.desktop
 share/kde/applnk/.hidden/kuickplugin.desktop
+share/kde/applnk/.hidden/lnkforward.desktop
 share/kde/applnk/.hidden/mediaplayerplugin.desktop
-share/kde/applnk/.hidden/minitoolsplugin.desktop
-share/kde/applnk/.hidden/searchbarplugin.desktop
-share/kde/applnk/.hidden/smbmounterplugin.desktop
-share/kde/applnk/.hidden/uachangerplugin.desktop
-share/kde/applnk/.hidden/validatorsplugin.desktop
-share/kde/applnk/.hidden/webarchiverplugin.desktop
+share/kde/apps/akregator/pics/rss.png
 share/kde/apps/atlantikdesigner/atlantikdesignerui.rc
+share/kde/apps/domtreeviewer/domtreeviewerui.rc
 share/kde/apps/fsview/fsview_part.rc
 share/kde/apps/kaddressbook/geo_xxportui.rc
+share/kde/apps/kaddressbook/gmx_xxportui.rc
 share/kde/apps/kate/plugins/katecppsymbolviewer/ui.rc
+share/kde/apps/kate/plugins/katefiletemplates/templates/cppgpl.cpp.katetemplate
+share/kde/apps/kate/plugins/katefiletemplates/templates/cppgpl.hh.katetemplate
+share/kde/apps/kate/plugins/katefiletemplates/templates/cpplgpl.cpp.katetemplate
+share/kde/apps/kate/plugins/katefiletemplates/templates/cpplgpl.hh.katetemplate
+share/kde/apps/kate/plugins/katefiletemplates/templates/docbookchapter.xml.katetemplate
+share/kde/apps/kate/plugins/katefiletemplates/templates/html.katetemplate
+share/kde/apps/kate/plugins/katefiletemplates/templates/language.xml.katetemplate
+share/kde/apps/kate/plugins/katefiletemplates/ui.rc
 share/kde/apps/kate/plugins/katefll/ui.rc
 share/kde/apps/kate/plugins/katehtmltools/ui.rc
 share/kde/apps/kate/plugins/katemodeline/ui.rc
 share/kde/apps/kate/plugins/kateopenheader/ui.rc
 share/kde/apps/kate/plugins/katepybrowse/ui.rc
+share/kde/apps/kate/plugins/katesnippets/plugin_katesnippets.rc
 share/kde/apps/kate/plugins/katetabbarextension/ui.rc
 share/kde/apps/kate/plugins/katetextfilter/ui.rc
 share/kde/apps/kate/plugins/katexmlcheck/ui.rc
 share/kde/apps/kate/plugins/katexmltools/ui.rc
 share/kde/apps/kate/scripts/html-tidy.desktop
 share/kde/apps/kate/scripts/html-tidy.sh
+share/kde/apps/katepart/syntax/katetemplate.xml
 share/kde/apps/katexmltools/html4-loose.dtd.xml
 share/kde/apps/katexmltools/html4-strict.dtd.xml
+share/kde/apps/katexmltools/kcfg.dtd.xml
 share/kde/apps/katexmltools/kde-docbook.dtd.xml
 share/kde/apps/katexmltools/kpartgui.dtd.xml
 share/kde/apps/katexmltools/language.dtd.xml
@@ -180,16 +190,32 @@ share/kde/apps/katexmltools/xhtml1-strict.dtd.xml
 share/kde/apps/katexmltools/xhtml1-transitional.dtd.xml
 share/kde/apps/katexmltools/xslt-1.0.dtd.xml
 share/kde/apps/kcontrol/pics/kvim.png
+share/kde/apps/khtml/kpartplugins/akregator_konqfeedicon.desktop
+share/kde/apps/khtml/kpartplugins/akregator_konqfeedicon.rc
+share/kde/apps/khtml/kpartplugins/autorefresh.desktop
 share/kde/apps/khtml/kpartplugins/autorefresh.rc
+share/kde/apps/khtml/kpartplugins/babelfishplugin.desktop
+share/kde/apps/khtml/kpartplugins/crashesplugin.desktop
 share/kde/apps/khtml/kpartplugins/crashesplugin.rc
+share/kde/apps/khtml/kpartplugins/domtreeviewerplugin.desktop
+share/kde/apps/khtml/kpartplugins/khtmlsettingsplugin.desktop
 share/kde/apps/khtml/kpartplugins/khtmlsettingsplugin.rc
+share/kde/apps/khtml/kpartplugins/minitoolsplugin.desktop
 share/kde/apps/khtml/kpartplugins/minitoolsplugin.rc
+share/kde/apps/khtml/kpartplugins/plugin_babelfish.desktop
 share/kde/apps/khtml/kpartplugins/plugin_babelfish.rc
+share/kde/apps/khtml/kpartplugins/plugin_domtreeviewer.desktop
 share/kde/apps/khtml/kpartplugins/plugin_domtreeviewer.rc
+share/kde/apps/khtml/kpartplugins/plugin_rellinks.desktop
 share/kde/apps/khtml/kpartplugins/plugin_rellinks.rc
+share/kde/apps/khtml/kpartplugins/plugin_validators.desktop
 share/kde/apps/khtml/kpartplugins/plugin_validators.rc
+share/kde/apps/khtml/kpartplugins/plugin_webarchiver.desktop
 share/kde/apps/khtml/kpartplugins/plugin_webarchiver.rc
+share/kde/apps/khtml/kpartplugins/uachangerplugin.desktop
 share/kde/apps/khtml/kpartplugins/uachangerplugin.rc
+share/kde/apps/khtml/kpartplugins/validatorsplugin.desktop
+share/kde/apps/khtml/kpartplugins/webarchiverplugin.desktop
 share/kde/apps/kicker/applets/kbinaryclock.desktop
 share/kde/apps/kicker/applets/kolourpicker.desktop
 share/kde/apps/kicker/applets/ktimemon.desktop
@@ -206,14 +232,14 @@ share/kde/apps/knewsticker/scripts/sportscores.py
 share/kde/apps/knewsticker/scripts/stock.pl
 share/kde/apps/konqiconview/kpartplugins/dirfilterplugin.rc
 share/kde/apps/konqiconview/kpartplugins/kimgalleryplugin.rc
-share/kde/apps/konqiconview/kpartplugins/smbmounterplugin.rc
 share/kde/apps/konqlistview/kpartplugins/dirfilterplugin.rc
 share/kde/apps/konqlistview/kpartplugins/kimgalleryplugin.rc
-share/kde/apps/konqlistview/kpartplugins/smbmounterplugin.rc
 share/kde/apps/konqsidebartng/add/mplayer_add.desktop
 share/kde/apps/konqsidebartng/add/news_add.desktop
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/google.png
+share/kde/apps/konqueror/kpartplugins/searchbar.desktop
 share/kde/apps/konqueror/kpartplugins/searchbar.rc
+share/kde/apps/konqueror/kpartplugins/searchbarplugin.desktop
 share/kde/apps/konqueror/servicemenus/imageconverter.desktop
 share/kde/apps/konqueror/servicemenus/jpegorient.desktop
 share/kde/apps/ksig/ksigui.rc
@@ -241,6 +267,9 @@ share/kde/apps/noatun/luckytag.plugin
 share/kde/apps/noatun/lyrics.plugin
 share/kde/apps/noatun/lyricsui.rc
 share/kde/apps/noatun/madness.plugin
+share/kde/apps/noatun/oblique.plugin
+share/kde/apps/noatun/oblique/schemas/standard
+share/kde/apps/noatun/obliqueui.rc
 share/kde/apps/noatun/pitchablespeed.plugin
 share/kde/apps/noatun/synaescope.plugin
 share/kde/apps/noatun/tippecanoe.plugin
@@ -277,10 +306,8 @@ share/kde/icons/crystalsvg/22x22/actions/webarchiver.png
 share/kde/icons/crystalsvg/22x22/apps/konqsidebar_mediaplayer.png
 share/kde/icons/crystalsvg/32x32/apps/atlantikdesigner.png
 share/kde/icons/crystalsvg/32x32/apps/konqsidebar_mediaplayer.png
-share/kde/icons/crystalsvg/32x32/apps/konqsidebar_news.png
 share/kde/icons/crystalsvg/32x32/apps/ktimemon.png
 share/kde/icons/crystalsvg/48x48/apps/konqsidebar_mediaplayer.png
-share/kde/icons/crystalsvg/48x48/apps/konqsidebar_news.png
 share/kde/icons/hicolor/16x16/apps/ksig.png
 share/kde/icons/hicolor/22x22/apps/fsview.png
 share/kde/icons/hicolor/32x32/apps/fsview.png
@@ -289,26 +316,32 @@ share/kde/icons/locolor/16x16/apps/autorefresh.png
 share/kde/icons/locolor/16x16/apps/ktimemon.png
 share/kde/icons/locolor/32x32/apps/konqsidebar_mediaplayer.png
 share/kde/icons/locolor/32x32/apps/ktimemon.png
-share/kde/mimelnk/application/x-webarchive.desktop
 share/kde/mimelnk/application/x-win-lnk.desktop
+share/kde/services/akregator_konqplugin.desktop
 share/kde/services/ark_plugin.desktop
+share/kde/services/dirfilterplugin.desktop
 share/kde/services/fsview_part.desktop
 share/kde/services/kaddressbook/geo_xxport.desktop
+share/kde/services/kaddressbook/gmx_xxport.desktop
 share/kde/services/katecppsymbolviewer.desktop
+share/kde/services/katefiletemplates.desktop
 share/kde/services/katefll_initplugin.desktop
 share/kde/services/katefll_plugin.desktop
 share/kde/services/katehtmltools.desktop
 share/kde/services/katemodeline.desktop
 share/kde/services/kateopenheader.desktop
 share/kde/services/katepybrowse.desktop
+share/kde/services/katesnippets.desktop
 share/kde/services/katetabbarextension.desktop
 share/kde/services/katetextfilter.desktop
 share/kde/services/katexmlcheck.desktop
 share/kde/services/katexmltools.desktop
+share/kde/services/kfile_cert.desktop
 share/kde/services/kfile_desktop.desktop
 share/kde/services/kfile_folder.desktop
 share/kde/services/kfile_html.desktop
 share/kde/services/kfile_lnk.desktop
+share/kde/services/kfile_mhtml.desktop
 share/kde/services/kfile_txt.desktop
 share/kde/services/kuick_plugin.desktop
 share/kde/services/renaudiodlg.desktop
@@ -332,7 +365,9 @@ share/kde/services/webarchivethumbnail.desktop
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @dirrm share/kde/apps/vimpart
-@comment dirrm share/kde/apps/noatun
+@dirrm share/kde/apps/noatun/oblique/schemas
+@dirrm share/kde/apps/noatun/oblique
+@comment @dirrm share/kde/apps/noatun
 @dirrm share/kde/apps/mediacontrol/fulldecent
 @dirrm share/kde/apps/mediacontrol/default
 @dirrm share/kde/apps/mediacontrol/blueish
@@ -350,21 +385,27 @@ share/kde/services/webarchivethumbnail.desktop
 @comment in kde: @dirrm share/kde/apps/khtml/kpartplugins
 @comment in kde: @dirrm share/kde/apps/kcontrol/pics
 @dirrm share/kde/apps/katexmltools
+@comment in kde: @dirrm share/kde/apps/katepart/syntax
 @comment in kde: @dirrm share/kde/apps/kate/scripts
 @dirrm share/kde/apps/kate/plugins/katexmltools
 @dirrm share/kde/apps/kate/plugins/katexmlcheck
 @dirrm share/kde/apps/kate/plugins/katetextfilter
 @dirrm share/kde/apps/kate/plugins/katetabbarextension
+@dirrm share/kde/apps/kate/plugins/katesnippets
 @dirrm share/kde/apps/kate/plugins/katepybrowse
 @dirrm share/kde/apps/kate/plugins/kateopenheader
 @dirrm share/kde/apps/kate/plugins/katemodeline
 @dirrm share/kde/apps/kate/plugins/katehtmltools
 @dirrm share/kde/apps/kate/plugins/katefll
+@dirrm share/kde/apps/kate/plugins/katefiletemplates/templates
+@dirrm share/kde/apps/kate/plugins/katefiletemplates
 @dirrm share/kde/apps/kate/plugins/katecppsymbolviewer
 @comment in kde: @dirrm share/kde/apps/kate/plugins
 @comment in kde: @dirrm share/kde/apps/kaddressbook
 @dirrm share/kde/apps/fsview
+@dirrm share/kde/apps/domtreeviewer
 @dirrm share/kde/apps/atlantikdesigner
+@comment in kdepim: @dirrm share/kde/apps/akregator/pics
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/.hidden
 @dirrm share/doc/kde/HTML/en/konq-plugins/webarchiver
