@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2001/06/10 00:08:48 jlam Exp $
+# $NetBSD: Makefile.common,v 1.16 2001/06/11 02:05:14 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -109,10 +109,7 @@ CFLAGS=
 CFLAGS+=		-DA4
 .endif
 
-CFLAGS+=		-I${BUILDLINK_INCDIR}
 CFLAGS+=		-DHAVE_MKSTEMP=1
-
-LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 
 .if ${OPSYS} == "SunOS"
 LDFLAGS+=		-L${LOCALBASE}/bsd/lib -Wl,-R${LOCALBASE}/bsd/lib
