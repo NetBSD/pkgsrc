@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:26:57 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/22 07:51:12 grant Exp $
 
 DISTNAME=	plp_1_8
 PKGNAME=	plp-1.8
@@ -11,7 +11,7 @@ COMMENT=	Tools to talk to the PSION organiser
 
 USE_BUILDLINK2=	# defined
 USE_GCC_SHLIB=	# defined
-USE_GMAKE=	# defined
+USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	# defined
 
 do-install:

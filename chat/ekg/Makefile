@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/12/08 16:32:52 adam Exp $
+# $NetBSD: Makefile,v 1.22 2004/01/22 07:49:20 grant Exp $
 #
 
 DISTNAME=	ekg-1.4
@@ -11,7 +11,7 @@ HOMEPAGE=	http://dev.null.pl/ekg/
 COMMENT=	Experimental Gadu-Gadu Client (Polish instant messaging system)
 
 USE_BUILDLINK2=		YES
-USE_GMAKE=		YES
+USE_GNU_TOOLS+=		make
 USE_GNU_READLINE=	YES
 USE_LIBTOOL=		YES
 USE_NCURSES=		YES	# KEY_RESIZE, ncurses internals

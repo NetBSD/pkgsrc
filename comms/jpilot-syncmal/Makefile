@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/12 10:39:06 cjep Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/22 07:51:12 grant Exp $
 
 DISTNAME=		jpilot-syncmal_0.71.2
 PKGNAME=		jpilot-syncmal-0.71.2
@@ -14,7 +14,7 @@ BUILDLINK_DEPMETHOD.jpilot=	full
 
 USE_BUILDLINK2=		# defined
 USE_X11=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		# defined
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
