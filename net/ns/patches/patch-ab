@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/08/27 08:07:07 seb Exp $
+$NetBSD: patch-ab,v 1.2 2004/03/08 23:55:24 minskim Exp $
 
---- autoconf.h.in.orig	Mon Aug 14 15:57:14 2000
+--- autoconf.h.in.orig	Mon Jan 12 18:59:20 2004
 +++ autoconf.h.in
-@@ -63,6 +63,9 @@
+@@ -66,6 +66,9 @@
  #undef HAVE_ARPA_INET_H
  #undef HAVE_NETINET_IN_H
  #undef HAVE_NET_ETHERNET_H
