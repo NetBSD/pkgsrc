@@ -1,6 +1,5 @@
-$NetBSD: patch-ab,v 1.3 2000/09/03 13:38:49 wiz Exp $
---- ./src/share/org/apache/tomcat/task/ApacheConfig.java.orig	Sun May 14 18:11:20 2000
-+++ ./src/share/org/apache/tomcat/task/ApacheConfig.java	Sun May 14 18:13:28 2000
+--- src/share/org/apache/tomcat/task/ApacheConfig.java.orig	Tue Dec 12 14:51:28 2000
++++ src/share/org/apache/tomcat/task/ApacheConfig.java	Tue Dec 12 18:58:28 2000
 @@ -97,7 +97,7 @@
  	    } else {
  		// XXX XXX change it to mod_jserv_${os.name}.so, put all so in tomcat
@@ -10,11 +9,12 @@ $NetBSD: patch-ab,v 1.3 2000/09/03 13:38:49 wiz Exp $
  	    }
  
  	    pw.println("ApJServManual on");
-@@ -105,13 +105,14 @@
+@@ -105,13 +105,15 @@
  	    pw.println("ApJServSecretKey DISABLED");
  	    pw.println("ApJServMountCopy on");
  	    pw.println("ApJServLogLevel notice");
 +	    pw.println("ApJServLogFile /var/log/httpd/jserv/mod_jserv.log");
++
  	    pw.println();
  	    
  	    // XXX read it from ContextManager

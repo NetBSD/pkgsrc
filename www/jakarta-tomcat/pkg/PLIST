@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/05/14 23:35:28 jwise Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/12/13 03:49:31 jwise Exp $
 jakarta/tomcat/LICENSE
 jakarta/tomcat/bin/ant
 jakarta/tomcat/bin/antRun
@@ -371,7 +371,6 @@ jakarta/tomcat/src/org/apache/tomcat/util/xml/XmlAction.java
 jakarta/tomcat/src/org/apache/tomcat/util/xml/XmlMapper.java
 jakarta/tomcat/src/org/apache/tomcat/util/xml/XmlMatch.java
 jakarta/tomcat/webapps/ROOT.war
-jakarta/tomcat/webapps/admin.war
 jakarta/tomcat/webapps/examples.war
 jakarta/tomcat/webapps/test.war
 @comment these are automatically created at run time
