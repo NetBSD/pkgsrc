@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/01/22 07:49:21 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/05/09 23:58:19 wiz Exp $
 #
 
 DISTNAME=	ser-0.8.10_src
@@ -13,12 +13,14 @@ COMMENT=	SIP express router
 
 WRKSRC=		${WRKDIR}/ser-0.8.10
 
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 
-MAKE_ENV+= BUILDLINK_PREFIX.pthread="${BUILDLINK_PREFIX.pthread}"
+MAKE_ENV+= BUILDLINK_PREFIX.pthread=${BUILDLINK_PREFIX.pthread:Q}
+MAKE_ENV+= BUILDLINK_PREFIX.mysql-client=${BUILDLINK_PREFIX.mysql-client:Q}
+MAKE_ENV+= BUILDLINK_PREFIX.expat=${BUILDLINK_PREFIX.expat:Q}
 
-.include "../../databases/mysql-client/buildlink2.mk"
-.include "../../textproc/expat/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../databases/mysql-client/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
