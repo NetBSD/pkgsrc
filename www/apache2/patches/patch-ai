@@ -1,0 +1,20 @@
+$NetBSD: patch-ai,v 1.6 2004/11/30 23:21:44 jlam Exp $
+
+--- support/apxs.in.orig	2004-02-09 15:59:49.000000000 -0500
++++ support/apxs.in
+@@ -337,9 +337,12 @@ if (! -x "$apu_bindir/apu-config") {
+     exit(1);
+ }
+ 
+-my $libtool = `$apr_bindir/apr-config --installbuilddir`;
+-chomp($libtool);
+-$libtool = "$libtool/libtool";
++my $libtool = $ENV{'APR_LIBTOOL'};
++unless ($libtool) {
++	$libtool = `$apr_bindir/apr-config --installbuilddir`;
++	chomp($libtool);
++	$libtool = "$libtool/libtool";
++}
+ 
+ my $apr_includedir = `$apr_bindir/apr-config --includes`;
+ chomp($apr_includedir);
