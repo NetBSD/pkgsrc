@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.46 2004/11/23 19:44:02 jlam Exp $
+# $NetBSD: build,v 1.47 2004/12/11 02:49:57 kristerw Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -83,7 +83,7 @@ while [ ${#} -ge 1 ] ; do
 		exit 0
 		;;
 
-	--mirror_only )
+	--mirror_only|-m )
 		mirror_only=yes
 		target=mirror-distfiles
 		shift
