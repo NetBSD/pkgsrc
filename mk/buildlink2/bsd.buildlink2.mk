@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.1.2.3 2002/06/28 06:26:57 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.1.2.4 2002/06/28 06:31:34 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -576,5 +576,5 @@ _BLNK_CHECK_PATTERNS+=	-e "-I${X11BASE}/" -e "-L${X11BASE}/"
 
 buildlink-check:
 	@if [ -f ${_BLNK_WRAP_LOG} ]; then				\
-		${EGREP} ${_BLNK_CHECK_PATTERNS} ${_BLNK_WRAP_LOG} || ${TRUE} \
+		${GREP} ${_BLNK_CHECK_PATTERNS} ${_BLNK_WRAP_LOG} || ${TRUE}; \
 	fi
