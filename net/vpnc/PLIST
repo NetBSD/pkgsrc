@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/20 22:58:52 wiz Exp $
+bin/vpnc
+bin/vpnc-connect
+bin/vpnc-disconnect
+man/man8/vpnc.8
+share/doc/vpnc/README
+share/examples/vpnc/vpnc.conf
+@dirrm share/examples/vpnc
+@dirrm share/doc/vpnc
