@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/03 10:27:50 agc Exp $
+
+--- Ma2Asm/ix86_any.c.orig	Thu Apr  6 04:47:50 2000
++++ Ma2Asm/ix86_any.c	Fri Jun 30 12:48:40 2000
+@@ -39,7 +39,7 @@
+ 
+ #define MAX_C_ARGS_IN_C_CODE       32
+ 
+-#ifdef M_ix86_cygwin
++#if defined(M_ix86_cygwin) || defined(M_ix86_bsd)
+ 
+ #define UN                         "_"
+ 
+@@ -703,7 +703,9 @@
+ void Dico_String_Start(int nb_consts)
+ 
+ {
++#if !defined(M_ix86_bsd)
+  Label_Printf(".section\t.rodata");
++#endif
+ }
+ 
+ 

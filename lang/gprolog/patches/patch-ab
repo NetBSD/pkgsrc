@@ -1,0 +1,68 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/07/03 10:27:50 agc Exp $
+
+--- Linedit/stty.c.orig	Wed May 24 03:35:24 2000
++++ Linedit/stty.c	Fri Jun 30 12:48:41 2000
+@@ -21,12 +21,25 @@
+ /* with this program; if not, write to the Free Software Foundation, Inc.  */
+ /* 59 Temple Place - Suite 330, Boston, MA 02111, USA.                     */
+ /*-------------------------------------------------------------------------*/
++#include "../EnginePl/gp_config.h"
++
+ #include <stdio.h>
+ #include <signal.h>
+ 
+ #if defined(__unix__) || defined(__CYGWIN__)
+ 
++#if defined(HAVE_SYS_IOCTL_COMPAT_H)
++#include <sys/ioctl_compat.h>
++#endif
++#if defined(HAVE_TERMIOS_H)
++#include <termios.h>
++#elif defined(HAVE_TERMIO_H)
+ #include <termio.h>
++#define termios termio
++#define TIOCGETP TCGETA
++#define TIOCSETP TCSETA
++#endif
++
+ #include <unistd.h>
+ 
+ #if defined(sun) /* && defined(sparc) */ /* commented out for ix86/solaris */
+@@ -71,10 +84,10 @@
+ 
+ static int           is_tty_in;
+ static int           is_tty_out;
+-static struct termio old_stty_in;
+-static struct termio new_stty_in;
+-static struct termio old_stty_out;
+-static struct termio new_stty_out;
++static struct termios old_stty_in;
++static struct termios new_stty_in;
++static struct termios old_stty_out;
++static struct termios new_stty_out;
+ 
+ #elif defined(_WIN32)
+ 
+@@ -96,10 +109,10 @@
+ #if defined(__unix__) || defined(__CYGWIN__)
+ 
+ static
+-void      Set_TTY_Mode          (struct termio *old,struct termio *new);
++void      Set_TTY_Mode          (struct termios *old,struct termios *new);
+ 
+-#define Gtty(fd,s) ioctl(fd,TCGETA,s)
+-#define Stty(fd,s) ioctl(fd,TCSETA,s)
++#define Gtty(fd,s) ioctl(fd,TIOCGETP,s)
++#define Stty(fd,s) ioctl(fd,TIOCSETP,s)
+ 
+ #endif
+ 
+@@ -287,7 +300,7 @@
+ /*                                                                         */
+ /* Mode cbreak (raw mode).                                                 */
+ /*-------------------------------------------------------------------------*/
+-static void Set_TTY_Mode(struct termio *old,struct termio *new)
++static void Set_TTY_Mode(struct termios *old,struct termios *new)
+ 
+ {
+  *new = *old;

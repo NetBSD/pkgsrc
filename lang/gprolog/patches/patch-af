@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/07/03 10:27:50 agc Exp $
+
+--- EnginePl/Makefile.in.orig	Wed Jun 28 03:34:38 2000
++++ EnginePl/Makefile.in	Fri Jun 30 12:48:42 2000
+@@ -18,7 +18,7 @@
+ 
+ $(LIBNAME): $(OBJLIB)
+ 	rm -f $(LIBNAME) 
+-	$(AR_RC)$(LIBNAME) $(OBJLIB)
++	$(AR_RC) $(LIBNAME) $(OBJLIB)
+ 	$(RANLIB) $(LIBNAME)
+ 
+ 
