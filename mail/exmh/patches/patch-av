@@ -1,0 +1,19 @@
+*** lib/post.tcl	Tue Dec 23 18:41:31 1997
+--- lib/post.tcl.new	Fri Jan  9 11:40:29 1998
+***************
+*** 59,65 ****
+      # and CNews which get upset when they can't do it
+      set header_throwAway \
+  	{{return-path:} {received:} {path:} {date:} {message-id:} {to:} \
+! 	     {lines:} {x-exmh-isig-} {cc:}}
+  
+      # Headers INN wants to add  itself get X-original- shoved in front
+      # if we want to keep them
+--- 59,65 ----
+      # and CNews which get upset when they can't do it
+      set header_throwAway \
+  	{{return-path:} {received:} {path:} {date:} {message-id:} {to:} \
+! 	     {lines:} {x-exmh-isig-} {cc:} {from }}
+  
+      # Headers INN wants to add  itself get X-original- shoved in front
+      # if we want to keep them
