@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/03/29 09:42:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/05/10 00:15:59 wiz Exp $
 bin/bison
 @unexec ${INSTALL_INFO} --delete %D/info/bison.info %D/info/dir
 info/bison.info
@@ -8,7 +8,7 @@ info/bison.info-3
 info/bison.info-4
 info/bison.info-5
 info/bison.info-6
-@comment also in libiconv: lib/charset.alias
+@comment from libiconv: lib/charset.alias
 @exec ${INSTALL_INFO} %D/info/bison.info %D/info/dir
 man/man1/bison.1
 share/bison/bison.simple
