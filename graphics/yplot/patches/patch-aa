@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/14 11:52:11 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/03/30 20:30:07 jtb Exp $
 
 --- Makefile.build.orig	Fri Sep  3 21:59:31 1999
 +++ Makefile.build
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/02/14 11:52:11 jtb Exp $
  	yorick -batch make.i yplot yplot.i
  	mv -f Makefile Makefile_yplot
 -	make -f Makefile_yplot
-+	make -f Makefile_yplot PKG_LIBS="`plplot_linkage` -lyorm"
++	make -f Makefile_yplot PKG_LIBS="`plplot-config --libs` -lyorm"
  
  # generate doc/yplot.doc using local yplot and mkdoc
  doc/yplot.doc: yplot yplot_doc.csh
