@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2004/05/03 15:58:55 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2004/07/02 15:18:06 drochner Exp $
 
 DISTNAME=	Guppi-0.40.3
 PKGNAME=	${DISTNAME:S/G/g/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	math graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/Guppi/0.40/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,19 +11,8 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/guppi/
 COMMENT=	Plot program with integrated statistics capabilities
 
-.if exists(/usr/include/wctype.h)
-#
-# "guppi" only accepts newer versions of the "gnumeric" package which
-# cannot be build on all platforms. We only enable "gnumeric" support
-# on platforms which can build the "gnumeric" 1.0.x packages.
-#
-DEPENDS+=		gnumeric>=1.0.9:../../math/gnumeric
-CONFIGURE_ARGS=		--enable-gnumeric
-PLIST_SUBST+=		GNUMERIC=
-.else
+# works only with gnumeric-1.0.x (gnome1 based)
 CONFIGURE_ARGS=		--disable-gnumeric
-PLIST_SUBST+=		GNUMERIC="@comment "
-.endif
 
 USE_BUILDLINK3=		YES
 USE_DIRS+=		xdg-1.1
@@ -34,7 +23,6 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 .include "../../devel/bonobo/buildlink3.mk"
-.include "../../devel/gal/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/guile14/buildlink3.mk"

@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2004/05/03 15:58:55 wiz Exp $
-${GNUMERIC}bin/guppi-gnumeric
+@comment $NetBSD: PLIST,v 1.19 2004/07/02 15:18:06 drochner Exp $
 include/gnome-1.0/libguppi/gnan.h
 include/gnome-1.0/libguppi/guppi-2d.h
 include/gnome-1.0/libguppi/guppi-alpha-template.h
@@ -217,9 +216,6 @@ share/gnome/help/guppi/C/guppi.html
 share/gnome/help/guppi/C/ln14.html
 share/gnome/help/guppi/C/topic.dat
 share/guppi/glade/view-properties.glade
-${GNUMERIC}share/guppi/glade/guppi-gnumeric-format-guru.glade
-${GNUMERIC}share/guppi/scripts/guppi-gnumeric-plots.xml
-${GNUMERIC}share/oaf/GNOME_Guppi_Gnumeric.oaf
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/Guppi.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/Guppi.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/Guppi.mo
@@ -320,7 +316,6 @@ share/pixmaps/guppi/stock.xpm
 share/pixmaps/guppi/surface.xpm
 @exec ${MKDIR} %D/share/gnome/help/guppi/C/images
 @dirrm share/pixmaps/guppi
-${GNUMERIC}@dirrm share/guppi/scripts
 @dirrm share/guppi/glade
 @dirrm share/guppi
 @dirrm share/gnome/help/guppi/C/images
