@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1623 2004/04/16 17:49:47 recht Exp $
+$NetBSD: TODO,v 1.1624 2004/04/16 21:19:25 minskim Exp $
 
 Suggested new packages
 ======================
@@ -226,7 +226,6 @@ Suggested package updates
 	o jam-2.5
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jpilot-0.99.7 [pkg/24635]
-	o kermit-8.0.211
 	o larswm-7.3
 	o lavaps-2.4
 	o leafnode-1.9.52
@@ -271,6 +270,7 @@ Suggested package updates
 	o nosefart-1.92j-mls
 	o ns-flash-6.0.79
 	o nsd-2.0.2
+	o nslint-2.1a3
 	o nut-9.12
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
@@ -301,6 +301,7 @@ Suggested package updates
 	o pygtk-0.6.11
 	o pysol-4.82
 	o rep-gtk-0.17
+	o rhythmbox-0.8.0
 	o rox-1.2.2
 	o rox-session-0.1.20
 	o rrdtool-1.0.45
