@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 1998/12/21 10:29:42 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/05/25 23:45:06 jlam Exp $
 bin/R
+bin/R.binary
 bin/Rd2txt
 bin/Rdconv
 bin/Rdindex
@@ -50,8 +51,8 @@ share/R/bin/BATCH
 share/R/bin/COMPILE
 share/R/bin/INSTALL
 share/R/bin/R
-share/R/bin/R.binary
 share/R/bin/REMOVE
+share/R/bin/Rd2contents
 share/R/bin/Rd2dvi
 share/R/bin/Rd2txt
 share/R/bin/Rdconv
@@ -106,12 +107,13 @@ share/R/doc/html/template.html
 share/R/doc/html/thanks.html
 share/R/doc/html/up.jpg
 share/R/doc/keyword-test
-share/R/doc/manual/ABOUT.tex
-share/R/doc/manual/Man.tex
+share/R/doc/manual/Manual.tex
 share/R/doc/manual/Rd.sty
 share/R/doc/manual/Rd2dvi.tex
+share/R/doc/manual/Reference.tex
 share/R/doc/manual/plotmath.tex
 share/R/doc/manual/primitive-funs.tex
+share/R/doc/manual/programming.tex
 share/R/doc/manual/writing-Rd.tex
 share/R/etc/Makeconf
 share/R/etc/Rdconvlib.pl
@@ -130,45 +132,37 @@ share/R/include/Memory.h
 share/R/include/Platform.h
 share/R/include/PrtUtil.h
 share/R/include/Random.h
+share/R/include/Rinternals.h
 share/R/include/S.h
 share/R/include/S_compat.h
 share/R/include/Utils.h
 share/R/include/f2c.h
 share/R/library/LibIndex
+share/R/library/base/CONTENTS
 share/R/library/base/INDEX
-share/R/library/base/R-ex/Alias.R
 share/R/library/base/R-ex/Arithmetic.R
-share/R/library/base/R-ex/BATCH.R
 share/R/library/base/R-ex/Bessel.R
 share/R/library/base/R-ex/Beta.R
 share/R/library/base/R-ex/Binomial.R
-share/R/library/base/R-ex/C.R
-share/R/library/base/R-ex/COMPILE.R
 share/R/library/base/R-ex/Cauchy.R
 share/R/library/base/R-ex/Chisquare.R
 share/R/library/base/R-ex/Comparison.R
 share/R/library/base/R-ex/Constants.R
 share/R/library/base/R-ex/Control.R
-share/R/library/base/R-ex/Defunct.R
 share/R/library/base/R-ex/Deprecated.R
-share/R/library/base/R-ex/Devices.R
 share/R/library/base/R-ex/Exponential.R
 share/R/library/base/R-ex/Extract.R
 share/R/library/base/R-ex/Extremes.R
 share/R/library/base/R-ex/FDist.R
-share/R/library/base/R-ex/Foreign.R
 share/R/library/base/R-ex/GammaDist.R
 share/R/library/base/R-ex/Geometric.R
 share/R/library/base/R-ex/Hyperbolic.R
 share/R/library/base/R-ex/Hypergeometric.R
-share/R/library/base/R-ex/INSTALL.R
 share/R/library/base/R-ex/IQR.R
-share/R/library/base/R-ex/Internal.R
 share/R/library/base/R-ex/Log.R
 share/R/library/base/R-ex/Logic.R
 share/R/library/base/R-ex/Logistic.R
 share/R/library/base/R-ex/Lognormal.R
-share/R/library/base/R-ex/Machine.R
 share/R/library/base/R-ex/Math.R
 share/R/library/base/R-ex/Memory.R
 share/R/library/base/R-ex/NA.R
@@ -178,14 +172,11 @@ share/R/library/base/R-ex/NegBinomial.R
 share/R/library/base/R-ex/Normal.R
 share/R/library/base/R-ex/Poisson.R
 share/R/library/base/R-ex/Primitive.R
-share/R/library/base/R-ex/REMOVE.R
-share/R/library/base/R-ex/RHOME.R
 share/R/library/base/R-ex/Random.R
+share/R/library/base/R-ex/Recall.R
 share/R/library/base/R-ex/Round.R
-share/R/library/base/R-ex/SHLIB.R
 share/R/library/base/R-ex/SignRank.R
 share/R/library/base/R-ex/Special.R
-share/R/library/base/R-ex/Startup.R
 share/R/library/base/R-ex/TDist.R
 share/R/library/base/R-ex/Trig.R
 share/R/library/base/R-ex/Tukey.R
@@ -195,14 +186,11 @@ share/R/library/base/R-ex/Weibull.R
 share/R/library/base/R-ex/Wilcoxon.R
 share/R/library/base/R-ex/abbreviate.R
 share/R/library/base/R-ex/abline.R
-share/R/library/base/R-ex/acid.R
 share/R/library/base/R-ex/add1.R
-share/R/library/base/R-ex/airmiles.R
-share/R/library/base/R-ex/airquality.R
+share/R/library/base/R-ex/aggregate.R
 share/R/library/base/R-ex/alias.R
 share/R/library/base/R-ex/all.R
 share/R/library/base/R-ex/allnames.R
-share/R/library/base/R-ex/anova.R
 share/R/library/base/R-ex/anscombe.R
 share/R/library/base/R-ex/aov.R
 share/R/library/base/R-ex/aperm.R
@@ -216,7 +204,6 @@ share/R/library/base/R-ex/arrows.R
 share/R/library/base/R-ex/as.function.R
 share/R/library/base/R-ex/assign.R
 share/R/library/base/R-ex/attach.R
-share/R/library/base/R-ex/attenu.R
 share/R/library/base/R-ex/attr.R
 share/R/library/base/R-ex/attributes.R
 share/R/library/base/R-ex/autoload.R
@@ -224,27 +211,22 @@ share/R/library/base/R-ex/ave.R
 share/R/library/base/R-ex/axis.R
 share/R/library/base/R-ex/backsolve.R
 share/R/library/base/R-ex/barplot.R
-share/R/library/base/R-ex/bees.R
 share/R/library/base/R-ex/body.R
 share/R/library/base/R-ex/box.R
 share/R/library/base/R-ex/boxplot.R
 share/R/library/base/R-ex/boxplot.stats.R
-share/R/library/base/R-ex/browser.R
-share/R/library/base/R-ex/bug.report.R
 share/R/library/base/R-ex/bxp.R
 share/R/library/base/R-ex/c.R
 share/R/library/base/R-ex/call.R
-share/R/library/base/R-ex/cars.R
 share/R/library/base/R-ex/case.names.R
 share/R/library/base/R-ex/cat.R
 share/R/library/base/R-ex/cbind.R
-share/R/library/base/R-ex/character.R
 share/R/library/base/R-ex/charmatch.R
-share/R/library/base/R-ex/chickwts.R
+share/R/library/base/R-ex/check.options.R
 share/R/library/base/R-ex/chisq.test.R
 share/R/library/base/R-ex/chol.R
 share/R/library/base/R-ex/chol2inv.R
-share/R/library/base/R-ex/class.R
+share/R/library/base/R-ex/chull.R
 share/R/library/base/R-ex/codes.R
 share/R/library/base/R-ex/coefficients.R
 share/R/library/base/R-ex/col.R
@@ -256,15 +238,9 @@ share/R/library/base/R-ex/complex.R
 share/R/library/base/R-ex/conflicts.R
 share/R/library/base/R-ex/consume.R
 share/R/library/base/R-ex/contour.R
-share/R/library/base/R-ex/contrast.R
-share/R/library/base/R-ex/contrasts.R
-share/R/library/base/R-ex/contributors.R
 share/R/library/base/R-ex/convolve.R
 share/R/library/base/R-ex/coplot.R
-share/R/library/base/R-ex/cor.R
 share/R/library/base/R-ex/count.fields.R
-share/R/library/base/R-ex/cov.wt.R
-share/R/library/base/R-ex/crimes.R
 share/R/library/base/R-ex/crossprod.R
 share/R/library/base/R-ex/cumsum.R
 share/R/library/base/R-ex/curve.R
@@ -272,11 +248,7 @@ share/R/library/base/R-ex/cut.R
 share/R/library/base/R-ex/data.R
 share/R/library/base/R-ex/data.class.R
 share/R/library/base/R-ex/data.frame.R
-share/R/library/base/R-ex/data.matrix.R
 share/R/library/base/R-ex/dataentry.R
-share/R/library/base/R-ex/date.R
-share/R/library/base/R-ex/deaths.R
-share/R/library/base/R-ex/debug.R
 share/R/library/base/R-ex/delay.R
 share/R/library/base/R-ex/delete.response.R
 share/R/library/base/R-ex/demo.R
@@ -286,13 +258,10 @@ share/R/library/base/R-ex/deriv.R
 share/R/library/base/R-ex/detach.R
 share/R/library/base/R-ex/dev.R
 share/R/library/base/R-ex/dev2.R
-share/R/library/base/R-ex/deviance.R
-share/R/library/base/R-ex/df.residual.R
 share/R/library/base/R-ex/diag.R
 share/R/library/base/R-ex/diff.R
 share/R/library/base/R-ex/dim.R
 share/R/library/base/R-ex/dimnames.R
-share/R/library/base/R-ex/discoveries.R
 share/R/library/base/R-ex/do.call.R
 share/R/library/base/R-ex/dotplot.R
 share/R/library/base/R-ex/double.R
@@ -308,30 +277,28 @@ share/R/library/base/R-ex/effects.R
 share/R/library/base/R-ex/eigen.R
 share/R/library/base/R-ex/environment.R
 share/R/library/base/R-ex/esoph.R
-share/R/library/base/R-ex/eurodist.R
+share/R/library/base/R-ex/euro.R
 share/R/library/base/R-ex/eval.R
 share/R/library/base/R-ex/example.R
 share/R/library/base/R-ex/exists.R
 share/R/library/base/R-ex/expand.grid.R
 share/R/library/base/R-ex/expression.R
+share/R/library/base/R-ex/extractAIC.R
 share/R/library/base/R-ex/factor.R
 share/R/library/base/R-ex/factor.scope.R
-share/R/library/base/R-ex/faithful.R
 share/R/library/base/R-ex/family.R
 share/R/library/base/R-ex/fft.R
-share/R/library/base/R-ex/fitted.values.R
+share/R/library/base/R-ex/file.R
+share/R/library/base/R-ex/file.show.R
+share/R/library/base/R-ex/filled.contour.R
 share/R/library/base/R-ex/fivenum.R
-share/R/library/base/R-ex/fix.R
 share/R/library/base/R-ex/formals.R
 share/R/library/base/R-ex/format.R
 share/R/library/base/R-ex/format.info.R
 share/R/library/base/R-ex/formatc.R
 share/R/library/base/R-ex/formula.R
-share/R/library/base/R-ex/frame.R
-share/R/library/base/R-ex/freeny.R
 share/R/library/base/R-ex/function.R
 share/R/library/base/R-ex/gc.R
-share/R/library/base/R-ex/gctorture.R
 share/R/library/base/R-ex/get.R
 share/R/library/base/R-ex/getenv.R
 share/R/library/base/R-ex/gl.R
@@ -345,56 +312,52 @@ share/R/library/base/R-ex/help.R
 share/R/library/base/R-ex/help.start.R
 share/R/library/base/R-ex/hist.R
 share/R/library/base/R-ex/hsv.R
-share/R/library/base/R-ex/identify.R
 share/R/library/base/R-ex/ifelse.R
 share/R/library/base/R-ex/image.R
 share/R/library/base/R-ex/infert.R
 share/R/library/base/R-ex/influence.measures.R
-share/R/library/base/R-ex/insects.R
-share/R/library/base/R-ex/integer.R
+share/R/library/base/R-ex/interaction.R
 share/R/library/base/R-ex/interactive.R
 share/R/library/base/R-ex/invisible.R
 share/R/library/base/R-ex/is.finite.R
-share/R/library/base/R-ex/is.function.R
 share/R/library/base/R-ex/is.language.R
 share/R/library/base/R-ex/is.recursive.R
-share/R/library/base/R-ex/is.single.R
 share/R/library/base/R-ex/isR.R
-share/R/library/base/R-ex/islands.R
-share/R/library/base/R-ex/judges.R
+share/R/library/base/R-ex/jitter.R
 share/R/library/base/R-ex/kappa.R
-share/R/library/base/R-ex/labels.R
+share/R/library/base/R-ex/kronecker.R
 share/R/library/base/R-ex/lapply.R
 share/R/library/base/R-ex/layout.R
 share/R/library/base/R-ex/legend.R
 share/R/library/base/R-ex/length.R
-share/R/library/base/R-ex/levels.R
+share/R/library/base/R-ex/levels.factor.R
 share/R/library/base/R-ex/library.R
 share/R/library/base/R-ex/library.dynam.R
-share/R/library/base/R-ex/license.R
 share/R/library/base/R-ex/lines.R
 share/R/library/base/R-ex/list.R
+share/R/library/base/R-ex/list.files.R
 share/R/library/base/R-ex/lm.R
 share/R/library/base/R-ex/lm.influence.R
 share/R/library/base/R-ex/lm.summaries.R
 share/R/library/base/R-ex/load.R
-share/R/library/base/R-ex/locator.R
-share/R/library/base/R-ex/logical.R
+share/R/library/base/R-ex/loglin.R
 share/R/library/base/R-ex/longley.R
 share/R/library/base/R-ex/lower.tri.R
 share/R/library/base/R-ex/lowess.R
 share/R/library/base/R-ex/ls.R
 share/R/library/base/R-ex/ls.diag.R
-share/R/library/base/R-ex/ls.print.R
 share/R/library/base/R-ex/lsfit.R
 share/R/library/base/R-ex/machine.R
-share/R/library/base/R-ex/macintosh.R
 share/R/library/base/R-ex/mad.R
 share/R/library/base/R-ex/mahalanobis.R
+share/R/library/base/R-ex/make.link.R
+share/R/library/base/R-ex/make.names.R
+share/R/library/base/R-ex/make.socket.R
 share/R/library/base/R-ex/mat.or.vec.R
 share/R/library/base/R-ex/match.R
 share/R/library/base/R-ex/match.arg.R
 share/R/library/base/R-ex/match.call.R
+share/R/library/base/R-ex/match.fun.R
 share/R/library/base/R-ex/matmult.R
 share/R/library/base/R-ex/matplot.R
 share/R/library/base/R-ex/matrix.R
@@ -417,7 +380,6 @@ share/R/library/base/R-ex/names.R
 share/R/library/base/R-ex/nargs.R
 share/R/library/base/R-ex/nchar.R
 share/R/library/base/R-ex/nextn.R
-share/R/library/base/R-ex/nhtemp.R
 share/R/library/base/R-ex/nlevels.R
 share/R/library/base/R-ex/nlm.R
 share/R/library/base/R-ex/noquote.R
@@ -431,6 +393,7 @@ share/R/library/base/R-ex/options.R
 share/R/library/base/R-ex/order.R
 share/R/library/base/R-ex/outer.R
 share/R/library/base/R-ex/pairs.R
+share/R/library/base/R-ex/pairs.formula.R
 share/R/library/base/R-ex/palette.R
 share/R/library/base/R-ex/palettes.R
 share/R/library/base/R-ex/panel.smooth.R
@@ -438,10 +401,9 @@ share/R/library/base/R-ex/par.R
 share/R/library/base/R-ex/parse.R
 share/R/library/base/R-ex/paste.R
 share/R/library/base/R-ex/persp.R
-share/R/library/base/R-ex/phones.R
 share/R/library/base/R-ex/pictex.R
 share/R/library/base/R-ex/piechart.R
-share/R/library/base/R-ex/pigs.R
+share/R/library/base/R-ex/plants.R
 share/R/library/base/R-ex/plot.R
 share/R/library/base/R-ex/plot.window.R
 share/R/library/base/R-ex/plot.xy.R
@@ -455,11 +417,9 @@ share/R/library/base/R-ex/polygon.R
 share/R/library/base/R-ex/polyroot.R
 share/R/library/base/R-ex/postscript.R
 share/R/library/base/R-ex/ppoints.R
-share/R/library/base/R-ex/precip.R
 share/R/library/base/R-ex/predict.R
 share/R/library/base/R-ex/predict.glm.R
 share/R/library/base/R-ex/predict.lm.R
-share/R/library/base/R-ex/presidents.R
 share/R/library/base/R-ex/pretty.R
 share/R/library/base/R-ex/print.R
 share/R/library/base/R-ex/print.coefmat.R
@@ -473,30 +433,25 @@ share/R/library/base/R-ex/prop.test.R
 share/R/library/base/R-ex/qqnorm.R
 share/R/library/base/R-ex/qr.R
 share/R/library/base/R-ex/qraux.R
-share/R/library/base/R-ex/quakes.R
 share/R/library/base/R-ex/quantile.R
 share/R/library/base/R-ex/quit.R
 share/R/library/base/R-ex/range.R
 share/R/library/base/R-ex/rank.R
 share/R/library/base/R-ex/read.fwf.R
-share/R/library/base/R-ex/read.table.R
+share/R/library/base/R-ex/read.socket.R
 share/R/library/base/R-ex/readline.R
-share/R/library/base/R-ex/real.R
 share/R/library/base/R-ex/rect.R
-share/R/library/base/R-ex/remove.R
+share/R/library/base/R-ex/relevel.R
 share/R/library/base/R-ex/rep.R
-share/R/library/base/R-ex/replace.R
 share/R/library/base/R-ex/replications.R
-share/R/library/base/R-ex/residuals.R
 share/R/library/base/R-ex/rev.R
 share/R/library/base/R-ex/rgb.R
-share/R/library/base/R-ex/rivers.R
+share/R/library/base/R-ex/rle.R
 share/R/library/base/R-ex/row.R
 share/R/library/base/R-ex/rowsum.R
 share/R/library/base/R-ex/rug.R
 share/R/library/base/R-ex/sample.R
 share/R/library/base/R-ex/save.R
-share/R/library/base/R-ex/savings.R
 share/R/library/base/R-ex/scale.R
 share/R/library/base/R-ex/scan.R
 share/R/library/base/R-ex/screen.R
@@ -507,14 +462,13 @@ share/R/library/base/R-ex/seq.R
 share/R/library/base/R-ex/sequence.R
 share/R/library/base/R-ex/sign.R
 share/R/library/base/R-ex/sink.R
+share/R/library/base/R-ex/sleep.R
 share/R/library/base/R-ex/solve.R
 share/R/library/base/R-ex/sort.R
-share/R/library/base/R-ex/source.R
 share/R/library/base/R-ex/splinefun.R
 share/R/library/base/R-ex/split.R
 share/R/library/base/R-ex/stackloss.R
 share/R/library/base/R-ex/stat.anova.R
-share/R/library/base/R-ex/state.R
 share/R/library/base/R-ex/stem.R
 share/R/library/base/R-ex/step.R
 share/R/library/base/R-ex/stop.R
@@ -526,7 +480,6 @@ share/R/library/base/R-ex/strwidth.R
 share/R/library/base/R-ex/subset.R
 share/R/library/base/R-ex/substitute.R
 share/R/library/base/R-ex/substr.R
-share/R/library/base/R-ex/sum.R
 share/R/library/base/R-ex/summary.R
 share/R/library/base/R-ex/svd.R
 share/R/library/base/R-ex/sweep.R
@@ -543,41 +496,36 @@ share/R/library/base/R-ex/table.R
 share/R/library/base/R-ex/tabulate.R
 share/R/library/base/R-ex/tapply.R
 share/R/library/base/R-ex/tempfile.R
-share/R/library/base/R-ex/terms.R
 share/R/library/base/R-ex/text.R
 share/R/library/base/R-ex/time.R
 share/R/library/base/R-ex/title.R
 share/R/library/base/R-ex/trace.R
 share/R/library/base/R-ex/traceback.R
 share/R/library/base/R-ex/transform.R
-share/R/library/base/R-ex/trees.R
 share/R/library/base/R-ex/ts.R
 share/R/library/base/R-ex/typeof.R
 share/R/library/base/R-ex/unique.R
 share/R/library/base/R-ex/uniroot.R
 share/R/library/base/R-ex/units.R
-share/R/library/base/R-ex/unlink.R
 share/R/library/base/R-ex/unlist.R
 share/R/library/base/R-ex/update.R
-share/R/library/base/R-ex/update.formula.R
 share/R/library/base/R-ex/update.lm.R
-share/R/library/base/R-ex/uspop.R
 share/R/library/base/R-ex/var.R
 share/R/library/base/R-ex/vector.R
-share/R/library/base/R-ex/volcano.R
 share/R/library/base/R-ex/warning.R
-share/R/library/base/R-ex/warpbreaks.R
 share/R/library/base/R-ex/weighted.mean.R
 share/R/library/base/R-ex/which.R
 share/R/library/base/R-ex/window.R
-share/R/library/base/R-ex/women.R
 share/R/library/base/R-ex/write.R
-share/R/library/base/R-ex/write.table.R
-share/R/library/base/R-ex/x11.R
 share/R/library/base/R-ex/xy.coords.R
+share/R/library/base/R-ex/zAlias.R
+share/R/library/base/R-ex/zC.R
+share/R/library/base/R-ex/zMachine.R
+share/R/library/base/R-ex/zMethods.R
 share/R/library/base/R/Rprofile
 share/R/library/base/R/base
 share/R/library/base/TITLE
+share/R/library/base/data/00Index
 share/R/library/base/data/acid.R
 share/R/library/base/data/airmiles.R
 share/R/library/base/data/airquality.tab
@@ -587,15 +535,16 @@ share/R/library/base/data/attitude.R
 share/R/library/base/data/bees.R
 share/R/library/base/data/cars.R
 share/R/library/base/data/chickwts.R
+share/R/library/base/data/co2.R
 share/R/library/base/data/consume.R
 share/R/library/base/data/crimes.tab
 share/R/library/base/data/deaths.R
 share/R/library/base/data/discoveries.R
 share/R/library/base/data/esoph.R
+share/R/library/base/data/euro.R
 share/R/library/base/data/eurodist.R
 share/R/library/base/data/faithful.R
 share/R/library/base/data/freeny.R
-share/R/library/base/data/index.doc
 share/R/library/base/data/infert.R
 share/R/library/base/data/insects.R
 share/R/library/base/data/iris.R
@@ -614,7 +563,6 @@ share/R/library/base/data/pressure.R
 share/R/library/base/data/quakes.R
 share/R/library/base/data/randu.R
 share/R/library/base/data/rivers.R
-share/R/library/base/data/rock.rda
 share/R/library/base/data/savings.R
 share/R/library/base/data/sleep.R
 share/R/library/base/data/stackloss.R
@@ -627,14 +575,12 @@ share/R/library/base/data/volcano.R
 share/R/library/base/data/warpbreaks.R
 share/R/library/base/data/women.R
 share/R/library/base/help/00Titles
-share/R/library/base/help/Alias
 share/R/library/base/help/AnIndex
 share/R/library/base/help/Arithmetic
 share/R/library/base/help/BATCH
 share/R/library/base/help/Bessel
 share/R/library/base/help/Beta
 share/R/library/base/help/Binomial
-share/R/library/base/help/C
 share/R/library/base/help/COMPILE
 share/R/library/base/help/Cauchy
 share/R/library/base/help/Chisquare
@@ -660,7 +606,6 @@ share/R/library/base/help/Log
 share/R/library/base/help/Logic
 share/R/library/base/help/Logistic
 share/R/library/base/help/Lognormal
-share/R/library/base/help/Machine
 share/R/library/base/help/Math
 share/R/library/base/help/Memory
 share/R/library/base/help/NA
@@ -673,6 +618,7 @@ share/R/library/base/help/Primitive
 share/R/library/base/help/REMOVE
 share/R/library/base/help/RHOME
 share/R/library/base/help/Random
+share/R/library/base/help/Recall
 share/R/library/base/help/Round
 share/R/library/base/help/SHLIB
 share/R/library/base/help/SignRank
@@ -689,6 +635,7 @@ share/R/library/base/help/abbreviate
 share/R/library/base/help/abline
 share/R/library/base/help/acid
 share/R/library/base/help/add1
+share/R/library/base/help/aggregate
 share/R/library/base/help/airmiles
 share/R/library/base/help/airquality
 share/R/library/base/help/alias
@@ -709,6 +656,7 @@ share/R/library/base/help/as.function
 share/R/library/base/help/assign
 share/R/library/base/help/attach
 share/R/library/base/help/attenu
+share/R/library/base/help/attitude
 share/R/library/base/help/attr
 share/R/library/base/help/attributes
 share/R/library/base/help/autoload
@@ -732,11 +680,15 @@ share/R/library/base/help/cat
 share/R/library/base/help/cbind
 share/R/library/base/help/character
 share/R/library/base/help/charmatch
+share/R/library/base/help/check.options
 share/R/library/base/help/chickwts
 share/R/library/base/help/chisq.test
 share/R/library/base/help/chol
 share/R/library/base/help/chol2inv
+share/R/library/base/help/chull
 share/R/library/base/help/class
+share/R/library/base/help/close.socket
+share/R/library/base/help/co2
 share/R/library/base/help/codes
 share/R/library/base/help/coefficients
 share/R/library/base/help/col
@@ -753,6 +705,7 @@ share/R/library/base/help/contrasts
 share/R/library/base/help/contributors
 share/R/library/base/help/convolve
 share/R/library/base/help/coplot
+share/R/library/base/help/copyright
 share/R/library/base/help/cor
 share/R/library/base/help/count.fields
 share/R/library/base/help/cov.wt
@@ -800,17 +753,22 @@ share/R/library/base/help/effects
 share/R/library/base/help/eigen
 share/R/library/base/help/environment
 share/R/library/base/help/esoph
+share/R/library/base/help/euro
 share/R/library/base/help/eurodist
 share/R/library/base/help/eval
 share/R/library/base/help/example
 share/R/library/base/help/exists
 share/R/library/base/help/expand.grid
 share/R/library/base/help/expression
+share/R/library/base/help/extractAIC
 share/R/library/base/help/factor
 share/R/library/base/help/factor.scope
 share/R/library/base/help/faithful
 share/R/library/base/help/family
 share/R/library/base/help/fft
+share/R/library/base/help/file
+share/R/library/base/help/file.show
+share/R/library/base/help/filled.contour
 share/R/library/base/help/fitted.values
 share/R/library/base/help/fivenum
 share/R/library/base/help/fix
@@ -840,12 +798,15 @@ share/R/library/base/help/hsv
 share/R/library/base/help/identify
 share/R/library/base/help/ifelse
 share/R/library/base/help/image
+share/R/library/base/help/index.search
 share/R/library/base/help/infert
 share/R/library/base/help/influence.measures
 share/R/library/base/help/insects
 share/R/library/base/help/integer
+share/R/library/base/help/interaction
 share/R/library/base/help/interactive
 share/R/library/base/help/invisible
+share/R/library/base/help/iris
 share/R/library/base/help/is.finite
 share/R/library/base/help/is.function
 share/R/library/base/help/is.language
@@ -853,25 +814,30 @@ share/R/library/base/help/is.recursive
 share/R/library/base/help/is.single
 share/R/library/base/help/isR
 share/R/library/base/help/islands
+share/R/library/base/help/jitter
 share/R/library/base/help/judges
 share/R/library/base/help/kappa
+share/R/library/base/help/kronecker
 share/R/library/base/help/labels
 share/R/library/base/help/lapply
 share/R/library/base/help/layout
 share/R/library/base/help/legend
 share/R/library/base/help/length
 share/R/library/base/help/levels
+share/R/library/base/help/levels.factor
 share/R/library/base/help/library
 share/R/library/base/help/library.dynam
 share/R/library/base/help/license
 share/R/library/base/help/lines
 share/R/library/base/help/list
+share/R/library/base/help/list.files
 share/R/library/base/help/lm
 share/R/library/base/help/lm.influence
 share/R/library/base/help/lm.summaries
 share/R/library/base/help/load
 share/R/library/base/help/locator
 share/R/library/base/help/logical
+share/R/library/base/help/loglin
 share/R/library/base/help/longley
 share/R/library/base/help/lower.tri
 share/R/library/base/help/lowess
@@ -883,10 +849,15 @@ share/R/library/base/help/machine
 share/R/library/base/help/macintosh
 share/R/library/base/help/mad
 share/R/library/base/help/mahalanobis
+share/R/library/base/help/make.link
+share/R/library/base/help/make.names
+share/R/library/base/help/make.socket
+share/R/library/base/help/make.tables
 share/R/library/base/help/mat.or.vec
 share/R/library/base/help/match
 share/R/library/base/help/match.arg
 share/R/library/base/help/match.call
+share/R/library/base/help/match.fun
 share/R/library/base/help/matmult
 share/R/library/base/help/matplot
 share/R/library/base/help/matrix
@@ -901,6 +872,7 @@ share/R/library/base/help/model.frame
 share/R/library/base/help/model.matrix
 share/R/library/base/help/model.tables
 share/R/library/base/help/mosaicplot
+share/R/library/base/help/mtcars
 share/R/library/base/help/mtext
 share/R/library/base/help/na.action
 share/R/library/base/help/na.fail
@@ -922,7 +894,9 @@ share/R/library/base/help/optimize
 share/R/library/base/help/options
 share/R/library/base/help/order
 share/R/library/base/help/outer
+share/R/library/base/help/page
 share/R/library/base/help/pairs
+share/R/library/base/help/pairs.formula
 share/R/library/base/help/palette
 share/R/library/base/help/palettes
 share/R/library/base/help/panel.smooth
@@ -934,6 +908,7 @@ share/R/library/base/help/phones
 share/R/library/base/help/pictex
 share/R/library/base/help/piechart
 share/R/library/base/help/pigs
+share/R/library/base/help/plants
 share/R/library/base/help/plot
 share/R/library/base/help/plot.window
 share/R/library/base/help/plot.xy
@@ -952,6 +927,7 @@ share/R/library/base/help/predict
 share/R/library/base/help/predict.glm
 share/R/library/base/help/predict.lm
 share/R/library/base/help/presidents
+share/R/library/base/help/pressure
 share/R/library/base/help/pretty
 share/R/library/base/help/print
 share/R/library/base/help/print.coefmat
@@ -968,14 +944,16 @@ share/R/library/base/help/qraux
 share/R/library/base/help/quakes
 share/R/library/base/help/quantile
 share/R/library/base/help/quit
+share/R/library/base/help/randu
 share/R/library/base/help/range
 share/R/library/base/help/rank
 share/R/library/base/help/read.fwf
+share/R/library/base/help/read.socket
 share/R/library/base/help/read.table
 share/R/library/base/help/readline
 share/R/library/base/help/real
 share/R/library/base/help/rect
-share/R/library/base/help/remove
+share/R/library/base/help/relevel
 share/R/library/base/help/rep
 share/R/library/base/help/replace
 share/R/library/base/help/replications
@@ -983,6 +961,8 @@ share/R/library/base/help/residuals
 share/R/library/base/help/rev
 share/R/library/base/help/rgb
 share/R/library/base/help/rivers
+share/R/library/base/help/rle
+share/R/library/base/help/rm
 share/R/library/base/help/row
 share/R/library/base/help/rowsum
 share/R/library/base/help/rug
@@ -999,6 +979,7 @@ share/R/library/base/help/seq
 share/R/library/base/help/sequence
 share/R/library/base/help/sign
 share/R/library/base/help/sink
+share/R/library/base/help/sleep
 share/R/library/base/help/solve
 share/R/library/base/help/sort
 share/R/library/base/help/source
@@ -1020,6 +1001,7 @@ share/R/library/base/help/substitute
 share/R/library/base/help/substr
 share/R/library/base/help/sum
 share/R/library/base/help/summary
+share/R/library/base/help/sunspots
 share/R/library/base/help/svd
 share/R/library/base/help/sweep
 share/R/library/base/help/swiss
@@ -1067,14 +1049,16 @@ share/R/library/base/help/write
 share/R/library/base/help/write.table
 share/R/library/base/help/x11
 share/R/library/base/help/xy.coords
+share/R/library/base/help/zAlias
+share/R/library/base/help/zC
+share/R/library/base/help/zMachine
+share/R/library/base/help/zMethods
 share/R/library/base/html/00Index.html
-share/R/library/base/html/Alias.html
 share/R/library/base/html/Arithmetic.html
 share/R/library/base/html/BATCH.html
 share/R/library/base/html/Bessel.html
 share/R/library/base/html/Beta.html
 share/R/library/base/html/Binomial.html
-share/R/library/base/html/C.html
 share/R/library/base/html/COMPILE.html
 share/R/library/base/html/Cauchy.html
 share/R/library/base/html/Chisquare.html
@@ -1100,7 +1084,6 @@ share/R/library/base/html/Log.html
 share/R/library/base/html/Logic.html
 share/R/library/base/html/Logistic.html
 share/R/library/base/html/Lognormal.html
-share/R/library/base/html/Machine.html
 share/R/library/base/html/Math.html
 share/R/library/base/html/Memory.html
 share/R/library/base/html/NA.html
@@ -1113,6 +1096,7 @@ share/R/library/base/html/Primitive.html
 share/R/library/base/html/REMOVE.html
 share/R/library/base/html/RHOME.html
 share/R/library/base/html/Random.html
+share/R/library/base/html/Recall.html
 share/R/library/base/html/Round.html
 share/R/library/base/html/SHLIB.html
 share/R/library/base/html/SignRank.html
@@ -1129,6 +1113,7 @@ share/R/library/base/html/abbreviate.html
 share/R/library/base/html/abline.html
 share/R/library/base/html/acid.html
 share/R/library/base/html/add1.html
+share/R/library/base/html/aggregate.html
 share/R/library/base/html/airmiles.html
 share/R/library/base/html/airquality.html
 share/R/library/base/html/alias.html
@@ -1149,6 +1134,7 @@ share/R/library/base/html/as.function.html
 share/R/library/base/html/assign.html
 share/R/library/base/html/attach.html
 share/R/library/base/html/attenu.html
+share/R/library/base/html/attitude.html
 share/R/library/base/html/attr.html
 share/R/library/base/html/attributes.html
 share/R/library/base/html/autoload.html
@@ -1172,11 +1158,15 @@ share/R/library/base/html/cat.html
 share/R/library/base/html/cbind.html
 share/R/library/base/html/character.html
 share/R/library/base/html/charmatch.html
+share/R/library/base/html/check.options.html
 share/R/library/base/html/chickwts.html
 share/R/library/base/html/chisq.test.html
 share/R/library/base/html/chol.html
 share/R/library/base/html/chol2inv.html
+share/R/library/base/html/chull.html
 share/R/library/base/html/class.html
+share/R/library/base/html/close.socket.html
+share/R/library/base/html/co2.html
 share/R/library/base/html/codes.html
 share/R/library/base/html/coefficients.html
 share/R/library/base/html/col.html
@@ -1193,6 +1183,7 @@ share/R/library/base/html/contrasts.html
 share/R/library/base/html/contributors.html
 share/R/library/base/html/convolve.html
 share/R/library/base/html/coplot.html
+share/R/library/base/html/copyright.html
 share/R/library/base/html/cor.html
 share/R/library/base/html/count.fields.html
 share/R/library/base/html/cov.wt.html
@@ -1240,17 +1231,22 @@ share/R/library/base/html/effects.html
 share/R/library/base/html/eigen.html
 share/R/library/base/html/environment.html
 share/R/library/base/html/esoph.html
+share/R/library/base/html/euro.html
 share/R/library/base/html/eurodist.html
 share/R/library/base/html/eval.html
 share/R/library/base/html/example.html
 share/R/library/base/html/exists.html
 share/R/library/base/html/expand.grid.html
 share/R/library/base/html/expression.html
+share/R/library/base/html/extractAIC.html
 share/R/library/base/html/factor.html
 share/R/library/base/html/factor.scope.html
 share/R/library/base/html/faithful.html
 share/R/library/base/html/family.html
 share/R/library/base/html/fft.html
+share/R/library/base/html/file.html
+share/R/library/base/html/file.show.html
+share/R/library/base/html/filled.contour.html
 share/R/library/base/html/fitted.values.html
 share/R/library/base/html/fivenum.html
 share/R/library/base/html/fix.html
@@ -1280,12 +1276,15 @@ share/R/library/base/html/hsv.html
 share/R/library/base/html/identify.html
 share/R/library/base/html/ifelse.html
 share/R/library/base/html/image.html
+share/R/library/base/html/index.search.html
 share/R/library/base/html/infert.html
 share/R/library/base/html/influence.measures.html
 share/R/library/base/html/insects.html
 share/R/library/base/html/integer.html
+share/R/library/base/html/interaction.html
 share/R/library/base/html/interactive.html
 share/R/library/base/html/invisible.html
+share/R/library/base/html/iris.html
 share/R/library/base/html/is.finite.html
 share/R/library/base/html/is.function.html
 share/R/library/base/html/is.language.html
@@ -1293,18 +1292,22 @@ share/R/library/base/html/is.recursive.html
 share/R/library/base/html/is.single.html
 share/R/library/base/html/isR.html
 share/R/library/base/html/islands.html
+share/R/library/base/html/jitter.html
 share/R/library/base/html/judges.html
 share/R/library/base/html/kappa.html
+share/R/library/base/html/kronecker.html
 share/R/library/base/html/labels.html
 share/R/library/base/html/lapply.html
 share/R/library/base/html/layout.html
 share/R/library/base/html/legend.html
 share/R/library/base/html/length.html
+share/R/library/base/html/levels.factor.html
 share/R/library/base/html/levels.html
 share/R/library/base/html/library.dynam.html
 share/R/library/base/html/library.html
 share/R/library/base/html/license.html
 share/R/library/base/html/lines.html
+share/R/library/base/html/list.files.html
 share/R/library/base/html/list.html
 share/R/library/base/html/lm.html
 share/R/library/base/html/lm.influence.html
@@ -1312,6 +1315,7 @@ share/R/library/base/html/lm.summaries.html
 share/R/library/base/html/load.html
 share/R/library/base/html/locator.html
 share/R/library/base/html/logical.html
+share/R/library/base/html/loglin.html
 share/R/library/base/html/longley.html
 share/R/library/base/html/lower.tri.html
 share/R/library/base/html/lowess.html
@@ -1323,9 +1327,14 @@ share/R/library/base/html/machine.html
 share/R/library/base/html/macintosh.html
 share/R/library/base/html/mad.html
 share/R/library/base/html/mahalanobis.html
+share/R/library/base/html/make.link.html
+share/R/library/base/html/make.names.html
+share/R/library/base/html/make.socket.html
+share/R/library/base/html/make.tables.html
 share/R/library/base/html/mat.or.vec.html
 share/R/library/base/html/match.arg.html
 share/R/library/base/html/match.call.html
+share/R/library/base/html/match.fun.html
 share/R/library/base/html/match.html
 share/R/library/base/html/matmult.html
 share/R/library/base/html/matplot.html
@@ -1341,6 +1350,7 @@ share/R/library/base/html/model.frame.html
 share/R/library/base/html/model.matrix.html
 share/R/library/base/html/model.tables.html
 share/R/library/base/html/mosaicplot.html
+share/R/library/base/html/mtcars.html
 share/R/library/base/html/mtext.html
 share/R/library/base/html/na.action.html
 share/R/library/base/html/na.fail.html
@@ -1362,6 +1372,8 @@ share/R/library/base/html/optimize.html
 share/R/library/base/html/options.html
 share/R/library/base/html/order.html
 share/R/library/base/html/outer.html
+share/R/library/base/html/page.html
+share/R/library/base/html/pairs.formula.html
 share/R/library/base/html/pairs.html
 share/R/library/base/html/palette.html
 share/R/library/base/html/palettes.html
@@ -1374,6 +1386,7 @@ share/R/library/base/html/phones.html
 share/R/library/base/html/pictex.html
 share/R/library/base/html/piechart.html
 share/R/library/base/html/pigs.html
+share/R/library/base/html/plants.html
 share/R/library/base/html/plot.html
 share/R/library/base/html/plot.window.html
 share/R/library/base/html/plot.xy.html
@@ -1392,6 +1405,7 @@ share/R/library/base/html/predict.glm.html
 share/R/library/base/html/predict.html
 share/R/library/base/html/predict.lm.html
 share/R/library/base/html/presidents.html
+share/R/library/base/html/pressure.html
 share/R/library/base/html/pretty.html
 share/R/library/base/html/print.coefmat.html
 share/R/library/base/html/print.default.html
@@ -1408,14 +1422,16 @@ share/R/library/base/html/qraux.html
 share/R/library/base/html/quakes.html
 share/R/library/base/html/quantile.html
 share/R/library/base/html/quit.html
+share/R/library/base/html/randu.html
 share/R/library/base/html/range.html
 share/R/library/base/html/rank.html
 share/R/library/base/html/read.fwf.html
+share/R/library/base/html/read.socket.html
 share/R/library/base/html/read.table.html
 share/R/library/base/html/readline.html
 share/R/library/base/html/real.html
 share/R/library/base/html/rect.html
-share/R/library/base/html/remove.html
+share/R/library/base/html/relevel.html
 share/R/library/base/html/rep.html
 share/R/library/base/html/replace.html
 share/R/library/base/html/replications.html
@@ -1423,6 +1439,8 @@ share/R/library/base/html/residuals.html
 share/R/library/base/html/rev.html
 share/R/library/base/html/rgb.html
 share/R/library/base/html/rivers.html
+share/R/library/base/html/rle.html
+share/R/library/base/html/rm.html
 share/R/library/base/html/row.html
 share/R/library/base/html/rowsum.html
 share/R/library/base/html/rug.html
@@ -1439,6 +1457,7 @@ share/R/library/base/html/seq.html
 share/R/library/base/html/sequence.html
 share/R/library/base/html/sign.html
 share/R/library/base/html/sink.html
+share/R/library/base/html/sleep.html
 share/R/library/base/html/solve.html
 share/R/library/base/html/sort.html
 share/R/library/base/html/source.html
@@ -1460,6 +1479,7 @@ share/R/library/base/html/substitute.html
 share/R/library/base/html/substr.html
 share/R/library/base/html/sum.html
 share/R/library/base/html/summary.html
+share/R/library/base/html/sunspots.html
 share/R/library/base/html/svd.html
 share/R/library/base/html/sweep.html
 share/R/library/base/html/swiss.html
@@ -1507,13 +1527,15 @@ share/R/library/base/html/write.html
 share/R/library/base/html/write.table.html
 share/R/library/base/html/x11.html
 share/R/library/base/html/xy.coords.html
-share/R/library/base/latex/Alias.tex
+share/R/library/base/html/zAlias.html
+share/R/library/base/html/zC.html
+share/R/library/base/html/zMachine.html
+share/R/library/base/html/zMethods.html
 share/R/library/base/latex/Arithmetic.tex
 share/R/library/base/latex/BATCH.tex
 share/R/library/base/latex/Bessel.tex
 share/R/library/base/latex/Beta.tex
 share/R/library/base/latex/Binomial.tex
-share/R/library/base/latex/C.tex
 share/R/library/base/latex/COMPILE.tex
 share/R/library/base/latex/Cauchy.tex
 share/R/library/base/latex/Chisquare.tex
@@ -1539,7 +1561,6 @@ share/R/library/base/latex/Log.tex
 share/R/library/base/latex/Logic.tex
 share/R/library/base/latex/Logistic.tex
 share/R/library/base/latex/Lognormal.tex
-share/R/library/base/latex/Machine.tex
 share/R/library/base/latex/Math.tex
 share/R/library/base/latex/Memory.tex
 share/R/library/base/latex/NA.tex
@@ -1552,6 +1573,7 @@ share/R/library/base/latex/Primitive.tex
 share/R/library/base/latex/REMOVE.tex
 share/R/library/base/latex/RHOME.tex
 share/R/library/base/latex/Random.tex
+share/R/library/base/latex/Recall.tex
 share/R/library/base/latex/Round.tex
 share/R/library/base/latex/SHLIB.tex
 share/R/library/base/latex/SignRank.tex
@@ -1568,6 +1590,7 @@ share/R/library/base/latex/abbreviate.tex
 share/R/library/base/latex/abline.tex
 share/R/library/base/latex/acid.tex
 share/R/library/base/latex/add1.tex
+share/R/library/base/latex/aggregate.tex
 share/R/library/base/latex/airmiles.tex
 share/R/library/base/latex/airquality.tex
 share/R/library/base/latex/alias.tex
@@ -1588,6 +1611,7 @@ share/R/library/base/latex/as.function.tex
 share/R/library/base/latex/assign.tex
 share/R/library/base/latex/attach.tex
 share/R/library/base/latex/attenu.tex
+share/R/library/base/latex/attitude.tex
 share/R/library/base/latex/attr.tex
 share/R/library/base/latex/attributes.tex
 share/R/library/base/latex/autoload.tex
@@ -1611,11 +1635,15 @@ share/R/library/base/latex/cat.tex
 share/R/library/base/latex/cbind.tex
 share/R/library/base/latex/character.tex
 share/R/library/base/latex/charmatch.tex
+share/R/library/base/latex/check.options.tex
 share/R/library/base/latex/chickwts.tex
 share/R/library/base/latex/chisq.test.tex
 share/R/library/base/latex/chol.tex
 share/R/library/base/latex/chol2inv.tex
+share/R/library/base/latex/chull.tex
 share/R/library/base/latex/class.tex
+share/R/library/base/latex/close.socket.tex
+share/R/library/base/latex/co2.tex
 share/R/library/base/latex/codes.tex
 share/R/library/base/latex/coefficients.tex
 share/R/library/base/latex/col.tex
@@ -1632,6 +1660,7 @@ share/R/library/base/latex/contrasts.tex
 share/R/library/base/latex/contributors.tex
 share/R/library/base/latex/convolve.tex
 share/R/library/base/latex/coplot.tex
+share/R/library/base/latex/copyright.tex
 share/R/library/base/latex/cor.tex
 share/R/library/base/latex/count.fields.tex
 share/R/library/base/latex/cov.wt.tex
@@ -1679,17 +1708,22 @@ share/R/library/base/latex/effects.tex
 share/R/library/base/latex/eigen.tex
 share/R/library/base/latex/environment.tex
 share/R/library/base/latex/esoph.tex
+share/R/library/base/latex/euro.tex
 share/R/library/base/latex/eurodist.tex
 share/R/library/base/latex/eval.tex
 share/R/library/base/latex/example.tex
 share/R/library/base/latex/exists.tex
 share/R/library/base/latex/expand.grid.tex
 share/R/library/base/latex/expression.tex
+share/R/library/base/latex/extractAIC.tex
 share/R/library/base/latex/factor.scope.tex
 share/R/library/base/latex/factor.tex
 share/R/library/base/latex/faithful.tex
 share/R/library/base/latex/family.tex
 share/R/library/base/latex/fft.tex
+share/R/library/base/latex/file.show.tex
+share/R/library/base/latex/file.tex
+share/R/library/base/latex/filled.contour.tex
 share/R/library/base/latex/fitted.values.tex
 share/R/library/base/latex/fivenum.tex
 share/R/library/base/latex/fix.tex
@@ -1719,12 +1753,15 @@ share/R/library/base/latex/hsv.tex
 share/R/library/base/latex/identify.tex
 share/R/library/base/latex/ifelse.tex
 share/R/library/base/latex/image.tex
+share/R/library/base/latex/index.search.tex
 share/R/library/base/latex/infert.tex
 share/R/library/base/latex/influence.measures.tex
 share/R/library/base/latex/insects.tex
 share/R/library/base/latex/integer.tex
+share/R/library/base/latex/interaction.tex
 share/R/library/base/latex/interactive.tex
 share/R/library/base/latex/invisible.tex
+share/R/library/base/latex/iris.tex
 share/R/library/base/latex/is.finite.tex
 share/R/library/base/latex/is.function.tex
 share/R/library/base/latex/is.language.tex
@@ -1732,18 +1769,22 @@ share/R/library/base/latex/is.recursive.tex
 share/R/library/base/latex/is.single.tex
 share/R/library/base/latex/isR.tex
 share/R/library/base/latex/islands.tex
+share/R/library/base/latex/jitter.tex
 share/R/library/base/latex/judges.tex
 share/R/library/base/latex/kappa.tex
+share/R/library/base/latex/kronecker.tex
 share/R/library/base/latex/labels.tex
 share/R/library/base/latex/lapply.tex
 share/R/library/base/latex/layout.tex
 share/R/library/base/latex/legend.tex
 share/R/library/base/latex/length.tex
+share/R/library/base/latex/levels.factor.tex
 share/R/library/base/latex/levels.tex
 share/R/library/base/latex/library.dynam.tex
 share/R/library/base/latex/library.tex
 share/R/library/base/latex/license.tex
 share/R/library/base/latex/lines.tex
+share/R/library/base/latex/list.files.tex
 share/R/library/base/latex/list.tex
 share/R/library/base/latex/lm.influence.tex
 share/R/library/base/latex/lm.summaries.tex
@@ -1751,6 +1792,7 @@ share/R/library/base/latex/lm.tex
 share/R/library/base/latex/load.tex
 share/R/library/base/latex/locator.tex
 share/R/library/base/latex/logical.tex
+share/R/library/base/latex/loglin.tex
 share/R/library/base/latex/longley.tex
 share/R/library/base/latex/lower.tri.tex
 share/R/library/base/latex/lowess.tex
@@ -1762,9 +1804,14 @@ share/R/library/base/latex/machine.tex
 share/R/library/base/latex/macintosh.tex
 share/R/library/base/latex/mad.tex
 share/R/library/base/latex/mahalanobis.tex
+share/R/library/base/latex/make.link.tex
+share/R/library/base/latex/make.names.tex
+share/R/library/base/latex/make.socket.tex
+share/R/library/base/latex/make.tables.tex
 share/R/library/base/latex/mat.or.vec.tex
 share/R/library/base/latex/match.arg.tex
 share/R/library/base/latex/match.call.tex
+share/R/library/base/latex/match.fun.tex
 share/R/library/base/latex/match.tex
 share/R/library/base/latex/matmult.tex
 share/R/library/base/latex/matplot.tex
@@ -1780,6 +1827,7 @@ share/R/library/base/latex/model.frame.tex
 share/R/library/base/latex/model.matrix.tex
 share/R/library/base/latex/model.tables.tex
 share/R/library/base/latex/mosaicplot.tex
+share/R/library/base/latex/mtcars.tex
 share/R/library/base/latex/mtext.tex
 share/R/library/base/latex/na.action.tex
 share/R/library/base/latex/na.fail.tex
@@ -1801,6 +1849,8 @@ share/R/library/base/latex/optimize.tex
 share/R/library/base/latex/options.tex
 share/R/library/base/latex/order.tex
 share/R/library/base/latex/outer.tex
+share/R/library/base/latex/page.tex
+share/R/library/base/latex/pairs.formula.tex
 share/R/library/base/latex/pairs.tex
 share/R/library/base/latex/palette.tex
 share/R/library/base/latex/palettes.tex
@@ -1813,6 +1863,7 @@ share/R/library/base/latex/phones.tex
 share/R/library/base/latex/pictex.tex
 share/R/library/base/latex/piechart.tex
 share/R/library/base/latex/pigs.tex
+share/R/library/base/latex/plants.tex
 share/R/library/base/latex/plot.tex
 share/R/library/base/latex/plot.window.tex
 share/R/library/base/latex/plot.xy.tex
@@ -1831,6 +1882,7 @@ share/R/library/base/latex/predict.glm.tex
 share/R/library/base/latex/predict.lm.tex
 share/R/library/base/latex/predict.tex
 share/R/library/base/latex/presidents.tex
+share/R/library/base/latex/pressure.tex
 share/R/library/base/latex/pretty.tex
 share/R/library/base/latex/print.coefmat.tex
 share/R/library/base/latex/print.default.tex
@@ -1847,14 +1899,16 @@ share/R/library/base/latex/qraux.tex
 share/R/library/base/latex/quakes.tex
 share/R/library/base/latex/quantile.tex
 share/R/library/base/latex/quit.tex
+share/R/library/base/latex/randu.tex
 share/R/library/base/latex/range.tex
 share/R/library/base/latex/rank.tex
 share/R/library/base/latex/read.fwf.tex
+share/R/library/base/latex/read.socket.tex
 share/R/library/base/latex/read.table.tex
 share/R/library/base/latex/readline.tex
 share/R/library/base/latex/real.tex
 share/R/library/base/latex/rect.tex
-share/R/library/base/latex/remove.tex
+share/R/library/base/latex/relevel.tex
 share/R/library/base/latex/rep.tex
 share/R/library/base/latex/replace.tex
 share/R/library/base/latex/replications.tex
@@ -1862,6 +1916,8 @@ share/R/library/base/latex/residuals.tex
 share/R/library/base/latex/rev.tex
 share/R/library/base/latex/rgb.tex
 share/R/library/base/latex/rivers.tex
+share/R/library/base/latex/rle.tex
+share/R/library/base/latex/rm.tex
 share/R/library/base/latex/row.tex
 share/R/library/base/latex/rowsum.tex
 share/R/library/base/latex/rug.tex
@@ -1878,6 +1934,7 @@ share/R/library/base/latex/seq.tex
 share/R/library/base/latex/sequence.tex
 share/R/library/base/latex/sign.tex
 share/R/library/base/latex/sink.tex
+share/R/library/base/latex/sleep.tex
 share/R/library/base/latex/solve.tex
 share/R/library/base/latex/sort.tex
 share/R/library/base/latex/source.tex
@@ -1899,6 +1956,7 @@ share/R/library/base/latex/substitute.tex
 share/R/library/base/latex/substr.tex
 share/R/library/base/latex/sum.tex
 share/R/library/base/latex/summary.tex
+share/R/library/base/latex/sunspots.tex
 share/R/library/base/latex/svd.tex
 share/R/library/base/latex/sweep.tex
 share/R/library/base/latex/swiss.tex
@@ -1946,6 +2004,11 @@ share/R/library/base/latex/write.table.tex
 share/R/library/base/latex/write.tex
 share/R/library/base/latex/x11.tex
 share/R/library/base/latex/xy.coords.tex
+share/R/library/base/latex/zAlias.tex
+share/R/library/base/latex/zC.tex
+share/R/library/base/latex/zMachine.tex
+share/R/library/base/latex/zMethods.tex
+share/R/library/eda/CONTENTS
 share/R/library/eda/INDEX
 share/R/library/eda/R-ex/line.R
 share/R/library/eda/R-ex/medpolish.R
@@ -1965,20 +2028,42 @@ share/R/library/eda/latex/line.tex
 share/R/library/eda/latex/medpolish.tex
 share/R/library/eda/latex/smooth.tex
 share/R/library/eda/libs/eda.so
+share/R/library/lqs/CONTENTS
+share/R/library/lqs/INDEX
+share/R/library/lqs/R-ex/cov.rob.R
+share/R/library/lqs/R-ex/lqs.R
+share/R/library/lqs/R-ex/predict.lqs.R
+share/R/library/lqs/R/lqs
+share/R/library/lqs/TITLE
+share/R/library/lqs/help/00Titles
+share/R/library/lqs/help/AnIndex
+share/R/library/lqs/help/cov.rob
+share/R/library/lqs/help/lqs
+share/R/library/lqs/help/predict.lqs
+share/R/library/lqs/html/00Index.html
+share/R/library/lqs/html/cov.rob.html
+share/R/library/lqs/html/lqs.html
+share/R/library/lqs/html/predict.lqs.html
+share/R/library/lqs/latex/cov.rob.tex
+share/R/library/lqs/latex/lqs.tex
+share/R/library/lqs/latex/predict.lqs.tex
+share/R/library/lqs/libs/lqs.so
+share/R/library/modreg/CONTENTS
+share/R/library/modreg/COPYRIGHTS
 share/R/library/modreg/INDEX
 share/R/library/modreg/R-ex/ksmooth.R
 share/R/library/modreg/R-ex/loess.R
-share/R/library/modreg/R-ex/loess.control.R
 share/R/library/modreg/R-ex/plot.ppr.R
 share/R/library/modreg/R-ex/ppr.R
 share/R/library/modreg/R-ex/predict.loess.R
 share/R/library/modreg/R-ex/predict.smooth.spline.R
-share/R/library/modreg/R-ex/rock.R
 share/R/library/modreg/R-ex/scatter.smooth.R
 share/R/library/modreg/R-ex/smooth.spline.R
 share/R/library/modreg/R-ex/supsmu.R
 share/R/library/modreg/R/modreg
 share/R/library/modreg/TITLE
+share/R/library/modreg/data/00Index
+share/R/library/modreg/data/rock.rda
 share/R/library/modreg/help/00Titles
 share/R/library/modreg/help/AnIndex
 share/R/library/modreg/help/ksmooth
@@ -2016,8 +2101,8 @@ share/R/library/modreg/latex/scatter.smooth.tex
 share/R/library/modreg/latex/smooth.spline.tex
 share/R/library/modreg/latex/supsmu.tex
 share/R/library/modreg/libs/modreg.so
+share/R/library/mva/CONTENTS
 share/R/library/mva/INDEX
-share/R/library/mva/R-ex/biplot.R
 share/R/library/mva/R-ex/biplot.princomp.R
 share/R/library/mva/R-ex/cancor.R
 share/R/library/mva/R-ex/cmdscale.R
@@ -2059,6 +2144,7 @@ share/R/library/mva/latex/kmeans.tex
 share/R/library/mva/latex/prcomp.tex
 share/R/library/mva/latex/princomp.tex
 share/R/library/mva/libs/mva.so
+share/R/library/stepfun/CONTENTS
 share/R/library/stepfun/INDEX
 share/R/library/stepfun/R-ex/ecdf.R
 share/R/library/stepfun/R-ex/plot.stepfun.R
@@ -2077,53 +2163,61 @@ share/R/library/stepfun/html/stepfun.html
 share/R/library/stepfun/latex/ecdf.tex
 share/R/library/stepfun/latex/plot.stepfun.tex
 share/R/library/stepfun/latex/stepfun.tex
-@dirrm share/R/afm
-@dirrm share/R/bin
-@dirrm share/R/demos/dynload
-@dirrm share/R/demos/graphics
-@dirrm share/R/demos/language
-@dirrm share/R/demos/models
-@dirrm share/R/demos/nlm
-@dirrm share/R/demos
+@dirrm share/R/library/stepfun/latex
+@dirrm share/R/library/stepfun/html
+@dirrm share/R/library/stepfun/help
+@dirrm share/R/library/stepfun/R-ex
+@dirrm share/R/library/stepfun/R
+@dirrm share/R/library/stepfun
+@dirrm share/R/library/mva/libs
+@dirrm share/R/library/mva/latex
+@dirrm share/R/library/mva/html
+@dirrm share/R/library/mva/help
+@dirrm share/R/library/mva/R-ex
+@dirrm share/R/library/mva/R
+@dirrm share/R/library/mva
+@dirrm share/R/library/modreg/libs
+@dirrm share/R/library/modreg/latex
+@dirrm share/R/library/modreg/html
+@dirrm share/R/library/modreg/help
+@dirrm share/R/library/modreg/data
+@dirrm share/R/library/modreg/R-ex
+@dirrm share/R/library/modreg/R
+@dirrm share/R/library/modreg
+@dirrm share/R/library/lqs/libs
+@dirrm share/R/library/lqs/latex
+@dirrm share/R/library/lqs/html
+@dirrm share/R/library/lqs/help
+@dirrm share/R/library/lqs/R-ex
+@dirrm share/R/library/lqs/R
+@dirrm share/R/library/lqs
+@dirrm share/R/library/eda/libs
+@dirrm share/R/library/eda/latex
+@dirrm share/R/library/eda/html
+@dirrm share/R/library/eda/help
+@dirrm share/R/library/eda/R-ex
+@dirrm share/R/library/eda/R
+@dirrm share/R/library/eda
+@dirrm share/R/library/base/latex
+@dirrm share/R/library/base/html
+@dirrm share/R/library/base/help
+@dirrm share/R/library/base/data
+@dirrm share/R/library/base/R-ex
+@dirrm share/R/library/base/R
+@dirrm share/R/library/base
+@dirrm share/R/library
+@dirrm share/R/include
+@dirrm share/R/etc
+@dirrm share/R/doc/manual
 @dirrm share/R/doc/html/search
 @dirrm share/R/doc/html
-@dirrm share/R/doc/manual
 @dirrm share/R/doc
-@dirrm share/R/etc
-@dirrm share/R/include
-@dirrm share/R/library/base/R
-@dirrm share/R/library/base/R-ex
-@dirrm share/R/library/base/data
-@dirrm share/R/library/base/help
-@dirrm share/R/library/base/html
-@dirrm share/R/library/base/latex
-@dirrm share/R/library/base
-@dirrm share/R/library/eda/R
-@dirrm share/R/library/eda/R-ex
-@dirrm share/R/library/eda/help
-@dirrm share/R/library/eda/html
-@dirrm share/R/library/eda/latex
-@dirrm share/R/library/eda/libs
-@dirrm share/R/library/eda
-@dirrm share/R/library/modreg/R
-@dirrm share/R/library/modreg/R-ex
-@dirrm share/R/library/modreg/help
-@dirrm share/R/library/modreg/html
-@dirrm share/R/library/modreg/latex
-@dirrm share/R/library/modreg/libs
-@dirrm share/R/library/modreg
-@dirrm share/R/library/mva/R
-@dirrm share/R/library/mva/R-ex
-@dirrm share/R/library/mva/help
-@dirrm share/R/library/mva/html
-@dirrm share/R/library/mva/latex
-@dirrm share/R/library/mva/libs
-@dirrm share/R/library/mva
-@dirrm share/R/library/stepfun/R
-@dirrm share/R/library/stepfun/R-ex
-@dirrm share/R/library/stepfun/help
-@dirrm share/R/library/stepfun/html
-@dirrm share/R/library/stepfun/latex
-@dirrm share/R/library/stepfun
-@dirrm share/R/library
+@dirrm share/R/demos/nlm
+@dirrm share/R/demos/models
+@dirrm share/R/demos/language
+@dirrm share/R/demos/graphics
+@dirrm share/R/demos/dynload
+@dirrm share/R/demos
+@dirrm share/R/bin
+@dirrm share/R/afm
 @dirrm share/R
