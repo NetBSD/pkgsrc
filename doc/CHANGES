@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9751 2005/04/04 14:16:34 tron Exp $
+$NetBSD: CHANGES,v 1.9752 2005/04/04 15:34:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1902,3 +1902,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libevent to 1.0c [wiz 2005-04-04]
 	Updated phpmyadmin to 2.6.2rc1 [tron 2005-04-04]
 	Updated squid to 2.5.9nb4 [tron 2005-04-04]
+	Updated abiword to 2.2.6 [adam 2005-04-04]
+	Updated abiword-plugins to 2.2.6 [adam 2005-04-04]
