@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/07/22 02:01:00 tsarna Exp $
+# $NetBSD: Makefile,v 1.16 1998/08/22 17:26:12 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -20,6 +20,7 @@
 #    SUBDIR += gwstat
     SUBDIR += grail
 #    SUBDIR += harvest
+    SUBDIR += htmldoc
 #    SUBDIR += http-analyze
 #    SUBDIR += libpics
     SUBDIR += libwww
