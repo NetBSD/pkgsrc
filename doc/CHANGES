@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3897 2003/12/02 23:44:34 recht Exp $
+$NetBSD: CHANGES,v 1.3898 2003/12/03 00:18:30 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4716,3 +4716,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tla to 1.1.0.8 [recht 2003-12-02]
 	Updated py-checker to 0.8.13 [recht 2003-12-02]
 	Updated roundup to 0.6.3.1 [recht 2003-12-02]
+	Updated mono to 0.28nb1 [recht 2003-12-03]
+	Updated boehm-gc to 6.2nb2 [recht 2003-12-03]
