@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 1999/11/16 21:23:03 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2000/01/19 00:42:41 jlam Exp $
 
 DISTNAME=	samba-2.0.6
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
@@ -8,7 +8,11 @@ MASTER_SITES=	ftp://ftp.samba.org/pub/samba/
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://www.samba.org/
 
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
+
+.if !exists(/usr/include/readline.h)
 DEPENDS+=	readline-4.0:../../devel/readline
+.endif
 
 GNU_CONFIGURE=	yes
 
@@ -29,6 +33,9 @@ CONFIGURE_ARGS= --with-swatdir=${PREFIX}/share/swat \
 		--with-privatedir=${SAMBA_PRIVATE}
 
 PLIST_SUBST+=	SAMBA_PRIVATE=${SAMBA_PRIVATE}
+
+pre-configure:
+	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/samba/faq

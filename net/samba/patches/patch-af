@@ -1,0 +1,35 @@
+$NetBSD: patch-af,v 1.1 2000/01/19 00:42:43 jlam Exp $
+
+--- include/includes.h.orig	Wed Nov 10 21:36:00 1999
++++ include/includes.h	Tue Jan 18 14:12:29 2000
+@@ -775,20 +775,20 @@
+ #define ULTRIX_AUTH 1
+ #endif
+ 
+-#ifdef HAVE_LIBREADLINE
+-#  ifdef HAVE_READLINE_READLINE_H
+-#    include <readline/readline.h>
+-#    ifdef HAVE_READLINE_HISTORY_H
+-#      include <readline/history.h>
++#ifdef HAVE_READLINE
++#  ifdef HAVE_READLINE_H
++#    include <readline.h>
++#    ifdef HAVE_HISTORY_H
++#      include <history.h>
+ #    endif
+ #  else
+-#    ifdef HAVE_READLINE_H
+-#      include <readline.h>
+-#      ifdef HAVE_HISTORY_H
+-#        include <history.h>
++#    ifdef HAVE_READLINE_READLINE_H
++#      include <readline/readline.h>
++#      ifdef HAVE_READLINE_HISTORY_H
++#        include <readline/history.h>
+ #      endif
+ #    else
+-#      undef HAVE_LIBREADLINE
++#      undef HAVE_READLINE
+ #    endif
+ #  endif
+ #endif
