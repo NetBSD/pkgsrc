@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.12 2003/07/28 14:38:05 adam Exp $
+$NetBSD: patch-aa,v 1.13 2003/09/10 11:54:42 adam Exp $
 
---- Makefile.orig	2003-07-28 14:34:21.000000000 +0200
-+++ Makefile	2003-07-28 14:34:21.000000000 +0200
-@@ -419,9 +419,9 @@
+--- Makefile.orig	2003-07-15 03:17:18.000000000 +0200
++++ Makefile
+@@ -424,9 +424,9 @@ sslunix sslsco:
  	@echo + In order to rectify this problem, you MUST build with:
  	@echo ++ SSLTYPE=$(SSLTYPE).nopwd
  	@echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/28 14:38:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/09/10 11:54:41 adam Exp $
 include/c-client/c-client.h
 include/c-client/env.h
 include/c-client/env_unix.h
@@ -51,10 +51,11 @@ share/doc/imap-uw/Y2K
 share/doc/imap-uw/bugs.txt
 share/doc/imap-uw/calendar.txt
 share/doc/imap-uw/commndmt.txt
+share/doc/imap-uw/draft/README
 share/doc/imap-uw/draft/compare.txt
 share/doc/imap-uw/draft/i18n.txt
 share/doc/imap-uw/draft/sort.txt
-share/doc/imap-uw/draft/README
+share/doc/imap-uw/draft/unselect.txt
 share/doc/imap-uw/drivers.txt
 share/doc/imap-uw/formats.txt
 share/doc/imap-uw/imaprc.txt
