@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/08/15 15:17:07 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/25 18:35:06 minskim Exp $
 #
 
-DISTNAME=	ttf-alee_1.4
-PKGNAME=	alee-ttf-1.4
+DISTNAME=	ttf-alee_2.7
+PKGNAME=	alee-ttf-2.7
 CATEGORIES=	fonts korean
 MASTER_SITES=	http://ftp.debian.org/debian/pool/main/t/ttf-alee/
 

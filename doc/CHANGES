@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6993 2004/08/25 17:16:09 seb Exp $
+$NetBSD: CHANGES,v 1.6994 2004/08/25 18:35:06 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4043,3 +4043,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmame to 0.85nb1 [wiz 2004-08-25]
 	Added digikam-0.6.2 [seb 2004-08-25]
 	Updated imapfilter to 1.0.1 [seb 2004-08-25]
+	Updated alee-ttf to 2.7 [minskim 2004-08-25]
