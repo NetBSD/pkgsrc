@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.1 2003/08/14 13:16:48 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.2 2003/08/16 08:33:31 jlam Exp $
 #
 # Assume PKG_INSTALLATION_TYPE == "pkgviews".
 
@@ -352,8 +352,6 @@ _BLNK_TRANSFORM+=       r:
 #
 .if defined(_USE_RPATH) && empty(_USE_RPATH:M[yY][eE][sS])
 _BLNK_TRANSFORM+=       no-rpath
-.elif defined(USE_SUNPRO)
-_BLNK_TRANSFORM+=       sanitize-rpath
 .endif
 #
 # Undo the protection for the directories that we allow to be specified
@@ -491,6 +489,23 @@ _BLNK_WRAP_SANITIZE_PATH.LIBTOOL=	# empty
 _BLNK_WRAP_SETENV.SHLIBTOOL=	# empty
 _BLNK_WRAPPER_SH.SHLIBTOOL=	${.CURDIR}/../../mk/buildlink3/libtool.sh
 _BLNK_WRAP_SANITIZE_PATH.SHLIBTOOL=	# empty
+
+.if defined(USE_SUNPRO)
+_BLNK_WRAP_PRIVATE_PRE_CACHE.CC=	${_BLNK_WRAP_PRE_CACHE}
+_BLNK_WRAP_PRIVATE_CACHE_ADD.CC=	${BUILDLINK_DIR}/bin/.sunpro-cc-cache-add
+_BLNK_WRAP_PRIVATE_CACHE.CC=		${BUILDLINK_DIR}/bin/.sunpro-cc-cache
+_BLNK_WRAP_PRIVATE_POST_CACHE.CC=	${BUILDLINK_DIR}/bin/.sunpro-cc-post-cache
+_BLNK_WRAP_POST_LOGIC.CC=		${BUILDLINK_DIR}/bin/.sunpro-cc-post-logic
+#
+# The SunPro C++ compiler wrapper shares cache information with the C
+# compiler.
+#
+_BLNK_WRAP_PRIVATE_PRE_CACHE.CXX=	${_BLNK_WRAP_PRE_CACHE}
+_BLNK_WRAP_PRIVATE_CACHE_ADD.CXX=	${BUILDLINK_DIR}/bin/.sunpro-cc-cache-add
+_BLNK_WRAP_PRIVATE_CACHE.CXX=		${BUILDLINK_DIR}/bin/.sunpro-cc-cache
+_BLNK_WRAP_PRIVATE_POST_CACHE.CXX=	${BUILDLINK_DIR}/bin/.sunpro-cc-post-cache
+_BLNK_WRAP_POST_LOGIC.CXX=		${BUILDLINK_DIR}/bin/.sunpro-cc-post-logic
+.endif	# USE_SUNPRO
 
 _BLNK_WRAP_PRIVATE_PRE_CACHE.LD=	${_BLNK_WRAP_PRE_CACHE}
 _BLNK_WRAP_PRIVATE_CACHE_ADD.LD=	${BUILDLINK_DIR}/bin/.ld-cache-add
