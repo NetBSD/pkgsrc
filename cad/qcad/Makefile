@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/05/03 14:12:42 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/05/11 07:40:51 jmc Exp $
 
 DISTNAME=		qcad-1.5.4-src
 PKGNAME=		qcad-1.5.4
@@ -33,4 +33,5 @@ do-install:
 		${PREFIX}/share/qcad
 
 .include "../../x11/qt3-libs/buildlink2.mk"
+.include "../../x11/qt3-tools/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
