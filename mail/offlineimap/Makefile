@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 12:19:43 agc Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/15 17:36:29 drochner Exp $
 #
 
 DISTNAME=	offlineimap_${_OFFLINEIMAP_VER}
@@ -18,15 +18,9 @@ _OFFLINEIMAP_VER=	4.0.0
 
 PYTHON_VERSIONS_ACCEPTED=	22pth 23pth
 BUILDLINK_DEPENDS.python22-pth=	python22-pth>=2.2.2
+PYDISTUTILSPKG=			yes
 PYTHON_PATCH_SCRIPTS=		bin/offlineimap
-PYTHON_PATCH_SCRIPT_SED=	-e "1s;^\#!.*python.*;\#!${PYTHONBIN};"
 PLIST_SUBST+=			PYSITELIB=${PYSITELIB}
-
-do-build:
-	cd ${WRKSRC}; ${PYTHONBIN} setup.py build
-
-do-install:
-	cd ${WRKSRC}; ${PYTHONBIN} setup.py install
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/offlineimap
@@ -36,5 +30,6 @@ post-install:
 	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/offlineimap.1 ${PREFIX}/man/man1/offlineimap.1
 
+.include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
