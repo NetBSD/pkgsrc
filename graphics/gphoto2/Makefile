@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/07/08 21:47:21 veego Exp $
+# $NetBSD: Makefile,v 1.3 2001/08/01 15:50:22 wiz Exp $
 
 DISTNAME=	gphoto-2.0beta1
-PKGNAME=	gphoto-2.0beta1nb1
+PKGNAME=	gphoto-2.0.0.1nb1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.gphoto.net/dist/
 
@@ -9,6 +9,7 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.gphoto.org/gphoto2/
 COMMENT=	Download and view files from various digital cameras
 
+BUILD_USES_MSGFMT=	yes
 DEPENDS+=	libusb-*:../../devel/libusb
 
 USE_GMAKE=		yes
