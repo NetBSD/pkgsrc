@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5553 2004/04/12 13:56:28 tron Exp $
+$NetBSD: CHANGES,v 1.5554 2004/04/12 14:19:00 tron Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1926,3 +1926,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed libicq2000 [snj 2004-04-12]
 	Updated pkglint to 3.70 [jmmv 2004-04-12]
 	Updated milter-greylist to 1.0.2nb1 [tron 2004-04-12]
+	Updated oidentd to 2.0.7nb1 [tron 2004-04-12]
