@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2000/06/20 21:14:05 pooka Exp $
+$NetBSD: patch-aa,v 1.7 2000/10/29 08:54:54 pooka Exp $
 
---- src/Makefile.in.orig	Wed May  3 21:27:00 2000
-+++ src/Makefile.in	Tue Jun 20 23:53:19 2000
-@@ -102,7 +102,7 @@
+--- src/Makefile.in.orig	Thu Oct 26 18:51:21 2000
++++ src/Makefile.in	Sat Oct 28 15:18:33 2000
+@@ -104,7 +104,7 @@
  
  bin_PROGRAMS = xsidplay
  
--xsidplay_LDADD = $(OBJMETA) AudioDriver.o 			@SIDPLAY_LDFLAGS@ -lsidplay @QT_LDFLAGS@ -lqt
-+xsidplay_LDADD = $(OBJMETA) AudioDriver.o 			@SIDPLAY_LDFLAGS@ -lsidplay @QT_LDFLAGS@ -lqt -lX11 -lXext @LIBAUDIO@
+-xsidplay_LDADD = audio/libaudio.a stilview/libstilview.a songlendb/libsonglendb.a tools/libtools.a widgets/libwidgets.a @SIDPLAY_LDFLAGS@ -lsidplay @QT_LDFLAGS@ -lqt
++xsidplay_LDADD = audio/libaudio.a stilview/libstilview.a songlendb/libsonglendb.a tools/libtools.a widgets/libwidgets.a @SIDPLAY_LDFLAGS@ -lsidplay @QT_LDFLAGS@ -lX11 -lXext -lICE -lSM -lqt @LIBAUDIO@
  
  
- xsidplay_SOURCES =  AudioConfig.h         HistoryDialog.cpp      StilDialog.h AudioDialog.cpp       HistoryDialog.h        StilDialogData.cpp AudioDialog.h         HistoryDialogData.cpp  StilDialogData.h AudioDialogData.cpp   HistoryDialogData.h    TextFile.cpp AudioDialogData.h     HistoryFile.cpp        TextFile.h ConfigFile.cpp        HistoryFile.h          TimeLCD.cpp ConfigFile.h          HistoryItem.h          TimeLCD.h EmuDialog.cpp         LEDButton.cpp          WaveViewDialog.cpp EmuDialog.h           LEDButton.h            WaveViewDialog.h EmuDialogData.cpp     MainDialog.cpp         WaveViewDialogData.cpp EmuDialogData.h       MainDialog.h           WaveViewDialogData.h FilterDialog.cpp      MainDialogData.cpp     myTimer.h FilterDialog.h        MainDialogData.h       stil.cpp FilterDialogData.cpp  MixerConfig.h          stil.h FilterDialogData.h    MixerDialog.cpp        stilcomm.cpp GlobalIcon.h          MixerDialog.h          stilcomm.h HVSCDialog.cpp        MixerDialogData.cpp    stildefs.h HVSCDialog.h          MixerDialogData.h      xsidplay.cpp HVSCDialogData.cpp    PicButton.cpp          xsidplay.h HVSCDialogData.h      PicButton.h HVSCconfig.h          StilDialog.cpp
+ xsidplay_SOURCES = $(BUILT_SOURCES) AudioDialog.cpp AudioDialog.h AudioDialogData.cpp AudioDialogData.h ConfigC.cpp ConfigC.h ConfigFile.cpp ConfigFile.h ConfigFileOld.cpp ConfigFileOld.h EmuDialog.cpp EmuDialog.h EmuDialogData.cpp EmuDialogData.h FilterDialog.cpp FilterDialog.h FilterDialogData.cpp FilterDialogData.h GlobalIcon.h HVSC_Dialog.cpp HVSC_Dialog.h HVSC_DialogData.cpp HVSC_DialogData.h HVSC_Config.h HistoryDialog.cpp HistoryDialog.h HistoryDialogData.cpp HistoryDialogData.h HistoryFile.cpp HistoryFile.h HistoryItem.h MainDialog.cpp MainDialog.h MainDialogData.cpp MainDialogData.h MixerConfig.h MixerDialog.cpp MixerDialog.h MixerDialogData.cpp MixerDialogData.h Player.h Player.cpp Playlist.cpp Playlist.h PlaylistDialog.cpp PlaylistDialog.h PlaylistDialogData.cpp PlaylistDialogData.h PlaylistEditDialog.cpp PlaylistEditDialog.h PlaylistEditDialogData.cpp PlaylistEditDialogData.h PlaylistCheck.cpp PlaylistCheck.h PlaylistItem.h PlaylistOptDialog.cpp PlaylistOptDialog.h StilDialog.cpp StilDialog.h WaveViewDialog.cpp WaveViewDialog.h WaveViewDialogData.cpp WaveViewDialogData.h WidgetOffset.cpp WidgetOffset.h myTimer.h filenames.h xsidplay.cpp
