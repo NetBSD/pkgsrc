@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/01/16 10:15:48 kleink Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/17 19:35:40 kleink Exp $
 #
 
 DISTNAME=		scmxx-0.5.8
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		comms
 MASTER_SITES=		http://www.hendrik-sattler.de/scmxx/download/
 EXTRACT_SUFX=		.tar.bz2
