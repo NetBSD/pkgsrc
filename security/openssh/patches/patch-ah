@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.16 2002/02/05 04:17:32 jlam Exp $
+$NetBSD: patch-ah,v 1.17 2002/04/23 13:32:58 martti Exp $
 
---- Makefile.in.orig	Sun Nov 11 18:34:23 2001
-+++ Makefile.in
+--- Makefile.in.orig	Tue Feb 26 19:24:22 2002
++++ Makefile.in	Mon Apr 22 20:10:00 2002
 @@ -16,7 +16,7 @@
  DESTDIR=
  VPATH=@srcdir@
@@ -10,25 +10,8 @@ $NetBSD: patch-ah,v 1.16 2002/02/05 04:17:32 jlam Exp $
 +#ASKPASS_PROGRAM=$(libexecdir)/ssh-askpass
  SFTP_SERVER=$(libexecdir)/sftp-server
  
- PATHS= -DETCDIR=\"$(sysconfdir)\" \
-@@ -30,6 +30,7 @@
- CFLAGS=@CFLAGS@
- CPPFLAGS=-I. -I$(srcdir) @CPPFLAGS@ $(PATHS) @DEFS@
- LIBS=@LIBS@
-+TCPW_LIB=@TCPW_LIB@
- AR=@AR@
- RANLIB=@RANLIB@
- INSTALL=@INSTALL@
-@@ -98,7 +99,7 @@
- 	$(LD) -o $@ $(SSHOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
- 
- sshd$(EXEEXT): libssh.a	$(LIBCOMPAT) $(SSHDOBJS)
--	$(LD) -o $@ $(SSHDOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
-+	$(LD) -o $@ $(SSHDOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(TCPW_LIB) $(LIBS)
- 
- scp$(EXEEXT): $(LIBCOMPAT) libssh.a scp.o
- 	$(LD) -o $@ scp.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
-@@ -182,7 +183,7 @@
+ PATHS= -DSSHDIR=\"$(sysconfdir)\" \
+@@ -189,7 +189,7 @@
  scard-install:
  	(cd scard && $(MAKE) DESTDIR=$(DESTDIR) install)
  
