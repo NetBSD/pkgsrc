@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 1999/04/23 22:53:28 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/07/24 21:01:18 tron Exp $
+bin/tixindex
 bin/tixwish4.1.8.0
 bin/tixwish
 include/tix.h
@@ -16,7 +17,9 @@ include/tix/generic/tixPort.h
 include/tix/generic/tixTList.h
 include/tix/unix/tixUnixInt.h
 include/tix/unix/tixUnixPort.h
+lib/libtix4180.a
 lib/libtix4180.so.1.2
+lib/libtixsam4180.a
 lib/libtixsam4180.so.1.2
 man/mann/BtnBox.n.gz
 man/mann/Balloon.n.gz
