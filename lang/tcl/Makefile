@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2004/03/24 15:24:36 jwise Exp $
+# $NetBSD: Makefile,v 1.30 2004/03/25 22:49:14 jlam Exp $
 #
 
 DISTNAME=		tcl8.4.6-src
 PKGNAME=		tcl-8.4.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -30,7 +30,8 @@ PLIST_SUBST+=		SHLIB_SUFX="${SHLIB_SUFX}"
 # Initially install the man pages into ${WRKDIR}/man, as we need a staged
 # install to avoid overwriting existing manpages in ${PREFIX}/man.
 #
-CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man --enable-threads
+CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
+CONFIGURE_ARGS+=	--enable-threads
 
 # Add ${VIEWBASE}/lib/tcl to the list of locations for Tcl packages.
 CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
@@ -51,6 +52,8 @@ SHLIB_SUFX=		la
 .if (${MACHINE_PLATFORM:MNetBSD-1.5*-m68k} != "")
 CONFIGURE_ENV+=		COMPILER_OPTIMIZATION_BUG=YES
 .endif
+
+.include "../../mk/pthread.buildlink3.mk"
 
 # Modify mkLinks script to remove the short-filename manpage if it was
 # linked to a longer filename.
@@ -96,5 +99,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../generic/tclPort.h ${PREFIX}/include/tcl/generic
 	${INSTALL_DATA} ${WRKSRC}/../generic/tclRegexp.h ${PREFIX}/include/tcl/generic
 
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
