@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8934 2005/01/26 14:17:50 cube Exp $
+$NetBSD: CHANGES,v 1.8935 2005/01/26 14:47:39 cube Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -610,3 +610,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated djbdns-run to 20050126 [schmonz 2005-01-26]
 	Updated bind to 9.3.0pl1 [tron 2005-01-26]
 	Updated p5-Params-Validate to 0.76 [cube 2005-01-26]
+	Added p5-Class-Singleton-1.03 [cube 2005-01-26]
