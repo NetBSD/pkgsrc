@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.3 2005/02/11 16:11:36 tv Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.4 2005/02/11 16:15:53 tv Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -110,6 +110,88 @@ USE_MAKEINFO?=		no
 
 .if !empty(INFO_FILES) || empty(USE_MAKEINFO:M[nN][oO])
 .  include "../../mk/texinfo.mk"
+.endif
+
+### USE_PERL5, PERL5_REQD
+
+# Distill the PERL5_REQD list into a single _PERL5_REQD value that is the
+# highest version of Perl required.
+#
+PERL5_REQD+=		5.0
+PERL5_REQD+=		${_OPSYS_PERL_REQD}
+
+_PERL5_STRICTEST_REQD?=	none
+.for _version_ in ${PERL5_REQD}
+.  for _pkg_ in perl-${_version_}
+.    if ${_PERL5_STRICTEST_REQD} == "none"
+_PERL5_PKG_SATISFIES_DEP=	YES
+.      for _vers_ in ${PERL5_REQD}
+.        if !empty(_PERL5_PKG_SATISFIES_DEP:M[yY][eE][sS])
+_PERL5_PKG_SATISFIES_DEP!=	\
+	if ${PKG_ADMIN} pmatch 'perl>=${_vers_}' ${_pkg_} 2>/dev/null; then \
+		${ECHO} "YES";						\
+	else								\
+		${ECHO} "NO";						\
+	fi
+.        endif
+.      endfor
+.      if !empty(_PERL5_PKG_SATISFIES_DEP:M[yY][eE][sS])
+_PERL5_STRICTEST_REQD=	${_version_}
+.      endif
+.    endif
+.  endfor
+.endfor
+_PERL5_REQD=	${_PERL5_STRICTEST_REQD}
+
+# Convert USE_PERL5 to be two-valued: either "build" or "run" to denote
+# whether we want a build-time or run-time dependency on perl.
+#
+.if defined(USE_PERL5)
+.  if (${USE_PERL5} == "build")
+_PERL5_DEPMETHOD=	BUILD_DEPENDS
+.  else
+USE_PERL5:=		run
+_PERL5_DEPMETHOD=	DEPENDS
+.  endif
+_PERL5_DEPENDS=		{perl>=${_PERL5_REQD},perl-thread>=${_PERL5_REQD}}
+PERL5_PKGSRCDIR?=	../../lang/perl58
+.  if !defined(BUILDLINK_DEPENDS.perl)
+${_PERL5_DEPMETHOD}+=	${_PERL5_DEPENDS}:${PERL5_PKGSRCDIR}
+.  endif
+.endif
+
+.if defined(USE_PERL5) && (${USE_PERL5} == "run")
+CONFIGURE_ENV+=		PERL=${PERL5:Q}
+.  if !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
+.    if exists(${PERL5})
+PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; \
+			${ECHO} $${installsitelib}
+PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; \
+			${ECHO} $${installsitearch}
+PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`; \
+			${ECHO} $${installarchlib}
+.      if ${PKG_INSTALLATION_TYPE} == "overwrite"
+_PERL5_PREFIX!=		eval `${PERL5} -V:prefix 2>/dev/null`; \
+			${ECHO} $${prefix}
+PERL5_SITELIB:=		${PERL5_SITELIB:S/^${_PERL5_PREFIX}/${LOCALBASE}/}
+PERL5_SITEARCH:=	${PERL5_SITEARCH:S/^${_PERL5_PREFIX}/${LOCALBASE}/}
+PERL5_ARCHLIB:=		${PERL5_ARCHLIB:S/^${_PERL5_PREFIX}/${LOCALBASE}/}
+MAKEFLAGS+=		PERL5_SITELIB=${PERL5_SITELIB:Q}
+MAKEFLAGS+=		PERL5_SITEARCH=${PERL5_SITEARCH:Q}
+MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB:Q}
+.      endif # PKG_INSTALLATION_TYPE == "overwrite"
+.    endif   # exists($PERL5)
+.  endif     # !defined(PERL5_*)
+.endif       # USE_PERL5 == run
+
+.if defined(PERL5_SITELIB)
+PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:S/^${LOCALBASE}\///}
+.endif
+.if defined(PERL5_SITEARCH)
+PLIST_SUBST+=	PERL5_SITEARCH=${PERL5_SITEARCH:S/^${LOCALBASE}\///}
+.endif
+.if defined(PERL5_ARCHLIB)
+PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 .endif
 
 ### USE_RMAN
