@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:10 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/28 13:51:24 fredb Exp $
 bin/ntpd
 bin/ntpdate
 bin/ntpdc
@@ -53,6 +53,7 @@ share/doc/html/ntp4/driver36.htm
 share/doc/html/ntp4/driver37.htm
 share/doc/html/ntp4/driver38.htm
 share/doc/html/ntp4/driver39.htm
+share/doc/html/ntp4/driver40.htm
 share/doc/html/ntp4/exec.htm
 share/doc/html/ntp4/extern.htm
 share/doc/html/ntp4/gadget.htm
@@ -98,6 +99,7 @@ share/doc/html/ntp4/hints/freebsd
 share/doc/html/ntp4/hints/hpux
 share/doc/html/ntp4/hints/linux
 share/doc/html/ntp4/hints/notes-xntp-v3
+share/doc/html/ntp4/hints/mpeix
 share/doc/html/ntp4/hints/parse
 share/doc/html/ntp4/hints/refclocks
 share/doc/html/ntp4/hints/rs6000
@@ -173,9 +175,6 @@ share/examples/ntp4/baldwin.conf
 share/examples/ntp4/dewey.conf
 share/examples/ntp4/grundoon.conf
 share/examples/ntp4/malarky.conf
-share/examples/ntp4/ntp_malarky.conf
-share/examples/ntp4/ntp_pogo.conf
-share/examples/ntp4/ntp_rackety.conf
 share/examples/ntp4/pogo.conf
 share/examples/ntp4/rackety.conf
 @dirrm share/examples/ntp4
