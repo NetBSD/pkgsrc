@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/03/06 14:09:39 is Exp $
+# $NetBSD: Makefile,v 1.6 2000/03/16 12:25:49 wiz Exp $
 # KAME Id: Makefile,v 1.6 1999/11/28 14:36:04 itojun Exp
 #
 
@@ -8,11 +8,11 @@ CATEGORIES=		devel
 # need to fetch on your own
 #MASTER_SITES=		
 EXTRACT_SUFX=		.tar
-DECOMPRESS_CMD=		${CAT}
 
 MAINTAINER=		itojun@kame.net
 HOMEPAGE=		http://www.sun.com/solaris/ipv6/
 
+DECOMPRESS_CMD=		${CAT}
 EXTRACT_BEFORE_ARGS=	-xf
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 NO_CDROM=		"not redistributable"
@@ -24,6 +24,7 @@ do-fetch:
 	@if ${TEST} \! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}; then \
 		${ECHO} "===> You need to sign the agreement on ${HOMEPAGE}"; \
 		${ECHO} "     and fetch on your own."; \
+		exit 1; \
 	fi
 
 do-install:
