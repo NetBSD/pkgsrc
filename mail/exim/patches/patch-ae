@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2002/06/19 16:02:27 ad Exp $
+$NetBSD: patch-ae,v 1.3 2002/12/09 11:38:06 ad Exp $
 
 --- src/configure.default.orig	Thu Jun 13 11:37:52 2002
 +++ src/configure.default	Thu Jun 13 11:38:06 2002
@@ -7,7 +7,7 @@ $NetBSD: patch-ae,v 1.2 2002/06/19 16:02:27 ad Exp $
    allow_fail
    allow_defer
 -  data = ${lookup{$local_part}lsearch{/etc/aliases}}
-+  data = ${lookup{$local_part}dbm{/etc/mail/aliases}}
++  data = ${lookup{$local_part}dbm{/etc/mail/aliases.db}}
  # user = exim
    file_transport = address_file
    pipe_transport = address_pipe
