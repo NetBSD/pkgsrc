@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/12/28 02:47:50 reed Exp $
+# $NetBSD: Makefile,v 1.14 2004/12/31 14:36:57 taca Exp $
 #
 
 DISTNAME=	bkpupsd-2.1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.jone-system.com/pub/misc/ \
 		ftp://ftp.back-street.net/pub/misc/
