@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2004/05/06 11:18:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.134 2004/05/19 12:34:44 recht Exp $
 #
 
 COMMENT=	Databases
@@ -93,6 +93,7 @@ SUBDIR+=	postgresql-pltcl
 SUBDIR+=	postgresql-server
 SUBDIR+=	postgresql74
 SUBDIR+=	postgresql74-client
+SUBDIR+=	postgresql74-contrib
 SUBDIR+=	postgresql74-docs
 SUBDIR+=	postgresql74-lib
 SUBDIR+=	postgresql74-server
