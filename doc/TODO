@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.251 2003/02/14 20:40:34 salo Exp $
+$NetBSD: TODO,v 1.252 2003/02/14 21:01:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -77,9 +77,9 @@ Suggested package updates
 	o adobe-cmaps-1.5 [pkg/19646]
 	o amaya-7.2
 	o angband-3.0.3
-	o aim-1.5.277
 	o amaya-7.0
 	o apcupsd-0.8.6
+	o atari800-1.3
 	o atk-1.2.2 [pkg/20235]
 	o aumix-2.8
 	o balsa-1.4.2
@@ -210,6 +210,7 @@ Suggested package updates
 	o mkfontscale-20020618
 	o mng-1.0.5rc2
 	o mowitz-0.2.2
+	o mpgtx-1.3 [pkg/19082]
 	o mplayer-0.90rc4 [pkg/20307]
 	o mrproject-0.8
 	o mysql-3.23.54
@@ -235,12 +236,13 @@ Suggested package updates
 	o pen-0.9.5 [pkg/19216]
 	o php4-4.3.0
 	o pkgconfig-0.15.0 [pkg/20236]
-	o plib-1.6.0
+	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12
 	o povray-3.5
 	o pureftpd-0.13a [pkg/19233]
 	o pureftpd-0.14
 	o pv-0.4.5 [pkg/19884]
+	o py-mysqldb-0.9.2 [pkg/19056]
 	o py-wxWindows-2.4.0.2
 	o pygtk-0.6.11
 	o qt3-3.1.1 [skrll]
@@ -289,7 +291,7 @@ Suggested package updates
 	o teTeX-2.0
 	o texmacs-1.0.1.3
 	o tightvnc-1.2.7
-	o tscp-0.9.7 [pkg/20166]
+	o tspc-0.9.7 [pkg/20166]
 	o ttf2pt1-3.4.3
 	o tuxpaint-0.9.7
 	o tuxpaint-stamps-2003.01.28
