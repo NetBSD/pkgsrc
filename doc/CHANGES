@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.813 2002/12/16 23:32:56 jmmv Exp $
+$NetBSD: CHANGES,v 1.814 2002/12/17 10:55:22 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3981,3 +3981,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ploticus to 1.20 [grant 2002-12-17]
 	Updated star to 1.4.2 [grant 2002-12-17]
 	Updated whiteBOX to 0.5 [jmmv 2002-12-17]
+	Added pekwm-0.1.2 [jmmv 2002-12-17]
