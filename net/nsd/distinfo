@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.15 2004/07/31 17:15:15 itojun Exp $
+$NetBSD: distinfo,v 1.16 2005/01/19 02:11:24 itojun Exp $
 
-SHA1 (nsd-2.1.2.tar.gz) = dfae3780dc4be68236e77e716ffc8bca9f81130b
-Size (nsd-2.1.2.tar.gz) = 218704 bytes
+SHA1 (nsd-2.2.0.tar.gz) = 4a9e1d6c822ccda8c49884ee97246120fb30926a
+Size (nsd-2.2.0.tar.gz) = 230431 bytes
+SHA1 (patch-aa) = d39630dd21c53bddfedff5fe8525dd93227e2f40

@@ -1,21 +1,26 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/16 21:55:14 itojun Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/01/19 02:11:24 itojun Exp $
 sbin/nsd
-sbin/nsd-notify
-sbin/nsdc
 sbin/zonec
+sbin/nsdc
+sbin/nsd-notify
+sbin/nsd-xfer
 man/man8/nsd.8
-man/man8/nsd-notify.8
 man/man8/nsdc.8
 man/man8/zonec.8
+man/man8/nsd-notify.8
+man/man8/nsd-xfer.8
 share/nsd/DIFFERENCES
 share/nsd/LICENSE
 share/nsd/NSD-DATABASE
 share/nsd/README
 share/nsd/RELNOTES
 share/nsd/TODO
+share/examples/nsd/nsdc.conf.sample
+share/examples/nsd/nsd.zones.sample
 share/nsd/contrib/README
 share/nsd/contrib/build-nsdzones.pl
 share/nsd/contrib/build-nsdzones.pl.README
 share/nsd/contrib/example-plugin.c
+@dirrm share/examples/nsd
 @dirrm share/nsd/contrib
 @dirrm share/nsd
