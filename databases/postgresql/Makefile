@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 1999/09/20 23:38:45 jlam Exp $
+# $NetBSD: Makefile,v 1.43 1999/12/02 01:47:05 darcy Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
-DISTNAME=		postgresql-6.5.2
+DISTNAME=		postgresql-6.5.3
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/ \
@@ -12,8 +12,9 @@ MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.PostgreSQL.ORG/
 
-BUILD_DEPENDS+=		${LOCALBASE}/bin/bison:../../devel/bison
 DEPENDS+=		addnerd-1.6:../../sysutils/addnerd
+
+BUILD_DEPENDS+=		${LOCALBASE}/bin/bison:../../devel/bison
 
 # Evil stuff follows: I haven't figured out how to add flags to configure to
 # nicely disable the ncurses and readline checks in the configure script, yet.
@@ -120,7 +121,7 @@ post-build:
 	@${ECHO} "Dump existing databases, before installing new db version !!"
 	@${ECHO} "Detailed instructions, see INSTALL file under ${WRKDIR}...  "
 	@${ECHO} "------------------------------------------------------------"
-	
+
 pre-install:
 	${RM} -rf ${PGPREFIX}
 	${MKDIR} ${PGPREFIX}
