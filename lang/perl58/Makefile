@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/01/05 21:29:14 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/06 18:56:50 abs Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -231,6 +231,7 @@ STATIC_MAKEFLAGS=	MKPIC=no STATIC_PERL=NO
 STATIC_MAKEFLAGS+=	WRKDIR=${STATIC_WRKDIR}
 STATIC_MAKEFLAGS+=	ALL_TARGET=perl
 WRKSRC_PERL5=		${STATIC_WRKDIR}/${WRKSRC:T}/perl
+UNLIMIT_RESOURCES=      datasize
 
 post-build:
 	cd ${.CURDIR} && ${MAKE} build ${STATIC_MAKEFLAGS}
