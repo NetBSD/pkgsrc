@@ -1,8 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/28 21:43:26 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2005/02/22 16:10:03 adam Exp $
 bin/dictfmt
 bin/dictfmt_index2suffix
+bin/dictfmt_index2word
+bin/dictfmt_plugin
+bin/dictfmt_virtual
+bin/dictunformat
 bin/dictzip
 man/man1/dictfmt.1
+man/man1/dictfmt_index2suffix.1
+man/man1/dictfmt_index2word.1
+man/man1/dictunformat.1
 man/man1/dictzip.1
 man/man8/dictd.8
 sbin/dictd
