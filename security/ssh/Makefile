@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 1998/09/10 16:36:11 kim Exp $
+# $NetBSD: Makefile,v 1.35 1998/09/10 19:40:41 kim Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -6,7 +6,7 @@ DISTNAME=		ssh-1.2.26
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.cs.hut.fi/pub/ssh/ \
 			ftp://ftp.funet.fi/pub/unix/security/login/ssh/ \
-			ftp://ftp.gw.com/pub/unix/ssh/
+			ftp://ftp.cert.dfn.de/pub/tools/net/ssh/
 
 MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.cs.hut.fi/ssh/
