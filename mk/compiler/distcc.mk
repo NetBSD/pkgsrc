@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.12 2004/02/06 03:04:50 jlam Exp $
+# $NetBSD: distcc.mk,v 1.13 2004/02/06 04:37:02 jlam Exp $
 
 .if !defined(COMPILER_DISTCC_MK)
 COMPILER_DISTCC_MK=	one
@@ -58,8 +58,7 @@ COMPILER_DISTCC_MK+=	two
 
 .    if !empty(_USE_DISTCC:M[yY][eE][sS])
 .      if !empty(_LANGUAGES.distcc)
-.        if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE}) && \
-            empty(PREPEND_PATH:M${_DISTCC_DIR}/bin)
+.        if empty(PREPEND_PATH:M${_DISTCC_DIR}/bin)
 PREPEND_PATH+=	${_DISTCC_DIR}/bin
 PATH:=		${_DISTCC_DIR}/bin:${PATH}
 .        endif

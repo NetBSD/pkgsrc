@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.38 2004/02/06 03:04:50 jlam Exp $
+# $NetBSD: gcc.mk,v 1.39 2004/02/06 04:37:02 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
@@ -298,17 +298,16 @@ COMPILER_GCC_MK+=	two
 # Prepend the path to the compiler to the PATH.
 .    if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
 .      if exists(${_GCC_PREFIX}bin/gcc) && !empty(_LANGUAGES.gcc)
-.        if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE}) && \
-            empty(PREPEND_PATH:M${_GCC_PREFIX}bin)
-PREPEND_PATH+=	${GCC_PREFIX}bin
+.        if empty(PREPEND_PATH:M${_GCC_PREFIX}bin)
+FOO!=	echo ${PREPEND_PATH} 1>&2; echo 0
+PREPEND_PATH+=	${_GCC_PREFIX}bin
 PATH:=		${_GCC_PREFIX}bin:${PATH}
 .        endif
 .      endif
 .    elif !empty(_IS_BUILTIN_GCC:M[yY][eE][sS])
 _CC_DIRPATH=	${_CC:H}
 .      if !empty(_CC_DIRPATH:M/*)
-.        if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE}) && \
-            empty(PREPEND_PATH:M${_CC_DIRPATH})
+.        if empty(PREPEND_PATH:M${_CC_DIRPATH})
 PREPEND_PATH+=	${_CC_DIRPATH}
 PATH:=		${_CC_DIRPATH}:${PATH}
 .        endif
