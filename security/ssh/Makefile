@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 1999/01/30 09:38:44 is Exp $
+# $NetBSD: Makefile,v 1.37 1999/01/30 20:09:44 is Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -75,11 +75,6 @@ CONFIGURE_ARGS+=	--disable-suid-ssh
 # Make libwrap also compare against forwards (off by default)
 .if defined(LIBWRAP_FWD) && ${LIBWRAP_FWD} == YES
 CFLAGS+=		-DLIBWRAP_FWD
-.endif
-
-# be more effective on M68060 machines
-.if defined(M68060)
-CONFIGURE_ARGS+=	--host=m68060--netbsd
 .endif
 
 PKGDIR=		${WRKDIR}/pkg
