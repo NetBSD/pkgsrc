@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1237 2003/08/12 15:51:29 seb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1238 2003/08/12 15:55:21 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -1620,7 +1620,6 @@ show-depends-dirs:
 
 # Show all build and run depends, reverse-breadth first, with options.
 .if make(show-all-depends-dirs) || make(show-all-depends-dirs-excl) || make (show-root-dirs)
-.PHONY: show-all-depends-dirs show-all-depends-dirs-excl show-root-dirs
 
 # "awk" macro to recurse over the dependencies efficiently, never running in
 # the same same directory twice. You may set the following options via "-v":
