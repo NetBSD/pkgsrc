@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.992 2003/11/04 15:14:11 cube Exp $
+$NetBSD: TODO,v 1.993 2003/11/04 17:46:41 salo Exp $
 
 Suggested new packages
 ======================
@@ -323,6 +323,7 @@ Suggested package updates
 	o sml-nj-110.43
 	o snd-6.12
 	o snes9x-1.41
+	o snort-2.0.3
 	o squeak-3.2 [fredb|pkg/17950]
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
