@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.152 2002/10/03 16:11:05 martti Exp $
+$NetBSD: CHANGES,v 1.153 2002/10/03 19:23:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3083,3 +3083,14 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libxslt to 1.0.21 [martti 2002-10-03]
 	Updated mserv to 0.33nb5 [abs 2002-10-03]
 	Updated popt to 1.6.4 [martti 2002-10-03]
+	Removed cross-arm-netbsd [wiz 2002-10-03]
+	Removed cross-armv2-netbsd [wiz 2002-10-03]
+	Removed cross-i386-netbsd [wiz 2002-10-03]
+	Removed cross-i386-netbsdelf [wiz 2002-10-03]
+	Removed cross-m68k-netbsdelf [wiz 2002-10-03]
+	Removed cross-mipseb-netbsd [wiz 2002-10-03]
+	Removed cross-mipsel-netbsd [wiz 2002-10-03]
+	Removed cross-powerpc-netbsd [wiz 2002-10-03]
+	Removed cross-sh-netbsdcoff [wiz 2002-10-03]
+	Removed cross-shel-netbsdcoff [wiz 2002-10-03]
+	Removed cross-sparc-netbsdelf [wiz 2002-10-03]
