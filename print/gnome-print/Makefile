@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2001/02/17 17:51:43 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2001/04/06 22:12:07 rh Exp $
 #
 
-DISTNAME=		gnome-print-0.25
+DISTNAME=		gnome-print-0.28
 CATEGORIES=		print gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gnome-print/}
 
@@ -13,7 +13,7 @@ DEPENDS+=		gnome-libs>=1.0.56:../../x11/gnome-libs
 DEPENDS+=		libxml>=1.8.5:../../textproc/libxml
 DEPENDS+=		libunicode>=0.4:../../textproc/libunicode
 DEPENDS+=		ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
-DEPENDS+=		gdk-pixbuf>=0.7.0:../../graphics/gdk-pixbuf
+DEPENDS+=		gdk-pixbuf-gnome>=0.10.1:../../graphics/gdk-pixbuf-gnome
 
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
