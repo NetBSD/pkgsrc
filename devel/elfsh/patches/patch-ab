@@ -1,22 +1,35 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/05/05 10:57:05 mjl Exp $
+$NetBSD: patch-ab,v 1.2 2004/02/17 12:45:56 cube Exp $
 
---- elfsh/Makefile.orig	Mon May  5 12:27:16 2003
-+++ elfsh/Makefile	Mon May  5 12:27:43 2003
-@@ -9,12 +9,12 @@
- 			  notes.c opt.c pht.c rel.c sht.c stab.c sym.c usage.c \
- 			  data.c ctors.c dtors.c hexa.c
- OBJ			= $(SRC:.c=.o)
--CC			= gcc
--NAME			= elfsh
--LDFLAGS			= -L../libelfsh/ -lelfsh
--CFLAGS			= -Wall -Iinclude -I../libelfsh/include -g3 -O2
--RM			= rm -f 
-+# CC			= gcc
- NAME			= elfsh
-+LDFLAGS			+= -L../libelfsh/ -lelfsh
-+CFLAGS			+= -Wall -Iinclude -I../libelfsh/include -g3 -O2
-+# RM			= rm -f 
-+# NAME			= elfsh
+--- vm/Makefile.orig	2003-08-21 03:23:17.000000000 +0200
++++ vm/Makefile
+@@ -19,8 +19,8 @@
+ #LDASMOPT		= -lasm
  
- all		       	: $(OBJ)
- 		       $(CC) $(LDFLAGS) $(OBJ) -o $(NAME)
+ # Uncommant that to use libreadline
+-#READLNOPT		= -DUSE_READLN
+-#LDREADLNOPT		= -lreadline -ltermcap
++READLNOPT		= -DUSE_READLN
++LDREADLNOPT		= -lreadline -ltermcap
+ 
+ 
+ # End of configurable Makefile
+@@ -36,15 +36,15 @@ SRC			= grammar.c disasm.c dyn.c hdr.c m
+ OBJ			= $(SRC:.c=.o)
+ SRC_DYN			= elfsh_etdyn.c
+ OBJ_DYN			= $(SRC_DYN:.c=.o)
+-CC			= gcc
+-RM			= rm -f
++# CC			= gcc
++# RM			= rm -f
+ NAME			= elfsh
+ 
+-CFLAGS			= -rdynamic -fPIC -g3 -O2 -Wall -Iinclude \
++CFLAGS			+= -rdynamic -fPIC -g3 -O2 -Wall -Iinclude \
+ 			-I../libhash/include/ -I../libelfsh/include/ \
+ 			-DELFSH_INTERN $(DLOPT) $(ASMOPT) $(READLNOPT)
+ 
+-LDFLAGS			= -L../libelfsh/ -lelfsh -L../libhash/ -lhashelfsh \
++LDFLAGS			+= -L../libelfsh/ -lelfsh -L../libhash/ -lhashelfsh \
+ 			-rdynamic -g3 $(LDASMOPT) $(LDREADLNOPT) $(DLOPT)\
+ 			$(EXTRAOPT)
+ 
