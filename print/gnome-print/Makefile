@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2000/11/25 13:53:08 rh Exp $
+# $NetBSD: Makefile,v 1.34 2000/12/15 19:14:04 wiz Exp $
 #
 
 DISTNAME=		gnome-print-0.25
@@ -12,6 +12,7 @@ DEPENDS+=		gnome-libs>=1.0.56:../../x11/gnome-libs
 DEPENDS+=		libxml>=1.8.5:../../textproc/libxml
 DEPENDS+=		libunicode>=0.4:../../textproc/libunicode
 DEPENDS+=		ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
+DEPENDS+=		gkd-pixbuf>=0.7.0:../../graphics/gdk-pixbuf
 
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
