@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2003/09/26 13:35:36 wiz Exp $
+
+--- KeyRing/keyring.c.orig	2002-12-25 07:19:04.000000000 +0100
++++ KeyRing/keyring.c
+@@ -31,7 +31,7 @@
+ 
+ /* Opensll header files */
+ #include <openssl/md5.h>
+-#include <openssl/des.h>
++#include <des.h>
+ 
+ #include "libplugin.h"
+ 
