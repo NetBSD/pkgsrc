@@ -1,18 +1,23 @@
-# $NetBSD: Makefile,v 1.5 2003/07/04 14:39:38 salo Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/23 13:54:25 salo Exp $
 #
 
-DISTNAME=	dovecot-0.99.10
-CATEGORIES=	mail
-MASTER_SITES=	http://dovecot.procontrol.fi/
+DISTNAME=		dovecot-0.99.10
+PKGREVISION=		1
+CATEGORIES=		mail
+MASTER_SITES=		http://dovecot.procontrol.fi/
 
-MAINTAINER=	tom@replic8.net
-HOMEPAGE=	http://dovecot.procontrol.fi/
-COMMENT=	Secure IMAP and POP3 server
+PATCH_SITES=		${MASTER_SITES}
+PATCHFILES=		auth-home.patch bodystructure.patch
+PATCH_DIST_STRIP=	-p1
 
-USE_BUILDLINK2=	YES
-USE_LIBTOOL=	YES
-USE_PKGINSTALL= YES
-GNU_CONFIGURE=	YES
+MAINTAINER=		tom@replic8.net
+HOMEPAGE=		http://dovecot.procontrol.fi/
+COMMENT=		Secure IMAP and POP3 server
+
+USE_BUILDLINK2=		YES
+USE_LIBTOOL=		YES
+USE_PKGINSTALL= 	YES
+GNU_CONFIGURE=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
