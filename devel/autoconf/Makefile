@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2003/12/06 18:26:36 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2003/12/16 21:25:53 wiz Exp $
 
 DISTNAME=		autoconf-2.59
 CATEGORIES=		devel
-# 2.59 not uploaded to GNU site; change back to GNU mirrors
-# during next update
-MASTER_SITES=		http://www.lrde.epita.fr/~akim/download/
-#MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
+MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		wiz@NetBSD.org
