@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2002/12/25 16:59:03 grant Exp $
+# $NetBSD: Makefile,v 1.48 2003/03/12 21:02:25 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/28 00:04:18 se Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	Various utilities for the KDE integrated X11 desktop
 
-DEPENDS+=	kdebase-1.1.2nb1:../../x11/kdebase
+DEPENDS+=	kdebase-1.1.2nb2:../../x11/kdebase
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
