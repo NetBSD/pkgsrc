@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1 2002/10/12 09:40:01 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2002/10/26 18:45:29 grant Exp $
 
---- src/ctlib/Makefile.am.orig	Sat Oct 12 10:55:48 2002
+--- src/ctlib/Makefile.am.orig	Sun Aug 18 00:34:31 2002
 +++ src/ctlib/Makefile.am
-@@ -7,3 +7,4 @@ libct_la_SOURCES=	ct.c cs.c blk.c ctutil
- libct_la_LIBADD	=	$(patsubst %, $(TDSDIR)/%, \
- 				$(patsubst %.c, %.lo, $(TDSSOURCES)))
+@@ -6,3 +6,4 @@ lib_LTLIBRARIES	=	libct.la
+ libct_la_SOURCES=	ct.c cs.c blk.c ctutil.c
+ libct_la_LIBADD	=	$(TDSOBJECTS) $(NETWORK_LIBS) $(LIBICONV)
  INCLUDES	=	-I$(top_srcdir)/include
 +LIBS		=	@LIBICONV@

@@ -1,24 +1,20 @@
-$NetBSD: patch-ac,v 1.1 2002/10/12 09:40:01 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2002/10/26 18:45:29 grant Exp $
 
---- src/ctlib/Makefile.in.orig	Sat Oct 12 10:29:55 2002
+--- src/ctlib/Makefile.in.orig	Thu Sep 12 02:35:51 2002
 +++ src/ctlib/Makefile.in
-@@ -89,10 +89,11 @@ TDSDIR = ../tds
- TDSSOURCES = mem.c token.c util.c login.c read.c write.c convert.c numeric.c config.c query.c iconv.c
- lib_LTLIBRARIES = libct.la
+@@ -96,6 +96,7 @@ lib_LTLIBRARIES = libct.la
  libct_la_SOURCES = ct.c cs.c blk.c ctutil.c
- libct_la_LIBADD = $(patsubst %, $(TDSDIR)/%, \
- 				$(patsubst %.c, %.lo, $(TDSSOURCES)))
- 
+ libct_la_LIBADD = $(TDSOBJECTS) $(NETWORK_LIBS) $(LIBICONV)
  INCLUDES = -I$(top_srcdir)/include
 +LIBS = @LIBICONV@
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../../include/config.h
  CONFIG_CLEAN_FILES = 
-@@ -102,7 +102,6 @@ LTLIBRARIES =  $(lib_LTLIBRARIES)
+@@ -105,7 +106,6 @@ LTLIBRARIES =  $(lib_LTLIBRARIES)
  DEFS = @DEFS@ -I. -I$(srcdir) -I../../include
  CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
 -LIBS = @LIBS@
  libct_la_LDFLAGS = 
- libct_la_DEPENDENCIES =  $(patsubst %, $(TDSDIR)/%, $(patsubst %.c, \
- %.lo, $(TDSSOURCES)))
+ libct_la_DEPENDENCIES =  $(TDSDIR)/mem.lo $(TDSDIR)/token.lo \
+ $(TDSDIR)/util.lo $(TDSDIR)/login.lo $(TDSDIR)/read.lo \
