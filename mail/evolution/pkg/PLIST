@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2001/09/29 17:43:56 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/10/06 14:44:03 rh Exp $
 bin/evolution
 bin/evolution-addressbook
 bin/evolution-alarm-notify
@@ -757,6 +757,7 @@ share/images/evolution/service-up.png
 share/images/evolution/show_all_messages.xpm
 share/images/evolution/splash.png
 share/images/evolution/talking-heads.png
+share/images/evolution/task.png
 share/images/evolution/task.xpm
 share/images/evolution/thankyou.png
 share/images/evolution/timezone-16.xpm
