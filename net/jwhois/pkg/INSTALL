@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2000/08/12 06:29:18 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2001/10/31 15:08:29 tv Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -10,18 +10,9 @@ PRE-INSTALL)
 	;;
 POST-INSTALL)
 	EXAMPLE_DIR=${PKG_PREFIX}/share/examples
-	INSTALL_DATA="/usr/bin/install -c -o root -g wheel -m 0644"
-	CONF=/etc/jwhois.conf
 
 	INSTALL_CACHE="/usr/bin/install -c -o root -g nogroup -m 0664 /dev/null"
 	DBCACHE=/var/db/jwhois.db
-
-	conf=`basename ${CONF}`
-	if [ ! -f ${CONF} ]
-	then
-		echo "Installing example ${conf} in /etc..."
-		${INSTALL_DATA} ${EXAMPLE_DIR}/${conf} ${CONF}
-	fi
 
 	if [ ! -f ${DBCACHE} ]
 	then
