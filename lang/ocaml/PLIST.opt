@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST.opt,v 1.1 2001/11/01 00:32:30 zuntum Exp $
-bin/ocamlopt
+@comment $NetBSD: PLIST.opt,v 1.2 2002/06/19 02:23:42 jschauma Exp $
 bin/ocamlc.opt
+bin/ocamlopt
 bin/ocamlopt.opt
 lib/ocaml/arg.cmx
 lib/ocaml/arg.p.cmx
@@ -8,6 +8,8 @@ lib/ocaml/arith_flags.cmx
 lib/ocaml/arith_status.cmx
 lib/ocaml/array.cmx
 lib/ocaml/array.p.cmx
+lib/ocaml/arrayLabels.cmx
+lib/ocaml/arrayLabels.p.cmx
 lib/ocaml/big_int.cmx
 lib/ocaml/bigarray.a
 lib/ocaml/bigarray.cmx
@@ -16,6 +18,15 @@ lib/ocaml/buffer.cmx
 lib/ocaml/buffer.p.cmx
 lib/ocaml/callback.cmx
 lib/ocaml/callback.p.cmx
+lib/ocaml/camlp4/extfun.cmx
+lib/ocaml/camlp4/fstream.cmx
+lib/ocaml/camlp4/gramext.cmx
+lib/ocaml/camlp4/gramlib.a
+lib/ocaml/camlp4/gramlib.cmxa
+lib/ocaml/camlp4/grammar.cmx
+lib/ocaml/camlp4/plexer.cmx
+lib/ocaml/camlp4/stdpp.cmx
+lib/ocaml/camlp4/token.cmx
 lib/ocaml/char.cmx
 lib/ocaml/char.p.cmx
 lib/ocaml/dbm.a
@@ -40,6 +51,8 @@ lib/ocaml/int32.p.cmx
 lib/ocaml/int64.cmx
 lib/ocaml/int64.p.cmx
 lib/ocaml/int_misc.cmx
+lib/ocaml/labelled.cmx
+lib/ocaml/labelled.p.cmx
 lib/ocaml/labltk/balloon.cmx
 lib/ocaml/labltk/bell.cmx
 lib/ocaml/labltk/button.cmx
@@ -93,10 +106,14 @@ lib/ocaml/libasmrun.a
 lib/ocaml/libasmrunp.a
 lib/ocaml/list.cmx
 lib/ocaml/list.p.cmx
+lib/ocaml/listLabels.cmx
+lib/ocaml/listLabels.p.cmx
 lib/ocaml/map.cmx
 lib/ocaml/map.p.cmx
 lib/ocaml/marshal.cmx
 lib/ocaml/marshal.p.cmx
+lib/ocaml/moreLabels.cmx
+lib/ocaml/moreLabels.p.cmx
 lib/ocaml/nat.cmx
 lib/ocaml/nativeint.cmx
 lib/ocaml/nativeint.p.cmx
@@ -126,6 +143,8 @@ lib/ocaml/sort.cmx
 lib/ocaml/sort.p.cmx
 lib/ocaml/stack.cmx
 lib/ocaml/stack.p.cmx
+lib/ocaml/stdLabels.cmx
+lib/ocaml/stdLabels.p.cmx
 lib/ocaml/std_exit.cmx
 lib/ocaml/std_exit.o
 lib/ocaml/std_exit.p.cmx
@@ -141,11 +160,14 @@ lib/ocaml/stream.cmx
 lib/ocaml/stream.p.cmx
 lib/ocaml/string.cmx
 lib/ocaml/string.p.cmx
+lib/ocaml/stringLabels.cmx
+lib/ocaml/stringLabels.p.cmx
 lib/ocaml/string_misc.cmx
 lib/ocaml/sys.cmx
 lib/ocaml/sys.p.cmx
 lib/ocaml/unix.a
 lib/ocaml/unix.cmx
 lib/ocaml/unix.cmxa
+lib/ocaml/unixLabels.cmx
 lib/ocaml/weak.cmx
 lib/ocaml/weak.p.cmx
