@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2001/09/07 14:34:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/09/28 20:18:39 jlam Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -2385,7 +2385,7 @@ share/kde/wallpapers/simple_wallpaper.jpg
 share/kde/wallpapers/sunday_brunch.jpg
 share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/wallpapers
-@exec /bin/mkdir -p /usr/X11R6/share/kde/templates/.source/emptydir
+@exec /bin/mkdir -p %D/share/kde/templates/.source/emptydir
 @dirrm share/kde/templates/.source/emptydir
 @dirrm share/kde/templates/.source
 @dirrm share/kde/templates
