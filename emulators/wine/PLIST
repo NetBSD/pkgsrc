@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2003/10/26 09:59:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2003/12/01 15:59:50 adam Exp $
 bin/function_grep.pl
 bin/notepad
 bin/progman
@@ -68,7 +68,10 @@ include/wine/msvcrt/wchar.h
 include/wine/msvcrt/wctype.h
 include/wine/unicode.h
 include/wine/windows/accctrl.h
+include/wine/windows/amvideo.h
+include/wine/windows/amvideo.idl
 include/wine/windows/audevcod.h
+include/wine/windows/aviriff.h
 include/wine/windows/axcore.idl
 include/wine/windows/axextend.idl
 include/wine/windows/basetsd.h
@@ -137,7 +140,6 @@ include/wine/windows/icmpapi.h
 include/wine/windows/imagehlp.h
 include/wine/windows/imm.h
 include/wine/windows/initguid.h
-include/wine/windows/instance.h
 include/wine/windows/ipexport.h
 include/wine/windows/iphlpapi.h
 include/wine/windows/ipifcons.h
@@ -209,6 +211,7 @@ include/wine/windows/rpcdcep.h
 include/wine/windows/rpcndr.h
 include/wine/windows/rpcnterr.h
 include/wine/windows/rpcproxy.h
+include/wine/windows/sddl.h
 include/wine/windows/servprov.h
 include/wine/windows/servprov.idl
 include/wine/windows/setupapi.h
@@ -286,12 +289,14 @@ lib/wine/avifile.dll.so
 lib/wine/aviinfo.exe.so
 lib/wine/aviplay.exe.so
 lib/wine/cabinet.dll.so
+lib/wine/capi2032.dll.so
+lib/wine/cfgmgr32.dll.so
 lib/wine/clock.exe.so
 lib/wine/comcat.dll.so
 lib/wine/comctl32.dll.so
 lib/wine/comdlg32.dll.so
 lib/wine/commdlg.dll.so
-lib/wine/comm.drv.so 
+lib/wine/comm.drv.so
 lib/wine/compobj.dll.so
 lib/wine/control.exe.so
 lib/wine/crtdll.dll.so
@@ -310,7 +315,7 @@ lib/wine/devenum.dll.so
 lib/wine/dinput.dll.so
 lib/wine/dinput8.dll.so
 lib/wine/dispdib.dll.so
-lib/wine/display.drv.so 
+lib/wine/display.drv.so
 lib/wine/dmband.dll.so
 lib/wine/dmcompos.dll.so
 lib/wine/dmime.dll.so
@@ -343,6 +348,8 @@ lib/wine/libadvapi32.def
 lib/wine/libavicap32.def
 lib/wine/libavifil32.def
 lib/wine/libcabinet.def
+lib/wine/libcapi2032.def
+lib/wine/libcfgmgr32.def
 lib/wine/libcomcat.def
 lib/wine/libcomctl32.def
 lib/wine/libcomdlg32.def
@@ -427,6 +434,7 @@ lib/wine/libuser32.def
 lib/wine/libuxtheme.def
 lib/wine/libversion.def
 lib/wine/libw32skrnl.def
+lib/wine/libwined3d.def
 lib/wine/libwinedos.def
 lib/wine/libwineps.def
 lib/wine/libwininet.def
@@ -543,6 +551,7 @@ lib/wine/wineaudioio.drv.so
 lib/wine/wineboot.exe.so
 lib/wine/winecfg.exe.so
 lib/wine/wineconsole.exe.so
+lib/wine/wined3d.dll.so
 lib/wine/winedbg.exe.so
 lib/wine/winedos.dll.so
 lib/wine/winefile.exe.so
