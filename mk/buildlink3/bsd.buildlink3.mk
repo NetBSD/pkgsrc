@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.45 2004/01/10 22:22:50 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.46 2004/01/11 04:02:52 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -653,6 +653,7 @@ _BLNK_MANGLE_DIRS+=	${_BLNK_BUILTIN_DIRS}
 # directories to _BLNK_{,UN}PROTECT_DIRS below.
 #
 _BLNK_MANGLE_DIRS+=	${PREFIX}
+_BLNK_MANGLE_DIRS+=	${LOCALBASE}
 _BLNK_MANGLE_DIRS+=	${X11BASE}
 
 _BLNK_MANGLE_START=		_bUiLdLiNk_
@@ -693,13 +694,6 @@ _BLNK_UNPROTECT_DIRS+=	${BUILDLINK_DIR}
 _BLNK_TRANSFORM+=	mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 .endfor
 #
-# Protect ${PREFIX} and ${X11BASE} from change when untransforming, e.g.
-# when unbuildlinkifying files.
-#
-.for _dir_ in ${PREFIX} ${X11BASE}
-_BLNK_TRANSFORM+=	untransform:mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
-.endfor
-#
 # Change any buildlink directories in runtime library search paths into
 # the canonical actual installed paths.
 #
@@ -719,8 +713,7 @@ _BLNK_TRANSFORM+=	rpath:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
 # are just found in the default view.
 #
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
-_BLNK_TRANSFORM+=	transform:depot:${DEPOTBASE}:${LOCALBASE}
-_BLNK_TRANSFORM+=	untransform:depot:${DEPOTBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
+_BLNK_TRANSFORM+=	depot:${DEPOTBASE}:${LOCALBASE}
 .endif
 #
 # Convert direct paths to shared libraries into "-Ldir -llib" equivalents.
@@ -738,11 +731,6 @@ _BLNK_TRANSFORM+=	P:${X11BASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_X11_DIR}}
 _BLNK_TRANSFORM+=	P:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 .endif
 #
-# Explicitly remove everything that's an absolute path when
-# untransforming.
-#
-_BLNK_TRANSFORM+=	untransform:r:
-#
 # Transform references into ${X11BASE} into ${BUILDLINK_X11_DIR}.
 #
 .if defined(USE_X11)
@@ -757,14 +745,20 @@ _BLNK_TRANSFORM+=	I:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 _BLNK_TRANSFORM+=	L:${LOCALBASE}:${_BLNK_MANGLE_DIR.${BUILDLINK_DIR}}
 .endif
 #
+# Protect any remaining references to ${PREFIX}, ${LOCALBASE}, or ${X11BASE}.
+#
+.for _dir_ in ${PREFIX} ${LOCALBASE} ${X11BASE}
+_BLNK_TRANSFORM+=	untransform:mangle:${_dir_}:${_BLNK_MANGLE_DIR.${_dir_}}
+.endfor
+#
 # Add any package specified transformations (l:, etc.)
 #
 _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 #
-# Explicitly remove everything else that's an absolute path when
-# transforming, since we've already protected the ones we care about.
+# Explicitly remove everything else that's an absolute path, since we've
+# already protected the ones we care about.
 #
-_BLNK_TRANSFORM+=       transform:r:
+_BLNK_TRANSFORM+=       r:
 #
 # Remove -Wl,-R* and *-rpath* if _USE_RPATH == "no".
 # Transform -Wl,-R* and *-rpath* if Sun compilers are used.
@@ -780,10 +774,10 @@ _BLNK_TRANSFORM+=       no-rpath
 _BLNK_TRANSFORM+=	rpath:${_BLNK_MANGLE_DIR.${_dir_}}:${_dir_}
 .endfor
 #
-# Undo the protection for ${PREFIX} and ${X11BASE} so that the directory
-# names are correct, e.g. when unbuildlinkifying files.
+# Undo the protection for ${PREFIX}, ${X11BASE} and ${X11BASE} so that the
+# directory names are correct, e.g. when unbuildlinkifying files.
 #
-.for _dir_ in ${PREFIX} ${X11BASE}
+.for _dir_ in ${PREFIX} ${LOCALBASE} ${X11BASE}
 _BLNK_TRANSFORM+=	untransform:mangle:${_BLNK_MANGLE_DIR.${_dir_}}:${_dir_}
 .endfor
 #
