@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2004/01/03 18:49:43 reed Exp $
+# $NetBSD: Makefile,v 1.84 2004/01/22 10:59:39 jlam Exp $
 
 DISTNAME=	netpbm-10.11.8
 PKGREVISION=	1
@@ -10,7 +10,9 @@ MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://netpbm.sourceforge.net/
 COMMENT=	Toolkit for conversion of images between different formats
 
-USE_BUILDLINK2=	yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
 USE_GMAKE=	yes
 USE_PERL5=	yes
 
@@ -64,6 +66,6 @@ post-install:
 	${PAX} -rwpppm . ${PREFIX}
 	${RM} -fr ${STAGEDIR}
 
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
