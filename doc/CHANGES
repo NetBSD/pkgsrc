@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1119 2003/01/13 23:42:34 salo Exp $
+$NetBSD: CHANGES,v 1.1120 2003/01/14 05:36:57 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -259,3 +259,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added xemacs-nox11-21.1.14 [magick 2003-01-13]
 	Added asm2html-1.0 [jmmv 2003-01-13]
 	Updated nasm-devel to 0.98.35 [salo 2003-01-14]
+	Updated gtkglext to 0.6.1 [rh 2003-01-14]
