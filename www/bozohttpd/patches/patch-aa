@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2004/02/24 13:39:57 wiz Exp $
+$NetBSD: patch-aa,v 1.12 2004/03/02 17:25:36 wiz Exp $
 
 --- bozohttpd.c.orig	Wed Feb 18 14:11:57 2004
 +++ bozohttpd.c
@@ -11,3 +11,11 @@ $NetBSD: patch-aa,v 1.11 2004/02/24 13:39:57 wiz Exp $
  	debug((DEBUG_FAT, "process_cgi: going exec %s, %s %s %s",
  	    path, argv[0], strornull(argv[1]), strornull(argv[2])));
  
+@@ -2291,6 +2289,7 @@ static struct content_map content_map[] 
+ 	{ ".ppt",	"application/powerpoint",	"",		"", NULL },
+ 	{ ".rtf",	"application/rtf",		"",		"", NULL },
+ 	{ ".bcpio",	"application/x-bcpio",		"",		"", NULL },
++	{ ".torrent",	"application/x-bittorrent",	"",		"", NULL },
+ 	{ ".vcd",	"application/x-cdlink",		"",		"", NULL },
+ 	{ ".cpio",	"application/x-cpio",		"",		"", NULL },
+ 	{ ".csh",	"application/x-csh",		"",		"", NULL },
