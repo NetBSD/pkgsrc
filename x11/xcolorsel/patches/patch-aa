@@ -1,11 +1,11 @@
---- RgbText.c.orig	Tue Jul 14 20:16:24 1998
-+++ RgbText.c	Tue Jul 14 20:16:56 1998
-@@ -146,7 +146,7 @@
- { XtNcolumns, XtCColumns, XtRDimension, sizeof(Dimension), offset(columns),
- 		XtRString, (XtPointer) "30" },
- { XtNfile, XtCFile, XtRString, sizeof(String), offset(file),
--		XtRString, (XtPointer) "/usr/lib/X11/rgb.txt" },
-+		XtRString, (XtPointer) "/usr/X11R6/lib/X11/rgb.txt" },
- { XtNtileWidth, XtCTileWidth, XtRDimension, sizeof(Dimension), offset(tile_width),
- 		XtRString, (XtPointer) "3" },
- { XtNmaxRed, XtCMaxRed, XtRShort, sizeof(unsigned short), offset(max_red),
+--- Imakefile.orig	Tue Dec 13 21:31:19 1994
++++ Imakefile	Wed Jul 15 09:56:07 1998
+@@ -71,7 +71,7 @@
+ all:: Xcolorsel.help
+ install:: Xcolorsel.help
+ 
+-NormalProgramTarget(xcolorsel,$(OBJS),,XawClientLibs,)
++NormalProgramTarget(xcolorsel,$(OBJS),,-lXaw3d $(XMULIB) $(XTOOLLIB) $(XLIB),)
+ 
+ InstallProgram(xcolorsel,$(BINDIR))
+ InstallManPage(xcolorsel,$(MANDIR))
