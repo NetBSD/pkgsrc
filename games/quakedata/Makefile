@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:15:41 agc Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/11 19:22:43 snj Exp $
 
 DISTNAME=	quake106
 PKGNAME=	quakedata-1.0
@@ -20,8 +20,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	unzip -q -o ${DOWNLOADED_DISTFILE} -d ${WRKDIR} resource.*
-USE_BUILDLINK2=	YES
 NO_BUILD=	YES
+NO_BUILDLINK=	YES
 
 post-extract:
 	cd ${WRKSRC}; ${CAT} resource.dat resource.1 > resource.exe
