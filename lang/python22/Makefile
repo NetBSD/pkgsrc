@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/04/17 08:09:03 darcy Exp $
+# $NetBSD: Makefile,v 1.15 2003/04/17 08:20:47 jdolecek Exp $
 #
 
 DISTNAME=	Python-2.2.2
@@ -30,7 +30,6 @@ PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 # XXX We'll enable native threads (if available) as soon as it is
 # stable enough. Remaining issues:
 # -stack size too small in main thread
-# -"test_gettext" in Python autotest hanging forever
 CONFIGURE_ARGS+=	--without-threads
 .endif
 
