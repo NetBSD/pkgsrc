@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 1998/04/16 16:52:05 tron Exp $
+# $NetBSD: Makefile,v 1.23 1998/04/18 17:31:32 tron Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
-#    SUBDIR += archie
+    SUBDIR += archie
 #    SUBDIR += arpwatch
 #    SUBDIR += ascend-radius
 #    SUBDIR += bb
