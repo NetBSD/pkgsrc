@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3911 2003/12/03 04:59:24 martti Exp $
+$NetBSD: CHANGES,v 1.3912 2003/12/03 05:35:51 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4732,3 +4732,26 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bluefish to 0.12 [xtraeme 2003-12-03]
 	Updated etcupdate to 20031112 [martti 2003-12-03]
 	Updated audit-packages to 1.26 [martti 2003-12-03]
+	Added xfce4-diskperf-plugin-1.4 [martti 2003-12-03]
+	Added xfce4-datetime-plugin-0.2 [martti 2003-12-03]
+	Added xfce4-clipman-plugin-0.3.1 [martti 2003-12-03]
+	Added xfce4-notes-plugin-0.9.7 [martti 2003-12-03]
+	Updated libxfce4gui to 4.0.1 [martti 2003-12-03]
+	Updated libxfce4mcs to 4.0.1 [martti 2003-12-03]
+	Updated libxfce4util to 4.0.1 [martti 2003-12-03]
+	Updated xfce4-desktop to 4.0.1 [martti 2003-12-03]
+	Updated xfce4-fm to 4.0.1 [martti 2003-12-03]
+	Updated xfce4-gtk2-engines to 2.1.7 [martti 2003-12-03]
+	Updated xfce4-iconbox to 4.0.1 [martti 2003-12-03]
+	Updated xfce4-mcs-manager to 4.0.1 [martti 2003-12-03]
+	Updated xfce4-mcs-plugins to 4.0.1 [martti 2003-12-03]
+	Updated xfce4-netload-plugin to 0.2.2 [martti 2003-12-03]
+	Updated xfce4-panel to 4.0.1 [martti 2003-12-03]
+	Updated xfce4-print to 4.0.1 [martti 2003-12-03]
+	Updated xfce4-systemload-plugin to 0.3.4 [martti 2003-12-03]
+	Updated xfce4-systray to 4.0.1 [martti 2003-12-03]
+	Updated xfce4-toys to 4.0.1 [martti 2003-12-03]
+	Updated xfce4-trigger-launcher to 4.0.1 [martti 2003-12-03]
+	Updated xfce4-utils to 4.0.1 [martti 2003-12-03]
+	Updated xfce4-wm to 4.0.1 [martti 2003-12-03]
+	Updated xfce4 to 4.0.1 [martti 2003-12-03]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1105 2003/12/03 03:51:49 xtraeme Exp $
+$NetBSD: TODO,v 1.1106 2003/12/03 05:35:51 martti Exp $
 
 Suggested new packages
 ======================
@@ -419,7 +419,6 @@ Suggested package updates
 	o xerces-c-2.2.0 [heinz]
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.5.0
-	o xfce-4.0.1 [martti]
 	o xfstt-1.6
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.1
