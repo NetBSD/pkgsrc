@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1514 2004/03/17 15:52:53 martti Exp $
+$NetBSD: TODO,v 1.1515 2004/03/17 22:02:53 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -318,8 +318,6 @@ Suggested package updates
 	o stella-1.3
 	o streamtuner-0.11.1
 	o subversion-1.0.1
-	o sun-jdk14-1.4.2.4
-	o sun-jre14-1.4.2.4
 	o tcl-expect-5.39.0
 	o tcpreplay-2.0.2
 	o tct-1.14
