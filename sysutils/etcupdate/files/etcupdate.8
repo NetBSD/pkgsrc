@@ -1,4 +1,4 @@
-.\"	$NetBSD: etcupdate.8,v 1.2 2001/11/20 17:29:54 wiz Exp $
+.\"	$NetBSD: etcupdate.8,v 1.3 2001/11/21 11:58:07 martti Exp $
 .\"
 .\" Copyright (c) 2001 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -39,7 +39,7 @@
 .Os
 .Sh NAME
 .Nm etcupdate
-.Nd update the configuration files in
+.Nd update the configuration and startup files in
 .Pa /etc
 .Sh SYNOPSIS
 .Nm
@@ -51,23 +51,27 @@
 .Op Fl w Ar width
 .Sh DESCRIPTION
 .Nm
-is a tool to update the configuration files in
+is a tool to update the configuration and startup files in
 .Pa /etc
 without the need of manually checking and modifying every file.
 The user should run this script after performing an operating system
-update (i.e. after running
+update (e.g. after running
 .Pa make build
 in
 .Pa /usr/src )
-to use the latest configuration files during reboot.
+to use the latest configuration and startup files during reboot.
 .Pp
 .Nm
-will first create a copy of the new configuration files and compare these
-against the installed files.  The user is given the option of installing,
-merging or deleting each modified or missing file.
+will first create a copy of the new configuration and startup files
+(by running
+.Pa make distribution
+in
+.Pa /usr/src/etc )
+and compare these against the currently installed files. The user is given
+the option of installing, merging or deleting each modified or missing file.
 .Pp
 .Nm
-also notes if the user installs certain special files and performs
+also detects if the user installs certain special files and performs
 corresponding tasks like remaking the device nodes or rebuilding a database
 from the
 .Pa /etc/mail/aliases
@@ -99,7 +103,7 @@ argument or by defining the
 variable.
 .It Ev PAGER
 The pager to use when displaying files.  By default this is
-.Pa /usr/bin/more
+.Xr more 1
 but it can be changed either with the
 .Fl p Ar pager
 argument or by defining the
