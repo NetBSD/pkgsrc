@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/10/17 08:52:03 lukem Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/21 03:39:42 rh Exp $
 #
 
-DISTNAME=	antiword-0.32
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-/./}
+DISTNAME=	antiword-0.33
 CATEGORIES=	textproc print
 MASTER_SITES=	http://www.winfield.demon.nl/linux/
 
@@ -12,10 +11,9 @@ COMMENT=	free converter MS Word to text and Postscript converter
 
 post-patch:
 	cd ${WRKSRC} ; \
-	${MV} antiword.h antiword.h.orig ; \
-	${SED} -e "s|@@PREFIX@@|${PREFIX}|g" antiword.h.orig > antiword.h ; \
-	${MV} Docs/antiword.1 Docs/antiword.1.orig ; \
-	${SED} -e "s|@@PREFIX@@|${PREFIX}|g" Docs/antiword.1.orig > \
-	    Docs/antiword.1
+	for pf in antiword.h Docs/antiword.1 ; do \
+	  ${MV} $${pf} $${pf}.old ; \
+	  ${SED} -e "s|/usr/share|${PREFIX}/share|g" $${pf}.old > $${pf} ; \
+	done
 
 .include "../../mk/bsd.pkg.mk"
