@@ -1,6 +1,5 @@
-diff -ru ../mozilla-current.orig/mozilla/configure.in ./configure.in
---- ../mozilla-current.orig/mozilla/configure.in	Sun Jun  4 13:01:34 2000
-+++ ./configure.in	Mon Jun  5 00:49:07 2000
+--- configure.in.orig	Tue Jun 13 16:56:51 2000
++++ configure.in	Mon Jun 19 06:06:55 2000
 @@ -344,6 +344,11 @@
  TARGET_MD_ARCH=unix
  DIRENT_INO=d_ino
@@ -13,7 +12,7 @@ diff -ru ../mozilla-current.orig/mozilla/configure.in ./configure.in
  
  MOZ_JPEG_CFLAGS=
  MOZ_JPEG_LIBS='-L$(DIST)/lib -ljpeg'
-@@ -682,11 +687,25 @@
+@@ -682,29 +687,28 @@
      ;;
  
  *-netbsd*)
@@ -41,10 +40,17 @@ diff -ru ../mozilla-current.orig/mozilla/configure.in ./configure.in
      # At least for 1.3 and up, ld supports this, despite the test failing above.
      MKSHLIB_FORCE_ALL='--whole-archive'
      MKSHLIB_UNFORCE_ALL='--no-whole-archive'
-@@ -701,10 +720,6 @@
- 		MKCSHLIB='$(LD) $(DSO_LDOPTS) -o $@'
- 		;;
-     esac
+-    case $OS_TEST in
+-	alpha)
+-		dnl NetBSD/alpha can't find a shared lib
+-		dnl (.so.1.0) unless there's a .so as well.
+-		NEED_BASE_DLL_NAME_ALSO=1
+-		;;
+-	*86)
+-		MKSHLIB='$(LD) $(DSO_LDOPTS) -o $@'
+-		MKCSHLIB='$(LD) $(DSO_LDOPTS) -o $@'
+-		;;
+-    esac
 -    dnl Test for a.out platform and handle C++ libraries correctly
 -    if $CC -E - -dM </dev/null | grep -v __ELF__ >/dev/null; then
 -	DSO_LDOPTS="-shared"
@@ -52,7 +58,7 @@ diff -ru ../mozilla-current.orig/mozilla/configure.in ./configure.in
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-R$LIBRUNPATH $DSO_LDOPTS"
      fi
-@@ -947,6 +962,11 @@
+@@ -947,6 +951,11 @@
  
  dnl See above (netbsd)
  AC_SUBST(NEED_BASE_DLL_NAME_ALSO)
@@ -64,7 +70,7 @@ diff -ru ../mozilla-current.orig/mozilla/configure.in ./configure.in
  
  dnl Only one oddball right now (QNX), but this gives us flexibility
  dnl if any other platforms need to override this in the future.
-@@ -1150,6 +1170,12 @@
+@@ -1150,6 +1159,12 @@
      AM_PATH_GTK($GTK_VERSION,,
        AC_MSG_ERROR(Test for GTK failed.))
  
@@ -77,7 +83,7 @@ diff -ru ../mozilla-current.orig/mozilla/configure.in ./configure.in
  dnl ========================================================
  dnl =							   =
  dnl = --with-java-supplement				   =
-@@ -1621,6 +1647,13 @@
+@@ -1621,6 +1636,13 @@
      HOST_LIBIDL_LIBS=`${HOST_LIBIDL_CONFIG} --libs`
  fi
  
@@ -91,7 +97,7 @@ diff -ru ../mozilla-current.orig/mozilla/configure.in ./configure.in
  dnl Checks for typedefs, structures, and compiler characteristics.
  dnl ========================================================
  AC_C_CONST
-@@ -2760,6 +2793,7 @@
+@@ -2760,6 +2782,7 @@
      *-*-solaris*) MOZ_MONOLITHIC_TOOLKIT= ;;
      *-openvms*)   MOZ_MONOLITHIC_TOOLKIT= ;;
      *-freebsd*)   MOZ_MONOLITHIC_TOOLKIT= ;;
