@@ -1,0 +1,35 @@
+.\"	$NetBSD: dmesg2gif.1,v 1.1 2003/11/02 19:58:00 cube Exp $
+.\"
+.Dd November 2, 2003
+.Dt DMESG2GIF 1
+.Os
+.Sh NAME
+.Nm dmesg2gif
+.Nd output
+.Xr dmesg 8
+device tree as GIF image
+.Sh SYNOPSYS
+.Nm
+< /var/run/dmesg.boot | xv -
+.Sh DESCRIPTION
+.Nm
+takes in input the kernel configuration messages that
+are printed during boot.
+Then it computes the device tree and passes it to
+.Xr dot 1
+to produce a GIF image of that tree.
+You can either save the output into a file or pass it to
+an image viewer, such as
+.Xr xv 1 .
+.Sh FILES
+.Bl -tag -width /var/run/dmesg.boot
+.It Pa /var/run/dmesg.boot
+The output of
+.Xr dmesg 8
+is saved in that file quickly after the boot since kernel
+messages that follow may overwrite initial output.
+.El
+.Sh SEE ALSO
+.Xr dmesg 1 ,
+.Xr dot 1 ,
+.Xr xv 1
