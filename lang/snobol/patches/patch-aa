@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/03/11 06:01:56 wiz Exp $
+
+--- ./configure.orig	Fri Jul 18 23:43:30 1997
++++ ./configure	Sat Mar 11 03:56:00 2000
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-if autoconf "$@" > config.m4.tmp; then
++if ./autoconf "$@" > config.m4.tmp; then
+ 	rm -f config.m4
+ 	mv config.m4.tmp config.m4
+ else

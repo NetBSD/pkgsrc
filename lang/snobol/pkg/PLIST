@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/11 06:01:55 wiz Exp $
+bin/snobol4
+man/man1/snobol4.1
+lib/snobol4/snolib.a
+lib/snobol4/bq.sno
+share/doc/snobol4/load.doc
+share/doc/snobol4/design.doc
+@dirrm lib/snobol4
+@dirrm share/doc/snobol4
