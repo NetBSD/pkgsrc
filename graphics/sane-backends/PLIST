@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/03/20 22:19:56 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/05/03 12:45:58 adam Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -37,6 +37,7 @@ etc/sane.d/nec.conf
 etc/sane.d/net.conf
 etc/sane.d/pie.conf
 etc/sane.d/plustek.conf
+etc/sane.d/plustek_pp.conf
 etc/sane.d/ricoh.conf
 etc/sane.d/s9036.conf
 etc/sane.d/saned.conf
@@ -50,6 +51,7 @@ etc/sane.d/teco1.conf
 etc/sane.d/teco2.conf
 etc/sane.d/teco3.conf
 etc/sane.d/test.conf
+etc/sane.d/u12.conf
 etc/sane.d/umax.conf
 etc/sane.d/umax1220u.conf
 etc/sane.d/umax_pp.conf
@@ -83,8 +85,8 @@ lib/sane/libsane-artec.so.${SANE_MAJOR}.${SANE_MICRO}
 lib/sane/libsane-artec_eplus48u.a
 lib/sane/libsane-artec_eplus48u.la
 lib/sane/libsane-artec_eplus48u.so
-lib/sane/libsane-artec_eplus48u.so.1
-lib/sane/libsane-artec_eplus48u.so.1.12
+lib/sane/libsane-artec_eplus48u.so.${SANE_MAJOR}
+lib/sane/libsane-artec_eplus48u.so.${SANE_MAJOR}.${SANE_MICRO}
 lib/sane/libsane-as6e.a
 lib/sane/libsane-as6e.la
 lib/sane/libsane-as6e.so
@@ -158,8 +160,8 @@ lib/sane/libsane-fujitsu.so.${SANE_MAJOR}.${SANE_MICRO}
 lib/sane/libsane-gt68xx.a
 lib/sane/libsane-gt68xx.la
 lib/sane/libsane-gt68xx.so
-lib/sane/libsane-gt68xx.so.1
-lib/sane/libsane-gt68xx.so.1.12
+lib/sane/libsane-gt68xx.so.${SANE_MAJOR}
+lib/sane/libsane-gt68xx.so.${SANE_MAJOR}.${SANE_MICRO}
 lib/sane/libsane-hp.a
 lib/sane/libsane-hp.la
 lib/sane/libsane-hp.so
@@ -168,13 +170,13 @@ lib/sane/libsane-hp.so.${SANE_MAJOR}.${SANE_MICRO}
 lib/sane/libsane-hp5400.a
 lib/sane/libsane-hp5400.la
 lib/sane/libsane-hp5400.so
-lib/sane/libsane-hp5400.so.1
-lib/sane/libsane-hp5400.so.1.12
+lib/sane/libsane-hp5400.so.${SANE_MAJOR}
+lib/sane/libsane-hp5400.so.${SANE_MAJOR}.${SANE_MICRO}
 lib/sane/libsane-ibm.a
 lib/sane/libsane-ibm.la
 lib/sane/libsane-ibm.so
-lib/sane/libsane-ibm.so.1
-lib/sane/libsane-ibm.so.1.12
+lib/sane/libsane-ibm.so.${SANE_MAJOR}
+lib/sane/libsane-ibm.so.${SANE_MAJOR}.${SANE_MICRO}
 lib/sane/libsane-leo.a
 lib/sane/libsane-leo.la
 lib/sane/libsane-leo.so
@@ -183,8 +185,8 @@ lib/sane/libsane-leo.so.${SANE_MAJOR}.${SANE_MICRO}
 lib/sane/libsane-ma1509.a
 lib/sane/libsane-ma1509.la
 lib/sane/libsane-ma1509.so
-lib/sane/libsane-ma1509.so.1
-lib/sane/libsane-ma1509.so.1.12
+lib/sane/libsane-ma1509.so.${SANE_MAJOR}
+lib/sane/libsane-ma1509.so.${SANE_MAJOR}.${SANE_MICRO}
 lib/sane/libsane-matsushita.a
 lib/sane/libsane-matsushita.la
 lib/sane/libsane-matsushita.so
@@ -240,6 +242,11 @@ lib/sane/libsane-plustek.la
 lib/sane/libsane-plustek.so
 lib/sane/libsane-plustek.so.${SANE_MAJOR}
 lib/sane/libsane-plustek.so.${SANE_MAJOR}.${SANE_MICRO}
+lib/sane/libsane-plustek_pp.a
+lib/sane/libsane-plustek_pp.la
+lib/sane/libsane-plustek_pp.so
+lib/sane/libsane-plustek_pp.so.${SANE_MAJOR}
+lib/sane/libsane-plustek_pp.so.${SANE_MAJOR}.${SANE_MICRO}
 lib/sane/libsane-ricoh.a
 lib/sane/libsane-ricoh.la
 lib/sane/libsane-ricoh.so
@@ -305,6 +312,11 @@ lib/sane/libsane-test.la
 lib/sane/libsane-test.so
 lib/sane/libsane-test.so.${SANE_MAJOR}
 lib/sane/libsane-test.so.${SANE_MAJOR}.${SANE_MICRO}
+lib/sane/libsane-u12.a
+lib/sane/libsane-u12.la
+lib/sane/libsane-u12.so
+lib/sane/libsane-u12.so.${SANE_MAJOR}
+lib/sane/libsane-u12.so.${SANE_MAJOR}.${SANE_MICRO}
 lib/sane/libsane-umax.a
 lib/sane/libsane-umax.la
 lib/sane/libsane-umax.so
@@ -325,17 +337,11 @@ man/man1/sane-config.1
 man/man1/sane-find-scanner.1
 man/man1/saned.1
 man/man1/scanimage.1
-man/man5/sane-artec_eplus48u.5
-man/man5/sane-gt68xx.5
-man/man5/sane-hpsj5s.5
-man/man5/sane-ibm.5
-man/man5/sane-ma1509.5
-man/man5/sane-teco2.5
-man/man5/sane-teco3.5
 man/man5/sane-abaton.5
 man/man5/sane-agfafocus.5
 man/man5/sane-apple.5
 man/man5/sane-artec.5
+man/man5/sane-artec_eplus48u.5
 man/man5/sane-as6e.5
 man/man5/sane-avision.5
 man/man5/sane-bh.5
@@ -352,9 +358,13 @@ man/man5/sane-dmc.5
 man/man5/sane-epson.5
 man/man5/sane-fujitsu.5
 man/man5/sane-gphoto2.5
+man/man5/sane-gt68xx.5
 man/man5/sane-hp.5
 man/man5/sane-hp5400.5
+man/man5/sane-hpsj5s.5
+man/man5/sane-ibm.5
 man/man5/sane-leo.5
+man/man5/sane-ma1509.5
 man/man5/sane-matsushita.5
 man/man5/sane-microtek.5
 man/man5/sane-microtek2.5
@@ -366,6 +376,7 @@ man/man5/sane-net.5
 man/man5/sane-pie.5
 man/man5/sane-pint.5
 man/man5/sane-plustek.5
+man/man5/sane-plustek_pp.5
 man/man5/sane-pnm.5
 man/man5/sane-qcam.5
 man/man5/sane-ricoh.5
@@ -379,7 +390,10 @@ man/man5/sane-sp15c.5
 man/man5/sane-st400.5
 man/man5/sane-tamarack.5
 man/man5/sane-teco1.5
+man/man5/sane-teco2.5
+man/man5/sane-teco3.5
 man/man5/sane-test.5
+man/man5/sane-u12.5
 man/man5/sane-umax.5
 man/man5/sane-umax1220u.5
 man/man5/sane-umax_pp.5
@@ -398,16 +412,17 @@ share/doc/sane-${SANE_VERSION}/README
 share/doc/sane-${SANE_VERSION}/README.aix
 share/doc/sane-${SANE_VERSION}/README.beos
 share/doc/sane-${SANE_VERSION}/README.darwin
+share/doc/sane-${SANE_VERSION}/README.djpeg
+share/doc/sane-${SANE_VERSION}/README.freebsd
 share/doc/sane-${SANE_VERSION}/README.hp-ux
 share/doc/sane-${SANE_VERSION}/README.linux
-share/doc/sane-${SANE_VERSION}/README.freebsd
 share/doc/sane-${SANE_VERSION}/README.netbsd
 share/doc/sane-${SANE_VERSION}/README.openbsd
 share/doc/sane-${SANE_VERSION}/README.os2
 share/doc/sane-${SANE_VERSION}/README.solaris
 share/doc/sane-${SANE_VERSION}/README.unixware2
 share/doc/sane-${SANE_VERSION}/README.unixware7
-share/doc/sane-${SANE_VERSION}/TODO
+share/doc/sane-${SANE_VERSION}/README.windows
 share/doc/sane-${SANE_VERSION}/backend-writing.txt
 share/doc/sane-${SANE_VERSION}/canon/canon.changes
 share/doc/sane-${SANE_VERSION}/canon/canon.install2700F.txt
@@ -417,10 +432,20 @@ share/doc/sane-${SANE_VERSION}/matsushita/matsushita.txt
 share/doc/sane-${SANE_VERSION}/mustek/mustek.CHANGES
 share/doc/sane-${SANE_VERSION}/mustek_usb/mustek_usb.CHANGES
 share/doc/sane-${SANE_VERSION}/mustek_usb/mustek_usb.TODO
+share/doc/sane-${SANE_VERSION}/plustek/BUILD
+share/doc/sane-${SANE_VERSION}/plustek/FAQ
+share/doc/sane-${SANE_VERSION}/plustek/MakeModule.sh
+share/doc/sane-${SANE_VERSION}/plustek/Makefile.kernel24
+share/doc/sane-${SANE_VERSION}/plustek/Makefile.kernel26
+share/doc/sane-${SANE_VERSION}/plustek/Makefile.module
+share/doc/sane-${SANE_VERSION}/plustek/Plustek-PARPORT-TODO.txt
+share/doc/sane-${SANE_VERSION}/plustek/Plustek-PARPORT.changes
 share/doc/sane-${SANE_VERSION}/plustek/Plustek-PARPORT.txt
 share/doc/sane-${SANE_VERSION}/plustek/Plustek-USB-TODO.txt
+share/doc/sane-${SANE_VERSION}/plustek/Plustek-USB.changes
 share/doc/sane-${SANE_VERSION}/plustek/Plustek-USB.txt
-share/doc/sane-${SANE_VERSION}/plustek/Plustek.changes
+share/doc/sane-${SANE_VERSION}/plustek/VERSION0
+share/doc/sane-${SANE_VERSION}/plustek/VERSION1
 share/doc/sane-${SANE_VERSION}/sane-backends-external.html
 share/doc/sane-${SANE_VERSION}/sane-backends.html
 share/doc/sane-${SANE_VERSION}/sane-mfgs-external.html
@@ -429,30 +454,22 @@ share/doc/sane-${SANE_VERSION}/sceptre/s1200.txt
 share/doc/sane-${SANE_VERSION}/teco/teco1.txt
 share/doc/sane-${SANE_VERSION}/teco/teco2.txt
 share/doc/sane-${SANE_VERSION}/teco/teco3.txt
+share/doc/sane-${SANE_VERSION}/u12/U12.changes
+share/doc/sane-${SANE_VERSION}/u12/U12.todo
+share/doc/sane-${SANE_VERSION}/umax/negative-types.txt
 share/doc/sane-${SANE_VERSION}/umax/sane-logo.jpg
-share/doc/sane-${SANE_VERSION}/umax/sane-logo2.jpg
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-advanced-options-doc.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-advanced.jpg
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-astra-doc.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-config-doc.html
-share/doc/sane-${SANE_VERSION}/umax/sane-umax-contact.html
-share/doc/sane-${SANE_VERSION}/umax/sane-umax-doc.dvi
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-doc.html
-share/doc/sane-${SANE_VERSION}/umax/sane-umax-doc.tex
-share/doc/sane-${SANE_VERSION}/umax/sane-umax-download.html
-share/doc/sane-${SANE_VERSION}/umax/sane-umax-firewire-info.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-histogram.jpg
-share/doc/sane-${SANE_VERSION}/umax/sane-umax-mailinglist.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-mirage-doc.html
-share/doc/sane-${SANE_VERSION}/umax/sane-umax-news.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-not-listed-doc.html
-share/doc/sane-${SANE_VERSION}/umax/sane-umax-old-scanners-doc.html
-share/doc/sane-${SANE_VERSION}/umax/sane-umax-options-doc.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-others-doc.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-parport-doc.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-powerlook-doc.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-scanner-clones-doc.html
-share/doc/sane-${SANE_VERSION}/umax/sane-umax-scanners-doc.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-speed-doc.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-standard-options-doc.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-standard.jpg
@@ -461,21 +478,28 @@ share/doc/sane-${SANE_VERSION}/umax/sane-umax-text2.jpg
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-text4.jpg
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-uc-doc.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax-vista-doc.html
-share/doc/sane-${SANE_VERSION}/umax/sane-umax-websites.html
 share/doc/sane-${SANE_VERSION}/umax/sane-umax.jpg
 share/doc/sane-${SANE_VERSION}/umax/umax.BUGS
 share/doc/sane-${SANE_VERSION}/umax/umax.CHANGES
 share/doc/sane-${SANE_VERSION}/umax/umax.FAQ
 share/doc/sane-${SANE_VERSION}/umax/umax.TODO
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/sane-backends.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sane-backends.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sane-backends.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sane-backends.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sane-backends.mo
+@exec ${MKDIR} %D/share/sane/gt68xx
+@dirrm share/sane/gt68xx
+@dirrm share/sane
 @dirrm share/doc/sane-${SANE_VERSION}/umax
+@dirrm share/doc/sane-${SANE_VERSION}/u12
 @dirrm share/doc/sane-${SANE_VERSION}/teco
 @dirrm share/doc/sane-${SANE_VERSION}/sceptre
 @dirrm share/doc/sane-${SANE_VERSION}/plustek
@@ -486,9 +510,6 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sane-backends.mo
 @dirrm share/doc/sane-${SANE_VERSION}/gt68xx
 @dirrm share/doc/sane-${SANE_VERSION}/canon
 @dirrm share/doc/sane-${SANE_VERSION}
-@exec ${MKDIR} %D/share/sane/gt68xx
-@dirrm share/sane/gt68xx
-@dirrm share/sane
 @dirrm lib/sane
 @dirrm include/sane
 @dirrm etc/sane.d
