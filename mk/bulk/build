@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.37 2004/04/07 22:56:34 dmcmahill Exp $
+# $NetBSD: build,v 1.38 2004/04/09 11:06:35 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -31,8 +31,80 @@
 #
 
 #
-# Do builk build
+# Do bulk build
 #
+
+usage() {
+	echo "Usage:"
+	echo "   $0 [-m | --mirror_only] [-r | --restart | restart]"
+	echo "   $0 -h|--help"
+	echo " "
+	echo "Runs a bulk pkgsrc build."
+	echo " "
+	echo "The following options are supported:"
+	echo " "
+	echo " -h|--help             Displays this message."
+	echo " "
+	echo " -m|--mirror_only      Downloads all distfiles need for the"
+	echo "                       build but does not run the build."
+	echo "                       IMPORTANT:  Note that this will still"
+	echo "                       run all the pre-build stuff which involves"
+	echo "                       removing all of your installed packages."
+	echo " "
+	echo "                       The only difference between this option"
+	echo "                       and a regular bulk build is that the packages"
+	echo "                       are not actually built."
+	echo " "
+	echo " -r|--restart|restart  Restart a previously interrupted bulk build."
+	echo "                       last form of this option is for backwards"
+	echo "                       compatibility and may be removed in future"
+	echo "                       versions of this script."
+	echo " "
+	echo "                       The --restart option may be combined with the"
+	echo "                       --mirror_only option."
+	echo " "
+}
+
+restart=no
+mirror_only=no
+target=bulk-package
+
+while [ ${#} -ge 1 ] ; do
+	case $1 in
+
+	--help|-h )
+		usage
+		exit 0
+		;;
+
+	--mirror_only )
+		mirror_only=yes
+		target=mirror-distfiles
+		shift
+		;;
+
+	--restart|restart )
+		restart=yes
+		shift
+		;;
+
+	-* )
+		echo "unknown option:  $1"
+		usage
+		exit 1
+		;;
+
+	* )
+		break
+		;;
+
+	esac
+done
+
+if [ $# -ne 0 ]; then
+	usage
+	exit 1
+fi
 
 opsys=`uname -s`
 case "$opsys" in
@@ -89,7 +161,8 @@ unset DISPLAY		# allow sane failure for gimp, xlispstat
 
 cd ${USR_PKGSRC}
 
-if [ "$1" = "restart" ]; then
+
+if [ "x$restart" = "xyes" ]; then
 	echo Restarting - skipping pre-build script
 else
 	sh mk/bulk/pre-build	# make veryveryclean :)
@@ -184,7 +257,7 @@ done
 
 # Create the bulk cache files
 cd ${USR_PKGSRC}
-if [ "$1" != "restart" ]; then
+if [ "x$restart" != "xyes" ]; then
 	cd ${USR_PKGSRC} && ${BMAKE} bulk-cache
 	if [ $? != 0 ]; then
 		echo "$0: Cache creation failed.  Aborting build."
@@ -215,7 +288,7 @@ do
 	if [ $? -ne 0 ]; then
 		built=`wc -l $BUILDLOG | ${AWK} '{print $1}'`
 		percent=`echo $built $tot | ${AWK} '{printf("%4.1f%%",$1*100/$2);}'`
-		(cd $pkgdir && nice -n 20 ${BMAKE} USE_BULK_CACHE=yes bulk-package </dev/null | ${SED} "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ ${MACHINE_ARCH}> ;g")
+		(cd $pkgdir && nice -n 20 ${BMAKE} USE_BULK_CACHE=yes $target </dev/null | ${SED} "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ ${MACHINE_ARCH}> ;g")
 		echo "$pkgdir" >> $BUILDLOG
 	fi
 done
@@ -243,6 +316,16 @@ do
 		esac
 	fi
 done
+
+# for now, just quit if we were only mirroring distfiles.  At somepoint we
+# should teach the post-build script to generate a nice report about how many
+# distfiles were downloaded, how many had bad checksums, failed master sites,
+# network speed, etc.
+
+if [ "x$mirror_only" = "xyes" ]; then
+	echo "Bulk mirror of distfiles completed: `date`"
+	exit 0
+fi
 
 echo "Post processing bulk build results..."
 
