@@ -1,0 +1,76 @@
+$NetBSD: patch-af,v 1.3 1999/07/18 23:36:55 tron Exp $
+
+--- samples/sendbatch.in.orig	Thu Sep 17 08:15:02 1998
++++ samples/sendbatch.in	Mon Jul 19 01:23:35 1999
+@@ -12,7 +12,7 @@
+ COMP=
+ COMPFLAGS=
+ # Use the COMPRESS variable as it is in innshellvars
+-# COMPRESS=/usr/ucb/compress
++COMPRESS=/usr/bin/compress
+ ECHO=
+ ##  Not a config param since this is the remote rnews.
+ RNEWS=rnews
+@@ -37,6 +37,10 @@
+ 	DEFBYTES=`expr "${SITE}" : '-s\(.*\)'`
+ 	continue
+ 	;;
++    -t*)
++	TRANSHOST=`expr "${SITE}" : '-t\(.*\)'`
++	continue
++	;;
+     -m*)
+ 	BYTESQUEUED=`expr "${SITE}" : '-m\(.*\)'`
+ 	continue
+@@ -75,6 +79,16 @@
+ 	ECHO="echo '#! cunbatch'"
+ 	continue
+ 	;;
++    -cg)
++	COMP="; exec gzip -9"
++	ECHO="echo '#! cunbatch'"
++	continue
++	;;
++    -g)
++	COMP="; exec gzip -9"
++	ECHO="echo '#! gunbatch'"
++	continue
++	;;
+     +c)
+ 	COMP=''
+ 	C7=''
+@@ -160,12 +174,20 @@
+ 	fi
+ #    fi
+ 
++     if [ ${TRANSHOST-none} != none ]; then
++       SITE_SPOOLDIR=${UUSPOOL}/${TRANSHOST}
++       UUCPPATH=${TRANSHOST}!${SITE}
++     else
++       UUCPPATH=${SITE}
++       SITE_SPOOLDIR=${UUSPOOL}/${SITE}
++    fi
++
+     ##  Check the host's queue size?
+     QUEUE=0
+     if [ -n "${BYTESQUEUED}" ] ; then
+-	if [ -d ${UUSPOOL}/${SITE} ] ; then
++	if [ -d ${SITE_SPOOLDIR} ] ; then
+ 	    # Get queue size from directory size
+-	    QUEUE=`du -s "${UUSPOOL}/${SITE}" \
++	    QUEUE=`du -s "${SITE_SPOOLDIR}" \
+ 		    | ${AWK} '{ printf("%s000\n", $1); }'`
+ 
+ 	else
+@@ -199,9 +221,9 @@
+     if [ -f ${SITE}.cmd ] ; then
+ 	UUXCOM="`cat ${SITE}.cmd`"
+     elif [ -n "${ECHO}" -o -n "${COMP}" ]; then
+-	UUXCOM="( ${ECHO} ${COMP} ) | ${UUX} - ${UUXFLAGS} ${SITE}!${RNEWS}"
++	UUXCOM="( ${ECHO} ${COMP} ) | ${UUX} - ${UUXFLAGS} ${UUCPPATH}!${RNEWS}"
+     else
+-	UUXCOM="${UUX} - ${UUXFLAGS} ${SITE}!${RNEWS}"
++	UUXCOM="${UUX} - ${UUXFLAGS} ${UUCPPATH}!${RNEWS}"
+     fi
+ 
+     ## Create batches.
