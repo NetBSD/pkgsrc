@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2430 2003/06/05 06:55:56 wiz Exp $
+$NetBSD: CHANGES,v 1.2431 2003/06/05 08:23:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2332,3 +2332,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated galway to 0.33nb3 [uebayasi 2003-06-05]
 	Updated naim to 0.11.5.8 [wiz 2003-06-05]
 	Updated easytag to 0.28 [wiz 2003-06-05]
+	Updated giblib to 1.2.3 [wiz 2003-06-05]
+	Updated feh to 1.2.6 [wiz 2003-06-05]
