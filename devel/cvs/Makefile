@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2004/03/04 20:54:40 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2004/03/27 04:21:55 jlam Exp $
 #
 
 DISTNAME=	cvs-1.11.13
@@ -21,7 +21,7 @@ GNU_CONFIGURE=	yes
 
 BUILD_DEFS+=		USE_INET6
 
-.if defined(USE_INET6) && ${USE_INET6} == "YES" && \
+.if defined(USE_INET6) && !empty(USE_INET6:M[yY][eE][sS]) && \
     empty(MACHINE_PLATFORM:MSunOS-5.[89]-*) && \
     empty(MACHINE_PLATFORM:MLinux-*)
 CONFIGURE_ARGS+=	--enable-ipv6
