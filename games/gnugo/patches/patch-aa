@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.4 2000/11/21 04:51:37 toshii Exp $
+
+--- doc/gnugo.info.orig	Mon Feb 14 16:10:18 2000
++++ doc/gnugo.info
+@@ -1,5 +1,9 @@
+ This is gnugo.info, produced by makeinfo version 4.0 from gnugo.texi.
+ 
++INFO-DIR-SECTION Games
++START-INFO-DIR-ENTRY
++* Gnugo: (gnugo).	Go playing program.
++END-INFO-DIR-ENTRY
+ 
+ Indirect:
+ gnugo.info-1: 71
