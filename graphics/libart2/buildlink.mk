@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2002/08/25 19:22:50 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2002/09/07 03:58:47 rh Exp $
 #
 # This Makefile fragment is included by packages that use the library
 # provided by libart2.
@@ -18,7 +18,7 @@ LIBART2_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libart2?=	libart2>=2.3.8
+BUILDLINK_DEPENDS.libart2?=	libart2>=2.3.10
 DEPENDS+=	${BUILDLINK_DEPENDS.libart2}:../../graphics/libart2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libart2=libart2
