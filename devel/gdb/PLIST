@@ -1,15 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2003/03/10 23:50:48 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/06/23 10:54:15 seb Exp $
 bin/gdb
 include/ansidecl.h
 include/bfd.h
 include/bfdlink.h
 include/dis-asm.h
 include/symcat.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/bfd.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gdb.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gdbint.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/mmalloc.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/stabs.info
 info/bfd.info
 info/bfd.info-1
 info/bfd.info-2
@@ -50,11 +45,6 @@ info/stabs.info-1
 info/stabs.info-2
 info/stabs.info-3
 info/stabs.info-4
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/bfd.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gdb.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/gdbint.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/mmalloc.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/stabs.info
 lib/libbfd-2.13.90.so
 lib/libbfd.a
 lib/libbfd.la

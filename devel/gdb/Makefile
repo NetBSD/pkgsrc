@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:20:49 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/23 10:54:15 seb Exp $
 #
 
 DISTNAME=       gdb-5.3
@@ -17,6 +17,8 @@ USE_GMAKE=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/bfd/libtool ${WRKSRC}/opcodes/libtool
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 INSTALL_TARGET=	install install-info
+USE_NEW_TEXINFO=	YES
+INFO_FILES=		bfd.info gdb.info gdbint.info mmalloc.info stabs.info
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,5 +28,4 @@ CONFIGURE_ENV+=		ac_cv_header_curses_h=yes
 .endif
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
