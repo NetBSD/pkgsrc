@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.24 2004/07/14 12:49:18 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.25 2004/07/15 19:26:46 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -44,3 +44,5 @@ Pullup ticket 57, requested by Grant Beattie [agc 2004-07-14]
 	apache2 security and bug fix
 Pullup ticket 58, requested by Martti Kuparinen [agc 2004-07-14]
 	Further updates to bring xfce4 to 4.0.6 - bugfix release
+Pullup ticket 55, requested by Lubomir Sedlacik [agc 2004-07-15]
+	Solaris psify build fix
