@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 1998/06/28 17:19:07 tron Exp $
+# $NetBSD: Makefile,v 1.40 1998/07/03 23:31:37 tron Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -121,8 +121,8 @@
     SUBDIR += xtimer
 #    SUBDIR += xtoolwait
 #    SUBDIR += xview-clients
-#    SUBDIR += xview-config
-#    SUBDIR += xview-lib
+    SUBDIR += xview-config
+    SUBDIR += xview-lib
 #    SUBDIR += xzoom
 
 .include "../mk/bsd.pkg.subdir.mk"
