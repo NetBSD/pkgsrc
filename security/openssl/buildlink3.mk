@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/01/24 03:12:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/01/30 10:59:14 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSSL_BUILDLINK3_MK:=	${OPENSSL_BUILDLINK3_MK}+
@@ -150,6 +150,12 @@ BUILDLINK_DEPENDS+=	rsaref
 .endif
 
 .if !empty(OPENSSL_BUILDLINK3_MK:M+)
+#
+# Ensure that -lcrypt comes before -lcrypto when linking so that the
+# system crypt() routine is used.
+#
+BUILDLINK_TRANSFORM+=	reorder:l:crypt:crypto
+
 SSLBASE=	${BUILDLINK_PREFIX.openssl}
 BUILD_DEFS+=	SSLBASE
 
