@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.33 2002/12/06 12:29:34 jmmv Exp $
+$NetBSD: TODO,v 1.34 2002/12/06 13:23:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -68,6 +68,7 @@ Suggested package updates
 	o anjuta-1.0.0
 	o aspell-0.50.3
 	o atari800-1.2.5
+	o auctex-11.13
 	o aumix-2.8
 	o autotrace-0.31.1
 	o balsa-1.4.1
@@ -75,6 +76,8 @@ Suggested package updates
 	o binutils-2.13.1
 	o bins-1.1.19
 	o bison-1.75
+	o bitchx-1.0c19 [pkg/19296]
+	o bonnie++-1.03
 	o bzflag-1.7e6
 	o cdlabelgen-2.5.0
 	o cdrecord-1.11a39 [pkg/19073]
@@ -138,6 +141,7 @@ Suggested package updates
 	o icewm-1.2.2
 	o icu-2.2 [heinz]
 	o imlib2-1.0.6 [pkg/19144]
+	o inform-6.21.3 [pkg/19298]
 	o intltool-0.23 [pkg/18891]
 	o ivtools-1.0.7
 	o jakarta-ant-1.5 [pkg/18322]
@@ -186,6 +190,7 @@ Suggested package updates
 	o openssh-3.5p1
 	o opensp-1.5
 	o oss-397f
+	o pan-0.13.2
 	o pen-0.9.5 [pkg/19216]
 	o phoenix-0.4
 	o pilot-link-0.11.4 [dillo]
@@ -215,7 +220,7 @@ Suggested package updates
 	o sendfile-20010424
 	o shorten-3.5.0
 	o siag-office-3.5.3
-	o smalltalk-2.0.8
+	o smalltalk-2.0.9
 	o snes9x-1.39a
 	o sodipodi-0.28
 	o speex-1.0beta2
@@ -226,6 +231,8 @@ Suggested package updates
 	o suck-4.3.1
 	o sylpheed-claws-0.8.6
 	o tcl/tk-8.4.1 [bjoern]
+	o ted-2.12
+	o texmacs-1.0.0.24
 	o tightvnc-1.2.7
 	o ttf2pt1-3.4.3
 	o vfu-4.00
