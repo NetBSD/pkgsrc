@@ -1,0 +1,118 @@
+I wrote these programs to fill a vacuum.  Chris Brady's memtest-86 is
+an excellent program for testing memory, but I wanted something that
+would do stability testing for CPUs since I had decided to overclock
+my pair of Celeron 366's on an Abit BP-6 motherboard.  No comments from
+the peanut gallery. burnBX was added to test RAM & controller stability
+  
+Other than much vilified overclockers, other people may find these
+programs useful.  System builders may wish to test their systems and
+heatsinks.  PC buyers may wish to test their systems, particularly if
+they have doubts about the builder's expertise.  Leaving out thermal
+interface material (grease) on the heatsink is a likely flaw.
+
+The usual advice is to run kernel compiles.  This is dangerous since a
+crash will certainly corrupt the filesystem with all the files make -j 4
+will have open.  Worse, I doubt that gcc has any significant FPU code.
+Worse still, gcc is compiled with gcc, and I doubted that it would
+produce highly optimized code.
+
+Since I couldn't find anything, I decided to write it.
+
+It's certain that Intel and other CPU manufacturers have devoted enormous
+effort to CPU testing.  They have some programs for stability testing
+and parts speed rating ("binning").  Some of these (HIPWR30.EXE) are
+available to qualified Intel customers under NDA.
+
+I wanted a program that would load the CPU to maximum.  Unintentionally,
+code optimization does this.  I chose a base of FPU code (DDOT) since
+I believed from 8087 days that the FPU consumes alot of current, and
+was untested by gcc.  Then integer instructions were slipped into their
+shadow to try to keep the other P6 ports loaded.  Agner Fog's excellent
+article helped quite a bit.  Trial and much error.
+
+I also tried to chose data (all-bits-lit) that would maximize power
+consumption.  But I do not claim that my code is the most optimized
+nor the most power consuming.  There could always be better.
+
+Once I found lm-sensors, I could measure the results of my efforts.
+Subject thermister vagaries, here are my results [revised]:
+
+	29'C  at idle (hlt)
+	41'   doing idle loop
+	46'   mprime95  (as-is or reniced -19)	
+	47'   make -j 4 on kernel
+	47'   2 * burnP5    (estimated)
+	47'   2 * burnBX  L (default, 4 MB)
+	48'   2 * burnMMX L	
+	48'   2 * burnK6    (estimated)
+	50'   2 * burnMMX F (default, 64 kB in L2)	
+	51'   2 * burnMMX D (16 kB, L1 cache)	
+	51'   2 * burnP6    on zeroes for data
+	52'   2 * burnP6    with FF's for data
+
+All at 2 * 5.5 * 97 MHz (26'C ambient).  Higher and my CPU1 will lockup
+under burnP6 in 5-10 min .  kernel compiles are stable to 99 MHz for
+24 h.  But 98 MHz will give `burnBX` errors every 5-8 hours, and 95
+MHz will give burnMMX D errors every ~6 hours, so now I run 94 MHz.
+Errors seem to increase 10x for every 1 MHz.
+
+I got tired of waiting for temperature steady-state so I measure current
+instead.  Mostly I use the ATX power harness as a shunt, and measure
+current by voltage drop.  Email for details.  This permits testng many
+different instruction mix ideas quickly.  As it turns out, the orignal
+burnP6 is close to the best I've found, needing only minor tweaking for
+a 2% improvement.  The optimum burnK6 is also fairly similar, with just
+minor architectural adjustments for AMD.
+
+I also did some measurements with an inductive ammeter.  They gave 90% of
+the estimated maximum datasheet current draw for burnP6.  So I'm fairly
+happy with the code.  But suggestions for improvement are most welcome.
+I don't claim this code is perfect, nor that it will catch all system
+deficiencies.
+
+BURNBX:  This program has been quite frustrating to develop.  It's hard to
+measure the results.  I've finally hit on a reasonable pattern (walking
+bit through carry, inverted every quadword except for cacheline leadoff)
+that really brings out errors, and occasional lockups (more on FreeBSD).
+The 82443BX only gets to 42'C.
+
+Essentially, burnBX is a RAM tester, using whatever pages the OS allocates
+to the process.  As such, it cannot test kernel RAM.  But it is designed
+to be very intense, using the P6 optimized `rep movsd` instructions.
+Please note that burnBX is _not_ optimal on AMD K6 based systems because
+they don't have the optimized `rep mosvd` block move.
+
+Beta testers have mostly reported quick error terminations. Their impact
+should not be minimized, because such a data error could occur in kernel
+code, causing system crashes.  The errors may be from the CPU/BX bus, in
+which case ECC RAM will not help.   The cause is not perfectly clear, but
+general case & 440BX cooling helps and so does an adequate powersupply.
+300W is suggested.
+
+Errors on my "instrumented" version of burnBX have not been isolated
+to one memory cell but have been distributed across many addresses and
+a few bits [only one at a time].  It is suspected that there is a bus
+or transistor driver problem.  Or there may be undetected transients in
+the 3.3 voltage.
+
+REVISED BURNMMX:  I started this project as simply a way for AMD system
+owners to check out their systems.  I was very surpised when my own
+system started throwing errors with the MMX memory moves, and had to
+downclock from 2 * 5.5 * 97 MHz to 94 MHz. It would seem that the simple
+memory moves are more fragile (less robust to interrupts) than the 2%
+higher bandwidth string moves.
+
+BURNK7:  I finally bought an AMD Athlon and had to write a tester even
+though I don't overclock it.  Writing burnK7 was much trial and error,
+but the ammeter gave me immediate feedback on my efforts.  The powerful
+K7 core was easy and fun to optimize.  I parallel pathed DDOT to remove a
+dependancy, and could have gone much further, but current didn't increase,
+so I stuffed in integer instructions which did increase current.  On my
+850 Thunderbird, burnK7 draws 9% more power than burnK6.
+
+
+Robert Redelmeier  redelm@ev1.net     June 15, 2001   
+
+	
+
+
