@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2004/10/17 16:37:02 tv Exp $
+# $NetBSD: Makefile.common,v 1.57 2004/11/20 10:10:35 grant Exp $
 #
 
 DISTNAME=	libtool-1.5.10
@@ -41,7 +41,7 @@ CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 # or -B, so tell it
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		lt_cv_path_NM="nm -p"
-.elif ${OPSYS} == "IRIX"
+.elif ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1"
 CONFIGURE_ENV+=		lt_cv_path_NM="nm -B"
 .endif
 
