@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/16 02:55:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2000/11/17 01:49:07 hubertf Exp $
 #
 
 DISTNAME=	bacKgammon-1.9.1b
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=backgammon/}
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://bacKgammon.sourceforge.net/
+
+DEPENDS+=	kde-1.*:../../x11/kde
 
 GNU_CONFIGURE=	yes
 EVAL_PREFIX+=   QT1DIR=qt1 KDEBASEDIR=kdebase
