@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.813 2003/08/31 19:24:04 wiz Exp $
+$NetBSD: TODO,v 1.814 2003/08/31 19:48:42 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -263,7 +263,6 @@ Suggested package updates
 	o sylpheed-claws-0.9.4 [pkg/22519]
 	o t1lib-5.0.0
 	o tcl/tk-8.4.4
-	o tcl-tclcl-1.0b13 [pkg/22632]
 	o tcpreplay-1.4.5
 	o tct-1.12
 	o teapop-0.3.6
