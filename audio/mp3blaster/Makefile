@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:22:53 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/25 16:50:27 drochner Exp $
 
 DISTNAME=	mp3blaster-3.1.3
 PKGREVISION=	3
@@ -12,6 +12,7 @@ COMMENT=	MP3 console curses-based player
 
 PTHREAD_OPTS=	require
 USE_BUILDLINK2=	yes
+USE_GMAKE=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+="--with-cxxflags=${CXXFLAGS}" \
