@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1 2004/04/22 09:18:38 tron Exp $
+
+--- config/gnu/config.sub.orig	Mon Jun 25 16:04:51 2001
++++ config/gnu/config.sub	Thu Apr 22 10:34:37 2004
+@@ -289,7 +289,7 @@
+ 	      | [cjt]90-* \
+ 	      | m88110-* | m680[01234]0-* | m683?2-* | m68360-* | z8k-* | d10v-* \
+ 	      | thumb-* | v850-* | d30v-* | tic30-* | tic80-* | c30-* | fr30-* \
+-	      | bs2000-* | tic54x-* | c54x-* | x86_64-* | pj-* | pjl-*)
++	      | bs2000-* | tic54x-* | c54x-* | x86_64-* | pj-* | pjl-* | macppc-*)
+ 		;;
+ 	# Recognize the various machine names and aliases which stand
+ 	# for a CPU type and a company and sometimes even an OS.

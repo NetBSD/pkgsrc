@@ -1,0 +1,40 @@
+$NetBSD: patch-aw,v 1.1 2004/04/22 09:18:40 tron Exp $
+
+--- ocamldoc/Makefile.orig	Mon Aug 19 15:28:20 2002
++++ ocamldoc/Makefile	Thu Apr 22 10:34:37 2004
+@@ -272,23 +272,23 @@
+ # Installation targets
+ ######################
+ install: dummy
+-	if test -d $(INSTALL_BINDIR); then : ; else $(MKDIR) $(INSTALL_BINDIR); fi
+-	if test -d $(INSTALL_LIBDIR); then : ; else $(MKDIR) $(INSTALL_LIBDIR); fi
+-	$(CP) $(OCAMLDOC) $(INSTALL_BINDIR)
+-	$(CP) ocamldoc.sty ocamldoc.hva *.cmi $(GENERATORS) $(OCAMLDOC_LIBCMA) $(INSTALL_LIBDIR)
+-	$(CP) $(INSTALL_MLIS) $(INSTALL_CMIS) $(INSTALL_LIBDIR)
+-	if test -d $(INSTALL_MANODIR); then : ; else $(MKDIR) $(INSTALL_MANODIR); fi
+-	$(CP) stdlib_man/* $(INSTALL_MANODIR)
++	if test -d $(INSTALL_BINDIR); then : ; else ${BSD_INSTALL_PROGRAM_DIR} $(INSTALL_BINDIR); fi
++	if test -d $(INSTALL_LIBDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALL_LIBDIR); fi
++	${BSD_INSTALL_PROGRAM} $(OCAMLDOC) $(INSTALL_BINDIR)
++	${BSD_INSTALL_DATA} ocamldoc.sty ocamldoc.hva *.cmi $(GENERATORS) $(OCAMLDOC_LIBCMA) $(INSTALL_LIBDIR)
++	${BSD_INSTALL_DATA} $(INSTALL_MLIS) $(INSTALL_CMIS) $(INSTALL_LIBDIR)
++	if test -d $(INSTALL_MANODIR); then : ; else ${BSD_INSTALL_MAN_DIR} $(INSTALL_MANODIR); fi
++	${BSD_INSTALL_MAN} stdlib_man/* $(INSTALL_MANODIR)
+ 
+ installopt:
+ 	if test -f $(OCAMLDOC_OPT) ; then $(MAKE) installopt_really ; fi
+ 
+ installopt_really:
+-	if test -d $(INSTALL_BINDIR); then : ; else $(MKDIR) $(INSTALL_BINDIR); fi
+-	if test -d $(INSTALL_LIBDIR); then : ; else $(MKDIR) $(INSTALL_LIBDIR); fi
+-	$(CP) $(OCAMLDOC_OPT) $(INSTALL_BINDIR)
+-	$(CP) ocamldoc.sty ocamldoc.hva $(OCAMLDOC_LIBA) $(OCAMLDOC_LIBCMXA) $(INSTALL_LIBDIR)
+-	$(CP) $(INSTALL_MLIS) $(INSTALL_CMIS) $(INSTALL_LIBDIR)
++	if test -d $(INSTALL_BINDIR); then : ; else ${BSD_INSTALL_PROGRAM_DIR} $(INSTALL_BINDIR); fi
++	if test -d $(INSTALL_LIBDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALL_LIBDIR); fi
++	${BSD_INSTALL_PROGRAM} $(OCAMLDOC_OPT) $(INSTALL_BINDIR)
++	${BSD_INSTALL_DATA} ocamldoc.sty ocamldoc.hva $(OCAMLDOC_LIBA) $(OCAMLDOC_LIBCMXA) $(INSTALL_LIBDIR)
++	${BSD_INSTALL_DATA} $(INSTALL_MLIS) $(INSTALL_CMIS) $(INSTALL_LIBDIR)
+ 
+ # Testing :
+ ###########

@@ -1,0 +1,13 @@
+$NetBSD: patch-az,v 1.1 2004/04/22 09:18:40 tron Exp $
+
+--- otherlibs/dynlink/Makefile.orig	Sun Jan 20 16:12:28 2002
++++ otherlibs/dynlink/Makefile	Thu Apr 22 10:34:37 2004
+@@ -38,7 +38,7 @@
+ 	$(CAMLC) $(COMPFLAGS) -o extract_crc dynlink.cma extract_crc.cmo
+ 
+ install:
+-	cp dynlink.cmi dynlink.cma dynlink.mli extract_crc $(LIBDIR)
++	${BSD_INSTALL_DATA} dynlink.cmi dynlink.cma dynlink.mli extract_crc $(LIBDIR)
+ 
+ installopt:
+ 

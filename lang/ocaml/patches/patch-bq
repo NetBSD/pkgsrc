@@ -1,0 +1,22 @@
+$NetBSD: patch-bq,v 1.1 2004/04/22 09:18:46 tron Exp $
+
+--- otherlibs/unix/Makefile.orig	Thu Jun 27 13:36:02 2002
++++ otherlibs/unix/Makefile	Thu Apr 22 10:34:37 2004
+@@ -65,13 +65,13 @@
+ 	rm -f *.a *.o *.so
+ 
+ install:
+-	if test -f dllunix.so; then cp dllunix.so $(STUBLIBDIR)/dllunix.so; fi
+-	cp libunix.a $(LIBDIR)/libunix.a
++	if test -f dllunix.so; then ${BSD_INSTALL_DATA} dllunix.so $(STUBLIBDIR)/dllunix.so; fi
++	${BSD_INSTALL_DATA} libunix.a $(LIBDIR)/libunix.a
+ 	cd $(LIBDIR); $(RANLIB) libunix.a
+-	cp unix.cma $(MLOBJS:.cmo=.cmi) $(MLOBJS:.cmo=.mli) $(LIBDIR)
++	${BSD_INSTALL_DATA} unix.cma $(MLOBJS:.cmo=.cmi) $(MLOBJS:.cmo=.mli) $(LIBDIR)
+ 
+ installopt:
+-	cp $(MLOBJS:.cmo=.cmx) unix.cmxa unix.a $(LIBDIR)
++	${BSD_INSTALL_DATA} $(MLOBJS:.cmo=.cmx) unix.cmxa unix.a $(LIBDIR)
+ 	cd $(LIBDIR); $(RANLIB) unix.a
+ 
+ .SUFFIXES: .ml .mli .cmo .cmi .cmx

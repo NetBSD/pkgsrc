@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2004/04/22 09:18:41 tron Exp $
+
+--- otherlibs/labltk/browser/Makefile.orig	Mon Aug 12 07:31:21 2002
++++ otherlibs/labltk/browser/Makefile	Thu Apr 22 10:34:37 2004
+@@ -47,7 +47,7 @@
+ 
+ install:
+ 	if test -f ocamlbrowser$(EXE); then : ; \
+-	  cp ocamlbrowser$(EXE) $(BINDIR); fi
++	  ${BSD_INSTALL_SCRIPT} ocamlbrowser$(EXE) $(BINDIR); fi
+ 
+ clean:
+ 	rm -f *.cm? ocamlbrowser$(EXE) dummy.mli *~ *.orig

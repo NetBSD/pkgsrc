@@ -1,17 +1,25 @@
-$NetBSD: patch-am,v 1.1 2004/03/04 06:27:45 minskim Exp $
+$NetBSD: patch-am,v 1.2 2004/04/22 09:18:37 tron Exp $
 
---- otherlibs/labltk/support/cltkImg.c.orig	2002-07-23 09:11:59.000000000 -0500
-+++ otherlibs/labltk/support/cltkImg.c
-@@ -99,7 +99,11 @@ camltk_setimgdata_native (value imgname,
-   pib.offset[0] = 0;
-   pib.offset[1] = 1;
-   pib.offset[2] = 2;
--  Tk_PhotoPutBlock(ph,&pib,Int_val(x),Int_val(y),Int_val(w),Int_val(h)); 
-+  Tk_PhotoPutBlock(ph,&pib,Int_val(x),Int_val(y),Int_val(w),Int_val(h)
-+#if (TK_MAJOR_VERSION == 8 && TK_MINOR_VERSION >= 4 || TK_MAJOR_VERSION > 8)
-+                   , TK_PHOTO_COMPOSITE_SET
-+#endif
-+    ); 
- }
+--- camlp4/lib/Makefile.orig	Fri Jul 19 16:53:47 2002
++++ camlp4/lib/Makefile	Thu Apr 22 10:34:37 2004
+@@ -36,15 +36,15 @@
+ 	done
  
- CAMLprim void camltk_setimgdata_bytecode(argv,argn)
+ install:
+-	-$(MKDIR) $(LIBDIR)/camlp4
+-	cp $(TARGET) *.mli $(LIBDIR)/camlp4/.
+-	cp *.cmi $(LIBDIR)/camlp4/.
++	-${BSD_INSTALL_DATA_DIR} $(LIBDIR)/camlp4
++	${BSD_INSTALL_DATA} $(TARGET) *.mli $(LIBDIR)/camlp4/.
++	${BSD_INSTALL_DATA} *.cmi $(LIBDIR)/camlp4/.
+ 	if test -f $(TARGET:.cma=.cmxa); then $(MAKE) installopt LIBDIR=$(LIBDIR); fi
+ 
+ installopt:
+-	cp $(TARGET:.cma=.cmxa) *.cmx $(LIBDIR)/camlp4/.
++	${BSD_INSTALL_DATA} $(TARGET:.cma=.cmxa) *.cmx $(LIBDIR)/camlp4/.
+ 	if test -f $(TARGET:.cma=.lib); then \
+-	  cp $(TARGET:.cma=.lib) $(LIBDIR)/camlp4/.; \
++	  ${BSD_INSTALL_DATA} $(TARGET:.cma=.lib) $(LIBDIR)/camlp4/.; \
+ 	else \
+ 	  tar cf - $(TARGET:.cma=.a) | (cd $(LIBDIR)/camlp4/.; tar xf -); \
+ 	fi

@@ -1,12 +1,16 @@
-$NetBSD: patch-ag,v 1.1 2003/06/29 23:04:19 jtb Exp $
+$NetBSD: patch-ag,v 1.2 2004/04/22 09:18:36 tron Exp $
 
---- asmcomp/power/arch.ml.orig
-+++ asmcomp/power/arch.ml
-@@ -91,6 +91,5 @@
- let toc =
-   match Config.system with
-   | "aix" -> true
--  | "elf" -> false
--  | "rhapsody" -> false
-+  | "elf" | "rhapsody" | "bsd" -> false
-   | _ -> Misc.fatal_error "wrong $(SYSTEM)"
+--- asmrun/sparc.S.orig	Fri Feb  8 17:55:33 2002
++++ asmrun/sparc.S	Thu Apr 22 10:34:38 2004
+@@ -16,9 +16,9 @@
+ /* Asm part of the runtime system for the Sparc processor.  */
+ /* Must be preprocessed by cpp */
+ 
+-/* SunOS 4 and BSD prefix identifiers with _, Solaris and Linux do not */
++/* SunOS 4 prefixes identifiers with _ */
+ 
+-#if defined(SYS_sunos) || defined(SYS_bsd)
++#if defined(SYS_sunos)
+ 
+         .common _caml_required_size, 4, "bss"
+ 

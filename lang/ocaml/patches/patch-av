@@ -1,0 +1,12 @@
+$NetBSD: patch-av,v 1.1 2004/04/22 09:18:40 tron Exp $
+
+--- man/Makefile.orig	Wed Apr 24 11:09:35 2002
++++ man/Makefile	Thu Apr 22 10:34:37 2004
+@@ -17,6 +17,6 @@
+ DIR=$(MANDIR)/man$(MANEXT)
+ 
+ install:
+-	for i in *.m; do cp $$i $(DIR)/`basename $$i .m`.$(MANEXT); done
++	for i in *.m; do ${BSD_INSTALL_MAN} $$i $(DIR)/`basename $$i .m`.$(MANEXT); done
+ 	echo '.so man$(MANEXT)/ocamlc.$(MANEXT)' > $(DIR)/ocamlc.opt.$(MANEXT)
+ 	echo '.so man$(MANEXT)/ocamlopt.$(MANEXT)' > $(DIR)/ocamlopt.opt.$(MANEXT)

@@ -1,0 +1,20 @@
+$NetBSD: patch-bi,v 1.1 2004/04/22 09:18:43 tron Exp $
+
+--- otherlibs/labltk/support/Makefile.orig	Thu Jun 27 13:36:01 2002
++++ otherlibs/labltk/support/Makefile	Thu Apr 22 10:34:37 2004
+@@ -26,12 +26,11 @@
+     widget.cmi widget.mli
+ 
+ install: lib$(LIBNAME).a $(PUB)
+-	if test -d $(INSTALLDIR); then : ; else mkdir $(INSTALLDIR); fi
+-	cp $(PUB) lib$(LIBNAME).a $(INSTALLDIR)
++	if test -d $(INSTALLDIR); then : ; else ${BSD_INSTALL_DATA_DIR} $(INSTALLDIR); fi
++	${BSD_INSTALL_DATA} $(PUB) lib$(LIBNAME).a $(INSTALLDIR)
+ 	cd $(INSTALLDIR); $(RANLIB) lib$(LIBNAME).a
+-	cd $(INSTALLDIR); chmod 644 $(PUB) lib$(LIBNAME).a
+ 	if test -f dll$(LIBNAME).so; then \
+-	   cp dll$(LIBNAME).so $(STUBLIBDIR)/dll$(LIBNAME).so; fi
++	   ${BSD_INSTALL_DATA} dll$(LIBNAME).so $(STUBLIBDIR)/dll$(LIBNAME).so; fi
+ 
+ clean : 
+ 	rm -f *.cm* *.o *.a *.so

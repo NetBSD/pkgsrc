@@ -1,0 +1,17 @@
+$NetBSD: patch-ap,v 1.1 2004/04/22 09:18:38 tron Exp $
+
+--- camlp4/ocpp/Makefile.orig	Sun Jan 20 16:12:28 2002
++++ camlp4/ocpp/Makefile	Thu Apr 22 10:34:37 2004
+@@ -24,8 +24,9 @@
+ 	rm -f *.cm[ioa] *.pp[io] *.o *.out *.bak .*.bak crc.ml ocpp$(EXE)
+ 
+ install:
+-	-$(MKDIR) $(LIBDIR)/camlp4 $(BINDIR)
+-	cp $(OBJS) $(LIBDIR)/camlp4/.
+-	cp ocpp$(EXE) $(BINDIR)/.
++	-${BSD_INSTALL_DATA_DIR} $(LIBDIR)/camlp4
++	-${BSD_INSTALL_PROGRAM_DIR}  $(BINDIR)
++	${BSD_INSTALL_DATA} $(OBJS) $(LIBDIR)/camlp4/.
++	${BSD_INSTALL_SCRIPT} ocpp$(EXE) $(BINDIR)/.
+ 
+ depend:

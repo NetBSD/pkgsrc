@@ -1,16 +1,42 @@
-$NetBSD: patch-af,v 1.1 2003/06/23 20:15:18 jtb Exp $
+$NetBSD: patch-af,v 1.2 2004/04/22 09:18:36 tron Exp $
 
---- asmrun/sparc.S.orig
-+++ asmrun/sparc.S
-@@ -16,9 +16,9 @@
- /* Asm part of the runtime system for the Sparc processor.  */
- /* Must be preprocessed by cpp */
+--- asmrun/signals.c.orig	Mon May  6 14:02:26 2002
++++ asmrun/signals.c	Thu Apr 22 10:34:37 2004
+@@ -162,6 +162,8 @@
+ void handle_signal(int sig, struct sigcontext * context)
+ #elif defined(TARGET_power) && defined(SYS_rhapsody)
+ void handle_signal(int sig, int code, struct sigcontext * context)
++#elif defined(TARGET_power) && defined(SYS_bsd)
++void handle_signal(int sig, int code, struct sigcontext * context)
+ #else
+ void handle_signal(int sig)
+ #endif
+@@ -205,6 +207,10 @@
+       /* Cached in register 30 */
+       CONTEXT_GPR(context, 30) = (unsigned long) young_limit;
+ #endif
++#if defined(TARGET_power) && defined(SYS_bsd)
++      /* Cached in register 30 */
++      context->sc_frame.fixreg[30] = (unsigned long) young_limit;
++#endif
+     }
+   }
+ }
+@@ -442,6 +448,17 @@
+   array_bound_error();
+ }
+ #endif
++
++#if defined(TARGET_power) && defined(SYS_bsd)
++static void trap_handler(int sig, int code, struct sigcontext * context)
++{
++  /* Recover young_ptr and caml_exception_pointer from registers 31 and 29 */
++  caml_exception_pointer = (char *) context->sc_frame.fixreg[29];
++  young_ptr = (char *) context->sc_frame.fixreg[31];
++  array_bound_error();
++}
++#endif
++
  
--/* SunOS 4 and BSD prefix identifiers with _, Solaris and Linux do not */
-+/* SunOS 4 prefixes identifiers with _ */
- 
--#if defined(SYS_sunos) || defined(SYS_bsd)
-+#if defined(SYS_sunos)
- 
-         .common _caml_required_size, 4, "bss"
+ /* Machine- and OS-dependent handling of stack overflow */
  

@@ -1,0 +1,17 @@
+$NetBSD: patch-bl,v 1.1 2004/04/22 09:18:44 tron Exp $
+
+--- otherlibs/labltk/tkanim/tkAnimGIF.c.orig	Tue Jul 23 16:12:00 2002
++++ otherlibs/labltk/tkanim/tkAnimGIF.c	Thu Apr 22 10:34:38 2004
+@@ -336,7 +336,11 @@
+             }
+         }
+         Tk_PhotoPutBlock(photoHandle, &block, 0, 0, 
+-                         imageWidth, imageHeight);
++                         imageWidth, imageHeight
++#if (TK_MAJOR_VERSION == 8 && TK_MINOR_VERSION >= 4 || TK_MAJOR_VERSION > 8)
++                   , TK_PHOTO_COMPOSITE_SET
++#endif
++          );
+ #ifdef TKANIM_DEBUG
+     fprintf(stderr, " Retrieving result\n");
+ #endif

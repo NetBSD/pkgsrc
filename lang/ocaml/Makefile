@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2004/04/12 18:02:52 seb Exp $
+# $NetBSD: Makefile,v 1.29 2004/04/22 09:18:34 tron Exp $
 
 DISTNAME=	ocaml-3.06
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/cristal/ocaml/${DISTNAME}/
 
@@ -20,8 +20,11 @@ CONFIGURE_ARGS+=	-x11lib ${X11BASE}/lib
 CONFIGURE_ARGS+=	-tkdefs "-I${BUILDLINK_PREFIX.tk}/include  -I${BUILDLINK_PREFIX.tcl}/include"
 CONFIGURE_ARGS+=	-tklibs "`${SH} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH}; ${ECHO} $$TK_LIBS $$TCL_LIBS'`"
 CONFIGURE_ARGS+=	-libs "${LDFLAGS}"
+CONFIGURE_ARGS+=	-with-pthread
 
 ALL_TARGET=	world
+
+.include "../../mk/bsd.prefs.mk"
 
 post-extract:
 	${CP} ${WRKSRC}/asmrun/power-elf.S ${WRKSRC}/asmrun/power-bsd.S
@@ -34,26 +37,12 @@ post-build:
 		${GMAKE} opt.opt; \
 	fi
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || (${MACHINE_ARCH} == "sparc")
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
+    (${MACHINE_ARCH} == "sparc")
 PLIST_SRC=	${PKGDIR}/PLIST.opt ${PKGDIR}/PLIST
 .else
 PLIST_SRC=	${PKGDIR}/PLIST
 .endif
-
-PTHREAD_OPTS+=	native
-.include "../../mk/pthread.buildlink3.mk"
-
-.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} != "none")
-CONFIGURE_ARGS+=	-with-pthread
-PLIST_SRC+=		${PKGDIR}/PLIST.threads
-PLIST_SUBST+=		NATIVE_THREADS="@comment "
-.else
-PLIST_SUBST+=		NATIVE_THREADS=
-.endif
-
-PLIST_SRC+=		${PKGDIR}/PLIST.common_end
 
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
