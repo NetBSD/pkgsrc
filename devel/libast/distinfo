@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/12/26 04:52:19 wiz Exp $
+
+SHA1 (libast-0.5.tar.gz) = e5e8305283bf64c7392ec752542ea27a3bccb350
+Size (libast-0.5.tar.gz) = 276591 bytes
+SHA1 (patch-aa) = 0a870149b7750089aef347a878f3953a66b16c37
