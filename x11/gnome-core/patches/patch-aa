@@ -1,0 +1,78 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/10/07 19:45:26 agc Exp $
+
+Use NetBSD's own pkglibtool
+
+--- configure	1998/10/05 14:27:05	1.1
++++ configure	1998/10/05 14:27:46
+@@ -541,7 +541,7 @@
+ 
+ ac_ext=c
+ # CFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
+-ac_cpp='$CPP $CPPFLAGS'
++ac_cpp='$CPP $CPPFLAGS -I$LOCALBASE/include'
+ ac_compile='${CC-cc} -c $CFLAGS $CPPFLAGS conftest.$ac_ext 1>&5'
+ ac_link='${CC-cc} -o conftest $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ cross_compiling=$ac_cv_prog_cc_cross
+@@ -1043,7 +1043,7 @@
+ 
+ ac_ext=c
+ # CFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
+-ac_cpp='$CPP $CPPFLAGS'
++ac_cpp='$CPP $CPPFLAGS -I$LOCALBASE/include'
+ ac_compile='${CC-cc} -c $CFLAGS $CPPFLAGS conftest.$ac_ext 1>&5'
+ ac_link='${CC-cc} -o conftest $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ cross_compiling=$ac_cv_prog_cc_cross
+@@ -1234,7 +1234,7 @@
+ 
+ ac_ext=c
+ # CFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
+-ac_cpp='$CPP $CPPFLAGS'
++ac_cpp='$CPP $CPPFLAGS -I$LOCALBASE/include'
+ ac_compile='${CC-cc} -c $CFLAGS $CPPFLAGS conftest.$ac_ext 1>&5'
+ ac_link='${CC-cc} -o conftest $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ cross_compiling=$ac_cv_prog_cc_cross
+@@ -1710,7 +1710,8 @@
+ 
+ 
+ 
+-# Always use our own libtool.
++# Always use our own libtool for NetBSD.
++if false; then
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ 
+@@ -1790,6 +1791,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
++fi
+ 
+ for ac_prog in $CCC c++ g++ gcc CC cxx cc++
+ do
+@@ -1831,7 +1833,7 @@
+ 
+ ac_ext=C
+ # CXXFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
+-ac_cpp='$CXXCPP $CPPFLAGS'
++ac_cpp='$CXXCPP $CPPFLAGS -I$LOCALBASE/include'
+ ac_compile='${CXX-g++} -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext 1>&5'
+ ac_link='${CXX-g++} -o conftest $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ cross_compiling=$ac_cv_prog_cxx_cross
+@@ -1857,7 +1859,7 @@
+ rm -fr conftest*
+ ac_ext=c
+ # CFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
+-ac_cpp='$CPP $CPPFLAGS'
++ac_cpp='$CPP $CPPFLAGS -I$LOCALBASE/include'
+ ac_compile='${CC-cc} -c $CFLAGS $CPPFLAGS conftest.$ac_ext 1>&5'
+ ac_link='${CC-cc} -o conftest $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS 1>&5'
+ cross_compiling=$ac_cv_prog_cc_cross
+@@ -2530,7 +2532,7 @@
+   rm -f conf.gtktest
+ 
+ 
+-					        CPPFLAGS="$CPPFLAGS $GTK_CFLAGS"
++					        CPPFLAGS="$CPPFLAGS $GTK_CFLAGS -I$LOCALBASE/include"
+ 
+         saved_ldflags="$LDFLAGS"
+         LDFLAGS="$LDFLAGS $GTK_LIBS"
