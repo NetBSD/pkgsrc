@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2004/02/20 19:25:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.70 2004/03/06 07:12:54 xtraeme Exp $
 #
 
 DISTNAME=		abiword-${DIST_VER}
-PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=abiword/}
 EXTRACT_SUFX=		.tar.bz2
@@ -29,7 +28,7 @@ USE_GNU_ICONV=		yes # XXX
 
 MAKEFILE=		GNUmakefile
 
-DIST_VER=		2.0.3
+DIST_VER=		2.0.4
 
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--with-sys-wv
