@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/10 10:48:02 reinoud Exp $
+
+--- magic-install.sh.orig	2004-05-09 09:38:34.000000000 +0200
++++ magic-install.sh
+@@ -4,7 +4,7 @@ OIFS="${IFS-}"
+ for prog in "$@"
+ do
+   IFS=:
+-  for p in $PATH /usr/bin /usr/local/bin
++  for p in $PATH /usr/bin ${PREFIX}/bin ${X11BASE}/bin
+   do
+     IFS="$OIFS"
+     if [ -f "$p/$prog" ]; then
