@@ -1,7 +1,8 @@
-$NetBSD: patch-ab,v 1.15 2002/05/20 19:15:08 cjep Exp $
---- configure.orig	Thu May 16 17:35:54 2002
-+++ configure	Thu May 16 17:37:02 2002
-@@ -7092,7 +7092,7 @@
+$NetBSD: patch-ab,v 1.16 2003/06/30 07:45:50 jlam Exp $
+
+--- configure.orig	Mon Mar 10 07:25:26 2003
++++ configure
+@@ -7427,7 +7427,7 @@ else
  #define USE_GL 1
  _ACEOF
  
