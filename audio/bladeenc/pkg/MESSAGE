@@ -1,8 +1,8 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 1998/12/28 03:16:27 tv Exp $
+$NetBSD: MESSAGE,v 1.2 1998/12/28 19:16:51 tv Exp $
 
 In order to run BladeEnc on i386, you need no compat libraries, but you
-must have all of COMPAT_NOMID, COMPAT_09, COMPAT_10, COMPAT_12 (and
-COMPAT_13, if applicable) in your running kernel.
+must have all of COMPAT_43, COMPAT_NOMID, COMPAT_09, COMPAT_10, COMPAT_12
+(and COMPAT_13, if applicable) in your running kernel.
 
 ==========================================================================
