@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2000/05/02 23:35:58 jlam Exp $
+
+--- src/pkg/netbsd/Makefile.orig	Tue Feb 29 16:37:58 2000
++++ src/pkg/netbsd/Makefile	Tue May  2 18:36:23 2000
+@@ -4,6 +4,7 @@
+ 
+ # The plain "install" common to all Unix targets
+ install:
+-	@TARGET=$(prefix)/AbiSuite BINDIR=$(prefix)/bin SRCDIR=$(OUTDIR) \
++	@TARGET=$(prefix)/share/AbiSuite BINDIR=$(prefix)/bin SRCDIR=$(OUTDIR) \
++		LIBEXECDIR=$(prefix)/libexec/AbiSuite \
+ 		SCRIPTDIR=$(ABI_ROOT)/src/pkg/common/unix/scripts \
+ 		$(ABI_ROOT)/src/pkg/common/unix/scripts/install.sh
