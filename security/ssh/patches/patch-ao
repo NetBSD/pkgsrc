@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.6 1998/11/04 23:43:39 tron Exp $
+$NetBSD: patch-ao,v 1.7 1999/05/15 13:46:59 bouyer Exp $
 
---- newchannels.c.orig	Wed Jul  8 18:40:36 1998
-+++ newchannels.c	Thu Nov  5 00:28:07 1998
-@@ -263,7 +263,7 @@
+--- newchannels.c.orig	Wed May 12 13:19:27 1999
++++ newchannels.c	Sat May 15 04:31:04 1999
+@@ -274,7 +274,7 @@
  #include "authfd.h"
  #include "emulate.h"
  #include "servconf.h"
@@ -11,25 +11,25 @@ $NetBSD: patch-ao,v 1.6 1998/11/04 23:43:39 tron Exp $
  #include <tcpd.h>
  #include <syslog.h>
  #ifdef NEED_SYS_SYSLOG_H
-@@ -923,7 +923,7 @@
- 	      sprintf(buf, "X11 connection from %.200s port %d",
- 		      remote_hostname, get_peer_port(newsock));
- 	      xfree(remote_hostname);
+@@ -934,7 +934,7 @@
+               snprintf(buf, sizeof(buf), "X11 connection from %.200s port %d",
+                       remote_hostname, get_peer_port(newsock));
+               xfree(remote_hostname);
 -#ifdef LIBWRAP
 +#if defined(LIBWRAP) && defined(LIBWRAP_FWD)
- 	      {
- 		struct request_info req;
- 		struct servent *serv;
-@@ -974,7 +974,7 @@
- 		      ch->listening_port, remote_hostname,
- 		      get_peer_port(newsock));
- 	      xfree(remote_hostname);
+               {
+                 struct request_info req;
+                 struct servent *serv;
+@@ -986,7 +986,7 @@
+                        ch->listening_port, remote_hostname,
+                        get_peer_port(newsock));
+               xfree(remote_hostname);
 -#ifdef LIBWRAP
 +#if defined(LIBWRAP) && defined(LIBWRAP_FWD)
- 	      {
- 		struct request_info req;
- 		struct servent *serv;
-@@ -2388,6 +2388,10 @@
+               {
+                 struct request_info req;
+                 struct servent *serv;
+@@ -2412,6 +2412,10 @@
       ssh-agent connections on your system */
    old_umask = umask(S_IRUSR|S_IXUSR|S_IRGRP|S_IXGRP|S_IROTH|S_IXOTH);
    
