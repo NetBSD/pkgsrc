@@ -1,12 +1,15 @@
-$NetBSD: patch-aj,v 1.1.2.2 2003/04/06 20:58:37 grant Exp $
+$NetBSD: patch-aj,v 1.1.2.3 2003/06/19 00:37:36 grant Exp $
 
 Fixes potential remote buffer overflows.  See the following url for more
 details:  http://securityfocus.com/archive/1/315057
 
 Patch by caf@guarana.org.
 
---- source/names.c.orig	2003-03-29 21:48:19.000000000 +0100
-+++ source/names.c	2003-03-29 21:52:59.000000000 +0100
+Fix major core bug with channel mode -k * on hybrid7 servers.
+From BitchX CVS.
+
+--- source/names.c.orig	2002-03-25 21:47:30.000000000 +0100
++++ source/names.c	2003-05-14 21:51:01.000000000 +0200
 @@ -572,7 +572,7 @@
  
     	*nmodes = 0;
@@ -25,3 +28,14 @@ Patch by caf@guarana.org.
  	{
  		if (tucm->o_ed) 
  		{
+@@ -1003,8 +1003,9 @@
+ 				malloc_strcpy(key, next_arg(rest, &rest));
+ 			else
+ 			{
+-				if (rest && *key && !my_strnicmp(rest, *key, strlen(*key)))
++				if (rest && *key && (!my_strnicmp(rest, *key, strlen(*key)) || rest[0] == '*'))
+ 					next_arg(rest, &rest);
++
+ 				new_free(key);
+ 			}
+ 			(*channel)->i_mode = -1;
