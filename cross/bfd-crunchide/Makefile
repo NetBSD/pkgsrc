@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2001/02/25 04:17:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/23 13:36:17 wiz Exp $
 
-DISTNAME=	bfd-crunchide-1.0
+DISTNAME=	bfd-crunchide-1.1
 CATEGORIES=	cross
 MASTER_SITES=	# empty
 DISTFILES=	# empty
