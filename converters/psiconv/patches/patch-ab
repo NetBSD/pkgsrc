@@ -1,0 +1,7 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/12/06 01:58:07 sakamoto Exp $
+
+--- ./Makefile.am.orig	Wed Oct 27 23:03:37 1999
++++ ./Makefile.am	Mon Dec  6 10:02:34 1999
+@@ -1 +1 @@
+-SUBDIRS = compat lib psiconv formats docs
++SUBDIRS = compat lib psiconv docs
