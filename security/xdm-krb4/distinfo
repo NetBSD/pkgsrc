@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/04/05 11:49:37 wennmach Exp $
+$NetBSD: distinfo,v 1.4 2002/04/11 12:52:57 wennmach Exp $
 
 SHA1 (xdm-krb4-3.3.6.3.tar.gz) = 050032632d5c6b9abae87fcf0cd5a9a89a0cff97
-Size (xdm-krb4-3.3.6.2.tar.gz) = 119208 bytes
+Size (xdm-krb4-3.3.6.3.tar.gz) = 119208 bytes
