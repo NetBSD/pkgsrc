@@ -1,0 +1,13 @@
+$NetBSD: patch-sum,v 1.1 1999/07/09 14:23:19 agc Exp $
+
+MD5 (patch-CacheCheckSize) = 83bf08cce493d232765a538c8acbb094
+MD5 (patch-CacheDirs) = b0fe5d39d4c773f9635964a7b86148d6
+MD5 (patch-SSL) = d37389deb25d890d12d8c8e8fc64ac95
+MD5 (patch-aa) = 9238c78cc4571aede74c5481b4aaf474
+MD5 (patch-ab) = 805df2b5b2b8dc359ab5e6f275ff8417
+MD5 (patch-ac) = 01d26d9a5af1e8c260db3389925c2623
+MD5 (patch-ad) = 8a639f0dc35b3075d1cfb83262fd47f8
+MD5 (patch-ba) = 8f9ef3f6095a59628e7e69fa2cf7bb28
+MD5 (patch-bb) = 620375e3cd4b32ff1d5b0700e944a838
+MD5 (patch-bc) = 0723f7953457462f0bd6ae78d141e274
+MD5 (patch-ca) = cb1a912f30b83cc364ef21b3cc961900
