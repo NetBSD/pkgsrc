@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1997/11/24 13:14:33 is Exp $
+# $NetBSD: Makefile,v 1.5 1997/12/11 18:03:48 is Exp $
 # Id: Makefile,v 1.5 1996/12/03 10:41:49 asami Exp
 #
 
@@ -8,7 +8,7 @@
 #    SUBDIR += rtpmon
     SUBDIR += sdr
 #    SUBDIR += speak_freely
-#    SUBDIR += vat
+    SUBDIR += vat
     SUBDIR += vic
 #    SUBDIR += wb
 
