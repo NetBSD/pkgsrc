@@ -1,0 +1,18 @@
+$NetBSD: patch-ay,v 1.1 2004/03/29 00:50:41 dillo Exp $
+
+This patch is based on
+ftp://ftp.trilon.com/pub/xv/patches/longname.patch
+
+--------------------------
+
+
+--- xvtext.c.orig	Sat Jan 14 00:46:28 1995
++++ xvtext.c
+@@ -293,6 +293,7 @@ void OpenTextView(text, len, title, free
+   tv->textlen     = len;
+   tv->freeonclose = freeonclose;
+   strncpy(tv->title, title, (size_t) TITLELEN-1);
++  tv->title[TITLELEN-1] = '\0';
+ 
+   computeText(tv);      /* compute # lines and linestarts array */
+ 
