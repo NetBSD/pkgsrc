@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:41 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1998/09/14 17:15:05 agc Exp $
 #
 
 DISTNAME=	fastcap-2.0-15Jul92
-PKGNAME=	fastcap-2.0.15Jul92
+PKGNAME=	fastcap-2.0.19920715
 WRKSRC=		${WRKDIR}/fastcap
 CATEGORIES=	cad
 MASTER_SITES=	ftp://rle-vlsi.mit.edu/pub/fastcap/
@@ -71,7 +71,7 @@ do-install:
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/tcad.ps.Z ${PREFIX}/share/doc/fastcap
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/ug.ps.Z ${PREFIX}/share/doc/fastcap
 .for file in mtt.ps.Z tcad.ps.Z ug.ps.Z
-	uncompress ${PREFIX}/share/doc/fastcap/${file}
+	uncompress -f ${PREFIX}/share/doc/fastcap/${file}
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/README.docs ${PREFIX}/share/doc/fastcap
 
