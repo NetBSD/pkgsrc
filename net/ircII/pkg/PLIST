@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1997/12/09 00:06:40 mrg Exp $
+@comment $NetBSD: PLIST,v 1.5 1997/12/11 09:59:06 hubertf Exp $
 bin/irc-4.4
 @exec 	ln -f %B/%f %B/irc
 @unexec	rm -f %B/irc
@@ -574,6 +574,8 @@ lib/irc/help/window/stack
 lib/irc/help/window/sticky
 lib/irc/help/window/swap
 lib/irc/help/window/window
+man/man1/ircII.1
+man/man1/ircbug.1
 @dirrm lib/irc/help/alias
 @dirrm lib/irc/help/bind
 @dirrm lib/irc/help/ctcp

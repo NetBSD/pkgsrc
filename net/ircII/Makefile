@@ -3,7 +3,7 @@
 # Date created:		18 Oct 1994
 # Whom:			torstenb
 #
-# $NetBSD: Makefile,v 1.5 1997/12/09 00:06:38 mrg Exp $
+# $NetBSD: Makefile,v 1.6 1997/12/11 09:59:04 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -18,6 +18,6 @@ MAINTAINER=		mrg@eterna.com.au
 GNU_CONFIGURE=		yes
 #CONFIGURE_ARGS+=	--with-default-server=SERVER[:PORT]
 
-MAN=		ircII.1 ircbug.1
+MAN1=		ircII.1 ircbug.1
 
 .include <bsd.port.mk>
