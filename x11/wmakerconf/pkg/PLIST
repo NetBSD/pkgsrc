@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/04/08 08:41:28 rh Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/11/29 23:50:22 wiz Exp $
 bin/mkpreview
 bin/wmakerconf
 share/locale/ca/LC_MESSAGES/wmakerconf.mo
@@ -12,11 +12,15 @@ share/locale/it/LC_MESSAGES/wmakerconf.mo
 share/locale/ja/LC_MESSAGES/wmakerconf.mo
 share/locale/ja/LC_MESSAGES/wmakerconf-data.mo
 share/locale/ko/LC_MESSAGES/wmakerconf.mo
+share/locale/ko/LC_MESSAGES/wmakerconf-data.mo
 share/locale/no/LC_MESSAGES/wmakerconf.mo
 share/locale/pl/LC_MESSAGES/wmakerconf.mo
+share/locale/pl/LC_MESSAGES/wmakerconf-data.mo
 share/locale/pt_BR/LC_MESSAGES/wmakerconf.mo
 share/locale/ru/LC_MESSAGES/wmakerconf.mo
+share/locale/ru/LC_MESSAGES/wmakerconf-data.mo
 share/locale/sv/LC_MESSAGES/wmakerconf.mo
+share/locale/tr/LC_MESSAGES/wmakerconf.mo
 share/wmakerconf/black.xpm
 share/wmakerconf/appearance.xpm
 share/wmakerconf/effects.xpm
