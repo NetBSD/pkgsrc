@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 1999/04/07 23:21:26 tron Exp $
+$NetBSD: patch-ab,v 1.2 2000/02/06 03:33:53 wiz Exp $
 
---- audio_oss.c.orig	Wed Dec 30 17:28:45 1998
-+++ audio_oss.c	Thu Apr  8 01:18:25 1999
-@@ -17,7 +17,7 @@
+--- ./audio_oss.c.orig	Tue Oct  5 00:10:32 1999
++++ ./audio_oss.c	Sun Feb  6 03:42:31 2000
+@@ -19,7 +19,7 @@
  #define ARCH_esd_audio_devices
  const char *esd_audio_devices()
  {
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1 1999/04/07 23:21:26 tron Exp $
  }
  
  
-@@ -34,7 +34,7 @@
+@@ -36,7 +36,7 @@
          mode = O_RDWR;
  
      /* open the sound device */
