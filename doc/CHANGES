@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3424 2003/09/17 14:40:34 itojun Exp $
+$NetBSD: CHANGES,v 1.3425 2003/09/17 15:04:05 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3746,3 +3746,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated darcnes to 20010401nb1 [wiz 2003-09-17]
 	Updated kopete to 0.7.2 [jmmv 2003-09-17]
 	Updated bind9 to 9.2.2p1 [itojun 2003-09-17]
+	Updated catdoc 0.91.4nb1 [jmmv 2003-09-17]
+	Added catdoc-tk-0.91.4 [jmmv 2003-09-17]
