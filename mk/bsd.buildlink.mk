@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.48 2001/10/29 19:21:19 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.49 2001/10/31 14:29:04 tv Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -79,7 +79,8 @@
 # listed below.
 #
 # pre-configure			this target should have as dependencies any
-#				targets to be invoked; this is just usually	#				<pkgname>-buildlink and possibly
+#				targets to be invoked; this is just usually
+#				<pkgname>-buildlink and possibly
 #				<pkgname>-buildlink-config-wrapper
 #
 # <pkgname>-buildlink		this target should just invoke the
