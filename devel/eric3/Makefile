@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2005/01/23 20:41:45 recht Exp $
+# $NetBSD: Makefile,v 1.7 2005/02/24 20:27:51 drochner Exp $
 #
 
-DISTNAME=	eric-3.4.2
+DISTNAME=	eric-3.6.2
 CATEGORIES=	devel
-MASTER_SITES=	http://www.die-offenbachs.de/detlev/files/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eric-ide/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.die-offenbachs.de/detlev/eric3.html
