@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 1999/08/06 16:37:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.68 1999/08/10 03:02:01 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -121,6 +121,7 @@
     SUBDIR += swig
 #    SUBDIR += tclcheck
     SUBDIR += tkcvs
+    SUBDIR += tkdiff
 #    SUBDIR += tvision
 #    SUBDIR += vtcl
     SUBDIR += xdelta
