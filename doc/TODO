@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.627 2003/06/09 18:51:33 wiz Exp $
+$NetBSD: TODO,v 1.628 2003/06/09 19:09:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -82,6 +82,7 @@ Suggested package updates
 	o balsa-1.4.4
 	o balsa2-2.0.11
 	o bidwatcher-1.3.8
+	o biew-5.5.0
 	o bind-8.4.0
 	o bogofilter-0.11.2
 	o bzflag-1.7g0
@@ -103,6 +104,7 @@ Suggested package updates
 	o ddd-3.3.5
 	o disc-cover-1.5.2
 	o distcc-2.5.1
+	o dopewars-1.5.9
 	o doxygen-1.3.1
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
@@ -119,6 +121,7 @@ Suggested package updates
 	o freetds-0.61 [pkg/21395]
 	o fsviewer-0.2.5
 	o gabber-0.8.8
+	o galeon-1.2.11
 	o gauche-0.7 [kei]
 	o gawk-3.1.2
 	o gcpio-2.5 [pkg/20799]
@@ -131,7 +134,7 @@ Suggested package updates
 	o gettext-0.12.1
 	o gftp-2.0.14 [pkg/20250]
 	o ghostscript-8.00 (apfl)
-	o gkrellm-2.1.10 [pkgsrc-wip]
+	o gkrellm-2.1.12 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
 	o gliblib-1.2.3 [pkg/21776]
 	o gnome-python-1.99.13
@@ -144,6 +147,7 @@ Suggested package updates
 	o gq-0.6.0 [pkg/21284]
 	o grace-5.1.12
 	o gsed-4.0.7
+	o gtetrinet-0.7.2
 	o gtkglext-1.0.0
 	o gtkmm-2.2.2
 	o guile-1.6.4
@@ -214,6 +218,7 @@ Suggested package updates
 	o povray-3.5
 	o py-soappy-0.10.1 [pkg/21735]
 	o pygtk-0.6.11
+	o ratpoison-1.2.1
 	o rep-gtk-0.17
 	o rox-1.2.2
 	o rox-session-0.1.19
@@ -252,6 +257,7 @@ Suggested package updates
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o vttest-20030301
+	o wdm-1.25
 	o wine-20030508
 	o wmbiff-0.4.15
 	o wmweather-2.4.0
