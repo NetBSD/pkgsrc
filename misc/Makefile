@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2004/02/07 17:50:18 wiz Exp $
+# $NetBSD: Makefile,v 1.189 2004/02/11 23:08:39 jmmv Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -58,6 +58,7 @@ SUBDIR+=	gnome1-dirs
 SUBDIR+=	gnome2-dirs
 SUBDIR+=	gnome2-user-docs
 SUBDIR+=	gnome2-utils
+SUBDIR+=	gnuls
 SUBDIR+=	gok
 SUBDIR+=	gone
 SUBDIR+=	gperiodic
@@ -99,7 +100,6 @@ SUBDIR+=	less
 SUBDIR+=	libcdio
 SUBDIR+=	libutf
 SUBDIR+=	lile
-SUBDIR+=	linuxls
 SUBDIR+=	loco
 SUBDIR+=	logsurfer
 SUBDIR+=	lookup
