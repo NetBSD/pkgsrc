@@ -1,27 +1,30 @@
-# $NetBSD: Makefile,v 1.5 2002/02/18 15:14:42 seb Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/14 13:54:04 uebayasi Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
 
-DISTNAME=	eb-3.0
+DISTNAME=	eb-3.2.1
 CATEGORIES=	textproc japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/eb/appendix/ \
 		ftp://ftp.sra.co.jp/pub/misc/eb/
-DISTFILES=	${EBFILES} \
-		${LISTFILES} \
-		${APPENDIXFILES}
+DISTFILES=	${EB_DISTFILES} \
+		${EB_LISTS} \
+		${EB_APPENDICES}
 
 MAINTAINER=	uebayasi@soum.co.jp
 HOMEPAGE=	http://www.sra.co.jp/people/m-kasahr/eb/
 COMMENT=	C library for accessing EB, EBG, EBXA and EPWING CD-ROM dictionaries
 
-EBFILES=	${DISTNAME}${EXTRACT_SUFX}
-LISTFILES=	LIST \
+EB_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+EB_LISTS=	LIST \
 		LIST-ja
-APPENDIXFILES=	cencro-1.0.tar.gz \
+EB_APPENDICES=	\
+		cencro-1.0.tar.gz \
 		chujiten-2.3.tar.gz \
 		chujiten2-2.0.tar.gz \
 		chujiten6-2.3.tar.gz \
 		colloc-2.0.tar.gz \
 		crownfj-2.0.tar.gz \
+		crownfj2-1.0.tar.gz \
+		crowngj-1.0.tar.gz \
 		daihyakka-1.0.tar.gz \
 		daijirin-2.0.tar.gz \
 		dd75-2.0.tar.gz \
@@ -41,26 +44,29 @@ APPENDIXFILES=	cencro-1.0.tar.gz \
 		readers-2.2.tar.gz \
 		readers2-2.0.tar.gz \
 		superdic98-1.0.tar.gz
-EXTRACT_ONLY=	${EBFILES}
+EXTRACT_ONLY=	${EB_DISTFILES}
 
 DIST_SUBDIR=		eb
-USE_BUILDLINK_ONLY=	yes
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+USE_BUILDLINK_ONLY=	# Defined
+USE_LIBTOOL=		# Defined
+GNU_CONFIGURE=		# Defined
 CONFIGURE_ARGS+=	--with-zlib
-USE_GMAKE=		yes
+USE_GMAKE=		# Defined
+TEXINFO_OVERRIDE=	YES
+# For patterns like '... (install-info ...) ...'
+TEXINFO_SUBST_SED+=     -e "s!^\(	.*\)\([ 	'(]\)install-info\([ 	]\)!\1\2${INSTALL_INFO}\3!g"
 
-APPENDIXDIR=	${PREFIX}/share/eb/appendix
+EB_APPENDIXDIR=	${PREFIX}/share/eb/appendix
 
 post-extract:
 	cd ${WRKSRC} && ${RM} -rf zlib
 
 post-install:
-	for f in ${LISTFILES}; do \
-		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$f ${APPENDIXDIR}; \
+	for f in ${EB_LISTS}; do \
+		${INSTALL_DATA} ${_DISTDIR}/$${f} ${EB_APPENDIXDIR}; \
 	done
-	for f in ${APPENDIXFILES}; do \
-		${GTAR} -C ${APPENDIXDIR} -zxmf ${DISTDIR}/${DIST_SUBDIR}/$$f; \
+	for f in ${EB_APPENDICES}; do \
+		${GTAR} -C ${EB_APPENDIXDIR} -zxmf ${_DISTDIR}/$${f}; \
 	done
 
 .include "../../devel/gettext-lib/buildlink.mk"
