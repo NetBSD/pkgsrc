@@ -1,16 +1,14 @@
-# $NetBSD: Makefile.common,v 1.9 2001/08/06 17:44:45 pooka Exp $
-VIM_VERSION=		5.8
+# $NetBSD: Makefile.common,v 1.10 2001/10/04 10:18:12 martti Exp $
+VIM_VERSION=		6.0
 DISTNAME=		vim-${VIM_VERSION}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
 			ftp://ftp.fu-berlin.de/misc/editors/vim/unix/ \
 			ftp://ftp.twics.co.jp/pub/vim/unix/
-DISTFILES=		${DISTNAME}-src${EXTRACT_SUFX}
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pooka@netbsd.org
-HOMEPAGE=		http://www.vim.org
-
-CONFLICTS+=		vim-6*
+MAINTAINER=		martti@netbsd.org
+HOMEPAGE=		http://www.vim.org/
 
 GNU_CONFIGURE=		yes
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
+WRKSRC=			${WRKDIR}/vim60/src
