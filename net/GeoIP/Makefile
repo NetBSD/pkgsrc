@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:45 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/17 03:34:07 minskim Exp $
 #
 
 DISTNAME=	GeoIP-1.3.1
@@ -9,8 +9,10 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.maxmind.com/download/geoip/api/c/
 COMMENT=	Find the country from any IP address
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 USE_PKGINSTALL=		yes
 
