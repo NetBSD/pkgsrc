@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1165 2003/12/12 22:10:41 wiz Exp $
+$NetBSD: TODO,v 1.1166 2003/12/12 22:19:18 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -106,8 +106,8 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o GConf2-2.4.0.1 [pkg/23697]
-	o GConf2-ui-2.4.0.1 [pkg/23698]
+	o GConf2-2.4.0.1 [pkg/23697|jmmv]
+	o GConf2-ui-2.4.0.1 [pkg/23698|jmmv]
 	o ImageViewer-0.6.3
 	o SDL_gfx-2.0.10
 	o TeXmacs-1.0.2.10
