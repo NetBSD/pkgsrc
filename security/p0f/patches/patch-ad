@@ -1,0 +1,30 @@
+$NetBSD: patch-ad,v 1.1 2003/10/05 18:13:00 recht Exp $
+
+--- mk/SunOS~	2003-09-19 20:04:06.000000000 +0200
++++ mk/SunOS	2003-10-05 20:06:00.000000000 +0200
+@@ -5,9 +5,9 @@
+ # (C) Copyright 2000-2003 by Michal Zalewski <lcamtuf@coredump.cx>
+ #
+ 
+-CC      = gcc
+-LIBS    = -lpcap -I/opt/local/include -L/opt/local/lib -lsocket -lnsl 
+-CFLAGS  = -O3 -Wall -fomit-frame-pointer -funroll-loops
++#CC      = gcc
++LIBS    = $(LDFLAGS) -lpcap -lsocket -lnsl 
++#CFLAGS  = -O3 -Wall -fomit-frame-pointer -funroll-loops
+ FILE    = p0f
+ 
+ all: $(FILE) 
+@@ -17,10 +17,10 @@
+ static: $(FILE)-static 
+ 
+ $(FILE): $(FILE).c
+-	$(CC) $(CFLAGS) -o $@ $(FILE).c $(LIBS)
++	$(CC) $(CFLAGS) -o $@ $(FILE).c $(FILE)-query.c $(LIBS)
+ 
+ $(FILE)-static: $(FILE).c
+-	$(CC) -static $(CFLAGS) -o $@ $(FILE).c $(LIBS)
++	$(CC) -static $(CFLAGS) -o $@ $(FILE).c $(FILE)-query.c $(LIBS)
+ 
+ p0fq: test/p0fq
+ 
