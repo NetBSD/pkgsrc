@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/24 23:44:29 seb Exp $
+bin/sccs
+@unexec install-info --delete --info-dir=%D/info %D/info/cssc.info
+info/cssc.info
+info/cssc.info-1
+info/cssc.info-2
+info/cssc.info-3
+@exec install-info --info-dir=%D/info %D/info/cssc.info
+libexec/cssc/admin
+libexec/cssc/cdc
+libexec/cssc/delta
+libexec/cssc/get
+libexec/cssc/prs
+libexec/cssc/prt
+libexec/cssc/rmdel
+libexec/cssc/sact
+libexec/cssc/sccsdiff
+libexec/cssc/unget
+libexec/cssc/val
+libexec/cssc/what
+man/man1/sccs.1
+@dirrm libexec/cssc
