@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/14 14:41:01 tron Exp $
+$NetBSD: patch-aa,v 1.2 2001/09/22 16:22:30 tron Exp $
 
 --- src/main.c.orig	Sun May 27 05:26:22 2001
-+++ src/main.c	Tue Jun 12 23:17:55 2001
++++ src/main.c	Sat Sep 22 18:18:32 2001
 @@ -2,7 +2,9 @@
  #include "gnutella.h"
  
@@ -12,3 +12,28 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/14 14:41:01 tron Exp $
  
  #include "interface.h"
  #include "support.h"
+@@ -274,13 +276,19 @@
+ 
+         /* Auto-connect to the network. */
+         if(up_connections && !stop_host_get) {
++	    gint i;
++	    const gchar *hosts[] = { "connect1.gnutellanet.com" , "connect2.gnutellanet.com" , "connect3.gnutellanet.com" , "connect4.gnutellanet.com" , NULL };
+             guint32 autoConnectIp = 0;
+ 
+-            autoConnectIp = host_to_ip("gnutellahosts.com");
+-            if (autoConnectIp != 0)
+-            {
+-                 node_add(NULL, autoConnectIp, 6346);
+-            }
++	    i = 0;
++	    while (hosts[i] != NULL)
++	    {
++		autoConnectIp = host_to_ip(hosts[i++]);
++		if (autoConnectIp != 0)
++		{
++		    node_add(NULL, autoConnectIp, 6346);
++		}
++	    }
+         }
+     
+ 
