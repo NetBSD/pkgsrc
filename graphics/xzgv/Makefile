@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/05/22 09:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/25 23:48:42 zuntum Exp $
 
 DISTNAME=	xzgv-0.7
 CATEGORIES=	graphics
@@ -9,15 +9,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://xzgv.browser.org/
 COMMENT=	Image viewer
 
-DEPENDS+=	gtk+>=1.2.0:../../x11/gtk
-DEPENDS+=	glib-[0-9]*:../../devel/glib
-DEPENDS+=	libungif-[0-9]*:../../graphics/libungif
-DEPENDS+=	jpeg-[0-9]*:../../graphics/jpeg
-DEPENDS+=	png>=1.0.11:../../graphics/png
-DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
-DEPENDS+=	imlib>=1.0:../../graphics/imlib
-
 INFO_FILES=	xzgv
+USE_BUILDLINK_ONLY=yes
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 
@@ -28,5 +21,11 @@ do-install:
 	@for f in xzgv xzgv-1 xzgv-2 xzgv-3 ; do \
 	${INSTALL_DATA} ${WRKSRC}/doc/$$f ${PREFIX}/info ; done
 
+.include "../../x11/gtk/buildlink.mk"
+.include "../../devel/glib/buildlink.mk"
+.include "../../graphics/libungif/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
+.include "../../graphics/imlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
-
