@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/28 20:40:05 soren Exp $
+# $NetBSD: Makefile,v 1.3 2000/02/05 06:59:14 wiz Exp $
 # FreeBSD Id: Makefile,v 1.17 1999/04/24 09:25:32 kuriyama Exp
 
 DISTNAME=	db141
@@ -24,12 +24,12 @@ do-build:
 
 pre-install:
 	@[ -d ${INSTDIR} ] || ${MKDIR} ${INSTDIR}
-#	@find ${WRKDIR} -name '*~' -exec ${RM} {} \;
-#	@find ${WRKDIR} -name '*.orig' -exec ${RM} {} \;
+#	@${FIND} ${WRKDIR} -name '*~' -exec ${RM} {} \;
+#	@${FIND} ${WRKDIR} -name '*.orig' -exec ${RM} {} \;
 
 do-install:
 	@${CP} -Rp ${WRKDIR}/docbook/* ${INSTDIR}
-	@$(CHOWN) -R ${SHAREOWN}.${SHAREGRP} ${INSTDIR}
+	@${CHOWN} -R ${SHAREOWN}.${SHAREGRP} ${INSTDIR}
 
 post-install:
 	@${CAT} ${FILESDIR}/install-note
