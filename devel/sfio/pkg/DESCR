@@ -1,0 +1,45 @@
+Sfio is a portable library for managing I/O streams.  It provides
+similar functionality to the ANSI C Standard I/O functions known
+collectively as Stdio.  However, it has a distinct interface and is
+generally faster and more robust than most Stdio implementations. 
+Sfio also introduces a number of new features and concepts beyond
+Stdio stream I/O processing: 
+
++ Automatic locking to avoid concurrent stream accesses, 
++ I/O disciplines to pre/post-process read/write data from/to streams,
++ Stream stacking for recursive processing of nested streams, 
++ Stream pooling for automatic stream synchronization when I/O
+       operations are performed on different streams,
++ Buffer reservation for safe access to the internal buffers of streams,
++ Robust handling of variable-sized records, and 
++ Extensible printf/scanf-like formatting I/O operations. 
+
+For backward compatibility, Sfio provides two Stdio emulation
+packages.  An application with source code can include the header file
+stdio.h provided by Sfio instead of the native one to translate Stdio
+calls to Sfio calls.  An application already compiled with the native
+header file stdio.h can make use of Sfio functionality by linking with
+the library libstdio.a which emulates Stdio functions.  In fact, it is
+safe to mix and match modules that are compiled with either
+Sfio-provided or native stdio.h. 
+
+The current distribution of Sfio is Sfio1998.  This version of the
+library is portable to all known UNIX platforms including various
+flavors of IRIX, SUNOS, Solaris, Ultrix, MVS/OpenEdition, Linux and
+BSDI.  The library handles 64-bit streams on platforms that support
+64-bit files.  The formatting family of functions (e.g., sfprintf()
+and sfscanf()) have been extended so that applications can redefine
+the meanings of predefined patterns as well as define new patterns. 
+The manual page has more details on recent changes. 
+
+Below are papers related to Sfio: 
+
+David G. Korn and Kiem-Phong Vo, ``Sfio: Safe/Fast String/File IO'',
+Proceedings of the Summer '91 Usenix Conference, pp. 235-256, 1991. 
+
+Glenn S. Fowler, David G. Korn and Kiem-Phong Vo,
+``Feature-Based Portability'', Proceedings of the Usenix VHLL
+Conference, pp. 197-207, 1994.
+
+Kiem-Phong Vo, ``An Architecture for Reusable Libraries'',
+Proc. of the IEEE Fifth Int. Conf. on Software Reuse, 1998. 

@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/02 14:43:17 agc Exp $
+
+--- src/lib/sfio/Makefile	1998/10/27 17:01:58	1.1
++++ src/lib/sfio/Makefile	1998/10/27 17:03:57
+@@ -9,6 +9,8 @@
+ 
+ CCFLAGS = -O
+ 
++BINDIR=	../../../bin
++
+ SFIO=	sfexit.c sfclose.c sfclrlock.c sfcvt.c sfdlen.c sfexcept.c sfextern.c \
+ 	sffilbuf.c sfflsbuf.c sfprints.c sfgetd.c sfgetl.c sfgetr.c sfgetu.c \
+ 	sfllen.c sfmode.c sfmove.c sfnew.c sfnputc.c sfopen.c sfpeek.c \
+@@ -41,7 +43,7 @@
+ stdio $(VERSION) :LIBRARY:	$(STDIO_B)
+ 
+ ast_common.h : features/common
+-	iffe - run features/common > ast_common.h
++	${BINDIR}/iffe - run features/common > ast_common.h
+ sfstdgen : sfstdio.c
+ 	$(CC) -I. $(*) -o sfstdgen
+ sfstdhdr.h :
