@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/07 01:14:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/07 15:25:13 cjep Exp $
 #
 
 DISTNAME=	MuSE-0.9
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/MuSE/muse/}
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.dyne.org/muse/releases/ \
 		http://www.ljudmila.org/~jaromil/muse/releases/ \
-		ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/ 
+		ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://muse.dyne.org/
