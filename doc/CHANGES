@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7440 2004/10/15 00:36:01 grant Exp $
+$NetBSD: CHANGES,v 1.7441 2004/10/15 03:15:21 reed Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4727,3 +4727,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dcraw to 1.211 [kristerw 2004-10-14]
 	Updated verilog to 0.8 [dmcmahill 20040-10-14]
 	Updated evolution14 to 1.4.6nb2 [grant 2004-10-15]
+	Added inkscape-0.39nb1 [reed 2004-10-15]
