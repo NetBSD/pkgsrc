@@ -9,6 +9,8 @@ SRCS=   ckcmai.c ckucmd.c ckuusr.c ckuus2.c ckuus3.c ckuus4.c ckuus5.c \
 BINDIR=%%PREFIX%%/bin
 MANDIR=%%PREFIX%%/man
 
+MANINSTALL= maninstall catinstall
+
 CLEANFILES+= ckcpro.c ckcwart.o wart kermit.1
 
 DPADD=  ${LIBCURSES} ${LIBTERM}
