@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2004/08/10 14:20:57 ben Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/13 21:12:19 salo Exp $
+man/man8/cfagent.8
 man/man8/cfengine.8
+man/man8/cfenvd.8
+man/man8/cfenvgraph.8
+man/man8/cfexecd.8
+man/man8/cfkey.8
+man/man8/cfrun.8
+man/man8/cfservd.8
 share/doc/html/cfengine/cfengine-Anomalies.html
 share/doc/html/cfengine/cfengine-Reference.html
 share/doc/html/cfengine/cfengine-Tutorial.html
