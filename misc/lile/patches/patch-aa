@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:10:23 agc Exp $
+$NetBSD: patch-aa,v 1.3 1999/11/19 12:46:41 agc Exp $
 
---- ile.c.orig	Wed Jun 25 01:54:50 1997
-+++ ile.c	Wed Jun 25 01:55:24 1997
-@@ -65,7 +65,7 @@
+--- ile.c	Fri Nov 19 12:42:34 1999
++++ ile.c	Fri Nov 19 12:43:07 1999
+@@ -51,7 +51,7 @@
  #include <errno.h>
  #include <sys/ioctl.h>
  #include <sys/types.h>
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.2 1998/08/07 11:10:23 agc Exp $
 +#include <sys/dirent.h>
  #include <sys/file.h>
  #include <sys/time.h>
- /*
-@@ -75,7 +75,6 @@
+ #include <sys/wait.h>
+@@ -63,7 +63,6 @@
  /* Definitions of system stuff.  */
  extern int errno;
  
