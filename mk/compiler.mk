@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.26 2004/02/18 13:32:38 jlam Exp $
+# $NetBSD: compiler.mk,v 1.27 2004/03/31 09:38:36 sketch Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -53,7 +53,7 @@
 # CC_VERSION
 #	The compiler and version being used, e.g.,
 #
-#	.include "../../mk/bsd.prefs.mk"
+#	.include "../../mk/compiler.mk"
 #
 #	.if !empty(CC_VERSION:Mgcc-3*)
 #	...
