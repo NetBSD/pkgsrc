@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/24 08:58:36 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/03/28 22:06:15 xtraeme Exp $
 
-SHA1 (X430src-1.tgz) = 3aaf219e8c2d3eb299f150bd4a2554a84a19354b
-Size (X430src-1.tgz) = 10993622 bytes
-SHA1 (X430src-4.tgz) = b462d0bf7d1a947e9dbb18b5a9c08602969905e0
-Size (X430src-4.tgz) = 12906091 bytes
+SHA1 (XFree86-4.4.0-src-1.tgz) = 44b38a7044c82d0b2f785b0e6a935349abcb5d79
+Size (XFree86-4.4.0-src-1.tgz) = 11760814 bytes
+SHA1 (XFree86-4.4.0-src-4.tgz) = beba65576a085b9d1c0c4f950c4bc134f8d7d15d
+Size (XFree86-4.4.0-src-4.tgz) = 13057535 bytes
