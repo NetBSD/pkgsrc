@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.221 2002/12/21 10:54:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.222 2002/12/24 21:33:18 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -26,11 +26,11 @@ SUBDIR+=	apla
 SUBDIR+=	aqsis
 SUBDIR+=	artist
 SUBDIR+=	autotrace
+SUBDIR+=	avi-xmms
 SUBDIR+=	aview
 SUBDIR+=	aview-x11
 SUBDIR+=	avifile
 SUBDIR+=	avifile-devel
-SUBDIR+=	avi-xmms
 SUBDIR+=	barcode
 SUBDIR+=	bktr2jpeg
 SUBDIR+=	blender
@@ -116,6 +116,7 @@ SUBDIR+=	lcms
 SUBDIR+=	lib3ds
 SUBDIR+=	libart2
 SUBDIR+=	libexif
+SUBDIR+=	libexif-gtk
 SUBDIR+=	libflash
 SUBDIR+=	libgdgeda
 SUBDIR+=	libggi
