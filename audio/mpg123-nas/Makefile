@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/21 02:43:44 grant Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/31 14:25:37 wiz Exp $
 #
 
 DISTNAME=	mpg123-0.59r
@@ -22,7 +22,7 @@ FILESDIR=	${.CURDIR}/../mpg123/files
 CONFLICTS+=	mpg123-[0-9]*
 
 USE_X11BASE=		# defined
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
 # for OBJECT_FMT
 .include "../../mk/bsd.prefs.mk"
@@ -62,5 +62,5 @@ post-patch:
 		-e 's@^/@#/@g' \
 		<decode_i586.s.orig >decode_i586.s
 
-.include "../../audio/nas/buildlink.mk"
+.include "../../audio/nas/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
