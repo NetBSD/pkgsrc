@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.31 1999/10/07 17:41:55 tron Exp $
+# $NetBSD: Makefile,v 1.32 1999/11/06 11:58:45 tron Exp $
 
 DISTNAME=	mutt-${MUTT_VERSION}
 CATEGORIES=	mail
-MASTER_SITES=	ftp://ftp.guug.de/pub/mutt/ \
+MASTER_SITES=	ftp://ftp.mutt.org/pub/mutt/ \
 		ftp://ftp.gbnet.net/pub/mutt-international/ \
-		ftp://ftp.fu-berlin.de/pub/unix/mail/mutt/ \
-		ftp://ftp.gwdg.de/pub/unix/mail/mutt/international/ \
-		ftp://ftp.uib.no/pub/mutt/
+		ftp://ftp.funet.fi/pub/unix/mail/mutt/ \
+		ftp://ftp.uib.no/pub/mutt/ \
+		ftp://uiarchive.cso.uiuc.edu/pub/packages/mail/mutt/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mutt.org/
@@ -26,7 +26,7 @@ BUILD_DEFS+=	MUTT_INTERNATIONAL MUTT_VERSION
 
 .include "../../mk/bsd.pkg.mk"
 
-MUTT_BASE_VERSION=	1.0pre3
+MUTT_BASE_VERSION=	1.0
 .if defined(MUTT_INTERNATIONAL) && ${MUTT_INTERNATIONAL} == YES
 MUTT_VERSION=		${MUTT_BASE_VERSION}i
 
