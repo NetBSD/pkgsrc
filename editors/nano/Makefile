@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/07/21 16:44:38 martti Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/09 10:48:09 seb Exp $
 
 DISTNAME=	nano-1.0.9
 PKGREVISION=	1
@@ -13,7 +13,6 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
 
-USE_NEW_TEXINFO=	YES
 INFO_FILES=	nano.info
 
 .include "../../devel/gettext-lib/buildlink2.mk"
