@@ -1,0 +1,19 @@
+$NetBSD: patch-bc,v 1.1 2001/09/16 14:03:10 taya Exp $
+
+diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/reflect/xptcall/src/md/unix/Makefile.in
+--- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	Tue Jun 19 07:10:25 2001
++++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	Sun Sep 16 20:47:28 2001
+@@ -235,6 +235,13 @@
+ CPPSRCS		:= xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
+ ASFILES		:= xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
+ endif
++#   
++# NetBSD/SPARC64
++#   
++ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc64)
++CPPSRCS		:= xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_netbsd.cpp
++ASFILES		:= xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
++endif
+ #
+ # Solaris/SPARC
+ #
