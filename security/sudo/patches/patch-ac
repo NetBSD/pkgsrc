@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 1998/08/07 11:13:52 agc Exp $
+$NetBSD: patch-ac,v 1.5 1999/08/31 19:26:41 jlam Exp $
 
---- sudo.man.orig	Tue Jan 13 06:00:17 1998
-+++ sudo.man	Wed Jul  1 20:11:51 1998
-@@ -195,10 +195,11 @@
+--- sudo.man.orig	Sun Mar 28 23:37:03 1999
++++ sudo.man	Sun Aug 29 05:44:36 1999
+@@ -198,7 +198,8 @@
  .SH "DESCRIPTION"
  \fBsudo\fR allows a permitted user to execute a \fIcommand\fR
  as the superuser (real and effective uid and gid are set
@@ -11,17 +11,4 @@ $NetBSD: patch-ac,v 1.4 1998/08/07 11:13:52 agc Exp $
 +by using the user's own password.
  .PP
  \fBsudo\fR determines who is an authorized user by consulting the
--file \fI/etc/sudoers\fR.  By giving \fBsudo\fR the \f(CW-v\fR flag a user
-+file \fI/usr/pkg/etc/sudoers\fR.  By giving \fBsudo\fR the \f(CW-v\fR flag a user
- can update the time stamp without running a \fIcommand.\fR
- The password prompt itself will also time out if the password is
- not entered with N minutes (again, this is defined at installation
-@@ -321,7 +322,7 @@
- .SH "FILES"
- .PP
- .Vb 1
--\& /etc/sudoers           file of authorized users.
-+\& /usr/pkg/etc/sudoers           file of authorized users.
- .Ve
- .SH "ENVIRONMENT VARIABLES"
- .PP
+ file \fI/etc/sudoers\fR.  By giving \fBsudo\fR the \f(CW-v\fR flag a user

@@ -1,35 +1,22 @@
-$NetBSD: patch-af,v 1.3 1999/05/09 14:10:28 frueauf Exp $
+$NetBSD: patch-af,v 1.4 1999/08/31 19:26:41 jlam Exp $
 
---- configure.in.orig	Mon Mar 29 06:05:07 1999
-+++ configure.in	Sun May  9 14:50:26 1999
-@@ -52,8 +52,8 @@
- dnl
- test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
- test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
--test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
--test "$sysconfdir" = '${prefix}/etc' && sysconfdir='/etc'
-+test "$sbindir" = '${exec_prefix}/sbin' || sbindir='$(exec_prefix)/sbin'
-+test "$sysconfdir" = '${prefix}/etc' || sysconfdir='/etc'
- 
- dnl
- dnl Options for --with
-@@ -139,6 +139,19 @@
-     no)		;;
-     *)		echo "Ignoring unknown argument to --with-csops: $with_csops"
+--- configure.in.orig	Thu Jul 29 03:20:38 1999
++++ configure.in	Sun Aug 29 05:54:13 1999
+@@ -141,6 +141,17 @@
  		;;
-+esac])
-+
-+AC_ARG_WITH(nbsdops,[  --with-nbsdops         add NetBSD standard options],
-+[case $with_nbsdops in
-+    yes)        OPTIONS="${OPTIONS} -DIGNORE_DOT_PATH -DENV_EDITOR -DUSE_TTY_TI
-+CKETS"
-+		sbindir='$(exec_prefix)/sbin'
-+		echo 'nbsdops--adding options: IGNORE_DOT_PATH ENV_EDITOR USE_T
-+TY_TICKETS'
-+		;;
-+    no)         ;;
-+    *)          echo "Ignoring unknown argument to --with-nbsdops: $with-nbsdop
-+s"
  esac])
  
++AC_ARG_WITH(nbsdops, [  --with-nbsdops          add NetBSD standard options],
++[case $with_nbsdops in
++    yes)	OPTIONS="${OPTIONS} -DIGNORE_DOT_PATH -DENV_EDITOR -DUSE_TTY_TICKETS"
++		sbindir='$(exec_prefix)/sbin'
++		echo 'nbsdops--adding options: IGNORE_DOT_PATH ENV_EDITOR USE_TTY_TICKETS'
++		;;
++    no)		;;
++    *)		echo "Ignoring unknown argument to --with-nbsdops: $with-nbsdops"
++		;;
++esac])
++
  AC_ARG_WITH(skey, [  --with-skey             enable S/Key support ],
+ [case $with_skey in
+     yes)	AC_DEFINE(HAVE_SKEY)
