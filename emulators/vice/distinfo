@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2002/08/08 11:59:36 wiz Exp $
+$NetBSD: distinfo,v 1.7 2002/09/07 09:17:12 kristerw Exp $
 
-SHA1 (vice-1.9.tar.gz) = 085726784887fe7629a0d5413c6df77c1e8e97ba
-Size (vice-1.9.tar.gz) = 3056898 bytes
+SHA1 (vice-1.10.tar.gz) = 13f89c5302d2601cf136e200305b503835ca067f
+Size (vice-1.10.tar.gz) = 3111990 bytes
 SHA1 (64gs.390852-01.bin) = 21940ef5f1bfe67d7537164f7ca130a1095b067a
 Size (64gs.390852-01.bin) = 16384 bytes
 SHA1 (kernal.4064.901246-01.bin) = 6c4fa9465f6091b174df27dfe679499df447503c
@@ -9,7 +9,6 @@ Size (kernal.4064.901246-01.bin) = 8192 bytes
 SHA1 (kernal.sx.251104-04.bin) = aa136e91ecf3c5ac64f696b3dbcbfc5ba0871c98
 Size (kernal.sx.251104-04.bin) = 8192 bytes
 SHA1 (patch-ab) = 0be2ec8b98a50e5c879095b1d0327c802b7740e2
-SHA1 (patch-ac) = 04181c249239e13ad1859532840154499da0fe4c
 SHA1 (patch-ad) = ea9f6ebb3696591d1f0c4d496bff41fe1c8a8a73
 SHA1 (patch-ae) = 8e595b5b304fe2f3b6084fb30d569d0186d3d0c7
 SHA1 (patch-af) = b2c8e616f1000ae635c9b88486725f35bd8dd524
