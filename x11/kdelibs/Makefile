@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1999/02/19 21:55:24 tron Exp $
+# $NetBSD: Makefile,v 1.28 1999/03/04 14:59:24 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=       http://www.kde.org/
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png-1.0.2:../../graphics/png
+DEPENDS+=	png-1.0.3:../../graphics/png
 DEPENDS+=	qt-1.42:../../x11/qt
 DEPENDS+=	tiff-3.4:../../graphics/tiff
 
