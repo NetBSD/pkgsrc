@@ -1,0 +1,65 @@
+--- Makefile.in.orig	Sun May 15 11:28:49 1994
++++ Makefile.in	Fri May  8 14:22:13 1998
+@@ -74,9 +74,7 @@
+ 
+ TEXI_F = gdbm.info
+      
+-SRCS = $(DBM_CF) $(NDBM_CF) $(GDBM_CF) $(TEST_CF)
+-
+-OBJS = $(DBM_OF) $(NDBM_OF) $(GDBM_OF) @ALLOCA@
++SRCS = $(DBM_CF) $(NDBM_CF) $(GDBM_CF)
+ 
+ HDRS = gdbmdefs.h extern.h gdbmerrno.h systems.h dbm.h ndbm.h gdbmconst.h \
+ 	proto.h
+@@ -88,12 +86,21 @@
+ 
+ DISTFILES = $(SRCS) $(HDRS) $(MSCFILES)
+ 
+-all: libgdbm.a
++# for bsd.lib.mk to build shared lib easily
++LIB = gdbm
++SHLIB_MAJOR=1
++SHLIB_MINOR=73
++NOPROFILE=1
++NOLINT=1
++
++all: libgdbm.a libgdbm_pic.a libgdbm.so.${SHLIB_MAJOR}.${SHLIB_MINOR}
+ 
+ progs: $(PROGS)
+ 
+-install: libgdbm.a gdbm.h gdbm.info
++install: libgdbm.a libgdbm_pic.a libgdbm.so.${SHLIB_MAJOR}.${SHLIB_MINOR} gdbm.h gdbm.info
+ 	$(INSTALL_DATA) libgdbm.a $(libdir)/libgdbm.a
++	$(INSTALL_DATA) libgdbm_pic.a $(libdir)/libgdbm_pic.a
++	$(INSTALL_DATA) libgdbm.so.${SHLIB_MAJOR}.${SHLIB_MINOR} $(libdir)
+ 	$(INSTALL_DATA) gdbm.h $(includedir)/gdbm.h
+ 	$(INSTALL_DATA) $(srcdir)/gdbm.3 $(man3dir)/gdbm.3
+ 	$(INSTALL_DATA) $(srcdir)/gdbm.info $(infodir)/gdbm.info
+@@ -102,11 +109,6 @@
+ 	$(INSTALL_DATA) $(srcdir)/dbm.h $(includedir)/dbm.h
+ 	$(INSTALL_DATA) $(srcdir/ndbm.h $(includedir)/ndbm.h
+ 
+-libgdbm.a: $(OBJS) gdbm.h
+-	rm -f libgdbm.a
+-	ar q libgdbm.a $(OBJS)
+-	$(RANLIB) libgdbm.a
+-
+ gdbm.h:	gdbm.proto gdbmerrno.h gdbm.proto2
+ 	rm -f gdbm.h
+ 	cp $(srcdir)/gdbm.proto gdbm.h
+@@ -157,9 +159,6 @@
+ gdbm.dvi:
+ 	$(TEXI2DVI) $(srcdir)/gdbm.texinfo
+ 
+-clean:
+-	rm -f $(PROGS) $(TEX_F) *.o core junk*
+-
+ mostlyclean: clean
+ 
+ distclean: clean
+@@ -227,3 +226,5 @@
+ testndbm.o:	autoconf.h ndbm.h
+ tdbm.o:		autoconf.h
+ conv2gdbm.o:	autoconf.h gdbm.h
++
++.include <bsd.lib.mk>
