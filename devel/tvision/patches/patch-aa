@@ -1,13 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/17 01:18:08 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2004/09/10 19:32:44 wiz Exp $
 
---- lib/drawbuf.h.orig	Fri May 11 12:30:15 2001
-+++ lib/drawbuf.h	Fri May 11 12:31:46 2001
-@@ -97,6 +97,8 @@
+--- myendian.h.orig	2001-07-25 16:09:37.000000000 +0200
++++ myendian.h
+@@ -32,6 +32,10 @@
  
- #ifdef __FreeBSD__
  #include <machine/endian.h>
+ 
 +#elif defined(__NetBSD__)
++
 +#include <sys/endian.h>
- #else
- #include <endian.h>
- #endif
++
+ #elif sun
+ 
+ #define LITTLE_ENDIAN	1234
