@@ -1,3 +1,34 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/13 22:39:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/15 03:30:49 wiz Exp $
 bin/gnofin
+lib/gnofin/plugins/libcbb.a
+lib/gnofin/plugins/libcbb.la
+lib/gnofin/plugins/libcbb.so.0.0
+lib/gnofin/plugins/libfind.a
+lib/gnofin/plugins/libfind.la
+lib/gnofin/plugins/libfind.so.0.0
+lib/gnofin/plugins/libhtml.a
+lib/gnofin/plugins/libhtml.la
+lib/gnofin/plugins/libhtml.so.0.0
+lib/gnofin/plugins/liblatex.a
+lib/gnofin/plugins/liblatex.la
+lib/gnofin/plugins/liblatex.so.0.0
+lib/gnofin/plugins/libqif.a
+lib/gnofin/plugins/libqif.la
+lib/gnofin/plugins/libqif.so.0.0
+lib/gnofin/plugins/libreconcile.a
+lib/gnofin/plugins/libreconcile.la
+lib/gnofin/plugins/libreconcile.so.0.0
+lib/gnofin/plugins/libsched.a
+lib/gnofin/plugins/libsched.la
+lib/gnofin/plugins/libsched.so.0.0
+lib/gnofin/plugins/libtext.a
+lib/gnofin/plugins/libtext.la
+lib/gnofin/plugins/libtext.so.0.0
+share/gnome/apps/Applications/gnofin.desktop
+share/locale/cs/LC_MESSAGES/gnofin.mo
+share/locale/fr/LC_MESSAGES/gnofin.mo
+share/locale/pt_BR/LC_MESSAGES/gnofin.mo
 man/man1/gnofin.1
+@unexec rmdir -p %D/share/gnome/apps/Applications 2> /dev/null || true
+@dirrm lib/gnofin/plugins
+@dirrm lib/gnofin
