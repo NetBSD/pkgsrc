@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/23 19:18:51 fredb Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/04/28 04:07:45 fredb Exp $
 bin/achfile
 bin/acleandir.rc
 bin/add_netatalk_printer
@@ -77,6 +77,7 @@ lib/libatalk.a
 lib/libatalk.la
 libexec/netatalk/afpd
 libexec/netatalk/atalkd
+libexec/netatalk/etc2ps.sh
 libexec/netatalk/ifmpap
 libexec/netatalk/ifmpaprev
 libexec/netatalk/ifpap
