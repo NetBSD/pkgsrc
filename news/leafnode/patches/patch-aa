@@ -1,0 +1,58 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/06/16 11:34:26 cjep Exp $
+
+--- Makefile.in.orig	Wed Apr 17 19:39:31 2002
++++ Makefile.in
+@@ -587,14 +587,14 @@
+ 	done
+ sysconfDATA_INSTALL = $(INSTALL_DATA)
+ install-sysconfDATA: $(sysconf_DATA)
+-	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
+-	@list='$(sysconf_DATA)'; for p in $$list; do \
+-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+-	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f"; \
+-	  $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f; \
+-	done
++#	@$(NORMAL_INSTALL)
++#	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
++#	@list='$(sysconf_DATA)'; for p in $$list; do \
++#	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
++#	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++#	  echo " $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f"; \
++#	  $(sysconfDATA_INSTALL) $$d$$p $(DESTDIR)$(sysconfdir)/$$f; \
++#	done
+ 
+ uninstall-sysconfDATA:
+ 	@$(NORMAL_UNINSTALL)
+@@ -995,18 +995,18 @@
+ 	rpm -ba leafnode.spec
+ 
+ install-data-hook: quickmkdir amiroot
+-	set -e ; for i in . leaf.node failed.postings interesting.groups \
+-		out.going message.id ; do \
+-        mkdir -p $(DESTDIR)$(SPOOLDIR)/$$i ; \
+-	if ./amiroot ; then \
+-	 chown news:news $(DESTDIR)$(SPOOLDIR)/$$i ; \
+-	 chmod 2775      $(DESTDIR)$(SPOOLDIR)/$$i ; fi ; \
+-	done 
+-	d="`dirname $(DESTDIR)@LOCKFILE@`" ; mkdir -p "$${d}" && \
+-	if ./amiroot ; then \
+-          chown news:news "$${d}" ; \
+-	  chmod 2775 "$${d}" ; fi
+-	./quickmkdir $(DESTDIR)
++#	set -e ; for i in . leaf.node failed.postings interesting.groups \
++#		out.going message.id ; do \
++#        mkdir -p $(DESTDIR)$(SPOOLDIR)/$$i ; \
++#	if ./amiroot ; then \
++#	 chown news:news $(DESTDIR)$(SPOOLDIR)/$$i ; \
++#	 chmod 2775      $(DESTDIR)$(SPOOLDIR)/$$i ; fi ; \
++#	done 
++#	d="`dirname $(DESTDIR)@LOCKFILE@`" ; mkdir -p "$${d}" && \
++#	if ./amiroot ; then \
++#          chown news:news "$${d}" ; \
++#	  chmod 2775 "$${d}" ; fi
++#	./quickmkdir $(DESTDIR)
+ 
+ uninstall-local:
+ 	rm -rf $(DESTDIR)$(SPOOLDIR) $(DESTDIR)@LOCKFILE@
