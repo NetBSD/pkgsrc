@@ -1,3 +1,4 @@
-$NetBSD: md5,v 1.6 1999/07/10 10:39:03 tron Exp $
+$NetBSD: md5,v 1.7 2000/02/18 11:04:10 itojun Exp $
 
 MD5 (mpg123-0.59r.tar.gz) = 95df59ad1651dd2346d49fafc83747e7
+MD5 (mpg123-059r-v6-20000111.diff.gz) = e563e5fe1276cc1e8a9b01aef53dda6d
