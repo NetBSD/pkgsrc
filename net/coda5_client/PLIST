@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:03 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/20 19:28:25 jlam Exp $
 bin/cfs
 bin/clog
 bin/cmon
+bin/coda_replay
 bin/codacon
 bin/cpasswd
 bin/ctokens
@@ -11,17 +12,31 @@ bin/hoard
 bin/parser
 bin/removeinc
 bin/repair
-bin/replay
 bin/spy
 bin/xaskuser
 bin/xfrepair
-etc/coda/sidekick.intr.ex
-etc/coda/venus.conf.ex
-sbin/au
+man/man1/cfs.1
+man/man1/clog.1
+man/man1/cmon.1
+man/man1/cpasswd.1
+man/man1/ctokens.1
+man/man1/cunlog.1
+man/man1/hoard.1
+man/man1/repair.1
+man/man1/spy.1
+man/man8/au.8
+man/man8/coda_replay.8
+man/man8/venus.8
+man/man8/venus-au.8
+man/man8/vutil.8
 sbin/sidekick
 sbin/venus
+sbin/venus-au
 sbin/venus-coda-setup-ports
 sbin/venus-codaconfedit
 sbin/venus-setup
 sbin/volmunge
 sbin/vutil
+share/examples/coda/sidekick.intr.ex
+share/examples/coda/venus.conf.ex
+@unexec ${RMDIR} %D/share/examples/coda 2>/dev/null || ${TRUE}
