@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5807 2004/05/03 20:57:24 jmmv Exp $
+$NetBSD: CHANGES,v 1.5808 2004/05/03 20:59:55 mrauch Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2338,3 +2338,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated zenity to 2.6.1 [jmmv 2004-05-03]
 	Updated GConf2 to 2.6.1 [jmmv 2004-05-03]
 	Updated GConf2-ui to 2.6.1 [jmmv 2004-05-03]
+	Updated openoffice to 1.1.1 [mrauch 2004-05-03]
