@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: pxe,v 1.1.1.1 2001/08/06 09:46:47 rh Exp $
+#	$NetBSD: pxe,v 1.2 2001/11/06 05:55:05 cjs Exp $
 #
 
 # PROVIDE: pxe
@@ -10,7 +10,7 @@
 
 name="pxe"
 command="@@PREFIX@@/sbin/${name}"
-required_files="@@PREFIX@@/etc/${name}.conf"
+required_files="/etc/${name}.conf"
 
 load_rc_config $name
 run_rc_command "$1"
