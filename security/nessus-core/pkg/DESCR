@@ -1,0 +1,6 @@
+The Nessus Security Scanner is a  security  auditing  tool made
+up  of  two  parts  :  a  server, and a client.  The server,
+nessusd(8) is in charge of  the  attacks,  whereas the client nessus
+provides an interface to the user.
+
+Nessus is an X11 client based on the Gimp ToolKit (GTK).
