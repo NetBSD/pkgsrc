@@ -1,4 +1,4 @@
-# $NetBSD: x11.buildlink.mk,v 1.2 2001/09/25 23:49:57 jlam Exp $
+# $NetBSD: x11.buildlink.mk,v 1.3 2001/10/01 17:14:40 jlam Exp $
 #
 # This Makefile fragment is included by packages that use X11.
 #
@@ -9,6 +9,7 @@
 # (2) Include this Makefile fragment in the package Makefile.
 #
 # NOTE: This file must be included _before_ bsd.pkg.mk.
+# NOTE: This file should _not_ be included in any package's buildlink.mk file.
 
 .if !defined(X11_BUILDLINK_MK)
 X11_BUILDLINK_MK=	# defined
@@ -26,7 +27,7 @@ CONFIGURE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 MAKE_ENV+=		BUILDLINK_X11_DIR="${BUILDLINK_X11_DIR}"
 
 BUILDLINK_X11_CPPFLAGS=	-I${BUILDLINK_X11_DIR}/include
-BUILDLINK_X11_LDFLAGS=	-L${BUILDLINK_X11_DIR}/lib
+BUILDLINK_X11_LDFLAGS=	-L${BUILDLINK_X11_DIR}/lib -Wl,-R${X11BASE}/lib
 
 # We just append to these values, as there's no need for the BUILDLINK_X11
 # flags to be listed in the beginning; these are just the X11R6 headers and
