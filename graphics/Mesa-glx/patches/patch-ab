@@ -1,13 +1,94 @@
-$NetBSD: patch-ab,v 1.1 1999/10/01 18:43:18 tron Exp $
+$NetBSD: patch-ab,v 1.2 2000/04/11 22:36:05 tron Exp $
 
---- servGL/hwglx/mga/Makefile.in.orig	Sat Jul 31 09:07:55 1999
-+++ servGL/hwglx/mga/Makefile.in	Fri Oct  1 19:43:02 1999
-@@ -80,7 +80,7 @@
- # -------------
+--- libGL/Makefile.in.orig	Sun Feb 27 13:52:53 2000
++++ libGL/Makefile.in	Thu Apr  6 23:29:08 2000
+@@ -14,7 +14,7 @@
+ # These define the name/version of the shared library we're building
+ # ------------------------------------------------------------------
+ LIBNAME = GL
+-SOGLREV = 1.0
++SOGLREV = 3:0
  
- mgaregs.h : mgaregs.pl
--	./mgaregs.pl
-+	${PERL} ./mgaregs.pl
+ # Source and Object files
+ # -----------------------
+@@ -23,7 +23,6 @@
+ 	map_points.c pointers.c glx_varray.c direct_protocol.c 
  
- #tritmpl.h : tmplgen.sh
- #	./tmplgen.sh triangle.tmpl
+ OBJS = ${SRCS:.c=.o}
+-UNSHARED_OBJS = unshared/*.o
+ 
+ 
+ # Additional compiler rules
+@@ -50,22 +49,12 @@
+ 	${CC} ${ALL_CFLAGS} -E $*.c > $@
+ 
+ .c.o:
+-ifeq "${USE_DYNAMIC_MODULE}" "yes"
+-	${RM} $@
+-	${CC} ${ALL_CFLAGS} ${SHARED_CFLAGS} -c $<
+-else
+-	${RM} unshared/$@
+-	${CC} ${ALL_CFLAGS} -c $< -o unshared/$@
+-endif
++	${LIBTOOL} ${CC} ${ALL_CFLAGS} -c $< 
+ 
+ # Main targets
+ # ------------
+ 
+-ifeq "${USE_DYNAMIC_MODULE}" "yes"
+-all : lib${LIBNAME}.so.${SOGLREV}
+-else
+-all : unshared-subdir lib${LIBNAME}.a
+-endif
++all : lib${LIBNAME}.la
+ 
+ 
+ clean :
+@@ -78,20 +67,8 @@
+ 	${DEPEND} -f .deps -- ${ALL_CFLAGS} -- ${SRCS}
+ 
+ 
+-ifeq "${USE_DYNAMIC_MODULE}" "yes"
+-install: lib${LIBNAME}.so.${SOGLREV}
+-	@if [ -d ${INSTALL_libdir} ]; then set +x; \
+-	else (set -x; ${MKDIR} ${INSTALL_libdir}); fi
+-	${INSTALL} ${INSTALLFLAGS} ${INSTBINFLAGS} lib${LIBNAME}.so.${SOGLREV} ${INSTALL_libdir}
+-	@T=`echo ${INSTALL_libdir}/lib${LIBNAME}.so.${SOGLREV} | sed 's/\.[^\.]*$$//'`; set -x; ${RM} $$T && ${LN} lib${LIBNAME}.so.${SOGLREV} $$T
+-	${RM} ${INSTALL_libdir}/lib${LIBNAME}.so
+-	${LN} lib${LIBNAME}.so.${SOGLREV} ${INSTALL_libdir}/lib${LIBNAME}.so
+-else
+-install: lib${LIBNAME}.a
+-	@if [ -d ${INSTALL_libdir} ]; then set +x; \
+-	else (set -x; ${MKDIR} ${INSTALL_libdir}); fi
+-	${INSTALL} ${INSTALLFLAGS} ${INSTBINFLAGS} lib${LIBNAME}.a ${INSTALL_libdir}
+-endif
++install: lib${LIBNAME}.la
++	${LIBTOOL} ${BSD_INSTALL_DATA} $< ${INSTALL_libdir}
+ 
+ tags :
+ 	${TAGS} -w *.[ch]
+@@ -109,21 +86,9 @@
+ render.c: genlib.tcl genGL.tcl
+ 	${TCLSH} genlib.tcl
+ 
+-lib${LIBNAME}.so.${SOGLREV} : render.c ${OBJS}
+-	${RM} $@~
+-	@SONAME=`echo $@ | sed 's/\.[^\.]*$$//'`; set -x; \
+-	if [ `uname` = "SunOS" ] ; then \
+-		${CC} -o ./$@~ ${SHARED_LDFLAGS} -Wl,-h,$$SONAME ${OBJS} \
+-		${XLIBDIR} ${XLIBS} ${LIBS} ${MATHLIBS}; \
+-	else \
+-		${CC} -o ./$@~ ${SHARED_LDFLAGS} -Wl,-soname,$$SONAME ${OBJS} \
+-		${XLIBDIR} ${XLIBS} ${LIBS} ${MATHLIBS}; \
+-	fi; \
+-	${RM} $$SONAME; ${LN} $@ $$SONAME; \
+-	${RM} $@
+-	${MV} $@~ $@
+-	${RM} lib${LIBNAME}.so
+-	${LN} $@ lib${LIBNAME}.so
++lib${LIBNAME}.la : render.c ${OBJS}
++	${LIBTOOL} --mode=link ${CC} -rpath ${INSTALL_libdir} \
++	  -version-info ${SOGLREV} -o $@ ${OBJS:.o=.lo}
+ 
+ lib${LIBNAME}.a : render.c ${UNSHARED_OBJS}
+ 	${RM} $@~

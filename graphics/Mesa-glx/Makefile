@@ -1,57 +1,67 @@
-# $NetBSD: Makefile,v 1.7 2000/04/05 21:08:14 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/04/11 22:36:04 tron Exp $
 
-DISTNAME=	glx-19990804
-PKGNAME=	Mesa-${DISTNAME:S/-/-${GLX_CHIPSET}-/}
+DISTNAME=	glx-20000407
+PKGNAME=	Mesa-${DISTNAME}
 CATEGORIES=	graphics
-MASTER_SITES=	http://glx.on.openprojects.net/
+MASTER_SITES=	http://snow.ashlu.bc.ca/glx/snapshots/
 EXTRACT_SUFX=	.tar.bz2
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
+		MesaLib-${MESA_VERSION}${EXTRACT_SUFX} \
+		MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}		
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://utah-glx.sourceforge.net/
 
-BROKEN=		update required for Mesa 3.1.
-
 BUILD_DEPENDS+=	${PERL}:../../lang/perl5
+BUILD_DEPENDS+=	${AUTOCONF}:../../devel/autoconf
 BUILD_DEPENDS+=	${TCLSH}:../../lang/tcl80
-BUILD_DEPENDS+=	${MESA_WRKSRC}/lib/libMesaGL.a:${MESA_PKGDIR}:build
 
 CONFLICTS+=		Mesa-*
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
-
-# Either "mga" (Matrox MGA 200 and 400) or "tnt" (Riva TNT and TNT 2)
-GLX_CHIPSET?=	mga
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 USE_X11BASE=		yes
-CONFIGURE_ARGS+=	--with-mmx-asm=no --with-3dnow-asm=no \
-			--with-chipset=${GLX_CHIPSET} \
-			--with-mesa=${MESA_WRKSRC}
+CONFIGURE_ARGS+=	--enable-static --with-mesa=${MESA_WRKSRC}
 CONFIGURE_ENV+=		TCLSH=${TCLSH}
 
-BUILD_DEFS+=	GLX_CHIPSET
-MAKE_ENV+=		PERL=${PERL}
-MESA_PKGDIR=	../Mesa
-MESA_VERSION=	3.0
-MESA_WRKSRC=	${BUILD_ROOT}/graphics/Mesa/${WRKDIR:T}/Mesa-${MESA_VERSION}
+AUTOCONF=	${LOCALBASE}/bin/autoconf
+WRKSRCDIRS=	${MESA_WRKSRC} ${WRKSRC} ${WRKSRC}/docs
+MAKE_ENV+=	PERL=${PERL}
+MESA_VERSION=	3.1
+MESA_WRKSRC=	${WRKDIR}/Mesa-${MESA_VERSION}
 PERL=		${LOCALBASE}/bin/perl
-PLIST_SRC=	${WRKDIR}/PLIST
 TCLSH=		${LOCALBASE}/bin/tclsh8.0
 
-pre-install:
-	cd ${MESA_PKGDIR} && ${MAKE} do-install
+pre-configure:
+	@cd ${WRKSRC} && ${AUTOCONF} && cd docs && ${AUTOCONF}
 
-post-install:
-	cd ${PREFIX}/lib; \
-	for EXT in a so.${MESA_VERSION} ; do \
-	  ${LN} -fs libGL.$${EXT} libMesaGL.$${EXT}; \
-	  ${LN} -fs libGLU.$${EXT} libMesaGLU.$${EXT}; \
+do-configure:
+	@for DIR in ${WRKSRCDIRS}; do \
+	  cd $$DIR && \
+	  ${SETENV} CC="${CC}" ac_cv_path_CC="${CC}" \
+	    CFLAGS="${CFLAGS}" \
+	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
+	    INSTALL_DATA="${INSTALL_DATA}" \
+	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
+	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
+	    ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}; \
 	done
-	@${CP} ${MESA_PKGDIR}/pkg/PLIST ${PLIST_SRC}
-	@${ECHO} "lib/modules/glx.so" >> ${PLIST_SRC}
 
-pre-clean:
-	@cd ${MESA_PKGDIR} && ${MAKE} clean
+do-build:
+	@for DIR in ${WRKSRCDIRS}; do \
+	  cd $$DIR && \
+	  ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} \
+	    ${ALL_TARGET}; \
+	done
+
+do-install:
+	@for DIR in ${WRKSRCDIRS}; do \
+	  cd $$DIR && \
+	  ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} \
+	    ${INSTALL_TARGET}; \
+	done
+	${INSTALL_DATA} ${WRKSRC}/glx.conf ${PREFIX}/etc/glx.conf.default
 
 .include "../../mk/bsd.pkg.mk"
