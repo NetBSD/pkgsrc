@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2004/10/10 11:58:29 grant Exp $
 
---- configure.orig	Fri Oct 19 19:24:15 2001
+--- configure.orig	2001-10-20 10:24:15.000000000 +1000
 +++ configure
 @@ -4776,6 +4776,7 @@ fi
      # Step 3: set configuration options based on system name and version.
@@ -103,7 +103,26 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
  		
  fi
-@@ -5569,6 +5592,9 @@ EOF
+@@ -5401,7 +5424,7 @@ fi
+ 	Rhapsody-*|Darwin-*)
+ 	    SHLIB_CFLAGS="-fno-common"
+ 	    SHLIB_LD="cc -dynamiclib \${LDFLAGS}"
+-	    TCL_SHLIB_LD_EXTRAS="-compatibility_version ${TCL_MAJOR_VERSION} -current_version \${VERSION} -install_name \${LIB_RUNTIME_DIR}/\${TCL_LIB_FILE} -prebind -seg1addr a000000"
++	    TCL_SHLIB_LD_EXTRAS="-dynamiclib -compatibility_version ${TCL_MAJOR_VERSION} -current_version \${VERSION} -install_name \${LIB_RUNTIME_DIR}/\${TCL_LIB_FILE} -prebind -seg1addr a000000"
+ 	    SHLIB_LD_LIBS="${LIBS}"
+ 	    SHLIB_SUFFIX=".dylib"
+ 	    DL_OBJS="tclLoadDyld.o"
+@@ -5410,6 +5433,9 @@ fi
+ 	    LD_SEARCH_FLAGS=""
+ 	    CFLAGS_OPTIMIZE="-O3"
+ 	    EXTRA_CFLAGS="-arch ppc -pipe"
++	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.dylib'
++	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+ 	NEXTSTEP-*)
+ 	    SHLIB_CFLAGS=""
+@@ -5569,6 +5595,9 @@ EOF
  	    DL_LIBS="-ldl"
  	    LDFLAGS=""
  	    LD_SEARCH_FLAGS='-Wl,-R,${LIB_RUNTIME_DIR}'
@@ -113,7 +132,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  	    ;;
  	SunOS-5*)
  
-@@ -5616,6 +5642,9 @@ EOF
+@@ -5616,6 +5645,9 @@ EOF
  	    else
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
@@ -123,7 +142,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
-@@ -6103,7 +6132,7 @@ if test "${SHARED_BUILD}" = "1" -a "${SH
+@@ -6103,7 +6135,7 @@ if test "${SHARED_BUILD}" = "1" -a "${SH
      if test "x$DL_OBJS" = "xtclLoadAout.o"; then
  	MAKE_LIB="\${STLIB_LD} \$@ \${OBJS}"
      else
@@ -132,7 +151,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
      fi
  else
      case $system in
-@@ -6141,7 +6170,7 @@ if test "$SHARED_BUILD" = "0" -o $TCL_NE
+@@ -6141,7 +6173,7 @@ if test "$SHARED_BUILD" = "0" -o $TCL_NE
          TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
      fi
      TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
@@ -141,7 +160,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  else
      TCL_BUILD_EXP_FILE="lib.exp"
      eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -6171,10 +6200,17 @@ VERSION=${TCL_VERSION}
+@@ -6171,10 +6203,17 @@ VERSION=${TCL_VERSION}
  #--------------------------------------------------------------------
  
  if test "$prefix" != "$exec_prefix"; then
@@ -161,16 +180,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  
  #--------------------------------------------------------------------
  #       The statements below define various symbols relating to Tcl
-@@ -6186,7 +6222,7 @@ eval "TCL_STUB_LIB_FILE=libtclstub${TCL_
- # Replace DBGX with TCL_DBGX
- eval "TCL_STUB_LIB_FILE=\"${TCL_STUB_LIB_FILE}\""
- 
--MAKE_STUB_LIB="\${STLIB_LD} \$@ \${STUB_LIB_OBJS}"
-+MAKE_STUB_LIB="\${STLIB_LD} -o \$@ \${STUB_LIB_OBJS}"
- 
- if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
-     TCL_STUB_LIB_FLAG="-ltclstub${TCL_VERSION}\${TCL_DBGX}"
-@@ -6262,6 +6298,8 @@ TCL_SHARED_BUILD=${SHARED_BUILD}
+@@ -6262,6 +6301,8 @@ TCL_SHARED_BUILD=${SHARED_BUILD}
  
  
  
@@ -179,7 +189,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/03/08 19:22:27 minskim Exp $
  trap '' 1 2 15
  cat > confcache <<\EOF
  # This file is a shell script that caches the results of configure
-@@ -6437,12 +6475,12 @@ s%@TCL_DBGX@%$TCL_DBGX%g
+@@ -6437,12 +6478,12 @@ s%@TCL_DBGX@%$TCL_DBGX%g
  s%@CFG_TCL_SHARED_LIB_SUFFIX@%$CFG_TCL_SHARED_LIB_SUFFIX%g
  s%@CFG_TCL_UNSHARED_LIB_SUFFIX@%$CFG_TCL_UNSHARED_LIB_SUFFIX%g
  s%@CFG_TCL_EXPORT_FILE_SUFFIX@%$CFG_TCL_EXPORT_FILE_SUFFIX%g

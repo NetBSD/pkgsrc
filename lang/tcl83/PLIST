@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/10/09 15:29:41 tv Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/10/10 11:58:29 grant Exp $
 bin/tclsh
 bin/tclsh8.3
 include/tcl.h
@@ -17,7 +17,7 @@ include/tcl/generic/tclRegexp.h
 include/tcl/unix/tclUnixPort.h
 include/tclDecls.h
 include/tclPlatDecls.h
-lib/libtcl83.${SHLIB_SUFX}
+lib/libtcl83.la
 lib/libtclstub83.a
 lib/tcl8.3/auto.tcl
 lib/tcl8.3/encoding/ascii.enc
