@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9263 2005/02/22 14:35:21 minskim Exp $
+$NetBSD: CHANGES,v 1.9264 2005/02/22 15:36:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1030,3 +1030,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Removed abiword1 [adam 2005-02-22]
 	Updated octave-current to 2.1.65 [adam 2005-02-22]
 	Added gtmess-0.9 [minskim 2005-02-22]
+	Updated codeville to 0.1.10 [adam 2005-02-22]
