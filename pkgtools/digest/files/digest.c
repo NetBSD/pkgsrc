@@ -1,4 +1,4 @@
-/*	$NetBSD: digest.c,v 1.7 2003/06/16 13:35:22 atatat Exp $ */
+/*	$NetBSD: digest.c,v 1.8 2003/07/24 00:27:09 atatat Exp $ */
 
 /*
  * Copyright (c) 2001 Alistair G. Crooks.  All rights reserved.
@@ -39,7 +39,7 @@
 #ifndef lint
 __COPYRIGHT("@(#) Copyright (c) 2001 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: digest.c,v 1.7 2003/06/16 13:35:22 atatat Exp $");
+__RCSID("$NetBSD: digest.c,v 1.8 2003/07/24 00:27:09 atatat Exp $");
 #endif
 
 
@@ -168,7 +168,8 @@ main(int argc, char **argv)
 	argv += optind;
 	
 	if (argc == 0) {
-		(void) fprintf(stderr, "Usage: %s algorithm [file...]\n", *argv);
+		(void) fprintf(stderr, "Usage: %s algorithm [file...]\n",
+		    argv[-optind]);
 		return EXIT_FAILURE;
 	}
 	if ((alg = find_algorithm(argv[0])) == NULL) {
