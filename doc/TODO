@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2726 2004/12/19 16:49:42 wiz Exp $
+$NetBSD: TODO,v 1.2727 2004/12/19 22:50:21 minskim Exp $
 
 Suggested new packages
 ======================
@@ -770,7 +770,6 @@ Suggested package updates
 	o oroborus-2.0.13.1
 	o osh-041028
 	o oss-3.99.1i [also available for 2.0]
-	o overnet-1.0.1
 	o p5-Apache-ASP-2.57
 	o p5-Apache-Gallery-0.9.1
 	o p5-Apache-SSI-2.17
