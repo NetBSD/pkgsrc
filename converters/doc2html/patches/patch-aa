@@ -1,65 +1,52 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/14 14:03:20 agc Exp $
+$NetBSD: patch-aa,v 1.2 2001/10/09 15:49:40 nra Exp $
 
---- doc2html.pl.orig	Mon Sep 11 05:29:20 2000
+--- doc2html.pl.orig	Tue Jun  5 04:12:02 2001
 +++ doc2html.pl
-@@ -20,48 +20,48 @@
- #  If all else fails, attempts to read file without conversion.
- 
- # wp2html binary
--$WP2HTML = "/opt/local/wp2html-3.2/bin/wp2html";
-+$WP2HTML = "";
+@@ -51,13 +51,13 @@
  
  # rtf2html converts Rich Text Font documents to HTML
- # (get it from: http://www.res.bbsrc.ac.uk/wp2html/):
--$RTF2HTML = "/opt/local/rtf2html-1.1/bin/rtf2html";
-+$RTF2HTML = "@@LOCALBASE@@/bin/rtf2html";
+ # (get it from http://www.fe.msk.ru/~vitus/catdoc/)
+-my $RTF2HTML = '';
++my $RTF2HTML = '@@LOCALBASE@@/bin/rtf2html';
  
  # Catdoc converts MS Word to plain text
- # (get it from: http://www.fe.msk.ru/~vitus/catdoc/):
+ # (get it from: http://www.fe.msk.ru/~vitus/catdoc/)
  
  #version of catdoc for Word6, Word7 & Word97 files:
--$CATDOC = "/opt/local/catdoc-0.91.4/bin/catdoc";
-+$CATDOC = "@@LOCALBASE@@/bin/catdoc";
+-my $CATDOC = '';
++my $CATDOC = '@@LOCALBASE@@/bin/catdoc';
  
- #version of catdoc for Word2 files:
--$CATDOC2 = "/opt/local/catdoc-0.91.4/bin/catdoc";
-+$CATDOC2 = "@@LOCALBASE@@/bin/catdoc";
- 
- #version of catdoc for Word 5.1 for MAC:
--$CATDOCM = "/opt/local/catdoc-0.91.4/bin/catdoc";
-+$CATDOCM = "@@LOCALBASE@@/bin/catdoc";
+ #version of catdoc for Word2 files
+ my $CATDOC2 = $CATDOC;
+@@ -67,11 +67,11 @@
  
  # PostScript to text converter
- # (get it from the ghostscript 3.33 (or later) package):
--$CATPS = "/usr/freeware/bin/ps2ascii";
-+$CATPS = "@@LOCALBASE@@/bin/ps2ascii";
+ # (get it from the ghostscript 3.33 (or later) package)
+-my $CATPS = '';
++my $CATPS = '@@LOCALBASE@@/bin/ps2ascii';
  
- # add to search path the directory which contains gs:
+ # add to search path the directory which contains gs
+ # (edit for your environment)
 -$ENV{PATH} .= ":/usr/freeware/bin";
 +# $ENV{PATH} .= ":/usr/freeware/bin";
  
- # PDF to text converter and pdfinfo tool
- # (get them from the xpdf package at http://www.foolabs.com/xpdf/):
--$CATPDF = "/opt/local/xpdf-0.9/bin/pdftotext";
--$PDFINFO = "/opt/local/xpdf-0.9/bin/pdfinfo";
-+$CATPDF = "@@X11BASE@@/bin/pdftotext";
-+$PDFINFO = "@@X11BASE@@/bin/pdfinfo";
+ # PDF to HTML conversion script
+ # Full pathname of Perl script pdf2html.pl
+@@ -79,7 +79,7 @@
  
  #Microsoft Excel to HTML converter
  # (get it from www.xlHtml.org)
--$XLS2HTML = "/opt/local/xlHtml-0.2.7.2/bin/xlHtml";
-+$XLS2HTML = "@@LOCALBASE@@/bin/xlHtml";
- 
- #Microsoft Powerpoint to HTML converter
- # (get it from www.xlHtml.org)
--$PPT2HTML = "/opt/local/xlHtml-0.2.7.2/bin/pptHtml";
-+$PPT2HTML = "@@LOCALBASE@@/bin/pptHtml";
+-my $XLS2HTML = '';
++my $XLS2HTML = '@@LOCALBASE@@/bin/xlHtml';
  
  #MicroSoft Excel to .CSV converter
  # (you don't need this if you have xlHtml)
- # (get it with catdoc)
--$CATXLS = "/opt/local/catdoc-0.91.2/bin/xls2csv";
-+$CATXLS = "";
+@@ -88,7 +88,7 @@
  
- ########################################################################################
- # Written by David Adams <d.j.adams@soton.ac.uk>.
+ #Microsoft Powerpoint to HTML converter
+ # (get it from www.xlHtml.org)
+-my $PPT2HTML = '';
++my $PPT2HTML = '@@LOCALBASE@@/bin/pptHtml';
+ 
+ #Shockwave Flash 
+ # (extracts links from file)
