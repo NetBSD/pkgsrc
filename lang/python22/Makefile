@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2004/01/24 08:13:14 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/01/27 18:55:30 abs Exp $
 #
 
 PKGNAME=	python22-2.2.3
+PKGREVISION=	1
 
 CONFIGURE_ARGS+=	--without-threads
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/01/25 16:06:47 recht Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/27 18:55:30 abs Exp $
 #
 
 PKGNAME=	python22-pth-2.2.3
+PKGREVISION=	1
 
 PTHREAD_OPTS=	require
 .include "../../mk/pthread.buildlink3.mk"
