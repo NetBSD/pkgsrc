@@ -1,31 +1,35 @@
-$NetBSD: patch-ab,v 1.7 1998/10/02 22:02:26 tv Exp $
+$NetBSD: patch-ab,v 1.8 1998/12/03 17:29:59 tv Exp $
 
 --- Makefile.ssl.orig	Fri Jun 26 04:25:25 1998
-+++ Makefile.ssl	Fri Oct  2 16:00:53 1998
-@@ -62,7 +62,7 @@
++++ Makefile.ssl	Thu Dec  3 07:37:42 1998
+@@ -1,6 +1,6 @@
+ #
+ # Makefile for all the SSL related library routines and utilities
+-VERSION = 0.9.0a
++VERSION = 0.9.0b
+ #
+ # make install will install:
+ #   libraries into $INSTALLTOP/lib
+@@ -62,9 +62,12 @@
  CC= cc
  #CFLAG= -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall -Wuninitialized -DMD5_ASM -DSHA1_ASM -DRMD160_ASM
  CFLAG= -O -DNOPROTO
 -PEX_LIBS= -L. -L.. -L../.. -L../../..
-+PEX_LIBS= -L. -L.. -L../.. -L../../.. -L${PREFIX}/lib
++PEX_LIBS= 
  EX_LIBS= 
  AR=ar r
- 
-@@ -176,6 +176,10 @@
- 	MICROSOFT makevms.com config PATENTS
- WDIRS=  windows
- LIBS=   libcrypto.a libssl.a 
 +.if defined(USE_RSAREF)
-+LIBS+=	libRSAglue.a
-+EX_LIBS+=-lRSAglue -lrsaref
++EX_LIBS+=-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lrsaref
 +.endif
  
- GENERAL=        Makefile
- BASENAME=       SSLeay
-@@ -327,5 +331,6 @@
- 		sh util/ranlib.sh $(INSTALLTOP)/lib/$$i; \
- 		chmod 644 $(INSTALLTOP)/lib/$$i ); \
- 	done
-+	cp apps/ssleay.cnf $(INSTALLTOP)/lib/ssleay.cnf.eg
+ # Set BN_MULW to bn_mulw.o if you want to use the C version
+ BN_MULW= bn_mulw.o
+@@ -147,7 +150,7 @@
+ #RMD160_ASM_OBJ= asm/rm86-out.o       # a.out, FreeBSD
+ #RMD160_ASM_OBJ= asm/rm86bsdi.o       # bsdi
  
- # DO NOT DELETE THIS LINE -- make depend depends on it.
+-DIRS=   crypto ssl rsaref apps test tools
++DIRS=   rsaref crypto ssl apps test tools
+ # dirs in crypto to build
+ SDIRS=  \
+ 	md2 md5 sha mdc2 hmac ripemd \

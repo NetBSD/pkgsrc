@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1 1998/12/03 17:30:01 tv Exp $
+
+--- test/Makefile.ssl.orig	Tue Dec  1 16:30:35 1998
++++ test/Makefile.ssl	Tue Dec  1 16:30:57 1998
+@@ -21,8 +21,8 @@
+ 
+ DLIBCRYPTO= ../libcrypto.a
+ DLIBSSL= ../libssl.a
+-LIBCRYPTO= -L.. -lcrypto
+-LIBSSL= -L.. -lssl
++LIBCRYPTO= ../libcrypto.la
++LIBSSL= ../libssl.la
+ 
+ BNTEST=		bntest
+ EXPTEST=	exptest
