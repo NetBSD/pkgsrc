@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9499 2005/03/17 15:51:09 wiz Exp $
+$NetBSD: CHANGES,v 1.9500 2005/03/17 16:11:03 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1379,3 +1379,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bogofilter to 0.92.8nb2 [wiz 2005-03-17]
 	Updated gq to 1.0beta1nb5 [cube 2005-03-17]
 	Updated fspanel to 0.8.0.1nb2 [wiz 2005-03-17]
+	Updated suse91_base to 9.1nb4 [tron 2005-03-17]
