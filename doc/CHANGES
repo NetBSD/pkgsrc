@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7760 2004/11/08 10:29:12 adam Exp $
+$NetBSD: CHANGES,v 1.7761 2004/11/08 10:40:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5156,3 +5156,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated flodo to v4 [mrg 2004-11-08]
 	Updated wmakerconf to 2.9.2 [adam 2004-11-08]
 	Updated sane-backeds to 1.0.15 [adam 2004-11-08]
+	Updated gentoo to 0.11.53 [adam 2004-11-08]
