@@ -1,0 +1,10 @@
+$NetBSD: patch-ae,v 1.5 2001/11/17 15:28:49 tron Exp $
+
+--- include/libxml/xmlerror.h.orig	Sun Oct 14 04:35:07 2001
++++ include/libxml/xmlerror.h	Sat Nov 17 14:24:12 2001
+@@ -175,3 +175,5 @@
+ }
+ #endif
+ #endif /* __XML_ERROR_H__ */
++
++#include <libxml/globals.h>
