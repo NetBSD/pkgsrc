@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:31:37 zuntum Exp $
-lib/dewey_cmp.so
+@comment $NetBSD: PLIST,v 1.2 2005/01/05 21:15:15 tv Exp $
+lib/postgresql/dewey_cmp.so
 bin/pkgconflict
 bin/pkgdbextract
