@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1091 2003/01/11 08:48:39 salo Exp $
+$NetBSD: CHANGES,v 1.1092 2003/01/11 09:01:13 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -209,3 +209,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkglint to 3.42 [rh 2003-01-11]
 	Updated pkg_install to 20030111 [schmonz 2003-01-11]
 	Updated ipv6calc to 0.45 [salo 2003-01-11]
+	Updated speedbar to 0.14rc4 [uebayasi 2003-01-11]
+	Updated jde to 2.3.2 [uebayasi 2003-01-11]
+	Updated eieio to 0.17 [uebayasi 2003-01-11]
+	Updated semantic to 1.4.2 [uebayasi 2003-01-11]
