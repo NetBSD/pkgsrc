@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2002/06/17 21:08:16 tron Exp $
+# $NetBSD: Makefile,v 1.50 2002/06/23 11:46:03 tron Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
@@ -33,12 +33,14 @@ SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=    USE_WIDEPATCH USE_INET6 USE_TCPWRAPPERS USE_LDAP USE_DB2 \
 		USE_STARTTLS
-
-.include "../../mk/bsd.prefs.mk"
-
 MESSAGE_SRC=	${WRKDIR}/.MESSAGE_SRC
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 DESCR_SRC=	${WRKDIR}/.DESCR_SRC
+
+.include "../../mk/bsd.prefs.mk"
+# Make sure that ${BUILDLINK_DIR} is defined even no "buildlink.mk" gets
+# included below.
+.include "../../mk/bsd.buildlink.mk"
 
 .if ${OPSYS} == "SunOS"
 USE_DB2?=	YES
