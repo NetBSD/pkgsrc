@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.30 2004/02/05 10:59:40 sketch Exp $
+# $NetBSD: post-build,v 1.31 2004/02/05 23:53:16 grant Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -61,7 +61,11 @@ $ordfile=basename($ORDERFILE);
 $startfile=basename($STARTFILE);
 
 $startdate = (stat($STARTFILE))[9];
-$startdate = "unknown" if $startdate == 0;
+if ($startdate == 0) {
+	$startdate = "unknown";
+} else {
+	$startdate = localtime($startdate)."";
+}
 
 $verbose=1;
 
