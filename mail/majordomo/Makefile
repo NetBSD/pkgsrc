@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/06/04 21:46:57 jtb Exp $
+# $NetBSD: Makefile,v 1.15 2001/09/12 11:05:12 agc Exp $
 
 DISTNAME=		majordomo-1.94.5
 CATEGORIES=		mail
@@ -63,31 +63,10 @@ require-uid:
 		${TOUCH} "/tmp/grouptestmajordomo1.$$";			\
 		if ! ${CHGRP} ${MAJORDOMO_GROUP}			\
 			"/tmp/grouptestmajordomo1.$$" >/dev/null 2>&1; then \
-			${MAKE} ${.MAKEFLAGS} su-require-uid;		\
+			realtarget="root-require-uid";			\
+			${_SU_TARGET};					\
 		fi;							\
 		${RM} -f "/tmp/grouptestmajordomo1.$$";			\
-	fi
-
-su-require-uid:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ `${ID} -u` = 0 ]; then					\
-		${MAKE} ${.MAKEFLAGS} root-require-uid;			\
-	elif [ "X${BATCH}" != X"" ]; then				\
-		${ECHO_MSG} "Warning: Batch mode, not superuser, can't create majordomo user."; \
-		${ECHO_MSG} "Become root and try again."; \
-	else								\
-		make=`${TYPE} ${MAKE} | ${AWK} '{ print $$NF }'`;	\
-		args="";						\
-		if [ "X${PKG_DEBUG_LEVEL}" != X"" ]; then		\
-			args="$$args PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL}"; \
-		fi;							\
-		if [ "X${PRE_ROOT_CMD}" != "X${TRUE}" ]; then		\
-			${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
-			${PRE_ROOT_CMD};				\
-		fi;                                             	\
-		${ECHO_MSG} "===>  Becoming root@`/bin/hostname` to create majordomo user."; \
-		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
-		${SU_CMD} "cd ${.CURDIR}; $$make $$args ${.MAKEFLAGS} root-require-uid"; \
 	fi
 
 root-require-uid:
