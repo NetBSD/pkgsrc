@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2004/07/26 18:45:09 dillo Exp $
+# $NetBSD: Makefile,v 1.57 2004/08/14 00:25:56 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.84.1
-PKGNAME=		xmess-0.84.1
-PKGREVISION=		1
+DISTNAME=		xmame-0.85
+PKGNAME=		xmess-0.85
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -35,7 +34,9 @@ MAKE_FLAGS+=		TARGET="${TARGET:S/x//}"
 MAKE_FLAGS+=		LIBS="${LDFLAGS} ${LIBS}"
 MAKE_FLAGS+=		CFLAGS="${CFLAGS}"
 MAKE_FLAGS+=		X11INC= X11LIB=
-MAKE_FLAGS+=		XMAME_NET=1
+
+# Network support is broken in xmame-0.85
+#MAKE_FLAGS+=		XMAME_NET=1
 
 .if !empty(USE_ESOUND:M[Yy][Ee][Ss])
 MAKE_FLAGS+=		SOUND_ESOUND=1
@@ -116,4 +117,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${ROMPATH}
 	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
 
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
