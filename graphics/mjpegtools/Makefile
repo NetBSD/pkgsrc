@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/26 21:41:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2003/08/02 05:22:57 mrg Exp $
 
 DISTNAME=	mjpegtools-1.6.1
 PKGREVISION=	2
@@ -19,6 +19,7 @@ USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--enable-large-file
 CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
 # XXX fix me
 CONFIGURE_ARGS+=	--without-avifile
