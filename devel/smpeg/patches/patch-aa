@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 08:48:33 wulf Exp $
+
+--- configure.orig	Sun Oct  8 01:33:26 2000
++++ configure	Sun Oct  8 01:33:38 2000
+@@ -1916,7 +1916,7 @@
+ LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++# LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
