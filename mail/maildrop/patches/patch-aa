@@ -1,51 +1,41 @@
-$NetBSD: patch-aa,v 1.2 2001/08/16 07:39:21 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2002/01/22 22:09:42 jlam Exp $
 
---- Makefile.in.orig	Mon Jul  9 22:06:48 2001
+--- Makefile.in.orig	Sat Jan  5 13:28:01 2002
 +++ Makefile.in
 @@ -87,7 +87,7 @@
  EXTRA_DIST = UPGRADE.html UPGRADE.txt INSTALL.txt README README.postfix maildroptips.txt maildropldap.config maildropmysql.config
  
  scriptdir = $(pkgdatadir)/scripts
 -htmldir = $(pkgdatadir)/html
-+htmldir = $(datadir)/doc/html/@PACKAGE@
- @INSTALL_USERDB_TRUE@USERDBHTML = userdb.html makeuserdb.html userdbpw.html
++htmldir = $(prefix)/share/doc/html/@PACKAGE@
+ @INSTALL_USERDB_TRUE@USERDBHTML = @INSTALL_USERDB_TRUE@userdb.html makeuserdb.html userdbpw.html
  @INSTALL_USERDB_FALSE@USERDBHTML = 
- @INSTALL_USERDB_TRUE@USERDBMAN = userdb.8 makeuserdb.8 userdbpw.8
-@@ -106,7 +106,7 @@
- MAILDROPHTML = dotlock.html maildirmake.html maildropex.html 	maildropfilter.html maildropgdbm.html maildrop.html mailbot.html 	makemime.html reformail.html reformime.html
+ @INSTALL_USERDB_TRUE@USERDBMAN = @INSTALL_USERDB_TRUE@userdb.8 makeuserdb.8 userdbpw.8
+@@ -108,9 +108,8 @@
+ 	makemime.html reformail.html reformime.html
  
  
--MAILDROPMAN = dotlock.1 maildirmake.1 maildrop.1 mailbot.1 maildropex.5 	maildropfilter.5 maildropgdbm.5 makemime.1 reformail.1 reformime.1 	maildirquota.8 deliverquota.8
-+MAILDROPMAN = dotlock.1 maildrop.maildirmake.1 maildrop.1 mailbot.1 maildropex.5 	maildropfilter.5 maildropgdbm.5 makemime.1 reformail.1 reformime.1 	maildirquota.8 deliverquota.8
+-MAILDROPMAN = dotlock.1 maildirmake.1 maildrop.1 mailbot.1 maildropex.5 \
+-	maildropfilter.5 maildropgdbm.5 makemime.1 reformail.1 reformime.1 \
+-	maildirquota.7 deliverquota.8
++MAILDROPMAN = dotlock.1 maildrop.1 mailbot.1 maildropex.5 \
++	maildropfilter.5 maildropgdbm.5 makemime.1 reformail.1 reformime.1
  
  
  EXTRA_LIBRARIES = librfc822.a librfc2045.a
-@@ -795,14 +795,14 @@
+@@ -836,14 +835,13 @@
  	for f in maildrop mailbot reformail dotlock ; do \
  		$(INSTALL_PROGRAM) maildrop/$$f $(DESTDIR)$(bindir)/$$f ; \
  	done
 -	$(INSTALL_PROGRAM) maildir/maildirmake $(DESTDIR)$(bindir)/$$f
-+	$(INSTALL_PROGRAM) maildir/maildirmake $(DESTDIR)$(bindir)/maildrop.maildirmake
  	$(INSTALL_PROGRAM) rfc2045/reformime $(DESTDIR)$(bindir)/reformime
  	$(INSTALL_PROGRAM) rfc2045/makemime $(DESTDIR)$(bindir)/makemime
  	. maildrop/uidgid ; test -z "$$gid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chgrp $$gid maildrop dotlock
- 	. maildrop/uidgid ; test -z "$$uid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chown $$uid maildrop dotlock && chmod 6755 maildrop dotlock
+ 	. maildrop/uidgid ; test -z "$$uid" && exit 0; test -w /etc || exit 0; cd $(DESTDIR)$(bindir) && chown $$uid maildrop dotlock && chmod 755 maildrop dotlock
  
  uninstall-maildrop:
 -	for f in maildrop mailbot maildirmake reformail dotlock makemime reformime ; do \
-+	for f in maildrop mailbot maildrop.maildirmake reformail dotlock makemime reformime ; do \
++	for f in maildrop mailbot reformail dotlock makemime reformime ; do \
  		rm -f $(DESTDIR)$(bindir)/$$f ; \
  	done
  
-@@ -837,9 +837,9 @@
- maildirmake.html: maildir/maildirmake.html
- 	cp -f maildir/maildirmake.html maildirmake.html
- 
--maildirmake.1: maildirmake.html
-+maildrop.maildirmake.1: maildirmake.html
- 	chmod +x maildrop/html2man.pl
--	maildrop/html2man.pl <maildirmake.html >maildirmake.1
-+	maildrop/html2man.pl <maildirmake.html >maildrop.maildirmake.1
- 
- maildropex.html: maildrop/maildropex.html
- 	cp -f $(srcdir)/maildrop/maildropex.html maildropex.html
