@@ -1,31 +1,43 @@
-$NetBSD: patch-aj,v 1.1 2001/01/16 21:59:40 cjones Exp $
+$NetBSD: patch-aj,v 1.2 2004/05/12 18:45:26 bouyer Exp $
 
---- example/Makefile.in.orig	Sat Nov 25 07:02:02 2000
-+++ example/Makefile.in	Mon Jan 15 15:33:47 2001
-@@ -33,7 +33,7 @@
+--- restore-src/Makefile.in.orig	2004-01-08 10:23:31.000000000 -0800
++++ restore-src/Makefile.in	2004-02-23 15:39:26.000000000 -0800
+@@ -170,16 +170,11 @@
+ # need to list libamanda twice here, first to override the system library
+ # routines, and second to pick up any references in the other libraries.
+ ###
+-LDADD = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++LDADD = -lamtape -lamanda
  
- DESTDIR =
  
--pkgdatadir = $(datadir)/@PACKAGE@
-+pkgdatadir = $(datadir)/examples/@PACKAGE@
- pkglibdir = $(libdir)/@PACKAGE@
- pkgincludedir = $(includedir)/@PACKAGE@
+ amidxtaped_SOURCES = amidxtaped.c
+-amidxtaped_LDADD = ../common-src/libamanda.$(LIB_EXTENSION) \
+-                   ../server-src/libamserver.$(LIB_EXTENSION) \
+-                   ../tape-src/libamtape.$(LIB_EXTENSION) \
+-                   ../common-src/libamanda.$(LIB_EXTENSION)
++amidxtaped_LDADD = ../server-src/libamserver.$(LIB_EXTENSION)
  
-@@ -216,7 +216,16 @@
- install-exec-am:
- install-exec: install-exec-am
+ subdir = restore-src
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
+@@ -191,17 +186,12 @@
  
--install-data-am:
-+install-data-am: $(noinst_DATA) $(EXTRA_DIST)
-+	@$(NORMAL_INSTALL)
-+	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)
-+	@list='$(noinst_DATA) $(EXTRA_DIST)'; for p in $$list; do \
-+	  if test -f "$$p"; then d= ; else d="$(srcdir)/"; fi; \
-+	  f="`echo $$p | sed -e 's|^.*/||'`"; \
-+	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(pkgdatadir)/$$f"; \
-+	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(pkgdatadir)/$$f; \
-+	done
-+
- install-data: install-data-am
+ am_amidxtaped_OBJECTS = amidxtaped.$(OBJEXT)
+ amidxtaped_OBJECTS = $(am_amidxtaped_OBJECTS)
+-amidxtaped_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	../server-src/libamserver.$(LIB_EXTENSION) \
+-	../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++amidxtaped_DEPENDENCIES = ../server-src/libamserver.$(LIB_EXTENSION)
+ amidxtaped_LDFLAGS =
+ amrestore_SOURCES = amrestore.c
+ amrestore_OBJECTS = amrestore.$(OBJEXT)
+ amrestore_LDADD = $(LDADD)
+-amrestore_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION) \
+-	../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++amrestore_DEPENDENCIES =
+ amrestore_LDFLAGS =
  
- install-am: all-am
+ DEFS = @DEFS@
