@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/04/06 13:45:39 hubertf Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/05/12 14:57:41 jmc Exp $
 #
 # This Makefile fragment is included by packages that use dbh.
 #
@@ -10,7 +10,7 @@ DBH_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			dbh
 BUILDLINK_DEPENDS.dbh?=			dbh>=1.0.14
-BUILDLINK_PKGSRCDIR.dbh?=		../../wip/dbh
+BUILDLINK_PKGSRCDIR.dbh?=		../../databases/dbh
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.dbh=dbh
 BUILDLINK_PREFIX.dbh_DEFAULT=	${LOCALBASE}
