@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2004/02/02 00:00:48 recht Exp $
+# $NetBSD: Makefile,v 1.10 2004/02/11 10:55:49 recht Exp $
 
-DISTNAME=	clamav-0.65
-PKGREVISION=	1
+DISTNAME=	clamav-0.66
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/} \
+		http://clamav.catt.com/stable/
 
 MAINTAINER=	david@netbsd-fr.org
 HOMEPAGE=	http://www.clamav.net/
 COMMENT=	Anti-virus toolkit
 
-AUTOCONF_REQD=		2.53	# clamav used 2.53
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_PKGINSTALL=		yes
@@ -29,6 +28,7 @@ PKG_USERS+=     ${CLAMAV_USER}:${CLAMAV_GROUP}::Clamav\\ User
 
 EGDIR=		${PREFIX}/share/examples/clamav
 CONF_FILES=	${EGDIR}/clamav.conf ${PKG_SYSCONFDIR}/clamav.conf
+CONF_FILES+=	${EGDIR}/freshclam.conf ${PKG_SYSCONFDIR}/freshclam.conf
 PLIST_SRC=	${PKGDIR}/PLIST
 
 .include "../../mk/bsd.prefs.mk"
@@ -40,12 +40,6 @@ PLIST_SRC=	${PKGDIR}/PLIST
 CONFIGURE_ARGS+=	--disable-milter
 .endif
 
-pre-configure:
-	cd ${WRKSRC};						\
-	${ACLOCAL};						\
-	${AUTOMAKE} -a --foreign -i;				\
-	${AUTOCONF}
-
 # for freshclam to work it must own the share/clamav dir
 post-install:
 	${CHOWN} -R ${CLAMAV_USER}:${CLAMAV_GROUP} ${PREFIX}/share/clamav
@@ -54,6 +48,4 @@ post-install:
 .include "../../devel/zlib/buildlink2.mk"
 
 .include "../../mk/pthread.buildlink2.mk"
-.include "../../mk/autoconf.mk"
-.include "../../mk/automake.mk"
 .include "../../mk/bsd.pkg.mk"
