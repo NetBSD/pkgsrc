@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:01:09 zuntum Exp $
-lib/gkrellm/plugins/gkrellstock.so
-bin/GetQuote
+@comment $NetBSD: PLIST,v 1.2 2004/02/24 23:05:57 cube Exp $
+bin/GetQuote2
+lib/gkrellm2/plugins/gkrellstock.so
