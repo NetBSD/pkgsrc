@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/27 22:24:57 jschauma Exp $
+bin/annotate
+bin/combineMUMs
+bin/gaps
+bin/mgaps
+bin/mummer
+bin/postnuc
+bin/postpro
+bin/prenuc
+bin/prepro
+bin/repeat-match
+bin/show-aligns
+bin/show-coords
+bin/show-tiling
+share/doc/html/mummer/covplot.gif
+share/doc/html/mummer/dotplot.gif
+share/doc/html/mummer/email.jpg
+share/doc/html/mummer/gaps.gif
+share/doc/html/mummer/index.html
+share/doc/html/mummer/manual_logo.gif
+share/doc/html/mummer/mgaps.gif
+share/doc/html/mummer/nuc_proex.gif
+share/doc/html/mummer/nucex.gif
+share/doc/html/mummer/osi.gif
+share/doc/html/mummer/pro_proex.gif
+share/doc/mummer/maxmat3man.pdf
+share/doc/mummer/maxmat3man.tex
+share/doc/mummer/maxmat3src.pdf
+share/doc/mummer/nucmer.README
+share/doc/mummer/optionman.sty
+share/doc/mummer/promer.README
+share/doc/mummer/run-mummer1.README
+share/doc/mummer/run-mummer3.README
+share/doc/mummer/skaff.sty
+share/mummer/exact-tandems
+share/mummer/mummerplot
+share/mummer/nucmer
+share/mummer/nucmer2xfig
+share/mummer/promer
+share/mummer/run-mummer1
+share/mummer/run-mummer3
+@dirrm share/mummer
+@dirrm share/doc/mummer
+@dirrm share/doc/html/mummer
