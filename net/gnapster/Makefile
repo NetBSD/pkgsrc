@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.21 2002/12/24 06:10:17 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2003/03/27 15:59:05 wiz Exp $
 
 DISTNAME=	gnapster-1.5.0
 PKGREVISION=	3
 CATEGORIES=	net
-MASTER_SITES=	http://www.faradic.net/~jasta/files/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnapster/}
 
 MAINTAINER=	tron@netbsd.org
-HOMEPAGE=	http://www.faradic.net/~jasta/programs.html
+HOMEPAGE=	http://sourceforge.net/projects/gnapster/
 COMMENT=	simple client for the online mp3 community
 
 BUILD_USES_MSGFMT=	YES
@@ -17,7 +17,7 @@ USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
