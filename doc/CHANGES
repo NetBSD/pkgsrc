@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9754 2005/04/04 18:14:22 martti Exp $
+$NetBSD: CHANGES,v 1.9755 2005/04/04 20:36:46 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1846,7 +1846,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-Module-CoreList to 1.98 [seb 2005-03-31]
 	Added teTeX-bin-3.0 as teTeX3-bin [hubertf 2005-04-01]
 	Added teTeX-texmf-3.0 as teTeX3-texmf [hubertf 2005-04-01]
-	Added teTeX-texmfsrc-3.0 as teTeX-texmfsrc [hubertf 2005-04-01]
+	Added teTeX-texmfsrc-3.0 as teTeX3-texmfsrc [hubertf 2005-04-01]
 	Updated octave to 2.1.69 [adam 2005-04-01]
 	Updated octave-current  to 2.9.1 [adam 2005-04-01]
 	Updated octave-forge to 2004.11.16nb1 [adam 2005-04-01]
