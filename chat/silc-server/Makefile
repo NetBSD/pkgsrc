@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2003/01/08 23:56:44 salo Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/26 14:10:44 salo Exp $
 
-DISTNAME=		silc-server-0.9.11
+DISTNAME=		silc-server-0.9.12
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/lib/silcmath/mpi/libtool
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool ${WRKSRC}/lib/silcmath/mpi/libtool
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -70,17 +70,6 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .if (${MACHINE_ARCH} != "i386")
 CONFIGURE_ARGS+=	--disable-asm
 .endif
-
-# Ugly hack which prevents installation of static libraries.
-#
-post-build:
-	for f in \
-	${WRKSRC}/lib/libsilc.la \
-	${WRKSRC}/lib/.libs/libsilc.la ; \
-	do \
-		${CP} $$f $$f.orig ; \
-		${SED} "s|^old_library|#&|" $$f.orig > $$f ; \
-	done
 
 post-install:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/motd.txt \
