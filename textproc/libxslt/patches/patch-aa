@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2003/12/26 21:56:15 jmmv Exp $
+$NetBSD: patch-aa,v 1.11 2004/02/17 16:47:23 jmmv Exp $
 
---- doc/Makefile.in.orig	2003-12-24 08:15:27.000000000 -0600
+--- doc/Makefile.in.orig	2004-02-16 16:00:13.000000000 +0100
 +++ doc/Makefile.in
 @@ -86,7 +86,7 @@ F77 = @F77@
  GCJ = @GCJ@
@@ -26,6 +26,6 @@ $NetBSD: patch-aa,v 1.10 2003/12/26 21:56:15 jmmv Exp $
  
 -TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)/html
 +TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
- PAGES = API.html bugs.html contribs.html docs.html downloads.html \
-          help.html index.html intro.html news.html xsltproc2.html FAQ.html
- 
+ PAGES = API.html bugs.html contribs.html FAQ.html docs.html \
+          downloads.html help.html index.html intro.html news.html \
+ 	 xsltproc2.html
