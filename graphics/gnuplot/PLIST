@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/17 23:37:12 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/06/25 17:08:13 adrianp Exp $
 bin/gnuplot
-bin/gnuplot_x11
+libexec/gnuplot/4.0/gnuplot_x11
 man/man1/gnuplot.1
-share/gnuplot.gih
+share/gnuplot/4.0/gnuplot.gih
+@dirrm share/gnuplot/4.0
+@dirrm share/gnuplot
+@dirrm libexec/gnuplot/4.0
+@dirrm libexec/gnuplot
