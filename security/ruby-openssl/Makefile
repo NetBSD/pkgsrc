@@ -1,34 +1,37 @@
-# $NetBSD: Makefile,v 1.16 2004/10/03 00:18:13 tv Exp $
+# $NetBSD: Makefile,v 1.17 2004/11/27 14:45:30 taca Exp $
 
-DISTNAME=		ossl-0.1.4a
-PKGNAME=		${RUBY_PKGNAMEPREFIX}openssl-0.1.4.1
-PKGREVISION=		3
-CATEGORIES=		security ruby
-MASTER_SITES=		http://freesoftware.fsf.org/download/rubypki/
+DISTNAME=	${RUBY_DISTNAME}
+PKGNAME=	${RUBY_PKGPREFIX}-openssl-${OSSL_VERSION}
+CATEGORIES=	security ruby
+MASTER_SITES=	${MASTER_SITE_RUBY}
 
-MAINTAINER=		taca@NetBSD.org
-HOMEPAGE=		http://www.freesoftware.fsf.org/rubypki/
-COMMENT=		OpenSSL interface module for Ruby
+MAINTAINER=	taca@NetBSD.org
+HOMEPAGE=	${RUBY_HOMEPAGE}
+COMMENT=	OpenSSL interface module for Ruby
 
-WRKSRC=			${WRKDIR}/ossl
-DIST_SUBDIR=		ruby
-USE_RUBY_EXTCONF=	yes
-RUBY_REQD=		1.6.4
+OSSL_VERSION=		1.0.0
+RUBY_VERSION_SUPPORTED=	18
 USE_BUILDLINK3=		yes
-CONFLICTS=		ruby-ossl-*
+USE_RUBY_EXTCONF=	yes
+DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
+WRKSRC=			${RUBY_WRKSRC}/ext/openssl
+EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/openssl \
+			${RUBY_DISTNAME}/sample/openssl
 
-CONFIGURE_ARGS=		--with-ssl-include="${BUILDLINK_PREFIX.openssl}/include" \
-			--with-ssl-lib="${BUILDLINK_PREFIX.openssl}/lib"
-INSTALL_TARGET=		site-install
-DOCS=			ChangeLog README
+CONFIGURE_ARGS=	--with-ssl-include="${BUILDLINK_PREFIX.openssl}/include" \
+		--with-ssl-lib="${BUILDLINK_PREFIX.openssl}/lib"
+EXAMPLES=	c_rehash.rb cert2text.rb cert_store_view.rb certstore.rb \
+		cipher.rb crlstore.rb echo_cli.rb echo_svr.rb gen_csr.rb \
+		smime_read.rb smime_write.rb wget.rb
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/openssl
-.for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/$f ${RUBY_DOCDIR}/openssl
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/openssl
+.for f in ${EXAMPLES}
+	${INSTALL_DATA} ${RUBY_WRKSRC}/sample/openssl/$f \
+		${RUBY_EXAMPLESDIR}/openssl
 .endfor
 
-.include "../../lang/ruby-base/Makefile.common"
-.include "../../lang/ruby-base/buildlink3.mk"
+.include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/Makefile.common"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
