@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.41 2002/09/24 02:08:53 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.42 2002/09/24 09:51:25 chris Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -2948,3 +2948,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated psiconv to 0.8.2nb3 [jlam 2002-09-23]
 	Updated p5-Jcode to 0.82 [taca 2002-09-23]
 	Updated bins to 1.1.17 [dmcmahill 2002-09-23]
+	Added tremor 1.0.2 [chris 2002-09-24]
+	Added tremor-tools 1.0.0.8 [chris 2002-09-24]
