@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2003/07/17 21:43:16 grant Exp $
+# $NetBSD: Makefile,v 1.50 2003/09/17 19:40:40 grant Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	5
@@ -45,10 +45,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xv
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xv
 	${INSTALL_DATA} ${WRKSRC}/docs/xvdocs.ps ${PREFIX}/share/doc/xv
-
-.if defined(USE_GCC3)
-.  include "../../lang/gcc3/buildlink2.mk"
-.endif
 
 .include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/tiff/buildlink2.mk"
