@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.975 2003/10/29 21:03:01 reed Exp $
+$NetBSD: TODO,v 1.976 2003/10/30 14:59:41 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -230,7 +230,7 @@ Suggested package updates
 	o libole2-2.2.8
 	o libtiff-3.6.0
 	o libtool-1.5 [skrll]
-	o libxml2-2.6.0
+	o libxml2-2.6.1
 	o lilypond-2.0.0
 	o links-2.11pre13
 	o lmbench-2.0.4
