@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1346 2004/01/18 00:51:30 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1347 2004/01/19 14:54:26 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -2282,10 +2282,10 @@ _REPLACE.perl.new=	${PERL5}
 _REPLACE_FILES.perl=	${REPLACE_PERL}
 .endif
 
+.if defined(REPLACE_INTERPRETER)
 _CONFIGURE_PREREQ+=	replace-interpreter
 .PHONY: replace-interpreter
 replace-interpreter:
-.if defined(REPLACE_INTERPRETER)
 .  for lang in ${REPLACE_INTERPRETER}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${WRKSRC};							\
@@ -2300,14 +2300,12 @@ replace-interpreter:
 	    fi;								\
 	done
 .  endfor
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
 .endif
 
+.if defined(USE_LIBTOOL) && defined(LTCONFIG_OVERRIDE)
 _CONFIGURE_PREREQ+=	do-ltconfig-override
 .PHONY: do-ltconfig-override
 do-ltconfig-override:
-.if defined(USE_LIBTOOL) && defined(LTCONFIG_OVERRIDE)
 .  for ltconfig in ${LTCONFIG_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${ltconfig} ]; then					\
@@ -2317,8 +2315,6 @@ do-ltconfig-override:
 		${CHMOD} +x ${ltconfig};				\
 	fi
 .  endfor
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
 .endif
 
 .if defined(CONFIG_GUESS_OVERRIDE) || defined(CONFIG_SUB_OVERRIDE)
@@ -2380,10 +2376,11 @@ do-configure:
 .  endif
 .endif
 
+.if defined(USE_LIBTOOL) && \
+    (defined(LIBTOOL_OVERRIDE) || defined(SHLIBTOOL_OVERRIDE))
 _CONFIGURE_POSTREQ+=	do-libtool-override
 .PHONY: do-libtool-override
 do-libtool-override:
-.if defined(USE_LIBTOOL)
 .  if defined(LIBTOOL_OVERRIDE)
 .    for libtool in ${LIBTOOL_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2402,8 +2399,6 @@ do-libtool-override:
 	fi
 .    endfor
 .  endif
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}${TRUE}
 .endif
 
 .PHONY: post-configure
