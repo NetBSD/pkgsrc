@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.48 2003/03/04 14:50:11 seb Exp $
+# $NetBSD: defs.Linux.mk,v 1.49 2003/03/20 00:34:17 hubertf Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -121,7 +121,7 @@ IMAKE_MANNEWSUFFIX=	${IMAKE_MAN_SUFFIX}
 _DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	yes	# GNU make is standard
-.if exists(/usr/include/netinet6)
+.if exists(/usr/include/netinet6) || exists(/usr/include/linux/in6.h)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
 _OPSYS_HAS_INET6=	no	# IPv6 is not standard
