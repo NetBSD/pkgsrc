@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2003/12/15 00:26:50 xtraeme Exp $
+$NetBSD: distinfo,v 1.7 2004/01/16 02:35:50 xtraeme Exp $
 
-SHA1 (gnome-session-2.4.1.tar.bz2) = a583b8d3e4f76033056b946acb76fd1c698804c1
-Size (gnome-session-2.4.1.tar.bz2) = 902545 bytes
+SHA1 (gnome-session-2.4.2.tar.bz2) = c9001f78a4c02ef5b34114c8a0407157d22a73ae
+Size (gnome-session-2.4.2.tar.bz2) = 911570 bytes
