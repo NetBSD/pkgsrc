@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/07/23 22:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2001/07/29 05:32:34 tron Exp $
 #
 
 DISTNAME=	libgetopt-${VERS}
@@ -10,6 +10,8 @@ DISTFILES=	getopt_long.c-${VERS} getopt_long.3-${VERS}
 
 MAINTAINER=	hubertf@netbsd.org,mcr@netbsd.org
 COMMENT=	Library for handling --long options
+
+NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
 .if exists(/usr/include/getopt.h)
 IGNORE=         "${PKGNAME} is part of your NetBSD distribution"
@@ -26,7 +28,7 @@ MAKE_FLAGS+=	MKLINT=no
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-MAKEFLAGS+=	NETBSD_COMPATIBLE=YES 
+MAKEFLAGS+=	NETBSD_COMPATIBLE=YES
 CFLAGS+=	-DREPLACE_GETOPT
 .endif
 
