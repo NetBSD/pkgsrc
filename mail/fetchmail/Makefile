@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2001/06/27 04:17:35 jlam Exp $
+# $NetBSD: Makefile,v 1.100 2001/06/27 04:28:48 jlam Exp $
 
 DISTNAME=       fetchmail-5.8.10
 CATEGORIES=	mail
@@ -13,21 +13,23 @@ COMMENT=	batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
 BUILD_USES_MSGFMT=	yes
 
-USE_LIBINTL=		yes
+USE_BUILDLINK_ONLY=	yes
+#USE_LIBINTL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-hesiod
-CONFIGURE_ENV+=		LDFLAGS="${CFLAGS}"
 
 BUILD_DEFS+=		USE_INET6
 CFLAGS+=		${CPPFLAGS}
+LDFLAGS+=		${CFLAGS}
 
 .include "../../mk/bsd.prefs.mk"
 
 FETCHMAIL_USE_SSL?=	YES
 
 .if defined(FETCHMAIL_USE_SSL) && ${FETCHMAIL_USE_SSL} == YES
-USE_SSL=		yes
-CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
+.include "../../security/openssl/buildlink.mk"
+#USE_SSL=		yes
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 .else
 CONFIGURE_ARGS+=	--without-ssl
 .else
@@ -79,4 +81,5 @@ post-install:
 	   fetchmail-FAQ.html fetchmail-features.html \
 	   design-notes.html ${FDOC}
 
+.include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
