@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2001/03/20 17:57:49 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2001/03/20 19:21:55 wiz Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -9,7 +9,7 @@
 DISTNAME=		ssh-1.2.27
 PKGNAME=		ssh-1.2.27nb1
 CATEGORIES=		security net
-MASTER_SITES=		ftp://ftp.cs.hut.fi/pub/ssh/ \
+MASTER_SITES=		ftp://ftp.ssh.com/pub/ssh/old/ \
 			ftp://ftp.funet.fi/pub/unix/security/login/ssh/ \
 			ftp://ftp.cert.dfn.de/pub/tools/net/ssh/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
