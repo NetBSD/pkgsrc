@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2005/01/06 05:32:29 tv Exp $
+# $NetBSD: Makefile,v 1.45 2005/03/23 14:32:19 agc Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -15,10 +15,10 @@ COMMENT?=	Message digest wrapper utility
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
-NO_CHECKSUM=		# defined
+NO_CHECKSUM=		yes
 
 # XXX Remove the following two lines after pkgsrc/bootstrap is up and
 # XXX running.
