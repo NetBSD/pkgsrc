@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/03/27 03:20:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/04/02 22:52:25 wiz Exp $
 
 DISTNAME=	ppp-2.3.9
 PKGNAME=	ppp-mppe-2.3.9
@@ -32,7 +32,6 @@ post-extract:
 	@${CP} ${OPENSSL_SRC}/crypto/sha/sha1dgst.c ${WRKSRC}/netbsd-1.4/sha1dgst.c
 	@${CP} ${OPENSSL_SRC}/crypto/sha/sha_locl.h ${WRKSRC}/netbsd-1.4/sha_locl.h
 	@${CP} ${OPENSSL_SRC}/crypto/sha/sha.h ${WRKSRC}/netbsd-1.4/sha.h
-
 
 pre-configure:
 	if [ ! -e ${OPENSSL_SRC}/crypto/rc4 ]; then			\
