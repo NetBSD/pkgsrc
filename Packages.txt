@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.44 1998/09/23 13:09:33 agc Exp $
+# $NetBSD: Packages.txt,v 1.45 1998/11/26 06:37:22 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -538,6 +538,12 @@ of when dealing with the PLIST file (or files, see below!).
    Legacy note: There used to be a symbol "<$ARCH>" that was replaced by
    the output of "uname -m", but that's no longer supported and has been
    removed.
+
+ * ${OPSYS}, ${OS_VERSION}:
+   Some packages want to embed the OS name and version into some paths.
+   to do this, use these two variables in PLIST. ${OPSYS} will be replaced
+   by output from "uname -s", ${OS_VERSION} will be set to what "uname -r"
+   gives.
 
  * Manpage-compression:
    Manpages should be installed in compressed form if MANZ is set (in
