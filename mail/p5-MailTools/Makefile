@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/29 00:17:03 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/09/03 15:08:13 wiz Exp $
 
 DISTNAME=	MailTools-1.13
 PKGNAME=	p5-MailTools-1.13
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	packages@netbsd.org
 
-BUILD_DEPENDS+	${PERL5_SITEARCH}/auto/Net/.packlist:../../net/p5-Net
+BUILD_DEPENDS+=	${PERL5_SITEARCH}/auto/Net/.packlist:../../net/p5-Net
 
 USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Mail/.packlist
