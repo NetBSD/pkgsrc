@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/09/04 14:47:39 agc Exp $
+# $NetBSD: Makefile,v 1.24 2002/09/05 12:39:41 zuntum Exp $
 
 PKGNAME=		ap-php-${PHP_BASE_VERS}
 PKGREVISION=		# empty
@@ -8,6 +8,8 @@ DEPENDS+=		php>=${PHP_BASE_VERS}:../../www/php4
 
 USE_BUILDLINK2=		YES
 APACHE_MODULE=		YES
+
+.include "../../www/php4/Makefile.php"
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
