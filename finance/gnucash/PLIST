@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/02/27 04:08:24 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/05/30 16:19:56 jmmv Exp $
 bin/gnc-prices
 bin/gnc-test-env
 bin/gnucash
@@ -745,7 +745,7 @@ share/pixmaps/gnucash/gnucash_splash.png
 share/pixmaps/gnucash/stock_split_title.png
 share/pixmaps/gnucash/stock_split_watermark.png
 @dirrm share/pixmaps/gnucash
-@unexec ${RMDIR} %D/share/mime-info 2>/dev/null || ${TRUE}
+@comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/gnucash/scm/qif-import
 @dirrm share/gnucash/scm/printing
 @dirrm share/gnucash/scm/gnumeric

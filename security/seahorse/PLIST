@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/05/30 15:25:08 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/05/30 16:20:04 jmmv Exp $
 bin/seahorse
 bin/seahorse-pgp-preferences
 lib/bonobo/libseahorse-pgp-file-listener.a
@@ -63,7 +63,7 @@ share/seahorse/glade/seahorse-signatures.glade
 @dirrm share/seahorse
 @dirrm share/omf/seahorse
 @comment in scrollkeeper: @dirrm share/omf
-@exec ${RMDIR} %D/share/mime-info >/dev/null || ${TRUE}
+@comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/gnome/help/seahorse/C/figures
 @dirrm share/gnome/help/seahorse/C
 @dirrm share/gnome/help/seahorse

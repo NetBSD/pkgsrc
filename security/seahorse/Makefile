@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/05/30 15:25:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/05/30 16:20:04 jmmv Exp $
 
 DISTNAME=	seahorse-0.7.3
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=seahorse/}
 
@@ -9,7 +10,7 @@ HOMEPAGE=	http://seahorse.sourceforge.net/
 COMMENT=	GnuPG front end and bonobo component for Gnome
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS=		gnupg>=1.2.1:../../security/gnupg
+DEPENDS+=		gnupg>=1.2.1:../../security/gnupg
 DEPENDS+=		gnome2-dirs>=1.1:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		yes

@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.14 2003/05/05 16:40:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2003/05/30 16:20:02 jmmv Exp $
 #
 
 DISTNAME=		gnumeric-0.75
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/0.75/}
 
 MAINTAINER=		rh@netbsd.org
 HOMEPAGE=		http://www.gnome.org/gnumeric/
 COMMENT=		Powerful and easy to use spreadsheet program from the GNOME project
+
+DEPENDS+=		gnome1-dirs>=1.2:../../misc/gnome1-dirs
 
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES

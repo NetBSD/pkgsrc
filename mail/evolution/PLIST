@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2003/04/12 04:26:41 rh Exp $
+@comment $NetBSD: PLIST,v 1.14 2003/05/30 16:20:00 jmmv Exp $
 bin/csv2vcard
 bin/evolution
 bin/evolution-addressbook
@@ -1439,6 +1439,7 @@ share/omf/evolution/evolution-no.omf
 share/pixmaps/evolution.png
 @dirrm share/omf/evolution
 @comment in scrollkeeper: @dirrm share/omf
+@comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/libical-evolution/zoneinfo/Pacific
 @dirrm share/libical-evolution/zoneinfo/Indian
 @dirrm share/libical-evolution/zoneinfo/Europe

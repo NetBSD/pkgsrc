@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/07/17 22:21:38 rh Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/05/30 16:19:57 jmmv Exp $
 bin/ctali
 bin/freecell
 bin/gataxx
@@ -1045,6 +1045,7 @@ share/xbill/pixmaps/wingdows.xpm
 @dirrm share/pixmaps/cards/backs
 @dirrm share/pixmaps/cards
 @dirrm share/omf/gnome-games
+@comment in gnome-dirs: @dirrm share/mime-info
 @exec ${MKDIR} %D/share/gnome/help/same-gnome/ru/stylesheet-images
 @dirrm share/gnome/help/same-gnome/ru/stylesheet-images
 @exec ${MKDIR} %D/share/gnome/help/same-gnome/ru/figures

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/18 14:56:01 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/05/30 16:20:04 jmmv Exp $
 bin/bug-buddy
 man/man1/bug-buddy.1
 share/application-registry/bug-buddy.applications
@@ -64,6 +64,7 @@ share/omf/bug-buddy/bug-buddy-C.omf
 share/pixmaps/bug-buddy.png
 @dirrm share/omf/bug-buddy
 @comment in scrollkeeper: @dirrm share/omf
+@comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/gnome/help/bug-buddy/C
 @dirrm share/gnome/help/bug-buddy
 @dirrm share/bug-buddy/bugzilla/ximian

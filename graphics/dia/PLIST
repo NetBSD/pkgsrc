@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/05/09 15:21:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/05/30 16:19:59 jmmv Exp $
 bin/dia
 lib/dia/libbondgraph_objects.a
 lib/dia/libbondgraph_objects.la
@@ -664,6 +664,7 @@ share/mime-info/dia.keys
 share/mime-info/dia.mime
 share/pixmaps/dia-diagram.png
 share/pixmaps/dia_gnome_icon.png
+@comment in gnome-dirs: @dirrm share/mime-info
 @dirrm share/gnome/help/dia/pl
 @dirrm share/gnome/help/dia/en
 @dirrm share/gnome/help/dia
