@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1998/11/16 21:13:01 agc Exp $
+# $NetBSD: Makefile,v 1.21 1999/01/03 13:13:12 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.3.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.PostgreSQL.ORG/
 
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 DEPENDS+=	tcl-8.0p2:../../lang/tcl80
-DEPENDS+=	addnerd-1.5:../../sysutils/addnerd
+DEPENDS+=	addnerd-1.6:../../sysutils/addnerd
 DEPENDS+=	bison-1.25:../../devel/bison
 
 NOT_FOR_ARCHS=	alpha	# Needs ELF clue
