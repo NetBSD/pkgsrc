@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2004/03/15 10:35:13 tron Exp $
+# $NetBSD: builtin.mk,v 1.3 2004/03/15 17:30:18 recht Exp $
 
 .if !defined(XF86_VERSION)
 _X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/version.def
@@ -30,3 +30,12 @@ MAKEFLAGS+=	XF86_VERSION=${XF86_VERSION}
 .endif
 
 USE_BUILTIN.x11-links?=	no
+
+# Xrandr won't build without the X Extension library which is only present
+# in XFree86>=4.3; ignore it when checking dependencies or buildlinking.
+#
+.if !exists(${X11BASE}/include/X11/extensions/extutil.h)
+IGNORE_PKG.Xrandr=	yes
+IGNORE_PKG.randrext=	yes
+.endif
+
