@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/05/10 07:48:01 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/09/28 20:40:05 soren Exp $
 # FreeBSD Id: Makefile,v 1.19 1999/01/08 19:59:26 fenner Exp
 
 DISTNAME=	w3c-httpd-3.0A
@@ -31,7 +31,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/cgiparse ${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/cgiutils ${PREFIX}/sbin
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"
 
 .if (${OPSYS} == "FreeBSD")
 OSNAME=	freebsd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/09/02 20:16:46 tron Exp $
+# $NetBSD: Makefile,v 1.9 1999/09/28 20:40:05 soren Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/03/15 02:01:27 steve Exp
 
 DISTNAME=       analog3.32
@@ -34,4 +34,4 @@ do-install:
 	${INSTALL_DATA} -m 644 ${WRKSRC}/analog.cfg \
 	  ${PREFIX}/etc/analog.cfg.default
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"

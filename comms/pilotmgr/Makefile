@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/05/26 20:48:16 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/09/28 20:40:03 soren Exp $
 
 DISTNAME=	pilotmgr-1.107
 CATEGORIES=	comms
@@ -47,4 +47,4 @@ do-install:
 		done
 		${LN} -fs ${PM_DOC_DIR} ${PM_PERL_DIR}/docs
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"

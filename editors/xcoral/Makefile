@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/15 20:39:41 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/09/28 20:40:03 soren Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/26 02:16:00 steve Exp
 #
 
@@ -28,4 +28,4 @@ do-install:
 	@${MKDIR} ${PREFIX}/share/doc/xcoral/HTML/icons
 	${CP} -r ${WRKSRC}/Doc/* ${PREFIX}/share/doc/xcoral
 
-.include <../../mk/bsd.pkg.mk>
+.include "../../mk/bsd.pkg.mk"
