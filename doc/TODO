@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1611 2004/04/15 08:38:30 adam Exp $
+$NetBSD: TODO,v 1.1612 2004/04/15 10:39:13 grant Exp $
 
 Suggested new packages
 ======================
@@ -66,11 +66,6 @@ Suggested new packages
 	Asterisk [grant, itojun/PR22585 (0.4 release)]
 	PBX-in-a-box for Linux
 	http://www.asterisk.org/
-
-	sqlrelay [wip/sqlrelay]
-	SQL connection pooling and sharing library, supports various
-	different backends and provides APIs for many popular languages
-	http://sqlrelay.sourceforge.net/
 
 	Unreal Tournament server [wip/unrealtournament-server]
 	Server for Unreal Tournament first person shooter
