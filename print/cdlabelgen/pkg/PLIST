@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/15 07:54:27 hubertf Exp $
+bin/cdlabelgen
+man/man1/cdlabelgen.1
+share/cdlabelgen/template.ps
+share/cdlabelgen/recycle.ps
+share/cdlabelgen/recycle.epsi
+share/cdlabelgen/mp3.eps
+share/cdlabelgen/cdda.eps
+share/cdlabelgen/cd.eps
+share/cdlabelgen/penguin.eps
