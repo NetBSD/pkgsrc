@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile.in,v 1.1.1.1 2003/06/23 11:45:22 grant Exp $
+#	$NetBSD: Makefile.in,v 1.2 2003/06/24 08:06:19 grant Exp $
 
 srcdir	= @srcdir@
 prefix	= @prefix@
@@ -49,5 +49,5 @@ install:
 #	$(INSTALL) -m 444 $(PROG).cat1 $(mandircat1)/$(PROG).0
 #	$(INSTALL) -m 444 cpio.1 $(mandirman1)
 #	$(INSTALL) -m 444 cpio.cat1 $(mandircat1)/cpio.0
-#	$(INSTALL) -m 444 tar.1 $(mandirman1)/tar.1
+#	$(INSTALL) -m 444 tar.1 $(mandirman1)
 #	$(INSTALL) -m 444 tar.cat1 $(mandircat1)/tar.0
