@@ -1,0 +1,29 @@
+$NetBSD: patch-ah,v 1.1 2004/11/01 23:41:59 xtraeme Exp $
+
+--- config/cf/Imake.cf.orig	2004-10-25 15:42:06.000000000 +0000
++++ config/cf/Imake.cf	2004-10-22 15:29:33.000000000 +0000
+@@ -253,7 +253,23 @@
+ #define KNetBSDArchitecture
+ #endif
+ 
+-#ifdef __FreeBSD__
++#ifdef __DragonFly__
++# define MacroIncludeFile <DragonFly.cf>
++# define MacroFile DragonFly.cf
++# undef __DragonFly__
++# define FreeBSDArchitecture
++# define KFreeBSDArchitecture
++# ifdef __i386__
++#  define i386BsdArchitecture
++#  define i386Architecture
++#  undef i386
++# endif
++# ifdef __amd64__
++#  define AMD64Architecture
++#  undef __amd64__
++#  undef __x86_64__
++# endif
++#elif defined __FreeBSD__
+ # define MacroIncludeFile <FreeBSD.cf>
+ # define MacroFile FreeBSD.cf
+ # undef __FreeBSD__
