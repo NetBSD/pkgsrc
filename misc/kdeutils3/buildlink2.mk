@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/07/13 13:52:43 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/07/30 15:36:49 markd Exp $
 #
 # This Makefile fragment is included by packages that use kdeutils.
 #
@@ -30,7 +30,7 @@ BUILDLINK_FILES.kdeutils+=	lib/libkcalc_main.*
 BUILDLINK_FILES.kdeutils+=	lib/libkedit_main.*
 BUILDLINK_FILES.kdeutils+=	lib/libklaptopdaemon_main.*
 
-.include "../../x11/kde3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	kdeutils-buildlink
