@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 1998/08/07 10:40:18 agc Exp $
+$NetBSD: patch-aa,v 1.4 1999/02/04 21:35:01 frueauf Exp $
 
---- client/Makefile.in.orig	Tue Jun 30 08:14:37 1998
-+++ client/Makefile.in	Fri Jul 17 12:20:34 1998
+--- client/Makefile.in.orig	Wed Jul  8 11:10:53 1998
++++ client/Makefile.in	Thu Feb  4 17:12:10 1999
 @@ -42,8 +42,8 @@
  AUTOHEADER = @AUTOHEADER@
  
@@ -40,6 +40,15 @@ $NetBSD: patch-aa,v 1.3 1998/08/07 10:40:18 agc Exp $
  mysql_DEPENDENCIES=		$(LIBRARIES)
  mysqladmin_DEPENDENCIES=	$(LIBRARIES)
  mysqlshow_DEPENDENCIES=		$(LIBRARIES)
+@@ -167,7 +167,7 @@
+ CLEANFILES =		$(libmysqlclient_a_LIBADD) $(SHLIBOBJS) \
+ 			libmysqlclient.so libmysqlclient.so.@VERSION@
+ 
+-DEFS =			-DUNDEF_THREADS_HACK
++DEFS =			-DUNDEF_THREADS_HACK -Dunix
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 
 @@ -218,10 +218,10 @@
  select_test_LDFLAGS = 
  CXXFLAGS = @CXXFLAGS@
