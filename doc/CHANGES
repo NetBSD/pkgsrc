@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.901 2002/12/24 18:11:31 jmmv Exp $
+$NetBSD: CHANGES,v 1.902 2002/12/24 18:43:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4158,7 +4158,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gturing to 0.1.1nb1 [wiz 2002-12-24]
 	Updated guppi to 0.40.3nb2 [wiz 2002-12-24]
 	Updated kdbg to 1.2.6nb1 [wiz 2002-12-24]
-	Updated kde to 3.0.4nb1 [wiz 2002-12-24]
 	Updated kdeaddons to 3.0.4nb1 [wiz 2002-12-24]
 	Updated kdeadmin to 3.0.4nb1 [wiz 2002-12-24]
 	Updated kdeartwork to 3.0.4nb1 [wiz 2002-12-24]
@@ -4243,3 +4242,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libexif to 0.5.8 [wiz 2002-12-24]
 	Updated pspp to 0.3.0nb1 [jmmv 2002-12-24]
 	Updated binkd to 0.9.4nb1 [jmmv 2002-12-24]
+	Updated qt3 to 3.0.6nb1 [wiz 2002-12-24]
+	Updated kde3 to 3.0.4nb2 [wiz 2002-11-01]
