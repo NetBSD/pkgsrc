@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/14 17:47:27 rh Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/27 15:19:53 adam Exp $
 
---- configure.orig	Tue May  8 01:13:07 2001
+--- configure.orig	2001-07-05 22:00:47.000000000 +0000
 +++ configure
-@@ -1744,14 +1744,14 @@
+@@ -1744,14 +1744,14 @@ exec 5>>./config.log
  
  
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/14 17:47:27 rh Exp $
  cat > conftest.$ac_ext <<EOF
  #line 1757 "configure"
  #include "confdefs.h"
-@@ -1779,7 +1779,7 @@
+@@ -1779,7 +1779,7 @@ LIBS="$ac_save_LIBS"
  fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -29,3 +29,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/14 17:47:27 rh Exp $
  else
    echo "$ac_t""no" 1>&6
  fi
+@@ -2352,6 +2352,7 @@ else
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ 
+ char*

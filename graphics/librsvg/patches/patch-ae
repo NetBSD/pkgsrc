@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2004/04/27 15:19:53 adam Exp $
+
+--- rsvg-ft.c.orig	2004-04-27 12:02:07.000000000 +0000
++++ rsvg-ft.c
+@@ -28,6 +28,7 @@
+ #include <stdlib.h>
+ #include <math.h>
+ 
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ 
+ #include <libart_lgpl/art_misc.h>

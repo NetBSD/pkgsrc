@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.7 2004/04/27 15:21:15 adam Exp $
+
+--- libgnomeprint/parseTT.h.orig	2004-04-27 10:27:00.000000000 +0000
++++ libgnomeprint/parseTT.h
+@@ -22,6 +22,7 @@
+ BEGIN_GNOME_DECLS
+ 
+ #include <glib.h>
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ 
+ /*
