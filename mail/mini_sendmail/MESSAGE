@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2003/02/15 22:11:23 is Exp $
+
+Before you install ${PREFIX}/etc/mailer.conf.mini_sendmail as
+/etc/mailer.conf, edit it to replace ``relayhost'' with the name of
+the smart mail relay host.
+
+See the manual page for details.
