@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/14 21:47:51 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/02/13 23:43:49 jmmv Exp $
 include/eel-2/eel/eel-accessibility.h
 include/eel-2/eel/eel-art-extensions.h
 include/eel-2/eel/eel-art-gtk-extensions.h
@@ -116,8 +116,5 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/eel-2.0.mo
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf2: @dirrm share/gconf/schemas
-@comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
 @dirrm include/eel-2/eel
 @dirrm include/eel-2
