@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2003/09/22 12:30:24 wiz Exp $
+
+--- cstream.c.orig	Wed Jul 11 17:13:05 2001
++++ cstream.c
+@@ -93,6 +93,11 @@
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ 
++/* Solaris needs this */
++#ifndef	INADDR_NONE
++#define	INADDR_NONE	0xffffffff
++#endif
++
+ #ifndef NORESOLV
+ #include <netdb.h>
+ #endif
