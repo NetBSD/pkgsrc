@@ -1,8 +1,6 @@
-$NetBSD: patch-ac,v 1.1 1999/01/06 16:46:18 tv Exp $
-
 --- libiberty/strerror.c.orig	Fri May 15 19:42:41 1998
-+++ libiberty/strerror.c	Wed Jan  6 11:45:53 1999
-@@ -7,22 +7,9 @@
++++ libiberty/strerror.c	Wed Jan  6 12:10:40 1999
+@@ -7,21 +7,12 @@
  
  #include "config.h"
  
@@ -21,11 +19,13 @@ $NetBSD: patch-ac,v 1.1 1999/01/06 16:46:18 tv Exp $
 -#ifdef HAVE_SYS_ERRLIST
 -#undef sys_errlist
 -#endif
--
++/* Bogus!  We have these. */
++#undef HAVE_SYS_ERRLIST
++#define HAVE_SYS_ERRLIST
+ 
  /*  Routines imported from standard C runtime libraries. */
  
- #ifdef __STDC__
-@@ -459,11 +446,6 @@
+@@ -459,11 +450,6 @@
  
  static int sys_nerr;
  static const char **sys_errlist;
