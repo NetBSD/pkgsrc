@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2000/07/26 08:10:14 itohy Exp $
+# $NetBSD: Makefile.common,v 1.4 2000/08/27 02:46:06 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -136,7 +136,6 @@ MAKEFRAGS=		${FILESDIR}/devs.x11
 .endif
 MAKEFRAGS+=		${FILESDIR}/devs.nox11
 
-PERL_PATH=		${LOCALBASE}/bin/perl
 GSINST_DIR=		${PREFIX}/share/ghostscript/${GS_VERS}vflib
 DOC_DIR=		${PREFIX}/share/doc/ghostscript
 LIB_DIR=		${GSINST_DIR}/lib
@@ -196,7 +195,7 @@ do-configure:
 		> ${WRKDIR}/unix-gcc.mak
 	${MV} -f ${WRKDIR}/unix-gcc.mak ${WRKSRC}/src
 
-	${SED}	-e "s,@PERL@,${PERL_PATH},g" \
+	${SED}	-e "s,@PERL@,${PERL5},g" \
 		< ${WRKSRC}/lib/fixmswrd.pl.in > ${WRKSRC}/lib/fixmswrd.pl
 
 post-install:

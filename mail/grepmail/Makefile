@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/01/24 14:19:56 agc Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/27 02:46:04 jlam Exp $
 #
 
 DISTNAME=	grepmail-4.11
@@ -8,17 +8,16 @@ MASTER_SITES=	http://www.cs.virginia.edu/~dwc3q/code/
 MAINTAINER=	david@fundy.net
 HOMEPAGE=	http://www.cs.virginia.edu/~dwc3q/code/index.html
 
-CONFIGURE_ENV=	PERL=${PREFIX}/bin/perl
-
-USE_PERL5=	yes
+USE_PERL5=	# defined
+CONFIGURE_ENV=	PERL=${PERL5}
 
 do-build:
 	@cd ${WRKSRC} ;						\
 	for i in 1 2 ; do					\
-		${ECHO} "$$i" | ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL; \
+		${ECHO} "$$i" | ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL; \
 		${MAKE};					\
 		${RM} -f grepmail-$$i;				\
-		${SED} -e '1s|.*|#! ${PREFIX}/bin/perl|' grepmail > grepmail-$$i; \
+		${SED} -e '1s|.*|#! ${PERL5}|' grepmail > grepmail-$$i; \
 	done
 
 do-install:

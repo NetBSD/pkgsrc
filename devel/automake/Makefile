@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/05/22 16:24:09 tv Exp $
+# $NetBSD: Makefile,v 1.18 2000/08/27 02:46:03 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/09/19 09:29:04 max Exp
 #
 
@@ -11,11 +11,11 @@ HOMEPAGE=	http://www.gnu.org/software/automake/automake.html
 
 DEPENDS=	autoconf-2.13:../../devel/autoconf
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	PERL=${PREFIX}/bin/perl
+USE_PERL5=	# defined
+GNU_CONFIGURE=	# defined
+CONFIGURE_ENV=	PERL=${PERL5}
 STRIPFLAG=	# none
 
-USE_PERL5=	yes
 INFO_FILES=	automake.info
 
 .include "../../mk/bsd.pkg.mk"
