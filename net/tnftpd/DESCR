@@ -1,0 +1,13 @@
+tnftpd is the a server for the Internet File Transfer Protocol (ftp). 
+The server uses the TCP protocol and listens at the port specified in
+the ``ftp'' service specification; see services(5).
+
+`tnftpd' is a portable version of the NetBSD ftpd, hence the name.
+It was formerly known as `lukemftpd'.
+
+Various features such as the ftpd.conf(5) functionality, RFC 2389, and
+draft-ietf-ftpext-mlst-11 support was implemented in NetBSD 1.3 and
+later releases by Luke Mewburn <lukem@netbsd.org>.
+
+tnftpd provides around 90% of the functionality of wuftpd, but in
+approximately 30% of the footprint.
