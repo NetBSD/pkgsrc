@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2495 2003/06/12 13:39:56 wiz Exp $
+$NetBSD: CHANGES,v 1.2496 2003/06/13 03:19:26 itojun Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2446,3 +2446,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated audit-packages to 1.16 [wiz 2003-06-12]
 	Updated file-roller to 2.2.4 [wiz 2003-06-12]
 	Updated gtexinfo to 4.6 [wiz 2003-06-12]
+	Updated ethereal to 0.9.13 [itojun 2003-06-13]
