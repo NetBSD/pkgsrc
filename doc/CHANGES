@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6239 2004/06/20 19:39:59 agc Exp $
+$NetBSD: CHANGES,v 1.6240 2004/06/20 19:43:07 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2972,3 +2972,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cdrdao to 1.1.9 [dillo 2004-06-20]
 	Added pearpc-0.2.0 [xtraeme 2004-06-20]
 	Added websvn-1.39 [xtraeme 2004-06-20]
+	Added dspam-3.0.0 [xtraeme 2004-06-20]
