@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/08/16 03:34:22 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2001/08/17 21:16:49 jlam Exp $
 #
 
 DISTNAME=	dspectral-1.2
@@ -12,7 +12,6 @@ COMMENT=	XMMS plugin for dual spectral analyzer
 
 USE_X11=	yes
 USE_LIBTOOL=	yes
-MAKE_ENV+=	GTK_CONFIG=${BUILDLINK_CONFIG_WRAPPER.gtk}
 
 pre-build:
 		cd ${WRKSRC} ; ${MAKE} clean
