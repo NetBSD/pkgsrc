@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/05/02 11:56:10 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2003/05/05 16:59:03 jmmv Exp $
 
 DISTNAME=		ntop-2.1.54
 PKGNAME=		ntop2-2.1.54
-PKGREVISION=	2
+PKGREVISION=		2
 WRKSRC=                 ${WRKDIR}/${DISTNAME}/ntop
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ntop/}
