@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/11/27 21:20:06 mycroft Exp $
+# $NetBSD: Makefile,v 1.8 2001/01/04 16:59:05 wiz Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -11,12 +11,13 @@ HOMEPAGE=		http://xracer.annexia.org/
 BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=		automake:../../devel/automake
 DEPENDS+=		jpeg-*:../../graphics/jpeg
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 
 USE_X11=		# defined
 USE_MESA=		# defined
 USE_GMAKE=		# defined
 USE_PERL5=		# defined
+USE_LIBINTL=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XRacer/.packlist
 
 USE_LIBTOOL=		# defined
