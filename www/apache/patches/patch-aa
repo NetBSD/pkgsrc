@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.17 2002/01/01 06:12:06 jlam Exp $
+$NetBSD: patch-aa,v 1.18 2002/02/01 16:04:39 jlam Exp $
 
---- Makefile.tmpl.orig	Tue Jan  1 00:38:59 2002
+--- Makefile.tmpl.orig	Fri Feb  1 10:05:43 2002
 +++ Makefile.tmpl
 @@ -324,11 +324,6 @@
  	$(MKDIR) $(root)$(mandir)/man1
@@ -49,7 +49,7 @@ $NetBSD: patch-aa,v 1.17 2002/01/01 06:12:06 jlam Exp $
  		done; \
  	fi
  	@echo "<=== [programs]"
-@@ -531,7 +498,7 @@
+@@ -533,7 +500,7 @@
  #   icons and distributed CGI scripts.
  install-data:
  	@echo "===> [data: Installing initial data files]"
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.17 2002/01/01 06:12:06 jlam Exp $
  		echo "[PRESERVING EXISTING DATA SUBDIR: $(root)$(htdocsdir)/]"; \
  	else \
  		echo "Copying tree $(TOP)/htdocs/ -> $(root)$(htdocsdir)/"; \
-@@ -553,9 +520,10 @@
+@@ -555,9 +522,10 @@
  		for script in printenv test-cgi; do \
  			cat $(TOP)/cgi-bin/$${script} |\
  			sed -e 's;^#!/.*perl;#!$(PERL);' \
@@ -71,7 +71,7 @@ $NetBSD: patch-aa,v 1.17 2002/01/01 06:12:06 jlam Exp $
  		done; \
  	fi
  	@echo "Copying tree $(TOP)/icons/ -> $(root)$(iconsdir)/"; \
-@@ -569,7 +537,7 @@
+@@ -571,7 +539,7 @@
  #   and initial config files while preserving existing ones.
  install-config:
  	@echo "===> [config: Installing Apache configuration files]"
