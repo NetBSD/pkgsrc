@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/03/06 23:50:51 jmc Exp $
+# $NetBSD: Makefile,v 1.11 2003/05/11 07:12:49 jmc Exp $
 
 DISTNAME=	ffcall-1.8d
 PKGNAME=	ffcall-1.8.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=libs/}
 
@@ -15,6 +16,21 @@ ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-i386 *-*-m68k *-*-sparc *-*-sparc64 *-*
 
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+# Gnustep requires this by linking ffcall libs into libgnustep-base.so
+# Only tested on powerpc.
+.if (${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "NetBSD")
+CONFIGURE_ARGS+=	--enable-shared
+PLIST_SRC+=		PLIST.shared
+
+post-install:
+	${LN} -sf ../lib/libavcall.so.0.0 ${PREFIX}/lib/libavcall.so.0
+	${LN} -sf ../lib/libavcall.so.0.0 ${PREFIX}/lib/libavcall.so
+	${LN} -sf ../lib/libcallback.so.0.0 ${PREFIX}/lib/libcallback.so.0
+	${LN} -sf ../lib/libcallback.so.0.0 ${PREFIX}/lib/libcallback.so
+.endif
 
 post-patch:
 	${CP} files/tramp-rs6000-netbsd.s ${WRKSRC}/callback/trampoline_r
