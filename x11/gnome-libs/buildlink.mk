@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/06/23 19:27:01 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/06/30 14:52:37 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gnome-libs.
 #
@@ -49,7 +49,7 @@ BUILDLINK_TARGETS.gnome-libs+=	gnome-libs-buildlink-config-wrapper
 BUILDLINK_TARGETS.gnome-libs+=	libart-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.gnome-libs}
 
-BUILDLINK_CONFIG.gnome-libs=		${LOCALBASE}/bin/gnome-config
+BUILDLINK_CONFIG.gnome-libs=		${X11PREFIX}/bin/gnome-config
 BUILDLINK_CONFIG_WRAPPER.gnome-libs=	${BUILDLINK_DIR}/bin/gnome-config
 BUILDLINK_CONFIG_WRAPPER.libart=	${BUILDLINK_DIR}/bin/libart-config
 
