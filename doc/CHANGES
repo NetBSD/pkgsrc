@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4216 2003/12/21 21:31:57 wiz Exp $
+$NetBSD: CHANGES,v 1.4217 2003/12/22 01:19:16 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5279,3 +5279,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added libcaca-0.3 [wiz 2003-12-21]
 	Added jpeg_ls-2.2 [wiz 2003-12-21]
 	Added ljpeg-1.0 [wiz 2003-12-21]
+	Update createbuildlink to 2.9 [uebayasi 2003-12-22]
