@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2000/10/15 17:32:11 rh Exp $
+$NetBSD: md5,v 1.2 2000/12/28 17:04:24 wiz Exp $
 
-MD5 (lilypond-1.3.86.tar.gz) = 37a1896ab4a45b544a91d2498f161c8d
+MD5 (lilypond-1.3.119.tar.gz) = 3b449725b7d64583a6b899a74c634709
