@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2003/01/16 03:05:01 uebayasi Exp $
+# $NetBSD: Makefile,v 1.30 2003/01/17 02:09:36 uebayasi Exp $
 #
 
-DISTNAME=       siag-3.1.20
-PKGREVISION=	1
+DISTNAME=       siag-3.5.4
 CATEGORIES=     misc textproc math
-MASTER_SITES=   ftp://ftp.edu.stockholm.se/pub/siag/
+MASTER_SITES=   ftp://siag.nu/pub/siag/
 
 MAINTAINER=     packages@netbsd.org
 HOMEPAGE=       http://siag.nu/
@@ -13,22 +12,32 @@ COMMENT=	Poor man's office suite with spreadsheet, word processor, etc
 DEPENDS+=	gv>=3.5.8nb1:../../print/gv
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-CONFIGURE_ARGS=	--with-x --with-guile --includedir=${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+=--with-x
+CONFIGURE_ARGS+=--with-guile
+CONFIGURE_ARGS+=--with-docdir=${PREFIX}/share/doc/siag
 GNU_CONFIGURE=  YES
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 USE_X11=	YES
 
-CFLAGS+=	-Dunix
-_STRIPFLAG_INSTALL=
+#CFLAGS+=	-Dunix
+#_STRIPFLAG_INSTALL=
 
-# XXX The source assumes Xaw3d.  Need work to use standard.
 .include "../../mk/bsd.prefs.mk"
 
-XAW_TYPE=	3d
+.if ${XAW_TYPE} == "xpm"
+CONFIGURE_ARGS+=--with-xawm=XawXpm
+.elif ${XAW_TYPE} == "3d"
+CONFIGURE_ARGS+=--with-xawm=Xaw3d
+.elif ${XAW_TYPE} == "neXtaw"
+CONFIGURE_ARGS+=--with-xawm=neXtaw
+.else
+CONFIGURE_ARGS+=--with-xawm=Xaw
+.endif
 
 .include "../../devel/ncurses/buildlink2.mk"
 .include "../../lang/guile14/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/xaw.buildlink2.mk"
+.include "../../x11/mowitz/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
