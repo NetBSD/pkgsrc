@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8910 2005/01/25 13:37:39 blymn Exp $
+$NetBSD: CHANGES,v 1.8911 2005/01/25 13:45:59 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -579,4 +579,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lwp to 1.12 [blymn 2005-01-25]
 	Updated rpc2 to 1.26 [blymn 2005-01-25]
 	Updated rvm to 1.10 [blymn 2005-01-25]
-
+	Updated gnetcat to 0.7.1nb1 [adrianp 2005-01-25]
