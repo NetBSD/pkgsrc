@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2002/08/20 14:10:37 drochner Exp $
+# $NetBSD: Makefile,v 1.161 2002/08/22 06:35:44 cjep Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -105,6 +105,7 @@ SUBDIR+=	p5-XML-Parser
 SUBDIR+=	p5-XML-RSS
 SUBDIR+=	p5-XML-RegExp
 SUBDIR+=	p5-XML-SAX
+SUBDIR+=	p5-XML-Simple
 SUBDIR+=	p5-XML-Writer
 SUBDIR+=	p5-XML-XPath
 SUBDIR+=	p5-XML-XQL
