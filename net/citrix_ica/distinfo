@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.4 2001/05/08 23:58:44 dmcmahill Exp $
+
+SHA1 (citrix/linuxx86.tar.gz) = d30a8b151c7503a61005b00c5d2a0e77301df259
+Size (citrix/linuxx86.tar.gz) = 1507974 bytes
+SHA1 (patch-i386-aa) = db6ec387f49feffdc02d6a495c14c8bef4433d16
+SHA1 (patch-i386-ab) = a688fa885d0a93ee7a8a02935de5024fa6fecc6c
+SHA1 (citrix/solaris.tar.Z) = 453eaf6cdbafd57485e71d497e634b616f747ace
+Size (citrix/solaris.tar.Z) = 1728307 bytes
+SHA1 (patch-sparc-aa) = 646df6b2908fc007d53be22176f2eff05041f6f8
+SHA1 (patch-sparc-ab) = 9f4f6939434156acedd18947155721237091db03
