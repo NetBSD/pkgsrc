@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/05 05:02:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/03 23:29:53 xtraeme Exp $
 #
 
-DISTNAME=	allegro-4.1.13
+DISTNAME=	allegro-4.1.14
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alleg/}
 
@@ -24,7 +24,6 @@ INSTALL_TARGET=		install install-info
 CONFIGURE_ARGS+=	--disable-ossmidi
 
 LIBS+=		${LIBOSSAUDIO}
-CFLAGS+=	-DDEVOSSAUDIO=\"\\\"${DEVOSSAUDIO}\\\"\"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,6 +33,12 @@ BUILD_DEFS+=	USE_ESOUND
 CONFIGURE_ARGS+=	--enable-esddigi
 .include "../../audio/esound/buildlink3.mk"
 .endif
+
+SUBST_CLASSES=		oss
+SUBST_STAGE.oss=	post-patch
+SUBST_FILES.oss=	src/unix/uoss.c setup/setup.c
+SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
+SUBST_MESSAGE.oss=	"Fixing harcoded audio device."
 
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
