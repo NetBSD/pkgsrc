@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 1998/09/03 11:55:22 agc Exp $
+bin/pax
+man/man1/pax.1
+man/cat1/pax.0
