@@ -11,22 +11,28 @@ include/GL/osmesa.h
 include/GL/svgamesa.h
 include/GL/wmesa.h
 include/GL/xmesa.h
-lib/libGL.a
-lib/libGL.so.13.2
-lib/libGLU.a
-lib/libGLU.so.13.2
-lib/libMesaGL.a
-lib/libMesaGL.so.13.2
-lib/libMesaGLU.a
-lib/libMesaGLU.so.13.2
-lib/libMesaaux.a
-lib/libMesaaux.so.13.2
-lib/libMesatk.a
-lib/libMesatk.so.13.2
+include/GL/fxmesa.h
+include/GL/mglmesa.h
+lib/libMesaGL.so.2.4
+@exec ln %D/%F %D/lib/libGL.so.2.4
+@unexec rm %D/lib/libGL.so.2.4
+lib/libMesaGLU.so.2.4
+@exec ln %D/%F %D/lib/libGLU.so.2.4
+@unexec rm %D/lib/libGLU.so.2.4
+lib/libMesaGL_pic.a
+@exec ln %D/%F %D/lib/libGL_pic.a
+@unexec rm %D/lib/libGL_pic.a
+lib/libMesaGLU_pic.a
+@exec ln %D/%F %D/lib/libGLU_pic.a
+@unexec rm %D/lib/libGLU_pic.a
+lib/libMesaaux.so.2.4
+lib/libMesaaux_pic.a
+lib/libMesatk.so.2.4
+lib/libMesatk_pic.a
 @exec ldconfig -m %B
+@unexec ldconfig -m %B
 share/examples/Mesa/book/Imakefile
 share/examples/Mesa/book/Makefile
-share/examples/Mesa/book/NOTES
 share/examples/Mesa/book/README
 share/examples/Mesa/book/accanti
 share/examples/Mesa/book/accanti.c
@@ -170,6 +176,8 @@ share/examples/Mesa/book/xfont
 share/examples/Mesa/book/xfont.c
 share/examples/Mesa/demos/Imakefile
 share/examples/Mesa/demos/Makefile
+share/examples/Mesa/demos/Makefile.DJ
+share/examples/Mesa/demos/Makefile.cygnus
 share/examples/Mesa/demos/bounce
 share/examples/Mesa/demos/bounce.c
 share/examples/Mesa/demos/clearspd.c
@@ -195,6 +203,7 @@ share/examples/Mesa/demos/osdemo
 share/examples/Mesa/demos/osdemo.c
 share/examples/Mesa/demos/reflect
 share/examples/Mesa/demos/reflect.c
+share/examples/Mesa/demos/shape.c
 share/examples/Mesa/demos/spectex.c
 share/examples/Mesa/demos/spin
 share/examples/Mesa/demos/spin.c
@@ -203,6 +212,7 @@ share/examples/Mesa/demos/stex3d.c
 share/examples/Mesa/demos/tess_demo.c
 share/examples/Mesa/demos/test0
 share/examples/Mesa/demos/test0.c
+share/examples/Mesa/demos/texcyl.c
 share/examples/Mesa/demos/texobj
 share/examples/Mesa/demos/texobj.c
 share/examples/Mesa/demos/trispd.c
@@ -219,7 +229,7 @@ share/examples/Mesa/samples/3.rgb
 share/examples/Mesa/samples/4.rgb
 share/examples/Mesa/samples/Imakefile
 share/examples/Mesa/samples/Makefile
-share/examples/Mesa/samples/NOTES
+share/examples/Mesa/samples/Makefile.DJ
 share/examples/Mesa/samples/README
 share/examples/Mesa/samples/accum
 share/examples/Mesa/samples/accum.c
