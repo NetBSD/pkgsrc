@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/11/24 20:37:39 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/11/24 20:54:03 tv Exp $
 #
 
 DISTNAME=	ircu2.10.04
@@ -17,7 +17,7 @@ IS_INTERACTIVE=	yes
 post-configure:
 	@${CP} ${FILESDIR}/config ${WRKSRC}/config/.config
 	@cd ${WRKSRC} && \
-		${MAKE} CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" config
+		${MAKE} PREFIX="${PREFIX}" CC="${CC}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" config
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/ircd ${PREFIX}/share/doc/ircd
