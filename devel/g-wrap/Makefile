@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/12/03 14:31:28 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2004/12/03 15:55:36 wiz Exp $
 
 DISTNAME=	g-wrap-1.3.4
 PKGREVISION=	5
@@ -9,7 +9,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnucash.org/
 COMMENT=	Tool for importing types, functions, and constants into guile
 
-DEPENDS+=	guile-slib>=2.4.2:../../devel/guile-slib
+DEPENDS+=	guile-slib-2.4.2nb[0-5]:../../devel/guile14-slib
 
 USE_BUILDLINK3=		YES
 
