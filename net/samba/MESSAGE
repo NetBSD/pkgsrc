@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:58:42 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2001/11/21 17:13:38 jlam Exp $
 
                     *===* Security Notes *===*
 
@@ -12,5 +12,4 @@ port, pkg_delete will *NOT* remove the smbpasswd file because
 pkg_delete can be used for upgrading this package.  If you won't use
 this package anymore, I strongly recommend that you remove the
 smbpasswd file manually.
-
 ===========================================================================
