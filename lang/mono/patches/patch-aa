@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/03/01 13:11:47 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2003/03/15 08:27:45 jmmv Exp $
 
---- mono/jit/jit.c.orig	2003-02-26 17:59:57.000000000 +0100
-+++ mono/jit/jit.c	2003-02-26 18:00:00.000000000 +0100
-@@ -4207,8 +4207,8 @@
+--- mono/jit/jit.c.orig	2003-03-13 11:31:58.000000000 +0100
++++ mono/jit/jit.c	2003-03-13 11:32:37.000000000 +0100
+@@ -4208,8 +4208,8 @@
  	sigemptyset (&sa.sa_mask);
  	sa.sa_flags = 0;
  	//g_assert (syscall (SYS_sigaction, SIGILL, &sa, NULL) != -1);
