@@ -1,6 +1,6 @@
-# $NetBSD: INSTALL,v 1.7 2002/06/28 04:40:05 grant Exp $
+# $NetBSD: INSTALL,v 1.8 2002/06/28 18:29:20 jlam Exp $
 
-DIRS="/etc /etc/ssh @PREFIX@/etc @PREFIX@/etc/ssh"
+DIRS="/etc /etc/ssh ${PKG_PREFIX}/etc ${PKG_PREFIX}/etc/ssh"
 FILES="sshd.conf sshd_config"
 
 if [ "${STAGE}" != "POST-INSTALL" ]; then
