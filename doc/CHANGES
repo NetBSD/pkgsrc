@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.173 2002/10/05 06:15:13 tron Exp $
+$NetBSD: CHANGES,v 1.174 2002/10/05 22:13:22 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3120,3 +3120,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libglade to 0.17nb2 [rh 2002-10-05]
 	Added kile-1.2 [markd 2002-10-05]
 	Updated logsurfer to 1.5.2 [tron 2002-10-05]
+	Added aquaified-0.30 [mrg 2002-10-05]
