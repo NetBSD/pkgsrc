@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/09/01 20:16:59 veego Exp $
+# $NetBSD: Makefile,v 1.21 2001/01/26 05:21:47 hubertf Exp $
 
 DISTNAME=		inn-2.2.3
 CATEGORIES=		news
@@ -68,7 +68,7 @@ post-install:
 	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/examples/inn; \
 	done
 	cd ${WRKSRC}/site && \
-	${INSTALL_SCRIPT} ${WRKDIR}/innd.sh ${PREFIX}/etc/rc.d
+	${INSTALL_SCRIPT} ${WRKDIR}/innd.sh ${PREFIX}/etc/rc.d/innd
 	@${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"

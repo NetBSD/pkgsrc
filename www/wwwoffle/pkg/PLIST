@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/11/20 05:12:40 itojun Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/01/26 05:21:49 hubertf Exp $
 bin/wwwoffle
 bin/wwwoffle-ls
 bin/wwwoffle-mv
@@ -6,7 +6,7 @@ bin/wwwoffle-read
 bin/wwwoffle-rm
 bin/wwwoffle-tools
 bin/wwwoffle-write
-etc/rc.d/wwwoffle.sh
+etc/rc.d/wwwoffle
 etc/wwwoffle/wwwoffle.conf.default
 @exec if [ ! -f %D/etc/wwwoffle/wwwoffle.conf ]; then cp -p %D/etc/wwwoffle/wwwoffle.conf.default %D/etc/wwwoffle/wwwoffle.conf; fi
 libdata/wwwoffle-spool.tar.gz
