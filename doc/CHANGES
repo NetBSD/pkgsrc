@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9003 2005/02/02 09:11:41 tron Exp $
+$NetBSD: CHANGES,v 1.9004 2005/02/02 11:24:54 augustss Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -708,3 +708,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-SVN-Mirror to 0.55 [epg 2005-02-02]
 	Updated svk to 0.29 [epg 2005-02-02]
 	Updated mencvcd to 0.3nb2 [tron 2005-02-02]
+	Added libquantum-0.2.4 [augustss 2005-02-02]
