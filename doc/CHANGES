@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1023 2003/01/05 13:59:37 cjep Exp $
+$NetBSD: CHANGES,v 1.1024 2003/01/05 14:08:54 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -93,4 +93,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libglade2 to 2.0.1nb3 [jmmv 2003-01-05]
 	Updated libgnomecanvas to 2.0.5nb1 [jmmv 2003-01-05]
 	Updated kdelibdocs3 to 3.0.5.1 [skrll 2003-01-05]
-	Added gp-grpconst-2.0 [cjep 2003-01-5]
+	Added gp-grpconst-2.0 [cjep 2003-01-05]
+	Updated bonobo-activation to 2.1.1 [jmmv 2003-01-05]
