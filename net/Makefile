@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.283 2002/03/28 02:18:11 itojun Exp $
+# $NetBSD: Makefile,v 1.284 2002/04/01 05:51:09 explorer Exp $
 #
 
 COMMENT=	Networking tools
@@ -23,6 +23,7 @@ SUBDIR+=	bind9-current
 SUBDIR+=	bing
 SUBDIR+=	bounce
 SUBDIR+=	bridged
+SUBDIR+=	cdpd
 SUBDIR+=	cftp
 SUBDIR+=	choparp
 SUBDIR+=	chrony
