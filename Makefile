@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2004/02/28 06:04:13 grant Exp $
+# $NetBSD: Makefile,v 1.64 2004/03/26 02:38:42 wiz Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -235,3 +235,11 @@ show-host-specific-pkgs:
 	@${ECHO} "HOST_SPECIFIC_PKGS= \\";					\
 	${MAKE} show-pkgsrc-dir | ${AWK} '/^===/ { next; } { printf("%s \\\n", $$1) }'; \
 	${ECHO} ""
+
+# list all packages that depend on a particular package; needs the INDEX file
+# usage: 'make show-deps PKG=openssl'
+# PKG: name of the package
+show-deps:
+	@if [ ! -f "${.CURDIR}/INDEX" ]; then ${ECHO} "No index available -- please build it with 'make index'" >&2; ${FALSE}; fi
+	@if [ -z "${PKG}" ]; then ${ECHO} "PKG variable not set" >&2; ${FALSE}; fi
+	@${GREP} -E "^([^|]*\|){7}([^|]* |)${PKG}>=" ${.CURDIR}/INDEX | ${SED} -n "s/^[^|]*|\([^|]*\)|.*/\1/p" | ${SORT}
