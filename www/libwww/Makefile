@@ -1,31 +1,30 @@
-# New ports collection makefile for:	libwww
-# Version required:	5.1m1
-# Date created:		18 Feb 1996
-# Whom:			torstenb
-#
-# $Id: Makefile,v 1.1.1.1 1998/07/14 16:51:20 tv Exp $
+# $NetBSD: Makefile,v 1.2 1998/07/14 16:56:51 tv Exp $
+# FreeBSD Id: Makefile,v 1.10 1998/06/14 23:34:59 jseger Exp
 #
 
-PKGNAME=	libwww-5.1m1
 DISTNAME=	w3c-${PKGNAME}
+PKGNAME=	libwww-5.1m1
 CATEGORIES=	www devel
 MASTER_SITES=	ftp://ftp.w3.org/pub/libwww/
 
-MAINTAINER=	jseger@FreeBSD.org
+MAINTAINER=	tv@netbsd.org
+
+BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-CONFIGURE_ARGS=	--enable-shared --enable-static
+CONFIGURE_ARGS=	--with-zlib --with-regex
+CONFIGURE_ENV=	LIBTOOL=${PREFIX}/bin/libtool \
+		CPPFLAGS="-I${X11BASE}/include" \
+		LDFLAGS="-L${X11BASE}/lib"
+WRKSRC=		${WRKDIR}/w3c-libwww-5.1m
+
 DOCDIR=		${PREFIX}/share/doc/libwww
 
-WRKSRC=		${WRKDIR}/w3c-libwww-5.1m
 post-install:
-	@${LDCONFIG} -m ${PREFIX}/lib
-.if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCDIR}/User
 	${CP} -R ${WRKSRC}/Library/User/* ${DOCDIR}/User
 	@${MKDIR} ${DOCDIR}/src
 	${CP} ${WRKSRC}/Library/src/*.html ${DOCDIR}/src
-.endif
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
