@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5950 2004/05/15 14:09:29 jmmv Exp $
+$NetBSD: CHANGES,v 1.5951 2004/05/15 14:29:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2548,3 +2548,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated eog2 to 2.6.1 [jmmv 2004-05-15]
 	Updated file-roller to 2.6.1 [jmmv 2004-05-15]
 	Updated zenity to 2.6.2 [jmmv 2004-05-15]
+	Updated gedit to 2.6.1 [jmmv 2004-05-15]
+	Updated yelp to 2.6.1 [jmmv 2004-05-15]
