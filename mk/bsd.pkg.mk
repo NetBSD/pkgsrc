@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.525 2000/07/30 14:26:11 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.526 2000/07/31 02:49:47 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -99,28 +99,20 @@ USE_MOTIF=		# defined
 .if ${OPSYS} == "SunOS"
 MOTIFBASE?=		/usr/dt
 .elif exists(${X11BASE}/include/Xm/Xm.h)
-MOTIFBASE?=		${X11BASE}
-.elif ${X11PREFIX} == ${LOCALBASE}
-.if defined(USE_MOTIF12)
-MOTIFBASE?=		${LOCALBASE}/LessTif/Motif1.2
-.else
-MOTIFBASE?=		${LOCALBASE}
-.endif
-.else
-.if defined(USE_MOTIF12)
-MOTIFBASE?=		${X11BASE}/LessTif/Motif1.2
+.if defined(USE_MOTIF12) && exists(${X11BASE}/include/Xm/Gadget.h)
+MOTIFBASE?=		${X11PREFIX}/LessTif/Motif1.2
 .else
 MOTIFBASE?=		${X11BASE}
 .endif
+.elif defined(USE_MOTIF12)
+MOTIFBASE?=		${X11PREFIX}/LessTif/Motif1.2
+.else
+MOTIFBASE?=		${X11PREFIX}
 .endif
 .endif  # USE_MOTIF
 
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
-.if ${X11PREFIX} == ${LOCALBASE}
-PREFIX=			${LOCALBASE}
-.else
-PREFIX=			${X11BASE}
-.endif
+PREFIX=			${X11PREFIX}
 .elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
 NO_MTREE=		yes
