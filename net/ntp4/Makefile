@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/07/12 16:24:58 fredb Exp $
+# $NetBSD: Makefile,v 1.18 2001/07/12 17:38:18 fredb Exp $
 #
 
 DISTNAME=	ntp-4.0.99m-rc3
@@ -14,6 +14,7 @@ COMMENT=	Network Time Protocol Version 4
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ENV+=	PATH_PERL="${PERL5}"
+CONFIGURE_ENV+=	ac_cv_lib_readline_readline=no
 
 DOCDIR=		${PREFIX}/share/doc
 EXAMPLESDIR=	${PREFIX}/share/examples
