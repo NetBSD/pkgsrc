@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/01/07 08:07:59 skrll Exp $
+$NetBSD: patch-ac,v 1.2 2002/10/28 08:46:44 skrll Exp $
 
---- src/tools/qdir_unix.cpp.orig	Wed Dec 12 06:58:31 2001
+--- src/tools/qdir_unix.cpp.orig	Thu Oct 17 15:08:58 2002
 +++ src/tools/qdir_unix.cpp
-@@ -81,10 +81,19 @@
+@@ -82,10 +82,19 @@ QString QDir::canonicalPath() const
  
  bool QDir::mkdir( const QString &dirName, bool acceptAbsPath ) const
  {
--#ifdef Q_OS_MACX  // Mac X doesn't support trailing /'s
+-#if defined(Q_OS_MACX)  // Mac X doesn't support trailing /'s
 +#ifdef Q_TRAILING_DIR_SEP  // Some OSes doesn't support trailing /'s
      QString name = dirName;
 -    if (dirName[dirName.length() - 1] == "/")
@@ -25,7 +25,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/01/07 08:07:59 skrll Exp $
      return QT_MKDIR( QFile::encodeName(filePath(name,acceptAbsPath)), 0777 )
  	== 0;
  #else
-@@ -95,7 +104,24 @@
+@@ -96,7 +105,24 @@ bool QDir::mkdir( const QString &dirName
  
  bool QDir::rmdir( const QString &dirName, bool acceptAbsPath ) const
  {
