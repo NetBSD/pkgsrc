@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/11/13 07:03:08 taya Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/12/03 16:45:54 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2215,6 +2215,7 @@ include/${MOZILLA}/zlib/zlib.h
 @comment end INCLUDE
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regchrome
+@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/firefox-bin -register
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/chrome.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/browser/content/overlays.rdf
 @unexec ${RM} %D/lib/${MOZILLA}/chrome/overlayinfo/communicator/content/overlays.rdf
@@ -2263,7 +2264,6 @@ include/${MOZILLA}/zlib/zlib.h
 @dirrm lib/${MOZILLA}/components/myspell
 @dirrm lib/${MOZILLA}/components
 @dirrm lib/${MOZILLA}/chrome
-@dirrm lib/${MOZILLA}
 @dirrm include/${MOZILLA}/zlib
 @dirrm include/${MOZILLA}/xultmpl
 @dirrm include/${MOZILLA}/xuldoc
