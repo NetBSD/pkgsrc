@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:44 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 21:59:54 wiz Exp $
 
-MD5 (voice_aec_di-2.0.tar.gz) = 5f17a9cd6d73258be5774f76bebd2877
+SHA1 (voice_aec_di-2.0.tar.gz) = de9080819d31bade71918f23d49e36ede87203e6
+Size (voice_aec_di-2.0.tar.gz) = 5778351 bytes
