@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.7 2003/03/05 12:01:43 grant Exp $
+$NetBSD: patch-ab,v 1.8 2003/03/23 11:46:45 grant Exp $
 
---- doc/autoconf.texi.orig	Tue Dec  3 18:16:32 2002
-+++ doc/autoconf.texi
-@@ -100,7 +100,7 @@ published by the Free Software Foundatio
+--- doc/autoconf.info.orig	Tue Dec  3 18:43:16 2002
++++ doc/autoconf.info
+@@ -27,7 +27,7 @@ START-INFO-DIR-ENTRY
  * Autoconf: (autoconf).         Create source code configuration scripts
- @end direntry
+ END-INFO-DIR-ENTRY
  
--@dircategory Individual utilities
-+@dircategory GNU Autoconf
- @direntry
+-INFO-DIR-SECTION Individual utilities
++INFO-DIR-SECTION GNU Autoconf
+ START-INFO-DIR-ENTRY
  * autoscan: (autoconf)autoscan Invocation.
-                                 Semi-automatic @file{configure.ac} writing
+                                 Semi-automatic `configure.ac' writing
