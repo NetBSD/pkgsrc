@@ -1,21 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/04/28 18:14:03 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2000/10/19 07:57:18 skrll Exp $
 
---- config.mk.orig	Mon Dec 13 09:47:08 1999
-+++ config.mk	Fri Apr 28 20:01:32 2000
-@@ -1,18 +1,20 @@
- # Your very own favorite C++ compiler
--CXX = CC
-+#CXX = CC
- 
- # Additional compiler flags for compiling for debugging/optimization
- DEBUG = -O
- 
- # The location of flex. Not all versions of flex seem to work.
--FLEX = /usr/local/bin/flex -i -t
-+FLEX = flex -i -t
- FLEXLIB = -lfl
- 
- # The location of your QT installation (if you don't have it in your env)
+--- config.mk.orig	Sat Mar 25 13:31:45 2000
++++ config.mk
+@@ -12,7 +12,9 @@
  #QTDIR = /usr/local/qt
  QTINCL = -I$(QTDIR)/include
  QTCC = $(QTDIR)/bin/moc
