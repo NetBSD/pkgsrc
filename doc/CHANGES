@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1913 2003/04/12 09:22:10 jmmv Exp $
+$NetBSD: CHANGES,v 1.1914 2003/04/12 10:15:27 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1563,3 +1563,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated teTeX2-bin to 2.0.2nb1 [jschauma 2003-04-11]
 	Updated evolution to 1.2.4 [rh 2003-04-12]
 	Updated xosd to 2.2.0 [jmmv 2003-04-12]
+	Updated buildtool to 0.11 [jmmv 2003-04-12]
