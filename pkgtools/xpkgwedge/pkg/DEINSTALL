@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.5 2000/10/23 17:32:08 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.6 2001/01/13 16:21:21 tron Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -19,7 +19,7 @@ POST-DEINSTALL)
 		> ${HOSTDEF}
 	rm -f ${HOSTDEF}.bak
 	if [ ${PKG_PREFIX} != ${X11BASE} ] && \
-	   diff -q ${X11_HOSTDEF} ${HOSTDEF} >/dev/null
+	   @DIFF@ -q ${X11_HOSTDEF} ${HOSTDEF} >/dev/null
 	then
 		rm -f ${HOSTDEF}
 	fi
