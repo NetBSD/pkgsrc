@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2003/04/26 09:49:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/05/08 14:55:13 jmmv Exp $
 
 #
 # There is no distinfo file since the files change contents so often on the
 # master site
 #
 
-DISTNAME=	wmthemes-0.62
-PKGREVISION=	2
+DISTNAME=	wmthemes-0.80.0
 WRKSRC=		${WRKDIR}
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://download.themes.org/wm/
@@ -28,16 +27,16 @@ PLIST_SRC=	${WRKDIR}/PLIST
 THEME_SUBDIRS=	Backgrounds IconSets Icons Pixmaps Sounds Styles Themes
 WM_DATADIR=	share/WindowMaker
 
-BUILD_DEFS+=	WINDOWMAKER_THEMES
-
 .include "../../mk/bsd.prefs.mk"
 
-WINDOWMAKER_THEMES?=	FreeBSD-theme-0.52
+BUILD_DEFS+=	WINDOWMAKER_THEMES
 
 THEME_FILES=
-.for FILE in ${WINDOWMAKER_THEMES}
-THEME_FILES+=	${FILE}${EXTRACT_SUFX}
+.for theme in ${WINDOWMAKER_THEMES}
+THEME_FILES+=	${theme}.tar.gz
+SITES_${theme}.tar.gz=	http://download.freshmeat.net/themes/${theme:C/-[^-]*$//}/
 .endfor
+.undef theme
 
 do-install:
 	@${RM} -f ${PLIST_SRC}
