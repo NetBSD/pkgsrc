@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/05/08 08:18:19 wiz Exp $
+$NetBSD: distinfo,v 1.8 2002/05/09 20:22:37 wiz Exp $
 
 SHA1 (gmplayer/MPlayer-0.90pre3.tar.bz2) = 0ed1d70787488ce55699826752d492aed3425795
 Size (gmplayer/MPlayer-0.90pre3.tar.bz2) = 2322749 bytes
@@ -38,5 +38,5 @@ SHA1 (gmplayer/AlienMind.tar.bz2) = 8bd483aa6b52c10ee826c458a2c509c90a57e0f7
 Size (gmplayer/AlienMind.tar.bz2) = 129515 bytes
 SHA1 (gmplayer/CornerMP.tar.bz2) = d46a59c33abcc27ddc24be3124d3f4d23361e836
 Size (gmplayer/CornerMP.tar.bz2) = 237492 bytes
-SHA1 (patch-aa) = 89d80673df0a2142846968b8733a301dc5d92c4b
+SHA1 (patch-aa) = f24f92892d3bfa2e4e45efbbb685b209b5e1ac3b
 SHA1 (patch-ab) = a90f1dda80a3208695e5435b63fa4f2b11689a63
