@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1025 2002/08/03 00:15:30 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1026 2002/08/03 19:51:20 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -109,7 +109,7 @@ DEPENDS+=		sun-jre13-[0-9]*:../../lang/sun-jre13
 .    if ${MACHINE_PLATFORM:MNetBSD-1.5Z[A-Z]-i386} != "" || \
 	${MACHINE_PLATFORM:MNetBSD-1.[6-9]*-i386} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
-_JAVA_PKGBASE=		sun-jdk1[34]
+_JAVA_PKGBASE=		sun-jdk1[34]*
 _JAVA_PREFIX_DEFAULT=	${LOCALBASE}/java/sun-1.4.0
 _JAVA_HOME=		${_JAVA_PREFIX}
 ${_JDK_DEPMETHOD}+=	sun-jdk1[34]-[0-9]*:../../lang/sun-jdk14
@@ -117,7 +117,7 @@ DEPENDS+=		sun-jre1[34]-[0-9]*:../../lang/sun-jre14
 .    elif ${MACHINE_PLATFORM:MNetBSD-*-i386} != "" || \
 	${MACHINE_PLATFORM:MDarwin-*-*} != "" || \
 	${MACHINE_PLATFORM:MLinux-*-i386} != ""
-_JAVA_PKGBASE=		sun-jdk1[34]
+_JAVA_PKGBASE=		sun-jdk1[34]*
 .    if ${OPSYS} == "Darwin"
 _JAVA_PREFIX_DEFAULT=	/usr
 .    else
