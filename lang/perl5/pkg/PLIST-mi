@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/01/17 16:03:49 hubertf Exp $
+@comment $NetBSD: PLIST-mi,v 1.9 2000/01/18 17:11:51 jlam Exp $
 bin/perl5.00503
 bin/perl
 bin/a2p
@@ -105,23 +105,7 @@ lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DynaLoader/dl_find_symbol_
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DynaLoader/autosplit.ix
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DynaLoader/DynaLoader.a
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DynaLoader/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B/B.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B/B.bs
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DB_File/autosplit.ix
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DB_File/DB_File.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DB_File/DB_File.bs
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Data/Dumper/Dumper.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Data/Dumper/Dumper.bs
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Fcntl/Fcntl.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Fcntl/Fcntl.bs
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO/IO.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO/IO.bs
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IPC/SysV/SysV.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IPC/SysV/SysV.bs
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/NDBM_File/NDBM_File.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/NDBM_File/NDBM_File.bs
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Opcode/Opcode.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Opcode/Opcode.bs
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/assert.al
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/tolower.al
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/toupper.al
@@ -271,17 +255,7 @@ lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/sleep.al
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/unlink.al
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/utime.al
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/autosplit.ix
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/POSIX.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX/POSIX.bs
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/SDBM_File/SDBM_File.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/SDBM_File/SDBM_File.bs
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/sdbm/extralibs.ld
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Socket/Socket.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Socket/Socket.bs
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/attrs/attrs.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/attrs/attrs.bs
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/re/re.so
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/re/re.bs
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/DynaLoader.pm
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/B.pm
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/O.pm
@@ -351,7 +325,6 @@ lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/thrdvar.h
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/thread.h
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/unixish.h
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/util.h
-lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE/libperl.so.5.3
 lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/.packlist
 lib/perl5/5.00503/AnyDBM_File.pm
 lib/perl5/5.00503/AutoLoader.pm
@@ -737,59 +710,3 @@ lib/perl5/5.00503/man/man3/Socket.3
 lib/perl5/5.00503/man/man3/attrs.3
 lib/perl5/5.00503/man/man3/Errno.3
 @exec /bin/mkdir -p /usr/pkg/lib/perl5/site_perl/5.005/${MACHINE_ARCH}-${LOWER_OPSYS}
-@dirrm lib/perl5/site_perl/5.005/${MACHINE_ARCH}-${LOWER_OPSYS}
-@dirrm lib/perl5/site_perl/5.005
-@dirrm lib/perl5/site_perl
-@dirrm lib/perl5/5.00503/pod
-@dirrm lib/perl5/5.00503/man/man3
-@dirrm lib/perl5/5.00503/man
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/sdbm
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/re
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/attrs
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Socket
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/SDBM_File
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/POSIX
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Opcode
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/NDBM_File
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IPC/SysV
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IPC
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/IO
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Fcntl
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DynaLoader
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Data/Dumper
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Data
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/DB_File
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/B
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/auto
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/IO
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/CORE
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}/B
-@dirrm lib/perl5/5.00503/${MACHINE_ARCH}-${LOWER_OPSYS}
-@dirrm lib/perl5/5.00503/auto/Getopt/Long
-@dirrm lib/perl5/5.00503/auto/Getopt
-@dirrm lib/perl5/5.00503/auto
-@dirrm lib/perl5/5.00503/User
-@dirrm lib/perl5/5.00503/Time
-@dirrm lib/perl5/5.00503/Tie
-@dirrm lib/perl5/5.00503/Text
-@dirrm lib/perl5/5.00503/Test
-@dirrm lib/perl5/5.00503/Term
-@dirrm lib/perl5/5.00503/Sys
-@dirrm lib/perl5/5.00503/Search
-@dirrm lib/perl5/5.00503/Pod
-@dirrm lib/perl5/5.00503/Net
-@dirrm lib/perl5/5.00503/Math
-@dirrm lib/perl5/5.00503/IPC
-@dirrm lib/perl5/5.00503/I18N
-@dirrm lib/perl5/5.00503/Getopt
-@dirrm lib/perl5/5.00503/File/Spec
-@dirrm lib/perl5/5.00503/File
-@dirrm lib/perl5/5.00503/ExtUtils
-@dirrm lib/perl5/5.00503/Devel
-@dirrm lib/perl5/5.00503/Data
-@dirrm lib/perl5/5.00503/Class
-@dirrm lib/perl5/5.00503/CPAN
-@dirrm lib/perl5/5.00503/CGI
-@dirrm lib/perl5/5.00503/B
-@dirrm lib/perl5/5.00503
-@dirrm lib/perl5
