@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1442 2003/02/20 17:37:09 salo Exp $
+$NetBSD: CHANGES,v 1.1443 2003/02/20 23:20:26 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -774,3 +774,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bsetroot to 0.1nb2 [jschauma 2003-02-20]
 	Updated blackbox to 0.65.0nb2 [jschauma 2003-02-20]
 	Updated bluefish to 0.9 [salo 2003-02-20]
+	Updated glade to 0.6.4 [salo 2003-02-20]
