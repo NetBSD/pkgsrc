@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/31 16:47:04 tron Exp $
+# $NetBSD: Makefile,v 1.2 2000/07/31 16:59:51 tron Exp $
 
 DISTNAME=	cfitsio2037
 PKGNAME=	cfitsio-2.0.37
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME:C/-.*//}
 
 post-build:
 	cd ${WRKSRC}; \
-	testprog | diff - testprog.out; \
+	./testprog | diff - testprog.out; \
 	cmp testprog.fit testprog.std
 
 do-install:
