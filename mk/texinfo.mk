@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.18 2003/07/31 20:09:41 jmc Exp $
+# $NetBSD: texinfo.mk,v 1.19 2003/07/31 22:05:38 seb Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk when INFO_FILES and
 # USE_NEW_TEXINFO are defined.
@@ -70,9 +70,6 @@ FILES_SUBST+=		INFO_DIR=${INFO_DIR:Q}
 CONFIGURE_ENV+=		INSTALL_INFO="${TRUE}"
 MAKE_ENV+=		INSTALL_INFO="${TRUE}"
 .endif
-
-# By default makeinfo is not needed for building.
-USE_MAKEINFO?=         NO
 
 .if empty(USE_MAKEINFO:M[nN][oO])
 #
