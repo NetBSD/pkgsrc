@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: tomcat.sh,v 1.1 2001/03/28 02:46:08 jwise Exp $
+# $NetBSD: tomcat.sh,v 1.2 2001/03/28 04:28:44 jwise Exp $
 #
 # PROVIDE: tomcat
 # REQUIRE: DAEMON
@@ -13,7 +13,7 @@ then
 	export JAVA_HOME
 fi
 
-CLASSPATH=${PREFIX}/lib/java/servlet.jar:${PREFIX}/lib/java/jaxp.jar:${PREFIX}/lib/java/parser.jar:${CLASSPATH}
+CLASSPATH=${CLASSPATH}:${PREFIX}/lib/java/servlet.jar:${PREFIX}/lib/java/jaxp.jar:${PREFIX}/lib/java/parser.jar
 export CLASSPATH
 
 name="tomcat"
