@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/15 17:11:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/28 09:12:07 drochner Exp $
 bin/pydoc2.2
 bin/python2.2
 include/python2.2/Python.h
@@ -747,7 +747,6 @@ lib/python2.2/lib-dynload/_socket.so
 lib/python2.2/lib-dynload/_testcapi.so
 lib/python2.2/lib-dynload/_weakref.so
 lib/python2.2/lib-dynload/array.so
-lib/python2.2/lib-dynload/audioop.so
 lib/python2.2/lib-dynload/binascii.so
 lib/python2.2/lib-dynload/bsddb.so
 lib/python2.2/lib-dynload/cPickle.so
@@ -759,7 +758,6 @@ lib/python2.2/lib-dynload/errno.so
 lib/python2.2/lib-dynload/fcntl.so
 lib/python2.2/lib-dynload/fpectl.so
 lib/python2.2/lib-dynload/grp.so
-lib/python2.2/lib-dynload/imageop.so
 lib/python2.2/lib-dynload/math.so
 lib/python2.2/lib-dynload/md5.so
 lib/python2.2/lib-dynload/mmap.so
@@ -770,7 +768,6 @@ lib/python2.2/lib-dynload/pcre.so
 lib/python2.2/lib-dynload/pwd.so
 lib/python2.2/lib-dynload/regex.so
 lib/python2.2/lib-dynload/resource.so
-lib/python2.2/lib-dynload/rgbimg.so
 lib/python2.2/lib-dynload/rotor.so
 lib/python2.2/lib-dynload/select.so
 lib/python2.2/lib-dynload/sha.so
