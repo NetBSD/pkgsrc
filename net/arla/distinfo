@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2003/03/05 13:10:21 wennmach Exp $
+$NetBSD: distinfo,v 1.12 2005/02/24 12:13:42 agc Exp $
 
 SHA1 (arla-0.35.12.tar.gz) = dda009ab21cf784f1f5561852b5b81a0170498f7
+RMD160 (arla-0.35.12.tar.gz) = 37102def997780212548b326b69342741f2a3569
 Size (arla-0.35.12.tar.gz) = 1334145 bytes
 SHA1 (patch-ac) = a1d725edea6aaf3711c0d62a5ab5acd84d5fe4b7
 SHA1 (patch-ad) = c5c33c0daf8174b2f8f76119f97725cd61015bb6
