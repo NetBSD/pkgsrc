@@ -1,15 +1,6 @@
-$NetBSD: distinfo,v 1.6 2003/08/18 05:31:03 jmc Exp $
+$NetBSD: distinfo,v 1.7 2004/03/29 02:46:18 perry Exp $
 
-SHA1 (clisp-2.30.tar.bz2) = 7335116934d30cb327f4724047a1362498b85520
-Size (clisp-2.30.tar.bz2) = 5652698 bytes
-SHA1 (patch-aa) = 7c5375242feafab3a568eee373d0fef685896f5b
-SHA1 (patch-ab) = a830152fefc8db8a0504e7a7d3886fd2d11af601
-SHA1 (patch-ac) = 3f18f9859e5f93fe524845f98678c147c901cab2
-SHA1 (patch-ad) = c5c5808e78121dd398f76ba612b265e39978a7b1
-SHA1 (patch-ae) = 7fe957edd58e42f943a33908472042e0c42869d8
-SHA1 (patch-af) = a7c13cf848c370b676458a5b2e46a8fdcf4caa7f
-SHA1 (patch-ag) = 5ad9fe11abdea49780bdd0a01bf697d8ad07123c
-SHA1 (patch-ah) = ab42e8107d24a6ac86992aad5aa335ad33cfac62
-SHA1 (patch-ai) = 89f19718514b813b008ed92de8b538c76d341a53
-SHA1 (patch-aj) = 529b11e3cc3a3f72d4428d6f69bdce7bb9b33b97
-SHA1 (patch-ak) = f9152d73ddb74d4190ca6a91439a9173fbab5274
+SHA1 (clisp-2.33.tar.bz2) = 41292d4342803d7cb27d8ed436a31d1778860b31
+Size (clisp-2.33.tar.bz2) = 6072837 bytes
+SHA1 (patch-aa) = e7ef5ce48e6215d803d03ea57b23a80fb0862794
+SHA1 (patch-ai) = 1890cdfb1f59ca573a802e889f2bb2dbc8e32256
