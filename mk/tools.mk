@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.3 2003/08/02 05:07:35 grant Exp $
+# $NetBSD: tools.mk,v 1.4 2003/08/12 11:39:46 grant Exp $
 #
 # handle platforms with broken tools in the base system, such as sed
 # and awk.
@@ -35,11 +35,7 @@ _TOOLS_OPSYS_HAS_GNU.sed+=	Linux-*-*
 # is available.
 _TOOLS_OPSYS_INCOMPAT.awk+=	# empty
 _TOOLS_OPSYS_INCOMPAT.grep+=	# empty
-
-# Solaris includes a less broken sed in /usr/xpg4/bin, which is mostly
-# adequate for pkgsrc internal use, but pkg builds have shown they
-# demand more, so mark it incompatible.
-_TOOLS_OPSYS_INCOMPAT.sed+=	SunOS-*-*
+_TOOLS_OPSYS_INCOMPAT.sed+=	# empty
 
 # a suitable alternative version is available in the base system, as
 # eg. ${AWK}, ${SED}, ... refer to defs.*.mk for the definitions.
