@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/03/26 02:27:51 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2004/04/25 21:26:13 snj Exp $
 
 DISTNAME=	dvipdfm-0.13.2c
 PKGREVISION=	3
@@ -14,7 +14,7 @@ CONFLICTS+=	ja-dvipdfm-[0-9]*
 CONFLICTS+=	teTeX-bin>=2.0
 
 WRKSRC=			${WRKDIR}/dvipdfm
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 # needed to get the stdarg.h version of kpathsea/c-varargs.h instead of the
@@ -33,7 +33,7 @@ post-patch:
 post-install:
 	mktexlsr
 
-.include "../../graphics/png/buildlink2.mk"
-.include "../../print/teTeX1-bin/kpathsea.buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../print/teTeX1-bin/kpathsea.buildlink3.mk"
 .include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.mk"
