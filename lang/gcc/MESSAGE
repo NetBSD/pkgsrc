@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2002/03/14 16:21:57 wiz Exp $
+$NetBSD: MESSAGE,v 1.4 2003/05/02 08:22:12 jmmv Exp $
 
-To use ${PKGNAME} include "${PREFIX}/etc/${PKGNAME}.mk" in your
+To use ${PKGNAME} include "${PREFIX}/share/examples/gcc/mk.conf" in your
 BSD style makefile.
 
 ===========================================================================

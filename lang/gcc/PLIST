@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2002/09/27 12:28:15 jlam Exp $
-etc/${PKGNAME}.mk
+@comment $NetBSD: PLIST,v 1.8 2003/05/02 08:22:12 jmmv Exp $
 @unexec ${INSTALL_INFO} --delete %D/info/chill.info %D/info/dir
 info/chill.info
 @exec ${INSTALL_INFO} %D/info/chill.info %D/info/dir
@@ -66,3 +65,5 @@ info/gcc.info-6
 info/gcc.info-7
 info/gcc.info-8
 info/gcc.info-9
+share/examples/gcc/mk.conf
+@dirrm share/examples/gcc
