@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/01/11 07:38:03 tron Exp $
+# $NetBSD: Makefile,v 1.25 2001/01/11 07:39:41 tron Exp $
 #
 
 DISTNAME=       mpg123-0.59r
@@ -35,7 +35,6 @@ ALL_TARGET=	${LOWER_OPSYS}
 
 .if ${OPSYS} == "SunOS"
 ALL_TARGET=	solaris-gcc
-#MAKE_ENV+=	CPPFLAGS=""
 .endif
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
