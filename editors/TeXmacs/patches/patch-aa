@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/04/27 09:53:44 rh Exp $
+
+--- configure.in.orig	Thu Apr 25 22:14:51 2002
++++ configure.in	Thu Apr 25 22:15:25 2002
+@@ -271,12 +271,12 @@
+     AC_MSG_RESULT(final setup for an unsupported host)
+     CONFIG_OS="unknown"
+     CONFIG_CX="$X_CFLAGS"
+     CONFIG_LFLAGS=""
+     CONFIG_LSTATIC="-static"
+-    CONFIG_LSHARED="-shared"
++    CONFIG_LSHARED="-shared ${LDFLAGS}"
+     CONFIG_LPATH="-Wl,-rpath,"
+     CONFIG_LX="$X_LIBS -lXext -lX11"
+     CONFIG_BFLAGS=""
+     CONFIG_BSTATIC="-Wl,-Bstatic"
+-    CONFIG_BSHARED="-Wl,-Bdynamic"
++    CONFIG_BSHARED="-Wl,-Bdynamic ${LDFLAGS}"
+     CONFIG_BPATH="-Wl,-rpath,"
