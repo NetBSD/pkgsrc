@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 2002/03/22 14:59:02 tron Exp $
+$NetBSD: patch-aa,v 1.9 2002/03/23 17:16:50 kim Exp $
 
---- src/Makefile.in.orig	Wed Apr  4 09:01:12 2001
-+++ src/Makefile.in	Fri Mar 22 15:47:06 2002
+--- src/Makefile.in.orig	Wed Apr  4 03:01:12 2001
++++ src/Makefile.in	Sat Mar 23 12:10:02 2002
 @@ -12,6 +12,8 @@
  cgi_suffix	= @cgi_suffix@
  top_srcdir	= @top_srcdir@
@@ -11,15 +11,7 @@ $NetBSD: patch-aa,v 1.8 2002/03/22 14:59:02 tron Exp $
  libexecdir      = @libexecdir@
  sysconfdir	= @sysconfdir@
  localstatedir   = @localstatedir@
-@@ -34,20 +36,20 @@
- DISKD_EXE	= diskd$(exec_suffix)
- 
- DEFAULT_PREFIX		= $(prefix)
--DEFAULT_CONFIG_FILE     = $(sysconfdir)/squid.conf
--DEFAULT_MIME_TABLE	= $(sysconfdir)/mime.conf
-+DEFAULT_CONFIG_FILE     = $(prefix)/etc/squid/squid.conf
-+DEFAULT_MIME_TABLE	= $(prefix)/etc/squid/mime.conf
- DEFAULT_DNSSERVER       = $(libexecdir)/$(DNSSERVER_EXE)
+@@ -40,14 +42,14 @@
  DEFAULT_CACHE_LOG       = $(localstatedir)/logs/cache.log
  DEFAULT_ACCESS_LOG      = $(localstatedir)/logs/access.log
  DEFAULT_STORE_LOG       = $(localstatedir)/logs/store.log
