@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/09/27 23:18:40 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2002/03/14 12:35:59 wiz Exp $
 #
 
 DISTNAME=	pgp50i-unix-src
@@ -16,7 +16,7 @@ MASTER_SITES=	ftp://ftp.pgpi.com/pub/pgp/5.0/unix/ \
 
 MAINTAINER=	mjl@netbsd.org
 HOMEPAGE=       http://www.pgpi.com/
-COMMENT=	New, international, Public-Key encryption and digital signature utility
+COMMENT=	Public-Key encryption and digital signature utility
 
 BUILD_DEPENDS=	perl>=${PERL5_REQD}:../../lang/perl5
 
