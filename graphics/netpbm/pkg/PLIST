@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/05/17 10:13:24 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/05/17 18:41:22 tron Exp $
 bin/anytopnm
 bin/asciitopgm
 bin/atktopbm
@@ -205,6 +205,7 @@ include/pgm.h
 include/pnm.h
 include/ppm.h
 include/ppmcmap.h
+include/shhopt.h
 lib/libpbm.a
 lib/libpbm.so.9.2
 lib/libpgm.a
