@@ -1,8 +1,16 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.4 2001/11/21 05:38:03 jlam Exp $
+# $NetBSD: deinstall,v 1.5 2001/11/21 15:43:01 jlam Exp $
 
-ALL_FILES="${CONF_FILES} ${SUPPORT_FILES} ${RCD_SCRIPTS}"
+ALL_FILES="${CONF_FILES} ${SUPPORT_FILES}"
+set -- ${RCD_SCRIPTS}
+while [ $# -gt 0 ]
+do
+	samplefile="${PKG_PREFIX}/etc/rc.d/$1"
+	file="${RCD_SCRIPTS_DIR}/$1"
+	shift
+	ALL_FILES="${ALL_FILES} ${samplefile} ${file}"
+done
 set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
 while [ $# -gt 0 ]
 do
