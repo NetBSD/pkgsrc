@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/25 16:03:42 mjl Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/08 01:29:58 dmcmahill Exp $
 bin/asnparser
 include/ptclib/cypher.h
 include/ptclib/asner.h
@@ -105,6 +105,8 @@ include/ptlib/videoio.h
 lib/libpt.la
 lib/libpt.a
 lib/libpt.so
+lib/libpt.so.1
+lib/libpt.so.1.1
 share/pwlib/make/unix.mak
 share/pwlib/make/common.mak
 share/pwlib/make/lib.mak
