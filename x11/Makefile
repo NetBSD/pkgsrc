@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.348 2004/04/20 09:59:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.349 2004/05/29 00:21:42 xtraeme Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -300,6 +300,7 @@ SUBDIR+=	xterm
 SUBDIR+=	xtermset
 SUBDIR+=	xtoolwait
 SUBDIR+=	xvattr
+SUBDIR+=	xvidcap
 SUBDIR+=	xview
 SUBDIR+=	xview-clients
 SUBDIR+=	xview-config
