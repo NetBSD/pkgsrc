@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/02/28 06:13:20 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/25 16:57:30 wiz Exp $
 
 DISTNAME=	apc-1.1.0pl1
 PKGNAME=	php-apc-1.1.0.1
@@ -13,7 +13,7 @@ COMMENT=	Alternative PHP Cache for PHP4
 EXTRACT_ELEMENTS=	# empty
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 .include "../../www/php4/Makefile.module"
 
@@ -30,5 +30,5 @@ post-install:
 		GORY_DETAILS INSTALL LICENSE README.compiler ${DOCDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} extras/apcinfo.php ${EGDIR}
 
-.include "../../www/php4/buildlink.mk"
+.include "../../www/php4/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
