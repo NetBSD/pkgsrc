@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/19 11:38:33 jlam Exp $
-etc/rc.d/dhid.sh.sample
+@comment $NetBSD: PLIST,v 1.2 1999/08/04 14:04:37 jlam Exp $
+etc/rc.d/dhid.sh
 libexec/dhid
 man/man1/dtool.1
 man/man8/dhid.8
