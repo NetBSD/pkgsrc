@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9163 2005/02/17 13:35:21 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9164 2005/02/17 15:15:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -904,3 +904,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mmg to 1.0.2 [salo 2005-02-17]
 	Updated netpbm to 10.26.3 [adam 2005-02-17]
 	Updated cairo to 0.3.0 [xtraeme 2005-02-17]
+	Updated squid to 2.5.8nb1 [taca 2005-02-17]
+	Updated ruby-eruby to 1.0.5nb3 [taca 2005-02-17]
