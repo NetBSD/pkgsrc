@@ -1,40 +1,40 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/03/31 05:02:18 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/03/31 05:07:52 grant Exp $
 #
 
-.if !defined(LIBPKGSRC_BUILDLINK2_MK)
-LIBPKGSRC_BUILDLINK2_MK=     # defined
+.if !defined(LIBNBCOMPAT_BUILDLINK2_MK)
+LIBNBCOMPAT_BUILDLINK2_MK=     # defined
 
-BUILDLINK_DEPMETHOD.libpkgsrc=	build
+BUILDLINK_DEPMETHOD.libnbcompat=	build
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILDLINK_DEPENDS.libpkgsrc?=	libpkgsrc>=20030331
-BUILDLINK_PKGSRCDIR.libpkgsrc?=	../../pkgtools/libpkgsrc
+BUILDLINK_DEPENDS.libnbcompat?=		libnbcompat>=20030331
+BUILDLINK_PKGSRCDIR.libnbcompat?=	../../pkgtools/libnbcompat
 
-BUILDLINK_PACKAGES+=		libpkgsrc
-EVAL_PREFIX+=			BUILDLINK_PREFIX.libpkgsrc=libpkgsrc
-BUILDLINK_PREFIX.libpkgsrc_DEFAULT= ${LOCALBASE}
+BUILDLINK_PACKAGES+=		libnbcompat
+EVAL_PREFIX+=			BUILDLINK_PREFIX.libnbcompat=libnbcompat
+BUILDLINK_PREFIX.libnbcompat_DEFAULT=	${LOCALBASE}
 
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/extern.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/ftpglob.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/fts.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/md5.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/mtree.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/namespace.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/nbcompat.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/nb-types.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/pack_dev.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/pwcache.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/rmd160.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/sha1.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/sha2.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/stat_flags.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/util.h
-BUILDLINK_FILES.libpkgsrc+=	include/libpkgsrc/vis.h
-BUILDLINK_FILES.libpkgsrc+=	lib/libpkgsrc.a
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/extern.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/ftpglob.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/fts.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/md5.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/mtree.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/namespace.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/nbcompat.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/nb-types.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/pack_dev.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/pwcache.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/rmd160.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/sha1.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/sha2.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/stat_flags.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/util.h
+BUILDLINK_FILES.libnbcompat+=	include/libnbcompat/vis.h
+BUILDLINK_FILES.libnbcompat+=	lib/libnbcompat.a
 
-BUILDLINK_TARGETS+=	libpkgsrc-buildlink
+BUILDLINK_TARGETS+=	libnbcompat-buildlink
 
-libpkgsrc-buildlink: _BUILDLINK_USE
+libnbcompat-buildlink: _BUILDLINK_USE
 
-.endif  # LIBPKGSRC_BUILDLINK2_MK
+.endif  # LIBNBCOMPAT_BUILDLINK2_MK
