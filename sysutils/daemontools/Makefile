@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/03/16 20:53:05 zuntum Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/26 17:56:10 zuntum Exp $
 # FreeBSD Id: ports/sysutils/daemontools/Makefile,v 1.8 2000/12/03 05:16:41 steve Exp
 
 DISTNAME=	daemontools-0.70
@@ -27,9 +27,9 @@ PLIST_SUBST+=	SERVICEDIR=${SERVICEDIR}
 DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
 
 post-patch:
-	@${ECHO} "${CC} ${CFLAGS}" > ${WRKSRC}/conf-cc
-	@${ECHO} "${CC} -s" > ${WRKSRC}/conf-ld
-	@${ECHO} "${PREFIX}" > ${WRKSRC}/conf-home
+	@${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
+	@${ECHO} ${CC} ${STRIPFLAG} > ${WRKSRC}/conf-ld
+	@${ECHO} ${PREFIX} > ${WRKSRC}/conf-home
 
 post-build:
 	@${SED} \
