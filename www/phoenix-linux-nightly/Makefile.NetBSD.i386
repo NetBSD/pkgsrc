@@ -1,0 +1,8 @@
+# $NetBSD: Makefile.NetBSD.i386,v 1.1.1.1 2003/03/26 12:55:04 grant Exp $
+#
+
+DEPENDS+=		suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=		suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=		suse_gtk>=7.3:../../emulators/${SUSE_DIR_PREFIX}_gtk
+
+.include "../../emulators/suse_linux/Makefile.application"
