@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/22 08:09:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/10/30 05:18:52 minskim Exp $
 bin/tclsh
 bin/tclsh8.4
 include/tcl.h
@@ -740,6 +740,8 @@ man/mann/while.n
 @dirrm lib/tcl8.4/http1.0
 @dirrm lib/tcl8.4/encoding
 @dirrm lib/tcl8.4
+@exec ${MKDIR} %D/lib/tcl
+@dirrm lib/tcl
 @dirrm include/tcl/unix
 @dirrm include/tcl/generic
 @dirrm include/tcl
