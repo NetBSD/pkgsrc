@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2297 2003/05/23 14:47:08 seb Exp $
+$NetBSD: CHANGES,v 1.2298 2003/05/23 18:06:36 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2109,3 +2109,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmame to 0.68.1 [kristerw 2003-05-23]
 	Updated xmess to 0.68.1 [kristerw 2003-05-23]
 	Added scli-0.2.12 [seb 2003-05-23]
+	Updated gimp to 1.2.4 [salo 2003-05-23]
+	Updated gimp-base to 1.2.4 [salo 2003-05-23]
