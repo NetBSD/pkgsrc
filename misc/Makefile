@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2001/09/22 05:40:31 jlam Exp $
+# $NetBSD: Makefile,v 1.106 2001/09/27 02:54:03 jlam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -63,6 +63,7 @@ SUBDIR+=	p5-Business-CreditCard
 SUBDIR+=	p5-Business-ISBN
 SUBDIR+=	p5-Business-UPS
 SUBDIR+=	p5-ControlX10-CM11
+SUBDIR+=	p5-ControlX10-CM17
 SUBDIR+=	p5-File-MMagic
 SUBDIR+=	p5-Locale-Codes
 SUBDIR+=	p5-Search
