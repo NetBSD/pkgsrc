@@ -1,20 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/21 06:02:28 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/08 20:49:39 xtraeme Exp $
 
---- src/definitions.h.orig	Tue Nov 21 02:26:07 2000
-+++ src/definitions.h
-@@ -31,6 +31,7 @@
- # define __USE_BSD
- #endif
+--- Makefile.in.orig	2004-01-08 18:59:21.000000000 +0100
++++ Makefile.in	2004-01-08 18:59:45.000000000 +0100
+@@ -112,7 +112,7 @@
+ AUTOMAKE_OPTIONS = 1.6 foreign dist-zip
+ ACLOCAL_AMFLAGS = -I m4
  
-+#ifndef __NetBSD__
- #ifndef __EXTENSIONS__
- # define __EXTENSIONS__
- #endif
-@@ -62,6 +63,7 @@
- # endif
- #endif
+-SUBDIRS = src conf debian doc web admin win32
++SUBDIRS = src doc web admin
  
-+#endif /* __NetBSD__ */
- 
- 
- 
+ EXTRA_DIST = HACKING m4/acx_pthread.m4 m4/ogg.m4 m4/vorbis.m4 \
+     m4/xiph_compiler.m4 m4/xiph_curl.m4 m4/xiph_net.m4 \
