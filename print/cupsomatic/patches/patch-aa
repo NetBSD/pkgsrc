@@ -1,19 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/08 16:57:25 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2002/02/13 18:55:54 jlam Exp $
 
---- cupsomatic.in.orig	Thu Dec  7 03:48:55 2000
-+++ cupsomatic.in
-@@ -1,4 +1,4 @@
--#! /usr/bin/perl
-+#!@PERL@
+--- cupsomatic.orig	Sat Feb  9 14:35:39 2002
++++ cupsomatic
+@@ -37,7 +37,7 @@
+ # the first one.
+ # You can set this to "a2ps", "enscript" or "mpage" to select one of the
+ # default command strings.
+-my $enscriptcommand = "";
++my $enscriptcommand = "mpage";
  
- # The above Perl path may vary on your system; fix it!!!
+ # Set to 1 to insert postscript code for accounting.
+ my $ps_accounting = 1;
+@@ -267,7 +267,7 @@
+ # onto the stack @examined_stuff, which will be stuffed into
+ # Ghostscript/whatever later on.
  
-@@ -26,7 +26,7 @@
- # possibly other stuff.  The default path is often fine on Linux, but
- # may not be on other systems.
- # 
--# $ENV{'PATH'} = '/usr/local/bin:/usr/bin:/bin';
-+$ENV{'PATH'} = '@LOCALBASE@/bin:/usr/local/bin:/usr/bin:/bin';
- 
- 
- # Set debug to 1 to enable the debug logfile for this filter; it will
+-print $logh "Seaerching job for option settings ...\n";
++print $logh "Searching job for option settings ...\n";
+ my $maxlines = 1000;            # how many lines to examine?
+ my $more_stuff = 1;             # there is more stuff in stdin.
+ my $linect = 0;                 # how many lines have we examined?

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2001/09/09 20:36:44 agc Exp $
+# $NetBSD: Makefile,v 1.10 2002/02/13 18:55:53 jlam Exp $
 
 DISTNAME=	cupsomatic
-PKGNAME=	${DISTNAME}-1.6
+PKGNAME=	${DISTNAME}-2.2
 CATEGORIES=	print
 EXTRACT_SUFX=	# empty
 
@@ -25,27 +25,31 @@ CONFLICTS+=	cupsomatic-200012??
 
 DIST_SUBDIR=	${PKGNAME}
 
-DEPENDS+=	cups>=1.1.1:../../print/cups
+DEPENDS+=	cups>=1.1.10:../../print/cups
 DEPENDS+=	foomatic-gswrapper>=1.2:../../print/foomatic-gswrapper
 DEPENDS+=	ghostscript{,-nox11}-[6-9]*:../../print/ghostscript
 DEPENDS+=	mpage-[0-9]*:../../print/mpage
 
-USE_PERL5=	# defined
+USE_PERL5=	yes
 WRKSRC=		${WRKDIR}
-NO_CONFIGURE=	# defined
 EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}/${DISTNAME}
 
 FILTERDIR=	${PREFIX}/libexec/cups/filter
 
-post-extract:
-	cd ${WRKSRC}; ${MV} ${DISTNAME} ${DISTNAME}.in
-
 do-build:
-	${SED}	-e "s,@PERL@,${PERL5},g"				\
-		-e "s,@LOCALBASE@,${LOCALBASE},g"			\
-		${WRKSRC}/${DISTNAME}.in > ${WRKSRC}/${DISTNAME}
+	cd ${WRKSRC};							\
+	for file in cupsomatic; do					\
+		${SED}	-e "s|/usr/bin/perl|${PERL5}|g"			\
+			-e "s|/usr/local|${LOCALBASE}|g"		\
+			-e "s|/etc/foomatic|${PKG_SYSCONFDIR}/foomatic|g" \
+			$${file} > $${file}.fixed;			\
+		${MV} $${file}.fixed $${file};				\
+	done
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${FILTERDIR}
+	cd ${WRKSRC};							\
+	for file in cupsomatic; do					\
+		${INSTALL_SCRIPT} ${WRKSRC}/$${file} ${FILTERDIR};	\
+	done
 
 .include "../../mk/bsd.pkg.mk"
