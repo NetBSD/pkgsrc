@@ -1,18 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 1998/05/24 18:59:44 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/06/12 20:39:26 tv Exp $
 bin/scp
+bin/slogin
 bin/ssh
-@exec ln -fs %f %B/slogin
-@unexec rm %B/slogin
 bin/ssh-add
 bin/ssh-agent
-bin/ssh-askpass
 bin/ssh-keygen
 bin/ssh1
 bin/ssh-keygen1
 bin/ssh-agent1
 bin/ssh-add1
 bin/scp1
-bin/ssh-askpass1
 bin/make-ssh-known-hosts1
 bin/make-ssh-known-hosts
 etc/rc.d/sshd.sh
