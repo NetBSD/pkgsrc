@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.11 2002/08/05 21:26:04 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.12 2002/08/07 06:10:33 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libiconv.
 #
@@ -27,8 +27,9 @@ _NEED_ICONV=		NO
 .  else
 _NEED_ICONV=		YES
 .  endif
-_INCOMPAT_ICONV=	NetBSD-*-* ${INCOMPAT_ICONV}
-.  for _pattern_ in ${_INCOMPAT_ICONV}
+_INCOMPAT_ICONV?=	# should be set from defs.${OPSYS}.mk
+INCOMPAT_ICONV?=	# empty
+.  for _pattern_ in ${_INCOMPAT_ICONV} ${INCOMPAT_ICONV}
 .    if !empty(MACHINE_PLATFORM:M${_pattern_})
 _NEED_ICONV=		YES
 .    endif
