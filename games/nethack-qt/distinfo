@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2001/06/26 19:10:18 jlam Exp $
+$NetBSD: distinfo,v 1.5 2001/08/29 22:41:13 jlam Exp $
 
 SHA1 (nethack-331.tgz) = e3d07efc81c9aeb85fadc268d1d4976ab3a0f7e9
 Size (nethack-331.tgz) = 3061094 bytes
 SHA1 (patch-aa) = d8ec9c209bf28abda1f78159e9d240895e38db30
-SHA1 (patch-ac) = 55d083ade87986ff236994144e6d5931daaf8f2b
+SHA1 (patch-ac) = f3fb0576ad1bffa88fa1fdb6c1c134536a522e19
 SHA1 (patch-ad) = 580a75c7ebc55b099a702ad21ce12d960f2805ff

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/07/04 03:08:57 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/08/29 22:41:17 jlam Exp $
 
 DISTNAME=		geomview-1.8.1
 CATEGORIES=		graphics math
@@ -12,12 +12,11 @@ CONFLICTS=		ImageMagick-*	# both have a program named 'animate'
 
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
-USE_X11=		yes
 
 CONFIGURE_ARGS+=	--without-xforms
 CONFIGURE_ARGS+=	--with-opengl=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-motif=${BUILDLINK_DIR}
-CPPFLAGS+=		-Dunix -Dalloca=__builtin_alloca -I${X11BASE}/include
+CPPFLAGS+=		-Dunix -Dalloca=__builtin_alloca
 
 INFO_FILES=		geomview
 
@@ -43,4 +42,5 @@ post-install:
 
 .include "../../graphics/Mesa/buildlink.mk"
 .include "../../x11/lesstif/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

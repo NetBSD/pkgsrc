@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/08/23 04:58:04 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/08/29 22:41:32 jlam Exp $
 
 DISTNAME=	xteddy-2.0.1
 CATEGORIES=	x11 games
@@ -12,9 +12,6 @@ CONFLICT+=	xteddy-1.*
 
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
-USE_X11=		yes
-
-CPPFLAGS+=		-I${X11BASE}/include
 
 pre-configure:
 	files="configure xteddy_test xtoys";				\
@@ -29,4 +26,5 @@ pre-configure:
 	done
 
 .include "../../graphics/imlib/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

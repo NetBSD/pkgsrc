@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/07/15 10:50:07 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2001/08/29 22:41:20 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/11/29 12:43:12 asami Exp
 #
 
@@ -18,9 +18,11 @@ IGNORE+=		"APM is not available for ${MACHINE_PLATFORM}"
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
-USE_X11=		YES
 CONFIGURE_ARGS+=	--disable-jpeg	# there actually is no JPEG support
 CONFIGURE_ARGS+=	--with-xpm
+CONFIGURE_ARGS+=	--with-xpm-includes=${BUILDLINK_DIR}/include
+CONFIGURE_ARGS+=	--with-xpm-library=${BUILDLINK_DIR}/lib
 
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

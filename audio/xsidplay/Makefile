@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/06/26 18:32:26 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/08/29 22:41:04 jlam Exp $
 #
 
 DISTNAME=	xsidplay-1_5_4
@@ -27,4 +27,5 @@ do-install:
 
 .include "../../audio/libsidplay/buildlink.mk"
 .include "../../x11/qt2-libs/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

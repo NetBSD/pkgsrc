@@ -1,18 +1,54 @@
-$NetBSD: patch-aa,v 1.8 2001/06/26 20:26:16 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2001/08/29 22:41:06 jlam Exp $
 
 --- configure.orig	Mon May 22 14:34:07 2000
-+++ configure	Wed Aug 30 10:53:54 2000
-@@ -4408,5 +4408,5 @@
++++ configure
+@@ -3970,12 +3970,12 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   # One or both of the vars are not set, and there is no cached value.
+-if test "{$x_includes+set}" = set || test "$x_includes" = NONE; then
++if test "${x_includes+set}" != set || test "$x_includes" = NONE; then
+    kde_x_includes=NO
+ else
+    kde_x_includes=$x_includes
+ fi
+-if test "{$x_libraries+set}" = set || test "$x_libraries" = NONE; then
++if test "${x_libraries+set}" != set || test "$x_libraries" = NONE; then
+    kde_x_libraries=NO
+ else
+    kde_x_libraries=$x_libraries
+@@ -4132,6 +4132,8 @@
+ rm -f conftest*
+ fi # $ac_x_libraries = NO
+ 
++# Don't second-guess the package builder.
++if false; then
+ rm -fr conftestdir
+ if mkdir conftestdir; then
+   cd conftestdir
+@@ -4165,6 +4167,7 @@
+   cd ..
+   rm -fr conftestdir
+ fi
++fi
+ 
+ if test -z "$ac_x_includes"; then
+ ac_x_includes="."
+@@ -4407,7 +4410,7 @@
+ echo $ac_n "checking for Qt""... $ac_c" 1>&6
  echo "configure:4409: checking for Qt" >&5
  
 -LIBQT="$LIBQT $X_PRE_LIBS -lXext -lX11 $LIBSOCKET"
 +LIBQT="$LIBQT $X_PRE_LIBS -lXext -lX11 -lz -lpng -lSM -ljpeg -lICE $LIBSOCKET"
  ac_qt_includes=NO ac_qt_libraries=NO ac_qt_bindir=NO
  qt_libraries=""
-@@ -4631,5 +4631,5 @@
+ qt_includes=""
+@@ -4630,7 +4633,7 @@
+ 
  CXXFLAGS="$CXXFLAGS -I$qt_includes"
  LDFLAGS="$X_LDFLAGS"
 -LIBS="-lqt -lXext -lX11 $LIBSOCKET"
 +LIBS="-lqt -lXext -lX11 -lz -lpng -lSM -ljpeg -lICE $LIBSOCKET"
  LD_LIBRARY_PATH=
  export LD_LIBRARY_PATH
+ LIBRARY_PATH=
