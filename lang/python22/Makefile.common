@@ -1,0 +1,49 @@
+# $NetBSD: Makefile.common,v 1.1 2004/01/24 08:13:14 grant Exp $
+#
+
+DISTNAME=	Python-2.2.3
+CATEGORIES=	lang
+MASTER_SITES=	ftp://ftp.python.org/pub/python/2.2.3/
+EXTRACT_SUFX=	.tgz
+
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.python.org/
+COMMENT=	Interpreted, interactive, object-oriented programming language
+
+USE_BUILDLINK2=		YES
+GNU_CONFIGURE=		YES
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_SRC=	${.CURDIR}/../../lang/python22/PLIST.common
+.if exists(${.CURDIR}/../../lang/python22/PLIST.${OPSYS})
+PLIST_SRC+=	${.CURDIR}/../../lang/python22/PLIST.${OPSYS}
+.endif
+PLIST_SRC+=	${.CURDIR}/../../lang/python22/PLIST.common_end
+
+.if ${OPSYS} == "SunOS"
+LOWER_OPSYS=	sunos
+.endif
+
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "IRIX"
+PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}
+.else
+PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}${OS_VERSION:C/\..*//}
+.endif
+
+PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX}
+
+INSTALL_TARGET=	altinstall
+
+post-extract:
+	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
+
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../mk/bsd.pkg.mk"
+
+# This comes after bsd.pkg.mk so that the LDFLAGS here overrides the one
+# set earlier in the environment (last definition wins).
+#
+.if ${OBJECT_FMT} == "a.out"
+MAKE_ENV+=      LDFLAGS="${LDFLAGS:S/-Wl,//}"
+.endif
