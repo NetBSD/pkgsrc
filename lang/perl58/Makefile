@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2003/06/02 14:05:06 abs Exp $
+# $NetBSD: Makefile,v 1.15 2003/06/23 07:45:03 jlam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES+=		lang devel
 
 MAINTAINER=		jlam@netbsd.org
