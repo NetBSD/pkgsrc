@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/10/12 22:34:21 veego Exp $
+# $NetBSD: Makefile,v 1.10 2001/11/12 03:06:31 wiz Exp $
 #
 
 DISTNAME=		rcs-5.7
@@ -10,13 +10,17 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/rcs/rcs.html
 COMMENT=		GNU Revision Control System - version control software
 
-ONLY_FOR_PLATFORM=	SunOS-*-*	# in NetBSD base system
+ONLY_FOR_PLATFORM=	SunOS-*-* Darwin-*-*	# in NetBSD base system
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
 DEPENDS=		diffutils-2.7:../../devel/diffutils
+CONFIGURE_ARGS+=	--with-diffutils=gdiff
+.endif
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV=		PATH=${LOCALBASE}/bin:$PATH
-CONFIGURE_ARGS+=	--with-diffutils=gdiff
 
 post-install:
 	${RM} -f ${PREFIX}/bin/rcslog
