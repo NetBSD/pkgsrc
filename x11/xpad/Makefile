@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 15:30:34 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/16 22:19:01 grant Exp $
 #
 
 DISTNAME=	xpad-1.12
@@ -15,12 +15,12 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
