@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/20 08:34:00 jun Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/10/21 09:54:20 wiz Exp $
+share/doc/apel/README.en
+share/doc/apel/README.ja
 share/emacs/site-lisp/apel/alist.elc
 share/emacs/site-lisp/apel/calist.elc
 share/emacs/site-lisp/apel/path-util.elc
@@ -57,3 +59,4 @@ share/emacs/20.7/site-lisp/emu/emu.el
 share/emacs/20.7/site-lisp/emu/richtext.el
 share/emacs/20.7/site-lisp/emu/mule-caesar.el
 @dirrm share/emacs/20.7/site-lisp/emu
+@dirrm share/doc/apel
