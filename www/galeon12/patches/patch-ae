@@ -1,0 +1,73 @@
+$NetBSD: patch-ae,v 1.1 2005/01/16 05:23:59 taya Exp $
+
+diff -ru ../Orig/galeon-1.2.14/src/mozilla/FilePicker.cpp ./src/mozilla/FilePicker.cpp
+--- ../Orig/galeon-1.2.14/src/mozilla/FilePicker.cpp	2003-04-12 06:29:27.000000000 +0900
++++ ./src/mozilla/FilePicker.cpp	2005-01-16 13:59:04.000000000 +0900
+@@ -98,8 +98,8 @@
+ ////////////////////////////////////////////////////////////////////////////////
+ 
+ /* void init (in nsIDOMWindowInternal parent, in wstring title, in short mode); */
+-NS_IMETHODIMP GFilePicker::Init(nsIDOMWindowInternal *parent, 
+-				 const PRUnichar *title, PRInt16 mode)
++NS_IMETHODIMP GFilePicker::Init(nsIDOMWindow *parent, 
++				 const nsAString &title, PRInt16 mode)
+ {
+ 	mParentInternal = parent;
+ 	mParent = do_QueryInterface (mParentInternal);
+@@ -121,8 +121,8 @@
+ }
+ 
+ /* void appendFilter (in wstring title, in wstring filter); */
+-NS_IMETHODIMP GFilePicker::AppendFilter(const PRUnichar *title,
+-					const PRUnichar *filter)
++NS_IMETHODIMP GFilePicker::AppendFilter(const nsAString& title,
++					const nsAString& filter)
+ {
+ 	//GtkFileSelection is crippled, so we can't provide a short-list
+ 	//of filters to choose from. We provide minimal functionality
+@@ -142,29 +142,27 @@
+ }
+ 
+ /* attribute wstring defaultString; */
+-NS_IMETHODIMP GFilePicker::GetDefaultString(PRUnichar * *aDefaultString)
++NS_IMETHODIMP GFilePicker::GetDefaultString(nsAString& aDefaultString)
+ {
+-	*aDefaultString = ToNewUnicode (mDefaultString);
++	aDefaultString = ToNewUnicode (mDefaultString);
+ 	return NS_OK;
+ }
+-NS_IMETHODIMP GFilePicker::SetDefaultString(const PRUnichar * aDefaultString)
++NS_IMETHODIMP GFilePicker::SetDefaultString(const nsAString& aDefaultString)
+ {
+-	if (aDefaultString)
+-		mDefaultString = aDefaultString;
+-	else
+-		mDefaultString = NS_LITERAL_STRING ("");
++	mDefaultString = aDefaultString;
++
+ 	return NS_OK;
+ }
+ 
+ /* attribute wstring defaultExtension; */
+ // Again, due to the crippled file selector, we can't really
+ // do anything here.
+-NS_IMETHODIMP GFilePicker::GetDefaultExtension(PRUnichar * *aDefaultExtension)
++NS_IMETHODIMP GFilePicker::GetDefaultExtension(nsAString& aDefaultExtension)
+ {
+     return NS_ERROR_NOT_IMPLEMENTED;
+ }
+ 
+-NS_IMETHODIMP GFilePicker::SetDefaultExtension(const PRUnichar * aDefaultExtension)
++NS_IMETHODIMP GFilePicker::SetDefaultExtension(const nsAString& aDefaultExtension)
+ {
+     return NS_OK;
+ }
+@@ -606,7 +604,7 @@
+ 	g_free (expanded_directory);
+ 
+ 	aFilePicker->InitWithGtkWidget (parentWidget, title, mode);
+-	aFilePicker->SetDefaultString (uDefaultString);
++	aFilePicker->SetDefaultString (nsAutoString(uDefaultString));
+ 	aFilePicker->SetDisplayDirectory (aDir);
+ 	
+ 	PRInt16 retval;
