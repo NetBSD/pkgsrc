@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6999 2004/08/26 01:02:24 wiz Exp $
+$NetBSD: CHANGES,v 1.7000 2004/08/26 01:34:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4049,3 +4049,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libstatgrab to 0.10.3 [wiz 2004-08-25]
 	Updated gawk to 3.1.4 [wiz 2004-08-25]
 	Updated suse91_openmotif to 9.1nb1 [wiz 2004-08-26]
+	Updated less to 382 [wiz 2004-08-26]
