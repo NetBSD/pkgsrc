@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/06/20 03:29:28 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2002/09/25 17:26:04 wiz Exp $
 
 DISTNAME=		irssi-0.8.5
 WRKSRC=			${WRKDIR}/irssi-0.8.5
@@ -14,9 +14,11 @@ COMMENT=                Secure and modular IRC client with text mode user interf
 BUILD_DEFS+=		USE_INET6
 
 GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		yes
 
 CONFIGURE_ARGS+=	--with-terminfo \
-			--enable-ipv6
+			--enable-ipv6 \
+			--without-ncurses
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,7 +27,7 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Irssi/.packlist
 PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/Irssi/Irc/.packlist
 PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/Irssi/UI/.packlist
 PERL5_PACKLIST+=	${PERL5_SITEARCH}/auto/Irssi/TextUI/.packlist
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 # actually we don't need --with-perl here, irssi is compiled with it by default
 # but who knows what may happen in future versions
 CONFIGURE_ARGS+=	--with-perl
@@ -34,8 +36,5 @@ CONFIGURE_ARGS+=	--with-perl-lib=site
 CONFIGURE_ARGS+=	--with-perl=no
 .endif
 
-USE_BUILDLINK_ONLY=	yes
-USE_CONFIG_WRAPPER=	yes
-
-.include "../../devel/glib/buildlink.mk"
+.include "../../devel/glib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
