@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/02/02 04:10:04 wiz Exp $
+$NetBSD: distinfo,v 1.3 2004/02/10 14:21:38 ben Exp $
 
-SHA1 (fp-netbsd-ws-4.3.2.tar.gz) = 378634c96a817b82c60c4094b973b8bacad4fa10
-Size (fp-netbsd-ws-4.3.2.tar.gz) = 2241757 bytes
+SHA1 (fp-netbsd-ws-4.3.3.tar.gz) = e3c6ab02b0561ec861e615b4c1b538a357006995
+Size (fp-netbsd-ws-4.3.3.tar.gz) = 2245050 bytes
