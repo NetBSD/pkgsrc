@@ -1,4 +1,4 @@
-$NetBSD: patch-aq,v 1.2 1998/12/28 23:31:37 bad Exp $
+$NetBSD: patch-aq,v 1.3 1999/03/15 16:16:11 explorer Exp $
 
 --- pthreads/fd_kern.c.orig	Tue Oct  1 20:26:48 1996
 +++ pthreads/fd_kern.c	Tue Dec 29 00:15:02 1998
@@ -18,3 +18,104 @@ $NetBSD: patch-aq,v 1.2 1998/12/28 23:31:37 bad Exp $
  
  	return(machdep_sys_lseek(fd, offset, whence));
  }
+@@ -1078,7 +1078,7 @@
+ /* ==========================================================================
+  * bind()
+  */
+-int bind(int fd, const struct sockaddr *name, int namelen)
++int bind(int fd, const struct sockaddr *name, socklen_t namelen)
+ {
+ 	/* Not much to do in bind */
+ 	int ret;
+@@ -1100,7 +1100,7 @@
+ /* ==========================================================================
+  * connect()
+  */
+-int connect(int fd, const struct sockaddr *name, int namelen)
++int connect(int fd, const struct sockaddr *name, socklen_t namelen)
+ {
+ 	struct sockaddr tmpname;
+ 	int ret, tmpnamelen;
+@@ -1148,7 +1148,7 @@
+ /* ==========================================================================
+  * accept()
+  */
+-int accept(int fd, struct sockaddr *name, int *namelen)
++int accept(int fd, struct sockaddr *name, socklen_t *namelen)
+ {
+ 	int ret, fd_kern;
+ 
+@@ -1284,7 +1284,8 @@
+  * sendto_timedwait()
+  */
+ ssize_t sendto_timedwait(int fd, const void * msg, size_t len,
+- int flags, const struct sockaddr *to, int to_len, struct timespec * timeout)
++			 int flags, const struct sockaddr *to,
++			 socklen_t to_len, struct timespec * timeout)
+ {
+ 	int ret;
+ 
+@@ -1337,7 +1338,7 @@
+  * sendto()
+  */
+ ssize_t sendto(int fd, const void * msg, size_t len, int flags,
+-  const struct sockaddr *to, int to_len)
++  const struct sockaddr *to, socklen_t to_len)
+ {
+ 	return(sendto_timedwait(fd, msg, len, flags, to, to_len, NULL));
+ }
+@@ -1509,7 +1510,7 @@
+  * recvfrom_timedwait()
+  */
+ ssize_t recvfrom_timedwait(int fd, void * buf, size_t len, int flags,
+-  struct sockaddr * from, int * from_len, struct timespec * timeout)
++  struct sockaddr * from, socklen_t * from_len, struct timespec * timeout)
+ {
+ 	int ret;
+ 
+@@ -1563,7 +1564,7 @@
+  * recvfrom()
+  */
+ ssize_t recvfrom(int fd, void * buf, size_t len, int flags,
+-  struct sockaddr * from, int * from_len)
++		 struct sockaddr * from, socklen_t * from_len)
+ {
+ 	return(recvfrom_timedwait(fd, buf, len, flags, from, from_len, NULL));
+ }
+@@ -1713,7 +1714,8 @@
+ /* ==========================================================================
+  * setsockopt()
+  */
+-int setsockopt(int fd, int level, int optname, const void * optval, int optlen)
++int setsockopt(int fd, int level, int optname, const void * optval,
++	       socklen_t optlen)
+ {
+    int ret;
+ 
+@@ -1735,7 +1737,7 @@
+ /* ==========================================================================
+  * getsockopt()
+  */
+-int getsockopt(int fd, int level, int optname, void * optval, int * optlen)
++int getsockopt(int fd, int level, int optname, void *optval, socklen_t *optlen)
+ {
+    int ret;
+ 
+@@ -1757,7 +1759,7 @@
+ /* ==========================================================================
+  * getsockname()
+  */
+-int getsockname(int fd, struct sockaddr * name, int * naddrlen)
++int getsockname(int fd, struct sockaddr * name, socklen_t * naddrlen)
+ {
+    int ret;
+ 
+@@ -1779,7 +1781,7 @@
+ /* ==========================================================================
+  * getpeername()
+  */
+-int getpeername(int fd, struct sockaddr * peer, int * paddrlen)
++int getpeername(int fd, struct sockaddr * peer, socklen_t * paddrlen)
+ {
+    int ret;
+ 
