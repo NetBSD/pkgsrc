@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2000/07/28 17:53:52 tsarna Exp $
+# $NetBSD: Makefile,v 1.89 2000/07/31 01:56:45 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -46,7 +46,7 @@
     SUBDIR += links
     SUBDIR += lynx
     SUBDIR += lynx-current
-#    SUBDIR += mozilla
+    SUBDIR += mozilla
     SUBDIR += navigator
     SUBDIR += navigator3
     SUBDIR += ns-remote
