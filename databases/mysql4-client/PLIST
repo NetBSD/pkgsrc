@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2004/10/22 01:10:04 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/10/28 01:12:44 xtraeme Exp $
+bin/client_test
 bin/make_win_binary_distribution
 bin/make_win_src_distribution
 bin/msql2mysql
 bin/mysql
 bin/mysql_config
 bin/mysql_convert_table_format
+bin/mysql_create_system_tables
 bin/mysql_explain_log
 bin/mysql_find_rows
 bin/mysql_fix_extensions
@@ -28,6 +30,7 @@ bin/mysqlmanagerc
 bin/mysqlshow
 bin/mysqltest
 include/mysql/errmsg.h
+include/mysql/keycache.h
 include/mysql/m_ctype.h
 include/mysql/m_string.h
 include/mysql/my_alloc.h
@@ -42,15 +45,20 @@ include/mysql/my_no_pthread.h
 include/mysql/my_pthread.h
 include/mysql/my_semaphore.h
 include/mysql/my_sys.h
+include/mysql/my_xml.h
 include/mysql/mysql.h
 include/mysql/mysql_com.h
 include/mysql/mysql_embed.h
+include/mysql/mysql_time.h
 include/mysql/mysql_version.h
 include/mysql/mysqld_error.h
 include/mysql/raid.h
+include/mysql/sql_common.h
+include/mysql/sql_state.h
 include/mysql/sslopt-case.h
 include/mysql/sslopt-longopts.h
 include/mysql/sslopt-vars.h
+include/mysql/typelib.h
 lib/mysql/libmysqlclient.la
 man/man1/isamchk.1
 man/man1/isamlog.1
@@ -67,9 +75,7 @@ share/mysql/Description.plist
 share/mysql/Info.plist
 share/mysql/MySQL-shared-compat.spec
 share/mysql/StartupParameters.plist
-share/mysql/binary-configure
-share/mysql/make_binary_distribution
-share/mysql/make_sharedlib_distribution
+share/mysql/fill_help_tables.sql
 share/mysql/my-huge.cnf
 share/mysql/my-innodb-heavy-4G.cnf
 share/mysql/my-large.cnf
@@ -77,6 +83,7 @@ share/mysql/my-medium.cnf
 share/mysql/my-small.cnf
 share/mysql/mysql-${PKGVERSION}.spec
 share/mysql/mysql-log-rotate
+share/mysql/mysql_fix_privilege_tables.sql
 share/mysql/postinstall
 share/mysql/preinstall
 @dirrm share/mysql
