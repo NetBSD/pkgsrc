@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2003/08/30 01:31:13 taca Exp $
+$NetBSD: patch-ab,v 1.6 2004/06/05 13:16:35 taca Exp $
 
---- configure.in.orig	2003-08-22 17:45:59.000000000 +0900
+--- configure.in.orig	2004-01-22 20:20:32.000000000 +0900
 +++ configure.in
-@@ -2328,6 +2328,10 @@ AC_ARG_WITH(pam,
+@@ -2352,6 +2352,10 @@ AC_ARG_WITH(pam,
  # we can't build a pam module if we don't have pam.
  AC_CHECK_LIB(pam, pam_get_data, [AC_DEFINE(HAVE_LIBPAM)])
  

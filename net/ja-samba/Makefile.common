@@ -1,12 +1,13 @@
-# $NetBSD: Makefile.common,v 1.4 2003/08/30 01:31:11 taca Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/06/05 13:16:35 taca Exp $
 
 DISTNAME=		samba-${SAMBA_BASE_VERS}-ja-${SAMBA_JA_VERS}
-SAMBA_BASE_VERS=	2.2.8a
-SAMBA_JA_VERS=		1.1
+SAMBA_BASE_VERS=	2.2.9
+SAMBA_JA_VERS=		1.0
 WRKSRC?=		${WRKDIR}/${DISTNAME}/source
 CATEGORIES?=		net
 MASTER_SITES=		ftp://ftp.samba.gr.jp/pub/samba-jp/samba-${SAMBA_BASE_VERS}-ja/ \
-			ftp://ring.asahi-net.or.jp/pub/net/samba-jp/samba-${SAMBA_BASE_VERS}-ja/
+			ftp://ftp.ring.gr.jp/pub/net/samba-jp/samba-${SAMBA_BASE_VERS}-ja/ \
+			ftp://ftp.mex.ad.jp/pub/samba-jp/pub/net/samba-jp/samba-${SAMBA_BASE_VERS}-ja/
 EXTRACT_SUFX=		.tar.bz2
 
 DISTINFO_FILE?=		${.CURDIR}/../../net/ja-samba/distinfo
