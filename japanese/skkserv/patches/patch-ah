@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2001/11/18 12:21:05 frueauf Exp $
+
+--- jisyo-tools/skkdic-sort.c-orig	Tue Dec 17 06:51:28 1996
++++ jisyo-tools/skkdic-sort.c	Sun Nov 18 13:01:23 2001
+@@ -22,7 +22,7 @@
+  */
+ 
+ #include <stdio.h>
+-#ifndef NO_MALLOC_H
++#ifdef HAVE_MALLOC_H
+ #include <malloc.h>
+ #endif
+ 

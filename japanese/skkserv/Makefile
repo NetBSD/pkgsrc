@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/25 04:17:54 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/11/18 12:21:05 frueauf Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4nb1
@@ -34,7 +34,7 @@ SKKSERV_GID?=	65534		# nogroup
 .endif
 SKKSERV_UID?=	32767		# nobody
 SKKSERV_GID?=	32766		# nogroup
-MAKE_ENV=	MAKE_FLAGS='SKKUID=${SKKSERV_UID} SKKGID=${SKKSERV_GID}'
+MAKE_ENV=	SKKUID=${SKKSERV_UID} SKKGID=${SKKSERV_GID}
 
 # tmp for building dictionary.  ~16MB required.  mfs would be much faster.
 TMPDIR?=	${WRKDIR}
