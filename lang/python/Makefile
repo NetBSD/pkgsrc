@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/02/17 09:07:27 agc Exp $
+# $NetBSD: Makefile,v 1.22 2001/03/06 10:03:03 mrg Exp $
 #
 
 DISTNAME=	BeOpen-Python-2.0
@@ -31,15 +31,11 @@ SSLFLAGS=	-DUSE_SSL -I/usr/include/openssl -lssl -lcrypto
 
 # Handle the module setup file:
 #   - disable a few broken modules on 64 bit platforms (nothing important)
-#   - handle machines with no dynamic loader
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64"
 NO64BIT=\#
-.endif
-.if ${MACHINE_ARCH} == "sparc64"
-NOSHARED=\#
 .endif
 .if ${OPSYS} == "SunOS"
 ZOULARIS?=	${PREFIX}/bsd
