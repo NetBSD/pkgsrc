@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1 2004/05/21 12:42:23 he Exp $
+
+--- wonka/hal/hostos/netbsd/src/Etc.c.orig	Thu Mar 13 16:09:43 2003
++++ wonka/hal/hostos/netbsd/src/Etc.c
+@@ -65,7 +65,7 @@ Etc_getOSVersion (JNIEnv *env, w_instanc
+   if (!uname_called) {
+     uname(&uname_buffer);
+   }
+-  string = cstring2String(thread, uname_buffer.version, strlen(uname_buffer.version));
++  string = cstring2String(thread, uname_buffer.release, strlen(uname_buffer.release));
+   result = newStringInstance(string);
+   deregisterString(string);
+ 
