@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/01/20 12:13:28 agc Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/14 17:21:36 jlam Exp $
 #
 
 DISTNAME=	DevIL-1.6.6
@@ -18,8 +18,6 @@ USE_LIBTOOL=		yes
 USE_X11=		yes
 
 CONFIGURE_ARGS+=	--disable-lcms
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"

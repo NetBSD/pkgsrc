@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:24:05 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 17:21:34 jlam Exp $
 #
 
 DISTNAME=	iris-0.11
@@ -13,7 +13,6 @@ COMMENT=	OpenGL Spectrum Analyzer with theme engine and fullscreen modes
 
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=	YES
 
 # Needs libXxf86vm.so which isn't provided on NetBSD currently.

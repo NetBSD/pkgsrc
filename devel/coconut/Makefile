@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/23 21:50:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/14 17:21:36 jlam Exp $
 #
 
 DISTNAME=	coconut-0.3.0
@@ -16,7 +16,6 @@ USE_LIBTOOL=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 CPPFLAGS+=	-I${PREFIX}/include/libxml2/libxml -DGL_GLEXT_LEGACY
-LIBTOOL_OVERRIDE=${WRKSRC}/libtool
 
 pre-configure:
 	cd ${WRKSRC} &&							\

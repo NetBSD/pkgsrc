@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:18:53 agc Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/14 17:21:43 jlam Exp $
 #
 
 DISTNAME=	libtabe-0.2.5
@@ -13,7 +13,6 @@ WRKSRC=			${WRKDIR}/libtabe
 USE_BUILDLINK2=		# defined
 USE_X11=		# defined
 USE_LIBTOOL=		# defined
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-db-inc=${BUILDLINK_PREFIX.db3}/include/db3

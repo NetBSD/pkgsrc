@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/12/30 05:29:45 christos Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/14 17:21:46 jlam Exp $
 
 DISTNAME=	net-snmp-5.0.9
 PKGREVISION=	2
@@ -22,11 +22,10 @@ NET_SNMP_PERSISTENTDIR?=	/var/net-snmp
 NET_SNMP_MIBDIRS?=		\$$HOME/.snmp/mibs:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm2.1.10/mibs:/usr/local/share/snmp/mibs
 
 USE_BUILDLINK2=		yes
+USE_LIBTOOL=		yes
+
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-
-USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .if ${OPSYS} == "NetBSD" && empty(CFLAGS:U:M*-Dnetbsd1*)
 CFLAGS+=		-Dnetbsd1

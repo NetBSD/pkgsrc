@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2004/02/11 05:28:58 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.16 2004/02/14 17:21:35 jlam Exp $
 #
 
 DISTNAME?=		libgda-1.0.0
@@ -16,8 +16,6 @@ USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFDIR}"
 CONFIGURE_ARGS+=	--enable-gtk-doc=no

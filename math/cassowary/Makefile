@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/24 13:58:23 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/14 17:21:44 jlam Exp $
 #
 
 DISTNAME=		cassowary-0.60
@@ -15,7 +15,6 @@ BUILD_DEPENDS+=		bison>=1.34:../../devel/bison
 USE_BUILDLINK2=		# defined
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		# defined
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-fd-solver

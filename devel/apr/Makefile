@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/02/13 18:03:40 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/02/14 17:21:36 jlam Exp $
 
 PKGNAME=	apr-${APR_VERSION}.${APACHE_VERSION}
 PKGREVISION=	1
@@ -13,7 +13,6 @@ CONFLICTS=		apache2<=2.0.45
 
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-LIBTOOL_OVERRIDE=	${WRKSRC}/apr/libtool
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/srclib
 BUILD_DIRS=		${WRKSRC}/apr ${WRKSRC}/apr-util

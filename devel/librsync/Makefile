@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/11/12 01:31:48 salo Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 17:21:38 jlam Exp $
 #
 
 DISTNAME=		librsync-0.9.6
@@ -13,7 +13,6 @@ COMMENT=		Checksum-based differencing library
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--without-included-popt
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_BUILDLINK2=		yes
 
 .include "../../archivers/bzip2/buildlink2.mk"

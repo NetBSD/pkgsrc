@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/08/28 20:05:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:39 jlam Exp $
 #
 
 DISTNAME=	yasm-0.2.2
@@ -16,8 +16,6 @@ USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PERL5=		build
-
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
