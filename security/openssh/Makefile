@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2004/04/25 23:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.127 2004/04/27 12:21:49 markd Exp $
 
 DISTNAME=		openssh-3.8p1
 PKGNAME=		openssh-3.8.1
@@ -28,7 +28,7 @@ CRYPTO=			yes
 
 # retain the following line, for IPv6-ready pkgsrc webpage
 BUILD_DEFS+=		USE_INET6
-#BUILD_DEFS+=		KERBEROS
+BUILD_DEFS+=		KERBEROS
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -89,12 +89,14 @@ CONFIGURE_ARGS+=	--without-skey
 
 .if defined(KERBEROS)
 PKG_USE_KERBEROS=	yes
+.include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-kerberos5=${KRB5BASE}
+CPPFLAGS+=		-I${KRB5BASE}/include/krb5
+.if ${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--with-kerberos4=/usr
-CONFIGURE_ARGS+=	--with-kerberos5=/usr
-CPPFLAGS+=		-I/usr/include/krb5
 CPPFLAGS+=		-I/usr/include/kerberosIV
 # kerberos 5 dependencies are detected correctly.
-LDFLAGS+=		-lkrb -lcom_err -lroken -ldes
+LDFLAGS+=		-lkrb -lcom_err -lroken -ldes -lcrypto
 .endif
 
 # The ssh-askpass program is in ${X11BASE}/bin or ${X11PREFIX}/bin depending
