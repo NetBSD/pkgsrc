@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.136 2005/02/21 00:05:32 taca Exp $
+# $NetBSD: Makefile,v 1.137 2005/02/28 16:59:08 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE8
 PKGNAME=	squid-2.5.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -15,7 +15,12 @@ PATCHFILES=	squid-2.5.STABLE8-dns_assert.patch \
 		squid-2.5.STABLE8-html_high_chars.patch \
 		squid-2.5.STABLE8-ftp_cleanup.patch \
 		squid-2.5.STABLE8-relaxed_header_parser.patch \
-		squid-2.5.STABLE8-gcc4.patch
+		squid-2.5.STABLE8-gcc4.patch \
+		squid-2.5.STABLE8-ar.patch \
+		squid-2.5.STABLE8-reconfigure_peer_leaks.patch \
+		squid-2.5.STABLE8-ftp_url_display.patch \
+		squid-2.5.STABLE8-fqdn_spaces.patch \
+		squid-2.5.STABLE8-retry_on_error.patch
 PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	taca@NetBSD.org
