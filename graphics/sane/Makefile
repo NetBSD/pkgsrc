@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/04/05 08:50:04 rh Exp $
+# $NetBSD: Makefile,v 1.13 1999/04/06 02:03:00 abs Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/04/30 02:38:03 obrien Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mostang.com/sane/
 
 DEPENDS+=	gtk10-1.0.6:../../x11/gtk10
-DEPENDS+=	gimp-1.0.3:../../graphics/gimp
+DEPENDS+=	gimp-1.0.4:../../graphics/gimp
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes

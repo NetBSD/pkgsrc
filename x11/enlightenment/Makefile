@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/03/30 04:56:18 garbled Exp $
+# $NetBSD: Makefile,v 1.9 1999/04/06 02:10:08 abs Exp $
 
 DISTNAME=		enlightenment-0.15.4
 CATEGORIES=		x11
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://ftp.enlightenment.org/pub/enlightenment/enlightenment/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.enlightenment.org/
 
-DEPENDS+=		ImageMagick-4.2.1:../../graphics/ImageMagick
+DEPENDS+=		ImageMagick-4.2.2:../../graphics/ImageMagick
 DEPENDS+=		imlib-1.9.4:../../graphics/imlib
 DEPENDS+=		freetype-1.1:../../graphics/freetype
 DEPENDS+=		fnlib-0.4:../../graphics/fnlib
