@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2205 2004/10/07 13:48:55 wiz Exp $
+$NetBSD: TODO,v 1.2206 2004/10/07 14:55:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -289,6 +289,7 @@ Suggested package updates
 	o gtkmm-2.4.5
 	o gtksee-0.5.6 [pkg/26372]
 	o gtranslator-1.0.1
+	o guile-1.6.5
 	o guile-pg-0.16 [pkg/24039]
 	o guile-gtk-0.40.90 [in wip]
 	o hatari-0.50
