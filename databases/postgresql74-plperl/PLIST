@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/10 12:24:10 jdolecek Exp $
+lib/postgresql/plperl.so
