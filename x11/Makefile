@@ -48,6 +48,7 @@
     SUBDIR += rxvt
 #    SUBDIR += sliderule
 #    SUBDIR += slingshot
+    SUBDIR += sunclock
     SUBDIR += swisswatch
 #    SUBDIR += sxpc
 #    SUBDIR += tix
