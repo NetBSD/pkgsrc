@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1244 2003/01/27 11:48:13 jmmv Exp $
+$NetBSD: CHANGES,v 1.1245 2003/01/27 12:33:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -427,3 +427,8 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gnome2-dirs-1.0 [jmmv 2003-01-27]
 	Updated docbook-xsl to 1.60.1 [grant 2003-01-27]
 	Updated cxunzip to 0.96nb1 [jmmv 2003-01-27]
+	Updated easytag to 0.26nb2 [jmmv 2003-01-27]
+	Updated gnome-media to 1.2.3nb4 [jmmv 2003-01-27]
+	Updated gqmpeg to 0.19.0nb1 [jmmv 2003-01-27]
+	Updated sweep to 0.5.13nb1 [jmmv 2003-01-27]
+	Updated yamt to 0.5nb1 [jmmv 2003-01-27]
