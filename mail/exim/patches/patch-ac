@@ -1,16 +1,13 @@
-$NetBSD: patch-ac,v 1.5 2003/08/02 17:00:10 jmmv Exp $
+$NetBSD: patch-ac,v 1.6 2003/09/02 10:33:42 abs Exp $
 
---- OS/Makefile-NetBSD-a.out.orig	Thu Apr 18 08:08:28 2002
-+++ OS/Makefile-NetBSD-a.out	Thu Jun 13 12:37:38 2002
-@@ -1,9 +1,10 @@
- # Exim: OS-specific make file for NetBSD (a.out binary format)
+--- OS/Makefile-NetBSD-a.out.orig	2003-08-12 16:39:51.000000000 +0100
++++ OS/Makefile-NetBSD-a.out
+@@ -1,7 +1,7 @@
+ # Exim: OS-specific make file for NetBSD (a.out/COFF object format)
  
  CHOWN_COMMAND=/usr/sbin/chown
 -CFLAGS=-O
-+CFLAGS+=-O2 -pipe
++CFLAGS?=-O2 -pipe
  
  HAVE_SA_LEN=YES
-+HAVE_IPV6=YES
- LIBS=-lcrypt
- 
- X11=/usr/X11R6
+ HAVE_IPV6=YES
