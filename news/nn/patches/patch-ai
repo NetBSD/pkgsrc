@@ -1,8 +1,26 @@
-$NetBSD: patch-ai,v 1.3 1999/08/22 22:55:46 kim Exp $
+$NetBSD: patch-ai,v 1.4 1999/09/20 21:43:34 kim Exp $
 
---- config.h.orig	Sun Jun  6 18:22:28 1999
-+++ config.h	Sun Aug 22 17:57:00 1999
-@@ -107,7 +107,7 @@
+--- config.h-dist.orig	Sun Jun  6 18:22:28 1999
++++ config.h-dist	Mon Sep 20 17:18:32 1999
+@@ -13,6 +13,8 @@
+ 
+ #define	RELEASE 	"6.5"
+ 
++#define PREFIX		"@PREFIX@"
++
+ #include <stdio.h>
+ #include <ctype.h>
+ 
+@@ -71,7 +73,7 @@
+  *	ascii files.  (Thank you Geoff!)
+  */
+ 
+-/* #define NETWORK_DATABASE	*/
++#define NETWORK_DATABASE
+ 
+ 
+ /********************************** NNTP *********************************
+@@ -107,7 +109,7 @@
   *	NOTE: If you plan to use the included inews, it MUST be a full pathname
   */
  
@@ -11,27 +29,36 @@ $NetBSD: patch-ai,v 1.3 1999/08/22 22:55:46 kim Exp $
  
  /*
   *	Define NNTP_POST if you want nn to reject attempts to post via
-@@ -149,7 +149,7 @@
+@@ -149,7 +151,7 @@
   *	conf/s-template.h as a starting point for writing you own.
   */
  
 -#include "s-hpux9-0.h"
-+#include "s-netbsd.h"
++#include "@SFILE@"
  
  /*
   *	Define DEFAULT_PAGER as the initial value of the 'pager' variable.
-@@ -227,8 +227,8 @@
+@@ -210,7 +212,7 @@
+  *	conf/m-template.h as a starting point for writing you own.
+  */
+ 
+-#include "m-hp9000.h"
++#include "@MFILE@"
+ 
+ 
+ /***************************** OWNERSHIP ***************************
+@@ -227,8 +229,8 @@
   *	Common choices are:  (news, news)  and   (your uid, your gid)
   */
  
 -#define	OWNER	"news"
 -#define	GROUP	"news"
-+#define	OWNER	BINOWN
-+#define	GROUP	BINGRP
++#define	OWNER	"@BINOWN@"
++#define	GROUP	"@BINGRP@"
  
  
  /**************************** LOCALIZATION ****************************
-@@ -261,9 +261,9 @@
+@@ -261,9 +263,12 @@
   *			   (= LIB_DIRECTORY/Log if undefined).
   */
  
@@ -40,11 +67,14 @@ $NetBSD: patch-ai,v 1.3 1999/08/22 22:55:46 kim Exp $
 -
 +#define BIN_DIRECTORY	PREFIX "/bin"
 +#define LIB_DIRECTORY	PREFIX "/lib/nn"
-+#define TMP_DIRECTORY   "/var/tmp"
++#ifndef _PATH_VARTMP
++# define _PATH_VARTMP	"/var/tmp"
++#endif
++#define TMP_DIRECTORY   _PATH_VARTMP
  
  /**************************** DATABASE LOCATION **************************
   *
-@@ -318,7 +318,7 @@
+@@ -318,7 +323,7 @@
  
  /* #define NEWS_DIRECTORY	"/usr/spool/news"	*/
  /* #define NEWS_LIB_DIRECTORY	"/usr/lib/news"		*/
@@ -53,16 +83,19 @@ $NetBSD: patch-ai,v 1.3 1999/08/22 22:55:46 kim Exp $
  
  
  /*
-@@ -341,7 +341,7 @@
+@@ -341,7 +346,10 @@
   */
  
  /* #define REC_MAIL	"/usr/lib/news/recmail"	*/	/* non-sendmail */
 -#define REC_MAIL	"/usr/lib/sendmail -t"		/* sendmail */
-+#define REC_MAIL        "/usr/sbin/sendmail -t"          /* sendmail */
++#ifndef _PATH_SENDMAIL
++# define _PATH_SENDMAIL	"/usr/lib/sendmail"
++#endif
++#define REC_MAIL        _PATH_SENDMAIL " -t"		/* sendmail */
  
  
  /*
-@@ -403,13 +403,13 @@
+@@ -403,13 +411,13 @@
   *	DAEMON_MAN	- nnmaster
   */
  
@@ -80,12 +113,3 @@ $NetBSD: patch-ai,v 1.3 1999/08/22 22:55:46 kim Exp $
  #define DAEMON_MAN_SECTION	"8"
  
  
-@@ -481,7 +481,7 @@
-  *	via some sort of NNTP.
-  */
- 
--#define SYNCHRONOUS_POSTING	/* comment out for C-News */
-+#define SYNCHRONOUS_POSTING     /* comment out for C-News */
- 
- /*
-  *	PUT_TIMESTAMP_IN_SCRIPTS
