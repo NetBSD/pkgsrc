@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1776 2004/05/25 15:20:36 epg Exp $
+$NetBSD: TODO,v 1.1777 2004/05/25 16:31:00 epg Exp $
 
 Suggested new packages
 ======================
@@ -335,6 +335,7 @@ Suggested package updates
 	o py-psycopg-1.1.10
 	o pygtk-0.6.11
 	o pysol-4.82
+	o rapidsvn-0.6.0 [epg]
 	o rep-gtk-0.17
 	o roundup-0.7.2
 	o rox-1.2.2
@@ -376,6 +377,7 @@ Suggested package updates
 	o tkman-2.2
 	o tmda-1.0.2
 	o top-3.5b12.10
+	o trac-0.7 [epg]
 	o tripwire-2.3.1 [see also pkg/22362]
 	o txt2html-2.24 [wennmach]
 	o uvscan-4.3.2 [jlam]
