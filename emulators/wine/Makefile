@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2004/02/11 01:45:01 abs Exp $
+# $NetBSD: Makefile,v 1.68 2004/02/16 14:06:58 adam Exp $
 #
 
-DISTNAME=	Wine-20040121
+DISTNAME=	Wine-20040213
 PKGNAME=	${DISTNAME:S/W/w/}
-WRKSRC= 	${WRKDIR}/${DISTNAME:S/W/w/}
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.ibiblio.org/pub/Linux/ALPHA/wine/development/ \
 		${MASTER_SITE_SOURCEFORGE:=wine/} \
@@ -23,12 +22,11 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.[6-9]*-i386 NetBSD-2*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386
 
 BUILDLINK_DEPENDS.freetype2=	freetype>=2.1.4
-
+WRKSRC=		 	${WRKDIR}/${DISTNAME:S/W/w/}
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
-UNLIMIT_RESOURCES=	datasize
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-curses #--disable-debug --disable-trace
