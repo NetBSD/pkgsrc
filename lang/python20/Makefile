@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/11/15 17:54:49 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2004/11/22 21:48:08 wiz Exp $
 #
 
 DISTNAME=	Python-2.0.1
@@ -19,7 +19,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 WRKSRC=		${WRKDIR}/Python-2.0.1
 DIST_SUBDIR=	python
 
-USE_GCC_SHLIB=	yes
+USE_LANGUAGES=	c c++
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--without-threads

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2004/11/15 17:54:49 jlam Exp $
+# $NetBSD: Makefile.common,v 1.20 2004/11/22 21:48:09 wiz Exp $
 #
 
 DISTNAME=	Python-2.3.4
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
 
 USE_LANGUAGES=		c c++
-USE_GCC_SHLIB=		yes
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
