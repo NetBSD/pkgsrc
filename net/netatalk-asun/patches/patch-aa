@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2001/05/24 17:00:57 abs Exp $
+$NetBSD: patch-aa,v 1.6 2003/07/30 16:32:10 jmmv Exp $
 
 --- Makefile.orig	Sun Feb  7 11:15:46 1999
 +++ Makefile
@@ -21,9 +21,9 @@ $NetBSD: patch-aa,v 1.5 2001/05/24 17:00:57 abs Exp $
 +RESDIR=$(DESTDIR)/share
  # for configuration files (AppleVolumes.system, etc.)
 -ETCDIR=$(DESTDIR)/etc
-+ETCDIR=/etc/netatalk
++ETCDIR?=/etc/netatalk
 +# for startup script
-+RCDIR=$(DESTDIR)/etc/rc.d
++RCDIR?=$(DESTDIR)/etc/rc.d
  # for include files
  INCDIR=$(DESTDIR)/include
  # Root of man pages.  Subdirectories will be

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.14 2003/07/17 22:51:27 grant Exp $
+# $NetBSD: Makefile,v 1.15 2003/07/30 16:32:09 jmmv Exp $
 #
 # XXX do not use -- see ../netatalk instead
 
 DISTNAME=	netatalk-1.4b2+asun2.1.3
 PKGNAME=	netatalk-asun-2.1.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net print
-MASTER_SITES=   ftp://ftp.cobaltnet.com/pub/users/asun/release/ \
+MASTER_SITES=	ftp://ftp.cobaltnet.com/pub/users/asun/release/ \
 		ftp://ftp.hanse.de/sites/transit/mirror/ftp.u.washington.edu/public/asun/
 
 MAINTAINER=	abs@NetBSD.org
@@ -15,6 +15,16 @@ COMMENT=	Netatalk appletalk file and print services, enhanced by Adrian Sun
 
 CONFLICTS=	netatalk-[0-9]*
 CONFLICTS+=	netatalk-umich-[0-9]*
+
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
+
+MAKE_ENV+=		ETCDIR="${PKG_SYSCONFDIR}"
+MAKE_ENV+=		RCDIR="${PREFIX}/etc/rc.d"
+
+PKG_SYSCONFSUBDIR=	netatalk
+
+RCD_SCRIPTS=		netatalk
 
 post-extract:
 		@${MV} ${WRKSRC}/man/man8/papd.8 ${WRKSRC}/man/man8/papd.tbl
