@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2004/01/05 11:36:40 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2004/01/19 15:15:08 jlam Exp $
 
 DISTNAME=	audit-packages-1.28
 WRKSRC=		${WRKDIR}
@@ -13,8 +13,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 
-USE_BUILDLINK3=	yes
 NO_CHECKSUM=    yes
+NO_BUILDLINK=	yes
 
 INSTALLATION_DIRS=	man/cat8 man/man8 sbin
 
