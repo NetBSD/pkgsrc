@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/04/12 15:09:50 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2000/04/25 19:10:11 thorpej Exp $
 #
 
 DISTNAME=		isakmpd-000220
@@ -17,7 +17,12 @@ MAINTAINER=		itojun@kame.net
 IGNORE+=		"requires ipsec-ready NetBSD"
 .endif
 
+# if PATENTEDOPENSSLSRC is defined, then we assume that
+# RSA already exists in the OpenSSL built as part of the
+# base distribution.
+.if !defined(PATENTEDOPENSSLSRC)
 DEPENDS+=		openssl-0.9.4:../../security/openssl
+.endif
 DEPENDS+=		gmp-*:../../devel/gmp
 
 RESTRICTED=		"Crypto; export-controlled"
