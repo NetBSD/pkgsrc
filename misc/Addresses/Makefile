@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/02 07:40:56 rh Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/10 23:57:23 rh Exp $
 #
 
 DISTNAME=		Addresses-0.4.5
+PKGREVISION=		1
 CATEGORIES=		misc gnustep
 MASTER_SITES=		http://giesler.biz/bjoern/downloads/
 
@@ -9,13 +10,12 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://giesler.biz/bjoern/en/sw_addr.html
 COMMENT=		Address book for GNUstep
 
-NO_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
-USE_GNU_TOOLS+=		make
-MAKEFILE=		GNUmakefile
+NO_CONFIGURE=		yes
 MAKE_ENV+=		Addresses_OBJCFLAGS=-I..
 
-.include "../../x11/gnustep-back/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../devel/gnustep-base/buildlink3.mk"
+.include "../../x11/gnustep-back/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
