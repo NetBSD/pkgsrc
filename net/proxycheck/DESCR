@@ -1,0 +1,11 @@
+proxycheck is a simple tool that will work on a reasonable *nix system
+and may be used to quickly check whenever a given host or set of hosts
+has open proxy server running.
+
+Open proxies of various kinds are (ab)used nowadays for various evil
+things like sending mass spam, hacking into your machine, making denial
+of service attacks (DoS) and the like. Every such machine should be
+either secured properly or turned off permanently, but that's not an
+option, since in most cases there is either no administrator of such
+machines exists at all, or he has no clue about what's on that machine,
+or it's irrelevant for him.
