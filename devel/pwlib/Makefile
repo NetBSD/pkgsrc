@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2004/10/03 00:13:32 tv Exp $
+# $NetBSD: Makefile,v 1.30 2004/10/08 21:02:53 mjl Exp $
 #
 
-DISTNAME=		pwlib_1.4.4
-PKGNAME=		pwlib-1.4.4
-PKGREVISION=		4
+DISTNAME=		pwlib_1.5.2
+PKGNAME=		${DISTNAME:S/_/-/}
+# PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		http://www.openh323.org/bin/
 COUNTRY_MIRRORS=	at us1 us2 ru de cz
@@ -22,6 +22,7 @@ USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 
 PTHREAD_OPTS+=		require
 
@@ -47,7 +48,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptclib
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptlib/unix/ptlib
 	cd ${WRKSRC}/include;						\
-	for f in `${FIND} . -type f -print | ${GREP} -v '/CVS/'`; do	\
+	for f in `${FIND} . -name CVS -prune -o -type f -print | ${GREP} -v 'ptbuildopts'`; do	\
 		${INSTALL_DATA} $$f ${PREFIX}/include/`${DIRNAME} $$f`;	\
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/pwlib/make
