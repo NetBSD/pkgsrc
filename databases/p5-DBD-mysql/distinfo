@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2002/03/20 11:33:04 martti Exp $
+$NetBSD: distinfo,v 1.4 2002/04/14 14:11:19 veego Exp $
 
 SHA1 (Msql-Mysql-modules-1.2219.tar.gz) = 23d9b4b44e5c02930b7b1f60dd70a99ad25e966f
 Size (Msql-Mysql-modules-1.2219.tar.gz) = 195634 bytes
+SHA1 (patch-aa) = 2aabc77faf189de8fac6590955d9837eff8ad16b
