@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2000/05/12 06:15:06 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/29 22:46:44 jlam Exp $
 
 CXX=		c++
 
@@ -11,7 +11,7 @@ OBJS=		${SRCS:.cpp=.lo}
 LOBJS=		${OBJS:T}
 
 CXXFLAGS=	# empty
-CPPFLAGS+=	-I${.CURDIR}
+CPPFLAGS+=	-I${.CURDIR} -I${LOCALBASE}/include/sgi-stl
 
 all:	${LIB}
 
