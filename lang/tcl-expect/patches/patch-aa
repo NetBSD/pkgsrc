@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2004/11/18 16:47:19 adam Exp $
+$NetBSD: patch-aa,v 1.4 2004/11/30 20:30:19 adam Exp $
 
 --- Makefile.in.orig	2004-05-07 18:10:30.000000000 +0000
 +++ Makefile.in
@@ -99,12 +99,12 @@ $NetBSD: patch-aa,v 1.3 2004/11/18 16:47:19 adam Exp $
 -	  $(INSTALL_PROGRAM) $(EXP_SHARED_LIB_FILE) $(tcl_libdir)/$(EXP_SHARED_LIB_FILE) ; \
 -	  $(INSTALL_PROGRAM) pkgIndex $(libdir)/pkgIndex.tcl ; \
 -	else true; fi
-+	  $(INSTALL_DATA) $(EXP_SHARED_LIB_FILE:C/\.so.*/.la/) $(tcl_libdir)
++	  $(INSTALL_DATA) $(EXP_SHARED_LIB_FILE) $(tcl_libdir)
 +	  $(INSTALL_DATA) pkgIndex $(libdir)/pkgIndex.tcl
  
  expect_installed:	exp_main_exp.o $(EXP_LIB_FILE) install_shared_lib
 -	$(CC) $(XCFLAGS) @EXP_SHLIB_CFLAGS@ @TCL_LD_FLAGS@ -o expect_installed exp_main_exp.o @EXP_LIB_SPEC@ $(TCLLIB_INSTALLED) $(EXP_AND_TCL_LIBS)
-+	$(LD) $(XCFLAGS) @EXP_SHLIB_CFLAGS@ @TCL_LD_FLAGS@ -o expect_installed exp_main_exp.o $(EXP_SHARED_LIB_FILE:C/\.so.*/.la/) $(TCLLIB_INSTALLED) $(EXP_AND_TCL_LIBS)
++	$(LD) $(XCFLAGS) @EXP_SHLIB_CFLAGS@ @TCL_LD_FLAGS@ -o expect_installed exp_main_exp.o $(EXP_SHARED_LIB_FILE) $(TCLLIB_INSTALLED) $(EXP_AND_TCL_LIBS)
  	$(SETUID) expect_installed
  
  # Build Expect with TestCenter
@@ -124,7 +124,7 @@ $NetBSD: patch-aa,v 1.3 2004/11/18 16:47:19 adam Exp $
  
  expectk_installed: exp_main_tk.o $(EXP_LIB_FILE)
 -	$(CC) $(XCFLAGS) @EXP_SHLIB_CFLAGS@ @TCL_LD_FLAGS@ -o expectk_installed exp_main_tk.o @EXP_LIB_SPEC@ $(TKLIB_INSTALLED) $(TCLLIB_INSTALLED) $(X11_LD_FLAGS) $(EXP_AND_TK_LIBS) 
-+	$(LD) $(XCFLAGS) @EXP_SHLIB_CFLAGS@ @TCL_LD_FLAGS@ -o expectk_installed exp_main_tk.o $(EXP_SHARED_LIB_FILE:C/\.so.*/.la/) $(TKLIB_INSTALLED) $(TCLLIB_INSTALLED) $(X11_LD_FLAGS) $(EXP_AND_TK_LIBS) 
++	$(LD) $(XCFLAGS) @EXP_SHLIB_CFLAGS@ @TCL_LD_FLAGS@ -o expectk_installed exp_main_tk.o $(EXP_SHARED_LIB_FILE) $(TKLIB_INSTALLED) $(TCLLIB_INSTALLED) $(X11_LD_FLAGS) $(EXP_AND_TK_LIBS) 
  	$(SETUID) expectk_installed
  
  # Build Expectk with TestCenter
@@ -139,7 +139,7 @@ $NetBSD: patch-aa,v 1.3 2004/11/18 16:47:19 adam Exp $
  $(EXP_SHARED_LIB_FILE): $(OFILES)
  	-rm -f $(EXP_SHARED_LIB_FILE)
 -	@TCL_SHLIB_LD@ -o $(EXP_SHARED_LIB_FILE) $(SHARED_OFILES) @EXP_LD_SEARCH_FLAGS@ @EXP_SHLIB_LD_LIBS@
-+	${LIBTOOL} @CC@ --mode=link -rpath ${PREFIX}/lib -o $(EXP_SHARED_LIB_FILE:C/\.so.*/.la/) $(OFILES:.o=.lo) @EXP_LD_SEARCH_FLAGS@ @EXP_SHLIB_LD_LIBS@ -version-info 1:0
++	${LIBTOOL} @CC@ --mode=link -rpath ${PREFIX}/lib -o $(EXP_SHARED_LIB_FILE) $(OFILES:.o=.lo) @EXP_LD_SEARCH_FLAGS@ @EXP_SHLIB_LD_LIBS@ -version-info 1:0
  
  .PHONY: install-info install info
  install-info:
