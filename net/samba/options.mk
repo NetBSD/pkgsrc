@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/08/22 19:32:52 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2004/09/12 05:00:53 jlam Exp $
 
 # Global and legacy options
 .if defined(USE_CUPS) && !empty(USE_CUPS:M[yY][eE][sS])
@@ -85,3 +85,23 @@ PLIST_SUBST+=		SMBMOUNT=
 .else
 PLIST_SUBST+=		SMBMOUNT="@comment "
 .endif
+
+###
+### Determine the proper name for the winbind and WINS NSS modules.
+###
+NSS_WINBIND.${OPSYS}?=  libnss_winbind.so
+NSS_WINS.${OPSYS}?=     libnss_wins.so
+
+NSS_WINBIND.AIX=        WINBIND       
+NSS_WINS.AIX=           # empty       
+
+NSS_WINBIND.IRIX=       libns_winbind.so
+NSS_WINS.IRIX=          libns_wins.so 
+
+.if !empty(MACHINE_PLATFORM:MFreeBSD-5.*)
+NSS_WINBIND.FreeBSD=    nss_winbind.so
+NSS_WINS.FreeBSD=       nss_wins.so   
+.endif
+
+NSS_WINBIND=            ${NSS_WINBIND.${OPSYS}}
+NSS_WINS=               ${NSS_WINS.${OPSYS}}
