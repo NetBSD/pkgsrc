@@ -1,4 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/03/31 17:44:21 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/03/31 18:25:09 jmmv Exp $
+#
+# This Makefile fragment is included by packages that use wxGTK.
+#
+# This file was created automatically using createbuildlink 2.4.
+#
 
 .if !defined(WXGTK_BUILDLINK2_MK)
 WXGTK_BUILDLINK2_MK=	# defined
@@ -8,11 +13,15 @@ BUILDLINK_DEPENDS.wxGTK?=	wxGTK>=2.4.0
 BUILDLINK_PKGSRCDIR.wxGTK?=	../../x11/wxGTK
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.wxGTK=wxGTK
-BUILDLINK_PREFIX.wxGTK_DEFAULT=	${X11PREFIX}
-BUILDLINK_FILES.wxGTK=		include/wx/*
-BUILDLINK_FILES.wxGTK+=		include/wx/*/*
-BUILDLINK_FILES.wxGTK+=		lib/wx/include/wx/gtk/*
-BUILDLINK_FILES.wxGTK+=		lib/libwx_gtk.*
+BUILDLINK_PREFIX.wxGTK_DEFAULT=	${LOCALBASE}
+BUILDLINK_FILES.wxGTK+=	include/wx/*
+BUILDLINK_FILES.wxGTK+=	include/wx/generic/*
+BUILDLINK_FILES.wxGTK+=	include/wx/gtk/*
+BUILDLINK_FILES.wxGTK+=	include/wx/html/*
+BUILDLINK_FILES.wxGTK+=	include/wx/protocol/*
+BUILDLINK_FILES.wxGTK+=	include/wx/unix/*
+BUILDLINK_FILES.wxGTK+=	lib/libwx_gtk.*
+BUILDLINK_FILES.wxGTK+=	lib/wx/include/gtk-2.4/wx/*
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
