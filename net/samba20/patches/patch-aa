@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/08/03 13:24:37 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2001/08/03 13:46:02 jlam Exp $
 
 --- Makefile.in.orig	Thu Mar 16 17:57:08 2000
 +++ Makefile.in
@@ -60,15 +60,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/08/03 13:24:37 jlam Exp $
  
  bin/smbspool: $(CUPS_OBJ) bin/.dummy
  	@echo Linking $@
-@@ -462,8 +464,9 @@
- install: installbin installman installscripts installcp installswat
- 
- installdirs:
--	$(SHELL) $(srcdir)/install-sh -d -m $(INSTALLPERMS) \
--	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(CODEPAGEDIR)
-+	@for dir in $(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(CODEPAGEDIR); do \
-+		$(SHELL) $(srcdir)/install-sh -d -m $(INSTALLPERMS) $${dir}; \
-+	done
- 
- installservers: all installdirs
- 	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
