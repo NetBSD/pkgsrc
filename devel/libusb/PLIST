@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2004/02/05 20:14:05 skrll Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/05/03 08:45:44 adam Exp $
 bin/libusb-config
 include/usb.h
-lib/libusb-0.1.so.7
-lib/libusb-0.1.so.7.0
+lib/libusb-0.1.so.8
+lib/libusb-0.1.so.8.0
 lib/libusb.a
 lib/libusb.la
 lib/libusb.so
