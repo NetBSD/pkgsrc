@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink2.mk,v 1.6 2002/12/07 02:37:57 schmonz Exp $
+# $NetBSD: pthread.buildlink2.mk,v 1.7 2003/01/25 08:39:54 jlam Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -150,8 +150,19 @@ BUILDLINK_FILES.pthread=	include/pthread.h
 BUILDLINK_FILES.pthread+=	lib/libpthread.*
 
 BUILDLINK_TARGETS+=		pthread-buildlink
+BUILDLINK_TARGETS+=		pthread-buildlink-la
+
+LIBTOOL_ARCHIVE_UNTRANSFORM_SED+= \
+	-e "s|${BUILDLINK_PREFIX.pthread}/lib/libpthread.la|-lpthread|g" \
+	-e "s|${LOCALBASE}/lib/libpthread.la|-lpthread|g"
 
 pthread-buildlink: _BUILDLINK_USE
+
+pthread-buildlink-la:
+	${_PKG_SILIENT}${_PKG_DEBUG}					\
+	lafile="${BUILDLINK_DIR}/lib/libpthread.la";			\
+	libpattern="${BUILDLINK_PREFIX.pthread}/lib/libpthread.*";	\
+	${BUILDLINK_FAKE_LA}
 
 .elif ${PTHREAD_TYPE} == "${_PKG_PTHREAD}"
 .  if exists(${_PKG_PTHREAD_BUILDLINK2_MK})
