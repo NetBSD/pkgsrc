@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.20 2003/05/06 17:42:03 jmmv Exp $
+# $NetBSD: mksandbox,v 1.21 2003/07/29 20:31:05 seb Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -44,6 +44,8 @@ src=/usr/src
 
 kernel=""
 sandboxDirs="/bin /sbin /lib /libexec /usr/X11R6 /usr/bin /usr/games /usr/include /usr/lib /usr/libdata /usr/libexec /usr/lkm /usr/share /usr/sbin /var/mail"
+
+sandboxEmptyDirs="/var/log /var/spool/mqueue"
 
 opsys=`uname -s`
 case "$opsys" in
@@ -215,11 +217,18 @@ $chmodprog 2775 $sandbox/var/games
 
 echo "Making /var/run and /var/run/utmp(x) in $sandbox"
 $mkdirprog $sandbox/var/run
-cp /dev/null $sandbox/var/run/utmp
-cp /dev/null $sandbox/var/run/utmpx
+if test -f /var/run/utmp; then
+	cp /dev/null $sandbox/var/run/utmp
+fi
+if test -f /var/run/utmpx; then
+	cp /dev/null $sandbox/var/run/utmpx
+fi
 
-echo "Making /var/spool/mqueue in $sandbox"
-$mkdirprog $sandbox/var/spool/mqueue
+for d in $sandboxEmptyDirs; do
+	test -d $d || continue
+	echo "Making $d in $sandbox"
+	$mkdirprog $sandbox$d
+done
 
 echo "Mount $src from $sandbox"
 $mkdirprog $sandbox/usr/src
