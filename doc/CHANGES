@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5622 2004/04/17 03:28:22 gehenna Exp $
+$NetBSD: CHANGES,v 1.5623 2004/04/17 10:43:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2038,3 +2038,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtoolkit to 0.9.5nb5 [rh 2004-04-17]
 	Added quakeforge 0.5.4 [snj 2004-04-17]
 	Updated cvsync to 0.24.15 [gehenna 2004-04-17]
+	Updated glib2 to 2.4.0nb2 [jmmv 2004-04-17]
+	Updated libglade2 to 2.3.6nb1 [jmmv 2004-04-17]
+	Updated evolution to 1.4.5nb9 [jmmv 2004-04-17]
