@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2004/05/14 09:20:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.94.2.1 2004/07/08 10:42:12 agc Exp $
 #
 
-DISTNAME=		ethereal-0.10.4
+DISTNAME=		ethereal-0.10.5
 PKGREVISION=		# defined
 CATEGORIES=		net
 MASTER_SITES=		http://www.ethereal.com/distribution/ \
