@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/01/05 11:05:47 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/01/24 01:52:14 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XRENDER_BUILDLINK3_MK:=	${XRENDER_BUILDLINK3_MK}+
@@ -76,6 +76,7 @@ BUILDLINK_DEPENDS+=		Xrender
 .  if !empty(BUILDLINK_USE_BUILTIN.Xrender:M[yY][eE][sS])
 BUILDLINK_PREFIX.Xrender=	${X11BASE}
 .  endif
+USE_X11=	yes
 .endif	# XRENDER_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
