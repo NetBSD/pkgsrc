@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3634 2003/10/04 20:33:59 agc Exp $
+$NetBSD: CHANGES,v 1.3635 2003/10/04 20:55:15 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4069,3 +4069,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated navi2ch to 1.7.1 [toshii 2003-10-04]
 	Added xylem-1.8.7 [jschauma 2003-10-04]
 	Added scm-5d8 [agc 2003-10-04]
+	Added gpspoint-2.030521 [jschauma 2003-10-04]
