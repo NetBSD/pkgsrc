@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2002/05/10 16:07:54 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/28 17:23:54 jschauma Exp $
 #
 
-DISTNAME=	2vcard-0.3
+DISTNAME=	2vcard-0.4
 CATEGORIES=	converters
 MASTER_SITES=	http://www.netmeister.org/apps/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,10 +18,6 @@ NO_BUILD=	yes
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/2vcard ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/2vcard.1 ${PREFIX}/man/man1/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/2vcard
-	${INSTALL_DATA} ${WRKSRC}/CHANGES ${PREFIX}/share/doc/2vcard
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/2vcard
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/2vcard
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/2vcard
 	${INSTALL_DATA} ${WRKSRC}/doc/html/* ${PREFIX}/share/doc/html/2vcard
 
