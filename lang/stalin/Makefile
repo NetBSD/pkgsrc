@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/01/27 00:38:56 jmc Exp $
+# $NetBSD: Makefile,v 1.12.8.1 2002/11/13 19:41:46 agc Exp $
 
 DISTNAME=		stalin-0.9
 CATEGORIES=		lang
@@ -11,6 +11,13 @@ COMMENT=		Aggressively optimizing Scheme compiler
 
 # Only ported to these 4 archs
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-alpha *-*-mips
+UNLIMIT_RESOURCES=	stacksize datasize
+
+.include "../../mk/bsd.prefs.mk"
+
+.if (${MACHINE_ARCH} == "sparc")
+CFLAGS:=		${CFLAGS:C/-O[0-9]*/-O0/}
+.endif
 
 DEPENDS+=		boehm-gc-[0-9]*:../../devel/boehm-gc
 
