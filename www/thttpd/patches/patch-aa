@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/04/10 22:01:10 tron Exp $
+
+--- extras/Makefile.in.orig	Sun Apr  4 17:14:00 1999
++++ extras/Makefile.in	Sun Apr  4 17:14:19 1999
+@@ -68,6 +68,4 @@
+ 	rm -f $(BINDIR)/makeweb $(BINDIR)/htpasswd $(BINDIR)/syslogtocern
+ 	cp makeweb $(BINDIR)/makeweb
+-	chgrp $(WEBGROUP) $(BINDIR)/makeweb
+-	chmod 2755 $(BINDIR)/makeweb
+ 	cp htpasswd $(BINDIR)/htpasswd
+ 	cp syslogtocern $(BINDIR)/syslogtocern
