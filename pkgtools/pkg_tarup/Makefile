@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/14 15:28:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2002/11/23 22:47:02 wiz Exp $
 
 DISTNAME=	pkg_tarup-1.2
 CATEGORIES=	pkgtools
@@ -15,19 +15,18 @@ NO_PATCH=       yes
 NO_BUILD=	yes
 NO_MTREE=	yes
 
-# Set SCRIPT_SUBST to substitute "${variable}" to "value" in MESSAGE
-SCRIPT_SUBST+=	AWK=${AWK}				\
-		ECHO=${ECHO}				\
-		ID=${ID}				\
-		PKG_DBDIR=${PKG_DBDIR}			\
-		PKG_SUFX=${PKG_SUFX}			\
-		PREFIX=${PREFIX}			\
-		PKG_TOOLS_BIN=${PKG_TOOLS_BIN}		\
-		SH=${SH}				\
-		SU=${SU}
+# Set SCRIPT_SUBST to substitute "@VARIABLE@" with "value"
+SCRIPT_SUBST+=	AWK=${AWK:Q}				\
+		ECHO=${ECHO:Q}				\
+		ID=${ID:Q}				\
+		PKG_DBDIR=${PKG_DBDIR:Q}		\
+		PKG_SUFX=${PKG_SUFX:Q}			\
+		PREFIX=${PREFIX:Q}			\
+		PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}	\
+		SH=${SH:Q}				\
+		SU=${SU:Q}
 
-# XXX this should probably use the @VAR@ form instead of ${VAR}...
-SCRIPT_SUBST_SED=	${SCRIPT_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
+SCRIPT_SUBST_SED=	${SCRIPT_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 do-configure:
 	${SED} ${SCRIPT_SUBST_SED}			\
