@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.68 2005/01/14 18:02:38 jmmv Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.69 2005/01/15 10:50:17 jmmv Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -190,16 +190,6 @@ FILES_SUBST+=		RCD_SCRIPTS_SHELL=${RCD_SCRIPTS_SHELL}
 MESSAGE_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 MESSAGE_SUBST+=		RCD_SCRIPTS_EXAMPLEDIR=${RCD_SCRIPTS_EXAMPLEDIR}
 
-.if defined(PKG_DEVELOPER) && ${CHECK_FILES} == "YES"
-.  for e c in ${CONF_FILES} ${SUPPORT_FILES}
-CHECK_FILES_SKIP+=	${c:S/${PREFIX}\///}/.pkgsrc
-.  endfor
-.  for e c u g m in ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
-CHECK_FILES_SKIP+=	${c:S/${PREFIX}\///}/.pkgsrc
-.  endfor
-.  undef e c u g m
-.endif
-
 # OWN_DIRS contains a list of directories for this package that should be
 #       created and should attempt to be destroyed by the INSTALL/DEINSTALL
 #	scripts.  MAKE_DIRS is used the same way, but the package admin
@@ -220,16 +210,6 @@ FILES_SUBST+=		MAKE_DIRS=${MAKE_DIRS:Q}
 FILES_SUBST+=		MAKE_DIRS_PERMS=${MAKE_DIRS_PERMS:Q}
 FILES_SUBST+=		OWN_DIRS=${OWN_DIRS:Q}
 FILES_SUBST+=		OWN_DIRS_PERMS=${OWN_DIRS_PERMS:Q}
-
-.if defined(PKG_DEVELOPER) && ${CHECK_FILES} == "YES"
-.  for d in ${MAKE_DIRS} ${OWN_DIRS}
-CHECK_FILES_SKIP+=	${d:S/${PREFIX}\///}
-.  endfor
-.  for d o g m in ${MAKE_DIRS_PERMS} ${OWN_DIRS_PERMS}
-CHECK_FILES_SKIP+=	${d:S/${PREFIX}\///}
-.  endfor
-.  undef d o g m
-.endif
 
 # PKG_CREATE_USERGROUP indicates whether the INSTALL script should
 #	automatically add any needed users/groups to the system using
