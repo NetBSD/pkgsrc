@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/04/21 11:28:17 rh Exp $
+
+--- ../AppRun.orig	Thu Apr 11 21:58:15 2002
++++ ../AppRun
+@@ -39,7 +39,7 @@
+ 		exit 1
+ esac
+ 
+-BIN="$APP_DIR/$PLATFORM/$PROG"
++BIN="$APP_DIR/$PROG"
+ 
+ if [ -x "$BIN" ]; then
+   exec $DEBUGGER "$BIN" "$@"
