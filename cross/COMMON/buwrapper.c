@@ -1,4 +1,4 @@
-/*	$NetBSD: buwrapper.c,v 1.1 1999/01/04 22:37:30 tv Exp $	*/
+/*	$NetBSD: buwrapper.c,v 1.2 1999/01/04 22:51:53 tv Exp $	*/
 
 #include <err.h>
 #include <stdlib.h>
@@ -34,9 +34,9 @@ int main(int argc, char **argv) {
 	snprintf(path, PATHLEN, "%s/%s/%s", PREFIX, binsubdir, prog);
 
 	/* set up environment */
-	setenv("GNUTARGET", GNUTARGET, 1);
+	setenv("GNUTARGET", GNUTARGET, 0);
 #ifdef LDEMULATION
-	setenv("LDEMULATION", LDEMULATION, 1);
+	setenv("LDEMULATION", LDEMULATION, 0);
 #endif
 #ifdef LD_RPATH_LINK
 	setenv("LD_RPATH_LINK", LD_RPATH_LINK, 1);
