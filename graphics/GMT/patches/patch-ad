@@ -1,0 +1,40 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/11/26 22:48:16 jtb Exp $
+
+--- src/gmt_init.c.orig	Tue Oct 24 17:24:38 2000
++++ src/gmt_init.c
+@@ -1488,7 +1488,7 @@
+ 
+ 	if (get == 0) {	/* Must use GMT system defaults via gmt.conf */
+ 	
+-		sprintf (line, "%s%cshare%cgmt.conf\0", GMTHOME, DIR_DELIM, DIR_DELIM);
++		sprintf (line, "%s%cshare%cgmt%cgmt.conf\0", GMTHOME, DIR_DELIM, DIR_DELIM, DIR_DELIM);
+ 		if ((fp = fopen (line, "r")) == NULL) {
+ 			fprintf (stderr, "GMT Fatal Error: Cannot open/find GMT configuration file %s\n", line);
+ 			exit (EXIT_FAILURE);
+@@ -1501,7 +1501,7 @@
+ 		else if (!strncmp (line, "SI", 2))
+ 			id = 1;
+ 		else {
+-			fprintf (stderr, "GMT Fatal Error: No SI/US keyword in GMT configuration file ($GMTHOME/share/gmt.conf)\n");
++			fprintf (stderr, "GMT Fatal Error: No SI/US keyword in GMT configuration file ($GMTHOME/share/gmt/gmt.conf)\n");
+ 			exit (EXIT_FAILURE);
+ 		}
+ 	}
+@@ -1509,7 +1509,7 @@
+ 		id = get;
+ 	
+ 	id--;	/* Get 0 or 1 */
+-	sprintf (line, "%s%cshare%c.gmtdefaults_%s\0", GMTHOME, DIR_DELIM, DIR_DELIM, suffix[id]);
++	sprintf (line, "%s%cshare%cgmt%c.gmtdefaults_%s\0", GMTHOME, DIR_DELIM, DIR_DELIM, DIR_DELIM, suffix[id]);
+ 
+ 	path = (char *) GMT_memory (VNULL, (size_t)(strlen (line) + 1), (size_t)1, GMT_program);
+ 	
+@@ -1643,7 +1643,7 @@
+ 
+ 	GMT_set_home ();
+ 
+-	sprintf (line, "%s%cshare%cgmtmedia.d\0", GMTHOME, DIR_DELIM, DIR_DELIM);
++	sprintf (line, "%s%cshare%cgmt%cgmtmedia.d\0", GMTHOME, DIR_DELIM, DIR_DELIM, DIR_DELIM);
+ 	if ((fp = fopen (line, "r")) == NULL) return (0);
+ 
+ 	n_alloc = GMT_TINY_CHUNK;
