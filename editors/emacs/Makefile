@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/06/24 17:03:37 minoura Exp $
+# $NetBSD: Makefile,v 1.40 2000/12/16 13:56:40 wiz Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-20.7
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
+
+CONFLICTS=	mule-*
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
