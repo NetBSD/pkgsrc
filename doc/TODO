@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.107 2002/12/24 22:22:35 wiz Exp $
+$NetBSD: TODO,v 1.108 2002/12/24 22:48:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -195,7 +195,6 @@ Suggested package updates
 	o openssh-3.5p1
 	o openssl-0.9.6h
 	o opensp-1.5
-	o pan-0.13.2
 	o pen-0.9.5 [pkg/19216]
 	o pilot-link-0.11.4 [dillo]
 	o plib-1.6.0
