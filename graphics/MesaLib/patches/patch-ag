@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.4 2005/01/04 15:49:24 adam Exp $
+$NetBSD: patch-ag,v 1.5 2005/02/23 13:57:35 grant Exp $
 
---- src/glut/glx/Makefile.orig	2004-12-05 18:00:20.000000000 +0000
+--- src/glut/glx/Makefile.orig	2004-12-06 05:00:20.000000000 +1100
 +++ src/glut/glx/Makefile
 @@ -79,6 +79,7 @@ OBJECTS = $(SOURCES:.c=.o)
  ##### RULES #####
@@ -10,7 +10,7 @@ $NetBSD: patch-ag,v 1.4 2005/01/04 15:49:24 adam Exp $
  	$(CC) -c -I$(TOP)/include $(CFLAGS) $(GLUT_CFLAGS) $<
  
  
-@@ -90,10 +91,8 @@ default: $(LIB_DIR)/$(GLUT_LIB_NAME)
+@@ -90,10 +91,10 @@ default: $(LIB_DIR)/$(GLUT_LIB_NAME)
  
  # Make the library
  $(LIB_DIR)/$(GLUT_LIB_NAME): depend $(OBJECTS)
@@ -19,7 +19,9 @@ $NetBSD: patch-ag,v 1.4 2005/01/04 15:49:24 adam Exp $
 -		-patch $(GLUT_TINY) $(MKLIB_OPTIONS) -install $(LIB_DIR) \
 -		$(GLUT_LIB_DEPS) $(OBJECTS)
 +	${LIBTOOL} --mode=link ${CC} -o ${GLUT_LIB_NAME:.so=.la} ${OBJECTS:.o=.lo} \
-+		-rpath ${PREFIX}/lib -version-info ${GLUT_MAJOR}:${GLUT_MINOR}
++		-rpath ${PREFIX}/lib \
++		-L${X11BASE}/lib -rpath ${X11BASE}/lib -lXi \
++		-version-info ${GLUT_MAJOR}:${GLUT_MINOR}
  
  
  clean:
