@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.7 2000/10/11 09:57:30 itojun Exp $
+$NetBSD: md5,v 1.8 2000/11/10 02:35:02 wiz Exp $
 
-MD5 (gnupg-1.0.3.tar.gz) = ef42c679df7a555e23ebe3c8d14a9124
+MD5 (gnupg-1.0.4.tar.gz) = bef2267bfe9b74a00906a78db34437f9
