@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.apps,v 1.1.1.1 1999/11/17 18:32:29 drochner Exp $
+# $NetBSD: Makefile.apps,v 1.2 2000/03/23 23:15:26 dmcmahill Exp $
 #
 #	Makefile rules for Qwt examples
 #	===============================
@@ -15,7 +15,7 @@ CFLAGS	=	-O2
 INCLUDES =	-I$(QWTINC) -I$(QTINC)
 LD	=	$(CC)
 LDFLAGS	=	
-LIBS	=	-L$(QTLIB) -W,l -R$(QTLIB) -lqt -lXext -lX11 -lqwt -lm
+LIBS	=	-L$(QTLIB) -W,l -R$(QTLIB) -lqt1 -lXext -lX11 -lqwt -lm
 
 #
 # IMPLICIT RULES

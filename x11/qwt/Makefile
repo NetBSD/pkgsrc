@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/11/17 18:32:29 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2000/03/23 23:15:25 dmcmahill Exp $
 
 DISTNAME=	qwtlib-0.2
 CATEGORIES=	x11
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.troll.no/qtprogs.html
 
-DEPENDS+=	qt-1.44:../../x11/qt
+DEPENDS+=	qt1-1.44:../../x11/qt1
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
