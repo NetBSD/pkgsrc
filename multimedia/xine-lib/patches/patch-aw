@@ -1,0 +1,26 @@
+$NetBSD: patch-aw,v 1.1 2004/08/02 19:09:45 shannonjr Exp $
+
+--- src/post/goom/Makefile.in.orig	2004-06-20 18:23:58.000000000 -0600
++++ src/post/goom/Makefile.in
+@@ -412,7 +412,6 @@ EXTRA_DIST = zoom_filter_mmx.c zoom_filt
+ 
+ lib_LTLIBRARIES = xineplug_post_goom.la
+ 
+-@HAVE_FFMMX_TRUE@@PPC_ARCH_FALSE@extra_files = zoom_filter_mmx.c zoom_filter_xmmx.c
+ @HAVE_FFMMX_TRUE@@PPC_ARCH_FALSE@MMX_CFLAG = -DHAVE_MMX
+ 
+ xineplug_post_goom_la_SOURCES = $(extra_files) xine_goom.c \
+@@ -445,12 +444,10 @@ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+ xineplug_post_goom_la_DEPENDENCIES = \
+ 	$(top_builddir)/src/xine-engine/libxine.la
+-am__xineplug_post_goom_la_SOURCES_DIST = zoom_filter_mmx.c \
++am__xineplug_post_goom_la_SOURCES_DIST = _mmx.c \
+ 	zoom_filter_xmmx.c xine_goom.c goom_core.c filters.c lines.c \
+ 	ifs_display.c ifs.c graphic.c gfontlib.c gfontrle.c surf3d.c \
+ 	surface.c tentacle3d.c
+-@HAVE_FFMMX_TRUE@@PPC_ARCH_FALSE@am__objects_1 = zoom_filter_mmx.lo \
+-@HAVE_FFMMX_TRUE@@PPC_ARCH_FALSE@	zoom_filter_xmmx.lo
+ am_xineplug_post_goom_la_OBJECTS = $(am__objects_1) xine_goom.lo \
+ 	goom_core.lo filters.lo lines.lo ifs_display.lo ifs.lo \
+ 	graphic.lo gfontlib.lo gfontrle.lo surf3d.lo surface.lo \
