@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2000/02/14 13:31:12 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2000/06/01 09:45:42 dmcmahill Exp $
 #
 
 PKGNAME=		ns-flash-4.0r12
 FLASH_VERS=		${PKGNAME:S/ns-flash-//}
 
-ONLY_FOR_PLATFORM=      *-*-i386 *-*-sparc
+ONLY_FOR_PLATFORM=      *-*-i386 SunOS-*-sparc
 
 .include "../../mk/bsd.prefs.mk"
 
