@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2000/05/12 09:19:14 agc Exp $
+# $NetBSD: Makefile,v 1.35 2000/05/12 18:42:22 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
@@ -22,6 +22,7 @@ SUBDIR += databases
 SUBDIR += devel
 SUBDIR += editors
 SUBDIR += emulators
+SUBDIR += fonts
 SUBDIR += games
 SUBDIR += graphics
 SUBDIR += ham
