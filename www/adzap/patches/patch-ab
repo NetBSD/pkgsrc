@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2002/01/10 00:41:46 simonb Exp $
+$NetBSD: patch-ab,v 1.7 2002/01/10 00:48:41 simonb Exp $
 
 --- scripts/adzap.conf.orig	Fri Nov 23 12:31:35 2001
 +++ scripts/adzap.conf	Fri Nov 23 12:32:56 2001
-@@ -0,0 +1,25 @@
+@@ -0,0 +1,26 @@
 +# example adzap configuration file
 +# copy this file over to /etc/adzap.conf,
 +# then modify this to match your install
