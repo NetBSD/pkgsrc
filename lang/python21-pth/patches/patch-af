@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 2002/08/20 19:58:58 drochner Exp $
+$NetBSD: patch-af,v 1.2 2003/06/06 18:14:12 drochner Exp $
 
---- Makefile.pre.in.orig	Thu Jul 19 15:21:05 2001
-+++ Makefile.pre.in	Tue Aug 20 16:53:43 2002
+--- Makefile.pre.in.orig	2001-07-19 15:21:05.000000000 +0200
++++ Makefile.pre.in	2003-06-06 19:35:30.000000000 +0200
 @@ -55,7 +55,7 @@
  # Compiler options
  OPT=		@OPT@
@@ -11,6 +11,15 @@ $NetBSD: patch-af,v 1.1.1.1 2002/08/20 19:58:58 drochner Exp $
  LDFLAGS=	@LDFLAGS@
  LDLAST=		@LDLAST@
  SGI_ABI=	@SGI_ABI@
+@@ -274,7 +274,7 @@
+ $(PYTHON):	Modules/$(MAINOBJ) $(LDLIBRARY)
+ 		$(LINKCC) $(LDFLAGS) $(LINKFORSHARED) -o $@ \
+ 			Modules/$(MAINOBJ) \
+-			$(LDLIBRARY) $(LIBS) $(MODLIBS) $(SYSLIBS) $(LDLAST)
++			$(LDLIBRARY) $(LIBS) $(MODLIBS) $(SYSLIBS) $(LDLAST) ${LINK_ALL_LIBGCC_HACK}
+ 
+ platform: $(PYTHON)
+ 	./$(PYTHON) -c 'import sys ; from distutils.util import get_platform ; print get_platform()+"-"+sys.version[0:3]' >platform
 @@ -386,7 +386,7 @@
  		-$(PGEN) $(GRAMMAR_INPUT) $(GRAMMAR_H) $(GRAMMAR_C)
  

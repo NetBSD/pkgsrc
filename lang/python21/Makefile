@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/06/02 01:18:56 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/06 18:14:11 drochner Exp $
 #
 
 DISTNAME=	Python-2.1.3
@@ -15,6 +15,7 @@ COMMENT=	Interpreted, interactive, object-oriented programming language
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-threads
+MAKE_ENV+=	LINK_ALL_LIBGCC_HACK=${LINK_ALL_LIBGCC_HACK:Q}
 
 INSTALL_TARGET=	altinstall
 
