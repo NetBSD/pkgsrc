@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1167 2003/01/19 18:13:07 cjep Exp $
+$NetBSD: CHANGES,v 1.1168 2003/01/19 20:22:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -332,3 +332,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated scrollz to 1.9 [grant 2003-01-19]
 	Updated ORBit to 0.5.15nb3 [wiz 2003-01-19]
 	Updated nail to 10.4 [cjep 2003-01-19]
+	Updated mozilla to 1.2.1nb3 [tron 2003-01-19]
