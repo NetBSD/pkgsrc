@@ -1,0 +1,76 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/13 17:54:14 xtraeme Exp $
+bin/vte
+include/vte/pty.h
+include/vte/reaper.h
+include/vte/vte.h
+include/vte/vteaccess.h
+lib/libvte.a
+lib/libvte.la
+lib/libvte.so
+lib/libvte.so.5
+lib/libvte.so.5.1
+lib/pkgconfig/vte.pc
+lib/vte/decset
+lib/vte/interpret
+lib/vte/iso8859mode
+lib/vte/nativeecho
+lib/vte/osc
+lib/vte/slowcat
+lib/vte/utf8echo
+lib/vte/utf8mode
+lib/vte/vterdb
+lib/vte/window
+libexec/gnome-pty-helper
+${PKGLOCALEDIR}/locale/am/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/is/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/li/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/vte.mo
+share/vte/termcap/xterm
+@dirrm share/vte/termcap
+@dirrm share/vte
+@exec ${MKDIR} %D/share/doc/html/vte
+@dirrm share/doc/html/vte
+@dirrm lib/vte
+@dirrm include/vte
