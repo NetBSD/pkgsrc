@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.181 2001/03/13 11:29:08 itojun Exp $
+# $NetBSD: Makefile,v 1.182 2001/03/15 08:46:08 skrll Exp $
 #
 
 COMMENT=	Development utilities
@@ -70,6 +70,8 @@ SUBDIR+=	its4
 SUBDIR+=	jakarta-ant
 SUBDIR+=	jlib
 SUBDIR+=	kdbg
+SUBDIR+=	kdebindings2
+SUBDIR+=	kdesdk2
 SUBDIR+=	kdevelop
 SUBDIR+=	kdevelop-base
 SUBDIR+=	lclint
