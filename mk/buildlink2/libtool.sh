@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.6 2002/11/14 21:45:21 jlam Exp $
+# $NetBSD: libtool.sh,v 1.7 2002/12/22 19:02:44 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -13,6 +13,7 @@ specificlogic="@_BLNK_WRAP_SPECIFIC_LOGIC@"
 libtool_fix_la="@_BLNK_LIBTOOL_FIX_LA@"
 wrapperlog="@_BLNK_WRAP_LOG@"
 updatecache=${BUILDLINK_UPDATE_CACHE-yes}
+cacheall=${BUILDLINK_CACHE_ALL-no}
 
 cmd="@WRAPPEE@"
 lafile=
@@ -23,7 +24,7 @@ case "$1" in
 	doinstall=yes
 	;;
 *)
-	while [ $# -gt 0 ]; do
+	while @TEST@ $# -gt 0; do
 		arg="$1"; shift
 		case $arg in
 		--fix-la)
@@ -36,8 +37,8 @@ case "$1" in
 			esac
 			;;
 		--mode|--mode=install)
-			if [ "$arg" = "--mode=install" ] || \
-			   [ "$arg" = "--mode" -a "$1" = "install" ]; then
+			if @TEST@ "$arg" = "--mode=install" || \
+			   @TEST@ "$arg" = "--mode" -a "$1" = "install"; then
 				doinstall=yes
 				break
 			fi
@@ -56,19 +57,17 @@ case "$1" in
 			;;
 		esac
 		. $specificlogic
-		args="$args $arg"
+		cmd="$cmd $arg"
 	done
 	;;
 esac
-if [ -n "$doinstall" ]; then
-	args="$args $arg"
-	while [ $# -gt 0 ]; do
+if @TEST@ -n "$doinstall"; then
+	cmd="$cmd $arg"
+	while @TEST@ $# -gt 0; do
 		arg="$1"; shift
 		case $arg in
 		*[\`\"\$\\]*)
-			arg=`@ECHO@ X$arg | \
-				$Xsed -e "$sed_quote_subst" \
-			`
+			arg=`@ECHO@ "X$arg" | $Xsed -e "$sed_quote_subst"`
 			;;
 		esac
 		case $arg in
@@ -76,10 +75,9 @@ if [ -n "$doinstall" ]; then
 			arg="\"$arg\""
 			;;
 		esac
-		args="$args $arg"
+		cmd="$cmd $arg"
 	done
 fi
-cmd="$cmd $args"
 
 @_BLNK_WRAP_ENV@
 @_BLNK_WRAP_SANITIZE_PATH@
@@ -88,7 +86,7 @@ cmd="$cmd $args"
 eval $cmd
 wrapper_result=$?
 
-if [ -n "$lafile" ] && [ -f "$lafile" ]; then
+if @TEST@ -n "$lafile" && @TEST@ -f "$lafile"; then
 	. $libtool_fix_la
 fi
 

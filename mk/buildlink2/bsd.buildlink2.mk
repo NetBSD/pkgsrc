@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.62 2002/12/03 08:31:41 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.63 2002/12/22 19:02:43 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -64,10 +64,21 @@ _BLNK_LDFLAGS=		-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
 .endif
 _BLNK_OPSYS=		${OPSYS}
 
+BUILDLINK_SHELL?=	${SH}
+
 # The configure process usually tests for outlandish or missing things
 # that we don't want polluting the argument cache.
 #
 CONFIGURE_ENV+=		BUILDLINK_UPDATE_CACHE=no
+
+# The caching code, which greatly speeds up the build process, works only
+# on certain platforms.
+#
+_BLNK_CACHE_ALL=	NetBSD
+.if !empty(_BLNK_CACHE_ALL:M${OPSYS})
+CONFIGURE_ENV+=		BUILDLINK_CACHE_ALL=yes
+MAKE_ENV+=		BUILDLINK_CACHE_ALL=yes
+.endif
 
 .if defined(USE_X11)
 USE_X11_LINKS?=		YES
@@ -520,18 +531,6 @@ _ALIASES.CPP=		cpp
 _ALIASES.FC=		f77 g77
 _ALIASES.LD=		ld
 
-# On Darwin, protect against using /bin/sh if it's zsh.
-.if ${_BLNK_OPSYS} == "Darwin"
-.  if exists(/bin/bash)
-BUILDLINK_SHELL?=	/bin/bash
-.  else
-BUILD_DEPENDS+=		bash-[0-9]*:../../shells/bash2
-BUILDLINK_SHELL?=	${LOCALBASE}/bin/bash
-.  endif
-.else
-BUILDLINK_SHELL?=	${SH}
-.endif
-
 # _BLNK_WRAP_*.<wrappee> variables represent "template methods" of the
 
 # wrapper script that may be customized per wrapper:
@@ -652,6 +651,7 @@ _BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@CAT@|${CAT:Q}|g"						\
 	-e "s|@ECHO@|${ECHO:Q}|g"					\
 	-e "s|@SED@|${SED:Q}|g"						\
+	-e "s|@TEST@|${TEST:Q}|g"					\
 	-e "s|@TOUCH@|${TOUCH:Q}|g"					\
 	-e "s|@_BLNK_LIBTOOL_FIX_LA@|${_BLNK_LIBTOOL_FIX_LA:Q}|g"	\
 	-e "s|@_BLNK_WRAP_LOG@|${_BLNK_WRAP_LOG:Q}|g"			\
@@ -767,6 +767,7 @@ ${_BLNK_WRAP_POST_CACHE}: ${.CURDIR}/../../mk/buildlink2/post-cache
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
 		-e "s|@LOCALBASE@|${LOCALBASE}|g"			\
 		-e "s|@X11BASE@|${X11BASE}|g"				\
+		-e 's|@CAT@|${CAT}|g'					\
 		-e 's|@ECHO@|${ECHO}|g'					\
 		-e 's|@_BLNK_TRANSFORM_SED@||g'				\
 		${.ALLSRC} > ${.TARGET}.tmp
@@ -779,6 +780,7 @@ ${_BLNK_WRAP_POST_CACHE_TRANSFORM}:					\
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
 		-e "s|@LOCALBASE@|${LOCALBASE}|g"			\
 		-e "s|@X11BASE@|${X11BASE}|g"				\
+		-e 's|@CAT@|${CAT}|g'					\
 		-e 's|@ECHO@|${ECHO}|g'					\
 		-e 's|@_BLNK_TRANSFORM_SED@|${_BLNK_TRANSFORM_SED:Q}|g'	\
 		${.CURDIR}/../../mk/buildlink2/post-cache > ${.TARGET}.tmp
@@ -830,6 +832,7 @@ ${_BLNK_LIBTOOL_FIX_LA}:						\
 		-e "s|@MV@|${MV:Q}|g"					\
 		-e "s|@RM@|${RM:Q}|g"					\
 		-e "s|@SED@|${SED:Q}|g"					\
+		-e "s|@TEST@|${TEST:Q}|g"				\
 		-e "s|@TOUCH@|${TOUCH:Q}|g"				\
 		-e 's|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}|g' \
 		-e 's|@_BLNK_UNTRANSFORM_SED@|${_BLNK_UNTRANSFORM_SED:Q}|g' \
@@ -859,6 +862,7 @@ ${_BLNK_FAKE_LA}: ${.CURDIR}/../../mk/buildlink2/fake-la
 		-e "s|@MV@|${MV:Q}|g"					\
 		-e "s|@RM@|${RM:Q}|g"					\
 		-e "s|@SED@|${SED:Q}|g"					\
+		-e "s|@TEST@|${TEST:Q}|g"				\
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
