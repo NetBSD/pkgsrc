@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2004/07/04 17:16:32 jschauma Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2004/08/13 18:57:16 jlam Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -10,6 +10,7 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/binutils.mo
 ${NO_GPROF}${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gprof.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/ld.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/opcodes.mo
+${NO_GPROF}${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gprof.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/opcodes.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bfd.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/binutils.mo
@@ -27,9 +28,12 @@ ${NO_GPROF}${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gprof.mo
 ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/opcodes.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bfd.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/binutils.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/opcodes.mo
 ${NO_GPROF}${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gprof.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/opcodes.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/bfd.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/opcodes.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/binutils.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/bfd.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/binutils.mo
 ${NO_GPROF}${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gprof.mo
