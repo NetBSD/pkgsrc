@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/04/06 13:57:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2004/04/07 12:54:01 salo Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -33,6 +33,7 @@ SUBDIR+=	libdvdnav
 SUBDIR+=	libdvdplay
 SUBDIR+=	libdvdread
 SUBDIR+=	libflash
+SUBDIR+=	libmatroska
 SUBDIR+=	libtheora
 SUBDIR+=	mencoder
 SUBDIR+=	mjpegtools
