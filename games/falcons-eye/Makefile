@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/02/16 18:56:22 ben Exp $
+# $NetBSD: Makefile,v 1.20 2005/02/17 21:05:08 reed Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
@@ -19,6 +19,8 @@ DIST_SUBDIR=		${PKGNAME}-20050216-2
 
 WRKSRC=			${WRKDIR}
 USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		lex yacc
+MAKE_ENV+=		YACC="${YACC}"
 USE_X11=		yes
 
 LIBS.SunOS+=		-lm
