@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.5 2004/12/23 18:57:03 ben Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.6 2005/02/04 21:06:38 reed Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Notes on fixes for packages</title>
@@ -227,7 +227,7 @@
     
         <listitem>
           <para> If your package needs some executable to be able to run
-            correctly and if there's agail no
+            correctly and if there's no
             <filename>buildlink3.mk</filename> file, this is specified
             using the <varname>DEPENDS</varname> variable. The
             <pkg>print/lyx</pkg> package needs to be able to execute the
