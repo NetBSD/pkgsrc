@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/04/16 14:30:44 recht Exp $
+# $NetBSD: Makefile,v 1.25 2004/07/06 16:01:10 reed Exp $
 #
 
 LIBQT=			${WRKSRC}/lib/libqt-mt.la
@@ -8,7 +8,7 @@ LIBQT=			${WRKSRC}/lib/libqt-mt.la
 PKGNAME=		qt3-libs-${QTVERSION}
 COMMENT=		C++ X GUI toolkit
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GCC_REQD+=		2.95.3
 
 ALL_TARGET=		sub-plugins
@@ -34,16 +34,16 @@ do-install:
 	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/plugins/imageformats/libqjpeg.la ${QTPREFIX}/plugins/imageformats
 	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/plugins/imageformats/libqmng.la ${QTPREFIX}/plugins/imageformats
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../fonts/Xft2/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../graphics/mng/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../x11/Xrandr/buildlink2.mk"
-.include "../../x11/xcursor/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/mng/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/Xrandr/buildlink3.mk"
+.include "../../x11/xcursor/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
