@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2004/12/02 06:43:14 itojun Exp $
+# $NetBSD: Makefile,v 1.72 2004/12/02 06:44:27 itojun Exp $
 #
 
 DISTNAME=	racoon-20040818a
@@ -39,9 +39,9 @@ CONFIGURE_ARGS+=--disable-ipv6
 .endif
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
 .if defined(PKGREVISION)
-CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20040617anb${PKGREVISION}
+CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20040818anb${PKGREVISION}
 .else
-CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20040617a
+CONFIGURE_ARGS+=--with-pkgversion=netbsd-pkgsrc-20040818a
 .endif
 
 pre-configure:
