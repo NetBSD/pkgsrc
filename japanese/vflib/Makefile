@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/04/30 19:04:04 sakamoto Exp $
+# $NetBSD: Makefile,v 1.8 2000/05/01 06:07:46 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1999/05/03 01:58:33 steve Exp $
 
 DISTNAME=	VFlib2-2.24.2
@@ -11,7 +11,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} watanabe-vf${EXTRACT_SUFX}
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://TypeHack.aial.hiroshima-u.ac.jp/VFlib/
 
-DEPENDS=	freetype-1.2:../../graphics/freetype
+DEPENDS=	freetype-lib-1.2:../../graphics/freetype-lib
 
 VFLIB_VERSION=	2.24.2
 PLIST_SUBST+=	VFLIB_VERSION=${VFLIB_VERSION} \
