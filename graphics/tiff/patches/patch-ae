@@ -1,37 +1,13 @@
-$NetBSD: patch-ae,v 1.8 2004/04/27 20:38:48 tv Exp $
+$NetBSD: patch-ae,v 1.9 2004/12/28 23:10:10 reed Exp $
 
---- man/Makefile.in.orig	Mon Dec 22 03:22:15 2003
-+++ man/Makefile.in
-@@ -363,9 +363,7 @@ apps/Makefile:
- 	 ${ECHO} 'install:';						\
- 	 for i in *.1; do						\
- 	    f=${MANAPPNAME};						\
--	    ${ECHO} '	cd ..; ${INSTALL} -m 444 			\
--		-F $${DESTDIR}${MAN}/${MANAPPS}				\
--		-idb tiff.man.tools -src' apps/"$$i" '-O' "$$f";	\
-+	    ${ECHO} '	${BSD_INSTALL_DATA}' $$i ${MAN}/${MANAPPS}/$$f; \
- 	 done								\
- 	)>apps/Makefile
- lib/Makefile:
-@@ -376,17 +374,15 @@ lib/Makefile:
- 	 ${ECHO} 'install:';						\
- 	 for i in *.3t; do						\
- 	    f=${MANLIBNAME};						\
--	    ${ECHO} '	cd ..; ${INSTALL} -m 444 			\
--		-F $${DESTDIR}${MAN}/${MANLIB}				\
--		-idb tiff.man.dev -src' lib/"$$i" '-O' "$$f";		\
-+	    ${ECHO} '	${BSD_INSTALL_DATA}' $$i ${MAN}/${MANLIB}/$$f;  \
- 	 done								\
- 	)>lib/Makefile
- 
- install: all
--	${INSTALL} -m 755 -dir -idb tiff.man.tools ${DESTDIR}${MAN}
--	${INSTALL} -m 755 -dir -idb tiff.man.tools ${DESTDIR}${MAN}/${MANAPPS}
-+	${INSTALL} -m ${PKGDIRMODE} -dir -idb tiff.man.tools ${DESTDIR}${MAN}
-+	${INSTALL} -m ${PKGDIRMODE} -dir -idb tiff.man.tools ${DESTDIR}${MAN}/${MANAPPS}
- 	cd apps; ${MAKE} -${MAKEFLAGS} install
--	${INSTALL} -m 755 -dir -idb tiff.man.dev ${DESTDIR}${MAN}/${MANLIB}
-+	${INSTALL} -m ${PKGDIRMODE} -dir -idb tiff.man.dev ${DESTDIR}${MAN}/${MANLIB}
- 	cd lib; ${MAKE} -${MAKEFLAGS} install
- 
- clean:
+--- html/images/Makefile.in.orig	Mon Dec 20 11:29:26 2004
++++ html/images/Makefile.in
+@@ -213,7 +213,7 @@ target_alias = @target_alias@
+ target_cpu = @target_cpu@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
+-docdir = $(prefix)/share/doc/$(PACKAGE)-$(VERSION)/html/images
++docdir = $(prefix)/share/doc/$(PACKAGE)/html/images
+ docfiles = \
+ 	back.gif \
+ 	bali.jpg \
