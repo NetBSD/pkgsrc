@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2004/05/16 01:33:45 xtraeme Exp $
+# $NetBSD: Makefile,v 1.74 2004/06/24 23:32:21 ben Exp $
 #
 
 COMMENT=	Archivers
@@ -30,6 +30,7 @@ SUBDIR+=	ha
 SUBDIR+=	hpack
 SUBDIR+=	jamjar
 SUBDIR+=	lbrate
+SUBDIR+=	lcab
 SUBDIR+=	lha
 SUBDIR+=	libcomprex
 SUBDIR+=	liblzo
