@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2004/01/19 15:05:44 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2004/01/19 15:49:24 jlam Exp $
 #
 
 DISTNAME=		texinfo-4.6
@@ -12,12 +12,13 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
 COMMENT=		GNU info file manipulation utilities
 
-USE_BUILDLINK2=		yes
-USE_GNU_GETTEXT=	yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+BUILDLINK_USE_BUILTIN.gettext=	no
+
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
-CONFIGURE_ARGS+=	--with-libintl-prefix=${BUILDLINK_PREFIX.gettext}
 CONFIG_STATUS_OVERRIDE=	${WRKSRC}/config.status
 
 INFO_FILES=		info-stnd.info info.info texinfo
@@ -31,7 +32,7 @@ post-patch:
 		< ${WRKSRC}/info/filesys.h.orig		\
 		> ${WRKSRC}/info/filesys.h
 
-.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # This need to be defined here to override the setting in texinfo.mk
