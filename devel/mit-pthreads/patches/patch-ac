@@ -1,0 +1,8 @@
+$NetBSD: patch-ac,v 1.1 1998/08/23 06:22:17 garbled Exp $
+--- pthreads/process.c.orig	Fri Jul 17 06:35:13 1998
++++ pthreads/process.c	Fri Jul 17 06:58:34 1998
+@@ -42,2 +42,4 @@
+ 
++extern void *alloca();
++
+ #ifndef lint
