@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/04/24 22:46:09 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/06/12 04:21:15 grant Exp $
 
 DISTNAME=	nana-2.4
 CATEGORIES=	devel
@@ -10,5 +10,6 @@ COMMENT=	Improved support for assertions and logging in C and C++
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	nana.info
+USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.pkg.mk"
