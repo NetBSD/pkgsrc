@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/01/13 00:01:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2005/02/09 11:39:19 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
@@ -57,6 +57,10 @@ pre-install:
 		${FILESDIR}/${f} > ${WRKSRC}/${f}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${X11BASE}/lib/pkgconfig/${f}
 .endfor
+
+.if exists(${.CURDIR}/PLIST.${OPSYS}.${MACHINE_ARCH})
+PLIST_SRC+=	${.CURDIR}/PLIST.${OPSYS}.${MACHINE_ARCH}
+.endif
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
