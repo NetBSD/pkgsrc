@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/01/29 19:49:59 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/07/15 00:15:25 mjl Exp $
 bin/plan
 libexec/plan/pland
 libexec/plan/notifier
@@ -22,7 +22,6 @@ share/plan/holiday/holiday_finnish
 share/plan/holiday/holiday_french
 share/plan/holiday/holiday_frswiss
 share/plan/holiday/holiday_german
-share/plan/holiday/holiday_german.orig
 share/plan/holiday/holiday_hungary
 share/plan/holiday/holiday_italy
 share/plan/holiday/holiday_japan
@@ -32,7 +31,15 @@ share/plan/holiday/holiday_spain
 share/plan/holiday/holiday_swedish
 share/plan/holiday/holiday_uk
 share/plan/holiday/holiday_us
+share/plan/holiday/holiday_combi
+share/plan/holiday/holiday_czech
+share/plan/holiday/holiday_portugal
 share/plan/plan.help
+share/plan/plan.lang.dutch
+share/plan/plan.lang.english
+share/plan/plan.lang.french
+share/plan/plan.lang.german
+share/plan/plan.lang.spanish
 @dirrm share/plan/holiday
 @dirrm share/plan
 @dirrm libexec/plan

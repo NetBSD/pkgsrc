@@ -1,44 +1,57 @@
-$NetBSD: patch-aa,v 1.3 1999/01/29 19:49:45 tron Exp $
+$NetBSD: patch-aa,v 1.4 1999/07/15 00:15:25 mjl Exp $
 
---- Makefile.orig	Sat May  9 22:21:09 1998
-+++ Makefile	Thu Sep  3 23:15:04 1998
-@@ -6,18 +6,18 @@
- # DO NOT put a blank between the path and the #, or you'll get compile errors.
+--- Makefile.orig	Wed Jul  7 22:24:27 1999
++++ Makefile	Thu Jul 15 01:54:21 1999
+@@ -8,17 +8,17 @@
+ # configure script.
  #
- 
--DIR  = /usr/local/bin#		# user-callable executable (plan)
--LIB  = /usr/local/lib#		# auxiliary programs (pland, notifier, netplan)
--HELP = $(LIB)#			# help file (plan.help)
-+DIR  = ${X11BASE}/bin#		# user-callable executable (plan)
-+LIB  = ${X11BASE}/libexec/plan#	# auxiliary programs (pland, notifier, netplan)
-+HELP = ${X11BASE}/share/plan#	# help file (plan.help)
- NETPLANDIR = $(LIB)#		# netplan expects netplan.dir/ here
- # NETPLANDIR = "/var/lib/plan"#	# use this for Debian Linux
--MAN  = /usr/man/local/man#	# unformatted nroff manpage (plan.[14])
-+MAN  = ${X11BASE}/man/man#		# unformatted nroff manpage (plan.[14])
- # MAN = /usr/local/man/man#	# for linux
--CATMAN = /usr/catman/local/cat#	# formatted manpage (plan.[14])
-+CATMAN = ${X11BASE}/cat/cat#	# formatted manpage (plan.[14])
- INCDIR =#			# extra cc options, e.g. "-I/var/include"
--NOB_UID = 60001#		# numerical user ID of <nobody> account
--NOB_GID = 60001#		# default numerical group ID of <nobody> account
--CPP_PATH="/lib/cpp -P -I$(HELP)"# used by plan to pre-process holiday files,
-+NOB_UID = 39#			# numerical user ID of <nobody> account
-+NOB_GID = 39#			# default numerical group ID of <nobody> account
-+CPP_PATH="/usr/bin/cpp -P -I$(HELP)"# used by plan to pre-process holiday files,
+ #				# user-callable executable (plan)
+-DIR=/usr/local/bin
++DIR=${X11BASE}/bin
+ #				# auxiliary programs (pland, notifier, netplan)
+-LIB=/usr/local/lib
++LIB=${X11BASE}/libexec/plan
+ #				# help file (plan.help)
+-HELP=/usr/local/lib
++HELP=${X11BASE}/share/plan
+ #				# netplan expects netplan.dir/ here
+-NETPLANDIR=/usr/local/lib
++NETPLANDIR=${LIB}
+ #				# unformatted nroff manpage (plan.[14])
+-MAN=/usr/local/man
++MAN=${X11BASE}/man/man
+ #				# formatted manpage (plan.[14])
+-CATMAN=/usr/catman/local/cat
++CATMAN=${X11BASE}/cat/cat
+ #				# subdirectory in home dir, or empty
+ PLANRULE=
+ #				# lockfile for plan, %d is uid
+@@ -32,12 +32,12 @@
+ #				# standard Unix compiler generator
+ YACC=yacc
+ #				# numerical user ID of <nobody> account
+-NOB_UID=60001
++NOB_UID=39
+ #				# default numerical group ID of <nobody>
+-NOB_GID=60001
++NOB_GID=39
+ # 				# used by plan to pre-process holiday files,
  #				# plan will check if this file really exists
- ESCTOISOLATIN=\"\\033\(B\"#	# switching to ISO8859-1
- ESCTOJISLATIN=\"\\033\(J\"#	# switching to JIS X0201-1976 roman
-@@ -28,7 +28,7 @@
- #        -DLOCALE_SJIS=\"ja_JP.SJIS\" -DLOCALE_EUC=\"ja_JP.EUC\"
- #				# JAPAN requires X11R5 and a Japanese env.
+-CPP_PATH='/lib/cpp -P -I$(HELP)'
++CPP_PATH='/usr/bin/cpp -P -I$(HELP)'
+ #				# by default, fork on startup? TRUE or FALSE
+ DOFORK=TRUE
+ #				# switching to ISO8859-1
+@@ -53,7 +53,7 @@
+ #				# do NOT define -O2 on DEC OSF/1 machines!
+ DEBUG=-O2
+ #				# what to do without make arguments
+-DEFTARGET=linux
++DEFTARGET=netbsd
+ #------------------------- end of configuration section ----------------------
  
--DEBUG = -g
-+#DEBUG = -g
- #DEBUG = -O2#			# do NOT define -O2 on DEC OSF/1 machines!
- #DEBUG =
- 
-@@ -113,8 +113,7 @@
+ OPT=$(DEBUG) $(PLANRULE) -DPLANLOCK=\"$(PLANLOCK)\" -DPLANDLOCK=\"$(PLANDLOCK)\"
+@@ -136,8 +136,7 @@
  USL_C	= -DNOKILL0 -I/usr/X/include
  BSDI_C	= -DBSD -DRABBITS -I/usr/X11/include -DFLOCK -DNOREGEX -Dbsdi
  BSDIG_C	= -DBSD -DRABBITS -I/usr/X11/include -DFLOCK -DNOREGEX -Dbsdi -ansi 
@@ -48,55 +61,61 @@ $NetBSD: patch-aa,v 1.3 1999/01/29 19:49:45 tron Exp $
  FBSD_C	= -ansi -I/usr/X11R6/include -DBSD -DNOLOCK -DNOREGEX -DRABBITS\
  	  -DSTDLIBMALLOC
  LINUX_C	= -I/usr/X11R6/include -D_POSIX_SOURCE -DNOLOCK -DLINUX
-@@ -195,8 +194,8 @@
+@@ -220,8 +219,8 @@
  BSDI_L2	= -lc
  BSDIG_L1= -L/usr/X11/lib -lXm -lXt -lX11
  BSDIG_L2= -L/usr/X11/lib -lc
 -NBSD_L1	= -L/usr/X11R6/lib -lXm -lXt -lX11
 -NBSD_L2	= -L/usr/X11R6/lib -lc
-+NBSD_L1	= -L${X11BASE}/lib -lXm -lXt -lX11
-+NBSD_L2	= -L${X11BASE}/lib -lc
- FBSD_L1	= -L/usr/X11R6/lib -lXm -lXt -lX11 -lXext
++NBSD_L1	= -Wl,-rpath ${X11BASE}/lib -L${X11BASE}/lib -lXm -lXt -lX11
++NBSD_L2	= -Wl,-rpath ${X11BASE}/lib -L${X11BASE}/lib -lc
+ FBSD_L1	= -L/usr/X11R6/lib -lXm -lXt -lX11 -lXext -lSM -lICE -lXpm
  FBSD_L2	= -L/usr/X11R6/lib -lc
  LINUX_L1= -L/usr/X11R6/lib -L/usr/lib/X11R6/lib -lSM -lXm -lXt -lX11 -lXpm -lc -lXext -lSM -lICE -lX11
-@@ -528,31 +527,19 @@
+@@ -416,7 +415,7 @@
+ 	env CF="$(BSDIG_C)" L1F="$(BSDIG_L1)" L2F="$(BSDIG_L2)" MYCC=gcc make all
+ 
+ netbsd:
+-	env CF="$(NBSD_C)" L1F="$(NBSD_L1)" L2F="$(NBSD_L2)" MYCC=gcc $(MAKE) all
++	env CF="$(NBSD_C)" L1F="$(NBSD_L1)" L2F="$(NBSD_L2)" MYCC=${CC} $(MAKE) all
+ 
+ freebsd:
+ 	env CF="$(FBSD_C)" L1F="$(FBSD_L1)" L2F="$(FBSD_L2)" MYCC=${CC} make all
+@@ -564,29 +563,15 @@
  
  #---------------------------------------------------------------
  install:
 -	cp plan $(DIR)
 -	-rm -f $(DIR)/pland $(DIR)/notifier
--	cp pland notifier netplan ../misc/plan_cal.ps $(LIB)
+-	cp pland notifier netplan ../misc/plan_cal.ps ../language/* $(LIB)
 -	-(test x'$(JAPAN)' != x && cp ../misc/plan_calSJ.ps $(LIB)) || exit 0
--	cp ../misc/plan.help $(HELP)
+-	cp ../language/plan.help $(HELP)
 -	-strip $(DIR)/plan $(LIB)/pland $(LIB)/notifier $(LIB)/netplan
-+	${BSD_INSTALL_PROGRAM} plan $(DIR)
-+	${BSD_INSTALL_PROGRAM} pland notifier netplan $(LIB)
-+	${BSD_INSTALL_DATA} ../misc/plan_cal.ps $(LIB)
-+	${BSD_INSTALL_DATA} ../misc/plan.help $(HELP)
- 	-chmod 755 $(DIR)/plan $(LIB)/pland $(LIB)/notifier $(LIB)/netplan
- 	-chmod 644 $(HELP)/plan.help $(LIB)/plan_cal.ps
+-	-chmod 755 $(DIR)/plan $(LIB)/pland $(LIB)/notifier $(LIB)/netplan
+-	-chmod 644 $(HELP)/plan.help $(LIB)/plan_cal.ps $(LIB)/plan.lang.*
 -	-(test x'$(JAPAN)' != x && chmod 644 $(LIB)/plan_calSJ.ps) || exit 0
--	-mkdir $(LIB)/netplan.dir
-+	-mkdir -p $(LIB)/netplan.dir
- 	-chmod 700 $(LIB)/netplan.dir
+-	-mkdir $(NETPLANDIR)/netplan.dir
++	${BSD_INSTALL_PROGRAM} plan $(DIR)
++	${BSD_INSTALL_PROGRAM} pland notifier netplan ${LIB}
++	${BSD_INSTALL_DATA} ../misc/plan_cal.ps ${LIB}
++	${BSD_INSTALL_DATA} ../language/plan.* $(HELP)
++	-mkdir -p $(NETPLANDIR)/netplan.dir
+ 	-chmod 700 $(NETPLANDIR)/netplan.dir
 -	-(test -x `which nroff` && nroff -man ../misc/plan.1 >../misc/plan.1cat) || exit 0
 -	-(test -x `which nroff` && nroff -man ../misc/plan.4 >../misc/plan.4cat) || exit 0
 -	-(test -x `which nroff` && nroff -man ../misc/netplan.1 >../misc/netplan.1cat) || exit 0
--	-(test -d $(MAN)1 && cp ../misc/plan.1 $(MAN)1/plan.1) || exit 0
--	-(test -d $(MAN)4 && cp ../misc/plan.4 $(MAN)4/plan.4) || exit 0
--	-(test -d $(MAN)1 && cp ../misc/netplan.1 $(MAN)1/netplan.1) || exit 0
--	-(test -d $(CATMAN)1 && cp ../misc/plan.1cat $(CATMAN)1/plan.1) || exit 0
--	-(test -d $(CATMAN)4 && cp ../misc/plan.4cat $(CATMAN)4/plan.4) || exit 0
--	-(test -d $(CATMAN)1 && cp ../misc/netplan.1cat $(CATMAN)1/netplan.1) || exit 0
--	-(test -f ${HOME}/.holiday || cp ../holiday/holiday_german ${HOME}/.holiday) || exit 0
+-	-(test -d $(MAN)1 && cp ../misc/plan.1 $(MAN)1/plan) || exit 0
+-	-(test -d $(MAN)4 && cp ../misc/plan.4 $(MAN)4/plan) || exit 0
+-	-(test -d $(MAN)1 && cp ../misc/netplan.1 $(MAN)1/netplan) || exit 0
+-	-(test -d $(CATMAN)1 && cp ../misc/plan.1cat $(CATMAN)1/plan) || exit 0
+-	-(test -d $(CATMAN)4 && cp ../misc/plan.4cat $(CATMAN)4/plan) || exit 0
+-	-(test -d $(CATMAN)1 && cp ../misc/netplan.1cat $(CATMAN)1/netplan) || exit 0
+-	-(test -f ${HOME}/.holiday || cp ../holiday/holiday_$(HOLIDAY) ${HOME}/.holiday) || exit 0
 -	-(test `uname` = IRIX -o `uname` = IRIX64 && mkdir $$HOME/.icons) || exit 0
 -	-(test `uname` = IRIX -o `uname` = IRIX64 && cp ../misc/Plan.icon $$HOME/.icons/Plan.icon) || exit 0
 +	-(test -d $(MAN)1 && ${BSD_INSTALL_MAN} ../misc/plan.1 $(MAN)1/plan.1) || exit 0
 +	-(test -d $(MAN)4 && ${BSD_INSTALL_MAN} ../misc/plan.4 $(MAN)4/plan.4) || exit 0
 +	-(test -d $(MAN)1 && ${BSD_INSTALL_MAN} ../misc/netplan.1 $(MAN)1/netplan.1) || exit 0
  	@echo ""
--	@echo "use ../holiday/* as templates for your ~/.holiday file"
-+	@echo "Use " ${X11BASE}"/share/plan/holiday/* as templates for your ~/.holiday file."
+ 	@echo "use ../holiday/* as templates for your ~/.holiday file"
  
- clean:
- 	-rm -f *.o
