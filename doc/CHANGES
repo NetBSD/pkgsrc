@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3706 2003/10/18 11:18:11 jmmv Exp $
+$NetBSD: CHANGES,v 1.3707 2003/10/18 14:45:46 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4175,7 +4175,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-XML-Parser to 2.31nb1 [grant 2003-10-11]
 	Updated php4-wddx to 4.3.3nb1 [grant 2003-10-11]
 	Updated py-expat to 0nb1 [grant 2003-10-11]
-	Updated py-xml to 0.3.8nb1 [grant 2003-10-11]
+	Updated pyxml to 0.8.3nb1 [grant 2003-10-11]
 	Updated sablotron to 1.0nb1 [grant 2003-10-11]
 	Updated ap-dav to 1.0.3nb1 [grant 2003-10-11]
 	Updated apache to 1.3.28nb1 [grant 2003-10-11]
