@@ -1,0 +1,25 @@
+$NetBSD: patch-ar,v 1.1 1998/12/28 22:22:01 bad Exp $
+
+--- machdep/netbsd-1.1/__signal.h.orig	Tue Apr 23 08:11:39 1996
++++ machdep/netbsd-1.1/__signal.h	Sat Oct 17 21:41:52 1998
+@@ -1,8 +1,20 @@
+ #include <sys/signal.h>
+ 
++#if NSIG <= 32
+ #define	__SIGEMPTYSET		0
+ #define	__SIGFILLSET		0xffffffff
+ #define	__SIGADDSET(s, n)	(*(s) |= 1 << ((n) - 1), 0)
+ #define	__SIGDELSET(s, n)	(*(s) &= ~(1 << ((n) - 1)), 0)
+ #define	__SIGISMEMBER(s, n)	((*(s) & (1 << ((n) - 1))) != 0)
+ 
++#else	/* XXX Netbsd >= 1.3H */
++#define	__SIGEMPTYSET		{ 0, 0, 0, 0}
++#define	__SIGFILLSET		{ 0xffffffff, 0xffffffff, \
++				  0xffffffff, 0xffffffff }
++#define __SIGMASK(n)		(1 << (((n) - 1) & 31))
++#define	__SIGWORD(n)		(((n) - 1) >> 5)
++#define	__SIGADDSET(s, n)	((s)->__bits[__SIGWORD(n)] |= __SIGMASK(n))
++#define	__SIGDELSET(s, n)	((s)->__bits[__SIGWORD(n)] &= ~__SIGMASK(n))
++#define	__SIGISMEMBER(s, n)	(((s)->__bits[__SIGWORD(n)] & __SIGMASK(n)) != 0)
++
++#endif
