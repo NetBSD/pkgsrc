@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2000/02/14 02:44:47 wiz Exp $
+
+--- ./types.h.orig	Tue Dec  7 03:01:23 1999
++++ ./types.h	Mon Feb 14 02:37:37 2000
+@@ -13,6 +13,8 @@
+ #include MACH_TYPES
+ #endif
+ 
++#include "endian.h"
++
+ typedef unsigned char u8;
+ typedef signed char s8;
+ 
