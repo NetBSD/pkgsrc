@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2000/01/15 18:39:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2000/07/14 21:29:10 jlam Exp $
 bin/captoinfo
 bin/infocmp
 bin/infotocap
@@ -21,14 +21,19 @@ include/term.h
 include/termcap.h
 include/unctrl.h
 lib/libform.a
+lib/libform.la
 lib/libform.so.5.0
 lib/libmenu.a
+lib/libmenu.la
 lib/libmenu.so.5.0
 lib/libncurses++.a
+lib/libncurses++.la
 lib/libncurses++.so.5.0
 lib/libncurses.a
+lib/libncurses.la
 lib/libncurses.so.5.0
 lib/libpanel.a
+lib/libpanel.la
 lib/libpanel.so.5.0
 man/man1/captoinfo.1
 man/man1/infocmp.1
