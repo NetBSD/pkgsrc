@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 22:53:19 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/05 12:04:20 jlam Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -12,8 +12,10 @@ COMMENT=	Monitor and filter incoming requests for network services
 
 ONLY_FOR_PLATFORM=	IRIX-*-* Darwin-*-* SunOS-*-* Linux-*-*	# in NetBSD base system
 
-USE_BUILDLINK2=	# defined
-USE_LIBTOOL=	# defined
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=	yes
+USE_LIBTOOL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
