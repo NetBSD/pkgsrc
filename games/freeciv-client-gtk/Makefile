@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2000/08/12 06:34:35 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/04 19:31:26 wiz Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-gtk-/}
 
 DEPENDS+=		freeciv-share-${FC_VERS}:../../games/freeciv-share
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		imlib-*:../../graphics/imlib
 
@@ -14,7 +14,6 @@ USE_X11=		# defined
 CONFIGURE_ARGS+=	--disable-server
 CONFIGURE_ARGS+=	--disable-make-data
 CONFIGURE_ARGS+=	--enable-client=gtk
-CPPFLAGS+=		-I${LOCALBASE}/include		# libintl.h
 
 do-install:
 	cd ${WRKSRC}/client; ${SETENV} ${MAKE_ENV} \
