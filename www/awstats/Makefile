@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2004/06/23 18:40:41 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/12/29 10:22:27 minskim Exp $
 #
 
-DISTNAME=	awstats-6.1
+DISTNAME=	awstats-6.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=awstats/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://awstats.sourceforge.net/
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 
@@ -16,6 +16,8 @@ USE_PERL5=	run
 
 REPLACE_PERL=	tools/*.pl		\
 		wwwroot/cgi-bin/*.pl
+
+.include "../../lang/perl5/buildlink3.mk"
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/awstats
@@ -32,5 +34,4 @@ do-install:
 	cd ${WRKSRC}/wwwroot && ${PAX} -rwpppm . ${PREFIX}/awstats/
 	cd ${WRKSRC}/docs && ${PAX} -rwpppm . ${PREFIX}/share/doc/html/awstats/
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
