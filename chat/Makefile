@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2001/12/19 14:11:24 tron Exp $
+# $NetBSD: Makefile,v 1.27 2001/12/22 19:51:49 fredb Exp $
 #
 
 COMMENT=	communication programs
 
+SUBDIR+=	aim
 SUBDIR+=	bitchx
 SUBDIR+=	blackened
 SUBDIR+=	bnc
