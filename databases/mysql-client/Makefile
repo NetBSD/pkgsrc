@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/12 01:26:51 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/16 01:54:09 wiz Exp $
 #
 
 DISTNAME=	mysql-3.22.32
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=--without-readline
 CFLAGS+=	-Dunix
 
 USE_PERL5=	yes
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
 
 INFO_FILES=	mysql.info
 
