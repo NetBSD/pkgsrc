@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/10/08 21:02:53 mjl Exp $
+# $NetBSD: Makefile,v 1.31 2004/10/08 22:09:55 mjl Exp $
 #
 
 DISTNAME=		pwlib_1.5.2
@@ -47,6 +47,7 @@ do-install:
 	${_PKG_SILENT}cd ${WRKSRC}/tools/asnparser && ${MAKE_ENV} ${GMAKE} install
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptclib
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptlib/unix/ptlib
+	${INSTALL_DATA} ${WRKSRC}/version.h ${PREFIX}/include/ptlib
 	cd ${WRKSRC}/include;						\
 	for f in `${FIND} . -name CVS -prune -o -type f -print | ${GREP} -v 'ptbuildopts'`; do	\
 		${INSTALL_DATA} $$f ${PREFIX}/include/`${DIRNAME} $$f`;	\
