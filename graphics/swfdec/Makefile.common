@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.common,v 1.1 2004/01/22 12:48:32 jmmv Exp $
+#
+
+DISTNAME=		swfdec-0.2.1
+CATEGORIES=		graphics
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swfdec/}
+
+MAINTAINER=		jmmv@NetBSD.org
+HOMEPAGE=		http://swfdec.sourceforge.net/
+COMMENT=		Library for rendering Flash(R) animations and games
+
+DISTINFO_FILE=		${.CURDIR}/../../graphics/swfdec/distinfo
+PATCHDIR=		${.CURDIR}/../../graphics/swfdec/patches
+
+GNU_CONFIGURE=		yes
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+PKGCONFIG_OVERRIDE=	${WRKSRC}/swfdec.pc.in
+
+pre-install:
+	echo "install:" >${WRKSRC}/plugin/Makefile

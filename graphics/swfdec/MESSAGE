@@ -1,13 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/06/24 12:26:17 cjep Exp $
+$NetBSD: MESSAGE,v 1.3 2004/01/22 12:48:32 jmmv Exp $
 
-This package has installed new gdk-pixbuf loaders.  In order to get them
-working, you should update gdk-pixbuf's configuration file.  This can be
-usually done issuing the following command:
-
-    ${PREFIX}/bin/gdk-pixbuf-query-loaders > \
-	${PKG_SYSCONFDIR.gtk2}/gdk-pixbuf.loaders
-
-Note that this will discard your personal changes to that file.
+You should install the swfdec-gtk2 package, which provides an SWF
+gdk-pixbuf loader for the GTK2 toolkit.
 
 ===========================================================================
