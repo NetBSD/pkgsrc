@@ -1,0 +1,30 @@
+# $NetBSD: Makefile,v 1.1.1.1 2001/08/12 22:07:50 zuntum Exp $
+#
+
+DISTNAME=	gfract-0.21
+CATEGORIES=	graphics x11
+MASTER_SITES=	http://www.cs.Helsinki.FI/u/salerma/gfract/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} gfract-palettes-0.1.tar.gz
+
+MAINTAINER=	collver@linuxfreemail.com
+HOMEPAGE=	http://www.cs.Helsinki.FI/u/salerma/gfract/
+COMMENT=	gtk-based fractal program
+
+USE_BUILDLINK_ONLY=	yes
+
+USE_X11=	yes
+ALL_TARGET=	gfract
+
+post-extract:
+	${MV} ${WRKDIR}/monk2\'.map ${WRKDIR}/monk2.map
+
+do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/gfract
+	${INSTALL_DATA_DIR} ${PREFIX}/share/gfract/palettes
+	${INSTALL_DATA} ${WRKDIR}/*.map ${PREFIX}/share/gfract/palettes/
+	${INSTALL_DATA} ${WRKSRC}/gfract.xpm ${PREFIX}/share/gfract/
+	${INSTALL_PROGRAM} ${WRKSRC}/gfract ${PREFIX}/bin/
+
+.include "../../graphics/png/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
+.include "../../mk/bsd.pkg.mk"
