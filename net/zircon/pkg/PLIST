@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/09/05 20:19:16 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/01/06 12:27:33 frueauf Exp $
 bin/zircon
 share/doc/zircon/BUGS
 share/doc/zircon/COPYRIGHT
@@ -84,6 +84,7 @@ share/zircon/lib/Notrace.tcl
 share/zircon/lib/Object.tcl
 share/zircon/lib/On.tcl
 share/zircon/lib/Protect.tcl
+share/zircon/lib/SOCKS.tcl
 share/zircon/lib/Server.tcl
 share/zircon/lib/Service.tcl
 share/zircon/lib/Sound.tcl
