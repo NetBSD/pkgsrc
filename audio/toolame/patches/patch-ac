@@ -1,0 +1,11 @@
+$NetBSD: patch-ac,v 1.1 2003/09/23 21:32:16 dmcmahill Exp $
+
+--- Makefile.orig	Sun Mar  2 07:07:02 2003
++++ Makefile	Tue Sep 23 21:28:07 2003
+@@ -38,5 +38,5 @@
+ 
+ #pick your architecture
+-ARCH = -march=pentium
++#ARCH = -march=pentium
+ #Possible x86 architectures
+ #gcc3.2 => i386, i486, i586, i686, pentium, pentium-mmx
