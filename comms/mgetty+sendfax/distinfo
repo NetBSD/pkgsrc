@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2003/09/25 20:27:12 fredb Exp $
+$NetBSD: distinfo,v 1.13.2.1 2003/12/30 16:17:13 agc Exp $
 
 SHA1 (mgetty1.1.30-Dec16.tar.gz) = aea2a4c999f167e2311e797b164d4797baf328c4
 Size (mgetty1.1.30-Dec16.tar.gz) = 969967 bytes
@@ -14,3 +14,5 @@ SHA1 (patch-aj) = 37d88c1a4f8d5826f7113dd120c32e89cc442e5d
 SHA1 (patch-ak) = 18f9570f35909089a4083fa24903dfea14dcc475
 SHA1 (patch-al) = 2a6dcf13d65446d2064228b1024517e599892a60
 SHA1 (patch-am) = 6b7516b3f857f65c0ecc7963f39e433e4ef8771d
+SHA1 (patch-an) = 36be41aa6002d6c0bb387be4a0fc46a1701f0b11
+SHA1 (patch-ao) = 64a8b1f390dffc0b20eba18ba7d242084dc909dd
