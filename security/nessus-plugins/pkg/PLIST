@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2001/06/17 13:25:56 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/08/16 17:27:55 frueauf Exp $
 bin/nessus-build
 etc/nessus/accounts.txt
 etc/nessus/queso.conf
@@ -7,6 +7,7 @@ lib/nessus/plugins/ColdFusion.nasl
 lib/nessus/plugins/ExAir_dos_advsearch.nasl
 lib/nessus/plugins/ExAir_dos_query.nasl
 lib/nessus/plugins/ExAir_dos_search.nasl
+lib/nessus/plugins/GuildFTPD097.nasl
 lib/nessus/plugins/IIS_frontpage_DOS.nasl
 lib/nessus/plugins/LPRng.nasl
 lib/nessus/plugins/NetSphere.nasl
@@ -36,6 +37,9 @@ lib/nessus/plugins/analogx.nasl
 lib/nessus/plugins/analogx_dos.nasl
 lib/nessus/plugins/analogx_traversal.nasl
 lib/nessus/plugins/annex_dos.nasl
+lib/nessus/plugins/apache_dir_listing.nasl
+lib/nessus/plugins/apache_server_info.nasl
+lib/nessus/plugins/apache_server_status.nasl
 lib/nessus/plugins/apache_slash.nasl
 lib/nessus/plugins/apache_source_asp.nasl
 lib/nessus/plugins/arkeia.nasl
@@ -67,6 +71,7 @@ lib/nessus/plugins/bind_zxfr_bug.nasl
 lib/nessus/plugins/bizdb1_search.nasl
 lib/nessus/plugins/bonk.nasl
 lib/nessus/plugins/bootparamd.nasl
+lib/nessus/plugins/broadvision_path_disclosure.nasl
 lib/nessus/plugins/broker_ftp.nasl
 lib/nessus/plugins/c32.nasl
 lib/nessus/plugins/ca_unicenter_file_transfer_service.nasl
@@ -87,16 +92,21 @@ lib/nessus/plugins/cgiwrap.nasl
 lib/nessus/plugins/chameleon_smtpd_overflow.nasl
 lib/nessus/plugins/chargen.nasl
 lib/nessus/plugins/checkpoint.nasl
+lib/nessus/plugins/cisco-view-source-dos.nasl
 lib/nessus/plugins/cisco_675.nasl
 lib/nessus/plugins/cisco_675_http_dos.nasl
 lib/nessus/plugins/cisco_catalyst.nasl
 lib/nessus/plugins/cisco_dos.nasl
+lib/nessus/plugins/cisco_http_admin_access.nasl
 lib/nessus/plugins/cisco_http_dos.nasl
 lib/nessus/plugins/cmail_overflow.nasl
+lib/nessus/plugins/codered_x.nasl
 lib/nessus/plugins/cold_fusion_admin_dos.nasl
 lib/nessus/plugins/commerce_cgi.nasl
 lib/nessus/plugins/communigatepro_overflow.nasl
 lib/nessus/plugins/count_cgi.nasl
+lib/nessus/plugins/cp-firewall-auth.nasl
+lib/nessus/plugins/cp-firewall-webauth.nasl
 lib/nessus/plugins/csm_helo.nasl
 lib/nessus/plugins/cvs_detect.nasl
 lib/nessus/plugins/cvsweb_shell.nasl
@@ -107,8 +117,8 @@ lib/nessus/plugins/dbman_cgi.nasl
 lib/nessus/plugins/dcforum.nasl
 lib/nessus/plugins/deep_throat.nasl
 lib/nessus/plugins/delegate_overflow.nasl
-lib/nessus/plugins/dfire_cgi.nasl
 lib/nessus/plugins/dhcp.nasl
+lib/nessus/plugins/directorypro.nasl
 lib/nessus/plugins/dmail_overflow.nasl
 lib/nessus/plugins/dns_xfer.nasl
 lib/nessus/plugins/doc_browsable.nasl
@@ -148,6 +158,7 @@ lib/nessus/plugins/frontpage.nasl
 lib/nessus/plugins/frontpage_authors.nasl
 lib/nessus/plugins/frontpage_dos.nasl
 lib/nessus/plugins/frontpage_dvwssr.nasl
+lib/nessus/plugins/frontpage_overflow.nasl
 lib/nessus/plugins/frontpage_shtml.nasl
 lib/nessus/plugins/ftp_anonymous.nasl
 lib/nessus/plugins/ftp_backdoor.nasl
@@ -160,6 +171,7 @@ lib/nessus/plugins/ftp_overflow.nasl
 lib/nessus/plugins/ftp_pasv_dos.nasl
 lib/nessus/plugins/ftp_pasv_on_connect.nasl
 lib/nessus/plugins/ftp_pl.nasl
+lib/nessus/plugins/ftp_qnx_stack_overflow.nasl
 lib/nessus/plugins/ftp_realpath.nasl
 lib/nessus/plugins/ftp_root.nasl
 lib/nessus/plugins/ftp_servu_dos.nasl
@@ -175,6 +187,7 @@ lib/nessus/plugins/gauntlet_overflow.nasl
 lib/nessus/plugins/girlfriend.nasl
 lib/nessus/plugins/glimpse.nasl
 lib/nessus/plugins/gnapster_get_file.nasl
+lib/nessus/plugins/goodtech_ftpd_dos.nasl
 lib/nessus/plugins/groupwise_overflow.nasl
 lib/nessus/plugins/guestbook.nasl
 lib/nessus/plugins/guestbook_pl.nasl
@@ -220,7 +233,10 @@ lib/nessus/plugins/iis_decode_bug.nasl
 lib/nessus/plugins/iis_dir_traversal.nasl
 lib/nessus/plugins/iis_dos_ussrback.nasl
 lib/nessus/plugins/iis_dot_cnf.nasl
+lib/nessus/plugins/iis_frag_disclosure.nasl
 lib/nessus/plugins/iis_ftp_crash.nasl
+lib/nessus/plugins/iis_ida_isapi.nasl
+lib/nessus/plugins/iis_isapi_overflow.nasl
 lib/nessus/plugins/iis_malformed_request.nasl
 lib/nessus/plugins/iis_perl_problem.nasl
 lib/nessus/plugins/iis_propfind2.nasl
@@ -286,12 +302,16 @@ lib/nessus/plugins/ms_index_server.nasl
 lib/nessus/plugins/msadcs_dll.nasl
 lib/nessus/plugins/mspws_dotdotdot.nasl
 lib/nessus/plugins/msql_overflow.nasl
+lib/nessus/plugins/mssql_blank_password.nasl
+lib/nessus/plugins/mssql_ping.nasl
 lib/nessus/plugins/mssqlserver_detect.nasl
 lib/nessus/plugins/mssqlserver_dos.nasl
 lib/nessus/plugins/mstream_agent.nasl
 lib/nessus/plugins/mstream_handler.nasl
 lib/nessus/plugins/multicsp_detect.nasl
 lib/nessus/plugins/multihtml.nasl
+lib/nessus/plugins/mycio_detect.nasl
+lib/nessus/plugins/mycio_directory_traversal.nasl
 lib/nessus/plugins/mysql_bad_password.nasl
 lib/nessus/plugins/mysql_flaws.nasl
 lib/nessus/plugins/mysql_overflow.nasl
@@ -312,8 +332,11 @@ lib/nessus/plugins/netscape_PageServices.nasl
 lib/nessus/plugins/netscape_accept_overflow.nasl
 lib/nessus/plugins/netscape_adminpw.nasl
 lib/nessus/plugins/netscape_crash.nasl
+lib/nessus/plugins/netscape_entreprise_dot_overflow.nasl
+lib/nessus/plugins/netscape_entreprise_index.nasl
 lib/nessus/plugins/netscape_fasttrack.nasl
 lib/nessus/plugins/netscape_imap_overflow.nasl
+lib/nessus/plugins/netscape_pop_auth.nasl
 lib/nessus/plugins/netscape_publishing_expert_psuser.nasl
 lib/nessus/plugins/netscape_wp_tag.nasl
 lib/nessus/plugins/netstat.nasl
@@ -373,6 +396,7 @@ lib/nessus/plugins/php_log.nasl
 lib/nessus/plugins/php_nuke_bb_smilies_passwd.nasl
 lib/nessus/plugins/php_nuke_opendir.nasl
 lib/nessus/plugins/php_overflow.nasl
+lib/nessus/plugins/php_safe_mode.nasl
 lib/nessus/plugins/phpix.nasl
 lib/nessus/plugins/pi3web_isapi.nasl
 lib/nessus/plugins/pimp.nasl
@@ -465,6 +489,7 @@ lib/nessus/plugins/rsh.nasl
 lib/nessus/plugins/rsh_users.nasl
 lib/nessus/plugins/sambar_cgi.nasl
 lib/nessus/plugins/sambar_mailit.nasl
+lib/nessus/plugins/sambar_pagecount.nasl
 lib/nessus/plugins/sambar_search_cgi.nasl
 lib/nessus/plugins/sambar_sendmail.nasl
 lib/nessus/plugins/sambar_sysadmin.nasl
@@ -473,6 +498,7 @@ lib/nessus/plugins/savant_percent_dos.nasl
 lib/nessus/plugins/sawmill.nasl
 lib/nessus/plugins/sawmill_password.nasl
 lib/nessus/plugins/securemote.nasl
+lib/nessus/plugins/securemote_info_leak.nasl
 lib/nessus/plugins/sedum_dos.nasl
 lib/nessus/plugins/sendmail_debug.nasl
 lib/nessus/plugins/sendmail_decode.nasl
@@ -484,6 +510,7 @@ lib/nessus/plugins/shaft.nasl
 lib/nessus/plugins/shells.nasl
 lib/nessus/plugins/shiva_default_pass.nasl
 lib/nessus/plugins/showmount.nasl
+lib/nessus/plugins/simplewww.nasl
 lib/nessus/plugins/siteUserMod.nasl
 lib/nessus/plugins/slmail.nasl
 lib/nessus/plugins/slmail27.nasl
@@ -514,6 +541,7 @@ lib/nessus/plugins/smb_nt_ms00-086.nasl
 lib/nessus/plugins/smb_nt_ms00-089.nasl
 lib/nessus/plugins/smb_nt_ms00-091.nasl
 lib/nessus/plugins/smb_nt_ms01-003.nasl
+lib/nessus/plugins/smb_nt_ms01-008.nasl
 lib/nessus/plugins/smb_nt_ms01-009.nasl
 lib/nessus/plugins/smb_nt_ms01-011.nasl
 lib/nessus/plugins/smb_nt_ms01-025.nasl
@@ -539,6 +567,7 @@ lib/nessus/plugins/smtp_bounce.nasl
 lib/nessus/plugins/smtp_bypass_cisco.nasl
 lib/nessus/plugins/smtp_file.nasl
 lib/nessus/plugins/smtp_helo.nasl
+lib/nessus/plugins/smtp_ms01-037.nasl
 lib/nessus/plugins/smtp_program.nasl
 lib/nessus/plugins/smtp_relay.nasl
 lib/nessus/plugins/smtpserver_detect.nasl
@@ -551,8 +580,10 @@ lib/nessus/plugins/snmp_lanman_services.nasl
 lib/nessus/plugins/snmp_lanman_shares.nasl
 lib/nessus/plugins/snmp_lanman_users.nasl
 lib/nessus/plugins/snmp_processes.nasl
+lib/nessus/plugins/snmp_vacm.nasl
 lib/nessus/plugins/sojourn.nasl
 lib/nessus/plugins/spinclient.nasl
+lib/nessus/plugins/ssh3_passwd.nasl
 lib/nessus/plugins/ssh_crc32.nasl
 lib/nessus/plugins/ssh_detect.nasl
 lib/nessus/plugins/ssh_insertion.nasl
@@ -578,6 +609,7 @@ lib/nessus/plugins/teardrop.nasl
 lib/nessus/plugins/technote.nasl
 lib/nessus/plugins/telnet.nasl
 lib/nessus/plugins/telnetserver_detect_type_nd_version.nasl
+lib/nessus/plugins/teso_telnet.nasl
 lib/nessus/plugins/test-cgi.nasl
 lib/nessus/plugins/tfn.nasl
 lib/nessus/plugins/tfs_smtp_overflow.nasl
@@ -592,6 +624,7 @@ lib/nessus/plugins/traceroute.nasl
 lib/nessus/plugins/translate_f.nasl
 lib/nessus/plugins/trinity.nasl
 lib/nessus/plugins/trinoo.nasl
+lib/nessus/plugins/ttawebtop.nasl
 lib/nessus/plugins/ultraseek_dos.nasl
 lib/nessus/plugins/unicast_dos.nasl
 lib/nessus/plugins/upload_cgi.nasl
@@ -618,6 +651,8 @@ lib/nessus/plugins/webdist.nasl
 lib/nessus/plugins/webdriver.nasl
 lib/nessus/plugins/webfind.nasl
 lib/nessus/plugins/webgais.nasl
+lib/nessus/plugins/weblogic_dotdotdos.nasl
+lib/nessus/plugins/weblogic_percent.nasl
 lib/nessus/plugins/webplus.nasl
 lib/nessus/plugins/webplus_version.nasl
 lib/nessus/plugins/websendmail.nasl
@@ -646,6 +681,7 @@ lib/nessus/plugins/wu_ftpd_overflow.nasl
 lib/nessus/plugins/wu_ftpd_site_exec.nasl
 lib/nessus/plugins/wu_ftpd_site_newer.nasl
 lib/nessus/plugins/www_too_long_auth.nasl
+lib/nessus/plugins/www_too_long_post.nasl
 lib/nessus/plugins/www_too_long_url.nasl
 lib/nessus/plugins/wwwboardpwd.nasl
 lib/nessus/plugins/wwwwais.nasl
@@ -656,6 +692,7 @@ lib/nessus/plugins/xtramail_helo.nasl
 lib/nessus/plugins/xtramail_pop_overflow.nasl
 lib/nessus/plugins/yabb.nasl
 lib/nessus/plugins/yahoo_dos.nasl
+lib/nessus/plugins/yppasswdd.nasl
 lib/nessus/plugins/zeus.nasl
 lib/nessus/plugins/zope.nasl
 lib/nessus/plugins/zope_img_updating.nasl
