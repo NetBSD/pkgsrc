@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2698 2003/07/08 10:00:54 seb Exp $
+$NetBSD: CHANGES,v 1.2699 2003/07/08 14:06:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2696,3 +2696,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added pari-galdata-2.1 [jtb 2003-07-07]
 	Added brs-4.0 [wiz 2003-07-08]
 	Updated gnus to 5.10.2nb1 [seb 2003-07-08]
+	Updated fftw to 3.0.1 [wiz 2003-07-08]
