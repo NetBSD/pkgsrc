@@ -17,3 +17,22 @@
   	if (mdfullpath[i]=='/') {
   	    i++;
   	    break;
+--- c/hsc.c	1997/11/18 12:32:02	1.1
++++ c/hsc.c	1997/11/18 12:33:06
+@@ -491,6 +491,7 @@
+ 
+     esc=adj_escape_prob(fe[cp],cp);
+     tot=ft[cp];
++    cf = 0;
+     if (nec>=NECLIM) {
+ 	if (tot<=NECTLIM && nec==NECMAX) sv=2;
+ 	else sv=1;
+@@ -548,7 +549,7 @@
+     register U16B i;
+     register S16B sum,tot,esc,cf;
+     
+-    esc=tot=0;
++    esc=tot=cf=0;
+     for (i=cp;i!=NIL;i=nb[i]) {
+ 	if (!cmask[fc[i]]) {
+ 	    tot+=fa[i];
