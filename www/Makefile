@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 1999/09/29 15:40:54 tsarna Exp $
+# $NetBSD: Makefile,v 1.47 1999/09/29 15:43:29 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -20,7 +20,6 @@
 #    SUBDIR += chimera
 #    SUBDIR += comline
     SUBDIR += communicator
-    SUBDIR += flashplayer
 #    SUBDIR += fxhtml
 #    SUBDIR += gn
 #    SUBDIR += gwstat
