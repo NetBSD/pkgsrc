@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2004/10/03 00:14:58 tv Exp $
+# $NetBSD: Makefile,v 1.25 2004/10/07 14:52:57 wiz Exp $
 #
 
-DISTNAME=	tuxpaint-0.9.13
-PKGREVISION=	1
+DISTNAME=	tuxpaint-0.9.14
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxpaint/} \
+		ftp://ftp.sonic.net/pub/users/nbs/unix/x/tuxpaint/source/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.newbreedsoftware.com/tuxpaint/
@@ -24,6 +24,7 @@ CONF_FILES=		${EGDIR}/tuxpaint.conf ${PKG_SYSCONFDIR}/tuxpaint.conf
 
 post-install:
 	-${FIND} ${PREFIX}/share/doc/tuxpaint -name CVS -exec ${RM} -r {} \; 2>/dev/null
+	-${RMDIR} ${PREFIX}/share/doc/tuxpaint/cz
 	-${FIND} ${PREFIX}/share/tuxpaint -name CVS -exec ${RM} -r {} \; 2>/dev/null
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
