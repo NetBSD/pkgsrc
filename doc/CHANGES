@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5128 2004/03/07 09:31:16 seb Exp $
+$NetBSD: CHANGES,v 1.5129 2004/03/07 10:41:58 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1214,3 +1214,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added cpia2view-0.03 [hamajima 2004-03-07]
 	Updated qcamview to 0.4 [hamajima 2004-03-07]
 	Updated sather to 1.2.1nb3 [seb 2004-03-07]
+        Updated abiword to 2.0.4nb1 [jmmv 2004-03-07]
