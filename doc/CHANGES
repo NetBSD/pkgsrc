@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.838 2002/12/19 12:27:58 grant Exp $
+$NetBSD: CHANGES,v 1.839 2002/12/19 12:56:47 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4010,3 +4010,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added quirc-0.9.82 [grant 2002-12-19]
 	Added xaric-0.12.0 [grant 2002-12-19]
 	Added gpaint-0.2 [grant 2002-12-19]
+	Updated sysbuild to 1.6 [jmmv 2002-12-19]
