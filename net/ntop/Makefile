@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2005/01/11 19:38:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.33 2005/01/19 11:08:27 adam Exp $
 
 DISTNAME=	ntop-3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
 EXTRACT_SUFX=	.tgz
@@ -19,6 +19,7 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/ntop
 CONFIGURE_ARGS+=	--with-gd-root=${BUILDLINK_PREFIX.gd}
 CONFIGURE_ARGS+=	--with-gdbm-root=${BUILDLINK_PREFIX.gdbm}
@@ -39,6 +40,7 @@ BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.8.3
 .include "../../graphics/gdchart/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/gdome2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
