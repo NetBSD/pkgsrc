@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.25 2004/01/23 21:50:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/04 14:42:23 markd Exp $
 
-DISTNAME=	kdenetwork-3.1.5
-PKGREVISION=	1
+DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
+
+CONFLICTS=	kopete-[0-9]*
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 USE_BUILDLINK2=		yes
 PTHREAD_OPTS+=		require
-
-FOO_MAIN_FILES= \
-	ksirc/ksirc_main.cpp \
-	kxmlrpc/kxmlrpcd_main.cpp
 
 REPLACE_PERL=		ksirc/dsirc
 
@@ -21,8 +18,6 @@ REPLACE_PERL=		ksirc/dsirc
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		ac_cv_sys_file_offset_bits=no
 .endif
-
-.include "../../meta-pkgs/kde3/Makefile.foo_main"
 
 .include "../../converters/uulib/buildlink2.mk"
 .include "../../databases/gdbm/buildlink2.mk"
