@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.6 2004/03/07 01:34:04 snj Exp $
+$NetBSD: distinfo,v 1.7 2004/04/07 13:59:40 recht Exp $
 
 SHA1 (xmbmon203.tar.gz) = 009ccd550d4aa1acc830948d5be304f142c78341
 Size (xmbmon203.tar.gz) = 113252 bytes
+SHA1 (xmbmon200203temp23.diff) = a843e9cf49f0a7b8084bc7764544a8c40bfdf265
+Size (xmbmon200203temp23.diff) = 531 bytes
 SHA1 (patch-aa) = f7329f826e61cb6803d49a1d9e78fc55edde1098
 SHA1 (patch-ab) = bfc75d75dfc1d976d3920ff4fb56dcbe45f06421
 SHA1 (patch-ac) = cf9dedf838f26092472ac8eff35138313b894445
