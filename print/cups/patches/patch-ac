@@ -1,15 +1,15 @@
-$NetBSD: patch-ac,v 1.9 2001/05/15 17:43:21 jlam Exp $
+$NetBSD: patch-ac,v 1.10 2001/08/02 03:37:39 jlam Exp $
 
---- conf/cupsd.conf.in.orig	Wed Mar 14 08:45:30 2001
-+++ conf/cupsd.conf.in
-@@ -258,8 +258,8 @@
- # program is run...
- #
+--- backend/Makefile.orig	Wed Jun 27 17:53:07 2001
++++ backend/Makefile
+@@ -50,7 +50,9 @@
  
--#User lp
--#Group sys
-+User @CUPS_USER@
-+Group @CUPS_GROUP@
+ install:
+ 	$(INSTALL_DIR) $(SERVERBIN)/backend
+-	$(INSTALL_BIN) $(BACKENDS) http $(SERVERBIN)/backend
++	$(INSTALL_BIN) $(BACKENDS) $(SERVERBIN)/backend
++	$(RM) $(SERVERBIN)/backend/http
++	$(LN) ipp $(SERVERBIN)/backend/http
+ 
  
  #
- # RIPCache: the amount of memory that each RIP should use to cache

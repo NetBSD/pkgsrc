@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.8 2000/12/28 02:22:18 jlam Exp $
+# $NetBSD: INSTALL,v 1.9 2001/08/02 03:37:40 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -51,7 +51,7 @@ PRE-INSTALL)
 	if [ $? -eq 0 ]
 	then
 		echo "Creating '${USER}' user..."
-		${ADDUSER} -c "CUPS User" -g ${GROUP} -s /bin/sh ${USER}
+		${ADDUSER} -c "Common UNIX Printing System user" -g ${GROUP} -s /bin/sh ${USER}
 		echo "Done."
 	else
 		echo "User '${USER}' already exists...proceeding."
@@ -61,15 +61,16 @@ PRE-INSTALL)
 POST-INSTALL)
 	${MKDIR} ${CONFDIR}
 	${MKDIR} ${CONFDIR}/certs
-	${CHMOD} ugo+x,go-rw ${CONFDIR}/certs
+	${CHMOD} 711 ${CONFDIR}/certs
+	${CHOWN} ${USER}:${GROUP} ${CONFDIR}/certs
 	${MKDIR} ${CONFDIR}/interfaces
 	${MKDIR} ${CONFDIR}/ppd
         ${MKDIR} ${LOGDIR}
         ${MKDIR} ${REQUESTDIR}
-	${CHMOD} u+rwx,go-rwx ${REQUESTDIR}
+	${CHMOD} 700 ${REQUESTDIR}
 	${CHOWN} ${USER}:${GROUP} ${REQUESTDIR}
 	${MKDIR} ${REQUESTDIR}/tmp
-	${CHMOD} u+rwx,go-rwx,+t ${REQUESTDIR}/tmp
+	${CHMOD} 1700 ${REQUESTDIR}/tmp
 	${CHOWN} ${USER}:${GROUP} ${REQUESTDIR}/tmp
 
 	echo "Installing configuration files:"

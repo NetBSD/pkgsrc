@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2001/05/15 17:43:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/08/02 03:37:40 jlam Exp $
 bin/cancel
 bin/disable
 bin/enable
@@ -54,6 +54,7 @@ man/cat1/cancel.0
 man/cat1/filter.0
 man/cat1/lp.0
 man/cat1/lpoptions.0
+man/cat1/lppasswd.0
 man/cat1/lpq.0
 man/cat1/lpr.0
 man/cat1/lprm.0
@@ -79,6 +80,7 @@ man/man1/cancel.1
 man/man1/filter.1
 man/man1/lp.1
 man/man1/lpoptions.1
+man/man1/lppasswd.1
 man/man1/lpq.1
 man/man1/lpr.1
 man/man1/lprm.1
@@ -190,7 +192,9 @@ share/cups/model/laserjet.ppd
 share/cups/model/okidat24.ppd
 share/cups/model/okidata9.ppd
 share/cups/model/stcolor.ppd
+share/cups/model/stcolor2.ppd
 share/cups/model/stphoto.ppd
+share/cups/model/stphoto2.ppd
 share/cups/pstoraster/Fontmap
 share/cups/pstoraster/gs_btokn.ps
 share/cups/pstoraster/gs_ccfnt.ps
@@ -353,6 +357,7 @@ share/locale/en/cups_en
 share/locale/es/cups_es
 share/locale/fr/cups_fr
 share/locale/it/cups_it
+@dirrm share/locale/C
 @dirrm share/examples/cups
 @dirrm share/doc/html/cups/images
 @dirrm share/doc/html/cups
