@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/09/20 21:43:32 kim Exp $
+# $NetBSD: Makefile,v 1.13 2000/02/27 23:37:53 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/30 18:17:48 adam Exp
 #
 
@@ -13,7 +13,7 @@ BUILD_DEFS+=	USE_INN
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_INN) && ${USE_INN} == YES
-DEPENDS=	inn-2.2:../inn
+DEPENDS=	inn>=2.2:../inn
 .else
 DEPENDS=	nntpclnt-1.6.1:../nntpclnt
 .endif
