@@ -1,0 +1,12 @@
+--- bitesex.h.orig	Thu Jul 30 03:45:50 1998
++++ bitesex.h	Thu Jul 30 03:46:35 1998
+@@ -27,3 +27,3 @@
+ #else
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <machine/endian.h>
+@@ -39,3 +39,3 @@
+ #endif /* SVR4 */
+-#endif /* FreeBSD */
++#endif /* FreeBSD/NetBSD */
+ #endif /* AIX */

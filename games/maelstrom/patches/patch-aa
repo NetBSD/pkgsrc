@@ -1,0 +1,50 @@
+--- Makeflags.orig	Mon Jul 14 11:32:13 1997
++++ Makeflags	Thu Jul 30 04:46:45 1998
+@@ -1,8 +1,13 @@
++# This file contains the template for Makeflags
+ 
+-# Some sensible defaults
+-BINDIR = /usr/local/bin
+-LIBDIR = /usr/local/lib/Maelstrom
++SYSTEM =
++FEATURES =
+ 
+-INSTALL = install
++LOGIC = netlogic
+ 
++XPMINCLUDE = -I$(PREFIX)/include
++XPMLINKDIR = -Wl,-R$(PREFIX)/lib -L$(PREFIX)/lib
++
++BINDIR = $(PREFIX)/bin
++LIBDIR = $(PREFIX)/share/maelstrom
+ DATAFILES = Images/*.icon Images/*.cicn "Maelstrom Fonts" \
+@@ -10,3 +15,28 @@
+ 
+-all: config
++OBJS = main.o framebuf.o v_framebuf.o x11_framebuf.o vga_framebuf.o \
++       dga_framebuf.o fontserv.o sound.o Mac_Resource.o imagedump.o \
++       init.o $(LOGIC)/$(LOGIC).o \
++       controls.o scores.o dialog.o fastrand.o netscore.o checksum.o \
++       Utils.o shared.o myerror.o
++SOUNDOBJS = Maelstrom_sound.o Mac_Resource.o soundres.o mixer.o shared.o myerror.o
++
++#CXX = c++
++OPTIMIZE =
++X11INCLUDE = -I$(X11BASE)/include
++INCLUDES = -I$(LOGIC) $(X11INCLUDE) $(XPMINCLUDE)
++CFLAGS = $(OPTIMIZE) $(INCLUDES) $(FEATURES) \
++                              -DSYSTEM=\"$(SYSTEM)\" -DLIBDIR=\"$(LIBDIR)\"
++EXTRALIBS =
++X11LINKDIR = $(RPATH) -L$(X11BASE)/lib
++X11LIBS = -lX11 -lXext -lXpm
++CSUMLIB =
++LIBS = $(EXTRALIBS) $(XPMLINKDIR) $(X11LINKDIR) $(X11LIBS) $(CSUMLIB)
++SOUNDLIBS =
++
++INSTALL = /usr/bin/install
++
++all: $(MAELSTROM) netplayd/netplayd
++
++netplayd:
++	cd netplayd && make
+ 

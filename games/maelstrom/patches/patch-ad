@@ -1,0 +1,7 @@
+--- mixer.cpp.orig	Thu Jul 30 03:59:50 1998
++++ mixer.cpp	Thu Jul 30 04:02:23 1998
+@@ -287,3 +287,3 @@
+ 	flags = fcntl(dsp_fd, F_GETFL, 0);
+-	flags |= O_SYNC;
++/*	flags |= O_SYNC;*/
+ 	(void) fcntl(dsp_fd, F_SETFL, flags);
