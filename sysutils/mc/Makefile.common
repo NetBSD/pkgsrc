@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2001/01/03 14:45:27 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.5 2001/02/13 11:47:06 tron Exp $
 
 DISTNAME=		mc-4.5.51
 CATEGORIES+=		sysutils
@@ -17,7 +17,7 @@ CONFLICTS+=		mc-* gmc-*
 FILESDIR=		${.CURDIR}/../../sysutils/mc/files
 PATCHDIR=		${.CURDIR}/../../sysutils/mc/patches
 
-PLIST_SUBST+=		LOCALEBASE=${LOCALEBASE}
+PLIST_SUBST+=		LOCALEDIR=${LOCALEDIR}
 
 USE_GMAKE=		yes
 USE_LIBINTL=		yes
@@ -36,7 +36,7 @@ CONFIGURE_ENV+=		ac_cv_header_readline_history_h=no
 CONFIGURE_ENV+=		ac_cv_header_readline_readline_h=no
 
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
-CONFIGURE_ENV+=		LOCALEBASE="${LOCALEBASE}"
+CONFIGURE_ENV+=		LOCALEDIR="${LOCALEDIR}"
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 
@@ -49,12 +49,12 @@ CPPFLAGS+=		-Dunix
 
 # The directory in which locale files are found is:
 #
-# 	${PREFIX}/${LOCALEBASE}/locale/<lang>/LC_MESSAGES
+# 	${PREFIX}/${LOCALEDIR}/locale/<lang>/LC_MESSAGES
 #
 .if ${OPSYS} == "SunOS"
-LOCALEBASE=		lib
+LOCALEDIR=		lib
 .else
-LOCALEBASE=		share
+LOCALEDIR=		share
 .endif
 
 .include "../../mk/bsd.pkg.mk"

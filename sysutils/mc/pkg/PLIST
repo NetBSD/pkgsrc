@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2000/10/19 23:31:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2001/02/13 11:47:06 tron Exp $
 bin/mc
 bin/mcedit
 bin/mcmfmt
@@ -75,33 +75,33 @@ lib/mc/term/xterm.ti
 man/man1/mc.1
 man/man1/mcedit.1
 man/man8/mcserv.8
-${LOCALEBASE}/locale/ca/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/cs/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/da/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/de/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/el/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/es/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/es_ES/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/fi/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/fr/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/hu/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/it/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/ja/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/ko/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/nl/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/no/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/pl/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/pt_BR/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/ro/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/ru/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/sk/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/sl/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/sv/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/tr/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/uk/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/wa/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/zh_CN.GB2312/LC_MESSAGES/mc.mo
-${LOCALEBASE}/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/ca/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/cs/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/da/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/de/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/el/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/es/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/es_ES/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/fi/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/fr/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/hu/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/it/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/ja/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/ko/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/nl/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/no/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/pl/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/pt_BR/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/ro/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/ru/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/sk/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/sl/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/sv/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/tr/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/uk/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/wa/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/mc.mo
+${LOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/mc.mo
 @dirrm lib/mc/term
 @dirrm lib/mc/syntax
 @dirrm lib/mc/extfs
