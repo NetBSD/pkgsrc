@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/08/25 11:13:00 cjep Exp $
+
+SHA1 (bgrep-20030825.tar.gz) = 847f81eb1530fb7372c91607270f5b77de661518
+Size (bgrep-20030825.tar.gz) = 12921 bytes
+SHA1 (patch-aa) = c147bb05387e01b6f7e0ec8a918b09e77da2103c
