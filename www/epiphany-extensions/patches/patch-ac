@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/09/07 19:36:52 jmmv Exp $
+
+--- configure.orig	2004-04-13 14:38:25.000000000 +0200
++++ configure
+@@ -23137,6 +23137,8 @@ case "$MOZILLA_VERSION" in
+  1.7a) MOZILLA_SNAPSHOT=14 ;;
+  1.7b) MOZILLA_SNAPSHOT=15 ;;
+   1.7) MOZILLA_SNAPSHOT=15 ;;
++1.7.1) MOZILLA_SNAPSHOT=15 ;;
++1.7.2) MOZILLA_SNAPSHOT=15 ;;
+ trunk) MOZILLA_SNAPSHOT=15 ;;
+     *) { { echo "$as_me:$LINENO: error:
+ *******************************************************************************
