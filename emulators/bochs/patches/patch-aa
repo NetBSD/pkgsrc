@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2002/05/13 14:12:04 fredb Exp $
+$NetBSD: patch-aa,v 1.7 2002/05/14 13:52:52 fredb Exp $
 
 --- .bochsrc.orig	Thu Mar 28 01:49:52 2002
 +++ .bochsrc
@@ -44,6 +44,15 @@ $NetBSD: patch-aa,v 1.6 2002/05/13 14:12:04 fredb Exp $
  
  #=======================================================================
  # DISKD:
+@@ -108,7 +108,7 @@
+ # NOTE: diskd and cdromd must not be used together!
+ #=======================================================================
+ #cdromd: dev=D:, status=inserted             # for win32
+-#cdromd: dev=/dev/cdrom, status=inserted
++cdromd: dev=/dev/rcd0d, status=ejected
+ 
+ #=======================================================================
+ # NEWHARDDRIVESUPPORT: enabled=[0|1]
 @@ -125,8 +125,8 @@
  #   boot: a
  #   boot: cdrom
