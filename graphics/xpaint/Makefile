@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/03/30 21:44:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.28 2001/03/31 22:33:25 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
 
 DISTNAME=       xpaint-2.6.1
@@ -19,6 +19,7 @@ USE_XPM=	YES
 USE_RMAN=	YES
 
 EVAL_PREFIX=	XPMDIR=xpm
+PLIST_SRC=	${WRKDIR}/PLIST
 
 pre-configure:
 	${MV} -f ${WRKSRC}/Local.config ${WRKSRC}/Local.config.save
@@ -26,5 +27,11 @@ pre-configure:
 		-e 's|\$${X11BASE}|${X11BASE}|g' \
 		-e 's|\$${XPMDIR}|${XPMDIR}|g' \
 		${WRKSRC}/Local.config.save > ${WRKSRC}/Local.config
+
+post-install:
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	if [ -f  ${PREFIX}/lib/X11/doc/html/xpaint.1.html ]; then \
+	  ${ECHO} lib/X11/doc/html/xpaint.1.html >>${PLIST_SRC}; \
+	fi
 
 .include "../../mk/bsd.pkg.mk"
