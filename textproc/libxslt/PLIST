@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/23 08:34:25 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/07 04:50:42 jlam Exp $
 bin/xslt-config
 bin/xsltproc
 include/breakpoint/breakpoint.h
@@ -41,28 +41,27 @@ lib/xsltConf.sh
 man/man1/xsltproc.1
 man/man4/libexslt.4
 man/man4/libxslt.4
-share/doc/libxslt/html/book1.html
-share/doc/libxslt/html/libxslt-attributes.html
-share/doc/libxslt/html/libxslt-functions.html
-share/doc/libxslt/html/libxslt-imports.html
-share/doc/libxslt/html/libxslt-keys.html
-share/doc/libxslt/html/libxslt-lib.html
-share/doc/libxslt/html/libxslt-namespaces.html
-share/doc/libxslt/html/libxslt-notes.html
-share/doc/libxslt/html/libxslt-numbersinternals.html
-share/doc/libxslt/html/libxslt-pattern.html
-share/doc/libxslt/html/libxslt-templates.html
-share/doc/libxslt/html/libxslt-transform.html
-share/doc/libxslt/html/libxslt-variables.html
-share/doc/libxslt/html/libxslt-xslt.html
-share/doc/libxslt/html/libxslt-xsltinternals.html
-share/doc/libxslt/html/libxslt-xsltutils.html
-share/doc/libxslt/html/tutorial/libxslt_tutorial.c
-share/doc/libxslt/html/tutorial/libxslttutorial.html
-share/doc/libxslt/html/tutorial/libxslttutorial.xml
-@dirrm share/doc/libxslt/html/tutorial
-@dirrm share/doc/libxslt/html
-@dirrm share/doc/libxslt
+share/doc/html/libxslt/book1.html
+share/doc/html/libxslt/libxslt-attributes.html
+share/doc/html/libxslt/libxslt-functions.html
+share/doc/html/libxslt/libxslt-imports.html
+share/doc/html/libxslt/libxslt-keys.html
+share/doc/html/libxslt/libxslt-lib.html
+share/doc/html/libxslt/libxslt-namespaces.html
+share/doc/html/libxslt/libxslt-notes.html
+share/doc/html/libxslt/libxslt-numbersinternals.html
+share/doc/html/libxslt/libxslt-pattern.html
+share/doc/html/libxslt/libxslt-templates.html
+share/doc/html/libxslt/libxslt-transform.html
+share/doc/html/libxslt/libxslt-variables.html
+share/doc/html/libxslt/libxslt-xslt.html
+share/doc/html/libxslt/libxslt-xsltinternals.html
+share/doc/html/libxslt/libxslt-xsltutils.html
+share/doc/html/libxslt/tutorial/libxslt_tutorial.c
+share/doc/html/libxslt/tutorial/libxslttutorial.html
+share/doc/html/libxslt/tutorial/libxslttutorial.xml
+@dirrm share/doc/html/libxslt/tutorial
+@dirrm share/doc/html/libxslt
 @dirrm include/libxslt
 @dirrm include/libexslt
 @dirrm include/breakpoint
