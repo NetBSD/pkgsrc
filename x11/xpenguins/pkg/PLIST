@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/30 01:35:06 hubertf Exp $
+bin/xpenguins
+man/man1/xpenguins.1
