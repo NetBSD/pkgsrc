@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/04/29 14:18:58 sketch Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/04 23:46:37 snj Exp $
 #
 
 DISTNAME=       Text-Format0.52
@@ -11,7 +11,7 @@ MAINTAINER=	sketch@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/search?module=Text::Format
 COMMENT=	Provide perl5 formatting functions on plain text
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Text/Format/.packlist
 
 .include "../../lang/perl5/module.mk"

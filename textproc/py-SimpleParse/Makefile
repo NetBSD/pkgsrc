@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/26 02:27:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/05/04 23:46:37 snj Exp $
 #
 
 DISTNAME=		SimpleParse-2.0.0
@@ -13,9 +13,9 @@ HOMEPAGE=		http://simpleparse.sourceforge.net/
 COMMENT=		Simple parser generator for mxTextTools text-tagging engine
 
 PYDISTUTILSPKG=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 PYTHON_VERSIONS_ACCEPTED=	23pth 22pth
 
 .include "../../lang/python/extension.mk"
-.include "../../time/py-mxDateTime/buildlink2.mk"
+.include "../../time/py-mxDateTime/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
