@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/24 15:26:00 dillo Exp $
+
+--- Makefile.in.orig	2003-08-11 12:40:47.000000000 +0200
++++ Makefile.in
+@@ -83,11 +83,11 @@ X_PRE_LIBS = @X_PRE_LIBS@
+ am__include = @am__include@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+ SUBDIRS = src 
+ 
+ man_MANS = freedroid.6
+ 
+-EXTRA_DIST = $(man_MANS) mac-osx map graphics sound
++EXTRA_DIST = $(man_MANS) map graphics sound
+ 
+ win_txts = COPYING AUTHORS README Releasetext freedroid-man
+ win_dir = freedroid-$(VERSION)-win32
+@@ -483,14 +483,15 @@ uninstall-man: uninstall-man6
+ 
+ 
+ dist-hook:
+-	rm -rf `find $(distdir) -name CVS`
++	-rm -rf `find $(distdir) -name CVS`
+ 
+ install-data-local:
+ 	echo "Now copying the the data-directories..."
+ 	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)
+ 	cp -r $(srcdir)/$(EXTRA_DIST) $(DESTDIR)$(pkgdatadir)
+ 	echo "... and cleaning from CVS dirs.."
+-	rm -rf `find $(DESTDIR)$(pkgdatadir) -name CVS`
++	-rm -rf `find $(DESTDIR)$(pkgdatadir) -name CVS -o -name 'Makefile*'`
++	-rm -f $(DESTDIR)$(pkgdatadir)/freedroid.6
+ 	echo "..done."
+ dist-win32: src/freedroid.exe
+ 	mkdir -p $(win_dir)
