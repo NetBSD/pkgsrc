@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/02/21 19:53:27 veego Exp $
+$NetBSD: patch-ab,v 1.2 2001/10/15 21:27:19 veego Exp $
 
---- configure	Thu Dec 21 23:22:15 2000
-+++ configure	Sun Feb 18 16:29:25 2001
-@@ -2434,7 +2434,7 @@
+--- configure-orig	Sun Oct 14 12:34:54 2001
++++ configure	Sun Oct 14 12:46:23 2001
+@@ -2642,7 +2642,7 @@
  EOF
- if { (eval echo configure:2436: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
+ if { (eval echo configure:2644: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
    rm -rf conftest*
 -  eval "ac_cv_lib_$ac_lib_var=yes"
 +  eval "ac_cv_lib_$ac_lib_var=no"
