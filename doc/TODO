@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1615 2004/04/15 14:42:59 jmmv Exp $
+$NetBSD: TODO,v 1.1616 2004/04/15 21:27:39 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -209,8 +209,6 @@ Suggested package updates
 	o grepmail-5.23
 	o grhino-0.11.0
 	o gsasl-0.0.14
-	o gst-plugins-0.8.1 [jmmv]
-	o gstreamer-0.8.1 [jmmv]
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.6
 	o gtksee-0.5.5.1
