@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/11/23 16:05:38 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/08/23 14:28:26 dmcmahill Exp $
 pvm3/bin/@pvmarch@/dbwtest
 pvm3/bin/@pvmarch@/fgexample
 pvm3/bin/@pvmarch@/fmaster1
@@ -23,7 +23,6 @@ pvm3/bin/@pvmarch@/inheritb
 pvm3/bin/@pvmarch@/joinleave
 pvm3/bin/@pvmarch@/lmbi
 pvm3/bin/@pvmarch@/master1
-pvm3/bin/@pvmarch@/master1h
 pvm3/bin/@pvmarch@/mhf_server
 pvm3/bin/@pvmarch@/mhf_tickle
 pvm3/bin/@pvmarch@/mtile
@@ -120,7 +119,6 @@ pvm3/lib/pvmd.bat
 pvm3/lib/pvmd.cmd
 pvm3/lib/pvmgetarch
 pvm3/lib/pvmgetarch.cmd
-pvm3/lib/pvmgetarch.orig
 pvm3/lib/pvmtmparch
 pvm3/lib/xpvm
 pvm3/lib/@pvmarch@/libfpvm3.a
