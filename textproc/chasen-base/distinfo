@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/06/01 08:23:29 shannonjr Exp $
+$NetBSD: distinfo,v 1.5 2004/06/09 05:42:31 taca Exp $
 
 SHA1 (chasen-2.3.3.tar.gz) = 711f5717ee284d26aa5616292f7aaffaef11d03a
 Size (chasen-2.3.3.tar.gz) = 425981 bytes
@@ -12,3 +12,5 @@ SHA1 (patch-ai) = 7a9ffd640c275c1361e34591d08c1ce519df5dc7
 SHA1 (patch-aj) = 8c440610abaa31b22950ef41149736feefc968e8
 SHA1 (patch-ak) = 05afdb444ef6a59cb2f9c86617b6dba8332ac5f3
 SHA1 (patch-al) = a1069b648d7c352923dd27a193f93b87b4bf3e8a
+SHA1 (patch-am) = 25965ca10b35e564cd0358a1949c7a90a8596b55
+SHA1 (patch-an) = e24d8cb3f1ffa9b2b601b417e94f5eb533782aa5
