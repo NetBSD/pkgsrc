@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/04 20:47:38 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/08 17:35:02 hubertf Exp $
 #
 
 DISTNAME=	ipv6calc-0.12
@@ -11,6 +11,9 @@ COMMENT=	Manipulates IPv6 adresses
 
 USE_GMAKE=	yes
 ALL_TARGET=	ipv6calc
+
+# This package does not set or evaluate USE_INET6, but it should still
+# be listed in README-IPv6.html. Leave this comment here to make it so!
 
 MAKE_ENV+=	CC="${CC} -D_NETINET_IN_H"
 
