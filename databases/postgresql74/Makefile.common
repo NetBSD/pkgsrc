@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2004/08/21 17:27:04 seb Exp $
+# $NetBSD: Makefile.common,v 1.12 2004/10/10 07:30:22 jdolecek Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -11,12 +11,14 @@
 
 DISTNAME?=		postgresql-${DIST_VERS}
 CATEGORIES+=		databases
-MASTER_SITES?=		http://www.postgresql.org/ftpsite/source/v${DIST_VERS}/ \
-			ftp://ftp.postgresql.org/pub/source/v${DIST_VERS}/ \
+MASTER_SITES?=		\
 			ftp://ftp.de.postgresql.org/mirror/postgresql/source/v${DIST_VERS}/ \
 			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/source/v${DIST_VERS}/ \
 			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/source/v${DIST_VERS}/ \
-			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/source/v${DIST_VERS}/
+			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/source/v${DIST_VERS}/ \
+			http://www.postgresql.org/ftpsite/source/v${DIST_VERS}/ \
+			ftp://ftp.postgresql.org/pub/source/v${DIST_VERS}/
+
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER?=		recht@NetBSD.org
@@ -34,7 +36,7 @@ PATCHDIR?=		${.CURDIR}/../postgresql74/patches
 # BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
 # Note: Do not forget jdbc-postgresql when updating version
-DIST_VERS?=		7.4.3
+DIST_VERS?=		7.4.5
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_DEPENDS.postgresql74-lib?=	postgresql74-lib>=${BASE_VERS}
