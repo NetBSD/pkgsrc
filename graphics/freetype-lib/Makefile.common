@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2000/10/06 01:27:38 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2000/11/04 07:05:09 itojun Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.3.1
@@ -10,7 +10,7 @@ MASTER_SITES=		http://download.sourceforge.net/freetype/ \
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.freetype.org/
 
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 
 USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -18,6 +18,8 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-locale-dir=${PREFIX}/share/locale
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+
+USE_LIBINTL=		yes
 
 CFLAGS+=		-I${LOCALBASE}/include
 CPPFLAGS+=		-I${LOCALBASE}/include
