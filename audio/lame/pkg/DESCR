@@ -1,8 +1,14 @@
-NotLame is a high quality and fast MP3 encoder, based on the LAME
-patch. The quality is almost as good as the FhG encoder. LAME is
-a patch (it actually stands for LAME Ain't an MP3 Encoder), while
-NotLame is the executable after the patch has been applied to ISO
-sources and compiled.
+Following the great history of GNU naming, LAME originally stood for
+LAME Ain't an Mp3 Encoder. LAME started life as a GPL'd patch against
+the dist10 ISO demonstration source, and thus was incapable of
+producing an mp3 stream or even being compiled by itself. But in May
+2000, the last remnants of the ISO source code were replaced, and now
+LAME is the source code for a fully GPL'd MP3 encoder, with speed and
+quality to rival all commercial competitors.
 
-This version does not have the gtk based gui.  That can be obtained
-from the lame-gui package.
+LAME is an educational tool to be used for learning about MP3
+encoding. The goal of the LAME project is to use the open source model
+to improve the psycho acoustics, noise shaping and speed of
+MP3. Another goal of the LAME project is to use these improvements for
+the basis of a patent free audio compression codec for the GNU
+project.
