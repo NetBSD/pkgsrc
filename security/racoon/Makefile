@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/08/21 21:01:33 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 2000/08/27 07:35:09 itojun Exp $
 #
 
 DISTNAME=	racoon-20000731a
@@ -22,6 +22,7 @@ BUILD_DEFS+=	USE_INET6
 # if PATENTEDOPENSSLSRC is defined, then we assume that
 # RSA already exists in the OpenSSL built as part of the
 # base distribution.
+# XXX the check chokes with cross build
 .if !defined(PATENTEDOPENSSLSRC) && !exists(/usr/include/openssl/rsa.h)
 DEPENDS+=	openssl-0.9.*:../../security/openssl
 CONFIGURE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include CFLAGS=-I${LOCALBASE}/include \
