@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9208 2005/02/19 17:19:11 wiz Exp $
+$NetBSD: CHANGES,v 1.9209 2005/02/19 17:33:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -954,3 +954,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-YAML to 0.36 [wiz 2005-02-19]
 	Updated p5-Module-Build to 0.2608 [wiz 2005-02-19]
 	Added p5-Sub-Uplevel-0.09 [wiz 2005-02-19]
+	Added p5-Test-Exception-0.20 [wiz 2005-02-19]
