@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1999/02/11 19:17:33 tv Exp $
+@comment $NetBSD: PLIST,v 1.8 1999/03/29 15:47:12 hubertf Exp $
 bin/MakeTeXMF
 bin/pslatex
 bin/makeindex.bin
@@ -2298,6 +2298,7 @@ share/texmf/fonts/tfm/ams/cmextra/cmmib6.tfm
 share/texmf/fonts/tfm/ams/cmextra/cmmib7.tfm
 share/texmf/fonts/tfm/ams/cmextra/cmmib8.tfm
 share/texmf/fonts/tfm/ams/cmextra/cmmib9.tfm
+share/texmf/fonts/tfm/jknappen/ec/ecrm1000.tfm
 share/texmf/fonts/type1/adobe/utopia/putb8a.pfb
 share/texmf/fonts/type1/adobe/utopia/putbi8a.pfb
 share/texmf/fonts/type1/adobe/utopia/putr8a.pfb
