@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/10 13:47:07 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/12 16:19:32 drochner Exp $
 
 DISTNAME=	transcode-0.6.12
 PKGREVISION=	1
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--disable-qt
 # when libmpeg3 is a shlib.
 CONFIGURE_ARGS+=	--without-libmpeg3
 CONFIGURE_ARGS+=	--with-default-xvid=xvid4
+CONFIGURE_ARGS+=	--with-ft-prefix=${BUILDLINK_PREFIX.freetype2}
 
 .if exists(${X11BASE}/lib/libXv.so)
 PLIST_SUBST+=		FILTERPV=filter_pv.so
@@ -34,10 +35,11 @@ PLIST_SUBST+=		FILTERPV=filter_pv.a
 # this used to operate on acinclude.m4 and run aclocal, but running
 # aclocal here breaks due to missing DLFCN checking
 post-patch:
+	-cd ${WRKSRC} && ${ACLOCAL} && ${AUTOCONF} && ${AUTOMAKE}
 	cd ${WRKSRC} && \
 	${SED} "s|/usr/local|${PREFIX}|g; s|include/libmpeg3|include/mpeg3|g; s|-ldl -lm|-lm|g" configure > configure.new && \
 	${MV} configure.new configure && ${CHMOD} a+x configure
-	-cd ${WRKSRC} && ${AUTOMAKE}
+	${CP} ${FILESDIR}/strip_fPIC.sh ${WRKSRC}
 
 post-install:
 	${LN} -sf ../libxvidcore.so.4.0  ${PREFIX}/lib/transcode/libxvidcore.so.4

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/05/10 13:47:08 wiz Exp $
+$NetBSD: distinfo,v 1.2 2004/05/12 16:19:32 drochner Exp $
 
 SHA1 (transcode-0.6.12.tar.gz) = 3d9b223f804253a6a76d9645feb86609b0a2499a
 Size (transcode-0.6.12.tar.gz) = 3454807 bytes
@@ -17,3 +17,5 @@ SHA1 (patch-ap) = fb393e3400423a5d4225fb31afabfbcaa265a35b
 SHA1 (patch-aq) = 3a8bd7888460880767204239ac783bff3d6814a9
 SHA1 (patch-ar) = df0bf12044741c586b0168ead6aa0fa71a23aea1
 SHA1 (patch-as) = d673ec6009d96f55afcf8382f834edc2cadd2ae3
+SHA1 (patch-at) = f598541e1ea9c7e6fcd93d7f2704397b5bdb5cd8
+SHA1 (patch-au) = 0e9731f693f209d1c2bd4b28e71c03cab94020ea
