@@ -1,7 +1,7 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([libnbcompat], [20030719], [grant@NetBSD.org])
-AC_CONFIG_HEADER(config.h)
+AC_INIT([libnbcompat], [20030823], [grant@NetBSD.org])
+AC_CONFIG_HEADER(nbconfig.h)
 AC_ARG_PROGRAM
 
 AC_CANONICAL_HOST
@@ -15,6 +15,7 @@ AC_PROG_CC
 AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_PROG_RANLIB
+AC_PROG_AWK
 AC_CHECK_PROG(AR, ar, ar)
 
 AUTOCONF=${AUTOCONF-"$srcdir/missing --run autoconf"}
@@ -25,17 +26,16 @@ AC_SUBST(AUTOHEADER)
 dnl Checks for header files.
 AC_HEADER_STDC
 AC_HEADER_TIME
-AC_CHECK_HEADERS([sys/endian.h sys/file.h sys/mkdev.h sys/param.h])
 
-AC_CHECK_HEADERS([assert.h arpa/nameser.h dirent.h err.h errno.h fcntl.h \
-		fts.h libutil.h locale.h machine/endian.h param.h paths.h \
-		poll.h regex.h stringlist.h sys/byteorder.h sys/poll.h \
-		termcap.h time.h tzfile.h unistd.h util.h vis.h limits.h])
-
-AC_CHECK_HEADERS([bind/bitypes.h inttypes.h sys/bitypes.h sys/cdefs.h \
-		sys/endian.h sys/mount.h sys/queue.h sys/time.h \
-		sys/stat.h sys/statvfs.h sys/vfs.h sys/types.h \
-		sys/byteorder.h])
+AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
+	errno.h fcntl.h fts.h inttypes.h libutil.h limits.h \
+	machine/endian.h memory.h ndir.h netdb.h netinet/in6_machtypes.h \
+	paths.h poll.h pwd.h stdint.h stdlib.h stringlist.h strings.h \
+	string.h sys/bitypes.h sys/byteorder.h sys/cdefs.h sys/dir.h \
+	sys/endian.h sys/file.h sys/mkdev.h sys/mount.h sys/ndir.h \
+	sys/param.h sys/poll.h sys/queue.h sys/time.h sys/ttycom.h \
+	sys/stat.h sys/statvfs.h sys/vfs.h sys/types.h termcap.h termios.h \
+	time.h tzfile.h unistd.h util.h utmp.h vis.h])
 
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_C___ATTRIBUTE__
@@ -45,13 +45,13 @@ AC_CHECK_TYPES([long long, int8_t, int16_t, int32_t, int64_t, u_int8_t, u_int16_
 #include <stdlib.h>
 #include <stddef.h>
 #endif
-#ifdef HAVE_INTTYPES_H
+#if HAVE_INTTYPES_H
 #include <inttypes.h>
 #endif
-#ifdef HAVE_SYS_TYPES_H
+#if HAVE_SYS_TYPES_H
 #include <sys/types.h>
 #endif
-#ifdef HAVE_SYS_BITYPES_H
+#if HAVE_SYS_BITYPES_H
 #include <sys/bitypes.h>
 #endif])
 AC_C_BIGENDIAN
@@ -64,7 +64,7 @@ AC_FUNC_VPRINTF
 
 AC_REPLACE_FUNCS([err fgetln fparseln fseeko getenv glob inet_ntop \
 		inet_pton isblank lchflags lchmod lchown lutimes mkstemp \
-		setenv setprogname sl_init snprintf strdup strerror \
+		mkdtemp setenv setprogname snprintf strdup strerror \
 		strlcat strlcpy strmode strptime strsep strtoll timegm \
 		usleep])
 
@@ -72,7 +72,6 @@ AC_CHECK_FUNCS([MD5File RMD160File SHA1File])
 AC_CHECK_FUNCS([setgroupent setgrent setpassent setpwent])
 AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
 AC_CHECK_FUNCS([getmode setmode])
-AC_CHECK_FUNCS([statfs statvfs])
 AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb pwcache_userdb \
 		uid_from_user user_from_uid])
 
@@ -81,8 +80,38 @@ AC_CHECK_FUNCS([strunvis strvis strsvis])
 AC_CHECK_FUNCS([getpassphrase getpgrp memmove poll select])
 AC_CHECK_FUNCS([getopt_long])
 
-if test $ac_cv_func_getpgrp = yes; then
-	AC_FUNC_GETPGRP
+AC_CHECK_FUNC(getpgrp, [AC_FUNC_GETPGRP])
+
+AC_CHECK_FUNC(sl_init, [
+	if test $ac_cv_func_sl_init = yes; then
+		AC_MSG_TRY_COMPILE(if sl_add() returns int,
+			pkg_cv_INT_SL_ADD,
+			[ #include <stringlist.h> ],
+			[ int f = sl_add((StringList *)0, "foo") ],
+			[:] , [AC_LIBOBJ(sl_init)])
+	fi
+])
+
+dnl Solaris 2.7 and 2.8 have statfs(2), but it is deprecated, and has a
+dnl different interface from NetBSD's statfs.
+
+pkg_have_nbcompat_statfs=yes
+AC_CHECK_FUNC(statfs, [
+	case $host_os in
+	linux*|freebsd*|netbsd*)
+		pkg_have_nbcompat_statfs=no
+		;;
+	*)
+		AC_CHECK_FUNC(statvfs, [:], [
+			AC_MSG_ERROR(statfs isn't supported and can't be implemented)
+		])
+		;;
+	esac
+])
+
+if test $pkg_have_nbcompat_statfs = yes; then
+	AC_DEFINE(HAVE_NBCOMPAT_STATFS, 1)
+	AC_LIBOBJ(statfs)
 fi
 
 if test $ac_cv_type_long_long = yes -a $ac_cv_sizeof_off_t -ge 8; then
@@ -132,12 +161,6 @@ dnl		support because we don't know how to display it.
 
 fi
 
-if test $ac_cv_func_sl_init = yes; then
-	AC_MSG_TRY_COMPILE(if sl_add() returns int, pkg_cv_INT_SL_ADD, [
-	#include <stringlist.h> ], [ int f = sl_add((StringList *)0, "foo") ],
-	[:] , [AC_LIBOBJ="$AC_LIBOBJ sl_init.o"])
-fi
-
 if test $ac_cv_header_vis_h = yes; then
 	AC_MSG_TRY_COMPILE(for VIS_WHITE in vis.h,
 			    pkg_cv_have_vis_white, [
@@ -155,24 +178,29 @@ AC_MSG_TRY_COMPILE(for optind declaration, ftp_cv_HAVE_OPTIND_D, [
 #include <unistd.h> ], [ int X = optind ], [:] [AC_DEFINE(HAVE_OPTIND_D, 1)])
 
 AH_BOTTOM([
+/* NBCOMPAT template section follows. */
 
-/* Define if *printf() uses %qd to print `long long' (otherwise uses %lld) */
+/* Define to 1 if the `statfs' function is built into the library. */
+#undef HAVE_NBCOMPAT_STATFS
+
+/* Define to 1 if *printf() uses %qd to print `long long' (otherwise uses
+   %lld) */
 #undef HAVE_PRINTF_QD
 
-/* Define if `long long' is supported and sizeof(off_t) >= 8 */
+/* Define to 1 if `long long' is supported and sizeof(off_t) >= 8 */
 #undef HAVE_QUAD_SUPPORT
 
-/* Define if optarg is declared in <stdlib.h> or <unistd.h> */
+/* Define to 1 if optarg is declared in <stdlib.h> or <unistd.h> */
 #undef HAVE_OPTARG_D
 
-/* Define if optind is declared in <stdlib.h> or <unistd.h> */
+/* Define to 1 if optind is declared in <stdlib.h> or <unistd.h> */
 #undef HAVE_OPTIND_D
 
 #ifndef HAVE___ATTRIBUTE__
 # define __attribute__(x)
 #endif
 
-#ifdef HAVE_SYS_CDEFS_H
+#if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
 
@@ -221,19 +249,19 @@ AH_BOTTOM([
 # endif
 #endif
 
-#ifdef HAVE_SYS_PARAM_H
+#if HAVE_SYS_PARAM_H
 #include <sys/param.h>
 #endif
 
-#ifdef HAVE_SYS_ENDIAN_H
+#if HAVE_SYS_ENDIAN_H
 #include <sys/endian.h>
 #endif
 
-#ifdef HAVE_MACHINE_ENDIAN_H
+#if HAVE_MACHINE_ENDIAN_H
 #include <machine/endian.h>
 #endif
 
-#ifdef HAVE_SYS_BYTEORDER_H
+#if HAVE_SYS_BYTEORDER_H
 #include <sys/byteorder.h>
 #endif
 
@@ -262,23 +290,19 @@ AH_BOTTOM([
 #endif
 
 #if defined(HAVE_MEMSET)
-#define MEMSET_BZERO(p,l)	memset((p), 0, (l))
+# define MEMSET_BZERO(p,l)	memset((p), 0, (l))
+#elif defined(HAVE_BZERO)
+# define MEMSET_BZERO(p,l)	bzero((p), (l))
 #else
-# if defined(HAVE_BZERO)
-#define MEMSET_BZERO(p,l)	bzero((p), (l))
-# else
-#error You need either memset or bzero
-# endif
+# error You need either memset or bzero
 #endif
 
 #if defined(HAVE_MEMCPY)
-#define MEMCPY_BCOPY(d,s,l)	memcpy((d), (s), (l))
+# define MEMCPY_BCOPY(d,s,l)	memcpy((d), (s), (l))
+#elif defined(HAVE_BCOPY)
+# define MEMCPY_BCOPY(d,s,l)	bcopy((s), (d), (l))
 #else
-# if defined(HAVE_BCOPY)
-#define MEMCPY_BCOPY(d,s,l)	bcopy((s), (d), (l))
-# else
-#error You need either memcpy or bcopy
-# endif
+# error You need either memcpy or bcopy
 #endif
 ])
 

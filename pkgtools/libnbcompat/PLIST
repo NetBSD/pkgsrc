@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/31 12:02:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/01 15:31:14 jlam Exp $
 include/libnbcompat/extern.h
 include/libnbcompat/err.h
 include/libnbcompat/ftpglob.h
@@ -8,6 +8,7 @@ include/libnbcompat/md5.h
 include/libnbcompat/mtree.h
 include/libnbcompat/namespace.h
 include/libnbcompat/nbcompat.h
+include/libnbcompat/nbconfig.h
 include/libnbcompat/nbtypes.h
 include/libnbcompat/pack_dev.h
 include/libnbcompat/pwcache.h
