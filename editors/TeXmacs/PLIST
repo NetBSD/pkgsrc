@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/20 01:20:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/09/06 11:59:38 wiz Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -13,14 +13,6 @@ libexec/${PKGNAME}/bin/tm_maxima
 libexec/${PKGNAME}/bin/tm_mupad
 libexec/${PKGNAME}/bin/tm_mupad_help
 libexec/${PKGNAME}/bin/tm_reduce
-libexec/${PKGNAME}/lib/libbasic.so
-libexec/${PKGNAME}/lib/libconvert.so
-libexec/${PKGNAME}/lib/libedit.so
-libexec/${PKGNAME}/lib/libglue.so
-libexec/${PKGNAME}/lib/libresource.so
-libexec/${PKGNAME}/lib/libserver.so
-libexec/${PKGNAME}/lib/libtypeset.so
-libexec/${PKGNAME}/lib/libwindow.so
 man/man1/fig2ps.1
 man/man1/texmacs.1
 share/${PKGNAME}/LICENSE
@@ -29,6 +21,7 @@ share/${PKGNAME}/doc/dvi/texmacs.tex
 share/${PKGNAME}/doc/english/help/about.tex
 share/${PKGNAME}/doc/english/help/advanced.tex
 share/${PKGNAME}/doc/english/help/compatibility.tex
+share/${PKGNAME}/doc/english/help/configure.tex
 share/${PKGNAME}/doc/english/help/interface.tex
 share/${PKGNAME}/doc/english/help/introduction.tex
 share/${PKGNAME}/doc/english/help/itf_customize.tex
@@ -52,7 +45,6 @@ share/${PKGNAME}/doc/english/source/basic.tex
 share/${PKGNAME}/doc/english/source/boxes.tex
 share/${PKGNAME}/doc/english/source/buffer.tex
 share/${PKGNAME}/doc/english/source/bugs.tex
-share/${PKGNAME}/doc/english/source/compiler.tex
 share/${PKGNAME}/doc/english/source/convert.tex
 share/${PKGNAME}/doc/english/source/data.tex
 share/${PKGNAME}/doc/english/source/fonts.tex
@@ -66,6 +58,7 @@ share/${PKGNAME}/doc/english/startup/upgrade-2.tex
 share/${PKGNAME}/doc/english/startup/upgrade-3.tex
 share/${PKGNAME}/doc/english/startup/upgrade-4.tex
 share/${PKGNAME}/doc/english/startup/upgrade-5.tex
+share/${PKGNAME}/doc/english/startup/upgrade-6.tex
 share/${PKGNAME}/doc/romanian/help/introduction.tm
 share/${PKGNAME}/doc/romanian/help/keyboard.tm
 share/${PKGNAME}/doc/romanian/help/styles.tm
@@ -431,8 +424,12 @@ share/${PKGNAME}/packages/standard/std-math.ts
 share/${PKGNAME}/packages/standard/std-symbol.ts
 share/${PKGNAME}/packages/test/algo.ts
 share/${PKGNAME}/progs/boot/base.scm
+share/${PKGNAME}/progs/boot/david.scm
+share/${PKGNAME}/progs/boot/debug.scm
 share/${PKGNAME}/progs/boot/fold.scm
 share/${PKGNAME}/progs/boot/general.scm
+share/${PKGNAME}/progs/boot/hybrid.scm
+share/${PKGNAME}/progs/boot/menu.scm
 share/${PKGNAME}/progs/boot/modify.scm
 share/${PKGNAME}/progs/boot/preferences.scm
 share/${PKGNAME}/progs/boot/style.scm
@@ -452,13 +449,15 @@ share/${PKGNAME}/progs/cas/qcl.scm
 share/${PKGNAME}/progs/cas/reduce.scm
 share/${PKGNAME}/progs/cas/scilab.scm
 share/${PKGNAME}/progs/cas/yacas.scm
-share/${PKGNAME}/progs/convert/htmlout.scm
-share/${PKGNAME}/progs/convert/htmltest.scm
-share/${PKGNAME}/progs/convert/output.scm
-share/${PKGNAME}/progs/convert/texout.scm
-share/${PKGNAME}/progs/convert/textest.scm
-share/${PKGNAME}/progs/convert/tmpre.scm
-share/${PKGNAME}/progs/convert/tmtex.scm
+share/${PKGNAME}/progs/convert/tmhtml/htmlout.scm
+share/${PKGNAME}/progs/convert/tmhtml/htmltest.scm
+share/${PKGNAME}/progs/convert/tmhtml/tmhtml.scm
+share/${PKGNAME}/progs/convert/tmtex/texout.scm
+share/${PKGNAME}/progs/convert/tmtex/textest.scm
+share/${PKGNAME}/progs/convert/tmtex/tmtex-preamble.scm
+share/${PKGNAME}/progs/convert/tmtex/tmtex.scm
+share/${PKGNAME}/progs/convert/tools/output.scm
+share/${PKGNAME}/progs/convert/tools/tmpre.scm
 share/${PKGNAME}/progs/fonts/adobe-fonts.scm
 share/${PKGNAME}/progs/fonts/cm-fonts.scm
 share/${PKGNAME}/progs/fonts/ec-fonts.scm
@@ -468,19 +467,29 @@ share/${PKGNAME}/progs/fonts/misc-fonts.scm
 share/${PKGNAME}/progs/fonts/x-fonts.scm
 share/${PKGNAME}/progs/init-buffer.scm
 share/${PKGNAME}/progs/init-texmacs.scm
-share/${PKGNAME}/progs/keyboard/accents.scm
-share/${PKGNAME}/progs/keyboard/emacs.scm
-share/${PKGNAME}/progs/keyboard/keymaps.scm
+share/${PKGNAME}/progs/keyboard/circulate.scm
+share/${PKGNAME}/progs/keyboard/kbd-emacs.scm
+share/${PKGNAME}/progs/keyboard/kbd-general.scm
+share/${PKGNAME}/progs/keyboard/kbd-math.scm
+share/${PKGNAME}/progs/keyboard/kbd-old.scm
+share/${PKGNAME}/progs/keyboard/kbd-preamble.scm
+share/${PKGNAME}/progs/keyboard/kbd-table.scm
+share/${PKGNAME}/progs/keyboard/kbd-text.scm
 share/${PKGNAME}/progs/keyboard/latex.scm
 share/${PKGNAME}/progs/keyboard/russian/cp1251.scm
 share/${PKGNAME}/progs/keyboard/russian/jcuken.scm
 share/${PKGNAME}/progs/keyboard/russian/koi8.scm
 share/${PKGNAME}/progs/keyboard/russian/translit.scm
 share/${PKGNAME}/progs/keyboard/russian/yawerty.scm
-share/${PKGNAME}/progs/keyboard/shorthands.scm
+share/${PKGNAME}/progs/keyboard/wildcards.scm
+share/${PKGNAME}/progs/menu/basic-menus.scm
+share/${PKGNAME}/progs/menu/format-menu.scm
 share/${PKGNAME}/progs/menu/icon-menu.scm
+share/${PKGNAME}/progs/menu/insert-menu.scm
 share/${PKGNAME}/progs/menu/main-menu.scm
-share/${PKGNAME}/progs/menu/symbol-menu.scm
+share/${PKGNAME}/progs/menu/mathematics-menu.scm
+share/${PKGNAME}/progs/menu/table-menu.scm
+share/${PKGNAME}/progs/menu/text-menu.scm
 share/${PKGNAME}/styles/article.ts
 share/${PKGNAME}/styles/book.ts
 share/${PKGNAME}/styles/documentation/browser.ts
@@ -517,6 +526,13 @@ share/${PKGNAME}/texts/tutorial/overview.tm
 @dirrm share/${PKGNAME}/progs/fonts
 @exec ${MKDIR} %D/share/${PKGNAME}/progs/examples
 @dirrm share/${PKGNAME}/progs/examples
+@dirrm share/${PKGNAME}/progs/convert/tools
+@dirrm share/${PKGNAME}/progs/convert/tmtex
+@dirrm share/${PKGNAME}/progs/convert/tmhtml
+@exec ${MKDIR} %D/share/${PKGNAME}/progs/convert/textm
+@dirrm share/${PKGNAME}/progs/convert/textm
+@exec ${MKDIR} %D/share/${PKGNAME}/progs/convert/htmltm
+@dirrm share/${PKGNAME}/progs/convert/htmltm
 @dirrm share/${PKGNAME}/progs/convert
 @dirrm share/${PKGNAME}/progs/cas
 @dirrm share/${PKGNAME}/progs/boot
@@ -583,6 +599,7 @@ share/${PKGNAME}/texts/tutorial/overview.tm
 @dirrm share/${PKGNAME}/doc/dvi
 @dirrm share/${PKGNAME}/doc
 @dirrm share/${PKGNAME}
+@exec ${MKDIR} %D/libexec/${PKGNAME}/lib
 @dirrm libexec/${PKGNAME}/lib
 @dirrm libexec/${PKGNAME}/bin
 @dirrm libexec/${PKGNAME}
