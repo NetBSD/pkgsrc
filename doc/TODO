@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.260 2003/02/15 04:22:11 salo Exp $
+$NetBSD: TODO,v 1.261 2003/02/15 05:22:27 salo Exp $
 
 Suggested new packages
 ======================
@@ -167,7 +167,6 @@ Suggested package updates
 	o jove-4.16.0.58 [pkg/19924]
 	o jpilot-0.99.4
 	o jpilot-syncmal-0.71.2
-	o jwhois-3.2.1
 	o kdbg-1.2.7
 	o kde-3.1 [skrll]
 	o kdevelop-2.1.5
