@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/03/26 02:28:02 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2004/05/01 23:57:00 snj Exp $
 #
 
 PKGNAME=		qt2-designer-kde-${QTVERSION}
@@ -7,7 +7,7 @@ COMMENT=		Visual (WYSIWYG) QT GUI builder with KDE widget support
 
 CONFLICTS+=		qt2-designer-[0-9]*
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 BUILDLINK_DEPENDS.qt2-libs=	qt2-libs>=${QTVERSION}nb2
 
 .include "../qt2-libs/Makefile.common"
@@ -27,6 +27,6 @@ do-install:
 	${LIBTOOL} ${INSTALL_PROGRAM} \
 		${WRKSRC}/tools/designer/designer/designer ${QTPREFIX}/bin
 
-.include "../../x11/kdelibs2/buildlink2.mk"
+.include "../../x11/kdelibs2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
