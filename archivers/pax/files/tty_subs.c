@@ -1,4 +1,4 @@
-/*	$NetBSD: tty_subs.c,v 1.3 2003/12/20 04:45:04 grant Exp $	*/
+/*	$NetBSD: tty_subs.c,v 1.4 2004/08/21 03:28:56 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -36,15 +36,19 @@
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
 #include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#if defined(__RCSID) && !defined(lint)
+#if !defined(lint)
 #if 0
 static char sccsid[] = "@(#)tty_subs.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: tty_subs.c,v 1.3 2003/12/20 04:45:04 grant Exp $");
+__RCSID("$NetBSD: tty_subs.c,v 1.4 2004/08/21 03:28:56 jlam Exp $");
 #endif
 #endif /* not lint */
 
