@@ -1,9 +1,9 @@
 # New ports collection makefile for:	icb client
-# Version required:	
+# Version required:	5.0.5
 # Date created:		18 March 1998
 # Whom:			cjs
 #
-# $NetBSD: Makefile,v 1.1 1998/03/18 22:40:47 cjs Exp $
+# $NetBSD: Makefile,v 1.2 1998/03/19 11:46:01 frueauf Exp $
 #
 
 DISTNAME=		icb-5.0.5
@@ -16,7 +16,7 @@ do-install:
 	pwd
 	${INSTALL_PROGRAM} ${WRKSRC}/icb/icb ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/icbserverdb ${PREFIX}/libdata
-	install -d ${PREFIX}/libdata/icb
+	${INSTALL} -d ${PREFIX}/libdata/icb
 	${INSTALL_PROGRAM} ${WRKSRC}/sample.icbrc \
 		${WRKSRC}/contrib/bartender \
 		${WRKSRC}/contrib/confuse \
