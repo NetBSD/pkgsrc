@@ -1,4 +1,4 @@
-# $NetBSD: krb5.buildlink3.mk,v 1.5 2004/02/06 18:45:03 jlam Exp $
+# $NetBSD: krb5.buildlink3.mk,v 1.6 2004/03/18 09:12:13 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Kerberos 5 implementation.  krb5.buildlink3.mk will:
@@ -19,7 +19,7 @@ KRB5_BUILDLINK3_MK:=	${KRB5_BUILDLINK3_MK}+
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(KRB5_BUILDLINK3_MK)
+.if !empty(KRB5_BUILDLINK3_MK:M+)
 KRB5_DEFAULT?=	# empty
 KRB5_ACCEPTED?=	${_KRB5_PKGS}
 
@@ -47,21 +47,21 @@ MAKEFLAGS+=	_KRB5_INSTALLED.${_krb5_}=${_KRB5_INSTALLED.${_krb5_}}
 .    endif
 .  endfor
 
-.  if !defined(_KRB5)
+.  if !defined(_KRB5_TYPE)
 #
 # Prefer the default one if it's accepted,...
 #
 .    if !empty(_KRB5_DEFAULT) && \
 	defined(_KRB5_OK.${_KRB5_DEFAULT}) && \
 	!empty(_KRB5_OK.${_KRB5_DEFAULT}:M[yY][eE][sS])
-_KRB5=		${_KRB5_DEFAULT}
+_KRB5_TYPE=	${_KRB5_DEFAULT}
 .    endif
 #
 # ...otherwise, use one of the installed Kerberos 5 packages,...
 #
 .    for _krb5_ in ${_KRB5_ACCEPTED}
 .      if !empty(_KRB5_INSTALLED.${_krb5_}:M[yY][eE][sS])
-_KRB5?=		${_krb5_}
+_KRB5_TYPE?=	${_krb5_}
 .      else
 _KRB5_FIRSTACCEPTED?=	${_krb5_}
 .      endif
@@ -70,31 +70,31 @@ _KRB5_FIRSTACCEPTED?=	${_krb5_}
 # ...otherwise, just use the first accepted Kerberos 5 package.
 #
 .    if defined(_KRB5_FIRSTACCEPTED)
-_KRB5?=		${_KRB5_FIRSTACCEPTED}
+_KRB5_TYPE?=	${_KRB5_FIRSTACCEPTED}
 .    endif
-_KRB5?=		none
-MAKEFLAGS+=	_KRB5=${_KRB5}
+_KRB5_TYPE?=	none
+MAKEFLAGS+=	_KRB5_TYPE=${_KRB5_TYPE}
 .  endif
 
-KRB5_TYPE=	${_KRB5}
+KRB5_TYPE=	${_KRB5_TYPE}
 BUILD_DEFS+=	KRB5_TYPE
 
-.  if ${KRB5_TYPE} == "none"
+.endif	# KRB5_BUILDLINK3_MK
+
+.if ${KRB5_TYPE} == "none"
 PKG_FAIL_REASON=	"No acceptable Kerberos 5 implementation found."
-.  else
+.else
 #
 # Packages that use Kerberos are automatically categorized as restricted
 # packages.
 #
 CRYPTO+=	uses Kerberos encryption code
-.    if ${KRB5_TYPE} == "heimdal"
+.  if ${KRB5_TYPE} == "heimdal"
 KRB5BASE=	${BUILDLINK_PREFIX.heimdal}
-.      include "../../security/heimdal/buildlink3.mk"
-.    elif ${KRB5_TYPE} == "mit-krb5"
+.    include "../../security/heimdal/buildlink3.mk"
+.  elif ${KRB5_TYPE} == "mit-krb5"
 KRB5BASE=	${BUILDLINK_PREFIX.mit-krb5}
-.      include "../../security/mit-krb5/buildlink3.mk"
-.    endif
+.    include "../../security/mit-krb5/buildlink3.mk"
 .  endif
+.endif
 BUILD_DEFS+=	KRB5BASE
-
-.endif	# KRB5_BUILDLINK3_MK

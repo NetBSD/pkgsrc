@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:37 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:13 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBESMTP_BUILDLINK3_MK:=	${LIBESMTP_BUILDLINK3_MK}+
@@ -19,8 +19,8 @@ LIBESMTP=	-lesmtp
 CONFIGURE_ENV+=	LIBESMTP="${LIBESMTP}"
 MAKE_ENV+=	LIBESMTP="${LIBESMTP}"
 
-.include "../../security/openssl/buildlink3.mk"
-
 .endif	# LIBESMTP_BUILDLINK3_MK
+
+.include "../../security/openssl/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:10 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBBONOBOUI_BUILDLINK3_MK:=	${LIBBONOBOUI_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	libbonoboui
 .if !empty(LIBBONOBOUI_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libbonoboui+=		libbonoboui>=2.4.1nb2
 BUILDLINK_PKGSRCDIR.libbonoboui?=	../../devel/libbonoboui
+.endif	# LIBBONOBOUI_BUILDLINK3_MK
 
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -23,7 +24,5 @@ BUILDLINK_PKGSRCDIR.libbonoboui?=	../../devel/libbonoboui
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-
-.endif	# LIBBONOBOUI_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:41 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/03/18 09:12:15 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SCROLLKEEPER_BUILDLINK3_MK:=	${SCROLLKEEPER_BUILDLINK3_MK}+
@@ -13,12 +13,14 @@ BUILDLINK_PACKAGES+=	scrollkeeper
 .if !empty(SCROLLKEEPER_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.scrollkeeper+=	scrollkeeper>=0.3.12nb2
 BUILDLINK_PKGSRCDIR.scrollkeeper?=	../../textproc/scrollkeeper
+.endif	# SCROLLKEEPER_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/buildlink3.mk"
 
+.if !empty(SCROLLKEEPER_BUILDLINK3_MK:M+)
 BUILDLINK_TARGETS+=	scrollkeeper-buildlink-fake
 
 _SK_FAKE_UPDATE=	${BUILDLINK_DIR}/bin/scrollkeeper-update
@@ -41,7 +43,6 @@ scrollkeeper-buildlink-fake:
 		${ECHO} "echo '[pkgsrc] Doing nothing for scrollkeeper-rebuilddb' \$$*" >> ${_SK_FAKE_REBUILDDB};		\
 		${CHMOD} +x ${_SK_FAKE_REBUILDDB};			\
 	fi
-
 .endif	# SCROLLKEEPER_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

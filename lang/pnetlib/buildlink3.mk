@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:36 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:13 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PNETLIB_BUILDLINK3_MK:=	${PNETLIB_BUILDLINK3_MK}+
@@ -13,10 +13,9 @@ BUILDLINK_PACKAGES+=	pnetlib
 .if !empty(PNETLIB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.pnetlib+=	pnetlib>=0.6.2
 BUILDLINK_PKGSRCDIR.pnetlib?=	../../lang/pnetlib
+.endif	# PNETLIB_BUILDLINK3_MK
 
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../lang/pnet/buildlink3.mk"
-
-.endif	# PNETLIB_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

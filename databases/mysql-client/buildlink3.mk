@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/03/05 19:25:09 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:09 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MYSQL_CLIENT_BUILDLINK3_MK:=	${MYSQL_CLIENT_BUILDLINK3_MK}+
@@ -14,9 +14,8 @@ BUILDLINK_PACKAGES+=	mysql-client
 BUILDLINK_DEPENDS.mysql-client+=	mysql-client>=3.23.58
 BUILDLINK_PKGSRCDIR.mysql-client?=	../../databases/mysql-client
 BUILDLINK_LIBDIRS.mysql-client?=	lib/mysql
+.endif	# MYSQL_CLIENT_BUILDLINK3_MK
 
 .include "../../devel/zlib/buildlink3.mk"
-
-.endif	# MYSQL_CLIENT_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

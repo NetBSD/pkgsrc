@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/06 23:19:38 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/18 09:12:09 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SDLMM_BUILDLINK3_MK:=	${SDLMM_BUILDLINK3_MK}+
@@ -13,9 +13,8 @@ BUILDLINK_PACKAGES+=	SDLmm
 .if !empty(SDLMM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.SDLmm+=	SDLmm>=0.1.8nb1
 BUILDLINK_PKGSRCDIR.SDLmm?=	../../devel/SDLmm
+.endif	# SDLMM_BUILDLINK3_MK
 
 .include "../../devel/SDL/buildlink3.mk"
-
-.endif	# SDLMM_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

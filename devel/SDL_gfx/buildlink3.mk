@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/07 04:21:55 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/03/18 09:12:09 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SDL_GFX_BUILDLINK3_MK:=	${SDL_GFX_BUILDLINK3_MK}+
@@ -13,9 +13,8 @@ BUILDLINK_PACKAGES+=	SDL_gfx
 .if !empty(SDL_GFX_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.SDL_gfx+=	SDL_gfx>=2.0.3nb2
 BUILDLINK_PKGSRCDIR.SDL_gfx?=	../../devel/SDL_gfx
+.endif	# SDL_GFX_BUILDLINK3_MK
 
 .include "../../devel/SDL/buildlink3.mk"
-
-.endif	# SDL_GFX_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

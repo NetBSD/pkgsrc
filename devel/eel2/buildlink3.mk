@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/03/18 09:12:10 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EEL2_BUILDLINK3_MK:=	${EEL2_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	eel2
 .if !empty(EEL2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.eel2+=	eel2>=2.4.1nb2
 BUILDLINK_PKGSRCDIR.eel2?=	../../devel/eel2
+.endif	# EEL2_BUILDLINK3_MK
 
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gail/buildlink3.mk"
@@ -26,7 +27,5 @@ BUILDLINK_PKGSRCDIR.eel2?=	../../devel/eel2
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-
-.endif	# EEL2_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

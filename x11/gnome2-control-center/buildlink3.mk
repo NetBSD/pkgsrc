@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/05 19:25:42 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/03/18 09:12:16 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GNOME2_CONTROL_CENTER_BUILDLINK3_MK:=	${GNOME2_CONTROL_CENTER_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	gnome2-control-center
 .if !empty(GNOME2_CONTROL_CENTER_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gnome2-control-center+=	gnome2-control-center>=2.4.0nb2
 BUILDLINK_PKGSRCDIR.gnome2-control-center?=	../../x11/gnome2-control-center
+.endif	# GNOME2_CONTROL_CENTER_BUILDLINK3_MK
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
@@ -30,7 +31,5 @@ BUILDLINK_PKGSRCDIR.gnome2-control-center?=	../../x11/gnome2-control-center
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
-
-.endif	# GNOME2_CONTROL_CENTER_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
