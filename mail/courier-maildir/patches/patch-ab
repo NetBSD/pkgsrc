@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2005/02/18 22:12:50 jlam Exp $
+
+--- configure.orig	2005-01-11 21:12:03.000000000 -0500
++++ configure
+@@ -19891,7 +19891,7 @@ echo "$as_me: error: courierauthconfig n
+ fi
+ 
+ $COURIERAUTHCONFIG --configfiles | sed 's/^/auth/' >configtmp
+-. configtmp
++. ./configtmp
+ 
+ # Check whether --with-courierlogger or --without-courierlogger was given.
+ if test "${with_courierlogger+set}" = set; then

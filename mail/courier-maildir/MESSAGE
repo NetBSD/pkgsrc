@@ -1,11 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/07/14 20:05:50 jlam Exp $
+$NetBSD: MESSAGE,v 1.2 2005/02/18 22:12:50 jlam Exp $
 
-If you are planning on using Courier-IMAP or SqWebMail to serve mail on
-the system and you will be using shared maildirs, then you should create
-a cron job that runs at regular intervals (once ever few hours is fine)
-that executes the following script to update the shared folder index:
+If you are planning on using Courier-IMAP or SqWebMail to serve mail
+on the system and you will be using shared maildirs, then you should
+create a cron job that runs at regular intervals (once every few hours
+is fine) that executes the following script to update the shared folder
+index:
 
-    ${PREFIX}/share/courier/sharedindexupdate
+    ${PKG_SYSCONFDIR}/sharedindexupdate
 
 ===========================================================================
