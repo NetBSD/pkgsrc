@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.1 2000/07/28 00:46:17 hubertf Exp $
+#	$Id: bsd.bulk-pkg.mk,v 1.2 2000/07/28 01:16:04 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -32,7 +32,6 @@
 ##
 ## For this to work, put
 ##   DEPENDS_TARGET=	bulk-install
-##   PKG_MISC_TARGETS+=	bulk-install bulk-package
 ##   BATCH=		yes
 ## into your /etc/mk.conf, then cd /usr/pkgsrc; make bulk-package
 ##
