@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/02/01 22:26:01 recht Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/02/15 15:47:42 recht Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -207,8 +207,8 @@ share/TeXmacs/doc/about/welcome/welcome.es.tm
 share/TeXmacs/doc/about/welcome/welcome.fr.tm
 share/TeXmacs/doc/about/welcome/welcome.it.tm
 share/TeXmacs/doc/devel/format/env-vars.de.tm
-share/TeXmacs/doc/devel/format/env-vars.en.tm
 share/TeXmacs/doc/devel/format/env-vars.fr.tm
+share/TeXmacs/doc/devel/format/environment/environment.en.tm
 share/TeXmacs/doc/devel/format/format.de.tm
 share/TeXmacs/doc/devel/format/format.en.tm
 share/TeXmacs/doc/devel/format/format.fr.tm
@@ -216,12 +216,29 @@ share/TeXmacs/doc/devel/format/language/auxiliaries.en.tm
 share/TeXmacs/doc/devel/format/language/environment.en.tm
 share/TeXmacs/doc/devel/format/language/language.en.tm
 share/TeXmacs/doc/devel/format/language/lengths.en.tm
+share/TeXmacs/doc/devel/format/language/process.en.tm
 share/TeXmacs/doc/devel/format/language/strings.en.tm
+share/TeXmacs/doc/devel/format/language/syntax.en.tm
 share/TeXmacs/doc/devel/format/leaves.fr.tm
 share/TeXmacs/doc/devel/format/planned-changes.fr.tm
-share/TeXmacs/doc/devel/format/primitives.en.tm
 share/TeXmacs/doc/devel/format/primitives.fr.tm
-share/TeXmacs/doc/devel/format/syntax.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-functional.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-fundamental.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-graphic.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-howtoread.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-indent.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-line-break.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-link.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-math.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-obscure.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-page-break.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-physical-misc.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-physical.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-space.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-style.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-table.en.tm
+share/TeXmacs/doc/devel/format/primitives/prim-transient.en.tm
+share/TeXmacs/doc/devel/format/primitives/primitives.en.tm
 share/TeXmacs/doc/devel/format/trees.de.tm
 share/TeXmacs/doc/devel/format/trees.fr.tm
 share/TeXmacs/doc/devel/interface/interface-background.en.tm
@@ -1828,7 +1845,9 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/doc/devel/source
 @dirrm share/TeXmacs/doc/devel/plugin
 @dirrm share/TeXmacs/doc/devel/interface
+@dirrm share/TeXmacs/doc/devel/format/primitives
 @dirrm share/TeXmacs/doc/devel/format/language
+@dirrm share/TeXmacs/doc/devel/format/environment
 @dirrm share/TeXmacs/doc/devel/format
 @dirrm share/TeXmacs/doc/devel
 @dirrm share/TeXmacs/doc/about/welcome
