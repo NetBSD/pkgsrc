@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2003/12/04 10:57:42 tron Exp $
+# $NetBSD: Makefile,v 1.50 2004/01/20 05:16:42 grant Exp $
 
-DISTNAME=	rsync-2.5.7
+DISTNAME=	rsync-2.6.0
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 		ftp://rsync.samba.org/pub/rsync/ \
@@ -20,11 +20,11 @@ CONFIGURE_ARGS+=	--with-included-popt
 
 PKG_SYSCONFSUBDIR=	rsync
 
-post-patch:
-	@cd ${WRKSRC} && \
-	for f in rsync.h rsync.1 rsyncd.conf.5 ; do \
-		${MV} $${f} $${f}.orig;			\
-		${SED} ${FILES_SUBST_SED} $${f}.orig > $${f};	\
-	done
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	rsync.h rsync.1 rsyncd.conf.5
+SUBST_SED.paths=	-e 's|/etc/rsyncd|${PKG_SYSCONFDIR}/rsyncd|g' \
+			-e 's|/usr/bin/rsync|${PREFIX}/bin/rsync|g'
 
 .include "../../mk/bsd.pkg.mk"

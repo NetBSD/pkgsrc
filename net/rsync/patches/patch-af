@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.3 2003/04/11 03:56:06 salo Exp $
+$NetBSD: patch-af,v 1.4 2004/01/20 05:16:42 grant Exp $
 
---- socket.c.orig	2003-01-27 04:35:09.000000000 +0100
-+++ socket.c	2003-04-11 05:07:48.000000000 +0200
-@@ -292,59 +292,30 @@
+--- socket.c.orig	2003-08-22 00:04:13.000000000 -0500
++++ socket.c
+@@ -292,59 +292,30 @@ int open_socket_out_wrapped (char *host,
   * @param bind_address Local address to bind, or NULL to allow it to
   * default.
   **/
@@ -34,9 +34,7 @@ $NetBSD: patch-af,v 1.3 2003/04/11 03:56:06 salo Exp $
 -	for (resp = all_ai; resp; resp = resp->ai_next) {
 -		s = socket(resp->ai_family, resp->ai_socktype,
 -			   resp->ai_protocol);
-+	s = socket(resp->ai_family, resp->ai_socktype,
-+		   resp->ai_protocol);
- 
+-
 -		if (s == -1) 
 -			/* See if there's another address that will work... */
 -			continue;
@@ -50,7 +48,9 @@ $NetBSD: patch-af,v 1.3 2003/04/11 03:56:06 salo Exp $
 -			close(s);
 -			continue;
 -		}
--
++	s = socket(resp->ai_family, resp->ai_socktype,
++		   resp->ai_protocol);
+ 
 -		freeaddrinfo(all_ai);
 -		return s;
 +	if (s == -1) 
@@ -76,8 +76,8 @@ $NetBSD: patch-af,v 1.3 2003/04/11 03:56:06 salo Exp $
  }
  
  
-@@ -373,24 +344,52 @@
- 	return(getsockopt(fd, SOL_SOCKET, SO_TYPE, (char *)&v, &l) == 0);
+@@ -382,24 +353,52 @@ static RETSIGTYPE sigchld_handler(UNUSED
+ #endif
  }
  
 +#define	MAXSOCK	20
@@ -137,7 +137,7 @@ $NetBSD: patch-af,v 1.3 2003/04/11 03:56:06 salo Exp $
  
  	/* now accept incoming connections - forking a new process
  	   for each incoming connection */
-@@ -407,49 +406,54 @@
+@@ -416,42 +415,47 @@ void start_accept_loop(int port, int (*f
  		log_close();
  
  		FD_ZERO(&fds);
@@ -149,33 +149,15 @@ $NetBSD: patch-af,v 1.3 2003/04/11 03:56:06 salo Exp $
 +		if (select(maxsock + 1, &fds, NULL, NULL, NULL) < 0)
  			continue;
 -		}
- 
+-
 -		if(!FD_ISSET(s, &fds)) continue;
-+		for (i = 0; i < nsock; i++) {
-+			if (!FD_ISSET(s[i], &fds))
-+				continue;
  
 -		fd = accept(s,(struct sockaddr *)&addr,&addrlen);
-+			fd = accept(s[i], (struct sockaddr *)&addr, &addrlen);
- 
+-
 -		if (fd == -1) continue;
-+			if (fd == -1)
-+				continue;
- 
--		signal(SIGCHLD, SIG_IGN);
-+			signal(SIGCHLD, SIG_IGN);
- 
--		/* we shouldn't have any children left hanging around
--		   but I have had reports that on Digital Unix zombies
--		   are produced, so this ensures that they are reaped */
-+			/* we shouldn't have any children left hanging around
-+			   but I have had reports that on Digital Unix zombies
-+			   are produced, so this ensures that they are reaped */
- #ifdef WNOHANG
--                while (waitpid(-1, NULL, WNOHANG) > 0);
-+	                while (waitpid(-1, NULL, WNOHANG) > 0);
- #endif
- 
+-
+-		signal(SIGCHLD, sigchld_handler);
+-
 -		if ((pid = fork()) == 0) {
 -			int ret;
 -			close(s);
@@ -198,6 +180,17 @@ $NetBSD: patch-af,v 1.3 2003/04/11 03:56:06 salo Exp $
 -		} else {
 -			/* Parent doesn't need this fd anymore. */
 -			close(fd);
++		for (i = 0; i < nsock; i++) {
++			if (!FD_ISSET(s[i], &fds))
++				continue;
++
++			fd = accept(s[i], (struct sockaddr *)&addr, &addrlen);
++
++			if (fd == -1)
++				continue;
++
++			signal(SIGCHLD, sigchld_handler);
++
 +			if ((pid = fork()) == 0) {
 +				int ret;
 +				for (i = 0; i < nsock; i++)
@@ -209,7 +202,7 @@ $NetBSD: patch-af,v 1.3 2003/04/11 03:56:06 salo Exp $
 +				close_all();
 +				_exit(ret);
 +			} else if (pid < 0) {
-+					rprintf(FERROR,
++				rprintf(FERROR,
 +					RSYNC_NAME
 +					": could not create child server process: %s\n",
 +					strerror(errno));

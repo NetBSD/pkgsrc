@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2003/03/06 20:44:14 salo Exp $
+$NetBSD: patch-ab,v 1.9 2004/01/20 05:16:42 grant Exp $
 
---- Makefile.in.orig	2003-01-20 19:26:14.000000000 +0100
-+++ Makefile.in	2003-03-06 20:50:23.000000000 +0100
-@@ -60,12 +60,11 @@
+--- Makefile.in.orig	2003-07-30 01:12:25.000000000 -0500
++++ Makefile.in
+@@ -61,12 +61,11 @@ all: rsync$(EXEEXT)
  man: rsync.1 rsyncd.conf.5
  
  install: all

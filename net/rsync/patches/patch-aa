@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.8 2002/03/12 16:02:57 tron Exp $
+$NetBSD: patch-aa,v 1.9 2004/01/20 05:16:42 grant Exp $
 
---- match.c.orig	Sun Feb  3 02:38:39 2002
-+++ match.c	Tue Mar 12 16:55:19 2002
-@@ -247,7 +247,7 @@
+--- match.c.orig	2003-12-06 15:07:27.000000000 -0600
++++ match.c
+@@ -256,7 +256,7 @@ static void hash_search(int f,struct sum
  		   running match, the checksum update and the
  		   literal send. */
- 		if (offset > last_match &&
--		    offset-last_match >= CHUNK_SIZE+s->n && 
-+		    offset >= last_match+CHUNK_SIZE+s->n && 
- 		    (end-offset > CHUNK_SIZE)) {
- 			matched(f,s,buf,offset - s->n, -2);
+ 		if (offset > last_match
+-		 && offset-last_match >= CHUNK_SIZE+s->blength
++		 && offset >= last_match+CHUNK_SIZE+s->blength
+ 		 && end-offset > CHUNK_SIZE) {
+ 			matched(f,s,buf,offset - s->blength, -2);
  		}
