@@ -1,7 +1,7 @@
-$NetBSD: patch-be,v 1.1 2002/01/03 20:40:45 tron Exp $
+$NetBSD: patch-be,v 1.2 2002/03/28 10:11:54 jmc Exp $
 
---- ../gcc-2.95.3/gcc/config/elfos.h.orig	Wed Apr 12 03:22:51 2000
-+++ ../gcc-2.95.3/gcc/config/elfos.h	Thu Jan  3 20:37:54 2002
+--- ../gcc-2.95.3/gcc/config/elfos.h.orig 2001/04/23 11:59:20 1.1.1.2
++++ ../gcc-2.95.3/gcc/config/elfos.h 2001/05/03 18:20:47 1.4
 @@ -48,6 +48,7 @@
  
  /* Output #ident as a .ident.  */

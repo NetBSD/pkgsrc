@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.2 2002/01/03 20:40:42 tron Exp $
+$NetBSD: patch-ai,v 1.3 2002/03/28 10:11:52 jmc Exp $
 
---- ../gcc-2.95.3/gcc/config/arm/elf.h.orig	Mon May 31 10:21:53 1999
-+++ ../gcc-2.95.3/gcc/config/arm/elf.h	Thu Jan  3 20:37:53 2002
+--- ../gcc-2.95.3/gcc/config/arm/elf.h.orig 2000/07/26 00:18:16 1.1.1.1
++++ ../gcc-2.95.3/gcc/config/arm/elf.h 2001/05/03 18:20:47 1.2
 @@ -163,6 +163,15 @@
  #define TARGET_DEFAULT (ARM_FLAG_SOFT_FLOAT | ARM_FLAG_APCS_32)
  #endif
