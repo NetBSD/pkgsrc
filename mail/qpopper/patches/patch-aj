@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1 1999/09/15 21:38:45 tron Exp $
+
+--- pop_apop.c.orig	Fri Jul 10 08:44:07 1998
++++ pop_apop.c	Sat Sep 11 09:09:30 1999
+@@ -178,6 +178,8 @@
+ 	dbm_close (db);
+ #endif
+ 	return(pop_auth_fail(p, POP_FAILURE, "not authorized"));
++    } else {
++	ddatum.dptr = obscure(ddatum.dptr);
+     }
+ 
+ #ifdef GDBM
+@@ -189,7 +191,7 @@
+ 
+     MD5Init(&mdContext);
+     MD5Update(&mdContext, (unsigned char *)p->md5str, strlen(p->md5str));
+-    MD5Update(&mdContext, (unsigned char *)obscure(ddatum.dptr), (ddatum.dsize - 1));
++    MD5Update(&mdContext, (unsigned char *)ddatum.dptr, (ddatum.dsize - 1));
+     MD5Final(digest, &mdContext);
+ 
+     cp = buffer;
