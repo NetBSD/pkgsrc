@@ -1,0 +1,8 @@
+sysgen reads DEC Qbus or UNIBUS device names from standard input,
+assigns CSR addresses and interrupt vectors to the devices according
+to the DEC standard algorithm for auto-configuration, and prints
+the resulting list of allocations to standard output.
+
+The program attempts to conform to the CONFIG command of the  VMS
+SYSGEN program, but has simplified output.  Specifically, it does
+not print information about VMS device naming and support.
