@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/01/07 03:56:26 uebayasi Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/07 14:47:16 wiz Exp $
 #
 
 DISTNAME=		cassowary-0.60
@@ -10,16 +10,16 @@ HOMEPAGE=		http://www.cs.washington.edu/research/constraints/cassowary/
 COMMENT=		Constraint-solving toolkit for linear equalities and inequalities
 
 BUILD_DEPENDS+=		bison>=1.34:../../devel/bison
-DEPENDS+=		gtl>=0.3.2:../../devel/gtl
 
+USE_BUILDLINK2=		# defined
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--enable-fd-solver
-CONFIGURE_ARGS+=	--with-guile-prefix=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-gtl=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-guile-prefix=${BUILDLINK_PREFIX.guile14}
+CONFIGURE_ARGS+=	--with-gtl=${BUILDLINK_PREFIX.gtl}
 
 YACC=			bison -y
 
@@ -35,5 +35,6 @@ MAKE_ENV+=		CXX=${LOCALBASE}/egcs/bin/g++
 post-install:
 	cd ${PREFIX}/lib/cassowary && ${RMDIR} -p bench
 
+.include "../../devel/gtl/buildlink2.mk"
 .include "../../lang/guile14/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
