@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.4 2004/01/20 02:48:33 jschauma Exp $
+$NetBSD: patch-ac,v 1.5 2004/04/09 13:06:06 adam Exp $
 
---- Makefile.orig	2004-01-19 18:31:20.000000000 -0500
-+++ Makefile	2004-01-19 18:31:54.000000000 -0500
-@@ -79,7 +79,7 @@
- 	@echo "  make linux-icc             for Linux with the Intel C/C++ compiler"
+--- Makefile.orig	2004-04-02 23:29:33.000000000 +0000
++++ Makefile
+@@ -104,7 +104,7 @@ default:
+ 	@echo "  make linux-ia64-ecc-static-nothreads  for Linux IA64 with the Intel C/C++ compiler, static, no threads"
  	@echo "  make lynxos                for LynxOS systems with GCC"
  	@echo "  make mklinux               for Linux on Power Macintosh"
 -	@echo "  make netbsd                for NetBSD 1.0 systems with GCC"
@@ -11,12 +11,12 @@ $NetBSD: patch-ac,v 1.4 2004/01/20 02:48:33 jschauma Exp $
  	@echo "  make openbsd               for OpenBSD systems"
  	@echo "  make openstep              for OpenStep/MacOSX Server systems"
  	@echo "  make osf1                  for DEC Alpha systems with OSF/1"
-@@ -115,7 +115,7 @@
+@@ -152,7 +152,7 @@ linux-glide linux-x86-glide linux-glide-
  linux-alpha-static linux-alpha \
  linux-ppc-static linux-ppc \
  linux-sparc linux-sparc5 linux-sparc-ultra \
--mklinux netbsd osf1 openbsd qnx \
-+mklinux pkgsrc osf1 openbsd qnx \
+-mklinux netbsd osf1 osf1-nothreads openbsd qnx \
++mklinux pkgsrc osf1 osf1-nothreads openbsd qnx \
  solaris-x86 solaris-x86-gcc \
  sunos4 sunos4-sl sunos4-gcc sunos4-gcc-sl sunos4-gcc-x11r6-sl \
  sunos5 sunos5-smp sunos5-gcc sunos5-gcc-debug \
