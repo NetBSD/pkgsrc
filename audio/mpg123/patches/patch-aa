@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.23 2002/11/28 12:24:07 markd Exp $
+$NetBSD: patch-aa,v 1.24 2004/03/17 04:49:48 danw Exp $
 
 --- Makefile.orig	Mon Nov 25 22:42:10 2002
 +++ Makefile
@@ -226,3 +226,20 @@ $NetBSD: patch-aa,v 1.23 2002/11/28 12:24:07 markd Exp $
  		mpg123-make
  
  bsdos:
+@@ -554,6 +737,16 @@
+ generic:
+ 	$(MAKE) LDFLAGS= OBJECTS='decode.o dct64.o audio_dummy.o' \
+ 		CFLAGS='$(CFLAGS) -O -DGENERIC -DNOXFERMEM' \
++		mpg123-make
++
++darwin-esd:
++	$(MAKE) CC=cc LDFLAGS= \
++		AUDIO_LIB="`esd-config --libs`" \
++		OBJECTS='decode.o dct64.o audio_esd.o term.o' \
++		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O3 -fomit-frame-pointer \
++			-funroll-all-loops -ffast-math -DREAD_MMAP \
++			-DREAL_IS_FLOAT -DUSE_MMAP -DTERM_CONTROL \
++			`esd-config --cflags`' \
+ 		mpg123-make
+ 
+ ###########################################################################
