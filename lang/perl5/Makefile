@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/22 12:44:31 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/08/15 01:37:19 kim Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/18 06:16:44 markm Exp
 #
 
@@ -13,6 +13,7 @@ MAINTAINER=		packages@netbsd.org
 OPSYS!=			uname -s
 LOPSYS!= 		echo ${OPSYS}|tr [A-Z] [a-z]
 HAS_CONFIGURE=		yes
+CONFIGURE_ENV+=		PREFIX=${PREFIX}
 CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} \
 			-Darchname=${MACHINE_ARCH}-${LOPSYS}
