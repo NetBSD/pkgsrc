@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/03/08 20:27:13 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/05/27 21:30:28 hubertf Exp $
 #
 
 DISTNAME=	liveice
@@ -16,6 +16,8 @@ DEPENDS+=	tk>=8.0:../../x11/tk83
 
 GNU_CONFIGURE=	YES
 DIST_SUBDIR=	liveice-0.20001121
+USE_BUILDLINK3=	yes
+LIBS+=		${LIBOSSAUDIO}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/liveice ${PREFIX}/bin
@@ -32,4 +34,5 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/liveice ; \
 	done
 
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
