@@ -1,0 +1,45 @@
+# $NetBSD: buildcmd,v 1.1 2003/10/03 19:39:19 jlam Exp $
+#
+# Append $arg to $cmd to build up the command line to be executed, but
+# directly add the next few arguments to $cmd if $skipargs > 0.
+
+if $test $skipargs -gt 0; then
+	cmd="$cmd $arg"
+	while $test $skipargs -gt 0; do
+		arg=$1; shift
+		. $quotearg
+		arg="$qarg"
+		cmd="$cmd $arg"
+		skipargs=`$expr $skipargs - 1`
+	done
+else
+	#
+	# Reduce command length by not appending options that we've
+	# already seen to the command.
+	#
+	case $arg in
+	-[DILR]*|-Wl,-R*|-Wl,-*,/*)
+		#
+		# These options are only ever useful the first time
+		# they're given.  All other instances are redundant.
+		#
+		case "$cmd" in
+		*" "$arg|*" "$arg" "*)	;;
+		*)	cmd="$cmd $arg" ;;
+		esac
+		;;
+	-l*)
+		#
+		# Extra libraries are suppressed only if they're
+		# repeated, e.g. "-lm -lm -lm -lm" -> "-lm".
+		#
+		case "$cmd" in
+		*" "$arg)	;;
+		*)	cmd="$cmd $arg" ;;
+		esac
+		;;
+	*)
+		cmd="$cmd $arg"
+		;;
+	esac
+fi
