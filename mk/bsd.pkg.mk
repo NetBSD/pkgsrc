@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.29 2003/08/23 07:41:58 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.30 2003/08/23 09:35:30 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -187,7 +187,7 @@ PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
 
 .if ${PKG_INSTALLATION_TYPE} == "overwrite"
 PKG_DBDIR=		${PKG_DBDIR_DFLT}
-.elif ${PKG_INSTALLATION_TYPE} == "pkgview"
+.elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
 PKG_DBDIR=		${DEPOTBASE}
 #
 # _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
