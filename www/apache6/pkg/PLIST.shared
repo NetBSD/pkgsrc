@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.shared,v 1.1 2001/02/06 10:58:20 itojun Exp $
-lib/httpd/mod_proxy.so
-lib/httpd/httpd.exp
-@dirrm lib/httpd

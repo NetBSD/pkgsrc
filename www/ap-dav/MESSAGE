@@ -1,0 +1,16 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 02:15:40 zuntum Exp $
+
+In order to use mod_dav in your Apache installation, you need to add
+the following to your httpd.conf file:
+
+  LoadModule dav_module lib/httpd/mod_dav.so
+  AddModule mod_dav.c
+
+Please read the information in
+
+	${PREFIX}/share/doc/mod_dav/INSTALL
+
+to learn how to properly enable DAV support in your Apache configuration.
+
+=============================================================================

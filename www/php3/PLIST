@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:26 zuntum Exp $
+bin/php
+bin/php2convert
+etc/php3.ini.example
+@exec [ -f %D/etc/php3.ini ] || cp %D/etc/php3.ini.example %D/etc/php3.ini
+libexec/cgi-bin/php
+share/examples/php3/README.logging
+share/examples/php3/date.php3
+share/examples/php3/dir.php3
+share/examples/php3/log-db.php3
+share/examples/php3/log-footer.php3
+share/examples/php3/log-header.php3
+share/examples/php3/log-test.php3
+share/php3/README
+share/php3/php2.gif
+share/php3/php3.gif
+share/php3/phpi.gif
+share/php3/phps.gif
+@exec mkdir -p %D/lib/php3
+@dirrm lib/php3
+@dirrm share/examples/php3
+@dirrm share/php3
