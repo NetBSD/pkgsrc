@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/07/09 05:43:37 sakamoto Exp $
+$NetBSD: md5,v 1.2 1999/08/17 02:16:44 sakamoto Exp $
 
-MD5 (ruby-1.3.4-990625.tar.gz) = 0d88c18c42b79050b22f84a401a490bf
+MD5 (ruby-1.4.0.tar.gz) = e093dcd834caeedd84459d62e09e72ea
