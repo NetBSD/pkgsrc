@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2000/04/16 15:19:14 rh Exp $
+# $NetBSD: Makefile,v 1.14 2000/06/17 12:51:11 rh Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/11/09 09:24:20 max Exp
 #
 
-DISTNAME=	delegate6.1.7
-PKGNAME=	delegate-6.1.7
+DISTNAME=	delegate6.1.14
+PKGNAME=	delegate-6.1.14
 CATEGORIES=	net
 MASTER_SITES=	ftp://etlport.etl.go.jp/pub/DeleGate/ \
 		ftp://ftp.kyushu-u.ac.jp/pub/Net/WWW/server/delegate/ \
