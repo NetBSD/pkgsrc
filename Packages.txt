@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.58 1999/08/16 14:12:40 bad Exp $
+# $NetBSD: Packages.txt,v 1.59 1999/08/21 02:15:23 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1005,7 +1005,19 @@ perform the equivalent of:
 
  * deinstall:
    This target does a pkg_delete(1) in the current directory,
-   effectively de-installing the package.
+   effectively de-installing the package. The following variables can
+   be used either on the command line of in /etc/mk.conf to tune the
+   behaviour: 
+
+    - PKG_VERBOSE:
+      Add a "-v" to the pkg_delete(1) command.
+      
+    - DEINSTALLDEPENDS:
+      Remove all packages that require (depend on) the given package.
+      This can be used to remove any packages that may have been pulled in
+      by a given package, e.g. if "make deinstall DEINSTALLDEPENDS=1" is
+      done in x11/kde, this is likely to remove whole KDE. Works by adding
+      a "-R" to the pkg_delete command line.
 
  * readme:
    This target generates a README.html file, which can be viewed using a
