@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1237 2003/12/23 23:01:08 wiz Exp $
+$NetBSD: TODO,v 1.1238 2003/12/24 22:52:31 veego Exp $
 
 Suggested new packages
 ======================
@@ -296,7 +296,7 @@ Suggested package updates
 	o teapop-0.3.8
 	o tkman-2.2
 	o top-3.5b12.10
-	o transcode-0.6.11
+	o transcode-0.6.11 [veego]
 	o ttf2pt1-3.4.3
 	o txt2html-2.20 [wennmach]
 	o vfu-4.03
