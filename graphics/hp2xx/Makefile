@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/03/29 12:41:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2003/07/03 17:31:04 seb Exp $
 #
 
 DISTNAME=	hp2xx-3.4.0
@@ -11,14 +11,15 @@ MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/hp2xx/hp2xx.html
 COMMENT=	HPGL converter and previewer
 
-DEPENDS+=	png>=1.2.1:../../graphics/png
-DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
-
 USE_X11=	yes
+USE_BUILDLINK2=	YES
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
 INFO_FILES=	hp2xx.info
 
 post-extract:
 	${CP} ${WRKSRC}/../makes/generic.mak ${WRKSRC}/Makefile
 
-.include "../../mk/texinfo.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
