@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2198 2004/10/04 22:42:51 wiz Exp $
+$NetBSD: TODO,v 1.2199 2004/10/05 12:46:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -184,7 +184,7 @@ Suggested package updates
 	o abiword-2.0.10 [pkg/26695]
 	o afterstep-2.00.00
 	o ald-0.1.6 [pkg/26431]
-	o allegro-4.1.15
+	o allegro-4.1.16
 	o amavisd-new-2.1.2 [pkg/26843]
 	o anjuta-1.2.2
 	o ap-jk-5.0.25
@@ -366,7 +366,7 @@ Suggested package updates
 	o onyx-5.1.1
 	o openal-20040215
 	o openh323-1.12.2
-	o openoffice-1.1.2
+	o openoffice-1.1.3
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
 	o oss-3.99.1g
 	o p5-CGI-3.05
