@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/29 17:46:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/30 16:48:44 cjep Exp $
 #
 
 DISTNAME=		at-spi-1.3.8
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		Assistive Technology Service Provider Interface		
+COMMENT=		Assistive Technology Service Provider Interface
 
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 

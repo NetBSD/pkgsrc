@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/20 11:24:51 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/30 16:53:35 cjep Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -53,7 +53,7 @@ post-install:
 	${LN} -s libgdk.so libgdk-1.2.so.0;				\
 	${LN} -s libglib.so libglib-1.2.so.0;				\
 	${LN} -s libgmodule.so libgmodule-1.2.so.0
-	
+
 .endif
 	@${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	@${ECHO} bin/MozillaFirebird-${PLATFORM} >> ${PLIST_SRC}
