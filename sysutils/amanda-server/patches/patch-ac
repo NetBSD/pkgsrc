@@ -1,19 +1,31 @@
-$NetBSD: patch-ac,v 1.5 2001/01/16 21:59:39 cjones Exp $
+$NetBSD: patch-ac,v 1.6 2004/05/12 18:45:26 bouyer Exp $
 
---- example/amanda.conf.chg-scsi.in~	Thu Jun 17 12:33:43 1999
-+++ example/amanda.conf.chg-scsi.in	Mon Jan 15 14:26:31 2001
-@@ -153,10 +153,10 @@
- # Note that, although the keyword below is infofile, it is only so for
- # historic reasons, since now it is supposed to be a directory (unless
- # you have selected some database format other than the `text' default)
--infofile "/usr/adm/amanda/@DEFAULT_CONFIG@/curinfo"	# database DIRECTORY
--logdir   "/usr/adm/amanda/@DEFAULT_CONFIG@"		# log directory
--indexdir "/usr/adm/amanda/@DEFAULT_CONFIG@/index"	# index directory
--#tapelist "/usr/adm/amanda/@DEFAULT_CONFIG@/tapelist"	# list of used tapes
-+infofile "@localstatedir@/@DEFAULT_CONFIG@/curinfo"	# database DIRECTORY
-+logdir   "@localstatedir@/@DEFAULT_CONFIG@"		# log directory
-+indexdir "@localstatedir@/@DEFAULT_CONFIG@/index"	# index directory
-+#tapelist "@localstatedir@/@DEFAULT_CONFIG@/tapelist"	# list of used tapes
- # tapelist is stored, by default, in the directory that contains amanda.conf
+--- example/Makefile.in.orig	2004-01-08 10:23:49.000000000 -0800
++++ example/Makefile.in	2004-02-23 07:54:24.000000000 -0800
+@@ -35,7 +35,7 @@
+ mandir = @mandir@
+ includedir = @includedir@
+ oldincludedir = /usr/include
+-pkgdatadir = $(datadir)/@PACKAGE@
++pkgdatadir = $(datadir)/examples/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+ top_builddir = ..
+@@ -278,7 +278,16 @@
  
+ info-am:
+ 
+-install-data-am:
++install-data-am: $(noinst_DATA) $(EXTRA_DIST)  
++	@$(NORMAL_INSTALL)
++	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)
++	@list='$(noinst_DATA) $(EXTRA_DIST)'; for p in $$list; do \
++	  if test -f "$$p"; then d= ; else d="$(srcdir)/"; fi; \
++	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(pkgdatadir)/$$f"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(pkgdatadir)/$$f; \
++	done
++
+ 
+ install-exec-am:
  
