@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2001/11/27 16:10:10 wiz Exp $
+
+--- src/fe-text/Makefile.am.orig	Mon Feb 19 07:23:03 2001
++++ src/fe-text/Makefile.am
+@@ -10,8 +10,6 @@
+ 	$(CURSES_INCLUDEDIR) \
+ 	-DLOCALEDIR=\""$(datadir)/locale"\"
+ 
+-irssi_DEPENDENCIES = @COMMON_LIBS@
+-
+ irssi_LDADD = \
+ 	@COMMON_LIBS@ \
+ 	@PERL_LINK_LIBS@ \
