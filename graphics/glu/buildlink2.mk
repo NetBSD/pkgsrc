@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.2.2 2002/06/21 23:00:31 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.1.2.3 2002/06/24 16:12:57 jlam Exp $
 
 .if !defined(GLU_BUILDLINK2_MK)
 GLU_BUILDLINK2_MK=	# defined
@@ -11,12 +11,13 @@ BUILDLINK_PKGSRCDIR.glu?=	../../graphics/glu
 # Check if we got libGLU distributed with XFree86 4.x or if we need to
 # depend on the glu package.
 #
+_REQUIRE_BUILTIN_GLU?=	NO
 .if exists(${X11BASE}/include/GL/glu.h)
 _IS_BUILTIN_GLU!=	${EGREP} -c BuildGLULibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 _IS_BUILTIN_GLU=	0
 .endif
-.if ${_IS_BUILTIN_GLU} == "0"
+.if (${_IS_BUILTIN_GLU} == "0") && (${_REQUIRE_BUILTIN_GLU} == "NO")
 _NEED_GLU=		YES
 .else
 _NEED_GLU=		NO
