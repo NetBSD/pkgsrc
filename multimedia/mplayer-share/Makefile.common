@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2004/03/06 12:09:53 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.5 2004/04/10 12:16:12 salo Exp $
 #
 
 MPLAYER_DIST_VERSION=	1.0pre3
@@ -56,8 +56,8 @@ BUILD_DEFS+=		MPLAYER_ENABLE_RUNTIME_CPU_DETECTION
 CONFIGURE_ARGS+=	--with-reallibdir="${LOCALBASE}/lib/RealPlayer8-Codecs"
 .endif
 
-.if defined(BUILDLINK_PREFIX.cdparanoia)
-CONFIGURE_ARGS+=	--with-cdparanoiaincdir="${BUILDLINK_PREFIX.cdparanoia}/include/cdparanoia"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-cdparanoiaincdir="${LOCALBASE}/include/cdparanoia"
 .endif
 
 .if ${OPSYS} == "SunOS" && !empty(MPLAYER_USE_MEDIALIB:M[Yy][Ee][Ss])
