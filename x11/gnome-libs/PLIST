@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/01/14 21:41:07 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/01/30 11:14:43 jmmv Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -591,9 +591,9 @@ share/type-convert/type.convert
 @dirrm share/gnome/html
 @dirrm share/gnome/help/gnome-dev-info/C
 @dirrm share/gnome/help/gnome-dev-info
-@dirrm share/gnome/help
-@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome 2>/dev/null || ${TRUE}
+@comment in gnome1-dirs: @dirrm share/gnome/help
+@comment in gnome1-dirs: @dirrm share/gnome/apps
+@comment in gnome1-dirs: @dirrm share/gnome
 @dirrm share/doc/html/libart
 @dirrm share/doc/gnome-libs
 @dirrm lib/gnome-libs/include
