@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.8 2001/10/12 19:28:02 hubertf Exp $
+# $NetBSD: printdepends,v 1.9 2001/10/14 20:34:53 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -34,6 +34,15 @@
 # Print list of pkg dependencies suitable for tsort(1).
 # Start in /usr/pkgsrc.
 #
+# If an argument is given, use it as a file name
+# to contain any failure messages in each package directory.
+#
+
+if [ ! -z "$1" ]; then
+	brokenfile=$1
+else
+	brokenfile=/dev/null
+fi
 
 # /usr/pkgsrc
 cwd=$PWD
@@ -54,14 +63,24 @@ do
 		cd $pkgdir
 
 		l=`make show-depends-dirs`
-		if [ "$l" = "" ]; then
-			# No dependencies
+		if [ $? != 0 ]; then
+			echo "WARNING (printdepends):  the package in $pkgdir had problem with" > /dev/stderr
+			echo "    make show-depends-dirs" > /dev/stderr
+			echo "    dependency information in the cache will" > /dev/stderr
+			echo "    be dropped for $pkgdir" > /dev/stderr
+			echo "make show-depends-dirs failed:" > $brokenfile
+			make show-depends-dirs  >> $brokenfile 2>&1
 			echo "$pkgdir $pkgdir"
 		else
-			for depdir in $l
-			do
-				echo "$depdir $pkgdir"
-			done
+			if [ "$l" = "" ]; then
+				# No dependencies
+				echo "$pkgdir $pkgdir"
+			else
+				for depdir in $l
+				do
+					echo "$depdir $pkgdir"
+				done
+			fi
 		fi
 	fi
 	cd $cwd

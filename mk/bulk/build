@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.12 2001/10/13 14:32:01 dmcmahill Exp $
+# $NetBSD: build,v 1.13 2001/10/14 20:34:53 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -70,12 +70,19 @@ else
 	sh mk/bulk/pre-build	# make veryveryclean :)
 fi
 
-cd pkgtools/pkglint
-DEPENDSTREEFILE=`make show-var VARNAME=DEPENDSTREEFILE`
-DEPENDSFILE=`make show-var VARNAME=DEPENDSFILE`
-SUPPORTSFILE=`make show-var VARNAME=SUPPORTSFILE`
-INDEXFILE=`make show-var VARNAME=INDEXFILE`
-ORDERFILE=`make show-var VARNAME=ORDERFILE`
+if [ -d pkgtools/pkglint ]; then
+	cd pkgtools/pkglint
+	DEPENDSTREEFILE=`make show-var VARNAME=DEPENDSTREEFILE`
+	DEPENDSFILE=`make show-var VARNAME=DEPENDSFILE`
+	SUPPORTSFILE=`make show-var VARNAME=SUPPORTSFILE`
+	INDEXFILE=`make show-var VARNAME=INDEXFILE`
+	ORDERFILE=`make show-var VARNAME=ORDERFILE`
+	BROKENFILE=`make show-var VARNAME=BROKENFILE`
+else
+	echo "The pkgtools/pkglint directory does not exist.  Please update"
+	echo "your pkgsrc tree in ${USR_PKGSRC}"
+	exit 1
+fi
 cd ${USR_PKGSRC}	
 
 # get the list of packages which should always be installed during the build
@@ -97,7 +104,7 @@ done
 cd ${USR_PKGSRC}
 if [ "$1" != "restart" ]; then
 	echo "Building dependency tree (this may take a while)..."
-	sh mk/bulk/printdepends > $DEPENDSTREEFILE
+	sh mk/bulk/printdepends $BROKENFILE > $DEPENDSTREEFILE
 
 	echo "Sorting build order..."
 	tsort $DEPENDSTREEFILE > $ORDERFILE
@@ -107,7 +114,7 @@ if [ "$1" != "restart" ]; then
 	./mk/bulk/tflat -d $DEPENDSTREEFILE > $DEPENDSFILE
 
 	echo "Generating package name <=> package directory cross reference file (this may take a while)..."
-	sh mk/bulk/printindex > $INDEXFILE
+	sh mk/bulk/printindex $BROKENFILE > $INDEXFILE
 
 fi
 
