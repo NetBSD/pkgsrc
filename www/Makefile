@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1998/12/05 03:49:36 tv Exp $
+# $NetBSD: Makefile,v 1.24 1998/12/05 16:27:51 tv Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -38,6 +38,7 @@
 #    SUBDIR += netscape4-communicator
 #    SUBDIR += netscape4-navigator
     SUBDIR += p5-Apache-ASP
+    SUBDIR += p5-Apache-ePerl
 #    SUBDIR += p5-CGI
     SUBDIR += p5-CGI_Lite
     SUBDIR += p5-FCGI
