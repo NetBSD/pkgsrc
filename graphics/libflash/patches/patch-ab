@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/08/28 17:33:50 rh Exp $
+
+--- Lib/Makefile.orig	Sun Jun  4 11:49:23 2000
++++ Lib/Makefile
+@@ -1,4 +1,4 @@
+-CPPFLAGS=-I../Jpeg -I../Zlib
++CPPFLAGS=-I${LOCALBASE}/include
+ # Comment out the following line if you use egcs :
+ CXXFLAGS=-O3 -Wall -fno-rtti -fno-exceptions
+ 
+@@ -34,10 +34,20 @@
+ #	bitstream.o
+ #	dump.o
+ 
++.cc.o:
++	${LIBTOOL} --mode=compile ${CXX} -c ${CPPFLAGS} ${CXXFLAGS} ${.IMPSRC}
++
+ all: libflash.a
+ 
++install:
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libflash.la ${PREFIX}/lib
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/include/flash
++.for file in ${INCLUDES}
++	${BSD_INSTALL_DATA} ${file} ${PREFIX}/include/flash
++.endfor
++
+ libflash.a: $(SWFOBJS) 
+-	ar rcs $@ $(SWFOBJS)
++	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${SWFOBJS:.o=.lo} -rpath ${PREFIX}/lib -L${PREFIX}/lib -Wl,-R${PREFIX}/lib -ljpeg -version-info 0:4
+ 
+ $(SWFOBJS): $(INCLUDES)
+ 

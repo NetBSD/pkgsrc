@@ -1,0 +1,4 @@
+  GPL Flash [tm] library is a set of source codes that allow to play
+Flash[tm] movies.  The core of the library is a graphic renderer that is
+portable is to be re-used in applications that need to play Flash[tm]
+movies.
