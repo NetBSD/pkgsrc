@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/09/22 17:00:33 ben Exp $
+# $NetBSD: Makefile,v 1.13 2004/09/22 17:38:30 ben Exp $
 #
 
 DISTNAME=		helpdc21
@@ -39,11 +39,6 @@ MASTER_SITE_SIMTEL+=	ftp://ftp.cdrom.com/pub/simtelnet/ \
 
 .if ${OPSYS} == "Linux"
 CFLAGS+=		-Dstrlcpy=strncpy
-.endif
-
-.if !empty(LOWER_OPSYS:Mirix5*)
-DEPENDS+=		../../pkgtools/libnbcompat
-LDFLAGS+=		-lgen -L${LOCALBASE}/lib -lnbcompat
 .endif
 
 MAKE_ENV+=		CFLAGS="${CFLAGS}"
