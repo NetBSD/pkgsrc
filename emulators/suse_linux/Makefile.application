@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.application,v 1.3 2002/04/04 20:31:30 tron Exp $
+# $NetBSD: Makefile.application,v 1.4 2002/04/09 01:29:25 dmcmahill Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -20,5 +20,10 @@ SUSE_VERSION=			7.3
 .endif
 
 .else
+# we put a value here so that the creation of the bulk
+# build cache files works correctly on non-i386 machines.
+# This speeds up the marking of all compat_linux packages
+# as not available.
+SUSE_DIR_PREFIX=		suse
 .include "../../mk/bsd.pkg.mk"
 .endif
