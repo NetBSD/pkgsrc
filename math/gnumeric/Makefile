@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 1999/09/10 15:39:34 rh Exp $
+# $NetBSD: Makefile,v 1.10 1999/10/10 15:35:04 rh Exp $
 #
 
-DISTNAME=	gnumeric-0.34
+DISTNAME=	gnumeric-0.38
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnumeric/}
 
@@ -10,8 +10,8 @@ HOMEPAGE=	http://www.gnome.org/gnumeric/
 
 BUILD_DEPENDS+=	${LOCALBASE}/bin/python:../../lang/python
 DEPENDS+=	gnome-core-1.0.9:../../x11/gnome-core
-DEPENDS+=	gnome-print-0.7:../../print/gnome-print
-DEPENDS+=	libglade-0.5:../../devel/libglade
+DEPENDS+=	gnome-print-*:../../print/gnome-print
+DEPENDS+=	libglade-*:../../devel/libglade
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
