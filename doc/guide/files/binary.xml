@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.6 2005/01/10 21:01:27 hubertf Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.7 2005/01/18 23:25:04 heinz Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -484,7 +484,7 @@ chroot-&rprompt; <userinput>cat $HOME/.ssh/id-dsa.pub</userinput> </screen>
       <para>
         Now take the output of <filename>id-dsa.pub</filename> and
         append it to your <filename>~/.ssh/authorized_keys</filename>
-        file on ftp.netBSD.org. You can remove the key after the
+        file on ftp.NetBSD.org. You can remove the key after the
         upload is done!
       </para>
 
