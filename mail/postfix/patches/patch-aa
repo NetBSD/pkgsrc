@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2003/01/15 17:15:05 martti Exp $
+$NetBSD: patch-aa,v 1.12 2003/04/17 06:22:18 martti Exp $
 
---- postfix-install.orig	Tue Jan 14 19:57:32 2003
-+++ postfix-install	Wed Jan 15 18:58:03 2003
-@@ -337,33 +337,13 @@
+--- postfix-install.orig	2003-03-21 21:04:53.000000000 +0200
++++ postfix-install	2003-04-17 08:53:23.000000000 +0300
+@@ -338,33 +338,13 @@
  : ${tempdir=`pwd`}
  : ${config_directory=`bin/postconf -h -d config_directory`}
  
