@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1.1.1 2003/06/03 09:17:20 jmmv Exp $
+
+--- src/gsocket.c.orig	2003-05-31 21:53:44.000000000 +0200
++++ src/gsocket.c	2003-05-31 21:54:24.000000000 +0200
+@@ -363,6 +363,7 @@
+ GSocketError GSocket_SetServer(GSocket *sck)
+ {
+   int arg = 1;
++  int intYes = 1;
+ 
+   assert(sck != NULL);
+ 
+@@ -400,7 +401,6 @@
+ /* Added by Un-Thesis 2003-05-15 */
+ /* Allows socket reuse */
+ /* Code contributed by McCabe and arkanes */
+-int intYes = 1;
+ if(setsockopt(sck->m_fd, SOL_SOCKET, SO_REUSEADDR, &intYes, sizeof(int))) {
+ 	return GSOCK_IOERR;
+ }
