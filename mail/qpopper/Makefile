@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/08/18 09:01:49 agc Exp $
+# $NetBSD: Makefile,v 1.18 1999/09/03 22:00:52 tron Exp $
 #
 
 DISTNAME=		qpopper2.53
@@ -24,7 +24,7 @@ BUILD_DEFS+=		QPOPPER_SERVERMODE USE_INET6
 .if defined(QPOPPER_SERVERMODE)
 CONFIGURE_ARGS+=	--enable-servermode
 .endif
-.if defined(USE_INET6)
+.if defined(USE_INET6) && ${USE_INET6} == YES
 CONFIGURE_ENV+=		O_DEFS="${O_DEFS}" CFLAGS="-DINET6"
 .endif
 
