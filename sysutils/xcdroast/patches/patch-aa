@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/02/10 23:23:35 frueauf Exp $
+
+--- Makefile-orig	Sun Nov 26 15:03:56 2000
++++ Makefile	Fri Feb  9 23:46:24 2001
+@@ -5,7 +5,7 @@
+ 
+ # Installation prefix directory:
+ 
+-PREFIX=/usr
++#PREFIX=/usr
+ #PREFIX=/usr/local
+ PRE_LIBDIR=$(PREFIX)/lib/xcdroast-0.98
+ 
