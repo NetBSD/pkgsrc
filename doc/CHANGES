@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4238 2003/12/23 21:12:30 jmmv Exp $
+$NetBSD: CHANGES,v 1.4239 2003/12/23 23:00:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5323,3 +5323,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated doxygen to 1.3.5nb1 [jmmv 2003-12-23]
 	Updated lyx-qt to 1.3.3nb1 [jmmv 2003-12-23]
 	Updated lyx-xforms to 1.3.3nb1 [jmmv 2003-12-23]
+	Updated docbook-simple to 1.1b1 [wiz 2003-12-23]
