@@ -1,5 +1,5 @@
-=============================================================================
-$NetBSD: MESSAGE,v 1.1 2001/11/01 01:24:07 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/12 19:37:07 wiz Exp $
 
 You will need to add something like the following to your .emacs.el (or
 default.el) file to autoload Haskell mode for Emacs.
@@ -14,4 +14,4 @@ default.el) file to autoload Haskell mode for Emacs.
 (autoload 'literate-haskell-mode "haskell-mode"
   "Major mode for editing literate Haskell scripts." t)
 
-=============================================================================
+===========================================================================
