@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/25 06:39:19 rh Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/27 02:16:47 rh Exp $
 
-DISTNAME=	gnome-2.2
+DISTNAME=	gnome-2.2.1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,9 +19,10 @@ DEPENDS+=	gnome-media>=2.2.1:../../audio/gnome2-media
 DEPENDS+=	gnome-panel>=2.2.1:../../x11/gnome-panel
 DEPENDS+=	gnome-session>=2.2.1:../../x11/gnome-session
 DEPENDS+=	gnome-utils>=2.2.1:../../misc/gnome2-utils
+DEPENDS+=	gnome-vfs2>=2.2.4:../../sysutils/gnome-vfs2
 DEPENDS+=	gtk2-engines>=2.2.0:../../x11/gtk2-engines
 DEPENDS+=	gtkmm>=2.2.1:../../x11/gtkmm
-#DEPENDS+=	evolution>=1.4:../../mail/evolution2
+DEPENDS+=	nautilus>=2.2.3.1:../../sysutils/nautilus
 
 USE_X11=	yes
 USE_BUILDLINK2=	yes
