@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 1997/10/13 15:07:24 agc Exp $
 # New ports collection makefile for:	team
 # Version required:	3.1 (From the RCS Id line of team.c)
 # Date created:		1 July 1995
 # Whom:			joerg
 #
+# $NetBSD: Makefile,v 1.6 1998/01/24 21:30:38 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/04/30 03:18:06 asami Exp
 #
 
@@ -14,5 +14,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	joerg@FreeBSD.org
 
 MANCOMPRESSED=	yes
+MAN1=		team.1
 
 .include <bsd.port.mk>
