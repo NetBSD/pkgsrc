@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/05/30 14:38:19 agc Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/31 11:04:56 agc Exp $
 #
 
 DISTNAME=		RTF-1.10
-PKGNAME=		rtf-tools-1.10
+PKGNAME=		rtf-tools-1.10nb1
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.primate.wisc.edu/software/RTF/
 EXTRACT_SUFX=		.tar.Z
