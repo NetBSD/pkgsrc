@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2004/03/01 09:45:31 cube Exp $
+# $NetBSD: Makefile,v 1.172 2004/03/29 19:01:57 tv Exp $
 #
 
 COMMENT=	Security tools
@@ -46,6 +46,7 @@ SUBDIR+=	gsasl
 SUBDIR+=	gss
 SUBDIR+=	gtk-systrace
 SUBDIR+=	hackbot
+SUBDIR+=	hashcash
 SUBDIR+=	heimdal
 SUBDIR+=	ike-scan
 SUBDIR+=	isakmpd
