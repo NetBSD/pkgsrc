@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 2005/01/22 13:03:06 magick Exp $
+
+--- src/mule-canna.c.orig	2004-09-20 21:19:52.000000000 +0200
++++ src/mule-canna.c
+@@ -438,7 +438,9 @@ If nil is specified for each arg, the de
+     }
+   else
+     {
++#ifndef CANNA2
+       jrBeepFunc = call_Fding;
++#endif
+ 
+ #ifdef KC_SETAPPNAME
+ #ifndef CANNA_MULE
