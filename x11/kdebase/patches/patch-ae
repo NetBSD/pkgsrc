@@ -1,5 +1,8 @@
-$NetBSD: patch-ae,v 1.6 1999/11/12 04:50:00 hubertf Exp $
+$NetBSD: patch-ae,v 1.7 1999/12/11 23:21:51 jdolecek Exp $
 
+Pulled into KDE, though needed serious rework, as the internal interface
+changed in KDE2.
+			jdolecek 1999-12-11
 --- ./kcontrol/info/memory.h	Mon Nov 17 20:05:18 1997
 +++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kcontrol/info/memory.h	Fri Nov 12 05:10:32 1999
 @@ -26,7 +26,11 @@
