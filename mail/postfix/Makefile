@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.129 2004/04/21 21:09:31 cube Exp $
+# $NetBSD: Makefile,v 1.130 2004/05/05 06:55:28 martti Exp $
 
-DISTNAME=	postfix-2.0.19
+DISTNAME=	postfix-2.0.20
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 
@@ -50,8 +50,8 @@ BUILD_DEFS+=	USE_SASL2
 
 .if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
 .  include "../../security/openssl/buildlink3.mk"
-PATCHFILES+=		tls+ipv6-1.22-pf-2.0.19.patch.gz
-PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.22/
+PATCHFILES+=		tls+ipv6-1.23-pf-2.0.20.patch.gz
+PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.23/
 PATCH_DIST_STRIP=	-p1
 
 CCARGS+=	-DHAS_SSL
