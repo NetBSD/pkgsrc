@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2004/05/15 17:03:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2004/06/28 15:27:36 jmmv Exp $
 #
 
-DISTNAME=		gnome-utils-2.6.1
+DISTNAME=		gnome-utils-2.6.2
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.6/}
 EXTRACT_SUFX=		.tar.bz2
