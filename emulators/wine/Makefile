@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2004/02/23 23:54:39 abs Exp $
+# $NetBSD: Makefile,v 1.70 2004/03/12 11:13:48 adam Exp $
 #
 
-DISTNAME=	Wine-20040213
+DISTNAME=	Wine-20040309
 PKGNAME=	${DISTNAME:S/W/w/}
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.ibiblio.org/pub/Linux/ALPHA/wine/development/ \
@@ -21,9 +21,8 @@ CONFLICTS=	rewind-[0-9]*
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.[6-9]*-i386 NetBSD-2*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386
 
-BUILDLINK_DEPENDS.freetype2=	freetype>=2.1.4
 WRKSRC=		 	${WRKDIR}/${DISTNAME:S/W/w/}
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		YES
@@ -46,27 +45,23 @@ LIBS+=			${LDFLAGS}
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_CUPS) && (${USE_CUPS} == YES)
-.  include "../../print/cups/buildlink2.mk"
+.  include "../../print/cups/buildlink3.mk"
 BUILD_DEFS+=		USE_CUPS
 .endif
 
-EGDIR=			${PREFIX}/share/examples/wine
+EGDIR=			${PREFIX}/share/wine
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/winedefault.reg ${EGDIR}/winedefault.reg
-	cd ${WRKSRC}/documentation/samples &&				\
-	${INSTALL_DATA} config ${EGDIR}/wine.conf &&			\
-	${INSTALL_DATA} generic.ppd ${EGDIR}/generic.ppd &&		\
-	${INSTALL_DATA} system.ini ${EGDIR}/system.ini &&		\
+	${INSTALL_DATA} ${WRKSRC}/documentation/samples/config ${EGDIR}/config
 	${RMDIR} ${PREFIX}/man/man3w
 
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
-.include "../../graphics/glut/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
