@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.466 2004/02/22 01:13:01 minskim Exp $
+# $NetBSD: Makefile,v 1.467 2004/02/22 01:59:37 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -321,6 +321,7 @@ SUBDIR+=	p5-PV
 SUBDIR+=	p5-Params-Validate
 SUBDIR+=	p5-Parse-RecDescent
 SUBDIR+=	p5-Parse-Yapp
+SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-Proc-Daemon
 SUBDIR+=	p5-SDL
 SUBDIR+=	p5-Safe-Hole
