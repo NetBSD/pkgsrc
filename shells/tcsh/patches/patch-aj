@@ -1,0 +1,11 @@
+$NetBSD: patch-aj,v 1.1 2001/09/03 01:57:21 kim Exp $
+
+--- nls/Makefile.orig	Mon Aug  6 19:48:45 2001
++++ nls/Makefile	Sun Sep  2 21:48:46 2001
+@@ -1,5 +1,5 @@
+ 
+-SUBDIRS=	C et finnish french german greek italian ja pl russian \
++SUBDIRS=	C et finnish french german greek italian ja russian \
+ 		spanish ukrainian
+ #GENCAT=	gencat -new
+ GENCAT=		gencat
