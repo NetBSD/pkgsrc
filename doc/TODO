@@ -234,6 +234,7 @@ Suggested package updates
 	o lavaps-2.4
 	o leafnode-1.9.50
 	o libcaca-0.9
+	o libebml-0.6.4
 	o libesmtp-1.0.2
 	o libidn-0.3.7
 	o libmpeg3-1.5.4
@@ -284,6 +285,7 @@ Suggested package updates
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
 	o p5-Crypt-PasswdMD5-1.3
+	o p5-DBI-1.41
 	o p5-DateTime-0.20
 	o p5-Devel-StackTrace-1.05
 	o p5-Exception-Class-1.17
