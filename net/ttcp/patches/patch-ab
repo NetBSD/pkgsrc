@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.5 2000/01/10 01:24:41 wiz Exp $
 --- ttcp.c.orig	Fri Aug  6 15:30:21 1999
 +++ ttcp.c	Fri Aug  6 15:30:21 1999
 @@ -55,6 +55,7 @@
