@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2000/09/10 17:55:46 fredb Exp $
+# $NetBSD: Makefile.common,v 1.9 2000/09/11 20:46:41 fredb Exp $
 #
 
 DISTNAME=		xscreensaver-3.25
@@ -12,9 +12,10 @@ HOMEPAGE=		http://www.jwz.org/xscreensaver/
 DEPENDS+=		Mesa-*:../../graphics/Mesa
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 
+USE_MESA=		yes
+USE_PERL5=		yes
 USE_X11BASE=		yes
 USE_XPM=		yes
-USE_PERL5=		yes
 
 EVAL_PREFIX+=		GTKDIR=gtk+
 EVAL_PREFIX+=		XPMDIR=xpm
