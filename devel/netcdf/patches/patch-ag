@@ -1,15 +1,22 @@
-$NetBSD: patch-ag,v 1.1.1.1 1999/01/14 20:28:54 frueauf Exp $
+$NetBSD: patch-ag,v 1.2 2003/03/02 08:26:10 jtb Exp $
 
---- ncdump/Makefile.orig	Sun Sep 27 20:07:07 1998
-+++ ncdump/Makefile	Sun Sep 27 20:08:23 1998
-@@ -19,8 +19,8 @@
+--- ncdump/Makefile.orig	Thu Feb 27 13:28:14 2003
++++ ncdump/Makefile
+@@ -16,7 +16,7 @@ PACKING_LIST	= $(c_sources) $(headers) d
  		  test0.cdl ncdump.1 Makefile
  MANUAL		= ncdump.1
  
 -lib_netcdf	= ../libsrc/libnetcdf.a
--ld_netcdf	= -L../libsrc -lnetcdf
 +lib_netcdf	= ../libsrc/libnetcdf.la
-+ld_netcdf	= ${lib_netcdf}
- OBJS		=  ncdump.o vardata.o dumplib.o
- GARBAGE		= $(PROGRAM) test0.nc test1.nc test1.cdl test2.cdl
  
+ # Don't use "-L../libsrc -lnetcdf" in the following because that doesn't
+ # work on a CRAY T90 (sigh).
+@@ -28,7 +28,7 @@ GARBAGE		= $(PROGRAM) test0.nc test1.nc 
+ all:		$(PROGRAM)
+ 
+ $(PROGRAM):	$(lib_netcdf) $(OBJS)
+-	$(LINK.c) $(OBJS) $(ld_netcdf) $(LIBS) 
++	$(LINK.c) $(OBJS) $(ld_netcdf) $(LIBS)
+ 
+ test:		$(PROGRAM) FORCE
+ 	$(NCGEN) -b test0.cdl
