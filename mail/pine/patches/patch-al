@@ -1,17 +1,15 @@
-$NetBSD: patch-al,v 1.7 2000/11/09 03:37:27 hubertf Exp $
-
---- build.orig	Tue Aug  1 00:28:01 2000
-+++ build
-@@ -198,7 +198,7 @@
-      mnt) makeargs="CC=gcc $makeargs" ;;
+--- build.orig	Thu Jan  4 20:13:11 2001
++++ build	Fri Feb 16 10:33:44 2001
+@@ -201,7 +201,7 @@
       bs3) makeargs="CC=shlicc $makeargs" ;;
+      nto) makeargs="CC=qcc $makeargs" ;;
       lyn) [ -f /CYGNUS.bash ] && . /CYGNUS.bash; makeargs="CC=gcc $makeargs" ;;
 -       *) makeargs="CC=cc $makeargs" ;;
 +       *) makeargs="CC=${LT}\ cc\ -g $makeargs" ;;
    esac
  fi
  
-@@ -303,23 +303,28 @@
+@@ -309,23 +309,28 @@
  	  echo "Including SSL functionality"
  	fi
  
@@ -57,7 +55,7 @@ $NetBSD: patch-al,v 1.7 2000/11/09 03:37:27 hubertf Exp $
  
          echo "Making Pine".
          cd $PHOME/pine
-@@ -336,8 +341,6 @@
+@@ -342,8 +347,6 @@
          if [ -s ../pico/pilot ] ;     then ln ../pico/pilot pilot ; fi
          cd $PHOME
          echo ''
@@ -66,7 +64,7 @@ $NetBSD: patch-al,v 1.7 2000/11/09 03:37:27 hubertf Exp $
  	case $maketarg in
  	    mnt)    echo "Fixing stacksizes ..."
  		    fixstk 64K bin/pine bin/pico bin/imapd bin/mtest bin/pilot
-@@ -347,9 +350,9 @@
+@@ -353,9 +356,9 @@
  
  
      clean) # This only sort of works 
