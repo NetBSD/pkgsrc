@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.2 2005/03/24 04:50:08 ben Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.3 2005/03/24 05:05:34 ben Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -202,6 +202,14 @@
 
       <listitem>
         <para><filename>PLIST.${OPSYS}</filename></para>
+      </listitem>
+
+      <listitem>
+        <para><filename>PLIST.${MACHINE_ARCH}</filename></para>
+      </listitem>
+
+      <listitem>
+        <para><filename>PLIST.${OPSYS}-${MACHINE_ARCH}</filename></para>
       </listitem>
 
       <listitem>
