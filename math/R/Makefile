@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/09/23 13:41:15 markd Exp $
+# $NetBSD: Makefile,v 1.39 2002/09/26 05:36:48 markd Exp $
 
 DISTNAME=		R-1.5.1
 CATEGORIES=		math
@@ -66,7 +66,7 @@ INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 R_LIBDIR=		${PREFIX}/lib/R
-INSTALL_DIRS=		${R_LIBDIR}
+R_INSTALL_DIRS=		${R_LIBDIR}
 
 # R does ugly things in the configure to get the default list of arguments
 # for linking Fortran, which exposes the buildlink2 tricks so clean up
@@ -91,7 +91,7 @@ post-install:
 	${RM} -f ${PLIST_SRC}
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 	( cd ${PREFIX};							\
-	  for dir in ${INSTALL_DIRS}; do				\
+	  for dir in ${R_INSTALL_DIRS}; do				\
 		${FIND} $${dir#${PREFIX}/} \( -type f -o -type l \) -print; \
 	  done;								\
 	) | ${GREP} -v "lib/R/doc/html/packages.html" |			\
@@ -100,7 +100,7 @@ post-install:
 	${ECHO} "@unexec ${RM} -f %D/lib/R/doc/html/packages.html" >> ${PLIST_SRC}
 	${ECHO} "@unexec ${RM} -f %D/lib/R/doc/html/search/index.txt" >> ${PLIST_SRC}
 	( cd ${PREFIX};							\
-	  for dir in ${INSTALL_DIRS}; do				\
+	  for dir in ${R_INSTALL_DIRS}; do				\
 		${FIND} $${dir#${PREFIX}/} -type d -print;		\
 	  done;								\
 	) | ${SORT} -ur | ${SED} -e "s|^|@dirrm |" >> ${PLIST_SRC}
