@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.241 2002/03/27 20:50:33 rh Exp $
+# $NetBSD: Packages.txt,v 1.242 2002/04/02 21:04:31 seb Exp $
 ###########################################################################
 
 			==========================
@@ -1614,7 +1614,7 @@ be removed.
 Package that need a Motif-1.2-compatible installation should define
 USE_MOTIF12, otherwise assume the need for a Motif-2.0-compatible
 installation.  If MOTIFBASE or MOTIF12BASE is set, then it is assumed that
-they point to valid 1.2-compatible or 2.0-compatible Motif, respectively.
+they point to valid 2.0-compatible or 1.2-compatible Motif, respectively.
 
 Packages that use OpenSSL that require a specific version of OpenSSL should
 define USE_OPENSSL_VERSION to the minimum version number required prior to
