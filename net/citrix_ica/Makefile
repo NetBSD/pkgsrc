@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/02/20 12:58:09 grant Exp $
+# $NetBSD: Makefile,v 1.20 2005/02/21 21:24:06 veego Exp $
 #
 
 # A default so lintpkgsrc is happy, overridden below
@@ -44,10 +44,6 @@ NO_SRC_ON_FTP=          ${RESTRICTED}
 NO_BIN_ON_FTP=          ${RESTRICTED}
 NO_SRC_ON_CDROM=        ${RESTRICTED}
 NO_BIN_ON_CDROM=        ${RESTRICTED}
-
-PLIST_SRC=	${PKGDIR}/PLIST.pre \
-		${PKGDIR}/PLIST.${MACHINE_ARCH} \
-		${PKGDIR}/PLIST.post
 
 WRKSRC=         ${WRKDIR}
 DIST_SUBDIR=    ${PKGNAME}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.post,v 1.4 2002/12/09 16:01:36 tron Exp $
+@comment $NetBSD: PLIST.common_end,v 1.1 2005/02/21 21:24:06 veego Exp $
 @exec ${MKDIR} %D/lib/netscape/plugins
 @unexec ${RMDIR} %D/lib/netscape/plugins 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/netscape 2>/dev/null || ${TRUE}
