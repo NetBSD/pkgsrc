@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7623 2004/10/30 15:07:01 minskim Exp $
+$NetBSD: CHANGES,v 1.7624 2004/10/30 20:53:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4987,3 +4987,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated spread to 3.17.3 [recht 2004-10-30]
 	Updated clamav to 0.80nb3 [recht 2004-10-30]
 	Updated mathomatic to 11.4d [minskim 2004-10-30]
+	Added p5-X11-Protocol-0.53 [minskim 2004-10-30]
