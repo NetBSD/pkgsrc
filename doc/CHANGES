@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1029 2003/01/05 20:01:22 jschauma Exp $
+$NetBSD: CHANGES,v 1.1030 2003/01/05 20:16:43 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -101,3 +101,31 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gpsdrive to 1.31nb1 [tsarna 2003-01-05]
 	Updated gail to 1.1.6 [jmmv 2003-01-05]
 	Updated bsetroot to 0.1nb1 [jschauma 2003-01-05]
+	Updated postgresql to 7.3.1 [jlam 2003-01-05]
+	Updated postgresql-client to 7.3.1 [jlam 2003-01-05]
+	Updated postgresql-docs to 7.3.1 [jlam 2003-01-05]
+	Updated postgresql-lib to 7.3.1 [jlam 2003-01-05]
+	Updated postgresql-plperl to 7.3.1 [jlam 2003-01-05]
+	Updated postgresql-pltcl to 7.3.1 [jlam 2003-01-05]
+	Updated postgresql-server to 7.3.1 [jlam 2003-01-05]
+	Updated tcl-postgresql to 7.3.1 [jlam 2003-01-05]
+	Updated tk-postgresql to 7.3.1 [jlam 2003-01-05]
+	Updated gtksql to 0.3nb1 [jlam 2003-01-05]
+	Updated gtranscript to 0.0.1nb2 [jlam 2003-01-05]
+	Updated guile-pg to 0.07nb1 [jlam 2003-01-05]
+	Updated kpsql to 1.0nb2 [jlam 2003-01-05]
+	Updated p5-DBD-postgresql to 1.13nb3 [jlam 2003-01-05]
+	Updated p5-postgresql to 1.9.0nb1 [jlam 2003-01-05]
+	Updated php-pgsql to 3.0.18nb1 [jlam 2003-01-05]
+	Updated php-pgsql to 4.2.3nb1 [jlam 2003-01-05]
+	Updated py22-postgresql to 3.3nb1 [jlam 2003-01-05]
+	Updated py21pth-psycopg to 1.0.13nb1 [jlam 2003-01-05]
+	Updated ruby-DBD-postgresql to 0.0.12nb1 [jlam 2003-01-05]
+	Updated ruby-postgresql to 0.6.5nb1 [jlam 2003-01-05]
+	Updated courier-authpgsql to 0.37.1nb1 [jlam 2003-01-05]
+	Updated netsaint-plugins to 1.2.9.4nb4 [jlam 2003-01-05]
+	Updated snort-pgsql to 1.9.0nb1 [jlam 2003-01-05]
+	Updated ap-aolserver to 1.1nb2 [jlam 2003-01-05]
+	Updated ap-auth-postgresql to 1.2b2nb1 [jlam 2003-01-05]
+	Updated openacs to 3.2.5nb2 [jlam 2003-01-05]
+	Updated qt3-psql to 3.0.6nb2 [jlam 2003-01-05]
