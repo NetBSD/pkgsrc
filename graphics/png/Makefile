@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2004/01/05 20:38:35 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2004/01/15 21:07:42 jlam Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
@@ -27,7 +27,7 @@ LIBPNG_SO_MAJOR=	3
 LIBPNG_SO_MINOR=	1
 
 MAKEFILE=	scripts/makefile.std
-MAKE_ENV+=	REALCC="${CC}"
+MAKE_ENV+=	REALCC="${BUILDLINK_CC}"
 MAKE_ENV+=	LIBPNG_SO_MAJOR=${LIBPNG_SO_MAJOR}
 MAKE_ENV+=	LIBPNG_SO_MINOR=${LIBPNG_SO_MINOR}
 PLIST_SUBST+=	LIBPNG_SO_MAJOR=${LIBPNG_SO_MAJOR}
