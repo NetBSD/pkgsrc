@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1 1999/08/17 05:18:44 sakamoto Exp $
+
+--- ./configure.in.orig	Mon Jul 26 22:18:17 1999
++++ ./configure.in	Tue Aug 17 12:30:31 1999
+@@ -372,7 +372,7 @@
+ test "x$prefix" = xNONE && prefix=$ac_default_prefix
+ 
+-CFLAGS="$CFLAGS -DPLUGINS_DIR=\"\\\"$prefix/Giram/plug-ins/\\\"\""
++CFLAGS="$CFLAGS -DPLUGINS_DIR=\"\\\"$prefix/libexec/Giram/\\\"\""
+ 
+-CFLAGS="$CFLAGS -DHELPFILE=\"\\\"$prefix/Giram/docs/Tutorial\\\"\""
++CFLAGS="$CFLAGS -DHELPFILE=\"\\\"$prefix/share/doc/Giram/Tutorial\\\"\""
+ 
+ dnl --------------------------------------------------------------------------

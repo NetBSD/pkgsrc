@@ -1,0 +1,11 @@
+$NetBSD: patch-ag,v 1.1 1999/08/17 05:18:43 sakamoto Exp $
+
+--- ./plugins/Spheres/Makefile.in.orig	Sat Jul 31 11:32:49 1999
++++ ./plugins/Spheres/Makefile.in	Tue Aug 17 12:30:56 1999
+@@ -88,5 +88,5 @@
+ l = @l@
+ 
+-plugindir = $(prefix)/Giram/plug-ins
++plugindir = $(prefix)/libexec/Giram
+ 
+ plugin_PROGRAMS = Spheres
