@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.188 2003/10/16 12:36:29 salo Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.189 2003/10/19 07:43:24 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -181,12 +181,12 @@ RCD_SCRIPTS_DIR?= /etc/rc.d
 # Possible: any path you like
 # Default: /etc/rc.d
 
-PACKAGES?=       ${_PKGSRCDIR}/packages
+PACKAGES?=	${_PKGSRCDIR}/packages
 # Store generated packages on a per-architecture base
 # Possible: any path you like
 # Default: /usr/pkgsrc/packages
 
-PKGVULNDIR?=     ${DISTDIR}
+PKGVULNDIR?=	${DISTDIR}
 # Specifies where the `vulnerabilities' file is located.  This variable
 # is used by the audit-packages program and by pkgsrc itself to do security
 # checks before building/installing programs.
@@ -373,7 +373,7 @@ PATCH_FUZZ_FACTOR?= -F0
 # Possible:  defined, not defined
 # Default: not defined
 
-#MASTER_SORT=        .ac.at .at .de .ch .se .fi .no
+#MASTER_SORT=	.ac.at .at .de .ch .se .fi .no
 # Whitespace delimited list of preferred download locations. 
 # MASTER_SITES and PATCH_SITES will be reordered according to the hosts'
 # address last components.
@@ -416,7 +416,7 @@ PATCH_FUZZ_FACTOR?= -F0
 #	-DManUsr=${PREFIX}
 .if ${OPSYS} == "IRIX"
 #IMAKEOPTS?=	-DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE} \
-#               -DManUsr=${PREFIX}
+#		-DManUsr=${PREFIX}
 # ABI specific flags may be added during bootstrapping process or by hand:
 .  if defined(ABI)
 .    if ${ABI} == "32"
@@ -550,11 +550,11 @@ APACHE_GROUP?=	www
 # Possible: any --suexec-* options recognized by the Apache configure script.
 # Default: not defined
 
-APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs                
+APACHE_SUEXEC_DOCROOT?=	${LOCALBASE}/share/httpd/htdocs
 # Used in apache, apache2, and apache6 to specify the document space in
-# which suexec will be allowed to work.      
-# Possible: Any valid directory                                              
-# Default: ${LOCALBASE}/share/httpd/htdocs                                   
+# which suexec will be allowed to work.
+# Possible: Any valid directory
+# Default: ${LOCALBASE}/share/httpd/htdocs
 
 ARLA_CACHE?=	${LOCALBASE}/cache
 # Used in arla to specify the location of the cache used by arla. Should
@@ -605,25 +605,25 @@ ATERM_USE_GREEK?= NO
 # Possible: not defined, YES
 # Default: not defined
 
-#BLENDER_INSTALL_DOC=   YES
+#BLENDER_INSTALL_DOC=	YES
 # Used in blender to determine if the extensive html documentation should be
 # installed or not.
 # Possible: YES, not defined
 # Default: not defined
 
-#BLENDER_USE_OGG=       YES
+#BLENDER_USE_OGG=	YES
 # Used in blender to determine if support for the ogg audio format should be
 # compiled in or not.
 # Possible: YES, not defined
 # Default: not defined
 
-#BLENDER_USE_VORBIS=    YES
+#BLENDER_USE_VORBIS=	YES
 # Used in blender to determine if support for the vorbis audio format should
 # be compiled in or not.
 # Possible: YES, not defined
 # Default: not defined
 
-#BLENDER_USE_OPENAL=    YES
+#BLENDER_USE_OPENAL=	YES
 # Used in blender to determine if support for the openal audio format should
 # be compiled in or not.
 # Possible: YES, not defined
@@ -978,13 +978,13 @@ IRCD_HYBRID_SMALL_NET?=		YES
 # Possible: 1<> ~IRCD_HYBRID_HARD_FDLIMIT_
 # Default: 200 from source, 40 if IRCD_HYBRID_SMALL_NET is "YES"
 
-IRCD_HYBRID_USE_LOGFILE?=       YES
+IRCD_HYBRID_USE_LOGFILE?=	YES
 # Used by ircd-hybrid. Specify if the daemon should use a logfile.
 # Note: can be used even when IRCD_HYBRID_USE_SYSLOG is "YES".
 # Possible: YES, NO
 # Default: YES
  
-IRCD_HYBRID_USE_SYSLOG?=        NO
+IRCD_HYBRID_USE_SYSLOG?=	NO
 # Used by ircd-hybrid. Specify if the daemon should use syslog.
 # Note: can be used even when IRCD_HYBRID_USE_LOGFILE is "YES".
 # Possible: YES, NO
@@ -1182,9 +1182,9 @@ JSDK_HOME?= ${JAVA_HOME}/jsdk
 # Default: none
 
 LINUX_LOCALES?=								\
-	    af ar bg br ca cs cy da de el en eo es et eu fi fo fr ga gl \
-	    he hr hu hy id is it ja ka kl ko lo lt lv nl no oc pl pt ro \
-	    ru sk sl sr sv th tr uk vi wa zh
+	af ar bg br ca cs cy da de el en eo es et eu fi fo fr ga gl	\
+	he hr hu hy id is it ja ka kl ko lo lt lv nl no oc pl pt ro	\
+	ru sk sl sr sv th tr uk vi wa zh
 # Used in linux-locale package to install specify language(s)
 # Possible: af ar bg br ca cs cy da de el en eo es et eu fi fo fr ga gl \
 #	    he hr hu hy id is it ja ka kl ko lo lt lv nl no oc pl pt ro \
@@ -1903,12 +1903,12 @@ USERPPP_GROUP?=	network
 # Possible: not defined, see "configure --help"
 # Default: not defined
 
-W3M_USE_COLOR?=                 YES
+W3M_USE_COLOR?=			YES
 # Used in w3m to use colors.
 # Possible: YES, NO
 # Default: YES
 
-W3M_USE_COOKIE?=                YES
+W3M_USE_COOKIE?=		YES
 # Enable cookie support in w3m.
 # Possible: YES, NO
 # Default: YES
@@ -1919,32 +1919,32 @@ W3M_USE_IMAGE?=			NO
 # Possible: YES, NO
 # Default: NO
 
-W3M_USE_JAPANESE_MESSAGES?=     NO
+W3M_USE_JAPANESE_MESSAGES?=	NO
 # Let w3m to use Japanese messages. (Japanese localization.)
 # Possible: YES, NO
 # Default: NO
 
-W3M_USE_LYNX_KEY?=              NO
+W3M_USE_LYNX_KEY?=		NO
 # Enable lynx like keybinding for w3m.
 # Possible: YES, NO
 # Default: NO
 
-W3M_USE_M17N=                   YES
+W3M_USE_M17N=			YES
 # For multilingual support for w3m.
 # Possible: YES, NO
 # Default: YES
 
-W3M_USE_MOUSE?=                 YES
+W3M_USE_MOUSE?=			YES
 # Enable mouse support in w3m.
 # Possible: YES, NO
 # Default: YES
 
-W3M_USE_SSL?=                   YES
+W3M_USE_SSL?=			YES
 # Enable HTTPS support in w3m.
 # Possible: YES, NO
 # Default: YES
 
-W3M_USE_UNICODE?=               YES
+W3M_USE_UNICODE?=		YES
 # Used in w3m to use Unicode characters.
 # Possible: YES, NO
 # Default: YES
@@ -2068,8 +2068,8 @@ XCHAT_USE_SSL?=	YES
 
 # France
 #
-#MASTER_SITE_SUSE=      \
-#       ftp://fr2.rpmfind.net/linux/SuSE-Linux/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
+#MASTER_SITE_SUSE=	\
+#	ftp://fr2.rpmfind.net/linux/SuSE-Linux/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/
 
 # Greece
 #
@@ -2119,11 +2119,11 @@ XCHAT_USE_SSL?=	YES
 # France. This will try to fetch distfile from the distfile mirror
 # before trying ${MASTER_SITE} or the distfiles at ftp.netbsd.org
 #
-#MASTER_SITE_OVERRIDE= \
+#MASTER_SITE_OVERRIDE=	\
 #	ftp://ftp2.fr.netbsd.org/pub/NetBSD/packages/distfiles/
-#MASTER_SITE_BACKUP=     \
+#MASTER_SITE_BACKUP=	\
 #	ftp://ftp2.fr.netbsd.org/pub/NetBSD/packages/distfiles/
-#MASTER_SITE_LOCAL=      \
+#MASTER_SITE_LOCAL=	\
 #	ftp://ftp.fr.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 .if exists(${.CURDIR}/../../mk/bsd.pkg.obsolete.mk)
