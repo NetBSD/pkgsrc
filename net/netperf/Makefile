@@ -1,8 +1,4 @@
-# New ports collection makefile for: netperf
-# Version required:	2.1.3
-# Date created:		19 July 1996
-# Whom:			koshy
-#
+# $NetBSD: Makefile,v 1.2 2000/01/21 13:01:57 itojun Exp $
 # KAME Id: Makefile,v 1.3 2000/01/21 12:34:29 itojun Exp
 #
 
@@ -12,14 +8,21 @@ CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/
 
 PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	netperf-21pl3-20000111.diff.gz
-PATCH_DIST_STRIP=	-p
+PATCHFILES=	netperf-21pl3-20000121a.diff.gz
+PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	sumikawa@kame.net
+MAINTAINER=	itojun@kame.net
+HOMEPAGE=	http://www.netperf.org/
 
 MAKEFILE=	makefile
 MAN1=		netperf.1 netserver.1
 MINSTALL=	${INSTALL} ${COPY} -o ${MANOWN} -g ${MANGRP} -m ${MANMODE}
+
+BUILD_DEFS+=	USE_INET6
+.include "../../mk/bsd.prefs.mk"
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
+CFLAGS+=	-DDO_IPV6
+.endif
 
 post-install:
 	strip ${PREFIX}/netperf/netperf
@@ -29,7 +32,7 @@ post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/netperf
 	${MINSTALL} ${WRKSRC}/netperf.ps ${PREFIX}/share/doc/netperf
-	gzip -9nf ${PREFIX}/share/doc/netperf/netperf.ps
+	${GZIP_CMD} -9nf ${PREFIX}/share/doc/netperf/netperf.ps
 .endif
 
 .include "../../mk/bsd.pkg.mk"

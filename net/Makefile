@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2000/01/17 17:42:32 jlam Exp $
+# $NetBSD: Makefile,v 1.106 2000/01/21 13:01:56 itojun Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -73,6 +73,7 @@
     SUBDIR += netatalk
     SUBDIR += netcat
     SUBDIR += netname
+    SUBDIR += netperf
     SUBDIR += ngrep
     SUBDIR += nmap
     SUBDIR += nocol
