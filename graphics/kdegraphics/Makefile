@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2000/09/03 10:12:58 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2000/11/07 20:40:34 skrll Exp $
 #
 
 DISTNAME=	kdegraphics-1.1.2
@@ -15,6 +15,9 @@ DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/admin/ltconfig \
+			${WRKSRC}/kdvi/kpathsea/ltconfig
 
 EVAL_PREFIX+=	QT1DIR=qt1 KDEBASEDIR=kdebase
 CONFIGURE_ARGS=	"--datadir=${KDEBASEDIR}/share/kde" \
