@@ -1,7 +1,7 @@
-$NetBSD: patch-av,v 1.2 2000/02/11 00:06:36 jlam Exp $
+$NetBSD: patch-av,v 1.3 2000/02/28 03:25:53 thorpej Exp $
 
---- configure.in.orig	Tue Jun  2 13:29:56 1998
-+++ configure.in	Thu Feb 10 18:53:22 2000
+--- configure.in.orig	Sun Feb 27 19:14:29 2000
++++ configure.in	Sun Feb 27 19:13:59 2000
 @@ -168,6 +168,9 @@
    AC_DEFINE(HAVE_CONNECT)
  fi])
@@ -72,15 +72,6 @@ $NetBSD: patch-av,v 1.2 2000/02/11 00:06:36 jlam Exp $
  hold_cppflags=$CPPFLAGS
  CPPFLAGS="$CPPFLAGS -I$GSSAPI/include "
  AC_CHECK_HEADERS(gssapi.h gssapi/gssapi.h gssapi/gssapi_generic.h)
-@@ -272,7 +280,7 @@
-   if test "$ac_cv_header_gssapi_h" = "yes"; then
-     LIBS="$LIBS -L$GSSAPI/lib -lgssapi -lkrb5 -lasn1 -ldes -lroken"
-   else
--    LIBS="$LIBS -L$GSSAPI/lib -lgssapi_krb5 -lkrb5 -lcrypto -lcom_err"
-+    LIBS="$LIBS -L$GSSAPI/lib -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err"
-   fi
-   save_CPPFLAGS=$CPPFLAGS
-   CPPFLAGS="-I$GSSAPI/include $CPPFLAGS"
 @@ -286,6 +294,7 @@
    # there, an_to_ln.o refers to things defined only in -lgen.
    AC_CHECK_LIB(gen, compile)
