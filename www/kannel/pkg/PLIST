@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/30 12:46:19 rh Exp $
+bin/bearerbox
+bin/smsbox
+bin/wapbox
+bin/wmlsc
+bin/wmlsdasm
+bin/seewbmp
+bin/run_kannel_box
+bin/start-stop-daemon

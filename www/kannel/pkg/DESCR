@@ -1,0 +1,9 @@
+Kannel is an open source WAP gateway.  It attempts to provide this
+essential part of the WAP infrastructure freely to everyone so that
+the market potential for WAP services, both from wireless operators
+and specialized service providers, will be realized as efficiently
+as possible. 
+
+  Kannel also works as an SMS gateway for GSM networks.  Almost all
+GSM phones can send and receive SMS messages, so this is a way to
+serve many more clients than just those using a new WAP phone. 
