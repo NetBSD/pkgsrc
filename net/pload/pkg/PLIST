@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/01/06 05:17:00 hubertf Exp $
+bin/pload
+man/cat1/pload.0
