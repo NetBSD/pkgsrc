@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3711 2003/10/19 00:25:37 rh Exp $
+$NetBSD: CHANGES,v 1.3712 2003/10/19 09:26:17 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4224,3 +4224,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated jwhois to 3.2.2nb1 [kleink 2003-10-18]
 	Updated adzap to 20031018 [kleink 2003-10-18]
 	Updated cpuflags to 0.58 [rh 2003-10-19]
+	Updated xbattbar to 1.4.2nb3 [agc 2003-10-19]
