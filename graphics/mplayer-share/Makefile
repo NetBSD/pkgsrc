@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/25 07:51:22 veego Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/07 12:53:06 veego Exp $
 
 .include "Makefile.common"
 
@@ -29,6 +29,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/font
 	${INSTALL_DATA} ${WRKSRC}/etc/codecs.conf ${PREFIX}/share/mplayer
+	${INSTALL_DATA} ${WRKSRC}/etc/input.conf ${PREFIX}/share/mplayer
 	${CP} -R ${WRKSRC}/DOCS ${PREFIX}/share/mplayer
 	@${ECHO_MSG} "Installing font ${MPLAYER_FONT}..."
 	(cd ${WRKDIR}/${MPLAYER_FONT}; ${PAX} -rwpp . ${PREFIX}/share/mplayer/font)

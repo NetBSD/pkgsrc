@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.6 2002/08/04 08:44:47 veego Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/08/07 12:53:06 veego Exp $
 
-MPLAYER_DIST_VERSION=	0.90pre5
+MPLAYER_DIST_VERSION=	0.90pre6
 
 # There is no need to change anything below here.
 
@@ -54,4 +54,7 @@ CONFIGURE_ENV+=		TMPDIR=${WRKDIR}
 
 .if ${MACHINE_ARCH} == "i386"
 CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
+.if ${MPLAYER_USE_REALMEDIA} == "YES"
+CONFIGURE_ARGS+=	--with-reallibdir="${LOCALBASE}/lib/RealPlayer8/Codecs"
+.endif
 .endif
