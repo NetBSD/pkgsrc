@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1 1998/08/07 22:42:29 kim Exp $
+$NetBSD: patch-aa,v 1.2 1998/10/11 10:25:24 hubertf Exp $
 
---- Makefile.in.orig	Mon Aug  3 06:43:38 1998
-+++ Makefile.in	Fri Aug  7 18:22:37 1998
+--- Makefile.in.orig	Mon Aug  3 12:43:38 1998
++++ Makefile.in	Sat Oct 10 22:06:42 1998
+@@ -48,7 +48,7 @@
+ LDFLAGS = @LDFLAGS@ -L/usr/5lib
+ 
+ # Standard LIBS
+-LIBS = @LIBS@
++LIBS = @LIBS@ -L${PREFIX}/lib -lncurses
+ 
+ INSTALL = @INSTALL@
+ 
 @@ -76,6 +76,8 @@
  
  CLEANFILES = $(PROG) $(OBJ) $(GENSRC)
