@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/04/06 05:57:31 rh Exp $
+
+--- sanei/Makefile.in.orig	Wed Mar  3 00:25:06 1999
++++ sanei/Makefile.in	Mon Apr  5 19:13:46 1999
+@@ -27,7 +27,7 @@
+ RANLIB = @RANLIB@
+ 
+ CC = @CC@
+-INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include -I$(top_srcdir)/include
++INCLUDES = -I. -I$(srcdir) -I$(top_builddir)/include -I$(top_srcdir)/include -I${PREFIX}/include
+ CPPFLAGS = @CPPFLAGS@
+ CFLAGS = @CFLAGS@
+ LDFLAGS = @LDFLAGS@
+@@ -35,7 +35,7 @@
+ DEFS = @DEFS@
+ 
+ COMPILE = $(CC) -c $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+-LIBTOOL = ../libtool
++LIBTOOL = @LIBTOOL@
+ MCOMP	= --mode=compile
+ MLINK	= --mode=link
+ 
