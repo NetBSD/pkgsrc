@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4301 2003/12/31 13:05:19 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4302 2003/12/31 13:09:14 cube Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5492,5 +5492,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated maude to 2.0.1 [kristerw 2003-12-31]
 	Updated gnome2-media to 2.4.1.1 [xtraeme 2003-12-31]
 	Updated xlockmore to 5.11 [hubertf 2003-12-31]
-	Added MozillaFirebird-gtk2-bin-nightly [2003-12-31]
+	Added MozillaFirebird-gtk2-bin-nightly [grant 2003-12-31]
 	Updated bitlbee to 0.83 [xtraeme 2003-12-31]
+	Added ap2-auth-mysql [cube 2003-12-31]
