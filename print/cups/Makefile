@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/12/07 20:33:05 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2000/12/09 05:53:06 jlam Exp $
 #
 
 DISTNAME=		cups-1.1.4-source
@@ -44,6 +44,8 @@ USERDIR=		${LOCALBASE}/sbin
 #
 CUPS_USER?=		lp
 CUPS_GROUP?=		sys
+
+BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
