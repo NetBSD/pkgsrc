@@ -1,0 +1,71 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/12/04 03:48:34 hubertf Exp $
+
+--- siod/slibu.c.orig	Thu Dec  3 04:26:29 1998
++++ siod/slibu.c	Thu Dec  3 05:04:41 1998
+@@ -15,13 +15,15 @@
+ #endif
+ #endif
+ 
++#ifndef __NetBSD__
+ #ifndef _XOPEN_SOURCE	/* and another */
+-#define _XOPEN_SOURCE
++#define _XOPEN_SOURCE 2
+ #endif
+ 
+ #ifndef _POSIX_SOURCE
+ #define _POSIX_SOURCE
+ #endif
++#endif /* __NetBSD__ */
+ 
+ #ifndef _BSD_SOURCE
+ #define _BSD_SOURCE
+@@ -89,6 +91,10 @@
+ #define PATH_MAX MAXPATHLEN
+ #endif
+ 
++#if defined(__NetBSD__)
++#include <sys/syslimits.h>
++#endif
++
+ #if defined(VMS)
+ #include <unixlib.h>
+ #include <stat.h>
+@@ -276,6 +282,7 @@
+  return(NIL);}
+ #endif
+ 
++#ifndef __NetBSD__
+ LISP lputpwent(LISP alist,LISP file)
+ {int iflag = no_interrupt(1);
+  int status;
+@@ -284,6 +291,7 @@
+  status = putpwent(&p,get_c_file(file,NULL));
+  no_interrupt(iflag);
+  return(NIL);}
++#endif
+ 
+ LISP laccess_problem(LISP lfname,LISP lacc)
+ {char *fname = get_c_string(lfname);
+@@ -995,7 +1003,7 @@
+  else
+    return(NIL);}
+ 
+-LISP lchmod(LISP path,LISP mode)
++LISP _lchmod(LISP path,LISP mode)
+ {if (chmod(get_c_string(path),get_c_long(mode)))
+    return(err("chmod",llast_c_errmsg(-1)));
+  else
+@@ -1954,10 +1962,12 @@
+ #if defined(__osf__)
+  init_subr_1("setpwfile",lsetpwfile);
+ #endif
++#ifndef __NetBSD__
+  init_subr_2("putpwent",lputpwent);
++#endif
+  init_subr_2("access-problem?",laccess_problem);
+  init_subr_3("utime",lutime);
+- init_subr_2("chmod",lchmod);
++ init_subr_2("chmod",_lchmod);
+  init_subr_2("fchmod",lfchmod);
+ #endif
+  init_subr_1("random",lrandom);
