@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/10/01 15:10:23 fredb Exp $
+$NetBSD: patch-aa,v 1.2 2000/07/22 06:44:55 jlam Exp $
 
---- Makefile.orig	Wed Sep 29 00:08:22 1999
-+++ Makefile	Wed Sep 29 00:17:16 1999
+--- Makefile.orig	Wed Jan 13 05:28:43 1999
++++ Makefile	Sat Jul 22 02:41:55 2000
 @@ -5,12 +5,12 @@
  # If you're not using background pixmaps, remove -lXpm from the LIBS.
  # If your X libraries are somewhere other than /usr/X11/lib, give their
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/10/01 15:10:23 fredb Exp $
  # as a -I option here (excluding the X11 bit).  If you're using I18N
  # and Xlocale, please add -DX_LOCALE.
 -CFLAGS = -g -O2 -I/usr/include -I/usr/openwin/include
-+CFLAGS = -g -O2 -I${X11BASE}/include
++CFLAGS = -g -O2 -I${X11BASE}/include -I${XPMDIR}/include
  
  OBJECTS	= Border.o Buttons.o Channel.o Client.o Config.o Events.o Main.o Manager.o Menu.o Rotated.o Session.o
  
