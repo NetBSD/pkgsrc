@@ -1,0 +1,26 @@
+$NetBSD: patch-config-imake-Imakefile,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+
+--- config/imake/Imakefile.orig	Sun Oct 29 15:29:28 2000
++++ config/imake/Imakefile	Sun Oct 29 15:31:43 2000
+@@ -5,6 +5,21 @@
+ XCOMM
+ XCOMM $XFree86: xc/config/imake/Imakefile,v 3.6.2.1 1997/06/11 12:08:33 dawes Exp $
+ 
++XCOMM
++XCOMM
++XCOMM
++
++#ifdef NetBSDArchitecture
++#undef InstallProgram
++#define InstallProgram(file,dest) /* as nothing */
++#undef InstallNamedProg
++#define InstallNamedProg(srcname,dstname,dest) /* as nothing */
++#undef InstallManPage
++#define InstallManPage(file,dest) /* as nothing */
++#undef InstallManPageLong
++#define InstallManPageLong(srcname,dest,dstname) /* as nothing */
++#endif
++
+ XCOMM Some compilers generate fatal errors if an -L directory does
+ XCOMM not exist.  Since BUILDLIBDIR may not exist yet suppress its use.
+          LDPRELIB =

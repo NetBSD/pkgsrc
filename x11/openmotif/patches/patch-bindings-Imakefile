@@ -1,0 +1,17 @@
+$NetBSD: patch-bindings-Imakefile,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+
+--- bindings/Imakefile.orig	Wed May  3 11:12:34 2000
++++ bindings/Imakefile	Sun Oct 29 14:23:39 2000
+@@ -37,10 +37,10 @@
+ XCOMM HISTORY
+ XCOMM 
+ XCOMM   $TOG: Imakefile /main/8 1997/07/02 17:51:43 samborn $
+-INSTALLFLAGS = $(INSTINCFLAGS)
+ 
+ FILES = \
+ 	xmbind.alias \
++	CDE \
+ 	acorn \
+ 	apollo \
+ 	dec \
+ 

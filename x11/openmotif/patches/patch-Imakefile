@@ -1,0 +1,22 @@
+$NetBSD: patch-Imakefile,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+
+--- Imakefile.orig	Thu May  4 08:30:42 2000
++++ Imakefile	Wed Aug  9 19:29:42 2000
+@@ -57,7 +57,7 @@
+ ImakeDependency(xmakefile)
+ xmakefile:: Imakefile
+ 	RMoveToBakFile(xmakefile)
+-	$(IMAKE_CMD) -s xmakefile -DTOPDIR=$(TOP) -DCURDIR=$(CURRENT_DIR)
++	$(IMAKE) -s xmakefile -DTOPDIR=$(TOP) -DCURDIR=$(CURRENT_DIR)
+ 
+ 
+ VerifyOS::
+@@ -89,7 +90,7 @@
+ #ifdef UseInstalled
+ TESTS_IMAKE = $(IMAKE) -DUseInstalled
+ #else
+-TESTS_IMAKE = ../$(IMAKE)
++TESTS_IMAKE = $(IMAKE)
+ #endif
+ DIRS_TO_CREATE = $(USRLIBDIR) $(BINDIR) $(INCDIR) $(USRINCDIR) $(LIBDIR) $(XAPPLOADDIR)
+ CDE_DIRS_TO_CREATE = $(USRLIBDIR) $(BINDIR) $(PROJECTROOT)/share/include

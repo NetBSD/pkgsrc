@@ -1,0 +1,13 @@
+$NetBSD: patch-config-cf-Imakefile,v 1.1.1.1 2000/10/29 16:17:13 mjl Exp $
+
+--- config/cf/Imakefile.orig	Sun Oct 29 15:17:58 2000
++++ config/cf/Imakefile	Sun Oct 29 15:19:49 2000
+@@ -121,7 +121,7 @@
+ QNX.cf \
+ xfree86.cf
+ 
+-INSTFILES = $(RULEFILES) $(TMPLFILES) $(DEFFILES) $(CFFILES) $(LOCALFILES)
++INSTFILES = Motif.rules Motif.tmpl host.def
+ 
+ all::
+ 
