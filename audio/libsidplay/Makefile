@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/12/24 15:13:31 mycroft Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/31 04:15:37 wiz Exp $
 #
 
 DISTNAME=	libsidplay-1.36.47
@@ -14,7 +14,7 @@ CONFLICTS=	sidplay-1.36.*
 
 GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 
 USE_LIBTOOL=		yes
 LDFLAGS+=		-lstdc++ -lm
