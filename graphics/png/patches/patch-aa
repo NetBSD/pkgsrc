@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.21 2004/04/27 19:36:27 tv Exp $
+$NetBSD: patch-aa,v 1.22 2004/04/27 22:40:35 tv Exp $
 
 --- scripts/makefile.std.orig	Thu May 23 08:29:59 2002
 +++ scripts/makefile.std
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.21 2004/04/27 19:36:27 tv Exp $
 -	chmod 644 $(DESTDIR)$(LIBPATH)/libpng.a
 +install: libpng.la
 +	${BSD_INSTALL_DATA} png.h pngconf.h $(INCPATH)
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_SCRIPT} libpng.la $(LIBPATH)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libpng.la $(LIBPATH)
  
  clean:
  	rm -f *.o libpng.a pngtest pngout.png
