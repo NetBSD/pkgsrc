@@ -1,0 +1,40 @@
+# $NetBSD: Makefile.in,v 1.1.1.1 2002/12/20 18:13:54 schmonz Exp $
+# Original from FreeBSD, no rcs id.
+
+PREFIX=		@prefix@
+INSTALL=	@INSTALL@
+
+mandir=		${PREFIX}/man
+mandircat1=	${mandir}/cat1
+
+CC=		@CC@
+CCLD=		$(CC)
+LIBS=		@LIBS@ -linstall
+CPPFLAGS=	@CPPFLAGS@
+DEFS=		@DEFS@ -I. -I@srcdir@ -I../lib
+CFLAGS=		@CFLAGS@
+LDFLAGS=	@LDFLAGS@ -L../lib
+
+LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
+COMPILE=	$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS)
+
+PROG=		pkg_add
+
+SRCS= main.c perform.c futil.c extract.c verify.c
+OBJS= main.o perform.o futil.o extract.o verify.o
+
+all: ${PROG}
+
+${PROG}: ${OBJS}
+	${LINK} ${OBJS} ${LIBS}
+
+.c.o:
+	$(COMPILE) -c $< -o $@
+
+clean:
+	rm -f ${OBJS} ${PROG}
+
+install:
+	${INSTALL} ${PROG} ${PREFIX}/sbin
+	${INSTALL} -m 755 -d ${mandircat1}
+	${INSTALL} -m 444 ${PROG}.cat1 ${mandircat1}/${PROG}.1

@@ -1,0 +1,39 @@
+# $NetBSD: Makefile.in,v 1.1.1.1 2002/12/20 18:13:52 schmonz Exp $
+# Original from FreeBSD, no rcs id.
+
+all: libdir adddir admindir createdir deletedir infodir
+
+libdir:
+	cd lib && ${MAKE}
+adddir:
+	cd add && ${MAKE}
+admindir:
+	cd admin && ${MAKE}
+createdir:
+	cd create && ${MAKE}
+deletedir:
+	cd delete && ${MAKE}
+infodir:
+	cd info && ${MAKE}
+
+install: all
+	@MKDIR@ -p @prefix@/sbin
+	cd add && ${MAKE} install
+	cd admin && ${MAKE} install
+	cd create && ${MAKE} install
+	cd delete && ${MAKE} install
+	cd info && ${MAKE} install
+
+clean:
+	cd lib && ${MAKE} clean
+	cd add && ${MAKE} clean
+	cd admin && ${MAKE} clean
+	cd create && ${MAKE} clean
+	cd delete && ${MAKE} clean
+	cd info && ${MAKE} clean
+
+distclean: clean
+	rm -f config.log config.status config.cache
+	rm -f Makefile */Makefile
+	rm -f lib/lib.h lib/config.h
+	
