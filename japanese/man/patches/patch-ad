@@ -1,0 +1,10 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/06/08 10:01:21 sakamoto Exp $
+--- ./man/Makefile.orig	Thu Jan 28 07:23:34 1999
++++ ./man/Makefile	Mon May 31 16:18:47 1999
+@@ -9,6 +9,3 @@
+ .endif
+ 
+-beforeinstall:
+-	mtree -def jmantree -p ${DESTDIR}/usr/local -u
+-
+ .include <bsd.subdir.mk>
