@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/03/13 17:37:04 fredb Exp $
+# $NetBSD: Makefile,v 1.15 2002/04/23 02:08:53 jlam Exp $
 
 DISTNAME=	dx-4.1.3
 PKGREVISION=	1
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.research.ibm.com/dx/
 COMMENT=	Open Visualization Data Explorer
 
 USE_BUILDLINK_ONLY=	yes
+USE_X11BASE=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-javadx

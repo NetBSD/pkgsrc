@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/02/18 15:14:20 seb Exp $
+# $NetBSD: Makefile,v 1.19 2002/04/23 02:08:53 jlam Exp $
 
 DISTNAME=		geomview-1.8.1
 CATEGORIES=		graphics math
@@ -11,6 +11,7 @@ COMMENT=		Interactive geometry viewing program
 CONFLICTS=		ImageMagick-[0-9]*	# both have a program named 'animate'
 
 USE_BUILDLINK_ONLY=	yes
+USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--without-xforms

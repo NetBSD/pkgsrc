@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/03/13 17:37:23 fredb Exp $
+# $NetBSD: Makefile,v 1.18 2002/04/23 02:08:53 jlam Exp $
 #
 
 DISTNAME=	grace-5.1.4
@@ -19,6 +19,7 @@ COMMENT=	GRaphing, Advanced Computation and Exploration of data
 #DEPENDS+=	fftw-[0-9]*:../../math/fftw
 
 USE_BUILDLINK_ONLY=	YES
+USE_X11BASE=		YES
 USE_GMAKE=		YES
 USE_FORTRAN=		YES
 GNU_CONFIGURE=		YES
