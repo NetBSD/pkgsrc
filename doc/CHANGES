@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2894 2003/07/25 18:31:02 drochner Exp $
+$NetBSD: CHANGES,v 1.2895 2003/07/25 20:42:07 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2957,3 +2957,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated eog2 to 2.3.4 [drochner 2003-07-25]
 	Updated sketch to 0.6.15 [drochner 2003-07-25]
 	Updated balsa2 to 2.0.12 [drochner 2003-07-25]
+	Updated intlfonts to 1.2.1nb1 [tron 2003-07-25]
