@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2003/07/21 16:30:35 martti Exp $
+# $NetBSD: Makefile,v 1.16 2003/08/03 14:12:29 jmmv Exp $
 
 DISTNAME=	audacity-src-1.0.0-2
 PKGNAME=	audacity-1.0.0.2
-PKGREVISION=	3
+PKGREVISION=	4
 WRKSRC=		${WRKDIR}/audacity-src-1.0.0
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audacity/}
@@ -41,9 +41,11 @@ pre-configure:
 	done
 	cd ${WRKSRC} && ${AUTOCONF}
 
+.include "../../audio/id3lib/buildlink2.mk"
 .include "../../audio/lame/buildlink2.mk"
 .include "../../audio/libvorbis/buildlink2.mk"
 .include "../../audio/libmad/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../x11/wxGTK/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
 
