@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2004/11/12 06:39:20 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.5 2004/11/25 14:52:20 adam Exp $
 
-DISTNAME=		libdv-0.102
-PKGREVISION=		1
-CATEGORIES=		multimedia
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libdv/}
+DISTNAME=	libdv-0.103
+CATEGORIES=	multimedia
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libdv/}
 
-MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=		http://libdv.sourceforge.net/
-COMMENT=		DV video codec library
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
+HOMEPAGE=	http://libdv.sourceforge.net/
+COMMENT=	DV video codec library
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE=	${WRKSRC}/libdv.pc.in
 
 LIBS+=			${LIBOSSAUDIO}
 
