@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2001/08/06 15:41:14 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2001/08/17 07:29:18 wiz Exp $
 
 --- fig2dev/Imakefile.orig	Thu Apr 19 19:19:38 2001
 +++ fig2dev/Imakefile
@@ -75,7 +75,7 @@ $NetBSD: patch-aa,v 1.6 2001/08/06 15:41:14 wiz Exp $
  #ifdef USEPNG
  DUSEPNG = -DUSE_PNG
 -PNGLIBS = -L$(PNGLIBDIR) -lpng -lz
-+PNGLIBS = -Wl,-R$(PNGLIBDIR) -L$(PNGLIBDIR) -lpng -lz
++PNGLIBS = -Wl,-R$(LOCALBASE)/lib -L$(PNGLIBDIR) -lpng -lz
  #endif /* USEPNG */
  
  #ifdef USEXPM
@@ -90,7 +90,7 @@ $NetBSD: patch-aa,v 1.6 2001/08/06 15:41:14 wiz Exp $
  
  #ifdef USEINSTALLEDJPEG
 -JPEGLIB = -L$(JPEGLIBDIR) -ljpeg
-+JPEGLIB = -Wl,-R$(JPEGLIBDIR) -L$(JPEGLIBDIR) -ljpeg
++JPEGLIB = -Wl,-R$(LOCALBASE)/lib -L$(JPEGLIBDIR) -ljpeg
  #else
  JPEGCONF = configure
  JPEGLIB = $(JPEGLIBDIR)/libjpeg.a
