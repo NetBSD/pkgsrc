@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/05/03 22:20:06 jtb Exp $
+# $NetBSD: Makefile,v 1.6 2002/12/23 16:22:52 cjep Exp $
 
 DISTNAME=		proj-4.4.5
 CATEGORIES=		misc
@@ -21,7 +21,7 @@ NAD27_FILES=FL.lla MD.lla README.NADUS TN.lla WI.lla WO.lla alaska.lla	\
 
 post-extract:
 	cd ${WRKDIR} &&	${LN} ${NAD27_FILES} ${WRKDIR}/${DISTNAME}/nad
- 
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/proj
 	${INSTALL_DATA} ${WRKDIR}/*.pdf ${PREFIX}/share/doc/proj/
