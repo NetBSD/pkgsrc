@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.47 2001/10/25 16:45:03 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.48 2001/10/29 19:21:19 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -244,15 +244,15 @@ MAKEFILE_PATTERNS+=	*.mk
 .if (${OBJECT_FMT} == "a.out") || defined(BUILDLINK_AOUT_DEBUG)
 REPLACE_LIBNAME_PATTERNS+=	${MAKEFILE_PATTERNS}
 _REPLACE_LIBNAME_PATTERNS_FIND=	\
-	${REPLACE_LIBNAME_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1}
+	\( ${REPLACE_LIBNAME_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
 _REPLACE_LIBNAME_CONFIGURE_PATTERNS_FIND=	\
-	-name "${CONFIGURE_SCRIPT:T}"
+	\( -name "${CONFIGURE_SCRIPT:T}" \)
 
 REPLACE_LIBNAMES_CONFIGURE+=	\
-	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_LIBNAME_CONFIGURE_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
+	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_LIBNAME_CONFIGURE_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT}`
 
 REPLACE_LIBNAMES+=	\
-	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_LIBNAME_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
+	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_LIBNAME_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT}`
 
 .if defined(HAS_CONFIGURE) || defined(GNU_CONFIGURE)
 _CONFIGURE_PREREQ+=	replace-libnames-configure
@@ -287,10 +287,10 @@ replace-libnames-makefiles:
 
 REPLACE_RPATH_PATTERNS+=	${MAKEFILE_PATTERNS}
 _REPLACE_RPATH_PATTERNS_FIND=	\
-	${REPLACE_RPATH_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1}
+	\( ${REPLACE_RPATH_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
 
 REPLACE_RPATH+=	\
-	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_RPATH_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
+	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_RPATH_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT}`
 
 REPLACE_RPATH_SED+=	\
 	-e "s|-R[ 	]*${BUILDLINK_DIR}/|-R${LOCALBASE}/|g"
@@ -326,10 +326,10 @@ REPLACE_BUILDLINK_PATTERNS+=	*-config
 REPLACE_BUILDLINK_PATTERNS+=	*Conf.sh
 REPLACE_BUILDLINK_PATTERNS+=	*.pc
 _REPLACE_BUILDLINK_PATTERNS_FIND=	\
-	${REPLACE_BUILDLINK_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1}
+	\( ${REPLACE_BUILDLINK_PATTERNS:S/$/!/:S/^/-o -name !/:S/!/"/g:S/-o//1} \)
 
 REPLACE_BUILDLINK+=	\
-	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_BUILDLINK_PATTERNS_FIND} | ${SED} -e 's|^\./||' | ${SORT}`
+	`cd ${WRKSRC}; ${FIND} . ${_REPLACE_BUILDLINK_PATTERNS_FIND} -print | ${SED} -e 's|^\./||' | ${SORT}`
 
 .if defined(REPLACE_BUILDLINK)
 post-build: replace-buildlink
