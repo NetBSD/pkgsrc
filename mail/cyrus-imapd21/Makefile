@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/11/12 03:39:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2004/01/10 15:20:37 chris Exp $
 
 DISTNAME=		cyrus-imapd-2.1.15
 PKGREVISION=		2
@@ -22,6 +22,7 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
+BUILD_DEFS+=		CYRUS_USE_INET6
 .if defined(CYRUS_USE_INET6) && ${CYRUS_USE_INET6} == "YES"
 PATCH_SITES=		http://www.imasy.or.jp/~ume/ipv6/
 PATCHFILES=		${DISTNAME}-ipv6-20030819.diff.gz
@@ -52,6 +53,7 @@ CONFIGURE_ARGS+=	--enable-netscapehack
 CONFIGURE_ARGS+=	--with-perl=${PERL5}
 
 # Follow the recommended methods for database types to use:
+BUILD_DEFS+=		CYRUS_DB_RECOMMENDED
 .if defined(CYRUS_DB_RECOMMENDED)
 CONFIGURE_ARGS+=	--with-duplicate-db=db3_nosync
 CONFIGURE_ARGS+=	--with-mboxlist-db=skiplist
