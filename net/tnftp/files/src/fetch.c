@@ -1,7 +1,7 @@
-/*	$NetBSD: fetch.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	$NetBSD: fetch.c,v 1.2 2004/07/27 10:25:09 grant Exp $	*/
 
 /*-
- * Copyright (c) 1997-2003 The NetBSD Foundation, Inc.
+ * Copyright (c) 1997-2004 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -42,7 +42,7 @@
 #if 0
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: fetch.c,v 1.1 2004/03/11 13:01:01 grant Exp $");
+__RCSID("$NetBSD: fetch.c,v 1.2 2004/07/27 10:25:09 grant Exp $");
 #endif /* not lint */
 #endif
 
@@ -1254,6 +1254,7 @@ aborthttp(int notused)
 	char msgbuf[100];
 	int len;
 
+	sigint_raised = 1;
 	alarmtimer(0);
 	len = strlcpy(msgbuf, "\nHTTP fetch aborted.\n", sizeof(msgbuf));
 	write(fileno(ttyout), msgbuf, len);
@@ -1677,7 +1678,9 @@ auto_fetch(int argc, char *argv[])
 	if (sigsetjmp(toplevel, 1)) {
 		if (connected)
 			disconnect(0, NULL);
-		return (argpos + 1);
+		if (rval > 0)
+			rval = argpos + 1;
+		return (rval);
 	}
 	(void)xsignal(SIGINT, intr);
 	(void)xsignal(SIGPIPE, lostpeer);

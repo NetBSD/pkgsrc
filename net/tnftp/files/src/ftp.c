@@ -1,7 +1,7 @@
-/*	$NetBSD: ftp.c,v 1.1 2004/03/11 13:01:01 grant Exp $	*/
+/*	$NetBSD: ftp.c,v 1.2 2004/07/27 10:25:09 grant Exp $	*/
 
 /*-
- * Copyright (c) 1996-2002 The NetBSD Foundation, Inc.
+ * Copyright (c) 1996-2004 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -106,7 +106,7 @@
 #if 0
 static char sccsid[] = "@(#)ftp.c	8.6 (Berkeley) 10/27/94";
 #else
-__RCSID("$NetBSD: ftp.c,v 1.1 2004/03/11 13:01:01 grant Exp $");
+__RCSID("$NetBSD: ftp.c,v 1.2 2004/07/27 10:25:09 grant Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -115,8 +115,9 @@ __RCSID("$NetBSD: ftp.c,v 1.1 2004/03/11 13:01:01 grant Exp $");
 
 #include "ftp_var.h"
 
-volatile int	abrtflag = 0;
-volatile int	timeoutflag = 0;
+volatile sig_atomic_t	abrtflag;
+volatile sig_atomic_t	timeoutflag;
+
 sigjmp_buf	ptabort;
 int	ptabflg;
 int	ptflag = 0;
@@ -304,6 +305,7 @@ cmdabort(int notused)
 {
 	int oerrno = errno;
 
+	sigint_raised = 1;
 	alarmtimer(0);
 	if (fromatty)
 		write(fileno(ttyout), "\n", 1);
@@ -587,6 +589,7 @@ abortxfer(int notused)
 	char msgbuf[100];
 	int len;
 
+	sigint_raised = 1;
 	alarmtimer(0);
 	mflag = 0;
 	abrtflag = 0;
@@ -1725,6 +1728,7 @@ psabort(int notused)
 {
 	int oerrno = errno;
 
+	sigint_raised = 1;
 	alarmtimer(0);
 	abrtflag++;
 	errno = oerrno;
@@ -1821,6 +1825,7 @@ void
 abortpt(int notused)
 {
 
+	sigint_raised = 1;
 	alarmtimer(0);
 	if (fromatty)
 		write(fileno(ttyout), "\n", 1);
@@ -2039,6 +2044,7 @@ abort_squared(int dummy)
 	char msgbuf[100];
 	int len;
 
+	sigint_raised = 1;
 	alarmtimer(0);
 	len = strlcpy(msgbuf, "\nremote abort aborted; closing connection.\n",
 	    sizeof(msgbuf));
