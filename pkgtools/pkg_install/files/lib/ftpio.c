@@ -1,4 +1,4 @@
-/*	$NetBSD: ftpio.c,v 1.11 2004/10/31 02:48:12 grant Exp $	*/
+/*	$NetBSD: ftpio.c,v 1.12 2004/11/02 00:44:00 erh Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: ftpio.c,v 1.11 2004/10/31 02:48:12 grant Exp $");
+__RCSID("$NetBSD: ftpio.c,v 1.12 2004/11/02 00:44:00 erh Exp $");
 #endif
 
 /*-
@@ -281,7 +281,7 @@ expect(int fd, const char *str, int *ftprc)
 				fflush(stdout);
 #endif /* EXPECT_DEBUG */
 
-				if (ftprc && isdigit(buf[match.rm_so+1])) 
+				if (ftprc && isdigit((unsigned char)buf[match.rm_so+1])) 
 					*ftprc = atoi(buf+match.rm_so+1);
 
 				done=1;
@@ -937,14 +937,14 @@ http_extract_fn(char *input, char *outbuf, size_t outbuflen)
 				state = ST_NONE;
 			else if (p == 'a' || p == 'A')
 				state = ST_LTA;
-			else if (!isspace(p))
+			else if (!isspace((unsigned char)p))
 				state = ST_TAG;
 			break;
 		case ST_LTA:
 			/* in tag -- "<a" already found */
 			if (p == '>')
 				state = ST_NONE;
-			else if (isspace(p))
+			else if (isspace((unsigned char)p))
 				state = ST_TAGA;
 			else
 				state = ST_TAG;
@@ -960,14 +960,14 @@ http_extract_fn(char *input, char *outbuf, size_t outbuflen)
 				state = ST_NONE;
 			else if (p == 'h' || p == 'H')
 				state = ST_H;
-			else if (!isspace(p))
+			else if (!isspace((unsigned char)p))
 				state = ST_TAGAX;
 			break;
 		case ST_TAGAX:
 			/* in unknown keyword in a-tag */
 			if (p == '>')
 				state = ST_NONE;
-			else if (isspace(p))
+			else if (isspace((unsigned char)p))
 				state = ST_TAGA;
 			break;
 		case ST_H:
@@ -976,7 +976,7 @@ http_extract_fn(char *input, char *outbuf, size_t outbuflen)
 				state = ST_NONE;
 			else if (p == 'r' || p == 'R')
 				state = ST_R;
-			else if (isspace(p))
+			else if (isspace((unsigned char)p))
 				state = ST_TAGA;
 			else
 				state = ST_TAGAX;
@@ -987,7 +987,7 @@ http_extract_fn(char *input, char *outbuf, size_t outbuflen)
 				state = ST_NONE;
 			else if (p == 'e' || p == 'E')
 				state = ST_E;
-			else if (isspace(p))
+			else if (isspace((unsigned char)p))
 				state = ST_TAGA;
 			else
 				state = ST_TAGAX;
@@ -998,7 +998,7 @@ http_extract_fn(char *input, char *outbuf, size_t outbuflen)
 				state = ST_NONE;
 			else if (p == 'f' || p == 'F')
 				state = ST_F;
-			else if (isspace(p))
+			else if (isspace((unsigned char)p))
 				state = ST_TAGA;
 			else
 				state = ST_TAGAX;
@@ -1009,7 +1009,7 @@ http_extract_fn(char *input, char *outbuf, size_t outbuflen)
 				state = ST_NONE;
 			else if (p == '=')
 				state = ST_HREF;
-			else if (!isspace(p))
+			else if (!isspace((unsigned char)p))
 				state = ST_TAGAX;
 			break;
 		case ST_HREF:
@@ -1018,7 +1018,7 @@ http_extract_fn(char *input, char *outbuf, size_t outbuflen)
 			if (p == '>')
 				state = ST_NONE;
 			/* skip spaces before URL */
-			else if (!isspace(p))
+			else if (!isspace((unsigned char)p))
 				state = ST_TAGA;
 			break;
 			/* no default case by purpose */
