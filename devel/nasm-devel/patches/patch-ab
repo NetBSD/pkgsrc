@@ -1,0 +1,46 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/06/20 16:43:01 wiz Exp $
+
+--- rdoff/Makefile.orig	Fri Jun 15 21:21:30 2001
++++ rdoff/Makefile	Fri Jun 15 21:26:10 2001
+@@ -11,18 +11,18 @@
+ 
+ top_srcdir	= ..
+ srcdir		= .
+-prefix		= /usr/local
++prefix		= ${PREFIX}
+ exec_prefix	= ${prefix}
+ bindir		= ${exec_prefix}/bin
+ mandir		= ${prefix}/man
+ 
+ CC		= gcc
+-CFLAGS		= -g -O2 -Wall -ansi -pedantic -I$(srcdir) -I$(top_srcdir)
++CFLAGS		= -O2 -Wall -ansi -pedantic -I$(srcdir) -I$(top_srcdir)
+ LDFLAGS		= 
+ 
+-INSTALL		= /usr/bin/ginstall -c
+-INSTALL_PROGRAM	= ${INSTALL}
+-INSTALL_DATA	= ${INSTALL} -m 644
++#INSTALL		= /usr/bin/ginstall -c
++#INSTALL_PROGRAM	= ${INSTALL}
++#INSTALL_DATA	= ${INSTALL} -m 644
+ LN_S 		= ln -s
+ 
+ LDRDFLIBS 	= rdoff.o nasmlib.o symtab.o collectn.o rdlib.o segtab.o hash.o
+@@ -73,10 +73,10 @@
+ distclean: spotless
+ 
+ install: rdfdump ldrdf rdx rdflib rdf2bin rdf2com rdf2ihx
+-	$(INSTALL_PROGRAM) rdfdump $(INSTALLROOT)$(bindir)/rdfdump
+-	$(INSTALL_PROGRAM) ldrdf $(INSTALLROOT)$(bindir)/ldrdf
+-	$(INSTALL_PROGRAM) rdx $(INSTALLROOT)$(bindir)/rdx
+-	$(INSTALL_PROGRAM) rdflib $(INSTALLROOT)$(bindir)/rdflib
+-	$(INSTALL_PROGRAM) rdf2bin $(INSTALLROOT)$(bindir)/rdf2bin
+-	$(INSTALL_PROGRAM) rdf2ihx $(INSTALLROOT)$(bindir)/rdf2ihx
+-	cd $(INSTALLROOT)$(bindir) && rm -f rdf2com && $(LN_S) rdf2bin rdf2com
++	$(INSTALL_PROGRAM) rdfdump $(bindir)/rdfdump
++	$(INSTALL_PROGRAM) ldrdf $(bindir)/ldrdf
++	$(INSTALL_PROGRAM) rdx $(bindir)/rdx
++	$(INSTALL_PROGRAM) rdflib $(bindir)/rdflib
++	$(INSTALL_PROGRAM) rdf2bin $(bindir)/rdf2bin
++	$(INSTALL_PROGRAM) rdf2ihx $(bindir)/rdf2ihx
++	cd $(bindir) && rm -f rdf2com && $(LN_S) rdf2bin rdf2com
