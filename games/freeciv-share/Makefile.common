@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2001/01/04 14:18:50 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2001/02/26 17:01:59 jlam Exp $
 
 DISTNAME=		freeciv-${FC_VERS}
 FC_VERS=		1.11.4
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.freeciv.org/
 
-BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 
 FILESDIR=		${.CURDIR}/../../games/freeciv-share/files
@@ -21,6 +21,6 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 USE_LIBINTL=		yes
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf
+	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
 
 .include "../../mk/bsd.pkg.mk"
