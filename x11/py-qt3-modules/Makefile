@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/22 17:24:50 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/19 04:35:04 jmc Exp $
 #
 
 DISTNAME=		PyQt-x11-gpl-3.7
 PKGNAME=		${PYPKGPREFIX}-qt3-modules-3.7
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://www.river-bank.demon.co.uk/download/PyQt/
 
@@ -19,6 +20,8 @@ CONFIGURE_ARGS=		-q ${QTDIR} -m ${GMAKE} -p ${SIPBIN}
 
 PYTHON_VERSIONS_ACCEPTED=	22pth 21pth
 PY_PATCHPLIST=	yes
+QTLIBDIR=	${QTDIR:S/${BUILDLINK_PREFIX.qt3-libs}\///}/lib
+PLIST_SUBST+=	QTLIBDIR=${QTLIBDIR}
 
 MAKE_ENV+=	QTPREFIX=${QTDIR}
 
@@ -28,6 +31,8 @@ do-configure:
 
 PYQTMODULES=	qtcanvas qtgl qtnetwork qtsql qttable qtui qtxml
 
+# XXX - hack. Shouldn't need the symlinks as qmake should let us build
+# proper libraries that install outside of QTDIR more easily.
 do-install:
 	(for f in ${PYQTMODULES}; do \
 		(cd ${WRKSRC}/$${f} && ( \
@@ -37,6 +42,12 @@ do-install:
 			) \
 		); \
 	 done)
+	(for f in ${PYQTMODULES}; do \
+		(cd ${PREFIX}/${PYSITELIB}; for i in lib$${f}cmodule.*; do \
+			${LN} -sf ${PREFIX}/${PYSITELIB}/$$i \
+				${PREFIX}/${QTLIBDIR}/$$i; done \
+		); \
+	done)
 
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-qt3-base/buildlink2.mk"
