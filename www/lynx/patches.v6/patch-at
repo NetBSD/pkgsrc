@@ -1,0 +1,19 @@
+$NetBSD: patch-at,v 1.1 2000/01/15 17:44:25 hubertf Exp $
+
+Place(s) where this was (most probably...) in before:
+
+diff -x *.orig -urN ./WWW/Library/Implementation/tcp.h /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/WWW/Library/Implementation/tcp.h
+--- ./WWW/Library/Implementation/tcp.h	Sat May  8 19:46:28 1999
++++ /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/WWW/Library/Implementation/tcp.h	Sat Jan 15 07:57:19 2000
+@@ -56,7 +56,11 @@
+ #define INVSOC (-1)             /* Unix invalid socket */
+ 		/* NB: newer libwww has something different for Windows */
+ 
++#ifdef INET6
++typedef struct sockaddr_storage SockA;  /* See netinet/in.h */
++#else
+ typedef struct sockaddr_in SockA;  /* See netinet/in.h */
++#endif
+ 
+ #ifndef VMS
+ #include <sys/types.h>

@@ -1,0 +1,30 @@
+$NetBSD: patch-ay,v 1.1 2000/01/15 17:44:26 hubertf Exp $
+
+Place(s) where this was (most probably...) in before:
+
+diff -x *.orig -urN ./src/LYUtils.c /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/src/LYUtils.c
+--- ./src/LYUtils.c	Sun May 30 05:27:26 1999
++++ /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/src/LYUtils.c	Sat Jan 15 07:57:20 2000
+@@ -4298,6 +4298,8 @@
+     char *Fragment = NULL;
+     BOOLEAN GotHost = FALSE;
+     BOOLEAN Startup = (helpfilepath == NULL);
++    struct addrinfo hints, *res;
++    int error;
+ 
+     /*
+      *	If it's a NULL or zero-length string,
+@@ -4370,7 +4372,12 @@
+ 	fprintf(stdout, "%s '%s'%s\n", WWW_FIND_MESSAGE, host, FIRST_SEGMENT);
+     }
+ #ifndef DJGPP
+-    if (LYGetHostByName(host) != NULL)
++    memset(&hints, 0, sizeof(hints));
++    hints.ai_family = PF_UNSPEC;
++    hints.ai_socktype = SOCK_STREAM;
++    error = getaddrinfo(host, "80", &hints, &res); 
++
++    if (!error && res)
+ #else
+     if (resolve(host) != 0)
+ #endif /* DJGPP */

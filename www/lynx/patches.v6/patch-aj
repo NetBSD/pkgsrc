@@ -1,0 +1,284 @@
+$NetBSD: patch-aj,v 1.1 2000/01/15 17:44:22 hubertf Exp $
+
+Place(s) where this was (most probably...) in before:
+
+diff -x *.orig -urN ./WWW/Library/Implementation/HTFTP.c /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/WWW/Library/Implementation/HTFTP.c
+--- ./WWW/Library/Implementation/HTFTP.c	Tue May 25 19:13:02 1999
++++ /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/WWW/Library/Implementation/HTFTP.c	Sat Jan 15 07:57:18 2000
+@@ -1013,10 +1013,11 @@
+ */
+ PRIVATE int get_listen_socket NOARGS
+ {
+-    struct sockaddr_in soc_address;	/* Binary network address */
+-    struct sockaddr_in* soc_in = &soc_address;
++    struct sockaddr_storage soc_address;	/* Binary network address */
++    struct sockaddr_in* soc_in = (struct sockaddr_in *)&soc_address;
+     int new_socket;			/* Will be master_socket */
+-
++    int af;
++    int slen;
+ 
+     FD_ZERO(&open_sockets);	/* Clear our record of open sockets */
+     num_sockets = 0;
+@@ -1026,9 +1027,18 @@
+ 	return master_socket;  /* Done already */
+ #endif /* !REPEAT_LISTEN */
+ 
++    /* query address family of control connection */
++    slen = sizeof(soc_address);
++    if (getsockname(control->socket, (struct sockaddr *)&soc_address,
++		&slen) < 0) {
++	return HTInetStatus("getsockname failed");
++    }
++    af = soc_address.ss_family;
++    memset(&soc_address, 0, sizeof(soc_address));
++
+ /*  Create internet socket
+ */
+-    new_socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
++    new_socket = socket(af, SOCK_STREAM, IPPROTO_TCP);
+ 
+     if (new_socket < 0)
+ 	return HTInetStatus(gettext("socket for master socket"));
+@@ -1037,8 +1047,24 @@
+ 
+ /*  Search for a free port.
+ */
+-    soc_in->sin_family = AF_INET;	    /* Family = internet, host order  */
+-    soc_in->sin_addr.s_addr = INADDR_ANY;   /* Any peer address */
++    memset(&soc_address, 0, sizeof(soc_address));
++    soc_address.ss_family = af;
++    switch (af) {
++    case AF_INET:
++#ifdef SIN6_LEN
++	soc_address.ss_len = sizeof(struct sockaddr_in);
++#endif
++	break;
++#ifdef INET6
++    case AF_INET6:
++#ifdef SIN6_LEN
++	soc_address.ss_len = sizeof(struct sockaddr_in6);
++#endif
++	break;
++#endif
++    default:
++	HTInetStatus("AF");
++    }
+ #ifdef POLL_PORTS
+     {
+ 	unsigned short old_port_number = port_number;
+@@ -1049,15 +1075,19 @@
+ 	    if (port_number == old_port_number) {
+ 		return HTInetStatus("bind");
+ 	    }
+-	    soc_address.sin_port = htons(port_number);
++	    soc_in->sin_port = htons(port_number);
+ #ifdef SOCKS
+ 	    if (socks_flag)
+ 		if ((status=Rbind(new_socket,
+ 			(struct sockaddr*)&soc_address,
+ 			    /* Cast to generic sockaddr */
+-			sizeof(soc_address)
++#ifdef SIN6_LEN
++			soc_address.ss_len,
++#else
++			SA_LEN((struct sockaddr *)&soc_address),
++#endif
+ #ifndef SHORTENED_RBIND
+-			,socks_bind_remoteAddr
++			socks_bind_remoteAddr
+ #endif /* !SHORTENED_RBIND */
+ 						)) == 0)
+ 		    break;
+@@ -1066,7 +1096,12 @@
+ 	    if ((status=bind(new_socket,
+ 		    (struct sockaddr*)&soc_address,
+ 			    /* Cast to generic sockaddr */
+-		    sizeof(soc_address))) == 0)
++#ifdef SIN6_LEN
++		    soc_address.ss_len
++#else
++		    SA_LEN((struct sockaddr *)&soc_address)
++#endif
++		    )) == 0)
+ 		break;
+ 	    CTRACE(tfp, "TCP bind attempt to port %d yields %d, errno=%d\n",
+ 		port_number, status, SOCKET_ERRNO);
+@@ -1088,17 +1123,21 @@
+ 			     (void *)&address_length);
+ 	if (status<0) return HTInetStatus("getsockname");
+ 	CTRACE(tfp, "HTFTP: This host is %s\n",
+-	    HTInetString(soc_in));
++	    HTInetString((SockA *)soc_in));
+ 
+-	soc_address.sin_port = 0;	/* Unspecified: please allocate */
++	soc_in->sin_port = 0;	/* Unspecified: please allocate */
+ #ifdef SOCKS
+ 	if (socks_flag)
+ 	    status=Rbind(new_socket,
+ 			 (struct sockaddr*)&soc_address,
+ 			 /* Cast to generic sockaddr */
+-			 sizeof(soc_address)
++#ifdef SIN6_LEN
++			 soc_address.ss_len,
++#else
++			 SA_LEN((struct sockaddr *)&soc_address),
++#endif
+ #ifndef SHORTENED_RBIND
+-			,socks_bind_remoteAddr
++			socks_bind_remoteAddr
+ #endif /* !SHORTENED_RBIND */
+ 						);
+ 	else
+@@ -1106,7 +1145,12 @@
+ 	status=bind(new_socket,
+ 		    (struct sockaddr*)&soc_address,
+ 		    /* Cast to generic sockaddr */
+-		    sizeof(soc_address));
++#ifdef SIN6_LEN
++		    soc_address.ss_len
++#else
++		    SA_LEN((struct sockaddr *)&soc_address)
++#endif
++		    );
+ 	if (status<0) return HTInetStatus("bind");
+ 
+ 	address_length = sizeof(soc_address);
+@@ -1126,7 +1170,7 @@
+ 
+     CTRACE(tfp, "HTFTP: bound to port %d on %s\n",
+ 		(int)ntohs(soc_in->sin_port),
+-		HTInetString(soc_in));
++		HTInetString((SockA *)soc_in));
+ 
+ #ifdef REPEAT_LISTEN
+     if (master_socket >= 0)
+@@ -1138,7 +1182,9 @@
+ /*	Now we must find out who we are to tell the other guy
+ */
+     (void)HTHostName();		/* Make address valid - doesn't work*/
+-    sprintf(port_command, "PORT %d,%d,%d,%d,%d,%d%c%c",
++    switch (soc_address.ss_family) {
++    case AF_INET:
++	sprintf(port_command, "PORT %d,%d,%d,%d,%d,%d%c%c",
+ 		    (int)*((unsigned char *)(&soc_in->sin_addr)+0),
+ 		    (int)*((unsigned char *)(&soc_in->sin_addr)+1),
+ 		    (int)*((unsigned char *)(&soc_in->sin_addr)+2),
+@@ -1146,7 +1192,29 @@
+ 		    (int)*((unsigned char *)(&soc_in->sin_port)+0),
+ 		    (int)*((unsigned char *)(&soc_in->sin_port)+1),
+ 		    CR, LF);
+-
++	break;
++#ifdef INET6
++    case AF_INET6:
++      {
++	char hostbuf[MAXHOSTNAMELEN];
++	char portbuf[MAXHOSTNAMELEN];
++	getnameinfo((struct sockaddr *)&soc_address,
++#ifdef SIN6_LEN
++	    soc_address.ss_len,
++#else
++	    SA_LEN((struct sockaddr *)&soc_address),
++#endif
++	    hostbuf, sizeof(hostbuf), portbuf, sizeof(portbuf),
++	    NI_NUMERICHOST | NI_NUMERICSERV);
++	sprintf(port_command, "EPRT |%d|%s|%s|%c%c", 2, hostbuf, portbuf,
++		CR, LF);
++	break;
++      }
++#endif
++    default:
++	sprintf(port_command, "JUNK%c%c", CR, LF);
++	break;
++    }
+ 
+ /*	Inform TCP that we will accept connections
+ */
+@@ -2594,7 +2662,8 @@
+ 	if (status < 0) {
+ 	    NETCLOSE (control->socket);
+ 	    control->socket = -1;
+-	    close_master_socket ();
++	    if (master_socket >= 0)
++		(void)close_master_socket ();
+ 	    /* HT_INTERRUPTED would fall through, if we could interrupt
+ 	       somehow in the middle of it, which we currently can't. */
+ 	    return status;
+@@ -2631,26 +2700,50 @@
+ 	    int status;
+ 	    data_soc = status;
+ 
+-	    status = send_cmd_1("PASV");
+-	    if (status != 2) {
+-		if (status < 0)
+-		    continue;		/* retry or Bad return */
+-		return -status;		/* bad reply */
++	    status = send_cmd_1("EPSV");
++	    if (status < 0)	/* retry or Bad return */
++		continue;
++	    else if (status != 2) {
++		status = send_cmd_1("PASV");
++		if (status < 0)	/* retry or Bad return */
++		    continue;
++		else if (status != 2) {
++		    return -status; 	/* bad reply */
++		}
+ 	    }
+-	    for (p = response_text; *p && *p != ','; p++)
+-		; /* null body */
+ 
+-	    while (--p > response_text && '0' <= *p && *p <= '9')
+-		; /* null body */
++	    if (strncmp(command, "PASV", 4) == 0) {
++		for (p = response_text; *p && *p != ','; p++)
++		    ; /* null body */
++
++		while (--p > response_text && '0' <= *p && *p <= '9')
++		    ; /* null body */
+ 
+-	   status = sscanf(p+1, "%d,%d,%d,%d,%d,%d",
+-		   &h0, &h1, &h2, &h3, &p0, &p1);
+-	   if (status < 4) {
+-	       fprintf(tfp, "HTFTP: PASV reply has no inet address!\n");
+-	       return -99;
+-	   }
+-	   passive_port = (p0<<8) + p1;
+-	   CTRACE(tfp, "HTFTP: Server is listening on port %d\n",
++	       status = sscanf(p+1, "%d,%d,%d,%d,%d,%d",
++		       &h0, &h1, &h2, &h3, &p0, &p1);
++	       if (status < 4) {
++		   fprintf(tfp, "HTFTP: PASV reply has no inet address!\n");
++		   return -99;
++	       }
++	       passive_port = (p0<<8) + p1;
++	    } else if (strncmp(command, "EPSV", 4) == 0) {
++		char ch;
++		/*
++		 * EPSV |||port|
++		 */
++		for (p = response_text; *p && !isspace(*p); p++)
++		    ; /* null body */
++		for (p = response_text; *p && isspace(*p); p++)
++		    ; /* null body */
++		status = sscanf(p+1, "%c%c%c%d%c",
++		       &h0, &h1, &h2, &p0, &h3);
++		if (status != 5) {
++		    fprintf(tfp, "HTFTP: EPSV reply has invalid format!\n");
++		    return -99;
++		}
++		passive_port = p0;
++	    }
++	    CTRACE(tfp, "HTFTP: Server is listening on port %d\n",
+ 			passive_port);
+ 
+ 
+@@ -3162,7 +3255,7 @@
+ /*	Wait for the connection
+ */
+     {
+-	struct sockaddr_in soc_address;
++	struct sockaddr_storage soc_address;
+ 	int	soc_addrlen=sizeof(soc_address);
+ #ifdef SOCKS
+ 	if (socks_flag)

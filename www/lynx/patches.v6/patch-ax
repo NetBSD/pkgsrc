@@ -1,0 +1,20 @@
+$NetBSD: patch-ax,v 1.1 2000/01/15 17:44:26 hubertf Exp $
+
+Place(s) where this was (most probably...) in before:
+
+diff -x *.orig -urN ./makefile.in /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/makefile.in
+--- ./makefile.in	Fri May 28 16:04:01 1999
++++ /usr/pkgsrc/www/lynx/work.unpatched/lynx2-8-2/makefile.in	Sat Jan 15 07:59:17 2000
+@@ -15,10 +15,11 @@
+ CC		= @CC@
+ CFLAGS		= @CFLAGS@
+ DEFS		= @DEFS@
+-CPPFLAGS	= @CPPFLAGS@
++CPPFLAGS	= @CPPFLAGS@
+ LINT		= @LINT@
+ 
+ LIBS		= @LIBS@
++#LIBS+=		-L/usr/local/v6/lib -linet6
+ 
+ INSTALL		= @INSTALL@
+ INSTALL_PROGRAM	= @INSTALL_PROGRAM@
