@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.23 1998/09/04 12:48:04 agc Exp $
+#	$NetBSD: Makefile,v 1.24 1998/12/04 03:49:30 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += amanda
@@ -40,6 +40,7 @@
     SUBDIR += qterm
     SUBDIR += rpm
     SUBDIR += screen
+    SUBDIR += siag
     SUBDIR += splitvt
     SUBDIR += team
 #   SUBDIR += viz
