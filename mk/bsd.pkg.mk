@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.83 1998/05/14 11:53:30 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.84 1998/05/22 17:35:42 tv Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -819,7 +819,7 @@ CONFIGURE_SCRIPT?=	configure
 CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
 
 .if defined(GNU_CONFIGURE)
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_ARCH}-netbsd --prefix=${PREFIX}
 HAS_CONFIGURE=		yes
 .endif
 
