@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/13 22:35:49 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/13 22:49:44 jlam Exp $
 
 DISTNAME=	ghostscript-cmaps-20020913
 CATEGORIES=	fonts
@@ -30,5 +30,6 @@ MAKE_DIRS=		${GS_RESOURCEDIR} ${GS_RESOURCEDIR}/CMap
 
 do-install:	# nothing
 
+.include "../../mk/ghostscript.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
