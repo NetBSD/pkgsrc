@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2002/10/12 09:40:00 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/26 18:45:28 grant Exp $
 
-DISTNAME=	freetds-0.53
+DISTNAME=	freetds-0.60
 CATEGORIES=	databases
-PKGREVISION=	2
 MASTER_SITES=	ftp://ftp.metalab.unc.edu/pub/Linux/ALPHA/freetds/
 EXTRACT_SUFX=	.tgz
 
@@ -24,10 +23,12 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 EGDIR=		${PREFIX}/share/examples/freetds
 CONF_FILES=	${EGDIR}/freetds.conf ${PKG_SYSCONFDIR}/freetds.conf
+CONF_FILES+=	${EGDIR}/locales.conf ${PKG_SYSCONFDIR}/locales.conf
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/freetds.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/locales.conf ${EGDIR}
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
