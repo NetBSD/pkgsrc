@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2005/03/23 21:37:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2005/03/27 22:43:09 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -5050,7 +5050,7 @@ ${PKGLOCALEDIR}/locale/all_languages
 @dirrm share/kde/services/kresources/kabc
 @dirrm share/kde/services/kresources
 @dirrm share/kde/services/kded
-@dirrm share/kde/services
+@comment in kde: @dirrm share/kde/services
 @dirrm share/kde/mimelnk/video
 @dirrm share/kde/mimelnk/uri
 @dirrm share/kde/mimelnk/text
@@ -5062,7 +5062,7 @@ ${PKGLOCALEDIR}/locale/all_languages
 @dirrm share/kde/mimelnk/audio
 @dirrm share/kde/mimelnk/application
 @dirrm share/kde/mimelnk/all
-@dirrm share/kde/mimelnk
+@comment in kde: @dirrm share/kde/mimelnk
 @comment in kde: @dirrm share/kde/icons/locolor/64x64/mimetypes
 @comment in kde: @dirrm share/kde/icons/locolor/64x64/filesystems
 @comment in kde: @dirrm share/kde/icons/locolor/64x64/devices
@@ -5182,7 +5182,7 @@ ${PKGLOCALEDIR}/locale/all_languages
 @dirrm share/kde/emoticons
 @dirrm share/kde/config/ui
 @dirrm share/kde/config/colors
-@dirrm share/kde/config
+@comment in kde: @dirrm share/kde/config
 @dirrm share/kde/autostart
 @dirrm share/kde/apps/proxyscout
 @dirrm share/kde/apps/ktexteditor_kdatatool
@@ -5316,7 +5316,7 @@ ${PKGLOCALEDIR}/locale/all_languages
 @dirrm share/kde/apps/khtml/icons/crystalsvg
 @dirrm share/kde/apps/khtml/icons
 @dirrm share/kde/apps/khtml/css
-@dirrm share/kde/apps/khtml
+@comment in kde: @dirrm share/kde/apps/khtml
 @dirrm share/kde/apps/kdewidgets/pics
 @dirrm share/kde/apps/kdewidgets
 @dirrm share/kde/apps/kdeui/pics
@@ -5351,7 +5351,7 @@ ${PKGLOCALEDIR}/locale/all_languages
 @dirrm share/kde/apps/kabc
 @dirrm share/kde/apps/dcopidlng
 @dirrm share/kde/apps/LICENSES
-@dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde
 @dirrm share/examples/kdelibs3
 @dirrm share/doc/kde/HTML/en/kspell
@@ -5423,9 +5423,9 @@ ${PKGLOCALEDIR}/locale/all_languages
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs
 @dirrm share/doc/kde/HTML/en/common
-@dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML
-@dirrm share/doc/kde
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
 @dirrm share/applications/kde
 @dirrm lib/kde3/plugins/styles
 @dirrm lib/kde3/plugins/designer
