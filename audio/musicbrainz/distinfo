@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2004/02/09 00:07:36 chris Exp $
+$NetBSD: distinfo,v 1.5 2004/08/21 11:07:35 markd Exp $
 
-SHA1 (libmusicbrainz-2.0.2.tar.gz) = 7aaef31e4a5f6a7d2e8aa14c4b6b7167ee533301
-Size (libmusicbrainz-2.0.2.tar.gz) = 583123 bytes
+SHA1 (libmusicbrainz-2.1.1.tar.gz) = 83fb98534da266eb8c87d0cc14fb5f95a5feb37c
+Size (libmusicbrainz-2.1.1.tar.gz) = 528162 bytes
