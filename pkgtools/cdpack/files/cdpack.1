@@ -1,4 +1,4 @@
-.\" $NetBSD: cdpack.1,v 1.7 2002/05/19 07:59:47 dmcmahill Exp $
+.\" $NetBSD: cdpack.1,v 1.8 2002/05/22 22:30:44 dmcmahill Exp $
 .\"
 .\" Copyright (c) 2001 Dan McMahill, All rights reserved.
 .\"
@@ -65,15 +65,21 @@ that directory.  A file,
 which lists the contents of each CD will be left in the root
 directory of each CD image.
 .Bl -tag -width "-x directory "
-.It Fl a
+.It Fl ac
 Include binary packages marked as NO_BIN_ON_CDROM on the CD set.
 The default is to omit any
 packages which were marked as NO_BIN_ON_CDROM.  This option should
 only be used when making a CD set for personal use and not for
 distribution unless you are sure you have not violated any licenses.
+.It Fl af
+Include binary packages marked as NO_BIN_ON_FTP on the CD set.
+This option is enabled by default.
 .It Fl d
 Enable debugging by not deleting temporary files at the end of the
 run.  These files are left in TMPDIR.
+.It Fl ec
+Exclude packages marked as NO_BIN_ON_CDROM from the CD set.  This is
+the default.
 .It Fl ef
 Exclude packages marked as NO_BIN_ON_FTP from the CD set.  The default
 is to allow packages which are NO_BIN_ON_FTP.
