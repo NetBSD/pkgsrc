@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8540 2004/12/31 12:03:48 minskim Exp $
+$NetBSD: CHANGES,v 1.8541 2004/12/31 13:21:33 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6719,3 +6719,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cbrowser to 0.6nb1 [minskim 2004-12-31]
 	Updated pvs to 3.1nb2 [minskim 2004-12-31]
 	Updated icewmconf to 2.1.0nb1 [minskim 2004-12-31]
+	Updated eukleides to 1.0.1 [kristerw 2004-12-31]
+	Updated xeukleides to 1.0.0 [kristerw 2004-12-31]
