@@ -1,4 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:03:52 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/16 00:11:48 dillo Exp $
+bin/opt-case.pl
 bin/rtin
 bin/tin
+bin/w2r.pl
+man/man1/opt-case.pl.1
+man/man1/rtin.1
 man/man1/tin.1
+man/man1/w2r.pl.1
+man/man5/mmdf.5
+man/man5/tin.5
+share/doc/tin/WHATSNEW
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tin.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/tin.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/tin.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/tin.mo
+@dirrm share/doc/tin
