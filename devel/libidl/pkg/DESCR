@@ -1,0 +1,7 @@
+With libIDL, you can parse an IDL file which will be automatically run
+through the C preprocessor (on systems with one available), and have
+detailed error and warning messages displayed.  On a compilation
+without errors, the tree is returned to the custom application.
+libIDL performs compilation phases from lexical analysis to nearly
+full semantic analysis with some optimizations, and will attempt to
+generate meaningful errors and warnings for invalid or deprecated IDL.
