@@ -1,7 +1,7 @@
  #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.1 2003/01/04 21:13:37 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.2 2003/01/15 00:40:50 dmcmahill Exp $
 #
-# Copyright (c) 2002 The NetBSD Foundation, Inc.
+# Copyright (c) 2002, 2003 The NetBSD Foundation, Inc.
 # All rights reserved.
 #
 # This code is derived from software contributed to The NetBSD Foundation
@@ -292,7 +292,8 @@ END {
 	    vul="";
 	    if(have_vfile) {
 		i=1;
-		pkgbase=gensub(/-[^-]*$/,"","G",pkgdir2name[toppkg]);
+		pkgbase=pkgdir2name[toppkg];
+		gsub(/-[^-]*$/, "", pkgbase);
 		if(debug) printf("Checking for %s (%s) vulnerabilities\n",toppkg,pkgbase);
 		while(i in vulpkg) {
 		    nm=vulpkg[i];
@@ -605,9 +606,9 @@ function reg2str(reg){
 # accepts a full path to a package directory, like "/usr/pkgsrc/math/scilab"
 # and returns just the last 2 directories, like "math/scilab"
 #
-function fulldir2pkgdir(d){
-    d=gensub(/^(.*)(\/)([^\/]*\/[^\/]*)$/,"\\3","g",d);
-    return(d);
+function fulldir2pkgdir(d,i){
+    i = match(d, /\/[^\/]+\/[^\/]+$/);
+    return substr(d, i + 1);
 }
 
 #
