@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/12/14 00:54:49 wiz Exp $
+
+--- Makefile.orig	Wed Oct 13 19:58:26 1999
++++ Makefile	Wed Oct 13 20:56:08 1999
+@@ -6,8 +6,18 @@
+ # arnold@skeeve.atl.ga.us
+ 
+ CC = gcc
+-CFLAGS = -g -O
++CFLAGS = -O -I/usr/X11R6/include
+ LIBS = -lX11
+ 
++
++all: 9menu
++
+ 9menu: 9menu.c
+-	$(CC) $(CFLAGS) 9menu.c $(LIBS) -o 9menu
++	$(CC) $(CFLAGS) 9menu.c $(LDFLAGS) $(LIBS) -o 9menu
++
++install:
++	$(INSTALL) -c 9menu $(PREFIX)/bin
++	$(INSTALL) -c 9menu.1 $(PREFIX)/man/man1
++	strip $(PREFIX)/bin/9menu
++	gzip -9nf $(PREFIX)/man/man1/9menu.1
++
