@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2001/11/27 03:38:42 itojun Exp $
+$NetBSD: patch-ac,v 1.5 2004/10/03 09:20:41 tron Exp $
 
---- lib/lwres/getaddrinfo.c.orig	Sat Jul 14 08:34:01 2001
-+++ lib/lwres/getaddrinfo.c	Tue Jul 17 10:15:03 2001
-@@ -31,6 +31,10 @@
+--- lib/lwres/getaddrinfo.c-	2004-05-16 05:03:22.000000000 +0900
++++ lib/lwres/getaddrinfo.c	2004-05-16 05:04:33.000000000 +0900
+@@ -30,6 +30,10 @@
  #include <lwres/net.h>
  #include <lwres/netdb.h>
  
@@ -13,14 +13,10 @@ $NetBSD: patch-ac,v 1.4 2001/11/27 03:38:42 itojun Exp $
  #define SA(addr)	((struct sockaddr *)(addr))
  #define SIN(addr)	((struct sockaddr_in *)(addr))
  #define SIN6(addr)	((struct sockaddr_in6 *)(addr))
-@@ -253,14 +257,18 @@
+@@ -252,14 +256,22 @@
  			p = strchr(ntmp, '%');
  			ep = NULL;
  
--			/*
--			 * Vendors may want to support non-numeric
--			 * scopeid around here.
--			 */
 +#ifdef __KAME__
 +			if (p != NULL) {
 +				scopeid = if_nametoindex(p + 1);
@@ -28,6 +24,10 @@ $NetBSD: patch-ac,v 1.4 2001/11/27 03:38:42 itojun Exp $
 +					p = NULL;
 +			}
 +#endif
+ 			/*
+ 			 * Vendors may want to support non-numeric
+ 			 * scopeid around here.
+ 			 */
  
 -			if (p != NULL)
 +			if (p != NULL) {
