@@ -1,0 +1,5 @@
+Tools for bumping PKGREVISIONs and adapting BUILDLINK_RECOMMENDED
+versions to the latest version automatically.
+
+This tool is mostly intended for pkgsrc developers with commit
+access.
