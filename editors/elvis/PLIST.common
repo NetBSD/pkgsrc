@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2004/01/20 21:16:07 recht Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2004/01/20 22:48:07 recht Exp $
 bin/elvfmt
 bin/elvis
 bin/elvtags
@@ -12,6 +12,7 @@ man/manl/elvis.1
 man/manl/elvtags.1
 man/manl/ref.1
 share/elvis/README
+share/elvis/README.etc
 share/doc/elvis/bugs.txt
 share/doc/elvis/ctags.man
 share/doc/elvis/doexec.txt
