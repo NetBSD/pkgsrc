@@ -1,55 +1,51 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/09/05 09:18:21 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2001/06/07 04:25:34 jlam Exp $
 
---- installperl.orig	Wed Mar  8 07:22:41 2000
-+++ installperl	Wed Aug 30 15:09:30 2000
-@@ -56,7 +56,7 @@
- }
- 
- my @scripts = qw(utils/c2ph utils/h2ph utils/h2xs utils/perlbug utils/perldoc
--		utils/pl2pm utils/splain utils/perlcc utils/dprofpp
-+		utils/pl2pm utils/splain utils/perlcc
- 		x2p/s2p x2p/find2perl 
- 		pod/pod2man pod/pod2html pod/pod2latex pod/pod2text
- 		pod/pod2usage pod/podchecker pod/podselect);
-@@ -224,7 +224,7 @@
- safe_unlink("$installbin/s$perl_verbase$ver$exe_ext");
- if ($d_dosuid) {
-     copy("suidperl$exe_ext", "$installbin/s$perl_verbase$ver$exe_ext");
--    chmod(04711, "$installbin/s$perl_verbase$ver$exe_ext");
-+    chmod(04111, "$installbin/s$perl_verbase$ver$exe_ext");
- }
- 
- # Install library files.
-@@ -326,19 +326,19 @@
- 	      (-l $usrbinperl) &&
- 	      ((readlink $usrbinperl) eq $expinstperl));
+--- pp.c.orig	Sun Apr  8 02:09:16 2001
++++ pp.c	Sun May 27 17:02:09 2001
+@@ -1900,6 +1900,28 @@
      }
--    if ((! $mainperl_is_instperl) &&
--	(yn("Many scripts expect perl to be installed as $usrbinperl.\n" . 
--	     "Do you wish to have $usrbinperl be the same as\n" .
--	     "$expinstperl? [y] ")))
--    {
--	unlink($usrbinperl);
--	( $Config{'d_link'} eq 'define' &&
--	  eval { CORE::link $instperl, $usrbinperl } )	||
--	eval { symlink $expinstperl, $usrbinperl }	||
--	copy($instperl, $usrbinperl);
--
--	$mainperl_is_instperl = 1;
--    }
-+#    if ((! $mainperl_is_instperl) &&
-+#	(yn("Many scripts expect perl to be installed as $usrbinperl.\n" . 
-+#	     "Do you wish to have $usrbinperl be the same as\n" .
-+#	     "$expinstperl? [y] ")))
-+#    {
-+#	unlink($usrbinperl);
-+#	( $Config{'d_link'} eq 'define' &&
-+#	  eval { CORE::link $instperl, $usrbinperl } )	||
-+#	eval { symlink $expinstperl, $usrbinperl }	||
-+#	copy($instperl, $usrbinperl);
-+#
-+#	$mainperl_is_instperl = 1;
-+#    }
  }
  
- # Make links to ordinary names if installbin directory isn't current directory.
++/*
++ * There are strange code-generation bugs caused on sparc64 by gcc-2.95.2.
++ * These need to be revisited when a newer toolchain becomes available.
++ */
++#if defined(__sparc64__) && defined(__GNUC__)
++#if __GNUC__ < 2 || (__GNUC__ == 2 && __GNUC_MINOR__ < 96)
++#undef SPARC64_WORKAROUND
++#define SPARC64_WORKAROUND 1
++#endif
++#endif
++
++#if defined(SPARC64_WORKAROUND)
++double
++sparc64_workaround_modf(double theVal, double *theIntRes)
++{
++    double res, ret;
++    ret = modf(theVal, &res);
++    *theIntRes = res;
++    return ret;
++}
++#endif
++
+ PP(pp_int)
+ {
+     dSP; dTARGET;
+@@ -1913,6 +1935,9 @@
+       }
+       else {
+ 	  if (value >= 0.0) {
++#if defined(SPARC64_WORKAROUND)
++	      (void)sparc64_workaround_modf(value, &value);
++#else
+ #if defined(HAS_MODFL) || defined(LONG_DOUBLE_EQUALS_DOUBLE)
+ 	      (void)Perl_modf(value, &value);
+ #else
+@@ -1920,6 +1945,7 @@
+ 	      (void)Perl_modf(tmp, &tmp);
+ 	      value = (NV)tmp;
+ #endif
++#endif /* SPARC64_WORKAROUND */
+ 	  }
+ 	else {
+ #if defined(HAS_MODFL) || defined(LONG_DOUBLE_EQUALS_DOUBLE)
