@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6837 2004/08/10 06:50:29 minskim Exp $
+$NetBSD: CHANGES,v 1.6838 2004/08/10 12:11:48 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3776,3 +3776,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tnftpd to 20040810 [lukem 2004-08-10]
 	Updated getmail to 4.0.9 [schmonz 2004-08-10]
 	Added moss-0.1.2 [minskim 2004-08-10]
+	Updated molden to 4.0 [agc 2004-08-10]
