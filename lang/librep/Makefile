@@ -1,29 +1,22 @@
-# $NetBSD: Makefile,v 1.2 2000/06/01 11:23:33 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/07/01 03:39:44 danw Exp $
 #
 
-DISTNAME=	librep-0.7
-CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.dcs.warwick.ac.uk/people/John.Harper/librep/
+DISTNAME=		librep-0.12.2
+CATEGORIES=		lang devel
+MASTER_SITES=		ftp://librep.sourceforge.net/pub/librep/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.dcs.warwick.ac.uk/~john/sw/librep.html
+MAINTAINER=		danw@netbsd.org
+HOMEPAGE=		http://librep.sourceforge.net/
 
-ONLY_FOR_PLATFORM=	SunOS-*-*	# only for Solaris, at the moment
+DEPENDS+=		gmp>=3.0:../../devel/gmp
+DEPENDS+=		gdbm>=1.8.0:../../databases/gdbm
+DEPENDS+=		readline>=4.0:../../devel/readline
 
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_PKGLIBTOOL=	yes
-
-#INFO_FILES=	librep.info
-
-PLIST_SRC=	${WRKDIR}/PLIST-src
-
-post-install:
-	case ${OPSYS} in						\
-	NetBSD)	platform=""; os="netbsd1" ;;				\
-	SunOS)	platform="sun"; os="solaris2" ;;			\
-	esac;								\
-	${SED} -e 's|@PLATFORM@|'$$platform'|g' -e 's|@OS@|'$$os'|g'	\
-			${PKGDIR}/PLIST > ${PLIST_SRC}
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS=		--with-readline --with-gmp-prefix=${LOCALBASE} \
+			--with-gdbm-prefix=${LOCALBASE}
+USE_GMAKE=		yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/etc/ltconfig
 
 .include "../../mk/bsd.pkg.mk"
