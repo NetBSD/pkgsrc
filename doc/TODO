@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1785 2004/05/27 14:50:52 salo Exp $
+$NetBSD: TODO,v 1.1786 2004/05/27 15:01:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -178,6 +178,7 @@ Suggested package updates
 	o checkbot-1.74
 	o clanlib-0.7.8
 	o classpath-0.09
+	o clisp-2.33.1
 	o cocoon-2.1.5
 	o conserver-8.1.5
 	o courier-imap-3.0.0
@@ -295,6 +296,7 @@ Suggested package updates
 	o minicom-2.1
 	o mono-0.31
 	o mowitz-0.3.0
+	o moz-bin-flash-7.0r25
 	o moz-bin-plugger-1.5.1
 	o mozilla-stable-1.4.2
 	o mrproject-0.9.1
