@@ -1,10 +1,7 @@
-$Id: todo,v 1.1.1.2 2004/04/15 03:15:15 lukem Exp $
+$Id: todo,v 1.1 2004/03/11 13:01:01 grant Exp $
 
 Current Items
 -------------
-
-autoconf test for HAVE_GETADDRINFO_D (declaration) if providing
-getaddrinfo() override.  (required for UnixWare 7.1.1)
 
 Update:  INSTALL NEWS README
 
