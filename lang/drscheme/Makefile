@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/01 16:33:31 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/15 11:27:11 kei Exp $
 #
 
 DISTNAME=		plt.src.x
@@ -17,11 +17,11 @@ COMMENT=		R4RS-compilant and nearly R5RS-compliant scheme tailored for teaching
 
 CONFLICTS+=		mzscheme-[0-9]*:../../lang/mzscheme
 
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 USE_GMAKE=		yes
 USE_PERL5=		yes
 GNU_CONFIGURE=		yes
-LDFLAGS=		-L${LOCALBASE}/lib
-CFLAGS=			-I${LOCALBASE}/include
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-*
 
@@ -32,7 +32,9 @@ post-patch:
 		${WRKDIR}/plt/bin/background-help-desk \
 		${WRKDIR}/plt/bin/drscheme \
 		${WRKDIR}/plt/bin/help-desk \
+		${WRKDIR}/plt/bin/mred \
 		${WRKDIR}/plt/bin/mzc \
+		${WRKDIR}/plt/bin/mzscheme \
 		${WRKDIR}/plt/bin/setup-plt \
 		${WRKDIR}/plt/bin/tex2page \
 		${WRKDIR}/plt/man/man1/mzscheme.1 \
@@ -47,7 +49,7 @@ post-patch:
 	@${MV} -f ${WRKSRC}/mred/Makefile.in ${WRKSRC}/foo
 	@${SED} -e 's|@X11PREFIX@|${X11PREFIX}|' < ${WRKSRC}/foo > ${WRKSRC}/mred/Makefile.in
 	@${RM} -f ${WRKSRC}/foo
-	@${RM} -f ${WRKSRC}/../bin/*.orig
+	@${FIND} ${WRKDIR} -name '*.orig' | ${XARGS} ${RM} -f
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/plt/collects
@@ -70,4 +72,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/../install ${PREFIX}/lib/plt
 	@cd ${PREFIX}/lib/plt && ${ECHO} y | ${SH} install
 
+.include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
