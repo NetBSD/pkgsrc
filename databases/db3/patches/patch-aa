@@ -1,39 +1,59 @@
-$NetBSD: patch-aa,v 1.2 2001/02/21 15:56:02 fvdl Exp $
-
---- ../dist/Makefile.in.orig	Fri Dec  1 00:07:33 2000
-+++ ../dist/Makefile.in	Wed Feb 21 13:10:10 2001
+--- ../dist/Makefile.in.orig	Thu Nov 30 23:07:33 2000
++++ ../dist/Makefile.in	Thu Mar 22 18:34:56 2001
 @@ -17,7 +17,7 @@
  INSTALLER=	@INSTALLER@
  
  LDFLAGS=	@LDFLAGS@
 -LIBDB_ARGS=	@LIBDB_ARGS@
-+LIBDB_ARGS=	-L. -Wl,-R/usr/pkg/lib libdb3.a
++LIBDB_ARGS=	-L. -Wl,-R/usr/pkg/lib libdb3.la
  LIBJSO_LIBS=	@LIBJSO_LIBS@
  LIBS=		@LIBS@
  LIBSO_LIBS=	@LIBSO_LIBS@
-@@ -31,9 +31,9 @@
+@@ -26,19 +26,19 @@
+ LIBXSO_LIBS=	@LIBXSO_LIBS@
+ 
+ POSTLINK=	@POSTLINK@
+-SOLINK=		@SOLINK@
++SOLINK=		@SOLINK@ -version-info @DB_VERSION_MINOR@:@DB_VERSION_PATCH@
+ SOFLAGS=	@SOFLAGS@
  SOMAJOR=	@DB_VERSION_MAJOR@
  SOVERSION=	@DB_VERSION_MAJOR@.@DB_VERSION_MINOR@
  
 -libdb=		libdb.a
-+libdb=		libdb3.a
++libdb=		libdb3.la
  
 -libso_base=	libdb
+-libso_linkname=	$(libso_base)-$(SOVERSION).la
+-libso=		$(libso_base)-$(SOVERSION).@SOSUFFIX@
+-libso_target=	$(libso_base)-$(SOVERSION).la
 +libso_base=	libdb3
- libso_linkname=	$(libso_base)-$(SOVERSION).la
- libso=		$(libso_base)-$(SOVERSION).@SOSUFFIX@
- libso_target=	$(libso_base)-$(SOVERSION).la
-@@ -47,8 +47,8 @@
++libso_linkname=	$(libso_base).la
++libso=		$(libso_base).@SOSUFFIX@.$(SOVERSION)
++libso_target=	$(libso_base).la
+ libso_default=	$(libso_base).@SOSUFFIX@
+-libso_major=	$(libso_base)-$(SOMAJOR).@SOSUFFIX@
++libso_major=	$(libso_base).@SOSUFFIX@.$(SOMAJOR)
+ 
+ ##################################################
+ # C++
+@@ -47,12 +47,12 @@
  # You must configure it using:
  #	--enable-cxx
  ##################################################
 -libcxx=		libdb_cxx.a
 -libxso_base=	libdb_cxx
+-libxso=		$(libxso_base)-$(SOVERSION).@SOSUFFIX@
+-libxso_target=	$(libxso_base)-$(SOVERSION).la
 +libcxx=		libdb3_cxx.a
 +libxso_base=	libdb3_cxx
- libxso=		$(libxso_base)-$(SOVERSION).@SOSUFFIX@
- libxso_target=	$(libxso_base)-$(SOVERSION).la
++libxso=		$(libxso_base).@SOSUFFIX@.$(SOVERSION)
++libxso_target=	$(libxso_base).la
  libxso_default=	$(libxso_base).@SOSUFFIX@
+-libxso_major=	$(libxso_base)-$(SOMAJOR).@SOSUFFIX@
++libxso_major=	$(libxso_base).@SOSUFFIX@.$(SOMAJOR)
+ 
+ ##################################################
+ # JAVA
 @@ -72,8 +72,8 @@
  JAVA_DBDIR=	$(JAVA_SRCDIR)/$(JAVA_DBREL)
  JAVA_EXDIR=	$(JAVA_SRCDIR)/com/sleepycat/examples
@@ -77,7 +97,22 @@ $NetBSD: patch-aa,v 1.2 2001/02/21 15:56:02 fvdl Exp $
  
  JAVA_DBSRCS=\
  	$(JAVA_DBDIR)/Db.java $(JAVA_DBDIR)/DbAppendRecno.java \
-@@ -275,57 +275,57 @@
+@@ -230,14 +230,6 @@
+ ##################################################
+ all:	@DEFAULT_LIB@ @ADDITIONAL_LIBS@ @ADDITIONAL_LANG@ $(PROGS)
+ 
+-$(libdb): $(OBJS)
+-	$(ar) $@ $(OBJS)
+-	test ! -f $(ranlib) || $(ranlib) $@
+-
+-$(libcxx): $(COBJS) $(OBJS)
+-	$(ar) $@ $(COBJS) $(OBJS)
+-	test ! -f $(ranlib) || $(ranlib) $@
+-
+ $(libso_target): $(OBJS)
+ 	$(SOLINK) $(SOFLAGS) -o $(libso_target) \
+ 	    $(OBJS) $(LDFLAGS) $(LIBSO_LIBS)
+@@ -275,57 +267,57 @@
  ##################################################
  # Utilities
  ##################################################
@@ -147,3 +182,40 @@ $NetBSD: patch-aa,v 1.2 2001/02/21 15:56:02 fvdl Exp $
  	$(CCLINK) -o $@ $(LDFLAGS) \
  	    db_verify@o@ util_sig@o@ $(LIBDB_ARGS) $(LIBS)
  	$(POSTLINK) $@
+@@ -452,8 +444,6 @@
+ 	@cd $(libdir) && $(rm) -f \
+ 	    $(libso_target) $(libso) $(libso_default) $(libso_major)
+ 	@$(INSTALLER) $(libso_target) $(libdir)
+-	@cd $(libdir) && $(ln) -s $(libso) $(libso_default)
+-	@cd $(libdir) && $(ln) -s $(libso) $(libso_major)
+ 	@$(LIBTOOL) --mode=finish $(libdir)
+ 
+ install_dynamic_cxx:
+@@ -463,8 +453,6 @@
+ 	@cd $(libdir) && $(rm) -f \
+ 	    $(libxso_target) $(libxso) $(libxso_default) $(libxso_major)
+ 	@$(INSTALLER) $(libxso_target) $(libdir)
+-	@cd $(libdir) && $(ln) -s $(libxso) $(libxso_default)
+-	@cd $(libdir) && $(ln) -s $(libxso) $(libxso_major)
+ 
+ install_tcl:
+ 	@echo "Installing DB Tcl library: $(libdir) ..."
+@@ -473,8 +461,6 @@
+ 	@cd $(libdir) && $(rm) -f \
+ 	    $(libtso_target) $(libtso) $(libtso_default) $(libtso_major)
+ 	@$(INSTALLER) $(libtso_target) $(libdir)
+-	@cd $(libdir) && $(ln) -s $(libtso) $(libtso_default)
+-	@cd $(libdir) && $(ln) -s $(libtso) $(libtso_major)
+ 
+ install_java:
+ 	@echo "Installing DB Java library: $(libdir) ..."
+@@ -483,9 +469,6 @@
+ 	@cd $(libdir) && $(rm) -f \
+ 	    $(libjso_target) $(libjso) $(libjso_default) $(libjso_major)
+ 	@$(INSTALLER) $(libjso_target) $(libdir)
+-	@cd $(libdir) && $(ln) -s $(libjso) $(libjso_default)
+-	@cd $(libdir) && $(ln) -s $(libjso) $(libjso_major)
+-	@cd $(libdir) && $(ln) -s $(libjso) $(libjso_g)
+ 	@$(cp) $(JAVA_CLASSTOP)/$(libj_jarfile) $(libdir)
+ 
+ install_utilities:
