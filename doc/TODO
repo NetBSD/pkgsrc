@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.521 2003/05/07 10:25:00 wiz Exp $
+$NetBSD: TODO,v 1.522 2003/05/07 12:45:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -132,7 +132,6 @@ Suggested package updates
 	o giram-0.3.5
 	o gkrellm-2.1.8 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
-	o gnet-2.0.2
 	o gnome-python-1.99.13
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99
