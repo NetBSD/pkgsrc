@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/01/22 08:38:29 grant Exp $
+# $NetBSD: Makefile,v 1.24 2004/02/09 04:17:28 xtraeme Exp $
 #
 
 DISTNAME=	xft-2.1.2
@@ -16,34 +16,21 @@ COMMENT=	Library for configuring and customizing font access
 BUILDLINK_DEPENDS.freetype2=  freetype2>=2.0.9
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
-# Uses libtool 1.5 features
-#USE_LIBTOOL=		YES
+USE_BUILDLINK3=		YES
+USE_LIBTOOL=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_GNU_TOOLS+=		awk
 
 PKGCONFIG_OVERRIDE=	${WRKSRC}/xft.pc.in
-#LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 MAKE_ENV+=		EGREP="${EGREP}"
 
 BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8.2
 
-.include "../../mk/bsd.prefs.mk"
-
-# XXX: Temporal fix for systems where libXft.so.$(MAJOR_VERSION).$(MINOR_VERSION)
-# is not built (we have to use libtool 1.5 to have the same library between all
-# systems)
-
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
-PLIST_SUBST+=		LIBXFT="@comment "
-.else
-PLIST_SUBST+=		LIBXFT=""
-.endif
-
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../fonts/fontconfig/buildlink2.mk"
-.include "../../graphics/freetype2/buildlink2.mk"
-.include "../../x11/Xrender/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/Xrender/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
