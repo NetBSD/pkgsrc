@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4459 2004/01/14 07:30:12 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4460 2004/01/14 08:55:08 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -214,3 +214,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gcalctool to 4.3.35 [xtraeme 2004-01-14]
 	Updated xmms-nebulus to 0.6.0 [xtraeme 2004-01-14]
 	Updated evolution to 1.4.5nb1 [xtraeme 2004-01-14]
+	Updated createbuildlink to 3.0 [rh 2004-01-14]
