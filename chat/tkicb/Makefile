@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/11/29 01:12:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2002/10/21 14:45:44 wiz Exp $
 #
 
 DISTNAME=	icb.2.1.4
@@ -18,8 +18,8 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
-USE_BUILDLINK_ONLY=	YES
-USE_X11=	yes
+USE_BUILDLINK2=	YES
+USE_X11=	YES
 
 WRKSRC=		${WRKDIR}
 
@@ -39,5 +39,5 @@ do-install:
 		${WRKSRC}/lib/servers ${PREFIX}/libdata/tkicb/lib
 	${INSTALL_SCRIPT} ${WRKSRC}/lib/* ${PREFIX}/libdata/tkicb/lib
 
-.include "../../x11/tk/buildlink.mk"
+.include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
