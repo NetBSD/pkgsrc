@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.39 2004/02/06 04:37:02 jlam Exp $
+# $NetBSD: gcc.mk,v 1.40 2004/02/06 04:38:10 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
@@ -299,7 +299,6 @@ COMPILER_GCC_MK+=	two
 .    if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
 .      if exists(${_GCC_PREFIX}bin/gcc) && !empty(_LANGUAGES.gcc)
 .        if empty(PREPEND_PATH:M${_GCC_PREFIX}bin)
-FOO!=	echo ${PREPEND_PATH} 1>&2; echo 0
 PREPEND_PATH+=	${_GCC_PREFIX}bin
 PATH:=		${_GCC_PREFIX}bin:${PATH}
 .        endif
