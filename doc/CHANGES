@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.268 2002/10/15 23:36:43 dillo Exp $
+$NetBSD: CHANGES,v 1.269 2002/10/16 00:22:12 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3277,3 +3277,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Removed prc-tools-gdb [dillo 2002-10-15]
 	Updated ketm to 0.0.6 [kristerw 2002-10-16]
 	Updated pilrc to 2.9.10 [dillo 2002-10-15]
+	Updated gmake to 3.80 [dmcmahill 2002-10-15]
