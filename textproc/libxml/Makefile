@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2001/08/11 12:50:35 rh Exp $
+# $NetBSD: Makefile,v 1.21 2001/09/30 20:15:48 rh Exp $
 #
 
-DISTNAME=		libxml-1.8.14
+DISTNAME=		libxml-1.8.16
 CATEGORIES=		textproc devel lang gnome
 MASTER_SITES=		ftp://rpmfind.net/pub/veillard/ \
 			${MASTER_SITE_GNOME:=stable/sources/libxml/}
