@@ -1,13 +1,56 @@
-$NetBSD: patch-af,v 1.2 1998/08/07 11:09:24 agc Exp $
+$NetBSD: patch-af,v 1.3 1998/12/01 02:47:19 tv Exp $
 
---- hints/netbsd.sh.orig	Tue Mar 24 12:24:25 1998
-+++ hints/netbsd.sh	Tue Mar 24 12:28:19 1998
-@@ -49,13 +49,16 @@
+--- hints/netbsd.sh.orig	Thu May  8 11:52:59 1997
++++ hints/netbsd.sh	Mon Nov 30 21:06:57 1998
+@@ -19,26 +19,25 @@
+ 	usedl="$undef"
+ 	;;
+ *)
+-	case `uname -m` in
+-	alpha|powerpc|pmax)
+-		d_dlopen=$undef
+-		;;
+-# this doesn't work (yet).
+-#	alpha)
+-#		d_dlopen=$define
+-#		d_dlerror=$define
+-#		cccdlflags="-DPIC -fPIC $cccdlflags"
+-#		lddlflags="-shared $lddlflags"
+-#		;;
+-	*)
++	if [ -f /usr/libexec/ld.elf_so ]; then
++		d_dlopen=$define
++		d_dlerror=$define
++		useshrplib=$define
++		ccdlflags="-Wl,-E -Wl,-R${PREFIX}/lib $ccdlflags"
++		cccdlflags="-DPIC -fPIC $cccdlflags"
++		lddlflags="--whole-archive -shared $lddlflags"
++	elif [ -f /usr/libexec/ld.so ]; then
+ 		d_dlopen=$define
+ 		d_dlerror=$define
++		useshrplib=$define
++		ccdlflags="-Wl,-R${PREFIX}/lib $ccdlflags"
+ # we use -fPIC here because -fpic is *NOT* enough for some of the
+ # extensions like Tk on some netbsd platforms (the sparc is one)
+ 		cccdlflags="-DPIC -fPIC $cccdlflags"
+ 		lddlflags="-Bforcearchive -Bshareable $lddlflags"
+-		;;
+-	esac
++	else
++		d_dlopen=$undef
++	fi
+ 	;;
+ esac
+ 
+@@ -47,15 +46,18 @@
+ # way to make perl call setuid() or setgid().  if they aren't, then
+ # ($<, $>) = ($u, $u); will work (same for $(/$)).  this is because
  # you can not change the real userid of a process under 4.4BSD.
- # netbsd fixed this in 1.2A.
+-# netbsd fixed this in 1.2A.
++# netbsd fixed this in 1.3.2.
  case "$osvers" in
 -0.9*|1.0*|1.1*|1.2_*|1.2|1.2.*)
-+0.9*|1.0*|1.1*|1.2_*|1.2|1.2.*|1.3|1.3.1)
++0.9*|1.0*|1.1*|1.2*|1.3|1.3.1)
  	d_setregid="$undef"
  	d_setreuid="$undef"
  	d_setrgid="$undef"

@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 1998/09/07 22:40:28 agc Exp $
+$NetBSD: patch-aa,v 1.9 1998/12/01 02:47:19 tv Exp $
 
---- Configure.orig	Fri Oct  3 18:57:39 1997
-+++ Configure	Fri Aug  7 12:31:44 1998
+--- Configure.orig	Fri Oct  3 13:57:39 1997
++++ Configure	Mon Nov 30 20:48:38 1998
 @@ -65,7 +65,7 @@
  fi
  
@@ -122,6 +122,19 @@ $NetBSD: patch-aa,v 1.8 1998/09/07 22:40:28 agc Exp $
  	fi;;
  esac
  case "$libpth" in
+@@ -4747,10 +4748,10 @@
+ 	aix)
+ 		# We'll set it in Makefile.SH...
+ 		;;
+-	solaris|netbsd)
++	solaris)
+ 		xxx="-R $shrpdir"
+ 		;;
+-	freebsd)
++	freebsd|netbsd)
+ 		xxx="-Wl,-R$shrpdir"
+ 		;;
+ 	linux|irix*|dec_osf)
 @@ -4965,8 +4966,8 @@
  esac
  
