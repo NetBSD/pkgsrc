@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/02/12 09:10:51 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/02/15 15:02:38 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBREP_BUILDLINK3_MK:=	${LIBREP_BUILDLINK3_MK}+
@@ -11,6 +11,8 @@ BUILDLINK_DEPENDS+=	librep
 BUILDLINK_PACKAGES+=		librep
 BUILDLINK_DEPENDS.librep+=	librep>=0.16.1nb1
 BUILDLINK_PKGSRCDIR.librep?=	../../lang/librep
+
+MAKE_FLAGS+=	rep_LIBTOOL=${LIBTOOL}
 
 .  include "../../devel/gettext-lib/buildlink3.mk"
 .  include "../../devel/gmp/buildlink3.mk"
