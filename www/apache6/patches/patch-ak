@@ -1,14 +1,16 @@
-$NetBSD: patch-ak,v 1.1.1.1 1999/07/23 17:53:30 itojun Exp $
+$NetBSD: patch-ak,v 1.2 1999/09/01 07:41:03 itojun Exp $
 
---- src/support/apxs.pl.orig	Fri Dec  4 11:34:17 1998
-+++ src/support/apxs.pl	Fri Dec  4 11:36:26 1998
-@@ -383,8 +383,7 @@
-         }
+--- src/support/apxs.pl.orig	Sat Jul 24 11:05:02 1999
++++ src/support/apxs.pl	Wed Sep  1 00:06:50 1999
+@@ -426,8 +426,9 @@
          my $t = $f;
          $t =~ s|^.+/([^/]+)$|$1|;
--        push(@cmds, "cp $f $CFG_LIBEXECDIR/$t");
--        push(@cmds, "chmod 755 $CFG_LIBEXECDIR/$t");
-+        push(@cmds, "install -c -m 555 -o root -g wheel $f $CFG_LIBEXECDIR/$t");
+         if ($opt_i) {
+-	    push(@cmds, "cp $f $CFG_LIBEXECDIR/$t");
+-	    push(@cmds, "chmod 755 $CFG_LIBEXECDIR/$t");
++#	    push(@cmds, "cp $f $CFG_LIBEXECDIR/$t");
++#	    push(@cmds, "chmod 755 $CFG_LIBEXECDIR/$t");
++	    push(@cmds, "install -c -m 555 -o root -g wheel $f $CFG_LIBEXECDIR/$t");
+         }
  
          #   determine module symbolname and filename
-         my $filename = '';
