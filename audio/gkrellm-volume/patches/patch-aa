@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/06/11 22:39:42 wiz Exp $
+
+--- volume.c.orig	Sun Apr 14 17:22:08 2002
++++ volume.c	Sun Apr 14 17:22:23 2002
+@@ -20,7 +20,7 @@
+ #ifdef __FreeBSD__
+ #include <machine/soundcard.h>
+ #else
+-#include <sys/soundcard.h>
++#include <soundcard.h>
+ #endif
+ 
+ #include "volume.h"
