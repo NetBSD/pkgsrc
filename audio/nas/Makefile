@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/10/28 14:11:47 fredb Exp $
+# $NetBSD: Makefile,v 1.37 2003/12/18 19:09:31 sketch Exp $
 
 DISTNAME=	nas-1.6.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -32,14 +32,14 @@ post-patch:
 	done
 
 pre-configure:
-	cd ${WRKSRC}; for file in					\
+	@cd ${WRKSRC}; for file in					\
 		config/NetAudio.def;					\
 	do								\
 		${SED}	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
 			$${file} >> $${file}.fixed;			\
 		${MV} -f $${file}.fixed $${file};			\
 	done
-	cd ${WRKSRC}; for file in					\
+	@cd ${WRKSRC}; for file in					\
 		server/nasd.conf.eg					\
 		server/dda/voxware/auvoxware.c;				\
 	do								\
@@ -47,6 +47,14 @@ pre-configure:
 			$${file} >> $${file}.fixed;			\
 		${MV} -f $${file}.fixed $${file};			\
 	done
+	@cd ${WRKSRC}; for file in					\
+		config/mungeman;					\
+	do								\
+		${SED} -e "s|^[ 	]*#|#|g"			\
+			$${file} >> $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
+	done
+
 
 PLIST_SRC=	${PKGDIR}/PLIST.clients
 .if (${MACHINE_ARCH} == "i386") || \
