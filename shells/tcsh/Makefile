@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2002/07/24 17:51:32 kim Exp $
+# $NetBSD: Makefile,v 1.34 2002/07/25 10:07:46 martti Exp $
 #
 
+PKGNAME=	tcsh-6.12.00
 DISTNAME=	tcsh-6.12.00
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
