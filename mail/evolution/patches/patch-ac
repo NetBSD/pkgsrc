@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2003/01/09 13:59:25 rh Exp $
+$NetBSD: patch-ac,v 1.7 2004/01/04 21:37:09 rh Exp $
 
---- shell/main.c.orig	Tue Nov 19 07:35:13 2002
+--- shell/main.c.orig	2003-07-29 01:19:13.000000000 +1000
 +++ shell/main.c
-@@ -77,6 +77,25 @@ static gboolean force_upgrade = FALSE;
+@@ -91,6 +91,25 @@ static gboolean killev = FALSE;
  
  extern char *evolution_debug_log;
  
@@ -28,7 +28,7 @@ $NetBSD: patch-ac,v 1.6 2003/01/09 13:59:25 rh Exp $
  
  static GtkWidget *
  quit_box_new (void)
-@@ -307,6 +326,10 @@ idle_cb (void *data)
+@@ -374,6 +393,10 @@ idle_cb (void *data)
  	else
  		startup_line_mode = E_SHELL_STARTUP_LINE_MODE_OFFLINE;
  
@@ -39,14 +39,14 @@ $NetBSD: patch-ac,v 1.6 2003/01/09 13:59:25 rh Exp $
  	shell = e_shell_new (evolution_directory, ! no_splash, startup_line_mode, &result);
  	g_free (evolution_directory);
  
-@@ -496,6 +519,10 @@ main (int argc, char **argv)
- 	}
+@@ -634,6 +657,10 @@ main (int argc, char **argv)
  
  	gtk_idle_add (idle_cb, uri_list);
-+
+ 
 +#ifdef _PTH_PTHREAD_H_
 +	gtk_timeout_add (200, pth_nbschedule, NULL);
 +#endif
++
+ 	bonobo_main ();
  
- 	gtk_widget_push_visual (gdk_rgb_get_visual ());
- 	gtk_widget_push_colormap (gdk_rgb_get_cmap ());
+ 	return 0;

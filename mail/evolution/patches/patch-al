@@ -1,13 +1,41 @@
-$NetBSD: patch-al,v 1.6 2003/01/09 13:59:25 rh Exp $
+$NetBSD: patch-al,v 1.7 2004/01/04 21:37:09 rh Exp $
 
---- doc/devel/calendar/cal-util/Makefile.in.orig	Fri Dec  6 09:14:26 2002
-+++ doc/devel/calendar/cal-util/Makefile.in
-@@ -266,7 +266,7 @@ extra_files = 
- GTKDOC_CFLAGS =  	-I$(top_srcdir)/calendar				-I$(top_srcdir)						-I$(top_builddir)					-I$(top_builddir)/libical/src/libical			-I$(top_srcdir)/libical/src/libical			$(EVOLUTION_CALENDAR_CFLAGS)
+--- mail/importers/Makefile.in.orig	2003-09-16 05:17:15.000000000 +1000
++++ mail/importers/Makefile.in
+@@ -275,6 +275,7 @@ libevolution_netscape_importer_la_LIBADD
+ 	$(top_builddir)/e-util/libeutil.la			\
+ 	$(top_builddir)/filter/libfilter.la			\
+ 	$(top_builddir)/shell/libeshell.la			\
++	../libevolution-mail.la					\
+ 	$(IMPORTERS_LIBS)
  
  
--GTKDOC_LIBS =  	$(EVOLUTION_CALENDAR_LIBS)						$(top_builddir)/calendar/cal-util/libcal-util-static.la			$(top_builddir)/libical/src/libical/libical-static.la			$(top_builddir)/libversit/libversit.a
-+GTKDOC_LIBS =  	$(EVOLUTION_CALENDAR_LIBS)						$(top_builddir)/calendar/cal-util/libcal-util.la			$(top_builddir)/libical/src/libical/libical-evolution.la
+@@ -287,6 +288,7 @@ libevolution_elm_importer_la_LDFLAGS = -
+ libevolution_elm_importer_la_LIBADD = \
+ 	$(top_builddir)/shell/importer/libevolution-importer.la \
+ 	$(top_builddir)/e-util/libeutil.la			\
++	../libevolution-mail.la					\
+ 	$(IMPORTERS_LIBS)
  
  
- GTKDOC_CC = $(LIBTOOL) --mode=compile $(CC)
+@@ -300,6 +302,7 @@ libevolution_pine_importer_la_LIBADD = \
+ 	$(top_builddir)/shell/importer/libevolution-importer.la \
+ 	$(top_builddir)/addressbook/backend/ebook/libebook.la	\
+ 	$(top_builddir)/camel/libcamel.la			\
++	../libevolution-mail.la					\
+ 	$(IMPORTERS_LIBS)
+ 
+ 
+@@ -356,10 +359,10 @@ libevolution_pine_importer_la_DEPENDENCI
+ am_libevolution_pine_importer_la_OBJECTS = pine-importer.lo
+ libevolution_pine_importer_la_OBJECTS = \
+ 	$(am_libevolution_pine_importer_la_OBJECTS)
+-libmbox_la_LIBADD =
++libmbox_la_LIBADD = $(top_builddir)/camel/libcamel.la ../libevolution-mail.la
+ am_libmbox_la_OBJECTS = evolution-mbox-importer.lo
+ libmbox_la_OBJECTS = $(am_libmbox_la_OBJECTS)
+-liboutlook_la_LIBADD =
++liboutlook_la_LIBADD = $(top_builddir)/camel/libcamel.la ../libevolution-mail.la
+ am_liboutlook_la_OBJECTS = evolution-outlook-importer.lo
+ liboutlook_la_OBJECTS = $(am_liboutlook_la_OBJECTS)
+ 
