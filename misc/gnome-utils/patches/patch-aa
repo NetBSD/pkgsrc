@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/05/03 16:48:57 rh Exp $
+
+--- gdialog/dialog.h.orig	Tue Feb 16 22:39:28 1999
++++ gdialog/dialog.h	Fri Apr 23 14:03:44 1999
+@@ -22,6 +22,12 @@
+ #define WITH_GNOME		/* Gnome support */
+ #undef WITH_GPM			/* Gpm mouse support */
+ 
++#include "config.h"
++
++#ifdef	VERSION
++#undef	VERSION
++#endif
++
+ #define VERSION	"0.6gnome1"
+ 
+ #include <sys/types.h>
