@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.56 1999/07/09 15:26:42 agc Exp $
+# $NetBSD: Packages.txt,v 1.57 1999/07/09 15:29:43 agc Exp $
 ###########################################################################
 
 			==========================
@@ -1028,6 +1028,13 @@ perform the equivalent of:
  * show-distfiles:
    This target shows which distfiles and patchfiles are needed to build
    the package.
+
+ * show-downlevel:
+   This target shows nothing if the package is not installed. If a version
+   of this package is installed, but is not the version provided in this
+   version of pkgsrc, then a warning message is displayed. This target can
+   be used to show which of your installed packages are downlevel, and so
+   the old versions can be deleted, and the current ones added.
 
 
 
