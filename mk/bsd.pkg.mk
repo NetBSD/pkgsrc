@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.202 1999/01/19 01:30:29 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.203 1999/01/19 22:18:19 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -533,7 +533,7 @@ PKGTOOLS_REQD=		19981107
 
 # Check that we're using up-to-date pkg_* tools with this file.
 .ifndef _PKGTOOLS_VER
-_PKGTOOLS_VER!= /usr/bin/ident ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ "\$$NetBSD" && $$2 !~ "^crt0" { gsub("/", "", $$4); print $$4 }' | sort | tail -n 1
+_PKGTOOLS_VER!= /usr/bin/ident ${PKG_CREATE} ${PKG_DELETE} ${PKG_INFO} ${PKG_ADD} | ${AWK} '$$1 ~ /\$$NetBSD/ && $$2 !~ /^crt0/ { gsub("/", "", $$4); print $$4 }' | sort | tail -n 1
 uptodate-pkgtools:
 .if ${_PKGTOOLS_VER} < ${PKGTOOLS_REQD}
 	@case ${PKGNAME} in						\
@@ -850,7 +850,7 @@ _FETCH_FILE=								\
 			if ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${bfile} ${FETCH_AFTER_ARGS}; then \
 				if [ -n "${FAILOVER_FETCH}" -a -f ${MD5_FILE} ]; then	\
 					CKSUM=`${MD5} < ${_DISTDIR}/$$bfile`; \
-					CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
+					CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "('$$file')"{print $$4;}' ${MD5_FILE}`; \
 					if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
 						continue 2;		\
 					else				\
@@ -1513,7 +1513,7 @@ checksum: fetch
 		(cd ${DISTDIR}; OK="true"; \
 		  for file in ${_CKSUMFILES}; do \
 			CKSUM=`${MD5} < $$file`; \
-			CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
+			CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "('$$file')"{print $$4;}' ${MD5_FILE}`; \
 			if [ "$$CKSUM2" = "" ]; then \
 				${ECHO_MSG} ">> No checksum recorded for $$file."; \
 				OK="false"; \
@@ -1529,7 +1529,7 @@ checksum: fetch
 			fi; \
 		  done; \
 		  for file in ${_IGNOREFILES}; do \
-			CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "\('$$file'\)"{print $$4;}' ${MD5_FILE}`; \
+			CKSUM2=`${AWK} '$$1 == "MD5" && $$2 == "('$$file')"{print $$4;}' ${MD5_FILE}`; \
 			if [ "$$CKSUM2" = "" ]; then \
 				${ECHO_MSG} ">> No checksum recorded for $$file, file is in "'$$'"{IGNOREFILES} list."; \
 				OK="false"; \
