@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/20 19:36:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/21 01:34:16 xtraeme Exp $
 #
 
-DISTNAME=	WebSVN_139
-PKGNAME=	websvn-1.39
+DISTNAME=	WebSVN_140
+PKGNAME=	websvn-1.40
 CATEGORIES=	www
 MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/10659/
 
@@ -15,6 +15,9 @@ BUILD_DEPENDS+=	ap-php-[0-9]*:../../www/ap-php4
 
 WRKSRC=		${WRKDIR}/WebSVN
 NO_BUILD=	yes
+USE_PKGINSTALL=	yes
+
+PKG_SYSCONFDIR.websvn=	${PREFIX}/${HTTPD_ROOT}/websvn/include	
 
 MESSAGE_SUBST+=	PKGBASE=${PKGBASE}
 MESSAGE_SUBST+=	HTTPD_ROOT=${HTTPD_ROOT}
@@ -24,8 +27,17 @@ HTTPD_ROOT?=	share/httpd/htdocs
 
 BUILD_DEFS+=	HTTPD_ROOT
 
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+MAKE_DIRS=	${PREFIX}/${HTTPD_ROOT}/websvn/include
+CONF_FILES=	${EGDIR}/distconfig.inc ${PKG_SYSCONFDIR}/config.inc
+
+INSTALLATION_DIRS=	${HTTPD_ROOT}/websvn share/examples/${PKGBASE}
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTTPD_ROOT}/websvn
+	${INSTALL_DATA} ${WRKSRC}/include/distconfig.inc ${EGDIR}
 	cd ${WRKSRC} && ${PAX} -rwppm . ${PREFIX}/${HTTPD_ROOT}/websvn
+
+post-install:
+	${RM} ${PREFIX}/${HTTPD_ROOT}/websvn/include/distconfig.inc
 
 .include "../../mk/bsd.pkg.mk"
