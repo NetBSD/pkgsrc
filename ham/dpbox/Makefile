@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/05/15 10:54:44 wulf Exp $
+# $NetBSD: Makefile,v 1.2 2000/05/15 11:26:20 wulf Exp $
 #
 
 DISTNAME=	dpbox-60000
 PKGNAME=	dpbox-6.00.00
 WRKSRC=		${WRKDIR}/dpbox-6.00.00/source
 CATEGORIES=	ham
-MASTER_SITES=	ftp://ftp.ping.net.au/pub/unix/ham/
+MASTER_SITES=	http://userpage.fu-berlin.de/~jschurig/
 
 MAINTAINER=	wulf@netbsd.org
-HOMEPAGE=	http://userpgages.fu-berlin.de/
-
-LICENSE=        no-commercial-use
+HOMEPAGE=	http://userpage.fu-berlin.de/~jschurig/
 
 USE_GMAKE=	yes
 MAKEFILE=	Makefile.netbsd
