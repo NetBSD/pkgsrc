@@ -1,9 +1,9 @@
-$NetBSD: patch-ar,v 1.1 2001/03/30 09:37:50 taya Exp $
+$NetBSD: patch-ar,v 1.2 2001/05/11 00:37:46 taya Exp $
 
 diff -ru ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
---- ../Orig/mozilla/nsprpub/configure.in	Sun Mar 11 15:24:30 2001
-+++ ./nsprpub/configure.in	Sat Mar 24 01:33:09 2001
-@@ -1073,24 +1073,29 @@
+--- ../Orig/mozilla/nsprpub/configure.in	Tue Apr 17 08:22:28 2001
++++ ./nsprpub/configure.in	Mon May  7 05:40:30 2001
+@@ -1121,24 +1121,29 @@
      AC_DEFINE(XP_UNIX)
      AC_DEFINE(NETBSD)
      AC_DEFINE(HAVE_BSD_FLOCK)
@@ -42,9 +42,9 @@ diff -ru ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
 -        DSO_LDOPTS="$DSO_LDOPTS -R$(LIBRUNPATH)"
 +        DSO_LDOPTS="$DSO_LDOPTS -Wl,-R$LIBRUNPATH"
      fi
-     ;;
- 
-@@ -1777,11 +1782,6 @@
+     MDCPUCFG_H=_netbsd.cfg
+     PR_MD_CSRCS=netbsd.c
+@@ -1868,11 +1873,6 @@
      _PTHREAD_LDFLAGS=
      USE_USER_PTHREADS=
      ;;

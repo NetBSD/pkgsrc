@@ -1,0 +1,17 @@
+$NetBSD: patch-av,v 1.1 2001/05/11 00:37:46 taya Exp $
+
+diff -ru ../Orig/mozilla/security/coreconf/ruleset.mk ./security/coreconf/ruleset.mk
+--- ../Orig/mozilla/security/coreconf/ruleset.mk	Sun Feb  4 14:52:37 2001
++++ ./security/coreconf/ruleset.mk	Mon May  7 05:40:42 2001
+@@ -93,9 +93,9 @@
+ endif
+ 
+ #
+-# Always set CPU_TAG on Linux.
++# Always set CPU_TAG on Linux & NetBSD.
+ #
+-ifeq ($(OS_ARCH), Linux)
++ifeq (,$(filter-out Linux NetBSD,$(OS_ARCH)))
+ 	CPU_TAG = _$(CPU_ARCH)
+ endif
+ 

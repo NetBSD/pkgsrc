@@ -1,9 +1,9 @@
-$NetBSD: patch-aq,v 1.1 2001/01/16 16:01:24 taya Exp $
+$NetBSD: patch-aq,v 1.2 2001/05/11 00:37:46 taya Exp $
 
 diff -ru ../Orig/mozilla/security/nss/lib/freebl/Makefile ./security/nss/lib/freebl/Makefile
---- ../Orig/mozilla/security/nss/lib/freebl/Makefile	Tue Oct  3 07:52:43 2000
-+++ ./security/nss/lib/freebl/Makefile	Mon Jan 15 15:37:55 2001
-@@ -200,6 +200,17 @@
+--- ../Orig/mozilla/security/nss/lib/freebl/Makefile	Thu Mar 15 08:30:37 2001
++++ ./security/nss/lib/freebl/Makefile	Mon May  7 05:40:18 2001
+@@ -265,6 +265,17 @@
  MPI_OBJS = $(addprefix $(OBJDIR)/$(PROG_PREFIX), $(MPI_SRCS:.c=$(OBJ_SUFFIX)))
  MPI_OBJS += $(addprefix $(OBJDIR)/$(PROG_PREFIX), $(MPI_USERS:.c=$(OBJ_SUFFIX)))
  
