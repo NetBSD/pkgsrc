@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/03/04 09:06:18 tron Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/11 16:59:03 mjl Exp $
 
-DISTNAME=		WindowMaker-0.62.1
-PKGNAME=		windowmaker-0.62.1nb1
+DISTNAME=		WindowMaker-0.64.0
+PKGNAME=		windowmaker-0.64.0
 CATEGORIES=		x11 wm
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
 			ftp://ftp.ics.es.osaka-u.ac.jp/pub/mirrors/WindowMaker/beta/srcs/
@@ -50,7 +50,7 @@ CFLAGS=
 #	openlook	enable support for OPEN LOOK(tm) window manager hints
 #	lite		remove Window Maker redundancies with KDE and GNOME
 #
-WINDOWMAKER_OPTIONS?=	gnome kde
+WINDOWMAKER_OPTIONS?=	gnome kde openlook
 
 BUILD_DEFS+=		WINDOWMAKER_OPTIONS
 
