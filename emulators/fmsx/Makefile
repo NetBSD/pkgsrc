@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/07/28 15:54:26 martin Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/06 14:45:04 wiz Exp $
 
-DISTNAME=	fMSX21.tar
-PKGNAME=	fmsx-2.1
+DISTNAME=	fMSX22.tar
+PKGNAME=	fmsx-2.2
 CATEGORIES=	emulators x11
 MASTER_SITES=	http://www.komkon.org/fms/fMSX/
 EXTRACT_SUFX=	.Z
@@ -22,7 +22,7 @@ WRKSRC= 	${WRKDIR}/MSX
 
 DEFS=		-DFontDir=\"\\\"${PREFIX}/share/fmsx/\"\\\"
 DEFS+=		-DRomDir=\"\\\"${PREFIX}/share/fmsx/\"\\\"
-DEFS+=		-DMITSHM -D${CUR_DEPTH}
+DEFS+=		-DMITSHM -D${CUR_DEPTH} -DSOUND -DSUN_AUDIO
 
 MAKE_ENV=	DEFS="${DEFS}"
 
