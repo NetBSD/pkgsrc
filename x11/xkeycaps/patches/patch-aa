@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1999/07/24 14:23:15 tron Exp $
+
+--- Imakefile.old	Fri Apr 23 02:59:08 1999
++++ Imakefile	Sat Jul 24 16:17:35 1999
+@@ -70,7 +70,7 @@
+ 
+ 
+           KBDIR = $(CURRENT_DIR)/kbds
+-       INCLUDES = -I$(KBDIR) $(XTRAP_INCLUDES)
++       INCLUDES = -I$(KBDIR) $(XTRAP_INCLUDES) -Dunix
+         DEFINES = $(KBD_DEFINES) $(XTRAP_DEFINES) $(HP_LOSSAGE)
+            SRCS = $(CURRENT_DIR)/xkeycaps.c $(CURRENT_DIR)/KbdWidget.c \
+                   $(CURRENT_DIR)/KeyWidget.c $(CURRENT_DIR)/info.c \
