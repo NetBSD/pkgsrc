@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/01/24 15:23:46 grant Exp $
+# $NetBSD: Makefile,v 1.28 2004/12/29 15:42:38 minskim Exp $
 
 DISTNAME=	ApacheJServ-1.1.2
 PKGNAME=	ap-jserv-1.1.2
@@ -21,7 +21,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-apxs=${LOCALBASE}/sbin/apxs
 CONFIGURE_ARGS+=	--with-jdk-home=${PKG_JAVA_HOME}
 CONFIGURE_ARGS+=	--with-JSDK=${PREFIX}/lib/java/jsdk.jar
-CONFIGURE_ARGS+=	--with-logdir=/var/log/httpd
+CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/httpd
 CONFIGURE_ARGS+=	--with-servlets=${LOCALBASE}/share/httpd/servlets
 CONFIGURE_ARGS+=	--enable-EAPI
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/12/28 02:47:41 reed Exp $
+# $NetBSD: Makefile,v 1.37 2004/12/29 15:42:37 minskim Exp $
 #
 
 DISTNAME=		silc-server-0.9.18
@@ -51,15 +51,15 @@ RCD_SCRIPT_SRC.silcd=	${FILESDIR}/silcd.sh
 RCD_SCRIPT_SRC.silcd=	${FILESDIR}/silcd.generic
 .endif
 
-OWN_DIRS_PERMS+=	/var/log/silcd ${SILCD_USER} ${SILCD_GROUP} 0700
+OWN_DIRS_PERMS+=	${VARBASE}/log/silcd ${SILCD_USER} ${SILCD_GROUP} 0700
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/${PKGBASE}
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-silcd-config-file=${PKG_SYSCONFDIR}/silcd.conf
 CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/${PKGBASE}/modules
-CONFIGURE_ARGS+=	--with-logsdir=/var/log/silcd
-CONFIGURE_ARGS+=	--with-silcd-pid-file=/var/run/silcd.pid
+CONFIGURE_ARGS+=	--with-logsdir=${VARBASE}/log/silcd
+CONFIGURE_ARGS+=	--with-silcd-pid-file=${VARBASE}/run/silcd.pid
 CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-libtoolfix
 
