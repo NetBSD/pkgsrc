@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/07/30 19:43:49 nra Exp $
+
+--- Makefile.orig	Fri Oct  7 01:41:10 1994
++++ Makefile
+@@ -2,10 +2,11 @@
+ 
+ SRCS=	tftpd.c tftpsubs.c tftpyale.c config.c
+ PROG=	tftpd
+-MAN8=	tftpd.8
++MAN=	tftpd.8
+ 
+-ETCDIR?=${DESTDIR}/etc
+-BINDIR?=${DESTDIR}/usr/libexec
++ETCDIR=${PREFIX}/etc
++BINDIR=${PREFIX}/libexec
++MANDIR=${PREFIX}/man
+ 
+ CFLAGS+=-DCONFIGFILE='"${ETCDIR}/tftpd.conf"'
+ 

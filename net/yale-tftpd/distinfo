@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/07/30 19:43:49 nra Exp $
+
+SHA1 (yale-tftpd-3.0.tar.gz) = 5f87e3d37feb5c5c8b7f2db34a0c87ee537727af
+Size (yale-tftpd-3.0.tar.gz) = 33469 bytes
+SHA1 (patch-aa) = a61c860d4ee1088a4b5b3e8976e6f042d57dae94
+SHA1 (patch-ab) = e6eb66ed95139b47ee1df07014a636803e89ad47
+SHA1 (patch-ac) = eb748d6a96e50475acb7acd6f38e4552972d73f5
+SHA1 (patch-ad) = 1743282699af3a17e4e95c825ad4989688349cd6

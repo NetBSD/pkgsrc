@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/30 19:43:49 nra Exp $
+libexec/tftpd
+man/man8/tftpd.8
+man/cat8/tftpd.0
