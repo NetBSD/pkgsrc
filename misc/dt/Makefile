@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2000/08/21 21:01:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2000/09/09 05:28:44 fredb Exp $
 #
 
 DISTNAME=	dt-1.1.7
-WRKSRC=		${WRKDIR}/dt
 CATEGORIES=	misc
 MASTER_SITES=   ${MASTER_SITE_LOCAL}
 
@@ -10,13 +9,20 @@ MAINTAINER=	fb@enteract.com
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
-.BEGIN:
-.if (${MACHINE} != "mac68k") && (${MACHINE} != "macppc")
-IGNORE=		"${PKGNAME} is only useful for ports that have the adb and grf devices"
+.if ${MACHINE} != "mac68k"
+IGNORE=		"${PKGNAME} is only useful for mac68k!"
 .endif
 
 ALL_TARGET=	depend all
+CPPFLAGS+=	-D${DT_LAYOUT}_LAYOUT
+MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
+
 DTDOCSDIR=	${PREFIX}/share/doc/dt
+WRKSRC=		${WRKDIR}/dt
+
+post-install:
+	${INSTALL_DATA_DIR} ${DTDOCSDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} README dt.html example.dtrc ${DTDOCSDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,12 +36,5 @@ DTDOCSDIR=	${PREFIX}/share/doc/dt
 #	DV	Dvorak
 #
 DT_LAYOUT?=	FI
-
-CPPFLAGS+=	-D${DT_LAYOUT}_LAYOUT
-MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
-
-post-install:
-	${INSTALL_DATA_DIR} ${DTDOCSDIR}
-	(cd ${WRKSRC}; ${INSTALL_DATA} README dt.html example.dtrc ${DTDOCSDIR})
 
 .include "../../mk/bsd.pkg.mk"
