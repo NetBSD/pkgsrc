@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/10/18 12:46:37 cjep Exp $
+# $NetBSD: Makefile,v 1.23 2003/12/02 23:11:30 recht Exp $
 #
 
 DISTNAME=	icu-2.6
@@ -31,5 +31,16 @@ PKG_SYSCONFSUBDIR=	icu
 
 SUPPORT_FILES+=		${PREFIX}/share/examples/icu/convrtrs.txt \
 			${PKG_SYSCONFDIR}/convrtrs.txt
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(CC_VERSION:Mgcc-3*)
+CXXFLAGS:=		${CXXFLAGS:C/-O[0-9]*/-O/g}
+CFLAGS:=		${CFLAGS:C/-O[0-9]*/-O/g}
+CXXFLAGS:=		${CXXFLAGS:C/-Os/-O/g}
+CFLAGS:=		${CFLAGS:C/-Os/-O/g}
+CONFIGURE_ENV+=		CXXFLAGS="${CXXFLAGS}"
+CONFIGURE_ENV+=		CFLAGS="${CFLAGS}"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
