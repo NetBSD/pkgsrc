@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1 2003/09/26 14:04:54 tron Exp $
+
+--- ppm_handler.h.orig	1997-02-21 12:52:17.000000000 +0100
++++ ppm_handler.h	2003-09-26 16:02:13.000000000 +0200
+@@ -7,6 +7,7 @@
+ /*                                                                      */
+ /*======================================================================*/
+ 
++#include <string.h>
+ #include "bool.h"
+ 
+ bool ppm_size (char name [], int &dx, int &dy, int &color);
