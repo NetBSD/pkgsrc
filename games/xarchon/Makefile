@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/02/16 15:10:59 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/08/15 20:40:01 zuntum Exp $
 #
 
 DISTNAME=	xarchon-0.50
@@ -10,15 +10,8 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://xarchon.seul.org/
 COMMENT=	Chess-like strategy game with battle options
 
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	esound-*:../../audio/esound
-
-USE_XPM=	YES
-GNU_CONFIGURE=	YES
-EVAL_PREFIX+=	GTKDIR=gtk+ XPMDIR=xpm
-CONFIGURE_ARGS+=--with-xpm-prefix=${XPMDIR} \
-		--with-gtk-prefix=${GTKDIR} \
-		--with-esd-prefix=${LOCALBASE}
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,4 +19,7 @@ CONFIGURE_ARGS+=--with-xpm-prefix=${XPMDIR} \
 CONFIGURE_ENV+=	CC="${CC}"
 .endif
 
+.include "../../audio/esound/buildlink.mk"
+.include "../../graphics/xpm/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
