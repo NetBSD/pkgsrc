@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5528 2004/04/11 03:40:09 rh Exp $
+$NetBSD: CHANGES,v 1.5529 2004/04/11 06:57:35 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1900,3 +1900,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated GWLib to 0.6.3 [rh 2004-04-11]
 	Updated gworkspace to 0.6.3 [rh 2004-04-11]
 	Updated gnustep to 1.9.1 [rh 2004-04-11]
+	Updated pkg_install to 20040411 [rh 2004-04-11]
