@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:21:11 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/10/06 07:23:55 jlam Exp $
 
 DISTNAME=       freeze-2.5
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.cdrom.com/pub/unixfreeware/archive/
 
@@ -10,6 +11,9 @@ COMMENT=	FREEZE / MELT compression program - often used in QNX
 USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 ALL_TARGET=	prog
+
+# Allow "melting" freeze-1.0-format archives.
+CFLAGS+=	-DCOMPAT=1
 
 post-patch:
 	cd ${WRKSRC}; for file in *.1; do				\
