@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2003/10/05 10:07:09 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.25 2004/01/11 12:27:41 markd Exp $
 #
 DISTNAME=		qt-x11-free-${QTVERSION}
 CATEGORIES=		x11
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	-platform solaris-g++
 .  else
 CONFIGURE_ARGS+=	-platform solaris-cc
 .  endif
-SYS_LIBS=		-lresolv -lsocket -lnsl
+SYS_LIBS=		-lresolv -lsocket -lnsl -lrt
 .endif
 
 .if !exists(${X11BASE}/lib/libXinerama.so)
