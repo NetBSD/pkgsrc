@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2000/02/09 20:20:57 tron Exp $
+# $NetBSD: Makefile,v 1.47 2000/02/15 09:26:23 agc Exp $
 #
 
 DISTNAME=	ghostscript-5.50
@@ -19,8 +19,8 @@ PATCHFILES=	990524.txt 990220c.txt 990220b.txt 990220a.txt 990220.txt \
 MAINTAINER=	explorer@netbsd.org
 HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
 
-BUILD_DEPENDS=	${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jpeg:extract \
-		unzip:../../archivers/unzip
+BUILD_DEPENDS=	${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jpeg:extract
+BUILD_DEPENDS+=	unzip:../../archivers/unzip
 DEPENDS=	png>=1.0.3:../../graphics/png
 
 USE_X11=	yes

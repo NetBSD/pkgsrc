@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 1999/11/28 21:17:10 frueauf Exp $
+# $NetBSD: Makefile,v 1.24 2000/02/15 09:26:23 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -9,10 +9,10 @@ MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/
 MAINTAINER=		frueauf@netbsd.org
 HOMEPAGE=		http://www.lyx.org/
 
-DEPENDS=		ispell-3.1.20:../../textproc/ispell \
-			teTeX-1.0.6:../../print/teTeX \
-			xpm-3.4k:../../graphics/xpm \
-			xforms-0.88:../../x11/xforms
+DEPENDS=		ispell-3.1.20:../../textproc/ispell
+DEPENDS+=		teTeX-1.0.6:../../print/teTeX
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
+DEPENDS+=		xforms-0.88:../../x11/xforms
 
 USE_PERL5=		yes
 GNU_CONFIGURE=		yes

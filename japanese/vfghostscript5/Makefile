@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/02/12 18:29:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2000/02/15 09:26:21 agc Exp $
 #
 
 DISTNAME=	ja-vfghostscript-5.50
@@ -16,7 +16,7 @@ MASTER_SITES+=  ftp://ftp.cs.wisc.edu/ghost/aladdin/gs510/ \
 		http://www.ldl.jaist.ac.jp/~akr/nonresearch/free-software/ghostscript/ \
 		http://www.jaist.ac.jp/~daisuke/Linux/gs/gs5/Original-sources/OLD/ \
 		http://www.rd.nacsis.ac.jp/~katayama/homepage/ghostscript/jpdf/\
-												http://itohws03.ee.noda.sut.ac.jp/~matsuda/VFlib-FT/ \
+		http://itohws03.ee.noda.sut.ac.jp/~matsuda/VFlib-FT/ \
 		http://www.bpe.es.osaka-u.ac.jp/~watanabe/ \
 		http://www.bukka.p.chiba-u.ac.jp/~ohmori/gs/ \
 		ftp://ftp.iijnet.or.jp/humbleSoft/pub/
@@ -28,11 +28,11 @@ DISTFILES+=     gdevlips-2.3.3.tar.gz gdevmjc-0.8.tar.gz gdevrpdl.tar.gz \
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
 
-BUILD_DEPENDS=	${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jpeg:extract \
-		unzip:../../archivers/unzip
-DEPENDS=	png>=1.0.3:../../graphics/png \
-		ja-vflib-2.24.2:../../japanese/vflib \
-		ghostscript-5.50:../../print/ghostscript5
+BUILD_DEPENDS=	${BUILD_ROOT}/graphics/jpeg/${WRKDIR:T}/jpeg-6b:../../graphics/jpeg:extract
+BUILD_DEPENDS+=	unzip:../../archivers/unzip
+DEPENDS=	png>=1.0.3:../../graphics/png
+DEPENDS+=	ja-vflib-2.24.2:../../japanese/vflib
+DEPENDS+=	ghostscript-5.50:../../print/ghostscript5
 
 DIST_SUBDIR=	ghostscript
 

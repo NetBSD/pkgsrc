@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/12/28 04:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/02/15 09:26:14 agc Exp $
 
 DISTNAME=	festvox_en1
 PKGNAME=	festvox-en1-1.4.0
@@ -9,11 +9,11 @@ MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 
-DEPENDS+=	festival-1.4.0:../festival \
-		festlex-poslex-1.4.0:../festlex-poslex \
-		festlex-oald-1.4.0:../festlex-oald \
-		mbrola-301h:../mbrola \
-		mbrolavox-en1-980910:../mbrolavox-en1
+DEPENDS+=	festival-1.4.0:../festival
+DEPENDS+=	festlex-poslex-1.4.0:../festlex-poslex
+DEPENDS+=	festlex-oald-1.4.0:../festlex-oald
+DEPENDS+=	mbrola-301h:../mbrola
+DEPENDS+=	mbrolavox-en1-980910:../mbrolavox-en1
 
 LICENSE=	no-commercial-use
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/10/07 17:41:53 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/02/15 09:26:20 agc Exp $
 
 DISTNAME=	glx-19990804
 PKGNAME=	Mesa-${DISTNAME:S/-/-${GLX_CHIPSET}-/}
@@ -9,9 +9,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://glx.on.openprojects.net/
 
-BUILD_DEPENDS+=	${PERL}:../../lang/perl5 \
-		${TCLSH}:../../lang/tcl80 \
-		${MESA_WRKSRC}/lib/libMesaGL.a:${MESA_PKGDIR}:build
+BUILD_DEPENDS+=	${PERL}:../../lang/perl5
+BUILD_DEPENDS+=	${TCLSH}:../../lang/tcl80
+BUILD_DEPENDS+=	${MESA_WRKSRC}/lib/libMesaGL.a:${MESA_PKGDIR}:build
 
 CONFLICTS+=		Mesa-*
 ONLY_FOR_PLATFORM=	NetBSD-*-i386

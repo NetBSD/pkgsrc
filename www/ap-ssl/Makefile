@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/12/07 20:15:16 bad Exp $
+# $NetBSD: Makefile,v 1.12 2000/02/15 09:26:24 agc Exp $
 #
 
 DISTNAME=	mod_ssl-2.4.8-1.3.9
@@ -9,8 +9,8 @@ MASTER_SITES=	ftp://ftp.modssl.org/source/
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.modssl.org/
 
-DEPENDS=	openssl-0.9.4:../../security/openssl \
-		apache-1.3.9p0:../../www/apache
+DEPENDS=	openssl-0.9.4:../../security/openssl
+DEPENDS+=	apache-1.3.9p0:../../www/apache
 # For "apxs":
 BUILD_DEPENDS=	${LOCALBASE}/bin/perl:../../lang/perl5
 

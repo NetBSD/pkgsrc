@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/12/28 04:20:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2000/02/15 09:26:15 agc Exp $
 
 DISTNAME=	festvox_kallpc16k
 PKGNAME=	festvox-kal16-1.4.0
@@ -9,9 +9,9 @@ MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.0/
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 
-DEPENDS+=	festival-1.4.0:../festival \
-		festlex-poslex-1.4.0:../festlex-poslex \
-		festlex-cmu-1.4.0:../festlex-cmu
+DEPENDS+=	festival-1.4.0:../festival
+DEPENDS+=	festlex-poslex-1.4.0:../festlex-poslex
+DEPENDS+=	festlex-cmu-1.4.0:../festlex-cmu
 
 CONFLICTS=	festvox-kal8-*
 
