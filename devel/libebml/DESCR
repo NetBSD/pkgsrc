@@ -1,0 +1,4 @@
+EBML (Extensible Binary Meta Language), a binary derivative of XML.
+EBML enables the Matroska Development Team to gain significant
+advantages in terms of future format extensibility, without breaking
+file support in old parsers.
