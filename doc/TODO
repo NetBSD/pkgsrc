@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.765 2003/08/04 12:16:35 wiz Exp $
+$NetBSD: TODO,v 1.766 2003/08/04 15:47:55 jtb Exp $
 
 Suggested new packages
 ======================
@@ -227,7 +227,6 @@ Suggested package updates
 	o scribus-1.0
 	o sendfile-20010424
 	o slib-2.4.4 [pkg/22185]
-	o smalltalk-2.1.4
 	o smarteiffel-1.0 [replacing smalleiffel]
 	o snd-6.8
 	o snes9x-1.40
