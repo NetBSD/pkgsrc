@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2002/08/25 21:52:08 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2002/11/26 15:07:31 jmmv Exp $
 #
 
 DISTNAME=	dillo-0.6.6
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://dillo.cipsga.org.br/download/
 
@@ -14,6 +15,11 @@ USE_X11=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
+EGDIR=		${PREFIX}/share/examples/dillo
+CONF_FILES=	${EGDIR}/dillorc ${PKG_SYSCONFDIR}/dillorc
+
+CFLAGS+=	-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\\\"\"
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dillo
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/dillo
@@ -22,4 +28,5 @@ post-install:
 .include "../../graphics/png/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

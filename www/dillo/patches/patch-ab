@@ -1,16 +1,26 @@
-$NetBSD: patch-ab,v 1.5 2002/08/25 21:52:09 jlam Exp $
+$NetBSD: patch-ab,v 1.6 2002/11/26 15:07:32 jmmv Exp $
 
---- Makefile.in.orig	Tue May 21 12:53:53 2002
+--- Makefile.in.orig	Wed May 29 23:02:18 2002
 +++ Makefile.in
-@@ -359,9 +359,9 @@
+@@ -23,7 +23,7 @@ bindir = @bindir@
+ sbindir = @sbindir@
+ libexecdir = @libexecdir@
+ datadir = @datadir@
+-sysconfdir = @sysconfdir@
++sysconfdir = @datadir@/examples/@PACKAGE@
+ sharedstatedir = @sharedstatedir@
+ localstatedir = @localstatedir@
+ libdir = @libdir@
+@@ -358,10 +358,9 @@ mostlyclean distclean maintainer-clean
+ 
  
  install-data-local: dillorc
++	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
  	-if [ -d $(DESTDIR)$(sysconfdir) ]; then \
 -		$(INSTALL_DATA) --backup=t $(srcdir)/dillorc $(DESTDIR)$(sysconfdir)/; \
-+		$(INSTALL_DATA) $(srcdir)/dillorc $(DESTDIR)$(sysconfdir)/; \
- 	elif [ -d /etc/ ]; then \
+-	elif [ -d /etc/ ]; then \
 -		$(INSTALL_DATA) --backup=t $(srcdir)/dillorc /etc/; \
-+		$(INSTALL_DATA) $(srcdir)/dillorc /etc/; \
++		$(INSTALL_DATA) $(srcdir)/dillorc $(DESTDIR)$(sysconfdir)/; \
  	fi
  
  uninstall-local:
