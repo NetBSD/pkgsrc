@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/27 05:17:41 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/28 06:00:53 jlam Exp $
 #
 
 PKGNAME=	prc-tools-gdb-${PRC_TOOLS_VERS}
@@ -8,6 +8,8 @@ BASE_DIST=	gdb
 BASE_VERS=	4.18
 
 .include "../../devel/prc-tools/Makefile.common"
+
+USE_BUILDLINK_ONLY=	YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gdb/gdb/gdb ${PREFIX}/bin/m68k-palmos-gdb
