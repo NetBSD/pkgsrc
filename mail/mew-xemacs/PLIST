@@ -1,14 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/24 20:29:29 magick Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/21 17:00:43 seb Exp $
 bin/mewcat
 bin/mewdecode
 bin/mewencode
 bin/mewls
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/mew.info
 info/mew.info
 info/mew.info-1
 info/mew.info-2
 info/mew.info-3
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/mew.info
 lib/xemacs/etc/Mew/Mew.img
 lib/xemacs/etc/Mew/Mew.png
 lib/xemacs/etc/Mew/Mew.xbm
