@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/06/28 13:19:56 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2001/10/19 14:24:51 wiz Exp $
 #
 
 DISTNAME=	Python-2.0.1
@@ -64,8 +64,8 @@ post-install:
 	(cd ${PREFIX}; ${FIND} -d include/python2.0 -type d -print | \
 		${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 	(cd ${PREFIX}; ${FIND} -d lib/python2.0 -type d -print | \
-		${GREP} -v site-packages | tee /tmp/x | \
-		${GREP} -vx lib/python2.0 | tee /tmp/y | \
+		${GREP} -v site-packages | \
+		${GREP} -vx lib/python2.0 | \
 		${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 	# Reinstall Python binary to get it stripped
 	${RM} ${PREFIX}/bin/python2.0 ${PREFIX}/bin/python
