@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:42:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/20 04:29:52 jlam Exp $
 #
 
 DISTNAME=	whowatch-1.4
@@ -10,10 +10,8 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://wizard.ae.krakow.pl/~mike/\#whowatch
 COMMENT=	interactive who-like program displaying real-time user information
 
-GNU_CONFIGURE=	YES
-CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -I${PREFIX}/include"
+GNU_CONFIGURE=		YES
+USE_BUILDLINK_ONLY=	YES
 
-USE_CURSES=	YES
-REPLACE_NCURSES+=whowatch.h configure.in configure
-
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
