@@ -1,0 +1,31 @@
+$NetBSD: patch-cf,v 1.1 1999/03/07 19:40:01 kim Exp $
+
+--- sbr/m_getfld.c.orig	Fri Jul 31 18:48:37 1998
++++ sbr/m_getfld.c	Sun Mar  7 14:33:11 1999
+@@ -259,7 +259,7 @@
+ 		bp = sp = (unsigned char *) iob->_ptr - 1;
+ 		j = (cnt = iob->_cnt+1) < i ? cnt : i;
+ #endif
+-		while ((c = *bp++) != ':' && c != '\n' && --j >= 0)
++		while (--j >= 0 && (c = *bp++) != ':' && c != '\n')
+ 		    *cp++ = c;
+ 
+ 		j = bp - sp;
+@@ -538,7 +538,7 @@
+ 	    ;
+ #else /* RPATHS */
+ 	cp = unixbuf;
+-	while ((c = getc (iob)) != '\n')
++	while ((c = getc (iob)) != '\n' && cp - unixbuf < BUFSIZ - 1)
+ 	    *cp++ = c;
+ 	*cp = 0;
+ #endif /* RPATHS */
+@@ -639,7 +639,7 @@
+ 		break;
+ #else /* RPATHS */
+ 	cp = unixbuf;
+-	while ((c = getc (iob)) != '\n' && c >= 0)
++	while ((c = getc (iob)) != '\n' && c >= 0 && cp - unixbuf < BUFSIZ - 1)
+ 	    *cp++ = c;
+ 	*cp = 0;
+ #endif /* RPATHS */
