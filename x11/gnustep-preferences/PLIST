@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/05 10:23:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/10 21:30:50 wiz Exp $
 share/GNUstep/System/Applications/Preferences.app/Preferences
 share/GNUstep/System/Applications/Preferences.app/Resources/English.lproj/Localizable.strings
 share/GNUstep/System/Applications/Preferences.app/Resources/English.lproj/Preferences.gorm
@@ -22,15 +22,14 @@ share/GNUstep/System/Applications/Preferences.app/library_paths.openapp
 share/GNUstep/System/Applications/Preferences.app/stamp.make
 share/GNUstep/System/Library/Headers/PrefsModule
 share/GNUstep/System/Library/Libraries/libPrefsModule.so
-share/GNUstep/System/Library/Libraries/libPrefsModule.so.1.0.0
+share/GNUstep/System/Library/Libraries/libPrefsModule.so.0.0.1
 share/GNUstep/System/Library/Frameworks/PrefsModule.framework/Headers
 share/GNUstep/System/Library/Frameworks/PrefsModule.framework/Resources
 share/GNUstep/System/Library/Frameworks/PrefsModule.framework/Versions/A/Headers/PrefsModule.h
 share/GNUstep/System/Library/Frameworks/PrefsModule.framework/Versions/A/PrefsModule
 share/GNUstep/System/Library/Frameworks/PrefsModule.framework/Versions/A/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Frameworks/PrefsModule.framework/Versions/A/Resources/Info.plist
 share/GNUstep/System/Library/Frameworks/PrefsModule.framework/Versions/A/libPrefsModule.so
-share/GNUstep/System/Library/Frameworks/PrefsModule.framework/Versions/A/libPrefsModule.so.1.0.0
+share/GNUstep/System/Library/Frameworks/PrefsModule.framework/Versions/A/libPrefsModule.so.0.0.1
 share/GNUstep/System/Library/Frameworks/PrefsModule.framework/Versions/Current
 share/GNUstep/System/Library/Preferences/Keyboard.prefs/Keyboard
 share/GNUstep/System/Library/Preferences/Keyboard.prefs/Resources/Info-gnustep.plist
@@ -49,5 +48,5 @@ share/GNUstep/System/Library/Preferences/Keyboard.prefs/stamp.make
 @dirrm share/GNUstep/System/Applications/Preferences.app/Resources/English.lproj
 @dirrm share/GNUstep/System/Applications/Preferences.app/Resources
 @dirrm share/GNUstep/System/Applications/Preferences.app
-@dirrm share/GNUsrep/Network/Library/Preferences
-@dirrm share/GNUsrep/Local/Library/Preferences
+@dirrm share/GNUstep/Network/Library/Preferences
+@dirrm share/GNUstep/Local/Library/Preferences
