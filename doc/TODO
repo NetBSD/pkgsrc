@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1181 2003/12/13 19:11:57 xtraeme Exp $
+$NetBSD: TODO,v 1.1182 2003/12/13 19:30:14 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -355,7 +355,6 @@ Suggested package updates
 	o xpad-1.13
 	o xps-4.2
 	o xpuyopuyo-0.9.5
-	o xscreensaver-4.14
 	o xsidplay-1.6.5pre20
 	o xzgv-0.8
 	o yacas-1.0.55
