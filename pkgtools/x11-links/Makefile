@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/09/02 07:14:39 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2003/09/02 10:41:38 seb Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in mk/buildlink[23]/bsd.buildlink[23].mk
@@ -17,7 +17,7 @@ COMMENT=	Shadow tree of links to ${X11BASE} headers and libraries
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
-EXTRACT_ONLY=		yes
+EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		yes
 NO_MTREE=		yes
 USE_X11=		yes
