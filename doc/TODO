@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1618 2004/04/15 23:24:31 wiz Exp $
+$NetBSD: TODO,v 1.1619 2004/04/16 00:53:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -380,7 +380,6 @@ Suggested package updates
 	o yaz-2.0.12
 	o ysm-2.9.4
 	o zenicb 1.31 (needs merge with lots of local changes)
-	o zsnes-1.40
 
 Infrastructure problems which need addressing
 =============================================
