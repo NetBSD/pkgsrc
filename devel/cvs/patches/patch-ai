@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.6 2004/03/04 20:54:40 wiz Exp $
+$NetBSD: patch-ai,v 1.7 2004/04/15 22:28:36 wiz Exp $
 
---- src/parseinfo.c.orig	Thu Feb 12 20:56:15 2004
+--- src/parseinfo.c.orig	Fri Mar 19 21:36:39 2004
 +++ src/parseinfo.c
-@@ -347,6 +347,14 @@ parse_config (cvsroot)
+@@ -350,6 +350,14 @@ parse_config (cvsroot)
  		goto error_return;
  	    }
  	}

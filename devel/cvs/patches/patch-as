@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.5 2004/03/04 20:54:40 wiz Exp $
+$NetBSD: patch-as,v 1.6 2004/04/15 22:28:36 wiz Exp $
 
---- src/tag.c.orig	Tue Feb  3 15:39:44 2004
+--- src/tag.c.orig	Tue Apr  6 20:37:10 2004
 +++ src/tag.c
-@@ -1299,7 +1299,7 @@ Numeric tag %s contains characters other
+@@ -1290,7 +1290,7 @@ Numeric tag %s contains characters other
  	/* The tags is valid but not mentioned in val-tags.  Add it.  */
  	datum value;
  
