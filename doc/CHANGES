@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1648 2003/03/15 17:16:36 jmmv Exp $
+$NetBSD: CHANGES,v 1.1649 2003/03/15 18:22:21 kim Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1136,3 +1136,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nasm-devel to 0.98.36 [wiz 2003-03-15]
 	Updated screen to 3.9.15 [hubertf 2003-03-15]
 	Updated libgtkhtml to 2.2.1 [jmmv 2003-03-15]
+	Updated roller to 1.13 [kim 2003-03-15]
