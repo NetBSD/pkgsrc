@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2003/03/28 11:10:28 wiz Exp $
+$NetBSD: distinfo,v 1.12 2003/04/20 20:58:12 cjep Exp $
 
-SHA1 (ipa-1.3.2.tar.gz) = ea723c87357ef95cae0e94434fc60c691edad264
-Size (ipa-1.3.2.tar.gz) = 135550 bytes
+SHA1 (ipa-1.3.3.tar.gz) = 47e9a1537a47dbb5fea499d8d181151619ff66b9
+Size (ipa-1.3.3.tar.gz) = 135328 bytes
 SHA1 (patch-aa) = bed495cd58e2c9d2414fe4e94f8f3613b988be64
 SHA1 (patch-ab) = edce3d9d03ee7456c440ce4179e1e8c39bb516f2
