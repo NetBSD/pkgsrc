@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1hl.c,v 1.3 2003/09/03 13:11:15 jlam Exp $	*/
+/*	$NetBSD: sha1hl.c,v 1.4 2003/09/05 18:36:05 jlam Exp $	*/
 
 /* sha1hl.c
  * ----------------------------------------------------------------------------
@@ -27,7 +27,7 @@
 
 #include <assert.h>
 #include <errno.h>
-#include <sha1.h>
+#include "nbcompat/sha1.h"
 #include <stdio.h>
 #include <stdlib.h>
 #if HAVE_UNISTD_H
@@ -35,7 +35,7 @@
 #endif
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: sha1hl.c,v 1.3 2003/09/03 13:11:15 jlam Exp $");
+__RCSID("$NetBSD: sha1hl.c,v 1.4 2003/09/05 18:36:05 jlam Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #ifndef _DIAGASSERT

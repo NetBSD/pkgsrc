@@ -1,4 +1,4 @@
-/* $NetBSD: sha2hl.c,v 1.3 2003/09/03 13:11:15 jlam Exp $	 */
+/* $NetBSD: sha2hl.c,v 1.4 2003/09/05 18:36:05 jlam Exp $	 */
 
 /*
  * sha2hl.c
@@ -47,7 +47,7 @@
 #include "nbcompat/nbtypes.h"
 
 #ifndef lint
-__RCSID("$NetBSD: sha2hl.c,v 1.3 2003/09/03 13:11:15 jlam Exp $");
+__RCSID("$NetBSD: sha2hl.c,v 1.4 2003/09/05 18:36:05 jlam Exp $");
 #endif				/* not lint */
 
 
@@ -60,7 +60,7 @@ __RCSID("$NetBSD: sha2hl.c,v 1.3 2003/09/03 13:11:15 jlam Exp $");
 #if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
-#include <sha2.h>
+#include "nbcompat/sha2.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

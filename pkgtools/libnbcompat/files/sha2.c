@@ -44,7 +44,7 @@
 #include <stdio.h>
 #include <string.h>	/* memcpy()/memset() or bcopy()/bzero() */
 #include <assert.h>	/* assert() */
-#include "sha2.h"
+#include "nbcompat/sha2.h"
 
 /*
  * ASSERT NOTE:

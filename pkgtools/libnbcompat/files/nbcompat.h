@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.14 2003/09/03 13:11:14 jlam Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.15 2003/09/05 18:36:02 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -225,7 +225,11 @@ struct {								\
 # include <nbcompat/err.h>
 #endif
 
-#include <ftpglob.h>
+#if HAVE_GLOB_H
+# include <glob.h>
+#else
+# include <nbcompat/glob.h>
+#endif
 
 #if HAVE_SYS_MKDEV_H
 # include <sys/mkdev.h>
@@ -316,6 +320,30 @@ void	 tputs(const char *, int, int (*)(int));
 # include <libutil.h>
 #endif
 
+#if HAVE_MD5_H
+# include <md5.h>
+#else
+# include <nbcompat/md5.h>
+#endif
+
+#if HAVE_RMD160_H
+# include <rmd160.h>
+#else
+# include <nbcompat/rmd160.h>
+#endif
+
+#if HAVE_SHA1_H
+# include <sha1.h>
+#else
+# include <nbcompat/sha1.h>
+#endif
+
+#if HAVE_SHA2_H
+# include <sha2.h>
+#else
+# include <nbcompat/sha2.h>
+#endif
+
 #if HAVE_NBCOMPAT_VIS
 # ifdef HAVE_VIS_H
 #  undef HAVE_VIS_H
@@ -326,6 +354,20 @@ void	 tputs(const char *, int, int (*)(int));
 # include <vis.h>
 #else
 # include <nbcompat/vis.h>
+#endif
+
+#if HAVE_GETOPT_H
+# include <getopt.h>
+#else
+# include <nbcompat/getopt.h>
+#endif
+
+#if !HAVE_OPTARG_D
+extern char    *optarg;
+#endif
+
+#if !HAVE_OPTIND_D
+extern int	optind;
 #endif
 
 #if !HAVE_D_NAMLEN
@@ -347,14 +389,6 @@ int     isblank(int);
 
 #if !HAVE_GETPASS_D
 char	*getpass(const char *);
-#endif
-
-#if !HAVE_OPTARG_D
-extern char    *optarg;
-#endif
-
-#if !HAVE_OPTIND_D
-extern int	optind;
 #endif
 
 #if !HAVE_PCLOSE_D
@@ -459,6 +493,22 @@ size_t	strlcpy(char *, const char *, size_t);
 
 #if !HAVE_STRSEP
 char   *strsep(char **stringp, const char *delim);
+#endif
+
+#if !HAVE_USER_FROM_UID
+const char *user_from_uid(uid_t, int);
+#endif
+
+#if !HAVE_GROUP_FROM_GID
+const char *group_from_gid(gid_t, int);
+#endif
+
+#if !HAVE_UID_FROM_USER
+int uid_from_user(const char *, uid_t *);
+#endif
+
+#if !HAVE_GID_FROM_GROUP
+int gid_from_group(const char *, gid_t *);
 #endif
 
 #if HAVE_NBCOMPAT_STATFS
