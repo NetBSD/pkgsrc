@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1998/08/06 21:08:53 frueauf Exp $
+# $NetBSD: Makefile,v 1.27 1998/08/07 11:55:54 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -45,6 +45,7 @@
 #    SUBDIR += qcc
 #    SUBDIR += quakeserver
 #    SUBDIR += sokoban
+    SUBDIR += spellcast
 #    SUBDIR += spider
 #    SUBDIR += starlanes
     SUBDIR += tanked
