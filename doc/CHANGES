@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6107 2004/06/03 12:20:01 adam Exp $
+$NetBSD: CHANGES,v 1.6108 2004/06/03 15:20:59 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2765,3 +2765,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added jdbc-postgresql74 [abs 2004-06-02]
 	Added gdbada [shannonjr 2004-06-03]
 	Updated joe to 3.1 [adam 2004-06-03]
+	Updated exctags to 5.5.4 [uebayasi 2004-06-03]
