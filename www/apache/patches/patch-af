@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.7 2001/02/02 16:39:57 jlam Exp $
+$NetBSD: patch-af,v 1.8 2001/10/17 19:17:00 jlam Exp $
 
---- src/modules/standard/mod_so.c.orig	Fri Feb  2 00:42:13 2001
+--- src/modules/standard/mod_so.c.orig	Wed Oct 17 11:47:02 2001
 +++ src/modules/standard/mod_so.c
-@@ -318,7 +318,15 @@
+@@ -321,7 +321,15 @@
          return err;
      }
      

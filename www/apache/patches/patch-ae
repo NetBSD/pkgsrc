@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.5 2001/03/13 20:52:28 jlam Exp $
+$NetBSD: patch-ae,v 1.6 2001/10/17 19:17:00 jlam Exp $
 
---- src/modules/standard/mod_include.c.orig	Fri Feb 23 11:37:26 2001
+--- src/modules/standard/mod_include.c.orig	Thu Sep 20 23:51:54 2001
 +++ src/modules/standard/mod_include.c
 @@ -93,7 +93,11 @@
  #include "http_log.h"
@@ -71,7 +71,7 @@ $NetBSD: patch-ae,v 1.5 2001/03/13 20:52:28 jlam Exp $
  
  
  /* -------------------------- The main function --------------------------- */
-@@ -2286,6 +2304,13 @@
+@@ -2300,6 +2318,13 @@
              }
  #endif
              else {
