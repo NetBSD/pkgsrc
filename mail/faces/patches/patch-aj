@@ -1,0 +1,34 @@
+diff -ur ../faces-DIST/filters/Makefile ./filters/Makefile
+--- ../faces-DIST/filters/Makefile	Thu Oct 24 12:26:14 1991
++++ ./filters/Makefile	Fri Oct  1 14:32:09 1999
+@@ -34,7 +34,7 @@
+ 
+ CC		= cc
+ CDEFS		= $(NOINDEX) $(SYSV)
+-CCOMP		= -g
++CCOMP		= -pipe -O2
+ CFLAGS		= $(CCOMP) $(CDEFS)
+ 
+ all:		$(BINARIES)
+@@ -55,12 +55,12 @@
+ 		rm -f *.o $(BINARIES)
+ 
+ install:	$(BINARIES)
+-		install -s -m 751 icon2ikon $(BINDIR)
+-		install -s -m 751 ikon2icon $(BINDIR)
+-		install -s -m 751 rs2icon $(BINDIR)
+-		install -c -m 755 fs2ikon $(BINDIR)
+-		install -c -m 755 fs2xbm $(BINDIR)
+-		install -c -m 755 ikon2xbm $(BINDIR)
+-		install -c -m 755 xbm2ikon $(BINDIR)
+-		install -c -m 755 xbmcut48 $(BINDIR)
+-		install -c -m 755 xbmsize48 $(BINDIR)
++		install -s -o bin -m 751 icon2ikon $(BINDIR)
++		install -s -o bin -m 751 ikon2icon $(BINDIR)
++		install -s -o bin -m 751 rs2icon $(BINDIR)
++		install -c -o bin -m 755 fs2ikon $(BINDIR)
++		install -c -o bin -m 755 fs2xbm $(BINDIR)
++		install -c -o bin -m 755 ikon2xbm $(BINDIR)
++		install -c -o bin -m 755 xbm2ikon $(BINDIR)
++		install -c -o bin -m 755 xbmcut48 $(BINDIR)
++		install -c -o bin -m 755 xbmsize48 $(BINDIR)

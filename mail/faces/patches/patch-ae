@@ -1,34 +1,83 @@
-$NetBSD: patch-ae,v 1.2 1998/08/07 11:09:35 agc Exp $
-
---- filters/rs2icon.c	1998/02/25 13:51:18	1.1
-+++ filters/rs2icon.c	1998/02/25 13:51:55
-@@ -21,7 +21,7 @@
-  */
+diff -ur ../faces-DIST/compface/file.c ./compface/file.c
+--- ../faces-DIST/compface/file.c	Wed Jun 19 16:29:13 1991
++++ ./compface/file.c	Fri Oct  1 14:32:06 1999
+@@ -15,6 +15,8 @@
  
- #include <stdio.h>
--#ifdef SYSV32 || hpux
-+#if defined(SYSV32) || defined(hpux)
- #include <string.h>
- #else
- #include <strings.h>
---- filters/ikon2icon.c	1998/02/25 13:51:11	1.1
-+++ filters/ikon2icon.c	1998/02/25 13:57:09
-@@ -13,12 +13,17 @@
-  *  either to the comments or the code of this program, but if reported
-  *  to me, then an attempt will be made to fix them.
-  */
-+#include <sys/param.h>
+ #include "compface.h"
  
- #include <stdio.h>
++int xbitmap=0;
++
+ void
+ BigRead(fbuf)
+ register char *fbuf;
+@@ -127,10 +129,19 @@
+ {
+ 	register char *s, *t;
+ 	register int i, bits, digits, words;
++	extern int xbitmap;
++	int digsperword = DIGSPERWORD;
++	int wordsperline = WORDSPERLINE;
  
- #define  PATCHLEVEL  1
- 
--#define  GETS        (void) gets     /* To make lint happy. */
-+#if (defined(BSD) && BSD >= 199306)
-+#define  GETS(s)	{ (void)fgets(s, sizeof(s), stdin); s[sizeof(s) - 1] = 0; }
-+#else
-+#define  GETS(s)        (void) gets(s)     /* To make lint happy. */
-+#endif
- #define  PRINTF      (void) printf
- #define  SPRINTF     (void) sprintf
- #define  SSCANF      (void) sscanf
+ 	s = F;
+ 	t = fbuf;
+ 	bits = digits = words = i = 0;
++	if (xbitmap) {
++		sprintf(t,"#define noname_width 48\n#define noname_height 48\nstatic char noname_bits[] = {\n ");
++		while (*t) t++;
++		digsperword = 2;
++		wordsperline = 15;
++	}
+ 	while (s < F + PIXELS)
+ 	{
+ 		if ((bits == 0) && (digits == 0))
+@@ -138,25 +149,43 @@
+ 			*(t++) = '0';
+ 			*(t++) = 'x';
+ 		}
+-		if (*(s++))
+-			i = i * 2 + 1;
+-		else
+-			i *= 2;
++		if (xbitmap) {
++			if (*(s++))
++				i = (i >> 1) | 0x8;
++			else
++				i >>= 1;
++		}
++		else {
++			if (*(s++))
++				i = i * 2 + 1;
++			else
++				i *= 2;
++		}
+ 		if (++bits == BITSPERDIG)
+ 		{
+-			*(t++) = *(i + HexDigits);
++			if (xbitmap) {
++				t++;
++				t[-(digits & 1) * 2] = *(i + HexDigits);
++			}
++			else *(t++) = *(i + HexDigits);
+ 			bits = i = 0;
+-			if (++digits == DIGSPERWORD)
++			if (++digits == digsperword)
+ 			{
++				if (xbitmap && (s >= F + PIXELS)) break;
+ 				*(t++) = ',';
+ 				digits = 0;
+-				if (++words == WORDSPERLINE)
++				if (++words == wordsperline)
+ 				{
+ 					*(t++) = '\n';
++					if (xbitmap) *(t++) = ' ';
+ 					words = 0;
+ 				}
+ 			}
+ 		}
++	}
++	if (xbitmap) {
++		sprintf(t, "}\n");
++		while (*t) t++;
+ 	}
+ 	*(t++) = '\0';
+ }

@@ -1,0 +1,15 @@
+diff -ur ../faces-DIST/y.tab.h ./y.tab.h
+--- ../faces-DIST/y.tab.h	Fri Oct  1 14:36:35 1999
++++ ./y.tab.h	Fri Oct  1 14:32:03 1999
+@@ -0,0 +1,11 @@
++#define EOL 257
++#define ATOM 258
++#define LIT_DOMAIN 259
++#define QUOTED_STRING 260
++typedef union {
++   char	 yChar;
++   char	*yString;
++   Dom	*yDom;
++   Addr	*yAddr;
++} YYSTYPE;
++extern YYSTYPE yylval;
