@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/08/22 11:20:26 martti Exp $
+# $NetBSD: Makefile,v 1.17 2002/09/21 10:48:55 jlam Exp $
 # FreeBSD Id: Makefile,v 1.4 1998/06/27 05:19:35 asami Exp
 #
 
@@ -22,6 +22,7 @@ BUILD_DEPENDS=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	iso8879-1986:../../textproc/iso8879
 
 NO_MTREE=       yes
+USE_BUILDLINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=       yes
 WRKSRC=		${WRKDIR}
@@ -31,11 +32,11 @@ ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog
 
 pre-install:
 	${INSTALL_DATA_DIR} ${INSTDIR}/2.4.1
-	@[ -d ${INSTDIR}/3.0 ] || ${MKDIR} ${INSTDIR}/3.0
-	@[ -d ${INSTDIR}/3.1 ] || ${MKDIR} ${INSTDIR}/3.1
-	@[ -d ${INSTDIR}/4.0 ] || ${MKDIR} ${INSTDIR}/4.0
-	@[ -d ${INSTDIR}/4.1 ] || ${MKDIR} ${INSTDIR}/4.1
-	@[ -d ${INSTDIR}/4.2 ] || ${MKDIR} ${INSTDIR}/4.2
+	@[ -d ${INSTDIR}/3.0 ] || ${INSTALL_DATA_DIR} ${INSTDIR}/3.0
+	@[ -d ${INSTDIR}/3.1 ] || ${INSTALL_DATA_DIR} ${INSTDIR}/3.1
+	@[ -d ${INSTDIR}/4.0 ] || ${INSTALL_DATA_DIR} ${INSTDIR}/4.0
+	@[ -d ${INSTDIR}/4.1 ] || ${INSTALL_DATA_DIR} ${INSTDIR}/4.1
+	@[ -d ${INSTDIR}/4.2 ] || ${INSTALL_DATA_DIR} ${INSTDIR}/4.2
 
 do-install:
 	#
