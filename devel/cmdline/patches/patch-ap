@@ -1,0 +1,249 @@
+$NetBSD: patch-ap,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/shells.h.orig	Thu Jan  2 13:33:30 1997
++++ src/cmd/shells.h
+@@ -16,6 +16,9 @@
+ //
+ // ^HISTORY:
+ //    04/19/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+ #ifndef _shells_h
+@@ -28,11 +31,11 @@
+ public:
+    ShellVariable(const char * name);
+ 
+-   virtual ~ShellVariable(void);
++   virtual ~ShellVariable();
+ 
+       // Return the name of this variable
+    const char *
+-   name(void) const { return  var_name ; }
++   name() const { return  var_name ; }
+ 
+       // Set the value of this variable
+    void
+@@ -40,7 +43,7 @@
+ 
+       // Return the value of this variable
+    const char *
+-   value(void) const { return  var_value; }
++   value() const { return  var_value; }
+ 
+ protected:
+    const char * var_name ;
+@@ -55,19 +58,19 @@
+ public:
+    ShellArray(const char * name);
+ 
+-   virtual ~ShellArray(void);
++   virtual ~ShellArray();
+ 
+       // Return the name of this array
+    const char *
+-   name(void) const { return  array_name; }
++   name() const { return  array_name; }
+ 
+       // Append to the list of values in this array
+    void
+    append(const char * value);
+ 
+       // Return the number of items in this array.
+-   unsigned
+-   count(void) const;
++   unsigned int
++   count() const;
+ 
+       // Return the desired element of an array
+       //
+@@ -76,7 +79,7 @@
+       //       NULL-ptr dereferencing error!
+       //
+    const char *
+-   operator[](unsigned  index) const;
++   operator[](unsigned int index) const;
+ 
+ protected:
+    const char       * array_name ;
+@@ -91,11 +94,11 @@
+ class  AbstractUnixShell {
+ public:
+    virtual
+-   ~AbstractUnixShell(void);
++   ~AbstractUnixShell();
+ 
+       // Return the name of this shell
+    virtual  const char *
+-   name(void) const = 0;
++   name() const = 0;
+ 
+       // Does "name" correspond to the positional-parameters for this shell?
+    virtual  int
+@@ -128,7 +131,7 @@
+    set(const ShellArray & array, int variant) const = 0;
+ 
+ protected:
+-   AbstractUnixShell(void) {};
++   AbstractUnixShell() {};
+ 
+ } ;
+ 
+@@ -145,15 +148,15 @@
+    UnixShell(const char * shell_name);
+ 
+    virtual
+-   ~UnixShell(void);
++   ~UnixShell();
+ 
+       // See if this shell is valid
+    int
+-   is_valid(void) const { return  (valid) ? 1 : 0; }
++   is_valid() const { return  (valid) ? 1 : 0; }
+ 
+       // Return the name of this shell
+    virtual  const char *
+-   name(void) const;
++   name() const;
+ 
+    virtual  void
+    unset_args(const char * name) const;
+@@ -168,7 +171,7 @@
+    set(const ShellArray & array, int variant) const;
+ 
+ private:
+-   unsigned    valid : 1 ;
++   unsigned int valid : 1 ;
+    AbstractUnixShell * shell;
+ 
+ } ;
+@@ -197,12 +200,12 @@
+    //
+ class  BourneShell : public  AbstractUnixShell {
+ public:
+-   BourneShell(void);
++   BourneShell();
+ 
+-   virtual  ~BourneShell(void);
++   virtual  ~BourneShell();
+ 
+    virtual  const char *
+-   name(void) const;
++   name() const;
+ 
+    virtual  void
+    unset_args(const char * name) const;
+@@ -244,12 +247,12 @@
+    //
+ class  KornShell : public BourneShell {
+ public:
+-   KornShell(void);
++   KornShell();
+ 
+-   virtual  ~KornShell(void);
++   virtual  ~KornShell();
+ 
+    virtual  const char *
+-   name(void) const;
++   name() const;
+ 
+    virtual  void
+    unset_args(const char * name) const;
+@@ -276,12 +279,12 @@
+    //
+ class  BourneAgainShell : public BourneShell {
+ public:
+-   BourneAgainShell(void);
++   BourneAgainShell();
+ 
+-   virtual  ~BourneAgainShell(void);
++   virtual  ~BourneAgainShell();
+ 
+    virtual  const char *
+-   name(void) const;
++   name() const;
+ 
+    virtual  void
+    set(const ShellVariable & variable) const;
+@@ -309,12 +312,12 @@
+    //
+ class  CShell : public AbstractUnixShell {
+ public:
+-   CShell(void);
++   CShell();
+ 
+-   virtual  ~CShell(void);
++   virtual  ~CShell();
+ 
+    virtual  const char *
+-   name(void) const;
++   name() const;
+ 
+    virtual  void
+    unset_args(const char * name) const;
+@@ -355,12 +358,12 @@
+    //
+ class  ZShell : public AbstractUnixShell {
+ public:
+-   ZShell(void);
++   ZShell();
+ 
+-   virtual  ~ZShell(void);
++   virtual  ~ZShell();
+ 
+    virtual  const char *
+-   name(void) const;
++   name() const;
+ 
+    virtual  void
+    unset_args(const char * name) const;
+@@ -397,12 +400,12 @@
+    //
+ class  Plan9Shell : public AbstractUnixShell {
+ public:
+-   Plan9Shell(void);
++   Plan9Shell();
+ 
+-   virtual  ~Plan9Shell(void);
++   virtual  ~Plan9Shell();
+ 
+    virtual  const char *
+-   name(void) const;
++   name() const;
+ 
+    virtual  void
+    unset_args(const char * name) const;
+@@ -438,12 +441,12 @@
+    //
+ class  PerlShell : public AbstractUnixShell {
+ public:
+-   PerlShell(void);
++   PerlShell();
+ 
+-   virtual  ~PerlShell(void);
++   virtual  ~PerlShell();
+ 
+    virtual  const char *
+-   name(void) const;
++   name() const;
+ 
+    virtual  void
+    unset_args(const char * name) const;
+@@ -479,12 +482,12 @@
+    //
+ class  TclShell : public AbstractUnixShell {
+ public:
+-   TclShell(void);
++   TclShell();
+ 
+-   virtual  ~TclShell(void);
++   virtual  ~TclShell();
+ 
+    virtual  const char *
+-   name(void) const;
++   name() const;
+ 
+    virtual  void
+    unset_args(const char * name) const;
