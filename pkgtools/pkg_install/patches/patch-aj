@@ -1,15 +1,16 @@
-$NetBSD: patch-aj,v 1.1 2002/08/05 15:54:57 wiz Exp $
+$NetBSD: patch-aj,v 1.2 2002/11/23 22:49:48 jschauma Exp $
 
---- lib/path.h	Fri Jul 19 12:04:41 2002
-+++ lib/path.h	Mon Aug  5 08:43:32 2002
-@@ -36,3 +36,10 @@
- void path_create(const char *);
- void path_free(void);
+--- lib/path.h.orig	Sat Nov 23 17:44:03 2002
++++ lib/path.h	Sat Nov 23 17:44:59 2002
+@@ -38,3 +38,11 @@
+ void path_prepend_from_pkgname(const char *);
+ void path_prepend_clear(void);
  void path_setenv(const char *);
 +
 +#ifndef TAILQ_FOREACH
-+#define TAILQ_FOREACH(var, head, field)                                 \
-+        for ((var) = ((head)->tqh_first);                               \
-+                (var);                                                  \
-+                (var) = ((var)->field.tqe_next))
++#define TAILQ_FOREACH(var, head, field)					\
++	for ((var) = ((head)->tqh_first);				\
++		(var);							\
++		(var) = ((var)->field.tqe_next))
 +#endif
++
