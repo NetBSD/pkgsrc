@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1997/10/29 11:40:36 agc Exp $
+# $NetBSD: Makefile,v 1.5 1997/10/29 12:29:57 agc Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -10,7 +10,7 @@
 #    SUBDIR += lsof
 #    SUBDIR += manck
 #    SUBDIR += mei
-#    SUBDIR += mkisofs
+    SUBDIR += mkisofs
 #    SUBDIR += pib
     SUBDIR += rtty
 #    SUBDIR += setquota
