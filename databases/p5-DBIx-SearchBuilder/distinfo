@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2004/08/02 09:57:02 cube Exp $
+$NetBSD: distinfo,v 1.13 2004/12/05 17:34:25 he Exp $
 
-SHA1 (DBIx-SearchBuilder-1.01.tar.gz) = b4b815e260d065764c8cc39de8c509230759a86c
-Size (DBIx-SearchBuilder-1.01.tar.gz) = 38274 bytes
+SHA1 (DBIx-SearchBuilder-1.15.tar.gz) = 4e08d2db9b070e3e41e05e6351e396724be99782
+Size (DBIx-SearchBuilder-1.15.tar.gz) = 41676 bytes
