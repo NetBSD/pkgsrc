@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2909 2003/07/28 12:36:28 seb Exp $
+$NetBSD: CHANGES,v 1.2910 2003/07/28 13:56:43 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3038,3 +3038,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libiconv to 1.9.1nb1 [jmmv 2003-07-28]
 	Updated gtk-gnutella to 0.92 [adam 2003-07-28]
 	Updated p5-GraphViz to 1.8 [seb 2003-07-28]
+	Added gtksee-0.5.2 [hubertf 2003-07-28]
