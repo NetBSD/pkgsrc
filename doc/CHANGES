@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4210 2003/12/21 09:51:23 jmmv Exp $
+$NetBSD: CHANGES,v 1.4211 2003/12/21 09:59:00 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5272,3 +5272,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed abiword2-gnome [xtraeme 2003-12-21]
 	Updated abiword2 to 2.0.2 [xtraeme 2003-12-21]
 	Updated distcc to 2.12 [jmmv 2003-12-21]
+	Updated libgcrypt to 1.1.90nb1 [xtraeme 2003-12-21]
