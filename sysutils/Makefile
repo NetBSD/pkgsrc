@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2002/06/03 05:03:28 grant Exp $
+# $NetBSD: Makefile,v 1.142 2002/06/04 09:57:30 cjep Exp $
 #
 
 COMMENT=	System utilities
@@ -100,6 +100,7 @@ SUBDIR+=	socket
 SUBDIR+=	sshsh
 #SUBDIR+=	storage-manager		# Requires manual intervention
 SUBDIR+=	stow
+SUBDIR+=	su2
 SUBDIR+=	sux
 SUBDIR+=	sysgen
 SUBDIR+=	sysinfo
