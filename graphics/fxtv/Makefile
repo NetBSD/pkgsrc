@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/07/17 20:21:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/17 21:40:38 grant Exp $
 
 DISTNAME=	fxtv-1.03
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://people.freebsd.org/~rhh/fxtv/
 COMMENT=	TV display application for Brooktree 848 compatible TV cards
 

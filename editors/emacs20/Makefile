@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/30 00:17:06 seb Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:34:26 grant Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	2
@@ -16,7 +16,7 @@ PATCH_SITES+=		http://home.catv.ne.jp/pp/ginoue/software/emacs-xim/
 PATCHFILES+=		emacs20-xim-20000713.diff
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2002/11/22 21:08:34 schmonz Exp $
+# $NetBSD: Makefile.common,v 1.3 2003/07/17 21:34:21 grant Exp $
 #
 
 DISTNAME=		ce-${VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=		editors
 MASTER_SITES=		http://cnswww.cns.cwru.edu/~chet/dist/ \
 			ftp://ftp.cwru.edu/pub/chet/
 
-MAINTAINER=		schmonz@netbsd.org
+MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cnswww.cns.cwru.edu/php/chet/
 COMMENT=		Chet's Emacs: small, fast emacs-like editor
 

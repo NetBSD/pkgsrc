@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:39:33 grant Exp $
 # FreeBSD Id: ports/games/xemeraldia/Makefile,v 1.17 1999/12/10 19:24:55 steve Exp
 
 DISTNAME=	xemeraldia-0.3
@@ -10,7 +10,7 @@ PATCH_SITES=	ftp://ftp.lab.kdd.co.jp/Usenet/fj.sources/1995/apr/
 PATCHFILES=	xemeraldia-0.3to0.31.patch.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	sakamoto@netbsd.org
+MAINTAINER=	sakamoto@NetBSD.org
 COMMENT=	Game of breaking blocks
 
 USE_IMAKE=	yes

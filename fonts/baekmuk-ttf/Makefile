@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/04/17 14:38:05 salo Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:36:56 grant Exp $
 #
 
 DISTNAME=	baekmuk-ttf-2.1
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	fonts korean
 MASTER_SITES=	ftp://ftp.mizi.com/pub/baekmuk/
 
-MAINTAINER=	junyoung@netbsd.org
+MAINTAINER=	junyoung@NetBSD.org
 HOMEPAGE=	http://www.mizi.com/ko/prod/desktop/mizios/mos-pro2.htm
 COMMENT=	Baekmuk family Korean TrueType fonts
 

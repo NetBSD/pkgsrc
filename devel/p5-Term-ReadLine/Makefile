@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/06/02 01:20:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:32:50 grant Exp $
 
 DISTNAME=	Term-ReadLine-Gnu-1.12
 PKGNAME=	p5-Term-ReadLine-1.12
@@ -6,7 +6,7 @@ SVR4_PKGNAME=	p5trl
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Term/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/Term-ReadLine-Gnu/
 COMMENT=	interface to the GNU Readline Library
 

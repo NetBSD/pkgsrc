@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2003/06/25 12:44:21 seb Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:33:55 grant Exp $
 
 DISTNAME=	semi-1.14.5
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/semi/semi-1.14-for-flim-1.14/
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.m17n.org/SEMI/
 COMMENT=	Emacs lisp library to provide MIME feature
 

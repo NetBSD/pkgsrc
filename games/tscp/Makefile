@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/10/28 13:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:39:26 grant Exp $
 #
 
 DISTNAME=	tscp173
@@ -7,7 +7,7 @@ CATEGORIES=	games benchmarks
 MASTER_SITES=	http://home.attbi.com/~tckerrigan/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	abs@netbsd.org
+MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://home.attbi.com/~tckerrigan/
 COMMENT=	Tom Kerrigan's Simple Chess Program
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:20:24 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:32:42 grant Exp $
 #
 
 DISTNAME=	Module-Dependency-1.8
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Module/}
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Build perl program/module dependency graph
 
 DEPENDS+=	p5-Storable>=1.0.14:../../devel/p5-Storable

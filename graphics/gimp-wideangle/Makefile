@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/13 13:52:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:40:55 grant Exp $
 #
 
 DISTNAME=	wideangleFeb03
@@ -9,7 +9,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.ozemail.com.au/~hodsond/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ozemail.com.au/~hodsond/
 COMMENT=	GIMP plugin for wideangle lens distortions
 

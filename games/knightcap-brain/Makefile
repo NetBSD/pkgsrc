@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:38:55 grant Exp $
 
 DISTNAME=		new_brain
 PKGNAME=		knightcap-brain-19980616
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		ftp://samba.anu.edu.au/pub/KnightCap/
 EXTRACT_SUFX=		.dat
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://anu.samba.org/KnightCap/
 COMMENT=		book of losing moves for KnightCap
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:28 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:31:34 grant Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -6,7 +6,7 @@ PKGNAME=	libhfs-3.2.6
 CATEGORIES=	devel sysutils
 MASTER_SITES=	ftp://ftp.mars.org/pub/hfs/
 
-MAINTAINER=	wrstuden@netbsd.org
+MAINTAINER=	wrstuden@NetBSD.org
 HOMEPAGE=	http://www.mars.org/home/rob/proj/hfs/
 COMMENT=	library for accessing HFS (Apple Macintosh) volumes
 

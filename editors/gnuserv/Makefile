@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/06/08 05:46:34 epg Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:34:29 grant Exp $
 
 DISTNAME=	gnuserv-3.12.6
 CATEGORIES=	editors
 MASTER_SITES=	${HOMEPAGE}/src/
 
-MAINTAINER=	epg@netbsd.org
+MAINTAINER=	epg@NetBSD.org
 HOMEPAGE=	http://meltin.net/hacks/emacs/
 COMMENT=	Improved version of emacsserver for GNU Emacs
 

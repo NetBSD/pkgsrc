@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:20:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:31:11 grant Exp $
 #
 
 DISTNAME=	its4-1.1.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	# have to fetch for yourself, or from a NetBSD mirror
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cigital.com/its4/
 COMMENT=	static C/C++ code scanner for potential security problems
 

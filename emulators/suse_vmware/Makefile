@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/26 04:05:46 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:36:16 grant Exp $
 
 DISTNAME=		fileutils-4.1-154.i386
 PKGNAME=		suse_vmware-${SUSE_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE_UPD:=a1/}
 EXTRACT_SUFX=		.rpm
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package to support running VMware
 

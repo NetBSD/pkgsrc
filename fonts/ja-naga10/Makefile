@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/15 20:43:09 kei Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:37:11 grant Exp $
 
 DISTNAME=		knj10-1.1
 PKGNAME=		ja-naga10-1.1
@@ -7,7 +7,7 @@ MASTER_SITES=		http://hp.vector.co.jp/authors/VA013391/fonts/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			6x12${EXTRACT_SUFX}
 
-MAINTAINER=		tech-pkg-ja@jp.netbsd.org
+MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://hp.vector.co.jp/authors/VA013391/fonts/#naga10
 COMMENT=		10x10 dots X11 bitmap font for JIS X 0208
 

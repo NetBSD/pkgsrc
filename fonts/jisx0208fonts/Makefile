@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/03/21 17:43:09 kei Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/17 21:37:13 grant Exp $
 #
 
 DISTNAME=	jisx0208fonts-200301316
@@ -6,7 +6,7 @@ CATEGORIES=	fonts x11 japanese
 MASTER_SITES=   # empty
 DISTFILES=	# empty
 
-MAINTAINER=	tech-pkg-ja@jp.netbsd.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	meta-package including X11 BDF fonts for JIS X0208 standard and more
 
 .include "../../mk/bsd.prefs.mk"

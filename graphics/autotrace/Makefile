@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2003/01/10 17:33:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/17 21:40:08 grant Exp $
 #
 
 DISTNAME=	autotrace-0.31.1
 CATEGORIES=	graphics cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=autotrace/}
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://autotrace.sourceforge.net/
 COMMENT=	convert bitmap to vector graphics
 

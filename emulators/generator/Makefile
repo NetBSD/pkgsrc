@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/13 13:51:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:35:30 grant Exp $
 #
 
 DISTNAME=	generator-0.34
@@ -6,7 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.squish.net/generator/files/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.sqish.net/generator/
 COMMENT=	Sega Mega drive genesis emulator
 

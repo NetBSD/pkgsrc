@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/04/25 20:24:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/17 21:33:04 grant Exp $
 #
 # This package is a placeholder to signify that the base PHP3 package already
 # has the PCRE functionality.  It *must* have the same version number as the
@@ -10,7 +10,7 @@ PKGREVISION=		1
 CATEGORIES=		www php3 devel
 DISTFILES=		# empty
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.php.net/
 COMMENT=		PHP3 extension for Perl-compatible regular expressions
 

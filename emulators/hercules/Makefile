@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2003/06/02 01:19:58 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:35:31 grant Exp $
 
 DISTNAME=		hercules-2.11
 PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.conmicro.cx/hercules/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.conmicro.cx/hercules/
 COMMENT=		s370 emulator
 

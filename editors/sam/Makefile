@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/06/02 01:20:06 jschauma Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/17 21:34:47 grant Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:40 obrien Exp
 #
 
@@ -10,7 +10,7 @@ CATEGORIES=		editors plan9
 MASTER_SITES=		ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
 EXTRACT_SUFX=		.msg.gz
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Unix version of Rob Pike's editor for plan9
 
 DEPENDS+=		libXgFonts-1.0:../../fonts/Xg

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/03/26 04:05:46 jschauma Exp $
+# $NetBSD: Makefile,v 1.23 2003/07/17 21:36:17 grant Exp $
 
 DISTNAME=		suse_x11-${SUSE_VERSION}
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=x1/}
 DISTFILES=		${RPMFILES}
 
-MAINTAINER=		tron@netbsd.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for X11 binaries
 

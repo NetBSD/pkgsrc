@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/03/29 12:41:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/17 21:38:57 grant Exp $
 #
 
 DISTNAME=	kulki-1.01
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.cs.put.poznan.pl/adanilecki/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.cs.put.poznan.pl/adanilecki/
 COMMENT=	Simple logic game - "balls"
 

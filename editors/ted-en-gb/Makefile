@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/06/02 01:20:05 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/17 21:34:54 grant Exp $
 
 DISTNAME=	Ted_en_GB
 PKGNAME=	ted-en-gb-2.14
@@ -7,7 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.nluug.nl/pub/editors/ted/ \
 		ftp://metalab.unc.edu/pub/packages/editors/ted/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.nllgg.nl/Ted/
 COMMENT=	UK English spelling dictionary for the Ted word processor
 

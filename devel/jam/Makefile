@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/22 17:23:12 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/17 21:31:09 grant Exp $
 #
 
 DISTNAME=	jam-2.4
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.perforce.com/pub/jam/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	schmonz@netbsd.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://www.perforce.com/jam/jam.html
 COMMENT=	Program construction tool, like make(1)
 

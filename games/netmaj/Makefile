@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:39:05 grant Exp $
 #
 
 DISTNAME=		netmaj-2.0.7
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}/netmaj
 CATEGORIES=		games
 MASTER_SITES=		http://www.sfc.wide.ad.jp/~kusune/netmaj/files/
 
-MAINTAINER=		kei@netbsd.org
+MAINTAINER=		kei@NetBSD.org
 HOMEPAGE=		http://www.sfc.wide.ad.jp/~kusune/netmaj/
 COMMENT=		mahjongg game with network and 1-4 player(s) support
 

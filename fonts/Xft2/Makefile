@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/06/02 01:19:50 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/17 21:36:39 grant Exp $
 #
 
 DISTNAME=	fcpackage.2_1
@@ -8,7 +8,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/Xft
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://fontconfig.org/release/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://fontconfig.org/
 COMMENT=	Library for configuring and customizing font access
 

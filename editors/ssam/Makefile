@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2003/05/09 07:34:44 agc Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:34:49 grant Exp $
 #
 
 DISTNAME=	ssam-1.9
 CATEGORIES=	editors
 MASTER_SITES=	http://www.westley.demon.co.uk/src/
 
-MAINTAINER=	agc@netbsd.org
+MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.westley.demon.co.uk/software.html
 COMMENT=	UTF-8-aware stream editor like sed(1), using the sam command set
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/05/05 17:29:09 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:34:31 grant Exp $
 #
 
 DISTNAME=       jde-2.3.2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 # The "real" site has silly naming conventions:
 #MASTER_SITES=   http://jdee.sunsite.dk/
 
-MAINTAINER=     cjones@netbsd.org
+MAINTAINER=     cjones@NetBSD.org
 HOMEPAGE=       http://jdee.sunsite.dk/
 COMMENT=        Full-featured Java editing mode for emacs
 

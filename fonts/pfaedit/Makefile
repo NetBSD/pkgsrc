@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 08:25:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/07/17 21:37:37 grant Exp $
 #
 
 DISTNAME=	pfaedit_full-${VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	fonts editors
 MASTER_SITES=	http://pfaedit.sourceforge.net/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://pfaedit.sourceforge.net/
 COMMENT=	postscript font editor
 

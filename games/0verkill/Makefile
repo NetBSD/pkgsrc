@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/03/16 20:53:02 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/17 21:37:48 grant Exp $
 #
 
 DISTNAME=	0verkill-0.15
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://artax.karlin.mff.cuni.cz/~brain/0verkill/release/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	zuntum@netbsd.org
+MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://artax.karlin.mff.cuni.cz/~brain/0verkill/
 COMMENT=	0verkill is bloody 2D action deathmatch-like game in ASCII-ART
 

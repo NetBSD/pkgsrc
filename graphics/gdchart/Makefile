@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/06/24 08:20:59 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/17 21:40:42 grant Exp $
 #
 
 DISTNAME=	gdchart0.11.4dev
@@ -8,7 +8,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://www.fred.net/brv/chart/ \
 		ftp://ftp.nuug.no/pub/anders/distfiles/
 
-MAINTAINER=	adam@netbsd.org
+MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.fred.net/brv/chart/
 COMMENT=	Easy to use, fast C API for creating charts and graphs
 

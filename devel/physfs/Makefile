@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/13 20:00:29 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/17 21:33:05 grant Exp $
 #
 
 DISTNAME=		physfs-0.1.8
 CATEGORIES=		devel
 MASTER_SITES=		http://www.icculus.org/physfs/downloads/
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.icculus.org/physfs/
 COMMENT=		library providing abstract access to various archives
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/13 22:22:51 seb Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/17 21:32:07 grant Exp $
 #
 
 DISTNAME=		Class-Loader-2.02
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5clo
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Class/}
 
-MAINTAINER=		mcr@netbsd.org
+MAINTAINER=		mcr@NetBSD.org
 #	from sen_ml@eccosys.com
 #HOMEPAGE=	
 COMMENT=		perl5 module for module loading and on-demand object creation

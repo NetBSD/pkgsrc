@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/06/02 01:20:35 jschauma Exp $
+# $NetBSD: Makefile,v 1.27 2003/07/17 21:31:59 grant Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/09/15 07:22:06 tg Exp
 #
 
@@ -9,7 +9,7 @@ CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.cs.virginia.edu/pub/nr/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.cs.virginia.edu/~nr/noweb/
 COMMENT=		Simple, extensible literate-programming tool
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/17 21:38:54 grant Exp $
 
 DISTNAME=		KnightCap-3.6
 PKGNAME=		knightcap-3.6
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/Export
 CATEGORIES=		games
 MASTER_SITES=		ftp://samba.anu.edu.au/pub/KnightCap/
 
-MAINTAINER=		jlam@netbsd.org
+MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://anu.samba.org/KnightCap/
 COMMENT=		chess engine with 3D OpenGL-rendered chessboard
 
