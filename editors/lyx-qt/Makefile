@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2004/05/29 11:27:09 shannonjr Exp $
+# $NetBSD: Makefile,v 1.13 2004/06/04 15:30:35 reed Exp $
 #
 
 .include "./Makefile.common"
 
 PKGNAME=	${DISTNAME:S/lyx-/lyx-qt-/}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT+=	(QT version)
 
