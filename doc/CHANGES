@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7100 2004/09/05 18:36:05 seb Exp $
+$NetBSD: CHANGES,v 1.7101 2004/09/05 20:44:37 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4197,3 +4197,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pam-dbm-0.2 [grant 2004-09-05]
 	Updated gnome-speech to 0.3.5 [jmmv 2004-09-05]
 	Updated chicken to 1.66 [seb 2004-09-05]
+	Updated xmame to 0.86 [kristerw 2004-09-05]
+	Updated xmess to 0.86 [kristerw 2004-09-05]
