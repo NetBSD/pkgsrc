@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7710 2004/11/05 15:06:36 shannonjr Exp $
+$NetBSD: CHANGES,v 1.7711 2004/11/05 15:12:08 peter Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5087,3 +5087,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated lwm to 1.2.1 [adam 2004-11-05]
 	Updated gnustep-base to 1.10.1 [adam 2004-11-05]
 	Updated librfuncs to 1.0.3 [shannonjr 2004-11-05]
+	Added pflkm-20041025 [peter 2004-11-05]
+	Added pfstat-1.7 [peter 2004-11-05]
+	Added pftop-0.4 [peter 2004-11-05]
