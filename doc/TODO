@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.470 2003/04/15 12:21:21 wiz Exp $
+$NetBSD: TODO,v 1.471 2003/04/15 16:24:44 salo Exp $
 
 Suggested new packages
 ======================
@@ -236,7 +236,6 @@ Suggested package updates
 	o squeak-3.4
 	o srp_client-1.7.5 [jlam]
 	o stella-1.3
-	o subversion-0.20.1 [pkg/20725]
 	o sun-jdk14-1.4.2
 	o sun-jre14-1.4.2
 	o sweep-0.8.1
