@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/04/11 13:17:09 taca Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/27 15:28:30 taca Exp $
 # FreeBSD: ports/textproc/ruby-rdtool/Makefile,v 1.15 2001/01/30 19:20:09 knu Exp
 
-DISTNAME=	rdtool-${RUBY_RD_VERSION}
-PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
-PKGREVISION=	3
+DISTNAME=	rdtool-0.6.14
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www2.pos.to/~tosh/ruby/rdtool/archive/
 
@@ -11,16 +10,24 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www2.pos.to/~tosh/ruby/rdtool/
 COMMENT=	RD (Ruby Document) converter to HTML/man/etc
 
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}optparse>=0.7:../../devel/ruby-optparse
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}strscan>=0.6.1:../../devel/ruby-strscan
-BUILD_DEPENDS+=	${RUBY_PKGNAMEPREFIX}racc>=1.3.6:../../devel/ruby-racc
+# Since rd2 commands depends its name and it can't rename, we cannot
+# install multiple ruby??-rd2 package (unless supported by pkgview.
+CONFLICTS+=	ruby[1-9][0-9]-rdtool-*
 
-DIST_SUBDIR=	ruby
-USE_RUBY=	yes
+REPLACE_RUBY=	rd2 rmi2html.rb utils/rdswap.rb
 INSTALL_TARGET=	install install-rmi2html
 
-REPLACE_RUBY=	rmi2html.rb utils/rdswap.rb
+.include "../../lang/ruby/rubyversion.mk"
 
+.if ${RUBY_VER} == "16"
+BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-racc>=1.3.6:../../devel/ruby16-racc
+DEPENDS+=	${RUBY_PKGPREFIX}-optparse>=0.7:../../devel/ruby-optparse
+DEPENDS+=	${RUBY_PKGPREFIX}-strscan>=0.6.1:../../devel/ruby-strscan
+.else
+BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-racc>=1.3.6:../../devel/ruby-racc
+.endif
+
+MAKE_ENV+=	RACC=${RACC}
 DOCS_RD=	README.rd README.rd.ja doc/rd-draft.rd doc/rd-draft.rd.ja
 DOCS=		${DOCS_RD} README.html README.html.ja \
 		doc/rd-draft.html doc/rd-draft.html.ja
@@ -37,7 +44,6 @@ post-build:
 .endfor
 
 post-install:
-	${LN} -sf rmi2html.rb ${PREFIX}/bin/rmi2html
 	${INSTALL_SCRIPT} ${WRKSRC}/utils/rdswap.rb ${PREFIX}/bin/rdswap
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/rd
 .for f in ${DOCS}
@@ -46,6 +52,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/rd
 	${INSTALL_DATA} ${RUBY_SITELIBDIR}/rd/dot.rd2rc ${RUBY_EXAMPLESDIR}/rd
 
-.include "Makefile.common"
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
+.include "../../devel/ruby-racc/raccversion.mk"
 .include "../../mk/bsd.pkg.mk"
