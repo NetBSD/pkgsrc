@@ -1,19 +1,7 @@
-$NetBSD: patch-ab,v 1.9 2002/06/26 10:53:33 lukem Exp $
+$NetBSD: patch-ab,v 1.10 2002/07/10 10:48:04 mrg Exp $
 
 --- bozohttpd.8.in.orig	Sat Sep 22 20:10:00 2001
 +++ bozohttpd.8.in
-@@ -99,10 +99,7 @@
- .Nm
- from doing IP address to name resolution of hosts for setting the
- .Ev REMOTE_HOST
--variable before running a CGI program.  This option has no effect
--without the
--.Fl c
--option.
-+variable before running a CGI program.
- .It Fl r
- This option causes
- .Nm
 @@ -172,8 +169,8 @@
  .Xr inetd.conf 5
  entry would be:
