@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/01/26 15:25:00 cube Exp $
+# $NetBSD: Makefile,v 1.42 2004/02/10 02:22:50 jlam Exp $
 
 DISTNAME=	Mail-SpamAssassin-${PKGVERSION}
 PKGNAME=	spamassassin-2.63
@@ -19,7 +19,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 
-PERL5_REQD=	5.6.0	# MakeMaker >= 5.45 needed
+PERL5_REQD+=	5.6.0	# MakeMaker >= 5.45 needed
 
 DEPENDS+=	p5-Net-DNS>=0.29:../../net/p5-Net-DNS
 DEPENDS+=	p5-HTML-Parser>=3.29:../../www/p5-HTML-Parser
