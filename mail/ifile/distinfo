@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2003/02/25 11:34:37 salo Exp $
+$NetBSD: distinfo,v 1.3 2003/04/18 10:29:20 salo Exp $
 
-SHA1 (ifile-1.3.0.tar.gz) = c72b53dc73d1cf2ad63a2d616d57f0361cc312ae
-Size (ifile-1.3.0.tar.gz) = 167901 bytes
-SHA1 (ifile-1.3.0.argp_configure.patch.gz) = 714992159b6711240fb9fe0320272c61730b68a1
-Size (ifile-1.3.0.argp_configure.patch.gz) = 37078 bytes
+SHA1 (ifile-1.3.1.tar.gz) = 70fa6e0066e7753b5f02ec94831e77541f9570b8
+Size (ifile-1.3.1.tar.gz) = 186800 bytes
 SHA1 (patch-aa) = 077a6e175358745092a4318e9a1c56783299bbab
