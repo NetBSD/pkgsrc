@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2001/04/24 14:14:41 rh Exp $
+# $NetBSD: Makefile,v 1.21 2001/09/27 06:38:15 perry Exp $
 #
 
 COMMENT=	Network news
 
+SUBDIR+=	gnus
 SUBDIR+=	inn
 SUBDIR+=	knews
 SUBDIR+=	newscache
