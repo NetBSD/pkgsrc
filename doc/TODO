@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.998 2003/11/05 13:17:18 recht Exp $
+$NetBSD: TODO,v 1.999 2003/11/05 14:37:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -137,6 +137,7 @@ Suggested package updates
 	o awstats-5.9
 	o balsa-1.4.4
 	o bitlbee-0.81a [xtraeme]
+	o blender-2.30
 	o bzflag-1.7g2
 	o centericq-4.9.8
 	o cervisia-2.0
@@ -209,8 +210,10 @@ Suggested package updates
 	o gpa-0.7.0
 	o grace-5.1.12
 	o grepmail-5.21
+	o gsed-4.0.8
 	o gstreamer-0.6.4
 	o gtetrinet-0.7.4
+	o gtk-gnutella-0.93
 	o gtkglext-1.0.3
 	o gtksee-0.5.3
 	o guile-1.6.4
@@ -356,7 +359,7 @@ Suggested package updates
 	o wdm-1.26
 	o wmbiff-0.4.17
 	o wmweather-2.4.2
-	o wv2-0.1.8
+	o wv2-0.2
 	o wwwoffle-2.7h
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
