@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 1999/10/05 14:18:31 kim Exp $
+# $NetBSD: Makefile,v 1.85 1999/10/09 13:01:40 dbj Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/08/16 03:11:52 gpalmer Exp 
 #
 
@@ -13,6 +13,7 @@
     SUBDIR += bind4
     SUBDIR += bing
 #    SUBDIR += cap
+    SUBDIR += choparp
     SUBDIR += coda5_client
     SUBDIR += coda5_server
     SUBDIR += coda_client
@@ -79,6 +80,8 @@
     SUBDIR += pfnet
     SUBDIR += pload
 #    SUBDIR += pmf
+    SUBDIR += poptop
+    SUBDIR += ppp-mppe
     SUBDIR += ra-pna-proxy
     SUBDIR += ra-rtsp-proxy
     SUBDIR += radius
