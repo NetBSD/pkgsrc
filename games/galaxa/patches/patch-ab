@@ -1,34 +1,38 @@
-$NetBSD: patch-ab,v 1.2 1998/08/07 10:40:40 agc Exp $
-
---- galaxa.c.orig	Fri Jul 24 03:06:10 1998
-+++ galaxa.c	Fri Jul 24 03:27:53 1998
-@@ -2694,7 +2694,7 @@
+$NetBSD: patch-ab,v 1.3 1998/09/13 20:55:15 garbled Exp $
+--- galaxa.c.orig	Wed Apr 22 22:29:14 1998
++++ galaxa.c	Sun Sep 13 13:41:46 1998
+@@ -2693,16 +2693,14 @@
+   FILE * fi;
    int i, z;
--  
-+  char temp[128];
    
+-  
    /* Open file: */
 -  
 -  fi = fopen("galaxa-highs.dat", "r");
-+  sprintf(temp, "%s/galaxa-highs.dat", DATA);
-+  fi = fopen(temp, "r");
++  fi = fopen("/var/games/galaxa-highs.dat", "r");
    
-@@ -2704,3 +2704,3 @@
+   if (fi == NULL)
+     {
+       /* Set defaults: */
        
 -      perror("galaxa-highs.dat");
-+      perror(temp);
++      perror("/var/games/galaxa-highs.dat");
        
-@@ -2752,4 +2752,6 @@
+       for (i = 0; i < 10; i++)
+ 	{
+@@ -2750,12 +2748,12 @@
+ {
+   FILE * fi;
    int i;
 -  
 -  fi = fopen("galaxa-highs.dat", "w");
-+  char temp[128];
 +
-+  sprintf(temp, "%s/galaxa-highs.dat", DATA);
-+    fi = fopen(temp, "w");
++    fi = fopen("/var/games/galaxa-highs.dat", "w");
    
-@@ -2757,3 +2759,3 @@
+   if (fi == NULL)
      {
 -      perror("galaxa-highs.dat");
-+      perror(temp);
++      perror("/var/games/galaxa-highs.dat");
      }
+   else
+     {
