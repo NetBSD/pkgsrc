@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7542 2004/10/23 17:27:47 minskim Exp $
+$NetBSD: CHANGES,v 1.7543 2004/10/23 19:12:48 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4838,3 +4838,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Time-Piece-1.08 [minskim 2004-10-23]
 	Added p5-OOTools-1.75 [minskim 2004-10-23]
 	Added p5-IO-Util-1.26 [minskim 2004-10-23]
+	Updated lua to 5.0.2nb2 [kristerw 2004-10-23]
