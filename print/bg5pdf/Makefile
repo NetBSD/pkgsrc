@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/21 23:46:55 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/08 19:21:01 wiz Exp $
 #
 
 DISTNAME=	bg5pdf-1.0.0
@@ -9,6 +9,7 @@ MAINTAINER=	rxg@netbsd.org
 HOMEPAGE=	http://students.washington.edu/cschin/bg5ps/bg5pdf/
 COMMENT=	wrap big5 encoding text file into PDF file by using PDFlib
 
+USE_BUILDLINK2=			yes
 PYTHON_VERSIONS_ACCEPTED=	21
 PYBINMODULE=			# defined
 PY_PATCHPLIST=			yes
@@ -23,5 +24,5 @@ post-extract:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../print/pdflib/buildlink.mk"
+.include "../../print/pdflib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
