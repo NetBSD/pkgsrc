@@ -1,7 +1,7 @@
-$NetBSD: patch-az,v 1.7 2000/02/18 23:55:15 mycroft Exp $
+$NetBSD: patch-az,v 1.8 2000/02/18 23:57:54 mycroft Exp $
 
 --- src/unexelf.c.orig	Fri Dec  3 04:09:21 1999
-+++ src/unexelf.c	Fri Feb 18 18:23:34 2000
++++ src/unexelf.c	Fri Feb 18 18:56:56 2000
 @@ -478,6 +478,13 @@
  # endif
  # include <sys/exec_elf.h>
@@ -106,47 +106,7 @@ $NetBSD: patch-az,v 1.7 2000/02/18 23:55:15 mycroft Exp $
  /* ****************************************************************
   * unexec
   *
-@@ -829,6 +894,10 @@
-   if (n < 0)
-     fatal ("Couldn't find segment next to .bss in %s\n", old_name, 0);
- 
-+#ifdef HAVE_MIPS_SBSSxxx
-+  bss_phdr_index = n;
-+#endif
-+
-   /* Make sure that the size includes any padding before the old .bss
-      section.  */
-   NEW_PROGRAM_H (n).p_filesz = new_bss_addr - NEW_PROGRAM_H (n).p_vaddr;
-@@ -908,6 +977,28 @@
- 	     this section will be placed in exactly the same place. */
- 	  NEW_SECTION_H (nn).sh_addralign = OLD_SECTION_H (nn).sh_addralign;
- 	  NEW_SECTION_H (nn).sh_size = 0;
-+
-+#ifdef HAVE_MIPS_SBSSxxx
-+	  /* On ELF mips,  the new data section replaces both .sbss and .bss
-+	     (we have, after all, written to them.).  Adding new_data2_size
-+	     to the sh_addr and sh_offset of sbss puts sbss at the end of
-+	     the new data section. setting the size to zero makes it empty.
-+	     But then, adding the new_data2_size to the bss address puts
-+	     its start  beyond the end of the original bss. If the sbss size
-+	     was bigger than a page,  the bss ends up not covered by the
-+	     program header.  This breaks strip. Since both sbss and bss
-+	     are zero-sized,  just use the same address and file offset for
-+	     both, guaranteeing other tools will assign them to the same
-+	     program section (asssuming no sections are loaded at higher
-+	     offsets.)  */
-+	  if (n == old_bss_index) {
-+	    	 int new_sbss_bss_padding = NEW_SECTION_H(nn).sh_addr -
-+		    NEW_SECTION_H(nn - 1).sh_addr;
-+		printf("sbss to bss offset =0x%x\n", new_sbss_bss_padding);
-+		NEW_SECTION_H(nn).sh_addr =NEW_SECTION_H(nn - 1).sh_addr;
-+		NEW_SECTION_H(nn).sh_offset =NEW_SECTION_H(nn - 1).sh_offset;
-+	  }
-+#endif  /* HAVE_MIPS_SBSS */
- 	}
-       else
- 	{
-@@ -983,22 +1074,11 @@
+@@ -983,22 +1048,11 @@
  	  == 0)
  	{
  	  pHDRR symhdr = (pHDRR) (NEW_SECTION_H (nn).sh_offset + new_base);
@@ -171,7 +131,7 @@ $NetBSD: patch-az,v 1.7 2000/02/18 23:55:15 mycroft Exp $
        if (NEW_SECTION_H (nn).sh_type == SHT_MIPS_DEBUG && old_mdebug_index) 
          {
  	  int diff = NEW_SECTION_H(nn).sh_offset 
-@@ -1007,20 +1087,17 @@
+@@ -1007,20 +1061,17 @@
  
  	  if (diff)
  	    {
