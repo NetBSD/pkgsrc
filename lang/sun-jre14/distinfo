@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2004/03/17 22:01:43 jschauma Exp $
+$NetBSD: distinfo,v 1.11 2004/07/02 14:40:21 jschauma Exp $
 
-SHA1 (j2re-1_4_2_04-linux-i586.bin) = 7b789583a09c1ca4037b5d1427ee1b3ec7a55b80
-Size (j2re-1_4_2_04-linux-i586.bin) = 14173427 bytes
+SHA1 (j2re-1_4_2_05-linux-i586.bin) = 326a50523fbedb449596f2c502c2572d9b88114c
+Size (j2re-1_4_2_05-linux-i586.bin) = 14381383 bytes
