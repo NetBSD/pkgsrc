@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1.1.1 1999/11/10 23:15:28 tron Exp $
+
+--- config/Gnome.in.orig	Mon Apr 19 00:08:08 1999
++++ config/Gnome.in	Tue Nov  9 23:30:28 1999
+@@ -1,4 +1,4 @@
+-#!/bin/bash -login
++#!/bin/sh
+ 
+ for errfile in "$HOME/.gnomerc-errors" "${TMPDIR-/tmp}/gnomerc-$USER" "/tmp/gnomerc-$USER"
+ do

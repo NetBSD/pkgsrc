@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/11/10 23:15:28 tron Exp $
+
+--- config/gdm.conf.in.orig	Tue Sep  7 06:37:16 1999
++++ config/gdm.conf.in	Tue Nov  9 23:30:28 1999
+@@ -1,9 +1,9 @@
+ [daemon]
+ Chooser=@bindir@/gdmchooser --disable-sound --disable-crash-dialog
+-DefaultPath=/bin:/usr/bin:/usr/bin/X11:/usr/local/bin:@bindir@
++DefaultPath=/bin:/usr/bin:/usr/local/bin:@X11BASE@/bin:@LOCALBASE@/bin
+ DisplayInitDir=@sysconfdir@/gdm/Init
+ Greeter=@bindir@/gdmlogin --disable-sound --disable-crash-dialog
+-Group=gdm
++Group=@GDMGRP@
+ HaltCommand=/sbin/shutdown -h now
+ KillInitClients=1
+ LogDir=@authdir@
+@@ -11,10 +11,10 @@
+ PostSessionScriptDir=@sysconfdir@/gdm/PostSession/
+ PreSessionScriptDir=@sysconfdir@/gdm/PreSession/
+ RebootCommand=/sbin/shutdown -r now
+-RootPath=/sbin:/usr/sbin:/bin:/usr/bin:/usr/bin/X11:/usr/local/bin:@bindir@
++RootPath=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin:@X11BASE@/bin:@LOCALBASE@/bin
+ ServAuthDir=@authdir@
+ SessionDir=@sysconfdir@/gdm/Sessions/
+-User=gdm
++User=@GDMOWN@
+ UserAuthDir=
+ UserAuthFBDir=/tmp
+ UserAuthFile=.Xauthority
+@@ -64,7 +64,7 @@
+ Enable=0
+ 
+ [servers]
+-0=/usr/bin/X11/X
+-#1=/usr/bin/X11/X
++0=@X11BASE@/bin/X
++#1=@X11BASE@/bin/X
+ 
+ 
