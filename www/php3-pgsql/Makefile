@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/15 20:07:54 explorer Exp $
+# $NetBSD: Makefile,v 1.2 1999/09/01 17:09:56 bad Exp $
 #
 
 PKGNAME=	php-pgsql-${PHP_VERSION}
 
 DEPENDS+=	postgresql-6.4.2:../../databases/postgresql
 
-CONFIGURE_ARGS+=--with-pgsql=/usr/pkg/pgsql
+CONFIGURE_ARGS+=--with-pgsql=${LOCALBASE}/pgsql
 
 BUILDING_EXTENSION_MODULE=yes
 
