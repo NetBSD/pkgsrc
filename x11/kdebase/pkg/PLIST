@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1998/05/08 20:59:36 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.8 1998/07/01 06:34:51 tron Exp $
 bin/kappfinder
 bin/kappfinder_restart
 bin/kcmkpanel
@@ -15,6 +15,7 @@ bin/startkde
 bin/kdehelp
 bin/kfontmanager
 bin/kfind
+bin/kmorph3d.kss
 bin/kvt
 bin/kwm
 bin/kpanel
@@ -52,6 +53,7 @@ bin/kcminfo
 bin/kcontrol
 bin/unpack
 bin/kwmsound
+bin/kspace.kss
 bin/kbouboule.kss
 bin/krdb
 bin/kcmsyssound
@@ -155,7 +157,6 @@ share/config/kcmlocalerc
 share/config/kdmrc
 share/config/kfmrc
 share/config/kpanelrc
-share/config/charsets
 share/doc/HTML/en/kcontrol/syssound/index.html
 share/doc/HTML/en/kcontrol/index.html
 share/doc/HTML/en/kcontrol/index-1.html
@@ -270,7 +271,6 @@ share/doc/HTML/en/kmenuedit/kmenuedit1.gif
 share/doc/HTML/en/kmenuedit/index.html
 share/doc/HTML/en/kmenuedit/kmenuedit2.gif
 share/doc/HTML/de/kcontrol/syssound/index.html
-share/toolbar/configure.xpm
 share/toolbar/back.xpm
 share/toolbar/bottom.xpm
 share/toolbar/contents.xpm
@@ -779,8 +779,6 @@ share/locale/el/LC_MESSAGES/kfm.mo
 cgi-bin/helpsearch
 cgi-bin/helpindex
 @dirrm share/wallpapers
-@dirrm share/config
-@dirrm share/toolbar
 @dirrm share/doc/HTML/en/kwm
 @dirrm share/doc/HTML/en/kvt
 @dirrm share/doc/HTML/en/kmenuedit
