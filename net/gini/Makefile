@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:46 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/04/24 23:19:55 wiz Exp $
 #
 
 DISTNAME=		gini-0.5.1
@@ -12,10 +12,10 @@ HOMEPAGE=		http://gini.sourceforge.net/
 COMMENT=		Free streaming media server
 
 GNU_CONFIGURE=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 
-.include "../../audio/libvorbis/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
