@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2435 2004/11/24 00:20:23 simonb Exp $
+$NetBSD: TODO,v 1.2436 2004/11/24 08:16:20 salo Exp $
 
 Suggested new packages
 ======================
@@ -689,7 +689,6 @@ Suggested package updates
 	o minicom-2.1
 	o minivmac-2.4.1
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-1.0
 	o mldonkey-2.5.22
 	o mlterm-2.9.0
 	o mmix-20041014
