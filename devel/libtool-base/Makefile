@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/09 06:08:02 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/13 00:46:00 jlam Exp $
 #
 
 PKGNAME=	${DISTNAME:C/-/-base-/}
@@ -42,6 +42,7 @@ CONFIGURE_ENV+=		lt_cv_path_LD=${LD:Q}
 # which breaks when SED is nbsed.  Tell it explicitly to use the sed
 # named by ${SED}.
 #
+CONFIGURE_ENV+=		SED=${SED:Q}
 CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 
 .if !empty(MACHINE_PLATFORM:MDarwin-*-*)
