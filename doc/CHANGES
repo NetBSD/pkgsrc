@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9769 2005/04/05 21:50:20 rillig Exp $
+$NetBSD: CHANGES,v 1.9770 2005/04/06 04:16:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1917,3 +1917,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lv to 4.51 [cube 2005-04-05]
 	Updated sr to 2.3.3nb5 [is 2005-04-05]
 	Updated sr to 2.3.3nb6 [is 2005-04-05]
+	Updated getmail to 4.3.5 [schmonz 2005-04-06]
