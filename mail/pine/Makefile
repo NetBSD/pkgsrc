@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2003/07/28 15:44:10 adam Exp $
+# $NetBSD: Makefile,v 1.75 2003/09/04 11:09:11 martti Exp $
 
 DISTNAME=       pine4.56
 PKGNAME=        pine-4.56
@@ -25,7 +25,7 @@ CONF_FILES=    ${PREFIX}/share/examples/pine/pine.conf ${PKG_SYSCONFDIR}/pine.co
 BUILDNAME= so5
 BUILDFILE= sol
 .elif ${OPSYS} == "Linux"
-BUILDNAME= lrh
+BUILDNAME= lnx
 BUILDFILE= lnx
 .elif ${OPSYS} == "Darwin"
 BUILDNAME= osx

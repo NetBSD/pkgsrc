@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2003/07/30 09:29:58 adam Exp $
+# $NetBSD: Makefile,v 1.66 2003/09/04 11:02:19 martti Exp $
 
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -30,7 +30,7 @@ DOC_DIR=	${PREFIX}/share/doc/imap-uw
 .if ${OPSYS} == "SunOS"
 ALL_TARGET=	gso
 .elif ${OPSYS} == "Linux"
-ALL_TARGET=	lrh
+ALL_TARGET=	slx
 .elif ${OPSYS} == "Darwin"
 ALL_TARGET=	osx
 .else
