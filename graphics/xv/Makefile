@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/04/10 07:26:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.36 2001/05/22 09:32:23 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/07/03 07:37:08 asami Exp
 #
 
@@ -18,7 +18,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.trilon.com/xv/
 COMMENT=	X11 program that displays images of various formats
 
-DEPENDS+=	png>1.0.9:../png
+DEPENDS+=	png>=1.0.11:../png
 DEPENDS+=	tiff-*:../../graphics/tiff
 
 USE_IMAKE=	yes

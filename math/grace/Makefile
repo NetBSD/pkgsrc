@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/03/28 11:26:09 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2001/05/22 09:32:24 wiz Exp $
 
 DISTNAME=	grace-5.1.2
 CATEGORIES=	math graphics x11
@@ -11,7 +11,7 @@ COMMENT=	GRaphing, Advanced Computation and Exploration of data
 DEPENDS+=	netcdf>=3.4:../../devel/netcdf
 DEPENDS+=	jpeg-6*:../../graphics/jpeg
 DEPENDS+=	tiff-*:../../graphics/tiff
-DEPENDS+=	png>1.0.9:../../graphics/png
+DEPENDS+=	png>=1.0.11:../../graphics/png
 DEPENDS+=	pdflib>=3.0:../../print/pdflib
 DEPENDS+=	t1lib>=1.0.1:../../textproc/t1lib
 DEPENDS+=	Xbae-*:../../x11/Xbae

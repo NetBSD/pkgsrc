@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/07 10:47:13 skrll Exp $
+# $NetBSD: Makefile,v 1.10 2001/05/22 09:32:28 wiz Exp $
 #
 USE_MESA=	yes
 
@@ -8,7 +8,7 @@ PKGNAME=	qt2-libs-${QTVERSION}
 
 COMMENT=	C++ X GUI toolkit
 
-DEPENDS+=	png>1.0.9:../../graphics/png
+DEPENDS+=	png>=1.0.11:../../graphics/png
 DEPENDS+=	mng-1.0.0:../../graphics/mng
 DEPENDS+=	jpeg-*:../../graphics/jpeg
 
