@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/02/11 11:30:50 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/02/12 01:59:38 jlam Exp $
 #
 # Optionally define USE_GNU_READLINE to force use of GNU readline.
 #
@@ -24,17 +24,25 @@ BUILDLINK_IS_BUILTIN.readline=	NO
       exists(/usr/include/readline/readline.h)
 BUILDLINK_IS_BUILTIN.readline=	YES
 .  endif
+.  if !empty(BUILDLINK_CHECK_BUILTIN.readline:M[nN][oO])
 #
 # These catch-alls are probably too broad, but better to err on the safe
 # side.  We can narrow down the match when we have better information.
 #
 _INCOMPAT_READLINE?=	SunOS-*-*
-.  for _pattern_ in ${_INCOMPAT_READLINE} ${INCOMPAT_READLINE}
-.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+.    for _pattern_ in ${_INCOMPAT_READLINE} ${INCOMPAT_READLINE}
+.      if !empty(MACHINE_PLATFORM:M${_pattern_})
 BUILDLINK_IS_BUILTIN.readline=	NO
-.    endif
-.  endfor
+.      endif
+.    endfor
+.  endif
 MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.readline=${BUILDLINK_IS_BUILTIN.readline}
+.endif
+
+.if !empty(BUILDLINK_IS_BUILTIN.readline:M[yY][eE][sS])
+BUILDLINK_USE_BUILTIN.readline=	YES
+.else
+BUILDLINK_USE_BUILTIN.readline=	NO
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
@@ -48,15 +56,6 @@ BUILDLINK_USE_BUILTIN.readline=	NO
 
 .if !empty(BUILDLINK_CHECK_BUILTIN.readline:M[yY][eE][sS])
 BUILDLINK_USE_BUILTIN.readline=	YES
-.endif
-
-.if !defined(BUILDLINK_USE_BUILTIN.readline)
-.  if !empty(BUILDLINK_IS_BUILTIN.readline:M[nN][oO])
-BUILDLINK_USE_BUILTIN.readline=	NO
-.  else
-BUILDLINK_USE_BUILTIN.readline=	YES
-.  endif
-MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.readline=${BUILDLINK_USE_BUILTIN.readline}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.readline:M[nN][oO])
