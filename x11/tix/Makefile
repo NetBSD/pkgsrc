@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2000/08/15 14:33:05 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2000/09/01 17:58:04 jwise Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/03/17 07:55:17 tg Exp
 
 DISTNAME=	Tix4.1.0.006
 PKGNAME=	tix-4.1.0.006
 CATEGORIES=	x11 tk80
 MASTER_SITES=	ftp://ftp.xpi.com/pub/
+
+BROKEN=		This package has not yet been updated to work with tcl-8.3.2.
 
 MAINTAINER=	rh@vip.at
 
