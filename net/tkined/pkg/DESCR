@@ -1,0 +1,7 @@
+tkined is a graphical tool based on scotty which allows you to
+troubleshoot your IP network (ping, traceroute, finger, query tcp
+services, query RPC services) and monitor network status plus
+scripts to discover and layout the topology of your IP network. SNMP
+based scripts can be used to dump routing tables, to query interface
+status and to monitor SNMP variables. There is also a MIB browser to
+inspect the MIB hierarchy.
