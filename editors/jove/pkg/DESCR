@@ -1,0 +1,12 @@
+JOVE ("Jonathan's Own Version of Emacs") is an emacs-like editor less all
+the overhead of the LISP engine.  But for projects that don't require all
+the chrome of EMACS, JOVE will get the job done.  It supports split
+screens, shell windows, process control, customizable comment formatting
+and other features.  No syntax highlighting, colorisation or any of the
+other chrome.
+
+There is an 'X' version of jove included but it only works with SunTools
+or OpenWindows.  Hopefully this will be expanded.  It is not compiled in
+by default.
+
+If you want something more like EMACS, use EMACS.
