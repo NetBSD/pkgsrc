@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2002/10/28 22:37:11 wiz Exp $
+$NetBSD: patch-ac,v 1.8 2002/12/14 02:34:04 salo Exp $
 
 --- configure.orig	Thu Oct 24 05:26:17 2002
-+++ configure
-@@ -11012,7 +11012,7 @@ _ACEOF
++++ configure	Sat Dec 14 02:37:53 2002
+@@ -11012,7 +11012,7 @@
    if test "$have_kerberos5" = yes ; then
      # from Matt Knopp <mhat@infocalypse.netlag.com>
      # (who got it from amu@mit.edu)
@@ -11,3 +11,24 @@ $NetBSD: patch-ac,v 1.7 2002/10/28 22:37:11 wiz Exp $
    elif test "$have_kerberos" = yes ; then
      # from Tim Showalter <tjs@psaux.com> for FreeBSD 4.2
      PASSWD_LIBS="$PASSWD_LIBS -lkrb -ldes -lcom_err"
+@@ -12917,19 +12917,7 @@
+   fi
+ 
+ 
+-  GNOME_DATADIR=""
+-  if test "$have_gtk" = yes; then
+-    if test -n "$pkg_config"; then
+-      if test "$have_gtk2" = yes; then
+-        GNOME_DATADIR=`$pkg_config --variable=prefix gtk+-2.0`
+-      else
+-        GNOME_DATADIR=`$pkg_config --variable=prefix gtk+`
+-      fi
+-    else
+-      GNOME_DATADIR=`$gtk_config --prefix`
+-    fi
+-    GNOME_DATADIR="$GNOME_DATADIR/share"
+-  fi
++  GNOME_DATADIR="$datadir"
+ 
+   # .desktop files go in different places in Gnome 1.x and Gnome 2.x...
+   if test "$have_gtk2" = yes; then
