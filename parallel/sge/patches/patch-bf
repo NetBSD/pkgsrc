@@ -1,0 +1,31 @@
+$NetBSD: patch-bf,v 1.1.1.1 2004/05/03 00:38:36 dmcmahill Exp $
+
+--- source/utilbin/infotext.c.orig	Wed Mar  3 13:11:17 2004
++++ source/utilbin/infotext.c
+@@ -64,7 +64,7 @@ static void  sge_infotext_welcome(void);
+ static void  sge_infotext_raw(char* format_string);
+ static void  sge_infotext_usage(void);
+ static int   sge_infotext_get_nr_of_substrings(char* buffer, char* substring);
+-#if defined(ALPHA) || defined(ALPHA5) || defined(ALINUX) || defined(HP11) || defined(HP10) || __GNUC__ == 3
++#if defined(ALPHA) || defined(ALPHA5) || defined(ALINUX) || defined(HP11) || defined(HP10) || __GNUC__ == 3 || defined(NETBSD)
+ static char* sge_infotext_string_replace(dstring* buf, char* arg, char* what, char* with, int only_first );
+ #endif
+ static char* sge_infotext_string_input_parsing(dstring* buf,char* string);
+@@ -536,7 +536,7 @@ static char* sge_infotext_string_output_
+ }
+ 
+ 
+-#if defined(ALPHA) || defined(ALPHA5) || defined(ALINUX) || defined(HP11) || defined(HP10) || __GNUC__ == 3
++#if defined(ALPHA) || defined(ALPHA5) || defined(ALINUX) || defined(HP11) || defined(HP10) || __GNUC__ == 3 || defined(NETBSD)
+ static char* sge_infotext_string_replace(dstring* tmp_buf, char* arg, char* what, char* with, int only_first) {
+    int i;
+    char* p1;
+@@ -1035,7 +1035,7 @@ int main( int argc, char* argv[] ) {
+    DPRINTF(("pass 4\n"));
+    {
+       if (real_args > 0) {
+-#if defined(ALPHA) || defined(ALPHA5) || defined(ALINUX) || defined(HP11) || defined(HP10) || __GNUC__ == 3
++#if defined(ALPHA) || defined(ALPHA5) || defined(ALINUX) || defined(HP11) || defined(HP10) || __GNUC__ == 3 || defined(NETBSD)
+       for(i=0;i<real_args;i++) {
+ /*      printf("argument[%d]: \"%s\"\n",i,argv[first_arg +i]); */
+          sge_dstring_copy_string(&buffer, sge_infotext_string_replace(&tmp_buf, (char*)sge_dstring_get_string(&buffer2),"%s",argv[first_arg +i],1));

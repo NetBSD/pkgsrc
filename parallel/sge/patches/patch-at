@@ -1,0 +1,25 @@
+$NetBSD: patch-at,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/dist/util/arch_variables	2003-10-02 14:25:34.000000000 +0200
++++ source/dist/util/arch_variables	2003-09-30 16:30:23.000000000 +0200
+@@ -166,6 +166,20 @@
+    GETTEXT=/usr/local/bin/gettext
+    ROOTGROUP=wheel
+    ;;
++ nbsd-*)
++   AWK=/usr/bin/awk
++   ECHO="/bin/echo"
++   RC_FILE=netbsd
++   RC_PREFIX=@rcd_dir@
++   RC_SUFFIX=
++   XTERM=/usr/X11R6/bin/xterm
++   MAILER=/usr/bin/mail
++   QLOGIN_COMMAND=telnet
++   QLOGIN_DAEMON=/usr/libexec/telnetd
++   RLOGIN_DAEMON=/usr/libexec/rlogind
++   GETTEXT=/usr/bin/gettext
++   ROOTGROUP=wheel
++   ;;
+  darwin)
+    AWK=/usr/bin/awk
+    ECHO=/bin/echo

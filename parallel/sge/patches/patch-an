@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/clients/qevent/qevent.c	2003-10-02 14:25:29.000000000 +0200
++++ source/clients/qevent/qevent.c	2003-10-01 14:22:09.000000000 +0200
+@@ -35,7 +35,7 @@
+ #include <time.h>
+ #include <unistd.h>
+ #include <string.h>
+-#if defined(FREEBSD) || defined(DARWIN)
++#if defined(FREEBSD) || defined(DARWIN) || defined(NETBSD)
+ #include <sys/time.h>
+ #endif
+ 
