@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2003/10/06 07:21:57 mycroft Exp $
+
+--- src/video_out/video_out_aa.c.orig	2003-07-13 19:29:04.000000000 +0000
++++ src/video_out/video_out_aa.c	2003-10-06 07:16:39.000000000 +0000
+@@ -109,6 +109,8 @@
+   frame = (aa_frame_t *) malloc (sizeof (aa_frame_t));
+   memset (frame, 0, sizeof (aa_frame_t));
+ 
++  pthread_mutex_init (&frame->vo_frame.mutex, NULL);
++
+   frame->vo_frame.copy = NULL;
+   frame->vo_frame.field = aa_frame_field;
+   frame->vo_frame.dispose = aa_dispose_frame;
