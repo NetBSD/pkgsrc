@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/09/22 16:25:16 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2004/02/21 07:27:16 snj Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/10/13 09:14:49 tg Exp
 #
 
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.ibp.fr/pub/networking/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cnam.fr/reseau/bing.html
-COMMENT=	Bing is a point-to-point bandwith measurement tool
+COMMENT=	Bing is a point-to-point bandwidth measurement tool
 
 .include "../../mk/bsd.prefs.mk"
 
