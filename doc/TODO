@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.472 2003/04/15 20:43:16 wiz Exp $
+$NetBSD: TODO,v 1.473 2003/04/16 08:57:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -175,9 +175,11 @@ Suggested package updates
 	o mgetty-1.1.30
 	o mhonarc-2.5.13 [pkg/19366]
 	o midnight-commander-4.6.0
+	o mimedefang-2.32
 	o mixer.app-1.8.0
 	o mpgtx-1.3 [pkg/19082]
 	o mrproject-0.9.1
+	o mrtg-2.9.29
 	o mtools-3.9.9
 	o mysql-3.23.54
 	o napshare-1.2
@@ -189,6 +191,7 @@ Suggested package updates
 	o netscape-7.02
 	o newscache-0.99.22p1
 	o ns-flash-6.0.79
+	o ntop2-2.2
 	o nut-7.22
 	o openh323-1.11.2
 	o openldap-2.1.17
@@ -220,7 +223,7 @@ Suggested package updates
 	o sawfish-1.3
 	o scmxx-0.6.3.7
 	o scribus-0.8
-	o scsh-0.6.3
+	o scsh-0.6.4
 	o sendfile-20010424
 	o sketch-0.6.15
 	o smalltalk-2.1
