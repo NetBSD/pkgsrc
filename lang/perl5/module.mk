@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.40 2005/02/24 22:38:42 jlam Exp $
+# $NetBSD: module.mk,v 1.41 2005/02/25 15:57:12 wiz Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -50,7 +50,7 @@ PERL5_MODULE_TYPE?=		MakeMaker
 
 .if empty(BUILDING_MODULE_BUILD:M[yY][eE][sS]) && \
     (${PERL5_MODULE_TYPE} == "Module::Build")
-BUILD_DEPENDS+=		p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
+BUILD_DEPENDS+=		p5-Module-Build>=0.2608nb1:../../devel/p5-Module-Build
 .endif
 
 .include "../../lang/perl5/vars.mk"
