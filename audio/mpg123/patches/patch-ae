@@ -1,0 +1,116 @@
+diff -ur ../../work/mpg123-0.59o/Makefile ./Makefile
+--- ../../work/mpg123-0.59o/Makefile	Mon Feb 15 13:29:13 1999
++++ ./Makefile	Mon Feb 15 13:36:44 1999
+@@ -33,6 +33,7 @@
+ 	@echo "make os2            IBM OS/2"
+ 	@echo "make netbsd         NetBSD"
+ 	@echo "make netbsd-i386    NetBSD optimized for i386"
++	@echo "make netbsd-m68k    NetBSD optimized for m68k"
+ 	@echo "make bsdos          BSDI BSD/OS"
+ 	@echo "make generic        try this one if your system isn't listed above"
+ 	@echo ""
+@@ -215,6 +216,22 @@
+ 		CFLAGS='-Wall -ansi -pedantic -O3 -fomit-frame-pointer \
+ 			-funroll-all-loops -ffast-math \
+ 			-DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
++		mpg123-make
++
++netbsd-profile:
++	$(MAKE) CC=cc LDFLAGS='-pg -static'\
++		OBJECTS='decode.o dct64.o audio_sun.o' \
++		CFLAGS='-Wall -ansi -pedantic -O3 -pg \
++			-funroll-all-loops -ffast-math \
++			-DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD -DM68K_ASSEM' \
++		mpg123-make
++
++netbsd-m68k:
++	$(MAKE) CC=cc LDFLAGS= \
++		OBJECTS='decode.o dct64.o audio_sun.o' \
++		CFLAGS='-Wall -ansi -pedantic -O3 -fomit-frame-pointer \
++			-ffast-math -DREAL_IS_FLOAT \
++			-DUSE_MMAP -DNETBSD -DM68K_ASSEM' \
+ 		mpg123-make
+ 
+ netbsd-i386:
+diff -ur ../../work/mpg123-0.59o/common.c ./common.c
+--- ../../work/mpg123-0.59o/common.c	Wed Feb 11 22:36:25 1998
++++ ./common.c	Sun Feb 14 13:49:42 1999
+@@ -31,7 +31,7 @@
+ 
+ long freqs[9] = { 44100, 48000, 32000, 22050, 24000, 16000 , 11025 , 12000 , 8000 };
+ 
+-#ifdef I386_ASSEM
++#if defined(I386_ASSEM) || defined(M68K_ASSEM)
+ int bitindex;
+ unsigned char *wordpointer;
+ #else
+@@ -1040,6 +1040,7 @@
+   return rval;
+ }
+ 
++#ifndef M68K_ASSEM
+ #ifdef _gcc_
+ inline 
+ #endif
+@@ -1068,9 +1069,14 @@
+   return rval>>7;
+ }
+ #endif
++#endif
+ 
+ void set_pointer(long backstep)
+ {
++#if defined(M68K_ASSEM)
++  wordpointer += (bitindex >> 3);
++  bitindex &= 7;
++#endif
+   wordpointer = bsbuf + ssize - backstep;
+   if (backstep)
+     memcpy(wordpointer,bsbufold+fsizeold-backstep,backstep);
+diff -ur ../../work/mpg123-0.59o/get1bit.h ./get1bit.h
+--- ../../work/mpg123-0.59o/get1bit.h	Sun Jul 13 00:12:03 1997
++++ ./get1bit.h	Sun Feb 14 15:45:00 1999
+@@ -25,4 +25,18 @@
+ #endif
+ 
+ 
++#ifdef M68K_ASSEM
++static __inline__ int get1bit(void) {
++	extern int bitindex;
++	extern unsigned char *wordpointer;
++	int ret;
+ 
++	__asm__ __volatile__ ("| XXX is:\n\t"
++		"bfextu %2@{%1:#1},%0"
++		: "=d" (ret)
++		: "d" (bitindex), "a" (wordpointer) 
++		: "memory" );
++	bitindex += 1;
++	return ret;
++}
++#endif
+diff -ur ../../work/mpg123-0.59o/layer3.c ./layer3.c
+--- ../../work/mpg123-0.59o/layer3.c	Sun Feb  8 19:46:56 1998
++++ ./layer3.c	Sun Feb 14 13:35:53 1999
+@@ -16,7 +16,7 @@
+ #include "mpg123.h"
+ #include "huffman.h"
+ 
+-#if 0
++#if defined(M68K_ASSEM)
+ #include "get1bit.h"
+ #endif
+ 
+diff -ur ../../work/mpg123-0.59o/mpg123.h ./mpg123.h
+--- ../../work/mpg123-0.59o/mpg123.h	Wed Feb 11 21:44:32 1998
++++ ./mpg123.h	Sun Feb 14 13:36:43 1999
+@@ -184,7 +184,9 @@
+ 
+ extern int split_dir_file(const char *path, char **dname, char **fname);
+ 
++#ifndef M68K_ASSEM
+ extern unsigned int   get1bit(void);
++#endif
+ extern unsigned int   getbits(int);
+ extern unsigned int   getbits_fast(int);
+ 
