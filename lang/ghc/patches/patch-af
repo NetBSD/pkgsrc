@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.1.1.1 1999/12/15 06:05:15 proff Exp $
+$NetBSD: patch-af,v 1.2 2003/04/29 11:27:44 augustss Exp $
 
---- /p/lang/ghc/old/fptools/Makefile    Wed Sep 15 09:03:33 1999
-+++ Makefile    Wed Dec 15 16:04:58 1999
-@@ -15,7 +15,7 @@
- # on whether we do `make install' or not. Having a $(ifeq ... ) would
- # be preferable..
- CURRENT_TARGET = $(MAKECMDGOALS)
--SUBDIRS = $(shell if (test x$(CURRENT_TARGET) = xinstall) ; then echo $(ProjectsToInstall); else echo $(ProjectsToBuild); fi)
-+SUBDIRS = $(shell if test x$(CURRENT_TARGET) = xinstall ; then echo $(ProjectsToInstall); else echo $(ProjectsToBuild); fi)
-
- ifneq "$(Project)" ""
-    include $(shell echo $(Project) | tr A-Z a-z)/mk/config.mk
+--- ./ghc/driver/mangler/ghc-asm.lprl.orig	Sun Dec  8 15:29:50 2002
++++ ./ghc/driver/mangler/ghc-asm.lprl	Fri Mar 28 23:48:01 2003
+@@ -197,7 +197,7 @@
+         $T_hsc_cc_PAT   = '\.string.*\)(hsc|cc) (.*)\\\\t(.*)"';
+     }
+ 
+-    $T_DOT_WORD	    = '\.(long|value|byte|zero)';
++    $T_DOT_WORD	    = '\.(long|value|word|byte|zero)';
+     $T_DOT_GLOBAL   = '\.globl';
+     $T_HDR_literal  = "\.section\t\.rodata\n"; # or just use .text??? (WDP 95/11)
+     $T_HDR_misc	    = "\.text\n\t\.align 4\n";
