@@ -1,0 +1,30 @@
+The dync utility is a small, but quite useful utility, which allows
+the use of C as a scripting language.  This can be quite useful
+****SOMETIMES****, allowing access to system calls and library functions
+from the command line.  For example, there are occasions when I want
+to see the struct stat for a directory entry, and want to be able to
+access st_mtime values, without having to parse output from "ls -l". 
+A simple:
+
+int main(int argc, char **argv)
+{
+	struct stat	st;
+	if (stat(argv[1], &st) == 0) {
+		printf("%lld\n", st.st_mtime);
+	}
+	exit(0);
+}
+
+will do the job.  If I was to try this by other means, I would either
+have to install all of Perl, and then learn its idiosyncratic syntax,
+or write a custom C program, which I would then have to compile on
+each architecture I need.
+
+This utility relies on there being a C compiler on the target machine,
+and a working dlopen(3).
+
+This has only, as yet, been tested on NetBSD/i386.
+
+Alistair G. Crooks
+agc@uts.amdahl.com
+Thu Aug 13 15:26:56 BST 1998
