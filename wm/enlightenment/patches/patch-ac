@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.3 2004/08/26 20:22:18 recht Exp $
+$NetBSD: patch-ac,v 1.4 2005/01/11 13:41:24 adam Exp $
 
---- scripts/e_gen_menu.orig	2004-06-13 22:44:03.000000000 +0200
-+++ scripts/e_gen_menu	2004-08-26 21:48:46.000000000 +0200
+--- scripts/e_gen_menu.orig	2004-09-30 18:31:47.000000000 +0000
++++ scripts/e_gen_menu
 @@ -25,7 +25,7 @@
  ##############################################################################
  
  # Likely  prefixes
--$Prefixes = "/usr/local:/usr:/opt";
-+$Prefixes = "@LOCALBASE@:@X11BASE@:/usr";
+-$Prefixes = "/usr/local:/usr:/opt::/opt/kde:$ENV{'KDEDIR'}";
++$Prefixes = "@LOCALBASE@:@X11BASE@:/usr:$ENV{'KDEDIR'}";
+ $Prefixes = RemoveDuplcates($Prefixes);
  
  # Where to look for GNOME2/KDE2,3 stuff
- $AppDirs = MkDirList($Prefixes, "/share/applications");
-@@ -51,7 +51,7 @@
+@@ -53,7 +53,7 @@ $loc3 =~ s/_.*//;
  $loc1 = "" if ($loc1 eq $loc2);
  
  $EdirUser = "$ENV{'HOME'}/.enlightenment" unless $EdirUser;

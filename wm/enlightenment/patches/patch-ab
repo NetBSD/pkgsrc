@@ -1,6 +1,8 @@
---- configure.orig	2004-08-18 01:29:31.000000000 +0200
-+++ configure	2004-08-26 21:20:44.000000000 +0200
-@@ -13500,14 +13500,20 @@
+$NetBSD: patch-ab,v 1.4 2005/01/11 13:41:23 adam Exp $
+
+--- configure.orig	2004-10-28 18:36:02.000000000 +0000
++++ configure
+@@ -11206,14 +11206,20 @@ echo "$as_me: error: Fatal Error: no Iml
     { (exit 1); exit 1; }; }
  fi
  
@@ -25,7 +27,7 @@
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -13566,7 +13572,9 @@
+@@ -11272,7 +11278,9 @@ fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_dl_dlopen" >&5
  echo "${ECHO_T}$ac_cv_lib_dl_dlopen" >&6
  if test $ac_cv_lib_dl_dlopen = yes; then
