@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1099 2003/12/03 01:37:53 xtraeme Exp $
+$NetBSD: TODO,v 1.1100 2003/12/03 01:54:21 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -227,7 +227,6 @@ Suggested package updates
 	o gnocatan-0.8.0
 	o gnome-audio-2.0.0 [pkg/23582]
 	o gnome-core-2.4
-	o gnome-icons-1.0.9 [pkg/23596]
 	o gnome-utils-2.4.1
 	o gnomeicu-0.99
 	o gnucash-1.8.8
