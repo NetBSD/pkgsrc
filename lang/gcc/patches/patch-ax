@@ -1,0 +1,11 @@
+$NetBSD: patch-ax,v 1.1 2001/04/27 10:45:23 skrll Exp $
+
+--- ../gcc-2.95.2/gcc/config/vax/netbsd.h.orig	Wed Dec 16 21:14:22 1998
++++ ../gcc-2.95.2/gcc/config/vax/netbsd.h
+@@ -20,5 +20,4 @@
+ 
+ /* Until they use ELF or something that handles dwarf2 unwinds
+    and initialization stuff better.  */
+-#undef DWARF2_UNWIND_INFO
+-
++#define DWARF2_UNWIND_INFO 0

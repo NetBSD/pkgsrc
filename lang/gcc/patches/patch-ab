@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2000/09/15 23:58:48 tron Exp $
+$NetBSD: patch-ab,v 1.2 2001/04/27 10:45:22 skrll Exp $
 
---- ../gcc-2.95.2/gcc/config/i386/netbsd-elf.h.orig	Sat Sep 16 00:17:42 2000
-+++ ../gcc-2.95.2/gcc/config/i386/netbsd-elf.h	Sat Sep 16 00:17:42 2000
-@@ -0,0 +1,161 @@
+--- ../gcc-2.95.2/gcc/config/i386/netbsd-elf.h.orig	Thu Apr 26 11:53:41 2001
++++ ../gcc-2.95.2/gcc/config/i386/netbsd-elf.h
+@@ -0,0 +1,164 @@
 +/* Definitions of target machine for GNU compiler,
 +   for i386 NetBSD systems.
 +   Copyright (C) 1998 Free Software Foundation, Inc.
@@ -164,3 +164,6 @@ $NetBSD: patch-ab,v 1.1 2000/09/15 23:58:48 tron Exp $
 +  else									\
 +    readonly_data_section ();						\
 +}
++
++/* Use sjlj exceptions. */
++#define DWARF2_UNWIND_INFO 0
