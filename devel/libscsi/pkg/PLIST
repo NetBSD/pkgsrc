@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 1998/05/03 21:23:00 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/12/28 02:48:38 tv Exp $
 include/scsi.h
 lib/libscsi.a
-lib/libscsi_p.a
-lib/libscsi_pic.a
 man/cat3/scsi.0
 man/cat3/scsireq_buff_decode.0
 man/cat3/scsireq_build.0
