@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/09/02 17:46:37 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2003/09/11 15:39:53 jmmv Exp $
 bin/gmplayer
 man/man1/gmplayer.1
 share/mplayer/Skin/AlienMind/README
@@ -112,7 +112,7 @@ share/mplayer/Skin/CornerMP/subt.png
 share/mplayer/Skin/CornerMP/symbols.fnt
 share/mplayer/Skin/CornerMP/symbols.png
 share/mplayer/Skin/CornerMP/vol.png
-share/mplayer/Skin/Cyrus/README
+share/mplayer/Skin/Cyrus/REAME
 share/mplayer/Skin/Cyrus/VERSION
 share/mplayer/Skin/Cyrus/eq.png
 share/mplayer/Skin/Cyrus/eqb.png
@@ -132,7 +132,6 @@ share/mplayer/Skin/Cyrus/plb.png
 share/mplayer/Skin/Cyrus/pos.png
 share/mplayer/Skin/Cyrus/posbar.png
 share/mplayer/Skin/Cyrus/prev.png
-share/mplayer/Skin/Cyrus/readme
 share/mplayer/Skin/Cyrus/skin
 share/mplayer/Skin/Cyrus/stop.png
 share/mplayer/Skin/Cyrus/sub.png
