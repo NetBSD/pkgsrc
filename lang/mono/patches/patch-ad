@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.8 2004/06/26 20:19:16 recht Exp $
+$NetBSD: patch-ad,v 1.9 2004/11/22 13:42:42 adam Exp $
 
---- mono/metadata/icall.c.orig	2004-06-25 00:44:48.000000000 +0200
-+++ mono/metadata/icall.c	2004-06-26 14:01:58.000000000 +0200
-@@ -4743,7 +4743,7 @@
+--- mono/metadata/icall.c.orig	2004-10-29 16:07:28.000000000 +0000
++++ mono/metadata/icall.c
+@@ -4749,7 +4749,7 @@ ves_icall_System_Configuration_DefaultCo
  
  	MONO_ARCH_SAVE_REGS;
  
