@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6036 2004/05/26 22:20:07 recht Exp $
+$NetBSD: CHANGES,v 1.6037 2004/05/27 09:29:58 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2659,3 +2659,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated chkrootkit to 0.43nb1 [wiz 2004-05-26]
 	Updated jakarta-tomcat to 5.0.24 [xtraeme 2004-05-26]
 	Updated cyrus-imapd22 to 2.2.4 [recht 2004-05-26]
+	Updated cyrus-imapd22 to 2.2.4nb2 [recht 2004-05-27]
