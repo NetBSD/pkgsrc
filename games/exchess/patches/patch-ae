@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/10/25 08:40:00 jlam Exp $
+
+--- search.par.in.orig	Sun Apr 30 09:59:16 2000
++++ search.par.in
+@@ -20,7 +20,7 @@
+ 
+ # Endgame Tablebases - if you have them installed
+ 
+-EGTB_PATH            c:\projects\exchess\tb
++EGTB_PATH            @PREFIX@/share/egtb
+ EGTB_CACHE_SIZE      2.0     # Tablebase cache size in megabytes
+ 
+ # Log File
+@@ -32,7 +32,7 @@
+ 
+ GAMBIT_SCORE        80          # Maximum gambit allowed
+ BOOK_FILE      open_bk.dat      # Name of the opening book file
+-BOOK_LEARNING        1          # Set to 0 for no book learning
++BOOK_LEARNING        0          # Set to 0 for no book learning
+ 
+ # Search Extensions
+ #
