@@ -1,15 +1,18 @@
-$NetBSD: MESSAGE,v 1.1 2000/04/15 00:59:28 dmcmahill Exp $
+$NetBSD: MESSAGE,v 1.2 2000/04/28 10:09:55 drochner Exp $
+
+To allow this
+package to coexist with other versions of Qt, it has been installed
+in ${X11BASE}/qt2/{bin,include,lib,man}.
 
 You should be able to select this version of Qt when compiling
-programs which use it by doing the following:
+programs which use it by ensuring that
 
-*  Use the following "configure" arguments:
-      "--with-qt-includes=${X11BASE}/include/qt2/"
-      "--with-qt-libraries=${X11BASE}/lib/qt2/"
+1) QTDIR is set to ${X11BASE}/qt2
 
-*  Put ${X11BASE}/bin/qt2 in your PATH and/or set the environment
-   variable MOC to ${X11BASE}/bin/qt2/moc
+2) Use the "configure" argument "--with-qt-dir=${X11BASE}/qt2"
 
-To access Qt-2 man pages add ${X11BASE}/man/qt2 to your MANPATH
+3) you may also have to put ${X11BASE}/qt2/bin in your PATH
+
+To access Qt-2 man pages add ${X11BASE}/qt2/man to your MANPATH
 environment variable.  Note that the Qt-2 man pages are installed
-here to avoid conflicts with the Qt-1 man pages.
+here to avoid conflicts with man pages of other Qt versions.
