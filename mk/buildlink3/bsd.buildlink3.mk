@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.17 2003/08/26 20:49:04 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.18 2003/08/26 20:52:17 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -68,14 +68,14 @@ BUILDLINK_X11_DIR!=							\
 BUILDLINK_DEPMETHOD.${_pkg_}=	full
 .  endif
 .  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
-_BUILDLINK_DEPMETHOD.${_pkg_}=	DEPENDS
+_BLNK_DEPMETHOD.${_pkg_}=	DEPENDS
 .  elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
-_BUILDLINK_DEPMETHOD.${_pkg_}=	BUILD_DEPENDS
+_BLNK_DEPMETHOD.${_pkg_}=	BUILD_DEPENDS
 .  endif
 .  if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
       defined(BUILDLINK_PKGSRCDIR.${_pkg_})
 .    for _depends_ in ${BUILDLINK_DEPENDS.${_pkg_}}
-${_BUILDLINK_DEPMETHOD.${_pkg_}}+= \
+${_BLNK_DEPMETHOD.${_pkg_}}+= \
 	${_depends_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .    endfor
 .  endif
