@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.4 2003/03/15 12:26:11 grant Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.5 2003/03/15 12:33:34 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -251,3 +251,10 @@ lower optimization on 8 problem files on alpha which trigger compiler
 bugs.  This package now builds on NetBSD-1.6/alpha and even seems to
 run the GUI.  Audio output not verified due to lack of hardware.
 	[dmcmahill, ticket #1215]
+
+graphics/aqsis/distinfo				1.2
+graphics/aqsis/patches/patch-af			1.1 (new)
+
+use a time_t * as the argument to time(3) to let this compile on 64 bit systems.
+Fixes recently noted compile problems on alpha.
+	[dmcmahill, ticket #1216]
