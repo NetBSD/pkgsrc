@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.2 1998/12/11 12:05:44 bouyer Exp $
+# $NetBSD: Makefile,v 1.3 1998/12/17 12:42:07 bouyer Exp $
 
-DISTNAME=	samba-2.0.0beta3
+DISTNAME=	samba-2.0.0beta4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.samba.org/pub/samba/beta/
 
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://www.samba.org/
 
-CONFLICTS=      samba-1.9.18p8 samba-1.9.18p10 samba-2.0.0beta2
+CONFLICTS=      samba-1.9.18p8 samba-1.9.18p10 samba-2.0.0beta2 \
+		samba-2.0.0beta3
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 GNU_CONFIGURE=	yes
