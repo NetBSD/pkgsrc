@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.120 2003/01/02 09:12:20 skrll Exp $
+$NetBSD: TODO,v 1.121 2003/01/02 14:43:54 mjl Exp $
 
 Suggested new packages
 ======================
@@ -196,7 +196,7 @@ Suggested package updates
 	o pilot-link-0.11.4 [dillo]
 	o plib-1.6.0
 	o postfix-2.0
-	o postgresql-7.3
+	o postgresql-7.3.1
 	o povray-3.5
 	o psi-0.8.7
 	o psm-0.8.7 [pkg/19428]
