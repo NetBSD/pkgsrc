@@ -1,0 +1,7 @@
+'rio' is a simple command line utility which allows you to display and
+manage files on your Diamond Rio portable music player.
+
+At present the Rio utility supports the Diamond Rio PMP300 with 32M
+internal flash memory.  Additional external flash memory is now
+supported thanks to the work done by Guido March
+(march@pc40.mpier.uni-frankfurt.de).
