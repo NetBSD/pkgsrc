@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.19 2002/02/05 04:17:32 jlam Exp $
+$NetBSD: patch-aa,v 1.20 2002/03/14 13:07:33 wiz Exp $
 
---- configure.orig	Sat Dec  1 18:38:55 2001
+--- configure.orig	Sun Dec  2 00:38:55 2001
 +++ configure
 @@ -3587,8 +3587,6 @@
  	CFLAGS="$CFLAGS"
@@ -21,7 +21,16 @@ $NetBSD: patch-aa,v 1.19 2002/02/05 04:17:32 jlam Exp $
  # Allow user to specify flags
  
  # Check whether --with-cflags or --without-cflags was given.
-@@ -6289,17 +6290,20 @@
+@@ -6252,6 +6253,8 @@
+ #line 6252 "configure"
+ #include "confdefs.h"
+ 
++#include <sys/cdefs.h>
++#include <stdio.h>
+ #include <tcpd.h>
+ 					int deny_severity = 0, allow_severity = 0;
+ 
+@@ -6289,17 +6294,20 @@
  _ACEOF
  
  					TCPW_MSG="yes"
@@ -42,7 +51,7 @@ $NetBSD: patch-aa,v 1.19 2002/02/05 04:17:32 jlam Exp $
  		fi
  
  fi;
-@@ -15590,6 +15594,7 @@
+@@ -15590,6 +15598,7 @@
  s,@TEST_MINUS_S_SH@,$TEST_MINUS_S_SH,;t t
  s,@LOGIN_PROGRAM_FALLBACK@,$LOGIN_PROGRAM_FALLBACK,;t t
  s,@LD@,$LD,;t t
@@ -50,7 +59,7 @@ $NetBSD: patch-aa,v 1.19 2002/02/05 04:17:32 jlam Exp $
  s,@NO_SFTP@,$NO_SFTP,;t t
  s,@rsh_path@,$rsh_path,;t t
  s,@xauth_path@,$xauth_path,;t t
-@@ -16069,7 +16074,7 @@
+@@ -16069,7 +16078,7 @@
  echo "                 User binaries: $B"
  echo "               System binaries: $C"
  echo "           Configuration files: $D"
