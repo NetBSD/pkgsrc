@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2003/07/28 15:20:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/04 19:13:58 cjep Exp $
 #
 
-DISTNAME=	overnet0.48.2
-PKGNAME=	overnet-0.48.2
+DISTNAME=	overnet0.51.2
+PKGNAME=	overnet-0.51.2
 WRKSRC=		${WRKDIR}
 CATEGORIES=	net
-MASTER_SITES=	${HOMEPAGE}files/
+MASTER_SITES=	http://download.overnet.com/
 
 MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://www.overnet.com/
