@@ -1,0 +1,33 @@
+$NetBSD: patch-ac,v 1.1.1.1 2003/12/18 16:39:18 agc Exp $
+
+--- handlers/pty.c	2003/12/18 09:47:10	1.1
++++ handlers/pty.c	2003/12/18 09:49:36
+@@ -21,7 +21,10 @@
+ #include <termios.h>
+ #include <fcntl.h>
+ #include <stdio.h>
+-#ifndef N_HDLC
++#ifdef __NetBSD__
++#include <util.h>
++#endif
++#if defined(__linux__) && !defined(N_HDLC)
+ #include <linux/termios.h>
+ #endif
+ 
+@@ -39,6 +42,9 @@
+ int
+ pty_get(int *mfp, int *sfp)
+ {
++#ifdef __NetBSD__
++	return openpty(mfp, sfp, NULL, NULL, NULL);
++#else
+     char pty_name[24];
+     struct termios tios;
+     int mfd, sfd;
+@@ -92,5 +98,6 @@
+ 	return -1;
+     }
+     return 0;
++#endif
+ }
+ 
