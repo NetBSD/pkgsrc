@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/07/04 05:11:15 mycroft Exp $
+# $NetBSD: Makefile,v 1.8 1998/07/04 09:19:06 mycroft Exp $
 #
 
 DISTNAME=		transfig.3.2.1
@@ -10,7 +10,7 @@ MASTER_SITE_SUBDIR=	applications/drawing_tools/transfig
 
 MAINTAINER=		root@garbled.futureone.com
 
-DEPENDS+=		xpm-3.4j:../../graphics/xpm
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 
 CONFLICTS=		transfig-3.2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/07/03 23:30:09 tron Exp $
+# $NetBSD: Makefile,v 1.14 1998/07/04 09:18:54 mycroft Exp $
 #
 
 DISTNAME=		snd
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		hubertf@netbsd.org
 
-DEPENDS+=		xpm-3.4j:../../graphics/xpm
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 MIRROR_DISTFILE=	no
 USE_MOTIF=		yes

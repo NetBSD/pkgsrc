@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1998/07/04 05:11:13 mycroft Exp $
+# $NetBSD: Makefile,v 1.21 1998/07/04 09:18:59 mycroft Exp $
 
 DISTNAME=	gimp-1.0.0
 CATEGORIES=	graphics
@@ -15,7 +15,7 @@ DEPENDS+=	gtk+-1.0.4:../../x11/gtk
 DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
 DEPENDS+=	png-0.96:../../graphics/png
 DEPENDS+=	tiff-3.4:../../graphics/tiff
-DEPENDS+=	xpm-3.4j:../../graphics/xpm
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 CONFLICTS+=	gimp-0.99.28
 
