@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.471 2002/11/06 11:12:44 wiz Exp $
+$NetBSD: CHANGES,v 1.472 2002/11/06 18:41:17 frueauf Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3542,3 +3542,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated bozohttpd to 20021106 [mrg 2002-11-06]
 	Updated xscreensaver-gnome to 4.06nb1 [wiz 2002-11-06]
 	Updated xscreensaver to 4.06nb1 [wiz 2002-11-06]
+	Updated fetchmail to 4.6.2 [frueauf 2002-11-06]
+	Updated fetchmailconf to 4.6.2 [frueauf 2002-11-06]
