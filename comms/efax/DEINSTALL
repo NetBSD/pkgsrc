@@ -1,17 +1,22 @@
 #!/bin/sh
 #
-if [ -d /var/spool/efax ]; then
-	filecount="`find /var/spool/efax -type f 2>/dev/null | wc -l`"
-	if [ $filecount -eq 0 ]; then
-		echo "Removing empty efax spool directories..."
-		rm -r /var/spool/efax
-	fi
-fi
+# $NetBSD: DEINSTALL,v 1.2 2003/08/30 18:40:06 jlam Exp $
 
-if [ -d /var/log/efax ]; then
-	filecount="`find /var/log/efax -type f 2>/dev/null | wc -l`"
-	if [ $filecount -eq 0 ]; then
-		echo "Removing empty efax log directories..."
-		rm -r /var/log/efax
+case "$1" in
+DEINSTALL)
+	if [ -d /var/spool/efax ]; then
+		filecount=`${FIND} /var/spool/efax -type f 2>/dev/null | wc -l`
+		if [ $filecount -eq 0 ]; then
+			${ECHO} "Removing empty efax spool directories..."
+			${RM} -r /var/spool/efax
+		fi
 	fi
-fi
+	if [ -d /var/log/efax ]; then
+		filecount=`${FIND} /var/log/efax -type f 2>/dev/null | wc -l`
+		if [ $filecount -eq 0 ]; then
+			${ECHO} "Removing empty efax log directories..."
+			${RM} -r /var/log/efax
+		fi
+	fi
+	;;
+esac
