@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/07/06 21:14:56 tron Exp $
-#
+# $NetBSD: Makefile,v 1.4 2001/07/06 21:23:17 tron Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
@@ -17,6 +16,8 @@ LANGUAGES=	en de pt nl no it sv es hu br fr cs ru uk sl id da
 
 WRKSRC=		${WRKDIR}/asclock1.0
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
+
+.include "../../mk/bsd.prefs.mk"
 
 # Translate to two-letter abbreviations in /usr/share/misc/language.
 #
@@ -50,7 +51,11 @@ do-install:
 		${FILESDIR}/asclock.sh > ${WRKDIR}/asclock.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/asclock.sh ${PREFIX}/bin/asclock
 	${INSTALL_PROGRAM} ${WRKSRC}/asclock ${PREFIX}/libexec/asclock-classic
+.if (${OPSYS} == SunOS)
+	${INSTALL_DATA} ${WRKSRC}/asclock.man ${PREFIX}/man/man1/asclock.1
+.else
 	${INSTALL_DATA} ${WRKSRC}/asclock.0 ${PREFIX}/man/cat1/asclock.0
+.endif
 	${INSTALL_DATA_DIR} ${PREFIX}/share/asclock-classic
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 .for LANGUAGE in ${LANGUAGES}
