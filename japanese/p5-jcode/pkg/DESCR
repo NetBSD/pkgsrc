@@ -8,8 +8,6 @@ To use this, your script should load this library as
 or
 + require('jcode.pl');
 
-# ``unshift(@INC, '/usr/local/lib/perl');'' could be needed before.
-
 # See also:
 # http://www.bekkoame.or.jp/~syunji/perl/perl_j.html
 # http://www.bekkoame.or.jp/~syunji/perl/jcode20.txt

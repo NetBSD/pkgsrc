@@ -1,30 +1,20 @@
-# New ports collection makefile for:	jcode.pl
-# Version required:	2.10
-# Date created:		20 February 1998
-# Whom:			sada
-#
-# $Id: Makefile,v 1.1.1.1 1999/06/08 09:49:29 sakamoto Exp $
-#
+# $NetBSD: Makefile,v 1.2 1999/06/08 09:52:19 sakamoto Exp $
+# FreeBSD Id: Makefile,v 1.2 1999/01/17 10:56:40 vanilla Exp $
 
 DISTNAME=	jcode.pl-2.10
-PKGNAME=	ja-jcode.pl-2.10
 CATEGORIES=	japanese
 MASTER_SITES=	ftp://ftp.iij.ad.jp/pub/IIJ/dist/utashiro/perl/ \
 		ftp://ftp.sra.co.jp/pub/lang/perl/sra-scripts/
 EXTRACT_SUFX=
 
-MAINTAINER=	sada@e-mail.ne.jp
+MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 
-NO_WRKSUBDIR=		yes
-NO_BUILD=		yes
-EXTRACT_CMD=		${CP}
-EXTRACT_BEFORE_ARGS=
-EXTRACT_AFTER_ARGS=	.
-
-INSTALLDIR=	${PREFIX}/lib/perl
+USE_PERL5=	yes
+NO_WRKSUBDIR=	yes
+NO_BUILD=	yes
+EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} .
 
 do-install:
-	@${MKDIR} ${INSTALLDIR}
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME} ${INSTALLDIR}/jcode.pl
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME} ${PREFIX}/lib/perl5/site_perl/jcode.pl
 
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
