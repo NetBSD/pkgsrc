@@ -1,15 +1,17 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/12/03 17:08:24 recht Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2004/02/03 12:30:11 recht Exp $
+#
 
 .if !defined(MONO_BUILDLINK2_MK)
 MONO_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			mono
-BUILDLINK_DEPENDS.mono?=		mono>=0.29
+BUILDLINK_DEPENDS.mono?=		mono>=0.30
 BUILDLINK_PKGSRCDIR.mono?=		../../lang/mono
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.mono=mono
 BUILDLINK_PREFIX.mono_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.mono+=	include/mono/cil/opcode.def
+BUILDLINK_FILES.mono+=	include/mono/interpreter/*.h
 BUILDLINK_FILES.mono+=	include/mono/io-layer/*.h
 BUILDLINK_FILES.mono+=	include/mono/jit/*.h
 BUILDLINK_FILES.mono+=	include/mono/metadata/*.h
@@ -68,7 +70,7 @@ BUILDLINK_FILES.mono+=	lib/System.Web.dll
 BUILDLINK_FILES.mono+=	lib/System.Windows.Forms.dll
 BUILDLINK_FILES.mono+=	lib/System.Xml.dll
 BUILDLINK_FILES.mono+=	lib/System.dll
-BUILDLINK_FILES.mono+=	lib/libgdiplus.dll.*
+BUILDLINK_FILES.mono+=	lib/libmint.*
 BUILDLINK_FILES.mono+=	lib/libmono-profiler-cov.*
 BUILDLINK_FILES.mono+=	lib/libmono.*
 BUILDLINK_FILES.mono+=	lib/mscorlib.dll
