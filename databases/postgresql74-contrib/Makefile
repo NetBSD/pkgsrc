@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/19 12:33:30 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/06/11 10:38:46 grant Exp $
 
 PKGNAME=		postgresql-contrib-${BASE_VERS}
 SVR4_PKGNAME=		pstgc
@@ -10,6 +10,8 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-zlib
 CONFIGURE_ARGS+=	--with-readline
 MAKE_ENV+=		INSTALLED_LIBPQ=1
+
+USE_GNU_TOOLS+=		flex
 
 BUILD_DIRS=		${WRKSRC}/contrib
 
