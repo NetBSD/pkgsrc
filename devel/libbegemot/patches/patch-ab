@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/05/24 00:24:30 kristerw Exp $
+
+--- begemot.h.in.orig	2004-05-24 02:21:36.000000000 +0200
++++ begemot.h.in	2004-05-24 02:22:09.000000000 +0200
+@@ -25,7 +25,7 @@
+ # endif
+ 
+ # if defined(__GNUC__)
+-#  if __GNUC__ >= 2 && __GNUC_MINOR__ >= 5
++#  if (__GNUC__ == 2 && __GNUC_MINOR__ >= 5) || __GNUC__ > 2
+ void panic(const char *, ...) __attribute__ ((noreturn, format(printf, 1, 2)));
+ void bug(const char *, ...) __attribute__ ((noreturn, format(printf, 1, 2)));
+ void warn(const char *, ...) __attribute__ ((format(printf, 1, 2)));
