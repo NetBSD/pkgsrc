@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2001/07/29 16:41:18 tron Exp $
+# $NetBSD: Makefile,v 1.48 2001/07/29 16:47:01 tron Exp $
 
 DISTNAME=	squid-2.4.STABLE1-src
 PKGNAME=	squid-2.4.1nb1
@@ -69,8 +69,6 @@ pre-install:
 	) >>${PLIST_SRC}
 
 post-install:
-	${INSTALL_DATA_DIR} /var/squid
-	${INSTALL} -d -o nobody /var/squid/logs
 	cd ${WRKSRC}/src; ${MAKE} install-pinger
 	${INSTALL_SCRIPT} ${WRKDIR}/squid.sh ${PREFIX}/etc/rc.d/squid
 	@${SETENV} ${MAKE_ENV} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
