@@ -1,4 +1,7 @@
 #! /bin/sh
+#
+# $NetBSD: config.rpath,v 1.2 2005/01/14 00:10:50 tv Exp $
+#
 # Output a system dependent set of variables, describing how to set the
 # run time search path of shared libraries in an executable.
 #
