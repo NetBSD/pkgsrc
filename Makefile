@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2003/02/09 14:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2003/05/03 16:26:01 cjep Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -47,6 +47,10 @@ SUBDIR += textproc
 SUBDIR += wm
 SUBDIR += www
 SUBDIR += x11
+.endif
+
+.ifdef USER_ADDITIONAL_PKGS
+SUBDIR+=	${USER_ADDITIONAL_PKGS}
 .endif
 
 PKGSRCTOP=	yes
