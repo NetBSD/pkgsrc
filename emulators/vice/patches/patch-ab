@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2000/08/27 14:08:35 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2001/02/25 19:35:52 kristerw Exp $
 
 --- src/arch/unix/archdep.h.orig	Tue Nov 16 16:19:50 1999
 +++ src/arch/unix/archdep.h
@@ -12,4 +12,4 @@ $NetBSD: patch-ab,v 1.4 2000/08/27 14:08:35 wiz Exp $
 +#define DOCDIR          PREFIX "/share/doc/vice"
  #define VICEUSERDIR     ".vice"
  
- extern const char *archdep_home_path(void);
+ /* Printer default devices.  */
