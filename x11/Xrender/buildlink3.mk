@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2003/09/30 10:18:57 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2003/11/10 02:26:53 fredb Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XRENDER_BUILDLINK3_MK:=	${XRENDER_BUILDLINK3_MK}+
@@ -62,9 +62,9 @@ MAKEFLAGS+=	_NEED_XRENDER="${_NEED_XRENDER}"
 .if ${_NEED_XRENDER} == "YES"
 #
 # If we depend on the package, depend on the latest version with a library
-# major number bump.
+# minor number bump.
 #
-BUILDLINK_DEPENDS.Xrender=	Xrender>=0.7
+BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8.2
 .  if !empty(BUILDLINK_DEPTH:M\+)
 BUILDLINK_DEPENDS+=		Xrender
 .  endif
