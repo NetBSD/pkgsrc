@@ -1,37 +1,30 @@
-# $NetBSD: Makefile,v 1.120 2003/01/28 22:04:26 jlam Exp $
+# $NetBSD: Makefile,v 1.120.2.1 2003/08/05 11:43:38 grant Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
 DISTNAME=		apache_${APACHE_VERSION}
 PKGNAME=		apache-${APACHE_VERSION}
-PKGREVISION=		3
-APACHE_VERSION=		1.3.27
+APACHE_VERSION=		1.3.28
 CATEGORIES=		www
-MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
-			http://www.apache.de/dist/httpd/
-# This must be defined, before it may be referred to on the LHS.
-EXTRACT_SUFX=		.tar.gz
+MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
+			${MASTER_SITE_APACHE:=httpd/old/}
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${NETBSD_LOGO} ${MODSSL_DIST}
 
-APACHE_DIST=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES=		${APACHE_DIST}
+MAINTAINER=		jlam@NetBSD.org
+HOMEPAGE=		http://httpd.apache.org/
+COMMENT=		Apache HTTP (Web) server
 
 NETBSD_LOGO=		sitedrivenby.gif
-SITES_${NETBSD_LOGO}=	http://www.netbsd.org/images/logos/
-DISTFILES+=		${NETBSD_LOGO}
+SITES_${NETBSD_LOGO}=	http://www.NetBSD.org/images/logos/
 
-MODSSL_VERSION=		2.8.12
+MODSSL_VERSION=		2.8.15
 MODSSL_DISTNAME=	mod_ssl-${MODSSL_VERSION}-${APACHE_VERSION}
-MODSSL_DIST=		${MODSSL_DISTNAME}${EXTRACT_SUFX}
+MODSSL_DIST=		${MODSSL_DISTNAME}.tar.gz
 MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
 SITES_${MODSSL_DIST}=	http://www.modssl.org/source/ \
 			ftp://ftp.pca.dfn.de/pub/tools/net/mod_ssl/source/ \
 			ftp://ftp.funet.fi/pub/crypt/cryptography/libs/modssl/source/
-DISTFILES+=		${MODSSL_DIST}
-
-MAINTAINER=		jlam@netbsd.org
-HOMEPAGE=		http://httpd.apache.org/
-COMMENT=		Apache HTTP (Web) server
 
 CONFLICTS=		apache-*ssl-[0-9]* apache6-[0-9]*
 
@@ -111,7 +104,7 @@ APACHE_CUSTOM_CFLAGS+=	-D_FILE_OFFSET_BITS=64
 # certain symbols from the C++ implementation (__get_eh_context, etc.)
 # referenced by DSOs written in C++ will resolve correctly.
 #
-.if (${OPSYS} == "NetBSD") && (${OBJECT_FMT} == "ELF")
+.if ${OPSYS} == "NetBSD" && ${OBJECT_FMT} == "ELF"
 LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -lgcc -Wl,--no-whole-archive
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
@@ -159,27 +152,27 @@ MAKE_ENV+=		CHMOD="${CHMOD}" CHOWN="${CHOWN}" XARGS="${XARGS}"
 MAKE_ENV+=		FIND="${FIND}"
 
 post-extract:
-	${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include
-	${CP} ${MODSSL_SRC}/pkg.addon/*.c ${WRKSRC}/src/modules/extra
-	${CP} ${MODSSL_SRC}/pkg.addon/*.html ${WRKSRC}/htdocs/manual/mod
-	${CP} ${MODSSL_SRC}/pkg.eapi/*.c ${WRKSRC}/src/ap
-	${CP} ${MODSSL_SRC}/pkg.eapi/*.h ${WRKSRC}/src/include
+	@${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include
+	@${CP} ${MODSSL_SRC}/pkg.addon/*.c ${WRKSRC}/src/modules/extra
+	@${CP} ${MODSSL_SRC}/pkg.addon/*.html ${WRKSRC}/htdocs/manual/mod
+	@${CP} ${MODSSL_SRC}/pkg.eapi/*.c ${WRKSRC}/src/ap
+	@${CP} ${MODSSL_SRC}/pkg.eapi/*.h ${WRKSRC}/src/include
 
 pre-patch:
-	cd ${WRKSRC} && ${CAT}						\
+	@cd ${WRKSRC} && ${CAT}						\
 		${MODSSL_SRC}/pkg.addon/addon.patch			\
 		${MODSSL_SRC}/pkg.eapi/eapi.patch			\
 		${MODSSL_SRC}/pkg.sslcfg/sslcfg.patch			\
 		${MODSSL_SRC}/pkg.sslmod/sslmod.patch			\
 		${MODSSL_SRC}/pkg.sslsup/sslsup.patch			\
 		| ${PATCH} ${PATCH_ARGS}
-	cd ${WRKSRC} && ${TAIL} +160					\
+	@cd ${WRKSRC} && ${TAIL} +160					\
 		${MODSSL_SRC}/pkg.ssldoc/ssldoc.patch			\
 		| ${PATCH} ${PATCH_ARGS}
-	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
+	@${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-patch:
-	cd ${WRKSRC}/src/support;					\
+	@cd ${WRKSRC}/src/support;					\
 	${SED}	-e "s|@INSTALL@|"`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'`" -c -o ${LIBOWN} -g ${LIBGRP}|" \
 		apxs.pl > apxs.pl.sed;					\
 	${MV} apxs.pl.sed apxs.pl
@@ -189,7 +182,7 @@ pre-configure:
 		${FILESDIR}/config.layout > ${WRKDIR}/config.layout
 
 pre-install:
-	${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
+	@${FIND} ${WRKSRC}/htdocs -name '*.orig' -print | ${XARGS} ${RM} -f
 
 post-install:
 .if !defined(NOPIC)
