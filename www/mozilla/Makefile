@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2000/10/26 07:53:37 mycroft Exp $
+# $NetBSD: Makefile,v 1.45 2000/10/28 18:55:24 mycroft Exp $
 
 DISTNAME=	mozilla-source-M18
 PKGNAME=	mozilla-0.m18
@@ -47,10 +47,11 @@ SCRIPTS_ENV+=	BINGRP=${BINGRP}
 SCRIPTS_ENV+=	BINMODE=${BINMODE}
 SHAREMODE?=	644
 
-XPTCFILES+=	xptcinvoke_asm_ppc_netbsd.s xptcinvoke_ppc_netbsd.cpp
-XPTCFILES+=	xptcstubs_asm_ppc_netbsd.s xptcstubs_ppc_netbsd.cpp
-XPTCFILES+=	xptcinvoke_asm_sparc_netbsd.s xptcinvoke_sparc_netbsd.cpp
-XPTCFILES+=	xptcstubs_asm_sparc_netbsd.s xptcstubs_sparc_netbsd.cpp
+XPTCFILES+=	xptcinvoke_asm_ppc_netbsd.s xptcstubs_asm_ppc_netbsd.s
+XPTCFILES+=	xptcinvoke_ppc_netbsd.cpp xptcstubs_ppc_netbsd.cpp
+XPTCFILES+=	xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
+XPTCFILES+=	xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
+XPTCFILES+=	xptcinvoke_arm_netbsd.cpp xptcstubs_arm_netbsd.cpp
 
 post-extract:
 .for F in ${XPTCFILES}
