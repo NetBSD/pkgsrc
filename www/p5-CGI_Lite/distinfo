@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:13:05 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/21 21:47:58 wiz Exp $
 
 SHA1 (CGI-Lite-2.0.tar.gz) = db7fa60faece3c0d250d30f55729945ce9051292
+Size (CGI-Lite-2.0.tar.gz) = 14571 bytes
