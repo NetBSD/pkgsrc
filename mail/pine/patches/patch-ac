@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.6 1998/08/07 11:09:48 agc Exp $
+$NetBSD: patch-ac,v 1.7 1998/11/13 16:32:38 tv Exp $
 
---- pine/makefile.neb.orig	Fri May  8 19:28:46 1998
-+++ pine/makefile.neb	Sun Jul 19 00:22:00 1998
+--- pine/makefile.neb.orig	Thu Aug 27 12:50:02 1998
++++ pine/makefile.neb	Sun Sep 27 16:45:10 1998
 @@ -45,9 +45,12 @@
  RM=          rm -f
  LN=          ln -s
@@ -22,9 +22,9 @@ $NetBSD: patch-ac,v 1.6 1998/08/07 11:09:48 agc Exp $
  
  STDLIBS=     -ltermlib
 -LOCLIBS=     $(PICODIR)/libpico.a $(CCLIENTDIR)/c-client.a
--LIBS=        $(EXTRALIBS) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
+-LIBS=        $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
 +LOCLIBS=     -lpico $(CCLIENTDIR)/c-client.a
-+LIBS=        -L$(PREFIX)/lib -R$(PREFIX)/lib/ $(EXTRALIBS) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
++LIBS=        -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib/ $(EXTRALIBES) $(LOCLIBS) $(LDAPLIBS) $(STDLIBS) \
               `cat $(CCLIENTDIR)/LDFLAGS`
  
  STDCFLAGS=   -DNETBSD -DSYSTYPE=\"NEB\" -DMOUSE

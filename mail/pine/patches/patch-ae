@@ -1,0 +1,41 @@
+$NetBSD: patch-ae,v 1.3 1998/11/13 16:32:38 tv Exp $
+
+--- pine/filter.c.orig	Sun Sep 27 16:49:33 1998
++++ pine/filter.c	Sun Sep 27 16:52:27 1998
+@@ -669,15 +669,15 @@
+ 			register unsigned char *GF_IP_INIT(FO);  \
+ 			register unsigned char *GF_EIB_INIT(FO);
+ 
+-#define	GF_CH_RESET(F)	((int)(op = eob = GF_QUE_START(F), \
++#define	GF_CH_RESET(F)	((long)(op = eob = GF_QUE_START(F), \
+ 					    (F)->queueout = (F)->queuein = 0))
+ 
+ #define	GF_END(FI, FO)	(GF_OP_END(FI), GF_IP_END(FO))
+ 
+-#define	GF_FLUSH(F)	((int)(GF_IP_END(F), (*(F)->f)((F), GF_DATA), \
++#define	GF_FLUSH(F)	((long)(GF_IP_END(F), (*(F)->f)((F), GF_DATA), \
+ 			       GF_IP_INIT(F), GF_EIB_INIT(F)))
+ 
+-#define	GF_PUTC(F, C)	((int)(*ip++ = (C), (ip >= eib) ? GF_FLUSH(F) : 1))
++#define	GF_PUTC(F, C)	((long)(*ip++ = (C), (ip >= eib) ? GF_FLUSH(F) : 1))
+ 
+ #define	GF_GETC(F, C)	((op < eob) ? ((int)((C) = *op++), 1) : GF_CH_RESET(F))
+ 
+@@ -1937,7 +1937,7 @@
+ 			GF_PUTC(f->next, '\r');
+ 			GF_PUTC(f->next, '\n');
+ 		    }
+-		    else if(! (int) f->opt /* gf_rich_plain */){
++		    else if(!f->opt /* gf_rich_plain */){
+ 			if(!strcmp(f->line, "bold")) {
+ 			    GF_PUTC(f->next, TAG_EMBED);
+ 			    GF_PUTC(f->next, TAG_BOLDON);
+@@ -2088,7 +2088,7 @@
+ 			else
+ 			  f->f2 |= TEF_NOFILL;
+ 		    }
+-		    else if(! (int) f->opt /* gf_enriched_plain */){
++		    else if(!f->opt /* gf_enriched_plain */){
+ 			/* Following is a cute hack or two to get 
+ 			   bold and underline on the screen. 
+ 			   See Putline0n() where these codes are
