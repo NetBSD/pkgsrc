@@ -1,5 +1,6 @@
+# $NetBSD: patch-aj,v 1.8 1999/11/30 09:08:46 explorer Exp $
 --- configure.orig	Wed May 12 04:20:06 1999
-+++ configure	Thu Jun  3 23:59:18 1999
++++ configure	Mon Nov 29 16:04:16 1999
 @@ -1989,12 +1989,6 @@
  
  export CFLAGS CC
@@ -33,6 +34,17 @@
      echo "configure: warning: Remember to read README.TIS. The connection between sshd and TIS authentication
  server is clear text!" 1>&2
      ;;
+@@ -6646,8 +6640,8 @@
+ EOF
+ 
+   KERBEROS_ROOT="$with_kerberos5"
+-  KERBEROS_INCS="-I${KERBEROS_ROOT}/include"
+-  KERBEROS_LIBS="-L${KERBEROS_ROOT}/lib -lgssapi_krb5 -lkrb5 -lcrypto -lcom_err"
++  KERBEROS_INCS="-I${KERBEROS_ROOT}/include/krb5"
++  KERBEROS_LIBS="-L${KERBEROS_ROOT}/lib -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err"
+   echo $ac_n "checking for dbm_open in -lndbm""... $ac_c" 1>&6
+ echo "configure:6653: checking for dbm_open in -lndbm" >&5
+ ac_lib_var=`echo ndbm'_'dbm_open | sed 'y%./+-%__p_%'`
 @@ -7295,15 +7289,15 @@
     case "$enableval" in
    no)

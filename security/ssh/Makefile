@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 1999/11/12 16:34:29 abs Exp $
+# $NetBSD: Makefile,v 1.65 1999/11/30 09:08:44 explorer Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -87,9 +87,9 @@ DISTFILES+=		ssh-1.2.27-afs-kerberos.patch-1
 
 .if defined(KERBEROS) && ${KERBEROS} == 5
 USE_KERBEROS=	yes
-CONFIGURE_ARGS+=--with-krb5
+CONFIGURE_ARGS+=--with-kerberos5=/usr
 .else
-CONFIGURE_ARGS+=--without-krb5
+CONFIGURE_ARGS+=--without-kerberos5
 .endif
 
 # Find X11 libraries with xpkgwedge
