@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/08/15 03:57:47 itojun Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/15 04:16:20 itojun Exp $
 
 DISTNAME=	w3m-0.1.10
 CATEGORIES=	www
@@ -34,7 +34,21 @@ W3M_USE_LYNX_KEY?=	NO
 W3M_USE_SSL?=		YES
 # set this to YES if you want HTTP cookie support.
 W3M_USE_COOKIE?=	YES
+# set this to YES if you want mouse support.
+W3M_USE_MOUSE?=		NO
+# set this to YES if you want color support.
+W3M_USE_COLOR?=		NO
 
+.if defined(W3M_USE_COLOR) && ${W3M_USE_COLOR} == YES
+CONFIGURE_ENV+=	use_color=y
+.else
+CONFIGURE_ENV+=	use_color=n
+.endif
+.if defined(W3M_USE_MOUSE) && ${W3M_USE_MOUSE} == YES
+CONFIGURE_ENV+=	use_mouse=y
+.else
+CONFIGURE_ENV+=	use_mouse=n
+.endif
 .if defined(W3M_USE_COOKIE) && ${W3M_USE_COOKIE} == YES
 CONFIGURE_ENV+=	use_cookie=y
 .else
@@ -75,7 +89,6 @@ HELP_W3M=	-w3m
 CONFIGURE_ENV+=	def_bindir=${LOCALBASE}/bin
 CONFIGURE_ENV+=	def_libdir=${LOCALBASE}/${HELPERDIR}
 CONFIGURE_ENV+=	def_helpdir=${LOCALBASE}/${HELPDIR}
-CONFIGURE_ENV+=	use_color=n use_mouse=n
 CONFIGURE_ENV+=	use_menu=n use_matrix=n
 CONFIGURE_ENV+=	ded=vi dmail=Mail dbrowser=
 CONFIGURE_ENV+=	dcc="${CC}" dtermlib="-ltermcap"
