@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/09/28 18:10:27 tron Exp $
+bin/mpeg2decode
+bin/mpeg2encode
+share/doc/mpeg2codec/mpeg2enc.doc
+@dirrm share/doc/mpeg2codec
+share/mpeg2codec/MPEG-1.par
+share/mpeg2codec/NTSC.par
+share/mpeg2codec/PAL.par
+share/mpeg2codec/inter.mat
+share/mpeg2codec/intra.mat
+@dirrm share/mpeg2codec
