@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/11 18:11:58 seb Exp $
+share/Module-Signature/AUTRIJUS.pub
+share/Module-Signature/PAUSE2003.pub
+@dirrm share/Module-Signature
