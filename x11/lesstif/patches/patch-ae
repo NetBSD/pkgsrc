@@ -1,37 +1,36 @@
-$NetBSD: patch-ae,v 1.5 1998/08/07 11:18:09 agc Exp $
-
---- doc/lessdox/clients/Makefile.in.orig	Fri May 22 21:20:30 1998
-+++ doc/lessdox/clients/Makefile.in	Sat May 23 15:10:41 1998
-@@ -98,10 +98,10 @@
- MAINTAINERCLEANFILES=Makefile.in
- SUFFIXES=	.1 .3 .5 .html
+$NetBSD: patch-ae,v 1.6 1999/09/03 19:45:12 drochner Exp $
+--- doc/lessdox/clients/Makefile.in.orig	Tue Jul 13 18:21:26 1999
++++ doc/lessdox/clients/Makefile.in	Mon Aug 16 13:41:14 1999
+@@ -114,10 +114,10 @@
+ EXTRA_DIST = $(man1_DATA) $(man3_DATA) $(man5_DATA)
+ SUFFIXES = .1 .3 .5 .html
  
--mandir=	$(exec_prefix)/LessTif/doc/man
--man1dir=	$(exec_prefix)/LessTif/doc/man/man1
--man3dir=	$(exec_prefix)/LessTif/doc/man/man3
--man5dir=	$(exec_prefix)/LessTif/doc/man/man5
-+mandir=		$(exec_prefix)/man
-+man1dir=	$(mandir)/man1
-+man3dir=	$(mandir)/man3
-+man5dir=	$(mandir)/man5
+-mandir = $(exec_prefix)/LessTif/doc/man
+-man1dir = $(exec_prefix)/LessTif/doc/man/man1
+-man3dir = $(exec_prefix)/LessTif/doc/man/man3
+-man5dir = $(exec_prefix)/LessTif/doc/man/man5
++mandir = $(exec_prefix)/man
++man1dir = $(mandir)/man1
++man3dir = $(mandir)/man3
++man5dir = $(mandir)/man5
  
- man1_DATA=	mwm.1 xmbind.1 lesstif.1
- man3_DATA=
-@@ -116,7 +116,7 @@
+ man1_DATA = mwm.1 xmbind.1 lesstif.1
+ man3_DATA = 
+@@ -132,7 +132,7 @@
  # build them.
  #
  
--htmldir=	$(exec_prefix)/LessTif/doc/html
-+htmldir=	$(exec_prefix)/share/lesstif/doc/clients
+-htmldir = $(exec_prefix)/LessTif/doc/html
++htmldir = $(exec_prefix)/share/lesstif/doc/html
  
- @HaveMan2html_TRUE@html_DATA=	mwm.html mwmrc.html xmbind.html lesstif.html
+ @HaveMan2html_TRUE@html_DATA = mwm.html mwmrc.html xmbind.html lesstif.html
  
-@@ -245,7 +245,7 @@
- install-exec: 
- 	@$(NORMAL_INSTALL)
+@@ -269,7 +269,7 @@
+ install-exec-am:
+ install-exec: install-exec-am
  
--install-data: install-htmlDATA install-man1DATA install-man3DATA install-man5DATA
-+install-data: install-man1DATA install-man3DATA install-man5DATA
- 	@$(NORMAL_INSTALL)
+-install-data-am: install-htmlDATA install-man1DATA install-man3DATA \
++install-data-am: install-man1DATA install-man3DATA \
+ 		install-man5DATA
+ install-data: install-data-am
  
- install: install-exec install-data all

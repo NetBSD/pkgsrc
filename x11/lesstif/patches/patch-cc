@@ -1,0 +1,20 @@
+$NetBSD: patch-cc,v 1.1 1999/09/03 19:45:12 drochner Exp $
+--- lib/Mrm-2.0/Makefile.in.orig	Tue Aug 17 00:08:08 1999
++++ lib/Mrm-2.0/Makefile.in	Tue Aug 17 00:09:41 1999
+@@ -121,7 +121,7 @@
+ 
+ EXTRA_DIST = ${SRCS_2_0}
+ 
+-@Version_2_0_TRUE@libdir = $(prefix)/LessTif/Motif2.0/lib
++@Version_2_0_TRUE@libdir = $(prefix)/lib
+ 
+ #
+ # Sources in another directory
+@@ -312,7 +312,6 @@
+ 
+ install-data-am:
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-data: install-data-am
+ 
+ install-am: all-am

@@ -1,10 +1,9 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:18:08 agc Exp $
-
---- lib/config/mxmkmf.in.orig	Wed Feb 19 20:53:22 1997
-+++ lib/config/mxmkmf.in	Tue Feb 25 11:24:59 1997
+$NetBSD: patch-ac,v 1.3 1999/09/03 19:45:12 drochner Exp $
+--- lib/config/mxmkmf.in.orig	Sun Aug 15 11:37:11 1999
++++ lib/config/mxmkmf.in	Sun Aug 15 11:37:44 1999
 @@ -5,4 +5,4 @@
  # Make sure to read the LessTif configuration first, to pick up
  # that version of Imake.tmpl
  #
--imake -DUseInstalled -I@prefix@/lib/config -I@x_lib_path@/X11/config
-+imake -DUseInstalled -I@prefix@/lib/X11/lesstif -I@x_lib_path@/X11/config
+-imake -DUseInstalled -I@prefix@/lib/config -I@x_libraries@/X11/config
++imake -DUseInstalled -I@prefix@/lib/X11/lesstif -I@x_libraries@/X11/config
