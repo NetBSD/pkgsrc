@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:06:42 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/06/23 19:36:46 jlam Exp $
 #
 
 PKGNAME=	qt2-docs-${QTVERSION}
-
 COMMENT=	Documentation for the QT C++ X GUI toolkit
 
 .include "../qt2-libs/Makefile.common"
 
-DEPENDS+=	qt2-libs-${QTVERSION}:../../x11/qt2-libs
+NO_BUILDLINK_ONLY=		yes
+BUILDLINK_DEPENDS.qt2-libs=	qt2-libs-${QTVERSION}
 
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
@@ -32,15 +32,16 @@ do-install:
 	${INSTALL_DATA_DIR} ${QTPREFIX}/doc/html
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/README.QT ${QTPREFIX}/doc/html
 	cd ${WRKSRC};  \
-	DOCDIRS="`find doc/html -type d -print | sort`"; \
+	DOCDIRS="`${FIND} doc/html -type d -print | ${SORT}`"; \
 	(for d in $${DOCDIRS}; do \
 	    ${ECHO} installing ${QTPREFIX}/$${d}; \
 	    ${INSTALL_DATA_DIR} ${QTPREFIX}/$${d}; \
 	done) ; \
-	DOCFILES="`find doc/html -type f -print | sort`"; \
+	DOCFILES="`${FIND} doc/html -type f -print | ${SORT}`"; \
 	(for f in $${DOCFILES}; do \
 	    ${ECHO} installing ${QTPREFIX}/$${f}; \
 	    ${INSTALL_DATA} $${f} ${QTPREFIX}/$${f}; \
 	done)
 
+.include "../../x11/qt2-libs/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
