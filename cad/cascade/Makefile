@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 13:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/09/06 22:58:37 dmcmahill Exp $
 #
 
-DISTNAME=	cascade-1.3.0
+DISTNAME=	cascade-1.4
 CATEGORIES=	cad
-MASTER_SITES=	http://www.mit.edu/~mcmahill/software/cascade/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rfcascade/}
 
 MAINTAINER=	dmcmahill@netbsd.org
-HOMEPAGE=	http://www.mit.edu/~mcmahill/software/cascade/index.html
-COMMENT=	analyzing the noise and distortion of a rf system
+HOMEPAGE=	http://rfcascade.sourceforge.net
+COMMENT=	Simple tool to analyze noise and distortion of a RF system
 
 GNU_CONFIGURE=	YES
 
