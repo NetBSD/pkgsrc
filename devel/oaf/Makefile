@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/10/03 20:19:35 rh Exp $
+# $NetBSD: Makefile,v 1.13 2001/10/03 20:46:21 rh Exp $
 #
 
 DISTNAME=		oaf-0.6.6
@@ -16,7 +16,6 @@ USE_X11BASE=		YES
 USE_LIBTOOL=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-CPPFLAGS+=		-I${X11PREFIX}/include -I${LOCALBASE}/include
 
 REPLACE_BUILDLINK_SED=	-e "s|${BUILDLINK_DIR}/|${LOCALBASE}/|g"
 REPLACE_BUILDLINK+=	oafConf.sh
