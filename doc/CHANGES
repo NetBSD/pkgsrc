@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8030 2004/11/26 23:13:36 he Exp $
+$NetBSD: CHANGES,v 1.8031 2004/11/26 23:26:09 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5464,6 +5464,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmountains to 2.7 [snj 2004-11-26]
 	Updated 9menu to 1.8 [snj 2004-11-26]
 	Updated qiv to 2.0 [snj 2004-11-26]
-	Updated vpnc to 0.3.2 [hubertf 2004-11-27]
+	Updated vpnc to 0.3.2 [hubertf 2004-11-26]
 	Updated epydoc to 2.1 [darcy 2004-11-26]
 	Updated p5-IO-Interface to 0.98 [he 2004-11-26]
+	Updated brandybasic to 1.0.16 [abs 2004-11-26]
+
