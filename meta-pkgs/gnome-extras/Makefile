@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2004/03/26 02:27:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/04/01 19:17:24 jmmv Exp $
 
-DISTNAME=	gnome-extras-2.4.2
-PKGREVISION=	5
+DISTNAME=	gnome-extras-2.6.0
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -13,15 +12,16 @@ COMMENT=	Meta-package for applications related to the GNOME desktop
 DEPENDS+=	abiword>=2.0.2:../../editors/abiword
 DEPENDS+=	balsa>=2.0.10:../../mail/balsa2
 DEPENDS+=	conglomerate>=0.7.6nb6:../../editors/conglomerate
+DEPENDS+=	epiphany-extensions>=0.8.1:../../www/epiphany-extensions
 DEPENDS+=	evolution>=1.4.5:../../mail/evolution
 DEPENDS+=	gaim>=0.75:../../chat/gaim
 DEPENDS+=	glade2>=2.0.0:../../devel/glade2
-DEPENDS+=	gnome>=2.4.2nb3:../../meta-pkgs/gnome
+DEPENDS+=	gnome>=2.6.0:../../meta-pkgs/gnome
 DEPENDS+=	gnome-audio>=2.0.0:../../audio/gnome-audio
 DEPENDS+=	gqview>=1.3.8:../../graphics/gqview
 DEPENDS+=	mergeant>=0.12.1:../../databases/mergeant
 DEPENDS+=	pan>=0.14.2:../../news/pan
-DEPENDS+=	rhythmbox>=0.6.5:../../audio/rhythmbox
+DEPENDS+=	rhythmbox>=0.7.1:../../audio/rhythmbox
 DEPENDS+=	seahorse>=0.7.3nb11:../../security/seahorse
 DEPENDS+=	xcdroast>=0.98a15:../../sysutils/xcdroast
 DEPENDS+=	xchat>=2.0.7:../../chat/xchat2
