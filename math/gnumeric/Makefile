@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/08/23 22:40:40 mjl Exp $
+# $NetBSD: Makefile,v 1.36 2001/10/04 19:28:42 rh Exp $
 #
 
 DISTNAME=		gnumeric-0.70
@@ -10,15 +10,8 @@ HOMEPAGE=		http://www.gnome.org/gnumeric/
 COMMENT=		Powerful and easy to use spreadsheet program from the GNOME project
 
 BUILD_DEPENDS+=		python>=2.0:../../lang/python
-DEPENDS+=		libglade>=0.16:../../devel/libglade
-DEPENDS+=		gal>=0.10:../../devel/gal
-DEPENDS+=		gb>=0.0.20:../../lang/gb
-DEPENDS+=		libole2>=0.2.3:../../devel/libole2
-DEPENDS+=		oaf>=0.6.5:../../devel/oaf
-DEPENDS+=		libxml>=1.8.14:../../textproc/libxml
 
 GNU_CONFIGURE=		YES
-USE_LIBINTL=		YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
@@ -27,6 +20,22 @@ LDFLAGS+=      		-L${LOCALBASE}/lib
 LDFLAGS+=      		-Wl,-R${LOCALBASE}/lib
 LDFLAGS+=      		-lunicode
 CPPFLAGS+=		-I${LOCALBASE}/include
+CONFIGURE_ARGS+=	--without-guile		# needs CVS-only guile-1.5
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+pre-configure:
+	for i in ${WRKSRC}/plugins/*/Makefile.in ; do			\
+		${SED} <$$i >$$i.fixed					\
+		  -e 's/^\(COMPILE.*\)$$/\1 $${EXTRA_GNOME_CFLAGS}/' &&	\
+		${MV} $$i.fixed $$i ;					\
+	done
+
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
+.include "../../devel/libglade/buildlink.mk"
+.include "../../devel/libole2/buildlink.mk"
+.include "../../devel/oaf/buildlink.mk"
+.include "../../devel/gal/buildlink.mk"
+.include "../../lang/gb/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
