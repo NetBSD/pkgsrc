@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2001/11/22 13:08:41 hubertf Exp $
+$NetBSD: distinfo,v 1.5 2002/08/30 08:06:15 drochner Exp $
 
-SHA1 (sketch-0.6.12.tar.gz) = 015e32eec543a0f1cb2e00a6bd713c8d6d2006a2
-Size (sketch-0.6.12.tar.gz) = 853387 bytes
+SHA1 (sketch-0.6.13.tar.gz) = 962b2014c9542c218683a8905c598756c70aed75
+Size (sketch-0.6.13.tar.gz) = 897295 bytes
 SHA1 (patch-aa) = 4ad34c6f0807dedb3e3c7e2e4ad713613dffe706

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2002/01/28 17:37:54 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2002/08/30 08:06:14 drochner Exp $
 #
 
-DISTNAME=	sketch-0.6.12
+DISTNAME=	sketch-0.6.13
 CATEGORIES=	graphics
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=sketch/}
 
