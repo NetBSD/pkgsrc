@@ -1,0 +1,4 @@
+DelimMatch allows you to match delimited substrings in a buffer.  The
+delimiters can be specified with any regular expression and the start
+and end delimiters need not be the same.  If the delimited text is
+properly nested, entire nested groups are returned.
