@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2004/07/23 23:51:21 jlam Exp $
+# $NetBSD: Makefile,v 1.79 2004/07/24 03:32:24 jlam Exp $
 
-DISTNAME=		openldap-2.1.30
+DISTNAME=		openldap-2.2.13
 SVR4_PKGNAME=		oldap
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
@@ -14,84 +14,70 @@ CONFLICTS+=		ldapsdk-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_BUILDLINK3=		YES
-USE_PKGINSTALL=		YES
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+USE_BUILDLINK3=		yes
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 TEST_TARGET=		test
 
-USE_DB185=		YES
+OPENLDAP_ETCDIR=	${PKG_SYSCONFDIR}/openldap
+OPENLDAP_MODULEDIR=	${PREFIX}/lib/openldap
+OPENLDAP_VARDIR=	${VARBASE}/openldap
+FILES_SUBST+=		OPENLDAP_ETCDIR=${OPENLDAP_ETCDIR}
 
-PKG_SYSCONFSUBDIR=	openldap
-
-# Unfortunately, --enable-phonetic cannot be disabled by runtime
-# configuration.
-#
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--localstatedir=/var/openldap
-CONFIGURE_ARGS+=	--enable-dynamic   # link servers against shared libs
-CONFIGURE_ARGS+=	--enable-bdb
-CONFIGURE_ARGS+=	--enable-crypt
-CONFIGURE_ARGS+=	--enable-dnssrv
-CONFIGURE_ARGS+=	--enable-ldap
-CONFIGURE_ARGS+=	--enable-ldbm
-CONFIGURE_ARGS+=	--enable-passwd
-CONFIGURE_ARGS+=	--enable-wrappers
-CONFIGURE_ARGS+=	--with-tls=openssl
-CONFIGURE_ARGS+=	--without-readline
-
-BUILD_DEFS+=		USE_SASL USE_SASL2
+.include "../../mk/bsd.prefs.mk"
+.include "Makefile.options"
 
 CPPFLAGS.Darwin+=	-DBIND_8_COMPAT
 
-.include "../../mk/bsd.prefs.mk"
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${OPENLDAP_VARDIR}
+CONFIGURE_ARGS+=	--enable-dynamic   # link servers against shared libs
+CONFIGURE_ARGS+=	--with-tls=openssl
 
-.if defined(USE_SASL2) && (${USE_SASL2} == "YES")
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-cyrus-sasl
-CONFIGURE_ARGS+=	--enable-spasswd
-.elif defined(USE_SASL) && (${USE_SASL} == "YES")
-.  include "../../security/cyrus-sasl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-cyrus-sasl
+# SLAPD options
+CONFIGURE_ARGS+=	--enable-crypt
+.if !empty(_OPENLDAP_OPTIONS:Msasl)
 CONFIGURE_ARGS+=	--enable-spasswd
 .endif
+CONFIGURE_ARGS+=	--enable-wrappers
 
-.if defined(KERBEROS)
-.  include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ENV+=		ol_with_kerberos=yes
-CONFIGURE_ENV+=		ol_enable_kpasswd=yes
-CONFIGURE_ARGS+=	--with-kerberos
-CONFIGURE_ARGS+=	--enable-kpasswd
-.else
-CONFIGURE_ARGS+=	--without-kerberos
-.endif
+SLAPD_BACKEND_MODULES=	bdb:static dnnsrv hdb ldap ldbm meta		\
+			monitor:static null passwd shell
+.for _mod_ in ${SLAPD_BACKEND_MODULES}
+.  if !empty(_OPENLDAP_OPTIONS:Mdynamic)
+CONFIGURE_ARGS+=	--enable-${_mod_:C/\:.*//}${_mod_:N*\:static:C/.*/=mod/}
+.  else
+CONFIGURE_ARGS+=	--enable-${_mod_:C/\:.*//}
+.  endif
+.endfor
+.undef _mod_
 
+OPENLDAP_FILEPERMS=	${ROOT_USER} ${ROOT_GROUP} 0600
+OPENLDAP_DIRPERMS=	${ROOT_USER} ${ROOT_GROUP} 0700
+
+USE_PKGINSTALL=		yes
 EGDIR=			${PREFIX}/share/examples/openldap
-MAKE_DIRS=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/schema
-OWN_DIRS=		/var/openldap
-OWN_DIRS_PERMS=		/var/openldap/openldap-data ${ROOT_USER} ${ROOT_GROUP} 0700
-OWN_DIRS_PERMS=		/var/openldap/openldap-ldbm ${ROOT_USER} ${ROOT_GROUP} 0700
-OWN_DIRS_PERMS+=	/var/openldap/openldap-slurp ${ROOT_USER} ${ROOT_GROUP} 0700
+MAKE_DIRS=		${OPENLDAP_ETCDIR} ${OPENLDAP_ETCDIR}/schema
+OWN_DIRS=		${OPENLDAP_VARDIR} ${OPENLDAP_VARDIR}/run
+OWN_DIRS_PERMS=		${OPENLDAP_VARDIR}/openldap-data ${OPENLDAP_DIRPERMS}
+OWN_DIRS_PERMS=		${OPENLDAP_VARDIR}/openldap-ldbm ${OPENLDAP_DIRPERMS}
+OWN_DIRS_PERMS+=	${OPENLDAP_VARDIR}/openldap-slurp ${OPENLDAP_DIRPERMS}
 
-CNFS=			ldap.conf
-CNFS_PERMS=		slapd.conf
-SUPPS=			schema/corba.schema schema/core.schema		\
+CNFS=			ldap.conf					\
+			schema/corba.schema schema/core.schema		\
 			schema/java.schema schema/inetorgperson.schema	\
 			schema/cosine.schema schema/misc.schema		\
 			schema/nis.schema schema/openldap.schema
+CNFS_PERMS=		slapd.conf
 
 CONF_FILES=		# empty
 CONF_FILES_PERMS=	# empty
-SUPPORT_FILES=		# empty
 .for FILE in ${CNFS}
-CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+CONF_FILES+=		${EGDIR}/${FILE} ${OPENLDAP_ETCDIR}/${FILE}
 .endfor
 .for FILE in ${CNFS_PERMS}
-CONF_FILES_PERMS+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}	\
-			${ROOT_USER} ${ROOT_GROUP} 0600
-.endfor
-.for FILE in ${SUPPS}
-SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+CONF_FILES_PERMS+=	${EGDIR}/${FILE} ${OPENLDAP_ETCDIR}/${FILE}	\
+			${OPENLDAP_FILEPERMS}
 .endfor
 RCD_SCRIPTS=		slapd
 
@@ -109,6 +95,7 @@ OPENLDAP_PTHREAD_OPTS?=	native
 OPENLDAP_PTHREAD_OPTS?=	require
 PTHREAD_OPTS+=		${OPENLDAP_PTHREAD_OPTS}
 
+.include "../../devel/libtool/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
@@ -127,11 +114,7 @@ CONFIGURE_ARGS+=	--without-threads
 PLIST_SUBST+=		SLURPD_COMMENT="@comment "
 .endif
 
-post-install:
-	${_ULIMIT_CMD}cd ${WRKSRC}/libraries/libldap;			\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install-conf sysconfdir=${EGDIR}
-	${_ULIMIT_CMD}cd ${WRKSRC}/servers/slapd;			\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install-conf sysconfdir=${EGDIR}; \
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install-schema sysconfdir=${EGDIR}
+MAKE_FLAGS+=		moduledir=${OPENLDAP_MODULEDIR}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
