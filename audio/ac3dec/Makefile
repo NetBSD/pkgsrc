@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 13:30:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/16 10:38:19 jlam Exp $
 #
 
 DISTNAME=	ac3dec-0.6.1
@@ -9,7 +9,8 @@ MAINTAINER=	David Maxwell <david@fundy.ca>
 HOMEPAGE=	http://ess.engr.uvic.ca/~aholtzma/ac3/
 COMMENT=	ac3 audio (as used on DVDs) decoding tools
 
-GNU_CONFIGURE=  yes
+USE_BUILDLINK_ONLY=	yes
+GNU_CONFIGURE=  	yes
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ac3dec
