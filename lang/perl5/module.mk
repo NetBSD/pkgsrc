@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.31 2004/01/13 07:15:41 jlam Exp $
+# $NetBSD: module.mk,v 1.32 2004/01/13 08:02:12 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -156,7 +156,10 @@ post-install: perl5-post-install
 .PHONY: perl5-post-install
 perl5-post-install:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for dir in ${PERL5_INSTALLARCHLIB} ${PERL5_INSTALLSITEARCH}; do \
+	for dir in							\
+	    ${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}			\
+	    ${PERL5_INSTALLSITEARCH};					\
+	do								\
 		if [ -f $$dir/perllocal.pod ]; then			\
 			${RM} -f $$dir/perllocal.pod;			\
 		fi;							\
