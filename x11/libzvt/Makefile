@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:18:36 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/03/14 22:54:51 jmmv Exp $
 #
 
 DISTNAME=		libzvt-2.0.1
@@ -19,6 +19,7 @@ USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libzvt/libzvt-2.0.pc.in
 
 .include "../../graphics/libart2/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
