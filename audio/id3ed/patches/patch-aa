@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/05 23:54:51 hubertf Exp $
+
+--- Makefile.orig	Thu Jun  3 20:58:26 1999
++++ Makefile	Sun Jun  6 01:29:48 1999
+@@ -1,12 +1,12 @@
+ CXXFLAGS=-Wall -g
+ 
+ #comment these two lines if you don't want readline
+-CXXFLAGS+=-DWANT_READLINE
+-LIBS+=-lreadline -lhistory -lcurses
++CXXFLAGS+=-DWANT_READLINE -I${LOCALBASE}/include
++LIBS+=-L${LOCALBASE}/lib -lreadline -lhistory -lcurses
+ #comment this if you are using readline >= 4.0
+ CXXFLAGS+=-DOLD_READLINE
+ 
+-PREFIX=/usr/local
++#PREFIX=/usr/local
+ BINDIR=$(PREFIX)/bin
+ MANDIR=$(PREFIX)/man/man1
+ 
+@@ -19,8 +19,8 @@
+ 	g++ -MM *.cc > .depend
+ 
+ install: all
+-	install -s -o root -g bin -m 0755 id3ed $(BINDIR)
+-	install -o root -g bin -m 0644 id3ed.1 $(MANDIR)
++	${BSD_INSTALL_PROGRAM} id3ed $(BINDIR)
++	${BSD_INSTALL_MAN} id3ed.1 $(MANDIR)
+ 
+ dist:
+ 	cd ..;tar -czf id3ed/distro/id3ed-`egrep "id3ed v[0-9.]+ -" id3ed/id3ed.cc | sed "s/.*v\([0-9.]\+\).*/\1/"`.tar.gz id3ed/README id3ed/Changelog id3ed/COPYING id3ed/*.cc id3ed/*.h id3ed/Makefile id3ed/id3ed.1
