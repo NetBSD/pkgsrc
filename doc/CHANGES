@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2646 2003/07/01 09:46:54 wiz Exp $
+$NetBSD: CHANGES,v 1.2647 2003/07/01 10:15:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2160,6 +2160,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated suse_libpng to 7.3nb1 [taca 2003-05-25]
 	Updated gcc3 to 3.3 [grant 2003-05-25]
 	Updated scli to 0.2.12nb1 [seb 2003-05-25]
+	Updated groff to 1.19nb2 [jmc 2003-05-25]
 	Updated sylpheed to 0.9.0 [chris 2003-05-26]
 	Updated cyrus-sasl to 2.1.13 [martti 2003-05-26]
 	Updated cyrus-imapd to 2.1.13 [martti 2003-05-26]
@@ -2638,3 +2639,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gcc3 to gcc3-3.3nb2 [abs 2003-06-30]
 	Updated xchat2 to 2.0.3 [jmmv 2003-07-01]
 	Updated libxml2 to 2.5.7nb1 [wiz 2003-07-01]
+	Updated groff to 1.19nb3 [wiz 2003-07-01]
