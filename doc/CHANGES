@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8769 2005/01/16 08:37:16 kei Exp $
+$NetBSD: CHANGES,v 1.8770 2005/01/16 08:59:55 kei Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -333,3 +333,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added sqlite3-3.0.8 [tv 2005-01-15]
 	Updated galeon to 1.2.14nb4 [taya 2005-01-15]
 	Updated teTeX-bin to 2.0.2nb3 [kei 2005-01-16]
+	Updated Gauche to 0.8.3 [kei 2005-01-16]
