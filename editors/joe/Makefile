@@ -5,7 +5,7 @@
 #
 # Imported into NetBSD by explorer@flame.org
 #
-# $NetBSD: Makefile,v 1.2 1997/10/29 19:56:55 explorer Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/24 04:44:49 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/17 07:01:28 obrien Exp
 #
 
@@ -15,8 +15,10 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.std.com/src/editors/
 EXTRACT_SUFX=	.tar.Z
 
-WRKSRC=		${WRKDIR}/joe
+MAINTAINER=	explorer@netbsd.org
+
 ALL_TARGET=	joe
+WRKSRC=		${WRKDIR}/joe
 MAN1=		joe.1
 
 .include <bsd.port.mk>
