@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:29:47 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/20 12:13:27 agc Exp $
 #
 
 DISTNAME=	c4
 PKGNAME=	${DISTNAME}-1.6
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.perforce.com/perforce/utils/c4/
 
@@ -12,6 +11,7 @@ COMMENT=	CVS-like frontend to Perforce
 
 DEPENDS+=	p4-[0-9]*:../../devel/p4
 
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 ALL_TARGET=	c4
 
 do-install:

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2003/07/17 21:25:22 grant Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/20 12:09:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ic.eecs.berkeley.edu/pub/Spice3/
 EXTRACT_SUFX=   .tar.Z
@@ -17,6 +16,7 @@ CONFLICTS=	ng-spice-[0-9]*
 
 BUILDLINK_DEPENDS.readline=	readline>=4.0
 
+WRKSRC=			${WRKDIR}
 USE_BUILDLINK2=		# defined
 USE_X11=		# defined
 USE_GNU_READLINE=	uses rl_* interface

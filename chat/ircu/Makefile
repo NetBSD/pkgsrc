@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 21:25:54 grant Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:09:35 agc Exp $
 #
 
 DISTNAME=	ircu2.10.11.04
 PKGNAME=	ircu-2.10.11.04
-WRKSRC=		${WRKDIR}/ircu2.10
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=undernet-ircu/}
 
@@ -11,6 +10,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://coder-com.undernet.org/
 COMMENT=	Internet Relay Chat server customized for Undernet
 
+WRKSRC=		${WRKDIR}/ircu2.10
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2004/01/10 19:06:36 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2004/01/20 12:13:29 agc Exp $
 #
 
 DISTNAME=	perldap-1.2.2
 PKGNAME=	p5-LDAP-1.2.2
 SVR4_PKGNAME=	p5lda
-WRKSRC=		${WRKDIR}/perldap
 CATEGORIES=	devel perl5 databases
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/directory/perldap/
 EXTRACT_SUFX=	.tgz
@@ -13,6 +12,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.mozilla.org/directory/perldap.html
 COMMENT=	Perl5 module to build LDAP clients with perl
 
+WRKSRC=		${WRKDIR}/perldap
 USE_BUILDLINK2=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Mozilla/LDAP/API/.packlist
 

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 13:41:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/20 12:08:40 agc Exp $
 
 DISTNAME=	fastDNAml_1.2.1
 PKGNAME=	fastDNAml-1.2.1
-WRKSRC=		${WRKDIR}/${DISTNAME}
 CATEGORIES=	biology
 MASTER_SITES=	http://geta.life.uiuc.edu/~gary/programs/fastDNAml/
 
@@ -13,6 +12,8 @@ COMMENT=	Program derived from Joseph Felsenstein's version 3.3 DNAML
 RESTRICTED=	"No commercial distribution without a royalty agreement with the author"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 do-build :
 	@ cd ${WRKSRC}/source && ${MAKE} LDFLAGS=-lm fastDNAml
