@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2000/11/25 19:08:59 jtb Exp $
+# $NetBSD: Makefile,v 1.102 2000/11/25 21:11:37 jtb Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -75,6 +75,7 @@
     SUBDIR += photopc
     SUBDIR += pixmap
     SUBDIR += ploticus
+    SUBDIR += plotmtv
     SUBDIR += plotutils
     SUBDIR += png
     SUBDIR += png2html
