@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.45 2004/10/14 11:41:40 grant Exp $
+# $NetBSD: tools.mk,v 1.46 2004/11/02 22:24:35 wiz Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -134,16 +134,16 @@ USE_GNU_TOOLS?=		# empty
 # instead.
 #
 _TOOLS_OPSYS_HAS_GNU.awk+=	FreeBSD-*-* Interix-*-* Linux-*-* OpenBSD-*-*
-_TOOLS_OPSYS_HAS_GNU.awk+=	NetBSD-1.[0-6]*-*
+_TOOLS_OPSYS_HAS_GNU.awk+=	NetBSD-1.[0-6]*-* DragonFly-*-*
 _TOOLS_OPSYS_HAS_GNU.grep+=	Darwin-*-* FreeBSD-*-* Linux-*-*
-_TOOLS_OPSYS_HAS_GNU.grep+=	NetBSD-*-* OpenBSD-*-*
+_TOOLS_OPSYS_HAS_GNU.grep+=	NetBSD-*-* OpenBSD-*-* DragonFly-*-*
 _TOOLS_OPSYS_HAS_GNU.lex+=	FreeBSD-*-* Interix-*-* Linux-*-* NetBSD-*-*
-_TOOLS_OPSYS_HAS_GNU.lex+=	OpenBSD-*-*
+_TOOLS_OPSYS_HAS_GNU.lex+=	OpenBSD-*-* DragonFly-*-*
 _TOOLS_OPSYS_HAS_GNU.m4+=	# empty
 _TOOLS_OPSYS_HAS_GNU.make+=	Darwin-*-*
 _TOOLS_OPSYS_HAS_GNU.patch+=	Darwin-*-* FreeBSD-*-* Linux-*-*
-_TOOLS_OPSYS_HAS_GNU.patch+=	NetBSD-*-* OpenBSD-*-*
-_TOOLS_OPSYS_HAS_GNU.sed+=	FreeBSD-*-* Linux-*-* NetBSD-*-*
+_TOOLS_OPSYS_HAS_GNU.patch+=	NetBSD-*-* OpenBSD-*-* DragonFly-*-*
+_TOOLS_OPSYS_HAS_GNU.sed+=	FreeBSD-*-* Linux-*-* NetBSD-*-* DragonFly-*-*
 _TOOLS_OPSYS_HAS_GNU.yacc+=	Linux-*-*
 
 # These platforms have GNUish versions of the tools available in the base
