@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.own.mk.in,v 1.1.1.1 2004/03/11 13:04:00 grant Exp $
+#	$NetBSD: bsd.own.mk.in,v 1.2 2004/03/11 17:29:11 tv Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -18,7 +18,7 @@ BSDSRCDIR?=	/usr/src
 BSDOBJDIR?=	/usr/obj
 
 BINGRP?=	@ROOT_GROUP@
-BINOWN?=	root
+BINOWN?=	@ROOT_USER@
 BINMODE?=	555
 NONBINMODE?=	444
 
@@ -27,13 +27,13 @@ NONBINMODE?=	444
 
 MANDIR?=	/usr/share/man
 MANGRP?=	@ROOT_GROUP@
-MANOWN?=	root
+MANOWN?=	@ROOT_USER@
 MANMODE?=	${NONBINMODE}
 MANINSTALL?=	maninstall catinstall
 
 INFODIR?=	/usr/share/info
 INFOGRP?=	@ROOT_GROUP@
-INFOOWN?=	root
+INFOOWN?=	@ROOT_USER@
 INFOMODE?=	${NONBINMODE}
 
 LIBDIR?=	/usr/lib
@@ -45,22 +45,22 @@ LIBMODE?=	${NONBINMODE}
 DOCDIR?=	/usr/share/doc
 HTMLDOCDIR?=	/usr/share/doc/html
 DOCGRP?=	@ROOT_GROUP@
-DOCOWN?=	root
+DOCOWN?=	@ROOT_USER@
 DOCMODE?=	${NONBINMODE}
 
 NLSDIR?=	/usr/share/nls
 NLSGRP?=	@ROOT_GROUP@
-NLSOWN?=	root
+NLSOWN?=	@ROOT_USER@
 NLSMODE?=	${NONBINMODE}
 
 KMODDIR?=	/usr/lkm
 KMODGRP?=	@ROOT_GROUP@
-KMODOWN?=	root
+KMODOWN?=	@ROOT_USER@
 KMODMODE?=	${NONBINMODE}
 
 LOCALEDIR?=	/usr/share/locale
 LOCALEGRP?=	@ROOT_GROUP@
-LOCALEOWN?=	root
+LOCALEOWN?=	@ROOT_USER@
 LOCALEMODE?=	${NONBINMODE}
 
 COPY?=		-c
