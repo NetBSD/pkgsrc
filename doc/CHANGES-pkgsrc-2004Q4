@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.81 2005/02/20 18:45:52 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.82 2005/02/21 00:30:13 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -171,3 +171,5 @@ Pullup ticket 298 - requested by Marc Recht
 PLIST fix for python24
 Pullup ticket 299 - requested by Mark Davies
 security fix for kdeedu3
+Pullup ticket 302 - requested by Takahiro Kambe
+update distribution patches for squid
