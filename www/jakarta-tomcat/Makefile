@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2000/01/16 21:41:08 jwise Exp $
+# $NetBSD: Makefile,v 1.7 2000/05/14 23:35:26 jwise Exp $
 
 DISTNAME=	jakarta-tomcat.src
-PKGNAME=	jakarta-tomcat-3.0
+PKGNAME=	jakarta-tomcat-3.1
 CATEGORIES=	www
-MASTER_SITES=	http://jakarta.apache.org/builds/tomcat/release/v3.0/src/
-DISTFILES=	jakarta-tomcat.src.zip jakarta-tools.src.zip
+MASTER_SITES=	http://jakarta.apache.org/builds/tomcat/release/v3.1/src/
+DISTFILES=	jakarta-tomcat.tar.gz jakarta-tools.tar.gz jakarta-ant.tar.gz
+DIST_SUBDIR=	jakarta-3.1
 
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://jakarta.apache.org/
@@ -12,31 +13,25 @@ HOMEPAGE=	http://jakarta.apache.org/
 USE_JAVA=	yes
 
 WRKSRC=		${WRKDIR}/jakarta-tomcat
-BUILD_DEFS+=	JAKARTA_HOME
-EXTRACT_CMD=    ${DO_NADA}
 NO_MTREE=
 
-.include "../../mk/bsd.prefs.mk"
-
-JAKARTA_HOME?=	${JAVA_HOME}/jakarta
+JAKARTA_HOME=	${PREFIX}/jakarta
 MAKE_ENV+=	JAVA_HOME=${JAVA_HOME}
 
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
-post-extract:
-.for x in ${DISTFILES}
-	cd ${WRKDIR} && ${EXTRACTOR} ${DISTDIR}/$x
-.endfor
-
 post-patch:
-	${SED} -e s,@TOMCAT_HOME@,${JAKARTA_HOME}/tomcat,g \
+	${SED} -e s,@JAKARTA_HOME@,${JAKARTA_HOME},g \
 		< ${WRKSRC}/build.xml > ${WRKSRC}/build.tmp
 	${MV} ${WRKSRC}/build.tmp ${WRKSRC}/build.xml
 	${SED} -e s,@LOCALBASE@,${LOCALBASE},g \
-		< ${WRKSRC}/src/etc/tomcat.conf > ${WRKSRC}/src/etc/tomcat.tmp
-	${MV} ${WRKSRC}/src/etc/tomcat.tmp ${WRKSRC}/src/etc/tomcat.conf
+		< ${WRKSRC}/src/share/org/apache/tomcat/task/ApacheConfig.java \
+		> ${WRKSRC}/src/share/org/apache/tomcat/task/ApacheConfig.java.tmp
+	${MV} ${WRKSRC}/src/share/org/apache/tomcat/task/ApacheConfig.java.tmp \
+		${WRKSRC}/src/share/org/apache/tomcat/task/ApacheConfig.java
 
 do-build:
+	cd ${WRKSRC}/../jakarta-ant && ${SH} bootstrap.sh
 	cd ${WRKSRC} && ${SH} ./build.sh
 
 post-build:
@@ -46,19 +41,7 @@ post-build:
 do-install:
 	${MKDIR} ${JAKARTA_HOME}/tomcat
 	cd ${WRKSRC} && ${SH} ./build.sh dist
-	${INSTALL_DATA} ${WRKSRC}/Tomcat+Apache-HOWTO ${JAKARTA_HOME}/tomcat
-	${CHMOD} +x ${JAKARTA_HOME}/tomcat/*.sh
+	${CHMOD} +x ${JAKARTA_HOME}/tomcat/bin/*.sh
+	${RM} ${JAKARTA_HOME}/tomcat/bin/*.bat
 
 .include "../../mk/bsd.pkg.mk"
-
-# This needs to be after bsd.pkg.mk 
-PREFIX:=        ${JAKARTA_HOME}
-
-# work around a bug in kaffe's jar utility
-# pkglint or no, this has to be after bsd.pkg.mk
-.if ${PKG_JVM} == "kaffe"
-DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-EXTRACTOR=	${LOCALBASE}/bin/unzip -x
-.else
-EXTRACTOR=	${JAVA_HOME}/bin/jar xf
-.endif

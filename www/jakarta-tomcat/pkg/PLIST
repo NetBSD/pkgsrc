@@ -1,361 +1,433 @@
-@comment $NetBSD: PLIST,v 1.3 2000/01/14 01:21:04 jwise Exp $
-tomcat/lib/ant.jar
-tomcat/lib/xml.jar
-tomcat/lib/servlet.jar
-tomcat/lib/jasper.jar
-tomcat/etc/server.xml
-tomcat/etc/server.dtd
-tomcat/etc/web.xml
-tomcat/etc/web.dtd
-tomcat/etc/tomcat.conf
-tomcat/etc/SimpleStartup.java
-tomcat/src/javax/servlet/ServletException.java
-tomcat/src/javax/servlet/http/HttpServletResponse.java
-tomcat/src/javax/servlet/http/LocalStrings.properties
-tomcat/src/javax/servlet/http/HttpSession.java
-tomcat/src/javax/servlet/http/HttpServlet.java
-tomcat/src/javax/servlet/http/HttpSessionBindingListener.java
-tomcat/src/javax/servlet/http/HttpSessionBindingEvent.java
-tomcat/src/javax/servlet/http/HttpSessionContext.java
-tomcat/src/javax/servlet/http/HttpServletRequest.java
-tomcat/src/javax/servlet/http/Cookie.java
-tomcat/src/javax/servlet/http/HttpUtils.java
-tomcat/src/javax/servlet/GenericServlet.java
-tomcat/src/javax/servlet/SingleThreadModel.java
-tomcat/src/javax/servlet/jsp/tagext/TagSupport.java
-tomcat/src/javax/servlet/jsp/tagext/BodyTagSupport.java
-tomcat/src/javax/servlet/jsp/tagext/TagLibraryInfo.java
-tomcat/src/javax/servlet/jsp/tagext/VariableInfo.java
-tomcat/src/javax/servlet/jsp/tagext/TagExtraInfo.java
-tomcat/src/javax/servlet/jsp/tagext/BodyContent.java
-tomcat/src/javax/servlet/jsp/tagext/TagAttributeInfo.java
-tomcat/src/javax/servlet/jsp/tagext/TagData.java
-tomcat/src/javax/servlet/jsp/tagext/TagInfo.java
-tomcat/src/javax/servlet/jsp/tagext/Tag.java
-tomcat/src/javax/servlet/jsp/tagext/BodyTag.java
-tomcat/src/javax/servlet/jsp/JspTagException.java
-tomcat/src/javax/servlet/jsp/JspException.java
-tomcat/src/javax/servlet/jsp/JspPage.java
-tomcat/src/javax/servlet/jsp/JspWriter.java
-tomcat/src/javax/servlet/jsp/JspEngineInfo.java
-tomcat/src/javax/servlet/jsp/PageContext.java
-tomcat/src/javax/servlet/jsp/HttpJspPage.java
-tomcat/src/javax/servlet/jsp/JspFactory.java
-tomcat/src/javax/servlet/ServletConfig.java
-tomcat/src/javax/servlet/ServletResponse.java
-tomcat/src/javax/servlet/LocalStrings.properties
-tomcat/src/javax/servlet/ServletRequest.java
-tomcat/src/javax/servlet/ServletInputStream.java
-tomcat/src/javax/servlet/ServletContext.java
-tomcat/src/javax/servlet/UnavailableException.java
-tomcat/src/javax/servlet/RequestDispatcher.java
-tomcat/src/javax/servlet/ServletOutputStream.java
-tomcat/src/javax/servlet/Servlet.java
-tomcat/examples/jsp/dates/date.txt
-tomcat/examples/jsp/dates/date.jsp
-tomcat/examples/jsp/dates/date.html
-tomcat/examples/jsp/jsptoserv/jsptoservlet.jsp
-tomcat/examples/jsp/jsptoserv/stj.txt
-tomcat/examples/jsp/jsptoserv/jts.txt
-tomcat/examples/jsp/jsptoserv/jts.html
-tomcat/examples/jsp/jsptoserv/hello.jsp
-tomcat/examples/jsp/sessions/DummyCart.html
-tomcat/examples/jsp/sessions/carts.txt
-tomcat/examples/jsp/sessions/carts.jsp
-tomcat/examples/jsp/sessions/carts.html
-tomcat/examples/jsp/sessions/crt.html
-tomcat/examples/jsp/checkbox/checkresult.txt
-tomcat/examples/jsp/checkbox/checkresult.jsp
-tomcat/examples/jsp/checkbox/cresult.html
-tomcat/examples/jsp/checkbox/CheckTest.html
-tomcat/examples/jsp/checkbox/check.html
-tomcat/examples/jsp/plugin/plugin.txt
-tomcat/examples/jsp/plugin/plugin.html
-tomcat/examples/jsp/plugin/plugin.jsp
-tomcat/examples/jsp/plugin/applet/Clock2.java
-tomcat/examples/jsp/plugin/applet/Clock2.class
-tomcat/examples/jsp/include/foo.html
-tomcat/examples/jsp/include/inc.html
-tomcat/examples/jsp/include/foo.jsp
-tomcat/examples/jsp/include/include.jsp
-tomcat/examples/jsp/include/include.txt
-tomcat/examples/jsp/error/er.html
-tomcat/examples/jsp/error/err.jsp
-tomcat/examples/jsp/error/err.txt
-tomcat/examples/jsp/error/error.html
-tomcat/examples/jsp/error/errorpge.jsp
-tomcat/examples/jsp/snp/snoop.txt
-tomcat/examples/jsp/snp/snoop.jsp
-tomcat/examples/jsp/snp/snoop.html
-tomcat/examples/jsp/cal/Entry.txt
-tomcat/examples/jsp/cal/cal2.jsp
-tomcat/examples/jsp/cal/cal2.txt
-tomcat/examples/jsp/cal/cal1.jsp
-tomcat/examples/jsp/cal/cal1.txt
-tomcat/examples/jsp/cal/Entries.txt
-tomcat/examples/jsp/cal/login.html
-tomcat/examples/jsp/cal/calendar.html
-tomcat/examples/jsp/cal/JspCalendar.txt
-tomcat/examples/jsp/cal/TableBean.txt
-tomcat/examples/jsp/num/numguess.txt
-tomcat/examples/jsp/num/numguess.jsp
-tomcat/examples/jsp/num/numguess.html
-tomcat/examples/jsp/source.jsp
-tomcat/examples/jsp/colors/ColorGameBean.html
-tomcat/examples/jsp/colors/clr.html
-tomcat/examples/jsp/colors/colrs.jsp
-tomcat/examples/jsp/colors/colors.txt
-tomcat/examples/jsp/colors/colors.html
-tomcat/examples/jsp/forward/fwd.html
-tomcat/examples/jsp/forward/two.html
-tomcat/examples/jsp/forward/one.jsp
-tomcat/examples/jsp/forward/forward.jsp
-tomcat/examples/jsp/forward/forward.txt
-tomcat/examples/jsp/index.html
-tomcat/examples/jsp/simpletag/foo.txt
-tomcat/examples/jsp/simpletag/foo.html
-tomcat/examples/jsp/simpletag/foo.jsp
-tomcat/examples/servlets/reqparams.html
-tomcat/examples/servlets/reqheaders.html
-tomcat/examples/servlets/index.html
-tomcat/examples/servlets/helloworld.html
-tomcat/examples/servlets/reqinfo.html
-tomcat/examples/servlets/cookies.html
-tomcat/examples/servlets/sessions.html
-tomcat/examples/WEB-INF/classes/colors/ColorGameBean.class
-tomcat/examples/WEB-INF/classes/colors/ColorGameBean.java
-tomcat/examples/WEB-INF/classes/error/Smart.class
-tomcat/examples/WEB-INF/classes/error/Smart.java
-tomcat/examples/WEB-INF/classes/num/NumberGuessBean.java
-tomcat/examples/WEB-INF/classes/num/NumberGuessBean.class
-tomcat/examples/WEB-INF/classes/SnoopServlet.java
-tomcat/examples/WEB-INF/classes/servletToJsp.java
-tomcat/examples/WEB-INF/classes/dates/JspCalendar.class
-tomcat/examples/WEB-INF/classes/dates/JspCalendar.java
-tomcat/examples/WEB-INF/classes/servletToJsp.class
-tomcat/examples/WEB-INF/classes/LocalStrings.properties
-tomcat/examples/WEB-INF/classes/cal/Entries.class
-tomcat/examples/WEB-INF/classes/cal/Entries.java
-tomcat/examples/WEB-INF/classes/cal/Entry.class
-tomcat/examples/WEB-INF/classes/cal/Entry.java
-tomcat/examples/WEB-INF/classes/cal/JspCalendar.class
-tomcat/examples/WEB-INF/classes/cal/TableBean.class
-tomcat/examples/WEB-INF/classes/cal/JspCalendar.java
-tomcat/examples/WEB-INF/classes/cal/TableBean.java
-tomcat/examples/WEB-INF/classes/examples/ExampleTagBase.class
-tomcat/examples/WEB-INF/classes/examples/ExampleTagBase.java
-tomcat/examples/WEB-INF/classes/examples/LogTag.class
-tomcat/examples/WEB-INF/classes/examples/FooTag.class
-tomcat/examples/WEB-INF/classes/examples/ShowSource.java
-tomcat/examples/WEB-INF/classes/examples/LogTag.java
-tomcat/examples/WEB-INF/classes/examples/FooTag.java
-tomcat/examples/WEB-INF/classes/examples/ShowSource.class
-tomcat/examples/WEB-INF/classes/examples/FooTagExtraInfo.java
-tomcat/examples/WEB-INF/classes/examples/FooTagExtraInfo.class
-tomcat/examples/WEB-INF/classes/checkbox/CheckTest.class
-tomcat/examples/WEB-INF/classes/checkbox/CheckTest.java
-tomcat/examples/WEB-INF/classes/SnoopServlet.class
-tomcat/examples/WEB-INF/classes/RequestHeaderExample.class
-tomcat/examples/WEB-INF/classes/RequestParamExample.class
-tomcat/examples/WEB-INF/classes/RequestParamExample.java
-tomcat/examples/WEB-INF/classes/RequestHeaderExample.java
-tomcat/examples/WEB-INF/classes/RequestInfoExample.class
-tomcat/examples/WEB-INF/classes/RequestInfoExample.java
-tomcat/examples/WEB-INF/classes/sessions/DummyCart.class
-tomcat/examples/WEB-INF/classes/sessions/DummyCart.java
-tomcat/examples/WEB-INF/classes/SessionExample.java
-tomcat/examples/WEB-INF/classes/CookieExample.class
-tomcat/examples/WEB-INF/classes/SessionExample.class
-tomcat/examples/WEB-INF/classes/CookieExample.java
-tomcat/examples/WEB-INF/classes/HelloWorldExample.class
-tomcat/examples/WEB-INF/classes/HelloWorldExample.java
-tomcat/examples/WEB-INF/web.xml
-tomcat/examples/WEB-INF/jsp/applet/Clock2.java
-tomcat/examples/WEB-INF/jsp/example-taglib.tld
-tomcat/examples/images/execute.gif
-tomcat/examples/images/code.gif
-tomcat/examples/images/return.gif
-tomcat/webpages/docs/api/javax/servlet/package-summary.html
-tomcat/webpages/docs/api/javax/servlet/jsp/class-use/HttpJspPage.html
-tomcat/webpages/docs/api/javax/servlet/jsp/class-use/PageContext.html
-tomcat/webpages/docs/api/javax/servlet/jsp/class-use/JspPage.html
-tomcat/webpages/docs/api/javax/servlet/jsp/class-use/JspException.html
-tomcat/webpages/docs/api/javax/servlet/jsp/class-use/JspFactory.html
-tomcat/webpages/docs/api/javax/servlet/jsp/class-use/JspEngineInfo.html
-tomcat/webpages/docs/api/javax/servlet/jsp/class-use/JspWriter.html
-tomcat/webpages/docs/api/javax/servlet/jsp/class-use/JspError.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/TagData.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/Tag.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/TagInfo.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/BodyTag.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/BodyJspWriter.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/TagAttributeInfo.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/BodyContent.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/BodyTagSupport.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/TagLibraryInfo.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/TagSupport.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/VariableInfo.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use/TagExtraInfo.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/TagSupport.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/BodyJspWriter.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/Tag.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/BodyContent.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/BodyTagSupport.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/package-frame.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/VariableInfo.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/package-tree.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/package-use.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/TagInfo.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/TagData.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/BodyTag.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/package-summary.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/TagAttributeInfo.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/TagExtraInfo.html
-tomcat/webpages/docs/api/javax/servlet/jsp/tagext/TagLibraryInfo.html
-tomcat/webpages/docs/api/javax/servlet/jsp/package-summary.html
-tomcat/webpages/docs/api/javax/servlet/jsp/package-tree.html
-tomcat/webpages/docs/api/javax/servlet/jsp/JspWriter.html
-tomcat/webpages/docs/api/javax/servlet/jsp/package-use.html
-tomcat/webpages/docs/api/javax/servlet/jsp/package-frame.html
-tomcat/webpages/docs/api/javax/servlet/jsp/PageContext.html
-tomcat/webpages/docs/api/javax/servlet/jsp/JspError.html
-tomcat/webpages/docs/api/javax/servlet/jsp/JspException.html
-tomcat/webpages/docs/api/javax/servlet/jsp/JspFactory.html
-tomcat/webpages/docs/api/javax/servlet/jsp/JspPage.html
-tomcat/webpages/docs/api/javax/servlet/jsp/JspEngineInfo.html
-tomcat/webpages/docs/api/javax/servlet/jsp/HttpJspPage.html
-tomcat/webpages/docs/api/javax/servlet/http/class-use/Cookie.html
-tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpSessionBindingEvent.html
-tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpSessionBindingListener.html
-tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpServletRequest.html
-tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpSessionContext.html
-tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpUtils.html
-tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpServletResponse.html
-tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpServlet.html
-tomcat/webpages/docs/api/javax/servlet/http/class-use/HttpSession.html
-tomcat/webpages/docs/api/javax/servlet/http/HttpServletResponse.html
-tomcat/webpages/docs/api/javax/servlet/http/HttpServletRequest.html
-tomcat/webpages/docs/api/javax/servlet/http/Cookie.html
-tomcat/webpages/docs/api/javax/servlet/http/HttpServlet.html
-tomcat/webpages/docs/api/javax/servlet/http/HttpSession.html
-tomcat/webpages/docs/api/javax/servlet/http/package-use.html
-tomcat/webpages/docs/api/javax/servlet/http/package-summary.html
-tomcat/webpages/docs/api/javax/servlet/http/HttpUtils.html
-tomcat/webpages/docs/api/javax/servlet/http/package-tree.html
-tomcat/webpages/docs/api/javax/servlet/http/HttpSessionBindingListener.html
-tomcat/webpages/docs/api/javax/servlet/http/package-frame.html
-tomcat/webpages/docs/api/javax/servlet/http/HttpSessionBindingEvent.html
-tomcat/webpages/docs/api/javax/servlet/http/HttpSessionContext.html
-tomcat/webpages/docs/api/javax/servlet/class-use/ServletOutputStream.html
-tomcat/webpages/docs/api/javax/servlet/class-use/UnavailableException.html
-tomcat/webpages/docs/api/javax/servlet/class-use/Servlet.html
-tomcat/webpages/docs/api/javax/servlet/class-use/GenericServlet.html
-tomcat/webpages/docs/api/javax/servlet/class-use/ServletContext.html
-tomcat/webpages/docs/api/javax/servlet/class-use/ServletRequest.html
-tomcat/webpages/docs/api/javax/servlet/class-use/RequestDispatcher.html
-tomcat/webpages/docs/api/javax/servlet/class-use/ServletConfig.html
-tomcat/webpages/docs/api/javax/servlet/class-use/ServletResponse.html
-tomcat/webpages/docs/api/javax/servlet/class-use/ServletInputStream.html
-tomcat/webpages/docs/api/javax/servlet/class-use/SingleThreadModel.html
-tomcat/webpages/docs/api/javax/servlet/class-use/ServletException.html
-tomcat/webpages/docs/api/javax/servlet/ServletInputStream.html
-tomcat/webpages/docs/api/javax/servlet/RequestDispatcher.html
-tomcat/webpages/docs/api/javax/servlet/Servlet.html
-tomcat/webpages/docs/api/javax/servlet/package-tree.html
-tomcat/webpages/docs/api/javax/servlet/package-use.html
-tomcat/webpages/docs/api/javax/servlet/GenericServlet.html
-tomcat/webpages/docs/api/javax/servlet/ServletException.html
-tomcat/webpages/docs/api/javax/servlet/ServletResponse.html
-tomcat/webpages/docs/api/javax/servlet/ServletOutputStream.html
-tomcat/webpages/docs/api/javax/servlet/ServletRequest.html
-tomcat/webpages/docs/api/javax/servlet/ServletContext.html
-tomcat/webpages/docs/api/javax/servlet/SingleThreadModel.html
-tomcat/webpages/docs/api/javax/servlet/ServletConfig.html
-tomcat/webpages/docs/api/javax/servlet/package-frame.html
-tomcat/webpages/docs/api/javax/servlet/UnavailableException.html
-tomcat/webpages/docs/api/index.html
-tomcat/webpages/docs/api/index-all.html
-tomcat/webpages/docs/api/package-list
-tomcat/webpages/docs/api/stylesheet.css
-tomcat/webpages/docs/api/overview-frame.html
-tomcat/webpages/docs/api/overview-tree.html
-tomcat/webpages/docs/api/serialized-form.html
-tomcat/webpages/docs/api/help-doc.html
-tomcat/webpages/docs/api/packages.html
-tomcat/webpages/docs/api/allclasses-frame.html
-tomcat/webpages/docs/api/deprecated-list.html
-tomcat/webpages/docs/api/overview-summary.html
-tomcat/webpages/index.html
-tomcat/webpages/tomcat.gif
-tomcat/webpages/WEB-INF/web.xml
-tomcat/webpages/WEB-INF/classes/SnoopServlet.java
-tomcat/webpages/WEB-INF/classes/SnoopServlet.class
-tomcat/tomcatEnv.bat
-tomcat/tomcat.sh
-tomcat/tomcat.bat
-tomcat/shutdown.sh
-tomcat/shutdown.bat
-tomcat/startup.sh
-tomcat/startup.bat
-tomcat/env.tomcat
-tomcat/ant
-tomcat/server.xml
-tomcat/README
-tomcat/FAQ
-tomcat/webserver.jar
-tomcat/Tomcat+Apache-HOWTO
-@unexec rm -rf %D/tomcat/work
-@unexec rm -rf %D/tomcat/serverlog.txt
-@dirrm tomcat/webpages/docs/api/javax/servlet/jsp/tagext/class-use
-@dirrm tomcat/webpages/docs/api/javax/servlet/jsp/tagext
-@dirrm tomcat/webpages/docs/api/javax/servlet/jsp/class-use
-@dirrm tomcat/webpages/docs/api/javax/servlet/jsp
-@dirrm tomcat/webpages/docs/api/javax/servlet/http/class-use
-@dirrm tomcat/webpages/docs/api/javax/servlet/http
-@dirrm tomcat/webpages/docs/api/javax/servlet/class-use
-@dirrm tomcat/webpages/docs/api/javax/servlet
-@dirrm tomcat/webpages/docs/api/javax
-@dirrm tomcat/webpages/docs/api
-@dirrm tomcat/webpages/docs
-@dirrm tomcat/webpages/WEB-INF/classes
-@dirrm tomcat/webpages/WEB-INF
-@dirrm tomcat/webpages
-@dirrm tomcat/src/javax/servlet/jsp/tagext
-@dirrm tomcat/src/javax/servlet/jsp
-@dirrm tomcat/src/javax/servlet/http
-@dirrm tomcat/src/javax/servlet
-@dirrm tomcat/src/javax
-@dirrm tomcat/src
-@dirrm tomcat/lib
-@dirrm tomcat/examples/servlets
-@dirrm tomcat/examples/jsp/snp
-@dirrm tomcat/examples/jsp/simpletag
-@dirrm tomcat/examples/jsp/sessions
-@dirrm tomcat/examples/jsp/plugin/applet
-@dirrm tomcat/examples/jsp/plugin
-@dirrm tomcat/examples/jsp/num
-@dirrm tomcat/examples/jsp/jsptoserv
-@dirrm tomcat/examples/jsp/include
-@dirrm tomcat/examples/jsp/forward
-@dirrm tomcat/examples/jsp/error
-@dirrm tomcat/examples/jsp/dates
-@dirrm tomcat/examples/jsp/colors
-@dirrm tomcat/examples/jsp/checkbox
-@dirrm tomcat/examples/jsp/cal
-@dirrm tomcat/examples/jsp
-@dirrm tomcat/examples/images
-@dirrm tomcat/examples/WEB-INF/jsp/applet
-@dirrm tomcat/examples/WEB-INF/jsp
-@dirrm tomcat/examples/WEB-INF/classes/sessions
-@dirrm tomcat/examples/WEB-INF/classes/num
-@dirrm tomcat/examples/WEB-INF/classes/examples
-@dirrm tomcat/examples/WEB-INF/classes/error
-@dirrm tomcat/examples/WEB-INF/classes/dates
-@dirrm tomcat/examples/WEB-INF/classes/colors
-@dirrm tomcat/examples/WEB-INF/classes/checkbox
-@dirrm tomcat/examples/WEB-INF/classes/cal
-@dirrm tomcat/examples/WEB-INF/classes
-@dirrm tomcat/examples/WEB-INF
-@dirrm tomcat/examples
-@dirrm tomcat/etc
-@dirrm tomcat
+@comment $NetBSD: PLIST,v 1.4 2000/05/14 23:35:28 jwise Exp $
+jakarta/tomcat/LICENSE
+jakarta/tomcat/bin/ant
+jakarta/tomcat/bin/antRun
+jakarta/tomcat/bin/jspc.sh
+jakarta/tomcat/bin/shutdown.sh
+jakarta/tomcat/bin/startup.sh
+jakarta/tomcat/bin/tomcat.sh
+jakarta/tomcat/conf/build.xml
+jakarta/tomcat/conf/jni_server.xml
+jakarta/tomcat/conf/jni_workers.properties
+jakarta/tomcat/conf/manifest.servlet
+jakarta/tomcat/conf/obj.conf
+jakarta/tomcat/conf/server.dtd
+jakarta/tomcat/conf/server.xml
+jakarta/tomcat/conf/test-tomcat.xml
+jakarta/tomcat/conf/tomcat-users.xml
+jakarta/tomcat/conf/tomcat.conf
+jakarta/tomcat/conf/tomcat.properties
+jakarta/tomcat/conf/uriworkermap.properties
+jakarta/tomcat/conf/web.dtd
+jakarta/tomcat/conf/web.xml
+jakarta/tomcat/conf/workers.properties
+jakarta/tomcat/doc/appdev/build.xml.txt
+jakarta/tomcat/doc/appdev/contents.html
+jakarta/tomcat/doc/appdev/deployment.html
+jakarta/tomcat/doc/appdev/footer.html
+jakarta/tomcat/doc/appdev/header.html
+jakarta/tomcat/doc/appdev/index.html
+jakarta/tomcat/doc/appdev/installation.html
+jakarta/tomcat/doc/appdev/introduction.html
+jakarta/tomcat/doc/appdev/processes.html
+jakarta/tomcat/doc/appdev/sample/build
+jakarta/tomcat/doc/appdev/sample/build.bat
+jakarta/tomcat/doc/appdev/sample/build.xml
+jakarta/tomcat/doc/appdev/sample/etc/web.xml
+jakarta/tomcat/doc/appdev/sample/src/Hello.java
+jakarta/tomcat/doc/appdev/sample/web/hello.jsp
+jakarta/tomcat/doc/appdev/sample/web/images/tomcat.gif
+jakarta/tomcat/doc/appdev/sample/web/index.html
+jakarta/tomcat/doc/appdev/source.html
+jakarta/tomcat/doc/appdev/tomcat.gif
+jakarta/tomcat/doc/appdev/web.xml.txt
+jakarta/tomcat/doc/faq
+jakarta/tomcat/doc/readme
+jakarta/tomcat/doc/uguide/images/banner.gif
+jakarta/tomcat/doc/uguide/style.css
+jakarta/tomcat/doc/uguide/tomcat_ug.html
+jakarta/tomcat/lib/ant.jar
+jakarta/tomcat/lib/jasper.jar
+jakarta/tomcat/lib/servlet.jar
+jakarta/tomcat/lib/test/Golden/Err.txt
+jakarta/tomcat/lib/test/Golden/ForwardWithQuery.txt
+jakarta/tomcat/lib/test/Golden/HelloWorld.txt
+jakarta/tomcat/lib/test/Golden/Include.txt
+jakarta/tomcat/lib/test/Golden/IncludeFile.txt
+jakarta/tomcat/lib/test/Golden/Mismatch1.txt
+jakarta/tomcat/lib/test/Golden/Mismatch2.txt
+jakarta/tomcat/lib/test/Golden/MustFail.txt
+jakarta/tomcat/lib/test/Golden/PrintWriterTest.txt
+jakarta/tomcat/lib/test/Golden/ServletParam.txt
+jakarta/tomcat/lib/test/Golden/SimpleForward.txt
+jakarta/tomcat/lib/test/Golden/SimpleInclude.txt
+jakarta/tomcat/lib/test/Golden/beanSer.txt
+jakarta/tomcat/lib/test/Golden/beanTest.txt
+jakarta/tomcat/lib/test/Golden/buffer.txt
+jakarta/tomcat/lib/test/Golden/classTest.txt
+jakarta/tomcat/lib/test/Golden/image1.gif
+jakarta/tomcat/lib/test/Golden/implicitConfig.txt
+jakarta/tomcat/lib/test/Golden/implicitContext.txt
+jakarta/tomcat/lib/test/Golden/implicitException.txt
+jakarta/tomcat/lib/test/Golden/implicitOut.txt
+jakarta/tomcat/lib/test/Golden/implicitPage.txt
+jakarta/tomcat/lib/test/Golden/implicitPageContext.txt
+jakarta/tomcat/lib/test/Golden/implicitRequest.txt
+jakarta/tomcat/lib/test/Golden/implicitResponse.txt
+jakarta/tomcat/lib/test/Golden/implicitSession.txt
+jakarta/tomcat/lib/test/Golden/import.txt
+jakarta/tomcat/lib/test/Golden/index.txt
+jakarta/tomcat/lib/test/Golden/jsptoservlet.txt
+jakarta/tomcat/lib/test/Golden/pageImport.txt
+jakarta/tomcat/lib/test/Golden/parse.txt
+jakarta/tomcat/lib/test/Golden/servletParam1.txt
+jakarta/tomcat/lib/test/Golden/servletParam2.txt
+jakarta/tomcat/lib/test/Golden/welcome.txt
+jakarta/tomcat/lib/webserver.jar
+jakarta/tomcat/lib/xml.jar
+jakarta/tomcat/src/javax/servlet/GenericServlet.java
+jakarta/tomcat/src/javax/servlet/LocalStrings.properties
+jakarta/tomcat/src/javax/servlet/RequestDispatcher.java
+jakarta/tomcat/src/javax/servlet/Servlet.java
+jakarta/tomcat/src/javax/servlet/ServletConfig.java
+jakarta/tomcat/src/javax/servlet/ServletContext.java
+jakarta/tomcat/src/javax/servlet/ServletException.java
+jakarta/tomcat/src/javax/servlet/ServletInputStream.java
+jakarta/tomcat/src/javax/servlet/ServletOutputStream.java
+jakarta/tomcat/src/javax/servlet/ServletRequest.java
+jakarta/tomcat/src/javax/servlet/ServletResponse.java
+jakarta/tomcat/src/javax/servlet/SingleThreadModel.java
+jakarta/tomcat/src/javax/servlet/UnavailableException.java
+jakarta/tomcat/src/javax/servlet/http/Cookie.java
+jakarta/tomcat/src/javax/servlet/http/HttpServlet.java
+jakarta/tomcat/src/javax/servlet/http/HttpServletRequest.java
+jakarta/tomcat/src/javax/servlet/http/HttpServletResponse.java
+jakarta/tomcat/src/javax/servlet/http/HttpSession.java
+jakarta/tomcat/src/javax/servlet/http/HttpSessionBindingEvent.java
+jakarta/tomcat/src/javax/servlet/http/HttpSessionBindingListener.java
+jakarta/tomcat/src/javax/servlet/http/HttpSessionContext.java
+jakarta/tomcat/src/javax/servlet/http/HttpUtils.java
+jakarta/tomcat/src/javax/servlet/http/LocalStrings.properties
+jakarta/tomcat/src/javax/servlet/http/LocalStrings_es.properties
+jakarta/tomcat/src/javax/servlet/jsp/HttpJspPage.java
+jakarta/tomcat/src/javax/servlet/jsp/JspEngineInfo.java
+jakarta/tomcat/src/javax/servlet/jsp/JspException.java
+jakarta/tomcat/src/javax/servlet/jsp/JspFactory.java
+jakarta/tomcat/src/javax/servlet/jsp/JspPage.java
+jakarta/tomcat/src/javax/servlet/jsp/JspTagException.java
+jakarta/tomcat/src/javax/servlet/jsp/JspWriter.java
+jakarta/tomcat/src/javax/servlet/jsp/PageContext.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/BodyContent.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/BodyTag.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/BodyTagSupport.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/Tag.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/TagAttributeInfo.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/TagData.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/TagExtraInfo.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/TagInfo.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/TagLibraryInfo.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/TagSupport.java
+jakarta/tomcat/src/javax/servlet/jsp/tagext/VariableInfo.java
+jakarta/tomcat/src/org/apache/jasper/CommandLineContext.java
+jakarta/tomcat/src/org/apache/jasper/Constants.java
+jakarta/tomcat/src/org/apache/jasper/EmbededServletOptions.java
+jakarta/tomcat/src/org/apache/jasper/JasperException.java
+jakarta/tomcat/src/org/apache/jasper/JspC.java
+jakarta/tomcat/src/org/apache/jasper/JspCompilationContext.java
+jakarta/tomcat/src/org/apache/jasper/JspEngineContext.java
+jakarta/tomcat/src/org/apache/jasper/Options.java
+jakarta/tomcat/src/org/apache/jasper/compiler/BaseJspListener.java
+jakarta/tomcat/src/org/apache/jasper/compiler/BeanEndGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/BeanGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/BeanRepository.java
+jakarta/tomcat/src/org/apache/jasper/compiler/CharDataGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/ClassDeclarationPhase.java
+jakarta/tomcat/src/org/apache/jasper/compiler/ClassName.java
+jakarta/tomcat/src/org/apache/jasper/compiler/CommandLineCompiler.java
+jakarta/tomcat/src/org/apache/jasper/compiler/CommentGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/Compiler.java
+jakarta/tomcat/src/org/apache/jasper/compiler/CoreElement.java
+jakarta/tomcat/src/org/apache/jasper/compiler/DeclarationGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/DelegatingListener.java
+jakarta/tomcat/src/org/apache/jasper/compiler/DestroyMethodPhase.java
+jakarta/tomcat/src/org/apache/jasper/compiler/DumbParseEventListener.java
+jakarta/tomcat/src/org/apache/jasper/compiler/EscapeUnicodeWriter.java
+jakarta/tomcat/src/org/apache/jasper/compiler/ExpressionGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/FileDeclarationPhase.java
+jakarta/tomcat/src/org/apache/jasper/compiler/ForwardGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/Generator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/GeneratorBase.java
+jakarta/tomcat/src/org/apache/jasper/compiler/GetPropertyGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/IncludeGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/InfoGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/InitMethodPhase.java
+jakarta/tomcat/src/org/apache/jasper/compiler/JakartaCommentGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/JavaCompiler.java
+jakarta/tomcat/src/org/apache/jasper/compiler/JikesJavaCompiler.java
+jakarta/tomcat/src/org/apache/jasper/compiler/JspCompiler.java
+jakarta/tomcat/src/org/apache/jasper/compiler/JspParseEventListener.java
+jakarta/tomcat/src/org/apache/jasper/compiler/JspReader.java
+jakarta/tomcat/src/org/apache/jasper/compiler/JspUtil.java
+jakarta/tomcat/src/org/apache/jasper/compiler/Mangler.java
+jakarta/tomcat/src/org/apache/jasper/compiler/MappedCharDataGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/Mark.java
+jakarta/tomcat/src/org/apache/jasper/compiler/ParseEventListener.java
+jakarta/tomcat/src/org/apache/jasper/compiler/ParseException.java
+jakarta/tomcat/src/org/apache/jasper/compiler/Parser.java
+jakarta/tomcat/src/org/apache/jasper/compiler/PluginGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/ScriptletGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/ServiceMethodPhase.java
+jakarta/tomcat/src/org/apache/jasper/compiler/ServletWriter.java
+jakarta/tomcat/src/org/apache/jasper/compiler/SetPropertyGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/StaticInitializerPhase.java
+jakarta/tomcat/src/org/apache/jasper/compiler/StoredCharDataGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/SunJavaCompiler.java
+jakarta/tomcat/src/org/apache/jasper/compiler/TagBeginGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/TagCache.java
+jakarta/tomcat/src/org/apache/jasper/compiler/TagEndGenerator.java
+jakarta/tomcat/src/org/apache/jasper/compiler/TagGeneratorBase.java
+jakarta/tomcat/src/org/apache/jasper/compiler/TagLibraries.java
+jakarta/tomcat/src/org/apache/jasper/compiler/TagLibraryInfoImpl.java
+jakarta/tomcat/src/org/apache/jasper/resources/messages.properties
+jakarta/tomcat/src/org/apache/jasper/resources/messages_es.properties
+jakarta/tomcat/src/org/apache/jasper/resources/web-jsptaglib_1_1.dtd
+jakarta/tomcat/src/org/apache/jasper/runtime/BodyContentImpl.java
+jakarta/tomcat/src/org/apache/jasper/runtime/HttpJspBase.java
+jakarta/tomcat/src/org/apache/jasper/runtime/JspFactoryImpl.java
+jakarta/tomcat/src/org/apache/jasper/runtime/JspLoader.java
+jakarta/tomcat/src/org/apache/jasper/runtime/JspRuntimeLibrary.java
+jakarta/tomcat/src/org/apache/jasper/runtime/JspServlet.java
+jakarta/tomcat/src/org/apache/jasper/runtime/JspWriterImpl.java
+jakarta/tomcat/src/org/apache/jasper/runtime/PageContextImpl.java
+jakarta/tomcat/src/org/apache/jasper/runtime/ServletEngine.java
+jakarta/tomcat/src/org/apache/jasper/runtime/TomcatServletEngine.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Adapter.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Container.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Context.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/ContextConfig.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Engine.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Host.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Interceptor.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Lifecycle.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/LifecycleException.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Loader.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Logger.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Manager.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Realm.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Request.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Resources.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Response.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Session.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Store.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/Wrapper.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/WrapperConfig.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/WrapperParam.java
+jakarta/tomcat/src/org/apache/tomcat/catalina/WrapperRole.java
+jakarta/tomcat/src/org/apache/tomcat/context/AutoSetup.java
+jakarta/tomcat/src/org/apache/tomcat/context/DefaultCMSetter.java
+jakarta/tomcat/src/org/apache/tomcat/context/LoadOnStartupInterceptor.java
+jakarta/tomcat/src/org/apache/tomcat/context/LocalStrings.properties
+jakarta/tomcat/src/org/apache/tomcat/context/LocalStrings_es.properties
+jakarta/tomcat/src/org/apache/tomcat/context/LogEvents.java
+jakarta/tomcat/src/org/apache/tomcat/context/WebXmlReader.java
+jakarta/tomcat/src/org/apache/tomcat/context/WorkDirInterceptor.java
+jakarta/tomcat/src/org/apache/tomcat/core/BaseInterceptor.java
+jakarta/tomcat/src/org/apache/tomcat/core/BufferedServletInputStream.java
+jakarta/tomcat/src/org/apache/tomcat/core/BufferedServletOutputStream.java
+jakarta/tomcat/src/org/apache/tomcat/core/Constants.java
+jakarta/tomcat/src/org/apache/tomcat/core/Container.java
+jakarta/tomcat/src/org/apache/tomcat/core/Context.java
+jakarta/tomcat/src/org/apache/tomcat/core/ContextInterceptor.java
+jakarta/tomcat/src/org/apache/tomcat/core/ContextManager.java
+jakarta/tomcat/src/org/apache/tomcat/core/HttpServletRequestFacade.java
+jakarta/tomcat/src/org/apache/tomcat/core/HttpServletResponseFacade.java
+jakarta/tomcat/src/org/apache/tomcat/core/LocalStrings.properties
+jakarta/tomcat/src/org/apache/tomcat/core/LocalStrings_es.properties
+jakarta/tomcat/src/org/apache/tomcat/core/Request.java
+jakarta/tomcat/src/org/apache/tomcat/core/RequestDispatcherImpl.java
+jakarta/tomcat/src/org/apache/tomcat/core/RequestImpl.java
+jakarta/tomcat/src/org/apache/tomcat/core/RequestInterceptor.java
+jakarta/tomcat/src/org/apache/tomcat/core/RequestSecurityProvider.java
+jakarta/tomcat/src/org/apache/tomcat/core/Response.java
+jakarta/tomcat/src/org/apache/tomcat/core/ResponseImpl.java
+jakarta/tomcat/src/org/apache/tomcat/core/ServerConnector.java
+jakarta/tomcat/src/org/apache/tomcat/core/ServletConfigImpl.java
+jakarta/tomcat/src/org/apache/tomcat/core/ServletContextFacade.java
+jakarta/tomcat/src/org/apache/tomcat/core/ServletLoader.java
+jakarta/tomcat/src/org/apache/tomcat/core/ServletWrapper.java
+jakarta/tomcat/src/org/apache/tomcat/core/SessionContextImpl.java
+jakarta/tomcat/src/org/apache/tomcat/core/SessionManager.java
+jakarta/tomcat/src/org/apache/tomcat/core/SimpleRequestSecurityProviderImpl.java
+jakarta/tomcat/src/org/apache/tomcat/core/TomcatException.java
+jakarta/tomcat/src/org/apache/tomcat/core/package.html
+jakarta/tomcat/src/org/apache/tomcat/loader/AdaptiveClassLoader.java
+jakarta/tomcat/src/org/apache/tomcat/loader/AdaptiveServletLoader.java
+jakarta/tomcat/src/org/apache/tomcat/loader/NetworkClassLoader.java
+jakarta/tomcat/src/org/apache/tomcat/loader/ServletClassLoaderImpl.java
+jakarta/tomcat/src/org/apache/tomcat/loader/SimpleFileFilter.java
+jakarta/tomcat/src/org/apache/tomcat/loader/URLResourceReader.java
+jakarta/tomcat/src/org/apache/tomcat/logging/Logger.java
+jakarta/tomcat/src/org/apache/tomcat/logging/TomcatLogger.java
+jakarta/tomcat/src/org/apache/tomcat/net/DefaultServerSocketFactory.java
+jakarta/tomcat/src/org/apache/tomcat/net/ServerSocketFactory.java
+jakarta/tomcat/src/org/apache/tomcat/protocol/WARConnection.java
+jakarta/tomcat/src/org/apache/tomcat/protocol/WARManager.java
+jakarta/tomcat/src/org/apache/tomcat/protocol/jar/Handler.java
+jakarta/tomcat/src/org/apache/tomcat/protocol/war/Handler.java
+jakarta/tomcat/src/org/apache/tomcat/request/FixHeaders.java
+jakarta/tomcat/src/org/apache/tomcat/request/SecurityCheck.java
+jakarta/tomcat/src/org/apache/tomcat/request/SessionInterceptor.java
+jakarta/tomcat/src/org/apache/tomcat/request/SimpleMapper.java
+jakarta/tomcat/src/org/apache/tomcat/service/Ajp11ConnectionHandler.java
+jakarta/tomcat/src/org/apache/tomcat/service/JNIEndpoint.java
+jakarta/tomcat/src/org/apache/tomcat/service/JNIEndpointConnector.java
+jakarta/tomcat/src/org/apache/tomcat/service/LocalStrings.properties
+jakarta/tomcat/src/org/apache/tomcat/service/LocalStrings_es.properties
+jakarta/tomcat/src/org/apache/tomcat/service/PoolTcpConnector.java
+jakarta/tomcat/src/org/apache/tomcat/service/PoolTcpEndpoint.java
+jakarta/tomcat/src/org/apache/tomcat/service/SimpleTcpConnector.java
+jakarta/tomcat/src/org/apache/tomcat/service/SimpleTcpEndpoint.java
+jakarta/tomcat/src/org/apache/tomcat/service/TODO
+jakarta/tomcat/src/org/apache/tomcat/service/TcpConnection.java
+jakarta/tomcat/src/org/apache/tomcat/service/TcpConnectionHandler.java
+jakarta/tomcat/src/org/apache/tomcat/service/TcpEndpoint.java
+jakarta/tomcat/src/org/apache/tomcat/service/TcpEndpointConnector.java
+jakarta/tomcat/src/org/apache/tomcat/service/connector/Ajp12ConnectionHandler.java
+jakarta/tomcat/src/org/apache/tomcat/service/connector/Ajp23ConnectionHandler.java
+jakarta/tomcat/src/org/apache/tomcat/service/connector/ConnectorRequest.java
+jakarta/tomcat/src/org/apache/tomcat/service/connector/ConnectorResponse.java
+jakarta/tomcat/src/org/apache/tomcat/service/connector/ConnectorServletIS.java
+jakarta/tomcat/src/org/apache/tomcat/service/connector/ConnectorServletOS.java
+jakarta/tomcat/src/org/apache/tomcat/service/connector/DoorConnectionHandler.java
+jakarta/tomcat/src/org/apache/tomcat/service/connector/JNIConnectionHandler.java
+jakarta/tomcat/src/org/apache/tomcat/service/connector/MsgBuffer.java
+jakarta/tomcat/src/org/apache/tomcat/service/connector/MsgConnector.java
+jakarta/tomcat/src/org/apache/tomcat/service/connector/package.html
+jakarta/tomcat/src/org/apache/tomcat/service/http/Constants.java
+jakarta/tomcat/src/org/apache/tomcat/service/http/HttpConnectionHandler.java
+jakarta/tomcat/src/org/apache/tomcat/service/http/HttpRequestAdapter.java
+jakarta/tomcat/src/org/apache/tomcat/service/http/HttpResponseAdapter.java
+jakarta/tomcat/src/org/apache/tomcat/service/http/package.html
+jakarta/tomcat/src/org/apache/tomcat/service/package.html
+jakarta/tomcat/src/org/apache/tomcat/servlets/AuthServlet.java
+jakarta/tomcat/src/org/apache/tomcat/servlets/DefaultErrorPage.java
+jakarta/tomcat/src/org/apache/tomcat/servlets/DefaultServlet.java
+jakarta/tomcat/src/org/apache/tomcat/servlets/InvokerServlet.java
+jakarta/tomcat/src/org/apache/tomcat/servlets/JSecurityCheck.java
+jakarta/tomcat/src/org/apache/tomcat/servlets/NoInvokerServlet.java
+jakarta/tomcat/src/org/apache/tomcat/servlets/WarFileServlet.java
+jakarta/tomcat/src/org/apache/tomcat/session/ApplicationSession.java
+jakarta/tomcat/src/org/apache/tomcat/session/LocalStrings.properties
+jakarta/tomcat/src/org/apache/tomcat/session/LocalStrings_es.properties
+jakarta/tomcat/src/org/apache/tomcat/session/ManagerBase.java
+jakarta/tomcat/src/org/apache/tomcat/session/Reaper.java
+jakarta/tomcat/src/org/apache/tomcat/session/ServerSession.java
+jakarta/tomcat/src/org/apache/tomcat/session/ServerSessionManager.java
+jakarta/tomcat/src/org/apache/tomcat/session/StandardManager.java
+jakarta/tomcat/src/org/apache/tomcat/session/StandardSession.java
+jakarta/tomcat/src/org/apache/tomcat/session/StandardSessionManager.java
+jakarta/tomcat/src/org/apache/tomcat/startup/LocalStrings.properties
+jakarta/tomcat/src/org/apache/tomcat/startup/LocalStrings_es.properties
+jakarta/tomcat/src/org/apache/tomcat/startup/SimpleStartup.java
+jakarta/tomcat/src/org/apache/tomcat/startup/Tomcat.java
+jakarta/tomcat/src/org/apache/tomcat/task/ApacheConfig.java
+jakarta/tomcat/src/org/apache/tomcat/task/ApacheConfig.java.orig
+jakarta/tomcat/src/org/apache/tomcat/task/Expand.java
+jakarta/tomcat/src/org/apache/tomcat/task/GTest.java
+jakarta/tomcat/src/org/apache/tomcat/util/ArrayEnumerator.java
+jakarta/tomcat/src/org/apache/tomcat/util/Ascii.java
+jakarta/tomcat/src/org/apache/tomcat/util/BuffTool.java
+jakarta/tomcat/src/org/apache/tomcat/util/CookieTools.java
+jakarta/tomcat/src/org/apache/tomcat/util/CookieUtils.java
+jakarta/tomcat/src/org/apache/tomcat/util/DevNullOutputStream.java
+jakarta/tomcat/src/org/apache/tomcat/util/FileUtil.java
+jakarta/tomcat/src/org/apache/tomcat/util/HexUtils.java
+jakarta/tomcat/src/org/apache/tomcat/util/HttpDate.java
+jakarta/tomcat/src/org/apache/tomcat/util/LocalStrings.properties
+jakarta/tomcat/src/org/apache/tomcat/util/LocalStrings_es.properties
+jakarta/tomcat/src/org/apache/tomcat/util/LocaleToCharsetMap.java
+jakarta/tomcat/src/org/apache/tomcat/util/MessageBytes.java
+jakarta/tomcat/src/org/apache/tomcat/util/MessageString.java
+jakarta/tomcat/src/org/apache/tomcat/util/MimeHeaderField.java
+jakarta/tomcat/src/org/apache/tomcat/util/MimeHeaders.java
+jakarta/tomcat/src/org/apache/tomcat/util/MimeMap.java
+jakarta/tomcat/src/org/apache/tomcat/util/Queue.java
+jakarta/tomcat/src/org/apache/tomcat/util/RequestUtil.java
+jakarta/tomcat/src/org/apache/tomcat/util/SessionIdGenerator.java
+jakarta/tomcat/src/org/apache/tomcat/util/SessionUtil.java
+jakarta/tomcat/src/org/apache/tomcat/util/StringManager.java
+jakarta/tomcat/src/org/apache/tomcat/util/ThreadPool.java
+jakarta/tomcat/src/org/apache/tomcat/util/URLUtil.java
+jakarta/tomcat/src/org/apache/tomcat/util/WARUtil.java
+jakarta/tomcat/src/org/apache/tomcat/util/package.html
+jakarta/tomcat/src/org/apache/tomcat/util/pattern/Implication.java
+jakarta/tomcat/src/org/apache/tomcat/util/pattern/ImplicationTable.java
+jakarta/tomcat/src/org/apache/tomcat/util/pattern/PatternMatcher.java
+jakarta/tomcat/src/org/apache/tomcat/util/pattern/URLPatternMatcher.java
+jakarta/tomcat/src/org/apache/tomcat/util/pattern/WildcardPattern.java
+jakarta/tomcat/src/org/apache/tomcat/util/xml/PathMatch.java
+jakarta/tomcat/src/org/apache/tomcat/util/xml/SaxContext.java
+jakarta/tomcat/src/org/apache/tomcat/util/xml/XmlAction.java
+jakarta/tomcat/src/org/apache/tomcat/util/xml/XmlMapper.java
+jakarta/tomcat/src/org/apache/tomcat/util/xml/XmlMatch.java
+jakarta/tomcat/webapps/ROOT.war
+jakarta/tomcat/webapps/admin.war
+jakarta/tomcat/webapps/examples.war
+jakarta/tomcat/webapps/test.war
+@comment these are automatically created at run time
+@unexec rm -rf %D/jakarta/tomcat/work
+@unexec rm -rf %D/jakarta/tomcat/logs
+@unexec rm -f %D/jakarta/tomcat/conf/tomcat-apache.conf
+@comment the war files get expanded at runtime -- they're not there at install
+@comment time, so they don;t get registered, but they're there after you've run
+@comment once.
+@unexec rm -rf %D/jakarta/tomcat/webapps
+@dirrm jakarta/tomcat/src/org/apache/tomcat/util/xml
+@dirrm jakarta/tomcat/src/org/apache/tomcat/util/pattern
+@dirrm jakarta/tomcat/src/org/apache/tomcat/util
+@dirrm jakarta/tomcat/src/org/apache/tomcat/task
+@dirrm jakarta/tomcat/src/org/apache/tomcat/startup
+@dirrm jakarta/tomcat/src/org/apache/tomcat/session
+@dirrm jakarta/tomcat/src/org/apache/tomcat/servlets
+@dirrm jakarta/tomcat/src/org/apache/tomcat/service/http
+@dirrm jakarta/tomcat/src/org/apache/tomcat/service/connector
+@dirrm jakarta/tomcat/src/org/apache/tomcat/service
+@dirrm jakarta/tomcat/src/org/apache/tomcat/request
+@dirrm jakarta/tomcat/src/org/apache/tomcat/protocol/war
+@dirrm jakarta/tomcat/src/org/apache/tomcat/protocol/jar
+@dirrm jakarta/tomcat/src/org/apache/tomcat/protocol
+@dirrm jakarta/tomcat/src/org/apache/tomcat/net
+@dirrm jakarta/tomcat/src/org/apache/tomcat/logging
+@dirrm jakarta/tomcat/src/org/apache/tomcat/loader
+@dirrm jakarta/tomcat/src/org/apache/tomcat/core
+@dirrm jakarta/tomcat/src/org/apache/tomcat/context
+@dirrm jakarta/tomcat/src/org/apache/tomcat/catalina
+@dirrm jakarta/tomcat/src/org/apache/tomcat
+@dirrm jakarta/tomcat/src/org/apache/jasper/runtime
+@dirrm jakarta/tomcat/src/org/apache/jasper/resources
+@dirrm jakarta/tomcat/src/org/apache/jasper/compiler
+@dirrm jakarta/tomcat/src/org/apache/jasper
+@dirrm jakarta/tomcat/src/org/apache
+@dirrm jakarta/tomcat/src/org
+@dirrm jakarta/tomcat/src/javax/servlet/jsp/tagext
+@dirrm jakarta/tomcat/src/javax/servlet/jsp
+@dirrm jakarta/tomcat/src/javax/servlet/http
+@dirrm jakarta/tomcat/src/javax/servlet
+@dirrm jakarta/tomcat/src/javax
+@dirrm jakarta/tomcat/src
+@dirrm jakarta/tomcat/lib/test/Golden
+@dirrm jakarta/tomcat/lib/test
+@dirrm jakarta/tomcat/lib
+@dirrm jakarta/tomcat/doc/uguide/images
+@dirrm jakarta/tomcat/doc/uguide
+@dirrm jakarta/tomcat/doc/appdev/sample/web/images
+@dirrm jakarta/tomcat/doc/appdev/sample/web
+@dirrm jakarta/tomcat/doc/appdev/sample/src
+@dirrm jakarta/tomcat/doc/appdev/sample/etc
+@dirrm jakarta/tomcat/doc/appdev/sample
+@dirrm jakarta/tomcat/doc/appdev
+@dirrm jakarta/tomcat/doc
+@dirrm jakarta/tomcat/conf
+@dirrm jakarta/tomcat/bin
+@dirrm jakarta/tomcat
+@dirrm jakarta
