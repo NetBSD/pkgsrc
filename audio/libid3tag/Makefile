@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/12/30 16:58:14 cjep Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/11 08:37:35 xtraeme Exp $
 #
 
 DISTNAME=	libid3tag-0.15.0b
@@ -13,7 +13,7 @@ COMMENT=	ID3 tag library, part of MAD (MPEG Audio Decoder)
 
 CONFLICTS=	mad<0.15
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -26,6 +26,6 @@ post-build:
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/id3tag.pc ${PREFIX}/lib/pkgconfig
 
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
