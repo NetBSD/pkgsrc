@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/02/05 00:36:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/05/05 16:57:11 taca Exp $
 bin/make_printerdef
 bin/make_smbcodepage
 bin/make_unicodemap
@@ -12,6 +12,7 @@ bin/smbpasswd
 bin/smbspool
 bin/smbstatus
 bin/smbtar
+bin/tdbbackup
 bin/testparm
 bin/testprns
 etc/rc.d/nmbd
@@ -86,14 +87,15 @@ share/doc/samba/PROFILES.txt
 share/doc/samba/Passwords.txt
 share/doc/samba/Printing.txt
 share/doc/samba/README.DCEDFS
-share/doc/samba/README.jis
 share/doc/samba/README.NOW
+share/doc/samba/README.jis
 share/doc/samba/README.sambatar
 share/doc/samba/Recent-FAQs.txt
 share/doc/samba/RoutedNetworks.txt
 share/doc/samba/SCO.txt
 share/doc/samba/SMBTAR.notes
 share/doc/samba/Samba-OpenSSL.txt
+share/doc/samba/Solaris-Winbind-HOWTO.txt
 share/doc/samba/Speed.txt
 share/doc/samba/Speed2.txt
 share/doc/samba/Tracing.txt
@@ -110,9 +112,6 @@ share/doc/samba/WinXP_SignOrSeal.reg
 share/doc/samba/WindowsTerminalServer.reg
 share/doc/samba/announce
 share/doc/samba/cifsntdomain.txt
-share/doc/samba/kurs.pdf
-share/doc/samba/kurs.tex
-share/doc/samba/logo.ps
 share/doc/samba/security_level.txt
 share/examples/samba/LDAP/README
 share/examples/samba/LDAP/export2_smbpasswd.pl
@@ -121,6 +120,9 @@ share/examples/samba/LDAP/import2_smbpasswd.pl
 share/examples/samba/LDAP/import_smbpasswd.pl
 share/examples/samba/LDAP/ldapchpasswd
 share/examples/samba/LDAP/ldapsync.pl
+share/examples/samba/LDAP/samba-schema-netscapeds4.x
+share/examples/samba/LDAP/samba-schema-netscapeds5.x
+share/examples/samba/LDAP/samba-schema.IBMSecureWay
 share/examples/samba/LDAP/samba.schema
 share/examples/samba/README
 share/examples/samba/VFS/Makefile
@@ -130,6 +132,7 @@ share/examples/samba/VFS/block/Makefile
 share/examples/samba/VFS/block/block.c
 share/examples/samba/VFS/block/samba-block.conf
 share/examples/samba/VFS/block/smb.conf
+share/examples/samba/VFS/recycle.c
 share/examples/samba/VFS/skel.c
 share/examples/samba/appliance/Makefile
 share/examples/samba/appliance/README
@@ -152,8 +155,9 @@ share/examples/samba/printer-accounting/hp5-redir
 share/examples/samba/printer-accounting/lp-acct
 share/examples/samba/printer-accounting/printcap
 share/examples/samba/printing/smbprint
-share/examples/samba/printing/smbprint-new.sh
 share/examples/samba/printing/smbprint.newer
+share/examples/samba/printing/smbprint.old
+share/examples/samba/printing/smbprint.safer
 share/examples/samba/printing/smbprint.sysv
 share/examples/samba/simple/README
 share/examples/samba/simple/smb.conf
