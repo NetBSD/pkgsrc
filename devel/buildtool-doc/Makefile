@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/07/24 10:13:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2003/07/25 12:04:54 jmmv Exp $
 #
 
 DISTNAME=	buildtool-doc-0.12
@@ -24,5 +24,5 @@ BUILDLINK_DEPMETHOD.xmlcatmgr?=	build
 .include "../../devel/buildtool/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
-.include "../../textproc/xmlcatmgr/catalogs.mk"
+.include "../../textproc/xmlcatmgr/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
