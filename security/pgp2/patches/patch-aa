@@ -1,0 +1,48 @@
+--- fileio.h.orig	Sat Jan  6 14:46:36 1996
++++ fileio.h	Tue Feb 17 19:49:06 1998
+@@ -21,15 +21,6 @@
+ #define FOPWPBIN	"w+b","ctx=stm"
+ #else
+ #ifdef UNIX
+-/*
+- * Directory for system-wide files.  Must end in a /, ready for
+- * dumb appending of the filename.  (If not defined, it's not used.)
+- */
+-#ifdef LINUX
+-#  define PGP_SYSTEM_DIR "/var/lib/pgp/"
+-#else
+-#  define PGP_SYSTEM_DIR "/usr/local/lib/pgp/"
+-#endif
+ #define FOPRBIN		"r"
+ #define FOPRTXT		"r"
+ #define FOPWBIN		"w"
+--- pgp.h.orig	Mon Jan 15 15:19:29 1996
++++ pgp.h	Tue Feb 17 19:24:28 1998
+@@ -12,6 +12,13 @@
+ #ifndef PGP_H
+ #define PGP_H
+ 
++#ifdef __NetBSD__
++#include <machine/ansi.h>
++#if BYTE_ORDER == BIG_ENDIAN
++#define HIGHFIRST
++#endif
++#endif
++
+ #include "usuals.h"
+ #include "more.h"
+ #include "armor.h"
+--- rsaglue2.c.orig	Tue Jan  2 09:17:27 1996
++++ rsaglue2.c	Tue Feb 17 19:24:28 1998
+@@ -52,9 +52,8 @@
+ Uses the RSAREF(tm) Toolkit, which is copyright RSA Data Security, Inc.\n\
+ Distributed by the Massachusetts Institute of Technology.\n");
+ 
+-#include <global.h>
+-#include <rsaref.h>
+-#include <rsa.h>
++#include <rsaref/rsaref.h>
++#include <rsaref/rsa.h>
+ /*
+  * The functions we call in rsa.h are:
+  *
