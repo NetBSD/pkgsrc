@@ -1,0 +1,67 @@
+$NetBSD: patch-ai,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+
+--- src/rrd_graph.c.orig	Sun Nov  7 21:46:02 1999
++++ src/rrd_graph.c	Sun Nov  7 21:47:13 1999
+@@ -6,12 +6,12 @@
+ 
+ #include "rrd_tool.h"
+ #include <gd.h>
+-#include <gdlucidan10.h>
+-#include <gdlucidab12.h>
++#include <gdfontt.h>
++#include <gdfonts.h>
+ #include <sys/stat.h>
+ 
+-#define SmallFont gdLucidaNormal10
+-#define LargeFont gdLucidaBold12
++#define SmallFont gdFontTiny
++#define LargeFont gdFontSmall
+ 
+ /* #define DEBUG */
+ 
+@@ -37,7 +37,7 @@
+ 	    OP_COS,OP_LOG,OP_EXP,OP_LT,OP_LE,OP_GT,OP_GE,OP_EQ,OP_IF,
+ 	    OP_UN,OP_END};
+ 
+-enum if_en {IF_GIF=0,IF_PNG=1};
++enum if_en {IF_PNG=0};
+ 
+ typedef struct rpnp_t {
+     enum op_en   op;
+@@ -305,7 +305,6 @@
+ 
+ enum if_en if_conv(char *string){
+     
+-    conv_if(GIF,IF_GIF)
+     conv_if(PNG,IF_PNG)
+ 
+     return (-1);
+@@ -2129,9 +2128,6 @@
+     if ((fd = fopen(im->graphfile,"rb")) == NULL) 
+       return 0; /* the file does not exist */
+     switch (im->imgformat) {
+-    case IF_GIF:
+-	GifSize(fd,&(im->xgif),&(im->ygif));
+-	break;
+     case IF_PNG:
+ 	PngSize(fd,&(im->xgif),&(im->ygif));
+ 	break;
+@@ -2389,9 +2385,6 @@
+ 	}
+     }
+     switch (im->imgformat) {
+-    case IF_GIF:
+-	gdImageGif(gif, fo);    
+-	break;
+     case IF_PNG:
+ 	gdImagePng(gif, fo);    
+ 	break;
+@@ -2506,7 +2499,7 @@
+     im.prt_c = 0;
+     im.gdes_c = 0;
+     im.gdes = NULL;
+-    im.imgformat = IF_GIF; /* we default to GIF output */
++    im.imgformat = IF_PNG; /* we default to PNG output */
+ 
+     for(i=0;i<DIM(graph_col);i++)
+ 	im.graph_col[i].red=-1;

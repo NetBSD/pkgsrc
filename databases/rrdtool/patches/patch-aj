@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 1999/11/17 17:34:39 wennmach Exp $
+
+--- src/rrd_cgi.c.ORIG	Fri Nov  5 00:20:16 1999
++++ src/rrd_cgi.c	Fri Nov  5 00:21:26 1999
+@@ -12,7 +12,7 @@
+ #define MEMBLK 1024
+ 
+ /* global variable for libcgi */
+-s_cgi **cgiArg;
++s_cgi *cgiArg;
+ 
+ /* in arg[0] find tags beginning with arg[1] call arg[2] on them
+    and replace by result of arg[2] call */
