@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/06 17:18:01 tron Exp $
+bin/getsounds
+bin/nmaker
+bin/setsounds
+bin/wmsound
+etc/WindowMaker/WMSound
+include/wmsnd.h
+lib/libwmsnd.a
+share/WindowMaker/Sounds/appexit.wav
+share/WindowMaker/Sounds/appstart.wav
+share/WindowMaker/Sounds/deiconify.wav
+share/WindowMaker/Sounds/hide.wav
+share/WindowMaker/Sounds/iconify.wav
+share/WindowMaker/Sounds/maximize.wav
+share/WindowMaker/Sounds/minimize.wav
+share/WindowMaker/Sounds/recycle.wav
+share/WindowMaker/Sounds/shade.wav
+share/WindowMaker/Sounds/startup.wav
+share/WindowMaker/Sounds/unhide.wav
+share/WindowMaker/Sounds/unmaximize.wav
+share/WindowMaker/Sounds/unshade.wav
