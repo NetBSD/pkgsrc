@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/01/24 20:15:58 tv Exp $
+# $NetBSD: Makefile,v 1.24 2005/02/26 04:42:50 tv Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -24,14 +24,19 @@ INFO_FILES=		remsync.info sharutils.info
 
 CONFIGURE_ARGS+=	--disable-uucode
 
+.include "../../mk/bsd.prefs.mk"
+
 # gettext 0.11+ has renamed internal symbols, and gsharutils is
 # being a very bad neighbor by using them directly.  To fix, force
 # use of gettext >= 0.11, and rename the symbol in gsharutils.  -tv
 #
+.if ${OPSYS} != "Linux"
+# XXX ...but don't do this on Linux, where glibc-internalized gettext
+# always uses the non-prefixed symbols.
+#
 BUILDLINK_DEPENDS.gettext+= gettext-lib>=0.11
 CPPFLAGS+=		-D_nl_default_dirname=libintl_nl_default_dirname
-
-.include "../../mk/bsd.prefs.mk"
+.endif
 
 .if defined(GNU_PROGRAM_PREFIX)
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
