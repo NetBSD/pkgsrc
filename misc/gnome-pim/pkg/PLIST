@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/07/24 08:41:41 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/08/29 20:36:26 tron Exp $
 bin/gnomecal
 bin/gnomecard
 etc/CORBA/servers/gnomecard.gnorba
@@ -52,7 +52,3 @@ share/gnome/help/gnomecard/C/docbook.css
 @dirrm share/gnome/help/gnomecal/C/images
 @dirrm share/gnome/help/gnomecal/C
 @dirrm share/gnome/help/gnomecal
-@unexec rmdir %D/share/gnome/apps/Applications 2>/dev/null || true
-@unexec rmdir %D/share/gnome/apps 2>/dev/null || true
-@unexec rmdir %D/share/gnome/help 2>/dev/null || true
-@unexec rmdir %D/share/gnome 2>/dev/null || true
