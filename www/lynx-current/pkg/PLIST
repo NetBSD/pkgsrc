@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/23 17:56:44 fredb Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/08/07 11:48:48 fredb Exp $
 bin/lynx
 man/man1/lynx.1
 share/locale/cs/LC_MESSAGES/lynx.mo
+share/locale/da/LC_MESSAGES/lynx.mo
 share/locale/de/LC_MESSAGES/lynx.mo
 share/locale/es/LC_MESSAGES/lynx.mo
 share/locale/fr/LC_MESSAGES/lynx.mo
 share/locale/it/LC_MESSAGES/lynx.mo
+share/locale/ja/LC_MESSAGES/lynx.mo
 share/locale/ko/LC_MESSAGES/lynx.mo
 share/locale/nl/LC_MESSAGES/lynx.mo
 share/locale/no/LC_MESSAGES/lynx.mo
@@ -32,6 +34,7 @@ share/lynx/lynx_doc/samples/lynx.lss
 share/lynx/lynx_doc/samples/mailcap
 share/lynx/lynx_doc/samples/mime.types
 share/lynx/lynx_doc/samples/mild-colors.lss
+share/lynx/lynx_doc/samples/mailto-form.pl
 share/lynx/lynx_doc/test/ALT88592.html
 share/lynx/lynx_doc/test/ISO_LATIN1_test.html
 share/lynx/lynx_doc/test/README.txt
