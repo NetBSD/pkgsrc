@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.9 2004/11/12 06:39:20 jlam Exp $
+$NetBSD: patch-af,v 1.10 2005/01/13 09:58:57 adam Exp $
 
---- src/IIOP/Makefile.in.orig	Mon Jan  7 18:23:54 2002
-+++ src/IIOP/Makefile.in	Thu Apr  4 12:30:24 2002
-@@ -399,8 +399,11 @@
+--- src/IIOP/Makefile.in.orig	2002-06-06 11:34:50.000000000 +0000
++++ src/IIOP/Makefile.in
+@@ -409,8 +409,11 @@ $(libwrap_files): make_libwrap_files
  
  make_libwrap_files: $(LIBWRAP_PATH)
  	ar x $(LIBWRAP_PATH)
