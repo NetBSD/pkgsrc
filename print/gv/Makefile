@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2003/06/12 15:37:13 jschauma Exp $
+# $NetBSD: Makefile,v 1.39 2003/07/17 20:51:14 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.16 1997/07/13 18:49:29 max Exp
 #
 
@@ -14,6 +14,8 @@ COMMENT=	PostScript and PDF previewer
 USE_BUILDLINK2=		# defined
 USE_IMAKE=		# defined
 XAW_TYPE?=		3d
+
+IMAKEOPTS+=		-DCONVERT_INCLUDE_DIRECTIVES
 
 .include "../../mk/bsd.prefs.mk"
 
