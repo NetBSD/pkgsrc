@@ -1,17 +1,17 @@
-$NetBSD: patch-af,v 1.8 2003/07/17 09:01:02 adam Exp $
+$NetBSD: patch-af,v 1.9 2004/11/03 15:54:31 adam Exp $
 
---- Local.config.orig	2003-06-03 14:56:41.000000000 +0200
-+++ Local.config	2003-07-17 09:51:15.000000000 +0200
-@@ -9,7 +9,7 @@
+--- Local.config.orig	2004-09-05 08:14:53.000000000 +0000
++++ Local.config
+@@ -9,7 +9,7 @@ XCOMM $Id: Local.config,v 1.29 2004/09/0
  XCOMM Local customization
  
  DESTDIR = 
 -SHAREDIR = /usr/share/xpaint
 +SHAREDIR = $${X11PREFIX}/share/xpaint
  
- PRINT_COMMAND = lpr -Plp
- EDITOR = emacs -fn 9x15 -cr green -ms red -bg lightyellow -fg black
-@@ -58,6 +58,9 @@
+ XCOMM Printing system defaults
+ PRINT_COMMAND = lpr
+@@ -70,6 +70,9 @@ XCOMM #endif
  
  #ifdef NetBSDArchitecture
  ARCH_DEFINES = -DHAVE_PARAM_H  
@@ -21,7 +21,7 @@ $NetBSD: patch-af,v 1.8 2003/07/17 09:01:02 adam Exp $
  #endif
  
  #ifdef OS2Architecture
-@@ -120,11 +123,11 @@
+@@ -132,11 +135,11 @@ XCOMM
  XCOMM  You must have the XPM library.
  XCOMM  Make sure the path name to the library is correct.
  
@@ -35,7 +35,7 @@ $NetBSD: patch-af,v 1.8 2003/07/17 09:01:02 adam Exp $
  
  
  DEPENDFLAGS = -I./bitmaps
-@@ -150,14 +153,14 @@
+@@ -162,14 +165,14 @@ XCOMM CDEBUGFLAGS =
  
  XCOMM This should take care of everything needed for BSD.
  
