@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.875 2001/12/05 16:42:46 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.876 2001/12/07 09:52:57 abs Exp $
 #
 # This file is in the public domain.
 #
@@ -82,7 +82,7 @@ JAVA_HOME?=		${LOCALBASE}/java
 DEPENDS+=		kaffe-[0-9]*:../../lang/kaffe
 JAVA_HOME?=		${LOCALBASE}/kaffe
 .  endif
-.  if exists(${JAVA_HOME}/lib/classes.zip:)
+.  if exists(${JAVA_HOME}/lib/classes.zip)
 CLASSPATH?=		${JAVA_HOME}/lib/classes.zip:.
 
 MAKE_ENV+=		CLASSPATH=${CLASSPATH}
