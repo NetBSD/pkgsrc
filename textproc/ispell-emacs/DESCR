@@ -1,0 +1,9 @@
+Ispell is a fast screen-oriented spelling checker that displays
+errors in the context of the original file, and suggests possible
+corrections. Some of the salient features of ispell include its
+multilingual support and integration with emacs. Ispell contains
+direct support for files formatted using LaTeX and [nt]roff. The
+integration into emacs supports additional formats, including
+hypertext files.
+
+ispell.el is an emacs/XEmacs interface to ispell.
