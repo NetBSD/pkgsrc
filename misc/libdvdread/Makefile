@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/08/25 19:23:09 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/26 06:51:40 jlam Exp $
 
 DISTNAME=	libdvdread-0.9.3
 CATEGORIES=	misc
@@ -11,5 +11,6 @@ COMMENT=	DVD access library, primarily used in Ogle
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
+USE_BUILDLINK2=	yes
 
 .include "../../mk/bsd.pkg.mk"
