@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/28 15:19:52 tron Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/28 21:20:31 skrll Exp $
 #
 
 .include "../libtool/Makefile.common"
@@ -25,10 +25,6 @@ CONFIGURE_ARGS=	--disable-shared
 .endif
 .else
 CONFIGURE_ARGS=	--enable-ltdl-install
-.endif
-
-.if (${OPSYS} == SunOS)
-PLIST_SRC=	${PKGDIR}/PLIST.SunOS
 .endif
 
 .include "../../mk/bsd.pkg.mk"
