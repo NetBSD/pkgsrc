@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/07/10 21:58:14 skrll Exp $
+# $NetBSD: Makefile,v 1.30 2002/07/18 09:17:26 agc Exp $
 #
 
 DISTNAME=		unproven-pthreads-0.17
@@ -16,6 +16,9 @@ CONFLICTS+=		mit-pthreads-[0-9]*
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/pthreads
 MAKE_ENV+=		NOLINT=1 NOPROFILE=1 OBJECT_FMT=${OBJECT_FMT}
+
+CONFIG_GUESS_OVERRIDE=	${WRKSRC}/config/config.guess
+CONFIG_SUB_OVERRIDE=	${WRKSRC}/config/config.sub
 
 post-extract:
 	@${RM} ${WRKSRC}/include/pthread/unistd.h
