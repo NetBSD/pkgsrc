@@ -1,34 +1,21 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:11 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/04 20:35:09 wiz Exp $
 #
 
-DISTNAME=	xmms-musepack-1.00
-PKGREVISION=	1
-CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpegplus/}
+DISTNAME=		xmms-musepack-1.1
+CATEGORIES=		audio
+MASTER_SITES=		http://www.saunalahti.fi/grimmel/musepack.net/linux/plugins/
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
-HOMEPAGE=	http://www.sourceforge.net/projects/mpegplus/
-COMMENT=	Musepack audio output plugin for XMMS
+MAINTAINER=		jmmv@NetBSD.org
+HOMEPAGE=		http://www.musepack.net/
+COMMENT=		XMMS plugin for musepack (mpc) files
 
-USE_BUILDLINK3=	yes
-USE_LIBTOOL=	yes
+USE_BUILDLINK3=		yes
+USE_LANGUAGES=		c++
+GNU_CONFIGURE=		yes
 
-CFLAGS+=	-DVERSION='"${PKGVERSION}"'
-XMMS_CONFIG=	${BUILDLINK_PREFIX.xmms}/bin/xmms-config
-
-do-build:
-	cd ${WRKSRC} && for f in *.c; do \
-		${SHLIBTOOL} --mode=compile ${CC} ${CFLAGS} \
-		`${XMMS_CONFIG} --cflags` -c $$f || break; \
-	done
-	cd ${WRKSRC} && ${SHLIBTOOL} --mode=link ${CC} ${LDFLAGS} \
-		-o libmusepack.la *.lo `${XMMS_CONFIG} --libs` \
-		-rpath ${PREFIX}/lib/xmms/Input \
-		-module -avoid-version
-
-do-install:
-	cd ${WRKSRC} && ${SHLIBTOOL} --mode=install \
-		${INSTALL_DATA} libmusepack.la ${PREFIX}/lib/xmms/Input
-
+.include "../../audio/libmusepack/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
