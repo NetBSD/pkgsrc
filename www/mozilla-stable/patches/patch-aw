@@ -1,3 +1,4 @@
+$NetBSD: patch-aw,v 1.2 2002/11/26 22:02:45 cjep Exp $
 diff -ru ../Orig/mozilla/widget/src/gtksuperwin/Makefile.in ./widget/src/gtksuperwin/Makefile.in
 --- ../Orig/mozilla/widget/src/gtksuperwin/Makefile.in	Wed Apr 10 12:35:09 2002
 +++ ./widget/src/gtksuperwin/Makefile.in	Thu Sep 12 00:26:30 2002
