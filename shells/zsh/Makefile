@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2001/09/23 21:01:30 tron Exp $
+# $NetBSD: Makefile,v 1.25 2001/09/23 21:15:39 tron Exp $
 
 DISTNAME=       zsh-4.0.2
 CATEGORIES=	shells
@@ -24,7 +24,7 @@ PLIST_SRC=	${PKGDIR}/PLIST
 CONFIGURE_ARGS+=--disable-dynamic
 LDFLAGS+=	-static
 .else
-PLIST_SRC+=	${PKGDIR}/PLIST.dynamic
+PLIST_SRC=	${PKGDIR}/PLIST.dynamic ${PKGDIR}/PLIST
 .endif
 
 post-install:
