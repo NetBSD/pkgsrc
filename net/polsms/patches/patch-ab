@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2001/07/09 09:11:28 zuntum Exp $
+$NetBSD: patch-ab,v 1.2 2001/09/16 16:12:59 zuntum Exp $
 
---- main.cc.orig	Fri Jun 29 15:37:35 2001
+--- main.cc.orig	Sun Sep  2 12:10:25 2001
 +++ main.cc
-@@ -135,10 +135,14 @@
+@@ -154,10 +154,14 @@
  			tick = 1;
  		}
  
 +#ifdef PLUS_MAIL
-+			konfig.plus_mail = 1;
++		konfig.plus_mail = 1;
 +#else
  		if (!strcmp(argv[start_arg], "--plusmail")) {
  			tick = 1;
@@ -15,5 +15,5 @@ $NetBSD: patch-ab,v 1.1 2001/07/09 09:11:28 zuntum Exp $
  		}
 +#endif
  
- 		if (!tick) break;
- 		start_arg++;
+ 		if (!strcmp(argv[start_arg], "--check")) {
+ 			tick = 1;
