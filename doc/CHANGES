@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1107 2003/01/12 17:59:23 veego Exp $
+$NetBSD: CHANGES,v 1.1108 2003/01/12 19:50:23 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -243,3 +243,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated phpmyadmin to 2.3.3.1nb1 [tron 2003-01-12]
 	Updated ssh2 to 3.2.2 [seb 2003-01-12]
 	Updated irssi to 0.8.6nb1 [veego 2003-01-12]
+	Updated libglade2 to 2.0.1nb6 [jmmv 2003-01-12]
