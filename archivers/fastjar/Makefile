@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/01 16:41:05 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/11 14:50:57 tron Exp $
 #
 
 DISTNAME=	fastjar-0.90
 CATEGORIES=	archivers
-MASTER_SITES=	http://download.sourceforge.net/fastjar/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fastjar/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	packages@netbsd.org
