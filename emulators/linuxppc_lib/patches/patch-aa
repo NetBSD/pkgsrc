@@ -1,0 +1,8 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/23 22:29:48 manu Exp $
+--- etc/ld.so.conf.orig	Sun Jan 14 22:29:50 2001
++++ etc/ld.so.conf	Sun Jan 14 22:30:05 2001
+@@ -0,0 +1,4 @@
++/lib
++/usr/lib
++/usr/local/lib
++/usr/X11R6/lib
