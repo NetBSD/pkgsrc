@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.8 1998/11/04 16:37:11 agc Exp $
+
+--- config/Makefile.config.in	1998/11/04 15:12:15	1.1
++++ config/Makefile.config.in	1998/11/04 15:51:37
+@@ -20,7 +20,7 @@
+ 
+ # Optimized CXXFLAGS
+ CXXFLAGS      += $(CFLAGS) -Wall -O4 -pipe -I@x_includes@ \
+-                -I$(TOP) -I$(TOP)/@host_dir@ @DEFS@
++                -I$(TOP) -I$(TOP)/@host_dir@ -I${TOP}/include @DEFS@
+ # DEBUG CXXFLAGS
+ #CXXFLAGS      += $(CFLAGS) -Wall -ggdb -pipe -I@x_includes@ \
+ #                -I$(TOP) -I$(TOP)/@host_dir@ @DEFS@
