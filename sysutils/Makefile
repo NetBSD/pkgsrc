@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2000/03/25 16:39:47 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.62 2000/05/12 15:41:26 mjl Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -41,6 +41,7 @@
     SUBDIR += mtools
     SUBDIR += osname
     SUBDIR += psmisc
+    SUBDIR += pstree
     SUBDIR += roller
     SUBDIR += rtty
     SUBDIR += sh-utils
