@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.204 2004/01/14 06:57:45 rh Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.205 2004/01/14 08:23:07 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -86,10 +86,14 @@ PKGSRC_SLEEPSECS?= 5
 # Default: not defined
 
 IGNORE_RECOMMENDED?=	no
-# ignore package prerequisite recommendations.  If this is set to
+# Ignore package prerequisite recommendations.  If this is set to
 # "no", all entries in RECOMMENDED will be added to DEPENDS.
 # If set to "yes", a warning will be printed if recommendations
 # are possibly ignored.
+#
+# WARNING: This should only be set if you know what you're doing.
+# Please read pkgsrc/Packages.txt for details.
+#
 # Possible: yes, no
 # Default: no
 
