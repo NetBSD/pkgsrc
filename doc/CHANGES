@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1939 2003/04/15 03:39:10 uebayasi Exp $
+$NetBSD: CHANGES,v 1.1940 2003/04/15 08:28:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1601,3 +1601,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated e2fsprogs to 1.32 [hubertf 2003-04-15]
 	Updated spamassassin to 2.53 [heinz 2003-04-15]
 	Updated emacs-nox11 to 21.3nb1 [uebayasi 2003-04-15]
+	Updated popa3d to 0.6.3 [wiz 2003-04-15]
