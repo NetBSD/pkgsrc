@@ -1,22 +1,17 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:22:20 agc Exp $
+# $NetBSD: Makefile,v 1.13 2004/03/03 10:27:17 recht Exp $
 #
 
-DISTNAME=	pygoogle-0.5.3
+DISTNAME=	pygoogle-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	net
-MASTER_SITES=	http://diveintomark.org/projects/pygoogle/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pygoogle/}
 
 MAINTAINER=	drochner@NetBSD.org
-HOMEPAGE=	http://diveintomark.org/projects/pygoogle/
+HOMEPAGE=	http://pygoogle.sourceforge.net/
 COMMENT=	Call the Google web API from Python
 
-WRKSRC=		${WRKDIR}/pygoogle
 PYDISTUTILSPKG=	yes
 USE_BUILDLINK2=	yes
-
-post-extract:
-	${RM} ${WRKSRC}/soap.py
 
 .include "../../net/py-soappy/buildlink2.mk"
 .include "../../lang/python/extension.mk"
