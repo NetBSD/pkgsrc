@@ -3,14 +3,14 @@
 # Date created:		21 December 1997
 # Whom:			hubertf@netbsd.org
 #
-# $NetBSD: Makefile,v 1.4 1998/01/15 11:17:53 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/02/15 18:27:25 tron Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/09/08 13:20:10 tg Exp 
 #
 
 DISTNAME=	xmcd-2.2
 PKGNAME=	xmcd-2.2pl1
 CATEGORIES=	audio
-MASTER_SITES=	ftp://ftp.netcom.com/pub/tk/tkan/xmcd-2.2/src/
+MASTER_SITES=	http://mercury.hypersurf.com/~amb/download/xmcd-2.2/src/
 
 MAINTAINER=	hubertf@netbsd.org
 
