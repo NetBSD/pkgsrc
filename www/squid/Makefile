@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2000/11/28 01:09:17 taca Exp $
+# $NetBSD: Makefile,v 1.38 2000/12/13 16:03:39 taca Exp $
 
 DISTNAME=	squid-2.3.STABLE4-src
-PKGNAME=	squid-2.3s4nb2
+PKGNAME=	squid-2.3s4nb3
 CATEGORIES=	www
 MASTER_SITES=	\
 	http://www.squid-cache.org/Versions/v2/2.3/ \
@@ -17,7 +17,8 @@ PATCHFILES=	squid-2.3.stable4-invalid_ip_acl_entry.patch \
 		squid-2.3.stable4-internal_dns_rcode_table_formatting.patch \
 		squid-2.3.stable4-ftp_icon_not_found.patch \
 		squid-2.3.stable4-accel_only_access.patch \
-		squid-2.3.stable4-html_quoting.patch
+		squid-2.3.stable4-html_quoting.patch \
+		squid-2.3.stable4-carp-assertion.patch
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.squid-cache.org/
