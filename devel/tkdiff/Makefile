@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 1999/08/10 12:19:07 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/12/02 02:59:39 sakamoto Exp $
 #
 
-DISTNAME=	tkdiff-3.03m.tcl.txt
-PKGNAME=	tkdiff-3.03m
+DISTNAME=	tkdiff-3.05.tcl.txt
+PKGNAME=	tkdiff-3.05
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ede.com/pub/free/tkdiff/
 EXTRACT_SUFX=	# Nothing
