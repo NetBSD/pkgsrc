@@ -1,0 +1,93 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/22 19:26:57 cjep Exp $
+lib/gap4.3/pkg/xgap/bin/i386--netbsdelf-cc/xgap
+lib/gap4.3/pkg/xgap/doc/answers.tex
+lib/gap4.3/pkg/xgap/doc/diffgap3.tex
+lib/gap4.3/pkg/xgap/doc/gobject.tex
+lib/gap4.3/pkg/xgap/doc/graphs.tex
+lib/gap4.3/pkg/xgap/doc/install.tex
+lib/gap4.3/pkg/xgap/doc/manual.tex
+lib/gap4.3/pkg/xgap/doc/posetops.tex
+lib/gap4.3/pkg/xgap/doc/savetime.tex
+lib/gap4.3/pkg/xgap/doc/sglatsys.tex
+lib/gap4.3/pkg/xgap/doc/sgrplats.tex
+lib/gap4.3/pkg/xgap/doc/usercomm.tex
+lib/gap4.3/pkg/xgap/doc/whatis.tex
+lib/gap4.3/pkg/xgap/doc/gobject.msk
+lib/gap4.3/pkg/xgap/doc/posetops.msk
+lib/gap4.3/pkg/xgap/doc/usercomm.msk
+lib/gap4.3/pkg/xgap/doc/xgap.msk
+lib/gap4.3/pkg/xgap/doc/buildman.config
+lib/gap4.3/pkg/xgap/doc/Makefile
+lib/gap4.3/pkg/xgap/doc/manual.six
+lib/gap4.3/pkg/xgap/doc/manual.bib
+lib/gap4.3/pkg/xgap/doc/manual.mst
+lib/gap4.3/pkg/xgap/doc/manual.dvi
+lib/gap4.3/pkg/xgap/doc/manual.pdf
+lib/gap4.3/pkg/xgap/examples/cavicchi.g
+lib/gap4.3/pkg/xgap/examples/cryst.g
+lib/gap4.3/pkg/xgap/examples/dihedral.g
+lib/gap4.3/pkg/xgap/examples/fpgroup.g
+lib/gap4.3/pkg/xgap/examples/matrix.g
+lib/gap4.3/pkg/xgap/examples/puzzle.g
+lib/gap4.3/pkg/xgap/examples/sym6.g
+lib/gap4.3/pkg/xgap/examples/trefoil.g
+lib/gap4.3/pkg/xgap/htm/biblio.htm
+lib/gap4.3/pkg/xgap/htm/CHAP001.htm
+lib/gap4.3/pkg/xgap/htm/CHAP002.htm
+lib/gap4.3/pkg/xgap/htm/CHAP003.htm
+lib/gap4.3/pkg/xgap/htm/CHAP004.htm
+lib/gap4.3/pkg/xgap/htm/CHAP005.htm
+lib/gap4.3/pkg/xgap/htm/CHAP006.htm
+lib/gap4.3/pkg/xgap/htm/CHAP007.htm
+lib/gap4.3/pkg/xgap/htm/CHAP008.htm
+lib/gap4.3/pkg/xgap/htm/CHAP009.htm
+lib/gap4.3/pkg/xgap/htm/CHAP010.htm
+lib/gap4.3/pkg/xgap/htm/chapters.htm
+lib/gap4.3/pkg/xgap/htm/indxA.htm
+lib/gap4.3/pkg/xgap/htm/indxB.htm
+lib/gap4.3/pkg/xgap/htm/indxC.htm
+lib/gap4.3/pkg/xgap/htm/indxD.htm
+lib/gap4.3/pkg/xgap/htm/indxE.htm
+lib/gap4.3/pkg/xgap/htm/indxF.htm
+lib/gap4.3/pkg/xgap/htm/indxG.htm
+lib/gap4.3/pkg/xgap/htm/indxH.htm
+lib/gap4.3/pkg/xgap/htm/indxI.htm
+lib/gap4.3/pkg/xgap/htm/indxL.htm
+lib/gap4.3/pkg/xgap/htm/indxM.htm
+lib/gap4.3/pkg/xgap/htm/indxN.htm
+lib/gap4.3/pkg/xgap/htm/indxO.htm
+lib/gap4.3/pkg/xgap/htm/indxP.htm
+lib/gap4.3/pkg/xgap/htm/indxQ.htm
+lib/gap4.3/pkg/xgap/htm/indxR.htm
+lib/gap4.3/pkg/xgap/htm/indxS.htm
+lib/gap4.3/pkg/xgap/htm/indxT.htm
+lib/gap4.3/pkg/xgap/htm/indxU.htm
+lib/gap4.3/pkg/xgap/htm/indxV.htm
+lib/gap4.3/pkg/xgap/htm/indxW.htm
+lib/gap4.3/pkg/xgap/htm/theindex.htm
+lib/gap4.3/pkg/xgap/init.g
+lib/gap4.3/pkg/xgap/lib/read1.g
+lib/gap4.3/pkg/xgap/lib/window.g
+lib/gap4.3/pkg/xgap/lib/color.gi
+lib/gap4.3/pkg/xgap/lib/font.gi
+lib/gap4.3/pkg/xgap/lib/gobject.gi
+lib/gap4.3/pkg/xgap/lib/ilatgrp.gi
+lib/gap4.3/pkg/xgap/lib/meataxe.gi
+lib/gap4.3/pkg/xgap/lib/menu.gi
+lib/gap4.3/pkg/xgap/lib/poset.gi
+lib/gap4.3/pkg/xgap/lib/sheet.gi
+lib/gap4.3/pkg/xgap/lib/color.gd
+lib/gap4.3/pkg/xgap/lib/font.gd
+lib/gap4.3/pkg/xgap/lib/gobject.gd
+lib/gap4.3/pkg/xgap/lib/ilatgrp.gd
+lib/gap4.3/pkg/xgap/lib/meataxe.gd
+lib/gap4.3/pkg/xgap/lib/menu.gd
+lib/gap4.3/pkg/xgap/lib/poset.gd
+lib/gap4.3/pkg/xgap/lib/sheet.gd
+@dirrm lib/gap4.3/pkg/xgap/lib
+@dirrm lib/gap4.3/pkg/xgap/htm
+@dirrm lib/gap4.3/pkg/xgap/examples
+@dirrm lib/gap4.3/pkg/xgap/doc
+@dirrm lib/gap4.3/pkg/xgap/bin/${MACHINE_GNU_PLATFORM}-cc
+@dirrm lib/gap4.3/pkg/xgap/bin
+@dirrm lib/gap4.3/pkg/xgap

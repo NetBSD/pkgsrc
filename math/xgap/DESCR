@@ -1,0 +1,10 @@
+XGAP is a graphical user interface for GAP, it extends the GAP library
+with functions dealing with graphic sheets and objects. Using these
+functions it also supplies a graphical interface for investigating the
+subgroup lattice of a group, giving you easy access to the low index
+subgroups, prime quotient and Reidemeister-Schreier algorithms and
+many other GAP functions for groups and subgroups. 
+
+At the moment the only supported window system is X-Windows X11R5,
+however, programs using the XGAP library functions will run on other
+platforms as soon as XGAP is available on these.
