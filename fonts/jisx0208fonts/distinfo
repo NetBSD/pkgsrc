@@ -1,12 +1,15 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:14:17 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 14:24:36 agc Exp $
 
-MD5 (elisau10.tgz) = e14defd8b1f310241576686b6a2887a6
-MD5 (clR5x8.bdf) = 7c9c28f5a68a977e49f40f3f17044c35
-MD5 (elisat10.tar.gz) = ac64d7a5aeafef4d5cb1e35d3fa53267
-MD5 (kaname_k12_bdf.tar.gz) = e0a103ceeffe0aa1c5670458f47452b3
-MD5 (Kappa20-0.3.tar.gz) = 0fb4dec59deb0a01dd65e6d26d47126a
-MD5 (knj10-1.1.tar.gz) = 5836501841546f41406092b10858fd17
-MD5 (6x12.tar.gz) = de7bbe307e3fd646942275cddf77e62b
-MD5 (k12x10bdf.tar.gz) = 37c9fecb9f57f82b423ecca212f9049a
-MD5 (shinonome12-1.0.8.tar.bz2) = b2aa5bf8ef7c78462d5fede98e9a4d12
+SHA1 (elisat10.tar.gz) = 7ea5b06d227c1286e82eef528fe476564ada3e30
+Size (elisat10.tar.gz) = 125435 bytes
+SHA1 (kaname_k12_bdf.tar.gz) = 06b610c7cc417d9fbd2db1e09160bed349b00c47
+Size (kaname_k12_bdf.tar.gz) = 196704 bytes
+SHA1 (Kappa20-0.3.tar.gz) = 7e3aa2916a05a3f5d3feaae2a4026d6cdf85be81
+Size (Kappa20-0.3.tar.gz) = 715041 bytes
+SHA1 (knj10-1.1.tar.gz) = 7aaf20d3ca0fd9f989a078f1bf02b2d4a7ec1991
+Size (knj10-1.1.tar.gz) = 301108 bytes
+SHA1 (6x12.tar.gz) = c5d729220452d7d3a7c606471296a1872e33e0e7
+Size (6x12.tar.gz) = 7759 bytes
+SHA1 (shinonome12-1.0.8.tar.bz2) = 9b3b61938f5067f243418022090e521fc746466b
+Size (shinonome12-1.0.8.tar.bz2) = 209323 bytes
 SHA1 (patch-aa) = a301b1e478adbc9bedaeec44acdcf3f5e0c3cc75
