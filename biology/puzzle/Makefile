@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 13:41:31 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/08 13:36:33 jtb Exp $
 
-DISTNAME=	puzzle-402
-PKGNAME=	puzzle-4.0.2
-WRKSRC=		${WRKDIR}/${PKGNAME}/src
+DISTNAME=	tree-puzzle-5.0
+PKGNAME=	puzzle-5.0
 CATEGORIES=	biology
 MASTER_SITES=	http://members.tripod.de/korbi/puzzle/ \
 		ftp://ftp.ebi.ac.uk/pub/software/unix/puzzle/ \
@@ -11,15 +10,19 @@ MASTER_SITES=	http://members.tripod.de/korbi/puzzle/ \
 		http://iubio.bio.indiana.edu/soft/molbio/evolve/puzzle/
 
 MAINTAINER=	babafou@babafou.eu.org
-HOMEPAGE=	http://members.tripod.de/korbi/puzzle/
+HOMEPAGE=	http://www.tree-puzzle.de
 COMMENT=	Maximum likelihood analysis of molecular sequence data
 
-MAKEFILE=	makefile
-ALL_TARGET=	puzzle
+BUILD_DEPENDS=	mpich>=1.2.1:../../parallel/mpi-ch
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/puzzle ${PREFIX}/bin
+GNU_CONFIGURE=	yes
+
+post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/puzzle
-	${INSTALL_DATA} ${WRKDIR}/${PKGNAME}/doc/manual.html ${PREFIX}/share/doc/puzzle
+	cd ${WRKSRC}/doc; ${INSTALL_DATA} manual.html *.gif 		\
+		${PREFIX}/share/doc/puzzle
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/puzzle
+	cd ${WRKSRC}/data; ${INSTALL_DATA} atp6.a globin.a		\
+		marswolf.n primates.b ${PREFIX}/share/examples/puzzle
 
 .include "../../mk/bsd.pkg.mk"
