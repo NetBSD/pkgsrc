@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.737 2002/12/09 15:17:38 tron Exp $
+$NetBSD: CHANGES,v 1.738 2002/12/09 19:20:48 abs Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3877,3 +3877,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ivtools to 1.0.7 [markd 2002-12-09]
 	Updated wine to 20021125 [junyoung 2002-12-09]
 	Updated rpm2pkg to 1.3 [tron 2002-12-09]
+	Updated p5-HTML-FixEntities to 1.03 [abs 2002-12-09]
+	Updated p5-Text-Substitute to 0.15 [abs 2002-12-09]
+	Updated p5-Text-CSV-Hash to 0.16 [abs 2002-12-09]
