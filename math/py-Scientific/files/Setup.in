@@ -1,0 +1,5 @@
+*shared*
+
+Scientific_netcdf -I@NETCDFPREFIX@/include -I../Scientific/Include \
+                  Scientific_netcdf.c -Wl,-R@NETCDFPREFIX@/lib -L@NETCDFPREFIX@/lib -lnetcdf
+Scientific_mpi -I@MPICHPREFIX@/include -I@MPICHPREFIX@/libdata/netbsd/ch_p4/ -I../Scientific/Include Scientific_mpi.c -L@MPICHPREFIX@/libdata/netbsd/ch_p4/  -lmpich
