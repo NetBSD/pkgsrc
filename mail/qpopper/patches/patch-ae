@@ -1,40 +1,23 @@
 --- popauth.8.orig	Fri Jul 10 01:44:08 1998
-+++ popauth.8	Wed Sep  9 01:10:21 1998
-@@ -2,25 +2,25 @@
- .\"	
- .\"	@(MHWARNING)
- .\" @(#)$Id: patch-ae,v 1.5 1998/09/08 23:25:06 tron Exp $
++++ popauth.8	Wed Sep  9 09:10:57 1998
+@@ -5 +5 @@
 -.TH POPAUTH 8
 +.TH QPOPAUTH 8
- .SH NAME
+@@ -7 +7 @@
 -popauth - manipulate POP authorization DB
 +qpopauth - manipulate POP authorization DB
- .SH SYNOPSIS
+@@ -9 +9 @@
 -popauth
 +qpopauth
- \%[\-init] \%[\-list] \%[\-delete\ name] \%[\-user\ name]
- \%[\-help]
- .SH DESCRIPTION
+@@ -13 +13 @@
 -The \fIpopauth\fR program allows a POP-subscriber to change the secret
 +The \fIqpopauth\fR program allows a POP-subscriber to change the secret
- value used to generate their authentication credentials.
- In addition,
- the super\-user or master POP user may use this program to either
- add or remove a user, or to print public information from it.  Only the
+@@ -18 +18 @@
 -super\-user may initialize the database.  \fIpopauth\fR is useful only when
 +super\-user may initialize the database.  \fIqpopauth\fR is useful only when
- the APOP configuration option is defined.  (This configuration option defines
- the name of the POP authorization DB.)
- 
- Under normal usage,
+@@ -23 +23 @@
 -\fIpopauth\fR prompts for a new secret,
 +\fIqpopauth\fR prompts for a new secret,
- just like the \fIpasswd\fR program.
- It then updates the POP authorization DB accordingly.
- 
-@@ -38,4 +38,4 @@
- .SH ACKNOWLEDGEMENTS
- This program was derived from MH 6.8.3
- .SH SEE ALSO
+@@ -41 +41 @@
 -popper(8)
 +qpopper(8)
