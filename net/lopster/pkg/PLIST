@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/28 19:16:03 ad Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/03/28 02:35:38 hubertf Exp $
 bin/lopster
+lib/locale/de/LC_MESSAGES/lopster.mo
 share/lopster/pixmaps/arrowd.xpm
 share/lopster/pixmaps/arrowl.xpm
 share/lopster/pixmaps/arrowr.xpm
@@ -15,9 +16,11 @@ share/lopster/pixmaps/folder_open.xpm
 share/lopster/pixmaps/friend.xpm
 share/lopster/pixmaps/home16b.xpm
 share/lopster/pixmaps/ignore.xpm
+share/lopster/pixmaps/info.xpm
 share/lopster/pixmaps/kfind.xpm
 share/lopster/pixmaps/logo.jpg
 share/lopster/pixmaps/logo.xpm
+share/lopster/pixmaps/logo1.xpm
 share/lopster/pixmaps/mail16b.xpm
 share/lopster/pixmaps/mini-folder.xpm
 share/lopster/pixmaps/notes16.xpm
