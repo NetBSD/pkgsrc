@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4123 2003/12/15 00:07:09 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4124 2003/12/15 00:17:08 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5171,3 +5171,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bug-buddy to 2.4.0 [xtraeme 2003-12-14]
 	Updated eog2 to 2.4.1 [xtraeme 2003-12-14]
 	Updated gconf-editor to 2.4.0 [xtraeme 2003-12-14]
+	Updated gedit to 2.4.1 [xtraeme 2003-12-14]
