@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 1998/11/25 23:59:18 tron Exp $
+
+--- src/pt-exp.h.orig	Tue Nov 19 05:32:50 1996
++++ src/pt-exp.h	Sun Nov 22 21:33:43 1998
+@@ -253,7 +253,7 @@
+       or
+     };
+ 
+-  tree_boolean_expression (int l = -1, int c = -1, type t)
++  tree_boolean_expression (int l = -1, int c = -1, type t = unknown)
+     : tree_binary_expression (l, c), etype (t) { }
+ 
+   tree_boolean_expression (tree_expression *a, tree_expression *b,
