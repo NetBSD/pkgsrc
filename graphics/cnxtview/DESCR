@@ -1,0 +1,4 @@
+Creative WEBCAM Notebook Utility Programs for NetBSD
+
+cnxtshot ... simple image capture program ( output stdout JPEG file )
+cnxtview ... sequential image viewer program ( about 20fps )
