@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/08/18 22:46:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2000/08/21 21:01:33 hubertf Exp $
 
 PKGNAME=	acroread3-3.01
 CATEGORIES=	print
@@ -25,13 +25,13 @@ DISTNAME=	acroread_linux_301
 PLATFORM=	intellinux
 .elif (${MACHINE_ARCH} == "alpha")
 .if !exists(/emul/osf1/sbin/loader)
-IGNORE=	"requires Digital UNIX libraries - see compat_osf1(8)"
+IGNORE=	"${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)"
 .endif
 DISTNAME=	acroread_osf_301
 PLATFORM=	alphaosf
 .elif (${MACHINE_ARCH} == "sparc")
 .if !exists(/emul/sunos/usr/lib/ld.so)
-IGNORE=		"requires SunOS libraries - see compat_sunos(8)"
+IGNORE=		"${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
 .endif
 DISTNAME=	acroread_sunos_301
 PLATFORM=	sparcsun

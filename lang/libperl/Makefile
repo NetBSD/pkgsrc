@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/05/16 14:46:44 veego Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/21 21:01:31 hubertf Exp $
 #
 
 DISTNAME=		perl5.004_04
@@ -20,7 +20,7 @@ PLIST_SRC=		${PKGDIR}/PLIST-elf
 .elif exists(/usr/libexec/ld.so)
 PLIST_SRC=		${PKGDIR}/PLIST-aout
 .else
-IGNORE=			"needs shared object support"
+IGNORE=			"${PKGNAME} needs shared object support"
 .endif
 .elif ${OPSYS} == "SunOS"
 PLIST_SRC=		${PKGDIR}/PLIST-elf

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/18 22:46:43 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/21 21:01:32 hubertf Exp $
 #
 
 DISTNAME=	dt-1.1.7
@@ -12,7 +12,7 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 .BEGIN:
 .if (${MACHINE} != "mac68k") && (${MACHINE} != "macppc")
-IGNORE=		"is only useful for ports that have the adb and grf devices"
+IGNORE=		"${PKGNAME} is only useful for ports that have the adb and grf devices"
 .endif
 
 ALL_TARGET=	depend all

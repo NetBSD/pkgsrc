@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/07/30 16:56:36 itojun Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/21 21:01:33 hubertf Exp $
 #
 
 DISTNAME=	racoon-20000731a
@@ -12,7 +12,7 @@ RESTRICTED=	"Crypto, export-controlled"
 
 # this is not compatible with cross build - there's no other way
 .if !exists(/usr/include/netinet6/ipsec.h)
-IGNORE+=		"requires ipsec-ready NetBSD"
+IGNORE+=		"${PKGNAME} requires ipsec-ready NetBSD"
 .endif
 
 .include "../../mk/bsd.prefs.mk"
