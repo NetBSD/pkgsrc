@@ -1,0 +1,58 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/20 02:40:46 fredb Exp $
+bin/htdig
+bin/htfuzzy
+bin/htmerge
+bin/htnotify
+bin/rundig
+sbin/htsearch
+share/examples/htdig/search.html
+@dirrm share/examples/htdig
+share/htdig/conf/htdig.conf
+@dirrm share/htdig/conf
+share/htdig/common/header.html
+share/htdig/common/footer.html
+share/htdig/common/wrapper.html
+share/htdig/common/nomatch.html
+share/htdig/common/syntax.html
+share/htdig/common/long.html
+share/htdig/common/short.html
+share/htdig/common/bad_words
+share/htdig/common/english.0
+share/htdig/common/english.aff
+share/htdig/common/synonyms
+@dirrm share/htdig/common
+@dirrm share/htdig/db
+@dirrm share/htdig
+share/httpd/htdocs/htdig/button1.gif
+share/httpd/htdocs/htdig/button2.gif
+share/httpd/htdocs/htdig/button3.gif
+share/httpd/htdocs/htdig/button4.gif
+share/httpd/htdocs/htdig/button5.gif
+share/httpd/htdocs/htdig/button6.gif
+share/httpd/htdocs/htdig/button7.gif
+share/httpd/htdocs/htdig/button8.gif
+share/httpd/htdocs/htdig/button9.gif
+share/httpd/htdocs/htdig/buttonl.gif
+share/httpd/htdocs/htdig/buttonr.gif
+share/httpd/htdocs/htdig/button10.gif
+share/httpd/htdocs/htdig/htdig.gif
+share/httpd/htdocs/htdig/star.gif
+share/httpd/htdocs/htdig/star_blank.gif
+share/httpd/htdocs/htdig/button1.png
+share/httpd/htdocs/htdig/button2.png
+share/httpd/htdocs/htdig/button3.png
+share/httpd/htdocs/htdig/button4.png
+share/httpd/htdocs/htdig/button5.png
+share/httpd/htdocs/htdig/button6.png
+share/httpd/htdocs/htdig/button7.png
+share/httpd/htdocs/htdig/button8.png
+share/httpd/htdocs/htdig/button9.png
+share/httpd/htdocs/htdig/buttonl.png
+share/httpd/htdocs/htdig/buttonr.png
+share/httpd/htdocs/htdig/button10.png
+share/httpd/htdocs/htdig/htdig.png
+share/httpd/htdocs/htdig/star.png
+share/httpd/htdocs/htdig/star_blank.png
+@dirrm share/httpd/htdocs/htdig
+@dirrm share/httpd/htdocs
+@dirrm share/httpd
