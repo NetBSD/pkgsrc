@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/08/03 08:59:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2004/08/23 03:47:48 schmonz Exp $
 #
 
-DISTNAME=		qmail-run-20040803
+DISTNAME=		qmail-run-20040823
 CATEGORIES=		mail
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -9,14 +9,8 @@ DISTFILES=		# empty
 MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Configures qmail to receive and deliver mail
 
-DEPENDS_QMAIL=		{qmail>=1.03nb8,netqmail>=1.05nb1}:../../mail/qmail
+DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
-.if !exists(/usr/sbin/mailwrapper)
-DEPENDS+=		mailwrapper-[0-9]*:../../mail/mailwrapper
-.endif
-.if !exists(/etc/rc.subr)
-DEPENDS+=		rc.subr-[0-9]*:../../pkgtools/rc.subr
-.endif
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -27,21 +21,16 @@ USE_PKGINSTALL=		yes
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA}
 FILES_SUBST+=		PKGNAME=${PKGNAME}
-RCD_SCRIPTS=		qmail qmailqread qmailpop3d qmailsend qmailsmtpd
+RCD_SCRIPTS=		qmail qmailpop3d qmailqread qmailsend qmailsmtpd
 
 INSTALLATION_DIRS=	bin share/doc/qmail-run share/examples/qmail-run
 
 .include "../../mk/bsd.prefs.mk"
 
-# Detect the PKG_SYSCONFDIR of the installed qmail or netqmail, so we
-# can create config files there and refer to them from rc.d scripts.
+# Detect the PKG_SYSCONFDIR of the installed qmail, so we can create
+# config files there and refer to them from rc.d scripts.
 .if !empty(PHASES_AFTER_EXTRACT:M${PKG_PHASE})
-INSTALLED_QMAIL!= \
-	dep=`${PKG_BEST_EXISTS} ${DEPENDS_QMAIL:C/:.*$//:Q:S/\ / /g}`;	\
-	case "$$dep" in							\
-	"")	${ECHO} "qmail_not_found_" ;;				\
-	*)	${ECHO} "$$dep" ;;					\
-	esac
+INSTALLED_QMAIL!= ${PKG_BEST_EXISTS} ${DEPENDS_QMAIL:C/:.*$//:Q:S/\ / /g}
 .  if empty(INSTALLED_QMAIL:M*_not_found_)
 .    if !defined(PKG_SYSCONFDIR.qmail-run)
 PKG_SYSCONFDIR.qmail-run!= \
@@ -56,10 +45,16 @@ do-build:
 		> ${WRKDIR}/README.pkgsrc
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf		\
 		> ${WRKDIR}/mailer.conf
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/qmail-procmail.sh	\
+		> ${WRKDIR}/qmail-procmail
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/qmail-qfilter-queue.sh	\
+		> ${WRKDIR}/qmail-qfilter-queue
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/qmail-qread-client.sh	\
 		> ${WRKDIR}/qmail-qread-client
 
 do-install:
+	${INSTALL_SCRIPT} ${WRKDIR}/qmail-procmail ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/qmail-qfilter-queue ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/qmail-qread-client ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc ${PREFIX}/share/doc/qmail-run
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${PREFIX}/share/examples/qmail-run

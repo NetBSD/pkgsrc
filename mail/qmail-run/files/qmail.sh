@@ -1,9 +1,13 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmail.sh,v 1.2 2004/08/03 08:59:24 schmonz Exp $
+# $NetBSD: qmail.sh,v 1.3 2004/08/23 03:47:48 schmonz Exp $
 #
 # @PKGNAME@ master script for administrators to control qmail
 # services. Usage resembles the qmailctl script from "Life with qmail".
+#
+# For Red Hat chkconfig
+# chkconfig: - 80 30
+# description: the qmail MTA
 #
 
 # KEYWORD: nostart
@@ -84,7 +88,6 @@ extra_commands="pause cont stat status cdb doqueue reload queue alrm flush hup h
 if [ -f /etc/rc.subr ]; then
 	run_rc_command "$1"
 else
-	@ECHO@ -n " ${name}"
 	_arg="$1"
 	${start_cmd}
 fi
