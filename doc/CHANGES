@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9258 2005/02/22 00:41:02 wiz Exp $
+$NetBSD: CHANGES,v 1.9259 2005/02/22 01:09:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1025,3 +1025,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Test-Pod-Coverage-1.06 [wiz 2005-02-22]
 	Added p5-Test-Warn-0.08 [wiz 2005-02-22]
 	Updated p5-IPC-Run to 0.79 [wiz 2005-02-22]
+	Updated xchm to 0.9.8 [minskim 2005-02-22]
