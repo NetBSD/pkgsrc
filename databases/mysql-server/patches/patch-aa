@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/05/06 23:37:00 tv Exp $
+$NetBSD: patch-aa,v 1.2 1999/12/13 20:36:22 bad Exp $
 
---- Makefile.in.orig	Thu May  6 10:58:47 1999
-+++ Makefile.in	Thu May  6 12:35:20 1999
-@@ -136,8 +136,8 @@
+--- Makefile.in.orig	Thu Jul  8 06:33:18 1999
++++ Makefile.in	Tue Aug 17 00:06:35 1999
+@@ -141,7 +141,7 @@
  # These are built from source in the Docs directory
- EXTRA_DIST =		INSTALL-SOURCE-GENERIC README \
- 			PUBLIC INSTALL-SOURCE MIRRORS
--SUBDIRS =		@docs_dirs@ @readline_dir@ client @sql_server_dirs@ \
--			scripts include tests man @bench_dirs@ support-files
-+SUBDIRS =		@sql_server_dirs@ \
-+			tests @bench_dirs@
+ EXTRA_DIST = INSTALL-SOURCE-GENERIC README 			PUBLIC INSTALL-SOURCE MIRRORS
+ 
+-SUBDIRS = @docs_dirs@ @readline_dir@ client @sql_server_dirs@ 			scripts include tests man @bench_dirs@ support-files
++SUBDIRS = @sql_server_dirs@ tests @bench_dirs@
+ 
  
  # Relink after clean
- CLEANFILES =		linked_client_sources
