@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.1 2002/06/11 23:22:43 fredb Exp $
+
+--- libao2/ao_sun.c.orig	Mon Apr 29 03:47:30 2002
++++ libao2/ao_sun.c
+@@ -445,13 +445,19 @@
+     }
+ #endif
+ 
+-#ifndef __OpenBSD__
++#if !defined(__OpenBSD__) && !defined(__NetBSD__)
+     ioctl(audio_fd, AUDIO_GETINFO, &info);
+     if (queued_bursts - info.play.eof > 2)
+ 	return 0;
+ #endif
+ 
++#if defined(__NetBSD__)
++    ioctl(audio_fd, AUDIO_GETINFO, &info);
++    return info.hiwat * info.blocksize - info.play.seek;
++#else
+     return ao_data.outburst;
++#endif
++
+ }
+ 
+ // plays 'len' bytes of 'data'
+@@ -507,7 +513,7 @@
+ static float get_delay(){
+     audio_info_t info;
+     ioctl(audio_fd, AUDIO_GETINFO, &info);
+-#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__)
+     return (float) info.play.seek/ (float)byte_per_sec ;
+ #else
+     if (info.play.samples && enable_sample_timing == RTSC_ENABLED)
