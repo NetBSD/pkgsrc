@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2299 2003/05/23 21:03:26 wiz Exp $
+$NetBSD: CHANGES,v 1.2300 2003/05/23 21:32:24 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2112,3 +2112,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gimp to 1.2.4 [salo 2003-05-23]
 	Updated gimp-base to 1.2.4 [salo 2003-05-23]
 	Updated easytag to 0.27.1nb1 [wiz 2003-05-23]
+	Updated opera7 to 7.11 [jdolecek 2003-05-23]
