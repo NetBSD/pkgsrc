@@ -1,0 +1,30 @@
+# $NetBSD: Makefile.getopt,v 1.1 2001/05/15 19:18:14 jlam Exp $
+#
+# This Makefile fragment is included by packages that use getopt_long().
+#
+# If getopt_long() is not present in the base system, then a dependency
+# on devel/libgetopt is added, and the appropriate headers are linked
+# into ${WRKINCDIR} (${WRKSRC}/include).
+#
+# To use this Makefile, simply include this Makefile fragment in the
+# package Makefile, optionally define WRKINCDIR, add
+# link-getopt-headers to the prerequisite targets for pre-configure,
+# and add ${WRKINCDIR} to the compiler's header search path.
+
+.if exists(/usr/include/getopt.h)
+GETOPT_H=	/usr/include/getopt.h
+.else
+GETOPT_H=	${LOCALBASE}/include/getopt.h
+DEPENDS+=	libgetopt>=1.3:../../devel/libgetopt
+LIBS+=		-lgetopt
+.endif
+
+WRKINCDIR?=	${WRKDIR}/include
+
+# This target links the getopt header into ${WRKINCDIR}/include, which is
+# searched first by the C preprocessor.
+# 
+link-getopt-headers:
+	${MKDIR} -p ${WRKINCDIR}
+	${RM} -f ${WRKINCDIR}/getopt.h
+	${LN} -sf ${GETOPT_H} ${WRKINCDIR}
