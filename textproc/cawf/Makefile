@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/01/20 19:04:15 tv Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/02 13:59:06 wiz Exp $
 #
 # Possible TODOs:
 # - set CH based on manual page section number, and real OS name
@@ -25,7 +25,7 @@ USE_BUILDLINK3=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-CPPFLAGS+=		-DUNIX -DUSG -DSTDLIB -DCAWFLIB='\"${PREFIX}/share/cawf\"'
+CPPFLAGS+=		-DUNIX -DUSG -DSTDLIB -DCAWFLIB="\"${PREFIX}/share/cawf\""
 
 post-extract:
 	${RM} -f ${WRKSRC}/*.o
