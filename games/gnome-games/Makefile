@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/07/28 10:33:58 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2000/11/02 03:25:33 wiz Exp $
 
 DISTNAME=		gnome-games-1.2.0
 CATEGORIES=		games gnome
@@ -26,8 +26,10 @@ post-build:
 	${SED} -e 's#@@INSTALL@@#${INSTALL}#' \
 	  ${PKGDIR}/INSTALL >${INSTALL_FILE}
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if ${NEED_NCURSES} == "YES"
 CONFIGURE_ARGS+=--with-ncurses=${LOCALBASE}
 .endif
+
+.include "../../mk/bsd.pkg.mk"
