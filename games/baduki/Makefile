@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/07/14 16:04:21 agc Exp $
+# $NetBSD: Makefile,v 1.13 2000/07/15 20:39:17 agc Exp $
 
 DISTNAME=	baduki-0.2.9
 CATEGORIES=	games
@@ -11,9 +11,11 @@ DEPENDS+=	gtk+-1.2.*:../../x11/gtk
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-gtk-prefix=`${SHOW_PREFIX1} gtk+ ${SHOW_PREFIX2}`
+
+EVAL_PREFIX+=	GTKDIR=gtk+
+CONFIGURE_ARGS+=	--with-gtk-prefix=${GTKDIR}
 CONFIGURE_ARGS+=	--without-included-gettext
-CONFIGURE_ENV+=	GTK_CONFIG="`${SHOW_PREFIX1} gtk+ ${SHOW_PREFIX2}`/bin/gtk-config"
+CONFIGURE_ENV+=	GTK_CONFIG="${GTKDIR}/bin/gtk-config"
 LDFLAGS+=	-L${LOCALBASE}/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"

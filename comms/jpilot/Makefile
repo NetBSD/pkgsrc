@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/07/14 16:04:20 agc Exp $
+# $NetBSD: Makefile,v 1.7 2000/07/15 20:39:15 agc Exp $
 #
 
 DISTNAME=		jpilot-0.98.1
@@ -16,7 +16,8 @@ USE_LIBTOOL=		YES
 USE_X11=		YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-CONFIGURE_ARGS+=	--with-gtk-prefix="`${SHOW_PREFIX1} gtk+ ${SHOW_PREFIX2}`"
+EVAL_PREFIX+=		GTKDIR=gtk+
+CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}"
 CONFIGURE_ARGS+=	--with-pilot-prefix=${LOCALBASE}
 
 post-install:

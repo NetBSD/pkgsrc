@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/14 16:04:21 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/07/15 20:39:17 agc Exp $
 #
 
 DISTNAME=	amor-0.6
@@ -13,7 +13,9 @@ DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
 
 USE_X11BASE=		yes	# To get this near KDE
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=	QTDIR=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1
-CONFIGURE_ARGS+=--with-qt-dir=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1
+
+EVAL_PREFIX+=	QT1DIR=qt1
+CONFIGURE_ENV+=	QTDIR=${QT1DIR}/qt1
+CONFIGURE_ARGS+=--with-qt-dir=${QT1DIR}/qt1
 
 .include "../../mk/bsd.pkg.mk"

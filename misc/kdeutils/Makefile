@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/07/14 16:04:23 agc Exp $
+# $NetBSD: Makefile,v 1.40 2000/07/15 20:39:21 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/28 00:04:18 se Exp
 #
 
@@ -16,7 +16,9 @@ DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--with-qt-dir=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1" 
+
+EVAL_PREFIX+=	QT1DIR=qt1
+CONFIGURE_ARGS=	"--with-qt-dir=${QT1DIR}/qt1" 
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
