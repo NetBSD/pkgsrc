@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/10/11 14:13:49 proff Exp $
+# $NetBSD: Makefile,v 1.7 1999/10/25 22:56:31 hubertf Exp $
 
 DISTNAME=	festival-1.4.0
 WRKSRC=		${WRKDIR}
@@ -53,9 +53,9 @@ MAKE_ENV+=	PKG_EST_HOME=${SPEECHTOOLS} \
 
 pre-patch:
 	@ ${CP} ${SPEECHTOOLS}/config/config-dist ${SPEECHTOOLS}/config/config && \
-	  chmod u+w ${SPEECHTOOLS}/config/config
+	  ${CHMOD} u+w ${SPEECHTOOLS}/config/config
 	@ ${CP} ${FESTIVAL}/config/config-dist ${FESTIVAL}/config/config && \
-	  chmod u+w ${FESTIVAL}/config/config
+	  ${CHMOD} u+w ${FESTIVAL}/config/config
 
 post-patch:
 	@ ${CP} ${FILESDIR}/top-Makefile ${WRKSRC}/Makefile
@@ -63,8 +63,8 @@ post-patch:
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
-	chmod -R u+w,a+r,og-w ${FESTIVAL}/lib
-	find ${FESTIVAL}/lib -type d -print0| xargs -0 chmod 755
+	${CHMOD} -R u+w,a+r,og-w ${FESTIVAL}/lib
+	find ${FESTIVAL}/lib -type d -print0| xargs -0 ${CHMOD} 755
 	cd ${FESTIVAL} && pax -r -w lib examples ${FHOME}
 	${RM} -f ${FHOME}/lib/etc/NetBSD/audsp
 	${INSTALL_PROGRAM} ${FESTIVAL}/lib/etc/NetBSD/audsp ${PREFIX}/libexec
