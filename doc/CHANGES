@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4599 2004/01/25 00:48:51 kleink Exp $
+$NetBSD: CHANGES,v 1.4600 2004/01/25 10:49:19 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -473,3 +473,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gnome-extras-2.4.1 [jmmv 2004-01-24]
 	Added libksba-0.9.1 [kleink 2004-01-25]
 	Added libksba-0.4.7 [kleink 2004-01-25]
+	Updated lua to 5.0.1nb1 [cube 2004-01-25]
