@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/22 14:26:45 martti Exp $
+# $NetBSD: Makefile,v 1.2 2002/04/02 09:56:26 martti Exp $
 
 DISTNAME=	proftpd-1.2.4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	martti@netbsd.org
 HOMEPAGE=	http://www.proftpd.org/
 COMMENT=	FTP server with Apache like configuration
 
