@@ -1,43 +1,22 @@
-$NetBSD: patch-aa,v 1.6 2001/08/03 17:07:25 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2002/08/31 02:14:39 wiz Exp $
 
---- Makefile.orig	Tue Jul 17 18:56:02 2001
-+++ Makefile
-@@ -14,16 +14,14 @@
- 
- 
- # Installation prefix dirctory:
--PREFIX	= /usr
- BINDIR	= $(PREFIX)/bin
- 
- 
--CC        = gcc
--GLIBS     = `gtk-config --libs`
--GFLAGS    = `gtk-config --cflags` $(NLS) -DLOCALE=\"${LOCALEDIR}\" $(DATA_DIR)
--OPT       = -g -Wall -O2 #-mpentium #-pedantic
--MAKE      = make
--LOCALEDIR = $(PREFIX)/share/locale
-+GLIBS = ${LDFLAGS} `${GTK_CONFIG} --libs` -lintl
-+GFLAGS	= ${CFLAGS} `${GTK_CONFIG} --cflags` $(NLS) -DLOCALE=\"${LOCALEDIR}\" $(DATA_DIR)
-+OPT   = -Wall
-+#ID3_LIB = -lid3
-+LOCALEDIR = $(PREFIX)/${PKGLOCALEDIR}/locale
- 
- # The directory where are located pixmaps, logo
- DATA_DIR = -DPACKAGE_DATA_DIR=\"${PACKAGE_DATA_DIR}\"
-@@ -39,10 +37,12 @@
- install:
- 	$(MAKE) install -C src
- 	[ -z "$(NLS)" ] || $(MAKE) install -C po
--	cp -f easytag.desktop $(PREFIX)/share/gnome/apps/Multimedia/
--	cp -f pixmaps/EasyTAG_icon.xpm $(PREFIX)/share/pixmaps/EasyTAG.xpm
--	mkdir -p $(PREFIX)/share/easytag
--	cp -f pixmaps/EasyTAG_logo.xpm $(PREFIX)/share/easytag/
-+	${BSD_INSTALL_DATA_DIR} $(PREFIX)/share/gnome/apps/Multimedia
-+	${BSD_INSTALL_DATA} easytag.desktop $(PREFIX)/share/gnome/apps/Multimedia/
-+	${BSD_INSTALL_DATA_DIR} $(PREFIX)/share/pixmaps
-+	${BSD_INSTALL_DATA} pixmaps/EasyTAG_icon.xpm $(PREFIX)/share/pixmaps/EasyTAG.xpm
-+	${BSD_INSTALL_DATA_DIR} $(PREFIX)/share/easytag
-+	${BSD_INSTALL_DATA} pixmaps/EasyTAG_logo.xpm $(PREFIX)/share/easytag/
- 	@echo "------"
- 	@echo "EasyTAG is installed, to uninstall it, type 'make uninstall'!"
- 	@echo "------"
+--- configure.orig	Sat Aug 31 03:46:09 2002
++++ configure
+@@ -8016,7 +8016,7 @@ int
+ main ()
+ {
+     FILE *output;
+-    output=fopen("conftest.id3","w");
++    output=fopen("/tmp/id3test.id3","w");
+     fprintf(output,"ID3LIB_MAJOR=%d\nID3LIB_MINOR=%d\nID3LIB_PATCH=%d\n",ID3LIB_MAJOR_VERSION,ID3LIB_MINOR_VERSION,ID3LIB_PATCH_VERSION);
+     fclose(output);
+     exit(0);
+@@ -8034,7 +8034,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  . conftest.id3; echo "${ID3LIB_MAJOR}.${ID3LIB_MINOR}.${ID3LIB_PATCH}"
++  . /tmp/id3test.id3; echo "${ID3LIB_MAJOR}.${ID3LIB_MINOR}.${ID3LIB_PATCH}"
+ else
+   echo "$as_me: program exited with status $ac_status" >&5
+ echo "$as_me: failed program was:" >&5
