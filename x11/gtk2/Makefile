@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.17 2002/12/19 12:59:29 grant Exp $
+# $NetBSD: Makefile,v 1.18 2002/12/24 04:07:31 wiz Exp $
 #
 
-DISTNAME=		gtk+-2.0.9
+DISTNAME=		gtk+-2.2.0
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.0/ \
-			${MASTER_SITE_GNOME:=sources/gtk+/2.0/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
+			${MASTER_SITE_GNOME:=sources/gtk+/2.2/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		packages@netbsd.org
@@ -15,12 +15,14 @@ COMMENT=		Gimp toolkit. Libraries for building X11 user interfaces
 
 BUILD_USES_MSGFMT=	yes
 USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
 USE_X11=		yes
 USE_GMAKE=		yes
 
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
 MAKE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+TEST_TARGET=		check
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
