@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/06/01 22:15:11 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/08/28 15:23:44 garbled Exp $
 bin/MakeTeXMF
 bin/pslatex
 bin/makeindex.bin
@@ -73,7 +73,6 @@ bin/amstex
 bin/kpsexpand
 bin/kpsepath
 bin/kpsewhich
-bin/texi2dvi
 @unexec %D/bin/install-info --delete %D/info/latex %D/info/dir
 @unexec %D/bin/install-info --delete %D/info/kpathsea.info %D/info/dir
 @unexec %D/bin/install-info --delete %D/info/dvips.info %D/info/dir
