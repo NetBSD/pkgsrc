@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2002/02/14 22:21:00 jdolecek Exp $
+# $NetBSD: Makefile,v 1.13 2002/02/21 19:56:27 jdolecek Exp $
 #
 
-DISTNAME=	csacek-2.1.7
-PKGNAME=	ap-csacek-2.1.7
+DISTNAME=	csacek-2.1.8
+PKGNAME=	ap-csacek-2.1.8
 CATEGORIES=	www
 MASTER_SITES=	http://www.csacek.cz/distrib/
 EXTRACT_SUFX=	.tar.bz2
