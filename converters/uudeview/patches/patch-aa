@@ -1,11 +1,10 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:16 agc Exp $
+$NetBSD: patch-aa,v 1.3 1999/11/15 14:30:43 rh Exp $
 
-diff -ud --recursive ./Makefile.in /usr/devel/ports/uudeview/src/Makefile.in
---- ./Makefile.in	Sat Jul 20 17:43:22 1996
-+++ /usr/devel/ports/uudeview/src/Makefile.in	Thu Aug  1 20:07:25 1996
-@@ -144,7 +144,7 @@
- 	cat uudeview-$(VERSION).$(PATCH).tar.gz >> uudeview-sfx-$(VERSION).$(PATCH).sh
- 	chmod 755 uudeview-sfx*
+--- Makefile.in.orig	Mon Nov 15 15:27:34 1999
++++ Makefile.in	Mon Nov 15 15:27:34 1999
+@@ -161,7 +161,7 @@
+ 	rm -rf uudeview-$(VERSION).$(PATCH)
+ 	chmod 644 uudeview-$(V)-$(VERSION).$(PATCH).diff.gz
  
 -uudeview:	unix/config.h libuu.a
 +uudeview:	unix/config.h
