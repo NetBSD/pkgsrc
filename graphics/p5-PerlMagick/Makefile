@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.6 2000/08/27 07:11:13 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2001/02/04 00:34:13 tron Exp $
 
-DISTNAME=		ImageMagick-5.2.2
-PKGNAME=		p5-PerlMagick-5.2.2
+DISTNAME=		ImageMagick-5.2.8
+PKGNAME=		p5-PerlMagick-5.2.8
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.wizards.dupont.com/cristy/ImageMagick.html
+MAINTAINER=		tron@netbsd.org
+HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
 
-DEPENDS+=		ImageMagick-5.2.2:../../${MAGICK}
+DEPENDS+=		${DISTNAME}:../../${MAGICK}
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 MAGICK=			graphics/ImageMagick
 MAGICKDIR=		${PKGSRCDIR}/${MAGICK}
+FILESDIR=		${MAGICKDIR}/files
 PATCHDIR=		${MAGICKDIR}/patches
-PATCH_SUM_FILE=		${MAGICKDIR}/files/patch-sum
-MD5_FILE=		${MAGICKDIR}/files/md5
 
 .if !(make(do-configure) || make(do-patch))
 WRKSRC=			${WRKDIR}/${DISTNAME}/PerlMagick
@@ -25,13 +24,14 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/PerlMagick
 
 #EXTRACT_AFTER_ARGS+=	${WRKSRC}
 
-USE_LIBTOOL=		# defined
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-USE_PERL5=		# defined
+USE_PERL5=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Image/Magick/.packlist
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		YES
+USE_X11=		YES
 
 # These need to coordinate with the ImageMagick package.
 # Just leave out "--without-perl".
