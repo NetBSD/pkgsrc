@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.164 2004/01/05 23:55:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.165 2004/01/12 17:21:06 xtraeme Exp $
 #
 
 COMMENT=	Programming languages
@@ -93,6 +93,10 @@ SUBDIR+=	perl5
 SUBDIR+=	perl58
 SUBDIR+=	pforth
 SUBDIR+=	pgcc
+SUBDIR+=	pnet
+SUBDIR+=	pnetC
+SUBDIR+=	pnetlib
+SUBDIR+=	pnetlib-nox11
 SUBDIR+=	py-extclass
 SUBDIR+=	py-html-docs
 SUBDIR+=	py-psyco
