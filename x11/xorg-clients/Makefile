@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/10/20 14:33:30 reed Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/20 18:55:57 xtraeme Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-clients-${XORG_VER}
@@ -25,8 +25,10 @@ XINSTALL_MAN_DIRS=	programs
 
 # XXX todo: define build's VarDirectory to pkgsrc's VARBASE
 OWN_DIRS=               ${VARBASE}/lib/xdm
-OWN_DIRS_PERMS+=        ${VARBASE}/lib/xdm/authdir ${ROOT_USER} ${ROOT_GROUP} 0700
-OWN_DIRS_PERMS+=        ${VARBASE}/lib/xdm/authdir/authfiles ${ROOT_USER} ${ROOT_GROUP} 0700
+OWN_DIRS_PERMS+=        ${VARBASE}/lib/xdm/authdir \
+	${ROOT_USER} ${ROOT_GROUP} 0700
+OWN_DIRS_PERMS+=        ${VARBASE}/lib/xdm/authdir/authfiles \
+	${ROOT_USER} ${ROOT_GROUP} 0700
 
 EGDIR=			${LOCALBASE}/share/examples/xorg/xdm
 PKG_SYSCONFSUBDIR=	xorg/xdm
@@ -34,11 +36,16 @@ CONF_FILES=		${EGDIR}/xdm/xdm-config ${PKG_SYSCONFDIR}/xdm-config
 CONF_FILES+=		${EGDIR}/xdm/Xservers ${PKG_SYSCONFDIR}/Xservers
 CONF_FILES+=		${EGDIR}/xdm/Xresources ${PKG_SYSCONFDIR}/Xresources
 CONF_FILES+=		${EGDIR}/xdm/Xaccess ${PKG_SYSCONFDIR}/Xaccess
-CONF_FILES_PERMS=	${EGDIR}/xdm/Xsetup_0 ${PKG_SYSCONFDIR}/Xsetup_0 ${ROOT_USER} ${ROOT_GROUP} 0755
-CONF_FILES_PERMS+=	${EGDIR}/xdm/Xsession ${PKG_SYSCONFDIR}/Xsession ${ROOT_USER} ${ROOT_GROUP} 0755
-CONF_FILES_PERMS+=	${EGDIR}/xdm/TakeConsole ${PKG_SYSCONFDIR}/TakeConsole ${ROOT_USER} ${ROOT_GROUP} 0755
-CONF_FILES_PERMS+=	${EGDIR}/xdm/GiveConsole ${PKG_SYSCONFDIR}/GiveConsole ${ROOT_USER} ${ROOT_GROUP} 0755
-CONF_FILES_PERMS+=	${EGDIR}/xdm/Xwilling ${PKG_SYSCONFDIR}/Xwilling ${ROOT_USER} ${ROOT_GROUP} 0755
+CONF_FILES_PERMS=	${EGDIR}/xdm/Xsetup_0 ${PKG_SYSCONFDIR}/Xsetup_0 \
+	${ROOT_USER} ${ROOT_GROUP} 0755
+CONF_FILES_PERMS+=	${EGDIR}/xdm/Xsession ${PKG_SYSCONFDIR}/Xsession \
+	${ROOT_USER} ${ROOT_GROUP} 0755
+CONF_FILES_PERMS+=	${EGDIR}/xdm/TakeConsole ${PKG_SYSCONFDIR}/TakeConsole \
+	${ROOT_USER} ${ROOT_GROUP} 0755
+CONF_FILES_PERMS+=	${EGDIR}/xdm/GiveConsole ${PKG_SYSCONFDIR}/GiveConsole \
+	${ROOT_USER} ${ROOT_GROUP} 0755
+CONF_FILES_PERMS+=	${EGDIR}/xdm/Xwilling ${PKG_SYSCONFDIR}/Xwilling \
+	${ROOT_USER} ${ROOT_GROUP} 0755
 
 post-buildlink:
 	@${MKDIR} ${WRKSRC}/exports/include
