@@ -1,39 +1,44 @@
-# $NetBSD: Makefile,v 1.5 2004/07/19 23:50:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/20 00:04:36 schmonz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
 
-DISTNAME=	ezmlm-idx-0.421
+DISTNAME=		ezmlm-idx-0.421
 SITES_${DISTNAME}.tar.gz=	http://www.ezmlm.org/archive/0.421/
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.ezmlm.org/
-COMMENT=	ezmlm with enhancements by third parties
+MAINTAINER=		tech-pkg@NetBSD.org
+HOMEPAGE=		http://www.ezmlm.org/
+COMMENT=		ezmlm with enhancements by third parties
 
-CONFLICTS=	ezmlm-[0-9]*
+CONFLICTS=		ezmlm-[0-9]*
 
-DISTFILES+=	${EZMLM_VERS}.tar.gz
-PLIST_SRC+=	PLIST.idx
+DISTFILES+=		${EZMLM_VERS}.tar.gz
+PLIST_SRC+=		PLIST.idx
 
-USE_BUILDLINK3=	yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 
 # ezmlm-idx is a modification of the ezmlm source.
-RESTRICTED=	"modified source and binaries may not be distributed"
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
+RESTRICTED=		"modified source and binaries may not be distributed"
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
-USE_PKGINSTALL=	YES
+USE_PKGINSTALL=		YES
 
 PKG_SYSCONFSUBDIR=	ezmlm
-CFLAGS+=	-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\"\\\"
+CFLAGS+=		-DPKG_SYSCONFDIR=\"\\\"${PKG_SYSCONFDIR}\"\\\"
 
-EGDIR=		${PREFIX}/share/examples/ezmlm-idx
-CONF_FILES=	${EGDIR}/ezcgirc ${PKG_SYSCONFDIR}/ezcgirc
-CONF_FILES+=	${EGDIR}/ezmlmrc ${PKG_SYSCONFDIR}/ezmlmrc
+EGDIR=			${PREFIX}/share/examples/ezmlm-idx
+CONF_FILES=		${EGDIR}/ezcgirc ${PKG_SYSCONFDIR}/ezcgirc
+CONF_FILES+=		${EGDIR}/ezmlmrc ${PKG_SYSCONFDIR}/ezmlmrc
+
+INSTALLATION_DIRS=	bin man man/man1 man/man5 man/cat1 man/cat5
+INSTALLATION_DIRS+=	share/examples/ezmlm-idx
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	EZMLM_IDX_USE_MYSQL EZMLM_IDX_USE_PGSQL
+BUILD_DEFS+=		EZMLM_IDX_USE_MYSQL EZMLM_IDX_USE_PGSQL
 
 .if !empty(EZMLM_IDX_USE_MYSQL:M[yY][eE][sS])
 .include "../../databases/mysql-client/buildlink3.mk"
