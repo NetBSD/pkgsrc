@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9328 2005/02/26 22:38:22 is Exp $
+$NetBSD: CHANGES,v 1.9329 2005/02/26 22:43:04 is Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1156,3 +1156,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-File-Temp to 0.16 [wiz 2005-02-26]
 	Updated blender to 2.36 [reinoud 2005-02-26]
 	Updated sr to 2.3.3 [is 2005-02-26]
+	Updated sr-examples to 2.3.3 [is 2005-02-26]
