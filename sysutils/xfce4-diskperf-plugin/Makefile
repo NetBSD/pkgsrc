@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2004/03/10 11:59:31 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/07 11:26:05 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	1.4
+XFCE4_VERSION=	1.4.1
 
 DISTNAME=	xfce4-diskperf-plugin-${XFCE4_VERSION}
-PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.berlios.de/xfce-goodies/
 COMMENT=	XFce4 disk performance plugin
