@@ -1,0 +1,36 @@
+$NetBSD: patch-ac,v 1.4 2000/10/31 18:15:46 dmcmahill Exp $
+
+fix a problem scaling tick marks.  it should be
+fixed in the next (not yet released version 3.4)
+hp2xx.
+
+--- hpgl.c.orig	Sun Feb 13 18:19:28 2000
++++ hpgl.c	Tue Oct 31 12:57:51 2000
+@@ -1521,19 +1521,23 @@
+   if (mode == 0)	/* X tick	*/
+   {
+-  	/* dividing by Q appears to be unnecessary - MK
++	if(scale_flag){
+ 	p1.y -= neg_ticklen * (P2.y - P1.y) / Q.y;
+ 	p2.y += pos_ticklen * (P2.y - P1.y) / Q.y;
+-	*/
++ 	}
++	else{	
+ 	p1.y -= neg_ticklen * (P2.y - P1.y) ;
+ 	p2.y += pos_ticklen * (P2.y - P1.y) ;
++	}
+   }
+   else			/* Y tick	*/
+   {
+-	/*
++	if (scale_flag){
+ 	p1.x -= neg_ticklen * (P2.x - P1.x) / Q.x;
+ 	p2.x += pos_ticklen * (P2.x - P1.x) / Q.x;
+-	*/
++ 	}
++	else{	
+ 	p1.x -= neg_ticklen * (P2.x - P1.x);
+ 	p2.x += pos_ticklen * (P2.x - P1.x);
++	}
+   }
+ 
