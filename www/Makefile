@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.280 2003/12/08 16:29:15 sketch Exp $
+# $NetBSD: Makefile,v 1.281 2003/12/17 14:38:38 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -188,6 +188,7 @@ SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-htmlsplit
 SUBDIR+=	ruby-tag
 SUBDIR+=	ruby-webrick
+SUBDIR+=	ruby-webunit
 SUBDIR+=	sarg
 SUBDIR+=	sitecopy
 SUBDIR+=	snarf
