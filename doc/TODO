@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.135 2003/01/04 11:21:46 wiz Exp $
+$NetBSD: TODO,v 1.136 2003/01/04 11:45:19 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -165,7 +165,6 @@ Suggested package updates
 	o lbreakout2-2.4
 	o lcms-1.0.9
 	o lftp-2.6.3 [pkg/19419]
-	o libgnomeui-2.0.6
 	o libole2-2.2.8
 	o libmcrypt-2.5.4
 	o librep-0.16.1
