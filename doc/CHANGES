@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9556 2005/03/22 15:11:20 adam Exp $
+$NetBSD: CHANGES,v 1.9557 2005/03/22 15:12:55 tv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1468,3 +1468,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gkrellm-volume to 2.1.13 [cube 2005-03-22]
 	Updated fontforge to 20050310 [adam 2005-03-22]
 	Updated ImageMagick to 6.2.0.8 [adam 2005-03-22]
+	Updated libltdl to 1.5.14 [tv 2005-03-22]
+	Updated libtool to 1.5.14 [tv 2005-03-22]
+	Updated libtool-base to 1.5.14 [tv 2005-03-22]
+	Updated libtool-info to 1.5.14 [tv 2005-03-22]
