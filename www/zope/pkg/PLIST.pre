@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST.pre,v 1.1.1.1 1998/12/12 17:28:23 tsarna Exp $
+@comment $NetBSD: PLIST.pre,v 1.2 1999/06/19 22:48:23 tsarna Exp $
 sbin/zope-install
+sbin/zope-shutdown
+
