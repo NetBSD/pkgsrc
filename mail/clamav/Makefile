@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2004/10/20 09:12:11 grant Exp $
+# $NetBSD: Makefile,v 1.28 2004/10/20 10:18:15 grant Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
@@ -55,12 +56,14 @@ CONF_FILES_PERMS+=	${EGDIR}/${_file_} ${VIRUSDBDIR}/${_file_}	\
 
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} CFGINST=${EGDIR} DBINST=${EGDIR}
 
+PKG_DEFAULT_OPTIONS+=	curl
+
 .if defined(USE_MILTER) && !empty(USE_MILTER:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=	milter
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamav
-PKG_SUPPORTED_OPTIONS=	milter
+PKG_SUPPORTED_OPTIONS=	curl milter
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mmilter)
@@ -72,6 +75,14 @@ CONFIGURE_ARGS+=	--disable-milter
 # XXX --disable-milter doesn't work as expected, so we need this
 CONFIGURE_ENV+=		ac_cv_header_libmilter_mfapi_h=no
 PLIST_SUBST+=		MILTER="@comment "
+.endif
+
+.if !empty(PKG_OPTIONS:Mcurl)
+.  include "../../www/curl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libcurl
+BUILDLINK_DEPENDS.curl+=curl>=7.10.0
+.else
+CONFIGURE_ARGS+=	--without-libcurl
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
