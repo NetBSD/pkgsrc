@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/12/05 02:04:49 wiz Exp $
+
+--- libdyn/dyn_realloc.c.orig	Fri Dec 10 20:56:05 1993
++++ libdyn/dyn_realloc.c
+@@ -11,6 +11,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ #include "dynP.h"
+ 
