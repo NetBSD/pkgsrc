@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.4 2001/07/31 14:23:01 drochner Exp $
+
+--- doc/html/Makefile.in.orig	Thu Mar 15 19:58:56 2001
++++ doc/html/Makefile.in	Tue Jul 31 13:33:31 2001
+@@ -109,9 +109,9 @@
+ AUTOMAKE_OPTIONS = foreign ansi2knr
+ 
+ docdir = $(datadir)/doc
+-pkgdocdir = $(docdir)/$(PACKAGE)
++pkgdocdir = $(docdir)
+ htmldir = $(docdir)/html
+-pkghtmldir = $(pkgdocdir)/html
++pkghtmldir = $(pkgdocdir)/html/$(PACKAGE)
+ 
+ pkghtml_DATA = \
+         basic.html \
