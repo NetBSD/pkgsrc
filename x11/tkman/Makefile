@@ -3,7 +3,7 @@
 # Date created:         27 Dec 1994
 # Whom:                 thomas Gellekum <tg@freebsd.org>
 #
-# $Id: Makefile,v 1.4 1997/12/17 16:07:52 hubertf Exp $
+# $Id: Makefile,v 1.5 1998/01/22 10:26:41 agc Exp $
 #
 
 DISTNAME=	tkman-2.0.4
@@ -18,6 +18,7 @@ RUN_DEPENDS=	rman:${PORTSDIR}/textproc/rman \
 		glimpse:${PORTSDIR}/textproc/glimpse
 
 NO_CDROM=	"Don't sell for profit"
+MIRROR_DISTFILE=	no
 MAN1=		tkman.1
 
 .include <bsd.port.mk>

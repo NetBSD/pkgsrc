@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1997/11/18 17:21:26 is Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/22 10:26:38 agc Exp $
 #
 # Packages collection makefile for:	sdr
 # Version required:			2.3a1
@@ -24,6 +24,7 @@ MAINTAINER=	is@netbsd.org
 LIB_DEPENDS=	tk80\\.1:${PORTSDIR}/x11/tk80
 
 RESTRICTED=	"Contains DES encryption"
+MIRROR_DISTFILE=	no
 NO_WRKSUBDIR=	yes
 USE_GMAKE=	yes
 USE_X11=	yes

@@ -3,7 +3,7 @@
 # Date created:         
 # Whom:                 erich@FreeBSD.org
 #
-# $NetBSD: Makefile,v 1.2 1997/12/29 19:08:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/22 10:26:39 agc Exp $
 # FreeBSD Id: Makefile,v 1.19 1997/12/04 17:34:28 asami Exp
 #
 
@@ -15,6 +15,11 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	erich@FreeBSD.org
 
 PREFIX=		/emul/linux
+
+# The distfile is distributed under the GPL, so no re-distribution of
+# binaries without source.
+MIRROR_DISTFILE=	no
+
 NO_MTREE=	yes
 NO_BUILD=	yes
 EXTRACT_ONLY=	# empty
