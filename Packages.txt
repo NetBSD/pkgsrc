@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.63 1999/08/30 22:48:05 tron Exp $
+# $NetBSD: Packages.txt,v 1.64 1999/08/30 22:54:26 tron Exp $
 ###########################################################################
 
 			==========================
@@ -1296,6 +1296,14 @@ specified using the DEPENDS definition.  An example of this is the
 print/lyx package, which uses the xpm library, version 3.4j to build.
 
 DEPENDS+=       xpm-3.4j:../../graphics/xpm
+
+You can also use wildcards in package dependences:
+
+DEPENDS+=	xpm-*:../../graphics/xpm
+
+Note that these wildcards will be expanded while creating binary packages.
+Thus binary package will depend on exactly the version which was installed
+when they were created.
 
 (d) If your package needs some executable to be able to run correctly,
 this is specified using the RUN_DEPENDS definition.  The print/lyx
