@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2004/12/20 11:31:01 grant Exp $
+# $NetBSD: Makefile,v 1.7 2005/04/04 09:31:03 wiz Exp $
 
-DISTNAME=	Log-Agent-0.303
+DISTNAME=	Log-Agent-0.306
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5lag
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/Log-Agent/
 COMMENT=	General logging framework aimed at reusable modules
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
