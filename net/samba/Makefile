@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2002/02/05 03:04:20 jlam Exp $
+# $NetBSD: Makefile,v 1.80 2002/02/05 05:14:46 jlam Exp $
 
 DISTNAME=		samba-2.2.3
 PKGREVISION=		1
@@ -75,6 +75,9 @@ CONFIGURE_ARGS+=	--with-ldapsam
 PLIST_SUBST+=		SAMBA_LDAP=""
 .else
 PLIST_SUBST+=		SAMBA_LDAP="@comment "
+MESSAGE_SRC=		${.CURDIR}/MESSAGE.smbpasswd
+SMBPASSWD_FILE=		/dev/null ${SAMBA_PRIVATE}/smbpasswd		\
+			${ROOT_USER} ${ROOT_GROUP} 0700
 .endif
 
 # The following are Linux-only options.
@@ -89,11 +92,15 @@ FILES_SUBST=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
 FILES_SUBST+=		SAMBA_LOCKDIR=${SAMBA_LOCKDIR}
 FILES_SUBST+=		SAMBA_LOGDIR=${SAMBA_LOGDIR}
 FILES_SUBST+=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
-MESSAGE_SUBST+=		ETCDIR=${SAMBA_ETCDIR}
+MESSAGE_SUBST+=		SAMBA_ETCDIR=${SAMBA_ETCDIR}
+MESSAGE_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
+MESSAGE_SUBST+=		ROOT_USER=${ROOT_USER}
 
 CONF_FILES=		${EXAMPLESDIR}/smb.conf.sample ${SAMBA_ETCDIR}/smb.conf
+SUPPORT_FILES_PERMS=	${SMBPASSWD_FILE}
 RCD_SCRIPTS=		samba nmbd smbd
-OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_PRIVATE} ${SAMBA_LOCKDIR}
+OWN_DIRS=		${SAMBA_ETCDIR} ${SAMBA_LOCKDIR}
+OWN_DIRS_PERMS=		${SAMBA_PRIVATE} ${ROOT_USER} ${ROOT_GROUP} 0500
 
 INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 
@@ -103,7 +110,7 @@ post-extract:
 	${RM} -r ${WRKDIR}/${DISTNAME}/docs/textdocs/outdated
 
 pre-install:
-	for script in ${RCD_SCRIPTS}; do				\
+	@for script in ${RCD_SCRIPTS}; do				\
 		${SED} ${FILES_SUBST_SED} ${FILESDIR}/$${script}.sh	\
 			> ${WRKDIR}/$${script};				\
 	done
@@ -130,7 +137,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
 
-	${SED} ${FILES_SUBST_SED}					\
+	@${SED} ${FILES_SUBST_SED}					\
 		${FILESDIR}/smb.conf.sample > ${WRKDIR}/smb.conf.sample
 	${INSTALL_DATA} ${WRKDIR}/smb.conf.sample ${EXAMPLESDIR}
 
