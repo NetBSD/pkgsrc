@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1350 2004/02/07 15:38:57 wiz Exp $
+$NetBSD: TODO,v 1.1351 2004/02/07 15:41:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -135,7 +135,6 @@ Suggested package updates
 	o bochs-2.1
 	o boehm-gc-6.3alpha2
 	o bogofilter-0.15.13.2
-	o bomberclone-0.11.1
 	o bzflag-1.10.4
 	o centericq-4.9.10
 	o cervisia-2.0
