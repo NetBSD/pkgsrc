@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# $NetBSD: wrapper,v 1.1.1.1 2001/12/19 14:10:04 tron Exp $
+
+@MKDIR@ $HOME/.everybuddy
+@RM@ -f $HOME/.everybuddy/eb_socke
+
+PATH=@PREFIX@/libexec/everybuddy:$PATH; export PATH
+
+exec everybuddy "$@"
