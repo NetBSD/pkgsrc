@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.14 2004/08/16 06:53:08 minskim Exp $
+$NetBSD: distinfo,v 1.15 2004/11/29 17:36:10 minskim Exp $
 
-SHA1 (xchat-2.4.0.tar.bz2) = 61a62f4d614305b5c64b1d6d986e0134b5f5884c
-Size (xchat-2.4.0.tar.bz2) = 1159266 bytes
+SHA1 (xchat-2.4.1.tar.bz2) = 6e096fc536367470f213832f313312560d4920e1
+Size (xchat-2.4.1.tar.bz2) = 1214388 bytes
+SHA1 (xc241-fix-fetext.diff) = befb516e34ca447dd4855ba7ca262bc166280155
+Size (xc241-fix-fetext.diff) = 568 bytes
