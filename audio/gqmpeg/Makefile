@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/06/15 09:05:23 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2001/06/16 19:59:54 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1998/12/28 01:02:05 vanilla Exp
 
 DISTNAME=		gqmpeg-0.8.3
@@ -12,19 +12,21 @@ COMMENT=		GTK+ front end to mpg123
 
 BUILD_USES_MSGFMT=	yes
 
-DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		mpg123-0.59r:../../audio/mpg123
 
 #USE_LIBINTL=		YES
 USE_X11BASE=		YES
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../graphics/gdk-pixbuf/buildlink.mk"
-
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--enable-japanese
 CONFIGURE_ENV+=		PKGLOCALEDIR="${PKGLOCALEDIR}"
+
+USE_CONFIG_WRAPPER=	YES
+
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../graphics/gdk-pixbuf/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 
 # in case gnome isn't installed, we need to create the directories
 pre-install:
