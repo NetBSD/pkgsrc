@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/08/25 18:38:57 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/26 06:59:47 jlam Exp $
 #
 
 DISTNAME=	aalib-1.4rc4
@@ -11,7 +11,7 @@ MAINTAINER=	manu@netbsd.org
 HOMEPAGE=	http://aa-project.sourceforge.net/aalib/
 COMMENT=	ASCII Art library
 
-CONFLICTS+=	aalib-x11-[0-9]*
+CONFLICTS+=	aalib-x11<=1.4.0.4
 
 WRKSRC=		${WRKDIR}/aalib-1.4.0
 USE_BUILDLINK2=		YES
