@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2002/03/15 12:42:18 martti Exp $
+# $NetBSD: Makefile,v 1.11 2002/04/17 11:06:54 shell Exp $
 
-DISTNAME=	Net_SSLeay.pm-1.13
+DISTNAME=	Net_SSLeay.pm-1.15
 PKGNAME=	p5-${DISTNAME:S/Net_/Net-/:S/.pm//}
 SVR4_PKGNAME=	p5nsl
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
-MAINTAINER=	shell@shellhung.org
+MAINTAINER=	shell@netbsd.org
 HOMEPAGE=	http://www.bacus.pt/Net_SSLeay/index.html
 COMMENT=	perl5 module for using OpenSSL
 
