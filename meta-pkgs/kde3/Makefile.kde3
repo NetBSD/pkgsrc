@@ -1,16 +1,16 @@
-# $NetBSD: Makefile.kde3,v 1.5 2004/01/24 14:01:53 grant Exp $
+# $NetBSD: Makefile.kde3,v 1.6 2004/02/04 14:01:16 markd Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
 # settings).
 
 CATEGORIES+=	kde
-_KDE_VERSION=	3.1.5
-MASTER_SITES_KDE=	ftp://ftp.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://ftp.us.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://ftp.de.kde.org/pub/kde/stable/${_KDE_VERSION}/src/ \
-		ftp://public.planetmirror.com.au/pub/kde/stable/${_KDE_VERSION}/src/ \
-		http://public.planetmirror.com.au/pub/kde/stable/${_KDE_VERSION}/src/
+_KDE_VERSION=	3.2.0
+MASTER_SITES_KDE=	ftp://ftp.kde.org/pub/kde/stable/3.2/src/ \
+		ftp://ftp.us.kde.org/pub/kde/stable/3.2/src/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/3.2/src/ \
+		ftp://public.planetmirror.com.au/pub/kde/stable/3.2/src/ \
+		http://public.planetmirror.com.au/pub/kde/stable/3.2/src/
 MASTER_SITES?=	${MASTER_SITES_KDE}
 EXTRACT_SUFX?=	.tar.bz2
 
