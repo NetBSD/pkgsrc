@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2004/10/03 16:06:18 taca Exp $
+$NetBSD: distinfo,v 1.65 2004/10/06 08:06:37 abs Exp $
 
 SHA1 (squid-2.5.6nb3/squid-2.5.STABLE6.tar.bz2) = e9d6606949b3e7caedfac5d3959d33703a81bb67
 Size (squid-2.5.6nb3/squid-2.5.STABLE6.tar.bz2) = 1047199 bytes
@@ -20,7 +20,7 @@ SHA1 (squid-2.5.6nb3/squid-2.5.STABLE6-basic_auth_caseinsensitive.patch) = 236a0
 Size (squid-2.5.6nb3/squid-2.5.STABLE6-basic_auth_caseinsensitive.patch) = 2337 bytes
 SHA1 (squid-2.5.6nb3/squid-2.5.STABLE6-active_requests_delaypool.patch) = 62ca044bc57c84ee6963b69e8fd48e1e4a13bad1
 Size (squid-2.5.6nb3/squid-2.5.STABLE6-active_requests_delaypool.patch) = 500 bytes
-SHA1 (squid-2.5.6nb3/squid-2.5.STABLE6-client_db_gc.patch) = b5ad443c429245cd4cdf01d44c1beb02ff545442
+SHA1 (squid-2.5.6nb3/squid-2.5.STABLE6-client_db_gc.patch) = a3acfc08cbc50059e054dc59fdac08d0ef4fba4a
 Size (squid-2.5.6nb3/squid-2.5.STABLE6-client_db_gc.patch) = 3668 bytes
 SHA1 (squid-2.5.6nb3/squid-2.5.STABLE6-ntlmtruncated.patch) = 88657150423327808b475ffff9999497fbd76657
 Size (squid-2.5.6nb3/squid-2.5.STABLE6-ntlmtruncated.patch) = 4383 bytes
