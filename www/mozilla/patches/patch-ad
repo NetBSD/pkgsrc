@@ -1,3 +1,5 @@
+$NetBSD: patch-ad,v 1.7 2000/06/19 04:17:27 soren Exp $
+
 --- configure.in.orig	Tue Jun 13 16:56:51 2000
 +++ configure.in	Mon Jun 19 06:06:55 2000
 @@ -344,6 +344,11 @@
