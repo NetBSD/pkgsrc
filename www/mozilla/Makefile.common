@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2003/09/27 12:16:42 markd Exp $
+# $NetBSD: Makefile.common,v 1.23 2003/12/20 10:28:45 grant Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -58,6 +58,10 @@ CONFIGURE_ARGS+=	--enable-svg
 
 .ifdef BUILD_CALENDAR
 CONFIGURE_ARGS+=	--enable-calendar
+.endif
+
+.if exists(${X11BASE}/include/X11/extensions/Xinerama.h)
+CONFIGURE_ARGS+=	--enable-xinerama
 .endif
 
 # avoid creating a .mozilla directory in the users home
