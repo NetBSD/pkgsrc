@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2004/03/15 17:38:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2004/04/17 03:45:46 snj Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
@@ -17,6 +17,8 @@ BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 .if !defined(BUILDING_MESA)
 BUILDLINK_CPPFLAGS.MesaLib=	-DGLX_GLXEXT_LEGACY
 .endif
+
+BUILDLINK_TRANSFORM+=		l:MesaGL:GL
 
 .endif	# MESALIB_BUILDLINK3_MK
 
