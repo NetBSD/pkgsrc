@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/03/18 17:45:13 jlam Exp $
+bin/pgtclsh
+include/libpgtcl.h
+lib/libpgtcl.a
+lib/libpgtcl.so.2.0
+lib/pltcl.so
