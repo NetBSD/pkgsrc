@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/05/14 20:04:13 kim Exp $
+# $NetBSD: Makefile,v 1.5 2000/06/05 07:28:27 tron Exp $
 
 DISTNAME=	fxtv-1.02
 CATEGORIES=	graphics
@@ -11,7 +11,8 @@ HOMEPAGE=	http://www.ipass.net/~dbhopper/aa8vb/fxtv/
 DEPENDS+=	tiff>=3.5.5:../../graphics/tiff
 DEPENDS+=	xpm-3.4[j-z]:../../graphics/xpm
 
-ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.[5-9]*-*
+ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-i386 \
+			NetBSD-1.[5-9]*-*
 
 USE_GMAKE=	yes
 USE_XAW=	yes
