@@ -1,4 +1,4 @@
-.\"	$NetBSD: cpuflags.1,v 1.6 2002/01/03 11:54:47 abs Exp $
+.\"	$NetBSD: cpuflags.1,v 1.7 2002/07/15 10:48:47 abs Exp $
 .Dd May 31, 2001
 .Dt CPUFLAGS 1
 .Os
@@ -21,7 +21,7 @@ will set the following
 .Xr make 1
 variables. The first two are explicitly added to MAKE_ENV, while MAKE_FLAGS
 will have CCOPTIONS=${CPU_FLAGS}
-.Bl -tag -width CPU_FLAGS -compact
+.Bl -tag -width LOWER_CPU_DIR -compact
 .It
 .It CPU_FLAGS
 The output of cpuflags
