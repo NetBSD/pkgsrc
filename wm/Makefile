@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2005/02/03 09:59:59 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2005/03/06 21:19:31 jmmv Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -38,7 +38,6 @@ SUBDIR+=	ion3-devel
 SUBDIR+=	larswm
 SUBDIR+=	lwm
 SUBDIR+=	matchbox
-SUBDIR+=	menu2wm
 SUBDIR+=	metacity
 SUBDIR+=	novawm
 SUBDIR+=	obconf
