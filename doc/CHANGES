@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8695 2005/01/11 11:22:51 adam Exp $
+$NetBSD: CHANGES,v 1.8696 2005/01/11 11:42:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -234,3 +234,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated abiword to 2.2.2 [adam 2005-01-11]
 	Updated abiword-plugins to 2.2.2 [adam 2005-01-11]
 	Updated gentoo to 0.11.54 [adam 2005-01-11]
+	Removed gnome-extras [jmmv 2005-01-11]
