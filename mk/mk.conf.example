@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.218 2001/06/04 20:01:02 jtb Exp $
+# $NetBSD: mk.conf.example,v 1.219 2001/06/04 20:17:52 jtb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -182,6 +182,9 @@
 #ACCEPTABLE_LICENSES+=	unrar-license
 # Enable it if you accept the license terms for the unrar archiver
 # and would like to build unrar.  see pkgsrc/archivers/unrar.
+#ACCEPTABLE_LICENSES+=	zoo-license
+# Enable it if you accept the license terms for the zoo archiver
+# and would like to build zoo.  see pkgsrc/archivers/zoo.
 #ACCEPTABLE_LICENSES+=	emiclock-license
 # Enable it if you accept the license terms for emiclock
 # and would like to build it.  see pkgsrc/time/emiclock.
