@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.3 2004/11/06 16:49:34 sketch Exp $
+
+--- bonobo/bonobo-app-client.c.orig	Sat Nov  6 15:23:37 2004
++++ bonobo/bonobo-app-client.c	Sat Nov  6 15:23:49 2004
+@@ -266,7 +266,7 @@
+ }
+ 
+ 
+-static __inline__ GType
++static inline GType
+ _typecode_to_gtype (CORBA_TypeCode tc)
+ {
+ 	static GHashTable *hash = NULL;
