@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 2005/03/21 18:08:31 wiz Exp $
+
+--- cfs_fh.c.orig	2004-11-30 11:19:25.000000000 -0500
++++ cfs_fh.c
+@@ -547,7 +547,9 @@ fhtofd(f,mode)
+ 		openfd=NULL;
+ 	}
+ 
++#if 0
+ 	if (mode==0) { mode=CFS_WRITE; }
++#endif
+ 	/* Phil Karn's hack for R/O file systems */
+ 	if ((fd=open(f->name,mode,0))<0 && errno == EROFS) {
+ 		mode = CFS_READ;        /* Force read and try again */
