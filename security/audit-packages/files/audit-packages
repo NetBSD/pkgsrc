@@ -1,4 +1,5 @@
 #! ${SH}
+# $NetBSD: audit-packages,v 1.6 2001/12/17 18:08:21 wiz Exp $
 
 if [ ! -f ${DISTDIR}/vulnerabilities ] ;then
     echo "** Missing ${DISTDIR}/vulnerabilities" 1>&2
