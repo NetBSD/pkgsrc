@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/10/04 23:42:01 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/10/05 12:08:07 tron Exp $
 #
 
 DISTNAME=	gnome-libs-0.30.1
@@ -6,8 +6,6 @@ CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/ \
 		ftp://ftp.gnome.org/pub/GNOME/sources/ \
 		ftp://ftp.geo.net/pub/gnome/sources/
-
-NOT_FOR_ARCHS=	alpha	# problems with gtk
 
 MAINTAINER=	tron@netbsd.org
 
@@ -20,6 +18,8 @@ DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	imlib-1.7:../../graphics/imlib
 
+NOT_FOR_ARCHS=	alpha	# problems with gtk
+
 CONFLICTS=	gnome-libs-0.27
 
 GNU_CONFIGURE=	yes
@@ -27,10 +27,20 @@ USE_X11=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 
-CONFIGURE_ARGS+=	--localstatedir=${X11BASE}/lib/X11/Gnome/var --with-glib-prefix=${LOCALBASE}
+LOCALSTATEDIR=	/var/gnome
+
+CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
+			--with-glib-prefix=${LOCALBASE}
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
+
+PLIST_SRC=	${WRKDIR}/PLIST
 
 pre-build:
 	(cd ${WRKSRC}/support; ${GMAKE} gnomesupport.h)
+
+post-install:
+	${MKDIR} ${LOCALSTATEDIR}
+	${SED} -e 's#@@LOCALSTATEDIR@@#${LOCALSTATEDIR}#' \
+	    <${PKGDIR}/PLIST >${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
