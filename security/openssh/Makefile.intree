@@ -1,16 +1,6 @@
-# $NetBSD: Makefile.intree,v 1.4 2002/08/20 17:13:38 abs Exp $
+# $NetBSD: Makefile.intree,v 1.5 2002/08/28 04:00:55 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
-
-# We would like to require an in-tree OpenSSL that is at least 0.9.5a, but the
-# openssl buildlink.mk forces at least 0.9.5f, which makes
-# UPDATE_INTREE_OPENSSH useless for anything before 1.6x
-#
-# USE_OPENSSL_VERSION:=	${OPENSSL_VERSION_095A}
-.include "../../security/openssl/buildlink.mk"
-.if ${_NEED_OPENSSL} == "YES"
-IGNORE=		"OpenSSL>=0.9.5f in the base distribution is required."
-.endif
 
 _UPDATE_INTREE_OPENSSH?=	NO
 .if ${OPSYS} == "NetBSD"
@@ -28,6 +18,17 @@ PKG_SYSCONFSUBDIR:=		ssh
 .  endfor
 .endif
 
+# We would like to require an in-tree OpenSSL that is at least 0.9.5a, but the
+# openssl buildlink.mk forces at least 0.9.6f, which makes
+# UPDATE_INTREE_OPENSSH useless for anything before 1.6*
+#
+# USE_OPENSSL_VERSION:=	${OPENSSL_VERSION_095A}
+.include "../../security/openssl/buildlink2.mk"
+.if ${_NEED_OPENSSL} == "YES"
+_UPDATE_INTREE_OPENSSH=		NO
+IGNORE=		"OpenSSL>=0.9.6f in the base distribution is required."
+.endif
+
 .if ${_UPDATE_INTREE_OPENSSH} == "YES"
 NO_MTREE=		yes
 NO_PKG_REGISTER=	yes
@@ -38,7 +39,7 @@ PKG_SYSCONFBASE:=	/etc
 MANDIR:=		share/man
 RCD_SCRIPTS_EGDIR:=	share/examples/openssh
 .else
-IGNORE=		"Unable to update in-tree OpenSSH for ${OPSYS}-${OS_VERSION}."
+IGNORE?=	"Unable to update in-tree OpenSSH for ${OPSYS}-${OS_VERSION}."
 .endif
 
 real-tarball:
