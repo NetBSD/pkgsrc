@@ -1,5 +1,5 @@
 <?php
-# $NetBSD: pear_plist.php,v 1.1 2004/04/03 04:39:47 jdolecek Exp $
+# $NetBSD: pear_plist.php,v 1.1 2004/11/01 19:55:57 jdolecek Exp $
 # Parses package XML file and outputs appropriate PLIST
 
 $PEAR_LIB = getenv('PEAR_LIB');
