@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7427 2004/10/14 09:45:30 jmmv Exp $
+$NetBSD: CHANGES,v 1.7428 2004/10/14 12:29:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4710,3 +4710,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ccache to 2.4 [xtraeme 2004-10-14]
 	Updated gtkhtml30 to 3.0.10nb2 [grant 2004-10-14]
 	Updated gaim to 1.0.1 [jmmv 2004-10-14]
+	Added xbomb-2.1a [adam 2004-10-14]
