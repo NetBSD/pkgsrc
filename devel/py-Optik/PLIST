@@ -1,12 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/26 15:11:50 shell Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/09/14 16:43:48 recht Exp $
 ${PYSITELIB}/optik/__init__.py
 ${PYSITELIB}/optik/__init__.pyc
+${PYSITELIB}/optik/__init__.pyo
 ${PYSITELIB}/optik/errors.py
 ${PYSITELIB}/optik/errors.pyc
+${PYSITELIB}/optik/errors.pyo
 ${PYSITELIB}/optik/help.py
 ${PYSITELIB}/optik/help.pyc
+${PYSITELIB}/optik/help.pyo
 ${PYSITELIB}/optik/option.py
 ${PYSITELIB}/optik/option.pyc
+${PYSITELIB}/optik/option.pyo
 ${PYSITELIB}/optik/option_parser.py
 ${PYSITELIB}/optik/option_parser.pyc
+${PYSITELIB}/optik/option_parser.pyo
 @dirrm ${PYSITELIB}/optik

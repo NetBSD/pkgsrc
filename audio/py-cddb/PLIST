@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2001/12/07 19:48:01 jmc Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/09/14 16:43:46 recht Exp $
 ${PYSITELIB}/CDDB.py
 ${PYSITELIB}/CDDB.pyc
+${PYSITELIB}/CDDB.pyo
 ${PYSITELIB}/DiscID.py
 ${PYSITELIB}/DiscID.pyc
+${PYSITELIB}/DiscID.pyo
 ${PYSITELIB}/cdrom.so
