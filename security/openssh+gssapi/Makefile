@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/27 19:08:36 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2004/05/11 04:40:59 snj Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -55,7 +55,7 @@ MANDIR=			man
 
 PLIST_SUBST+=		MANDIR=${MANDIR}
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -74,14 +74,14 @@ CPPFLAGS+=		-I/usr/include/krb5 -I/usr/include/kerberosIV
 # XXX: why yet.  For the moment, disable PAM authentication.
 #
 #.if defined(USE_PAM)
-#.include "../../security/PAM/buildlink2.mk"
+#.include "../../security/PAM/buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-pam
 #PLIST_SRC+=		${.CURDIR}/PLIST.pam
 #MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
 #.endif
 
 .if (${OPSYS} == "Darwin") || (${OPSYS} == "SunOS")
-.  include "../../security/skey/buildlink2.mk"
+.  include "../../security/skey/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-skey=${BUILDLINK_PREFIX.skey}
 .elif ${OPSYS} == "NetBSD"
 # XXX: NetBSD has 4 args (4: sslen) to skeychallenge instead of 3
@@ -154,9 +154,9 @@ post-install:
 #	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.freebsd ${EGDIR}/sshd.pam
 #.endif
 
-.include "../../devel/zlib/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../security/tcp_wrappers/buildlink2.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/autoconf.mk"
 
 .include "../../mk/bsd.pkg.mk"
