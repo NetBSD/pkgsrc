@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 1999/11/17 14:51:57 drochner Exp $
+# $NetBSD: Makefile,v 1.36 1999/12/08 16:12:21 proff Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
@@ -64,6 +64,7 @@
 #    SUBDIR += scm
     SUBDIR += siod
     SUBDIR += smalleiffel
+    SUBDIR += sml-nj
 #    SUBDIR += smalltalk
 #    SUBDIR += squeak
 #    SUBDIR += sr
