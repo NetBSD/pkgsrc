@@ -1,0 +1,43 @@
+--- Makefile.orig	Tue Feb  8 21:11:37 1994
++++ Makefile	Sun Jul 26 07:39:28 1998
+@@ -12,8 +12,8 @@
+ #BIN = /usr/public/${HOSTTYPE}/games
+-BIN = /usr/local/games
++BIN = $(PREFIX)/bin
+ # Directory where the library for this game will be stored
+-LIB = /usr/local/games/lib/${GAME}
++LIB = $(PREFIX)/share/${GAME}
+ # Directory where manual pages are kept
+ MANEXT = 6
+-MAN = /usr/local/man/man${MANEXT}
++MAN = $(PREFIX)/man/man${MANEXT}
+ # Font used to display score
+@@ -30,6 +30,6 @@
+ #CFLAGS = -O
+-CFLAGS = -O2 -W -Wreturn-type -Wunused -finline-functions -D__USE_BSD_SIGNAL 
++CFLAGS = -O2 -W -Wreturn-type -Wunused -finline-functions -D__USE_BSD_SIGNAL -I$(PREFIX)/include
+ #CFLAGS = -g
+ #LDFLAGS = -L /usr/X11/lib -lbsd -s
+-LDFLAGS = -L /usr/X11/lib -s
++LDFLAGS = $(RPATH) -L$(PREFIX)/lib
+ 
+@@ -38,13 +38,12 @@
+ install: all
+-	-mkdir ${LIB}
+-	cp ${GAME} ${EDITOR} ${BIN}
++	-mkdir -p ${LIB}
++	install -s -o bin -g games -m 2755 ${GAME} ${BIN}
++	install -s -o bin -g games -m 2755 ${EDITOR} ${BIN}
+ # The next line sets up the level files so that anyone can edit all of
+ # the levels.  Remove this line to have better security.
+-	chmod 4755 ${BIN}/${EDITOR}
+-	touch ${LIB}/scores
++	install -o bin -g games -m 0664 /dev/null ${LIB}/scores
+ # Allow anyone to modify the high score file.  An alternative is to
+ # change the mode bits of ${GAME} to be 4755.
+-	chmod 666 ${LIB}/scores
+-	cp goldlev* default ${LIB}
+-	cp golddig.p ${MAN}/golddig.${MANEXT}
++	install -o bin -g bin -m 0644 goldlev* default ${LIB}
++	install -o root -g wheel -m 0644 golddig.p ${MAN}/golddig.${MANEXT}
+ 
