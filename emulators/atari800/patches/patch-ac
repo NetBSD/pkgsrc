@@ -1,21 +1,23 @@
-$NetBSD: patch-ac,v 1.3 2003/07/13 17:51:50 dillo Exp $
+$NetBSD: patch-ac,v 1.4 2004/01/08 15:24:42 adam Exp $
 
---- Makefile.in.orig	Mon Jan 27 15:13:01 2003
+--- Makefile.in.orig	2004-01-08 15:57:43.000000000 +0000
 +++ Makefile.in
-@@ -6,13 +6,15 @@ EXEEXT=@EXEEXT@
- TARGET=atari800$(EXEEXT)
- CFLAGS=@CPPFLAGS@ @CFLAGS@
- DEFS=@DEFS@
-+srcdir=@srcdir@
+@@ -5,15 +5,15 @@ DEFS = @DEFS@
+ LIBS = @LIBS@
+ TARGET = atari800@EXEEXT@
  
- PREFIX		= @prefix@
- BIN_PATH	= ${PREFIX}/bin
- LIB_PATH	= ${PREFIX}/lib
- MAN_PATH	= ${PREFIX}/share/man
+-CFLAGS = @CFLAGS@
+-LDFLAGS = @LDFLAGS@
++CFLAGS = @CFLAGS@ -DPREFIX=\"${PREFIX}\" -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\"
++LDFLAGS = @LDFLAGS@ ${LIBOSSAUDIO}
  
--INCLUDE=-I.
-+INCLUDE=-I. -I$(srcdir)
-+VPATH=.:$(srcdir)
+ INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@ -s
+ INSTALL_DATA = @INSTALL_DATA@
  
- LDFLAGS=@LDFLAGS@
- LIBS=@LIBS@
+ BIN_DIR = @prefix@/bin
+-MAN_DIR = @prefix@/share/man/man1
++MAN_DIR = @prefix@/man/man1
+ DOC_DIR = @prefix@/share/doc/atari800
+ 
+ DESTDIR =
