@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/06/12 03:01:44 kim Exp $
+# $NetBSD: Makefile,v 1.6 1999/08/18 09:28:02 agc Exp $
 
 DISTNAME=	cyrus-imapd-v1.5.14
 CATEGORIES=	mail
@@ -24,11 +24,15 @@ CONFIGURE_ARGS+=	--with-statedir=/var/run
 CONFIGURE_ARGS+=	--includedir=${LOCALBASE}/include/tcl8.0
 CONFIGURE_ARGS+=	--enable-netscapehack
 
-.include "../../mk/bsd.pkg.mk"
+BUILD_DEFS+=		USE_KERBEROS4
 
-PKGNAME!=	${ECHO} "${DISTNAME}" | ${SED} -e 's/-imapd-v/-/'
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_KERBEROS4)
 CONFIGURE_ARGS+=	--with-login=krb
 RESTRICTED=		uses Kerberos encryption code
 .endif
+
+.include "../../mk/bsd.pkg.mk"
+
+PKGNAME!=	${ECHO} "${DISTNAME}" | ${SED} -e 's/-imapd-v/-/'

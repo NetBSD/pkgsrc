@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1999/07/23 21:39:41 tron Exp $
+# $NetBSD: Makefile,v 1.12 1999/08/18 09:28:02 agc Exp $
 #
 # Tempted to install another radius package?
 #
@@ -36,6 +36,8 @@ MAKE_ENV+=	RADLIBS="${RADLIBS} -lskey" LIBS=-lcrypt \
 #RADLIBS=	-lkrb -ldes
 #RESTRICTED=	uses Kerberos encryption code
 #.endif
+
+BUILD_DEFS+=	USE_KERBEROS4
 
 .include "../../mk/bsd.prefs.mk"
 
