@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:55 wiz Exp $
-
-This package should be deinstalled before you update to a newer Solaris
-or OpenWindows version.
-
-===========================================================================
