@@ -1,0 +1,58 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/07/29 04:49:52 xtraeme Exp $
+
+--- config/cf/FreeBSD.cf.in.orig	2004-03-03 07:40:43.000000000 +0000
++++ config/cf/FreeBSD.cf.in	2004-03-03 07:44:05.000000000 +0000
+@@ -190,11 +190,11 @@
+ # define CcCmd			$(CLIENTENVSETUP) cc
+ # define CplusplusCmd		$(CLIENTENVSETUP) c++
+ #else
+-# define CcCmd			cc
+-# define CplusplusCmd		c++
++# define CcCmd			@@PKGSRC_CC@@
++# define CplusplusCmd		@@PKGSRC_CXX@@
+ #endif
+ 
+-#define CppCmd			/usr/bin/cpp
++#define CppCmd			@@PKGSRC_CPP@@
+ #define PreProcessCmd		CppCmd
+ #define StandardCppOptions	-traditional
+ #define StandardCppDefines	/**/
+@@ -207,7 +207,7 @@
+ #else
+ #define NoSystemWarn
+ #endif
+-#define DefaultCCOptions	-ansi -pedantic NoSystemWarn -Dasm=__asm \
++#define DefaultCCOptions	-ansi NoSystemWarn -Dasm=__asm \
+ 	GccWarningOptions
+ #endif
+ #endif
+@@ -439,18 +439,8 @@
+ #define XawI18nDefines		-DUSE_XWCHAR_STRING -DUSE_XMBTOWC
+ #endif
+ 
+-/* The GCC strength-reduce bug is fixed for FreeBSD 2.1.5 and later */
+-#ifndef DefaultGcc2i386Opt
+-#if OSMajorVersion > 2 || (OSMajorVersion == 2 && OSMinorVersion > 1) || (OSMajorVersion == 2 && OSMinorVersion == 1 && OSTeenyVersion >= 5)
+-#define DefaultGcc2i386Opt -O2 GccAliasingArgs
+-#endif
+-#endif
+-
+-#ifdef i386Architecture
+-# define OptimizedCDebugFlags DefaultGcc2i386Opt
+-#else
+-# define OptimizedCDebugFlags -O
+-#endif
++#define DefaultGcc2i386Opt
++#define OptimizedCDebugFlags   @@PKGSRC_CFLAGS@@
+ 
+ #ifndef PreIncDir
+ # define PreIncDir	/usr/include
+@@ -476,7 +466,7 @@
+  * Compress manual pages
+  */
+ #ifndef CompressManPages
+-# define CompressManPages	YES
++# define CompressManPages	NO
+ #endif
+ 
+ #if OSMajorVersion > 2 || (OSMajorVersion == 2 && OSMinorVersion >= 1)
