@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2003/05/10 01:31:26 jtb Exp $
+$NetBSD: patch-ac,v 1.2 2003/06/23 21:04:38 jtb Exp $
 
 --- gperiodic.c.orig
 +++ gperiodic.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1 2003/05/10 01:31:26 jtb Exp $
  
  int main(int argc, char** argv) {
 -  char ch;
-+  signed char ch;
++  int ch;
  
      textdomain (PACKAGE);
      bindtextdomain(PACKAGE, GPERIODIC_LOCALE_DIR);
