@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/12/22 08:14:26 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/02/15 03:42:31 minskim Exp $
 lib/xemacs/xemacs-packages/etc/BABYL
 lib/xemacs/xemacs-packages/etc/app-defaults/de/Emacs
 lib/xemacs/xemacs-packages/etc/app-defaults/fr/Emacs
@@ -124,6 +124,97 @@ lib/xemacs/xemacs-packages/etc/e/emancs
 lib/xemacs/xemacs-packages/etc/e/emancs.ti
 lib/xemacs/xemacs-packages/etc/e/eterm
 lib/xemacs/xemacs-packages/etc/e/eterm.ti
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-15/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-15/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-15/end-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-15/guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-15/handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-15/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-15/no-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-15/no-handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-15/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-16/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-16/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-16/end-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-16/guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-16/handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-16/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-16/no-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-16/no-handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-16/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-17/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-17/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-17/end-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-17/guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-17/handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-17/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-17/no-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-17/no-handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-17/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-18/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-18/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-18/end-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-18/guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-18/handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-18/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-18/no-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-18/no-handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-18/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-19/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-19/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-19/end-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-19/guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-19/handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-19/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-19/no-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-19/no-handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-19/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-20/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-20/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-20/end-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-20/guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-20/handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-20/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-20/no-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-20/no-handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-20/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-21/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-21/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-21/end-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-21/guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-21/handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-21/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-21/no-guide.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-21/no-handle.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-21/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-15/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-15/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-15/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-15/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-16/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-16/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-16/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-16/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-17/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-17/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-17/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-17/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-18/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-18/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-18/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-18/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-19/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-19/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-19/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-19/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-20/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-20/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-20/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-20/open.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-21/close.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-21/empty.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-21/leaf.xpm
+lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-21/open.xpm
 lib/xemacs/xemacs-packages/etc/edict/ChangeLog.096
 lib/xemacs/xemacs-packages/etc/edict/README
 lib/xemacs/xemacs-packages/etc/edict/README.096
@@ -156,6 +247,10 @@ lib/xemacs/xemacs-packages/etc/ediff/ediff-update.xpm
 lib/xemacs/xemacs-packages/etc/edt-user.doc
 lib/xemacs/xemacs-packages/etc/emerge.txt
 lib/xemacs/xemacs-packages/etc/enriched.doc
+lib/xemacs/xemacs-packages/etc/erc/AUTHORS
+lib/xemacs/xemacs-packages/etc/erc/CREDITS
+lib/xemacs/xemacs-packages/etc/erc/README
+lib/xemacs/xemacs-packages/etc/erc/servers.pl
 lib/xemacs/xemacs-packages/etc/ess/BACKBUGS.BAT
 lib/xemacs/xemacs-packages/etc/ess/backbugs
 lib/xemacs/xemacs-packages/etc/ess/ess-s4.S
@@ -1392,10 +1487,7 @@ lib/xemacs/xemacs-packages/etc/zenirc/server-list
 lib/xemacs/xemacs-packages/etc/zenirc/tao-of-irc
 lib/xemacs/xemacs-packages/etc/zenirc/tour.of.irc
 lib/xemacs/xemacs-packages/etc/zenirc/undernet
-lib/xemacs/xemacs-packages/info/auctex.info
-lib/xemacs/xemacs-packages/info/auctex.info-1
-lib/xemacs/xemacs-packages/info/auctex.info-2
-lib/xemacs/xemacs-packages/info/auctex.info-3
+lib/xemacs/xemacs-packages/info/auc-tex.info
 lib/xemacs/xemacs-packages/info/bbdb.info
 lib/xemacs/xemacs-packages/info/build.info
 lib/xemacs/xemacs-packages/info/calc.info
@@ -1633,6 +1725,7 @@ lib/xemacs/xemacs-packages/lisp/apel/std11.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/apel/std11.elc
 lib/xemacs/xemacs-packages/lisp/auctex/CHANGES
 lib/xemacs/xemacs-packages/lisp/auctex/ChangeLog
+lib/xemacs/xemacs-packages/lisp/auctex/INSTALLATION
 lib/xemacs/xemacs-packages/lisp/auctex/PROBLEMS
 lib/xemacs/xemacs-packages/lisp/auctex/README
 lib/xemacs/xemacs-packages/lisp/auctex/_pkg.el${ELSUFX}
@@ -2066,6 +2159,8 @@ lib/xemacs/xemacs-packages/lisp/ecb/ecb-examples.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-examples.elc
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-face.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-face.elc
+lib/xemacs/xemacs-packages/lisp/ecb/ecb-file-browser.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/ecb/ecb-file-browser.elc
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-help.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-help.elc
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-jde.el${ELSUFX}
@@ -2074,10 +2169,14 @@ lib/xemacs/xemacs-packages/lisp/ecb/ecb-layout-defs.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-layout-defs.elc
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-layout.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-layout.elc
+lib/xemacs/xemacs-packages/lisp/ecb/ecb-method-browser.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/ecb/ecb-method-browser.elc
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-mode-line.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-mode-line.elc
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-navigate.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-navigate.elc
+lib/xemacs/xemacs-packages/lisp/ecb/ecb-semantic-wrapper.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/ecb/ecb-semantic-wrapper.elc
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-speedbar.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-speedbar.elc
 lib/xemacs/xemacs-packages/lisp/ecb/ecb-tod.el${ELSUFX}
@@ -2118,6 +2217,8 @@ lib/xemacs/xemacs-packages/lisp/ecrypto/md5.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecrypto/md5.elc
 lib/xemacs/xemacs-packages/lisp/ecrypto/paranoid.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecrypto/paranoid.elc
+lib/xemacs/xemacs-packages/lisp/ecrypto/password.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/ecrypto/password.elc
 lib/xemacs/xemacs-packages/lisp/ecrypto/rander.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ecrypto/rander.elc
 lib/xemacs/xemacs-packages/lisp/ecrypto/rc16.el${ELSUFX}
@@ -2567,6 +2668,81 @@ lib/xemacs/xemacs-packages/lisp/emerge/custom-load.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/emerge/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/emerge/emerge.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/emerge/emerge.elc
+lib/xemacs/xemacs-packages/lisp/erc/ChangeLog
+lib/xemacs/xemacs-packages/lisp/erc/ChangeLog.upstream
+lib/xemacs/xemacs-packages/lisp/erc/Makefile.upstream
+lib/xemacs/xemacs-packages/lisp/erc/_pkg.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/auto-autoloads.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/auto-autoloads.elc
+lib/xemacs/xemacs-packages/lisp/erc/custom-load.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/custom-load.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-autoaway.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-autoaway.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-autojoin.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-autojoin.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-bbdb.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-button.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-button.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-chess.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-compat.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-complete.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-complete.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-dcc.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-dcc.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-ezbounce.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-ezbounce.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-fill.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-fill.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-ibuffer.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-imenu.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-imenu.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-lang.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-lang.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-list.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-list.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-log.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-log.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-macs.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-macs.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-maint.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-maint.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-match.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-match.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-members.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-members.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-menu.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-menu.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-nets.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-nets.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-netsplit.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-netsplit.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-nickserv.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-nickserv.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-notify.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-notify.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-page.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-page.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-pcomplete.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-pcomplete.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-replace.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-replace.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-ring.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-ring.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-sound.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-sound.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-speak.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-speedbar.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-stamp.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-stamp.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-track.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-track.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-truncate.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-truncate.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc-xdcc.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc-xdcc.elc
+lib/xemacs/xemacs-packages/lisp/erc/erc.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/erc/erc.elc
+lib/xemacs/xemacs-packages/lisp/erc/mkChangeLog.upstream
 lib/xemacs/xemacs-packages/lisp/eshell/ChangeLog
 lib/xemacs/xemacs-packages/lisp/eshell/_pkg.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/eshell/auto-autoloads.el${ELSUFX}
@@ -2902,7 +3078,6 @@ lib/xemacs/xemacs-packages/lisp/gnus/ChangeLog.1.upstream
 lib/xemacs/xemacs-packages/lisp/gnus/ChangeLog.upstream
 lib/xemacs/xemacs-packages/lisp/gnus/GNUS-NEWS
 lib/xemacs/xemacs-packages/lisp/gnus/_pkg.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/gnus/_pkg.elc
 lib/xemacs/xemacs-packages/lisp/gnus/auto-autoloads.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/auto-autoloads.elc
 lib/xemacs/xemacs-packages/lisp/gnus/binhex.el${ELSUFX}
@@ -2915,6 +3090,8 @@ lib/xemacs/xemacs-packages/lisp/gnus/custom-load.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/gnus/deuglify.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/deuglify.elc
+lib/xemacs/xemacs-packages/lisp/gnus/dgnushack-xemacs.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/gnus/dgnushack.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/earcon.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/earcon.elc
 lib/xemacs/xemacs-packages/lisp/gnus/flow-fill.el${ELSUFX}
@@ -3020,9 +3197,7 @@ lib/xemacs/xemacs-packages/lisp/gnus/gnus-xmas.elc
 lib/xemacs/xemacs-packages/lisp/gnus/gnus.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/gnus.elc
 lib/xemacs/xemacs-packages/lisp/gnus/gpg-ring.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/gnus/gpg-ring.elc
 lib/xemacs/xemacs-packages/lisp/gnus/gpg.el${ELSUFX}
-lib/xemacs/xemacs-packages/lisp/gnus/gpg.elc
 lib/xemacs/xemacs-packages/lisp/gnus/hashcash.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/hashcash.elc
 lib/xemacs/xemacs-packages/lisp/gnus/html2text.el${ELSUFX}
@@ -3031,6 +3206,7 @@ lib/xemacs/xemacs-packages/lisp/gnus/ietf-drums.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/ietf-drums.elc
 lib/xemacs/xemacs-packages/lisp/gnus/imap.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/imap.elc
+lib/xemacs/xemacs-packages/lisp/gnus/lpath.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/mail-parse.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/mail-parse.elc
 lib/xemacs/xemacs-packages/lisp/gnus/mail-prsvr.el${ELSUFX}
@@ -3056,6 +3232,7 @@ lib/xemacs/xemacs-packages/lisp/gnus/mm-extern.elc
 lib/xemacs/xemacs-packages/lisp/gnus/mm-partial.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/mm-partial.elc
 lib/xemacs/xemacs-packages/lisp/gnus/mm-url.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/gnus/mm-url.el.upstream
 lib/xemacs/xemacs-packages/lisp/gnus/mm-url.elc
 lib/xemacs/xemacs-packages/lisp/gnus/mm-util.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/gnus/mm-util.elc
@@ -4256,8 +4433,12 @@ lib/xemacs/xemacs-packages/lisp/net-utils/dns.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/net-utils/dns.elc
 lib/xemacs/xemacs-packages/lisp/net-utils/feedmail.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/net-utils/feedmail.elc
+lib/xemacs/xemacs-packages/lisp/net-utils/google-query.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/net-utils/google-query.elc
 lib/xemacs/xemacs-packages/lisp/net-utils/metamail.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/net-utils/metamail.elc
+lib/xemacs/xemacs-packages/lisp/net-utils/mozmail.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/net-utils/mozmail.elc
 lib/xemacs/xemacs-packages/lisp/net-utils/net-utils.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/net-utils/net-utils.elc
 lib/xemacs/xemacs-packages/lisp/net-utils/rcompile.el${ELSUFX}
@@ -4692,6 +4873,8 @@ lib/xemacs/xemacs-packages/lisp/riece/riece-500.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/riece/riece-500.elc
 lib/xemacs/xemacs-packages/lisp/riece/riece-alias.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/riece/riece-alias.elc
+lib/xemacs/xemacs-packages/lisp/riece/riece-async.el${ELSUFX}
+lib/xemacs/xemacs-packages/lisp/riece/riece-async.elc
 lib/xemacs/xemacs-packages/lisp/riece/riece-button.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/riece/riece-button.elc
 lib/xemacs/xemacs-packages/lisp/riece/riece-channel.el${ELSUFX}
@@ -6071,6 +6254,7 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.egg-its
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.eieio
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.elib
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.emerge
+lib/xemacs/xemacs-packages/pkginfo/MANIFEST.erc
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.eshell
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.ess
 lib/xemacs/xemacs-packages/pkginfo/MANIFEST.eterm
@@ -6312,6 +6496,7 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.zenirc
 @dirrm lib/xemacs/xemacs-packages/lisp/eterm
 @dirrm lib/xemacs/xemacs-packages/lisp/ess
 @dirrm lib/xemacs/xemacs-packages/lisp/eshell
+@dirrm lib/xemacs/xemacs-packages/lisp/erc
 @dirrm lib/xemacs/xemacs-packages/lisp/emerge
 @dirrm lib/xemacs/xemacs-packages/lisp/elib
 @dirrm lib/xemacs/xemacs-packages/lisp/eieio
@@ -6429,8 +6614,27 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.zenirc
 @dirrm lib/xemacs/xemacs-packages/etc/gnats
 @dirrm lib/xemacs/xemacs-packages/etc/frame-icon
 @dirrm lib/xemacs/xemacs-packages/etc/ess
+@dirrm lib/xemacs/xemacs-packages/etc/erc
 @dirrm lib/xemacs/xemacs-packages/etc/ediff
 @dirrm lib/xemacs/xemacs-packages/etc/edict
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-21
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-20
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-19
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-18
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-17
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-16
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories/height-15
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/directories
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-21
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-20
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-19
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-18
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-17
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-16
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default/height-15
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images/default
+@dirrm lib/xemacs/xemacs-packages/etc/ecb/ecb-images
+@dirrm lib/xemacs/xemacs-packages/etc/ecb
 @dirrm lib/xemacs/xemacs-packages/etc/e
 @dirrm lib/xemacs/xemacs-packages/etc/bbdb/tex
 @dirrm lib/xemacs/xemacs-packages/etc/bbdb
@@ -6443,3 +6647,4 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.zenirc
 @dirrm lib/xemacs/xemacs-packages/etc/app-defaults
 @dirrm lib/xemacs/xemacs-packages/etc
 @dirrm lib/xemacs/xemacs-packages
+@comment in xemacs: @dirrm lib/xemacs
