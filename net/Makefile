@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.369 2003/04/11 17:08:00 cjep Exp $
+# $NetBSD: Makefile,v 1.370 2003/04/13 13:02:30 cjep Exp $
 #
 
 COMMENT=	Networking tools
@@ -178,6 +178,7 @@ SUBDIR+=	p5-Net-DNS
 SUBDIR+=	p5-Net-Daemon
 SUBDIR+=	p5-Net-IRC
 SUBDIR+=	p5-Net-SNMP
+SUBDIR+=	p5-Net-Server
 SUBDIR+=	p5-Net-TFTP
 SUBDIR+=	p5-Net-Telnet
 SUBDIR+=	p5-SNMP
