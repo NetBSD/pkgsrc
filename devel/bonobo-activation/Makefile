@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/12/04 19:48:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/07 02:21:16 jlam Exp $
 #
 
 DISTNAME=		bonobo-activation-2.1.1
@@ -25,7 +25,7 @@ PKGCONFIG_OVERRIDE=	${WRKSRC}/bonobo-activation-2.0.pc.in
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFBASE}"
+CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFBASEDIR}"
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 PKG_SYSCONFSUBDIR=	bonobo-activation
