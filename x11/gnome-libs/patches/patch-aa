@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.16 2002/03/24 19:53:42 rh Exp $
+$NetBSD: patch-aa,v 1.16.2.1 2002/08/25 17:58:05 jlam Exp $
 
 --- configure.orig	Tue Jan 22 14:35:12 2002
 +++ configure
@@ -12,8 +12,8 @@ $NetBSD: patch-aa,v 1.16 2002/03/24 19:53:42 rh Exp $
 -  GLIB_LDFLAGS=`echo $GTK_LIBS | sed -e 's/\(-L[^ ]*\) .*$/\1/' -e 's/^.*\(-L[^ ]*\)$/\1/'`
 -fi 
 -GLIB_LIBS="$GLIB_LDFLAGS `echo $GTK_LIBS | sed 's/^.*\(-lglib[^ ]*\).*$/\1/'`"
-+GLIB_CFLAGS="`$GLIB_CONFIG --cflags`"
-+GLIB_LIBS="`$GLIB_CONFIG --libs`"
++GLIB_CFLAGS="`glib-config --cflags`"
++GLIB_LIBS="`glib-config --libs`"
 +GLIB_LDFLAGS="$GLIB_LIBS"
  
  
