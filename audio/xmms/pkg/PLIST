@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2000/03/07 23:03:14 tron Exp $
 bin/xmms
 bin/wmxmms
 bin/xmms-config
@@ -8,11 +9,6 @@ include/xmms/util.h
 include/xmms/fullscreen.h
 include/xmms/dga.h
 include/xmms/plugin.h
-lib/libxmms.so.1
-@exec ln -fs %D/%F %B/libxmms.so
-@exec /usr/bin/env OBJFORMAT=%%PORTOBJFORMAT%% /sbin/ldconfig -m %D/lib
-@unexec rm -f %B/libxmms.so
-@unexec /usr/bin/env OBJFORMAT=%%PORTOBJFORMAT%% /sbin/ldconfig -R
 lib/xmms/Output/libOSS.so
 lib/xmms/Output/libdisk_writer.so
 lib/xmms/Input/libwav.so
@@ -27,7 +23,7 @@ lib/xmms/General/libir.so
 lib/xmms/General/libsong_change.so
 lib/xmms/Visualization/libbscope.so
 lib/xmms/Visualization/libsanalyzer.so
-lib/libxmms.la
+lib/libxmms.so.1.0
 lib/libxmms.a
 share/aclocal/xmms.m4
 share/xmms/wmxmms.xpm

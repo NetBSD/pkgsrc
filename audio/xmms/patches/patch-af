@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1 2000/03/07 23:03:13 tron Exp $
+
+--- libxmms/configure.orig	Tue Mar  7 23:25:18 2000
++++ libxmms/configure	Tue Mar  7 23:28:07 2000
+@@ -1473,6 +1473,7 @@
+ 
+ 
+ 
++if false; then
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1626,6 +1627,7 @@
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
