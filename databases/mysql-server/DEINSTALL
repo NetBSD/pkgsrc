@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.1 2001/11/01 00:11:53 zuntum Exp $
+# $NetBSD: DEINSTALL,v 1.2 2003/01/21 06:02:41 lukem Exp $
 
-PKGNAME=$1
-STAGE=$2
+: ${PKGNAME:=$1}
+: ${STAGE:=$2}
 
 MYSQL_DATADIR="@MYSQL_DATADIR@"
 

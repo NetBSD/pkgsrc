@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2003/01/20 18:09:08 jdolecek Exp $
+# $NetBSD: Makefile,v 1.33 2003/01/21 06:02:41 lukem Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
-PKGREVISION=		1
+PKGREVISION=		2
 SVR4_PKGNAME=		mysqs
 COMMENT=		MySQL, a free SQL database (server)
 
@@ -12,10 +12,11 @@ CONFIGURE_ARGS+=	--without-berkeley-db
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 
+
 ONLY_FOR_PLATFORM=	SunOS-*-sparc Linux-*-*
 
 # on NetBSD, if native threads are not available, hardwire
-# included mit-pthreads
+# included mit-pthreads, as this doesn't yet work properly with pth
 .if (${OPSYS} == "NetBSD")
 .if (exists(/usr/include/pthread.h))
 
@@ -32,7 +33,16 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386	\
 .endif
 .endif
 
+
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+
+PKG_USERS=		${MYSQL_USER}:${MYSQL_GROUP}::MySQL\\ database\\ administrator:${MYSQL_DATADIR}:${SH}
+PKG_GROUPS=		${MYSQL_GROUP}
+RCD_SCRIPTS=		mysqld
+CONFIGURE_ARGS+=	--with-mysqld-user=${MYSQL_USER}
+FILES_SUBST+=		MYSQL_DATADIR=${MYSQL_DATADIR}
+BUILD_DEFS+=		MYSQL_DATADIR
+MAKE_DIRS_PERMS+=	${MYSQL_DATADIR} ${MYSQL_USER} ${MYSQL_GROUP} 0700
 
 post-configure:
 	cd ${WRKSRC} && ${CP} -f config.h include/my_config.h
@@ -55,4 +65,5 @@ post-install:
 
 .include "../../databases/mysql-client/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,4 @@
+If this is a new installation, please remember to set a password for
+the MySQL root user!  This is done with:
+	${PREFIX}/bin/mysqladmin -u root -p password 'new-password'
+See the manual for more instructions.
