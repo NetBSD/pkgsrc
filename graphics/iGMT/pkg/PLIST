@@ -1,10 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/29 04:32:12 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/19 17:48:27 jtb Exp $
 bin/igmt
-share/doc/igmt/COPYING
-share/doc/igmt/COPYRIGHT
-share/doc/igmt/NOTES.TXT
-share/doc/igmt/README.TXT
-share/doc/igmt/manual.ps
 share/examples/igmt/example1.dat
 share/examples/igmt/example1.ps.gz
 share/examples/igmt/example2.dat
@@ -13,6 +8,12 @@ share/examples/igmt/example3.dat
 share/examples/igmt/example3.ps.gz
 share/examples/igmt/example4.dat
 share/examples/igmt/example4.ps.gz
+share/igmt/01_02-98.cmt
+share/igmt/COPYING
+share/igmt/COPYRIGHT
+share/igmt/NOTES.TXT
+share/igmt/README.TXT
+share/igmt/allslabs_rum.gmt
 share/igmt/colminmax.awk
 share/igmt/colormaps/absvel.cpt
 share/igmt/colormaps/bathymetry.cpt
@@ -78,8 +79,8 @@ share/igmt/colormaps/topo2.cpt
 share/igmt/colormaps/topo3.cpt
 share/igmt/colormaps/topo4.cpt
 share/igmt/formatcpt.awk
-share/igmt/01_02-98.cmt
-share/igmt/allslabs_rum.gmt
+share/igmt/gps.vel
+share/igmt/hotspots.dat
 share/igmt/igmt.tcl
 share/igmt/igmt_configure.tcl
 share/igmt/igmt_datasets.tcl
@@ -98,14 +99,12 @@ share/igmt/igmt_menus.tcl
 share/igmt/igmt_parameters.tcl
 share/igmt/igmt_plotting.tcl
 share/igmt/img2latlongrd.batch
-share/igmt/gps.vel
-share/igmt/hotspots.dat
+share/igmt/manual.ps
 share/igmt/nuvel.yx
+share/igmt/sortwsm.awk
 share/igmt/volcanoes.dat
 share/igmt/wcity.dat
 share/igmt/wcity_major.dat
-share/igmt/sortwsm.awk
 @dirrm share/igmt/colormaps
 @dirrm share/igmt
 @dirrm share/examples/igmt
-@dirrm share/doc/igmt
