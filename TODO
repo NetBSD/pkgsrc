@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8 2001/05/04 19:24:43 jlam Exp $
+$NetBSD: TODO,v 1.9 2001/05/04 20:59:45 zuntum Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -50,6 +50,8 @@ package update TODO (Suggested package updates)
 		(zuntum has the patch, will update after freeze)
 	o update postgresql to 7.1 and split into -client/-server packages
 		(jlam has these packages ready, will update after freeze)
+	o update editors/manedit to recent version
+		(zuntum will do that)
 	
 
 pksgrc TODO (Suggested pkgsrc features and enhancements)
