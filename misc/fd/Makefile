@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2001/06/26 11:40:43 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2001/09/14 22:51:54 wiz Exp $
 #
 
-DISTNAME=	FD-1.03s
-PKGNAME=	fd-1.03s
+DISTNAME=	FD-1.03t
+PKGNAME=	fd-1.03t
 CATEGORIES=	misc
 MASTER_SITES=	http://hp.vector.co.jp/authors/VA012337/soft/fd/
 
