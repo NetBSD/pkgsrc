@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/15 10:32:33 grant Exp $
+
+SHA1 (rudiments-0.25.1.tar.gz) = fc580d1da17c17a6f01a782a0eb885f0e32eade6
+Size (rudiments-0.25.1.tar.gz) = 340219 bytes
+SHA1 (patch-aa) = ffb2d6182e5ea6e376cc6b631ea3b24bdaac44eb
