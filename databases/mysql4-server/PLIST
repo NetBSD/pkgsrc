@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/01/10 15:47:18 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/01/17 14:42:35 xtraeme Exp $
 bin/client_test
 bin/comp_err
 bin/isamchk
@@ -68,6 +68,11 @@ share/mysql-test/include/ps_renew.inc
 share/mysql-test/include/system_db_struct.inc
 share/mysql-test/install_test_db
 share/mysql-test/mysql-test-run
+share/mysql-test/r/rpl_insert_ignore.result
+share/mysql-test/r/rpl_many_optimize.result
+share/mysql-test/t/rpl_insert_ignore-slave.opt
+share/mysql-test/t/rpl_insert_ignore.test
+share/mysql-test/t/rpl_many_optimize.test
 share/mysql-test/r/alias.result
 share/mysql-test/r/alter_table.result
 share/mysql-test/r/analyse.result
