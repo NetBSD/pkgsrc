@@ -1,4 +1,4 @@
-DISTNAME=	mkvtoolnix-0.9.5
+DISTNAME=	mkvtoolnix-0.9.6
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.bunkus.org/videotools/mkvtoolnix/sources/
 EXTRACT_SUFX=	.tar.bz2
