@@ -1,13 +1,12 @@
-$NetBSD: patch-av,v 1.1 2004/05/07 01:44:45 danw Exp $
+$NetBSD: patch-av,v 1.2 2004/09/20 02:08:58 dmcmahill Exp $
 
---- src/fasthenry/mulGlobal.h.orig	Sun May  2 21:40:34 2004
-+++ src/fasthenry/mulGlobal.h
-@@ -45,7 +45,7 @@ extern char *   calloc();
- extern char *   malloc();
- extern char *   realloc();
- #else
--#include <malloc.h>
-+#include <stdlib.h>
- #endif /* end if NEWS */
+--- src/zbuf/uglieralloc.c.orig	Tue Aug  3 22:17:23 2004
++++ src/zbuf/uglieralloc.c
+@@ -54,6 +54,7 @@ operation of Software or Licensed Progra
+  - no attempt is made to make allocation efficient in terms of virtual pages
+ */
  #include <stdio.h>
- #include <math.h>
++#include <string.h>
+ 
+ #define NALLOC 8184		/* >= sizeof(HEADER)*NALLOC bytes sbrk()'d */
+ #define MAGICN 0xaaaaaaaaL	/* used to check fidelity of allocated blks */
