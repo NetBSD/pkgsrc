@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:09:35 agc Exp $
+# $NetBSD: Makefile,v 1.8 2005/04/03 21:31:13 fredb Exp $
 
-DISTNAME=	aim-1.5.277
+DISTNAME=	aim-1.5.286
 CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.newaol.com/aimgen/73010/
+MASTER_SITES=	http://ftp.newaol.com/aimgen/380469/
 EXTRACT_SUFX=	-1.i386.rpm
 
 MAINTAINER=	fredb@NetBSD.org
@@ -23,12 +23,16 @@ NO_BUILD=	YES
 
 EXTRACT_ONLY=	# nothing
 PLIST_SRC=	${WRKDIR}/PLIST.rpm
+PLIST_SUBST+=	EMULSUBDIR=${EMULSUBDIR}
+
+DIST_SUBDIR=	.
+RPMFILES=	${DISTFILES}
 
 do-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${LOCALBASE}/sbin/rpm2pkg -d ${PREFIX} -f ${PLIST_SRC} \
-		-p emul/linux ${DISTDIR}/${DISTFILES}
-	${LN} -s ${PREFIX}/emul/linux/usr/local/bin/aim ${PREFIX}/bin/aim
+		-p ${EMULSUBDIR} ${DISTDIR}/${DISTFILES}
+	${LN} -fs ../${EMULSUBDIR}/usr/bin/aim ${PREFIX}/bin/aim
 
 .include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
