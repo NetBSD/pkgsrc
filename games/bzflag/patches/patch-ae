@@ -1,16 +1,24 @@
-$NetBSD: patch-ae,v 1.3 2004/03/02 23:14:31 snj Exp $
+$NetBSD: patch-ae,v 1.4 2004/06/07 02:29:07 snj Exp $
 
---- src/bzflag/Makefile.in.orig	2004-03-02 14:27:33.000000000 -0800
-+++ src/bzflag/Makefile.in	2004-03-02 14:32:25.000000000 -0800
-@@ -241,7 +241,6 @@ bzflag_SOURCES = \
+--- src/bzflag/Makefile.in.orig	2004-06-03 17:38:21.000000000 -0700
++++ src/bzflag/Makefile.in	2004-06-03 17:41:42.000000000 -0700
+@@ -179,7 +179,6 @@ bzflag_SOURCES = \
+ @MACOS_TRUE@	../scene/libSceneDB.a		\
+ @MACOS_TRUE@	../geometry/libGeometry.a	\
+ @MACOS_TRUE@	../mediafile/libMediaFile.a	\
+-@MACOS_TRUE@	../zlib/libz.a			\
+ @MACOS_TRUE@	$(REGEX)			\
+ @MACOS_TRUE@	$(RESOURCE)			\
+ @MACOS_TRUE@	$(GLIBS)
+@@ -193,7 +192,6 @@ bzflag_SOURCES = \
  @MACOS_FALSE@	../scene/libSceneDB.a		\
  @MACOS_FALSE@	../geometry/libGeometry.a	\
  @MACOS_FALSE@	../mediafile/libMediaFile.a	\
 -@MACOS_FALSE@	../zlib/libz.a			\
+ @MACOS_FALSE@	$(REGEX)			\
  @MACOS_FALSE@	$(RESOURCE)			\
  @MACOS_FALSE@	$(GLIBS)
- 
-@@ -265,7 +264,7 @@ bzflag_SOURCES = \
+@@ -203,7 +201,7 @@ bzflag_SOURCES = \
  #	$(ALIBS)
  AM_CPPFLAGS = $(X_CFLAGS)
  
@@ -19,22 +27,69 @@ $NetBSD: patch-ae,v 1.3 2004/03/02 23:14:31 snj Exp $
  subdir = src/bzflag
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = $(top_builddir)/include/config.h
-@@ -296,7 +295,7 @@ bzflag_LDADD = $(LDADD)
- @MACOS_FALSE@@WIN32_TRUE@	../scene/libSceneDB.a \
- @MACOS_FALSE@@WIN32_TRUE@	../geometry/libGeometry.a \
- @MACOS_FALSE@@WIN32_TRUE@	../mediafile/libMediaFile.a \
--@MACOS_FALSE@@WIN32_TRUE@	../zlib/libz.a bzflag.res
-+@MACOS_FALSE@@WIN32_TRUE@	bzflag.res
- @MACOS_FALSE@@WIN32_FALSE@bzflag_DEPENDENCIES = ../net/libNet.a \
- @MACOS_FALSE@@WIN32_FALSE@	../common/libCommon.a \
- @MACOS_FALSE@@WIN32_FALSE@	../obstacle/libObstacle.a \
-@@ -304,8 +303,7 @@ bzflag_LDADD = $(LDADD)
- @MACOS_FALSE@@WIN32_FALSE@	../ogl/libGLKit.a \
- @MACOS_FALSE@@WIN32_FALSE@	../scene/libSceneDB.a \
- @MACOS_FALSE@@WIN32_FALSE@	../geometry/libGeometry.a \
--@MACOS_FALSE@@WIN32_FALSE@	../mediafile/libMediaFile.a \
--@MACOS_FALSE@@WIN32_FALSE@	../zlib/libz.a
-+@MACOS_FALSE@@WIN32_FALSE@	../mediafile/libMediaFile.a
- @MACOS_TRUE@@WIN32_TRUE@bzflag_DEPENDENCIES = ../net/libNet.a \
- @MACOS_TRUE@@WIN32_TRUE@	../common/libCommon.a \
- @MACOS_TRUE@@WIN32_TRUE@	../obstacle/libObstacle.a \
+@@ -235,7 +233,6 @@ bzflag_LDADD = $(LDADD)
+ @BUILD_REGEX_FALSE@@MACOS_FALSE@@WIN32_TRUE@	../scene/libSceneDB.a \
+ @BUILD_REGEX_FALSE@@MACOS_FALSE@@WIN32_TRUE@	../geometry/libGeometry.a \
+ @BUILD_REGEX_FALSE@@MACOS_FALSE@@WIN32_TRUE@	../mediafile/libMediaFile.a \
+-@BUILD_REGEX_FALSE@@MACOS_FALSE@@WIN32_TRUE@	../zlib/libz.a \
+ @BUILD_REGEX_FALSE@@MACOS_FALSE@@WIN32_TRUE@	bzflag.res
+ @BUILD_REGEX_FALSE@@MACOS_FALSE@@WIN32_FALSE@bzflag_DEPENDENCIES = \
+ @BUILD_REGEX_FALSE@@MACOS_FALSE@@WIN32_FALSE@	../net/libNet.a \
+@@ -246,7 +243,6 @@ bzflag_LDADD = $(LDADD)
+ @BUILD_REGEX_FALSE@@MACOS_FALSE@@WIN32_FALSE@	../scene/libSceneDB.a \
+ @BUILD_REGEX_FALSE@@MACOS_FALSE@@WIN32_FALSE@	../geometry/libGeometry.a \
+ @BUILD_REGEX_FALSE@@MACOS_FALSE@@WIN32_FALSE@	../mediafile/libMediaFile.a \
+-@BUILD_REGEX_FALSE@@MACOS_FALSE@@WIN32_FALSE@	../zlib/libz.a
+ @BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_TRUE@bzflag_DEPENDENCIES = \
+ @BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_TRUE@	../net/libNet.a \
+ @BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_TRUE@	../common/libCommon.a \
+@@ -257,7 +253,6 @@ bzflag_LDADD = $(LDADD)
+ @BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_TRUE@	../scene/libSceneDB.a \
+ @BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_TRUE@	../geometry/libGeometry.a \
+ @BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_TRUE@	../mediafile/libMediaFile.a \
+-@BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_TRUE@	../zlib/libz.a \
+ @BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_TRUE@	bzflag.res
+ @BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_FALSE@bzflag_DEPENDENCIES = \
+ @BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_FALSE@	../net/libNet.a \
+@@ -268,8 +263,7 @@ bzflag_LDADD = $(LDADD)
+ @BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_FALSE@	../ogl/libGLKit.a \
+ @BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_FALSE@	../scene/libSceneDB.a \
+ @BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_FALSE@	../geometry/libGeometry.a \
+-@BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_FALSE@	../mediafile/libMediaFile.a \
+-@BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_FALSE@	../zlib/libz.a
++@BUILD_REGEX_FALSE@@MACOS_TRUE@@WIN32_FALSE@	../mediafile/libMediaFile.a
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_TRUE@bzflag_DEPENDENCIES = \
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_TRUE@	../net/libNet.a \
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_TRUE@	../common/libCommon.a \
+@@ -279,7 +273,6 @@ bzflag_LDADD = $(LDADD)
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_TRUE@	../scene/libSceneDB.a \
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_TRUE@	../geometry/libGeometry.a \
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_TRUE@	../mediafile/libMediaFile.a \
+-@BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_TRUE@	../zlib/libz.a \
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_TRUE@	../regex/libregex.a \
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_TRUE@	bzflag.res
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_FALSE@bzflag_DEPENDENCIES = \
+@@ -291,7 +284,6 @@ bzflag_LDADD = $(LDADD)
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_FALSE@	../scene/libSceneDB.a \
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_FALSE@	../geometry/libGeometry.a \
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_FALSE@	../mediafile/libMediaFile.a \
+-@BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_FALSE@	../zlib/libz.a \
+ @BUILD_REGEX_TRUE@@MACOS_FALSE@@WIN32_FALSE@	../regex/libregex.a
+ @BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_TRUE@bzflag_DEPENDENCIES = \
+ @BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_TRUE@	../net/libNet.a \
+@@ -303,7 +295,6 @@ bzflag_LDADD = $(LDADD)
+ @BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_TRUE@	../scene/libSceneDB.a \
+ @BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_TRUE@	../geometry/libGeometry.a \
+ @BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_TRUE@	../mediafile/libMediaFile.a \
+-@BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_TRUE@	../zlib/libz.a \
+ @BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_TRUE@	../regex/libregex.a \
+ @BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_TRUE@	bzflag.res
+ @BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_FALSE@bzflag_DEPENDENCIES = \
+@@ -316,7 +307,6 @@ bzflag_LDADD = $(LDADD)
+ @BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_FALSE@	../scene/libSceneDB.a \
+ @BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_FALSE@	../geometry/libGeometry.a \
+ @BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_FALSE@	../mediafile/libMediaFile.a \
+-@BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_FALSE@	../zlib/libz.a \
+ @BUILD_REGEX_TRUE@@MACOS_TRUE@@WIN32_FALSE@	../regex/libregex.a
+ 
+ DEFS = @DEFS@
