@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.1.1.1 2000/05/25 17:57:28 wennmach Exp $
+$NetBSD: patch-af,v 1.2 2000/06/08 13:53:26 wennmach Exp $
+
+Do not try to strip scripts.
 
 --- appl/kx/Makefile.in.orig	Thu May 25 14:47:35 2000
 +++ appl/kx/Makefile.in	Thu May 25 14:56:51 2000
