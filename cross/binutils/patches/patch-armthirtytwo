@@ -1,4 +1,4 @@
-$NetBSD: patch-arm32,v 1.1 1999/12/06 09:43:21 sakamoto Exp $
+$NetBSD: patch-armthirtytwo,v 1.1 2001/04/05 15:27:25 wiz Exp $
 
 diff -U2 -r -N ./bfd/Makefile.am ../binutils-2.9.1/bfd/Makefile.am
 --- ./bfd/Makefile.am	Sat May  2 00:47:58 1998
