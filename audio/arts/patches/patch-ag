@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2002/10/03 10:22:35 jlam Exp $
+
+--- configure.orig	Thu Oct  3 02:11:16 2002
++++ configure
+@@ -23952,7 +23952,7 @@ fi
+ echo "$as_me:23952: result: $ac_cv_lib_ossaudio__oss_ioctl" >&5
+ echo "${ECHO_T}$ac_cv_lib_ossaudio__oss_ioctl" >&6
+ if test $ac_cv_lib_ossaudio__oss_ioctl = yes; then
+-  LIBOSSAUDIO="-lossaudio"
++  LIBOSSAUDIO="${LIBOSSAUDIO}"
+ fi
+ 
+ MCOPIDL='$(top_builddir)/mcopidl/mcopidl'
