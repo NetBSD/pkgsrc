@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/21 16:54:05 martti Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/21 07:10:40 snj Exp $
 #
 
 DISTNAME=	rexx-imc-1.76
@@ -9,7 +9,7 @@ MASTER_SITES=	http://users.comlab.ox.ac.uk/ian.collier/distribution/ \
 
 MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=	http://users.comlab.ox.ac.uk/ian.collier/Rexx/
-COMMENT=	Implementation of IBM's REXX scripting langauge
+COMMENT=	Implementation of IBM's REXX scripting language
 
 USE_LIBTOOL=	yes
 
