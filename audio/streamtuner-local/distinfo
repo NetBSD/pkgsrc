@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/02/16 05:59:54 salo Exp $
+
+SHA1 (streamtuner-local-0.2.1.tar.gz) = 06fe5438d1c8c9b82dcd80f6fe19d849e4c8faf6
+Size (streamtuner-local-0.2.1.tar.gz) = 182499 bytes
+SHA1 (patch-aa) = 6816c5d51d657a8655814fcd1e73001a6b31ae08
