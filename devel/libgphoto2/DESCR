@@ -1,0 +1,10 @@
+libgphoto2 is the core library designed to allow access to digital
+camera by external programs. Here is an overview of the global
+architecture:
+
+It abstracts communication ports and camera protocol, to allow a
+complete modularity. To support a new communication physical layer
+(like IEEE1394), just add a new port to libgphoto2_port. To support
+a new kind a digital camera, just provide a new camlib with the
+required callbacks. All of this will be transparent to client
+programs that call libgphoto2.
