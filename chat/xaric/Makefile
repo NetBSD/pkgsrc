@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/22 07:49:21 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/29 08:05:50 xtraeme Exp $
 #
 
 DISTNAME=	xaric-0.12.1
@@ -10,8 +10,8 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.xaric.org/
 COMMENT=	IRC client similar to BitchX and ircII
 
-USE_BUILDLINK2=	YES
-GNU_CONFIGURE=	YES
+USE_BUILDLINK3=	yes
+GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 
 CONFIGURE_ARGS+=	--enable-optimize
