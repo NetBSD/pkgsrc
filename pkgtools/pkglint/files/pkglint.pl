@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.75 2002/12/10 14:30:36 schmonz Exp $
+# $NetBSD: pkglint.pl,v 1.76 2002/12/23 14:05:45 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -755,7 +755,7 @@ sub checkmakefile {
 	print "OK: checking USE_SSL.\n" if ($verbose);
 	if ($whole =~ /\nUSE_SSL/) {
 		&perror("FATAL: USE_SSL is deprecated, ".
-			"use the openssl buildlink.mk instead.");
+			"use the openssl buildlink2.mk instead.");
 	}
 	print "OK: checking NO_WRKSUBDIR.\n" if ($verbose);
 	if ($whole =~ /\nNO_WRKSUBDIR/) {
