@@ -1,14 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/16 16:53:14 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2002/08/20 08:30:46 dillo Exp $
 
---- makefile.orig	Thu Nov  2 11:44:48 2000
-+++ makefile	Fri Dec 15 16:36:50 2000
-@@ -26,11 +26,13 @@
- 
- #CC              = egcs
- CC		= gcc
--CFLAGS          = -O2 -m486 -Wall -DAVRLANG=LANGUAGE_$(LANGUAGE)
-+CFLAGS          = -O2 -Wall -DAVRLANG=LANGUAGE_$(LANGUAGE)
- CPPFLAGS	=
+--- makefile.orig	Tue Apr  3 10:27:39 2001
++++ makefile
+@@ -30,6 +30,8 @@ CPPFLAGS	=
  CCFLAGS         = $(CFLAGS) $(CPPFLAGS)
  LINK            = -lm
  OBJS		= avrparse.o avrlex.o avrasm.o symbol.o semantic.o utils.o
@@ -17,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/16 16:53:14 wiz Exp $
  
  ### Defaul CC files #########################################################
  
-@@ -39,13 +41,15 @@
+@@ -38,13 +40,15 @@ OBJS		= avrparse.o avrlex.o avrasm.o sym
  
  ### Executable ##############################################################
  
@@ -34,7 +28,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/12/16 16:53:14 wiz Exp $
  		mv avrparse avrparse.cc
  		mv avrparse.h avrparse.hh
  
-@@ -53,12 +57,12 @@
+@@ -52,12 +56,12 @@ avrparse.cc:	avrparse.y avrasm.hh symbol
  
  avrlex.cc:	avrparse.cc avrlex.l symbol.hh semantic.hh avrparse.hh \
  		opcodes.hh avrasm.hh messages.hh
