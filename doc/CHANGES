@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8669 2005/01/09 10:44:00 seb Exp $
+$NetBSD: CHANGES,v 1.8670 2005/01/09 11:15:07 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -191,3 +191,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added libkexif-0.2.1 [seb 2005-01-09]
 	Added libkipi-0.1 [seb 2005-01-09]
 	Added kipi-plugins-0.1beta1 [seb 2005-01-09]
+	Updated digikam to 0.7.1 [seb 2005-01-09]
