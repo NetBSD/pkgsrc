@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1278 2003/09/13 11:23:35 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1279 2003/09/13 11:32:04 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -3959,13 +3959,7 @@ install-depends: uptodate-pkgtools
 				exit 1;					\
 			fi;						\
 		fi;							\
-		if [ `${ECHO} $$found | ${WC} -w` -gt 1 ]; then		\
-			${ECHO} '***' "WARNING: Dependency on '$$found' expands to several installed packages " ; \
-			${ECHO} "    (" `${ECHO} $$found` ")." ; 	\
-			${ECHO} "    Please check if this is really intended!" ; \
-		else 							\
-			${ECHO_MSG} "${_PKGSRC_IN}> Required installed package $$pkg: $${found} found"; \
-		fi ; 							\
+		${ECHO_MSG} "${_PKGSRC_IN}> Required installed package $$pkg: $${found} found"; \
 	else								\
 		${ECHO_MSG} "${_PKGSRC_IN}> Required package $$pkg: NOT found"; \
 		target=${DEPENDS_TARGET};				\
@@ -4601,15 +4595,6 @@ fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 			fi;						\
 		fi;							\
 		list="`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true ECHO_MSG=${TRUE} | ${SORT} -u`" ; \
-		for dep in $$list; do \
-			realdep="`${PKG_BEST_EXISTS} \"$$dep\" || ${TRUE}`" ; \
-			if [ `${ECHO} $$realdep | ${WC} -w` -gt 1 ]; then \
-				${ECHO} '***' "WARNING: '$$dep' expands to several installed packages " ; \
-				${ECHO} "    (" `${ECHO} $$realdep` ")." ; \
-				${ECHO} "    Please check if this is really intended!" ; \
-				continue ; 				\
-			fi ; 						\
-		done ;							\
 		for realdep in `${ECHO} $$list | ${XARGS} -n 1 ${SETENV} ${PKG_BEST_EXISTS} | ${SORT} -u`; do \
 			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - dependency NOT registered" ; \
