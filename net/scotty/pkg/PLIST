@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/03/07 22:11:20 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/05/09 00:15:03 tron Exp $
 bin/ntping
 bin/straps
 bin/scotty
@@ -378,7 +378,6 @@ man/man8/straps.8.gz
 man/man8/ntping.8.gz
 man/mann/dns.n.gz
 man/mann/gdmo.n.gz
-man/mann/http.n.gz
 man/mann/icmp.n.gz
 man/mann/job.n.gz
 man/mann/mib.n.gz
