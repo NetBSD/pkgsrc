@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/02 13:59:55 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/19 23:24:34 jtb Exp $
 
---- Imakefile.orig	Tue Oct  3 11:33:52 2000
-+++ Imakefile	Thu Nov  2 08:22:31 2000
-@@ -29,6 +29,6 @@
+--- Imakefile.orig	Tue Dec 19 18:43:58 2000
++++ Imakefile
+@@ -28,15 +28,15 @@
+ #CCOPTIONS = -O2
  #
  # for debugging purposes uncomment the following line:
 -CDEBUGFLAGS = -g
@@ -11,23 +12,29 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/11/02 13:59:55 dmcmahill Exp $
 +STD_INCLUDES = -I. -I${X11BASE}/include -I${LOCALBASE}/include
  
  #------------------------------------------------------------------------
-@@ -37,5 +37,5 @@
+ # Installation directories:
+ # Change the following as desired to suit your environment:
  #------------------------------------------------------------------------
  #
 -PREFIX = /usr/local
 +# PREFIX = /usr/local
- # XCIRCUIT_LIB_DIR = $(PREFIX)/src/xcircuit-2.1b5/psfiles
- XCIRCUIT_LIB_DIR = $(PREFIX)/lib/xcircuit-2.1
-@@ -59,5 +59,5 @@
+ # XCIRCUIT_LIB_DIR = $(PREFIX)/src/xcircuit-2.2.0/psfiles
+ XCIRCUIT_LIB_DIR = $(PREFIX)/lib/xcircuit-2.2
+ XCIRCUIT_BIN_DIR = $(PREFIX)/bin
+@@ -58,7 +58,7 @@
+ # Support for background rendering through ghostscript.  Change this
  # to the path where gs can be found.
  # GS_EXEC= /usr/local/src/gs5.50/obj/gs
 -GS_EXEC= /usr/bin/gs
-+GS_EXEC= ${LOCALBASE}/bin/gs
++GS_EXEC= ${GS_PREFIX}/bin/gs
  
  #------------------------------------------------------------------------
-@@ -186,4 +186,5 @@
+ # Window manager bug workaround---If you don't like xcircuit grabbing kbd
+@@ -186,6 +186,7 @@
+    MakeNsubdirMakefiles()
  #endif
  
 +MakefileSubdirs(Xw)
  MakeMakeSubdirs(Xw,libxcXw.a)
  MakeSubdirs(Xw)
+ DependSubdirs(Xw)
