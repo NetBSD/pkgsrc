@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.2 2000/04/17 13:32:47 fredb Exp $
+$NetBSD: md5,v 1.3 2000/04/22 05:34:05 fredb Exp $
 
-MD5 (lynx2.8.3pre.6.tar.bz2) = 55b7fa77c148957ece3d29a2cda541ff
+MD5 (lynx2.8.3pre.7.tar.bz2) = 5ed168676d218e311f2e8e94938e3485
 MD5 (lynx-283d17-ssl.patch.gz) = a5bcfaf72753393d992eb8e56658a375
