@@ -1,4 +1,4 @@
-# $NetBSD: defs.AIX.mk,v 1.7 2004/04/19 20:19:46 jmmv Exp $
+# $NetBSD: defs.AIX.mk,v 1.8 2004/04/27 13:43:05 tv Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -110,9 +110,9 @@ GROUPADD?=	/usr/sbin/groupadd
 .else
 USERADD?=	${LOCALBASE}/sbin/useradd
 GROUPADD?=	${LOCALBASE}/sbin/groupadd
-.if defined(USE_USERADD) || defined(USE_GROUPADD)
-DEPENDS+=	user>=20000313:../../sysutils/user
-.endif
+_USER_DEPENDS=	user>=20000313:../../sysutils/user
+DEPENDS+=	${USE_USERADD:D${_USER_DEPENDS}}
+DEPENDS+=	${USE_GROUPADD:D${_USER_DEPENDS}}
 .endif
 
 CPP_PRECOMP_FLAGS?=	# unset
