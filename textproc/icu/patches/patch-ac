@@ -1,31 +1,20 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/12/20 18:28:06 skrll Exp $
+$NetBSD: patch-ac,v 1.2 2000/12/21 18:14:18 skrll Exp $
 
---- common/uresbund.c.orig	Wed Aug 16 21:44:50 2000
-+++ common/uresbund.c
-@@ -238,7 +238,7 @@
-             r->fBogus = U_USING_FALLBACK_ERROR;
-         } else { /* if we have a regular entry */
-             /* handle the alias by trying to get out the %%Alias tag.*/
--            char aliasName[100];
-+            char aliasName[256];
-             int32_t aliasLen;
-             /* We'll try to get alias string from the bundle */
-             Resource aliasres = res_getResource(&(r->fData), "%%ALIAS");
-@@ -1027,7 +1027,7 @@
-                     const char* localeID,
-                     UErrorCode* status)
- {
--    char path[100];
-+    char path[256];
-     UResourceBundle *r;
-     size_t tempSize = uprv_wcstombs(NULL, myPath, ((size_t)-1) >> 1);
-     /*char *temp = new char[tempSize + 1];*/
-@@ -1051,7 +1051,7 @@
-                   const char* localeID, 
-                   UErrorCode* status)
- {
--    char path[100];
-+    char path[256];
-     UResourceBundle *r;
-     int32_t pathlen = u_strlen(myPath);
- 
+--- configure.orig	Mon Dec  4 23:30:03 2000
++++ configure
+@@ -3718,6 +3718,7 @@
+ 	*-*-solaris*) 	platform=U_SOLARIS ;;
+ 	*-*-linux*) 	platform=U_LINUX ;;
+ 	*-*-freebsd*) 	platform=U_LINUX ;;
++	*-*-netbsd*) 	platform=U_BSD ;;
+ 	*-*-aix*) 	platform=AIX ;;
+ 	*-sequent-*)	platform=PTX ;;
+ 	*-*-hpux*) 	platform=HPUX ;;
+@@ -3740,6 +3741,7 @@
+ 	*-*-solaris*) 	ld_rpath_suf=":" ;;
+ 	*-*-linux*) 	ld_rpath_suf=" " ;;
+ 	*-*-freebsd*) 	ld_rpath_suf=" " ;;
++	*-*-netbsd*) 	ld_rpath_suf=" " ;;
+ 	*-*-aix*) 	ld_rpath_suf="" ;;
+ 	*-sequent-*)	ld_rpath_suf="" ;;
+ 	*-*-hpux*) 	ld_rpath_suf=":" ;;
