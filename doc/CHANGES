@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8472 2004/12/27 15:28:08 jlam Exp $
+$NetBSD: CHANGES,v 1.8473 2004/12/27 21:13:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6590,3 +6590,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Kwiki-NewPage-0.12 [jlam 2004-12-27]
 	Added p5-Kwiki-ParagraphBlocks-0.12 [jlam 2004-12-27]
 	Added p5-Kwiki-PreformattedBlocks-0.11 [jlam 2004-12-27]
+	Updated osh to 041028 [wiz 2004-12-27]
