@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.9 2004/05/18 11:58:04 recht Exp $
+# $NetBSD: Makefile,v 1.10 2004/08/15 18:59:40 recht Exp $
 #
 
-DISTNAME=	tla-1.2.1pre1
+DISTNAME=	tla-1.2.1
 CATEGORIES=	devel
-MASTER_SITES=	http://release.gnuarch.org/		\
-		${MASTER_SITE_GNU:=gnu-arch/}		\
+MASTER_SITES=	http://release.gnuarch.org/tla-1.2/1.2.1/	\
+		ftp://gnuarch.org/tla-1.2/1.2.1/	\
 		http://regexps.srparish.net/src/tla/	\
 		http://arch.quackerhead.com/~lord/releases/tla/
+#${MASTER_SITE_GNU:=gnu-arch/}		\
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://regexps.srparish.net/www/
@@ -38,7 +40,7 @@ post-install:
 	# Install arch documentation.
 	${INSTALL_DATA_DIR} ${HTMLDIR}
 	cd ${WRKDIR}/${DISTNAME}/src/docs-tla/html && \
-		${PAX} -rwppm . ${HTMLDIR}
+		${PAX} -s ',.*/\.arch-ids.*,,' -rwppm . ${HTMLDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${HTMLDIR}
 	${CHMOD} -R ugo-w ${HTMLDIR}
 
