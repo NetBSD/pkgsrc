@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 1999/05/16 03:21:39 explorer Exp $
+# $NetBSD: Makefile,v 1.40 1999/05/19 12:03:37 bad Exp $
 # FreeBSD Id: Makefile,v 1.65 1997/11/17 06:31:39 fenner Exp
 #
 
@@ -14,6 +14,7 @@
     SUBDIR += arena
 #    SUBDIR += ashe           # requires Motif
 #    SUBDIR += aswedit
+    SUBDIR += bozohttpd
 #    SUBDIR += cgiparse
 #    SUBDIR += chimera
 #    SUBDIR += comline
