@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/14 16:56:38 tv Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 09:59:24 agc Exp $
 
 SHA1 (mailman-2.1.4.tgz) = b77d22283d5780b6d8449f19f86c210e4e58a032
+RMD160 (mailman-2.1.4.tgz) = 39bde587b81528c4bbc07a8a651d91d731bdddc0
 Size (mailman-2.1.4.tgz) = 5779983 bytes
 SHA1 (patch-aa) = f0bc550b28794008ea840a88a5b0053578f3ae0f
 SHA1 (patch-ab) = 39f6294e53110bd1fd09b1e90ab46820f4d48e3f

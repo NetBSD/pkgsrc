@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.23 2005/02/10 08:45:50 itojun Exp $
+$NetBSD: distinfo,v 1.24 2005/02/24 09:59:21 agc Exp $
 
 SHA1 (cue-snap-20050131.tar.gz) = 4701a6194281203330a0ea732892642998428e8c
+RMD160 (cue-snap-20050131.tar.gz) = e325ce89e89eda4c63069e8015f939dc01748733
 Size (cue-snap-20050131.tar.gz) = 169347 bytes
