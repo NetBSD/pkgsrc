@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/14 14:28:14 dmcmahill Exp $
+
+--- ./src/maths/cmaths/test_cx_ph.c.orig	Sun Oct 15 03:49:18 2000
++++ ./src/maths/cmaths/test_cx_ph.c	Sat Nov 11 13:04:33 2000
+@@ -1,4 +1,5 @@
+ #include <stdio.h>
+ #include <math.h>
++#include <float.h>
+ 
+ #include <config.h>

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/14 14:28:14 dmcmahill Exp $
+
+--- src/include/ngspice.h.orig	Sun Oct 15 03:48:57 2000
++++ src/include/ngspice.h	Sat Nov 11 12:20:12 2000
+@@ -13,4 +13,8 @@
+ #include <stddef.h>
+ 
++#ifdef HAVE_LIMITS_H
++#  include <machine/limits.h>
++#endif
++
+ #include "memory.h"
+ #include "defines.h"

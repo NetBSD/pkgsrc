@@ -1,0 +1,46 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/11/14 14:28:14 dmcmahill Exp $
+
+--- src/frontend/parser/complete.c.orig	Wed Oct 25 13:30:06 2000
++++ src/frontend/parser/complete.c	Sat Nov 11 13:56:56 2000
+@@ -415,4 +415,9 @@
+ #    ifdef HAVE_TERMIOS_H
+ 
++#      ifdef __NetBSD__
++#        define TCGETS
++#        define TCSETS
++#      endif
++
+ #      define TERM_GET TCGETS
+ #      define TERM_SET TCSETS
+@@ -423,5 +428,5 @@
+ #  endif
+ 
+-#  ifdef TERM_GET
++#  if defined(TERM_GET) || defined(__NetBSD__)
+     static bool ison = FALSE;
+ 
+@@ -431,12 +436,24 @@
+ 
+     if (ison == TRUE) {
++#ifdef __NetBSD__
++	tcgetattr(fileno(cp_in),&OS_Buf);
++#else
+ 	(void) ioctl(fileno(cp_in), TERM_GET, (char *) &OS_Buf);
++#endif
+ 	sbuf = OS_Buf;
+ 	sbuf.c_cc[VEOF] = 0;
+ 	sbuf.c_cc[VEOL] = ESCAPE;
+ 	sbuf.c_cc[VEOL2] = CNTRL_D;
++#ifdef __NetBSD__
++	tcsetattr(fileno(cp_in),TCSANOW,&sbuf);
++#else
+ 	(void) ioctl(fileno(cp_in), TERM_SET, (char *) &sbuf);
++#endif
+     } else {
++#ifdef __NetBSD__
++	tcsetattr(fileno(cp_in),TCSANOW,&OS_Buf);
++#else
+ 	(void) ioctl(fileno(cp_in), TERM_SET, (char *) &OS_Buf);
++#endif
+     }
+ 
