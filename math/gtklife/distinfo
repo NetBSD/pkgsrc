@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/09/30 09:38:24 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 12:06:55 agc Exp $
 
 SHA1 (gtklife-4.1.tar.gz) = d67aa27d0ae3742e4aa6ec75c3a5fa47a77cca8d
+RMD160 (gtklife-4.1.tar.gz) = a34d9c16c436a2465afb4b3d80e7b396ea69c13c
 Size (gtklife-4.1.tar.gz) = 759895 bytes
 SHA1 (patch-aa) = 41793f54cf987d2916176f8b0a7459b9ae8dcd61

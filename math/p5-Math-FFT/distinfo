@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/27 12:50:38 gson Exp $
+$NetBSD: distinfo,v 1.2 2005/02/23 12:06:56 agc Exp $
 
 SHA1 (Math-FFT-0.25.tar.gz) = 91aed4d69c124009e9112082e8c98eee1b2b37e0
+RMD160 (Math-FFT-0.25.tar.gz) = cc69fb7edb08f0bbcbce90dd375fd877cb7522e5
 Size (Math-FFT-0.25.tar.gz) = 28114 bytes
