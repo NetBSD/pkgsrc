@@ -1,0 +1,34 @@
+$NetBSD: patch-an,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+
+--- rts/socket.c.orig	1999-08-09 18:34:34.000000000 +0200
++++ rts/socket.c
+@@ -5,6 +5,7 @@
+ 
+ #include "rts.h"
+ #include <fcntl.h>
++#include <string.h>
+ 
+ #ifdef __PARAGON__
+ #include <nx.h>
+@@ -481,17 +482,10 @@ static void
+ syserr (message)
+ char *message;
+ {
+-    char s1[100], s2[100];
+-    extern int sys_nerr;
++    char *s1;
++    char s2[100];
+ 
+-#if !defined(__NetBSD__) && !defined(__FreeBSD__) && !defined(__linux__)
+-    extern char *sys_errlist[];
+-#endif
+-
+-    if (errno > 0 && errno < sys_nerr)
+-	strcpy (s1, sys_errlist[errno]);
+-    else
+-	sprintf (s1, "error %d", errno);
+-    sprintf (s2, "%s: %s", message ? message : "network I/O", s1);
++    s1 = strerror(errno);
++    snprintf (s2, sizeof(s2), "%s: %s", message ? message : "network I/O", s1);
+     sr_net_abort (s2);
+ }
