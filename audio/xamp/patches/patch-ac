@@ -1,65 +1,81 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/09/17 00:48:27 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2000/10/18 11:22:44 rh Exp $
 
---- QtAMP.cpp	Wed Feb 11 17:53:35 1998
-+++ QtAMP.cpp	Wed Jul 29 22:21:08 1998
-@@ -24,10 +24,9 @@
+--- QtAMP.cpp.orig	Fri Jul 31 22:29:58 1998
++++ QtAMP.cpp	Tue Oct 17 17:48:13 2000
+@@ -24,10 +24,12 @@
  
  #include <sys/types.h>
  #include <sys/stat.h>
--#include <sched.h>
++#ifndef OS_NetBSD
+ #include <sched.h>
++#include <sys/soundcard.h>
++#endif
  #include <sys/socket.h>
  #include <sys/ioctl.h>
 -#include <sys/soundcard.h>
-+#include <soundcard.h>
  #include <sys/time.h>
  #include <sys/resource.h>
  #include <errno.h>
-@@ -84,11 +84,11 @@
- 	splash->show();
- 	
- 	// init mixer
--#ifdef OS_Linux
-+#if defined(OS_Linux) || defined(OS_NetBSD)
+@@ -89,7 +91,11 @@
  	if ((mixer = open("/dev/mixer", O_RDWR)) < 0)
  	    die("Error opening /dev/mixer, exiting\n");
  	ioctl(mixer, SOUND_MIXER_READ_PCM, &v);
 -#endif OS_Linux
 +#endif
++
++#ifdef OS_NetBSD
++	audioSetMixer();
++#endif
  	
  	/* where mine resource file is located */
  	char home[500];
-@@ -262,7 +262,7 @@
- 
- QtAMP::~QtAMP()
- {
--#ifdef OS_Linux
-+#if defined(OS_Linux) || defined(OS_NetBSD)
- 	close(mixer);
- #endif
- 	real_quit();
-@@ -348,7 +348,7 @@
- 	sprintf(volum,"Volume: %d",vr);
- 	playLabel->setText( volum );
- 	//	printf("%d %d\n",tvr,tv);
--#ifdef OS_Linux
-+#if defined(OS_Linux) || defined(OS_NetBSD)
+@@ -428,6 +434,13 @@
  	int x = (tv*256 + tvl);
  	ioctl(mixer, SOUND_MIXER_WRITE_PCM, &x);
  #endif
-@@ -884,14 +884,14 @@
- {
- 	if (mute == 1)
- 	  {
--#ifdef OS_Linux
-+#if defined(OS_Linux) || defined(OS_NetBSD)
++
++#ifdef OS_NetBSD
++	if (tvr == 0)
++		audioSetVolume(vr);
++	else
++		audioSetBalance(vr, tvr);
++#endif
+ }
+ 
+ void QtAMP::bal_slider_moved(int bal)
+@@ -437,6 +450,10 @@
+ 	sprintf(volum,"Balance: %d",tvr);
+ 	vol_slider_moved(vr);
+ 	playLabel->setText( volum );
++
++#ifdef OS_NetBSD
++	audioSetBalance(vr, tvr);
++#endif
+ }
+ 
+ void QtAMP::bal_slider_released()
+@@ -1077,12 +1094,24 @@
  		  int x = (tv*256 + tvl);
  		  ioctl(mixer, SOUND_MIXER_WRITE_PCM, &x);
  #endif
++
++#ifdef OS_NetBSD
++	int vr = 0;
++	audioSetVolume(vr);
++#endif
  	  }
  	if (mute == 0)
  	  {
--#ifdef OS_Linux
-+#if defined(OS_Linux) || defined(OS_NetBSD)
+ #ifdef OS_Linux
  		  int x = (7*256 + 7);
  		  ioctl(mixer, SOUND_MIXER_WRITE_PCM, &x);
++#endif
++
++#ifdef OS_NetBSD  
++	if (tvr == 0)
++		audioSetVolume(vr);
++	else
++		audioSetBalance(vr, tvr);
  #endif
+ 	  }
+ 	mute=!mute;

@@ -1,11 +1,19 @@
-$NetBSD: patch-ah,v 1.3 2000/03/28 00:09:21 dmcmahill Exp $
+$NetBSD: patch-ah,v 1.4 2000/10/18 11:22:44 rh Exp $
 
---- configure.in.orig	Sun Oct  5 12:42:34 1997
-+++ configure.in	Sun Mar 26 13:59:52 2000
-@@ -58,5 +58,5 @@
+--- configure.in.orig	Sun Oct  5 22:42:34 1997
++++ configure.in	Mon Oct 16 21:08:33 2000
+@@ -71,6 +71,14 @@
+     CFLAGS="-O6 -ffast-math -fomit-frame-pointer -DNO_BYTE_SWAPPING ${CFLAGS_ARCH}"
      ;;
  
--  Linux|FreeBSD)
-+  Linux|FreeBSD|NetBSD)
-     CC="gcc"
-     if test "$ARCH_TYPE" = "i486" ; then
++  NetBSD)
++    CC="gcc"
++    if test "$ARCH_TYPE" = "i386" ; then
++      CFLAGS_ARCH="-i586 -pipe"
++    fi
++    CFLAGS="-O6 -ffast-math -fomit-frame-pointer -DNO_BYTE_SWAPPING ${CFLAGS_ARCH}"
++    ;;
++
+   SunOS)
+     if test "$CC" = "gcc"; then
+        CFLAGS="-O6"
