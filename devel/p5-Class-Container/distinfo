@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/08/30 18:56:46 he Exp $
+$NetBSD: distinfo,v 1.2 2004/12/05 15:58:08 he Exp $
 
-SHA1 (Class-Container-0.10.tar.gz) = 85926d193097a9f53fce7edf5185d246dd5edf20
-Size (Class-Container-0.10.tar.gz) = 18366 bytes
+SHA1 (Class-Container-0.11.tar.gz) = 720e92d730edbd20d4b9410a2d846e980b1481c9
+Size (Class-Container-0.11.tar.gz) = 19208 bytes
