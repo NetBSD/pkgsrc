@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/08/25 19:22:24 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2002/09/21 08:48:39 jlam Exp $
 #
 
 DISTNAME=		bonobo-1.0.18
@@ -12,32 +12,24 @@ COMMENT=		Architecture for creating reusable software components
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
-BUILDLINK_DEPENDS.ORBit=ORBit>0.5.8
-BUILDLINK_DEPENDS.libxml=libxml>1.8.15
+BUILDLINK_DEPENDS.libxml=	libxml>1.8.15
 
-USE_BUILDLINK_ONLY=	YES
-USE_LIBTOOL=		YES
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 USE_GMAKE=		YES
-GNU_CONFIGURE=		YES
 
+GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 CONFIGURE_ENV+=		X11BASE="${X11BASE}"
 
+USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-post-patch:
-	for file in `${FIND} ${WRKSRC} -name "Makefile.in"`; do		\
-		${SED}	-e "s|-I\$$(includedir)||g"			\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
+.include "../../graphics/gdk-pixbuf-gnome/buildlink2.mk"
+.include "../../graphics/freetype2/buildlink2.mk"
+.include "../../print/gnome-print/buildlink2.mk"
+.include "../../textproc/libxml/buildlink2.mk"
+.include "../../devel/popt/buildlink2.mk"
+.include "../../devel/oaf/buildlink2.mk"
 
-.include "../../graphics/gdk-pixbuf-gnome/buildlink.mk"
-.include "../../graphics/freetype2/buildlink.mk"
-.include "../../print/gnome-print/buildlink.mk"
-.include "../../textproc/libxml/buildlink.mk"
-.include "../../devel/popt/buildlink.mk"
-.include "../../devel/oaf/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
