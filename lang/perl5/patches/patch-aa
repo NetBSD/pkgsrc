@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.18 2001/09/05 17:13:40 jlam Exp $
+
+--- Configure.orig	Sun Mar 18 19:03:33 2001
++++ Configure	Sat Sep  1 14:31:15 2001
+@@ -6807,8 +6807,11 @@
+ 	aix)
+ 		# We'll set it in Makefile.SH...
+ 		;;
+-	solaris|netbsd)
++	solaris)
+ 		xxx="-R $shrpdir"
++		;;
++	netbsd)
++		xxx="-Wl,-R$shrpdir"
+ 		;;
+ 	freebsd)
+ 		xxx="-Wl,-R$shrpdir"
