@@ -1,0 +1,57 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/10/19 14:23:01 fredb Exp $
+
+--- image/png.c.orig	Sun Mar 28 20:23:46 1999
++++ image/png.c	Wed Oct 18 22:56:45 2000
+@@ -222,17 +222,11 @@
+     if (setjmp(png->state->jmpbuf))
+         return;
+ 
+-    if (png->state) {
+-        png_read_destroy(png->state, png->info, (png_info *) 0);
+-        free_mem(png->state);
++    if ((png->state) && (png->info)) {
++        png_destroy_read_struct(&png->state, &png->info, (png_info **)NULL);
+         png->state = 0;
+     }
+ 
+-    if (png->info) {
+-        free_mem(png->info);
+-        png->info = 0;
+-    }
+-
+     if (png->image) {
+         freeImage(png->image);
+         png->image = 0;
+@@ -275,27 +269,21 @@
+     memset(png, 0, sizeof(pngState));
+     png->lineProc = lineProc;
+     png->closure = closure;
+-    png->state = (png_struct *) alloc_mem(sizeof(png_struct));
++    png->state = (png_struct *) png_create_read_struct(PNG_LIBPNG_VER_STRING,
++        NULL, NULL, NULL);
+     if (!png->state)
+         return;
+ 
+-    png->info = (png_info *) alloc_mem(sizeof(png_info));
++    png->info = (png_info *) png_create_info_struct(png->state);
+     if (!png->info) {
+-        free_mem(png->state);
++        png_destroy_read_struct(&png->state, &png->info, (png_info **)NULL);
+         return;
+     }
+ 
+     if (setjmp(png->state->jmpbuf)) {
+-        png_read_destroy(png->state, png->info, (png_info *) 0);
+-        free_mem(png->state);
+-        free_mem(png->info);
+-        png->state = 0;
+-        png->info = 0;
++        png_destroy_read_struct(&png->state, &png->info, (png_info **)NULL);
+         return;
+     }
+-
+-    png_info_init(png->info);
+-    png_read_init(png->state);
+ 
+     png_set_progressive_read_fn(png->state, (void *) png, lf_info_callback,
+         lf_row_callback, lf_end_callback);
