@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:40:31 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/03/05 21:59:35 jschauma Exp $
 
-SHA1 (fsh-1.1.tar.gz) = eb9287bd60aa5d6801cf8038252dc75076849209
-Size (fsh-1.1.tar.gz) = 125008 bytes
+SHA1 (fsh-1.2.tar.gz) = c2f1e923076d368fbb5504dcd1d33c74024b0d1b
+Size (fsh-1.2.tar.gz) = 152374 bytes
