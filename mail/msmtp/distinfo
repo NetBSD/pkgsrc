@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/19 09:24:29 wiz Exp $
+
+SHA1 (msmtp-0.5.0.tar.gz) = c9f5d96e5c12b4ab8c371a818ad68395bffcd92d
+Size (msmtp-0.5.0.tar.gz) = 41147 bytes
+SHA1 (patch-aa) = 73b5d5c098e10539681c594c26c47585e3d396f0
