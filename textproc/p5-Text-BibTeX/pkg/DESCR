@@ -1,0 +1,12 @@
+Text::BibTeX is a Perl library for reading, parsing, and processing
+BibTeX files.  It is the Perl half of btOOL, a pair of libraries for
+dealing with BibTeX data; the C half, btparse, is needed to compile
+Text::BibTeX.
+
+Text::BibTeX gives you access to the data at many different levels: you
+may work with BibTeX entries as simple "field -> string" mappings, or
+get at the original form of the data as a list of simple values
+(strings, macros, or numbers) pasted together.  You can impose no
+restrictions on the allowed/expected entry types or fields, or you can
+use the structure defined by BibTeX 0.99's standard style files, or you
+can invent your own.
