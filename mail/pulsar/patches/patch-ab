@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
+
+--- doc/Makefile.in.orig	Sun Jul  6 23:42:37 2003
++++ doc/Makefile.in
+@@ -50,5 +50,5 @@ clean:
+ 	@find . -name "*~" -exec rm -f {} ";"
+ 
+ install:
+-	${INSTALL} -m 0555 -g root -o root -d ${docdir}/
+-	${INSTALL} -m 0444 -g root -o root ${DOC_FILES} ${docdir}/
++	${INSTALL} -m 0555 -d ${docdir}/
++	${INSTALL} -m 0444 ${DOC_FILES} ${docdir}/
