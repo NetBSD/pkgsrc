@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/03/08 19:52:51 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2004/03/20 23:18:09 minskim Exp $
 
 DISTNAME=       swig1.1p5
 PKGNAME=	swig-1.1p5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=   ftp://ftp.swig.org/pub/
 
@@ -10,12 +11,12 @@ HOMEPAGE=	http://www.swig.org/
 COMMENT=	Simplified Wrapper and Interface Generator
 
 WRKSRC=		${WRKDIR}/SWIG1.1p5
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 .include "../../lang/python/pyversion.mk"
 
-.include "../../lang/perl5/buildlink2.mk"
-.include "../../lang/tcl83/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
