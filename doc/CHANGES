@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6291 2004/06/23 16:48:18 taya Exp $
+$NetBSD: CHANGES,v 1.6292 2004/06/23 18:30:26 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3036,3 +3036,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated python15 to 1.5.2nb2 [minskim 2004-06-23]
 	Updated flawfinder to 1.26 [snj 2004-06-23]
 	Updated firefox to 0.9 [taya 2004-06-23]
+	Updated mips64emul to 20040623 [xtraeme 2004-06-23]
