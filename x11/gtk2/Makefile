@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2004/01/07 02:21:17 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2004/01/22 12:38:46 jmmv Exp $
 #
 
 DISTNAME=		gtk+-2.2.4
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.2/ \
@@ -23,7 +23,7 @@ USE_GMAKE=		yes
 
 GNU_CONFIGURE=		 yes
 CONFIGURE_ARGS+=	--with-xinput=xfree
-CONFIGURE_ARGS+=	--sysconfdir="${PKG_SYSCONFBASEDIR}"
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
@@ -39,12 +39,6 @@ PKGCONFIG_OVERRIDE+=	${WRKSRC}/gdk-pixbuf-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/contrib/gdk-pixbuf-xlib/gdk-pixbuf-xlib-2.0.pc.in
 
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/demos/gtk-demo
-
-PKG_SYSCONFSUBDIR=	gtk-2.0
-EGDIR=			${PREFIX}/share/examples/gtk2
-CONF_FILES=		${EGDIR}/gdk-pixbuf.loaders \
-			${PKG_SYSCONFDIR}/gdk-pixbuf.loaders
-CONF_FILES+=		${EGDIR}/gtk.immodules ${PKG_SYSCONFDIR}/gtk.immodules
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gtk-2.0/engines
