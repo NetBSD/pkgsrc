@@ -1,43 +1,52 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 18:22:28 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/25 21:40:21 jtb Exp $
 
 DISTNAME=		mesch12b
 PKGNAME=		meschach-1.2b
 CATEGORIES=		math
-MASTER_SITES=		ftp://ftpmaths.anu.edu.au/pub/meschach/
+MASTER_SITES=		http://www.math.uiowa.edu/~dstewart/meschach/
 
 MAINTAINER=		jtb@netbsd.org
-HOMEPAGE=		ftp://ftpmaths.anu.edu/pub/meschach/meschach.html
+HOMEPAGE=		http://www.math.uiowa.edu/~dstewart/meschach/
 COMMENT=		Library of C Routines for Matrix Computations
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
-GNU_CONFIGURE=		YES
+GNU_CONFIGURE=		#defined
 WRKSRC=			${WRKDIR}
 MAKEFILE=		makefile
-USE_LIBTOOL=		YES
+USE_LIBTOOL=		#defined
 
 CONFIGURE_ARGS+=	"--with-all"
 
 pre-patch:
-	@${CP} ${FILESDIR}/makefile.in ${WRKSRC}
+	${CP} ${FILESDIR}/makefile.in ${WRKSRC}
 
 post-patch:
-	@${SED} -e 's:%%PREFIX%%:'${PREFIX}':g' < ${FILESDIR}/makefile.test \
-	> ${WRKSRC}/Makefile
+	${SED} -e 's:@PREFIX@:'${PREFIX}':g' <				\
+	${FILESDIR}/makefile.test > ${WRKSRC}/Makefile
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/meschach
-	@for i in err.h machine.h matlab.h matrix.h meminfo.h sparse.h \
-	zmatrix.h iter.h matrix2.h oldnames.h sparse2.h zmatrix2.h ; do \
-	${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/include/meschach ; done
+	@for f in err.h machine.h matlab.h matrix.h meminfo.h sparse.h	\
+	zmatrix.h iter.h matrix2.h oldnames.h sparse2.h zmatrix2.h; do	\
+	i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/include/meschach/";	\
+	${ECHO} $$i; $$i;						\
+	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/meschach
 	${INSTALL_DATA_DIR} ${PREFIX}/share/meschach/tests
-	@for t in torture.c sptort.c ztorture.c memtort.c itertort.c \
-	mfuntort.c iotort.c ; do \
-	${INSTALL_DATA} ${WRKSRC}/$$t ${PREFIX}/share/meschach/tests ; done
+	@for f in torture.c sptort.c ztorture.c memtort.c itertort.c	   \
+	mfuntort.c iotort.c; do						   \
+	i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/meschach/tests/"; \
+	${ECHO} $$i; $$i;						   \
+	done
 	${INSTALL_DATA} ${WRKSRC}/Makefile ${PREFIX}/share/meschach/tests
-	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/DOC/* ${PREFIX}/share/meschach
+	@for f in ${WRKSRC}/README ${WRKSRC}/DOC/*; do			\
+	i="${INSTALL_DATA} $$f ${PREFIX}/share/meschach/";		\
+	${ECHO} $$i; $$i;						\
+	done
 	${INSTALL_DATA} ${WRKSRC}/copyright ${PREFIX}/share/meschach
-	@for e in tutadv.c tutorial.c ; do \
-	${INSTALL_DATA} ${WRKSRC}/$$e ${PREFIX}/share/meschach ; done
+	@for f in tutadv.c tutorial.c ; do				\
+	i="${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/meschach/";	\
+	${ECHO} $$i; $$i;						\
+	done
 
 .include "../../mk/bsd.pkg.mk"
