@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/30 23:26:15 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/13 09:20:40 agc Exp $
 # FreeBSD: ports/devel/ruby-racc/Makefile,v 1.20 2001/01/27 09:54:30 knu Exp
 
 DISTNAME=	racc-${RACC_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.xdsl.ne.jp/Cd/aamine/soft/
 
 MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://www.xdsl.ne.jp/Cd/aamine/
-COMMENT?=	LALR(1) parser generator for Ruby
+COMMENT=	LALR(1) parser generator for Ruby
 
 RACC_VERSION=	1.3.9
 
