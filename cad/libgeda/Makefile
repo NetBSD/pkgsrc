@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/09/10 23:43:37 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.22 2003/10/31 02:13:59 dmcmahill Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
@@ -23,7 +23,7 @@ USE_BUILDLINK2=		YES
 
 INFO_FILES=		libgedadoc.info
 
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../devel/libstroke/buildlink2.mk"
 .include "../../graphics/libgdgeda/buildlink2.mk"
