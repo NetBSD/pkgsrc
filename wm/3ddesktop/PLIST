@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/25 13:50:35 xtraeme Exp $
+bin/3ddesk
+bin/3ddeskd
+share/3ddesktop/digits.bmp
+share/examples/3ddesktop/3ddesktop.conf
+@dirrm share/examples/3ddesktop
+@dirrm share/3ddesktop

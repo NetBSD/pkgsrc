@@ -1,0 +1,10 @@
+3D-Desktop is an OpenGL program for switching virtual desktops in a seamless 
+3-dimensional manner on unix. The current desktop is mapped into a fullscreen 
+3D environment where you may choose other screens. Several different 
+visualization modes are available.
+
+The transition from working desktop to fullscreen 3D environment is seamless. 
+In other words when the pager activates you see your current desktop appear 
+to zoom out to a point in space where you can see your other virtual desktops 
+allowing you to select another. The best way to understand is to try it out 
+and get the full effect! 
