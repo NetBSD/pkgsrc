@@ -1,5 +1,0 @@
-libgtop is a library that fetches system information about the running
-system such as cpu and memory usage, active processes etc.  It
-provides a setgid server that fetches the information and a
-client-side library that talks to this server.
-

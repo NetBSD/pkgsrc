@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/10/18 22:34:00 tron Exp $
+# $NetBSD: Makefile,v 1.4 1998/11/01 23:21:46 tron Exp $
 #
 
 DISTNAME=	libgtop-0.26.0
