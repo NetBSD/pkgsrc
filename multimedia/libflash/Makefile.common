@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/01/26 13:34:45 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/02/11 01:46:30 abs Exp $
 #
 
 DISTNAME=	flash-0.4.10
@@ -10,6 +10,7 @@ MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.swift-tools.com/Flash/
 
 USE_X11=	yes
+USE_LANGUAGES=	c c++
 
 DISTINFO_FILE=	${.CURDIR}/../libflash/distinfo
 PATCHDIR=	${.CURDIR}/../libflash/patches

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/02/10 01:56:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.34 2004/02/11 01:46:30 abs Exp $
 #
 
 DISTNAME=		pango-1.2.5
@@ -17,6 +17,7 @@ USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
 USE_GNU_TOOLS+=		make
 USE_X11=		yes
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 
