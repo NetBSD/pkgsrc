@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2004/10/19 02:26:39 grant Exp $
-#
+# $NetBSD: Makefile,v 1.4 2004/11/13 18:33:44 tron Exp $
 
-DISTNAME=		kphone-4.0.3
-PKGREVISION=		1
+DISTNAME=		kphone-4.0.5
 CATEGORIES=		net comms
 MASTER_SITES=		http://www.wirlab.net/kphone/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.wirlab.net/kphone/
 COMMENT=		Graphical Voice Over Internet (VoIP) phone
 

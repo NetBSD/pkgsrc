@@ -1,18 +1,13 @@
-$NetBSD: patch-ag,v 1.1 2004/07/21 21:49:02 scw Exp $
+$NetBSD: patch-ag,v 1.2 2004/11/13 18:33:44 tron Exp $
 
---- kphone/Makefile.in.orig	2004-06-23 10:21:38.000000000 +0100
-+++ kphone/Makefile.in	2004-07-21 12:52:34.000000000 +0100
-@@ -6,11 +6,11 @@
- SHARE_DIR=@datadir@/kphone
+--- kphone/Makefile.in.orig	2004-11-08 10:28:49.000000000 +0100
++++ kphone/Makefile.in	2004-11-13 19:23:10.000000000 +0100
+@@ -6,7 +6,7 @@
+ SHARE_DIR=@datadir@/apps/kphone
  BIN_DIR=@bindir@
  
--MOREDEFS=-DSHARE_DIR=\"$(SHARE_DIR)\"
-+MOREDEFS=-DSHARE_DIR=\"$(SHARE_DIR)\" -DDEVOSSAUDIO=\"$(DEVOSSAUDIO)\"
+-MOREDEFS=-DSHARE_DIR=\"$(SHARE_DIR)\" -DPO_DIR=\"$(SHARE_DIR)/translations//\" 
++MOREDEFS=-DSHARE_DIR=\"$(SHARE_DIR)\" -DPO_DIR=\"$(SHARE_DIR)/translations//\"  -DDEVOSSAUDIO=\"$(DEVOSSAUDIO)\"
  
  CFLAGS=@CFLAGS@ -I. -I../gsm -I../ilbc -I../dissipate2 @DEFS@ $(MOREDEFS)
  CXXFLAGS=$(CFLAGS)
--LIBS=@LIBS@ -lssl -lcrypto -lresolv
-+LIBS=@LIBS@ -lssl -lcrypto -lresolv ${LIBOSSAUDIO} ${PTHREAD_LIBS}
- LDFLAGS=@LDFLAGS@ -g
- 
- SUBLIBS=dissipate2 gsm ilbc

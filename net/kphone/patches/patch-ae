@@ -1,34 +1,39 @@
-$NetBSD: patch-ae,v 1.1 2004/07/21 21:49:02 scw Exp $
+$NetBSD: patch-ae,v 1.2 2004/11/13 18:33:44 tron Exp $
 
---- Makefile.in.orig	2004-04-01 14:54:32.000000000 +0100
-+++ Makefile.in	2004-07-21 11:44:19.000000000 +0100
-@@ -2,22 +2,22 @@
+--- Makefile.in.orig	2004-11-13 19:12:23.000000000 +0100
++++ Makefile.in	2004-11-13 19:13:07.000000000 +0100
+@@ -2,25 +2,25 @@
  SUBS	:=$(foreach sub,$(SUBDIRS), $(sub)/$(sub).a)
  
  all dep:
 -	@for T in $(SUBDIRS); do make -C $$T $@; done
-+	@for T in $(SUBDIRS); do ${MAKE} -C $$T $@; done
++	@for T in $(SUBDIRS); do $(MAKE) -C $$T $@; done
  
  install:	all
+-	make -C po install
 -	make -C icons install
 -	make -C kphone install
-+	${MAKE} -C icons install
-+	${MAKE} -C kphone install
++	$(MAKE) -C po install
++	$(MAKE) -C icons install
++	$(MAKE) -C kphone install
  
  uninstall:
+-	make -C po uninstall
 -	make -C icons uninstall
 -	make -C kphone uninstall
-+	${MAKE} -C icons uninstall
-+	${MAKE} -C kphone uninstall
++	$(MAKE) -C po uninstall
++	$(MAKE) -C icons uninstall
++	$(MAKE) -C kphone uninstall
  
  clean:
 -	@for T in $(SUBDIRS); do make -C $$T $@; done
-+	@for T in $(SUBDIRS); do ${MAKE} -C $$T $@; done
++	@for T in $(SUBDIRS); do $(MAKE) -C $$T $@; done
  
  distclean:	clean
  	rm -f config.cache config.log config.status
  	rm -f Makefile
 -	@for T in $(SUBDIRS); do make -C $$T $@; done
-+	@for T in $(SUBDIRS); do ${MAKE} -C $$T $@; done
++	@for T in $(SUBDIRS); do $(MAKE) -C $$T $@; done
+ 	rm -f po/Makefile
  	rm -f icons/Makefile
  
