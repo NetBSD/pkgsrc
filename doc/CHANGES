@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9437 2005/03/06 05:24:10 uebayasi Exp $
+$NetBSD: CHANGES,v 1.9438 2005/03/06 11:12:24 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1292,3 +1292,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated freepwing to 1.4.4nb1 [uebayasi 2005-03-06]
 	Added ja-sazanami-ttf-20040629 [uebayasi 2005-03-06]
 	Removed kochi-ttf-20030809 [uebayasi 2005-03-06]
+	Updated libol to 0.3.15 [adrianp 2005-03-06]
