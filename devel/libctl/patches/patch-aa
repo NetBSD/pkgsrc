@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/25 21:34:05 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/21 04:49:45 jtb Exp $
 
---- configure.in.orig	Thu Mar 16 12:10:25 2000
+--- configure.in.orig
 +++ configure.in
-@@ -10,7 +10,9 @@
- AC_PROG_CC
- AC_PROG_MAKE_SET
- AC_PROG_INSTALL
--AC_PROG_RANLIB
-+
-+AC_PATH_PROG(LIBTOOL, libtool, libtool)
-+AC_SUBST(LIBTOOL)
+@@ -115,7 +115,7 @@
+ # so that examples/Makefile.in can be used as-is for other programs:
+ CPPFLAGS="$CPPFLAGS -I`pwd`/$srcdir/base -I`pwd`/$srcdir/utils"
+ LDFLAGS="$LDFLAGS -L`pwd`/$srcdir/base"
+-LIBS="-lctl $LIBS"
++#LIBS="-lctl $LIBS"
  
- AC_CHECK_PROGS(INDENT, indent gindent, echo)
- AC_SUBST(INDENT)
+ LIBCTL_DIR="`pwd`/$srcdir"
+ AC_SUBST(LIBCTL_DIR)
