@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/05 17:11:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/29 18:52:02 wiz Exp $
 
 .include "../gaim/Makefile.common"
 
@@ -16,7 +16,6 @@ CONFIGURE_ARGS+= --enable-panel
 USE_BUILDLINK2=	YES
 
 .include "../../audio/esound/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../lang/perl5/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
