@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/12/05 16:14:53 tv Exp $
+$NetBSD: patch-aa,v 1.2 2001/05/12 16:00:41 hubertf Exp $
 
---- Makefile.in.orig	Sat Dec  5 11:06:44 1998
-+++ Makefile.in	Sat Dec  5 11:07:23 1998
+--- Makefile.in.orig	Sun Aug  2 16:03:04 1998
++++ Makefile.in	Sat May 12 17:56:03 2001
+@@ -24,7 +24,7 @@
+ CC       = $(perl_cc)
+ CFLAGS   = @CFLAGS@ $(perl_optimize) $(perl_ccflags) -I$(perl_archlib)/CORE -I.
+ DLCFLAGS = @CFLAGS@ $(perl_optimize) $(perl_cccdlflags) $(perl_ccflags) -I$(perl_archlib)/CORE -I.
+-LDFLAGS  = @LDFLAGS@ $(perl_ccdlflags) $(perl_ldflags) -L$(perl_archlib)/CORE 
++LDFLAGS  = @LDFLAGS@ $(perl_ccdlflags) $(perl_ldflags) -L$(perl_archlib)/CORE  -Wl,-R$(perl_archlib)/CORE
+ LDLIBS   = $(perl_dla) -lperl $(perl_libs)
+ AR       = @AR@
+ RANLIB   = @RANLIB@
 @@ -44,7 +44,7 @@
  exec_prefix     = $(prefix)
  bindir          = $(prefix)/bin
