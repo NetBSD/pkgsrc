@@ -3,3 +3,6 @@ to install "@@PREFIX@@/etc/mailer.conf.sendmail" as global mailwrapper
 configuration file. The command below will do that for you:
 
 ln -fs @@PREFIX@@/etc/mailer.conf.sendmail /etc/mailer.conf
+
+If you are upgrading from "sendmail" 8.8.x don't forget to rebuild all
+databases with "newaliases" and "makemap".
