@@ -1,0 +1,13 @@
+$NetBSD: patch-ft,v 1.1 2004/11/01 16:39:06 gavan Exp $
+
+--- konsole/konsole/session.cpp.orig	2004-05-22 21:26:55.000000000 +0100
++++ konsole/konsole/session.cpp
+@@ -14,6 +14,8 @@
+ #include <qregexp.h>
+ #include <qtextedit.h>
+ 
++#undef truncate
++
+ #ifndef HERE
+ #define HERE fprintf(stderr,"%s(%d): here\n",__FILE__,__LINE__)
+ #endif
