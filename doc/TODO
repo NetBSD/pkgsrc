@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2765 2004/12/26 02:08:47 wiz Exp $
+$NetBSD: TODO,v 1.2766 2004/12/26 02:44:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -889,7 +889,6 @@ Suggested package updates
 	o p5-razor-agents-2.61
 	o p5-sybperl-2.17
 	o p5-xmltv-0.5.37
-	o p7zip-4.13
 	o pari-2.2.7
 	o pdmenu-1.2.85
 	o pen-0.15.0
