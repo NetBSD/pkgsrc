@@ -1,38 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2000/03/07 03:35:43 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2000/03/07 17:44:13 jlam Exp $
 #
-
-DISTNAME=	icewm-1.0.2
-CATEGORIES=	x11
-MASTER_SITES=	http://download.sourceforge.net/icewm/ \
-		ftp://ftp.fu-berlin.de/unix/X11/window-managers/icewm/
-EXTRACT_SUFX=	.src.tar.gz
-
-MAINTAINER=	wiz@netbsd.org
-HOMEPAGE=	http://icewm.sourceforge.net/
 
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 CONFLICTS+=	icewm-gnome-[0-9]*
 
-GNU_CONFIGURE=	YES
-USE_X11BASE=	YES
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-.if exists(/usr/include/machine/apmvar.h)
-CPPFLAGS+=	-DCONFIG_APM
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
-.endif
-.endif
-
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/icewm
-.for f in BUGS CHANGES COPYING FAQ README TODO doc/icewm.html
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/icewm
-.endfor
-.for f in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
-	${INSTALL_DATA} ${WRKSRC}/doc/icewm-${f}.html ${PREFIX}/share/doc/icewm
-.endfor
-
-.include "../../mk/bsd.pkg.mk"
+.include "../../x11/icewm/Makefile.common"
