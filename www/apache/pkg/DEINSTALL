@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: DEINSTALL,v 1.6 2001/04/14 19:42:54 kim Exp $
+# $NetBSD: DEINSTALL,v 1.7 2001/04/29 20:42:29 jlam Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -84,7 +84,7 @@ EOF
 EOF
 			for file in ${modified_files}
 			do
-				echo "  ${file}"
+				echo "	${file}"
 			done
 		fi
 		if [ -n "${existing_dirs}" ]
@@ -96,7 +96,7 @@ EOF
 EOF
 			for dir in ${existing_dirs}
 			do
-				echo "  ${dir}"
+				echo "	${dir}"
 			done
 		fi
 		${CAT} << EOF
