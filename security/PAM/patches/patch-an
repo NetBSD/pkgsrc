@@ -1,0 +1,89 @@
+$NetBSD: patch-an,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+
+--- modules/pam_unix/pam_unix_acct.c.orig	Sat Oct 21 12:49:02 2000
++++ modules/pam_unix/pam_unix_acct.c
+@@ -46,9 +46,12 @@
+ #include <string.h>
+ #include <unistd.h>
+ #include <sys/types.h>
++#include <sys/param.h>
+ #include <syslog.h>
+ #include <pwd.h>
++#ifndef BSD
+ #include <shadow.h>
++#endif
+ #include <time.h>		/* for time() */
+ 
+ 
+@@ -78,7 +81,7 @@
+ 	const char *uname;
+ 	int retval, daysleft;
+ 	time_t curdays;
+-	struct spwd *spent;
++	struct spwd *spent = NULL;
+ 	struct passwd *pwent;
+ 	char buf[80];
+ 
+@@ -119,6 +122,9 @@
+ 					return PAM_CRED_INSUFFICIENT;
+ 			}
+ 		}
++#ifdef BSD
++		spent = NULL;
++#else
+ 		spent = getspnam( uname );
+ 		if (save_uid == pwent->pw_uid)
+ 			setreuid( save_uid, save_euid );
+@@ -127,16 +133,42 @@
+ 			setreuid( save_uid, -1 );
+ 			setreuid( -1, save_euid );
+ 		}
+-
++#endif
+ 	} else if (!strcmp( pwent->pw_passwd, "x" )) {
++#ifdef BSD
++		spent = NULL;
++#else
+ 		spent = getspnam(uname);
++#endif
+ 	} else {
++#if (defined(BSD) && BSD >= 199306)
++		time_t now = time(NULL);
++		if (now > pwent->pw_expire) {
++			_log_err(LOG_NOTICE
++				 ,"account %s has expired (account expired)"
++				 ,uname);
++			_make_remark(pamh, ctrl, PAM_ERROR_MSG,
++			    	"Your account has expired; please contact your system administrator");
++			D(("account expired"));
++			return PAM_ACCT_EXPIRED;
++		}
++		else if (now + _PASSWORD_WARNDAYS * 86400 > pwent->pw_expire) {
++			daysleft = (pwent->pw_expire - now) / 86400;
++			_log_err(LOG_DEBUG
++				 ,"password for user %s will expire in %d days"
++				 ,uname, daysleft);
++			snprintf(buf, 80, "Warning: your password will expire in %d day%.2s",
++				 daysleft, daysleft == 1 ? "" : "s");
++			_make_remark(pamh, ctrl, PAM_TEXT_INFO, buf);
++		}
++#endif
+ 		return PAM_SUCCESS;
+ 	}
+ 
+ 	if (!spent)
+ 		return PAM_AUTHINFO_UNAVAIL;	/* Couldn't get username from shadow */
+ 
++#ifndef BSD
+ 	curdays = time(NULL) / (60 * 60 * 24);
+ 	D(("today is %d, last change %d", curdays, spent->sp_lstchg));
+ 	if ((curdays > spent->sp_expire) && (spent->sp_expire != -1)
+@@ -189,7 +221,7 @@
+ 			 daysleft, daysleft == 1 ? "" : "s");
+ 		_make_remark(pamh, ctrl, PAM_TEXT_INFO, buf);
+ 	}
+-
++#endif
+ 	D(("all done"));
+ 
+ 	return PAM_SUCCESS;

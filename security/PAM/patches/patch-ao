@@ -1,0 +1,100 @@
+$NetBSD: patch-ao,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+
+--- modules/pam_unix/pam_unix_passwd.c.orig	Sat Oct 21 13:10:07 2000
++++ modules/pam_unix/pam_unix_passwd.c
+@@ -52,7 +52,10 @@
+ #include <errno.h>
+ #include <pwd.h>
+ #include <syslog.h>
++#include <sys/param.h>
++#ifndef BSD
+ #include <shadow.h>
++#endif
+ #include <time.h>		/* for time() */
+ #include <fcntl.h>
+ #include <ctype.h>
+@@ -83,7 +86,7 @@
+ #include "md5.h"
+ #include "support.h"
+ 
+-#if !((__GLIBC__ == 2) && (__GLIBC_MINOR__ >= 1))
++#if !defined(BSD) && !((__GLIBC__ == 2) && (__GLIBC_MINOR__ >= 1))
+ extern int getrpcport(const char *host, unsigned long prognum,
+ 		      unsigned long versnum, unsigned int proto);
+ #endif				/* GNU libc 2.1 */
+@@ -334,6 +337,9 @@
+ 
+ static int _update_passwd(const char *forwho, char *towhat)
+ {
++#ifdef BSD
++	return PAM_AUTHTOK_ERR;
++#else
+ 	struct passwd *tmpent = NULL;
+ 	FILE *pwfile, *opwfile;
+ 	int retval = 0;
+@@ -376,10 +382,14 @@
+ 		unlink(PW_TMPFILE);
+ 
+ 	return retval;
++#endif
+ }
+ 
+ static int _update_shadow(const char *forwho, char *towhat)
+ {
++#ifdef BSD
++	return PAM_AUTHTOK_ERR;
++#else
+ 	struct spwd *spwdent = NULL, *stmpent = NULL;
+ 	FILE *pwfile, *opwfile;
+ 	int retval = 0;
+@@ -428,6 +438,7 @@
+ 		unlink(SH_TMPFILE);
+ 
+ 	return retval;
++#endif
+ }
+ 
+ static int _do_setpass(const char *forwho, char *fromwhat, char *towhat,
+@@ -535,15 +546,18 @@
+ 		return PAM_AUTHINFO_UNAVAIL;	/* We don't need to do the rest... */
+ 
+ 	if (strcmp(pwd->pw_passwd, "x") == 0) {
++#ifndef BSD
+ 		/* ...and shadow password file entry for this user, if shadowing
+ 		   is enabled */
+ 		setspent();
+ 		spwdent = getspnam(user);
+ 		endspent();
++#endif
+ 
+ 		if (spwdent == NULL)
+ 			return PAM_AUTHINFO_UNAVAIL;
+ 	} else {
++#ifndef BSD
+ 		if (strcmp(pwd->pw_passwd,"*NP*") == 0) { /* NIS+ */                 
+ 			uid_t save_uid;
+ 
+@@ -556,8 +570,15 @@
+ 				return PAM_AUTHINFO_UNAVAIL;
+ 		} else
+ 			spwdent = NULL;
++#endif
+ 	}
+ 
++#ifdef BSD
++	if (off(UNIX__IAMROOT, ctrl)) {
++		if (time(NULL) > pwd->pw_expire)
++			retval = PAM_ACCT_EXPIRED;
++	}
++#else
+ 	if (spwdent != NULL) {
+ 		/* We have the user's information, now let's check if their account
+ 		   has expired (60 * 60 * 24 = number of seconds in a day) */
+@@ -583,6 +604,7 @@
+ 				retval = PAM_ACCT_EXPIRED;
+ 		}
+ 	}
++#endif
+ 	return retval;
+ }
+ 

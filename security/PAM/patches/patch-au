@@ -1,0 +1,19 @@
+$NetBSD: patch-au,v 1.1.1.1 2000/10/21 18:41:54 rh Exp $
+
+--- conf/install_conf.orig	Sun Jul 12 07:17:14 1998
++++ conf/install_conf
+@@ -14,11 +14,10 @@
+ 		echo "\
+ An older Linux-PAM configuration file already exists ($CONFILE)"
+ 		WRITE=overwrite
++		yes=n
++	else
++		yes=y
+ 	fi
+-	echo -n "\
+-Do you wish to copy the $CONF file in this distribution
+-to $CONFILE ? (y/n) [n] "
+-	read yes
+ else
+ 	yes=n
+ fi
