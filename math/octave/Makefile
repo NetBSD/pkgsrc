@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1999/12/16 15:42:54 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.14 2000/01/09 01:32:55 wiz Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.13
@@ -41,7 +41,7 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-GCC_VERSION!=	${CC} --version 
+GCC_VERSION!=	${CC} --version
 
 post-patch:
 .if (${GCC_VERSION:C/-.*$$//} == egcs)
