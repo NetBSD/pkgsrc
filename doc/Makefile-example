@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.2 2004/01/21 10:33:16 agc Exp $
+# $NetBSD: Makefile-example,v 1.3 2004/01/21 10:48:21 agc Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
@@ -6,7 +6,7 @@
 DISTNAME=		make-3.80
 PKGNAME=		gmake-3.80	# only to be added if the package name is different from DISTNAME
 #PKGREVISION=		2		# should be added/incremented for user-visible changes
-CATEGORIES=		devel		# multiple categories are allowed
+CATEGORIES=		devel gnu	# multiple categories are allowed
 MASTER_SITES=		${MASTER_SITE_GNU:=make/}
 #EXTRACT_SUFX=		.tar.bz2	# .tar.gz is the default, only needed in unusual circumstances
 
@@ -15,23 +15,32 @@ MAINTAINER=		tech-pkg@NetBSD.org	# set this to your email address, tech-pkg@ is 
 HOMEPAGE=		http://www.gnu.org/software/make/make.html
 COMMENT=		GNU version of 'make' utility	# start with a capital, no articles at start
 
-# Third paragraph - PKG_INSTALLATION_TYPES
+# Third paragraph - licensing information
+# Please set RESTRICTED to the relevant reason, and use it to define NO_{SRC,BIN}_ON_{FTP,CDROM}
+# Any specific licence should be added to the pkgsrc/licenses directory
+RESTRICTED=		"Redistribution of unmodified source only; resale prohibited."
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+LICENSE=		hptools-license
+
+# Fourth paragraph - PKG_INSTALLATION_TYPES
 PKG_INSTALLATION_TYPES=	overwrite pkgviews	# needed for package views-ready packages
 
-# Fourth paragraph - all build definitions
+# Fifth paragraph - all build definitions
 # WRKSRC, USE_BUILDLINK2, USE_BUILDLINK3, GNU_CONFIGURE, HAS_CONFIGURE,
 # USE_PKGLOCALEDIR, USE_INSTALL, TEXINFO_REQD, USE_JAVA, USE_PERL5
 # INFO_FILES, DIST_SUBDIR, CONFIGURE_ENV, CONFIGURE_ARGS, MAKE_ENV
 # etc
-WRKSRC=			${WRKDIR}/src
-USE_BUILDLINK3=		YES
-GNU_CONFIGURE=		YES
-USE_PKGLOCALEDIR=	YES
-TEXINFO_REQD=		4.0
-INFO_FILES=		make.info
 DIST_SUBDIR=		gmake
+GNU_CONFIGURE=		yes
+INFO_FILES=		make.info	# any info files, whitespace delimited
+TEXINFO_REQD=		4.0		# version of texinfo which is necessary
+USE_BUILDLINK3=		yes
+USE_PKGLOCALEDIR=	yes
+WRKSRC=			${WRKDIR}/src
 
-# Fifth paragraph - different targets
+# Sixth paragraph - different targets
 # ALL_TARGET, INSTALL_TARGET, TEST_TARGET
 TEST_TARGET=		check
 
@@ -39,23 +48,22 @@ TEST_TARGET=		check
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(GNU_PROGRAM_PREFIX)
+# indent nested "if" by 2 spaces please
+.  if ${GNU_PROGRAM_PREFIX} == "g"
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
+.  endif
 .endif
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
-
-.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-PLIST_SUBST+=		GMAKE_LINK=""
-.else
-PLIST_SUBST+=		GMAKE_LINK="@comment "
-.endif
 
 # Makefile targets should occur after all the other definitions in the file
 post-install:
 	${CHMOD} g-s ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}make
 	${CHGRP} ${BINGRP} ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}make
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-	${LN} -sf ${GNU_PROGRAM_PREFIX}make ${PREFIX}/bin/gmake
+	# Solaris's "ln -fs" is not the same as on *BSD - use an explicit rm(1) instead
+	${RM} -f ${PREFIX}/bin/gmake
+	${LN} -s ${GNU_PROGRAM_PREFIX}make ${PREFIX}/bin/gmake
 .endif
 
 # buildlink2 and buildlink3 files should come at the end of the file,
