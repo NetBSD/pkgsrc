@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:50:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/01 02:00:12 salo Exp $
 bin/baduki
-share/locale/ko/LC_MESSAGES/baduki.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/baduki.mo
 share/baduki/baduki.gtkrc
 share/baduki/board.xpm
 @dirrm share/baduki
