@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/02/20 12:03:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/29 16:41:21 jmmv Exp $
 #
 
-DISTNAME=	rhythmbox-0.6.5
-PKGREVISION=	1
+DISTNAME=	rhythmbox-0.6.7
 CATEGORIES=	audio gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=gnome/sources/rhythmbox/0.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.6/}
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.rhythmbox.org/
@@ -20,6 +19,8 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 
+PKGCONFIG_OVERRIDE=	data/rhythmbox.pc.in
+
 GCONF2_SCHEMAS=		rhythmbox.schemas
 
 .include "../../audio/flac/buildlink3.mk"
@@ -34,6 +35,7 @@ GCONF2_SCHEMAS=		rhythmbox.schemas
 .include "../../multimedia/gstreamer/buildlink3.mk"
 .include "../../multimedia/gst-plugins/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
