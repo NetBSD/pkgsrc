@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.112 2002/12/07 21:23:25 cjep Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.113 2002/12/22 01:23:50 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -616,6 +616,11 @@ GIMP_WITH_HELPBROWSER?=	no
 # help browser. Adds quite some bloat in the form of dependencies.
 # Possible: yes, no
 # Default: no
+
+GNU_PROGRAM_PREFIX?=	g
+# This is the prefix to add for GNU programs, like gls or gnutouch.
+# Possible, g, gnu, empty, ...
+# Default: g
 
 #GQMPEG_NO_JAPANESE?=	yes
 # Can be enabled to handle keep gqmpeg from interpreting ID3 tags
