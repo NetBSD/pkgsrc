@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.21 2001/05/09 10:06:11 zuntum Exp $
+$NetBSD: TODO,v 1.22 2001/05/09 16:33:52 abs Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -16,6 +16,10 @@ packages TODO (Suggested new packages)
 	figfonts
 	More fonts for figlet
 	ftp://ftp.plig.org/pub/figlet/fonts/contributed/
+
+	jabber
+	Messaging client
+	http://www.jabber.com/downloads/index.shtml
 
 	kde-i18n
 	Internationalisation package for KDE 2.
@@ -42,6 +46,9 @@ packages TODO (Suggested new packages)
 	SquirrelMail has a plugings features and several plugins exist.
 	http://www.squirrelmail.org/index.php3?page=15
 
+	vmsbackup
+	Read VMS backup tapes
+	http://garbo.uwasa.fi/pub/unix/vmsbackup/
 
 package update TODO (Suggested package updates)
 ^^^^^^^^^^^^^^^^^^^
