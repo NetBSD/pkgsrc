@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/16 21:49:27 wiz Exp $
+bin/bbsload
+share/bbtools/README.bbsload
+share/bbtools/bbsload.bb
+share/bbtools/bbsload.nobb
+@unexec ${RMDIR} %D/share/bbtools 2>/dev/null || true
