@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/04 08:33:59 agc Exp $
+# $NetBSD: Makefile,v 1.2 2003/12/24 09:53:50 jmmv Exp $
 #
 
 DISTNAME=	nroff-clone
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.scn.rain.com/pub/text/
 EXTRACT_SUFX=	.shar.Z
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.scn.rain.com/pub/text/
 COMMENT=	Text formatter (nroff-clone) written in awk
 

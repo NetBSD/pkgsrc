@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/12/13 20:14:26 ben Exp $
+# $NetBSD: Makefile,v 1.12 2003/12/24 09:53:48 jmmv Exp $
 
 DISTNAME=	gmodplay-0.08
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://magic.metawire.com/~rani/ \
 		http://rani.free.fr/
 
-MAINTAINER=	ben@netbsd.org
+MAINTAINER=	ben@NetBSD.org
 HOMEPAGE=	http://rani.free.fr/
 COMMENT=	MOD player for IT XM S3M MOD MTM STM FAR ULT 669 AMS DBM MDL OKT files
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2003/12/13 20:14:27 ben Exp $
+# $NetBSD: Makefile,v 1.10 2003/12/24 09:53:50 jmmv Exp $
 #
 
 DISTNAME=		memtest86-2.9
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.memtest86.com/
 
-MAINTAINER=		ben@netbsd.org
+MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www.memtest86.com/
 COMMENT=		Thorough, stand alone memory test for x86 arch
 
