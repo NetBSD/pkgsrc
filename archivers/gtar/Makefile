@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15.2.1 2002/05/11 02:08:49 jlam Exp $
+# $NetBSD: Makefile,v 1.15.2.2 2002/06/21 23:04:42 jlam Exp $
 #
 
 DISTNAME=	gtar-1.12
@@ -13,7 +13,7 @@ COMMENT=	The "meta-package" for the GNU tape archiver (tar)
 DEPENDS+=	gtar-base-1.12:../../archivers/gtar-base
 DEPENDS+=	gtar-info-1.12:../../archivers/gtar-info
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=	yes
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes

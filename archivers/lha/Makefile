@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12.2.1 2002/05/11 02:08:51 jlam Exp $
+# $NetBSD: Makefile,v 1.12.2.2 2002/06/21 23:04:46 jlam Exp $
 
 DISTNAME=       lha-114i
 PKGNAME=	lha-114.9
@@ -9,7 +9,7 @@ MASTER_SITES=   http://www2m.biglobe.ne.jp/~dolphin/lha/prog/ \
 MAINTAINER=     packages@netbsd.org
 COMMENT=	Archive files using LZW compression (.lzh files)
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 MAKE_FLAGS=	MAKE="${MAKE_PROGRAM}"
 

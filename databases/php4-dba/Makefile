@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2002/02/28 06:16:48 jlam Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2002/06/21 23:05:03 jlam Exp $
 
 MODNAME=		dba
 CATEGORIES+=		databases
 PKGREVISION=		# empty
 COMMENT=		PHP4 extension for DBM database access
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 .include "../../www/php4/Makefile.module"
 
@@ -20,9 +20,9 @@ CONFIGURE_ARGS+=	--without-dbm
 CONFIGURE_ARGS+=	--without-gdbm
 CONFIGURE_ARGS+=	--with-ndbm=/usr
 .else
-CONFIGURE_ARGS+=	--with-gdbm=shared,${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-gdbm=shared,${BUILDLINK_PREFIX.gdbm}
 CONFIGURE_ARGS+=	--without-ndbm
-.include "../../databases/gdbm/buildlink.mk"
+.include "../../databases/gdbm/buildlink2.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"

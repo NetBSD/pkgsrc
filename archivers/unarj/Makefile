@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11.2.1 2002/05/11 02:08:55 jlam Exp $
+# $NetBSD: Makefile,v 1.11.2.2 2002/06/21 23:04:52 jlam Exp $
 
 DISTNAME=       unarj-2.43
 CATEGORIES=	archivers
@@ -14,7 +14,7 @@ RESTRICTED=	"Do not charge a fee for use, copying, or distribution"
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unarj

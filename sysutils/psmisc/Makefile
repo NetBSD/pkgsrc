@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11.2.1 2002/05/11 02:09:24 jlam Exp $
+# $NetBSD: Makefile,v 1.11.2.2 2002/06/21 23:05:42 jlam Exp $
 
 DISTNAME=		psmisc-20.1
 CATEGORIES=		sysutils
@@ -10,7 +10,7 @@ COMMENT=		miscellaneous procfs tools: killall, pidof, and pstree
 
 CONFLICTS+=		pstree-[0-9]*
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 GNU_CONFIGURE=		# defined
 LIBS+=			${LIBGETOPT}
 

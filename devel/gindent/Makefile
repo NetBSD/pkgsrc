@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23.2.1 2002/06/06 06:54:35 jlam Exp $
+# $NetBSD: Makefile,v 1.23.2.2 2002/06/21 23:05:06 jlam Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/08/29 09:20:00 obrien Exp
 #
 
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/indent/indent.html
 COMMENT=	GNU version of pretty-printer for C source code
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--program-prefix=g
 

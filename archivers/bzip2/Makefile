@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18.2.1 2002/05/11 02:08:47 jlam Exp $
+# $NetBSD: Makefile,v 1.18.2.2 2002/06/21 23:04:39 jlam Exp $
 #
 
 DISTNAME=	bzip2-1.0.2
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://sourceware.cygnus.com/bzip2/
 COMMENT=	Block-sorting file compressor
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 USE_LIBTOOL=		# defined
 MAKE_ENV+=		REALCC="${BUILDLINK_CC}"
 

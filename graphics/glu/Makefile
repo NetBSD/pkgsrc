@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10.2.1 2002/05/11 02:09:11 jlam Exp $
+# $NetBSD: Makefile,v 1.10.2.2 2002/06/21 23:05:21 jlam Exp $
 
 PKGNAME=		${DISTNAME:C/MesaLib/glu/}
 WRKSRC=			${WRKDIR}/${DISTNAME:C/Lib//}
@@ -10,7 +10,7 @@ CONFLICTS+=		Mesa<3.2.1
 
 .include "../Mesa/Makefile.common"
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 
 .include "../../mk/bsd.prefs.mk"

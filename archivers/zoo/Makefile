@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11.2.1 2002/05/11 02:08:57 jlam Exp $
+# $NetBSD: Makefile,v 1.11.2.2 2002/06/21 23:04:56 jlam Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/08/10 22:31:36 fenner Exp 
 #
 
@@ -12,7 +12,7 @@ COMMENT=	Manipulate archives of files in compressed form
 
 LICENSE=	zoo-license
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=	yes
 
 WRKSRC=		${WRKDIR}
 ALL_TARGET=     bsdansi

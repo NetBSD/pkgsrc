@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31.2.1 2002/05/11 02:09:21 jlam Exp $
+# $NetBSD: Makefile,v 1.31.2.2 2002/06/21 23:05:36 jlam Exp $
 
 DISTNAME=	xpkgwedge-1.7
 CATEGORIES=	pkgtools devel x11
@@ -14,7 +14,7 @@ NO_CONFIGURE=	# defined
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	# defined
 
-USE_BUILDLINK2_ONLY=	# defined
+USE_BUILDLINK2=	# defined
 
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL

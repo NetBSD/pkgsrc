@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3.2.1 2002/05/11 02:09:13 jlam Exp $
+# $NetBSD: Makefile,v 1.3.2.2 2002/06/21 23:05:24 jlam Exp $
 
 DISTNAME=	libmng-1.0.3
 PKGNAME=	${DISTNAME:S/lib//}
@@ -11,7 +11,7 @@ MAINTAINER=	packages@netbsd.com
 HOMEPAGE=	http://www.libmng.com/
 COMMENT=	Multiple-image Network Graphics (MNG) reference library
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

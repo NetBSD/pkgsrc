@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10.2.1 2002/05/11 02:09:22 jlam Exp $
+# $NetBSD: Makefile,v 1.10.2.2 2002/06/21 23:05:39 jlam Exp $
 #
 
 DISTNAME=	Linux-${PKGNAME}
@@ -11,7 +11,7 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.kernel.org/pub/linux/libs/pam/
 COMMENT=	Pluggable Authentication Modules
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 
 GNU_CONFIGURE=		yes

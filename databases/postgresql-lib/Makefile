@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5.2.1 2002/05/11 02:09:01 jlam Exp $
+# $NetBSD: Makefile,v 1.5.2.2 2002/06/21 23:05:04 jlam Exp $
 
 PKGNAME=		postgresql-lib-${BASE_VERS}
 COMMENT=		PostgreSQL database headers and libraries
 
-USE_BUILDLINK2_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 .include "../../databases/postgresql/Makefile.common"
 

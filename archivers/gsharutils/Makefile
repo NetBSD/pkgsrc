@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9.2.1 2002/05/11 02:08:48 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.2 2002/06/21 23:04:42 jlam Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -10,8 +10,8 @@ HOMEPAGE=	http://www.gnu.org/software/sharutils/sharutils.html
 COMMENT=	Allow packing and unpacking of shell archives
 
 BUILD_USES_MSGFMT=	yes
-USE_BUILDLINK2_ONLY=	yes
 
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=  yes
 CONFIGURE_ARGS= --program-prefix=g --disable-uucode
 CONFIGURE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13.2.1 2002/06/06 06:54:34 jlam Exp $
+# $NetBSD: Makefile,v 1.13.2.2 2002/06/21 23:04:59 jlam Exp $
 
 DISTNAME=	vorbis-tools-1.0rc3
 PKGNAME=	vorbis-tools-1.0.0.7
@@ -17,7 +17,7 @@ DEPENDS=	curl>=7.9.1:../../www/curl
 
 CONFLICTS=	vorbis-[0-9]*
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig

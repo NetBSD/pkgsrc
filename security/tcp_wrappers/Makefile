@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6.2.1 2002/06/06 06:54:50 jlam Exp $
+# $NetBSD: Makefile,v 1.6.2.2 2002/06/21 23:05:41 jlam Exp $
 
 DISTNAME= 	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -12,8 +12,8 @@ COMMENT=	Monitor and filter incoming requests for network services
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# in NetBSD base system
 
-USE_BUILDLINK2_ONLY=	# defined
-USE_LIBTOOL=		# defined
+USE_BUILDLINK2=	# defined
+USE_LIBTOOL=	# defined
 
 ALL_TARGET=	sunos5
 

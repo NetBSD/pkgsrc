@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17.2.1 2002/05/11 02:09:32 jlam Exp $
+# $NetBSD: Makefile,v 1.17.2.2 2002/06/21 23:05:56 jlam Exp $
 
 PKGNAME=	qt2-libs-${QTVERSION}
 PKGREVISION=	2
 COMMENT=	C++ X GUI toolkit
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=	yes
 
 .include "../qt2-libs/Makefile.common"
 

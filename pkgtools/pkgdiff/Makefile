@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24.2.1 2002/05/11 02:09:20 jlam Exp $
+# $NetBSD: Makefile,v 1.24.2.2 2002/06/21 23:05:34 jlam Exp $
 #
 
 DISTNAME=	pkgdiff-0.105
@@ -18,7 +18,7 @@ NO_CHECKSUM=	yes
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
 
-USE_BUILDLINK2_ONLY=	yes
+USE_BUILDLINK2=	yes
 
 MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR}
 
