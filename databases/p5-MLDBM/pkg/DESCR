@@ -1,0 +1,2 @@
+MLDBM is a Perl module that can be used to store multidimensional
+hash structures in tied hashes (including DBM files).
