@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6360 2004/06/28 05:39:34 minskim Exp $
+$NetBSD: CHANGES,v 1.6361 2004/06/28 08:15:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3121,3 +3121,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added rss2email-2.32 [schmonz 2004-06-27]
 	Updated mips64emul to 20040627 [xtraeme 2004-06-28]
 	Added txt2pdbdoc-1.4.4 [minskim 2004-06-28]
+	Updated libsndfile to 1.0.10 [adam 2004-06-28]
