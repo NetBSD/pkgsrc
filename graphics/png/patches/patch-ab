@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1 2000/04/20 02:11:48 wiz Exp $
+
+--- libpngpf.3.orig	Tue Mar 21 12:13:03 2000
++++ libpngpf.3	Thu Apr 20 04:06:09 2000
+@@ -1,4 +1,4 @@
+-.TH LIBPNGPF 3 March 21, 2000
++.TH LIBPNGPF 3 "March 21, 2000"
+ .SH NAME
+ libpng \- Portable Network Graphics (PNG) Reference Library 1.0.6
+ (private functions)
