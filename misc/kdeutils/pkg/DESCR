@@ -1,1 +1,9 @@
-KDE provides an integrated X11 based environment, much like CDE.
+A collection of utilities for the K Development Environment:
+
+ * archiver
+ * online manual reader
+ * calculator
+ * editors
+ * post-it notes
+ * hex file editor
+ * ...
