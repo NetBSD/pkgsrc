@@ -41,13 +41,13 @@ else
 		cd /dev
 		/bin/ls -C tty[0-9][0-9]
 		echo ""
-		echo -n "Enter the number X from cuaaX above : "
+		echo -n "Enter the number X from ttyX above : "
 		read bar
 		if [ ${bar} ] ; then
-			if [ -e /dev/cuaa${bar} ]; then
-				ln -s /dev/cuaa${bar} /dev/modem
+			if [ -e /dev/tty${bar} ]; then
+				ln -s /dev/tty${bar} /dev/modem
 			else
-				echo "Error: /dev/cuaa${bar} doesn't exist."
+				echo "Error: /dev/tty${bar} doesn't exist."
 				exit 1
 			fi
 		fi
