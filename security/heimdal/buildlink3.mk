@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/01/10 21:35:26 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/01/13 00:00:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HEIMDAL_BUILDLINK3_MK:=	${HEIMDAL_BUILDLINK3_MK}+
@@ -47,7 +47,7 @@ BUILDLINK_USE_BUILTIN.heimdal=	NO
 # the version number of the software.  Match up heimdal versions with
 # OS versions for an approximate determination of the heimdal version.
 #
-.if !defined(_HEIMDAL_VERSION)
+.    if !defined(_HEIMDAL_VERSION)
 _HEIMDAL_VERSIONS=	0.6 0.5 0.4e 0.3f 0.3e
 _HEIMDAL_0.6=		NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
 _HEIMDAL_0.5=		NetBSD-1.6[I-T]-*
@@ -57,16 +57,16 @@ _HEIMDAL_0.4e=		NetBSD-1.6[A-H]-*				\
 _HEIMDAL_0.3f=		NetBSD-1.5X-*
 _HEIMDAL_0.3e=		NetBSD-1.5[UVW]-*				\
 			NetBSD-1.5.*-*
-.  for _heimdal_version_ in ${_HEIMDAL_VERSIONS}
-.    for _pattern_ in ${_HEIMDAL_${_heimdal_version_}}
-.      if !empty(MACHINE_PLATFORM:M${_pattern_})
+.      for _heimdal_version_ in ${_HEIMDAL_VERSIONS}
+.        for _pattern_ in ${_HEIMDAL_${_heimdal_version_}}
+.          if !empty(MACHINE_PLATFORM:M${_pattern_})
 _HEIMDAL_VERSION?=	${_heimdal_version_}
-.      endif
-.    endfor
-.  endfor
+.          endif
+.        endfor
+.      endfor
 _HEIMDAL_VERSION?=	0.2t
 MAKEFLAGS+=	_HEIMDAL_VERSION="${_HEIMDAL_VERSION}"
-.endif
+.    endif
 
 _HEIMDAL_PKG=		heimdal-${_HEIMDAL_VERSION}
 _HEIMDAL_DEPENDS=	${BUILDLINK_DEPENDS.heimdal}
