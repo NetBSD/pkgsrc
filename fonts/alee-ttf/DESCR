@@ -1,0 +1,16 @@
+This package contains Hangul truetype fonts made by A Lee.
+
+Eunjin and Ongdalsam are general purpose Hangul truetype fonts and
+contain ascii and Korean syllable characters.  These fonts are looks
+good in 12px (9pt in 96dpi screen) size without antialiasing.
+
+Hmfs is not a real Hangul font.  It is specially designed truetype
+ascii font in the manner of Hangul 3-bul-sik typewriter which is
+invented by Dr. Kong Byeong-woo.
+
+On qwerty keyboard layout, get Hmfs font and type as typing Hangul on
+Hangul 3-bul-sik-final keyboard WITHOUT HANGUL IME.  Then letters you
+type will appear like Hangul.
+
+Hmfs.ttf contains 16px bitmap for screen use, so looks good in
+16px (12pt in 96dpi screen) size without antialiasing.

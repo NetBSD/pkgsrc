@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/23 00:32:16 minskim Exp $
+lib/X11/fonts/TTF/Eunjin.ttf
+lib/X11/fonts/TTF/Hmfs.ttf
+lib/X11/fonts/TTF/Ongdalsam.ttf
+share/doc/alee-ttf/Copyright
+@dirrm share/doc/alee-ttf
