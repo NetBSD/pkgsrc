@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2000/03/28 21:41:42 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.31 2000/04/05 15:22:42 dmcmahill Exp $
 #
 
 DISTNAME=	qt-2.0.2
@@ -34,18 +34,13 @@ DEPENDS+=	egcs-1.1.2:../../lang/egcs
 CXX=		${LOCALBASE}/egcs/bin/g++
 .endif
 
-QTPREFIX=	${PREFIX}/qt2
+QTPREFIX=	${PREFIX}
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${QTPREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/moc ${QTPREFIX}/bin
-	${INSTALL_DATA_DIR} ${QTPREFIX}/lib
 	@${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/src/libqt.la ${QTPREFIX}/lib
-	${LN} -fs ${QTPREFIX}/lib/libqt.so.2.0 ${PREFIX}/lib/libqt.so.2.0
-	${INSTALL_DATA_DIR} ${QTPREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/include/* ${QTPREFIX}/include
-	${INSTALL_MAN_DIR} ${QTPREFIX}/man/man1
-	${INSTALL_MAN_DIR} ${QTPREFIX}/man/man3
+	${INSTALL_DATA_DIR} ${QTPREFIX}/include/qt
+	${INSTALL_DATA} ${WRKSRC}/include/* ${QTPREFIX}/include/qt
 	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${QTPREFIX}/man/man1
 	@cd ${WRKSRC}/man/man3; PAGES="`ls -1 | ${SED} -e 's,3qt$$,3,'`"; \
 	(for PAGE in $$PAGES; do \
