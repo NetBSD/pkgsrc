@@ -1,41 +1,29 @@
-# $NetBSD: Makefile,v 1.25 2000/02/11 10:48:20 agc Exp $
+# $NetBSD: Makefile,v 1.26 2000/02/25 01:04:16 wiz Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/11/09 10:17:02 asami Exp
 #
 
-#    SUBDIR += cfs
-#    SUBDIR += cops
     SUBDIR += crack
-#    SUBDIR += donkey
     SUBDIR += ddos-scan
     SUBDIR += fortify
     SUBDIR += fsh
-#    SUBDIR += fwtk
-#    SUBDIR += john
     SUBDIR += gnupg
     SUBDIR += libident
     SUBDIR += nessus
     SUBDIR += nfsbug
+    SUBDIR += openssh
     SUBDIR += openssl
-#    SUBDIR += p5-Authen-Radius
-#    SUBDIR += p5-Crypt-DES
-#    SUBDIR += p5-Crypt-IDEA
     SUBDIR += p5-Digest-MD5
     SUBDIR += p5-MD5
-#    SUBDIR += p5-PGP
     SUBDIR += pgp2
     SUBDIR += pgp5
-#    SUBDIR += pidentd
     SUBDIR += portsentry
     SUBDIR += py-crypto
     SUBDIR += rc5des
     SUBDIR += rsaref
+    SUBDIR += srp_client
     SUBDIR += ssh
     SUBDIR += ssh-ip-tunnel
     SUBDIR += sudo
-#    SUBDIR += super
-#    SUBDIR += swatch
     SUBDIR += tripwire
-#    SUBDIR += vscan
-#    SUBDIR += xinetd
 
 .include "../mk/bsd.pkg.subdir.mk"

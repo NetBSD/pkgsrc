@@ -1,84 +1,49 @@
-# $NetBSD: Makefile,v 1.42 2000/02/15 19:45:22 pooka Exp $
+# $NetBSD: Makefile,v 1.43 2000/02/25 01:04:14 wiz Exp $
 # FreeBSD Id: Makefile,v 1.82 1997/09/30 07:49:24 asami Exp
 #
 
-#    SUBDIR += Gofer
     SUBDIR += STk
-#    SUBDIR += Sather
     SUBDIR += bwbasic
-#    SUBDIR += cim
     SUBDIR += cint
     SUBDIR += clisp
-#    SUBDIR += cmucl
-#    SUBDIR += eiffel
     SUBDIR += egcs
     SUBDIR += elisp-manual
     SUBDIR += elk
-#    SUBDIR += eperl
     SUBDIR += expect
     SUBDIR += f2c
     SUBDIR += fort77
-#    SUBDIR += forth
-#    SUBDIR += g77
     SUBDIR += gawk
-#    SUBDIR += gcl
     SUBDIR += gforth
     SUBDIR += ghc
-#    SUBDIR += gnat
     SUBDIR += guavac
     SUBDIR += guile
     SUBDIR += hugs
     SUBDIR += icon
-#    SUBDIR += idl4
-#    SUBDIR += itcl
     SUBDIR += japhar
-#    SUBDIR += javac_netscape
     SUBDIR += jdk
     SUBDIR += jikes
     SUBDIR += kaffe
-#    SUBDIR += lcc
     SUBDIR += libperl
     SUBDIR += librep
-#    SUBDIR += logo
     SUBDIR += mawk
-#    SUBDIR += mit-scheme
-#    SUBDIR += mixal
-#    SUBDIR += mocka
-#    SUBDIR += modula-3
-#    SUBDIR += modula-3-lib
-#    SUBDIR += modula-3-socks
     SUBDIR += moscow_ml
     SUBDIR += mzscheme
     SUBDIR += nawk
-#    SUBDIR += ocaml
     SUBDIR += p2c
-#    SUBDIR += p5-Tcl
-#    SUBDIR += p5-ePerl
-#    SUBDIR += pbasic
     SUBDIR += perl5
-#    SUBDIR += pgcc
-#    SUBDIR += pgcc-current
+#    SUBDIR += perl5-currrent		# disabled by default
     SUBDIR += py-extclass
     SUBDIR += py-html-docs
     SUBDIR += python
-#    SUBDIR += rexx-imc
     SUBDIR += ruby
     SUBDIR += scheme48
-#    SUBDIR += schemetoc
-#    SUBDIR += scm
     SUBDIR += siod
     SUBDIR += smalleiffel
     SUBDIR += sml-nj
-#    SUBDIR += smalltalk
     SUBDIR += squeak
-#    SUBDIR += sr
-#    SUBDIR += swi-pl
-#    SUBDIR += tcl75
-#    SUBDIR += tcl76
     SUBDIR += tcl80
     SUBDIR += tclX80
+    SUBDIR += tclman80
     SUBDIR += ucblogo
-#    SUBDIR += vast_f90
-#    SUBDIR += xpl
 
 .include "../mk/bsd.pkg.subdir.mk"

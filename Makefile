@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2000/02/09 03:51:12 hubertf Exp $
+# $NetBSD: Makefile,v 1.31 2000/02/25 01:04:11 wiz Exp $
 # FreeBSD Id: Makefile,v 1.35 1997/08/19 07:10:01 fenner Exp
 #
 
@@ -10,14 +10,11 @@ SUBDIR+=	${HOST_SPECIFIC_PKGS}
 SUBDIR+=	${GROUP_SPECIFIC_PKGS}
 SUBDIR+=	${USER_SPECIFIC_PKGS}
 .else
-#SUBDIR += ai
 SUBDIR += archivers
-#SUBDIR += astro
 SUBDIR += audio
 SUBDIR += benchmarks
 SUBDIR += biology
 SUBDIR += cad
-#SUBDIR += chinese
 SUBDIR += comms
 SUBDIR += converters
 SUBDIR += corba
@@ -27,11 +24,9 @@ SUBDIR += devel
 SUBDIR += editors
 SUBDIR += emulators
 SUBDIR += games
-#SUBDIR += german
 SUBDIR += graphics
 SUBDIR += ham
 SUBDIR += japanese
-#SUBDIR += korean
 SUBDIR += lang
 SUBDIR += mail
 SUBDIR += math
@@ -44,12 +39,10 @@ SUBDIR += parallel
 SUBDIR += pkgtools
 SUBDIR += plan9
 SUBDIR += print
-#SUBDIR += russian
 SUBDIR += security
 SUBDIR += shells
 SUBDIR += sysutils
 SUBDIR += textproc
-#SUBDIR += vietnamese
 SUBDIR += www
 SUBDIR += x11
 .endif

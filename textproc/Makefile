@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2000/01/16 14:03:45 wulf Exp $
+# $NetBSD: Makefile,v 1.35 2000/02/25 01:04:16 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/10/13 11:11:32 itojun Exp
 #
 
-#    SUBDIR += agrep
     SUBDIR += catdoc
     SUBDIR += dict-client
     SUBDIR += dict-server
@@ -10,28 +9,22 @@
     SUBDIR += dsssl-docbook-modular
     SUBDIR += eperl
     SUBDIR += glimpse
-#    SUBDIR += html
     SUBDIR += html2text
-#    SUBDIR += info2html
-#    SUBDIR += isearch
     SUBDIR += iso12083
     SUBDIR += iso8879
     SUBDIR += ispell
     SUBDIR += jade
     SUBDIR += kdoc
     SUBDIR += libxml
-#    SUBDIR += linuxdoc
     SUBDIR += lout
-#    SUBDIR += mgdiff
     SUBDIR += mminstance
     SUBDIR += mswordview
-    SUBDIR += par
     SUBDIR += p5-Convert-BER
     SUBDIR += p5-Filter
     SUBDIR += p5-XML-Parser
-#    SUBDIR += pilot_makedoc
+    SUBDIR += par
+    SUBDIR += py-dtml
     SUBDIR += rman
-#    SUBDIR += sgmlformat
     SUBDIR += sp
     SUBDIR += t1lib
     SUBDIR += t1utils
@@ -51,6 +44,5 @@
     SUBDIR += texi2html
     SUBDIR += textutils
     SUBDIR += unroff
-#    SUBDIR += wdiff
 
 .include "../mk/bsd.pkg.subdir.mk"
