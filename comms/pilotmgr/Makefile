@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/03/27 08:54:55 tron Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/28 09:14:00 jlam Exp $
 
 DISTNAME=	pilotmgr-1.107p2
 CATEGORIES=	comms
@@ -13,9 +13,10 @@ DEPENDS+=	p5-Digest-MD5-*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Tk-*:../../x11/p5-Tk
 DEPENDS+=	p5-pilot-link-*:../p5-pilot-link
 
-USE_X11=	yes
-HAS_CONFIGURE=	yes
-NO_BUILD=	yes
+USE_X11=	# defined
+USE_PERL5=	# defined
+HAS_CONFIGURE=	# defined
+NO_BUILD=	# defined
 
 CONFIGURE_ARGS=		</dev/null
 CONFIGURE_SCRIPT=	./Setup
