@@ -1,15 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2001/11/11 06:17:27 hubertf Exp $
+$NetBSD: MESSAGE,v 1.3 2003/04/27 15:53:07 cjep Exp $
 
 See http://sourceware.cygnus.com/gnats/ for the official web page
 and don't forget to run ${PREFIX}/libexec/gnats/mkcat as gnats.
 
 Add the following line to /etc/inetd.conf to activate GNATS:
-
     support stream tcp nowait gnats ${PREFIX}/libexec/gnats/gnatsd gnatsd
 
 Add something like this into the crontab to process incoming bug reports:
-
     */5 * * * * ${PREFIX}/libexec/gnats/queue-pr -r
+
+To accept PRs by mail you'll need some new mail aliases too, e.g. 
+	gnats-admin:    postmaster
+	bugs:           "| /usr/pkg/libexec/gnats/queue-pr -q"
+	query-pr:       "| /usr/pkg/libexec/gnats/mail-query"
 
 ===========================================================================
