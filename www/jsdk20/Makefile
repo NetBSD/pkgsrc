@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/09/27 20:27:32 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2002/07/29 22:23:30 jlam Exp $
 # STOP!  Don't update this to a later version of this software.
 # The JSDK and Apache Jakarta projects have merged, making the
 # jakarta-tomcat package the current version of this software.
@@ -18,7 +18,7 @@ COMMENT=	Sun's Java Servlet Development Kit, version 2.0
 BUILD_DEPENDS+=        urlget>=1.3:../../www/urlget
 
 LICENSE=	sun-jsdk20-license
-USE_JAVA=	yes
+USE_JAVA=	run
 
 WRKSRC=		${WRKDIR}/JSDK2.0
 BUILD_DEFS+=    JSDK_HOME
