@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.310 2003/02/23 13:21:45 salo Exp $
+$NetBSD: TODO,v 1.311 2003/02/23 17:54:39 salo Exp $
 
 Suggested new packages
 ======================
@@ -263,7 +263,6 @@ Suggested package updates
 	o tuxpaint-stamps-2003.01.28
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
-	o wdm-1.22.1
 	o webalizer-2.01-10 [pkg/20445]
 	o wine-20021219 [pkg/19747]
 	o wine-20030219
