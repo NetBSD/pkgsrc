@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2004/08/04 19:59:59 minskim Exp $
+$NetBSD: patch-aa,v 1.8 2004/09/25 00:40:54 minskim Exp $
 
 --- makefile.orig	2004-08-02 20:07:42.000000000 -0500
 +++ makefile
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.7 2004/08/04 19:59:59 minskim Exp $
 -CFLAGS		+= $(READLINE:1=-DREADLINE)
 -LIBS		+= $(READLINE:1=-lreadline -lcurses)
 +CFLAGS		+= -DREADLINE
-+LIBS		+= -lreadline
++LIBS		+= -lreadline -ltermcap
  
 -prefix		= /usr/local
 +prefix		= ${PREFIX}
