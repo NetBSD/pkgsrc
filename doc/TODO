@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2693 2004/12/05 19:23:22 he Exp $
+$NetBSD: TODO,v 1.2694 2004/12/05 20:06:02 he Exp $
 
 Suggested new packages
 ======================
@@ -749,7 +749,6 @@ Suggested package updates
 	o p5-Authen-SASL-2.08
 	o p5-Authen-SASL-Cyrus-0.11
 	o p5-Business-CreditCard-0.28
-	o p5-Business-ISBN-1.78
 	o p5-CDDB-1.15
 	o p5-CGI-FormBuilder-2.13
 	o p5-CGI_Lite-2.02
