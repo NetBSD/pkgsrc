@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2003/01/15 17:15:04 martti Exp $
+# $NetBSD: Makefile,v 1.75 2003/01/23 06:50:21 martti Exp $
 
 DISTNAME=	postfix-2.0.2
 CATEGORIES=	mail
@@ -25,8 +25,8 @@ MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
 .endif
 
 #.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
-#PATCHFILES+=		tls+ipv6-1.11-pf-2.0.0.2.patch.gz
-#PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.11/
+#PATCHFILES+=		tls+ipv6-1.12-pf-2.0.2.patch.gz
+#PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.12/
 #PATCH_DIST_STRIP=	-p1
 #BUILD_DEFS+=		POSTFIX_USE_INET6
 #
