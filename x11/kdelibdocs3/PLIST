@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/11/18 11:48:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/12/10 06:06:23 markd Exp $
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/arts.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/artsmessage_8cc-source.html
@@ -3384,6 +3384,7 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/kdcoppropertyproxy_8cpp-sourc
 share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/kdcoppropertyproxy_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/kde-config_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/kde__dmalloc_8h-source.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/kde__file_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/kdebug_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/kdebug_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/kdebugclasses_8h-source.html
@@ -6593,6 +6594,14 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLabelElement__c
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLabelElement__inherit__graph.map
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLabelElement__inherit__graph.md5
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLabelElement__inherit__graph.png
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLayerElement-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLayerElement.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLayerElement__coll__graph.map
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLayerElement__coll__graph.md5
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLayerElement__coll__graph.png
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLayerElement__inherit__graph.map
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLayerElement__inherit__graph.md5
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLayerElement__inherit__graph.png
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLegendElement-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLegendElement.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLegendElement__coll__graph.map
@@ -7382,6 +7391,7 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/kqeventutil_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/kxeventutil_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/kxeventutil_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/namespaceDOM.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/namespaceKParts.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/namespacemembers.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/namespacemembers_type.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/namespaces.html
@@ -9835,7 +9845,6 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html/structKJS_1_1UChar.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html/structKJS_1_1UChar__coll__graph.map
 share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html/structKJS_1_1UChar__coll__graph.md5
 share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html/structKJS_1_1UChar__coll__graph.png
-share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html/testavl_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html/testkjs_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html/types_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html/ustring_8cpp-source.html
@@ -10678,33 +10687,19 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/pages.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/pluginpage_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/pluginpage_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/kutils.tag
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/annotated.html
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/classKWallet_1_1Wallet-members.html
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/classKWallet_1_1Wallet.html
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/classKWallet_1_1Wallet__coll__graph.map
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/classKWallet_1_1Wallet__coll__graph.md5
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/classKWallet_1_1Wallet__coll__graph.png
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/classKWallet_1_1Wallet__inherit__graph.map
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/classKWallet_1_1Wallet__inherit__graph.md5
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/classKWallet_1_1Wallet__inherit__graph.png
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/classes.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/doxygen.css
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/doxygen.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/files.html
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/functions.html
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/functions_func.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/graph_legend.dot
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/graph_legend.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/graph_legend.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/hierarchy.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/index.html
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/inherit__graph__0.map
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/inherit__graph__0.md5
-share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/inherit__graph__0.png
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/inherits.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/installdox
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/kwallet_8cc-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/kwallet_8h-source.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html/kwallettypes_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/kwallet.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html/alsaout_8cc-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html/alsaout_8h-source.html
@@ -10874,42 +10869,42 @@ share/doc/kde/HTML/en/kdelibs-apidocs/pages.html
 share/doc/kde/HTML/en/kdelibs-apidocs/qt/qt.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/search.html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/qt
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kwallet
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kutils
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kresources/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kresources
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kparts/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kparts
-@comment dirrm share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff/html
-@comment dirrm share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kmdi
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kjs
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/khtml
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeui/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeui
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdefx/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdefx
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdecore
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kate/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kate
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kabc/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kabc
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/dcop/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/dcop
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kwallet
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kutils
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kresources/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kresources
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kparts/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kparts
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kmdi
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kjs
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/khtml
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeui/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeui
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdefx/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdefx
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdecore
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kate/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kate
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kabc/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kabc
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/dcop/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/dcop
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts/html
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts
+@comment @dirrm share/doc/kde/HTML/en/kdelibs-apidocs
