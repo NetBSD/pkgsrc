@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 1999/03/22 08:41:48 tron Exp $
+# $NetBSD: Makefile,v 1.31 1999/03/23 17:47:59 tron Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/27 00:25:46 se Exp
 #
 
@@ -28,8 +28,8 @@ CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
 CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}"
+CONFIGURE_ENV=	CXXFLAGS="${CFLAGS}" \
+		all_libraries="-L${LOCALBASE}/lib"
 
 pre-patch:
 		@${LN} -s . ${WRKSRC}/${DISTNAME}
