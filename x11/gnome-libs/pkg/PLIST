@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2001/04/06 21:47:07 rh Exp $
+@comment $NetBSD: PLIST,v 1.40 2001/04/07 05:55:56 rh Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -235,7 +235,6 @@ share/doc/gnome-libs/mime-type-handling.txt
 share/doc/gnome-libs/mkstub
 share/doc/gnome-libs/session-management.txt
 share/doc/gnome-libs/suggestions.txt
-share/gnome/help/gnome-dev-info/C/docbook.css
 share/gnome/html/gnome-decl.txt
 share/gnome/html/gnome-sections.txt
 share/gnome/html/gnome.html
@@ -428,6 +427,7 @@ share/pixmaps/yes.xpm
 share/type-convert/gnome-make-postscript-mimes
 share/type-convert/postscript.convert
 share/type-convert/type.convert
+@exec mkdir -p -m 0755 %D/share/gnome/help/gnome-dev-info/C
 @dirrm share/type-convert
 @dirrm share/mime-info
 @dirrm share/idl
