@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2001/06/07 04:25:34 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/07/09 17:10:27 tv Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
-PKGNAME=		perl-base-${PERL5_VERS}
+PKGNAME=		perl-base-${PERL5_VERS}nb1
 PERL5_PKG_VERS=		# empty
 CATEGORIES+=		lang devel
 
@@ -10,7 +10,10 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://language.perl.com/index.html
 COMMENT=		base installation of Perl
 
-CONFLICTS=		perl-5.00* p5-CGI-2.6* p5-CGI-2.7[0-5]
+CONFLICTS=		perl-5.00* p5-CGI-2.6* p5-CGI-2.7[0-5] \
+			p5-Data-Dumper-2.1[0-9][0-9] p5-Data-Dumper-[0-9][0-9] \
+			p5-Devel-DProf-[0-9]* p5-Devel-Peek-[0-9]* \
+			perl-mk-[0-9]*
 
 HAS_CONFIGURE=		# defined
 CONFIGURE_SCRIPT=	./Configure
@@ -87,6 +90,14 @@ post-install:
 	@strip ${PREFIX}/bin/a2p
 	@strip ${PREFIX}/bin/perl
 	${RMDIR} -p ${PERL5_SITEARCH} 2>/dev/null || ${TRUE}
+	${RM} -f ${WRKDIR}/bsd.perl.mk
+	eval `${PERL5} -V:installsitelib 2>/dev/null` && \
+		echo PERL5_SITELIB=$$installsitelib >>${WRKDIR}/bsd.perl.mk
+	eval `${PERL5} -V:installsitearch 2>/dev/null` && \
+		echo PERL5_SITEARCH=$$installsitearch >>${WRKDIR}/bsd.perl.mk
+	eval `${PERL5} -V:installarchlib 2>/dev/null` && \
+		echo PERL5_ARCHLIB=$$installarchlib >>${WRKDIR}/bsd.perl.mk
+	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/
 
 test:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.782 2001/07/07 17:10:36 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.783 2001/07/09 17:10:25 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -182,7 +182,6 @@ PERL5_REQD?=		5.0
 .if defined(USE_PERL5)
 DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 .if exists(${PERL5})
-BUILD_DEPENDS+=		perl-mk-1.1:../../pkgtools/perl-mk
 .if exists(${LOCALBASE}/share/mk/bsd.perl.mk)
 .include "${LOCALBASE}/share/mk/bsd.perl.mk"
 .elif !defined(PERL5_SITELIB) || !defined(PERL5_SITEARCH) || !defined(PERL5_ARCHLIB)
