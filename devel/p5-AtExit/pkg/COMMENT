@@ -1,0 +1,1 @@
+Provides an ANSI C style atexit() function to Perl programs.
