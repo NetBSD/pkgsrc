@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:33 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/09/30 10:30:33 xtraeme Exp $
 bin/icecast
-etc/icecast/groups.aut.dist
-etc/icecast/icecast.conf.dist
-etc/icecast/mounts.aut.dist
-etc/icecast/users.aut.dist
+etc/rc.d/icecast
 share/doc/icecast/manual.html
+share/examples/icecast/groups.aut.dist
+share/examples/icecast/icecast.conf.dist
+share/examples/icecast/mounts.aut.dist
+share/examples/icecast/users.aut.dist
 share/icecast/templates/306.html
 share/icecast/templates/400.html
 share/icecast/templates/403.html
@@ -24,8 +25,5 @@ share/icecast/templates/manual.html
 share/icecast/templates/mountlist.html
 share/icecast/templates/statistics.html
 @dirrm share/icecast/templates
-@exec ${MKDIR} %D/share/icecast/static
-@dirrm share/icecast/static
-@dirrm share/icecast
+@dirrm share/examples/icecast
 @dirrm share/doc/icecast
-@dirrm etc/icecast
