@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/06 17:19:06 taca Exp $
-# FreeBSD: ports/devel/ruby-racc/Makefile,v 1.20 2001/01/27 09:54:30 knu Exp
+# $NetBSD: Makefile,v 1.4 2005/03/24 21:12:53 wiz Exp $
 
 DISTNAME=	racc-${RACC_VERSION}-all-2
 PKGNAME=	${RUBY_PKGPREFIX}-racc-${RACC_VERSION}

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:21:01 agc Exp $
-# FreeBSD Id: Makefile,v 1.2 1996/11/11 05:49:31 obrien Exp
-#
+# $NetBSD: Makefile,v 1.14 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=	fep
 PKGNAME=	fep-1.0

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/20 12:28:28 agc Exp $
-# FreeBSD: Makefile,v 1.9 1998/01/22 00:41:36 fenner Exp
-#
+# $NetBSD: Makefile,v 1.13 2005/03/24 21:13:04 wiz Exp $
 
 DISTNAME=	xcolors
 PKGNAME=	xcolors-1.3

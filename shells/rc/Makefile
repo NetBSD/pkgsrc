@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/07/17 22:53:24 grant Exp $
-# FreeBSD Id: Makefile,v 1.3 1996/11/12 02:19:38 obrien Exp
-#
+# $NetBSD: Makefile,v 1.17 2005/03/24 21:13:00 wiz Exp $
 
 DISTNAME=       rc-1.6
 CATEGORIES=	shells plan9

@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2004/10/03 00:14:40 tv Exp $
-# FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
-#
+# $NetBSD: Makefile,v 1.42 2005/03/24 21:12:54 wiz Exp $
 
 DISTNAME=		vile-9.4
 PKGNAME=		xvile-9.4
