@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/03/05 12:01:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/19 08:58:36 uebayasi Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGREVISION=	2
@@ -23,5 +23,10 @@ post-extract:
 	@${ECHO} 'cd ..' >>${WRKSRC}/configure
 	@${ECHO} 'exec ./configure $$*' >>${WRKSRC}/configure
 	@${CHMOD} +x ${WRKSRC}/configure
+
+.include "../../mk/bsd.prefs.mk"
+
+post-install:
+	@${CHOWN} -R ${ROOT_USER} ${PREFIX}/share/emacs/20.7/leim
 
 .include "../../mk/bsd.pkg.mk"
