@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/20 20:03:53 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/04/29 16:01:17 jtb Exp $
 bin/${SWIPL}
 bin/plld
 bin/plrc
@@ -15,7 +15,6 @@ lib/${SWILIBDIR}/boot/dwim.pl
 lib/${SWILIBDIR}/boot/history.pl
 lib/${SWILIBDIR}/boot/init.pl
 lib/${SWILIBDIR}/boot/list.pl
-lib/${SWILIBDIR}/boot/listing.pl
 lib/${SWILIBDIR}/boot/load.pl
 lib/${SWILIBDIR}/boot/make.pl
 lib/${SWILIBDIR}/boot/messages.pl
@@ -48,6 +47,7 @@ lib/${SWILIBDIR}/library/files.pl
 lib/${SWILIBDIR}/library/gensym.pl
 lib/${SWILIBDIR}/library/help.pl
 lib/${SWILIBDIR}/library/helpidx.pl
+lib/${SWILIBDIR}/library/listing.pl
 lib/${SWILIBDIR}/library/netscape.pl
 lib/${SWILIBDIR}/library/oset.pl
 lib/${SWILIBDIR}/library/qsave.pl
