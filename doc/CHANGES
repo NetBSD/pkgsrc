@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2979 2003/08/03 21:00:00 jmmv Exp $
+$NetBSD: CHANGES,v 1.2980 2003/08/04 00:03:19 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3187,3 +3187,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added beecrypt-2.1.0 [jmmv 2003-08-03]
 	Updated cdlabelgen to 2.6.1 [jdolecek 2003-08-03]
 	Updated beecrypt to 3.0.0 [jmmv 2003-08-03]
+	Added gputils-0.11.6 [wulf 2003-08-04]
+	Removed gpasm [wulf 2003-08-04]
