@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.4 2001/05/02 08:22:31 jlam Exp $
+$NetBSD: patch-af,v 1.5 2001/07/06 15:27:18 bad Exp $
 
---- configure.orig	Thu Mar 15 19:52:05 2001
-+++ configure
+--- configure.orig	Fri Mar 16 01:52:05 2001
++++ configure	Fri Jul  6 16:37:36 2001
 @@ -5004,7 +5004,10 @@
  #define HAVE_LIBWRAP 1
  EOF
@@ -27,12 +27,21 @@ $NetBSD: patch-af,v 1.4 2001/05/02 08:22:31 jlam Exp $
  fi
  
  
-@@ -10466,7 +10473,7 @@
+@@ -10466,15 +10473,15 @@
  
      MT_INCLUDES="-I\$(top_srcdir)/mit-pthreads/include"
      
 -    MT_LD_ADD="-L \$(top_srcdir)/mit-pthreads/obj/ -lpthread"
 +    MT_LD_ADD="\$(top_srcdir)/mit-pthreads/obj/libpthread.a"
      
-     LIBS="$MT_LD_ADD $LIBS"
+-    LIBS="$MT_LD_ADD $LIBS"
      echo ""
+     echo "Configuring MIT Pthreads"
+     # We will never install so installation paths are not needed.
+     (cd mit-pthreads; sh ./configure)
+     echo "End of MIT Pthreads configuration"
+     echo ""
++    LIBS="$MT_LD_ADD $LIBS"
+   fi
+ fi
+ 

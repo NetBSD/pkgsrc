@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.4 2001/05/02 08:22:31 jlam Exp $
+$NetBSD: patch-ae,v 1.5 2001/07/06 15:27:18 bad Exp $
 
---- configure.in.orig	Thu Mar 15 19:51:51 2001
-+++ configure.in
+--- configure.in.orig	Fri Mar 16 01:51:51 2001
++++ configure.in	Fri Jul  6 16:37:36 2001
 @@ -581,7 +581,10 @@
          AC_MSG_RESULT(yes)
          AC_DEFINE(LIBWRAP)
@@ -27,12 +27,21 @@ $NetBSD: patch-ae,v 1.4 2001/05/02 08:22:31 jlam Exp $
  fi
  AC_SUBST(readline_dir)
  AC_SUBST(readline_link)
-@@ -1951,7 +1958,7 @@
+@@ -1951,15 +1958,15 @@
      AC_DEFINE(HAVE_mit_thread)
      MT_INCLUDES="-I\$(top_srcdir)/mit-pthreads/include"
      AC_SUBST(MT_INCLUDES)
 -    MT_LD_ADD="-L \$(top_srcdir)/mit-pthreads/obj/ -lpthread"
 +    MT_LD_ADD="\$(top_srcdir)/mit-pthreads/obj/libpthread.a"
      AC_SUBST(MT_LD_ADD)
-     LIBS="$MT_LD_ADD $LIBS"
+-    LIBS="$MT_LD_ADD $LIBS"
      echo ""
+     echo "Configuring MIT Pthreads"
+     # We will never install so installation paths are not needed.
+     (cd mit-pthreads; sh ./configure)
+     echo "End of MIT Pthreads configuration"
+     echo ""
++    LIBS="$MT_LD_ADD $LIBS"
+   fi
+ fi
+ AC_SUBST(sql_server_dirs)
