@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1063 2003/11/25 02:18:59 heinz Exp $
+$NetBSD: TODO,v 1.1064 2003/11/25 07:35:22 reed Exp $
 
 Suggested new packages
 ======================
@@ -118,6 +118,10 @@ Suggested new packages
 	thunderbird-bin{,-nightly} [wip/thunderbird-bin{,-nightly}]
 	Redesign of the Mozilla mail client
 	http://www.mozilla.org/projects/thunderbird/
+
+	sgmltools-lite [wip/sgmltools-lite, PR 14849]
+	Generates various output formats from DocBook SGML documents
+	[in pkgsrc wip and another in PR 14849]
 
 Suggested package updates
 =========================
