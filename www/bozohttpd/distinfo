@@ -1,5 +1,4 @@
-$NetBSD: distinfo,v 1.17 2002/08/25 21:52:00 jlam Exp $
+$NetBSD: distinfo,v 1.18 2002/09/09 17:13:33 jlam Exp $
 
 SHA1 (bozohttpd-5.14.tar.bz2) = ce4eeb87b8005b4eac5d52c8647c0ed3cae9f56e
 Size (bozohttpd-5.14.tar.bz2) = 21666 bytes
-SHA1 (patch-ab) = 706f678d56bbedd1b2f02f543c265d48dae8011d
