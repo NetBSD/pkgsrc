@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/01/04 18:40:30 xtraeme Exp $
+
+To start a Rocket Arena Quake3 server, you should run:
+
+./q3ded +set fs_game arena +set vm_game 0 +set sv_pure 1 +set bot_enable 0
+        +set dedicated 2 +set net_port 27960 +exec server.cfg
+
+===========================================================================
