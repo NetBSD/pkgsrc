@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.34 1998/12/05 10:48:14 tron Exp $
+# $NetBSD: mk.conf.example,v 1.35 1998/12/12 17:45:36 tron Exp $
 #
 # Sample /etc/mk.conf file, which can be used to set specific values
 # for building either NetBSD or some of the NetBSD packages collection.
@@ -141,6 +141,11 @@ MANZ=		1		# gzip manual pages at installation time
                                 # of Kerberos subsystem.
                                 # Possible: defined, not defined
                                 # Default: not defined
+
+#MUTT_INTERNATIONAL=	yes	# Used to decide if international export
+				# restricted version of "mutt" is built.
+				# Possible: not defined, YES
+				# Default: not defined
 
 NMH_MTA=	smtp		# default MTA for use in nmh.
                                 # Possible: smtp or sendmail.
