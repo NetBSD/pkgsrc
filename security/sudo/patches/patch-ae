@@ -1,0 +1,74 @@
+--- sudoers.man.orig	Tue Jan 13 05:55:42 1998
++++ sudoers.man	Wed Jul  1 20:19:04 1998
+@@ -297,7 +297,7 @@
+ \fB\s-1DO\s0 \s-1NOT\s0\fR define an alias of \fI\s-1ALL\s0\fR, it will \fB\s-1NOT\s0\fR be used.
+ Note that \fI\s-1ALL\s0\fR implies the entire universe of hosts/users/commands.
+ You can subtract elements from the universe by using the syntax:
+-   user  host=\s-1ALL\s0,!\s-1ALIAS1\s0,!/etc/halt...
++   user  host=\s-1ALL\s0,!\s-1ALIAS1\s0,!/sbin/halt...
+ Note that the \*(L"!\*(R" notation only works in a user's command list.  You
+ may not use it to subtract elements in a User_Alias, Host_Alias,
+ Cmnd_Alias or user list.
+@@ -334,7 +334,7 @@
+ \&    Cmnd_Alias  SHELLS=/bin/sh,/bin/csh,/bin/tcsh,/bin/ksh
+ \&    Cmnd_Alias  SU=/bin/su
+ \&    Cmnd_Alias  MISC=/bin/rm,/bin/cat:\e
+-\&                SHUTDOWN=/etc/halt,/etc/shutdown
++\&                SHUTDOWN=/sbin/halt,/sbin/shutdown
+ .Ve
+ .Vb 14
+ \&    # User specification
+@@ -344,11 +344,11 @@
+ \&    +interns    +openlabs=ALL,!SHELLS,!SU
+ \&    britt       REMOTE=SHUTDOWN:ALL=LPCS
+ \&    jimbo       CUNETS=/bin/su ?*,!/bin/su root
+-\&    nieusma     SERVERS=SHUTDOWN,/etc/reboot:\e
++\&    nieusma     SERVERS=SHUTDOWN,/sbin/reboot:\e
+ \&                HUB=ALL,!SHELLS
+-\&    jill        houdini=/etc/shutdown -[hr] now,MISC
+-\&    markm       HUB=ALL,!MISC,!/etc/shutdown,!/etc/halt
+-\&    davehieb    merlin=(OP) ALL:SERVERS=/etc/halt:\e
++\&    jill        houdini=/sbin/shutdown -[hr] now,MISC
++\&    markm       HUB=ALL,!MISC,!/sbin/shutdown,!/sbin/halt
++\&    davehieb    merlin=(OP) ALL:SERVERS=/sbin/halt:\e
+ \&                kodiakthorn=NOPASSWD: ALL
+ \&    steve       CSNETS=(operator) /usr/op_commands/
+ .Ve
+@@ -394,21 +394,21 @@
+ B network).
+ .Ip "nieusma" 16
+ The user \f(CWnieusma\fR may run commands in the \f(CWSHUTDOWN\fR alias
+-as well as \fI/etc/reboot\fR on the \f(CWSERVER\fR machines and
++as well as \fI/sbin/reboot\fR on the \f(CWSERVER\fR machines and
+ any command except those in the \f(CWSHELLS\fR alias on the \f(CWHUB\fR
+ machines.
+ .Ip "jill" 16
+-The user \f(CWjill\fR may run \f(CW/etc/shutdown -h now\fR or
+-\f(CW/etc/shutdown -r now\fR as well as the commands in the
++The user \f(CWjill\fR may run \f(CW/sbin/shutdown -h now\fR or
++\f(CW/sbin/shutdown -r now\fR as well as the commands in the
+ \f(CWMISC\fR alias on houdini.
+ .Ip "markm" 16
+ The user \f(CWmarkm\fR may run any command on the \f(CWHUB\fR machines
+-except \fI/etc/shutdown\fR, \fI/etc/halt\fR, and commands listed
++except \fI/sbin/shutdown\fR, \fI/sbin/halt\fR, and commands listed
+ in the \f(CWMISC\fR alias.
+ .Ip "davehieb" 16
+ The user \f(CWdavehieb\fR may run any command on \f(CWmerlin\fR as any
+ user in the Runas_Alias \s-1OP\s0 (ie: root or operator).  He may
+-also run \fI/etc/halt\fR on the \f(CWSERVERS\fR and any command
++also run \fI/sbin/halt\fR on the \f(CWSERVERS\fR and any command
+ on \f(CWkodiakthorn\fR (no password required on \f(CWkodiakthorn\fR).
+ .Ip "steve" 16
+ The user \f(CWsteve\fR may run any command in the \fI/usr/op_commands/\fR
+@@ -421,8 +421,8 @@
+ .SH "FILES"
+ .PP
+ .Vb 2
+-\& /etc/sudoers           file of authorized users.
+-\& /etc/netgroup          list of network groups.
++\& /usr/pkg/etc/sudoers     file of authorized users.
++\& /etc/netgroup            list of network groups.
+ .Ve
+ .SH "SEE ALSO"
+ \fIsudo\fR\|(8), \fIvisudo\fR\|(8), \fIsu\fR\|(1), \fIfnmatch\fR\|(3).
