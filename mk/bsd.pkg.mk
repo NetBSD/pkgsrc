@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.843 2001/11/08 09:29:56 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.844 2001/11/08 12:47:12 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2033,10 +2033,6 @@ real-configure: configure-message pre-configure do-configure post-configure conf
 real-build: build-message pre-build do-build post-build build-cookie
 real-install: do-su-install
 real-package: do-su-package
-
-# sudo or priv are acceptable substitutes
-SU_CMD?=	${SU} - root -c
-PRE_ROOT_CMD?=	${TRUE}
 
 _SU_TARGET=								\
 	if [ `${ID} -u` = 0 ]; then					\
