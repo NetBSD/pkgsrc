@@ -1,12 +1,11 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.4 2004/12/04 02:16:03 taya Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.5 2004/12/14 23:35:34 taya Exp $
 
 MOZILLA_BIN=	thunderbird-bin
-MOZ_VER=	0.9
-PKGREVISION=	1
+MOZ_VER=	1.0
 EXTRACT_SUFX=	.tar.bz2
 DISTNAME=	thunderbird-${MOZ_VER}-source
-MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/ \
-		ftp://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/
+MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/source/ \
+		ftp://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/source/
 
 HOMEPAGE=	http://www.mozilla.org/projects/thunderbird/
 
