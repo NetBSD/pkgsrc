@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.19 2004/08/23 03:44:34 jlam Exp $
+# $NetBSD: bootstrap,v 1.20 2004/08/27 06:48:58 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -601,7 +601,7 @@ esac
 case "$need_sed" in
 yes)	echo_msg "Installing sed"
 	copy_src ../textproc/nbsed/files sed
-	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat' LDFLAGS='-L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && make && make install)"
+	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='-I../libnbcompat' LDFLAGS='-L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && make && make install)"
 	echo "SED=$prefix/bin/nbsed" >> ${MKCONF_EXAMPLE}
 	BSTRAP_ENV="SED=\"$prefix/bin/nbsed\" $BSTRAP_ENV"
 	;;
