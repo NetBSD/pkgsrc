@@ -1,22 +1,27 @@
-$NetBSD: patch-aa,v 1.6 2003/01/16 08:21:53 salo Exp $
+$NetBSD: patch-aa,v 1.7 2003/07/22 10:39:41 adam Exp $
 
---- src/Makefile.in.orig	Sat Jan 11 19:57:47 2003
-+++ src/Makefile.in
-@@ -9,7 +9,7 @@ libexecdir = @libexecdir@
- sysconfdir = @sysconfdir@
+--- src/Makefile.in.orig	2003-05-19 15:36:41.000000000 +0200
++++ src/Makefile.in	2003-07-22 11:09:38.000000000 +0200
+@@ -25,8 +25,8 @@
  
- CC = @CC@ 
--CFLAGS = -I.. -I../lib @CFLAGS@ -Wall -DDATADIR=\"${datadir}/ekg\" -DSYSCONFDIR=\"${sysconfdir}\"
-+CFLAGS = -I.. -I../lib @CFLAGS@ -Wall -DDATADIR=\"${PREFIX}/share/ekg\" -DSYSCONFDIR=\"${PREFIX}/etc\"
- LDFLAGS = @LDFLAGS@
- LIBS = @LIBS@
- 
-@@ -26,7 +26,7 @@ SRCS = $(OBJS:.o=.c)
  all:	dep ekg @ioctld@
  
- ekg:	$(OBJS) @libgadu_a@
--	$(CC) $(CFLAGS) -o ekg $(OBJS) -L../lib $(LDFLAGS) $(LIBS) @lgadu@ @libgadu_a@
-+	$(CC) $(CFLAGS) -o ekg $(OBJS) -Wl -R${LOCALBASE}/lib -L../lib $(LDFLAGS) $(LIBS) @lgadu@ @libgadu_a@
+-ekg:	$(OBJS) @libgadu_a@
+-	$(CC) $(CFLAGS) -o ekg $(OBJS) -L../lib @lgadu@ @libgadu_a@ $(LDFLAGS) $(LIBS)
++ekg:	$(OBJS)
++	${LIBTOOL} --mode=link $(CC) $(CFLAGS) -o ekg ../lib/libgadu.la $(OBJS) $(LDFLAGS) $(LIBS)
  
  ioctld:	ioctld.c
- 	$(CC) $(CFLAGS) ioctld.c -o ioctld $(LIBS)
+ 	$(CC) $(CFLAGS) ioctld.c -o ioctld $(LIBS) @IOCTLD_OBJS@
+@@ -40,9 +40,8 @@
+ 
+ install: all install-ekg @install_ioctld@
+ 
+-install-ekg:	@strip_ekg@
+-	$(INSTALL) -d $(DESTDIR)$(bindir)
+-	$(INSTALL) -m 755 ekg $(DESTDIR)$(bindir)
++install-ekg:
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} ekg ${PREFIX}/bin
+ 
+ install-ioctld:	@strip_ioctld@
+ 	$(INSTALL) -d $(DESTDIR)$(libexecdir)
