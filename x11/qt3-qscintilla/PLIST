@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/15 15:55:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/08/23 14:56:32 drochner Exp $
 qt3/include/qextscintilla.h
 qt3/include/qextscintillaapis.h
 qt3/include/qextscintillabase.h
@@ -19,5 +19,5 @@ qt3/include/qextscintillaprinter.h
 qt3/lib/libqscintilla.a
 qt3/lib/libqscintilla.la
 qt3/lib/libqscintilla.so
-qt3/lib/libqscintilla.so.2
-qt3/lib/libqscintilla.so.2.0
+qt3/lib/libqscintilla.so.3
+qt3/lib/libqscintilla.so.3.0
