@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2000/10/12 14:56:42 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2000/10/12 16:27:58 pooka Exp $
 
 DISTNAME=		ncurses-${NC_VERS}
 NC_VERS=		5.1
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=ncurses/} \
 			ftp://dickey.his.com/ncurses/ \
 			ftp://dickey.his.com/ncurses/${NC_VERS}/
-DISTFILES+=		${NC_PATCH}
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${NC_PATCH}
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://dickey.his.com/ncurses/ncurses.html
