@@ -1,55 +1,35 @@
-$NetBSD: patch-ae,v 1.3 2000/09/03 09:17:00 kei Exp $
+$NetBSD: patch-ae,v 1.4 2001/05/10 09:00:24 abs Exp $
 
---- configure.in.orig	Tue Jul 11 02:37:45 2000
-+++ configure.in	Sun Sep  3 06:23:09 2000
-@@ -237,9 +237,6 @@
- AC_CHECK_TYPE(offset_t,loff_t)
- AC_CHECK_TYPE(ssize_t, int)
+--- include/includes.h.orig	Thu Mar 16 22:59:09 2000
++++ include/includes.h
+@@ -808,20 +808,20 @@
+ #define ULTRIX_AUTH 1
+ #endif
  
--# we need libcups for CUPS support...
--AC_CHECK_LIB(cups,httpConnect)
--
- # we need libdl for PAM and the new VFS code
- AC_CHECK_LIB(dl,main)
- 
-@@ -315,7 +312,14 @@
- # test for where we get readline() from
- if test "$ac_cv_header_readline_h" = "yes" ||
-    test "$ac_cv_header_readline_readline_h" = "yes"; then
--  AC_CHECK_LIB(readline,readline)
-+    AC_CHECK_LIB(termcap, tputs)
-+    if test "$ac_cv_lib_termcap_tputs" = "yes"; then
-+        AC_CHECK_LIB(edit, readline, , [AC_CHECK_LIB(readline, readline)])
-+        if test "$ac_cv_lib_edit_readline" = "yes" ||
-+           test "$ac_cv_lib_readline_readline" = "yes"; then
-+            AC_DEFINE(HAVE_READLINE)
-+       fi
-+    fi
- fi
- 
- 
-@@ -1227,6 +1231,24 @@
-     AC_DEFINE(BROKEN_NISPLUS_INCLUDE_FILES)
- fi
- 
-+
-+#################################################
-+# check for CUPS support
-+AC_MSG_CHECKING(whether to use CUPS)
-+AC_ARG_WITH(cups,
-+[  --with-cups    Include CUPS support
-+  --without-cups Don't include CUPS support (default)],
-+[ case "$withval" in
-+  yes)
-+    AC_MSG_RESULT(yes)
-+    AC_CHECK_LIB(cups, httpConnect)
-+    ;;
-+  *)
-+    AC_MSG_RESULT(no)
-+    ;;
-+  esac ],
-+  AC_MSG_RESULT(no)
-+)
- 
- #################################################
- # check for smbwrapper support
+-#ifdef HAVE_LIBREADLINE
+-#  ifdef HAVE_READLINE_READLINE_H
+-#    include <readline/readline.h>
+-#    ifdef HAVE_READLINE_HISTORY_H
+-#      include <readline/history.h>
++#ifdef HAVE_READLINE
++#  ifdef HAVE_READLINE_H
++#    include <readline.h>
++#    ifdef HAVE_HISTORY_H
++#      include <history.h>
+ #    endif
+ #  else
+-#    ifdef HAVE_READLINE_H
+-#      include <readline.h>
+-#      ifdef HAVE_HISTORY_H
+-#        include <history.h>
++#    ifdef HAVE_READLINE_READLINE_H
++#      include <readline/readline.h>
++#      ifdef HAVE_READLINE_HISTORY_H
++#        include <readline/history.h>
+ #      endif
+ #    else
+-#      undef HAVE_LIBREADLINE
++#      undef HAVE_READLINE
+ #    endif
+ #  endif
+ #endif
