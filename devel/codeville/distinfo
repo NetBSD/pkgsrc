@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/15 14:32:27 drochner Exp $
+
+SHA1 (Codeville-0.1.7.1.tar.gz) = 96198e15a5fa07bdea30d71ad18fababc27968ff
+Size (Codeville-0.1.7.1.tar.gz) = 64751 bytes
+SHA1 (patch-aa) = d924f9d48c262964d2766b200ec4834d04f0a522
