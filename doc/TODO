@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.666 2003/06/29 08:51:23 jlam Exp $
+$NetBSD: TODO,v 1.667 2003/06/29 10:21:27 rh Exp $
 
 Suggested new packages
 ======================
@@ -221,8 +221,6 @@ Suggested package updates
 	o rt-3.0.2
 	o sablecc-2.18.1
 	o sablotron-0.97
-	o sane-backends-1.0.12
-	o sane-frontends-1.0.12
 	o sawfish-1.3
 	o scmxx-0.6.3.8
 	o scribus-0.8
