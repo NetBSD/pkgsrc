@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/12/04 13:02:07 tron Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:12 jmmv Exp $
 
 DISTNAME=	xtux-arena-src-nov-15
 PKGNAME=	xtux-0.2000.11.15
+WRKSRC=		${WRKDIR}/xtux
 CATEGORIES=	games
 MASTER_SITES=	http://www.adelaide.net.au/~philaw/ \
 		${MASTER_SITE_SOURCEFORGE:=xtux/}
@@ -13,8 +14,6 @@ COMMENT=	2D multi-player shootout using images from the Open Software scene
 USE_BUILDLINK2=	YES
 USE_GMAKE=	YES
 USE_X11=	YES
-
-WRKSRC=		${WRKDIR}/xtux
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xtux

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/03/26 04:05:44 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:08 jmmv Exp $
 
 DISTNAME=	linuxq3apoint-1.17.x86
 PKGNAME=	quake3arena-1.17
+WRKSRC=		${WRKDIR}
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/quake3/linux/old/ \
 		ftp://ftp.uni-klu.ac.at/pub/linux/games/quake3/ \
@@ -22,7 +23,6 @@ NO_SRC_ON_FTP=	no
 NO_BIN_ON_FTP=	no
 
 NO_CONFIGURE=	yes
-WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
 								${GTAR} xzf -
 

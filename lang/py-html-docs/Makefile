@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2001/09/09 20:36:32 agc Exp $
+# $NetBSD: Makefile,v 1.12 2003/03/29 12:41:30 jmmv Exp $
 #
 
 DISTNAME=	html-2.0
 PKGNAME=	py-html-docs-2.0
+WRKSRC=		${WRKDIR}
 CATEGORIES=	lang
 MASTER_SITES=	http://www.python.org/ftp/python/doc/2.0/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,8 +13,6 @@ HOMEPAGE=	http://www.python.org/doc/
 COMMENT=	HTML Documentation for Python
 
 DIST_SUBDIR=	python
-
-WRKSRC=		${WRKDIR}
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

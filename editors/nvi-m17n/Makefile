@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2002/11/09 02:18:09 itojun Exp $
+# $NetBSD: Makefile,v 1.23 2003/03/29 12:40:45 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
 PKGNAME=	nvi-m17n-1.79.19991117
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/${DISTNAME}/build
 CATEGORIES=	editors
 MASTER_SITES=	ftp://sleepy.vwh.net/pub/ \
 		ftp://ftp.foretune.co.jp/pub/tools/nvi-m17n/
@@ -17,7 +18,6 @@ COMMENT=	Clone of vi/ex, with multilingual patch
 CONFLICTS=	vigor-[0-9]* nvi-[0-9]*
 
 USE_BUILDLINK2=	YES
-WRKSRC=		${WRKDIR}/${DISTNAME}/build
 GNU_CONFIGURE=	YES
 PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -E -p1 -f
 CONFIGURE_ENV=	OPTFLAG='-D_PATH_SYSEXRC=\"${PREFIX}/etc/vi.exrc\"'

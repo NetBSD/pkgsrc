@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2002/04/29 16:59:28 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:39 jmmv Exp $
 
 DISTNAME=	aribas-1.30
+WRKSRC=		${WRKDIR}/aribas/src
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.mathematik.uni-muenchen.de/pub/forster/aribas/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mathematik.uni-muenchen.de/~forster/sw/aribas.html
 COMMENT=	Multi-precision floating point and big integer arithmetic calculator
-
-WRKSRC=		${WRKDIR}/aribas/src
 
 CPPFLAGS+=	-DUNiX -DPROTO
 

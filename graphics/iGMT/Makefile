@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2002/09/13 06:53:33 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2003/03/29 12:41:17 jmmv Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
 PKGREVISION=		2
+WRKSRC=			${WRKDIR}/igmt_1.2
 CATEGORIES=		graphics
 MASTER_SITES=		http://op.gfz-potsdam.de/igmt/
 
@@ -16,7 +17,6 @@ DEPENDS+=		tk>=8.0:../../x11/tk
 DEPENDS+=		gv-[0-9]*:../../print/gv
 DEPENDS+=		ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
 
-WRKSRC=			${WRKDIR}/igmt_1.2
 NO_BUILD=		yes
 USE_X11=		yes
 

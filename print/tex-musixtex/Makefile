@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2003/01/25 04:10:42 fredb Exp $
+# $NetBSD: Makefile,v 1.3 2003/03/29 12:42:19 jmmv Exp $
 #
 
 DISTNAME=	musixtex-109
 PKGNAME=	tex-${DISTNAME}
+WRKSRC=		${WRKDIR}/musixtex-T109
 CATEGORIES=	print
 #MASTER_SITES=	ftp://ftp.tex.ac.uk/tex-archive/macros/musixtex/taupin/
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/musixtex/taupin/}
@@ -15,7 +16,6 @@ COMMENT=	TeX macros to typeset music
 DEPENDS+=       teTeX-1.0*:../../print/teTeX
 
 NO_CONFIGURE=	yes
-WRKSRC=		${WRKDIR}/musixtex-T109
 
 TEXMF=		${LOCALBASE}/share/texmf
 TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf

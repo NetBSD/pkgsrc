@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/09/21 07:06:41 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:40:19 jmmv Exp $
 
 DISTNAME=	estic-1.61
+WRKSRC=		${WRKDIR}/${PKGNAME:C/-.*//}
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.gwdg.de/pub/misc/isdn/linux/estic/
 EXTRACT_SUFX=	.zip
@@ -24,7 +25,6 @@ ESTICPATCH=	${DISTNAME}-patch-from-1.60${EXTRACT_SUFX}
 LIB_TARGET=	depend lib
 LIBSRC=		${WRKDIR}/spunk
 MAKEFILE=	make/freebsd-x.mak
-WRKSRC=		${WRKDIR}/${PKGNAME:C/-.*//}
 
 post-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}${GZCAT} ${DISTDIR}/${ESTICPATCH} | \

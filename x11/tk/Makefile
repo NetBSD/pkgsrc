@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2003/02/17 15:28:04 dillo Exp $
+# $NetBSD: Makefile,v 1.21 2003/03/29 12:43:10 jmmv Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
+WRKSRC=		${WRKDIR}/${DISTNAME}/unix
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.scriptics.com/pub/tcl/tcl8_3/ \
 		ftp://ftp.informatik.uni-hamburg.de/pub/soft/lang/tcl/tcl8_3/
@@ -10,7 +11,6 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.tcltk.com/
 COMMENT=	Graphical toolkit for TCL
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 MAKE_ENV+=		TOUCH="${TOUCH}"

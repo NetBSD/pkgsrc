@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/03/28 21:14:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/29 12:41:52 jmmv Exp $
 #
 
 DISTNAME=		6to4-1.3
+WRKSRC=			${WRKDIR}
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -14,7 +15,6 @@ USE_PERL5=		YES
 
 # This pkg doesn't regard USE_INET6 (leave this comment for README-IPv6.html!)
 EXTRACT_ONLY=	# empty
-WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:18 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:57 jmmv Exp $
 
 DISTNAME=	kochi-gothic-20020503
 PKGNAME=	kochi-ttf-20020503
+WRKSRC=		${WRKDIR}/kochi-gothic
 CATEGORIES=	fonts japanese
 MASTER_SITES=	http://www.on.cs.keio.ac.jp/~yasu/linux/fonts/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,8 +16,6 @@ COMMENT=	Free Japanese TrueType font by Yasuyuki Furukawa
 DEPENDS+=	mkfontscale>=20020524:../../fonts/mkfontscale
 
 KOCHI_VERSION=	0.2.20020503
-
-WRKSRC=		${WRKDIR}/kochi-gothic
 
 NO_BUILD=	yes
 USE_X11BASE=	yes

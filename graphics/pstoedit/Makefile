@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/03/14 19:37:42 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/29 12:41:20 jmmv Exp $
 
 DISTNAME=	pstoedit_3_31
 PKGNAME=	pstoedit-3.31
+WRKSRC=		${WRKDIR}/pstoedit_3.31/src
 CATEGORIES=	converters graphics print
 MASTER_SITES=	http://home.t-online.de/home/helga.glunz/wglunz/pstoedit/
 EXTRACT_SUFX=	.zip
@@ -16,8 +17,6 @@ DEPENDS+=	plotutils>=2.4.1:../../graphics/plotutils
 RESTRICTED?=	"The author writes: If you include this program on a CDROM, please send me a copy of the CD, or if it goes with a book, of the book."
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-WRKSRC=		${WRKDIR}/pstoedit_3.31/src
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2002/09/01 16:17:06 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.5 2003/03/29 12:40:56 jmmv Exp $
 
 DISTNAME=	# empty
 CATEGORIES=	fonts
+WRKSRC=		${WRKDIR}
 MASTER_SITES=	ftp://ftp.mirror.ac.uk/sites/ftp.netscape.com/pub/communicator/extras/fonts/windows/ \
 		ftp://ftp.riken.go.jp/pub/net/netscape/communicator/extras/fonts/windows/ \
 		ftp://ftp.man.poznan.pl/mirrors/mirrorsite.netscape.com/netscape/communicator/extras/fonts/windows/ \
@@ -29,7 +30,6 @@ DIST_SUBDIR=	cyberbit-ttf
 
 EXTRACT_CMD=	${LOCALBASE}/bin/unzip -Laq $${extract_file}
 EXTRACT_ONLY=	${FONT_FILE}
-WRKSRC=		${WRKDIR}
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

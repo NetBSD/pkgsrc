@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2002/09/25 06:37:19 tron Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 12:41:24 jmmv Exp $
 
 DISTNAME=	bwbasic-2.20
-WRKSRC=		${WRKDIR}/bwbasic-2.20p2/${PKGNAME_NOREV}
 PKGREVISION=	1
+WRKSRC=		${WRKDIR}/bwbasic-2.20p2/${PKGNAME_NOREV}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.rahul.net/pub/rhn/
 EXTRACT_SUFX=	.tar.Z

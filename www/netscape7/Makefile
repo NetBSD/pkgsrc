@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2003/03/26 04:05:39 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/29 12:42:52 jmmv Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
 PKGNAME=		netscape${VERS_MAJ}-${VERS_MIN}
+WRKSRC=			${WRKDIR}/netscape-installer
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.netscape.com/pub/netscape7/${SUB}/ \
 			ftp://sunsite.utk.edu/pub/netscape/netscape7/${SUB}/ \
@@ -28,7 +29,6 @@ VERS_MAJ=		7
 VERS_MIN=		01
 SUB=			${PKG_LANG}/${VERS_MAJ}.${VERS_MIN}/unix/${DIST_DIR_NAME}/sea
 DIST_SUBDIR=		netscape/${VERS_MAJ}.${VERS_MIN}/${PKG_LANG}
-WRKSRC=			${WRKDIR}/netscape-installer
 
 .if ${PKG_LANG} != english
 DISTINFO_FILE=		${PKGDIR}/distinfo.${PKG_LANG}

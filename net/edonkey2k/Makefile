@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/03/28 21:14:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/29 12:41:56 jmmv Exp $
 #
 
 DISTNAME=	donkey
 PKGNAME=	edonkey2k-16.16.59
+WRKSRC=		${WRKDIR}
 CATEGORIES=	net
 MASTER_SITES=	http://www.edonkey2000.com/files/
 EXTRACT_SUFX=	.gz
@@ -20,7 +21,6 @@ DEPENDS+=	suse_base>=6.1:../../emulators/${SUSE_DIR_PREFIX}_base
 DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
 .endif
 
-WRKSRC=		${WRKDIR}
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
 CHECK_SHLIBS=	NO

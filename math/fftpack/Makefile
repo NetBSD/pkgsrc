@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/04/14 21:43:52 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:41:40 jmmv Exp $
 
 DISTNAME=		fftpack-20001130
+WRKSRC=			${WRKDIR}/fftpack
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -8,7 +9,6 @@ MAINTAINER=		packages@netbsd.org
 COMMENT=		Single precision Fortran FFT subroutines
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
-WRKSRC=			${WRKDIR}/fftpack
 USE_FORTRAN=		YES
 
 post-extract:

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2002/12/02 21:16:39 tron Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/29 12:42:24 jmmv Exp $
 #
 
 DISTNAME=	nessus-libraries-${VERS}
+WRKSRC=		${WRKDIR}/nessus-libraries
 .include 	"../nessus/Makefile.common"
 
 COMMENT=	Libs required by the Nessus Network security scanner
@@ -11,8 +12,6 @@ USE_LIBTOOL=	yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
-
-WRKSRC=		${WRKDIR}/nessus-libraries
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CPP=${CPP}

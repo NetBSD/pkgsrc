@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2003/01/19 21:31:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2003/03/29 12:40:06 jmmv Exp $
 #
 
 DISTNAME=		Csound4.23
 PKGNAME=		csound-bath-4.23
+WRKSRC=			${WRKDIR}
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.cs.bath.ac.uk/pub/dream/newest/
 
@@ -15,7 +16,6 @@ RESTRICTED=		"no for-fee-redistribution"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		csound
 CONFLICTS=		csound-4*
 USE_GMAKE=		yes

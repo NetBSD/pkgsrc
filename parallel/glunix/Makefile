@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2002/07/17 13:17:21 agc Exp $
+# $NetBSD: Makefile,v 1.25 2003/03/29 12:42:08 jmmv Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
+WRKSRC=		${WRKDIR}
 CATEGORIES=	parallel
 MASTER_SITES=	http://now.cs.berkeley.edu/Glunix/ \
 		http://www.inficad.com/~garbled/
@@ -22,7 +23,6 @@ USE_GMAKE=	yes
 USE_PERL5=	yes
 INTERACTIVE_STAGE=	fetch
 NO_MTREE=	yes
-WRKSRC=		${WRKDIR}
 
 NOW_ROOT=	${LOCALBASE}/now
 MESSAGE_SUBST+=	NOW_ROOT=${NOW_ROOT}

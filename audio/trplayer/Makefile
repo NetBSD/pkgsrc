@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/03/27 07:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/29 12:40:09 jmmv Exp $
 #
 
 DISTNAME=	trplayer-1.2.0
+WRKSRC=		${WRKDIR}
 CATEGORIES=	audio
 MASTER_SITES=	ftp://linux-speakup.org/pub/linux/goodies/trplayer/
 EXTRACT_SUFX=	-1.i386.rpm
@@ -35,7 +36,6 @@ EMULDIR=	${LOCALBASE}/emul/linux
 EXTRACT_ONLY=	# nothing
 INFO_FILES=	trplayer.info
 PLIST_SRC=	${WRKDIR}/PLIST.rpm
-WRKSRC=		${WRKDIR}
 
 do-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC};				\

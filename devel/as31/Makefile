@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:19 agc Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:40:30 jmmv Exp $
 
 DISTNAME=	asm.8051
 PKGNAME=	as31-19900126
+WRKSRC=		${WRKDIR}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.uu.net/usenet/comp.sources.misc/volume10/ \
 		ftp://sunsite.org.uk/usenet/comp.sources.misc/volume10/
@@ -12,7 +13,6 @@ COMMENT=	8031/8051 assembler
 
 EXTRACT_CMD=	${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | \
 		${SED} '1,/^.! \/bin\/sh/d' | ${SH}
-WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
 ALL_TARGET=	as31 man
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/02/15 08:13:20 salo Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:41:09 jmmv Exp $
 #
 
 DISTNAME=	tworld-1.0
 PKGNAME=	${DISTNAME:S/^t/tile/}
+WRKSRC=		${WRKDIR}/tworld-1.0
 CATEGORIES=	games
 MASTER_SITES=	http://www.muppetlabs.com/~breadbox/pub/software/tworld/
 
@@ -15,7 +16,6 @@ USE_GMAKE=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
 
-WRKSRC=		${WRKDIR}/tworld-1.0
 ALL_TARGET=	tworld
 
 MAKE_ENV+=	ECHO="${ECHO}" DATE="${DATE}"

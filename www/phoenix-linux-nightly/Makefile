@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/03/26 12:55:04 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/29 12:42:53 jmmv Exp $
 #
 
 DISTNAME=		phoenix-i686-pc-linux-gnu
 PKGNAME=		phoenix-linux-${PKGVER}
+WRKSRC=			${WRKDIR}/phoenix
 CATEGORIES=		www
 MASTER_SITES=		http://komodo.mozilla.org/pub/phoenix/nightly/latest-trunk/
 
@@ -14,7 +15,6 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386
 
 PKGVER!=		date +%Y%m%d
 DIST_SUBDIR=		${PKGNAME}
-WRKSRC=			${WRKDIR}/phoenix
 NO_CHECKSUM=		# defined
 NO_CONFIGURE=		# defined
 

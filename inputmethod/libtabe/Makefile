@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/09/23 03:00:01 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:23 jmmv Exp $
 #
 
 DISTNAME=	libtabe-0.2.5
+WRKSRC=		${WRKDIR}/libtabe
 CATEGORIES=	chinese inputmethod
 MASTER_SITES=	ftp://xcin.linux.org.tw/pub/xcin/libtabe/devel/
 
@@ -17,8 +18,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-db-inc=${BUILDLINK_PREFIX.db3}/include/db3
 CONFIGURE_ARGS+=	--with-db-lib=${BUILDLINK_PREFIX.db3}/lib
-
-WRKSRC=		${WRKDIR}/libtabe
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tabe

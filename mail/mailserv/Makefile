@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2001/09/09 20:36:34 agc Exp $
+# $NetBSD: Makefile,v 1.4 2003/03/29 12:41:35 jmmv Exp $
 #
 
 DISTNAME=	mailserv
 PKGNAME=	${DISTNAME}-3.27
+WRKSRC=		${WRKDIR}
 CATEGORIES=	mail
 MASTER_SITES=	http://www.csicop.org/~fitz/www/mailserv/
 
@@ -12,7 +13,6 @@ COMMENT=	WWW interface to several types of mailing list servers
 
 USE_PERL5=	YES
 NO_BUILD=	YES
-WRKSRC=		${WRKDIR}
 
 do-configure:
 .for file in mailserv cgi-lib.pl

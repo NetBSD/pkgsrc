@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2001/09/09 20:36:13 agc Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/29 12:40:10 jmmv Exp $
 
 DISTNAME=		dhry2.1
 PKGNAME=		dhrystone-2.1
+WRKSRC=			${WRKDIR}
 CATEGORIES=		benchmarks
 MASTER_SITES=		ftp://gatekeeper.dec.com/pub/misc/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		root@garbled.net
 COMMENT=		Reinhold Weicker's DHRYSTONE 2.1 integer benchmark
-
-WRKSRC=			${WRKDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dry2 ${PREFIX}/bin/dry2
