@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/07/15 12:17:01 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/01/26 22:03:20 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/11/17 18:47:53 max Exp
 #
 
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	Lars.Koeller@Uni-Bielefeld.DE
 
 WRKSRC=		${WRKDIR}/faces
+
+BUILD_USES_X11=	yes
 
 post-configure:
 	@for f in ${WRKSRC}/Makefile ${WRKSRC}/faces.h ${WRKSRC}/x11.c; do \
