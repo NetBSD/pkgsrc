@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/05/25 09:09:40 epg Exp $
+# $NetBSD: Makefile,v 1.2 2003/05/30 11:43:31 epg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-subversion-${SVNVER}
 COMMENT=	Python bindings and tools for Subversion
@@ -29,10 +29,10 @@ post-install:
 		${SVNEXAMPLES}/hook-scripts
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/subversion/cvs2svn
 	${INSTALL_DATA} ${WRKSRC}/tools/cvs2svn/README ${SVNDOC}/cvs2svn
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/cvs2svn/cvs2svn.py \
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/cvs2svn/cvs2svn.py \
 		${PREFIX}/bin/cvs2svn
-	${INSTALL_PROGRAM_DIR} ${LOCALBASE}/${PYSITELIB}/rcsparse
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/cvs2svn/rcsparse/*.py \
+	${INSTALL_SCRIPT_DIR} ${LOCALBASE}/${PYSITELIB}/rcsparse
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/cvs2svn/rcsparse/*.py \
 		${LOCALBASE}/${PYSITELIB}/rcsparse
 
 .include "../../devel/subversion/buildlink2.mk"
