@@ -1,0 +1,111 @@
+$NetBSD: patch-aa,v 1.12 2002/12/19 11:45:21 tron Exp $
+
+--- helpers.cpp.orig	Mon Oct 21 03:56:16 2002
++++ helpers.cpp	Thu Dec 19 12:42:54 2002
+@@ -49,21 +49,25 @@
+ 
+ char *CheckPrice="0123456789.$,";      // Characters allowed in a price   
+ 
+-char *SearchOps[2][16]={{ "Starts at",           // 1:  +1
+-			  "Currently",           // 2:  +1
+-			  "First bid",           // 3:  +1
+-			  "Quantity",            // 4:  +1
+-			  "# of bids",           // 5:  +1
+-			  "Time left",           // 6:  +1
+-			  "Location",            // 7:  +1
+-			  "Started",             // 8:  +1
+-			  "Ends",                // 9:  +1
+-			  "Seller (Rating)",     // 10: +1
+-			  "High bid",            // 11: +1
+-			  "Bid increment",       // 12: +1
+-			  "This is a ",          // 13: +1
+-			  "Lowest",              // 14: +1
+-			  "(reserve ",           // 15:
++char *SearchOps[2][20]={{ "Starts at",           // 1
++			  "Currently",           // 2
++			  "First bid",           // 3
++			  "Quantity",            // 4
++			  "# of bids",           // 5
++			  "Time left",           // 6
++			  "Location",            // 7
++			  "Started",             // 8
++			  "Ends",                // 9
++			  "Seller (Rating)",     // 10
++			  "High bid",            // 11
++			  "Bid increment",       // 12
++			  "This is a ",          // 13
++			  "Lowest",              // 14
++			  "(reserve ",           // 15
++			  "Current bid",	 // 16
++			  "Starting bid",	 // 17
++			  "Seller (rating)",	 // 18
++			  "High bidder",	 // 19
+ 			  "*"},
+ 			/* eBay Motors */
+ 			{ "Currently",           // 1
+@@ -183,6 +187,8 @@
+     if (!strcmp(temp, "nbsp") || !strcmp(temp, "copy") || 
+ 	!strcmp(temp, "#8260") || !strcmp(temp, "#12288"))
+       return ' ';
++    if (!strcmp(temp, "middot")) // This should be trademark
++      return ' ';
+     if (!strcmp(temp, "#8482")) // This should be trademark
+       return ' ';
+     if (!strcmp(temp, "#8220")) // lower double-quote
+@@ -622,13 +628,13 @@
+ }
+ 
+ // returns a 0-terminated array of ids of auctions in which we've participated
+-unsigned int * ParseList2(char * Buff)
++unsigned long * ParseList2(char * Buff)
+ {
+   char lineBuff[2048];
+   int nlpos;
+   
+-  unsigned int ids[512], numids=0;
+-  unsigned int *retval;
++  unsigned long ids[512], numids=0;
++  unsigned long *retval;
+   unsigned int i;
+   
+   
+@@ -648,7 +654,7 @@
+       }
+     }
+   
+-  retval = (unsigned int *) malloc(sizeof(unsigned int)*(numids+1));
++  retval = (unsigned long *) malloc(sizeof(unsigned long)*(numids+1));
+   for(i=0; i < numids; i++) retval[i] = ids[i];
+   retval[i] = 0;
+   return retval;
+@@ -1010,6 +1016,7 @@
+        case TYPE_EBAY:
+ 	 switch (ReturnBidVarNum(LineData, auc_type)) {
+ 	 case 1: 
++	 case 16:
+ 	 case 14: // "Lowest" -shows up on motorsnotcars
+ 	 case 2: // current price
+ 	   if (CurrentBid==0) {
+@@ -1027,6 +1034,7 @@
+ 		 streamBuff.unget();
+ 	   }
+ 	   break;
++	 case 17:
+ 	 case 3:  // first bid
+ 	   if (!FirstBid) {
+ 	     streamBuff.getline(LineData, 1024, '\n');
+@@ -1085,12 +1093,14 @@
+ 	     translate_date(Ends);
+ 	   }
+ 	   break;
++	 case 18:
+ 	 case 10: // seller id
+ 	   if (!Seller[0]) {
+ 	     streamBuff.getline(LineData, 1024, '\n');
+ 	     strncpy(Seller, LineData, 75);
+ 	   }
+ 	   break;
++	 case 19:
+ 	 case 11: // high bidder id
+ 	   if (!HighBidder[0]) {
+ 	     streamBuff.getline(LineData, 1024, '\n');
