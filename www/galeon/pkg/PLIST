@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2001/09/21 16:37:43 taya Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/09/21 17:24:40 abs Exp $
 bin/galeon
 bin/galeon-bin
 bin/galeon-config-tool
+etc/gconf/schemas/galeon.schemas
 etc/sound/events/galeon.soundlist
 man/man1/galeon.1
 share/galeon/BackHistory.png
