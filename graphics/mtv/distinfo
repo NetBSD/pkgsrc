@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/22 18:22:45 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/04/03 11:00:02 tron Exp $
 
-SHA1 (mtv/mtv-1.2.1-1.i386.rpm) = 1b5794217bc7e14f8b120bc307ba471ecb8dc0b6
-Size (mtv/mtv-1.2.1-1.i386.rpm) = 396979 bytes
+SHA1 (mtv/mtv-1.2.5-1.i386.rpm) = 73f40ce83abc390c9292e71afd17bf91326a742c
+Size (mtv/mtv-1.2.5-1.i386.rpm) = 398864 bytes
 SHA1 (mtv/SDL-1.1.2-1.i386.rpm) = 5263e84c0051a6daefa1aac6db5981823b696b3f
 Size (mtv/SDL-1.1.2-1.i386.rpm) = 124835 bytes
