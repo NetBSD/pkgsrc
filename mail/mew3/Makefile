@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/08/18 14:29:13 taca Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/13 16:49:54 uebayasi Exp $
 
 DISTNAME=	mew-3.3
 CATEGORIES=	mail
@@ -11,6 +11,8 @@ COMMENT=	Messaging in the Emacs World
 CONFLICTS=+	mew-xemacs-*
 
 INFO_FILES=	mew.info
+
+USE_BUILDLINK3=	yes
 
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20
 
@@ -33,5 +35,6 @@ post-install:
 	@${INSTALL_DATA_DIR} ${MEW_CONTRIB_DIR}
 	@${INSTALL_DATA} ${WRKSRC}/contrib/* ${MEW_CONTRIB_DIR}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
