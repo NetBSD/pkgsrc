@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2003/12/16 11:10:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2004/01/17 15:21:22 wiz Exp $
 bin/function_grep.pl
 bin/notepad
 bin/progman
@@ -304,10 +304,7 @@ lib/wine/crypt32.dll.so
 lib/wine/ctl3d.dll.so
 lib/wine/ctl3d32.dll.so
 lib/wine/ctl3dv2.dll.so
-lib/wine/d3d8.dll.so
-lib/wine/d3d9.dll.so
 lib/wine/d3dim.dll.so
-lib/wine/d3dx8.dll.so
 lib/wine/dciman32.dll.so
 lib/wine/ddeml.dll.so
 lib/wine/ddraw.dll.so
@@ -332,8 +329,8 @@ lib/wine/dsound.dll.so
 lib/wine/expand.exe.so
 lib/wine/gdi.exe.so
 lib/wine/gdi32.dll.so
-lib/wine/glu32.dll.so
-lib/wine/glut32.dll.so
+@comment lib/wine/glu32.dll.so
+@comment lib/wine/glut32.dll.so
 lib/wine/icinfo.exe.so
 lib/wine/icmp.dll.so
 lib/wine/imaadp32.acm.so
@@ -500,7 +497,6 @@ lib/wine/oledlg.dll.so
 lib/wine/olepro32.dll.so
 lib/wine/olesvr.dll.so
 lib/wine/olesvr32.dll.so
-lib/wine/opengl32.dll.so
 lib/wine/progman.exe.so
 lib/wine/psapi.dll.so
 lib/wine/qcap.dll.so
@@ -555,7 +551,6 @@ lib/wine/wineaudioio.drv.so
 lib/wine/wineboot.exe.so
 lib/wine/winecfg.exe.so
 lib/wine/wineconsole.exe.so
-lib/wine/wined3d.dll.so
 lib/wine/winedbg.exe.so
 lib/wine/winedos.dll.so
 lib/wine/winefile.exe.so
