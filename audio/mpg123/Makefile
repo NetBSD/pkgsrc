@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/07/13 07:33:08 itojun Exp $
+# $NetBSD: Makefile,v 1.22 2000/09/11 18:58:42 tron Exp $
 #
 
 DISTNAME=       mpg123-0.59r
@@ -6,14 +6,16 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.mpg123.de/mpg123/ \
 		http://www-ti.informatik.uni-tuebingen.de/~hippm/mpg123/
 
-PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=	mpg123-059r-v6-20000713b.diff.gz
+PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/ \
+		http://www.unix-ag.org/Linux-Alpha/Packages/
+PATCHFILES=	mpg123-059r-v6-20000713b.diff.gz l3.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mpg123.de/
 
 BUILD_DEFS+=	USE_INET6
+DIST_SUBDIR=	mpg123
 
 # for OBJECT_FMT
 .include "../../mk/bsd.prefs.mk"
