@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.27 2001/02/25 04:17:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.28 2001/03/20 12:50:49 hubertf Exp $
 
-DISTNAME=	postfix-19991231-pl13
-PKGNAME=	postfix-19991231pl13
+DISTNAME=	release-20010228
+PKGNAME=	postfix-20010228
 CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/official/
 
-.include "../../mk/bsd.prefs.mk"
+PATCHFILES=	postfix-20010228release-v6-20010318a.diff.gz \
+		postfix-20010228release-ercpt.diff
+PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/ \
+		ftp://ftp.gw.com/pub/people/kim/patches/
+PATCH_DIST_STRIP+=	-p1
 
-.if defined(POSTFIX_VERP) && ${POSTFIX_VERP} == YES
-PATCHFILES=		postfix-19991231-pl06-verp.patch.gz
-PATCH_SITES=		ftp://ftp.gw.com/pub/people/kim/patches/
-PATCH_DIST_STRIP=	-p1
-.endif
-
-MAINTAINER=	christos@netbsd.org
+MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	postfix smtp server and tools
 
@@ -21,57 +19,59 @@ DIST_SUBDIR=	postfix
 
 POSTFIX_SPOOL=	/var/spool/postfix
 
+.include "../../mk/bsd.prefs.mk"
+# automagically determines IPv6 support
+BUILD_DEFS+=	USE_INET6
+
 .if defined(POSTFIX_PCRE) && ${POSTFIX_PCRE} == YES
 DEPENDS+=	pcre-2.08:../../devel/pcre
 CFLAGS+=	-DHAS_PCRE -I${LOCALBASE}/include
-AUXLIBS=	-lpcre
+AUXLIBS=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lpcre
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}"
 .endif
 
-MANINSTALL?=	maninstall catinstall
-
-BUILD_DEFS+=	POSTFIX_PCRE POSTFIX_VERP MANINSTALL
+BUILD_DEFS+=	POSTFIX_PCRE
 
 PLIST_SRC=	${PKGDIR}/PLIST
-.for i in ${MANINSTALL}
-PLIST_SRC+=	${PKGDIR}/PLIST.$i
-.endfor
 
-pre-patch:
-	${CP} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.dist
+ALL_TARGET=	#empty
 
 pre-configure:
 	${CP} ${WRKSRC}/conf/main.cf ${WRKSRC}/conf/main.cf.dist
-	${CP} ${WRKSRC}/util/sys_defs.h ${WRKSRC}/util/sys_defs.h.dist
-	${CP} ${WRKSRC}/Makefile.inc ${WRKSRC}/Makefile.inc.dist
+	${CP} ${WRKSRC}/src/util/sys_defs.h ${WRKSRC}/src/util/sys_defs.h.dist
+	${CP} ${WRKSRC}/INSTALL.sh ${WRKSRC}/INSTALL.sh.dist
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
 	    < ${WRKSRC}/conf/main.cf.dist \
 	    > ${WRKSRC}/conf/main.cf
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
-	    < ${WRKSRC}/util/sys_defs.h.dist \
-	    > ${WRKSRC}/util/sys_defs.h
-	capitalopsys=`${ECHO} ${OPSYS} | ${TR} a-z A-Z`; \
-	osmajorversion=`${ECHO} ${OS_VERSION} | ${SED} -e 's/\..*//g'`; \
-	${SED} -e 's:@OPSYS@:'$$capitalopsys$$osmajorversion':g' \
-	    < ${WRKSRC}/Makefile.inc.dist \
-	    > ${WRKSRC}/Makefile.inc
+	    < ${WRKSRC}/src/util/sys_defs.h.dist \
+	    > ${WRKSRC}/src/util/sys_defs.h
+	${SED} -e 's:__PREFIX:'${PREFIX}':g' \
+	    < ${WRKSRC}/INSTALL.sh.dist \
+	    > ${WRKSRC}/INSTALL.sh
+
+do-configure:
+	(cd ${WRKSRC}; ${MAKE} makefiles)
 
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
-	  <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.postfix
+	    <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.postfix
 
 pre-install:
 	${INSTALL_DATA_DIR} /etc/postfix ${PREFIX}/share/postfix \
-	  ${PREFIX}/share/doc/postfix ${PREFIX}/libexec/postfix
+	    ${PREFIX}/share/doc/postfix ${PREFIX}/libexec/postfix
 	${CHOWN} root:wheel ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
 	${CHMOD} 755 ${PREFIX}/share/postfix ${PREFIX}/libexec/postfix
+	-${RM} -f ${WRKSRC}/conf/*.orig
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.postfix ${PREFIX}/etc
 	${LN} -sf ${PREFIX}/share/postfix/postfix-script /etc/postfix
 	-${INSTALL_DATA_DIR} ${POSTFIX_SPOOL}
 	${CHMOD} 755 ${POSTFIX_SPOOL}
-	${TEST} -f /etc/postfix/main.cf || ${INSTALL_DATA} ${PREFIX}/share/postfix/main.cf /etc/postfix
-	${TEST} -f /etc/postfix/master.cf || ${INSTALL_DATA} ${PREFIX}/share/postfix/master.cf /etc/postfix
+	${TEST} -f /etc/postfix/main.cf || \
+		${INSTALL_DATA} ${PREFIX}/share/postfix/main.cf /etc/postfix
+	${TEST} -f /etc/postfix/master.cf || \
+		${INSTALL_DATA} ${PREFIX}/share/postfix/master.cf /etc/postfix
 
 .include "../../mk/bsd.pkg.mk"
