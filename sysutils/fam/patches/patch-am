@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.4 2004/11/19 12:35:22 sketch Exp $
+
+--- lib/fam.c++.orig	2003-01-18 14:18:12.000000000 +0000
++++ lib/fam.c++	2004-11-08 13:45:48.827971000 +0000
+@@ -22,6 +22,7 @@
+ 
+ #include <sys/types.h>
+ #include <rpc/rpc.h>
++#include <rpc/rpcent.h>
+ #include <sys/time.h>
+ #include <unistd.h>
+ #include <stdlib.h>
