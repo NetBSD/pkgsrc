@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.3 1998/08/07 11:10:51 agc Exp $
+$NetBSD: patch-ab,v 1.4 1998/11/05 00:24:38 mycroft Exp $
 
---- configure.in.orig	Fri Jul 17 16:46:51 1998
-+++ configure.in	Sun Jul 26 00:38:05 1998
-@@ -42,6 +42,7 @@
+--- configure.in.orig	Tue Nov  3 17:00:45 1998
++++ configure.in	Wed Nov  4 19:00:51 1998
+@@ -49,6 +49,7 @@
  AC_CHECK_FUNCS(mmap munmap waitpid getcwd strdup strerror chown chmod mknod)
- AC_CHECK_FUNCS(fchmod fstat strchr readlink link utime utimes)
- AC_CHECK_FUNCS(memmove getopt_long lchown vsnprintf setsid glob strpbrk)
+ AC_CHECK_FUNCS(fchmod fstat strchr readlink link utime utimes strftime)
+ AC_CHECK_FUNCS(memmove getopt_long lchown vsnprintf snprintf setsid glob strpbrk)
 +AC_CHECK_FUNCS(mkstemp)
  
  echo $ac_n "checking for working fnmatch... $ac_c"
