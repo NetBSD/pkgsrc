@@ -1,0 +1,33 @@
+$NetBSD: patch-ai,v 1.1 2002/12/02 03:40:21 itojun Exp $
+
+security fix between 3.6 -> 3.6p1
+
+--- server/convert.c.orig	Mon Dec  2 20:01:34 1996
++++ server/convert.c	Sat Nov  9 10:39:32 2002
+@@ -53,6 +53,8 @@
+ #define ACK2 2
+ #define ACK3 3
+ #define CHECK_ACK_BUF_SIZE	(ACK_BUFSIZE + (SIZEOFLONG * 2) )
++#define IR_INT_MAX 32767
++#define IR_INT_INVAL(x) ((unsigned int)x > IR_INT_MAX)
+ 
+ extern int  errno;
+ 
+@@ -1778,6 +1780,8 @@
+ 	return( needsize ) ;
+ 
+     req->namelen = (int)L4TOL(buf + SIZE4);
++    if( IR_INT_INVAL(req->namelen) )
++	return( -1 );
+    ir_debug( Dmsg(10,"req->namelen =%d\n", req->namelen ); )
+ 
+     if( (needsize = SIZE8 + req->namelen - size) > 0 )
+@@ -1785,6 +1789,8 @@
+ 
+     if( req->namelen > 0 ){
+ 	req->name = buf + SIZE8 ;
++	if( req->name[req->namelen - 1] != 0 )
++	    return( -1 );
+     }
+    ir_debug( Dmsg(10,"req->namelen =%d\n", req->namelen ); )
+    ir_debug( Dmsg(10,"req->name =%s\n", req->name ); )
