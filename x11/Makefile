@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2003/03/01 14:34:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.285 2003/03/08 08:30:19 tron Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -143,6 +143,7 @@ SUBDIR+=	xcb
 SUBDIR+=	xclip
 SUBDIR+=	xcolors
 SUBDIR+=	xcolorsel
+SUBDIR+=	xcursorgen
 SUBDIR+=	xcruise
 SUBDIR+=	xdaemon
 SUBDIR+=	xdaemon2
