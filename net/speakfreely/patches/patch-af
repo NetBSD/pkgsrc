@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
+$NetBSD: patch-af,v 1.2 1999/10/26 16:45:18 jlam Exp $
 
 --- speakfree.h.orig	Tue Sep 14 08:17:32 1999
-+++ speakfree.h	Mon Oct 11 01:38:35 1999
-@@ -20,6 +20,17 @@
++++ speakfree.h	Tue Oct 26 12:23:11 1999
+@@ -20,6 +20,18 @@
  #define _BSD_SIGNALS
  #endif
  
@@ -11,6 +11,7 @@ $NetBSD: patch-af,v 1.1.1.1 1999/10/11 05:48:25 jlam Exp $
 + * header files.
 + */
 +#if defined(__NetBSD__)
++#include <sys/types.h>		/* needed for NetBSD <= 1.4.x */
 +#include <machine/endian.h>
 +#if BYTE_ORDER == LITTLE_ENDIAN
 +#define M_LITTLE_ENDIAN
