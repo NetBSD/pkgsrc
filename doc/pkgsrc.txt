@@ -4715,16 +4715,23 @@ The procedure to edit the pkgsrc guide is:
 
   * Edit the XML file(s) in pkgsrc/doc/guide/files
    
+  * Run make do-lint in pkgsrc/doc/guide to check the XML syntax, and fix it if
+    needed
+   
   * Run make in pkgsrc/doc/guide to build the HTML and ASCII version
    
-  * Run make OUTPUT=pdf in pkgsrc/doc/guide to build the PDF version. Dont'
-    omit this, as this does a very strict SGML test, and doing this properly is
-    important for getting proper documentation on the web server!
+  * Run make OUTPUT=pdf in pkgsrc/doc/guide to build the PDF version.
    
-  * If all is well, run make install-doc to put the generated files into
-    pkgserc/doc.
+  * If all is well, run make install-doc to put the generated files into pkgsrc
+    /doc.
    
   * cvs commit pkgsrc/doc/guide/files
    
   * cvs commit pkgsrc/doc/pkgsrc.{html,txt}
+   
+  * Until the webserver on www.NetBSD.org is really updated automatically to
+    pick up changes to the pkgsrc guide automatically, also run make
+    install-htdoc HTDOCSDIR=../../../htdocs (or similar, adjust HTDOCSDIR!)
+   
+  * cvs commit htdocs/Documentation/pkgsrc
    
