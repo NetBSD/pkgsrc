@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/29 19:49:04 tv Exp $
+
+--- Makefile.PL.orig	Wed Feb 18 07:46:46 2004
++++ Makefile.PL
+@@ -1,6 +1,8 @@
+ use 5.006;
+ use ExtUtils::MakeMaker;
+ 
++open(STDIN, '</dev/null');
++
+ # Thanks to YAML
+ my @programs = ();
+ for (split "\n", <<'QUERIES') {
+@@ -21,11 +23,11 @@ WriteMakefile(
+ 				'Test::More'		=> 0.40,
+ 				'MLDBM'				=> 2.01,
+ 				'Storable'			=> 2.04,
+-				'DB_File'			=> 1.806,
++				'DB_File'			=> 0,
+ 				'Fcntl'				=> 0,
+ 				'Carp'				=> 0,
+ 				'Exporter'			=> 0,
+-				'Getopt::Long'		=> 2.30,
++				'Getopt::Long'		=> 0,
+ 			}, # e.g., Module::Name => 1.1
+ 	ABSTRACT_FROM => 'lib/Mail/SRS.pm', # retrieve abstract from module
+ 	AUTHOR     => 'Shevek <cpan@anarres.org>',
