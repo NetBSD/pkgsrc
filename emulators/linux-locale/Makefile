@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/05/12 05:19:09 sakamoto Exp $
+# $NetBSD: Makefile,v 1.8 2000/08/25 00:20:22 jlam Exp $
 #
 
 DISTNAME=	locales-2.1-1mdk
@@ -41,6 +41,7 @@ EMULDIR=	${PREFIX}/${EMULSUBDIR}
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
 EXCLUDELIST=	${WRKDIR}/EXCLUDE
 CPIOLIST=	${WRKDIR}/CPIOLIST
+LDD?=		${EMULDIR}/usr/bin/ldd
 
 do-install:
 	@${RM} -f ${CPIOLIST}

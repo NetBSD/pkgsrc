@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/08/18 22:46:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/25 00:20:23 jlam Exp $
 #
 
 PKGNAME=		ns-flash-4.0r12
@@ -12,9 +12,11 @@ ONLY_FOR_PLATFORM=      *-*-i386 SunOS-*-sparc
 DEPENDS+=		suse_linux>=6.1:../../emulators/suse_linux
 DISTUNAME=		linux
 WRKNAME=		Linux
+LDD?=			/emul/linux/usr/bin/ldd
 .elif ${MACHINE_ARCH} == "sparc" && ${OPSYS} == "SunOS"
 DISTUNAME=		solaris
 WRKNAME=		Solaris
+LDD?=			${TRUE}
 .endif
 
 DISTNAME=		flash_${DISTUNAME}
