@@ -39,15 +39,6 @@ diff -ru ../coda-4.6.5/coda-src/scripts/venus-setup ./coda-src/scripts/venus-set
 diff -ru ../coda-4.6.5/coda-src/vice/Makefile.in ./coda-src/vice/Makefile.in
 --- ../coda-4.6.5/coda-src/vice/Makefile.in	Wed Sep  2 14:21:38 1998
 +++ ./coda-src/vice/Makefile.in	Thu Sep  3 13:40:46 1998
-@@ -25,7 +25,7 @@
- # improvements or extensions that  they  make,  and  to  grant  Carnegie
- # Mellon the rights to redistribute these changes without encumbrance.
- # 
--# static char *rcsid = "$Header: /cvsroot/pkgsrc/net/coda5_server/patches/Attic/patch-aa,v 1.1.1.1 1998/09/29 17:20:47 rvb Exp $";
-+# static char *rcsid = "$Header: /cvsroot/pkgsrc/net/coda5_server/patches/Attic/patch-aa,v 1.1.1.1 1998/09/29 17:20:47 rvb Exp $";
- 
- 
- # 
 @@ -96,7 +96,7 @@
  	smon.o		\
  	ViceErrorMsg.o	
@@ -93,7 +84,7 @@ diff -ru /dev/null ./configs/Makeconf.i386_fbsd3
 +# Mellon the rights to redistribute these changes without encumbrance.
 +# */
 +# 
-+# static char *rcsid = "$Header: /cvsroot/pkgsrc/net/coda5_server/patches/Attic/patch-aa,v 1.1.1.1 1998/09/29 17:20:47 rvb Exp $";
++# static char *rcsid = "$Header: /cvsroot/pkgsrc/net/coda5_server/patches/Attic/patch-aa,v 1.2 1998/10/02 13:23:17 drochner Exp $";
 +# 
 +
 +MACHINE_FLAGS = -D__BSD44__
