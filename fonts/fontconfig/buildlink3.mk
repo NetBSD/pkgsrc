@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/02/16 19:24:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/02/16 22:47:23 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FONTCONFIG_BUILDLINK3_MK:=	${FONTCONFIG_BUILDLINK3_MK}+
@@ -8,7 +8,7 @@ FONTCONFIG_BUILDLINK3_MK:=	${FONTCONFIG_BUILDLINK3_MK}+
 .if !empty(FONTCONFIG_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			fontconfig
 BUILDLINK_DEPENDS.fontconfig+=		fontconfig>=2.1nb1
-BUILDLINK_PKGSRCDIR.fontconfig?=	../../x11/fontconfig
+BUILDLINK_PKGSRCDIR.fontconfig?=	../../fonts/fontconfig
 .endif	# FONTCONFIG_BUILDLINK3_MK
 
 BUILDLINK_CHECK_BUILTIN.fontconfig?=	NO
