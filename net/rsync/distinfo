@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2002/03/12 16:02:56 tron Exp $
+$NetBSD: distinfo,v 1.7 2002/03/12 17:35:31 tron Exp $
 
 SHA1 (rsync-2.5.3.tar.gz) = e23791d0e53d63d8452bfbb9451b137745643838
 Size (rsync-2.5.3.tar.gz) = 383692 bytes
 SHA1 (patch-aa) = 27c2925b67d38132507a2e8e41ba7e406a9d9051
+SHA1 (patch-ab) = 7c74750f761de607ee50f5c4a6e06bfb07851ae8
