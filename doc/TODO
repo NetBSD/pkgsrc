@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2242 2004/10/21 03:39:04 xtraeme Exp $
+$NetBSD: TODO,v 1.2243 2004/10/21 04:14:48 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -225,7 +225,6 @@ Suggested package updates
 	o delegate-8.9.2
 	o dict-client-1.9.11
 	o dict-server-1.9.11
-	o distcc-2.18
 	o dmalloc-5.3.0
 	o docbook-4.3
 	o docsis-0.9.1
