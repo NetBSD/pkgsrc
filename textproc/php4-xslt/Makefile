@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/10/31 21:28:51 jdolecek Exp $
+# $NetBSD: Makefile,v 1.14 2004/11/05 21:44:44 jdolecek Exp $
 
 MODNAME=		xslt
 CATEGORIES+=		textproc
@@ -6,9 +6,6 @@ PKGREVISION=		# empty
 COMMENT=		PHP4 extension for XSLT functions (Sablotron backend)
 
 USE_BUILDLINK3=		YES
-
-PHP_VERSION_REQD=	4
-.include "../../lang/php/ext.mk"
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 CONFIGURE_ARGS+=	--with-${MODNAME}-sablot=${BUILDLINK_PREFIX.sablotron}
@@ -18,6 +15,7 @@ CONFIGURE_ARGS+=	--with-expat-dir=${BUILDLINK_PREFIX.expat}
 # or use the packaged iconv, as appropriate; using
 # --with-iconv=shared,${BUILDLINK_PREFIX.iconv} assumes libiconv exists
 
+.include "../../mk/bsd.prefs.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -35,5 +33,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} README.XSLT-BACKENDS ${DOCDIR}
 
+PHP_VERSION_REQD=	4
+.include "../../lang/php/ext.mk"
 .include "../../textproc/sablotron/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
