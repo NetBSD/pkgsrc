@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.8 1999/04/30 17:05:20 tv Exp $
+$NetBSD: patch-aa,v 1.9 1999/05/02 21:13:08 tv Exp $
 
---- Makefile.tmpl.orig	Mon Apr 26 16:03:46 1999
-+++ Makefile.tmpl	Mon Apr 26 16:29:40 1999
+--- Makefile.tmpl.orig	Sun May  2 17:09:00 1999
++++ Makefile.tmpl	Sun May  2 17:12:32 1999
 @@ -114,7 +114,7 @@
  datadir         = @datadir@
  iconsdir        = $(datadir)/icons
@@ -11,6 +11,15 @@ $NetBSD: patch-aa,v 1.8 1999/04/30 17:05:20 tv Exp $
  includedir      = @includedir@
  localstatedir   = @localstatedir@
  runtimedir      = @runtimedir@
+@@ -338,7 +338,7 @@
+ 	fi
+ 	$(INSTALL_DATA) $(TOP)/$(SRC)/support/httpd.8 $(root)$(mandir)/man8/$(TARGET).8
+ 	-@$(RM) $(SRC)/.apaci.install.conf; touch $(SRC)/.apaci.install.conf
+-	-@if [ ".`grep '^[ 	]*SharedModule' $(TOP)/$(SRC)/Configuration.apaci`" != . ]; then \
++	-@if false; then \
+ 		for mod in `egrep '^[ 	]*SharedModule' $(TOP)/$(SRC)/Configuration.apaci |\
+ 	                sed -e 's/^[ 	]*SharedModule[ 	]*//'`; do \
+ 			file=`echo $${mod} | sed -e 's;^.*/\([^/]*\);\1;'`; \
 @@ -453,12 +453,13 @@
  		find $(root)$(htdocsdir)/ -type d -exec chmod a+rx {} \; ; \
  		find $(root)$(htdocsdir)/ -type f -exec chmod a+r {} \; ; \
