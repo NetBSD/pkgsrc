@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2002/08/25 18:38:49 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/08/25 10:31:07 drochner Exp $
 #
 
-DISTNAME=	rvm-1.6
-PKGREVISION=	1
+DISTNAME=	rvm-1.8
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.coda.cs.cmu.edu/pub/rvm/src/ \
 		ftp://ftp.wu-wien.ac.at/pub/systems/coda/src/
