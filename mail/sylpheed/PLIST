@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2003/05/25 23:41:33 chris Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/01/31 13:56:09 chris Exp $
 bin/sylpheed
 share/examples/sylpheed/mime.types
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sylpheed.mo
