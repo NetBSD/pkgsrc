@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/04/20 16:57:21 itojun Exp $
+# $NetBSD: Makefile,v 1.5 2000/05/09 17:16:18 itojun Exp $
 
 DISTNAME=	intlfonts-1.2
 CATEGORIES=	x11
@@ -39,6 +39,15 @@ USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-fontdir=${PREFIX}/lib/X11/fonts/intlfonts \
 		--without-bdf --enable-compress=gzip
+
+.if !defined(NO_EXTRA_FONTS)
+FONT_SETS+=	${EXTRA_FONTS}
+PLIST_SRC=	${WRKDIR}/PLIST
+
+# the order may look strange, but we need to make "@dirrm" the last item.
+post-patch:
+	${CAT} ${PKGDIR}/PLIST.extrafonts ${PKGDIR}/PLIST > ${PLIST_SRC}
+.endif
 
 post-extract:
 .for FILE in ${MISC_FILES}
