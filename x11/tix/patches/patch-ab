@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 1999/04/23 23:02:21 tron Exp $
+$NetBSD: patch-ab,v 1.5 1999/07/24 20:49:46 tron Exp $
 
 --- ../Makefile.in.orig	Wed Jul  9 22:33:48 1997
 +++ ../Makefile.in	Wed Oct  1 12:03:37 1997
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.4 1999/04/23 23:02:21 tron Exp $
  	    done;
  	@echo "installing the tixindex program for builing tclIndex for Tix scripts"
 -	@cd $(TOOLS_DIR); $(INSTALL_PROGRAM) tixindex $(BIN_DIR)/tixindex
-+	-@cd $(TOOLS_DIR); $(INSTALL_PROGRAM) tixindex $(BIN_DIR)/tixindex
++	@cd $(TOOLS_DIR); $(BSD_INSTALL_SCRIPT) tixindex $(BIN_DIR)/tixindex
  
  install-headers:
  	@for i in $(INCLUDE_DIR); \
