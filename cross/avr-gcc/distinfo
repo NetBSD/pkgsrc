@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/16 20:14:20 wennmach Exp $
+
+SHA1 (gcc-core+g++-3.3.2003.05.11.tar.bz2) = d9224f5b5a76317563fa7d02c31c2ba9cdfae029
+Size (gcc-core+g++-3.3.2003.05.11.tar.bz2) = 12112530 bytes
+SHA1 (gcc-man.2003.05.11.gz) = b7e2cd1e79ba4705003762cab58e25c14899b1c9
+Size (gcc-man.2003.05.11.gz) = 153595 bytes
+SHA1 (patch-16bitassign) = 9b076aeb426cc932fd2cb9acb9c14f82996a7ae7
+SHA1 (patch-aa) = 3f8641a42a31a7f5d6839e95fc6bfbce5218f9f3
+SHA1 (patch-ab) = 8938a1987422f7d99bc51ebf906a46b66c0debac
