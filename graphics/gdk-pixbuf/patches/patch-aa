@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2002/10/17 19:23:46 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2002/10/20 22:36:46 bouyer Exp $
 
 This is to work-around the following error, reported in PR pkg/17553:
 
@@ -12,11 +12,11 @@ gmake[3]: *** [pixops.lo] Error 1
 gmake[3]: Leaving directory `/t/pkgobj/graphics/gdk-pixbuf/work.m68k/gdk-pixbuf-0.17.0/gdk-pixbuf/pixops'
 [and so on]
 
---- gdk-pixbuf/pixops/Makefile.am.orig	Mon May 22 13:49:06 2000
-+++ gdk-pixbuf/pixops/Makefile.am
-@@ -21,4 +21,13 @@
- 	pixops-internal.h		\
- 	$(mmx_sources)
+--- gdk-pixbuf/pixops/Makefile.am.orig	Mon Oct 21 00:23:25 2002
++++ gdk-pixbuf/pixops/Makefile.am	Mon Oct 21 00:26:28 2002
+@@ -7,6 +7,15 @@
+ timescale_SOURCES = timescale.c
+ timescale_LDADD = libpixops.la $(GLIB_LIBS) -lm
  
 +ifeq (m68k,$(findstring m68k,$(host_alias)))
 +pixops.o: pixops.c
@@ -27,4 +27,6 @@ gmake[3]: Leaving directory `/t/pkgobj/graphics/gdk-pixbuf/work.m68k/gdk-pixbuf-
 +
 + endif
 +
- EXTRA_DIST =				\
+ if USE_MMX
+ mmx_sources =				\
+ 	have_mmx.S			\
