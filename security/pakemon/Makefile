@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 22:53:09 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/21 17:20:26 martti Exp $
 
 DISTNAME=	pakemon-0.3.1
 CATEGORIES=	security
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.sfc.keio.ac.jp/~keiji/ids/pakemon/ \
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://web.sfc.keio.ac.jp/~keiji/backup/ids/pakemon/index.html
-COMMENT=	packet monster, an Open Source Intrusion Detection System
+COMMENT=	Packet monster, an Open Source Intrusion Detection System
 
 DEPENDS+=	libnet-[0-9]*:../../devel/libnet
 # libnids provides static library only, thus it isn't necessary at run-time,

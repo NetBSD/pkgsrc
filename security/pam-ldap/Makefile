@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 22:53:09 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/21 17:20:27 martti Exp $
 #
 
 DISTNAME=	pam_ldap-150
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.padl.com/pub/
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.padl.com/pam_ldap.html
-COMMENT=	pluggable authentication module for LDAP directories
+COMMENT=	Pluggable authentication module for LDAP directories
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES

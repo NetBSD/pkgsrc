@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:53:08 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:20:26 martti Exp $
 #
 
 DISTNAME=		Tie-EncryptedHash-1.1
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Tie/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 #HOMEPAGE=	
-COMMENT=		perl5 module for hashes with encrypting fields
+COMMENT=		Perl5 module for hashes with encrypting fields
 
 DEPENDS+=		p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
 DEPENDS+=		p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
