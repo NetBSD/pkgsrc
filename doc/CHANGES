@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.686 2002/12/05 10:58:34 abs Exp $
+$NetBSD: CHANGES,v 1.687 2002/12/05 12:33:30 tron Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3816,3 +3816,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated xlockmore to 5.06 [hubertf 2002-12-05]
 	Updated opera6 to 6.11 [tron 2002-12-05]
 	Updated xlife to 5.0nb1 [abs 2002-12-05]
+	Updated kdeadmin2 to 2.2.2nb2 [tron 2002-12-05]
+	Updated kdenetwork2 to 2.2.2nb4 [tron 2002-12-05]
+	Updated kde2 to 2.2.2nb5 [tron 2002-12-05]
