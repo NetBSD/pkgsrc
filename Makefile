@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2004/01/26 11:32:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.62 2004/02/28 06:03:22 grant Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -148,14 +148,14 @@ ${.CURDIR}/INDEX: ${.CURDIR}/PKGDB
 	@${RM} -f ${.CURDIR}/PKGDB
 
 print-index: ${.CURDIR}/INDEX
-	@${AWK} -F\| '{ printf("Port:\t%s\nPath:\t%s\nInfo:\t%s\nMaint:\t%s\nIndex:\t%s\nB-deps:\t%s\nR-deps:\t%s\nArch:\t%s\n\n", $$1, $$2, $$4, $$6, $$7, $$8, $$9, $$10); }' < ${.CURDIR}/INDEX
+	@${AWK} -F\| '{ printf("Pkg:\t%s\nPath:\t%s\nInfo:\t%s\nMaint:\t%s\nIndex:\t%s\nB-deps:\t%s\nR-deps:\t%s\nArch:\t%s\n\n", $$1, $$2, $$4, $$6, $$7, $$8, $$9, $$10); }' < ${.CURDIR}/INDEX
 
 search: ${.CURDIR}/INDEX
 .if !defined(key)
 	@${ECHO} "The search target requires a keyword parameter,"
 	@${ECHO} "e.g.: \"${MAKE} search key=somekeyword\""
 .else
-	@${GREP} ${key} ${.CURDIR}/INDEX | ${AWK} -F\| '{ printf("Port:\t%s\nPath:\t%s\nInfo:\t%s\nMaint:\t%s\nIndex:\t%s\nB-deps:\t%s\nR-deps:\t%s\nArch:\t%s\n\n", $$1, $$2, $$4, $$6, $$7, $$8, $$9, $$10); }'
+	@${GREP} ${key} ${.CURDIR}/INDEX | ${AWK} -F\| '{ printf("Pkg:\t%s\nPath:\t%s\nInfo:\t%s\nMaint:\t%s\nIndex:\t%s\nB-deps:\t%s\nR-deps:\t%s\nArch:\t%s\n\n", $$1, $$2, $$4, $$6, $$7, $$8, $$9, $$10); }'
 .endif
 
 #
