@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/01/18 21:15:06 heinz Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 14:08:36 wiz Exp $
 
 SHA1 (HTML-Tree-3.18.tar.gz) = afe3631ab479d84d6a08c2570b6c7cda62560b50
+RMD160 (HTML-Tree-3.18.tar.gz) = 06fbf5facca20a5abef61936a1bdd6274eba62ff
 Size (HTML-Tree-3.18.tar.gz) = 116025 bytes

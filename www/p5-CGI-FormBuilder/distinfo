@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/12/05 21:04:11 he Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 14:08:35 wiz Exp $
 
 SHA1 (CGI-FormBuilder-2.13.tar.gz) = fb3b5451c2199727dcb5fc58aadbd037720d4300
+RMD160 (CGI-FormBuilder-2.13.tar.gz) = 440aded90d52b80a5f9beb50eafbdbc2862a8ab3
 Size (CGI-FormBuilder-2.13.tar.gz) = 66195 bytes

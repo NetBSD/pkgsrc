@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/03 16:18:54 reed Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:08:33 wiz Exp $
 
 SHA1 (mini_httpd-1.19.tar.gz) = da1ce9cf717f16aea69a75d3a77e610e9a740cc7
+RMD160 (mini_httpd-1.19.tar.gz) = 376bda80c64395db9cbfbdeaea92dbee1f99ce65
 Size (mini_httpd-1.19.tar.gz) = 42142 bytes
 SHA1 (patch-aa) = 3e30a58fa50283a5b9fe3d272ae312f825a4c8ec

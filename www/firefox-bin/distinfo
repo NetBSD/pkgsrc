@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.6 2005/01/22 11:36:48 jdolecek Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 14:08:30 wiz Exp $
 
-SHA1 (firefox-0.8-i386-unknown-netbsdelf1.6.tar.bz2) = e93acf161226044ca2abd6897c825695dfa562db
-Size (firefox-0.8-i386-unknown-netbsdelf1.6.tar.bz2) = 8722216 bytes
 SHA1 (firefox-1.0-i686-pc-linux-jds2.tar.gz) = c5d7dde0fa4f5872cfdab9461e28974b7265928c
+RMD160 (firefox-1.0-i686-pc-linux-jds2.tar.gz) = b4c919d4d76f1dedd8d9bf2cb81a88169c76fc9e
 Size (firefox-1.0-i686-pc-linux-jds2.tar.gz) = 10297912 bytes
 SHA1 (firefox-1.0-i386-pc-solaris2.8.tar.gz) = 16866aff8ae5b431bdfa6a7a90d350d4de9841b0
+RMD160 (firefox-1.0-i386-pc-solaris2.8.tar.gz) = 35ad1726e381d1499dfc0db1c298ddbf90ff8b00
 Size (firefox-1.0-i386-pc-solaris2.8.tar.gz) = 16837263 bytes
 SHA1 (firefox-1.0-sparc-sun-solaris2.8.tar.gz) = 3c6707c302b13d80e32b4e7ec6c283e7cb276cbb
 Size (firefox-1.0-sparc-sun-solaris2.8.tar.gz) = 19345072 bytes
+RMD160 (firefox-1.0-sparc-sun-solaris2.8.tar.gz) = 1cd8391d82e1fe814a227c8d77c8e60e63ff8a33

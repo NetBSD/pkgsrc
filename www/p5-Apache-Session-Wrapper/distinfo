@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/11/05 22:24:19 he Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:08:35 wiz Exp $
 
 SHA1 (Apache-Session-Wrapper-0.17.tar.gz) = a7325de6dd33f90649d05d1b6d5d8ebf07f66b1a
+RMD160 (Apache-Session-Wrapper-0.17.tar.gz) = 09f25cdc05e85943cc483956e025de4a649950b8
 Size (Apache-Session-Wrapper-0.17.tar.gz) = 17662 bytes

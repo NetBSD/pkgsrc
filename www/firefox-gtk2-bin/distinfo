@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.5 2004/10/04 11:28:45 wiz Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 14:08:30 wiz Exp $
 
 SHA1 (firefox-0.10.1/firefox-1.0PR-i686-linux-gtk2+xft.tar.gz) = f87a7b0874f70ff665fefdc0b4f32025766a1c34
+RMD160 (firefox-0.10.1/firefox-1.0PR-i686-linux-gtk2+xft.tar.gz) = 252e39c68dbbc153273ad97fbfc7406c46fa9576
 Size (firefox-0.10.1/firefox-1.0PR-i686-linux-gtk2+xft.tar.gz) = 8145364 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/11/28 17:47:05 martti Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 14:08:29 wiz Exp $
 
 SHA1 (cgicc-3.1.5.tar.gz) = ee33b6ebf2858cb729bd189e2df8bd8c5fce516e
+RMD160 (cgicc-3.1.5.tar.gz) = a3c1b8ee22a9dca4750f875d7cefc536fc70870c
 Size (cgicc-3.1.5.tar.gz) = 328747 bytes
