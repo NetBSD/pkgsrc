@@ -5,7 +5,8 @@ to extend the ISO Standard C++ Library, including:
 	compose		functional composition adapters for the STL
 	compressed_pair	Empty member optimization
 	integer		headers for dealing with integral types
-	min_rand	a random number generator class
+	random		a complete system for random number generation
+	min_rand	a random number generator class (deprecated)
 	operators	Templates for arithmetic classes and iterators
 	pri_queue	set of different priority queue implementations
 	rational	a rational number class

@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 2000/05/29 22:46:45 jlam Exp $
+$NetBSD: md5,v 1.3 2000/06/20 06:04:41 jlam Exp $
 
-MD5 (boost-1.14.3/boost_all.zip) = 92961172c2402bd22122750fac3741b7
+MD5 (boost-1.15.0/boost_all.zip) = c1e98c3d40858e3a7e98da9a9d65e284
