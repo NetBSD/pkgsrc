@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.26 2004/12/28 23:18:21 reed Exp $
-#
+# $NetBSD: Makefile,v 1.27 2005/01/11 13:37:54 adam Exp $
 
-DISTNAME=		imlib2-1.1.2
-PKGREVISION=		3
-CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
+DISTNAME=	imlib2-1.2.0
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 
-MAINTAINER=		rh@NetBSD.org
-HOMEPAGE=		http://www.enlightenment.org/pages/imlib2.html
-COMMENT=		Image manipulation library
+MAINTAINER=	rh@NetBSD.org
+HOMEPAGE=	http://www.enlightenment.org/pages/imlib2.html
+COMMENT=	Image manipulation library
 
-GNU_CONFIGURE=		YES
-USE_X11=		YES
-USE_LIBTOOL=		YES
 USE_BUILDLINK3=		YES
+USE_LIBTOOL=		YES
+USE_X11=		YES
+GNU_CONFIGURE=		YES
 
 PKGCONFIG_OVERRIDE=	imlib2.pc.in
 
@@ -36,4 +34,5 @@ CONFIGURE_ARGS+=	--enable-mmx
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
