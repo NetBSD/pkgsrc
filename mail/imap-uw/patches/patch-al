@@ -1,14 +1,57 @@
-$NetBSD: patch-al,v 1.3 2003/07/28 14:38:06 adam Exp $
+$NetBSD: patch-al,v 1.4 2003/07/30 09:29:59 adam Exp $
 
 --- src/c-client/auth_gss.c.orig	2003-03-05 06:24:17.000000000 +0100
-+++ src/c-client/auth_gss.c	2003-07-28 15:40:16.000000000 +0200
-@@ -18,6 +18,9 @@
++++ src/c-client/auth_gss.c	2003-07-30 10:54:54.000000000 +0200
+@@ -18,6 +18,16 @@
   * CPYRIGHT, included with this Distribution.
   */
  
 +#ifdef __NetBSD__
++/* This is really Heimdal specific, but . . . */
 +#include <gssapi/gssapi.h>
++#include <krb5/krb5.h>
++
++#define gss_nt_service_name	GSS_C_NT_HOSTBASED_SERVICE
++#else
++#include <gssapi/gssapi_generic.h>
++#include <gssapi/gssapi_krb5.h>
 +#endif
  
  long auth_gssapi_valid (void);
  long auth_gssapi_client (authchallenge_t challenger,authrespond_t responder,
+@@ -53,15 +63,32 @@
+   OM_uint32 smn;
+   gss_buffer_desc buf;
+   gss_name_t name;
++  krb5_context ctx;
++  krb5_keytab kt;
++  krb5_kt_cursor csr;
++
++				/* make a context */
++  if (krb5_init_context (&ctx))
++   return NIL;
+ 				/* make service name */
+   sprintf (tmp,"%s@%s",(char *) mail_parameters (NIL,GET_SERVICENAME,NIL),
+ 	   mylocalhost ());
+   buf.length = strlen (buf.value = tmp);
+ 				/* see if can build a name */
+   if (gss_import_name (&smn,&buf,GSS_C_NT_HOSTBASED_SERVICE,&name) !=
+-      GSS_S_COMPLETE) return NIL;
+-				/* remove server method if no keytab */
+-  if (!kerberos_server_valid ()) auth_gss.server = NIL;
++      GSS_S_COMPLETE) {
++    krb5_free_context (ctx);	/* finished with context */
++    return NIL;
++  }
++
++				/* get default keytab */
++  if (!krb5_kt_default (ctx,&kt)) {
++				/* can do server if have good keytab */
++    if (!krb5_kt_start_seq_get (ctx,kt,&csr))
++	auth_gss.server = auth_gssapi_server;
++    krb5_kt_close (ctx,kt);	/* finished with keytab */
++  }
++  krb5_free_context (ctx);	/* finished with context */
+   gss_release_name (&smn,&name);/* finished with name */
+   return LONGT;
+ }
