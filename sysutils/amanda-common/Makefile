@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/12/25 20:50:01 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2002/08/25 21:50:53 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -12,7 +12,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 COMMENT=		Libraries and binaries used by both the client and server parts of amanda
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"

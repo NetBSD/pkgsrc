@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/08/13 22:19:48 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/08/25 21:51:45 jlam Exp $
 
 DISTNAME=		mod_dav-1.0.3-1.3.6
 PKGNAME=		ap-dav-1.0.3
@@ -12,11 +12,10 @@ COMMENT=		Apache WebDAV module
 # Ugly mess that says apache>=1.3.9 and apache<2.0.
 BUILDLINK_DEPENDS.apache=	{apache-1.3.9*,apache-1.3.[1-9][0-9]*,apache6-1.3.9*,apache6-1.3.[1-9][0-9]*}
 
-DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
-
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+APACHE_MODULE=		YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
 
 AP_MODULE_DIR=		${PREFIX}/lib/httpd
 DOCDIR=			${PREFIX}/share/doc/mod_dav
@@ -29,6 +28,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE.html ${HTMLDIR}
 
-.include "../../textproc/expat/buildlink.mk"
-.include "../../www/apache/buildlink.mk"
+.include "../../textproc/expat/buildlink2.mk"
+.include "../../www/apache/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

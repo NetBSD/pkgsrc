@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/06/03 13:29:55 cjep Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/25 21:51:03 jlam Exp $
 #
 
 DISTNAME=	stow-1.3.3
@@ -9,11 +9,12 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.ai.mit.edu/software/stow/stow.html
 COMMENT=	Maps several separate packages into a tree without merging them
 
-USE_BUILDLINK_ONLY=	YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK2=	YES
+GNU_CONFIGURE=	YES
 
 INFO_FILES=	stow.info
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
+
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2002/07/03 11:57:14 lukem Exp $
+$NetBSD: distinfo,v 1.10 2002/08/25 21:51:07 jlam Exp $
 
 SHA1 (nut-0.50.0.tar.gz) = b8826f2e7301e5c753ac946574a53d651faf69c3
 Size (nut-0.50.0.tar.gz) = 382755 bytes

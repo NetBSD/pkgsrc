@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/07/26 08:57:14 grant Exp $
+# $NetBSD: Makefile,v 1.23 2002/08/25 21:51:49 jlam Exp $
 #
 
 DISTNAME=		mod_perl-1.25
@@ -16,12 +16,10 @@ DEPENDS+=		${BUILDLINK_DEPENDS.apache}:../../www/apache
 DEPENDS+=		{libperl>=${LIBPERL5_REQD},perl>=5.8.0}:../../lang/libperl
 DEPENDS+=		p5-BSD-Resource>=1.10:../../devel/p5-BSD-Resource
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
+APACHE_MODULE=		YES
 LIBPERL5_REQD=		${PERL5_REQD}
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/mod_perl/.packlist
-
-REPLACE_BUILDLINK=	blib/lib/Apache/MyConfig.pm
-REPLACE_BUILDLINK_SED=	-e "s|${APXS}|${PREFIX}/sbin/apxs|g"
 
 MAKE_PARAMS+=		USE_APXS=1
 MAKE_PARAMS+=		WITH_APXS=${APXS}
@@ -35,10 +33,14 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/htdocs/manual/mod/mod_perl.html \
 		${PREFIX}/share/httpd/htdocs/manual/mod
 
-.include "../../lang/perl5/buildlink.mk"
-.include "../../www/apache/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
+.include "../../www/apache/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
 
 .if exists(${PERL5_ARCHLIB}/DynaLoader_pic.o)
-MAKE_ENV+=		DYNALOADER_OBJ_PIC="${PERL5_ARCHLIB}/DynaLoader_pic.o"
+DYNALOADER_OBJ_PIC=	${PERL5_ARCHLIB}/DynaLoader_pic.o
+.elif ${OPSYS} == "NetBSD"
+DYNALOADER_OBJ_PIC=	${PERL5_ARCHLIB}/auto/DynaLoader/DynaLoader.a
 .endif
+MAKE_ENV+=	DYNALOADER_OBJ_PIC="${DYNALOADER_OBJ_PIC}"

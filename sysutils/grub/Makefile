@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.9 2002/07/20 13:27:32 tron Exp $
+# $NetBSD: Makefile,v 1.10 2002/08/25 21:51:00 jlam Exp $
+#
 
 DISTNAME=	grub-0.92
 CATEGORIES=	sysutils
@@ -12,7 +13,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,7 +29,7 @@ CONFIGURE_ARGS+=	--enable-${GRUB_NETWORK_CARD}
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/grub
 	${INSTALL_DATA} ${WRKSRC}/netboot/README.netboot \
-	  ${PREFIX}/share/doc/grub
+		${PREFIX}/share/doc/grub
 .else
 PLIST_SUBST+=		NETBOOT="@comment "
 .endif
@@ -37,6 +38,7 @@ PLIST_SUBST+=		NETBOOT="@comment "
 CONFIGURE_ARGS+=	${GRUB_SCAN_ARGS}
 .endif
 
-.include "../../devel/binutils/buildlink.mk"
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/binutils/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2001/08/09 19:03:19 jlam Exp $
+$NetBSD: patch-ad,v 1.5 2002/08/25 21:51:43 jlam Exp $
 
 --- ../annotlib/Makefile.in.orig	Thu Apr  5 06:49:33 2001
 +++ ../annotlib/Makefile.in
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.4 2001/08/09 19:03:19 jlam Exp $
 -	  -I@top_srcdir@/../libwww/modules/expat/xmlparse \
 -	  -I@top_srcdir@/../libwww/modules/expat/xmltok \
 +	  -I@top_srcdir@/amaya/f \
-+	  -I${BUILDLINK_DIR}/include/w3c-libwww \
++	  -I${LOCALBASE}/include/w3c-libwww \
  	   @THOTINCLUDES@ $(X_FLAGS)
  
  

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/08/29 22:41:25 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/25 21:51:38 jlam Exp $
 
 DISTNAME=	wm2-4
 PKGNAME=	wm2-4.0
@@ -11,13 +11,12 @@ COMMENT=	Minimalist window manager for X
 
 ALL_TARGET=	depend wm2
 
-USE_BUILDLINK_ONLY=	YES
-USE_X11BASE=		YES
-MAKE_ENV+=	CCC="${CXX}"
+USE_BUILDLINK2=	YES
+USE_X11BASE=	YES
+MAKE_ENV+=	CCC="${BUILDLINK_CXX}"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wm2 ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/man/cat1/wm2.0
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

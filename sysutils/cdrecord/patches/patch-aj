@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.3 2002/05/18 14:52:31 bouyer Exp $
+$NetBSD: patch-aj,v 1.4 2002/08/25 21:50:56 jlam Exp $
 
 --- cdrecord/scsi_cdr.c.orig	Wed Apr 11 00:22:21 2001
 +++ cdrecord/scsi_cdr.c	Wed May 15 19:55:52 2002

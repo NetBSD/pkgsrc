@@ -1,5 +1,5 @@
 ======================================================================
-$NetBSD: MESSAGE,v 1.2 2002/07/03 11:57:11 lukem Exp $
+$NetBSD: MESSAGE,v 1.3 2002/08/25 21:51:04 jlam Exp $
 
  ${NUT_CONFDIR}/upsd.users has a new format from version 0.45.5.
  You will need to update this before restarting upsd(8).

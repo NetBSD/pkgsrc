@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2002/07/19 11:56:47 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2002/08/25 21:52:24 jlam Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www2u.biglobe.ne.jp/~hsaka/w3m/patch/
 MAINTAINER=	kei@netbsd.org
 HOMEPAGE=	http://www2u.biglobe.ne.jp/~hsaka/w3m/
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=	yes
 
 W3M_VERS=	${W3M_BASE_VERS}-m17n-${W3M_M17N_VERS}
 W3M_BASE_VERS=	0.3
@@ -96,9 +96,9 @@ CONFIGURE_ENV+=	use_cookie=n
 .endif
 .if ${W3M_USE_SSL} == YES
 CONFIGURE_ENV+=	use_ssl=y use_ssl_verify=y
-CONFIGURE_ARGS+=	--ssl-includedir=${BUILDLINK_DIR}/include/openssl
-CONFIGURE_ARGS+=	--ssl-libdir=${BUILDLINK_DIR}/lib
-.include "../../security/openssl/buildlink.mk"
+CONFIGURE_ARGS+=	--ssl-includedir=${SSLBASE}/include/openssl
+CONFIGURE_ARGS+=	--ssl-libdir=${SSLBASE}/lib
+.include "../../security/openssl/buildlink2.mk"
 .else
 CONFIGURE_ENV+=	use_ssl=n use_ssl_verify=n
 .endif
@@ -126,8 +126,8 @@ CONFIGURE_ARGS+= --prefix=${PREFIX}
 CONFIGURE_ARGS+= --bindir=${PREFIX}/bin
 CONFIGURE_ARGS+= --libdir=${PREFIX}/${HELPERDIR}
 CONFIGURE_ARGS+= --helpdir=${PREFIX}/${HELPDIR}
-CONFIGURE_ARGS+= --gc-includedir=${BUILDLINK_DIR}/include
-CONFIGURE_ARGS+= --gc-libdir=${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+= --gc-includedir=${BUILDLINK_PREFIX.boehm-gc}/include
+CONFIGURE_ARGS+= --gc-libdir=${BUILDLINK_PREFIX.boehm-gc}/lib
 
 .if ${W3M_USE_IMAGE} == YES
 PLIST_SUBST+=	USE_IMAGE=''
@@ -184,8 +184,8 @@ post-install:
 	    ${LN} -s w3mhelp${HELP_W3M}${HELP_LANG}.html w3mhelp.html)
 
 .if ${W3M_USE_IMAGE} == YES
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/imlib/buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/imlib/buildlink2.mk"
 .endif
-.include "../../devel/boehm-gc/buildlink.mk"
+.include "../../devel/boehm-gc/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

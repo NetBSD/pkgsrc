@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/07/24 11:38:47 martti Exp $
+$NetBSD: distinfo,v 1.8 2002/08/25 21:52:06 jlam Exp $
 
 SHA1 (cvsweb-2.0.5.tar.gz) = 6fb2049eb8f9a79788b9f84523399d761dbc6205
 Size (cvsweb-2.0.5.tar.gz) = 51948 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/08/20 08:52:33 uebayasi Exp $
+# $NetBSD: Makefile,v 1.12 2002/08/25 21:52:20 jlam Exp $
 
 DISTNAME=		sitecopy-0.11.4
 CATEGORIES=		www
@@ -9,11 +9,11 @@ HOMEPAGE=		http://www.lyra.org/sitecopy/
 COMMENT=		utility for synchronizing remote and local web sites
 
 USE_GMAKE=		# defined
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 BUILD_USES_MSGFMT=	# defined
 
 GNU_CONFIGURE=		# defined
-CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-included-neon
 CONFIGURE_ARGS+=	--enable-libxml
 
@@ -29,8 +29,9 @@ pre-build:
 	${RM} -f ${WRKSRC}/fnmatch.h
 	${LN} -sf ${WRKSRC}/lib/fnmatch.h ${WRKSRC}/fnmatch.h
 
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/libgetopt/buildlink.mk"
-.include "../../security/openssl/buildlink.mk"
-.include "../../textproc/libxml/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/libgetopt/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../textproc/libxml/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

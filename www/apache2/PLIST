@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/06/18 23:58:07 itojun Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/08/25 21:51:53 jlam Exp $
 bin/apr-config
 bin/apu-config
 etc/rc.d/apache

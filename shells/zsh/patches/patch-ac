@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.9 2002/07/18 18:01:56 mycroft Exp $
+$NetBSD: patch-ac,v 1.10 2002/08/25 21:50:52 jlam Exp $
 
 --- zshconfig.ac.orig	Wed Oct 24 11:16:27 2001
 +++ zshconfig.ac	Thu Jul 18 17:59:09 2002

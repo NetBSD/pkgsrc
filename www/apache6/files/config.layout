@@ -1,4 +1,4 @@
-# $NetBSD: config.layout,v 1.4 2002/07/30 18:40:15 wiz Exp $
+# $NetBSD: config.layout,v 1.5 2002/08/25 21:52:00 jlam Exp $
 
 <Layout pkgsrc>
 prefix: @PREFIX@

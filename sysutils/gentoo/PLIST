@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/24 03:52:30 grant Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/08/25 21:50:58 jlam Exp $
 bin/gentoo
 etc/gentoogtkrc
 etc/gentoorc

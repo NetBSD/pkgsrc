@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2002/07/03 11:57:13 lukem Exp $
+$NetBSD: patch-aa,v 1.7 2002/08/25 21:51:06 jlam Exp $
 
 --- models/upscommon.c.orig	Fri May 17 15:27:55 2002
 +++ models/upscommon.c

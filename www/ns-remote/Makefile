@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/03/26 22:43:46 abs Exp $
+# $NetBSD: Makefile,v 1.13 2002/08/25 21:52:18 jlam Exp $
 
 DISTNAME=	ns-remote
 PKGNAME=	ns-remote-1.6
@@ -12,7 +12,8 @@ COMMENT=	remote-control Netscape Navigator and Communicator
 
 DIST_SUBDIR=    netscape
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=	# defined
+USE_X11=	# defined
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -31,5 +32,4 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ns-remote ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${FILESDIR}/ns-open ${PREFIX}/bin
 
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/08/22 10:58:34 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/08/25 21:51:34 jlam Exp $
 bin/genpref
 bin/icehelp
 bin/icesh

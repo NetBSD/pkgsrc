@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2002/07/02 11:23:04 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2002/08/25 21:52:13 jlam Exp $
 #
 
 DISTNAME=	links-2.1pre2
@@ -13,10 +13,8 @@ MAINTAINER=	jschauma@netbsd.org
 HOMEPAGE=	http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
-
 CONFIGURE_ARGS+=	--enable-javascript
-PLIST_SRC=	../../www/links/PLIST
 
-.include "../../security/openssl/buildlink.mk"
-.include "../../mk/bsd.pkg.mk"
+PLIST_SRC=		${.CURDIR}/../../www/links/PLIST
+
+.include "../../security/openssl/buildlink2.mk"

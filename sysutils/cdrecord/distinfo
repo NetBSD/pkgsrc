@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/05/18 15:00:42 wiz Exp $
+$NetBSD: distinfo,v 1.6 2002/08/25 21:50:56 jlam Exp $
 
 SHA1 (cdrtools-1.10.tar.gz) = 0d61bd1331d69a579e6582719a119d94166fcf10
 Size (cdrtools-1.10.tar.gz) = 1331424 bytes

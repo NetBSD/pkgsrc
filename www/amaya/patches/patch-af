@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2002/07/01 02:23:17 kristerw Exp $
+$NetBSD: patch-af,v 1.5 2002/08/25 21:51:44 jlam Exp $
 --- ../config.h.in.orig	Mon Jul  1 02:52:16 2002
 +++ ../config.h.in	Mon Jul  1 02:52:51 2002
 @@ -321,6 +321,9 @@
