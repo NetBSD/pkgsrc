@@ -1,0 +1,12 @@
+$NetBSD: patch-er,v 1.1 2004/03/26 23:37:49 kristerw Exp $
+
+--- ../xmloff/source/forms/elementimport.cxx.orig	Fri Mar 26 23:59:06 2004
++++ ../xmloff/source/forms/elementimport.cxx	Fri Mar 26 23:59:36 2004
+@@ -100,6 +100,7 @@
+ #include <com/sun/star/form/FormComponentType.hpp>
+ #endif
+ 
++#include <algorithm>
+ //.........................................................................
+ namespace xmloff
+ {
