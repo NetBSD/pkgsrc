@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/10/03 08:05:27 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2002/10/14 09:46:59 rh Exp $
 #
 
 DISTNAME=	xmms-1.2.7
@@ -12,9 +12,9 @@ HOMEPAGE=	http://www.xmms.org/
 COMMENT=	X Multimedia System --- An audio player with a Winamp GUI
 
 USE_BUILDLINK2=	yes
-USE_LIBTOOL=		yes
-USE_GMAKE=		yes
-GNU_CONFIGURE=		yes
+USE_LIBTOOL=	yes
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--without-gnome
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -27,6 +27,10 @@ LIBS+=			-liconv
 .include "../../mk/bsd.prefs.mk"
 
 PTHREAD_OPTS+=		require
+
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CONFIGURE_ARGS+=	--enable-ipv6
+.endif
 
 .if (${OPSYS} == NetBSD)
 CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}
