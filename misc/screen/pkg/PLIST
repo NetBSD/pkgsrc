@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 1999/08/10 17:43:56 tron Exp $
+@comment $NetBSD: PLIST,v 1.11 1999/08/13 09:37:29 agc Exp $
 bin/screen
-bin/screen-3.9.3
+bin/@DISTNAME@
 man/man1/screen.1
 @unexec install-info --delete %D/info/screen.info %D/info/dir
 info/screen.info
