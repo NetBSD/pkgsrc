@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/24 22:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/25 04:06:43 snj Exp $
 
 DISTNAME=	imap-utils
 PKGNAME=	imap-uw-utils-20020102
@@ -13,7 +13,7 @@ COMMENT=	UW IMAP mailbox utilities
 
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		${PKGNAME_NOREV}
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 
 SRCDIRS=	chkmail dmail icat ifrom imapcopy imapxfer \
 		mbxcopy mbxcreat mbxcvt tmail
@@ -38,6 +38,6 @@ do-install:
 	${LN} -sf imapcopy ${PREFIX}/bin/imapmove
 	${LN} -sf mbxcopy ${PREFIX}/bin/mbxmove
 
-.include "../../mail/imap-uw/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../mail/imap-uw/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
