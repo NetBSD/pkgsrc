@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.271 1999/05/23 22:10:01 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.272 1999/05/24 18:42:00 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -17,69 +17,56 @@
 # NEVER override the "regular" targets unless you want to open
 # a major can of worms.
 
-# Include any preferences, if not already included, and common definitions
+##### Transitional compatibility: #####
+ONLY_FOR_OPSYS?=	*
+ONLY_FOR_ARCHS?=	*
+.for __opsys__ in ${ONLY_FOR_OPSYS}
+.for __arch__ in ${ONLY_FOR_ARCHS}
+ONLY_FOR_PLATFORM+=	${__opsys__}-*-${__arch__}
+.endfor
+.endfor
+NOT_FOR_PLATFORM+=	${NOT_FOR_OPSYS:S/$/-*-*/} ${NOT_FOR_ARCHS:S/^/*-*-/}
+
+##### Include any preferences, if not already included, and common definitions
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(ONLY_FOR_ARCHS)
-.for __ARCH in ${ONLY_FOR_ARCHS}
-.if ${MACHINE_ARCH:M${__ARCH}} != ""
-__ARCH_OK?=	1
+##### Define __PLATFORM_OK only if the OS matches the pkg's allowed list.
+.if !empty(ONLY_FOR_PLATFORM)
+.for __tmp__ in ${ONLY_FOR_PLATFORM}
+.if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+__PLATFORM_OK?=
 .endif
 .endfor
 .else
-__ARCH_OK?=	1
+__PLATFORM_OK?=
 .endif
 
-.if defined(NOT_FOR_ARCHS)
-.for __NARCH in ${NOT_FOR_ARCHS}
-.if ${MACHINE_ARCH:M${__NARCH}} != ""
-.undef __ARCH_OK
+.for __tmp__ in ${NOT_FOR_PLATFORM}
+.if ${MACHINE_PLATFORM:M${__tmp__}} != ""
+.undef __PLATFORM_OK
 .endif
 .endfor
+
+.if !defined(__PLATFORM_OK)
+IGNORE=			"does not work on ${MACHINE_PLATFORM}"
 .endif
 
-.if defined(ONLY_FOR_OPSYS)
-.for __OPSYS in ${ONLY_FOR_OPSYS}
-.if ${OPSYS:M${__OPSYS}} != ""
-__OPSYS_OK?=	1
-.endif
-.endfor
-.else
-__OPSYS_OK?=	1
-.endif
-
-.if defined(NOT_FOR_OPSYS)
-.for __NOPSYS in ${NOT_FOR_OPSYS}
-.if ${OPSYS:M${__NOPSYS}} != ""
-.undef __OPSYS_OK
-.endif
-.endfor
-.endif
-
-.if exists(${.CURDIR}/../Makefile.inc)
-.include "${.CURDIR}/../Makefile.inc"
-.endif
-
-.if (${OPSYS} == "NetBSD")
-DEF_UMASK?=		0022
-CLEANDEPENDS?=		NO
-DEINSTALLDEPENDS?=	NO
-.elif (${OPSYS} == "SunOS")
-DEF_UMASK?=		022
-CLEANDEPENDS?=		NO
-DEINSTALLDEPENDS?=	NO
-.elif (${OPSYS} == "OpenBSD")
-NOMANCOMPRESS?=	yes
-DEF_UMASK?=		022
-.else
-DEF_UMASK?=		0022
-.endif
-
+##### Some overrides of defaults below on a per-OS basis.
 .if (${OPSYS} == "NetBSD")
 LOCALBASE?=		${DESTDIR}/usr/pkg
-.else
-LOCALBASE?=		${DESTDIR}/usr/local
+.elif (${OPSYS} == "SunOS")
+DEF_UMASK?=		022
+X11BASE?=		${DESTDIR}/usr/openwin
+.elif (${OPSYS} == "OpenBSD")
+DEF_UMASK?=		022
+NOMANCOMPRESS?=		yes
 .endif
+
+DEF_UMASK?=		0022
+CLEANDEPENDS?=		NO
+DEINSTALLDEPENDS?=	NO
+
+LOCALBASE?=		${DESTDIR}/usr/local
 X11BASE?=		${DESTDIR}/usr/X11R6
 CROSSBASE?=		${LOCALBASE}/cross
 
@@ -112,18 +99,23 @@ PREFIX=			${LOCALBASE}
 .if defined(USE_GMAKE)
 BUILD_DEPENDS+=		${GMAKE}:${PKGSRCDIR}/devel/gmake
 MAKE_PROGRAM=		${GMAKE}
+GMAKE?=			gmake
 .else
 MAKE_PROGRAM=		${MAKE}
 .endif
+
 .if defined(USE_PERL5)
 DEPENDS+=		perl-5.00404:${PKGSRCDIR}/lang/perl5
 .endif
+
 .if defined(INFO_FILES)
 USE_GTEXINFO=		yes
 .endif
+
 .if defined(USE_GTEXINFO) && !exists(/usr/bin/install-info)
 DEPENDS+=		gtexinfo-3.12:${PKGSRCDIR}/devel/gtexinfo
 .endif
+
 .if defined(USE_MOTIF)
 .if exists(${X11BASE}/include/Xm/Xm.h)
 RUN_DEPENDS+=		${X11BASE}/include/Xm/Xm.h:${PKGSRCDIR}/x11/lesstif
@@ -132,15 +124,12 @@ RUN_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:${PKGSRCDIR}/x11/lesstif
 BUILD_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:${PKGSRCDIR}/x11/lesstif
 .endif
 .endif
+
 .if defined(USE_LIBTOOL)
 LIBTOOL=		${LOCALBASE}/bin/pkglibtool-1.2p1
 BUILD_DEPENDS+=		${LIBTOOL}:${PKGSRCDIR}/pkgtools/pkglibtool
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
-.endif
-
-.if exists(${PKGSRCDIR}/../Makefile.inc)
-.include "${PKGSRCDIR}/../Makefile.inc"
 .endif
 
 # Don't change these!!!  These names are built into the _TARGET_USE macro,
@@ -153,7 +142,6 @@ PATCH_COOKIE?=		${WRKDIR}/.patch_done
 PACKAGE_COOKIE?=	${WRKDIR}/.package_done
 
 # Miscellaneous overridable commands:
-GMAKE?=			gmake
 XMKMF?=			xmkmf -a
 .if exists(/sbin/md5)
 MD5?=			/sbin/md5
@@ -187,22 +175,22 @@ FETCH_CMD?=		/usr/bin/ftp
 MIRROR_DISTFILE?=	yes
 
 TOUCH?=			/usr/bin/touch
-TOUCH_FLAGS?=	-f
+TOUCH_FLAGS?=		-f
 
 .if (${OPSYS} == "SunOS")
 PATCH?=			${LOCALBASE}/bin/patch -b
 .else
 PATCH?=			/usr/bin/patch
 .endif
-PATCH_STRIP?=	-p0
+PATCH_STRIP?=		-p0
 PATCH_DIST_STRIP?=	-p0
 .if defined(PATCH_DEBUG) || defined(PKG_VERBOSE)
 PATCH_DEBUG_TMP=	yes
-PATCH_ARGS?=	-d ${WRKSRC} -E ${PATCH_STRIP}
+PATCH_ARGS?=		-d ${WRKSRC} -E ${PATCH_STRIP}
 PATCH_DIST_ARGS?=	-d ${WRKSRC} -E ${PATCH_DIST_STRIP}
 .else
 PATCH_DEBUG_TMP=	no
-PATCH_ARGS?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_STRIP}
+PATCH_ARGS?=		-d ${WRKSRC} --forward --quiet -E ${PATCH_STRIP}
 PATCH_DIST_ARGS?=	-d ${WRKSRC} --forward --quiet -E ${PATCH_DIST_STRIP}
 .endif
 .if defined(BATCH)
@@ -211,7 +199,7 @@ PATCH_DIST_ARGS+=	--batch
 .endif
 
 .if defined(PATCH_CHECK_ONLY)
-PATCH_ARGS+=	-C
+PATCH_ARGS+=		-C
 PATCH_DIST_ARGS+=	-C
 .endif
 
@@ -345,7 +333,7 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 
 COMMENT?=		${PKGDIR}/COMMENT
 DESCR_SRC?=		${PKGDIR}/DESCR
-DESCR?=			${WRKDIR}/.DESCR
+DESCR=			${WRKDIR}/.DESCR
 PLIST=			${WRKDIR}/.PLIST
 
 # Set INSTALL_FILE to be the name of any INSTALL file
@@ -639,30 +627,8 @@ PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
 CONFIGURE_SCRIPT?=	configure
 CONFIGURE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin
 
-# 1.3.[012] did not define all of these in bsd.own.mk.  Preload those
-# for architectures available in those releases.
-GNU_ARCH.alpha?=	alpha
-GNU_ARCH.arm32?=	arm
-GNU_ARCH.i386?=		i386
-GNU_ARCH.m68k?=		m68k
-GNU_ARCH.mips?=		mipsel
-GNU_ARCH.ns32k?=	ns32k
-GNU_ARCH.sparc?=	sparc
-GNU_ARCH.vax?=		vax
-MACHINE_GNU_ARCH?=	${GNU_ARCH.${MACHINE_ARCH}}
-
-.if (${OPSYS} == "NetBSD")
-LOWER_OPSYS?=		netbsd
-LOWER_VENDOR?=		
-LOWER_ARCH?=		${MACHINE_GNU_ARCH}
-.elif (${OPSYS} == "SunOS")
-LOWER_OPSYS?=		solaris
-LOWER_VENDOR?=		sun
-LOWER_ARCH?=		${MACHINE_GNU_ARCH}
-.endif
-
 .if defined(GNU_CONFIGURE)
-CONFIGURE_ARGS+=	--host=${LOWER_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS} --prefix=${PREFIX}
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM} --prefix=${PREFIX}
 HAS_CONFIGURE=		yes
 .endif
 
@@ -771,22 +737,6 @@ package:
 BUILD_DEFS+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
 BUILD_DEFS+=	CPPFLAGS CFLAGS LDFLAGS LICENSE
 BUILD_DEFS+=	CONFIGURE_ENV CONFIGURE_ARGS
-
-.if !defined(__ARCH_OK) || !defined(__OPSYS_OK)
-.MAIN:	all
-
-fetch fetch-list extract patch configure build install reinstall package checkpatch checksum makesum all:
-.if defined(ONLY_FOR_ARCHS)
-	@${ECHO} "This package is only for ${ONLY_FOR_ARCHS},"
-.endif
-.if defined(NOT_FOR_OPSYS)
-	@${ECHO} "This package does not run on ${NOT_FOR_OPSYS},"
-.endif
-.if defined(NOT_FOR_ARCHS)
-	@${ECHO} "This package does not run on ${NOT_FOR_ARCHS},"
-.endif
-	@${ECHO} "and you are running ${OPSYS} on ${MACHINE_ARCH}."
-.else
 
 .if defined(ALL_HOOK)
 all:
@@ -1505,11 +1455,6 @@ root-deinstall:
 	@${RM} -f ${INSTALL_COOKIE} ${PACKAGE_COOKIE}
 .endif						# target(deinstall)
 
-
-.endif # __ARCH_OK
-       # The functions below may be useful even if _ARCH_OK is not set
-
-
 ################################################################
 # Some more targets supplied for users' convenience
 ################################################################
@@ -1519,7 +1464,7 @@ root-deinstall:
 # re-distributed freely
 mirror-distfiles:
 .if (${MIRROR_DISTFILE} == "yes")
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} fetch __ARCH_OK=1 __OPSYS_OK=1 NO_IGNORE=yes
+	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} fetch NO_IGNORE=yes
 .endif
 
 
@@ -1903,11 +1848,6 @@ depends-list:
 # The PKG_URL is set from FTP_PKG_URL_* or CDROM_PKG_URL_*, depending on
 # the target used to generate the README.html file.
 .if !target(binpkg-list)
-
-.ifndef OS_VERSION
-OS_VERSION!=	/usr/bin/uname -r
-.endif
-
 binpkg-list:
 	@cd ${PACKAGES};						\
 	case `/bin/pwd` in						\
@@ -2265,6 +2205,7 @@ ${PLIST}: ${PLIST_SRC}
 				-e 's|\$${OS_VERSION}|${OS_VERSION}|g'	\
 				-e 's|\$${MACHINE_ARCH}|${MACHINE_ARCH}|g' \
 				-e 's|\$${MACHINE_GNU_ARCH}|${MACHINE_GNU_ARCH}|g' \
+				-e 's|\$${MACHINE_GNU_PLATFORM}|${MACHINE_GNU_PLATFORM}|g' \
 				-e 's|\$${LOWER_VENDOR}|${LOWER_VENDOR}|g'\
 				-e 's|\$${LOWER_OPSYS}|${LOWER_OPSYS}|g'\
 			> ${PLIST}; 					\
