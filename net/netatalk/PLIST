@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/02/15 20:01:06 fredb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/02/23 19:18:51 fredb Exp $
 bin/achfile
 bin/acleandir.rc
 bin/add_netatalk_printer
@@ -12,6 +12,7 @@ bin/apple_mv
 bin/apple_rm
 bin/binheader
 bin/cleanappledouble.pl
+@comment bin/cnid_maint
 bin/getzones
 bin/hqx2bin
 bin/lp2pap.sh
@@ -164,6 +165,7 @@ share/netatalk/nls/maccode.437
 share/netatalk/nls/maccode.850
 share/netatalk/nls/maccode.iso8859-1
 share/netatalk/nls/maccode.iso8859-1.adapted
+share/netatalk/nls/maccode.koi8-r
 share/netatalk/pagecount.ps
 @dirrm share/netatalk/nls
 @dirrm share/netatalk
