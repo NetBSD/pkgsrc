@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5121 2004/03/07 03:30:51 heinz Exp $
+$NetBSD: CHANGES,v 1.5122 2004/03/07 03:36:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1205,3 +1205,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tuxpaint-stamps to 2003.12.23 [snj 2004-03-07]
 	Updated xrick to 021212nb3 [snj 2004-03-07]
 	Updated p5-Crypt-OpenPGP to 1.03 [heinz 2004-03-07]
+	Updated ruby-tmail to 0.10.8 [taca 2004-03-07]
