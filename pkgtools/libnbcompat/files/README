@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.4 2004/08/13 04:38:02 jlam Exp $
+$NetBSD: README,v 1.5 2004/08/13 14:18:44 jlam Exp $
 
  0 Introduction
  ==============
@@ -49,6 +49,7 @@ on the following operating systems:
 	FreeBSD-4.8/i386	<jlam@NetBSD.org>
 	MacOS X 10.2.8		<jlam@NetBSD.org>
 	NetBSD-1.6.2/i386	<jlam@NetBSD.org>
+	Solaris 2.7/sparc	<blsecres@ssdtgsm.com>
 
 
  3 Usage
