@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2001/03/14 16:20:32 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2001/06/22 03:31:51 jlam Exp $
 
 DISTNAME=       imap-2000c
 PKGNAME=        imap-uw-2000.0.3nb1
@@ -10,9 +10,9 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.washington.edu/imap/
 COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
 
-USE_LIBTOOL=	# defined
-USE_SSL=	# defined
-NO_CONFIGURE=	# defined
+USE_BUILDLINK_ONLY=	# defined
+USE_LIBTOOL=		# defined
+#USE_SSL=		# defined
 
 INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
 INST_LIB=	${LIBTOOL} ${INSTALL_DATA}
@@ -63,6 +63,7 @@ MAKE_ENV+=	CREATEPROTO=${CCLIENT_MBOX_FMT}proto
 
 ALL_TARGET+=	CC="${LIBTOOL} ${CC}"
 ALL_TARGET+=	EXTRACFLAGS="${CFLAGS}"
+ALL_TARGET+=	EXTRALDFLAGS="${LDFLAGS}"
 ALL_TARGET+=	SPECIALAUTHENTICATORS="ssl"
 
 post-extract:
@@ -115,4 +116,5 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOC_DIR}
 	${CHMOD} -R a=rX ${DOC_DIR}
 
+.include "../../security/openssl/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
