@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/11/15 23:40:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/29 16:23:13 agc Exp $
 #
 
 DISTNAME=	vigor-0.016
@@ -9,11 +9,10 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.red-bean.com/~joelh/vigor/
 COMMENT=	nvi with excessive online "help"
 
-DEPENDS+=	tk>=8.3.2:../../x11/tk
-
 CONFLICTS+=	nvi-[0-9]*
 
 USE_X11=	yes
+USE_BUILDLINK2=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/build
 GNU_CONFIGURE=	yes
@@ -26,7 +25,14 @@ CONFIGURE_ENV+=	ADDCPPFLAGS="	-I${LOCALBASE}/include \
 				-I${LOCALBASE}/include" \
 		ADDLDFLAGS="	-L${LOCALBASE}/lib"
 
+.if exists(/usr/include/sys/queue.h)
+# this file obscures the system header
+post-patch:
+	${RM} -f ${WRKSRC}/../include/sys/queue.h
+.endif
+
 post-build:
 	nroff -mandoc ${WRKSRC}/../docs/USD.doc/vi.man/vi.1 >${WRKSRC}/../docs/USD.doc/vi.man/vi.0
 
+.include "../../x11/tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
