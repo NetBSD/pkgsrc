@@ -1,0 +1,18 @@
+$NetBSD: patch-ap,v 1.4.4.1 2004/09/30 13:58:22 agc Exp $
+
+--- src/modules/proxy/proxy_http.c.orig	29 Mar 2004 17:47:15 -0000	1.106
++++ src/modules/proxy/proxy_http.c	11 Jun 2004 07:54:38 -0000	1.107
+@@ -485,6 +485,13 @@
+         content_length = ap_table_get(resp_hdrs, "Content-Length");
+         if (content_length != NULL) {
+             c->len = ap_strtol(content_length, NULL, 10);
++
++	    if (c->len < 0) {
++		ap_kill_timeout(r);
++		return ap_proxyerror(r, HTTP_BAD_GATEWAY, ap_pstrcat(r->pool,
++				     "Invalid Content-Length from remote server",
++                                      NULL));
++	    }
+         }
+ 
+     }
