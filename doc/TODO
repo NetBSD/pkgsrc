@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1649 2004/04/20 20:55:35 minskim Exp $
+$NetBSD: TODO,v 1.1650 2004/04/20 21:19:35 minskim Exp $
 
 Suggested new packages
 ======================
@@ -294,7 +294,6 @@ Suggested package updates
 	o p5-Exception-Class-1.17
 	o p5-Socket6-0.16
 	o p5-Term-Readline-1.14 [pkg/25163]
-	o p5-XML-Path-1.13 [pkg/24998]
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
 	o php-4.3.6
