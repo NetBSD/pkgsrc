@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2004/01/22 07:49:20 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/02/22 23:27:19 xtraeme Exp $
 #
 
-DISTNAME=		bitlbee-0.83
+DISTNAME=		bitlbee-0.84
 CATEGORIES=		chat
 MASTER_SITES=		http://get.bitlbee.org/src/
 
@@ -9,7 +9,7 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.bitlbee.org/
 COMMENT=		IRC to other chat networks gateway
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 HAS_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		yes
@@ -45,7 +45,7 @@ do-install:
 .endfor
 .undef f
 
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../devel/glib2/buildlink2.mk"
-.include "../../net/libsoup/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
