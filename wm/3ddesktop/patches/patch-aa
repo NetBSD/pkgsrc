@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/09/25 13:50:35 xtraeme Exp $
+
+--- Makefile.in.orig	2003-06-12 23:53:30.000000000 +0200
++++ Makefile.in	2003-06-12 23:53:43.000000000 +0200
+@@ -112,7 +112,7 @@
+                          $(imlib2_cflags) @GL_CFLAGS@
+ 
+ 
+-dist_sysconf_DATA = 3ddesktop.conf
++dist_sysconf_DATA = 
+ dist_pkgdata_DATA = digits.bmp
+ 
+ bin_PROGRAMS = 3ddesk 3ddeskd
