@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/06/01 11:23:45 rh Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/16 02:12:30 hubertf Exp $
 
 DISTNAME=	gtk+-1.0.6
 PKGNAME=	gtk10-1.0.6
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.gtk.org/
 
 CONFLICTS=	gtk+-1.0.*
 
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
 USE_X11BASE=	yes
 
 GNU_CONFIGURE=  yes
