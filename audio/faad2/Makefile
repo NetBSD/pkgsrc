@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2003/03/29 12:40:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/06/08 14:14:33 grant Exp $
 #
 
 DISTNAME=	faad2-1.1
 WRKSRC=		${WRKDIR}/faad2
 CATEGORIES=	audio
-MASTER_SITES=	http://faac.sourceforge.net/files/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=faac/}
 
 MAINTAINER=	dillo@giga.or.at
 HOMEPAGE=	http://faac.sourceforge.net/
