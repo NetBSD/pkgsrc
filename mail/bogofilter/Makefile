@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2004/05/23 22:42:05 snj Exp $
+# $NetBSD: Makefile,v 1.18 2004/06/29 02:20:17 snj Exp $
 
-DISTNAME=	bogofilter-0.17.5
+DISTNAME=	bogofilter-0.92.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bogofilter/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,6 @@ GNU_CONFIGURE=	YES
 USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 
-CONFIGURE_ARGS+=	--with-libdb-prefix=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=			${PREFIX}/share/examples/bogofilter
