@@ -20,7 +20,7 @@ OBJ = 	csroot.o epslon.o pythag.o bakvec.o balanc.o balbak.o bandr.o	\
 
 lib$(LIB):	$(OBJ)
 	@$(LIBTOOL) --mode=link $(FORTRAN) $(FFLAGS) $(FOPTS) \
-	-O -o lib$(LIB).la $(OBJ:.o=.lo) -rpath $(LIBDIR)
+	-O -o lib$(LIB).la $(OBJ:.o=.lo) --version-info 0:0 -rpath $(LIBDIR)
 
 .f.o:
 	@$(LIBTOOL) --mode=compile $(FORTRAN) $(FFLAGS) $(FOPTS) -c $*.f
