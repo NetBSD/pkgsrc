@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/02/06 19:04:25 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HEIMDAL_BUILDLINK3_MK:=	${HEIMDAL_BUILDLINK3_MK}+
@@ -26,7 +26,7 @@ BUILDLINK_IS_BUILTIN.heimdal!=						\
 		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.heimdal="${BUILDLINK_IS_BUILTIN.heimdal}"
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.heimdal=${BUILDLINK_IS_BUILTIN.heimdal}
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
@@ -70,7 +70,7 @@ _HEIMDAL_VERSION?=	${_heimdal_version_}
 .        endfor
 .      endfor
 _HEIMDAL_VERSION?=	0.2t
-MAKEFLAGS+=	_HEIMDAL_VERSION="${_HEIMDAL_VERSION}"
+MAKEFLAGS+=	_HEIMDAL_VERSION=${_HEIMDAL_VERSION}
 .    endif
 
 _HEIMDAL_PKG=		heimdal-${_HEIMDAL_VERSION}
@@ -87,7 +87,7 @@ BUILDLINK_USE_BUILTIN.heimdal!=		\
 .    endfor
 .  endif
 MAKEFLAGS+=	\
-	BUILDLINK_USE_BUILTIN.heimdal="${BUILDLINK_USE_BUILTIN.heimdal}"
+	BUILDLINK_USE_BUILTIN.heimdal=${BUILDLINK_USE_BUILTIN.heimdal}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.heimdal:M[nN][oO])

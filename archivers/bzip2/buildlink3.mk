@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/02/06 19:04:24 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BZIP2_BUILDLINK3_MK:=	${BZIP2_BUILDLINK3_MK}+
@@ -23,7 +23,7 @@ BUILDLINK_IS_BUILTIN.bzip2!=						\
 		${ECHO} "NO";						\
 	fi
 .  endif
-MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.bzip2="${BUILDLINK_IS_BUILTIN.bzip2}"
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.bzip2=${BUILDLINK_IS_BUILTIN.bzip2}
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
@@ -56,7 +56,7 @@ BUILDLINK_USE_BUILTIN.bzip2=	NO
 .      endif
 .    endfor
 .  endif
-MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.bzip2="${BUILDLINK_USE_BUILTIN.bzip2}"
+MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.bzip2=${BUILDLINK_USE_BUILTIN.bzip2}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.bzip2:M[nN][oO])

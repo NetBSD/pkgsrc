@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2004/02/06 02:49:54 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2004/02/06 19:04:25 jlam Exp $
 
 GCC_VERSION=	3.3.2
 DISTNAME=	gcc-${GCC_VERSION}
@@ -69,7 +69,7 @@ AS_VERSION!=	${AS} --version | ${AWK} '{				\
 		}'
 USE_BINUTILS!=	${TEST} ${AS_VERSION} -lt 02130201 && ${ECHO} YES || ${ECHO} NO
 .    endif
-MAKEFLAGS+=	USE_BINUTILS="${USE_BINUTILS}"
+MAKEFLAGS+=	USE_BINUTILS=${USE_BINUTILS}
 .  endif
 .endif
 

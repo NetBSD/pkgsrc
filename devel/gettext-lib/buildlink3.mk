@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/02/06 19:04:24 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
@@ -65,7 +65,7 @@ BUILDLINK_USE_BUILTIN.gettext=	NO
 .    endfor
 .  endif
 MAKEFLAGS+=	\
-	BUILDLINK_USE_BUILTIN.gettext="${BUILDLINK_USE_BUILTIN.gettext}"
+	BUILDLINK_USE_BUILTIN.gettext=${BUILDLINK_USE_BUILTIN.gettext}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.gettext:M[nN][oO])
@@ -110,7 +110,7 @@ _BLNK_LIBINTL_FOUND!=	\
 	else								\
 		${ECHO} "YES";						\
 	fi
-MAKEFLAGS+=	_BLNK_LIBINTL_FOUND="${_BLNK_LIBINTL_FOUND}"
+MAKEFLAGS+=	_BLNK_LIBINTL_FOUND=${_BLNK_LIBINTL_FOUND}
 .    endif
 .    if ${_BLNK_LIBINTL_FOUND} == "YES"
 _BLNK_LIBINTL=		-lintl

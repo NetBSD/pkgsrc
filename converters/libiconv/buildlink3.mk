@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/02/05 07:17:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/02/06 19:04:24 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ICONV_BUILDLINK3_MK:=	${ICONV_BUILDLINK3_MK}+
@@ -46,7 +46,7 @@ BUILDLINK_USE_BUILTIN.iconv=	NO
 .      endif
 .    endfor
 .  endif
-MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.iconv="${BUILDLINK_USE_BUILTIN.iconv}"
+MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.iconv=${BUILDLINK_USE_BUILTIN.iconv}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.iconv:M[nN][oO])

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2004/02/05 08:45:31 uebayasi Exp $
+# $NetBSD: Makefile,v 1.34 2004/02/06 19:04:25 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -170,7 +170,7 @@ _GCC_IS_AT_LEAST_3_3!=	\
 	else								\
 		${ECHO} "NO";						\
 	fi
-MAKEFLAGS+=	_GCC_IS_AT_LEAST_3_3="${_GCC_IS_AT_LEAST_3_3}"
+MAKEFLAGS+=	_GCC_IS_AT_LEAST_3_3=${_GCC_IS_AT_LEAST_3_3}
 .  endif
 .  if !empty(_GCC_IS_AT_LEAST_3_3:M[nN][oO])
 #
