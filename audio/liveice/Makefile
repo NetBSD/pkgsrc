@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/12/31 11:08:58 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2005/02/21 20:26:08 hubertf Exp $
 #
 
 DISTNAME=	liveice
@@ -6,7 +6,7 @@ PKGNAME=	liveice-0.20001121
 CATEGORIES=	audio
 MASTER_SITES=	http://star.arm.ac.uk/~spm/software/
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://star.arm.ac.uk/~spm/software/liveice.html
 COMMENT=	Source client for Icecast
 

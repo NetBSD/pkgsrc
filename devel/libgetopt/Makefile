@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/02/11 17:29:06 tv Exp $
+# $NetBSD: Makefile,v 1.17 2005/02/21 20:26:10 hubertf Exp $
 #
 
 DISTNAME=	libgetopt-${VERS}
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 #	 	ftp://ftp.de.NetBSD.org/pub/NetBSD/NetBSD-current/src/lib/libc/stdlib/
 DISTFILES=	getopt_long.c-${VERS} getopt_long.3-${VERS}
 
-MAINTAINER=	hubertf@NetBSD.org,mcr@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org,mcr@NetBSD.org
 COMMENT=	Library for handling --long options
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL

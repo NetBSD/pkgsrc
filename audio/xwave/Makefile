@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/09 00:57:47 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2005/02/21 20:26:09 hubertf Exp $
 #
 
 DISTNAME=		xwave2
@@ -6,7 +6,7 @@ PKGNAME=		xwave-2.0
 CATEGORIES=		audio x11
 MASTER_SITES=		# empty
 
-MAINTAINER=		hubertf@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Audio player/recorder/editor for the X Window System
 
 USE_BUILDLINK3=		YES

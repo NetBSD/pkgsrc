@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/28 02:47:46 reed Exp $
+# $NetBSD: Makefile,v 1.15 2005/02/21 20:26:12 hubertf Exp $
 #
 
 DISTNAME=	dhid-5.2
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.dhis.org/pub/dhis/
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.dhis.org/
 COMMENT=	Dynamic Host Information System client daemon
 

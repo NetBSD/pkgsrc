@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/25 21:23:53 snj Exp $
+# $NetBSD: Makefile,v 1.5 2005/02/21 20:26:13 hubertf Exp $
 #
 
 DISTNAME=	teTeX-texmf-1.0.2
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Machine-independent part of teTeX
 

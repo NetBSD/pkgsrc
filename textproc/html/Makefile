@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2004/12/25 14:46:06 uebayasi Exp $
+# $NetBSD: Makefile,v 1.12 2005/02/21 20:26:14 hubertf Exp $
 #
 
 DISTNAME=	html-4.01
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.FreeBSD.org/pub/FreeBSD/ports/distfiles/
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.w3.org/TR/REC-html40/
 COMMENT=	SGML DTDs for the Hypertext Markup Language
 

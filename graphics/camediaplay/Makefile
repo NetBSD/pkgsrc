@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/20 12:18:15 agc Exp $
+# $NetBSD: Makefile,v 1.10 2005/02/21 20:26:11 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/01/17 17:46:00 itojun Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=   ftp://ftp.itojun.org/pub/digi-cam/C-400L/unix/ \
 		ftp://ftp.digipri.co.jp/pub/free-software/Olympus/C-400L/unix/
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Digital camera downloading tool for Epson/Sanyo/Olympus/Agfa camera
 
 WRKSRC=		${WRKDIR}/camediaplay/build

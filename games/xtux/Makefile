@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/04/08 19:17:04 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2005/02/21 20:26:11 hubertf Exp $
 
 DISTNAME=	xtux-arena-src-nov-15
 PKGNAME=	xtux-0.2000.11.15
@@ -6,7 +6,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.adelaide.net.au/~philaw/ \
 		${MASTER_SITE_SOURCEFORGE:=xtux/}
 
-MAINTAINER=	hubertf@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://xtux.sourceforge.net/
 COMMENT=	2D multi-player shootout using images from the Open Software scene
 
