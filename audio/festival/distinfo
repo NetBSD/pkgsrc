@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:22:39 agc Exp $
+
+MD5 (festival-1.4.0.tar.gz) = 49d1b69fd1ed7063af25e639f7ae458b
+MD5 (speech_tools-1.2.0.tar.gz) = 088d22b93fca042d4499f35f04afc28d
+MD5 (OGIresLPC-2.0.3.tar.gz) = 99c7127350e20a8b1f719c5b1596d0ff
+MD5 (OGIfestpatch-1.4.0.tar.gz) = 8ba29d27b1e9da565a51a43431155ce2
+SHA1 (patch-aa) = be60f30a65bd7d7d49a438c274a8c1b1f0fb64fc
+SHA1 (patch-ab) = 5d49c932446fb625c9e6bd114af67c9d959bb2ba
+SHA1 (patch-ac) = 64597fabe79d93f402bcf5bf100ac2e9d0613e0c
+SHA1 (patch-ad) = 24110cc98f6d36becd5f38cba6a48c7785839f4b
+SHA1 (patch-ae) = d045128bacdedf05cd18b0dd750ea6a6a34a0ce4
+SHA1 (patch-af) = 3bcd5f48bcc6f2ecc68e179d8a0c70cdd6cfa5fd
+SHA1 (patch-ag) = 17f19d5b738f44f98bb2572f0a8231429adb6065
+SHA1 (patch-ah) = 4bda46a40668209140e937206f6e6ae76e5a740f
+SHA1 (patch-ai) = 690a0649e8231296dae291b7210b6e7c84bae961
+SHA1 (patch-aj) = a50a9e762096faf7dc1272325a925e54d2c882a0
+SHA1 (patch-ak) = 705016ef010989c1b9ffe2d23b78ee9615a4c6f7
+SHA1 (patch-al) = d8a22c5f509a6d75aa3295037654b594e8db4a4a

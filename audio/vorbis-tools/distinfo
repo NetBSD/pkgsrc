@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:36 agc Exp $
+
+SHA1 (vorbis-tools-1.0beta4.tar.gz) = 58fd74ed0c8c814052e5c713736fb2df99bb89e6
+SHA1 (patch-aa) = aab33b5461b56f912ee7cb551c90612d20461323
+SHA1 (patch-ab) = fc23be24de8b2e43f0a3fd2ce73d47bf3fe2196b
+SHA1 (patch-ac) = 069843ac1db8badd3fb6032678116041b0507184

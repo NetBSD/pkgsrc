@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:24 agc Exp $
+
+MD5 (nas-1.4.src.tar.gz) = 8b9280377d0ad404afbaa5a93f213bc5
+SHA1 (patch-aa) = 208537a671751ea59cc9ebe9152b9695e2decbd1
+SHA1 (patch-ab) = 17f9eee9e78430fdd7649ca4741f780621d992f7
+SHA1 (patch-ac) = 5fe9a1fa688d95a3b201c50e1b309224a8429797
+SHA1 (patch-ad) = 87b457884ef37a303abc443a385b304c0786d727

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:25:58 agc Exp $
+
+MD5 (chemtool-1.3.tar.gz) = bc66cf300fb12e6b308c0c3ef33c8491
+SHA1 (patch-aa) = 25a4397878c387ec78737133381ae1daddd50fe1
+SHA1 (patch-ab) = cac82a03d026a9cd1bbea819218682da4b024924
+SHA1 (patch-ac) = 01e3786e50275e82b64340d591a3aebad7bc2174

@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:33 agc Exp $
+
+MD5 (splay-0.8.2.tar.gz) = 4031830584fddf315881798e074f7207
+SHA1 (patch-aa) = a1c7edc9939454e437a6ad301cd5955f59612ed5
+SHA1 (patch-ab) = a5b2e7c16a1f4d12d99bdd0d625e2732966cf067
+SHA1 (patch-ad) = 11b69c6d1eb0e26d8274ca650602fab6f3dca8da
+SHA1 (patch-ah) = 4671d5a581a37e2a412ff14c2664a511a2189dbd
+SHA1 (patch-ai) = 9ac8c7aa7a7d341585e57dec4ddba4e285db7b34

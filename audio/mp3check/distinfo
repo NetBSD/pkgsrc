@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:20 agc Exp $
+
+MD5 (mp3check-0.5.2.tar.gz) = dfcf569d46bed6fbefb6a78d91f560f9
+SHA1 (patch-aa) = 62141b14254260af3c61cf5a26280f7162cb8970
+SHA1 (patch-ab) = 2391013099979a0a72fe46c8b777debffcf4e0d4

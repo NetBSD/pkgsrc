@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:04 agc Exp $
+
+MD5 (icecast-1.3.7.tar.gz) = 74f78ca33bea3cfd562530bc90d0d214
+SHA1 (patch-aa) = 169202f563e4e2812d8d532264dcdb4f9ffc8df2
+SHA1 (patch-ab) = 8724c2085a36caf4908067a29267bbd7a0f4e103
