@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/01/24 14:50:05 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/27 14:13:49 grant Exp $
 #
 
 DISTNAME=	iplog-2.2.3
@@ -8,16 +8,16 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ojnk/}
 
 MAINTAINER=	gremlin@portal-to-web.de
 HOMEPAGE=	http://ojnk.sourceforge.net/
-COMMENT=	Iplog is a tool using pcap to log ip traffic
+COMMENT=	Iplog is a tool using pcap to log IP traffic
 
 USE_BUILDLINK2=	YES
 USE_GNU_TOOLS+=	make
 USE_PKGINSTALL=	YES
 GNU_CONFIGURE=	YES
 
-CFLAGSTMP="-I${PREFIX}/include -Wall"
-LDFLAGSTMP="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib"
-LIBSTMP="-lpthread"
+CFLAGSTMP=	"-I${PREFIX}/include -Wall"
+LDFLAGSTMP=	"-L${PREFIX}/lib -Wl,-R${PREFIX}/lib"
+LIBSTMP=	"-lpthread"
 
 RCD_SCRIPTS=	iplog
 
