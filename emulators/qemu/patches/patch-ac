@@ -1,17 +1,15 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/11/09 13:05:34 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2004/11/15 11:35:30 xtraeme Exp $
 
---- vl.c.orig	2004-07-10 21:20:09.000000000 +0300
-+++ vl.c
-@@ -40,9 +40,9 @@
- #include <sys/socket.h>
+--- vl.c.orig	2004-11-15 12:04:03.000000000 +0100
++++ vl.c	2004-11-15 12:04:17.000000000 +0100
+@@ -43,8 +43,10 @@
  #ifdef _BSD
  #include <sys/stat.h>
--#ifndef __APPLE__
--#include <libutil.h>
--#endif
-+//#ifndef __APPLE__
-+//#include <libutil.h>
-+//#endif
+ #ifndef __APPLE__
++#ifndef _BSD
+ #include <libutil.h>
+ #endif
++#endif
  #else
  #include <linux/if.h>
  #include <linux/if_tun.h>
