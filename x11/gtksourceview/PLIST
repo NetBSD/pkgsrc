@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/19 14:36:42 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/21 16:59:47 jmmv Exp $
 include/gtksourceview-1.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-1.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-1.0/gtksourceview/gtksourcelanguage.h
@@ -17,47 +17,54 @@ lib/libgtksourceview-1.0.so
 lib/libgtksourceview-1.0.so.0
 lib/libgtksourceview-1.0.so.0.0
 lib/pkgconfig/gtksourceview-1.0.pc
-share/doc/html/gtksourceview/GtkSourceBuffer.html
-share/doc/html/gtksourceview/GtkSourceLanguage.html
-share/doc/html/gtksourceview/GtkSourceLanguagesManager.html
-share/doc/html/gtksourceview/GtkSourcePrintJob.html
-share/doc/html/gtksourceview/GtkSourceStyleScheme.html
-share/doc/html/gtksourceview/GtkSourceTag.html
-share/doc/html/gtksourceview/GtkSourceTagTable.html
-share/doc/html/gtksourceview/GtkSourceView.html
-share/doc/html/gtksourceview/gtksourceview-GtkSourceMarker.html
-share/doc/html/gtksourceview/gtksourceview-GtkSourceTagStyle.html
-share/doc/html/gtksourceview/gtksourceview-Searching-in-a-GtkSourceBuffer.html
-share/doc/html/gtksourceview/gtksourceview.devhelp
-share/doc/html/gtksourceview/home.png
-share/doc/html/gtksourceview/index.html
-share/doc/html/gtksourceview/index.sgml
-share/doc/html/gtksourceview/left.png
-share/doc/html/gtksourceview/right.png
-share/doc/html/gtksourceview/rn01.html
-share/doc/html/gtksourceview/up.png
+share/doc/gtksourceview/GtkSourceBuffer.html
+share/doc/gtksourceview/GtkSourceLanguage.html
+share/doc/gtksourceview/GtkSourceLanguagesManager.html
+share/doc/gtksourceview/GtkSourcePrintJob.html
+share/doc/gtksourceview/GtkSourceStyleScheme.html
+share/doc/gtksourceview/GtkSourceTag.html
+share/doc/gtksourceview/GtkSourceTagTable.html
+share/doc/gtksourceview/GtkSourceView.html
+share/doc/gtksourceview/gtksourceview-GtkSourceMarker.html
+share/doc/gtksourceview/gtksourceview-GtkSourceTagStyle.html
+share/doc/gtksourceview/gtksourceview-Searching-in-a-GtkSourceBuffer.html
+share/doc/gtksourceview/gtksourceview.devhelp
+share/doc/gtksourceview/home.png
+share/doc/gtksourceview/index.html
+share/doc/gtksourceview/index.sgml
+share/doc/gtksourceview/left.png
+share/doc/gtksourceview/right.png
+share/doc/gtksourceview/rn01.html
+share/doc/gtksourceview/style.css
+share/doc/gtksourceview/up.png
 share/gtksourceview-1.0/language-specs/ada.lang
 share/gtksourceview-1.0/language-specs/c.lang
 share/gtksourceview-1.0/language-specs/cpp.lang
 share/gtksourceview-1.0/language-specs/csharp.lang
 share/gtksourceview-1.0/language-specs/desktop.lang
 share/gtksourceview-1.0/language-specs/diff.lang
+share/gtksourceview-1.0/language-specs/haskell.lang
 share/gtksourceview-1.0/language-specs/html.lang
 share/gtksourceview-1.0/language-specs/idl.lang
 share/gtksourceview-1.0/language-specs/java.lang
 share/gtksourceview-1.0/language-specs/language.dtd
 share/gtksourceview-1.0/language-specs/latex.lang
+share/gtksourceview-1.0/language-specs/lua.lang
 share/gtksourceview-1.0/language-specs/msil.lang
 share/gtksourceview-1.0/language-specs/perl.lang
 share/gtksourceview-1.0/language-specs/php.lang
 share/gtksourceview-1.0/language-specs/po.lang
 share/gtksourceview-1.0/language-specs/python.lang
+share/gtksourceview-1.0/language-specs/ruby.lang
 share/gtksourceview-1.0/language-specs/sql.lang
+share/gtksourceview-1.0/language-specs/texinfo.lang
+share/gtksourceview-1.0/language-specs/vbnet.lang
 share/gtksourceview-1.0/language-specs/verilog.lang
 share/gtksourceview-1.0/language-specs/xml.lang
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gtksourceview-1.0.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gtksourceview-1.0.mo
@@ -108,6 +115,6 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gtksourceview-1.0.mo
 @dirrm share/gtksourceview-1.0/language-specs
 @dirrm share/gtksourceview-1.0
-@dirrm share/doc/html/gtksourceview
+@dirrm share/doc/gtksourceview
 @dirrm include/gtksourceview-1.0/gtksourceview
 @dirrm include/gtksourceview-1.0
