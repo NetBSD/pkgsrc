@@ -1,2 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/10/01 11:32:15 drochner Exp $
-MD5 (dxsamples-4.0.tar.gz) = f611ccb5b8fcf59ba7049a1d8e9ea50e
+$NetBSD: md5,v 1.2 2000/01/31 21:10:29 drochner Exp $
+
+MD5 (dxsamples-4.0.8.tar.gz) = 5c8701e695988951f7ad02e912d935b8
