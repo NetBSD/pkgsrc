@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2004/01/10 19:12:51 cjep Exp $
+# $NetBSD: Makefile.common,v 1.19 2004/01/11 19:41:39 cjep Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang java
@@ -64,7 +64,7 @@ _FETCH_MESSAGE= 							\
 	${ECHO} ; 							\
 	${ECHO} " Choose 'Windows/Linux/Solaris SPARC/Solaris x86' from"; \
 	${ECHO} " the '${SHORT}' column, accept the license, then choose 'Linux ";\
-        ${ECHO} " self-extracting file'.";                              \
+	${ECHO} " self-extracting file'.";                              \
 	${ECHO} ; 							\
 	${ECHO} "======================================================================"
 

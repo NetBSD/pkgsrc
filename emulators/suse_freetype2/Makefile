@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:36:07 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/01/11 19:41:39 cjep Exp $
 
 DISTNAME=		freetype2
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
 CATEGORIES=		emulators
 PKGREVISION=		1
 MASTER_SITES=		${MASTER_SITE_SUSE:=gra1/} \
-                        ${MASTER_SITE_SUSE_UPD:=gra1/}
+			${MASTER_SITE_SUSE_UPD:=gra1/}
 DISTFILES=		${RPMFILES}
 
 MAINTAINER=		tech-pkg@NetBSD.org

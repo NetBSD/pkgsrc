@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/01/03 18:49:55 reed Exp $
+# $NetBSD: Makefile,v 1.29 2004/01/11 19:41:39 cjep Exp $
 #
 
 DISTNAME=		Eterm-0.9.2
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/^E/e/}
 PKGREVISION=		6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=eterm/} \
-                        ftp://ftp.dti.ad.jp/pub/X/Eterm/
+			ftp://ftp.dti.ad.jp/pub/X/Eterm/
 DISTFILES=		${ETERM_SRCS} ${PIXMAP_FILES}
 
 SITES_Eterm-bg-scale-1.tar.gz= ${MASTER_SITE_BACKUP}
