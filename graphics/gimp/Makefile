@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/05/07 15:26:01 tron Exp $
+# $NetBSD: Makefile,v 1.16 1998/05/09 15:24:42 frueauf Exp $
 
 DISTNAME=	gimp-0.99.28
 CATEGORIES=	graphics
@@ -42,7 +42,7 @@ PLIST_SRC=	${WRKDIR:T}/.PLIST-src
 
 pre-build:
 	@if [ "$$DISPLAY" = "" ]; then \
-	  echo "${DISTNAME} can only be built under X11."; \
+	  ${ECHO} "${DISTNAME} can only be built under X11."; \
 	  exit 1; \
 	 fi
 
