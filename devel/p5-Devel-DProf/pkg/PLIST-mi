@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST-mi,v 1.1.1.1 1998/11/26 18:02:49 bad Exp $
+bin/dprofpp
+lib/perl5/man/man3/Devel::DProf.3
+lib/perl5/site_perl/Devel/DProf.pm
+man/man1/dprofpp.1
+lib/perl5/site_perl/${MACHINE_ARCH}-netbsd/auto/Devel/DProf/.packlist
