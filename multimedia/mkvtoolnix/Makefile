@@ -1,21 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2004/05/05 15:57:47 salo Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/08 18:09:20 salo Exp $
 #
 
-DISTNAME=	mkvtoolnix-0.8.8
-CATEGORIES=	multimedia
-MASTER_SITES=	http://www.bunkus.org/videotools/mkvtoolnix/sources/
-EXTRACT_SUFX=	.tar.bz2
+.include "../../multimedia/mkvtoolnix/Makefile.dist"
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.bunkus.org/videotools/mkvtoolnix/
 COMMENT=	Set of tools to create, alter and inspect Matroska files
 
+GNU_CONFIGURE=	yes
 USE_BUILDLINK3=	yes
 USE_GNU_TOOLS+=	make
-
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--with-extra-libs=${PREFIX}
-CONFIGURE_ARGS+=	--with-extra-includes=${PREFIX}
+USE_LANGUAGES=	c c++
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/liblzo/buildlink3.mk"
