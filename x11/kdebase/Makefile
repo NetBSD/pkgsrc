@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 1999/02/17 08:34:36 tron Exp $
+# $NetBSD: Makefile,v 1.30 1999/02/18 23:37:54 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 #
 
@@ -36,6 +36,8 @@ PLIST_DIRS=	share/kde/applnk share/kde/apps/kappfinder share/kde/icons \
 		share/kde/mimelnk
 
 post-install:
+	@${MKDIR} ${PREFIX}/share/doc/kde/HTML/it
+	@${MKDIR} ${PREFIX}/share/kde/sounds
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@(cd ${PREFIX}; find ${PLIST_DIRS} -type f >>${PLIST_SRC})
 	@(cd ${PREFIX}; find ${PLIST_DIRS} -type d | sort -r | \
