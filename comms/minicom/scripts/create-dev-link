@@ -39,7 +39,7 @@ else
 	if [ ${foo} = Y -o ${foo} = y -o ${foo} = yes ] ; then
 		echo "From the list below, what port number is your modem attached to?"
 		cd /dev
-		/bin/ls -C cuaa*
+		/bin/ls -C tty[0-9][0-9]
 		echo ""
 		echo -n "Enter the number X from cuaaX above : "
 		read bar
