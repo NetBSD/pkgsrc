@@ -1,0 +1,116 @@
+$NetBSD: patch-bi,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
+
+--- src/lib/strindent.c.orig	Thu Jan  2 13:33:34 1997
++++ src/lib/strindent.c
+@@ -11,11 +11,15 @@
+ //
+ // ^HISTORY:
+ //    12/05/91 	Brad Appleton 	<bradapp@enteract.com> 	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
+ //-^^-----------------------------------------------------------------------
+ 
+-#include <iostream.h>
+-#include <string.h>
+-#include <ctype.h>
++#include <iostream>
++#include <cstring>
++#include <cctype>
+ 
+ #include "cmdline.h"
+ 
+@@ -26,6 +30,7 @@
+ //
+ #define TO_LOWER(c)  ((isupper(c)) ? tolower(c) : c)
+ 
++namespace cmdline {
+ 
+ //-------
+ // ^FUNCTION: strmatch - match a keyword
+@@ -40,7 +45,7 @@
+ //    const char * attempt;
+ //    -- the "candidate" that may or may not match the keyword
+ //
+-//    unsigned len;
++//    unsigned int len;
+ //    -- the number of character of "attempt" to consider (==0 if all
+ //       characters of "attempt" should be used).
+ //
+@@ -67,9 +72,9 @@
+ //    else return str_PARTIAL
+ //-^^----
+ CmdLine::strmatch_t
+-CmdLine::strmatch(const char * src, const char * attempt, unsigned len)
++CmdLine::strmatch(const char * src, const char * attempt, unsigned int len)
+ {
+-   unsigned  i;
++   unsigned int i;
+ 
+    if (src == attempt)  return  str_EXACT ;
+    if ((src == NULL) || (attempt == NULL))  return  str_NONE ;
+@@ -94,16 +99,16 @@
+ //    ostream & os;
+ //    -- the stream to which output is sent
+ //
+-//    unsigned maxcols;
++//    unsigned int maxcols;
+ //    -- the maximum width (in characters) of the output
+ //
+-//    unsigned margin;
++//    unsigned int margin;
+ //    -- the number of spaces to use as the left margin
+ //
+ //    char * title;
+ //    -- the paragraph title
+ //
+-//    unsigned indent;
++//    unsigned int indent;
+ //    -- the distance between the title and the paragraph body
+ //
+ //    char * text;
+@@ -134,10 +139,10 @@
+ //-^^-----------------------------------------------------------------------
+ void
+ CmdLine::strindent(ostream    & os,
+-                   unsigned     maxcols,
+-                   unsigned     margin,
++                   unsigned int maxcols,
++                   unsigned int margin,
+                    const char * title,
+-                   unsigned     indent,
++                   unsigned int indent,
+                    const char * text)
+ {
+    // If we were given non-sensical parameters then dont use them
+@@ -168,9 +173,9 @@
+    // Loop through the paragraph text witing to print until we absolutely
+    // have to.
+    //
+-   unsigned  col = margin + indent + 1;
+-   unsigned  index = 0 ;
+-   unsigned  last_white = 0 ;
++   unsigned int col = margin + indent + 1;
++   unsigned int index = 0 ;
++   unsigned int last_white = 0 ;
+    const char * p = text ;
+ 
+    while (p[index]) {
+@@ -291,8 +296,8 @@
+ getsym(const char * sym_name)
+ {
+    static  char  sym_value[256];
+-   unsigned long   stat;
+-   unsigned short  buflen;
++   unsigned int long   stat;
++   unsigned int short  buflen;
+    $DESCRIPTOR(sym_name_d, sym_name);
+    $DESCRIPTOR(sym_value_d, sym_value);
+ 
+@@ -309,3 +314,5 @@
+ }
+ 
+ #endif  /* vms */
++
++} // namespace cmdline

@@ -1,0 +1,102 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/quoted.c.orig	Thu Jan  2 13:33:29 1997
++++ src/cmd/quoted.c
+@@ -6,18 +6,23 @@
+ //
+ // ^HISTORY:
+ //    05/01/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Updated to ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <string.h>
+-#include <ctype.h>
++#include <cctype>
++#include <cstdlib>
++#include <cstring>
++#include <iostream>
+ 
+ #include "quoted.h"
+ 
++using namespace std;
++
+ //--------------------------------------------------------------- Constructors
+ 
+-QuotedString::QuotedString(unsigned  max_size)
++QuotedString::QuotedString(unsigned int max_size)
+    : size(max_size)
+ {
+    buffer = new char[size] ;
+@@ -26,28 +31,28 @@
+ 
+ QuotedString::QuotedString(const char * str)
+ {
+-   size = ::strlen(str + 1);
++   size = strlen(str + 1);
+    buffer = new char[size];
+-   if (buffer)  ::strcpy(buffer, str);
++   if (buffer)  strcpy(buffer, str);
+ }
+ 
+-QuotedString::QuotedString(const char * str, unsigned  max_size)
++QuotedString::QuotedString(const char * str, unsigned int max_size)
+    : size(max_size)
+ {
+    buffer = new char[size];
+-   if (buffer)  ::strcpy(buffer, str);
++   if (buffer)  strcpy(buffer, str);
+ }
+ 
+ QuotedString::QuotedString(const QuotedString & qstr)
+    : size(qstr.size)
+ {
+    buffer = new char[size];
+-   if (buffer)  ::strcpy(buffer, qstr.buffer);
++   if (buffer)  strcpy(buffer, qstr.buffer);
+ }
+ 
+ //--------------------------------------------------------------- Destructor
+ 
+-QuotedString::~QuotedString(void)
++QuotedString::~QuotedString()
+ {
+    delete [] buffer ;
+ }
+@@ -60,7 +65,7 @@
+    delete [] buffer ;
+    size = qstr.size;
+    buffer = new char[size];
+-   if (buffer)  ::strcpy(buffer, qstr.buffer);
++   if (buffer)  strcpy(buffer, qstr.buffer);
+    return  *this ;
+ }
+ 
+@@ -68,9 +73,9 @@
+ QuotedString::operator=(const char * str)
+ {
+    delete [] buffer ;
+-   size = ::strlen(str) + 1;
++   size = strlen(str) + 1;
+    buffer = new char[size];
+-   if (buffer)  ::strcpy(buffer, str);
++   if (buffer)  strcpy(buffer, str);
+    return  *this ;
+ }
+ 
+@@ -108,9 +113,9 @@
+ 
+ 
+    // Now fetch into "dest" until we see the ending quote.
+-   char    * dest = qstr.buffer;
+-   unsigned  end_quote = 0;
+-   unsigned  len = 0;
++   char       * dest = qstr.buffer;
++   unsigned int end_quote = 0;
++   unsigned int len = 0;
+    int  c;
+    while (! end_quote) {
+       int  escape = 0;

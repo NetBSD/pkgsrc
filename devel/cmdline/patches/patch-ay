@@ -1,0 +1,169 @@
+$NetBSD: patch-ay,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/lib/cmdline.c.orig	Thu Jan  2 13:33:32 1997
++++ src/lib/cmdline.c
+@@ -18,21 +18,31 @@
+ //    - Added cmd_nargs_parsed field to CmdLine
+ //    - Added cmd_description field to CmdLine
+ //    - Added exit_handler() and quit() member-functions to CmdLine
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <stdarg.h>
+-#include <string.h>
+-#include <ctype.h>
++#include <cstdlib>
++#include <cstdarg>
++#include <cstring>
++#include <cctype>
++#include <iostream>
+ 
+ #include "cmdline.h"
+ #include "cmdargs.h"
+ #include "arglist.h"
+ #include "states.h"
+ 
+-#define  va_CmdArgP(ap)  va_arg(ap, CmdArg *)
++namespace cmdline {
+ 
++using std::cerr;
++using std::exit;
++using std::strcpy;
++using std::strrchr;
++
++#define  va_CmdArgP(ap)  va_arg(ap, CmdArg *)
+ 
+ //------------------------------------------------------------------- init_args
+ 
+@@ -139,12 +149,12 @@
+ # ifdef vms
+    char * ver;
+    // remove leading directory and/or device name
+-   p1 = ::strrchr(filename, ':');
+-   p2 = ::strrchr(filename, ']');
++   p1 = strrchr(filename, ':');
++   p2 = strrchr(filename, ']');
+ # else
+    // remove leading directory and/or drive name
+-   p1 = ::strrchr(filename, '/');
+-   p2 = ::strrchr(filename, '\\');
++   p1 = strrchr(filename, '/');
++   p2 = strrchr(filename, '\\');
+ # endif
+    if ((p1 == NULL) && (p2 == NULL)) {
+       start = filename ;
+@@ -157,15 +167,15 @@
+    }
+ 
+    str = new char[strlen(start) + 1];
+-   (void) ::strcpy(str, start);
++   strcpy(str, start);
+ 
+    // remove the extension
+-   ext = ::strrchr(str, '.');
++   ext = strrchr(str, '.');
+    if (ext)  *ext = '\0' ;
+ 
+ # ifdef vms
+    // remove the version
+-   ver = ::strrchr(str, ';');
++   ver = strrchr(str, ';');
+    if (ver)  *ver = '\0' ;
+ # endif
+ 
+@@ -173,7 +183,7 @@
+ 
+ #else
+ 
+-   char * p = ::strrchr(filename, '/') ;
++   char * p = strrchr(filename, '/') ;
+    return  (p == NULL) ? filename : (p + 1) ;
+ 
+ #endif /* if (vms || msdos || os2) */
+@@ -197,7 +207,7 @@
+      cmd_quit_handler(NULL)
+ {
+    name(cmdname);
+-   ::init_args(cmd_args);
++   init_args(cmd_args);
+ }
+ 
+    // Constructor with a name and CmdArgs
+@@ -215,7 +225,7 @@
+      cmd_quit_handler(NULL)
+ {
+    name(cmdname);
+-   ::init_args(cmd_args);
++   init_args(cmd_args);
+ 
+    CmdArgListListIter  iter(cmd_args);
+    CmdArgList * arg_list = iter();
+@@ -244,7 +254,7 @@
+      cmd_quit_handler(NULL)
+ {
+    if (cmdarg1 == NULL)  return;
+-   ::init_args(cmd_args);
++   init_args(cmd_args);
+ 
+    CmdArgListListIter  iter(cmd_args);
+    CmdArgList * arg_list = iter();
+@@ -259,7 +269,7 @@
+ 
+ 
+    // Destructor
+-CmdLine::~CmdLine(void)
++CmdLine::~CmdLine()
+ {
+    delete  cmd_args;
+ 
+@@ -278,14 +288,14 @@
+ #if (defined(vms) || defined(msdos) || defined(os2))
+    delete [] cmd_name;
+ #endif
+-   cmd_name = ::filebasename((progname) ? progname : unknown_progname);
++   cmd_name = filebasename((progname) ? progname : unknown_progname);
+ }
+ 
+ 
+    // Print an error message prefix and return a reference to the
+    // error output stream for this command
+ ostream &
+-CmdLine::error(unsigned  quiet) const
++CmdLine::error(unsigned int quiet) const
+ {
+    ostream * os = (cmd_err) ? cmd_err : &cerr ;
+    if (cmd_name && *cmd_name && !quiet)  *os << cmd_name << ": " ;
+@@ -310,7 +320,7 @@
+    if (cmd_quit_handler != NULL) {
+       (*cmd_quit_handler)(status);
+    } else {
+-      ::exit(status);
++      exit(status);
+    }
+ }
+ 
+@@ -338,7 +348,7 @@
+    }
+ }
+ 
+-CmdLineCmdArgIter::~CmdLineCmdArgIter(void)
++CmdLineCmdArgIter::~CmdLineCmdArgIter()
+ {
+    delete  iter;
+ }
+@@ -347,8 +357,9 @@
+    // Returns NULL if we are already at the end of the list.
+    //
+ CmdArg *
+-CmdLineCmdArgIter::operator()(void)
++CmdLineCmdArgIter::operator()()
+ {
+    return  (iter) ? iter->operator()() : NULL ;
+ }
+ 
++} // namespace cmdline

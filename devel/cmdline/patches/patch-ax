@@ -1,0 +1,637 @@
+$NetBSD: patch-ax,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/lib/cmdargs.h.orig	Thu Jan  2 13:33:33 1997
++++ src/lib/cmdargs.h
+@@ -50,13 +50,23 @@
+ //
+ // ^HISTORY:
+ //    03/25/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
++//    - Removed unnecessary NULL.
+ //-^^---------------------------------------------------------------------
+ 
+ #ifndef _usr_include_cmdargs_h
+ #define _usr_include_cmdargs_h
+ 
++#include <iosfwd>
+ #include <cmdline.h>
+ 
++namespace cmdline {
++
++using std::ostream;
++
+ //-------------------------------------------------------------- Dummy Argument
+ 
+    // A Dummy argument is one that is used only for its appearance in
+@@ -73,28 +83,28 @@
+                const char * keyword,
+                const char * value,
+                const char * description,
+-               unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++               unsigned int syntax_flags =CmdArg::isOPTVALREQ)
+       : CmdArg(optchar, keyword, value, description, syntax_flags) {}
+ 
+    CmdArgDummy(char         optchar,
+                const char * keyword,
+                const char * description,
+-               unsigned     syntax_flags =CmdArg::isOPT)
++               unsigned int syntax_flags =CmdArg::isOPT)
+       : CmdArg(optchar, keyword, description, syntax_flags) {}
+ 
+    CmdArgDummy(const char * value,
+                const char * description,
+-               unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++               unsigned int syntax_flags =CmdArg::isPOSVALREQ)
+       : CmdArg(value, description, syntax_flags) {}
+ 
+    CmdArgDummy(const CmdArgDummy & cp) : CmdArg(cp) {}
+ 
+    CmdArgDummy(const CmdArg & cp) : CmdArg(cp) {}
+ 
+-   virtual ~CmdArgDummy(void);
++   virtual ~CmdArgDummy();
+ 
+    virtual  int
+-   is_dummy(void);   // return non-zero
++   is_dummy();   // return non-zero
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);  // NO-OP
+@@ -115,20 +125,20 @@
+    CmdArgUsage(char         optchar,
+                const char * keyword,
+                const char * description,
+-               ostream    * osp =NULL);   // cout is used if "osp" is NULL
++               ostream    * osp =0);   // cout is used if "osp" is NULL
+ 
+    CmdArgUsage(const CmdArgUsage & cp) : CmdArg(cp) {}
+ 
+    CmdArgUsage(const CmdArg & cp) : CmdArg(cp) {}
+ 
+-   virtual ~CmdArgUsage(void);
++   virtual ~CmdArgUsage();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+ 
+       // get/set the ostream that usage is printed on
+    ostream *
+-   ostream_ptr(void) const { return  os_ptr; }
++   ostream_ptr() const { return  os_ptr; }
+ 
+    void
+    ostream_ptr(ostream * osp);
+@@ -150,19 +160,19 @@
+                      const char * keyword,
+                      const char * value,
+                      const char * description,
+-                     unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++                     unsigned int syntax_flags =CmdArg::isOPTVALREQ)
+       : CmdArg(optchar, keyword, value, description, syntax_flags) {}
+ 
+    CmdArgIntCompiler(const char * value,
+                      const char * description,
+-                     unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++                     unsigned int syntax_flags =CmdArg::isPOSVALREQ)
+       : CmdArg(value, description, syntax_flags) {}
+ 
+    CmdArgIntCompiler(const CmdArgIntCompiler & cp) : CmdArg(cp) {}
+ 
+    CmdArgIntCompiler(const CmdArg & cp) : CmdArg(cp) {}
+ 
+-   virtual ~CmdArgIntCompiler(void);
++   virtual ~CmdArgIntCompiler();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd) = 0;
+@@ -178,7 +188,7 @@
+    // a CmdArgInt as if it were an integer:
+    //
+    //    operator=(int);
+-   //    operator int(void);
++   //    operator int();
+    //    operator<<(os, CmdArgInt);
+    //
+    // The integer value is initialized to zero by the constructor.
+@@ -199,16 +209,16 @@
+              const char * keyword,
+              const char * value,
+              const char * description,
+-             unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++             unsigned int syntax_flags =CmdArg::isOPTVALREQ)
+       : CmdArgIntCompiler(optchar, keyword, value, description, syntax_flags),
+         val(0) {}
+ 
+    CmdArgInt(const char * value,
+              const char * description,
+-             unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++             unsigned int syntax_flags =CmdArg::isPOSVALREQ)
+       : CmdArgIntCompiler(value, description, syntax_flags), val(0) {}
+ 
+-   virtual ~CmdArgInt(void);
++   virtual ~CmdArgInt();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+@@ -223,7 +233,7 @@
+    CmdArgInt &
+    operator=(int cp)  { val = cp; return  *this; }
+ 
+-   operator int(void)  const { return  val; }
++   operator int()  const { return  val; }
+ 
+ private:
+    int   val;
+@@ -246,19 +256,19 @@
+                        const char * keyword,
+                        const char * value,
+                        const char * description,
+-                       unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++                       unsigned int syntax_flags =CmdArg::isOPTVALREQ)
+       : CmdArg(optchar, keyword, value, description, syntax_flags) {}
+ 
+    CmdArgFloatCompiler(const char * value,
+                        const char * description,
+-                       unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++                       unsigned int syntax_flags =CmdArg::isPOSVALREQ)
+       : CmdArg(value, description, syntax_flags) {}
+ 
+    CmdArgFloatCompiler(const CmdArgFloatCompiler & cp) : CmdArg(cp) {}
+ 
+    CmdArgFloatCompiler(const CmdArg & cp) : CmdArg(cp) {}
+ 
+-   virtual ~CmdArgFloatCompiler(void);
++   virtual ~CmdArgFloatCompiler();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd) = 0;
+@@ -274,7 +284,7 @@
+    // a CmdArgFloat as if it were a float:
+    //
+    //    operator=(float);
+-   //    operator float(void);
++   //    operator float();
+    //    operator<<(os, CmdArgFloat);
+    //
+    // The floating-point value is initialized to zero by the constructor.
+@@ -296,16 +306,16 @@
+                const char * keyword,
+                const char * value,
+                const char * description,
+-               unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++               unsigned int syntax_flags =CmdArg::isOPTVALREQ)
+       : CmdArgFloatCompiler(optchar, keyword, value, description, syntax_flags),
+         val(0) {}
+ 
+    CmdArgFloat(const char * value,
+                const char * description,
+-               unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++               unsigned int syntax_flags =CmdArg::isPOSVALREQ)
+       : CmdArgFloatCompiler(value, description, syntax_flags), val(0) {}
+ 
+-   virtual ~CmdArgFloat(void);
++   virtual ~CmdArgFloat();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+@@ -322,7 +332,7 @@
+    CmdArgFloat &
+    operator=(float cp)  { val = cp; return  *this; }
+ 
+-   operator float(void)  const  { return  val; }
++   operator float()  const  { return  val; }
+ 
+ private:
+    float   val;
+@@ -343,19 +353,19 @@
+                       const char * keyword,
+                       const char * value,
+                       const char * description,
+-                      unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++                      unsigned int syntax_flags =CmdArg::isOPTVALREQ)
+       : CmdArg(optchar, keyword, value, description, syntax_flags) {}
+ 
+    CmdArgCharCompiler(const char * value,
+                       const char * description,
+-                      unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++                      unsigned int syntax_flags =CmdArg::isPOSVALREQ)
+       : CmdArg(value, description, syntax_flags) {}
+ 
+    CmdArgCharCompiler(const CmdArgCharCompiler & cp) : CmdArg(cp) {}
+ 
+    CmdArgCharCompiler(const CmdArg & cp) : CmdArg(cp) {}
+ 
+-   virtual ~CmdArgCharCompiler(void);
++   virtual ~CmdArgCharCompiler();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd) = 0;
+@@ -371,7 +381,7 @@
+    // a CmdArgChar as if it were a character:
+    //
+    //    operator=(char);
+-   //    operator char(void);
++   //    operator char();
+    //    operator<<(os, CmdArgChar);
+    //
+    // The character value is initialized to '\0' by the constructor.
+@@ -393,16 +403,16 @@
+               const char * keyword,
+               const char * value,
+               const char * description,
+-              unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++              unsigned int syntax_flags =CmdArg::isOPTVALREQ)
+       : CmdArgCharCompiler(optchar, keyword, value, description, syntax_flags),
+         val(0) {}
+ 
+    CmdArgChar(const char * value,
+               const char * description,
+-              unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++              unsigned int syntax_flags =CmdArg::isPOSVALREQ)
+       : CmdArgCharCompiler(value, description, syntax_flags), val(0) {}
+ 
+-   virtual ~CmdArgChar(void);
++   virtual ~CmdArgChar();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+@@ -417,7 +427,7 @@
+    CmdArgChar &
+    operator=(char cp)  { val = cp; return  *this; }
+ 
+-   operator char(void)  const  { return  val; }
++   operator char()  const  { return  val; }
+ 
+ private:
+    char   val;
+@@ -446,17 +456,17 @@
+    // it and a "char *" (in most cases).
+    //
+    struct  casc_string {
+-      unsigned     is_alloc : 1 ;
++      unsigned int is_alloc : 1 ;
+       const char * str ;
+ 
+-      casc_string(void) : is_alloc(0), str(0) {}
++      casc_string() : is_alloc(0), str(0) {}
+ 
+       casc_string(const char * s) : is_alloc(0), str(s) {}
+ 
+       void
+-      copy(unsigned  is_temporary, const char * s);
++      copy(unsigned int is_temporary, const char * s);
+ 
+-      casc_string(unsigned  is_temporary, const char * s)
++      casc_string(unsigned int is_temporary, const char * s)
+          : is_alloc(0), str(0) { copy(is_temporary, s); }
+ 
+       casc_string(const casc_string & cp)
+@@ -469,9 +479,9 @@
+       casc_string &
+       operator=(const char * cp) { copy(0, cp); return *this; }
+ 
+-      operator const char*(void)  const { return  str; }
++      operator const char*()  const { return  str; }
+ 
+-      virtual ~casc_string(void)
++      virtual ~casc_string()
+ #ifdef __GNUG__
+          { if (is_alloc)   delete [] (char *) str; }
+ #endif
+@@ -482,19 +492,19 @@
+                      const char * keyword,
+                      const char * value,
+                      const char * description,
+-                     unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++                     unsigned int syntax_flags =CmdArg::isOPTVALREQ)
+       : CmdArg(optchar, keyword, value, description, syntax_flags) {}
+ 
+    CmdArgStrCompiler(const char * value,
+                      const char * description,
+-                     unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++                     unsigned int syntax_flags =CmdArg::isPOSVALREQ)
+       : CmdArg(value, description, syntax_flags) {}
+ 
+    CmdArgStrCompiler(const CmdArgStrCompiler & cp) : CmdArg(cp) {}
+ 
+    CmdArgStrCompiler(const CmdArg & cp) : CmdArg(cp) {}
+ 
+-   virtual ~CmdArgStrCompiler(void);
++   virtual ~CmdArgStrCompiler();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd) = 0;
+@@ -510,7 +520,7 @@
+    // a CmdArgStr as if it were a string:
+    //
+    //    operator=(char*);
+-   //    operator char*(void);
++   //    operator char*();
+    //    operator<<(os, CmdArgStr);
+    // 
+    // The string value is initialized to NULL by the constructor.
+@@ -532,16 +542,16 @@
+              const char * keyword,
+              const char * value,
+              const char * description,
+-             unsigned     syntax_flags =CmdArg::isOPTVALREQ)
++             unsigned int syntax_flags =CmdArg::isOPTVALREQ)
+       : CmdArgStrCompiler(optchar, keyword, value, description, syntax_flags),
+         val(0) {}
+ 
+    CmdArgStr(const char * value,
+              const char * description,
+-             unsigned     syntax_flags =CmdArg::isPOSVALREQ)
++             unsigned int syntax_flags =CmdArg::isPOSVALREQ)
+       : CmdArgStrCompiler(value, description, syntax_flags), val(0) {}
+ 
+-   virtual ~CmdArgStr(void);
++   virtual ~CmdArgStr();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+@@ -560,12 +570,12 @@
+    CmdArgStr &
+    operator=(const char * cp)  { val = cp; return  *this; }
+ 
+-   operator CmdArgStrCompiler::casc_string(void)  { return  val; }
++   operator CmdArgStrCompiler::casc_string()  { return  val; }
+ 
+-   operator const char*(void)  const { return  val.str; }
++   operator const char*()  const { return  val.str; }
+ 
+    // use this for comparing to NULL
+-   int isNULL(void) const { return (val.str) ? 0 : 1; }
++   int isNULL() const { return (val.str) ? 0 : 1; }
+ 
+ private:
+    CmdArgStrCompiler::casc_string  val;
+@@ -605,25 +615,25 @@
+             const char * keyword,
+             const char * value,
+             const char * description,
+-            unsigned   syntax_flags =(CmdArg::isOPTVALREQ + CmdArg::isLIST))
++            unsigned int syntax_flags =(CmdArg::isOPTVALREQ + CmdArg::isLIST))
+       : CmdArgIntCompiler(optchar, keyword, value, description, syntax_flags),
+         val(0) {}
+ 
+    CmdArgIntList(const char * value,
+             const char * description,
+-            unsigned   syntax_flags =(CmdArg::isPOSVALREQ + CmdArg::isLIST))
++            unsigned int syntax_flags =(CmdArg::isPOSVALREQ + CmdArg::isLIST))
+       : CmdArgIntCompiler(value, description, syntax_flags), val(0) {}
+ 
+-   virtual ~CmdArgIntList(void);
++   virtual ~CmdArgIntList();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+ 
+-   unsigned
+-   count(void) const;
++   unsigned int
++   count() const;
+ 
+    int &
+-   operator[](unsigned  index);
++   operator[](unsigned int index);
+ 
+ private:
+    CmdArgIntList(const CmdArgInt & cp);
+@@ -652,25 +662,25 @@
+               const char * keyword,
+               const char * value,
+               const char * description,
+-              unsigned   syntax_flags =(CmdArg::isOPTVALREQ + CmdArg::isLIST))
++              unsigned int syntax_flags =(CmdArg::isOPTVALREQ + CmdArg::isLIST))
+       : CmdArgFloatCompiler(optchar, keyword, value, description, syntax_flags),
+         val(0) {}
+ 
+    CmdArgFloatList(const char * value,
+               const char * description,
+-              unsigned   syntax_flags =(CmdArg::isPOSVALREQ + CmdArg::isLIST))
++              unsigned int syntax_flags =(CmdArg::isPOSVALREQ + CmdArg::isLIST))
+       : CmdArgFloatCompiler(value, description, syntax_flags), val(0) {}
+ 
+-   virtual ~CmdArgFloatList(void);
++   virtual ~CmdArgFloatList();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+ 
+-   unsigned
+-   count(void) const;
++   unsigned int
++   count() const;
+ 
+    float &
+-   operator[](unsigned  index);
++   operator[](unsigned int index);
+ 
+ private:
+    CmdArgFloatList(const CmdArgFloat & cp);
+@@ -699,25 +709,25 @@
+             const char * keyword,
+             const char * value,
+             const char * description,
+-            unsigned   syntax_flags =(CmdArg::isOPTVALREQ + CmdArg::isLIST))
++            unsigned int syntax_flags =(CmdArg::isOPTVALREQ + CmdArg::isLIST))
+       : CmdArgStrCompiler(optchar, keyword, value, description, syntax_flags),
+         val(0) {}
+ 
+    CmdArgStrList(const char * value,
+             const char * description,
+-            unsigned   syntax_flags =(CmdArg::isPOSVALREQ + CmdArg::isLIST))
++            unsigned int syntax_flags =(CmdArg::isPOSVALREQ + CmdArg::isLIST))
+       : CmdArgStrCompiler(value, description, syntax_flags), val(0) {}
+ 
+-   virtual ~CmdArgStrList(void);
++   virtual ~CmdArgStrList();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+ 
+-   unsigned
+-   count(void) const;
++   unsigned int
++   count() const;
+ 
+    CmdArgStrCompiler::casc_string &
+-   operator[](unsigned  index);
++   operator[](unsigned int index);
+ 
+ private:
+    CmdArgStrList(const CmdArgStr & cp);
+@@ -754,14 +764,14 @@
+    CmdArgBoolCompiler(char         optchar,
+                       const char * keyword,
+                       const char * description,
+-                      unsigned     syntax_flags =CmdArg::isOPT)
++                      unsigned int syntax_flags =CmdArg::isOPT)
+       : CmdArg(optchar, keyword, description, syntax_flags) {}
+ 
+    CmdArgBoolCompiler(const CmdArgBoolCompiler & cp) : CmdArg(cp) {}
+ 
+    CmdArgBoolCompiler(const CmdArg & cp) : CmdArg(cp) {}
+ 
+-   virtual ~CmdArgBoolCompiler(void);
++   virtual ~CmdArgBoolCompiler();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd) = 0;
+@@ -769,8 +779,8 @@
+    int
+    compile(const char * & arg,
+            CmdLine      & cmd,
+-           unsigned     & value,
+-           unsigned       default_value =1);
++           unsigned int & value,
++           unsigned int   default_value =1);
+ } ;
+ 
+ 
+@@ -794,7 +804,7 @@
+    // a Boolean Value:
+    //
+    //   operator=(int);
+-   //   operator int(void);
++   //   operator int();
+    //
+    // Examples:
+    //    CmdArgBool    xflag('x', "xmode", "turn on xmode);
+@@ -808,7 +818,7 @@
+    CmdArgBool(char         optchar,
+               const char * keyword,
+               const char * description,
+-              unsigned     syntax_flags =CmdArg::isOPT)
++              unsigned int syntax_flags =CmdArg::isOPT)
+       : CmdArgBoolCompiler(optchar, keyword, description, syntax_flags),
+         val(0) {}
+ 
+@@ -816,7 +826,7 @@
+ 
+    CmdArgBool(const CmdArg & cp) : CmdArgBoolCompiler(cp), val(0) {}
+ 
+-   virtual ~CmdArgBool(void);
++   virtual ~CmdArgBool();
+ 
+    CmdArgBool &
+    operator=(const CmdArgBool & cp)
+@@ -826,13 +836,13 @@
+    operator=(int new_value)
+       { val = (new_value) ? 1 : 0; return *this; }
+ 
+-   operator int(void) const { return  val; }
++   operator int() const { return  val; }
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+ 
+ protected:
+-   unsigned  val : 1;
++   unsigned int val : 1;
+ } ;
+ 
+ ostream &
+@@ -845,14 +855,14 @@
+    CmdArgClear(char         optchar,
+                const char * keyword,
+                const char * description,
+-               unsigned     syntax_flags =CmdArg::isOPT)
++               unsigned int syntax_flags =CmdArg::isOPT)
+       : CmdArgBool(optchar, keyword, description, syntax_flags) { val = 1; }
+ 
+    CmdArgClear(const CmdArgClear & cp) : CmdArgBool(cp) {}
+ 
+    CmdArgClear(const CmdArg & cp) : CmdArgBool(cp) { val = 1; }
+ 
+-   virtual ~CmdArgClear(void);
++   virtual ~CmdArgClear();
+ 
+    CmdArgClear &
+    operator=(const CmdArgClear & cp)
+@@ -862,7 +872,7 @@
+    operator=(int new_value)
+       { val = (new_value) ? 1 : 0; return *this; }
+ 
+-   operator int(void) const { return  val; }
++   operator int() const { return  val; }
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+@@ -873,14 +883,14 @@
+    CmdArgToggle(char         optchar,
+                 const char * keyword,
+                 const char * description,
+-                unsigned     syntax_flags =CmdArg::isOPT)
++                unsigned int syntax_flags =CmdArg::isOPT)
+       : CmdArgBool(optchar, keyword, description, syntax_flags) {}
+ 
+    CmdArgToggle(const CmdArgToggle & cp) : CmdArgBool(cp) {}
+ 
+    CmdArgToggle(const CmdArg & cp) : CmdArgBool(cp) {}
+ 
+-   virtual ~CmdArgToggle(void);
++   virtual ~CmdArgToggle();
+ 
+    CmdArgToggle &
+    operator=(const CmdArgToggle & cp)
+@@ -890,7 +900,7 @@
+    operator=(int new_value)
+       { val = (new_value) ? 1 : 0; return *this; }
+ 
+-   operator int(void) const { return  val; }
++   operator int() const { return  val; }
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+@@ -929,10 +939,10 @@
+                  char         optchar,
+                  const char * keyword,
+                  const char * description,
+-                 unsigned     syntax_flags =CmdArg::isOPT)
++                 unsigned int syntax_flags =CmdArg::isOPT)
+       : CmdArg(optchar, keyword, description, syntax_flags), ref(bool_arg) {}
+ 
+-   virtual  ~CmdArgBoolRef(void);
++   virtual  ~CmdArgBoolRef();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+@@ -949,10 +959,10 @@
+                   char         optchar,
+                   const char * keyword,
+                   const char * description,
+-                  unsigned     syntax_flags =CmdArg::isOPT)
++                  unsigned int syntax_flags =CmdArg::isOPT)
+       : CmdArg(optchar, keyword, description, syntax_flags), ref(bool_arg) {}
+ 
+-   virtual  ~CmdArgClearRef(void);
++   virtual  ~CmdArgClearRef();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+@@ -967,10 +977,10 @@
+                   char         optchar,
+                   const char * keyword,
+                   const char * description,
+-                  unsigned     syntax_flags =CmdArg::isOPT)
++                  unsigned int syntax_flags =CmdArg::isOPT)
+       : CmdArg(optchar, keyword, description, syntax_flags), ref(bool_arg) {}
+ 
+-   virtual  ~CmdArgToggleRef(void);
++   virtual  ~CmdArgToggleRef();
+ 
+    virtual  int
+    operator()(const char * & arg, CmdLine & cmd);
+@@ -978,5 +988,7 @@
+ protected:
+    CmdArgBool & ref;
+ } ;
++
++} // namespace cmdline
+ 
+ #endif /* _usr_include_cmdargs_h */

@@ -1,0 +1,71 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/08/25 16:15:52 jlam Exp $
+
+--- Config.mk.orig	Thu Jan  2 13:33:36 1997
++++ Config.mk
+@@ -13,7 +13,7 @@
+ ###^^#####################################################################
+ 
+    ## Universe to compile in (use "att" for SYSV Unix and "ucb" for BSD Unix).
+-.UNIVERSE=att
++.UNIVERSE=ucb
+ 
+    ## Host operating system
+ OS=unix
+@@ -28,7 +28,7 @@
+ OBJEXT=.o
+ 
+    ## library file extension
+-LIBEXT=.a
++LIBEXT=.la
+ 
+    ## executable file extension
+ EXECEXT=
+@@ -106,7 +106,7 @@
+ #          their corresponding strings at the end of doc/macros.man!
+ #
+    ## common local directory
+-LOCAL=/usr/local/
++LOCAL=${PREFIX}/
+ 
+    ## where to install executables
+ BINDIR=$(LOCAL)bin/
+@@ -127,10 +127,10 @@
+ LOCALMAN=local_man/
+ 
+    ## where to install man-pages
+-MANDIR=/usr/man/$(LOCALMAN)
++MANDIR=$(LOCAL)man/
+ 
+    ## where to install catman-pages (preformatted manual pages)
+-CATMANDIR=/usr/catman/$(LOCALMAN)
++CATMANDIR=$(MANDIR)
+ 
+    ## subdirectory of MANDIR and CATMANDIR for section 1 of man-pages
+ MAN1DIR=man1/
+@@ -149,7 +149,7 @@
+ # Define C++ compilation stuff
+ #
+    ## name of C++ compiler
+-CC=CC
++CC=$(LIBTOOL) g++
+ 
+    ## option to specify other include directories to search
+ INC=-I
+@@ -183,7 +183,8 @@
+ FLAG=$(OPT)
+ # FLAG=$(DBG)
+ TESTDEFS=
+-USRDEFS=$(DEF)DEBUG_CMDLINE
++USRDEFS=$(DEF)unix $(DEF)DEBUG_CMDLINE $(DEF)GNU_READLINE $(MOREUSRDEFS)
++USRLIBS=$(MOREUSRLIBS)
+ OPTIONS=
+ 
+ #------------------------------------------------------------------------------
+@@ -192,6 +193,7 @@
+ RECUR= "FLAG=$(FLAG)" \
+    "TESTDEFS=$(TESTDEFS)" \
+    "USRDEFS=$(USRDEFS)" \
++   "USRLIBS=$(USRLIBS)" \
+    "OPTIONS=$(OPTIONS)"
+ 
+ #------------------------------------------------------------------------------

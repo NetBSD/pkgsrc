@@ -1,0 +1,41 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/08/25 16:15:52 jlam Exp $
+
+--- src/cmd/Makefile.orig	Thu Jan  2 13:33:27 1997
++++ src/cmd/Makefile
+@@ -46,12 +46,12 @@
+ ###
+ # compilation options
+ ###
+-INCLUDES=$(INC)$(PROGLIBDIR)
++INCLUDES=$(INC)$(PROGLIBDIR) $(INC)$(CURDIR)
+ FLAG=$(OPT)
+ # FLAG=$(DBG)
+ TESTDEFS=
+ USRDEFS=
+-DEFINES=$(OSDEFS) $(USRDEFS) $(TESTDEFS)
++DEFINES=$(OSDEFS) $(USRDEFS) $(TESTDEFS) $(MOREUSRDEFS)
+ OPTIONS=
+ CFLAGS=$(FLAG) $(INCLUDES) $(DEFINES) $(OPTIONS)
+ 
+@@ -74,17 +74,16 @@
+ 	( $(CHDIR) $(PROGLIBDIR) ; $(BUILD) $@ ; )
+ 
+ $(PROGRAM): $(OBJS)
+-	$(CC) $(EXE) $@ $(OBJS) $(PROGLIB)
++	$(CC) $(EXE) $@ $(OBJS) $(PROGLIB) $(USRLIBS)
+ 
+ ###
+ # maintenance dependencies
+ ###
+ install: $(PROGRAM) $(BINDIR) $(PROGRAM).pl
+ 	-$(RM) $(BINDIR)$(PROGRAM) $(PERLLIB)$(PROGRAM).pl $(TCLLIB)$(PROGRAM).tcl
+-	$(CP) $(PROGRAM)  $(BINDIR)$(PROGRAM)
+-	$(STRIP) $(BINDIR)$(PROGRAM)
+-	-$(CP) $(PROGRAM).pl $(PERLLIB)$(PROGRAM).pl
+-	-$(CP) $(PROGRAM).tcl $(TCLLIB)$(PROGRAM).tcl
++	$(LIBTOOL) $(BSD_INSTALL_PROGRAM) $(PROGRAM) $(BINDIR)$(PROGRAM)
++#	-$(CP) $(PROGRAM).pl $(PERLLIB)$(PROGRAM).pl
++#	-$(CP) $(PROGRAM).tcl $(TCLLIB)$(PROGRAM).tcl
+ 
+ clean:
+ 	-$(RM) *$(OBJEXT) core .exrc *~ \#*\#

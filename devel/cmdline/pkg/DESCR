@@ -1,0 +1,3 @@
+This is CmdLine, a C++ library for parsing command arguments and assigning
+the corresponding values to program variables. Also included is cmdparse,
+a program to provide an interface to CmdLine for shell-scripts.

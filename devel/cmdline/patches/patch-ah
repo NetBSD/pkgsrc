@@ -1,0 +1,38 @@
+$NetBSD: patch-ah,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/cmd/fsm.c.orig	Thu Jan  2 13:33:28 1997
++++ src/cmd/fsm.c
+@@ -7,15 +7,20 @@
+ //
+ // ^HISTORY:
+ //    03/27/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Updated to ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <ctype.h>
+-#include <string.h>
++#include <cctype>
++#include <cstdlib>
++#include <cstring>
++#include <iostream>
+ 
+ #include "fsm.h"
+ 
++using namespace std;
++
+    // define the characters that have a "special" meaning
+ enum {
+   c_LBRACE = '[',
+@@ -214,7 +219,7 @@
+       //
+       if (! *input) {
+          fsm_state = FINAL;
+-      } else if (::strncmp(input, "...", 3) == 0) {
++      } else if (strncmp(input, "...", 3) == 0) {
+          fsm_state = LIST;
+          token.set(input, 3);
+          input += 3;

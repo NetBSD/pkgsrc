@@ -1,0 +1,399 @@
+$NetBSD: patch-aw,v 1.1.1.1 2000/08/25 16:15:53 jlam Exp $
+
+--- src/lib/cmdargs.c.orig	Thu Jan  2 13:33:32 1997
++++ src/lib/cmdargs.c
+@@ -10,17 +10,26 @@
+ //
+ //    03/03/93	Brad Appleton	<bradapp@enteract.com>
+ //    - Added exit_handler() and quit() member-functions to CmdLine
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
++//    - Updated to follow ISO C++ standard
+ //-^^---------------------------------------------------------------------
+ 
+-#include <stdlib.h>
+-#include <iostream.h>
+-#include <string.h>
+-#include <ctype.h>
++#include <cstdlib>
++#include <cstring>
++#include <cctype>
++#include <iostream>
+ 
+ #include "cmdargs.h"
+ #include "exits.h"
+ #include "fifolist.h"
+ 
++namespace cmdline {
++
++using std::cout;
++using std::ostream;
++
+    // return values for operator()
+ enum { SUCCESS = 0, FAILURE = -1 } ;
+ 
+@@ -47,7 +56,7 @@
+ //    -- The internal value (of some appropriate type) that is "managed"
+ //       by this command argument.
+ //
+-//    unsigned  default_value;
++//    unsigned int default_value;
+ //    -- What to assign to "value" if "arg" is NOT a value for this command
+ //       argument.
+ //
+@@ -89,10 +98,10 @@
+ 
+ //-------------------------------------------------------------- Dummy Argument
+ 
+-CmdArgDummy::~CmdArgDummy(void)  {}
++CmdArgDummy::~CmdArgDummy()  {}
+ 
+ int
+-CmdArgDummy::is_dummy(void)  { return  1; }
++CmdArgDummy::is_dummy()  { return  1; }
+ 
+    // For a CmdArgDummy - operator() is a No-OP and should NEVER
+    // be called.
+@@ -114,7 +123,7 @@
+    if (os_ptr == NULL)  os_ptr = &cout;
+ }
+ 
+-CmdArgUsage::~CmdArgUsage(void)  {}
++CmdArgUsage::~CmdArgUsage()  {}
+ 
+ void
+ CmdArgUsage::ostream_ptr(ostream * osp)
+@@ -134,7 +143,7 @@
+ 
+ //----------------------------------------------------------- Integer Arguments
+ 
+-CmdArgIntCompiler::~CmdArgIntCompiler(void)  {}
++CmdArgIntCompiler::~CmdArgIntCompiler()  {}
+ 
+    // Compile a string into an integer value.
+ int
+@@ -153,7 +162,7 @@
+    }
+ 
+    // compile the string into an integer
+-   result = ::strtol(arg, (char **) &ptr, 0);  // watch out for -c0xa vs -axc0!
++   result = std::strtol(arg, (char **) &ptr, 0);  // watch out for -c0xa vs -axc0!
+    if (ptr == arg) {
+       // do we have a valid integer?
+       if (! (cmd.flags() & CmdLine::QUIET)) {
+@@ -168,7 +177,7 @@
+ }
+ 
+ 
+-CmdArgInt::~CmdArgInt(void)  {}
++CmdArgInt::~CmdArgInt()  {}
+ 
+ int
+ CmdArgInt::operator()(const char * & arg, CmdLine & cmd)
+@@ -185,7 +194,7 @@
+ 
+ //---------------------------------------------------- Floating-point Arguments
+ 
+-CmdArgFloatCompiler::~CmdArgFloatCompiler(void)  {}
++CmdArgFloatCompiler::~CmdArgFloatCompiler()  {}
+ 
+    // Compile a string into a floating-point value.
+ int
+@@ -203,7 +212,7 @@
+       return  FAILURE ;
+    }
+ 
+-   result = ::strtod(arg, (char **) &ptr);  // compile the string into a float
++   result = std::strtod(arg, (char **) &ptr);  // compile the string into a float
+    if (ptr == arg) {
+       // do we have a valid float?
+       if (! (cmd.flags() & CmdLine::QUIET)) {
+@@ -219,7 +228,7 @@
+ }
+ 
+ 
+-CmdArgFloat::~CmdArgFloat(void)  {}
++CmdArgFloat::~CmdArgFloat()  {}
+ 
+ int
+ CmdArgFloat::operator()(const char * & arg, CmdLine & cmd)
+@@ -236,7 +245,7 @@
+ 
+ //--------------------------------------------------------- Character Argumrnts
+ 
+-CmdArgCharCompiler::~CmdArgCharCompiler(void)  {}
++CmdArgCharCompiler::~CmdArgCharCompiler()  {}
+ 
+ int
+ CmdArgCharCompiler::compile(const char * & arg, CmdLine & cmd, char & value)
+@@ -268,7 +277,7 @@
+ }
+ 
+ 
+-CmdArgChar::~CmdArgChar(void)  {}
++CmdArgChar::~CmdArgChar()  {}
+ 
+ int
+ CmdArgChar::operator()(const char * & arg, CmdLine & cmd)
+@@ -287,7 +296,7 @@
+ typedef  CmdArgStrCompiler::casc_string  CmdArgString ;
+ 
+ #ifndef __GNUG__
+-CmdArgString::~casc_string(void)
++CmdArgString::~casc_string()
+ {
+    if (is_alloc)  delete [] (char *)str;
+ }
+@@ -295,20 +304,20 @@
+ 
+    // Copy a string (allocating storage if necessary)
+ void
+-CmdArgString::copy(unsigned  is_temporary, const char * s)
++CmdArgString::copy(unsigned int is_temporary, const char * s)
+ {
+    if (is_alloc)  delete [] (char *)str;
+    is_alloc = (is_temporary) ? 1 : 0;
+    str = s;
+    if (is_alloc && s) {
+-      char * new_s = new char[::strlen(s) + 1] ;
+-      (void) ::strcpy(new_s, s);
++      char * new_s = new char[std::strlen(s) + 1] ;
++      std::strcpy(new_s, s);
+       str = new_s;
+    }
+ }
+ 
+ 
+-CmdArgStrCompiler::~CmdArgStrCompiler(void)  {}
++CmdArgStrCompiler::~CmdArgStrCompiler()  {}
+ 
+ int
+ CmdArgStrCompiler::compile(const char  * & arg,
+@@ -326,7 +335,7 @@
+ }
+ 
+ 
+-CmdArgStr::~CmdArgStr(void)  {}
++CmdArgStr::~CmdArgStr()  {}
+ 
+ int
+ CmdArgStr::operator()(const char * & arg, CmdLine & cmd)
+@@ -356,11 +365,11 @@
+    IntList       list;
+    IntListArray  array;
+ 
+-   CmdArgIntListPrivate(void);
++   CmdArgIntListPrivate();
+ } ;
+ 
+ 
+-CmdArgIntListPrivate::CmdArgIntListPrivate(void)
++CmdArgIntListPrivate::CmdArgIntListPrivate()
+    : array(list)
+ {
+    list.self_cleaning(1);
+@@ -382,19 +391,19 @@
+    return  rc;
+ }
+ 
+-unsigned
+-CmdArgIntList::count(void) const
++unsigned int
++CmdArgIntList::count() const
+ {
+    return  (val) ? val->list.count() : 0 ;
+ }
+ 
+ int &
+-CmdArgIntList::operator[](unsigned  index)
++CmdArgIntList::operator[](unsigned int index)
+ {
+    return  val->array[index];
+ }
+ 
+-CmdArgIntList::~CmdArgIntList(void) {}
++CmdArgIntList::~CmdArgIntList() {}
+ 
+ 
+           //------------------- Float List -------------------
+@@ -406,10 +415,10 @@
+    FloatList       list;
+    FloatListArray  array;
+ 
+-   CmdArgFloatListPrivate(void);
++   CmdArgFloatListPrivate();
+ } ;
+ 
+-CmdArgFloatListPrivate::CmdArgFloatListPrivate(void)
++CmdArgFloatListPrivate::CmdArgFloatListPrivate()
+    : array(list)
+ {
+    list.self_cleaning(1);
+@@ -432,19 +441,19 @@
+    return  rc;
+ }
+ 
+-unsigned
+-CmdArgFloatList::count(void) const
++unsigned int
++CmdArgFloatList::count() const
+ {
+    return  (val) ? val->list.count() : 0 ;
+ }
+ 
+ float &
+-CmdArgFloatList::operator[](unsigned  index)
++CmdArgFloatList::operator[](unsigned int index)
+ {
+    return  val->array[index];
+ }
+ 
+-CmdArgFloatList::~CmdArgFloatList(void) {}
++CmdArgFloatList::~CmdArgFloatList() {}
+ 
+           //------------------- String List -------------------
+ 
+@@ -454,10 +463,10 @@
+    StringList       list;
+    StringListArray  array;
+ 
+-   CmdArgStrListPrivate(void);
++   CmdArgStrListPrivate();
+ } ;
+ 
+-CmdArgStrListPrivate::CmdArgStrListPrivate(void)
++CmdArgStrListPrivate::CmdArgStrListPrivate()
+    : array(list)
+ {
+    list.self_cleaning(1);
+@@ -478,29 +487,29 @@
+    return  rc;
+ }
+ 
+-unsigned
+-CmdArgStrList::count(void) const
++unsigned int
++CmdArgStrList::count() const
+ {
+    return  (val) ? val->list.count() : 0 ;
+ }
+ 
+ CmdArgString &
+-CmdArgStrList::operator[](unsigned  index)
++CmdArgStrList::operator[](unsigned int index)
+ {
+    return  val->array[index];
+ }
+ 
+-CmdArgStrList::~CmdArgStrList(void) {}
++CmdArgStrList::~CmdArgStrList() {}
+ 
+ //----------------------------------------------------------- Boolean Arguments
+ 
+-CmdArgBoolCompiler::~CmdArgBoolCompiler(void)  {}
++CmdArgBoolCompiler::~CmdArgBoolCompiler()  {}
+ 
+ int
+ CmdArgBoolCompiler::compile(const char  * & arg,
+                             CmdLine       & cmd,
+-                            unsigned      & value,
+-                            unsigned        default_value)
++                            unsigned int  & value,
++                            unsigned int    default_value)
+ {
+    if (arg == NULL) {
+          // if no argument was given use the default
+@@ -587,12 +596,12 @@
+ 
+ //------------------------------------------------------------------ CmdArgBool
+ 
+-CmdArgBool::~CmdArgBool(void)  {}
++CmdArgBool::~CmdArgBool()  {}
+ 
+ int
+ CmdArgBool::operator()(const char * & arg, CmdLine & cmd)
+ {
+-   unsigned  value = val;
++   unsigned int value = val;
+    int  rc = compile(arg, cmd, value, 1);
+    val = value;
+    return  rc;
+@@ -600,12 +609,12 @@
+ 
+ //----------------------------------------------------------------- CmdArgClear
+ 
+-CmdArgClear::~CmdArgClear(void)  {}
++CmdArgClear::~CmdArgClear()  {}
+ 
+ int
+ CmdArgClear::operator()(const char * & arg, CmdLine & cmd)
+ {
+-   unsigned  value = val;
++   unsigned int value = val;
+    int  rc = compile(arg, cmd, value, 0);
+    val = value;
+    return  rc;
+@@ -613,12 +622,12 @@
+ 
+ //---------------------------------------------------------------- CmdArgToggle
+ 
+-CmdArgToggle::~CmdArgToggle(void)  {}
++CmdArgToggle::~CmdArgToggle()  {}
+ 
+ int
+ CmdArgToggle::operator()(const char * & arg, CmdLine & cmd)
+ {
+-   unsigned  value = val;
++   unsigned int value = val;
+    int  rc = compile(arg, cmd, value, (! value));
+    val = value;
+    return  rc;
+@@ -626,12 +635,12 @@
+ 
+ //--------------------------------------------------------------- CmdArgBoolRef
+ 
+-CmdArgBoolRef::~CmdArgBoolRef(void)  {}
++CmdArgBoolRef::~CmdArgBoolRef()  {}
+ 
+ int
+ CmdArgBoolRef::operator()(const char * & arg, CmdLine & cmd)
+ {
+-   unsigned  val = ref;
++   unsigned int val = ref;
+    int rc = ref.compile(arg, cmd, val, 1);
+    ref = val;
+    return  rc;
+@@ -639,12 +648,12 @@
+ 
+ //-------------------------------------------------------------- CmdArgClearRef
+ 
+-CmdArgClearRef::~CmdArgClearRef(void)  {}
++CmdArgClearRef::~CmdArgClearRef()  {}
+ 
+ int
+ CmdArgClearRef::operator()(const char * & arg, CmdLine & cmd)
+ {
+-   unsigned  val = ref;
++   unsigned int val = ref;
+    int rc = ref.compile(arg, cmd, val, 0);
+    ref = val;
+    return  rc;
+@@ -652,14 +661,15 @@
+ 
+ //------------------------------------------------------------- CmdArgToggleRef
+ 
+-CmdArgToggleRef::~CmdArgToggleRef(void)  {}
++CmdArgToggleRef::~CmdArgToggleRef()  {}
+ 
+ int
+ CmdArgToggleRef::operator()(const char * & arg, CmdLine & cmd)
+ {
+-   unsigned  val = ref;
++   unsigned int val = ref;
+    int rc = ref.compile(arg, cmd, val, (! val));
+    ref = val;
+    return  rc;
+ }
+ 
++} // namespace cmdline

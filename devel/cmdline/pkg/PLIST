@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
+bin/cmdparse
+include/cmdline.h
+include/cmdargs.h
+include/fifolist.h
+lib/libcmdline.a
+lib/libcmdline.la
+lib/libcmdline.so.0.0
+man/man1/cmdparse.1
+man/man3/cmdline.3
+man/man3/cmdargs.3

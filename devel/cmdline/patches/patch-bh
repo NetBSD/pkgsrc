@@ -1,0 +1,40 @@
+$NetBSD: patch-bh,v 1.1.1.1 2000/08/25 16:15:54 jlam Exp $
+
+--- src/lib/states.h.orig	Thu Jan  2 13:33:34 1997
++++ src/lib/states.h
+@@ -9,6 +9,9 @@
+ //
+ // ^HISTORY:
+ //    03/26/92	Brad Appleton	<bradapp@enteract.com>	Created
++//
++//    08/16/00	Johnny Lam	<lamj@stat.cmu.edu>
++//    - Wrapped in namespace cmdline
+ //-^^---------------------------------------------------------------------
+ 
+ #ifndef _states_h
+@@ -16,14 +19,16 @@
+ 
+ #include "cmdline.h"
+ 
++namespace cmdline {
++
+ #ifdef unix_style
+    // Default command-flags for a unix-command
+-   static const unsigned DEFAULT_CMDFLAGS = CmdLine::OPTS_FIRST ;
++   static const unsigned int DEFAULT_CMDFLAGS = CmdLine::OPTS_FIRST ;
+ #endif
+ 
+ #ifdef vms_style
+    // Default command-flags for a vms-command
+-   static const unsigned DEFAULT_CMDFLAGS = CmdLine::TEMP ;
++   static const unsigned int DEFAULT_CMDFLAGS = CmdLine::TEMP ;
+ #endif
+ 
+ //
+@@ -67,5 +72,6 @@
+ #endif
+ } ;
+ 
++} // namespace cmdline
+ 
+ #endif /* _states_h */
