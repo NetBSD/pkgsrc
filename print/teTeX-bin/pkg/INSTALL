@@ -1,25 +1,33 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.1.1.1 1999/08/03 13:54:56 hubertf Exp $
+# $NetBSD: INSTALL,v 1.2 1999/08/17 23:16:11 tron Exp $
 #
 
-if [ "$PREFIX" = "" ]
-then
-	PREFIX=/usr/pkg
-fi
-
-TEXMF=$PREFIX/share/texmf
-
-
-cat <<EOT
+case $2 in
+    PRE-INSTALL)
+	if [ ! -d /var/spool/texfonts ]
+	then
+	    install -d -m 755 -o root -g wheel /var/spool/texfonts
+	    for SUBDIR in pk source tfm; do
+		install -d -m 1777 -o root -g wheel /var/spool/texfonts/$SUBDIR
+	    done
+	fi
+        ;;
+     POST-INSTALL)
+	cat <<EOT
 ---------------------------------------------------------------------------
-You may consider running $PREFIX/bin/texconfig to adjust for your
+You may consider running ${PKG_PREFIX}/bin/texconfig to adjust for your
 local environment, e.g. configure font generation to use a temporary
 directory.
 
-For further information have a look at $TEXMF/doc/tetex/.
+For further information have a look at ${PKG_PREFIX}/share/texmf/doc/tetex/.
 ---------------------------------------------------------------------------
-
-EOT
+	EOT
+	;;
+    *)
+	echo "Unexpected Argument $2!!"
+	exit 1
+	;;
+esac
 
 exit 0
