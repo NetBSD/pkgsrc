@@ -1,9 +1,8 @@
-$NetBSD: md5,v 1.3 2000/01/09 07:10:37 tls Exp $
+$NetBSD: md5,v 1.4 2000/12/17 13:05:42 tron Exp $
 
-MD5 (suse63/aaa_dir.rpm) = 87ee0ecfd22c7e9d90832edc3839553d
-MD5 (suse63/shlibs.rpm) = e57a8e32f79fe90fbea7a0a4698d916a
-MD5 (suse63/ldso.rpm) = d334f54383bb56c22569d10b459b2820
-MD5 (suse63/bash.rpm) = 9301eb3c62304eabc1d628f531ea7a47
-MD5 (suse63/gppshare.rpm) = c0462c3c70bcf998e4d34e113b059f40
-MD5 (suse63/ncurses-p1.rpm) = ac23bc0dc320ebad3c8be79a2da3fe3c
-MD5 (suse63/libz.rpm) = 8a3b751f8559a02b9d5f0a3ffb66b61c
+MD5 (suse64/aaa_dir.rpm) = fd3a18bf4b7c9d15fe77f3de4a20cc7e
+MD5 (suse64/shlibs.rpm) = 2e884e2e489bb8f5d6f5d78dfe086627
+MD5 (suse64/libz.rpm) = d2f08151747e3747165468bdfc7ed077
+MD5 (suse64/bash.rpm) = 1f5d652686850fa7d6c5ad99b1ebf6a8
+MD5 (suse64/gppshare.rpm) = 88a7839aa2b48827dd2d1e483435d85e
+MD5 (suse64/ncurses.rpm) = 538fdd9f392d3a88ecaa2274189920d9

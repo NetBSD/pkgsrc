@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2000/12/16 22:37:31 tron Exp $
+# $NetBSD: Makefile,v 1.4 2000/12/17 13:05:43 tron Exp $
 #
 
-DISTNAME=		suse_glx-6.4
+DISTNAME=		suse_glx-${SUSE_VERSION}
 CATEGORIES=		emulators
-MASTER_SITES=		${MASTER_SITE_SUSE:=x3d1/} \
-			ftp://ftp.suse.com/pub/suse/i386/6.4/suse/x3d1/
+MASTER_SITES=		${MASTER_SITE_SUSE:=x3d1/}
 DISTFILES=		${RPMFILES}
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.suse.com/
 
-DEPENDS+=		suse_base-6.3:../../emulators/suse_base
+DEPENDS+=		suse_base-${SUSE_VERSION}:../../emulators/suse_base
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
