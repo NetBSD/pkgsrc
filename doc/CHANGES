@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8016 2004/11/26 14:16:18 adam Exp $
+$NetBSD: CHANGES,v 1.8017 2004/11/26 15:05:24 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5452,3 +5452,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added mftrace-1.0.35 [adam 2004-11-26]
 	Updated libcdaudio to 0.99.12 [adam 2004-11-26]
 	Added potrace-1.5 [adam 2004-11-26]
+	Updated cvsync to 0.24.18 [gehenna 2004-11-26]
