@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/10 14:34:37 cjep Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/27 06:05:57 snj Exp $
 #
 
 DISTNAME=	RADIUS-1.0
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.netmonger.net/~chris/RADIUS/
 COMMENT=	Perl5 module for RADIUS queries
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/RADIUS/.packlist
 
 .include "../../lang/perl5/module.mk"
