@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2003/02/05 22:19:56 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/02/14 20:04:11 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use GConf2-ui.
 #
@@ -7,7 +7,7 @@
 GCONF2_UI_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			GConf2-ui
-BUILDLINK_DEPENDS.GConf2-ui?=		GConf2-ui>=1.2.1
+BUILDLINK_DEPENDS.GConf2-ui?=		GConf2-ui>=2.2.0
 BUILDLINK_PKGSRCDIR.GConf2-ui?=		../../devel/GConf2-ui
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.GConf2-ui=GConf2-ui
