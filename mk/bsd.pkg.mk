@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.456 2000/06/03 14:58:06 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.457 2000/06/03 15:08:35 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -2694,8 +2694,7 @@ fake-pkg: ${PLIST} ${DESCR}
 			esac;						\
 		done;							\
 	fi;								\
-	pkgsrcdir=`cd ../.. && pwd`;				\
-	${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^'$$pkgsrcdir'/||' > ${BUILD_VERSION_FILE};
+	${GREP} '\$$NetBSD' $$files | ${SED} -e 's|^${PKGSRCDIR}/||' > ${BUILD_VERSION_FILE};
 .for def in ${BUILD_DEFS}
 	@${ECHO} "${def}=	${${def}}" | ${SED} -e 's|PATH=[^ 	]*|PATH=...|' >> ${BUILD_INFO_FILE}
 .endfor
