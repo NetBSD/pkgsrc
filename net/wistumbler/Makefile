@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2002/08/04 22:44:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/08 05:47:17 itojun Exp $
 
-DISTNAME=	wistumbler-0.1
+DISTNAME=	wistumbler-20020807
 CATEGORIES=	net
 MASTER_SITES=	http://gongon.com/persons/iseki/wistumbler/
 
@@ -9,6 +9,8 @@ HOMEPAGE=	http://gongon.com/persons/iseki/wistumbler/
 COMMENT=	Network stumbler for WaveLAN/IEEE wireless networking
 
 USE_BUILDLINK_ONLY=	YES
+
+WRKSRC=		${WRKDIR}/wistumbler
 
 .include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
