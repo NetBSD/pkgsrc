@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.3 2003/09/21 08:53:37 jmc Exp $
+
+--- lib/libbsd/setenv.c.orig	2003-09-21 03:45:39.000000000 +0000
++++ lib/libbsd/setenv.c	2003-09-21 03:46:02.000000000 +0000
+@@ -37,6 +37,7 @@
+ 
+ /* 	$Id: patch-aa,v 1.3 2003/09/21 08:53:37 jmc Exp $	 */
+ 
++#ifndef __NetBSD__
+ #ifndef lint
+ static char vcid[] = "$Id: patch-aa,v 1.3 2003/09/21 08:53:37 jmc Exp $";
+ #endif /* lint */
+@@ -126,3 +127,4 @@
+ 			if (!(*P = *(P + 1)))
+ 				break;
+ }
++#endif /* __NetBSD__ */
