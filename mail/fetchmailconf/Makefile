@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2002/09/30 20:51:04 frueauf Exp $
+# $NetBSD: Makefile,v 1.43 2002/10/24 18:35:50 drochner Exp $
 
 DISTNAME=	fetchmail-6.1.0
 PKGNAME=	${DISTNAME:S/fetchmail/fetchmailconf/}
@@ -15,6 +15,7 @@ DEPENDS+=	${PKGNAME:S/conf//}:../../mail/fetchmail
 
 NO_BUILD=	YES
 USE_X11=	YES
+USE_BUILDLINK2=	yes
 
 DISTINFO_FILE=		${.CURDIR}/../../mail/fetchmail/distinfo
 PATCHDIR=		${.CURDIR}/../../mail/fetchmail/patches
@@ -26,5 +27,5 @@ do-install:
 		${LN} -s fetchmail.1 ${PREFIX}/man/man1/fetchmailconf.1
 
 .include "../../lang/python/application.mk"
-.include "../../x11/py-Tk/buildlink.mk"
+.include "../../x11/py-Tk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
