@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/05/10 13:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/18 13:05:57 wiz Exp $
 #
 
 DISTNAME=		vlc-0.7.1
@@ -64,6 +64,13 @@ PLIST_SUBST+=	DVDCSS=
 CONFIGURE_ARGS+=	--disable-dvd
 PLIST_SUBST+=	DVDCSS="@comment "
 .endif
+
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/admin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/skins
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/skins/default
 
 #.include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
