@@ -1,0 +1,136 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/26 01:12:12 dmcmahill Exp $
+bin/bem
+bin/calcCAP
+bin/calcRL
+bin/tnt
+bin/tnt.tcl
+lib/bem1.0/bem.tcl
+lib/bem1.0/bem_gpge.itcl
+lib/bem1.0/bem_graphs.itcl
+lib/bem1.0/bem_iterate.tcl
+lib/bem1.0/bem_parameters.tcl
+lib/bem1.0/bem_sweep.tcl
+lib/bem1.0/bem_view.tcl
+lib/bem1.0/bem_welement.itcl
+lib/bem1.0/pkgIndex.tcl
+lib/calccap/calcCAP.tcl
+lib/calccap/calcCAP_exe.tcl
+lib/calccap/epl.bit
+lib/calccap/pkgIndex.tcl
+lib/calcrl/calcRL.tcl
+lib/calcrl/calcRL_exe.tcl
+lib/calcrl/pkgIndex.tcl
+lib/csdl1.0.1/csdl.tcl
+lib/csdl1.0.1/csdl_hlcsdl.itcl
+lib/csdl1.0.1/csdl_llcsdl.itcl
+lib/csdl1.0.1/csdl_shapes.itcl
+lib/csdl1.0.1/pkgIndex.tcl
+lib/gui2.0/MayoSPPDGlogo.gif
+lib/gui2.0/canvas_functions.tcl
+lib/gui2.0/conductivity.list
+lib/gui2.0/gui.tcl
+lib/gui2.0/gui_build.tcl
+lib/gui2.0/gui_canvas.itcl
+lib/gui2.0/gui_elements.tcl
+lib/gui2.0/gui_help.tcl
+lib/gui2.0/gui_initialize.tcl
+lib/gui2.0/gui_xmission.tcl
+lib/gui2.0/loss_tangent.list
+lib/gui2.0/loss_tangent2.list
+lib/gui2.0/permittivity.list
+lib/gui2.0/permittivity2.list
+lib/gui2.0/pkgIndex.tcl
+lib/gui2.0/splash.tcl
+lib/gui2.0/style.tcl
+lib/sppdgTcllib1.0/addressDialog1.0/addressDialog.tcl
+lib/sppdgTcllib1.0/addressDialog1.0/pkgIndex.tcl
+lib/sppdgTcllib1.0/console1.1/README
+lib/sppdgTcllib1.0/console1.1/console.tcl
+lib/sppdgTcllib1.0/console1.1/console_demo.tcl
+lib/sppdgTcllib1.0/console1.1/pkgIndex.tcl
+lib/sppdgTcllib1.0/console1.1/tkcon.tcl
+lib/sppdgTcllib1.0/getFilePreview1.0/getFilePreview.tcl
+lib/sppdgTcllib1.0/getFilePreview1.0/pkgIndex.tcl
+lib/sppdgTcllib1.0/pkgIndex.tcl
+lib/sppdgTcllib1.0/sgraph1.0/pkgIndex.tcl
+lib/sppdgTcllib1.0/sgraph1.0/sgraph.tcl
+lib/units1.0/pkgIndex.tcl
+lib/units1.0/units.html
+lib/units1.0/units.tcl
+share/tnt-mmtl/AUTHORS
+share/tnt-mmtl/COPYING
+share/tnt-mmtl/ChangeLog
+share/tnt-mmtl/NEWS
+share/tnt-mmtl/README
+share/tnt-mmtl/THANKS
+share/tnt-mmtl/examples/9-7-00.xsctn
+share/tnt-mmtl/examples/coplanar.xsctn
+share/tnt-mmtl/examples/example-microstrip-2.xsctn
+share/tnt-mmtl/examples/example-microstrip-5.xsctn
+share/tnt-mmtl/examples/example-stripline-2.xsctn
+share/tnt-mmtl/examples/generic.xsctn
+share/tnt-mmtl/examples/test1.xsctn
+share/tnt-mmtl/examples/trap_test.xsctn
+share/tnt-mmtl/examples/w10t2.5.xsctn
+share/tnt-mmtl/examples/w20t5.xsctn
+share/tnt-mmtl/user-guide.pdf
+share/tnt-mmtl/user-guide/WARNINGS
+share/tnt-mmtl/user-guide/contents.png
+share/tnt-mmtl/user-guide/images.aux
+share/tnt-mmtl/user-guide/images.log
+share/tnt-mmtl/user-guide/images.out
+share/tnt-mmtl/user-guide/images.pl
+share/tnt-mmtl/user-guide/images.tex
+share/tnt-mmtl/user-guide/img1.png
+share/tnt-mmtl/user-guide/img10.png
+share/tnt-mmtl/user-guide/img11.png
+share/tnt-mmtl/user-guide/img2.png
+share/tnt-mmtl/user-guide/img3.png
+share/tnt-mmtl/user-guide/img4.png
+share/tnt-mmtl/user-guide/img5.png
+share/tnt-mmtl/user-guide/img6.png
+share/tnt-mmtl/user-guide/img7.png
+share/tnt-mmtl/user-guide/img8.png
+share/tnt-mmtl/user-guide/img9.png
+share/tnt-mmtl/user-guide/index.html
+share/tnt-mmtl/user-guide/internals.pl
+share/tnt-mmtl/user-guide/labels.pl
+share/tnt-mmtl/user-guide/mainwindow.png
+share/tnt-mmtl/user-guide/mmtl-run.png
+share/tnt-mmtl/user-guide/next.png
+share/tnt-mmtl/user-guide/next_g.png
+share/tnt-mmtl/user-guide/node1.html
+share/tnt-mmtl/user-guide/node10.html
+share/tnt-mmtl/user-guide/node11.html
+share/tnt-mmtl/user-guide/node12.html
+share/tnt-mmtl/user-guide/node13.html
+share/tnt-mmtl/user-guide/node2.html
+share/tnt-mmtl/user-guide/node3.html
+share/tnt-mmtl/user-guide/node4.html
+share/tnt-mmtl/user-guide/node5.html
+share/tnt-mmtl/user-guide/node6.html
+share/tnt-mmtl/user-guide/node7.html
+share/tnt-mmtl/user-guide/node8.html
+share/tnt-mmtl/user-guide/node9.html
+share/tnt-mmtl/user-guide/prev.png
+share/tnt-mmtl/user-guide/prev_g.png
+share/tnt-mmtl/user-guide/sweep-parameters.png
+share/tnt-mmtl/user-guide/sweep-select.png
+share/tnt-mmtl/user-guide/up.png
+share/tnt-mmtl/user-guide/up_g.png
+share/tnt-mmtl/user-guide/user-guide.css
+share/tnt-mmtl/user-guide/user-guide.html
+@dirrm share/tnt-mmtl/user-guide
+@dirrm share/tnt-mmtl/examples
+@dirrm share/tnt-mmtl
+@dirrm lib/units1.0
+@dirrm lib/sppdgTcllib1.0/sgraph1.0
+@dirrm lib/sppdgTcllib1.0/getFilePreview1.0
+@dirrm lib/sppdgTcllib1.0/console1.1
+@dirrm lib/sppdgTcllib1.0/addressDialog1.0
+@dirrm lib/sppdgTcllib1.0
+@dirrm lib/gui2.0
+@dirrm lib/csdl1.0.1
+@dirrm lib/calcrl
+@dirrm lib/calccap
+@dirrm lib/bem1.0
