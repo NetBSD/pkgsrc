@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.10 2004/01/11 03:30:20 grant Exp $
+# $NetBSD: libtool.sh,v 1.11 2004/01/21 13:52:56 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -39,6 +39,9 @@ WRKSRC="@WRKSRC@"
 
 # Argument buffers
 buf1=; buf2=; buf3=; buf4=; buf5=
+
+original_cmd="$0 $@"
+$echo [*] $original_cmd >> $wrapperlog
 
 # Discover the libtool mode by examining the argument list.
 mode=link
@@ -162,7 +165,7 @@ esac
 @_BLNK_WRAP_ENV@
 @_BLNK_WRAP_SANITIZE_PATH@
 
-$echo $cmd >> $wrapperlog
+$echo "<.>" $cmd >> $wrapperlog
 eval $cmd
 wrapper_result=$?
 
