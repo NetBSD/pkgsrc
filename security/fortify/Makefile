@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/11/11 07:55:14 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2004/06/26 19:24:54 grant Exp $
 #
 
 DISTNAME=	Fortify-1.4.6-unix-src
@@ -54,9 +54,9 @@ post-extract:
 	cd ${WRKSRC}; ${RMDIR} */bin
 
 do-build:
-	cd ${WRKSRC}/src/common; \
+	@cd ${WRKSRC}/src/common; \
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ${ALL_TARGET}
-	cd ${WRKSRC}/src/cmdline; \
+	@cd ${WRKSRC}/src/cmdline; \
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ${ALL_TARGET}
 
 do-install:
