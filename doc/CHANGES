@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2693 2003/07/07 22:02:32 jtb Exp $
+$NetBSD: CHANGES,v 1.2694 2003/07/07 23:37:03 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2691,3 +2691,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated emacs to 21.3nb2 [uebayasi 2003-07-06]
 	Updated rc.subr to 20030706 [grant 2003-07-06]
 	Updated pari to 2.1.5 [jtb 2003-07-06]
+	Updated twelf to 1.4nb1 [seb 2003-07-07]
