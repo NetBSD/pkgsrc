@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2004/03/20 19:28:52 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2004/05/13 22:06:04 minskim Exp $
 #
 
-DISTNAME=	tclX8.2.0
-PKGNAME=	tk-tclX-8.2.0
-PKGREVISION=	1
+DISTNAME=	tclx8.3.5-src
+PKGNAME=	tk-tclX-8.3.5
 CATEGORIES=	lang tcl tk
-MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/TclX/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tclx/}
 
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://tclx.sourceforge.net/
@@ -13,8 +12,10 @@ COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
 
 CONFLICTS+=	tclX-[0-9]*
 
-WRKSRC=		${WRKDIR}/tclX8.2.0/unix
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}/unix
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared \
@@ -29,20 +30,18 @@ CONFIGURE_ENV+=		\
 
 MAKE_ENV+=		GTAR=${GTAR} CHOWN=${CHOWN} CHMOD=${CHMOD} \
 			SHAREMODE=${SHAREMODE} SHAREOWN=${SHAREOWN} \
-			SHAREGRP=${SHAREGRP}
+			SHAREGRP=${SHAREGRP} \
+			TCLX_PREFIX=${BUILDLINK_PREFIX.tcl-tclX}
 
 FILESDIR=	${.CURDIR}/../../lang/tcl-tclX/files
 PATCHDIR=	${.CURDIR}/../../lang/tcl-tclX/patches
+DISTINFO_FILE=	${.CURDIR}/../../lang/tcl-tclX/distinfo
 
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing Tcl/Tk library names."
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	${WRKSRC}/../tk/unix/Makefile.in
-SUBST_SED.paths=	-e 's,ltcl83,ltcl,g' -e 's,ltk83,ltk,g'
+INSTALLATION_DIRS=	bin include
 
-.include "../../lang/tcl/buildlink2.mk"
-.include "../../lang/tcl-tclX/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../lang/tcl-tclX/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 
 post-extract:
 	${MV} ${WRKSRC}/../doc/Memory.n ${WRKSRC}/../doc/TclXMemory.n
@@ -67,8 +66,8 @@ post-build:
 	cd ${WRKSRC}/../tk/unix && ${MAKE_ENV} ${MAKE} buildhelp
 
 post-install:
-	${FIND} ${PREFIX}/lib/tcl/tclX8.2/help -type d -exec ${CHMOD} 555 '{}' \;
-	${FIND} ${PREFIX}/lib/tcl/tclX8.2/help -type f -exec ${CHMOD} 444 '{}' \;
+	${FIND} ${PREFIX}/lib/tcl/tclX8.3/help -type d -exec ${CHMOD} 555 '{}' \;
+	${FIND} ${PREFIX}/lib/tcl/tclX8.3/help -type f -exec ${CHMOD} 444 '{}' \;
 
 # 	@${RM} ${PREFIX}/man/man3/TkX_Main.3
 # 	@${RM} ${PREFIX}/man/man3/Tkx_Init.3
