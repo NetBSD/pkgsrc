@@ -1,16 +1,7 @@
-$NetBSD: patch-aj,v 1.2 2001/02/14 11:19:17 jtb Exp $
+$NetBSD: patch-aj,v 1.3 2001/03/30 20:26:23 jtb Exp $
 
---- cf/pkg_f77.in.orig	Wed Feb 14 07:51:15 2001
+--- cf/pkg_f77.in.orig	Sat Mar  3 12:47:38 2001
 +++ cf/pkg_f77.in
-@@ -15,7 +15,7 @@
- 
- FDEMOS_SOURCES = x01f.f x02f.f x03f.f x04f.f x05f.f x06f.f x07f.f \
- 	x08f.f x09f.f x10f.f x11f.f x12f.f x13f.f x16f.f
--	
-+
- x01f.f: x01f.fm4 fmacs.m4
- 
- x02f.f: x02f.fm4 fmacs.m4
 @@ -46,7 +46,7 @@
  
  # Require dependency on FDEMOS_SOURCES because these are generated files
