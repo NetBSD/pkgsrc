@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/12/05 07:32:17 skrll Exp $
+
+--- libtme/misc.c.orig	2003-06-27 22:00:21.000000000 +0100
++++ libtme/misc.c
+@@ -83,7 +83,7 @@ tme_misc_tokenize(const char *string,
+ 
+     /* if this is a token delimiter: */
+     if (c == '\0'
+-	|| isspace(c)
++	|| isspace((unsigned char)c)
+ 	|| c == comment) {
+ 
+       /* if we had been collecting a token, it's finished: */
