@@ -1,5 +1,7 @@
 #!@RCD_SCRIPTS_SHELL@
 #
+# $NetBSD: icecast.sh,v 1.2 2003/09/30 10:36:46 xtraeme Exp $
+#
 # PROVIDE: icecast
 # REQUIRE: DAEMON LOGIN network
 
