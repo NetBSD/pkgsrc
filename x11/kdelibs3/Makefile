@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2005/01/05 10:36:23 markd Exp $
+# $NetBSD: Makefile,v 1.76 2005/01/31 09:55:15 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGREVISION=	6
@@ -45,10 +45,6 @@ SUBST_FILES.kdelibsfix= \
 	kio/kssl/kopenssl.cc
 SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g' \
 	-e 's:@PKGLOCALEDIR@:${PKGLOCALEDIR}:g'
-
-.if defined(USE_CUPS) && (${USE_CUPS} == "YES")
-PKG_DEFAULT_OPTIONS+=	cups
-.endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kdelibs
 PKG_SUPPORTED_OPTIONS=	cups
