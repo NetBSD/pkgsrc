@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/24 03:23:51 itohy Exp $
+bin/skkinput
+lib/X11/app-defaults/Skkinput
+man/ja_JP.EUC/man1/skkinput.1
+share/doc/skkinput/README.jis
+share/doc/skkinput/FAQ.jis
+share/doc/skkinput/BUGS.jis
+@dirrm share/doc/skkinput
+@unexec if [ -f ${PKGBASE}/etc/skk.conf ]; then echo 'Remove "${PKGBASE}/etc/skk.conf" if you will not use SKK programs any longer.'; fi
