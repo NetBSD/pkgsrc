@@ -1,0 +1,251 @@
+--- ./clients/audio/audial/audial.c.orig	Sun May 17 19:29:08 1998
++++ ./clients/audio/audial/audial.c	Sun May 17 19:31:30 1998
+@@ -133,6 +133,7 @@
+     signal(SIGALRM, SIG_DFL);
+ }
+ 
++#if (!defined(__FreeBSD__) || (__FreeBSD__ < 3)) && !defined(__NetBSD__)
+ static void
+ usleep(usecs)
+ unsigned int    usecs;
+@@ -149,6 +150,7 @@
+     setitimer(ITIMER_REAL, &ntval, &otval);
+     pause();
+ }
++#endif /* !__FreeBSD__ && !__NetBSD__ */
+ 
+ #endif						/* SYSV else not */
+ #endif						/* VMS else not */
+--- ./clients/audio/auedit/auedit.c.orig	Sun May 17 17:15:34 1998
++++ ./clients/audio/auedit/auedit.c	Sun May 17 17:16:15 1998
+@@ -77,8 +77,10 @@
+ #include "pause.xbm"
+ 
+ #define	APP_CLASS		"Auedit"
++#ifndef __NetBSD__
+ #define LITTLE_ENDIAN 		(*(char *) &g->endian == 1)
+ #define BIG_ENDIAN 		(!LITTLE_ENDIAN)
++#endif /* !__NetBSD__ */
+ #define SELECTION_HEADER_SIZE	4
+ #define DEFAULT_FREQUENCY	8000
+ #define ZOOM_SCALE		2
+--- ./clients/audio/auedit/Graph.c.orig	Sun May 17 17:22:27 1998
++++ ./clients/audio/auedit/Graph.c	Sun May 17 19:40:41 1998
+@@ -28,7 +28,12 @@
+  */
+ 
+ #ifndef WIN32
++#if defined(__FreeBSD__) || defined(__NetBSD__)
++#include <limits.h>
++#define MAXSHORT	SHRT_MAX
++#else  /* !__FreeBSD__ && !__NetBSD__ */
+ #include <values.h>
++#endif /* __FreeBSD__ || __NetBSD__ */
+ #else /* WIN32 */
+ #define MAXSHORT 0x7fff
+ #endif /* WIN32 */
+--- ./config/NetAudio.tmpl.orig	Sun May 17 15:49:55 1998
++++ ./config/NetAudio.tmpl	Sun May 17 18:29:27 1998
+@@ -193,12 +193,14 @@
+ 
+ #define	AuInstallManPageLong(file,destdir,dest)				    @@\
+ install.man:: file.man							    @@\
++	@if [ ! -f file.man.orig ]; then \				    @@\
++		cp file.man file.man.orig; \				    @@\
++	fi								    @@\
+ 	@(rel=`cat $(TOP)/RELEASE | \				     	    @@\
+ 	  sed 's/Network Audio System Release //'`; \			    @@\
+ 	  sed -f $(TOP)/config/mungeman \				    @@\
+-	      -e "s/_RELEASE_/$$rel/" < file.man > tmp.man)		    @@\
+-	InstallManPageLong(tmp,destdir,dest)				    @@\
+-	@$(RM) tmp.man
++	      -e "s/_RELEASE_/$$rel/" < file.man.orig > file.man)	    @@\
++	InstallManPageLong(file,destdir,dest)
+ 
+ #define SingleAudioProgram(program)					    @@\
+ 	InstallProgram(program,$(BINDIR))				    @@\
+--- ./include/audio/Imakefile.orig	Sun May 17 17:03:45 1998
++++ ./include/audio/Imakefile	Sun May 17 20:33:52 1998
+@@ -24,7 +24,11 @@
+ 
+ #include "../../config/NetAudio.tmpl"
+ 
+-INSTALLFLAGS = $(INSTINCFLAGS)
++#if HasBsdMake
++INSTALLFLAGS += $(INSTINCFLAGS)
++#else
++INSTALLFLAGS = $(INSTALLFLAGS) $(INSTINCFLAGS)
++#endif
+ 
+ HEADERS = Afuncproto.h Afuncs.h Amd.h Aos.h Aosdefs.h Aproto.h audio.h
+   FILES = $(HEADERS)
+@@ -37,7 +41,7 @@
+ 	MakeDir($(BUILDINCDIR:/=\))
+ #endif /* WIN32 */
+ 
+-BuildIncludes($(HEADERS),audio,..)
++BuildIncludes($(HEADERS),audio,.)
+ 
+ #if ProjectX < 5		/* X11R4 doesn't make dir explicitly */
+ #ifndef MakeDir
+--- ./lib/audio/Alibint.c.orig	Sun May 17 15:02:27 1998
++++ ./lib/audio/Alibint.c	Sun May 17 17:10:44 1998
+@@ -1324,11 +1324,12 @@
+ static char *_SysErrorMsg (n)
+     int n;
+ {
+-#if !defined(__FreeBSD__)
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+     extern char *sys_errlist[];
+ #endif
+     extern int sys_nerr;
+-    char *s = ((n >= 0 && n < sys_nerr) ? sys_errlist[n] : "unknown error");
++    char *s;
++    s = ((n >= 0 && n < sys_nerr) ? (char *) sys_errlist[n] : "unknown error");
+ 
+     return (s ? s : "no such error");
+ }
+--- ./lib/audio/ConnSvr.c.orig	Sun May 17 15:03:00 1998
++++ ./lib/audio/ConnSvr.c	Sun May 17 15:03:32 1998
+@@ -54,9 +54,9 @@
+ #define FIOSNBIO	FIONBIO
+ #endif /* WIN32 */
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <sys/param.h>
+-#endif /* __FreeBSD__ */
++#endif /* __FreeBSD__ || __NetBSD__ */
+ #include <ctype.h>
+ #include <audio/Alibint.h>
+ #include <audio/Aos.h>
+--- ./lib/audio/Imakefile.orig	Sun May 17 17:01:15 1998
++++ ./lib/audio/Imakefile	Sun May 17 20:33:19 1998
+@@ -65,11 +65,20 @@
+     COMPAT_OBJS = AuGetBest.o
+ #endif /* ProjectX < 5 */
+ 
++#if HasBSD44Sockets
++    SOCK_DEFINES = -DBSD44SOCKETS
++#endif
++
+      EDB_DEFINES = -DERRORDB=\"$(LIBDIR)/AuErrorDB\"
+ 
+         DEFINES = $(MALLOC_DEFINES) $(SYSV_DEFINES)
+-   CONN_DEFINES = ConnectionFlags
+-   INSTALLFLAGS = $(INSTINCFLAGS)
++   CONN_DEFINES = ConnectionFlags $(SOCK_DEFINES)
++
++#if HasBsdMake
++   INSTALLFLAGS += $(INSTINCFLAGS)
++#else
++   INSTALLFLAGS = $(INSTINCFLAGS)
++#endif
+ 
+ HEADERS = Alibint.h Alibnet.h Xtutil.h audiolib.h audioutil.h snd.h wave.h    \
+           voc.h aiff.h sound.h soundlib.h fileutil.h 8svx.h Astreams.h
+@@ -120,7 +129,7 @@
+ 
+ #endif
+ 
+-BuildIncludes($(HEADERS),audio,..)
++BuildIncludes($(HEADERS),audio,.)
+ InstallMultiple($(HEADERS),$(INCDIR))
+ #if ProjectX >= 5
+ InstallNonExecFile(AuErrorDB,$(LIBDIR))
+--- ./lib/audio/fileutil.h.orig	Sun May 17 17:12:26 1998
++++ ./lib/audio/fileutil.h	Sun May 17 17:13:50 1998
+@@ -58,9 +58,11 @@
+ #endif
+ #endif /* _FUNCPROTOBEGIN */
+ 
++#ifndef __NetBSD__
+ #define LITTLE_ENDIAN 		(*(char *) &endian)
+ #define BIG_ENDIAN 		(!LITTLE_ENDIAN)
+ static int      endian = 1;
++#endif /* !__NetBSD__ */
+ 
+ /* byte swap a AuInt32 */
+ #define swapl(x, n) { n = ((char *) (x))[0];\
+--- ./lib/audio/Astreams.c.orig	Sun May 17 19:34:53 1998
++++ ./lib/audio/Astreams.c	Sun May 17 19:36:13 1998
+@@ -51,8 +51,11 @@
+ #include <errno.h>
+ #include <sys/stropts.h>
+ 
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
++/* needed for some platforms which do not define this in <errno.h> */
+ extern int errno;
+ extern char *sys_errlist[];
++#endif 
+ 
+ /* stolen from <X11/Xproto.h> */
+ typedef struct {
+--- ./lib/audio/ErrHndlr.c.orig	Sun May 17 19:04:41 1998
++++ ./lib/audio/ErrHndlr.c	Sun May 17 19:04:45 1998
+@@ -59,9 +59,9 @@
+     AuIOErrorHandler oldhandler = aud->funcs.ioerror_handler;
+ 
+     if (!oldhandler)
+-	oldhandler = (AuErrorHandler) _AuDefaultIOError;
++	oldhandler = (AuIOErrorHandler) _AuDefaultIOError;
+ 
+     aud->funcs.ioerror_handler = handler ? handler :
+-	(AuErrorHandler) _AuDefaultIOError;
++	(AuIOErrorHandler) _AuDefaultIOError;
+     return oldhandler;
+ }
+--- ./server/dda/voxware/auvoxware.c.orig	Sun May 17 15:08:50 1998
++++ ./server/dda/voxware/auvoxware.c	Sun May 17 15:18:55 1998
+@@ -164,6 +164,9 @@
+ #ifdef __FreeBSD__
+ #include <machine/soundcard.h>
+ #include <machine/pcaudioio.h>
++#elif defined(__NetBSD__)
++#include <sys/ioctl.h>
++#include <soundcard.h>
+ #else
+ #include <sys/soundcard.h>
+ #endif
+--- ./server/dia/au.h.orig	Sun May 17 20:36:35 1998
++++ ./server/dia/au.h	Sun May 17 15:05:42 1998
+@@ -33,7 +33,7 @@
+ #include "../dda/sgi/ausgi.h"
+ #endif						/* sgi */
+ 
+-#if defined(__FreeBSD__) || defined(linux) || (defined(SVR4) && defined(SYSV386))
++#if defined(__FreeBSD__) || defined(linux) || (defined(SVR4) && defined(SYSV386)) || defined(__NetBSD__)
+ #include "../dda/voxware/auvoxware.h"
+ #endif
+ 
+--- ./server/os/connection.c.orig	Sun May 17 15:04:27 1998
++++ ./server/os/connection.c	Sun May 17 15:04:51 1998
+@@ -1032,7 +1032,7 @@
+ 
+     for (i=0; i<MAXSOCKS; i++) ConnectionTranslation[i] = 0;
+ #ifndef X_NOT_POSIX
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+     lastfdesc = getdtablesize() - 1;
+ #else
+     lastfdesc = sysconf(_SC_OPEN_MAX) - 1;
+--- ./server/Imakefile.orig	Sun May 17 15:07:12 1998
++++ ./server/Imakefile	Sun May 17 15:38:11 1998
+@@ -52,6 +52,8 @@
+ #else
+         SYSLIBS = /usr/ucblib/libucb.a
+ #endif
++#elif defined(NetBSDArchitecture)
++        SYSLIBS = -lossaudio
+ #else
+         SYSLIBS =
+ #endif
+@@ -87,7 +89,7 @@
+ #endif
+ 
+ 
+-#if defined(i386SVR4Architecture) || defined(__FreeBSD__) || defined(FreeBSDArchitecture) || defined(LinuxArchitecture) || defined(i386BsdArchitecture)
++#if defined(i386SVR4Architecture) || defined(__FreeBSD__) || defined(FreeBSDArchitecture) || defined(NetBSDArchitecture) || defined(LinuxArchitecture) || defined(i386BsdArchitecture)
+ #define CanBuildAuServer	YES
+ ALL1 = auvoxware
+ #define BuildVoxServer
