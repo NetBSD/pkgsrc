@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2004/10/03 00:18:01 tv Exp $
+# $NetBSD: Makefile,v 1.76 2005/01/13 13:30:08 bouyer Exp $
 
 DISTNAME=	wget-1.9.1
 PKGREVISION=	2
@@ -35,6 +35,16 @@ BUILD_DEFS+=		WGET_USE_SSL
 CONFIGURE_ARGS+=--with-ssl=${SSLBASE}
 .else
 CONFIGURE_ARGS+=--without-ssl
+.endif
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.wget
+PKG_SUPPORTED_OPTIONS=	inet6
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
