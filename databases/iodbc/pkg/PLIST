@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/15 06:25:05 jlam Exp $
+include/isql.h
+include/isqlext.h
+include/isqltypes.h
+include/sql.h
+include/sqlext.h
+include/sqltypes.h
+lib/libiodbc.a
+lib/libiodbc.so.2.50
+share/doc/iodbc/COPYING
+share/doc/iodbc/README
+share/examples/iodbc/odbc.ini
+@dirrm share/examples/iodbc
+@dirrm share/doc/iodbc
