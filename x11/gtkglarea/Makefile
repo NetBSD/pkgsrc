@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1999/09/29 22:58:45 tron Exp $
+# $NetBSD: Makefile,v 1.11 1999/10/23 00:00:54 tron Exp $
 
 DISTNAME=	gtkglarea-1.2.1
 CATEGORIES=	x11 graphics
@@ -8,7 +8,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.student.oulu.fi/~jlof/gtkglarea/
 
 DEPENDS+=       Mesa-*:../../graphics/Mesa
-DEPENDS+=       gtk+-1.2.4:../../x11/gtk
+DEPENDS+=       gtk+-1.2.*:../../x11/gtk
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -17,11 +17,16 @@ CONFIGURE_ARGS+= --with-gtk-prefix=${X11BASE}
 CONFIGURE_ARGS+= --with-GL-prefix=${X11BASE}
 CONFIGURE_ARGS+= --with-lib-MesaGL
 
+PLIST_SUBST+=	LOCALBASE=${LOCALBASE}
+
 post-install:
 	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/gtkglarea
 	cd ${WRKSRC}/docs ; \
 	${INSTALL_MAN} HOWTO.txt ${PREFIX}/share/doc/gtkglarea ; \
 	${INSTALL_MAN} gdkgl.txt ${PREFIX}/share/doc/gtkglarea ; \
 	${INSTALL_MAN} gtkglarea.txt ${PREFIX}/share/doc/gtkglarea
+	${TEST} ${PREFIX} = ${LOCALBASE} || \
+	${LN} -fs ${PREFIX}/share/aclocal/gtkgl.m4 \
+	  ${LOCALBASE}/share/aclocal/gtkgl.m4
 	
 .include "../../mk/bsd.pkg.mk"
