@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2938 2005/01/20 14:01:44 wiz Exp $
+$NetBSD: TODO,v 1.2939 2005/01/20 15:10:35 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -583,7 +583,6 @@ Suggested package updates
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.3
-	o jabberd2-2.0s6 [pkg/28820]
 	o jakarta-tomcat-5.0.30
 	o jdb-1.13
 	o jessie-1.0.0
