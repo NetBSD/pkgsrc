@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1 2003/02/22 00:51:59 jtb Exp $
+
+--- /dev/null	Sat Feb 22 00:18:00 2003
++++ build/lua/Makefile
+@@ -0,0 +1,16 @@
++PROG= lua
++
++SRCS= lua.c
++
++BINDIR= ${PREFIX}/bin
++MANDIR= ${PREFIX}/man
++
++CPPFLAGS+= -D_POSIX_SOURCE -I${.CURDIR}/../../include
++
++LDFLAGS+= -R${PREFIX}/lib -L${.CURDIR}/../liblua -L${.CURDIR}/../liblualib
++
++LDADD+= -llua -llualib -lm
++
++.PATH:	${.CURDIR}/../../src/lua
++
++.include <bsd.prog.mk>

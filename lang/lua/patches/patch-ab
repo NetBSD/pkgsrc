@@ -1,13 +1,33 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/06/19 14:47:23 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2003/02/22 00:51:59 jtb Exp $
 
---- Makefile.orig	Tue Jun 19 15:18:13 2001
-+++ Makefile
-@@ -19,7 +19,7 @@
- 	strip bin/lua bin/luac
- 
- # official installation
--install: all strip
-+install: all
- 	mkdir -p $(INSTALL_BIN) $(INSTALL_INC) $(INSTALL_LIB) $(INSTALL_MAN)
- 	$(INSTALL_EXEC) bin/* $(INSTALL_BIN)
- 	$(INSTALL_DATA) include/*.h $(INSTALL_INC)
+--- /dev/null	Fri Feb 21 23:53:36 2003
++++ build/liblua/Makefile
+@@ -0,0 +1,28 @@
++LIB= lua
++
++SHLIB_MAJOR= 0
++SHLIB_MINOR= 0
++
++LIBDIR= ${PREFIX}/lib
++INCDIR= ${PREFIX}/include
++
++CPPFLAGS+= -I${.CURDIR}/../../include
++
++LDADD+= -lm
++
++NOLINT= 1
++
++.PATH:	${.CURDIR}/../../src
++
++INCLUDES= lua.h luadebug.h lauxlib.h
++
++SRCS= lapi.c lcode.c ldebug.c ldo.c lfunc.c lgc.c llex.c lmem.c	\
++      lobject.c lparser.c lstate.c lstring.c ltable.c ltests.c	\
++      ltm.c lundump.c lvm.c lzio.c
++
++afterinstall:
++	for i in ${INCLUDES}; do					\
++	${BSD_INSTALL_DATA} ${.CURDIR}/../../include/$$i ${INCDIR};	\
++	done
++
++.include <bsd.lib.mk>
