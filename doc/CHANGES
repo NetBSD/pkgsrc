@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8435 2004/12/25 14:46:06 uebayasi Exp $
+$NetBSD: CHANGES,v 1.8436 2004/12/25 15:24:52 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6533,3 +6533,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated intltool to 0.32.1 [jmmv 2004-12-25]
 	Updated p5-Tk to 804.027nb2 [wiz 2004-12-25]
 	Updated html to 4.01 [uebayasi 2004-12-25]
+	Updated bmp to 0.9.7 [jmmv 2004-12-25]
+	Updated bmp-esound to 0.9.7 [jmmv 2004-12-25]
