@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/09/27 23:18:46 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2001/10/05 07:15:12 jlam Exp $
 
 DISTNAME=		Sablot-0.60
 PKGNAME=		sablotron-0.60
@@ -9,13 +9,11 @@ MAINTAINER=		uithuis@dds.nl
 HOMEPAGE=		http://www.gingerall.com/charlie-bin/get/webGA/act/sablotron.act
 COMMENT=		XSL processor fully implemented in C++
 
-DEPENDS+=		expat-[0-9]*:../../textproc/expat
-
+USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=  	YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/tools/ltconfig
 
-CPPFLAGS=		-I${LOCALBASE}/include -L${LOCALBASE}/lib
-
+.include "../../textproc/expat/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
