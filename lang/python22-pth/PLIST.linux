@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST.linux,v 1.1.1.1 2002/10/25 10:48:48 drochner Exp $
+lib/python2p2/plat-linux2/CDROM.py
+lib/python2p2/plat-linux2/CDROM.pyc
+lib/python2p2/plat-linux2/CDROM.pyo
+lib/python2p2/plat-linux2/DLFCN.py
+lib/python2p2/plat-linux2/DLFCN.pyc
+lib/python2p2/plat-linux2/DLFCN.pyo
+lib/python2p2/plat-linux2/TYPES.py
+lib/python2p2/plat-linux2/TYPES.pyc
+lib/python2p2/plat-linux2/TYPES.pyo
+lib/python2p2/lib-dynload/linuxaudiodev.so
