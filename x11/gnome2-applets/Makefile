@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/02/14 21:26:46 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/17 12:40:01 jmmv Exp $
 #
 
 DISTNAME=		gnome-applets-2.4.2
@@ -61,7 +61,10 @@ PLIST_SUBST+=		BATTSTAT="@comment "
 .endif
 
 .include "../../devel/GConf2/schemas.mk"
-INSTALL_EXTRA_TMPL+=	${FILESDIR}/install.tmpl
+
+# This must come after GConf2's schemas.mk because it will modify default
+# values for keys created during the registration of .schemas files.
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 .include "../../devel/gail/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
