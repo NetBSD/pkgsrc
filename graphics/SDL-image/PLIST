@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/23 02:04:51 wiz Exp $
 bin/showimage
 include/SDL/SDL_image.h
 lib/libSDL_image-1.2.so
-lib/libSDL_image-1.2.so.0
-lib/libSDL_image-1.2.so.0.0
+lib/libSDL_image-1.2.so.1
+lib/libSDL_image-1.2.so.1.0
 lib/libSDL_image.a
 lib/libSDL_image.la
 lib/libSDL_image.so
