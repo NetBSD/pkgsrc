@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/08/05 14:47:46 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2004/10/21 23:55:12 tv Exp $
 
 DISTNAME=	nc110
 PKGNAME=	netcat-1.10
@@ -25,6 +25,7 @@ MAKE_ENV+=	DFLAGS="-DGAPING_SECURITY_HOLE -DTELNET"
 .include "../../mk/bsd.prefs.mk"
 
 NC_TARGET.${OPSYS}?=	${LOWER_OPSYS}
+NC_TARGET.Interix=	netbsd
 NC_TARGET.OpenBSD=	netbsd
 ALL_TARGET=		${NC_TARGET.${OPSYS}}
 
