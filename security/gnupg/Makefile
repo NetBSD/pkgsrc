@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/11/24 12:22:16 chris Exp $
+# $NetBSD: Makefile,v 1.38 2002/11/24 16:52:05 chris Exp $
 #
 
 DISTNAME=	gnupg-1.2.1
@@ -59,7 +59,7 @@ CONFIGURE_ARGS+=--disable-ldap
 PLIST_SUBST+=	OPENLDAP="@comment "
 .endif
 
-regress:
+test:
 		cd ${WRKSRC} && make check
 
 .include "../../converters/libiconv/buildlink2.mk"
