@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/11/18 11:48:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/12/10 06:13:03 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -182,6 +182,7 @@ lib/kde3/kfile_avi.la
 lib/kde3/kfile_flac.la
 lib/kde3/kfile_m3u.la
 lib/kde3/kfile_mp3.la
+lib/kde3/kfile_mpc.la
 lib/kde3/kfile_ogg.la
 lib/kde3/kfile_sid.la
 lib/kde3/kfile_wav.la
@@ -676,6 +677,11 @@ share/kde/apps/kmid/maps/YamahaPSS790.map
 share/kde/apps/kmid/maps/YamahaQY10.map
 share/kde/apps/kmid/maps/gm.map
 share/kde/apps/kmix/kmixui.rc
+share/kde/apps/kmix/pics/Listener.png
+share/kde/apps/kmix/pics/SpeakerFrontLeft.png
+share/kde/apps/kmix/pics/SpeakerFrontRight.png
+share/kde/apps/kmix/pics/SpeakerRearLeft.png
+share/kde/apps/kmix/pics/SpeakerRearRight.png
 share/kde/apps/kmix/pics/kmixdocked.png
 share/kde/apps/kmix/pics/kmixdocked_error.png
 share/kde/apps/kmix/pics/kmixdocked_mute.png
@@ -1055,6 +1061,7 @@ share/kde/services/kfile_avi.desktop
 share/kde/services/kfile_flac.desktop
 share/kde/services/kfile_m3u.desktop
 share/kde/services/kfile_mp3.desktop
+share/kde/services/kfile_mpc.desktop
 share/kde/services/kfile_ogg.desktop
 share/kde/services/kfile_sid.desktop
 share/kde/services/kfile_wav.desktop
@@ -1065,32 +1072,32 @@ share/kde/services/krec_exportwave.desktop
 share/kde/services/videothumbnail.desktop
 share/kde/servicetypes/audiomidi.desktop
 share/kde/servicetypes/krec_exportitem.desktop
-@comment dirrm share/kde/servicetypes
-@comment dirrm share/kde/services
-@comment dirrm share/kde/mimelnk/text
-@comment dirrm share/kde/mimelnk/interface
-@comment dirrm share/kde/mimelnk/audio
-@comment dirrm share/kde/mimelnk/application
-@comment dirrm share/kde/icons/locolor/32x32/apps
-@comment dirrm share/kde/icons/locolor/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/scalable/apps
-@comment dirrm share/kde/icons/crystalsvg/scalable/actions
-@comment dirrm share/kde/icons/crystalsvg/64x64/apps
-@comment dirrm share/kde/icons/crystalsvg/64x64/actions
-@comment dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment dirrm share/kde/icons/crystalsvg/48x48/actions
-@comment dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment dirrm share/kde/icons/crystalsvg/32x32/actions
-@comment dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment dirrm share/kde/icons/crystalsvg/22x22/actions
-@comment dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/16x16/actions
-@comment dirrm share/kde/icons/crystalsvg/128x128/apps
-@comment dirrm share/kde/icons/crystalsvg/128x128/actions
-@comment dirrm share/kde/config.kcfg
-@comment dirrm share/kde/autostart
+@comment in kde: @dirrm share/kde/servicetypes
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/mimelnk/text
+@comment in kde: @dirrm share/kde/mimelnk/interface
+@comment in kde: @dirrm share/kde/mimelnk/audio
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/actions
+@comment in kde: @dirrm share/kde/config.kcfg
+@comment in kde: @dirrm share/kde/autostart
 @dirrm share/kde/apps/videothumbnail
-@comment dirrm share/kde/apps/profiles
+@comment in kde: @dirrm share/kde/apps/profiles
 @dirrm share/kde/apps/noatun/skins/winamp/Winamp
 @dirrm share/kde/apps/noatun/skins/winamp
 @dirrm share/kde/apps/noatun/skins/kjofol/vibrocentric
@@ -1134,7 +1141,7 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm share/kde/apps/krec/icons/crystalsvg
 @dirrm share/kde/apps/krec/icons
 @dirrm share/kde/apps/krec
-@comment dirrm share/kde/apps/konqueror/servicemenus
+@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
 @dirrm share/kde/apps/kmix/pics
 @dirrm share/kde/apps/kmix
 @dirrm share/kde/apps/kmid/maps
@@ -1148,11 +1155,11 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm share/kde/apps/kmid/icons
 @dirrm share/kde/apps/kmid/fm
 @dirrm share/kde/apps/kmid
-@dirrm share/kde/apps/kicker/applets
-@comment dirrm share/kde/apps/kconf_update
+@comment in kde: @dirrm share/kde/apps/kicker/applets
+@comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kaudiocreator/pics
 @dirrm share/kde/apps/kaudiocreator
-@dirrm share/kde/apps/kappfinder/apps/Multimedia
+@comment in kdebase: @dirrm share/kde/apps/kappfinder/apps/Multimedia
 @dirrm share/kde/apps/kaboodle/icons/crystalsvg/22x22/actions
 @dirrm share/kde/apps/kaboodle/icons/crystalsvg/22x22
 @dirrm share/kde/apps/kaboodle/icons/crystalsvg/16x16/actions
@@ -1167,26 +1174,26 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm share/kde/apps/artsbuilder/examples/todo
 @dirrm share/kde/apps/artsbuilder/examples
 @dirrm share/kde/apps/artsbuilder
-@comment dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/apps
 @dirrm share/doc/kde/HTML/en/noatun
 @dirrm share/doc/kde/HTML/en/kscd
 @dirrm share/doc/kde/HTML/en/krec
 @dirrm share/doc/kde/HTML/en/kmix
 @dirrm share/doc/kde/HTML/en/kmid
 @dirrm share/doc/kde/HTML/en/kcontrol/kmixcfg
-@comment dirrm share/doc/kde/HTML/en/kcontrol
+@comment in kde: @dirrm share/doc/kde/HTML/en/kcontrol
 @dirrm share/doc/kde/HTML/en/kaboodle
 @dirrm share/doc/kde/HTML/en/juk
 @dirrm share/doc/kde/HTML/en/artsbuilder/images
 @dirrm share/doc/kde/HTML/en/artsbuilder
-@comment dirrm share/doc/kde/HTML/en
-@comment dirrm share/desktop-directories
-@comment dirrm share/applications/kde
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/desktop-directories
+@comment in kde: @dirrm share/applications/kde
 @dirrm lib/mcop/Noatun
 @dirrm lib/mcop/Arts/Environment
-@dirrm lib/mcop/Arts
-@dirrm lib/mcop
-@comment dirrm lib/kde3
+@comment in arts: @dirrm lib/mcop/Arts
+@comment in arts: @dirrm lib/mcop
+@comment in kde: @dirrm lib/kde3
 @dirrm include/noatun
 @dirrm include/mpeglib_artsplug
 @dirrm include/mpeglib/util/yaf/yafxplayer
@@ -1206,6 +1213,6 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm include/mpeglib/decoder
 @dirrm include/mpeglib
 @dirrm include/libkcddb
-@comment dirrm include/arts
+@comment in arts: @dirrm include/arts
 @dirrm include/akode
 @comment dirrm etc/xdg/menus/applications-merged
