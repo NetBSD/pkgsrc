@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2004/11/07 16:11:48 kristerw Exp $
+# $NetBSD: Makefile,v 1.61 2004/11/08 10:03:41 xtraeme Exp $
 #
 
 DISTNAME=		xmame-0.87
@@ -24,8 +24,7 @@ TARGET=			${PKGBASE}
 UNLIMIT_RESOURCES=	datasize
 
 .include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=		USE_ESOUND
+.include "${.CURDIR}/../../emulators/xmame/options.mk"
 
 ROMPATH=		${PREFIX}/share/${TARGET}
 SPOOLDIR=		${VARBASE}/games/${TARGET}
@@ -37,13 +36,6 @@ MAKE_FLAGS+=		X11INC= X11LIB=
 
 # Network support is broken in xmame-0.85
 #MAKE_FLAGS+=		XMAME_NET=1
-
-.if !empty(USE_ESOUND:M[Yy][Ee][Ss])
-MAKE_FLAGS+=		SOUND_ESOUND=1
-.include "../../audio/esound/buildlink3.mk"
-.endif
-
-MAME_DISP_METHOD?=	x11
 
 # Determine which CPU-specific code to use.
 .for MARCH in alpha m68k i386 ia64 mips
