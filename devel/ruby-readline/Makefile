@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/01/23 17:33:19 taca Exp $
+# $NetBSD: Makefile,v 1.15 2005/03/06 13:01:06 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -21,8 +21,8 @@ RUBY_DOCS=		README README.ja
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/readline
-.for file in ${RUBY_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${file} ${RUBY_DOCDIR}/readline
+.for f in ${RUBY_DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/readline
 .endfor
 
 .include "../../devel/readline/buildlink3.mk"
