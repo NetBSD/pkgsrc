@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:18:02 zuntum Exp $
+bin/timidity
+man/man1/timidity.1
+man/man5/timidity.cfg.5

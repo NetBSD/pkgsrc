@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 00:18:07 zuntum Exp $
+
+By default, ogg123 will decode to a testing null device.
+
+If you want to hear the audio and if you have a sound card with a
+working /dev/audio device, you can use libao's "sun" (SUN audio/NetBSD
+audio) device.  To setup your personal libao configuration so it
+uses "sun" do:
+
+  echo "default_device=sun" > ~/.libao
+
+Read the ogg123(1) manual page for further information.
+
+===========================================================================

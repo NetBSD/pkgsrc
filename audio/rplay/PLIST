@@ -1,0 +1,30 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:50 zuntum Exp $
+etc/rc.d/rplayd
+bin/rplay
+bin/rptp
+include/rplay.h
+@unexec	install-info --delete %D/info/RPLAY.info %D/info/dir
+@unexec	install-info --delete %D/info/RPTP.info %D/info/dir
+@unexec	install-info --delete %D/info/librplay.info %D/info/dir
+@unexec	install-info --delete %D/info/rplay.info %D/info/dir
+info/RPLAY.info
+info/RPTP.info
+info/librplay.info
+info/rplay.info
+@exec	install-info %D/info/RPLAY.info %D/info/dir
+@exec	install-info %D/info/RPTP.info %D/info/dir
+@exec	install-info %D/info/librplay.info %D/info/dir
+@exec	install-info %D/info/rplay.info %D/info/dir
+lib/librplay.a
+lib/librplay.la
+lib/librplay.so
+lib/librplay.so.0
+lib/librplay.so.0.0
+man/man1/rplay.1
+man/man1/rptp.1
+man/man5/rplay.conf.5
+man/man5/rplay.helpers.5
+man/man5/rplay.hosts.5
+man/man5/rplay.servers.5
+man/man8/rplayd.8
+sbin/rplayd

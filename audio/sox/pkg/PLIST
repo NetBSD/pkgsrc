@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2000/12/02 02:14:12 wiz Exp $
-bin/play
-bin/rec
-bin/sox
-man/man1/play.1
-man/man1/rec.1
-man/man1/sox.1
-man/man1/soxexam.1

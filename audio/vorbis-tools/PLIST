@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:18:07 zuntum Exp $
+bin/ogg123
+bin/oggenc
+bin/ogginfo
+bin/vcut
+bin/vorbiscomment
+man/man1/ogg123.1
+man/man1/oggenc.1
+man/man1/ogginfo.1
+share/doc/vorbis-tools-1.0rc2/ogg123rc-example
+@dirrm share/doc/vorbis-tools-1.0rc2

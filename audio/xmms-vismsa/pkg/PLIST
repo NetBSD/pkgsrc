@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/08/18 02:52:20 hubertf Exp $
-lib/xmms/Visualization/libvismsa.so
-lib/xmms/Visualization/libvismsa.la
-lib/xmms/Visualization/libvismsa.a

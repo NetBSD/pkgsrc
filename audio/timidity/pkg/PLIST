@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.8 2000/12/17 01:37:42 wiz Exp $
-bin/timidity
-man/man1/timidity.1
-man/man5/timidity.cfg.5
