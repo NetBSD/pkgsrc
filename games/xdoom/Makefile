@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/28 12:53:03 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/06 16:37:44 hubertf Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.idsoftware.com/archives/doomarc.html
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 
+WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	unzip
 EXTRACT_BEFORE_ARGS=	-qo
 EXTRACT_ONLY=	doomsrc.zip
@@ -20,16 +21,23 @@ USE_GMAKE=	yes
 
 post-extract:
 	(cd ${WRKDIR}; tar xzf linuxdoom-1.10.src.tgz)
+	(cd ${WRKDIR}; tar xzf sndserv.tgz)
+	ln -s /usr/include/soundcard.h ${WRKDIR}/sndserv/linux
 
 post-patch:
-	@${MV} ${WRKSRC}/i_sound.c foo
-	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' <foo> ${WRKSRC}/i_sound.c
-	@${MV} ${WRKSRC}/d_main.c foo
-	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' <foo> ${WRKSRC}/d_main.c
+	@${MV} ${WRKSRC}/${DISTNAME}/i_sound.c foo
+	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' <foo> ${WRKSRC}/${DISTNAME}/i_sound.c
+	@${MV} ${WRKSRC}/${DISTNAME}/d_main.c foo
+	@${SED} -e 's@XXXPREFIXXXX@${PREFIX}@' <foo> ${WRKSRC}/${DISTNAME}/d_main.c
 	@${RM} -f foo
 
+do-build:
+	cd ${WRKSRC}/${DISTNAME} ; ${GMAKE} X11BASE=${X11BASE}
+	cd ${WRKSRC}/sndserv ; ${GMAKE} X11BASE=${X11BASE}
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/linux/linuxxdoom ${PREFIX}/bin/xdoom
+	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME}/linux/linuxxdoom ${PREFIX}/bin/xdoom
+	${INSTALL_PROGRAM} ${WRKSRC}/sndserv/linux/sndserver ${PREFIX}/bin/sndserver
 	${MKDIR} ${PREFIX}/share/doom
 	${GUNZIP_CMD} -c ${DISTDIR}/doom-1.8.wad.gz > ${PREFIX}/share/doom/doom1.wad
 
