@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.20 2001/11/30 00:30:40 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.21 2001/12/03 04:51:08 kent Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -976,8 +976,13 @@ PILRC_USE_GTK?=	YES
 # Possible: defined, not defined
 # Default: not defined
 
-#POSTFIX_PCRE=YES
+#POSTFIX_USE_PCRE=YES
 # Add support for Perl Compatible Regular Expressions.
+# Possible: YES, not defined
+# Default: not defined
+
+#POSTFIX_USE_SASL_AUTH=YES
+# Add support for SMTP authentication with cyrus-sasl
 # Possible: YES, not defined
 # Default: not defined
 
