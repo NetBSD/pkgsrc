@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/28 06:17:21 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/28 21:21:12 jlam Exp $
 
 DISTNAME=	regress-buildlink-unwrap-0.0
 CATEGORIES=	regress
@@ -39,8 +39,18 @@ do-build:
 
 regress: build do-regress
 
+FAILED_TESTS=	${WRKDIR}/failed
+
 do-regress:
-	@${DO_NADA}
+	@if [ -f ${FAILED_TESTS} ]; then				\
+		${ECHO} "FAILED:";					\
+		${CAT} ${FAILED_TESTS} | while read test; do		\
+			${ECHO} "       $$test";			\
+		done;							\
+		exit `${CAT} ${FAILED_TESTS} | ${WC} -l`;		\
+	else								\
+		${DO_NADA};						\
+	fi
 
 TEST_RESULT=	PATH="${WRKSRC}:${PATH}";				\
 		runtest=`$$test`;					\
@@ -53,7 +63,7 @@ TEST_RESULT=	PATH="${WRKSRC}:${PATH}";				\
 			;;						\
 		*)							\
 			${ECHO} "(${.TARGET}) result:   FAIL";		\
-			exit 1;						\
+			${ECHO} "${.TARGET}" >> ${FAILED_TESTS};	\
 			;;						\
 		esac
 
