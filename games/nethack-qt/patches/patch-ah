@@ -1,0 +1,44 @@
+$NetBSD: patch-ah,v 1.1 2002/03/22 17:26:27 pooka Exp $
+
+--- sys/unix/Makefile.src.orig	Sat Aug  5 13:52:57 2000
++++ sys/unix/Makefile.src	Thu Aug 10 20:03:19 2000
+@@ -144,8 +144,8 @@
+ # flags for debugging:
+ # CFLAGS = -g -I../include
+ 
+-CFLAGS = -O -I../include
+-LFLAGS =
++CFLAGS += -I../include -I${BUILDLINK_X11_DIR}/include
++LFLAGS = ${LDFLAGS}
+ 
+ # The Qt and Be window systems are written in C++, while the rest of
+ # NetHack is standard C.  If using Qt, uncomment the LD line here to get
+@@ -203,8 +203,8 @@
+ 
+ #
+ #
+-WINSRC = $(WINTTYSRC)
+-WINOBJ = $(WINTTYOBJ)
++WINSRC = $(WINQTSRC)
++WINOBJ = $(WINQTOBJ)
+ 
+ # on some systems the termcap library is in -ltermcap or -lcurses
+ # on 386 Xenix, the -ltermlib tputs() seems not to work; use -lcurses instead
+@@ -230,7 +230,7 @@
+ # WINX11LIB = -lXaw -lXmu -lXpm -lXext -lXt -lX11 -lSM -lICE -lm # BSD/OS 2.0
+ #
+ # libraries for Qt
+-WINQTLIB = -L$(QTDIR)/lib -lqt
++WINQTLIB = -L$(QTDIR)/lib -lqt -lXpm -lX11 -lICE -lSM -lz -lpng -lXext
+ #
+ # libraries for KDE (with Qt)
+ WINKDELIB = -lkdecore -lkdeui -lXext
+@@ -244,7 +244,7 @@
+ # libraries for BeOS 
+ WINBELIB = -lbe
+ 
+-WINLIB = $(WINTTYLIB)
++WINLIB = $(WINQTLIB)
+ 
+ # any other strange libraries your system needs (for Sysunix only -- the more
+ # specialized targets should already be right)
