@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/02/05 19:54:27 drochner Exp $
+$NetBSD: distinfo,v 1.2 2003/11/11 09:32:27 wiz Exp $
 
-SHA1 (ipcheck-0.151/ipcheck.py) = 315097656108c8cb980b2536f2b4da1936a183a0
-Size (ipcheck-0.151/ipcheck.py) = 128969 bytes
+SHA1 (ipcheck-0.207/ipcheck.py) = f8312c35157a8ed50b79379249ef7c80bf517a3e
+Size (ipcheck-0.207/ipcheck.py) = 158838 bytes
