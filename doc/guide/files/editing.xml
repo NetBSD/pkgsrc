@@ -1,0 +1,100 @@
+<!-- $NetBSD: editing.xml,v 1.1 2004/10/22 00:26:56 hubertf Exp $ -->
+
+<appendix id="editing">
+  <title>Editing guidelines for the pkgsrc guide</title>
+
+  <para>
+    This section contains information on editing the pkgsrc guide
+    itself.
+  </para>
+
+  <sect1>
+    <title>Targets</title>
+  
+    <para>
+      The pkgsrc guide's source code is stored in
+      <filename>pkgsrc/doc/guide/files</filename>, and several files are
+      created from it:
+    </para>
+  
+    <itemizedlist>
+      <listitem>
+        <para>
+          <filename>pkgsrc/doc/pkgsrc.txt</filename>, which replaces
+  	<filename>pkgsrc/Packages.txt</filename>
+        </para>
+      </listitem>
+      
+      <listitem>
+        <para>
+          <filename>pkgsrc/doc/pkgsrc.html</filename>
+        </para>
+      </listitem>
+      
+      <listitem>
+        <para>
+          <filename>http://www.NetBSD.org/Documentation/pkgsrc/</filename>:
+  	the documentation on the NetBSD website will be built from
+  	pkgsrc and kept up to date on the web server itself. This
+  	means you <emphasis>must</emphasis> make sure that your
+  	changes haven't broken the build!
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>Procedure</title>
+    
+    <para>
+      The procedure to edit the pkgsrc guide is:
+    </para>
+  
+    <itemizedlist>
+      <listitem>
+        <para>
+          Edit the XML file(s) in <filename>pkgsrc/doc/guide/files</filename>
+        </para>
+      </listitem>
+      
+      <listitem>
+        <para>
+          Run <command>make</command> in
+          <filename>pkgsrc/doc/guide</filename> to build the HTML and
+          ASCII version
+        </para>
+      </listitem>
+      
+      <listitem>
+        <para>
+          Run <command>make OUTPUT=pdf</command> in
+          <filename>pkgsrc/doc/guide</filename> to build the PDF
+          version. Dont' omit this, as this does a very strict SGML
+          test, and doing this properly is important for getting proper
+          documentation on the web server!
+        </para>
+      </listitem>
+      
+      <listitem>
+        <para>
+          If all is well, run <command>make install-doc</command> to put
+          the generated files into <filename>pkgserc/doc</filename>. 
+        </para>
+      </listitem>
+      
+      <listitem>
+        <para>
+          <command>cvs commit pkgsrc/doc/guide/files</command>
+        </para>
+      </listitem>
+      
+      <listitem>
+        <para>
+          <command>cvs commit pkgsrc/doc/pkgsrc.{html,txt}</command>
+        </para>
+      </listitem>
+      
+    </itemizedlist>
+
+  </sect1>   
+</appendix>
