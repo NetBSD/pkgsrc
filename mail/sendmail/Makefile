@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.36 2001/04/15 01:18:06 itojun Exp $
+# $NetBSD: Makefile,v 1.37 2001/05/29 03:31:26 itojun Exp $
 
-DISTNAME=	sendmail.8.11.3
-PKGNAME=	sendmail-8.11.3
+DISTNAME=	sendmail.8.11.4
+PKGNAME=	sendmail-8.11.4
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/
 
+USE_WIDEPATCH=	NO
+.if ${USE_WIDEPATCH} == "YES"
 PATCH_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/
 PATCHFILES=	sendmail8.11.3+3.4W.patch.gz
 PATCH_DIST_ARGS=-d ${WRKSRC}/sendmail -E ${PATCH_DIST_STRIP}
@@ -14,6 +16,7 @@ PATCH_DIST_ARGS=-d ${WRKSRC}/sendmail -E ${PATCH_DIST_STRIP}
 PATCH_DIST_ARGS+=--forward --quiet
 .endif
 PATCH_DIST_STRIP=	-p1
+.endif
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.sendmail.org/
@@ -58,7 +61,9 @@ post-patch:
 	${CP} ${PKGDIR}/DESCR ${DESCR_SRC}
 	${ECHO} '---' >> ${DESCR_SRC}
 	${ECHO} -n 'compiled features:' >> ${DESCR_SRC}
+.if ${USE_WIDEPATCH} == YES
 	${ECHO} -n ' WIDE' >> ${DESCR_SRC}
+.endif
 .if defined(USE_INET6) && ${USE_INET6} == YES
 	${CAT} ${FILESDIR}/site.config.m4-v6 >> ${SITECONFIG}
 	${ECHO} -n ' INET6' >> ${DESCR_SRC}
