@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/05 22:10:41 mrg Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/06 00:02:50 wiz Exp $
+#
 
 DISTNAME=	aquaified-0.30
 CATEGORIES=	x11 wm
@@ -8,27 +9,17 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://themes.freshmeat.net/projects/aquaified/
 COMMENT=	Aquaified is a theme for the Sawfish window manager.
 
-DEPENDS+=	sawfish:../../wm/sawfish
+DEPENDS+=	sawfish>=1.0.1:../../wm/sawfish
 
 NO_BUILD=	yes
 NO_CHECKSUM=	yes
-WRKSRC=		${WRKDIR}
+WRKSRC=		${WRKDIR}/Aquaified
 
-PLIST_SRC=	${WRKDIR}/PLIST
 THEME_DATADIR=	share/sawfish/themes
 INST_DATADIR=	${PREFIX}/${THEME_DATADIR}
 
-.include "../../mk/bsd.prefs.mk"
-
 do-install:
-	@${RM} -f ${PLIST_SRC}
-	@${TOUCH} ${PLIST_SRC}
-	@${MKDIR} ${INST_DATADIR}/Aquaified
-	${ECHO} "Installing Aquaified in ${INST_DATADIR}.";
-	cd ${WRKSRC}/Aquaified; for FILE in *; do \
-	    ${INSTALL_DATA} "$$FILE" ${INST_DATADIR}/Aquaified; \
-	    ${ECHO} "${THEME_DATADIR}/Aquaified/$$FILE" >>${PLIST_SRC}; \
-	done
-	@${ECHO} "@dirrm ${THEME_DATADIR}/Aquaified" >>${PLIST_SRC}
+	@${INSTALL_DATA_DIR} ${INST_DATADIR}/Aquaified
+	@cd ${WRKSRC} && ${INSTALL_DATA} * ${INST_DATADIR}/Aquaified
 
 .include "../../mk/bsd.pkg.mk"
