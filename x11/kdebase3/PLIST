@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2004/12/10 06:05:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.28 2005/03/06 12:21:21 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -1966,6 +1966,7 @@ share/kde/fonts/console8x8.pcf.gz
 share/kde/fonts/fonts.dir
 share/kde/fonts/override/fonts.dir
 share/kde/icons/Daemon.png
+share/kde/icons/NetBSD-flag.png
 share/kde/icons/crystalsvg/128x128/apps/access.png
 share/kde/icons/crystalsvg/128x128/apps/acroread.png
 share/kde/icons/crystalsvg/128x128/apps/applixware.png
