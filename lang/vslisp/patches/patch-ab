@@ -1,0 +1,162 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/04 23:47:37 jtb Exp $
+
+--- src/Makefile.orig	Tue Nov 21 19:22:45 2000
++++ src/Makefile
+@@ -24,91 +24,91 @@
+ 
+ # LSer - just a test SERVER programm
+ LSer:  iser.lo lser.lo libvslisp$(HIVER).la 
+-	../libtool --mode=link $(CC) $(LOPT) LSer lser.lo iser.lo libvslisp$(HIVER).la \
++	@$(LIBTOOL) --mode=link $(CC) $(LOPT) LSer lser.lo iser.lo libvslisp$(HIVER).la \
+ 		$(LDLIBS)
+ 
+ lser.lo: inet/lser.c
+-	../libtool --mode=compile $(CC) $(OPT) inet/lser.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) inet/lser.c
+ 
+ iser.lo: inet/iser.c
+-	../libtool --mode=compile $(CC) $(OPT) inet/iser.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) inet/iser.c
+ 
+ bin2c: bin2c.lo
+ 	$(RM) bin2c
+-	../libtool --mode=link $(CC) $(LOPT) bin2c bin2c.lo
++	@$(LIBTOOL) --mode=link $(CC) $(LOPT) bin2c bin2c.lo
+ 
+ bin2c.lo: bin2c.c
+-	../libtool --mode=compile $(CC) $(OPT) bin2c.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) bin2c.c
+ 
+ mkfuns: mkfuns.c
+ 	$(CC) mkfuns.c -o mkfuns
+ 
+ cfish.lo: cfish.c
+-	../libtool --mode=compile $(CC) $(OPT) cfish.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) cfish.c
+ 
+ newhash.lo: newhash.c l_defs.h
+-	../libtool --mode=compile $(CC) $(OPT) newhash.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) newhash.c
+ 
+ cnofish.lo: cnofish.c
+-	../libtool --mode=compile $(CC) $(OPT) cnofish.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) cnofish.c
+ 
+ VSLisp0: ilisp.lo  $(LLOBJ) cfish.lo
+ 	$(RM) VSLisp0
+-	../libtool --mode=link $(CC) $(LOPT) VSLisp0 ilisp.lo $(LLOBJ) \
++	@$(LIBTOOL) --mode=link $(CC) $(LOPT) VSLisp0 ilisp.lo $(LLOBJ) \
+ 	            cfish.lo $(LDLIBS)
+ 
+ ilisp_d.lo: ilisp.c
+ 	rm -f ilisp_d.c
+ 	cp ilisp.c ilisp_d.c
+-	../libtool --mode=compile $(CC) -DL3DYN=1 $(OPT) ilisp_d.c 
++	@$(LIBTOOL) --mode=compile $(CC) -DL3DYN=1 $(OPT) ilisp_d.c 
+ 	rm -f ilisp_d.c
+ 
+ VSLisp: ilisp_d.lo cnofish.lo libvslisp$(HIVER).la
+-	../libtool --mode=link $(CC) $(LOPT) VSLisp ilisp_d.lo cnofish.lo \
++	@$(LIBTOOL) --mode=link $(CC) $(LOPT) VSLisp ilisp_d.lo cnofish.lo \
+ 	 libvslisp$(HIVER).la $(LDLIBS) 
+ 
+ colorslib.lo: lsrc/colorslib.l $(LSP0DEP) $(B2CDEP)
+ 	$(LSP0) -i lsrc/colorslib.l
+ 	$(B2C)	colorslib.lc colorslib.c colorslib
+ 	$(RM) colorslib.lc
+-	../libtool --mode=compile $(CC) $(OPT) colorslib.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) colorslib.c
+ 	$(RM) colorslib.c
+ 
+ libvslisp$(HIVER).la: $(LLOBJ) funcld.lo colorslib.lo
+-	../libtool --mode=link $(CC) $(LOPT) libvslisp$(HIVER).la colorslib.lo \
++	@$(LIBTOOL) --mode=link $(CC) $(LOPT) libvslisp$(HIVER).la colorslib.lo \
+ 		 cnofish.lo \
+ 	 funcld.lo $(LLOBJ) -rpath $(LIBDIR) $(LDLIBS) \
+ 		-version-info $(LDRELEASE)
+ 
+ lcore.lo:  lcore.c  l_defs.h
+-	../libtool --mode=compile $(CC) $(OSOPT) $(OPT) lcore.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OSOPT) $(OPT) lcore.c
+ 
+ funcf.lo:  functions/funcf.c l_defs.h
+-	../libtool --mode=compile $(CC) $(OPT) functions/funcf.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) functions/funcf.c
+ 
+ funcld.lo:  functions/funcld.c l_defs.h
+-	../libtool --mode=compile $(CC) $(OPT) functions/funcld.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) functions/funcld.c
+ 
+ funcn.lo:  funcn.c l_defs.h
+-	../libtool --mode=compile $(CC) $(OPT) funcn.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) funcn.c
+ 
+ colors.lo:  colors.c l_defs.h
+-	../libtool --mode=compile $(CC) $(OPT) colors.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) colors.c
+ 
+ lc.lo:  lc.c l_defs.h
+-	../libtool --mode=compile $(CC) $(OPT) lc.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) lc.c
+ 
+ funcm.lo:  funcm.c l_defs.h
+-	../libtool --mode=compile $(CC) $(OPT) funcm.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) funcm.c
+ 
+ ilisp.lo:  ilisp.c l_defs.h
+-	../libtool --mode=compile $(CC) $(OPT) ilisp.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) ilisp.c
+ 
+ funct.lo: funct.c l_defs.h
+-	../libtool --mode=compile $(CC) $(OPT) funct.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) funct.c
+ 
+ funcs.lo: funcs.c l_defs.h
+-	../libtool --mode=compile $(CC) $(OPT) funcs.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) funcs.c
+ 
+ funct.c: functions/funct.c mkfuns
+ 	./mkfuns funstmp < functions/funct.c > funct.c
+@@ -127,19 +127,19 @@
+ 	rm -f funstmp
+ 
+ lmem.lo:  lmem.c l_defs.h
+-	../libtool --mode=compile $(CC) $(OPT) lmem.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) lmem.c
+ 
+ forms1.lo:  forms1.c l_defs.h
+-	../libtool --mode=compile $(CC) $(OPT) forms1.c
++	@$(LIBTOOL) --mode=compile $(CC) $(OPT) forms1.c
+ 
+ test.lo: test.cpp lisp.hpp l_defs.h
+-	../libtool $(CCPP) $(OPT) test.cpp
++	@$(LIBTOOL) $(CCPP) $(OPT) test.cpp
+ 
+ lisp.lo: lisp.cpp lisp.hpp l_defs.h
+-	../libtool $(CCPP) $(OPT) lisp.cpp
++	@$(LIBTOOL) $(CCPP) $(OPT) lisp.cpp
+ 
+ test: test.lo lisp.lo libvslisp$(HIVER).la 
+-	../libtool $(CCPP) $(LOPT) test test.lo lisp.lo libvslisp$(HIVER).la \
++	@$(LIBTOOL) $(CCPP) $(LOPT) test test.lo lisp.lo libvslisp$(HIVER).la \
+ 		$(LDLIBS)
+ 
+ clean:
+@@ -168,14 +168,14 @@
+ 	mkdir -p $(PREFIX)/bin/
+ 	mkdir -p $(PREFIX)/lib/
+ 	mkdir -p $(PREFIX)/include/
+-	../libtool --mode=install $(INSTALL) -s VSLisp $(PREFIX)/bin/
+-	../libtool --mode=install $(INSTALL) -s -m 644 libvslisp$(HIVER).la \
++	@$(LIBTOOL) --mode=install $(INSTALL) -s VSLisp $(PREFIX)/bin/
++	@$(LIBTOOL) --mode=install $(INSTALL) -s -m 644 libvslisp$(HIVER).la \
+ 		 $(PREFIX)/lib/libvslisp$(HIVER).la
+ 	cp l_defs.h $(PREFIX)/include/
+ 
+ uninstall:
+ 	rm -f $(PREFIX)/bin/VSLisp
+-	../libtool --mode=uninstall rm -f $(PREFIX)/lib/libvslisp$(HIVER).la
++	@$(LIBTOOL) --mode=uninstall rm -f $(PREFIX)/lib/libvslisp$(HIVER).la
+ 
+ 
+ 
