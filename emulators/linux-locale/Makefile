@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/04/28 10:23:43 sakamoto Exp $
+# $NetBSD: Makefile,v 1.7 2000/05/12 05:19:09 sakamoto Exp $
 #
 
 DISTNAME=	locales-2.1-1mdk
@@ -29,7 +29,7 @@ DISTFILES+=	locales-${locale}-2.1-1mdk${EXTRACT_SUFX}
 DIST_SUBDIR=	linux-locale
 
 ONLY_FOR_PLATFORM=NetBSD-*-i386
-DEPENDS=	suse_linux-6.3:../../emulators/suse_linux
+DEPENDS=	suse_base-6.3:../../emulators/suse_linux
 
 EXTRACT_ONLY=	# empty
 NO_PATCH=	yes
@@ -39,25 +39,25 @@ NO_BUILD=	yes
 EMULSUBDIR=	emul/linux
 EMULDIR=	${PREFIX}/${EMULSUBDIR}
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
+EXCLUDELIST=	${WRKDIR}/EXCLUDE
 CPIOLIST=	${WRKDIR}/CPIOLIST
 
 do-install:
-	@${MV} ${EMULDIR}/usr/share/locale ${EMULDIR}/usr/share/locale.orig
 	@${RM} -f ${CPIOLIST}
+	@(cd ${EMULDIR}; \
+		${FIND} usr/share/locale -name "*" > ${EXCLUDELIST})
 .for f in ${DISTFILES}
-	@rpm2cpio ${DISTDIR}/${DIST_SUBDIR}/${f}|cpio -t -v >> ${CPIOLIST}
-	@(cd ${EMULDIR}; rpm2cpio ${DISTDIR}/${DIST_SUBDIR}/${f}|cpio -i -d)
+	@rpm2cpio ${DISTDIR}/${DIST_SUBDIR}/${f} | \
+		cpio -t -v -f -E ${EXCLUDELIST} >> ${CPIOLIST}
+	@(cd ${EMULDIR}; rpm2cpio ${DISTDIR}/${DIST_SUBDIR}/${f} | \
+		cpio -i -d -f -E ${EXCLUDELIST})
 .endfor
-	@${CHMOD} 755 ${EMULDIR}/usr/share/locale
 
 post-install:
-	@${ECHO} "@exec ${MV} ${EMULDIR}/usr/share/locale ${EMULDIR}/usr/share/locale.orig" > ${PLIST_SRC}
 	@${CAT} ${CPIOLIST}|${GREP} "^d"|${SED} -e "s|.* \(usr\/.*\)|@exec ${MKDIR} ${EMULDIR}/\1|"|sort >> ${PLIST_SRC}
 	@${CAT} ${CPIOLIST}|${GREP} "^-"|${SED} -e "s|.* \(usr\/.*\)|${EMULSUBDIR}/\1|"|sort >> ${PLIST_SRC}
 	@${CAT} ${CPIOLIST}|${GREP} "^l"|${SED} -e "s|.* \(usr\/.*\) -> \(.*\)|@exec ln -s \2 %D/${EMULSUBDIR}/\1|"|sort >> ${PLIST_SRC}
 	@${CAT} ${CPIOLIST}|${GREP} "^l"|${SED} -e "s|.* \(usr\/.*\) -> .*|@unexec rm -f %D/${EMULSUBDIR}/\1|"|sort >> ${PLIST_SRC}
 	@${CAT} ${CPIOLIST}|${GREP} "^d"|${SED} -e "s|.* \(usr\/.*\)|@dirrm ${EMULSUBDIR}/\1|"|sort -r >> ${PLIST_SRC}
-	@${ECHO} "@dirrm ${EMULSUBDIR}/usr/share/locale" >> ${PLIST_SRC}
-	@${ECHO} "@unexec ${MV} ${EMULDIR}/usr/share/locale.orig ${EMULDIR}/usr/share/locale" >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
