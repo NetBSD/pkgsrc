@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/02/18 15:14:25 seb Exp $
+# $NetBSD: Makefile,v 1.36 2002/03/14 16:21:57 wiz Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -15,24 +15,14 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 # If you get gcc working on other platforms, then please add them.
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-*
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == "NetBSD") && (${OBJECT_FMT} == "ELF")
-MACHINE_GCC_PLATFORM=	${MACHINE_GNU_PLATFORM}elf
-.else
-MACHINE_GCC_PLATFORM=	${MACHINE_GNU_PLATFORM}
-.endif
-
 USE_GMAKE=		YES
 HAS_CONFIGURE=		YES
-CONFIGURE_ARGS=		--host=${MACHINE_GCC_PLATFORM} \
+CONFIGURE_ARGS=		--host=${MACHINE_GNU_PLATFORM} \
 			--prefix=${GCC_PREFIX} \
 			--enable-shared
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
 INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
-MESSAGE_SUBST+=		MAKE=${MAKE}
-PLIST_SUBST+=		MACHINE_GCC_PLATFORM=${MACHINE_GCC_PLATFORM}
 PLIST_SUBST+=		GCC_VERSION=${PKGVERSION}
 SRCDIR=			${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIR}/objdir
@@ -85,16 +75,15 @@ pre-install:
 
 .if (${OPSYS} != SunOS)
 post-install:
-	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/curses.h ${PREFIX}/${PKGNAME}/bin/cc
+	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/curses.h ${PREFIX}/${PKGNAME}/bin/cc
 	${LN} -s gcc ${PREFIX}/${PKGNAME}/bin/cc
-	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/curses.h
 	${INSTALL_DATA} ${WRKDIR}/gcc.mk ${PREFIX}/etc/${PKGNAME}.mk
 .else
 # remove empy file and directory that show up when one
 # does make install; make deinstall; make install
 post-install:
-	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/fixed
-	-${RMDIR} ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GCC_PLATFORM}/${PKGVERSION}/include/v7
+	${RM} -f ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/fixed
+	-${RMDIR} ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/v7
 .endif
 
 .include "../../mk/texinfo.mk"
