@@ -1,18 +1,19 @@
 /*
- * $NetBSD: info_netbsd.cpp,v 1.1 1999/07/15 13:54:30 tron Exp $
+ * $NetBSD: info_netbsd.cpp,v 1.2 1999/07/19 21:05:16 tron Exp $
  *
  * info_netbsd.cpp is part of the KDE program kcminfo.  This displays
  * various information about the NetBSD system it's running on.
  *
+ * This code is derived from code written by
+ *	Jaromir Dolecek <dolecek@ics.muni.cz>
+ *
  * CPU info code has been imported from abs's processor.cpp implementation
  * for KDE 1.0 with only minor formatting changes
- * SCSI, IRQ, Devices, Audio and Partition Info was implemented by
- * Jaromir Dolecek <dolecek@ics.muni.cz>
  */
 
 #define INFO_CPU_AVAILABLE
 #define INFO_IRQ_AVAILABLE
-#define INFO_DMA_AVAILABLE
+/* #define INFO_DMA_AVAILABLE */ /* not really available */
 #define INFO_PCI_AVAILABLE
 #define INFO_IOPORTS_AVAILABLE
 #define INFO_SOUND_AVAILABLE
@@ -31,18 +32,11 @@
 #include <sys/types.h>
 #include <sys/param.h>
 #include <sys/sysctl.h>
+#include <stdio.h>	/* for NULL */
+#include <stdlib.h>	/* for malloc(3) */
 
 #include <qfile.h>
 #include <qfontmetrics.h>
-
-/* stdio.h has NULL, but also a lot of extra cruft */
-#ifndef NULL
-#define NULL 0L
-#endif
-
-/* Again avoid the cruft in stdlib.h since malloc() isn't gonna change 
-   too often, unless someone decides to de-KNR FreeBSD */
-void    *malloc __P((size_t));
 
 typedef struct
   {
@@ -210,14 +204,18 @@ bool GetInfo_DMA (KTabListBox *)
   return FALSE;
 }
 
-bool GetInfo_PCI (KTabListBox *)
+bool GetInfo_PCI (KTabListBox *lbox)
 {
-  return FALSE;
+	if (!GetDmesgInfo(lbox, "at pci", NULL))
+		lbox->insertItem(i18n("No PCI devices found."));
+	return true;
 }
 
-bool GetInfo_IO_Ports (KTabListBox *)
+bool GetInfo_IO_Ports (KTabListBox *lbox)
 {
-  return FALSE;
+	if (!GetDmesgInfo(lbox, "port 0x", NULL))
+		lbox->insertItem(i18n("No device using I/O ports found."));
+	return true;
 }
 
 bool GetInfo_Sound (KTabListBox *lbox)
