@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2004/10/03 00:13:26 tv Exp $
+# $NetBSD: Makefile,v 1.42 2004/11/30 18:26:39 wiz Exp $
 
 DISTNAME=		gal-0.22
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		gnome devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gal/0.22/}
 EXTRACT_SUFX=		.tar.bz2
