@@ -1,0 +1,10 @@
+tap(4) is a virtual Ethernet device driver.  Each tap(4) device appears as a
+regular Ethernet NIC to the kernel, with a MAC address and a set of media
+interfaces.  It is a clonable network interface, which means any number of
+such devices can be created by the administrator.
+
+Just like tun(4), tap(4) offers a TTY interface to each of its devices which
+allows an application to read and inject Ethernet frames into the network
+stack.  tap(4) devices can be created and used individually for system-wide
+configurations, but an application can also use a special clonable device
+node to create interfaces on demand.
