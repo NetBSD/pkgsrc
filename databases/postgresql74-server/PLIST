@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/19 00:04:23 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:53 reed Exp $
 bin/postgres
 bin/postmaster
-etc/rc.d/pgsql
 lib/postgresql/ascii_and_mic.so
 lib/postgresql/cyrillic_and_mic.so
 lib/postgresql/euc_cn_and_mic.so

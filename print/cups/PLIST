@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/01/10 03:32:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2004/04/23 22:07:57 reed Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestppd
@@ -11,7 +11,6 @@ bin/lpq
 bin/lpr
 bin/lprm
 bin/lpstat
-etc/rc.d/cupsd
 include/cups/cups.h
 include/cups/http.h
 include/cups/image.h

@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:59 reed Exp $
 lib/java/hiawatha/hiawatha.jar
 lib/java/hiawatha/xsls.jar
-etc/rc.d/hiawatha
 share/examples/hiawatha/simple.cfg
 share/examples/hiawatha/pault_com.cfg
 share/examples/hiawatha/hiawatha.cfg

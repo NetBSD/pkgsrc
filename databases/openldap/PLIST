@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/04/17 10:56:21 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.16 2004/04/23 22:07:53 reed Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -7,8 +7,6 @@ bin/ldapmodrdn
 bin/ldappasswd
 bin/ldapsearch
 bin/ldapwhoami
-etc/rc.d/slapd
-${SLURPD_COMMENT}etc/rc.d/slurpd
 include/lber.h
 include/lber_types.h
 include/ldap.h

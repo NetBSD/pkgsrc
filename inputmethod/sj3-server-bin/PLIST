@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/10 09:16:37 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:53 reed Exp $
 bin/sj3
 bin/sj3dic
 bin/sj3mkdic
 bin/sj3serv
 bin/sj3stat
-etc/rc.d/sj3
 man/ja_JP.EUC/man1/sj3.1
 man/ja_JP.EUC/man1/sj3dic.1
 man/ja_JP.EUC/man1/sj3mkdic.1

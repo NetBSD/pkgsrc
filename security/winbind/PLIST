@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/29 04:19:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:59 reed Exp $
 bin/wbinfo
-etc/rc.d/winbindd
 lib/libnss_winbind.so
 lib/security/pam_winbind.so
 sbin/winbindd

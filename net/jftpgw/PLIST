@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/23 01:32:34 xtraeme Exp $
-etc/rc.d/jftpgw
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:56 reed Exp $
 man/man1/jftpgw.1
 sbin/jftpgw
 share/examples/jftpgw/jftpgw.conf

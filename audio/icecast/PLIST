@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2004/02/19 11:51:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/04/23 22:07:52 reed Exp $
 bin/icecast
-etc/rc.d/icecast
 share/doc/icecast/AUTHORS
 share/doc/icecast/COPYING
 share/doc/icecast/NEWS

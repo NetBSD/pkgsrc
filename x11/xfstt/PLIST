@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/25 20:46:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/23 22:08:00 reed Exp $
 bin/xfstt
-etc/rc.d/xfstt
 man/man1/xfstt.1
 share/doc/xfstt/CHANGES
 share/doc/xfstt/FAQ

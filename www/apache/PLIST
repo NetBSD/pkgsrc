@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2003/11/02 05:36:56 grant Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/04/23 22:07:59 reed Exp $
 bin/checkgid
 bin/dbmmanage
 bin/htdigest
 bin/htpasswd
-etc/rc.d/apache
 include/httpd/ap.h
 include/httpd/ap_alloc.h
 include/httpd/ap_compat.h

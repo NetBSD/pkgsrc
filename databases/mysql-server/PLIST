@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/31 02:28:34 lukem Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/23 22:07:53 reed Exp $
 bin/comp_err
 bin/isamchk
 bin/isamlog
@@ -14,7 +14,6 @@ bin/replace
 bin/resolve_stack_dump
 bin/resolveip
 bin/safe_mysqld
-etc/rc.d/mysqld
 lib/mysql/libdbug.a
 lib/mysql/libheap.a
 lib/mysql/libmerge.a

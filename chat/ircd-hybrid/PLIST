@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:06:32 zuntum Exp $
-etc/rc.d/ircd-hybrid
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:07:52 reed Exp $
 man/man8/ircd-hybrid.8
 sbin/ircd-hybrid
 sbin/ircd-hybrid-fixklines

@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/23 16:09:21 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/04/23 22:08:00 reed Exp $
 bin/hsml
-etc/rc.d/screws
 lib/screws/BasicExec.so
 lib/screws/Hello.so
 lib/screws/HsmlExec.so

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2004/04/15 16:26:31 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.20 2004/04/23 22:07:57 reed Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -23,10 +23,6 @@ bin/tdbdump
 bin/testparm
 bin/testprns
 bin/wbinfo
-etc/rc.d/nmbd
-etc/rc.d/samba
-etc/rc.d/smbd
-etc/rc.d/winbindd
 include/libsmbclient.h
 lib/libnss_winbind.so
 lib/libnss_wins.so
