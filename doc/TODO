@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.289 2003/02/21 11:25:55 mycroft Exp $
+$NetBSD: TODO,v 1.290 2003/02/21 11:45:34 mycroft Exp $
 
 Suggested new packages
 ======================
@@ -173,7 +173,6 @@ Suggested package updates
 	o leafnode-1.9.35
 	o lesstif-0.93.40
 	o libbonobo-2.0.1
-	o libdvdcss-1.2.5
 	o libgii-0.8.2
 	o libggi-2.0.2
 	o libole2-2.2.8
