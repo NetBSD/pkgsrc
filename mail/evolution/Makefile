@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2004/04/17 10:58:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.62 2004/05/06 10:03:54 recht Exp $
 
-DISTNAME=		evolution-1.4.5
-PKGREVISION=		9
+DISTNAME=		evolution-1.4.6
 CATEGORIES=		mail time gnome
 MASTER_SITES=		ftp://ftp.ximian.com/pub/source/evolution/ \
 			${MASTER_SITE_GNOME:=sources/evolution/1.4/}
@@ -11,7 +10,6 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://ximian.com/products/evolution/
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
 
@@ -34,18 +32,21 @@ CONFIGURE_ARGS+=	--enable-ipv6=no
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_GNU_TOOLS+=		make
+USE_GNU_TOOLS+=		make yacc
 USE_X11=		YES
 USE_LIBTOOL=		YES
 USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
-YACC=			${PREFIX}/bin/bison -y
 
 REPLACE_PERL+=		libical/scripts/mkderivedvalues.pl
 REPLACE_PERL+=		libical/scripts/mkparameterrestrictions.pl
+REPLACE_PERL+=		libical/scripts/mkderivedcomponents.pl
+REPLACE_PERL+=		libical/scripts/mkderivedparameters.pl
+REPLACE_PERL+=		libical/scripts/mkderivedproperties.pl
 REPLACE_PERL+=		libical/scripts/mkrestrictionrecords.pl
 REPLACE_PERL+=		libical/scripts/mkrestrictiontable.pl
 REPLACE_PERL+=		tools/csv2vcard
+REPLACE_PERL+=		tools/evolution-addressbook-clean
 REPLACE_PERL+=		tools/evolution-addressbook-clean.in
 REPLACE_PERL+=		tools/killev
 CPPFLAGS+=		-I/usr/include/krb5 -I/usr/include/gssapi
@@ -71,13 +72,6 @@ GCONF2_SCHEMAS+=	evolution-mail.schemas
 BUILDLINK_TRANSFORM+=	S:-DG_DISABLE_DEPRECATED:
 BUILDLINK_TRANSFORM+=	S:-DGTK_DISABLE_DEPRECATED:
 
-pre-configure:
-	for i in ${WRKSRC}/camel/providers/*/Makefile.in ; do		\
-		${SED} <$$i >$$i.fixed					\
-		 -e 's|^\(lib.*_la_LIBADD.*\)$$|\1 ../../libcamel.la|' &&\
-		${MV} $$i.fixed $$i ;					\
-	done
-
 .if !exists(/usr/include/semaphore.h)
 LDFLAGS+=	-lsemaphore
 .include "../../devel/pthread-sem/buildlink3.mk"
@@ -95,6 +89,7 @@ LDFLAGS+=	-lsemaphore
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/gnome-spell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libunicode/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
