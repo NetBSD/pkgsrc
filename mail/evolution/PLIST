@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/03/24 20:04:32 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/03/26 20:50:12 rh Exp $
 bin/csv2vcard
 bin/evolution
 bin/evolution-addressbook
@@ -205,16 +205,16 @@ lib/evolution/camel-providers/1.0/libcamelsmtp.so
 lib/evolution/camel-providers/1.0/libcamelsmtp.so.0
 lib/evolution/camel-providers/1.0/libcamelsmtp.so.0.0
 lib/evolution/camel-providers/1.0/libcamelsmtp.urls
-lib/evolution/evolution-mail-importers/1.0.2/libmbox.a
-lib/evolution/evolution-mail-importers/1.0.2/libmbox.la
-lib/evolution/evolution-mail-importers/1.0.2/libmbox.so
-lib/evolution/evolution-mail-importers/1.0.2/libmbox.so.0
-lib/evolution/evolution-mail-importers/1.0.2/libmbox.so.0.0
-lib/evolution/evolution-mail-importers/1.0.2/liboutlook.a
-lib/evolution/evolution-mail-importers/1.0.2/liboutlook.la
-lib/evolution/evolution-mail-importers/1.0.2/liboutlook.so
-lib/evolution/evolution-mail-importers/1.0.2/liboutlook.so.0
-lib/evolution/evolution-mail-importers/1.0.2/liboutlook.so.0.0
+lib/evolution/evolution-mail-importers/1.0.3/libmbox.a
+lib/evolution/evolution-mail-importers/1.0.3/libmbox.la
+lib/evolution/evolution-mail-importers/1.0.3/libmbox.so
+lib/evolution/evolution-mail-importers/1.0.3/libmbox.so.0
+lib/evolution/evolution-mail-importers/1.0.3/libmbox.so.0.0
+lib/evolution/evolution-mail-importers/1.0.3/liboutlook.a
+lib/evolution/evolution-mail-importers/1.0.3/liboutlook.la
+lib/evolution/evolution-mail-importers/1.0.3/liboutlook.so
+lib/evolution/evolution-mail-importers/1.0.3/liboutlook.so.0
+lib/evolution/evolution-mail-importers/1.0.3/liboutlook.so.0.0
 lib/libcal-client.a
 lib/libcal-client.la
 lib/libcal-client.so
@@ -354,6 +354,7 @@ share/evolution/views/tasks/Tasks.galview
 share/evolution/views/tasks/With_Category.galview
 share/evolution/views/tasks/galview.xml
 share/gnome/apps/Applications/evolution.desktop
+share/gnome/help/evolution/C/access.html
 share/gnome/help/evolution/C/apx-gloss.html
 share/gnome/help/evolution/C/authors.html
 share/gnome/help/evolution/C/bugs.html
@@ -362,6 +363,7 @@ share/gnome/help/evolution/C/config-prefs-contact.html
 share/gnome/help/evolution/C/config-prefs.html
 share/gnome/help/evolution/C/config-sync.html
 share/gnome/help/evolution/C/config.html
+share/gnome/help/evolution/C/configure.html
 share/gnome/help/evolution/C/contact-automation-basic.html
 share/gnome/help/evolution/C/contact-search.html
 share/gnome/help/evolution/C/customizing-summary.html
@@ -372,6 +374,9 @@ share/gnome/help/evolution/C/figures/config-cal.png
 share/gnome/help/evolution/C/figures/config-mail.png
 share/gnome/help/evolution/C/figures/contact-editor.png
 share/gnome/help/evolution/C/figures/contact.png
+share/gnome/help/evolution/C/figures/exchange-identity.png
+share/gnome/help/evolution/C/figures/exchange-receive-options.png
+share/gnome/help/evolution/C/figures/exchange-receive.png
 share/gnome/help/evolution/C/figures/filter-assist-fig.png
 share/gnome/help/evolution/C/figures/filter-new-fig.png
 share/gnome/help/evolution/C/figures/full-1.png
@@ -384,13 +389,21 @@ share/gnome/help/evolution/C/figures/full-7.png
 share/gnome/help/evolution/C/figures/mail-composer.png
 share/gnome/help/evolution/C/figures/mail-druid-pic.png
 share/gnome/help/evolution/C/figures/mail-inbox.png
+share/gnome/help/evolution/C/figures/mail-threaded.png
 share/gnome/help/evolution/C/figures/mainwindow-pic.png
 share/gnome/help/evolution/C/figures/newmsg.png
+share/gnome/help/evolution/C/figures/outline.png
 share/gnome/help/evolution/C/figures/print-dest.png
 share/gnome/help/evolution/C/figures/print-preview.png
 share/gnome/help/evolution/C/figures/replymsg.png
+share/gnome/help/evolution/C/figures/schedule.png
+share/gnome/help/evolution/C/figures/small_desktop.png
+share/gnome/help/evolution/C/figures/summary.png
 share/gnome/help/evolution/C/figures/vfolder-createrule-fig.png
+share/gnome/help/evolution/C/full-advantage.html
+share/gnome/help/evolution/C/importing-mail-from-clients.html
 share/gnome/help/evolution/C/index.html
+share/gnome/help/evolution/C/install.html
 share/gnome/help/evolution/C/introduction.html
 share/gnome/help/evolution/C/ln20.html
 share/gnome/help/evolution/C/menuref.html
@@ -438,6 +451,7 @@ share/gnome/help/evolution/C/usage-calendar.html
 share/gnome/help/evolution/C/usage-contact-organize.html
 share/gnome/help/evolution/C/usage-contact-sharing.html
 share/gnome/help/evolution/C/usage-contact.html
+share/gnome/help/evolution/C/usage-exchange.html
 share/gnome/help/evolution/C/usage-mail-getnsend-get.html
 share/gnome/help/evolution/C/usage-mail-getnsend-send.html
 share/gnome/help/evolution/C/usage-mail-organize-columns.html
@@ -1285,7 +1299,7 @@ share/pixmaps/evolution.png
 @dirrm share/evolution/default_user/local
 @dirrm share/evolution/default_user
 @dirrm share/evolution
-@dirrm lib/evolution/evolution-mail-importers/1.0.2
+@dirrm lib/evolution/evolution-mail-importers/1.0.3
 @dirrm lib/evolution/evolution-mail-importers
 @dirrm lib/evolution/camel-providers/1.0
 @dirrm lib/evolution/camel-providers
