@@ -1,7 +1,16 @@
-$NetBSD: patch-ag,v 1.1 1998/08/15 00:17:05 tv Exp $
+$NetBSD: patch-ag,v 1.2 1998/10/04 19:56:34 tv Exp $
 
---- configure.orig	Fri Aug 14 20:11:14 1998
-+++ configure	Fri Aug 14 20:11:38 1998
+--- configure.orig	Tue Mar  3 13:30:18 1998
++++ configure	Sun Oct  4 15:53:12 1998
+@@ -1401,7 +1401,7 @@
+ # Some GNU/Linux systems (e.g., SuSE 4.3, 1996) don't have curses, but
+ # rather ncurses.  So we check for it.
+ TERMLIBS=
+-for termlib in ncurses curses termcap terminfo termlib ; do
++for termlib in curses termcap terminfo termlib ; do
+    echo $ac_n "checking for tputs in -l${termlib}""... $ac_c" 1>&6
+ echo "configure:1407: checking for tputs in -l${termlib}" >&5
+ ac_lib_var=`echo ${termlib}'_'tputs | sed 'y%./+-%__p_%'`
 @@ -3443,7 +3443,7 @@
  		 USE_INCLUDED_LIBINTL=yes
  		 CATOBJEXT=.cat
