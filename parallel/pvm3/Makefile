@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/01/01 23:42:58 garbled Exp $
+# $NetBSD: Makefile,v 1.6 1999/04/26 20:29:35 garbled Exp $
 
 DISTNAME=		pvm3.4.beta7
 PKGNAME=		pvm-3.4.7
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.netlib.org/
 
 #DEPENDS+=		ssh-1.2.26:../../security/ssh
 
+USE_X11=		yes
 WRKSRC=			${WRKDIR}/pvm3
 MAKE_ENV+=		PVM_ROOT=${WRKSRC}
 ALL_TARGET=		all install
