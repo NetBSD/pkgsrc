@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7593 2004/10/28 17:03:06 wiz Exp $
+$NetBSD: CHANGES,v 1.7594 2004/10/28 19:24:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4938,3 +4938,21 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ImageMagick to 6.1.2-3 [adam 2004-10-28]
 	Added bittornado-0.3.7 [wiz 2004-10-28]
 	Added bittornado-gui-0.3.7 [wiz 2004-10-28]
+	Updated gtksourceview to 1.1.1 [jmmv 2004-10-28]
+	Updated yelp to 2.6.4 [jmmv 2004-10-28]
+	Updated zenity to 2.8.1 [jmmv 2004-10-28]
+	Updated eog2 to 2.8.1 [jmmv 2004-10-28]
+	Updated file-roller to 2.8.3 [jmmv 2004-10-28]
+	Updated gconf-editor to 2.8.2 [jmmv 2004-10-28]
+	Updated gok to 0.11.12 [jmmv 2004-10-28]
+	Updated gnome-mag to 0.11.8 [jmmv 2004-10-28]
+	Updated gnopernicus to 0.9.16 [jmmv 2004-10-28]
+	Updated gucharmap to 1.4.2 [jmmv 2004-10-28]
+	Updated gnome2-utils to 2.8.1 [jmmv 2004-10-28]
+	Updated gnome2-user-docs to 2.8.1 [jmmv 2004-10-28]
+	Updated nautilus-cd-burner to 2.8.3 [jmmv 2004-10-28]
+	Updated evolution-webcal to 2.0.1 [jmmv 2004-10-28]
+        Updated gnome-base to 2.8.1 [jmmv 2004-10-28]
+        Updated gnome to 2.8.1 [jmmv 2004-10-28]
+        Updated gnome-devel to 2.8.1 [jmmv 2004-10-28]
+        Updated gnome-extras to 2.8.1 [jmmv 2004-10-28]
