@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.722 2003/07/14 21:22:49 wiz Exp $
+$NetBSD: TODO,v 1.723 2003/07/15 09:24:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -157,7 +157,6 @@ Suggested package updates
 	o licq-1.2.7
 	o libmpeg3-1.5.1
 	o libole2-2.2.8
-	o libsigc++-1.2.5
 	o libtool-1.5 [skrll]
 	o lilypond-1.6.10
 	o lmbench-2.0.4
