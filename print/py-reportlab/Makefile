@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/26 15:00:58 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/28 19:08:53 drochner Exp $
 #
 
 DISTNAME=	ReportLab_1_18
@@ -20,6 +20,6 @@ post-install:
 	cd ${WRKDIR} && ${PAX} -rw -pp reportlab ${PREFIX}/${PYSITELIB}
 	${RM} -rf ${PREFIX}/${PYSITELIB}/reportlab/lib/build
 
-.include "../../textproc/pyxml/buildlink2.mk"
 .include "../../lang/python/extension.mk"
+.include "../../textproc/pyxml/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
