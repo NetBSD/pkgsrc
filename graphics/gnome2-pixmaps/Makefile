@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/12/08 21:11:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2002/12/09 21:56:08 jmmv Exp $
 #
 
 DISTNAME=		gnome-desktop-2.0.8
@@ -28,7 +28,6 @@ NO_BUILD=		YES
 DSTDIR=			${PREFIX}/share/pixmaps
 
 do-install:
-	${INSTALL_DATA_DIR} ${DSTDIR}
 	cd ${WRKSRC}/pixmaps &&					\
 	for i in *.png *.xpm ; do				\
 		${INSTALL_DATA} $$i ${DSTDIR} ;			\
