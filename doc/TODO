@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.166 2003/01/10 08:13:22 cjep Exp $
+$NetBSD: TODO,v 1.167 2003/01/10 12:04:28 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -281,4 +281,7 @@ Suggested cleanups in pkgsrc
 		CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 	  does the trick; additionally, one might set
 		CONFIGURE_ARGS+=	--enable-gtk-doc=no
-	  to avoid a gtk-doc dependency).
+	  to avoid a gtk-doc dependency if html documentation is shipped
+	  with the package). Please fill in GNOME bug reports if any of
+	  the packages do not honor these configuration options and/or do
+	  not ship with pregenerated html documents.
