@@ -1,0 +1,12 @@
+diff -ur ../faces-DIST/scripts/mkfacesindex ./scripts/mkfacesindex
+--- ../faces-DIST/scripts/mkfacesindex	Tue Nov 19 15:05:58 1991
++++ ./scripts/mkfacesindex	Fri Oct  1 14:32:12 1999
+@@ -15,7 +15,7 @@
+ # than version v1.6.0:
+ #$olddb = 1;
+ 
+-$FACEDIR = '/usr/local/faces';
++$FACEDIR = '/usr/local/share/faces';
+ 
+ # mkfacesindex - make a .index file at the root of a faces database that
+ #		 facesall can use more speedily instead of tabulating the
