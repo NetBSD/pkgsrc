@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/08/18 22:46:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 2000/11/30 18:03:55 agc Exp $
 #
 
 DISTNAME=	xanim2801
@@ -28,7 +28,9 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+USE_X11BASE=	yes
 USE_IMAKE=	yes
+XMKMF=			xmkmf -a
 
 post-extract:
 	@${LN} -s docs/xanim.man ${WRKSRC}
