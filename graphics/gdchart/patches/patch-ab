@@ -1,7 +1,7 @@
-$NetBSD: patch-gdchart.c,v 1.1 2001/10/18 11:13:56 darcy Exp $
+$NetBSD: patch-ab,v 1.1 2001/10/18 11:39:24 wiz Exp $
 
 --- gdchart.c.orig	Sat Nov  4 02:49:46 2000
-+++ gdchart.c	Mon Jun 18 00:56:42 2001
++++ gdchart.c
 @@ -664,7 +664,7 @@
  
  	if( GDC_xaxis && xlbl )
