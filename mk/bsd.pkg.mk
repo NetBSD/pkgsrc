@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.969 2002/04/25 21:58:55 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.970 2002/04/29 06:43:34 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -201,7 +201,7 @@ PKG_FC?=		f2c-f77
 .    if defined(USE_BUILDLINK_ONLY)
 .      include "../../lang/f2c/buildlink.mk"
 .    else
-DEPENDS+=       f2c>=20001205nb3:../../lang/f2c
+DEPENDS+=	f2c>=20001205nb3:../../lang/f2c
 .    endif
 .  endif
 FC=             ${PKG_FC}
