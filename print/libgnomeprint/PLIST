@@ -1,0 +1,115 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/12 17:15:54 wiz Exp $
+bin/libgnomeprint-2.0-font-install
+include/libgnomeprint-2.0/libgnomeprint/gnome-font-face.h
+include/libgnomeprint-2.0/libgnomeprint/gnome-font.h
+include/libgnomeprint-2.0/libgnomeprint/gnome-glyphlist.h
+include/libgnomeprint-2.0/libgnomeprint/gnome-pgl.h
+include/libgnomeprint-2.0/libgnomeprint/gnome-print-config.h
+include/libgnomeprint-2.0/libgnomeprint/gnome-print-master.h
+include/libgnomeprint-2.0/libgnomeprint/gnome-print-paper.h
+include/libgnomeprint-2.0/libgnomeprint/gnome-print-unit.h
+include/libgnomeprint-2.0/libgnomeprint/gnome-print.h
+include/libgnomeprint-2.0/libgnomeprint/gnome-rfont.h
+include/libgnomeprint-2.0/libgnomeprint/gp-gc.h
+include/libgnomeprint-2.0/libgnomeprint/private/gnome-font-private.h
+include/libgnomeprint-2.0/libgnomeprint/private/gnome-print-private.h
+include/libgnomeprint-2.0/libgnomeprint/private/gp-gc-private.h
+include/libgnomeprint-2.0/libgnomeprint/private/gpa-private.h
+lib/gnome-print-2.0/drivers/libgnomeprint-fax.a
+lib/gnome-print-2.0/drivers/libgnomeprint-fax.la
+lib/gnome-print-2.0/drivers/libgnomeprint-fax.so
+lib/gnome-print-2.0/drivers/libgnomeprint-fax.so.0
+lib/gnome-print-2.0/drivers/libgnomeprint-fax.so.0.0
+lib/gnome-print-2.0/transports/libgnomeprint-custom.a
+lib/gnome-print-2.0/transports/libgnomeprint-custom.la
+lib/gnome-print-2.0/transports/libgnomeprint-custom.so
+lib/gnome-print-2.0/transports/libgnomeprint-custom.so.0
+lib/gnome-print-2.0/transports/libgnomeprint-custom.so.0.0
+lib/gnome-print-2.0/transports/libgnomeprint-file.a
+lib/gnome-print-2.0/transports/libgnomeprint-file.la
+lib/gnome-print-2.0/transports/libgnomeprint-file.so
+lib/gnome-print-2.0/transports/libgnomeprint-file.so.0
+lib/gnome-print-2.0/transports/libgnomeprint-file.so.0.0
+lib/gnome-print-2.0/transports/libgnomeprint-lpr.a
+lib/gnome-print-2.0/transports/libgnomeprint-lpr.la
+lib/gnome-print-2.0/transports/libgnomeprint-lpr.so
+lib/gnome-print-2.0/transports/libgnomeprint-lpr.so.0
+lib/gnome-print-2.0/transports/libgnomeprint-lpr.so.0.0
+lib/libgnomeprint-2.a
+lib/libgnomeprint-2.la
+lib/libgnomeprint-2.so
+lib/libgnomeprint-2.so.0
+lib/libgnomeprint-2.so.0.0
+lib/pkgconfig/libgnomeprint-2.0.pc
+share/fonts/README.installer.2
+share/gnome-print-2.0/media/media.xml
+share/gnome-print-2.0/models/GNOME-GENERIC-PS.model
+share/gnome-print-2.0/models/HP-LASERJET-4ML.model
+share/gnome-print-2.0/models/STYLUS-COLOR-740.model
+share/gnome-print-2.0/printers/GENERIC.printer
+share/gnome-print-2.0/vendors/EPSON.vendor
+share/gnome-print-2.0/vendors/GNOME.vendor
+share/gnome-print-2.0/vendors/HP.vendor
+share/gnome/libgnomeprint-2.0/fonts/adobe-urw.font
+share/gnome/libgnomeprint-2.0/fonts/defaults.fontmap
+share/gtk-doc/html/libgnomeprint/index.html
+share/gtk-doc/html/libgnomeprint/index.sgml
+share/gtk-doc/html/libgnomeprint/libgnomeprint-building.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-compiling.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-font-face.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-font.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-glyphlist.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-pgl.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-print-config.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-print-master.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-print-paper.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-print-unit.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-print.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-gnome-rfont.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-question-index.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint-resources.html
+share/gtk-doc/html/libgnomeprint/libgnomeprint.html
+share/gtk-doc/html/libgnomeprint/libgnomeprintunsorted.html
+${PKGLOCALEDIR}/locale/az/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libgnomeprint-2.0.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libgnomeprint-2.0.mo
+@unexec rm %D/etc/gnome/libgnomeprint-2.0/fonts/gnome-print.fontmap
+@dirrm share/gtk-doc/html/libgnomeprint
+@dirrm share/gnome/libgnomeprint-2.0/fonts
+@dirrm share/gnome/libgnomeprint-2.0
+@dirrm share/gnome-print-2.0/vendors
+@dirrm share/gnome-print-2.0/printers
+@dirrm share/gnome-print-2.0/models
+@dirrm share/gnome-print-2.0/media
+@dirrm share/gnome-print-2.0
+@dirrm lib/gnome-print-2.0/transports
+@dirrm lib/gnome-print-2.0/drivers
+@dirrm lib/gnome-print-2.0
+@dirrm include/libgnomeprint-2.0/libgnomeprint/private
+@dirrm include/libgnomeprint-2.0/libgnomeprint
+@dirrm include/libgnomeprint-2.0
+@dirrm etc/gnome/libgnomeprint-2.0/fonts
+@dirrm etc/gnome/libgnomeprint-2.0

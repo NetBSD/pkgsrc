@@ -1,0 +1,3 @@
+libgnomeprint is a library used to communicate with the gnomeprint
+environment. It is part of the GNOME2 platform and it is UI
+independant.
