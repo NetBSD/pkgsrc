@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4991 2004/02/25 01:13:50 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4992 2004/02/25 03:59:13 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1038,3 +1038,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gkrellm-launch-0.5 [cube 2004-02-25]
 	Added gkrellm-leds-0.8.1 [cube 2004-02-25]
 	Updated eagle to 4.11 [xtraeme 2004-02-25]
+	Updated metamail to 2.7nb2 [snj 2004-02-25]
