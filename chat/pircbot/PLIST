@@ -1,0 +1,40 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/18 17:42:14 jmmv Exp $
+lib/java/pircbot.jar
+share/doc/java/pircbot/allclasses-frame.html
+share/doc/java/pircbot/allclasses-noframe.html
+share/doc/java/pircbot/constant-values.html
+share/doc/java/pircbot/deprecated-list.html
+share/doc/java/pircbot/help-doc.html
+share/doc/java/pircbot/index-all.html
+share/doc/java/pircbot/index.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/dccchat.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/identserver.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/inputthread.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/ircexception.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/nickalreadyinuseexception.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/outputthread.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/pircbot.html
+share/doc/java/pircbot/org/jibble/pircbot/class-use/queue.html
+share/doc/java/pircbot/org/jibble/pircbot/dccchat.html
+share/doc/java/pircbot/org/jibble/pircbot/identserver.html
+share/doc/java/pircbot/org/jibble/pircbot/inputthread.html
+share/doc/java/pircbot/org/jibble/pircbot/ircexception.html
+share/doc/java/pircbot/org/jibble/pircbot/nickalreadyinuseexception.html
+share/doc/java/pircbot/org/jibble/pircbot/outputthread.html
+share/doc/java/pircbot/org/jibble/pircbot/package-frame.html
+share/doc/java/pircbot/org/jibble/pircbot/package-summary.html
+share/doc/java/pircbot/org/jibble/pircbot/package-tree.html
+share/doc/java/pircbot/org/jibble/pircbot/package-use.html
+share/doc/java/pircbot/org/jibble/pircbot/pircbot.html
+share/doc/java/pircbot/org/jibble/pircbot/queue.html
+share/doc/java/pircbot/overview-tree.html
+share/doc/java/pircbot/package-list
+share/doc/java/pircbot/packages.html
+share/doc/java/pircbot/pircbot-style.css
+share/doc/java/pircbot/serialized-form.html
+share/doc/java/pircbot/stylesheet.css
+@dirrm share/doc/java/pircbot/org/jibble/pircbot/class-use
+@dirrm share/doc/java/pircbot/org/jibble/pircbot
+@dirrm share/doc/java/pircbot/org/jibble
+@dirrm share/doc/java/pircbot/org
+@dirrm share/doc/java/pircbot

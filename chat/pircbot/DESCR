@@ -1,0 +1,8 @@
+PircBot is a Java framework for writing IRC bots quickly and easily.
+Its features include an event-driven architecture to handle common IRC
+events, flood protection, DCC support, ident support, and more. Its
+comprehensive logfile format is suitable for use with pisg to generate
+channel statistics.
+
+Full documentation for PircBot's API is included, and its homepage
+contains a 5-minute step-by-step guide to making your first IRC bot.
