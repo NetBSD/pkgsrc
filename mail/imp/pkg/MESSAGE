@@ -1,5 +1,5 @@
 ==========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2001/02/12 15:27:43 jlam Exp $
+$NetBSD: MESSAGE,v 1.2 2001/04/30 06:11:09 jlam Exp $
 
 Please refer to the file:
 
@@ -19,8 +19,8 @@ You will also need to make IMP accessible through your HTTP server.  If
 you are running Apache and ap-php, then you can add the following lines
 to httpd.conf:
 
-	Include ${PREFIX}/etc/httpd/horde.conf
-	Include ${PREFIX}/etc/httpd/imp.conf
+	Include ${APACHE_SYSCONFDIR}/horde.conf
+	Include ${APACHE_SYSCONFDIR}/imp.conf
 
 to make Horde accessible through:
 	

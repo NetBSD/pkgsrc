@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/12 15:27:43 jlam Exp $
-etc/httpd/imp.conf.dist
+@comment $NetBSD: PLIST,v 1.2 2001/04/30 06:11:09 jlam Exp $
 share/doc/imp/CHANGES
 share/doc/imp/COPYING
 share/doc/imp/CREDITS
@@ -9,6 +8,7 @@ share/doc/imp/INSTALL
 share/doc/imp/PACKAGES
 share/doc/imp/README
 share/doc/imp/SECURITY
+share/examples/imp/imp.conf
 share/horde/imp/addcontact.php3
 share/horde/imp/compose.php3
 share/horde/imp/config/MOTD.html.dist
@@ -855,3 +855,5 @@ share/horde/imp/view.php3
 @dirrm share/horde/imp/lib/js
 @dirrm share/horde/imp/lib
 @dirrm share/horde/imp/graphics
+@dirrm share/examples/imp
+@dirrm share/doc/imp
