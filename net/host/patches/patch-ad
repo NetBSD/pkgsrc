@@ -1,0 +1,204 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/03/10 17:06:37 wiz Exp $
+
+--- rblookup.orig	Wed Jan 27 01:50:22 1999
++++ rblookup
+@@ -12,8 +12,8 @@
+ # of the Mail Abuse Prevention System. See: http://maps.vix.com/rbl
+ #
+ #	Syntax:
+-#		rblookup hostname
+-#		rblookup -i dottedquad
++#		rblookup hostname ...
++#		rblookup -i dottedquad ...
+ #
+ #	Returns:
+ #		zero if the given host was found on the blacklist.
+@@ -44,25 +44,72 @@
+ # Setup environment.
+ # ----------------------------------------------------------------------
+ 
+ # This is where the ``host'' executable lives.
+-BINDIR=/usr/local/bin
++BINDIR=@PREFIX@/bin
+ 
+-PATH=${BINDIR}:/bin:/usr/bin:/usr/ucb ; export PATH
++PATH=${BINDIR}:/bin:/usr/bin ; export PATH
+ 
+ cmd=`basename $0`
+ 
+-options="[-maps] [-orbs] [-i] [-v]"
+-usage="Usage: $cmd $options hostname"
++options="[-dul] [-maps] [-orbs] [-relays] [-i] [-v]"
++usage="Usage: $cmd $options hostname|IP# ..."
+ 
+ # ----------------------------------------------------------------------
+-# Configuration.
++# RBLs:
+ # ----------------------------------------------------------------------
+ 
+-MAPSROOT="rbl.maps.vix.com"
++# MAPS RBL: Mail Abuse Protection System Realtime Blackhole List
++# <URL:http://mail-abuse.org/rbl/>
++# 
++# This listing is human-operated, and is one of the most popular
++# blacklists of spam-originating systems.  Originally started by Paul
++# Vixie, this is the original "RBL" system.
++#
++MAPSROOT="blackholes.mail-abuse.org"
++ALLRBLS="${MAPSROOT} ${ALLRBLS}"
++
++# MAPS DUL: Mail Abuse Protection System Dial-up User List
++# <URL:http://mail-abuse.org/dul/>
++# 
++# This list was started from a list compiled by "Afterburner" (the
++# head-honcho abuse guy at Erols Internet), and extended to be easily
++# added to over time.  This service was originally called the ORCA
++# DUL, and was operated at "dul.orca.bc.ca".  The MAPS project invited
++# Al Iverson, the then-current DUL maintainer, to host it on their
++# systems.
++# 
++DULROOT="dialups.mail-abuse.org"
++ALLRBLS="${DULROOT} ${ALLRBLS}"
++
++# ORBS: Open Relay Behaviour-modification System
++# <URL:http://www.orbs.org/>
++# 
++# This is an listing of IP addresses that have been submitted by spam
++# victims and others and have been automatically tested and proven to
++# be the output ports of SMTP servers that will transmit at least one
++# message to any system for anyone (an "open email relay").
++# Administrators of listed servers can request re-testing and
++# automated systems will remove those that have proven to close their
++# relays.  Input points of multi-level relays can be submitted too,
++# but only the output point is listed in the DNS RBL.
++# 
+ ORBSROOT="relays.orbs.org"
++ALLRBLS="${ORBSROOT} ${ALLRBLS}"
++
++# RSS: MAPS Relay Spam Stopper
++# <URL:http://mail-abuse.org/rss/>
++# 
++# This is a list of e-mail relays which have been verified to have
++# been used to send spam.  They supposedly have archives of the spam
++# they received through these relays.  They do not list multi-level
++# relays (and thus miss a vast number of the actively exploited
++# systems out there -- I really hope they change this policy)!
++#
++RELAYSROOT="relays.mail-abuse.org"
++ALLRBLS="${RELAYSROOT} ${ALLRBLS}"
+ 
+ # ----------------------------------------------------------------------
+-# Exit codes from <sysexits.h>
++# Exit codes from <sysexits.h>, just in case we are called from a mailer
+ # ----------------------------------------------------------------------
+ 
+ EX_OK=0
+@@ -85,8 +134,11 @@
+ # ----------------------------------------------------------------------
+ 
+ verbose=
+-reverse=
+-orbs=
++reverse=false
++orbs=false
++dul=false
++maps=false
++relays=false
+ 
+ skip=
+ for i
+@@ -95,7 +147,9 @@
+ 
+ 	case "$i" in
+ 	-orbs)	orbs=true ;;
+-	-maps)	orbs= ;;
++	-dul)	dul=true ;;
++	-maps)	maps=true ;;
++	-relays) relays=true ;;
+ 	-i)	reverse=true ;;
+ 	-v)	verbose="-v" ;;
+ 	-d)	exec=echo ;;
+@@ -105,28 +159,10 @@
+ 	shift
+ done
+ 
+-# ----------------------------------------------------------------------
+-# Process arguments.
+-# ----------------------------------------------------------------------
+-
+-name="$1"
+-
+-[ "X$name" = "X" ] && fatal "$usage"
+-
+-# Remove trailing dots.
+-name=`echo $name | sed 's/\.*$//'`
+-
+-if [ $reverse ]
+-then
+-	# Assume this is already a dotted quad.
+-	addresslist="$name"
+-else
+-	# Try to resolve domain name into dotted quad.
+-	addresslist=`host "$name" | awk '$2 == "A" {print $3}'`
+-fi
++[ $# -lt 1 ] && fatal "$usage"
+ 
+ # ----------------------------------------------------------------------
+-# Auxiliary routines.
++# More routines.
+ # ----------------------------------------------------------------------
+ 
+ invalid ()
+@@ -180,20 +216,42 @@
+ 
+ exitstat=$EX_UNAVAILABLE
+ 
+-for address in $addresslist
++for name in ${1+$@}
+ do
++	# Remove trailing dots.
++	name=`echo $name | sed 's/\.*$//'`
++
++	if $reverse
++	then
++		# Assume this is already a dotted quad.
++		address="$name"
++	else
++		# Try to resolve domain name into dotted quad.
++		address=`host "$name" | awk '$2 == "A" {print $3}'`
++	fi
++
+ 	# Swap dotted quad labels.
+ 	invert
+ 
+-	# Construct proper name in map.
+-	[ $orbs ] && map="$ORBSROOT" || map="$MAPSROOT"
+-	name="$reversed.$map"
+-
+-	echo "--- $name ---"
+-	$exec host $verbose -t A $name
+-	found=$?
+-	[ $found -eq $EX_OK ] && exitstat=$EX_OK
+-	[ $found -eq $EX_OK ] && $exec host $verbose -t TXT $name
++	rbllist=""
++	$orbs && rbllist="$ORBSROOT $rbllist"
++	$dul && rbllist="$DULROOT $rbllist"
++	$maps && rbllist="$MAPSROOT $rbllist"
++	$relays && rbllist="$RELAYSROOT $rbllist"
++
++	[ -z "$rbllist" ] && rbllist="$ALLRBLS"
++
++	for rbl in $rbllist
++	do
++		# Construct proper name in map.
++		name="$reversed.$rbl"
++
++		echo "--- $name ---"
++		$exec host $verbose -t A $name
++		found=$?
++		[ $found -eq $EX_OK ] && exitstat=$EX_OK
++		[ $found -eq $EX_OK ] && $exec host $verbose -t TXT $name
++	done
+ done
+ 
+ exit $exitstat
