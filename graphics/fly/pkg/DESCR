@@ -1,8 +1,8 @@
 DESCRIPTION
-   fly is a C program that creates GIF images on the fly from CGI and
+   fly is a C program that creates PNG images on the fly from CGI and
    other programs. Using Thomas Boutell's gd graphics library for fast
-   GIF creation, it provides a command-file interface for creating and
-   modifying GIF images.
+   PNG creation, it provides a command-file interface for creating and
+   modifying PNG images.
 
 AUTHOR
    Martin Gleeson, gleeson@unimelb.edu.au.
