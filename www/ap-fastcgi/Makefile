@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/03/27 03:20:22 hubertf Exp $
+# $NetBSD: Makefile,v 1.18 2001/04/30 03:46:33 jlam Exp $
 #
 
 DISTNAME=	mod_fastcgi_2.2.10
@@ -12,7 +12,7 @@ COMMENT=	New, improved CGI-like interface module for Apache
 
 DEPENDS+=	apache-1.3.*:../../www/apache
 # For "apxs":
-BUILD_DEPENDS=	perl-5.*:../../lang/perl5
+BUILD_DEPENDS=	perl>=${PERL5_REQD}:../../lang/perl5
 
 do-build:
 	@cd ${WRKSRC} && ${PREFIX}/sbin/apxs -c -o mod_fastcgi.so *.c
