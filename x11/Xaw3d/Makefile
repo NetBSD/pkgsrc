@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/02/25 04:18:25 hubertf Exp $
+# $NetBSD: Makefile,v 1.24 2001/03/11 09:45:40 tron Exp $
 #
 
 DISTNAME=	Xaw3d-1.5
@@ -15,8 +15,17 @@ WRKSRC=		${WRKDIR}/xc/lib/Xaw3d
 PLIST_SRC=	${WRKDIR}/PLIST-src
 PLIST_SUBST=	XAWREV=${XAWREV}
 
+.include "../../mk/bsd.prefs.mk"
+
 post-extract:
 	@(cd ${WRKSRC}; ${LN} -s .. X11)
+
+.if (${OPSYS} == SunOS) && (${X11BASE} == /usr/openwin)
+post-configure:
+	cd ${WRKSRC}; \
+	${SED} -e 's#^	SERVER#SERVER#' <${MAKEFILE} >${MAKEFILE}.sed; \
+	${MV} ${MAKEFILE}.sed ${MAKEFILE}
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Xaw3d
@@ -30,4 +39,8 @@ post-install:
 
 .include "../../mk/bsd.pkg.mk"
 
+.if (${OPSYS} == SunOS) && (${X11BASE} == /usr/openwin)
+XAWREV!=awk '/define.*SharedXawRev/{print $$3}' ${X11BASE}/lib/config/sv4Lib.tmpl
+.else
 XAWREV!=awk '/define.*SharedXawRev/{print $$3}' ${X11BASE}/lib/X11/config/X11.tmpl
+.endif
