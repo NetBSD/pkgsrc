@@ -1,0 +1,28 @@
+$NetBSD: patch-ag,v 1.4 2003/11/21 13:41:58 jlam Exp $
+
+--- saslauthd/Makefile.am.orig	Fri Mar 28 11:59:23 2003
++++ saslauthd/Makefile.am	Fri Nov 21 05:32:39 2003
+@@ -24,17 +24,17 @@
+ saslcache_DEPENDENCIES = @COMPAT_OBJ@
+ saslcache_LDADD = @COMPAT_OBJ@
+ 
+-EXTRA_DIST	= saslauthd.8 saslauthd.mdoc config include \
++EXTRA_DIST	= saslauthd.0 saslauthd.mdoc config include \
+ 		  getnameinfo.c getaddrinfo.c LDAP_SASLAUTHD
+ INCLUDES	= -I$(top_srcdir)/include -I../include
+ DEFS            = @DEFS@ -DSASLAUTHD_CONF_FILE_DEFAULT=\"@sysconfdir@/saslauthd.conf\" -I. -I$(srcdir) -I..
+ 
+ 
+-dist-hook: saslauthd.8
++dist-hook: saslauthd.0
+ 
+-saslauthd.8: saslauthd.mdoc
+-	nroff -mdoc $(srcdir)/saslauthd.mdoc > $(srcdir)/saslauthd.8
++saslauthd.0: saslauthd.mdoc
++	nroff -mdoc $(srcdir)/saslauthd.mdoc > $(srcdir)/saslauthd.0
+ 
+-install-data-local: saslauthd.8
++install-data-local: saslauthd.0
+ 	$(mkinstalldirs) $(DESTDIR)$(mandir)/cat8
+-	$(INSTALL_DATA) $(srcdir)/saslauthd.8 $(DESTDIR)$(mandir)/cat8/saslauthd.8
++	$(INSTALL_DATA) $(srcdir)/saslauthd.8 $(DESTDIR)$(mandir)/cat8/saslauthd.0
