@@ -1,4 +1,4 @@
-# $NetBSD: defs.Darwin.mk,v 1.21 2002/04/09 22:15:41 jlam Exp $
+# $NetBSD: defs.Darwin.mk,v 1.22 2002/05/18 21:35:45 schmonz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -69,7 +69,7 @@ USERADD?=		${FALSE}			# XXX - Fix me!
 ZOULARISBASE?=		${DESTDIR}/usr/pkg
 
 _DO_LIBINTL_CHECKS=	yes	# perform checks for valid libintl
-_DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
+_DO_SHLIB_CHECKS=	yes	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	yes	# GNU make is standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
