@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/03/09 11:33:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2004/03/10 21:15:43 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -148,7 +148,7 @@ lib/kde3/dockbar_panelextension.so
 lib/kde3/extensionproxy.la
 lib/kde3/extensionproxy.so
 lib/kde3/fontthumbnail.la
-lib/kde3/fontthumbnail.so
+lib/kde3/fontthumbnail.${FONTENC_SUFFIX}
 lib/kde3/gsthumbnail.la
 lib/kde3/gsthumbnail.so
 lib/kde3/htmlthumbnail.la
@@ -434,7 +434,7 @@ lib/kde3/libkdeprint_part.so
 lib/kde3/libkfindpart.la
 lib/kde3/libkfindpart.so
 lib/kde3/libkfontviewpart.la
-lib/kde3/libkfontviewpart.so
+lib/kde3/libkfontviewpart.${FONTENC_SUFFIX}
 lib/kde3/libkmanpart.la
 lib/kde3/libkmanpart.so
 lib/kde3/libkonsolepart.la
