@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.90 2004/02/17 16:56:47 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.91 2004/02/18 05:23:37 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -103,7 +103,7 @@ _BLNK_PACKAGES+=	${_pkg_}
 
 # Add the proper dependency on each package pulled in by buildlink3.mk
 # files.  BUILDLINK_DEPMETHOD.<pkg> contains a list of either "full" or
-# "build", and if any of that list if "full" then we use a full dependency
+# "build", and if any of that list is "full" then we use a full dependency
 # on <pkg>, otherwise we use a build dependency on <pkg>.  By default,
 # we use a full dependency.
 #
