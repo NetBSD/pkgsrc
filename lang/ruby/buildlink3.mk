@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/11/29 07:05:00 taca Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/11/29 10:31:28 taca Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 RUBY_BASE_BUILDLINK3_MK:=	${RUBY_BASE_BUILDLINK3_MK}+
@@ -68,7 +68,5 @@ BUILDLINK_FILES.ruby18+= lib/ruby/${RUBY_VER_DIR}/${RUBY_MD_LIBDIR}/version.h
 BUILDLINK_PREFIX.ruby-base_DEFAULT=	${LOCALBASE}
 
 .endif	# RUBY_BASE_BUILDLINK3_MK
-
-.include "../../devel/ncurses/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
