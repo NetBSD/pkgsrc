@@ -1,0 +1,30 @@
+# $NetBSD: Makefile.common,v 1.1 2002/08/26 19:38:05 jlam Exp $
+
+DISTNAME=	aalib-${DIST_VERS}
+CATEGORIES+=	graphics
+MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=aa-project/}
+
+DIST_VERS=	1.4rc4
+BASE_VERS=	1.4.0.4
+
+MAINTAINER?=	manu@netbsd.org
+HOMEPAGE=	http://aa-project.sourceforge.net/aalib/
+
+DISTINFO_FILE=		${.CURDIR}/../../graphics/aalib/distinfo
+PATCHDIR=		${.CURDIR}/../../graphics/aalib/patches
+
+WRKSRC=			${WRKDIR}/aalib-1.4.0
+
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+.if (${MACHINE_ARCH} == arm32)
+GCC_VERSION!=		gcc --version
+.  if (${GCC_VERSION:C/-.*$$//} == egcs)
+.    include "../../lang/gcc/Makefile.gcc"
+.  endif
+.endif
+
+.include "../../mk/texinfo.mk"
+.include "../../mk/bsd.pkg.mk"
