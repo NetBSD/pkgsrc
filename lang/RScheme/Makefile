@@ -1,42 +1,66 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:43:55 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/08/04 15:34:18 jtb Exp $
 
-DISTNAME=		rs-0.7.3.1
-PKGNAME=		RScheme-0.7.3.1
-PKGREVISION=		2
+DISTNAME=		rs-0.7.3.2
+PKGNAME=		RScheme-0.7.3.2
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.rscheme.org/pub/rscheme/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.rscheme.org
-COMMENT=		Scheme implementation
+HOMEPAGE=		http://www.rscheme.org/
+COMMENT=		Object-oriented Scheme implementation
 
-HAS_CONFIGURE=		#defined
-CONFIGURE_ARGS+=	--prefix=${PREFIX}/lib/RScheme
+USE_BUILDLINK2=		YES
+GNU_CONFIGURE=		YES
 ALL_TARGET=		base
 
 NOT_FOR_PLATFORM=       *-*-alpha
 
-#
-# Can't define WRKSRC as the src subdir since it doesn't appear until after
-# the configure stage and patches need to be applied before then.
-#
+RSCHEME_MODULES_DIR=	src/install/resource/modules
+RSCHEME_MODULES=	${RSCHEME_MODULES_DIR}/primops.mif ${RSCHEME_MODULES_DIR}/precore.mif \
+			${RSCHEME_MODULES_DIR}/corelib.mif ${RSCHEME_MODULES_DIR}/low_scheme.mif \
+			${RSCHEME_MODULES_DIR}/objsys.mif ${RSCHEME_MODULES_DIR}/paths.mif \
+			${RSCHEME_MODULES_DIR}/mathlib.mif ${RSCHEME_MODULES_DIR}/tables.mif \
+			${RSCHEME_MODULES_DIR}/iolib.mif ${RSCHEME_MODULES_DIR}/high_scheme.mif \
+			${RSCHEME_MODULES_DIR}/start.mif ${RSCHEME_MODULES_DIR}/sort.mif \
+			${RSCHEME_MODULES_DIR}/imageio.mif ${RSCHEME_MODULES_DIR}/editinp.mif \
+			${RSCHEME_MODULES_DIR}/mlink.mif ${RSCHEME_MODULES_DIR}/compiler.mif \
+			${RSCHEME_MODULES_DIR}/codegen.mif ${RSCHEME_MODULES_DIR}/repl.mif \
+			${RSCHEME_MODULES_DIR}/debugger.mif ${RSCHEME_MODULES_DIR}/regex.mif \
+			${RSCHEME_MODULES_DIR}/hacks.mif ${RSCHEME_MODULES_DIR}/threads.mif
+
 pre-configure:
-	cd ${WRKSRC} && ${MAKE} stage1
+	@cd ${WRKSRC}/stage0 && ${AUTOCONF}
+	cd ${WRKSRC}/stage0 && ${SETENV} ${CONFIGURE_ENV} CFLAGS="${CFLAGS}" \
+		./configure ${CONFIGURE_ARGS} --prefix=`pwd`/install
+	@cd ${WRKSRC}/stage0 && ${SETENV} ${MAKE_ENV} ${MAKE}
+	@${MKDIR} ${WRKSRC}/stage0/install/bin
+	@cd ${WRKSRC}/stage0 && ${SETENV} ${MAKE_ENV} ${MAKE} shell
+	@cd ${WRKSRC}/stage0 && ${LN} -fs ../../rshell/rs install/bin/rs
+	@cd ${WRKSRC}/stage0 && ${LN} -fs ../../system.img install/resource/system.img
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${MAKE}	RS=${WRKSRC}/stage0/install/bin/rs \
+			RSC_FLAGS2=-ccode src src/tmp/rsc.img \
+			${RSCHEME_MODULES} src/tmp/system.bas
+	@cd ${WRKSRC} && ${CP} -p stage0/configure src/configure
 
 do-configure:
-	cd ${WRKSRC}/src && ./configure ${CONFIGURE_ARGS}
+	@cd ${WRKSRC}/src && ${SETENV} ${CONFIGURE_ENV} CFLAGS="${CFLAGS}" \
+		./configure ${CONFIGURE_ARGS} --prefix=${PREFIX}/lib/rscheme \
+				--enable-readline --enable-dynamic-linking
 
 do-build:
-	cd ${WRKSRC}/src && ${MAKE} ${ALL_TARGET}
+	@cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE} ${ALL_TARGET}
 
 do-install:
-	cd ${WRKSRC}/src && ${MAKE} install-base && ${MAKE} shell && \
-	${MAKE} install-shell && ${MAKE} packages
+	@cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} ${MAKE} install-base && ${MAKE} shell && \
+		${MAKE} install-shell && ${MAKE} packages
 
 post-install:
-	${LN} -fs ${PREFIX}/lib/RScheme/bin/rs ${PREFIX}/bin/RScheme
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/RScheme
+	${LN} -fs ${PREFIX}/lib/rscheme/bin/rs ${PREFIX}/bin/rscheme
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rscheme
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${WRKSRC}/README \
-	${PREFIX}/share/doc/RScheme
+		${PREFIX}/share/doc/rscheme
 
+.include "../../devel/readline/buildlink2.mk"
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
