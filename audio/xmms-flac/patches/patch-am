@@ -1,0 +1,26 @@
+$NetBSD: patch-am,v 1.1 2003/12/21 17:50:55 ben Exp $
+
+--- src/test_libOggFLAC++/Makefile.in.orig	2003-01-25 10:42:53.000000000 -0800
++++ src/test_libOggFLAC++/Makefile.in
+@@ -142,8 +142,8 @@ CFLAGS = @CFLAGS@ @OGG_CFLAGS@
+ 
+ noinst_PROGRAMS = test_libOggFLAC++
+ test_libOggFLAC___LDADD = \
+-	$(top_builddir)/src/share/grabbag/libgrabbag.a \
+-	$(top_builddir)/src/share/gain_analysis/libgain_analysis.a \
++	$(top_builddir)/src/share/grabbag/libgrabbag.la \
++	$(top_builddir)/src/share/gain_analysis/libgain_analysis.la \
+ 	$(top_builddir)/src/libOggFLAC++/libOggFLAC++.la \
+ 	$(top_builddir)/src/libOggFLAC/libOggFLAC.la \
+ 	$(top_builddir)/src/libFLAC/libFLAC.la \
+@@ -172,8 +172,8 @@ am_test_libOggFLAC___OBJECTS = decoders.
+ 	file_utils.$(OBJEXT) main.$(OBJEXT) metadata_utils.$(OBJEXT)
+ test_libOggFLAC___OBJECTS = $(am_test_libOggFLAC___OBJECTS)
+ test_libOggFLAC___DEPENDENCIES = \
+-	$(top_builddir)/src/share/grabbag/libgrabbag.a \
+-	$(top_builddir)/src/share/gain_analysis/libgain_analysis.a \
++	$(top_builddir)/src/share/grabbag/libgrabbag.la \
++	$(top_builddir)/src/share/gain_analysis/libgain_analysis.la \
+ 	$(top_builddir)/src/libOggFLAC++/libOggFLAC++.la \
+ 	$(top_builddir)/src/libOggFLAC/libOggFLAC.la \
+ 	$(top_builddir)/src/libFLAC/libFLAC.la
