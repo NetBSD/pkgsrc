@@ -1,13 +1,21 @@
-$NetBSD: patch-ab,v 1.7 2001/08/04 06:58:24 jlam Exp $
+$NetBSD: patch-ab,v 1.8 2002/09/26 22:06:31 jlam Exp $
 
---- Makefile.in.orig	Tue Apr  3 21:03:24 2001
-+++ Makefile.in	Mon Apr 16 12:44:31 2001
-@@ -599,7 +599,7 @@
+--- Makefile.in.orig	Tue Apr  3 12:03:24 2001
++++ Makefile.in
+@@ -595,15 +595,10 @@ TAGS:	$(SOURCES) $(BUILTIN_C_SRC) $(LIBR
+ installdirs:
+ 	@${SHELL} $(SUPPORT_SRC)mkdirs $(bindir)
+ 	@${SHELL} $(SUPPORT_SRC)mkdirs $(man1dir) $(man3dir)
+-	@${SHELL} $(SUPPORT_SRC)mkdirs $(infodir)
  
  install:	.made installdirs
  	$(INSTALL_PROGRAM) $(INSTALLMODE) $(Program) $(bindir)/$(Program)
 -	$(INSTALL_PROGRAM) $(INSTALLMODE2) bashbug $(bindir)/bashbug
+-	-( cd $(DOCDIR) ; $(MAKE) $(MFLAGS) \
+-		man1dir=$(man1dir) man1ext=$(man1ext) \
+-		man3dir=$(man3dir) man3ext=$(man3ext) \
+-		infodir=$(infodir) htmldir=$(htmldir) $@ )
 +	$(INSTALL_SCRIPT) $(INSTALLMODE2) bashbug $(bindir)/bashbug
- 	-( cd $(DOCDIR) ; $(MAKE) $(MFLAGS) \
- 		man1dir=$(man1dir) man1ext=$(man1ext) \
- 		man3dir=$(man3dir) man3ext=$(man3ext) \
+ 
+ install-strip:
+ 	$(MAKE) $(MFLAGS) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' \

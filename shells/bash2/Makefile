@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.34 2002/08/25 21:50:50 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2002/09/26 22:06:29 jlam Exp $
 #
 
-V=		2.05
-DV=		2.05
-DISTNAME=	bash-${V}
-PKGREVISION=	1
+DISTNAME=	bash-2.05
+PKGREVISION=	2
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://slc2.ins.cwru.edu/pub/dist/
-DISTFILES=      bash-${V}.tar.gz bash-doc-${DV}.tar.gz
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
@@ -38,7 +35,7 @@ GETTEXT_PREFIX_DEFAULT=	${LOCALBASE}
 # Remove -I$(includedir) from the INCLUDES passed to the compiler.  We
 # want the build to be completely self-contained.
 #
-post-patch:
+pre-build:
 	cd ${WRKSRC};							\
 	files="Makefile.in";						\
 	for file in $${files}; do					\
@@ -58,24 +55,13 @@ pre-configure:
 	done
 
 post-install:
+	${INSTALL_MAN} ${WRKSRC}/doc/bash.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/bashbug.1 ${PREFIX}/man/man1
 	${TOUCH} /etc/shells
 	${CP} /etc/shells /etc/shells.bak
 	(${GREP} -v ${PREFIX}/bin/bash /etc/shells.bak || ${TRUE}; ${ECHO} ${PREFIX}/bin/bash) >/etc/shells
 	${RM} /etc/shells.bak
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bash
-	${INSTALL_MAN}  \
-		${WRKDIR}/doc/article.ps  \
-		${WRKDIR}/doc/bashref.ps  \
-		${WRKDIR}/doc/article.txt  \
-		${PREFIX}/share/doc/bash
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/bash
-	${INSTALL_MAN} \
-		${WRKDIR}/doc/bash.html  \
-		${WRKDIR}/doc/bashref.html  \
-		${PREFIX}/share/doc/html/bash
-	${GZIP_CMD} ${PREFIX}/share/doc/bash/*.ps
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
 
 CPPFLAGS:=	-I${GETTEXTDIR}/include ${CPPFLAGS}
