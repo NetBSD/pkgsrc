@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsend.sh,v 1.4 2004/12/29 16:18:41 schmonz Exp $
+# $NetBSD: qmailsend.sh,v 1.5 2005/03/30 20:06:20 schmonz Exp $
 #
 # @PKGNAME@ script to control qmail-send (local and outgoing mail).
 #
@@ -14,7 +14,7 @@ name="qmailsend"
 # User-settable rc.conf variables and their default values:
 : ${qmailsend_postenv:="PATH=@LOCALBASE@/bin:$PATH"}
 : ${qmailsend_defaultdelivery:="`@HEAD@ -1 @PKG_SYSCONFDIR@/control/defaultdelivery`"}
-: ${qmailsend_logcmd:="@LOCALBASE@/bin/splogger nb${name}"}
+: ${qmailsend_logcmd:="logger -t nb${name} -p mail.info"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
