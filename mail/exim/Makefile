@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2001/08/13 08:11:55 ad Exp $
+# $NetBSD: Makefile,v 1.27 2001/12/19 17:11:02 ad Exp $
 
-DISTNAME=	exim-3.32
+DISTNAME=	exim-3.34
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.exim.org/pub/exim/ \
-		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/ \
+		ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim3/ \
 		ftp://ftp.esat.net/pub/networking/mail/mta/exim/
 
 MAINTAINER=	ad@netbsd.org
