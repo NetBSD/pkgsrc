@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2004/01/20 12:10:01 agc Exp $
+# $NetBSD: Makefile,v 1.40 2004/04/11 06:43:27 snj Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/07/16 06:44:37 vanilla Exp
 #
 
@@ -18,7 +18,7 @@ BUILD_DEPENDS+=	texi2roff-[0-9]*:../../textproc/texi2roff
 CONFLICTS=	hylafax-[0-9]*
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
@@ -61,5 +61,5 @@ do-configure:
 	&& cd ${.CURDIR}					\
 	&& ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/configure
 
-.include "../../graphics/netpbm/buildlink2.mk"
+.include "../../graphics/netpbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
