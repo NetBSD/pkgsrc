@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2002/01/29 07:40:11 martti Exp $
+# $NetBSD: Makefile,v 1.12 2002/04/26 10:32:37 martti Exp $
 
-DISTNAME=	libxml2-2.4.13
+DISTNAME=	libxml2-2.4.20
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/libxml/}
 
@@ -16,6 +16,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
+CONFIGURE_ARGS+=	--without-python
 
 .include "../../devel/zlib/buildlink.mk"
 .include "../../converters/libiconv/buildlink.mk"
