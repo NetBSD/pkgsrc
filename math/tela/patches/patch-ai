@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2001/02/28 22:34:09 jtb Exp $
+
+--- telakka.in.orig	Mon Dec  4 07:27:58 2000
++++ telakka.in
+@@ -7,7 +7,7 @@
+ 
+ nm_options=""
+ 
+-CTPP="$BINDIR/ctpp"
++CTPP="@PREFIX@/bin/ctpp"
+ compileOnly=false
+ shared=false
+ outputFileSpecified=false

@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2001/02/28 22:34:09 jtb Exp $
+
+--- t/std.t.orig	Wed Feb 28 19:00:03 2001
++++ t/std.t
+@@ -95,7 +95,7 @@
+ // kinds of Tela documentation.
+ local(directory,choicViewing,choiceDoc,editor,env)
+ {
+-	directory = "/usr/local/lib/tela";
++	directory = "@PREFIX@/share/tela";
+ 	editor = "emacs";
+ 	pager = "less -Ms";
+ 	env = getenv("EDITOR");
