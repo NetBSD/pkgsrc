@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3540 2003/09/26 11:24:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.3541 2003/09/26 12:15:56 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3950,3 +3950,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Added xfce4-4.0.0 [martti 2003-09-26]
 	Updated xosd to 2.2.5 [jmmv 2003-09-26]
 	Updated xmms-osd to 2.2.5 [jmmv 2003-09-26]
+	Updated mplayer-share to 1.0rc1nb1 [salo 2003-09-26]
+	Updated mplayer to 1.0rc1nb1 [salo 2003-09-26]
+	Updated gmplayer to 1.0rc1nb1 [salo 2003-09-26]
+	Updated mencoder to 1.0rc1nb1 [salo 2003-09-26]
