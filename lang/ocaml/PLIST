@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:24:23 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/14 18:10:08 wiz Exp $
 bin/labltk
 bin/ocaml
 bin/ocamlbrowser
@@ -241,6 +241,7 @@ man/man1/ocaml.1
 man/man1/ocamlc.1
 man/man1/ocamlc.opt.1
 man/man1/ocamlcp.1
+man/man1/ocamldebug.1
 man/man1/ocamldep.1
 man/man1/ocamllex.1
 man/man1/ocamlmktop.1
