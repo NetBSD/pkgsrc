@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/09/20 05:14:10 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2000/10/01 11:22:36 rh Exp $
 #
 
 DISTNAME=	hylafax-4.1beta2
@@ -34,16 +34,14 @@ MANCOMPRESSED=	yes
 SUID_EXES=	${PREFIX}/libexec/faxgetty ${PREFIX}/sbin/faxq \
 		${PREFIX}/bin/faxrm ${PREFIX}/bin/faxalter
 
-post-install:
-	${CHOWN} ${FAXUSER} ${SUID_EXES}
-	${CHMOD} 4555 ${SUID_EXES}
-
 post-build:
 	${SED} -e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
 	    -e 's#@PREFIX@#${PREFIX}#g' \
 	    <${FILESDIR}/hylafax.sh >${WRKDIR}/hylafax.sh; \
 
 post-install:
+	${CHOWN} ${FAXUSER} ${SUID_EXES}
+	${CHMOD} 4555 ${SUID_EXES}
 	${INSTALL_SCRIPT} ${WRKDIR}/hylafax.sh ${PREFIX}/etc/rc.d/hylafax
 
 .include "../../mk/bsd.pkg.mk"
