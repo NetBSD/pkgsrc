@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.8 2004/07/28 07:30:17 tron Exp $
+# $NetBSD: bsd.sites.mk,v 1.9 2004/07/28 07:35:35 tron Exp $
 #
 # Default MASTER_SITES
 
@@ -117,6 +117,8 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/GNOME/
 
 MASTER_SITE_SOURCEFORGE+=	\
+	http://aleron.dl.sourceforge.net/sourceforge/ \
+	http://belnet.dl.sourceforge.net/sourceforge/ \
 	http://heanet.dl.sourceforge.net/sourceforge/ \
 	http://optusnet.dl.sourceforge.net/sourceforge/ \
 	http://ovh.dl.sourceforge.net/sourceforge/ \
