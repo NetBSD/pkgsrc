@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2002/12/19 12:05:18 grant Exp $
+# $NetBSD: Makefile,v 1.61 2002/12/19 12:16:17 grant Exp $
 #
 
 COMMENT=	communication programs
@@ -63,6 +63,7 @@ SUBDIR+=	tkicb
 SUBDIR+=	tkirc
 SUBDIR+=	tkirc2
 SUBDIR+=	vicq
+SUBDIR+=	xaric
 SUBDIR+=	xchat
 SUBDIR+=	xchat-gnome
 SUBDIR+=	ymessenger
