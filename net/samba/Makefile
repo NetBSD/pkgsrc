@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2001/11/25 18:59:46 jlam Exp $
+# $NetBSD: Makefile,v 1.71 2001/11/26 23:55:06 taca Exp $
 
 DISTNAME=		samba-2.2.2
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -37,11 +37,11 @@ MAKE_ENV+=		LOGDIR=${SAMBA_LOGDIR}
 CONFIGURE_ARGS+=	--localstatedir=${SAMBA_LOGDIR}
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
 CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
-CONFIGURE_ARGS+=	--with-codepagedir=${SAMBA_SHARE}/samba/codepages
-CONFIGURE_ARGS+=	--with-datadir=${SAMBA_SHARE}
+CONFIGURE_ARGS+=	--with-codepagedir=${SAMBA_DATADIR}/samba/codepages
+CONFIGURE_ARGS+=	--with-datadir=${SAMBA_DATADIR}
 CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
 CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE}
-CONFIGURE_ARGS+=	--with-swatdir=${SAMBA_SHARE}/samba/swat
+CONFIGURE_ARGS+=	--with-swatdir=${SAMBA_DATADIR}/samba/swat
 
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-ssl
