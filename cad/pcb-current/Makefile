@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/02/15 21:57:14 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/15 23:14:25 dmcmahill Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
@@ -10,15 +10,15 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://pcb.sourceforge.net/
 COMMENT=	Printed circuit board layout system (development snapshot version)
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	m4>=1.4:../../devel/m4
 DEPENDS+=	tk>=8.3:../../x11/tk
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 CONFLICTS+=	pcb-[0-9]*
 
-SNAPDATE=	20030815
+SNAPDATE=	20040215
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
 USE_X11=	yes
