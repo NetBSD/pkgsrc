@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.46 2003/10/01 11:30:10 abs Exp $
+# $Id: pkgchk.sh,v 1.47 2003/10/04 21:07:53 agc Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -308,7 +308,7 @@ run_cmd()
     fi
     }
 
-args=`getopt BC:D:L:U:abcfhiklnrsuv $*`
+args=`getopt BC:D:L:U:abcfghiklnrsuv $*`
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -324,6 +324,7 @@ while [ $# != 0 ]; do
 	-b )	opt_b=1 ;;
 	-c )	opt_c=1 ;;
 	-f )	opt_f=1 ;;
+	-g )	opt_g=1 ;;
 	-h )	opt_h=1 ;;
 	-i )	opt_i=1 ;;
 	-k )	opt_k=1 ;;
@@ -342,8 +343,8 @@ if [ -z "$opt_b" -a -z "$opt_s" ];then
     opt_b=1; opt_s=1;
 fi
 
-if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_i" -a -z "$opt_l" ];then
-    echo "Must specify at least one of -a, -c, -i, -l, or -u";
+if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_g" -a -z "$opt_i" -a -z "$opt_l" ];then
+    echo "Must specify at least one of -a, -c, -g, -i, -l, or -u";
     echo
     opt_h=1;
 fi
@@ -359,6 +360,7 @@ if [ -n "$opt_h" -o $# != 1 ];then
 	-b      Limit installations to binary packages
 	-c      Check installed packages against pkgchk.conf
 	-f      Perform a 'make fetch' for all required packages
+	-g      Generate an initial pkgchk.conf file
 	-h      This help
 	-i	Check versions of installed packages (not using pkgchk.conf)
 	-k	Continue with further packages if errors are encountered
@@ -420,6 +422,13 @@ if [ -n "$opt_i" ];then
     PKGDIRLIST=`sh -c "${PKG_INFO} -B \*" | ${AWK} -F= '/PKGPATH=/{print $2" "}'`
 fi
 
+if [ -n "$opt_g" ]; then
+	if [ -r $PKGCHK_CONF ]; then
+		mv $PKGCHK_CONF ${PKGCHK_CONF}.old
+	fi
+	echo "# Generated automatically at `date`" > $PKGCHK_CONF
+	${PKG_INFO} -qBa | awk '/^PKGPATH/ { sub("PKGPATH=[ ]*", ""); print }' >> $PKGCHK_CONF
+fi
 
 if [ -n "$opt_c" -o -n "$opt_l" ];then
 

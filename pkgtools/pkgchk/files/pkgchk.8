@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkgchk.8,v 1.18 2003/10/04 12:02:12 seb Exp $
+.\"	$NetBSD: pkgchk.8,v 1.19 2003/10/04 21:07:53 agc Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
@@ -71,6 +71,10 @@ to perform the fetch before any building, or with
 or
 .Fl i
 to just fetch missing/mismatches packages.
+.It Fl g
+Generate an initial
+.Pa pkgchk.conf
+file based upon the packages installed on the host machine.
 .It Fl h
 Brief help.
 .It Fl i
