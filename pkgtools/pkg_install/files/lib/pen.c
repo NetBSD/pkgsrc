@@ -1,4 +1,4 @@
-/*	$NetBSD: pen.c,v 1.13 2004/06/01 17:29:09 minskim Exp $	*/
+/*	$NetBSD: pen.c,v 1.14 2004/08/06 16:57:03 jlam Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pen.c,v 1.25 1997/10/08 07:48:12 charnier Exp";
 #else
-__RCSID("$NetBSD: pen.c,v 1.13 2004/06/01 17:29:09 minskim Exp $");
+__RCSID("$NetBSD: pen.c,v 1.14 2004/08/06 16:57:03 jlam Exp $");
 #endif
 #endif
 
@@ -51,7 +51,7 @@ __RCSID("$NetBSD: pen.c,v 1.13 2004/06/01 17:29:09 minskim Exp $");
 #if HAVE_SYS_VFS_H
 #include <sys/vfs.h>
 #endif
-#ifdef HAVE_SYS_STATVFS_H
+#if HAVE_SYS_STATVFS_H
 #include <sys/statvfs.h>
 #endif
 
@@ -211,18 +211,11 @@ leave_playpen(char *save)
 uint64_t
 min_free(char *tmpdir)
 {
-#ifdef HAVE_SYS_STATVFS_H
 	struct statvfs buf;
 
 	if (statvfs(tmpdir, &buf) != 0) {
 		warn("statvfs");
-#else
-	struct statfs buf;
-
-	if (statfs(tmpdir, &buf) != 0) {
-		warn("statfs");
-#endif
-		return -1;
+		return 0;
 	}
-	return (uint64_t) buf.f_bavail * (uint64_t) buf.f_bsize;
+	return buf.f_bavail * buf.f_bsize;
 }

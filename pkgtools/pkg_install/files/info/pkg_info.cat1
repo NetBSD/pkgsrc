@@ -1,4 +1,4 @@
-PKG_INFO(1)             NetBSD General Commands Manual             PKG_INFO(1)
+PKG_INFO(1)                 NetBSD Reference Manual                PKG_INFO(1)
 
 NNAAMMEE
      ppkkgg__iinnffoo - a utility for displaying information on software packages
@@ -85,6 +85,10 @@ DDEESSCCRRIIPPTTIIOONN
 
      --pp      Show the installation prefix for each package.
 
+     --QQ      Show the definition of _v_a_r_i_a_b_l_e from the build information for
+             each package.  An empty string is returned if no such variable
+             definition is found for the package(s).
+
      --qq      Be ``quiet'' in emitting report headers and such, just dump the
              raw info (basically, assume a non-human reading).
 
@@ -130,7 +134,7 @@ PPAACCKKAAGGEE WWIILLDDCCAARRDDSS
      candidate.  The magic string ``rc'' equates to _r_e_l_e_a_s_e _c_a_n_d_i_d_a_t_e and
      sorts before a release.  For example, _n_a_m_e_-_1_._3_r_c_3 will sort before
      _n_a_m_e_-_1_._3 and after _n_a_m_e_-_1_._2_._9 Similarly _n_a_m_e_-_1_._3_a_l_p_h_a_2 will sort before
-     _n_a_m_e_-_1_._3_b_e_t_a_1 and they both sort before _n_a_m_e_-_1_._3_r_c_1 In addition, alpha-
+     _n_a_m_e_-_1_._3_b_e_t_a_1 and they both sort before _n_a_m_e_-_1_._3_r_c_1.  In addition, alpha-
      betic characters sort in the same place as their numeric counterparts, so
      that _n_a_m_e_-_1_._2_e has the same sorting value as _n_a_m_e_-_1_._2_._5 The magic string
      ``pl'' equates to a _p_a_t_c_h _l_e_v_e_l and has the same value as a dot in the
@@ -173,4 +177,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, depends displaying,
              pkg size display etc.
 
-NetBSD 1.6                      January 6, 2004                     NetBSD 1.6
+NetBSD 1.6.2                      May 7, 2004                                3
