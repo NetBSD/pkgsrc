@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/11/23 09:57:06 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/12/06 14:38:41 bouyer Exp $
 
 DISTNAME=	db-2.7.7
 CATEGORIES=	databases
@@ -19,3 +19,6 @@ post-install:
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/doc/db
 
 .include "../../mk/bsd.pkg.mk"
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=		--enable-compat185
+.endif
