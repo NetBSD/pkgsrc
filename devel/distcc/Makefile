@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/01/22 08:24:29 grant Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/01 02:23:24 jlam Exp $
 
 DISTNAME=		distcc-2.12.1
 CATEGORIES=		devel
@@ -9,14 +9,14 @@ MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://distcc.samba.org/
 COMMENT=		Tool for distributed C/C++ compiling
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-GNU_CONFIGURE=		YES
 
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--enable-rfc2553
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	distcc
 
-.include "../../devel/popt/buildlink2.mk"
+.include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
