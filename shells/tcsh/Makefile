@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/09/04 00:29:26 kim Exp $
+# $NetBSD: Makefile,v 1.30 2001/09/06 00:54:52 kim Exp $
 #
 
 DISTNAME=	tcsh-6.11
@@ -41,7 +41,7 @@ post-install:
 	    greek:ISO_8859-7:el:GR				\
 	    italian:ISO_8859-1:it:CH:IT				\
 	    ja:EUC:ja:JP					\
-	    russian:KOI8-R:ru:SU				\
+	    russian:KOI8-R:ru:RU:SU				\
 	    spanish:ISO_8859-1:es:ES				\
 	    ukrainian:KOI8-U:uk:UA				\
 	    ;							\
