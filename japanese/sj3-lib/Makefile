@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 15:25:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/11 16:19:46 tron Exp $
 # FreeBSD Id: Makefile,v 1.9 1998/11/28 05:08:27 asami Exp $
 
 DISTNAME=	sj3-2.0.1.20
@@ -16,6 +16,6 @@ pre-configure:
 		${WRKSRC}/Imakefile.orig > ${WRKSRC}/Imakefile
 
 do-configure:
-	@(cd ${WRKSRC}; xmkmf; ${MAKE} Makefiles)
+	@(cd ${WRKSRC}; ${X11BASE}/bin/xmkmf; ${MAKE} Makefiles)
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:18:20 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/11 16:19:46 tron Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -19,7 +19,7 @@ NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
 USE_IMAKE=	yes
 # drop -a because we have no `depends' target
-XMKMF=		${SH} -c "xmkmf && ${MAKE} Makefiles"
+XMKMF=		${SH} -c "${X11BASE}/bin/xmkmf && ${MAKE} Makefiles"
 
 post-extract:
 	cd ${WRKSRC}/modules; \
