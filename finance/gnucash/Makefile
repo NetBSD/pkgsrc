@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2003/01/16 23:02:23 rh Exp $
+# $NetBSD: Makefile,v 1.36 2003/01/24 04:28:52 jlam Exp $
 
 DISTNAME=		gnucash-1.6.8
 PKGREVISION=		3
@@ -19,7 +19,8 @@ BUILD_DEPENDS+=			bison>=1.28:../../devel/bison
 USE_GMAKE=		YES
 USE_X11=		YES
 USE_LIBTOOL=		YES
-#LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+LIBTOOL_FLAGS+=		--preserve-dup-deps
 USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -27,19 +28,20 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ENV+=		GUILE="${GUILE14}"
 CONFIGURE_ENV+=		PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
+
+AM_MAKEFLAGS=		LIBTOOL='${PKGLIBTOOL} ${LIBTOOL_FLAGS}'
+MAKE_ENV+=		AM_MAKEFLAGS="${AM_MAKEFLAGS}"
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == NetBSD)
-CPPFLAGS+=		-I${WRKSRC}/include
-
-post-extract:
-	${MKDIR} ${WRKSRC}/include
-	${LN} -s /usr/include/db.h ${WRKSRC}/include/db_185.h
-.if !exists(/usr/include/wctype.h)
-	${TOUCH} ${WRKSRC}/include/wctype.h
-.endif
+.if ${OPSYS} == "NetBSD"
+post-buildlink:
+	${LN} -s /usr/include/db.h ${BUILDLINK_DIR}/include/db_185.h
+	if [ ! -f /usr/include/wctype.h ]; then				\
+		${TOUCH} ${BUILDLINK_DIR}/include/wctype.h;		\
+	fi
 .endif
 
 .include "../../converters/libiconv/buildlink2.mk"
