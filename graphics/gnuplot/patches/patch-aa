@@ -1,0 +1,15 @@
+--- readline.c.orig	Fri Jan 30 07:58:22 1998
++++ readline.c	Fri Jan 30 08:08:56 1998
+@@ -119,3 +119,3 @@
+ #ifdef SIGTSTP
+-#define TERMIOS
++/*#define TERMIOS*/
+ #include <termios.h>
+@@ -126,2 +126,3 @@
+ #endif 
++#endif /* ISC22 */
+ #ifndef IUCLC
+@@ -129,3 +130,2 @@
+ #endif
+-#endif /* ISC22 */
+ 
