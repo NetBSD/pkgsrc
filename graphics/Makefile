@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2000/11/17 08:06:23 rh Exp $
+# $NetBSD: Makefile,v 1.100 2000/11/25 18:02:48 jtb Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -45,6 +45,7 @@
     SUBDIR += gnuplot
     SUBDIR += gphoto
     SUBDIR += gqview
+    SUBDIR += grap
     SUBDIR += hermes
     SUBDIR += hp2xx
     SUBDIR += imlib
