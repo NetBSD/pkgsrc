@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 1999/12/28 14:08:53 tron Exp $
+# $NetBSD: Makefile,v 1.33 2000/01/02 03:14:58 wiz Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-20.5a
@@ -18,7 +18,7 @@ INSTALL_PROGRAM=${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 WRKSRC=		${WRKDIR}/emacs-20.5
 
 pre-install:
-	@find ${WRKSRC} -type f -name "*.orig" | xargs ${RM} -f
+	@${FIND} ${WRKSRC} -type f -name "*.orig" | xargs ${RM} -f
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/01/23 20:22:26 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/01/02 03:20:12 wiz Exp $
 
 DISTNAME=		um5.5.2
 PKGNAME=		moria-5.5.2
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}/umoria
 
 do-configure:
 	@rm -f ${WRKSRC}/*.[ch] ${WRKSRC}/Makefile
-	@cd ${WRKSRC}; ln -s source/* unix/* .
+	@cd ${WRKSRC}; ${LN} -s source/* unix/* .
 
 post-install:
 	@if [ ! -f /var/games/moria.scores ]; then \
