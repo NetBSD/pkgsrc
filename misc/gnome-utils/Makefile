@@ -1,4 +1,4 @@
-## $NetBSD: Makefile,v 1.47 2002/09/10 16:06:45 wiz Exp $
+## $NetBSD: Makefile,v 1.48 2002/10/06 02:01:19 wiz Exp $
 
 DISTNAME=		gnome-utils-1.4.1
 PKGREVISION=		3
@@ -11,17 +11,20 @@ COMMENT=		Set of useful GNOME utilities and applications
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 BUILD_DEPENDS+=		xml-i18n-tools-[0-9]*:../../textproc/xml-i18n-tools
-DEPENDS+=		libgtop>=1.0.12nb2:../../devel/libgtop
 
 USE_GMAKE=		YES
 USE_X11BASE=		YES
+USE_BUILDLINK2=		YES
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${X11PREFIX}/var/lib
 
-.include "../../devel/libglade/buildlink.mk"
-.include "../../devel/gettext-lib/buildlink.mk"
-.include "../../devel/ncurses/buildlink.mk"
-.include "../../x11/gnome-core/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/libglade/buildlink2.mk"
+.include "../../devel/libgtop/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../lang/guile/buildlink2.mk"
+.include "../../www/gtkhtml/buildlink2.mk"
+.include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
