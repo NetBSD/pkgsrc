@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1030 2002/08/11 09:59:43 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1031 2002/08/11 16:56:51 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -901,6 +901,7 @@ MASTER_SITE_MOZILLA+=	\
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
+	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
 .if defined(DIST_SUBDIR)
@@ -918,7 +919,6 @@ _MASTER_SITE_OVERRIDE:= ${MASTER_SITE_OVERRIDE}
 # Where to put distfiles that don't have any other master site
 MASTER_SITE_LOCAL?= \
 	${MASTER_SITE_BACKUP:=LOCAL_PORTS/} \
-	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 # Derived names so that they're easily overridable.
 DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
