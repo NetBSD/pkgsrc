@@ -1,0 +1,4 @@
+File::MMagic
+
+This module is used to guess file type from its contents like file(1)
+command.
