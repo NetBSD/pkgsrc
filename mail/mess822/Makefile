@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/26 23:26:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/22 00:23:55 schmonz Exp $
 #
 
 DISTNAME=		mess822-0.58
@@ -9,7 +9,7 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/mess822.html
 COMMENT=		Library for parsing Internet mail messages
 
-DEPENDS+=		{qmail>=1.03nb7,netqmail>=1.05}:../../mail/qmail
+DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 
 # We change conf-home from the default "/usr/local" and don't
 # provide compatibilbity symlinks. We also patch hier.c to respect
