@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/21 09:44:10 jun Exp $
+
+--- Makefile.in.org	Mon May 21 18:05:09 2001
++++ Makefile.in
+@@ -29,6 +29,8 @@
+ LIBS		= @LIBS@
+ SOURCES		= $(OBJ:$(OBJ_EXTN)=.c)
+ 
++all: $(BIN)
++
+ $(BIN):	$(OBJ)
+ 	$(CC) $(LDFLAGS) -o $(BIN) $(OBJ) $(LIBS)
+ 
