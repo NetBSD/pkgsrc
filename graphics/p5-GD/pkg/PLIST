@@ -1,9 +1,1 @@
-@comment $NetBSD: PLIST,v 1.2 1999/09/03 17:35:21 kim Exp $
-lib/perl5/man/man3/GD.3
-lib/perl5/site_perl/GD.pm
-lib/perl5/site_perl/auto/GD/autosplit.ix
-lib/perl5/site_perl/qd.pl
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/GD/.packlist
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/GD/GD.bs
-lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/GD/GD.so
-@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/GD
+@comment $NetBSD: PLIST,v 1.3 2000/08/27 07:11:12 jlam Exp $

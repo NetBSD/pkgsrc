@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/12/01 16:39:32 rh Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/27 07:11:24 jlam Exp $
 #
 
 DISTNAME=       	FCGI-0.48
@@ -9,9 +9,10 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=FCGI/}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.fastcgi.com/
 
-USE_PERL5=		YES
+USE_PERL5=		# defined
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/FCGI/.packlist
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL
+	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"
