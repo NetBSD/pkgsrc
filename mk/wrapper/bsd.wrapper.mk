@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.3 2004/09/25 20:38:21 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.4 2004/09/26 21:38:03 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -131,20 +131,24 @@ WRAPPER_VARS+=		_WRAP_PATH
 # _WRAP_ALIASES.CC, _WRAP_ALIASES.LD, etc. are the other names by
 # which each wrapper may be invoked.
 #
-_WRAPPEES+=	AS
-_WRAPPEES+=	CC
+WRAPPEES+=	AS
+WRAPPEES+=	CC
 # XXX The following is a workaround until I can find time to fix this
 # XXX more completely (jlam).
 .if ${CPP:N-*} != ${CC}
-_WRAPPEES+=	CPP
+WRAPPEES+=	CPP
 .endif
-_WRAPPEES+=	CXX
-_WRAPPEES+=	FC
+WRAPPEES+=	CXX
+WRAPPEES+=	FC
 .if defined(USE_X11)
 IMAKE?=		${X11BASE}/bin/imake
-_WRAPPEES+=	IMAKE
+WRAPPEES+=	IMAKE
 .endif
-_WRAPPEES+=	LD
+WRAPPEES+=	LD
+
+.for _wrappee_ in ${WRAPPEES}
+_WRAPPEES+=	${_wrappee_}
+.endfor
 
 _WRAP_ALIASES.AS=	as
 _WRAP_ALIASES.CC=	cc gcc
