@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9400 2005/03/02 22:06:31 magick Exp $
+$NetBSD: CHANGES,v 1.9401 2005/03/02 22:16:59 magick Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1245,3 +1245,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated g-wrap to 1.9.5 [wiz 2005-03-02]
 	Updated gnucash to 1.8.11 [wiz 2005-03-02]
 	Updated xemacs-current to 21.5.19 [magick 2005-03-02]
+	Updated nxtvepg to 2.7.4 [magick 2005-03-02]
