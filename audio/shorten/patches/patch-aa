@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/16 22:23:34 zuntum Exp $
+
+--- Makefile.orig	Tue Oct 10 19:45:29 2000
++++ Makefile
+@@ -2,10 +2,8 @@
+ BOBJS = mkbshift.o
+ COBJS = exit.o array.o Sulawalaw.o
+ SOBJS = main.o shorten.o fixio.o vario.o poly.o lpc.o hsgetopt.o dupfinfo.o riffwave.o license.o
+-CC    = cc
+-CFLAGS= -O
+ 
+-DESTDIR = /usr/local
++DESTDIR = ${PREFIX}
+ prefix = $(DESTDIR)
+ exec_prefix = $(prefix)/bin
+ man_prefix = $(prefix)/man/man$(manext)
+@@ -17,9 +15,9 @@
+ all: shorten shorten.man
+ 
+ install: shorten
+-	mkdir -p $(exec_prefix) $(man_prefix)
+-	cp shorten $(exec_prefix)
+-	cp shorten.1 $(man_prefix)
++	${MKDIR} $(exec_prefix) $(man_prefix)
++	${BSD_INSTALL_PROGRAM} shorten $(exec_prefix)
++	${BSD_INSTALL_MAN} shorten.1 $(man_prefix)
+ 
+ install-debian: shorten
+ 	install -s shorten $(DESTDIR)/usr/bin
