@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1492 2004/08/24 00:27:13 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1493 2004/08/25 04:09:10 schmonz Exp $
 #
 # This file is in the public domain.
 #
@@ -568,7 +568,10 @@ PATCH_DIST_CAT?=	{ case $$patchfile in				\
 PATCH_DIST_CAT.${i:S/=/--/}?=	{ patchfile=${i}; ${PATCH_DIST_CAT}; }
 .endfor
 
-PKG_PATCH_FAIL=								\
+.if empty(PKGSRC_SHOW_PATCH_ERRORMSG:M[yY][eE][sS])
+PKGSRC_PATCH_FAIL=	exit 1
+.else
+PKGSRC_PATCH_FAIL=							\
 if [ -n "${PKG_OPTIONS}" ] || [ -n "${_LOCALPATCHFILES}" ]; then	\
 	${ECHO} "==========================================================================";								\
 	${ECHO};							\
@@ -577,6 +580,7 @@ if [ -n "${PKG_OPTIONS}" ] || [ -n "${_LOCALPATCHFILES}" ]; then	\
 	${ECHO};							\
 	${ECHO} "==========================================================================";								\
 fi; exit 1
+.endif
 
 EXTRACT_SUFX?=		.tar.gz
 
@@ -2085,7 +2089,7 @@ do-patch: uptodate-digest
 	fi;								\
 	${PATCH_DIST_CAT.${i:S/=/--/}} |				\
 	${PATCH} ${PATCH_DIST_ARGS.${i:S/=/--/}}			\
-		|| { ${ECHO} "Patch ${i} failed"; ${PKG_PATCH_FAIL}; }
+		|| { ${ECHO} "Patch ${i} failed"; ${PKGSRC_PATCH_FAIL}; }
 .    endfor
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -2162,11 +2166,11 @@ do-patch: uptodate-digest
 			fuzz="";					\
 			${PATCH} -v > /dev/null 2>&1 && fuzz="${PATCH_FUZZ_FACTOR}"; \
 			${PATCH} $$fuzz ${PATCH_ARGS} < $$i ||		\
-				{ ${ECHO} Patch $$i failed ; ${PKG_PATCH_FAIL}; };	\
+				{ ${ECHO} Patch $$i failed ; ${PKGSRC_PATCH_FAIL}; }; \
 		done;							\
 		if [ "X$$fail" != "X" ]; then				\
 			${ECHO_MSG} "Patching failed due to modified patch file(s): $$fail"; \
-			${PKG_PATCH_FAIL};						\
+			${PKGSRC_PATCH_FAIL};				\
 		fi;							\
 	fi
 .endif
