@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/03/04 09:06:09 tron Exp $
+# $NetBSD: Makefile,v 1.20 2001/03/04 12:03:52 tron Exp $
 
 DISTNAME=	kdbg-1.0.1
 CATEGORIES=	devel kde
@@ -12,7 +12,7 @@ COMMENT=	Graphical User Interface around gdb using KDE
 BUILD_DEPENDS+= msgfmt:../../devel/gettext
 DEPENDS+=	autoconf-2.13:../autoconf
 DEPENDS+=	automake-1.4:../automake
-DEPENDS+=	kdebase-1.*:../../x11/kde
+DEPENDS+=	kdevelop-1.*:../kdevelop
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
