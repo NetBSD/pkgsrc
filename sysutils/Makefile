@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2000/02/18 15:21:28 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2000/02/21 16:46:14 pooka Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/09/30 06:14:59 asami Exp
 #
 
@@ -13,6 +13,7 @@
     SUBDIR += apcupsd
     SUBDIR += aperture
     SUBDIR += asapm
+    SUBDIR += bchunk
     SUBDIR += cdrdao
     SUBDIR += cdrecord
     SUBDIR += cfengine
