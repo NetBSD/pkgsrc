@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/05/04 21:42:52 seb Exp $
+# $NetBSD: Makefile,v 1.7 2003/06/23 10:43:35 seb Exp $
 #
 
 DISTNAME=	elib-1.0
@@ -18,6 +18,8 @@ MAKEFLAGS+=	EMACS=${EMACS_FLAVOR}
 NO_CONFIGURE=	# set
 USE_GMAKE=	# set
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=	YES
 INFO_FILES=	elib.info
 
 SRCS=	stack-f.el stack-m.el queue-f.el queue-m.el elib-node.el	\
@@ -30,5 +32,4 @@ do-install:
 			${EMACS_LISPPREFIX}/elib
 	cd ${WRKSRC} && ${INSTALL_DATA} elib.info* ${PREFIX}/info
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
