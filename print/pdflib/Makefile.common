@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2001/10/01 20:51:45 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2001/12/04 15:56:42 jlam Exp $
 
 DISTNAME=		pdflib-${PDFLIB_DIST_VERS}
 CATEGORIES=		print
@@ -11,12 +11,9 @@ HOMEPAGE=		http://www.pdflib.com/pdflib/index.html
 #
 # PDFLIB_DIST_VERS	version number on the distfile
 # PDFLIB_BASE_VERS	pkgsrc-mangled version number (convert pl -> .)
-# PDFLIB_PKG_VERS	pkgsrc revisions (nbX, etc.)
-# PDFLIB_VERS		pkgsrc version number of package
 #
 PDFLIB_DIST_VERS=	4.0.1
-PDFLIB_PKG_VERS?=	# empty
-PDFLIB_VERS=		${PDFLIB_DIST_VERS}${PDFLIB_PKG_VERS}
+PDFLIB_BASE_VERS=	4.0.1
 
 DISTINFO_FILE=		${.CURDIR}/../pdflib/distinfo
 PATCHDIR=		${.CURDIR}/../pdflib/patches
