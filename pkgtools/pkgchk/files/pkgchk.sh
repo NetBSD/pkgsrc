@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.27 2002/03/10 23:23:40 abs Exp $
+# $Id: pkgchk.sh,v 1.28 2002/03/17 22:47:41 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -9,7 +9,7 @@ PATH=/usr/sbin:${PATH}
 check_packages_installed()
     {
     UPDATE_TODO=
-    INSTALL_TODO=
+    MISSING_TODO=
     MISMATCH_TODO=
 
     for pkgdir in $* ; do
@@ -41,9 +41,7 @@ check_packages_installed()
 		fi
 	    else
 		echo_n "missing"
-		if [ -n "$opt_a" ] ; then
-		    INSTALL_TODO="$INSTALL_TODO $PKGNAME $pkgdir"
-		fi
+		MISSING_TODO="$MISSING_TODO $PKGNAME $pkgdir"
 	    fi
 	    if [ -f $PACKAGES/All/$PKGNAME.tgz ] ;then
 		echo_n " (binary package available)"
@@ -118,7 +116,7 @@ extract_variables()
 get_build_ver()
     {
     files=""
-    for f in ${FILESDIR}/* ${PKGDIR}/*; do
+    for f in Makefile ${FILESDIR}/* ${PKGDIR}/*; do
 	if [ -f $f ];then
 	    files="$files $f"
 	fi
@@ -142,6 +140,19 @@ get_build_ver()
     cat $files | ${GREP} '\$NetBSD'
     }
 
+pkg_fetch()
+    {
+    PKGNAME=$1
+    PKGDIR=$2
+
+    run_cmd "cd $PKGSRCDIR/$PKGDIR && ${MAKE} fetch-list | sh"
+    if [ -n "$FAIL" ]; then
+	FAIL_DONE=$FAIL_DONE" "$PKGNAME
+    else
+	FETCH_DONE=$FETCH_DONE" "$PKGNAME
+    fi
+    }
+
 pkg_install()
     {
     PKGNAME=$1
@@ -151,7 +162,7 @@ pkg_install()
     if [ -d /var/db/pkg/$PKGNAME ];then
 	echo "$PKGNAME installed in previous stage"
     elif [ -n "$opt_b" -a -f $PACKAGES/All/$PKGNAME.tgz ] ; then
-	if [ $INSTALL = U ];then
+	if [ $INSTALL = Update ];then
 	    PKG=`echo $PKGNAME | sed 's/-[0-9].*//'`
 	    run_cmd "pkg_delete $PKG" 1
 	    if [ -n "$FAIL" ]; then
@@ -170,11 +181,31 @@ pkg_install()
 
     if [ -n "$FAIL" ]; then
 	FAIL_DONE=$FAIL_DONE" "$PKGNAME
-    elif [ $INSTALL = U ];then
+    elif [ $INSTALL = Update ];then
 	UPDATE_DONE=$UPDATE_DONE" "$PKGNAME
     else
 	INSTALL_DONE=$INSTALL_DONE" "$PKGNAME
     fi
+    }
+
+pkg_fetchlist()
+    {
+    PKGLIST=$@
+    echo "[ Fetch...]"
+    while [ $# != 0 ]; do 
+	pkg_fetch $1 $2
+	shift ; shift;
+    done
+    }
+
+pkg_installlist()
+    {
+    INSTALL=$1 ; shift
+    echo "[ $INSTALL...]" ; shift
+    while [ $# != 0 ]; do
+	pkg_install $1 $2 $INSTALL
+	shift ; shift;
+    done
     }
 
 run_cmd()
@@ -197,7 +228,7 @@ run_cmd()
     fi
     }
 
-args=`getopt BC:D:U:abchiknrsuv $*`
+args=`getopt BC:D:U:abcfhiknrsuv $*`
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -211,6 +242,7 @@ while [ $# != 0 ]; do
 	-a )	opt_a=1 ; opt_c=1 ;;
 	-b )	opt_b=1 ;;
 	-c )	opt_c=1 ;;
+	-f )	opt_f=1 ;;
 	-h )	opt_h=1 ;;
 	-i )	opt_i=1 ;;
 	-k )	opt_k=1 ;;
@@ -243,6 +275,7 @@ if [ -n "$opt_h" -o $# != 1 ];then
 	-a      Add all missing packages (implies -c)
 	-b      Limit installations to binary packages
 	-c      Check installed packages against pkgchk.conf
+	-f      Perform a 'make fetch' for all required packages
 	-h      This help
 	-i	Check versions of installed packages (not using pkgchk.conf)
 	-k	Continue with further packages if errors are encountered
@@ -385,8 +418,6 @@ if [ -n "$opt_r" -a -n "$MISMATCH_TODO" ]; then
 fi
 
 if [ -n "$UPDATE_TODO" ];then
-    echo "[ Update... ]"
-
     # Generate list including packages which depend on updates
     #
     set -- $UPDATE_TODO
@@ -423,22 +454,17 @@ if [ -n "$UPDATE_TODO" ];then
 	}
     }
     '`
-
-    set -- $UPDATE_TODO
-    while [ $# != 0 ]; do
-	pkg_install $1 $2 U
-	shift ; shift;
-    done
 fi
 
-if [ -n "$INSTALL_TODO" ];then
-    echo ""
-    echo "[ Install... ]"
-    set -- $INSTALL_TODO
-    while [ $# != 0 ]; do
-	pkg_install $1 $2 I
-	shift ; shift;
-    done
+if [ -n "$opt_f" ] ; then
+    pkg_fetchlist $UPDATE_TODO
+    pkg_fetchlist $MISSING_TODO
+fi
+if [ -n "$opt_u" ] ; then
+    pkg_installlist Update  $UPDATE_TODO
+fi
+if [ -n "$opt_a" ] ; then
+    pkg_installlist Install $MISSING_TODO
 fi
 
 if [ -n "$UPDATE_DONE" ];then
