@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2000/08/03 23:09:22 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/10/15 17:19:52 frueauf Exp $
 bin/nessus-config
 include/nessus/getopt.h
 include/nessus/harglists.h
@@ -11,16 +11,16 @@ include/peks/messages.h
 include/peks/peks.h
 lib/libhosts_gatherer.a
 lib/libhosts_gatherer.la
-lib/libhosts_gatherer.so.1.4
+lib/libhosts_gatherer.so.1.5
 lib/libnessus.a
 lib/libnessus.la
-lib/libnessus.so.1.4
+lib/libnessus.so.1.5
 lib/libpcap-nessus.a
 lib/libpcap-nessus.la
-lib/libpcap-nessus.so.1.4
+lib/libpcap-nessus.so.1.5
 lib/libpeks.a
 lib/libpeks.la
-lib/libpeks.so.8.13
+lib/libpeks.so.8.15
 man/man1/nessus-config.1
 @dirrm include/peks
 @dirrm include/nessus/net
