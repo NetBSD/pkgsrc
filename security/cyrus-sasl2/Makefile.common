@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/08/16 09:06:41 recht Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/09/13 19:08:50 jlam Exp $
 #
 # This Makefile fragment should be included _below_ and SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
@@ -23,7 +23,8 @@ USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+MAKE_ENV+=		SHLIBTOOL="${PKGSHLIBTOOL}"
 
 .include "../../mk/bsd.prefs.mk"
 
