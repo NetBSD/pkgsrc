@@ -2,7 +2,7 @@ LIB 	= quadpack
 
 LIBDIR	= ${PREFIX}/lib
 FORTRAN = %%FORTRAN%%
-FOPTS	= -O3
+FFLAGS	= -O3
 
 all:	lib$(LIB)
 
@@ -19,11 +19,11 @@ OBJ= 	dqag.o dqage.o dqagi.o dqagie.o dqagp.o dqagpe.o dqags.o	\
 	qwgtc.o qwgtf.o qwgts.o
 
 lib$(LIB):	$(OBJ)
-	@$(LIBTOOL) --mode=link $(FORTRAN) $(FFLAGS) $(FOPTS) \
-	-O -o lib$(LIB).la $(OBJ:.o=.lo) -rpath $(LIBDIR)
+	@$(LIBTOOL) --mode=link $(FORTRAN) $(FFLAGS) \
+	-O -o lib$(LIB).la $(OBJ:.o=.lo) -rpath $(LIBDIR) --version-info 0:0
 
 .f.o:
-	@$(LIBTOOL) --mode=compile $(FORTRAN) $(FFLAGS) $(FOPTS) -c $*.f
+	@$(LIBTOOL) --mode=compile $(FORTRAN) $(FFLAGS) -c $*.f
 
 install:	lib$(LIB)
 	@$(LIBTOOL) --mode=install install -c lib$(LIB).la $(LIBDIR)
