@@ -1,3 +1,5 @@
-$NetBSD: patch-sum,v 1.6 2001/03/28 02:46:08 jwise Exp $
+$NetBSD: patch-sum,v 1.7 2001/03/29 23:26:24 jwise Exp $
 
-SHA1 (patch-aa) = 2e81b9a95672822158825e25b6ed5207a88456b9
+SHA1 (patch-aa) = 7d2810e5306c68e416f04b26e505504924488f98
+SHA1 (patch-ab) = c51b4db3fd61e31d37e54f5f58a1ef33094bb13c
+SHA1 (patch-ac) = 0ce9657b32a5ddc0029b9790ac00990f8a83a0d6
