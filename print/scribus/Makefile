@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/01 05:48:22 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/01 05:53:29 jlam Exp $
 
 DISTNAME=	scribus-0.7.5
 CATEGORIES=	print
@@ -8,7 +8,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://web2.altmuehlnet.de/fschmid/
 COMMENT=	Publishing layout with graphical interface
 
-USE_PTHREAD=    require
+PTHREAD_OPTS+=	require
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
