@@ -1,7 +1,7 @@
-$NetBSD: patch-db,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-db,v 1.2 2001/09/05 03:52:48 groo Exp $
 
---- ../../collects/launcher/launcherr.ss.orig	Sat May 20 16:10:38 2000
-+++ ../../collects/launcher/launcherr.ss	Sat May 20 16:22:05 2000
+--- ../collects/launcher/launcherr.ss.orig	Sat May 20 16:10:38 2000
++++ ../collects/launcher/launcherr.ss	Sat May 20 16:22:05 2000
 @@ -170,15 +170,14 @@
  		     "# This script was created by make-~a-launcher" newline
  		     newline

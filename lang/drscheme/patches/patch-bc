@@ -1,7 +1,7 @@
-$NetBSD: patch-bc,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-bc,v 1.2 2001/09/05 03:52:48 groo Exp $
 
---- gc/dyn_load.c.orig	Thu Oct 21 22:06:14 1999
-+++ gc/dyn_load.c	Mon Jan  3 09:10:01 2000
+--- mzscheme/gc/dyn_load.c.orig	Thu Oct 21 22:06:14 1999
++++ mzscheme/gc/dyn_load.c	Mon Jan  3 09:10:01 2000
 @@ -48,7 +48,8 @@
  #if !defined(SUNOS4) && !defined(SUNOS5DL) && !defined(IRIX5) && \
      !defined(MSWIN32) && !(defined(ALPHA) && defined(OSF1)) && \

@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-ag,v 1.2 2001/09/05 03:52:47 groo Exp $
 
---- cmdline.inc.orig	Thu Oct 21 22:06:11 1999
-+++ cmdline.inc	Sat Jan  8 23:19:04 2000
+--- mzscheme/cmdline.inc.orig	Thu Oct 21 22:06:11 1999
++++ mzscheme/cmdline.inc	Sat Jan  8 23:19:04 2000
 @@ -432,7 +432,7 @@
  # ifdef USE_BEOS_SNOOZE
  		            "(#%lambda () \"/boot/apps/plt/collects\")"

@@ -1,7 +1,7 @@
-$NetBSD: patch-dd,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-dd,v 1.2 2001/09/05 03:52:48 groo Exp $
 
---- ../../bin/drscheme-jr.orig	Sat May 20 16:34:38 2000
-+++ ../../bin/drscheme-jr	Sat May 20 16:35:23 2000
+--- ../bin/drscheme-jr.orig	Sat May 20 16:34:38 2000
++++ ../bin/drscheme-jr	Sat May 20 16:35:23 2000
 @@ -1,11 +1,10 @@
  #!/bin/sh
  # This script was created by make-mzscheme-launcher

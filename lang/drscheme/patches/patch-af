@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-af,v 1.2 2001/09/05 03:52:47 groo Exp $
 
---- ../../bin/mzc.orig	Thu May 14 00:35:57 1998
-+++ ../../bin/mzc	Sat Jan  8 23:21:59 2000
+--- ../bin/mzc.orig	Thu May 14 00:35:57 1998
++++ ../bin/mzc	Sat Jan  8 23:21:59 2000
 @@ -1,11 +1,9 @@
  #!/bin/sh
 -# This script was created by make-mzscheme-launcher

@@ -1,7 +1,7 @@
-$NetBSD: patch-bd,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-bd,v 1.2 2001/09/05 03:52:48 groo Exp $
 
---- gc/misc.c.orig	Thu Oct 21 22:06:15 1999
-+++ gc/misc.c	Mon Jan  3 10:21:54 2000
+--- mzscheme/gc/misc.c.orig	Thu Oct 21 22:06:15 1999
++++ mzscheme/gc/misc.c	Mon Jan  3 10:21:54 2000
 @@ -58,6 +58,10 @@
  #   endif
  # endif

@@ -1,7 +1,7 @@
-$NetBSD: patch-be,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-be,v 1.2 2001/09/05 03:52:48 groo Exp $
 
---- gc/os_dep.c.orig	Thu Oct 21 22:06:15 1999
-+++ gc/os_dep.c	Thu Dec 30 22:15:23 1999
+--- mzscheme/gc/os_dep.c.orig	Thu Oct 21 22:06:15 1999
++++ mzscheme/gc/os_dep.c	Thu Dec 30 22:15:23 1999
 @@ -156,6 +156,19 @@
    }
  #endif

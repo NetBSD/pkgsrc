@@ -1,7 +1,7 @@
-$NetBSD: patch-bg,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+$NetBSD: patch-bg,v 1.2 2001/09/05 03:52:48 groo Exp $
 
 --- /dev/null	Thu Dec 30 22:01:07 1999
-+++ gc/sparc_netbsd_mach_dep.s	Thu Dec 30 22:19:46 1999
++++ mzscheme/gc/sparc_netbsd_mach_dep.s	Thu Dec 30 22:19:46 1999
 @@ -0,0 +1,34 @@
 +!	SPARCompiler 3.0 and later apparently no longer handles
 +!	asm outside functions.  So we need a separate .s file
