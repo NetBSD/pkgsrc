@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2004/01/13 23:29:07 xtraeme Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2004/03/08 01:48:54 kristerw Exp $
 #
 # This Makefile fragment is included by packages that use blt.
 #
@@ -15,6 +15,13 @@ BUILDLINK_PKGSRCDIR.blt?=		../../x11/blt
 EVAL_PREFIX+=	BUILDLINK_PREFIX.blt=blt
 BUILDLINK_PREFIX.blt_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.blt+=	include/blt.h
+BUILDLINK_FILES.blt+=	include/bltBind.h
+BUILDLINK_FILES.blt+=	include/bltChain.h
+BUILDLINK_FILES.blt+=	include/bltHash.h
+BUILDLINK_FILES.blt+=	include/bltList.h
+BUILDLINK_FILES.blt+=	include/bltPool.h
+BUILDLINK_FILES.blt+=	include/bltTree.h
+BUILDLINK_FILES.blt+=	include/bltVector.h
 BUILDLINK_FILES.blt+=	lib/libBLT.*
 BUILDLINK_FILES.blt+=	lib/libBLT24.*
 
