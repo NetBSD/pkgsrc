@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7304 2004/10/01 00:09:16 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7305 2004/10/01 08:46:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4502,3 +4502,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pearpc to 0.3.1 [xtraeme 2004-10-01]
 	Added sun-jdk15-5.0 [rh 2004-10-01]
 	Updated dosbox to 0.62 [xtraeme 2004-10-01]
+	Updated libntlm to 0.3.6 [wiz 2004-10-01]
