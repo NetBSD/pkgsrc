@@ -1,13 +1,31 @@
-$NetBSD: patch-aa,v 1.3 2002/06/19 16:02:27 ad Exp $
+$NetBSD: patch-aa,v 1.4 2003/08/02 17:00:10 jmmv Exp $
 
---- scripts/exim_install.orig	Thu Jun 13 12:06:12 2002
-+++ scripts/exim_install	Thu Jun 13 12:07:28 2002
-@@ -42,6 +42,8 @@
+--- scripts/exim_install.orig	2002-07-22 10:59:47.000000000 +0200
++++ scripts/exim_install
+@@ -42,6 +42,8 @@ INFO_DIRECTORY=`sed -n -e '/^ *INFO_DIRE
  NO_SYMLINK=`sed -n         -e '/^ *NO_SYMLINK *=/{s/^[^=]*= *//; s/ \{1,\}#.*//;s/ *$//;h;}' -e '${g;p;}' Makefile`
  EXE=`sed -n                       -e '/^ *EXE *=/{s/^[^=]*= *//; s/ \{1,\}#.*//;s/ *$//;h;}' -e '${g;p;}' Makefile`
  
-+INST_CONFIGURE_FILE=$CONFIGURE_FILE.example
++INST_CONFIGURE_FILE=${PREFIX}/share/examples/exim/configure
 +
  # Allow INST_xx to over-ride xx
  case "$INST_BIN_DIRECTORY" in ?*) BIN_DIRECTORY="$INST_BIN_DIRECTORY";; esac
  case "$INST_CONFIGURE_FILE" in ?*) CONFIGURE_FILE="$INST_CONFIGURE_FILE";; esac
+@@ -278,15 +280,8 @@ if [ ! -f ${CONFIGURE_FILE} ]; then
+     echo $com "*** Exim installation ${ver}failed ***"
+     exit 1
+   fi
+-  if [ ! -f /etc/aliases ]; then
+-    echo $com '****'
+-    echo $com Installing a dummy /etc/aliases file because you do not have
+-    echo $com one, and the default configuration requires it. You should
+-    echo $com edit /etc/aliases and at least create an alias for postmaster.
+-    echo $com '***'
+-    echo ${CP} ../src/aliases.default /etc/aliases
+-    ${real} ${CP} ../src/aliases.default /etc/aliases
+-  fi
++  echo ${CP} ../src/aliases.default ${PREFIX}/share/examples/exim/aliases
++  ${real} ${CP} ../src/aliases.default ${PREFIX}/share/examples/exim/aliases
+ else
+   echo $com Configuration file ${CONFIGURE_FILE} already exists
+ fi

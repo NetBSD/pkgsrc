@@ -1,19 +1,20 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/06/19 16:02:26 ad Exp $
+$NetBSD: MESSAGE,v 1.3 2003/08/02 17:00:08 jmmv Exp $
 
 To use exim, you will need to perform the following steps manually; it is
 inappropriate for this package to make the changes for you.
 
-1. Set the correct ownership and permissions on the exim log directory:
-   chown mail:mail /var/log/exim && chmod 750 /var/log/exim
-3. Read the documentation. Edit ${PREFIX}/etc/exim/configure to taste.
-4. Back-up /etc/mailer.conf to /etc/mailer.conf.sendmail.
-   Copy ${PREFIX}/etc/exim/mailer.conf.exim to /etc/mailer.conf.
-5. Set 'sendmail=NO', 'exim=YES' and exim_flags to some sane value in
-   /etc/rc.conf (previously it was "-bd -q15m"). Copy ${PREFIX}/etc/rc.d/exim
-   to /etc/rc.d.
-6. Configuring log rotation is dependant on personal taste and the version of
-   NetBSD in use. See weekly.conf(5), newsyslog(8), exicyclog and eximstats.
+1. Read the documentation.  Edit ${PKG_SYSCONFDIR}/configure to taste.
+2. Edit ${PKG_SYSCONFDIR}/aliases to taste (or override it with the default
+   /etc/aliases system file).
+3. Back-up /etc/mailer.conf to /etc/mailer.conf.sendmail.
+   Copy ${EGDIR}/mailer.conf to /etc/mailer.conf.
+4. Set 'sendmail=NO', 'exim=YES' and exim_flags to some sane value in
+   /etc/rc.conf (previously it was "-bd -q15m").
+   Copy ${PREFIX}/etc/rc.d/exim to /etc/rc.d.
+5. Configuring log rotation is dependant on personal taste and the version
+   of NetBSD in use.  See weekly.conf(5), newsyslog(8), exicyclog and
+   eximstats.
 
 Also note:
 
