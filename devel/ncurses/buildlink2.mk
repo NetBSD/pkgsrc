@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/01/21 11:05:17 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/02/15 00:36:41 salo Exp $
 #
 # Optionally define:
 #
@@ -89,10 +89,10 @@ ncurses-extra-includes-buildlink:
 	extra_includes="						\
 		include/term.h						\
 	";								\
-	for file in $${extra_includes}; do				\
-		if [ ! -f ${BUILDLINK_DIR}/$${file} ]; then		\
-			${ECHO_BUILDLINK_MSG} "Touching extra ncurses header ($${file}) in ${BUILDLINK_DIR}."; \
-			${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_DIR}/$${file}; \
+	for f in $${extra_includes}; do				\
+		if [ ! -f ${BUILDLINK_DIR}/$${f} ]; then		\
+			${ECHO_BUILDLINK_MSG} "Touching extra ncurses header ($${f}) in ${BUILDLINK_DIR}."; \
+			${TOUCH} ${TOUCH_FLAGS} ${BUILDLINK_DIR}/$${f}; \
 		fi;							\
 	done
 
