@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2000/07/14 04:44:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2000/07/15 01:23:57 jlam Exp $
 ${PGUSER}/.profile.pgsql
 ${PGUSER}/post-install-notes
 bin/createdb
@@ -1029,19 +1029,3 @@ share/postgresql/pg_hba.conf.sample
 share/postgresql/pg_ident.conf.sample
 share/postgresql/pg_options.sample
 share/postgresql/postmaster.opts.default.sample
-@dirrm share/postgresql
-@dirrm share/doc/postgresql
-@dirrm share/doc/html/postgresql/user
-@dirrm share/doc/html/postgresql/tutorial
-@dirrm share/doc/html/postgresql/programmer
-@dirrm share/doc/html/postgresql/postgres
-@dirrm share/doc/html/postgresql/admin
-@dirrm share/doc/html/postgresql
-@dirrm include/pgsql/utils
-@dirrm include/pgsql/libpq
-@dirrm include/pgsql/libpq++
-@dirrm include/pgsql/lib
-@dirrm include/pgsql/executor
-@dirrm include/pgsql/commands
-@dirrm include/pgsql/access
-@dirrm include/pgsql
