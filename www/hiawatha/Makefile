@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 22:55:35 grant Exp $
+# $NetBSD: Makefile,v 1.12 2003/08/04 11:00:31 jmmv Exp $
 #
 
 DISTNAME=	hiawatha
 PKGNAME=	hiawatha-0.1
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}
 CATEGORIES=	textproc www
 MASTER_SITES=	${HOMEPAGE} ${MASTER_SITE_BACKUP}
@@ -19,38 +20,40 @@ DEPENDS+=	saxon-[0-9]*:../../textproc/saxon
 NO_CONFIGURE=
 NO_BUILD=
 
+USE_BUILDLINK2=	yes
 USE_JAVA=	run
-DIST_SUBDIR=	${PKGNAME}
+USE_PKGINSTALL=	yes
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 EXTRACT_CMD=	unzip -aq ${DOWNLOADED_DISTFILE}
 
+RCD_SCRIPTS=	hiawatha
+
+EGDIR=		${PREFIX}/share/examples/hiawatha
+CONF_FILES=	${EGDIR}/hiawatha.cfg ${PKG_SYSCONFDIR}/hiawatha.cfg
+
+OWN_DIRS=	/var/spool/hiawatha
+
 post-extract:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/hiawatha.sh \
-		> ${WRKDIR}/hiawatha.sh
-	${SED} -e "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/hiawatha.cfg \
-		> ${WRKDIR}/hiawatha.cfg
+	${SED}  -e "s,@PREFIX@,${PREFIX},g" \
+		-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g" \
+		< ${FILESDIR}/hiawatha.cfg > ${WRKDIR}/hiawatha.cfg
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java/hiawatha
 	${INSTALL_DATA} ${WRKSRC}/hiawatha.jar ${PREFIX}/lib/java/hiawatha
 	${INSTALL_DATA} ${WRKSRC}/xsls.jar ${PREFIX}/lib/java/hiawatha
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/hiawatha
-	${INSTALL_DATA} ${WRKSRC}/simple.cfg \
-		${PREFIX}/share/examples/hiawatha
-	${INSTALL_DATA} ${WRKSRC}/SeeAlso/pault_com.cfg \
-		${PREFIX}/share/examples/hiawatha
-	if [ ! -f ${PREFIX}/etc/hiawatha.cfg ]; \
-	then \
-		${INSTALL_DATA} ${WRKDIR}/hiawatha.cfg ${PREFIX}/etc \
-	; fi
-	${INSTALL_DATA} ${WRKDIR}/hiawatha.cfg ${PREFIX}/share/examples/hiawatha
-	cd ${WRKSRC} && ${PAX} -s '/^WEBROOT/pault.com/' -rw WEBROOT ${PREFIX}/share/examples/hiawatha
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/hiawatha/WEBROOT
-	${INSTALL_DATA} ${FILESDIR}/index.xml ${PREFIX}/share/examples/hiawatha/WEBROOT
-	${INSTALL_DATA} ${FILESDIR}/index.xsl ${PREFIX}/share/examples/hiawatha/WEBROOT
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/hiawatha/WEBROOT/images
-	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/examples/hiawatha/WEBROOT/images
-	${INSTALL_SCRIPT} ${WRKDIR}/hiawatha.sh ${PREFIX}/etc/rc.d/hiawatha
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/simple.cfg ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/SeeAlso/pault_com.cfg ${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/hiawatha.cfg ${EGDIR}
+	cd ${WRKSRC} && ${PAX} -s '/^WEBROOT/pault.com/' -rw WEBROOT ${EGDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}/WEBROOT
+	${INSTALL_DATA} ${FILESDIR}/index.xml ${EGDIR}/WEBROOT
+	${INSTALL_DATA} ${FILESDIR}/index.xsl ${EGDIR}/WEBROOT
+	${INSTALL_DATA_DIR} ${EGDIR}/WEBROOT/images
+	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${EGDIR}/WEBROOT/images
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
