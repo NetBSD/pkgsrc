@@ -1,5 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2003/05/06 17:42:36 jmmv Exp $
+$NetBSD: MESSAGE,v 1.6 2004/03/11 23:33:09 reed Exp $
+
+Use the visudo(8) command to edit the sudoers file.
 
 If you are upgrading from a version of sudo prior to 1.6, please read
 
