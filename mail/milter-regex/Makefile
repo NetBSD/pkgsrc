@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2004/06/11 23:11:48 jdarrow Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/11 23:17:50 jdarrow Exp $
 #
 
 DISTNAME=	milter-regex-1.5
 CATEGORIES=	mail
 MASTER_SITES=	http://www.benzedrine.cx/
 
-MAINTAINER=	manu@NetBSD.org
+MAINTAINER=	jdarrow@NetBSD.org
 HOMEPAGE=	http://www.benzedrine.cx/milter-regex.html
 COMMENT=	Milter enabling regular expression filtering
 
