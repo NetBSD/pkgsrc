@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2260 2004/10/26 17:16:21 reed Exp $
+$NetBSD: TODO,v 1.2261 2004/10/26 18:03:57 reed Exp $
 
 Suggested new packages
 ======================
@@ -172,6 +172,64 @@ Suggested new packages
 	doxywizard
 	QT-based wizard for doxygen documentation generator.
 	See pkgsrc/devel/doxygen
+
+	tkfontsel
+	http://ftp.sunet.se/pub/lang/tcl/sorted/graphics/tkfontsel/
+	http://ftp.se.kde.org/pub/lang/tcl/sorted/packages-7.6/graphics/tkfontsel/
+	Simple Tk font browser.
+
+	xftlsfonts
+	FreeType font list displayer.
+
+	gtkfontsel
+	http://packages.qa.debian.org/g/gtkfontsel.html
+	GTK-based utility for browsing, previewing and selecting a X11 font.
+
+	choosefont
+	http://choosefont.sourceforge.net/
+	Utility for browsing, previewing and selecting a X11 font.
+
+	rkhunter
+	http://www.rkhunter.org/projects/rootkit_hunter.html
+	Security auditing scanner for rootkits, backdoors, local exploits and more.
+
+	logrider
+	http://ilya-evseev.narod.ru/posix/logrider/
+	Scan system logs for alert/hacking signatures based on set of static filters.
+
+	swatch
+	http://swatch.sourceforge.net/
+	Active log file monitoring tool.
+
+	ardour
+	http://ardour.org/
+	Digital audio workstation with plugins, professional mixer, multichannel recording, and more.
+
+	libdisassemble
+	http://www.immunitysec.com/resources-freesoftware.shtml
+	http://lwn.net/Articles/98988/?format=printable
+	Python library that will disassemble X86.
+
+	cenon
+	http://www.cenon.info/
+	Vector graphics and desktop publishing tool that supports many formats.
+
+	pdftk
+	http://www.accesspdf.com/pdftk/
+	PDF manipulation tool for merging, splitting, decrypting, encrypting, and more.
+	[use Java classes in C++ program]
+
+	guipdftk
+	http://de.geocities.com/dpaehl2004/guipdftk/
+	GUI for Pdftk for PDF manipulation
+
+	ttf-freefont
+	http://packages.qa.debian.org/t/ttf-freefont.html
+	TrueType fonts covering the UCS character sets similar to Helvetica, Times and Courier.
+
+	LingoTeach
+	http://www.lingoteach.org/
+	Language teaching program with various lessons (with GTK+ interface).
 
 Suggested package updates
 =========================
