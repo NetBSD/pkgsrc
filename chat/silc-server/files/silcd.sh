@@ -1,27 +1,29 @@
 #!/bin/sh
 #
-# $NetBSD: silcd.sh,v 1.2 2001/12/17 00:43:11 hubertf Exp $
+# $NetBSD: silcd.sh,v 1.3 2002/01/26 14:43:17 hubertf Exp $
 #
 # PROVIDE: silcd
 # REQUIRE: DAEMON
+#
+# To start silcd at startup, copy this script to /etc/rc.d and set
+# silcd=YES in /etc/rc.conf.
 
 . /etc/rc.subr
 
 name="silcd"
+rcvar=$name
+confdir="@PKG_SYSCONFDIR@"
+required_files="$confdir/silcd.conf"
+required_dirs="/var/log/silcd"
 pidfile="/var/run/${name}.pid"
 command="@PREFIX@/sbin/silcd"
 start_precmd="silcd_precmd"
 stop_cmd="silcd_stop"
-confdir="@SILCD_CONF_DIR@"
 
 silcd_precmd()
 {
-	if [ -f $confdir/silcd.conf ]; then
-		if [ ! -f $confdir/silcd.prv ]; then
-			$command -C $confdir
-		fi
-	else
-		warn "Cannot open $confdir/silcd.conf"
+	if [ ! -f $confdir/silcd.prv ]; then
+		$command -C $confdir
 	fi
 }
 
@@ -36,10 +38,6 @@ silcd_stop()
 		exit 1
 	fi
 
-	if ! eval $_precmd && [ -z "$_rc_force_run" ]; then
-		return 1
-	fi      
-
 	echo "Stopping ${name}."
 	_doit=\
 "${_user:+su -m $_user -c '}kill -${sig_stop:-TERM} $_pid${_user:+'}"
@@ -51,4 +49,5 @@ silcd_stop()
 	fi
 }
 
+load_rc_config $name
 run_rc_command "$1"
