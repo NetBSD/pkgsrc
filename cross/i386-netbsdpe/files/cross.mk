@@ -32,7 +32,7 @@ BINUTILS_WRKSRC=	${WRKDIR}/${BINUTILS_DISTNAME}
 CROSS_DISTFILES+=	${BINUTILS_DISTNAME}.tar.gz
 MASTER_SITES+=		${MASTER_SITE_GNU:=binutils/}
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
-DEPENDS+=		cross-binutils-2.9.1.1:../../cross/binutils
+DEPENDS+=		cross-binutils>=2.9.1.1:../../cross/binutils
 PLIST_PRE+=		${COMMON_DIR}/PLIST-binutils
 
 AS_FOR_TARGET=		${BINUTILS_WRKSRC}/gas/as-new
