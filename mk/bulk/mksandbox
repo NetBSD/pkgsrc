@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.38 2004/10/24 22:54:25 agc Exp $
+# $NetBSD: mksandbox,v 1.38.2.1 2005/02/11 15:27:57 tv Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -87,7 +87,7 @@ Linux)
 	mountprog=/sbin/mount
 	paxprog=""
 	sedprog=/bin/sed
-	sandboxMountDirs="/proc"
+	sandboxMountDirs="$sandboxMountDirs /proc"
 	;;
 NetBSD)
 	bmakeprog=make

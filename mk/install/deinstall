@@ -1,97 +1,24 @@
 # start of deinstall
 #
-# $NetBSD: deinstall,v 1.29 2004/10/11 22:04:19 reed Exp $
-
-eval set -- ${PKG_USERS}
-for userset; do
-	user=`
-		IFS=":"
-		set -- ${userset}
-		${ECHO} "$1"
-	`
-	ALL_USERS="${ALL_USERS} \"${user}\""
-done
-eval set -- ${PKG_GROUPS}
-for groupset; do
-	group=`
-		IFS=":"
-		set -- ${groupset}
-		${ECHO} "$1"
-	`
-	ALL_GROUPS="${ALL_GROUPS} \"${group}\""
-done
-
-eval set -- ${CONF_FILES} ${SUPPORT_FILES}
-while [ $# -gt 0 ]; do
-	samplefile="$1"; file="$2"
-	shift; shift
-	ALL_FILES="${ALL_FILES} \"${samplefile}\" \"${file}\""
-	VIEW_FILES="${VIEW_FILES} \"${file}\""
-done
-if [ "${_PKG_RCD_SCRIPTS}" = "YES" ]; then
-	eval set -- ${RCD_SCRIPTS}
-	for script; do
-		samplefile="${PKG_PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/${script}"
-		file="${RCD_SCRIPTS_DIR}/${script}"
-		shift
-		ALL_FILES="${ALL_FILES} \"${samplefile}\" \"${file}\""
-	done
-fi
-eval set -- ${CONF_FILES_PERMS} ${SUPPORT_FILES_PERMS}
-while [ $# -gt 0 ]; do
-	samplefile="$1"; file="$2"; owner="$3"; group="$4"; mode="$5"
-	shift; shift; shift; shift; shift
-	ALL_FILES="${ALL_FILES} \"${samplefile}\" \"${file}\""
-	VIEW_FILES="${VIEW_FILES} \"${file}\""
-done
-
-eval set -- ${PKG_SYSCONFDIR} ${RCD_SCRIPTS_DIR} ${MAKE_DIRS}
-for dir; do
-	ALL_MAKE_DIRS="${ALL_MAKE_DIRS} \"${dir}\""
-done
-eval set -- ${MAKE_DIRS_PERMS}
-while [ $# -gt 0 ]; do
-	dir="$1"; owner="$2"; group="$3"; mode="$4"
-	shift; shift; shift; shift
-	ALL_MAKE_DIRS="${ALL_MAKE_DIRS} \"${dir}\""
-done
-eval set -- ${ALL_MAKE_DIRS} ${OWN_DIRS}
-for dir; do
-	ALL_DIRS="${ALL_DIRS} \"${dir}\""
-done
-eval set -- ${OWN_DIRS_PERMS}
-while [ $# -gt 0 ]; do
-	dir="$1"; owner="$2"; group="$3"; mode="$4"
-	shift; shift; shift; shift
-	ALL_DIRS="${ALL_DIRS} \"${dir}\""
-done
-ALL_DIRS=`
-	( eval set -- ${ALL_DIRS}
-	  for dir; do
-		${ECHO} "\"${dir}\""
-	  done
-	) | ${SORT} -r
-`
+# $NetBSD: deinstall,v 1.29.2.1 2005/02/11 15:27:57 tv Exp $
 
 case ${STAGE} in
 VIEW-DEINSTALL)
-	if [ "${_PKG_CONFIG}" = "YES" -a -n "${VIEW_FILES}" ]; then
-		if [ -n "${PKG_SYSCONFDEPOTBASE}" ]; then
+	case ${_PKG_CONFIG} in
+	YES)
+		case ${PKG_SYSCONFDEPOTBASE} in
+		"")
+			${TEST} -x ./+FILES &&
+				./+FILES VIEW-REMOVE ${PREFIX} ${PKG_PREFIX}
+			;;
+		*)
 			${SETENV} PLIST_IGNORE_FILES="${CONF_IGNORE_FILES}" \
 				${LINKFARM} -D -t ${PKG_SYSCONFVIEWBASE} -d ${PKG_SYSCONFDEPOTBASE} ${PKGNAME}
 			${RMDIR} -p ${PKG_SYSCONFVIEWBASE} 2>/dev/null || ${TRUE}
-		else
-			eval set -- ${VIEW_FILES}
-			for file; do
-				link=`${ECHO} ${file} | ${SED} "s,^${PREFIX}/,${PKG_PREFIX}/,"`
-				dir=`${DIRNAME} ${link}`
-				if [ -h "${link}" ]; then
-					${RM} -f ${link}
-					${RMDIR} -p ${dir} 2>/dev/null || ${TRUE}
-				fi
-			done
-		fi
-	fi
+			;;
+		esac
+		;;
+	esac
 	if [ -n "${PKG_SHELL}" -a "${PKG_REGISTER_SHELLS}" = "YES" ]; then
 		${ECHO} "===> Updating /etc/shells"
 		${CP} /etc/shells /etc/shells.pkgsrc."$$"
@@ -104,34 +31,17 @@ DEINSTALL)
 	# Remove configuration files if they don't differ from the default
 	# config file.
 	#
-        if [ "${_PKG_CONFIG}" = "YES" ]; then
-		eval set -- ${ALL_FILES}
-		while [ $# -gt 0 ]; do
-			samplefile="$1"; file="$2"
-			shift; shift
-
-			if [ ! "${file}" -ef "${samplefile}" -a		\
-			     -f "${file}" -a -f "${samplefile}" ]; then
-				if ${CMP} -s "${file}" "${samplefile}"; then
-					${RM} -f "${file}"
-				fi
-			fi
-		done
-	fi
+	case ${_PKG_CONFIG} in
+	YES)	${TEST} -x ./+FILES &&
+			./+FILES REMOVE ${PKG_METADATA_DIR} ;;
+	esac
+	case ${_PKG_CONFIG}${_PKG_RCD_SCRIPTS} in
+	YESYES)	${TEST} -x ./+RCD_SCRIPTS &&
+			./+RCD_SCRIPTS REMOVE ${PKG_METADATA_DIR} ;;
+	esac
 	;;
 
 POST-DEINSTALL)
-	modified_files=''
-	eval set -- ${ALL_FILES}
-	while [ $# -gt 0 ]; do
-		samplefile="$1"; file="$2"
-		shift; shift
-
-		if [ -f "${file}" ]; then
-			modified_files="${modified_files} \"${file}\""
-		fi
-	done
-
 	if [ "${PKG_INSTALLATION_TYPE}" = "pkgviews" -a			\
 	     "${_PKG_CONFIG}" = "YES" -a -n "${CONF_DEPENDS}" ]; then
 		if [ -h ${PKG_SYSCONFDIR} ]; then
@@ -139,114 +49,28 @@ POST-DEINSTALL)
 		fi
 		${RMDIR} -p `${DIRNAME} ${PKG_SYSCONFDIR}` 2>/dev/null || ${TRUE}
 	fi
-
-	existing_dirs=''
-	eval set -- ${ALL_DIRS}
-	for dir; do
-        	if [ "${_PKG_CONFIG}" = "YES" ]; then
-			if [ -f "${dir}/.pkgsrc" ]; then
-				dirowner=`${HEAD} -1 "${dir}/.pkgsrc"`
-				if [ "${dirowner}" = "${PKGBASE}" ]; then
-					${RM} -f "${dir}/.pkgsrc"
-					${RMDIR} -p "${dir}" 2>/dev/null || ${TRUE}
-				fi
-			fi
-			is_make_dir=`					\
-				eval set -- ${ALL_MAKE_DIRS};		\
-				is_make_dir=0;				\
-				for make_dir; do			\
-					case "${make_dir}" in		\
-					${dir}) is_make_dir=1; break ;;	\
-					esac;				\
-				done;					\
-				${ECHO} ${is_make_dir}			\
-			`
-			if [ ${is_make_dir} -eq 0 -a -d "${dir}" ]; then
-				existing_dirs="${existing_dirs} \"${dir}\""
-			fi
-		else
-			case "${dir}" in
-			${PKG_PREFIX}/*)
-				${RMDIR} -p "${dir}" 2>/dev/null || ${TRUE}
-				;;
-			esac
-			case "${dir}" in
-			#
-			# Don't bother the admin about the following dirs
-			# if they still exist.
-			#
-			${PKG_SYSCONFBASE}|${RCD_SCRIPTS_DIR})
-				;;
-			*)	
-				if [ -d "${dir}" ]; then
-					existing_dirs="${existing_dirs} \"${dir}\""
-				fi
-				;;
-			esac
-		fi
-	done
-
-	if [ -n "${ALL_USERS}" -o -n "${ALL_GROUPS}" -o			\
-	     -n "${modified_files}" -o -n "${existing_dirs}" ]; then
-		${CAT} << EOF
-===========================================================================
-If you won't be using ${PKGNAME} any longer, you may want to remove
-EOF
-		if [ -n "${ALL_USERS}" ]; then
-			${ECHO} ""
-			allusersmsg="  * the following users"
-			sep=":   "
-			eval set -- ${ALL_USERS}
-			for user; do
-				allusersmsg="${allusersmsg}${sep}${user}"
-				sep=", "
-			done
-			${ECHO} "${allusersmsg}"
-		fi
-		if [ -n "${ALL_GROUPS}" ]; then
-			${ECHO} ""
-			allgroupsmsg="  * the following groups"
-			sep=":  "
-			eval set -- ${ALL_GROUPS}
-			for group; do
-				allgroupsmsg="${allgroupsmsg}${sep}${group}"
-				sep=", "
-			done
-			${ECHO} "${allgroupsmsg}"
-		fi
-		if [ -n "${modified_files}" ]; then
-			${CAT} << EOF
-
-  * the following files:
-
-EOF
-			eval set -- ${modified_files}
-			for file; do
-				${ECHO} "	${file}"
-			done
-		fi
-		if [ -n "${existing_dirs}" ]; then
-			${CAT} << EOF
-
-  * the following directories:
-
-EOF
-			eval set -- ${existing_dirs}
-			for dir; do
-				${ECHO} "	${dir}"
-			done
-		fi
-		if [ -n "${RCD_SCRIPTS}" ]; then
-			${CAT} << EOF
-
-You may also want to remove any settings in rc.conf that you may have
-made in order to use ${PKGNAME}.
-EOF
-		fi
-		${CAT} << EOF
-===========================================================================
-EOF
-	fi
+	#
+	# Remove empty directories and unused users/groups.
+	#
+	case ${_PKG_CONFIG} in
+	YES)	${TEST} -x ./+DIRS &&
+			./+DIRS REMOVE ${PKG_METADATA_DIR} ;;
+	esac
+	case ${_PKG_CREATE_USERGROUP} in
+	YES)	${TEST} -x ./+USERGROUP &&
+			./+USERGROUP REMOVE ${PKG_METADATA_DIR} ;;
+	esac
+	#
+	# Check for any existing bits after we're finished de-installing.
+	#
+	${TEST} -x ./+USERGROUP &&
+		./+USERGROUP CHECK-REMOVE ${PKG_METADATA_DIR}
+	${TEST} -x ./+FILES &&
+		./+FILES CHECK-REMOVE ${PKG_METADATA_DIR}
+	${TEST} -x ./+RCD_SCRIPTS &&
+		./+RCD_SCRIPTS CHECK-REMOVE ${PKG_METADATA_DIR}
+	${TEST} -x ./+DIRS &&
+		./+DIRS CHECK-REMOVE ${PKG_METADATA_DIR}
 	;;
 esac
 

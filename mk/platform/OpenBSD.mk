@@ -1,4 +1,4 @@
-# $NetBSD: OpenBSD.mk,v 1.7.2.1 2004/12/31 20:25:30 tv Exp $
+# $NetBSD: OpenBSD.mk,v 1.7.2.2 2005/02/11 15:27:57 tv Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -12,7 +12,6 @@ CMP?=		/usr/bin/cmp
 CP?=		/bin/cp
 CUT?=		/usr/bin/cut
 DATE?=		/bin/date
-DC?=		/usr/bin/dc
 DIRNAME?=	/usr/bin/dirname
 ECHO?=		echo				# Shell builtin
 ECHO_N?=	${ECHO} -n
@@ -167,9 +166,7 @@ SERIAL_DEVICES?=	/dev/null
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
-_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
-.endif
+_OPSYS_MAX_CMDLEN_CMD=	/sbin/sysctl -n kern.argmax
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
 # (it defaults to 'no' as per bsd.pkg.defaults.mk).

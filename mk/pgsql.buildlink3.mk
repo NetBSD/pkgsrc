@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.3 2004/10/26 21:39:33 xtraeme Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.3.2.1 2005/02/11 15:27:57 tv Exp $
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
@@ -6,7 +6,7 @@ PGVERSION_MK=	defined
 .include "../../mk/bsd.prefs.mk"
 
 PGSQL_VERSION_DEFAULT?=		74
-PGSQL_VERSIONS_ACCEPTED?=	74 73
+PGSQL_VERSIONS_ACCEPTED?=	80 74 73
 
 # transform the list into individual variables
 .for pv in ${PGSQL_VERSIONS_ACCEPTED}
@@ -14,7 +14,10 @@ _PGSQL_VERSION_${pv}_OK=	yes
 .endfor
 
 # check what is installed
-.if exists(${LOCALBASE}/lib/libecpg.so.4)
+.if exists(${LOCALBASE}/lib/libecpg.so.4.2)
+_PGSQL_VERSION_80_INSTALLED=	yes
+.endif
+.if exists(${LOCALBASE}/lib/libecpg.so.4.1)
 _PGSQL_VERSION_74_INSTALLED=	yes
 .endif
 .if exists(${LOCALBASE}/lib/libecpg.so.3)
@@ -58,7 +61,9 @@ _PGSQL_VERSION=	${_PGSQL_VERSION_FIRSTACCEPTED}
 #
 # set variables for the version we decided to use:
 #
-.if ${_PGSQL_VERSION} == "74"
+.if ${_PGSQL_VERSION} == "80"
+PGPKGSRCDIR=	../../databases/postgresql80-lib
+.elif ${_PGSQL_VERSION} == "74"
 PGPKGSRCDIR=	../../databases/postgresql74-lib
 .elif ${_PGSQL_VERSION} == "73"
 PGPKGSRCDIR=	../../databases/postgresql73-lib
