@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 10:50:01 agc Exp $
+$NetBSD: distinfo,v 1.3 2003/09/30 17:47:44 tron Exp $
 
 SHA1 (xcopilot-0.6.6.tar.gz) = 91f76d1fd8fc19b6fea18853425aa3076e945d5d
 Size (xcopilot-0.6.6.tar.gz) = 343264 bytes
@@ -11,3 +11,4 @@ SHA1 (patch-af) = 5b1a93a5b08444e53fdbb17e1148149542cc6dd1
 SHA1 (patch-ag) = 68a22072946811f9cc97434f532081a07fda567f
 SHA1 (patch-ah) = fa166c5ecf7458c91f89b216aee5acb6de270292
 SHA1 (patch-ai) = 255d997e2ef340a8d4b91ce25c2a3071df5c4520
+SHA1 (patch-aj) = 560a3dd902323ec1d07c292b6e8f95acb6c1c939
