@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/10/16 09:37:26 rh Exp $
+
+--- eel-2.0.pc.in.orig	Wed Oct 16 19:21:18 2002
++++ eel-2.0.pc.in
+@@ -7,5 +7,5 @@ Name: eel
+ Description: Eazel Extensions Library
+ Version: @VERSION@
+ Requires: gconf-2.0 gdk-pixbuf-2.0 glib-2.0 gmodule-2.0 gnome-vfs-2.0 gthread-2.0 gtk+-2.0 libart-2.0 libgnome-2.0 libgnomecanvas-2.0 libgnomeui-2.0 libxml-2.0 gail libglade-2.0
+-Libs: -L${libdir} -leel-2
++Libs: -Wl,-R${libdir} -L${libdir} -leel-2
+ Cflags: -I${includedir}
