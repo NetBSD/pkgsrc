@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.26 2004/04/23 01:25:09 danw Exp $
+# $NetBSD: pyversion.mk,v 1.27 2004/05/23 17:15:09 recht Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -111,13 +111,7 @@ PYDEPENDENCY=	${BUILDLINK_DEPENDS.python23-pth}:${PYPKGSRCDIR}
 PYPACKAGE=	python23-pth
 PYVERSSUFFIX=	2p3
 PYPKGPREFIX=	py23pth
-.  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-PTHREAD_OPTS=	require
-.    include "../../mk/pthread.buildlink2.mk"
-.    if ${PTHREAD_TYPE} == "pth"
-.        include "../../devel/pth/buildlink2.mk"
-.    endif
-.  elif defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
+.  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
 PTHREAD_OPTS=	require
 .    include "../../mk/pthread.buildlink3.mk"
 .    if ${PTHREAD_TYPE} == "pth"
@@ -136,13 +130,7 @@ PYDEPENDENCY=	${BUILDLINK_DEPENDS.python22-pth}:${PYPKGSRCDIR}
 PYPACKAGE=	python22-pth
 PYVERSSUFFIX=	2p2
 PYPKGPREFIX=	py22pth
-.  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-PTHREAD_OPTS=	require
-.    include "../../mk/pthread.buildlink2.mk"
-.    if ${PTHREAD_TYPE} == "pth"
-.        include "../../devel/pth/buildlink2.mk"
-.    endif
-.  elif defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
+.  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
 PTHREAD_OPTS=	require
 .    include "../../mk/pthread.buildlink3.mk"
 .    if ${PTHREAD_TYPE} == "pth"
@@ -161,13 +149,7 @@ PYPACKAGE=	python21-pth
 PYDEPENDENCY=	${BUILDLINK_DEPENDS.python21-pth}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2p1
 PYPKGPREFIX=	py21pth
-.  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-PTHREAD_OPTS=	require
-.    include "../../mk/pthread.buildlink2.mk"
-.    if ${PTHREAD_TYPE} == "pth"
-.        include "../../devel/pth/buildlink2.mk"
-.    endif
-.  elif defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
+.  if defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO])
 PTHREAD_OPTS=	require
 .    include "../../mk/pthread.buildlink3.mk"
 .    if ${PTHREAD_TYPE} == "pth"
@@ -194,16 +176,11 @@ BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
 	error: no valid Python version
 .endif
 
-.if (defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])) || \
-  (defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO]))
+.if (defined(USE_BUILDLINK3) && empty(USE_BUILDLINK3:M[nN][oO]))
 .  if defined(PYTHON_FOR_BUILD_ONLY)
 BUILD_DEPMETHOD.python?=	build
 .  endif
-.  if defined(USE_BUILDLINK2) && empty(USE_BUILDLINK2:M[nN][oO])
-.    include "${PYPKGSRCDIR}/buildlink2.mk"
-.  else
-.    include "${PYPKGSRCDIR}/buildlink3.mk"
-.  endif
+.  include "${PYPKGSRCDIR}/buildlink3.mk"
 .else
 .  if defined(PYTHON_FOR_BUILD_ONLY)
 BUILD_DEPENDS+=	${PYDEPENDENCY}
