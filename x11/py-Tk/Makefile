@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/09/22 16:13:34 tsarna Exp $
+# $NetBSD: Makefile,v 1.6 1998/09/27 22:24:44 tsarna Exp $
 #
 
 DISTNAME=	pyth151
@@ -14,6 +14,8 @@ HOMEPAGE=	http://www.python.org/topics/tkinter/
 DEPENDS+=	python-1.5.1:../../lang/python
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 DEPENDS+=	tcl-8.0p2:../../lang/tcl80
+
+NOT_FOR_ARCHS=  alpha # possibly broken
 
 WRKSRC=		${WRKDIR}/Python-1.5.1/Modules
 ALL_TARGET=	default
