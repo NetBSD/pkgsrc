@@ -1,15 +1,22 @@
-$NetBSD: patch-ab,v 1.4 1999/07/16 04:57:48 sakamoto Exp $
+$NetBSD: patch-ab,v 1.5 1999/07/19 06:14:30 sakamoto Exp $
 
---- ./Makefile.in.orig	Thu Jul 15 03:27:53 1999
-+++ ./Makefile.in	Fri Jul 16 10:42:33 1999
-@@ -195,5 +195,5 @@
+--- ./Makefile.in.orig	Fri Jul 16 20:33:16 1999
++++ ./Makefile.in	Mon Jul 19 14:54:11 1999
+@@ -43,5 +43,5 @@
+ CC          = @CC@
+ CFLAGS      = @CFLAGS@ -I.
+-LDFLAGS     = @LDFLAGS@ -L.
++LDFLAGS     = @LDFLAGS@
+ LIBS        = @LIBS@
+ SHTOOL      = @SHTOOL@
+@@ -199,5 +199,5 @@
  	$(SHTOOL) install -c -m 644 pth.3 $(mandir)/man3/pth.3
  	$(SHTOOL) install -c -m 644 pth.h $(includedir)/pth.h
 -	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libpth.la $(libdir)/libpth.la
 +	@$(LIBTOOL) --mode=install install -c -m 644 libpth.la $(libdir)/libpth.la
  install-pthread:
  	$(SHTOOL) install -c -m 755 pthread-config $(bindir)/pthread-config
-@@ -201,5 +201,5 @@
+@@ -205,5 +205,5 @@
  	$(SHTOOL) install -c -m 644 pthread.h $(includedir)/pthread.h
  	$(SHTOOL) install -c -m 644 pthread.3 $(mandir)/man3/pthread.3
 -	@$(LIBTOOL) --mode=install $(SHTOOL) install -c -m 644 libpthread.la $(libdir)/libpthread.la
