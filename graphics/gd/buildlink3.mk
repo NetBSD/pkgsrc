@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/01/13 01:41:07 simonb Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/01/23 11:48:03 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GD_BUILDLINK3_MK:=	${GD_BUILDLINK3_MK}+
@@ -11,6 +11,8 @@ BUILDLINK_DEPENDS+=	gd
 BUILDLINK_PACKAGES+=		gd
 BUILDLINK_DEPENDS.gd?=		gd>=2.0.15
 BUILDLINK_PKGSRCDIR.gd?=	../../graphics/gd
+
+USE_X11=	yes
 
 .  include "../../mk/pthread.buildlink3.mk"
 .  include "../../devel/zlib/buildlink3.mk"
