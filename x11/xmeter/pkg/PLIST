@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/10/30 10:53:41 agc Exp $
+bin/xmeter
+lib/X11/app-defaults/XMeter
+man/cat1/xmeter.0
