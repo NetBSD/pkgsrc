@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.4 2002/10/13 16:43:21 taca Exp $
+$NetBSD: patch-al,v 1.5 2004/08/22 15:11:09 taca Exp $
 
---- src/structs.h.orig	Sat Oct 12 23:14:04 2002
+--- src/structs.h.orig	2004-08-20 18:35:25.000000000 +0900
 +++ src/structs.h
-@@ -525,6 +525,7 @@ struct _SquidConfig {
+@@ -527,6 +527,7 @@ struct _SquidConfig {
      wordlist *mcast_group_list;
      wordlist *dns_testname_list;
      wordlist *dns_nameservers;

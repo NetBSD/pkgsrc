@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.3 2004/06/06 16:01:03 taca Exp $
+$NetBSD: patch-bb,v 1.4 2004/08/22 15:11:09 taca Exp $
 
---- include/autoconf.h.in.orig	2004-06-07 00:54:39.000000000 +0900
+--- include/autoconf.h.in.orig	2004-08-20 18:35:25.000000000 +0900
 +++ include/autoconf.h.in
-@@ -548,6 +548,9 @@
+@@ -551,6 +551,9 @@
  /* Define if you have the setpgrp function.  */
  #undef HAVE_SETPGRP
  
@@ -12,7 +12,7 @@ $NetBSD: patch-bb,v 1.3 2004/06/06 16:01:03 taca Exp $
  /* Define if you have the setrlimit function.  */
  #undef HAVE_SETRLIMIT
  
-@@ -656,6 +659,9 @@
+@@ -659,6 +662,9 @@
  /* Define if you have the <linux/netfilter_ipv4.h> header file.  */
  #undef HAVE_LINUX_NETFILTER_IPV4_H
  
@@ -22,7 +22,7 @@ $NetBSD: patch-bb,v 1.3 2004/06/06 16:01:03 taca Exp $
  /* Define if you have the <malloc.h> header file.  */
  #undef HAVE_MALLOC_H
  
-@@ -824,6 +830,9 @@
+@@ -833,6 +839,9 @@
  /* Define if you have the <unistd.h> header file.  */
  #undef HAVE_UNISTD_H
  
