@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 1999/09/11 00:52:33 tron Exp $
+@comment $NetBSD: PLIST,v 1.23 2000/03/21 22:18:24 tron Exp $
 bin/Magick-config
 bin/animate
 bin/combine
@@ -8,13 +8,13 @@ bin/identify
 bin/import
 bin/mogrify
 bin/montage
-bin/xtp
+include/magick/cache.h
+include/magick/cache_io.h
 include/magick/api.h
 include/magick/blob.h
 include/magick/classify.h
 include/magick/compress.h
 include/magick/config.h
-include/magick/defines.h
 include/magick/delegates.h
 include/magick/error.h
 include/magick/gems.h
@@ -23,10 +23,12 @@ include/magick/magick.h
 include/magick/memory.h
 include/magick/monitor.h
 include/magick/quantize.h
+include/magick/timer.h
 include/magick/utility.h
 include/magick/version.h
+include/magick/xwindows.h
 lib/libMagick.a
-lib/libMagick.so.4.29
+lib/libMagick.so.5.11
 man/man1/ImageMagick.1
 man/man1/animate.1
 man/man1/combine.1
@@ -36,7 +38,6 @@ man/man1/identify.1
 man/man1/import.1
 man/man1/mogrify.1
 man/man1/montage.1
-man/man1/xtp.1
 man/man4/miff.4
 man/man5/quantize.5
 share/ImageMagick/Copyright.txt
