@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 1999/01/16 21:37:58 tron Exp $
+
+--- libiberty/functions.def.orig	Thu Apr 30 10:35:35 1998
++++ libiberty/functions.def	Sat Jan 16 15:48:08 1999
+@@ -55,15 +55,12 @@
+    second arg is how to declare the variable, and the third is how to
+    use it. */
+ 
+-DEFVAR(sys_nerr, int sys_nerr, sys_nerr = 0)
+-DEFVAR(sys_errlist, char *sys_errlist[], sys_errlist[0] = 0)
+ DEFVAR(sys_siglist, char *sys_siglist[], sys_siglist[0] = 0)
+ 
+ /* List of global functions that we want to look for in the host
+    environment, and to generate an entry NEED_<funcname> in config.h
+    if they are not found. */
+ 
+-DEFFUNC(strerror, char*, (errnoval), int errnoval)
+ DEFFUNC(psignal, void, (signo, message), unsigned signo AND char *message)
+ DEFFUNC(basename, char *, (name), CONST char *name)
+ DEFFUNC(on_exit, void, (f, arg), void (*f)() AND char *arg)
