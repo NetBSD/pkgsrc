@@ -1,8 +1,12 @@
-$NetBSD: patch-ar,v 1.1 1999/11/03 04:18:47 jlam Exp $
+$NetBSD: patch-ar,v 1.2 1999/11/24 17:34:10 hubertf Exp $
 
---- lib/config/Makefile.in.orig	Mon Sep  6 17:13:30 1999
-+++ lib/config/Makefile.in	Tue Nov  2 22:16:17 1999
-@@ -116,7 +116,7 @@
+Place(s) where this was (most probably...) in before:
+     NetBSD: patch-ar,v 1.1 1999/11/03 04:18:47 jlam Exp 
+
+diff -x *.orig -urN ./lib/config/Makefile.in /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/config/Makefile.in
+--- ./lib/config/Makefile.in	Fri Nov  5 21:14:33 1999
++++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/config/Makefile.in	Wed Nov 24 17:30:54 1999
+@@ -120,7 +120,7 @@
  MAINTAINERCLEANFILES = Makefile.in
  bin_SCRIPTS = mxmkmf
  

@@ -1,8 +1,12 @@
-$NetBSD: patch-ao,v 1.1 1999/11/03 04:18:47 jlam Exp $
+$NetBSD: patch-ao,v 1.2 1999/11/24 17:34:10 hubertf Exp $
 
---- lib/Xlt/configure.orig	Mon Sep  6 17:18:15 1999
-+++ lib/Xlt/configure	Tue Nov  2 22:16:17 1999
-@@ -1972,6 +1972,7 @@
+Place(s) where this was (most probably...) in before:
+     NetBSD: patch-ao,v 1.1 1999/11/03 04:18:47 jlam Exp 
+
+diff -x *.orig -urN ./lib/Xlt/configure /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/Xlt/configure
+--- ./lib/Xlt/configure	Fri Nov  5 21:17:11 1999
++++ /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/Xlt/configure	Wed Nov 24 17:30:54 1999
+@@ -2316,6 +2316,7 @@
  
  
  
@@ -10,11 +14,11 @@ $NetBSD: patch-ao,v 1.1 1999/11/03 04:18:47 jlam Exp $
  # Check for any special flags to pass to ltconfig.
  libtool_flags="--cache-file=$cache_file"
  test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
-@@ -2129,6 +2130,7 @@
+@@ -2473,6 +2474,7 @@
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
  exec 5>>./config.log
 +fi
  
  echo $ac_n "checking whether to enable maintainer-specific portions of Makefiles""... $ac_c" 1>&6
- echo "configure:2135: checking whether to enable maintainer-specific portions of Makefiles" >&5
+ echo "configure:2479: checking whether to enable maintainer-specific portions of Makefiles" >&5
