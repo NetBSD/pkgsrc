@@ -1,27 +1,27 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.19 2003/09/28 12:36:52 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.20 2003/09/28 12:51:46 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
 # -------------8<-------------8<-------------8<-------------8<-------------
-# .if !defined(FOO_BUILDLINK3_MK)
-# FOO_BUILDLINK3_MK=	# defined
 # BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+		# push
+#
+# BUILDLINK_DEPENDS.foo?=	foo-lib>=1.0
+# BUILDLINK_PKGSRCDIR.foo?=	../../category/foo-lib
 #
 # .if !empty(BUILDLINK_DEPTH:M\+)
 # BUILDLINK_DEPENDS+=	foo
 # .endif
 #
+# .if !defined(BUILDLINK_PACKAGES) || empty(BUILDLINK_PACKAGES:Mfoo)
 # BUILDLINK_PACKAGES+=		foo
-# BUILDLINK_DEPENDS.foo?=	foo-lib>=1.0
-# BUILDLINK_PKGSRCDIR.foo?=	../../category/foo-lib
 #
 # # We want "-lbar" to eventually resolve to "-lfoo".
 # BUILDLINK_TRANSFORM+=		l:bar:foo
+# .endif
 #
 # .include "../../category/baz/buildlink3.mk"
 #
 # BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}	# pop
-# .endif # FOO_BUILDLINK3_MK
 # -------------8<-------------8<-------------8<-------------8<-------------
 #
 # Note that if a buildlink3.mk file is included, then the package Makefile
