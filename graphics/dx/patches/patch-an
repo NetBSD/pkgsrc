@@ -1,16 +1,15 @@
-$NetBSD: patch-an,v 1.1 2001/02/26 19:00:56 wiz Exp $
+$NetBSD: patch-an,v 1.2 2004/04/20 22:11:48 drochner Exp $
 
---- man/catl/Makefile.in.orig	Wed Apr  5 21:02:18 2000
-+++ man/catl/Makefile.in
-@@ -132,9 +132,9 @@
+--- man/catl/Makefile.in.orig	2003-09-26 22:19:38.000000000 +0000
++++ man/catl/Makefile.in	2004-04-20 19:29:31.000000000 +0000
+@@ -213,8 +213,8 @@
  	@list='$(cat_DATA)'; for p in $$list; do \
- 	  if test -f $(srcdir)/$$p; then \
- 	    echo " $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(catdir)/$$p"; \
--	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(catdir)/$$p; \
-+	    $(INSTALL_DATA) $(srcdir)/$$p $(DESTDIR)$(catdir)/dx.0; \
- 	  else if test -f $$p; then \
--	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(catdir)/$$p"; \
-+	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(catdir)/dx.0"; \
- 	    $(INSTALL_DATA) $$p $(DESTDIR)$(catdir)/$$p; \
- 	  fi; fi; \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(catDATA_INSTALL) $$d$$p $(DESTDIR)$(catdir)/$$f"; \
+-	  $(catDATA_INSTALL) $$d$$p $(DESTDIR)$(catdir)/$$f; \
++	  echo " $(catDATA_INSTALL) $$d$$p $(DESTDIR)$(catdir)/dx.0"; \
++	  $(catDATA_INSTALL) $$d$$p $(DESTDIR)$(catdir)/dx.0; \
  	done
+ 
+ uninstall-catDATA:
