@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2738 2003/07/12 01:11:57 zuntum Exp $
+$NetBSD: CHANGES,v 1.2739 2003/07/12 01:39:18 zuntum Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2755,3 +2755,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated polsms to 1.9.2d [zuntum 2003-07-12]
 	Updated poink to 1.6 [zuntum 2003-07-12]
 	Updated p0f to 1.8.3 [zuntum 2003-07-12]
+	Updated ratpoison to 1.2.2 [zuntum 2003-07-12]
