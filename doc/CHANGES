@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9446 2005/03/06 17:54:16 hira Exp $
+$NetBSD: CHANGES,v 1.9447 2005/03/06 19:26:58 hira Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1301,3 +1301,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added ruby16-base-1.6.8 [taca 2005-03-06]
 	Added ruby18-base-1.8.2 [taca 2005-03-06]
 	Updated mlterm to 2.9.2 [hira 2005-03-06]
+	Updated wl to 2.12.2 [hira 2005-03-06]
