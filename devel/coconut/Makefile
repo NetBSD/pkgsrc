@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/04/15 12:17:43 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/04/15 20:51:44 jmc Exp $
 #
 
 DISTNAME=	coconut-0.3.0
@@ -15,7 +15,7 @@ USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 USE_X11=	YES
 GNU_CONFIGURE=	YES
-CPPFLAGS+=	-I${PREFIX}/include/libxml2/libxml
+CPPFLAGS+=	-I${PREFIX}/include/libxml2/libxml -DGL_GLEXT_LEGACY
 LIBTOOL_OVERRIDE=${WRKSRC}/libtool
 
 pre-configure:
