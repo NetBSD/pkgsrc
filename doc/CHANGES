@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8316 2004/12/06 00:29:08 schmonz Exp $
+$NetBSD: CHANGES,v 1.8317 2004/12/06 08:58:59 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5821,3 +5821,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added python24-2.4 [recht 2004-12-05]
 	Added python24-pth-2.4 [recht 2004-12-05]
 	Updated getmail to 4.2.4 [schmonz 2004-12-06]
+	bsd.pkg.mk: started freeze for pkgsrc-2004Q4 branch [agc 2004-12-06]
