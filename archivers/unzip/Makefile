@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/05/06 17:40:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.37 2003/05/17 06:23:44 grant Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 05:30:04 ache Exp
 #
 
@@ -33,7 +33,7 @@ do-install:
 	cd ${WRKSRC}/unix && ${INSTALL_SCRIPT} zipgrep ${PREFIX}/bin
 	cd ${WRKSRC}/man && ${INSTALL_MAN} funzip.1 unzip.1 unzipsfx.1 \
 		zipgrep.1 zipinfo.1 ${PREFIX}/man/man1
-	${INSTALL_DATA_DIR}  ${PREFIX}/share/doc/unzip
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unzip
 	cd ${WRKSRC} && ${INSTALL_DATA} BUGS COPYING.OLD LICENSE README WHERE \
 		${PREFIX}/share/doc/unzip
 
