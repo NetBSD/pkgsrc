@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7066 2004/09/01 12:14:35 recht Exp $
+$NetBSD: CHANGES,v 1.7067 2004/09/01 13:37:53 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4140,3 +4140,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated icewm-gnome to 1.2.16 [jmmv 2004-09-01]
 	Updated icewm-imlib to 1.2.16 [jmmv 2004-09-01]
 	Updated sylpheed-gtk2 to 0.9.12.0.1 [recht 2004-09-01]
+	Updated intltool to 0.31.2 [jmmv 2004-09-01]
