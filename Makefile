@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2003/07/25 02:44:09 grant Exp $
+# $NetBSD: Makefile,v 1.59 2003/09/16 20:31:00 jmmv Exp $
 #
 
 .include "mk/bsd.prefs.mk"
@@ -187,6 +187,11 @@ README-all.html:
 	fi
 .endfor
 	@${ECHO} "."
+	@if [ ! -f $@.new ]; then \
+		${ECHO} "There are no categories with README.html files available."; \
+		${ECHO} "You need to run \`${MAKE} readme' to generate them before running this target."; \
+		${FALSE}; \
+	fi
 	@${SORT} -f -t '">' +2 <$@.new >$@.newsorted
 	@${WC} -l $@.newsorted | ${AWK} '{ print $$1 }'  >$@.npkgs
 	@${CAT} templates/README.all \
