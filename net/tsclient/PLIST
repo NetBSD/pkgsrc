@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/30 21:32:55 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/09/16 07:59:10 xtraeme Exp $
 bin/tsclient
 lib/bonobo/servers/GNOME_TSClientApplet.server
 libexec/tsclient-applet
@@ -12,18 +12,28 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/tsclient.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/tsclient.mo
 ${PKGLOCALEDIR}/locale/gr/LC_MESSAGES/tsclient.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/tsclient.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/tsclient.mo
+${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/tsclient.mo
 ${PKGLOCALEDIR}/locale/nl_NL/LC_MESSAGES/tsclient.mo
 ${PKGLOCALEDIR}/locale/no_nb/LC_MESSAGES/tsclient.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/tsclient.mo
+${PKGLOCALEDIR}/locale/pl_PL/LC_MESSAGES/tsclient.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/tsclient.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/tsclient.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/tsclient.mo
 ${PKGLOCALEDIR}/locale/se/LC_MESSAGES/tsclient.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/tsclient.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/tsclient.mo
 share/mime-info/tsclient.keys
 share/mime-info/tsclient.mime
 share/pixmaps/tsclient.png
 share/pixmaps/tsclient/banner-ar.png
 share/pixmaps/tsclient/banner-en.png
+share/pixmaps/tsclient/banner-es.png
 share/pixmaps/tsclient/banner-hu.png
+share/pixmaps/tsclient/banner-ms.png
 share/pixmaps/tsclient/banner-nl.png
+share/pixmaps/tsclient/banner-zh_CN.png
+share/pixmaps/tsclient/banner-zh_TW.png
 share/pixmaps/tsclient/colors.png
 share/pixmaps/tsclient/computer.png
 share/pixmaps/tsclient/keyboard.png
