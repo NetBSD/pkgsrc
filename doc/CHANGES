@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8968 2005/01/29 00:52:27 taca Exp $
+$NetBSD: CHANGES,v 1.8969 2005/01/29 10:18:45 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -644,9 +644,10 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated librsvg to 1.0.3 [adam 2005-01-28]
 	Updated eel to 1.0.2 [adam 2005-01-28]
 	Updated ruby-webrick to 1.3.1nb1 [taca 2005-01-28]
-        Updated bittornado to 0.3.10 [veego 2005-01-28]
-        Updated bittornado-gui to 0.3.10 [veego 2005-01-28]
+	Updated bittornado to 0.3.10 [veego 2005-01-28]
+	Updated bittornado-gui to 0.3.10 [veego 2005-01-28]
 	Removed snort-contrib [adrianp 2005-01-28]
 	Updated snort to 2.3.0 [adrianp 2005-01-28]
 	Updated f2c to 20001205nb8 [dmcmahill 2005-01-28]
 	Updated squid to 2.5.7nb10 [taca 2005-01-28]
+	Updated postgresql-autodoc to 1.24 [mjl 2005-01-29]
