@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2155 2004/09/21 13:12:48 cube Exp $
+$NetBSD: TODO,v 1.2156 2004/09/21 17:30:19 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -326,7 +326,6 @@ Suggested package updates
 	o marbles-1.0.6
 	o matchbox-0.8.3 [pkgsrc-wip]
 	o mathomatic-11.3e
-	o metacity-2.8.5 [pkg/26957|jmmv]
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o minicom-2.1
