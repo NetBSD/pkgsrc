@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.32 2002/10/08 13:24:22 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2003/01/07 06:30:34 rh Exp $
 #
 
-DISTNAME=		xfig.3.2.3d.full
-PKGNAME=		xfig-3.2.3.4
-PKGREVISION=		1
-WRKSRC=			${WRKDIR}/xfig.3.2.3d
+DISTNAME=		xfig.3.2.4.full
+PKGNAME=		xfig-3.2.4
+WRKSRC=			${WRKDIR}/xfig.3.2.4
 CATEGORIES=		graphics
-MASTER_SITES=		${MASTER_SITE_XCONTRIB:=applications/drawing_tools/xfig/} \
-			ftp://www-epb.lbl.gov/xfig/
+MASTER_SITES=		ftp://epb.lbl.gov/xfig/
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://epb1.lbl.gov/BVSmith/xfig/
+HOMEPAGE=		http://epb.lbl.gov/BVSmith/xfig/
 COMMENT=		CAD-like 2D drawing tool, good for colorful scale drawings & ISOs
 
-DEPENDS+=		transfig>=3.2.3.4:../../print/transfig
+DEPENDS+=		transfig>=3.2.4:../../print/transfig
 
 USE_BUILDLINK2=		YES
 USE_IMAKE=		YES
@@ -32,16 +30,9 @@ pre-configure:
 	  ${SED} 's/#define.XAW3D/XCOMM &/' Imakefile.bak > Imakefile
 .endif
 
-XFIGEXAMPLES=		${PREFIX}/share/examples/xfig
 XFIGDOCDIR=		${PREFIX}/share/doc/xfig
 
 post-install:
-	${INSTALL_DATA_DIR} ${XFIGEXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/Examples/*.fig ${XFIGEXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/Examples/*.gif ${XFIGEXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/Examples/*.jpg ${XFIGEXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/Examples/*.xbm ${XFIGEXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/Examples/*.xpm ${XFIGEXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/Doc/FORMAT* ${XFIGDOCDIR}
 
 .include "../../graphics/jpeg/buildlink2.mk"
