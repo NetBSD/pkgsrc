@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2004/07/28 01:02:08 minskim Exp $
+# $NetBSD: Makefile,v 1.43 2004/08/21 11:31:00 recht Exp $
 
-DISTNAME=	curl-7.12.0
+DISTNAME=	curl-7.12.1
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/ \
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/curl
 	for _f in MANUAL TheArtOfHttpScripting FAQ		\
-		libcurl-the-guide; do				\
+		curl-config.pdf curl.pdf; do				\
 		${INSTALL_DATA} ${WRKSRC}/docs/$${_f}		\
 			 ${PREFIX}/share/doc/curl/${_f};	\
 	done
