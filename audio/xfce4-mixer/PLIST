@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/10 07:41:16 martti Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/16 16:12:00 martti Exp $
 lib/xfce4/panel-plugins/libmixer.a
 lib/xfce4/panel-plugins/libmixer.la
 lib/xfce4/panel-plugins/libmixer.so
+${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfce4-mixer.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfce4-mixer.mo
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xfce4-mixer.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfce4-mixer.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xfce4-mixer.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce4-mixer.mo
