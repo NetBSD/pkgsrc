@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.10 2003/07/09 14:35:28 abs Exp $
+# $Id: optimize_gcc.mk,v 1.11 2003/07/10 11:52:03 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and probably quite broken by design.
@@ -8,8 +8,10 @@
 # compile some code, and even generate curdled binaries. It is completely
 # unsupported. Any questions should be directed to <abs@netbsd.org>.
 
+# -O3 would give -finline-functions and -frename-registers
+# As of gcc3-3.3nb4 -frename-registers still causes problems with xdm
 .if defined(USE_GCC3) || (${MACHINE} != sparc64)
-COPT_FLAGS=-O3
+COPT_FLAGS=-finline-functions
 .else
 COPT_FLAGS=
 .endif
@@ -27,7 +29,6 @@ PKGBASE=${.CURDIR:C:.*/::}
 
 COPT_FLAGS+=-ffast-math -fomit-frame-pointer
 
-PKG_EXCLUDE_RENAME_REGISTERS+=
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=galeon lua4 mozilla phoenix
 .if !defined(USE_GCC3)
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=qt3-libs kdeedu3
@@ -35,11 +36,6 @@ PKG_EXCLUDE_OMIT_FRAME_POINTER+=qt3-libs kdeedu3
 
 .if !empty(PKG_EXCLUDE_OMIT_FRAME_POINTER:M${PKGBASE})
 COPT_FLAGS:=    ${COPT_FLAGS:S/-fomit-frame-pointer//}
-.endif
-
-# -O3 implies -finline-functions and -frename-registers
-.if !empty(PKG_EXCLUDE_RENAME_REGISTERS:M${PKGBASE})
-COPT_FLAGS:=	${COPT_FLAGS:S/-O3/-finline-functions/}
 .endif
 
 CFLAGS+=${COPT_FLAGS}
