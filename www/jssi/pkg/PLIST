@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/18 01:51:44 jwise Exp $
+doc/jssi/generate_javadoc
+doc/jssi/images/java-apache-project.gif
+doc/jssi/index.html
+doc/jssi/install.html
+doc/jssi/parameterprop.html
+doc/jssi/traditionalssi.html
+@dirrm doc/jssi/images
+@dirrm doc/jssi
+lib/ApacheJSSI.jar
