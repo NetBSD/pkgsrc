@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2326 2003/05/25 23:45:34 chris Exp $
+$NetBSD: CHANGES,v 1.2327 2003/05/26 06:55:14 martti Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2161,3 +2161,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gcc3 to 3.3 [grant 2003-05-25]
 	Updated scli to 0.2.12nb1 [seb 2003-05-25]
 	Updated sylpheed to 0.9.0 [chris 2003-05-26]
+	Updated cyrus-sasl to 2.1.13 [martti 2003-05-26]
+	Updated cyrus-imapd to 2.1.13 [martti 2003-05-26]
