@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/10/22 06:14:31 martti Exp $
+# $NetBSD: Makefile,v 1.41 2002/03/21 20:24:12 wiz Exp $
 #
 
 COMMENT=	Archivers
@@ -43,6 +43,7 @@ SUBDIR+=	unlzx
 SUBDIR+=	unrar
 SUBDIR+=	unzip
 SUBDIR+=	xbin
+SUBDIR+=	yencode
 SUBDIR+=	zip
 SUBDIR+=	zip1
 SUBDIR+=	zoo
