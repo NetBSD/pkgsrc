@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.12 2004/11/16 18:04:00 tv Exp $
+# $NetBSD: Interix.mk,v 1.13 2004/11/19 13:10:05 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -100,9 +100,6 @@ TSORT?=		/bin/tsort
 TYPE?=		type				# Shell builtin
 WC?=		/bin/wc
 XARGS?=		/bin/xargs
-
-# Default to threaded Perl, the same as is shipped with Interix itself.
-PERL5_USE_THREADS?=	yes
 
 USERADD?=		${LOCALBASE}/sbin/useradd
 GROUPADD?=		${LOCALBASE}/sbin/groupadd
