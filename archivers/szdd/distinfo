@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/05/14 13:02:55 agc Exp $
+
+SHA1 (xfd_SZDD.lha) = 194dfe24790822078638dbe3ae56e72510af6c76
+Size (xfd_SZDD.lha) = 15268 bytes
+SHA1 (patch-aa) = 244bec00af7e43e017b998b818121e2733681c51
