@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/24 05:48:51 taca Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/15 15:51:12 taca Exp $
 
 --- Makefile.orig	Sat Apr 14 02:41:22 2001
 +++ Makefile
@@ -80,14 +80,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/24 05:48:51 taca Exp $
  OSLIBS_tru64 = -lpthread
  OSLIBS = $(OSLIBS_$(OS))
  
-@@ -133,7 +136,7 @@
+@@ -133,9 +136,9 @@
  #### You REALLY shouldn't have to modify anything beyond here ...
  ####
  
 -CFLAGS = $(OPTIM) $(DEFINES) -I. $(GMPINC) $(BFINC) $(ZINC) $(BZINC)
-+CFLAGS = $(OPTIM) $(DEFINES) -I. $(GMPINC)
++CFLAGS = $(OPTIM) $(DEFINES) -I. -I${BUILDLINK_DIR}/include $(GMPINC)
  
- LIBS = $(GMPLIB) $(BFLIB) $(ZLIB) $(BZLIB) $(OSLIBS)
+-LIBS = $(GMPLIB) $(BFLIB) $(ZLIB) $(BZLIB) $(OSLIBS)
++LIBS = -L${BUILDLINK_DIR}/lib $(GMPLIB) $(BFLIB) $(ZLIB) $(BZLIB) $(OSLIBS)
+ 
+ OBJS = zebedee.o sha_func.o huge.o $(GETOPTOBJ) $(SERVICEOBJ)
  
 @@ -150,7 +153,7 @@
  all : precheck zebedee$(EXE) zebedee.1 zebedee.html ftpgw.tcl.1 ftpgw.tcl.html zebedee.ja_JP.html
