@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.166 2003/07/29 20:21:37 seb Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.167 2003/08/02 17:00:06 jmmv Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -735,6 +735,16 @@ EMACS_USE_XAW3D?= NO
 # Used by emacs package to determine if should use Xaw3D for the scrollbar.
 # Possible: YES, NO
 # Default: NO
+
+EXIM_GROUP?=	mail
+# Used in the exim package to specify the server group.
+# Possible: any group name
+# Default: mail
+
+EXIM_USER?=	exim
+# Used in the exim package to specify the server user.
+# Possible: any user name
+# Default: exim
 
 FETCHMAIL_USE_SSL?=	YES
 # Enable SSL in fetchmail (for pop and imap connections)
