@@ -1,11 +1,6 @@
-$NetBSD: md5,v 1.2 1998/08/07 13:21:28 agc Exp $
+$NetBSD: md5,v 1.3 1998/08/13 02:17:39 tv Exp $
 
-MD5 (compat12_amiga.tgz) = d9d2939fc4607c498bddb34c47e051f5
-MD5 (compat12_atari.tgz) = 258286a20c74f07eeaf770c159f65cad
-MD5 (compat12_hp300.tgz) = 76f7eda9ecd6830ba52ec748e2db7d9a
-MD5 (compat12_i386.tgz) = 1be7cc9e943c3010ea32d8c3e188db4a
-MD5 (compat12_mac68k.tgz) = ef69cadb5b7b4a9389060fa51949294a
-MD5 (compat12_mvme68k.tgz) = 7acb6bbdafd8412e8a467c8923c596ee
-MD5 (compat12_pc532.tgz) = 5ee4752065e2431812fb7201e3be90ea
-MD5 (compat12_sparc.tgz) = 687bd864d1ee5436f349f58cb59384f0
-MD5 (compat12_sun3.tgz) = 7765a72206b21a222d1e778c3cb7cabe
+MD5 (compat12-i386.tar.gz) = 25497f20330197262e513ebfb8fa9247
+MD5 (compat12-m68k.tar.gz) = 7711595a3916be92d518f5904ea55f92
+MD5 (compat12-ns32k.tar.gz) = 415f7a3d735036908c358814d28d82ba
+MD5 (compat12-sparc.tar.gz) = 2f28e7761826eb69ba03c0426e28fbc6

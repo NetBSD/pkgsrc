@@ -1,27 +1,18 @@
-# $NetBSD: Makefile,v 1.7 1998/07/15 12:01:42 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/08/13 02:17:39 tv Exp $
 #
 
-DISTNAME=	compat12
+DISTNAME=	compat12-1.2.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=	_${ARCH}.tgz
+EXTRACT_SUFX=	-${MACHINE_ARCH}.tar.gz
 
 MAINTAINER=	tv@netbsd.org
 
-ONLY_FOR_ARCHS=	amiga atari hp300 i386 mac68k mvme68k pc532 sparc sun3
+ONLY_FOR_ARCHS=	i386 m68k ns32k sparc
 
-MIRROR_DISTFILE= no
-HAS_CONFIGURE=	yes
 NO_BUILD=	yes
-WRKSRC=		${WRKDIR}/usr/lib
-PLIST_SRC=	${WRKSRC}/.PLIST
 
-post-extract:
-	@${INSTALL} -c -m 755 ${FILESDIR}/configure ${WRKSRC}
+do-install:
+	${INSTALL_DATA} ${WRKDIR}/lib*.so* ${PREFIX}/lib/
 
 .include "../../mk/bsd.pkg.mk"
-
-# for sun3x in 1.3.x, get sun3 package
-.if (${ARCH} == "sun3x")
-ARCH=		sun3
-.endif
