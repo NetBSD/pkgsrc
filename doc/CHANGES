@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.856 2002/12/21 10:57:39 jmmv Exp $
+$NetBSD: CHANGES,v 1.857 2002/12/21 11:11:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4033,3 +4033,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated pvs to 3.0nb1 [jschauma 2002-12-20]
 	Updated digest to 20021220 [schmonz 2002-12-21]
 	Added avi-xmms-1.2.2 [jmmv 2002-12-21]
+	Updated fxtv to 1.03nb2 [wiz 2002-12-21]
