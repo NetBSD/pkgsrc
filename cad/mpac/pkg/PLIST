@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/24 23:00:26 dmcmahill Exp $
+bin/mpac
+share/mpac/patch.gif
+@dirrm share/mpac
