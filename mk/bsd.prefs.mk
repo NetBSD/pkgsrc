@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.76 2002/09/01 15:13:41 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.77 2002/09/15 11:58:23 rh Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -284,6 +284,25 @@ HAVE_BUILTIN_XPM=	YES
 LOCALBASE?=		${DESTDIR}/usr/pkg
 X11BASE?=		${DESTDIR}/usr/X11R6
 CROSSBASE?=		${LOCALBASE}/cross
+
+# Set X11PREFIX to reflect the install directory of X11 packages.
+# Set XMKMF_CMD properly if xpkgwedge is installed.
+#
+# The check for the existence of ${X11BASE}/lib/X11/config/xpkgwedge.def
+# is to catch users of xpkgwedge<1.0.
+#
+XMKMF?=			${XMKMF_CMD} ${XMKMF_FLAGS} -a
+XMKMF_FLAGS?=		# empty
+.if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
+    exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
+HAVE_XPKGWEDGE=		yes
+X11PREFIX=		${LOCALBASE}
+XMKMF_CMD?=		${X11PREFIX}/bin/pkgxmkmf
+.else
+X11PREFIX=		${X11BASE}
+XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
+.endif
+
 
 .ifndef DIGEST
 DIGEST:=		${LOCALBASE}/bin/digest
