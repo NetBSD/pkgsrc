@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2004/01/12 00:00:03 grant Exp $
+# $NetBSD: Makefile,v 1.98 2004/01/22 12:53:48 jlam Exp $
 #
 
 DISTNAME=		ORBit-0.${ORBIT_MAJOR}.${ORBIT_MINOR}
@@ -10,7 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		High-performance CORBA ORB with support for the C language
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,9 +41,9 @@ PLIST_SUBST+=		ORBIT_MAJOR=${ORBIT_MAJOR} ORBIT_MINOR=${ORBIT_MINOR}
 
 INFO_FILES=		libIDL.info
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/glib/buildlink2.mk"
-.include "../../security/tcp_wrappers/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib/buildlink3.mk"
+.include "../../security/tcp_wrappers/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
-.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
