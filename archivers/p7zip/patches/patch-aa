@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2004/12/26 02:43:38 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2005/02/07 14:13:29 wiz Exp $
 
---- makefile.machine.orig	2004-12-03 22:00:37.000000000 +0100
+--- makefile.machine.orig	2005-01-23 16:18:54.000000000 +0100
 +++ makefile.machine
 @@ -1,8 +1,7 @@
  
