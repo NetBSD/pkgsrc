@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/09/12 18:13:04 drochner Exp $
+$NetBSD: distinfo,v 1.2 2002/11/27 15:14:22 drochner Exp $
 
-SHA1 (zope/Formulator-1.2.0.tgz) = 7ba8b60ac4b65cac2360ab8684b87c44458afab1
-Size (zope/Formulator-1.2.0.tgz) = 53997 bytes
+SHA1 (zope/Formulator-1.3.0.tgz) = 87b93c84597c6f11f5647ac6091561548db7a511
+Size (zope/Formulator-1.3.0.tgz) = 58282 bytes
