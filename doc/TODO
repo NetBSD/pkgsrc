@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3117 2005/02/26 01:33:32 wiz Exp $
+$NetBSD: TODO,v 1.3118 2005/02/26 01:58:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -62,9 +62,6 @@ Suggested new packages
 
 	p5-Crypt-PasswdMD5-1.3
 	Provides interoperable MD5-based crypt() function
-
-	p5-DateTime-0.20 [wip/p5-DateTime]
-	Suite of inter-operable modules for dealing with dates and times
 
 	p5-CGI-AppToolkit-0.051
 	Perl CGI application toolkit
