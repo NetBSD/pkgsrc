@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.197 2001/04/18 00:38:29 kei Exp $
+# $NetBSD: mk.conf.example,v 1.198 2001/04/21 01:49:39 jtb Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -532,16 +532,6 @@
 # Possible: not defined, defined
 # Default: not defined
 
-#TEXMFSITE=
-# Used in TeXfamily package which depends on teTeX package to specify
-# site-local texmf configuration.
-# Since teTeX package uses ${PREFIX}/share/texmf directory, TeXfamily
-# package uses ${PREFIX}/share/texmf.local.  Therefore, though you can
-# use /usr/local/share/texmf as TEXMFSITE, it causes a conflict if you
-# set ${PREFIX} to /usr/local.  Use another path in such a case.
-# Possible: any valid path
-# Default: none
-
 #LIBWRAP_FWD=
 # Used in ssh package to make libwrap also compare against forwarded
 # connection attempts
@@ -800,6 +790,16 @@ PAPERSIZE=	A4
 # Possible: defined, not defined
 # Default: not defined
 
+#TEXMFSITE=
+# Used in TeXfamily package which depends on teTeX package to specify
+# site-local texmf configuration.
+# Since teTeX package uses ${PREFIX}/share/texmf directory, TeXfamily
+# package uses ${PREFIX}/share/texmf.local.  Therefore, though you can
+# use /usr/local/share/texmf as TEXMFSITE, it causes a conflict if you
+# set ${PREFIX} to /usr/local.  Use another path in such a case.
+# Possible: any valid path
+# Default: none
+
 #UPCLIENT_LOGIN=
 #UPCLIENT_PASSWORD=
 #UPCLIENT_HOSTID=
@@ -915,7 +915,7 @@ PAPERSIZE=	A4
 # Default: not defined
 
 #ZSH_STATIC=
-# Build static version of zsh binary - recommended if used as a login shell
+# Build statically linked zsh binary - recommended if used as a login shell
 # Possible: defined, not defined
 # Default: not defined
 
