@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.45 2002/12/08 12:16:56 jmmv Exp $
+$NetBSD: TODO,v 1.46 2002/12/08 12:44:13 cjep Exp $
 
 Suggested new packages
 ======================
@@ -151,7 +151,6 @@ Suggested package updates
 	o kdevelop-2.1.4 [3.0alpha1]
 	o lbreakout2-2.3.5
 	o lcms-1.0.9
-	o leafnode-1.9.30
 	o lftp-2.6.2
 	o libexif-0.5.7
 	o libgnomeprint-2.1.2 [jmmv]
