@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.857 2003/09/13 14:42:26 jlam Exp $
+$NetBSD: TODO,v 1.858 2003/09/13 21:58:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -143,7 +143,6 @@ Suggested package updates
 	o gstreamer-0.6.3
 	o gtetrinet-0.7.4
 	o gtkglext-1.0.3
-	o gtkhtml-1.1.10
 	o gtksee-0.5.3
 	o guile-1.6.4
 	o hatari-0.40
@@ -167,6 +166,7 @@ Suggested package updates
 	o jwhois-3.2.2 [pkg/22741]
 	o kaffe-1.1.0 [pkg/22155]
 	o kbiff-3.7
+	o kopete-0.7.2 [pkg/22777]
 	o latd-1.18 [pkg/22735]
 	o lavaps-2.3
 	o lcms-1.0.9
@@ -293,7 +293,7 @@ Suggested package updates
 	o xsidplay-1.6.5pre20
 	o yacas-1.0.55
 	o ysm-2.9.0
-	o yudit-2.7.5
+	o yudit-2.7.6
 	o zenicb 1.31 (needs merge with lots of local changes)
 
 Infrastructure problems which need addressing
