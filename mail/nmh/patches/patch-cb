@@ -1,7 +1,7 @@
-$NetBSD: patch-cb,v 1.4 1999/03/07 01:16:26 kim Exp $
+$NetBSD: patch-cb,v 1.5 2000/03/02 00:23:15 hubertf Exp $
 
---- config.h.in.orig	Sat Jan 23 21:27:49 1999
-+++ config.h.in	Sat Mar  6 19:50:56 1999
+--- config.h.in.orig	Sun Feb  6 13:40:21 2000
++++ config.h.in	Thu Mar  2 00:47:13 2000
 @@ -1,5 +1,12 @@
  /* config.h.in.  Generated automatically from configure.in by autoheader.  */
  
@@ -15,23 +15,7 @@ $NetBSD: patch-cb,v 1.4 1999/03/07 01:16:26 kim Exp $
  /****** BEGIN USER CONFIGURATION SECTION *****/
  
  /*
-@@ -37,9 +44,12 @@
-  *  OpenBSD 2.x
-  *  BSD/OS 2.x
-  */
--/* #define BIND     1 */
--/* #define BSD42    1 */
--/* #define BSD44    1 */
-+#ifdef BSD4_4
-+#define BIND     1
-+#define BSD42    1
-+#define BSD44    1
-+#define GCOS_HACK 1
-+#endif
- 
- /*
-  *  SCO 4.x
-@@ -399,9 +409,6 @@
+@@ -405,9 +412,6 @@
  
  /* Define if you have the <sys/ndir.h> header file.  */
  #undef HAVE_SYS_NDIR_H
