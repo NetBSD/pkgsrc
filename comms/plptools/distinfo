@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.4 2001/08/24 12:52:06 hubertf Exp $
+$NetBSD: distinfo,v 1.5 2001/11/06 22:23:49 jlam Exp $
 
 SHA1 (plptools-0.6.tar.gz) = 99280368116018a10469ea7e1b86985cf551eae5
 Size (plptools-0.6.tar.gz) = 197770 bytes
 SHA1 (patch-aa) = cfb95f4970b6e7c8d17bc79250f4500ee0da3963
 SHA1 (patch-ab) = 00fee9bb2eebf357b171ac640163a943485f482f
-SHA1 (patch-ac) = dfd7d48975c518076f978e76d76dc6e665d27677
+SHA1 (patch-ac) = abfbc62ffa4fe17fbab470f0bd5cb10211f91a77
 SHA1 (patch-ad) = de550f23304b6205f0d4a6b40cc32307c41a509f
 SHA1 (patch-ae) = 46b1d9714397c7b9d6b3fb5d053cda44fc5f10fd
 SHA1 (patch-af) = 41f937ef89ba41d79b531ffc57fd77dee0608a93
