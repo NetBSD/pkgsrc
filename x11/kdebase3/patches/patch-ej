@@ -1,61 +1,55 @@
-$NetBSD: patch-ej,v 1.4 2003/01/02 09:12:36 skrll Exp $
+$NetBSD: patch-ej,v 1.5 2003/03/11 13:10:29 markd Exp $
 
---- kxkb/Makefile.in.orig	Fri Dec 27 18:19:11 2002
+--- kxkb/Makefile.in.orig	Fri Jan 17 09:03:12 2003
 +++ kxkb/Makefile.in
-@@ -291,11 +291,11 @@ INCLUDES = $(all_includes)
+@@ -293,11 +293,11 @@ KDE_OPTIONS = nofinal
  
  bin_PROGRAMS = kxkb
  
 -kxkb_SOURCES = dummy.cpp
 +kxkb_SOURCES = kxkb_main.cpp
  kxkb_LDFLAGS = $(all_libraries) $(KDE_RPATH)
--kxkb_LDADD = kxkb.la
-+kxkb_LDADD = libkxkb_main.la
+-kxkb_LDADD = kxkb.la -lxkbfile
++kxkb_LDADD = libkxkb_main.la -lxkbfile
  
 -lib_LTLIBRARIES = kxkb.la
 +lib_LTLIBRARIES = libkxkb_main.la kxkb.la
  kde_module_LTLIBRARIES = kcm_keyboard.la
  
- kcm_keyboard_la_SOURCES = rules.cpp kcmlayout.cpp pixmap.cpp kcmmisc.cpp
-@@ -303,9 +303,13 @@ kcm_keyboard_la_SOURCES = rules.cpp kcml
+ #>- kcm_keyboard_la_SOURCES = rules.cpp kcmlayout.cpp pixmap.cpp kcmmisc.cpp kcmmiscwidget.ui
+@@ -306,9 +306,13 @@ kcm_keyboard_la_SOURCES=rules.cpp kcmlay
  kcm_keyboard_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
- kcm_keyboard_la_LIBADD = @XTESTLIB@ $(LIB_KFILE)
+ kcm_keyboard_la_LIBADD = $(XTESTLIB) $(LIB_KIO) -lxkbfile
  
--kxkb_la_SOURCES = rules.cpp kxkb.cpp extension.cpp pixmap.cpp
-+libkxkb_main_la_SOURCES = rules.cpp kxkb.cpp extension.cpp pixmap.cpp
+-kxkb_la_SOURCES = kxkb.cpp rules.cpp extension.cpp pixmap.cpp
++libkxkb_main_la_SOURCES = kxkb.cpp rules.cpp extension.cpp pixmap.cpp
 +libkxkb_main_la_LDFLAGS = $(all_libraries)
-+libkxkb_main_la_LIBADD = -lX11 -lXext $(LIB_KDEUI)
++libkxkb_main_la_LIBADD = -lX11 -lXext $(LIB_KDEUI) -lxkbfile
 +
 +kxkb_la_SOURCES = kxkb_main.cpp
  kxkb_la_LDFLAGS = $(all_libraries) -module -avoid-version
--kxkb_la_LIBADD = -lX11 -lXext $(LIB_KDEUI)
+-kxkb_la_LIBADD = -lX11 -lXext $(LIB_KDEUI) -lxkbfile
 +kxkb_la_LIBADD = libkxkb_main.la
  
  data_DATA = keyboard.desktop
- 
-@@ -325,22 +329,27 @@ kcm_keyboard_la_final_OBJECTS = kcm_keyb
- kcm_keyboard_la_nofinal_OBJECTS = rules.lo kcmlayout.lo pixmap.lo kcmmisc.lo
- @KDE_USE_FINAL_FALSE@kcm_keyboard_la_OBJECTS = $(kcm_keyboard_la_nofinal_OBJECTS)
- @KDE_USE_FINAL_TRUE@kcm_keyboard_la_OBJECTS = $(kcm_keyboard_la_final_OBJECTS)
+ data2_DATA = keyboard_layout.desktop
+@@ -327,19 +331,24 @@ am_kcm_keyboard_la_OBJECTS = rules.lo kc
+ #>- kcm_keyboard_la_OBJECTS = $(am_kcm_keyboard_la_OBJECTS)
+ #>+ 1
+ kcm_keyboard_la_OBJECTS = rules.lo kcmlayout.lo pixmap.lo kcmmisc.lo kcmmiscwidget.lo
 -kxkb_la_DEPENDENCIES =
--am_kxkb_la_OBJECTS = rules.lo kxkb.lo extension.lo pixmap.lo
+-am_kxkb_la_OBJECTS = kxkb.lo rules.lo extension.lo pixmap.lo
 +kxkb_la_DEPENDENCIES = libkxkb_main.la
 +am_kxkb_la_OBJECTS = kxkb_main.lo
  #>- kxkb_la_OBJECTS = $(am_kxkb_la_OBJECTS)
-+#>+ 1
+ #>+ 1
+-kxkb_la_OBJECTS = kxkb.lo rules.lo extension.lo pixmap.lo
 +kxkb_la_OBJECTS = kxkb_main.lo
 +libkxkb_main_la_DEPENDENCIES =
-+am_libkxkb_main_la_OBJECTS = rules.lo kxkb.lo extension.lo pixmap.lo
++am_libkxkb_main_la_OBJECTS = kxkb.lo rules.lo extension.lo pixmap.lo
 +#>- libkxkb_main_la_OBJECTS = $(am_libkxkb_main_la_OBJECTS)
- #>+ 4
--kxkb_la_final_OBJECTS = kxkb_la.all_cpp.lo 
--kxkb_la_nofinal_OBJECTS = rules.lo kxkb.lo extension.lo pixmap.lo
--@KDE_USE_FINAL_FALSE@kxkb_la_OBJECTS = $(kxkb_la_nofinal_OBJECTS)
--@KDE_USE_FINAL_TRUE@kxkb_la_OBJECTS = $(kxkb_la_final_OBJECTS)
-+libkxkb_main_la_final_OBJECTS = libkxkb_main_la.all_cpp.lo 
-+libkxkb_main_la_nofinal_OBJECTS = rules.lo kxkb.lo extension.lo pixmap.lo
-+@KDE_USE_FINAL_FALSE@libkxkb_main_la_OBJECTS = $(libkxkb_main_la_nofinal_OBJECTS)
-+@KDE_USE_FINAL_TRUE@libkxkb_main_la_OBJECTS = $(libkxkb_main_la_final_OBJECTS)
++#>+ 1
++libkxkb_main_la_OBJECTS = kxkb.lo rules.lo extension.lo pixmap.lo
  bin_PROGRAMS = kxkb$(EXEEXT)
  PROGRAMS = $(bin_PROGRAMS)
  
@@ -70,151 +64,106 @@ $NetBSD: patch-ej,v 1.4 2003/01/02 09:12:36 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -348,19 +357,19 @@ CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
+@@ -348,14 +357,16 @@ LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/extension.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/kcmlayout.Plo $(DEPDIR)/kcmmisc.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/kxkb.Plo $(DEPDIR)/pixmap.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/rules.Plo
-+#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/extension.Plo $(DEPDIR)/kcmlayout.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kcmmisc.Plo $(DEPDIR)/kxkb.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kxkb_main.Plo $(DEPDIR)/kxkb_main.Po \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/pixmap.Plo $(DEPDIR)/rules.Plo
- #>+ 9
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/kcm_keyboard_la.all_cpp.P $(DEPDIR)/kxkb_la.all_cpp.P  $(DEPDIR)/dummy.Po $(DEPDIR)/extension.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kcmlayout.Plo $(DEPDIR)/kcmmisc.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kxkb.Plo $(DEPDIR)/pixmap.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/rules.Plo
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   $(DEPDIR)/dummy.Po $(DEPDIR)/extension.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kcmlayout.Plo $(DEPDIR)/kcmmisc.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kxkb.Plo $(DEPDIR)/pixmap.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/rules.Plo
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/kcm_keyboard_la.all_cpp.P $(DEPDIR)/libkxkb_main_la.all_cpp.P  $(DEPDIR)/extension.Plo $(DEPDIR)/kcmlayout.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kcmmisc.Plo $(DEPDIR)/kxkb.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kxkb_main.Plo $(DEPDIR)/kxkb_main.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/pixmap.Plo $(DEPDIR)/rules.Plo
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   $(DEPDIR)/extension.Plo $(DEPDIR)/kcmlayout.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kcmmisc.Plo $(DEPDIR)/kxkb.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kxkb_main.Plo $(DEPDIR)/kxkb_main.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/pixmap.Plo $(DEPDIR)/rules.Plo
+ am__depfiles_maybe = depfiles
+-#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/extension.Plo \
++#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/extension.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kcmlayout.Plo ./$(DEPDIR)/kcmmisc.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/kxkb.Plo ./$(DEPDIR)/pixmap.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kxkb.Plo ./$(DEPDIR)/kxkb_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kxkb_main.Po ./$(DEPDIR)/pixmap.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/rules.Plo
+-#>+ 5
+-@AMDEP_TRUE@DEP_FILES =  $(DEPDIR)/kcmmiscwidget.P  ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/extension.Plo \
++#>+ 6
++@AMDEP_TRUE@DEP_FILES =  $(DEPDIR)/kcmmiscwidget.P  ./$(DEPDIR)/extension.Plo \
+ @AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kcmlayout.Plo ./$(DEPDIR)/kcmmisc.Plo \
+-@AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kxkb.Plo ./$(DEPDIR)/pixmap.Plo \
++@AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kxkb.Plo ./$(DEPDIR)/kxkb_main.Plo \
++@AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kxkb_main.Po ./$(DEPDIR)/pixmap.Plo \
+ @AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/rules.Plo
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
- #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -382,11 +391,11 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -378,7 +389,7 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(kcm_keyboard_la_SOURCES) $(kxkb_la_SOURCES) \
 -	$(kxkb_SOURCES)
 +	$(libkxkb_main_la_SOURCES) $(kxkb_SOURCES)
- DATA = $(data_DATA) $(services_DATA)
+ DATA = $(data_DATA) $(data2_DATA) $(services_DATA)
  
+ 
+@@ -388,7 +399,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+ 	uninstall-recursive check-recursive installcheck-recursive
  DIST_COMMON = Makefile.am Makefile.in TODO
+ DIST_SUBDIRS = $(SUBDIRS)
 -SOURCES = $(kcm_keyboard_la_SOURCES) $(kxkb_la_SOURCES) $(kxkb_SOURCES)
 +SOURCES = $(kcm_keyboard_la_SOURCES) $(kxkb_la_SOURCES) $(libkxkb_main_la_SOURCES) $(kxkb_SOURCES)
  
- #>- all: all-am
+ #>- all: all-recursive
  #>+ 1
-@@ -459,6 +468,8 @@ clean-libLTLIBRARIES:
+@@ -468,6 +479,8 @@ clean-libLTLIBRARIES:
  	$(CXXLINK) -rpath $(kde_moduledir) $(kcm_keyboard_la_LDFLAGS) $(kcm_keyboard_la_OBJECTS) $(kcm_keyboard_la_LIBADD) $(LIBS)
  kxkb.la: $(kxkb_la_OBJECTS) $(kxkb_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kxkb_la_LDFLAGS) $(kxkb_la_OBJECTS) $(kxkb_la_LIBADD) $(LIBS)
 +libkxkb_main.la: $(libkxkb_main_la_OBJECTS) $(libkxkb_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libkxkb_main_la_LDFLAGS) $(libkxkb_main_la_OBJECTS) $(libkxkb_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -493,11 +504,12 @@ mostlyclean-compile:
+@@ -507,11 +520,12 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/extension.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcmlayout.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcmmisc.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxkb.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxkb_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kxkb_main.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/pixmap.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/rules.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/extension.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kcmlayout.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kcmmisc.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kxkb.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kxkb_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kxkb_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/pixmap.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rules.Plo@am__quote@
  
-@@ -592,7 +604,7 @@ distclean-tags:
- 
+@@ -698,7 +712,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=extension.h rules.h keyboard.desktop pixmap.h kcmmisc.h uninstall.desktop kxkb.h kxkbbindings.cpp LICENSE kcmlayout.h configure.in.in kxkb.desktop 
-+KDE_DIST=pixmap.h kxkb.h kcmmisc.h configure.in.in kcmlayout.h kxkbbindings.cpp extension.h kxkb.desktop LICENSE keyboard.desktop uninstall.desktop rules.h 
+-KDE_DIST=extension.h rules.h keyboard.desktop pixmap.h kcmmisc.h uninstall.desktop kxkb.h kxkbbindings.cpp keyboard_layout.desktop LICENSE kcmlayout.h configure.in.in kcmmiscwidget.ui kxkb.desktop 
++KDE_DIST=pixmap.h kxkb.h kcmmisc.h configure.in.in keyboard_layout.desktop kcmlayout.h kcmmiscwidget.ui kxkbbindings.cpp extension.h kxkb.desktop LICENSE keyboard.desktop uninstall.desktop rules.h 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -729,9 +741,6 @@ install-data-local: uninstall.desktop
- messages: 
+@@ -859,9 +873,6 @@ install-data-local: uninstall.desktop
+ messages: rc.cpp
  	$(XGETTEXT) $(kxkb_la_SOURCES) kxkbbindings.cpp -o $(podir)/kxkb.pot
- 	$(XGETTEXT) $(kcm_keyboard_la_SOURCES) kxkbbindings.cpp -o $(podir)/kcmlayout.pot 
+ 	$(XGETTEXT) rules.cpp kcmlayout.cpp pixmap.cpp kcmmisc.cpp rc.cpp kxkbbindings.cpp -o $(podir)/kcmlayout.pot 
 -
 -dummy.cpp:
 -	echo > dummy.cpp
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -788,33 +797,33 @@ kcm_keyboard_la.all_cpp.cpp: $(srcdir)/M
- 	rm -f kcm_keyboard_la.all_cpp.final kcm_keyboard_la.all_cpp.files
- 
- #>+ 11
--kxkb_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/rules.cpp $(srcdir)/kxkb.cpp $(srcdir)/extension.cpp $(srcdir)/pixmap.cpp  kxkb.moc
--	@echo 'creating kxkb_la.all_cpp.cpp ...'; \
--	rm -f kxkb_la.all_cpp.files kxkb_la.all_cpp.final; \
--	echo "#define KDE_USE_FINAL 1" >> kxkb_la.all_cpp.final; \
-+libkxkb_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/rules.cpp $(srcdir)/kxkb.cpp $(srcdir)/extension.cpp $(srcdir)/pixmap.cpp  kxkb.moc
-+	@echo 'creating libkxkb_main_la.all_cpp.cpp ...'; \
-+	rm -f libkxkb_main_la.all_cpp.files libkxkb_main_la.all_cpp.final; \
-+	echo "#define KDE_USE_FINAL 1" >> libkxkb_main_la.all_cpp.final; \
- 	for file in rules.cpp kxkb.cpp extension.cpp pixmap.cpp ; do \
--	  echo "#include \"$$file\"" >> kxkb_la.all_cpp.files; \
--	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kxkb_la.all_cpp.final; \
-+	  echo "#include \"$$file\"" >> libkxkb_main_la.all_cpp.files; \
-+	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> libkxkb_main_la.all_cpp.final; \
- 	done; \
--	cat kxkb_la.all_cpp.final kxkb_la.all_cpp.files > kxkb_la.all_cpp.cpp; \
--	rm -f kxkb_la.all_cpp.final kxkb_la.all_cpp.files
-+	cat libkxkb_main_la.all_cpp.final libkxkb_main_la.all_cpp.files > libkxkb_main_la.all_cpp.cpp; \
-+	rm -f libkxkb_main_la.all_cpp.final libkxkb_main_la.all_cpp.files
- 
- #>+ 3
- clean-final:
--	-rm -f kcm_keyboard_la.all_cpp.cpp kxkb_la.all_cpp.cpp
-+	-rm -f kcm_keyboard_la.all_cpp.cpp libkxkb_main_la.all_cpp.cpp
- 
- #>+ 2
- final:
--	$(MAKE) kcm_keyboard_la_OBJECTS="$(kcm_keyboard_la_final_OBJECTS)" kxkb_la_OBJECTS="$(kxkb_la_final_OBJECTS)" all-am
-+	$(MAKE) kcm_keyboard_la_OBJECTS="$(kcm_keyboard_la_final_OBJECTS)" libkxkb_main_la_OBJECTS="$(libkxkb_main_la_final_OBJECTS)" all-am
- #>+ 2
- final-install:
--	$(MAKE) kcm_keyboard_la_OBJECTS="$(kcm_keyboard_la_final_OBJECTS)" kxkb_la_OBJECTS="$(kxkb_la_final_OBJECTS)" install-am
-+	$(MAKE) kcm_keyboard_la_OBJECTS="$(kcm_keyboard_la_final_OBJECTS)" libkxkb_main_la_OBJECTS="$(libkxkb_main_la_final_OBJECTS)" install-am
- #>+ 2
- no-final:
--	$(MAKE) kcm_keyboard_la_OBJECTS="$(kcm_keyboard_la_nofinal_OBJECTS)" kxkb_la_OBJECTS="$(kxkb_la_nofinal_OBJECTS)" all-am
-+	$(MAKE) kcm_keyboard_la_OBJECTS="$(kcm_keyboard_la_nofinal_OBJECTS)" libkxkb_main_la_OBJECTS="$(libkxkb_main_la_nofinal_OBJECTS)" all-am
- #>+ 2
- no-final-install:
--	$(MAKE) kcm_keyboard_la_OBJECTS="$(kcm_keyboard_la_nofinal_OBJECTS)" kxkb_la_OBJECTS="$(kxkb_la_nofinal_OBJECTS)" install-am
-+	$(MAKE) kcm_keyboard_la_OBJECTS="$(kcm_keyboard_la_nofinal_OBJECTS)" libkxkb_main_la_OBJECTS="$(libkxkb_main_la_nofinal_OBJECTS)" install-am
- #>+ 3
- cvs-clean:
- 	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -824,9 +833,9 @@ kde-rpo-clean:
+@@ -946,13 +957,13 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
- #>+ 7
+ #>+ 11
+-$(srcdir)/rules.cpp: kcmmiscwidget.h 
+-kcmlayout.lo: kcmlayout.moc 
+-kxkb.o: kxkb.moc 
+-kcmlayout.o: kcmlayout.moc 
++$(srcdir)/kcmlayout.cpp: kcmmiscwidget.h 
++$(srcdir)/kcmmisc.cpp: kcmmiscwidget.h 
+ $(srcdir)/pixmap.cpp: kcmmiscwidget.h 
 -kcmmisc.lo: kcmmisc.moc 
  kxkb.lo: kxkb.moc 
+-$(srcdir)/kcmmisc.cpp: kcmmiscwidget.h 
 +kcmlayout.o: kcmlayout.moc 
- kcmlayout.lo: kcmlayout.moc 
--kcmmisc.o: kcmmisc.moc 
- kxkb.o: kxkb.moc 
--kcmlayout.o: kcmlayout.moc 
-+kcmmisc.o: kcmmisc.moc 
++kcmlayout.lo: kcmlayout.moc 
++kxkb.o: kxkb.moc 
++$(srcdir)/rules.cpp: kcmmiscwidget.h 
+ kcmmisc.o: kcmmisc.moc 
+-$(srcdir)/kcmlayout.cpp: kcmmiscwidget.h 
 +kcmmisc.lo: kcmmisc.moc 

@@ -1,8 +1,8 @@
-$NetBSD: patch-az,v 1.2 2002/08/25 19:23:53 jlam Exp $
+$NetBSD: patch-az,v 1.3 2003/03/11 13:10:35 markd Exp $
 
---- kinit/Makefile.am.orig	Wed Jan 23 06:28:28 2002
+--- kinit/Makefile.am.orig	Mon Sep 16 09:13:34 2002
 +++ kinit/Makefile.am
-@@ -58,8 +58,7 @@
+@@ -54,8 +54,7 @@
  klauncher_la_SOURCES = klauncher.cpp klauncher_main.cpp autostart.cpp
  
  klauncher_LDFLAGS =  $(all_libraries) $(KDE_RPATH)
@@ -12,9 +12,9 @@ $NetBSD: patch-az,v 1.2 2002/08/25 19:23:53 jlam Exp $
  
  METASOURCES = AUTO
  
-@@ -73,5 +72,3 @@
- # do nothing, it just depends on it
- 	
+@@ -65,5 +64,3 @@
+ 
+ shell.o: wrapper.c
  
 -dummy.cpp:
 -	echo > dummy.cpp

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/01/05 13:26:46 skrll Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/11 13:10:31 markd Exp $
 
-DISTNAME=	kdelibs-3.0.5a
-PKGNAME=	kdelibdocs-3.0.5.1
+DISTNAME=	kdelibs-3.1
+PKGNAME=	kdelibdocs-3.1
 CATEGORIES=	x11 devel
 
 COMMENT=	KDE library documentation
@@ -9,7 +9,7 @@ COMMENT=	KDE library documentation
 .include "../../x11/kde3/Makefile.kde3"
 
 BUILD_DEPENDS+=		kdoc>=3.0:../../textproc/kdoc
-DEPENDS+=		qt3-docs>=3.0.4:../../x11/qt3-docs
+DEPENDS+=		qt3-docs>=3.1.1:../../x11/qt3-docs
 
 USE_X11BASE=		yes
 NO_CONFIGURE=		yes

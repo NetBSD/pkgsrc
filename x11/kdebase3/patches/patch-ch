@@ -1,8 +1,8 @@
-$NetBSD: patch-ch,v 1.3 2003/01/02 09:12:35 skrll Exp $
+$NetBSD: patch-ch,v 1.4 2003/03/11 13:10:23 markd Exp $
 
---- konqueror/Makefile.in.orig	Fri Dec 27 18:19:11 2002
+--- konqueror/Makefile.in.orig	Fri Jan 17 09:03:09 2003
 +++ konqueror/Makefile.in
-@@ -293,7 +293,7 @@ INCLUDES = -I$(top_srcdir)/libkonq -I$(t
+@@ -291,7 +291,7 @@ INCLUDES = -I$(top_srcdir)/libkonq -I$(t
  #SUBDIRS = . kfmexec client iconview dirtree listview keditbookmarks shellcmdplugin about pics sidebar
  SUBDIRS = . kfmexec client iconview listview keditbookmarks shellcmdplugin about pics sidebar
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ch,v 1.3 2003/01/02 09:12:35 skrll Exp $
  
  konqdatadir = $(kde_datadir)/konqueror
  konqdata_DATA = konqueror.rc
-@@ -310,7 +310,7 @@ include_HEADERS = KonquerorIface.h
+@@ -308,7 +308,7 @@ include_HEADERS = KonquerorIface.h
  
  bin_PROGRAMS = konqueror
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ch,v 1.3 2003/01/02 09:12:35 skrll Exp $
  #>- 	    KonquerorIface.cc KonquerorIface.skel \
  #>- 	    KonqMainWindowIface.cc KonqMainWindowIface.skel \
  #>- 	    KonqViewIface.cc KonqViewIface.skel \
-@@ -325,7 +325,7 @@ bin_PROGRAMS = konqueror
+@@ -323,7 +323,7 @@ bin_PROGRAMS = konqueror
  #>- 	    konq_browseriface.cc \
  #>- 	    delayedinitializer.cc
  #>+ 14
@@ -29,8 +29,8 @@ $NetBSD: patch-ch,v 1.3 2003/01/02 09:12:35 skrll Exp $
  	    KonquerorIface.cc  \
  	    KonqMainWindowIface.cc  \
  	    KonqViewIface.cc  \
-@@ -341,11 +341,15 @@ konqueror_la_SOURCES=konq_main.cc \
- 	    delayedinitializer.cc KonquerorIface_skel.cc KonqMainWindowIface_skel.cc KonqViewIface_skel.cc
+@@ -346,11 +346,15 @@ noinst_HEADERS = KonqMainWindowIface.h K
+ 	konq_view.h konq_viewmgr.h version.h
  
  
 +libkonqueror_main_la_LDFLAGS = $(all_libraries) -module -avoid-version
@@ -47,8 +47,8 @@ $NetBSD: patch-ch,v 1.3 2003/01/02 09:12:35 skrll Exp $
 +konqueror_LDADD = libkonqueror_main.la
  konqueror_LDFLAGS = $(KDE_RPATH) $(all_libraries)
  
- data_DATA = konquerorsu.desktop kfmclient.desktop kfmclient_dir.desktop kfmclient_html.desktop
-@@ -367,32 +371,37 @@ CONFIG_HEADER = $(top_builddir)/config.h
+ data_DATA = kfmclient.desktop kfmclient_dir.desktop kfmclient_html.desktop kfmclient_war.desktop
+@@ -375,32 +379,37 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -96,62 +96,64 @@ $NetBSD: patch-ch,v 1.3 2003/01/02 09:12:35 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -403,7 +412,7 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
- #>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/KonqMainWindowIface.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/KonqViewIface.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/KonquerorIface.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/delayedinitializer.Plo $(DEPDIR)/dummy.Po \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/delayedinitializer.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/konq_actions.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/konq_browseriface.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/konq_combo.Plo $(DEPDIR)/konq_factory.Plo \
-@@ -414,12 +423,14 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
- #>- @AMDEP_TRUE@	$(DEPDIR)/konq_misc.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/konq_profiledlg.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/konq_run.Plo $(DEPDIR)/konq_view.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/konq_viewmgr.Plo
--#>+ 31
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/KonquerorIface_skel.P $(DEPDIR)/KonqMainWindowIface_skel.P $(DEPDIR)/KonqViewIface_skel.P  $(DEPDIR)/konqueror_la.all_cc.P  $(DEPDIR)/KonqMainWindowIface.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/konq_viewmgr.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/konqueror_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/konqueror_main.Po
-+#>+ 35
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/KonquerorIface_skel.P $(DEPDIR)/KonqMainWindowIface_skel.P $(DEPDIR)/KonqViewIface_skel.P  $(DEPDIR)/libkonqueror_main_la.all_cc.P  $(DEPDIR)/KonqMainWindowIface.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/KonqViewIface.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/KonquerorIface.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/delayedinitializer.Plo $(DEPDIR)/dummy.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/delayedinitializer.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konq_actions.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konq_browseriface.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konq_combo.Plo $(DEPDIR)/konq_factory.Plo \
-@@ -430,11 +441,13 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konq_misc.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konq_profiledlg.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konq_run.Plo $(DEPDIR)/konq_view.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konq_viewmgr.Plo
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konq_viewmgr.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konqueror_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/konqueror_main.Po
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/KonquerorIface_skel.P $(DEPDIR)/KonqMainWindowIface_skel.P $(DEPDIR)/KonqViewIface_skel.P  $(DEPDIR)/KonqMainWindowIface.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/KonqViewIface.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/KonquerorIface.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/delayedinitializer.Plo $(DEPDIR)/dummy.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/delayedinitializer.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konq_actions.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konq_browseriface.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konq_combo.Plo $(DEPDIR)/konq_factory.Plo \
-@@ -445,7 +458,9 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konq_misc.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konq_profiledlg.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konq_run.Plo $(DEPDIR)/konq_view.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konq_viewmgr.Plo
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konq_viewmgr.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konqueror_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/konqueror_main.Po
+@@ -413,7 +422,7 @@ am__depfiles_maybe = depfiles
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/KonqViewIface.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/KonquerorIface.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/delayedinitializer.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/dummy.Po ./$(DEPDIR)/konq_actions.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/konq_actions.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/konq_browseriface.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/konq_combo.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/konq_factory.Plo \
+@@ -424,13 +433,15 @@ am__depfiles_maybe = depfiles
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/konq_misc.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/konq_profiledlg.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/konq_run.Plo ./$(DEPDIR)/konq_view.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/konq_viewmgr.Plo
+-#>+ 33
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/KonquerorIface_skel.P $(DEPDIR)/KonqMainWindowIface_skel.P $(DEPDIR)/KonqViewIface_skel.P  $(DEPDIR)/konqueror_la.all_cc.P  ./$(DEPDIR)/KonqMainWindowIface.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/konq_viewmgr.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/konqueror_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/konqueror_main.Po
++#>+ 37
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/KonquerorIface_skel.P $(DEPDIR)/KonqMainWindowIface_skel.P $(DEPDIR)/KonqViewIface_skel.P  $(DEPDIR)/libkonqueror_main_la.all_cc.P  ./$(DEPDIR)/KonqMainWindowIface.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/KonqViewIface.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/KonquerorIface.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/delayedinitializer.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/dummy.Po ./$(DEPDIR)/konq_actions.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_actions.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_browseriface.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_combo.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_factory.Plo \
+@@ -441,12 +452,14 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_misc.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_profiledlg.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_run.Plo ./$(DEPDIR)/konq_view.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_viewmgr.Plo
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_viewmgr.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konqueror_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/konqueror_main.Po
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/KonquerorIface_skel.P $(DEPDIR)/KonqMainWindowIface_skel.P $(DEPDIR)/KonqViewIface_skel.P  ./$(DEPDIR)/KonqMainWindowIface.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/KonqViewIface.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/KonquerorIface.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/delayedinitializer.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/dummy.Po ./$(DEPDIR)/konq_actions.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_actions.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_browseriface.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_combo.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_factory.Plo \
+@@ -457,7 +470,9 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_misc.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_profiledlg.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_run.Plo ./$(DEPDIR)/konq_view.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_viewmgr.Plo
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konq_viewmgr.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konqueror_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/konqueror_main.Po
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -466,7 +481,8 @@ CXXLD = $(CXX)
+@@ -478,7 +493,8 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
@@ -159,53 +161,53 @@ $NetBSD: patch-ch,v 1.3 2003/01/02 09:12:35 skrll Exp $
 +DIST_SOURCES = $(konqueror_la_SOURCES) $(libkonqueror_main_la_SOURCES) \
 +	$(konqueror_SOURCES)
  DATA = $(data_DATA) $(data2_DATA) $(data3_DATA) $(data4_DATA) \
- 	$(kdelnk_DATA) $(konqdata_DATA)
- 
-@@ -480,7 +496,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
- DIST_COMMON = $(include_HEADERS) AUTHORS ChangeLog Makefile.am \
- 	Makefile.in TODO
+ 	$(data5_DATA) $(kde_apps_DATA) $(kde_services_DATA) \
+ 	$(konqdata_DATA)
+@@ -493,7 +509,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+ DIST_COMMON = $(include_HEADERS) $(noinst_HEADERS) AUTHORS ChangeLog \
+ 	Makefile.am Makefile.in TODO
  DIST_SUBDIRS = $(SUBDIRS)
 -SOURCES = $(konqueror_la_SOURCES) $(konqueror_SOURCES)
 +SOURCES = $(konqueror_la_SOURCES) $(libkonqueror_main_la_SOURCES) $(konqueror_SOURCES)
  
  #>- all: all-recursive
  #>+ 1
-@@ -529,6 +545,8 @@ clean-libLTLIBRARIES:
- 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+@@ -540,6 +556,8 @@ clean-libLTLIBRARIES:
+ 	done
  konqueror.la: $(konqueror_la_OBJECTS) $(konqueror_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(konqueror_la_LDFLAGS) $(konqueror_la_OBJECTS) $(konqueror_la_LIBADD) $(LIBS)
 +libkonqueror_main.la: $(libkonqueror_main_la_OBJECTS) $(libkonqueror_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libkonqueror_main_la_LDFLAGS) $(libkonqueror_main_la_OBJECTS) $(libkonqueror_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -567,7 +585,6 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/KonqViewIface.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/KonquerorIface.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/delayedinitializer.Plo@am__quote@
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/konq_actions.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/konq_browseriface.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/konq_combo.Plo@am__quote@
-@@ -581,6 +598,8 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/konq_run.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/konq_view.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/konq_viewmgr.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/konqueror_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/konqueror_main.Po@am__quote@
+@@ -583,7 +601,6 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/KonqViewIface.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/KonquerorIface.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/delayedinitializer.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konq_actions.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konq_browseriface.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konq_combo.Plo@am__quote@
+@@ -597,6 +614,8 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konq_run.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konq_view.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konq_viewmgr.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konqueror_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/konqueror_main.Po@am__quote@
  
  distclean-depend:
- 	-rm -rf $(DEPDIR)
-@@ -818,7 +837,7 @@ distclean-tags:
- 
+ 	-rm -rf ./$(DEPDIR)
+@@ -889,7 +908,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=profile_midnightcommander.desktop KonqMainWindowIface.h konq_mainwindow.h profile_webbrowsing.desktop konq_viewmgr.cc konq_viewmgr.h konq_mainwindow.cc konqfilemgr.desktop konq_frame.cc kfmclient_dir.desktop DESIGN KonqMainWindowIface.cc profile_filepreview.desktop delayedinitializer.h konq_factory.h konq_profiledlg.h konq_combo.cc konq_profiledlg.cc kfmclient_html.desktop konqueror.desktop konq_misc.cc konqbrowser.desktop konq_frame.h konq_browseriface.cc KonquerorIface.cc konq_view.h konq_guiclients.h convert_kdelnk.sh IDEAS konq_run.h KonqViewIface.h konq_view.cc konqueror.rc konq_main.h profile_filemanagement.desktop DESIGN_config konq_guiclients.cc konq_browseriface.h konq_factory.cc konq_actions.h konq_actions.cc konq_run.cc konquerorsu.desktop KonqViewIface.cc delayedinitializer.cc konq_misc.h Home.desktop kfmclient.desktop konq_openurlrequest.h konqueror_config.desktop version.h konq_combo.h 
-+KDE_DIST=konq_viewmgr.cc DESIGN konqfilemgr.desktop convert_kdelnk.sh konq_misc.h konq_view.cc konq_browseriface.h delayedinitializer.h DESIGN_config profile_midnightcommander.desktop konq_browseriface.cc konq_combo.cc konqueror_config.desktop konqueror.rc konqbrowser.desktop delayedinitializer.cc konq_guiclients.h konq_viewmgr.h profile_filemanagement.desktop konq_mainwindow.h kfmclient_dir.desktop konq_misc.cc kfmclient_html.desktop kfmclient.desktop konq_view.h konq_mainwindow.cc konq_actions.cc konq_frame.cc konq_actions.h KonqMainWindowIface.cc KonqMainWindowIface.h IDEAS konqueror.desktop konq_frame.h konq_profiledlg.cc konq_factory.h konq_run.cc version.h konq_run.h konq_factory.cc konq_combo.h konq_main.h konq_guiclients.cc profile_filepreview.desktop Home.desktop KonquerorIface.cc konquerorsu.desktop KonqViewIface.cc konq_profiledlg.h konq_openurlrequest.h profile_webbrowsing.desktop KonqViewIface.h 
+-KDE_DIST=profile_midnightcommander.desktop profile_webbrowsing.desktop kfmclient_war.desktop konq_viewmgr.cc konq_mainwindow.cc konqfilemgr.desktop konq_frame.cc kfmclient_dir.desktop DESIGN KonqMainWindowIface.cc profile_filepreview.desktop konq_combo.cc konq_profiledlg.cc kfmclient_html.desktop konqueror.desktop konq_misc.cc konqbrowser.desktop konq_browseriface.cc uninstall.desktop KonquerorIface.cc convert_kdelnk.sh IDEAS konq_view.cc konqueror.rc profile_filemanagement.desktop DESIGN_config konq_guiclients.cc konq_factory.cc konq_actions.cc konq_run.cc konquerorsu.desktop KonqViewIface.cc delayedinitializer.cc Home.desktop kfmclient.desktop konqueror_config.desktop 
++KDE_DIST=konq_viewmgr.cc DESIGN konqfilemgr.desktop convert_kdelnk.sh konq_view.cc DESIGN_config profile_midnightcommander.desktop konq_browseriface.cc konq_combo.cc konqueror_config.desktop konqueror.rc konqbrowser.desktop delayedinitializer.cc profile_filemanagement.desktop kfmclient_dir.desktop konq_misc.cc kfmclient_html.desktop kfmclient.desktop uninstall.desktop konq_mainwindow.cc konq_actions.cc konq_frame.cc KonqMainWindowIface.cc IDEAS konqueror.desktop konq_profiledlg.cc konq_run.cc konq_factory.cc konq_guiclients.cc profile_filepreview.desktop Home.desktop KonquerorIface.cc konquerorsu.desktop kfmclient_war.desktop KonqViewIface.cc profile_webbrowsing.desktop 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -976,9 +995,6 @@ uninstall-info: uninstall-info-recursive
+@@ -1056,9 +1075,6 @@ uninstall-info: uninstall-info-recursive
  #konqueror_static_LDADD = konqueror.la *view/*.la dirtree/*.la $(libdir)/libkhtml.la
  #konqueror_static_LDFLAGS = $(all_libraries) -static
  
@@ -215,7 +217,7 @@ $NetBSD: patch-ch,v 1.3 2003/01/02 09:12:35 skrll Exp $
  messages: rc.cpp
  	$(EXTRACTRC) *.rc */*.rc >> rc.cpp
  	$(EXTRACTRC) sidebar/trees/history_module/history_dlg.ui >> rc.cpp
-@@ -1007,23 +1023,13 @@ uninstall-local:
+@@ -1079,23 +1095,13 @@ uninstall-local:
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
  
@@ -244,7 +246,7 @@ $NetBSD: patch-ch,v 1.3 2003/01/02 09:12:35 skrll Exp $
  
  #>+ 3
  delayedinitializer.moc: $(srcdir)/delayedinitializer.h
-@@ -1034,40 +1040,50 @@ konq_mainwindow.moc: $(srcdir)/konq_main
+@@ -1106,40 +1112,50 @@ konq_mainwindow.moc: $(srcdir)/konq_main
  	$(MOC) $(srcdir)/konq_mainwindow.h -o konq_mainwindow.moc
  
  #>+ 3
@@ -313,7 +315,7 @@ $NetBSD: patch-ch,v 1.3 2003/01/02 09:12:35 skrll Exp $
  
  #>+ 6
  clean-idl:
-@@ -1087,33 +1103,33 @@ force-reedit:
+@@ -1159,33 +1175,33 @@ force-reedit:
  
  
  #>+ 11
@@ -360,7 +362,7 @@ $NetBSD: patch-ch,v 1.3 2003/01/02 09:12:35 skrll Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -1123,25 +1139,25 @@ kde-rpo-clean:
+@@ -1195,25 +1211,25 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 23

@@ -1,9 +1,9 @@
-$NetBSD: patch-bs,v 1.3 2003/01/02 09:12:34 skrll Exp $
+$NetBSD: patch-bs,v 1.4 2003/03/11 13:10:22 markd Exp $
 
---- kicker/proxy/Makefile.in.orig	Fri Dec 27 18:19:11 2002
+--- kicker/proxy/Makefile.in.orig	Fri Jan 17 09:03:08 2003
 +++ kicker/proxy/Makefile.in
-@@ -288,27 +288,35 @@ x_libraries = @x_libraries@
- 
+@@ -286,27 +286,35 @@ x_includes = @x_includes@
+ x_libraries = @x_libraries@
  INCLUDES = -I$(srcdir)/../share $(all_includes)
  
 -CLEANFILES = dummy.cpp
@@ -51,7 +51,7 @@ $NetBSD: patch-bs,v 1.3 2003/01/02 09:12:34 skrll Exp $
  extensionproxy_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  noinst_HEADERS = appletproxy.h extensionproxy.h
-@@ -318,29 +326,40 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -316,29 +324,40 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
@@ -104,32 +104,32 @@ $NetBSD: patch-bs,v 1.3 2003/01/02 09:12:34 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -348,11 +367,19 @@ CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
+@@ -347,11 +366,19 @@ LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/appletproxy.Plo $(DEPDIR)/dummy.Po \
--#>- @AMDEP_TRUE@	$(DEPDIR)/extensionproxy.Plo
+ am__depfiles_maybe = depfiles
+-#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/appletproxy.Plo ./$(DEPDIR)/dummy.Po \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/extensionproxy.Plo
 -#>+ 3
--@AMDEP_TRUE@DEP_FILES =   $(DEPDIR)/appletproxy.Plo $(DEPDIR)/dummy.Po \
--@AMDEP_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/extensionproxy.Plo
-+#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/appletproxy.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/appletproxy_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/appletproxy_main.Po \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/extensionproxy.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/extensionproxy_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/extensionproxy_main.Po
+-@AMDEP_TRUE@DEP_FILES =   ./$(DEPDIR)/appletproxy.Plo ./$(DEPDIR)/dummy.Po \
+-@AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/extensionproxy.Plo
++#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/appletproxy.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/appletproxy_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/appletproxy_main.Po \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/extensionproxy.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/extensionproxy_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/extensionproxy_main.Po
 +#>+ 7
-+@AMDEP_TRUE@DEP_FILES =   $(DEPDIR)/appletproxy.Plo \
-+@AMDEP_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/appletproxy_main.Plo \
-+@AMDEP_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/appletproxy_main.Po \
-+@AMDEP_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/extensionproxy.Plo \
-+@AMDEP_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/extensionproxy_main.Plo \
-+@AMDEP_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/extensionproxy_main.Po
++@AMDEP_TRUE@DEP_FILES =   ./$(DEPDIR)/appletproxy.Plo \
++@AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/appletproxy_main.Plo \
++@AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/appletproxy_main.Po \
++@AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/extensionproxy.Plo \
++@AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/extensionproxy_main.Plo \
++@AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/extensionproxy_main.Po
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -374,11 +401,13 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -373,11 +400,13 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(appletproxy_la_SOURCES) $(extensionproxy_la_SOURCES) \
@@ -145,7 +145,7 @@ $NetBSD: patch-bs,v 1.3 2003/01/02 09:12:34 skrll Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -429,6 +458,10 @@ appletproxy.la: $(appletproxy_la_OBJECTS
+@@ -426,6 +455,10 @@ appletproxy.la: $(appletproxy_la_OBJECTS
  	$(CXXLINK) -rpath $(libdir) $(appletproxy_la_LDFLAGS) $(appletproxy_la_OBJECTS) $(appletproxy_la_LIBADD) $(LIBS)
  extensionproxy.la: $(extensionproxy_la_OBJECTS) $(extensionproxy_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(extensionproxy_la_LDFLAGS) $(extensionproxy_la_OBJECTS) $(extensionproxy_la_LIBADD) $(LIBS)
@@ -153,31 +153,31 @@ $NetBSD: patch-bs,v 1.3 2003/01/02 09:12:34 skrll Exp $
 +	$(CXXLINK) -rpath $(libdir) $(libappletproxy_main_la_LDFLAGS) $(libappletproxy_main_la_OBJECTS) $(libappletproxy_main_la_LIBADD) $(LIBS)
 +libextensionproxy_main.la: $(libextensionproxy_main_la_OBJECTS) $(libextensionproxy_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libextensionproxy_main_la_LDFLAGS) $(libextensionproxy_main_la_OBJECTS) $(libextensionproxy_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -467,8 +500,11 @@ distclean-compile:
+@@ -469,8 +502,11 @@ distclean-compile:
  	-rm -f *.tab.c
  
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/appletproxy.Plo@am__quote@
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/appletproxy_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/appletproxy_main.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/extensionproxy.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/extensionproxy_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/extensionproxy_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/appletproxy.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/appletproxy_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/appletproxy_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/extensionproxy.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/extensionproxy_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/extensionproxy_main.Po@am__quote@
  
  distclean-depend:
- 	-rm -rf $(DEPDIR)
-@@ -571,7 +607,6 @@ install-strip:
+ 	-rm -rf ./$(DEPDIR)
+@@ -591,7 +627,6 @@ install-strip:
  mostlyclean-generic:
  
  clean-generic:
 -	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
  
  distclean-generic:
- 	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
-@@ -641,9 +676,6 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 	-rm -f Makefile $(CONFIG_CLEAN_FILES)
+@@ -661,9 +696,6 @@ uninstall-am: uninstall-binPROGRAMS unin
  messages:
  	$(XGETTEXT) appletproxy.cpp -o $(podir)/appletproxy.pot
  	$(XGETTEXT) extensionproxy.cpp -o $(podir)/extensionproxy.pot
@@ -187,7 +187,7 @@ $NetBSD: patch-bs,v 1.3 2003/01/02 09:12:34 skrll Exp $
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
-@@ -691,7 +723,7 @@ kde-rpo-clean:
+@@ -711,7 +743,7 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 5

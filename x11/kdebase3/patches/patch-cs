@@ -1,19 +1,18 @@
-$NetBSD: patch-cs,v 1.3 2002/08/28 07:15:41 skrll Exp $
+$NetBSD: patch-cs,v 1.4 2003/03/11 13:10:24 markd Exp $
 
---- konsole/konsole/Makefile.am.orig	Mon Aug  5 15:56:24 2002
+--- konsole/konsole/Makefile.am.orig	Fri Jan  3 17:43:59 2003
 +++ konsole/konsole/Makefile.am
-@@ -12,7 +12,8 @@ INCLUDES = $(all_includes)
+@@ -12,7 +12,7 @@ INCLUDES = -I. $(all_includes)
  
  # you can add here more. This one gets installed
  bin_PROGRAMS = 	konsole konsole_grantpty kwrited #kcmkonsole
--lib_LTLIBRARIES = libkonsolepart.la kwrited.la konsole.la
-+lib_LTLIBRARIES = libkonsolepart.la libkwrited_main.la kwrited.la \
-+	libkonsole_main.la konsole.la
+-lib_LTLIBRARIES = kwrited.la konsole.la
++lib_LTLIBRARIES = libkwrited_main.la kwrited.la libkonsole_main.la konsole.la
+ 
  # libkonsolepart is a part, but konsole.la links directly to it, so we can't
  # install it under kde_module
- 
-@@ -32,24 +33,32 @@ libkonsolepart_la_LDFLAGS = $(all_librar
- libkonsolepart_la_LIBADD = $(LIBUTIL) @XTESTLIB@ $(LIB_KPARTS)
+@@ -34,26 +34,34 @@ libkonsolepart_la_LDFLAGS = $(all_librar
+ libkonsolepart_la_LIBADD = $(LIBUTIL) $(XTESTLIB) $(LIB_KPARTS)
  
  # kwrited kdeinit module
 -kwrited_la_SOURCES = kwrited.cpp
@@ -30,29 +29,32 @@ $NetBSD: patch-cs,v 1.3 2002/08/28 07:15:41 skrll Exp $
 -kwrited_SOURCES	= dummy.cpp
 -kwrited_LDADD   = kwrited.la 
 +kwrited_SOURCES	= kwrited_main.cpp
-+kwrited_LDADD   = libkwrited_main.la 
++kwrited_LDADD   = libkwrited_main.la
  kwrited_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
+ 
  # konsole kdeinit module
--konsole_la_SOURCES = main.cpp konsole.cpp
--konsole_la_LIBADD  = libkonsolepart.la
-+libkonsole_main_la_SOURCES = main.cpp konsole.cpp
-+libkonsole_main_la_LIBADD  = libkonsolepart.la
+-konsole_la_SOURCES = TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp \
++libkonsole_main_la_SOURCES = TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp \
+      TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp konsoleiface.skel sessioniface.skel \
+      konsole_wcwidth.cpp konsolebookmarkhandler.cpp konsolebookmarkmenu.cpp konsole_child.cpp
 +libkonsole_main_la_LDFLAGS = $(all_libraries)
++libkonsole_main_la_LIBADD = $(LIB_KDEUI) $(LIB_KIO) $(LIBUTIL) $(XTESTLIB)
 +
 +konsole_la_SOURCES = konsole_main.cpp
-+konsole_la_LIBADD  = libkonsole_main.la
  konsole_la_LDFLAGS = $(all_libraries) -module -avoid-version
+-konsole_la_LIBADD = $(LIB_KDEUI) $(LIB_KIO) $(LIBUTIL) $(XTESTLIB)
++konsole_la_LIBADD = libkonsole_main.la
  
- # konsole executable - has all the sources, doesn't link kparts, saves startup time
- konsole_SOURCES	= TEPty.cpp BlockArray.cpp main.cpp konsole.cpp schema.cpp session.cpp TEWidget.cpp TEmuVt102.cpp \
-                   TEScreen.cpp TEmulation.cpp TEHistory.cpp keytrans.cpp konsoleiface.skel sessioniface.skel \
--                  konsole_wcwidth.cpp
-+                  konsole_wcwidth.cpp konsole_main.cpp
- konsole_LDADD = $(LIB_KSYCOCA) $(LIBUTIL) $(LIB_KFILE) @XTESTLIB@ $(LIB_KDEUI)
+ # konsole executable
+-konsole_SOURCES = dummy.cpp
+-konsole_LDADD = konsole.la $(LIB_KIO)
++konsole_SOURCES = konsole_main.cpp
++konsole_LDADD = libkonsole_main.la
  konsole_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
-@@ -91,9 +100,6 @@ messages: rc.cpp
+ # kcmkonsole_SOURCES = kcmkonsole.cpp schema.cpp
+@@ -97,9 +105,6 @@ messages: rc.cpp
  	$(XGETTEXT) rc.cpp *.cpp -o $(podir)/konsole.pot
  	rm -f schemas.cpp
  	rm -f tips.cpp
@@ -60,5 +62,5 @@ $NetBSD: patch-cs,v 1.3 2002/08/28 07:15:41 skrll Exp $
 -dummy.cpp:
 -	echo > dummy.cpp
  
- konsole.lo: konsole.o
- 
+ # setting up x-application/konsole as a special mimetype
+ mimedir = $(kde_mimedir)/application

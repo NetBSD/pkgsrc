@@ -1,17 +1,17 @@
-$NetBSD: patch-bp,v 1.3 2003/01/02 09:12:34 skrll Exp $
+$NetBSD: patch-bp,v 1.4 2003/03/11 13:10:22 markd Exp $
 
---- kicker/extensions/childpanel/Makefile.in.orig	Fri Dec 27 18:19:11 2002
+--- kicker/extensions/childpanel/Makefile.in.orig	Fri Jan 17 09:03:08 2003
 +++ kicker/extensions/childpanel/Makefile.in
-@@ -295,7 +295,7 @@ kde_module_LTLIBRARIES = childpanel_pane
+@@ -293,7 +293,7 @@ kde_module_LTLIBRARIES = childpanel_pane
  childpanel_panelextension_la_SOURCES=childpanelextension.cpp  childpanelextension_skel.cpp
  #>- childpanel_panelextension_la_METASOURCES = AUTO
- childpanel_panelextension_la_LDFLAGS = $(all_libraries) -version-info 1:0:0 -module 
+ childpanel_panelextension_la_LDFLAGS = -module $(KDE_PLUGIN) $(all_libraries)
 -childpanel_panelextension_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA) ../../kicker.la
 +childpanel_panelextension_la_LIBADD = $(LIB_KDEUI) $(LIB_KSYCOCA) ../../libkicker_main.la
  
  noinst_HEADERS = childpanelextension.h
  
-@@ -309,7 +309,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -307,7 +307,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,7 +20,7 @@ $NetBSD: patch-bp,v 1.3 2003/01/02 09:12:34 skrll Exp $
  am_childpanel_panelextension_la_OBJECTS = childpanelextension.lo
  #>- childpanel_panelextension_la_OBJECTS = \
  #>- 	$(am_childpanel_panelextension_la_OBJECTS)
-@@ -676,5 +676,5 @@ kde-rpo-clean:
+@@ -708,5 +708,5 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 3

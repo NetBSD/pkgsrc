@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.2 2002/08/25 19:23:51 jlam Exp $
+$NetBSD: patch-af,v 1.3 2003/03/11 13:10:34 markd Exp $
 
---- dcop/Makefile.am.orig	Sun Feb 17 06:36:25 2002
+--- dcop/Makefile.am.orig	Mon Sep 16 09:12:54 2002
 +++ dcop/Makefile.am
 @@ -29,7 +29,7 @@
  bin_PROGRAMS = dcopserver dcopserver_shutdown
@@ -9,11 +9,11 @@ $NetBSD: patch-af,v 1.2 2002/08/25 19:23:51 jlam Exp $
 -lib_LTLIBRARIES  = libDCOP.la dcopserver.la
 +lib_LTLIBRARIES  = libDCOP.la libdcopserver_main.la dcopserver.la
  libDCOP_la_LIBADD = KDE-ICE/libkICE.la $(LIB_QT)
- libDCOP_la_LDFLAGS = $(KDE_RPATH) -version-info 4:0 -no-undefined $(all_libraries)
+ libDCOP_la_LDFLAGS = $(KDE_RPATH) -version-info 5:0:1 -no-undefined $(all_libraries)
  
-@@ -43,13 +43,17 @@
+@@ -45,13 +45,17 @@
  # dcopstub needs to go first for --enable-final to work
- libDCOP_la_SOURCES = dcopstub.cpp dcopclient.cpp dcopobject.cpp dcopref.cpp
+ libDCOP_la_SOURCES = dcopstub.cpp dcopref.cpp dcopobject.cpp dcopclient.cpp
  
 +libdcopserver_main_la_LDFLAGS = $(all_libraries)
 +libdcopserver_main_la_SOURCES = dcopserver.cpp dcopsignals.cpp
@@ -33,10 +33,13 @@ $NetBSD: patch-af,v 1.2 2002/08/25 19:23:51 jlam Exp $
  
  dcopserver_shutdown_SOURCES = dcopserver_shutdown.c
  
-@@ -62,6 +66,3 @@
+@@ -64,9 +68,6 @@
  testdcopc_LDADD =  KDE-ICE/libkICE.la $(LIBSM)
  
  EXTRA_DIST = HOWTO ICE
 -
 -dummy.cpp:
 -	echo > dummy.cpp
+ 
+ DOXYGEN_REFERENCES = kdecore
+ DOXYGEN_EXCLUDE = KDE-ICE/*
