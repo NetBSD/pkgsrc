@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/05/09 15:24:45 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/06/03 14:01:11 agc Exp $
 # FreeBSD Id: Makefile,v 1.45 1998/02/25 06:23:55 asami Exp
 #
 
@@ -21,7 +21,9 @@ CONF_DIR=   ${HTTP_ROOT}/conf
 MAN1=   apachectl.1 htpasswd.1
 MAN8=   httpd.8
 
-# Set this for local-supplied patch, e.e.
+.include "../../mk/bsd.prefs.mk"
+
+# Set this for local-supplied patch, e.g.
 # VERS_ID = mods-1.0/me
 
 post-build:
