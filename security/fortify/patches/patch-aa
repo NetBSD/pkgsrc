@@ -1,12 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/10/28 00:02:09 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2004/06/26 19:25:12 grant Exp $
 
---- src/common/Makefile.orig	Thu Oct  7 11:53:04 1999
-+++ src/common/Makefile	Wed Oct 27 00:54:42 1999
-@@ -3,7 +3,7 @@
+--- src/common/Makefile.orig	2000-02-28 22:55:47.000000000 +1100
++++ src/common/Makefile
+@@ -1,9 +1,9 @@
+ 
+-CC	= gcc # -Wall -ansi
++#CC	= gcc # -Wall -ansi
  
  # For GNU/Linux/BSD systems
- CFLAGS	= -I. -O2	# -static
+-CFLAGS	= -I. -O2	# -static
 -YACC	= bison -y
++CFLAGS	= -I. # -O2	# -static
 +YACC	= yacc
  LDFLAGS = -static
  LEX    = lex -l
