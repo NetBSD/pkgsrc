@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/06/05 16:35:51 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/07/01 00:54:25 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WONKA_BUILDLINK3_MK:=	${WONKA_BUILDLINK3_MK}+
@@ -14,9 +14,6 @@ BUILDLINK_PACKAGES+=	wonka
 BUILDLINK_DEPENDS.wonka+=	wonka-[0-9]*
 BUILDLINK_PKGSRCDIR.wonka?=	../../lang/wonka
 BUILDLINK_JAVA_PREFIX.wonka=	${PREFIX}/java/wonka
-BUILDLINK_CPPFLAGS.wonka=						\
-	-I${BUILDLINK_JAVA_PREFIX.wonka}/include			\
-	-I${BUILDLINK_JAVA_PREFIX.wonka}/include/wonka
 .endif	# WONKA_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
