@@ -1,5 +1,5 @@
 ================================================================
-$NetBSD: MESSAGE,v 1.4 2001/03/28 03:59:39 jwise Exp $
+$NetBSD: MESSAGE,v 1.5 2001/09/10 16:32:50 wiz Exp $
 
   Cocoon is now installed.
 
@@ -12,7 +12,7 @@ $NetBSD: MESSAGE,v 1.4 2001/03/28 03:59:39 jwise Exp $
   	${PREFIX}/lib/java/xerces.jar, and
   	${PREFIX}/lib/java/turbine-pool.jar,
   	${PREFIX}/lib/java/sax-bugfix.jar,
-	${PREFIX}/jakarta/tomcat/lib/servlet.jar
+	${PREFIX}/lib/java/servlet.jar
 
   are in your CLASSPATH, and add
   
