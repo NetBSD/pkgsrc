@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2002/08/13 03:19:27 jdarrow Exp $
+# $NetBSD: Makefile,v 1.71 2002/08/21 15:19:42 kent Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -29,6 +29,7 @@ SUBDIR+=	netbsd32_compat15
 SUBDIR+=	osf1_lib
 SUBDIR+=	p11
 SUBDIR+=	pcemu
+SUBDIR+=	peace
 SUBDIR+=	plex86
 SUBDIR+=	rewind
 SUBDIR+=	simh
