@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/12/31 21:19:49 agc Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/11 11:31:18 agc Exp $
 #
 
 DISTNAME=	rio007
@@ -20,5 +20,7 @@ do-install:
 	${BSD_INSTALL_PROGRAM} ${WRKSRC}/rio ${PREFIX}/bin
 	${MKDIR} -p ${PREFIX}/share/rio
 	${BSD_INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/rio
+	${SED} -e 's|@AWK@|${AWK}|g' ${FILESDIR}/find-lpt-port > ${PREFIX}/bin/find-lpt-port
+	${CHMOD} 755 ${PREFIX}/bin/find-lpt-port
 
 .include "../../mk/bsd.pkg.mk"
