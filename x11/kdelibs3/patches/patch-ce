@@ -1,8 +1,8 @@
-$NetBSD: patch-ce,v 1.2 2003/03/11 13:10:39 markd Exp $
+$NetBSD: patch-ce,v 1.3 2004/02/04 13:58:40 markd Exp $
 
---- kioslave/file/Makefile.in.orig	Thu Jan 23 12:30:39 2003
+--- kioslave/file/Makefile.in.orig	2004-01-26 08:24:45.000000000 +1300
 +++ kioslave/file/Makefile.in
-@@ -358,7 +358,7 @@ SOURCES = $(kio_file_la_SOURCES)
+@@ -475,7 +475,7 @@ SOURCES = $(kio_file_la_SOURCES)
  all: docs-am  all-am
  
  .SUFFIXES:
@@ -11,10 +11,10 @@ $NetBSD: patch-ce,v 1.2 2003/03/11 13:10:39 markd Exp $
  $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
  #>- 	cd $(top_srcdir) && \
  #>- 	  $(AUTOMAKE) --foreign  kioslave/file/Makefile
-@@ -698,3 +698,35 @@ kde-rpo-clean:
- #>+ 3
- file.lo: file.moc 
+@@ -892,3 +892,34 @@ file.lo: file.moc 
+ nmcheck: 
  file.o: file.moc 
+ nmcheck-am: nmcheck
 +
 +# no optimization rules
 +
@@ -22,21 +22,21 @@ $NetBSD: patch-ce,v 1.2 2003/03/11 13:10:39 markd Exp $
 +LTCXXCOMPILE_NOOPT=${LTCXXCOMPILE:-O%=}
 +
 +.cpp.o:
-+@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
-+@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
-+@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++@AMDEP_TRUE@  source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
++@AMDEP_TRUE@  depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
++@AMDEP_TRUE@  $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 +	$(CXXCOMPILE_NOOPT) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
 +
 +.cpp.obj:
-+@AMDEP_TRUE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
-+@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
-+@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++@AMDEP_TRUE@  source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
++@AMDEP_TRUE@  depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
++@AMDEP_TRUE@  $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 +	$(CXXCOMPILE_NOOPT) -c -o $@ `cygpath -w $<`
 +
 +.cpp.lo:
-+@AMDEP_TRUE@	source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
-+@AMDEP_TRUE@	depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
-+@AMDEP_TRUE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
++@AMDEP_TRUE@  source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
++@AMDEP_TRUE@  depfile='$(DEPDIR)/$*.Plo' tmpdepfile='$(DEPDIR)/$*.TPlo' @AMDEPBACKSLASH@
++@AMDEP_TRUE@  $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 +	$(LTCXXCOMPILE_NOOPT) -c -o $@ `test -f $< || echo '$(srcdir)/'`$<
 +
 +.cc.cpp:
@@ -46,4 +46,3 @@ $NetBSD: patch-ce,v 1.2 2003/03/11 13:10:39 markd Exp $
 +
 +file.lo: file.cpp
 +file.o: file.cpp
-+
