@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/05/02 11:54:44 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2003/05/05 16:21:11 jmmv Exp $
 #
 
 DISTNAME=		gice-0.6.1
-PKGREVISION=	2
+PKGREVISION=		2
 WRKSRC=			${WRKDIR}/gice
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gice/}

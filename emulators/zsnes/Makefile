@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/05/02 11:54:50 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2003/05/05 16:24:01 jmmv Exp $
 #
 
 DISTNAME=		zsnes136src
-PKGREVISION=	1
+PKGREVISION=		1
 PKGNAME=		zsnes-1.360
 WRKSRC=			${WRKDIR}/zsnes-1.36/src
 CATEGORIES=		emulators
