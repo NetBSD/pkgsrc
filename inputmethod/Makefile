@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/05/31 14:14:16 seb Exp $
+# $NetBSD: Makefile,v 1.3 2002/06/04 08:32:04 uebayasi Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -9,6 +9,7 @@ SUBDIR+=	canuum
 SUBDIR+=	ja-freewnn-lib
 SUBDIR+=	ja-freewnn-server
 SUBDIR+=	kinput2
+SUBDIR+=	libtabe
 SUBDIR+=	sj3-lib
 SUBDIR+=	sj3-server
 SUBDIR+=	skkfep
