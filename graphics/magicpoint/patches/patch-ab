@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.3 2004/04/27 15:42:58 adam Exp $
+
+--- mgp.h.orig	2004-04-27 17:39:53.000000000 +0000
++++ mgp.h
+@@ -62,6 +62,7 @@
+ #include <X11/cursorfont.h>
+ #include <X11/Xatom.h>
+ #ifdef USE_XFT2
++#include <ft2build.h>
+ #include <freetype/freetype.h>
+ #include <fontconfig/fontconfig.h>
+ #include <X11/Xft/Xft.h>
