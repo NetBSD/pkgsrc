@@ -1,11 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 2000/05/17 09:09:42 veego Exp $
+# $NetBSD: INSTALL,v 1.4 2000/05/17 09:22:28 veego Exp $
 
 PKGNAME=$1
 STAGE=$2
 
 SAMBA_PRIVATE=@SAMBA_PRIVATE@
+ROOT_GROUP=@ROOT_GROUP@
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -16,7 +17,7 @@ POST-INSTALL)
 	then
 		echo -n "Creating ${SAMBA_PRIVATE}/smbpasswd..."
 		chown -R root ${SAMBA_PRIVATE}
-		chgrp -R wheel ${SAMBA_PRIVATE}
+		chgrp -R ${ROOT_GROUP} ${SAMBA_PRIVATE}
 		cat /etc/passwd | ${PKG_PREFIX}/bin/mksmbpasswd.sh \
 			>${SAMBA_PRIVATE}/smbpasswd
 		chmod 500 ${SAMBA_PRIVATE}
