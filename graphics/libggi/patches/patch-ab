@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.4 2003/01/02 23:54:57 jmmv Exp $
+$NetBSD: patch-ab,v 1.5 2003/04/02 12:05:27 wiz Exp $
 
---- Makefile.in.orig	Sun May 16 22:49:35 1999
+--- Makefile.in.orig	Wed Apr  2 11:09:09 2003
 +++ Makefile.in
-@@ -93,7 +93,7 @@ AUTOMAKE_OPTIONS = foreign
+@@ -117,7 +117,7 @@ AUTOMAKE_OPTIONS = 1.4 foreign
  
- SUBDIRS = include ggi display default extensions programs doc
+ SUBDIRS = include ggi display default extensions programs doc m4 dist
  
--ggiconfdatadir = @ggi_confdir@
-+ggiconfdatadir = @datadir@/examples/ggi
+-ggiconfdatadir = $(sysconfdir)/$(ggi_subdir)
++ggiconfdatadir = $(datadir)/examples/ggi
  ggiconfdata_DATA = libggi.conf
  
  noinst_PROGRAMS = patchlib
