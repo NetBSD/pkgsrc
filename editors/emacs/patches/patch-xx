@@ -1,6 +1,6 @@
-$NetBSD: patch-xx,v 1.5 2003/07/06 16:10:19 uebayasi Exp $
+$NetBSD: patch-xx,v 1.6 2005/03/22 15:39:05 wiz Exp $
 
---- src/s/netbsd.h.orig	Fri Apr 18 19:04:10 2003
+--- src/s/netbsd.h.orig	2002-05-31 18:29:02.000000000 +0200
 +++ src/s/netbsd.h
 @@ -60,9 +60,17 @@
  #endif /* not NO_SHARED_LIBS and not ELF */
@@ -20,3 +20,11 @@ $NetBSD: patch-xx,v 1.5 2003/07/06 16:10:19 uebayasi Exp $
  #undef LIB_GCC
  #define LIB_GCC
  #endif
+@@ -123,3 +131,7 @@
+ 
+ #define GC_MARK_STACK	GC_MAKE_GCPROS_NOOPS
+ 
++/* Use sigprocmask(2) and friends instead of sigblock(2); the man page
++   of sigblock says it is obsolete.  */
++
++#define POSIX_SIGNALS		1
