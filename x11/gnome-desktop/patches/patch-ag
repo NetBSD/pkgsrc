@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 2004/05/11 12:31:27 danw Exp $
+
+--- libgnome-desktop/gnome-desktop-item.c.orig	Tue Apr 13 08:49:43 2004
++++ libgnome-desktop/gnome-desktop-item.c
+@@ -1396,6 +1396,11 @@ sn_error_trap_pop (SnDisplay *display,
+ 	gdk_error_trap_pop ();
+ }
+ 
++#if defined(__APPLE__)
++#include <crt_externs.h>
++#define environ (*_NSGetEnviron())
++#endif
++
+ extern char **environ;
+ 
+ static char **
