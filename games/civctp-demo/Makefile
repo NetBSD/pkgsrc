@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/16 12:24:02 abs Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/24 01:59:52 wiz Exp $
 #
 
 DISTNAME=	civctp-demo-10251999
@@ -10,8 +10,6 @@ MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/civctp/ \
 
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://www.lokigames.com/products/civctp/demo.php3
-
-MIRROR_DISTFILE=no
 
 NO_CONFIGURE=		yes
 
