@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.574 2003/05/23 06:27:55 wiz Exp $
+$NetBSD: TODO,v 1.575 2003/05/23 07:29:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -193,7 +193,6 @@ Suggested package updates
 	o mrproject-0.9.1
 	o mrtg-2.9.29
 	o mtools-3.9.9
-	o mtr-0.54
 	o multi-gnome-terminal-1.6.2
 	o multitail-2.6
 	o mysql-3.23.54

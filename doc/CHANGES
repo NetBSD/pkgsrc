@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2291 2003/05/23 07:22:11 seb Exp $
+$NetBSD: CHANGES,v 1.2292 2003/05/23 07:29:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2099,3 +2099,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated phoenix to 0.6nb1 [taya 2003-05-23]
 	Updated ogmtools to 1.0.3 [wiz 2003-05-23]
 	Updated flow-tools to 0.66 [seb 2003-05-23]
+	Updated mtr to 0.54 [wiz 2003-05-23]
+	Updated mtr-gtk to 0.54 [wiz 2003-05-23]
