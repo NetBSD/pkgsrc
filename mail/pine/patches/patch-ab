@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.8 2002/11/26 21:41:09 cjep Exp $
---- pine/makefile.lnx.orig	Tue Oct 23 23:24:48 2001
-+++ pine/makefile.lnx	Mon Jul  8 16:02:59 2002
+$NetBSD: patch-ab,v 1.9 2002/12/14 10:34:44 tron Exp $
+
+--- pine/makefile.lnx.orig	Tue Sep 10 23:34:39 2002
++++ pine/makefile.lnx	Sat Dec 14 11:10:00 2002
 @@ -47,9 +47,11 @@
  MAKE=        make
  OPTIMIZE=    # -O2
  PROFILE=     # -pg
--DEBUG=       -g -DDEBUG
-+DEBUG=       -DDEBUG # -g
+-DEBUG=       -g -DDEBUG -DDEBUGJOURNAL
++DEBUG=       -DDEBUG -DDEBUGJOURNAL # -g
  
 -CCLIENTDIR=  ../c-client
 +CCLIENTDIR=  ${PREFIX}

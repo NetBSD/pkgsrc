@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.16 2001/12/15 08:31:38 martti Exp $
+$NetBSD: patch-ac,v 1.17 2002/12/14 10:34:44 tron Exp $
 
---- pine/makefile.neb.orig	Tue Oct 23 22:24:49 2001
-+++ pine/makefile.neb	Fri Dec 14 19:25:45 2001
+--- pine/makefile.neb.orig	Tue Sep 10 23:39:23 2002
++++ pine/makefile.neb	Sat Dec 14 11:13:52 2002
 @@ -47,9 +47,11 @@
  MAKE=        make
  OPTIMIZE=    # -O
  PROFILE=     # -pg
--DEBUG=       -g -DDEBUG
-+DEBUG=       -DDEBUG # -g	# XXX crashes on 'c'ompose w/o -DDEBUG
+-DEBUG=       -g -DDEBUG -DDEBUGJOURNAL
++DEBUG=       -DDEBUG -DDEBUGJOURNAL # -g
  
 -CCLIENTDIR=  ../c-client
 +CCLIENTDIR=  ${PREFIX}
