@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2002/10/14 14:22:50 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/28 20:05:39 abs Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
 PKGNAME=		netscape${VERS_MAJ}-${VERS_MIN}
-PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.netscape.com/pub/netscape7/${SUB}/ \
 			ftp://sunsite.utk.edu/pub/netscape/netscape7/${SUB}/ \
@@ -26,9 +25,9 @@ INTERACTIVE_STAGE=	build
 
 PKG_LANG?=		english
 VERS_MAJ=		7
-VERS_MIN=		0
+VERS_MIN=		01
 SUB=			${PKG_LANG}/${VERS_MAJ}.${VERS_MIN}/unix/${DIST_DIR_NAME}/sea
-DIST_SUBDIR=		netscape7/${PKG_LANG}
+DIST_SUBDIR=		netscape/${VERS_MAJ}.${VERS_MIN}/${PKG_LANG}
 WRKSRC=			${WRKDIR}/netscape-installer
 
 .if ${PKG_LANG} != english
@@ -48,6 +47,9 @@ pre-build:
 		${FILESDIR}/extract_instructions;			\
 	sleep $${delay};						\
 	${MKDIR} ${WRKSRC}/dest
+	${SED} -e "s|/usr/local/netscape|${WRKSRC}/dest|g" 		\
+		${WRKSRC}/config.ini > ${WRKSRC}/config.ini.new;	\
+       mv ${WRKSRC}/config.ini.new ${WRKSRC}/config.ini
 
 # we must wait for netscape to start up after build!
 do-build:
