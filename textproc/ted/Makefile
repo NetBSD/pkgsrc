@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/19 02:05:48 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/08 21:12:52 jlam Exp $
 
 DISTNAME=	ted-2.5.src
 PKGNAME=	ted-2.5
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.nllgg.nl/Ted/
 DEPENDS+=	giflib-3.0:../../graphics/giflib
 DEPENDS+=       jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.3:../../graphics/png
-DEPENDS+=       tiff-3.4:../../graphics/tiff
+DEPENDS+=       tiff-*:../../graphics/tiff
 DEPENDS+=       xpm-3.4k:../../graphics/xpm
 
 USE_MOTIF=	YES
