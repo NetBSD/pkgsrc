@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.9 1998/01/03 06:18:00 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.10 1998/01/19 08:07:16 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -126,7 +126,7 @@ Please consult your CDROM's documentation for the exact location!
  1.2 How to do
  =============
 
-If you have the files on a CDROM or downloaded them to your harddisk, you
+If you have the files on a CDROM or downloaded them to your hard disk, you
 can install them with the following command (be sure to su to root first):
 
 	pkg_add /path/to/package.tgz
@@ -179,7 +179,7 @@ must exist on your system for the packages system to be able to build it.
 If it's not, then ftp(1) is used to fetch the distribution files
 automatically.
 
-If you don't have a permanent internet connection and you want to know
+If you don't have a permanent Internet connection and you want to know
 which files to download, "make fetch-list" will tell you what you'll need.
 Put these distfiles into /usr/pkgsrc/distfiles.
 
@@ -265,7 +265,7 @@ so that anyone who quibbles with the (always completely correct) decisions
 taken by the guy who maintains the port can complain vigorously.
 
 Currently the following values are available for CATEGORIES. If more than
-one is used, they need to be seperated by spaces:
+one is used, they need to be separated by spaces:
 
   archivers  converters emulators  mail       news       shells     www
   audio      databases  games      mbone      plan9      sysutils   x11
@@ -351,7 +351,7 @@ to do
 in the package directory.
 
 Besides taking care of any FreeBSDisms, be sure to provide patches to
-replace any occurances of /usr/local in any "Makefile"s in the original
+replace any occurance of /usr/local in any "Makefile"s in the original
 package with ${PREFIX}.
 
 
@@ -451,11 +451,11 @@ timestamp files.
  5 PLIST* issues
  ===============
 
-This section addresses some specialities that one needs to take attention
+This section addresses some special issues that one needs to take attention
 of when dealing with the PLIST file (or files, see below!).
 
 
- 5.1 Miscallaneous
+ 5.1 Miscellaneous
  =================
 
  * RCS Id:
@@ -517,7 +517,7 @@ important issue, see below.
  ================================================
 
 If PLIST_SRC is not set (the usual case), and if there is no pkg/PLIST, the
-packges system looks for pkg/PLIST-mi, and pkg/PLIST-md.shared or
+packages system looks for pkg/PLIST-mi, and pkg/PLIST-md.shared or
 pkg/PLIST-md.static to handle differences due to the platform being able to
 handle shared libs or not. PLIST-mi contains machine independent files,
 PLIST-md.* contain machine dependent files, which may differ between
@@ -553,7 +553,7 @@ and PLIST-md.* contain:
         @dirrm foo/mi
 
 This will lead to some @dirrm statements being duplicated, but it's the
-only way to ensure everything's propperly removed. The same care must be
+only way to ensure everything is propperly removed. The same care must be
 taken when PLIST_SRC is set to some package-specific settings.
   
 
@@ -604,7 +604,7 @@ RCS IDs) and section 4.3 for gotchas on using patches from FreeBSD ports.
 
 One of the biggest problems with FreeBSD ports is that too many of them
 assume they will install into /usr/local, instead of regarding ${PREFX}
-propperly. To change this, add something like the following into your
+properly. To change this, add something like the following into your
 package Makefile:
 
 pre-configure:
@@ -616,7 +616,7 @@ $f.pdone $$f; \
 
 This is taken from the sysutils/rtty package; be sure this works for your
 package - it may actually make sense to look for some things in /usr/local,
-for example. So don't blindly replace all occurences of /usr/local!
+for example. So don't blindly replace all occurrences of /usr/local!
 
 Side note on manpages in PLIST: we don't regard any .gz suffix there, as
 many FreeBSD ports seem to have .gz pages in PLIST even when they install
@@ -642,7 +642,7 @@ Support the idea of free software!
 
 The basic steps for building a program are always the same. First the
 program's source (distfile) must be brought to the local system and
-extracted afterwards. After some patches to compile propperly on NetBSD are
+extracted afterwards. After some patches to compile properly on NetBSD are
 applied, the software can be configured, then built (usually by compiling),
 and finally the produced binaries etc. can be put into place on the system.
 These are exactly the steps performed by the NetBSD package system, which
@@ -699,8 +699,8 @@ The main targets used during the build process defined in bsd.port.mk are:
    present in the patches subdirectory of the package are
    applied. Patchfiles ending in .Z or .gz are uncompressed before they are
    applied, files ending in .orig or .rej are ignored. Any special options
-   to patch(1) can be handed in PATCH_DIST_ARGS. See section 4.3 for a more
-   detailles.
+   to patch(1) can be handed in PATCH_DIST_ARGS. See section 4.3 for more
+   details.
 
  * configure:
    Now that the source is in a form that has a chance to compile under
@@ -726,15 +726,15 @@ The main targets used during the build process defined in bsd.port.mk are:
    instead!)
 
  * build:
-   If everything's set up for compilation, this target cares to do so by
-   invoking $MAKE_PROGRAMM on $MAKEFILE with $ALL_TARGET as the target to
+   If everything is set up for compilation, this target cares to do so by
+   invoking $MAKE_PROGRAM on $MAKEFILE with $ALL_TARGET as the target to
    build. The defaults MAKE_PROGRAM is "gmake" if USE_GMAKE is set, "make"
    otherwise. MAKEFILE is by default set to "Makefile:, and ALL_TARGET
    defaults to "all". Any of these variables can be set to change the
    default build process.
 
  * install:
-   After all files are propperly digested and compiled, the final step is
+   After all files are properly digested and compiled, the final step is
    to move them into the place where they can be used from anyone. As in
    the build-target, $MAKE_PROGRAM is invoked on $MAKEFILE here, but with
    the $INSTALL_TARGET instead, the latter defaulting to "install" (plus
@@ -766,7 +766,7 @@ target in the order given above.
 
  * reinstall:
    If you did a "make install" and you noticed some file was not installed
-   propperly, you can repeat the installation with this target, which will
+   properly, you can repeat the installation with this target, which will
    ignore the "already installed" flag. 
 
 
@@ -780,7 +780,7 @@ only with some debugging aids.
 
  - Retrieve port from FreeBSD collection
  - Fix RCS-ID in the package's Makefile, see section 4.1. 
- - Import unchanged FreeBSD source (ONLY if you have cvs access, not neeed
+ - Import unchanged FreeBSD source (ONLY if you have cvs access, not needed
    otherwise):
    (cd ...pkgsrc/category/pkgname ; cvs import pkgsrc/category/pkgname \
 	FREEBSD FreeBSD-current-yyyy-mm-dd)
@@ -789,14 +789,14 @@ only with some debugging aids.
  - Have a look at pkg/PLIST, add a "@comment <$>NetBSD<$>" line at the
    beginning of any PLIST file (see section 5). 
  - make
- - If something's not ok, fix; for patches: fix the file, then re-generate
+ - If something is not ok, fix; for patches: fix the file, then re-generate
    the diff: 'diff -bu foo foo.orig >../../patches/patch-xx' (mv patch-xx
    patch-xx.orig before); If there's no foo.orig from a previous patch, be
    sure to have an old version of the file somewhere; re-iterate :)
- - If all builds ok: touch /tmp/bla
+ - If all builds OK: touch /tmp/bla
  - make install
  - find /usr/pkg/ /usr/X11R6/ -newer /tmp/bla >/tmp/x
-   (or whatever you set LOCALABSE and X11BASE to)
+   (or whatever you set LOCALBASE and X11BASE to)
  - pkg_delete blub
  - find /usr/pkg/ /usr/X11R6/ -newer /tmp/bla: if this brings up any files,
    they are missing in pkg/PLIST*; add them.
@@ -833,7 +833,7 @@ have to do that yourself, and this may not be what you want.
 If your package uses a different distribution method from .tar.gz, take a
 look at the packages for plan9/sam, which uses a gzipped shell archive
 (shar), but the quick solution is to set EXTRACT_SUFX to the name after the
-DIST_NAME field, and add the following wo your package's Makefile:
+DIST_NAME field, and add the following to your package's Makefile:
 
 > EXTRACT_SUFX=   .msg.gz
 > EXTRACT_CMD=            zcat
@@ -919,9 +919,9 @@ See section 4.3 on how to remove RCS IDs from patch files.
    files in a single directory. Place this tar-file to a place where the
    package maintainers can fetch it using FTP or HTTP (WWW). Finally,
    send-pr with category "pkg", a short description of your package
-   (contents of pkg/COMMENT are ok), plus the URL of your tar-file.
+   (contents of pkg/COMMENT are OK), plus the URL of your tar-file.
 
-   You will be notified if your send-pr has been adressed so you can remove
+   You will be notified if your send-pr has been addressed so you can remove
    the tar-file. 
 
 
@@ -1068,7 +1068,7 @@ Now compile:
 > rm -f bison.s1
 > sed -e "/^#line/ s|bison|/usr/pkg/share/bison|" < ./bison.simple > bison.s1
 
-Everything seems ok, so install the files:
+Everything seems OK, so install the files:
 
 > root@pumpy:/u/pkgsrc/lang/bison(1785)# make install
 > >> Checksum OK for bison-1.25.tar.gz.
@@ -1194,7 +1194,7 @@ Appendix A: build logs
 Appendix B: Layout of the FTP server's package archive
 ======================================================
 
-Layout for precompiled binary packges on ftp.netbsd.org:
+Layout for precompiled binary packages on ftp.netbsd.org:
 
 /pub/NetBSD/packages/
                 README
