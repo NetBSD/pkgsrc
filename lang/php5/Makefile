@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2004/12/17 07:53:06 jdolecek Exp $
+# $NetBSD: Makefile,v 1.7 2004/12/18 16:01:07 jdolecek Exp $
 #
 
 PKGNAME=		php-${PHP_BASE_VERS}
 PKGREVISION=		# empty
 CATEGORIES=		lang
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		jdolecek@NetBSD.org
 HOMEPAGE=		http://www.php.net/
 COMMENT=		PHP Hypertext Preprocessor version 5
 
