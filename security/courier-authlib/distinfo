@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/10 03:21:30 jlam Exp $
+
+SHA1 (courier-authlib-0.53.tar.bz2) = 98ee21462a81452c4b637b66b1e71ab1d49e0caa
+Size (courier-authlib-0.53.tar.bz2) = 1966836 bytes
+SHA1 (patch-aa) = ef333fefd1331d577d9fdad50d7dcc6e28283d58
