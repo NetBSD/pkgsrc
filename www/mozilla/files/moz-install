@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: moz-install,v 1.11 2004/08/31 02:37:57 danw Exp $
+# $NetBSD: moz-install,v 1.11.2.1 2004/11/30 23:29:15 salo Exp $
 
 ${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${PREFIX}/bin/${MOZILLA}
 ${CHOWN} ${BINOWN} ${PREFIX}/bin/${MOZILLA}
@@ -53,6 +53,12 @@ done
 # install INCLUDE
 for i in `${SED} -n -e '/^@comment begin INCLUDE$/,/^@comment end INCLUDE$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
 	src=`echo $i | ${SED} -e "s@include/${MOZILLA}@dist/include@"`;
+	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${PREFIX}/$i
+done
+
+# install INCLUDE-PUBLIC
+for i in `${SED} -n -e '/^@comment begin INCLUDE-PUBLIC$/,/^@comment end INCLUDE-PUBLIC$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
+	src=`echo $i | ${SED} -e "s@include/${MOZILLA}@dist/public@"`;
 	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${PREFIX}/$i
 done
 
