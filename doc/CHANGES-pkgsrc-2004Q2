@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.17 2004/07/09 06:56:00 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q2,v 1.1.2.18 2004/07/13 14:00:16 agc Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q2 branch:
@@ -30,3 +30,5 @@ Pullup ticket 49, requested by Grant Beattie [agc 2004-07-08, 2004-07-09]
 	${TEST} portability fixes
 Pullup ticket 50, requested by Martti Kuparinen [agc 2004-07-08]
 	security fix for ethereal
+Pullup ticket 51, requested by Grant Beattie [agc 2004-07-13]
+	Solaris bulk build fixes
