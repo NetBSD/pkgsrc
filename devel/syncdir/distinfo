@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/15 00:45:50 schmonz Exp $
+
+SHA1 (syncdir-1.0.tar.gz) = fdc3e282acd4af15e9bffb343ee825d69dde162e
+Size (syncdir-1.0.tar.gz) = 8878 bytes
+SHA1 (patch-aa) = 7ac1303eddbc91a6e4c709c778acc60e43be4be8
