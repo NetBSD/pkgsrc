@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7433 2004/10/14 17:04:51 jmmv Exp $
+$NetBSD: CHANGES,v 1.7434 2004/10/14 17:15:38 salo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4717,3 +4717,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkgclean to 20041014 [ben 2004-10-14]
 	Updated slurm to 0.3.3 [ben 2004-10-14]
 	Updated dia to 0.94 [jmmv 2004-10-14]
+	Updated libebml to 0.7.2 [salo 2004-10-14]
+	Updated libmatroska to 0.7.4 [salo 2004-10-14]
+	Updated mkvtoolnix to 0.9.6 [salo 2004-10-14]
+	Updated mmg to 0.9.6 [salo 2004-10-14]
