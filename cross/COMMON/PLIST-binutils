@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST-binutils,v 1.1 1998/08/12 02:42:28 tv Exp $
+${TARGET_ARCH}/bin/addr2line
+${TARGET_ARCH}/bin/ar
+${TARGET_ARCH}/bin/as
+${TARGET_ARCH}/bin/gasp
+${TARGET_ARCH}/bin/ld
+${TARGET_ARCH}/bin/nm
+${TARGET_ARCH}/bin/objcopy
+${TARGET_ARCH}/bin/objdump
+${TARGET_ARCH}/bin/ranlib
+${TARGET_ARCH}/bin/size
+${TARGET_ARCH}/bin/strings
+${TARGET_ARCH}/bin/strip
+bin/${TARGET_ARCH}-addr2line
+bin/${TARGET_ARCH}-ar
+bin/${TARGET_ARCH}-as
+bin/${TARGET_ARCH}-gasp
+bin/${TARGET_ARCH}-ld
+bin/${TARGET_ARCH}-nm
+bin/${TARGET_ARCH}-objcopy
+bin/${TARGET_ARCH}-objdump
+bin/${TARGET_ARCH}-ranlib
+bin/${TARGET_ARCH}-size
+bin/${TARGET_ARCH}-strings
+bin/${TARGET_ARCH}-strip
