@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/11/15 02:29:51 sakamoto Exp $
+
+--- ./configure.orig	Fri Nov 12 12:56:19 1999
++++ ./configure	Mon Nov 15 10:06:16 1999
+@@ -1361,4 +1361,6 @@
+ fi
+ 
++if false
++then
+ echo $ac_n "checking for local libnet library""... $ac_c" 1>&6
+ echo "configure:1365: checking for local libnet library" >&5
+@@ -1389,4 +1391,5 @@
+ then
+ 	LDFLAGS="$LDFLAGS -L$LIBNET_LIBPATH"
++fi
+ fi
+ 
