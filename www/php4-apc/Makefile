@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/12/17 15:44:12 taca Exp $
+# $NetBSD: Makefile,v 1.17 2004/12/18 15:08:39 jdolecek Exp $
 
 DISTNAME=	APC-${VERSION}
 PKGNAME=	php-apc-${VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://pecl.php.net/get/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://apc.communityconnect.com/
+HOMEPAGE=	http://pecl.php.net/apc
 COMMENT=	Alternative PHP Cache for PHP4
 
 EXTRACT_ELEMENTS=	# empty
