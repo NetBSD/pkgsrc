@@ -1,21 +1,21 @@
-$NetBSD: patch-aa,v 1.2 2001/07/10 20:03:28 nra Exp $
+$NetBSD: patch-aa,v 1.3 2001/10/01 11:14:42 martti Exp $
 
---- utils/Makefile.in.orig	Tue Jul 10 14:44:32 2001
-+++ utils/Makefile.in	Tue Jul 10 14:44:50 2001
-@@ -109,13 +109,13 @@
+--- utils/Makefile.in.orig	Tue Sep 18 09:20:20 2001
++++ utils/Makefile.in	Tue Sep 18 09:21:28 2001
+@@ -113,13 +113,13 @@
  xpm_CFLAGS = @xpm_CFLAGS@
  xpm_LIBS = @xpm_LIBS@
  
 -bin_PROGRAMS = @XPMROOT@
-+#bin_PROGRAMS = @XPMROOT@
++bin_PROGRAMS =
  bin_SCRIPTS = fvwm-config fvwmbug fvwm-menu-xlock fvwm-menu-directory 	fvwm-menu-desktop fvwm-menu-headlines fvwm24_convert
  
  
 -EXTRA_PROGRAMS = xpmroot xselection
 +EXTRA_PROGRAMS = xselection
  
--man_MANS = xpmroot.1 fvwmbug.1 fvwmrc_convert.1 fvwm24_convert.1 	fvwm-menu-xlock.1 fvwm-menu-directory.1 	fvwm-menu-desktop.1 fvwm-menu-headlines.1
-+man_MANS = fvwmbug.1 fvwmrc_convert.1 fvwm24_convert.1 	fvwm-menu-xlock.1 fvwm-menu-directory.1 	fvwm-menu-desktop.1 fvwm-menu-headlines.1
+-man_MANS = xpmroot.1 fvwm-config.1 fvwmbug.1 fvwmrc_convert.1 fvwm24_convert.1 	fvwm-menu-xlock.1 fvwm-menu-directory.1 	fvwm-menu-desktop.1 fvwm-menu-headlines.1
++man_MANS = fvwm-config.1 fvwmbug.1 fvwmrc_convert.1 fvwm24_convert.1 	fvwm-menu-xlock.1 fvwm-menu-directory.1 	fvwm-menu-desktop.1 fvwm-menu-headlines.1
  
  EXTRA_DIST = fvwmrc_convert fvwm24_convert.in quantize_pixmaps $(man_MANS)
  
