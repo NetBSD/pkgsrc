@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2001/02/08 19:52:03 fredb Exp $
+# $NetBSD: Makefile,v 1.26 2001/02/09 03:00:00 fredb Exp $
 #
 
 DISTNAME=		lynx2.8.4dev.16
@@ -58,8 +58,6 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-# Pick a terminal library. Choice affects support for colors, mouse,
-# "color styles", and more. No library supports all features.
 LYNX_SCREEN_LIB?=	slang
 .if (${LYNX_SCREEN_LIB} == slang)
 DEPENDS+=		libslang-*:../../devel/libslang
@@ -67,7 +65,9 @@ CONFIGURE_ENV+=		LIBS="-lm -ltermcap"
 .elif (${LYNX_SCREEN_LIB} == ncurses)
 DEPENDS+=		ncurses-*:../../devel/ncurses
 CONFIGURE_ARGS+=	--enable-color-style
-.elif (${LYNX_SCREEN_LIB} != curses)
+.elif (${LYNX_SCREEN_LIB} == curses)
+CONFIGURE_ENV+=		cf_cv_ncurses_version=no
+.else
 pre-configure:
 	@${ECHO} '****************************************************'
 	@${ECHO} '* Invalid value for LYNX_SCREEN_LIB. Please choose *'
