@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/06 03:52:07 kim Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/09/21 16:21:14 kim Exp $
+${AG_SHAREDIR}/htdocs/agfolder.png
 ${AG_SHAREDIR}/htdocs/application-doc.png
 ${AG_SHAREDIR}/htdocs/application-mp3.png
 ${AG_SHAREDIR}/htdocs/application-ogg.png
 ${AG_SHAREDIR}/htdocs/application-pdf.png
 ${AG_SHAREDIR}/htdocs/application-rtf.png
 ${AG_SHAREDIR}/htdocs/application-wav.png
-${AG_SHAREDIR}/htdocs/folder.png
-${AG_SHAREDIR}/htdocs/gallery.css
+${AG_SHAREDIR}/htdocs/c.png
+${AG_SHAREDIR}/htdocs/gallery-default.css
+${AG_SHAREDIR}/htdocs/gallery-new.css
 ${AG_SHAREDIR}/htdocs/video-asf.png
 ${AG_SHAREDIR}/htdocs/video-avi.png
 ${AG_SHAREDIR}/htdocs/video-mov.png
@@ -14,27 +16,50 @@ ${AG_SHAREDIR}/htdocs/video-mpeg.png
 ${AG_SHAREDIR}/htdocs/video-mpg.png
 ${AG_SHAREDIR}/htdocs/video-wmv.png
 @dirrm ${AG_SHAREDIR}/htdocs
-${AG_SHAREDIR}/templates/dircomment.tpl
-${AG_SHAREDIR}/templates/directory.tpl
-${AG_SHAREDIR}/templates/error.tpl
-${AG_SHAREDIR}/templates/file.tpl
-${AG_SHAREDIR}/templates/index.tpl
-${AG_SHAREDIR}/templates/info.tpl
-${AG_SHAREDIR}/templates/interval.tpl
-${AG_SHAREDIR}/templates/intervalactive.tpl
-${AG_SHAREDIR}/templates/layout.tpl
-${AG_SHAREDIR}/templates/navpicture.tpl
-${AG_SHAREDIR}/templates/nodircomment.tpl
-${AG_SHAREDIR}/templates/nopictureinfo.tpl
-${AG_SHAREDIR}/templates/orig.tpl
-${AG_SHAREDIR}/templates/picture.tpl
-${AG_SHAREDIR}/templates/pictureinfo.tpl
-${AG_SHAREDIR}/templates/refresh.tpl
-${AG_SHAREDIR}/templates/scale.tpl
-${AG_SHAREDIR}/templates/scaleactive.tpl
-${AG_SHAREDIR}/templates/showpicture.tpl
-${AG_SHAREDIR}/templates/slideshowisoff.tpl
-${AG_SHAREDIR}/templates/slideshowoff.tpl
+${AG_SHAREDIR}/templates/default/dircomment.tpl
+${AG_SHAREDIR}/templates/default/directory.tpl
+${AG_SHAREDIR}/templates/default/error.tpl
+${AG_SHAREDIR}/templates/default/file.tpl
+${AG_SHAREDIR}/templates/default/index.tpl
+${AG_SHAREDIR}/templates/default/info.tpl
+${AG_SHAREDIR}/templates/default/interval.tpl
+${AG_SHAREDIR}/templates/default/intervalactive.tpl
+${AG_SHAREDIR}/templates/default/layout.tpl
+${AG_SHAREDIR}/templates/default/navpicture.tpl
+${AG_SHAREDIR}/templates/default/nodircomment.tpl
+${AG_SHAREDIR}/templates/default/nopictureinfo.tpl
+${AG_SHAREDIR}/templates/default/orig.tpl
+${AG_SHAREDIR}/templates/default/picture.tpl
+${AG_SHAREDIR}/templates/default/pictureinfo.tpl
+${AG_SHAREDIR}/templates/default/refresh.tpl
+${AG_SHAREDIR}/templates/default/scale.tpl
+${AG_SHAREDIR}/templates/default/scaleactive.tpl
+${AG_SHAREDIR}/templates/default/showpicture.tpl
+${AG_SHAREDIR}/templates/default/slideshowisoff.tpl
+${AG_SHAREDIR}/templates/default/slideshowoff.tpl
+@dirrm ${AG_SHAREDIR}/templates/default
+${AG_SHAREDIR}/templates/new/dircomment.tpl
+${AG_SHAREDIR}/templates/new/directory.tpl
+${AG_SHAREDIR}/templates/new/error.tpl
+${AG_SHAREDIR}/templates/new/file.tpl
+${AG_SHAREDIR}/templates/new/index.tpl
+${AG_SHAREDIR}/templates/new/info.tpl
+${AG_SHAREDIR}/templates/new/interval.tpl
+${AG_SHAREDIR}/templates/new/intervalactive.tpl
+${AG_SHAREDIR}/templates/new/layout.tpl
+${AG_SHAREDIR}/templates/new/navpicture.tpl
+${AG_SHAREDIR}/templates/new/nodircomment.tpl
+${AG_SHAREDIR}/templates/new/nopictureinfo.tpl
+${AG_SHAREDIR}/templates/new/orig.tpl
+${AG_SHAREDIR}/templates/new/picture.tpl
+${AG_SHAREDIR}/templates/new/pictureinfo.tpl
+${AG_SHAREDIR}/templates/new/refresh.tpl
+${AG_SHAREDIR}/templates/new/scale.tpl
+${AG_SHAREDIR}/templates/new/scaleactive.tpl
+${AG_SHAREDIR}/templates/new/showpicture.tpl
+${AG_SHAREDIR}/templates/new/slideshowisoff.tpl
+${AG_SHAREDIR}/templates/new/slideshowoff.tpl
+@dirrm ${AG_SHAREDIR}/templates/new
 @dirrm ${AG_SHAREDIR}/templates
 @dirrm ${AG_SHAREDIR}
 ${AG_DOCDIR}/Changes
