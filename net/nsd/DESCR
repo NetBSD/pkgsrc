@@ -1,6 +1,6 @@
 This is NSD Name Server Daemon (NSD).
 
-NSD is a complete implementation of an autoritative DNS nameserver.
+NSD is a complete implementation of an authoritative DNS nameserver.
 For further information about what NSD is and what NSD is not please
 consult the REQUIREMENTS document which is a part of this distribution
 (thanks to Olaf).
