@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:56:02 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/03 22:20:17 wiz Exp $
 
 DISTNAME=	gkrellmPing-0.2-3
 PKGNAME=	gkrellm-ping-0.2.3
@@ -11,12 +11,12 @@ MAINTAINER=	damon@netbsd.org
 HOMEPAGE=	http://gkrellmping.dweb.ro/
 COMMENT=	gkrellm ping plugin
 
-DEPENDS+=       gkrellm>=1.2.13nb1:../../sysutils/gkrellm
-
-USE_GMAKE=	#defined
+USE_BUILDLINK2=	# defined
+USE_GMAKE=	# defined
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
 	${INSTALL_PROGRAM} ${WRKSRC}/gkrellmPing.so ${PREFIX}/lib/gkrellm/plugins/
 
+.include "../../sysutils/gkrellm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

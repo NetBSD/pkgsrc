@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/05/02 11:55:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/03 22:16:28 wiz Exp $
 
 DISTNAME=	gkrellmoon-0.3
 PKGNAME=	gkrellm-moon-0.3
@@ -10,9 +10,10 @@ MAINTAINER=	damon@netbsd.org
 HOMEPAGE=	http://gkrellmoon.sourceforge.net/
 COMMENT=	gkrellm moonclock plugin
 
-DEPENDS+=       gkrellm>=1.2.13nb1:../../sysutils/gkrellm
+USE_BUILDLINK2=	YES
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gkrellm/plugins
 
+.include "../../sysutils/gkrellm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
