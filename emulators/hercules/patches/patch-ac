@@ -1,10 +1,26 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/02/19 12:35:21 agc Exp $
+$NetBSD: patch-ac,v 1.2 2004/06/13 14:03:28 agc Exp $
 
 Linux tape handling.
 
---- hercules.h	2001/02/19 11:13:51	1.1
-+++ hercules.h	2001/02/19 11:52:42
-@@ -935,6 +935,56 @@
+--- hercules.h	2004-06-13 14:44:50.000000000 +0100
++++ hercules.h	2004-06-13 14:47:06.000000000 +0100
+@@ -34,6 +34,7 @@
+  #include <byteswap.h>
+ #endif
+ #include <sys/types.h>
++#include <sys/param.h>
+ #include <sys/resource.h>
+ #include <sys/stat.h>
+ #include <sys/socket.h>
+@@ -110,6 +111,7 @@
+ #define HAVE_STRUCT_TIMESPEC
+ #endif
+ #include <pthread.h>
++#include <sched.h>
+ #ifdef WIN32
+ #undef DWORD
+ #endif
+@@ -935,6 +937,56 @@
  #define CCKD_OPEN_RD           2
  #define CCKD_OPEN_RW           3
  
