@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 1999/10/19 00:28:40 rvb Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/02/09 02:27:47 fredb Exp $
 lib/coda/Advice.tcl
 lib/coda/CodaConsole
 lib/coda/Consider.tcl
@@ -56,4 +56,5 @@ bin/spy
 bin/xaskuser
 bin/xfrepair
 etc/coda/venus.conf.ex
+@unexec rmdir %D/etc/coda 2>/dev/null || true
 @dirrm lib/coda
