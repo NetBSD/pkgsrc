@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/03/24 16:16:10 tron Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/24 16:20:20 tron Exp $
 #
 
 .include "../../net/mldonkey/Makefile.common"
@@ -22,6 +22,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mlim ${PREFIX}/libexec/mldonkey
 	${INSTALL_PROGRAM} ${WRKSRC}/mlnet+gui ${PREFIX}/libexec/mldonkey
 
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/lablgtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
