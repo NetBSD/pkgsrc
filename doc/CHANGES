@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.533 2002/11/15 18:37:44 wiz Exp $
+$NetBSD: CHANGES,v 1.534 2002/11/16 00:09:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3638,3 +3638,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated libwmf to 0.2.7 [wiz 2002-11-15]
 	Updated wv to 0.7.4 [wiz 2002-11-15]
 	Updated wine to 20021031 [wiz 2002-11-15]
+	Updated ispell-german to 20021114 [wiz 2002-11-15]
