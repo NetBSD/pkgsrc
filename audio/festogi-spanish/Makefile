@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/04/04 19:33:34 proff Exp $
+# $NetBSD: Makefile,v 1.2 1999/04/04 22:03:15 proff Exp $
 
 DISTNAME=	festogi-spanish-1.4
 WRKSRC=		${WRKDIR}/festival
@@ -10,6 +10,8 @@ MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts
 
 DEPENDS+=	festival-1.3.1:../festival
+
+LICENSE=	no-commercial-use
 
 NO_BUILD=	yes
 
