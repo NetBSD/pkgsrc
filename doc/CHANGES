@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6881 2004/08/15 00:47:43 schmonz Exp $
+$NetBSD: CHANGES,v 1.6882 2004/08/15 03:28:25 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3837,3 +3837,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rsync to 2.6.2nb1 [tron 2004-08-14]
 	Updated licq-gui-qt to 1.2.6nb3 [kristerw 2004-08-14]
 	Added syncdir-1.0 [schmonz 2004-08-15]
+	Updated filerunner to 2.5.1nb1 [minskim 2004-08-15]
