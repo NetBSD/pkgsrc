@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/29 15:20:42 augustss Exp $
+bin/dsbr100
+man/man1/dsbr100.1
+man/cat1/dsbr100.0
