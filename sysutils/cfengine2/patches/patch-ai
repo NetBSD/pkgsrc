@@ -1,26 +1,23 @@
-$NetBSD: patch-ai,v 1.1.1.1 2002/12/22 13:04:38 seb Exp $
+$NetBSD: patch-ai,v 1.2 2003/04/26 08:33:01 seb Exp $
 
---- src/cfexecd.c.orig	Thu Dec 19 17:21:24 2002
-+++ src/cfexecd.c	Thu Dec 19 17:21:26 2002
-@@ -250,11 +250,21 @@
- if (!NO_FORK)
-   {
-+  int fd;
- #ifdef HAVE_SETSID
-   setsid();
- #endif 
-+  fd = open("/dev/null", O_RDWR, 0);
-   fclose (stdin);
-   fclose (stdout);
-   fclose (stderr);
-   closelog();
-+
-+  if (fd != -1)
-+     {
-+     dup2(fd,STDIN_FILENO);
-+     dup2(fd,STDOUT_FILENO);
-+     dup2(fd,STDERR_FILENO);
-+     close(fd);
-+     }
-   }
- 
+--- configure.ac.orig	2003-04-07 17:47:46.000000000 +0000
++++ configure.ac
+@@ -133,6 +133,18 @@ else
+         BERKELEY_DB_LIB="-ldb"
+         AC_MSG_RESULT($BERKELEY_DB_DIR)
+     else
++	d="$BERKELEY_DB_DIR"
++	for v in db-4 db4 db3 db; do
++	    if test -f "$d/include/$v/db.h" ; then
++		test "x$d" != "x/usr" && BERKELEY_DB_LDFLAGS="-L$d/lib"
++		BERKELEY_DB_CFLAGS="-I$d/include/$v"
++		BERKELEY_DB_LIB="-l$v"
++		AC_MSG_RESULT($d)
++		break
++	    fi
++	done
++    fi
++    if test x"$BERKELEY_DB_LIB" = "x"; then
+         AC_MSG_ERROR(Cannot find BerkeleyDB)
+     fi
+     AC_DEFINE(USE_BERKELEY_DB, 1, [Define if BerkeleyDB is available.])

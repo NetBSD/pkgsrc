@@ -1,26 +1,18 @@
-$NetBSD: patch-ah,v 1.1.1.1 2002/12/22 13:04:38 seb Exp $
+$NetBSD: patch-ah,v 1.2 2003/04/26 08:33:01 seb Exp $
 
---- src/cfenvd.c.orig	Fri Aug  2 04:57:44 2002
-+++ src/cfenvd.c	Thu Dec 19 17:16:13 2002
-@@ -512,11 +512,21 @@
- if (!NO_FORK)
-    {
-+   int fd;
- #ifdef HAVE_SETSID
-    setsid();
- #endif 
-+   fd = open("/dev/null", O_RDWR, 0);
-    fclose (stdin);
-    fclose (stdout);
-    fclose (stderr);
-    closelog();
-+
-+   if (fd != -1)
-+      {
-+      dup2(fd,STDIN_FILENO);
-+      dup2(fd,STDOUT_FILENO);
-+      dup2(fd,STDERR_FILENO);
-+      close(fd);
-+      }
-    }
+--- contrib/Makefile.am.orig	2001-11-21 18:59:51.000000000 +0000
++++ contrib/Makefile.am
+@@ -1,9 +1,12 @@
+ s1 = cfdoc
+ s2 = cfengine.el
  
+-sbin_SCRIPTS = vicf $(s1)
++sbin_SCRIPTS = $(s1)
+ pkgdata_SCRIPTS = $(s2)
+ 
++exampledir = $(prefix)/share/examples/cfengine
++example_SCRIPTS = vicf
++
+ EXTRA_DIST = README README.vicf $(s1) $(s2)
+ 
+ #
