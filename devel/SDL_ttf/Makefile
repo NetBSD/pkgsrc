@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/06/16 11:50:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/25 22:47:18 zuntum Exp $
 #
 
 DISTNAME=	SDL_ttf-1.2.2
@@ -9,7 +9,6 @@ MAINTAINER=	zuntum@netbsd.org
 HOMEPAGE=	http://www.libsdl.org/projects/SDL_ttf/
 COMMENT=	use TrueType fonts in your SDL applications
 
-DEPENDS+=	freetype-lib-*:../../graphics/freetype-lib
 DEPENDS+=	SDL>=1.0.1:../../devel/SDL
 
 GNU_CONFIGURE=	YES
@@ -18,4 +17,5 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 CONFIGURE_ENV+=	CFLAGS="-DFREETYPE_HDR_DIRECTORY"
 
+.include "../../graphics/freetype-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
