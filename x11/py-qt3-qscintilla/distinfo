@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/22 17:27:05 drochner Exp $
+
+SHA1 (PyQt-x11-gpl-3.7.tar.gz) = 190d1f1b25a696fa2e4fa0327a24c63ef1495e46
+Size (PyQt-x11-gpl-3.7.tar.gz) = 728162 bytes
+SHA1 (patch-aa) = 6dea71ea38e310e716fdbb635ab0331df500d304
+SHA1 (patch-ab) = d672949e9d993e18f3536c8a96f1527727e7e512
