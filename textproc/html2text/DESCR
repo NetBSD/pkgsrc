@@ -7,6 +7,3 @@ pret it "reasonably".
   Documents that are specified by a URL that begins with "http:" are
 retrieved with the Hypertext Transfer Protocol. URLs that begin with
 "file:" and URLs that do not contain a colon specify local files.
-
-  Html2text was written by Arno Unkrig and is available under a
-BSD-style licence.
