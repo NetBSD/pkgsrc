@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1935 2003/04/14 20:21:44 grant Exp $
+$NetBSD: CHANGES,v 1.1936 2003/04/14 20:29:20 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1595,3 +1595,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added phoenix-bin-nightly [grant 2003-04-14]
 	Deleted phoenix-linux-nightly, renamed to phoenix-bin-nightly
 		[grant 2003-04-14]
+	Added mozilla-bin-1.3 [grant 2003-04-14]
+	Deleted mozilla-linux, renamed to mozilla-bin [grant 2003-04-14]
