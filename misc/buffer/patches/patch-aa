@@ -1,20 +1,36 @@
-diff -udr buffer.ORG/Makefile buffer/Makefile
---- buffer.ORG/Makefile       Wed Jul 14 17:59:17 1993
-+++ Makefile    Thu Oct 23 03:54:43 1997
-@@ -7,8 +7,8 @@
+]2;feyrer@yui:/usr/pkgsrc/misc/buffer/work ]1;yui--- Makefile.orig	Wed Jul 14 17:59:17 1993
++++ Makefile	Wed Mar  4 16:34:17 1998
+@@ -7,10 +7,10 @@
  CFLAGS=
  
  # Where to install buffer and its manual pages
 -INSTBIN=/usr/local/bin
 -INSTMAN=/usr/man/manl
 +INSTBIN=${PREFIX}/bin
-+INSTMAN=${PREFIX}/man/manl
++INSTMAN=${PREFIX}/man/man1
  # The manual page section (normally l or 1)
- S=l
+-S=l
++S=1
  
-diff -udr buffer.ORG/buffer.c buffer/buffer.c
---- buffer.ORG/buffer.c	Wed Jul 14 17:59:17 1993
-+++ buffer.c	Fri Nov 17 20:23:58 1995
+ RM=/bin/rm
+ ALL=README buffer.man Makefile buffer.c sem.c COPYING
+@@ -24,12 +24,8 @@
+ 	$(RM) -f *.o core buffer .merrs
+ 
+ install: buffer
+-	rm -f $(INSTBIN)/buffer
+-	cp buffer $(INSTBIN)/buffer
+-	chmod 111 $(INSTBIN)/buffer
+-	rm -f $(INSTMAN)/buffer.$S
+-	cp buffer.man $(INSTMAN)/buffer.$S
+-	chmod 444 $(INSTMAN)/buffer.$S
++	${BSD_INSTALL_PROGRAM} buffer $(INSTBIN)/buffer
++	${BSD_INSTALL_MAN} buffer.man $(INSTMAN)/buffer.$S
+ 
+ buffer.tar: $(ALL)
+ 	$(RM) -f buffer.tar
+--- buffer.c.orig	Wed Jul 14 17:59:17 1993
++++ buffer.c	Wed Mar  4 16:32:52 1998
 @@ -384,6 +384,7 @@
  }
  
