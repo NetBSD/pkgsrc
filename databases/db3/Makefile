@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/03/26 19:31:55 skrll Exp $
+# $NetBSD: Makefile,v 1.7 2001/07/19 19:16:43 jlam Exp $
 
 DISTNAME=	db-3.2.9
 PKGNAME=	db3-2.9
@@ -9,12 +9,14 @@ MAINTAINER=	wrstuden@netbsd.org
 HOMEPAGE=	http://www.sleepycat.com/
 COMMENT=	Sleepycat Software's Berkeley DB version 3
 
+USE_BUILDLINK_ONLY=	yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKDIR}/${DISTNAME}/dist/ltconfig
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../dist/configure
 
 CONFIGURE_ARGS+=	--program-transform-name=s,db_,db3_,
+CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db3
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--enable-shared
 
