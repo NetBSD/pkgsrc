@@ -1,0 +1,40 @@
+$NetBSD: patch-bx,v 1.1 2002/06/27 07:10:15 skrll Exp $
+
+--- khtml/Makefile.in.orig	Wed Jun 26 08:21:40 2002
++++ khtml/Makefile.in
+@@ -833,7 +833,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=khtmlimage.desktop domtreeview.h khtml_events.cpp TODO-3.0 khtml_browser.rc configure.in.in khtml_iface.cc khtml.rc khtml_factory.h khtml_printsettings.cpp khtml_pagecache.cpp khtml_iface.h khtml_run.h khtml_ext.cpp DESIGN.html khtml.desktop khtml_find.cpp SECURITY khtml_popupmenu.rc 
++KDE_DIST=khtml_iface.h khtmlimage.desktop khtml.desktop khtml_find.cpp domtreeview.h configure.in.in khtml_iface.cc khtml_events.cpp SECURITY khtml_popupmenu.rc khtml_run.h khtml_iface_skel.cc TODO-3.0 libkhtml.la.closure khtml_ext.cpp khtml.rc khtmlimagepart.la.closure khtml_iface.kidl khtml_factory.h khtml_printsettings.cpp khtml_pagecache.cpp khtml_browser.rc DESIGN.html 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -932,7 +932,7 @@
+ 
+ #>- install-exec-am: install-libLTLIBRARIES
+ #>+ 1
+-install-exec-am: install-kde_moduleLTLIBRARIES install-libLTLIBRARIES
++install-exec-am: install-libLTLIBRARIES install-kde_moduleLTLIBRARIES
+ 
+ install-info: install-info-recursive
+ 
+@@ -1186,7 +1186,7 @@
+ 	rm -f khtmlimagepart_la.all_cpp.final khtmlimagepart_la.all_cpp.files
+ 
+ #>+ 11
+-khtmlimagepart_la.all_cc.cc: $(srcdir)/Makefile.in khtmlimagepart_la_meta_unload.cc  
++khtmlimagepart_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/khtmlimagepart_la_meta_unload.cc  
+ 	@echo 'creating khtmlimagepart_la.all_cc.cc ...'; \
+ 	rm -f khtmlimagepart_la.all_cc.files khtmlimagepart_la.all_cc.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> khtmlimagepart_la.all_cc.final; \
+@@ -1210,7 +1210,7 @@
+ 	rm -f libkhtml_la.all_cpp.final libkhtml_la.all_cpp.files
+ 
+ #>+ 11
+-libkhtml_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/khtml_settings.cc $(srcdir)/khtml_iface.cc khtml_iface_skel.cc libkhtml_la_meta_unload.cc   testrender.moc khtml_part.moc khtml_run.moc khtmlimage.moc testkhtml.moc khtml_factory.moc domtreeview.moc khtml_ext.moc khtml_pagecache.moc khtml_find.moc test_regression.moc khtmlview.moc khtml_printsettings.moc 
++libkhtml_la.all_cc.cc: $(srcdir)/Makefile.in $(srcdir)/khtml_settings.cc $(srcdir)/khtml_iface.cc $(srcdir)/khtml_iface_skel.cc $(srcdir)/libkhtml_la_meta_unload.cc   testrender.moc khtml_part.moc khtml_run.moc khtmlimage.moc testkhtml.moc khtml_factory.moc domtreeview.moc khtml_ext.moc khtml_pagecache.moc khtml_find.moc test_regression.moc khtmlview.moc khtml_printsettings.moc 
+ 	@echo 'creating libkhtml_la.all_cc.cc ...'; \
+ 	rm -f libkhtml_la.all_cc.files libkhtml_la.all_cc.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> libkhtml_la.all_cc.final; \
