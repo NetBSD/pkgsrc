@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# $Id: pkgchk.sh,v 1.28 2002/03/17 22:47:41 abs Exp $
+# $Id: pkgchk.sh,v 1.29 2002/03/18 00:06:04 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -201,7 +201,7 @@ pkg_fetchlist()
 pkg_installlist()
     {
     INSTALL=$1 ; shift
-    echo "[ $INSTALL...]" ; shift
+    echo "[ $INSTALL...]" ;
     while [ $# != 0 ]; do
 	pkg_install $1 $2 $INSTALL
 	shift ; shift;
