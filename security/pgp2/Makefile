@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/06/22 13:06:18 agc Exp $
+# $NetBSD: Makefile,v 1.11 1998/07/07 21:36:09 is Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -38,8 +38,13 @@ IS_INTERACTIVE=	yes
 OBJS_EXT=	_80386.o _zmatch.o
 ASMFLAG=	-DASM
 .elif ${MACHINE_ARCH} == "m68k"
+.ifdef M68060
+OBJS_EXT=
+ASMFLAG=	-m68060 -DPORTABLE -DMPORTABLE 
+.else
 OBJS_EXT=	mc68020.o
 ASMFLAG=
+.endif
 .elif ${MACHINE_ARCH} == "sparc"
 OBJS_EXT=	sparc.o
 ASMFLAG=
