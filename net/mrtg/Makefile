@@ -1,10 +1,17 @@
-# $NetBSD: Makefile,v 1.6 1999/05/18 14:16:53 bouyer Exp $
+# $NetBSD: Makefile,v 1.7 1999/05/22 10:45:32 rh Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/12/16 19:42:17 vanilla Exp
 #
 
-DISTNAME=	mrtg-2.5.3
+DISTNAME=	mrtg-2.7.4b
 CATEGORIES=	net
-MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/pub/
+MASTER_SITES=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/pub/ \
+		http://gd.tuwien.ac.at/infosys/network/tools/mrtg/pub/ \
+		ftp://mrtg.hdl.com/ \
+		ftp://ftp.sunet.se/pub/network/monitoring/mrtg/ \
+		ftp://ftp.ou.edu/mirrors/mrtg/ \
+		ftp://eesa.webstar.co.uk/pub/mrtg/ \
+		ftp://ftp.chg.ru/pub/networking/management/mrtg/ \
+		ftp://ftp.onet.pl/pub/unix/network/mrtg/pub/
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
@@ -12,8 +19,8 @@ HOMEPAGE=	http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/mrtg.html
 DEPENDS=	gd-1.3p1:../../graphics/gd
 
 USE_PERL5=	YES
-
-ALL_TARGET=	rateup substitute
+GNU_CONFIGURE=	YES
+CONFIGURE_ARGS=	--with-gd-inc=${PREFIX}/include/gd
 
 post-build:
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/mrtg.conf.example \
@@ -22,26 +29,31 @@ post-build:
 	    >${WRKDIR}/netstat2mrtg
 	${SED} s#@PREFIX@#${PREFIX}#g <${FILESDIR}/sys2mrtg \
 	    >${WRKDIR}/sys2mrtg
+
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/etc/mrtg
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mrtg
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mrtg
-	for file in mrtg-conf.html mrtg-conf.txt readme.html readme.txt mibhelp.txt COPYING COPYRIGHT; do \
+	for file in ${WRKSRC}/doc/*; do \
+		${INSTALL_DATA} $$file ${PREFIX}/share/doc/mrtg/; \
+	done
+	for file in ANNOUNCE CHANGES COPYING COPYRIGHT README; do \
 		${INSTALL_DATA} ${WRKSRC}/$$file ${PREFIX}/share/doc/mrtg/; \
 	done
-	for file in ${WRKSRC}/*.gif; do \
+	for file in ${WRKSRC}/images/*.gif; do \
 		${INSTALL_DATA} $$file ${PREFIX}/share/mrtg/; \
 	done
 	${INSTALL_DATA} ${WRKDIR}/mrtg.conf.example ${PREFIX}/etc/mrtg
 	for file in netstat2mrtg sys2mrtg; do \
 		${INSTALL_SCRIPT} ${WRKDIR}/$$file ${PREFIX}/libexec/; \
 	done
-	${INSTALL_PROGRAM} ${WRKSRC}/rateup ${PREFIX}/libexec/
-	${INSTALL_SCRIPT} ${WRKSRC}/mrtg ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/BER.pm ${WRKSRC}/SNMP_Session.pm \
-		${PREFIX}/lib/perl5/site_perl/
-	for file in cfgmaker convert indexmaker; do \
-		${INSTALL_SCRIPT} ${WRKSRC}/$$file ${PREFIX}/bin/mrtg$$file; \
+	${INSTALL_PROGRAM} ${WRKSRC}/run/rateup ${PREFIX}/libexec/
+	${INSTALL_SCRIPT} ${WRKSRC}/run/mrtg ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/run/BER.pm ${WRKSRC}/run/SNMP_Session.pm \
+		${WRKSRC}/run/SNMP_util.pm ${PREFIX}/lib/perl5/site_perl/
+	for file in cfgmaker cfgmaker_ip indexmaker; do \
+		${INSTALL_SCRIPT} ${WRKSRC}/run/$$file \
+			${PREFIX}/bin/mrtg$$file; \
 	done
 
 .include "../../mk/bsd.pkg.mk"

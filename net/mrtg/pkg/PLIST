@@ -1,25 +1,38 @@
-@comment $NetBSD: PLIST,v 1.3 1999/05/18 14:16:53 bouyer Exp $
-etc/mrtg/mrtg.conf.example
-bin/mrtgcfgmaker
-bin/mrtgconvert
-bin/mrtgindexmaker
+@comment $NetBSD: PLIST,v 1.4 1999/05/22 10:45:34 rh Exp $
 bin/mrtg
+bin/mrtgcfgmaker
+bin/mrtgcfgmaker_ip
+bin/mrtgindexmaker
+etc/mrtg/mrtg.conf.example
 lib/perl5/site_perl/BER.pm
 lib/perl5/site_perl/SNMP_Session.pm
-libexec/rateup
+lib/perl5/site_perl/SNMP_util.pm
 libexec/netstat2mrtg
 libexec/sys2mrtg
+libexec/rateup
+share/doc/mrtg/config.html
+share/doc/mrtg/config.pod
+share/doc/mrtg/config.txt
+share/doc/mrtg/htaccess.txt
+share/doc/mrtg/logfile-format.txt
+share/doc/mrtg/manual.html
+share/doc/mrtg/manual.txt
+share/doc/mrtg/mibhelp.txt
+share/doc/mrtg/mrtg-l.gif
+share/doc/mrtg/mrtg-m.gif
+share/doc/mrtg/mrtg-r.gif
+share/doc/mrtg/mrtg-ti.gif
+share/doc/mrtg/sample-mrtg.cfg
+share/doc/mrtg/squid.txt
+share/doc/mrtg/ANNOUNCE
+share/doc/mrtg/CHANGES
+share/doc/mrtg/COPYING
+share/doc/mrtg/COPYRIGHT
+share/doc/mrtg/README
 share/mrtg/mrtg-l.gif
 share/mrtg/mrtg-m.gif
 share/mrtg/mrtg-r.gif
 share/mrtg/mrtg-ti.gif
-share/doc/mrtg/COPYING
-share/doc/mrtg/COPYRIGHT
-share/doc/mrtg/mibhelp.txt
-share/doc/mrtg/mrtg-conf.html
-share/doc/mrtg/mrtg-conf.txt
-share/doc/mrtg/readme.html
-share/doc/mrtg/readme.txt
 @dirrm etc/mrtg
 @dirrm share/doc/mrtg
 @dirrm share/mrtg
