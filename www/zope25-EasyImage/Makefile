@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/12 18:10:17 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/24 21:56:32 drochner Exp $
 
 DISTNAME=	EasyImage15
 PKGNAME=	zope25-EasyImage-1.5
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.zope.org/Members/regebro/easyimage
 COMMENT=	image extension for Zope
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-short
+USE_BUILDLINK2=	yes
 
 post-extract:
 	${RM} -r ${WRKSRC}/easyimage/cvs ${WRKSRC}/easyimage/icons/cvs \
@@ -29,5 +30,5 @@ post-extract:
 		${WRKSRC}/EasyImage/dtml/manage_convertResizeEasyImageForm.dtml
 
 .include "../../www/zope25/product.mk"
-.include "../../graphics/py-imaging/buildlink.mk"
+.include "../../graphics/py-imaging/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
