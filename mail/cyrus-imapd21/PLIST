@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/27 16:08:53 chris Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/11/01 01:05:34 jlam Exp $
 bin/imtest
 bin/installsieve
 bin/lmtptest
@@ -31,7 +31,6 @@ cyrus/bin/squatter
 cyrus/bin/timsieved
 cyrus/bin/tls_prune
 cyrus/bin/translatesieve
-
 etc/rc.d/cyrus
 include/cyrus/acap.h
 include/cyrus/acl.h
