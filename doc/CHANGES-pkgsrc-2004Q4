@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.108 2005/03/14 21:36:04 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.109 2005/03/19 15:13:39 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -227,3 +227,5 @@ Pullup ticket 352 - requested by Lubomir Sedlacik
 security fix for lesstif
 Pullup ticket 357 - requested by Lubomir Sedlacik
 security fix for ethereal
+Pullup ticket 372 - requested by Julio M. Merino Vidal
+security fix for gaim
