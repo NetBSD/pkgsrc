@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/05 20:12:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/02/21 16:32:07 mycroft Exp $
 share/doc/html/postgresql/admin-preface.html
 share/doc/html/postgresql/admin.html
 share/doc/html/postgresql/app-clusterdb.html
@@ -191,11 +191,11 @@ share/doc/html/postgresql/libpq-notify.html
 share/doc/html/postgresql/libpq-threading.html
 share/doc/html/postgresql/libpq-trace.html
 share/doc/html/postgresql/libpq.html
-share/doc/html/postgresql/ln17902.html
-share/doc/html/postgresql/ln24595.html
+share/doc/html/postgresql/ln17977.html
+share/doc/html/postgresql/ln24704.html
 share/doc/html/postgresql/ln25.html
-share/doc/html/postgresql/ln37022.html
-share/doc/html/postgresql/ln51737.html
+share/doc/html/postgresql/ln37148.html
+share/doc/html/postgresql/ln51864.html
 share/doc/html/postgresql/ln659.html
 share/doc/html/postgresql/ln8.html
 share/doc/html/postgresql/lo-funcs.html
@@ -385,7 +385,9 @@ share/doc/html/postgresql/release-7-1.html
 share/doc/html/postgresql/release-7-2-1.html
 share/doc/html/postgresql/release-7-2-2.html
 share/doc/html/postgresql/release-7-2-3.html
+share/doc/html/postgresql/release-7-2-4.html
 share/doc/html/postgresql/release-7-2.html
+share/doc/html/postgresql/release-7-3-1.html
 share/doc/html/postgresql/release-7-3.html
 share/doc/html/postgresql/release.html
 share/doc/html/postgresql/resources.html
@@ -570,8 +572,8 @@ share/doc/html/postgresql/user.html
 share/doc/html/postgresql/wal-configuration.html
 share/doc/html/postgresql/wal-implementation.html
 share/doc/html/postgresql/wal.html
-share/doc/html/postgresql/x11875.html
 share/doc/html/postgresql/x1779.html
+share/doc/html/postgresql/x11950.html
 share/doc/html/postgresql/xaggr.html
 share/doc/html/postgresql/xfunc-c.html
 share/doc/html/postgresql/xfunc-internal.html
