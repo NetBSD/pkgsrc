@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2004/03/09 22:41:21 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2004/03/09 22:49:48 minskim Exp $
 #
 
-DISTNAME=	tkcvs_7_1_2
-PKGNAME=	tkcvs-7.1.2
+DISTNAME=	tkcvs_7_2
+PKGNAME=	tkcvs-7.2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.twobarleycorns.net/ \
 		${MASTER_SITE_SOURCEFORGE:=tkcvs/}
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.twobarleycorns.net/tkcvs.html
 COMMENT=	Tcl/Tk frontends to CVS and diff
 
-DEPENDS+=	tk>=8.3:../../x11/tk
+DEPENDS+=	tk>=8.4:../../x11/tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
