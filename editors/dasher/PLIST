@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/08 19:40:37 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/03 07:30:27 jmmv Exp $
 bin/dasher
 man/man1/dasher.1
 share/applications/dasher.desktop
@@ -14,6 +14,7 @@ share/dasher/alphabet.hungarianLowerCase.xml
 share/dasher/alphabet.ipa.xml
 share/dasher/alphabet.italian.xml
 share/dasher/alphabet.korean.xml
+share/dasher/alphabet.mongolian.xml
 share/dasher/alphabet.polish.xml
 share/dasher/alphabet.portuguese.xml
 share/dasher/alphabet.russian.xml
@@ -30,6 +31,7 @@ share/dasher/training_german_DE.txt
 share/dasher/training_hiragana60_JP.txt
 share/dasher/training_hiragana83_JP.txt
 share/dasher/training_italian_IT.txt
+share/dasher/training_mongolian_MN.txt
 share/dasher/training_portuguese_BR.txt
 share/dasher/training_russian_RU.txt
 share/gnome/help/dasher/C/dasher.xml
@@ -44,8 +46,10 @@ share/icons/dasher.png
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/dasher.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/dasher.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/dasher.mo
@@ -68,14 +72,22 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/dasher.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/dasher.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/dasher.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/dasher.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/dasher.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/dasher.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/dasher.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/dasher.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/dasher.mo
 share/omf/dasher/dasher-C.omf
 @dirrm share/omf/dasher
 @comment in scrollkeeper: @dirrm share/omf
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/gnome/help/dasher/C/figures
 @dirrm share/gnome/help/dasher/C
 @dirrm share/gnome/help/dasher
