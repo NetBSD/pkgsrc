@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1693 2003/03/19 23:16:11 kristerw Exp $
+$NetBSD: CHANGES,v 1.1694 2003/03/20 04:41:38 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1203,3 +1203,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added cy2-login-2.1.12 [jlam 2003-03-19]
 	Added cy2-ntlm-2.1.12 [jlam 2003-03-19]
 	Updated nhc98 to 1.16 [kristerw 2003-03-19]
+	Updated mutt to 1.4.1 [jschauma 2003-03-19]
