@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2001/11/21 17:55:55 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2001/11/21 17:58:33 jlam Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -20,6 +20,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${CONFDIR}
 CONFIGURE_ENV+=		RPLAY_TARGET=generic	# XXX generic, or oss, or sun?
 
 INFO_FILES=	RPLAY.info RPTP.info librplay.info rplay.info
+RCD_SCRIPTS=	rplayd
 
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf --force
@@ -38,4 +39,5 @@ post-install:
 .include "../../audio/gsm/buildlink.mk"
 .include "../../devel/readline/buildlink.mk"
 .include "../../devel/rx/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
