@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.6 2003/09/30 10:18:57 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/01/04 23:34:06 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLU_BUILDLINK3_MK:=	${GLU_BUILDLINK3_MK}+
 
-.if !empty(GLU_BUILDLINK3_MK:M\+)
+.if !empty(GLU_BUILDLINK3_MK:M+)
 .  include "../../mk/bsd.prefs.mk"
 
 MESA_REQD?=		3.4.2
@@ -62,13 +62,13 @@ MAKEFLAGS+=	_NEED_GLU="${_NEED_GLU}"
 # If we depend on the package, depend on the latest version with a library
 # major number bump.
 #
-BUILDLINK_DEPENDS.glu=	glu>=5.0
-.  if !empty(BUILDLINK_DEPTH:M\+)
+BUILDLINK_DEPENDS.glu=	glu>=5.0.2nb3
+.  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	glu
 .  endif
 .endif
 
-.if !empty(GLU_BUILDLINK3_MK:M\+)
+.if !empty(GLU_BUILDLINK3_MK:M+)
 .  if ${_NEED_GLU} == "YES"
 BUILDLINK_PACKAGES+=	glu
 .  else

@@ -1,9 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.6 2003/09/30 10:18:57 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/01/04 23:34:06 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FREETYPE2_BUILDLINK3_MK:=	${FREETYPE2_BUILDLINK3_MK}+
 
-.if !empty(FREETYPE2_BUILDLINK3_MK:M\+)
+.if !empty(FREETYPE2_BUILDLINK3_MK:M+)
 .  include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.0.1
@@ -67,17 +67,20 @@ MAKEFLAGS+=	_NEED_FREETYPE2="${_NEED_FREETYPE2}"
 # major number bump.
 #
 BUILDLINK_DEPENDS.freetype2=	freetype2>=2.1.3
-.  if !empty(BUILDLINK_DEPTH:M\+)
+.  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=		freetype2
 .  endif
 .endif
 
-.if !empty(FREETYPE2_BUILDLINK3_MK:M\+)
+.if !empty(FREETYPE2_BUILDLINK3_MK:M+)
 .  if ${_NEED_FREETYPE2} == "YES"
 BUILDLINK_PACKAGES+=		freetype2
 .  else
 BUILDLINK_PREFIX.freetype2=	${X11BASE}
 .  endif
+
+FREETYPE_CONFIG?=	${BUILDLINK_PREFIX.freetype2}/bin/freetype-config
+CONFIGURE_ENV+=		FREETYPE_CONFIG="${FREETYPE_CONFIG}"
 .endif	# FREETYPE2_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:C/\+$//}

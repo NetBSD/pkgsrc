@@ -1,19 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:43 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:05 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBMM_BUILDLINK3_MK:=	${LIBMM_BUILDLINK3_MK}+
 
-.if !empty(LIBMM_BUILDLINK3_MK:M\+)
-BUILDLINK_DEPENDS.libmm?=	libmm>=1.2.1
-BUILDLINK_PKGSRCDIR.libmm?=	../../devel/libmm
-.endif	# LIBMM_BUILDLINK3_MK
-
-.if !empty(BUILDLINK_DEPTH:M\+)
+.if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	libmm
 .endif
 
-.if !empty(LIBMM_BUILDLINK3_MK:M\+)
-BUILDLINK_PACKAGES+=	libmm
+.if !empty(LIBMM_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		libmm
+BUILDLINK_DEPENDS.libmm?=	libmm>=1.2.1
+BUILDLINK_PKGSRCDIR.libmm?=	../../devel/libmm
 .endif	# LIBMM_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}

@@ -1,19 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/03 23:06:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/04 23:34:06 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 JPEG_BUILDLINK3_MK:=	${JPEG_BUILDLINK3_MK}+
 
-.if !empty(JPEG_BUILDLINK3_MK:M\+)
-BUILDLINK_DEPENDS.jpeg?=	jpeg>=6b
-BUILDLINK_PKGSRCDIR.jpeg?=	../../graphics/jpeg
-.endif	# JPEG_BUILDLINK3_MK
-
-.if !empty(BUILDLINK_DEPTH:M\+)
+.if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	jpeg
 .endif
 
-.if !empty(JPEG_BUILDLINK3_MK:M\+)
-BUILDLINK_PACKAGES+=	jpeg
+.if !empty(JPEG_BUILDLINK3_MK:M+)
+BUILDLINK_PACKAGES+=		jpeg
+BUILDLINK_DEPENDS.jpeg?=	jpeg>=6b
+BUILDLINK_PKGSRCDIR.jpeg?=	../../graphics/jpeg
 .endif	# JPEG_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}

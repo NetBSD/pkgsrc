@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.7 2003/09/30 10:18:57 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/01/04 23:34:06 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XPM_BUILDLINK3_MK:=	${XPM_BUILDLINK3_MK}+
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(XPM_BUILDLINK3_MK:M\+)
+.if !empty(XPM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.xpm?=		xpm>=3.4k
 BUILDLINK_PKGSRCDIR.xpm?=	../../graphics/xpm
 .endif	# XPM_BUILDLINK3_MK
@@ -73,12 +73,12 @@ MAKEFLAGS+=	_NEED_XPM="${_NEED_XPM}"
 .endif	# _NEED_XPM
 
 .if ${_NEED_XPM} == "YES"
-.  if !empty(BUILDLINK_DEPTH:M\+)
+.  if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	xpm
 .  endif
 .endif
 
-.if !empty(XPM_BUILDLINK3_MK:M\+)
+.if !empty(XPM_BUILDLINK3_MK:M+)
 .  if ${_NEED_XPM} == "YES"
 BUILDLINK_PACKAGES+=	xpm
 .  else
