@@ -1,0 +1,66 @@
+# $NetBSD: Makefile-example,v 1.1 2004/01/20 12:04:49 agc Exp $
+
+# First paragraph - distfile and binary package data
+# DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
+# DYNAMIC_MASTER_SITES MASTER_SITE_SUBDIR EXTRACT_SUFX DISTFILES
+DISTNAME=		make-3.80
+PKGNAME=		gmake-3.80	# only to be added if the package name is different from DISTNAME
+#PKGREVISION=		2		# should be added/incremented for user-visible changes
+CATEGORIES=		devel		# multiple categories are allowed
+MASTER_SITES=		${MASTER_SITE_GNU:=make/}
+#EXTRACT_SUFX=		.tar.bz2	# .tar.gz is the default, only needed in unusual circumstances
+
+# Second paragraph - MAINTAINER, HOMEPAGE and COMMENT
+MAINTAINER=		tech-pkg@NetBSD.org	# set this to your email address, tech-pkg@ is the default
+HOMEPAGE=		http://www.gnu.org/software/make/make.html
+COMMENT=		GNU version of 'make' utility	# start with a capital, no articales at start
+
+# Third paragraph - PKG_INSTALLATION_TYPES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews	# needed for package views-ready packages
+
+# Fourth paragraph - all build definitions
+# WRKSRC, USE_BUILDLINK2, USE_BUILDLINK3, GNU_CONFIGURE, HAS_CONFIGURE,
+# USE_PKGLOCALEDIR, USE_INSTALL, TEXINFO_REQD, USE_JAVA, USE_PERL5
+# INFO_FILES, DIST_SUBDIR, CONFIGURE_ENV, CONFIGURE_ARGS, MAKE_ENV
+# etc
+WRKSRC=			${WRKDIR}/src
+USE_BUILDLINK3=		YES
+GNU_CONFIGURE=		YES
+USE_PKGLOCALEDIR=	YES
+TEXINFO_REQD=		4.0
+INFO_FILES=		make.info
+DIST_SUBDIR=		gmake
+
+# Fifth paragraph - different targets
+# ALL_TARGET, INSTALL_TARGET, TEST_TARGET
+TEST_TARGET=		check
+
+# always include bsd.prefs.mk before any .if or .ifdef statements
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(GNU_PROGRAM_PREFIX)
+CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
+.endif
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
+BUILD_DEFS+=		GNU_PROGRAM_PREFIX
+
+.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
+PLIST_SUBST+=		GMAKE_LINK=""
+.else
+PLIST_SUBST+=		GMAKE_LINK="@comment "
+.endif
+
+# Makefile targets should occur after all the other definitions in the file
+post-install:
+	${CHMOD} g-s ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}make
+	${CHGRP} ${BINGRP} ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}make
+.if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
+	${LN} -sf ${GNU_PROGRAM_PREFIX}make ${PREFIX}/bin/gmake
+.endif
+
+# buildlink2 and buildlink3 files should come at the end of the file,
+# sorted alphabetically
+.include "../../devel/gettext-lib/buildlink3.mk"
+
+# Finally, please include bsd.pkg.mk
+.include "../../mk/bsd.pkg.mk"
