@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.7 2004/06/24 17:31:43 drochner Exp $
+$NetBSD: distinfo,v 1.8 2005/02/24 12:23:31 agc Exp $
 
 SHA1 (mpich-1.2.5.2.tar.gz) = a767e56bab24d08a13903493e627e987e1685f50
+RMD160 (mpich-1.2.5.2.tar.gz) = 2960efb9c2a9be2d496292dba1255594525ff9b4
 Size (mpich-1.2.5.2.tar.gz) = 12383519 bytes
 SHA1 (mpich-docs.tgz) = fb7a9c7459998b9b74584d2afc4553027d94ad10
+RMD160 (mpich-docs.tgz) = 85c7d200794b1d494f812eb4e5de904bcf681f2b
 Size (mpich-docs.tgz) = 326405 bytes
 SHA1 (patch-aa) = fa6d5f16cbc88b850906a7cc970ad73e62bee50d
 SHA1 (patch-ak) = 8ad7340a9a95087649a96c823e5d0965922e209b
