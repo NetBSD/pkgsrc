@@ -1,0 +1,29 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 02:15:31 zuntum Exp $
+
+You will need to edit ${PREFIX}/etc/httpd/httpd.conf and add the following
+lines to the Dynamic Shared Object section in order to use this module:
+
+LoadModule aolserver_module   lib/httpd/mod_aolserver.so
+AddModule mod_aolserver.c
+
+Also add, in any virtual hosts which will use mod_aolserver:
+
+AolServerConf tcl_modules /usr/local/etc/httpd/tcl_modules
+AolServerConf config_file /usr/local/etc/httpd/tcl_modules/nsd.tcl
+AolServerConf log_file_location /var/log/httpd/error_log
+AolServerConf lockfile /var/run/aolsrv_lock
+AolServerConf nsv_shmem_file /var/run/aolsrv_shmem
+
+And, for your DocumentRoot:
+
+<Directory ${PREFIX}/share/httpd/htdocs>
+    Options Indexes FollowSymLinks MultiViews ExecCGI
+    DirectoryIndex index.tcl index.adp index.shtml index.html index.htm
+    AddHandler adp adp
+    AddHandler aolserver tcl
+</Directory>
+
+Also see the sample config files in
+${PREFIX}/share/examples/mod_aolserver.
+=============================================================================

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2000/10/22 20:30:06 tsarna Exp $
-libexec/pcgi-wrapper
-lib/python2.0/site-packages/pcgi_publisher.py
-lib/python2.0/site-packages/pcgi_publisher.pyc
-lib/python2.0/site-packages/pcgi_publisher.pyo
-bin/pcgifile
-bin/killpcgi

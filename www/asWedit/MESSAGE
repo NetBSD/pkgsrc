@@ -1,0 +1,12 @@
+==========================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 02:16:18 zuntum Exp $
+
+  asWedit has now been installed in ${PREFIX}.
+
+  Before using this package for the first time, each user has to merge
+  the contents of ${PREFIX}/share/examples/asWedit/AsWedit with his/her
+  X resources.  This can be done using the command
+
+	xrdb -merge ${PREFIX}/share/examples/asWedit/AsWedit
+
+==========================================================================

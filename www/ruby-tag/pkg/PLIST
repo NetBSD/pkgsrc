@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/01 14:17:14 taca Exp $
-${RUBY_SITELIBDIR}/tag.rb
-${RUBY_DOCDIR}/tag/ja/tag.html
-@dirrm ${RUBY_DOCDIR}/tag/ja
-@dirrm ${RUBY_DOCDIR}/tag

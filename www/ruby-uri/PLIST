@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:48 zuntum Exp $
+${RUBY_SITELIBDIR}/uri.rb
+${RUBY_SITELIBDIR}/urireg.rb
+${RUBY_EXAMPLESDIR}/uri/test-uri.rb
+${RUBY_EXAMPLESDIR}/uri/in-uri.txt
+@dirrm ${RUBY_EXAMPLESDIR}/uri
+${RUBY_DOCDIR}/uri/index.html
+@dirrm ${RUBY_DOCDIR}/uri

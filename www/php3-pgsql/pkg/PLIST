@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/15 20:07:54 explorer Exp $
-lib/php3/pgsql.so

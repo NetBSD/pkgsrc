@@ -1,0 +1,92 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:21 zuntum Exp $
+bin/bluefish
+man/man1/bluefish.1
+share/bluefish/php3_functions
+share/bluefish/php4_functions
+share/bluefish/rxml_functions
+share/bluefish/ssi_functions
+share/pixmaps/bluefish_icon.xpm
+share/doc/html/bluefish/images/germany.gif
+share/doc/html/bluefish/images/hungary.gif
+share/doc/html/bluefish/images/italy.gif
+share/doc/html/bluefish/images/uk.gif
+share/doc/html/bluefish/images/project_edit.png
+share/doc/html/bluefish/images/project_edit_files.png
+share/doc/html/bluefish/images/project_edit_lists.png
+share/doc/html/bluefish/images/bluefish.gif
+share/doc/html/bluefish/images/bluefish.png
+share/doc/html/bluefish/images/button_close.gif
+share/doc/html/bluefish/images/button_config.gif
+share/doc/html/bluefish/images/button_copy.gif
+share/doc/html/bluefish/images/button_cut.gif
+share/doc/html/bluefish/images/button_new.gif
+share/doc/html/bluefish/images/button_new.png
+share/doc/html/bluefish/images/button_open.gif
+share/doc/html/bluefish/images/button_paste.gif
+share/doc/html/bluefish/images/button_print.gif
+share/doc/html/bluefish/images/button_quickstart.gif
+share/doc/html/bluefish/images/button_redo.gif
+share/doc/html/bluefish/images/button_replace.gif
+share/doc/html/bluefish/images/button_save.gif
+share/doc/html/bluefish/images/button_saveas.gif
+share/doc/html/bluefish/images/button_search.gif
+share/doc/html/bluefish/images/button_undo.gif
+share/doc/html/bluefish/images/config_editor.png
+share/doc/html/bluefish/images/config_external.png
+share/doc/html/bluefish/images/config_gui.png
+share/doc/html/bluefish/images/config_html.png
+share/doc/html/bluefish/images/config_img.png
+share/doc/html/bluefish/images/mainscreen.gif
+share/doc/html/bluefish/images/mainscreen.png
+share/doc/html/bluefish/images/float.gif
+share/doc/html/bluefish/images/tfilemenu.gif
+share/doc/html/bluefish/images/tfilemenu.png
+share/doc/html/bluefish/images/editarea.gif
+share/doc/html/bluefish/de/chapter1.html
+share/doc/html/bluefish/de/chapter2.html
+share/doc/html/bluefish/de/chapter3.html
+share/doc/html/bluefish/de/chapter4.html
+share/doc/html/bluefish/de/manual.book
+share/doc/html/bluefish/de/preface.html
+share/doc/html/bluefish/de/index.html
+share/doc/html/bluefish/en/chapter1.html
+share/doc/html/bluefish/en/chapter2.html
+share/doc/html/bluefish/en/chapter3.html
+share/doc/html/bluefish/en/chapter4.html
+share/doc/html/bluefish/en/manual.book
+share/doc/html/bluefish/en/preface.html
+share/doc/html/bluefish/en/index.html
+share/doc/html/bluefish/it/chapter1.html
+share/doc/html/bluefish/it/chapter2.html
+share/doc/html/bluefish/it/chapter3.html
+share/doc/html/bluefish/hu/chapter1.html
+share/doc/html/bluefish/hu/chapter2.html
+share/doc/html/bluefish/hu/chapter3.html
+share/doc/html/bluefish/hu/chapter4.html
+share/doc/html/bluefish/hu/preface.html
+share/doc/html/bluefish/hu/index.html
+share/doc/html/bluefish/index.html
+share/doc/html/bluefish/manual.css
+share/locale/de/LC_MESSAGES/bluefish.mo
+share/locale/da/LC_MESSAGES/bluefish.mo
+share/locale/fr/LC_MESSAGES/bluefish.mo
+share/locale/ru/LC_MESSAGES/bluefish.mo
+share/locale/ro/LC_MESSAGES/bluefish.mo
+share/locale/cs/LC_MESSAGES/bluefish.mo
+share/locale/es/LC_MESSAGES/bluefish.mo
+share/locale/el/LC_MESSAGES/bluefish.mo
+share/locale/en/LC_MESSAGES/bluefish.mo
+share/locale/ja/LC_MESSAGES/bluefish.mo
+share/locale/it/LC_MESSAGES/bluefish.mo
+share/locale/sv/LC_MESSAGES/bluefish.mo
+share/locale/br/LC_MESSAGES/bluefish.mo
+share/locale/hu/LC_MESSAGES/bluefish.mo
+share/locale/pl/LC_MESSAGES/bluefish.mo
+@unexec rmdir -p %D/share/pixmaps 2>/dev/null || true
+@dirrm share/doc/html/bluefish/de
+@dirrm share/doc/html/bluefish/en
+@dirrm share/doc/html/bluefish/it
+@dirrm share/doc/html/bluefish/hu
+@dirrm share/doc/html/bluefish/images
+@dirrm share/doc/html/bluefish
+@dirrm share/bluefish
