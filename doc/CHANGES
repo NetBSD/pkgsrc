@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5712 2004/04/22 09:22:13 tron Exp $
+$NetBSD: CHANGES,v 1.5713 2004/04/22 12:00:43 abs Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2216,3 +2216,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rhythmbox to 0.8.1 [jmmv 2004-04-22]
 	Updated ocaml to 3.06nb6 [tron 2004-04-22]
 	Updated lablgtk to 1.2.6nb1 [tron 2004-04-22]
+	Updated cpuflags to 0.67 [abs 2004-04-22]
+
