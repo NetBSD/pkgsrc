@@ -1,0 +1,30 @@
+$NetBSD: patch-aq,v 1.3 2005/03/15 15:58:52 wennmach Exp $
+
+Add missing lib.
+
+--- appl/perf/Makefile.in.orig	2005-03-10 22:59:14.000000000 +0100
++++ appl/perf/Makefile.in	2005-03-10 23:04:01.000000000 +0100
+@@ -458,16 +458,18 @@
+ 	$(LIB_sl) \
+ 	$(LIB_readline) \
+ 	../../rx/librx.la \
+-	-L../../lwp -llwp $(PLWP_LIB_FLAGS) \
+-	-L../../appl/lib -larlalib \
+-	-L../../rxdef -lrxdefclient -lrxcbserver \
++	../../lwp/liblwp.a $(PLWP_LIB_FLAGS) \
++	../lib/libarlalib.la \
++	../../rxdef/librxdefclient.a \
++	../../rxdef/libkaclient.a \
++	../../rxdef/librxcbserver.a \
+ 	../../lib/ko/libko.la \
+ 	../../lib/vers/libvers.la \
+ 	../../util/libarlautil.la \
+-	$(LIB_roken) \
+ 	$(KAFS_LIBS) \
+ 	$(RXKAD_LIBS) \
+-	$(LIBS)
++	$(LIBS) \
++	$(LIB_roken) \
+ 
+ all: all-am
+ 
