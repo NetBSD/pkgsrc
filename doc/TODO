@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.388 2003/03/21 09:23:52 wiz Exp $
+$NetBSD: TODO,v 1.389 2003/03/21 17:14:25 tron Exp $
 
 Suggested new packages
 ======================
@@ -146,7 +146,7 @@ Suggested package updates
 	o icewm-1.2.7
 	o icu-2.4 [pkg/20825|heinz]
 	o inform-6.21.3 [pkg/19298]
-	o inn 2.3.4
+	o inn 2.3.5
 	o jakarta-ant-1.5 [pkg/18322]
 	o jakarta-tomcat-3.3.1a
 	o jed-0.99.16 [pkg/18937]
