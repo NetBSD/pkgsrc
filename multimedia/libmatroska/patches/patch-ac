@@ -1,16 +1,14 @@
-$NetBSD: patch-ac,v 1.4 2004/07/27 04:14:56 salo Exp $
+$NetBSD: patch-ac,v 1.5 2005/02/17 10:52:46 salo Exp $
 
---- make/linux/Makefile.orig	2004-07-19 18:43:44.000000000 +0200
-+++ make/linux/Makefile	2004-07-27 05:51:07.000000000 +0200
-@@ -20,13 +20,13 @@
+--- make/linux/Makefile.orig	2005-02-06 19:12:08.000000000 +0100
++++ make/linux/Makefile	2005-02-16 18:46:17.000000000 +0100
+@@ -20,11 +20,11 @@
  includedir=$(prefix)/include/matroska
  
  # Programs
 -CXX=g++
 +#CXX=g++
  LD=$(CXX)
- DEP=$(CXX) -MM
- DEPEND = makedepend
 -AR = ar rcvu
 -RANLIB = ranlib
 -INSTALL = install
