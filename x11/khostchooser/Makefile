@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/07/11 14:53:47 agc Exp $
+# $NetBSD: Makefile,v 1.8 2000/07/14 16:04:27 agc Exp $
 #
 
 DISTNAME=	khostchooser-0.3
@@ -19,11 +19,11 @@ USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir=${PREFIX}/share/kde \
-		--with-qt-dir=`${MAKE} show-qt1-prefix`/qt1 
+		--with-qt-dir=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1 
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
-		QTDIR=`${MAKE} show-qt1-prefix`/qt1 \
-		MOC=`${MAKE} show-qt1-prefix`/qt1/bin/moc \
+		QTDIR=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1 \
+		MOC=`${SHOW_PREFIX1} qt1 ${SHOW_PREFIX2}`/qt1/bin/moc \
 		CXXFLAGS="${CFLAGS}" \
 		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
 

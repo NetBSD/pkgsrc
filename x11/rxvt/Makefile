@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/07/11 14:53:48 agc Exp $
+# $NetBSD: Makefile,v 1.16 2000/07/14 16:04:28 agc Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-utmp \
 			--enable-frills \
 			--enable-keepscrolling \
 			--enable-mousewheel \
-			--with-xpm-includes=`${MAKE} show-xpm-prefix`/include/X11 \
-			--with-xpm-library=`${MAKE} show-xpm-prefix`/lib
+			--with-xpm-includes=`${SHOW_PREFIX1} xpm ${SHOW_PREFIX2}`/include/X11 \
+			--with-xpm-library=`${SHOW_PREFIX1} xpm ${SHOW_PREFIX2}`/lib
 
 .include "../../mk/bsd.pkg.mk"
