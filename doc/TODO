@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.216 2003/01/25 18:28:19 wiz Exp $
+$NetBSD: TODO,v 1.217 2003/01/26 21:53:51 salo Exp $
 
 Suggested new packages
 ======================
@@ -80,7 +80,7 @@ Suggested package updates
 	o binutils-2.13.2.1
 	o bitchx-1.0c19 [pkg/19296]
 	o bluefish-0.8
-	o bochs-2.0.1
+	o bochs-2.0.2
 	o bonnie++-1.03c
 	o bzflag-1.7g0
 	o cdlabelgen-2.5.0
@@ -99,7 +99,6 @@ Suggested package updates
 	o dctc-0.84.0
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
-	o elinks-0.4.1
 	o elm-me-2.4pl100
 	o ethereal-0.9.9
 	o exim-4.12 [pkg/19850]
