@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/03/07 10:20:06 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/04/18 05:10:15 snj Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
@@ -32,7 +32,7 @@ CONFLICTS+=	postfix-[0-9]*
 LICENSE=	no-profit
 
 WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	yes
 MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}" \
 		BUILDLINK_DIR="${BUILDLINK_DIR}"
@@ -52,24 +52,24 @@ USE_DB2?=	YES
 USE_DB2?=	NO
 .endif
 .if ${USE_DB2} == "YES"
-.  include "../../databases/db/buildlink2.mk"
+.  include "../../databases/db/buildlink3.mk"
 .endif
 
 .if defined(USE_LDAP) && (${USE_LDAP} == "YES")
-.  include "../../databases/openldap/buildlink2.mk"
+.  include "../../databases/openldap/buildlink3.mk"
 .endif
 
 .if defined(USE_SASL) && (${USE_SASL} == "YES")
-.  include "../../security/cyrus-sasl/buildlink2.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
 .if defined(USE_STARTTLS) && (${USE_STARTTLS} == "YES")
-.  include "../../security/openssl/buildlink2.mk"
+.  include "../../security/openssl/buildlink3.mk"
 .endif
 
 USE_TCPWRAPPERS?=	YES
 .if ${USE_TCPWRAPPERS} == "YES"
-.  include "../../security/tcp_wrappers/buildlink2.mk"
+.  include "../../security/tcp_wrappers/buildlink3.mk"
 .endif
 
 post-patch:
