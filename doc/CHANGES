@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3497 2003/09/23 17:54:18 jschauma Exp $
+$NetBSD: CHANGES,v 1.3498 2003/09/23 19:05:21 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3903,3 +3903,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated snort-mysql to 2.0.2 [salo 2003-09-23]
 	Updated snort-pgsql to 2.0.2 [salo 2003-09-23]
 	Updated openssh to 3.7.1.2 [jschauma 2003-09-23]
+	Added udfclient-ro1 [reinoud 2003-09-23]
