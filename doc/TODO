@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.937 2003/10/11 16:37:47 wiz Exp $
+$NetBSD: TODO,v 1.938 2003/10/11 16:43:15 dillo Exp $
 
 Suggested new packages
 ======================
@@ -289,7 +289,7 @@ Suggested package updates
 	o tct-1.12
 	o teapop-0.3.6
 	o tightvnc-1.2.9
-	o tin-1.6.1
+	o tin-1.6.1 [dillo]
 	o tkman-2.2
 	o tla-1.1.0.5 [replacing arch; pkg/23022]
 	o tla-1.1.0.7
