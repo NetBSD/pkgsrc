@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2001/03/27 03:20:02 hubertf Exp $
+# $NetBSD: Makefile.common,v 1.8 2001/05/03 04:23:16 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1999/05/03 01:58:33 steve Exp $
 
 DISTNAME=		VFlib2-${VFLIB_VERSION}
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--with-freetype-includedir=${FT_INCLUDEDIR}
 CONFIGURE_ARGS+=	--with-freetype-libdir=${FT_LIBDIR}
 MAKE_ENV+=		LOCAL_LDFLAGS="${LDFLAGS}"
 
-FILESDIR=		${.CURDIR}/../../japanese/vflib-lib/files
+DISTINFO_FILE=		${.CURDIR}/../../japanese/vflib-lib/distinfo
 PATCHDIR=		${.CURDIR}/../../japanese/vflib-lib/patches
 
 EXTRACT_ONLY=		${VFLIB_SRC}
