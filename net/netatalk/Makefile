@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/05/25 13:08:40 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/05/25 13:33:20 wiz Exp $
 
 DISTNAME=	netatalk-1.5.3.1
 CATEGORIES=	net print
@@ -9,11 +9,11 @@ MAINTAINER=	markd@netbsd.org
 HOMEPAGE=	http://sourceforge.net/projects/netatalk/
 COMMENT=	Netatalk appletalk file and print services
 
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_PERL5=	yes
-#USE_LIBTOOL=	yes
-#LIBTOOL_OVERRIDE=${WRKSRC}/libtool
+GNU_CONFIGURE=	YES
+USE_GMAKE=	YES
+USE_PERL5=	YES
+USE_LIBTOOL=	YES
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--with-tcp-wrappers --with-flock-locks \
 			--enable-netbsd
 
 pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/libexec/psffilters
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/netatalk
 .for FILE in atalkd.conf netatalk.conf papd.conf AppleVolumes.default \
 		AppleVolumes.system afpd.conf
