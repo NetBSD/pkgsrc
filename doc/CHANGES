@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7072 2004/09/01 20:18:14 schmonz Exp $
+$NetBSD: CHANGES,v 1.7073 2004/09/01 20:24:30 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4163,3 +4163,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gst-plugins-gnomevfs to 0.8.4 [jmmv 2004-09-01]
 	Updated djbdns to 1.05nb5 [schmonz 2004-09-01]
 	Added djbdns-run-20040901 [schmonz 2004-09-01]
+	Updated py-gd to 1.3nb5 [darcy 2004-09-01]
