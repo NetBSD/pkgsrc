@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2001/10/18 15:20:34 veego Exp $
+# $NetBSD: Makefile,v 1.58 2001/10/19 09:40:36 veego Exp $
 
 DISTNAME=		openssh-2.9.9p2
 SVR4_PKGNAME=		ossh
@@ -63,6 +63,14 @@ CONFIGURE_ARGS+=	--with-tcp-wrappers
 CONFIGURE_ARGS+=	--disable-suid-ssh
 .endif
 
+# Solaris normaly doesn't have a /var/run, thats why we put it in /etc
+.if (${OPSYS} == SunOS)
+CONFIGURE_ARGS+=	--with-pid-dir=/etc
+SSH_PID_DIR=		/etc
+.else
+SSH_PID_DIR=		/var/run
+.endif
+
 # The ssh-askpass program is in ${X11BASE}/bin or ${X11PREFIX}/bin depending
 # on if it's part of the X11 distribution, or if it's installed from pkgsrc
 # (security/ssh-askpass).  The configure process will lie about the compiled
@@ -94,6 +102,8 @@ post-build:
 		${FILESDIR}/sshd.sh;	\
 	do \
 		${SED}	-e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
+			-e 's#@SSH_PID_DIR@#${SSH_PID_DIR}#g' \
+			-e 's#@MKDIR@#${MKDIR}#g' \
 			-e 's#@PREFIX@#${PREFIX}#g' \
 			-e 's#@INSTALL_DATA@#${INSTALL_DATA}#g' \
 			< $${FILE} > ${WRKDIR}/`basename $${FILE}`; \
