@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.9 1999/06/05 21:41:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 1999/07/06 08:05:51 jlam Exp $
 #
 
-PKGNAME=	vfu-1.51
-DISTNAME=	${PKGNAME}-source
-WRKSRC=		${WRKDIR}/${PKGNAME}
+DISTNAME=	vfu-1.51
 CATEGORIES=	misc
 MASTER_SITES=	http://www.biscom.net/~cade/away/
-EXTRACT_SUFX=	.tgz
+EXTRACT_SUFX=	-source.tgz
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.biscom.net/~cade/vfu/
 
-DEPENDS=	ncurses-1.9.9g:../../devel/ncurses
+DEPENDS=	ncurses-4.2:../../devel/ncurses
 
-MAKE_FLAGS+=	CCDEF="-I${LOCALBASE}/include -DVFU_RCPATH1=\\\"${PREFIX}/etc/\\\" -DVFU_RCPATH2=\\\"${PREFIX}/\\\" -D__unix__" \
-		LDDEF="-L${LOCALBASE}/lib"
+MAKE_FLAGS+=	CCDEF="-DVFU_RCPATH1=\\\"${PREFIX}/etc/\\\" -DVFU_RCPATH2=\\\"${PREFIX}/\\\" -D__unix__" \
+		LDDEF="${LDFLAGS}"
 
 do-build:
 	cd ${WRKSRC}/vslib ; \
@@ -27,7 +25,7 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vfu/vfu  ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/ftparc/ftparc  ${PREFIX}/bin
-	${INSTALL_DATA_DIR}	${PREFIX}/share/doc/vfu
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vfu
 	${INSTALL_DATA} \
 		${WRKSRC}/COPYING \
 		${WRKSRC}/INSTALL \

@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.5 1999/07/06 08:05:51 jlam Exp $
+
+--- ftparc/makefile.orig	Wed Mar  3 14:33:58 1999
++++ ftparc/makefile	Fri Jul  2 09:42:37 1999
+@@ -3,8 +3,8 @@
+ CC      = g++
+ LD      = g++
+ AR      = ar rvs
+-CFLAGS  =  -I../vslib -O2     $(CCDEF)
+-CCFLAGS =  -I../vslib -O2     $(CCDEF)
++CFLAGS  =  -I../vslib -I${LOCALBASE}/include -O2     $(CCDEF)
++CCFLAGS =  -I../vslib -I${LOCALBASE}/include -O2     $(CCDEF)
+ LDFLAGS = -L../vslib -lvslib $(LDDEF)
+ ARFLAGS = 
+ TARGET  = ftparc
