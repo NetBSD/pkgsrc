@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: build,v 1.4 2001/10/22 21:46:50 agc Exp $
+# $NetBSD: build,v 1.1 2001/10/26 11:46:55 agc Exp $
 # FreeBSD Id: build,v 1.5 1997/08/21 08:09:56 peter Exp
 #
 

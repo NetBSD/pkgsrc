@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2001/10/22 21:37:59 agc Exp $
+# $NetBSD: Makefile,v 1.28 2001/10/26 11:46:54 agc Exp $
 # FreeBSD Id: Makefile,v 1.25 1998/02/15 05:36:54 peter Exp
 #
 
@@ -32,10 +32,10 @@ TCLSH=		tclsh
 do-build:
 	@cd ${WRKSRC} && ${SETENV} PREFIX=${PREFIX} TCLSH=${TCLSH} \
 		WISH=${PREFIX}/bin/${WISH} WRKSRC=${WRKSRC} \
-		FILESDIR=${FILESDIR} ${SH} ${SCRIPTDIR}/build
+		FILESDIR=${FILESDIR} ${SH} ${FILESDIR}/build
 
 do-install:
 	@cd ${WRKSRC} && ${SETENV} PREFIX=${PREFIX} \
-		WRKSRC=${WRKSRC} ${SH} ${SCRIPTDIR}/install
+		WRKSRC=${WRKSRC} ${SH} ${FILESDIR}/install
 
 .include "../../mk/bsd.pkg.mk"
