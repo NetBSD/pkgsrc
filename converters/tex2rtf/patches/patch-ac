@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.1 2003/12/20 16:00:56 ben Exp $
+
+--- texutils.cpp.orig	1997-06-05 16:17:46.000000000 -0700
++++ texutils.cpp
+@@ -390,7 +390,7 @@ void WriteTexReferences(char *filename)
+ 
+ void ReadTexReferences(char *filename)
+ {
+-  ifstream istr(filename, ios::nocreate | ios::in);
++  ifstream istr(filename, ios::in);
+   if (istr.bad()) return;
+ 
+   char label[100];
+@@ -554,7 +554,7 @@ void BibReadValue(istream& istr, char *b
+ Bool ReadBib(char *filename)
+ {
+   char buf[300];
+-  ifstream istr(filename, ios::nocreate | ios::in);
++  ifstream istr(filename, ios::in);
+   if (istr.bad()) return FALSE;
+ 
+   BibLine = 1;
+@@ -1271,7 +1271,7 @@ char *RegisterSetting(char *settingName,
+ 
+ Bool ReadCustomMacros(char *filename)
+ {
+-  ifstream istr(filename, ios::nocreate | ios::in);
++  ifstream istr(filename, ios::in);
+   if (istr.bad()) return FALSE;
+ 
+   CustomMacroList.Clear();
