@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.6 2001/07/23 18:55:04 tron Exp $
+$NetBSD: distinfo,v 1.7 2001/11/27 14:11:51 abs Exp $
 
-SHA1 (netscape/navigator-v478-us.x86-unknown-linux2.2.tar.gz) = 075e7e473eae977bfe95e10be820388842e03006
-Size (netscape/navigator-v478-us.x86-unknown-linux2.2.tar.gz) = 12501305 bytes
+SHA1 (netscape/navigator-v479-us.x86-unknown-linux2.2.tar.gz) = 2a377af5bbdfd94176df10a327ecd77295725e92
+Size (netscape/navigator-v479-us.x86-unknown-linux2.2.tar.gz) = 12508204 bytes
+SHA1 (netscape/navigator-v479-us.sparc-sun-solaris2.5.1.tar.gz) = 5d258c23d77e7ca089ac0a2486a1b9f9f7458dfc
+Size (netscape/navigator-v479-us.sparc-sun-solaris2.5.1.tar.gz) = 9348880 bytes
+SHA1 (netscape/navigator-v479-us.sparc-sun-solaris2.8.tar.gz) = f972251798c1ea22a782605867d999e3f089fdb7
+Size (netscape/navigator-v479-us.sparc-sun-solaris2.8.tar.gz) = 9381560 bytes
 SHA1 (netscape/navigator-v478-us.alpha-dec-osf4.0.tar.gz) = 3f6e0575284bda79d1c549580491409311c50df4
 Size (netscape/navigator-v478-us.alpha-dec-osf4.0.tar.gz) = 9910790 bytes
-SHA1 (netscape/navigator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = e3264c6611c43395a0b8aa32df586116d0b2edcc
-Size (netscape/navigator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = 11255397 bytes
-SHA1 (netscape/navigator-v478-us.sparc-sun-solaris2.5.1.tar.gz) = 624bcda89592d2640d3d2b21fe6228b1a65c9413
-Size (netscape/navigator-v478-us.sparc-sun-solaris2.5.1.tar.gz) = 9345104 bytes
-SHA1 (netscape/navigator-v478-us.sparc-sun-solaris2.8.tar.gz) = 9e458a2d104256364c99eeaa2d740fd805980841
-Size (netscape/navigator-v478-us.sparc-sun-solaris2.8.tar.gz) = 9375624 bytes
 SHA1 (netscape/navigator-v475-us.x86-bsdi-bsd2.tar.gz) = 692313695679be2770e964508d4e52519629c76c
 Size (netscape/navigator-v475-us.x86-bsdi-bsd2.tar.gz) = 9069934 bytes
+SHA1 (netscape/navigator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = e3264c6611c43395a0b8aa32df586116d0b2edcc
+Size (netscape/navigator-v461-export.sparc-sun-sunos4.1.3_U1.tar.gz) = 11255397 bytes
