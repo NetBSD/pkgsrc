@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 23:32:15 wiz Exp $
-bin/asclock-xlib
-share/doc/asclock-xlib/COPYING
-share/doc/asclock-xlib/README.THEMES
-@dirrm share/doc/asclock-xlib
