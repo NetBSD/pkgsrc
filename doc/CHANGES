@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9460 2005/03/07 15:00:13 adam Exp $
+$NetBSD: CHANGES,v 1.9461 2005/03/07 15:32:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1333,3 +1333,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added wdic-3.0 [minskim 2005-03-07]
 	Updated libffi to 2.0betanb2 [wiz 2005-03-07]
 	Updated sqlite3 to 3.1.3nb1 [adam 2005-03-07]
+	Updated libopendaap to 0.3.0 [adam 2005-03-07]
