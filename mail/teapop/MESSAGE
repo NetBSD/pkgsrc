@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.5 2004/04/23 22:43:20 reed Exp $
-
-You may also wish to:
-        cp ${RCD_SCRIPTS_EXAMPLEDIR}/teapop /etc/rc.d/teapop
-        echo "teapop=YES" >> /etc/rc.conf
-
-===========================================================================
