@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2003/08/27 09:27:32 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2003/09/02 07:12:15 martti Exp $
 #
 
 DISTNAME=		pango-1.2.4
@@ -39,6 +39,7 @@ CONFIGURE_ARGS+=	--with-qt=no
 
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../fonts/Xft2/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 
