@@ -1,15 +1,27 @@
-$NetBSD: patch-ac,v 1.7 2001/03/13 08:08:33 skrll Exp $
+$NetBSD: patch-ac,v 1.8 2001/06/16 20:01:23 jlam Exp $
 
---- configure.orig	Mon Mar 12 23:59:21 2001
-+++ configure
-@@ -3454,6 +3454,10 @@
- 		LIB_WRAP=-lwrap
- 		echo "Found $THEFILE/libwrap.so" 1>&5
- 		break
-+	elif test -f $THEFILE/libwrap.so.*.*; then
+--- configure.orig	Sun May 13 03:12:36 2001
++++ configure	Sat Jun 16 00:30:29 2001
+@@ -2151,9 +2151,9 @@
+   rm -f conf.glibtest
+ 
+ 
+-GMODULE_CFLAGS=`glib-config --cflags gmodule`
++GMODULE_CFLAGS=`$GLIB_CONFIG --cflags gmodule`
+ 
+-GMODULE_LIBS=`glib-config --libs gmodule`
++GMODULE_LIBS=`$GLIB_CONFIG --libs gmodule`
+ 
+ 
+ for ac_prog in 'bison -y' byacc
+@@ -3451,6 +3451,10 @@
+ 	THEFILE="`echo $I | sed -e 's,^-L,,'`"
+ 	echo "From $I, checking in dir $THEFILE for libwrap.so" 1>&5
+ 	if test -f $THEFILE/libwrap.so; then
 +		LIB_WRAP=-lwrap
 +		echo "Found $THEFILE/libwrap.so" 1>&5
 +		break
- 	else
- 		echo "From $I, checking in dir $THEFILE for libwrap.a" 1>&5
- 		if test -f $THEFILE/libwrap.a; then
++	elif test -f $THEFILE/libwrap.so.*.*; then
+ 		LIB_WRAP=-lwrap
+ 		echo "Found $THEFILE/libwrap.so" 1>&5
+ 		break
