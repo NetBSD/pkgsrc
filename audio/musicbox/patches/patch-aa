@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2004/10/28 12:20:39 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2004/11/02 13:27:45 wiz Exp $
 
---- Makefile.orig	Wed Nov 12 14:01:58 1997
-+++ Makefile	Thu Sep 13 23:26:26 2001
-@@ -1,14 +1,18 @@
+--- Makefile.orig	1997-11-12 20:01:58.000000000 +0100
++++ Makefile
+@@ -1,15 +1,19 @@
  # change following for your environment
 -INC = /usr/X11R6/include/X11/qt
 -LIB = /usr/X11R6/lib
@@ -19,13 +19,15 @@ $NetBSD: patch-aa,v 1.6 2004/10/28 12:20:39 wiz Exp $
  #if you use linux
  #CFLAGS = -DLinux
  
+-GCC = gcc
 +# if you use netbsd
 +#CFLAGS = -DNetBSD
 +
- GCC = gcc
++GCC = ${CXX}
  
  ALL = mplayer.o player.o ListView.o clock.o mclock.o mListView.o  \
-@@ -18,69 +22,69 @@
+ 	filebrowse.o mfilebrowse.o qktstreelist.o mqktstreelist.o \
+@@ -18,69 +22,69 @@ ALL = mplayer.o player.o ListView.o cloc
  PKG = musicbox
  
  all:	${ALL}
