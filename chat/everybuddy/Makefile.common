@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2004/04/14 16:15:21 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/04/26 05:31:43 snj Exp $
 
 DISTNAME=	everybuddy-0.2.0
 CATEGORIES=	chat
@@ -11,7 +11,7 @@ COMMENT=	Universal Instant Messaging Client
 USE_DIRS+=	gnome1-1.5
 USE_GNU_TOOLS+=	make
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2= yes
+USE_BUILDLINK3= yes
 
 DISTINFO_FILE=	${.CURDIR}/../everybuddy/distinfo
 FILESDIR=	${.CURDIR}/../everybuddy/files
@@ -29,4 +29,4 @@ post-build:
 post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/wrapper ${PREFIX}/bin/everybuddy
 
-.include "../../converters/libiconv/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
