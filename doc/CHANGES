@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4501 2004/01/18 22:53:24 heinz Exp $
+$NetBSD: CHANGES,v 1.4502 2004/01/18 23:41:07 kim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -333,3 +333,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Test-Harness to 2.40 [heinz 2004-01-18]
 	Updated p5-URI to 1.30 [heinz 2004-01-18]
 	Updated p5-Net-DNS to 0.45 [heinz 2004-01-18]
+	Updated anomy-sanitizer to 1.66 [kim 2004-01-18]
