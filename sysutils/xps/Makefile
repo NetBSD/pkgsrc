@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/02/27 17:00:07 sakamoto Exp $
+# $NetBSD: Makefile,v 1.2 1999/03/01 01:59:16 sakamoto Exp $
 
-DISTNAME=	xps-3.04
+DISTNAME=	xps-3.06
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.netwinder.org/users/r/rocky/
 
