@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.11 2002/01/31 17:51:27 jlam Exp $
+$NetBSD: patch-ag,v 1.12 2002/09/18 22:58:49 jlam Exp $
 
---- filter/Makefile.orig	Wed Jan 23 17:30:42 2002
+--- filter/Makefile.orig	Mon May 13 18:14:28 2002
 +++ filter/Makefile
-@@ -142,7 +142,7 @@
+@@ -154,7 +154,7 @@ libcupsimage_s.a:	$(IMAGEOBJS) ../Makede
  
  libcupsimage.la:       $(IMAGEOBJS) ../Makedefs
  	echo Linking $@...
 -	$(DSO) -o $(DSOFLAGS) $@ $(IMAGEOBJS:.o=.lo) $(DSOLIBS) \
 +	$(DSO) $(DSOFLAGS) -o $@ $(IMAGEOBJS:.o=.lo) $(DSOLIBS) \
- 		-rpath $(LIBDIR) -version-info 2:0
+ 		-rpath $(LIBDIR) -version-info 2:1
  
  

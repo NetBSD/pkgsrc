@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.14 2002/02/18 11:26:16 martti Exp $
+$NetBSD: patch-ab,v 1.15 2002/09/18 22:58:47 jlam Exp $
 
---- Makefile.orig	Tue Feb 12 20:05:36 2002
-+++ Makefile	Mon Feb 18 11:44:24 2002
-@@ -61,8 +61,6 @@
+--- Makefile.orig	Tue Apr 23 10:49:34 2002
++++ Makefile
+@@ -72,8 +72,6 @@ install:	installhdrs
  		echo Installing in $$dir... ;\
  		(cd $$dir; $(MAKE) $(MFLAGS) install) || exit 1;\
  	done
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.14 2002/02/18 11:26:16 martti Exp $
  	echo Installing in data...
  	(cd data; $(MAKE) $(MFLAGS) install)
  	echo Installing in doc...
-@@ -78,30 +76,6 @@
+@@ -89,30 +87,6 @@ install:	installhdrs
  	echo Installing cups-config script...
  	$(INSTALL_DIR) $(BINDIR)
  	$(INSTALL_SCRIPT) cups-config $(BINDIR)/cups-config
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.14 2002/02/18 11:26:16 martti Exp $
 -	if test "x$(INITDIR)" = "x" -a "x$(INITDDIR)" != "x"; then \
 -		$(INSTALL_DIR) $(BUILDROOT)$(INITDDIR); \
 -		if test "$(INITDDIR)" = "/System/Library/StartupItems/PrintingServices"; then \
--			$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDDIR)/PrintingServices.sh; \
+-			$(INSTALL_SCRIPT) cups.sh $(BUILDROOT)$(INITDDIR)/PrintingServices; \
 -			$(INSTALL_DATA) cups.plist $(BUILDROOT)$(INITDDIR)/StartupParameters.plist; \
 -			$(INSTALL_DIR) $(BUILDROOT)$(INITDDIR)/Resources/English.lproj; \
 -			$(INSTALL_DATA) cups.strings $(BUILDROOT)$(INITDDIR)/Resources/English.lproj/Localizable.strings; \
@@ -40,5 +40,5 @@ $NetBSD: patch-ab,v 1.14 2002/02/18 11:26:16 martti Exp $
 -		fi \
 -	fi
  
- 
  #
+ # Install source and header files...
