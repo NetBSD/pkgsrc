@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/10/03 00:13:33 tv Exp $
+# $NetBSD: Makefile,v 1.20 2004/11/12 06:39:20 jlam Exp $
 
 DISTNAME=	STLport-4.6
 PKGNAME=	stlport-4.6
@@ -22,6 +22,7 @@ MAKE_ENV+=	CXXFLAGS="${CXXFLAGS}"
 MAKEFILE=	gcc-libtool.mak
 
 PTHREAD_OPTS+=	require
+LDFLAGS+=	${PTHREAD_LIBS}
 
 INCDIR=		${PREFIX}/include/stlport
 LIBDIR=		${PREFIX}/lib

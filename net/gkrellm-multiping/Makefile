@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/10/03 00:17:52 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/12 06:39:20 jlam Exp $
 #
 
 DISTNAME=	gkrellm-multiping-2.0.8
@@ -15,8 +15,6 @@ USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 SPECIAL_PERMS+=	${PREFIX}/lib/gkrellm2/plugins/pinger ${SETUID_ROOT_PERMS}
 PTHREAD_OPTS=	require
-
-MAKE_ENV+=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" PTHREAD_LDFLAGS="${PTHREAD_LDFLAGS}"
 
 post-patch:
 	${SED} -e s,@@PREFIX@@,${PREFIX}, ${WRKSRC}/multiping.c > ${WRKSRC}/multiping.c.sed

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:13:32 tv Exp $
+# $NetBSD: Makefile,v 1.9 2004/11/12 06:39:20 jlam Exp $
 #
 
 DISTNAME=		physfs-1.0.0
@@ -15,8 +15,6 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_GCC_SHLIB=		yes
-
-CONFIGURE_ARGS+=	LIBS="${PTHREAD_LDFLAGS}"
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

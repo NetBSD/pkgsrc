@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2004/01/05 22:14:18 mrauch Exp $
+$NetBSD: patch-aa,v 1.5 2004/11/12 06:39:20 jlam Exp $
 
 --- src/gcc-libtool.mak.orig	2004-01-04 10:44:33.000000000 +0100
 +++ src/gcc-libtool.mak
@@ -23,9 +23,9 @@ $NetBSD: patch-aa,v 1.4 2004/01/05 22:14:18 mrauch Exp $
 +# guts for common stuff
 +#
 +#
-+LINK=$(LIBTOOL) $(CXX) $(LDFLAGS) $(PTHREAD_LDFLAGS) -o
++LINK=$(LIBTOOL) $(CXX) $(LDFLAGS) -o
 +# 2.95 flag
-+DYN_LINK=$(LIBTOOL) $(CXX) $(LDFLAGS) $(PTHREAD_LDFLAGS) -rpath $(PREFIX)/lib -version-info $(VERSION_MAJOR):$(VERSION_MINOR) -shared -o
++DYN_LINK=$(LIBTOOL) $(CXX) $(LDFLAGS) -rpath $(PREFIX)/lib -version-info $(VERSION_MAJOR):$(VERSION_MINOR) -shared -o
 +
 +OBJEXT=lo
 +DYNEXT=la
@@ -42,7 +42,7 @@ $NetBSD: patch-aa,v 1.4 2004/01/05 22:14:18 mrauch Exp $
 +
 +WARNING_FLAGS= -Wall -W -Wno-sign-compare -Wno-unused -Wno-uninitialized -ftemplate-depth-32
 +
-+CXXFLAGS_COMMON = ${CXXFLAGS} ${CPPFLAGS} $(PTHREAD_CFLAGS) -I${STLPORT_DIR} ${WARNING_FLAGS}
++CXXFLAGS_COMMON = ${CXXFLAGS} ${CPPFLAGS} -I${STLPORT_DIR} ${WARNING_FLAGS}
 +
 +CXXFLAGS_RELEASE_static = $(CXXFLAGS_COMMON) -O2
 +CXXFLAGS_RELEASE_dynamic = $(CXXFLAGS_COMMON) -O2

@@ -1,13 +1,12 @@
-$NetBSD: patch-af,v 1.1 2004/07/21 21:49:02 scw Exp $
+$NetBSD: patch-af,v 1.2 2004/11/12 06:39:21 jlam Exp $
 
 --- configure.orig	2004-04-01 16:56:26.000000000 +0100
 +++ configure	2004-07-21 11:45:46.000000000 +0100
-@@ -1860,7 +1860,7 @@
+@@ -1860,7 +1860,6 @@
           CFLAGS="$CFLAGS -g -DDEBUG"
  echo "$ac_t""yes" 1>&6
  else
 -CFLAGS="$CFLAGS -O3"
-+CFLAGS="${CFLAGS} ${PTHREAD_CFLAGS}"
  echo "$ac_t""no" 1>&6
  fi
  
