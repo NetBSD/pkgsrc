@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9729 2005/04/03 14:22:22 adrianp Exp $
+$NetBSD: CHANGES,v 1.9730 2005/04/03 19:16:27 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1873,3 +1873,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-String-Format-1.13 [epg 2005-04-03]
 	Updated p5-SQL-Statement to 1.11 [mjl 2005-04-03]
 	Added dircproxy-1.1.0 [adrianp 2005-04-03]
+	Updated ganglia-monitor-core to 3.0.1 [jschauma 2005-04-03]
+	Updated ganglia-webfrontend to 3.0.1 [jschauma 2005-04-03]
