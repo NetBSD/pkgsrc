@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2002/09/23 14:37:18 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.10 2002/09/25 00:06:34 jlam Exp $
 bin/aklog
 bin/amon
 bin/bos
@@ -14,10 +14,6 @@ bin/unlog
 bin/up
 bin/vos
 bin/ydr
-etc/CellServDB.default
-etc/SuidCells.default
-etc/ThisCell.default
-etc/arla.conf.default
 etc/rc.d/arlad
 include/afs/cmd.h
 include/arlalib.h
@@ -59,9 +55,7 @@ include/ubik.ss.h
 include/vldb.cs.h
 include/vldb.h
 include/vldb.ss.h
-@unexec ${INSTALL_INFO} --delete %D/info/arla.info %D/info/dir
 info/arla.info
-@exec ${INSTALL_INFO} %D/info/arla.info %D/info/dir
 lib/libarlalib.a
 lib/libbosclient.a
 lib/libbosserver.a
@@ -108,14 +102,14 @@ sbin/rxperf
 sbin/startarla
 sbin/umount_xfs
 sbin/xfs_makedev
+share/examples/arla/CellServDB
+share/examples/arla/SuidCells
+share/examples/arla/ThisCell
+share/examples/arla/arla.conf
 share/examples/arla/fstab
 share/examples/arla/lkm.conf
 share/examples/arla/services
-@unexec /bin/rm -f %D/lkm/xfs_mod
-@exec if [ ! -e /sbin/mount_xfs ]; then /bin/ln -s %D/sbin/mount_xfs /sbin/mount_xfs; fi
-@exec if [ ! -e ${ARLA_CACHE} ] ; then ${MKDIR} ${ARLA_CACHE}; ${CHMOD} 700 ${ARLA_CACHE}; ${CHOWN} root ${ARLA_CACHE}; fi
-@unexec /bin/rm -rf ${ARLA_CACHE}
-@unexec /bin/rm -f /sbin/mount_xfs
 @dirrm share/examples/arla
+@unexec ${RMDIR} %D/lkm 2>/dev/null || ${TRUE}
 @dirrm include/rx
 @dirrm include/afs
