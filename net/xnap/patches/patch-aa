@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/04/28 22:15:14 hubertf Exp $
+
+--- xnap.sh.orig	Sun Dec 23 07:36:23 2001
++++ xnap.sh
+@@ -10,6 +10,8 @@
+     APPHOME="/usr/local/share/xnap/"
+ elif [ "`dirname $0`" = "/usr/bin" ]; then
+     APPHOME="/usr/share/java"
++elif [ "`dirname $0`" = "/usr/pkg/bin" ]; then
++    APPHOME="/usr/pkg/share/xnap/"
+ else
+     echo "xnap.jar could not be found"
+     exit 1
