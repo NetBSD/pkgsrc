@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/05/23 13:35:10 dillo Exp $
+$NetBSD: distinfo,v 1.4 2001/12/25 17:30:40 wiz Exp $
 
 SHA1 (frotz-2.41.tar.gz) = 635f3ff0195ca3e429ba1582a90e00ef4403851a
 Size (frotz-2.41.tar.gz) = 137210 bytes
-SHA1 (patch-aa) = 4e520e2cbea3c617cf3e8a2042d26839cf9415c5
+SHA1 (patch-aa) = 96a116747a54713bac53c599072dcf64b950b289
