@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/01/24 15:46:43 grant Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/11 08:55:58 xtraeme Exp $
 
 DISTNAME=		Hermes-1.3.3
 CATEGORIES=		graphics
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.clanlib.org/hermes/
 COMMENT=		Library for conversion of pixel graphics
 
 WRKSRC=			${WRKDIR}/Hermes-1.3.3
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
