@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1519 2004/10/13 18:42:19 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1520 2004/10/16 22:37:29 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -3466,7 +3466,7 @@ ${DDIR}: ${DLIST}
 ${DLIST}: ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	{ ${PKG_DELETE} -n "${PKGWILDCARD}" 2>&1 | 			\
-		grep '^	' |						\
+		${GREP} '^	' |						\
 		${AWK} '{ l[NR]=$$0 } END { for (i=NR;i>0;--i) print l[i] }' \
 	|| ${TRUE}; } > ${DLIST}
 
@@ -4485,7 +4485,8 @@ _PRINT_PLIST_FILES_CMD=	\
 	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} \! -type d -print
 _PRINT_PLIST_DIRS_CMD=	\
 	${FIND} ${PREFIX}/. -xdev -newer ${EXTRACT_COOKIE} -type d -print
-_PRINT_LA_LIBNAMES=	${.CURDIR}/../../mk/scripts/print-la-libnames
+_PRINT_LA_LIBNAMES=	${SETENV} ECHO=${ECHO:Q} GREP=${GREP:Q} SORT=${SORT:Q} \
+			${SH} ${.CURDIR}/../../mk/scripts/print-la-libnames
 
 _PRINT_PLIST_LIBTOOLIZE_FILTER?=					\
 	(								\
@@ -4499,7 +4500,7 @@ _PRINT_PLIST_LIBTOOLIZE_FILTER?=					\
 	  while read file; do						\
 		case $$file in						\
 		*.la)							\
-			${SH} ${_PRINT_LA_LIBNAMES} $$file >> $$libslist; \
+			${_PRINT_LA_LIBNAMES} $$file >> $$libslist;	\
 			;;						\
 		esac;							\
 		${ECHO} "$$file";					\
@@ -4960,7 +4961,7 @@ _PLIST_AWK_LIBTOOL?=	# empty
 .else
 _PLIST_AWK_LIBTOOL?=							\
 /^[^@].*\.la$$/ {							\
-	system("cd ${PREFIX} && ${SH} ${_PRINT_LA_LIBNAMES} " $$0)	\
+	system("cd ${PREFIX} && ${_PRINT_LA_LIBNAMES} " $$0)		\
 }
 .endif
 
