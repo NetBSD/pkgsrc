@@ -1,11 +1,11 @@
-# $NetBSD: xfree.mk,v 1.5 2004/02/16 23:39:36 jlam Exp $
+# $NetBSD: xfree.mk,v 1.6 2004/02/17 08:26:25 jlam Exp $
 
 FILES_LIST=	${FILESDIR}/xfree
 
 X11_MODULES=	MesaLib glu
 X11_MODULES+=	freetype2
 X11_MODULES+=	xpm
-X11_MODULES+=	Xrender fontconfig render
+X11_MODULES+=	Xrender expat fontconfig render
 X11_MODULES+=	Xrandr randrext
 X11_MODULES+=	xcursor
 
@@ -21,6 +21,7 @@ BUILDLINK_CHECK_BUILTIN.${_module_}=	YES
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/Xrandr/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
 .include "../../x11/render/buildlink3.mk"
