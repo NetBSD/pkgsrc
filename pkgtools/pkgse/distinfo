@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/19 23:13:52 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/08/12 13:15:45 wiz Exp $
 
-SHA1 (pkgse-0.1.tgz) = ecc77a572dbbd2ff988a3d62e2379c3037fd35f6
-Size (pkgse-0.1.tgz) = 989 bytes
+SHA1 (pkgse-0.2.tgz) = ca8cd59c880d26eb1c7f8875f8e0eb167ec4f5ff
+Size (pkgse-0.2.tgz) = 1106 bytes

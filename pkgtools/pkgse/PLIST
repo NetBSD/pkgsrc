@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/19 23:13:52 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/08/12 13:15:45 wiz Exp $
 bin/pkgse
