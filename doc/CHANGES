@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8635 2005/01/06 13:17:53 adrianp Exp $
+$NetBSD: CHANGES,v 1.8636 2005/01/06 14:44:39 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -145,3 +145,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated nasm to 0.98.38nb1 [adrianp 2005-01-06]
 	Updated cmake to 2.0.5 [adam 2005-01-06]
 	Updated bugzilla to 2.18rc3nb1 [adrianp 2005-01-06]
+	Updated daapd to 0.2.4a [mjl 2005-01-06]
