@@ -1,27 +1,27 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/08/13 22:03:07 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/02/28 15:44:16 wiz Exp $
 
---- Makefile.orig	Thu Aug 10 22:06:59 2000
-+++ Makefile	Thu Aug 10 22:07:17 2000
-@@ -17,13 +17,13 @@
- # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+--- Makefile.orig	Wed Feb 28 15:10:37 2001
++++ Makefile	Wed Feb 28 15:11:02 2001
+@@ -19,13 +19,13 @@
+ VERSION="1.2"
  
  all:
--	cd src && gmake
-+	cd src && ${MAKE}
+-	cd src && gmake VERSION=$(VERSION)
++	cd src && ${MAKE} VERSION=$(VERSION)
  
  install:
--	cd src && gmake install
-+	cd src && ${MAKE} install
+-	cd src && gmake VERSION=$(VERSION) install
++	cd src && ${MAKE} VERSION=$(VERSION) install
  
  dist:
 -	gmake clean
 +	${MAKE} clean
- 	rm -rf ~/cksfv-1.1 && \
- 	cp -r . ~/cksfv-1.1 && cd ~ && rm -rf cksfv-1.1/CVS \
- 	&& rm -rf cksfv-1.1/src/CVS && tar cf cksfv-1.1.tar cksfv-1.1 \
-@@ -38,4 +38,4 @@
+ 	rm -rf ~/cksfv-$(VERSION) \
+ 	&& cp -r . ~/cksfv-$(VERSION) && cd ~ && rm -rf cksfv-$(VERSION)/CVS \
+ 	&& rm -rf cksfv-$(VERSION)/src/CVS \
+@@ -55,4 +55,4 @@
  clean:
- 	rm -f *.o *~ *.core
- 	rm -f rpm/*.o rpm/*~ rpm/*.core
+ 	rm -f *.o *~ *.core core
+ 	rm -f rpm/*.o rpm/*~ rpm/*.core rpm/core
 -	cd src && gmake clean
 +	cd src && ${MAKE} clean
