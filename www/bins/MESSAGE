@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2002/07/04 19:37:38 wiz Exp $
+
+	Before running bins, copy the example templates directory
+		${PREFIX}/share/examples/bins/templates.default
+	into your home directory as
+		~/.bins/templates.default
+	and modify.
+
+===========================================================================
