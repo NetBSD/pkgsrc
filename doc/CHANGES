@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1289 2003/01/30 17:58:40 salo Exp $
+$NetBSD: CHANGES,v 1.1290 2003/01/30 23:12:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -508,3 +508,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cadaver to 0.20.5 [drochner 2003-01-30]
 	Updated subversion to 0.17.1 [drochner 2003-01-30]
 	Updated sodipodi to 0.28 [salo 2003-01-30]
+	Updated sweep to 0.8.0 [jmmv 2003-01-30]
