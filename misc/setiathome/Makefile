@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/01/12 16:39:33 abs Exp $
+# $NetBSD: Makefile,v 1.4 2000/04/05 08:57:42 jdolecek Exp $
 #
 
 BASE_OS		= ${OS_VERSION:S/.//:C/\..*//}
@@ -16,18 +16,12 @@ DISTNAME=	${PKGNAME}.alpha-unknown-netbsd1.3.3
 DISTNAME=	${PKGNAME}.alpha-unknown-netbsd1.4
 .endif
 #
-.elif (${MACHINE_ARCH} == "arm")
-DISTNAME=	${PKGNAME}.arm-unknown-netbsd1.3I
-#
 .elif (${MACHINE_ARCH} == "i386")
 .if (${BASE_OS} == 13)
 DISTNAME=	${PKGNAME}.i386-unknown-netbsd1.3.2
 .else
 DISTNAME=	${PKGNAME}.i386-unknown-netbsd1.4
 .endif
-#
-.elif (${MACHINE_ARCH} == "m68k")
-DISTNAME=	${PKGNAME}.m68k-hp-netbsd1.3.3
 #
 .elif (${MACHINE_ARCH} == "sparc")
 DISTNAME=	${PKGNAME}.sparc-sun-netbsd1.3.3
@@ -44,7 +38,7 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://setiathome.ssl.berkeley.edu/
 
-ONLY_FOR_PLATFORM= *-*-alpha *-*-arm *-*-i386 *-*-m68k *-*-sparc
+ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-sparc
 
 DIST_SUBDIR=    setiathome
 DECOMPRESS_CMD=	${CAT}
