@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 1999/07/06 07:51:04 jlam Exp $
+$NetBSD: patch-ab,v 1.5 1999/07/16 18:43:48 jlam Exp $
 
 --- configure.orig	Thu Feb 12 18:46:01 1998
-+++ configure	Fri Jul  2 03:04:33 1999
++++ configure	Thu Jul 15 03:09:54 1999
 @@ -1628,6 +1628,7 @@
      test -z "$cf_dir" && cf_dir=/usr/man
      cf_rename=""
@@ -37,7 +37,7 @@ $NetBSD: patch-ab,v 1.4 1999/07/06 07:51:04 jlam Exp $
  
  # dependencies and linker-arguments for utility-programs
  PROG_ARGS="$TEST_ARGS"
-@@ -5353,16 +5356,16 @@
+@@ -5353,16 +5356,13 @@
  EOF
  
  			TEST_DEPS="${LIB_PREFIX}${cf_dir}${DFT_DEP_SUFFIX} $TEST_DEPS"
@@ -48,16 +48,15 @@ $NetBSD: patch-ab,v 1.4 1999/07/06 07:51:04 jlam Exp $
  done
  echo "$ac_t""$cf_cv_src_modules" 1>&6
 -TEST_ARGS="-L${LIB_DIR} -L\$(libdir) $TEST_ARGS"
+-
+-
 +TEST_ARGS="-L\$(libdir) $TEST_ARGS"
  
- 
- 
 -PROG_ARGS="-L${LIB_DIR} -L\$(libdir) $PROG_ARGS"
-+PROG_ARGS="-L\$(libdir) $PROG_ARGS"
  
  
  SRC_SUBDIRS="man include"
-@@ -5888,7 +5891,7 @@
+@@ -5888,7 +5888,7 @@
  			
  	
  	case $cf_item in
@@ -66,7 +65,7 @@ $NetBSD: patch-ab,v 1.4 1999/07/06 07:51:04 jlam Exp $
  	debug)   cf_suffix='_g.a' ;;
  	profile) cf_suffix='_p.a' ;;
  	shared)
-@@ -5931,7 +5934,7 @@
+@@ -5931,7 +5931,7 @@
  			
  	
  	case $cf_item in
@@ -75,7 +74,7 @@ $NetBSD: patch-ab,v 1.4 1999/07/06 07:51:04 jlam Exp $
  	debug)   cf_suffix='_g.a' ;;
  	profile) cf_suffix='_p.a' ;;
  	shared)
-@@ -6120,7 +6123,7 @@
+@@ -6120,7 +6120,7 @@
  		for i in `cat $srcdir/$cf_dir/headers |fgrep -v "#"`
  		do
  			echo "	@ (cd \$(INSTALL_PREFIX)\$(includedir) && rm -f `basename $i`) ; ../headers.sh \$(INSTALL_DATA) \$(INSTALL_PREFIX)\$(includedir) \$(srcdir) $i" >>$cf_dir/Makefile
