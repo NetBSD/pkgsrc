@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9006 2005/02/02 16:44:22 jschauma Exp $
+$NetBSD: CHANGES,v 1.9007 2005/02/02 17:30:48 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -711,3 +711,10 @@ Changes to the packages collection and infrastructure in 2005:
 	Added libquantum-0.2.4 [augustss 2005-02-02]
 	Updated lilypond to 2.4.3nb1 [jmmv 2005-02-02]
 	Updated tor to 0.0.9.3 [jschauma 2005-02-02]
+	Updated p5-Kwiki-Archive-Rcs to 0.14 [jlam 2005-02-02]
+	Updated p5-Kwiki-BreadCrumbs to 0.12 [jlam 2005-02-02]
+	Updated p5-Kwiki-Favorites to 0.13 [jlam 2005-02-02]
+	Updated p5-Kwiki-RecentChanges to 0.13 [jlam 2005-02-02]
+	Updated p5-Kwiki-Revisions to 0.14 [jlam 2005-02-02]
+	Updated p5-Kwiki-UserName to 0.14 [jlam 2005-02-02]
+	Updated p5-Kwiki-UserPreferences to 0.13 [jlam 2005-02-02]
