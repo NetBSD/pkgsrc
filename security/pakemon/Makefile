@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2002/10/02 19:11:59 dillo Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/07 23:49:28 wiz Exp $
 
 DISTNAME=	pakemon-0.3.1
 CATEGORIES=	security
-MASTER_SITES=	http://www.inas.mag.keio.ac.jp/ids/pakemon/
+MASTER_SITES=	http://www.sfc.keio.ac.jp/~keiji/ids/pakemon/ \
+		http://www.binarii.com/files/security/ \
+		http://www.mirrors.wiretapped.net/security/network-intrusion-detection/pakemon/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.inas.mag.keio.ac.jp/ids/pakemon/
+HOMEPAGE=	http://web.sfc.keio.ac.jp/~keiji/backup/ids/pakemon/index.html
 COMMENT=	packet monster, an Open Source Intrusion Detection System
 
 DEPENDS+=	libnet-[0-9]*:../../devel/libnet
