@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/03/29 00:19:35 jwise Exp $
+# $NetBSD: Makefile,v 1.18 2001/03/29 23:26:24 jwise Exp $
 
 DISTNAME=	${PKGNAME}-src
 PKGNAME=	jakarta-tomcat-3.2.1
@@ -23,6 +23,12 @@ INSTALL_TARGET=	dist
 
 DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
+
+post-patch:
+	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
+		-e "s|@JAVA_HOME@|${JAVA_HOME}|g"			\
+		${WRKSRC}/src/etc/workers.properties > ${WRKSRC}/src/etc/workers.properties.tmp
+		${MV} ${WRKSRC}/src/etc/workers.properties.tmp ${WRKSRC}/src/etc/workers.properties
 
 post-build:
 	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\

@@ -1,0 +1,27 @@
+--- src/etc/workers.properties.orig	Thu Mar 29 14:16:09 2001
++++ src/etc/workers.properties	Thu Mar 29 14:16:41 2001
+@@ -40,20 +40,20 @@
+ # installed tomcat. This is where you have your conf, webapps and lib
+ # directories.
+ #
+-workers.tomcat_home=c:\jakarta-tomcat
++workers.tomcat_home=@PREFIX@/tomcat
+ 
+ #
+ # workers.java_home should point to your Java installation. Normally
+ # you should have a bin and lib directories beneath it.
+ #
+-workers.java_home=c:\jdk1.2.2
++workers.java_home=@JAVA_HOME@
+ 
+ #
+ # You should configure your environment slash... ps=\ on NT and / on UNIX
+ # and maybe something different elsewhere.
+ #
+-ps=\
+-# ps=/
++# ps=\
++ps=/
+ 
+ #
+ #------ ADVANCED MODE ------------------------------------------------
