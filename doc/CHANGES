@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1194 2003/01/22 11:01:03 lukem Exp $
+$NetBSD: CHANGES,v 1.1195 2003/01/22 12:53:58 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -367,3 +367,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated aspell to 0.50.3nb1 [salo 2003-01-22]
 	Updated mozilla-stable to 1.0.2nb2 [lukem 2003-01-22]
 	Updated phoenix to 0.5nb4 [lukem 2003-01-22]
+	Updated adzap to 20030120 [simonb 2003-01-22]
