@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/05 10:33:35 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/01/03 18:33:24 reed Exp $
 bin/fax2ps
 bin/fax2tiff
 bin/gif2tiff
 bin/pal2rgb
 bin/ppm2tiff
 bin/ras2tiff
+bin/raw2tiff
 bin/rgb2ycbcr
 bin/thumbnail
 bin/tiff2bw
+bin/tiff2pdf
 bin/tiff2ps
 bin/tiff2rgba
 bin/tiffcmp
@@ -26,17 +28,19 @@ lib/libtiff.a
 lib/libtiff.la
 lib/libtiff.so
 lib/libtiff.so.3
-lib/libtiff.so.3.5
+lib/libtiff.so.3.6
 man/man1/fax2ps.1
 man/man1/fax2tiff.1
 man/man1/gif2tiff.1
 man/man1/pal2rgb.1
 man/man1/ppm2tiff.1
 man/man1/ras2tiff.1
+man/man1/raw2tiff.1
 man/man1/rgb2ycbcr.1
 man/man1/sgi2tiff.1
 man/man1/thumbnail.1
 man/man1/tiff2bw.1
+man/man1/tiff2pdf.1
 man/man1/tiff2ps.1
 man/man1/tiff2rgba.1
 man/man1/tiffcmp.1
@@ -57,6 +61,7 @@ man/man3/TIFFCurrentDirectory.3
 man/man3/TIFFCurrentRow.3
 man/man3/TIFFCurrentStrip.3
 man/man3/TIFFCurrentTile.3
+man/man3/TIFFDataWidth.3
 man/man3/TIFFDefaultStripSize.3
 man/man3/TIFFDefaultTileSize.3
 man/man3/TIFFError.3
@@ -67,6 +72,7 @@ man/man3/TIFFFindCODEC.3
 man/man3/TIFFFlush.3
 man/man3/TIFFFlushData.3
 man/man3/TIFFGetField.3
+man/man3/TIFFGetFieldDefaulted.3
 man/man3/TIFFGetMode.3
 man/man3/TIFFIsByteSwapped.3
 man/man3/TIFFIsMSB2LSB.3
@@ -87,6 +93,7 @@ man/man3/TIFFReadDirectory.3
 man/man3/TIFFReadEncodedStrip.3
 man/man3/TIFFReadEncodedTile.3
 man/man3/TIFFReadRGBAImage.3
+man/man3/TIFFReadRGBAImageOriented.3
 man/man3/TIFFReadRGBAStrip.3
 man/man3/TIFFReadRGBATile.3
 man/man3/TIFFReadRawStrip.3
@@ -111,6 +118,7 @@ man/man3/TIFFTileRowSize.3
 man/man3/TIFFTileSize.3
 man/man3/TIFFUnRegisterCODEC.3
 man/man3/TIFFVGetField.3
+man/man3/TIFFVGetFieldDefaulted.3
 man/man3/TIFFVSetField.3
 man/man3/TIFFVStripSize.3
 man/man3/TIFFVTileSize.3
@@ -125,6 +133,7 @@ man/man3/TIFFWriteScanline.3
 man/man3/TIFFWriteTile.3
 man/man3/TIFFbuffer.3
 man/man3/TIFFcodec.3
+man/man3/TIFFcolor.3
 man/man3/TIFFfree.3
 man/man3/TIFFmalloc.3
 man/man3/TIFFmemcmp.3
@@ -138,6 +147,7 @@ man/man3/TIFFstrip.3
 man/man3/TIFFswab.3
 man/man3/TIFFtile.3
 man/man3/libtiff.3
+share/doc/html/tiff/TIFFTechNote2.html
 share/doc/html/tiff/bugs.html
 share/doc/html/tiff/build.html
 share/doc/html/tiff/contrib.html
@@ -181,5 +191,11 @@ share/doc/html/tiff/v3.4beta036.html
 share/doc/html/tiff/v3.5.1.html
 share/doc/html/tiff/v3.5.2.html
 share/doc/html/tiff/v3.5.3.html
+share/doc/html/tiff/v3.5.4.html
+share/doc/html/tiff/v3.5.5.html
+share/doc/html/tiff/v3.5.6-beta.html
+share/doc/html/tiff/v3.5.7.html
+share/doc/html/tiff/v3.6.0.html
+share/doc/html/tiff/v${PKGVERSION}.html
 @dirrm share/doc/html/tiff/images
 @dirrm share/doc/html/tiff
