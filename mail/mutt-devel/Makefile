@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2001/07/13 07:09:18 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/07/22 13:37:12 tron Exp $
 
-DISTNAME=		mutt-1.3.18i
+DISTNAME=		mutt-1.3.19i
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mutt.org/pub/mutt/devel/
 
@@ -60,7 +60,6 @@ pre-install:
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
-	${TOUCH} ${TOUCH_FLAGS} ${PREFIX}/share/mutt/.directory
 	${INSTALL_DATA} ${WRKSRC}/Muttrc ${PREFIX}/share/doc/mutt/samples
 	${INSTALL_DATA} ${WRKSRC}/mime.types ${PREFIX}/share/doc/mutt/samples
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
