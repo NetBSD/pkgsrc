@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/22 07:49:20 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/02 01:37:09 grant Exp $
 #
 
 DISTNAME=		jabberd-1.4.3
@@ -11,7 +11,9 @@ COMMENT=		Instant messaging server
 
 CONFLICTS=		jabberd2-[0-9]*:../../wip/jabberd2
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 HAS_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 USE_PKGINSTALL=		yes
@@ -26,6 +28,9 @@ LIBDIR=			${PREFIX}/lib/jabberd
 INCDIR=			${PREFIX}/include/jabberd
 
 .include "../../mk/bsd.prefs.mk"
+
+# some systems don't have u_intN_t
+CPPFLAGS+=		-Du_int8_t=uint8_t
 
 BUILD_DEFS+=		JABBERD_USER	JABBERD_GROUP \
 			JABBERD_LOGDIR	JABBERD_SPOOLDIR \
@@ -76,6 +81,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/lib.h ${INCDIR}
 	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/xmlparse.h ${INCDIR}
 
-.include "../../devel/pth/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../devel/pth/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
