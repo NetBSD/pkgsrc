@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8952 2005/01/27 20:40:20 kleink Exp $
+$NetBSD: CHANGES,v 1.8953 2005/01/27 20:44:31 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -631,4 +631,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated libtasn1 to 0.2.13 [adam 2005-01-27]
 	Updated udfclient to 0.3.3 [reinoud 2005-01-27]
 	Updated hylafax to 4.2.1 [adam 2005-01-27]
-	Updated jwhois to 3.2.2nb12 [kleink 2004-01-27]
+	Updated jwhois to 3.2.2nb12 [kleink 2005-01-27]
+	Updated pkgfind to 20050127 [jschauma 2005-01-27]
