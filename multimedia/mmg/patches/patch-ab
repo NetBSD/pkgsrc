@@ -1,14 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/05/08 18:22:14 salo Exp $
+$NetBSD: patch-ab,v 1.2 2005/03/23 16:58:39 salo Exp $
 
---- doc/mmg.1.orig	2004-05-06 19:47:45.000000000 +0200
-+++ doc/mmg.1	2004-05-08 18:44:49.000000000 +0200
-@@ -23,7 +23,8 @@
- be loaded directly after startup. This way \fBmmg\fR preferences files
- can be associated with \fBmmg\fR itself.
- .LP
--The full documentation is available in HTML form (doc/mkvmerge-gui.html).
-+The full documentation is available in HTML form
-+(@PREFIX@/share/doc/html/mmg/guide.html).
+--- src/mmg/mmg.cpp.orig	2005-03-02 22:34:35.000000000 +0100
++++ src/mmg/mmg.cpp	2005-03-23 17:27:01.000000000 +0100
+@@ -1153,7 +1153,7 @@
+     wxConfigBase *cfg;
+     bool first;
  
- 
- .SH AUTHOR
+-    help_path = wxGetCwd();
++    help_path = "@HELPDIR@";
+     cfg = wxConfigBase::Get();
+     cfg->SetPath(wxT("/GUI"));
+     if (!cfg->Read(wxT("help_path"), &help_path))
