@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7107 2004/09/06 13:11:12 adam Exp $
+$NetBSD: CHANGES,v 1.7108 2004/09/06 13:13:57 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4205,3 +4205,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nail to 11.5 [cjep 2004-09-06]
 	Updated lame to 3.96.1 [adam 2004-09-06]
 	Updated ImageMagick to 6.0.7-1 [adam 2004-09-06]
+	Updated kdelibs3 to 3.3.0nb1 [markd 2004-09-06]
