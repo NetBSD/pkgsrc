@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/13 17:37:34 fredb Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/28 21:15:11 fredb Exp $
 
 DISTNAME=	all-com-ppds
 PKGNAME=	cupsomatic-ppds-20010515
@@ -26,7 +26,7 @@ COMMENT=	free software printer drivers for use with CUPS
 
 CONFLICTS+=	cupsomatic-200012??
 
-DIST_SUBDIR=	${PKGNAME}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 DEPENDS+=	cups>=1.1.14nb1:../../print/cups
 DEPENDS+=	cupsomatic-[0-9]*:../../print/cupsomatic
