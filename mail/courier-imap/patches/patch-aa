@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/07/31 22:48:50 jlam Exp $
+
+--- Makefile.in.orig	Wed Jun 13 18:37:56 2001
++++ Makefile.in
+@@ -30,3 +30,3 @@
+ datadir = @datadir@
+-sysconfdir = @sysconfdir@
++sysconfdir = ${prefix}/share/examples/courier
+ sharedstatedir = @sharedstatedir@
+@@ -93,3 +93,3 @@
+ sbin_PROGRAMS = imaplogin pop3login userdbpw
+-man_MANS = makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.8 deliverquota.8 maildirmake.1 imapd.8 mkimapdcert.8 mkpop3dcert.8
++man_MANS = makeuserdb.8 userdb.8 userdbpw.8 couriertcpd.8 deliverquota.8 maildirmake.1 courier-imapd.8 mkimapdcert.8 mkpop3dcert.8
+ 
+@@ -786,4 +786,4 @@
+ 
+-imapd.8: imap/imapd.8
+-	cp imap/imapd.8 .
++courier-imapd.8: imap/imapd.8
++	cp imap/imapd.8 courier-imapd.8
+ 
