@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.315 2002/07/10 12:36:26 kim Exp $
+# $NetBSD: Makefile,v 1.316 2002/07/11 21:41:30 agc Exp $
 #
 
 COMMENT=	Networking tools
 
 SUBDIR+=	6to4
 SUBDIR+=	6tunnel
+SUBDIR+=	IglooFTP
 SUBDIR+=	LaBrea
 SUBDIR+=	ORBit
 SUBDIR+=	ORBit2
