@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.351 1999/10/05 15:48:26 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.352 1999/10/05 22:18:05 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -116,15 +116,6 @@ USE_GTEXINFO=		yes
 
 .if defined(USE_GTEXINFO) && !exists(/usr/bin/install-info)
 DEPENDS+=		gtexinfo-3.12:${PKGSRCDIR}/devel/gtexinfo
-.endif
-
-.if defined(USE_MOTIF)
-.if exists(${X11BASE}/include/Xm/Xm.h)
-RUN_DEPENDS+=		${X11BASE}/include/Xm/Xm.h:${PKGSRCDIR}/x11/lesstif
-.else
-RUN_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:${PKGSRCDIR}/x11/lesstif
-BUILD_DEPENDS+=		${PREFIX}/include/Xm/Xm.h:${PKGSRCDIR}/x11/lesstif
-.endif
 .endif
 
 .if defined(USE_LIBTOOL)
@@ -563,6 +554,18 @@ INSTALL_TARGET+=	install.man
 # If this host is behind a filtering firewall, use passive ftp(1)
 .if defined(PASSIVE_FETCH)
 FETCH_BEFORE_ARGS += -p
+.endif
+
+# Check if we got a real Motif, Lesstif or no Motif at all.
+.if defined(USE_MOTIF)
+.if exists(${X11BASE}/include/Xm/Xm.h)
+IS_LESSTIF!=	${EGREP} -c LESSTIF ${X11BASE}/include/Xm/Xm.h || ${TRUE}
+.if (${IS_LESSTIF} != "0")
+DEPENDS+=	lesstif-*:${PKGSRCDIR}/x11/lesstif
+.endif
+.else
+DEPENDS+=	lesstif-*:${PKGSRCDIR}/x11/lesstif
+.endif
 .endif
 
 # Popular master sites
