@@ -1,35 +1,30 @@
-# $NetBSD: Makefile,v 1.2 2000/01/10 00:57:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/09/04 15:46:31 kim Exp $
 #
 
-DISTNAME=	mp
-PKGNAME=	mp-3.4.0
+DISTNAME=	mpdist-3.5.2
+PKGNAME=	mp-3.5.2
 CATEGORIES=	print
 MASTER_SITES=	http://java.sun.com/people/richb/RichApps/mp/
-EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=     kim@tac.nyc.ny.us
 HOMEPAGE=	http://java.sun.com/people/richb/
 
-WRKSRC=		${WRKDIR}/mpdist
-
-NO_CONFIGURE=	yes
+GNU_CONFIGURE=	yes
 
 USE_X11=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
+CONFIGURE_ARGS+=--disable-mptool
+CONFIGURE_ARGS+=--with-prologue=${PREFIX}/share/mp
+
 .if ${OPSYS} == "SunOS"
-EXTRALIBS=	-lsocket -lnsl -lgen
 .else
-BSD_PRINT=	-DBSD_PRINT
+CONFIGURE_ARGS+=--enable-bsd-print
 .endif
 
-ALL_TARGET=	mp PREFIX=${PREFIX} X11BASE=${X11BASE} CC='${CC}' \
-		BSD_PRINT=${BSD_PRINT} EXTRALIBS='${EXTRALIBS}'
-
-INSTALL_TARGET=	install-mp PREFIX=${PREFIX}
-
-pre-patch:
-	${CP} ${WRKSRC}/Makefile.dist ${WRKSRC}/Makefile
+post-install:
+	${MV} ${PREFIX}/share/mpdist ${PREFIX}/share/mp
+	${RM} -f ${PREFIX}/man/man1/mptool.1
 
 .include "../../mk/bsd.pkg.mk"
