@@ -5,7 +5,7 @@
 # PROVIDE: courierimap
 # REQUIRE: DAEMON
 
-if [ ! -d /etc/rc.d -a -f /etc/rc.subr ]
+if [ -d /etc/rc.d -a -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
