@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.8 1998/06/20 14:05:02 tron Exp $
-# Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
+# $NetBSD: Makefile,v 1.9 1998/06/21 13:36:02 tron Exp $
+# $FreeBSD Id: Makefile,v 1.5 1998/02/19 09:43:16 obrien Exp
 #
 
 DISTNAME=	ddd-2.2.3
