@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.221 2001/05/21 12:55:06 zuntum Exp $
+# $NetBSD: Makefile,v 1.222 2001/05/21 13:17:54 zuntum Exp $
 #
 
 COMMENT=	Networking tools
@@ -168,6 +168,7 @@ SUBDIR+=	vncviewer
 SUBDIR+=	vtun
 SUBDIR+=	wakeup
 SUBDIR+=	wget
+SUBDIR+=	whatmask
 SUBDIR+=	wminet
 SUBDIR+=	wmnet
 SUBDIR+=	wmpload
