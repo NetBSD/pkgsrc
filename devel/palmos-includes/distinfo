@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
+$NetBSD: distinfo,v 1.2 2002/10/15 23:08:59 dillo Exp $
 
+SHA1 (sdk50-win.zip) = 3e5b1b11c6c257f2869f16d462e0cfffa8a32060
+Size (sdk50-win.zip) = 15893238 bytes
+SHA1 (sdk40-core.tar.gz) = 15fcba4a7c6ff6611b536b9b064bf4713587182c
+Size (sdk40-core.tar.gz) = 389680 bytes
+SHA1 (sdk40upd1.tar.gz) = f968006cbc2ee1cc1284d82f301d554705bb4a27
+Size (sdk40upd1.tar.gz) = 357300 bytes
 SHA1 (sdk35.tar.gz) = 27b8e16e0c27eee5583d60e750dc2facc32b49d7
 Size (sdk35.tar.gz) = 284047 bytes
 SHA1 (sdk35-update1.tar.gz) = 64cd653f9efab55942513c8dead236daf32e5e97
 Size (sdk35-update1.tar.gz) = 8399 bytes
-SHA1 (palmos-1-2-3.1-sdks-1.tar.gz) = ca5ff870586306ace21025ad0619ff20ce029b84
-Size (palmos-1-2-3.1-sdks-1.tar.gz) = 523519 bytes
+SHA1 (sdk31a1.zip) = 74eabc5bf2438016354a16a7281ff566686c2c43
+Size (sdk31a1.zip) = 3442635 bytes
