@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/21 02:55:15 tv Exp $
+# $NetBSD: Makefile,v 1.6 2005/01/21 12:57:45 tv Exp $
 #
 
 DISTNAME=	chef.l
@@ -27,5 +27,8 @@ do-extract:
 do-build:
 	cd ${WRKSRC} && ${LEX} chef.l
 	${LINK.c} -o ${WRKSRC}/chef ${WRKSRC}/lex.yy.c -ll
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/chef ${PREFIX}/bin/
 
 .include "../../mk/bsd.pkg.mk"
