@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.263 2003/07/24 20:15:20 wiz Exp $
+# $NetBSD: Makefile,v 1.264 2003/07/28 15:16:15 drochner Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -234,6 +234,7 @@ SUBDIR+=	zope25-Photo
 SUBDIR+=	zope25-PropertyFolder
 SUBDIR+=	zope25-PropertyObject
 SUBDIR+=	zope25-RDFSummary
+SUBDIR+=	zope25-RenderableCharts
 SUBDIR+=	zope25-Silva
 SUBDIR+=	zope25-Squishdot
 SUBDIR+=	zope25-TinyTablePlus
