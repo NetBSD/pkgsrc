@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/11/06 04:10:12 jlam Exp $
+
+--- DataManager/Makefile.in.orig	Sat Oct 20 13:54:10 2001
++++ DataManager/Makefile.in
+@@ -187,7 +187,7 @@
+ 
+ @QT_TRUE@INCLUDES = -I../include @QT_INCLUDES@
+ 
+-@QT_TRUE@DataManager_LDADD = @X_LDFLAGS@ 	@QT_LDFLAGS@ 	@USER_LDFLAGS@ 	@LIB_QT@ 	../odbcinst/libodbcinst.la 	../DriverManager/libodbc.la 
++@QT_TRUE@DataManager_LDADD = $(X_LDFLAGS) 	$(QT_LDFLAGS) 	$(USER_LDFLAGS) 	$(LIB_QT) 	-lodbcinst 	-lodbc $(PTH_LIBS) $(LIBLTDL)
+ 
+ @QT_TRUE@DataManager_DEPENDANCIES =     ../odbcinst/libodbcinst.la 	../DriverManager/libodbc.la 
+ 
