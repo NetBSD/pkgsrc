@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.169 2003/08/04 11:43:47 jmmv Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.170 2003/08/04 16:11:39 jmc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -744,7 +744,7 @@ EXIM_GROUP?=	mail
 EXIM_USER?=	mail
 # Used in the exim package to specify the server user.
 # Possible: any user name
-# Default: exim
+# Default: mail
 
 FETCHMAIL_USE_SSL?=	YES
 # Enable SSL in fetchmail (for pop and imap connections)
