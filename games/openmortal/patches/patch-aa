@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2004/01/18 18:43:05 kristerw Exp $
+
+--- src/State.cpp.orig	Sun Jan 18 19:18:52 2004
++++ src/State.cpp	Sun Jan 18 19:22:52 2004
+@@ -110,7 +110,11 @@
+ void SState::Save()
+ {
+ 	std::string sFilename = GetConfigFilename();
++#if defined(__GNUC__) && (__GNUC__ <= 2)
++	std::ofstream oStream( sFilename.c_str(), ios::out | ios::trunc );
++#else
+ 	std::ofstream oStream( sFilename.c_str(), std::ios_base::out | std::ios_base::trunc );
++#endif
+ 	if ( oStream.rdstate() & std::ios::failbit )
+ 	{
+ 		debug( "Unable to open config file: %s\n", sFilename.c_str() );
