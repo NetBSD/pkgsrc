@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/09/27 22:24:57 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2004/12/05 15:24:54 cube Exp $
 
 --- Makefile.orig	2003-07-09 09:49:51.000000000 -0400
 +++ Makefile	2003-09-27 18:15:34.000000000 -0400
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/09/27 22:24:57 jschauma Exp $
  #-------------------------------------------------------------------------------
 -SHELL = /bin/sh
 +SHELL = ${SH}
- VERSION := 3.04
+ VERSION := 3.15
  
  
 @@ -35,15 +35,12 @@
@@ -30,5 +30,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/09/27 22:24:57 jschauma Exp $
 +#PERL := $(filter /%,$(shell /bin/sh -c 'type perl'))
 +#AR   := $(filter /%,$(shell /bin/sh -c 'type ar'))
  
- FLATS = ACKNOWLEDGEMENTS COPYRIGHT INSTALL LICENSE Makefile README
+ FLATS = ACKNOWLEDGEMENTS COPYRIGHT INSTALL LICENSE Makefile README ChangeLog
  
