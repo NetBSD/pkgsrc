@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/03/27 22:39:28 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/03/29 03:13:02 enami Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.0.1
@@ -27,7 +27,7 @@ CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" \
 		XML_CONFIG="${LOCALBASE}/bin/xml-config"
 
-.include <../../mk/bsd.prefs.mk>
+.include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == NetBSD)
 CPPFLAGS+=	-I${WRKDIR}
