@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/11/27 16:28:44 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/15 12:14:51 martti Exp $
 #
 
-DISTNAME=	Image-Size-2.96
+DISTNAME=	Image-Size-2.98
 PKGNAME=	p5-${DISTNAME}0
 SVR4_PKGNAME=	p5isi
 CATEGORIES=	graphics perl5
