@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:06 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/03/11 01:49:49 jmc Exp $
 
 .if !defined(BLAS_BUILDLINK2_MK)
 BLAS_BUILDLINK2_MK=	# defined
@@ -10,7 +10,7 @@ BUILDLINK_DEPMETHOD.blas?=	build
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.blas=blas
 BUILDLINK_PREFIX.blas_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.blas=		lib/libblas.*
+BUILDLINK_FILES.blas=		lib/libblas* 
 
 BUILDLINK_TARGETS+=		blas-buildlink
 
