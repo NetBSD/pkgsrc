@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:21 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/01/18 13:39:04 martti Exp $
 
-SHA1 (lopster-0.9.8.tar.gz) = 3e244d7b2aaccc32d296ca9c28ecadc24f71cf10
-Size (lopster-0.9.8.tar.gz) = 434461 bytes
-SHA1 (patch-aa) = af5318b45a71c703d54cafba457c0249abbe8653
-SHA1 (patch-ab) = 7a33ce153f5cecc10e7899241d24c3c66f5f2d4a
-SHA1 (patch-ac) = 08204be9c9d8279148a36c175763bf360587bc81
-SHA1 (patch-ad) = 0ffba4b3a04ff6cf471158920165aac2bcaef65e
+SHA1 (lopster-1.0.1.tar.gz) = 9e755607520b30dba823a53e5de66e9b980ebcbe
+Size (lopster-1.0.1.tar.gz) = 554722 bytes
+SHA1 (patch-ab) = 1bf060a5da4d24d07f114c9d548a6ba2a70b5870
+SHA1 (patch-ac) = 018aceddd1fd21787854f5a6800164ee4997a166
+SHA1 (patch-ad) = 65adaefcad366c6f18b024619570f5a0851ded7b
