@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2002/06/09 11:24:02 taca Exp $
+# $NetBSD: Makefile,v 1.125 2002/06/20 15:51:07 jschauma Exp $
 #
 
 COMMENT=	Programming languages
@@ -12,7 +12,7 @@ SUBDIR+=	blackdown-jdk13
 SUBDIR+=	brandybasic
 SUBDIR+=	bwbasic
 SUBDIR+=	caml-light
-SUBDIR+=	camlp4
+#SUBDIR+=	camlp4 # obsoleted since included in ocaml 3.04
 SUBDIR+=	cilk
 SUBDIR+=	cim
 SUBDIR+=	cint
