@@ -1,12 +1,22 @@
-$NetBSD: patch-aq,v 1.1.1.1 2002/02/13 18:09:22 mrauch Exp $
+$NetBSD: patch-aq,v 1.2 2004/05/03 20:56:36 mrauch Exp $
 
---- ../connectivity/prj/build.lst.orig	Thu Nov  8 16:14:54 2001
-+++ ../connectivity/prj/build.lst
-@@ -8,6 +8,7 @@
- cn	connectivity\source\sdbcx				nmake	-	all	cn_sdbcx cn_types NULL
- cn	connectivity\source\drivers\ado			nmake	-	w	cn_ado cn_dbtools NULL
- cn	connectivity\source\drivers\mozab\mozillasrc		nmake	-	all	cn_mozab_mozillasrc cn_file NULL
-+cn	connectivity\source\drivers\mozab\mozillasrc\nortti		nmake	-	all	cn_mozab_mozillasrc_nortti cn_mozab_mozillasrc NULL
- cn	connectivity\source\drivers\mozab	nmake	-	all	cn_mozab cn_mozab_mozillasrc cn_dbtools NULL
- cn	connectivity\source\drivers\calc		nmake	-	all	cn_calc cn_file NULL
- cn	connectivity\source\drivers\odbc		nmake	-	all	cn_odbc cn_dbtools NULL
+--- ../stlport/makefile.mk.orig	2004-04-17 20:08:59.000000000 +0200
++++ ../stlport/makefile.mk
+@@ -102,7 +102,7 @@ PATCH_FILE_NAME=STLport-4.5-0119.patch
+ TAR_EXCLUDES=*/SC5/*
+ .ENDIF          # "$(USE_SHELL)"=="4nt"
+ 
+-ADDITIONAL_FILES=src$/gcc-3.0.mak src$/gcc-3.0-macosx.mak src$/gcc-3.0-freebsd.mak src$/sunpro8.mak
++ADDITIONAL_FILES=src$/gcc-3.0.mak src$/gcc-3.0-macosx.mak src$/gcc-3.0-freebsd.mak src$/sunpro8.mak src$/gcc-3.0-netbsd.mak
+ 
+ 
+ CONFIGURE_ACTION=none
+@@ -124,6 +124,8 @@ BUILD_FLAGS=-f vc7.mak
+ 		# FreeBSD needs a special makefile
+ 		.IF "$(OS)"=="FREEBSD"
+ 			BUILD_FLAGS=-f gcc-3.0-freebsd.mak
++		.ELIF "$(OS)"=="NETBSD"
++			BUILD_FLAGS=-f gcc-3.0-netbsd.mak
+ 		.ELIF "$(OS)"=="MACOSX"
+ 			BUILD_FLAGS=-f gcc-3.0-macosx.mak
+ 		.ELSE

@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/02/13 18:09:24 mrauch Exp $
+$NetBSD: patch-ab,v 1.2 2004/05/03 20:56:36 mrauch Exp $
 
---- ../bridges/prj/build.lst.orig	Mon Nov 12 22:45:25 2001
-+++ ../bridges/prj/build.lst
-@@ -13,5 +13,8 @@
- br	bridges\source\cpp_uno\cc50_solaris_sparc			nmake	-	u	br_cc50sols br_unotypes NULL
- br	bridges\source\cpp_uno\cc50_solaris_intel			nmake	-	u	br_cc50soli br_unotypes NULL
- br	bridges\source\cpp_uno\gcc2_solaris_sparc			nmake	-	u	br_gccsols br_unotypes NULL
-+br	bridges\source\cpp_uno\gcc2_netbsd_intel	nmake	-	u	br_gccni br_unotypes NULL
-+br	bridges\source\cpp_uno\gcc2_netbsd_sparc	nmake	-	u	br_gccns br_unotypes NULL
-+br	bridges\source\cpp_uno\gcc2_netbsd_powerpc	nmake	-	u	br_gccnp br_unotypes NULL
- br	bridges\source\prot_uno					nmake	-	all	br_pruno br_unotypes NULL
- br	bridges\source\java_uno					nmake	-	all	br_java_uno br_rcon NULL
+--- ../desktop/source/pkgchk/pkgchk_misc.h.orig	2004-04-17 19:21:18.000000000 +0200
++++ ../desktop/source/pkgchk/pkgchk_misc.h
+@@ -244,6 +244,8 @@ bool office_is_running( ::rtl::Bootstrap
+ #define THIS_PLATFORM_PATH "/linux_sparc.plt"
+ #elif defined (MACOSX) && defined (POWERPC)
+ #define THIS_PLATFORM_PATH "/macosx_powerpc.plt"
++#elif defined (NETBSD) && defined (INTEL)
++#define THIS_PLATFORM_PATH "/netbsd_intel.plt"
+ #elif defined (NETBSD) && defined (SPARC)
+ #define THIS_PLATFORM_PATH "/netbsd_sparc.plt"
+ #elif defined (FREEBSD) && defined (INTEL)

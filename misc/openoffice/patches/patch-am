@@ -1,15 +1,20 @@
-$NetBSD: patch-am,v 1.1.1.1 2002/02/13 18:09:23 mrauch Exp $
+$NetBSD: patch-am,v 1.2 2004/05/03 20:56:36 mrauch Exp $
 
---- ../bridges/source/prot_uno/makefile.mk.orig	Tue Jan  1 14:08:48 2002
-+++ ../bridges/source/prot_uno/makefile.mk
-@@ -85,8 +85,8 @@
- SHL1TARGET=	$(TARGET)
+--- ../soltools/checkdll/makefile.mk.orig	2004-04-17 19:28:45.000000000 +0200
++++ ../soltools/checkdll/makefile.mk
+@@ -81,12 +81,14 @@ APP1TARGET	= 	checkdll
+ APP1OBJS	=	$(OBJ)$/checkdll.obj
+ DEPOBJFILES	=	$(APP1OBJS) 
+ .IF "$(OS)"!="FREEBSD"
++.IF "$(OS)"!="NETBSD"
+ .IF "$(OS)"!="MACOSX"
+ STDLIB += -ldl
+ .ENDIF
+ .ENDIF
++.ENDIF
+ .IF "$(OS)"=="NETBSD"
+-APP1STDLIBS	+= -Wl,--whole-archive -lgcc -Wl,--no-whole-archive
++APP1STDLIBS	+= -u _Unwind_Resume -Wl,--whole-archive -lgcc -Wl,--no-whole-archive
+ .ENDIF
+ .ENDIF # "$(GUI)"=="UNX"
  
- SHL1STDLIBS= \
--		$(CPPULIB)			\
--		$(SALLIB)
-+		$(SALLIB)			\
-+		$(CPPULIB)
- 
- SHL1DEPN=
- SHL1IMPLIB=	i$(TARGET)
