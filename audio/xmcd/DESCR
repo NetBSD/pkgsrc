@@ -1,14 +1,6 @@
-Xmcd is a program that allows the use of the CD-ROM  drive
-as  a  full-featured  stereo compact-disc player for the X
-window system. 
-
-Most  of  the  features  found  on  real  CD  players  are
-available  in  xmcd,  such  as  shuffle  and repeat, track
-programming functions, a numeric  keypad  and  track  warp
-slider  for  direct  track  access.   Additional functions
-include sample play, A to B segment play, volume  control,
-balance control, etc.  Several automation options are also
-available on CD load, eject, play completion  and  program
-exit.   A Channel Routing feature allow you to select from
-several  stereo  or  mono  routing  options.   The  volume
-control  slider taper characteristics can also be altered.
+Xmcd is a full-featured CD Player utility package including xmcd, a CD
+Player for the X window system using the Motif graphical user interface;
+and cda, a command-line driven, text mode CD Player which also features
+a curses-based, screen-oriented mode.  Both utilities transform your
+CD-ROM, CD-R or CD-RW drive into a stereo CD player, allowing you to play
+audio CDs on your computer.
