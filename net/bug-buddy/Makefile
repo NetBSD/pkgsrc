@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/13 13:52:48 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/21 17:10:26 martti Exp $
 #
 
 DISTNAME=		bug-buddy-2.2.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		sab@posix.org.uk
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		graphical GNOME2 bug reporting tool
+COMMENT=		Graphical GNOME2 bug reporting tool
 
 BUILD_USES_MSGFMT=	YES
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs

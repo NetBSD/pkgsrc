@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:51:43 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 17:11:11 martti Exp $
 #
 
 DISTNAME=	pygoogle-0.5.2
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://diveintomark.org/projects/pygoogle/
-COMMENT=	call the Google web API from Python
+COMMENT=	Call the Google web API from Python
 
 PYDISTUTILSPKG=	yes
 USE_BUILDLINK2=	yes

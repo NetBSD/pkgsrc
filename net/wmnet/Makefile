@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:52:03 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 17:11:29 martti Exp $
 
 DISTNAME=	wmnet-1.06
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.digitalkaos.net/linux/wmnet/download/
 
 MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.digitalkaos.net/linux/wmnet/
-COMMENT=	dockable network monitor
+COMMENT=	Dockable network monitor
 
 USE_IMAKE=	YES
 
