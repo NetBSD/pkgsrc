@@ -1,18 +1,12 @@
-$NetBSD: patch-ab,v 1.1 1998/09/06 06:51:05 garbled Exp $
---- Makefile.in.orig	Sun Jun 28 22:20:48 1998
-+++ Makefile.in	Sat Sep  5 23:09:05 1998
-@@ -27,11 +27,11 @@
- CFLAGS = @CFLAGS@
- CXXFLAGS = @CXXFLAGS@
- 
--LDFLAGS = @LDFLAGS@
-+LDFLAGS = -Wl,-R${X11BASE}/lib @LDFLAGS@
- LIBS = @LIBS@
--X_LIBS = @X_LIBS@
-+X_LIBS = -L${X11BASE}/lib
- X_PRE_LIBS = @X_PRE_LIBS@
--GUI_LINK_OPTS_X = $(X_LIBS) $(X_PRE_LIBS) -lX11
-+GUI_LINK_OPTS_X =  $(LDFLAGS) $(X_LIBS) $(X_PRE_LIBS) -lX11
- GUI_LINK_OPTS_BEOS =
- GUI_LINK_OPTS_WIN32 = -luser32 -lgdi32 -lwinmm -lcomdlg32 -lcomctl32
- GUI_LINK_OPTS_WIN32_VC50 = user32.lib gdi32.lib winmm.lib comdlg32.lib comctl32.lib
+$NetBSD: patch-ab,v 1.2 1999/10/25 16:05:38 drochner Exp $
+--- Makefile.in.orig	Sat Oct 23 21:34:14 1999
++++ Makefile.in	Sat Oct 23 21:35:39 1999
+@@ -101,7 +101,7 @@
+            @DISASM_VAR@ @INSTRUMENT_VAR@ @DYNAMIC_VAR@ $(BX_OBJS) \
+            $(SIMX86_OBJS) \
+            $(FPU_LIB)
+-	@LINK@ $(BX_OBJS) \
++	@LINK@ $(LDFLAGS) $(BX_OBJS) \
+                 $(SIMX86_OBJS) \
+ 		iodev/libiodev.a \
+ 		cpu/libcpu.a memory/libmemory.a gui/libgui.a \

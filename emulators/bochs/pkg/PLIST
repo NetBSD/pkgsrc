@@ -1,39 +1,41 @@
-@comment $NetBSD: PLIST,v 1.2 1998/11/12 23:03:40 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/10/25 16:05:38 drochner Exp $
 bin/bochs
-lib/X11/fonts/misc/fonts.dir
-lib/X11/fonts/misc/hercules.bdf
-lib/X11/fonts/misc/vga.bdf
-lib/X11/fonts/misc/vga.pcf
-@exec %D/bin/mkfontdir %D/lib/X11/fonts/misc
-@unexec %D/bin/mkfontdir %D/lib/X11/fonts/misc
-share/doc/bochs/00README
-share/doc/bochs/3rdparty.license.html
-share/doc/bochs/DOS.html
-share/doc/bochs/LICENSE
-share/doc/bochs/Linux.html
-share/doc/bochs/Minix.html
-share/doc/bochs/OldWindows95.html
-share/doc/bochs/WISHLIST
-share/doc/bochs/Windows31.html
-share/doc/bochs/Windows95.html
-share/doc/bochs/changelog.html
-share/doc/bochs/company.html
-share/doc/bochs/construction.html
-share/doc/bochs/debugger.html
-share/doc/bochs/developers.html
-share/doc/bochs/drawing_board.html
-share/doc/bochs/features.html
-share/doc/bochs/index.html
-share/doc/bochs/install.html
-share/doc/bochs/jbochs.html
-share/doc/bochs/licensing.html
-share/doc/bochs/mtools.html
-share/doc/bochs/undercon.gif
-share/doc/bochs/whatisbochs.html
-share/doc/bochs/win32.html
-share/bochs/bios/BIOS-bochs-980702a
+share/bochs/doc/00README
+share/bochs/doc/3rdparty.license.html
+share/bochs/doc/DOS.html
+share/bochs/doc/LICENSE
+share/bochs/doc/Linux.html
+share/bochs/doc/Minix.html
+share/bochs/doc/OldWindows95.html
+share/bochs/doc/Windows31.html
+share/bochs/doc/Windows95.html
+share/bochs/doc/changelog.html
+share/bochs/doc/codingguidelines.html
+share/bochs/doc/configure.html
+share/bochs/doc/construction.html
+share/bochs/doc/cosimulation.html
+share/bochs/doc/debugger.html
+share/bochs/doc/developers.html
+share/bochs/doc/faq.html
+share/bochs/doc/features.html
+share/bochs/doc/fpu.html
+share/bochs/doc/index.html
+share/bochs/doc/install.html
+share/bochs/doc/instrumentation.html
+share/bochs/doc/licensing.html
+share/bochs/doc/mtools.html
+share/bochs/doc/undercon.gif
+share/bochs/doc/whatisbochs.html
+share/bochs/doc/win32.html
+share/bochs/bios/BIOS-bochs-990925a
 share/bochs/bios/VGABIOS-elpin-2.20
+@exec %D/bin/mkfontdir %D/share/bochs/xfonts
+share/bochs/xfonts/fonts.dir
+share/bochs/xfonts/hercules.bdf
+share/bochs/xfonts/vga.bdf
+share/bochs/xfonts/vga.pcf
 share/bochs/bochsrc
-@dirrm share/doc/bochs
+@dirrm share/bochs/doc
 @dirrm share/bochs/bios
+@dirrm share/bochs/xfonts
 @dirrm share/bochs
