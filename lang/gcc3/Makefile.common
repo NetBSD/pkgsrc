@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2004/07/03 12:15:22 grant Exp $
+# $NetBSD: Makefile.common,v 1.9 2004/07/30 20:48:39 jlam Exp $
 
 GCC_VERSION=	3.3.4
 DISTNAME=	gcc-${GCC_VERSION}
@@ -73,7 +73,7 @@ AS_PATH:=   ${_dir_}/${AS}
 .    if !empty(AS_PATH:M${LOCALBASE}/*)
 USE_BINUTILS=	YES
 .    else
-AS_VERSION!=	${AS} --version | ${AWK} '{				\
+AS_VERSION!=	${AS_PATH} --version | ${AWK} '{			\
 		    split($$3, v, /[.]/);				\
 		    printf "%02d%02d%02d%02d\n",v[1],v[2],v[3],v[4];	\
 		    exit;						\
