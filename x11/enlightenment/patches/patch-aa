@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/04 07:58:50 garbled Exp $
+--- configedit/configure.orig	Tue Nov  3 04:04:17 1998
++++ configedit/configure	Tue Nov  3 04:06:38 1998
+@@ -624,7 +624,7 @@
+ test -z "$INSTALL_DATA" && INSTALL_DATA='${INSTALL} -m 644'
+ 
+ 
+-test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL_PROGRAM}'
++test -z "$INSTALL_SCRIPT"
+ 
+ echo $ac_n "checking whether build environment is sane""... $ac_c" 1>&6
+ echo "configure:631: checking whether build environment is sane" >&5

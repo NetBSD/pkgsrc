@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/11/04 07:58:50 garbled Exp $
+--- configedit/Makefile.in.orig	Wed Nov  4 00:05:25 1998
++++ configedit/Makefile.in	Wed Nov  4 00:16:44 1998
+@@ -113,7 +113,7 @@
+ install-binSCRIPTS: $(bin_SCRIPTS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+-	@list='$(bin_SCRIPTS)'; for p in $$list; do \
++	@list='/usr/bin/true'; for p in $$list; do \
+ 	  if test -f $$p; then \
+ 	    echo " $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`"; \
+ 	    $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
