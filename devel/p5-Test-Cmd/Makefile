@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2001/06/12 13:01:43 zuntum Exp $
+# $NetBSD: Makefile,v 1.3 2001/06/17 07:40:59 zuntum Exp $
 
-DISTNAME=	Test-Cmd-1.03
+DISTNAME=	Test-Cmd-1.04
 PKGNAME=        p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://www.baldmt.com/Test-Cmd/
