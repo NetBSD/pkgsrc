@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/24 09:20:37 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/22 13:14:31 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/14 04:00:11 jfitz Exp
 #
 
@@ -15,23 +15,6 @@ BUILD_DEPENDS= 	${PREFIX}/lib/perl5/site_perl/MD5.pm:../../security/p5-MD5 \
 		${PREFIX}/lib/perl5/site_perl/MIME/Base64.pm:../../converters/p5-MIME-Base64
 
 USE_PERL5=	YES
-
-MAN1=		lwp-mirror.1 lwp-request.1 lwp-rget.1 lwp-download.1
-MAN3=           Bundle::LWP.3 File::CounterFile.3 File::Listing.3 Font::AFM.3 \
-		HTML::AsSubs.3 HTML::Element.3 HTML::Entities.3 \
-		HTML::FormatPS.3 HTML::FormatText.3 HTML::Formatter.3 \
-		HTML::HeadParser.3 HTML::LinkExtor.3 HTML::Parse.3 \
-		HTML::Parser.3 HTML::TreeBuilder.3 HTTP::Daemon.3 \
-		HTTP::Date.3 HTTP::Headers.3 HTTP::Message.3 HTTP::Negotiate.3 \
-		HTTP::Request.3 HTTP::Request::Common.3 HTTP::Response.3 \
-		HTTP::Status.3 LWP.3 \
-		LWP::Debug.3 LWP::IO.3 LWP::MediaTypes.3 \
-		LWP::MemberMixin.3 LWP::Protocol.3 LWP::RobotUA.3 \
-		LWP::Simple.3 LWP::Socket.3 LWP::TkIO.3 LWP::UserAgent.3 \
-		LWP::SecureSocket.3 \
-		URI::Escape.3 URI::URL.3 WWW::RobotRules.3 \
-		WWW::RobotRules::AnyDBM_File.3 lwpcook.3
-MAN3PREFIX=	${PREFIX}/lib/perl5
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/perl Makefile.PL

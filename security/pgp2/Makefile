@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/06/03 13:49:07 agc Exp $
+# $NetBSD: Makefile,v 1.10 1998/06/22 13:06:18 agc Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -33,8 +33,6 @@ MIRROR_DISTFILE=no
 PGPLIB=		${PREFIX}/lib/pgp
 CFLAGS+=	-DPGP_SYSTEM_DIR=\\\"${PGPLIB}/\\\"
 IS_INTERACTIVE=	yes
-
-MAN1=		pgp.1
 
 .if ${MACHINE_ARCH} == "i386"
 OBJS_EXT=	_80386.o _zmatch.o

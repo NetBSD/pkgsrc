@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/06/03 13:16:56 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/06/22 12:58:34 agc Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/01/03 10:14:21 obrien Exp
 #
 
@@ -12,7 +12,6 @@ MASTER_SITES=	ftp://samba.anu.edu.au/pub/rsync/  \
 MAINTAINER=     packages@netbsd.org
 
 GNU_CONFIGURE=	yes
-MAN1=		rsync.1
 
 .include "../../mk/bsd.prefs.mk"
 

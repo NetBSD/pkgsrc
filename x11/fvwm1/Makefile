@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/24 09:20:37 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/06/22 13:20:58 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -13,8 +13,6 @@ RUN_DEPENDS=	xpmroot:../../x11/xpmroot
 
 USE_IMAKE=	yes
 XMKMF=		xmkmf && make Makefiles	# drop -a because we have no `depends' target
-
-CAT1=		GoodStuff.0 fvwm.0
 
 post-extract:
 	cd ${WRKSRC}/modules; \

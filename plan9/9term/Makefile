@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/05/09 17:23:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/22 13:01:52 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -16,8 +16,6 @@ OPSYS!= 	uname -s
 .if (${OPSYS} == "NetBSD")
 MANCOMPRESSED=	yes
 .endif
-
-MAN1=		9term.1
 
 NO_WRKSUBDIR=	yes
 MAKE_ENV+=	WRKDIR=${WRKDIR} PKGSRCDIR=${PKGSRCDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:51 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/06/22 13:12:14 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/08/13 06:33:51 asami Exp
 #
 
@@ -10,7 +10,6 @@ MASTER_SITES=   http://www.cs.berkeley.edu/~amc/Par/
 MAINTAINER=	mark@grondar.za
 
 ALL_TARGET=
-MAN1=		par.1
 
 do-configure:
 	(cd ${WRKSRC}; ${CP} protoMakefile Makefile)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/04/24 09:20:37 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/22 13:12:14 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/04/27 00:11:48 asami Exp
 #
 
@@ -20,7 +20,6 @@ DIST_SUBDIR=	unroff
 UNROFF_SITE=	http://www-rn.informatik.uni-bremen.de/software/unroff
 PATCH1=		me-misc-patch
 PATCH2=		misc-patch-2
-MAN1=		unroff.1 unroff-html.1 unroff-html-man.1 unroff-html-ms.1
 
 pre-patch:
 	@${ECHO_MSG} "===>  Applying distribution patches for ${PKGNAME}"

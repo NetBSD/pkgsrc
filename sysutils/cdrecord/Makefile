@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/05/25 08:22:50 frueauf Exp $
+# $NetBSD: Makefile,v 1.15 1998/06/22 13:09:50 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 23:55:31 asami Exp
 #
 
@@ -10,7 +10,6 @@ MAINTAINER=	hubertf@NetBSD.org
 
 RUN_DEPENDS=	mkisofs:../../sysutils/mkisofs
 
-MAN1=		cdrecord.1
 USE_GMAKE=	yes
 
 post-configure:
