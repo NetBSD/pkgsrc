@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/20 12:55:43 taya Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/11/14 23:38:20 taya Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -98,15 +98,11 @@ lib/${MOZILLA}/libxpistub.${SO_SUFFIX}
 lib/${MOZILLA}/LICENSE.txt
 lib/${MOZILLA}/README.txt
 lib/${MOZILLA}/bloaturls.txt
-lib/${MOZILLA}/chrome/US.jar
 lib/${MOZILLA}/chrome/chromelist.txt
 lib/${MOZILLA}/chrome/classic.jar
 lib/${MOZILLA}/chrome/comm.jar
 lib/${MOZILLA}/chrome/embed-sample.jar
 lib/${MOZILLA}/chrome/en-US.jar
-lib/${MOZILLA}/chrome/en-mac.jar
-lib/${MOZILLA}/chrome/en-unix.jar
-lib/${MOZILLA}/chrome/en-win.jar
 lib/${MOZILLA}/chrome/help.jar
 lib/${MOZILLA}/chrome/icons/default/abcardWindow.xpm
 lib/${MOZILLA}/chrome/icons/default/abcardWindow16.xpm
@@ -604,7 +600,9 @@ include/${MOZILLA}/bayesflt/nsBayesianFilterCID.h
 include/${MOZILLA}/browser/nsIBrowserInstance.h
 include/${MOZILLA}/browser/nsIXULBrowserWindow.h
 include/${MOZILLA}/caps/nsIPrincipal.h
+include/${MOZILLA}/caps/nsIPrincipalObsolete.h
 include/${MOZILLA}/caps/nsIScriptSecurityManager.h
+include/${MOZILLA}/caps/nsIScriptSecurityManagerObsolete.h
 include/${MOZILLA}/caps/nsISecurityCheckedComponent.h
 include/${MOZILLA}/caps/nsISignatureVerifier.h
 include/${MOZILLA}/caps/nsJSPrincipals.h
@@ -804,6 +802,7 @@ include/${MOZILLA}/dom/nsDOMCID.h
 include/${MOZILLA}/dom/nsDOMError.h
 include/${MOZILLA}/dom/nsDOMString.h
 include/${MOZILLA}/dom/nsIBaseDOMException.h
+include/${MOZILLA}/dom/nsIBrowserDOMWindow.h
 include/${MOZILLA}/dom/nsIDOM3Document.h
 include/${MOZILLA}/dom/nsIDOM3DocumentEvent.h
 include/${MOZILLA}/dom/nsIDOM3EventTarget.h
@@ -1002,6 +1001,7 @@ include/${MOZILLA}/dom/nsIDOMWindow.h
 include/${MOZILLA}/dom/nsIDOMWindow2.h
 include/${MOZILLA}/dom/nsIDOMWindowCollection.h
 include/${MOZILLA}/dom/nsIDOMWindowInternal.h
+include/${MOZILLA}/dom/nsIDOMWindowUtils.h
 include/${MOZILLA}/dom/nsIDOMXMLDocument.h
 include/${MOZILLA}/dom/nsIDOMXPathEvaluator.h
 include/${MOZILLA}/dom/nsIDOMXPathException.h
@@ -1143,6 +1143,7 @@ include/${MOZILLA}/htmlparser/nsIParserNode.h
 include/${MOZILLA}/htmlparser/nsIParserService.h
 include/${MOZILLA}/htmlparser/nsITokenizer.h
 include/${MOZILLA}/htmlparser/nsParserCIID.h
+include/${MOZILLA}/htmlparser/nsParserDataListener.h
 include/${MOZILLA}/htmlparser/nsParserError.h
 include/${MOZILLA}/htmlparser/nsScannerString.h
 include/${MOZILLA}/htmlparser/nsToken.h
@@ -1846,6 +1847,7 @@ include/${MOZILLA}/necko/nsIURI.h
 include/${MOZILLA}/necko/nsIURIChecker.h
 include/${MOZILLA}/necko/nsIURL.h
 include/${MOZILLA}/necko/nsIURLParser.h
+include/${MOZILLA}/necko/nsIUnicharStreamListener.h
 include/${MOZILLA}/necko/nsIUnicharStreamLoader.h
 include/${MOZILLA}/necko/nsIUploadChannel.h
 include/${MOZILLA}/necko/nsNetCID.h
