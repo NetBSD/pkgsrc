@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/03/13 17:36:57 fredb Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/21 14:47:00 wiz Exp $
 #
 
 DISTNAME=       gnofin-0.8.4
@@ -11,15 +11,16 @@ HOMEPAGE=	http://gnofin.sourceforge.net/
 COMMENT=	Personal checking/savings account management program
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	gnome-libs>=1.4.1.2nb1:../../x11/gnome-libs
-DEPENDS+=	libxml>=1.8.10:../../textproc/libxml
 
+USE_BUILDLINK2=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_LIBINTL=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../textproc/libxml/buildlink2.mk"
+.include "../../x11/gnome-libs/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
