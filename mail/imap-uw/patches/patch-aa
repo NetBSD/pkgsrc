@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.3 1999/02/08 23:31:59 tron Exp $
+$NetBSD: patch-aa,v 1.4 1999/11/25 14:32:43 tron Exp $
 
 --- Makefile.orig	Wed Jan 27 23:40:30 1999
-+++ Makefile	Mon Feb  8 23:50:20 1999
++++ Makefile	Thu Nov 25 15:22:08 1999
+@@ -32,7 +32,7 @@
+ 
+ 
+ # *** TEMPORARY FOR PINE 4.10 BUILD ***
+-GSSDIR=/usr/local
++GSSDIR=$(PREFIX)
+ # *** TEMPORARY FOR PINE 4.10 BUILD ***
+ 
+ # Normal command to build IMAP toolkit:
 @@ -392,7 +392,7 @@
  # *** TEMPORARY FOR PINE 4.10 BUILD ***
  	echo GSSDIR=$(GSSDIR) >> c-client/EXTRASPECIALS
