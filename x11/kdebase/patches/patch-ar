@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.3 1999/07/15 08:46:26 tron Exp $
+
+--- kcontrol/info/info.cpp.orig	Mon Apr 12 11:02:27 1999
++++ kcontrol/info/info.cpp	Wed Jul 14 21:25:26 1999
+@@ -116,6 +116,8 @@ bool GetInfo_XServer_Generic( KTabListBo
+ #include "info_fbsd.cpp"
+ #elif hpux
+ #include "info_hpux.cpp"
++#elif __NetBSD__
++#include "info_netbsd.cpp"
+ #elif __svr4__
+ #include "info_svr4.cpp"
+ #else
