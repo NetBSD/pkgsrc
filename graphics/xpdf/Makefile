@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2001/03/28 11:26:09 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2001/04/03 14:47:16 wiz Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	Display tool for PDF files
 
 DEPENDS+=	freetype-lib-1.3.1:../../graphics/freetype
-DEPENDS+=	ghostscript-fonts-*:../../print/ghostscript-fonts
+DEPENDS+=	ghostscript-fonts-*:../../fonts/ghostscript-fonts
 DEPENDS+=	t1lib>=1.0.1:../../textproc/t1lib
 
 CONFLICTS=	xpdf-crypto-*

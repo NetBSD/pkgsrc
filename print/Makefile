@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2001/02/16 15:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2001/04/03 14:47:15 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -17,7 +17,6 @@ SUBDIR+=	dvidvi
 SUBDIR+=	enscript
 SUBDIR+=	ggv
 SUBDIR+=	ghostscript
-SUBDIR+=	ghostscript-fonts
 SUBDIR+=	ghostscript-nox11
 SUBDIR+=	gnome-print
 SUBDIR+=	gv
