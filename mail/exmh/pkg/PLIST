@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2000/01/13 09:17:43 agc Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/03/06 10:27:53 wulf Exp $
 bin/exmh
 bin/exmh-async
 bin/exmh-bg
 bin/ftp.expect
+lib/${PKGNAME}/PgpDecryptExpect
 lib/${PKGNAME}/addr.tcl
 lib/${PKGNAME}/aliases.tcl
 lib/${PKGNAME}/app-defaults
@@ -36,7 +37,10 @@ lib/${PKGNAME}/fileselect.tcl
 lib/${PKGNAME}/find.tcl
 lib/${PKGNAME}/flag.tcl
 lib/${PKGNAME}/flagdown.bitmap
+lib/${PKGNAME}/flagdown.gif
+lib/${PKGNAME}/flagdown.mask
 lib/${PKGNAME}/flagup.bitmap
+lib/${PKGNAME}/flagup.gif
 lib/${PKGNAME}/flist.tcl
 lib/${PKGNAME}/folder.tcl
 lib/${PKGNAME}/folderNew.tcl
@@ -119,6 +123,8 @@ lib/${PKGNAME}/inc.tcl
 lib/${PKGNAME}/ispell.tcl
 lib/${PKGNAME}/labels.tcl
 lib/${PKGNAME}/linethru.bitmap
+lib/${PKGNAME}/loaderror.ppm
+lib/${PKGNAME}/loading.ppm 
 lib/${PKGNAME}/mailcap.tcl
 lib/${PKGNAME}/main.tcl
 lib/${PKGNAME}/mbempty.bitmap
@@ -175,8 +181,8 @@ lib/${PKGNAME}/widgetText.tcl
 lib/${PKGNAME}/widgets.tcl
 lib/${PKGNAME}/xns.tcl
 lib/${PKGNAME}/xnsgetmail.exp
-lib/${PKGNAME}/flagdown.mask
 lib/${PKGNAME}/flagspool.bitmap
+lib/${PKGNAME}/flagspool.gif
 lib/${PKGNAME}/flagspool.mask
 lib/${PKGNAME}/flagup.mask
 lib/${PKGNAME}/ftp_get.tcl
