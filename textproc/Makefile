@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.283 2005/03/26 16:20:35 minskim Exp $
+# $NetBSD: Makefile,v 1.284 2005/03/30 15:43:21 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -250,6 +250,7 @@ SUBDIR+=	ruby-redcloth
 SUBDIR+=	ruby-rexml
 SUBDIR+=	ruby-rttool
 SUBDIR+=	ruby-xmlparser
+SUBDIR+=	ruby-xmlscan
 SUBDIR+=	sablotron
 SUBDIR+=	saxon
 SUBDIR+=	scew
