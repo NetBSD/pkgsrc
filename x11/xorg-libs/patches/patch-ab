@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/07/29 04:50:56 xtraeme Exp $
+
+--- programs/Xserver/dix/main.c.orig	2003-07-07 01:39:11.000000000 +0000
++++ programs/Xserver/dix/main.c	2003-07-07 01:43:07.000000000 +0000
+@@ -505,7 +505,7 @@
+     /* Leave off the ridBase and ridMask, these must be sent with 
+        connection */
+ 
+-    setup.release = VENDOR_RELEASE;
++    setup.release = NULL;
+     /*
+      * per-server image and bitmap parameters are defined in Xmd.h
+      */

@@ -1,0 +1,71 @@
+/* $NetBSD: host.def,v 1.1.1.1 2004/07/29 04:50:58 xtraeme Exp $ */
+
+#define ProjectRoot @PREFIX@
+
+#define MakeCmd @MAKE@
+#define HasGnuMake	NO
+#define ImakeCmd @IMAKE@
+#define RmanCmd @RMAN@
+#define HtmlIndexCmd @MKHTMLINDEX@
+#define DependDir @GCCMAKEDEP@
+#define DependCmd @MAKEDEPEND@
+#define RevPathCmd @REVPATH@
+
+#define NothingOutsideProjectRoot YES
+
+#define	InstallXdmConfig NO
+#define	InstallXinitConfig NO
+#define	InstallFSConfig NO
+#define	InstallAppDefFiles NO
+#define	BuildServer NO
+#define	BuildFontServer NO
+#define	BuildFonts NO
+#define	Build75DpiFonts NO
+#define	Build100DpiFonts NO
+#define	BuildSpeedoFonts NO
+#define BuildType1Fonts NO
+#define	BuildCIDFonts NO
+#define	BuildCyrillicFonts NO
+#define	BuildLatin2Fonts NO
+#define	BuildPlugin NO
+#define DebuggableLibraries NO
+#define StandardIncludes -I@BLNK@/include
+
+#undef  SharedLibXinerama
+#define SharedLibXinerama      YES
+
+#define NormalLibPSRes	YES
+
+#define LibInstallBuild  YES
+
+#ifndef DriDrivers
+#	define DriDrivers	/* Don't build the drivers here */
+#endif
+
+#define HasXdmAuth		YES
+#define UseInstalledPrograms	YES
+
+#ifndef FreeBSDArchitecture
+#  ifndef BuildThreadStubLibrary
+#	define BuildThreadStubLibrary YES
+#  endif
+#endif
+
+#define BuildRenderLibrary NO
+#define BuildExpatLibrary NO
+#define BuildFreetype2Library NO
+#define BuildFontconfigLibrary NO
+#define BuildXftLibrary NO
+#define BuildXft1Library NO
+#define BuildRandRLibrary NO
+
+#define HasFreetype2 YES
+#define Freetype2Dir @BLNK@
+
+#define HasExpat YES
+#define ExpatDir @BLNK@
+
+#define HasFontconfig YES
+#define FontconfigDir @BLNK@
+
+#define BuildHtmlManPages NO

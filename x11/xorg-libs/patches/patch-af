@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/07/29 04:50:58 xtraeme Exp $
+
+http://www.mail-archive.com/devel@xfree86.org/msg04688.html
+
+--- ./lib/XvMC/hw/i810/Imakefile.orig	2002-10-30 10:42:57.000000000 -0800
++++ ./lib/XvMC/hw/i810/Imakefile
+@@ -20,7 +20,7 @@ ALLOC_DEFINES = -DMALLOC_0_RETURNS_NULL
+       DEFINES = $(ALLOC_DEFINES) -DTRUE=1 -DFALSE=0
+      INCLUDES = -I$(XINCLUDESRC) -I$(INCLUDESRC) -I$(XLIBSRC) -I$(EXTINCSRC) \
+ 		-I$(XF86COMSRC) -I$(XF86OSSRC) -I$(XF86OSSRC)/linux/drm/kernel \
+-		-I$(XF86DRIVERSRC)/i810
++		-I$(XF86DRIVERSRC)/i810 -I$(XF86OSSRC)/shared/drm/kernel
+          SRCS = I810XvMC.c
+          OBJS = I810XvMC.o xf86drm.o xf86drmHash.o xf86drmRandom.o xf86drmSL.o
+      LINTLIBS = $(LINTXLIB)

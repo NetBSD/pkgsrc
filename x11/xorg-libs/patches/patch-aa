@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/07/29 04:50:58 xtraeme Exp $
+
+--- config/cf/Library.tmpl.orig	2004-07-29 01:38:38.000000000 +0200
++++ config/cf/Library.tmpl	2004-07-29 01:39:33.000000000 +0200
+@@ -389,6 +389,10 @@
+  */
+ 
+ #ifndef MakeStringsDependency
++#if defined(UseInstalled) || defined(UseInstalledPrograms)
++#define MakeStringsDependency                                          @@\
++MAKESTRS = @MAKESTRS@
++#else
+ # define MakeStringsDependency						@@\
+ MAKESTRS = $(CONFIGSRC)/util/makestrs					@@\
+ NoCmpScript(HostProgramTargetName($(MAKESTRS)) $(MAKESTRS).Osuf)	@@\
+@@ -398,6 +402,7 @@
+ 									@@\
+ includes:: HostProgramTargetName($(MAKESTRS))
+ #endif
++#endif
+ 
+ #ifndef ToolkitMakeStrings
+ # if defined(LibTookitMakeStringsDependency) && LibTookitMakeStringsDependency
