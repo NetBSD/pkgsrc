@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.19 2002/06/20 20:15:47 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.20 2002/06/22 02:48:35 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -152,6 +152,24 @@ FILES_SUBST+=		MAKE_DIRS=${_MAKE_DIRS:Q}
 FILES_SUBST+=		MAKE_DIRS_PERMS=${MAKE_DIRS_PERMS:Q}
 FILES_SUBST+=		OWN_DIRS=${OWN_DIRS:Q}
 FILES_SUBST+=		OWN_DIRS_PERMS=${OWN_DIRS_PERMS:Q}
+
+# PKG_CREATE_USERGROUP indicates whether the INSTALL script should
+#	automatically add any needed users/groups to the system using
+#	useradd/groupadd.  It is either YES or NO and defaults to YES.
+#
+# PKG_CONFIG indicates whether the INSTALL/DEINSTALL scripts should do
+#	automatic config file and directory handling, or if it should
+#	merely inform the admin of the list of required files and
+#	directories needed to use the package.  It is either YES or NO
+#	and defaults to YES.
+#
+# These values merely set the defaults for INSTALL/DEINSTALL scripts, but
+# they may be overridden by resetting them in the environment.
+#
+PKG_CREATE_USERGROUP?=	YES
+PKG_CONFIG?=		YES
+FILES_SUBST+=		PKG_CREATE_USERGROUP=${PKG_CREATE_USERGROUP}
+FILES_SUBST+=		PKG_CONFIG=${PKG_CONFIG}
 
 # Substitute for various programs used in the DEINSTALL/INSTALL scripts.
 FILES_SUBST+=		AWK=${AWK:Q}
