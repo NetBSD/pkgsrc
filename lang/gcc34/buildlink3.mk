@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/10/30 10:35:34 shannonjr Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/11/08 16:44:34 shannonjr Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCC34_BUILDLINK3_MK:=  ${GCC34_BUILDLINK3_MK}+
@@ -19,9 +19,10 @@ _GNAT1!=${BUILDLINK_PREFIX.gcc34}/bin/gcc -print-prog-name=gnat1
 .    if exists(${_GNAT1})
 BUILDLINK_ENV+=	ADAC=${BUILDLINK_PREFIX.gcc34}/bin/gcc
 .    endif
+BUILDLINK_LIBDIRS.gcc34+=	lib
 _GCC_ARCHDIR!=	${DIRNAME} `${BUILDLINK_PREFIX.gcc34}/bin/gcc --print-libgcc-file-name`
 .    if empty(_GCC_ARCHDIR:M*not_found*)
-BUILDLINK_LIBDIRS.gcc34+=	lib ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34}\///}/
+BUILDLINK_LIBDIRS.gcc34+=	${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34}\///}/
 .      if exists(${_GNAT1})
 BUILDLINK_LIBDIRS.gcc34+=	${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34}\///}/adalib
 .      endif
