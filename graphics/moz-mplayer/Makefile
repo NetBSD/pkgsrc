@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/08/28 20:05:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/01/01 19:03:20 salo Exp $
 #
 
-DISTNAME=	mplayerplug-in-0.80
-PKGNAME=	moz-mplayer-0.80
+DISTNAME=	mplayerplug-in-1.0
+PKGNAME=	moz-mplayer-1.0
 WRKSRC=         ${WRKDIR}/mplayerplug-in
 CATEGORIES=	graphics www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mplayerplug-in/}
@@ -11,11 +11,11 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://mplayerplug-in.sourceforge.net/
 COMMENT=	Embedded video player for Mozilla
 
-DEPENDS+=	mplayer>=0.90rc14:../../graphics/mplayer
-DEPENDS+=	mozilla-[0-9]*:../../www/mozilla
+DEPENDS+=	mplayer>=0.92:../../graphics/mplayer
 
 USE_BUILDLINK2=	YES
 USE_X11=	YES
+GNU_CONFIGURE=	YES
 
 MOZ_PLUGDIR=    ${PREFIX}/lib/mozilla/plugins
 
