@@ -16,10 +16,10 @@
   #define _PATH_CVT       "/etc/ftpd/ftpconversions"
   #define _PATH_PRIVATE   "/etc/ftpd/ftpgroups"
   #else
-! #define _PATH_FTPUSERS  "/usr/pkg/etc/ftpusers"
-! #define _PATH_FTPACCESS "/usr/pkg/etc/ftpaccess"
-! #define _PATH_CVT       "/usr/pkg/etc/ftpconversions"
-! #define _PATH_PRIVATE   "/usr/pkg/etc/ftpgroups"
+! #define _PATH_FTPUSERS  PREFIX "/etc/ftpusers"
+! #define _PATH_FTPACCESS PREFIX "/etc/ftpaccess"
+! #define _PATH_CVT       PREFIX "/etc/ftpconversions"
+! #define _PATH_PRIVATE   PREFIX "/etc/ftpgroups"
   #endif
   #endif
   
@@ -39,10 +39,10 @@
   #endif
   #else
   #ifndef _PATH_PIDNAMES
-! #define _PATH_PIDNAMES  "/usr/pkg/lib/ftpd/pids/%s"
+! #define _PATH_PIDNAMES  "/var/run/%s"
   #endif
   #ifndef _PATH_XFERLOG
-! #define _PATH_XFERLOG   "/usr/pkg/logs/xferlog"
+! #define _PATH_XFERLOG   "/var/logs/xferlog"
   #endif
   #endif
   
@@ -59,7 +59,7 @@
   #ifdef USE_ETC_FTPD
   #define _PATH_FTPHOSTS  "/etc/ftpd/ftphosts"
   #else
-! #define _PATH_FTPHOSTS  "/usr/pkg/etc/ftphosts"
+! #define _PATH_FTPHOSTS  PREFIX "/etc/ftphosts"
   #endif
   #endif
   #endif
