@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/01/04 13:08:47 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1999/01/17 00:56:43 frueauf Exp $
 #
 
 DISTNAME=	gtksql-0.2
@@ -11,6 +11,9 @@ HOMEPAGE=	http://www.multimania.com/bbrox/GtkSQL/
 
 DEPENDS+=	gtk+-1.0.6:../../x11/gtk10
 DEPENDS+=	postgresql-6.4.2:../../databases/postgresql
+
+# restriction inherit from postgresql
+NOT_FOR_ARCHS=	alpha mips
 
 USE_X11=	yes
 
