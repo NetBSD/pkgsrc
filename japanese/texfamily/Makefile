@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2002/03/13 17:37:20 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2002/03/13 20:12:12 fredb Exp $
 
-DISTNAME=	TeXfamily-1.2.1nb1
-PKGREVISION=	1
+DISTNAME=	TeXfamily-1.2.1
+PKGREVISION=	2
 CATEGORIES=	japanese
 MASTER_SITES=	ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2/ \
 		ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2.1/ \
@@ -27,7 +27,7 @@ PATCH_DIST_ARGS= -d ${WRKSRC}/texk/web2c/ptex-src-2.1.10
 MAINTAINER=	kei@netbsd.org
 COMMENT=	TeXfamily (pTeX, JTeX, MuLTeX) - executables
 
-DEPENDS+=	TeXfamily-share>=1.2.1nb1:../../japanese/texfamily-share
+DEPENDS+=	TeXfamily-share>=1.2.1nb2:../../japanese/texfamily-share
 DEPENDS+=	ja-vflib-lib-[0-9]*:../../japanese/vflib-lib
 
 DIST_SUBDIR=	TeXfamily
