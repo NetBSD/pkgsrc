@@ -1,12 +1,10 @@
-$NetBSD: patch-aa,v 1.7 1999/02/18 11:50:07 bouyer Exp $
---- Makefile.in.orig	Sat Feb  6 22:51:43 1999
-+++ Makefile.in	Thu Feb 11 14:29:47 1999
-@@ -23,12 +23,11 @@
- 
- BASEDIR= @prefix@
- BINDIR = @bindir@
--# we don't use sbindir because we want full compatibility with
--# the previous releases of Samba
+$NetBSD: patch-aa,v 1.8 1999/08/10 16:38:09 bouyer Exp $
+
+--- Makefile.in.orig	Tue Jul 20 21:24:31 1999
++++ Makefile.in	Sun Aug  8 21:31:11 1999
+@@ -26,8 +26,9 @@
+ # we don't use sbindir because we want full compatibility with
+ # the previous releases of Samba
 -SBINDIR = @bindir@
 +SBINDIR = @sbindir@
  LIBDIR = @libdir@
@@ -16,9 +14,7 @@ $NetBSD: patch-aa,v 1.7 1999/02/18 11:50:07 bouyer Exp $
 +LOGDIR?= $(BASEDIR)/log
  
  # The permissions to give the executables
- INSTALLPERMS = 0755
-@@ -36,12 +35,12 @@
- # set these to where to find various files
+@@ -37,10 +38,10 @@
  # These can be overridden by command line switches (see smbd(8))
  # or in smb.conf (see smb.conf(5))
 -SMBLOGFILE = $(VARDIR)/log.smb
@@ -35,9 +31,7 @@ $NetBSD: patch-aa,v 1.7 1999/02/18 11:50:07 bouyer Exp $
 +PASSWD_PROGRAM = /usr/bin/passwd
  # This is where smbpasswd et al go
  PRIVATEDIR = @privatedir@
- 
-@@ -430,8 +429,8 @@
- 	$(BASEDIR) $(SBINDIR) $(BINDIR) $(LIBDIR) $(VARDIR) $(CODEPAGEDIR)
+@@ -443,6 +444,6 @@
  
  installbin: all installdirs
 -	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
@@ -46,9 +40,7 @@ $NetBSD: patch-aa,v 1.7 1999/02/18 11:50:07 bouyer Exp $
 +	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(ETCDIR) $(LOGDIR) $(PROGS)
  
  installscripts: installdirs
- 	@$(SHELL) $(srcdir)/script/installscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
-@@ -456,8 +455,8 @@
- 	@$(SHELL) $(srcdir)/script/uninstallman.sh $(MANDIR) $(srcdir)
+@@ -469,6 +470,6 @@
  
  uninstallbin:
 -	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(SBINDIR) $(LIBDIR) $(VARDIR) $(SPROGS)
@@ -57,4 +49,3 @@ $NetBSD: patch-aa,v 1.7 1999/02/18 11:50:07 bouyer Exp $
 +	@$(SHELL) $(srcdir)/script/uninstallbin.sh $(INSTALLPERMS) $(BASEDIR) $(BINDIR) $(ETCDIR) $(LOGDIR) $(PROGS)
  
  uninstallscripts:
- 	@$(SHELL) $(srcdir)/script/uninstallscripts.sh $(INSTALLPERMS) $(BINDIR) $(SCRIPTS)
