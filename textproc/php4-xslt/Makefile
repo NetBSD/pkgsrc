@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/01 03:48:14 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2002/01/01 06:46:39 jlam Exp $
 
 .include "../../www/php4/Makefile.module"
 
@@ -18,6 +18,13 @@ CONFIGURE_ARGS+=	--with-expat-dir=shared,${BUILDLINK_DIR}
 CONFIGURE_ENV+=		ac_cv_lib_c_iconv_open=yes
 CONFIGURE_ENV+=		XSLT_SHARED_LIBADD="-liconv"
 LIBS+=			-liconv
+
+PLIST_SRC+=		${.CURDIR}/PLIST.extras
+DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
+
+post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} README.XSLT-BACKENDS ${DOCDIR}
 
 .include "../../textproc/sablotron/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
