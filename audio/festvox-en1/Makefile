@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/10/11 14:55:22 proff Exp $
+# $NetBSD: Makefile,v 1.6 1999/10/11 16:29:59 proff Exp $
 
 DISTNAME=	festvox_en1
 PKGNAME=	festvox-en1-1.4.0
@@ -29,7 +29,7 @@ post-extract:
 do-install:
 	cd ${WRKSRC} && pax -r -w * ${FHOME}
 #ugh
-	ln -fs ../../../../../mbrola/voices/en1/en1 ${MBROLA}
+	ln -fs ../../../../../mbrola/voices/en1 ${MBROLA}
 	ln -fs ../../../../../mbrola/voices/en1/en1mrpa ${MBROLA}
 
 .include "../../mk/bsd.pkg.mk"
