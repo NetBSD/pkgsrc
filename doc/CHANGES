@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2992 2003/08/05 07:23:31 wulf Exp $
+$NetBSD: CHANGES,v 1.2993 2003/08/05 07:26:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3201,3 +3201,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added libdvdplay-1.0.1 [wulf 2003-08-05]
 	Updated bogofilter to 0.14.2 [itojun 2003-08-05]
 	Added libmpeg2-20030612 [wulf 2003-08-05]
+	Added dvipng-0.5 [wiz 2003-08-05]
