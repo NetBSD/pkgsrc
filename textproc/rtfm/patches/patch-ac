@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/01/17 23:35:42 hubertf Exp $
+
+--- Makefile.orig	Tue Jan 18 06:33:15 2000
++++ Makefile
+@@ -4,7 +4,7 @@
+ 	${CC} -o rtfm rtfm.c ${CFLAGS} ${LDFLAGS}
+ 
+ install: rtfm
+-	install -c -s -o root -g wheel -m 0755 rtfm /usr/local/bin
++	install -c -s -o root -g wheel -m 0755 rtfm ${PREFIX}/bin
+ 	install -c -o root -g wheel -m 0644 rtfm.1 ${PREFIX}/man/man1
+ 
+ clean:
