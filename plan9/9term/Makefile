@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/05/15 11:54:42 agc Exp $
+# $NetBSD: Makefile,v 1.23 2000/08/25 02:33:44 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -19,6 +19,6 @@ NOT_FOR_PLATFORM=	*-*-alpha	#LP64 Problems
 
 MANCOMPRESSED=		yes
 NO_WRKSUBDIR=		yes
-MAKE_ENV+=		WRKDIR=${WRKDIR} PKGSRCDIR=${BUILD_ROOT}
+MAKE_ENV+=		WRKDIR=${WRKDIR} PKGSRCDIR=${PKGSRCDIR}
 
 .include "../../mk/bsd.pkg.mk"
