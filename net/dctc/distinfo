@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.9 2002/12/17 19:12:28 wiz Exp $
+$NetBSD: distinfo,v 1.10 2003/01/28 13:41:17 wiz Exp $
 
-SHA1 (dctc-0.83.9.tar.gz) = 88028f29e2587eba8380623a620d4024796827c4
-Size (dctc-0.83.9.tar.gz) = 255119 bytes
+SHA1 (dctc-0.84.1.tar.gz) = a58d95079d0420c365d87247581980dc6ed7b312
+Size (dctc-0.84.1.tar.gz) = 373521 bytes
 SHA1 (patch-aa) = 68a3ca5f8b7e28717e1a294456be56c846f3c521
 SHA1 (patch-ae) = 40e4f5c3929beb1b118a7a8180cdf93a2083e084
 SHA1 (patch-ag) = 61f8cc1cb35312de15dbc43e0ce7d185b7cda88e
