@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/06/20 19:57:48 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2001/08/06 17:44:45 pooka Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -7,7 +7,7 @@ PKGNAME=		vim-xaw-${VIM_VERSION}
 COMMENT=		Vim editor (vi clone) with X11 Athena GUI
 
 DEPENDS+=		vim-share-${VIM_VERSION}:../vim-share
-CONFLICTS=		vim-[0-9]* vim-gtk-*
+CONFLICTS+=		vim-[0-9]* vim-gtk-*
 
 USE_X11=		yes
 USE_XAW=		yes
