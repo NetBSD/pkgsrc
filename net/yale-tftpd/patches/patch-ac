@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/07/30 19:43:49 nra Exp $
+$NetBSD: patch-ac,v 1.2 2002/04/23 15:27:16 seb Exp $
 
 --- tftpd.8.orig	Wed Oct  5 06:18:21 1994
 +++ tftpd.8
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/07/30 19:43:49 nra Exp $
  line,
  .B tftpd
 -will use that, otherwise the default file is ``/usr/local/etc/tftpd.conf''.
-+will use that, otherwise the default file is ``@PREFIX@/etc/tftpd.conf''.
++will use that, otherwise the default file is ``@ETCDIR@/tftpd.conf''.
  .sp
  Configuration commands are:
  .IP defaultDirectory
@@ -26,7 +26,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/07/30 19:43:49 nra Exp $
  .SH "FILES"
 -.ta \w'/usr/local/etc/tftpd.conf~~'u
 -/usr/local/etc/tftpd.conf	default tftpd configuration file
-+.ta \w'@PREFIX@/etc/tftpd.conf~~'u
-+@PREFIX@/etc/tftpd.conf	default tftpd configuration file
++.ta \w'@ETCDIRX@/tftpd.conf~~'u
++@ETCDIR@/tftpd.conf	default tftpd configuration file
  .br
  /etc/inetd.conf	inetd configuration file
