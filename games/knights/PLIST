@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/13 21:32:50 jlam Exp $
+bin/knights
+share/doc/kde/HTML/en/knights/common
+share/doc/kde/HTML/en/knights/configure-02.png
+share/doc/kde/HTML/en/knights/configure-1.png
+share/doc/kde/HTML/en/knights/configure-3.png
+share/doc/kde/HTML/en/knights/index.cache.bz2
+share/doc/kde/HTML/en/knights/index.docbook
+share/doc/kde/HTML/en/knights/knights-01.png
+share/doc/kde/HTML/en/knights/knights-02.png
+share/kde/applnk/Games/Board/knights.desktop
+share/kde/apps/knights/icon-display.png
+share/kde/apps/knights/splash.png
+share/kde/apps/knights/themes/KTDefault.tar.gz
+share/kde/apps/knights/themes/KTGreen_Marble.tar.gz
+share/kde/icons/hicolor/16x16/apps/knights.png
+share/kde/icons/hicolor/32x32/apps/knights.png
+share/kde/icons/hicolor/48x48/apps/knights.png
+share/kde/icons/hicolor/64x64/apps/knights.png
+share/kde/icons/locolor/16x16/apps/knights.png
+share/kde/icons/locolor/32x32/apps/knights.png
+share/kde/icons/locolor/48x48/apps/knights.png
+share/kde/icons/locolor/64x64/apps/knights.png
+@dirrm share/kde/apps/knights/themes
+@dirrm share/kde/apps/knights
+@dirrm share/doc/kde/HTML/en/knights
