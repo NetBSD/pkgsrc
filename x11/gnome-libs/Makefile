@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2000/11/27 10:51:08 itojun Exp $
+# $NetBSD: Makefile,v 1.55 2000/11/29 02:37:43 mycroft Exp $
 
 DISTNAME=		gnome-libs-1.2.8
 CATEGORIES=		x11 gnome
@@ -32,23 +32,10 @@ CPPFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=       	-L${LOCALBASE}/lib
 
 LOCALSTATEDIR=		/var/gnome
-PLIST_SRC=		${WRKDIR}/PLIST
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE} \
 			LOCALSTATEDIR=${LOCALSTATEDIR}
 
 .include "../../mk/bsd.prefs.mk"
-
-# XXX This is a kludge to get libgnome to work on a.out systems.
-#
-.if (${OBJECT_FMT} == a.out)
-LIBGNOME_LTCOMPILE_FLAGS=	-static
-LIBGNOME_LTLINK_FLAGS=		-all-static
-.else
-LIBGNOME_LTCOMPILE_FLAGS=
-LIBGNOME_LTLINK_FLAGS=
-.endif
-MAKE_ENV+=		LIBGNOME_LTCOMPILE_FLAGS="${LIBGNOME_LTCOMPILE_FLAGS}"
-MAKE_ENV+=		LIBGNOME_LTLINK_FLAGS="${LIBGNOME_LTLINK_FLAGS}"
 
 .if ${OPSYS} == "SunOS"
 DEPENDS+=		db-*:../../databases/db
@@ -75,8 +62,6 @@ pre-build:
 post-install:
 	${MKDIR} ${PREFIX}/etc/CORBA/servers
 	${TOUCH} ${PREFIX}/etc/CORBA/servers/.directory
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	cd ${PREFIX}; ${FIND} lib -name 'libgnome.so.*.*' >>${PLIST_SRC}
 	${MKDIR} ${LOCALSTATEDIR}
 	${TEST} ${PREFIX} = ${LOCALBASE} || \
 	${LN} -fs ${PREFIX}/share/aclocal/libart.m4 \

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2000/11/07 04:36:37 rh Exp $
+@comment $NetBSD: PLIST,v 1.33 2000/11/29 02:37:43 mycroft Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -183,6 +183,7 @@ lib/libart_lgpl.la
 lib/libart_lgpl.so.4.0
 lib/libgnome.a
 lib/libgnome.la
+lib/libgnome.so.35.12
 lib/libgnomesupport.a
 lib/libgnomesupport.la
 lib/libgnomesupport.so.0.0
