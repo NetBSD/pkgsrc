@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/07/15 16:40:45 drochner Exp $
+
+--- build.py.orig	2003-07-05 12:44:43.000000000 +0200
++++ build.py	2003-07-13 17:51:30.000000000 +0200
+@@ -259,8 +259,9 @@
+     global pyFullVers, pyVersNr
+ 
+     pyFullVers = string.split(sys.version)[0]
++    pyFullVersn = string.replace(pyFullVers, 'p', '.');
+ 
+-    vl = string.split(re.findall("[0-9.]*",pyFullVers)[0],".")
++    vl = string.split(re.findall("[0-9.]*",pyFullVersn)[0],".")
+     major = vl[0]
+     minor = vl[1]
+ 
+@@ -269,7 +270,7 @@
+     except IndexError:
+         bug = 0
+ 
+-    pyVers = major + "." + minor
++    pyVers = sys.version[0:3]
+     pyVersNr = (int(major) << 16) + (int(minor) << 8) + int(bug)
+ 
+     global platMake, platCopy, platPySiteDir, platPyIncDir, platPyLib
+@@ -683,7 +684,7 @@
+     print "Type 'no' to decline the terms of the license."
+     print
+ 
+-    while 1:
++    while 0:
+         try:
+             resp = raw_input("Do you accept the terms of the license? ")
+         except:
