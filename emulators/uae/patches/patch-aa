@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/06/19 14:38:08 tron Exp $
+
+--- src/Makefile.in.orig	Tue Dec 29 00:50:26 1998
++++ src/Makefile.in	Sat Jun 19 15:25:48 1999
+@@ -10,7 +10,7 @@
+ CFLAGS    = @CFLAGS@ -D__inline__=@ac_cv_c_inline@
+ X_CFLAGS  = @X_CFLAGS@ @GTK_CFLAGS@ -DSHM_SUPPORT_LINKS=@SHM_SUPPORT_LINKS@
+ TARGET    = @TARGET@
+-LIBRARIES = @LIBRARIES@ @LIBS@ @GTK_LIBS@
++LIBRARIES = @LIBRARIES@ @LIBS@ @GTK_LIBS@ -lossaudio
+ MATHLIB   = @MATHLIB@
+ RESOBJS   = @RESOBJS@
+ 
