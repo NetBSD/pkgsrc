@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/02/14 17:21:43 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2004/03/02 13:54:03 seb Exp $
 #
 
 DISTNAME=		librep-${REP_VERS}
@@ -25,6 +25,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-gmp
 CONFIGURE_ARGS+=	--enable-static
+
+CONFIG_STATUS_OVERRIDE=	# empty
 
 USE_MAKEINFO=	YES
 INFO_FILES=	librep.info
