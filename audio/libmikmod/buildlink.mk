@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/02 05:33:57 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/20 01:54:33 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libmikmod.
 #
@@ -20,7 +20,7 @@ LIBMIKMOD_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.libmikmod?=	libmikmod>=3.1.9
 DEPENDS+=	${BUILDLINK_DEPENDS.libmikmod}:../../audio/libmikmod
 
-BUILDLINK_PREFIX.libmikmod=	${LOCALBASE}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.libmikmod=libmikmod
 BUILDLINK_FILES.libmikmod=	include/mikmod.h
 BUILDLINK_FILES.libmikmod+=	lib/libmikmod.*
 
@@ -28,8 +28,10 @@ BUILDLINK_TARGETS.libmikmod=	libmikmod-buildlink
 BUILDLINK_TARGETS.libmikmod+=	libmikmod-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.libmikmod}
 
-BUILDLINK_CONFIG.libmikmod=		${LOCALBASE}/bin/libmikmod-config
-BUILDLINK_CONFIG_WRAPPER.libmikmod=	${BUILDLINK_DIR}/bin/libmikmod-config
+BUILDLINK_CONFIG.libmikmod=	\
+			${BUILDLINK_PREFIX.libmikmod}/bin/libmikmod-config
+BUILDLINK_CONFIG_WRAPPER.libmikmod=	\
+			${BUILDLINK_DIR}/bin/libmikmod-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
 LIBMIKMOD_CONFIG?=	${BUILDLINK_CONFIG_WRAPPER.libmikmod}

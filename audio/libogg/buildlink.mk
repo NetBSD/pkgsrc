@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:10 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/20 01:54:33 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libogg.
 #
@@ -20,7 +20,7 @@ LIGOGG_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.libogg?=	libogg>=1.0.0.4
 DEPENDS+=	${BUILDLINK_DEPENDS.libogg}:../../audio/libogg
 
-BUILDLINK_PREFIX.libogg=	${LOCALBASE}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.libogg=libogg
 BUILDLINK_FILES.libogg=		include/ogg/config_types.h
 BUILDLINK_FILES.libogg+=	include/ogg/ogg.h
 BUILDLINK_FILES.libogg+=	include/ogg/os_types.h

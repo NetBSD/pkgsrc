@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.13 2001/07/01 22:59:18 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.14 2001/07/20 01:54:40 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
@@ -33,11 +33,11 @@ _NEED_GNU_READLINE=	YES
 
 .if ${_NEED_GNU_READLINE} == "YES"
 DEPENDS+=			${BUILDLINK_DEPENDS.readline}:../../devel/readline
-BUILDLINK_PREFIX.readline=	${LOCALBASE}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.readline=readline
 BUILDLINK_FILES.readline=	include/readline/*
 BUILDLINK_FILES.readline+=	lib/libreadline.*
 
-BUILDLINK_PREFIX.history=	${LOCALBASE}
+BUILDLINK_PREFIX.history=	${BUILDLINK_PREFIX.readline}
 BUILDLINK_FILES.history+=	lib/libhistory.*
 .else
 .if exists(/usr/include/readline.h)

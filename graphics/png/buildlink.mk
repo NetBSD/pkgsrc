@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/07/01 22:59:25 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/07/20 01:54:46 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libpng.
 #
@@ -20,7 +20,7 @@ PNG_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.png?=	png>=1.0.11
 DEPENDS+=		${BUILDLINK_DEPENDS.png}:../../graphics/png
 
-BUILDLINK_PREFIX.png=	${LOCALBASE}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.png=png
 BUILDLINK_FILES.png=	include/png.h
 BUILDLINK_FILES.png+=	include/pngconf.h
 BUILDLINK_FILES.png+=	lib/libpng.*

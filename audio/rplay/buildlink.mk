@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:11 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/20 01:54:34 jlam Exp $
 #
 # This Makefile fragment is included by packages that use rplay.
 #
@@ -20,7 +20,7 @@ RPLAY_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.rplay?=	rplay>=3.3.2
 DEPENDS+=	${BUILDLINK_DEPENDS.rplay}:../../audio/rplay
 
-BUILDLINK_PREFIX.rplay=	${LOCALBASE}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.rplay=rplay
 BUILDLINK_FILES.rplay=	include/rplay.h
 BUILDLINK_FILES.rplay+=	lib/librplay.*
 

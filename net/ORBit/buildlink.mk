@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/02 05:34:00 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/20 01:54:49 jlam Exp $
 #
 # This Makefile fragment is included by packages that use ORBit.
 #
@@ -20,7 +20,7 @@ ORBIT_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.ORBit?=	ORBit>=0.5.1
 DEPENDS+=	${BUILDLINK_DEPENDS.ORBit}:../../net/ORBit
 
-BUILDLINK_PREFIX.ORBit=	${LOCALBASE}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.ORBit=ORBit
 BUILDLINK_FILES.ORBit=	include/IIOP/*
 BUILDLINK_FILES.ORBit+=	include/ORBitservices/*
 BUILDLINK_FILES.ORBit+=	include/ORBitutil/*
@@ -45,11 +45,11 @@ BUILDLINK_TARGETS.ORBit+=	libIDL-buildlink-config-wrapper
 BUILDLINK_TARGETS.ORBit+=	orbit-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.ORBit}
 
-BUILDLINK_CONFIG.libIDL=		${LOCALBASE}/bin/libIDL-config
-BUILDLINK_CONFIG_WRAPPER.libIDL=	${BUILDLINK_DIR}/bin/libIDL-config
+BUILDLINK_CONFIG.libIDL=	${BUILDLINK_PREFIX.ORBit}/bin/libIDL-config
+BUILDLINK_CONFIG_WRAPPER.libIDL=${BUILDLINK_DIR}/bin/libIDL-config
 
-BUILDLINK_CONFIG.orbit=			${LOCALBASE}/bin/orbit-config
-BUILDLINK_CONFIG_WRAPPER.orbit=		${BUILDLINK_DIR}/bin/orbit-config
+BUILDLINK_CONFIG.orbit=		${BUILDLINK_PREFIX.ORBit}/bin/orbit-config
+BUILDLINK_CONFIG_WRAPPER.orbit=	${BUILDLINK_DIR}/bin/orbit-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
 LIBIDL_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.libIDL}

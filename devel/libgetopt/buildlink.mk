@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.10 2001/07/01 22:59:16 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.11 2001/07/20 01:54:38 jlam Exp $
 #
 # This Makefile fragment is included by packages that use getopt_long().
 #
@@ -23,7 +23,7 @@ BUILDLINK_PREFIX.getopt=	/usr
 BUILDLINK_FILES.getopt=		include/getopt.h
 .else
 DEPENDS+=	${BUILDLINK_DEPENDS.getopt}:../../devel/libgetopt
-BUILDLINK_PREFIX.getopt=	${LOCALBASE}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.getopt=libgetopt
 BUILDLINK_FILES.getopt=		include/getopt.h
 BUILDLINK_FILES.getopt+=	lib/libgetopt.*
 BUILDLINK_FILES.getopt+=	lib/libgetopt_pic.a

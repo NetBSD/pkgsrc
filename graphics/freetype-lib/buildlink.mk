@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/01 22:59:22 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/07/20 01:54:43 jlam Exp $
 #
 # This Makefile fragment is included by packages that use freetype.
 #
@@ -20,7 +20,7 @@ FREETYPE_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.freetype?=	freetype-lib>=1.3.1
 DEPENDS+=	${BUILDLINK_DEPENDS.freetype}:../../graphics/freetype-lib
 
-BUILDLINK_PREFIX.freetype=	${LOCALBASE}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.freetype=freetype-lib
 BUILDLINK_FILES.freetype=	include/freetype/*
 BUILDLINK_FILES.freetype+=	lib/libttf.*
 

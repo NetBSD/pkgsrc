@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:26 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:48 jlam Exp $
 #
 # This Makefile fragment is included by packages that use tcl.
 #
@@ -20,7 +20,7 @@ TCL_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.tcl?=	tcl>=8.3.2
 DEPENDS+=		${BUILDLINK_DEPENDS.tcl}:../../lang/tcl
 
-BUILDLINK_PREFIX.tcl=	${LOCALBASE}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.tcl=tcl
 BUILDLINK_FILES.tcl=	include/tcl.h
 BUILDLINK_FILES.tcl+=	include/tclDecls.h
 BUILDLINK_FILES.tcl+=	include/tcl/*/*.h
@@ -40,9 +40,9 @@ tclConfig-buildlink:
 	if [ ! -f $${cookie} ]; then					\
 		file=lib/tclConfig.sh;					\
 		${ECHO_MSG} "Creating script ${BUILDLINK_DIR}/$${file}."; \
-		${SED}	-e "s|-L${LOCALBASE}/lib|-L${BUILDLINK_DIR}/lib|g" \
-			-e "s|${LOCALBASE}/lib/libtclstub|${BUILDLINK_DIR}/lib/libtclstub|g" \
-			${LOCALBASE}/$${file} > ${BUILDLINK_DIR}/$${file}; \
+		${SED}	-e "s|-L${BUILDLINK_PREFIX.tcl}/lib|-L${BUILDLINK_DIR}/lib|g" \
+			-e "s|${BUILDLINK_PREFIX.tcl}/lib/libtclstub|${BUILDLINK_DIR}/lib/libtclstub|g" \
+			${BUILDLINK_PREFIX.tcl}/$${file} > ${BUILDLINK_DIR}/$${file}; \
 		${CHMOD} +x ${BUILDLINK_DIR}/$${file};			\
 		${TOUCH} ${TOUCH_FLAGS} $${cookie};			\
 	fi

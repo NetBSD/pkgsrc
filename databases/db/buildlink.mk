@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/01 22:59:13 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:35 jlam Exp $
 #
 # This Makefile fragment is included by packages that use db.
 #
@@ -20,7 +20,7 @@ DB_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.db?=	db>=2.7.3
 DEPENDS+=		${BUILDLINK_DEPENDS.db}:../../databases/db
 
-BUILDLINK_PREFIX.db=	${LOCALBASE}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.db=db
 BUILDLINK_FILES.db=	include/db2/*
 BUILDLINK_FILES.db+=	lib/libdb2.*
 

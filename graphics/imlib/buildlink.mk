@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/02 05:33:59 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/20 01:54:44 jlam Exp $
 #
 # This Makefile fragment is included by packages that use imlib.
 #
@@ -20,7 +20,7 @@ IMLIB_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.imlib?=	imlib>=1.9.8
 DEPENDS+=	${BUILDLINK_DEPENDS.imlib}:../../graphics/imlib
 
-BUILDLINK_PREFIX.imlib=	${X11PREFIX}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.imlib=imlib
 BUILDLINK_FILES.imlib=	include/gdk_imlib.h
 BUILDLINK_FILES.imlib+=	include/gdk_imlib_private.h
 BUILDLINK_FILES.imlib+=	include/gdk_imlib_types.h
@@ -41,7 +41,7 @@ BUILDLINK_TARGETS.imlib=	imlib-buildlink
 BUILDLINK_TARGETS.imlib+=	imlib-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.imlib}
 
-BUILDLINK_CONFIG.imlib=		${X11PREFIX}/bin/imlib-config
+BUILDLINK_CONFIG.imlib=		${BUILDLINK_PREFIX.imlib}/bin/imlib-config
 BUILDLINK_CONFIG_WRAPPER.imlib=	${BUILDLINK_DIR}/bin/imlib-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)

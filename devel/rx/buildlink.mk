@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/07/01 22:59:19 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/07/20 01:54:41 jlam Exp $
 #
 # This Makefile fragment is included by packages that use rx.
 #
@@ -20,7 +20,7 @@ RX_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.rx?=	rx>=1.5
 DEPENDS+=	${BUILDLINK_DEPENDS.rx}:../../devel/rx
 
-BUILDLINK_PREFIX.rx=	${LOCALBASE}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.rx=rx
 BUILDLINK_FILES.rx=	include/rxposix.h
 BUILDLINK_FILES.rx+=	lib/librx.*
 
