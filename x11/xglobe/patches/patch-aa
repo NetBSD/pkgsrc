@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/01/05 01:17:48 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 1999/01/07 14:33:07 hubertf Exp $
 
 --- Makefile.orig	Thu Dec 10 21:33:10 1998
 +++ Makefile	Fri Jan  1 19:43:28 1999
@@ -34,3 +34,16 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/01/05 01:17:48 hubertf Exp $
  
  ####### compile and link options
  
+@@ -32,9 +32,9 @@
+ 
+ INCLUDE_DIRS = -I$(QT_INCLUDE_DIR) -I$(X11_INCLUDE_DIR)
+ 
+-LIB_DIRS     = -L$(QT_LIB_DIR) -L$(X11_LIB_DIR)
++LIB_DIRS     = -L$(QT_LIB_DIR) -L$(X11_LIB_DIR) -Wl,-R$(X11_LIB_DIR)
+ 
+-LIBS         = -lX11 -lqt -lm
++LIBS         = -lqt -lm -ltermcap -lXext -lX11
+ 
+ ####### Target
+ 
+
