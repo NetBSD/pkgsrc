@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.19 2004/03/05 19:42:09 jlam Exp $
+#	$NetBSD: createbuildlink,v 1.20 2004/03/06 15:11:22 jlam Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,8 +40,9 @@
 # and PLIST
 #
 
-REV=`echo '$Revision: 1.19 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.20 $' | sed 's/\\$//g'`
 tmpdir=/tmp
+spacesintab=8
 makefile=Makefile
 sedrules=$tmpdir/sedrules.buildlink.$$
 PLIST=PLIST
@@ -151,9 +152,20 @@ EOF
 
 else	# buildlink 3
 
+gap="	"
+for i in 1 2 3; do
+	n=`expr $i \* $spacesintab`
+	if [ ${#PKGUPPER} -ge $n ]; then
+		gap="	$gap"
+	fi
+done
+
 sed -f $sedrules <<EOF
-BUILDLINK_DEPTH:=		\${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=${gap}\${BUILDLINK_DEPTH}+
 ${PKGUPPER}_BUILDLINK3_MK:=	\${${PKGUPPER}_BUILDLINK3_MK}+
+EOF
+
+sed -f $sedrules <<EOF
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	${PKGNOVER}
@@ -184,7 +196,6 @@ fi
 
 sed -f $sedrules <<EOF
 BUILDLINK_PKGSRCDIR.$PKGNOVER?=	../../$CURDIR
-
 EOF
 
 ##
@@ -192,6 +203,7 @@ EOF
 ##
 if [ $blver = 2 ]; then
 sed -f $sedrules <<EOF
+
 EVAL_PREFIX+=	BUILDLINK_PREFIX.$PKGNOVER=$PKGNOVER
 BUILDLINK_PREFIX.${PKGNOVER}_DEFAULT=	\${$PREFIX}
 EOF
@@ -220,13 +232,13 @@ for i in \
 	echo "BUILDLINK_FILES.$PKGNOVER+=	$i"
 done
 
-echo ""
-
 fi	## end of buildlink2-only part
 
 ##
 ## buildlinked dependencies
 ##
+grep -l '^.include.*\.\.\/.*\/.*/buildlink[23].mk\"' $makefile $commons \
+	>/dev/null 2>&1 && echo ""	# Be careful not to print duplicate \n
 for i in $makefile $commons ; do
 	[ ! -f $i ] || grep '^.include.*\.\.\/.*\/.*/buildlink[23].mk\"' $i |
 		sed "s/buildlink$otherver/buildlink$blver/"		|
