@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3001 2003/08/05 23:49:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.3002 2003/08/06 12:27:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3211,3 +3211,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rocksndiamonds to 3.0.0 [adam 2003-08-05]
 	Updated ns-remote to 1.8 [abs 2003-08-05]
 	Updated libbonoboui to 2.2.4 [jmmv 2003-08-05]
+	Updated grhino to 0.7.1 [wiz 2003-08-06]
