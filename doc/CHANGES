@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6951 2004/08/19 16:47:58 ben Exp $
+$NetBSD: CHANGES,v 1.6952 2004/08/19 20:45:48 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3917,3 +3917,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ImageMagick to 6.0.5-2 [adam 2004-08-19]
 	Updated codeville to 0.1.8 [drochner 2004-08-19]
 	Updated glimmer to 2.1.3 [ben 2004-08-19]
+	Updated py-pyrex to 0.9.3 [recht 2004-08-19]
