@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2004/12/25 02:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2005/02/09 11:35:50 markd Exp $
 
 DISTNAME=	gnupg-1.4.0
 CATEGORIES=	security
@@ -35,6 +35,10 @@ INFO_FILES=	gpg.info gpgv.info
 .include "options.mk"
 
 INSTALLATION_DIRS=	bin libexec/gnupg man/man1 man/man7 share/gnupg
+
+.if ${OPSYS} == "SunOS" || (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*))
+CONFIGURE_ARGS+=	--disable-gnupg-iconv
+.endif
 
 # XXX: still needed?
 .if ${OPSYS} == "FreeBSD"
