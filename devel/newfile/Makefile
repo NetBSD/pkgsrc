@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/04/25 05:33:18 snj Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/27 15:58:22 taca Exp $
 #
 
-DISTNAME=	newfile-1.0.7
-PKGREVISION=	1
+DISTNAME=	newfile-1.0.14
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=newfile/}
 
@@ -10,14 +10,17 @@ MAINTAINER=	flynn@energyhq.homeip.net
 HOMEPAGE=	http://newfile.sourceforge.net/
 COMMENT=	Tool for creating starter files in various languages
 
-DEPENDS+=	ruby-optparse>=0.8.6:../../devel/ruby-optparse
-
-USE_RUBY=	YES
+USE_BUILDLINK3=	YES
 NO_BUILD=	YES
 GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
 
-REPLACE_RUBY=	src/newfile.rb
+.include "../../lang/ruby/rubyversion.mk"
+
+.if ${RUBY_VER} == "16"
+DEPENDS+=	${RUBY_PKGPREFIX}-optparse>=0.8.6:../../devel/ruby-optparse
+.endif
+
+REPLACE_RUBY=	src/newfile.rb.in
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/newfile.rb ${PREFIX}/bin/newfile
@@ -25,5 +28,5 @@ post-install:
 		${PREFIX}/share/newfile/
 	${INSTALL_MAN} ${WRKSRC}/doc/newfile.1 ${PREFIX}/man/man1/
 
-.include "../../lang/ruby-base/buildlink3.mk"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
