@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.9 2003/09/17 23:18:57 markd Exp $
+$NetBSD: patch-aa,v 1.10 2003/11/08 13:13:49 jdolecek Exp $
 
---- configure.orig	2003-09-11 03:00:30.000000000 +1200
-+++ configure
-@@ -31619,63 +31619,6 @@ _ACEOF
+--- configure.orig	2003-09-10 17:00:30.000000000 +0200
++++ configure	2003-11-04 14:33:06.000000000 +0100
+@@ -23166,7 +23166,7 @@
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-	if test -f actest.cpp && grep klineedit actest.cpp > /dev/null; then
++	if test -f actest.cpp && grep -i klineedit actest.cpp > /dev/null; then
+ 		kde_cv_uic_plugins=yes
+ 	fi
+ fi
+@@ -31619,63 +31619,6 @@
  
  
  
@@ -66,7 +75,7 @@ $NetBSD: patch-aa,v 1.9 2003/09/17 23:18:57 markd Exp $
  echo "$as_me:$LINENO: checking if it's safe to enable UTMP" >&5
  echo $ECHO_N "checking if it's safe to enable UTMP... $ECHO_C" >&6
  
-@@ -33816,6 +33759,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -33816,6 +33759,23 @@
  
                    ac_cv_have_dpms="-lXdpms"
  
@@ -90,7 +99,7 @@ $NetBSD: patch-aa,v 1.9 2003/09/17 23:18:57 markd Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -38765,6 +38725,7 @@ fi
+@@ -38765,6 +38725,7 @@
  case "$UNAME" in
  	Linux) LIBHOSTS="$LIBSENSORS" ;;
  	FreeBSD) LIBHOSTS="$LIBSENSORS -lkvm" ;;
