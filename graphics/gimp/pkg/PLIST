@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 1998/04/15 20:48:13 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/05/03 11:00:36 frueauf Exp $
 bin/gimp
+man/man1/gimp.1
 include/gck/gck.h
 include/gck/gckcolor.h
 include/gck/gckcommon.h
@@ -602,6 +603,12 @@ share/gimp/scripts/weave.scm
 share/gimp/scripts/web-browser.scm
 share/gimp/scripts/xach-effect.scm
 share/gimp/user_install
+@unexec install-info --delete %D/info/pdb.info %D/info/dir
+info/pdb.info
+info/pdb.info-1
+info/pdb.info-2
+@exec ([ ! -f %D/info/dir ] && /usr/bin/sed -ne '1,/Menu:/p' ${LOCALBASE}/info/dir > %D/info/dir) || /usr/bin/true
+@exec install-info %D/info/pdb.info %D/info/dir
 @dirrm include/libgimp
 @dirrm include/gck
 @dirrm lib/gimp/0.99/plug-ins
