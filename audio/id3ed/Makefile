@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/05/22 15:44:32 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/05/24 08:53:54 jlam Exp $
 #
 
 DISTNAME=	id3ed-1.10.2
@@ -14,13 +14,13 @@ USE_GMAKE=	YES
 
 USE_GNU_READLINE=	# uses rl_startup_hook
 
-.include "../../devel/readline/Makefile.readline"
+.include "../../devel/readline/buildlink.mk"
 
 CONFIGURE_ENV+=	LIBS="${LIBS}"
-CFLAGS+=	-I${WRKINCDIR}
-LIBS+=		-L${WRKLIBDIR} ${LDFLAGS}
+CFLAGS+=	-I${BUILDLINK_INCDIR}
+LIBS+=		-L${BUILDLINK_LIBDIR} ${LDFLAGS}
 
-pre-configure: link-readline-headers link-readline-libs
+pre-configure: ${BUILDLINK_TARGETS}
 
 post-extract:
 	${TOUCH} ${WRKSRC}/install.sh

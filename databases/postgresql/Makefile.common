@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2001/05/16 05:28:55 jlam Exp $
+# $NetBSD: Makefile.common,v 1.16 2001/05/24 08:54:27 jlam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution.
@@ -79,20 +79,19 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 MAKE_ENV+=		CUSTOM_COPT="${CFLAGS}"
 
-WRKINCDIR=		${WRKDIR}/include
-WRKLIBDIR=		${WRKDIR}/lib
-CPPFLAGS+=		-I${WRKINCDIR}
-CFLAGS+=		-I${WRKINCDIR}
-LDFLAGS+=		-L${WRKLIBDIR}
+CPPFLAGS+=		-I${BUILDLINK_INCDIR}
+CFLAGS+=		-I${BUILDLINK_INCDIR}
+LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 
-# The following is a hack to force ${WRKLIBDIR} to the front of the linker's
-# library search path without having to patch a lot of Makefile.  It works
-# because the PostgreSQL Makefiles invoke the linker with $(CFLAGS) as well.
+# The following is a hack to force ${BUILDLINK_LIBDIR} to the front of the
+# linker's library search path without having to patch a lot of Makefile.
+# It works because the PostgreSQL Makefiles invoke the linker with $(CFLAGS)
+# as well.
 # 
-CFLAGS+=		-L${WRKLIBDIR}
+CFLAGS+=		-L${BUILDLINK_LIBDIR}
 
 post-extract:
-	${MKDIR} -p ${WRKINCDIR} ${WRKLIBDIR}
+	${MKDIR} ${BUILDLINK_INCDIR} ${BUILDLINK_LIBDIR}
 	if [ -d ${WRKSRC}/src ]; then					\
 		${RM} -f ${WRKSRC}/src/Makefile.custom;			\
 		${CP} -f ${COMMON_FILESDIR}/Makefile.custom		\

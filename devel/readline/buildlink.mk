@@ -1,23 +1,23 @@
-# $NetBSD: Makefile.readline,v 1.4 2001/05/22 16:46:37 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.1 2001/05/24 08:53:56 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
 # If readline() is not present in the base system through libedit, then a
 # dependency on devel/readline is added, the appropriate headers are linked
-# into ${WRKINCDIR} (${WRKSRC}/include), and the appropriate libraries are
-# linked into ${WRKLIBDIR} (${WRKSRC}/lib).
+# into ${BUILDLINK_INCDIR} (${WRKSRC}/include), and the appropriate libraries
+# are linked into ${BUILDLINK_LIBDIR} (${WRKSRC}/lib).
 #
 # To use this Makefile fragment, simply:
 #
 # (1) Optionally define USE_GNU_READLINE to force use of GNU readline.
 # (2) Optionally define READLINE_REQD to the version of GNU readline desired.
 # (3) Include this Makefile fragment in the package Makefile,
-# (4) Optionally define WRKINCDIR and WRKLIBDIR,
-# (5) Add link-readline-headers and link-readline-libs to the prerequisite
-#     targets for pre-configure,
-# (6) Add ${WRKINCDIR} to the front of the C preprocessor's header search
-#     path, and
-# (7) Add ${WRKLIBDIR} to the front of the linker's library search path.
+# (4) Optionally define BUILDLINK_INCDIR and BUILDLINK_LIBDIR,
+# (5) Add ${BUILDLINK_TARGETS} to the prerequisite targets for pre-configure,
+# (6) Add ${BUILDLINK_INCDIR} to the front of the C preprocessor's header
+#     search path, and
+# (7) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
+#     path.
 #
 # NOTE:	You may need to do some more work to get libedit recognized over
 #	libreadline, especially by GNU configure scripts.
@@ -57,36 +57,39 @@ DEPENDS+=		readline>=${READLINE_REQD}:../../devel/readline
 .endif
 .endif
 
-WRKINCDIR?=		${WRKDIR}/include
-WRKLIBDIR?=		${WRKDIR}/lib
+BUILDLINK_INCDIR?=	${WRKDIR}/include
+BUILDLINK_LIBDIR?=	${WRKDIR}/lib
 
-# This target links the readline and history headers into ${WRKINCDIR},
+BUILDLINK_TARGETS+=	link-readline-headers
+BUILDLINK_TARGETS+=	link-readline-libs
+
+# This target links the readline and history headers into ${BUILDLINK_INCDIR},
 # which should be searched first by the C preprocessor.
 #
 link-readline-headers:
-	@${ECHO} "Linking readline headers into ${WRKINCDIR}."
-	@${MKDIR} -p ${WRKINCDIR}/readline
-	@${RM} -f ${WRKINCDIR}/readline/*
+	@${ECHO} "Linking readline headers into ${BUILDLINK_INCDIR}."
+	@${MKDIR} -p ${BUILDLINK_INCDIR}/readline
+	@${RM} -f ${BUILDLINK_INCDIR}/readline/*
 .if defined(READLINE_INCDIR)
 	@for inc in ${READLINE_INCDIR}/*; do				\
-		${LN} -sf $${inc} ${WRKINCDIR}/readline;		\
+		${LN} -sf $${inc} ${BUILDLINK_INCDIR}/readline;		\
 	done
 .else
-	@${LN} -sf ${READLINE_H} ${WRKINCDIR}/readline
-	@${LN} -sf ${HISTORY_H} ${WRKINCDIR}/readline
+	@${LN} -sf ${READLINE_H} ${BUILDLINK_INCDIR}/readline
+	@${LN} -sf ${HISTORY_H} ${BUILDLINK_INCDIR}/readline
 .endif
 
-# This target links the readline and history libraries into ${WRKLIBDIR},
-# which should be searched first by the linker.
+# This target links the readline and history libraries into
+# ${BUILDLINK_LIBDIR}, which should be searched first by the linker.
 #
 link-readline-libs:
-	@${ECHO} "Linking readline libraries into ${WRKLIBDIR}."
-	@${MKDIR} -p ${WRKLIBDIR}
+	@${ECHO} "Linking readline libraries into ${BUILDLINK_LIBDIR}."
+	@${MKDIR} -p ${BUILDLINK_LIBDIR}
 	@for lib in ${LIBREADLINE}; do					\
 		dest=`${BASENAME} $${lib} | ${SED} "s|libedit|libreadline|"`; \
-		${LN} -sf $${lib} ${WRKLIBDIR}/$${dest};		\
+		${LN} -sf $${lib} ${BUILDLINK_LIBDIR}/$${dest};		\
 	done
 	@for lib in ${LIBHISTORY}; do					\
 		dest=`${BASENAME} $${lib} | ${SED} "s|libedit|libhistory|"`; \
-		${LN} -sf $${lib} ${WRKLIBDIR}/$${dest};		\
+		${LN} -sf $${lib} ${BUILDLINK_LIBDIR}/$${dest};		\
 	done

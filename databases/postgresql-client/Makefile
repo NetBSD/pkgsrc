@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2001/05/16 05:30:33 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/24 08:53:55 jlam Exp $
 
 .include "../../databases/postgresql/Makefile.common"
 .include "../../databases/postgresql/Makefile.ssl"
-.include "../../devel/libgetopt/Makefile.getopt"
-.include "../../devel/readline/Makefile.readline"
+.include "../../devel/libgetopt/buildlink.mk"
+.include "../../devel/readline/buildlink.mk"
 
 PKGNAME=		postgresql-client-${PG_VERS}
 PG_PKG_VERS=		# empty
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--enable-readline
 
 DIRS_TO_BUILD=		src/bin
 
-pre-configure: link-getopt-headers link-readline-headers link-readline-libs
+pre-configure: ${BUILDLINK_TARGETS}
 
 pre-build:
 	cd ${WRKSRC}/src/bin/psql &&					\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/05/22 17:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/05/24 08:53:54 jlam Exp $
 #
 
 DISTNAME=	plptools-0.6
@@ -16,15 +16,15 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_GNU_READLINE=	# uses rl_filename_quoting_desired flag
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../devel/readline/Makefile.readline"
+.include "../../devel/readline/buildlink.mk"
 
 CONFIGURE_ARGS+=	--with-serial=${DEFAULT_SERIAL_DEVICE}
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 
-CPPFLAGS+=		-I${WRKINCDIR}
+CPPFLAGS+=		-I${BUILDLINK_INCDIR}
 LIBS+=			-ltermcap
 
-pre-configure: link-readline-headers link-readline-libs
+pre-configure: ${BUILDLINK_TARGETS}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2001/05/22 21:49:28 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2001/05/24 08:53:57 jlam Exp $
 
 DISTNAME=		samba-2.2.0
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -24,10 +24,10 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../devel/readline/Makefile.readline"
+.include "../../devel/readline/buildlink.mk"
 
-CFLAGS+=		-I${WRKINCDIR}
-LDFLAGS+=		-L${WRKLIBDIR}
+CFLAGS+=		-I${BUILDLINK_INCDIR}
+LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 
 SAMBA_LOGDIR=		/var/log
 SAMBA_LOCKDIR=		/var/run/samba
@@ -78,6 +78,8 @@ HTMLDIR=		${PREFIX}/share/doc/html/samba
 
 post-extract:
 	${FIND} ${WRKDIR}/${DISTNAME} -name ".cvsignore" -exec ${RM} -f {} \;
+
+pre-configure: ${BUILDLINK_TARGETS}
 
 pre-install:
 	for file in nmbd.sh smbd.sh; do					\

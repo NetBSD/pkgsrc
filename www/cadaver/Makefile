@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/05/22 16:09:14 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/24 08:53:58 jlam Exp $
 
 DISTNAME=		cadaver-0.17.0
 CATEGORIES=		www
@@ -21,18 +21,18 @@ CONFIGURA_ARGS+=	--with-include-neon
 CONFIGURE_ARGS+=	--enable-libxml
 CONFIGURE_ARGS+=	--enable-netrc
 
-.include "../../devel/libgetopt/Makefile.getopt"
-.include "../../devel/readline/Makefile.readline"
+.include "../../devel/libgetopt/buildlink.mk"
+.include "../../devel/readline/buildlink.mk"
 
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 CONFIGURE_ENV+=		ac_cv_lib_curses_tputs=no
 CONFIGURE_ENV+=		ac_cv_lib_ncurses_tputs=no
 
-CFLAGS+=		-I${WRKINCDIR} ${CPPFLAGS}
-LDFLAGS+=		-L${WRKLIBDIR}
+CFLAGS+=		-I${BUILDLINK_INCDIR} ${CPPFLAGS}
+LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 LIBS+=			-ltermcap
 
-pre-configure: link-getopt-headers link-readline-headers link-readline-libs
+pre-configure: ${BUILDLINK_TARGETS}
 
 # The build process doesn't correctly find some headers for utility functions
 # which are provided in ${WRKSRC}/lib.  Help the compiler by linking the
