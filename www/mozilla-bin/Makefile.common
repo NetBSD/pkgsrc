@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2004/07/16 09:51:32 grant Exp $
+# $NetBSD: Makefile.common,v 1.23 2004/09/20 15:45:32 erh Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -13,6 +13,7 @@ NO_CONFIGURE=		# defined
 USE_LANGUAGES=		# empty
 
 FILESDIR=		${.CURDIR}/../../www/mozilla-bin/files
+MOZILLA_SCRIPT?=	${FILESDIR}/mozilla.sh
 
 USE_PKGINSTALL=		YES
 
@@ -72,10 +73,6 @@ MESSAGE_SRC+=	${.CURDIR}/../../www/mozilla-bin/MESSAGE.compat_linux
 # Linux builds on NetBSD
 .  if ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "linux"
 .    include "../../emulators/suse_linux/Makefile.application"
-DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
-DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
-DEPENDS+=	suse_gtk>=7.3:../../emulators/${SUSE_DIR_PREFIX}_gtk
-
 .  elif ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "netbsd"
 # we need libstdc++.so.4 on -current.
 .    if !exists(/usr/lib/libstdc++.so.4)
@@ -83,14 +80,23 @@ DEPENDS+=	compat16>=1.6.0:../../emulators/compat16
 _COMPAT16_LIBSTDCXX=	YES
 .    endif
 .  endif
+
 # gtk2 builds.
 .  if defined(MOZ_GTK2) && ${MOZ_GTK2} == "YES"
 .    if ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "netbsd"
 DEPENDS+=	gtk2+>=2.4:../../x11/gtk2
+.    elif ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "linux"
+DEPENDS+=	suse_x11>=9.1:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=	suse_gtk2>=9.1:../../emulators/${SUSE_DIR_PREFIX}_gtk2
+DEPENDS+=	suse_locale>=9.1:../../emulators/${SUSE_DIR_PREFIX}_locale
 .    else
 DEPENDS+=	gtk2+>=2.2:../../x11/gtk2
 .    endif
-.  elif (!(${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "linux"))
+.  elif ${OPSYS} == "NetBSD" && ${MOZ_PLATFORM} == "linux"
+DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=	suse_gtk>=7.3:../../emulators/${SUSE_DIR_PREFIX}_gtk
+.  else
 # default to at least gtk-1.2.
 DEPENDS+=	gtk+>=1.2:../../x11/gtk
 .  endif
@@ -104,7 +110,7 @@ post-extract:
 do-build:
 
 post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mozilla.sh > ${WRKDIR}/${MOZILLA}.sh
+	@${SED} ${FILES_SUBST_SED} ${MOZILLA_SCRIPT} > ${WRKDIR}/${MOZILLA}.sh
 
 do-install:
 	${INSTALL_DATA_DIR} ${MOZILLA_LIB}
