@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/12 11:11:52 hira Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/30 20:40:31 hira Exp $
 
 DISTNAME=	X11R${XORG_VER}-src1
 PKGNAME=	xorg-fontsTruetype-${XORG_VER}
@@ -15,6 +15,7 @@ DEPENDS+=	xorg-fontsEncodings>=${XORG_VER}:../../fonts/xorg-fontsEncodings
 
 XBUILD_DIRS=	fonts/encodings fonts/scaled/TTF
 XINSTALL_DIRS=	fonts/scaled/TTF
+XEXTRACTS=	${XBUILD_DIRS} extras/fonts
 
 FILESDIR=	${.CURDIR}/../../fonts/xorg-fontsEncodings/files
 
