@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.233 2003/01/31 01:27:15 salo Exp $
+$NetBSD: TODO,v 1.234 2003/01/31 11:19:00 shell Exp $
 
 Suggested new packages
 ======================
@@ -164,7 +164,6 @@ Suggested package updates
 	o lcms-1.0.9
 	o lftp-2.6.4 [pkg/19419]
 	o libbonobo-2.0.1
-	o libexif-0.5.9
 	o libgii-0.8.2
 	o libggi-2.0.2
 	o libole2-2.2.8
@@ -203,7 +202,6 @@ Suggested package updates
 	o openssl-0.9.7
 	o opensp-1.5
 	o oss-3.9.7g
-	o p5-Image-Size-2.991
 	o pen-0.9.5 [pkg/19216]
 	o php4-4.3.0
 	o plib-1.6.0
