@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/10/25 22:21:52 jwise Exp $
+# $NetBSD: Makefile,v 1.10 2002/01/03 13:42:00 wiz Exp $
 #
 
 DISTNAME=	expect-5.33.0
@@ -21,11 +21,6 @@ CONFIGURE_ARGS= --enable-shared \
 		--with-tclconfig=${PREFIX}/lib \
 		--with-tclinclude=${PREFIX}/include/tcl \
 		--without-x
-
-.include "../../mk/bsd.prefs.mk"
-
-pre-configure:
-	cd ${WRKSRC} && ${TOUCH} configure
 
 test:
 	@(cd ${WRKSRC}; ${MAKE} test)
