@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.1.1.1 2004/10/21 14:27:40 grant Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.2 2005/03/24 04:50:08 ben Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -208,12 +208,6 @@
         <para><filename>PLIST.common_end</filename></para>
       </listitem>
     </itemizedlist>
-
-    <para>If <filename>PLIST.${OPSYS}</filename> exists, these files are used
-      instead of <filename>PLIST</filename>. This allows packages which
-      behave in this way to be handled gracefully.  Manually overriding
-      <varname>PLIST_SRC</varname> for other more exotic uses is also
-      possible.</para>
   </sect1>
 
 
