@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.17 2000/06/03 22:33:22 mycroft Exp $
+# $NetBSD: bsd.prefs.mk,v 1.18 2000/10/15 11:31:42 rh Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -109,4 +109,21 @@ USE_INET6?=		YES
 # or a pkg Makefile modifies them.
 .include <sys.mk>
 
+# Check if we got Mesa distributed with XFree86 4.x or if we need to
+# depend on the Mesa package.
+.if (defined(CHECK_MESA) || defined(USE_MESA))
+X11BASE?=		/usr/X11R6
+.if exists(${X11BASE}/include/GL/glx.h)
+__BUILTIN_MESA!=	egrep -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl || true
+.else
+__BUILTIN_MESA=		0
 .endif
+.if ${__BUILTIN_MESA} == "0"
+HAVE_BUILTIN_MESA=	NO
+.else
+HAVE_BUILTIN_MESA=	YES
+.endif
+.undef __BUILTIN_MESA
+.endif	# CHECK_MESA
+
+.endif	# BSD_PKG_MK
