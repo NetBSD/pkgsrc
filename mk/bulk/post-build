@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.31 2004/02/05 23:53:16 grant Exp $
+# $NetBSD: post-build,v 1.32 2004/02/08 09:13:43 grant Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -220,6 +220,13 @@ sub writeReport {
 	$nbrokentot = $nbroken + $nbrokendep;
 	$ntotal = $nunpackaged + $nbroken + $nbrokendep;
 
+	# determine the number of packages attempted, and then successful
+	open(ORDER, $ordfile) || die "can't open $ordfile: $!";
+	my @order = <ORDER>;
+	close(ORDER);
+	my $nattempted = scalar(@order);
+	my $nsuccessful = $nattempted - $ntotal;
+
 	if ($verbose) {
 		print <<EOF;
 pkgsrc bulk build results
@@ -234,6 +241,7 @@ EOF
 		print swrite($summary_form, "Build started:", $startdate);
 		print swrite($summary_form, "Build ended:", $enddate);
 		print swrite($summary_form);
+		print swrite($summary_form, "Successfully packaged:", $nsuccessful);
 		print swrite($summary_form, "Packages really broken:", $nbroken);
 		print swrite($summary_form, "Pkgs broken due to them:", $nbrokendep);
 		print swrite($summary_form, "Total broken:", $nbrokentot);
@@ -362,20 +370,23 @@ alink="#3535c5">
 <tr>
   <td>&nbsp;</td>			<td>&nbsp;</td>
 </tr>
+<tr>
+  <td>Successfully packaged:</td>	<td align="right">$nsuccessful</td>
+</tr>
 <tr class="pkg-broken">
-  <td>Packages really broken:		<td align="right">$nbroken</td>
+  <td>Packages really broken:</td>	<td align="right">$nbroken</td>
 </tr>
 <tr class="pkg-brokendepends">
-  <td>Packages broken due to them:	<td align="right">$nbrokendep</td>
+  <td>Packages broken due to them:</td>	<td align="right">$nbrokendep</td>
 </tr>
 <tr>
-  <td>Total broken:			<td align="right">$nbrokentot</td>
+  <td>Total broken:</td>		<td align="right">$nbrokentot</td>
 </tr>
 <tr class="pkg-notpackaged">
-  <td>Not packaged:			<td align="right">$nunpackaged</td>
+  <td>Not packaged:</td>		<td align="right">$nunpackaged</td>
 </tr>
 <tr>
-  <td>Total:				<td align="right">$ntotal</td>
+  <td>Total:</td>			<td align="right">$ntotal</td>
 </tr>
 </table>
 
