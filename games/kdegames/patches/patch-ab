@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.9 1998/09/28 23:44:36 tron Exp $
+
+--- ksnake/Makefile.in.orig	Fri Jul 10 20:36:15 1998
++++ ksnake/Makefile.in	Tue Sep 29 01:15:34 1998
+@@ -534,7 +534,8 @@
+ 	$(MOC) -o $@ $<
+ 
+ mscore.cpp: score.h
+-	$(MOC) -o $@ $<
++	$(MOC) $< | \
++	sed 's/typedef void(Score::\*m1_t1)(int);/typedef void(Score::\*m1_t1)(int,int);/' >$@
+ 
+ mbox.cpp: box.h
+ 	$(MOC) -o $@ $<
