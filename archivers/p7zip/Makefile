@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/10/08 15:57:51 tv Exp $
+# $NetBSD: Makefile,v 1.5 2004/11/23 14:57:52 wiz Exp $
 #
 
-DISTNAME=		p7zip_0.80
-PKGNAME=		p7zip-0.80
+DISTNAME=		p7zip_4.12_src
+PKGNAME=		p7zip-4.12
 CATEGORIES=		archivers
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=p7zip/}
 EXTRACT_SUFX=		.tar.bz2
@@ -13,8 +13,6 @@ COMMENT=		File archiver with high compression
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-NOT_FOR_PLATFORM=	*-*-m68* *-*-mipseb* *-*-powerpc* *-*-sparc*
-
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		c c++
 MAKEFILE=		makefile
@@ -22,14 +20,49 @@ NO_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 PTHREAD_OPTS+=		require
 
+# compiles, but does not recognize any archives as supported
+DYNAMIC_7Z=		NO
+.if !empty(DYNAMIC_7Z:MYES)
+ALL_TARGET=		all2
+PLIST_SUBST+=		DYNAMIC_7Z=""
+.else
+PLIST_SUBST+=		DYNAMIC_7Z="@comment "
+.endif
+
+WRKSRC=			${WRKDIR}/${DISTNAME:S/_src//}
+
 GCC_REQD=		3.0
 
 INSTALLATION_DIRS=	bin
 
+.include "../../mk/endian.mk"
+
+.if !empty(MACHINE_ENDIAN:Mbig)
+CFLAGS+=		-DBIG_ENDIAN
+.else
+CFLAGS+=		-DLITTLE_ENDIAN
+.endif
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/7z ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/7za ${PREFIX}/bin
+.if !empty(DYNAMIC_7Z:MYES)
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/7z
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/7z/Codecs
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/7z/Formats
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/7z ${PREFIX}/lib/7z
+	${INSTALL_LIB} ${WRKSRC}/bin/Codecs/* ${PREFIX}/lib/7z/Codecs
+	${INSTALL_LIB} ${WRKSRC}/bin/Formats/* ${PREFIX}/lib/7z/Formats
+	${LN} -s ${PREFIX}/lib/7z/7z ${PREFIX}/bin
+.else
+	${LN} -s 7za ${PREFIX}/bin/7z
+.endif
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/p7zip
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/p7zip/commands
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/p7zip/switches
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/p7zip
+	${INSTALL_DATA} ${WRKSRC}/DOCS/MANUAL/*.* ${PREFIX}/share/doc/p7zip
+	${INSTALL_DATA} ${WRKSRC}/DOCS/MANUAL/commands/*.* ${PREFIX}/share/doc/p7zip/commands
+	${INSTALL_DATA} ${WRKSRC}/DOCS/MANUAL/switches/*.* ${PREFIX}/share/doc/p7zip/switches
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
