@@ -1,9 +1,10 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 1999/01/28 15:39:59 bad Exp $
+# $NetBSD: INSTALL,v 1.3 1999/01/29 19:26:37 bad Exp $
 #
 
 PKGNAME=$1
+DEFCONF=${PKG_PREFIX}/share/squid/squid.conf.default
 
 case $2 in
     PRE-INSTALL)
@@ -16,7 +17,7 @@ case $2 in
 	echo "      configuring your WWW Navigator (Netscape, Mosaic,...)"
 	echo "      to use it as a proxy server."
 	echo ""
-	echo "    o copy \"squid.conf.default\" to \"/etc/squid.conf\""
+	echo "    o copy \"${DEFCONF}\" to \"/etc/squid.conf\""
 	echo "      and edit it as required. You should pay attention to"
 	echo "      the ACTUAL locations of the cache \"spool\" logfiles"
 	echo "      and pidfile."

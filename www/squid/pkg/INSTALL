@@ -1,12 +1,12 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.3 1998/12/06 12:42:01 tron Exp $
+# $NetBSD: INSTALL,v 1.4 1999/01/29 19:26:37 bad Exp $
 #
 
 PKGNAME=$1
-DEFCONF=$2
+DEFCONF=${PKG_PREFIX}/share/squid/squid.conf.default
 
-case $3 in
+case $2 in
     PRE-INSTALL)
 	;;
     POST-INSTALL)
@@ -24,7 +24,7 @@ case $3 in
 	echo ""
 	;;
     *)
-	echo "Unexpected Argument $3!!!"
+	echo "Unexpected Argument $2!!"
 	exit 1
 	;;
 esac
