@@ -1,0 +1,160 @@
+$NetBSD: patch-ad,v 1.1 2002/11/15 15:28:00 lukem Exp $
+
+--- src/plugin_common/Makefile.in.orig	Wed Sep 25 14:53:41 2002
++++ src/plugin_common/Makefile.in
+@@ -118,7 +118,7 @@ AUTOMAKE_OPTIONS = foreign
+ 
+ INCLUDES = -I$(top_srcdir)/include @ID3LIB_CFLAGS@
+ 
+-noinst_LIBRARIES = libplugin_common.a
++noinst_LTLIBRARIES = libplugin_common.la
+ 
+ noinst_HEADERS = \
+ 	all.h \
+@@ -131,7 +131,7 @@ noinst_HEADERS = \
+ 	vorbiscomment.h
+ 
+ 
+-libplugin_common_a_SOURCES = \
++libplugin_common_la_SOURCES = \
+ 	canonical_tag.c \
+ 	charset.c \
+ 	dither.c \
+@@ -148,14 +148,13 @@ EXTRA_DIST = \
+ subdir = src/plugin_common
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_CLEAN_FILES =
+-LIBRARIES = $(noinst_LIBRARIES)
++LTLIBRARIES = $(noinst_LTLIBRARIES)
+ 
+-libplugin_common_a_AR = $(AR) cru
+-libplugin_common_a_LIBADD =
+-am_libplugin_common_a_OBJECTS = canonical_tag.$(OBJEXT) \
+-	charset.$(OBJEXT) dither.$(OBJEXT) id3v1.$(OBJEXT) \
+-	id3v2.$(OBJEXT) vorbiscomment.$(OBJEXT)
+-libplugin_common_a_OBJECTS = $(am_libplugin_common_a_OBJECTS)
++libplugin_common_la_LDFLAGS =
++libplugin_common_la_LIBADD =
++am_libplugin_common_la_OBJECTS = canonical_tag.lo charset.lo dither.lo \
++	id3v1.lo id3v2.lo vorbiscomment.lo
++libplugin_common_la_OBJECTS = $(am_libplugin_common_la_OBJECTS)
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir)
+@@ -164,10 +163,10 @@ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+-@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/canonical_tag.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/charset.Po ./$(DEPDIR)/dither.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/id3v1.Po ./$(DEPDIR)/id3v2.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/vorbiscomment.Po
++@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/canonical_tag.Plo \
++@AMDEP_TRUE@	./$(DEPDIR)/charset.Plo ./$(DEPDIR)/dither.Plo \
++@AMDEP_TRUE@	./$(DEPDIR)/id3v1.Plo ./$(DEPDIR)/id3v2.Plo \
++@AMDEP_TRUE@	./$(DEPDIR)/vorbiscomment.Plo
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) \
+@@ -176,11 +175,11 @@ CCLD = $(CC)
+ LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CFLAGS = @CFLAGS@
+-DIST_SOURCES = $(libplugin_common_a_SOURCES)
++DIST_SOURCES = $(libplugin_common_la_SOURCES)
+ HEADERS = $(noinst_HEADERS)
+ 
+ DIST_COMMON = README $(noinst_HEADERS) Makefile.am Makefile.in
+-SOURCES = $(libplugin_common_a_SOURCES)
++SOURCES = $(libplugin_common_la_SOURCES)
+ 
+ all: all-am
+ 
+@@ -192,14 +191,16 @@ $(srcdir)/Makefile.in:  Makefile.am  $(t
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
+ 
+-AR = ar
+-
+-clean-noinstLIBRARIES:
+-	-test -z "$(noinst_LIBRARIES)" || rm -f $(noinst_LIBRARIES)
+-libplugin_common.a: $(libplugin_common_a_OBJECTS) $(libplugin_common_a_DEPENDENCIES) 
+-	-rm -f libplugin_common.a
+-	$(libplugin_common_a_AR) libplugin_common.a $(libplugin_common_a_OBJECTS) $(libplugin_common_a_LIBADD)
+-	$(RANLIB) libplugin_common.a
++clean-noinstLTLIBRARIES:
++	-test -z "$(noinst_LTLIBRARIES)" || rm -f $(noinst_LTLIBRARIES)
++	@list='$(noinst_LTLIBRARIES)'; for p in $$list; do \
++	  dir="`echo $$p | sed -e 's|/[^/]*$$||'`"; \
++	  test -z "$dir" && dir=.; \
++	  echo "rm -f \"$${dir}/so_locations\""; \
++	  rm -f "$${dir}/so_locations"; \
++	done
++libplugin_common.la: $(libplugin_common_la_OBJECTS) $(libplugin_common_la_DEPENDENCIES) 
++	$(LINK)  $(libplugin_common_la_LDFLAGS) $(libplugin_common_la_OBJECTS) $(libplugin_common_la_LIBADD) $(LIBS)
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT) core *.core
+@@ -207,12 +208,12 @@ mostlyclean-compile:
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/canonical_tag.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/charset.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dither.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/id3v1.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/id3v2.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vorbiscomment.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/canonical_tag.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/charset.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dither.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/id3v1.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/id3v2.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/vorbiscomment.Plo@am__quote@
+ 
+ distclean-depend:
+ 	-rm -rf ./$(DEPDIR)
+@@ -309,7 +310,7 @@ distdir: $(DISTFILES)
+ 	done
+ check-am: all-am
+ check: check-am
+-all-am: Makefile $(LIBRARIES) $(HEADERS)
++all-am: Makefile $(LTLIBRARIES) $(HEADERS)
+ 
+ installdirs:
+ 
+@@ -339,7 +340,7 @@ maintainer-clean-generic:
+ 	@echo "it deletes files that may require special tools to rebuild."
+ clean: clean-am
+ 
+-clean-am: clean-generic clean-libtool clean-noinstLIBRARIES \
++clean-am: clean-generic clean-libtool clean-noinstLTLIBRARIES \
+ 	mostlyclean-am
+ 
+ distclean: distclean-am
+@@ -377,15 +378,16 @@ mostlyclean-am: mostlyclean-compile most
+ uninstall-am: uninstall-info-am
+ 
+ .PHONY: GTAGS all all-am check check-am clean clean-generic \
+-	clean-libtool clean-noinstLIBRARIES distclean distclean-compile \
+-	distclean-depend distclean-generic distclean-libtool \
+-	distclean-tags distdir dvi dvi-am info info-am install \
+-	install-am install-data install-data-am install-exec \
+-	install-exec-am install-info install-info-am install-man \
+-	install-strip installcheck installcheck-am installdirs \
+-	maintainer-clean maintainer-clean-generic mostlyclean \
+-	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
+-	tags uninstall uninstall-am uninstall-info-am
++	clean-libtool clean-noinstLTLIBRARIES distclean \
++	distclean-compile distclean-depend distclean-generic \
++	distclean-libtool distclean-tags distdir dvi dvi-am info \
++	info-am install install-am install-data install-data-am \
++	install-exec install-exec-am install-info install-info-am \
++	install-man install-strip installcheck installcheck-am \
++	installdirs maintainer-clean maintainer-clean-generic \
++	mostlyclean mostlyclean-compile mostlyclean-generic \
++	mostlyclean-libtool tags uninstall uninstall-am \
++	uninstall-info-am
+ 
+ 
+ debug:
