@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.666 2002/12/02 12:24:57 jmmv Exp $
+$NetBSD: CHANGES,v 1.667 2002/12/02 15:20:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3794,3 +3794,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated analog to 5.30 [tron 2002-12-02]
 	Updated irssi to 0.8.6 [jmmv 2002-12-02]
 	Added irssi-icb-0.14 [jmmv 2002-12-02]
+	Updated mng to 1.0.4nb1 [wiz 2002-12-02]
