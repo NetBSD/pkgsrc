@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/06/16 19:50:57 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2001/06/18 20:49:00 jlam Exp $
 
 DISTNAME=		esound-0.2.22
 CATEGORIES=		audio
@@ -17,14 +17,17 @@ USE_CONFIG_WRAPPER=	YES
 .include "../../audio/libaudiofile/buildlink.mk"
 .include "../../devel/libgetopt/buildlink.mk"
 
-# Fix esd-config by removing buildlink directory references.
+# Fix config scripts by removing buildlink directory references.
 post-build:
 	@cd ${WRKSRC};							\
-	${MV} -f esd-config esd-config.fixme;				\
-	${SED}  -e "/^audiofile/s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g" \
-		-e "/^audiofile/s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g" \
-		esd-config.fixme > esd-config;				\
-	${RM} -f esd-config.fixme;					\
-	${CHMOD} +x esd-config
+	config_scripts="esd-config";					\
+	for file in $${config_scripts}; do				\
+		${MV} -f $${file} $${file}.fixme;			\
+		${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
+			-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\
+			$${file}.fixme > $${file};			\
+		${RM} -f $${file}.fixme;				\
+		${CHMOD} +x $${file};					\
+	done
 
 .include "../../mk/bsd.pkg.mk"

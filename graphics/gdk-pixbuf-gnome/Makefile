@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/16 19:53:09 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/18 20:49:01 jlam Exp $
 
 .include "../gdk-pixbuf/Makefile.common"
 
@@ -16,7 +16,8 @@ GDK_PIXBUF_REQD=	0.10.1
 # Fix config scripts by removing buildlink directory references.
 post-build:
 	@cd ${WRKSRC};							\
-	for file in gnomecanvaspixbufConf.sh; do			\
+	config_scripts="gnomecanvaspixbufConf.sh";			\
+	for file in $${config_scripts}; do				\
 		${MV} -f $${file} $${file}.fixme;			\
 		${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
 			-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\

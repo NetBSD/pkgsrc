@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2001/06/16 20:05:10 jlam Exp $
+# $NetBSD: Makefile,v 1.63 2001/06/18 20:49:01 jlam Exp $
 
 DISTNAME=		gnome-libs-1.2.13
 CATEGORIES=		x11 gnome
@@ -61,10 +61,11 @@ pre-build:
 	cd ${WRKSRC}/support && \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} gnomesupport.h
 
-# Fix gnomeConf.sh, gnome-config by removing buildlink directory references.
+# Fix config scripts by removing buildlink directory references.
 post-build:
 	@cd ${WRKSRC};							\
-	for file in gnomeConf.sh gnome-config; do			\
+	config_scripts="gnomeConf.sh gnome-config";			\
+	for file in $${config_scripts}; do				\
 		${MV} -f $${file} $${file}.fixme;			\
 		${SED}	-e "s|-I${BUILDLINK_DIR}/|-I${LOCALBASE}/|g"	\
 			-e "s|-L${BUILDLINK_DIR}/|-L${LOCALBASE}/|g"	\
