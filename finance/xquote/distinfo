@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:10:36 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:44:04 agc Exp $
 
-MD5 (xquote-2.2.tar.gz) = 2fd42d7318931b6db142214ccd69a8b0
+SHA1 (xquote-2.2.tar.gz) = 2b32bfe25f826e9ae0bb28ee608ccbeae39350a6
+Size (xquote-2.2.tar.gz) = 82814 bytes
 SHA1 (patch-aa) = f3a8209dd3d25e1ec6b85a3d5c42ecd85e9f380a
 SHA1 (patch-ab) = 26c943dc5e22ea91641503cb7da35e6eeb47cec4
 SHA1 (patch-ac) = 2d9b18f22724f2ba92931077cafca38115a10eb4

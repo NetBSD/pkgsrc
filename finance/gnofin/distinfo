@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:10:33 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/18 13:44:02 agc Exp $
 
-MD5 (gnofin-0.8.4.tar.gz) = eb552f99fcf605b699519671ca4102f1
+SHA1 (gnofin-0.8.4.tar.gz) = 455e00a1bf019348e2dd6789acba9d074792fbd4
+Size (gnofin-0.8.4.tar.gz) = 413231 bytes
