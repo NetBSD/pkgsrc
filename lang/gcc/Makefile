@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2002/12/05 05:52:53 grant Exp $
+# $NetBSD: Makefile,v 1.51 2002/12/12 02:01:06 salo Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -35,7 +35,7 @@ INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
 .if ${OPSYS} == "SunOS"
 CONFLICTS+=		gcc-[0-9]* pgcc-[0-9]*
-.  if ${CC} != "gcc"
+.  if defined(CC) && (${CC} != "gcc")
 ALL_TARGET=		bootstrap
 .  endif
 GCC_PREFIX=		${PREFIX}
