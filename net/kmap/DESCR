@@ -1,6 +1,0 @@
-Kmap is a gui frontend to the popular portscanning utility nmap. Nmap
-is a console application with a wide variety of powerful options, but
-the sheer number of these options can make using nmap difficult. Thus,
-kmap is targeted towards those that would like to use a powerful
-scanner from time to time, without having to constantly check the man
-page for help.
