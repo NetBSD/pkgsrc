@@ -1,0 +1,17 @@
+$NetBSD: patch-bj,v 1.5 2002/08/29 15:11:15 taya Exp $
+
+diff -ru ../Orig/mozilla/directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c ./directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c
+--- ../Orig/mozilla/directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c	Fri Jun 14 06:45:30 2002
++++ ./directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c	Wed Aug 28 11:25:17 2002
+@@ -187,6 +187,11 @@
+ #define EDEADLOCK       -1
+ #endif
+ 
++#if defined(NETBSD)
++#define	ENOTSUP		-1
++#define	EDEADLOCK	-1
++#endif
++
+ /* XXX: need to verify that the -1 entries are correct (no mapping) */
+ static struct prldap_errormap_entry prldap_errormap[] = {
+     {  PR_OUT_OF_MEMORY_ERROR, ENOMEM },

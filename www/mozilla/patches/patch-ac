@@ -1,8 +1,9 @@
-$NetBSD: patch-ac,v 1.15 2002/08/19 22:57:03 fredb Exp $
+$NetBSD: patch-ac,v 1.16 2002/08/29 15:11:14 taya Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	Tue Apr  9 22:37:34 2002
-+++ xpcom/reflect/xptcall/src/md/unix/Makefile.in
-@@ -149,6 +149,14 @@
+diff -ru ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in ./xpcom/reflect/xptcall/src/md/unix/Makefile.in
+--- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	Wed Jul 17 08:05:10 2002
++++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	Wed Aug 28 11:21:45 2002
+@@ -159,6 +159,14 @@
  #
  ifeq ($(OS_ARCH),NetBSD)
  ifneq (,$(filter amiga atari hp300 mac68k mvme68k next68k sun3 sun3x x68k,$(OS_TEST)))
@@ -17,7 +18,7 @@ $NetBSD: patch-ac,v 1.15 2002/08/19 22:57:03 fredb Exp $
  CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
  endif
  endif
-@@ -253,6 +261,13 @@
+@@ -267,6 +275,13 @@
  ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc)
  CPPSRCS		:= xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
  ASFILES		:= xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
