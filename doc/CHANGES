@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2131 2003/05/03 07:10:22 salo Exp $
+$NetBSD: CHANGES,v 1.2132 2003/05/03 16:39:15 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1838,3 +1838,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added oo2c-2.0.8 [jtb 2003-05-03]
 	Added dvd+rw-tools-5.5.4.3.4 [dan 2003-05-03]
 	Updated dvd+rw-tools to 5.5.4.3.4nb1 [salo 2003-05-03]
+	Updated leafnode to 1.9.38 [cjep 2003-05-03]
