@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1534 2004/11/12 02:05:20 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1535 2004/11/12 05:20:01 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -474,10 +474,6 @@ MAKE_ENV+=		CPP="${CPP}"
 .if defined(CXXFLAGS)
 MAKE_ENV+=		CXXFLAGS="${CXXFLAGS}"
 .endif
-
-# export the flags needed to compile and link pthreaded code
-MAKE_ENV+=		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
-MAKE_ENV+=		PTHREAD_LDFLAGS="${PTHREAD_LDFLAGS}"
 
 TOUCH_FLAGS?=		-f
 
