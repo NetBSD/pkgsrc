@@ -1,12 +1,0 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/01/26 12:52:07 jmmv Exp $
-
---- mplex/stillsstream.cc	2003/12/19 18:20:51	1.1
-+++ mplex/stillsstream.cc	2003/12/19 18:21:08
-@@ -22,6 +22,7 @@
- 
- 
- #include <format_codes.h>
-+#include <assert.h>
- 
- #include "stillsstream.hh"
- #include "interact.hh"
