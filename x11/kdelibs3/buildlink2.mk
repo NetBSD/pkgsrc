@@ -1,9 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/10 16:06:55 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/10/10 00:11:51 jlam Exp $
 
 .if !defined(KDELIBS3_BUILDLINK2_MK)
 KDELIBS3_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		kdelibs3
+BUILDLINK_PKGBASE.kdelibs3?=	kdelibs
 BUILDLINK_DEPENDS.kdelibs3?=	kdelibs>=3.0.3nb1
 BUILDLINK_PKGSRCDIR.kdelibs3?=	../../x11/kdelibs3
 
@@ -11,7 +12,9 @@ BUILDLINK_PKGSRCDIR.kdelibs3?=	../../x11/kdelibs3
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.kdelibs3=kdelibs
 BUILDLINK_PREFIX.kdelibs3_DEFAULT=	${X11PREFIX}
-BUILDLINK_FILES.kdelibs3!=	${GREP} "^\(include\|lib\)" ${.CURDIR}/../../x11/kdelibs3/PLIST
+_KDELIBS3_BLNK_FILES= \
+	${BUILDLINK_PLIST_CMD.kdelibs3} | ${GREP} '^\(include\|lib\)'
+BUILDLINK_FILES.kdelibs3=	`${_KDELIBS3_BLNK_FILES}`
 
 KDEDIR=				${BUILDLINK_PREFIX.kdelibs3}
 
