@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.9 2004/07/30 20:32:01 kristerw Exp $
+
+--- src/arch/unix/x11/vidmode.c.orig	Fri Jul 30 21:56:16 2004
++++ src/arch/unix/x11/vidmode.c	Fri Jul 30 21:56:33 2004
+@@ -74,7 +74,7 @@
+         &vm_modes)) {
+         log_error(vidmode_log, _("Error getting video mode information - disabling vidmode extension."));
+         vm_available = 0;
+-        return -1;
++        return 0;
+     }
+ 
+     for (i = 0; i < vm_mode_count; i++) {
