@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2001/02/16 13:56:13 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2001/04/23 15:06:10 abs Exp $
 #
 
-DISTNAME=	hylafax-4.1beta2
-PKGNAME=	hylafax-4.1b2nb2
+DISTNAME=	hylafax-4.1beta3
+PKGNAME=	hylafax-4.1b3
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.hylafax.org/source/ \
 		ftp://ftp.sisis.de/pub/hylafax/source/ \
 		ftp://ftp.uni-bremen.de/pub/mirrors/ftp.hylafax.org/pub/hylafax/source/
 
-PATCH_SITES=	http://www.hylafax.org/patches/
-PATCHFILES=	tiff-3.5-interfaces.patch
+PATCH_SITES=   http://www.hylafax.org/patches/
+PATCHFILES=    hfaxd-vulnerability.patch
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.hylafax.org/
@@ -29,7 +29,7 @@ FAXGROUP?=	dialer
 
 HAS_CONFIGURE=	YES
 CONFIGURE_ENV=	PREFIX="${PREFIX}" FAXUID="${FAXUSER}" FAXGID="${FAXGROUP}"
-CONFIGURE_ARGS=	--with-MAKE=${MAKE_PROGRAM} --with-INSTALL=""
+CONFIGURE_ARGS=	--with-MAKE=${MAKE_PROGRAM} --with-INSTALL="" --nointeractive
 MANCOMPRESSED=	yes
 
 SUID_EXES=	${PREFIX}/libexec/faxgetty ${PREFIX}/sbin/faxq \

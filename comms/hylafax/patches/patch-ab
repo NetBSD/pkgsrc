@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2000/08/30 09:50:45 abs Exp $
+$NetBSD: patch-ab,v 1.4 2001/04/23 15:06:12 abs Exp $
 
---- config.h.in.orig	Thu Aug  5 12:11:41 1999
+--- config.h.in.orig	Thu Sep  2 11:16:20 1999
 +++ config.h.in
-@@ -53,6 +53,7 @@
+@@ -58,6 +58,7 @@
   * NB: The Unix-domain support is unfinished.
   */
  #define	FAX_USER	"@FAXUID@"	/* account name of the ``fax user'' */
