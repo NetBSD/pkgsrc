@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2002/11/15 13:55:07 wiz Exp $
+$NetBSD: distinfo,v 1.8 2002/12/04 14:39:47 wiz Exp $
 
-SHA1 (autoconf-2.56.tar.gz) = afff4a43d0b71a05de7b72e5a493a3e94219160c
-Size (autoconf-2.56.tar.gz) = 1069694 bytes
+SHA1 (autoconf-2.57.tar.gz) = 957cb551fed9b7ed5b34f1207512dfb676731754
+Size (autoconf-2.57.tar.gz) = 1074128 bytes
