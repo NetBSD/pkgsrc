@@ -1,0 +1,23 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2004/11/25 05:42:40 xtraeme Exp $
+
+To configure gld, the following steps should be acomplished:
+
+$ mysql -e "create database gld"
+$ mysql -e "grant all on gld.* to gld@localhost identified by 'PASSWORD'"
+$ mysql gld < ${PREFIX}/share/gld/tables.sql
+
+Modify "PASSWORD" with your desired password.
+
+Now edit your postfix's main.cf configuration file, and add the following
+line:
+
+	smtpd_recipient_restrictions = \
+		check_policy_service inet:127.0.0.1:2525,
+		reject_unauth_destination
+
+Start gld via ${RCD_SCRIPTS_DIR}/gld start
+
+it should be running fine now; good luck!
+
+===========================================================================

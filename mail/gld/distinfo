@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/25 05:42:40 xtraeme Exp $
+
+SHA1 (gld-1.4.tgz) = c5844b1537407dad658fd4e47fe6104047af9346
+Size (gld-1.4.tgz) = 35714 bytes
+SHA1 (patch-aa) = 90310c9e831372c7a94048cff47c72a17b65f605
