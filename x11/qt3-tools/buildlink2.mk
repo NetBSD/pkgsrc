@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/10/09 21:01:41 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/10/09 21:03:39 jlam Exp $
 
 .if !defined(QT3_TOOLS_BUILDLINK2_MK)
 QT3_TOOLS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		qt3-tools
-BUILDLINK_DEPENDS.qt3-tools?=	qt3-tools>=3.0.4nb1
+BUILDLINK_DEPENDS.qt3-tools?=	qt3-tools>=3.0.5nb1
 BUILDLINK_PKGSRCDIR.qt3-tools?=	../../x11/qt3-tools
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.qt3-tools=qt3-tools
