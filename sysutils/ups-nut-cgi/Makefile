@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2002/03/13 17:37:44 fredb Exp $
+# $NetBSD: Makefile,v 1.16 2002/05/13 15:15:23 lukem Exp $
 
-DISTNAME=		nut-0.45.3
-PKGNAME=		ups-nut-cgi-0.45.3
+DISTNAME=		nut-0.45.5
+PKGNAME=		ups-nut-cgi-0.45.5
 PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.exploits.org/nut/release/
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=		autoconf>=2.13:../../devel/autoconf
 DEPENDS+=		ups-nut-0.*:../../sysutils/ups-nut
 
 ALL_TARGET=		cgi
-INSTALL_TARGET=		install-cgi
+INSTALL_TARGET=		install-cgi install-cgi-man
 
 PKG_SYSCONFSUBDIR?=	nut
 NUT_CONFDIR=		${PKG_SYSCONFDIR}
