@@ -1,0 +1,35 @@
+$NetBSD: patch-bj,v 1.1 2001/04/13 19:18:13 jonb Exp $
+
+--- include/atalk/paths.h.orig	Wed Apr 11 23:51:32 2001
++++ include/atalk/paths.h	Wed Apr 11 23:52:17 2001
+@@ -12,7 +12,7 @@
+ /* lock file path. this should be re-organized a bit. */
+ #ifndef _PATH_LOCKDIR
+ #ifdef BSD4_4
+-#define _PATH_LOCKDIR           "/var/spool/lock/"
++#define _PATH_LOCKDIR           "/var/run/"
+ #else
+ #ifdef linux
+ #define _PATH_LOCKDIR           "/var/lock/"
+@@ -42,18 +42,18 @@
+  */
+ #define _PATH_ATALKDEBUG	"/tmp/atalkd.debug"
+ #define _PATH_ATALKDTMP		"atalkd.tmp"
+-#define _PATH_ATALKDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"atalkd")
++#define _PATH_ATALKDLOCK	ATALKPATHCAT(_PATH_LOCKDIR,"atalkd.pid")
+ 
+ /*
+  * psorder paths
+  */
+ #define _PATH_TMPPAGEORDER	"/tmp/psorderXXXXXX"
+-#define _PATH_PAPDLOCK		ATALKPATHCAT(_PATH_LOCKDIR,"papd")
++#define _PATH_PAPDLOCK		ATALKPATHCAT(_PATH_LOCKDIR,"papd.pid")
+ 
+ /*
+  * afpd paths
+  */
+ #define _PATH_AFPTKT		"/tmp/AFPtktXXXXXX"
+-#define _PATH_AFPDLOCK		ATALKPATHCAT(_PATH_LOCKDIR,"afpd")
++#define _PATH_AFPDLOCK		ATALKPATHCAT(_PATH_LOCKDIR,"afpd.pid")
+ 
+ #endif /* atalk/paths.h */

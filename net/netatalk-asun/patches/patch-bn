@@ -1,0 +1,13 @@
+$NetBSD: patch-bn,v 1.1 2001/04/13 19:18:14 jonb Exp $
+
+--- man/man8/papd.tbl.orig	Fri Apr 13 08:36:48 2001
++++ man/man8/papd.tbl	Fri Apr 13 08:37:11 2001
+@@ -3,7 +3,7 @@
+ .SH NAME
+ papd \- AppleTalk print server daemon
+ .SH SYNOPSIS
+-.B :SBINDIR:/papd
++.B :LIBEXECDIR:/papd
+ [
+ .B -d
+ ] [
