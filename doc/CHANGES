@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9641 2005/03/26 16:24:06 jmmv Exp $
+$NetBSD: CHANGES,v 1.9642 2005/03/26 17:06:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1768,3 +1768,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated evolution-data-server to 1.2.1 [jmmv 2005-03-26]
 	Updated evolution to 2.2.1.1 [jmmv 2005-03-26]
 	Updated ximian-connector to 2.2.1 [jmmv 2005-03-26]
+	Added lucy-1.18p [minskim 2005-03-26]
