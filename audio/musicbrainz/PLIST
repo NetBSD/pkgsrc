@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/20 16:02:34 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/09 00:07:36 chris Exp $
 include/musicbrainz/bitprintinfo.h
 include/musicbrainz/bitzi/bitcollider.h
 include/musicbrainz/bitzi/gui_win32.h
@@ -13,6 +13,7 @@ lib/libmusicbrainz.a
 lib/libmusicbrainz.la
 lib/libmusicbrainz.so
 lib/libmusicbrainz.so.2
-lib/libmusicbrainz.so.2.0
+lib/libmusicbrainz.so.2.1
+lib/pkgconfig/libmusicbrainz.pc
 @dirrm include/musicbrainz/bitzi
 @dirrm include/musicbrainz
