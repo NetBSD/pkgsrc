@@ -1,4 +1,4 @@
-# $NetBSD: motif.buildlink.mk,v 1.5 2001/09/13 19:22:17 jlam Exp $
+# $NetBSD: motif.buildlink.mk,v 1.6 2001/09/13 19:32:11 jlam Exp $
 #
 # This Makefile fragment is included by packages that use Motif-2.0.
 #
@@ -28,7 +28,7 @@ MOTIF_TYPE_DEFAULT?=	openmotif
 # Otherwise, if ${X11BASE} is valid, then use it.  Otherwise, use the
 # Motif-2.0 specified by ${MOTIF_TYPE_DEFAULT}.
 #
-.if exists(/usr/dt/include/Xm/Xm.h)
+.if exists(/usr/dt/include/Xm/Xm.h) && exists(/usr/dt/include/Xm/Gadget.h)
 _MOTIF_TYPE=		dt
 .elif exists(${X11BASE}/lib/X11/config/OpenMotif.tmpl) || \
       exists(${LOCALBASE}/lib/X11/config/OpenMotif.tmpl)
@@ -36,7 +36,7 @@ _MOTIF_TYPE=		openmotif
 .elif exists(${X11BASE}/lib/X11/config/LessTif.tmpl) || \
       exists(${LOCALBASE}/lib/X11/config/LessTif.tmpl)
 _MOTIF_TYPE=		lesstif
-.elif exists(${X11BASE}/include/Xm/Xm.h)
+.elif exists(${X11BASE}/include/Xm.h) && exists(${X11BASE}/include/Xm/Gadget.h)
 _MOTIF_TYPE=		none
 .else
 _MOTIF_TYPE=		${MOTIF_TYPE_DEFAULT}
