@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2001/02/25 04:18:22 hubertf Exp $
-# FreeBSD Id: Makefile,v 1.15 1999/03/15 02:01:27 steve Exp
+# $NetBSD: Makefile,v 1.24 2001/05/14 12:42:14 tron Exp $
 
-DISTNAME=       analog-4.16
+DISTNAME=       analog-5.0
 CATEGORIES=	www
 MASTER_SITES=   ${HOMEPAGE} \
 		http://www.web42.com/analog/ \
@@ -14,18 +13,21 @@ COMMENT=	Extremely fast program for analysing WWW logfiles
 
 ALL_TARGET=	analog
 MAKE_ENV+=	PREFIX=${PREFIX}
+WRKDISTDIR=	${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDISTDIR}/src
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/analog \
 	  ${PREFIX}/lib/analog/lang \
 	  ${PREFIX}/lib/analog/images
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${PREFIX}/share/doc/analog
-	${INSTALL_DATA} ${WRKSRC}/images/* ${PREFIX}/lib/analog/images
-	${INSTALL_DATA} ${WRKSRC}/lang/* ${PREFIX}/lib/analog/lang
-	${INSTALL_PROGRAM} ${WRKSRC}/analog ${PREFIX}/bin
-	${INSTALL_DATA} -m 644 ${WRKSRC}/analog.cfg \
+	${INSTALL_DATA} ${WRKDISTDIR}/docs/* ${PREFIX}/share/doc/analog
+	${INSTALL_DATA} ${WRKDISTDIR}/images/* ${PREFIX}/lib/analog/images
+	${INSTALL_DATA} ${WRKDISTDIR}/lang/* ${PREFIX}/lib/analog/lang
+	${INSTALL_PROGRAM} ${WRKDISTDIR}/analog ${PREFIX}/bin
+	${INSTALL_DATA} -m 644 ${WRKDISTDIR}/analog.cfg \
 	  ${PREFIX}/etc/analog.cfg.default
 	${TEST} -f ${PREFIX}/etc/analog.cfg || \
-	${INSTALL_DATA} -m 644 ${WRKSRC}/analog.cfg ${PREFIX}/etc/analog.cfg
+	${INSTALL_DATA} -m 644 ${WRKDISTDIR}/analog.cfg \
+	  ${PREFIX}/etc/analog.cfg
 
 .include "../../mk/bsd.pkg.mk"
