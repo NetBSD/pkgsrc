@@ -1,4 +1,4 @@
-$NetBSD: STATUS,v 1.32 2004/07/09 15:55:59 xtraeme Exp $
+$NetBSD: STATUS,v 1.33 2004/07/31 04:00:27 xtraeme Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -98,6 +98,8 @@ lang/ruby                                    Y      Y
 lang/sun-j*                                         Y
 lang/wonka
 math/gnumeric
+meta-pkgs/XFree86		    Y               Y
+meta-pkgs/xorg			    Y		    Y
 misc/openoffice
 www/mozilla 			    Y               Y                  Y
 www/opera
