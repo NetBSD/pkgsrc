@@ -1,12 +1,11 @@
 #! /bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 1999/08/17 23:16:11 tron Exp $
+# $NetBSD: INSTALL,v 1.3 1999/08/17 23:33:49 tron Exp $
 #
 
 case $2 in
     PRE-INSTALL)
-	if [ ! -d /var/spool/texfonts ]
-	then
+	if [ ! -d /var/spool/texfonts ]; then
 	    install -d -m 755 -o root -g wheel /var/spool/texfonts
 	    for SUBDIR in pk source tfm; do
 		install -d -m 1777 -o root -g wheel /var/spool/texfonts/$SUBDIR
@@ -22,7 +21,7 @@ directory.
 
 For further information have a look at ${PKG_PREFIX}/share/texmf/doc/tetex/.
 ---------------------------------------------------------------------------
-	EOT
+EOT
 	;;
     *)
 	echo "Unexpected Argument $2!!"
