@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2004/12/20 13:25:09 grant Exp $
+# $NetBSD: Makefile,v 1.69 2004/12/29 19:41:25 jlam Exp $
 
 # The following two variables should have empty values unless we're
 # building a perl snapshot or release candidate.
@@ -6,30 +6,30 @@
 PERL5_SNAPSHOT=	# empty
 PERL5_RC_VERS=	# empty
 
+PERL5_VERS=	5.8.6
+CATEGORIES=	lang devel perl5
+EXTRACT_SUFX=	.tar.bz2
+
 .if empty(PERL5_SNAPSHOT) && empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}
 PKGNAME=	perl-${PERL5_VERS}
-PKGREVISION=	6
-SNAPSHOT_SITES=	# empty
+PKGREVISION=	# empty
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 .else
 .  if !empty(PERL5_SNAPSHOT)
 DISTNAME=	perl@${PERL5_SNAPSHOT}
 PKGNAME=	perl-${PERL5_VERS}beta${PERL5_SNAPSHOT}
-SNAPSHOT_SITES=	http://www.iki.fi/jhi/
+MASTER_SITES=	http://www.iki.fi/jhi/
 EXTRACT_SUFX=	.tbz
 WRKSRC=		${WRKDIR}/perl
 .  else # !empty(PERL5_RC_VERS)
 DISTNAME=	perl-${PERL5_VERS}-RC${PERL5_RC_VERS}
 PKGNAME=	perl-${PERL5_VERS}rc${PERL5_RC_VERS}
-SNAPSHOT_SITES=	http://www.cpan.org/authors/id/J/JH/JHI/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S/${MODULE_DIR}/${AUTHOR_DIR}/}
+MODULE_DIR=	modules/by-module
+AUTHOR_DIR=	authors/id/J/JH/JHI
 .  endif
 .endif
-
-PERL5_VERS=	5.8.5
-CATEGORIES=	lang devel perl5
-MASTER_SITES=	${SNAPSHOT_SITES} \
-		${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://www.perl.com/
@@ -137,7 +137,16 @@ PERL5_HINTS_LDFLAGS+=	${LOCLIBRPATHFLAGS}
 
 .include "../../mk/dlopen.buildlink3.mk"
 
+CHECK_BUILTIN.pthread:=	yes
+.include "../../mk/pthread.builtin.mk"
+CHECK_BUILTIN.pthread:=	no
+
+# By default, build with threads only if the threads are native.
+.if !empty(USE_BUILTIN.pthread:M[yY][eE][sS])
+PERL5_USE_THREADS?=	yes
+.else
 PERL5_USE_THREADS?=	${DLOPEN_REQUIRE_PTHREADS}
+.endif
 
 ### [Sat Dec 18 17:29:44 EST 2004 : jlam]
 ### Native threading on VAX isn't ready for primetime in NetBSD>=2.0.
