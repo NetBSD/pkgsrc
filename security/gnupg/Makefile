@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/11/24 16:52:05 chris Exp $
+# $NetBSD: Makefile,v 1.39 2002/11/24 18:47:48 dillo Exp $
 #
 
 DISTNAME=	gnupg-1.2.1
@@ -26,6 +26,7 @@ GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 CONFIGURE_ARGS+=--enable-tiger --with-static-rnd=auto
+TEST_TARGET=	check
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -58,9 +59,6 @@ PLIST_SUBST+=	OPENLDAP=""
 CONFIGURE_ARGS+=--disable-ldap
 PLIST_SUBST+=	OPENLDAP="@comment "
 .endif
-
-test:
-		cd ${WRKSRC} && make check
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
