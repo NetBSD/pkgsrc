@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/04 14:47:56 manu Exp $
+bin/milter-greylist
+man/man8/milter-greylist.8
