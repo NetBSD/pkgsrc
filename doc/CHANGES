@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5866 2004/05/08 04:37:17 taya Exp $
+$NetBSD: CHANGES,v 1.5867 2004/05/08 04:38:40 taya Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2413,3 +2413,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gift-openft-0.2.1.2 [xtraeme 2004-05-08]
 	Added giftcurs-0.6.2 [xtraeme 2004-05-08]
 	Updated thunderbird to 0.6 [taya 2004-05-08]
+	Updated thunderbird-gtk2 to 0.6 [taya 2004-05-08]
