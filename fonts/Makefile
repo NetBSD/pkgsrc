@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2003/08/30 14:24:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.58 2003/10/03 18:21:18 hubertf Exp $
 #
 
 COMMENT=	Fonts
@@ -22,6 +22,7 @@ SUBDIR+=	artwiz-fonts
 SUBDIR+=	baekmuk-ttf
 SUBDIR+=	bakoma-fonts
 SUBDIR+=	biznet-iso8859_2
+SUBDIR+=	chkfontpath
 SUBDIR+=	cyberbase-ttf
 SUBDIR+=	cyberbit-ttf
 SUBDIR+=	cyr-rfx-bulgarian-mik
