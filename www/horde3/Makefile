@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/01/16 21:10:17 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2005/03/04 22:35:22 adrianp Exp $
 
-DISTNAME=	horde-3.0.2
+DISTNAME=	horde-3.0.3
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.horde.org/pub/horde/tarballs/
 
@@ -91,12 +91,12 @@ do-install:
 .	for d in ${PAXDIRS}
 		${INSTALL_DATA_DIR} ${HORDEDIR}/${d}
 .	endfor
-.	undef d 
+.	undef d
 
 .	for d in ${PAXDIRS}
 		cd ${WRKSRC}/${d} && ${PAX} -rw . ${HORDEDIR}/${d}
 .	endfor
-.	undef d 
+.	undef d
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${HORDEDIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${HORDEDIR}
