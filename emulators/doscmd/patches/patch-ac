@@ -1,0 +1,11 @@
+--- doscmd.1.orig	Wed Apr 10 02:38:59 1996
++++ doscmd.1	Fri Jul 17 23:30:00 1998
+@@ -305,7 +305,7 @@
+ .Fl ro
+ flag is specified, it is a read only file system.
+ These assignments will not take place when booting DOS until the
+-.Pa /usr/dos/instbsdi.exe
++.Pa %PREFIX%/libexec/instbsdi.exe
+ binary is run.
+ .\"
+ .\"

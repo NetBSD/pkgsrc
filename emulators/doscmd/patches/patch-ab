@@ -1,0 +1,30 @@
+--- Makefile.orig	Thu May  2 12:55:19 1996
++++ Makefile	Fri Jul 17 23:30:12 1998
+@@ -8,20 +8,23 @@
+ 	int1a.c int2f.c intff.c \
+ 	mem.c mouse.c net.c null.c port.c setver.c signal.c timer.c trace.c trap.c tty.c xms.c
+ 
++BINDIR= ${PREFIX}/bin
++MANDIR=	${PREFIX}/man
++
+ BINGRP=	kmem
+ EXEGRP=	bin
+ BINMODE=2555
+ EXEMODE=444
+-CFLAGS+=-I/usr/X11/include -DDISASSEMBLER -g
+-LDFLAGS+=-L/usr/X11/lib
++CFLAGS+=-I${X11BASE}/include -DDISASSEMBLER
++LDFLAGS+=-L${X11BASE}/lib
+ LDADD+=	-lX11 -li386 -lgcc -lc -lgcc
+ DPADD+=	/usr/X11/lib/libX11.a ${LIBC} ${LIBGCC}
+ 
+ afterinstall:
+ 	install ${COPY} -o ${BINOWN} -g ${EXEGRP} -m ${EXEMODE} \
+-		doscmd.kernel ${DESTDIR}/usr/libexec/doscmd.kernel
++		doscmd.kernel ${PREFIX}/libexec/doscmd.kernel
+ 	install -c -o ${BINOWN} -g ${EXEGRP} -m ${EXEMODE} \
+-		${.CURDIR}/instbsdi.exe ${DESTDIR}/usr/dos/
++		${.CURDIR}/instbsdi.exe ${PREFIX}/libexec/
+ 
+ doscmd: doscmd.kernel ${LIBCRT0} doscmd_loader.o
+ 	ld -N -Bstatic -o doscmd ${LDFLAGS} ${LIBCRT0} doscmd_loader.o ${LDADD}
