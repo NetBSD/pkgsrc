@@ -1,0 +1,16 @@
+This is Eric E. Fair's implementation of identd:
+
+      A proper identification protocol (RFC 1413) implementation,
+      providing all the utility, security, and authentication of
+      all other implementations of this protocol, without all the
+      expensive and pointless grovelling in /dev/kmem.
+
+      Careful design and software engineering makes this software
+      efficient, fast, compact, scalable, and completely maintenance
+      free.
+
+      Anyone who feels the need to use a daemon more complex than
+      this one should go read section 6 of RFC 1413 very carefully,
+      and think again.
+
+  Erik E. Fair <fair@clock.org>, February 1, 2000
