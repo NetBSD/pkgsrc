@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2004/03/31 02:25:11 jlam Exp $
+# $NetBSD: Makefile,v 1.142 2004/03/31 02:32:56 jlam Exp $
 
 DISTNAME=	fetchmail-6.2.5
 PKGREVISION=	2
@@ -12,12 +12,12 @@ COMMENT=	Batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-BUILD_USES_MSGFMT=	YES
+BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK3=		YES
-USE_PKGINSTALL=		YES
-USE_PKGLOCALEDIR=	YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		yes
+USE_PKGINSTALL=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-hesiod
 
 BUILD_DEFS+=		USE_INET6
@@ -25,7 +25,7 @@ LDFLAGS+=		${CFLAGS}
 
 .include "../../mk/bsd.prefs.mk"
 
-FETCHMAIL_USE_SSL?=	YES
+FETCHMAIL_USE_SSL?=	yes
 BUILD_DEFS+=		FETCHMAIL_USE_SSL
 
 .if defined(FETCHMAIL_USE_SSL) && !empty(FETCHMAIL_USE_SSL:M[yY][eE][sS])
