@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/29 12:56:24 abs Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/12 14:41:47 sketch Exp $
 #
 
 DISTNAME=       ${PKGNAME_NOREV}
@@ -33,7 +33,7 @@ DISTNAME=       ${PKGNAME_NOREV}.${MACHINE_ARCH}-unknown-openbsd3.3
 #
 .if ${MACHINE_ARCH} == "sparc"
 DISTNAME=	${PKGNAME_NOREV}.sparc-sun-solaris2.6
-else
+.else
 DISTNAME=	${PKGNAME_NOREV}.i386-pc-solaris2.6
 .endif
 
