@@ -1,8 +1,0 @@
--- $NetBSD: loadpath.UNIX.in,v 1.2 2000/02/21 21:23:34 jlam Exp $
---
-./
-@@SE_LIB@@/lib_std/
-@@SE_LIB@@/lib_iterator/
-@@SE_LIB@@/lib_random/
-@@SE_LIB@@/lib_number/
-@@SE_LIB@@/lib_se/
