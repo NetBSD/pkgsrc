@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2001/11/28 17:30:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2002/06/14 22:16:35 itojun Exp $
 
-DISTNAME=	micq-0.4.7
+DISTNAME=	micq-0.4.9
 CATEGORIES=	chat
 MASTER_SITES=	http://micq.ukeer.de/source/
 EXTRACT_SUFX=	.tgz

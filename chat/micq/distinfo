@@ -1,6 +1,4 @@
-$NetBSD: distinfo,v 1.4 2001/11/28 17:30:38 wiz Exp $
+$NetBSD: distinfo,v 1.5 2002/06/14 22:16:35 itojun Exp $
 
-SHA1 (micq-0.4.7.tgz) = 9eafac726ba1766c365c3fe13c93bd2846d0e558
-Size (micq-0.4.7.tgz) = 254626 bytes
-SHA1 (patch-ab) = a2f834722669baa3371a1e2cfb0a819d56cb279e
-SHA1 (patch-ac) = 3d10352b5bbd2717874384154ca4a58e22a04f7d
+SHA1 (micq-0.4.9.tgz) = 6641c416964e8abd694a062409395f2173c381b9
+Size (micq-0.4.9.tgz) = 419381 bytes
