@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/01/03 18:54:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/04 15:18:35 wiz Exp $
 #
 
-DISTNAME=	speex-1.0beta4
-PKGNAME=	Speex-0.99.4
-PKGREVISION=	1
+DISTNAME=	speex-1.0rc3
+PKGNAME=	Speex-0.99.5
 CATEGORIES=	audio
 MASTER_SITES=	http://www.speex.org/download/
 
