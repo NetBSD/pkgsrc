@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: smbd.sh,v 1.3 2001/08/17 16:08:21 jlam Exp $
+# $NetBSD: smbd.sh,v 1.4 2001/08/20 14:01:46 jlam Exp $
 #
 # PROVIDE: smbd
 # REQUIRE: nmbd
@@ -9,6 +9,7 @@ name="smbd"
 command="@PREFIX@/sbin/${name}"
 command_args="-D"		# _must_ start as daemon from rc.d;
 				# add more flags through ${smbd_flags}
+extra_commands="reload"
 
 if [ ! -d /etc/rc.d ]
 then
