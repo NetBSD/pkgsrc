@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2003/12/14 11:38:22 markd Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/15 09:20:53 markd Exp $
 
 --- kile/kile/kilelyxserver.cpp.orig	2003-12-14 22:38:00.000000000 +1300
 +++ kile/kile/kilelyxserver.cpp
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1 2003/12/14 11:38:22 markd Exp $
  
  #include <sys/stat.h>
  #include <sys/types.h>
-+#ifndef __NetBSD__
++#if !(defined(__NetBSD__) || defined(USE_SOLARIS))
  #include <error.h>
 +#endif
  #include <stdlib.h> //getenv
