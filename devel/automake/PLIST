@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/06/19 23:46:44 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/12/06 18:28:13 wiz Exp $
 bin/aclocal
 bin/aclocal-${PKG_DIR_VERSION}
 bin/automake
@@ -35,9 +35,12 @@ share/aclocal-${PKG_DIR_VERSION}/runlog.m4
 share/aclocal-${PKG_DIR_VERSION}/sanity.m4
 share/aclocal-${PKG_DIR_VERSION}/strip.m4
 share/automake-${PKG_DIR_VERSION}/Automake/Channels.pm
-share/automake-${PKG_DIR_VERSION}/Automake/Struct.pm
 share/automake-${PKG_DIR_VERSION}/Automake/General.pm
+share/automake-${PKG_DIR_VERSION}/Automake/Struct.pm
 share/automake-${PKG_DIR_VERSION}/Automake/XFile.pm
+share/automake-${PKG_DIR_VERSION}/COPYING
+share/automake-${PKG_DIR_VERSION}/INSTALL
+share/automake-${PKG_DIR_VERSION}/acinstall
 share/automake-${PKG_DIR_VERSION}/am/ansi2knr.am
 share/automake-${PKG_DIR_VERSION}/am/check.am
 share/automake-${PKG_DIR_VERSION}/am/clean-hdr.am
@@ -76,23 +79,22 @@ share/automake-${PKG_DIR_VERSION}/am/texi-vers.am
 share/automake-${PKG_DIR_VERSION}/am/texibuild.am
 share/automake-${PKG_DIR_VERSION}/am/texinfos.am
 share/automake-${PKG_DIR_VERSION}/am/yacc.am
-share/automake-${PKG_DIR_VERSION}/COPYING
-share/automake-${PKG_DIR_VERSION}/INSTALL
-share/automake-${PKG_DIR_VERSION}/texinfo.tex
-share/automake-${PKG_DIR_VERSION}/ansi2knr.c
 share/automake-${PKG_DIR_VERSION}/ansi2knr.1
+share/automake-${PKG_DIR_VERSION}/ansi2knr.c
+share/automake-${PKG_DIR_VERSION}/compile
+share/automake-${PKG_DIR_VERSION}/config-ml.in
 share/automake-${PKG_DIR_VERSION}/config.guess
 share/automake-${PKG_DIR_VERSION}/config.sub
+share/automake-${PKG_DIR_VERSION}/depcomp
+share/automake-${PKG_DIR_VERSION}/elisp-comp
 share/automake-${PKG_DIR_VERSION}/install-sh
 share/automake-${PKG_DIR_VERSION}/mdate-sh
 share/automake-${PKG_DIR_VERSION}/missing
 share/automake-${PKG_DIR_VERSION}/mkinstalldirs
-share/automake-${PKG_DIR_VERSION}/elisp-comp
-share/automake-${PKG_DIR_VERSION}/ylwrap
-share/automake-${PKG_DIR_VERSION}/acinstall
-share/automake-${PKG_DIR_VERSION}/depcomp
-share/automake-${PKG_DIR_VERSION}/compile
 share/automake-${PKG_DIR_VERSION}/py-compile
+share/automake-${PKG_DIR_VERSION}/symlink-tree
+share/automake-${PKG_DIR_VERSION}/texinfo.tex
+share/automake-${PKG_DIR_VERSION}/ylwrap
 @dirrm share/aclocal-${PKG_DIR_VERSION}
 @dirrm share/automake-${PKG_DIR_VERSION}/Automake
 @dirrm share/automake-${PKG_DIR_VERSION}/am
