@@ -1,43 +1,31 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/07 15:12:59 ben Exp $
---- ../upx-1.24/src/Makefile	2002-10-28 11:43:34.000000000 +0100
-+++ src/Makefile	2003-12-27 22:03:08.000000000 +0100
-@@ -187,6 +187,39 @@ LDFLAGS += $(LDLIBDIRS)
+$NetBSD: patch-aa,v 1.2 2005/02/10 15:51:38 ben Exp $
+
+--- ../upx-1.25-orig/src/Makefile.bld      2004-06-24 20:35:14.000000000 +0200
++++ src/Makefile.bld   2005-02-10 13:25:03.000000000 +0100
+@@ -144,6 +144,26 @@
+ include $(srcdir)/Makedefs.gcc
+ endif
  
- 
- ###
++##
 +### NetBSD
 +###
 +
-+ifeq ($(target),netbsd)
-+override arch := $(shell uname -m | sed -e 's/^i[3456789]86$$/i386/')
-+DEFS += '-DUPX_CONFIG_H="config_h/linux.h"'
-+DEFS += -D_FILE_OFFSET_BITS=64  -DWITH_UCL=1
-+LDLIBS += -lucl
-+ifeq ($(arch),i386)
-+  CC += -march=i386 -mcpu=i586
-+endif
 +
-+ifeq (1,2) 	# checkergcc
-+  CC = checkergcc
-+  CXX = checkerg++
-+else
++ifeq ($(target),netbsd)
++include $(srcdir)/Makedefs.gcc
++override arch := $(shell uname -m | sed -e 's/^i[3456789]86$$/i386/')
++ifeq ($(arch),i386)
++  CCARCH += -march=i386 -mcpu=i686
++endif
++DEFS += -D_FILE_OFFSET_BITS=64
++##CFLAGS_WERROR = -Werror
 +ifeq ($(DEBUG),1)
-+  CFLAGS += -O0 -g
 +else
 +  ##LDFLAGS += -static
 +  STUBEDIT_EXE = objcopy -S -R .comment -R .note $@
-+  ifeq ($(arch),i386)
-+    STUBIFY_EXE = perl $(srcdir)/stub/scripts/brandelf.pl $@
-+    CHMOD_EXE = chmod 755 $@
-+  endif
 +endif
-+endif
-+LDFLAGS += -L$(PREFIX)/lib -Wl,-rpath=$(PREFIX)/lib
-+CFLAGS += -I$(PREFIX)/include
-+CC = g++
-+endif	# netbsd
-+
-+###
- ### Linux
- ###
++CHMOD_EXE = chmod 755 $@
++endif  # netbsd
  
+ ###
+ ### linux - gcc
