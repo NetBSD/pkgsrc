@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2001/12/29 17:41:45 fredb Exp $
+# $NetBSD: Makefile,v 1.30 2001/12/29 18:33:39 fredb Exp $
 
 DISTNAME=		gcc-2.95.2
 PKGREVISION=		1
@@ -32,7 +32,7 @@ CONFIGURE_ARGS=		--host=${MACHINE_GCC_PLATFORM} \
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
 INFO_FILES=		chill.info cpp.info g77.info gcc.info
 
-GCC_VERSION=		${PKGNAME:C/.*-//}
+GCC_VERSION=		${PKGNAME:C/.*-//:C/nb[1-9]*//}
 MESSAGE_SUBST+=		MAKE=${MAKE}
 PLIST_SUBST+=		GCC_VERSION=${GCC_VERSION} \
 			MACHINE_GCC_PLATFORM=${MACHINE_GCC_PLATFORM}
