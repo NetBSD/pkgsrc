@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2004/01/19 20:18:02 wiz Exp $
+$NetBSD: distinfo,v 1.15 2004/02/27 15:28:20 wiz Exp $
 
-SHA1 (unrarsrc-3.3.4.tar.gz) = e9cdf81b60b6c4dbcfdf40d2ef40d0864cc75e6d
-Size (unrarsrc-3.3.4.tar.gz) = 117158 bytes
-SHA1 (patch-aa) = 612a31f767de48b574cd916d600005f5613eaefd
+SHA1 (unrarsrc-3.3.6.tar.gz) = 2fea657757149ed430acf7b314e7183615587ed4
+Size (unrarsrc-3.3.6.tar.gz) = 117590 bytes
+SHA1 (patch-aa) = 33c4fc01f182516e73b050aa11fe3d6d84dd9610
