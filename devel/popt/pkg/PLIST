@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/10/31 13:33:12 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/06/14 12:55:18 mjl Exp $
+lib/locale/ro/LC_MESSAGES/popt.mo
+lib/locale/sk/LC_MESSAGES/popt.mo
+lib/libpopt.so
+lib/libpopt.so.0.0
+lib/libpopt.so.0
+lib/libpopt.la
 lib/libpopt.a
 include/popt.h
-share/locale/ro/LC_MESSAGES/rpm.mo
+man/man3/popt.3
