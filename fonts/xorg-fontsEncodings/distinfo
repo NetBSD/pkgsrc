@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/29 04:57:51 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/09/21 17:38:52 xtraeme Exp $
 
-SHA1 (X11R6.7.0-src1.tar.gz) = 14f282cee9dc1ff6ebc34d834892599b53195f8b
-Size (X11R6.7.0-src1.tar.gz) = 30039655 bytes
+SHA1 (X11R6.8.1-src1.tar.gz) = 78d64a5ea4440699eefb6c7bf76f7b6ce3f2fb15
+Size (X11R6.8.1-src1.tar.gz) = 30573498 bytes
