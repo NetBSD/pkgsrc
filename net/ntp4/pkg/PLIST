@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/08/19 08:52:58 fredb Exp $
+@comment $NetBSD: PLIST,v 1.4 1999/11/14 05:23:28 fredb Exp $
 bin/ntpd
 bin/ntpdate
 bin/ntpdc
@@ -21,6 +21,7 @@ share/doc/ntp4/driver1.htm
 share/doc/ntp4/driver10.htm
 share/doc/ntp4/driver11.htm
 share/doc/ntp4/driver12.htm
+share/doc/ntp4/driver16.htm
 share/doc/ntp4/driver18.htm
 share/doc/ntp4/driver19.htm
 share/doc/ntp4/driver2.htm
@@ -36,6 +37,7 @@ share/doc/ntp4/driver3.htm
 share/doc/ntp4/driver30.htm
 share/doc/ntp4/driver32.htm
 share/doc/ntp4/driver33.htm
+share/doc/ntp4/driver34.htm
 share/doc/ntp4/driver4.htm
 share/doc/ntp4/driver5.htm
 share/doc/ntp4/driver6.htm
@@ -121,6 +123,7 @@ share/doc/ntp4/pic/appletree.gif
 share/doc/ntp4/pic/barnstable.gif
 share/doc/ntp4/pic/beaver.gif
 share/doc/ntp4/pic/c51.jpg
+share/doc/ntp4/pic/driver29.gif
 share/doc/ntp4/pic/fg6021.gif
 share/doc/ntp4/pic/flatheads.gif
 share/doc/ntp4/pic/gadget.jpg
