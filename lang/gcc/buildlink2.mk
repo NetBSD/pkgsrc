@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.4 2002/09/29 01:24:00 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2002/10/01 19:24:28 jlam Exp $
 
 .if !defined(GCC_BUILDLINK2_MK)
 GCC_BUILDLINK2_MK=	# defined
@@ -34,20 +34,25 @@ _GCC_ARCHDIR=		${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
 
 BUILDLINK_LDFLAGS.gcc=	-L${_GCC_ARCHDIR} -Wl,-R${_GCC_ARCHDIR}
 
+_GCC_VERSION!=		( gcc --version ) 2>/dev/null || ${ECHO} 0
+#
+# GCC_VERSION is the version number of the gcc detected above.  EGCS gcc is
+# considered to be "gcc-2.8.1" so that it will match "gcc>=2.8.0".
+#
+# GCC_PKG is the package name "gcc-${GCC_VERSION} for the gcc detected above.
+#
+.if !empty(_GCC_VERSION:Megcs-[0-9]*)
+GCC_VERSION=		2.8.1
+.else
+GCC_VERSION=		${_GCC_VERSION}
+.endif
+GCC_PKG=		gcc-${GCC_VERSION}
+
 .if defined(USE_PKGSRC_GCC)
 _NEED_PKGSRC_GCC=	YES
 .else
-_GCC_VERSION!=		( gcc --version ) 2>/dev/null || ${ECHO} 0
-.  if !empty(_GCC_VERSION:Megcs-[0-9]*)
-#
-# Consider EGCS to be gcc-2.8.1, so it will match 'gcc>=2.8.0'.
-#
-_GCC_PKG=		gcc-2.8.1
-.  else
-_GCC_PKG=		gcc-${_GCC_VERSION}
-.  endif
 _NEED_PKGSRC_GCC!= \
-	if ${PKG_ADMIN} pmatch '${BUILDLINK_DEPENDS.gcc}' ${_GCC_PKG}; then \
+	if ${PKG_ADMIN} pmatch '${BUILDLINK_DEPENDS.gcc}' ${GCC_PKG}; then \
 		gccpath=`${TYPE} gcc | ${AWK} '{ print $$NF }'`;	\
 		if [ "$$gccpath" = "${_GCC_PREFIX}bin/gcc" ]; then \
 			${ECHO} "YES";					\
