@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/06/21 15:09:47 agc Exp $
+
+--- icepref.orig	Thu Jan  6 00:16:04 2000
++++ icepref
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2.1
+ 
+ ##############################################################################
+ #                                IcePref 1.0
+@@ -1710,7 +1710,7 @@
+ 	    
+ 	    exec_path = commands.getoutput('whereis icewm')
+ 	    exec_path = split(exec_path) # split output of whereis into tokens at whitespace
+-	    exec_path = exec_path[1] # get second token (should be executable)
++	    exec_path = exec_path[0] # get second token (should be executable)
+ 	    
+ 	    if DEBUG:
+ 		print 'The icewm execuatable is located at %s' % exec_path
+@@ -1898,8 +1898,8 @@
+ 		# work on other non Linux systems.  Under Debian, this function requires
+ 		# the installation of the psmisc package.
+ 		
+-		os.system('killall -HUP -q icewm')
+-		os.system('killall -HUP -q icewm-gnome')
++		os.system('killall -HUP icewm')
++		os.system('killall -HUP icewm-gnome')
+ 	
+ 	# this is the callback for the OK button
+ 	
+@@ -2090,7 +2090,7 @@
+ 			button.show()
+ 			
+ 			# Disable the Restart button in the OS is BSD or the user is root
+-			if item[0] == 'Restart' and ( self.os == 'BSD' or USER == 'root'):
++			if item[0] == 'Restart' and ( USER == 'root'):
+ 			    button.set_sensitive(FALSE)
+ 			    
+ 			bbox.pack_start(button, TRUE, FALSE, 0)
