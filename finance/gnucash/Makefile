@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2001/09/26 22:37:21 mjl Exp $
+# $NetBSD: Makefile,v 1.16 2001/10/02 00:36:53 mjl Exp $
 
-DISTNAME=		gnucash-1.6.3
+DISTNAME=		gnucash-1.6.4
 CATEGORIES=		finance
 MASTER_SITES=		http://www.linas.org/pub/gnucash/gnucash/sources/stable/ \
 			ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
