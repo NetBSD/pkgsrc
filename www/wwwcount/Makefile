@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:56:08 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/24 10:33:15 jmmv Exp $
 # FreeBSD: Makefile,v 1.12 1998/09/28 18:02:05 smace Exp
 
 DISTNAME=       wwwcount2.5
@@ -24,7 +24,7 @@ do-install:
 	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/wwwcount
 	${INSTALL_MAN} ${WRKSRC}/docs/blues.gif ${PREFIX}/share/doc/wwwcount
 	${INSTALL_MAN} ${WRKSRC}/docs/Count.html ${PREFIX}/share/doc/wwwcount
-	${INSTALL} -l rs ${PREFIX}/share/doc/wwwcount/Count.html ${PREFIX}/share/doc/wwwcount/index.html
+	( cd ${PREFIX}/share/doc/wwwcount && ${LN} -s Count.html index.html )
 	${INSTALL_MAN} ${WRKSRC}/docs/Count2_5-ex.html ${PREFIX}/share/doc/wwwcount
 	${INSTALL_MAN} ${WRKSRC}/docs/Count_Changelog.html ${PREFIX}/share/doc/wwwcount
 	${INSTALL_MAN} ${WRKSRC}/docs/Count_FAQ.html ${PREFIX}/share/doc/wwwcount
