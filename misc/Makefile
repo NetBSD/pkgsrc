@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.219 2004/12/09 15:42:54 wiz Exp $
+# $NetBSD: Makefile,v 1.220 2004/12/24 10:06:24 jmmv Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -164,6 +164,7 @@ SUBDIR+=	staroffice
 SUBDIR+=	stellarium
 SUBDIR+=	tds
 SUBDIR+=	team
+SUBDIR+=	theme-dirs
 SUBDIR+=	ttyrec
 SUBDIR+=	udfclient
 SUBDIR+=	uptimec
