@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/14 12:12:21 agc Exp $
+# $NetBSD: Makefile,v 1.2 2001/03/14 13:52:21 wiz Exp $
 #
 
 DISTNAME=	ispell-3.1.20
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.gnu.org/software/ispell/ispell.html
 COMMENT=	British dictionary for interactive spelling checker
 
 DEPENDS+=	ispell-base-3.1.20:../../textproc/ispell-base
-CONFLICTS+=	ispell-[0-9]*
 
 WRKSRC=		${WRKDIR}/ispell-3.1
 
