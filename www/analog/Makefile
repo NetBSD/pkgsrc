@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/05/10 12:31:10 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/05/10 22:37:13 tron Exp $
 # FreeBSD Id: Makefile,v 1.15 1999/03/15 02:01:27 steve Exp
 
 DISTNAME=       analog3.2
@@ -20,11 +20,11 @@ do-install:
 	${INSTALL} -d -o ${BINOWN} -g ${BINGRP} -m 755 \
 		${PREFIX}/lib/analog/lang
 	${INSTALL} -d -o nobody -g nogroup -m 755 \
-		${PREFIX}/www/data/images
+		${PREFIX}/lib/analog/images
 	cd ${WRKSRC}/docs && \
 		${INSTALL_DATA} * ${PREFIX}/share/doc/analog
 	cd ${WRKSRC}/images && \
-		${INSTALL_DATA} * ${PREFIX}/www/data/images
+		${INSTALL_DATA} * ${PREFIX}/lib/analog/images
 	cd ${WRKSRC}/lang && \
 		${INSTALL_DATA} * ${PREFIX}/lib/analog/lang
 	cd ${WRKSRC} && \
