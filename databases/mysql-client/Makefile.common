@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2004/11/16 17:29:36 tron Exp $
+# $NetBSD: Makefile.common,v 1.32 2004/11/16 18:01:11 xtraeme Exp $
 
 DISTNAME=		mysql-4.0.22
 CATEGORIES=		databases
@@ -102,6 +102,11 @@ SUBST_STAGE.scripts=	post-extract
 SUBST_FILES.scripts=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh
 SUBST_SED.scripts=	-e "s,chown,${CHOWN},g"
 SUBST_MESSAGE.scripts=	"Fixing scripts."
+SUBST_STAGE.thr=	post-configure
+SUBST_FILES.thr=	libmysql/Makefile
+SUBST_SED.thr=		-e "s,${PTHREAD_CFLAGS},,g"	\
+			-e "s,${PTHREAD_LDFLAGS},,g"	\
+			-e "s,${PTHREAD_LIBS},,g"
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

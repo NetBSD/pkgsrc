@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/11/16 17:29:36 tron Exp $
+# $NetBSD: Makefile,v 1.37 2004/11/16 18:01:11 xtraeme Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=		mysqc
@@ -16,12 +16,6 @@ USE_BUILDLINK3=		yes
 UNWRAP_FILES=		scripts/mysql_config
 
 INFO_FILES=		mysql.info
-
-post-configure:
-	${SED} -e 's#${PTHREAD_CFLAGS}##g' -e 's#${PTHREAD_LDFLAGS}##g' \
-	   -e 's#${PTHREAD_LIBS}##g' ${WRKSRC}/libmysql/Makefile \
-	   >${WRKSRC}/libmysql/Makefile.new
-	${MV} ${WRKSRC}/libmysql/Makefile.new ${WRKSRC}/libmysql/Makefile
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Docs/mysql.info ${PREFIX}/info
