@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2004/11/27 08:44:35 xtraeme Exp $
+# $NetBSD: options.mk,v 1.5 2004/11/30 15:33:53 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lynx
 PKG_SUPPORTED_OPTIONS=	curses inet6 ncurses slang socks4 socks5
@@ -20,12 +20,15 @@ PKG_FAIL_REASON+=	"SOCKS may not be enabled together with the \"slang\"" \
 ### Set the screen library to "slang", "ncurses", or plain "curses".
 ###
 .if !empty(PKG_OPTIONS:Mslang)
+SCREENTYPE=		slang
 .  include "../../devel/libslang/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mncurses)
+SCREENTYPE=		ncurses
 USE_NCURSES=		color
 .  include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-color-style
 .elif !empty(PKG_OPTIONS:Mcurses)
+SCREENTYPE=		curses
 .  include "../../mk/curses.buildlink3.mk"
 .  if !empty(MACHINE_PLATFORM:MNetBSD-1.[56]*-i386)
 CONFIGURE_ARGS+=	--enable-color-style
