@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/15 08:10:58 shell Exp $
+bin/dnetc
+man/man1/dnetc.1
+share/doc/dnetc/CHANGES.txt
+share/doc/dnetc/dnetc.txt
+share/doc/dnetc/readme.1st
+share/doc/dnetc/readme._ix
+@dirrm share/doc/dnetc
