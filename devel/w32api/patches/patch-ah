@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2001/10/21 12:39:06 kent Exp $
+
+--- include/winnt.h.orig	Mon Jul 16 01:01:27 2001
++++ include/winnt.h
+@@ -53,6 +53,7 @@
+ 
+ #ifndef _WCHAR_T_DEFINED
+ #define _WCHAR_T_DEFINED
++#undef _BSD_WCHAR_T_
+ #ifndef _WCHAR_T_
+ #define _WCHAR_T_
+ #undef __need_wchar_t

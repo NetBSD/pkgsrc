@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/01/30 03:20:52 minoura Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/10/21 12:39:07 kent Exp $
+cross/i386-netbsdpe/include/basetsd.h
 cross/i386-netbsdpe/include/basetyps.h
 cross/i386-netbsdpe/include/cderr.h
 cross/i386-netbsdpe/include/cguid.h
@@ -17,6 +18,11 @@ cross/i386-netbsdpe/include/imagehlp.h
 cross/i386-netbsdpe/include/imm.h
 cross/i386-netbsdpe/include/initguid.h
 cross/i386-netbsdpe/include/intshcut.h
+cross/i386-netbsdpe/include/ipexport.h
+cross/i386-netbsdpe/include/iphlpapi.h
+cross/i386-netbsdpe/include/ipifcons.h
+cross/i386-netbsdpe/include/iprtrmib.h
+cross/i386-netbsdpe/include/iptypes.h
 cross/i386-netbsdpe/include/isguids.h
 cross/i386-netbsdpe/include/largeint.h
 cross/i386-netbsdpe/include/lm.h
@@ -46,14 +52,18 @@ cross/i386-netbsdpe/include/lzexpand.h
 cross/i386-netbsdpe/include/mciavi.h
 cross/i386-netbsdpe/include/mcx.h
 cross/i386-netbsdpe/include/mmsystem.h
+cross/i386-netbsdpe/include/mswsock.h
 cross/i386-netbsdpe/include/nb30.h
 cross/i386-netbsdpe/include/nddeapi.h
 cross/i386-netbsdpe/include/nspapi.h
+cross/i386-netbsdpe/include/ntdef.h
+cross/i386-netbsdpe/include/ntsecapi.h
 cross/i386-netbsdpe/include/oaidl.h
 cross/i386-netbsdpe/include/objbase.h
 cross/i386-netbsdpe/include/objfwd.h
 cross/i386-netbsdpe/include/objidl.h
 cross/i386-netbsdpe/include/ocidl.h
+cross/i386-netbsdpe/include/odbcinst.h
 cross/i386-netbsdpe/include/ole.h
 cross/i386-netbsdpe/include/ole2.h
 cross/i386-netbsdpe/include/ole2ver.h
@@ -71,6 +81,9 @@ cross/i386-netbsdpe/include/pshpack2.h
 cross/i386-netbsdpe/include/pshpack4.h
 cross/i386-netbsdpe/include/pshpack8.h
 cross/i386-netbsdpe/include/rapi.h
+cross/i386-netbsdpe/include/ras.h
+cross/i386-netbsdpe/include/raserror.h
+cross/i386-netbsdpe/include/rassapi.h
 cross/i386-netbsdpe/include/regstr.h
 cross/i386-netbsdpe/include/richedit.h
 cross/i386-netbsdpe/include/richole.h
@@ -84,14 +97,19 @@ cross/i386-netbsdpe/include/rpcnsip.h
 cross/i386-netbsdpe/include/rpcnterr.h
 cross/i386-netbsdpe/include/rpcproxy.h
 cross/i386-netbsdpe/include/scrnsave.h
+cross/i386-netbsdpe/include/setupapi.h
 cross/i386-netbsdpe/include/shellapi.h
 cross/i386-netbsdpe/include/shlguid.h
 cross/i386-netbsdpe/include/shlobj.h
 cross/i386-netbsdpe/include/sql.h
 cross/i386-netbsdpe/include/sqlext.h
 cross/i386-netbsdpe/include/sqltypes.h
+cross/i386-netbsdpe/include/sqlucode.h
+cross/i386-netbsdpe/include/subauth.h
 cross/i386-netbsdpe/include/tlhelp32.h
 cross/i386-netbsdpe/include/unknwn.h
+cross/i386-netbsdpe/include/userenv.h
+cross/i386-netbsdpe/include/w32api.h
 cross/i386-netbsdpe/include/winbase.h
 cross/i386-netbsdpe/include/wincon.h
 cross/i386-netbsdpe/include/wincrypt.h
@@ -114,5 +132,8 @@ cross/i386-netbsdpe/include/winspool.h
 cross/i386-netbsdpe/include/winsvc.h
 cross/i386-netbsdpe/include/winuser.h
 cross/i386-netbsdpe/include/winver.h
+cross/i386-netbsdpe/include/ws2tcpip.h
 cross/i386-netbsdpe/include/wtypes.h
 cross/i386-netbsdpe/include/zmouse.h
+cross/i386-netbsdpe/lib/libdxguid.a
+cross/i386-netbsdpe/lib/libuuid.a
