@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2003/08/29 18:51:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.201 2003/08/30 16:11:39 xtraeme Exp $
 
 COMMENT=	System utilities
 
@@ -160,6 +160,7 @@ SUBDIR+=	xbatt
 SUBDIR+=	xbattbar
 SUBDIR+=	xcdroast
 SUBDIR+=	xdu
+SUBDIR+=	xfe
 SUBDIR+=	xfm
 SUBDIR+=	xhfs
 SUBDIR+=	xmbmon
