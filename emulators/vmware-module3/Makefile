@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/06/02 01:19:51 jschauma Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/26 06:50:02 tron Exp $
 
 DISTNAME=	vmware-netbsd-3.2.2
 PKGNAME=	vmware-module-3.2.2
@@ -19,13 +19,10 @@ NO_CONFIGURE=	# defined
 
 NO_SRC_ON_FTP=		already there
 
-# to override <bsd.own.mk>, MUST be set this way BEFORE bsd.prefs.mk
-BSDSRCDIR?=	/nonexistent
-
 .include "../../mk/bsd.prefs.mk"
 
 pre-extract:
-.if ${BSDSRCDIR} == "/nonexistent"
+.if !exists(${BSDSRCDIR}/sys/lib/libkern/libkern.h)
 	@${ECHO_MSG} "Please set BSDSRCDIR in /etc/mk.conf, pointing it"
 	@${ECHO_MSG} "to a directory that contains sources that match"
 	@${ECHO_MSG} "your currently running system (esp. kernel), e.g."
