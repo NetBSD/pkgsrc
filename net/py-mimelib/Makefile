@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/11 14:56:54 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/21 12:43:33 drochner Exp $
 #
 
 DISTNAME=	email-2.5
@@ -18,3 +18,11 @@ PYTHON_VERSIONS_ACCEPTED= 21pth 21 22 22pth 23 23pth
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
+
+# _compat22.py is not byte-compiled if built with 2.1(-pth)
+.if !empty(PYPKGPREFIX:Mpy21*)
+NOT21=	"@comment "
+.else
+NOT21=	#empty
+.endif
+PLIST_SUBST+=	NOT21=${NOT21}
