@@ -1,0 +1,53 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/12/04 13:38:25 hubertf Exp $
+
+--- fed/select.c.orig	Mon Dec  4 13:46:59 2000
++++ fed/select.c
+@@ -46,7 +46,8 @@
+ 
+ #include "fed.h"
+ 
+-int sc, sr, scurchar;
++/* "sr" is defined in <curses.h> for some terminal capability?!? */
++int sc, fed_sr, scurchar;
+ 
+ int edit();
+ 
+@@ -153,12 +154,12 @@
+ 			case 'g':
+ 			case 'G':
+ 				dis_cmd("   Exchange: select Destination, then press RETURN or any other Key to ABORT");
+-				sr = r;
++				fed_sr = r;
+ 				sc = c;
+ 				scurchar = curchar;
+ 				if((curchar = sel_dest()) == -1)
+ 				{ /* failsafe */
+-					r = sr;
++					r = fed_sr;
+ 					c = sc;
+ 					curchar = scurchar;
+ 				}
+@@ -174,12 +175,12 @@
+ 			case 'm':
+ 			case 'M':
+ 				dis_cmd("   Move: select Destination, then press RETURN or any other Key to ABORT");
+-				sr = r;
++				fed_sr = r;
+ 				sc = c;
+ 				scurchar = curchar;
+ 				if((curchar = sel_dest()) == -1)
+ 				{ /* failsafe */
+-					r = sr;
++					r = fed_sr;
+ 					c = sc;
+ 					curchar = scurchar;
+ 				}
+@@ -320,7 +321,7 @@
+ 	mvwprintw(set_win,(r+1),((c*2)+1),"%c%c",h,l);
+ 	wmove(set_win,(r+1),((c*2)+1));
+ 
+-	if((r==sr) && (c==sc))
++	if((r==fed_sr) && (c==sc))
+ 	{
+ 		wattron(set_win,A_REVERSE);
+ 		mvwprintw(set_win,(r+1),((c*2)+1),"%c%c",h,l);

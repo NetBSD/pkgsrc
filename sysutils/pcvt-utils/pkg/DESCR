@@ -1,0 +1,6 @@
+This package contains the useful components that can still be used
+on NetBSD after pcvt was replaced with wscons:
+
+ * playvt: A vt-movie player, includes several demo files.
+ * fed, fontedit: two font editors that can also be used on
+                  the fonts in /usr/share/wscons/fonts. 
