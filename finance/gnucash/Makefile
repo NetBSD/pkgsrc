@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2001/10/03 09:02:44 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2001/12/17 22:29:04 mjl Exp $
 
-DISTNAME=		gnucash-1.6.4
+DISTNAME=		gnucash-1.6.5
 CATEGORIES=		finance
 MASTER_SITES=		http://www.linas.org/pub/gnucash/gnucash/sources/stable/ \
 			ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
@@ -28,8 +28,9 @@ LTCONFIG_OVERRIDE+=	${WRKSRC}/ltconfig
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-guile-config=${LOCALBASE}/bin/guile-config
-CONFIGURE_ARGS+=	--without-motif --without-included-gettext
+CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
+CONFIGURE_ARGS+=	--with-perl=${PERL5}
 
 CONFIGURE_ENV+=		LOCALBASE="${LOCALBASE}"
 CPPFLAGS+=		-I${LOCALBASE}/include
