@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 1998/03/31 12:55:44 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1999/03/29 13:35:16 hubertf Exp $
 bin/unroff
 man/man1/unroff.1.gz
 man/man1/unroff-html.1.gz
 man/man1/unroff-html-man.1.gz
 man/man1/unroff-html-ms.1.gz
+man/man1/unroff-html-me.1.gz
 share/unroff/doc/manual.ms
 share/unroff/misc/sample.unroff
 share/unroff/misc/tmac.hyper
