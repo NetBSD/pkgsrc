@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1 2001/05/03 19:29:59 abs Exp $
+$NetBSD: TODO,v 1.2 2001/05/04 09:30:43 skrll Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -11,6 +11,15 @@ packages TODO (Suggested new packages)
     compat_solaris8	Solaris and Intel compat libraries
     http://www.sun.com/software/solaris/binaries/download.html
 
+    kde-i18n		Internationalisation package for KDE 2.
+    ftp://ftp.kde.org/pub/kde/stable/2.1/distribution/tar/generic/src
 
 pksgrc TODO (Suggested pkgsrc features and enhancements)
 ^^^^^^^^^^^
+
+     o	Add a default test target to mk/*.mk and override in any pkgs
+	that have testsuites. Use it in bulk builds/test.
+
+     o	Add a USE_PTHREADS variable with ALT_PTHREADS override.
+
+     o	Add a sort check to pkglint for PLISTs
