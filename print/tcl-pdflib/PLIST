@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:28:03 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/06/30 03:59:05 jschauma Exp $
 lib/tcl8.3/pdflib/pdflib_tcl.a
 lib/tcl8.3/pdflib/pdflib_tcl.la
 lib/tcl8.3/pdflib/pdflib_tcl.so
-lib/tcl8.3/pdflib/pdflib_tcl.so.2
-lib/tcl8.3/pdflib/pdflib_tcl.so.2.1
+lib/tcl8.3/pdflib/pdflib_tcl.so.0
+lib/tcl8.3/pdflib/pdflib_tcl.so.0.0
 lib/tcl8.3/pdflib/pkgIndex.tcl
 @dirrm lib/tcl8.3/pdflib
