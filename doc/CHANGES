@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4118 2003/12/14 23:27:07 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4119 2003/12/14 23:35:35 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5166,3 +5166,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nautilus to 2.4.1 [xtraeme 2003-12-14]
 	Updated file-roller to 2.4.1 [xtraeme 2003-12-14]
 	Updated gnome2-control-center to 2.4.0 [xtraeme 2003-12-14]
+	Updated gnome-panel to 2.4.1 [xtraeme 2003-12-14]
