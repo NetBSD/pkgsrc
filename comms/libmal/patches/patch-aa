@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/04/19 14:01:46 markd Exp $
+
+--- malsync/mal/common/AGNet.h.orig	2004-04-19 21:59:57.000000000 +1200
++++ malsync/mal/common/AGNet.h
+@@ -54,6 +54,7 @@
+ #       else /* defined(macintosh) */
+ #           include <netdb.h>
+ #           include <sys/types.h>
++#           include <sys/param.h>
+ #           include <sys/socket.h>
+ #           include <unistd.h>
+ #           include <netinet/in.h>
