@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5590 2004/04/15 14:40:51 jmmv Exp $
+$NetBSD: CHANGES,v 1.5591 2004/04/15 16:29:16 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1966,3 +1966,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated doxygen to 1.3.6 [martti 2004-04-15]
 	Updated t1lib to 5.0.2 [minskim 2004-04-15]
 	Updated gnopernicus to 0.8.3 [jmmv 2004-04-15]
+	Updated samba to 3.0.2anb1 [jmmv 2004-04-15]
