@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/12/19 14:17:27 wulf Exp $
+# $NetBSD: Makefile,v 1.22 2001/01/04 02:56:14 wiz Exp $
 
 DISTNAME=	kdevelop-1.3
 CATEGORIES=	devel kde
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	wulf@netbsd.org
 HOMEPAGE=       http://www.kdevelop.org/
 
-BUILD_DEPENDS+= ${LOCALBASE}/bin/msgfmt:../../devel/gettext
+BUILD_DEPENDS+= msgfmt:../../devel/gettext
 DEPENDS+=       autoconf-*:../../devel/autoconf
 DEPENDS+=       automake-*:../../devel/automake
 DEPENDS+=       a2ps-*:../../print/a2ps
