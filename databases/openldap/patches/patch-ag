@@ -1,0 +1,33 @@
+$NetBSD: patch-ag,v 1.1 2004/01/09 22:48:16 jlam Exp $
+
+--- servers/slapd/Makefile.in.orig	Mon Mar 31 11:48:17 2003
++++ servers/slapd/Makefile.in
+@@ -312,7 +312,7 @@ veryclean-local-srv: FORCE
+ 		fi; \
+ 	done
+ 
+-install-local-srv: install-slapd install-conf install-schema install-tools
++install-local-srv: install-slapd install-tools
+ 
+ install-slapd: FORCE
+ 	-$(MKDIR) $(DESTDIR)$(libexecdir)
+@@ -363,17 +363,14 @@ install-schema: FORCE
+ 		else \
+ 			echo "PRESERVING EXISTING SCHEMA FILE $$SD" ; \
+ 		fi ; \
+-		$(INSTALL) $(INSTALLFLAGS) -m 444 $$i $$SD.default ; \
+ 	done
+ 
+ install-conf: FORCE
+ 	@-$(MKDIR) $(DESTDIR)$(sysconfdir)
+-	@-$(INSTALL) -m 700 -d $(DESTDIR)$(localstatedir)/openldap-data
+-	$(INSTALL) $(INSTALLFLAGS) -m 600 slapd.conf.tmp $(DESTDIR)$(sysconfdir)/slapd.conf.default
+ 	if test ! -f $(DESTDIR)$(sysconfdir)/slapd.conf; then \
+ 		echo "installing slapd.conf in $(sysconfdir)"; \
+-		echo "$(INSTALL) $(INSTALLFLAGS) -m 600 slapd.conf.tmp $(DESTDIR)$(sysconfdir)/slapd.conf"; \
+-		$(INSTALL) $(INSTALLFLAGS) -m 600 slapd.conf.tmp $(DESTDIR)$(sysconfdir)/slapd.conf; \
++		echo "$(INSTALL) $(INSTALLFLAGS) -m 444 slapd.conf.tmp $(DESTDIR)$(sysconfdir)/slapd.conf"; \
++		$(INSTALL) $(INSTALLFLAGS) -m 444 slapd.conf.tmp $(DESTDIR)$(sysconfdir)/slapd.conf; \
+ 	else \
+ 		echo "PRESERVING EXISTING CONFIGURATION FILE $(DESTDIR)$(sysconfdir)/slapd.conf" ; \
+ 	fi
