@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/08/31 22:39:45 tsarna Exp $
+
+--- _pdfmetrics.c.orig	Mon Aug 21 17:15:05 2000
++++ _pdfmetrics.c	Mon Aug 21 17:15:52 2000
+@@ -19,13 +19,13 @@
+ static	eI_t*	find_encoding(char* name)
+ {
+ 	eI_t*	e = Encodings;
+-	for(;e;e=e->next) if(!stricmp(name,e->name)) return e;
++	for(;e;e=e->next) if(!strcasecmp(name,e->name)) return e;
+ 	return (eI_t*)0;
+ }
+ 
+ static	fI_t* find_font(char* name, fI_t* f)
+ {
+-	for(;f;f=f->next) if(!stricmp(name,f->name)) return f;
++	for(;f;f=f->next) if(!strcasecmp(name,f->name)) return f;
+ 	return (fI_t*)0;
+ }
+ 
