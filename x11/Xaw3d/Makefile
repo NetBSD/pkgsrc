@@ -3,7 +3,7 @@
 # Date created:         30th November 1997
 # Whom:                 tron@lyssa.owl.de, soren@t.dk
 #
-# $NetBSD: Makefile,v 1.6 1998/01/16 17:39:17 agc Exp $
+# $NetBSD: Makefile,v 1.7 1998/01/24 23:58:04 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 09:33:26 asami Exp
 #
 
@@ -12,6 +12,8 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB}
 MASTER_SITE_SUBDIR=	widgets/Xaw3d/R6.1
 
+MAINTAINER=	packages@netbsd.org
+
 USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/xc/lib/Xaw3d
 
@@ -19,8 +21,8 @@ post-extract:
 	@(cd ${WRKSRC};ln -s .. X11)
 
 post-install:
-	${LDCONFIG} -m ${PREFIX}/lib
-	${MKDIR} -p ${PREFIX}/share/doc/Xaw3d
+	${LDCONFIG} -m ${PREFIX}/lib || /usr/bin/true
+	${MKDIR} ${PREFIX}/share/doc/Xaw3d
 	${CP} ${WRKSRC}/README.XAW3D ${PREFIX}/share/doc/Xaw3d
 
 .include <bsd.port.mk>
