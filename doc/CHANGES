@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9626 2005/03/25 13:23:57 adrianp Exp $
+$NetBSD: CHANGES,v 1.9627 2005/03/25 14:45:57 taya Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1745,3 +1745,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated horde to 3.0.3nb1 [adrianp 2005-03-25]
 	Updated imp to 4.0.1nb1 [adrianp 2005-03-25]
 	Added turba-2.0.2 [adrianp 2005-03-25]
+	Updated thunderbird to 1.0.2 [taya 2005-03-25]
+	Updated thunderbird-gtk2 to 1.0.2 [taya 2005-03-25]
