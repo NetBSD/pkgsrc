@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2001/02/16 14:05:08 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/07/04 21:05:03 christos Exp $
 #
 
-DISTNAME=       zoularis-20001003
+DISTNAME=       zoularis-20010704
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	agc@netbsd.org
 HOMEPAGE=	http://www.netbsd.org/
-COMMENT=	provides NetBSD libs, includes and utilities on Solaris
+COMMENT=	provides NetBSD libs, includes and utilities on Solaris and Linux
 
 WRKSRC=		${WRKDIR}/bsd
 
@@ -16,8 +16,8 @@ NO_BUILD=	yes
 NO_PACKAGE=	This package is needed to compile the pkgtools
 
 post-extract:
-	@${ECHO} "Please set BSDSRCDIR and DESTDIR in Makefile.inc"
-	@${ECHO} "and make sure /usr/ccs/bin is in your PATH and then"
-	@${ECHO} "/usr/ccs/bin/make"
+	@${ECHO} "Make sure /usr/ccs/bin is in your PATH and then"
+	@${ECHO} "configure --srcdir /your/bsd/source/root \\"
+	@${ECHO} "--prefix /your/installation/dir && make"
 
 .include "../../mk/bsd.pkg.mk"
