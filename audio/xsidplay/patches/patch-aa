@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2000/03/28 00:09:22 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.6 2000/06/20 21:14:05 pooka Exp $
 
---- src/Makefile.in.orig	Fri Jul  2 12:37:40 1999
-+++ src/Makefile.in	Fri Dec 17 13:31:49 1999
-@@ -30,7 +30,7 @@
- LIBM				= @LIBM@
- LIBIOS				= @LIBIOS@
- LIBAUDIO			= @LIBAUDIO@
--LIBS				= @LIBS@ -lqt -lX11 -lsidplay $(LIBM) $(LIBIOS) $(LIBAUDIO)
-+LIBS				= @LIBS@ -L${PREFIX}/qt1/lib -Wl,-R${PREFIX}/qt1/lib -lqt -lX11 -lXext -lsidplay $(LIBM) $(LIBIOS) $(LIBAUDIO)
+--- src/Makefile.in.orig	Wed May  3 21:27:00 2000
++++ src/Makefile.in	Tue Jun 20 23:53:19 2000
+@@ -102,7 +102,7 @@
  
- # Part of Qt.
- MOC					= @MOC@
+ bin_PROGRAMS = xsidplay
+ 
+-xsidplay_LDADD = $(OBJMETA) AudioDriver.o 			@SIDPLAY_LDFLAGS@ -lsidplay @QT_LDFLAGS@ -lqt
++xsidplay_LDADD = $(OBJMETA) AudioDriver.o 			@SIDPLAY_LDFLAGS@ -lsidplay @QT_LDFLAGS@ -lqt -lX11 -lXext @LIBAUDIO@
+ 
+ 
+ xsidplay_SOURCES =  AudioConfig.h         HistoryDialog.cpp      StilDialog.h AudioDialog.cpp       HistoryDialog.h        StilDialogData.cpp AudioDialog.h         HistoryDialogData.cpp  StilDialogData.h AudioDialogData.cpp   HistoryDialogData.h    TextFile.cpp AudioDialogData.h     HistoryFile.cpp        TextFile.h ConfigFile.cpp        HistoryFile.h          TimeLCD.cpp ConfigFile.h          HistoryItem.h          TimeLCD.h EmuDialog.cpp         LEDButton.cpp          WaveViewDialog.cpp EmuDialog.h           LEDButton.h            WaveViewDialog.h EmuDialogData.cpp     MainDialog.cpp         WaveViewDialogData.cpp EmuDialogData.h       MainDialog.h           WaveViewDialogData.h FilterDialog.cpp      MainDialogData.cpp     myTimer.h FilterDialog.h        MainDialogData.h       stil.cpp FilterDialogData.cpp  MixerConfig.h          stil.h FilterDialogData.h    MixerDialog.cpp        stilcomm.cpp GlobalIcon.h          MixerDialog.h          stilcomm.h HVSCDialog.cpp        MixerDialogData.cpp    stildefs.h HVSCDialog.h          MixerDialogData.h      xsidplay.cpp HVSCDialogData.cpp    PicButton.cpp          xsidplay.h HVSCDialogData.h      PicButton.h HVSCconfig.h          StilDialog.cpp
