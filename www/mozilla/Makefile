@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2001/08/04 07:05:18 taya Exp $
+# $NetBSD: Makefile,v 1.72 2001/09/16 14:03:07 taya Exp $
 
-MOZ_VER=	0.9.3
+MOZ_VER=	0.9.4
 NB_VER=
 DISTNAME=	mozilla-source-${MOZ_VER}
 PKGNAME=	mozilla-${MOZ_VER}${NB_VER}
@@ -67,6 +67,14 @@ DBG=
 .else
 CONFIGURE_ARGS+= --enable-optimize
 .endif
+
+XPTCFILES+=	xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
+XPTCFILES+=	xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_netbsd.cpp
+
+post-extract:
+.for F in ${XPTCFILES}
+	${CP} ${FILESDIR}/${F} ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/${F}
+.endfor
 
 post-build:
 	${ECHO} skin,install,select,classic/1.0 >> ${WRKSRC}/dist/bin/chrome/installed-chrome.txt
