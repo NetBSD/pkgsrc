@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2659 2003/07/02 15:24:12 taya Exp $
+$NetBSD: CHANGES,v 1.2660 2003/07/02 16:11:39 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2652,3 +2652,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added multi-aterm-0.0.4 [jmmv 2003-07-02]
 	Updated mozilla-bin to 1.4 [agc 2003-07-02]
 	Updated galeon to 1.2.11nb1 [taya 2003-07-02]
+	gtexinfo: Downgraded to 4.6 [grant 2003-07-02]
