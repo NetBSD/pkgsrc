@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2000/11/21 15:36:07 tron Exp $
+# $NetBSD: Makefile,v 1.61 2000/11/22 16:09:36 hubertf Exp $
 
 DISTNAME=	mutt-1.2.5i
 CATEGORIES=	mail
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/automake:../../devel/automake
 BUILD_DEPENDS+=	msgfmt:../../devel/gettext
 
 USE_LIBINTL=	YES
-MAKE_ENV+=	CPPFLAGS=-I{LOCALBASE}/include LIBS=-lintl
+MAKE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include LIBS=-lintl
 CONFIGURE_ENV+=	LIBS=-lintl
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
