@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/05 20:50:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/06/05 21:32:54 wiz Exp $
 @unexec ${INSTALL_INFO} --delete %D/info/fftw.info %D/info/dir
 info/fftw.info
 info/fftw.info-1
@@ -13,9 +13,9 @@ lib/libfftw.a
 lib/libfftw.la
 lib/libfftw.so
 lib/libfftw.so.2
-lib/libfftw.so.2.5
+lib/libfftw.so.2.7
 lib/librfftw.a
 lib/librfftw.la
 lib/librfftw.so
 lib/librfftw.so.2
-lib/librfftw.so.2.5
+lib/librfftw.so.2.7
