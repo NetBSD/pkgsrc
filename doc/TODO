@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2006 2004/08/04 21:20:16 wiz Exp $
+$NetBSD: TODO,v 1.2007 2004/08/05 16:05:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -217,7 +217,8 @@ Suggested package updates
 	o exim-4.34
 	o festival-1.4.3
 	o findutils-4.1.20
-	o firefox-bin-0.9.1 (+ gtk2, etc..) [grant]
+	o firefox-0.9.3
+	o firefox-bin-0.9.3 (+ gtk2, etc..) [grant]
 	o firewalk-5.0
 	o firewalk-gtk-5.0
 	o foomatic-3.0.1 [jlam]
@@ -229,12 +230,13 @@ Suggested package updates
 	o gcvs-1.0
 	o gdb-6.2
 	o generator-0.35
+	o getmail-4.0.6
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o gimageview-0.2.25
 	o gimp-print-4.2.7
-	o glpk-4.3
+	o glpk-4.6
 	o gmp-4.1.3
 	o gnomeicu-0.99.5
 	o gnucash-1.8.9
@@ -303,6 +305,8 @@ Suggested package updates
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-1.5.1
 	o moz-mplayer-2.65
+	o mozilla-1.7.2
+	o mozilla-bin-1.7.2
 	o mozilla-stable-1.4.2
 	o mrproject-0.9.1
 	o msmtp-1.2.0 [pkg/26425]
@@ -319,10 +323,9 @@ Suggested package updates
 	o netcdf-3.5.1
 	o nosefart-2.1
 	o ns-flash-6.0.79
-	o nsd-2.1.1
 	o nslint-2.1a3
 	o nulib2-2.0.2
-	o nut-9.19
+	o nut-9.20
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o onyx-5.1.1
@@ -330,7 +333,7 @@ Suggested package updates
 	o openh323-1.12.2
 	o openoffice-1.1.2
 	o openssl-0.9.7d [http://www.cs.stevens-tech.edu/~jschauma/netbsd/openssl.diff]
-	o opera-7.53
+	o opera-7.54
 	o oss-3.99.1e
 	o p0f-2.0.4
 	o p5-CGI-3.05
@@ -362,7 +365,7 @@ Suggested package updates
 	o rrdtool-1.0.48
 	o ruby-1.8.1 [taca]
 	o sablecc-2.18.1
-	o samba-2.2.9
+	o samba2-2.2.9
 	o sawfish-1.3
 	o scm-5d9
 	o scmxx-0.7.3
@@ -374,10 +377,12 @@ Suggested package updates
 	o slib-3a1
 	o smalltalk-2.1.8
 	o smarteiffel-2.0b2 [replacing smalleiffel|pkg/26540]
+	o sml-nj-110.47
 	o snd-7.5
 	o snes9x-1.42
 	o snownews-1.5.3
 	o socat-1.4.0.0
+	o spamassassin-2.64
 	o sqlite-3.0.2
 	o squid-2.5.6 [taca]
 	o srp_client-1.7.5 [jlam]
@@ -392,6 +397,7 @@ Suggested package updates
 	o tct-1.14
 	o teapop-0.3.8
 	o texi2html-1.70
+	o thunderbird-0.7.3
 	o tk-8.4.7
 	o tkdesk-2.0
 	o tkman-2.2
