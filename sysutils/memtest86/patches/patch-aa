@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/03/07 14:44:36 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2004/04/08 13:01:18 ben Exp $
 
---- Makefile.orig	Wed Oct 24 16:57:16 2001
+--- Makefile.orig	Thu Mar 11 08:56:32 2004
 +++ Makefile
 @@ -6,7 +6,7 @@
  #
