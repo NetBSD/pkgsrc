@@ -1,0 +1,15 @@
+--- xa_audio.c.original	Fri Aug 24 17:33:57 2001
++++ xa_audio.c	Fri Aug 24 17:35:14 2001
+@@ -4665,10 +4665,10 @@
+ 
+   a_info.mode = AUMODE_PLAY | AUMODE_PLAY_ALL;
+   ioctl(devAudio, AUDIO_SETINFO, &a_info);
+-#ifdef AUDIO_ENCODING_SLINEAR
++#ifdef AUDIO_ENCODING_SLINEAR_LE
+   /* Use new encoding names */
+   AUDIO_INITINFO(&a_info);
+-  a_info.play.encoding = AUDIO_ENCODING_SLINEAR;
++  a_info.play.encoding = AUDIO_ENCODING_SLINEAR_LE;
+   a_info.play.precision = 16;
+   if ( ioctl(devAudio, AUDIO_SETINFO, &a_info) < 0)
+   {
