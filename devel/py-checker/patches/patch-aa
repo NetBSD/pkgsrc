@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/06/27 14:16:34 drochner Exp $
+
+--- setup.py.orig	2003-06-27 15:51:02.000000000 +0200
++++ setup.py	2003-06-27 15:51:34.000000000 +0200
+@@ -42,7 +42,7 @@
+         script_str = '%s %s %s\n' % (py_exe, checker_py, arg_str)
+         script_suffix = '.bat'
+ 
+-    LOCAL_SCRIPT = 'pychecker' + script_suffix
++    LOCAL_SCRIPT = 'pychecker' + sys.version[0:3] + script_suffix
+     LOCAL_SCRIPT = os.path.join(tempfile.gettempdir(), LOCAL_SCRIPT)
+     remove_file(LOCAL_SCRIPT)
+ 
