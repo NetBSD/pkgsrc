@@ -139,6 +139,21 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
      author to write a script that reliably performs some action on the direc-
      tory where the package is installed, even if the user might have changed
      it by specifying the --pp option when running ppkkgg__ddeelleettee or pkg_add(1).
+     The scripts are also called with the PKG_METADATA_DIR environment vari-
+     able set to the location of the _+_* meta-data files, and with the
+     PKG_REFCOUNT_DBDIR environment variable set to the location of the pack-
+     age reference counts database directory.
+
+EENNVVIIRROONNMMEENNTT
+     PKG_DBDIR  If the --KK flag isn't given, then PKG_DBDIR is the location of
+                the package database directory.  The default package database
+                directory is _/_v_a_r_/_d_b_/_p_k_g.
+
+     PKG_REFCOUNT_DBDIR
+                Location of the package reference counts database directory.
+                The default location is the path to the package database
+                directory with ``.refcount'' appended to the path, e.g.
+                _/_v_a_r_/_d_b_/_p_k_g_._r_e_f_c_o_u_n_t.
 
 SSEEEE AALLSSOO
      pkg_add(1), pkg_admin(1), pkg_create(1), pkg_info(1), mktemp(3),
@@ -153,4 +168,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, recursive "down"
              delete, etc.
 
-NetBSD 2.0                     November 2, 2004                     NetBSD 2.0
+NetBSD 2.0                     February 4, 2005                     NetBSD 2.0
