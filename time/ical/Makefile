@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/03/08 20:27:16 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2004/03/19 08:34:01 bouyer Exp $
 
 DISTNAME=	ical-2.2.1
 CATEGORIES=	time
@@ -9,6 +9,7 @@ HOMEPAGE=	http://members.nbci.com/majahj/ical/
 COMMENT=	Calendar application
 
 USE_BUILDLINK2=	yes
+USE_LANGUAGES=	c c++
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX} \
