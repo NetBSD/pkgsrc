@@ -1,6 +1,6 @@
-#!/usr/pkg/bin/python
+#!/usr/pkg/bin/python2.0
 #
-#	$NetBSD: zope-shutdown.py,v 1.1 1999/07/02 12:55:33 tsarna Exp $
+#	$NetBSD: zope-shutdown.py,v 1.2 2002/01/22 18:47:15 drochner Exp $
 #
 # Copyright (c) 1999 Endicor Technologies, Inc.
 # All rights reserved. Written by Ty Sarna <tsarna@endicor.com>
