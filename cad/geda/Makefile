@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2004/02/23 13:47:26 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.34 2004/03/05 13:03:47 dmcmahill Exp $
 #
 
 DISTNAME=	geda-${PKGVERSION}
-PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 		ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \
@@ -13,12 +12,12 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.geda.seul.org/
 COMMENT=	Toolset for automating electronic design
 
-DEPENDS+=	gschem-${PKGVERSION}nb2:../../cad/gschem
-DEPENDS+=	gnetlist-${PKGVERSION}nb2:../../cad/gnetlist
-DEPENDS+=	gsymcheck-${PKGVERSION}nb2:../../cad/gsymcheck
-DEPENDS+=	geda-utils-${PKGVERSION}nb2:../../cad/geda-utils
-DEPENDS+=	geda-docs-${PKGVERSION}:../../cad/geda-docs
-DEPENDS+=	geda-examples-${PKGVERSION}:../../cad/geda-examples
+DEPENDS+=	gschem-${PKGVERSION}{,nb[0-9]+}:../../cad/gschem
+DEPENDS+=	gnetlist-${PKGVERSION}{,nb[0-9]+}:../../cad/gnetlist
+DEPENDS+=	gsymcheck-${PKGVERSION}{,nb[0-9]+}:../../cad/gsymcheck
+DEPENDS+=	geda-utils-${PKGVERSION}{,nb[0-9]+}:../../cad/geda-utils
+DEPENDS+=	geda-docs-${PKGVERSION}{,nb[0-9]+}:../../cad/geda-docs
+DEPENDS+=	geda-examples-${PKGVERSION}{,nb[0-9]+}:../../cad/geda-examples
 
 .include "Makefile.common"
 

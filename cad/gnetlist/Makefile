@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2004/02/23 04:01:08 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.26 2004/03/05 13:03:47 dmcmahill Exp $
 #
 
 DISTNAME=		geda-gnetlist-${PKGVERSION}
 PKGNAME=		gnetlist-${PKGVERSION}
-PKGREVISION=		2
 CATEGORIES=		cad
 MASTER_SITES=		ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
 			ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \
@@ -29,11 +28,13 @@ USE_BUILDLINK3=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 EVAL_PREFIX+=   PCBDIR=pcb
+M4DIR=	${LOCALBASE}
 
 post-patch:
 .for f in gnet-PCBboard.scm gnet-gsch2pcb.scm
 	${MV} -f ${WRKSRC}/scheme/${f} ${WRKSRC}/scheme/${f}.bak
-	${SED} -e 's;@pcb_confdir@;${PKG_SYSCONFDIR}/pcb;g' \
+	${SED} -e 's;@M4@;${M4DIR}/bin/${GNU_PROGRAM_PREFIX}m4;g' \
+	       -e 's;@pcb_confdir@;${PKG_SYSCONFDIR}/pcb;g' \
 	       -e 's;@pcb_m4dir@;${PCBDIR}/share/pcb/m4;g' \
 		${WRKSRC}/scheme/${f}.bak > ${WRKSRC}/scheme/${f}
 	${RM} -f ${WRKSRC}/scheme/${f}.bak
