@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/17 12:58:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/08/31 11:47:19 jmmv Exp $
 #
 
 DISTNAME=		glabels-2.0.1
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=glabels/}
 
@@ -9,15 +10,14 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://glabels.sourceforge.net/
 COMMENT=		Program for creating labels and business cards for GNOME
 
-DEPENDS+=		shared-mime-info-[0-9]*:../../databases/shared-mime-info
-
 USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+USE_DIRS+=		gnome2-1.5
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 
+.include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
