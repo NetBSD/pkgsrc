@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/09/26 10:34:18 martti Exp $
+# $NetBSD: Makefile,v 1.2 2003/10/02 07:15:32 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.2.0pre6
+XFCE4_VERSION=	0.2.1
 
 DISTNAME=	xfce4-netload-plugin-${XFCE4_VERSION}
 CATEGORIES=	sysutils
