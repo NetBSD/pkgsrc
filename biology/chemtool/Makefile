@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/08/17 21:16:50 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/12/06 04:30:09 jmc Exp $
 
 DISTNAME=	chemtool-1.3
 CATEGORIES=	biology
@@ -19,4 +19,5 @@ post-install:
 		${PREFIX}/share/doc/chemtool/
 
 .include "../../x11/gtk/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
