@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2003/10/26 14:26:26 tron Exp $
+$NetBSD: patch-aa,v 1.7 2003/12/08 19:20:49 wiz Exp $
 
---- configure.orig	2003-09-01 12:51:11.000000000 +0200
-+++ configure	2003-10-26 15:24:19.000000000 +0100
-@@ -348,8 +348,8 @@
+--- configure.orig	Sun Oct  5 17:34:40 2003
++++ configure
+@@ -352,8 +352,8 @@ for ac_option do
      _inc_extra=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
      ;;
    --with-extralibdir=*)
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.6 2003/10/26 14:26:26 tron Exp $
      ;;
    --enable-runtime-cpudetection)
      _runtime_cpudetection=yes
-@@ -473,7 +473,7 @@
+@@ -481,7 +481,7 @@ if test "$_skip_cc_check" != yes ; then
   for _cc in "$_cc" gcc-3.1 gcc3 gcc-3.0 cc ; do
    echocheck "$_cc version"
    cc_name=`( $_cc -v ) 2>&1 | tail -1 | cut -d ' ' -f 1`

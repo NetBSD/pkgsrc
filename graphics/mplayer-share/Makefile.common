@@ -1,13 +1,12 @@
-# $NetBSD: Makefile.common,v 1.46 2003/11/03 00:59:05 kristerw Exp $
+# $NetBSD: Makefile.common,v 1.47 2003/12/08 19:20:49 wiz Exp $
 #
 
-MPLAYER_DIST_VERSION=	1.0pre1
+MPLAYER_DIST_VERSION=	1.0pre2
 
 # This variable is used in all packages which depend on this package
-MPLAYER_PKG_VERSION=	1.0rc1
+MPLAYER_PKG_VERSION=	1.0rc2
 
 DISTNAME=		MPlayer-${MPLAYER_DIST_VERSION}
-WRKSRC=			${WRKDIR}/${DISTNAME:S/MPlayer/mplayer/}
 CATEGORIES?=		graphics
 MASTER_SITES=		http://www.mplayerhq.hu/MPlayer/releases/ \
 			http://www2.mplayerhq.hu/MPlayer/releases/ \
