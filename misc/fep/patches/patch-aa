@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2000/02/07 03:18:08 christos Exp $
+$NetBSD: patch-aa,v 1.5 2003/11/07 16:35:51 christos Exp $
 
---- Makefile.orig	Wed Jun  9 22:51:22 1993
-+++ Makefile	Sun Feb  6 21:48:47 2000
+--- Makefile.orig	1993-06-09 22:51:22.000000000 -0400
++++ Makefile	2003-11-07 11:13:19.000000000 -0500
 @@ -15,17 +15,21 @@
  DISTRIBUTION\
  	= Makefile fep.1 $(HEADER) $(SRC) feprc.sample README

@@ -1,8 +1,16 @@
-$NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
+$NetBSD: patch-aj,v 1.2 2003/11/07 16:35:51 christos Exp $
 
---- fep_main.c.orig	Wed Jun  9 22:53:06 1993
-+++ fep_main.c	Sun Feb  6 22:00:22 2000
-@@ -10,8 +10,17 @@
+--- fep_main.c.orig	1993-06-09 22:53:06.000000000 -0400
++++ fep_main.c	2003-11-07 11:28:23.000000000 -0500
+@@ -3,15 +3,24 @@
+ #ifndef lint
+ static char rcsid[]=
+ "$Id: patch-aj,v 1.2 2003/11/07 16:35:51 christos Exp $ (SRA)";
+-#endif lint
++#endif /* lint */
+ 
+ #include <stdio.h>
+ #include <signal.h>
  #include <sys/types.h>
  #include <sys/stat.h>
  #include <sys/ioctl.h>
@@ -21,6 +29,15 @@ $NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
  #include <sys/time.h>
  #include <sys/resource.h>
  #include <sys/errno.h>
+@@ -30,7 +39,7 @@
+ #ifdef STAT
+   static char fep_statrc[] = FEP_STAT;
+ #endif
+-#endif lint
++#endif /* lint */
+ 
+ char	*myself;			/* the command name */
+ char	*prompt = "";			/* prompt string */
 @@ -38,9 +47,9 @@
  					/* delimiter characters */
  int	master;				/* file discriptor for pty master */
@@ -34,7 +51,7 @@ $NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
  int	selectnfds;			/* max (fileno(stdin), master) + 1*/
  int	child_pid;			/* child pid */
  int	ptyflag = ON;			/* flag to use pty or not */
-@@ -48,21 +57,28 @@
+@@ -48,27 +57,34 @@
  int	debug = OFF;			/* debug switch */
  int	auto_tty_fix = ON;		/* fix tty mode automaticaly */
  FILE	*script_fp = NULL;		/* script file pointer */
@@ -68,6 +85,13 @@ $NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
  int	lmode_buf;			/* local mode */
  int	line_desc;			/* line descipline */
  #ifdef KANJI
+ struct	jtchars jtchars_buf;		/* kanji tty characters */
+ int	kmode_buf;			/* kanji mode */
+-#endif KANJI
++#endif /* KANJI */
+ 
+ char	master_tty[16];			/* master tty name */
+ char	slave_tty[16];			/* slave tty name */
 @@ -112,6 +128,10 @@
  
      myself = argv[0];
@@ -124,7 +148,7 @@ $NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
  	if (errno != EINTR) {
  		perror ("select");
 -		terminate();
-+		terminate(0);
++		terminate(1);
  	}
  
      /*
@@ -144,12 +168,14 @@ $NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
  
  #ifndef USE_TIMEOUT
  	/*
-@@ -468,7 +488,7 @@
+@@ -467,8 +487,8 @@
+ 	RETURNCHAR:
  	if ((c = getc (stdin)) == EOF) {
  	    if (debug)
- 		printf ("EOF chatched\n");
+-		printf ("EOF chatched\n");
 -	    terminate ();
-+	    terminate (0);
++		printf ("EOF catched\n");
++	    terminate (1);
  	}
  	else
  	    return (c & CHARMASK);
@@ -171,7 +197,7 @@ $NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
      ) {
  	nbyte = buf_read (master, output_buffer);
  	if (nbyte > 0) {
-@@ -636,9 +656,11 @@
+@@ -636,21 +656,23 @@
  #include <sys/m_wait.h>
  #endif
  
@@ -185,12 +211,17 @@ $NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
      struct rusage   ru;
  
      if (wait3 (&status, WNOHANG | WUNTRACED, &ru) != child_pid)
-@@ -650,7 +672,7 @@
+ 	return;
+     if (WIFSTOPPED (status) /* || WIFSIGNALED (status) */) {
+ 	if (debug) {
+-	    message ("Child has sttoped!!\n");
++	    message ("Child has stopped!!\n");
+ 	}
  	suspend ();
  	return;
      }
 -    terminate ();
-+    terminate (0);
++    terminate (WEXITSTATUS(status));
  }
  
  exec_to_command(argv)
@@ -252,7 +283,7 @@ $NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
  {
      extern int errno;
  
-@@ -759,9 +808,13 @@
+@@ -759,10 +808,14 @@
  	    if (killpg (child_pid, SIGKILL) < 0)
  		perror ("kill");
  
@@ -262,10 +293,12 @@ $NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
      ioctl (0, TIOCSETN, (char *) & initial_ttymode);
      ioctl (0, TIOCSETC, (char *) & tchars_buf);
      ioctl (0, TIOCSLTC, (char *) & ltchars_buf);
+-    exit (0);
 +#endif
-     exit (0);
++    exit (n);
  }
  
+ get_pty_master()
 @@ -796,11 +849,15 @@
      }
  
@@ -282,9 +315,12 @@ $NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
  
  #ifdef TIOCGWINSZ
      {
-@@ -822,9 +879,13 @@
+@@ -820,11 +877,15 @@
+ # if defined(TIOCKGETC) && defined(TIOCKSETC)
+     ioctl (0, TIOCKGETC, (char *) &jtchars_buf);
  # endif
- #endif KANJI
+-#endif KANJI
++#endif /* KANJI */
  
 -    stdinmask = 1 << fileno (stdin);
 -    mastermask = 1 << master;
@@ -315,6 +351,15 @@ $NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
  
  #ifdef KANJI
  # if defined(TIOCKGET) && defined(TIOCKSET)
+@@ -851,7 +916,7 @@
+ # if defined(TIOCKGETC) && defined(TIOCKSETC)
+     ioctl (slave, TIOCKSETC, (char *) &jtchars_buf);
+ # endif
+-#endif KANJI
++#endif /* KANJI */
+ 
+ #ifdef TIOCSWINSZ
+     {
 @@ -866,16 +931,19 @@
  
  recover_tty()
@@ -342,7 +387,7 @@ $NetBSD: patch-aj,v 1.1 2000/02/07 03:18:13 christos Exp $
      if (kill (child_pid, SIGCONT) < 0 && errno == ESRCH) {
  	printf ("Where my child has gone?!\n");
 -	terminate ();
-+	terminate (0);
++	terminate (1);
      }
      killpg (child_pid, SIGCONT);
      kill (0, SIGCONT);

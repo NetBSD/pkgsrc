@@ -1,8 +1,14 @@
-$NetBSD: patch-ae,v 1.2 2003/03/09 04:39:29 salo Exp $
+$NetBSD: patch-ae,v 1.3 2003/11/07 16:35:51 christos Exp $
 
---- fep_edit.c.orig	1995-01-20 09:16:37.000000000 +0100
-+++ fep_edit.c	2003-03-09 05:26:37.000000000 +0100
-@@ -8,7 +8,17 @@
+--- fep_edit.c.orig	1995-01-20 03:16:37.000000000 -0500
++++ fep_edit.c	2003-11-07 11:25:48.000000000 -0500
+@@ -3,12 +3,22 @@
+ #ifndef lint
+ static char rcsid[]=
+ "$Id: patch-ae,v 1.3 2003/11/07 16:35:51 christos Exp $ (SRA)";
+-#endif lint
++#endif /* lint */
+ 
  #include <stdio.h>
  #include <sys/types.h>
  #include <sys/stat.h>
@@ -98,7 +104,12 @@ $NetBSD: patch-ae,v 1.2 2003/03/09 04:39:29 salo Exp $
  	    && curFuncTab[c] != send_eof
  	    && ! look_var ("ignore-eof")
  	    && CommandLine [0] == '\0'
-@@ -426,7 +465,7 @@
+@@ -422,11 +461,11 @@
+     register int i, nbyte = 1, currentNull;
+ #ifdef KANJI
+     CHAR byte2;
+-#endif KANJI
++#endif /* KANJI */
  
      currentNull = strlen (CommandLine);
  
@@ -107,6 +118,169 @@ $NetBSD: patch-ae,v 1.2 2003/03/09 04:39:29 salo Exp $
          errorBell();
  	return (0);
      }
+@@ -441,7 +480,7 @@
+ 	nbyte = 2;
+     }
+     else
+-#endif KANJI
++#endif /* KANJI */
+ 	putChar (c);
+     reverse_strcpy (
+ 	&CommandLine[CurrentPosition] + nbyte,
+@@ -453,7 +492,7 @@
+     if (nbyte > 1) {
+ 	CommandLine[CurrentPosition - 1] = byte2;
+     }
+-#endif KANJI
++#endif /* KANJI */
+     printS (&CommandLine [CurrentPosition]);
+ 
+     if (CommandLine[CurrentPosition] != '\0') {
+@@ -557,7 +596,7 @@
+ #ifdef KANJI
+ 	    && !(CurrentPosition + 1 == position
+ 		    && iskanji (CommandLine[CurrentPosition]))
+-#endif KANJI
++#endif /* KANJI */
+ 	)
+ 	    (void) forward_n_character (1);
+ }
+@@ -581,10 +620,10 @@
+ #ifdef KANJI
+ #define INC(i) if(iskanji(CommandLine[i])) i+=2; else i++;
+ #define DEC(i) if(i>=2 && iskanji_in_string(CommandLine, i-2)) i-=2; else i--;
+-#else KANJI
++#else /* KANJI */
+ #define INC(i) i++
+ #define DEC(i) i--
+-#endif KANJI
++#endif /* KANJI */
+ 
+ /*
+  * Move cursor to end of line
+@@ -642,7 +681,7 @@
+ 	    i--;
+ 	}
+ 	else
+-#endif KANJI
++#endif /* KANJI */
+ 	putchar (BS);
+ 	i--;
+     }
+@@ -697,7 +736,7 @@
+ 	    nchars++;
+ 	}
+     }
+-#else KANJI
++#else /* KANJI */
+     while (n--) {
+ 	i--, nchars++;
+ 	while (i > 0 && !iswordchar (CommandLine [i])) {
+@@ -707,7 +746,7 @@
+ 	    i--, nchars++;
+ 	}
+     }
+-#endif KANJI
++#endif /* KANJI */
+     return (backward_n_character (nchars));
+ }
+ 
+@@ -758,7 +797,7 @@
+ 	    nchars++;
+ 	}
+     }
+-#else KANJI
++#else /* KANJI */
+     while (n--) {
+ 	i--, nchars++;
+ 	while (i > 0 && !isWordchar (CommandLine [i]))
+@@ -766,7 +805,7 @@
+ 	while (i > 0 && isWordchar (CommandLine [i - 1]))
+ 	    i--, nchars++;
+     }
+-#endif KANJI
++#endif /* KANJI */
+     return (backward_n_character (nchars));
+ }
+ 
+@@ -804,7 +843,7 @@
+ 	(void) putchar (CommandLine[i++]);
+     }
+     else
+-#endif KANJI
++#endif /* KANJI */
+     if (isctlchar(CommandLine[i])) {
+ 	(void) putchar (unctl (CommandLine [i]));
+ 	i++;
+@@ -819,7 +858,7 @@
+ 	    (void) putchar (CommandLine[i++]);
+ 	}
+ 	else
+-#endif KANJI
++#endif /* KANJI */
+ 	putChar (CommandLine [i++]);
+     }
+ 
+@@ -1000,9 +1039,9 @@
+ 	    i -= 2, nbyte += 2;
+ 	else
+ 	    i -= 1, nbyte += 1;
+-#else KANJI
++#else /* KANJI */
+     nbyte = n;
+-#endif KANJI
++#endif /* KANJI */
+ 
+     deleteArea = howlong (&CommandLine[CurrentPosition - nbyte], nbyte);
+     restArea = howlong (&CommandLine[CurrentPosition], 0);
+@@ -1075,7 +1114,7 @@
+ 	    nchars++;
+ 	}
+     }
+-#else KANJI
++#else /* KANJI */
+     while (n--) {
+ 	i--, nchars++;
+ 	while (i > 0 && !iswordchar (CommandLine [i]))
+@@ -1083,7 +1122,7 @@
+ 	while (i > 0 && iswordchar (CommandLine [i - 1]))
+ 	    i--, nchars++;
+     }
+-#endif KANJI
++#endif /* KANJI */
+ 
+     return (delete_previous_n_character (nchars));
+ }
+@@ -1136,7 +1175,7 @@
+ 	    nchars++;
+ 	}
+     }
+-#else KANJI
++#else /* KANJI */
+     while (n--) {
+ 	i--, nchars++;
+ 	while (i > 0 && !isWordchar (CommandLine [i]))
+@@ -1144,7 +1183,7 @@
+ 	while (i > 0 && isWordchar (CommandLine [i - 1]))
+ 	    i--, nchars++;
+     }
+-#endif KANJI
++#endif /* KANJI */
+ 
+     return (delete_previous_n_character (nchars));
+ }
+@@ -1183,9 +1222,9 @@
+ 	    else
+ 		cp++, nbyte++;
+     }
+-#else KANJI
++#else /* KANJI */
+     nbyte = n;
+-#endif KANJI
++#endif /* KANJI */
+ 
+     deleteArea = howlong (&CommandLine[CurrentPosition], nbyte);
+     restArea = howlong (&CommandLine[CurrentPosition + nbyte], 0);
 @@ -1481,7 +1520,11 @@
   */
  send_eof()
@@ -119,6 +293,18 @@ $NetBSD: patch-ae,v 1.2 2003/03/09 04:39:29 salo Exp $
  
      (void) self_insert (c);
      if (isctlchar (c))
+@@ -1738,9 +1781,9 @@
+ 
+ # ifdef ALLOCA
+   	    fcp = (char *) alloca (strlen (dp->d_name) + 1);
+-# else ALLOCA
++# else /* ALLOCA */
+   	    fcp = (char *) malloc (strlen (dp->d_name) + 1);
+-# endif ALLOCA
++# endif /* ALLOCA */
+ 	    if (fcp == 0) {
+ 		fputs ("\r\n", stdout);
+ 		perror ("alloca:");
 @@ -1754,7 +1797,7 @@
      fileList [i] = (char *) 0;
  
@@ -128,6 +314,45 @@ $NetBSD: patch-ae,v 1.2 2003/03/09 04:39:29 salo Exp $
  
  	strcpy (buf, start_expand);
  	p = x_dirname (buf);
+@@ -1801,7 +1844,7 @@
+ # ifndef ALLOCA
+     for (i = 0; fileList [i]; i++)
+ 	free (fileList [i]);
+-# endif ALLOCA
++# endif /* ALLOCA */
+ 
+     closedir(dirp);
+     return (0);
+@@ -1929,9 +1972,9 @@
+ 	if (prefix (prefixstring, dp->d_name)) {
+ # ifdef ALLOCA
+   	    fcp = (char *) alloca (strlen (dp->d_name) + 1);
+-# else ALLOCA
++# else /* ALLOCA */
+   	    fcp = (char *) malloc (strlen (dp->d_name) + 1);
+-# endif ALLOCA
++# endif /* ALLOCA */
+ 	    if (fcp == 0) {
+ 		fputs ("\r\n", stdout);
+ 		perror ("alloca:");
+@@ -1975,7 +2018,7 @@
+ # ifndef ALLOCA
+     for (i = 0; fileList [i]; i++)
+ 	free (fileList [i]);
+-# endif ALLOCA
++# endif /* ALLOCA */
+     return;
+ }
+ 
+@@ -2022,7 +2065,7 @@
+ 	fputs ("\n", stdout);
+     }
+ }
+-#endif RINFO
++#endif /* RINFO */
+ 
+ bind_key (ft, func, s, dfunc)
+     FUNC ft[];		/* Function table */
 @@ -2032,7 +2075,7 @@
  {
      char tmps[16];
