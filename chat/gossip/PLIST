@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/08 15:48:02 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/01 19:12:26 jmmv Exp $
 bin/gossip
 share/applications/gossip.desktop
 share/gconf/schemas/gossip.schemas
@@ -19,6 +19,7 @@ share/gossip/emoticon-face6.png
 share/gossip/emoticon-face7.png
 share/gossip/emoticon-face8.png
 share/gossip/emoticon-face9.png
+share/gossip/gossip-about.png
 share/gossip/gossip-available.png
 share/gossip/gossip-away.png
 share/gossip/gossip-busy.png
@@ -62,6 +63,7 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gossip.mo
 share/pixmaps/gossip.png
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/gossip
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
