@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2002/03/31 13:32:22 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2002/06/23 13:51:41 kent Exp $
 #
 
-DISTNAME=		cheesetracker-0.2.2
+DISTNAME=		cheesetracker-0.5.5
 CATEGORIES=		audio
 MASTER_SITES=		http://www.reduz.com.ar/cheesetracker/
 
-MAINTAINER=		collver@linuxfreemail.com
+MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://www.reduz.com.ar/cheesetracker/
 COMMENT=		impulse tracker clone
 
@@ -17,6 +17,14 @@ GCC_VERSION!=           gcc --version
 .include "../../lang/gcc/Makefile.gcc"
 .endif
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV=		CXXFLAGS="-O -Dusleep=pth_usleep -Dwrite=__pthread_write"
+# XXX: This package assumes pthread is pth.
+#      (glib specifies `USE_PTHREAD=native pth.')
+CONFIGURE_ENV=		CXXFLAGS="-O -Dusleep=pth_usleep"
+
+post-extract:
+	${RM} -f ${WRKSRC}/install-sh
+	${RM} -f ${WRKSRC}/mkinstalldirs
+	${LN} -s ${LOCALBASE}/share/automake/install-sh ${WRKSRC}/install-sh
+	${LN} -s ${LOCALBASE}/share/automake/mkinstalldirs ${WRKSRC}/mkinstalldirs
 
 .include "../../mk/bsd.pkg.mk"

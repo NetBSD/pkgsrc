@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/18 12:27:36 rh Exp $
+$NetBSD: patch-aa,v 1.2 2002/06/23 13:51:42 kent Exp $
 
---- src/sound_driver_oss.h.orig	Wed May  9 06:43:05 2001
-+++ src/sound_driver_oss.h	Thu Jun 14 23:33:41 2001
+--- waveout/sound_driver_oss.h.orig	Wed Jun 19 22:49:41 2002
++++ waveout/sound_driver_oss.h
 @@ -22,7 +22,12 @@
  
  #include <sound_driver.h>

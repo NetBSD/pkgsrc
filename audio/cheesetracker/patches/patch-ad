@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/06/18 12:27:36 rh Exp $
+$NetBSD: patch-ad,v 1.2 2002/06/23 13:51:43 kent Exp $
 
---- src/sound_driver_oss.cpp.orig	Wed May  9 06:43:01 2001
-+++ src/sound_driver_oss.cpp	Thu Jun 14 23:31:06 2001
+--- waveout/sound_driver_oss.cpp.orig	Wed Apr 10 20:46:44 2002
++++ waveout/sound_driver_oss.cpp
 @@ -18,7 +18,11 @@
  #include "sound_driver_oss.h"
  #include "math.h"
@@ -14,15 +14,48 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/06/18 12:27:36 rh Exp $
  
  int Sound_Driver_OSS::init() {
  
-@@ -155,16 +159,37 @@
- 
- 	int done;
+@@ -28,6 +32,10 @@
+ 	long supported_formats;
  	audio_buf_info buffinf;
+  	int request_buffer_size;
 +#if defined(__NetBSD__) && SOUND_VERSION <= 0x030000
 +	struct audio_info info;
 +#endif
++
  
- 	if (!active) return false;
+ 	if (mix_frequency==-1) {
+          	
+@@ -106,11 +114,29 @@
+ 	}
+ 
+ 
++#if defined(__NetBSD__) && SOUND_VERSION <= 0x030000
++/*
++	This is to work around a bug in NetBSD-1.5.1 and earlier, in which
++	the SNDCTL_DSP_GETOSPACE(&buf_info) ioctl was not handled properly.
++	The correct information is always available via the native audio
++	driver, so use that instead.
++*/
++	if (ioctl(sound_fd, AUDIO_GETINFO, &info) == 0) {
++		buffinf.fragsize = info.blocksize;
++		buffinf.fragments = info.hiwat - info.play.seek /
++			info.blocksize;
++		buffinf.bytes = info.play.buffer_size;
++	} else {
++		buffinf.fragments--;
++		buffinf.fragsize = buffinf.bytes = buffersize;
++	}
++#else
+ 	/* This call fails on Linux/PPC */
+ 	if( (ioctl(sound_fd,SNDCTL_DSP_GETOSPACE,&buffinf)<0) ) {
+ 
+ 		ioctl(sound_fd,SNDCTL_DSP_GETBLKSIZE,&buffinf.fragsize);
+ 	}
++#endif
+ 
+ 	
+ 
+@@ -163,17 +189,35 @@
  	
  	for (;;) {
  
@@ -52,3 +85,10 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/06/18 12:27:36 rh Exp $
  
                  if(!buffinf.fragments) break;
  
+ 		done=mixer->write_bytes(audiobuffer,buffinf.fragsize>buffinf.bytes?buffinf.bytes:buffinf.fragsize);
+ 
+-                write(sound_fd,audiobuffer,done);
++                __pthread_write(sound_fd,audiobuffer,done);
+ 	}		
+ 
+ 	return true;	

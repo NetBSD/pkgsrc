@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.1 2001/11/22 15:37:20 agc Exp $
+$NetBSD: patch-ae,v 1.2 2002/06/23 13:51:43 kent Exp $
 
---- src/loader_wav.cpp.orig	Wed Sep  5 21:51:35 2001
-+++ src/loader_wav.cpp
-@@ -162,7 +162,7 @@
-    cout << "--- loading " << p_filename << endl;
+--- trackercore/loader_wav.cpp.orig	Wed Jun 19 23:08:42 2002
++++ trackercore/loader_wav.cpp
+@@ -159,7 +159,7 @@
+ 
  
     // try and open the file
 -   FILE* Source = fopen( p_filename, "rb+" ); // haha I used b
