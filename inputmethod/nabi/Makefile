@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2003/12/13 00:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/12/20 05:18:37 xtraeme Exp $
 #
 
-DISTNAME=		nabi-0.11
-PKGREVISION=		1
+DISTNAME=		nabi-0.12
 CATEGORIES=		korean inputmethod
 MASTER_SITES=		http://download.kldp.net/nabi/
 

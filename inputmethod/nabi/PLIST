@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/27 03:23:33 junyoung Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/12/20 05:18:37 xtraeme Exp $
 bin/nabi
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/nabi.mo
 share/nabi/compose/default
@@ -14,6 +14,9 @@ share/nabi/themes/KingSejong/none.png
 share/nabi/themes/MSWindows/english.png
 share/nabi/themes/MSWindows/hangul.png
 share/nabi/themes/MSWindows/none.png
+share/nabi/themes/MSWindows2000/english.png
+share/nabi/themes/MSWindows2000/hangul.png
+share/nabi/themes/MSWindows2000/none.png
 share/nabi/themes/Mac/README
 share/nabi/themes/Mac/english.png
 share/nabi/themes/Mac/hangul.png
@@ -33,6 +36,7 @@ share/nabi/themes/keyboard/none.png
 @dirrm share/nabi/themes/SimplyRed
 @dirrm share/nabi/themes/Onion
 @dirrm share/nabi/themes/Mac
+@dirrm share/nabi/themes/MSWindows2000
 @dirrm share/nabi/themes/MSWindows
 @dirrm share/nabi/themes/KingSejong
 @dirrm share/nabi/themes
