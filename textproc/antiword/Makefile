@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2004/11/23 18:20:03 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2005/01/01 03:57:21 wiz Exp $
 #
 
-DISTNAME=	antiword-0.36
+DISTNAME=	antiword-0.36.1
 CATEGORIES=	textproc converters print
 MASTER_SITES=	http://www.winfield.demon.nl/linux/
 
