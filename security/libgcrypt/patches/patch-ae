@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1 2005/01/18 13:11:38 tv Exp $
+
+--- src/ath.h.orig	2005-01-18 08:08:14.000000000 -0500
++++ src/ath.h
+@@ -31,6 +31,12 @@
+ 
+ #include <config.h>
+ 
++#ifdef HAVE_SYS_SELECT_H
++# include <sys/select.h>
++#else
++# include <sys/time.h>
++#endif
++
+ 
+ /* Define _ATH_EXT_SYM_PREFIX if you want to give all external symbols
+    a prefix.  */
