@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2000/11/01 17:26:40 itojun Exp $
+# $NetBSD: Makefile,v 1.32 2000/11/15 03:29:24 hubertf Exp $
 #
 
 DISTNAME=		lynx2.8.3rel.1
@@ -93,7 +93,7 @@ post-configure:
 	${ECHO} '#define LYNX_LSS_FILE "${PREFIX}/etc/lynx.lss"') \
 	    >> ${WRKSRC}/userdefs.h
 	(${ECHO}; \
-	${ECHO} 'SSL_LIBS= ${SSLLIBS}'; \
+	${ECHO} 'SSL_LIBS= ${SSLLIBS} -ltermcap'; \
 	${ECHO} 'SSL_DEFINES= -DUSE_SSL ${SSLINCS}') \
 	    >> ${WRKSRC}/makefile
 	(${ECHO}; \
