@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2004/04/16 11:40:38 recht Exp $
+$NetBSD: distinfo,v 1.7 2004/05/27 15:00:14 wiz Exp $
 
-SHA1 (cadaver-0.22.1.tar.gz) = dabfc2cf88684b7939dd33d59e10b491c347993f
-Size (cadaver-0.22.1.tar.gz) = 441126 bytes
+SHA1 (cadaver-0.22.2.tar.gz) = ac8fe23cc15137deb791142b965d142c237056cd
+Size (cadaver-0.22.2.tar.gz) = 441975 bytes
