@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.9 2002/12/18 12:43:32 tron Exp $
+
+--- src/xsane-save.c.orig	Sun Oct 20 23:22:19 2002
++++ src/xsane-save.c	Wed Dec 18 13:33:58 2002
+@@ -1986,8 +1986,8 @@
+     position_bottom = bottom + paper_bottom_margin;
+     box_left        = left   + paper_left_margin;
+     box_bottom      = bottom + paper_bottom_margin;
+-    box_right       = box_left   + round(width+0.5);
+-    box_top         = box_bottom + round(height+0.5);
++    box_right       = box_left   + (int)(width+0.5);
++    box_top         = box_bottom + (int)(height+0.5);
+   }
+ 
+   depth = image_info->depth;
