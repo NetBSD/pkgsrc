@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 2001/06/13 07:55:07 jlam Exp $
+
+--- configure.in.orig	Tue Jul  6 09:03:02 1999
++++ configure.in	Wed Jun 13 03:49:05 2001
+@@ -35,6 +35,9 @@
+ 
+ AM_GNU_GETTEXT
+ 
++# Use ${PKGLOCALEDIR} to determine the location of the locale files.
++DATADIRNAME="${PKGLOCALEDIR}"
++
+ # This is necessary so that .o files in LIBOBJS are also built via
+ # the ANSI2KNR-filtering rules.
+ LIBOBJS=`echo $LIBOBJS|sed 's/\.o /\$U.o /g;s/\.o$/\$U.o/'`
