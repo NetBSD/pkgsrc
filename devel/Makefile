@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.553 2004/10/31 14:40:51 seb Exp $
+# $NetBSD: Makefile,v 1.554 2004/10/31 16:09:41 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -396,6 +396,7 @@ SUBDIR+=	p5-Test-Builder-Tester
 SUBDIR+=	p5-Test-Cmd
 SUBDIR+=	p5-Test-Harness
 SUBDIR+=	p5-Test-Inline
+SUBDIR+=	p5-Test-Pod
 SUBDIR+=	p5-Test-Simple
 SUBDIR+=	p5-Test-Unit
 SUBDIR+=	p5-Tie-IxHash
