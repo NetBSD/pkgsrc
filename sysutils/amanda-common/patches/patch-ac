@@ -1,17 +1,13 @@
-$NetBSD: patch-ac,v 1.3 2000/02/05 06:51:27 wiz Exp $
---- man/Makefile.in.old	Tue Feb 23 10:24:35 1999
-+++ man/Makefile.in	Tue Feb 23 10:25:34 1999
-@@ -158,12 +158,7 @@
+$NetBSD: patch-ac,v 1.4 2001/01/16 21:59:32 cjones Exp $
+
+--- man/Makefile.in.orig	Thu Jan 11 14:35:21 2001
++++ man/Makefile.in	Thu Jan 11 14:35:42 2001
+@@ -149,7 +149,7 @@
  
- transform =	s,x,x,;
+ transform = s,x,x,;
  
--man_MANS =	amadmin.8	amanda.8	amcheck.8	\
--		amcheckdb.8	amcleanup.8	amdump.8	\
--		amflush.8	amlabel.8	amoverview.8	\
--		amplot.8	amrecover.8	amrestore.8	\
--		amrmtape.8	amtape.8	amtoc.8		\
--		amverify.8	amstatus.8	amreport.8
-+man_MANS =	amanda.8
+-@WANT_AMPLOT_TRUE@AMPLOT_MAN_PAGES = @WANT_AMPLOT_TRUE@amplot.8
++#AMPLOT_MAN_PAGES = amplot.8
  
- EXTRA_DIST = amplot.8 amrestore.8 amtape.8
- mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
+ COMMON_MAN_PAGES = amanda.8
+ 
