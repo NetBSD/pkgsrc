@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:51:39 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/17 19:37:08 cube Exp $
 #
 
-DISTNAME=	pptpd-1.0.1
-PKGNAME=	${DISTNAME:S/pptpd/poptop/}
+DISTNAME=	pptpd-1.1.3-20030409
+PKGNAME=	poptop-1.1.3.20030409
+WRKSRC=		${WRKDIR}/poptop
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.snapgear.com/poptop/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poptop/}
 
-MAINTAINER=	dbj@NetBSD.org
-HOMEPAGE=	http://www.snapgear.com/vpn/pptp.html
+MAINTAINER=	cube@NetBSD.org
+HOMEPAGE=	http://www.poptop.org/
 COMMENT=	PPTP server with support for Microsoft VPN clients
 
 USE_BUILDLINK2=	YES
