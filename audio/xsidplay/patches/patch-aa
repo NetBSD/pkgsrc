@@ -1,53 +1,63 @@
-$NetBSD: patch-aa,v 1.8 2003/03/15 02:15:12 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.9 2004/09/17 23:21:27 hubertf Exp $
 
---- src/Makefile.in.orig	Thu Oct 26 11:51:21 2000
-+++ src/Makefile.in	Fri Mar 14 20:54:45 2003
-@@ -105,5 +105,5 @@
- bin_PROGRAMS = xsidplay
+--- configure.orig	2003-02-01 21:18:09.000000000 +0100
++++ configure
+@@ -6577,6 +6577,7 @@ else
+ fi
+  
  
--xsidplay_LDADD = audio/libaudio.a stilview/libstilview.a songlendb/libsonglendb.a tools/libtools.a widgets/libwidgets.a @SIDPLAY_LDFLAGS@ -lsidplay @QT_LDFLAGS@ -lqt
-+xsidplay_LDADD = audio/libaudio.a stilview/libstilview.a songlendb/libsonglendb.a tools/libtools.a widgets/libwidgets.a @SIDPLAY_LDFLAGS@ -lsidplay @QT_LDFLAGS@ -lX11 -lXext -lICE -lSM -lqt @LIBAUDIO@
++if test -z "$DISABLE_ARTSD_TEST"; then
+ # aRts (KDE Sound Server).
+ # Extract the first word of "artsc-config", so it can be a program name with args.
+ set dummy artsc-config; ac_word=$2
+@@ -6622,6 +6623,7 @@ EOF
+     ARTSC_INCLUDES="`$ARTSC_CONFIG --cflags`"
+     ARTSC_LDADD="`$ARTSC_CONFIG --libs`"
+ fi
++fi # DISABLE_ARTSD_TEST
  
  
-@@ -140,4 +140,6 @@
- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
- LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-+CXXCOMPILE_NOOPT = $(CXXCOMPILE:-O%=)
-+LTCXXCOMPILE_NOOPT = $(LTCXXCOMPILE:-O%=)
- CXXLD = $(CXX)
- CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
-@@ -159,5 +161,5 @@
- all: all-redirect
- .SUFFIXES:
--.SUFFIXES: .S .c .cpp .lo .o .s
-+.SUFFIXES:  .S .c .cxx .cpp .lo .o .s
- $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
- 	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps src/Makefile
-@@ -239,4 +241,11 @@
- 	$(LTCXXCOMPILE) -c $<
+ if test -n "$ARTSC_CONFIG"; then
+@@ -6634,7 +6636,7 @@ fi
  
-+.cxx.o:
-+	$(CXXCOMPILE_NOOPT) -c $<
-+.cxx.lo:
-+	$(LTCXXCOMPILE_NOOPT) -c $<
-+.cpp.cxx:
-+	cp $< $@
-+
- # This directory's subdirectories are mostly independent; you can cd
- # into them and run `make' without going through this Makefile.
-@@ -515,2 +524,15 @@
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
-+
-+# problem files  -- compile with no optimization
-+ifeq (${MACHINE_ARCH},alpha)
-+moc_FilterDialogData.o: moc_FilterDialogData.cxx
-+moc_MainDialog.o: moc_MainDialog.cxx
-+moc_MainDialogData.o: moc_MainDialogData.cxx
-+moc_MixerDialog.o: moc_MixerDialog.cxx
-+moc_MixerDialogData.o:  moc_MixerDialogData.cxx
-+moc_PlaylistDialog.o: moc_PlaylistDialog.cxx
-+moc_PlaylistEditDialog.o: moc_PlaylistEditDialog.cxx
-+moc_PlaylistEditDialogData.o: moc_PlaylistEditDialogData.cxx
-+endif
-+
+ 
+ 
+-
++if test -z "$DISABLE_ESD_TEST"; then
+ # Enlightenment Sound Daemon.
+ # Extract the first word of "esd-config", so it can be a program name with args.
+ set dummy esd-config; ac_word=$2
+@@ -6680,6 +6682,7 @@ EOF
+     ESD_INCLUDES="`$ESD_CONFIG --cflags`"
+     ESD_LDADD="`$ESD_CONFIG --libs`"
+ fi
++fi # DISABLE_ESD_TEST
+ 
+ 
+ if test -n "$ESD_CONFIG"; then
+@@ -7789,6 +7792,7 @@ fi
+     done
+ 
+ my_qt_includes=$qt_incdir
++my_qt_lib=-lqt
+ 
+     qt_libdir=""
+     for i in $qt_libdirs;
+@@ -7797,6 +7801,8 @@ my_qt_includes=$qt_incdir
+         do
+ 	        if test -r "$i/$j"; then
+ 		        qt_libdir=$i
++			my_qt_lib=-lqt-mt
++			echo "Using multi-threaded version of Qt lib (libqt-mt)"
+                 break 2
+             fi
+         done
+@@ -7886,7 +7892,7 @@ echo "configure:7879: checking for Qt ve
+     CXX="${SHELL-/bin/sh} ${srcdir}/libtool $CXX"
+     CXXFLAGS="$CXXFLAGS $QT_INCLUDES"
+     LDFLAGS="$LDFLAGS $QT_LDFLAGS"
+-    LIBS="$LIBS -lqt"
++    LIBS="$LIBS ${my_qt_lib}"
+ 
+     cat > conftest.$ac_ext <<EOF
+ #line 7893 "configure"
