@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2003/08/05 20:21:43 seb Exp $
+$NetBSD: patch-aa,v 1.8 2003/12/11 16:05:40 adam Exp $
 
---- Makefile.in.orig	2000-05-14 18:14:59.000000000 +0000
+--- Makefile.in.orig	2003-02-16 21:55:16.000000000 +0000
 +++ Makefile.in
 @@ -11,7 +11,6 @@ USERCFLAGS = 
  USERLDFLAGS =
@@ -8,8 +8,8 @@ $NetBSD: patch-aa,v 1.7 2003/08/05 20:21:43 seb Exp $
  
 -MAKEINFO = makeinfo
  TEXI2DVI = texi2dvi
+ TEXI2PDF = texi2pdf
  TEXI2HTML = texi2html
- 
 @@ -49,6 +48,7 @@ LN_S        = @LN_S@
  
  INSTALL         = @INSTALL@
@@ -22,12 +22,12 @@ $NetBSD: patch-aa,v 1.7 2003/08/05 20:21:43 seb Exp $
  .SUFFIXES: .o .c
  .SUFFIXES: .o .c
  
--MAN1 = floppyd.1 mattrib.1 mbadblocks.1 mcat.1 mcd.1 mcopy.1 mdel.1 mdeltree.1 mdir.1 \
-+MAN1 = @MANFLOPPYD@ mattrib.1 mbadblocks.1 mcat.1 mcd.1 mcopy.1 mdel.1 mdeltree.1 mdir.1 \
- mdu.1 mformat.1 mkmanifest.1 mlabel.1 mmd.1 mmount.1 mmove.1 mpartition.1 \
- mrd.1 mread.1 mren.1 mshowfat.1 mtoolstest.1 mtools.1 mtype.1 mzip.1
- MAN1EXT	= 1
-@@ -256,7 +256,7 @@ install-links: $(bindir)/mtools
+-MAN1 = floppyd.1 floppyd_installtest.1 mattrib.1 mbadblocks.1 mcat.1 mcd.1 \
++MAN1 = @MANFLOPPYD@ @MANFLOPPYD_INSTTEST@ mattrib.1 mbadblocks.1 mcat.1 mcd.1 \
+ mcopy.1 mdel.1 mdeltree.1 mdir.1 mdu.1 mformat.1  minfo.1 mkmanifest.1 \
+ mlabel.1 mmd.1 mmount.1 mmove.1 mpartition.1 \
+ mrd.1 mren.1 mshowfat.1 mtoolstest.1 mtools.1 mtype.1 mzip.1
+@@ -257,7 +257,7 @@ install-links: $(bindir)/mtools
  install-scripts: $(bindir)/mtools
  	@$(top_srcdir)/mkinstalldirs $(bindir)
  	@for j in $(SCRIPTS) ; do \
