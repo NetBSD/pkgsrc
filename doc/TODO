@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.964 2003/10/24 01:14:21 xtraeme Exp $
+$NetBSD: TODO,v 1.965 2003/10/24 01:46:11 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -159,7 +159,6 @@ Suggested package updates
 	o ettercap-0.6.b
 	o evilwm-0.99.17
 	o evolution-1.4.4
-	o exiftags-0.98 [pkg/22935]
 	o exim-4.24
 	o festival-1.4.3
 	o fetchmail-6.2.5

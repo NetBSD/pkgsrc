@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3726 2003/10/24 01:14:21 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3727 2003/10/24 01:46:11 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4240,3 +4240,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sylpheed-claws to 0.9.4nb3 [cube 2003-10-23]
 	Updated dgd to 1.2.0.3 [xtraeme 2003-10-24]
 	Updated xpdf to 2.03 [xtraeme 2003-10-24]
+	Updated exiftags to 0.98 [xtraeme 2003-10-24]
