@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/08 20:22:00 cjones Exp $
+$NetBSD: distinfo,v 1.2 2002/02/18 15:14:24 seb Exp $
 
 SHA1 (eieio-0.16.tar.gz) = efad4e46a8c699241eb9e1e09796f7ac86430e9e
 Size (eieio-0.16.tar.gz) = 77843 bytes
+SHA1 (patch-aa) = fa4f0bd7cb20224997d08d15d4051514c862299d

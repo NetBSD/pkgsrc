@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:02 seb Exp $
 share/doc/festival/speechtools/images_gen/docppimath_929959730_6.gif
 share/doc/festival/speechtools/images_gen/docppmath_929959728_2.gif
 share/doc/festival/speechtools/images_gen/docppmath_929959741_1.gif
@@ -140,7 +140,7 @@ share/doc/festival/speechtools/index.html
 share/doc/festival/speechtools/HTML.index
 share/doc/festival/speechtools/TeX.formulae
 @dirrm share/doc/festival/speechtools
-@unexec install-info --delete %D/info/festival.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/festival.info %D/info/dir
 info/festival.info
 info/festival.info-9
 info/festival.info-8
@@ -152,7 +152,7 @@ info/festival.info-3
 info/festival.info-2
 info/festival.info-1
 info/festival.info-10
-@exec install-info %D/info/festival.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/festival.info %D/info/dir
 share/doc/festival/festival/user-manual/festival_35.html
 share/doc/festival/festival/user-manual/festival_1.html
 share/doc/festival/festival/user-manual/festival_2.html

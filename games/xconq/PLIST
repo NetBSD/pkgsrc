@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:56:30 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:19 seb Exp $
 bin/imf2x
 bin/x2imf
 bin/xconq
 bin/ximfapp
-@unexec install-info --delete %D/info/hacking.info %D/info/dir
-@unexec install-info --delete %D/info/xcdesign.info %D/info/dir
-@unexec install-info --delete %D/info/xconq.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/hacking.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/xcdesign.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/xconq.info %D/info/dir
 info/hacking.info
 info/xcdesign.info
 info/xcdesign.info-1
@@ -28,9 +28,9 @@ info/xconq.info-3
 info/xconq.info-4
 info/xconq.info-5
 info/xconq.info-6
-@exec install-info %D/info/hacking.info %D/info/dir
-@exec install-info %D/info/xcdesign.info %D/info/dir
-@exec install-info %D/info/xconq.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/hacking.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/xcdesign.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/xconq.info %D/info/dir
 man/man6/xconq.6
 share/xconq/images/advt24x26.gif
 share/xconq/images/advt32x32.gif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/01/03 17:09:45 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/02/18 15:14:32 seb Exp $
 
 DISTNAME=	octave-2.1.33
 PKGNAME=	octave-2.1.34
@@ -26,7 +26,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_FORTRAN=	yes
 USE_GMAKE=	yes
-USE_GTEXINFO=	yes
 CONFIGURE_ARGS+=--with-g77
 CONFIGURE_ARGS+=--enable-shared --enable-rpath
 CONFIGURE_ARGS+=-prefix=${PREFIX}
@@ -60,4 +59,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/$f ${PREFIX}/share/doc/html/octave
 .endfor
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

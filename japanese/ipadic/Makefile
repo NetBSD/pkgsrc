@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/02/09 07:36:58 taca Exp $
+# $NetBSD: Makefile,v 1.13 2002/02/18 15:14:22 seb Exp $
 #
 
 DISTNAME=		ipadic-2.4.4
@@ -21,4 +21,5 @@ post-install:
 
 .include "../chasen/Makefile.common"
 .include "../../mk/bsd.pkg.install.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/22 03:41:49 nathanw Exp $
+# $NetBSD: Makefile,v 1.2 2002/02/18 15:14:25 seb Exp $
 
 DISTNAME=	inform-6.21.2
 CATEGORIES=	lang
@@ -12,4 +12,7 @@ LICENSE=	no-profit
 
 GNU_CONFIGURE=	yes
 
+INFO_FILES=	inform
+
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

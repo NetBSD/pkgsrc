@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:03 seb Exp $
 etc/fidogate/fidogate.conf.dist
 @dirrm etc/fidogate
 etc/rc.d/fidogate
-@unexec install-info --delete %D/info/fidogate.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/fidogate.info %D/info/dir
 info/fidogate.info
-@exec install-info %D/info/fidogate.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/fidogate.info %D/info/dir
 lib/fidogate/areafix.help
 lib/fidogate/bin/areasbbssync
 lib/fidogate/bin/ftnafutil

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/11/29 01:12:47 hubertf Exp $
+# $NetBSD: Makefile,v 1.32 2002/02/18 15:14:40 seb Exp $
 #
 
 V=		2.05
@@ -16,7 +16,6 @@ COMMENT=	The GNU Bourne Again Shell
 
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
-USE_GTEXINFO=		yes
 MAKE_ENV+=		INSTALL_SCRIPT='${INSTALL_SCRIPT}'
 
 .include "../../mk/bsd.prefs.mk"
@@ -57,4 +56,5 @@ post-install:
 	${GZIP_CMD} ${PREFIX}/share/doc/bash/*.ps
 
 .include "../../devel/gettext-lib/buildlink.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

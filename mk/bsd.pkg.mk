@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.927 2002/02/15 10:12:52 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.928 2002/02/18 15:14:34 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -213,16 +213,8 @@ MAKE_ENV+=	F77="${F77}"
 MAKE_ENV+=	FC="${FC}"
 .endif
 
-.if defined(INFO_FILES)
-USE_GTEXINFO=		yes
-.endif
-
 .if ((defined(NEED_NCURSES)) && (${NEED_NCURSES} == YES))
 DEPENDS+=		ncurses>=5.0:../../devel/ncurses
-.endif
-
-.if defined(USE_GTEXINFO) && !exists(/usr/bin/install-info)
-DEPENDS+=		gtexinfo>=3.12:../../devel/gtexinfo
 .endif
 
 # Automatically increase process limit where necessary for building.
@@ -514,6 +506,7 @@ PLIST_SUBST+=	OPSYS=${OPSYS}						\
 		CHGRP=${CHGRP:Q}					\
 		CHMOD=${CHMOD:Q}					\
 		CHOWN=${CHOWN:Q}					\
+		INSTALL_INFO=${INSTALL_INFO:Q}				\
 		MKDIR=${MKDIR:Q}					\
 		RMDIR=${RMDIR:Q}					\
 		RM=${RM:Q}						\
@@ -1950,9 +1943,9 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install-script
 .for f in ${INFO_FILES}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "install-info --info-dir=${PREFIX}/info ${PREFIX}/info/${f}"; \
-	install-info --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
-	install-info --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/${f}"; \
+	${INSTALL_INFO} --remove --info-dir=${PREFIX}/info ${PREFIX}/info/${f}; \
+	${INSTALL_INFO} --info-dir=${PREFIX}/info ${PREFIX}/info/${f}
 .endfor
 	@# PLIST must be generated at this late point (instead of
 	@# depending on it somewhere earlier), as the
@@ -3427,9 +3420,9 @@ print-PLIST:
 		}							\
 		{ 							\
 		  if (/\.info$$/) {					\
-		    print "\@unexec install-info --delete --info-dir=%D/info %D/" $$0; \
+		    print "\@unexec $${INSTALL_INFO} --delete --info-dir=%D/info %D/" $$0; \
 		    print $$0;						\
-		    print "\@exec install-info --info-dir=%D/info %D/" $$0; \
+		    print "\@exec $${INSTALL_INFO} --info-dir=%D/info %D/" $$0; \
 		  } else if (!/^info\/dir$$/) {				\
 		    print $$0;						\
 		  }							\

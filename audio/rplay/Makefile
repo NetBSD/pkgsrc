@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/01/11 15:10:56 skrll Exp $
+# $NetBSD: Makefile,v 1.35 2002/02/18 15:14:02 seb Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/06/13 16:17:01 ache Exp
 #
 
@@ -36,4 +36,5 @@ post-install:
 .include "../../devel/readline/buildlink.mk"
 .include "../../devel/rx/buildlink.mk"
 .include "../../mk/bsd.pkg.install.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/01/10 16:22:37 skrll Exp $
+# $NetBSD: Makefile,v 1.27 2002/02/18 15:14:07 seb Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/09/19 09:29:04 max Exp
 #
 
@@ -20,6 +20,8 @@ CONFIGURE_ENV=		PERL=${PERL5}
 STRIPFLAG=		# none
 
 INFO_FILES=	automake.info
+TEXINFO_OVERRIDE=	YES
 
 .include "../../lang/perl5/buildlink.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

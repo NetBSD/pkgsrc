@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:14 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:20 seb Exp $
 bin/aafire
 bin/aainfo
 bin/aalib-config
 bin/aasavefont
 bin/aatest
 include/aalib.h
-@unexec install-info --delete --info-dir=%D/info %D/info/aalib.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/aalib.info
 info/aalib.info
 info/aalib.info-1
 info/aalib.info-2
 info/aalib.info-3
-@exec install-info --info-dir=%D/info %D/info/aalib.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/aalib.info
 lib/libaa.a
 lib/libaa.la
 lib/libaa.so

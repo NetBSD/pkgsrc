@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:39 seb Exp $
 share/examples/kth-krb4/inetd.conf.changes
 share/examples/kth-krb4/krb.conf
 share/examples/kth-krb4/krb.realms
@@ -213,6 +213,6 @@ man/cat8/rlogind.0
 man/cat8/rshd.0
 man/cat8/telnetd.0
 man/cat8/push.0
-@unexec install-info --delete %D/info/kth-krb.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/kth-krb.info %D/info/dir
 info/kth-krb.info
-@exec install-info %D/info/kth-krb.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/kth-krb.info %D/info/dir

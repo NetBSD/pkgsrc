@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2001/12/26 08:32:42 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2002/02/18 15:14:11 seb Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -22,6 +22,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 
 INFO_FILES=		glib.info
+TEXINFO_OVERRIDE=	YES
 
 # XXX egcs is still broken on arm32.
 .if (${MACHINE_ARCH} == arm32)
@@ -75,4 +76,5 @@ post-configure:
 .endif
 
 .include "../../mk/pthread.buildlink.mk"
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:02 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:23 seb Exp $
 bin/c++
 bin/g++
 bin/gcc
@@ -145,9 +145,9 @@ include/g++/tempbuf.h
 include/g++/tree.h
 include/g++/type_traits.h
 include/g++/vector.h
-@unexec install-info --delete %D/info/g77.info %D/info/dir
-@unexec install-info --delete %D/info/gcc.info %D/info/dir
-@unexec install-info --delete %D/info/cpp.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/g77.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/gcc.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/cpp.info %D/info/dir
 info/g77.info
 info/g77.info-1
 info/g77.info-10
@@ -203,9 +203,9 @@ info/gcc.info-6
 info/gcc.info-7
 info/gcc.info-8
 info/gcc.info-9
-@exec install-info %D/info/g77.info %D/info/dir
-@exec install-info %D/info/gcc.info %D/info/dir
-@exec install-info %D/info/cpp.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/g77.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/gcc.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/cpp.info %D/info/dir
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/math.h
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/curses.h
 lib/gcc-lib/${MACHINE_GNU_PLATFORM}/egcs-2.91.66/include/assert.h

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/08/27 14:35:11 tron Exp $
+# $NetBSD: Makefile,v 1.19 2002/02/18 15:14:33 seb Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -20,7 +20,6 @@ BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=	yes
-USE_GTEXINFO=	yes
 USE_LIBINTL=	yes
 CPPFLAGS+=	-Dunix=1
 MAKE_ENV+=	pkgsysconfdir="${PREFIX}/etc/pspp"
@@ -28,4 +27,5 @@ MAKE_ENV+=	pkgsysconfdir="${PREFIX}/etc/pspp"
 pre-configure:
 	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
 
+.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
