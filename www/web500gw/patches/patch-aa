@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/01/08 14:15:57 hwr Exp $
+$NetBSD: patch-aa,v 1.2 2000/06/19 07:56:20 kleink Exp $
 
 --- Makefile.orig	Wed Oct 28 15:21:57 1998
 +++ Makefile	Fri Jan  8 14:05:39 1999
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/01/08 14:15:57 hwr Exp $
 -LDAPINCL = 
 -LDAPLIBS = -lldap -llber
 +LDAPINCL = -I@PREFIX@/include
-+LDAPLIBS = -L@PREFIX@/lib -lldap -llber -lcompat
++LDAPLIBS = -L@PREFIX@/lib -Wl,-R@PREFIX@/lib -lldap -llber -lcompat
  # set LDAPVERSION (32 for ldap-3.2, 33 for 3.3 etc)
  LDAPVERSION = 33
  VERSION = 3.3
