@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2001/01/31 10:07:02 abs Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/04 11:32:34 abs Exp $
 #
 
 DISTNAME=	tscp171
-PKGNAME=	tscp-1.71nb1
+PKGNAME=	tscp-1.71nb2
 CATEGORIES=	games benchmarks
 MASTER_SITES=	http://ucsu.colorado.edu/~kerrigat/
 EXTRACT_SUFX=	.zip
