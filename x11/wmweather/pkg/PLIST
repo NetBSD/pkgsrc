@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/12 05:57:52 rh Exp $
+bin/wmWeather
+bin/GrabWeather
+man/man1/wmWeather.1
