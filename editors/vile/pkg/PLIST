@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1998/06/02 12:06:29 agc Exp $
+@comment $NetBSD: PLIST,v 1.4 1998/10/05 12:30:52 agc Exp $
 bin/vile
 bin/vile-c-filt
 bin/vile-crypt
@@ -7,9 +7,11 @@ bin/vile-pas-filt
 man/man1/vile.1.gz
 share/vile/perl/glob2re.pl
 share/vile/perl/hgrep.pl
+share/vile/perl/hilite.pl
 share/vile/perl/manfilt.pl
 share/vile/perl/search.pl
 share/vile/perl/shell.pl
+share/vile/perl/syntax.pl
 share/vile/perl/tailf.pl
 share/vile/perl/visit.pl
 share/vile/vile.hlp
