@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/04/19 21:40:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.27 2004/05/13 19:29:42 kristerw Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	2
@@ -34,11 +34,11 @@ CONFIGURE_ARGS+=	--valbits=26
 CONFIGURE_ARGS+=	--bdf-path=${X11PREFIX}/lib/X11/fonts/intlfonts/bdf
 
 .if !defined(USE_WNN4) || ${USE_WNN4} == YES
-CONFIGURE_ARGS+=	--with-wnn4 --wnn-includes=${BUILDLINK_PREFIX.ja-freewnn}/include/wnn --wnn-libraries=${BUILDLINK_PREFIX.ja-freewnn}/lib
+CONFIGURE_ARGS+=	--with-wnn4 --wnn-includes=${BUILDLINK_PREFIX.ja-FreeWnn-lib}/include/wnn --wnn-libraries=${BUILDLINK_PREFIX.ja-FreeWnn-lib}/lib
 .endif
 
 .if !defined(USE_CANNA) || ${USE_CANNA} == YES
-CONFIGURE_ARGS+=	--canna --canna-includes=${BUILDLINK_PREFIX.canna}/include --canna-libraries=${BUILDLINK_PREFIX.canna}/lib
+CONFIGURE_ARGS+=	--canna --canna-includes=${BUILDLINK_PREFIX.Canna-lib}/include --canna-libraries=${BUILDLINK_PREFIX.Canna-lib}/lib
 .endif
 
 USE_MAKEINFO=	YES
