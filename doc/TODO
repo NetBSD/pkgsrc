@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1029 2003/11/15 08:48:16 cube Exp $
+$NetBSD: TODO,v 1.1030 2003/11/15 09:13:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -311,8 +311,6 @@ Suggested package updates
 	o openldap-2.1.23
 	o openoffice-1.1 [skrll]
 	o openssl-0.9.7c [jschauma]
-	o opera-7.22 [heinz, for Solaris/sparc]
-	o oss-3.9.8b
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
