@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.6 1999/09/25 16:06:54 drochner Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.7 1999/11/12 13:18:03 abs Exp $
 
 # (Somewhat quickly) Written by David Brownlee <abs@netbsd.org>.
 # Caveats:
@@ -103,15 +103,16 @@ sub fail
 sub list_possible_versions
     {
     my($pkg)=@_;
-    my($pkgname,@maybe,$fail);
+    my($pkgname,@maybe,$fail,$len);
 
     if (!defined($pkg2dir{$pkg}))
 	{
 	$pkgname=$pkg;
 	$pkgname =~ s/-[^-]+$/-/;
+	$len=length($pkgname);
 	foreach ( sort keys %pkg2dir )
 	    {
-	    if (/^$pkgname[0-9]/)
+	    if (substr($_,0,$len) eq $pkgname && substr($_,$len,1) =~ /[0-9]/)
 		{ push(@maybe,$_); }
 	    }
 	$_="Unknown package: '$pkg'";
