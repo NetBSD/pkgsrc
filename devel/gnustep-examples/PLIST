@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/05 10:20:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/12/08 15:43:23 adam Exp $
 share/GNUstep/Local/Applications/Calculator.app/Calculator
 share/GNUstep/Local/Applications/Calculator.app/Resources/Calculator.app.tiff
 share/GNUstep/Local/Applications/Calculator.app/Resources/Calculator.desktop
@@ -132,8 +132,6 @@ share/GNUstep/System/Applications/NSPanelTest.app/stamp.make
 @dirrm share/GNUstep/Local/Library/Bundles/CoordinateCheck-test.bundle
 @dirrm share/GNUstep/Local/Library/Bundles/Composite-test.bundle/Resources
 @dirrm share/GNUstep/Local/Library/Bundles/Composite-test.bundle
-@dirrm share/GNUstep/Local/Library/Bundles
-@dirrm share/GNUstep/Local/Library
 @dirrm share/GNUstep/Local/Applications/NSScreenTest.app/Resources
 @dirrm share/GNUstep/Local/Applications/NSScreenTest.app
 @dirrm share/GNUstep/Local/Applications/NSBrowserTest.app/Resources
@@ -146,4 +144,3 @@ share/GNUstep/System/Applications/NSPanelTest.app/stamp.make
 @dirrm share/GNUstep/Local/Applications/CurrencyConverter.app
 @dirrm share/GNUstep/Local/Applications/Calculator.app/Resources
 @dirrm share/GNUstep/Local/Applications/Calculator.app
-@dirrm share/GNUstep/Local/Applications
