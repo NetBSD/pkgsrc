@@ -1,0 +1,10 @@
+AutPGrp is a GAP 4 package for computing automorphism groups of p-groups.
+
+In the AutPGrp package we introduce a new function to compute the
+automorphism group of a finite p-group. The underlying algorithm is a
+refinement of the methods described in O'Brien (1995). In particular,
+this implementation is more efficient in both time and space requirements
+and hence has a wider range of applications than the ANU pq method. Our
+package is written in GAP code and it makes use of a number of methods
+from the GAP library such as the MeatAxe for matrix groups and
+permutation group functions.
