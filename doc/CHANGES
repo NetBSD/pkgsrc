@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6385 2004/06/28 19:22:37 minskim Exp $
+$NetBSD: CHANGES,v 1.6386 2004/06/28 19:24:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3163,3 +3163,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libgtkhtml to 2.6.2 [jmmv 2004-06-28]
 	Updated libwnck to 2.6.2 [jmmv 2004-06-28]
 	Updated abook to 0.5.2 [minskim 2004-06-28]
+	Updated nautilus to 2.6.3 [jmmv 2004-06-28]
