@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/08/16 05:09:30 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.16 2000/11/14 14:30:14 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
@@ -21,6 +21,8 @@ DEPENDS+=	readline>=4.0:../../devel/readline
 
 USE_X11=	yes
 NO_WRKSUBDIR=	yes
+
+CONFLICTS=	ng-spice-*
 
 do-configure:
 	${RM} -f ${WRKSRC}/makefile
