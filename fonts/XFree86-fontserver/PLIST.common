@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.common,v 1.1.1.1 2004/01/24 09:00:36 xtraeme Exp $
+bin/xfs
+lib/X11/fs/config
+@dirrm lib/X11/fs
