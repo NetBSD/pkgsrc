@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/09/21 23:46:48 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/10/10 12:31:08 wiz Exp $
 #
 
 DISTNAME=	ZMySQLDA-1.1.3-nonbin
@@ -13,8 +13,9 @@ COMMENT=	Zope Database Adaptor for MySQL
 
 DEPENDS+=	zope-2.*:../../www/zope
 
-WRKSRC=		${WRKDIR}/lib
+USE_BUILDLINK2=	YES
 
+WRKSRC=		${WRKDIR}/lib
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 ZOPEDIR=	${PREFIX}/lib/zope
@@ -38,5 +39,5 @@ do-install:
 	${ECHO} "@dirrm lib/zope/${DAPATH}" >> ${PLIST_SRC}
 
 .include "../../lang/python/application.mk"
-.include "../../databases/py-mysqldb/buildlink.mk"
+.include "../../databases/py-mysqldb/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
