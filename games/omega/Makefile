@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/12/25 21:21:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/10/25 17:42:13 wiz Exp $
 
 DISTNAME=	omega-0.90-pa4
 PKGNAME=	omega-0.90.4
@@ -12,16 +12,8 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.win.tue.nl/games/roguelike/omega
 COMMENT=	Complex rogue-like game of exploration with a sense of humor
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 ALL_TARGET=		# empty
-
-# Change references from <curses.h> to <ncurses.h> in the source files.
-post-extract:
-	cd ${WRKSRC}; for file in *.[ch]; do				\
-		${SED} -e "s|<curses\.h>|<ncurses.h>|g"			\
-			$${file} > $${file}.presubst;			\
-		${MV} -f $${file}.presubst $${file};			\
-	done
 
 do-install:
 	${INSTALL_PROGRAM} -o games -g games -m 4711 ${WRKSRC}/omega	\
@@ -44,5 +36,5 @@ post-install:
 		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/omega;	\
 	done
 
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
