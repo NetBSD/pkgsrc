@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/07/20 15:08:29 tv Exp $
+# $NetBSD: Makefile,v 1.20 1998/08/20 15:17:34 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 #
 
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.0/distribution/tar/generic/s
 		ftp://ftp.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/
 
 MAINTAINER=	tron@netbsd.org
+HOMEPAGE=       http://www.kde.org/
 
 DEPENDS+=	Mesa-2.6:../../graphics/Mesa
 DEPENDS+=	giflib-3.0:../../graphics/giflib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/07/15 12:14:24 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/08/20 15:16:53 tsarna Exp $
 
 DISTNAME=		Wine-980614
 PKGNAME=		wine-980614
@@ -7,7 +7,8 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE}
 MASTER_SITE_SUBDIR=	ALPHA/wine/development
 ONLY_FOR_ARCHS=		i386
 
-MAINTAINER=	mycroft@NetBSD.ORG
+MAINTAINER=	mycroft@netbsd.org
+HOMEPAGE=	http://www.winehq.com/
 
 CONFLICTS=	wine-980215
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/09 23:15:06 tron Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/20 15:16:53 tsarna Exp $
 #
 
 DISTNAME=	battalion
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.evl.uic.edu/aej/
 DISTFILES=	battalionSource1.4.tar.Z battalionSUN4.tar.gz
 
 MAINTAINER=	root@garbled.net
+HOMEPAGE=	http://www.evl.uic.edu/aej/AndyBattalion.html
 
 DEPENDS+=	Mesa-2.6:../../graphics/Mesa
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/06/22 13:07:50 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/08/20 15:17:26 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/09/26 08:23:14 torstenb Exp
 #
 
@@ -14,6 +14,7 @@ MASTER_SITES=   ftp://ftp.math.gatech.edu/pub/zsh/ \
 		ftp://ftp.uit.no/pub/unix/shells/zsh/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.peak.org/zsh/
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	zsh.info

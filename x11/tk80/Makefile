@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1998/07/15 10:58:53 agc Exp $
+# $NetBSD: Makefile,v 1.19 1998/08/20 15:17:35 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/10/01 09:20:31 tg Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.scriptics.com/pub/tcl/tcl8_0/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.scriptics.com/
 
 DEPENDS+=	tcl-8.0p2:../../lang/tcl80
 

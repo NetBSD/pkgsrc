@@ -1,5 +1,5 @@
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
-# $NetBSD: Makefile,v 1.2 1998/08/03 18:01:30 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/20 15:17:03 tsarna Exp $
 # 
 
 DISTNAME=       xpdf-0.7a
@@ -7,6 +7,7 @@ CATEGORIES=	graphics print
 MASTER_SITES=	ftp://ftp.aimnet.com/pub/users/derekn/xpdf/
 
 MAINTAINER=	tsarna@netbsd.org
+HOMEPAGE=	http://www.aimnet.com/~derekn/xpdf/
 
 DEPENDS=	xpm-3.4k:../../graphics/xpm
 

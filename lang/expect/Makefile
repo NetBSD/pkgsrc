@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/07/15 11:46:32 agc Exp $
+# $NetBSD: Makefile,v 1.15 1998/08/20 15:17:04 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.29 1998/01/27 01:11:47 fenner Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://expect.nist.gov/
 
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 

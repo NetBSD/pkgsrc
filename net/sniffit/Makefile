@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/06/22 12:58:35 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/08/20 15:17:19 tsarna Exp $
 #
 
 DISTNAME=	sniffit.0.3.5
@@ -7,6 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://reptile.rug.ac.be/~coder/sniffit/files/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://reptile.rug.ac.be/~coder/sniffit/sniffit.html
 
 do-build:
 	cd ${WRKSRC} ; ./configure ; make

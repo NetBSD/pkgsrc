@@ -22,10 +22,6 @@ based scripts can be used to dump routing tables, to query interface
 status and to monitor SNMP variables. There is also a MIB browser to
 inspect the MIB hierarchy.
 
-More information is available via WWW under the URL:
-
-        http://www.cs.tu-bs.de/ibr/projects/nm/scotty/
-
 If you have problems installing scotty or if you have made any changes
 to run scotty on your hardware or if you have found any bugs, please
 contact us. Discussion about scotty is currently done on the tkined

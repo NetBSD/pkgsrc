@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/07 14:56:54 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/20 15:17:24 tsarna Exp $
 
 DISTNAME=	pycrypt100
 PKGNAME=	py-crypto-1.0.0
@@ -7,6 +7,7 @@ MASTER_SITES=	ftp://ftp.cwi.nl/pub/pct/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tsarna@netbsd.org
+HOMEPAGE=	http://starship.skyport.net/crew/amk/writing/pct/
 
 DEPENDS+=	python-1.5.1:../../lang/python
 

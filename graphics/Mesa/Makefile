@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/07/15 11:22:53 agc Exp $
+# $NetBSD: Makefile,v 1.16 1998/08/20 15:17:00 tsarna Exp $
 #
 
 DISTNAME=       MesaLib-2.6
@@ -10,7 +10,8 @@ MASTER_SITES= 	ftp://iris.ssec.wisc.edu/pub/Mesa/ \
 DISTFILES=	MesaLib-${MESA_VERSION}${EXTRACT_SUFX} \
 		MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}
 
-MAINTAINER=	mycroft@NetBSD.ORG
+MAINTAINER=	mycroft@netbsd.org
+HOMEPAGE=	http://www.ssec.wisc.edu/~brianp/Mesa.html
 
 WRKSRC=         ${WRKDIR}/${PKGNAME}
 ALL_TARGET=	netbsd

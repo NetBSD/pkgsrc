@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/06/22 13:00:14 agc Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/20 15:17:22 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/07/31 06:36:03 asami Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=		ftp://nntpcache.org/pub/nntpcache/ \
 			ftp://suburbia.net/pub/nntpcache/
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.nntpcache.org/
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=/var/spool

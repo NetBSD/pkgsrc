@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/07/15 10:32:41 agc Exp $
+# $NetBSD: Makefile,v 1.13 1998/08/20 15:17:20 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -10,6 +10,7 @@ MASTER_SITES=	ftp://ftp.astec.co.jp/pub/security/socks/  \
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	ambrisko@ambrisko.roble.com
+HOMEPAGE=	http://www.socks.nec.com/
 
 CONFLICTS=	socks4-2.2
 

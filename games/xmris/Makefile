@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/03 18:44:44 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:58 tsarna Exp $
 
 DISTNAME=		xmris.4.04
 PKGNAME=		xmris-4.04
@@ -7,6 +7,7 @@ MASTER_SITES=		http://www.cs.bris.ac.uk/~nathan/xmris/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		root@garbled.net
+HOMEPAGE=		http://www.cs.bris.ac.uk/~nathan/xmris/
 
 USE_IMAKE=		yes
 ALL_TARGET=		initialize xmris xmred

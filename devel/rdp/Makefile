@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/01 22:30:26 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1998/08/20 15:16:50 tsarna Exp $
 
 DISTNAME=		rdp1_5
 PKGNAME=		rdp-1.5
@@ -7,6 +7,7 @@ MASTER_SITES=		ftp://ftp.dcs.rhbnc.ac.uk/pub/rdp/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.dcs.rhbnc.ac.uk/research/languages/rdp.shtml
 
 BUILD_DEPENDS=		unzip:../../archivers/unzip
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/06/21 15:22:19 tv Exp $
+# $NetBSD: Makefile,v 1.5 1998/08/20 15:17:29 tsarna Exp $
 #
 
 DISTNAME=		texi2html
@@ -8,6 +8,7 @@ MASTER_SITES=		http://wwwcn1.cern.ch/dci/texi2html/
 EXTRACT_SUFX=		.shar.Z
 
 MAINTAINER=		tv@netbsd.org
+HOMEPAGE=		http://wwwcn1.cern.ch/dci/texi2html/
 
 USE_PERL5=		YES
 

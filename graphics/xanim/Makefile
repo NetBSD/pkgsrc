@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/06/22 12:39:47 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/08/20 15:17:02 tsarna Exp $
 #
 
 DISTNAME=       xanim27070
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://xanim.va.pubnix.com/\
 DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://xanim.va.pubnix.com/
 
 EXTRACT_ONLY=   ${DISTNAME}.tar.gz
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/08/01 06:02:07 scottr Exp $
+# $NetBSD: Makefile,v 1.10 1998/08/20 15:17:17 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.39 1998/01/31 17:49:48 jseger Exp
 #
 
@@ -7,6 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=   ftp://ftp.ncftp.com/ncftp/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.ncftp.com/ncftp/
 
 DEPENDS+=	ncurses-1.9.9g:../../devel/ncurses
 

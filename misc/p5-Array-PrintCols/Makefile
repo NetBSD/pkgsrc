@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/06/22 12:52:33 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/08/20 15:17:14 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/09/14 02:54:03 jfitz Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN}
 MASTER_SITE_SUBDIR=	Array
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/Array-PrintCols/PrintCols.html
 
 USE_PERL5=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/06/03 13:16:57 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/08/20 15:17:20 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/07/19 19:43:36 fenner Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://jarok.cs.ohiou.edu/software/tcptrace/files/4.1.3/
 
 MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://jarok.cs.ohiou.edu/software/tcptrace/
 
 GNU_CONFIGURE=	yes
 

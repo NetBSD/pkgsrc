@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/07/24 01:57:00 tv Exp $
+# $NetBSD: Makefile,v 1.17 1998/08/20 15:17:12 tsarna Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -7,6 +7,7 @@ CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 
 MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.amanda.org/
 
 DEPENDS+=		readline-2.2:../../devel/readline
 DEPENDS+=		addnerd-1.5:../../sysutils/addnerd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1998/04/15 10:38:10 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/08/20 15:16:39 tsarna Exp $
 #
 
 DISTNAME=	cddbd-1.3.1
@@ -11,6 +11,7 @@ PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	cddbd-1.3.1.patch1.gz
 
 MAINTAINER=	bjn@visi.com
+HOMEPAGE=	http://www.moonsoft.com/software.html
 
 IS_INTERACTIVE=	yes
 NO_PACKAGE=	too interactive
