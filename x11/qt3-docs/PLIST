@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/12/19 15:43:31 skrll Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/04/16 14:30:44 recht Exp $
 qt3/doc/html/3rdparty.html
 qt3/doc/html/README
 qt3/doc/html/README-QT.TXT
@@ -7,7 +7,12 @@ qt3/doc/html/abstract-connections.png
 qt3/doc/html/abstractwidgets.html
 qt3/doc/html/accelerators.html
 qt3/doc/html/aclock-example.html
+qt3/doc/html/activeqt-dotnet.html
 qt3/doc/html/activeqt-examples.html
+qt3/doc/html/activeqt-tools-dumpdoc.html
+qt3/doc/html/activeqt-tools-idc.html
+qt3/doc/html/activeqt-tools-testcon.html
+qt3/doc/html/activeqt-tools.html
 qt3/doc/html/activeqt.html
 qt3/doc/html/addressbook-example.html
 qt3/doc/html/advanced.html
@@ -387,10 +392,8 @@ qt3/doc/html/qaxbindable-h.html
 qt3/doc/html/qaxbindable-members.html
 qt3/doc/html/qaxbindable.html
 qt3/doc/html/qaxcontainer-example-qutlook.html
-qt3/doc/html/qaxcontainer-example-testcon.html
 qt3/doc/html/qaxcontainer-example-webbrowser.html
 qt3/doc/html/qaxcontainer-examples.html
-qt3/doc/html/qaxcontainer-faq.html
 qt3/doc/html/qaxcontainer.html
 qt3/doc/html/qaxfactory-h.html
 qt3/doc/html/qaxfactory-members.html
@@ -398,6 +401,13 @@ qt3/doc/html/qaxfactory.html
 qt3/doc/html/qaxobject-h.html
 qt3/doc/html/qaxobject-members.html
 qt3/doc/html/qaxobject.html
+qt3/doc/html/qaxscript-h.html
+qt3/doc/html/qaxscript-members.html
+qt3/doc/html/qaxscript.html
+qt3/doc/html/qaxscriptengine-members.html
+qt3/doc/html/qaxscriptengine.html
+qt3/doc/html/qaxscriptmanager-members.html
+qt3/doc/html/qaxscriptmanager.html
 qt3/doc/html/qaxserver-demo-hierarchy.html
 qt3/doc/html/qaxserver-demo-menus.html
 qt3/doc/html/qaxserver-demo-multiple.html
@@ -413,7 +423,6 @@ qt3/doc/html/qaxserver-example-simple.html
 qt3/doc/html/qaxserver-example-tetrax.html
 qt3/doc/html/qaxserver-example-wrapper.html
 qt3/doc/html/qaxserver-examples.html
-qt3/doc/html/qaxserver-faq.html
 qt3/doc/html/qaxserver.html
 qt3/doc/html/qaxwidget-h.html
 qt3/doc/html/qaxwidget-members.html
@@ -572,6 +581,7 @@ qt3/doc/html/qd-helptoolbuttons3.png
 qt3/doc/html/qd-mainwinwzd.png
 qt3/doc/html/qd-mainwinwzdpage2.png
 qt3/doc/html/qd-preface.png
+qt3/doc/html/qd-preferences-dlg.png
 qt3/doc/html/qdatabrowser-h.html
 qt3/doc/html/qdatabrowser-members.html
 qt3/doc/html/qdatabrowser.html
@@ -840,6 +850,8 @@ qt3/doc/html/qhttpresponseheader-members.html
 qt3/doc/html/qhttpresponseheader.html
 qt3/doc/html/qicondrag-members.html
 qt3/doc/html/qicondrag.html
+qt3/doc/html/qicondragevent-members.html
+qt3/doc/html/qicondragevent.html
 qt3/doc/html/qicondragitem-members.html
 qt3/doc/html/qicondragitem.html
 qt3/doc/html/qiconfactory-members.html
@@ -957,6 +969,9 @@ qt3/doc/html/qlistviewitem.html
 qt3/doc/html/qlistviewitemiterator-members.html
 qt3/doc/html/qlistviewitemiterator.html
 qt3/doc/html/qlistviewitems.png
+qt3/doc/html/qlocale-h.html
+qt3/doc/html/qlocale-members.html
+qt3/doc/html/qlocale.html
 qt3/doc/html/qlocalfs-h.html
 qt3/doc/html/qlocalfs-members.html
 qt3/doc/html/qlocalfs.html
@@ -979,6 +994,7 @@ qt3/doc/html/qmake-manual-4.html
 qt3/doc/html/qmake-manual-5.html
 qt3/doc/html/qmake-manual-6.html
 qt3/doc/html/qmake-manual-7.html
+qt3/doc/html/qmake-manual-8.html
 qt3/doc/html/qmake-manual.html
 qt3/doc/html/qmake.dcf
 qt3/doc/html/qmap-h.html
@@ -1120,6 +1136,9 @@ qt3/doc/html/qplatinumstyle.html
 qt3/doc/html/qpngimagepacker-members.html
 qt3/doc/html/qpngimagepacker.html
 qt3/doc/html/qpngio-h.html
+qt3/doc/html/qpocketpcstyle-members.html
+qt3/doc/html/qpocketpcstyle.html
+qt3/doc/html/qpocketpcstyle_wce-h.html
 qt3/doc/html/qpoint-h.html
 qt3/doc/html/qpoint-members.html
 qt3/doc/html/qpoint.html
@@ -1399,7 +1418,7 @@ qt3/doc/html/qt-members.html
 qt3/doc/html/qt-template-lib.html
 qt3/doc/html/qt.dcf
 qt3/doc/html/qt.html
-qt3/doc/html/qt32-class-chart.png
+qt3/doc/html/qt33-class-chart.png
 qt3/doc/html/qtab-members.html
 qt3/doc/html/qtab.html
 qt3/doc/html/qtabbar-h.html
@@ -1475,6 +1494,7 @@ qt3/doc/html/qtimerevent-members.html
 qt3/doc/html/qtimerevent.html
 qt3/doc/html/qtl-qvaluelist-example.html
 qt3/doc/html/qtl.html
+qt3/doc/html/qtmac-as-native.html
 qt3/doc/html/qtoolbar-h.html
 qt3/doc/html/qtoolbar-members.html
 qt3/doc/html/qtoolbar.html
@@ -1658,7 +1678,6 @@ qt3/doc/html/rd-image.png
 qt3/doc/html/rd-open.png
 qt3/doc/html/rd-pagetitle.png
 qt3/doc/html/rd-prefedit1.png
-qt3/doc/html/rd-prefgen1.png
 qt3/doc/html/rd-projset.png
 qt3/doc/html/rd-projset2.png
 qt3/doc/html/rd-replace.png
@@ -1673,6 +1692,7 @@ qt3/doc/html/rd-template.png
 qt3/doc/html/rd-text.png
 qt3/doc/html/rd-title.png
 qt3/doc/html/rd-tunepalette.png
+qt3/doc/html/regexptester-example.html
 qt3/doc/html/removed20.html
 qt3/doc/html/richtext-example.html
 qt3/doc/html/rintersect.png
@@ -1932,6 +1952,9 @@ qt3/man/man3/QAxBase.3
 qt3/man/man3/QAxBindable.3
 qt3/man/man3/QAxFactory.3
 qt3/man/man3/QAxObject.3
+qt3/man/man3/QAxScript.3
+qt3/man/man3/QAxScriptEngine.3
+qt3/man/man3/QAxScriptManager.3
 qt3/man/man3/QAxWidget.3
 qt3/man/man3/QBig5Codec.3
 qt3/man/man3/QBig5hkscsCodec.3
@@ -2078,6 +2101,7 @@ qt3/man/man3/QHttpResponseHeader.3
 qt3/man/man3/QIMEvent.3
 qt3/man/man3/QIODevice.3
 qt3/man/man3/QIconDrag.3
+qt3/man/man3/QIconDragEvent.3
 qt3/man/man3/QIconDragItem.3
 qt3/man/man3/QIconFactory.3
 qt3/man/man3/QIconSet.3
@@ -2117,6 +2141,7 @@ qt3/man/man3/QListView.3
 qt3/man/man3/QListViewItem.3
 qt3/man/man3/QListViewItemIterator.3
 qt3/man/man3/QLocalFs.3
+qt3/man/man3/QLocale.3
 qt3/man/man3/QMacMime.3
 qt3/man/man3/QMacStyle.3
 qt3/man/man3/QMainWindow.3
@@ -2165,6 +2190,7 @@ qt3/man/man3/QPicture.3
 qt3/man/man3/QPixmap.3
 qt3/man/man3/QPixmapCache.3
 qt3/man/man3/QPlatinumStyle.3
+qt3/man/man3/QPocketPCStyle.3
 qt3/man/man3/QPoint.3
 qt3/man/man3/QPointArray.3
 qt3/man/man3/QPopupMenu.3
@@ -2343,6 +2369,9 @@ qt3/man/man3/qaxbase.3
 qt3/man/man3/qaxbindable.3
 qt3/man/man3/qaxfactory.3
 qt3/man/man3/qaxobject.3
+qt3/man/man3/qaxscript.3
+qt3/man/man3/qaxscriptengine.3
+qt3/man/man3/qaxscriptmanager.3
 qt3/man/man3/qaxwidget.3
 qt3/man/man3/qbig5codec.3
 qt3/man/man3/qbig5hkscscodec.3
@@ -2487,6 +2516,7 @@ qt3/man/man3/qhttpheader.3
 qt3/man/man3/qhttprequestheader.3
 qt3/man/man3/qhttpresponseheader.3
 qt3/man/man3/qicondrag.3
+qt3/man/man3/qicondragevent.3
 qt3/man/man3/qicondragitem.3
 qt3/man/man3/qiconfactory.3
 qt3/man/man3/qiconset.3
@@ -2527,6 +2557,7 @@ qt3/man/man3/qlistboxtext.3
 qt3/man/man3/qlistview.3
 qt3/man/man3/qlistviewitem.3
 qt3/man/man3/qlistviewitemiterator.3
+qt3/man/man3/qlocale.3
 qt3/man/man3/qlocalfs.3
 qt3/man/man3/qmacmime.3
 qt3/man/man3/qmacstyle.3
@@ -2576,6 +2607,7 @@ qt3/man/man3/qpixmap.3
 qt3/man/man3/qpixmapcache.3
 qt3/man/man3/qplatinumstyle.3
 qt3/man/man3/qpngimagepacker.3
+qt3/man/man3/qpocketpcstyle.3
 qt3/man/man3/qpoint.3
 qt3/man/man3/qpointarray.3
 qt3/man/man3/qpopupmenu.3
