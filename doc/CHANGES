@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2801 2003/07/16 10:35:52 abs Exp $
+$NetBSD: CHANGES,v 1.2802 2003/07/16 10:57:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2832,3 +2832,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated icewm-imlib to 1.2.9nb2 [tron 2003-07-16]
 	Updated cue to 20030714 [itojun 2003-07-16]
 	Updated postgresql-server to 7.3.3nb1 [abs 2003-07-16]
+	Updated dc_gui2 to 0.75 [wiz 2003-07-16]
