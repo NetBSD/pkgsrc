@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1072 2002/10/21 01:40:56 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1073 2002/10/21 13:58:16 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -710,17 +710,6 @@ INSTALL_TARGET+=	install.man
 .if defined(PASSIVE_FETCH)
 FETCH_BEFORE_ARGS += -p
 .endif
-
-# If USE_XPM is set, depend on xpm.
-.if defined(USE_XPM)
-.  if (defined(HAVE_BUILTIN_XPM) && (${HAVE_BUILTIN_XPM} == "NO"))
-DEPENDS+=		xpm-3.4k:../../graphics/xpm
-XPMDIR_DEFAULT=		${X11PREFIX}
-.  else
-XPMDIR_DEFAULT=		${X11BASE}
-.  endif
-.  undef __BUILTIN_XPM
-.endif	# USE_XPM
 
 # Check if we got "rman" with XFree86, for packages that need "rman". 
 .if defined(USE_RMAN)
