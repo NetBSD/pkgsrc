@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8024 2004/11/26 21:15:16 wiz Exp $
+$NetBSD: CHANGES,v 1.8025 2004/11/26 21:37:20 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5461,3 +5461,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmms-alarm to 0.3.6 [snj 2004-11-26]
 	Updated easytag to 1.0 [wiz 2004-11-26]
 	Updated crimsonfields to 0.4.5 [wiz 2004-11-26]
+	Updated xmountains to 2.7 [snj 2004-11-26]
