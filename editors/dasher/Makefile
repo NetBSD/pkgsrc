@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/05/15 12:49:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2004/09/04 16:54:23 jmmv Exp $
 #
 
-DISTNAME=	dasher-3.2.10
+DISTNAME=	dasher-3.2.11
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/3.2/}
 EXTRACT_SUFX=	.tar.bz2
