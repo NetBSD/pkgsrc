@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2004/03/31 10:50:19 tron Exp $
+# $NetBSD: Makefile,v 1.46 2004/05/03 12:50:11 adam Exp $
 
-DISTNAME=	xsane-0.90
-PKGREVISION=	4
+DISTNAME=	xsane-0.93
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.xsane.org/download/ \
 		http://gd.tuwien.ac.at/hci/sane/xsane/ \
@@ -19,17 +18,17 @@ COMMENT=	New improved frontend for SANE
 
 BUILD_USES_MSGFMT=	yes
 
-GNU_CONFIGURE=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
-USE_X11=		YES
-USE_BUILDLINK2=		YES
 USE_PKGLOCALEDIR=	YES
+USE_X11=		YES
+GNU_CONFIGURE=		YES
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/gimp1-base/buildlink2.mk"
-.include "../../graphics/sane-backends/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/gimp/buildlink3.mk"
+.include "../../graphics/sane-backends/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
