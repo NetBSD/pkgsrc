@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2001/04/30 04:27:34 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2001/05/14 14:02:47 jlam Exp $
 
-DISTNAME=		mod_ssl-2.8.2-1.3.19
-PKGNAME=		ap-ssl-2.8.2
+DISTNAME=		mod_ssl-2.8.3-1.3.19
+PKGNAME=		ap-ssl-2.8.3
 CATEGORIES=		www security
 MASTER_SITES=		http://www.modssl.org/source/
 
@@ -9,7 +9,7 @@ MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.modssl.org/
 COMMENT=		SSL/TLS protocols module for Apache
 
-DEPENDS+=		apache>=1.3.19nb1:../../www/apache
+DEPENDS+=		apache>=1.3.19nb2:../../www/apache
 # For "apxs":
 BUILD_DEPENDS+=		perl>=${PERL5_REQD}:../../lang/perl5
 
