@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/13 19:35:45 tron Exp $
+bin/xp
+bin/xpman
+lib/X11/app-defaults/Xp
+man/cat1/xp.0
