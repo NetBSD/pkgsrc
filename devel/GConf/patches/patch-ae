@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2001/08/26 16:55:46 rh Exp $
+
+--- gconf/Makefile.in.orig	Thu Aug 16 00:01:16 2001
++++ gconf/Makefile.in
+@@ -546,7 +546,7 @@
+ 
+ install-data-local:
+ 	-mkdir -p $(DESTDIR)$(sysconfdir)/gconf/$(MAJOR_VERSION)
+-	$(INSTALL_DATA) default.path $(DESTDIR)$(sysconfdir)/gconf/$(MAJOR_VERSION)/path
++	$(INSTALL_DATA) default.path $(DESTDIR)$(sysconfdir)/gconf/$(MAJOR_VERSION)/path.example
+ 	-mkdir -p $(DESTDIR)$(datadir)/oaf
+ 	$(INSTALL_DATA) gconfd.oafinfo $(DESTDIR)$(datadir)/oaf/gconfd-$(MAJOR_VERSION).oafinfo
+ 
