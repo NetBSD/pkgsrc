@@ -1,0 +1,21 @@
+--- Imakefile.orig	Fri Feb 28 08:48:57 1997
++++ Imakefile	Sat Aug  1 01:40:03 1998
+@@ -13,5 +13,5 @@
+ /* 書き込み権限が無いとインストール出来ません．=> 遊べない．(^^;           */
+-PIXMAPDIR	= /usr/local/games/lib/xsoldier
+-SCOREDIR	= /usr/local/games/lib/xsoldier
+-BINDIR		= /usr/local/games
++PIXMAPDIR	= $(X11BASE)/share/xsoldier
++SCOREDIR	= $(X11BASE)/share/xsoldier
++BINDIR		= $(X11BASE)/bin
+ 
+@@ -97,3 +97,3 @@
+         else $(MKDIRHIER) $(SCOREDIR); chmod 755 $(SCOREDIR); fi
+-	$(INSTALL) -c -m 600 scorefile.txt $(SCOREDIR)/$(SCOREFILE)
++	$(INSTALL) -c -g games -o bin -m 664 scorefile.txt $(SCOREDIR)/$(SCOREFILE)
+ 	@echo "install score . done"
+@@ -111,3 +111,3 @@
+         else (set -x; $(MKDIRHIER) $(BINDIR)); fi
+-	$(INSTALL) -c -m 4755 $(PROGRAM) $(BINDIR)/$(PROGRAM)
++	$(INSTALL) -c -o bin -g games -m 2755 $(PROGRAM) $(BINDIR)/$(PROGRAM)
+ 	@echo "install bin . done"
