@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.41 2004/01/07 07:11:34 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.42 2004/01/07 20:45:59 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -935,6 +935,23 @@ _BLNK_WRAP_SANITIZE_PATH.SHLIBTOOL=	# empty
 # We need to "unbuildlinkify" any libtool archives.
 _BLNK_WRAP_LT_UNTRANSFORM_SED=		${_UNBUILDLINK_SED}
 
+.if defined(USE_MIPSPRO)
+_BLNK_WRAP_PRIVATE_PRE_CACHE.CC=	${_BLNK_WRAP_PRE_CACHE}
+_BLNK_WRAP_PRIVATE_CACHE_ADD.CC=	${BUILDLINK_DIR}/bin/.mipspro-cc-cache-add
+_BLNK_WRAP_PRIVATE_CACHE.CC=		${BUILDLINK_DIR}/bin/.mipspro-cc-cache
+_BLNK_WRAP_PRIVATE_POST_CACHE.CC=	${BUILDLINK_DIR}/bin/.mipspro-cc-post-cache
+_BLNK_WRAP_POST_LOGIC.CC=		${BUILDLINK_DIR}/bin/.mipspro-cc-post-logic
+#
+# The MIPSpro C++ compiler wrapper shares cache information with the C
+# compiler.
+#
+_BLNK_WRAP_PRIVATE_PRE_CACHE.CXX=	${_BLNK_WRAP_PRE_CACHE}
+_BLNK_WRAP_PRIVATE_CACHE_ADD.CXX=	${BUILDLINK_DIR}/bin/.mipspro-cc-cache-add
+_BLNK_WRAP_PRIVATE_CACHE.CXX=		${BUILDLINK_DIR}/bin/.mipspro-cc-cache
+_BLNK_WRAP_PRIVATE_POST_CACHE.CXX=	${BUILDLINK_DIR}/bin/.mipspro-cc-post-cache
+_BLNK_WRAP_POST_LOGIC.CXX=		${BUILDLINK_DIR}/bin/.mipspro-cc-post-logic
+.endif	# USE_MIPSPRO
+
 .if defined(USE_SUNPRO)
 _BLNK_WRAP_PRIVATE_PRE_CACHE.CC=	${_BLNK_WRAP_PRE_CACHE}
 _BLNK_WRAP_PRIVATE_CACHE_ADD.CC=	${BUILDLINK_DIR}/bin/.sunpro-cc-cache-add
@@ -1121,10 +1138,16 @@ MAKE_ENV+=	${BUILDLINK_ENV}
 # OS-specific overrides for buildlink3 wrappers
 #
 .if defined(USE_SUNPRO)
-_BLNK_WRAPPEES.SunOS?=	CC CXX
+_BLNK_WRAPPEES.${_BLNK_OPSYS}?=	CC CXX
 SUNWSPROBASE?=		/opt/SUNWspro
-CC.SunOS?=		${SUNWSPROBASE}/bin/cc
-CXX.SunOS?=		${SUNWSPROBASE}/bin/CC
+CC.${_BLNK_OPSYS}?=	${SUNWSPROBASE}/bin/cc
+CXX.${_BLNK_OPSYS}?=	${SUNWSPROBASE}/bin/CC
+.endif
+.if defined(USE_MIPSPRO)
+_BLNK_WRAPPEES.${_BLNK_OPSYS}?=	CC CXX
+MIPSPROBASE?=		/usr
+CC.${_BLNK_OPSYS}?=	${MIPSPROBASE}/bin/cc
+CXX.${_BLNK_OPSYS}?=	${MIPSPROBASE}/bin/CC
 .endif
 
 .PHONY: buildlink-${_BLNK_OPSYS}-wrappers
@@ -1226,6 +1249,12 @@ ${_BLNK_WRAP_POST_CACHE}: ${.CURDIR}/../../mk/buildlink3/post-cache
 		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
 .endif
 
+${BUILDLINK_DIR}/bin/.mipspro-cc-post-cache:				\
+		${.CURDIR}/../../mk/buildlink3/mipspro-cc-post-cache
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
+
 ${BUILDLINK_DIR}/bin/.sunpro-cc-post-cache:				\
 		${.CURDIR}/../../mk/buildlink3/sunpro-cc-post-cache
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
@@ -1296,6 +1325,12 @@ ${_BLNK_WRAP_LOGIC_TRANSFORM}:						\
 		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 .endif
+
+${BUILDLINK_DIR}/bin/.mipspro-cc-post-logic:				\
+		${.CURDIR}/../../mk/buildlink3/mipspro-cc-post-logic
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
+		| ${_BLNK_SH_CRUNCH_FILTER} > ${.TARGET}
 
 ${BUILDLINK_DIR}/bin/.sunpro-cc-post-logic:				\
 		${.CURDIR}/../../mk/buildlink3/sunpro-cc-post-logic
