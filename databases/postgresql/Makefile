@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 1999/09/20 03:56:25 jlam Exp $
+# $NetBSD: Makefile,v 1.42 1999/09/20 23:38:45 jlam Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
-DISTNAME=		postgresql-6.5.1
+DISTNAME=		postgresql-6.5.2
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/ \
@@ -109,9 +109,9 @@ post-extract:
 
 pre-build:
 .if ${PGSQL_USE_TCL} == "YES"
-	@${ECHO} "Building PostgreSQL with \"libpgtcl\"."
+	@${ECHO} "Building PostgreSQL with Tcl/Tk interface library."
 .else
-	@${ECHO} "To build without the \"PostgreSQL Tcl interface library\","
+	@${ECHO} "To build without the \"PostgreSQL Tcl/Tk interface library\","
 	@${ECHO} "libpgtcl, type: \"${MAKE} PGSQL_USE_TCL=NO\"."
 .endif
 
