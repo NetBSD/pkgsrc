@@ -1,11 +1,16 @@
---- doc/man/Imakefile.~1~	Thu Jan 23 20:20:52 1997
-+++ doc/man/Imakefile	Tue Aug 18 12:15:20 1998
-@@ -40,7 +40,7 @@
-  */
- 
- #ifndef JapaneseManLocale
--#define JapaneseManLocale	ja_JP.EUC
-+#define JapaneseManLocale	ja
+$NetBSD: patch-af,v 1.2 1999/08/02 11:28:36 sakamoto Exp $
+
+--- server/main.c.orig	Mon Mar 23 19:48:03 1998
++++ server/main.c	Mon Aug  2 19:26:45 1999
+@@ -215,9 +215,11 @@
+ 	(void) setlocale(LC_CTYPE, "ja_JP.EUC");
  #endif
- JMANLOCALE = JapaneseManLocale
+ 	opening();
++#ifndef __NetBSD__
+ 	if (setuid(geteuid())) {
+ 		fprintf(stderr, "error at setuid.\r\n"); exit(1);
+ 	}
++#endif
  
+ 	parse_arg(argc, argv);		
+ 	read_runcmd();			

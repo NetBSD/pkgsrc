@@ -1,6 +1,28 @@
---- sj3.tmpl.~1~	Thu Jan 23 20:20:58 1997
-+++ sj3.tmpl	Tue Aug 18 11:07:42 1998
-@@ -48,7 +48,7 @@
+$NetBSD: patch-ad,v 1.2 1999/08/02 11:28:36 sakamoto Exp $
+
+--- sj3.tmpl.orig	Thu Jan 23 20:20:58 1997
++++ sj3.tmpl	Fri Jul 30 20:27:08 1999
+@@ -32,12 +32,12 @@
+  * $SonyDate: 1997/01/23 11:20:57 $
+  */
+ 
+-SJ3TOP		= /usr/local
++SJ3TOP		= $(PREFIX)
+ SJ3BINDIR	= $(SJ3TOP)/bin
+ SJ3HDRDIR	= $(SJ3TOP)/include
+ SJ3LIBDIR	= $(SJ3TOP)/lib
+-SJ3CONFDIR	= $(SJ3TOP)/lib/sj3
+-SJ3DICTDIR	= $(SJ3CONFDIR)/dict
++SJ3CONFDIR	= $(SJ3TOP)/share/sj3
++SJ3DICTDIR	= $(DICT_DIR)/sj3
+ 
+ /*
+  * Change for FreeBSD.
+@@ -45,10 +45,11 @@
+  * return NULL, use it in library libxpg4 
+  * Patched by Hidekazu Kuroki(hidekazu@cs.titech.ac.jp)		1996/8/10
+  */
++#if 0
  #if defined(FreeBSDArchitecture)
  
  CODE_LIBS	= -lxpg4
@@ -9,3 +31,9 @@
  SJ3GROUP	= bin
  
  #else
+@@ -61,4 +62,5 @@
+ SJ3GROUP	= staff
+ #endif
+ 
++#endif
+ #endif
