@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.4 2004/10/11 16:51:56 tv Exp $
+# $NetBSD: Interix.mk,v 1.5 2004/10/12 04:41:39 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -134,7 +134,7 @@ _OPSYS_HAS_INET6=	no	# IPv6 is not standard
 _OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
-_OPSYS_LIBTOOL_REQD=	1.5.10nb3
+_OPSYS_LIBTOOL_REQD=	1.5.10nb4
 _OPSYS_PERL_REQD=	5.8.3nb1 # base version of perl required
 _OPSYS_PKGTOOLS_REQD=	20040330
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads

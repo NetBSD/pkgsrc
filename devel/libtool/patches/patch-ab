@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
+$NetBSD: patch-ab,v 1.45 2004/10/12 04:41:39 tv Exp $
 
 --- configure.orig	2004-09-19 08:22:04.000000000 -0400
 +++ configure
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
    ;;
  
 +interix3*)
-+  lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|_pic\.a)$'
++  lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|\.a)$'
 +  ;;
 +
  irix5* | irix6* | nonstopux*)
@@ -105,7 +105,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
 +      # memory consuming.  To do this, we pick a random 256KB-aligned
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
 +      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      archive_expsym_cmds='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      archive_expsym_cmds='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      export_dynamic_flag_spec='${wl}-E'
 +      hardcode_direct=yes
 +      hardcode_libdir_flag_spec='${wl}-h,$libdir'
@@ -214,16 +214,24 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
  	  ac_ext=cc
  ac_cpp='$CXXCPP $CPPFLAGS'
  ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
-@@ -10817,6 +10854,8 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10817,6 +10854,16 @@ if test -z "$aix_libpath"; then aix_libp
  	;;
      esac
      ;;
 +  interix3*)
++    # Oy, what a hack.
++    # Because shlibs are not compiled -fPIC due to broken code, we must
++    # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
++    # all libraries, leading to runtime relocations -- slow and very
++    # memory consuming.  To do this, we pick a random 256KB-aligned
++    # start address between 0x50000000 and 0x6ffc0000 at link time.
++    archive_cmds_CXX='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++    archive_expsym_cmds_CXX='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +    ;;
    irix5* | irix6*)
      case $cc_basename in
        CC)
-@@ -10936,6 +10975,13 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10936,6 +10983,13 @@ if test -z "$aix_libpath"; then aix_libp
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
        archive_cmds_CXX='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
        wlarc=
@@ -237,7 +245,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
        hardcode_libdir_flag_spec_CXX='-R$libdir'
        hardcode_direct_CXX=yes
        hardcode_shlibpath_var_CXX=no
-@@ -11324,6 +11370,14 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -11324,6 +11378,21 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
      esac
    done
  
@@ -247,12 +255,19 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
 +      predep_objects_CXX=`eval echo $predep_objects_CXX | sed -e 's:/usr/lib/c++rt0.o:$cpprt0_file:'`
 +    fi
 +    ;;
++  interix3*)
++    # Interix installs completely hosed .la files for C++, so rather than
++    # hack all around it, let's just trust "g++" to DTRT.
++    predep_objects_CXX=
++    postdep_objects_CXX=
++    postdeps_CXX=
++    ;;
 +  esac
 +
    # Clean up.
    rm -f a.out a.exe
  else
-@@ -11371,9 +11425,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11371,9 +11440,11 @@ echo $ECHO_N "checking for $compiler opt
        lt_prog_compiler_pic_CXX='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -265,7 +280,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -11395,6 +11451,10 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11395,6 +11466,10 @@ echo $ECHO_N "checking for $compiler opt
  	;;
        esac
        ;;
@@ -276,7 +291,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
      *)
        lt_prog_compiler_pic_CXX='-fPIC'
        ;;
-@@ -11469,6 +11529,8 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11469,6 +11544,8 @@ echo $ECHO_N "checking for $compiler opt
  	    ;;
  	esac
  	;;
@@ -285,7 +300,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC)
-@@ -11939,6 +12001,7 @@ beos*)
+@@ -11939,6 +12016,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -293,7 +308,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -12053,16 +12116,17 @@ kfreebsd*-gnu)
+@@ -12053,16 +12131,17 @@ kfreebsd*-gnu)
    ;;
  
  freebsd*)
@@ -317,7 +332,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -12138,15 +12202,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -12138,15 +12217,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -346,7 +361,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -12223,11 +12294,11 @@ knetbsd*-gnu)
+@@ -12223,11 +12309,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -360,7 +375,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -12258,10 +12329,10 @@ nto-qnx*)
+@@ -12258,10 +12344,10 @@ nto-qnx*)
    ;;
  
  openbsd*)
@@ -373,7 +388,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -13805,9 +13876,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -13805,9 +13891,11 @@ echo $ECHO_N "checking for $compiler opt
        ;;
  
      darwin* | rhapsody*)
@@ -386,7 +401,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
        ;;
  
      msdosdjgpp*)
-@@ -13836,6 +13909,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -13836,6 +13924,11 @@ echo $ECHO_N "checking for $compiler opt
        esac
        ;;
  
@@ -398,7 +413,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
      *)
        lt_prog_compiler_pic_F77='-fPIC'
        ;;
-@@ -14221,6 +14299,17 @@ EOF
+@@ -14221,6 +14314,17 @@ EOF
        fi
        ;;
  
@@ -416,7 +431,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds_F77='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -14708,6 +14797,21 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -14708,6 +14812,21 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -428,7 +443,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
 +      # memory consuming.  To do this, we pick a random 256KB-aligned
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
 +      archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      archive_expsym_cmds_F77='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      archive_expsym_cmds_F77='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      export_dynamic_flag_spec_F77='${wl}-E'
 +      hardcode_direct_F77=yes
 +      hardcode_libdir_flag_spec_F77='${wl}-h,$libdir'
@@ -438,7 +453,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -15099,6 +15203,7 @@ beos*)
+@@ -15099,6 +15218,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -446,7 +461,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -15213,16 +15318,17 @@ kfreebsd*-gnu)
+@@ -15213,16 +15333,17 @@ kfreebsd*-gnu)
    ;;
  
  freebsd*)
@@ -470,7 +485,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -15298,15 +15404,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -15298,15 +15419,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -499,7 +514,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -15383,11 +15496,11 @@ knetbsd*-gnu)
+@@ -15383,11 +15511,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -513,7 +528,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -15418,10 +15531,10 @@ nto-qnx*)
+@@ -15418,10 +15546,10 @@ nto-qnx*)
    ;;
  
  openbsd*)
@@ -526,7 +541,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -16147,9 +16260,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -16147,9 +16275,11 @@ echo $ECHO_N "checking for $compiler opt
        ;;
  
      darwin* | rhapsody*)
@@ -539,7 +554,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
        ;;
  
      msdosdjgpp*)
-@@ -16178,6 +16293,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -16178,6 +16308,11 @@ echo $ECHO_N "checking for $compiler opt
        esac
        ;;
  
@@ -551,7 +566,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
      *)
        lt_prog_compiler_pic_GCJ='-fPIC'
        ;;
-@@ -16563,6 +16683,17 @@ EOF
+@@ -16563,6 +16698,17 @@ EOF
        fi
        ;;
  
@@ -569,7 +584,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	archive_cmds_GCJ='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -17070,6 +17201,21 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -17070,6 +17216,21 @@ if test -z "$aix_libpath"; then aix_libp
        fi
        ;;
  
@@ -581,7 +596,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
 +      # memory consuming.  To do this, we pick a random 256KB-aligned
 +      # start address between 0x50000000 and 0x6ffc0000 at link time.
 +      archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      archive_expsym_cmds_GCJ='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
++      archive_expsym_cmds_GCJ='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
 +      export_dynamic_flag_spec_GCJ='${wl}-E'
 +      hardcode_direct_GCJ=yes
 +      hardcode_libdir_flag_spec_GCJ='${wl}-h,$libdir'
@@ -591,7 +606,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
      irix5* | irix6* | nonstopux*)
        if test "$GCC" = yes; then
  	archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -17461,6 +17607,7 @@ beos*)
+@@ -17461,6 +17622,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -599,7 +614,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -17575,16 +17722,17 @@ kfreebsd*-gnu)
+@@ -17575,16 +17737,17 @@ kfreebsd*-gnu)
    ;;
  
  freebsd*)
@@ -623,7 +638,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -17660,15 +17808,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -17660,15 +17823,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
@@ -652,7 +667,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -17745,11 +17900,11 @@ knetbsd*-gnu)
+@@ -17745,11 +17915,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -666,7 +681,7 @@ $NetBSD: patch-ab,v 1.44 2004/10/11 17:19:53 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -17780,10 +17935,10 @@ nto-qnx*)
+@@ -17780,10 +17950,10 @@ nto-qnx*)
    ;;
  
  openbsd*)
