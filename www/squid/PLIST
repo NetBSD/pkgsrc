@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2002/11/12 16:07:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2002/11/25 14:46:14 taca Exp $
 bin/squidclient
 etc/rc.d/squid
-@unexec ${RMDIR} %D/etc/squid 2>/dev/null || ${TRUE}
 libexec/cachemgr.cgi
 man/man8/squid.8
 share/examples/squid/mime.conf
