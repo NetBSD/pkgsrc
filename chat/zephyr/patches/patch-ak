@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2003/09/16 19:41:50 seb Exp $
+
+--- server/Makefile.in.orig	2003-07-29 20:46:05.000000000 +0200
++++ server/Makefile.in
+@@ -52,7 +52,7 @@ install:
+ 	${INSTALL} -m 755 -s zephyrd ${DESTDIR}${sbindir}
+ 	${INSTALL} -m 644 ${srcdir}/zephyrd.8 ${DESTDIR}${mandir}/man8
+ 	${INSTALL} -m 644 ${srcdir}/default.subscriptions \
+-		${DESTDIR}${sysconfdir}/zephyr
++		${DESTDIR}${datadir}/examples/zephyr
+ 
+ clean:
+ 	rm -f ${OBJS} zephyrd zsrv_err.[ch]
