@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1609 2004/04/14 20:50:25 wiz Exp $
+$NetBSD: TODO,v 1.1610 2004/04/15 00:52:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -184,7 +184,7 @@ Suggested package updates
 	o exim-4.31
 	o festival-1.4.3
 	o ffmpeg-0.4.8
-	o file-4.08
+	o file-4.09
 	o findutils-4.1.20
 	o firewalk-5.0
 	o firewalk-gtk-5.0
@@ -452,6 +452,3 @@ Suggested cleanups in pkgsrc
 	o Set USE_LANGUAGES appropriately in packages that use C++, Fortran,
 	  or Objective-C so that the correct type of compiler dependency is
 	  set.
-
-	o G/C pkgconfig buildlink2.mk includes and .pc files from all
-          buildlink2.mk files
