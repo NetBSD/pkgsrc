@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.868 2002/12/22 16:07:31 cjep Exp $
+$NetBSD: CHANGES,v 1.869 2002/12/22 16:49:48 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -4048,7 +4048,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated tracker to 5.3nb1 [jmmv 2002-12-22]
 	Updated bkpupsd to 2.1.1 [taca 2002-12-22]
 	Added cfengine-2.0.4 [seb 2002-12-22]
-	Added cfengine-doc-2.0.4 [seb 2002-12-22]
+	Added cfengine2-doc-2.0.4 [seb 2002-12-22]
 	Updated gpgme to 0.3.14 [chris 2002-12-22]
 	Updated sylpheed to 0.8.7 [chris 2002-12-22]
 	Updated tkcvs to 7.1.2 [agc 2002-12-22]
