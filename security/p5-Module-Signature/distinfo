@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/11/11 18:11:58 seb Exp $
+
+SHA1 (Module-Signature-0.41.tar.gz) = 203a35b8bb7f9098286fbb2c3c92465d83b51c88
+Size (Module-Signature-0.41.tar.gz) = 56276 bytes
+SHA1 (patch-aa) = 17dc9e97f45058cc273265bcc3b9dcc1f39de6ec
