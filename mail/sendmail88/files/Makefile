@@ -1,5 +1,5 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2000/02/13 00:14:48 tron Exp $
+#	$NetBSD: Makefile,v 1.2 2002/10/09 14:44:39 itojun Exp $
 
-SUBDIR= src mailstats makemap praliases smrsh cf/cf
+SUBDIR= src mailstats makemap praliases cf/cf
 
 .include <bsd.subdir.mk>
