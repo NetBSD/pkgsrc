@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2004/05/03 15:58:55 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2004/05/05 11:18:14 wiz Exp $
 
 DISTNAME=		gnucash-1.8.8
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -33,8 +33,17 @@ LDFLAGS+=		-L${PREFIX}/${GUILE14_SUBDIR}/lib -Wl,-R${PREFIX}/${GUILE14_SUBDIR}/l
 
 AM_MAKEFLAGS=		LIBTOOL='${LIBTOOL} ${LIBTOOL_FLAGS}'
 MAKE_ENV+=		AM_MAKEFLAGS="${AM_MAKEFLAGS}"
+MAKE_ENV+=		GUILE14_SUBDIR=${GUILE14_SUBDIR:Q}
 
 INFO_FILES=		gnucash-design.info
+
+SUBST_CLASSES+=		guile14
+SUBST_STAGE.guile14=	pre-configure
+SUBST_MESSAGE.guile14=	"Substitute interpreter calls to use guile14."
+SUBST_FILES.guile14+=	src/bin/overrides/gnucash
+SUBST_FILES.guile14+=	src/bin/overrides/gnucash-make-guids
+SUBST_FILES.guile14+=	src/bin/overrides/gnucash-run-script
+SUBST_SED.guile14+=	"s, guile , ${PREFIX}/${GUILE14_SUBDIR}/bin/guile ,"
 
 .include "../../mk/bsd.prefs.mk"
 
