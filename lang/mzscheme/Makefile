@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/08/27 16:42:05 pooka Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/11 14:07:38 joda Exp $
 
 DISTNAME=		mzscheme.src.unix
 PKGNAME=		mzscheme-200
@@ -30,6 +30,8 @@ post-patch:
 
 do-install:
 	@(cd ${WRKDIR}/plt/src/mzscheme/mzscheme ; ${MAKE} normal-install)
+	@${INSTALL_DATA_DIR} ${PREFIX}/include/mzscheme
+	@${INSTALL_DATA} ${WRKDIR}/plt/include/*.h ${PREFIX}/include/mzscheme
 	@${INSTALL_MAN} ${WRKDIR}/plt/man/man1/mzscheme.1 ${PREFIX}/man/man1
 	@([ -d ${PREFIX}/lib/plt ] || ${INSTALL_DATA_DIR} ${PREFIX}/lib/plt)
 	@${CP} -R ${WRKDIR}/plt/collects ${PREFIX}/lib/plt
