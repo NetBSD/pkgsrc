@@ -1,8 +1,19 @@
-$NetBSD: patch-ac,v 1.3 2002/08/25 19:21:45 jlam Exp $
+$NetBSD: patch-ac,v 1.4 2003/11/03 12:07:28 mrg Exp $
 
---- flow/cpuinfo.cc.orig	Mon Mar 18 12:39:39 2002
-+++ flow/cpuinfo.cc
-@@ -204,6 +204,7 @@
+--- flow/cpuinfo.cc.orig	2003-07-14 05:33:37.000000000 +1000
++++ flow/cpuinfo.cc	2003-11-03 22:51:44.000000000 +1100
+@@ -27,6 +27,10 @@
+ #include <setjmp.h>
+ #include <signal.h>
+ 
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#endif
++
+ using namespace Arts;
+ 
+ int CpuInfo::s_flags = 0;
+@@ -204,6 +208,7 @@
  		: /* no input */
  		: "memory"
  	);
@@ -10,7 +21,7 @@ $NetBSD: patch-ac,v 1.3 2002/08/25 19:21:45 jlam Exp $
  	// SSE must be supported by the OS, if it's not, any SSE insn will
  	// trigger an invalid opcode exception, to check for this, a SIGILL
  	// handler is installed and a SSE insn run. If the handler is called,
-@@ -226,6 +227,7 @@
+@@ -226,6 +231,7 @@
  		}
  		signal(SIGILL, oldHandler);
  	}
