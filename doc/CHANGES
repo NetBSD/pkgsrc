@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7340 2004/10/04 13:24:19 wulf Exp $
+$NetBSD: CHANGES,v 1.7341 2004/10/04 15:07:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4542,3 +4542,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated firefox-gtk2-bin to 0.10.1 [wiz 2004-10-04]
 	Updated xorg-clients to 6.8.1nb2 [hira 2004-10-04]
 	Updated cppunit to 1.10.2nb1 [wulf 2004-10-04]
+	Updated ircservices to 5.0.41 [wiz 2004-10-04]
