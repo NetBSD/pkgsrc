@@ -1,0 +1,73 @@
+*** pine/mailcmd.c.orig	Wed Sep 10 14:14:13 1997
+--- pine/mailcmd.c	Wed Sep 10 14:16:22 1997
+***************
+*** 534,546 ****
+  	      char ret = 'n';
+  	      int  in_inbox = !strucmp(state->cur_folder,state->inbox_name);
+  
+! 	      if(!state->nr_mode && state->context_current
+! 		 && (((state->context_current->use & CNTXT_NEWS)
+! 		      && context_isambig(state->cur_folder))
+! 		     || ((state->context_current->use & CNTXT_INCMNG)
+! 			 && (in_inbox
+! 			     || folder_index(state->cur_folder,
+! 				     state->context_current->folders) >=0)))){
+  		  char		 nextfolder[MAXPATH];
+  		  MAILSTREAM	*nextstream = NULL;
+  
+--- 534,540 ----
+  	      char ret = 'n';
+  	      int  in_inbox = !strucmp(state->cur_folder,state->inbox_name);
+  
+! 	      if(!state->nr_mode && state->context_current) {
+  		  char		 nextfolder[MAXPATH];
+  		  MAILSTREAM	*nextstream = NULL;
+  
+***************
+*** 551,557 ****
+  			  if(!in_inbox){
+  			      sprintf(prompt, "No more %ss.  Return to \"%s\"",
+! 				     (state->context_current->use&CNTXT_INCMNG)
+! 				       ? "incoming folder" : "news group", 
+  				      state->inbox_name);
+  			      ret = want_to(prompt, 'y', 'x', NO_HELP, 0, 0);
+  			      if(ret == 'y')
+--- 545,551 ----
+  			  if(!in_inbox){
+  			      sprintf(prompt, "No more %ss.  Return to \"%s\"",
+! 				     (state->context_current->use&CNTXT_NEWS)
+! 				       ? "news group" : "folder", 
+  				      state->inbox_name);
+  			      ret = want_to(prompt, 'y', 'x', NO_HELP, 0, 0);
+  			      if(ret == 'y')
+***************
+*** 561,574 ****
+  			  else
+  			    q_status_message1(SM_ORDER, 0, 2, "No more %ss",
+! 				     (state->context_current->use&CNTXT_INCMNG)
+! 				        ? "incoming folder" : "news group");
+  
+  			  break;
+  		      }
+  
+  		      sprintf(prompt, "View next %s \"%s\"? ",
+! 			      (state->context_current->use&CNTXT_INCMNG)
+! 				 ? "Incoming folder" : "news group",
+  			      nextfolder);
+  
+  		      /*
+--- 555,568 ----
+  			  else
+  			    q_status_message1(SM_ORDER, 0, 2, "No more %ss",
+! 				     (state->context_current->use&CNTXT_NEWS)
+! 				        ? "news group" : "folder");
+  
+  			  break;
+  		      }
+  
+  		      sprintf(prompt, "View next %s \"%s\"? ",
+! 			      (state->context_current->use&CNTXT_NEWS)
+! 				 ? "news group" : "folder",
+  			      nextfolder);
+  
+  		      /*
