@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/08/18 22:46:44 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/25 00:20:23 jlam Exp $
 #
 
 DISTNAME=		so51a_lnx_${LANGNO}
@@ -27,6 +27,7 @@ PATCH_FUZZ_FACTOR=	-F1
 IS_INTERACTIVE=		YES
 NO_BUILD=		YES
 
+LDD?=			/emul/linux/usr/bin/ldd
 DECOMPRESS_CMD=		${CAT}
 
 .include "../../mk/bsd.prefs.mk"

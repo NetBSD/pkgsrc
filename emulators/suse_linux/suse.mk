@@ -1,4 +1,4 @@
-# $NetBSD: suse.mk,v 1.5 2000/08/10 08:33:00 tron Exp $
+# $NetBSD: suse.mk,v 1.6 2000/08/25 00:20:22 jlam Exp $
 
 MASTER_SITE_SUSE=	ftp://ftp.suse.com/pub/suse/i386/6.3/suse/
 
@@ -11,6 +11,9 @@ EMULSUBDIR=		emul/linux
 EMULDIR=		${PREFIX}/${EMULSUBDIR}
 
 RPM2PKG=		${PREFIX}/sbin/rpm2pkg
+
+# The SuSE Linux packages have circular dependencies.
+LDD?=			${TRUE}	
 
 RPM2PKGARGS=		-d ${PREFIX} -f ${PLIST_SRC} -p ${EMULSUBDIR}
 .for TEMP in ${RPMIGNOREPATH}

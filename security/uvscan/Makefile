@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/18 22:46:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/25 00:20:24 jlam Exp $
 #
 
 DISTNAME=		vlnx407e
@@ -23,6 +23,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
+
+LDD?=			/emul/linux/usr/bin/ldd
 
 do-configure:
 	${SED} <${FILESDIR}/uvscan.sh >${WRKSRC}/uvscan.sh \

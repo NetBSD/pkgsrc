@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/01/09 07:10:37 tls Exp $
+# $NetBSD: Makefile,v 1.12 2000/08/25 00:20:22 jlam Exp $
 
 DISTNAME=		suse_base-6.3
 CATEGORIES=		emulators
@@ -27,7 +27,7 @@ RPMFILES=		aaa_dir.rpm shlibs.rpm ldso.rpm libz.rpm \
 			bash.rpm gppshare.rpm ncurses-p1.rpm
 RPMIGNOREPATH=		tmp usr/tmp var
 
-LDD=			${PREFIX}/${EMULSUBDIR}/usr/bin/ldd
+LINUX_LDD=		${PREFIX}/${EMULSUBDIR}/usr/bin/ldd
 RPMLIB=			${LOCALBASE}/lib/librpm.a
 
 do-build:
@@ -54,10 +54,11 @@ do-install:
 	${EMULDIR}/sbin/ldconfig -r ${EMULDIR}
 	${ECHO} "@exec %D/${EMULSUBDIR}/sbin/ldconfig -r %D/${EMULSUBDIR}" \
 	  >>${PLIST_SRC}
-	${SED} -e 's:#! :#! /${EMULSUBDIR}:' \
-	       -e 's:^RTLD=:RTLD=/${EMULSUBDIR}:' <${LDD} >${LDD}.new
-	${MV} ${LDD}.new ${LDD}
-	${CHMOD} +x ${LDD}
+	${SED}	-e 's:#! :#! /${EMULSUBDIR}:' \
+		-e 's:^RTLD=:RTLD=/${EMULSUBDIR}:' \
+		< ${LINUX_LDD} > ${LINUX_LDD}.new
+	${MV} ${LINUX_LDD}.new ${LINUX_LDD}
+	${CHMOD} +x ${LINUX_LDD}
 	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} - POST-INSTALL
 
 .include "../suse_linux/suse.mk"
