@@ -1,14 +1,11 @@
-$NetBSD: patch-ac,v 1.3 2004/06/29 13:42:19 cjep Exp $
+$NetBSD: patch-ac,v 1.4 2004/08/16 15:34:25 cjep Exp $
 
---- nail.rc.orig	2002-10-27 01:12:25.000000000 +0100
+--- nail.rc.orig	2004-08-15 14:03:44.000000000 +0100
 +++ nail.rc
-@@ -4,6 +4,9 @@
- 
- # Sccsid @(#)nail.rc	2.1 (gritter) 9/1/02
- 
-+# Be xBSD compliant :)
-+set bsdcompat
+@@ -48,3 +48,6 @@ set newmail=noimap
+ # Hide some header fields which are uninteresting for most human readers.
+ ignore received in-reply-to message-id references
+ ignore mime-version content-transfer-encoding
 +
- # Append rather than prepend to mailboxes. Do not unset
- # or you will confuse other mail-handling programs!
- set append
++# Be xBSD compliant
++set bsdcompat
