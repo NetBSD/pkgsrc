@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/25 08:40:00 jlam Exp $
+
+--- book.cpp.orig	Sun Apr 30 09:56:26 2000
++++ book.cpp
+@@ -52,7 +52,7 @@
+   char outbook[100];
+   position temp_pos;                 // temporary position
+   move bmove;                        // book move under consideration
+-  unsigned __int64 pcode;            // hash code for position
++  u_int64_t pcode;                   // hash code for position
+   int i = -1, j = 0, k = 0, p;       // loop variables
+   int count = 0, thresh, LINE_DEPTH; // control variables
+ 
+@@ -245,7 +245,7 @@
+ {
+   file_pos = 0;
+   int jump = int(file_size/2);
+-  unsigned __int64 pcode = ZERO;
++  u_int64_t pcode = ZERO;
+ 
+   temporary_pos = p;
+   if(!exec_move(&temporary_pos, m, 1)) return 0;
