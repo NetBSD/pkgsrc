@@ -1,30 +1,30 @@
-$NetBSD: patch-ae,v 1.4 1999/12/28 18:15:43 itojun Exp $
+$NetBSD: patch-ae,v 1.5 2000/03/26 22:33:18 kim Exp $
 
---- ftp.pl.orig	Tue May 23 23:53:25 1995
-+++ ftp.pl	Wed May 12 18:10:21 1999
-@@ -430,7 +430,7 @@
+--- ftp.pl.orig	Fri Jun  5 05:10:27 1998
++++ ftp.pl	Sat Mar 25 03:00:20 2000
+@@ -233,7 +233,7 @@
+ 			}
+ 			else {
+ 				print $showfd "proxy connection failed " if $proxy;
+-				print $showfd "Cannot open ftp to $connect_site\n" if $ftp_show;
++				print $showfd "Cannot open ftp to $newhost:$newport\n" if $ftp_show;
+ 				return 0;
+ 			}
+ 		}
+@@ -486,7 +486,7 @@
  		return 0;
  	}
  	if( $ret == 1 ) {
--		$response =~ m/^227 Entering Passive Mode \((\d+),(\d+),(\d+),(\d+),(\d+),(\d+)\)$/;
-+		$response =~ m/^227 .*\((\d+),(\d+),(\d+),(\d+),(\d+),(\d+)\)/;
- 		$newhost = sprintf( "%d.%d.%d.%d", $1, $2, $3, $4 );
- 		$newport = $5 * 256 + $6;
- 	}
-@@ -443,7 +443,7 @@
+-		if( $response =~ m/^227 Entering Passive Mode \((\d+),(\d+),(\d+),(\d+),(\d+),(\d+)\)/ ){
++		if($response =~ m/^227 .*\((\d+),(\d+),(\d+),(\d+),(\d+),(\d+)\)/){
+ 			$newhost = sprintf( "%d.%d.%d.%d", $1, $2, $3, $4 );
+ 			$newport = $5 * 256 + $6;
  		}
- 		else {
- 			print $showfd "proxy connection failed " if $proxy;
--			print $showfd "Cannot open ftp to $connect_site\n" if $ftp_show;
-+			print $showfd "Cannot open ftp to $newhost:$newport\n" if $ftp_show;
- 			return 0;
- 		}
- 	}
-@@ -700,6 +700,7 @@
- 
+@@ -708,6 +708,7 @@
+ 	if( ! $service_open ){
  		return 0;
  	}
 +	chmod 0600, $loc_fname;
  
- 	local( $start_time ) = time;
- 	local( $bytes, $lasthash, $hashes ) = (0, 0, 0);
+ 	if( $loc_fname eq "" ){
+ 		$loc_fname = $rem_fname;
