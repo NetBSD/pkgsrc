@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2004/05/15 14:08:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2004/09/21 17:09:48 jmmv Exp $
 #
 
-DISTNAME=	file-roller-2.6.1
+DISTNAME=	file-roller-2.8.0
 CATEGORIES=	archivers gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.6/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -44,6 +44,7 @@ CPPFLAGS+=		-DFILEROLLER_ZIP=\"\\\"${PREFIX.zip}/bin/zip\\\"\"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
