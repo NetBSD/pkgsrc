@@ -1,9 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2004/03/06 06:28:22 grant Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.2 2004/07/19 03:25:11 jlam Exp $
 
 If you are running NetBSD 1.5 (or newer), the existing /etc/rc.d/postfix
 can be forced to start ${PREFIX}/sbin/postfix instead of /usr/sbin/postfix,
 by adding the following lines to /etc/rc.conf.d/postfix:
+
 	required_files='${PKG_SYSCONFDIR}/main.cf'
 	start_cmd='${PREFIX}/sbin/postfix start'
 	stop_cmd='${PREFIX}/sbin/postfix stop'
