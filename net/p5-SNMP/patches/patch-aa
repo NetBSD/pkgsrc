@@ -1,0 +1,35 @@
+--- Makefile.PL.orig	Fri Dec 19 01:34:49 1997
++++ Makefile.PL	Sun May 24 00:39:43 1998
+@@ -32,10 +32,10 @@
+     $sep = '/';
+ }
+ my $inc_path1 = "${sep}usr${sep}include";
+-my $inc_path2 = "${sep}usr${sep}local${sep}include";
++my $inc_path2 = "$ENV{'PREFIX'}${sep}include";
+ my $inc_path3 = "${inc_path2}${sep}ucd-snmp";
+ my $lib_path1 = "${sep}usr${sep}lib";
+-my $lib_path2 = "${sep}usr${sep}local${sep}lib";
++my $lib_path2 = "$ENV{'PREFIX'}${sep}lib";
+ 
+ my @IncludeFiles = qw[asn1.h mib.h parse.h snmp.h snmp_api.h 
+ 		      snmp_client.h snmp_impl.h];
+@@ -52,7 +52,7 @@
+ 
+    @IncludeFiles = map {"$IncludeDir$sep$_";} @IncludeFiles;
+    $Params{LIBS} = "-L$LibDir -l$snmp_llib";
+-   $Params{INC}  = "-I$IncludeDir";
++   $Params{INC}  = "-I$IncludeDir -DCMU_COMPATIBLE";
+    $Params{H}    = \@IncludeFiles;
+    return(%Params);
+ }
+@@ -79,8 +79,8 @@
+     }
+     $host ||= 'localhost';
+     $comm ||= 'private';
+-    my $resp = prompt("Enter host and community for SNMP tests: ",
+-		      "$host $comm");
++#HF#    my $resp = prompt("Enter host and community for SNMP tests: ",
++#HF#		      "$host $comm");
+     open(H, ">host") || die "Error: could not open file 'host' ($!)";
+     print H "$resp\n";
+     close H;
