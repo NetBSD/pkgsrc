@@ -1,10 +1,9 @@
-# $NetBSD: suse.mk,v 1.2 1999/09/20 00:51:41 tron Exp $
+# $NetBSD: suse.mk,v 1.3 1999/10/04 21:06:58 tron Exp $
 
 MASTER_SITE_SUSE=	ftp://ftp.suse.com/pub/suse/i386/6.1/suse/ \
 			ftp://ftp.cs.unm.edu/mirrors/SuSE61/suse/
 
 DIST_SUBDIR?=		suse
-MIRROR_DISTFILE?=	no
 
 WRKSRC?=		${WRKDIR}
 MANCOMPRESSED?=		yes
