@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/22 04:02:41 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/01 10:37:33 grant Exp $
 #
 
 DISTNAME=		rarlinux-3.3.0
@@ -12,7 +12,7 @@ COMMENT=		RAR command line archiver (Linux binary)
 LICENSE=		rar-license
 
 NO_BUILDLINK=		yes
-ONLY_FOR_PLATFORM=	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.[6-9]*-i386 \
+ONLY_FOR_PLATFORM=	NetBSD-1.5Z[A-Z]-i386 NetBSD-1.6*-i386 \
 			NetBSD-[2-9]*-i386 Linux-*-i[3-6]86
 WRKSRC=			${WRKDIR}/rar
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2004/08/28 21:09:08 ben Exp $
+# $NetBSD: Makefile,v 1.74 2004/10/01 10:37:33 grant Exp $
 #
 
 DISTNAME=	Wine-20040505
@@ -18,7 +18,7 @@ YACC=		${PREFIX}/bin/bison -y
 
 CONFLICTS=	rewind-[0-9]*
 
-ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.[6-9]*-i386 NetBSD-2*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD*-i386 Linux*-i386 SunOS*-i386
 
 WRKSRC=		 	${WRKDIR}/${DISTNAME:S/W/w/}

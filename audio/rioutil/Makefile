@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/08/19 03:33:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2004/10/01 10:37:33 grant Exp $
 #
 
 DISTNAME=	rioutil-1.4.6
@@ -15,7 +15,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-libusb
 
-ONLY_FOR_PLATFORM=	Darwin-*-* Linux-*-* NetBSD-1.[6-9]*-* NetBSD-[2-9]*-*
+ONLY_FOR_PLATFORM=	Darwin-*-* Linux-*-* NetBSD-1.6*-* NetBSD-[2-9]*-*
 # depends on -r1.6 of sys/dev/usb/urio.c
 ONLY_FOR_PLATFORM+=	NetBSD-1.5Z-* NetBSD-1.5Z[A-Z]-*
 

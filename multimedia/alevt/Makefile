@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/14 19:30:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/01 10:37:33 grant Exp $
 
 DISTNAME=	alevt-1.6.0
 PKGREVISION=	2
@@ -13,7 +13,7 @@ DEPENDS+=	png>=1.2.1:../../graphics/png
 DEPENDS+=	fxtv>=1.02:../../multimedia/fxtv
 
 ONLY_FOR_PLATFORM=	NetBSD-1.4[Y-Z]-* NetBSD-1.4Z[A-Z]-* \
-			NetBSD-1.5_ALPHA-* NetBSD-1.[5-9]*-* \
+			NetBSD-1.5_ALPHA-* NetBSD-1.[56]*-* \
 			NetBSD-[2-9]*-*
 
 USE_DIRS+=	xdg-1.1
