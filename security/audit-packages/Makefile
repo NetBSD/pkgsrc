@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2003/06/12 06:59:30 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2003/06/12 19:52:26 wiz Exp $
 
 DISTNAME=	audit-packages-1.16
 WRKSRC=		${WRKDIR}
@@ -42,7 +42,7 @@ do-install:
 	done
 	${INSTALL_MAN} ${WRKSRC}/audit-packages.0 ${PREFIX}/man/cat8
 	${INSTALL_MAN} ${WRKSRC}/audit-packages.8 ${PREFIX}/man/man8
-	${LN} -s audit-packages.0 ${PREFIX}/man/cat8/download-vulnerability-list.0
-	${LN} -s audit-packages.8 ${PREFIX}/man/man8/download-vulnerability-list.8
+	${LN} -sf audit-packages.0 ${PREFIX}/man/cat8/download-vulnerability-list.0
+	${LN} -sf audit-packages.8 ${PREFIX}/man/man8/download-vulnerability-list.8
 
 .include "../../mk/bsd.pkg.mk"
