@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.93 2002/10/07 14:55:08 hubertf Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.94 2002/10/07 17:09:11 jschauma Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -331,6 +331,12 @@ PRE_ROOT_CMD?=	${TRUE}
 # would allow others to write and modify files below ${WRKDIR}.
 # Possible: any shell commands
 # Default: none
+
+#SAWFISH_THEMES=
+# Specifies the DISTFILES for wm/sawfish-themes, to allow the user to choose
+# which themes to install
+# Possible: empty, any number of theme-name-[0-9]*.*.tar.gz
+# Default: Set to include about 180 themes available on themes.freshmeat.net
 
 SU_CMD?= ${ROOT_CMD}
 # Command to perform before "make install", if the user does not have
