@@ -1,0 +1,40 @@
+$NetBSD: patch-bv,v 1.1 2002/06/25 06:34:38 skrll Exp $
+
+--- noatun/modules/metatag/Makefile.in.orig	Sun Jun  9 12:28:50 2002
++++ noatun/modules/metatag/Makefile.in
+@@ -295,7 +295,7 @@
+ noatun_metatag_la_SOURCES = metatag.cpp edit.cpp
+ 
+ noatun_metatag_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
+-noatun_metatag_la_LIBADD = $(LIB_KIO) $(top_builddir)/noatun/library/libnoatun.la \
++noatun_metatag_la_LIBADD = $(LIB_KIO) $(top_builddir)/noatun/library/libnoatun_core.la \
+ 	$(top_builddir)/noatun/library/noatuntags/libnoatuntags.la
+ 
+ 
+@@ -311,7 +311,7 @@
+ LTLIBRARIES = $(kde_module_LTLIBRARIES)
+ 
+ noatun_metatag_la_DEPENDENCIES = \
+-	$(top_builddir)/noatun/library/libnoatun.la \
++	$(top_builddir)/noatun/library/libnoatun_core.la \
+ 	$(top_builddir)/noatun/library/noatuntags/libnoatuntags.la
+ am_noatun_metatag_la_OBJECTS = metatag.lo edit.lo
+ #>- noatun_metatag_la_OBJECTS = $(am_noatun_metatag_la_OBJECTS)
+@@ -490,7 +490,7 @@
+ 
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=metatag.plugin HANDLED_ITEMS 
++KDE_DIST=HANDLED_ITEMS metatag.plugin 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -663,7 +663,7 @@
+ 	-rm -f  noatun_metatag_la_meta_unload.cpp
+ 
+ #>+ 11
+-noatun_metatag_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/metatag.cpp $(srcdir)/edit.cpp noatun_metatag_la_meta_unload.cpp   edit.moc metatag.moc 
++noatun_metatag_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/metatag.cpp $(srcdir)/edit.cpp $(srcdir)/noatun_metatag_la_meta_unload.cpp   edit.moc metatag.moc 
+ 	@echo 'creating noatun_metatag_la.all_cpp.cpp ...'; \
+ 	rm -f noatun_metatag_la.all_cpp.files noatun_metatag_la.all_cpp.final; \
+ 	echo "#define KDE_USE_FINAL 1" >> noatun_metatag_la.all_cpp.final; \
