@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2003/01/22 15:56:33 manu Exp $
+--- src/etc/script/create_db.Pg.orig	Wed Jan 22 16:09:38 2003
++++ src/etc/script/create_db.Pg	Wed Jan 22 16:17:33 2003
+@@ -18,10 +18,10 @@
+ DROP TABLE subscriber_table;
+ CREATE TABLE subscriber_table (
+   	list_subscriber       	varchar (50) NOT NULL,
+ 	user_subscriber		varchar (100) NOT NULL,
+-	date_subscriber		datetime NOT NULL,
+-	update_subscriber 	datetime,
++	date_subscriber		timestamp with time zone NOT NULL,
++	update_subscriber 	timestamp with time zone,
+ 	visibility_subscriber	varchar (20),
+ 	reception_subscriber	varchar (20),
+ 	bounce_subscriber	varchar (35),
+ 	comment_subscriber	varchar (150),
