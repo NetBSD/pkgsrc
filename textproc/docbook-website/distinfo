@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/19 00:22:10 wiz Exp $
+$NetBSD: distinfo,v 1.5 2005/02/19 00:44:52 wiz Exp $
 
-SHA1 (website-2.5.0.tar.gz) = c36e345ff725c175407318fe878984f7ec5f0e56
-Size (website-2.5.0.tar.gz) = 135313 bytes
+SHA1 (website-2.3.tar.gz) = 895c98b09cc99a60f4ed6d52b588b07f7dd91733
+Size (website-2.3.tar.gz) = 80545 bytes
 SHA1 (patch-aa) = 14249023b2b1b3f1891e5f8d973f86337a2e9eee
-SHA1 (patch-ab) = 32ef65364493b6fb01cf2106c7d0c9d6c66db2af
+SHA1 (patch-ab) = a1db98fac78dbf553f5d30b2c45f7e3ebb8a18db
