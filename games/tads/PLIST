@@ -1,19 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/05 22:09:58 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/08 23:14:37 mycroft Exp $
 bin/t23run
 bin/t3make
 bin/t3run
 bin/tadsc
 bin/tadsr
 bin/tdb
+share/doc/html/tads3/articles.htm
 share/doc/html/tads3/changes.htm
-share/doc/html/tads3/changes_lib.htm
 share/doc/html/tads3/index.htm
 share/doc/html/tads3/lib_cont.htm
-share/doc/html/tads3/t3BigNum.htm
 share/doc/html/tads3/t3alone.htm
 share/doc/html/tads3/t3anonfn.htm
 share/doc/html/tads3/t3apiorg.htm
 share/doc/html/tads3/t3banner.htm
+share/doc/html/tads3/t3bignum.htm
 share/doc/html/tads3/t3build.htm
 share/doc/html/tads3/t3bytarr.htm
 share/doc/html/tads3/t3chars.htm
@@ -30,6 +30,7 @@ share/doc/html/tads3/t3export.htm
 share/doc/html/tads3/t3expr.htm
 share/doc/html/tads3/t3fctl.htm
 share/doc/html/tads3/t3file.htm
+share/doc/html/tads3/t3fmt.htm
 share/doc/html/tads3/t3frame.htm
 share/doc/html/tads3/t3gc.htm
 share/doc/html/tads3/t3gram.htm
@@ -90,6 +91,8 @@ share/tads3/libraries/adv3/actions.t
 share/tads3/libraries/adv3/actor.t
 share/tads3/libraries/adv3/adv3.h
 share/tads3/libraries/adv3/adv3.tl
+share/tads3/libraries/adv3/banner.t
+share/tads3/libraries/adv3/changes.htm
 share/tads3/libraries/adv3/disambig.t
 share/tads3/libraries/adv3/en_us/en_us.h
 share/tads3/libraries/adv3/en_us/en_us.t
@@ -101,8 +104,10 @@ share/tads3/libraries/adv3/exec.t
 share/tads3/libraries/adv3/exits.t
 share/tads3/libraries/adv3/extras.t
 share/tads3/libraries/adv3/footnote.t
+share/tads3/libraries/adv3/hintsys.t
 share/tads3/libraries/adv3/input.t
 share/tads3/libraries/adv3/lister.t
+share/tads3/libraries/adv3/menusys.t
 share/tads3/libraries/adv3/misc.t
 share/tads3/libraries/adv3/modid.t
 share/tads3/libraries/adv3/numbers.t
