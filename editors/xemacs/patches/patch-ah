@@ -1,13 +1,15 @@
-$NetBSD: patch-ah,v 1.1 1999/06/29 23:13:41 tron Exp $
-
---- src/unexelf.c.orig	Fri Jul 24 06:17:28 1998
-+++ src/unexelf.c	Fri Jul 24 06:17:36 1998
-@@ -419,3 +419,8 @@
+--- src/unexelf.c.orig	Sun Aug 15 03:29:56 1999
++++ src/unexelf.c	Fri Oct 29 07:10:13 1999
+@@ -426,3 +426,3 @@
  #include <fcntl.h>
-+#ifdef __NetBSD__ /* XXX this is a hack */
-+#include "netbsd.elf.h"
-+#include <sys/exec_elf.h>
-+#else
+-#if !defined (__NetBSD__) && !defined (__OpenBSD__)
++#if !defined (__OpenBSD__) && (!defined(__NetBSD__) || (__NetBSD_Version__ >= 104130000))
  #include <elf.h>
-+#endif
- #include <sys/mman.h>
+@@ -473,3 +473,6 @@
+ 
+-#ifdef __NetBSD__
++/*
++ * NetBSD has <elf.h> since 1.4M
++ */
++#if defined(__NetBSD__) && (__NetBSD_Version__ < 104130000)
+ /*
