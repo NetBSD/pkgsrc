@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/08/22 01:22:14 grant Exp $
+# $NetBSD: Makefile,v 1.8 2002/08/22 01:26:06 wiz Exp $
 
 DISTNAME=		autoconf-2.53
 PKGREVISION=		1
@@ -11,7 +11,9 @@ COMMENT=		Generates automatic source code configuration scripts
 
 DEPENDS=		m4-1.4:../../devel/m4
 
-CONFLICTS=		autoconf-[0-9]*
+# The next line is for conflicts with old versions of this package,
+# which had autoconf-devel as PKGNAME.
+CONFLICTS=		autoconf-devel-[0-9]*
 
 USE_BUILDLINK_ONLY=	YES
 
