@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.228 2003/02/14 22:19:54 wiz Exp $
+# $NetBSD: Makefile,v 1.229 2003/02/17 13:14:51 zuntum Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -196,6 +196,7 @@ SUBDIR+=	s10sh
 SUBDIR+=	sane-backends
 SUBDIR+=	sane-frontends
 SUBDIR+=	scigraphica
+SUBDIR+=	scrot
 SUBDIR+=	sketch
 SUBDIR+=	sodipodi
 SUBDIR+=	tcm
