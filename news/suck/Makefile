@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2001/02/25 04:18:10 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2003/02/21 13:46:44 wiz Exp $
 #
 
-DISTNAME=	suck-4.2.2
+DISTNAME=	suck-4.3.1
 CATEGORIES=	news
 MASTER_SITES=	http://home.att.net/~bobyetman/ \
 		${MASTER_SITE_SUNSITE:=system/news/transport/} \
@@ -12,15 +12,16 @@ HOMEPAGE=	http://home.att.net/~bobyetman/
 COMMENT=	Feed a local news server without a dedicated newsfeed
 
 GNU_CONFIGURE=	yes
+USE_BUILDLINK2=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
 .if ${USE_SOCKS} == 4
-DEPENDS+=		socks4-2.2:../../net/socks4
+.include "../../net/socks4/buildlink2.mk"
 .else
-DEPENDS+=		socks5-1.0.2:../../net/socks5
+.include "../../net/socks5/buildlink2.mk"
 .endif
 .endif
 
@@ -34,4 +35,6 @@ post-install:
 	${CP} ${WRKSRC}/sample/* ${LOCALBASE}/share/examples/suck
 	${CHMOD} 644 ${LOCALBASE}/share/examples/suck/*
 
+#.include "../../databases/gdbm/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
