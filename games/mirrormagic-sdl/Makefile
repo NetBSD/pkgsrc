@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/13 13:51:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2003/08/26 15:32:44 adam Exp $
 #
 
-DISTNAME=		mirrormagic-2.0.1
+DISTNAME=		mirrormagic-2.0.2
 PKGNAME=		${DISTNAME:S/-/-sdl-/}
 PKGREVISION=		3
 CATEGORIES=		games x11
