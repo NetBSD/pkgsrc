@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/10/28 09:04:02 agc Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/08 15:47:49 kristerw Exp $
 
---- scheme.c	2002/10/24 11:01:22	1.1
-+++ scheme.c	2002/10/24 11:03:17
+--- scheme.c.orig	2003-01-07 20:40:51.000000000 +0100
++++ scheme.c	2004-04-08 17:40:03.000000000 +0200
 @@ -91,8 +91,16 @@
  # define prompt "> "
  #endif
@@ -20,3 +20,39 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/10/28 09:04:02 agc Exp $
  #endif
  
  #ifndef FIRST_CELLSEGS
+@@ -569,7 +577,7 @@
+ 	  i = ++sc->last_cell_seg ;
+ 	  sc->alloc_seg[i] = cp;
+ 	  /* adjust in TYPE_BITS-bit boundary */
+-	  if(((int)cp)%adj!=0) {
++	  if(((long)cp)%adj!=0) {
+ 	    cp=(char*)(adj*((long)cp/adj+1));
+ 	  }
+         /* insert new segment in address order */
+@@ -2055,7 +2063,7 @@
+ 
+ static void s_save(scheme *sc, enum scheme_opcodes op, pointer args, pointer code) 
+ { 
+-  int nframes = (int)sc->dump; 
++  long nframes = (long)sc->dump; 
+   struct dump_stack_frame *next_frame; 
+ 
+   /* enough room for the next frame? */ 
+@@ -2075,7 +2083,7 @@
+ 
+ static pointer _s_return(scheme *sc, pointer a) 
+ { 
+-  int nframes = (int)sc->dump; 
++  long nframes = (long)sc->dump; 
+   struct dump_stack_frame *frame; 
+ 
+   sc->value = (a); 
+@@ -2115,7 +2123,7 @@
+ 
+ static INLINE void dump_stack_mark(scheme *sc) 
+ { 
+-  int nframes = (int)sc->dump;
++  long nframes = (long)sc->dump;
+   int i;
+   for(i=0; i<nframes; i++) {
+     struct dump_stack_frame *frame;
