@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/05 14:25:36 agc Exp $
+bin/mined
+share/help/mined.hlp
+man/man1/mined.1
