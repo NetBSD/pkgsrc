@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/04/13 01:29:15 salo Exp $
+@comment $NetBSD: PLIST,v 1.8 2003/08/03 00:30:43 seb Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
@@ -14,39 +14,21 @@ include/eb/error.h
 include/eb/font.h
 include/eb/text.h
 include/eb/zio.h
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/eb-ja.info
 info/eb-ja.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/eb-ja.info
 info/eb-ja.info-1
 info/eb-ja.info-2
 info/eb-ja.info-3
 info/eb-ja.info-4
 info/eb-ja.info-5
 info/eb-ja.info-6
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebfont-ja.info
 info/ebfont-ja.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebfont-ja.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebfont.info
 info/ebfont.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebfont.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebinfo-ja.info
 info/ebinfo-ja.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebinfo-ja.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebinfo.info
 info/ebinfo.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebinfo.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebrefile-ja.info
 info/ebrefile-ja.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebrefile-ja.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebrefile.info
 info/ebrefile.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebrefile.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebzip-ja.info
 info/ebzip-ja.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebzip-ja.info
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebzip.info
 info/ebzip.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebzip.info
 lib/libeb.a
 lib/libeb.la
 lib/libeb.so
