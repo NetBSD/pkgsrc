@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2003/12/26 06:13:52 grant Exp $
+$NetBSD: distinfo,v 1.4 2004/02/04 11:09:13 grant Exp $
 
 SHA1 (MozillaFirebird-source-0.7.tar.gz) = 6c70c89f8ce63dd9e84a0f87c22d2c2be51675a5
 Size (MozillaFirebird-source-0.7.tar.gz) = 38758572 bytes
-SHA1 (patch-ab) = 3fcea982f9cfac21c519c9b5c8bbc46e0a6a0a4e
+SHA1 (patch-ab) = e71202f8dee1f84f118f9f18287bfa4ebe0bb928
 SHA1 (patch-ac) = 3181d6004e513988f5169df3cc13b4ca98c19bec
 SHA1 (patch-ad) = 09091d0a2ded2775ca35d1315ae9b95c506b28ef
 SHA1 (patch-ae) = 99935f034e6485e9e0d4eaf20e6ddd2b90b75ad5
@@ -10,6 +10,8 @@ SHA1 (patch-af) = 3b6f5c71146b3a402b164b7f10fb652408712b73
 SHA1 (patch-ag) = fd8470f7ac0003797401ed68f459315170cbe9a8
 SHA1 (patch-am) = fec537d148e706fc4514f461d88af5e305e818c4
 SHA1 (patch-aw) = ba1a408cd3b44dcd2123672ec4cbcefb436e5330
+SHA1 (patch-ax) = 070c88dee0446b093ab1c2a9120dc1747642d46f
+SHA1 (patch-ay) = f1b80542aa9e122dafd0f2eab350874414112302
 SHA1 (patch-ba) = 35256ee83e446c174adf311d8d8aaf90207f309e
 SHA1 (patch-bb) = 2c59471e94e3d96baf62b668a411f8f5d5b96aa4
 SHA1 (patch-be) = dd85f24f2ebb10d2435055ab4540d27178d8074d
