@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5677 2004/04/20 12:15:19 grant Exp $
+$NetBSD: CHANGES,v 1.5678 2004/04/20 14:26:48 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2108,3 +2108,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed gtk10 [xtraeme 2004-04-20]
 	Added p5-Net-Pcap-0.05 [xtraeme 2004-04-20]
 	Updated libnbcompat to 20040420 [grant 2004-04-20]
+	Updated w3m to 0.5nb1 [uebayasi 2004-04-20]
+	Updated w3m-img to 0.5nb1 [uebayasi 2004-04-20]
