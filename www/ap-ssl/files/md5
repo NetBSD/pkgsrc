@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.9 2000/10/17 18:14:17 jlam Exp $
+$NetBSD: md5,v 1.10 2001/02/02 16:41:22 jlam Exp $
 
-MD5 (mod_ssl-2.7.1-1.3.14.tar.gz) = 99e05bd4ab7bd5c72fbb70bd8cfbf283
+MD5 (mod_ssl-2.8.0-1.3.17.tar.gz) = 3a158f3b5442cb8b7bee4a55851c3794

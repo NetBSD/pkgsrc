@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.8 2000/10/13 21:48:02 jlam Exp $
-etc/httpd/mod_ssl.conf
+@comment $NetBSD: PLIST,v 1.9 2001/02/02 16:41:23 jlam Exp $
+etc/httpd/apache_start.conf
 etc/httpd/ssl.crl/Makefile.crl
 etc/httpd/ssl.crl/README.CRL
 etc/httpd/ssl.crt/Makefile.crt
