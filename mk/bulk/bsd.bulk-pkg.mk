@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.63 2004/10/07 02:01:39 jlam Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.64 2004/11/12 15:39:22 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -147,7 +147,7 @@ bulk-cache:
 .else
 	@${ECHO_MSG} "BULK> Extracting database for SPECIFIC_PKGS subset of pkgsrc"
 	@${ECHO_MSG} "      along with their dependencies"
-.for __tmp__ in ${SUBDIR} ${BULK_PREREQ} lang/perl5 pkgtools/pkglint
+.for __tmp__ in ${SUBDIR} ${BULK_PREREQ} lang/perl58 pkgtools/pkglint
 	cd ${PKGSRCDIR}/${__tmp__} && ../../mk/scripts/mkdatabase -a -f ${BULK_DBFILE}
 .endfor
 	@${ECHO_MSG} "BULK> Extracting dependency tree file"
