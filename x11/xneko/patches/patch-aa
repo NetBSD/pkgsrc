@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1998/08/07 11:18:25 agc Exp $
+$NetBSD: patch-aa,v 1.5 2001/06/13 17:56:22 wiz Exp $
 
 --- Makefile.orig	Tue Jun  1 03:46:11 1993
 +++ Makefile	Thu May 28 10:08:17 1998
-@@ -1,8 +1,17 @@
+@@ -1,8 +1,15 @@
  #	@(#)Makefile	8.1 (Berkeley) 5/31/93
  
  PROG=	xneko
@@ -13,13 +13,11 @@ $NetBSD: patch-aa,v 1.4 1998/08/07 11:18:25 agc Exp $
 +
 +DPADD+=		${X11BASE}/lib/libX11.a ${LIBM}
 +CFLAGS+=	-I${X11BASE}/include
-+LDADD+=		-L${X11BASE}/lib -lX11 -lm
++LDADD+=		-lX11 -lm
 +
-+MANDIR=        ${X11BASE}/man
++MANDIR=        ${PREFIX}/man
 +MANINSTALL=    catinstall maninstall
 +
-+BINOWN=        bin
-+BINDIR=        ${X11BASE}/bin
-+BINMODE=       755
++BINDIR=        ${PREFIX}/bin
  
  .include <bsd.prog.mk>
