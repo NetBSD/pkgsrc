@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1502 2003/02/27 21:42:33 is Exp $
+$NetBSD: CHANGES,v 1.1503 2003/02/28 10:27:36 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -859,3 +859,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mgetty to 1.1.28nb3 [fredb 2003-02-27]
 	Updated openoffice-linux to 1.0.2nb3 [mrauch 2003-02-27]
 	Updated links-gui to 2.1.0.8nb1 [is 2003-02-27]
+	Updated libgnomecanvas to 2.2.0.2 [jmmv 2003-02-28]
