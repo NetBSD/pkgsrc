@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/02/14 17:21:46 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2004/02/14 18:26:28 jmmv Exp $
 #
 
 DISTNAME=		soup-0.7.10
@@ -14,7 +14,7 @@ COMMENT=		Callback-based mechanism for sending and servicing SOAP requests
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
 USE_LIBTOOL=		YES
-PKGCONFIG_OVERRIDE=	${WRKSRC}/soup.pc.in
+PKGCONFIG_OVERRIDE=	soup.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 

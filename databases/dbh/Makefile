@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/02/14 17:21:35 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/14 18:26:27 jmmv Exp $
 
 DISTNAME=		dbh_1.0-15
 PKGNAME=		dbh-1.0.15
@@ -12,7 +12,7 @@ COMMENT=		Library to create disk based Hashtables
 GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_LIBTOOL=		yes
-PKGCONFIG_OVERRIDE=	${WRKSRC}/src/dbh-1.0.pc.in
+PKGCONFIG_OVERRIDE=	src/dbh-1.0.pc.in
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dbh
