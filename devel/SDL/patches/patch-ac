@@ -1,16 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2001/07/03 06:17:32 rh Exp $
+$NetBSD: patch-ac,v 1.5 2001/09/24 14:28:55 rh Exp $
 
---- src/audio/SDL_audio.c.orig	Sat Jun 16 03:51:42 2001
+--- src/audio/SDL_audio.c.orig	Mon Jul 23 04:58:42 2001
 +++ src/audio/SDL_audio.c
-@@ -50,7 +50,7 @@
- #ifdef __OpenBSD__
- 	&OBSD_bootstrap,
- #endif
--#if (defined(unix) && !defined(__CYGWIN32__)) && \
-+#if (defined(__NetBSD__) || defined(unix) && !defined(__CYGWIN32__)) && \
-     !defined(OSS_SUPPORT) && !defined(ALSA_SUPPORT)
- 	&AUDIO_bootstrap,
- #endif
 @@ -241,7 +241,7 @@
  	/* Select the proper audio driver */
  	audio = NULL;

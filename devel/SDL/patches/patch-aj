@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.7 2001/07/14 15:45:35 jlam Exp $
+$NetBSD: patch-aj,v 1.8 2001/09/24 14:28:56 rh Exp $
 
---- configure.in.orig	Mon Jun 18 11:21:38 2001
+--- configure.in.orig	Mon Jul 23 21:54:03 2001
 +++ configure.in
-@@ -354,10 +354,7 @@
+@@ -366,10 +366,7 @@
                    , enable_nas=yes)
      if test x$enable_audio = xyes -a x$enable_nas = xyes; then
          AC_MSG_CHECKING(for NAS audio support)
@@ -14,7 +14,7 @@ $NetBSD: patch-aj,v 1.7 2001/07/14 15:45:35 jlam Exp $
          AC_MSG_RESULT($have_nas)
          if test x$have_nas = xyes; then
              CFLAGS="$CFLAGS -DNAS_SUPPORT"
-@@ -410,7 +407,7 @@
+@@ -420,7 +417,7 @@
                    NASMFLAGS="-f win32"
                    ;;
                *)
@@ -23,7 +23,7 @@ $NetBSD: patch-aj,v 1.7 2001/07/14 15:45:35 jlam Exp $
                    ;;
              esac
              AC_SUBST(NASMFLAGS)
-@@ -889,8 +886,8 @@
+@@ -930,8 +927,8 @@
              pthread_lib="-pthread"
              ;;
          *-*-netbsd*)
@@ -34,7 +34,15 @@ $NetBSD: patch-aj,v 1.7 2001/07/14 15:45:35 jlam Exp $
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -1577,7 +1574,11 @@
+@@ -1348,6 +1345,7 @@
+         CheckDummyVideo
+         CheckDiskAudio
+         CheckNASM
++        CheckOPENBSDAUDIO
+         CheckOSS
+         CheckARTSC
+         CheckESD
+@@ -1642,7 +1640,11 @@
              COPY_ARCH_SRC(src/thread, linux, SDL_systhread_c.h)
              COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex.c)
              COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex_c.h)
@@ -47,7 +55,7 @@ $NetBSD: patch-aj,v 1.7 2001/07/14 15:45:35 jlam Exp $
              COPY_ARCH_SRC(src/thread, generic, SDL_syssem_c.h)
              COPY_ARCH_SRC(src/thread, linux, SDL_syscond.c)
              COPY_ARCH_SRC(src/thread, generic, SDL_syscond_c.h)
-@@ -1956,6 +1957,10 @@
+@@ -2021,6 +2023,10 @@
  
  if test $ARCH = solaris; then
    SDL_RLD_FLAGS="-R\${exec_prefix}/lib"
