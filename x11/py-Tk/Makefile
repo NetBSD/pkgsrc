@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/09/27 22:24:44 tsarna Exp $
+# $NetBSD: Makefile,v 1.7 1998/11/12 14:56:32 agc Exp $
 #
 
 DISTNAME=	pyth151
@@ -6,7 +6,6 @@ PKGNAME=	py-Tk-1.5.1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
-DIST_SUBDIR=	python
 
 MAINTAINER=	dolecek@ics.muni.cz
 HOMEPAGE=	http://www.python.org/topics/tkinter/
@@ -14,6 +13,8 @@ HOMEPAGE=	http://www.python.org/topics/tkinter/
 DEPENDS+=	python-1.5.1:../../lang/python
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 DEPENDS+=	tcl-8.0p2:../../lang/tcl80
+
+DIST_SUBDIR=	python
 
 NOT_FOR_ARCHS=  alpha # possibly broken
 
