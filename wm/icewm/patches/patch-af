@@ -1,0 +1,26 @@
+$NetBSD: patch-af,v 1.4 2002/03/08 23:17:26 jmc Exp $
+
+--- configure.in.orig	Tue Oct  9 14:54:02 2001
++++ configure.in	Fri Mar  8 23:07:20 2002
+@@ -409,6 +409,13 @@
+     AC_DEFINE(NO_CONFIGURE, 1, [Define to disable preferences support.])
+   fi
+ 
++AC_ARG_ENABLE(apm,
++  [  --disable-apm           Don't enable the APM status applet])
++  if test "$enable_apm" != "no"; then
++    AC_DEFINE(CONFIG_APPLET_APM,        1,      [APM status applet])
++  fi
++
++
+ AC_ARG_ENABLE(keyconf,
+   [  --disable-keyconf       Disable configurable keybindings])
+   if test "$enable_keyconf" = "no"; then
+@@ -440,7 +447,6 @@
+     AC_DEFINE(CONFIG_APPLET_CPU_STATUS,	1,	[CPU status applet])
+     AC_DEFINE(CONFIG_APPLET_NET_STATUS,	1,	[Network status applet])
+     AC_DEFINE(CONFIG_APPLET_CLOCK,	1,	[LCD clock applet])
+-    AC_DEFINE(CONFIG_APPLET_APM,	1,	[APM status applet])
+     AC_DEFINE(CONFIG_ADDRESSBAR,	1,	[Address bar])
+     AC_DEFINE(CONFIG_WINLIST,		1,	[OS/2 like window list])
+     AC_DEFINE(CONFIG_WINMENU,		1,	[Window menu])
