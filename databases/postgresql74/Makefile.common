@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2005/01/21 03:15:52 tv Exp $
+# $NetBSD: Makefile.common,v 1.18 2005/01/25 05:21:53 tv Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -100,6 +100,14 @@ post-extract:
 			${WRKSRC}/src/template/${platform};		\
 	fi
 .endfor
+.for platform in interix3
+	if [ -d ${WRKSRC}/src/backend/port/dynloader ]; then		\
+		${RM} -f ${WRKSRC}/src/backend/port/dynloader/${platform}.h; \
+		${CP} -f ${COMMON_FILESDIR}/dynloader-ltdl.h		\
+			${WRKSRC}/src/backend/port/dynloader/${platform}.h; \
+		${TOUCH} ${WRKSRC}/src/backend/port/dynloader/${platform}.c; \
+	fi
+.endfor
 	if [ -d ${WRKSRC}/src/interfaces/libpq ]; then			\
 		${RM} -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
 		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpq		\
@@ -115,6 +123,11 @@ post-extract:
 		${CP} -f ${COMMON_FILESDIR}/netbsd.[ch]			\
 			${WRKSRC}/src/backend/port/dynloader/;		\
 	fi
+
+.if ${OPSYS} == "Interix"
+.  include "../../devel/libltdl/buildlink3.mk"
+LIBS+=		-lltdl
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
