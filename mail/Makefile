@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2002/07/23 08:55:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.139 2002/08/23 15:31:45 bouyer Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -49,6 +49,7 @@ SUBDIR+=	ja-mh
 SUBDIR+=	mailagent
 SUBDIR+=	mailcrypt
 SUBDIR+=	maildrop
+SUBDIR+=	mailman
 SUBDIR+=	mailserv
 SUBDIR+=	mailsync
 SUBDIR+=	mailwrapper
