@@ -1,0 +1,4 @@
+#!/bin/sh
+cd ${WRKSRC}
+unzip -qqXL setup.zip
+chmod 0755 setup.bin
