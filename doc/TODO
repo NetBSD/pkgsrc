@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1580 2004/04/05 15:40:54 grant Exp $
+$NetBSD: TODO,v 1.1581 2004/04/05 22:53:31 bouyer Exp $
 
 Suggested new packages
 ======================
@@ -134,7 +134,7 @@ Suggested package updates
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o afio-2.5
-	o amanda-2.4.4p2 [pkg/24550]
+	o amanda-2.4.4p2 [pkg/24550, bouyer]
 	o ap-python-2.7.10
 	o audacity-1.2.0
 	o avidemux-2.0.20
