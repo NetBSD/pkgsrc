@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/03/27 03:20:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.22 2001/04/20 12:33:52 fredb Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/14 23:34:59 jseger Exp
 #
 
@@ -12,6 +12,8 @@ MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.w3.org/Library/
 COMMENT=		The W3C Reference Library
 
+BUILD_DEPENDS+=		autoconf-2.13:../../devel/autoconf
+BUILD_DEPENDS+=		automake-1.4:../../devel/automake
 BUILD_DEPENDS+=		perl-5.*:../../lang/perl5
 
 USE_GMAKE=		yes
@@ -20,29 +22,33 @@ USE_SSL=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--with-zlib --with-regex --without-x
-CONFIGURE_ARGS+=	--with-ssl
+CONFIGURE_ARGS+=	--with-ssl="${SSLBASE}"
 
 DOCDIR=			${PREFIX}/share/doc/libwww
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 
 pre-configure:
 	cd ${WRKSRC}; \
-	    for foo in configure.in aclocal.m4 `find . -name Makefile.in` \
-		    configure stamp-h.in; do \
-		${TOUCH} $$foo; \
-	    done
+	    ${LOCALBASE}/bin/aclocal && \
+	    ${LOCALBASE}/bin/automake && \
+	    ${LOCALBASE}/bin/autoconf
 
 .include "../../mk/bsd.prefs.mk"
 
 # Include SOCKS firewall support
 .if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
 .if ${USE_SOCKS} == 4
-CONFIGURE_ARGS+= 	--with-socks --with-socks4 --without-socks5
+CONFIGURE_ARGS+= 	--with-socks4=${LOCALBASE}/lib/libsocks4.a --with-socks5=no
 DEPENDS+=		socks4-2.2:../../net/socks4
 .else
-CONFIGURE_ARGS+= 	--with-socks --without-socks4 --with-socks5
+CONFIGURE_ARGS+= 	--with-socks5=${LOCALBASE}/lib/libsocks5.a --with-socks4=no
 DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
 .endif
 
 .include "../../mk/bsd.pkg.mk"
+
+# This has to come after bsd.pkg.mk's construction of "${CONFIGURE_ENV}"
+# in order to have the desired effect. It's purpose is to allow "${SSLBASE}"
+# to take control of which "openssl" is used, if several are installed.
+CONFIGURE_ENV+=		LDFLAGS=""
