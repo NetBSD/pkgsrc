@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.7 2001/02/08 19:05:01 jlam Exp $
+$NetBSD: patch-ae,v 1.8 2001/02/13 20:21:36 jlam Exp $
 
 --- backend/usb.c.orig	Tue Feb  6 05:41:04 2001
 +++ backend/usb.c
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.7 2001/02/08 19:05:01 jlam Exp $
    int   i;                      /* Looping var */
    int   fd;                     /* File descriptor */
    char  device[255];            /* Device filename */
-@@ -407,6 +407,22 @@
+@@ -407,6 +407,21 @@
    for (i = 0; i < 3; i ++)
    {
      sprintf(device, "/dev/unlpt%d", i);
@@ -21,7 +21,6 @@ $NetBSD: patch-ae,v 1.7 2001/02/08 19:05:01 jlam Exp $
 +      printf("direct usb:%s \"Unknown\" \"USB Port #%d\"\n", device, i + 1);
 +    }
 +  }
-+#endif
 +#elif defined(__NetBSD__) || defined(__OpenBSD__)
 +  int   i;                      /* Looping var */
 +  int   fd;                     /* File descriptor */
