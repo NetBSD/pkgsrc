@@ -1,0 +1,50 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./sys/bsd/fileio.c.orig	Sun Jul  3 10:50:24 1988
++++ ./sys/bsd/fileio.c	Thu Mar 30 08:35:33 2000
+@@ -2,6 +2,7 @@
+  *		bsd (4.2, others?), Sun (3.2, ?) and Ultrix-32 (?) file I/O.
+  */
+ #include	"def.h"
++#include <unistd.h>    /* refling added this per compiler */
+ 
+ static	FILE	*ffp;
+ extern	char	*getenv(), *strncpy();
+@@ -276,7 +277,7 @@
+ 	if ((file = getenv("HOME")) == NULL) goto notfound;
+ 	if (strlen(file)+7 >= NFILEN - 1) goto notfound;
+ 	(VOID) strcpy(home, file);
+-	(VOID) strcat(home, "/.mg");
++	(VOID) strcat(home, "/.mgrc");
+ 	if (suffix != NULL) {
+ 		(VOID) strcat(home, "-");
+ 		(VOID) strcat(home, suffix);
+@@ -295,6 +296,18 @@
+ 	if (access(file, F_OK ) == 0) return file;
+ #endif
+ 
++
++/* refling - try to open a file name given by MGRC env var */
++	if ((file = getenv("MGRC")) == NULL) return NULL;
++	if (strlen(file)+7 >= NFILEN - 1) goto notfound;
++	(VOID) strcpy(home, file);
++	if (suffix != NULL) {
++		(VOID) strcat(home, "-");
++		(VOID) strcat(home, suffix);
++	}
++	if (access(home, F_OK ) == 0) return home;
++
++
+ 	return NULL;
+ }
+ #endif
+@@ -318,7 +331,8 @@
+ 	execve("cp", eargv, (char **)NULL);
+ 	_exit(1);	/* shouldn't happen */
+     }
+-    while(wait(&status) != pid) {}
++/*    while(wait(&status) != pid) {}   refling, was this */
++    while(wait((int *)&status) != pid) {}
+     return status.w_status == 0;
+ }
+ 

@@ -1,0 +1,1067 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/04/01 00:21:27 dmcmahill Exp $
+
+--- ./mg.1.orig	Thu Mar 30 08:35:36 2000
++++ ./mg.1	Thu Mar 30 08:35:36 2000
+@@ -0,0 +1,1062 @@
++.Dd January 28, 2000
++.Dt MG 1
++.Os
++.Sh NAME
++.Nm mg
++.Nd an emacs clone (formerly named MicroGnuEmacs)
++.Sh SYNOPSIS
++.Nm
++.Op Ar file ...
++.Sh DESCRIPTION
++MG is a small, fast, and portable Emacs-style text editor intended to
++be used by people who can't run a real Emacs for one reason or another.
++.Pp
++We've made MG compatible with GNU Emacs because that is the big,
++full-featured editor that many use regularly and are most
++familiar with.
++.Pp
++MG runs on many different kinds of hardware under many different 
++operating systems.  A small and fast version compiled for MSDOS
++is available at ftp://ftp.cdrom.com/pub/simtelnet/msdos/editor/mg2a_exe.zip.
++.Sh Notation and Conventions
++To type a control character, use the control key on your
++keyboard like a shift key:  hold down the control key while typing the
++character.  We will indicate control characters as: 
++C-x ie, type the character x while holding down the control key.
++.Pp
++Some keyboards also have a meta key that works like the control
++key.  You can also use the escape key as a meta
++prefix; first type the escape, and then the character.  Meta
++characters will be indicated as M-x.
++.Pp
++Besides the meta prefix, two other characters are used as prefixes:
++C-x and C-h.  A few keys have special notation:  SPC is
++the space character, DEL is the delete or rubout character, RET
++is carriage return, and ESC is the escape character.  NUL is 
++the null character (ASCII 0), which is usually equivalent to either 
++C-SPC or C-@.
++.Pp
++Uppercase and lowercase characters are generally equivalent in command
++keystrokes.
++.Pp
++When you run MG from a shell, command line arguments are interpreted as the
++names of files you want to visit, or edit.  Each file is 
++read into a buffer in memory.  No changes are actually made to 
++the file until you ask it to be written out to disk.
++.Pp
++Within MG, the large top part of the screen serves as a window into
++the buffer being edited.  Below this is the mode line, which 
++displays the name of the buffer.  Finally, at the very bottom of the screen,
++there is a one-line minibuffer which is used for displaying
++messages and answering questions.
++.Pp
++MG keeps track of two pointers into each window, the point and the
++mark.  The cursor appears at the point in the current
++window, and we often speak of moving the cursor rather than of moving the
++point.  The text between the point and the mark is referred to as the
++region.
++.Pp
++Some commands deal with words and paragraphs.
++Generally, whitespace and punctuation separate words.  Lines that are
++empty or that contain only spaces or tabs separate paragraphs without
++being part of a paragraph.  A non-empty line that starts with a space
++or tab also begins a new paragraph. 
++.Pp
++A number of commands are defined as toggles.  If no prefix argument
++is supplied, these commands toggle an action.  The action is turned on if a 
++negative or zero argument is supplied, and turned on if a positive argument
++is supplied.
++.Sh Frequently used commands
++.Pp
++C-p move the cursor to the previous line
++.Pp
++C-n move the cursor to the next line
++.Pp
++C-b move the cursor backwards
++.Pp
++C-f move the cursor forwards
++.Pp
++C-v scroll forwards one screenful
++.Pp
++M-v scroll backwards one screenful
++.Pp
++M-< go to the beginning of the buffer
++.Pp
++M-> go to the end of the buffer
++.Pp
++C-a go to the beginning of the line
++.Pp
++C-e go to the end of the line
++.Pp
++DEL delete the previous character
++.Pp
++C-k kill (delete) to the end of line
++.Pp
++C-y reinsert killed text.
++.Pp
++C-x C-c exit MG
++.Pp
++C-x C-s save the current buffer
++.Sh Command Arguments
++MG prompts for command arguments in the minibuffer.  Within the minibuffer,
++the following characters can be used for editing:
++.Pp
++DEL or C-h erase the last character. 
++.Pp
++C-x or C-u erase the entire input line. 
++.Pp
++C-w erase to the beginning of the previous word. 
++.Pp
++C-q or \\ quote the next character typed. 
++.Pp
++RET signifies that you have completed typing in the argument. 
++.Pp
++C-g abort the command in progress.
++.Sh Prefix Arguments
++All commands accept an optional numeric prefix argument.  This is
++often interpreted as a repetition count.  For example, the function
++next-line, if given a prefix argument, will move the cursor
++forward that many lines; without an argument, it will move the cursor
++forward one line.  A few commands behave differently if given a prefix
++argument than they do without one, and others ignore the prefix
++argument entirely. 
++.Bl -tag -width indent
++.It digit-argument, M-# & negative-argument, M--
++One way to specify a command argument is to use the escape key
++as a meta prefix, and then type one or more digits.  A dash may be
++used for a negative argument (# = 0,1,2,3,4,5,6,7,8,9).
++.It universal-argument, C-u
++Another way to specify a command prefix is to type C-u.
++Typing one C-u is equivalent to a prefix argument of 4, typing
++two gives a value of 16, and so on.  In addition, you can type digits
++following C-u to form a numeric prefix argument.
++.Sh Aborting
++.It keyboard-quit, C-g
++Typing C-g cancels any command.  It is particularly useful
++for cancelling a command when MG is prompting for input in the minibuffer.
++.Sh Extended commands
++.It execute-extended-command, M-x
++Commands that are not bound to keys can be executed through 
++execute-extended-command.  If a prefix argument is supplied, it
++is passed to the command being executed.
++.Sh Moving the cursor
++.It backward-char, C-b
++Moves the cursor backward (left) one character.  If the cursor
++is at the left margin, it will be moved to the end of the previous line.
++.It backward-paragraph, M-[
++Moves the cursor backwards to the beginning of the current
++paragraph, or to the beginning of the previous paragraph if the cursor
++is already at the beginning of a paragraph.
++.It backward-word, M-b
++Moves the cursor backwards to the beginning of the current word,
++or to the beginning of the previous word if the cursor is already at
++the beginning of a word.
++.It beginning-of-buffer, M-<
++Moves the cursor backwards to the beginning of the buffer.
++.It beginning-of-line, C-a
++Moves the cursor backwards to the beginning of the current
++line.  This command has no effect if the cursor is already at the beginning
++of the line.
++.It end-of-buffer, M->
++Moves the cursor forwards to the end of the buffer.
++.It end-of-line, C-e
++Moves the cursor forwards to the end of the current line.  This
++command has no effect if the cursor is already at the end of the line.
++.It exchange-point-and-mark, C-x C-x
++Set the mark at the current cursor position, and move the cursor
++to the old location of the mark.
++.It forward-char, C-f
++Moves the cursor forwards one character.  If the cursor is at the
++end of a line, it will be moved to the first character on the next line.
++.It forward-paragraph, M-]
++Moves the cursor forwards to the next paragraph delimiter.
++.It forward-word, M-f
++Moves the cursor forwards to the end of the current word, or to
++the end of the next word if the cursor is already at the end of a word.
++.It goto-line
++Moves the cursor to the beginning of line the line number in
++the buffer.
++.It next-line, C-n
++Moves the cursor down one line.  The cursor remains in the same
++column unless it would be past the end of the line, in which case it is
++moved to the end of the line.  At the end of the buffer, C-n will
++create new lines.
++.It previous-line, C-p
++Moves the cursor up one line.    The cursor remains in the same
++column unless it would be past the end of the line, in which case it is
++moved to the end of the line.
++.It recenter, C-l
++Redraws the entire screen, scrolling the current window if necessary
++so that the cursor is near the center.  With a positive prefix argument 
++n, the window is scrolled so that the cursor is n lines
++from the top.  A negative prefix argument puts the cursor that many lines
++from the bottom of the window.
++.It redraw-display
++Redraws the entire screen, but never scrolls.
++.It scroll-down, M-v
++Scrolls the display down (moving backward through the
++buffer).  Without 
++an argument, it scrolls slightly less than one windowful.  A prefix argument
++scrolls that many lines.
++.It scroll-one-line-down & scroll-one-line-up
++These functions are similar to scroll-down and scroll-up, but when
++invoked without an argument, cause the display 
++to scroll by one line only.  These functions are enabled by defining the
++compile-time option GOSMACS.
++.It scroll-other-window, M-C-v
++Scrolls the other window forward as for scroll-up.
++.It scroll-up, C-v
++Scrolls the display up (moving forward through the buffer).  Without an
++an argument, it scrolls slightly less than one windowful.  A prefix argument
++scrolls that many lines.
++.It set-mark-command
++Set the mark at the current cursor position.
++.It what-cursor-position, C-x =
++Prints some information in the minibuffer about where the cursor is.
++.Sh Text Insertion Commands
++The usual way to insert text into a buffer is simply to type the
++characters.  The default binding for all of the printing characters
++self-insert-command causes them to be inserted literally at
++the cursor position. 
++.It insert
++Insert typed string into the current buffer at the cursor position.
++.It newline, RET
++Insert a line break into the current buffer at the cursor position,
++moving the cursor forward to the beginning of the new line.
++.It newline-and-indent, C-j
++Insert a line break into the current buffer at the cursor position,
++then add extra whitespace so that the cursor is aligned in the same
++column as the first non-whitespace character in the previous line.
++.It open-line, C-o
++Inserts a line break into the current buffer at the current position,
++but does not move the cursor forward.
++.It quoted-insert, C-q
++This command acts as a prefix to
++cancel the normal interpretation of the next keystroke.  If C-q
++is followed by one to three octal digits, it is interpreted as the
++code of the character to insert.  Otherwise a single key is read and
++the character typed is inserted into the buffer instead of interpreted
++as a command.  This is used for inserting literal control characters
++into a buffer. 
++.It self-insert-command
++This is the default binding for keys representing printable
++characters.  The character is inserted into the buffer at the cursor
++position, and the cursor moved forward.
++.Sh Killing, Deleting, and Moving Text
++When text is deleted, it is erased completely.  Killing text, on the
++other hand, moves it into a temporary storage area called the kill
++buffer.  The saved text in the kill buffer is erased when another
++block of text is killed.  Until then, however, you can retrieve text
++from the kill buffer.  This can be used to move or copy blocks of
++text, as well as to restore accidentally killed text.
++.It backward-kill-word, M-DEL
++Kill the text backwards from the cursor position to the beginning
++of the current word.  Typing M-DEL several times in succession 
++prepends each killed word to the kill buffer.
++.It copy-region-as-kill, M-w
++Copies the text in the region into the kill buffer, without removing
++it from the current buffer.
++.It delete-backward-char, DEL
++Deletes the character to the left of the cursor.
++.It delete-blank-lines, C-x C-o
++Deletes all blank lines after the current line, and if the current
++line is blank, deletes it and all blank lines preceeding it as well.
++.It delete-char, C-d
++Deletes the character underneath the cursor.
++.It delete-horizontal-space, M-backslash
++Deletes all spaces and tabs on either side of the cursor.
++.It just-one-space, M-SPC
++This is like delete-horizontal-space, except it leaves a single
++space at the cursor position.
++.It kill-line, C-k
++If no prefix argument is specified, this function kills text up
++to the next newline; or if the cursor is at the end of a line, the newline
++is killed.  A prefix argument specifies how many lines to kill.  Typing
++C-k several times in succession appends each line to the kill buffer.
++.It kill-paragraph
++This command kills the entire paragraph containing the cursor.
++If the cursor is positioned between paragraphs, the next paragraph is killed.
++.It kill-region, C-w
++The region (all text between point and mark) is killed.
++.It kill-word, M-d
++Text is killed forward from the cursor position to the next
++end of word.  If the cursor is at the end of the word, then the next
++word is killed.  Typing M-d several times appends the killed
++text to the kill buffer.
++.It yank, C-y
++Text is copied from the kill buffer into the current buffer at
++the cursor position.  The cursor is moved to the end of the inserted
++text.
++.Sh Searching and Replacing
++The ordinary search command in MG differs from that in many other editors
++in that it is incremental:  it begins searching as soon as you begin
++typing the search string, instead of waiting for you to type the entire
++string.  All of the search commands described in this section are
++case-insensitive.
++.It isearch-backward, C-r & isearch-forward, C-s
++These commands perform an incremental search backward and 
++forward, respectively, for a typed pattern.  MG will move the cursor 
++to the place in the buffer that matches as much of the pattern as you 
++have typed so far, as each character is entered.
++.Pp
++Within the incremental search, the following characters are interpreted
++specially:
++.Pp
++\ DEL Erase the last character in the search string. 
++.Pp
++\ ESC Stop searching; exit from incremental search
++mode, leaving the cursor where the search brought it. 
++.Pp
++\ C-g If a match has been found, exits from
++incremental search but leaves the cursor in its original position.  If
++the search has failed, this will just erase the characters which have
++not been found from the end of the search pattern.  In this case, you
++must type C-g again to abort the search. 
++.Pp
++\ C-s Search forward for the next occurrence of the
++same pattern. 
++.Pp
++\ C-r Search backward for the previous occurrence of
++the same pattern. 
++.Pp
++\ C-q Quotes the next character typed, forcing it
++to be interpreted as a literal character in the search pattern.
++.Pp
++In addition, normal commands such as C-a that do not have special
++meanings within incremental search cause the search to be terminated, and
++then are executed in the ordinary way.
++.It search-again & search-backward, M-r & search-forward, M-s
++These commands perform ordinary, non-incremental searches.
++Search-again uses the same pattern and direction as the previous
++search.
++.Sh Replacing
++.It query-replace, M-%
++The primary replace command in MG is an interactive query replace.
++MG searches forward for occurrences of pattern, and asks you what
++to do about each one.  The choices are:
++.Pp
++SPC Replace this match with replacement,
++and go on to the next. 
++.Pp
++DEL Skip to the next match without replacing this one. 
++.Pp
++\ . Replace this match, and then quit. 
++.Pp
++! Replace all remaining occurrences without asking again. 
++.Pp
++ESC Quit.
++.Pp
++By default, query-replace adjusts the case of lower-case letters
++in the replacement string to match that of the
++particular occurrence of the pattern; for example, replacing Foo
++with bar results in Bar.  Upper case letters in the replacement
++string are always left uppercase.   In addition, supplying a prefix argument
++will also tell query-replace to leave the case of the replacement
++string as-is.
++.Pp
++Note that query-replace always performs a case-insensitive search.
++.Sh Regular Expressions
++Regular expressions provide a means for specifying complex search
++patterns, instead of just a literal string.  The commands in this
++section are available only if MG is compiled with the REGEX option
++defined. 
++.Pp
++Regular expression syntax uses the following rules.  Most characters
++in a regular expression are considered to be ordinary characters,
++and will match themselves and nothing else.  The exceptions are the
++special characters listed below.
++.Pp
++\ . Matches any single character except a newline.  
++.Pp
++* A suffix operator that matches zero or more
++repetitions of the (smallest) preceding regular expression. 
++.Pp
+++ A suffix operator that matches one or more
++repetitions of the (smallest) preceding regular expression. 
++.Pp
++? A suffix operator that matches either zero or one
++occurence of the (smallest) preceding regular expression. 
++.Pp
++[...] Matches any one character listed in the
++character set between the square brackets.  See examples below. 
++.Pp
++^ Matches at the beginning of a line. 
++.Pp
++dollar Matches at the end of a line. 
++.Pp
++\\ Except for the situations listed
++below, acts as a prefix operator which causes the character following
++to be treated as an ordinary character. 
++.Pp
++\\bar An infix binary or operator.
++It applies to the two largest surrounding expressions. 
++.Pp
++\\(...\\) A grouping construct,
++usually used to specify a larger expression for postfix operators such
++as * or to limit the scope of operands to \|. 
++.Pp
++\\# Matches the same text
++matched by the #_th \\(...\\) construct.  These are
++numbered from 1 to 9 in the order that the open-parentheses appear. 
++.It count-matches & count-non-matches
++These commands count the number of lines which do or do not
++(respectively) match the specified pattern.
++.It delete-matching-lines & delete-non-matching-lines
++These commands delete all lines which do or do not (respectively)
++match the specified pattern.
++.It query-replace-regexp
++This is the regular expression version of query-replace.
++The replacement string may be a constant, or it can refer to
++all or part of the string matched by the pattern.  \& in
++the replacement string expands into the entire text being replaced,
++while n (where n is a number) replaces the 
++n_th parenthesized expression in pattern.
++.It re-search-again & re-search-backward & re-search-forward
++These are the regular expression equivalents of the ordinary
++non-incremental search commands.
++.It set-case-fold-search
++This command toggles an internal variable that controls whether
++the regular expression search and replace commands pay attention to
++case.  By default, regular expression searches are case-insensitive.
++Ordinary searches are always case-insensitive and are not affected by
++the setting of this variable.
++.Pp
++See the latex version for the documentation for better description.
++.Sh Windows
++MG initially has only one text window displayed.  However, you can have
++as many windows as will fit on the screen.  Each window has its own mode
++line and must display at least two lines of text.  (Note that MG's
++windows are distinct from the windows handled by screen managers
++such as the X Window System.)
++.Pp
++Multiple windows may be used to display different buffers.  You can also
++have the same buffer displayed in more than one window, which is useful
++if you want to see one part of a file at the same time as you are editing
++another part.
++.Pp
++Although many windows can be displayed at once, only one window is active 
++at any given time.  This is the window where the cursor appears.
++.Pp
++Some commands refer to the other window.  This is the window directly
++below the current window, or the top window if you are in the bottom window.
++.It delete-other-windows, C-x 1
++Makes the current window the only window.
++.It delete-window, C-x 0
++Deletes the current window, making the other window the
++current window.  This command doesn't do anything useful if there is only
++one window being displayed.
++.It enlarge-window C-^
++Makes the current window larger.  Without a prefix argument, the
++window grows one line; otherwise, the prefix argument specifies how many
++lines to grow.
++.It other-window, C-x o
++Makes the other window the current window.
++.It previous-window
++This is like other-window, except that it cycles through
++the windows in reverse order.  This command is available only if MG was
++compiled with the GOSMACS option defined.
++.It shrink-window
++Makes the current window smaller.  Without a prefix argument, the
++window loses one line; otherwise, the prefix argument specifies how many
++lines go away.
++.It split-window-vertically, C-x 2
++Split the current window into two windows, both using the same
++buffer.
++.Sh Files and Buffers
++Most buffers are used to contain a file being edited.  It is
++also possible to have buffers that are not associated with any file;
++MG uses these for purposes such as displaying help text, for example.
++However, since most commands for dealing with files also deal with
++buffers, we have grouped all of these commands together into one chapter.
++.It insert-buffer
++Inserts the contents of the named buffer into the current buffer
++at the cursor location.  The cursor moves to the end of the inserted
++text.
++.It kill-buffer C-x k
++The named buffer and its contents are deleted.  If the buffer has
++been marked as modified, MG will ask you if you really want to delete it.
++Note that, contrary to its name, this command does not save the
++buffer contents in the kill buffer.
++If a buffer is being displayed in a window when it is deleted, MG will 
++find some other buffer to display in the same window.
++.It list-buffers, C-x C-b
++This command writes information about the buffers currently in
++use to a buffer named Buffer List.  This buffer is then displayed
++in the other window; if there is only one window, this command will
++split the screen into two windows.
++.It not-modified, M-~
++This command makes MG think that the current buffer has not been
++modified, even if it really has been changed.  This affects the behavior
++of the kill-buffer and the buffer-saving commands described below.
++.Pp
++MG indicates modified buffers with two stars at the left end of the mode
++line.
++.It switch-to-buffer, C-x b
++The current window is mapped onto the named buffer.  If there
++isn't already a buffer with that name around, MG will create one.
++.It switch-to-buffer-other-window, C-x 4 b
++This command works like switch-to-buffer, except that the
++other window is used.  If there is only one window, this command
++splits the screen into two windows and maps the named buffer onto one
++of them.
++.Sh Reading and Writing Files
++.It find-file C-x f & find-file-other-window C-x 4 C-f
++These commands are analagous to switch-to-buffer and
++switch-to-buffer-other-window, respectively.  The difference is that
++these commands look for a buffer associated with the named file.  If no
++matching buffer is found, MG will create a new buffer with a name
++derived from the filename, and attempt to read the file into the buffer.
++If the named file cannot be opened, the buffer remains empty.
++.It insert-file C-x i
++This command reads in the contents of the named file into the
++current buffer at the cursor position.  The cursor remains in the same
++place.
++.It save-buffer, C-x C-s
++If the current buffer has been modified, it is saved.  Buffers
++that are not associated with files cannot be written out with this
++command.
++.It save-buffers-kill-emacs, C-x C-c
++This command is used to leave MG and return control to the shell
++or other program that was used to start MG.  If there are modified buffers,
++MG will ask you if you want to save them before exiting.
++.It save-some-buffers, C-x s
++MG will ask you if you want to save modified buffers that are
++associated with files.
++.It write-file C-x C-w
++The current buffer is written out using the file name supplied.
++This is useful for saving buffers that are not associated with files, or
++for writing out a file with a different name than what was used to read
++it in.
++.Sh Backup Files
++MG provides a way to save a copy of the original version of files which 
++have been modified and then written out again.  The backup copy reflects
++the state of the file as it existed the first time it was read into MG.
++The name used for the backup file varies, depending on the operating
++system.
++.Pp
++This feature is disabled if MG is compiled with NO_BACKUP defined.
++.It make-backup-files
++This command is a toggle which
++controls the state of an internal variable that determines whether MG
++creates backup files. 
++.Sh Changing the Directory
++The commands in this section are disabled by defining NO_DIR.
++.It cd
++This command changes MG's notion of the current directory
++or pathname.  This is used to supply defaults for functions that read 
++or write files.
++.It pwd
++Display what MG thinks is the current directory.
++.Sh Modes
++Modes are used to locally alter the bindings of keys on a 
++buffer-by-buffer basis.  MG is normally in fundamental mode, and these
++are the bindings that are listed with the command descriptions in 
++this manual.  Modes define additional keymaps that are searched for
++bindings before the fundamental mode bindings are examined; see the
++section on key binding below for more details on how this works.
++.It set-default-mode
++Normally, when MG visits a file, it puts the associated buffer
++into fundamental mode.  Using the set-default-mode command, you
++can specify that MG should default to use some other mode on all subsequent
++buffers that are created.  This command is a toggle.  With no prefix
++argument, if the named mode is not already on the list of
++default modes, then it will be added to the list; otherwise, it is removed
++from the list.
++.It no-tab-mode
++This command is a toggle to control whether notab mode is in effect.
++In notab mode, tabs are expanded into spaces instead of inserted
++literally into the buffer.  Literal tab characters are displayed as
++^I (much like other control characters).  These commands are
++available if MG is compiled with the symbol NOTAB defined.  (This mode
++is mainly for use on systems such as PRIMOS that do not treat tab as a
++series of spaces.)
++.It space-to-tabstop
++Insert enough spaces to move the cursor to the next tab stop.  In
++notab mode, this function is bound to C-i.
++.It overwrite-mode
++This command is a toggle which controls whether overwrite mode is
++in effect.
++Normally, when characters are inserted into the buffer, they are spliced
++into the existing text.  In overwrite mode, inserting a character causes
++the character already at the cursor position to be replaced.  This is
++useful for editing pictures, tables, and the like.
++.It auto-fill-mode
++This command is a toggle which controls whether fill mode is
++in effect.
++Fill mode causes newlines to be added automatically at word
++breaks when text is added at the end of a line, extending past the
++right margin.  Auto fill is useful for editing text and documentation
++files.
++.It insert-with-wrap
++This command works like self-insert, except that it checks
++to see if the cursor has passed the right margin.  If so, it fills
++the line by inserting a line break between words.  This command is bound to 
++SPC in fill mode.
++.It fill-paragraph, M-q
++Fill the paragraph containing the cursor.
++.It set-fill-column, C-x f
++Without a prefix argument, this command sets the right margin
++at the current cursor column.  If a prefix argument is supplied, it is used
++instead as the line width.
++.It auto-indent-mode
++This command is a toggle which controls whether auto-indent mode
++is in effect.
++Indent mode binds RET to newline-and-indent, so
++that each new line is indented to the same level as the preceeding
++line.  This mode is useful for editing code. 
++.It blink-matching-paren
++This command is a toggle which controls whether blink mode is
++in effect.
++Blink mode makes it easier to match parentheses, brackets, and other
++paired delimiters.  When the closing delimiter is typed, the cursor
++moves momentarily to the matching opening delimiter (if it is on the
++screen), or displays the line containing the matching delimiter on the
++echo line.  This is useful for editing Lisp or C code, or for
++preparing input files for text processors such as LaTeX that use
++paired delimiters. 
++.It blink-matching-paren-hack
++This function behaves like self-insert, except that it
++finds the matching delimiter as described above.  In blink mode, this
++function is bound to ), which flashes the matching (.  This
++function also knows about the pairs {}, [], and <>.
++All other characters match with themselves.
++.Sh Dired Mode
++Dired is an abbreviation for directory editor, and it provides a way
++to browse through the contents of a directory from with MG.  Dired puts
++a directory listing into a buffer; you can use normal editing commands to
++move around the buffer, and a special group of commands to manipulate
++the files.  For example, there are commands to delete and rename files,
++and to read a file into an MG buffer.
++.Pp
++Since dired mode rebinds many keys, a table may be helpful:
++.Pp
++    C-d      dired-flag-file-deleted
++.Pp
++    SPC      next-line
++.Pp
++    c        dired-copy-file
++.Pp
++    d        dired-flag-file-deleted
++.Pp
++    e        dired-find-file
++.Pp
++    f        dired-find-file
++.Pp
++    n        next-line
++.Pp
++    o        dired-find-file-other-window
++.Pp
++    p        previous-line
++.Pp
++    r        dired-renamefile
++.Pp
++    u        dired-unflag
++.Pp
++    x        dired-do-deletions
++.Pp
++    DEL      dired-backup-unflag
++.Pp
++The commands in this section are disabled by defining NO_DIRED.
++.It dired C-x d
++Creates a dired buffer for the given directory name, and displays
++it in the current window.  The files
++in the directory are listed, usually along with information about the
++file such as its size and timestamp.  The exact format of the information
++is system-specific.
++.It dired-backup-unflag
++This function removes the deletion flag from the file listed on
++the previous line of the dired buffer.
++.It dired-copy-file
++Copy the file listed on the current line of the dired buffer.
++.It dired-do-deletions
++Deletes the files that have been flagged for deletion.
++.It dired-find-file & dired-find-file-other-window
++These function works like find-file and find-file-other-window,
++except that the filename is taken 
++from the current line in the dired buffer.
++.It dired-flag-file-deleted
++Flag the file listed on the current line for deletion.  This is
++indicated in the buffer by putting a D at the left margin.  No
++files are not actually deleted until the function dired-do-deletions
++is executed.
++.It dired-other-window
++This function works just like dired, except that it puts the
++dired buffer in the other window.
++.It dired-rename-file
++Renames the file listed on the current line of the dired buffer.  
++Note that the dired buffer is not updated to reflect the change.
++.It dired-unflag
++Remove the deletion flag for the file on the current line.
++.Sh Help
++Most of the commands in this section write useful information to the
++*help* buffer, which is then displayed in the other window.
++.Pp
++These commands can be disabled at compile-time by defining NO_HELP.
++.It apropos, C-h a
++This command lists all functions whose names contain a string
++matching topic in the help buffer.
++.It describe-bindings, C-h b
++Information about the key bindings in effect in the current buffer
++is listed in the help buffer.
++.It describe-key-briefly, C-h c
++Information about the binding of ke is printed in the
++minibuffer.
++.It help-help, C-h C-h
++This command lists all of the help options available and
++prompts for which one to run.  Currently, these include only a
++to run apropos, b to run describe-bindings, and c
++to run describe-key-briefly.
++.Sh Keyboard Macros
++A keyboard macro is a saved set of commands from the keyboard that can be
++reexecuted later on.  There can only be one keyboard macro defined at
++any one time.
++.Pp
++The commands in this section are available unless they have been disabled
++by defining NO_MACRO.
++.It call-last-kbd-macro, C-x e
++Execute the saved keyboard macro.  A prefix argument can be used
++to specify a repetition count.
++.It end-kbd-macro, C-x ) & start-kbd-macro, C-x (
++These functions are used to define a keyboard macro.  All keys
++entered after start-kbd-macro is executed, up to a end-kbd-macro,
++are remembered as they are executed.  You can then reexecute the same
++sequence of operations using call-last-kbd-macro.
++.Sh Changing Case
++MG provides a number of functions for changing the case of text.
++.It
++capitalize-word, M-c
++.It
++downcase-region, C-x C-l
++.It
++downcase-word, M-l
++.It
++upcase-region, C-x C-u
++.It
++upcase-word, M-u
++.Sh Odds and Ends
++This section describes miscellaneous commands that don't fit into any
++particular category.
++.It emacs-version
++Prints information about the version of MG you are running in
++the minibuffer.
++.It meta-key-mode
++If the particular version of MG you are running supports a meta key,
++this function can be used to determine whether MG actually pays attention
++to it or not.  If no prefix argument is supplied, the internal variable
++that controls the use of the meta key is toggled; a positive value enables
++the meta key, while a negative value disables it.
++.It prefix-region & set-prefix-string
++Prefix-region is used to prefix each line of the region
++with a string.  This is useful for indenting quoted text, making block
++comments, and the like.  The function set-prefix-string can be
++used to set the string used as the prefix.
++.It suspend-emacs, C-z
++This command temporarily suspends
++MG so that you can run other programs, and later resume editing.  The
++exact behavior depends on which operating system you are running MG
++under.  Typically, MG will either spawn a new shell as a subprocess, or
++return you to the parent process.
++.It transpose-chars, C-t
++This command transposes the previous two characters.
++.Sh Customization
++MG provides a limited support for customization.  However, unlike real 
++Emacs, there is no extension language for interpretively defining new 
++functions.
++.Sh Key Bindings
++MG allows keys to be rebound locally or globally.  To understand the
++difference between the two, some discussion on how modes are implemented
++is necessary.
++.Pp
++An internal data structure called a keymap is used to look up the
++function that is bound to a particular key.  The keymap for
++fundamental mode contains all of the default bindings which are listed
++with the command descriptions in this manual.  Modes define additional
++keymaps that are searched for a binding before the fundamental mode
++keymap is examined.  Keymaps have the same name as the mode they are
++associated with.
++.Pp
++MG does not provide commands for defining new modes, but you can alter
++the keymaps for existing modes.
++.It define-key
++This command can be used to modify the keymap for the named mode.
++.It global-set-key & global-unset-key
++These commands modify the keymap for fundamental mode.  Bindings
++established by global-set-key will be inherited by all other modes, 
++as long as they do not establish local rebindings of the same key.
++.It local-set-key & local-unset-key
++These commands modify the keymap currently in effect.
++.Sh Startup Files
++Although MG does not include a general-purpose extension language, it
++does provide a way to read and evaluate commands using a somewhat
++different syntax than that used for executing extended commands.  This
++is typically used in a startup file to modify key bindings.
++.Pp
++A startup file consists of one or more expressions.  Each expression must
++appear on a separate line in the file; there may not be more than one
++expression per line, nor may expressions span across line breaks.
++Whitespace (spaces and tabs) separate the tokens in an expression.  For
++historical reasons, parentheses are also considered to be whitespace in
++this context.  A semicolon acts as a comment character, causing the rest
++of the line to be discarded.
++.Pp
++An expression consists of a function name, an optional prefix argument
++(given as an integer constant), and arguments to be passed to the
++function.  If an argument includes literal whitespace or nonprintable
++characters (for example, as in a keystroke argument to one of the key
++binding functions described in the previous section), it must be
++supplied as a string constant enclosed in double quotes. 
++.Pp
++The following commands which deal with evaluation of expressions are
++disabled by defining the compile-time option NO_STARTUP.  See the
++implementation notes for your particular version of MG for information
++on how it handles startup files. 
++.It eval-current-buffer
++Evaluate the expressions in the current buffer.
++.It eval-expression
++Evaluate the expression supplied.
++.It load
++Read in the specified file and evaluate its contents.
++.El
++.Sh Fundamental Mode Key Bindings
++.Pp
++NUL       set-mark-command
++.Pp
++C-a       beginning-of-line
++.Pp
++C-b       backward-char
++.Pp
++C-d       delete-char
++.Pp
++C-e       end-of-line
++.Pp
++C-f       forward-char
++.Pp
++C-g       keyboard-quit
++.Pp
++C-h       help
++.Pp
++TAB       self-insert-command
++.Pp
++C-j       newline-and-indent
++.Pp
++C-k       kill-line
++.Pp
++C-l       recenter
++.Pp
++RET       newline
++.Pp
++C-n       next-line
++.Pp
++C-o       open-line
++.Pp
++C-p       previous-line
++.Pp
++C-q       quoted-insert
++.Pp
++C-r       isearch-backward
++.Pp
++C-s       isearch-forward
++.Pp
++C-t       transpose-chars
++.Pp
++C-u       universal-argument
++.Pp
++C-v       scroll-up
++.Pp
++C-w       kill-region
++.Pp
++C-x       c-x prefix
++.Pp
++C-y       yank
++.Pp
++C-z       suspend-emacs
++.Pp
++ESC       meta prefix
++.Pp
++SPC .. ~  self-insert-command
++.Pp
++DEL       delete-backward-char
++.Pp
++C-h C-g   keyboard-quit
++.Pp
++C-h C-h   help-help
++.Pp
++C-h a     apropos
++.Pp
++C-h b     describe-bindings
++.Pp
++C-h c     describe-key-briefly
++.Pp
++C-x C-b   list-buffers
++.Pp
++C-x C-c   save-buffers-kill-emacs
++.Pp
++C-x C-f   find-file
++.Pp
++C-x C-g   keyboard-quit
++.Pp
++C-x C-l   downcase-region
++.Pp
++C-x C-o   delete-blank-lines
++.Pp
++C-x C-s   save-buffer
++.Pp
++C-x C-u   upcase-region
++.Pp
++C-x C-w   write-file
++.Pp
++C-x C-x   exchange-point-and-mark
++.Pp
++C-x (     start-kbd-macro
++.Pp
++C-x )     end-kbd-macro
++.Pp
++C-x 0     delete-window
++.Pp
++C-x 1     delete-other-windows
++.Pp
++C-x 2     split-window-vertically
++.Pp
++C-x 4     c-x 4 prefix
++.Pp
++C-x =     what-cursor-position
++.Pp
++C-x ^     enlarge-window
++.Pp
++C-x b     switch-to-buffer
++.Pp
++C-x d     dired
++.Pp
++C-x e     call-last-kbd-macro
++.Pp
++C-x f     set-fill-column
++.Pp
++C-x i     insert-file
++.Pp
++C-x k     kill-buffer
++.Pp
++C-x o     other-window
++.Pp
++C-x s     save-some-buffers
++.Pp
++C-x 4 C-f find-file-other-window
++.Pp
++C-x 4 C-g keyboard-quit
++.Pp
++C-x 4 b   switch-to-buffer-other-window
++.Pp
++C-x 4 f   find-file-other-window
++.Pp
++M-C-g     keyboard-quit
++.Pp
++M-C-v     scroll-other-window
++.Pp
++M-SPC     just-one-space
++.Pp
++M-%       query-replace
++.Pp
++M--       negative-argument
++.Pp
++M-0       digit-argument
++.Pp
++M-1       digit-argument
++.Pp
++M-2       digit-argument
++.Pp
++M-3       digit-argument
++.Pp
++M-4       digit-argument
++.Pp
++M-5       digit-argument
++.Pp
++M-6       digit-argument
++.Pp
++M-7       digit-argument
++.Pp
++M-8       digit-argument
++.Pp
++M-9       digit-argument
++.Pp
++M-<       beginning-of-buffer
++.Pp
++M->       end-of-buffer
++.Pp
++M-[       backward-paragraph
++.Pp
++M-\       delete-horizontal-space
++.Pp
++M-]       forward-paragraph
++.Pp
++M-b       backward-word
++.Pp
++M-c       capitalize-word
++.Pp
++M-d       kill-word
++.Pp
++M-f       forward-word
++.Pp
++M-l       downcase-word
++.Pp
++M-q       fill-paragraph
++.Pp
++M-r       search-backward
++.Pp
++M-s       search-forward
++.Pp
++M-u       upcase-word
++.Pp
++M-v       scroll-down
++.Pp
++M-w       copy-region-as-kill
++.Pp
++M-x       execute-extended-command
++.Pp
++M-~       not-modified
++.Pp
++M-DEL     backward-kill-word
++.Pp
++.Sh Bugs and Limitations
++Some listed in the LaTeX documentation.  A few path-length issues,
++like not being able to handle files with too great a path length.
++An irritating behavior that arrow keys leave their control characters
++(sans the leading escape) when pressed during incremental-search.
++.Sh History
++The original authors of mg2a were 
++Bob Larson, Mic Kaczmarczik, Mike Meyer, Sandra Loosemore,
++Michael Portuesi, Stephen Walton, Marion Hakanson, Dave Brower,
++Jeff Siegal, and John P. Nelson.
++It was posted to the comp.sources.misc mailing list of Usenet
++sometime around 1988. Original sources
++available at ftp://ftp.cdrom.com/pub/c-unix/editors/mg2a.tar.Z
++or in ftp://www.leo.org/pub/comp/usenet/comp.sources.misc/mg2a.
++.Pp
++Modified for NetBSD by John P. Refling as follows:
++.Pp
++December 1999 (version 1.00)
++.Pp
++Port to NetBSD (not much to do there) and a change to the
++mg.rc startup file name and search paths (searches the directory
++where the executable is first).
++Also hastily turned the LaTeX documentation written by Sandra J
++Loosemore in 1987 into this manpage.
++.Pp
++January 2000 (version 1.10):
++.Pp
++Journaling:
++if a subdirectory named .journal exists in the directory of the
++edited file fn, the edited file is copied into the .journal
++subdirectory as fn-@# before the new version is written out.
++The # is the system time in seconds since January 1, 1970.
++This feature creates a transparent backup chain of all files
++edited within a selected directory.  If the edited file did not exist
++at the start of the editing session, a zero length fn-@# file is created.
++.Pp
++If the environment variable MG_DOT_ORIG is set, then the edited
++file fn is copied to a fn.orig file, only if a fn.orig file does not already exist.
++Helpful for creating diffs.  If the edit file itself does not exist
++prior to the editing session, a fn.orig file is touched.
++.Pp
++All these actions are indicated in the information bar when the
++file is being saved: `Wrote (o+j) filename....' o indicates that a
++fn.orig was created, and j indicates that a time stamped copy was
++made in the .journal directory.
