@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.177.2.1 2004/11/22 22:48:05 tv Exp $
+# $NetBSD: bsd.prefs.mk,v 1.177.2.2 2004/11/23 17:15:22 tv Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -286,9 +286,12 @@ SHAREMODE?=		${DOCMODE}
 
 PKGDIRMODE?=		755
 
-.if make(package) || make(real-su-package) || make(show-var) || make(show-vars)
+.if make(package) || make(real-su-package) || \
+    make(show-var) || make(show-vars)
 PKG_PHASES=	fetch checksum depends extract patch tools wrapper configure build test install package
-.elif make(install) || make (real-su-install) || make(replace) || make(real-su-replace)
+.elif make(install) || make (real-su-install) || \
+      make(replace) || make(real-su-replace) || \
+      make(plist) || make(do-shlib-handling)
 PKG_PHASES=	fetch checksum depends extract patch tools wrapper configure build test install
 .elif make(test)
 PKG_PHASES=	fetch checksum depends extract patch tools wrapper configure build test
