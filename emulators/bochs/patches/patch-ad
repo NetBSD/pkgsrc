@@ -1,16 +1,7 @@
-$NetBSD: patch-ad,v 1.3 2002/05/14 13:52:52 fredb Exp $
+$NetBSD: patch-ad,v 1.4 2002/07/12 03:39:16 itojun Exp $
 
 --- iodev/cdrom.cc.orig	Tue Mar 19 19:24:16 2002
 +++ iodev/cdrom.cc
-@@ -65,7 +65,7 @@
- #define BX_CD_FRAMESIZE 2048
- #endif
- 
--#if (defined(__OpenBSD__) || defined(__FreeBSD__))
-+#if (defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__NetBSD__))
- // OpenBSD pre version 2.7 may require extern "C" { } structure around
- // all the includes, because the i386 sys/disklabel.h contains code which 
- // c++ considers invalid.
 @@ -357,6 +357,22 @@
      return(true);
  }
@@ -34,21 +25,3 @@ $NetBSD: patch-ad,v 1.3 2002/05/14 13:52:52 fredb Exp $
  
    void
  cdrom_interface::eject_cdrom()
-@@ -365,7 +381,7 @@
-   // some ioctl() calls to really eject the CD as well.
- 
-   if (fd >= 0) {
--#if (defined(__OpenBSD__) || defined(__FreeBSD__))
-+#if (defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__NetBSD__))
-     (void) ioctl (fd, CDIOCALLOW);
-     if (ioctl (fd, CDIOCEJECT) < 0)
- 	  BX_DEBUG(( "eject_cdrom: eject returns error." ));
-@@ -495,7 +511,7 @@
- 
-   return true;
-   }
--#elif (defined(__OpenBSD__) || defined(__FreeBSD__))
-+#elif (defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__NetBSD__))
-   {
-   struct ioc_toc_header h;
-   struct ioc_read_toc_entry t;
