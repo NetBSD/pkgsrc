@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:19:22 zuntum Exp $
+bin/xalarm
+bin/xfortune
+bin/xmemo
+bin/xyow
+lib/X11/app-defaults/XAlarm
+lib/X11/app-defaults/XAlarm-color
+man/cat1/xalarm.0
+man/cat1/xfortune.0
+man/cat1/xmemo.0
+man/cat1/xyow.0
