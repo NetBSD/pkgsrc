@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6919 2004/08/17 05:36:37 cube Exp $
+$NetBSD: CHANGES,v 1.6920 2004/08/17 09:15:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3876,3 +3876,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated liferea to 0.5.3 [minskim 2004-08-17]
 	Updated metacity to 2.8.3 [ben 2004-08-17]
 	Updated edict to 2004.002 [cube 2004-08-17]
+	Updated scmxx to 0.7.3 [wiz 2004-08-17]
