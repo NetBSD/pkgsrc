@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:26 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/19 04:39:09 mycroft Exp $
 bin/rep
 bin/rep-config
 bin/rep-remote
@@ -80,6 +80,7 @@ libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/timers.la
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/timers.a
 libexec/rep/${REP_VERS}/${MACHINE_GNU_PLATFORM}/timers.so
 share/aclocal/rep.m4
+share/emacs/site-lisp/rep-debugger.el
 share/rep/${REP_VERS}/lisp/cgi-get.jl
 share/rep/${REP_VERS}/lisp/cgi-get.jlc
 share/rep/${REP_VERS}/lisp/compiler.jl
