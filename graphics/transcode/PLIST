@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/09/22 10:45:20 seb Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/12/26 12:40:39 jmmv Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
@@ -12,15 +12,17 @@ bin/tcmodinfo
 bin/tcmp3cut
 bin/tcmplex
 bin/tcprobe
+bin/tcrequant
 bin/tcscan
 bin/tcxmlcheck
+bin/tcxpm2rgb
 bin/transcode
 lib/transcode/a52_decore.la
 lib/transcode/a52_decore.so
 lib/transcode/af6_decore.la
 lib/transcode/af6_decore.so
-lib/transcode/export_ac3.so
 lib/transcode/export_ac3.la
+lib/transcode/export_ac3.so
 lib/transcode/export_af6.conf
 lib/transcode/export_debugppm.la
 lib/transcode/export_debugppm.so
@@ -32,8 +34,8 @@ lib/transcode/export_divx5.la
 lib/transcode/export_divx5.so
 lib/transcode/export_divx5raw.la
 lib/transcode/export_divx5raw.so
-lib/transcode/export_ffmpeg.a
 lib/transcode/export_ffmpeg.la
+lib/transcode/export_ffmpeg.so
 lib/transcode/export_im.la
 lib/transcode/export_im.so
 lib/transcode/export_jpg.la
@@ -62,19 +64,17 @@ lib/transcode/export_ppm.la
 lib/transcode/export_ppm.so
 lib/transcode/export_raw.la
 lib/transcode/export_raw.so
-lib/transcode/export_sampeg.la
-lib/transcode/export_sampeg.so
 lib/transcode/export_toolame.la
 lib/transcode/export_toolame.so
 lib/transcode/export_wav.la
 lib/transcode/export_wav.so
 lib/transcode/export_xvid.so
-lib/transcode/export_xvid2.a
 lib/transcode/export_xvid2.la
-lib/transcode/export_xvid3.a
+lib/transcode/export_xvid2.so
 lib/transcode/export_xvid3.la
-lib/transcode/export_xvid4.a
+lib/transcode/export_xvid3.so
 lib/transcode/export_xvid4.la
+lib/transcode/export_xvid4.so
 lib/transcode/export_yuv4mpeg.a
 lib/transcode/export_yuv4mpeg.la
 lib/transcode/filter_29to23.la
@@ -99,6 +99,8 @@ lib/transcode/filter_cut.la
 lib/transcode/filter_cut.so
 lib/transcode/filter_decimate.la
 lib/transcode/filter_decimate.so
+lib/transcode/filter_detectclipping.la
+lib/transcode/filter_detectclipping.so
 lib/transcode/filter_detectsilence.la
 lib/transcode/filter_detectsilence.so
 lib/transcode/filter_dilyuvmmx.la
@@ -142,8 +144,8 @@ lib/transcode/filter_normalize.la
 lib/transcode/filter_normalize.so
 lib/transcode/filter_null.la
 lib/transcode/filter_null.so
-lib/transcode/${FILTERPV}
 lib/transcode/filter_pv.la
+lib/transcode/filter_pv.so
 lib/transcode/filter_resample.la
 lib/transcode/filter_resample.so
 lib/transcode/filter_skip.la
@@ -158,8 +160,6 @@ lib/transcode/filter_smartyuv.la
 lib/transcode/filter_smartyuv.so
 lib/transcode/filter_smooth.la
 lib/transcode/filter_smooth.so
-lib/transcode/filter_subtitler.la
-lib/transcode/filter_subtitler.so
 lib/transcode/filter_tc_audio.la
 lib/transcode/filter_tc_audio.so
 lib/transcode/filter_tc_video.la
@@ -172,6 +172,8 @@ lib/transcode/filter_unsharp.la
 lib/transcode/filter_unsharp.so
 lib/transcode/filter_videocore.la
 lib/transcode/filter_videocore.so
+lib/transcode/filter_whitebalance.la
+lib/transcode/filter_whitebalance.so
 lib/transcode/filter_xsharpen.la
 lib/transcode/filter_xsharpen.so
 lib/transcode/filter_yuvdenoise.la
@@ -222,6 +224,8 @@ lib/transcode/import_rawlist.la
 lib/transcode/import_rawlist.so
 lib/transcode/import_vdrac3.la
 lib/transcode/import_vdrac3.so
+lib/transcode/import_vnc.la
+lib/transcode/import_vnc.so
 lib/transcode/import_vob.la
 lib/transcode/import_vob.so
 lib/transcode/import_xml.la
@@ -248,21 +252,26 @@ man/man1/tcdemux.1
 man/man1/tcextract.1
 man/man1/tcmodinfo.1
 man/man1/tcprobe.1
+man/man1/tcpvmexportd.1
 man/man1/tcscan.1
 man/man1/tcxmlcheck.1
 man/man1/transcode.1
+share/doc/transcode/ChangeLog
 share/doc/transcode/OPTIMIZERS
 share/doc/transcode/README.Inverse.Telecine.txt
 share/doc/transcode/README.cluster
+share/doc/transcode/README.filter.modfps
 share/doc/transcode/README.rip
 share/doc/transcode/README.sync
 share/doc/transcode/README.vcd
+share/doc/transcode/README.xvid-credits
 share/doc/transcode/architecture.txt
 share/doc/transcode/avi_comments.txt
 share/doc/transcode/clone.txt
 share/doc/transcode/export-API.txt
 share/doc/transcode/export_ffmpeg.txt
 share/doc/transcode/export_mpeg.txt
+share/doc/transcode/export_pvm.txt
 share/doc/transcode/filter-API.txt
 share/doc/transcode/filter-socket.txt
 share/doc/transcode/filter_dnr.txt
@@ -330,6 +339,7 @@ share/doc/transcode/html/tc.png
 share/doc/transcode/import-API.txt
 share/doc/transcode/import-xml.txt
 share/doc/transcode/import_nvrec.txt
+share/doc/transcode/pvm.cfg
 share/doc/transcode/template.cfg.txt
 @dirrm share/doc/transcode/html
 @dirrm share/doc/transcode
