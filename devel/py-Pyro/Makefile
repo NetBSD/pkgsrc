@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/12/31 10:13:56 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/07 16:17:42 darcy Exp $
 #
 
 DISTNAME=		Pyro-3.4
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pyro/}
 
@@ -13,6 +14,20 @@ COMMENT=		Distributed Object Technology system in Python
 USE_BUILDLINK3=		yes
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
+PLIST_SUBST+=		PYVERSSUFFIX="-${PYVERSSUFFIX}"
+MAKE_ENV+=			PKGSRC="1" PYVERSSUFFIX="-${PYVERSSUFFIX}"
+post-extract:
+	cd ${WRKSRC}/bin; \
+	${MV} es es-${PYVERSSUFFIX}; \
+	${MV} esd esd-${PYVERSSUFFIX}; \
+	${MV} genguid genguid-${PYVERSSUFFIX}; \
+	${MV} ns ns-${PYVERSSUFFIX}; \
+	${MV} nsc nsc-${PYVERSSUFFIX}; \
+	${MV} nsd nsd-${PYVERSSUFFIX}; \
+	${MV} pyroc pyroc-${PYVERSSUFFIX}; \
+	${MV} rns rns-${PYVERSSUFFIX}; \
+	${MV} wxnsc wxnsc-${PYVERSSUFFIX}; \
+	${MV} xnsc xnsc-${PYVERSSUFFIX}
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

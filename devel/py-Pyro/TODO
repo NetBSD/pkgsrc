@@ -1,8 +1,0 @@
-$Id: TODO,v 1.1.1.1 2004/12/31 10:13:57 darcy Exp $
-
-Make scripts installed with ${PYPKGSUFX} so they don't conflict each other
-when it is installed for >1 versions of Python.
-
-(same as wip/py-twisted)
-
-	-- dotz@irc.pl
