@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8782 2005/01/17 07:56:28 adrianp Exp $
+$NetBSD: CHANGES,v 1.8783 2005/01/17 09:49:45 seb Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -345,3 +345,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-SVN-Mirror to 0.54 [epg 2005-01-16]
 	Updated libxml2 to 2.6.17 [recht 2005-01-16]
 	Updated svk to 0.28 [epg 2005-01-16]
+	Added amarok-1.1.1 [seb 2005-01-17]
