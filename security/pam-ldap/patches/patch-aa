@@ -1,23 +1,65 @@
-$NetBSD: patch-aa,v 1.2 2002/07/13 21:35:15 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2004/11/19 19:08:43 jlam Exp $
 
---- Makefile.in.orig	Fri Jun 28 06:21:15 2002
+--- Makefile.in.orig	2004-09-30 22:33:14.000000000 -0400
 +++ Makefile.in
-@@ -365,16 +365,13 @@
- install-exec-local: pam_ldap.so
+@@ -70,7 +70,7 @@ PACKAGE = @PACKAGE@
+ VERSION = @VERSION@
+ pam_ldap_so_LD = @pam_ldap_so_LD@
+ 
+-noinst_PROGRAMS = pam_ldap.so
++noinst_PROGRAMS = pam_ldap.la
+ EXTRA_DIST = COPYING.LIB CVSVersionInfo.txt ChangeLog README 	     ldap.conf pam.conf pam_ldap.spec pam.d
+ 
+ 
+@@ -98,6 +98,7 @@ pam_ldap_so_OBJECTS =  pam_ldap.o md5.o
+ pam_ldap_so_LDADD = $(LDADD)
+ pam_ldap_so_DEPENDENCIES = 
+ CFLAGS = @CFLAGS@
++LTCOMPILE = $(SHLIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+ DIST_COMMON =  README ./stamp-h.in AUTHORS COPYING COPYING.LIB ChangeLog \
+@@ -116,7 +117,7 @@ OBJECTS = $(pam_ldap_so_OBJECTS)
+ 
+ all: all-redirect
+ .SUFFIXES:
+-.SUFFIXES: .S .c .o .s
++.SUFFIXES: .S .c .lo .o .s
+ $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+ 	cd $(top_srcdir) && $(AUTOMAKE) --gnu Makefile
+ 
+@@ -185,6 +186,9 @@ distclean-compile:
+ 
+ maintainer-clean-compile:
+ 
++pam_ldap.la: $(pam_ldap_so_OBJECTS:.o=.lo) $(pam_ldap_so_DEPENDENCIES)
++	$(SHLIBTOOL) --mode=link $(CC) $(AM_LDFLAGS) $(LDFLAGS) $(pam_ldap_so_LDFLAGS) $(pam_ldap_so_OBJECTS:.o=.lo) -module -avoid-version -rpath $(libdir)/security -o $@ $(pam_ldap_so_LDADD) $(LIBS)
++
+ pam_ldap.so: $(pam_ldap_so_OBJECTS) $(pam_ldap_so_DEPENDENCIES)
+ 	@rm -f pam_ldap.so
+ 	$(LINK) $(pam_ldap_so_LDFLAGS) $(pam_ldap_so_OBJECTS) $(pam_ldap_so_LDADD) $(LIBS)
+@@ -385,7 +389,14 @@ mostlyclean-generic distclean-generic cl
+ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+ 
+ 
+-install-exec-local: pam_ldap.so
++install-exec-local: install-exec-local-libtool
++
++install-exec-local-libtool: pam_ldap.la
++	@$(NORMAL_INSTALL)
++	$(mkinstalldirs) $(DESTDIR)$(libdir)/security
++	$(SHLIBTOOL) --mode=install $(INSTALL_PROGRAM) -c pam_ldap.la $(DESTDIR)$(libdir)/security
++
++install-exec-local-so: pam_ldap.so
  	@$(NORMAL_INSTALL)
  	$(mkinstalldirs) $(DESTDIR)$(libdir)/security
--@EXTENSION_SO_TRUE@	$(INSTALL_PROGRAM) -o root -g root pam_ldap.so $(DESTDIR)$(libdir)/security/pam_ldap.so
--@EXTENSION_SO_FALSE@	$(INSTALL_PROGRAM) -o root -g root pam_ldap.so $(DESTDIR)$(libdir)/security/pam_ldap.so.1
--@EXTENSION_SO_FALSE@	-rm -f $(DESTDIR)$(libdir)/security/pam_ldap.so
--@EXTENSION_SO_FALSE@	-ln -s $(DESTDIR)$(libdir)/security/pam_ldap.so.1 $(DESTDIR)$(libdir)/security/pam_ldap.so
-+	${BSD_INSTALL_PROGRAM} pam_ldap.so $(DESTDIR)$(libdir)/security/pam_ldap.so
- 
- install-data-local:
+ @EXTENSION_SO_TRUE@	$(INSTALL_PROGRAM) -o root -g root pam_ldap.so $(DESTDIR)$(libdir)/security/pam_ldap.so
+@@ -397,7 +408,7 @@ install-data-local:
  	@$(NORMAL_INSTALL)
  	@if test ! -f $(DESTDIR)$(sysconfdir)/ldap.conf; then \
  		$(mkinstalldirs) $(DESTDIR)$(sysconfdir); \
 -		$(INSTALL_DATA) -o root -g root $(srcdir)/ldap.conf $(DESTDIR)$(sysconfdir)/ldap.conf; \
-+		$(BSD_INSTALL_DATA) $(srcdir)/ldap.conf $(DESTDIR)$(sysconfdir)/ldap.conf; \
++		$(INSTALL_DATA) $(srcdir)/ldap.conf $(DESTDIR)$(sysconfdir)/ldap.conf; \
  	fi
  
  uninstall-local:

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2004/11/19 15:32:49 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/11/19 19:08:43 jlam Exp $
 #
 
-DISTNAME=	pam_ldap-150
+DISTNAME=	pam_ldap-176
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.padl.com/pub/
 
@@ -12,20 +11,36 @@ HOMEPAGE=	http://www.padl.com/pam_ldap.html
 COMMENT=	Pluggable authentication module for LDAP directories
 
 USE_BUILDLINK3=		yes
+USE_LIBTOOL=		yes
+USE_GNU_TOOLS+=		make
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ldap-lib=openldap
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap}
-CONFIGURE_ARGS+=	--with-ldap-conf-file=${BUILDLINK_PREFIX.pam}/etc/pam/ldap.conf
-CONFIGURE_ARGS+=	--sysconfdir=${BUILDLINK_PREFIX.pam}/etc/pam
+CONFIGURE_ARGS+=	--with-ldap-conf-file=${PKG_SYSCONFDIR}/ldap.conf
+CONFIGURE_ARGS+=	--with-ldap-secret-file=${PKG_SYSCONFDIR}/ldap.secret
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+MAKE_ENV+=		SHLIBTOOL=$(SHLIBTOOL)
+
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 INSTALL_TARGET=		install install-data
+
+DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+
+USE_PKGINSTALL=	yes
+CONF_FILES=	${EGDIR}/ldap.conf ${PKG_SYSCONFDIR}/ldap.conf
 
 .include "../../databases/openldap/buildlink3.mk"
 .include "../../security/PAM/buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pam-ldap
-.for doc in COPYING COPYING.LIB INSTALL ChangeLog
-	cd ${WRKSRC} && ${INSTALL_DATA} ${doc} ${PREFIX}/share/doc/pam-ldap
+	${INSTALL_DATA_DIR} ${DOCDIR}
+.for file in COPYING COPYING.LIB
+	cd ${WRKSRC} && ${INSTALL_DATA} ${file} ${DOCDIR}
+.endfor
+.for file in ldapns.schema ns-pwd-policy.schema
+	cd ${WRKSRC} && ${INSTALL_DATA} ${file} ${EGDIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
