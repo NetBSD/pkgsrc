@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/03/14 15:59:48 skrll Exp $
+$NetBSD: patch-ad,v 1.2 2001/05/24 22:18:22 skrll Exp $
 
 --- configure.orig	Thu Feb 22 18:17:52 2001
 +++ configure
@@ -23,7 +23,26 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/03/14 15:59:48 skrll Exp $
  
  
  
-@@ -13183,7 +13184,7 @@
+@@ -12406,6 +12407,9 @@
+ fi
+ 
+ 
++if test $KJS_USE_PCRE = yes; then
++pcre_save_CPPFLAGS="$CPPFLAGS"
++CPPFLAGS="$CPPFLAGS -I${LOCALBASE}/include"
+ for ac_hdr in pcreposix.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+@@ -12445,6 +12449,8 @@
+   echo "$ac_t""no" 1>&6
+ fi
+ done
++CPPFLAGS="$pcre_save_CPPFLAGS"
++fi
+ 
+ 
+ 
+@@ -13183,7 +13189,7 @@
  
  
  
@@ -32,7 +51,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/03/14 15:59:48 skrll Exp $
  
  
  CXXFLAGS="$CXXFLAGS -DQT_CLEAN_NAMESPACE -DQT_NO_COMPAT -DQT_NO_ASCII_CAST"
-@@ -14140,7 +14141,7 @@
+@@ -14140,7 +14146,7 @@
      esac
    done
  
