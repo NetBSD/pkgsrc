@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/10/07 17:41:46 tron Exp $
+# $NetBSD: Makefile,v 1.3 2000/03/28 00:12:29 dmcmahill Exp $
 
 DISTNAME=	kdemultimedia-1.1.2
 CATEGORIES=	audio kde
@@ -15,11 +15,10 @@ USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
-		"--with-qt-dir=${PREFIX}" \
-		"--with-qt-includes=${PREFIX}/include/qt"
+		"--with-qt-dir=${PREFIX}/qt1"
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib"
+		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib"
 
 .include "../../mk/bsd.pkg.mk"
