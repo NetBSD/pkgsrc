@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.32 1998/06/03 11:11:27 agc Exp $
+# $NetBSD: Packages.txt,v 1.33 1998/06/03 15:06:06 agc Exp $
 ###########################################################################
 
 			==========================
@@ -690,7 +690,7 @@ next section, here's a brief discussion on where programs are installed,
 and which variables influence this.
 
 The variable PREFIX indicates where all files of the final program shall be
-installed. It is usually set to $LOCALBASE (/usr/pkg), it's value becomes
+installed. It is usually set to $LOCALBASE (/usr/pkg), its value becomes
 that of $X11BASE if either USE_IMAKE or USE_X11 is set. The value ${PREFIX}
 needs to be put into the various places in the program's source where paths
 to these files are encoded; see sections 4.3 and 6.2 for details on this.
@@ -745,7 +745,7 @@ The main targets used during the build process defined in bsd.pkg.mk are:
    placed in the package's scripts directory, called "configure". If so, it
    is executed using sh(1).
 
-   If the program's distfile contains it's own configure script, this can
+   If the program's distfile contains its own configure script, this can
    be invoked by setting HAS_CONFIGURE. If the configure script is a GNU
    autoconf script, GNU_CONFIGURE should be specified instead. In either
    case, any arguments to the configure script can be specified in the
@@ -816,7 +816,7 @@ only with some debugging aids.
    otherwise):
    (cd .../pkgsrc/category/pkgname ; cvs import pkgsrc/category/pkgname \
 	FREEBSD FreeBSD-current-yyyy-mm-dd)
- - IF you did a CVS import, check it out to apply the following fixes
+ - If you did a CVS import, check it out to apply the following fixes
    (not needed if you don't have CVS access!)
  - Look at Makefile, fix if necessary; see section 4.1. 
  - Look at patches, remember if not appropriate
@@ -843,7 +843,7 @@ only with some debugging aids.
  - pkg_add .../blub.tgz
  - Play with it :)
  - pkg_delete - still no file should be left (re-run above find)
- - submit (or commit, IF you have cvs access); see section 10.
+ - submit (or commit, if you have cvs access); see section 10.
 
 
  9 FAQs & features of the package system
@@ -971,7 +971,58 @@ package related issues. To subscribe do:
  9.11 How do i tell "make fetch" to do passive FTP?
  ==================================================
 
-Add the following to your /etc/mk.conf: FETCH_BEFORE_ARGS= -p
+Add the following to your /etc/mk.conf file: PASSIVE_FETCH=1
+
+ 9.12 Dependencies on other packages
+ ===================================
+
+Your package may depend on some other package being present - and
+there are various ways of expressing this dependency.  NetBSD supports
+the BUILD_DEPENDS, RUN_DEPENDS and DEPENDS definitions (beware:  the
+DEPENDS definition is not the same as FreeBSD's deprecated one, and
+NetBSD does not use the FreeBSD LIB_DEPENDS definition any more - it
+proved problematic on ELF NetBSD platforms).
+
+[In the following examples, the BUILD_DEPENDS and RUN_DEPENDS
+dependencies have the format:  <file>:<directory containing package to
+build>[:<stage>] If the <stage> isn't specified, it defaults to
+``install''.  If the file contains a '/', it is interpreted as a
+regular file - otherwise, the name is taken to be an executable file,
+and the PATH is searched for <file>.  If the regular file is not
+found, or the exectable file is not in the path, then the
+pre-requisite package will be built from the sources in <directory
+containing the package to build>.  The DEPENDS definition specifies a
+package name (which contains its version number), and the directory
+containing the package to build if this version of the package is not
+installed.]
+
+(a) If your package needs files from another package to build, see the
+print/ghostscript5 package (it relies on the jpeg sources being
+present in source form during the build):
+
+BUILD_DEPENDS=  ../../graphics/jpeg/${WRKDIR:T}/jpeg-6a:../../graphics/jpeg:extract
+
+(b) If your package needs to use another package to build itself, this
+is specified using the BUILD_DEPENDS definition, but without
+specifying the stage ``:extract'' in (a) above.  An example is the
+print/lyx package, which uses the latex binary during its build
+process:
+
+BUILD_DEPENDS=  latex:../../print/teTeX
+
+(c) If your package needs a library with which to link, this is
+specified using the DEPENDS definition.  An example of this is the
+print/lyx package, which uses the xpm library, version 3.4j to build.
+
+DEPENDS+=       xpm-3.4j:../../graphics/xpm
+
+(d) If your package needs some executable to be able to run correctly,
+this is specified using the RUN_DEPENDS definition.  The print/lyx
+package needs to be able to execute the latex and ispell binaries when
+it runs, and that is specified:
+
+RUN_DEPENDS=    latex:../../print/teTeX \
+                ispell:../../textproc/ispell
 
 
  10 Submitting
