@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2000/01/13 11:15:12 soren Exp $
+# $NetBSD: Makefile,v 1.11 2000/02/20 19:26:04 soren Exp $
 # FreeBSD Id: Makefile,v 1.13 1999/04/08 07:49:18 dima Exp $
 
-PKGNAME=	acroread-4.0
+PKGNAME=	acroread-4.05
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/4.x/
 
@@ -19,7 +19,7 @@ NO_BUILD=	YES
 .if ${OPSYS} == "NetBSD"
 .if (${MACHINE_ARCH} == "i386")
 DEPENDS=	suse_linux>=6.1:../../emulators/suse_linux
-DISTNAME=	linux-ar-40
+DISTNAME=	linux-ar-405
 #.elif (${MACHINE_ARCH} == "alpha")
 #.if !exists(/emul/osf1/sbin/loader)
 #IGNORE=	requires Digital UNIX libraries - see compat_osf1(8)
@@ -29,7 +29,7 @@ DISTNAME=	linux-ar-40
 #.if !exists(/emul/sunos/usr/lib/ld.so)
 #IGNORE=	requires SunOS libraries - see compat_sunos(8)
 #.endif
-#DISTNAME=	sunsparc-arws-40
+#DISTNAME=	sunsparc-rs-405
 .else
 DISTNAME=	${PKGNAME}
 .endif
@@ -38,7 +38,7 @@ PLATFORM=	intellinux
 # *-*-alpha *-*-sparc
 WRKSRC=		${WRKDIR}/ILINXR.install
 .elif ${OPSYS} == "SunOS"
-DISTNAME=	sunsparc-arws-40
+DISTNAME=	sunsparc-rs-405
 WRKSRC=		${WRKDIR}/SSOLRS.install
 PLATFORM=	sparcsolaris
 post-patch:
