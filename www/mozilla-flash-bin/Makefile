@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/04/14 18:23:02 grant Exp $
+# $NetBSD: Makefile,v 1.2 2003/04/14 21:00:43 grant Exp $
 #
 
 DISTNAME=	install_flash_player_6_linux
@@ -10,7 +10,7 @@ MAINTAINER=	jrp@hispabsd.org
 HOMEPAGE=	http://www.macromedia.com/
 COMMENT=	Flash player for the linux version of mozilla (binary pkg)
 
-DEPENDS+=	mozilla-linux-[0-9]*:../../www/mozilla-linux
+DEPENDS+=	mozilla-bin-[0-9]*:../../www/mozilla-bin
 
 VERSION=	6.0.69
 
