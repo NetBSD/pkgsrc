@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/04/01 18:36:37 jmmv Exp $
+$NetBSD: distinfo,v 1.8 2004/04/20 01:29:52 minskim Exp $
 
-SHA1 (eel-2.6.0.tar.bz2) = 9bf3c712fbe246d142a7fe07c4123e81656ef73d
-Size (eel-2.6.0.tar.bz2) = 552049 bytes
+SHA1 (eel-2.6.1.tar.bz2) = 554adc4f76a2b4307f04b6fb52bc35740b1b1de1
+Size (eel-2.6.1.tar.bz2) = 554569 bytes
