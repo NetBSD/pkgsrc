@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.11 2002/08/21 12:42:45 kent Exp $
+#	$NetBSD: cross.mk,v 1.12 2002/10/03 14:26:45 wiz Exp $
 #	$PEACE: cross.mk,v 1.12 2002/08/21 02:48:24 kent Exp $
 #	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
@@ -64,7 +64,7 @@ GCC_DISTNAME=		gcc-2.95.2
 GCC_INTVERSION=		2.95.2
 MASTER_SITES+=		${MASTER_SITE_GNU:=gcc/}
 GCC_LANGUAGES=		c # add to these below
-BUILD_DEPENDS+= 	autoconf-*:../../devel/autoconf
+AUTOCONF_REQD=		2.13
 
 .if defined(GCC_CXX)
 CXX_CONFIGURE_ARGS+=	--with-gxx-include-dir=${TARGET_DIR}/include/c++
@@ -187,6 +187,7 @@ post-install-plist:
 	@${ECHO} '@dirrm ${TARGET_ARCH}/lib' >>${PLIST_SRC}
 	@${ECHO} '@dirrm ${TARGET_ARCH}' >>${PLIST_SRC}
 
+.include "../../mk/autoconf.mk"
 .include "../../mk/bsd.pkg.mk"
 
 EXTRACT_BEFORE_ARGS:=	-X ${COMMON_DIR}/exclude ${EXTRACT_BEFORE_ARGS}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/08/21 12:42:44 kent Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/03 14:26:44 wiz Exp $
 # $PEACE: Makefile,v 1.21 2002/08/21 02:48:23 kent Exp $
 
 DISTVERSION=		1.3.4
@@ -55,7 +55,7 @@ post-patch:
 	for i in patches/binutils-*; do \
 		${PATCH} -d ${WRKSRC} --forward --quiet -E < $$i; \
 	done
-	cd ${WRKSRC}/gcc && ${LOCALBASE}/bin/autoconf
+	cd ${WRKSRC}/gcc && ${AUTOCONF}
 	cd ${WRKSRC}/gcc && \
 		${LN} -s ../../${PTHREAD_DISTNAME}/include/pthread.h . && \
 		${LN} -s ../../${PTHREAD_DISTNAME}/include/pthread .
