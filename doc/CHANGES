@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7415 2004/10/13 07:29:35 jmmv Exp $
+$NetBSD: CHANGES,v 1.7416 2004/10/13 08:59:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4628,3 +4628,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gzip-base to 1.2.4b [tv 2004-10-12]
 	Updated gcalctool to 4.4.20 [jmmv 2004-10-12]
 	Updated gtk2 to 2.4.13 [jmmv 2004-10-13]
+	Added eet-0.9.9 [minskim 2004-10-13]
