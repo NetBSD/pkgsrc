@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.krb5,v 1.1.1.1 2002/10/27 15:08:59 chris Exp $
+lib/sasl2/libgssapiv2.a
+lib/sasl2/libgssapiv2.la
+lib/sasl2/libgssapiv2.so
+lib/sasl2/libgssapiv2.so.1
+lib/sasl2/libgssapiv2.so.1.18
