@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1384 2004/02/15 23:28:22 minskim Exp $
+$NetBSD: TODO,v 1.1385 2004/02/15 23:55:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -217,6 +217,7 @@ Suggested package updates
 	o inn-2.4.1
 	o jakarta-tomcat-3.3.1a
 	o jam-2.5
+	o jasper-1.701.0
 	o joe-2.9.8 [pkg/18022, incomplete]
 	o jpilot-0.99.6
 	o kaffe-1.1.3 [pkg/24148]
