@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.37 2004/02/15 20:19:00 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.37.6.1 2004/11/02 10:39:07 agc Exp $
 
-DISTNAME=		wv-1.0.0
-PKGREVISION=		1
-CATEGORIES=		converters
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
+DISTNAME=	wv-1.0.2
+CATEGORIES=	converters
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wvware/}
 
-MAINTAINER=		adam@NetBSD.org
-HOMEPAGE=		http://wvware.sourceforge.net/
-COMMENT=		Library and executables to access Microsoft Word files
+MAINTAINER=	adam@NetBSD.org
+HOMEPAGE=	http://wvware.sourceforge.net/
+COMMENT=	Library and executables to access Microsoft Word files
 
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
@@ -35,4 +33,5 @@ CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
