@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8726 2005/01/12 22:33:19 minskim Exp $
+$NetBSD: CHANGES,v 1.8727 2005/01/12 22:53:22 tron Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -274,3 +274,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated inkscape to 0.40 [reed 2005-01-12]
 	Updated gcalctool to 4.4.22 [jmmv 2005-01-12]
 	Updated ap-dtcl to 0.11.2nb1 [minskim 2005-01-12]
+	Updated gqmpeg-skins to 20030712nb3 [tron 2005-01-12]
