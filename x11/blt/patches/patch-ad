@@ -1,0 +1,11 @@
+--- library/pkgIndex.tcl.in.orig	Thu Sep  7 22:06:25 2000
++++ library/pkgIndex.tcl.in	Thu Sep  7 22:06:59 2000
+@@ -10,7 +10,7 @@
+     set library BLT${version_no_dots}${suffix}
+     global tcl_platform
+     if { $tcl_platform(platform) == "unix" } {
+-	set library [file join [file dirname $dir] lib${library}]
++	set library [file join [file dirname $dir] .. lib${library}]
+     } 
+     package ifneeded BLT ${version} [list load $library BLT]
+ }
