@@ -1,0 +1,73 @@
+@comment $NetBSD: PLIST,v 1.1 1998/07/16 17:47:15 tv Exp $
+bin/pktdebug
+bin/pktmore
+bin/sumcrc
+etc/rc.d/fidogate.sh
+info/fidogate.info
+info/fidogate.info-1
+info/fidogate.info-2
+lib/fidogate/ffx
+lib/fidogate/ffxbatch
+lib/fidogate/ffxmail
+lib/fidogate/ffxqt
+lib/fidogate/ffxrmail
+lib/fidogate/ffxrun
+lib/fidogate/ftn2ftn
+lib/fidogate/ftn2rfc
+lib/fidogate/ftnaf
+lib/fidogate/ftnafmail
+lib/fidogate/ftnbsy
+lib/fidogate/ftnconfig
+lib/fidogate/ftnexpire
+lib/fidogate/ftnfattach
+lib/fidogate/ftnflo
+lib/fidogate/ftnhatch
+lib/fidogate/ftnin
+lib/fidogate/ftninpost
+lib/fidogate/ftninrecomb
+lib/fidogate/ftnlock
+lib/fidogate/ftnlog
+lib/fidogate/ftnpack
+lib/fidogate/ftnroute
+lib/fidogate/ftnseq
+lib/fidogate/ftntick
+lib/fidogate/ftntoss
+lib/fidogate/magic
+lib/fidogate/rfc2ftn
+lib/fidogate/rundf
+lib/fidogate/runin
+lib/fidogate/runout
+lib/fidogate/runtoss
+lib/fidogate/rununpack
+lib/libfidogate.so.0.0
+share/fidogate/inn/send-ffx
+share/fidogate/inn/send-fidogate
+share/fidogate/inn/viaffx
+share/fidogate/nodelist/latest
+share/fidogate/nodelist/nl-2hosts
+share/fidogate/nodelist/nl-2routing
+share/fidogate/nodelist/nl-autoupd
+share/fidogate/nodelist/nl-check
+share/fidogate/nodelist/nl-del
+share/fidogate/nodelist/nl-diff
+share/fidogate/nodelist/nl-html
+share/fidogate/nodelist/nl-isdn
+share/fidogate/nodelist/nl-print
+share/fidogate/nodelist/template.html
+share/fidogate/scripts/out-freq
+share/fidogate/scripts/out-ls
+share/fidogate/scripts/out-manip
+share/fidogate/scripts/out-rm0
+share/fidogate/scripts/out-rmbsy
+share/fidogate/scripts/run1
+share/fidogate/scripts/run2
+share/fidogate/scripts/runffx
+share/fidogate/scripts/runpoll
+share/fidogate/sendmail/ffx.m4
+share/fidogate/sendmail/ftn.m4
+@dirrm lib/fidogate
+@dirrm share/fidogate/inn
+@dirrm share/fidogate/nodelist
+@dirrm share/fidogate/scripts
+@dirrm share/fidogate/sendmail
+@dirrm share/fidogate
