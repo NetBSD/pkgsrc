@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2002/04/23 08:05:51 martti Exp $
+# $NetBSD: Makefile,v 1.27 2002/04/23 17:46:17 martti Exp $
 
 DISTNAME=		xfce-3.8.16
 CATEGORIES=		x11
 MASTER_SITES=		http://www.xfce.org/archive/
 
-MAINTAINER=		jwise@netbsd.org
+MAINTAINER=		martti@netbsd.org
 HOMEPAGE=		http://www.xfce.org/
 COMMENT=		Lightweight desktop environment with CDE look and feel
 
