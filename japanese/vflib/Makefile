@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/03 05:43:00 sakamoto Exp $
+# $NetBSD: Makefile,v 1.3 1999/09/06 05:32:47 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.20 1999/05/03 01:58:33 steve Exp $
 
 DISTNAME=	VFlib2-2.24.2
@@ -17,8 +17,10 @@ VFLIB_VERSION=	2.24.2
 PLIST_SUBST+=	VFLIB_VERSION=${VFLIB_VERSION} \
 		VFLIB_SO_VERSION=${VFLIB_VERSION:C/^2.//}
 
+USE_X11=	yes
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+MAKE_ENV+=	LOCAL_LDFLAGS="${LDFLAGS}"
 
 post-configure:
 	@${RM} -r ${WRKSRC}/libtool
@@ -33,8 +35,6 @@ post-build:
 .endfor
 
 pre-install:
-	@(cd ${WRKSRC}/tools; \
-	    ${INSTALL_SCRIPT} fmtest disol kban vfperf vftest ${PREFIX}/bin)
 	@(cd ${WRKSRC}; \
 	  ${MKDIR} ${PREFIX}/share/VFlib/${VFLIB_VERSION} ;\
 	  ${CP} COPYING COPYING.LIB README.txt.JP_EUC \
