@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/10/09 13:20:17 martti Exp $
+# $NetBSD: Makefile,v 1.37 2001/10/16 04:11:06 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -76,6 +76,15 @@ APACHE_CUSTOM_CFLAGS?=	# empty
 .if defined(APACHE_PERF_TUNING) && ${APACHE_PERF_TUNING} == YES
 APACHE_CUSTOM_CFLAGS+=	-DBUFFERED_LOGS
 APACHE_CUSTOM_CFLAGS+=	-O6 -fomit-frame-pointer -fexpensive-optimizations
+.endif
+
+# On NetBSD, we need to link libgcc.a whole-archive so that certain symbols
+# from the C++ implementation (__get_eh_context, etc.) referenced by DSOs
+# written in C++ will resolve correctly.
+#
+.if (${OPSYS} == "NetBSD")
+LINK_LIBGCC_LDFLAGS=	-Wl,-whole-archive -lgcc -Wl,-no-whole-archive
+MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
 
 .if (${OPSYS} == "SunOS")
