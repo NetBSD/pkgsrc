@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.own.mk,v 1.3 1998/05/25 23:40:21 tv Exp $
+#	$NetBSD: bsd.own.mk,v 1.4 1998/05/29 13:57:09 agc Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -66,6 +66,35 @@ STRIPFLAG?=	-s
 # in environments where it's not possible to keep /sys publicly readable)
 #SYS_INCLUDE= 	symlinks
 
+# XXX The next two are temporary until the transition to UVM is complete.
+
+
+# The NETBSD_CURRENT checks are to make sure that UVM is defined only
+# if the user is running a NetBSD-current, as well as the right platform
+# I'm told that 1.3C was the first version with UVM	XXX - agc
+.if !defined(UVM)
+NETBSD_CURRENT!= /usr/bin/uname -r | /usr/bin/sed -e 's|^1\.3[C-Z]$$|yes|'
+
+.if (${NETBSD_CURRENT} == "yes")
+# Systems on which UVM is the standard VM system.
+.if	(${MACHINE} == "alpha") || \
+	(${MACHINE} == "hp300") || \
+	(${MACHINE} == "mac68k") || \
+	(${MACHINE} == "mvme68k") || \
+	(${MACHINE} == "sparc")
+UVM?=		yes
+.endif
+
+# Systems that use UVM's new pmap interface.
+.if	(${MACHINE} == "alpha")
+PMAP_NEW?=	yes
+.endif
+
+.endif # NetBSD-current
+
+.endif # !UVM
+
+
 # don't try to generate PIC versions of libraries on machines
 # which don't support PIC.
 .if  (${MACHINE_ARCH} == "vax") || \
@@ -88,12 +117,12 @@ OBJECT_FMT?=ELF
 OBJECT_FMT?=a.out
 .endif
 
-
 # No lint, for now.
 
 # all machines on which we are okay should be added here until we can
 # get rid of the whole "NOLINT by default" thing.
-.if (${MACHINE} == "i386")
+.if (${MACHINE} == "i386") || \
+    (${MACHINE} == "sparc")
 NONOLINT=1
 .endif
 
