@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 22:54:56 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/08 12:26:20 jmmv Exp $
 #
 
-DISTNAME=	xmlcatmgr-0.2
+DISTNAME=	xmlcatmgr-1.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlcatmgr/}
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://xmlcatmgr.sourceforge.net/
-COMMENT=	XML catalog manager
+COMMENT=	XML (and SGML) catalog manager
 
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
@@ -25,6 +25,9 @@ OWN_DIRS=	${PKG_SYSCONFDIR}/sgml ${PKG_SYSCONFDIR}/xml
 EGDIR=		${PREFIX}/share/examples/xmlcatmgr
 CONF_FILES=	${EGDIR}/catalog.etc.sgml ${PKG_SYSCONFDIR}/sgml/catalog
 CONF_FILES+=	${EGDIR}/catalog.etc.xml ${PKG_SYSCONFDIR}/xml/catalog
+MAKE_DIRS=	${PREFIX}/share/sgml ${PREFIX}/share/xml
+SUPPORT_FILES=	${EGDIR}/catalog.share.sgml ${PREFIX}/share/sgml/catalog
+SUPPORT_FILES+=	${EGDIR}/catalog.share.xml ${PREFIX}/share/xml/catalog
 
 post-build:
 	@${ECHO} "Creating SGML catalogs..."
@@ -40,11 +43,9 @@ post-build:
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/sgml
-	${INSTALL_DATA_DIR} ${PREFIX}/share/xml
 	${INSTALL_DATA} ${WRKDIR}/catalog.etc.sgml ${EGDIR}/catalog.etc.sgml
 	${INSTALL_DATA} ${WRKDIR}/catalog.etc.xml ${EGDIR}/catalog.etc.xml
-	${INSTALL_DATA} ${WRKDIR}/catalog.sgml ${PREFIX}/share/sgml/catalog
-	${INSTALL_DATA} ${WRKDIR}/catalog.xml ${PREFIX}/share/xml/catalog
+	${INSTALL_DATA} ${WRKDIR}/catalog.sgml ${EGDIR}/catalog.share.sgml
+	${INSTALL_DATA} ${WRKDIR}/catalog.xml ${EGDIR}/catalog.share.xml
 
 .include "../../mk/bsd.pkg.mk"
