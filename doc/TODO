@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.739 2003/07/24 06:32:18 wiz Exp $
+$NetBSD: TODO,v 1.740 2003/07/24 13:42:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -66,7 +66,7 @@ Suggested package updates
 	o Amaya-8.1a
 	o ImageViewer-0.6.2
 	o R-1.7.1
-	o TeXmacs-1.0.1.18
+	o TeXmacs-1.0.1.19
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o angband-3.0.3
@@ -99,8 +99,9 @@ Suggested package updates
 	o easytag-0.28.1
 	o echoping-5.0.1
 	o elm-me-2.4pl102
+	o ethereal-0.9.14
 	o ettercap-0.6.b
-	o evilwm-0.99.15
+	o evilwm-0.99.15 [pkg/22239]
 	o evolution-1.4
 	o exim-4.12 [pkg/19850|ad]
 	o exim-4.20
@@ -145,6 +146,7 @@ Suggested package updates
 	o inform-6.21.3 [pkg/19298]
 	o inform-6.21.4 [pkg/21934]
 	o inn-2.4.0
+	o iozone-3.191
 	o ipa-1.3.5 [pkg/22208]
 	o isync-0.9.1 [pkg/22189]
 	o jakarta-tomcat-3.3.1a
@@ -243,6 +245,7 @@ Suggested package updates
 	o tcpreplay-1.4.4
 	o teapop-0.3.6
 	o tightvnc-1.2.8
+	o tin-1.6.0
 	o tinyproxy-1.6.0 [pkg/22161]
 	o tkman-2.2
 	o top-3.5b12.6
