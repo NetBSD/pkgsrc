@@ -1,11 +1,12 @@
-$NetBSD: patch-ae,v 1.4 2002/10/18 08:08:32 wiz Exp $
+$NetBSD: patch-ae,v 1.5 2003/03/10 01:43:58 uebayasi Exp $
 --- doc/Makefile.in.orig	Sun Sep  8 04:25:49 2002
 +++ doc/Makefile.in	Tue Oct  1 06:17:22 2002
 @@ -12,7 +12,7 @@
  prefix  = @prefix@
  datadir = @datadir@
- mandir  = $(datadir)/man/man1
+-mandir  = $(datadir)/man/man1
 -infodir = $(datadir)/info
++mandir  = @mandir@/man1
 +infodir = @infodir@
  
  all: info
