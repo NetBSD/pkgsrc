@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2002/06/15 21:20:04 cjep Exp $
+# $NetBSD: Makefile,v 1.100 2002/06/28 09:05:19 seb Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -195,7 +195,7 @@ post-install:
 	fi
 	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd
 
-BUILD_DEFS+=		USE_IDEA PKG_SYSCONFDIR SSH_SUID USE_RSAREF2
+BUILD_DEFS+=		USE_IDEA SSH_SUID USE_RSAREF2
 BUILD_DEFS+=		LIBWRAP_FWD M68060 USE_SOCKS
 
 .include "../../mk/bsd.pkg.mk"
