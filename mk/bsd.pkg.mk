@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.703 2001/03/28 14:34:00 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.704 2001/03/29 22:08:21 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -759,7 +759,7 @@ PKG_ARGS_COMMON+=	-m ${MTREE_FILE}
 .endif
 
 PKG_ARGS_INSTALL=	-p ${PREFIX} ${PKG_ARGS_COMMON}
-PKG_ARGS_BINPKG=	-p ${PREFIX:C/^${DESTDIR}//} -L ${PREFIX} ${PKG_ARGS_COMMON}
+PKG_ARGS_BINPKG=	-p ${PREFIX:S/^${DESTDIR}//} -L ${PREFIX} ${PKG_ARGS_COMMON}
 .endif # !PKG_ARGS_COMMON
 
 PKG_SUFX?=		.tgz
