@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.27 2003/06/06 18:28:47 jschauma Exp $
+# $NetBSD: pre-build,v 1.28 2003/08/26 08:18:09 hubertf Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -113,6 +113,8 @@ rm -fr /nonexistent		# broken useradd on pop3d
 rm -fr /home/majordom		# mail/majordomo pkg
 rm -fr /home/nut		# sysutils/ups-net
 rm -fr /var/wwwoffle		# www/wwwoffle
+rm -fr /tmp/config-guess-*
+rm -fr /tmp/mod*
 
 
 # Clean up state files
