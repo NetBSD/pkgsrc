@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/09/02 20:29:55 recht Exp $
+$NetBSD: distinfo,v 1.2 2005/01/22 09:57:51 jdolecek Exp $
 
-SHA1 (suse91/i586/libtiff-3.6.1-38.3.i586.rpm) = f157765f43c71dfa4c8d0647c0fa825b81119ac0
-Size (suse91/i586/libtiff-3.6.1-38.3.i586.rpm) = 195338 bytes
+SHA1 (suse91/i586/libtiff-3.6.1-38.14.i586.rpm) = 8a8f61166785549ed192088c050e05a4494a9e3d
+Size (suse91/i586/libtiff-3.6.1-38.14.i586.rpm) = 187720 bytes
