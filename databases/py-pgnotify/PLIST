@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/21 16:03:37 darcy Exp $
+${PYSITELIB}/pgnotify.py
