@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1620 2004/04/16 02:59:31 salo Exp $
+$NetBSD: TODO,v 1.1621 2004/04/16 03:10:48 salo Exp $
 
 Suggested new packages
 ======================
@@ -273,7 +273,6 @@ Suggested package updates
 	o nut-9.12
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
-	o ogmtools-1.4
 	o onyx-5.1.1
 	o openal-20040215
 	o openh323-1.12.2
