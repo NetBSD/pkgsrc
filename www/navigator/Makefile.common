@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2001/03/29 14:03:11 kei Exp $
+# $NetBSD: Makefile.common,v 1.34 2001/04/07 07:31:41 tron Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -6,7 +6,7 @@
 
 # Note - the version will be overridden for certain architectures which
 #	 do not have the latest version available (eg: SunOS sparc)
-NS_VERS=	4.76
+NS_VERS=	4.77
 NS_ENCRYPTION=	us
 LDAP_VERS=	40
 
@@ -50,8 +50,8 @@ VENDOR_NAME=	BSD/OS 2.1
 #
 .elif (${MACHINE_ARCH} == "i386")
 PLIST_ARCH=	linux-i386
-DEPENDS+=	suse_compat>=6.3:../../emulators/suse_compat
-DEPENDS+=	suse_x11>=6.3:../../emulators/suse_x11
+DEPENDS+=	suse_compat>=6.4:../../emulators/suse_compat
+DEPENDS+=	suse_x11>=6.4:../../emulators/suse_x11
 DISTUNAME=	x86-unknown-linux2.2
 DIST_DIR_NAME=	supported/linux22
 WRKNAME=	x86-unknown-linux2.2
@@ -98,8 +98,8 @@ VENDER_NAME=	# empty.  what should be here?
 .endif
 #
 
-NO_BUILD=	yes
-MAINTAINER=	abs@netbsd.org
+NO_BUILD=	YES
+MAINTAINER=	tron@netbsd.org
 HOMEPAGE?=	http://home.netscape.com/browsers/index.html
 RESTRICTED=	"No re-distribution without agreement from Netscape"
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -110,7 +110,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-powerpc *-*-sparc
 CATEGORIES=	www
 NS_NAME=	${BINNAME}-${NS_VERS}
-PKGNAME?=	${BINNAME}-${NS_VERS}nb1
+PKGNAME?=	${BINNAME}-${NS_VERS}
 DISTNAME?=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${DISTUNAME}
 
 .if (${BINNAME} != "netscape")
