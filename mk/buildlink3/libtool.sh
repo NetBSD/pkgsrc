@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.11 2004/01/21 13:52:56 jlam Exp $
+# $NetBSD: libtool.sh,v 1.12 2004/01/29 06:06:41 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -94,6 +94,8 @@ for arg do
 done
 
 cmd="@WRAPPEE@"
+ldflags=
+libs=
 case $mode in
 install)
 	#
@@ -161,6 +163,7 @@ install)
 	done
 	;;
 esac
+cmd="$cmd $ldflags $libs"
 
 @_BLNK_WRAP_ENV@
 @_BLNK_WRAP_SANITIZE_PATH@
