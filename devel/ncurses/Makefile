@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/09/01 18:36:35 tron Exp $
+# $NetBSD: Makefile,v 1.41 2002/11/17 11:23:15 salo Exp $
 
 DISTNAME=		ncurses-${NC_VERS}
 NC_VERS=		5.2
@@ -27,12 +27,18 @@ CONFIGURE_ARGS+=	--with-manpage-tbl
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == SunOS)
-PLIST_SUBST+=	NOT_SUNOS="@comment " TERMINFODIR=share/lib/terminfo
-
+PLIST_SUBST+=	NOT_SUNOS="@comment "
 TERMINFO_SRC=	${WRKSRC}/misc/terminfo.src
+TERMINFODIR=	share/lib/terminfo
 .else
-PLIST_SUBST+=	NOT_SUNOS= TERMINFODIR=share/terminfo
+PLIST_SUBST+=	NOT_SUNOS=""
+TERMINFODIR=	share/terminfo
 .endif
+
+PLIST_SUBST+=	TERMINFODIR="${TERMINFODIR}"
+
+CONFIGURE_ARGS+=	--with-default-terminfo-dir=${PREFIX}/${TERMINFODIR}
+CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
 
 # Remove these manpages from the distribution so they won't get installed
 CURSES_NO_MAN=		clear.1 tput.1 tset.1
