@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2004/11/22 21:01:37 tv Exp $
+# $NetBSD: Makefile,v 1.30 2004/11/23 02:42:10 tv Exp $
 #
 
 DISTNAME=	zip1-1.1
+PKGREVISION=	1
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
-DISTFILES=	zip11.zip
+MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/ \
+		http://ftp.uni-koeln.de/util/arc/
+DISTFILES=	zip11.zip zcrypt10.zip
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.info-zip.org/pub/infozip/
@@ -18,38 +20,26 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
-ALL_TARGET=	zip
+ALL_TARGET=	zip zipcloak
 
 USE_BUILDLINK3=	yes
-PLIST_SRC=	${WRKSRC}/PLIST
-
-BUILD_DEFS+=	ZIP_ENCRYPTION
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(ZIP_ENCRYPTION)
-DISTFILES+=	zcrypt10.zip
-ALL_TARGET+=	zipcloak
-CRYPTO=		yes
-.endif
-
+MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 .if ${OPSYS} == "Linux" || ${OPSYS} == "Interix"
-MAKE_FLAGS=	CFLAGS="${CFLAGS} -DSYSV"
+CFLAGS+=	-DSYSV -DMODERN -DTERMIOS
 .else
-MAKE_FLAGS=	CFLAGS="${CFLAGS} -DDIRENT" LFLAGS2="-lcompat"
+CFLAGS+=	-DDIRENT
+MAKE_FLAGS+=	LFLAGS2=-lcompat
 .endif
 
 INSTALLATION_DIRS=	bin man/man1
 
 do-install:
-	@${CP} ${PKGDIR}/PLIST.pre ${PLIST_SRC}
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} zip ${PREFIX}/bin/zip1
 	cd ${WRKSRC} && ${INSTALL_MAN} zip.1 ${PREFIX}/man/man1/zip1.1
-.if defined(ZIP_ENCRYPTION)
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} zipcloak ${PREFIX}/bin/zipcloak1
 	${LN} -fs zip1.1 ${PREFIX}/man/man1/zipcloak1.1
-	@${ECHO} >>${PLIST_SRC} "bin/zipcloak1"
-	@${ECHO} >>${PLIST_SRC} "man/man1/zipcloak1.1"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
