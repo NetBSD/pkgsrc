@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.pkg.dist,v 1.1 2002/12/02 17:07:27 jschauma Exp $
+# $NetBSD: IRIX.pkg.dist,v 1.2 2002/12/09 15:52:09 tron Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -478,6 +478,8 @@
 	    uk_UA.ISO_8859-1
 	    ..
         ..
+	pixmaps
+	..
         skel
         ..
     ..
