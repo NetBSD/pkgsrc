@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/02/06 12:34:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/03/09 13:36:50 markd Exp $
 share/doc/kde/HTML/uk/common/1.png
 share/doc/kde/HTML/uk/common/10.png
 share/doc/kde/HTML/uk/common/2.png
@@ -112,6 +112,7 @@ share/kde/locale/uk/LC_MESSAGES/appletproxy.mo
 share/kde/locale/uk/LC_MESSAGES/ark.mo
 share/kde/locale/uk/LC_MESSAGES/artsbuilder.mo
 share/kde/locale/uk/LC_MESSAGES/artscontrol.mo
+share/kde/locale/uk/LC_MESSAGES/artsmodules.mo
 share/kde/locale/uk/LC_MESSAGES/atlantikdesigner.mo
 share/kde/locale/uk/LC_MESSAGES/babelfish.mo
 share/kde/locale/uk/LC_MESSAGES/cervisia.mo
@@ -150,7 +151,9 @@ share/kde/locale/uk/LC_MESSAGES/fontinst.mo
 share/kde/locale/uk/LC_MESSAGES/htmlsearch.mo
 share/kde/locale/uk/LC_MESSAGES/imagerename_plugin.mo
 share/kde/locale/uk/LC_MESSAGES/imgalleryplugin.mo
+share/kde/locale/uk/LC_MESSAGES/irkick.mo
 share/kde/locale/uk/LC_MESSAGES/jefferson.mo
+share/kde/locale/uk/LC_MESSAGES/juk.mo
 share/kde/locale/uk/LC_MESSAGES/kabc2mutt.mo
 share/kde/locale/uk/LC_MESSAGES/kabc_dir.mo
 share/kde/locale/uk/LC_MESSAGES/kabc_file.mo
@@ -205,6 +208,7 @@ share/kde/locale/uk/LC_MESSAGES/kcmarts.mo
 share/kde/locale/uk/LC_MESSAGES/kcmaudiocd.mo
 share/kde/locale/uk/LC_MESSAGES/kcmbackground.mo
 share/kde/locale/uk/LC_MESSAGES/kcmbell.mo
+share/kde/locale/uk/LC_MESSAGES/kcmcddb.mo
 share/kde/locale/uk/LC_MESSAGES/kcmcgi.mo
 share/kde/locale/uk/LC_MESSAGES/kcmcolors.mo
 share/kde/locale/uk/LC_MESSAGES/kcmcomponentchooser.mo
@@ -232,6 +236,7 @@ share/kde/locale/uk/LC_MESSAGES/kcmkonsole.mo
 share/kde/locale/uk/LC_MESSAGES/kcmktalkd.mo
 share/kde/locale/uk/LC_MESSAGES/kcmkuick.mo
 share/kde/locale/uk/LC_MESSAGES/kcmkurifilt.mo
+share/kde/locale/uk/LC_MESSAGES/kcmkvaio.mo
 share/kde/locale/uk/LC_MESSAGES/kcmkwallet.mo
 share/kde/locale/uk/LC_MESSAGES/kcmkwindecoration.mo
 share/kde/locale/uk/LC_MESSAGES/kcmkwintheme.mo
@@ -243,6 +248,7 @@ share/kde/locale/uk/LC_MESSAGES/kcmlaunch.mo
 share/kde/locale/uk/LC_MESSAGES/kcmlayout.mo
 share/kde/locale/uk/LC_MESSAGES/kcmlilo.mo
 share/kde/locale/uk/LC_MESSAGES/kcmlinuz.mo
+share/kde/locale/uk/LC_MESSAGES/kcmlirc.mo
 share/kde/locale/uk/LC_MESSAGES/kcmlocale.mo
 share/kde/locale/uk/LC_MESSAGES/kcmmediacontrol.mo
 share/kde/locale/uk/LC_MESSAGES/kcmmidi.mo
@@ -269,6 +275,7 @@ share/kde/locale/uk/LC_MESSAGES/kdcop.mo
 share/kde/locale/uk/LC_MESSAGES/kdebugdialog.mo
 share/kde/locale/uk/LC_MESSAGES/kdelibs.mo
 share/kde/locale/uk/LC_MESSAGES/kdelibs_colors.mo
+share/kde/locale/uk/LC_MESSAGES/kdelirc.mo
 share/kde/locale/uk/LC_MESSAGES/kdepasswd.mo
 share/kde/locale/uk/LC_MESSAGES/kdeprint.mo
 share/kde/locale/uk/LC_MESSAGES/kdeprint_part.mo
@@ -334,6 +341,7 @@ share/kde/locale/uk/LC_MESSAGES/kgamma.mo
 share/kde/locale/uk/LC_MESSAGES/kgantt.mo
 share/kde/locale/uk/LC_MESSAGES/kget.mo
 share/kde/locale/uk/LC_MESSAGES/kghostview.mo
+share/kde/locale/uk/LC_MESSAGES/kgpg.mo
 share/kde/locale/uk/LC_MESSAGES/kgpgcertmanager.mo
 share/kde/locale/uk/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/uk/LC_MESSAGES/khexedit.mo
@@ -496,6 +504,7 @@ share/kde/locale/uk/LC_MESSAGES/kxsconfig.mo
 share/kde/locale/uk/LC_MESSAGES/libcalendarresources.mo
 share/kde/locale/uk/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 share/kde/locale/uk/LC_MESSAGES/libkcalsystem.mo
+share/kde/locale/uk/LC_MESSAGES/libkcddb.mo
 share/kde/locale/uk/LC_MESSAGES/libkdegames.mo
 share/kde/locale/uk/LC_MESSAGES/libkdehighscores.mo
 share/kde/locale/uk/LC_MESSAGES/libkdenetwork.mo
@@ -549,5 +558,5 @@ share/kde/locale/uk/flag.png
 @dirrm share/doc/kde/HTML/uk/khelpcenter
 @dirrm share/doc/kde/HTML/uk/kdeaccessibility
 @dirrm share/doc/kde/HTML/uk/kaddressbook
-@comment dirrm share/doc/kde/HTML/uk/common
+@dirrm share/doc/kde/HTML/uk/common
 @comment dirrm share/doc/kde/HTML/uk
