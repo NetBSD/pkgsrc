@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1006 2002/07/16 15:02:01 schmonz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1007 2002/07/18 10:21:18 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1853,20 +1853,20 @@ do-ltconfig-override:
 .if defined(CONFIG_GUESS_OVERRIDE) || defined(CONFIG_SUB_OVERRIDE)
 _CONFIGURE_PREREQ+=	do-config-star-override
 do-config-star-override:
-.	if defined(CONFIG_GUESS_OVERRIDE)
+.  if defined(CONFIG_GUESS_OVERRIDE)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for g in ${CONFIG_GUESS_OVERRIDE}; do				\
 		${RM} -f $$g;						\
 		${LN} -s ${_PKGSRCDIR}/mk/gnu-config/config.guess $$g;	\
 	done
-.	endif
-.	if defined(CONFIG_SUB_OVERRIDE)
+.  endif
+.  if defined(CONFIG_SUB_OVERRIDE)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for s in ${CONFIG_SUB_OVERRIDE}; do				\
 		${RM} -f $$s;						\
 		${LN} -s ${_PKGSRCDIR}/mk/gnu-config/config.sub $$s;	\
 	done
-.	endif
+.  endif
 .endif
 
 # By default, prevent invocation of GNU "auto*" driven by the generated
