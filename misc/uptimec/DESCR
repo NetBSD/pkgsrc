@@ -1,0 +1,6 @@
+The Uptime Project consist of three parts, one tiny client that runs on each 
+host that take part of the project, and sends information about it's uptime 
+to the project. The second part is a central database-server that collects 
+and stores updates from all participating hosts, and the third part which is 
+this website, where statistics can be viewed, and users can administrate 
+their accounts and add new hosts.
