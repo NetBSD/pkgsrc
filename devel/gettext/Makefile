@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2003/10/19 01:34:13 heinz Exp $
+# $NetBSD: Makefile,v 1.53 2003/12/05 18:15:49 erh Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/08/09 15:13:33 kuriyama Exp
 #
 
@@ -30,6 +30,8 @@ CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ=
 CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JIKES_IN_PATH=
+
+MAKE_ENV+=  OPSYS="${OPSYS}"
 
 TEST_TARGET=		check
 
