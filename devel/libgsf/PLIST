@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/12/22 11:44:41 drochner Exp $
 include/libgsf-1/gsf-gnome/gsf-input-bonobo.h
 include/libgsf-1/gsf-gnome/gsf-input-gnomevfs.h
 include/libgsf-1/gsf-gnome/gsf-output-bonobo.h
@@ -10,6 +10,7 @@ include/libgsf-1/gsf/gsf-doc-meta-data.h
 include/libgsf-1/gsf/gsf-impl-utils.h
 include/libgsf-1/gsf/gsf-infile-impl.h
 include/libgsf-1/gsf/gsf-infile-msole.h
+include/libgsf-1/gsf/gsf-infile-msvba.h
 include/libgsf-1/gsf/gsf-infile-stdio.h
 include/libgsf-1/gsf/gsf-infile-zip.h
 include/libgsf-1/gsf/gsf-infile.h
@@ -18,10 +19,12 @@ include/libgsf-1/gsf/gsf-input-gzip.h
 include/libgsf-1/gsf/gsf-input-impl.h
 include/libgsf-1/gsf/gsf-input-iochannel.h
 include/libgsf-1/gsf/gsf-input-memory.h
+include/libgsf-1/gsf/gsf-input-proxy.h
 include/libgsf-1/gsf/gsf-input-stdio.h
 include/libgsf-1/gsf/gsf-input-textline.h
 include/libgsf-1/gsf/gsf-input.h
 include/libgsf-1/gsf/gsf-libxml.h
+include/libgsf-1/gsf/gsf-meta-names.h
 include/libgsf-1/gsf/gsf-msole-utils.h
 include/libgsf-1/gsf/gsf-outfile-impl.h
 include/libgsf-1/gsf/gsf-outfile-msole.h
