@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/05 16:20:26 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2005/02/19 20:49:29 wiz Exp $
 share/doc/${DISTNAME}/README
 share/doc/${DISTNAME}/COPYING
 share/doc/${DISTNAME}/QuickStart
 share/doc/${DISTNAME}/README.win32
 share/xmltv/tv_grab_de_tvtoday/channel_ids
-share/xmltv/tv_grab_it/channel_ids
+share/xmltv/tv_grab_it_lt/channel_ids
 share/xmltv/tv_grab_nl/channels
 share/xmltv/tv_grab_uk_bleb/icon_urls
 share/xmltv/tv_grab_uk_rt/channel_ids
 @dirrm share/doc/${DISTNAME}
 @dirrm share/xmltv/tv_grab_de_tvtoday
-@dirrm share/xmltv/tv_grab_it
+@dirrm share/xmltv/tv_grab_it_lt
 @dirrm share/xmltv/tv_grab_nl
 @dirrm share/xmltv/tv_grab_uk_bleb
 @dirrm share/xmltv/tv_grab_uk_rt
