@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1 1998/08/18 09:25:18 frueauf Exp $
+
+--- highscore.c.orig	Thu Nov 21 18:28:46 1996
++++ highscore.c	Mon Aug 17 22:40:49 1998
+@@ -56,2 +56,5 @@
+ #include <file.h>
++#ifdef __NetBSD__
++  #include <sys/file.h>
++#endif
+ #include <sys/param.h>
