@@ -1,4 +1,4 @@
-$Id: patch-ad,v 1.1 1998/10/05 19:55:27 cjs Exp $
+$NetBSD: patch-ad,v 1.2 1998/11/12 23:54:33 frueauf Exp $
 
 This patch is necessary for listening on multiple ports safely. It has
 been submitted to the apache group, the gnats ID is os-netbsd/3120.
