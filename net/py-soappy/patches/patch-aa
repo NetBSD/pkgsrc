@@ -1,0 +1,62 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/10/01 17:21:39 drochner Exp $
+
+--- SOAP.py.orig	Tue Oct  1 18:52:15 2002
++++ SOAP.py	Tue Oct  1 18:53:25 2002
+@@ -71,6 +71,18 @@
+ # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ #
+ ################################################################################
++#
++# Additional changes:
++# 0.9.7.3 - 4/18/2002 - Mark Pilgrim (f8dy@diveintomark.org)
++#   added dump_dict as alias for dump_dictionary for Python 2.2 compatibility
++# 0.9.7.2 - 4/12/2002 - Mark Pilgrim (f8dy@diveintomark.org)
++#   fixed logic to unmarshal the value of "null" attributes ("true" or "1"
++#   means true, others false)
++# 0.9.7.1 - 4/11/2002 - Mark Pilgrim (f8dy@diveintomark.org)
++#   added "dump_str" as alias for "dump_string" for Python 2.2 compatibility
++#   Between 2.1 and 2.2, type("").__name__ changed from "string" to "str"
++################################################################################
++
+ import xml.sax
+ import UserList
+ import base64
+@@ -89,9 +101,9 @@
+ try: from M2Crypto import SSL
+ except: pass
+ 
+-ident = 'Id: SOAP.py,v 1.1.1.1 2001/06/27 21:36:12 cullman Exp '
++ident = 'Id: SOAP.py,v 1.3 2002/04/18 19:19:45 f8dy Exp '
+ 
+-__version__ = "0.9.7"
++__version__ = "0.9.7.3"
+ 
+ # Platform hackery
+ 
+@@ -2097,7 +2109,9 @@
+                     null = attrs[(NS.XSI3, 'nil')]
+                     del attrs[(NS.XSI3, 'nil')]
+ 
+-                null = int(null)
++                #MAP 4/12/2002 - must also support "true"
++                #null = int(null)
++                null = (str(null).lower() in ['true', '1'])
+ 
+                 if null:
+                     if len(cur) or \
+@@ -3102,6 +3116,7 @@
+             typed, ns_map, self.genroot(ns_map), id)
+ 
+     dump_unicode = dump_string
++    dump_str = dump_string # 4/12/2002 - MAP - for Python 2.2
+ 
+     def dump_None(self, obj, tag, typed = 0, ns_map = {}):
+         tag = tag or self.gentag()
+@@ -3214,6 +3229,7 @@
+                 self.dump(v, k, 1, ns_map)
+ 
+         self.out += '</%s>\n' % tag
++    dump_dict = dump_dictionary # 4/18/2002 - MAP - for Python 2.2
+ 
+     def dump_instance(self, obj, tag, typed = 1, ns_map = {}):
+         if not tag:
