@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.3 2003/09/12 15:54:40 grant Exp $
+# $NetBSD: compiler.mk,v 1.4 2003/09/12 16:07:09 grant Exp $
 
 # This Makefile fragment implements handling for supported
 # C/C++/fortran compilers.
@@ -99,6 +99,15 @@ PKG_FC=			${F77}
 .if (defined(USE_GCC2) || defined(USE_GCC3)) && defined(USE_GCC_SHLIB)
 _GCC_LDFLAGS=		-L${_GCC_ARCHDIR} -Wl,${RPATH_FLAG}${_GCC_ARCHDIR} -L${_GCC_PREFIX}lib -Wl,${RPATH_FLAG}${_GCC_PREFIX}lib
 LDFLAGS+=		${_GCC_LDFLAGS}
+.endif
+
+# The SunPro C++ compiler doesn't support passing linker flags with
+# -Wl to CC, so we make buildlink2 perform the required magic.
+#
+.if defined(USE_SUNPRO)
+_COMPILER_LD_FLAG=		# SunPro compiler
+.else
+_COMPILER_LD_FLAG=	-Wl,	# GCC and others
 .endif
 
 .endif	# COMPILER_MK
