@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/09/04 12:52:24 taca Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/23 11:51:57 wiz Exp $
 # FreeBSD Id: ports/japanese/namazu2/Makefile,v 1.16 2000/10/26 20:56:25 knu Exp
 
 DISTNAME=	namazu-2.0.12
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	-with-chasen
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 USE_PERL5=		# defined
 GNU_CONFIGURE=		# defined
 USE_LIBTOOL=		# defined
@@ -58,5 +58,5 @@ post-install:
 test:
 	@cd ${WRKSRC}; make check
 
-.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
