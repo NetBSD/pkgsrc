@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/05/29 11:28:46 xtraeme Exp $
+
+--- build/main.mk.orig	2004-05-29 12:52:37.000000000 +0200
++++ build/main.mk	2004-05-29 12:53:36.000000000 +0200
+@@ -109,6 +109,10 @@
+ OPENMSX_PLATFORM:=$(OPENMSX_TARGET_CPU)-$(OPENMSX_TARGET_OS)
+ endif
+ 
++ifeq ($(OPENMSX_TARGET_OS), netbsd)
++OPENMSX_PLATFORM:=$(OPENMSX_TARGET_OS)
++endif
++
+ # Ignore rest of Makefile if autodetection was not performed yet.
+ # Note that the include above will force a reload of the Makefile.
+ ifneq ($(origin OPENMSX_PLATFORM),undefined)
