@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/10/18 15:20:53 veego Exp $
+# $NetBSD: Makefile,v 1.18 2002/10/13 11:43:59 wiz Exp $
 #
 
 DISTNAME=		Gtk-Perl-0.7008
@@ -15,13 +15,11 @@ COMMENT=		Perl bindings for GTK+
 BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Writer
 BUILD_DEPENDS+=		p5-XML-Writer-[0-9]*:../../textproc/p5-XML-Writer
 
+USE_BUILDLINK2=		YES
 USE_X11=		YES
-USE_PERL5=		YES
+MAKE_PARAMS=		INSTALLMAN3DIR=${PREFIX}/man/man3
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Gtk/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL	\
-		INSTALLMAN3DIR=${PREFIX}/man/man3
-
-.include "../../x11/gtk/buildlink.mk"
+.include "../../lang/perl5/module.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
