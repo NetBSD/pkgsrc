@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6233 2004/06/20 18:43:26 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6234 2004/06/20 18:48:44 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2965,3 +2965,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pax to 20040620 [grant 2004-06-20]
 	Updated cvsync to 0.24.16 [gehenna 2004-06-20]
 	Updated vlc to 0.7.2 [xtraeme 2004-06-20]
+	Updated mysql4-server to 4.0.20 [xtraeme 2004-06-20]
+	Updated mysql4-client to 4.0.20 [xtraeme 2004-06-20]
