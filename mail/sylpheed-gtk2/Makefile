@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/01/03 18:49:45 reed Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/13 22:27:34 xtraeme Exp $
 #
 
-DISTNAME=	sylpheed-0.9.5-gtk2-20030906
-PKGNAME=	sylpheed-gtk2-0.9.5
-PKGREVISION=	4
+DISTNAME=	sylpheed-0.9.8a-gtk2-20040109
+PKGNAME=	sylpheed-gtk2-0.9.8a
 CATEGORIES=	mail x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-gtk2/}
 
@@ -34,8 +33,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		USE_INET6 USE_OPENLDAP USE_JPILOT
 
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
