@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2003/01/18 05:45:42 uebayasi Exp $
+# $NetBSD: Makefile,v 1.15 2003/01/19 06:52:55 salo Exp $
 
 DISTNAME=	xemacs-21.5.10
 CATEGORIES=	editors
@@ -82,7 +82,6 @@ CONFIGURE_ARGS+=	--site-includes=${PREFIX}/include:${WRKDIR}
 CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib
 
 CFLAGS+=		-Dunix
-MAKE_ENV+=		INSTALL_MAN="${INSTALL_MAN}"
 
 post-patch:
 	@${RM} -f ${WRKSRC}/etc/ctags.1.orig

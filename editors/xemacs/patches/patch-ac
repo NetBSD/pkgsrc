@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2002/10/09 16:32:17 magick Exp $
+$NetBSD: patch-ac,v 1.4 2003/01/19 06:52:55 salo Exp $
 
 --- Makefile.in.orig	Mon Dec 18 04:03:32 2000
 +++ Makefile.in
@@ -19,9 +19,9 @@ $NetBSD: patch-ac,v 1.3 2002/10/09 16:32:17 magick Exp $
 -	    chmod 0644 ${mandir}/$${page}${manext} ; \
 +	    if [ $${page} = etags ] || [ $${page} = ctags ] ; \
 +	    then \
-+	      ${INSTALL_MAN} ${srcdir}/etc/$${page}.1 ${mandir}/xemacs-$${page}${manext} ; \
++	      ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 ${mandir}/xemacs-$${page}${manext} ; \
 +	    else \
-+	      ${INSTALL_MAN} ${srcdir}/etc/$${page}.1 ${mandir}/$${page}${manext} ; \
++	      ${BSD_INSTALL_MAN} ${srcdir}/etc/$${page}.1 ${mandir}/$${page}${manext} ; \
 +	    fi \
  	  done
  	@echo "If you would like to save approximately 2M of disk space, do"
