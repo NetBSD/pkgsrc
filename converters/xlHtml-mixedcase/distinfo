@@ -1,7 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/05/14 13:23:51 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/12/10 16:03:44 taca Exp $
 
-SHA1 (xlHtml-0.2.8.tar.gz) = 17c39a704338c38f1c0463af2d01a6c063a6c834
-Size (xlHtml-0.2.8.tar.gz) = 339705 bytes
-SHA1 (patch-aa) = 11e45455c14a71f0459ac3104e5ffc2a148e70e7
-SHA1 (patch-ab) = 2f6d90508278fc8be313995bf1c83daf6c7ec21b
-SHA1 (patch-ac) = b44f37ce830bfe4cb53a64bac0c6f25892df8eba
+SHA1 (xlhtml-0.4.tar.gz) = c42844187db3965e078886e6c24eebd6a30be65e
+Size (xlhtml-0.4.tar.gz) = 266623 bytes
