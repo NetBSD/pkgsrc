@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1.1.1 2004/01/24 09:00:36 xtraeme Exp $
+man/man1/xfs.1.gz
