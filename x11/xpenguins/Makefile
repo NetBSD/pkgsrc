@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/12/12 13:56:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/17 17:07:21 wiz Exp $
 #
 
 DISTNAME=	xpenguins-1.2
@@ -7,6 +7,7 @@ MASTER_SITES=	http://xpenguins.seul.org/
 
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://xpenguins.seul.org/
+COMMENT=	Little penguins walking along the tops of your windows
 
 USE_XPM=	YES
 

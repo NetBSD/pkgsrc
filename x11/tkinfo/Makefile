@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/08/30 23:35:38 jwise Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/17 17:06:49 wiz Exp $
 # FreeBSD Id: Makefile,v 1.15 1997/12/16 09:26:12 tg Exp
 #
 
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/doctools/info/} \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://math-www.uni-paderborn.de/~axel/tkinfo/
+COMMENT=	Tk script to read and display GNU "info" files
 
 DEPENDS=	tk-8.3.2:../../x11/tk
 

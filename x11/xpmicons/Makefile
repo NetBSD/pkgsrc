@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/05/21 00:48:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/02/17 17:07:22 wiz Exp $
 
 DISTNAME=	xpmicons-1.0
 CATEGORIES=	x11
@@ -15,6 +15,7 @@ DISTFILES=	icons.tar.gz KDEicons.tgz \
 		avi-windows-icons.tgz oliphant-neon.tgz
 
 MAINTAINER=	root@garbled.net
+COMMENT=	huge collection of icons for any windowmanager
 
 DIST_SUBDIR=	icons
 WRKSRC=		${WRKDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/08/30 00:01:03 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2001/02/17 17:06:47 wiz Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/03/07 12:29:49 obrien Exp
 #
 
@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		gcw@rxvt.org
 HOMEPAGE=		http://www.rxvt.org/
+COMMENT=		Low memory usage xterm replacement that supports color
 
 USE_X11BASE=		YES
 USE_XPM=		YES

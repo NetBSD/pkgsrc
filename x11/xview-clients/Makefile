@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/12/29 15:07:21 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.16 2001/02/17 17:07:28 wiz Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
@@ -8,6 +8,7 @@ CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		jlam@netbsd.org
+COMMENT=		OpenLook applications and man pages
 
 DEPENDS+=		xview-lib>=3.2.1:../../x11/xview-lib
 NOT_FOR_PLATFORM=       *-*-alpha       # broken va_arg handling in xview-lib
