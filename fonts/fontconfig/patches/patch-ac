@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2005/03/01 23:38:27 wiz Exp $
+$NetBSD: patch-ac,v 1.6 2005/03/22 14:05:54 wiz Exp $
 
---- conf.d/Makefile.in.orig	2005-03-01 21:48:52.000000000 +0100
+--- conf.d/Makefile.in.orig	2005-03-09 00:42:10.000000000 +0100
 +++ conf.d/Makefile.in
 @@ -195,7 +195,7 @@ prefix = @prefix@
  program_transform_name = @program_transform_name@
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.5 2005/03/01 23:38:27 wiz Exp $
  target_alias = @target_alias@
  
  CONF_FILES = \
-@@ -207,7 +207,7 @@ CONF_FILES = \
+@@ -210,7 +210,7 @@ CONF_FILES = \
  EXTRA_DIST = $(CONF_FILES)
  
  configdir = $(CONFDIR)
