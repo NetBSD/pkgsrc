@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2524 2004/11/27 14:24:16 magick Exp $
+$NetBSD: TODO,v 1.2525 2004/11/27 14:50:43 he Exp $
 
 Suggested new packages
 ======================
@@ -825,7 +825,6 @@ Suggested package updates
 	o p5-Apache-ASP-2.57
 	o p5-Apache-AuthCookie-3.06
 	o p5-Apache-DBILogConfig-0.02
-	o p5-Apache-Filter-1.022
 	o p5-Apache-Gallery-0.9.1
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-1.70_01
