@@ -1,0 +1,259 @@
+--- changer-src/Makefile.in.old	Tue Feb 23 11:55:44 1999
++++ changer-src/Makefile.in	Tue Feb 23 11:57:09 1999
+@@ -83,7 +83,7 @@
+ BUILD_CLIENT_SCRIPTS_LIBEXEC = @BUILD_CLIENT_SCRIPTS_LIBEXEC@
+ BUILD_CLIENT_SCRIPTS_SBIN = @BUILD_CLIENT_SCRIPTS_SBIN@
+ BUILD_COMMON_LIB = @BUILD_COMMON_LIB@
+-BUILD_COMMON_LTLIB = @BUILD_COMMON_LTLIB@
++BUILD_COMMON_LTLIB =
+ BUILD_RECOVER_PROGS_SBIN = @BUILD_RECOVER_PROGS_SBIN@
+ BUILD_RESTORE_PROGS_LIBEXEC = @BUILD_RESTORE_PROGS_LIBEXEC@
+ BUILD_RESTORE_PROGS_SBIN = @BUILD_RESTORE_PROGS_SBIN@
+@@ -93,7 +93,7 @@
+ BUILD_SERVER_PROGS_SBIN = @BUILD_SERVER_PROGS_SBIN@
+ BUILD_SERVER_SCRIPTS_SBIN = @BUILD_SERVER_SCRIPTS_SBIN@
+ BUILD_TAPE_LIB = @BUILD_TAPE_LIB@
+-BUILD_TAPE_LTLIB = @BUILD_TAPE_LTLIB@
++BUILD_TAPE_LTLIB =
+ CAT = @CAT@
+ CC = @CC@
+ CHIO = @CHIO@
+@@ -161,8 +161,7 @@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(AMANDA_CFLAGS)
+ 
+ # they cross-reference each other a bit, so need to be included twice
+-LDADD = ../server-src/libamserver.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++LDADD = ../server-src/libamserver.$(LIB_EXTENSION) 
+ 
+ SUFFIXES =		.pl .sh
+ 
+@@ -203,9 +202,8 @@
+ 
+ chg_scsi_OBJECTS =  chg-scsi.o
+ chg_scsi_DEPENDENCIES =  libscsi.a \
+-../server-src/libamserver.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
+-chg_scsi_LDFLAGS = 
++../server-src/libamserver.$(LIB_EXTENSION) 
++chg_scsi_LDFLAGS = -lamanda
+ SCRIPTS =  $(libexec_SCRIPTS)
+ 
+ CFLAGS = @CFLAGS@
+--- restore-src/Makefile.in.old	Tue Feb 23 11:58:06 1999
++++ restore-src/Makefile.in	Tue Feb 23 12:58:50 1999
+@@ -83,7 +83,7 @@
+ BUILD_CLIENT_SCRIPTS_LIBEXEC = @BUILD_CLIENT_SCRIPTS_LIBEXEC@
+ BUILD_CLIENT_SCRIPTS_SBIN = @BUILD_CLIENT_SCRIPTS_SBIN@
+ BUILD_COMMON_LIB = @BUILD_COMMON_LIB@
+-BUILD_COMMON_LTLIB = @BUILD_COMMON_LTLIB@
++BUILD_COMMON_LTLIB = 
+ BUILD_RECOVER_PROGS_SBIN = @BUILD_RECOVER_PROGS_SBIN@
+ BUILD_RESTORE_PROGS_LIBEXEC = @BUILD_RESTORE_PROGS_LIBEXEC@
+ BUILD_RESTORE_PROGS_SBIN = @BUILD_RESTORE_PROGS_SBIN@
+@@ -93,7 +93,7 @@
+ BUILD_SERVER_PROGS_SBIN = @BUILD_SERVER_PROGS_SBIN@
+ BUILD_SERVER_SCRIPTS_SBIN = @BUILD_SERVER_SCRIPTS_SBIN@
+ BUILD_TAPE_LIB = @BUILD_TAPE_LIB@
+-BUILD_TAPE_LTLIB = @BUILD_TAPE_LTLIB@
++BUILD_TAPE_LTLIB =
+ CAT = @CAT@
+ CC = @CC@
+ CHIO = @CHIO@
+@@ -162,8 +162,7 @@
+ 
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(AMANDA_CFLAGS)
+ 
+-LDADD = ../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++LDADD = 
+ 
+ sbin_PROGRAMS = 	@BUILD_RESTORE_PROGS_SBIN@
+ 
+@@ -181,17 +180,15 @@
+ DEFS = @DEFS@ -I. -I$(srcdir) -I../config
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lamtape -lamanda
+ amrestore_SOURCES = amrestore.c
+ amrestore_OBJECTS =  amrestore.o
+ amrestore_LDADD = $(LDADD)
+-amrestore_DEPENDENCIES =  ../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++amrestore_DEPENDENCIES =  
+ amrestore_LDFLAGS = 
+ amidxtaped_OBJECTS =  amidxtaped.o
+ amidxtaped_LDADD = $(LDADD)
+-amidxtaped_DEPENDENCIES =  ../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++amidxtaped_DEPENDENCIES = 
+ amidxtaped_LDFLAGS = 
+ CFLAGS = @CFLAGS@
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
+--- server-src/Makefile.in.old	Tue Feb 23 13:01:08 1999
++++ server-src/Makefile.in	Tue Feb 23 13:03:27 1999
+@@ -83,7 +83,7 @@
+ BUILD_CLIENT_SCRIPTS_LIBEXEC = @BUILD_CLIENT_SCRIPTS_LIBEXEC@
+ BUILD_CLIENT_SCRIPTS_SBIN = @BUILD_CLIENT_SCRIPTS_SBIN@
+ BUILD_COMMON_LIB = @BUILD_COMMON_LIB@
+-BUILD_COMMON_LTLIB = @BUILD_COMMON_LTLIB@
++BUILD_COMMON_LTLIB =
+ BUILD_RECOVER_PROGS_SBIN = @BUILD_RECOVER_PROGS_SBIN@
+ BUILD_RESTORE_PROGS_LIBEXEC = @BUILD_RESTORE_PROGS_LIBEXEC@
+ BUILD_RESTORE_PROGS_SBIN = @BUILD_RESTORE_PROGS_SBIN@
+@@ -93,7 +93,7 @@
+ BUILD_SERVER_PROGS_SBIN = @BUILD_SERVER_PROGS_SBIN@
+ BUILD_SERVER_SCRIPTS_SBIN = @BUILD_SERVER_SCRIPTS_SBIN@
+ BUILD_TAPE_LIB = @BUILD_TAPE_LIB@
+-BUILD_TAPE_LTLIB = @BUILD_TAPE_LTLIB@
++BUILD_TAPE_LTLIB = 
+ CAT = @CAT@
+ CC = @CC@
+ CHIO = @CHIO@
+@@ -162,9 +162,7 @@
+ 
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS) $(AMANDA_CFLAGS)
+ 
+-LDADD =	libamserver.$(LIB_EXTENSION) \
+-	../tape-src/libamtape.$(LIB_EXTENSION) \
+-	../common-src/libamanda.$(LIB_EXTENSION)
++LDADD =	libamserver.$(LIB_EXTENSION) 
+ 
+ SUFFIXES =		.sh .pl
+ 
+@@ -234,7 +232,7 @@
+ DEFS = @DEFS@ -I. -I$(srcdir) -I../config
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lamtape -lamanda
+ libamserver_a_LIBADD = 
+ libamserver_a_OBJECTS =  amindex.o changer.o clock.o conffile.o \
+ diskfile.o driverio.o holding.o infofile.o logfile.o tapefile.o find.o
+@@ -249,109 +247,77 @@
+ amadmin_SOURCES = amadmin.c
+ amadmin_OBJECTS =  amadmin.o
+ amadmin_LDADD = $(LDADD)
+-amadmin_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++amadmin_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ amadmin_LDFLAGS = 
+ amcheck_SOURCES = amcheck.c
+ amcheck_OBJECTS =  amcheck.o
+ amcheck_LDADD = $(LDADD)
+-amcheck_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++amcheck_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ amcheck_LDFLAGS = 
+ amflush_SOURCES = amflush.c
+ amflush_OBJECTS =  amflush.o
+ amflush_LDADD = $(LDADD)
+-amflush_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++amflush_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ amflush_LDFLAGS = 
+ amindexd_OBJECTS =  amindexd.o disk_history.o list_dir.o
+ amindexd_LDADD = $(LDADD)
+-amindexd_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++amindexd_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ amindexd_LDFLAGS = 
+ amlabel_SOURCES = amlabel.c
+ amlabel_OBJECTS =  amlabel.o
+ amlabel_LDADD = $(LDADD)
+-amlabel_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++amlabel_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ amlabel_LDFLAGS = 
+ amtape_SOURCES = amtape.c
+ amtape_OBJECTS =  amtape.o
+ amtape_LDADD = $(LDADD)
+-amtape_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++amtape_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ amtape_LDFLAGS = 
+ amtrmidx_SOURCES = amtrmidx.c
+ amtrmidx_OBJECTS =  amtrmidx.o
+ amtrmidx_LDADD = $(LDADD)
+-amtrmidx_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++amtrmidx_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ amtrmidx_LDFLAGS = 
+ driver_SOURCES = driver.c
+ driver_OBJECTS =  driver.o
+ driver_LDADD = $(LDADD)
+-driver_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++driver_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ driver_LDFLAGS = 
+ dumper_SOURCES = dumper.c
+ dumper_OBJECTS =  dumper.o
+ dumper_LDADD = $(LDADD)
+-dumper_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++dumper_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ dumper_LDFLAGS = 
+ getconf_SOURCES = getconf.c
+ getconf_OBJECTS =  getconf.o
+ getconf_LDADD = $(LDADD)
+-getconf_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++getconf_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ getconf_LDFLAGS = 
+ planner_SOURCES = planner.c
+ planner_OBJECTS =  planner.o
+ planner_LDADD = $(LDADD)
+-planner_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++planner_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ planner_LDFLAGS = 
+ amreport_OBJECTS =  reporter.o
+ amreport_LDADD = $(LDADD)
+-amreport_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++amreport_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ amreport_LDFLAGS = 
+ taper_SOURCES = taper.c
+ taper_OBJECTS =  taper.o
+ taper_LDADD = $(LDADD)
+-taper_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++taper_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ taper_LDFLAGS = 
+ diskfile_OBJECTS =  diskfile.test.o
+ diskfile_LDADD = $(LDADD)
+-diskfile_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++diskfile_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ diskfile_LDFLAGS = 
+ conffile_OBJECTS =  conffile.test.o
+ conffile_LDADD = $(LDADD)
+-conffile_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++conffile_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ conffile_LDFLAGS = 
+ infofile_OBJECTS =  infofile.test.o
+ infofile_LDADD = $(LDADD)
+-infofile_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) \
+-../tape-src/libamtape.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++infofile_DEPENDENCIES =  libamserver.$(LIB_EXTENSION) 
+ infofile_LDFLAGS = 
+ SCRIPTS =  $(sbin_SCRIPTS)
+ 

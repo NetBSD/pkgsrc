@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/23 17:03:41 bouyer Exp $
+lib/libamanda.a
+lib/libamanda-2.4.1p1.so.0.0
+lib/libamtape.a
+lib/libamtape-2.4.1p1.so.0.0
+libexec/versionsuffix
+man/man8/amanda.8
