@@ -1,10 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.5 2003/09/30 00:42:32 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2003/09/30 10:18:57 jlam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+FREETYPE2_BUILDLINK3_MK:=	${FREETYPE2_BUILDLINK3_MK}+
 
-.if !defined(FREETYPE2_BUILDLINK3_MK)
-FREETYPE2_BUILDLINK3_MK=	YES
-
+.if !empty(FREETYPE2_BUILDLINK3_MK:M\+)
 .  include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.0.1
@@ -73,7 +72,7 @@ BUILDLINK_DEPENDS+=		freetype2
 .  endif
 .endif
 
-.if !defined(FREETYPE2_BUILDLINK3_MK)
+.if !empty(FREETYPE2_BUILDLINK3_MK:M\+)
 .  if ${_NEED_FREETYPE2} == "YES"
 BUILDLINK_PACKAGES+=		freetype2
 .  else
@@ -81,4 +80,4 @@ BUILDLINK_PREFIX.freetype2=	${X11BASE}
 .  endif
 .endif	# FREETYPE2_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:C/\+$//}
