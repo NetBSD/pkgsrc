@@ -1,0 +1,12 @@
+# $NetBSD: mipspro-cc-post-cache,v 1.1 2004/01/07 20:45:59 jlam Exp $
+#
+# This file implements the default action of the "cc" private cache
+# for the MIPSpro suite of compilers, and tells the wrapper to skip the
+# common cache lookup for all GCC arguments that the MIPSpro compiler
+# can't handle; they will instead by handled directly by
+# mipspro-cc-post-logic.
+
+-[OW]*)
+	skipcache=yes
+	;;
+esac
