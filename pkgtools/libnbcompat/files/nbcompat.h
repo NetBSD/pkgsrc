@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.16 2003/09/06 01:35:08 jlam Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.17 2003/09/06 06:13:48 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -352,7 +352,9 @@ void	 tputs(const char *, int, int (*)(int));
 
 #if HAVE_GETOPT_H
 # include <getopt.h>
-#else
+#endif
+
+#if HAVE_NBCOMPAT_GETOPT_LONG
 # include <nbcompat/getopt.h>
 #endif
 
