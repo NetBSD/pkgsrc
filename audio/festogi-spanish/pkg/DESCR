@@ -1,14 +1,48 @@
 Festival Spanish (Mexican) language support routines (in scheme) from ogi.edu
 
-OGIspanish is an extension to the Festival TTS system (created by
-CSTR at the University of Edinburgh
-http://www.cstr.ed.ac.uk/projects/festival).  This version of
-voice_abc has been designed to work with Festival version 1.3.0
-released starting from September 1998.  It provides Mexican Spanish
-voices created by Alejandro Barbosa from UDLA, Puebla, Mexico.
 
-New in recent releases:
-	* works with Festival 1.3.0
+		     Mexican Spanish Synthesizer
+			    for OGIresLPC
+			     version 2.0
+			      June 1999
+
+	     http://www.pue.udlap.mx/~sistemas/tlatoa/tts
+		   http://cslu.cse.ogi.edu/tts
+
+	      Alejandro Barbosa <alex@mail.pue.udlap.mx>
+		   Andrew Cronk <cronk@cse.ogi.edu>
+		Horacio Meza <is093970@mail.udlap.mx>
+		    Mike Macon <macon@ee.ogi.edu>
+		
+DESCRIPTION
+-----------
+
+OGIspanish is an extension to the Festival TTS system
+(http://www.cstr.ed.ac.uk/projects/festival).  This version of
+OGIspanish has been designed to work with Festival version 1.4.0
+released June 1999.  It provides Mexican Spanish voices created by OGI
+staff and Alejandro Barbosa from UDLA, Puebla, Mexico.
+
+The module is distributed in three chunks:
+ 1) OGIspanish-2.0.tar.gz -- Scheme code
+ 2) voice_hvs-2.0.tar.gz -- female voice
+ 3) voice_abc-2.0.tar.gz -- male voice
+
+New in this release (2.0):
+	* works with Festival 1.4.0
+	
+	* intonation module accepts parameter that allows base f0 to be
+	  modified in the same manner as the English voices in the context
+	  of the CSLU Toolkit
+
+	* major improvements to the tokenization module
+		- accents 'vowel format abandoned
+		- now use vowel' to indicate accent on non-Spanish keyboard
+		- tilde can be entered as n~ or ny
+		- dieresis supported
+		- Spanish keyboard special characters supported
+		- a host of Abbreviations added
+		- improved processing of money, temperature, etc.
 
 	* intonation module: At the highest level of the intonation module 
 	  is a new stage to incorporate different phrase intonation models. 
@@ -24,23 +58,29 @@ New in recent releases:
 Notes:
 
 1) Currently, the Mexican Spanish voice does not support Spanish
-characteres such as tilded vowels, or dierisis. You must enter 
+characters such as tilded vowels, ˜ or dierisis. You must enter 
 them as follows: 
 
-tilded a	-	'a
-tilded e	-	'e
-tilded i	-	'i
-tilded o	-	'o
-tilded u	-	'u
-tilded n	-	ny
+tilded a	-	a'
+tilded e	-	e'
+tilded i	-	i'
+tilded o	-	o'
+tilded u	-	u'
+tilded n	-	n~
 
-dierisis is not supported in this version.
 
 LICENSE 
 ------- 
 This module and accompanying data are freely available for
-non-commercial use only.  Please see the file "license.ogi" for
-information on usage and redistribution, and for a DISCLAIMER OF ALL
-WARRANTIES.
+non-commercial use only.  Please see the file "license_ogi_tts.txt"
+for information on usage and redistribution, and for a DISCLAIMER OF
+ALL WARRANTIES.
+
+
+BUGS and IMPROVEMENTS
+---------------------
+Please contact us via email if you find bugs or have suggestions
+for improvements.  <cronk@cse.ogi.edu>
+
 
 -Julian Assange <proff@iq.org>
