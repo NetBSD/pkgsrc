@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7685 2004/11/03 21:39:07 adrianp Exp $
+$NetBSD: CHANGES,v 1.7686 2004/11/03 23:49:21 cube Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5060,3 +5060,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Text-Tabs+Wrap-2001.0929 [adrianp 2004-11-03]
 	Updated p5-Bit-Vector to 6.4 [adrianp 2004-11-03]
 	Updated p5-Date-Calc to 5.4 [adrianp 2004-11-03]
+	Added RTFM-2.0.4 [cube 2004-11-03]
