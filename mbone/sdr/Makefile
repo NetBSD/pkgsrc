@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/10/28 02:40:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.25 2000/03/15 07:17:39 bouyer Exp $
 #
 
 DISTNAME=	sdr-2.7
@@ -15,21 +15,33 @@ USE_GMAKE=	yes
 
 RESTRICTED=	"Uses encryption"
 
+.include "../../mk/bsd.prefs.mk"
+
 .if exists(/usr/include/sys/inttypes.h)
 EXTRA_FLAGS+=	-DHAVE_SYS_INTTYPES_H
 MAKE_FLAGS+=	EXTRA_FLAGS="${EXTRA_FLAGS}"
 .endif
 
+.if ${OPSYS} == "SunOS"
+SYSDIR= solaris
+.else
+SYSDIR= netbsd
+.endif
+
 do-configure:
 	cd ${WRKSRC}/common	; ${SH} ./configure
+.if ${OPSYS} == "SunOS"
+	${CAT} ${WRKSRC}/sdr/solaris/Makefile.solaris ${WRKSRC}/sdr/src/Makefile.template > ${WRKSRC}/sdr/solaris/Makefile
+.else
 	${MKDIR} ${WRKSRC}/sdr/netbsd
 	${CAT} ${FILESDIR}/Makefile.netbsd ${WRKSRC}/sdr/src/Makefile.template > ${WRKSRC}/sdr/netbsd/Makefile
+.endif
 
 do-build:
 	cd ${WRKSRC}/common	; ${GMAKE}
-	cd ${WRKSRC}/sdr/netbsd	; ${GMAKE}
+	cd ${WRKSRC}/sdr/${SYSDIR}	; ${GMAKE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sdr/netbsd/sdr ${PREFIX}/bin/sdr
+	${INSTALL_PROGRAM} ${WRKSRC}/sdr/${SYSDIR}/sdr ${PREFIX}/bin/sdr
 
 .include "../../mk/bsd.pkg.mk"
