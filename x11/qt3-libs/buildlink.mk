@@ -17,7 +17,7 @@ QT3_LIBS_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.0.2
+BUILDLINK_DEPENDS.qt3-libs?=	qt3-libs>=3.0.4nb1
 DEPENDS+=			${BUILDLINK_DEPENDS.qt3-libs}:../../x11/qt3-libs
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.qt3-libs=qt3-libs
@@ -25,7 +25,7 @@ BUILDLINK_PREFIX.qt3-libs_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.qt3-libs=	qt3/bin/moc
 BUILDLINK_FILES.qt3-libs+=	qt3/include/*.h
 BUILDLINK_FILES.qt3-libs+=	qt3/include/private/*.h
-BUILDLINK_FILES.qt3-libs+=	qt3/lib/libqt.*
+BUILDLINK_FILES.qt3-libs+=	qt3/lib/libqt-mt.*
 
 REAL_QTDIR=			${BUILDLINK_PREFIX.qt3-libs}/qt3
 BUILDLINK_QTDIR=		${BUILDLINK_DIR}/qt3
