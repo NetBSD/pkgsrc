@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.38 2002/10/09 20:58:10 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.39 2002/10/09 22:10:04 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -190,9 +190,10 @@ _BUILDLINK_USE: .USE
 			buildlink_dir="${BUILDLINK_DIR}";		\
 			;;						\
 		esac;							\
-		files="${BUILDLINK_FILES.${.TARGET:S/-buildlink//}:S/^/${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}\//g}"; \
-		for file in $${files}; do				\
-			rel_file=`${ECHO} $${file} | ${SED} -e "s|${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/||"`; \
+		cd ${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}};	\
+		rel_files="${BUILDLINK_FILES.${.TARGET:S/-buildlink//}}"; \
+		for rel_file in $${rel_files}; do			\
+			file="${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/$${rel_file}"; \
 			if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
 				dest="$${buildlink_dir}/$${rel_file}";	\
 			else						\
