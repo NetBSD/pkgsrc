@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/06/01 11:23:35 rh Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/15 21:01:51 wiz Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.16
@@ -19,7 +19,7 @@ DEPENDS+=	gnuplot-3.7:../../graphics/gnuplot
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 USE_FORTRAN=		yes
-USE_PKGLIBTOOL=		yes
+USE_LIBTOOL=		yes
 USE_GMAKE=		yes
 CONFIGURE_ENV+=		CPPFLAGS=-I${WRKDIR}/include
 LDFLAGS+=		-Wl,-R${PREFIX}/lib -L${PREFIX}/lib
