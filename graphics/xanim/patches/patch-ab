@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 1999/07/07 23:11:19 tron Exp $
+$NetBSD: patch-ab,v 1.8 2001/10/12 20:39:37 tron Exp $
 
 --- Imakefile.orig	Sun Mar 21 23:36:26 1999
 +++ Imakefile	Thu Jul  8 00:55:07 1999
@@ -103,7 +103,7 @@ $NetBSD: patch-ab,v 1.7 1999/07/07 23:11:19 tron Exp $
  PROGRAMS = $(XANIM)
  
 -INCLUDES = -I$(INCDIR) $(XA_INCS)
-+INCLUDES = -I$(INCDIR)/X11 $(XA_INCS)
++INCLUDES = -I$(X11_ROOT)/include/X11 $(XA_INCS)
  
     LIBS1 = $(XA_LIBS) $(EXTENSIONLIB) $(XTOOLLIB) $(XLIB) -lm
  DEPLIBS1 = $(DEPEXTENSIONLIB) $(DEPXTOOLLIB) $(DEPXLIB)

@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/17 23:32:21 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2001/10/12 20:44:52 tron Exp $
 
 --- Makefile.orig	Tue Mar 23 03:20:32 1999
-+++ Makefile	Sun Jul 30 22:28:09 2000
++++ Makefile	Fri Oct 12 22:41:34 2001
 @@ -1,8 +1,8 @@
  CC     = gcc
  CFLAGS = -O2
 -INCDIR = -I/usr/X11R6/include/X11
 -DESTDIR= /usr/X11R6
 -LIBDIR = -L/usr/X11R6/lib
-+INCDIR = -I${PREFIX}/include
++INCDIR = -I${PREFIX}/include -I${X11BASE}/include
 +DESTDIR= ${PREFIX}
-+LIBDIR = -L${PREFIX}/lib -Wl,-R${PREFIX}/lib
++LIBDIR = -L${PREFIX}/lib -Wl,-R${PREFIX}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
  
  # for Linux
  LIBS   = -lXpm -lX11 -lXext
