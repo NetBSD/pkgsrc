@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2004/03/14 01:26:55 xtraeme Exp $
-#
+# $NetBSD: Makefile,v 1.19 2004/05/26 08:06:56 adam Exp $
 
-DISTNAME=	dillo-0.8.0
+DISTNAME=	dillo-0.8.1
 CATEGORIES=	www
 MASTER_SITES=	http://dillo.auriga.wearlab.de/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,12 +9,12 @@ MAINTAINER=	Benjamin.Wong@cc.gatech.edu
 HOMEPAGE=	http://dillo.auriga.wearlab.de/
 COMMENT=	Very small and fast graphical web-browser
 
-USE_BUILDLINK3=	YES
-USE_PKGINSTALL=	YES
-USE_X11=	YES
-GNU_CONFIGURE=	YES
+USE_BUILDLINK3=		YES
+USE_PKGINSTALL=		YES
+USE_X11=		YES
+GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS=		--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=		${PREFIX}/share/examples/dillo
 CONF_FILES=	${EGDIR}/dillorc.default ${PKG_SYSCONFDIR}/dillorc
