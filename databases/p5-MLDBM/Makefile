@@ -1,16 +1,22 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/25 05:14:28 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/02 14:33:50 agc Exp $
 #
 
-DISTNAME=	MLDBM-2.00
-PKGNAME=	p5-MLDBM-2.0
-CATEGORIES=	databases perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
+DISTNAME=		MLDBM-2.00
+PKGNAME=		p5-MLDBM-2.00
+CATEGORIES=		databases perl5
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=MLDBM/}
 
-MAINTAINER=	pkgsrc@netbsd.org
-COMMENT= 	Perl module store multidimensional hash structures in tied hashes
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/MLDBM/MLDBM.html
+COMMENT=		perl5 module for storing arbitrary data in tied hashes
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/MLDBM/.packlist
+DEPENDS+= 		p5-Data-Dumper-*:../../devel/p5-Data-Dumper
+
+USE_PERL5=		# defined
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/MLDBM/.packlist
+
+post-patch:
+	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} -f {} \;
 
 do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
