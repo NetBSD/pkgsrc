@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2002/05/08 16:20:56 taca Exp $
+$NetBSD: distinfo,v 1.9 2002/06/28 06:03:04 itojun Exp $
 
-SHA1 (bind/8.3.1/bind-src.tar.gz) = e2f7fb1dd86dfa58ad6a8a9d2c7c0fd21c8f7640
-Size (bind/8.3.1/bind-src.tar.gz) = 1392391 bytes
-SHA1 (bind/8.3.1/bind-doc.tar.gz) = 1a2adfb1b3d5e16072936f0245e30d035d182f0f
-Size (bind/8.3.1/bind-doc.tar.gz) = 1489943 bytes
+SHA1 (bind/8.3.3/bind-src.tar.gz) = d78e1e0818c16e6a81b2fbd545b564e73c1229fe
+Size (bind/8.3.3/bind-src.tar.gz) = 1411990 bytes
+SHA1 (bind/8.3.3/bind-doc.tar.gz) = 476f2b545f56b8fc2aad9d6e00653d1e267cfef6
+Size (bind/8.3.3/bind-doc.tar.gz) = 1488903 bytes
 SHA1 (patch-aa) = 6897694a7fa77bfb7c5da2d29a7537c948c669cb
 SHA1 (patch-ab) = 0d0e2e1a8cb58fc6c11b60fcc69fe496251f7659
 SHA1 (patch-ac) = fdf75b6b53fe4b9ab6ca74b90400edda54a825b1
