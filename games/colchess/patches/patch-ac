@@ -1,0 +1,41 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/10/24 20:08:13 jlam Exp $
+
+--- misc.c.orig	Thu Aug 17 04:22:08 2000
++++ misc.c
+@@ -16,7 +16,7 @@
+ #define ROLLOVER_CORRECTION   (double)((1073741824.0/(double)CLOCKS_PER_SEC)*4.0)
+ #define CMSCORE               (50000000)
+ 
+-extern char gamepath[FILENAME_MAX],path[FILENAME_MAX];
++extern char gamepath[FILENAME_MAX],book_path[FILENAME_MAX],path[FILENAME_MAX];
+ extern char dir_command[10],sep[3];
+ extern long int rtable[8][8][13],_nhash,_nanaly;
+ extern double time_spent;
+@@ -1160,13 +1160,10 @@
+   int i,a,b;
+   long int npos=0;
+   movelst *mvl=NULL,*oldmvl=NULL;
+-  char fen[80],temp[1024],ch,y,book_path[FILENAME_MAX];
++  char fen[80],temp[1024],ch,y;
+   openpos *op=NULL,*oldop=NULL,*opall=NULL;
+   FILE *fp;
+ 
+-  strcpy(book_path,path);
+-  strcat(book_path,sep);
+-  strcat(book_path,"book.dat");
+   if ((fp = fopen(book_path,"r"))==NULL) {
+     fprintf(stderr,"Failed to load opening book %s\n",book_path);
+     return NULL;
+@@ -1246,12 +1243,8 @@
+ void save_openings(openpos *openings) {
+   openpos *op=openings;
+   movelst *mvl;
+-  char book_path[FILENAME_MAX];
+   FILE *fp;
+    
+-  strcpy(book_path,path);
+-  strcat(book_path,sep);
+-  strcat(book_path,"book.dat");
+   if ((fp = fopen(book_path,"w"))==NULL) {
+     fprintf(stderr,"Failed to save opening book %s\n",book_path);
+     return;
