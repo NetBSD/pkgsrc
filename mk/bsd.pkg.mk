@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.82 1998/05/13 13:34:13 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.83 1998/05/14 11:53:30 agc Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -1532,8 +1532,8 @@ distclean: pre-distclean clean
 
 # Prints out a list of files to fetch (useful to do a batch fetch)
 
-# are we called from bsd.pkg.subdir.mk (i.e. do we scan all dirs anyways)? XXX
-.ifdef(DIRPRFX)
+# are we called from bsd.pkg.subdir.mk (i.e. do we scan all dirs anyway)? XXX
+.ifdef(_THISDIR_)
 RECURSIVE_FETCH_LIST?=	NO
 .else
 RECURSIVE_FETCH_LIST?=	YES
@@ -1910,7 +1910,7 @@ README_NAME=	${TEMPLATES}/README.port
 .endif
 
 README.html:
-	@${ECHO_MSG} "===>  Creating README.html for ${PKGNAME}"
+	@${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${PKGNAME}"
 	@${MAKE} depends-list PACKAGE_NAME_AS_LINK=YES >> $@.tmp1
 	@[ -s $@.tmp1 ] || echo "(none)" >> $@.tmp1
 	@${MAKE} package-depends PACKAGE_NAME_AS_LINK=YES >> $@.tmp2
