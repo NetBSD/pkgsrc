@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/10/03 20:56:44 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/11/11 20:00:13 damon Exp $
 #
 # This Makefile fragment is included by packages that use libole2.
 #
@@ -17,7 +17,7 @@ LIBOLE2_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libole2?=	libole2>=0.2.3
+BUILDLINK_DEPENDS.libole2?=	libole2>=0.2.4
 DEPENDS+=	${BUILDLINK_DEPENDS.libole2}:../../devel/libole2
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.libole2=libole2
