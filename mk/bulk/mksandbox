@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.36 2004/09/02 07:04:54 grant Exp $
+# $NetBSD: mksandbox,v 1.37 2004/09/16 09:55:42 cjep Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -169,6 +169,8 @@ localbase=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=LOCALBASE)`
 pkg_dbdir=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=PKG_DBDIR)`
 localpatches=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=LOCALPATCHES)`
 
+test -d "$localpatches" || echo "WARNING: LOCALPATCHES directory does not exist - ignoring"
+
 $mkdirprog $sandbox
 cat > $sandbox_script <<EOS
 #! /bin/sh -
@@ -277,7 +279,13 @@ $mountprog $mountflags $packages $sandbox/$packages
 $mountprog $mountflags $distfiles $sandbox/$distfiles
 echo "$packages $packages rw \\" >> $sandbox_script
 echo "$distfiles $distfiles rw \\" >> $sandbox_script
-test -n "$localpatches" && echo "$localpatches $localpatches rw \\" >> $sandbox_script
+
+if [ -n "$localpatches" ] && [ -d "$localpatches" ]; then
+	echo "Mounting $localpatches from $sandbox"
+	$mkdirprog $sandbox/$localpatches
+	$mountprog $mountflags $localpatches $sandbox/$localpatches
+	echo "$localpatches $localpatches rw \\" >> $sandbox_script
+fi
 
 cat >> $sandbox_script <<EOS
 "
