@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2003/07/13 13:52:37 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2003/07/17 21:49:02 grant Exp $
 
 DISTNAME=		gnome-utils-1.4.1.2
 PKGREVISION=		4
@@ -6,7 +6,7 @@ CATEGORIES=		misc x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/1.4/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rh@netbsd.org
+MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of useful GNOME utilities and applications
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/06/25 10:08:52 uebayasi Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/17 21:48:29 grant Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/09/11 03:54:53 fenner Exp
 #
 
@@ -15,7 +15,7 @@ PATCH_SITES=    ftp://tink.ims.ac.jp/pub/NetBSD/vic/
 PATCHFILES=     vic-2.8_ov511p0.diff.gz
 .endif
 
-MAINTAINER=	is@netbsd.org
+MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www-nrg.ee.lbl.gov/vic/
 COMMENT=	MBONE video conferencing tool
 

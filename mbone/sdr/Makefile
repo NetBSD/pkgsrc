@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2003/07/03 14:40:49 agc Exp $
+# $NetBSD: Makefile,v 1.37 2003/07/17 21:48:28 grant Exp $
 #
 
 DISTNAME=	sdr-3.0
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/sdr/${SYSDIR}
 CATEGORIES=	mbone tk
 MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/3.0/
 
-MAINTAINER=	is@netbsd.org
+MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/
 COMMENT=	MBone Session Directory
 

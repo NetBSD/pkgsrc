@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/02 01:18:53 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/07/17 21:45:25 grant Exp $
 
 DISTNAME=		stalin-0.9
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.nj.nec.com/pub/qobi/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@netbsd.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.neci.nj.nec.com/homepages/qobi/software.html
 COMMENT=		Aggressively optimizing Scheme compiler
 

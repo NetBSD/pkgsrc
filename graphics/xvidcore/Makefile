@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/06/02 01:19:09 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2003/07/17 21:43:18 grant Exp $
 #
 
 DISTNAME=	xvidcore-0.9.1
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://files.xvid.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.xvid.org/
 COMMENT=	ISO MPEG-4 compliant video codec
 

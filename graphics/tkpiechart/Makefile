@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2003/06/02 01:19:13 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/17 21:42:52 grant Exp $
 
 DISTNAME=	tkpiechart-5.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://jfontain.free.fr/
 
-MAINTAINER=	tech-pkg@netbsd.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://jfontain.free.fr/
 COMMENT=	Tcl/Tk pie-chart utility; in Tcl, not as an extension
 
