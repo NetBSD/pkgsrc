@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/08/31 18:39:27 mycroft Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/31 22:02:48 mycroft Exp $
 
 DISTNAME=	transcode-0.6.9
 #PKGREVISION=	3
@@ -31,7 +31,7 @@ post-patch:
 	-cd ${WRKSRC} && ${AUTOMAKE}
 
 post-install:
-	${LN} -s ../libxvidcore.so ${PREFIX}/lib/transcode/libxvidcore.so
+	${LN} -s ../libxvidcore.so.2.1  ${PREFIX}/lib/transcode/libxvidcore.so.2
 
 .include "../../archivers/liblzo/buildlink2.mk"
 .include "../../audio/liba52/buildlink2.mk"
