@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9731 2005/04/03 20:41:49 wiz Exp $
+$NetBSD: CHANGES,v 1.9732 2005/04/03 21:09:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1870,6 +1870,8 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated xmame to 0.95 [kristerw 2005-04-02]
 	Updated xmess to 0.95 [kristerw 2005-04-02]
 	Added ruby-syck-0.42 [minskim 2005-04-02]
+	Removed thunderbird-gtk2 [abs 2005-04-02]
+	Added thunderbird-gtk1-1.0.2 [abs 2005-04-02]
 	Added p5-String-Format-1.13 [epg 2005-04-03]
 	Updated p5-SQL-Statement to 1.11 [mjl 2005-04-03]
 	Added dircproxy-1.1.0 [adrianp 2005-04-03]
