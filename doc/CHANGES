@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6568 2004/07/16 01:02:47 wiz Exp $
+$NetBSD: CHANGES,v 1.6569 2004/07/16 01:32:39 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3407,3 +3407,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added prngd-0.9.29 [recht 2004-07-15]
 	Added memtester-2.93.1 [schmonz 2004-07-16]
 	Added xyame-038 [wiz 2004-07-16]
+	Added libosip2-2.0.9 [xtraeme 2004-07-16]
