@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/02/14 17:21:32 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/18 17:39:27 jlam Exp $
 #
 
 DISTNAME=		flac-1.1.0
@@ -27,6 +27,7 @@ BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 # This version of flac doesn't seem to build correctly with -O3 using
 # the MIPSpro compiler.
 #
+.include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mmipspro)
 BUILDLINK_TRANSFORM+=	S:-O3:
 .endif
