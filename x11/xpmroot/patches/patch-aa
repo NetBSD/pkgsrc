@@ -1,25 +1,11 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 11:18:28 agc Exp $
+--- xpmroot.c.BAK	Mon Feb 22 04:04:55 1999
++++ xpmroot.c	Mon Feb 22 04:04:58 1999
+@@ -6,8 +6,6 @@
+  * this program or anything related to it.
+  ****************************************************************************/
 
---- Imakefile.orig	Sat Feb 17 05:44:43 1996
-+++ Imakefile	Tue Mar 24 23:14:07 1998
-@@ -1,17 +1,10 @@
- /* 
-- * Imakefile for fvwm 2.0 -- xpmroot
-+ * Imakefile for xpmroot
-  */
- 
--FVWM_SRCDIR = ..
--#include "../Fvwm.tmpl"
+-#include "config.h"
 -
--#if HasXpm
--
- SRCS = xpmroot.c
- OBJS = xpmroot.o
- 
--LOCAL_LIBRARIES = $(FVWM_LIBS) $(XLIB)
--
--FvwmProgramTarget(xpmroot)
--#endif
-+LOCAL_LIBRARIES = -lXpm $(XLIB)
- 
-+ComplexProgramTarget(xpmroot)
+ #include <stdio.h>
+ #include <signal.h>
+ #include <string.h>
