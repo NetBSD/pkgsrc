@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2003/12/02 01:55:30 jmcneill Exp $
+
+--- source/status.c.orig	2003-12-01 21:52:00.000000000 -0400
++++ source/status.c	2003-12-01 21:52:43.000000000 -0400
+@@ -1213,7 +1213,7 @@
+  * current-type window, although i think they should go to all windows.
+  */
+ #define STATUS_VAR(x) \
+-static	char	*status_user ## x ## (Window *window)			\
++static	char	*status_user ## x (Window *window)			\
+ {									\
+ 	char	*text;							\
+ 									\
