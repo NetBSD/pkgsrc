@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.10 1999/05/20 17:28:31 msaitoh Exp $
+# $NetBSD: Makefile,v 1.11 1999/05/22 03:23:13 tsarna Exp $
 
 DISTNAME=	PTL2-current-990512
 PKGNAME=	ptl2-990512
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.media.osaka-cu.ac.jp/pub/PTL/PTL2/PTL2-current-990512/
-
-PATCH_SITES=	${MASTER_SITES}
-PATCHFILES=	PTL2-current-990512-patch-1
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	msaitoh@netbsd.org
 HOMEPAGE=	http://www.media.osaka-cu.ac.jp/~k-abe/PTL/
