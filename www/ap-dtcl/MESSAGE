@@ -1,0 +1,23 @@
+=============================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 02:15:42 zuntum Exp $
+
+In order to enable mod_dtcl in your Apache installation, you need to add
+the following to your httpd.conf file:
+
+	LoadModule dtcl_module ${PREFIX}/lib/httpd/mod_dtcl.so
+	AddModule mod_dtcl.c
+
+In order to turn on parsing of .ttml pages, you will also need to add
+
+	AddType application/x-httpd-tcl .ttml
+
+Optionally, you can also turn on support for raw in-process tcl execution
+by adding
+
+	AddType application/x-dtcl-tcl .tcl
+
+For more configuration options, see:
+
+	${PREFIX}/share/doc/html/mod_dtcl/documentation.html
+
+=============================================================================

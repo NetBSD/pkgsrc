@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.8 2000/08/27 10:37:04 jlam Exp $
-lib/httpd/mod_perl.so
-share/httpd/htdocs/manual/mod/mod_perl.html
