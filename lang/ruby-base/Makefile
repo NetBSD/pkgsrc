@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/01/04 09:44:59 taca Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/22 17:05:20 taca Exp $
 # FreeBSD Id: ports/lang/ruby/Makefile,v 1.39 2000/10/20 19:56:03 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_RUBY}
 MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://www.ruby-lang.org/en/
 COMMENT= 	base installation of Ruby
-
-BUILD_DEPENDS+=	autoconf>=2.13:../../devel/autoconf
 
 DIST_SUBDIR=	ruby
 USE_RUBY=	yes
@@ -62,7 +60,6 @@ pre-configure:
 	${RM} -f ${WRKSRC}/ext/readline/MANIFEST
 	${RM} -f ${WRKSRC}/ext/tcltklib/MANIFEST
 	${RM} -f ${WRKSRC}/ext/tk/MANIFEST
-	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf
 
 pre-build:
 	@${FIND} ${WRKSRC} -name '*.orig' -exec ${RM} -f {} \;
