@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/03 23:27:48 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/03/12 20:54:16 hubertf Exp $
 bin/silc
 etc/silc/silc.conf
 share/doc/silc/CHANGES
@@ -95,12 +95,12 @@ share/silc/help/whois
 share/silc/help/whowas
 share/silc/help/window
 share/silc/scripts/autoop.pl
-share/silc/scripts/autorejoin.pl
+share/silc/scripts/beep.pl
 share/silc/scripts/clones.pl
+share/silc/scripts/dns.pl
 share/silc/scripts/hello.pl
-share/silc/scripts/privmsg.pl
-share/silc/scripts/quitmsg.pl
-share/silc/scripts/realname.pl
+share/silc/scripts/mail-maildir.pl
+share/silc/scripts/mail.pl
 share/silc/themes/default.theme
 @dirrm share/silc/themes
 @dirrm share/silc/scripts
