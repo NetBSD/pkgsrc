@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/09/22 10:15:16 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2002/10/20 23:16:42 seb Exp $
 #
 
 DISTNAME=	GD-1.32
@@ -18,10 +18,6 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/GD/.packlist
 
 MAKE_ENV+=		GD_LIBS="${LDFLAGS}"
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
 .include "../../graphics/gd/buildlink2.mk"
-.include "../../lang/perl5/buildlink2.mk"
-
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
