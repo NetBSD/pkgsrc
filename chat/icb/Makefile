@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 13:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/24 02:09:27 hubertf Exp $
 #
 
 # Note: The file ftp://ftp.icb.net/pub/icb/icb-0.9grok2.tar.gz is way
@@ -21,7 +21,7 @@ do-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/icb/icb ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/icbserverdb ${PREFIX}/libdata
-	${INSTALL} -d ${PREFIX}/libdata/icb
+	${INSTALL_DATA_DIR} ${PREFIX}/libdata/icb
 	${INSTALL_SCRIPT} ${WRKSRC}/sample.icbrc \
 		${WRKSRC}/contrib/bartender \
 		${WRKSRC}/contrib/confuse \

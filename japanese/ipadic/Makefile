@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/16 15:25:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/24 02:09:28 hubertf Exp $
 #
 
 DISTNAME=		ipadic-2.4.1
@@ -17,8 +17,7 @@ USE_LIBTOOL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 post-install:
-	${INSTALL} -c -m ${NONBINMODE} -o ${BINOWN} -g ${BINGRP} \
-		${WRKSRC}/chasenrc \
+	${INSTALL_DATA} ${WRKSRC}/chasenrc \
 		${LOCALBASE}/share/chasen/dic/ipadic/chasenrc.example
 	test -f ${LOCALBASE}/etc/chasenrc || \
 		${INSTALL} -c -m ${NONBINMODE} -o ${BINOWN} -g ${BINGRP} \
