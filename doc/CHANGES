@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.703 2002/12/06 15:16:44 skrll Exp $
+$NetBSD: CHANGES,v 1.704 2002/12/06 16:51:25 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3838,3 +3838,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated kdelibs3 to 3.0.4nb1 [skrll 2002-12-06]
 	Updated subversion to 0.3987 [wiz 2002-12-06]
 	Updated mplayer-share to 0.90rc10nb1 [wiz 2002-12-06]
+	Updated dopewars to 1.5.8 [jmmv 2002-12-06]
