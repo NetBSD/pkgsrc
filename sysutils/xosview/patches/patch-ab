@@ -1,5 +1,5 @@
---- netbsd/pagemeter.cc.orig	Tue Mar  3 18:25:08 1998
-+++ netbsd/pagemeter.cc	Sun Mar  1 17:24:30 1998
+--- netbsd/pagemeter.cc.orig	Sun Dec  7 18:50:28 1997
++++ netbsd/pagemeter.cc	Wed Mar 18 15:11:46 1998
 @@ -56,9 +56,15 @@
  
  void PageMeter::getpageinfo (void) {
@@ -22,7 +22,7 @@
    fields_[1] = vm.v_vnodeout - prev_.v_vnodeout;
  #else
 +#if defined(UVM)
-+  fields_[0] = uvm.pgswapin - prev_.pgswapin;
++  fields_[0] = uvm.pageins - prev_.pageins;
 +  fields_[1] = uvm.pgswapout - prev_.pgswapout;
 +  prev_ = uvm;
 +#else

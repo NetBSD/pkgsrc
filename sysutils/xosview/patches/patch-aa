@@ -1,15 +1,13 @@
 *** netbsd/pagemeter.h.orig	Fri Jul 18 04:37:33 1997
---- netbsd/pagemeter.h	Fri Mar 13 17:36:28 1998
+--- netbsd/pagemeter.h	Wed Mar 18 15:02:27 1998
 ***************
 *** 21,25 ****
---- 21,33 ----
+--- 21,31 ----
   
   #include "fieldmeterdecay.h"
 + #if defined(UVM)
 + #include <sys/param.h>
-+ #include <sys/malloc.h>
-+ #include <sys/sysctl.h>
-+ #include <sys/device.h>
++ #include <vm/vm.h>
 + #include <uvm/uvm_extern.h>
 + #else
   #include <sys/vmmeter.h>
@@ -18,7 +16,7 @@
   class PageMeter : public FieldMeterDecay {
 ***************
 *** 36,40 ****
---- 44,52 ----
+--- 42,50 ----
     void getpageinfo( void );
   private:
 + #if defined(UVM)
