@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2001/06/05 16:28:08 jtb Exp $
+$NetBSD: patch-aa,v 1.5 2001/11/29 09:16:28 martti Exp $
 
---- Doc/Makefile.in.orig	Fri Jun  1 23:43:42 2001
+--- Doc/Makefile.in.orig	Fri Oct 26 22:18:31 2001
 +++ Doc/Makefile.in
 @@ -37,7 +37,7 @@
  
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.4 2001/06/05 16:28:08 jtb Exp $
 +MAKEINFO = makeinfo --no-split
  TEXI2DVI = texi2dvi
  DVIPS = dvips
- TEXI2HTML = texi2html -expandinfo -split_chapter
+ TEXI2HTML = texi2html -expand info -split chapter

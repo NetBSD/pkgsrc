@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:27:02 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/29 09:16:28 martti Exp $
 bin/zsh
 @exec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak || true; echo %D/%F) >/etc/shells
 @unexec echo "updating /etc/shells"; cp /etc/shells /etc/shells.bak; (grep -v %D/%F /etc/shells.bak || true) >/etc/shells
@@ -46,6 +46,7 @@ share/zsh/${PKGVERSION}/functions/_bindkey
 share/zsh/${PKGVERSION}/functions/_bison
 share/zsh/${PKGVERSION}/functions/_brace_parameter
 share/zsh/${PKGVERSION}/functions/_bsd_pkg
+share/zsh/${PKGVERSION}/functions/_bts
 share/zsh/${PKGVERSION}/functions/_bug
 share/zsh/${PKGVERSION}/functions/_builtin
 share/zsh/${PKGVERSION}/functions/_bzip2
@@ -53,6 +54,7 @@ share/zsh/${PKGVERSION}/functions/_cache_invalid
 share/zsh/${PKGVERSION}/functions/_call_function
 share/zsh/${PKGVERSION}/functions/_call_program
 share/zsh/${PKGVERSION}/functions/_cd
+share/zsh/${PKGVERSION}/functions/_chflags
 share/zsh/${PKGVERSION}/functions/_chown
 share/zsh/${PKGVERSION}/functions/_combination
 share/zsh/${PKGVERSION}/functions/_command
@@ -143,6 +145,7 @@ share/zsh/${PKGVERSION}/functions/_kill
 share/zsh/${PKGVERSION}/functions/_killall
 share/zsh/${PKGVERSION}/functions/_kld
 share/zsh/${PKGVERSION}/functions/_limits
+share/zsh/${PKGVERSION}/functions/_links
 share/zsh/${PKGVERSION}/functions/_list
 share/zsh/${PKGVERSION}/functions/_loadkeys
 share/zsh/${PKGVERSION}/functions/_logical_volumes
@@ -224,6 +227,7 @@ share/zsh/${PKGVERSION}/functions/_retrieve_cache
 share/zsh/${PKGVERSION}/functions/_rlogin
 share/zsh/${PKGVERSION}/functions/_rpm
 share/zsh/${PKGVERSION}/functions/_ruby
+share/zsh/${PKGVERSION}/functions/_samba
 share/zsh/${PKGVERSION}/functions/_sched
 share/zsh/${PKGVERSION}/functions/_sep_parts
 share/zsh/${PKGVERSION}/functions/_set
@@ -244,6 +248,7 @@ share/zsh/${PKGVERSION}/functions/_su
 share/zsh/${PKGVERSION}/functions/_sub_commands
 share/zsh/${PKGVERSION}/functions/_subscript
 share/zsh/${PKGVERSION}/functions/_sudo
+share/zsh/${PKGVERSION}/functions/_sysctl
 share/zsh/${PKGVERSION}/functions/_tags
 share/zsh/${PKGVERSION}/functions/_tar
 share/zsh/${PKGVERSION}/functions/_tar_archive
@@ -262,6 +267,7 @@ share/zsh/${PKGVERSION}/functions/_unhash
 share/zsh/${PKGVERSION}/functions/_unsetopt
 share/zsh/${PKGVERSION}/functions/_update-alternatives
 share/zsh/${PKGVERSION}/functions/_urls
+share/zsh/${PKGVERSION}/functions/_user_admin
 share/zsh/${PKGVERSION}/functions/_user_at_host
 share/zsh/${PKGVERSION}/functions/_users
 share/zsh/${PKGVERSION}/functions/_users_on
@@ -322,6 +328,7 @@ share/zsh/${PKGVERSION}/functions/_zmodload
 share/zsh/${PKGVERSION}/functions/_zpty
 share/zsh/${PKGVERSION}/functions/_zstyle
 share/zsh/${PKGVERSION}/functions/allopt
+share/zsh/${PKGVERSION}/functions/bash-backward-kill-word
 share/zsh/${PKGVERSION}/functions/checkmail
 share/zsh/${PKGVERSION}/functions/colors
 share/zsh/${PKGVERSION}/functions/compaudit
