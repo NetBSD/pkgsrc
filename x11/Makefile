@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2000/01/07 05:44:32 sakamoto Exp $
+# $NetBSD: Makefile,v 1.137 2000/01/16 01:29:32 jlam Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -93,6 +93,7 @@
     SUBDIR += scwm
 #    SUBDIR += sliderule
 #    SUBDIR += slingshot
+    SUBDIR += speyes
     SUBDIR += sunclock
     SUBDIR += swisswatch
 #    SUBDIR += sxpc
