@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8886 2005/01/23 18:29:19 kim Exp $
+$NetBSD: CHANGES,v 1.8887 2005/01/23 20:36:47 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -521,3 +521,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ruby-tcltk to 1.8.2 [taca 2005-01-23]
 	Updated ruby-tk to 1.8.2 [taca 2005-01-23]
 	Updated p5-Apache-Gallery to 0.9.1 [kim 2005-01-23]
+	Added linpsk-0.8.0.4 [wulf 2005-01-23]
