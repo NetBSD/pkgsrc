@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/11/29 13:24:00 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/12/13 21:04:34 jdolecek Exp $
 bin/opera
 ${EMULSUBDIR}/usr/share/opera
 share/doc/opera/LICENSE
@@ -137,22 +137,25 @@ share/opera/buttons/defsmall/tile.gif
 share/opera/buttons/defsmall/tilevert.gif
 share/opera/buttons/defsmall/update.gif
 share/opera/buttons/defsmall/url.gif
-share/opera/images/int_dir.gif
-share/opera/images/int_drv.gif
-share/opera/images/int_file.gif
-share/opera/images/int_link.gif
+share/opera/images/drive.gif
+share/opera/images/file.gif
+share/opera/images/folder.gif
+share/opera/images/link.gif
 share/opera/opera.adr
+share/opera/styles/about.css
 share/opera/styles/cache.css
+share/opera/styles/csr.css
 share/opera/styles/dir.css
 share/opera/styles/drives.css
+share/opera/styles/email.css
 share/opera/styles/history.css
-share/opera/styles/mailstyle.css
-share/opera/styles/opf.css
+share/opera/styles/im.css
 share/opera/styles/plugins.css
 share/opera/styles/wml.css
 @dirrm share/opera/styles
 @dirrm share/opera/images
 @dirrm share/opera/buttons/defsmall
 @dirrm share/opera/buttons/default
+@dirrm share/opera/buttons
 @dirrm share/opera
 @dirrm share/doc/opera
