@@ -1,13 +1,31 @@
-$NetBSD: patch-ae,v 1.4 2003/08/02 17:00:10 jmmv Exp $
+$NetBSD: patch-ae,v 1.5 2003/09/02 10:33:42 abs Exp $
 
---- src/configure.default.orig	Thu Jun 13 11:37:52 2002
-+++ src/configure.default	Thu Jun 13 11:38:06 2002
-@@ -367,7 +367,7 @@
-   driver = redirect
-   allow_fail
-   allow_defer
--  data = ${lookup{$local_part}lsearch{/etc/aliases}}
-+  data = ${lookup{$local_part}lsearch{@PKG_SYSCONFDIR@/aliases}}
- # user = exim
-   file_transport = address_file
-   pipe_transport = address_pipe
+--- scripts/exim_install.orig	2003-08-12 16:39:53.000000000 +0100
++++ scripts/exim_install
+@@ -79,6 +79,8 @@ if [ "${SYSTEM_ALIASES_FILE}" = "" ] ; t
+   SYSTEM_ALIASES_FILE=/etc/aliases
+ fi
+ 
++INST_CONFIGURE_FILE=${PREFIX}/share/examples/exim/configure
++
+ # Allow INST_xx to over-ride xx
+ case "$INST_BIN_DIRECTORY"       in ?*) BIN_DIRECTORY="$INST_BIN_DIRECTORY";; esac
+ case "$INST_CONFIGURE_FILE"      in ?*) CONFIGURE_FILE="$INST_CONFIGURE_FILE";; esac
+@@ -381,15 +383,8 @@ elif [ ! -f ${CONFIGURE_FILE} ]; then
+     echo $com "*** Exim installation ${ver}failed ***"
+     exit 1
+   fi
+-  if [ ! -f ${SYSTEM_ALIASES_FILE} ]; then
+-    echo $com '****'
+-    echo $com Installing a dummy ${SYSTEM_ALIASES_FILE} file because you do not have
+-    echo $com one, and the default configuration requires it. You should
+-    echo $com edit ${SYSTEM_ALIASES_FILE} and at least create an alias for postmaster.
+-    echo $com '***'
+-    echo ${CP} ../src/aliases.default ${SYSTEM_ALIASES_FILE}
+-    ${real} ${CP} ../src/aliases.default ${SYSTEM_ALIASES_FILE}
+-  fi
++  echo ${CP} ../src/aliases.default ${PREFIX}/share/examples/exim/aliases
++  ${real} ${CP} ../src/aliases.default ${PREFIX}/share/examples/exim/aliases
+ 
+ else
+   echo $com Configuration file ${CONFIGURE_FILE} already exists

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3202 2003/09/02 10:21:21 agc Exp $
+$NetBSD: CHANGES,v 1.3203 2003/09/02 10:34:30 abs Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3472,3 +3472,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nessus to 2.0.7 [frueauf 2003-09-02]
 	Updated rcs to 5.7nb2 [martti 2003-09-02]
 	Updated audit-packages to 1.18 [agc 2003-09-02]
+	Updated exim to 4.22 [abs 2003-09-02]
+
