@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 1998/11/07 17:29:54 mycroft Exp $
+# $NetBSD: Makefile,v 1.28 1998/11/13 00:54:10 frueauf Exp $
 
 DISTNAME=	gimp-1.0.2
 CATEGORIES=	graphics
@@ -7,12 +7,10 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v1.0/v1.0.2/ \
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		${GIMP_DATA}${EXTRACT_SUFX}
 
-NOT_FOR_ARCHS=	alpha	#illegal instruction, core dumped.
-
 MAINTAINER=	bsieker@techfak.uni-bielefeld.de
 HOMEPAGE=	http://www.gimp.org/
 
-BUILD_DEPENDS=	emacs:../../editors/emacs
+BUILD_DEPENDS=	xemacs:../../editors/xemacs20
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	gtk+-1.0.6:../../x11/gtk10
 DEPENDS+=	mpeg-1.2.1:../../graphics/mpeg-lib
@@ -21,6 +19,8 @@ DEPENDS+=	tiff-3.4:../../graphics/tiff
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 CONFLICTS+=	gimp-0.99.28 gimp-1.0.0
+
+NOT_FOR_ARCHS=	alpha	#illegal instruction, core dumped.
 
 GIMP_DATA=	gimp-data-extras-1.0.0
 
