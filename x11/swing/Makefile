@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/08/18 22:46:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2000/09/06 21:49:40 dmcmahill Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -35,6 +35,7 @@ do-fetch:
 	    ${ECHO_MSG} "    For licensing reasons, the Swing 1.1.1 distribution must be"; \
 	    ${ECHO_MSG} "    fetched manually into \"${DISTDIR}/${DIST_SUBDIR}\" from"; \
 	    ${ECHO_MSG} "    ${HOMEPAGE}download.html "; \
+	    ${ECHO_MSG} "    The required distribution file is \"${DISTNAME}${EXTRACT_SUFX}\""; \
 	    ${ECHO_MSG} "==============================================================="; \
 	    ${FALSE}; \
 	fi
