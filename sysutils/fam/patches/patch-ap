@@ -1,4 +1,5 @@
-$NetBSD: patch-ap,v 1.6 2004/05/07 12:06:47 cjep Exp $
+$NetBSD: patch-ap,v 1.7 2004/10/16 14:40:23 jmmv Exp $
+
 --- src/mntent_compat.c++.orig	2004-04-30 14:24:58.000000000 +0200
 +++ src/mntent_compat.c++	2004-04-30 14:28:45.000000000 +0200
 @@ -0,0 +1,191 @@
@@ -175,9 +176,9 @@ $NetBSD: patch-ap,v 1.6 2004/05/07 12:06:47 cjep Exp $
 +getmntent (FILE *fp)
 +{
 +#ifdef HAVE_SYS_STATVFS_H
-+	struct statvfs *mntbuf;
++	static struct statvfs *mntbuf;
 +#else
-+	struct statfs *mntbuf;
++	static struct statfs *mntbuf;
 +#endif
 +
 +	if (pos == -1 || mntsize == -1)
