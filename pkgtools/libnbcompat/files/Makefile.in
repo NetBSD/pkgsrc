@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.15 2003/09/05 18:35:58 jlam Exp $
+# $NetBSD: Makefile.in,v 1.16 2003/09/06 01:37:17 jlam Exp $
 #
 
 srcdir=		@srcdir@
@@ -22,7 +22,7 @@ LIB=		libnbcompat.a
 INCS=		nbcompat.h nbcompat/err.h nbcompat/fts.h nbcompat/getopt.h \
 		nbcompat/glob.h nbcompat/md5.h nbcompat/nbtypes.h \
 		nbcompat/poll.h nbcompat/rmd160.h nbcompat/sha1.h \
-		nbcompat/sha2.h nbcompat/statfs.h nbcompat/vis.h
+		nbcompat/statfs.h nbcompat/vis.h
 
 OBJS=		@LIBOBJS@
 
