@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:19:03 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/07/18 02:28:55 jwise Exp $
 bin/devtodo
 bin/tda
 bin/tdd
@@ -11,5 +11,11 @@ man/man1/tdd.1
 man/man1/tde.1
 man/man1/tdr.1
 man/man1/todo.1
+share/examples/devtodo/changelog2todo
+share/examples/devtodo/todo-html.xslt
 share/examples/devtodo/todorc
+share/examples/devtodo/xslt-example.1
+share/examples/devtodo/xslt-example.1.README
+share/examples/devtodo/xslt-example.1.sh
+share/examples/devtodo/xslt-example.2
 @dirrm share/examples/devtodo
