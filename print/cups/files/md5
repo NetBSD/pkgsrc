@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 2000/07/12 20:09:35 jlam Exp $
+$NetBSD: md5,v 1.3 2000/12/07 20:33:06 jlam Exp $
 
-MD5 (cups-1.1-source.tar.bz2) = 8dd8db34a30e2b4457b9d08bf248cef9
+MD5 (cups-1.1.4-source.tar.bz2) = c9f43f4f200e33458f84ca5e4a2bdebb
