@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2002/03/13 17:36:44 fredb Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/05 20:14:22 jlam Exp $
 #
 
 DISTNAME=	gtranscript-0.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://gtranscript.linuxbox.com/ \
 		ftp://ftp.matrix.com.br/pub/linuxberg/files/gnome/office/ \
@@ -19,11 +19,11 @@ HOMEPAGE=	http://gtranscript.linuxbox.com/
 COMMENT=	SQL Database Client with GNOME frontend
 
 DEPENDS+=	gnome-core>=1.4.0.4nb1:../../x11/gnome-core
-DEPENDS+=	postgresql-{6.5.3*,7.0*,lib-[0-9]*}:../../databases/postgresql-lib
+DEPENDS+=	postgresql-lib>=7.3.1:../../databases/postgresql-lib
 
 GNU_CONFIGURE=	YES
 USE_X11BASE=	YES
 
-CPPFLAGS+=	-I${LOCALBASE}/include		# pgsql/*.h
+CPPFLAGS+=	-I${LOCALBASE}/include		# <postgresql/*.h>
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2002/07/24 19:45:29 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/05 20:14:33 jlam Exp $
 
 DISTNAME=	AuthPG-1.2b2
 PKGNAME=	ap-auth-postgresql-1.2b2
+PKGREVISION=	1
 CATEGORIES=	www databases
 MASTER_SITES=	http://home.bawi.org/~minskim/authpg/
 
@@ -10,10 +11,10 @@ HOMEPAGE=	http://home.bawi.org/~minskim/authpg/
 COMMENT=	Module to allow apache authentication against a Postgresql database
 
 DEPENDS+=	apache{,6}-1.3.*:../../www/apache
-DEPENDS+=	postgresql-{6.5.3*,7.0*,lib-[0-9]*}:../../databases/postgresql-lib
+DEPENDS+=	postgresql-lib>=7.3.1:../../databases/postgresql-lib
 USE_PERL5=	build	# for "apxs"
 
-CPPFLAGS+=	-I${LOCALBASE}/include/pgsql
+CPPFLAGS+=	-I${LOCALBASE}/include/postgresql
 LIBS=		-lpq -lcrypt
 
 do-build:
