@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 13:20:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/22 03:31:25 kristerw Exp $
 #
 
 DISTNAME=	trplayer-1.2.0
@@ -24,7 +24,7 @@ DEPENDS+=	suse_slang>=7.3:../../emulators/${SUSE_DIR_PREFIX}_slang
 INTERACTIVE_STAGE=	fetch		# XXX Not really!
 #INTERACTIVE_STAGE=	install-depends
 LICENSE=		trplayer-license
-ONLY_FOR_PLATFORM=	NetBSD-1.6*-i386
+ONLY_FOR_PLATFORM=	NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 
 WRKSRC=		${WRKDIR}
 CHECK_SHLIBS=	NO
