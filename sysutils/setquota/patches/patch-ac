@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/11/15 15:46:33 taca Exp $
+
+--- printquota.c.orig	Mon Mar 24 13:14:46 1997
++++ printquota.c
+@@ -109,11 +109,9 @@
+ 
+ 	if (now == 0)
+ 		time(&now);
+-#ifdef 0
+ 	if (now > seconds)
+ 		return("none");
+ 	seconds -= now;
+-#endif
+ 	sprintf(buf, "%d", seconds);
+ 	return(buf);
+ 	minutes = (seconds + 30) / 60;

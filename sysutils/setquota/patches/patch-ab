@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/11/15 15:46:33 taca Exp $
+
+--- getquota.8.orig	Tue Mar 11 22:12:49 1997
++++ getquota.8
+@@ -37,7 +37,7 @@
+ .\"
+ .Dd March 6, 1997
+ .Dt GETQUOTA 8
+-.Os FreeBSD 2.2
++.Os
+ .Sh NAME
+ .Nm getquota
+ .Nd get quotas for users or groups
