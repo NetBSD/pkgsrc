@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2004/11/29 01:10:04 tv Exp $
+# $NetBSD: options.mk,v 1.9 2005/01/12 01:50:15 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap
 PKG_SUPPORTED_OPTIONS=	bdb dynamic kerberos sasl slp
@@ -28,6 +28,11 @@ CONFIGURE_ARGS+=	--disable-bdb --disable-hdb
 ### specified, then link the backend modules statically into slapd.
 ###
 .if !empty(PKG_OPTIONS:Mdynamic)
+.  if !empty(PKG_OPTIONS:Mbdb)
+PLIST_SUBST+=		HDB_MODULE=
+.  else
+PLIST_SUBST+=		HDB_MODULE="@comment "
+.  endif
 .  include "../../devel/libltdl/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-modules
 PLIST_SUBST+=		DYNAMIC_MOD=
