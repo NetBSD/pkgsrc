@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.47 2003/09/05 11:34:25 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.48 2003/09/06 11:41:31 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -270,6 +270,8 @@ FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 INSTALL_SCRIPTS_ENV=	PKG_PREFIX=${PREFIX}
 
+.PHONY: pre-install-script post-install-script
+
 pre-install-script: generate-install-scripts
 	${_PKG_SILENT}${_PKG_DEBUG}${SETENV} ${INSTALL_SCRIPTS_ENV}	\
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
@@ -278,6 +280,7 @@ post-install-script: install-rcd-scripts
 	${_PKG_SILENT}${_PKG_DEBUG}${SETENV} ${INSTALL_SCRIPTS_ENV}	\
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
+.PHONY: generate-install-scripts
 post-build: generate-install-scripts
 generate-install-scripts:	# do nothing
 
@@ -313,8 +316,11 @@ ${INSTALL_FILE}: ${INSTALL_SRC}
 # If the source rc.d script is not present, then the automatic handling
 # doesn't occur.
 
+.PHONY: generate-rcd-scripts
 post-build: generate-rcd-scripts
 generate-rcd-scripts:	# do nothing
+
+.PHONY: install-rcd-scripts
 install-rcd-scripts:	# do nothing
 
 .for _script_ in ${RCD_SCRIPTS}
