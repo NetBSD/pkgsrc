@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2003/05/06 17:42:31 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2003/12/30 23:14:18 cjep Exp $
 
 .if !defined(KTHKRB4_BUILDLINK2_MK)
 KTHKRB4_BUILDLINK2_MK=   # defined
@@ -25,6 +25,6 @@ BUILDLINK_FILES.kth-krb4+=	lib/libss.*
 
 BUILDLINK_TARGETS+=             kth-krb4-buildlink
 
-kth-krb4-buildlink: _BUILDLINK_USE 
+kth-krb4-buildlink: _BUILDLINK_USE
 
 .endif	# KTHKRB4_BUILDLINK2_MK
