@@ -1,7 +1,20 @@
-@comment $NetBSD: PLIST,v 1.4 2002/12/22 18:01:54 cjep Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/12/22 19:20:22 cjep Exp $
 bin/gap
 lib/gap4.3/bin/${MACHINE_GNU_PLATFORM}-cc/gac
 lib/gap4.3/bin/${MACHINE_GNU_PLATFORM}-cc/gap
+lib/gap4.3/cnf/Makefile
+lib/gap4.3/cnf/Makegap.bottom
+lib/gap4.3/cnf/Makegap.in
+lib/gap4.3/cnf/Makegap.top
+lib/gap4.3/cnf/README
+lib/gap4.3/cnf/aclocal.m4
+lib/gap4.3/cnf/config.guess
+lib/gap4.3/cnf/config.hin
+lib/gap4.3/cnf/config.sub
+lib/gap4.3/cnf/configure.in
+lib/gap4.3/cnf/configure.out
+lib/gap4.3/cnf/gac.in
+lib/gap4.3/cnf/install-sh
 lib/gap4.3/description4
 lib/gap4.3/doc/ext/about.tex
 lib/gap4.3/doc/ext/document.tex
@@ -4261,6 +4274,7 @@ lib/gap4.3/tst/zmodnz.tst
 @dirrm lib/gap4.3/doc/htm
 @dirrm lib/gap4.3/doc/ext
 @dirrm lib/gap4.3/doc
+@dirrm lib/gap4.3/cnf
 @dirrm lib/gap4.3/bin/${MACHINE_GNU_PLATFORM}-cc
 @dirrm lib/gap4.3/bin
 @dirrm lib/gap4.3
