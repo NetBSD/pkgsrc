@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/02/26 17:23:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.47 2005/03/18 19:28:09 jmmv Exp $
 #
 
 PKGCONFIG_OVERRIDE=	gnome-vfs-2.0.pc.in
@@ -41,4 +41,5 @@ LDFLAGS.Darwin+=	-lresolv
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
+.include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
