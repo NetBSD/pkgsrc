@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/16 20:20:05 xtraeme Exp $
+bin/skype
+share/skype/LICENSE
+share/skype/README
+share/skype/call_in.wav
+share/skype/icons/skype_16_32.png
+share/skype/icons/skype_32_32.png
+share/skype/icons/skype_48_32.png
+share/skype/skype
+share/skype/skype.desktop
+share/skype/skype.desktop.old
+share/skype/skype_da.qm
+share/skype/skype_de.qm
+share/skype/skype_el.qm
+share/skype/skype_en.qm
+share/skype/skype_es.qm
+share/skype/skype_es_AR.qm
+share/skype/skype_et.qm
+share/skype/skype_fi.qm
+share/skype/skype_fr.qm
+share/skype/skype_it.qm
+share/skype/skype_iw.qm
+share/skype/skype_ja.qm
+share/skype/skype_ko.qm
+share/skype/skype_nl.qm
+share/skype/skype_no.qm
+share/skype/skype_pl.qm
+share/skype/skype_pt_BR.qm
+share/skype/skype_ro.qm
+share/skype/skype_ru.qm
+share/skype/skype_sv.qm
+share/skype/skype_zh_CN.qm
+share/skype/skype_zh_TW.qm
+@dirrm share/skype/icons
+@dirrm share/skype
