@@ -1,26 +1,16 @@
-# $NetBSD: Makefile,v 1.18 1999/12/28 05:09:49 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2000/05/07 11:18:19 msaitoh Exp $
 
-DISTNAME=		PTL2-current-990622
-PKGNAME=		ptl2-990622
+DISTNAME=		PTL-2.1.2
+PKGNAME=		ptl-2.1.2
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.media.osaka-cu.ac.jp/pub/PTL/PTL2/PTL2-current-990622/
+MASTER_SITES=		ftp://ftp.media.osaka-cu.ac.jp/pub/PTL/PTL2/
 
 PATCH_SITES=		${MASTER_SITES}
-PATCHFILES=		PTL2-current-990622-patch-1 \
-			PTL2-current-990622-patch-2.gz \
-			PTL2-current-990622-patch-3 \
-			PTL2-current-990622-patch-4 \
-			PTL2-current-990622-patch-5
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		msaitoh@netbsd.org
 HOMEPAGE=		http://www.media.osaka-cu.ac.jp/~k-abe/PTL/
 
 BUILD_DEPENDS=		${LOCALBASE}/bin/perl:../../lang/perl5
-
-CONFLICTS=		ptl-current-*
-
-USE_GMAKE=
 
 MAKE_ENV=		INSTALL_PROGRAM="${INSTALL_SCRIPT}"
 PLIST_SRC=		${WRKDIR}/PLIST
@@ -35,11 +25,7 @@ post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@cd ${PREFIX}; \
 	${FIND} PTL -type f >>${PLIST_SRC}; \
-	for LINK in `${FIND} PTL -type l`; do \
-	  set - X `file $$LINK`; \
-	  ${ECHO} "@exec ${LN} -s $$6 %D/$$LINK" >>${PLIST_SRC}; \
-	  ${ECHO} "@unexec ${RM} -f %D/$$LINK" >>${PLIST_SRC}; \
-	done; \
+	${FIND} PTL -type l >>${PLIST_SRC}; \
 	for DIR in `${FIND} PTL -type d | sort -r`; do \
 	  if [ -z "`ls $$DIR`" ]; then \
 	    ${ECHO} "@exec ${MKDIR} %D/$$DIR" >>${PLIST_SRC}; \
