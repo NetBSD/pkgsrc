@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/08/29 10:17:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.8 2003/11/17 17:02:43 jmmv Exp $
 #
 
 DISTNAME=	TreeText-0.3.3-src
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://www.ab.wakwak.com/~tino/fox/treetext/
 COMMENT=	Multi documents editor
+
+BROKEN=		Compilation fails due to outdated code with respect to our fox package.
 
 USE_BUILDLINK2=	# defined
 USE_X11BASE=	# defined
