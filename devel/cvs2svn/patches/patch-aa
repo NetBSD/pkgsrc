@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2004/04/21 12:47:22 seb Exp $
+
+--- cvs2svn.py.orig	2004-04-19 20:03:26.000000000 +0000
++++ cvs2svn.py
+@@ -30,6 +30,7 @@ import getopt
+ import stat
+ import string
+ import md5
++import anydbm
+ import marshal
+ 
+ # Warnings and errors start with these strings.  They are typically
+@@ -54,7 +55,6 @@ except ImportError:
+   pass
+ 
+ # 2. These DBM modules are not good for cvs2svn.
+-import anydbm
+ if (anydbm._defaultmod.__name__ == 'dumbdbm'
+     or anydbm._defaultmod.__name__ == 'dbm'):
+   print 'ERROR: your installation of Python does not contain a suitable'
