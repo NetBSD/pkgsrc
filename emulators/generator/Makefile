@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/10/03 00:14:40 tv Exp $
+# $NetBSD: Makefile,v 1.13 2005/01/31 23:58:33 xtraeme Exp $
 #
 
-DISTNAME=	generator-0.34
-PKGREVISION=	6
+DISTNAME=	generator-0.35
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.squish.net/generator/files/
 
@@ -11,10 +10,11 @@ HOMEPAGE=	http://www.sqish.net/generator/
 COMMENT=	Sega Mega drive genesis emulator
 
 USE_BUILDLINK3=		yes
-USE_X11=		# defined
-GNU_CONFIGURE=		# defined
+USE_X11=		yes
+GNU_CONFIGURE=		yes
 
 .if (${MACHINE_ARCH} == "i386")
+BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
 CONFIGURE_ARGS+=	--with-gtk --with-raze
 .else
 CONFIGURE_ARGS+=	--with-gtk --with-cmz80
