@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/24 13:51:15 grant Exp $
+# $NetBSD: Makefile,v 1.25 2004/05/09 02:26:14 snj Exp $
 
 DISTNAME=		gcc-2.95.2
 PKGNAME=		pgcc-2.95.2.1
@@ -19,7 +19,7 @@ COMMENT=		Pentium GNU Compiler Collection
 ONLY_FOR_PLATFORM=	NetBSD-*-arm NetBSD-*-arm32 NetBSD-*-i386	\
 			NetBSD-*-m68k NetBSD-*-sparc SunOS-*-*
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_GNU_TOOLS+=		make
 
