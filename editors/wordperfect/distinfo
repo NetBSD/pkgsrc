@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:58:26 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:01:08 agc Exp $
 
-MD5 (wordperfect-personal-8/GUILG00.GZ) = 386d2c4c1422992e8f8242bd74f3f705
+SHA1 (wordperfect-personal-8/GUILG00.GZ) = 738839618cf7b9496b3556e04803ac6fafb18131
+Size (wordperfect-personal-8/GUILG00.GZ) = 23730473 bytes
 SHA1 (patch-aa) = 4986e0801acc6d0a83000c3cf581cd84e683e269

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:58:20 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:01:05 agc Exp $
 
-MD5 (ue400dev.zip) = a7903b48bd27e67f6e82aee328804ab1
+SHA1 (ue400dev.zip) = edbb0261cdaa1803d9f7dc7debfd4a9df3a668eb
+Size (ue400dev.zip) = 1179949 bytes
 SHA1 (patch-aa) = bc503d998c68d59aa297744e0b4ca9778814ec33
 SHA1 (patch-ab) = f3054f487f3f0f38c8f45391a0f425a19f66e213
 SHA1 (patch-ac) = f7aaa2514f74987a68da726a397d58089fc2d82e

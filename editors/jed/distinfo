@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:58:03 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:01:01 agc Exp $
 
-MD5 (jed0.98-7.tar.gz) = 868a0003cc169fbd559273085c838d78
+SHA1 (jed0.98-7.tar.gz) = c6040b97971a63ff61c9ffee71a3c6ca16200509
+Size (jed0.98-7.tar.gz) = 674853 bytes
 SHA1 (patch-aa) = 7f472d0452193d3c7a4c74fed2da949955ae19de
 SHA1 (patch-ab) = 6aa2b730ad771acf6e2126c3c20d51a6f656e839
 SHA1 (patch-ac) = 41d55b1345e0b87bec206bf5e417d06186d1e8a9
