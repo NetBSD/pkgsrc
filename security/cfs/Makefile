@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/06/07 15:35:14 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/09 04:32:13 jlam Exp $
 
 DISTNAME=		cfs-1.4.1
 CATEGORIES=		security
@@ -26,11 +26,12 @@ CFS_SUBST+=		cpasswd->cfs_passwd	CPASSWD->CFS_PASSWD
 
 .include "../../mk/bsd.prefs.mk"
 
+MAKE_ENV+=		OPSYS="${OPSYS}"
+
 # Required settings necessary to build CFS on various platforms.  This is
 # copied from ${WRKSRC}/Makefile and from browsing the various README files.
 #
 .if ${OPSYS} == "NetBSD"
-CFLAGS+=		-traditional    # uses strange preprocessor behaviour   
 CFLAGS+=		-DPROTOTYPES=1                                          
 CFLAGS+=		-DBSD44 -DANYPORT -DCFS_PORT=2049 -DSHORTLINKS          
 MAKE_ENV+=		MAKE=${MAKE_PROGRAM}                                    
@@ -63,25 +64,27 @@ MAKE_ENV+=		RPCOPTS="-k -b"
 CFS_BUILD_SCRIPT=	${WRKSRC}/make_with_bad_rpcgen
 .endif
 
-CFS_SUBST_SED=		${CFS_SUBST:S/->/!/:S/$/!g/:S/^/ -e s!/}                
+CFS_SUBST_SED=		${CFS_SUBST:S/->/!/:S/$/!g/:S/^/ -e s!/}
 
 DOCDIR=			${PREFIX}/share/doc/cfs
 
 post-extract:
-	@${RM} -f ${WRKSRC}/esm.1                                               
-	@cd ${WRKSRC}; for file in *; do				\
-		${MV} -f $${file} $${file}.orig;			\
-		dest=`${ECHO} $${file} | ${SED} ${CFS_SUBST_SED}`;	\
-		${SED} ${CFS_SUBST_SED} $${file}.orig > $${dest};	\
-		${RM} -f $${file}.orig;					\
-	done                                                                    
+	${RM} -f ${WRKSRC}/esm.1                                               
 
 post-patch:
-	@${CHMOD} +x ${CFS_BUILD_SCRIPT}
+	cd ${WRKSRC}; for file in *; do					\
+		${MV} -f $${file} $${file}.presubst;			\
+		dest=`${ECHO} $${file} | ${SED} ${CFS_SUBST_SED}`;	\
+		${SED} ${CFS_SUBST_SED} $${file}.presubst > $${dest};	\
+		${RM} -f $${file}.presubst;				\
+	done
+	${CHMOD} +x ${CFS_BUILD_SCRIPT}
 
-do-build:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
-		${SH} ${CFS_BUILD_SCRIPT} ${ALL_TARGET}
+pre-build:
+	${SED}	-e "s|@AWK@|${AWK}|g"					\
+		-e "s|@MV@|${MV}|g"					\
+		${FILESDIR}/unansi.sh > ${WRKSRC}/unansi
+	${CHMOD} +x ${WRKSRC}/unansi
 
 pre-install:                                                                    
 	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
