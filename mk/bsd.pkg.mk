@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1310 2003/12/03 18:25:05 erh Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1311 2003/12/03 18:31:06 erh Exp $
 #
 # This file is in the public domain.
 #
@@ -2687,6 +2687,172 @@ real-su-install: ${MESSAGE}
 # XXX This target could need some cleanup after it was ripped out of
 #     real-su-install
 #
+_AOUT_AWK = \
+	BEGIN { linkc = 1 }			\
+	/^@/ { lines[NR] = $$0; next }		\
+	function libtool_release(lib) {		\
+		if (gsub("-[^-]+\.so\.", "\.so\.", lib)) { \
+			if (system("${TEST} -h ${PREFIX}/" lib) == 0) { \
+				rels[NR] = lib; \
+			}			\
+		}				\
+	}					\
+	/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
+		libtool_release($$0);		\
+		lines[NR] = $$0;		\
+		sub("\.[0-9]+$$", "");		\
+		links[linkc++] = $$0;		\
+		sub("\.[0-9]+$$", "");		\
+		links[linkc++] = $$0;		\
+		sub("\.[0-9]+$$", "");		\
+		links[linkc++] = $$0;		\
+		if (sub("-[^-]+\.so$$", "\.so")) { \
+			links[linkc++] = $$0;	\
+		}				\
+		next				\
+	}					\
+	/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
+		libtool_release($$0);		\
+		lines[NR] = $$0;		\
+		sub("\.[0-9]+$$", "");		\
+		links[linkc++] = $$0;		\
+		sub("\.[0-9]+$$", "");		\
+		links[linkc++] = $$0;		\
+		if (sub("-[^-]+\.so$$", "\.so")) { \
+			links[linkc++] = $$0;	\
+		}				\
+		next				\
+	}					\
+	{ lines[NR] = $$0 }			\
+	END {					\
+		for (i = 0 ; i <= linkc ; i++)	\
+			for (j = 1 ; j < NR ; j++) \
+				if (lines[j] == links[i]) \
+					lines[j] = "@comment " lines[j]; \
+		if (${SHLIB_PLIST_MODE}) 	\
+			for (i = 1 ; i <= NR ; i++) { \
+				print lines[i]; \
+				if (rels[i] != "") \
+					print rels[i]; \
+			}			\
+	}
+
+_DYLIB_AWK= \
+	/^@/ { lines[NR] = $$0; next }		\
+		function libtool_release(lib) {		\
+		if (gsub("\.so\.", "\.", lib) || gsub("\.so$$", "", lib)) { \
+			lib = lib ".dylib"; \
+			if (system("${TEST} -h ${PREFIX}/" lib) == 0) { \
+				rels[NR] = lib; \
+			}			\
+		}				\
+	}					\
+	/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
+		libtool_release($$0);		\
+		lines[NR] = $$0;		\
+		links[linkc++] = $$0;		\
+		sub("\.[0-9]+$$", "");		\
+		links[linkc++] = $$0;		\
+		sub("\.[0-9]+$$", "");		\
+		links[linkc++] = $$0;		\
+		sub("\.[0-9]+$$", "");		\
+		links[linkc++] = $$0;		\
+		if (sub("-[^-]+\.so$$", "\.so")) { \
+			links[linkc++] = $$0;	\
+		}				\
+		next				\
+	}					\
+	/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
+		libtool_release($$0);		\
+		lines[NR] = $$0;		\
+		links[linkc++] = $$0;		\
+		sub("\.[0-9]+$$", "");		\
+		links[linkc++] = $$0;		\
+		sub("\.[0-9]+$$", "");		\
+		links[linkc++] = $$0;		\
+		if (sub("-[^-]+\.so$$", "\.so")) { \
+			links[linkc++] = $$0;	\
+		}				\
+		next				\
+	}					\
+	/.*\/lib[^\/]+\.so\.[0-9]+$$/ {		\
+		libtool_release($$0);		\
+		lines[NR] = $$0;		\
+		links[linkc++] = $$0;		\
+		sub("\.[0-9]+$$", "");		\
+		links[linkc++] = $$0;		\
+		if (sub("-[^-]+\.so$$", "\.so")) { \
+			links[linkc++] = $$0;	\
+		}				\
+		next				\
+	}					\
+	/.*\/lib[^\/]+\.so$$/ {			\
+		lines[NR] = $$0;		\
+		if (system("${TEST} -e ${PREFIX}/" $$0) == 0) { \
+			next;			\
+		}				\
+		libtool_release($$0);		\
+		links[linkc++] = $$0;		\
+		if (sub("-[^-]+\.so$$", "\.so")) { \
+			links[linkc++] = $$0;	\
+		}				\
+		next				\
+	}					\
+	{ lines[NR] = $$0 }			\
+	END {					\
+		for (i = 0 ; i <= linkc ; i++)	\
+			for (j = 1 ; j <= NR ; j++) \
+				if (lines[j] == links[i]) \
+					lines[j] = "@comment " lines[j]; \
+		if (${SHLIB_PLIST_MODE}) 	\
+			for (i = 1 ; i <= NR ; i++) { \
+				print lines[i]; \
+				if (rels[i] != "") { \
+					print rels[i]; \
+					"${LS} -l ${PREFIX}/" rels[i] | getline tgt; \
+					gsub(".* ", "", tgt); \
+					if (tgts[tgt] == "") { \
+						tgts[tgt] = tgt; \
+										if (index(tgt, "/") == 1) \
+											print tgt; \
+										else { \
+											prefix=""; \
+												if (match(rels[i], ".*/") != 0) \
+											prefix=substr(rels[i],1,RLENGTH); \
+										print prefix tgt; \
+									} \
+					}	\
+				}		\
+			}			\
+	}
+
+# Turn lib*.so.*, lib*.so into lib*.a.  Drop duplicates.
+_AIXLIB_AWK= \
+	/^@/ { lines[NR] = $$0; next }		\
+	/.*\/lib[^\/]+\.so(\.[0-9]+)*$$/ {		\
+		sub("(\.[0-9]+)*$$", "");		\
+		sub("\.so$$", "\.a");       \
+		lines[NR] = $$0;     \
+		next				\
+	}					\
+	{ lines[NR] = $$0 }			\
+	END {					\
+		nlibs = 0; \
+		for (i = 1; i <= NR; i++) { \
+	    	for (j = 0; j < nlibs; j++) \
+			{ \
+				if (libs[j] == lines[i]) \
+					break; \
+			} \
+			if (j >= nlibs) \
+				print lines[i]; \
+			if (match(lines[i], ".*\/lib[^\/]+\.a$$")) { \
+				libs[nlibs] = lines[i]; \
+				nlibs++; \
+			} \
+		} \
+	}
+
 .PHONY: do-shlib-handling
 do-shlib-handling:
 .if ${SHLIB_HANDLING} == "YES"
@@ -2700,56 +2866,7 @@ do-shlib-handling:
 		case "$$shlib_type" in					\
 		ELF) 	;;						\
 		"a.out") 						\
-			${AWK} ' 					\
-				BEGIN { linkc = 1 }			\
-				/^@/ { lines[NR] = $$0; next }		\
-				function libtool_release(lib) {		\
-					if (gsub("-[^-]+\.so\.", "\.so\.", lib)) { \
-						if (system("${TEST} -h ${PREFIX}/" lib) == 0) { \
-							rels[NR] = lib; \
-						}			\
-					}				\
-				}					\
-				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
-					libtool_release($$0);		\
-					lines[NR] = $$0;		\
-					sub("\.[0-9]+$$", "");		\
-					links[linkc++] = $$0;		\
-					sub("\.[0-9]+$$", "");		\
-					links[linkc++] = $$0;		\
-					sub("\.[0-9]+$$", "");		\
-					links[linkc++] = $$0;		\
-					if (sub("-[^-]+\.so$$", "\.so")) { \
-						links[linkc++] = $$0;	\
-					}				\
-					next				\
-				}					\
-				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
-					libtool_release($$0);		\
-					lines[NR] = $$0;		\
-					sub("\.[0-9]+$$", "");		\
-					links[linkc++] = $$0;		\
-					sub("\.[0-9]+$$", "");		\
-					links[linkc++] = $$0;		\
-					if (sub("-[^-]+\.so$$", "\.so")) { \
-						links[linkc++] = $$0;	\
-					}				\
-					next				\
-				}					\
-				{ lines[NR] = $$0 }			\
-				END {					\
-					for (i = 0 ; i <= linkc ; i++)	\
-						for (j = 1 ; j < NR ; j++) \
-							if (lines[j] == links[i]) \
-								lines[j] = "@comment " lines[j]; \
-					if (${SHLIB_PLIST_MODE}) 	\
-						for (i = 1 ; i <= NR ; i++) { \
-							print lines[i]; \
-							if (rels[i] != "") \
-								print rels[i]; \
-						}			\
-				}					\
-			' <${PLIST} >${PLIST}.tmp ;			\
+			${AWK} '${_AOUT_AWK}' <${PLIST} >${PLIST}.tmp ;			\
 			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
 				${MV} ${PLIST}.tmp ${PLIST};		\
 			else 						\
@@ -2771,101 +2888,17 @@ do-shlib-handling:
 			fi						\
 			;;						\
 		"dylib")						\
-			${AWK} '					\
-				/^@/ { lines[NR] = $$0; next }		\
-		    		function libtool_release(lib) {		\
-					if (gsub("\.so\.", "\.", lib) || gsub("\.so$$", "", lib)) { \
-						lib = lib ".dylib"; \
-						if (system("${TEST} -h ${PREFIX}/" lib) == 0) { \
-							rels[NR] = lib; \
-						}			\
-					}				\
-				}					\
-				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
-					libtool_release($$0);		\
-					lines[NR] = $$0;		\
-					links[linkc++] = $$0;		\
-					sub("\.[0-9]+$$", "");		\
-					links[linkc++] = $$0;		\
-					sub("\.[0-9]+$$", "");		\
-					links[linkc++] = $$0;		\
-					sub("\.[0-9]+$$", "");		\
-					links[linkc++] = $$0;		\
-					if (sub("-[^-]+\.so$$", "\.so")) { \
-						links[linkc++] = $$0;	\
-					}				\
-					next				\
-				}					\
-				/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
-					libtool_release($$0);		\
-					lines[NR] = $$0;		\
-					links[linkc++] = $$0;		\
-					sub("\.[0-9]+$$", "");		\
-					links[linkc++] = $$0;		\
-					sub("\.[0-9]+$$", "");		\
-					links[linkc++] = $$0;		\
-					if (sub("-[^-]+\.so$$", "\.so")) { \
-						links[linkc++] = $$0;	\
-					}				\
-					next				\
-				}					\
-				/.*\/lib[^\/]+\.so\.[0-9]+$$/ {		\
-					libtool_release($$0);		\
-					lines[NR] = $$0;		\
-					links[linkc++] = $$0;		\
-					sub("\.[0-9]+$$", "");		\
-					links[linkc++] = $$0;		\
-					if (sub("-[^-]+\.so$$", "\.so")) { \
-						links[linkc++] = $$0;	\
-					}				\
-					next				\
-				}					\
-				/.*\/lib[^\/]+\.so$$/ {			\
-					lines[NR] = $$0;		\
-					if (system("${TEST} -e ${PREFIX}/" $$0) == 0) { \
-						next;			\
-					}				\
-					libtool_release($$0);		\
-					links[linkc++] = $$0;		\
-					if (sub("-[^-]+\.so$$", "\.so")) { \
-						links[linkc++] = $$0;	\
-					}				\
-					next				\
-				}					\
-				{ lines[NR] = $$0 }			\
-				END {					\
-					for (i = 0 ; i <= linkc ; i++)	\
-						for (j = 1 ; j <= NR ; j++) \
-							if (lines[j] == links[i]) \
-								lines[j] = "@comment " lines[j]; \
-					if (${SHLIB_PLIST_MODE}) 	\
-						for (i = 1 ; i <= NR ; i++) { \
-							print lines[i]; \
-							if (rels[i] != "") { \
-								print rels[i]; \
-								"${LS} -l ${PREFIX}/" rels[i] | getline tgt; \
-								gsub(".* ", "", tgt); \
-								if (tgts[tgt] == "") { \
-									tgts[tgt] = tgt; \
-				                                	if (index(tgt, "/") == 1) \
-				                                		print tgt; \
-				                                	else { \
-				                                		prefix=""; \
-				                                        	if (match(rels[i], ".*/") != 0) \
-				                        				prefix=substr(rels[i],1,RLENGTH); \
-						                        	print prefix tgt; \
-				                        		} \
-								}	\
-							}		\
-						}			\
-				}					\
-			' <${PLIST} >${PLIST}.tmp ;			\
+			${AWK} '${_DYLIB_AWK}' <${PLIST} >${PLIST}.tmp &&			\
 			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
 				${MV} ${PLIST}.tmp ${PLIST};		\
-			else 						\
+			else						\
 				${RM} ${PLIST}.tmp ;			\
-			fi ; 						\
+			fi ;						\
 			;;						\
+		"aixlib")						\
+			${AWK} '${_AIXLIB_AWK}' <${PLIST} >${PLIST}.tmp &&			\
+			${MV} ${PLIST}.tmp ${PLIST};		\
+			;; \
 		"*")							\
 			if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 	\
 				${ECHO_MSG} "No shared libraries for ${MACHINE_ARCH}"; \
@@ -2934,11 +2967,14 @@ show-shlib-type:
 .  if exists(/usr/lib/libc.dylib)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} "dylib"
+.  elif ${OPSYS} == "AIX"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "aixlib"
 .  else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${WRKDIR} &&							\
 	sotype=none;							\
-	if [ "X${MKPIC}" != "Xno" -a "X${NOPIC}" = "X" ]; then		\
+	elif [ "X${MKPIC}" != "Xno" -a "X${NOPIC}" = "X" ]; then		\
 		${ECHO} "int main() { exit(0); }" > a.$$$$.c;		\
 		${CC} ${CFLAGS} a.$$$$.c -o a.$$$$.out;			\
 		case `${FILE_CMD} a.$$$$.out` in			\
