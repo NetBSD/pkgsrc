@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:56:09 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/28 09:27:29 drochner Exp $
 #
 
 DISTNAME=	Zope-2.6.1-src
@@ -21,6 +21,9 @@ ZOPEDIR=	${PREFIX}/lib/zope
 ZOPEPY=		pcgi lib/python ZServer z2.py zpasswd.py
 ZOPEDATA=	Extensions doc import var inst utilities
 
+ZOPECREATE_SED=		"-e s|@@PYTHONBIN@@|${PYTHONBIN}|"
+ZOPECREATE_SED+=	"-e s|@@ZOPE_HOME@@|${ZOPEDIR}|"
+
 #do-build:
 #	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} w_pcgi.py)
 
@@ -29,6 +32,8 @@ do-build:
 		${SETENV} ${MAKE_ENV} ${MAKE})
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} inst/build_extensions.py)
+	${SED} ${ZOPECREATE_SED} <${FILESDIR}/zope25-create \
+		>${WRKSRC}/zope25-create
 
 #
 # Install code and prototype data. A real INSTANCE_HOME must be created
@@ -42,6 +47,7 @@ do-install:
 		-print | ${PAX} -rw ${ZOPEDIR}
 	cd ${ZOPEDIR} && ${PYTHONBIN} ${WRKSRC}/inst/compilezpy.py
 	cd ${WRKSRC} && ${PAX} -rw ${ZOPEDATA} ${ZOPEDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/zope25-create ${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
