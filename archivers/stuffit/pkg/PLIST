@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/09 08:17:44 pooka Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/10/25 19:57:35 wiz Exp $
 bin/register
 bin/stuff
 bin/unstuff
 share/doc/stuffit/stuff/LICENSE
 share/doc/stuffit/stuff/INSTALL
 share/doc/stuffit/stuff/README
-share/doc/stuffit/stuff/REGISTRATION
 share/doc/stuffit/stuff/stuff.html
 share/doc/stuffit/unstuff/LICENSE
 share/doc/stuffit/unstuff/INSTALL
