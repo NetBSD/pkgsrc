@@ -1,16 +1,24 @@
-@comment $NetBSD: PLIST,v 1.11 1998/07/18 23:14:28 tv Exp $
+@comment $NetBSD: PLIST,v 1.12 1998/08/20 22:16:39 tron Exp $
 bin/gtk-config
 include/gdk/gdk.h
+include/gdk/gdkrgb.h
 include/gdk/gdkcursors.h
 include/gdk/gdki18n.h
 include/gdk/gdkkeysyms.h
 include/gdk/gdkprivate.h
 include/gdk/gdktypes.h
 include/gdk/gdkx.h
-include/glib.h
-include/glibconfig.h
 include/gtk/gtk.h
-include/gtk/gtkaccelerator.h
+include/gtk/gtkaccelgroup.h
+include/gtk/gtkaccellabel.h
+include/gtk/gtkarg.h
+include/gtk/gtkbindings.h
+include/gtk/gtkctree.h
+include/gtk/gtkfontsel.h
+include/gtk/gtkitemfactory.h
+include/gtk/gtkmarshal.h
+include/gtk/gtkpacker.h
+include/gtk/gtkprogress.h
 include/gtk/gtkadjustment.h
 include/gtk/gtkalignment.h
 include/gtk/gtkarrow.h
@@ -103,21 +111,16 @@ include/gtk/gtkvscrollbar.h
 include/gtk/gtkvseparator.h
 include/gtk/gtkwidget.h
 include/gtk/gtkwindow.h
-lib/libgdk.a
-lib/libgdk.so.1.4
-lib/libglib.a
-lib/libglib.so.1.4
-lib/libgtk.a
-lib/libgtk.so.1.4
+lib/libgdk-1.1.so.1.0
+lib/libgdk-1.1.a
+lib/libgtk-1.1.so.1.0
+lib/libgtk-1.1.a
 man/man1/gtk-config.1
 @unexec install-info --delete %D/info/gdk.info %D/info/dir
-@unexec install-info --delete %D/info/glib.info %D/info/dir
 @unexec install-info --delete %D/info/gtk.info %D/info/dir
 info/gdk.info
-info/glib.info
 info/gtk.info
 @exec install-info %D/info/gdk.info %D/info/dir
-@exec install-info %D/info/glib.info %D/info/dir
 @exec install-info %D/info/gtk.info %D/info/dir
 info/gtk.info-1
 info/gtk.info-2
