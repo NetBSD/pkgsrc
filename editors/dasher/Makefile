@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2004/10/03 00:14:38 tv Exp $
+# $NetBSD: Makefile,v 1.11 2005/02/26 17:25:47 jmmv Exp $
 #
 
-DISTNAME=	dasher-3.2.11
-PKGREVISION=	1
+DISTNAME=	dasher-3.2.13
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/3.2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -29,6 +28,7 @@ USE_X11=		yes
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
