@@ -1,17 +1,32 @@
-@comment $NetBSD: PLIST,v 1.3 1999/10/10 14:33:08 dmcmahill Exp $
-bin/spline
+@comment $NetBSD: PLIST,v 1.4 2000/07/18 07:41:25 itohy Exp $
 bin/double
-bin/ode
-bin/plot
-bin/tek2plot
-bin/plotfont
 bin/graph
+bin/ode
+bin/pic2plot
+bin/plot
+bin/plotfont
+bin/spline
+bin/tek2plot
 include/plot.h
 include/plotcompat.h
+include/plotter.h
+lib/libplot.a
+lib/libplot.so.3.0
+lib/libplotter.a
+lib/libplotter.so.3.0
 man/man1/ode.1
 man/man1/plot.1
 man/man1/spline.1
 man/man1/tek2plot.1
+share/libplot/README
+share/libplot/colors.txt
+share/libplot/demo-page
+share/libplot/h-demo.c
+share/libplot/h-fonts.doc
+share/libplot/h-glyphs.doc
+share/libplot/hershey.bib
+share/libplot/kana.doc
+share/libplot/kanji.doc
 share/ode/README
 share/ode/atwoods.ode
 share/ode/bead.ode
@@ -29,15 +44,11 @@ share/ode/qcd.ode
 share/ode/rumor.ode
 share/ode/soliton.ode
 share/ode/viscous.ode
-share/libplot/README
-share/libplot/colors.txt
-share/libplot/demo-page
-share/libplot/h-demo.c
-share/libplot/h-fonts.doc
-share/libplot/h-glyphs.doc
-share/libplot/hershey.bib
-share/libplot/kana.doc
-share/libplot/kanji.doc
+share/pic2plot/README
+share/pic2plot/macros.pic
+share/pic2plot/pic0.ps
+share/pic2plot/pic1.ps
+share/pic2plot/picmacros.ps
 share/tek2plot/README
 share/tek2plot/aitest.tek
 share/tek2plot/dmerc.tek
@@ -48,11 +59,10 @@ share/tek2plot/ocpred.tek
 share/tek2plot/scale.tek
 share/tek2plot/skymap.tek
 share/tek2plot/usmap.tek
-lib/libplot.so.3.0
-lib/libplot.a
 @unexec install-info --delete %D/info/plotutils.info %D/info/dir
 info/plotutils.info
 @exec install-info %D/info/plotutils.info %D/info/dir
-@dirrm share/tek2plot
 @dirrm share/libplot
 @dirrm share/ode
+@dirrm share/pic2plot
+@dirrm share/tek2plot
