@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/20 19:31:22 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/10/06 03:36:19 jlam Exp $
 bin/filter_wrapper
 bin/kchart
 bin/kformula
@@ -1506,13 +1506,7 @@ share/kde/icons/hicolor/48x48/mimetypes/kugardata.png
 share/kde/icons/locolor/16x16/apps/kspreadcalc.png
 share/kde/icons/locolor/22x22/apps/kspreadcalc.png
 share/kde/icons/locolor/32x32/apps/kspreadcalc.png
-share/kde/mimelnk/application/x-abiword.desktop
-share/kde/mimelnk/application/x-quattropro.desktop
-share/kde/mimelnk/image/x-msod.desktop
 share/kde/mimelnk/image/x-svg.desktop
-share/kde/mimelnk/image/x-wmf.desktop
-share/kde/mimelnk/image/x-xfig.desktop
-share/kde/mimelnk/text/x-csv.desktop
 share/kde/mimelnk/text/x-gnumeric.desktop
 share/kde/services/ki_rtf_export.desktop
 share/kde/services/killustrator_applixgraphic_import.desktop

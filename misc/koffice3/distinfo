@@ -1,11 +1,20 @@
-$NetBSD: distinfo,v 1.1 2002/06/28 00:35:12 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2002/10/06 03:36:19 jlam Exp $
 
 SHA1 (koffice-1.1.1-kde3.tar.bz2) = c2eeec46daac8a672cf11565fdf3dfdd899300f3
 Size (koffice-1.1.1-kde3.tar.bz2) = 8792363 bytes
-SHA1 (patch-aa) = 30f7d7db5e8492be148573b88d207f1da9971c5c
-SHA1 (patch-ab) = f0369c5f34b2fb5f370d2245ed78d01bce11d999
-SHA1 (patch-ac) = 786543aed389f0fc56dee9a13c6fb4cbc47c226a
-SHA1 (patch-ad) = 80299e8438ae050e415b6a1897f5efc8d2b6d37d
-SHA1 (patch-ae) = a048cbbbf51dc51dc0a7c47f783adb4e44d0e66d
-SHA1 (patch-af) = 95abb2d03f8607787a0f1069d7721d47b1f111ca
-SHA1 (patch-ag) = b3707ef85e564921f41a76c9c1f3c29dcd877d86
+SHA1 (patch-aa) = e359388b2fa49869b48b7b44db532466dc1e1920
+SHA1 (patch-ab) = 141fcac4661ac76fe1461cc50fbcd379831e093e
+SHA1 (patch-ac) = f31f2c9c777874e3a17740335f028e654d5539a9
+SHA1 (patch-ad) = 0c343fab3df4b73be17eba34f84c76f4dcf82d9a
+SHA1 (patch-ae) = 2518ceefade558b983f0559aab3b2ab32d5c55ae
+SHA1 (patch-af) = c4e9914c19e63ee6ca6bfa0ff70cdd1167fc0084
+SHA1 (patch-ag) = f7cf5b6932719c26383b5fb06c96fa1bd40d4804
+SHA1 (patch-ah) = 3a7a6cd2fcfad3636980da59ad89bc4848ecf71b
+SHA1 (patch-ai) = 6b681486d5ab49281f7a1096f240ea93349f87e8
+SHA1 (patch-aj) = 2463997c381825347f294f06d80b3c0a37d5ea0a
+SHA1 (patch-ak) = 551e4d1b748156f9e86b3468def01e9dc8e98655
+SHA1 (patch-al) = a4b78fa6592f088fe9e0f4f3e6881614a4882385
+SHA1 (patch-am) = eb66871d7d2f36f9b8d97c8bfd9b24a2988d6243
+SHA1 (patch-an) = 71b75582d79bd73c193a31401873b65d30f8129c
+SHA1 (patch-ao) = ea38f9553ee5a6e1c79913b4845859803da93fd6
+SHA1 (patch-ap) = 7999e24457d672c1dead6e05883c2adf0fe8dc75

@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2002/10/06 03:36:20 jlam Exp $
+
+--- filters/kspread/qpro/Makefile.in.orig	Sat Oct  5 06:09:22 2002
++++ filters/kspread/qpro/Makefile.in
+@@ -258,7 +258,7 @@ libqproimport_la_LIBADD = $(KOFFICE_LIBS
+ service_DATA = kspread_qpro_import.desktop
+ servicedir = $(kde_servicesdir)
+ 
+-kdemime_DATA = x-quattropro.desktop
++kdemime_DATA = # x-quattropro.desktop (already installed by kdelibs3)
+ kdemimedir = $(kde_mimedir)/application
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+ CONFIG_HEADER = ../../../config.h

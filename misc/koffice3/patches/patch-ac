@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2002/10/06 03:36:20 jlam Exp $
+
+--- filters/kontour/xfig/Makefile.in.orig	Sat Oct  5 06:09:22 2002
++++ filters/kontour/xfig/Makefile.in
+@@ -253,7 +253,7 @@ noinst_HEADERS = xfigimport.h xfigimport
+ 
+ service_DATA = killustrator_xfig_import.desktop
+ servicedir = $(kde_servicesdir)
+-data_DATA = x-xfig.desktop
++data_DATA = # x-xfig.desktop (already installed by kdelibs3)
+ datadir = $(kde_mimedir)/image
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+ CONFIG_HEADER = ../../../config.h
