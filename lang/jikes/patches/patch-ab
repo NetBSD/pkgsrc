@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.3 2001/05/16 10:05:36 agc Exp $
+$NetBSD: patch-ab,v 1.4 2002/10/30 06:46:07 skrll Exp $
 
---- doc/Makefile.in.orig	Fri Mar 30 07:23:12 2001
-+++ doc/Makefile.in	Wed May 16 09:54:18 2001
-@@ -82,7 +82,7 @@
- 
+--- doc/Makefile.in.orig	Wed Jul 10 07:16:00 2002
++++ doc/Makefile.in
+@@ -80,7 +80,7 @@ am__quote = @am__quote@
+ install_sh = @install_sh@
  man_MANS = jikes.1
  
 -docdir = $(prefix)/doc/${PACKAGE}-${VERSION}
