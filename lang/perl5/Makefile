@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2003/08/26 02:30:27 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2003/08/26 15:59:14 jschauma Exp $
 
 .include "../../lang/perl5/Makefile.common"
 
@@ -187,4 +187,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mk
 	${INSTALL_DATA} ${WRKDIR}/bsd.perl.mk ${PREFIX}/share/mk/bsd.perl.mk
 
+.include "../../converters/libiconv/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
