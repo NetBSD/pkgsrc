@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:16:24 martti Exp $
+# $NetBSD: Makefile,v 1.7 2003/09/19 09:38:03 wiz Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -23,6 +23,9 @@ SITES_mendexk2.5.tar.gz= \
 		ftp://ring.gr.jp/pub/text/TeX/ascii-ptex/mendex/
 
 DEPENDS+=	ja-ptex-share>=2.1:../../print/ja-ptex-share
+
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 .include "../../print/teTeX2-bin/Makefile.common"
 
