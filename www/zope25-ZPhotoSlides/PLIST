@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/04 15:01:49 drochner Exp $
+lib/zope/lib/python/Products/ZPhotoSlides/IMG_fileobj.py
+lib/zope/lib/python/Products/ZPhotoSlides/IMG_fileobj.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/IMG_img.py
+lib/zope/lib/python/Products/ZPhotoSlides/IMG_img.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/IMG_start.py
+lib/zope/lib/python/Products/ZPhotoSlides/IMG_start.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/LICENSE.txt
+lib/zope/lib/python/Products/ZPhotoSlides/README
+lib/zope/lib/python/Products/ZPhotoSlides/TODO
+lib/zope/lib/python/Products/ZPhotoSlides/ZPhotoSlides.py
+lib/zope/lib/python/Products/ZPhotoSlides/ZPhotoSlides.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/__init__.py
+lib/zope/lib/python/Products/ZPhotoSlides/__init__.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/Index.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/List_files.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/ZPhotoSlidesAdd.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/ZPhotoSlidesEdit.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/edit_photo.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/list_title.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/dtml/make_thumb.dtml
+lib/zope/lib/python/Products/ZPhotoSlides/image_modif.py
+lib/zope/lib/python/Products/ZPhotoSlides/image_modif.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/refresh.txt
+lib/zope/lib/python/Products/ZPhotoSlides/test.py
+lib/zope/lib/python/Products/ZPhotoSlides/test.pyc
+lib/zope/lib/python/Products/ZPhotoSlides/www/photo.gif
+lib/zope/lib/python/Products/ZPhotoSlides/zphoto.tex
+@dirrm lib/zope/lib/python/Products/ZPhotoSlides/www
+@dirrm lib/zope/lib/python/Products/ZPhotoSlides/dtml
+@dirrm lib/zope/lib/python/Products/ZPhotoSlides
