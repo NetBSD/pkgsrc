@@ -1,0 +1,4 @@
+p2c is a Pascal to C compiler (translates Pascal to C).
+
+p2c includes limited support for translating Borland TurboPascal
+and modula-2 programs
