@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1221 2003/12/18 04:30:10 xtraeme Exp $
+$NetBSD: TODO,v 1.1222 2003/12/18 04:41:57 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -306,7 +306,6 @@ Suggested package updates
 	o wavesurfer-1.5.3 [requires tk-8.4.2]
 	o wdm-1.26
 	o wistumbler2-2.00pre4 [xtraeme]
-	o wmbiff-0.4.17
 	o wv2-0.2
 	o wwwoffle-2.8a
 	o xalan-c-1.4
