@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2003/07/21 17:24:18 martti Exp $
+# $NetBSD: Makefile,v 1.5 2003/08/23 16:41:58 recht Exp $
 #
 
 .include "../../sysutils/mbmon/Makefile.common"
 
-PKGNAME=	mbmon-201
+PKGNAME=	mbmon-203
 
 MAINTAINER=	tech-pkg@NetBSD.org
 #HOMEPAGE=	
