@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2005/02/26 17:23:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.33 2005/03/22 15:57:32 jmmv Exp $
 #
 
-DISTNAME=		libglade-2.4.2
+DISTNAME=		libglade-2.5.1
 PKGNAME=		${DISTNAME:S/libglade/libglade2/}
 CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.5/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -27,11 +27,15 @@ CONFIGURE_ARGS+=	--without-xml-catalog
 XML_ENTRIES=	system http://glade.gnome.org/glade-2.0.dtd \
 		${PREFIX}/share/xml/libglade/glade-2.0.dtd
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
+BUILDLINK_DEPENDS.atk+=		atk>=1.9.0
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_DEPENDS.gtk2+=	gtk2>=2.6.0
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/libglade/2.0
 
+.include "../../devel/atk/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
