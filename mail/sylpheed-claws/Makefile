@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2003/12/11 15:22:28 adam Exp $
+# $NetBSD: Makefile,v 1.25 2003/12/14 17:56:39 wiz Exp $
 #
 
 DISTNAME=	sylpheed-0.9.7claws
 PKGNAME=	sylpheed-claws-0.9.7
+PKGREVISION=	1
 CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 EXTRACT_SUFX=	.tar.bz2
@@ -71,7 +72,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sylpheed*.png ${PREFIX}/share/sylpheed
 
 .include "../../converters/libiconv/buildlink2.mk"
-.include "../../security/gpgme/buildlink2.mk"
+.include "../../security/gpgme03/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 .include "../../textproc/aspell/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
