@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/03/10 13:46:29 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2002/01/02 10:21:44 hubertf Exp $
 
 DISTNAME=	Imaging-1.1.1
 PKGNAME=	py-imaging-1.1.1
@@ -23,7 +23,7 @@ do-configure:
 	(cd ${WRKSRC}; ${MAKE} -f Makefile.pre.in boot)
 
 do-build:
-	(cd ${WRKSRC}/libImaging; ${MAKE}; cd ..; ${MAKE})
+	(cd ${WRKSRC}/libImaging; ${SETENV} ${MAKE_ENV} ${MAKE}; cd ..; ${MAKE})
 
 post-build:
 	(cd ${WRKSRC}/PIL; python ${PREFIX}/lib/python2.0/compileall.py .)
