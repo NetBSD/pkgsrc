@@ -1,5 +1,5 @@
-=============================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 22:03:34 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/12 17:16:39 wiz Exp $
 
 This pkg DOES NOT install headers or runtime link libraries.  Only the
 compilers are installed.
@@ -9,4 +9,4 @@ includes and libraries in ${CROSSBASE}/i386-netbsdpe/include and
 ${CROSSBASE}/i386-netbsdpe/lib respectively, or symlink these paths to
 the appropriate places.
 
-=============================================================================
+===========================================================================

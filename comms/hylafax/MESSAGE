@@ -1,5 +1,5 @@
-======================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 20:44:06 zuntum Exp $
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/09/12 17:13:28 wiz Exp $
 
 Hylafax was installed.  You'll need manual configurations to actually
 activate it.
@@ -19,4 +19,4 @@ Setting up: (for impatients)
 
 >tty00	"${PREFIX}/libexec/faxgetty"	dialup	on secure
 
-======================================================================
+===========================================================================
