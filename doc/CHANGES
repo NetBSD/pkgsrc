@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6636 2004/07/22 16:26:19 simonb Exp $
+$NetBSD: CHANGES,v 1.6637 2004/07/22 18:16:01 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3501,3 +3501,9 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated nessus-plugins to 2.0.12 [adam 2004-07-22]
 	Updated nessus to 2.0.12 [adam 2004-07-22]
 	Updated musicpd to 0.11.3 [simonb 2004-07-23]
+	Updated py-psycopg to 1.1.14 [drochner 2004-07-23]
+	Updated zope25-ZPsycopgDA to 1.1.14 [drochner 2004-07-23]
+	Updated sqlite to 2.8.14 [drochner 2004-07-23]
+	Updated py-sqlite to 0.5.1 [drochner 2004-07-23]
+	Added mapm-4.9.2 [drochner 2004-07-23]
+	Added gtklife-3.0 [drochner 2004-07-23]
