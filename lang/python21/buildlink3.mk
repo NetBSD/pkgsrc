@@ -1,7 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/01/25 14:23:39 recht Exp $
-#
+# $NetBSD: buildlink3.mk,v 1.2 2004/01/25 17:15:12 jlam Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PYTHON21_BUILDLINK3_MK:=	${PYTHON21_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
@@ -9,21 +8,17 @@ BUILDLINK_DEPENDS+=	python21
 .endif
 
 .if !empty(PYTHON21_BUILDLINK3_MK:M+)
-BUILDLINK_PACKAGES+=			python21
-BUILDLINK_DEPENDS.python21?=		python21>=2.1.3
-BUILDLINK_PKGSRCDIR.python21?=		../../lang/python21
+BUILDLINK_PACKAGES+=		python21
+BUILDLINK_DEPENDS.python21+=	python21>=2.1.3
+BUILDLINK_PKGSRCDIR.python21?=	../../lang/python21
 
-.if defined(BUILDLINK_DEPMETHOD.python)
+.  if defined(BUILDLINK_DEPMETHOD.python)
 BUILDLINK_DEPMETHOD.python21?=	${BUILDLINK_DEPMETHOD.python}
-.endif
+.  endif
 
+BUILDLINK_INCDIRS.python21+=	include/python2.1
+BUILDLINK_LIBDIRS.python21+=	lib/python2.1/config
 BUILDLINK_TRANSFORM+=		l:python:python2.1
-
-BUILDLINK_CPPFLAGS.python21+= \
-	-I${BUILDLINK_PREFIX.python21}/include/python2.1
-BUILDLINK_LDFLAGS.python21+= \
-	-L${BUILDLINK_PREFIX.python21}/lib/python2.1/config		\
-	-Wl,-R${BUILDLINK_PREFIX.python21}/lib/python2.1/config
 
 .endif # PYTHON21_BUILDLINK3_MK
 
