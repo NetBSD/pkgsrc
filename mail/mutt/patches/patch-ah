@@ -1,0 +1,23 @@
+$NetBSD: patch-ah,v 1.1 2000/06/22 13:50:34 tron Exp $
+
+--- imap/md5.h.orig	Fri Aug 20 10:24:06 1999
++++ imap/md5.h	Thu Jun 22 15:13:06 2000
+@@ -26,14 +26,16 @@
+ #ifndef MD5_H
+ #define MD5_H 1
+ 
++#include <sys/types.h>
++
+ /* POINTER defines a generic pointer type */
+ typedef unsigned char *POINTER;
+ 
+ /* UINT2 defines a two byte word */
+-typedef unsigned short int UINT2;
++typedef u_int16_t UINT2;
+ 
+ /* UINT4 defines a four byte word */
+-typedef unsigned long int UINT4;
++typedef u_int32_t UINT4;
+ 
+ /* MD5 context. */
+ typedef struct {
