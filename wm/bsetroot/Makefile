@@ -1,23 +1,21 @@
-# $NetBSD: Makefile,v 1.4 2003/02/20 16:50:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/17 05:41:11 salo Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
 PKGNAME=	bsetroot-0.1
-PKGREVISION=	2
-CATEGORIES=	x11 wm
+PKGREVISION=	3
+CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blackboxwm/}
 
 MAINTAINER=	jschauma@netbsd.org
 HOMEPAGE=	http://blackboxwm.sourceforge.net/
 COMMENT=	tools to set the root windows background
 
-USE_BUILDLINK2=		yes
-USE_X11BASE=		yes
-GNU_CONFIGURE=		yes
+USE_BUILDLINK2=	YES
+USE_X11=	YES
+GNU_CONFIGURE=	YES
 
-do-build:
-	( cd ${WRKSRC}/nls && ${MAKE} && \
-	 cd ${WRKSRC}/util && ${MAKE} )
+BUILD_DIRS=	${WRKSRC}/nls ${WRKSRC}/util
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/util/bsetbg ${PREFIX}/bin
@@ -27,4 +25,5 @@ do-install:
 	( cd ${WRKSRC}/nls && ${MAKE} install )
 
 .include "../../devel/gettext-lib/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
