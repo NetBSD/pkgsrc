@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1.1.1 2002/07/07 19:45:39 dmcmahill Exp $
+$NetBSD: patch-ai,v 1.2 2004/11/08 15:48:20 adam Exp $
 
---- editor/shell.c.orig	Sat Oct 27 14:36:12 2001
+--- editor/shell.c.orig	2004-10-18 19:56:58.000000000 +0000
 +++ editor/shell.c
-@@ -437,8 +437,8 @@
+@@ -437,8 +437,8 @@ static void shell_pool_update (int fd, f
  {
      CWidget *w;
      struct running_shell *r;
@@ -13,7 +13,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2002/07/07 19:45:39 dmcmahill Exp $
      if (r->shell_pipe != fd) {
  	printf ("huh??\n");
      }
-@@ -560,7 +560,7 @@
+@@ -559,7 +559,7 @@ int execute_background_display_output (c
      char *argv[] =
      {0, 0};
      pid_t p;
@@ -22,7 +22,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2002/07/07 19:45:39 dmcmahill Exp $
      i = restart_shell (0, name, 0);
      argv[0] = hme_i (SCRIPT_FILE, i);
      savefile (argv[0], s, strlen (s), 0700);
-@@ -585,7 +585,7 @@
+@@ -584,7 +584,7 @@ static int execute_background_shell (str
      char *argv[] =
      {0, 0};
      pid_t p = 0;
