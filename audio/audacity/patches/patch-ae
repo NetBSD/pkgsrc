@@ -1,21 +1,43 @@
-$NetBSD: patch-ae,v 1.3 2002/05/20 17:16:08 cjep Exp $
---- Makefile.in.orig	Sun Jul 29 03:17:54 2001
-+++ Makefile.in	Tue Jul 31 19:28:20 2001
-@@ -8,7 +8,7 @@
+$NetBSD: patch-ae,v 1.4 2002/10/04 08:59:36 jlam Exp $
+
+--- Makefile.in.orig	Fri Jun  7 23:00:04 2002
++++ Makefile.in
+@@ -8,7 +8,10 @@
  # from Makefile.in
  #
  
 -LIBS = @LIBS@
-+LIBS = @LIBS@ -lmpeg3 -lossaudio
++HELPDIR = @HELPDIR@
++DEV_DSP = @DEV_DSP@
++EXTRA_CPPFLAGS = -DHELPDIR=\"$(HELPDIR)\" -DDEV_DSP=\"$(DEV_DSP)\"
++LIBS = @LIBS@ ${LIBOSSAUDIO}
  CFLAGS = @CFLAGS@ @CPPFLAGS@ -Iallegro
  CCC = @CXX@
  CC = @CC@
-@@ -82,7 +82,7 @@
- 	$(OBJDIR)/prefs/SampleRatePrefs.cpp.o \
- 	$(OBJDIR)/prefs/FileFormatPrefs.cpp.o \
- 	$(OBJDIR)/prefs/DirectoriesPrefs.cpp.o \
--	$(OBJDIR)/prefs/SpectrumPrefs.cpp.o @EXTRAOBJS@
-+	$(OBJDIR)/prefs/SpectrumPrefs.cpp.o
+@@ -106,10 +109,11 @@ audacity: $(OBJS) Makefile
+ #
+ #
+ install:
++	-test -d $(HELPDIR) || mkdir -m 755 -p $(HELPDIR)
++	-test -f audacity-help.htb && $(INSTALL) -m 644 audacity-help.htb \
++		$(HELPDIR)/audacity-help.htb
+ 	-test -d $(PREFIX)/share/doc/audacity || \
+ 		mkdir -m 755 -p $(PREFIX)/share/doc/audacity
+-	-test -f audacity-help.htb && $(INSTALL) -m 644 audacity-help.htb \
+-		$(PREFIX)/share/doc/audacity/audacity-help.htb
+ 	$(INSTALL) -m 644 README.txt $(PREFIX)/share/doc/audacity/README.txt
+ 	$(INSTALL) -m 644 LICENSE.txt $(PREFIX)/share/doc/audacity/LICENSE.txt
+ 	-test -d $(PREFIX)/bin || \
+@@ -175,10 +179,10 @@ $(DIRS): %: 
+ #
  
- ########################################
- # DEPENDENCIES
+ $(OBJDIR)/%.cpp.o: %.cpp
+-	$(CCC) -c $(CFLAGS) $< -o $@
++	$(CCC) -c $(CFLAGS) $(EXTRA_CPPFLAGS) $< -o $@
+ 
+ $(OBJDIR)/%.c.o: %.c
+-	$(CC) -c $(CFLAGS) $< -o $@
++	$(CC) -c $(CFLAGS) $(EXTRA_CPPFLAGS) $< -o $@
+ 
+ #
+ # Include ".depend" if it exists (run "make dep" to generate it)
