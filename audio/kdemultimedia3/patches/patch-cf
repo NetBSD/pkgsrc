@@ -1,8 +1,8 @@
-$NetBSD: patch-cf,v 1.3 2003/03/11 13:33:55 markd Exp $
+$NetBSD: patch-cf,v 1.4 2003/05/22 03:05:41 markd Exp $
 
---- noatun/modules/systray/Makefile.in.orig	Fri Jan 17 08:49:42 2003
+--- noatun/modules/systray/Makefile.in.orig	Thu May  8 00:05:29 2003
 +++ noatun/modules/systray/Makefile.in
-@@ -330,7 +330,7 @@ kde_module_LTLIBRARIES = noatun_systray.
+@@ -381,7 +381,7 @@ kde_module_LTLIBRARIES = noatun_systray.
  noatun_systray_la_SOURCES = systray.cpp noatunui.cpp kitsystemtray.cpp cmodule.cpp
  
  noatun_systray_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
@@ -11,7 +11,7 @@ $NetBSD: patch-cf,v 1.3 2003/03/11 13:33:55 markd Exp $
                          -lqtmcop -lkmedia2_idl -lsoundserver_idl
  
  
-@@ -349,7 +349,7 @@ CONFIG_CLEAN_FILES =
+@@ -400,7 +400,7 @@ CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
  noatun_systray_la_DEPENDENCIES = \
@@ -20,8 +20,8 @@ $NetBSD: patch-cf,v 1.3 2003/03/11 13:33:55 markd Exp $
  am_noatun_systray_la_OBJECTS = systray.lo noatunui.lo kitsystemtray.lo \
  	cmodule.lo
  #>- noatun_systray_la_OBJECTS = $(am_noatun_systray_la_OBJECTS)
-@@ -551,7 +551,7 @@ distclean-tags:
- 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+@@ -630,7 +630,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
 -KDE_DIST=cr16-action-noatuntrayplay.png cr16-action-noatuntray.png systray.plugin systrayui.rc cr16-action-noatuntraystop.png cr16-action-noatuntraypause.png 
@@ -29,7 +29,7 @@ $NetBSD: patch-cf,v 1.3 2003/03/11 13:33:55 markd Exp $
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -690,20 +690,20 @@ noatun_systray.la.closure: $(noatun_syst
+@@ -783,20 +783,20 @@ noatun_systray.la.closure: $(noatun_syst
  
  
  #>+ 3
@@ -55,7 +55,7 @@ $NetBSD: patch-cf,v 1.3 2003/03/11 13:33:55 markd Exp $
  
  #>+ 3
  clean-closures:
-@@ -734,7 +734,7 @@ force-reedit:
+@@ -827,7 +827,7 @@ force-reedit:
  
  
  #>+ 11
@@ -64,7 +64,7 @@ $NetBSD: patch-cf,v 1.3 2003/03/11 13:33:55 markd Exp $
  	@echo 'creating noatun_systray_la.all_cpp.cpp ...'; \
  	rm -f noatun_systray_la.all_cpp.files noatun_systray_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> noatun_systray_la.all_cpp.final; \
-@@ -770,9 +770,9 @@ kde-rpo-clean:
+@@ -863,9 +863,9 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 7
