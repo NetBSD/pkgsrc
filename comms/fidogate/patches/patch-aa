@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2002/07/06 20:15:52 tv Exp $
+$NetBSD: patch-aa,v 1.6 2004/08/23 15:18:02 tv Exp $
 
---- config.make.orig	Mon Aug 20 01:23:53 2001
-+++ config.make	Sat Jul  6 15:19:41 2002
+--- config.make.orig	2003-04-15 14:45:20.000000000 -0400
++++ config.make
 @@ -56,13 +56,13 @@
  #
  
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.5 2002/07/06 20:15:52 tv Exp $
  DEFAULT_V_BTBASEDIR	= /var/spool/bt
  DEFAULT_V_INBOUND	= $(DEFAULT_V_BTBASEDIR)/in
  DEFAULT_V_PINBOUND	= $(DEFAULT_V_BTBASEDIR)/pin
-@@ -83,17 +83,17 @@
+@@ -83,8 +83,8 @@ DEFAULT_V_CHARSETMAP	= %L/charset.bin
  
  # fixed parameters, DO NOT DELETE ANYTHING!!!
  # INN (Redhat 5.2)
@@ -34,8 +34,11 @@ $NetBSD: patch-aa,v 1.5 2002/07/06 20:15:52 tv Exp $
  # INN 1.7
  #DEFAULT_F_NEWSLIBDIR	= /usr/lib/news
  #DEFAULT_F_NEWSSPOOLDIR	= /var/spool/news
- # INN 2.2
--DEFAULT_F_NEWSLIBDIR	= /usr/lib
+@@ -92,11 +92,11 @@ DEFAULT_F_NEWSVARDIR	= /var/lib/news
+ #DEFAULT_F_NEWSLIBDIR	= /usr/lib
+ #DEFAULT_F_NEWSSPOOLDIR	= /var/spool/news/articles
+ # INN 2.3.4 on RedHat 9
+-DEFAULT_F_NEWSLIBDIR	= /usr/lib/news/lib
 -DEFAULT_F_NEWSSPOOLDIR	= /var/spool/news/articles
 +DEFAULT_F_NEWSLIBDIR	= @PREFIX@/inn/lib
 +DEFAULT_F_NEWSSPOOLDIR	= /var/news/spool/articles
@@ -46,7 +49,7 @@ $NetBSD: patch-aa,v 1.5 2002/07/06 20:15:52 tv Exp $
  
  # old-style config
  #DEFAULT_F_CONFIG_GATE	= %C/gate.conf
-@@ -146,18 +146,15 @@
+@@ -149,18 +149,15 @@ DEFAULT_A_UUINBOUND	= %U
  
  
  # The perl interpreter used by subst.pl
@@ -70,7 +73,7 @@ $NetBSD: patch-aa,v 1.5 2002/07/06 20:15:52 tv Exp $
  
  # RedHat RPM related dirs
  RPMBASEDIR	= /usr/src/redhat
-@@ -197,20 +194,17 @@
+@@ -200,20 +197,17 @@ GROUP		= news
  # install permissions
  PERM_PROG	= 755
  PERM_DATA	= 644
@@ -93,7 +96,7 @@ $NetBSD: patch-aa,v 1.5 2002/07/06 20:15:52 tv Exp $
  
  INCLUDE		= -I$(TOPDIR) -I$(TOPDIR)/src/include
  
-@@ -239,10 +233,10 @@
+@@ -242,10 +236,10 @@ INSTALL		= install
  # MSDOS, OS2, WIN32
  # EXE		= .exe
  EXE		=
