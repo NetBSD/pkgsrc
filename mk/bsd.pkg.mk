@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.306 1999/07/28 10:07:55 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.307 1999/07/28 10:58:30 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -852,7 +852,7 @@ describe:
 
 # Fetch
 _FETCH_FILE=								\
-	if [ ! -f $$file -a ! -f $$bfile ]; then			\
+	if [ ! -f $$file -a ! -f $$bfile -a ! -h $$bfile ]; then	\
 		${ECHO_MSG} ">> $$bfile doesn't seem to exist on this system."; \
 		for site in $$sites; do					\
 			${ECHO_MSG} ">> Attempting to fetch $$bfile from $${site}."; \
