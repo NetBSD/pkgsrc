@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/07/25 00:25:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2000/07/31 04:14:10 jlam Exp $
 #
 
 DISTNAME=		lynx2.8.3rel.1
@@ -14,7 +14,7 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		fb@enteract.com
 HOMEPAGE=		http://lynx.browser.org/
 
-DEPENDS+=		gettext-0.10.*:../../devel/gettext
+DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 
 RESTRICTED=		"Crypto, export-controlled"
 NO_BIN_ON_FTP=		${RESTRICTED}

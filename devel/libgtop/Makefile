@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2000/07/30 02:52:20 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2000/07/31 04:14:06 jlam Exp $
 
 DISTNAME=		libgtop-1.0.9
 CATEGORIES=		devel gnome
@@ -8,7 +8,7 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.home-of-linux.org/gnome/libgtop/
 
 BUILD_DEPENDS=		${PERL}:../../lang/perl5
-DEPENDS+=		gettext-0.10.*:../../devel/gettext
+DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
 DEPENDS+=		gnome-libs-*:../../x11/gnome-libs
 DEPENDS+=		guile-[0-9]*:../../lang/guile
 
