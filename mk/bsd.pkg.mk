@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.868 2001/11/30 01:26:33 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.869 2001/11/30 03:19:04 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1524,8 +1524,8 @@ do-patch: uptodate-digest
 
 # Configure
 
-_CONFIGURE_PREREQ+=	do-libtool
-do-libtool:
+_CONFIGURE_PREREQ+=	do-ltconfig-override
+do-ltconfig-override:
 .if defined(USE_LIBTOOL) && defined(LTCONFIG_OVERRIDE)
 .  for ltconfig in ${LTCONFIG_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
