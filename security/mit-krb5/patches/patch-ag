@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
+$NetBSD: patch-ag,v 1.2 2004/03/30 20:17:42 jlam Exp $
 
---- config/shlib.conf.orig	Mon Mar  3 02:09:45 2003
+--- config/shlib.conf.orig	Fri Feb 13 16:36:22 2004
 +++ config/shlib.conf
 @@ -8,12 +8,14 @@ SHLIBVEXT=.so.v-nobuild
  SHLIBSEXT=.so.s-nobuild
@@ -17,7 +17,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2004/03/30 18:07:18 jlam Exp $
  # Default for systems w/o shared libraries
  CC_LINK_STATIC='$(CC) $(PROG_LIBPATH) $(CFLAGS) $(LDFLAGS)'
  
-@@ -300,3 +302,8 @@ mips-*-netbsd*)
+@@ -325,3 +327,8 @@ mips-*-netbsd*)
  	RUN_ENV='LIBPATH=`echo $(PROG_LIBPATH) | sed -e "s/-L//g" -e "s/ /:/g"`:$(PROG_RPATH):/usr/lib:/usr/local/lib; export LIBPATH; '
  
  esac
