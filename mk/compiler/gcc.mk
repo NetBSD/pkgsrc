@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.41 2004/02/06 18:45:03 jlam Exp $
+# $NetBSD: gcc.mk,v 1.42 2004/02/06 19:16:37 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
@@ -199,7 +199,7 @@ _NEED_NEWER_GCC!=	\
 MAKEFLAGS+=	_NEED_NEWER_GCC=${_NEED_NEWER_GCC}
 .  endif
 .  if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && \
-    !empty(_NEED_NEWER_GCC:M[yY][eE][sS])
+      !empty(_NEED_NEWER_GCC:M[yY][eE][sS])
 PKG_SKIP_REASON=	"Unable to satisfy dependency: ${_GCC_DEPENDS}"
 .  endif
 
