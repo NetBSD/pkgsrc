@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2001/08/23 21:46:53 jlam Exp $
+$NetBSD: distinfo,v 1.6 2002/04/05 01:49:46 hubertf Exp $
 
 SHA1 (gtksql-0.3.tar.gz) = b2d078cb0eb8816b26f3e0369fc440085071fc0c
 Size (gtksql-0.3.tar.gz) = 50557 bytes
-SHA1 (patch-aa) = 1b87832d4b6d47515a07198a0521a886e68fd784
+SHA1 (patch-aa) = b5b4fef7202f76796429e36dac4e4ef718c09deb
