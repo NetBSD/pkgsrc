@@ -1,0 +1,23 @@
+--- f2c.1t.orig	Sat May 16 17:16:53 1998
++++ f2c.1t	Thu Jul  9 07:54:55 1998
+@@ -333,12 +333,15 @@
+ output file
+ .TP
+-.F /usr/include/f2c.h
++.F .../include/f2c.h
+ header file
+ .TP
+-.F /usr/lib/libF77.a
+-intrinsic function library
++.F .../lib/libF77.a
++intrinsic function library.  May be replaced by libf2c.a
+ .TP
+-.F /usr/lib/libI77.a
+-Fortran I/O library
++.F .../lib/libI77.a
++Fortran I/O library.  May be replaced by libf2c.a
++.TP
++.F .../lib/libf2c.a
++Combined Fortran library.  May be used in place of libF77.a and libI77.a
+ .TP
+ .F /lib/libc.a

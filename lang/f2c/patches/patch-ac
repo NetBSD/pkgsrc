@@ -1,0 +1,65 @@
+--- fc.orig	Tue May 16 17:37:49 1995
++++ fc	Thu Jul  9 08:36:49 1998
+@@ -1,4 +1,4 @@
+ #!/bin/sh
+-PATH=/v/bin:/bin:/usr/bin
++PATH=/bin:/usr/bin:PREFIX/bin
+ # f77-style shell script to compile and load fortran, C, and assembly codes
+ 
+@@ -21,4 +21,14 @@
+ #		-w		omit all warning messages
+ 
++#		-Wall		turn on the -Wall flag to the c compiler
++
++#		-O		turn on the -O flag to the c compiler
++
++#		-O1		turn on the -O1 flag to the c compiler
++
++#		-O2		turn on the -O2 flag to the c compiler
++
++#		-O3		turn on the -O3 flag to the c compiler
++
+ #		-w66		omit Fortran 66 compatibility warning messages
+ 
+@@ -46,5 +56,5 @@
+ s=/tmp/stderr_$$
+ t=/tmp/f77_$$.o
+-CC=${CC_f2c:-'cc -common'}
++CC=${CC_f2c:-'cc '}
+ EFL=${EFL:-efl}
+ EFLFLAGS=${EFLFLAGS:-'system=portable deltastno=10'}
+@@ -58,7 +68,8 @@
+ OUTF=a.out
+ cOPT=1
+-set -- `getopt cCD:gI:N:Oo:Suw6 "$@"`
++set -- `getopt cCD:gI:N:W:O:o:Suw6 "$@"`
+ case $? in 0);; *) rc=$?; exit;; esac
+ CPPFLAGS=
++CFLAGS=-IPREFIX/include 
+ while
+ 	test X"$1" != X--
+@@ -90,5 +101,5 @@
+ 		;;
+ 
+-	-O)	case $2 in -1) O=-O1;; -2) O=-O2;; -3) O=-O3;; *) O=-O;; esac
++	-O)	case $2 in 1) O=-O1;; 2) O=-O2;; 3) O=-O3;; *) O=-O;; esac
+ 		case $O in -O);; *) shift;; esac
+ 		CFLAGS="$CFLAGS $O"
+@@ -96,4 +107,10 @@
+ 		;;
+ 
++	-W)	case $2 in all) W=-Wall;; *) echo "don't understand -W$2";; esac
++		case $O in -W);; *) shift;; esac
++		CFLAGS="$CFLAGS $W"
++		shift
++		;;
++
+ 	-u)	F2CFLAGS="$F2CFLAGS -u"
+ 		shift
+@@ -232,5 +249,5 @@
+ done
+ 
+-case $cOPT in 2) $CC -o $OUTF -u MAIN__ $OFILES -lf2c -lm;; esac
++case $cOPT in 2) $CC -o $OUTF -u _MAIN__ $OFILES -LPREFIX/lib -lf2c -lm;; esac
+ rc=$?
+ exit $rc
