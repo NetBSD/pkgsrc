@@ -1,5 +1,0 @@
-mkttfdir is a script to create an index of X TrueType fonts files 
-in a directory. It would call the program 'ttfinfo' to read TrueType
-Fonts information, then use them to fill up each field of XLFD
-(X Logical Font Descriptor) in fonts.scale. Just to use it simply
-like 'mkfontdir'.
