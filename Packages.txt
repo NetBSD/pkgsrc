@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.167 2001/06/29 05:07:36 jlam Exp $
+# $NetBSD: Packages.txt,v 1.168 2001/06/29 14:07:28 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -1588,10 +1588,12 @@ buildlink.mk files:
     USE_SSL	-->	.include "../../security/openssl/buildlink.mk"
     USE_XPM	-->	.include "../../graphics/xpm/buildlink.mk"
 
-If the required dependency pattern for a package differs from the default
-specified in the package's buildlink.mk file, then it may be set by
-defining BUILDLINK_DEPENDS.<pkgname> in the Makefile to the dependency
-pattern required.
+The use of EVAL_PREFIX to find the installation prefix for packages may be
+removed since references to package library and header files are found
+through ${BUILDLINK_DIR}.  If the required dependency pattern for a package
+differs from the default specified in the package's buildlink.mk file, then
+it may be set by defining BUILDLINK_DEPENDS.<pkgname> in the Makefile to
+the dependency pattern required.
 
 A package that builds correctly with USE_BUILDLINK_ONLY set should have
 that setting added to its Makefile to note that it doesn't use any
