@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/07/24 01:57:00 tv Exp $
+# $NetBSD: Makefile,v 1.10 1998/07/26 14:36:43 tv Exp $
 
 DISTNAME=	mpeg_lib-1.2.1
 PKGNAME=	mpeg-1.2.1
@@ -11,6 +11,7 @@ MAINTAINER=	tron@netbsd.org
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+ALL_TARGET=	libmpeg.la
 
 WRKSRC=		${WRKDIR}/mpeg_lib
 
