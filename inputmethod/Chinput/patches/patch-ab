@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/06/15 09:31:39 shell Exp $
+
+--- src/XIM.h.orig	Mon Jun 10 21:19:55 2002
++++ src/XIM.h
+@@ -25,7 +25,7 @@
+ //setenv XMODIFIERS @im=Chinput		(csh, tcsh)
+ #define DEFAULT_IMNAME  "Chinput"
+ 
+-#define LOCALE_GB	"zh_CN.GBK"
++#define LOCALE_GB	"zh_CN.eucCN"
+ #define LOCALE_BIG5	"zh_TW.Big5"
+ 
+ //This input server support CJK by default

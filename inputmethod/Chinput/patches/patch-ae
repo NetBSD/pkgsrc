@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2002/06/15 09:31:39 shell Exp $
+
+--- src/init.c.orig	Mon Jun 10 21:23:44 2002
++++ src/init.c
+@@ -342,7 +342,7 @@
+ 	//enable two locales at the same time
+ 	strcpy(imlocale, IMLOCALE);
+ 
+-	if(getenv("LC_ALL") && strstr(getenv("LC_ALL"), "zh_TW")){
++	if(getenv("LC_CTYPE") && strstr(getenv("LC_CTYPE"), "zh_TW.Big5")){
+ 		strcpy(deflocale, LOCALE_BIG5);
+ 		//strcpy(imlocale,  "zh_TW");
+ 		flag_encoding = HZSERVER_ENCODING_BIG5;
+@@ -567,7 +567,7 @@
+ 	}
+ 	fclose(fp);
+ 
+-	if(strstr(getenv("LC_ALL"), "zh_TW"))
++	if(strstr(getenv("LC_CTYPE"), "zh_TW.Big5"))
+ 		cur_inputmethod = HZgetInputMethod(input_method_big5);
+ 	else
+ 		cur_inputmethod = HZgetInputMethod(input_method_gb);
