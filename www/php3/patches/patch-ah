@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 1999/05/07 14:14:18 tv Exp $
+$NetBSD: patch-ah,v 1.2 1999/06/15 22:32:01 tron Exp $
 
 --- configure.orig	Fri May  7 10:05:45 1999
 +++ configure	Fri May  7 10:06:05 1999
@@ -10,3 +10,12 @@ $NetBSD: patch-ah,v 1.1 1999/05/07 14:14:18 tv Exp $
  
  echo $ac_n "checking for Apache module support via DSO through APXS""... $ac_c" 1>&6
  echo "configure:3735: checking for Apache module support via DSO through APXS" >&5
+@@ -3748,7 +3748,7 @@
+     CFLAGS_SHLIB=`perl -V:cccdlflags | cut -d\' -f2`
+     LDFLAGS_SHLIB=`perl -V:lddlflags | cut -d\' -f2`
+     LDFLAGS_SHLIB_EXPORT=`perl -V:ccdlflags | cut -d\' -f2`
+-    PHP_LIBS=-L/usr/local/lib
++    PHP_LIBS="-L${PREFIX}/lib -Wl,-R${PREFIX}/lib"
+     STRONGHOLD=
+     cat >> confdefs.h <<\EOF
+ #define APACHE 1
