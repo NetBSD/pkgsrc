@@ -1,23 +1,26 @@
-$NetBSD: patch-al,v 1.1 2003/08/06 11:38:10 drochner Exp $
+$NetBSD: patch-al,v 1.2 2003/08/18 17:16:54 recht Exp $
 
 --- pyconfig.h.in.orig	2003-07-22 17:20:49.000000000 +0200
-+++ pyconfig.h.in	2003-08-02 15:50:34.000000000 +0200
-@@ -835,6 +835,10 @@
++++ pyconfig.h.in	2003-08-18 18:24:43.000000000 +0200
+@@ -835,6 +835,12 @@
  /* Define _OSF_SOURCE to get the makedev macro. */
  #undef _OSF_SOURCE
  
 +/* These defines disable needed library functions on NetBSD < 1.6T */
 +/* ( _NETBSD_SOURCE doesn't exist prior to 1.6T ) */
-+#if defined(__NetBSD_Version__) && (__NetBSD_Version__ < 106200000)
++#ifdef __NetBSD__
++#include <sys/param.h>
++#if !defined(__NetBSD_Version__) || (__NetBSD_Version__ < 106200000)
 +
  /* Define to 2 if the system does not provide POSIX.1 features except with
     this defined. */
  #undef _POSIX_1_SOURCE
-@@ -845,18 +849,26 @@
+@@ -845,18 +851,30 @@
  /* Define to 1 if you need to in order for `stat' and other things to work. */
  #undef _POSIX_SOURCE
  
 +#endif
++#endif /* __NetBSD__ */
 +
  /* Define if you have POSIX threads, and your system does not define that. */
  #undef _POSIX_THREADS
@@ -27,7 +30,9 @@ $NetBSD: patch-al,v 1.1 2003/08/06 11:38:10 drochner Exp $
  
 +/* These defines disable needed library functions on NetBSD < 1.6T */
 +/* ( _NETBSD_SOURCE doesn't exists prior to 1.6T ) */
-+#if defined(__NetBSD_Version__) && (__NetBSD_Version__ < 106200000)
++#ifdef __NetBSD__
++#include <sys/param.h>
++#if !defined(__NetBSD_Version__) || (__NetBSD_Version__ < 106200000)
 +
  /* Define to the level of X/Open that your system supports */
  #undef _XOPEN_SOURCE
@@ -36,6 +41,7 @@ $NetBSD: patch-al,v 1.1 2003/08/06 11:38:10 drochner Exp $
  #undef _XOPEN_SOURCE_EXTENDED
  
 +#endif
++#endif /* __NetBSD__ */
 +
  /* Define on FreeBSD to activate all library features */
  #undef __BSD_VISIBLE
