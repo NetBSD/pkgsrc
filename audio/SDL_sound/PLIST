@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/18 13:51:15 cube Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/05 20:14:05 skrll Exp $
 bin/playsound
 include/SDL/SDL_sound.h
-lib/libSDL_sound-1.0.so
 lib/libSDL_sound-1.0.so.1
 lib/libSDL_sound-1.0.so.1.0
 lib/libSDL_sound.a
