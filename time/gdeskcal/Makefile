@@ -1,26 +1,25 @@
-# $NetBSD: Makefile,v 1.5 2003/07/26 15:25:28 drochner Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/09 14:52:57 recht Exp $
 #
 
-DISTNAME=		gDeskCal-0_54
-PKGNAME=		gdeskcal-0.54
+DISTNAME=		gDeskCal-0_55
+PKGNAME=		gdeskcal-0.55
 CATEGORIES=		time
 MASTER_SITES=		http://www.pycage.de/download/
 
-MAINTAINER=		packages@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.pycage.de/software_gdeskcal.html
 COMMENT=		Desktop calendar
 
-WRKSRC=		${WRKDIR}/gDeskCal-0.54
-USE_BUILDLINK2=		yes
+WRKSRC=		${WRKDIR}/gDeskCal-0.55
+USE_BUILDLINK2=	yes
 NO_BUILD=	yes
 
-PYTHON_VERSION_REQD=	22pth
+PYTHON_VERSIONS_ACCEPTED=	22pth 23pth
 PYTHON_PATCH_SCRIPTS=	gdeskcal
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gdeskcal
 	(cd ${WRKSRC} && ${CP} -r . ${PREFIX}/lib/gdeskcal)
-	${RM} -f ${PREFIX}/lib/gdeskcal/po/de.po~
 	${PYTHONBIN} ${LOCALBASE}/${PYLIB}/compileall.py \
 		${PREFIX}/lib/gdeskcal/code
 	${LN} -s ${PREFIX}/lib/gdeskcal/gdeskcal ${PREFIX}/bin
