@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.13 2002/09/09 00:59:02 markd Exp $
+$NetBSD: patch-ab,v 1.14 2002/12/10 11:58:11 markd Exp $
 
---- aclocal.m4.orig	Wed Jul 17 01:20:41 2002
+--- aclocal.m4.orig	Mon Oct 21 22:28:00 2002
 +++ aclocal.m4
-@@ -510,6 +514,9 @@
+@@ -522,6 +522,9 @@
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.13 2002/09/09 00:59:02 markd Exp $
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -587,6 +594,9 @@
+@@ -602,6 +605,9 @@
  } Rcomplex;
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
