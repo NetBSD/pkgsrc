@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2004/01/17 19:59:07 kristerw Exp $
+# $NetBSD: Makefile,v 1.25 2004/01/20 12:07:42 agc Exp $
 
 DISTNAME=		libmikmod_3.1.10
 PKGNAME=		libmikmod-3.1.10
-WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		audio
 MASTER_SITES=		http://mikmod.raphnet.net/files/
 
@@ -17,6 +16,7 @@ USE_BUILDLINK2=		# defined
 USE_MAKEINFO=		YES
 INFO_FILES=		mikmod.info
 
+WRKSRC=			${WRKDIR}/${PKGNAME}
 CONFIGURE_ARGS+=	--disable-threads
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 

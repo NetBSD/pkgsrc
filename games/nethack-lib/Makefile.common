@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2003/10/14 13:42:18 pooka Exp $
+# $NetBSD: Makefile.common,v 1.15 2004/01/20 12:15:41 agc Exp $
 #
 
 NETHACK_BASEVER=	3.4.2
@@ -7,7 +7,6 @@ NETHACK_DISTVER=	342
 NETHACK_DIR=		nethackdir340
 
 DISTNAME=		nethack-${NETHACK_DISTVER}
-WRKSRC=			${WRKDIR}/nethack-${NETHACK_BASEVER}
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.sourceforge.net/pub/sourceforge/nethack/
 EXTRACT_SUFX=		.tgz
@@ -15,6 +14,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pooka@NetBSD.org
 HOMEPAGE=		http://www.nethack.org/
 
+WRKSRC=			${WRKDIR}/nethack-${NETHACK_BASEVER}
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./sys/unix/setup.sh
 

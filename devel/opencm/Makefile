@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2003/11/12 03:39:40 jschauma Exp $
+# $NetBSD: Makefile,v 1.23 2004/01/20 12:13:29 agc Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-1-src
 PKGNAME=	${OPENCM_VERSION:C/alpha/rc/}
 PKGREVISION=	2
-WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opencm.org/releases/
 EXTRACT_SUFX=	.tgz
@@ -13,6 +12,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.opencm.org/
 COMMENT=	Secure, high-integrity replacement for CVS
 
+WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base
 USE_BUILDLINK2=	YES
 USE_PKGINSTALL=	YES
 USE_GMAKE=	YES

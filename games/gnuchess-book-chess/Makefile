@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 16:49:48 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/20 12:15:40 agc Exp $
 # FreeBSD Id: Makefile,v 1.6 1999/01/27 07:41:12 fenner Exp
 #
 
 DISTNAME=		chess-5.00
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}
-WRKSRC=			${WRKDIR}/${DISTNAME}/book
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GNU:=chess/}
 
@@ -15,6 +14,7 @@ DEPENDS+=		gnuchess>=5.00nb1:../../games/gnuchess
 
 CONFLICTS+=		gnuchess-book-[0-9]*
 
+WRKSRC=			${WRKDIR}/${DISTNAME}/book
 CHESS_ENGINE=		gnuchess
 NO_CONFIGURE=		# defined
 

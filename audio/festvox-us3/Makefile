@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2003/04/10 01:28:11 grant Exp $
+# $NetBSD: Makefile,v 1.11 2004/01/20 12:07:42 agc Exp $
 
 DISTNAME=	festvox_us3
 PKGNAME=	festvox-us3-1.4.0
-WRKSRC=		${WRKDIR}/festival
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
 		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
@@ -19,6 +18,7 @@ DEPENDS+=	mbrolavox-us3-990208:../mbrolavox-us3
 
 LICENSE=	no-commercial-use
 
+WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes
 
 FHOME=		${PREFIX}/share/festival

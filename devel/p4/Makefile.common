@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2003/07/17 21:32:03 grant Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/01/20 12:13:29 agc Exp $
 #
 
 P4_VERS=	2002.1
 PKGNAME=	${DISTNAME}-${P4_VERS}
-WRKSRC=		${WRKDIR}
 CATEGORIES=	devel
 MAINTAINER=	schmonz@NetBSD.org
 
@@ -11,6 +10,7 @@ NO_PATCH=	# defined
 NO_CONFIGURE=	# defined
 NO_BUILD=	# defined
 
+WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	perforce
 
 .if defined(P4BINONLY)

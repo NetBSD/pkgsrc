@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:35:28 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/01/20 12:14:40 agc Exp $
 
 DISTNAME=	fMSX24.tar
 PKGNAME=	fmsx-2.4
-WRKSRC= 	${WRKDIR}/MSX
 CATEGORIES=	emulators x11
 MASTER_SITES=	http://www.komkon.org/fms/fMSX/
 EXTRACT_SUFX=	.Z
@@ -17,6 +16,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
+WRKSRC= 	${WRKDIR}/MSX
 USE_X11=	yes
 
 .include "../../mk/bsd.prefs.mk"

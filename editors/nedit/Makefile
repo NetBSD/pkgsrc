@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2003/12/12 10:20:53 adam Exp $
+# $NetBSD: Makefile,v 1.31 2004/01/20 12:14:05 agc Exp $
 
 DISTNAME=	nedit-${VERS}-source
 PKGNAME=	nedit-${VERS}
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=	editors
 MASTER_SITES=	http://www.nedit.org/ftp/v${VERS:S/./_/g}/ \
 		http://www.au.nedit.org/ftp/v${VERS:S/./_/g}/ \
@@ -15,6 +14,7 @@ COMMENT=	Motif based standard GUI style text editor
 
 VERS=		5.3
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 ALL_TARGET=		netbsd

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/07/21 16:49:38 martti Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/20 12:15:40 agc Exp $
 
 DISTNAME=		enormous
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
-WRKSRC=			${WRKDIR}
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/common/${DISTNAME}/
 EXTRACT_SUFX=		.zip
@@ -23,6 +22,7 @@ REASON=			"Files too large"
 NO_SRC_ON_CDROM=	${REASON}
 NO_SRC_ON_FTP=		${REASON}
 
+WRKSRC=			${WRKDIR}
 CHESS_ENGINE=		crafty
 DIST_SUBDIR=		chessbooks
 NO_CONFIGURE=		# defined

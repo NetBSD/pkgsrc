@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2003/12/23 10:35:30 sketch Exp $
+# $NetBSD: Makefile,v 1.29 2004/01/20 12:07:41 agc Exp $
 
 DISTNAME=	festival-1.4.1
 PKGREVISION=	1
-WRKSRC=		${WRKDIR}
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.cstr.ed.ac.uk/pub/festival/1.4.1/ \
 		http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/ \
@@ -18,6 +17,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival.html
 COMMENT=	Festival is an advanced multi-lingual speech synthesis system
 
+WRKSRC=		${WRKDIR}
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 USE_X11=	yes

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2003/11/18 14:20:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/20 12:15:42 agc Exp $
 #
 
 DISTNAME=		incoming		# yes, really!
 PKGNAME=		xgalaga-2.0.34
 PKGREVISION=		2
-WRKSRC=			${WRKDIR}/${PKGNAME:C,nb${PKGREVISION},,}
 CATEGORIES=		games x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xgalaga/}
 EXTRACT_SUFX=		# empty
@@ -13,6 +12,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://sourceforge.net/projects/xgalaga/
 COMMENT=		Very fast true-to-the-original port of galaga for X11
 
+WRKSRC=			${WRKDIR}/${PKGNAME:C,nb${PKGREVISION},,}
 USE_BUILDLINK2=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
