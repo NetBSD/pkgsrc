@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3672 2003/10/09 19:10:05 abs Exp $
+$NetBSD: CHANGES,v 1.3673 2003/10/10 09:21:10 cube Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4134,4 +4134,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-File-Spec-0.86 [thorpej 2003-10-09]
 	Updated freetds to 0.61.2 [dolecek 2003-10-09]
 	Updated speedtouch to 1.2-beta2 [abs 2003-10-09]
-
+	Updated libnids to 1.17 [cube 2003-10-10]
+	Updated dsniff to 2.3nb1 [cube 2003-10-10]
+	Updated pakemon to 0.3.1nb1 [cube 2003-10-10]
