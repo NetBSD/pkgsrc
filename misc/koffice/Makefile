@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/10/08 14:32:57 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2002/11/26 13:03:08 darcy Exp $
 
 DISTNAME=	koffice-1.2
 CATEGORIES=	misc kde
@@ -36,6 +36,7 @@ post-install:
 .include "../../lang/gcc/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../textproc/libxslt/buildlink2.mk"
+.include "../../graphics/libart2/buildlink2.mk"
 .include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
