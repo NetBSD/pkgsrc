@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/13 21:18:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/05 06:20:29 kristerw Exp $
 
 DISTNAME=	db2latex-0.7
 CATEGORIES=	textproc
@@ -22,6 +22,7 @@ do-install:
 	cd ${WRKSRC} && ${FIND} . -name "*.orig" -exec ${RM} {} \;
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${XSLDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}/doc && ${PAX} -rwpm . ${DOCDIR}
 	cd ${WRKSRC} && ${PAX} -rwpm AUTHOR COPYING COPYRIGHT README \
 		TODO VERSION ${DOCDIR}
