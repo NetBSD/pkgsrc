@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2003/12/13 00:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2003/12/14 19:51:29 jmmv Exp $
 #
 
-DISTNAME=		libgnomeprintui-2.2.1.2
-PKGREVISION=		5
+DISTNAME=		libgnomeprintui-2.4.0
 CATEGORIES=		print gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomeprintui/2.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomeprintui/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -21,16 +20,16 @@ USE_X11=		yes
 USE_LIBTOOL=		yes
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-PKGCONFIG_OVERRIDE=	${WRKSRC}/libgnomeprintui/libgnomeprintui-2.2.pc.in
+PKGCONFIG_OVERRIDE=	ibgnomeprintui/libgnomeprintui-2.2.pc.in
 
 CONFIGURE_ARGS=		--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/GConf2/buildlink2.mk"
-.include "../../devel/bonobo-activation/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"
 .include "../../devel/libglade2/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../graphics/libart2/buildlink2.mk"
 .include "../../graphics/libgnomecanvas/buildlink2.mk"
