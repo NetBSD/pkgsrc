@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/09 22:12:25 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/04/01 18:30:41 jmmv Exp $
 include/at-spi-1.0/cspi/spi-impl.h
 include/at-spi-1.0/cspi/spi-listener.h
 include/at-spi-1.0/cspi/spi-roletypes.h
@@ -36,47 +36,18 @@ lib/libcspi.a
 lib/libcspi.la
 lib/libcspi.so
 lib/libcspi.so.9
-lib/libcspi.so.9.12
+lib/libcspi.so.9.14
 lib/libspi.a
 lib/libspi.la
 lib/libspi.so
 lib/libspi.so.9
-lib/libspi.so.9.12
+lib/libspi.so.9.14
 lib/orbit-2.0/Accessibility_module.a
 lib/orbit-2.0/Accessibility_module.la
 lib/orbit-2.0/Accessibility_module.so
 lib/pkgconfig/cspi-1.0.pc
 lib/pkgconfig/libspi-1.0.pc
 libexec/at-spi-registryd
-share/doc/html/at-spi-cspi/at-spi-cspi-Accessible-Objects.html
-share/doc/html/at-spi-cspi/at-spi-cspi-AccessibleAction-Interface.html
-share/doc/html/at-spi-cspi/at-spi-cspi-AccessibleApplication-API.html
-share/doc/html/at-spi-cspi/at-spi-cspi-AccessibleComponent-Interface.html
-share/doc/html/at-spi-cspi/at-spi-cspi-AccessibleEditableText-Interface.html
-share/doc/html/at-spi-cspi/at-spi-cspi-AccessibleHyperlink-Interface.html
-share/doc/html/at-spi-cspi/at-spi-cspi-AccessibleHypertext-Interface.html
-share/doc/html/at-spi-cspi/at-spi-cspi-AccessibleImage-Interface.html
-share/doc/html/at-spi-cspi/at-spi-cspi-AccessibleRelations-and-RelationSets.html
-share/doc/html/at-spi-cspi/at-spi-cspi-AccessibleSelection-Interface.html
-share/doc/html/at-spi-cspi/at-spi-cspi-AccessibleTable-Interface.html
-share/doc/html/at-spi-cspi/at-spi-cspi-AccessibleText-Interface.html
-share/doc/html/at-spi-cspi/at-spi-cspi-AccessibleValue-Interface.html
-share/doc/html/at-spi-cspi/at-spi-cspi-Event-Listener-Support.html
-share/doc/html/at-spi-cspi/at-spi-cspi-Registry-queries.html
-share/doc/html/at-spi-cspi/at-spi-cspi-SPI-main-loop-and-initialization.html
-share/doc/html/at-spi-cspi/at-spi-cspi-State-and-StateSets.html
-share/doc/html/at-spi-cspi/at-spi-cspi.devhelp
-share/doc/html/at-spi-cspi/ch05.html
-share/doc/html/at-spi-cspi/home.png
-share/doc/html/at-spi-cspi/index.html
-share/doc/html/at-spi-cspi/index.sgml
-share/doc/html/at-spi-cspi/left.png
-share/doc/html/at-spi-cspi/right.png
-share/doc/html/at-spi-cspi/spi-accessible.html
-share/doc/html/at-spi-cspi/spi-application.html
-share/doc/html/at-spi-cspi/spi-component.html
-share/doc/html/at-spi-cspi/spi-main.html
-share/doc/html/at-spi-cspi/up.png
 share/idl/at-spi-1.0/Accessibility.idl
 share/idl/at-spi-1.0/Accessibility_Accessible.idl
 share/idl/at-spi-1.0/Accessibility_Action.idl
@@ -99,7 +70,6 @@ share/idl/at-spi-1.0/Accessibility_Text.idl
 share/idl/at-spi-1.0/Accessibility_Value.idl
 @dirrm share/idl/at-spi-1.0
 @comment in ORBit2: @dirrm share/idl
-@dirrm share/doc/html/at-spi-cspi
 @comment in ORBit2: @dirrm lib/orbit-2.0
 @comment in gtk2: @dirrm lib/gtk-2.0/modules
 @comment in libbonobo: @dirrm lib/bonobo/servers
