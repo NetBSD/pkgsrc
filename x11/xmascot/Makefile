@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1997/11/05 13:40:16 agc Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/09 09:17:05 agc Exp $
 # New ports collection makefile for:   xmascot
 # Version required:    2.5p2
 # Date created:        20 November 1996
@@ -16,7 +16,6 @@ MAINTAINER=	Nakai@Mlab.t.u-tokyo.ac.jp
 
 OPSYS!=		uname -s
 
-USE_GMAKE=	yes
 USE_IMAKE=	yes
 CAT1=		xmascot.0
 
