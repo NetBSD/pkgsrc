@@ -1,66 +1,46 @@
-$NetBSD: patch-ab,v 1.4 1998/08/07 11:09:53 agc Exp $
+$NetBSD: patch-ab,v 1.5 1999/09/15 21:30:59 tron Exp $
 
---- popper.h.orig	Wed Nov 19 22:20:39 1997
-+++ popper.h	Sat Mar  7 00:42:23 1998
-@@ -31,14 +31,26 @@
- 
- #ifdef		HAVE_SYS_PARAM_H
- #include <sys/param.h>
--# if (defined(BSD) && (BSD >= 199103))
-+# if (defined(BSD) && (BSD >= 199103)) && 0 /* shouldn't be necessary anymore */
- #  define	HAVE_UNISTD_H
- #  define	HAVE_VPRINTF
- #  define	BIND43
- # endif
- #endif
- 
--#ifdef BSDI
-+#ifdef	HAVE_STDLIB_H
-+# include <stdlib.h>
-+#endif
-+
-+#ifdef	HAVE_STRING_H
-+# include <string.h>
-+#endif
-+
-+#ifdef	HAVE_TIME_H
-+# include <time.h>
-+#endif
-+
-+#if defined (BSDI) || defined (__NetBSD__)
- #define BSD44_DBM
- #endif
- 
-@@ -67,12 +79,12 @@
- #define MAXPARMLEN      10
- #define ALLOC_MSGS  20
- 
--#ifndef OSF1
--# define POP_FACILITY    LOG_LOCAL0
--#else
-+#if defined(OSF1) || defined(__NetBSD__)
- # define POP_FACILITY    LOG_MAIL
-+#else
-+# define POP_FACILITY    LOG_LOCAL0
- #endif
--#define POP_PRIORITY    LOG_NOTICE
-+#define POP_PRIORITY    LOG_INFO
- #define POP_DEBUG       LOG_DEBUG
- #define POP_LOGOPTS     LOG_PID
- 
-@@ -292,13 +304,13 @@
- #ifdef KERBEROS
- 
- #ifndef KERBEROS_SERVICE
--# define KERBEROS_SERVICE	"rcmd"
-+# define KERBEROS_SERVICE	"pop"
- #endif
- 
- #ifdef SOLARIS2
- # include <kerberos/krb.h>
- #else
--# ifdef BSDI
-+# if defined (BSDI) || defined (__NetBSD__)
- #  include <kerberosIV/des.h>
- #  include <kerberosIV/krb.h>
- # else
+--- configure.in.orig	Fri Jul 10 01:44:06 1998
++++ configure.in	Wed Sep 15 23:28:17 1999
+@@ -13,7 +13,7 @@
+ fi
+ if test "$GCC" = yes 
+ then
+-	CFLAGS="$CFLAGS -fstrength-reduce -fpcc-struct-return "
++	CFLAGS="$CFLAGS -fstrength-reduce "
+ fi
+ AC_SUBST(CC)
+ AC_SUBST(CFLAGS)
+@@ -195,10 +195,12 @@
+ syslog.h \
+ net/errno.h \
+ unistd.h \
++stdlib.h \
++string.h \
++time.h \
+ netinet/in.h \
+ maillock.h \
+ ndbm.h \
+-gdbm.h \
+ dbm.h \
+ shadow.h \
+ )
+@@ -209,10 +211,17 @@
+ AC_CHECK_LIB(socket, socket, NETWORK_LIBS="$NETWORK_LIBS -lsocket")
+ AC_CHECK_LIB(resolv, res_init, NETWORK_LIBS="$NETWORK_LIBS -lresolv")
+ AC_CHECK_LIB(mail, maillock, NETWORK_LIBS="$NETWORK_LIBS -lmail"; AC_DEFINE(MAILOCK))
++AC_ARG_ENABLE(kerberos,
++	[  --enable-kerberos	compile in Kerberos authentification support],
++	[with_kerberos=$enableval],
++	[with_kerberos=no])
++if test "$with_kerberos" = "yes" ;then
+ AC_CHECK_LIB(krb, krb_recvauth, KERBEROS_LIBS="$KERBEROS_LIBS -lkrb")
++AC_CHECK_LIB(des, des_set_key, KERBEROS_LIBS="$KERBEROS_LIBS -ldes")
++AC_DEFINE(KERBEROS)
++fi
+ AC_CHECK_LIB(ndbm, dbm_open, DBM_LIBS="-lndbm")
+ AC_CHECK_LIB(dbm, dbm_open, DBM_LIBS="-ldbm")
+-AC_CHECK_LIB(gdbm, gdbm_open, DBM_LIBS="-lgdbm"; AC_DEFINE(GDBM))
+ AC_CHECK_LIB(security, set_auth_parameters, LIBS="$LIBS -lsecurity")
+ AC_CHECK_LIB(crypt, crypt, LIBS="$LIBS -lcrypt")
+ AC_CHECK_LIB(shadow, pw_encrypt, LIBS="$LIBS -lshadow")
