@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 1998/12/16 22:44:07 tsarna Exp $
+# $NetBSD: Makefile,v 1.14 1999/01/17 00:23:40 frueauf Exp $
 #
 
 DISTNAME=	pyth151
 PKGNAME=	python-1.5.1
+WRKSRC=		${WRKDIR}/Python-1.5.1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.python.org/pub/python/src/
 EXTRACT_SUFX=	.tgz
@@ -23,7 +24,6 @@ PATCHFILES= 	freeze.1.txt _tkinter.1.txt configure.1.txt \
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.python.org/
 
-WRKSRC=		${WRKDIR}/Python-1.5.1
 GNU_CONFIGURE=	yes
 MAKE_FLAGS+=	'OPT=${CFLAGS}'
 
@@ -34,7 +34,7 @@ MAKE_FLAGS+=	'OPT=${CFLAGS}'
 .if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "sparc64"
 NO64BIT=\#
 .endif
-.if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "mips" || ${MACHINE_ARCH} == "vax"
+.if ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "vax"
 NOSHARED=\#
 .endif
 
