@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.521 2000/07/28 01:16:27 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.522 2000/07/28 10:33:59 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -150,6 +150,25 @@ MAKE_ENV+=	FC="${FC}"
 
 .if defined(INFO_FILES)
 USE_GTEXINFO=		yes
+.endif
+
+.if defined(USE_CURSES) && !defined(NEED_NCURSES)
+.if ${OPSYS} == "NetBSD"
+GOOD_CURSES=    1.4[YZ] 1.4Z[A-D] 1.[5-9]*
+NEED_NCURSES=	YES
+.for PATTERN in ${GOOD_CURSES}
+.if ${OS_VERSION:M${PATTERN}} != ""
+NEED_NCURSES=   NO
+.endif
+.endfor
+.else
+NEED_NCURSES=	NO
+.endif
+MAKEFLAGS+=	NEED_NCURSES=${NEED_NCURSES}
+.endif
+
+.if defined(NEED_NCURSES) && ${NEED_NCURSES} == "YES"
+DEPENDS+=		ncurses>=5.0:../../devel/ncurses
 .endif
 
 .if defined(USE_GTEXINFO) && !exists(/usr/bin/install-info)
@@ -1322,6 +1341,20 @@ do-patch:
 
 .if !target(do-configure)
 do-configure:
+.if defined(REPLACE_NCURSES) && (!defined(NEED_NCURSES) || ${NEED_NCURSES} == "NO")
+.for f in ${REPLACE_NCURSES}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; if [ -f ${f} ]; then	\
+		${SED}  -e "s/ncurses/curses/g" ${f} > ${f}.new;	\
+		if [ -x ${f} ]; then					\
+			${MV} ${f}.new ${f};				\
+			${CHMOD} a+x ${f};				\
+		else							\
+			${MV} ${f}.new ${f};				\
+		fi							\
+	fi
+.endfor
+.endif
+
 .if (defined(USE_LIBTOOL) || defined(USE_PKGLIBTOOL)) && defined(LTCONFIG_OVERRIDE) && !defined(LIBTOOL_OVERRIDE)
 .for ltconfig in ${LTCONFIG_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -f ${ltconfig} ]; then \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2000/07/10 10:10:19 tron Exp $
+# $NetBSD: Makefile,v 1.54 2000/07/28 10:33:58 wiz Exp $
 
 DISTNAME=	mutt-1.2.4i
 CATEGORIES=	mail
@@ -19,6 +19,8 @@ USE_GMAKE=	yes
 CONFIGURE_ARGS+= --with-exec-shell=/bin/ksh \
 		 --with-docdir=${PREFIX}/share/doc/mutt \
 		 --enable-pop --enable-imap
+USE_CURSES=	yes
+REPLACE_NCURSES=	configure configure.in
 
 ALL_TARGET=	keymap_defs.h all
 LDFLAGS+=	-s
@@ -43,27 +45,8 @@ PLIST_SUBST+=	LOCALEBASE=lib
 PLIST_SUBST+=	LOCALEBASE=share
 .endif
 
-.if ${OPSYS} == "NetBSD"
-GOOD_CURSES=	1.4[Y-Z] 1.4Z[A-Z] 1.[5-9]*
+.include "../../mk/bsd.pkg.mk"
 
-.for PATTERN in ${GOOD_CURSES}
-.if ${OS_VERSION:M${PATTERN}} != ""
-CURSES_GOOD?=	# defined
-.endif
-.endfor
-
-.if defined(CURSES_GOOD)
-# hack to allow compilation even if ncurses are installed
-pre-configure:
-.for FILE in configure configure.in
-	cd ${WRKSRC}; ${SED} "s/-lncurses/-lcurses/" < ${FILE} \
-		> ${FILE}.patched; ${MV} ${FILE}.patched ${FILE}
-.endfor
-	${CHMOD} 755 ${WRKSRC}/configure
-.else
-DEPENDS+=	ncurses>=4.2:../../devel/ncurses
+.if defined(NEED_NCURSES) && ${NEED_NCURSES} == "YES"
 CONFIGURE_ARGS+= --with-curses=${LOCALBASE}
 .endif
-.endif
-
-.include "../../mk/bsd.pkg.mk"
