@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4718 2004/02/07 05:02:25 minskim Exp $
+$NetBSD: CHANGES,v 1.4719 2004/02/07 09:30:46 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -686,3 +686,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Added nautilus-media-0.3.3.1 [jmmv 2004-02-07]
 	Updated dvipng to 0.9 [snj 2004-02-07]
 	Updated dvipdfmx to 0.0.0.20031116 [minskim 2004-02-07]
+	Updated libtool to 1.5.2nb1 [seb 2004-02-07]
+	Updated libtool-base to 1.5.2nb1 [seb 2004-02-07]
+	Updated libtool-info to 1.5.2nb1 [seb 2004-02-07]
