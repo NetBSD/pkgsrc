@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 1999/01/10 23:52:16 tron Exp $
+$NetBSD: patch-aj,v 1.2 1999/07/25 21:17:33 tron Exp $
 
 --- pnm/Makefile.orig	Mon Jan 31 17:47:32 1994
 +++ pnm/Makefile	Mon Jan 11 00:18:48 1999
@@ -18,7 +18,7 @@ $NetBSD: patch-aj,v 1.1 1999/01/10 23:52:16 tron Exp $
 -TIFFINC =       -I../libtiff
 -TIFFLIB =       ../libtiff/libtiff.a
 +TIFFINC =       -I$(PREFIX)/include
-+TIFFLIB =       -L$(PREFIX)/lib -ltiff -ljpeg
++TIFFLIB =       -Wl,-R$(PREFIX)/lib -L$(PREFIX)/lib -ltiff -ljpeg
  TIFFBINARIES =  tifftopnm pnmtotiff
  TIFFOBJECTS =   tifftopnm.o pnmtotiff.o
 -#LDFLAGS =	-s
@@ -121,7 +121,7 @@ $NetBSD: patch-aj,v 1.1 1999/01/10 23:52:16 tron Exp $
 +	$(CC) $(ALLCFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM)
 +
 +$(PNGBINARIES):	$(DEFPNM) $(DEFPPM) $(DEFPGM) $(DEFPBM) $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM)
-+	$(CC) $(ALLCFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM) -L${LOCALBASE}/lib -lpng -lz -lm
++	$(CC) $(ALLCFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM) -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -lpng -lz -lm
 +
 +$(TIFFBINARIES):	$(DEFPNM) $(DEFPPM) $(DEFPGM) $(DEFPBM) $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM)
 +	$(CC) $(ALLCFLAGS) $(LDFLAGS) -o $@ $@.c $(LIBPNM) $(LIBPPM) $(LIBPGM) $(LIBPBM) $(TIFFLIB) -lm -lz
