@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.883 2001/12/19 20:02:41 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.884 2001/12/19 23:14:01 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -363,32 +363,9 @@ PATCH_DIST_ARGS+=	--batch
 PATCH_ARGS+=		-V simple ${_PATCH_BACKUP_ARG} .orig
 PATCH_FUZZ_FACTOR?=	-F0			# Default to zero fuzz
 
-# If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
-# pulling in the "bzip2" package if necessary. [Note: this is only for
-# the benefit of pre 1.5 NetBSD systems. "gzcat" on newer systems happily
-# decodes bzip2.] Do likewise for ".zip" and ".lha" distfiles.
 EXTRACT_SUFX?=		.tar.gz
-.if ${EXTRACT_SUFX} == ".tar.bz2" || ${EXTRACT_SUFX} == ".tbz"
-.  if exists(/usr/bin/bzcat)
-BZCAT=			/usr/bin/bzcat <
-.  else
-BZCAT=			${LOCALBASE}/bin/bzcat
-BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
-.  endif # !exists bzcat
-DECOMPRESS_CMD?=	${BZCAT}
-.elif ${EXTRACT_SUFX} == ".tar"
-DECOMPRESS_CMD?=	${CAT}
-.elif ${EXTRACT_SUFX} == ".zip"
-BUILD_DEPENDS+=		unzip-*:../../archivers/unzip
-EXTRACT_CMD?=		unzip -Laq ${DOWNLOADED_DISTFILE}
-.elif ${EXTRACT_SUFX} == ".lzh" || ${EXTRACT_SUFX} == ".lha"
-BUILD_DEPENDS+=		lha-*:../../archivers/lha
-EXTRACT_CMD?=		lha xq ${DOWNLOADED_DISTFILE}
-.else
-DECOMPRESS_CMD?=	${GZCAT}
-.endif
 
-# Also need bzip2 for PATCHFILES with .bz2 suffix.
+# We need bzip2 for PATCHFILES with .bz2 suffix.
 .if defined(PATCHFILES)
 .  if ${PATCHFILES:E} == "bz2" && ${EXTRACT_SUFX} != ".tar.bz2"
 .    if exists(/usr/bin/bzcat)
@@ -399,18 +376,6 @@ BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
 .    endif # !exists bzcat
 .  endif
 .endif # defined(PATCHFILES)
-
-# If this is empty, then everything gets extracted.
-EXTRACT_ELEMENTS?=	
-
-# If EXTRACT_USING_PAX is defined, use pax in preference to (GNU) tar,
-# and append 2 tar blocks of zero bytes on the end, in case the archive
-# was written with a buggy version of GNU tar.
-.if defined(EXTRACT_USING_PAX)
-EXTRACT_CMD?=		{ ${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -r ${EXTRACT_ELEMENTS}
-.else
-EXTRACT_CMD?=		${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
-.endif
 
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE)
@@ -1396,7 +1361,69 @@ show-pkgsrc-dir:
 
 # Extract
 
+_EXTRACT_SUFFICES=	.tar.gz .tgz .tar.bz2 .tbz .tar .zip .lzh .lha
+
+# If the distfile has a tar.bz2 suffix, use bzcat in preference to gzcat,
+# pulling in the "bzip2" package if necessary.  [Note: this is only for
+# the benefit of pre-1.5 NetBSD systems. "gzcat" on newer systems happily
+# decodes bzip2.]  Do likewise for ".zip" and ".lha" distfiles.
+#
+.if !empty(EXTRACT_ONLY:M*.tar.bz2) || !empty(EXTRACT_ONLY:M*.tbz)
+.  if exists(/usr/bin/bzcat)
+BZCAT=			/usr/bin/bzcat <
+.  else
+BUILD_DEPENDS+=		bzip2>=0.9.0b:../../archivers/bzip2
+BZCAT=			${LOCALBASE}/bin/bzcat
+.  endif
+.endif
+.if !empty(EXTRACT_ONLY:M*.zip)
+BUILD_DEPENDS+=		unzip-*:../../archivers/unzip
+.endif
+.if !empty(EXTRACT_ONLY:M*.lzh) || !empty(EXTRACT_ONLY:M*.lha)
+BUILD_DEPENDS+=		lha-*:../../archivers/lha  
+.endif
+
+DECOMPRESS_CMD.tar.gz?=		${GZCAT}
+DECOMPRESS_CMD.tgz?=		${DECOMPRESS_CMD.tar.gz}
+DECOMPRESS_CMD.tar.bz2?=	${BZCAT}
+DECOMPRESS_CMD.tbz?=		${DECOMPRESS_CMD.tar.bz2}
+DECOMPRESS_CMD.tar?=		${CAT}
+
+DECOMPRESS_CMD?=		${GZCAT}
+.for __suffix__ in ${_EXTRACT_SUFFICES}
+.  if !defined(DECOMPRESS_CMD${__suffix__})
+DECOMPRESS_CMD${__suffix__}?=	${DECOMPRESS_CMD}
+.  endif
+.endfor
+
+# If this is empty, then everything gets extracted.
+EXTRACT_ELEMENTS?=	# empty
+
 DOWNLOADED_DISTFILE=	${_DISTDIR}/$$file
+
+EXTRACT_CMD.zip?=	${LOCALBASE}/bin/unzip -Laq ${DOWNLOADED_DISTFILE}
+EXTRACT_CMD.lzh?=	${LOCALBASE}/bin/lha xq ${DOWNLOADED_DISTFILE}
+EXTRACT_CMD.lha?=	${EXTRACT_CMD.lzh}
+
+# If EXTRACT_USING_PAX is defined, use pax in preference to (GNU) tar,
+# and append 2 tar blocks of zero bytes on the end, in case the archive
+# was written with a buggy version of GNU tar.
+#
+.if defined(EXTRACT_USING_PAX)
+EXTRACT_CMD?=		{ ${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -r ${EXTRACT_ELEMENTS}
+.else
+EXTRACT_CMD?=		${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
+.endif
+
+.for __suffix__ in ${_EXTRACT_SUFFICES}
+.  if !defined(EXTRACT_CMD${__suffix__})
+.    if defined(EXTRACT_USING_PAX)
+EXTRACT_CMD${__suffix__}?=	{ ${DECOMPRESS_CMD${__suffix__}} ${DOWNLOADED_DISTFILE} ; dd if=/dev/zero bs=10k count=2; } | ${PAX} -r ${EXTRACT_ELEMENTS}
+.  else
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
+.    endif
+.  endif
+.endfor
 
 .if !target(do-extract)
 do-extract:
@@ -1411,11 +1438,27 @@ do-extract:
 		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
 	fi
 .  endif # WRKOBJDIR
+.  for __file__ in ${EXTRACT_ONLY}
+.    for __suffix__ in ${_EXTRACT_SUFFICES}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for file in "" ${EXTRACT_ONLY}; do				\
-		if [ "X$$file" = X"" ]; then continue; fi;		\
+	if [ ! -f ${WRKDIR}/.extracted ]; then				\
+		case "${__file__}" in					\
+		*${__suffix__})						\
+			file="${__file__}";				\
+			{ cd ${WRKDIR} && ${EXTRACT_CMD${__suffix__}}; }; \
+			${ECHO} "$$file" > ${WRKDIR}/.extracted;	\
+			;;						\
+		esac;							\
+	fi
+.    endfor
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if [ ! -f ${WRKDIR}/.extracted ]; then				\
+		file="${__file__}";					\
 		{ cd ${WRKDIR} && ${EXTRACT_CMD}; };			\
-	done
+	else								\
+		${RM} -f ${WRKDIR}/.extracted;				\
+	fi
+.  endfor
 .endif
 
 # Patch
