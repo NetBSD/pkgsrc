@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/08/18 08:34:32 agc Exp $
+# $NetBSD: Makefile,v 1.21 1999/10/19 08:59:37 agc Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/08/13 23:29:52 jmz Exp
 #
 
@@ -22,14 +22,14 @@ INFO_FILES=	ispell.info
 CFLAGS+=	-DHAVE_INTTYPES_H
 .endif
 
-BUILD_DEFS+=	EXTRA_DICT ISPELL_FR ISPELL_LANG
+BUILD_DEFS+=	ISPELL_EXTRA_DICT ISPELL_FR ISPELL_LANG
 
 .include "../../mk/bsd.prefs.mk"
 
 .ifdef ISPELL_FR
-EXTRA_DICT=	francais-IREQ-1.4.tar.gz
+ISPELL_EXTRA_DICT=	francais-IREQ-1.4.tar.gz
 MASTER_SITES+=	ftp://ftp.robot.ireq.ca/pub/ispell/
-DISTFILES+=	${EXTRA_DICT}
+DISTFILES+=	${ISPELL_EXTRA_DICT}
 .endif
 
 pre-extract:
@@ -43,8 +43,8 @@ pre-extract:
 .endif
 
 pre-configure:
-.if defined(EXTRA_DICT)
-	@${ECHO} ${EXTRA_DICT} > ${WRKDIR}/extra_dict
+.if defined(ISPELL_EXTRA_DICT)
+	@${ECHO} ${ISPELL_EXTRA_DICT} > ${WRKDIR}/extra_dict
 .endif
 
 post-configure:
