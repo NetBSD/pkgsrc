@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/05 18:56:38 recht Exp $
+# $NetBSD: Makefile,v 1.2 2004/02/08 12:44:43 recht Exp $
 #
 
-DISTNAME=	kodos-2.0
+DISTNAME=	kodos-2.4.0
 CATEGORIES=	misc python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kodos/}
 
@@ -13,6 +13,6 @@ USE_BUILDLINK2=	yes
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
-.include "../../x11/py-qt3-base/buildlink2.mk"
+.include "../../x11/py-qt3-modules/buildlink2.mk"
 .include "../../x11/py-qt3-sip/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

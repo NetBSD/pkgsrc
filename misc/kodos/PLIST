@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/05 18:56:40 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/08 12:44:43 recht Exp $
 bin/kodos.py
 ${PYSITELIB}/kodos.pth
 ${PYSITELIB}/kodos/__init__.py
@@ -31,6 +31,12 @@ ${PYSITELIB}/kodos/modules/kodosBA.pyo
 ${PYSITELIB}/kodos/modules/migrate_settings.py
 ${PYSITELIB}/kodos/modules/migrate_settings.pyc
 ${PYSITELIB}/kodos/modules/migrate_settings.pyo
+${PYSITELIB}/kodos/modules/newUserDialogBA.py
+${PYSITELIB}/kodos/modules/newUserDialogBA.pyc
+${PYSITELIB}/kodos/modules/newUserDialogBA.pyo
+${PYSITELIB}/kodos/modules/parseRegexLib.py
+${PYSITELIB}/kodos/modules/parseRegexLib.pyc
+${PYSITELIB}/kodos/modules/parseRegexLib.pyo
 ${PYSITELIB}/kodos/modules/prefs.py
 ${PYSITELIB}/kodos/modules/prefs.pyc
 ${PYSITELIB}/kodos/modules/prefs.pyo
@@ -52,6 +58,12 @@ ${PYSITELIB}/kodos/modules/referenceBA.pyo
 ${PYSITELIB}/kodos/modules/regexBA.py
 ${PYSITELIB}/kodos/modules/regexBA.pyc
 ${PYSITELIB}/kodos/modules/regexBA.pyo
+${PYSITELIB}/kodos/modules/regexLibrary.py
+${PYSITELIB}/kodos/modules/regexLibrary.pyc
+${PYSITELIB}/kodos/modules/regexLibrary.pyo
+${PYSITELIB}/kodos/modules/regexLibraryBA.py
+${PYSITELIB}/kodos/modules/regexLibraryBA.pyc
+${PYSITELIB}/kodos/modules/regexLibraryBA.pyo
 ${PYSITELIB}/kodos/modules/reportBug.py
 ${PYSITELIB}/kodos/modules/reportBug.pyc
 ${PYSITELIB}/kodos/modules/reportBug.pyo
@@ -70,9 +82,6 @@ ${PYSITELIB}/kodos/modules/stringBA.pyo
 ${PYSITELIB}/kodos/modules/tooltip.py
 ${PYSITELIB}/kodos/modules/tooltip.pyc
 ${PYSITELIB}/kodos/modules/tooltip.pyo
-${PYSITELIB}/kodos/modules/tooltips.py
-${PYSITELIB}/kodos/modules/tooltips.pyc
-${PYSITELIB}/kodos/modules/tooltips.pyo
 ${PYSITELIB}/kodos/modules/urlDialog.py
 ${PYSITELIB}/kodos/modules/urlDialog.pyc
 ${PYSITELIB}/kodos/modules/urlDialog.pyo
