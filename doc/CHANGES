@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1496 2003/02/27 05:20:51 lukem Exp $
+$NetBSD: CHANGES,v 1.1497 2003/02/27 13:03:34 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -853,3 +853,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnucash to 1.8.1 [jschauma 2003-02-27]
 	Removed lukemftpd [lukem 2003-02-27]
 	Added tnftpd-2.0rc3 [lukem 2003-02-27]
+	Updated swi-prolog to 5.0.10 [wulf 2003-02-28]
