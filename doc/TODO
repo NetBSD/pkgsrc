@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2080 2004/08/27 11:44:38 wiz Exp $
+$NetBSD: TODO,v 1.2081 2004/08/27 22:08:56 recht Exp $
 
 Suggested new packages
 ======================
@@ -316,7 +316,6 @@ Suggested package updates
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o minicom-2.1
-	o mono-1.0.1
 	o mowitz-0.3.0
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-1.5.1
