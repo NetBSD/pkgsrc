@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2001/08/13 21:40:42 nra Exp $
+# $NetBSD: Makefile,v 1.240 2001/08/13 21:55:11 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -181,6 +181,7 @@ SUBDIR+=	upclient
 SUBDIR+=	userppp
 SUBDIR+=	vnc
 SUBDIR+=	vncviewer
+SUBDIR+=	vsftpd
 SUBDIR+=	vtun
 SUBDIR+=	wakeup
 SUBDIR+=	wget
@@ -188,7 +189,6 @@ SUBDIR+=	whatmask
 SUBDIR+=	wminet
 SUBDIR+=	wmnet
 SUBDIR+=	wmpload
-SUBDIR+=	vsftpd
 SUBDIR+=	wu-ftpd
 SUBDIR+=	xarchie
 SUBDIR+=	xipdump
