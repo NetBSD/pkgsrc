@@ -1,0 +1,104 @@
+--- config.make.orig	Sat Oct 11 17:24:15 1997
++++ config.make	Thu Jul 16 11:07:46 1998
+@@ -14,35 +14,35 @@
+ # OS2 = OS/2 with EMX GCC
+ 
+ # FIDOGATE Directories
+-BINDIR		= /usr/local/bin
+-LIBDIR		= /usr/local/lib/fidogate
++BINDIR		= ${PREFIX}/bin
++LIBDIR		= ${PREFIX}/lib/fidogate
+ SPOOLDIR	= /var/spool/fido
+ LOGDIR		= /var/log/fido
+ 
+ # Doc directories
+-INFODIR		= /usr/local/info
++INFODIR		= ${PREFIX}/info
+ HTMLDIR		= /home/mj/public_html/fidogate
+ 
+ # Outbound *base* directory, i.e. outbound is OUTBOUND/out.xxx
+-OUTBOUND	= /var/spool/bt
++OUTBOUND	= /var/spool/fido/bt
+ # Normal (i.e. insecure) inbound
+-INBOUND		= /var/spool/bt/in
++INBOUND		= /var/spool/fido/bt/in
+ # Protected inbound
+-PINBOUND	= /var/spool/bt/pin
++PINBOUND	= /var/spool/fido/bt/pin
+ # Inbound for uuencoded mails (used by recvuu)
+-UUINBOUND	= /var/spool/bt/uuin
++UUINBOUND	= /var/spool/fido/bt/uuin
+ 
+ # INN directories
+-NEWSETCDIR	= /etc/news
++NEWSETCDIR	= ${PREFIX}/etc/news
+ NEWSVARDIR	= /var/lib/news
+-NEWSLIBDIR	= /usr/lib/news
++NEWSLIBDIR	= ${PREFIX}/lib/news
+ NEWSSPOOLDIR	= /var/spool/news
+ 
+ # Ifmail directory
+-IFMAILDIR       = /usr/local/lib/ifmail
++IFMAILDIR       = ${PREFIX}/lib/ifmail
+ 
+ # perl
+-PERL		= /usr/bin/perl
++PERL		= ${PREFIX}/bin/perl
+ 
+ # OS2: comment out
+  SHELL		= /bin/sh
+@@ -57,20 +57,20 @@
+ # install permissions
+  PERM_PROG	= 755
+  PERM_DATA	= 644
+- PERM_SETUID	= 4755
++ PERM_SETUID	= 4111
+  PERM_DIR	= 755
+ 
+ # C compiler / flags
+  CC		= gcc
+-# YACC		= yacc					# Use yacc, not bison
+- YACC		= bison -y
++ YACC		= yacc					# Use yacc, not bison
++# YACC		= bison -y
+  AR		= ar
+ # RANLIB	= @echo >/dev/null			# No ranlib
+  RANLIB		= ranlib
+ # RANLIB	= ar s					# OS2
+ 
+-# DEBUG		= -O2
+- DEBUG		= -g
++ DEBUG		= -O2
++# DEBUG		= -g
+ 
+  INCLUDE	= -I$(TOPDIR) -I$(TOPDIR)/src/include
+ 
+@@ -87,7 +87,7 @@
+ # LFLAGS	= $(DEBUG) -L$(TOPDIR)/src/common -posix
+ # OS2
+ # LFLAGS	= -Zexe $(DEBUG) -L$(TOPDIR)/src/common
+- LFLAGS		= $(DEBUG) -L$(TOPDIR)/src/common
++ LFLAGS		= $(DEBUG) -L$(TOPDIR)/src/common/.libs
+ 
+ # ISC 3.x
+ # LIBS		= -lfidogate -linet -lPW -lcposix
+@@ -99,13 +99,12 @@
+ # MSDOS, OS2, WIN32
+ # EXE		= .exe
+  EXE		=
+- INSTALL_PROG	= $(INSTALL) -c -g $(GROUP) -o $(OWNER) -m $(PERM_PROG)
+- INSTALL_DATA	= $(INSTALL) -c -g $(GROUP) -o $(OWNER) -m $(PERM_DATA)
+- INSTALL_SETUID	= $(INSTALL) -c -g $(GROUP) -o $(OWNER) -m $(PERM_SETUID)
+- INSTALL_DIR	= $(INSTALL) -g $(GROUP) -o $(OWNER) -m $(PERM_DIR) -d
+-# extra prefix for installation
+- PREFIX         =
++ INSTALL_PROG	= $(BSD_INSTALL_PROGRAM)
++ INSTALL_SCRIPT	= $(BSD_INSTALL_SCRIPT)
++ INSTALL_DATA	= $(BSD_INSTALL_DATA)
++ INSTALL_SETUID	= $(BSD_INSTALL_PROGRAM) -g $(GROUP) -o $(OWNER) -m $(PERM_SETUID)
++ INSTALL_DIR	= $(BSD_INSTALL_DATA_DIR) -g $(GROUP) -o $(OWNER) -m $(PERM_DIR)
+ 
+ # library name
+ # LIB		= fidogate.a			# OS2
+- LIB		= libfidogate.a
++ LIB		= libfidogate.la

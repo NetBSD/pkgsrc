@@ -1,0 +1,29 @@
+--- src/util/Makefile.orig	Thu Jul 16 10:51:19 1998
++++ src/util/Makefile	Thu Jul 16 10:57:59 1998
+@@ -34,16 +34,16 @@
+ 
+ 
+ install:
+-	$(INSTALL_PROG) ftnbsy$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnconfig$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnseq$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnfattach$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnflo$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) sumcrc$(EXE) $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) ftnlock$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnlog$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) pktdebug$(EXE) $(PREFIX)$(BINDIR)
+-	$(INSTALL_PROG) pktmore $(PREFIX)$(BINDIR)
++	$(INSTALL_PROG) ftnbsy$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ftnconfig$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ftnseq$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ftnfattach$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ftnflo$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) sumcrc$(EXE) $(BINDIR)
++	$(INSTALL_PROG) ftnlock$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ftnlog$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) pktdebug$(EXE) $(BINDIR)
++	$(INSTALL_SCRIPT) pktmore $(BINDIR)
+ 
+ 
+ clean veryclean:

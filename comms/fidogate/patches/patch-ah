@@ -1,0 +1,35 @@
+--- src/toss/Makefile.orig	Thu Jul 16 10:50:11 1998
++++ src/toss/Makefile	Thu Jul 16 10:54:04 1998
+@@ -42,19 +42,19 @@
+ 
+ 
+ install:
+-	$(INSTALL_PROG) ftn2ftn$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftntoss$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnexpire$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnroute$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnpack$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) runtoss $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) rununpack $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) magic $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) runin $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) runout $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) rundf $(PREFIX)$(LIBDIR)
+-	$(INSTALL_PROG) ftnaf$(EXE) $(PREFIX)$(LIBDIR)
+-	$(INSTALL_SETUID) ftnafmail$(EXE) $(PREFIX)$(LIBDIR)
++	$(INSTALL_PROG) ftn2ftn$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ftntoss$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ftnexpire$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ftnroute$(EXE) $(LIBDIR)
++	$(INSTALL_PROG) ftnpack$(EXE) $(LIBDIR)
++	$(INSTALL_SCRIPT) runtoss $(LIBDIR)
++	$(INSTALL_SCRIPT) rununpack $(LIBDIR)
++	$(INSTALL_SCRIPT) magic $(LIBDIR)
++	$(INSTALL_SCRIPT) runin $(LIBDIR)
++	$(INSTALL_SCRIPT) runout $(LIBDIR)
++	$(INSTALL_SCRIPT) rundf $(LIBDIR)
++	$(INSTALL_PROG) ftnaf$(EXE) $(LIBDIR)
++	$(INSTALL_SETUID) ftnafmail$(EXE) $(LIBDIR)
+ 
+ 
+ 

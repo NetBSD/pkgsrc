@@ -1,0 +1,36 @@
+--- src/common/Makefile.orig	Wed Jul 15 22:33:40 1998
++++ src/common/Makefile	Wed Jul 15 22:55:24 1998
+@@ -15,6 +15,7 @@
+ include $(TOPDIR)/config.make
+ include $(TOPDIR)/rules.make
+ 
++CC		= $(LIBTOOL) --mode=compile gcc
+ 
+ OBJS		= address.o aliases.o areas.o areasbbs.o binkley.o\
+ 		  bounce.o bufstring.o charset.o config.o crc16.o crc32.o\
+@@ -25,14 +26,11 @@
+ 		  sequencer.o textlist.o version.o wildmat.o\
+ 		  xalloc.o xstrtok.o mime.o tick.o parsenode.o flo.o
+ 
+-LIBOBJS		= $(OBJS:%=$(LIB)(%))
+-
+-
+ all:		$(LIB)
+ 
+ 
+-$(LIB):		$(LIBOBJS)
+-	$(RANLIB) $(LIB)
++$(LIB):		$(OBJS)
++	$(LIBTOOL) --mode=link gcc -o $(LIB) $(OBJS:.o=.lo) -rpath $(PREFIX)/lib -version-info 0:0
+ 
+ parsedate.c:	parsedate.y
+ 	@echo "expect 6 shift/reduce conflicts"
+@@ -40,6 +38,8 @@
+ 	mv y.tab.c parsedate.c
+ 
+ install:
++	$(LIBTOOL) --mode=install $(INSTALL_DATA) $(LIB) $(PREFIX)/lib
++	rm -f $(PREFIX)/lib/libfidogate.a
+ 
+ clean veryclean:
+ 	rm -f $(PROGS) $(LIB)

@@ -1,0 +1,40 @@
+--- config.h.orig	Thu Jul 16 09:33:56 1998
++++ config.h	Thu Jul 16 09:39:23 1998
+@@ -92,7 +92,7 @@
+ /***** rfc2ftn configuration ************************************************/
+ 
+ /** Passthru operation for NetMail: FIDO->Internet->FIDO **/
+-/* #define PASSTHRU_NETMAIL */
++#define PASSTHRU_NETMAIL
+ /** Passthru operation for EchoMail: FIDO->Internet->FIDO **/
+ /*
+  * Implemented, but requires ftntoss run after rfc2ftn to sort SEEN-BY
+@@ -153,20 +153,20 @@
+  *				"Received: by NeXT.Mailer"
+  */
+ 
+-/* Standard config: POSIX UNIX */
++#ifdef __NetBSD__
+ # define DO_HAVE_FCNTL_LOCK
+-# undef  DO_HAVE_GETTIMEOFDAY
+-# undef  DO_HAVE_TM_GMTOFF
+-# undef  DO_HAVE_SYSEXITS_H
+-# undef  DO_HAVE_TM_ZONE
+-# define DO_HAVE_STRFTIME
++# define DO_HAVE_GETTIMEOFDAY
++# define DO_HAVE_TM_GMTOFF
++# define DO_HAVE_SYSEXITS_H
++# define DO_HAVE_TM_ZONE
++# undef  DO_HAVE_STRFTIME
+ # undef  DO_HAVE_TZNAME
+-# undef  DO_HAVE_STRCASECMP
++# define DO_HAVE_STRCASECMP
+ # undef  DO_HAVE_STRICMP
+ # define DO_HAVE_STRERROR
+ # undef  DO_BINARY
+ # undef  DO_DOSIFY
+-
++#endif
+ 
+ #ifdef __sun__				/* SUNOS 4.1.x, GNU gcc */
+ # define DO_HAVE_FCNTL_LOCK
