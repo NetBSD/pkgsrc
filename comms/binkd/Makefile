@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2002/12/24 18:10:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.15 2002/12/24 18:53:18 jmmv Exp $
 #
 
 DISTNAME=		binkd094
 PKGNAME=		binkd-0.9.4
 PKGREVISION=		1
-WRKSRC=			${WRKDIR}/binkd-0.9.4
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 CATEGORIES=		comms
 MASTER_SITES=		http://www.corbina.net/~maloff/binkd/ \
 			ftp://happy.kiev.ua/pub/fidosoft/mailer/binkd/
