@@ -1,0 +1,17 @@
+$NetBSD: patch-ak,v 1.1.1.1 2000/06/08 15:56:28 wennmach Exp $
+
+Do not print a cryptic message after xfs_mod has been modloaded, say it
+in clear text.
+
+--- xfs/bsd/xfs_wrap-bsd.c.orig	Thu Jun  8 13:28:58 2000
++++ xfs/bsd/xfs_wrap-bsd.c	Thu Jun  8 13:35:12 2000
+@@ -310,8 +310,7 @@
+     ret = lkmdispatch(lkmtp, cmd);
+     if(cmd == LKM_E_LOAD) {
+ 	xfs_dev_major = _module.lkm_offset;
+-	printf ("xfs: cdev: %d, syscall: %d\n",
+-		xfs_dev_major, xfs_syscall_num);
++	printf("xfs_mod driver for arla loaded.\n");
+     }
+     return ret;
+ }

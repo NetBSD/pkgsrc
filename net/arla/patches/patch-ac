@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/06/08 15:56:28 wennmach Exp $
+
+Do not install libsl.a and ss/ss.h. There is a conflict with the libsl.a from
+the kth-krb4 package.
+
+--- lib/sl/Makefile.in.orig	Mon May 29 21:40:42 2000
++++ lib/sl/Makefile.in		Mon May 29 21:50:14 2000
+@@ -58,18 +58,8 @@
+ 	$(CC) -c $(DEFS) -I../../include -I. -I$(srcdir) $(KRB4_INC_FLAGS) $(CFLAGS) $(CPPFLAGS) $(PICFLAGS) $<
+ 
+ install: all
+-	$(MKINSTALLDIRS) $(DESTDIR)$(includedir)/ss
+-	$(INSTALL_DATA) $(srcdir)/ss.h $(DESTDIR)$(includedir)/ss/ss.h
+-	$(MKINSTALLDIRS) $(DESTDIR)$(libdir)
+-	$(INSTALL) -m 555 $(sl_LIB) $(DESTDIR)$(libdir)/$(sl_LIB)
+-	$(INSTALL) -m 555 $(sl_LIB) $(DESTDIR)$(libdir)/$(ss_LIB)
+-	$(MKINSTALLDIRS) $(DESTDIR)$(bindir)
+-	$(INSTALL) -m 0555 $(PROGS) $(DESTDIR)$(bindir)/$(PROGS)
+ 
+ uninstall:
+-	rm -f $(DESTDIR)$(includedir)/ss/ss.h
+-	rm -f $(DESTDIR)$(libdir)/$(sl_LIB) $(DESTDIR)$(libdir)/$(ss_LIB)
+-	rm -f $(DESTDIR)$(bindir)/$(PROGS)
+ 
+ TAGS: $(SOURCES)
+ 	etags $(SOURCES)

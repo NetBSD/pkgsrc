@@ -1,0 +1,2 @@
+# $NetBSD: fstab,v 1.1.1.1 2000/06/08 15:56:28 wennmach Exp $
+/dev/xfs0		/afs	xfs	rw		0	0
