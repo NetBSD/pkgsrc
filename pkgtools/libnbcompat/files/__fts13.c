@@ -1,4 +1,4 @@
-/*	$NetBSD: __fts13.c,v 1.5 2004/03/12 15:21:13 grant Exp $	*/
+/*	$NetBSD: __fts13.c,v 1.6 2004/08/16 17:24:56 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993, 1994
@@ -29,9 +29,7 @@
  * SUCH DAMAGE.
  */
 
-#if HAVE_CONFIG_H
 #include "nbcompat/nbconfig.h"
-#endif
 
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
@@ -41,7 +39,7 @@
 #if 0
 static char sccsid[] = "@(#)fts.c	8.6 (Berkeley) 8/14/94";
 #else
-__RCSID("$NetBSD: __fts13.c,v 1.5 2004/03/12 15:21:13 grant Exp $");
+__RCSID("$NetBSD: __fts13.c,v 1.6 2004/08/16 17:24:56 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 

@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.h,v 1.1 2003/09/05 18:36:08 jlam Exp $	*/
+/*	$NetBSD: sha1.h,v 1.2 2004/08/16 17:24:57 jlam Exp $	*/
 
 /*
  * SHA-1 in C
@@ -6,8 +6,8 @@
  * 100% Public Domain
  */
 
-#ifndef _SYS_SHA1_H_
-#define	_SYS_SHA1_H_
+#ifndef _NBCOMPAT_SYS_SHA1_H_
+#define	_NBCOMPAT_SYS_SHA1_H_
 
 typedef struct {
 	u_int32_t state[5];
@@ -25,4 +25,4 @@ char	*SHA1File __P((char *, char *));
 char	*SHA1Data __P((const u_char *, size_t, char *));
 #endif /* _KERNEL */
 
-#endif /* _SYS_SHA1_H_ */
+#endif /* _NBCOMPAT_SYS_SHA1_H_ */
