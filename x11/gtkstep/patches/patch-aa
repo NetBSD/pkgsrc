@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/08/29 08:28:19 jlam Exp $
+
+--- configure.orig	Tue Jul 27 15:23:30 1999
++++ configure	Sun Aug 29 00:23:29 1999
+@@ -1630,8 +1630,10 @@
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+ 
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++fi
+ 
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
