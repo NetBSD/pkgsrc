@@ -1,0 +1,8 @@
+--- kp.in.BAK	Fri Oct 24 00:15:10 1997
++++ kp.in	Fri Oct 24 00:15:18 1997
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/wish4.1 -f
++#!/usr/local/bin/wish8.0 -f
+ 
+ # Save original directory for loading files
+ set filepath [pwd]
