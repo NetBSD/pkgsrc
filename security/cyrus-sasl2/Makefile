@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/01/21 14:01:06 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2004/02/12 13:34:29 jlam Exp $
 
 .include "Makefile.common"
 
@@ -7,6 +7,8 @@ SVR4_PKGNAME=	csasl
 COMMENT=	Simple Authentication and Security Layer
 
 PLIST_SRC+=		${PKGDIR}/PLIST.common
+
+GNU_MISSING_OVERRIDE=	config/missing
 
 # Authentication mechanisms
 CONFIGURE_ARGS+=	--enable-anon		# ANONYMOUS
