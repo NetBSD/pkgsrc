@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:44 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/11/13 21:28:41 jlam Exp $
 bin/quanta
 lib/quanta/plugins/libftpclient.a
 lib/quanta/plugins/libftpclient.la
@@ -7,11 +7,13 @@ lib/quanta/plugins/libftpclient.so.0
 lib/quanta/plugins/libftpclient.so.0.0
 lib/quanta/plugins/weblint
 share/kde/applnk/Development/quanta.desktop
+share/kde/apps/quanta/actions.rc
 share/kde/apps/quanta/doc/documentation.html
 share/kde/apps/quanta/doc/head_bg.gif
 share/kde/apps/quanta/doc/minilogo.jpg
 share/kde/apps/quanta/doc/quanta-dialog-xml.html
 share/kde/apps/quanta/doc/quanta.docrc
+share/kde/apps/quanta/quantaui.rc
 share/kde/apps/quanta/syntax.xml
 share/kde/apps/quanta/tagdata.rc
 share/kde/apps/quanta/tags/a.tag
@@ -80,6 +82,7 @@ share/kde/apps/quanta/toolbar/font_dec.png
 share/kde/apps/quanta/toolbar/font_inc.png
 share/kde/apps/quanta/toolbar/form.png
 share/kde/apps/quanta/toolbar/forward.png
+share/kde/apps/quanta/toolbar/ftab.png
 share/kde/apps/quanta/toolbar/ftpclient.png
 share/kde/apps/quanta/toolbar/java.png
 share/kde/apps/quanta/toolbar/lineedit.png
@@ -99,6 +102,7 @@ share/kde/apps/quanta/toolbar/preview2.png
 share/kde/apps/quanta/toolbar/preview3.png
 share/kde/apps/quanta/toolbar/preview4.png
 share/kde/apps/quanta/toolbar/print.png
+share/kde/apps/quanta/toolbar/ptab.png
 share/kde/apps/quanta/toolbar/quanta.png
 share/kde/apps/quanta/toolbar/quantalogo.png
 share/kde/apps/quanta/toolbar/quick_list.png
@@ -163,7 +167,6 @@ share/kde/apps/quanta/toolbar/wiznewprjfin.png
 share/kde/apps/quanta/toolbar/wiznewprjglb.png
 share/kde/apps/quanta/toolbar/wiznewprjloc.png
 share/kde/apps/quanta/toolbar/wiznewprjweb.png
-share/kde/apps/quanta/toolbars.rc
 share/kde/icons/hicolor/16x16/apps/quanta.png
 share/kde/icons/hicolor/22x22/apps/quanta.png
 share/kde/icons/hicolor/32x32/apps/quanta.png
@@ -171,6 +174,12 @@ share/kde/icons/hicolor/48x48/apps/quanta.png
 share/kde/locale/da/LC_MESSAGES/quanta.mo
 share/kde/locale/de/LC_MESSAGES/quanta.mo
 share/kde/locale/fr/LC_MESSAGES/quanta.mo
+@unexec ${RMDIR} %D/share/kde/locale/fr/LC_MESSAGES 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/locale/fr 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/locale/de/LC_MESSAGES 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/locale/de 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/locale/da/LC_MESSAGES 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/kde/locale/da 2>/dev/null || ${TRUE}
 @dirrm share/kde/apps/quanta/toolbar
 @dirrm share/kde/apps/quanta/tags
 @dirrm share/kde/apps/quanta/doc
