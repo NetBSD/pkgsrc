@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2230 2003/05/14 14:29:05 kei Exp $
+$NetBSD: CHANGES,v 1.2231 2003/05/14 14:45:51 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1955,3 +1955,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lv to 4.49.5 [itojun 2003-05-14]
 	Updated kochi-cidfonts to 0.018 [kei 2003-05-14]
 	Added kochi-otf-0.018 [kei 2003-05-14]
+	Updated p5-Config-General to 2.19 [mjl 2003-05-14]
