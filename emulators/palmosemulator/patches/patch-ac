@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2002/12/31 06:59:54 dsainty Exp $
+
+--- SrcShared/Skins.cpp.orig	Sat Mar 30 01:11:17 2002
++++ SrcShared/Skins.cpp	Sun Nov 24 02:01:04 2002
+@@ -1163,6 +1163,11 @@
+ 	if (!scanDir.Exists ())
+ 		scanDir = EmDirRef (EmDirRef::GetEmulatorDirectory (), "skins");
+ 
++#ifdef PACKAGE_SKINS_DIR
++	if (!scanDir.Exists ())
++		scanDir = EmDirRef (PACKAGE_SKINS_DIR);
++#endif
++
+ #if PLATFORM_UNIX
+ 	// On Unix, also look in the /usr/local/share/pose and /usr/share/pose directories.
+ 
