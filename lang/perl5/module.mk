@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.38 2005/02/21 12:08:45 wiz Exp $
+# $NetBSD: module.mk,v 1.39 2005/02/23 10:42:07 wiz Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -68,7 +68,7 @@ MAKE_ENV+=	LC_ALL=C
 .if defined(PERL5_USES_MODULE_BUILD)
 _CONF_ARG=	Build.PL
 .else
-_CONF_ARG=	Makefile.PL ${MAKE_PARAMS:Q}
+_CONF_ARG=	Makefile.PL ${MAKE_PARAMS}
 .endif
 
 .PHONY: perl5-configure
