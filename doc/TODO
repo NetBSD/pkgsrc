@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1631 2004/04/17 17:08:37 minskim Exp $
+$NetBSD: TODO,v 1.1632 2004/04/18 15:22:09 ben Exp $
 
 Suggested new packages
 ======================
@@ -22,6 +22,12 @@ Suggested new packages
 	GTK application which allows posting of journal entries to
 	  http://www.livejournal.com/ .
 	http://loserjabber.sourceforge.net/
+
+	k3b
+	CD and DVD burning application optimized for KDE.  (This is
+	  a front-end for CLI utilities.  It claims to be comfortable
+	  for beginners, yet advanced enough for experienced users.)
+	http://k3b.plainblack.com/
 
 	resin
 	Fast JSP server. (I will import this when we have a native
