@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.566 2003/05/19 23:18:13 grant Exp $
+$NetBSD: TODO,v 1.567 2003/05/20 08:40:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -101,6 +101,7 @@ Suggested package updates
 	o cronolog-1.6.2 [pkg/21465]
 	o crossfire-1.5.0
 	o ctwm-3.6 [pkg/20648]
+	o curl-7.10.5
 	o cyrus-imapd21-2.1.13
 	o cyrus-sasl-2.1.13
 	o db4-4.1.25 [pkg/20289]
@@ -174,7 +175,7 @@ Suggested package updates
 	o librsvg-2.2.2.1
 	o libsigc++-1.2.5
 	o libtool-1.5 [skrll]
-	o lilypond-1.6.8
+	o lilypond-1.6.10
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
 	o lynx-current-2.8.5dev9
@@ -273,7 +274,8 @@ Suggested package updates
 	o xalan-c-1.4
 	o xanim-2.92.0 [pkg/19934]
 	o xerces-c-2.1.0 [heinz]
-	o xine-ui-0.9.21
+	o xine-lib-0.9.21 [pkg/21625]
+	o xine-ui-0.9.21 [pkg/21625]
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.0
 	o xmss-crossfade-0.3.2
