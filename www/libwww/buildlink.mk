@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.8 2002/01/02 21:01:23 fredb Exp $
+# $NetBSD: buildlink.mk,v 1.9 2002/07/15 14:39:21 fredb Exp $
 #
 # This Makefile fragment is included by packages that use libwww.
 #
@@ -17,7 +17,7 @@ LIBWWW_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.libwww?=	libwww>=5.3.2
+BUILDLINK_DEPENDS.libwww?=	libwww>=5.3.2nb2
 DEPENDS+=	${BUILDLINK_DEPENDS.libwww}:../../www/libwww
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libwww=libwww
