@@ -1,4 +1,4 @@
-# $NetBSD: HACKS,v 1.26 2004/07/10 13:23:55 grant Exp $
+# $NetBSD: HACKS,v 1.27 2004/08/16 13:10:24 dsainty Exp $
 #
 # This file is intended to document workarounds for currently unsolved
 # (mostly) compiler bugs.
@@ -432,4 +432,16 @@ file	graphics/netpbm/patches/patch-ab
 descr
 	sparc64 gcc 3.3.x toolchain bug means we must compile exif.o
 	without optimisation
+kcah
+
+hack	i386 g++ 3.3.x -O2 bug
+cdate	Tue Aug 17 00:59:31 NZST 2004
+who	dsainty
+port	i386
+file	emulators/palmosemulator/patches/patch-an
+descr
+	EmPoint.cpp malfunctions with optimisation on, trashing point
+	coordinates.  Apparently an aliasing issue with automatic variables on
+	the stack and some fairly dodgy type casting.  The patch file contains
+	more details.
 kcah
