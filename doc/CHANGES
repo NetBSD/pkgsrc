@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7255 2004/09/26 01:15:46 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.7256 2004/09/26 04:16:52 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4433,3 +4433,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kanjipad to 2.0.0 [wiz 2004-09-25]
 	Added digikamplugins-0.6.2 [seb 2004-09-26]
 	Added tnt-1.2.2 [dmcmahill 2004-09-26]
+	Updated p5-Locale-Maketext-Lexicon to 0.42 [epg 2004-09-26]
