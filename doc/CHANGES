@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.180 2002/10/06 04:15:37 heinz Exp $
+$NetBSD: CHANGES,v 1.181 2002/10/06 11:42:32 magick Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3128,3 +3128,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added p5-Digest-Nilsimsa-0.06 [heinz 2002-10-06]
 	Updated koffice3 to 1.1.1nb1 [jlam 2002-10-06]
 	Updated p5-razor-agents to 2.14 [heinz 2002-10-06]
+	Updated xemacs-current to 21.5.9 [magick 2002-10-06]
