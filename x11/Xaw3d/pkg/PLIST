@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/01/16 17:39:19 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/01/24 23:58:22 hubertf Exp $
 include/X11/Xaw3d/AllWidgets.h
 include/X11/Xaw3d/AsciiSink.h
 include/X11/Xaw3d/AsciiSinkP.h
@@ -76,8 +76,8 @@ include/X11/Xaw3d/XawImP.h
 include/X11/Xaw3d/XawInit.h
 lib/libXaw3d.a
 lib/libXaw3d.so.6.1
-@exec /sbin/ldconfig -m %B || true
-@unexec /sbin/ldconfig -m %B || true
+@exec /sbin/ldconfig -m %B || /usr/bin/true
+@unexec /sbin/ldconfig -m %B || /usr/bin/true
 share/doc/Xaw3d/README.XAW3D
 @dirrm share/doc/Xaw3d
 @dirrm include/X11/Xaw3d
