@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2002/10/16 14:47:01 dillo Exp $
+# $NetBSD: Makefile,v 1.92 2002/11/03 09:18:07 rh Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -24,6 +24,7 @@ SUBDIR+=	dvipdfm
 SUBDIR+=	enscript
 SUBDIR+=	foomatic-gswrapper
 SUBDIR+=	ggv
+SUBDIR+=	ggv2
 SUBDIR+=	ghostscript
 SUBDIR+=	ghostscript-esp
 SUBDIR+=	ghostscript-esp-nox11
