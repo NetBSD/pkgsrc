@@ -1,30 +1,20 @@
-$NetBSD: patch-ag,v 1.8 2003/04/17 06:22:19 martti Exp $
+$NetBSD: patch-ag,v 1.9 2004/01/21 06:56:48 martti Exp $
 
---- src/cleanup/cleanup.c.orig	2002-12-20 03:33:40.000000000 +0200
-+++ src/cleanup/cleanup.c	2003-04-17 08:54:39.000000000 +0300
-@@ -333,6 +333,7 @@
-      * Pass control to the single-threaded service skeleton.
-      */
+--- src/cleanup/cleanup.c.orig	2003-08-10 03:40:30.000000000 +0300
++++ src/cleanup/cleanup.c	2004-01-21 08:41:03.000000000 +0200
+@@ -335,2 +335,3 @@
      single_server_main(argc, argv, cleanup_service,
 +		       MAIL_SERVER_BOOL_TABLE, cleanup_bool_table,
  		       MAIL_SERVER_INT_TABLE, cleanup_int_table,
- 		       MAIL_SERVER_STR_TABLE, cleanup_str_table,
- 		       MAIL_SERVER_TIME_TABLE, cleanup_time_table,
 --- src/cleanup/cleanup.h.orig	2002-12-03 16:58:11.000000000 +0200
-+++ src/cleanup/cleanup.h	2003-04-17 08:54:39.000000000 +0300
-@@ -118,6 +118,7 @@
- extern void cleanup_all(void);
- extern void cleanup_pre_jail(char *, char **);
++++ src/cleanup/cleanup.h	2004-01-21 08:41:03.000000000 +0200
+@@ -120,2 +120,3 @@
  extern void cleanup_post_jail(char *, char **);
 +extern CONFIG_BOOL_TABLE cleanup_bool_table[];
  extern CONFIG_INT_TABLE cleanup_int_table[];
- extern CONFIG_STR_TABLE cleanup_str_table[];
- extern CONFIG_TIME_TABLE cleanup_time_table[];
---- src/cleanup/cleanup_envelope.c.orig	2002-11-01 15:34:02.000000000 +0200
-+++ src/cleanup/cleanup_envelope.c	2003-04-17 08:54:39.000000000 +0300
-@@ -192,15 +192,19 @@
- 	if (state->orig_rcpt == 0)
- 	    state->orig_rcpt = mystrdup(buf);
+--- src/cleanup/cleanup_envelope.c.orig	2003-05-23 00:03:20.000000000 +0300
++++ src/cleanup/cleanup_envelope.c	2004-01-21 08:41:03.000000000 +0200
+@@ -196,11 +196,15 @@
  	cleanup_rewrite_internal(clean_addr, *buf ? buf : var_empty_addr);
 -	if (cleanup_rcpt_canon_maps)
 -	    cleanup_map11_internal(state, clean_addr, cleanup_rcpt_canon_maps,
@@ -49,39 +39,23 @@ $NetBSD: patch-ag,v 1.8 2003/04/17 06:22:19 martti Exp $
 +		cleanup_masquerade_internal(clean_addr, cleanup_masq_domains);
 +	}
  	cleanup_out_recipient(state, state->orig_rcpt, STR(clean_addr));
- 	if (state->recip == 0)
- 	    state->recip = mystrdup(STR(clean_addr));
 --- src/cleanup/cleanup_init.c.orig	2002-12-03 16:56:56.000000000 +0200
-+++ src/cleanup/cleanup_init.c	2003-04-17 08:54:39.000000000 +0300
-@@ -6,6 +6,8 @@
- /* SYNOPSIS
- /*	#include "cleanup.h"
++++ src/cleanup/cleanup_init.c	2004-01-21 08:41:03.000000000 +0200
+@@ -8,2 +8,4 @@
  /*
 +/*	CONFIG_BOOL_TABLE cleanup_bool_table[];
 +/*
  /*	CONFIG_INT_TABLE cleanup_int_table[];
- /*
- /*	CONFIG_STR_TABLE cleanup_str_table[];
-@@ -28,7 +30,7 @@
- /*	for one-time initializations that must be done before any message
- /*	processing can take place.
+@@ -30,3 +32,3 @@
  /*
 -/*	cleanup_{int,str,time}_table[] specify configuration
 +/*	cleanup_{bool,int,str,time}_table[] specify configuration
  /*	parameters that must be initialized before calling any functions
- /*	in this module. These tables satisfy the interface as specified in
- /*	single_service(3).
-@@ -109,6 +111,7 @@
- int     var_extra_rcpt_limit;		/* recipient extract limit */
- char   *var_rcpt_witheld;		/* recipients not disclosed */
+@@ -111,2 +113,3 @@
  char   *var_masq_classes;		/* what to masquerade */
 +bool    var_canon_env_rcpt;		/* canonicalize envelope recipient */
  int     var_qattr_count_limit;		/* named attribute limit */
- int     var_body_check_len;		/* when to stop body scan */
- 
-@@ -145,6 +148,11 @@
-     0,
- };
+@@ -147,2 +150,7 @@
  
 +CONFIG_BOOL_TABLE cleanup_bool_table[] = {
 +    VAR_CANON_ENV_RCPT, DEF_CANON_ENV_RCPT, &var_canon_env_rcpt,
@@ -89,18 +63,12 @@ $NetBSD: patch-ag,v 1.8 2003/04/17 06:22:19 martti Exp $
 +};
 +
   /*
-   * Mappings.
-   */
---- src/global/mail_params.h.orig	2003-04-17 08:54:22.000000000 +0300
-+++ src/global/mail_params.h	2003-04-17 08:54:39.000000000 +0300
-@@ -324,6 +324,10 @@
- #define DEF_RCPT_CANON_MAPS	""
- extern char *var_rcpt_canon_maps;
+--- src/global/mail_params.h.orig	2004-01-21 08:40:40.000000000 +0200
++++ src/global/mail_params.h	2004-01-21 08:41:03.000000000 +0200
+@@ -326,2 +326,6 @@
  
 +#define VAR_CANON_ENV_RCPT	"canonicalize_envelope_recipient"
 +#define DEF_CANON_ENV_RCPT	1
 +extern bool var_canon_env_rcpt;
 +
  #define VAR_TRANSPORT_MAPS	"transport_maps"
- #define DEF_TRANSPORT_MAPS	""
- extern char *var_transport_maps;
