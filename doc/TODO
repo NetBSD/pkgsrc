@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2156 2004/09/21 17:30:19 jmmv Exp $
+$NetBSD: TODO,v 1.2157 2004/09/22 09:48:35 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -367,7 +367,6 @@ Suggested package updates
 	o p5-CGI-Application-3.1
 	o p5-Exception-Class-1.17
 	o p5-gtk2-1.060
-	o p0f-2.0.5
 	o pcre-5.0
 	o pdmenu-1.2.81
 	o pearpc-0.3.1
