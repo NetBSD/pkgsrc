@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.322 2004/05/13 11:37:50 tron Exp $
+# $NetBSD: Makefile,v 1.323 2004/05/14 20:35:15 jdolecek Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -17,7 +17,6 @@ SUBDIR+=	ap-auth-pgsql
 SUBDIR+=	ap-auth-postgresql
 SUBDIR+=	ap-auth-script
 SUBDIR+=	ap-bandwidth
-SUBDIR+=	ap-csacek
 SUBDIR+=	ap-dav
 SUBDIR+=	ap-dtcl
 SUBDIR+=	ap-fastcgi
