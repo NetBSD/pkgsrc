@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4989 2004/02/25 00:56:49 cube Exp $
+$NetBSD: CHANGES,v 1.4990 2004/02/25 01:09:53 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1013,6 +1013,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated abcde to 2.1.15 [snj 2004-02-24]
 	Added gnome-pkgview-1.0.5 [jmmv 2004-02-24]
 	Updated autoswc to 1.1 [jmmv 2004-02-24]
+	Updated p5-Crypt-RSA to 1.50 [heinz 2004-02-24]
+	Updated p5-Convert-ASN1 to 0.18 [heinz 2004-02-24]
 	Updated gkrellm to 2.1.25 [cube 2004-02-24]
 	Added gkrellm-share-2.1.25 [cube 2004-02-24]
 	Added gkrellm-server-2.1.25 [cube 2004-02-24]
@@ -1031,6 +1033,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gkrellm1-snmp-0.18nb6 [cube 2004-02-24]
 	Updated gkrellm-wireless to 2.0.3 [cube 2004-02-24]
 	Added gkrellm1-wireless-0.2.2nb4 [cube 2004-02-24]
+	Added p5-Crypt-CAST5_PP-1.02 [heinz 2004-02-25]
 	Added gkrellm-flynn-0.8 [cube 2004-02-25]
 	Added gkrellm-launch-0.5 [cube 2004-02-25]
 	Added gkrellm-leds-0.8.1 [cube 2004-02-25]
