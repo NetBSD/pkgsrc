@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/03/29 10:18:26 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2001/04/28 14:43:29 drochner Exp $
 #
 
 DISTNAME=	Audio-CD-0.04-disc-cover-1.1.0
@@ -10,7 +10,7 @@ MAINTAINER=	drochner@netbsd.org
 HOMEPAGE=	http://www.liacs.nl/~jvhemert/disc-cover/
 COMMENT=	Audio-CD perl module for use with disc-cover
 
-DEPENDS+=	libcdaudio-*:../../audio/libcdaudio
+DEPENDS+=	libcdaudio>=0.99.4nb1:../../audio/libcdaudio
 
 USE_PERL5=	yes
 PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Audio/CD/.packlist
