@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:54:26 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/11/01 14:51:03 salo Exp $
 #
 
 DISTNAME=	ispell-sk-0.2.0
 PKGNAME=	${DISTNAME:S/sk/slovak/}
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-sk//}
 CATEGORIES=	textproc
 MASTER_SITES=	http://ispell.hq.sk/
 
