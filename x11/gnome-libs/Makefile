@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2000/03/13 22:25:45 tron Exp $
+# $NetBSD: Makefile,v 1.41 2000/03/13 22:28:09 tron Exp $
 
 DISTNAME=		gnome-libs-1.0.56
 CATEGORIES=		x11 gnome
@@ -9,6 +9,7 @@ HOMEPAGE=		http://www.gnome.org/
 
 DEPENDS+=		ORBit-*:../../corba/ORBit
 DEPENDS+=		esound-*:../../audio/esound
+DEPENDS+=		gtk+>=1.2.7:../gtk
 DEPENDS+=		imlib-*:../../graphics/imlib
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
