@@ -1,82 +1,20 @@
-$NetBSD: patch-aa,v 1.13 2001/09/02 23:04:23 kristerw Exp $
---- makefile.unix.orig	Thu Aug 23 02:48:30 2001
-+++ makefile.unix	Sat Sep  1 12:19:39 2001
-@@ -32,7 +32,7 @@
+$NetBSD: patch-aa,v 1.14 2002/01/03 00:19:01 kristerw Exp $
+--- makefile.unix.orig	Wed Jan  2 01:32:01 2002
++++ makefile.unix	Wed Jan  2 18:44:08 2002
+@@ -32,7 +32,6 @@
  
  #set TARGET to "mame" (without the ") to compile xmame and to "mess" to
  #compile xmess.
 -TARGET = mame
-+TARGET = mess
  
  
  ##############################################################################
-@@ -189,7 +189,7 @@
+@@ -211,7 +210,7 @@
  # *** xmameroot, this is the default rompath, place where the highscores are
  # stored, global rc location etc. Since most of these are configurable through
  # the rc-file anyway, there are no longer seperate defines for each.
 -XMAMEROOT = $(PREFIX)/lib/x$(TARGET)
-+XMAMEROOT = $(PREFIX)/share/xmess
++XMAMEROOT = $(PREFIX)/share/x$(TARGET)
  
  
  ##############################################################################
-@@ -197,7 +197,7 @@
- ##############################################################################
- 
- ### i386 + gnu-asm
--MY_CPU = i386
-+MY_CPU = ${MAME_CPU}
- ### i386 no asm
- # MY_CPU = i386_noasm
- ### ia64
-@@ -218,11 +218,11 @@
- ##############################################################################
- 
- ### Linux 
--ARCH  = linux
-+# ARCH  = linux
- ### FreeBSD
- # ARCH  = freebsd
- ### NetBSD
--# ARCH  = netbsd
-+ARCH  = netbsd
- ### OpenBSD
- # ARCH = openbsd
- ### Solaris / SunOS
-@@ -255,11 +255,13 @@
- # X Input Extensions based joystick, this is known to not work right now ;|
- # JOY_X11 = 1
- # On iX86 based OS's, if supported, you can use standard joystick driver.
--# JOY_I386 = 1
-+ifeq (${NETBSD_JOYSTICK},yes)
-+JOY_I386 = 1
-+endif
- # Linux FM-TOWNS game PAD joystick emulation support, thanks to Osamu Kurati.
- # JOY_PAD = 1
- # NetBSD/FreeBSD USB joystick support.
--# JOY_USB = 1
-+JOY_USB = 1
- 
- 
- ##############################################################################
-@@ -307,7 +309,9 @@
- # MIT-Shared Memory X Extensions, comment the
- X11_MITSHM = 1
- # XFree86 DGA
--# X11_DGA = 1
-+ifeq (${NETBSD_DGA},yes)
-+X11_DGA = 1
-+endif
- # The XIL library (Solaris 2.5.1 and higher), uncomment
- # X11_XIL = 1
- 
-@@ -316,8 +320,8 @@
- # X11INC		= -I/usr/include/X11
- # X11LIB		= -L/usr/lib/X11
- # standard location for XFree86
--X11INC		= -I/usr/X11R6/include
--X11LIB		= -L/usr/X11R6/lib
-+X11INC		= -I${PREFIX}/include -I${X11BASE}/include
-+X11LIB		= -L${PREFIX}/lib -Wl,-R${PREFIX}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib
- # for Sun systems
- # X11INC		= -I/usr/openwin/include
- # X11LIB		= -L/usr/openwin/lib
