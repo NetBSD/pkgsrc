@@ -1,16 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2004/02/25 15:51:51 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2004/05/22 10:07:48 adam Exp $
 
---- src/libgcrypt-config.in.orig	2004-02-18 12:33:53.000000000 -0600
+--- src/libgcrypt-config.in.orig	Mon Mar 29 10:49:19 2004
 +++ src/libgcrypt-config.in
-@@ -158,9 +158,9 @@ if test "$echo_libs" = "yes"; then
+@@ -139,7 +139,7 @@ if test "$echo_libs" = "yes"; then
  
      # Set up `libdirs'.
-     if test "@libdir@" != "/usr/lib" ; then
--	libdirs="-L@libdir@"
-+	libdirs="-L@libdir@ -Wl,-R@libdir@"
- 	for i in $libs ; do
--	    if test "$i" = "-L@libdir@" ; then
-+	    if test "$i" = "-L@libdir@ -Wl,-R@libdir@" ; then
- 		libdirs=""
- 	    fi
- 	done
+     if test "x$libdir" != "x/usr/lib" -a "x$libdir" != "x/lib"; then
+-	libdirs="-L$libdir"
++	libdirs="-L$libdir -Wl,-R@libdir@"
+     fi
+ 
+     # Set up `libs_final'.

@@ -1,15 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/25 15:51:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/05/22 10:07:48 adam Exp $
 bin/libgcrypt-config
 include/gcrypt-module.h
 include/gcrypt.h
-lib/libgcrypt-pthread.a
-lib/libgcrypt-pthread.la
-lib/libgcrypt-pthread.so
-lib/libgcrypt-pthread.so.11
-lib/libgcrypt-pthread.so.11.0
 lib/libgcrypt.a
 lib/libgcrypt.la
 lib/libgcrypt.so
-lib/libgcrypt.so.11
-lib/libgcrypt.so.11.0
+lib/libgcrypt.so.12
+lib/libgcrypt.so.12.1
 share/aclocal/libgcrypt.m4
