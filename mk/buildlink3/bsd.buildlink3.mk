@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.163 2004/11/17 21:01:00 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.164 2004/11/28 19:19:52 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -91,7 +91,7 @@ BUILDLINK_BINDIR=	${BUILDLINK_DIR}/bin
 BUILDLINK_SRCDIR=	${.CURDIR}/../../mk/buildlink3
 BUILDLINK_X11_DIR=	${BUILDLINK_DIR:H}/.x11-buildlink
 
-.PHONY: pre-buildlink do-buildlink post-buildlink
+.PHONY: do-buildlink
 
 # Prepend ${BUILDLINK_BINDIR} to the PATH.
 PREPEND_PATH+=	${BUILDLINK_BINDIR}
@@ -1083,17 +1083,9 @@ ${WRAPPER_TMPDIR}/transform-libtool: ${BUILDLINK_SRCDIR}/transform-libtool
 			 -e "s|@PWD@|${PWD_CMD:Q}|g"			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
-WRAPPER_TARGETS+=	pre-buildlink do-buildlink post-buildlink
-.if !target(pre-buildlink)
-pre-buildlink:
-	@${DO_NADA}
-.endif
+WRAPPER_TARGETS+=	do-buildlink
 .if !target(do-buildlink)
 do-buildlink:
-	@${DO_NADA}
-.endif
-.if !target(post-buildlink)
-post-buildlink:
 	@${DO_NADA}
 .endif
 

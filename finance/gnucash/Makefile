@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2004/11/20 22:10:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.72 2004/11/28 19:19:52 jlam Exp $
 
 DISTNAME=		gnucash-1.8.9
 PKGREVISION=		3
@@ -52,7 +52,7 @@ SUBST_SED.guile14+=	"s, guile , ${PREFIX}/${GUILE14_SUBDIR}/bin/guile ,"
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-post-buildlink:
+post-wrapper:
 	if [ ! -f /usr/include/wctype.h ]; then				\
 		${TOUCH} ${BUILDLINK_DIR}/include/wctype.h;		\
 	fi
