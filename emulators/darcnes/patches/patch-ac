@@ -1,0 +1,112 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/02/13 23:28:07 wiz Exp $
+
+--- ./snd_unix.c.orig	Wed Jan 26 21:22:18 2000
++++ ./snd_unix.c	Sun Feb 13 22:27:06 2000
+@@ -8,13 +8,21 @@
+ 
+ /* #define SOUND_LINUX */	/* use linux sound header */
+-#define SOUND_FREEBSD		/* use freebsd sound header */
++/* #define SOUND_FREEBSD */	/* use freebsd sound header */
++#define SOUND_NETBSD		/* use netbsd sound system */
+ 
+ #ifdef SOUND_LINUX
+ #define SOUND_HEADER <sys/soundcard.h>
++#define SOUND_DEVICE "/dev/dsp"
+ #endif
+ 
+ #ifdef SOUND_FREEBSD
+ #define SOUND_HEADER <machine/soundcard.h>
++#define SOUND_DEVICE "/dev/dsp"
++#endif
++
++#ifdef SOUND_NETBSD
++#define SOUND_HEADER <sys/audioio.h>
++#define SOUND_DEVICE "/dev/sound"
+ #endif
+ 
+ #include <stdio.h>
+@@ -66,16 +74,21 @@
+ 
+ int snd_open(int samples_per_sync, int sample_rate)
+ {
+-    int tmp;
+     int result;
++#if defined(SOUND_LINUX) || defined(SOUND_FREEBSD)
++    int tmp;
+     int sound_rate;
+     int sound_frag;
++#endif
++#ifdef SOUND_NETBSD
++    audio_info_t info;
++#endif    
+ 
+     waveptr = 0;
+     wavflag = 0;
+     
+-    printf("opening /dev/dsp...");
+-    sound_fd = open("/dev/dsp", O_WRONLY);
++    printf("opening "SOUND_DEVICE"...");
++    sound_fd = open(SOUND_DEVICE, O_WRONLY);
+     if (sound_fd < 0) {
+ 	perror("failed");
+ 	sound_fd = 0;
+@@ -83,7 +96,8 @@
+     } else {
+ 	printf("done.\n");
+     }
+-    
++
++#if defined(SOUND_LINUX) || defined(SOUND_FREEBSD)
+     printf("setting unsigned 8-bit format...");
+     tmp = AFMT_U8;
+     result = ioctl(sound_fd, SNDCTL_DSP_SETFMT, &tmp);
+@@ -132,7 +146,41 @@
+     } else {
+ 	printf("done.\n");
+     }
++#endif
++#ifdef SOUND_NETBSD
++    AUDIO_INITINFO(&info);
++    printf("setting unsigned 8-bit format...");
++    info.play.encoding = AUDIO_ENCODING_ULINEAR;
++    /* this doesn't work for me, so ignore results */
++    result = ioctl(sound_fd, AUDIO_SETINFO, &info);
++    if (result < 0)
++    {
++	perror("warning: unsigned linear mode failed, using signed");
++	info.play.encoding = AUDIO_ENCODING_SLINEAR;
++    }
+ 
++    printf("setting sound rate to %dHz...", sample_rate);
++    info.play.sample_rate = sample_rate;
++    /* 8 bits per sample */
++    info.play.precision = 8;
++    printf("setting mono mode...");
++    info.play.channels = 1;
++    info.mode = AUMODE_PLAY_ALL;
++    /* "frag size" */
++    info.blocksize = 1 << 8;
++    /* "number of frags", hiwater mark */
++    info.hiwat = 8;
++    result = ioctl(sound_fd, AUDIO_SETINFO, &info);
++    if (result < 0) {
++	perror("initializing sound failed");
++	close(sound_fd);
++	sound_fd = 0;
++	return 0;
++    } else {
++	printf("done.\n");
++    }
++#endif    
++    
+     return 1;
+ }
+ 
+@@ -141,6 +189,7 @@
+     if (sound_fd) {
+ 	close(sound_fd);
+     }
++    sound_fd = 0;
+ }
+ 
+ /*

@@ -1,0 +1,13 @@
+DarcNES is a multi-system emulator. Some of the systems it emulates
+are
+  o Sega Master System, Sega Game Gear (with sound)
+  o Nintende Entertainment System (with sound)
+  o PC-Engine
+and in development is support for
+  o Colecovision
+  o Sega Megadrive, also known as Sega Genesis
+  o Apple ][
+
+The keys are: 'A', 'S', '[', ']', arrows, and escape.
+
+By Nyef (Alastair Bridgewater).
