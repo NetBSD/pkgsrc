@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3578 2003/09/30 00:08:56 reed Exp $
+$NetBSD: CHANGES,v 1.3579 2003/09/30 01:06:15 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4012,3 +4012,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated glu to 5.0.2 [jschauma 2003-09-29]
 	Updated glut to 5.0.2 [jschauma 2003-09-29]
 	Added bc-1.06 [reed 2003-09-29]
+	Added coalesce-1.5.0.2 [jschauma 2003-09-29]
