@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1688 2003/03/19 17:26:07 jschauma Exp $
+$NetBSD: CHANGES,v 1.1689 2003/03/19 18:22:39 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1197,3 +1197,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added p5-DB_File-1.806 [seb 2003-03-19]
 	Added eclipse-2.0.2 [jschauma 2003-03-19]
 	Added skampi-4.0 [jschauma 2003-03-19]
+	Updated edb to 1.0.3nb1 [jmmv 2003-03-19]
