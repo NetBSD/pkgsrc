@@ -1,8 +1,18 @@
-$NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
+$NetBSD: patch-ac,v 1.10 2003/01/01 19:06:02 kim Exp $
 
---- abcde.orig	Mon Jan 28 16:44:02 2002
-+++ abcde
-@@ -27,7 +27,7 @@ echo "-j    Number of encoder processes 
+--- abcde.orig	Mon Jan 28 00:44:02 2002
++++ abcde	Wed Jan  1 13:50:59 2003
+@@ -17,7 +17,8 @@
+ echo "This is abcde v$VERSION."
+ echo "Usage: abcde [options] [tracks]"
+ echo "Options:"
+-echo "-a    Specify actions to perform (cddb,read,encode,tag,move,playlist,clean)"
++echo "-a    Actions to perform (cddb,read,normalize,encode,tag,move,playlist,clean)"
++echo "-b    Batch mode: enable album normalization and nogap encoding"
+ echo "-c    Specify a configuration file (overrides system and user config files)"
+ echo "-C    Specify discid to resume from (only needed if you no longer have the cd)"
+ echo "-d    Specify CDROM device to grab"
+@@ -27,7 +28,7 @@
  echo "-l    Use low disk space algorithm"
  echo "-n    No lookup. Don't query CDDB, just create and use template"
  echo "-N    Noninteractive. Never prompt for anything"
@@ -11,7 +21,22 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  echo "-r    [host1,host2...] Also encode on these remote hosts"
  echo "-x    Eject CD after all tracks are read"
  echo "Tracks is a space-delimited list of tracks to grab."
-@@ -206,6 +206,11 @@ splitvarious ()
+@@ -101,6 +102,14 @@
+ 			RETURN=$?
+ 		fi
+ 	fi
++	case "$1" in
++	normalize)
++		if [ "$RETURN" = "2" ]; then
++			# File was already normalized.
++			RETURN=0
++		fi
++		;;
++	esac
+ 	if [ "$RETURN" != "0" ]; then
+ 		# Put an error in the errors file. For various reasons we
+ 		# can't capture a copy of the program's output but we can
+@@ -206,6 +215,11 @@
  			TRACKARTIST="$(echo $DTITLEARTIST | cut -f1 -d~)"
  			TRACKNAME="$(echo $DTITLEARTIST | cut -f2 -d~)"
  			;;
@@ -23,7 +48,7 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  		esac
  	else
  		TRACKARTIST=$DARTIST
-@@ -221,7 +226,8 @@ do_tag ()
+@@ -221,7 +235,8 @@
  {
  	COMMENTOUTPUT="$(eval echo ${COMMENT})"
  	run_command '' echo "Tagging track $1 of $TRACKS: $TRACKNAME..."
@@ -33,7 +58,7 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  		# Amazingly, id3 and id3v2 have identical -a, -A, -c, -t, and -T switches
  		# ...except id3v2's -c is completely broken (there's a bug in id3lib
  		# v3.7.x keeping -c from being properly implemented)
-@@ -232,7 +238,8 @@ do_tag ()
+@@ -232,7 +247,8 @@
  			run_command tagtrack-$1 $TAGGER $TAGGEROPTS -c "$COMMENTOUTPUT" \
  				-A "$DALBUM" -a "$TRACKARTIST" -t "$TRACKNAME" -T "$1" "$ABCDETEMPDIR/track$1.$OUTPUTTYPE"
  		fi
@@ -43,7 +68,7 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  		# vorbiscomment can't do in-place modification, mv the file first
  		if [ -f "$ABCDETEMPDIR/track$1.$OUTPUTTYPE" -a ! -f "$ABCDETEMPDIR/track$1.uncommented.$OUTPUTTYPE" ]; then
  			mv "$ABCDETEMPDIR/track$1.$OUTPUTTYPE" "$ABCDETEMPDIR/track$1.uncommented.$OUTPUTTYPE"
-@@ -254,7 +261,11 @@ do_tag ()
+@@ -254,7 +270,48 @@
  		else
  			mv "$ABCDETEMPDIR/track$1.uncommented.$OUTPUTTYPE" "$ABCDETEMPDIR/track$1.$OUTPUTTYPE"
  		fi
@@ -53,10 +78,47 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
 +		run_command tagtrack-$1 true
 +		;;
 +	esac
++}
++
++# do_batch_encode
++# variables used:
++# OUTPUTTYPE, ENCODERSYNTAX, ENCNICE, ENCODER, ENCODEROPTS
++do_batch_encode ()
++{
++	# The commands here don't go through run_command because they're never supposed to be silenced
++	echo "Batch encoding tracks: $TRACKQUEUE"
++	case "$OUTPUTTYPE" in
++	mp3)
++		case "$ENCODERSYNTAX" in
++		lame)
++			(
++			cd "$ABCDETEMPDIR"
++			TRACKFILES=
++			for UTRACKNUM in $TRACKQUEUE
++			do
++				TRACKFILES="$TRACKFILES track$UTRACKNUM.wav"
++			done
++			nice $ENCNICE $ENCODER $ENCODEROPTS --nogap $TRACKFILES
++			RETURN=$?
++			if [ "$RETURN" != "0" ]; then
++				echo "batch-encode: $ENCODER returned code $RETURN" >> errors
++			else
++				for UTRACKNUM in $TRACKQUEUE
++				do
++					echo encodetrack-$UTRACKNUM >> status
++				done
++			fi
++			)
++			;;
++		esac
++		;;
++	esac
++	# Other encoders fall through to normal encoding as the tracks
++	# have not been entered in the status file.
  }
  
  # do_encode [tracknumber] [hostname]
-@@ -295,6 +306,11 @@ do_encode ()
+@@ -295,6 +352,11 @@
  			;;
  		esac
  		;;
@@ -68,7 +130,69 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  	esac
  	# Only remove .wav if the encoding succeeded
  	if checkerrors encodetrack-$1; then :; else
-@@ -574,7 +590,7 @@ do_cddbread ()
+@@ -302,6 +364,45 @@
+ 	fi
+ }
+ 
++# do_batch_normalize
++# variables used:
++# NORMALIZER, NORMALIZEROPTS
++do_batch_normalize ()
++{
++	# The commands here don't go through run_command because they're never supposed to be silenced
++	echo "Batch normalizing tracks: $TRACKQUEUE"
++	(
++	cd "$ABCDETEMPDIR"
++	BLURB=
++	TRACKFILES=
++	for UTRACKNUM in $TRACKQUEUE
++	do
++		TRACKFILES="$TRACKFILES track$UTRACKNUM.wav"
++	done
++	# XXX: Hard-coded batch option!
++	$NORMALIZER -b $NORMALIZEROPTS $TRACKFILES
++	RETURN=$?
++	if [ "$RETURN" != "0" ]; then
++                echo "batch-normalize: $NORMALIZER returned code $RETURN" >> errors
++	else
++		for UTRACKNUM in $TRACKQUEUE
++		do
++			echo normalizetrack-$UTRACKNUM >> status
++		done
++	fi
++	)
++}
++
++# do_normalize [tracknumber]
++# variables used:
++# TRACKS, TRACKNAME, NORMALIZER, NORMALIZEROPTS
++do_normalize ()
++{
++	IN="$ABCDETEMPDIR/track$1.wav"
++	run_command '' echo "Normalizing track $1 of $TRACKS: $TRACKNAME..."
++	run_command normalizetrack-$1 $NORMALIZER $NORMALIZEROPTS "$IN"
++}
++
+ # do_move [tracknumber]
+ # Deduces the outfile from environment variables
+ # Creates directory if necessary
+@@ -496,6 +597,7 @@
+ 	# following environment variables for them:
+ 	DOCDDB=n
+ 	DOREAD=n
++	DONORMALIZE=n
+ 	DOENCODE=n
+ 	DOTAG=n
+ 	DOMOVE=n
+@@ -507,6 +609,7 @@
+ 		case $ACTION in
+ 		cddb) DOCDDB=y;;
+ 		read) DOREAD=y;;
++		normalize) DONORMALIZE=y; DOREAD=y;;
+ 		encode) DOENCODE=y; DOREAD=y;;
+ 		tag) DOTAG=y; DOREAD=y; DOENCODE=y; DOCDDB=y;;
+ 		move) DOMOVE=y; DOTAG=y; DOREAD=y; DOENCODE=y; DOCDDB=y;;
+@@ -574,7 +677,7 @@
  			fi
  			# List out disc title/author and contents
  			echo ---- "$(cut '-d ' -f4- "$ABCDETEMPDIR/cddbquery")" ---- >> "$ABCDETEMPDIR/cddbchoices"
@@ -77,7 +201,7 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  			do
  				echo $TRACK: "$(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.1" | cut -f2- -d= | tr -d \\r\\n)" >> "$ABCDETEMPDIR/cddbchoices"
  			done
-@@ -590,7 +606,7 @@ do_cddbread ()
+@@ -590,7 +693,7 @@
  			$CDDBTOOL template $(cat "$ABCDETEMPDIR/discid") > "$ABCDETEMPDIR/cddbread.1"
  			# List out disc title/author and contents of template
  			echo ---- Unknown Artist / Unknown Album ---- >> "$ABCDETEMPDIR/cddbchoices"
@@ -86,7 +210,7 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  			do
  				echo $TRACK: "$(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.1" | cut -f2- -d= | tr -d \\r\\n)" >> "$ABCDETEMPDIR/cddbchoices"
  			done
-@@ -620,7 +636,7 @@ do_cddbread ()
+@@ -620,7 +723,7 @@
  				fi
  				# List out disc title/author and contents
  				echo \#$X: ---- "$DISCINFO" ---- >> "$ABCDETEMPDIR/cddbchoices"
@@ -95,7 +219,7 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  				do
  					echo $TRACK: "$(grep ^TTITLE$(expr $TRACK - 1)= "$ABCDETEMPDIR/cddbread.$X" | cut -f2- -d= | tr -d \\r\\n)" >> "$ABCDETEMPDIR/cddbchoices"
  				done
-@@ -766,6 +782,9 @@ do_cddbedit ()
+@@ -766,6 +869,9 @@
  		elif [ "$(grep -c "^TTITLE.*\-" "$CDDBDATA")" -gt "$(expr $NUMTRACKS / 2 )" ]; then
  			# More than 1/2 contain a "-", so guess forward-dash
  			DEFAULTSTYLE=2
@@ -105,7 +229,7 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  		fi
  
  		echo "1) Artist / Title" >&2
-@@ -773,21 +792,22 @@ do_cddbedit ()
+@@ -773,21 +879,22 @@
  		echo "3) Title / Artist" >&2
  		echo "4) Title - Artist" >&2
  		echo "5) Artist: Title" >&2
@@ -135,7 +259,7 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  		done
  		if [ "$VARIOUSARTISTSTYLE" = "0" ]; then
  			VARIOUSARTISTSTYLE=$DEFAULTSTYLE
-@@ -809,7 +829,10 @@ do_cddbedit ()
+@@ -809,7 +916,10 @@
  		5) # Artist: Title
  			VARIOUSARTISTSTYLE=colon
  			;;
@@ -147,7 +271,15 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  			VARIOUSARTISTS=n
  			;;
  		esac
-@@ -909,6 +932,7 @@ XINGMP3ENC=xingmp3enc
+@@ -899,6 +1009,7 @@
+ READNICE=10
+ VARIOUSARTISTS=n
+ VARIOUSARTISTSTYLE=forward
++NORMALIZERSYNTAX=default
+ 
+ # program paths - defaults to checking your $PATH
+ LAME=lame
+@@ -909,6 +1020,7 @@
  MP3ENC=mp3enc
  VORBIZE=vorbize
  OGGENC=oggenc
@@ -155,7 +287,15 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  ID3=id3
  ID3V2=id3v2
  CDPARANOIA=cdparanoia
-@@ -929,9 +953,9 @@ XINGMP3ENCOPTS=
+@@ -919,6 +1031,7 @@
+ EJECT=eject
+ DISTMP3=distmp3
+ VORBISCOMMENT=vorbiscomment
++NORMALIZE=normalize
+ 
+ # Options for programs called from abcde
+ LAMEOPTS=
+@@ -929,14 +1042,15 @@
  MP3ENCOPTS=
  VORBIZEOPTS=
  OGGENCOPTS=
@@ -166,7 +306,13 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  CDDA2WAVOPTS=
  WGETOPTS=
  CDDBTOOLOPTS=
-@@ -948,7 +972,7 @@ ACTIONS=cddb,read,encode,tag,move,clean
+ EJECTOPTS=
+ DISTMP3OPTS=
++NORMALIZEOPTS=
+ 
+ # Default to one process if -j isn't specified
+ MAXPROCS=1
+@@ -948,7 +1062,7 @@
  # Custom filename munging:
  mungefilename ()
  {
@@ -175,7 +321,7 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  }
  
  # If CDDBAVAIL is set to n, no CDDB read is done
-@@ -964,17 +988,13 @@ if [ -z "$WAVOUTPUTDIR" ]; then
+@@ -964,17 +1078,13 @@
  	WAVOUTPUTDIR="$OUTPUTDIR"
  fi
  
@@ -198,7 +344,19 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  fi
  # Load user preference defaults
  if [ -r $HOME/.abcde.conf ]; then
-@@ -1010,7 +1030,7 @@ while [ $# -gt 0 ]; do
+@@ -982,9 +1092,10 @@
+ fi
+ 
+ # Parse command line options
+-while getopts a:c:C:d:Dhj:lnNo:r:x opt ; do
++while getopts a:bc:C:d:Dhj:lnNo:r:x opt ; do
+ 	case "$opt" in
+ 		a) ACTIONS="$OPTARG" ;;
++		b) BATCH=y ;;
+ 		c) . "$OPTARG" ;;
+ 		C) DISCID="$OPTARG" ;;
+ 		d) CDROM="$OPTARG" ;;
+@@ -1010,7 +1121,7 @@
  	if [ "$RSTART" = "$REND" ]; then 
  		NEWTRACKS="$RSTART"
  	else
@@ -207,11 +365,19 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  	fi
  	TRACKQUEUE=$(echo "$TRACKQUEUE" "$NEWTRACKS")
  
-@@ -1029,13 +1049,18 @@ case "$CDROMREADERSYNTAX" in
+@@ -1029,12 +1140,25 @@
  		;;
  esac
  
 -# If nothing has been specified, use oggenc for oggs and lame for mp3s
++# There's only one normalize...
++case "$NORMALIZERSYNTAX" in
++	default|normalize)
++		NORMALIZER="$NORMALIZE"
++		NORMALIZEROPTS="$NORMALIZEOPTS"
++		;;
++esac
++
 +# If nothing has been specified, use oggenc for oggs and lame for mp3s and flac
 +# for flacs
  if [ "$ENCODERSYNTAX" = "default" ]; then
@@ -220,16 +386,14 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
 -	else
 +	elif [ "$OUTPUTTYPE" = "mp3" ]; then
  		ENCODERSYNTAX=lame
--	fi
 +	elif [ "$OUTPUTTYPE" = "flac" ]; then
-+                ENCODERSYNTAX=flac
-+        else 
-+      		echo "abcde error: Invalid OUTPUTTYPE defined" >&2
-+        fi
++		ENCODERSYNTAX=flac
++	else 
++		echo "abcde error: Invalid OUTPUTTYPE defined" >&2
+ 	fi
  fi
  
- # decide which encoder
-@@ -1072,6 +1097,11 @@ case "$ENCODERSYNTAX" in
+@@ -1072,6 +1196,11 @@
  		ENCODEROPTS="$OGGENCOPTS"
  		ENCODER="$OGGENC"
  		;;
@@ -241,19 +405,94 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  esac
  
  # and which tagger
-@@ -1099,9 +1129,10 @@ if [ "$REMOTEHOSTS" ]; then NEEDDISTMP3=
+@@ -1098,10 +1227,13 @@
+ if [ "$REMOTEHOSTS" ]; then NEEDDISTMP3=y; fi	
  if [ "$OUTPUTTYPE" = "mp3" ]; then NEEDTAGGER=y; fi
  if [ "$OUTPUTTYPE" = "ogg" ]; then NEEDCOMMENTER=y; fi
- 
++if [ "$DONORMALIZE" = "y" ]; then NEEDNORMALIZER=y; fi
 +
+ 
  # Make sure a buncha things exist
  for X in $CDROMREADER $CDDISCID ${NEEDTAGGER+$TAGGER} $ENCODER $WGET \
 -	${NEEDDISTMP3+$DISTMP3} ${NEEDCOMMENTER+$VORBISCOMMENT} seq
-+	${NEEDDISTMP3+$DISTMP3} ${NEEDCOMMENTER+$VORBISCOMMENT} jot
++	${NEEDDISTMP3+$DISTMP3} ${NEEDCOMMENTER+$VORBISCOMMENT} \
++	${NEEDNORMALIZER+$NORMALIZER} jot
  do
  	# Cut off the command-line options we just added in
  	X=$(echo $X | cut -d' ' -f2)
-@@ -1191,7 +1222,7 @@ fi
+@@ -1119,7 +1251,7 @@
+ 
+ # One thousand lines in, we can start doing stuff with things
+ 
+-# List of valid actions: cddb,playlist,read,encode,tag,move
++# List of valid actions: cddb,playlist,read,normalize,encode,tag,move
+ 
+ do_discid # Get ABCDETEMPDIR created and status file initialized
+ 
+@@ -1161,16 +1293,20 @@
+ 			fi
+ 		fi
+ 	fi
+-	echo NEXTTRACK # Get the encoder machine churning again
+-	if [ "$DOREAD" = "y" ]; then
+-		if [ "$LOWDISK" = "y" ] && [ "$DOENCODE" = "y" ]; then
+-			until checkstatus encodetrack-$UTRACKNUM
+-			do
+-				if checkerrors encodetrack-$UTRACKNUM; then
+-					break
+-				fi
+-				sleep 2
+-			done
++	if [ "$BATCH" = "y" ]; then
++	    :
++	else
++		echo NEXTTRACK # Get the encoder machine churning again
++		if [ "$DOREAD" = "y" ]; then
++			if [ "$LOWDISK" = "y" ] && [ "$DOENCODE" = "y" ]; then
++				until checkstatus encodetrack-$UTRACKNUM
++				do
++					if checkerrors encodetrack-$UTRACKNUM; then
++						break
++					fi
++					sleep 2
++				done
++			fi
+ 		fi
+ 	fi
+ done
+@@ -1181,17 +1317,39 @@
+ 	echo "encode-output=loud" >> "$ABCDETEMPDIR/status"
+ fi
+ 
++# All tracks read, start encoding.
++if [ "$BATCH" = "y" ]; then
++	echo NEXTTRACK
++fi
++
+ # We are now finished with the cdrom - it can be safely ejected. Note that
+ # abcde will not have completed yet.
+ if [ "$EJECTCD" = "y" ]; then
+ 	$EJECT $EJECTOPTS $CDROM
+ fi
+ ) | (
++# In batch mode, we want all tracks to be read first.
++if [ "$BATCH" = "y" ]; then
++	read GOAHEAD # For blocking - will contain either "NO" or "NEXTTRACK"
++	if [ "$GOAHEAD" = "NO" ]; then break; fi
++	for LASTTRACK in $TRACKQUEUE; do :; done
++	if checkstatus readtrack-$LASTTRACK; then
++		if [ "$DONORMALIZE" = "y" ]; then
++			if checkstatus normalizetrack-$LASTTRACK; then :; else do_batch_normalize; fi
++			if checkerrors batch-normalize; then exit; fi
++		fi
++		if [ "$DOENCODE" = "y" ]; then
++			if checkstatus encodetrack-$LASTTRACK; then :; else do_batch_encode; fi
++			if checkerrors batch-encode; then exit; fi
++		fi
++	fi
++fi
++
+ # Do the encoding, including parallelization of remote encoding
  # Figure out where each track is going to be encoded
  ENCODELOCATIONS="$(echo $REMOTEHOSTS | tr , ' ')"
  if [ "$MAXPROCS" != "0" ]; then
@@ -262,3 +501,25 @@ $NetBSD: patch-ac,v 1.9 2002/12/16 05:14:30 lukem Exp $
  	do
  		ENCODELOCATIONS="$ENCODELOCATIONS %local$NUM%"
  	done
+@@ -1253,9 +1411,20 @@
+ 	# You can't tag a file before it's finished encoding -
+ 	# thus all of this is backgrounded together
+ 	(
++	if [ "$DONORMALIZE" = "y" ]; then
++		if checkstatus readtrack-$UTRACKNUM; then
++			if checkstatus normalizetrack-$UTRACKNUM; then :; else do_normalize $UTRACKNUM; fi
++		fi
++	fi
+ 	if [ "$DOENCODE" = "y" ]; then
+ 		if checkstatus readtrack-$UTRACKNUM; then
+-			if checkstatus encodetrack-$UTRACKNUM; then :; else do_encode $UTRACKNUM $LOCATION; fi
++			if [ "$DONORMALIZE" = "y" ]; then
++				if checkstatus normalizetrack-$UTRACKNUM; then
++					if checkstatus encodetrack-$UTRACKNUM; then :; else do_encode $UTRACKNUM $LOCATION; fi
++				fi
++			else
++				if checkstatus encodetrack-$UTRACKNUM; then :; else do_encode $UTRACKNUM $LOCATION; fi
++			fi
+ 		fi
+ 	fi
+ 	if [ "$DOTAG" = "y" ]; then
