@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.nolinguas,v 1.7 1999/09/21 18:05:40 tron Exp $
+@comment $NetBSD: PLIST.nolinguas,v 1.8 1999/10/05 20:46:55 tron Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -287,6 +287,7 @@ share/WindowMaker/menu.ja
 share/WindowMaker/menu.ko
 share/WindowMaker/menu.nl
 share/WindowMaker/menu.no
+share/WindowMaker/menu.pl
 share/WindowMaker/menu.pt
 share/WindowMaker/menu.ru
 share/WindowMaker/menu.se

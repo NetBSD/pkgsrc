@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 1999/09/21 18:05:38 tron Exp $
+# $NetBSD: Makefile,v 1.35 1999/10/05 20:46:53 tron Exp $
 
-DISTNAME=		WindowMaker-0.61.0
-PKGNAME=		windowmaker-0.61.0
+DISTNAME=		WindowMaker-0.61.1
+PKGNAME=		windowmaker-0.61.1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
 			ftp://shadowmere.student.utwente.nl/pub/WindowMaker/ \
@@ -12,7 +12,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://www.windowmaker.org/
 
-DEPENDS+=		libproplist-0.8.3:../../devel/libproplist
+DEPENDS+=		libproplist-0.9.*:../../devel/libproplist
 DEPENDS+=		giflib-3.0:../../graphics/giflib
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png-1.0.3:../../graphics/png
