@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/04 08:01:31 garbled Exp $
+bin/esd
+bin/esdcat
+bin/esdctl
+bin/esdmon
+bin/esdrec
+bin/esdsample
+bin/esdloop
+include/esd.h
+lib/libesd.so.0.0
+lib/libesd.a
