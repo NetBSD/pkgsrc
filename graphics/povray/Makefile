@@ -1,28 +1,27 @@
-# $NetBSD: Makefile,v 1.23 2004/10/03 00:14:57 tv Exp $
+# $NetBSD: Makefile,v 1.24 2004/11/18 15:57:37 adam Exp $
 
-DISTNAME=	povuni_s
-PKGNAME=	povray-3.50c
-PKGREVISION=	3
+DISTNAME=	povray-3.6.1
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.povray.org/pub/povray/Official/Unix/\
+MASTER_SITES=	ftp://ftp.povray.org/pub/povray/Official/Unix/ \
 	 	ftp://ftp.mirror.ac.uk/sites/ftp.povray.org/pub/povray/Official/Unix/
-EXTRACT_SUFX=	.tgz
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gavan@NetBSD.org
 HOMEPAGE=	http://www.povray.org/
 COMMENT=	Persistence of Vision Ray Tracer
 
 LICENSE=	povray-license
-DIST_SUBDIR=	${PKGNAME_NOREV}
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
-USE_X11=	YES
-GNU_CONFIGURE=	YES
-USE_BUILDLINK3=	YES
-USE_LANGUAGES=	c c++
-USE_PKGINSTALL=	YES
+USE_BUILDLINK3=		YES
+USE_LANGUAGES=		c c++
+USE_PKGINSTALL=		YES
+USE_X11=		YES
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--enable-strip
+CONFIGURE_ENV+=		COMPILED_BY="The NetBSD Packages Collection"
 
-CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR}
+PLIST_SUBST+=	POVRAY=povray-3.6
 
 EGDIR=		${PREFIX}/share/examples/povray
 CONF_FILES=	${EGDIR}/povray.conf ${PKG_SYSCONFDIR}/povray.conf
@@ -33,6 +32,9 @@ SUBST_MESSAGE.povini=	"Fixing Library_Path in povray.ini."
 SUBST_FILES.povini=	povray.ini
 SUBST_SED.povini=	-e 's|/usr/local|${PREFIX}|'
 SUBST_STAGE.povini=	post-patch
+
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/povray-3.6/scripts
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
