@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/14 17:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/22 20:01:28 dmcmahill Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
@@ -20,12 +20,13 @@ PKGVERSION=		20030901
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
 INFO_FILES=		libgedadoc.info
 
-.include "../../devel/libstroke/buildlink2.mk"
-.include "../../graphics/libgdgeda/buildlink2.mk"
-.include "../../lang/guile/buildlink2.mk"
-.include "../../x11/gtk2/buildlink2.mk"
+.include "../../devel/libstroke/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/libgdgeda/buildlink3.mk"
+.include "../../lang/guile/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
