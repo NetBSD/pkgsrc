@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2001/08/13 11:14:30 rh Exp $
+# $NetBSD: Makefile,v 1.54 2001/08/13 19:20:16 rh Exp $
 #
 
 DISTNAME=		imlib-1.9.11
@@ -31,6 +31,7 @@ CONFIGURE_ENV+=		X_LDFLAGS="${X_LDFLAGS}"
 X_LDFLAGS=		-Wl,-R${X11BASE}/lib -L${X11BASE}/lib
 
 pre-configure:
+	${TOUCH} ${WRKSRC}/ltconfig
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf --include-deps --force
 
 post-install:
