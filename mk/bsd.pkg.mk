@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.379 1999/12/29 16:04:18 bad Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.380 2000/01/05 16:55:32 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2570,7 +2570,7 @@ fake-pkg: ${PLIST} ${DESCR}
 		for dep in `${MAKE} package-depends PACKAGE_DEPENDS_WITH_PATTERNS=true ECHO_MSG=${TRUE} | sort -u`; do \
 			realdep="`${PKG_INFO} -e \"$$dep\" || ${TRUE}`" ; \
 			${ECHO} "a sanity check should be put in here to prevent some user having the pkg installed/registered twice somehow - HF" >/dev/null ; \
-			if ${TEST} -z $$realdep; then			\
+			if ${TEST} -z "$$realdep"; then			\
 				${ECHO} "$$dep not installed - NOT registered" ; \
 			elif [ -d ${PKG_DBDIR}/$$realdep ]; then	\
 				if ${TEST} ! -e ${PKG_DBDIR}/$$realdep/+REQUIRED_BY; then \
@@ -2655,6 +2655,7 @@ MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/
 MANZ_EXPRESSION= 
 .endif # SunOS
 
+plist: ${PLIST}
 ${PLIST}: ${PLIST_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -z "${PLIST_SRC}" ]; then					\
