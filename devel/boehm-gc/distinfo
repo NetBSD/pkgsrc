@@ -1,13 +1,8 @@
-$NetBSD: distinfo,v 1.4 2001/05/04 01:28:15 jlam Exp $
+$NetBSD: distinfo,v 1.5 2001/09/08 00:36:09 kei Exp $
 
-SHA1 (gc5.3.tar.gz) = b9acd4ac18ad56ca5b16dad23e5bf589720c6b8a
-Size (gc5.3.tar.gz) = 369125 bytes
-SHA1 (patch-aa) = 7985474afb5efbf80c7f140df066159b4220bd2b
-SHA1 (patch-ab) = 1168c658e55389d16cf3629195f1b7a21966b1dd
-SHA1 (patch-ac) = 4ea3367e7d54b2c2c55260445f2b57c1a2bfab74
-SHA1 (patch-ad) = 1a6fb30bf57d40b477ce08bfbb0cf860c2d25b00
-SHA1 (patch-ae) = 24aa52eec33fe25657514afa2aa025eff33b6380
-SHA1 (patch-af) = 98b8e418abfa95c34d6c6d17fa3b7256dadf41f2
-SHA1 (patch-ag) = 7beb9787669071a99c13ad4f04122eaf5a9839a4
-SHA1 (patch-ah) = 9863fcd96eb416f78b73fb579987ff10e8786205
-SHA1 (patch-ai) = c521f8c281e54b6f47c002a3866799b655417ee4
+SHA1 (gc6.0.tar.gz) = 9698826b33472b314d7b2eb640c1669ce05f5277
+Size (gc6.0.tar.gz) = 562188 bytes
+SHA1 (patch-aa) = e8558979454b3cff1f53b991648309ae0145080c
+SHA1 (patch-ac) = 38b22813cf2861dcbc9739d70f9fefe69acf3210
+SHA1 (patch-ad) = 66cdc0fdbf78c527b3fccfa54895a5f06d482268
+SHA1 (patch-ai) = aabb71b2e064d033290e595fa6addc9b779add15
