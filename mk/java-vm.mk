@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.13 2003/05/09 11:31:46 abs Exp $
+# $NetBSD: java-vm.mk,v 1.14 2003/05/25 18:39:12 jlam Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -8,11 +8,13 @@
 #	  to the directory in which the JVM is installed, respectively;
 #
 #	* add a full dependency on the JRE and possibly a build dependency
-#	  on the JDK, based on the value of USE_JAVA (if nonempty).  You
-#	  must explicitly set USE_JAVA=run to _not_ add the build dependency
-#	  on the JDK;
+#	  on the JDK.
 #
-# There are three variables used to tweak the JVM selection:
+# There are four variables used to tweak the JVM selection:
+#
+# USE_JAVA is used to note whether a build-time dependency on the JDK is
+#	added (the default).  If USE_JAVA is set to "run", then we _don't_
+#	add the dependency on the JDK.  The default value is "yes".
 #
 # USE_JAVA2 is used to note that the package requires a Java2 implementation.
 #	It's undefined by default, but may be set to "yes".
