@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2004/03/16 02:01:12 taca Exp $
+# $NetBSD: Makefile,v 1.11 2004/03/16 23:54:25 minskim Exp $
 # FreeBSD: ports/lang/ruby-tcltklib/Makefile,v 1.21 2000/10/20 19:56:04 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGNAMEPREFIX}tcltklib-${RUBY_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -11,8 +11,8 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.ruby-lang.org/en/
 COMMENT=	Ruby interface to Tcl/Tk libraries
 
-DEPENDS+=	tcl>=8.3:../../lang/tcl83
-DEPENDS+=	tk>=8.3:../../x11/tk83
+DEPENDS+=	tcl>=8.4:../../lang/tcl
+DEPENDS+=	tk>=8.4:../../x11/tk
 
 WRKSRC=		${RUBY_WRKSRC}/ext/tcltklib
 DIST_SUBDIR=	ruby
@@ -31,8 +31,8 @@ CONFIGURE_ARGS=	--with-tcllib="${TCL_LIB}" --with-tklib="${TK_LIB}" \
 # Set these vars as the version numbers (without decimal points) of Tcl/Tk
 # you want to use with Ruby/Tk.
 # e.g.: make TCL_VERSION=42 TK_VERSION=76 WITH_TCL_JP=yes build
-TCL_VERSION?=	83
-TK_VERSION?=	83
+TCL_VERSION?=	84
+TK_VERSION?=	84
 #.if defined(WITH_TCLTK_JP)
 #TCL_CATEGORY=	japanese
 #TK_CATEGORY=	japanese
