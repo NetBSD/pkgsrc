@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/01/11 07:40:55 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2004/02/14 18:03:03 snj Exp $
 
 DISTNAME=		cyrus-imapd-2.1.15
 PKGREVISION=		2
@@ -20,7 +20,6 @@ AUTOCONF_REQD=		2.13
 
 USE_PKGINSTALL=		YES
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
