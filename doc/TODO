@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.646 2003/06/18 09:10:38 wiz Exp $
+$NetBSD: TODO,v 1.647 2003/06/18 10:39:11 drochner Exp $
 
 Suggested new packages
 ======================
@@ -125,7 +125,6 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o gimageview-0.2.22 [pkg/21851]
 	o gimageview-0.2.23
-	o gimp-1.2.5
 	o icewm-1.2.8
 	o gkrellm-2.1.12 [pkgsrc-wip]
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
