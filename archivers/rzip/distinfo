@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/29 15:29:04 recht Exp $
+
+SHA1 (rzip-2.0.tar.gz) = 65d3d95689d14a6fb3b7c805768bf34868de5c17
+Size (rzip-2.0.tar.gz) = 42699 bytes
+SHA1 (patch-aa) = efa046e26d01dc5d38cb4648119e8cd2ad91ea41
