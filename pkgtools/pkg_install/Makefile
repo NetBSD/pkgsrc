@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2002/12/20 18:27:14 schmonz Exp $
+# $NetBSD: Makefile,v 1.60 2002/12/21 04:08:47 schmonz Exp $
 
 # Notes to package maintainers:
 #
@@ -16,6 +16,8 @@ DISTFILES=		# empty
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/
 COMMENT=		NetBSD-current's pkg_* tools
+
+USE_BUILDLINK2=		no
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
