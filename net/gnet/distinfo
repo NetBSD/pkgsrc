@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2003/04/22 13:49:05 wiz Exp $
+$NetBSD: distinfo,v 1.10 2003/05/07 12:43:46 wiz Exp $
 
-SHA1 (gnet-2.0.1.tar.gz) = 92f98a4de9859b5f5650668f5901bacbaf53631f
-Size (gnet-2.0.1.tar.gz) = 447574 bytes
+SHA1 (gnet-2.0.2.tar.gz) = 69ca1f067e169f0bcb51adb1055a5fb6487f75db
+Size (gnet-2.0.2.tar.gz) = 447775 bytes
 SHA1 (patch-ad) = 4c7e3a07df6f1018fe9446db333348eaf587225e
 SHA1 (patch-ae) = cf642dc0f9ea7a6c87ef0a9fb6be0f110d42232d
