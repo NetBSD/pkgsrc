@@ -1,30 +1,35 @@
-# $NetBSD: Makefile,v 1.10 2003/07/21 17:20:17 martti Exp $
+# $NetBSD: Makefile,v 1.11 2004/02/24 23:05:08 heinz Exp $
 #
 
-DISTNAME=		Crypt-RSA-1.47
+DISTNAME=		Crypt-RSA-1.50
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		# empty
 SVR4_PKGNAME=		p5rsa
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
-#HOMEPAGE=	
+MAINTAINER=		heinz@NetBSD.org
+HOMEPAGE=		http://search.cpan.org/dist/Crypt-RSA/
 COMMENT=		Perl5 module of the RSA public key algorithm
 
-DEPENDS+=		p5-Math-Pari-[0-9]*:../../math/p5-Math-Pari
-DEPENDS+=		p5-Crypt-Random-[0-9]*:../../security/p5-Crypt-Random
-DEPENDS+=		p5-Crypt-Primes-[0-9]*:../../security/p5-Crypt-Primes
+DEPENDS+=		p5-Math-Pari>=2.001804:../../math/p5-Math-Pari
+DEPENDS+=		p5-Crypt-Random>=0.34:../../security/p5-Crypt-Random
+DEPENDS+=		p5-Crypt-Primes>=0.38:../../security/p5-Crypt-Primes
+DEPENDS+=		p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
+DEPENDS+=		p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
 DEPENDS+=		p5-Tie-EncryptedHash-[0-9]*:../../security/p5-Tie-EncryptedHash
 DEPENDS+=		p5-Convert-ASCII-Armour-[0-9]*:../../textproc/p5-Convert-ASCII-Armour
 DEPENDS+=		p5-SortVersions-[0-9]*:../../devel/p5-SortVersions
 DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=		p5-Digest-MD5>=2.16:../../security/p5-Digest-MD5
 DEPENDS+=		p5-Digest-MD2-[0-9]*:../../security/p5-Digest-MD2
-DEPENDS+=		p5-Class-Loader-[0-9]*:../../devel/p5-Class-Loader
+DEPENDS+=		p5-Class-Loader>=2.00:../../devel/p5-Class-Loader
 DEPENDS+=		p5-Data-Buffer-[0-9]*:../../devel/p5-Data-Buffer
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
+USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/RSA/.packlist
 
 .include "../../lang/perl5/module.mk"
