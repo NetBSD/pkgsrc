@@ -1,2 +1,3 @@
+@comment $NetBSD: PLIST,v 1.2 1998/01/24 20:48:01 hubertf Exp $
 bin/vat
 man/man1/vat.1.gz
