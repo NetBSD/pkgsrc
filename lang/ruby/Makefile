@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.32 2005/03/06 13:05:38 taca Exp $
+# $NetBSD: Makefile,v 1.33 2005/03/06 16:46:05 taca Exp $
 # FreeBSD: ports/lang/ruby/Makefile,v 1.40 2001/01/18 19:53:38 knu Exp
 
 DISTNAME=	ruby-${RUBY_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang ruby
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.ruby-lang.org/en/
-COMMENT=	Ruby, object-oriented interpreted programming language
+COMMENT=	Wrapper package for Ruby programming language
 
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
@@ -19,7 +19,7 @@ PLIST_SRC=	${WRKDIR}/PLIST
 
 .include "../../lang/ruby/rubyversion.mk"
 
-DEPENDS+= 	${RUBY_PKGPREFIX}>=${RUBY_VERSION}:../${RUBY_PKGPREFIX}
+DEPENDS+= ${RUBY_PKGPREFIX}-base>=${RUBY_VERSION}:../${RUBY_PKGPREFIX}-base
 
 RUBY_COMMANDS=	irb ruby
 .if ${RUBY_VER} >= 18
