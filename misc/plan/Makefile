@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/12/30 10:02:33 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1999/01/29 19:49:11 tron Exp $
 #
 
 DISTNAME=	plan-1.7.2

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1998/11/12 14:53:31 agc Exp $
+$NetBSD: patch-aa,v 1.3 1999/01/29 19:49:45 tron Exp $
 
 --- Makefile.orig	Sat May  9 22:21:09 1998
 +++ Makefile	Thu Sep  3 23:15:04 1998

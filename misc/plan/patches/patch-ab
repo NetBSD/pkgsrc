@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 1998/12/30 10:02:33 frueauf Exp $
+$NetBSD: patch-ab,v 1.2 1999/01/29 19:49:45 tron Exp $
 
 --- time.c-orig	Wed Jan 14 21:36:09 1998
 +++ time.c	Wed Dec 30 10:48:35 1998
