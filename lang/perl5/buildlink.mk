@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/11/28 05:40:18 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/11/30 17:21:56 jlam Exp $
 #
 # This Makefile fragment is included by packages that use perl.
 #
@@ -66,7 +66,7 @@ perl-buildlink:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.perl_buildlink_done;			\
 	if [ ! -f $${cookie} ]; then					\
-		${ECHO_MSG} "Creating ${_BUILDLINK_CONFIG_PM}.";	\
+		${ECHO_BUILDLINK_MSG} "Creating ${_BUILDLINK_CONFIG_PM}.";	\
 		${MKDIR} ${_BUILDLINK_CONFIG_PM:H};			\
 		${SED} ${_CONFIG_PM_SED} ${_CONFIG_PM}			\
 			> ${_BUILDLINK_CONFIG_PM};			\

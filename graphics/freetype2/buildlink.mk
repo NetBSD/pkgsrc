@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.12 2001/10/03 20:56:49 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.13 2001/11/30 17:21:55 jlam Exp $
 #
 # This Makefile fragment is included by packages that use freetype2.
 #
@@ -70,7 +70,7 @@ BUILDLINK_CONFIG_WRAPPER.freetype2=	${BUILDLINK_CONFIG.freetype2}
 freetype2-buildlink-config:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ ! -f ${BUILDLINK_CONFIG.freetype2} ]; then			\
-		${ECHO_MSG} "Creating config script ${BUILDLINK_CONFIG.freetype2}."; \
+		${ECHO_BUILDLINK_MSG} "Creating config script ${BUILDLINK_CONFIG.freetype2}."; \
 		${MKDIR} ${BUILDLINK_CONFIG.freetype2:H};		\
 		${SED}	-e "s|@AWK@|${AWK}|g"				\
 			-e "s|@SED@|${SED}|g"				\
