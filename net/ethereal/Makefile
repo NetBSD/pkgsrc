@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.98 2004/10/09 12:09:15 adrianp Exp $
+# $NetBSD: Makefile,v 1.99 2004/10/31 13:22:53 adrianp Exp $
 
-DISTNAME=	ethereal-0.10.6
+DISTNAME=	ethereal-0.10.7
 PKGREVISION=	# defined1
 CATEGORIES=	net
 MASTER_SITES=	http://www.ethereal.com/distribution/ \
@@ -38,6 +38,7 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-net-snmp
 CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
+CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ENV+=		ac_cv_func_pcap_compile_nopcap=no
 
 PTHREAD_OPTS=		require
@@ -49,6 +50,7 @@ USE_BUILTIN.libpcap=	no
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
