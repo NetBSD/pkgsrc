@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:16:06 agc Exp $
+
+MD5 (xmeter-1.15.tar.gz) = 5dba2e3c27d0adfcef107855c3e56e68
+SHA1 (patch-aa) = f2f5415d53864a2eea2673e0a37a14d3c6f36a39

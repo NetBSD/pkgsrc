@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:15:13 agc Exp $
+
+MD5 (kterm-6.2.0.tar.gz) = 9cc72841b50dfba92bce01dbbebf3039
+MD5 (kterm-620-0213-20001107.diff.gz) = 4c3989a76c49f6d7e2c7fabd8237bbbb
+MD5 (KTerm-BGP-1.0.patch.gz) = 755546d138604f6a6e7120c4bc44d28b
+SHA1 (patch-aa) = eaf65b3832b493cf0354b504dc546f42f45af303

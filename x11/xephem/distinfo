@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:15:50 agc Exp $
+
+MD5 (xephem-3.4.tar.gz) = 9ec29999d081caabbf21cba941734c6c
+SHA1 (patch-aa) = 4f27922e46d18486e9d0931f4107ededb0c46b1b
+SHA1 (patch-ac) = c53bd1e08396eef2240f2e4c26d0961de80d2ebb
+SHA1 (patch-ad) = f61619f628a0dc47b8c6e50e454e270a788ba9d4
+SHA1 (patch-ae) = ede7fae621127ce381f144f3a56fe47b98ebb95e

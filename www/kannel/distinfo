@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:12:51 agc Exp $
+
+MD5 (gateway-0.8.tar.gz) = 107313aa61335d1441d2351806039dec
+SHA1 (patch-aa) = 3e6d7ff5bee28542c3d7028e87ef5706a4508876
+SHA1 (patch-ab) = 0f164cb33bd378b9bd57ef1a2a915f327048a1ad
+SHA1 (patch-ac) = 999876706143fe7e02e753071a13920119134454

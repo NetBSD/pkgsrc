@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:13:34 agc Exp $
+
+MD5 (python/Zope-2.2.2-src.tgz) = 83c8197f18bf97ad62bf2c5e424e2b82
+SHA1 (patch-aa) = b60ae122e42dec711fb2d27f34f0cff6c2fe7d41
+SHA1 (patch-ab) = ac3c8bd288f1521c07ca2d7845132b89d46dbbd8

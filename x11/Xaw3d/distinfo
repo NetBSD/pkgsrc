@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 12:14:41 agc Exp $
+
+MD5 (Xaw3d-1.5.tar.gz) = a77aa4ebe3be7964e4dbbc351e48277f
+SHA1 (patch-aa) = e9a10b671d0b8595a43be0939fb776927661a455
+SHA1 (patch-ab) = 0233ff209e06c8a699c23907be3af442ed099ff1
