@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/12/28 00:29:02 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/12/29 18:23:09 wiz Exp $
 #
 
 DISTNAME=	wml-2.0.3
@@ -29,7 +29,7 @@ USE_BUILDLINK2=	yes
 TEST_TARGET=	test
 
 INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
-INCOMPAT_CURSES=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*
+INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-C]*
 
 post-install:
 	cd ${PREFIX}/man/cat1 ; \
