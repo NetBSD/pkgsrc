@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2002/08/31 09:25:05 magick Exp $
+$NetBSD: patch-aa,v 1.9 2002/11/24 17:23:40 magick Exp $
 
---- Makefile.orig	Sat Aug 31 11:13:30 2002
+--- Makefile.orig	Tue Nov 19 20:03:24 2002
 +++ Makefile
-@@ -33,40 +33,42 @@
+@@ -33,34 +33,34 @@
  else
  
  ROOT    =
@@ -11,6 +11,8 @@ $NetBSD: patch-aa,v 1.8 2002/08/31 09:25:05 magick Exp $
  exec_prefix = ${prefix}
  bindir  = $(ROOT)${exec_prefix}/bin
  mandir  = $(ROOT)${prefix}/man/man1
+-resdir  = $(ROOT)/usr/X11R6/lib/X11
++resdir  = $(ROOT)${X11PREFIX}/lib/X11
  
  # if you have perl set the path here, else just leave it alone
 -PERL    = /usr/bin/perl
@@ -35,7 +37,6 @@ $NetBSD: patch-aa,v 1.8 2002/08/31 09:25:05 magick Exp $
 -DEFS   += -DTCL_LIBRARY_PATH=\"/usr/lib/tcl$(TCL_VER)\"
 +DEFS   += -DTK_LIBRARY_PATH=\"$(LOCALBASE)/lib/tk8.3\"  
 +DEFS   += -DTCL_LIBRARY_PATH=\"$(LOCALBASE)/lib/tcl8.3\"  
-+
  
  # enable use of multi-threading
 -DEFS   += -DUSE_THREADS
@@ -45,32 +46,35 @@ $NetBSD: patch-aa,v 1.8 2002/08/31 09:25:05 magick Exp $
  
  # enable use of daemon and client/server connection
  DEFS   += -DUSE_DAEMON
- 
- # path to the directory where the provider database files are kept
--DB_DIR  = /usr/tmp/nxtvdb
--DEFS   += -DEPG_DB_DIR=\"$(DB_DIR)\"
-+DB_DIR  = _PATH_TMP\"nxtvdb\" 
-+DEFS   += -DEPG_DB_DIR=$(DB_DIR) 
-+
- INST_DB_DIR = $(ROOT)$(DB_DIR)
- 
- WARN    = -Wall -Wnested-externs -Wstrict-prototypes -Wmissing-prototypes
-@@ -101,11 +103,9 @@
+@@ -71,8 +71,8 @@
+ #USER_DBDIR  = .nxtvdb
+ #DEFS       += -DEPG_DB_ENV=\"HOME\" -DEPG_DB_DIR=\"$(USER_DBDIR)\"
+ ifndef USER_DBDIR
+-SYS_DBDIR    = /usr/tmp/nxtvdb
+-DEFS        += -DEPG_DB_DIR=\"$(SYS_DBDIR)\"
++SYS_DBDIR    = _PATH_TMP\"nxtvdb\"
++DEFS        += -DEPG_DB_DIR=$(SYS_DBDIR)
+ INST_DB_DIR  = $(ROOT)$(SYS_DBDIR)
+ INST_DB_PERM = 0777
+ endif
+@@ -112,14 +112,9 @@
  install: nxtvepg nxtvepg.1
  	test -d $(bindir) || mkdirhier $(bindir)
  	test -d $(mandir) || mkdirhier $(mandir)
+-ifndef USER_DBDIR
 -	test -d $(INST_DB_DIR) || mkdirhier $(INST_DB_DIR)
--	chmod 0777 $(INST_DB_DIR)
+-	chmod $(INST_DB_PERM) $(INST_DB_DIR)
+-endif
  	install -c -m 0755 nxtvepg     $(bindir)
  	install -c -m 0644 nxtvepg.1   $(mandir)
+ 	install -c -m 0644 Nxtvepg.ad  $(resdir)/app-defaults/Nxtvepg
 -	rm -f $(mandir)/nxtvepg.1x
-+
  
- ##%.o: %.c
- ##	$(CC) $(CFLAGS) -c *.c -o *.o
-@@ -157,7 +157,7 @@
+ .SUFFIXES: .c .o .tcl
+ 
+@@ -171,7 +166,7 @@
+ 	cd .. && tar cf pc1.tar pc -X pc/tar-ex && bzip2 -f -9 pc1.tar
  	tar cf ../pc2.tar www ATTIC dsdrv?* tk8* tcl8* && bzip2 -f -9 ../pc2.tar
- 	cd .. && tar cf /e/pc.tar pc -X pc/tar-ex-win
  
 -include Makefile.dep
 +#include Makefile.dep
