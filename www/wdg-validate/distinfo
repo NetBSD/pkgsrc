@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2002/02/14 16:29:03 abs Exp $
+$NetBSD: distinfo,v 1.5 2002/07/11 09:51:11 wiz Exp $
 
-SHA1 (wdg-validate/validate) = 1150b3c540f304203e0539c320f3d2b7fd43ad6f
-Size (wdg-validate/validate) = 15039 bytes
-SHA1 (wdg-validate/sgml-lib.tar.gz) = 57bc51940b873b66af5c585e1c5d314512bd55eb
-Size (wdg-validate/sgml-lib.tar.gz) = 159465 bytes
-SHA1 (wdg-validate/README) = 0d287e7b41d4c5cb26d22fc22300b229c28ae66a
-Size (wdg-validate/README) = 2418 bytes
+SHA1 (wdg-validate-1.0.4/validate) = eb9ea352528fa5db2cbedc5ad4dbe59aa91d5e58
+Size (wdg-validate-1.0.4/validate) = 15210 bytes
+SHA1 (wdg-validate-1.0.4/sgml-lib-1.0.tar.gz) = 57bc51940b873b66af5c585e1c5d314512bd55eb
+Size (wdg-validate-1.0.4/sgml-lib-1.0.tar.gz) = 159465 bytes
+SHA1 (wdg-validate-1.0.4/README) = 0d287e7b41d4c5cb26d22fc22300b229c28ae66a
+Size (wdg-validate-1.0.4/README) = 2418 bytes
 SHA1 (patch-aa) = e9759bb7d3b949573a87687cc89ecdc3a8aabf61
