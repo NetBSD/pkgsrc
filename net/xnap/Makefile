@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2003/08/23 15:19:55 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/05 13:38:00 drochner Exp $
 #
 
 DISTNAME=	xnap-2.0
 CATEGORIES=	net java
-MASTER_SITES=	http://telia.dl.sourceforge.net/xnap/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xnap/}
 
 MAINTAINER=	Benjamin.Wong@cc.gatech.edu
 HOMEPAGE=	http://xnap.sourceforge.net/
