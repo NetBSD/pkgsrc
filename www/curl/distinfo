@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2002/07/19 04:25:17 mycroft Exp $
+$NetBSD: distinfo,v 1.15 2002/08/25 21:52:04 jlam Exp $
 
 SHA1 (curl-7.9.7.tar.gz) = 6fcb23be788984bcfca7debe5f307ec65fb56101
 Size (curl-7.9.7.tar.gz) = 717489 bytes

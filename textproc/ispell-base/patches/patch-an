@@ -1,4 +1,4 @@
-$NetBSD: patch-an,v 1.1 2002/07/22 10:31:31 agc Exp $
+$NetBSD: patch-an,v 1.2 2002/08/25 21:51:18 jlam Exp $
 
 --- splitdict.orig	Fri Jul 19 21:49:28 2002
 +++ splitdict	Fri Jul 19 21:48:33 2002

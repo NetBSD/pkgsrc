@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/05/02 15:34:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2002/08/25 21:52:49 jlam Exp $
 #
 
 DISTNAME=	wmfire-0.0.3.9pre4
@@ -9,8 +9,9 @@ MASTER_SITES=	http://staff.xmms.org/zinx/misc/
 MAINTAINER=	hubertf@netbsd.org
 COMMENT=	Displays generated fire according to system load
 
-USE_BUILDLINK_ONLY=	YES
-GNU_CONFIGURE=		YES
+USE_BUILDLINK2=	YES
+USE_X11=	YES
+GNU_CONFIGURE=	YES
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wmfire
@@ -20,6 +21,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/CREDITS ${PREFIX}/share/doc/wmfire
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/wmfire
 
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

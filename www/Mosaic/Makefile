@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2002/08/01 02:37:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.36 2002/08/25 21:51:41 jlam Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/05/27 08:44:56 dburr Exp
 #
 
@@ -17,14 +17,14 @@ LICENSE=		mosaic-license
 
 NOT_FOR_PLATFORM=	*-*-alpha	#LP64 problems
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
 USE_MOTIF12=		YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-jpegdir=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-pngdir=${BUILDLINK_DIR}
-CONFIGURE_ARGS+=	--with-zdir=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-jpegdir=${BUILDLINK_PREFIX.jpeg}
+CONFIGURE_ARGS+=	--with-pngdir=${BUILDLINK_PREFIX.png}
+CONFIGURE_ARGS+=	--with-zdir=${BUILDLINK_PREFIX.zlib}
 
 CPPFLAGS+=		-Dunix
 
@@ -39,10 +39,9 @@ do-install:
 		${PREFIX}/lib/X11/app-defaults/Mosaic
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mosaic
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/motif.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/motif.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

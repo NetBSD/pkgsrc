@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2002/08/20 13:41:33 blymn Exp $
+$NetBSD: patch-ab,v 1.4 2002/08/25 21:52:16 jlam Exp $
 
 --- src/LYCurses.c.orig	Tue Aug 20 22:33:51 2002
 +++ src/LYCurses.c

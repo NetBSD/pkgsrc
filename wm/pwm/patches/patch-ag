@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2001/09/09 03:10:08 jlam Exp $
+$NetBSD: patch-ag,v 1.3 2002/08/25 21:51:36 jlam Exp $
 
 --- system.mk.orig	Sat Jul  1 12:37:50 2000
 +++ system.mk
@@ -16,7 +16,7 @@ $NetBSD: patch-ag,v 1.2 2001/09/09 03:10:08 jlam Exp $
  ##
  
 -X11_PREFIX=/usr/X11R6
-+X11_PREFIX=${BUILDLINK_X11_DIR}
++X11_PREFIX=${X11BASE}
  
  # SunOS/Solaris
  #X11_PREFIX=/usr/openwin

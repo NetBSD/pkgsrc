@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2001/12/15 20:37:53 agc Exp $
+# $NetBSD: Makefile,v 1.10 2002/08/25 21:52:26 jlam Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -11,16 +11,16 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.psrg.cs.usyd.edu.au/~matty/9term/index.html
 COMMENT=		X11 program which emulates a plan9 window
 
-DEPENDS+=		sam-4.3nb1:../../editors/sam
+BUILDLINK_DEPMETHOD.sam=	full
 
 NOT_FOR_PLATFORM=	*-*-alpha	#LP64 Problems
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
+USE_X11=		yes
 
 MANCOMPRESSED=		yes
 WRKSRC=			${WRKDIR}
-EVAL_PREFIX+=		SAM_DIR=qt1
-MAKE_ENV+=		SAM_DIR=${SAM_DIR}
+MAKE_ENV+=		SAM_DIR=${BUILDLINK_PREFIX.sam}
 
-.include "../../mk/x11.buildlink.mk"
+.include "../../editors/sam/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
