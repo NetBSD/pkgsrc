@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/04/05 23:23:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/04/06 19:43:11 wiz Exp $
 etc/nntpcache/VERSION
 etc/nntpcache/innreport.conf-dist
 etc/nntpcache/innreport.pl
@@ -28,7 +28,7 @@ sbin/newshound
 sbin/newshound.pl
 sbin/nntpcached
 libexec/unixauth
-libexec/nntpcache.debug
+libexec/nntpcached.debug
 libexec/nntpcache-gdb.sh
 libexec/nntpcache.gdb
 man/man8/newshound.8
