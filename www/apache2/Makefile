@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/04/16 17:41:54 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/04/16 20:07:09 jlam Exp $
 
 DISTNAME=		httpd-2.0.35
 PKGNAME=		apache-2.0.35
@@ -30,7 +30,6 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-port=80
-CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_DIR}
 
 # Apache Portable Runtime library configure options
 CONFIGURE_ARGS+=	--with-mpm=prefork
@@ -101,6 +100,7 @@ OWN_DIRS_PERMS+=	/var/db/httpd/proxy nobody nobody 0755
 _AP_DEPENDS.ssl=	../../security/openssl/buildlink.mk
 _AP_DEPENDS.deflate=	../../devel/zlib/buildlink.mk
 
+_AP_CFG_ARGS.ssl=	--with-ssl=${BUILDLINK_DIR}
 _AP_CFG_ARGS.deflate=	--with-z=${BUILDLINK_DIR}
 
 .for _ap_mod in ${APACHE_MODULES}
@@ -121,38 +121,42 @@ CONFIGURE_ARGS+=	${_AP_CFG_ARGS.${_ap_mod}}
 post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/apache.sh > ${WRKDIR}/apache.sh
 
+AP_CONF_FILE_SED=	-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g"
+AP_CONF_FILE_SED+=	-e "s|${PREFIX}/htdocs|${PREFIX}/share/httpd/htdocs|g"
+AP_CONF_FILE_SED+=	-e "s|${PREFIX}/conf|${PKG_SYSCONFDIR}|g"
+AP_CONF_FILE_SED+=	-e "s|logs/|/var/log/httpd/|g"
+AP_CONF_FILE_SED+=	-e "s|/var/log/httpd/foo\.log|logs/foo.log/|g"
+.if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
+AP_CONF_FILE_SED+=	-e "s|^\(User[	 ]\).*|\1${APACHE_SUEXEC_USER}|g"
+AP_CONF_FILE_SED+=	-e "s|^\(Group[	 ]\).*|\1${APACHE_SUEXEC_GROUP}|g"
+.endif
+
 post-install:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
 		${MAKE_PROGRAM} install-conf sysconfdir="${EGDIR}"
-	cd ${EGDIR};							\
+	@cd ${EGDIR};							\
 	for file in							\
 		highperformance-std.conf				\
 		httpd-std.conf						\
 		ssl-std.conf;						\
 	do								\
-		(${SED} -e "/^Listen[	 ]/q"				\
-			-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g"		\
-			$${file};					\
-		 ${ECHO} "Listen 0.0.0.0:80";				\
-		 ${SED} -e "1,/^Listen[	 ]/d"				\
-			-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g"		\
-			$${file};					\
-		) >> $${file}.new;					\
+		${CAT} $${file}						\
+		| ${SED} ${AP_CONF_FILE_SED}				\
+		| ${AWK} '						\
+			/^Listen[ 	]*80/	{			\
+				print;					\
+				printf "%s", "Listen 0.0.0.0:80\n";	\
+				next;					\
+			}						\
+			/^Listen[ 	]*443/	{			\
+				print;					\
+				printf "%s", "Listen 0.0.0.0:443\n";	\
+				next;					\
+			}						\
+			{ print; }					\
+			' >> $${file}.new;				\
 		${MV} -f $${file}.new $${file};				\
 	done
-.if defined(APACHE_SUEXEC) && ${APACHE_SUEXEC} == YES
-	cd ${EGDIR};							\
-	for file in							\
-		highperformance-std.conf				\
-		httpd-std.conf						\
-		ssl-std.conf;						\
-	do								\
-		${SED}	-e "s|^\(User[	 ]\).*|\1${APACHE_SUEXEC_USER}|g" \
-			-e "s|^\(Group[	 ]\).*|\1${APACHE_SUEXEC_GROUP}|g" \
-			$${file} >> $${file}.new;			\
-		${MV} -f $${file}.new $${file};				\
-	done
-.endif
 	${INSTALL_SCRIPT} ${WRKDIR}/apache.sh ${PREFIX}/etc/rc.d/apache
 
 .include "../../lang/perl5/buildlink.mk"
