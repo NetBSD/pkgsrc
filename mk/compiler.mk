@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.32 2004/05/12 21:49:39 reed Exp $
+# $NetBSD: compiler.mk,v 1.33 2004/07/04 00:28:30 wiz Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -59,9 +59,6 @@
 #	...
 #	.endif
 #
-# The following variables are deprecated:
-#
-# USE_GCC2, USE_GCC3, USE_SUNPRO, USE_MIPSPRO
 
 .if !defined(BSD_COMPILER_MK)
 BSD_COMPILER_MK=	defined
@@ -81,25 +78,8 @@ USE_LANGUAGES?=	c c++
 # By default, assume that the package requires a C compiler.
 USE_LANGUAGES?=	c
 
-# Support some deprecated variables for a while.  They'll be removed
-# after the pkgsrc-2004Q2 branch is cut.
-#
-.if defined(USE_GCC2)
-GCC_REQD+=		2.8.0
+# Default to using gcc.
 PKGSRC_COMPILER?=	gcc
-.elif defined(USE_GCC3)
-GCC_REQD+=		3.0
-PKGSRC_COMPILER?=	gcc
-.elif defined(USE_PKGSRC_GCC)
-_USE_PKGSRC_GCC=	yes
-PKGSRC_COMPILER?=	gcc
-.elif defined(USE_SUNPRO)
-PKGSRC_COMPILER?=	sunpro
-.elif defined(USE_MIPSPRO)
-PKGSRC_COMPILER?=	mipspro
-.else
-PKGSRC_COMPILER?=	gcc
-.endif
 
 _COMPILERS=		gcc mipspro mipspro-ucode sunpro
 _PSEUDO_COMPILERS=	ccache distcc
