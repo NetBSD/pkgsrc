@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/04/12 10:14:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/20 10:22:56 jmmv Exp $
 #
 
 DISTNAME=	buildtool-0.11
@@ -12,14 +12,15 @@ COMMENT=	Portable BSD-like build infrastructure
 USE_BUILDLINK2=	yes
 HAS_CONFIGURE=	yes
 
-TEXINFO_REQD=	4.0
-INFO_FILES=	buildtool.info
+TEXINFO_REQD=		4.0
+USE_MAKEINFO=		yes
+USE_NEW_TEXINFO=	yes
+INFO_FILES=		buildtool.info
 
 PKG_SYSCONFSUBDIR=	buildtool
 
 CONFIGURE_ARGS=		-p ${LOCALBASE}
 CONFIGURE_ARGS+=	-c ${PKG_SYSCONFDIR}
-
-.include "../../mk/texinfo.mk"
+CONFIGURE_ENV+=		SH="${SH}"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2003/04/12 10:14:26 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/20 10:22:56 jmmv Exp $
 bin/buildtool
 bin/buildtool-0
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/buildtool.info
 info/buildtool.info
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/buildtool.info
 libexec/buildtool-0/bt_config
 libexec/buildtool-0/bt_dist
 libexec/buildtool-0/bt_doc
