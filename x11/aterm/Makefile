@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/01/14 08:29:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2001/01/23 16:00:39 dmcmahill Exp $
 #
 
 DISTNAME=	aterm-0.4.0
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aterm/}
 MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://aterm.sourceforge.net/
 
+USE_XPM=	YES
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--enable-background-image \
 		--enable-transparency \
