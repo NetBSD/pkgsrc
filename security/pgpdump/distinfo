@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2001/11/09 08:48:33 jun Exp $
+$NetBSD: distinfo,v 1.7 2001/12/10 09:26:03 jun Exp $
 
-SHA1 (pgpdump-0.14.tar.gz) = e04140a02165d6c9bde7b440fa518781ac8fc23a
-Size (pgpdump-0.14.tar.gz) = 32575 bytes
+SHA1 (pgpdump-0.16.tar.gz) = 463abb464a871ae5199d94f4aa90057bfb153f06
+Size (pgpdump-0.16.tar.gz) = 32824 bytes
