@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/28 19:16:03 ad Exp $
+
+--- src/resume.c.orig	Sun Jan 28 18:56:29 2001
++++ src/resume.c	Sun Jan 28 18:56:38 2001
+@@ -386,7 +386,7 @@
+   if (stat(resume->filename, &st) < 0) {
+     strcpy(text, "non existent");
+   } else {
+-    sprintf(text, "%lu", st.st_size);
++    sprintf(text, "%lu", (u_long)st.st_size);
+   }
+   gtk_ctree_node_set_text(ctree, node, 2, text);
+ 
