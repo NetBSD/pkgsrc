@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.933 2002/02/28 14:42:39 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.934 2002/02/28 23:33:13 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -211,10 +211,6 @@ CONFIGURE_ENV+=	F77="${F77}"
 CONFIGURE_ENV+=	FFLAGS="${FFLAGS}"
 MAKE_ENV+=	F77="${F77}"
 MAKE_ENV+=	FC="${FC}"
-.endif
-
-.if ((defined(NEED_NCURSES)) && (${NEED_NCURSES} == YES))
-DEPENDS+=		ncurses>=5.0:../../devel/ncurses
 .endif
 
 # Automatically increase process limit where necessary for building.
