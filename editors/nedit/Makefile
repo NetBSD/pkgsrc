@@ -1,23 +1,19 @@
-# $NetBSD: Makefile,v 1.8 1999/12/30 13:13:28 simonb Exp $
+# $NetBSD: Makefile,v 1.9 2000/05/19 11:24:46 mjl Exp $
 
-DISTNAME=	nedit_source
-PKGNAME=	nedit-5.0.2
+DISTNAME=	nedit-5.1.1-src
+PKGNAME=	nedit-5.1.1
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.nedit.org/pub/v5_0_2/
+MASTER_SITES=	http://ftp.nedit.org/ftp/v5_1_1/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.nedit.org/
 
 USE_MOTIF=	yes
 
-NO_WRKSUBDIR=	yes
 NO_CONFIGURE=	yes
-ALL_TARGET=	netbsd_nedit
+ALL_TARGET=	netbsd
 
-post-extract:
-.for DIR in source util
-	@${LN} -s ${FILESDIR}/Makefile.${DIR} ${WRKSRC}/${DIR}/Makefile.netbsd
-.endfor
+WRKSRC=	${WRKDIR}/${PKGNAME}
 
 do-install:
 .for PROGRAM in nc nedit
