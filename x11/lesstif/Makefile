@@ -3,7 +3,7 @@
 # Date created:		December 10, 1996
 # Whom:			1wardd@airmail.net
 #
-# $NetBSD: Makefile,v 1.14 1998/03/24 11:16:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.15 1998/03/26 22:58:37 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/08 08:34:13 tg Exp
 #
 
@@ -12,7 +12,6 @@ CATEGORIES=	x11
 MASTER_SITES=	ftp://linux.gt.ed.net/pub/linux/libs/lesstif/srcdist/ \
 		ftp://ftp.mathematik.th-darmstadt.de/pub/linux/mirrors/misc/lesstif/srcdist/ \
 		ftp://ftp.lesstif.org/pub/hungry/lesstif/srcdist/
-		
 
 MAINTAINER=	packages@netbsd.org
 
