@@ -1,44 +1,15 @@
-$NetBSD: patch-aa,v 1.14 2001/02/13 19:36:27 tron Exp $
+$NetBSD: patch-aa,v 1.15 2001/05/14 12:42:14 tron Exp $
 
---- Makefile.orig	Wed Oct 11 14:11:07 2000
-+++ Makefile	Fri Oct 27 05:14:48 2000
+--- Makefile.orig	Tue May  1 12:38:33 2001
++++ Makefile	Mon May 14 14:23:34 2001
 @@ -1,8 +1,8 @@
- # Makefile for analog 4.16
+ # Makefile for analog 5.0
  # Please read docs/Readme.html, or http://www.analog.cx/
 -CC = gcc           # which compiler to use: eg cc, acc, gcc. NB Different
 +#CC = gcc           # which compiler to use: eg cc, acc, gcc. NB Different
  #                    compilers need different CFLAGS, e.g., -O instead of -O2.
--CEXTRAFLAGS = -O2  # options, e.g. for optimisation or ANSI compilation.
-+#CEXTRAFLAGS = -O2  # options, e.g. for optimisation or ANSI compilation.
- #                    HP/UX cc requires CEXTRAFLAGS = -Aa (HP/UX 9) or ...
- #                    -Ae (HP/UX 10);       BS2000/OSD requires -XLLML -XLLMK;
- #                    NeXTSTEP apparently needs...
-@@ -26,15 +26,26 @@
- #              SVR4 requires LIBS = -lsocket -lnsl
- #              DYNIX/ptx requires LIBS = -L/usr/lib/bsd-socket -lsocket -lnsl
- 
-+OPSYS!= uname -s
-+
-+.if ${OPSYS} == "SunOS"
-+LIBS+=	-lsocket -lnsl
-+.endif
-+
-+DEFS =	-DANALOGDIR=\"${PREFIX}/lib/analog/\" \
-+	-DLOGFILE=\"/var/log/httpd-access.log\" \
-+	-DIMAGEDIR=\"/images/\" \
-+	-DDEFAULTCONFIGFILE=\"${PREFIX}/etc/analog.cfg\"
-+
- PROGRAM = analog
- OBJS = alias.o analog.o cache.o dates.o globals.o hash.o init.o init2.o \
- 	input.o macinput.o macstuff.o output.o output2.o pcre.o process.o \
- 	settings.o sort.o tree.o utils.o win32.o
- HEADERS = anlghead.h anlghea2.h anlghea3.h anlghea4.h macdir.h pcre.h
--CFLAGS = $(CEXTRAFLAGS) $(DEFS) -D$(OS)
-+CFLAGS += $(DEFS) -D$(OS)
- 
- $(PROGRAM): $(OBJS) $(HEADERS) Makefile
--	$(CC) $(CEXTRAFLAGS) -o $(PROGRAM) $(OBJS) $(LIBS)
-+	$(CC) $(OBJS) -o $(PROGRAM) $(LIBS)
- 	@echo '***'
- 	@echo '***IMPORTANT: You must read the licence before using analog'
- 	@echo '***'
+-CFLAGS = -O2    # options, e.g. for optimisation or ANSI compilation.
++#CFLAGS = -O2    # options, e.g. for optimisation or ANSI compilation.
+ #                 HP/UX cc needs CFLAGS = -Aa (HP/UX 9) or -Ae (HP/UX 10)
+ #                 BS2000/OSD needs CFLAGS = -XLLML -XLLMK
+ #                 NeXTSTEP needs CFLAGS = -O2 -pipe -no-precomp 
