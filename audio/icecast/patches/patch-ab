@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/11/21 06:02:28 hubertf Exp $
+
+--- configure.orig	Tue Nov 21 06:35:44 2000
++++ configure
+@@ -880,15 +880,15 @@
+ 	ICECAST_BINDIR=${prefix}/bin
+ 	ICECAST_SBINDIR=${prefix}/bin
+ 	ICECAST_ETCDIR=conf
+-	ICECAST_ETCDIR_INST=${prefix}/conf
++	ICECAST_ETCDIR_INST=${prefix}/etc/icecast
+ 	ICECAST_SHAREDIR=${prefix}
+ 	ICECAST_LOGDIR=logs
+-	ICECAST_LOGDIR_INST=${prefix}/logs
++	ICECAST_LOGDIR_INST=/var/log/icecast
+ 	ICECAST_TEMPLATEDIR=templates
+-	ICECAST_TEMPLATEDIR_INST=${prefix}/templates
++	ICECAST_TEMPLATEDIR_INST=${prefix}/share/icecast/templates
+ 	ICECAST_STATICDIR=static
+-	ICECAST_STATICDIR_INST=${prefix}/static
+-	ICECAST_DOCDIR=${prefix}/doc
++	ICECAST_STATICDIR_INST=${prefix}/share/icecast/static
++	ICECAST_DOCDIR=${prefix}/share/doc/icecast
+ 	USE_FSSTD=no
+ fi
+ 
