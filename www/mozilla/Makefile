@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2001/03/30 09:37:47 taya Exp $
+# $NetBSD: Makefile,v 1.62 2001/04/02 16:39:53 taya Exp $
 
 MOZ_VER=	0.8.1
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -30,12 +30,17 @@ USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tests \
 		--disable-debug \
-		--enable-optimize \
 		--with-jpeg=${LOCALBASE} \
 		--with-png=${LOCALBASE} \
 		--enable-mathml \
 		--enable-svg \
 		--with-extensions=cookie,irc,wallet,xmlextras,xml-rpc
+
+.if  ${MACHINE_ARCH} == "m68k"
+DBG=
+.else
+CONFIGURE_ARGS+= --enable-optimize
+.endif
 
 MOZ_LIBDIR=	${PREFIX}/lib/mozilla
 MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
