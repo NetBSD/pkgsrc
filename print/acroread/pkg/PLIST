@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/02/20 19:26:12 soren Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/02/20 20:10:13 soren Exp $
 Acrobat4/ReadMe
 Acrobat4/Browsers/@PLATFORM@/nppdf.so
 Acrobat4/Browsers/netscape
@@ -48,7 +48,9 @@ Acrobat4/Resource/Font/TimesNewRoman-BoldItalic
 Acrobat4/Resource/Font/TimesNewRoman-Italic
 Acrobat4/Resource/Font/ZapfDingbats
 Acrobat4/bin/acroread
+bin/acroread
 bin/acroread4
+lib/netscape/plugins/nppdf.so
 @exec ln -sf ../../Resource/Font/ %D/Acrobat4/Reader/@PLATFORM@/fonts
 @unexec rm -f %D/Acrobat4/Reader/@PLATFORM@/fonts
 @exec ln -sf ../../res %D/Acrobat4/Reader/@PLATFORM@/res
