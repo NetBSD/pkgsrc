@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2346 2004/11/09 20:12:00 xtraeme Exp $
+$NetBSD: TODO,v 1.2347 2004/11/09 20:20:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -238,6 +238,7 @@ Suggested new packages
 Suggested package updates
 =========================
 
+	o Addresses-0.4.6 [pkg/28111|rh]
 	o R-2.0.0
 	o TeXmacs-1.0.4.3
 	o Xaw3d-1.5E
@@ -253,10 +254,10 @@ Suggested package updates
 	o aqsis-0.9.1
 	o aranym-0.8.10
 	o asc-1.15.1
-	o aspell-0.60
+	o aspell-0.60.1
 	o atlc-4.2.11
 	o auctex-11.53
-	o avidemux-2.0.30
+	o avidemux-2.0.34
 	o balsa-1.4.4
 	o benchfft-3.1
 	o bins-1.1.27
@@ -264,6 +265,7 @@ Suggested package updates
 	o bitchx-1.1
 	o blender-2.34
 	o boson-0.10
+	o cairo-0.2.0 [pkg/28106|rh]
 	o capc-calc-2.11.10.1
 	o catdoc-0.92
 	o cdrtools-2.01
@@ -311,7 +313,7 @@ Suggested package updates
 	o eggdrop-1.6.17
 	o electric-7.00
 	o elk-3.99.6
-	o elm-me-2.4pl121
+	o elm-me-2.5plalpha4
 	o emech-2.8.5.1
 	o epic4-2.0
 	o erlang-r10b
@@ -322,7 +324,7 @@ Suggested package updates
 	o file-roller-2.8.3
 	o file-roller-2.9.0
 	o findutils-4.1.20
-	o firefox-bin-0.10.1 [not available yet]
+	o firefox-bin-1.0
 	o firewalk-5.0
 	o firewalk-gtk-5.0
 	o fluxbox-0.9.10
@@ -332,6 +334,7 @@ Suggested package updates
 	o freetds-0.62.3
 	o fsviewer-0.2.5
 	o fugu-1.2.3
+	o gaim-1.0.2
 	o galeon-1.3.18
 	o gbib-0.1.2
 	o gdm-2.6.0.5
@@ -341,10 +344,12 @@ Suggested package updates
 	o ghostscript-8.01 (gnu)
 	o gkrellm-volume-2.1.13
 	o gkrellm1-xmms-0.5.8
+	o glitz-0.2.3 [pkg/28107|rh]
 	o glpk-4.6
 	o gmpc-0.11.2
 	o gnomeicu-0.99.5
 	o gnunet-0.6.4a
+	o gnustep-ssl-1.10.1 [pkg/28112|rh]
 	o gogo-3.11p1
 	o gpsdrive-2.09
 	o grace-5.1.17
@@ -359,6 +364,7 @@ Suggested package updates
 	o guile-1.6.5
 	o guile-gtk-0.40.90 [in wip]
 	o guile-pg-0.16 [pkg/24039]
+	o gworkspace-0.6.5 [pkg/28116|rh]
 	o hatari-0.50
 	o hmmer-2.3.2
 	o host-20040812 [cjep,talking to greg woods about this]
@@ -397,14 +403,14 @@ Suggested package updates
 	o libcddb-0.9.6
 	o libcomprex-0.3.3
 	o libhydrogen-0.9.0
-	o libidn-0.5.9
+	o libidn-0.5.10
 	o libmpeg3-1.5.4
 	o libnet-1.1.2.1 [wip/libnet11|adrianp]
 	o libnids-1.19
 	o libole2-2.2.8
 	o libopendaap-0.2.3
-	o libtiff-3.7.0
-	o libxml2-2.6.15
+	o libpixman-0.1.2 [pkg/28108|rh]
+	o libtiff-3.7.0 [reed]
 	o licq-1.3.0
 	o lilypond-2.4
 	o lmbench-2.0.4
@@ -536,7 +542,7 @@ Suggested package updates
 	o tcl-expect-5.39.0
 	o tcl-itcl-3.2.1
 	o tcm-2.20
-	o tcpreplay-2.3.1
+	o tcpreplay-2.3.2
 	o tct-1.14
 	o teapop-0.3.8
 	o texi2html-1.70
