@@ -1,13 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2001/09/28 04:42:49 lukem Exp $
+$NetBSD: patch-aa,v 1.3 2002/01/03 14:49:00 lukem Exp $
 
---- Makefile.in.orig	Fri Aug 10 02:52:31 2001
-+++ Makefile.in	Fri Sep 28 12:50:05 2001
-@@ -5,10 +5,10 @@
- BASEPATH    = $(INSTALLROOT)@prefix@
- CONFPATH    = $(INSTALLROOT)@sysconfdir@
- CGIPATH     = $(INSTALLROOT)@CGIPATH@
--INSTALLDIRS = $(CONFPATH) $(CGIPATH) $(MODELPATH) $(BASEPATH)/@bindir@  $(BASEPATH)/@sbindir@ $(BASEPATH)/misc
-+INSTALLDIRS = $(CGIPATH)
+--- Makefile.in.orig	Fri Oct 26 17:16:27 2001
++++ Makefile.in
+@@ -8,7 +8,7 @@
+ INSTALLDIRS = $(CONFPATH) $(MODELPATH) $(BASEPATH)/@bindir@ $(BASEPATH)/@sbindir@
  STATEPATH   = $(INSTALLROOT)@STATEPATH@
  
 -SUBDIRS	= common models server clients man
@@ -15,15 +11,19 @@ $NetBSD: patch-aa,v 1.2 2001/09/28 04:42:49 lukem Exp $
  CFLAGS	= -I../include @CFLAGS@
  
  # these are here so they can be overridden during a make install
-@@ -58,11 +58,10 @@
- 		./install-sh -d -o $(RUNUID) -g $(RUNGID) $(STATEPATH) || exit 1; \
+@@ -60,7 +60,7 @@
+ 		|| echo "Unable to set ownership of $(STATEPATH)"; \
  	fi
  
 -cgi:
-+cgi:	build
++cgi: build
  	@cd clients; $(MAKE) cgi; cd ..;
  
  install-cgi: install-dirs 
+@@ -68,7 +68,6 @@
+ 		./install-sh -d $(CGIPATH) || exit 1; \
+ 	fi \
+ 
 -	@cd conf; $(MAKE) install; cd ..;
  	@cd clients; $(MAKE) install-cgi; cd ..;
  
