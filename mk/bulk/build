@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.40 2004/04/29 02:23:26 dmcmahill Exp $
+# $NetBSD: build,v 1.41 2004/07/22 14:26:42 agc Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -282,6 +282,11 @@ cd ${USR_PKGSRC}
 # make sure we have something to grep in in the build loop
 touch $BUILDLOG
 
+# set the nice level for bulk builds
+#case "${NICE_LEVEL}" in
+#"")	NICE_LEVEL="nice -n 20" ;;
+#esac
+
 # Loop over every package in the correct order.  Before building
 # each one, check to see if we've already processed this package
 # before.  This could happen if the build got interrupted and we
@@ -299,9 +304,9 @@ do
 	if [ $? -ne 0 ]; then
 		built=`wc -l $BUILDLOG | ${AWK} '{print $1}'`
 		percent=`echo $built $tot | ${AWK} '{printf("%4.1f%%",$1*100/$2);}'`
-		(cd $pkgdir && nice -n 20 ${BMAKE} USE_BULK_CACHE=yes $target \
+		(cd $pkgdir && ${NICE_LEVEL} ${BMAKE} USE_BULK_CACHE=yes $target \
 			$makeargs </dev/null | \
-			${SED} "s;^;`date '+%m/%d/%y %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ ${MACHINE_ARCH}> ;g")
+			${SED} "s;^;`date '+%Y/%m/%d %H:%M:%S'`  $built/${tot}=$percent $pkgdir @ ${MACHINE_ARCH}> ;g")
 		echo "$pkgdir" >> $BUILDLOG
 	fi
 done
