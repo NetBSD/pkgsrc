@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2337 2004/11/09 11:53:19 adam Exp $
+$NetBSD: TODO,v 1.2338 2004/11/09 12:10:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -248,7 +248,6 @@ Suggested package updates
 	o amavisd-new-2.1.2 [pkg/26843]
 	o amavisd-new-2.2.0
 	o ap-jk-5.0.25
-	o ap2-perl-1.99.17
 	o apcupsd-3.10.13
 	o apr-1.0.0
 	o aqsis-0.9.1
