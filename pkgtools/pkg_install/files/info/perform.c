@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.20 2005/02/10 23:51:18 grant Exp $	*/
+/*	$NetBSD: perform.c,v 1.21 2005/02/21 01:21:39 grant Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.20 2005/02/10 23:51:18 grant Exp $");
+__RCSID("$NetBSD: perform.c,v 1.21 2005/02/21 01:21:39 grant Exp $");
 #endif
 #endif
 
@@ -69,7 +69,7 @@ pkg_do(char *pkg)
 	struct stat sb;
 	char   *cp = NULL;
 	int     code = 0;
-	char flist[sizeof(ALL_FNAMES)];
+	char flist[sizeof(ALL_FNAMES)] = "\0";
 
 	if (IS_URL(pkg)) {
 		if ((cp = fileGetURL(pkg)) != NULL) {
