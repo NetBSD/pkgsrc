@@ -1,20 +1,14 @@
 $NetBSD: patch-be,v 1.1 1999/08/03 20:30:41 bad Exp $
 
---- mit-pthreads/machdep/engine-m68000-netbsd.h.orig	Tue Nov  8 16:39:15 1994
-+++ mit-pthreads/machdep/engine-m68000-netbsd.h	Wed Jul  7 04:29:09 1999
-@@ -3,6 +3,9 @@
-  *
-  * $Id: patch-be,v 1.1 1999/08/03 20:30:41 bad Exp $
+--- mit-pthreads/machdep/engine-m68000-netbsd.h.orig	Sun Oct 12 14:07:37 1997
++++ mit-pthreads/machdep/engine-m68000-netbsd.h	Wed Dec 22 16:32:38 1999
+@@ -5,2 +5,5 @@
   *
 + * m68k work by Andy Finnell <andyf@vei.net> based off work by
 + *  David Leonard and Chris Provenzano.
 + *
   */
- 
- #include <unistd.h>
-@@ -16,14 +19,14 @@
- #define SEMAPHORE_CLEAR 0
- #define SEMAPHORE_SET   0x80;
+@@ -18,10 +21,10 @@
  
 -#define SEMAPHORE_TEST_AND_SET(lock)    \
 -({										\
@@ -33,19 +27,11 @@ $NetBSD: patch-be,v 1.1 1999/08/03 20:30:41 bad Exp $
 +          :"0" (temp),"m" (*lock));             \
 +        temp;                                   \
  })
- 
- #define SEMAPHORE_RESET(lock)           *lock = SEMAPHORE_CLEAR
-@@ -48,6 +51,7 @@
-     void        		*machdep_stack;
- 	struct itimerval	machdep_timer;
+@@ -50,2 +53,3 @@
      jmp_buf     		machdep_state;
 +    char			machdep_fstate[92];
  };
- 
- /*
-@@ -56,6 +60,12 @@
- #define PTHREAD_STACK_MIN	1024
- 
+@@ -58,2 +62,8 @@
  /*
 + * Some fd flag defines that are necessary to distinguish between posix
 + * behavior and bsd4.3 behavior.
@@ -54,13 +40,8 @@ $NetBSD: patch-be,v 1.1 1999/08/03 20:30:41 bad Exp $
 +
 +/*
   * Static machdep_pthread initialization values.
-  * For initial thread only.
-  */
-@@ -70,7 +80,27 @@
+@@ -72,2 +82,22 @@
  
- #if defined(PTHREAD_KERNEL)
- 
--int machdep_save_state      __P_((void));
 +
 +#ifndef __machdep_stack_get
 +#define __machdep_stack_get(x)      (x)->machdep_stack
@@ -81,7 +62,4 @@ $NetBSD: patch-be,v 1.1 1999/08/03 20:30:41 bad Exp $
 +void *  __machdep_stack_alloc       __P_((size_t));
 +void    __machdep_stack_free        __P_((void *));
 +    
-+int machdep_save_state      __P_((void));
- 
- #endif
- 
+ int machdep_save_state      __P_((void));
