@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2004/12/05 12:50:19 jdolecek Exp $
+# $NetBSD: Makefile,v 1.21 2005/04/02 11:33:10 jdolecek Exp $
 
-PSI_VERSION=	0.9.2
+PSI_VERSION=	0.9.3
 DISTNAME=	psi-${PSI_VERSION}
 PKGREVISION=	# empty
 CATEGORIES=	chat
@@ -12,7 +12,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LANG_FILES}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 # XXX uses internal bsd.pkg.mk variable
-FETCH_BEFORE_ARGS+=	-o "${DISTDIR}/${DIST_SUBDIR}/$$bfile"
+FETCH_BEFORE_ARGS+=	${FETCH_OUTPUT_ARGS} "${DISTDIR}/${DIST_SUBDIR}/$$bfile"
 
 MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://psi.affinix.com/
@@ -27,10 +27,12 @@ USE_X11=	yes
 HAS_CONFIGURE=	yes
 
 CONFIGURE_ARGS= --prefix="${PREFIX}" --qtdir="${QTDIR}"
+CONFIGURE_ARGS+=	--with-qca-inc="${BUILDLINK_PREFIX.qca}/include" \
+			--with-qca-lib="${BUILDLINK_PREFIX.qca}/lib"
 
-LANG_FILES=	psi_zh.qm psi_nl.qm psi_sk.qm psi_fr.qm psi_fi.qm	\
-		psi_de.qm psi_sw.qm psi_pl.qm psi_mk.qm psi_el.qm	\
-		psi_es.qm psi_ru.qm
+LANG_FILES=	psi_zh.qm psi_nl.qm psi_sk.qm psi_fr.qm psi_cs.qm	\
+		psi_de.qm psi_et.qm psi_pl.qm psi_mk.qm psi_el.qm	\
+		psi_es.qm psi_ru.qm psi_vi.qm
 
 .for l in ${LANG_FILES}
 SITES_${l}=	http://psi.affinix.com/?version=${PSI_VERSION}&file=
@@ -68,4 +70,5 @@ do-install:
 BUILDLINK_DEPMETHOD.qt3-tools=	build
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/qca/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

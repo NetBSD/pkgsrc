@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.5 2004/11/27 21:58:18 jdolecek Exp $
+$NetBSD: patch-ac,v 1.6 2005/04/02 11:33:10 jdolecek Exp $
 
---- src/psi_profiles.cpp.orig	2004-11-27 12:25:13.000000000 +0100
-+++ src/psi_profiles.cpp	2004-11-27 12:25:34.000000000 +0100
-@@ -433,7 +433,11 @@
+--- src/psi_profiles.cpp.orig	2004-12-08 15:42:39.000000000 +0100
++++ src/psi_profiles.cpp	2005-04-02 12:51:21.000000000 +0200
+@@ -451,7 +451,11 @@
  
- 	prefs.clNewHeadings = false;
+ 	prefs.clNewHeadings = true;
  
 +#ifdef __NetBSD__
 +	prefs.player = "audioplay";
