@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 2000/05/12 15:36:05 mjl Exp $
+$NetBSD: md5,v 1.2 2000/12/15 12:36:03 mjl Exp $
 
-MD5 (pstree-2.14.tar.gz) = 9a477cca38b19f95910ad608a5d03a22
+MD5 (pstree-2.16.tar.gz) = 3155cbf4df98d68f5d55edd431a8bb1d
