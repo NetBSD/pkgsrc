@@ -1,0 +1,37 @@
+$NetBSD: patch-bg,v 1.1 2000/03/01 07:16:59 minoura Exp $
+
+--- configure.in.orig	Mon Nov 29 03:18:39 1999
++++ configure.in	Tue Feb 29 14:10:24 2000
+@@ -66,6 +66,8 @@
+ 	  esac
+ 	  with_x_toolkit=$val
+ ])
++AC_ARG_WITH(ipv6,
++[  --with-ipv6             support IPv6 stack])
+ 
+ #### Make srcdir absolute, if it isn't already.  It's important to
+ #### avoid running the path through pwd unnecessary, since pwd can
+@@ -158,9 +160,12 @@
+ 			machine=hp9000s300 ;;
+       powerpc-apple-netbsd*) machine=macppc ;;
+       mips-*-netbsd*)	machine=pmax ;;
++      mipsel-*-netbsd*)	machine=pmax ;;
+       ns32k-*-netbsd*)	machine=ns32000 ;;
++      powerpc-*-netbsd*) machine=powerpc ;;
+       sparc-*-netbsd*)	machine=sparc ;;
+       vax-*-netbsd*)	machine=vax ;;
++      arm*-*-netbsd*)	machine=arm ;;
+     esac
+   ;;
+ 
+@@ -1724,6 +1729,10 @@
+ 
+ if test -f /usr/lpp/X11/bin/smt.exp; then
+   AC_DEFINE(HAVE_AIX_SMT_EXP)
++fi
++
++if test "x$with_ipv6" = xyes; then
++  AC_CHECK_FUNCS(getaddrinfo)
+ fi
+ 
+ # Set up the CFLAGS for real compilation, so we can substitute it.
