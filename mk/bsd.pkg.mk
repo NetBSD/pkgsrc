@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.713 2001/04/07 12:45:20 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.714 2001/04/08 14:14:11 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -292,8 +292,8 @@ MAKE_ENV+=		PATH=${PATH}:${LOCALBASE}/bin:${X11BASE}/bin PREFIX=${PREFIX} LOCALB
 MAKE_ENV+=		MOTIFLIB="${MOTIFLIB}"
 .endif
 
-.if exists(${LOCALBASE}/bsd/bin/ftp)			# Zoularis
-FETCH_CMD?=		${LOCALBASE}/bsd/bin/ftp
+.if exists(${ZOULARISBASE}/bin/ftp)			# Zoularis
+FETCH_CMD?=		${ZOULARISBASE}/bin/ftp
 .else
 FETCH_CMD?=		/usr/bin/ftp
 .endif
@@ -534,7 +534,7 @@ FALSE?=		/usr/bin/false
 FILE?=		/usr/bin/file
 FIND?=		/usr/bin/find
 GREP?=		/usr/bin/grep
-GTAR?=		${LOCALBASE}/bsd/bin/tar
+GTAR?=		${ZOULARISBASE}/bin/tar
 .if exists(/usr/bin/gzip)
 GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/usr/bin/gzcat
@@ -552,7 +552,7 @@ LDCONFIG?=	/usr/bin/true
 LN?=		/usr/bin/ln
 LS?=		/usr/bin/ls
 MKDIR?=		/usr/bin/mkdir -p
-MTREE?=		${LOCALBASE}/bsd/bin/mtree
+MTREE?=		${ZOULARISBASE}/bin/mtree
 MV?=		/usr/bin/mv
 .if exists(/usr/bin/gpatch)
 PATCH?=		/usr/bin/gpatch -b
@@ -600,10 +600,10 @@ LDCONFIG?=	/sbin/ldconfig
 LN?=		/bin/ln
 LS?=		/bin/ls
 MKDIR?=		/bin/mkdir -p
-MTREE?=		${LOCALBASE}/bsd/bin/mtree
+MTREE?=		${ZOULARISBASE}/bin/mtree
 MV?=		/bin/mv
 PATCH?=		/usr/bin/patch
-PAX?=		/usr/local/bsd/bin/pax
+PAX?=		${ZOULARISBASE}/bin/pax
 PKGLOCALEDIR?=	share
 RM?=		/bin/rm
 RMDIR?=		/bin/rmdir
