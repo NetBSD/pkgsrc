@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.4 1998/11/28 20:59:58 frueauf Exp $
+$NetBSD: patch-ab,v 1.5 1999/11/27 22:27:38 rh Exp $
 
---- configure.orig	Sun Nov 22 05:04:59 1998
-+++ configure	Sat Nov 28 12:09:07 1998
-@@ -1621,7 +1621,7 @@
+--- configure.orig	Sat Apr 17 22:22:38 1999
++++ configure	Sat Nov 27 23:25:39 1999
+@@ -1622,7 +1622,7 @@
  EOF
- if { (eval echo configure:1623: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+ if { (eval echo configure:1624: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
    rm -rf conftest*
 -  eval "ac_cv_lib_$ac_lib_var=yes"
 +  eval "ac_cv_lib_$ac_lib_var=no"
  else
    echo "configure: failed program was:" >&5
    cat conftest.$ac_ext >&5
-@@ -3676,8 +3676,8 @@
+@@ -3680,8 +3680,8 @@
    echo "disabling DC210 backend (failed to find JPEG library)"
    DC210=
  else
