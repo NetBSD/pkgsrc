@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.16 2003/09/05 13:06:34 seb Exp $
+#	$NetBSD: cross.mk,v 1.17 2003/09/21 20:44:13 wiz Exp $
 #	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
 
@@ -194,7 +194,7 @@ post-install-plist:
 	@${ECHO} '@dirrm ${TARGET_ARCH}/lib' >>${PLIST_SRC}
 	@${ECHO} '@dirrm ${TARGET_ARCH}' >>${PLIST_SRC}
 
-.include "../../mk/autoconf.mk"
-.include "../../mk/bsd.pkg.mk"
+.include "../../../mk/autoconf.mk"
+.include "../../../mk/bsd.pkg.mk"
 
 #EXTRACT_BEFORE_ARGS:=	-X ${COMMON_DIR}/exclude ${EXTRACT_BEFORE_ARGS}
