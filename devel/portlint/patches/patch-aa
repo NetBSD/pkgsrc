@@ -1,5 +1,5 @@
---- portlint.pl.orig	Tue Apr 28 16:20:01 1998
-+++ portlint.pl	Tue Apr 28 16:28:06 1998
+--- portlint.pl.orig	Wed Jul 15 11:43:04 1998
++++ portlint.pl	Wed Jul 15 12:00:43 1998
 @@ -1,4 +1,4 @@
 -#! /usr/bin/perl
 +#!@PREFIX@/bin/perl
@@ -8,7 +8,7 @@
  # implemented by:
 @@ -12,6 +12,10 @@
  #
- # $Id: patch-aa,v 1.2 1998/04/28 14:57:44 frueauf Exp $
+ # $Id: patch-aa,v 1.3 1998/07/15 10:37:33 frueauf Exp $
  #
 +# This version contains some changes necessary for NetBSD packages
 +# done by Hubert Feyrer <hubertf@netbsd.org> and
@@ -445,7 +445,7 @@
 -				if (!grep($_ eq $j, @pman)) {
 -					&perror("WARN: manpage $j in $file ".
 -						"MAN$i but not in PLIST.");
-+	if ($extrafile) {
++	if ($extrafile && $osname ne "NetBSD") {
 +		print "OK: checking MAN[0-9LN].\n" if ($verbose);
 +		foreach $i (split(//, $manchapters)) {
 +			next if ($i eq '');
