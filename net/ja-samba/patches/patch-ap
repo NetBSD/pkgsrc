@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1 2003/03/29 08:18:50 taca Exp $
+$NetBSD: patch-ap,v 1.2 2003/03/31 16:33:22 taca Exp $
 
 Expand & in the gecos field to a capitalized login name.
 
@@ -16,12 +16,12 @@ Expand & in the gecos field to a capitalized login name.
  	memcpy((char *)&dst->pass, pass, sizeof(struct passwd));
  
  	unix_to_dos(dst->pw_name, pass->pw_name);
-@@ -784,7 +789,37 @@ static void copy_pwent(struct saved_pw *
- 	fstrcpy(dst->pw_passwd, pass->pw_passwd);
+@@ -785,6 +790,35 @@ static void copy_pwent(struct saved_pw *
  	dst->pass.pw_passwd = dst->pw_passwd;
  
+ 	unix_to_dos(dst->pw_gecos, pass->pw_gecos);
 +#ifdef BSD
-+	unix_to_dos(gecos, pass->pw_gecos);
++	gecos = dst->pw_gecos;
 +	if (*gecos == '*')
 +		gecos++;
 +	bp = buf;
@@ -48,8 +48,6 @@ Expand & in the gecos field to a capitalized login name.
 +
 +  gecos_done:
 +	fstrcpy(dst->pw_gecos, gecos);
-+#else
- 	unix_to_dos(dst->pw_gecos, pass->pw_gecos);
 +#endif
  	dst->pass.pw_gecos = dst->pw_gecos;
  
