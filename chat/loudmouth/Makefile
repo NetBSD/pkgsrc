@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2004/10/03 00:13:15 tv Exp $
-#
+# $NetBSD: Makefile,v 1.8 2004/10/22 09:12:26 adam Exp $
 
-DISTNAME=	loudmouth-0.17
-PKGREVISION=	1
+DISTNAME=	loudmouth-0.17.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/0.17/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,9 +10,9 @@ HOMEPAGE=	http://loudmouth.imendio.org/
 COMMENT=	Lightweight Jabber client library
 
 USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
 
 PKGCONFIG_OVERRIDE+=    loudmouth-1.0.pc.in
 
