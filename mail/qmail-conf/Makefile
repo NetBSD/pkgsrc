@@ -1,27 +1,27 @@
-# $NetBSD: Makefile,v 1.16 2004/07/21 23:54:47 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2004/08/22 00:22:31 schmonz Exp $
 #
 
-DISTNAME=	qmail-conf-0.60
-PKGREVISION=	3
-CATEGORIES=	mail
-MASTER_SITES=	http://www.din.or.jp/~ushijima/qmail-conf/		\
-		http://cr.yp.to/djbdns/					\
-		ftp://cr.yp.to/djbdns/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} djbdns-1.05${EXTRACT_SUFX}
+DISTNAME=		qmail-conf-0.60
+PKGREVISION=		3
+CATEGORIES=		mail
+MASTER_SITES=		http://www.din.or.jp/~ushijima/qmail-conf/	\
+			http://cr.yp.to/djbdns/				\
+			ftp://cr.yp.to/djbdns/
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} djbdns-1.05${EXTRACT_SUFX}
 
-MAINTAINER=	schmonz@NetBSD.org
-HOMEPAGE=	http://www.din.or.jp/~ushijima/qmail-conf.html
-COMMENT=	Collection of tools for setting up qmail services
+MAINTAINER=		schmonz@NetBSD.org
+HOMEPAGE=		http://www.din.or.jp/~ushijima/qmail-conf.html
+COMMENT=		Collection of tools for setting up qmail services
 
-DEPENDS+=	checkpassword-[0-9]*:../../sysutils/checkpassword
-DEPENDS+=	daemontools>=0.70:../../sysutils/daemontools
-DEPENDS+=	{qmail>=1.03nb7,netqmail>=1.05}:../../mail/qmail
-DEPENDS+=	ucspi-tcp>=0.86:../../net/ucspi-tcp
+DEPENDS+=		checkpassword-[0-9]*:../../sysutils/checkpassword
+DEPENDS+=		daemontools>=0.70:../../sysutils/daemontools
+DEPENDS+=		{qmail>=1.03nb7,netqmail>=1.05}:../../mail/qmail
+DEPENDS+=		ucspi-tcp>=0.86:../../net/ucspi-tcp
 
-USE_BUILDLINK3=	yes
+USE_BUILDLINK3=		yes
 
-ALL_TARGET=	it
-INSTALL_TARGET= setup check
+ALL_TARGET=		it
+INSTALL_TARGET= 	setup check
 
 do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
