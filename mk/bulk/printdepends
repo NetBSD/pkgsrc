@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.3 2000/11/18 07:30:25 hubertf Exp $
+# $NetBSD: printdepends,v 1.4 2000/12/29 15:56:26 dmcmahill Exp $
 #
 # Print list of pkg dependencies suitable for tsort(1).
 # Start in /usr/pkgsrc.
@@ -17,10 +17,10 @@ cwd=$PWD
 #list=x11/gnome
 #list='x11/xteddy x11/xsnow'
 
-
+mf=$cwd/.m.`hostname`.$$
 # Makefile to print the DEPENDS' and BUILD_DEPENDS' directory parts
 # bsd.pkg.mk is pulled in via the Makefile
-cat >$cwd/.m <<EOF
+cat >$mf <<EOF
 bla:
 	@echo \${DEPENDS:C/^[^:]*://:C/:.*$//} \${BUILD_DEPENDS:C/^[^:]*://:C/:.*$//}
 .include "Makefile"
@@ -31,7 +31,7 @@ for pkgdir in $list
 do
 	cd $pkgdir
 
-	l=`make -f - <$cwd/.m bla`	# XXX NOT -f $cwd/.m !
+	l=`make -f - <$mf bla`	# XXX NOT -f $mf !
 	if [ "$l" = "" ]; then
 		# No dependencies
 		echo "$pkgdir $pkgdir"
@@ -48,4 +48,4 @@ do
 	cd $cwd
 done
 
-rm -f $cwd/.m
+rm -f $mf
