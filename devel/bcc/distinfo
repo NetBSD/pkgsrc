@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.10 2004/01/02 15:30:04 cjep Exp $
+$NetBSD: distinfo,v 1.11 2004/06/12 02:24:57 grant Exp $
 
 SHA1 (bcc.tar.gz) = 6a5c47bde0a6ddf82b65569883a5a490deb7e9b2
 Size (bcc.tar.gz) = 214834 bytes
-SHA1 (patch-aa) = 3e8d9f543278573c57f5662820a939da8cfe1c79
-SHA1 (patch-ab) = c3f0a4123ca97cc5ed7dbb64a70c9b1faf818ea8
+SHA1 (patch-aa) = 998b87ba9839f734d10f07e23e10941661e8546a
+SHA1 (patch-ab) = 3bdac5087890d4035c957bd13f5ed8cb5daac0e0
 SHA1 (patch-ac) = 45e828bbe12636d0473c8f130a1e8cb9f19b4b6b
 SHA1 (patch-ad) = 25879740733764421d74a5940b56265161494a12
 SHA1 (patch-ae) = 43f68ba3b3e5325aa9b7b4a019aa66289187619f
