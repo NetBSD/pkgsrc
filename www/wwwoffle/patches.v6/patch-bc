@@ -1,3 +1,5 @@
+$NetBSD: patch-bc,v 1.2 1999/09/03 21:10:54 tron Exp $
+
 --- misc.c.orig	Tue Aug 24 19:50:58 1999
 +++ misc.c	Tue Aug 24 20:24:24 1999
 @@ -44,7 +44,7 @@
