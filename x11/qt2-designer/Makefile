@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/10/30 09:09:15 skrll Exp $
+# $NetBSD: Makefile,v 1.3 2000/11/03 08:37:05 skrll Exp $
 #
 
 PKGNAME=	qt2-designer-2.2.1
@@ -11,9 +11,6 @@ ALL_TARGET=	sub-tools
 
 PATCHFILES+=	${PKGSRCDIR}/x11/qt2-libs/patches/patch-??
 ALLFILES=	${DISTFILES} # don't checksum shared patches
-
-EVAL_PREFIX+=	QT2DIR=qt2-libs
-QTPREFIX=	${QT2DIR}/qt2
 
 CONFIGURE_ENV+=	QTDIR=${QTPREFIX}
 MAKE_ENV=	QTDIR=${QTPREFIX}
