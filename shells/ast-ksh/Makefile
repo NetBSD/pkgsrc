@@ -1,5 +1,5 @@
 # $OpenBSD: Makefile,v 1.5 2001/11/21 01:17:43 naddy Exp $
-# $NetBSD: Makefile,v 1.3 2002/11/17 09:01:59 salo Exp $
+# $NetBSD: Makefile,v 1.4 2002/11/29 04:16:45 uebayasi Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -17,19 +17,28 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386
+# needs pdksh
+ONLY_FOR_PLATFORM=	NetBSD-*
 
 ASTKSH_VERSION=	2002-09-22
 
-NO_BUILDLINK2=	# arcane build procedure causes buildlink2 to not work
+USE_BUILDLINK2=	YES
 WRKSRC=		${WRKDIR}
-MAKE_FLAGS=	CC="${BUILDLINK_CC}" CCFLAGS="${CFLAGS}"
+MAKE_FLAGS=	CC="${CC}" CCFLAGS="${CFLAGS}"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+PDKSH=		/bin/ksh
+.endif
 
 PKG_SHELL=	${PREFIX}/bin/ksh93
 
+# XXX Note that this 'make' is not an executable command, but a target name
+# ./bin/package uses.
 do-build:
 	cd ${WRKSRC}; \
-	${SETENV} SHELL=${SH} ${SH} ./bin/package ${MAKE_PROGRAM} ${MAKE_FLAGS}
+	${SETENV} SHELL=${PDKSH} ${PDKSH} ./bin/package make
 
 do-install:
 	arch=`${WRKSRC}/bin/package host`; \
