@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/04/05 14:54:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.15 2004/06/12 03:01:59 grant Exp $
 
 DISTNAME=	lua-5.0.2
 CATEGORIES=	lang
@@ -22,6 +22,9 @@ COMMENT=	Powerful light-weight language for extending applications
 USE_BUILDLINK3=	yes
 ALL_TARGET=	all so
 INSTALL_TARGET=	install soinstall
+
+LIBS.SunOS+=	-ldl
+MAKE_ENV+=	LIBS="${LIBS}"
 
 post-build:
 	cd ${WRKSRC}/etc && ${MAKE} bin2c
