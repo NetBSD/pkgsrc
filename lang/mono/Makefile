@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/10/02 08:41:42 recht Exp $
+# $NetBSD: Makefile,v 1.12 2003/12/03 00:12:12 recht Exp $
 #
 
 DISTNAME=	mono-0.28
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.go-mono.org/archive/
 
@@ -23,6 +24,7 @@ USE_LIBTOOL=		YES
 USE_PKGINSTALL=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+LIBTOOL_OVERRIDE+=	${WRKSRC}/libgc/libtool
 PKGCONFIG_OVERRIDE=	mono.pc.in
 
 CONFIGURE_ARGS+=	--with-gc=included

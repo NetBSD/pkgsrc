@@ -1,0 +1,63 @@
+$NetBSD: patch-ah,v 1.3 2003/12/03 00:12:12 recht Exp $
+
+--- libgc/os_dep.c.orig	2003-08-26 23:21:14.000000000 +0200
++++ libgc/os_dep.c	2003-11-27 18:34:40.000000000 +0100
+@@ -121,7 +121,7 @@
+ # include <fcntl.h>
+ #endif
+ 
+-#if defined(SUNOS5SIGS) || defined (HURD) || defined(LINUX)
++#if defined(SUNOS5SIGS) || defined (HURD) || defined(LINUX) || defined(NETBSD)
+ # ifdef SUNOS5SIGS
+ #  include <sys/siginfo.h>
+ # endif
+@@ -688,9 +688,11 @@
+ 	typedef void (*handler)();
+ #   endif
+ 
+-#   if defined(SUNOS5SIGS) || defined(IRIX5) || defined(OSF1) || defined(HURD)
++#   if defined(SUNOS5SIGS) || defined(IRIX5) || defined(OSF1) \
++    || defined(HURD) || defined(NETBSD)
+ 	static struct sigaction old_segv_act;
+-#	if defined(_sigargs) /* !Irix6.x */ || defined(HPUX) || defined(HURD)
++#	if defined(_sigargs) /* !Irix6.x */ || defined(HPUX) \
++	|| defined(HURD) || defined(NETBSD)
+ 	    static struct sigaction old_bus_act;
+ #	endif
+ #   else
+@@ -705,11 +707,11 @@
+ #   endif
+     {
+ #	if defined(SUNOS5SIGS) || defined(IRIX5)  \
+-        || defined(OSF1) || defined(HURD)
++        || defined(OSF1) || defined(HURD) || defined(NETBSD)
+ 	  struct sigaction	act;
+ 
+ 	  act.sa_handler	= h;
+-#	  ifdef SUNOS5SIGS
++#	  if defined(SUNOS5SIGS) || defined(NETBSD)
+             act.sa_flags          = SA_RESTART | SA_NODEFER;
+ #         else
+             act.sa_flags          = SA_RESTART;
+@@ -729,7 +731,7 @@
+ #	  else
+ 	        (void) sigaction(SIGSEGV, &act, &old_segv_act);
+ #		if defined(IRIX5) && defined(_sigargs) /* Irix 5.x, not 6.x */ \
+-		   || defined(HPUX) || defined(HURD)
++		   || defined(HPUX) || defined(HURD) || defined(NETBSD)
+ 		    /* Under Irix 5.x or HP/UX, we may get SIGBUS.	*/
+ 		    /* Pthreads doesn't exist under Irix 5.x, so we	*/
+ 		    /* don't have to worry in the threads case.		*/
+@@ -765,10 +767,10 @@
+     void GC_reset_fault_handler()
+     {
+ #       if defined(SUNOS5SIGS) || defined(IRIX5) \
+-	   || defined(OSF1) || defined(HURD)
++	   || defined(OSF1) || defined(HURD) || defined(NETBSD)
+ 	  (void) sigaction(SIGSEGV, &old_segv_act, 0);
+ #	  if defined(IRIX5) && defined(_sigargs) /* Irix 5.x, not 6.x */ \
+-	     || defined(HPUX) || defined(HURD)
++	     || defined(HPUX) || defined(HURD) || defined(NETBSD)
+ 	      (void) sigaction(SIGBUS, &old_bus_act, 0);
+ #	  endif
+ #       else

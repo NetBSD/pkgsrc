@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2003/12/03 00:12:12 recht Exp $
+
+--- mono/metadata/mono-config.c.orig	2003-11-27 21:10:10.000000000 +0100
++++ mono/metadata/mono-config.c	2003-11-27 21:12:30.000000000 +0100
+@@ -258,7 +258,7 @@
+ 
+ 	/* Ensure mono_cfg_dir gets a value */
+ 	mono_install_get_config_dir ();
+-	mono_cfg = g_build_filename (mono_cfg_dir, "mono", "config", NULL);
++	mono_cfg = g_build_filename (mono_cfg_dir, "config", NULL, NULL);
+ 	mono_config_parse_file (mono_cfg);
+ 	g_free (mono_cfg);
+ 
