@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.6 2002/08/28 04:49:16 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.7 2002/08/29 22:29:03 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -32,9 +32,11 @@
 ECHO_BUILDLINK_MSG?=	${TRUE}
 
 BUILDLINK_DIR=		${WRKDIR}/.buildlink
-_BLNK_X11PKG_DIR=	${BUILDLINK_DIR:H}/.buildlink-x11pkg
+BUILDLINK_X11PKG_DIR=	${BUILDLINK_DIR:H}/.buildlink-x11pkg
 CONFIGURE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
 MAKE_ENV+=		BUILDLINK_DIR="${BUILDLINK_DIR}"
+CONFIGURE_ENV+=		BUILDLINK_X11PKG_DIR="${BUILDLINK_X11PKG_DIR}"
+MAKE_ENV+=		BUILDLINK_X11PKG_DIR="${BUILDLINK_X11PKG_DIR}"
 _BLNK_CPPFLAGS=		-I${LOCALBASE}/include
 _BLNK_LDFLAGS=		-L${LOCALBASE}/lib
 
@@ -149,9 +151,9 @@ _BUILDLINK_USE: .USE
 		${MKDIR} ${BUILDLINK_DIR};				\
 		case "${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}" in	\
 		${X11BASE})						\
-			${RM} -f ${_BLNK_X11PKG_DIR} 2>/dev/null;	\
-			${LN} -sf ${BUILDLINK_DIR} ${_BLNK_X11PKG_DIR}; \
-			buildlink_dir="${_BLNK_X11PKG_DIR}";		\
+			${RM} -f ${BUILDLINK_X11PKG_DIR} 2>/dev/null;	\
+			${LN} -sf ${BUILDLINK_DIR} ${BUILDLINK_X11PKG_DIR}; \
+			buildlink_dir="${BUILDLINK_X11PKG_DIR}";		\
 			;;						\
 		*)							\
 			buildlink_dir="${BUILDLINK_DIR}";		\
@@ -207,8 +209,8 @@ _BLNK_TRANSFORM+=	I:${LOCALBASE}:${BUILDLINK_DIR}
 _BLNK_TRANSFORM+=	L:${LOCALBASE}:${BUILDLINK_DIR}
 _BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
 .if defined(USE_X11) || defined(USE_X11BASE) || defined(USE_IMAKE)
-_BLNK_TRANSFORM+=	II:${X11BASE}:${_BLNK_X11PKG_DIR},${BUILDLINK_X11_DIR}
-_BLNK_TRANSFORM+=	LL:${X11BASE}:${_BLNK_X11PKG_DIR},${BUILDLINK_X11_DIR}
+_BLNK_TRANSFORM+=	II:${X11BASE}:${BUILDLINK_X11PKG_DIR},${BUILDLINK_X11_DIR}
+_BLNK_TRANSFORM+=	LL:${X11BASE}:${BUILDLINK_X11PKG_DIR},${BUILDLINK_X11_DIR}
 .endif
 .if ${LOCALBASE} != "/usr/pkg"
 _BLNK_TRANSFORM+=	r:-I/usr/pkg
@@ -331,7 +333,7 @@ _BLNK_TRANSFORM_SED.3+= \
 
 # Generate wrapper scripts for the compiler tools that sanitize the
 # argument list by converting references to ${LOCALBASE} and ${X11BASE}
-# into references to ${BUILDLINK_DIR}, ${_BLNK_X11PKG_DIR}, and
+# into references to ${BUILDLINK_DIR}, ${BUILDLINK_X11PKG_DIR}, and
 # ${BUILDLINK_X11_DIR}.  These wrapper scripts are to be used instead of
 # the actual compiler tools when building software.
 #
@@ -547,7 +549,7 @@ ${_BLNK_WRAP_PRE_CACHE}: ${.CURDIR}/../../mk/buildlink2/pre-cache
 		-e "s|@WRKDIR@|${WRKDIR}|g"				\
 		-e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"		\
 		-e "s|@BUILDLINK_X11_DIR@|${BUILDLINK_X11_DIR}|g"	\
-		-e "s|@_BLNK_X11PKG_DIR@|${_BLNK_X11PKG_DIR}|g"		\
+		-e "s|@BUILDLINK_X11PKG_DIR@|${BUILDLINK_X11PKG_DIR}|g"		\
 		${.ALLSRC} > ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
