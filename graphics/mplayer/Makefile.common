@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2002/05/02 12:22:47 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/05/03 14:52:04 wiz Exp $
 
 MPLAYER_DIST_VERSION=	0.90pre2
 MPLAYER_PKG_VERSION=	${MPLAYER_DIST_VERSION:S/pre/rc/}
@@ -11,7 +11,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER?=		svs@ropnet.ru,zuntum@netbsd.org
 HOMEPAGE?=		http://www.mplayerhq.hu/
 
-ONLY_FOR_PLATFORM?=	NetBSD-1.5[YZ]*-i386 NetBSD-1.[6-9]*-i386
+ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 RESTRICTED?=		"unsure of the license"
 #	see http://www.mplayerhq.hu/DOCS/users_against_developers.html#binary
