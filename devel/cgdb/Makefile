@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/05/07 01:14:47 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2004/09/08 14:00:58 wiz Exp $
 #
 
 DISTNAME=	cgdb-0.4.0
@@ -12,6 +12,8 @@ COMMENT=	Curses-based interface to the GNU Debugger (GDB)
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
 USE_GNU_TOOLS+=	make
+USE_NCURSES=	# tigetstr()
+USE_GNU_READLINE=	# rl_mark and others
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cgdb
