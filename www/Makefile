@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2002/05/04 00:54:43 jtb Exp $
+# $NetBSD: Makefile,v 1.189 2002/05/05 22:08:10 rh Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -64,6 +64,7 @@ SUBDIR+=	htdig
 SUBDIR+=	htmldoc
 SUBDIR+=	htmlfix
 SUBDIR+=	htmllint
+SUBDIR+=	http_load
 SUBDIR+=	hypermail
 SUBDIR+=	ijb
 SUBDIR+=	jakarta-servletapi
