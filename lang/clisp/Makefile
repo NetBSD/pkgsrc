@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 1999/02/20 22:48:32 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 1999/04/17 01:55:55 mjl Exp $
 
-DISTNAME=	clispsrc-19990108
+DISTNAME=	clispsrc
 PKGNAME=	clisp-19990108
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITES=	ftp://ftp2.cons.org/pub/lisp/clisp/source/ \
+		ftp://ftp.tu-darmstadt.de/pub/programming/languages/lisp/clisp/source/
 
 MAINTAINER=	mjl@emsi.priv.at
 HOMEPAGE=	http://clisp.cons.org/~haible/clisp.html
@@ -11,11 +12,6 @@ HOMEPAGE=	http://clisp.cons.org/~haible/clisp.html
 NOT_FOR_ARCHS=	alpha	# severe LP64 problems
 
 MIRROR_DISTFILE=	no
-
-GCC_VERSION!=	gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs) && !target(clean)
-IGNORE=		"cannot be built with egcs yet"
-.endif
 
 GNU_CONFIGURE=		YES
 WRKSRC=			${WRKDIR}/clisp-1999-01-08/src
