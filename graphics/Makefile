@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 1999/10/16 15:04:58 rh Exp $
+# $NetBSD: Makefile,v 1.63 1999/11/23 04:23:01 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.53 1997/09/28 13:25:40 markm Exp
 #
 
@@ -6,7 +6,7 @@
     SUBDIR += ImageMagick
     SUBDIR += Mesa
 #    SUBDIR += aero
-#    SUBDIR += camediaplay
+    SUBDIR += camediaplay
     SUBDIR += cdlabelgen
     SUBDIR += clanlib
     SUBDIR += cqcam
@@ -18,10 +18,12 @@
     SUBDIR += fly
     SUBDIR += fnlib
     SUBDIR += freetype
+    SUBDIR += fujiplay
 #    SUBDIR += fxtv
     SUBDIR += g3d
     SUBDIR += gd
 #    SUBDIR += geomview
+    SUBDIR += get_ds7
 #    SUBDIR += gfont
     SUBDIR += gif2png
     SUBDIR += giflib
@@ -60,6 +62,7 @@
     SUBDIR += p5-Image-Size
 #    SUBDIR += pgperl
 #    SUBDIR += pgplot
+    SUBDIR += photopc
     SUBDIR += pixmap
 #    SUBDIR += plotmtv
     SUBDIR += plotutils
