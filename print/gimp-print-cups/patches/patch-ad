@@ -1,13 +1,15 @@
-$NetBSD: patch-ad,v 1.1 2002/11/27 16:12:35 drochner Exp $
+$NetBSD: patch-ad,v 1.2 2004/03/02 14:56:07 drochner Exp $
 
---- src/Makefile.in.orig	Wed Nov 27 16:41:28 2002
-+++ src/Makefile.in	Wed Nov 27 16:42:06 2002
-@@ -194,7 +194,7 @@
+--- src/Makefile.in.orig	2004-01-11 14:02:16.000000000 +0100
++++ src/Makefile.in
+@@ -191,8 +191,8 @@ gimpprint_libs = @gimpprint_libs@
  AUTOMAKE_OPTIONS = 1.4 gnu
  
  MAINT_CHARSET = latin1
 -NONGIMP_SUBDIRS = cups foomatic ghost testpattern
+-SUBDIRS = printdef main escputil gimp $(NONGIMP_SUBDIRS)
 +NONGIMP_SUBDIRS = cups foomatic testpattern
- SUBDIRS = printdef main escputil gimp $(NONGIMP_SUBDIRS)
++SUBDIRS = printdef escputil gimp $(NONGIMP_SUBDIRS)
  
  MAINTAINERCLEANFILES = Makefile.in
+ mkinstalldirs = $(SHELL) $(top_srcdir)/scripts/mkinstalldirs
