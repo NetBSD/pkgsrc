@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2004/11/13 21:28:27 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2004/11/29 00:58:08 tv Exp $
 #
 
-DISTNAME=		binkd094
-PKGNAME=		binkd-0.9.4
+DISTNAME=		binkd098
+PKGNAME=		binkd-0.9.8
 PKGREVISION=		1
 CATEGORIES=		comms
 MASTER_SITES=		http://www.corbina.net/~maloff/binkd/ \
