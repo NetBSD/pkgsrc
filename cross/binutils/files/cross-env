@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: cross-env,v 1.1 2001/01/29 10:25:07 abs Exp $
+# $NetBSD: cross-env,v 1.2 2002/03/13 10:41:57 abs Exp $
 
 PREFIX=@@PREFIX@@
 
@@ -58,4 +58,4 @@ export MAKE=make
 #export MAKEFLAGS="-I ${DESTDIR}/usr/share/mk"
 
 set -x
-exec $@
+exec "$@"
