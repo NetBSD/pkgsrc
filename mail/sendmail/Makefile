@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.39 2001/08/21 06:49:53 itojun Exp $
+# $NetBSD: Makefile,v 1.40 2001/09/09 16:41:40 taca Exp $
 
 DISTNAME=	sendmail.8.11.6
-PKGNAME=	sendmail-8.11.6
+PKGNAME=	sendmail-8.11.6nb1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/
 
-USE_WIDEPATCH=	NO
+USE_WIDEPATCH?=	YES
 .if ${USE_WIDEPATCH} == "YES"
 PATCH_SITES=	ftp://ftp.kyoto.wide.ad.jp/pub/mail/smtpfeed/
-PATCHFILES=	sendmail8.11.3+3.4W.patch.gz
+PATCHFILES=	sendmail8.11.6+3.4W.patch.gz
 PATCH_DIST_ARGS=-d ${WRKSRC}/sendmail -E ${PATCH_DIST_STRIP}
 .if !(defined(PATCH_DEBUG) || defined(PKG_VERBOSE))
 PATCH_DIST_ARGS+=--forward --quiet
@@ -28,7 +28,7 @@ NO_CONFIGURE=	yes
 MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}"
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME:C/nb[0-9]+$//}
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=    USE_INET6
