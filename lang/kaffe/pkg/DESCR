@@ -1,8 +1,3 @@
-*******************
-* NB: The section about the settings of the environment variables
-*     has changed! - Xaa
-*******************
-
 This is Kaffe, a virtual machine design to execute Java bytecode.
 This machine can be configured in two modes.  In one mode it operates as
 a pure bytecode interpreter (not unlike Javasoft's machine); in the second
@@ -17,12 +12,16 @@ Before running Kaffe it is necessary to configure the environment.
 This requires the setting of CLASSPATH, KAFFEHOME and LD_LIBRARY_PATH.
 For the standard installation these would be defined as follows:
 
- CLASSPATH=.:/usr/local/share/kaffe/classes.zip
- KAFFEHOME=/usr/local/share/kaffe
- LD_LIBRARY_PATH=/usr/lib:/usr/local/lib
+ CLASSPATH=.:${PREFIX}/share/kaffe/classes.zip
+ KAFFEHOME=${PREFIX}/share/kaffe
+ LD_LIBRARY_PATH=/usr/lib:${PREFIX}/lib
 
-You can run "sh /usr/local/share/kaffe/ENVIRONMENT" to have these set for
+You can run "sh ${PREFIX}/share/kaffe/ENVIRONMENT" to have these set for
 you.
+
+The value ${PREFIX} above is whatever LOCALBASE is set to in the
+environment, or in /etc/mk.conf, when the package was installed on
+NetBSD.  By default this is /usr/pkg.
 
 What's in there
 ===============
