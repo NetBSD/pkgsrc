@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2002/06/25 15:42:21 taca Exp $
+# $NetBSD: Makefile,v 1.29 2002/09/05 18:07:52 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -12,7 +12,6 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 COMMENT=		Client part of Amanda, a network backup system
 
-DEPENDS+=		{gtar,gtar-base}>=1.12:../../archivers/gtar-base
 DEPENDS+=		amanda-common-2.4.2p2:../../sysutils/amanda-common
 
 GNU_CONFIGURE=		yes
@@ -20,6 +19,10 @@ GNU_CONFIGURE=		yes
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"
 .include "../../devel/readline/buildlink.mk"
+
+.if ${OPSYS} != "Linux"
+DEPENDS+=		{gtar,gtar-base}>=1.12:../../archivers/gtar-base
+.endif
 
 CONFIGURE_ARGS+=	--without-server --without-restore
 
