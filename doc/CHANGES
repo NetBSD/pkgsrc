@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2154 2003/05/05 20:27:40 jmmv Exp $
+$NetBSD: CHANGES,v 1.2155 2003/05/06 00:02:43 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1862,3 +1862,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ethereal to 0.9.12 [salo 2003-05-05]
 	Updated sablecc to 2.16.2nb1 [wiz 2003-05-05]
 	Updated lmule to 1.2.0 [jmmv 2003-05-05]
+	Updated p5-SDL to 1.19.2nb3 [salo 2003-05-06]
