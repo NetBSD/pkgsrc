@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/10/15 19:51:07 agc Exp $
+# $NetBSD: Makefile,v 1.8 1998/11/13 01:38:16 frueauf Exp $
 #
 
 DISTNAME=	sniffit.0.3.5
@@ -6,10 +6,10 @@ PKGNAME=	sniffit-0.3.5
 CATEGORIES=	net security
 MASTER_SITES=	http://reptile.rug.ac.be/~coder/sniffit/files/
 
-NOT_FOR_ARCHS=	alpha	# severe LP64 loss
-
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://reptile.rug.ac.be/~coder/sniffit/sniffit.html
+
+NOT_FOR_ARCHS=	alpha	# severe LP64 loss
 
 do-build:
 	cd ${WRKSRC} ; ./configure ; make

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 1998/09/22 06:11:39 garbled Exp $
+# $NetBSD: Makefile,v 1.16 1998/11/13 01:41:16 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -6,8 +6,6 @@ DISTNAME=       9term.1.6.3
 PKGNAME=	9term-1.6.3
 CATEGORIES=	plan9
 MASTER_SITES=   ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
-
-NOT_FOR_ARCHS=	alpha	#LP64 Problems
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.psrg.cs.usyd.edu.au/~matty/9term/index.html
@@ -21,6 +19,8 @@ BUILD_ROOT=	${WRKOBJDIR}
 BUILD_ROOT=	${PKGSRCDIR}
 .endif
 BUILD_DEPENDS=	${BUILD_ROOT}/plan9/sam/${WRKDIR:T}/libframe/libframe.a:../../plan9/sam
+
+NOT_FOR_ARCHS=	alpha	#LP64 Problems
 
 MANCOMPRESSED=	yes
 NO_WRKSUBDIR=	yes
