@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/01/04 13:08:47 frueauf Exp $
+$NetBSD: md5,v 1.2 1999/08/20 14:14:21 rh Exp $
 
-MD5 (gtksql-0.2.tar.gz) = 74cdab5745874b5bdcef21398e95c066
+MD5 (gtksql-0.3.tar.gz) = 8f7a0a565e761fb649240cb46d6dd9cb
