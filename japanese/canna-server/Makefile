@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/04/06 19:29:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2002/04/08 14:44:30 uebayasi Exp $
 
 DISTNAME=	Canna35b2
 PKGNAME=	Canna-server-3.5.2
@@ -47,6 +47,15 @@ post-patch:
 		-e 's|\(SERVERDIR = .*\) dic/phono\(.*\)|\1\2|' \
 		-e 's|\(CLIENTDIR = .*\) dic/phono misc|\1|' \
 		${WRKSRC}/Imakefile.orig > ${WRKSRC}/Imakefile
+	@${FIND} ${WRKSRC} -name Imakefile -print | \
+	while read f; do \
+		${CP} $$f $${f}.orig; \
+		( \     
+			${ECHO} '/#include ".*\/Canna.conf"$$/a\'; \
+			${ECHO} '#include "${FILESDIR}/LinkFileList.rules"'; \
+		) | ${SED} -f /dev/stdin $${f}.orig >$$f; \
+	done
+
 
 do-configure:
 	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${XMKMF})
