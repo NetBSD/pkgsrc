@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/02/14 17:21:45 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2004/03/30 19:51:31 ben Exp $
 
-DISTNAME=	mjpegtools-1.6.0
-PKGNAME=	mplex-1.6.0
+DISTNAME=	mjpegtools-1.6.2
+PKGNAME=	mplex-1.6.2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 
@@ -15,16 +15,21 @@ USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_GCC_SHLIB=	yes
+USE_BUILDLINK3=	yes
 
 do-build:
 	cd ${WRKSRC}/utils && ${GMAKE}
 	cd ${WRKSRC}/mplex && ${GMAKE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mplex/mplex ${PREFIX}/bin
+	cd ${WRKSRC}/mplex && \
+		${LIBTOOL} --mode=install ${INSTALL_DATA} libmplex2.la \
+			${PREFIX}/lib && \
+		${LIBTOOL} --mode=install ${INSTALL_PROGRAM} mplex ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mplex
 	for FILE in COPYING INSTRUCT README; do \
 	  ${INSTALL_DATA} ${WRKSRC}/mplex/$$FILE ${PREFIX}/share/doc/mplex; \
 	done
 
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
