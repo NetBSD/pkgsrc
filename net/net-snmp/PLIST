@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/16 00:27:48 cjep Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/05/06 21:10:39 grant Exp $
 bin/encode_keychange
 bin/fixproc
 bin/ipf-mod.pl
@@ -85,9 +85,9 @@ include/net-snmp/library/snmp-tc.h
 include/net-snmp/library/snmp.h
 include/net-snmp/library/snmpCallbackDomain.h
 include/net-snmp/library/snmpTCPDomain.h
-include/net-snmp/library/snmpTCPIPv6Domain.h
+${IPV6H}include/net-snmp/library/snmpTCPIPv6Domain.h
 include/net-snmp/library/snmpUDPDomain.h
-include/net-snmp/library/snmpUDPIPv6Domain.h
+${IPV6H}include/net-snmp/library/snmpUDPIPv6Domain.h
 include/net-snmp/library/snmpUnixDomain.h
 include/net-snmp/library/snmp_alarm.h
 include/net-snmp/library/snmp_api.h
