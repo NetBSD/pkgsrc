@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.110 2004/03/11 05:15:23 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.111 2004/03/11 06:32:58 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -65,7 +65,17 @@ PREPEND_PATH+=	${BUILDLINK_DIR}/bin
 BUILDLINK_DEPENDS?=	# empty
 
 .if defined(USE_X11)
-.  include "../../pkgtools/x11-links/buildlink3.mk"
+X11_TYPE?=	native
+.  if ${X11_TYPE} == "native"
+.    include "../../pkgtools/x11-links/buildlink3.mk"
+#.  elif ${X11_TYPE} == "XFree86"
+#.    include "../../x11/XFree86-libs/buildlink3.mk"
+#.  elif ${X11_TYPE} == "xlibs"
+#.    include "../../x11/xlibs/buildlink3.mk"
+.  else
+PKG_FAIL_REASON+=	\
+	"${PKGNAME} uses X11, but \"${X11_TYPE}\" isn't a valid X11 type."
+.  endif
 .endif
 
 # For each package we use, check whether we are using the built-in
