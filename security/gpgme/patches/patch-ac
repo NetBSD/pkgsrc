@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/10/20 19:09:12 jmmv Exp $
+
+--- configure.orig	2004-09-30 04:44:16.000000000 +0200
++++ configure
+@@ -21872,7 +21872,7 @@ _ACEOF
+ fi
+ 
+ 
+-if test -n "$GPGSM"; then
++if test "$GPGSM" != no; then
+   HAVE_GPGSM_TRUE=
+   HAVE_GPGSM_FALSE='#'
+ else
