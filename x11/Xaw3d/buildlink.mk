@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:53 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/27 13:33:36 jlam Exp $
 #
 # This Makefile fragment is included by packages that use Xaw3d.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.Xaw3d?=	Xaw3d-1.5
 DEPENDS+=	${BUILDLINK_DEPENDS.Xaw3d}:../../x11/Xaw3d
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.Xaw3d=Xaw3d
+BUILDLINK_PREFIX.Xaw3d_DEFAULT=	${X11PREFIX}
 BUILDLINK_FILES.Xaw3d=		include/X11/X11/Xaw3d/*	# for OpenWindows
 BUILDLINK_FILES.Xaw3d+=		include/X11/Xaw3d/*
 BUILDLINK_FILES.Xaw3d+=		lib/libXaw3d.*

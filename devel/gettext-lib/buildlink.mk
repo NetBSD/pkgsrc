@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.9 2001/07/20 01:54:37 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.10 2001/07/27 13:33:23 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gettext.
 #
@@ -30,6 +30,7 @@ _NEED_GNU_GETTEXT=	YES
 .if ${_NEED_GNU_GETTEXT} == "YES"
 DEPENDS+=	${BUILDLINK_DEPENDS.gettext}:../../devel/gettext-lib
 EVAL_PREFIX+=	BUILDLINK_PREFIX.gettext=gettext-lib
+BUILDLINK_PREFIX.gettext_DEFAULT=	${LOCALBASE}
 .else
 BUILDLINK_PREFIX.gettext=	/usr
 .endif

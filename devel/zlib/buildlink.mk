@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.6 2001/07/20 01:54:41 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.7 2001/07/27 13:33:26 jlam Exp $
 #
 # This Makefile fragment is included by packages that use zlib. 
 #
@@ -28,6 +28,7 @@ _NEED_ZLIB=		YES
 .if ${_NEED_ZLIB} == "YES"
 DEPENDS+=		${BUILDLINK_DEPENDS.zlib}:../../devel/zlib
 EVAL_PREFIX+=		BUILDLINK_PREFIX.zlib=zlib
+BUILDLINK_PREFIX.zlib_DEFAULT=	${LOCALBASE}
 .else
 BUILDLINK_PREFIX.zlib=	/usr
 .endif

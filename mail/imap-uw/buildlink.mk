@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:48 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/07/27 13:33:32 jlam Exp $
 #
 # This Makefile fragment is included by packages that use imap-uw.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.imap-uw?=	imap-uw>=2000.0.3nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.imap-uw}:../../mail/imap-uw
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.imap-uw=imap-uw
+BUILDLINK_PREFIX.imap-uw_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.imap-uw=	include/c-client/*
 BUILDLINK_FILES.imap-uw+=	lib/libc-client.*
 BUILDLINK_FILES.imap-uw+=	lib/libc-client_pic.*

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/20 01:54:44 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/27 13:33:28 jlam Exp $
 #
 # This Makefile fragment is included by packages that use Hermes.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.Hermes?=	Hermes>=1.3.2
 DEPENDS+=	${BUILDLINK_DEPENDS.Hermes}:../../graphics/hermes
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.Hermes=Hermes
+BUILDLINK_PREFIX.Hermes_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.Hermes=		include/Hermes/*
 BUILDLINK_FILES.Hermes+=	lib/libHermes.*
 

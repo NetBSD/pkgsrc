@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/20 01:54:46 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/27 13:33:30 jlam Exp $
 #
 # This Makefile fragment is included by packages that use mng.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.mng?=	mng>=1.0.0
 DEPENDS+=		${BUILDLINK_DEPENDS.mng}:../../graphics/mng
 
 EVAL_PREFIX+=		BUILDLINK_PREFIX.mng=mng
+BUILDLINK_PREFIX.mng_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.mng=	include/libmng.h
 BUILDLINK_FILES.mng+=	include/libmng_conf.h
 BUILDLINK_FILES.mng+=	include/libmng_types.h

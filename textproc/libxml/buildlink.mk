@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/20 01:54:52 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/27 13:33:35 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libxml.
 #
@@ -21,6 +21,7 @@ BUILDLINK_DEPENDS.libxml?=	libxml>=1.8.11
 DEPENDS+=	${BUILDLINK_DEPENDS.libxml}:../../textproc/libxml
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.libxml=libxml
+BUILDLINK_PREFIX.libxml_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libxml=		include/gnome-xml/*
 BUILDLINK_FILES.libxml+=	lib/libxml.*
 BUILDLINK_FILES.libxml+=	lib/xmlConf.sh
