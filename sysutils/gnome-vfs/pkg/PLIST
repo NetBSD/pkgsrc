@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2001/04/06 22:03:09 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/05/14 17:11:37 rh Exp $
 bin/gnome-vfs-config
-bin/gnome-vfs-slave
 etc/gnome-vfs-mime-magic
 etc/vfs/modules/default-modules.conf
 include/libgnomevfs/gnome-vfs-application-registry.h
@@ -45,11 +44,6 @@ include/libgnomevfs/gnome-vfs-uri.h
 include/libgnomevfs/gnome-vfs-utils.h
 include/libgnomevfs/gnome-vfs-xfer.h
 include/libgnomevfs/gnome-vfs.h
-lib/libgnomevfs-corba.a
-lib/libgnomevfs-corba.la
-lib/libgnomevfs-corba.so
-lib/libgnomevfs-corba.so.0
-lib/libgnomevfs-corba.so.0.0
 lib/libgnomevfs-pthread.a
 lib/libgnomevfs-pthread.la
 lib/libgnomevfs-pthread.so
@@ -109,14 +103,42 @@ lib/vfs/modules/libvfs-translate.a
 lib/vfs/modules/libvfs-translate.la
 lib/vfs/modules/libvfs-translate.so
 lib/vfsConf.sh
-lib/vfscorbaConf.sh
 lib/vfspthreadConf.sh
 man/man5/gnome-vfs-mime.5
 share/application-registry/gnome-vfs.applications
 share/gnome/html/gnome-vfs-decl.txt
 share/gnome/html/gnome-vfs-sections.txt
+share/locale/az/LC_MESSAGES/gnome-vfs.mo
+share/locale/ca/LC_MESSAGES/gnome-vfs.mo
+share/locale/da/LC_MESSAGES/gnome-vfs.mo
+share/locale/de/LC_MESSAGES/gnome-vfs.mo
+share/locale/el/LC_MESSAGES/gnome-vfs.mo
+share/locale/es/LC_MESSAGES/gnome-vfs.mo
+share/locale/fi/LC_MESSAGES/gnome-vfs.mo
+share/locale/fr/LC_MESSAGES/gnome-vfs.mo
+share/locale/ga/LC_MESSAGES/gnome-vfs.mo
+share/locale/gl/LC_MESSAGES/gnome-vfs.mo
+share/locale/hu/LC_MESSAGES/gnome-vfs.mo
+share/locale/it/LC_MESSAGES/gnome-vfs.mo
+share/locale/ja/LC_MESSAGES/gnome-vfs.mo
+share/locale/ko/LC_MESSAGES/gnome-vfs.mo
+share/locale/lt/LC_MESSAGES/gnome-vfs.mo
+share/locale/nl/LC_MESSAGES/gnome-vfs.mo
+share/locale/nn/LC_MESSAGES/gnome-vfs.mo
+share/locale/no/LC_MESSAGES/gnome-vfs.mo
+share/locale/pl/LC_MESSAGES/gnome-vfs.mo
+share/locale/pt_BR/LC_MESSAGES/gnome-vfs.mo
+share/locale/ro/LC_MESSAGES/gnome-vfs.mo
+share/locale/ru/LC_MESSAGES/gnome-vfs.mo
+share/locale/sk/LC_MESSAGES/gnome-vfs.mo
+share/locale/sl/LC_MESSAGES/gnome-vfs.mo
+share/locale/sv/LC_MESSAGES/gnome-vfs.mo
+share/locale/tr/LC_MESSAGES/gnome-vfs.mo
+share/locale/uk/LC_MESSAGES/gnome-vfs.mo
+share/locale/wa/LC_MESSAGES/gnome-vfs.mo
 share/mime-info/gnome-vfs.keys
 share/mime-info/gnome-vfs.mime
+@exec mkdir -p %D/share/gnome/html/gnome-vfs
 @dirrm share/gnome/html/gnome-vfs
 @dirrm share/application-registry
 @dirrm lib/vfs/modules
