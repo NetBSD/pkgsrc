@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2004/10/13 12:29:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2004/11/18 10:02:07 markd Exp $
 bin/egroupwarewizard
 bin/groupwarewizard
 bin/ical2vcal
@@ -1280,7 +1280,7 @@ share/kde/servicetypes/kpilotconduit.desktop
 @dirrm share/kde/services/korganizer
 @dirrm share/kde/services/kontact
 @dirrm share/kde/services/kitchensync
-@dirrm share/kde/services/kded
+@comment dirrm share/kde/services/kded
 @dirrm share/kde/services/kaddressbook
 @comment dirrm share/kde/services
 @comment dirrm share/kde/mimelnk/kdedevice

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/09/22 08:09:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/11/18 10:02:07 markd Exp $
 bin/ark
 bin/irkick
 bin/kcalc
@@ -424,7 +424,7 @@ share/kde/services/kwalletmanager_show.desktop
 share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
 @dirrm share/kde/servicetypes/kmilo
 @dirrm share/kde/services/kmilo
-@dirrm share/kde/services/kded
+@comment dirrm share/kde/services/kded
 @comment dirrm share/kde/services
 @comment dirrm share/kde/icons/locolor/32x32/apps
 @comment dirrm share/kde/icons/locolor/16x16/apps
