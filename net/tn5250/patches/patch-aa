@@ -1,13 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/08/04 17:00:27 rh Exp $
+$NetBSD: patch-aa,v 1.2 1999/09/04 01:09:02 hubertf Exp $
 
 --- cursesterm.cc.orig	Mon Apr  5 18:25:45 1999
-+++ cursesterm.cc	Wed Aug  4 15:15:30 1999
-@@ -19,7 +19,11 @@
++++ cursesterm.cc	Sat Sep  4 02:32:40 1999
+@@ -19,7 +19,12 @@
  #include "config.h"
  #include <assert.h>
  #include <sys/time.h>
 +#ifdef __NetBSD__
 +#include <ncurses.h>
++#include <unistd.h>
 +#else
  #include <curses.h>
 +#endif
