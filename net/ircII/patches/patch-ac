@@ -1,0 +1,27 @@
+--- Makefile.in.orig	Tue Mar 25 22:47:43 1997
++++ Makefile.in	Thu Mar  5 11:37:54 1998
+@@ -132,8 +132,8 @@
+ LN = @LN@
+ CP = cp
+ MV = mv
+-INSTALL = ./bsdinstall -c -m 755
+-INSTALL_DATA = ../bsdinstall -c -m 644
++INSTALL = $(BSD_INSTALL_PROGRAM)
++INSTALL_DATA = $(BSD_INSTALL_DATA)
+ 
+ VERSION = @VERSION@
+ 
+@@ -186,11 +186,9 @@
+ 
+ installirc: irc installdirs
+ 	$(INSTALL) source/irc $(INSTALL_IRC)-$(VERSION)
+-	$(INSTALL) ircbug $(bindir)/ircbug
+-	@if test -f $(INSTALL_IRC).old; then $(RM) $(INSTALL_IRC).old; fi
+-	@if test -f $(INSTALL_IRC); then $(MV) $(INSTALL_IRC) $(INSTALL_IRC).old; fi
++	$(BSD_INSTALL_SCRIPT) ircbug $(bindir)/ircbug
+ 	$(RM) $(INSTALL_IRC)
+-	$(LN) $(INSTALL_IRC)-$(VERSION) $(INSTALL_IRC)
++	cd ${bindir}; $(LN) irc-$(VERSION) irc
+ 
+ installscript: installdirs
+ 	-chmod -x script/*
