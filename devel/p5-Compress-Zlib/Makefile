@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2004/12/20 11:30:58 grant Exp $
+# $NetBSD: Makefile,v 1.13 2005/02/26 17:22:21 wiz Exp $
 
-DISTNAME=		Compress-Zlib-1.33
+DISTNAME=		Compress-Zlib-1.34
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=	2
 SVR4_PKGNAME=		p5czl
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Compress/}
