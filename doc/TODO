@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1322 2004/01/21 22:54:00 wiz Exp $
+$NetBSD: TODO,v 1.1323 2004/01/22 07:40:22 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -252,6 +252,7 @@ Suggested package updates
 	o nethack-3.4.3
 	o newscache-0.99.22p1
 	o ngrep-1.41
+	o nmap-3.50
 	o ns-flash-6.0.79
 	o nsd-1.2.3 [pkg/24034]
 	o nut-9.8
