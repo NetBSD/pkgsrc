@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1.1.1 2002/12/31 06:59:54 dsainty Exp $
+
+--- BuildUnix/Makefile.in.orig	Sat Mar 30 01:11:21 2002
++++ BuildUnix/Makefile.in	Sun Nov 24 02:24:49 2002
+@@ -70,6 +70,7 @@
+ GLLIB = @GLLIB@
+ MAKEINFO = @MAKEINFO@
+ PACKAGE = @PACKAGE@
++PACKAGE_SKINS_FLAGS = -DPACKAGE_SKINS_DIR="\"@PACKAGE_SKINS_DIR@\""
+ POSER_CFLAGS = @POSER_CFLAGS@
+ POSER_CXXFLAGS = @POSER_CXXFLAGS@
+ RANLIB = @RANLIB@
+@@ -85,8 +86,8 @@
+ VPATH = $(srcdir)/../SrcUnix:										$(srcdir)/../SrcShared:										$(srcdir)/../SrcShared/Hardware:							$(srcdir)/../SrcShared/Hardware/TRG:						$(srcdir)/../SrcShared/omnithread:							$(srcdir)/../SrcShared/Palm/Platform/Core/System/Src:						$(srcdir)/../SrcShared/Patches:								$(srcdir)/../SrcShared/UAE:
+ 
+ 
+-CFLAGS = $(POSER_CFLAGS) $(LOCAL_CFLAGS) $(FLAGS) $(THREAD_FLAGS) $(X_CFLAGS)
+-CXXFLAGS = $(POSER_CXXFLAGS) $(LOCAL_CFLAGS) $(FLAGS) $(THREAD_FLAGS) $(X_CFLAGS)
++CFLAGS = $(POSER_CFLAGS) $(LOCAL_CFLAGS) $(FLAGS) $(THREAD_FLAGS) $(PACKAGE_SKINS_FLAGS) $(X_CFLAGS)
++CXXFLAGS = $(POSER_CXXFLAGS) $(LOCAL_CFLAGS) $(FLAGS) $(THREAD_FLAGS) $(PACKAGE_SKINS_FLAGS) $(X_CFLAGS)
+ INCLUDES = -I$(srcdir)/../SrcShared -I$(srcdir)/../SrcShared/Hardware -I$(srcdir)/../SrcShared/Hardware/TRG -I$(srcdir)/../SrcShared/Palm/Device -I$(srcdir)/../SrcShared/Palm/Platform -I$(srcdir)/../SrcShared/Palm/Platform/Core/Hardware/IncsPrv -I$(srcdir)/../SrcShared/Palm/Platform/Core/System/IncsPrv -I$(srcdir)/../SrcShared/Palm/Platform/Incs -I$(srcdir)/../SrcShared/Palm/Platform/Incs/Core -I$(srcdir)/../SrcShared/Palm/Platform/Incs/Core/Hardware -I$(srcdir)/../SrcShared/Palm/Platform/Incs/Core/System -I$(srcdir)/../SrcShared/Palm/Platform/Incs/Core/UI -I$(srcdir)/../SrcShared/Palm/Platform/Incs/Libraries -I$(srcdir)/../SrcShared/Gzip -I$(srcdir)/../SrcShared/jpeg -I$(srcdir)/../SrcShared/omnithread -I$(srcdir)/../SrcShared/Patches -I$(srcdir)/../SrcShared/UAE -I$(srcdir)/../SrcUnix -I$(srcdir)/../SrcUnix/espws-2.0
+ 
+ SRC_UNIX = EmApplicationFltk.cpp								EmApplicationFltk.h									EmCommonUnix.h										EmDirRefUnix.cpp									EmDirRefUnix.h										EmDlgFltk.cpp										EmDlgFltk.h											EmDocumentUnix.cpp									EmDocumentUnix.h									EmFileRefUnix.cpp									EmFileRefUnix.h										EmMenusFltk.cpp										EmMenusFltk.h										EmPixMapUnix.cpp									EmPixMapUnix.h										EmTransportSerialUnix.cpp							EmTransportSerialUnix.h								EmTransportUSBUnix.cpp								EmTransportUSBUnix.h								EmWindowFltk.cpp									EmWindowFltk.h										Platform_Unix.cpp									jconfig.h
