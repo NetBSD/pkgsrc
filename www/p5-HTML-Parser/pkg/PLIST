@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1999/04/08 18:52:00 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 2000/07/03 09:17:56 mjl Exp $
 lib/perl5/man/man3/HTML::Parser.3
 lib/perl5/man/man3/HTML::Entities.3
 lib/perl5/man/man3/HTML::Filter.3
@@ -12,5 +12,7 @@ lib/perl5/site_perl/HTML/HeadParser.pm
 lib/perl5/site_perl/HTML/LinkExtor.pm
 lib/perl5/site_perl/HTML/TokeParser.pm
 lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/HTML/Parser/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/HTML/Parser/Parser.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/HTML/Parser/Parser.so
 @dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/HTML/Parser
 @dirrm lib/perl5/site_perl/HTML
