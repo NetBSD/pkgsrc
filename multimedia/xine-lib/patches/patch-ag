@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.3 2004/03/28 20:14:22 mycroft Exp $
+$NetBSD: patch-ag,v 1.4 2004/06/21 15:55:55 drochner Exp $
 
---- configure.ac.orig	2004-03-16 21:44:17.000000000 +0000
-+++ configure.ac	2004-03-28 02:13:31.000000000 +0000
-@@ -347,6 +347,9 @@
+--- configure.ac.orig	2004-06-21 01:39:04.000000000 +0200
++++ configure.ac
+@@ -351,6 +351,9 @@ AC_CHECK_LIB(socket, socket, NET_LIBS="-
  AC_CHECK_LIB(nsl, gethostbyname, NET_LIBS="-lnsl $NET_LIBS",)
  AC_SUBST(NET_LIBS)
  
@@ -12,25 +12,25 @@ $NetBSD: patch-ag,v 1.3 2004/03/28 20:14:22 mycroft Exp $
  
  dnl ---------------------------------------------
  dnl IPv6
-@@ -385,7 +388,7 @@
- AC_CHECK_LIB(GL, glBegin,
- 	[AC_CHECK_HEADER(GL/gl.h,
-              [ ac_have_opengl="yes"
--               OPENGL_LIBS="-lGL" 
-+               OPENGL_LIBS="-lGL -lm" 
- 	       AC_CHECK_LIB(glut, glutInit, dnl check for glut
- 	                    [ ac_have_glut="yes"
-                               GLUT_LIBS="-lglut"
-@@ -403,7 +406,7 @@
-              ],
- 	[])],
-    [],
--   [$X_LIBS $X_PRE_LIBS -lGL $X_EXTRA_LIBS])
-+   [$X_LIBS $X_PRE_LIBS -lGL -lm $X_EXTRA_LIBS])
- AC_SUBST(OPENGL_LIBS)
- AC_SUBST(GLUT_LIBS)
- AC_SUBST(GLU_LIBS)
-@@ -580,8 +583,7 @@
+@@ -398,7 +401,7 @@ case "$host" in
+ 	AC_CHECK_LIB(GL, glBegin,
+ 		[AC_CHECK_HEADER(GL/gl.h,
+ 		     [ ac_have_opengl="yes"
+-		       OPENGL_LIBS="-lGL" 
++		       OPENGL_LIBS="-lGL -lm" 
+ 		       AC_CHECK_LIB(glut, glutInit, dnl check for glut
+ 				    [ ac_have_glut="yes"
+ 				      GLUT_LIBS="-lglut"
+@@ -416,7 +419,7 @@ case "$host" in
+ 		     ],
+ 		[])],
+ 	   [],
+-	   [$X_LIBS $X_PRE_LIBS -lGL $X_EXTRA_LIBS])
++	   [$X_LIBS $X_PRE_LIBS -lGL -lm $X_EXTRA_LIBS])
+ 	;;
+ esac
+ 
+@@ -596,8 +599,7 @@ dnl Checks for Xinerama extension
  dnl ---------------------------------------------
  
  AC_CHECK_LIB(Xinerama, XineramaQueryExtension, 
@@ -40,7 +40,7 @@ $NetBSD: patch-ag,v 1.3 2004/03/28 20:14:22 mycroft Exp $
                ac_have_xinerama="yes"],,
               [$X_LIBS $X_PRE_LIBS -lXext $X_EXTRA_LIBS])
  dnl AM_CONDITIONAL(HAVE_XINERAMA, test x$ac_have_xinerama = "xyes")
-@@ -993,9 +995,10 @@
+@@ -1031,9 +1033,10 @@ dnl ------------------------------------
  dnl gnome-vfs support
  dnl ---------------------------------------------
  
