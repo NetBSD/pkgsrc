@@ -1,10 +1,5 @@
-# New ports collection makefile for:	xmms
-# Version required:		1.0.1
-# Date created:			3 July 1999
-# Whom:				Espen Skoglund <esk@ira.uka.de>
-#
+# $NetBSD: Makefile,v 1.2 2000/03/07 23:03:12 tron Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
-#
 
 DISTNAME=	xmms-1.0.1
 CATEGORIES=	audio
@@ -16,20 +11,21 @@ MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.0/ \
 		ftp://ftp.nl.xmms.org/xmms/1.0/ \
 		ftp://ftp.de.xmms.org/xmms/1.0/
 
-MAINTAINER=	esk@ira.uka.de
+MAINTAINER=	tron@netbsd.org
+HOMEPAGE=	http://www.xmms.org/
 
-LIB_DEPENDS=	gtk12.2:${PORTSDIR}/x11-toolkits/gtk12 \
-		glib12.3:${PORTSDIR}/devel/glib12 \
-		xml.5:${PORTSDIR}/textproc/libxml
+DEPENDS+=	Mesa-*:../../graphics/Mesa
+DEPENDS+=	gtk+-1.2.*:../../x11/gtk
+DEPENDS+=	libmikmod>=3.1.7:../libmikmod
+DEPENDS+=	libxml>=1.8.5:../../textproc/libxml
+DEPENDS+=	mit-pthreads-*:../../devel/mit-pthreads
 
 USE_LIBTOOL=	yes
+USE_X11=	yes
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS= --without-gnome
-
-GTK_CONFIG?=	${X11BASE}/bin/gtk12-config
-GLIB_CONFIG?=	${LOCALBASE}/bin/glib12-config
-
-CONFIGURE_ENV=	GTK_CONFIG="${GTK_CONFIG}" \
- 		GLIB_CONFIG="${GLIB_CONFIG}"
+CC=		${LOCALBASE}/pthreads/bin/pgcc
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 post-extract:
 	@(cd ${WRKSRC}/Input/mpg123 && ${MV} decode_i586.s decode_i586.S && \
@@ -39,7 +35,4 @@ post-extract:
 	@${PERL} -pi.bak -e 's:blur_8.s:blur_8.S:g' \
 	    ${WRKSRC}/Visualization/blur_scope/Makefile.in
 
-post-install:
-	${SETENV} OBJFORMAT=${PORTOBJFORMAT} ${LDCONFIG} -m ${PREFIX}/lib
-
-.include <bsd.port.mk>
+.include "../../mk/bsd.pkg.mk"
