@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5760 2004/04/28 00:18:15 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5761 2004/04/28 04:28:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2270,3 +2270,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dvipng to 1.0 [adam 2004-04-27]
 	Added glitz-0.1.0 [adam 2004-04-27]
 	Updated jikes to 1.20 [recht 2004-04-27]
+	Updated mathomatic to 11.0e [minskim 2004-04-28]
