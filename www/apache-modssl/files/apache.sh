@@ -1,4 +1,4 @@
 #!/bin/sh
-# $NetBSD: apache.sh,v 1.2 1998/09/05 09:08:08 explorer Exp $
+# $NetBSD: apache.sh,v 1.3 1998/09/17 12:21:56 frueauf Exp $
 
-[ -x /usr/pkg/sbin/apachectl ] && /usr/pkg/sbin/apachectl start >/dev/null && echo -n ' apache'
+[ -x @@@PREFIX@@@/sbin/apachectl ] && @@@PREFIX@@@/sbin/apachectl start >/dev/null && echo -n ' apache'
