@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/03/21 23:25:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/06/23 15:52:52 wiz Exp $
 #
 # Unfortunately, some reading of the United States law (DMCA) means
 # that we are not able to provide pointers to the source or homepage
@@ -17,9 +17,9 @@ MAINTAINER=	marc@informatik.uni-bremen.de
 HOMEPAGE=	${LIBDVDCSS_HOMEPAGE}
 COMMENT=	simple library designed for accessing DVDs
 
-RESTRICTED=	Legal problems due to css code
+RESTRICTED=	Legal problems due to CSS code
 
-# no source because of the css source code in it
+# no source because of the CSS source code in it
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
