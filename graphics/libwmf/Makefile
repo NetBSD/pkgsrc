@@ -1,25 +1,33 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/02/27 18:33:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/02/29 06:43:00 jlam Exp $
 #
 
-DISTNAME=	libwmf-0.1.17
-CATEGORIES=	graphics devel
-MASTER_SITES=	http://www.csn.ul.ie/~caolan/publink/libwmf/
+DISTNAME=		libwmf-0.1.17
+CATEGORIES=		graphics devel
+MASTER_SITES=		http://www.csn.ul.ie/~caolan/publink/libwmf/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.csn.ul.ie/~caolan/docs/libwmf.html
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.csn.ul.ie/~caolan/docs/libwmf.html
 
-DEPENDS+=	xpm-3.4k:../../graphics/xpm
-DEPENDS+=	png>=1.0.3:../../graphics/png
-DEPENDS+=	freetype-*:../../graphics/freetype
+BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
+DEPENDS+=		freetype-*:../../graphics/freetype
+DEPENDS+=		png>=1.0.3:../../graphics/png
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 # uses own gd, which has some extra functionality
-CONFLICTS+=	gd-1.7.3:../../graphics/gd
+CONFLICTS+=		gd-1.7.3:../../graphics/gd
 
+WRKSRC=			${WRKDIR}/libwmf
+USE_X11=		YES
+
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-png="${LOCALBASE}"
 CONFIGURE_ARGS+=	--with-ttf="${LOCALBASE}"
+CONFIGURE_ARGS+=	--with-xpm="${X11BASE}"
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CPPFLAGS+=		-I${LOCALBASE}/include -I${X11BASE}/include
 
-WRKSRC=		${WRKDIR}/libwmf
-GNU_CONFIGURE=	YES
+pre-configure:
+	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libwmf
