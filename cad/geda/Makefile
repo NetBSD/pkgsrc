@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/05/18 18:08:39 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.19 2002/10/14 09:59:28 rh Exp $
 #
 
 DISTNAME=	gEDA-${PKGVERSION}
@@ -6,7 +6,7 @@ CATEGORIES=	cad
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	rh@netbsd.org
+MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://www.geda.seul.org/
 COMMENT=	Toolset for automating electronic design
 
