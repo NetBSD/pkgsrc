@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/02/21 20:57:20 veego Exp $
+# $NetBSD: Makefile,v 1.8 2005/02/27 22:30:43 veego Exp $
 #
 
 DISTNAME=		compat14-crypto-${MACHINE_ARCH}-${VERSION}
 PKGNAME=		compat14-crypto-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
