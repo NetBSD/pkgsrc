@@ -1,37 +1,23 @@
-# $NetBSD: Makefile,v 1.15 2001/10/18 15:20:05 veego Exp $
+# $NetBSD: Makefile,v 1.16 2001/11/02 02:57:28 jlam Exp $
 #
 
-.include "../../databases/mysql-client/Makefile.common"
+.include "Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 SVR4_PKGNAME=		mysqc
 COMMENT=		MySQL, a free SQL database (client)
 
-INFO_FILES=		mysql.info
+USE_BUILDLINK_ONLY=	YES
+REPLACE_BUILDLINK+=	scripts/mysql_config
+REPLACE_BUILDLINK+=	scripts/mysqlbug
 
 CONFIGURE_ARGS+=	--without-server
 
-.if exists(/usr/include/readline.h) || exists(/usr/include/readline/readline.h)
-CONFIGURE_ENV+=		readline_lib="edit"
-.else
-DEPENDS+=		readline>=4.0:../../devel/readline
-CPPFLAGS+=		-I${LOCALBASE}/include
-.endif
-
-# The compilation looks for <readline/readline.h>, so make sure
-# /usr/include/readline.h may be accessed that way if it's the readline
-# header available on the system.
-#
-.if exists(/usr/include/readline.h)
-CPPFLAGS+=		-I${WRKDIR}
-
-pre-build:
-	${RM} -f ${WRKDIR}/readline
-	${LN} -sf /usr/include ${WRKDIR}/readline
-.endif
+INFO_FILES=		mysql.info
 
 post-install:
 	cd ${PREFIX}/man/man1; ${RM} -f mysqld.1 safe_mysqld.1
 	${INSTALL_DATA} ${WRKSRC}/Docs/mysql.info ${PREFIX}/info
 
+.include "../../devel/readline/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

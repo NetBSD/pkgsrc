@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2001/10/08 17:23:19 veego Exp $
+# $NetBSD: Makefile.common,v 1.5 2001/11/02 02:57:28 jlam Exp $
 
 DISTNAME=		mysql-3.23.43
 CATEGORIES=		databases
@@ -18,9 +18,8 @@ MYSQL_DATADIR?=		/var/mysql
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR}
 CONFIGURE_ARGS+=	--with-named-z-libs=z
-CONFIGURE_ARGS+=	--with-libwrap
+CONFIGURE_ARGS+=	--without-libwrap
 CONFIGURE_ARGS+=	--with-named-curses-libs="-lcurses -ltermcap"
-CONFIGURE_ARGS+=	--without-perl
 
 # We always use our own readline, either system- or pkgsrc-supplied.
 CONFIGURE_ARGS+=	--without-readline
@@ -52,3 +51,5 @@ post-extract:
 			$${file}.orig > $${file};			\
 		${RM} $${file}.orig;					\
 	done
+
+.include "../../devel/zlib/buildlink.mk"
