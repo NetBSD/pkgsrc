@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2366 2004/11/15 01:29:29 wiz Exp $
+$NetBSD: TODO,v 1.2367 2004/11/15 06:37:01 snj Exp $
 
 Suggested new packages
 ======================
@@ -305,7 +305,6 @@ Suggested package updates
 	o dact-0.8.37
 	o db4-4.3.21
 	o dctc-0.85.9
-	o devilspie-0.7
 	o dict-client-1.9.11
 	o dict-server-1.9.11
 	o distcc-2.18.2
