@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/09/04 08:09:53 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/01/29 19:49:59 tron Exp $
 bin/plan
 libexec/plan/pland
 libexec/plan/notifier
