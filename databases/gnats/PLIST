@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:06 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/05/30 22:14:29 seb Exp $
 bin/edit-pr
 bin/getclose
 bin/install-sid
@@ -73,12 +73,5 @@ share/gnats/gnats-db/gnats-adm/gnatsd.conf
 share/gnats/gnats-db/gnats-adm/responsible
 share/gnats/gnats-db/gnats-adm/states
 share/gnats/gnats-db/gnats-adm/submitters
-@exec ${MKDIR} %D/share/gnats/gnats-db/gnats-queue
-@exec ${MKDIR} %D/share/gnats/gnats-db/pending
-@exec ${CHOWN} gnats %D/share/gnats/gnats-db %D/share/gnats/gnats-db/gnats-adm %D/share/gnats/gnats-db/gnats-adm/locks %D/share/gnats/gnats-db/pending %D/share/gnats/gnats-db/gnats-queue
 @dirrm libexec/gnats
-@dirrm share/gnats/gnats-db/gnats-adm/locks
-@dirrm share/gnats/gnats-db/gnats-adm
-@dirrm share/gnats/gnats-db/gnats-queue
-@dirrm share/gnats/gnats-db/pending
 @dirrm share/gnats/dist
