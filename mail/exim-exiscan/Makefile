@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/06/06 22:10:51 abs Exp $
+# $NetBSD: Makefile,v 1.13 2004/08/13 15:10:48 abs Exp $
 
 DISTNAME=	exim-${EXIM_VERSION}
 PKGNAME=	exim-exiscan-${EXIM_VERSION}_${EXISCAN_VERSION}
@@ -14,6 +14,7 @@ EXISCAN_VERSION=22
 
 PATCH_SITES=    http://duncanthrax.net/exiscan-acl/
 PATCHFILES=     exiscan-acl-${EXIM_VERSION}-${EXISCAN_VERSION}.patch.bz2
+PATCH_DIST_STRIP=-p1
 
 DISTINFO_FILE=	${.CURDIR}/../../mail/exim/distinfo
 PATCHDIR=	${.CURDIR}/../../mail/exim/patches
@@ -21,6 +22,4 @@ FILESDIR=	${.CURDIR}/../../mail/exim/files
 PLIST_SRC=	${.CURDIR}/../../mail/exim/PLIST
 
 .include "../../mail/exim/Makefile.common"
-
-PATCH_DIST_ARGS+=-p1
 
