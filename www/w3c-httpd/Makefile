@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/09/28 20:40:05 soren Exp $
+# $NetBSD: Makefile,v 1.5 2000/03/16 14:14:50 wiz Exp $
 # FreeBSD Id: Makefile,v 1.19 1999/01/08 19:59:26 fenner Exp
 
 DISTNAME=	w3c-httpd-3.0A
@@ -13,12 +13,12 @@ NO_WRKSUBDIR=	yes
 
 pre-configure:
 .if !defined(MD5_PW)
-	@echo ""
-	@echo "Defaulting to DES encrypted passwords."
-	@echo "Set the environment variable MD5_PW if you want MD5 encrypted passwords."
-	@echo ""
+	@${ECHO} ""
+	@${ECHO} "Defaulting to DES encrypted passwords."
+	@${ECHO} "Set the environment variable MD5_PW if you want MD5 encrypted passwords."
+	@${ECHO} ""
 .else
-	@echo "CFLAGS += -DMD5_PW" >> ${WRKDIR}/All/${OSNAME}/Makefile.include
+	@${ECHO} "CFLAGS += -DMD5_PW" >> ${WRKDIR}/All/${OSNAME}/Makefile.include
 .endif
 
 do-install:
