@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/03/09 22:47:43 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/03/22 23:19:16 jtb Exp $
 
 DISTNAME=	HDF4.1r4
 PKGNAME=	hdf-4.1r4
@@ -15,6 +15,7 @@ DEPENDS+=	jpeg-[0-9]*:../../graphics/jpeg
 
 USE_FORTRAN=	#defined
 
+F2CBASE_DEFAULT=${LOCALBASE}
 EVAL_PREFIX+=	JPEGBASE=jpeg F2CBASE=f2c
 
 .if (${MACHINE_ARCH} == "alpha")
@@ -27,15 +28,23 @@ post-patch:
 	libsrc/cdftest.c libsrc/globdef.c libsrc/local_nc.h	\
 	libsrc/xdrposix.c libsrc/xdrstdio.c ncdump/dumplib.c	\
 	ncdump/vardata.c ncgen/generate.c ncgen/ncgen.h		\
-	libsrc/mfhdf.h; do					\
+	libsrc/mfhdf.h nctest/add.c nctest/atttests.c		\
+	nctest/cdftests.c nctest/dimtests.c nctest/driver.c	\
+	nctest/error.c nctest/misctest.c nctest/rec.c		\
+	nctest/slabs.c nctest/val.c nctest/vardef.c		\
+	nctest/varget.c nctest/vargetg.c nctest/varput.c	\
+	nctest/varputg.c nctest/vartests.c nctest/vputget.c	\
+	nctest/vputgetg.c; do					\
 	${SED} -e 's:"netcdf.h":"netcdf_hdf.h":g'		\
 		-e 's:\<netcdf.h\>:\<netcdf_hdf.h\>:g'		\
-	< ${WRKSRC}/mfhdf/$$i > ${WRKSRC}/mfhdf/$$i.tmp		\
+	${WRKSRC}/mfhdf/$$i > ${WRKSRC}/mfhdf/$$i.tmp		\
 	&& ${MV} -f ${WRKSRC}/mfhdf/$$i.tmp			\
 	${WRKSRC}/mfhdf/$$i;					\
 	done
 	${MV} -f ${WRKSRC}/mfhdf/libsrc/netcdf.h.in 		\
 	${WRKSRC}/mfhdf/libsrc/netcdf_hdf.h
+	${MV} -f ${WRKSRC}/mfhdf/fortran/config/netcdf-fbsd.inc	\
+	${WRKSRC}/mfhdf/fortran/netcdf_hdf.inc
 	${MV} -f ${WRKSRC}/mfhdf/ncdump/ncdump.1		\
 	${WRKSRC}/mfhdf/ncdump/hdfncdump.1
 	${MV} -f ${WRKSRC}/mfhdf/ncgen/ncgen.1			\
@@ -52,7 +61,7 @@ pre-build:
 pre-configure:
 	${CC} ${FILESDIR}/bytesex.c -o ${WRKSRC}/bytesex
 
-SWAP=`${WRKSRC}/bytesex`
+SWAP=	`${WRKSRC}/bytesex`
 
 do-configure:
 	@for f in libsrc dumper ncgen ncdump; do		\
@@ -64,7 +73,15 @@ do-configure:
 	done
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/mfhdf/fortran/config/netcdf-fbsd.inc \
-	${PREFIX}/include/hdf/netcdf_hdf.inc
+	${INSTALL_DATA} ${WRKSRC}/mfhdf/fortran/netcdf_hdf.inc \
+	${PREFIX}/include/hdf
+
+test:	build
+	@cd ${WRKSRC}/hdf/test && ${SETENV} ${MAKE_ENV} ${MAKE}
+	@cd ${WRKSRC}/hdf/test && ./testhdf
+	@cd ${WRKSRC}/hdf/test && ./fortest
+	@cd ${WRKSRC}/mfhdf/dumper && ${SH} testhdp.sh
+	@cd ${WRKSRC}/mfhdf/ncdump && ${SETENV} ${MAKE_ENV} ${MAKE} test
+	@cd ${WRKSRC}/mfhdf/nctest && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
 .include "../../mk/bsd.pkg.mk"

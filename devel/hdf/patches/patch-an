@@ -1,0 +1,32 @@
+$NetBSD: patch-an,v 1.1 2001/03/22 23:19:17 jtb Exp $
+
+--- /dev/null	Thu Mar 22 22:34:52 2001
++++ mfhdf/nctest/Makefile
+@@ -0,0 +1,27 @@
++PROG= nctest
++
++SRCS = varget.c vargetg.c varput.c varputg.c vardef.c vartests.c	\
++	vputget.c vputgetg.c driver.c cdftests.c dimtests.c rec.c	\
++	atttests.c misctest.c add.c error.c emalloc.c val.c slabs.c
++
++MFHDFLIB= -L${.CURDIR}/../libsrc -lmfhdf
++MFHDFINC= -I${.CURDIR}/../libsrc
++
++HDFLIB= -L${.CURDIR}/../../hdf/src -ldf
++HDFINC= -I${.CURDIR}/../../hdf/src
++
++JPEGLIB= -R${JPEGBASE}/lib -L${JPEGBASE}/lib -ljpeg
++
++LDFLAGS+= -Wl,-R{LIBDIR} ${MFHDFLIB} ${HDFLIB} ${JPEGLIB}
++
++CPPFLAGS+= -Dunix -DNDEBUG ${MFHDFINC} ${HDFINC}
++
++NOMAN= 1
++
++test:		$(PROG)
++	@ echo "==========================="
++	@ echo "netCDF C interface tests"
++	@ echo "==========================="
++	./$(PROG)
++
++.include <bsd.prog.mk>
