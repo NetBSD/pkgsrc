@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2003/12/25 18:49:56 fredb Exp $
+$NetBSD: distinfo,v 1.5 2003/12/27 18:59:30 fredb Exp $
 
 SHA1 (ffmpeg-0.4.5.tar.gz) = 7d99250eb20c45b77a08e00ecad1f73d11f57cb8
 Size (ffmpeg-0.4.5.tar.gz) = 280506 bytes
 SHA1 (patch-aa) = e2e7ca0465ea69514a6b36e93451ea7eaca0513c
-SHA1 (patch-ab) = 812984db77f24c49d492162d83106d859b50d0f6
+SHA1 (patch-ab) = e5035ac9a90054fbf11dc7aad52f37a1d6d866f5
 SHA1 (patch-ac) = 1b009f7878ec4b85c0204db210ce26b337422820
 SHA1 (patch-ad) = db06e7ab8d60f523e02051339c5a0b66f8ac497f
 SHA1 (patch-ae) = d0f681ed5878c5e49c3daa956a7e0f28bdaf2b05
