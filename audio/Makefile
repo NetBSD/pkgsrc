@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2004/02/22 16:33:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.215 2004/02/24 22:47:42 cube Exp $
 #
 
 COMMENT=	Audio tools
@@ -63,6 +63,8 @@ SUBDIR+=	freezetag
 SUBDIR+=	gdcd
 SUBDIR+=	gkrellm-volume
 SUBDIR+=	gkrellm-xmms
+SUBDIR+=	gkrellm1-volume
+SUBDIR+=	gkrellm1-xmms
 SUBDIR+=	gmodplay
 SUBDIR+=	gmp3info
 SUBDIR+=	gnome-audio
