@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/01 18:24:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/15 11:33:28 jmmv Exp $
 #
 
-DISTNAME=	gnome-keyring-0.2.0
+DISTNAME=	gnome-keyring-0.2.1
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/0.2/}
 
