@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1882 2003/04/10 08:37:31 wiz Exp $
+$NetBSD: CHANGES,v 1.1883 2003/04/10 09:14:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1520,3 +1520,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xwrits to 2.21 [dmcmahill 2003-04-10]
 	Updated apache to 1.3.27nb4 [wiz 2003-04-10]
 	Updated ap-ssl to 2.8.14 [wiz 2003-04-10]
+	Updated curl to 7.10.4 [wiz 2003-04-10]
