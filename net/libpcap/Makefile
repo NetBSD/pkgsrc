@@ -1,20 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2000/12/05 15:47:23 veego Exp $
-#
+# $NetBSD: Makefile,v 1.5 2001/01/13 23:04:37 tron Exp $
 
-DISTNAME=		libpcap-0.4
+DISTNAME=		libpcap-0.6.1
 CATEGORIES=		net
-MASTER_SITES= 		ftp://ftp.ee.lbl.gov/
-EXTRACT_SUFX=		.tar.Z
+MASTER_SITES= 		http://www.tcpdump.org/release/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		tron@netbsd.org
+HOMEPAGE=		http://www.tcpdump.org/
 
-GNU_CONFIGURE=		yes
+BUILD_DEPENDS+=		bison:../../devel/bison
+BUILD_DEPENDS+=		flex:../../devel/flex
 
 ONLY_FOR_PLATFORM=	SunOS-*-*	# in NetBSD base system
 
-INSTALL_TARGET=		install install-incl install-man
-
-pre-install:
-	-${MKDIR} ${LOCALBASE}/include/net
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.pkg.mk"

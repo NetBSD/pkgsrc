@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.1.1.1 1999/04/07 12:54:16 agc Exp $
+$NetBSD: md5,v 1.2 2001/01/13 23:04:42 tron Exp $
 
-MD5 (libpcap-0.4.tar.Z) = 3e0025a24218d327b152075c70a578e9
+MD5 (libpcap-0.6.1.tar.gz) = 9e79abace0c9776e2f90514638ef37e6
