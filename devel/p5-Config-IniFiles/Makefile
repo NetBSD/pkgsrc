@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2001/11/26 06:49:46 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/19 10:43:20 mjl Exp $
 #
 
-DISTNAME=	Config-IniFiles-2.19
+DISTNAME=	Config-IniFiles-2.23
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5cif
 CATEGORIES=	devel perl5
