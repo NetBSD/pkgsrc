@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2000/10/15 17:35:30 rh Exp $
+$NetBSD: patch-aa,v 1.9 2000/10/17 17:10:53 rh Exp $
 
---- configure.orig	Wed Sep 20 00:32:19 2000
+--- configure.orig	Thu Sep 28 01:05:51 2000
 +++ configure
 @@ -2906,7 +2906,7 @@
    echo $ac_n "(cached) $ac_c" 1>&6
@@ -21,42 +21,3 @@ $NetBSD: patch-aa,v 1.8 2000/10/15 17:35:30 rh Exp $
  	
  else
    echo "$ac_t""no" 1>&6
-@@ -4906,8 +4907,7 @@
- 
- echo $ac_n "checking for libunicode >= 0.4""... $ac_c" 1>&6
- echo "configure:4909: checking for libunicode >= 0.4" >&5
--vers=`gnome-config --modversion unicode | sed -e "s/unicode-//" | \
--	awk 'BEGIN { FS = "."; } { printf "%d", $1 * 1000 + $2;}'`
-+vers=4
- if test "$vers" -ge 4; then
- 	echo "$ac_t""found" 1>&6
- else
-@@ -5041,23 +5041,23 @@
- PRINT_INCLUDEDIR='-I${includedir}'
- PRINT_INCLUDEDIR="$PRINT_INCLUDEDIR `gnome-config --cflags gnomeui`"
- PRINT_INCLUDEDIR="$PRINT_INCLUDEDIR `xml-config --cflags`"
--PRINT_LIBS="-lgnomeprint `gnome-config --libs gnomeui gdk_pixbuf unicode`"
-+PRINT_LIBS="-lgnomeprint `gnome-config --libs gnomeui gdk_pixbuf` -lunicode"
- PRINT_LIBS="$PRINT_LIBS `xml-config --libs`"
- 
- 
- 
- 
--PRINT_TEST_CFLAGS=`$GNOME_CONFIG --cflags gnomeui gdk_pixbuf unicode`
-+PRINT_TEST_CFLAGS="`$GNOME_CONFIG --cflags gnomeui gdk_pixbuf`"
- PRINT_TEST_CFLAGS="$PRINT_TEST_CFLAGS `xml-config --cflags`"
--PRINT_TEST_LIBS=`$GNOME_CONFIG --libs gnomeui gdk_pixbuf unicode`
-+PRINT_TEST_LIBS="`$GNOME_CONFIG --libs gnomeui gdk_pixbuf` -lunicode"
- PRINT_TEST_LIBS="$PRINT_TEST_LIBS `xml-config --libs`"
- 
- 
- 
- 
--PRINT_TEST_CFLAGS=`$GNOME_CONFIG --cflags gnomeui gdk_pixbuf unicode`
-+PRINT_TEST_CFLAGS=`$GNOME_CONFIG --cflags gnomeui gdk_pixbuf`
- PRINT_TEST_CFLAGS="$PRINT_TEST_CFLAGS `xml-config --cflags`"
--PRINT_TEST_LIBS=`$GNOME_CONFIG --libs gnomeui gdk_pixbuf unicode`
-+PRINT_TEST_LIBS="`$GNOME_CONFIG --libs gnomeui gdk_pixbuf` -lunicode"
- PRINT_TEST_LIBS="$PRINT_TEST_LIBS `xml-config --libs`"
- 
- 
