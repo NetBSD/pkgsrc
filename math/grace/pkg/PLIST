@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/03 19:47:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/05/08 17:29:07 drochner Exp $
 bin/xmgrace
 grace/bin/gracebat
 grace/bin/xmgrace
@@ -38,6 +38,11 @@ grace/fonts/type1/n021024l.afm
 grace/fonts/type1/s050000l.afm
 grace/fonts/enc/IsoLatin1.enc
 grace/fonts/enc/IsoLatin2.enc
+grace/fonts/enc/IsoLatin9.enc
+grace/fonts/enc/MacRoman.enc
+grace/fonts/enc/PDFDoc.enc
+grace/fonts/enc/PSLatin1.enc
+grace/fonts/enc/WinAnsi.enc
 grace/templates/Default.agr
 grace/doc/CHANGES.html
 grace/doc/GPL.html
@@ -65,8 +70,13 @@ grace/doc/gracebat.1
 grace/doc/xmgrace.1
 grace/doc/grconvert.1
 grace/examples/altaxis.par
+grace/examples/boxplot.agr
 grace/examples/logtest.par
+grace/examples/pie.agr
 grace/examples/times.agr
+grace/examples/txttrans.agr
+grace/examples/vmap.agr
+grace/examples/xysize.agr
 grace/examples/au.agr
 grace/examples/manygraphs.agr
 grace/examples/terr.agr
@@ -77,7 +87,6 @@ grace/examples/tlog.agr
 grace/examples/log2.agr
 grace/examples/bar.agr
 grace/examples/explain.agr
-grace/examples/moresyms.agr
 grace/examples/test.com
 grace/examples/tmc.c
 grace/examples/fills.agr
