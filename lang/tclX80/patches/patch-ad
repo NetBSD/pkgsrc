@@ -1,0 +1,11 @@
+--- Common.mk.in.orig	Sun Nov 30 00:19:08 1997
++++ Common.mk.in	Sat Mar  7 22:59:30 1998
+@@ -101,7 +101,7 @@
+ TCL_LD_FLAGS         = @TCL_LD_FLAGS@
+ TCL_DL_LIBS          = @TCL_DL_LIBS@
+ TCL_SHLIB_LD         = @TCL_SHLIB_LD@
+-TCL_SHLIB_LD_LIBS    = @TCL_SHLIB_LD_LIBS@
++TCL_SHLIB_LD_LIBS    = -L${PREFIX}/lib
+ TCL_BUILD_LIB_SPEC   = @TCL_BUILD_LIB_SPEC@
+ TCL_LIB_SPEC         = @TCL_LIB_SPEC@
+ TCL_LD_SEARCH_FLAGS  = @TCL_LD_SEARCH_FLAGS@
