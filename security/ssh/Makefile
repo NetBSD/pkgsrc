@@ -3,11 +3,10 @@
 # Date created:				19971214
 # Whom:					hubertf@netbsd.org
 #
-# $NetBSD: Makefile,v 1.4 1998/01/15 08:36:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 1998/01/18 20:07:43 kleink Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
-# Maximal ssh package requires YES values for
-# USE_PERL, USE_TCPWRAP
+# Maximal ssh package requires a YES value for USE_PERL.
 #
 
 DISTNAME=       ssh-1.2.21
@@ -37,7 +36,7 @@ IS_INTERACTIVE=	YES
 
 GNU_CONFIGURE=	YES
 
-CONFIGURE_ARGS+= --prefix=${PREFIX} --with-etcdir=/etc
+CONFIGURE_ARGS+= --prefix=${PREFIX} --with-etcdir=/etc --with-libwrap
 
 #Uncomment if all your users are in their own group and their homedir
 #is writeable by that group.  Beware the security implications!
@@ -125,15 +124,6 @@ BUILD_DEPENDS+= perl5.00404:${PORTSDIR}/lang/perl5
 CONFIGURE_ENV+= PERL=${PREFIX}/bin/perl5.00404
 .else
 CONFIGURE_ENV+= PERL=/replace_it_with_PERL_path
-.endif
-
-# Include tcp-wrapper support (call remote identd)
-.if defined(USE_TCPWRAP) && ${USE_TCPWRAP} == YES || \
-    exists(${PREFIX}/lib/libwrap.a) && \
-    (!defined(USE_TCPWRAP) || ${USE_TCPWRAP} != NO)
-CONFIGURE_ENV+= LDFLAGS=-L${PREFIX}/lib CFLAGS="${CFLAGS} -I${PREFIX}/include"
-CONFIGURE_ARGS+= --with-libwrap
-LIB_DEPENDS+=   wrap\\.7\\.:${PORTSDIR}/security/tcp_wrapper
 .endif
 
 # Include SOCKS firewall support
