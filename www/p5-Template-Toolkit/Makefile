@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/12/24 13:02:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2004/02/21 07:45:35 snj Exp $
 #
 
 DISTNAME=	Template-Toolkit-2.10
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.template-toolkit.org/
-COMMENT=	Perl5 text template and dynamic web page intergration toolkit
+COMMENT=	Perl5 text template and dynamic web page integration toolkit
 
 DEPENDS+=	p5-Apache-DBI>=0.87:../../databases/p5-Apache-DBI
 DEPENDS+=	p5-AppConfig>=1.52:../../devel/p5-AppConfig
