@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/02/09 18:47:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/20 13:15:10 jmmv Exp $
 
 DISTNAME=	acme-2.4.2
 PKGNAME=	gnome-${DISTNAME}
@@ -15,20 +15,20 @@ DEPENDS=	gnome2-control-center>=2.0:../../x11/gnome2-control-center
 
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_PKGLOCALEDIR=	yes
 
 GCONF2_SCHEMAS=		acme.schemas
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/libwnck/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../mk/ossaudio.buildlink2.mk"
-.include "../../textproc/intltool/buildlink2.mk"
-.include "../../x11/startup-notification/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/libwnck/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
