@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1.1.1 2005/03/30 15:12:48 wiz Exp $
+
+--- Makefile.orig	2005-01-25 06:07:50.000000000 +0600
++++ Makefile
+@@ -434,6 +434,11 @@ CDEFS += -DWITH_PNG
+ ifdef FREEBSD
+ LIBS += -lpng
+ else
++ifdef NETBSD
++# NetBSD uses pkg-config
++LIBS += `pkg-config --libs libpng12`
++CFLAGS += `pkg-config --cflags libpng12`
++else
+ CFLAGS += `libpng-config --cflags`
+ 
+ # seems like older libpng versions are broken and need this
+@@ -450,6 +455,7 @@ LIBS += `libpng-config  --L_opts $(PNGCO
+ endif
+ endif
+ endif
++endif
+ 
+ # enables/disables assert()
+ ifdef DISABLE_ASSERTS
