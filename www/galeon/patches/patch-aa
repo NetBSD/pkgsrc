@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.8 2002/08/29 20:00:22 drochner Exp $
+
+--- src/mozilla/ProgressListener2.cpp.orig	Thu Aug 29 20:56:41 2002
++++ src/mozilla/ProgressListener2.cpp	Thu Aug 29 20:56:50 2002
+@@ -334,7 +334,7 @@
+ NS_IMETHODIMP GProgressListener2::Init(nsIURI *aSource,
+ 				       nsILocalFile *aTarget,
+ 				       const PRUnichar *aDisplayName,
+-				       const PRUnichar *openingWith,
++				       nsIMIMEInfo *openingWith,
+ 				       PRInt64 aStartTime,
+ 				       nsIWebBrowserPersist *aPersist)
+ {
+@@ -379,11 +379,29 @@
+ 	return NS_OK;
+ }
+ 
++#if 0
+ NS_IMETHODIMP GProgressListener2::GetOpeningWith(PRUnichar * *aOpeningWith)
+ {
+ 	*aOpeningWith = NULL;
+ 	return NS_OK;
+ }
++#else
++NS_IMETHODIMP GProgressListener2::GetMIMEInfo(nsIMIMEInfo **mi)
++{
++	*mi = NULL;
++	return NS_OK;
++}
++NS_IMETHODIMP GProgressListener2::SetCancelDownloadOnClose(int val)
++{
++	return NS_OK;
++}
++NS_IMETHODIMP GProgressListener2::GetCancelDownloadOnClose(int *val)
++{
++	*val = 0;
++	return NS_OK;
++}
++#endif
++
+ /* attribute nsIObserver observer; */
+ NS_IMETHODIMP GProgressListener2::GetObserver(nsIObserver * *aObserver)
+ {
