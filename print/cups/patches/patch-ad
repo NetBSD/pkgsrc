@@ -1,37 +1,14 @@
-$NetBSD: patch-ad,v 1.6 2001/02/08 19:05:01 jlam Exp $
+$NetBSD: patch-ad,v 1.7 2001/02/27 17:37:53 jlam Exp $
 
---- configure.in.orig	Tue Feb  6 20:25:38 2001
+--- configure.in.orig	Tue Feb 20 12:32:59 2001
 +++ configure.in
-@@ -390,18 +390,7 @@
- 	# rather than to the executables.  This makes things smaller if you
- 	# are using any static libraries, and it also allows us to distribute
--	# a single DSO rather than a bunch...unless the linker is dumb.
--	case $uname in
--		NetBSD*)
--			# NetBSD's linker won't resolve symbols in a shared
--			# libraries unless their enclosing shared libraries
--			# are explicitly listed.
--			DSOLIBS="\$(LIBJPEG) \$(LIBPNG) \$(LIBTIFF) \$(LIBZ)"
--			IMGLIBS="\$(LIBJPEG) \$(LIBPNG) \$(LIBTIFF) \$(LIBZ)"
--			;;
--		*)
--			DSOLIBS="\$(LIBJPEG) \$(LIBPNG) \$(LIBTIFF) \$(LIBZ)"
--			IMGLIBS=""
--			;;
--	esac
-+	# a single DSO rather than a bunch.
-+	DSOLIBS="\$(LIBPNG) \$(LIBTIFF) \$(LIBJPEG) \$(LIBZ)"
-+	IMGLIBS=""
+@@ -494,4 +494,5 @@
  
- 	# The *BSD, HP-UX, and Solaris run-time linkers need help when
-@@ -427,5 +416,5 @@
- else
- 	DSOLIBS=""
--	IMGLIBS="\$(LIBJPEG) \$(LIBPNG) \$(LIBTIFF) \$(LIBZ)"
-+	IMGLIBS="\$(LIBPNG) \$(LIBTIFF) \$(LIBJPEG) \$(LIBZ)"
- fi
- 
-@@ -655,6 +644,6 @@
+ dnl Fix "mandir" variable...
++AMANDIR="\${mandir}"
+ if test "$mandir" = "\${prefix}/man" -a "$prefix" = "/"; then
+ 	case "$uname" in
+@@ -664,6 +665,6 @@
  
  dnl Set the CUPS_DOCROOT directory...
 -CUPS_DOCROOT='${datadir}/doc/cups'
@@ -40,7 +17,7 @@ $NetBSD: patch-ad,v 1.6 2001/02/08 19:05:01 jlam Exp $
 +AC_DEFINE_UNQUOTED(CUPS_DOCROOT, "$datadir/doc/html/cups")
  AC_SUBST(CUPS_DOCROOT)
  
-@@ -662,5 +651,5 @@
+@@ -671,5 +672,5 @@
  AC_DEFINE_UNQUOTED(CUPS_FONTPATH, "$fontpath")
  
 -AC_OUTPUT(Makedefs cups.sh)
