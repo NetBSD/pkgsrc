@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2002/05/29 16:27:04 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2002/07/01 17:16:21 hubertf Exp $
 
---- configure.orig	Tue May 14 04:40:41 2002
+--- configure.orig	Tue Jun 25 06:23:07 2002
 +++ configure
-@@ -10792,8 +10792,6 @@
+@@ -7762,8 +7762,6 @@
  fi
- rm -f conftest.$ac_objext conftest.$ac_ext
+ rm -f conftest*
  
 -CFLAGS="$CFLAGS -I/usr/local/include -I/opt/include -I\$(top_srcdir)"
 -
