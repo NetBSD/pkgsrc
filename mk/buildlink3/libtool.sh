@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.8 2003/11/25 14:43:23 jlam Exp $
+# $NetBSD: libtool.sh,v 1.9 2003/11/26 12:52:30 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -40,6 +40,7 @@ WRKSRC="@WRKSRC@"
 # Argument buffers
 buf1=; buf2=; buf3=; buf4=; buf5=
 
+# Discover the libtool mode by examining the argument list.
 mode=link
 prevopt=
 nonopt=
@@ -121,8 +122,7 @@ install)
 		*cc|*++|gcc*|*-gcc*|*CC)
 			case $mode in
 			link)
-				cmd="$cmd $arg"
- 				arg="@_BLNK_WRAP_EXTRA_FLAGS@"
+				set -- "$@" @_BLNK_WRAP_EXTRA_FLAGS@
 				;;
 			esac
 			;;
