@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.3 1998/11/12 23:45:54 frueauf Exp $
+$NetBSD: patch-al,v 1.4 2000/03/02 23:47:35 wiz Exp $
 
---- util/mpiinstall.in.orig	Sun Jul 12 08:28:14 1998
-+++ util/mpiinstall.in	Tue Oct 20 14:57:33 1998
+--- ./util/mpiinstall.in.orig	Sun Jul 12 17:28:14 1998
++++ ./util/mpiinstall.in	Fri Mar  3 00:20:21 2000
 @@ -120,12 +120,12 @@
  # script from the library directory itself.
  if [ -n "$libonly" ] ; then
@@ -240,7 +240,7 @@ $NetBSD: patch-al,v 1.3 1998/11/12 23:45:54 frueauf Exp $
      fi
  fi
  #
-@@ -599,12 +602,12 @@
+@@ -599,28 +602,28 @@
      echo "Attempting to build ch_p4 secure server"
      $Show "( cd mpid/ch_p4/p4/servers ; $MAKE serv_p4 ; )" 
      CopyFile mpid/ch_p4/p4/bin/serv_p4 $PREFIX/bin $XMODE
@@ -258,7 +258,11 @@ $NetBSD: patch-al,v 1.3 1998/11/12 23:45:54 frueauf Exp $
  fi
  #
  # P4
-@@ -615,12 +618,12 @@
+ if [ "$DEVICE" = "ch_p4" ] ; then
+     if [ ! -x mpid/server/server ] ; then
+ 	echo "Attempting to build alternate ch_p4 secure server"
+-	$Show "( cd mpid/server ; configure ; $MAKE server )"
++	$Show "( cd mpid/server ; ./configure ; $MAKE server )"
      fi
      if [ -x mpid/server/server ] ; then 
  	CopyFile mpid/server/server $PREFIX/bin $XMODE
