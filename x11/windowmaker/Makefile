@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2000/04/07 14:56:35 tron Exp $
+# $NetBSD: Makefile,v 1.46 2000/04/08 06:46:39 tron Exp $
 
-DISTNAME=		WindowMaker-0.62.0
-PKGNAME=		windowmaker-0.62.0
+DISTNAME=		WindowMaker-0.62.1
+PKGNAME=		windowmaker-0.62.1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
 			ftp://ftp.ics.es.osaka-u.ac.jp/pub/mirrors/WindowMaker/beta/srcs/
