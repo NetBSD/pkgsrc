@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/03/04 11:57:10 seb Exp $
+# $NetBSD: Makefile,v 1.24 2002/06/21 15:26:07 abs Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -28,6 +28,13 @@ MAKE_ENV+=	VERSION="${VERSION}"
 .if ${OPSYS} == "SunOS"
 MAKEFLAGS+=	NETBSD_COMPATIBLE=YES
 MANINSTALL=
+.elif ${OPSYS} == "Linux"
+CPPFLAGS+=-D__COPYRIGHT\(x\)=\; -D__RCSID\(x\)=\;
+.endif
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
+PLIST=	${WRKSRC}/.PLIST
+post-install:
+	${GREP} -v '^man/cat' ${PKGDIR}/PLIST > ${PLIST}
 .endif
 
 post-extract:
