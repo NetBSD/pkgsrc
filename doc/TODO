@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.168 2003/01/10 12:30:47 wiz Exp $
+$NetBSD: TODO,v 1.169 2003/01/10 12:42:03 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -178,7 +178,6 @@ Suggested package updates
 	o mng-1.0.5rc2
 	o mozilla-stable-1.0.2
 	o mrproject-0.7
-	o multi-gnome-terminal-1.6.1 [pkg/19665]
 	o mysql-3.23.54
 	o naim-0.11.5
 	o napshare-1.2
