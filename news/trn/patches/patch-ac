@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2000/02/16 18:47:17 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2000/03/18 19:51:33 wiz Exp $
 
 --- Configure.orig	Mon Sep 21 00:50:59 1998
 +++ Configure	Sun Jan 16 06:50:36 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1 2000/02/16 18:47:17 wiz Exp $
      ;;
  *)  case "$d_inews" in
 -    '') dflt="$prefix/bin";;
-+    '') dflt="$prefix/libexec/trn";;
++    '') dflt=none;;
      "$define")
  	set dflt installinews bin
  	eval $prefixit
