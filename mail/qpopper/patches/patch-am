@@ -1,0 +1,37 @@
+$NetBSD: patch-am,v 1.1 2001/06/10 15:08:41 taca Exp $
+
+--- popper/Makefile.in.orig	Mon Apr 23 07:59:15 2001
++++ popper/Makefile.in
+@@ -87,6 +87,8 @@
+ prefix          =   @prefix@
+ exec_prefix     =   @exec_prefix@
+ installdir      =   @sbindir@
++libexecdir	=   @libexecdir@
++sbindir		=   @sbindir@
+ 
+ popper_srcdir   =   ${top_srcdir}/popper
+ qd_srcdir       =   ${top_srcdir}/qd
+@@ -199,17 +201,17 @@
+ ${POPAUTHSRCS}:
+ 
+ install: popper ${pop_auth}
+-	${INSTALL} -s -m 0755 -o root popper ${installdir}/popper
+-	echo "Installed popper as ${installdir}/popper"
++	${INSTALL} -s -m 0755 -o root popper ${libexecdir}/qpopper
++	@echo "Installed popper as ${libexecdir}/qpopper"
+ 	if [ "x${poppassd}" != "x" ]; then \
+ 	    cd ${password_dir} && ${MAKE} $@ ;\
+ 	fi
+-	if [ "x${pop_auth}" != "x" ]; then \
++	@if [ "x${pop_auth}" != "x" ]; then \
+ 	    ${INSTALL} -s -m 4755 -o ${apop_uid} -g 0 ${pop_auth} \
+-	               ${installdir}/${pop_auth}; \
+-	    echo "Installed popauth as ${installdir}/${pop_auth} " \
++	               ${sbindir}/q${pop_auth}; \
++	    echo "Installed popauth as ${sbindir}/q${pop_auth} " \
+ 	         "with uid ${apop_uid}"; \
+-	    ${installdir}/${pop_auth} -init -safe; \
++	    ${sbindir}/q${pop_auth} -init -safe; \
+ 	fi
+ 
+ clean:
