@@ -1,5 +1,5 @@
---- kvt/command.c.orig	Thu Dec 18 00:28:32 1997
-+++ kvt/command.c	Thu Dec 18 00:35:56 1997
+--- kvt/command.c.orig	Tue Dec 30 23:47:02 1997
++++ kvt/command.c	Tue Dec 30 23:47:37 1997
 @@ -169,10 +169,12 @@
   */
  static struct termios ttmode;
@@ -10,12 +10,12 @@
  #define _POSIX_VDISABLE 0
  #endif
 +#endif
-  
+ 
  #undef CTRL
  #define CTRL(c) ((c) - '@')
 @@ -404,7 +406,7 @@
        }
-  
+ 
        /* init of termios structure		*/
 -#ifdef __FreeBSD__
 +#if defined(__FreeBSD__) || defined(__NetBSD__)
@@ -23,7 +23,7 @@
  #else
  #   ifdef _HPUX_SOURCE
 @@ -472,7 +474,7 @@
-  
+ 
        if(mask == 0x7f)
  	ttmode.c_cflag = B9600 | PARENB | CS7 | CREAD;
 -#ifdef __FreeBSD__
