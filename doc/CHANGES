@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3291 2003/09/09 13:09:39 recht Exp $
+$NetBSD: CHANGES,v 1.3292 2003/09/09 13:28:17 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3587,3 +3587,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated wxGTK to 2.4.1nb1 [recht 2003-09-09]
 	Updated py-wxWindows to 2.4.1.2 [recht 2003-09-09]
 	Added py-gnome2 2.0.0 [recht 2003-09-09]
+	Updated pyslk to 1.2.4 [recht 2003-09-09]
