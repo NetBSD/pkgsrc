@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2004/09/20 21:13:01 snj Exp $
+$NetBSD: distinfo,v 1.3 2004/11/15 06:35:50 snj Exp $
 
-SHA1 (devilspie-0.5.1.tar.gz) = 9672348b3708a4f5ba9b4cb33d84461d55996505
-Size (devilspie-0.5.1.tar.gz) = 164641 bytes
+SHA1 (devilspie-0.7.tar.gz) = 25cbf60969b5204cd97c5e158188760120a94391
+Size (devilspie-0.7.tar.gz) = 166105 bytes
