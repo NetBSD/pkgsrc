@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.5 2003/12/12 22:05:56 wiz Exp $
+$NetBSD: patch-an,v 1.6 2004/04/15 22:28:36 wiz Exp $
 
---- src/history.c.orig	Wed Oct  8 22:13:47 2003
+--- src/history.c.orig	Fri Mar 19 21:10:44 2004
 +++ src/history.c
-@@ -746,7 +746,7 @@ history_write (type, update_dir, revs, n
+@@ -747,7 +747,7 @@ history_write (type, update_dir, revs, n
      if (trace)
  	fprintf (stderr, "%s-> fopen(%s,a)\n",
  		 CLIENT_SERVER_STR, fname);

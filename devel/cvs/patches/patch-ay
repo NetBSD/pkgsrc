@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.4 2003/07/12 09:19:20 wiz Exp $
+$NetBSD: patch-ay,v 1.5 2004/04/15 22:28:36 wiz Exp $
 
---- src/run.c.orig	Wed Feb  5 20:46:52 2003
+--- src/run.c.orig	Thu Apr  1 20:53:22 2004
 +++ src/run.c
-@@ -189,6 +189,13 @@ run_exec (stin, stout, sterr, flags)
+@@ -191,6 +191,13 @@ run_exec (stin, stout, sterr, flags)
  #endif
      if (pid == 0)
      {
