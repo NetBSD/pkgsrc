@@ -1,0 +1,62 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2001/02/04 07:16:00 mrg Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	MACHINE_ARCH=@MACHINE_ARCH@
+	OBJECT_FMT=@OBJECT_FMT@
+
+	# Only create the symlink on certain platform/object combinations.  Note
+	# that sparc64 a.out compatibility lives in /emul/aout, not /emul/netbsd32.
+	#
+	create_emul_symlink=0
+	if [ "${MACHINE_ARCH}" = "sparc64" ]
+	then
+		create_emul_symlink=1
+	fi
+
+	if [ ${create_emul_symlink} = 1 ]
+	then
+		# Create a symlink from /emul/aout --> ${PKG_PREFIX}/emul/aout
+		# if it doesn't already exist.  Warn if we can't do this.
+		#
+		emul=netbsd32
+		if [ "`cd /etc && cd ${PKG_PREFIX}/emul/$emul 2>/dev/null && pwd -P`" \
+		     != "`cd / && cd /emul/$emul 2>/dev/null && pwd -P`" ]
+		then
+			if [ -e /emul/$emul -o -L /emul/$emul ] || \
+			   [ \( -e /emul -o -L /emul \) -a ! -d /emul ]
+			then
+				cat <<EOF
+==============================================================================
+	IMPORTANT:  You must create a symbolic link from /emul/$emul
+	to ${PKG_PREFIX}/emul/$emul in order for this package to work
+	properly.
+
+	(It seems there is something else located at /emul/$emul.)
+==============================================================================
+EOF
+			else
+				mkdir -p /emul
+				ln -sf ${PKG_PREFIX}/emul/$emul /emul/$emul
+			fi
+		fi
+	fi
+
+	# Regenerate the shared library cache.  This should work on either
+	# a.out or on ELF with the 1.5 release.
+	#
+	( @LDCONFIG@ || true ) >/dev/null 2>&1
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
