@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2004/06/28 11:43:53 abs Exp $
+# $NetBSD: Makefile,v 1.13 2004/08/04 08:49:09 recht Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
 # of ant was 3.1.  Do NOT use dependency patterns such as >=1.3 which could pick
 # up this version by mistake.
 
-DISTNAME=	apache-ant-1.6.1
+DISTNAME=	apache-ant-1.6.2
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=ant/binaries/}
 EXTRACT_SUFX=	.tar.bz2
