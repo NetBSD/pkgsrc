@@ -1,0 +1,62 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/07/08 13:30:04 bjh21 Exp $
+--- emitter.c	Sat Jul  8 11:55:42 2000
++++ emitter.c	Sun May 28 14:19:50 2000
+@@ -394,32 +394,47 @@
+ 	}
+ }
+ 
++srec_wrbyte(byte)
++{
++	check4 += byte;
++	fprintf(fout, "%02X", byte & 0xff);
++}
++
+ finishline()
+ {
+ 	int i;
+ 
+-	check4 = index4 + (address4 & 0xff) + ((address4>>8) & 0xff) + 4;
++	check4 = 0;
+ 
+ 	switch(format4) {
+ 	case '2':
+-		fprintf(fout, "S1%02X%04X", index4 + 4,	address4 & 0xffff);
++		fprintf(fout, "S1");
++		srec_wrbyte(index4 + 2 + 1);
++		srec_wrbyte(address4 >> 8);
++		srec_wrbyte(address4);
+ 		break;
+ 	case '3':
+-		fprintf(fout, "S2%02X%06X", index4 + 6, address4 & 0xffffff);
+-		check4 += ((address4>>16) & 0xff) + 2;
++		fprintf(fout, "S2");
++		srec_wrbyte(index4 + 3 + 1);
++		srec_wrbyte(address4 >> 16);
++		srec_wrbyte(address4 >> 8);
++		srec_wrbyte(address4);
+ 		break;
+ 	case '4':
+-		fprintf(fout, "S3%02X%08X", index4 + 8, address4);
+-		check4 += ((address4>>16) & 0xff) +((address4>>24) & 0xff) + 4;
++		fprintf(fout, "S3");
++		srec_wrbyte(index4 + 4 + 1);
++		srec_wrbyte(address4 >> 24);
++		srec_wrbyte(address4 >> 16);
++		srec_wrbyte(address4 >> 8);
++		srec_wrbyte(address4);
+ 		break;
+ 	}
+ 
+-	for(i=0; i<index4; i++) {
+-		fprintf(fout, "%02X", buf4[i] & 0xff);
+-		check4 += buf4[i];
+-	}
++	for(i=0; i<index4; i++)
++		srec_wrbyte(buf4[i]);
+ 
+-	fprintf(fout, "%02X\n", (~check4 & 0xff) );
++	srec_wrbyte(~check4);
++	fprintf(fout, "\n");
+ 	index4 = 0;
+ }
+ 
