@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2003/07/18 10:50:06 adam Exp $
+# $NetBSD: Makefile,v 1.66 2003/08/20 10:37:37 markd Exp $
 
 DISTNAME=		lesstif-0.93.46
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.hungry.com/pub/hungry/lesstif/srcdist/ \
 			ftp://ftp.unicamp.br/pub/X11/lesstif/srcdist/ \
