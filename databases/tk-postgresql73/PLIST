@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/24 22:28:08 recht Exp $
+bin/pgtksh
+man/man1/pgtksh.1
