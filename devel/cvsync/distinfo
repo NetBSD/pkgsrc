@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2003/05/08 15:40:40 gehenna Exp $
+$NetBSD: distinfo,v 1.27 2003/05/17 00:45:40 gehenna Exp $
 
-SHA1 (cvsync-0.20.2.tar.gz) = 0c69d7003e55e60d4cd906ee15e078c017f3a47b
-Size (cvsync-0.20.2.tar.gz) = 96811 bytes
+SHA1 (cvsync-0.21.0.tar.gz) = 67f8bf5c0015dfe9b3942a7a8ed78ac44d86f11a
+Size (cvsync-0.21.0.tar.gz) = 103071 bytes
