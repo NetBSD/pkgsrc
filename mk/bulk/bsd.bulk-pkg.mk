@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.53 2004/01/20 05:56:34 grant Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.54 2004/01/20 09:41:52 grant Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -251,7 +251,9 @@ bulk-package:
 					fi; \
 					if ${PKG_INFO} -qe $$pkgname ; then \
 						${SHCOMMENT} "Remove only unneeded pkgs" ; \
-						if ! ${EGREP} -q "^${PKGPATH} .* $$pkgdir( |$$)" ${DEPENDSFILE} ; then \
+						if ${EGREP} -q "^${PKGPATH} .* $$pkgdir( |$$)" ${DEPENDSFILE} ; then \
+							${ECHO_MSG} "BULK> ${PKGNAME} requires installed package $$pkgname ($$pkgdir) to build." ;\
+						else \
 							case "${BULK_PREREQ}" in \
 								*$$pkgdir* ) \
 									${ECHO_MSG} "BULK> Keeping BULK_PREREQ: $$pkgname ($$pkgdir)" ;\
@@ -264,8 +266,6 @@ bulk-package:
 									fi ;\
 									;; \
 							esac ; \
-						else \
-							${ECHO_MSG} "BULK> ${PKGNAME} requires installed package $$pkgname ($$pkgdir) to build." ;\
 						fi ;\
 					fi ;\
 				else \
@@ -285,15 +285,15 @@ bulk-package:
 				pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ; \
 				if [ -z "$$pkgname" ]; then continue ; fi ;\
 				pkgfile=${PACKAGES}/All/$${pkgname}.tgz ;\
-				if ! ${PKG_INFO} -qe $$pkgname ; then \
+				if ${PKG_INFO} -qe $$pkgname ; then \
+					${ECHO_MSG} "BULK> Required package $$pkgname ($$pkgdir) is already installed" ; \
+				else \
 					if [ -f $$pkgfile ]; then \
 						${ECHO_MSG} "BULK> ${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile"; \
 						${DO} ${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile || ${ECHO_MSG} "warning: could not add $$pkgfile." ; \
 					else \
 						${ECHO_MSG} "BULK> warning: $$pkgfile does not exist.  It will be rebuilt." ;\
 					fi ;\
-				else \
-					${ECHO_MSG} "BULK> Required package $$pkgname ($$pkgdir) is already installed" ; \
 				fi ;\
 			done ;\
 		fi ;\
@@ -339,7 +339,7 @@ bulk-package:
 					${ECHO_MSG} "Please view the <a href=\"../../${PKGPATH}/${BROKENFILE}\">build log for ${PKGNAME}</a>" \
 						>> ${_PKGSRCDIR}/$$pkgdir/${BROKENFILE};\
 					nbrokenby=`expr $$nbrokenby + 1`;\
-					if ! ${GREP} -q " $$pkgdir/${BROKENFILE}" ${_PKGSRCDIR}/${BROKENFILE} ; then \
+					if ${GREP} -q " $$pkgdir/${BROKENFILE}" ${_PKGSRCDIR}/${BROKENFILE} ; then :; else \
 						${ECHO} " $$pkgerr $$pkgdir/${BROKENFILE} 0 " >> ${_PKGSRCDIR}/${BROKENFILE} ;\
 					fi ;\
 				done ;\
@@ -374,7 +374,7 @@ bulk-package:
 # been modified and need rebuilding.
 bulk-install:
 	@if [ `${MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
-		if ! ${PKG_INFO} -qe ${PKGNAME} ; then \
+		if ${PKG_INFO} -qe ${PKGNAME} ; then :; else \
 			${DO} ${MAKE} install-depends ; \
 			${ECHO_MSG} "BULK>" ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
 			${DO} ${PKG_ADD} ${PKG_ARGS_ADD} ${PKGFILE} ; \
