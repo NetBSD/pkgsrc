@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/12/18 13:18:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2005/04/05 10:42:47 wiz Exp $
 
 DISTNAME=       atitvout-0.4
 PKGREVISION=	1
@@ -17,7 +17,7 @@ USE_CONFIGURE=		YES
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-DEPENDS+=	lrmi>=0.8nb1:../../emulators/lrmi
+.include "../../emulators/lrmi/buildlink3.mk"
 
 MAKEFILE=	Makefile.bsd
 
