@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2002/11/26 00:51:02 grant Exp $
+$NetBSD: distinfo,v 1.10 2003/02/28 22:15:31 grant Exp $
 
 SHA1 (libiconv-1.8.tar.gz) = 8894488118c31d3d1f1c6d2f81f61d7e052e9799
 Size (libiconv-1.8.tar.gz) = 3514117 bytes
 SHA1 (patch-ab) = 842ef918bb2036e1d9274a63c01c4c3743e9a084
 SHA1 (patch-ac) = 6896d58b242f4c08887061ddf3217bd9b291c895
 SHA1 (patch-ad) = 384cafd6f4c11443d0a539409121543b9201efdd
+SHA1 (patch-ae) = f4cb8da07449a640750f8021a4663fc3eee3fb57
