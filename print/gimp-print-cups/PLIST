@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/02 14:56:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/11/25 14:13:32 adam Exp $
 bin/cups-calibrate
 libexec/cups/backend/canon
 libexec/cups/backend/epson
@@ -91,6 +91,7 @@ share/cups/model/C/escp2-9500.ppd.gz
 share/cups/model/C/escp2-960.ppd.gz
 share/cups/model/C/escp2-9600.ppd.gz
 share/cups/model/C/escp2-980.ppd.gz
+share/cups/model/C/escp2-935.ppd.gz
 share/cups/model/C/escp2-c20sx.ppd.gz
 share/cups/model/C/escp2-c20ux.ppd.gz
 share/cups/model/C/escp2-c40sx.ppd.gz
@@ -121,6 +122,8 @@ share/cups/model/C/escp2-cx3100.ppd.gz
 share/cups/model/C/escp2-cx3200.ppd.gz
 share/cups/model/C/escp2-cx5100.ppd.gz
 share/cups/model/C/escp2-cx5200.ppd.gz
+share/cups/model/C/escp2-cx5300.ppd.gz
+share/cups/model/C/escp2-cx5400.ppd.gz
 share/cups/model/C/escp2-cx6300.ppd.gz
 share/cups/model/C/escp2-cx6400.ppd.gz
 share/cups/model/C/escp2-cx8300.ppd.gz
@@ -166,11 +169,17 @@ share/cups/model/C/escp2-pm9000c.ppd.gz
 share/cups/model/C/escp2-pm930c.ppd.gz
 share/cups/model/C/escp2-pm950c.ppd.gz
 share/cups/model/C/escp2-pm970c.ppd.gz
+share/cups/model/C/escp2-pmd750.ppd.gz
+share/cups/model/C/escp2-pmg700.ppd.gz
 share/cups/model/C/escp2-pro-xl.ppd.gz
 share/cups/model/C/escp2-pro.ppd.gz
 share/cups/model/C/escp2-px7000.ppd.gz
 share/cups/model/C/escp2-px9000.ppd.gz
 share/cups/model/C/escp2-pxv500.ppd.gz
+share/cups/model/C/escp2-r200.ppd.gz
+share/cups/model/C/escp2-r300.ppd.gz
+share/cups/model/C/escp2-rx500.ppd.gz
+share/cups/model/C/escp2-rx600.ppd.gz
 share/cups/model/C/escp2-scan2000.ppd.gz
 share/cups/model/C/escp2-scan2500.ppd.gz
 share/cups/model/C/escp2.ppd.gz
@@ -232,3 +241,4 @@ share/cups/model/C/pcl-desnj-450.ppd.gz
 share/cups/model/C/pcl-desnj-455.ppd.gz
 share/cups/model/C/pcl-desnj-488.ppd.gz
 share/cups/model/C/pcl-desnj-700.ppd.gz
+share/examples/cups/command.types
