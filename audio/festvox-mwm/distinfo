@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:22:51 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 22:03:58 wiz Exp $
 
-MD5 (voice_mwm_di-2.0.tar.gz) = 6037a6703ec83936e3e28d501e4e655e
+SHA1 (voice_mwm_di-2.0.tar.gz) = ffc55b72a5f0bfb9133938cda3399e97262753f5
+Size (voice_mwm_di-2.0.tar.gz) = 5033130 bytes

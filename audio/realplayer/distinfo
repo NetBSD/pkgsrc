@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 10:23:27 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/09 22:07:25 wiz Exp $
 
-MD5 (rp8_linux20_libc6_i386_cs1.bin) = 284c0db02874050b9f1d15dc312e8a28
+SHA1 (rp8_linux20_libc6_i386_cs1.bin) = fcb6049d3287ee9999fc71bcecd38828efe1a054
+Size (rp8_linux20_libc6_i386_cs1.bin) = 5940459 bytes
 SHA1 (patch-aa) = cede957cc13166c30e6ab89476e0190f187f48b6
 SHA1 (patch-ab) = 22e2eb6260bec208e64db89308f0492baa307adf
 SHA1 (patch-ac) = 2a5d80db6c7deb2d68b1470f09a824bc093648e4
