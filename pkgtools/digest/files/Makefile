@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.7 2001/07/09 21:42:03 hubertf Exp $
+#	$NetBSD: Makefile,v 1.8 2001/10/30 14:07:33 agc Exp $
 
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the version definition in the package Makefile
@@ -16,7 +16,7 @@ SRCS+= sha1.c sha1hl.c
 SRCS+= sha2.c sha2hl.c
 .endif
 
-.if !exists(/usr/include/md5.h) || (${OPSYS} == SunOS)
+.if !exists(/usr/include/md5.h) || ${OPSYS} == "SunOS"
 SRCS+= md5c.c md5hl.c
 .endif
 
@@ -30,7 +30,7 @@ CPPFLAGS+= -DHAVE_MACHINE_ENDIAN_H_
 
 .if (${OPSYS} == SunOS)
 NOMAN=		YES
-.else
+.elif ${OPSYS} != "Darwin"
 LDSTATIC?=      -static
 .endif
 
