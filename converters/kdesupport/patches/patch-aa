@@ -1,0 +1,19 @@
+--- configure.orig	Sun Jul 19 17:15:00 1998
++++ configure	Sun Jul 19 17:15:22 1998
+@@ -1632,6 +1632,8 @@
+ ac_save_cflags="$CFLAGS"
+ CC=$CXX
+ CFLAGS="$CXXFLAGS"
++
++if false; then
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+@@ -1679,6 +1681,7 @@
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+  CC=$ac_save_cc
+ CFLAGS="$ac_save_cflags"
++fi
+  
+ echo $ac_n "checking for AIX""... $ac_c" 1>&6
+ echo "configure:1685: checking for AIX" >&5
