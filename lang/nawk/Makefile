@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2002/09/26 17:12:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2002/12/09 00:05:27 cjep Exp $
 #
 
 DISTNAME=       awk
-PKGNAME=        nawk-20020628
+PKGNAME=        nawk-20021129
 CATEGORIES=	lang
 MASTER_SITES=   http://cm.bell-labs.com/who/bwk/
 
@@ -14,6 +14,7 @@ DIST_SUBDIR=	${PKGNAME}
 
 WRKSRC=		${WRKDIR}
 MAKEFILE=	makefile
+MAKEFLAGS+=	CC=${CC} YACC=${YACC} CFLAGS=${CFLAGS}
 ALL_TARGET=	a.out
 
 do-install:
