@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3027 2003/08/11 22:14:34 recht Exp $
+$NetBSD: CHANGES,v 1.3028 2003/08/12 07:13:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3248,3 +3248,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added lrmi-0.8 [drochner 2003-08-11]
 	Updated py-soappy to 0.10.1 [recht 2003-08-12]
 	Updated py-google to 0.5.2nb2 [recht 2003-08-12]
+	Added xmms-alarm-0.3.3 [wiz 2003-08-12]
