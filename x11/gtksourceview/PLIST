@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/11 11:11:34 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/01/18 01:52:56 cube Exp $
 include/gtksourceview-1.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-1.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-1.0/gtksourceview/gtksourcelanguage.h
@@ -51,6 +51,7 @@ share/gtksourceview-1.0/language-specs/python.lang
 share/gtksourceview-1.0/language-specs/xml.lang
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gtksourceview-1.0.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gtksourceview-1.0.mo
@@ -59,8 +60,12 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gtksourceview-1.0.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/gtksourceview-1.0.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gtksourceview-1.0.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gtksourceview-1.0.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtksourceview-1.0.mo
@@ -76,7 +81,9 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gtksourceview-1.0.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtksourceview-1.0.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gtksourceview-1.0.mo
