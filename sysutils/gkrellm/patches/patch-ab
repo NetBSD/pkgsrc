@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/03/13 17:53:29 zuntum Exp $
+
+--- src/Makefile.src.orig	Sun Jan 14 21:18:32 2001
++++ src/Makefile.src
+@@ -13,7 +13,7 @@
+ GTK_LIB = `$(GTK_CONFIG) --libs gthread`
+ IMLIB_LIB = `imlib-config --libs-gdk`
+ 
+-FLAGS = -O2 -I.. $(GTK_INCLUDE) $(IMLIB_INCLUDE) $(GTOP_INCLUDE)
++FLAGS = -I.. $(GTK_INCLUDE) $(IMLIB_INCLUDE) $(GTOP_INCLUDE)
+ FLAGS+= $(PTHREAD_INC)
+ 
+ LIBS = $(GTK_LIB) $(IMLIB_LIB) $(GTOP_LIBS) $(SYS_LIBS)
+@@ -31,7 +31,7 @@
+ endif
+ 
+ 
+-CC = gcc -Wall $(FLAGS) $(CFLAGS)
++CC+= -Wall $(FLAGS) $(CFLAGS)
+ 
+ OBJS =	main.o apm.o clock.o cpu.o disk.o fs.o hostname.o \
+ 	inet.o mail.o meminfo.o net.o proc.o sensors.o uptime.o \
