@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/28 19:59:47 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2004/11/30 16:13:53 adam Exp $
 
-SHA1 (gliv-1.8.2.tar.bz2) = 69949b729dfe448dfd23d6998b08fec9d3fa1cb5
-Size (gliv-1.8.2.tar.bz2) = 688729 bytes
+SHA1 (gliv-1.8.4.tar.bz2) = c46ac771a1e6931ab1dbca0c4f4ce6fb8d31f225
+Size (gliv-1.8.4.tar.bz2) = 428207 bytes
