@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/15 23:32:59 rh Exp $
+# $NetBSD: Makefile,v 1.3 1999/07/28 19:00:39 rh Exp $
 #
 
     SUBDIR += bioperl
@@ -7,6 +7,7 @@
 #    SUBDIR += dnagui
 #    SUBDIR += ncbi
 #    SUBDIR += phylip
+    SUBDIR += puzzle
 #    SUBDIR += xylem
 
 .include "../mk/bsd.pkg.subdir.mk"
