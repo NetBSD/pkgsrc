@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5082 2004/03/04 02:58:23 simonb Exp $
+$NetBSD: CHANGES,v 1.5083 2004/03/04 11:30:34 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1147,3 +1147,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xchm to 0.9 [minskim 2004-03-03]
 	Updated sylpheed-gtk2 to 0.9.9 [minskim 2004-03-03]
 	Updated priv to 1.0-beta2 [simonb 2004-03-04]
+	Added libelf-0.8.5 [recht 2004-03-04]
