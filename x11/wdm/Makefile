@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/04/27 12:52:02 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2003/05/06 21:03:25 jmmv Exp $
 
-DISTNAME=		wdm-1.22.1
+DISTNAME=		wdm-1.23
 CATEGORIES=		x11 windowmaker
 MASTER_SITES=		http://voins.program.ru/wdm/
 
@@ -16,22 +16,30 @@ USE_X11BASE=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=	--with-wdmdir=${WDM_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-wdmdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--with-gfx-incs=${BUILDLINK_DIR}/include/WINGs
 CONFIGURE_ARGS+=	--with-gfx-libs=${BUILDLINK_DIR}/lib
 
 RCD_SCRIPTS=		wdm
 
-WDM_SYSCONFDIR=		${PREFIX}/lib/X11/wdm
+PKG_SYSCONFSUBDIR=	wdm
 
-OWN_DIRS_PERMS+=	${WDM_SYSCONFDIR}/authdir/authfiles		\
+OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/authdir			\
 			${ROOT_USER} ${ROOT_GROUP} 700
-OWN_DIRS_PERMS+=	${WDM_SYSCONFDIR}/authdir/authdir		\
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/authdir/authfiles		\
 			${ROOT_USER} ${ROOT_GROUP} 700
-OWN_DIRS_PERMS=		${WDM_SYSCONFDIR}/authdir			\
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/authdir/authdir		\
 			${ROOT_USER} ${ROOT_GROUP} 700
-OWN_DIRS=		${WDM_SYSCONFDIR}
+
+CONF_FILES=
+.for f in	GiveConsole TakeConsole Xaccess Xclients Xclients.in	\
+		Xresources Xservers Xservers.fs Xservers.ws Xsession	\
+		Xsession.XFree86 Xsession.orig Xsetup_0 wdm-config	\
+		wdm-config.in wdmReconfig
+CONF_FILES+=	${PREFIX}/share/examples/wdm/$f ${PKG_SYSCONFDIR}/$f
+.endfor
+.undef f
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,6 +49,10 @@ OWN_DIRS=		${WDM_SYSCONFDIR}
 .for WMANAGER in ${WDM_MANAGERS}
 CONFIGURE_ARGS+=	--with-winmgr=${WMANAGER}
 .endfor
+
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/pixmaps/wdm
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/wdm
 
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/libungif/buildlink2.mk"
