@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.13 2005/03/20 10:45:48 recht Exp $
+
+--- libexslt/crypto.c.orig	Sun Mar 20 11:32:00 2005
++++ libexslt/crypto.c	Sun Mar 20 11:32:37 2005
+@@ -317,6 +317,13 @@
+ #define PLATFORM_MD5 GCRY_MD_MD5
+ #define PLATFORM_SHA1 GCRY_MD_SHA1
+ 
++#ifdef HAVE_SYS_TYPES_H
++# include <sys/types.h>
++#endif
++#ifdef HAVE_STDINT_H
++# include <stdint.h>
++#endif
++
+ #include <sys/select.h>		/* needed by gcrypt.h 4 Jul 04 */
+ #include <gcrypt.h>
+ 
