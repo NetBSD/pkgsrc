@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6638 2004/07/22 20:12:09 schmonz Exp $
+$NetBSD: CHANGES,v 1.6639 2004/07/22 21:32:00 erh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3508,3 +3508,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated py-sqlite to 0.5.1 [drochner 2004-07-22]
 	Added mapm-4.9.2 [drochner 2004-07-22]
 	Added gtklife-3.0 [drochner 2004-07-22]
+	Updated jakarta-tomcat to 5.0.27 [erh 2004-07-22]
