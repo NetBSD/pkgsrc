@@ -1,108 +1,103 @@
-$NetBSD: patch-ai,v 1.1 1998/08/23 06:49:29 garbled Exp $
---- internals.c.orig	Tue Jan 12 11:59:45 1993
-+++ internals.c	Wed Jul 22 21:35:54 1998
-@@ -24,2 +24,5 @@
+$NetBSD
+
+--- logo_setup.c.orig	Tue Jan 12 19:59:46 1993
++++ logo_setup.c	Mon Sep  6 18:22:07 1999
+@@ -28,6 +28,9 @@
+ # include <stdio.h>
+ 
  # include "cdrom_globs.h"
 +#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
 +# include "cdrom_freebsd.h"
 +#endif
  #ifdef sun
-@@ -31,3 +34,3 @@
+ # include "cdrom_sun.h"
+ #endif
+@@ -43,6 +46,8 @@
  
--
-+static void     scan_update();
- static XtIntervalId	ivid			= -1;
-@@ -38,2 +41,3 @@
+ void	Done();
  
 +extern AppData app_data;
++
+ static Widget	track_button_widget;
+ static Widget	timer_button_widget;
+ static Widget	volume_scroll_widget;
+@@ -55,19 +60,19 @@
+ Widget		title_done_widget;
  
-@@ -172,3 +176,2 @@
- 	int		curtrack;
--	extern void 	scan_update();
+ static int	vol;
++extern void     leds_label_setup();
++static void     cb_track_button();
++static void     cb_timer_button();
++static void     volume_jump_proc();
++static void     volume_scroll_proc();
++static void     popup_title_dialog();
++static void     popdown_title_dialog();
++
  
-@@ -198,3 +201,3 @@
- 		 ((start_addr.minute * 60) + start_addr.second - 
--		  scanSkipInterval)) ||
-+		  app_data.scanSkipInterval)) ||
- 		((cdi.state & CDROM_STATE_PAUSE) &&
-@@ -202,3 +205,3 @@
- 		 ((start_addr.minute * 60) + start_addr.second -
--		  pauseSkipInterval)))
-+		  app_data.pauseSkipInterval)))
- 	    {
-@@ -210,5 +213,5 @@
- 		if (cdi.state & CDROM_STATE_PAUSE) {
--			start_addr.second -= pauseSkipInterval; 
-+			start_addr.second -= app_data.pauseSkipInterval; 
- 		} else if (cdi.state & CDROM_STATE_PLAY) {
--			start_addr.second -= scanSkipInterval; 
-+			start_addr.second -= app_data.scanSkipInterval; 
- 		}
-@@ -225,5 +228,5 @@
- 		if (cdi.state & CDROM_STATE_PAUSE) {
--			start_addr.second -= pauseSkipInterval; 
-+			start_addr.second -= app_data.pauseSkipInterval; 
- 		} else if (cdi.state & CDROM_STATE_PLAY) {
--			start_addr.second -= scanSkipInterval; 
-+			start_addr.second -= app_data.scanSkipInterval; 
- 		}
-@@ -276,3 +279,3 @@
- 		scanivid = XtAppAddTimeOut(appc, 
--			(int)(pausePauseInterval * 1000.0), 
-+			(int)(app_data.pausePauseInterval * 1000.0), 
- 			scan_update, NULL);
-@@ -306,3 +309,2 @@
- 	int		curtrack;
--	extern void 	scan_update();
+ void
+ logo_setup(parent_widget)
+ 	Widget		parent_widget;
+ {
+-	extern void	leds_label_setup();
+-	extern void	cb_track_button();
+-	extern void	cb_timer_button();
+-	extern void	volume_jump_proc();
+-	extern void	volume_scroll_proc();
+-	extern void	popup_title_dialog();
+-	extern void	popdown_title_dialog();
+-
+ 	Widget		version_label_widget;
+ 	char		version_string[80];
  
-@@ -334,3 +336,3 @@
- 		 ((start_addr.minute * 60) + start_addr.second +
--		  scanSkipInterval)) ||
-+		  app_data.scanSkipInterval)) ||
- 		((cdi.state & CDROM_STATE_PAUSE) &&
-@@ -338,3 +340,3 @@
- 		 ((start_addr.minute * 60) + start_addr.second +
--		  pauseSkipInterval)))
-+		  app_data.pauseSkipInterval)))
- 	    {
-@@ -348,5 +350,5 @@
- 		    if (cdi.state & CDROM_STATE_PAUSE) {
--			    start_addr.second += pauseSkipInterval; 
-+			    start_addr.second += app_data.pauseSkipInterval; 
- 		    } else if (cdi.state & CDROM_STATE_PLAY) {
--			    start_addr.second += scanSkipInterval; 
-+			    start_addr.second += app_data.scanSkipInterval; 
- 		    }
-@@ -362,5 +364,5 @@
- 	    if (cdi.state & CDROM_STATE_PAUSE) {
--		start_addr.second += pauseSkipInterval; 
-+		start_addr.second += app_data.pauseSkipInterval; 
- 	    } else if (cdi.state & CDROM_STATE_PLAY) {
--		start_addr.second += scanSkipInterval; 
-+		start_addr.second += app_data.scanSkipInterval; 
- 	    }
-@@ -415,3 +417,3 @@
- 		scanivid = XtAppAddTimeOut(appc, 
--			(int)(pausePauseInterval * 1000.0), 
-+			(int)(app_data.pausePauseInterval * 1000.0), 
- 			scan_update, NULL);
-@@ -559,3 +561,3 @@
- 	        ivid = XtAppAddTimeOut(appc, 
--			(int)(scanPauseInterval * 1000.0), 
-+			(int)(app_data.scanPauseInterval * 1000.0), 
- 			scan_update, NULL);
-@@ -576,3 +578,3 @@
- 			ivid = XtAppAddTimeOut(appc,
--				(int)(scanPauseInterval * 1000.0),
-+				(int)(app_data.scanPauseInterval * 1000.0),
- 				scan_update, NULL);
-@@ -664,3 +666,3 @@
- 	        ivid = XtAppAddTimeOut(appc, 
--			(int)(scanPauseInterval * 1000.0), 
-+			(int)(app_data.scanPauseInterval * 1000.0), 
- 			update_track, NULL);
-@@ -681,3 +683,3 @@
- 			ivid = XtAppAddTimeOut(appc,
--				(int)(scanPauseInterval * 1000.0),
-+				(int)(app_data.scanPauseInterval * 1000.0),
- 				update_track, NULL);
+@@ -126,15 +131,16 @@
+ 
+ 	track_button_update();
+ 
+-	if (display_timer == True)
++	if (app_data.display_timer == True) {
+ 		timer_button_widget = XtCreateManagedWidget("timerButton",
+ 						    	   toggleWidgetClass,
+ 							   logo_form_widget,
+ 							   (ArgList) NULL, 0);
+ 
+-	XtAddCallback(timer_button_widget, XtNcallback, cb_timer_button, 0);
+-
+-	timer_button_update();
++		XtAddCallback(timer_button_widget, XtNcallback, 
++			     cb_timer_button, 0);
++		timer_button_update();
++	}
+ 	thumb_pixmap = XCreateBitmapFromData(XtDisplay(logo_form_widget),
+ 						  rootwin(logo_form_widget),
+ 						  thumb_bits,
+@@ -171,10 +177,10 @@
+ 
+ #ifdef sgi
+ 	if ((vol = cdrom_get_volume()) == 0) {
+-		vol = (int) ((MAXVOL - volbase) * 0.75) + volbase;
++		vol = (int) ((MAXVOL - app_data.volbase) * 0.75) + app_data.volbase;
+ 	}
+ #else
+-	vol = (int) ((MAXVOL - volbase) * 0.75) + volbase;
++	vol = (int) ((MAXVOL - app_data.volbase) * 0.75) + app_data.volbase;
+ #endif
+ 	cdrom_volume(vol, vol); 
+ #ifdef sgi
+@@ -356,7 +362,7 @@
+ 	Arg		args[1];
+ 	Boolean		state;
+ 
+-	if (display_timer == False)
++	if (app_data.display_timer == False)
+ 		return;
+ 
+ 	    if ((cdi.state & CDROM_STATE_PAUSE) == 0)
+@@ -413,7 +419,7 @@
+ 	vol = PCT2VAL(*(float *)percent);
+ #else
+ 	vol = (*(float *) percent) * MAXVOL;
+-	vol = (vol * volpcent) + volbase;
++	vol = (vol * app_data.volpcent) + app_data.volbase;
+ #endif
+ 
+ 	if (vol > MAXVOL)
