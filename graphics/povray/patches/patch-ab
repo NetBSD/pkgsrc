@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2003/08/31 23:04:15 gavan Exp $
+$NetBSD: patch-ab,v 1.5 2004/01/16 08:07:54 jklos Exp $
 
 --- src/Makefile.in.orig	Tue Jan  7 01:23:23 2003
 +++ src/Makefile.in
@@ -18,8 +18,8 @@ $NetBSD: patch-ab,v 1.4 2003/08/31 23:04:15 gavan Exp $
 -CXXFLAGS = $(NOMULTICHAR) -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -foptimize-sibling-calls -minline-all-stringops -Wno-multichar
 -LDFLAGS = @X_CFLAGS@
 +.ifdef GCC
-+CFLAGS = -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -Wno-multichar
-+CXXFLAGS = $(NOMULTICHAR) -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -malign-double -Wno-multichar
++CFLAGS = -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -Wno-multichar
++CXXFLAGS = $(NOMULTICHAR) -O3 -finline-functions -ffast-math -fomit-frame-pointer -funroll-loops -fexpensive-optimizations -Wno-multichar
 +.else
 +CFLAGS = @CFLAGS@
 +CXXFLAGS = @CXXFLAGS@
