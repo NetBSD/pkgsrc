@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1963 2003/04/17 16:05:17 salo Exp $
+$NetBSD: CHANGES,v 1.1964 2003/04/17 18:55:28 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1641,3 +1641,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated baekmuk-ttf to 2.1nb1 [salo 2003-04-17]
 	Updated dbz-ttf to 20020507nb1 [salo 2003-04-17]
 	Updated geoslab703-ttf to 20010522nb1 [salo 2003-04-17]
+	Updated eclipse to 2.1 [jschauma 2003-04-17]
