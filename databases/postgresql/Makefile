@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2000/04/09 03:53:16 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2000/05/20 19:32:18 jlam Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 #
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/bison:../../devel/bison
-DEPENDS+=		ncurses>=4.2:../../devel/ncurses
 DEPENDS+=		readline-*:../../devel/readline
 
 MAKEFILE=		GNUmakefile
@@ -37,9 +36,7 @@ PLIST_SUBST=		PGUSER=${PGUSER}
 CONFIGURE_ARGS+=	--without-perl --without-odbc --without-tcl
 CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
-CPPFLAGS+=		-I${LOCALBASE}/include	# ncurses.h, readline.h
-
-INSTALL_TARGET=		install install-man
+CPPFLAGS+=		-I${LOCALBASE}/include	# readline.h
 
 pre-install:
 	@case "X${PGUSER}" in						\
@@ -64,10 +61,9 @@ pre-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
-	cd ${PREFIX}; ${MV} include/pgsql/libpq++.H include/pgsql/libpq++.h
 	cd ${PREFIX}/include/pgsql; ${RMDIR} -p port/netbsd
 
-.for PROG in ecpg pg_dump pg_id pg_passwd pg_version postgres psql
+.for PROG in ecpg pg_dump pg_encoding pg_id pg_passwd pg_version postgres psql
 	strip ${PREFIX}/bin/${PROG}
 .endfor
 	${SED}	-e 's|@PATH@|${PATH}|g' \
@@ -85,13 +81,22 @@ post-install:
 	${INSTALL} -c -o root -g ${PGGROUP} -m 554 \
 		${WRKDIR}/pgsql.sh ${PREFIX}/etc/rc.d/pgsql.sh
 
+	${CAT} ${FILESDIR}/exclude ${FILESDIR}/man.tcl ${FILESDIR}/man.tk \
+		| ${SED} "s,^#.*,," \
+		| ${GTAR} zxCXf ${PREFIX}/man - \
+			${WRKDIR}/${DISTNAME}/doc/man.tar.gz
+
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/postgresql
 	cd ${WRKDIR}/${DISTNAME}/doc; \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} all
 	cd ${WRKDIR}/${DISTNAME}/doc; ${INSTALL_DATA} \
-		FAQ FAQ_DEV README.fsync TODO bug.template internals.ps \
-		admin.ps.gz programmer.ps.gz tutorial.ps.gz user.ps.gz \
+		FAQ FAQ_DEV README.Charsets README.fsync README.inet \
+		README.locale README.mb README.mb.jp TODO admin.ps.gz \
+		bug.template internals.ps programmer.ps.gz tutorial.ps.gz \
+		user.ps.gz \
 		${PREFIX}/share/doc/postgresql
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/postgresql
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/html/postgresql
 
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
