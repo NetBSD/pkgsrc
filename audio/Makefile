@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2004/09/05 18:40:08 wiz Exp $
+# $NetBSD: Makefile,v 1.253 2004/10/18 03:44:55 ben Exp $
 #
 
 COMMENT=	Audio tools
@@ -171,6 +171,7 @@ SUBDIR+=	oss
 SUBDIR+=	p5-Audio-CD
 SUBDIR+=	p5-Audio-Wav
 SUBDIR+=	p5-CDDB
+SUBDIR+=	p5-CDDB_get
 SUBDIR+=	p5-MP3-Info
 SUBDIR+=	p5-MP3-Tag
 SUBDIR+=	p5-MusicBrainz-Client
