@@ -1,82 +1,67 @@
-$NetBSD: patch-aa,v 1.1.1.1 1998/12/01 23:27:36 garbled Exp $
---- Makefile.orig	Wed Jul 15 13:27:08 1998
-+++ Makefile	Tue Dec  1 14:39:56 1998
-@@ -9,14 +9,14 @@
- #	AIX, Alpha, FreeBSD, HPUX, Linux, Linux-xcurses, 
- #	Solaris, Sun, and Irix (SGI)
- #
--OS		= Solaris
-+OS		= NetBSD
- 
- #
- # These reflect where CDK will be installed from and to
- # on your system.
- #
--SRCDIR		= $(HOME)/cdk-$(VERSION)
--INST_ROOTDIR	= $(HOME)/local
-+SRCDIR		= $(WRKSRC)
-+INST_ROOTDIR	= $(PREFIX)
- 
- #
- # Set some informational variables.
-@@ -51,7 +51,7 @@
- INST_LIBDIR	= ${INST_ROOTDIR}/lib
- INST_INCDIR	= ${INST_ROOTDIR}/include
- INST_MANDIR	= ${INST_ROOTDIR}/man/man3
--INST_SRCDIR	= ${INST_ROOTDIR}/src/cdk
-+INST_SRCDIR	= ${INST_ROOTDIR}/share/examples/cdk
- 
- #
- # Add what ever flags you need for the CFLAGS. The following lists all of 
-@@ -80,7 +80,7 @@
- # NOSTRERR	Your library does not have		Sun
- #		the library function strerr.
+$NetBSD: patch-aa,v 1.2 1999/07/06 07:57:22 jlam Exp $
+
+--- Makefile.in.orig	Thu Jan 21 11:11:06 1999
++++ Makefile.in	Tue Jul  6 01:46:36 1999
+@@ -31,18 +31,21 @@
+ #  SUCH DAMAGE.
  # 
--EXTRA_CFLAGS = -g -Wall
-+EXTRA_CFLAGS = -Wall -I.
  
- ###############################################################
- #         Do Not Change Anything Below This Line
-@@ -143,9 +143,9 @@
- #
+-CDKLIB		= libcdk.a
++CDKLIB		= libcdk.la
+ VERSION		= 4.9.8
+-CFLAGS		= -Iinclude @CFLAGS@ @DEFS@
+-CC		= @CC@
++SHLIB_MAJOR	= 4
++SHLIB_MINOR	= 9
++CFLAGS		= -Iinclude @CFLAGS@ @DEFS@ @CPPFLAGS@
++CC		= ${LIBTOOL} --mode=compile @CC@
+ LDFLAGS		= @LDFLAGS@
+ LIBS		= @LIBS@
+ RANLIB		= @RANLIB@
+-INSTALL		= @INSTALL@
++INSTALL		= ${BSD_INSTALL_DATA}
+ INSTALL_DIR	= @prefix@
+ INCLUDE_DIR	= $(INSTALL_DIR)/include/cdk
+ LIB_DIR		= $(INSTALL_DIR)/lib
+ MAN_DIR		= $(INSTALL_DIR)/man/man3
++DOC_DIR		= $(INSTALL_DIR)/share/doc/cdk
+ 
+ default:: cdklib
+ 
+@@ -76,8 +79,8 @@
  # Standard library directive.
  #
--cdklib $(CDKLIB): $(CDKOBJS)
--	@ar r $(CDKLIB) $(CDKOBJS)
--	@$(RANLIB)
-+#cdklib $(CDKLIB): $(CDKOBJS)
-+#	@ar r $(CDKLIB) $(CDKOBJS)
-+#	@$(RANLIB)
+ cdklib $(CDKLIB): $(CDKOBJS)
+-	$(AR) -cr $(CDKLIB) $(CDKOBJS)
+-	$(RANLIB) $(CDKLIB)
++	${LIBTOOL} --mode=link ${CC} -o ${CDKLIB} ${CDKOBJS:.o=.lo} \
++		-rpath ${LIB_DIR} -version-info ${SHLIB_MAJOR}:${SHLIB_MINOR}
  
  #
- # Shared library directive.
-@@ -214,7 +214,7 @@
- 	   mkdir -p $(INST_SRCDIR); \
- 	fi;
- 	@echo "Installing source example files...";
--	@$(RM) $(INST_SRCDIR)/Makefile;
-+	@-$(RM) $(INST_SRCDIR)/Makefile;
- 	@cp $(EXAMDIR)/examples.make $(INST_SRCDIR)/Makefile;
- 	@(cd $(EXAMDIR); for i in $(EXAMSRC); do \
- 	   echo "	$(INST_SRCDIR)/$$i" ; \
-@@ -364,13 +364,13 @@
+ # Make the examples directory.
+@@ -114,9 +117,12 @@
  #
- # Clean up after ourselves...
- #
--clean::
--	@echo "Cleaning files up..."
--	$(RM) *.o $(CDKLIB) $(CDKSLIB) inst/*.o
--	$(RM) core tst inst/vinstall inst/*.list
--	(cd $(EXAMDIR); make clean)
--	(cd $(CLIDIR); make clean)
--	(cd $(DEMODIR); make clean)
-+#clean::
-+#	@echo "Cleaning files up..."
-+#	$(RM) *.o $(CDKLIB) $(CDKSLIB) inst/*.o
-+#	$(RM) core tst inst/vinstall inst/*.list
-+#	(cd $(EXAMDIR); make clean)
-+#	(cd $(CLIDIR); make clean)
-+#	(cd $(DEMODIR); make clean)
+ installCDKReadme::
+ 	@echo "Installing CDK Readme files..."
++	@if [ ! -d $(DOC_DIR) ]; then \
++	   mkdir -p $(DOC_DIR); \
++	fi
+ 	@for i in $(CDKREADME); do \
+-	   echo "	$(INSTALL) $$i $(INCLUDE_DIR)"; \
+-	   $(INSTALL) $$i $(INCLUDE_DIR); \
++	   echo "	$(INSTALL) $$i $(DOC_DIR)"; \
++	   $(INSTALL) $$i $(DOC_DIR); \
+ 	done
  
  #
- # This makes the test program.
+@@ -127,8 +133,8 @@
+ 	@if [ ! -d $(LIB_DIR) ]; then \
+ 	   mkdir $(LIB_DIR); \
+ 	fi
+-	@echo "	$(INSTALL) $(CDKLIB) $(LIB_DIR)"
+-	@$(INSTALL) $(CDKLIB) $(LIB_DIR)
++	@echo "	${LIBTOOL} --mode=install $(INSTALL) $(CDKLIB) $(LIB_DIR)"
++	@${LIBTOOL} --mode=install $(INSTALL) $(CDKLIB) $(LIB_DIR)
+ 
+ #
+ # This installs the CDK man pages.
