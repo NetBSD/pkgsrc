@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/03/08 19:36:22 seb Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/03/29 16:20:16 adam Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -311,17 +311,17 @@ lib/libcruft.a
 lib/libcruft.la
 lib/libcruft.so
 lib/libcruft.so.2
-lib/libcruft.so.2.55
+lib/libcruft.so.2.57
 lib/liboctave.a
 lib/liboctave.la
 lib/liboctave.so
 lib/liboctave.so.2
-lib/liboctave.so.2.55
+lib/liboctave.so.2.57
 lib/liboctinterp.a
 lib/liboctinterp.la
 lib/liboctinterp.so
 lib/liboctinterp.so.2
-lib/liboctinterp.so.2.55
+lib/liboctinterp.so.2.57
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/info-emacs-info
 libexec/octave/${PKGVERSION}/exec/${MACHINE_GNU_PLATFORM}/info-emacs-octave-help
 libexec/octave/ls-R
@@ -641,6 +641,7 @@ share/octave/${PKGVERSION}/m/general/cart2pol.m
 share/octave/${PKGVERSION}/m/general/cart2sph.m
 share/octave/${PKGVERSION}/m/general/columns.m
 share/octave/${PKGVERSION}/m/general/common_size.m
+share/octave/${PKGVERSION}/m/general/deal.m
 share/octave/${PKGVERSION}/m/general/diff.m
 share/octave/${PKGVERSION}/m/general/fliplr.m
 share/octave/${PKGVERSION}/m/general/flipud.m
@@ -715,7 +716,6 @@ share/octave/${PKGVERSION}/m/miscellaneous/etime.m
 share/octave/${PKGVERSION}/m/miscellaneous/fileparts.m
 share/octave/${PKGVERSION}/m/miscellaneous/flops.m
 share/octave/${PKGVERSION}/m/miscellaneous/fullfile.m
-share/octave/${PKGVERSION}/m/miscellaneous/horzcat.m
 share/octave/${PKGVERSION}/m/miscellaneous/is_leap_year.m
 share/octave/${PKGVERSION}/m/miscellaneous/list_primes.m
 share/octave/${PKGVERSION}/m/miscellaneous/menu.m
@@ -730,7 +730,6 @@ share/octave/${PKGVERSION}/m/miscellaneous/texas_lotto.m
 share/octave/${PKGVERSION}/m/miscellaneous/tic.m
 share/octave/${PKGVERSION}/m/miscellaneous/toc.m
 share/octave/${PKGVERSION}/m/miscellaneous/version.m
-share/octave/${PKGVERSION}/m/miscellaneous/vertcat.m
 share/octave/${PKGVERSION}/m/miscellaneous/xor.m
 share/octave/${PKGVERSION}/m/plot/PKG_ADD
 share/octave/${PKGVERSION}/m/plot/__axis_label__.m
@@ -1047,8 +1046,8 @@ share/octave/${PKGVERSION}/m/miscellaneous/unix.m
 share/octave/ls-R
 share/octave/site/m/startup/octaverc
 @dirrm share/octave/site/m/startup
-@dirrm share/octave/site/api-v6/m
-@dirrm share/octave/site/api-v6
+@dirrm share/octave/site/api-v8/m
+@dirrm share/octave/site/api-v8
 @dirrm share/octave/${PKGVERSION}/site/m
 @dirrm share/octave/${PKGVERSION}/site
 @dirrm share/octave/${PKGVERSION}/m/time
@@ -1086,8 +1085,8 @@ share/octave/site/m/startup/octaverc
 @dirrm share/octave/${PKGVERSION}/doc
 @dirrm share/octave/${PKGVERSION}
 @dirrm share/doc/html/octave
-@dirrm libexec/octave/site/oct/api-v6/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/octave/site/oct/api-v6
+@dirrm libexec/octave/site/oct/api-v8/${MACHINE_GNU_PLATFORM}
+@dirrm libexec/octave/site/oct/api-v8
 @dirrm libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/octave/site/oct
 @dirrm libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
@@ -1104,5 +1103,6 @@ share/octave/site/m/startup/octaverc
 @dirrm libexec/octave/${PKGVERSION}/exec
 @dirrm libexec/octave/${PKGVERSION}
 @dirrm libexec/octave
+@dirrm lib/octave-${PKGVERSION}
 @dirrm include/octave-${PKGVERSION}/octave
 @dirrm include/octave-${PKGVERSION}

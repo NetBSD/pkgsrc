@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2004/02/26 16:47:35 adam Exp $
+$NetBSD: patch-aa,v 1.7 2004/03/29 16:20:16 adam Exp $
 
---- configure.orig	2004-02-20 21:17:41.000000000 +0000
+--- configure.orig	2004-03-05 19:16:10.000000000 +0000
 +++ configure
-@@ -7977,7 +7977,7 @@ if $have_fortran_compiler; then
+@@ -7930,7 +7930,7 @@ if $have_fortran_compiler; then
  %.c : %.f
  
  %.o : %.f
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.6 2004/02/26 16:47:35 adam Exp $
  
  pic/%.o : %.f
  	$(FC) -c $(FPICFLAG) $(ALL_FFLAGS) $< -o $@
-@@ -18764,19 +18764,19 @@ case "$canonical_host_type" in
+@@ -18717,19 +18717,19 @@ case "$canonical_host_type" in
      cat << \EOF > $bsd_gcc_kluge_targets_frag
  
  lex.o: lex.cc
