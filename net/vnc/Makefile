@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/01/20 12:22:22 agc Exp $
+# $NetBSD: Makefile,v 1.32 2004/11/27 00:58:21 abs Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/03/19 01:54:59 msmith Exp
 #
 
@@ -14,7 +14,7 @@ PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
 PATCHFILES=		vnc-3.3.3r2-v6-20010421.diff.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=		abs@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.uk.research.att.com/vnc/
 COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
