@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2004/02/14 17:21:53 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2005/03/12 10:23:57 jmmv Exp $
 #
 
 DISTNAME=		jday-1.3
 CATEGORIES=		time
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jday/}
 
-MAINTAINER=		David Simas <davids@idiom.com>
+MAINTAINER=		davids@idiom.com
 HOMEPAGE=		http://jday.sourceforge.net/
 COMMENT=		Julian date calculator
 
