@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.45 1998/11/26 06:37:22 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.46 1998/12/19 20:35:47 bad Exp $
 ###########################################################################
 
 			==========================
@@ -492,6 +492,25 @@ directory.  It can be removed by typing
 
 at the shell prompt. Also, this directory is used to keep various
 timestamp files. 
+
+ 4.7 importing the package into CVS
+ ==================================
+
+Newly created packages should be imported with a vendor tag of "TNF" and
+a release tag of "pkgsrc-base", e.g::
+
+	cvs import pkgsrc/<category>/frobnitz TNF pkgsrc-base
+
+Packages derived from a FreeBSD port could be imported with a vendor tag
+of "FREEBSD" and a release tag of "FreeBSD-current-YYYY-MM-DD" (YYYY-MM-DD
+being the date when the snapshot of the port were taken form the FreeBSD
+tree), and then doing the necessary modifications by normal CVS operations.
+E.g:
+
+	cvs import pkgsrc/<category>/mumbler FREEBSD FreeBSD-current-1998-04-01
+	cvs rm patches/patch-a
+	cvs add patches/patch-aa
+	cvs ci
 
 
  5 PLIST* issues
