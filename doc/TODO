@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3368 2005/04/06 04:16:11 schmonz Exp $
+$NetBSD: TODO,v 1.3369 2005/04/06 05:30:59 epg Exp $
 
 Suggested new packages
 ======================
@@ -355,8 +355,6 @@ Suggested package updates
 	o clanlib-0.7.8
 	o classpath-0.14
 	o classpath-gui-0.14
-	o clearsilver-0.9.14
-	o clearsilver-base-0.9.14
 	o clisp-2.33.2
 	o cocoon-2.1.7
 	o columba-1.0RC1
@@ -886,7 +884,6 @@ Suggested package updates
 	o py-ZODB-3.2.3
 	o py-amkCrypto-2.0
 	o py-bdb-xml-2.0.9
-	o py-clearsilver-0.9.14
 	o py-curl-7.13.2
 	o py-gnome2-2.10.0
 	o py-gnuplot-1.7
@@ -958,7 +955,6 @@ Suggested package updates
 	o rt-mysql-3.4.1
 	o rt-pgsql-3.4.1
 	o rtcw-1.41.3
-	o ruby-clearsilver-0.9.14
 	o ruby-fox-1.2.5 [needs to update of fox-1.4.6]
 	o ruby-mysql-2.5.2
 	o rudiments-0.27
