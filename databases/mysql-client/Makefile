@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/05/06 23:22:27 tv Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/20 20:09:50 tron Exp $
 #
 
 DISTNAME=	mysql-3.22.22
@@ -20,9 +20,6 @@ CONFIGURE_ARGS+=--without-perl --without-debug --without-bench \
 CONFIGURE_ARGS+=--without-readline
 .endif
 
-CONFIGURE_ENV=	INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
-		INSTALL_DATA="${INSTALL_DATA}" \
-		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 CFLAGS+=	-Dunix
 
 USE_GMAKE=	yes

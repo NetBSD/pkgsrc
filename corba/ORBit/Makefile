@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/05/02 14:29:16 tron Exp $
+# $NetBSD: Makefile,v 1.19 1999/05/20 20:09:50 tron Exp $
 #
 
 DISTNAME=	ORBit-0.4.3
@@ -16,7 +16,6 @@ DEPENDS+=	gindent-1.9.1:../../devel/gindent
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_GMAKE=	yes
-CONFIGURE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 LIBTOOL_FLAGS=	--install-la
 INFO_FILES=	libIDL.info
