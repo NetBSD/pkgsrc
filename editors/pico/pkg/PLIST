@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 1998/07/21 21:16:15 tv Exp $
+@comment $NetBSD: PLIST,v 1.7 1998/07/22 02:45:46 tv Exp $
 bin/pico
 bin/pilot
 lib/libpico.a
-lib/libpico.so.0.0
+lib/libpico.so.0.2
 man/man1/pico.1
 man/man1/pilot.1

@@ -41,7 +41,7 @@
 -		$(RANLIB) libpico.a
 +libpico.la:	$(OFILES)
 +		$(CC) -o libpico.la $(OFILES:.o=.lo) -rpath $(PREFIX)/lib \
-+			-version-info 0:0
++			-version-info 0:2
  
  clean:
  		rm -f *.a *.o *~ pico_os.c os.h pico pilot
