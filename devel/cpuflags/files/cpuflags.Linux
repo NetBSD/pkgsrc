@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.Linux,v 1.10 2004/11/03 18:16:27 abs Exp $
+# $NetBSD: cpuflags.Linux,v 1.11 2004/11/14 21:51:05 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 if [ "$1" = -v ] ; then
@@ -25,8 +25,8 @@ if [ ! -f /proc/cpuinfo ] ; then
     echo "Unable to open /proc/cpuinfo"
     hw_model=Unknown
 else
-    hw_model=$(awk -F: '/^model name/{sub(" ","",$2);print $2}' /proc/cpuinfo)
-    hw_flags=$(awk -F: '/^flags/{sub(" ","",$2);print $2}' /proc/cpuinfo)
+    hw_model=$(awk -F: '/^model name/{sub(" ","",$2);print $2;exit}' /proc/cpuinfo)
+    hw_flags=$(awk -F: '/^flags/{sub(" ","",$2);print $2;exit}' /proc/cpuinfo)
 fi
 
 case $hw_machine_arch in
@@ -38,6 +38,7 @@ case $hw_machine_arch in
 	"AMD Duron(TM)")		FLAGS='-march=athlon'		;;
 	"AMD Athlon(tm) XP "*)		FLAGS='-march=athlon-xp'	;;
 	"Celeron (Coppermine)")		FLAGS='-march=pentium3'		;;
+	"Pentium III (Coppermine)")	FLAGS='-march=pentium3'		;;
 	"Intel(R) Pentium(R) M processor"*) FLAGS='-march=pentium3m'	;;
 	"Intel(R) Celeron(R) CPU "*)
 	    case "$hw_flags" in
