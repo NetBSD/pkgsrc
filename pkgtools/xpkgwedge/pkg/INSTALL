@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2000/10/23 17:32:08 jlam Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+POST-INSTALL)
+	X11BASE=@X11BASE@
+	X11_HOSTDEF=${X11BASE}/lib/X11/config/host.def
+	HOSTDEF=${PKG_PREFIX}/lib/X11/config/host.def
+
+	if [ ${PKG_PREFIX} = ${X11BASE} -o -f ${HOSTDEF} ]
+	then
+		echo -n "Updating ${HOSTDEF}..."
+		cp -f ${HOSTDEF} ${HOSTDEF}.bak
+	else
+		echo -n "Creating ${HOSTDEF}..."
+		cp -f ${X11_HOSTDEF} ${HOSTDEF}.bak
+	fi
+	( echo '#include <xpkgwedge.def>'; \
+	  grep -v xpkgwedge ${HOSTDEF}.bak ) \
+		> ${HOSTDEF}
+	rm -f ${HOSTDEF}.bak
+	echo "done."
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
