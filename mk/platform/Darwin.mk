@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.3 2004/11/16 16:21:40 tv Exp $
+# $NetBSD: Darwin.mk,v 1.4 2004/11/16 18:04:00 tv Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -87,7 +87,6 @@ XARGS?=		/usr/bin/xargs
 .if !defined(PKGSRC_COMPILER) || !empty(PKGSRC_COMPILER:Mgcc)
 CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	# use the GNU cpp, not the OS X cpp
 .endif
-CPPFLAGS+=		${CPP_PRECOMP_FLAGS}
 DEF_UMASK?=		0022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
@@ -107,8 +106,6 @@ USERADD?=		${LOCALBASE}/sbin/useradd
 _PKG_USER_HOME?=	/var/empty	# to match other system accounts
 _PKG_USER_SHELL?=	/usr/bin/false	# to match other system accounts
 _USER_DEPENDS=		user>=20040801:../../sysutils/user_darwin
-DEPENDS+=		${USE_USERADD:D${_USER_DEPENDS}}
-DEPENDS+=		${USE_GROUPADD:D${_USER_DEPENDS}}
 
 # imake installs manpages in weird places
 # these values from /usr/X11R6/lib/X11/config/Imake.tmpl
@@ -158,7 +155,6 @@ LOCALBASE?=		${DESTDIR}/usr/pkg
 # to avoid a test required by the libtool script that takes forever.
 .if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
 _OPSYS_MAX_CMDLEN!=	/usr/sbin/sysctl -n kern.argmax
-CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
 .endif
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
