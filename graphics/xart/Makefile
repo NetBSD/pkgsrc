@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/03/13 17:37:18 fredb Exp $
+# $NetBSD: Makefile,v 1.27 2002/10/09 13:11:20 wiz Exp $
 #
 
 DISTNAME=       xart19980415
@@ -13,14 +13,15 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://linux01.gwdg.de/~rhohen/linux.html
 COMMENT=	Paint program (enhanced xpaint)
 
+USE_BUILDLINK2=	YES
 USE_IMAKE=      YES
 
 post-extract:
 	${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
 	${FIND} ${WRKSRC} -type f -print | ${XARGS} ${CHMOD} 644
 
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
