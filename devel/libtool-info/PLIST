@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:48 zuntum Exp $
-@unexec install-info --delete %D/info/libtool.info %D/info/dir
+@comment $NetBSD: PLIST,v 1.2 2002/02/18 16:42:27 seb Exp $
+@unexec ${INSTALL_INFO} --delete %D/info/libtool.info %D/info/dir
 info/libtool.info
 info/libtool.info-1
 info/libtool.info-2
 info/libtool.info-3
 info/libtool.info-4
 info/libtool.info-5
-@exec install-info %D/info/libtool.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/libtool.info %D/info/dir
