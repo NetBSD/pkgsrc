@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/06 13:39:28 agc Exp $
 # New ports collection makefile for:	jpeg
 # Version required:     6a
 # Date created:		6 November 1994
