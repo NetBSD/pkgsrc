@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1484 2004/08/04 15:29:13 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1485 2004/08/04 23:22:38 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -36,9 +36,9 @@ MAKE_ENV+=	USETOOLS="${USETOOLS}"
 
 # This has to come first to avoid showing all BUILD_DEFS added by this
 # Makefile, which are usually not customizable.
-.PHONY: pre-extract build-defs-message
-pre-extract: build-defs-message
-.if ${PKGSRC_SHOW_BUILD_DEFS} != "YES" && ${PKGSRC_SHOW_BUILD_DEFS} != "yes"
+.PHONY: pre-install-depends build-defs-message
+pre-install-depends: build-defs-message
+.if !empty(PKGSRC_SHOW_BUILD_DEFS:M[yY][eE][sS])
 build-defs-message:
 .elif !target(build-defs-message)
 build-defs-message: ${WRKDIR}
@@ -3966,13 +3966,14 @@ package-noinstall:
 # Dependency checking
 ################################################################
 
-.PHONY: install-depends
+.PHONY: install-depends pre-install-depends
+pre-install-depends:
 .if !target(install-depends)
 # Tells whether to halt execution if the object formats differ
 FATAL_OBJECT_FMT_SKEW?= yes
 WARN_NO_OBJECT_FMT?= yes
 
-install-depends: uptodate-pkgtools
+install-depends: uptodate-pkgtools pre-install-depends
 .  if defined(DEPENDS) || defined(BUILD_DEPENDS)
 .    if defined(NO_DEPENDS)
 	@${DO_NADA}
