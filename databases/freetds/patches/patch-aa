@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2002/08/25 19:22:06 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2002/10/26 18:45:29 grant Exp $
 
---- Makefile.in.orig	Sun Dec 16 10:40:25 2001
+--- Makefile.in.orig	Thu Sep 12 02:35:50 2002
 +++ Makefile.in
-@@ -369,12 +369,7 @@
+@@ -349,17 +349,7 @@ maintainer-clean-generic clean mostlycle
  
  
  install-data-local:
@@ -10,7 +10,12 @@ $NetBSD: patch-aa,v 1.2 2002/08/25 19:22:06 jlam Exp $
 -	if [ -f $(ETC)/freetds.conf ]; \
 -	then :; \
 -	else \
--		$(INSTALL_DATA) freetds.conf $(ETC)/freetds.conf; \
+-		$(INSTALL_DATA) $(srcdir)/freetds.conf $(ETC)/freetds.conf; \
+-	fi
+-	if [ -f $(ETC)/locales.conf ]; \
+-	then :; \
+-	else \
+-		$(INSTALL_DATA) $(srcdir)/locales.conf $(ETC)/locales.conf; \
 -	fi
 +	$(mkinstalldirs) $(DEFDIR)
  

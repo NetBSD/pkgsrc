@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2002/08/25 19:22:05 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/10/26 18:45:29 grant Exp $
+freetds/bin/freebcp
+freetds/bin/tsql
 freetds/include/bkpublic.h
 freetds/include/common.h
 freetds/include/cspublic.h
@@ -6,6 +8,7 @@ freetds/include/cstypes.h
 freetds/include/ctlib.h
 freetds/include/ctpublic.h
 freetds/include/dblib.h
+freetds/include/freebcp.h
 freetds/include/sqldb.h
 freetds/include/sqlfront.h
 freetds/include/sybdb.h
@@ -37,8 +40,14 @@ freetds/lib/libtdssrv.la
 freetds/lib/libtdssrv.so
 freetds/lib/libtdssrv.so.0
 freetds/lib/libtdssrv.so.0.0
+freetds/man/man1/freebcp.1
+freetds/man/man1/tsql.1
 share/examples/freetds/freetds.conf
+share/examples/freetds/locales.conf
 @dirrm share/examples/freetds
+@dirrm freetds/man/man1
+@dirrm freetds/man
 @dirrm freetds/lib
 @dirrm freetds/include
+@dirrm freetds/bin
 @dirrm freetds
