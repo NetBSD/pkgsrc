@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/05/17 01:54:01 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/05/17 02:16:07 tron Exp $
 
 DISTNAME=	suse_base-6.1
 CATEGORIES=	emulators
@@ -33,6 +33,7 @@ do-build:
 		  ${SCRIPTDIR}/*.sh; do \
 		  ${SED} -e 's#@@EMULDIR@@#${EMULDIR}#g' \
 		         -e 's#@@EMULSUBDIR@@#${EMULSUBDIR}#g' \
+		         -e 's#@@GTAR@@#${GTAR}#g' \
 		         -e 's#@@PREFIX@@#${PREFIX}#g' \
 		    <$$FILE >${WRKDIR}/`basename $$FILE`; \
 		done

@@ -37,7 +37,7 @@ done
  find @@EMULSUBDIR@@/* -type d | sort -r |
  awk '{print("@unexec rmdir %D/"$1" >/dev/null 2>&1 || true")}') >$PLIST
 
-cp -Rp $TMPDIR/@@EMULSUBDIR@@/* @@EMULDIR@@
+@@GTAR@@ cCf $TMPDIR - @@EMULSUBDIR@@ | @@GTAR@@ xCf @@PREFIX@@ -
 
 cat $PLIST
 
