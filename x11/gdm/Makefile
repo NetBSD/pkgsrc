@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2004/06/20 21:25:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.66 2004/07/05 09:10:19 jmmv Exp $
 #
 
 DISTNAME=	gdm-2.6.0.3
@@ -90,13 +90,15 @@ CONFIGURE_ARGS+=	X_SERVER_ARGS="vt05"
 .endif
 
 BUILD_DEFS+=	USE_PAM
-
 .if defined(USE_PAM)
-.include "../../security/PAM/buildlink3.mk"
-CONFIGURE_ENV+=		USE_PAM=yes
+.  include "../../security/PAM/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-authentication-scheme=pam
 PLIST_SUBST+=		PAM_MISC=""
+.elif exists(/etc/shadow)
+CONFIGURE_ARGS+=	--enable-authentication-scheme=shadow
+PLIST_SUBST+=		PAM_MISC="@comment "
 .else
-CONFIGURE_ENV+=		USE_PAM=no
+CONFIGURE_ARGS+=	--enable-authentication-scheme=crypt
 PLIST_SUBST+=		PAM_MISC="@comment "
 .endif
 

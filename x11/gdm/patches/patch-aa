@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2004/06/20 21:25:46 jmmv Exp $
+$NetBSD: patch-aa,v 1.10 2004/07/05 09:10:19 jmmv Exp $
 
 --- configure.orig	2004-06-11 17:49:13.000000000 +0200
 +++ configure
@@ -28,22 +28,6 @@ $NetBSD: patch-aa,v 1.9 2004/06/20 21:25:46 jmmv Exp $
              echo "$as_me:$LINENO: result: $DAEMON_LIBS" >&5
  echo "${ECHO_T}$DAEMON_LIBS" >&6
          else
-@@ -24803,6 +24804,7 @@ VRFY="verify-crypt"
- if test x$enable_authentication_scheme != xcrypt -a \
- 	x$enable_authentication_scheme != xshadow ; then
- 
-+if [ "${USE_PAM}" = "yes" ]; then
- for ac_header in security/pam_appl.h
- do
- as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
-@@ -24960,6 +24962,7 @@ fi
- done
- 
- fi
-+fi
- 
- GDMASKPASS=
- EXTRA_GDMASKPASS_LIBS=
 @@ -28015,6 +28018,10 @@ else
     X_SERVER="/usr/X11R6/bin/X"
     X_CONF_PATH="/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/opt/X11R6/bin"
