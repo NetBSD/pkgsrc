@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.10 1998/02/09 00:27:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1998/02/14 16:54:45 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -48,6 +48,8 @@ CONFIGURE_ARGS+=	${ARCH}--`echo ${OPSYS}|tr [A-Z] [a-z]` --prefix=${PREFIX} \
 		--site-libraries=${PREFIX}/lib \
 		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
 		${WITH_MULE} ${WITH_DIALOGS}
+
+MAKE_ENV+=	INSTALL_SCRIPT="${INSTALL_SCRIPT}"
 
 MAN1=		ctags.1 etags.1 gnuattach.1 gnuclient.1 gnudoit.1 \
 		gnuserv.1 xemacs.1
