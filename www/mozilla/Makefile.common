@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2002/12/04 15:20:27 taya Exp $
+# $NetBSD: Makefile.common,v 1.7 2002/12/25 09:21:42 grant Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -112,6 +112,11 @@ do-install:
 CONFIGURE_ARGS+= --without-pthreads
 .else
 CONFIGURE_ARGS+= --with-pthreads
+.endif
+
+.if ${MOZILLA_USE_XFT} == "YES"
+CONFIGURE_ARGS+= --enable-xft
+.include "../../fonts/Xft2/buildlink2.mk"
 .endif
 
 .include "../../mk/autoconf.mk"

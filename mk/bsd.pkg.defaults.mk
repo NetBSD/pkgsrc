@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.118 2002/12/24 09:08:47 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.119 2002/12/25 09:21:42 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -997,6 +997,11 @@ MAJORDOMO_USER?= majordom
 # Used by majordomo package as the userid majordomo runs at.
 # Possible: any
 # Default: majordom
+
+MOZILLA_USE_XFT?=	NO
+# Used by mozilla packages to enable Xft support where available.
+# Possible: YES, NO
+# Default: NO
 
 MPLAYER_ENABLE_RUNTIME_CPU_DETECTION?= YES
 # Used by mplayer to enable runtime CPU detection -- this makes
