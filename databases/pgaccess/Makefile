@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/09/21 19:12:52 jlam Exp $
+# $NetBSD: Makefile,v 1.2 1999/12/02 01:47:05 darcy Exp $
 #
 
 DISTNAME=	pgaccess-0.98
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.flex.ro/pub/pgaccess/
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.flex.ro/pgaccess/
 
-DEPENDS+=	postgresql-6.5.2:../../databases/postgresql
+DEPENDS+=	postgresql-6.5.3:../../databases/postgresql
 
 NO_BUILD=	yes
 
