@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2003/07/28 14:51:37 drochner Exp $
+$NetBSD: patch-ad,v 1.2 2004/12/11 00:13:54 jlam Exp $
 
 --- ntlm/ntlmdes.c.orig	2003-07-25 19:54:18.000000000 +0200
 +++ ntlm/ntlmdes.c	2003-07-25 19:54:34.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1 2003/07/28 14:51:37 drochner Exp $
  #include <string.h>
  #include <ctype.h>
 -#include <openssl/des.h>
-+#include <des.h>
++#include <openssl/des_old.h>
  #include <openssl/md4.h>
  
  #include "ntlm.h"
