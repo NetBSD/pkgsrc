@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8364 2004/12/18 17:45:27 grant Exp $
+$NetBSD: CHANGES,v 1.8365 2004/12/18 21:47:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5948,3 +5948,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pkgconfig to 0.15.0nb2 [grant 2004-12-18]
 	Update acroread5 to 5.10 [jdolecek 2004-12-18]
 	Updated libtool to 1.5.10nb8 [grant 2004-12-18]
+	Updated ed2k-gtk-gui to 0.6.3nb1 [minskim 2004-12-18]
