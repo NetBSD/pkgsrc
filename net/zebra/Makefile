@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2004/01/24 14:50:06 grant Exp $
+# $NetBSD: Makefile,v 1.62 2004/04/25 07:49:56 snj Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -15,7 +15,7 @@ COMMENT=	Free multithreaded routing daemon software
 .include "../../mk/bsd.prefs.mk"
 
 AUTOMAKE_REQD=		1.8
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 PKG_SYSCONFSUBDIR?=	zebra
 USE_PKGINSTALL=		YES
@@ -42,7 +42,7 @@ BUILD_DEFS+=		USE_ZEBRA_VTYSH
 
 .if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"
 USE_GNU_READLINE=	# uses rl_pending_input
-.  include "../../devel/readline/buildlink2.mk"
+.  include "../../devel/readline/buildlink3.mk"
 PLIST_SRC+=		${PKGDIR}/PLIST.vtysh
 CONFIGURE_ARGS+=	--enable-vtysh
 CONF_FILES+=		${EGDIR}/vtysh.conf.sample ${PKG_SYSCONFDIR}/vtysh.conf
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--disable-vtysh
 
 USE_GNU_TOOLS+=		make
 USE_MAKEINFO=		# defined
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
 
 BUILD_DEFS+=		USE_INET6
 
