@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2610 2003/06/28 11:48:18 jmmv Exp $
+$NetBSD: CHANGES,v 1.2611 2003/06/29 02:04:29 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2599,3 +2599,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rc.subr to 20030627 [grant 2003-06-28]
 	Updated xmule to 1.4.1a [jmmv 2003-06-28]
 	Updated yasm to 0.2.2 [jmmv 2003-06-28]
+	Updated centericq to 4.9.4 [jlam 2003-06-28]
