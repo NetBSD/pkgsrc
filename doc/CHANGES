@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.828 2002/12/18 20:37:32 wiz Exp $
+$NetBSD: CHANGES,v 1.829 2002/12/18 22:07:06 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3999,3 +3999,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated gedit to 2.0.6 [jmmv 2002-12-18]
 	Added waimea-0.4.0 [jmmv 2002-12-18]
 	Updated whiteBOX to 0.5nb1 [wiz 2002-12-18]
+	Added novawm-0.7rc1 [jmmv 2002-12-18]
