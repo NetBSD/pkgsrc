@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/01/08 17:45:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/28 22:04:18 jlam Exp $
 #
 
 DISTNAME=	sysbuild-1.9
@@ -35,6 +35,7 @@ FILES_SUBST+=		SYSBUILD_SRCGROUP=${SYSBUILD_SRCGROUP}
 FILES_SUBST+=		EGDIR=${EGDIR}
 MESSAGE_SUBST+=		SYSBUILD_USER=${SYSBUILD_USER}
 
+USE_PKGINSTALL=		yes
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
@@ -66,5 +67,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/crontab ${EGDIR}/crontab
 	${INSTALL_DATA} ${WRKSRC}/profile ${EGDIR}/profile
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

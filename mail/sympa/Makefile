@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/01/28 09:40:15 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2003/01/28 22:03:42 jlam Exp $
 #
 
 DISTNAME=	sympa-3.4.2
@@ -23,8 +23,9 @@ DEPENDS+=	p5-DBD-mysql>=2.0407:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-DBD-postgresql>=0.90:../../databases/p5-DBD-postgresql
 DEPENDS+=	p5-perl-ldap>=0.10:../../databases/p5-perl-ldap
 
-USE_BUILDLINK2=	YES
-GNU_CONFIGURE=	YES
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-piddir=/var/run
 
 PERL5_REQD=	5.005
@@ -37,7 +38,6 @@ post-install:
 	${CHMOD} ug-s ${PREFIX}/bin/wwsympa.fcgi
 
 .include "../../lang/perl5/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
 
 PREFIX=	${LOCALBASE}/sympa

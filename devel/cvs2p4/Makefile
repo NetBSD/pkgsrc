@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/11/22 21:13:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:14 jlam Exp $
 #
 
 DISTNAME=	cvs2p4-2.3.3
@@ -16,8 +16,9 @@ DEPENDS+=	p4d-[0-9]*:../../devel/p4d
 DEPENDS+=	rcs-[0-9]*:../../devel/rcs
 .endif
 
-USE_PERL5=	# defined
-NO_BUILD=	# defined
+USE_PKGINSTALL=	yes
+USE_PERL5=	yes
+NO_BUILD=	yes
 
 DOCDIR=		share/doc/${PKGBASE}
 EGDIR=		share/examples/${PKGBASE}
@@ -53,5 +54,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/test/config ${PREFIX}/${EGDIR}
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

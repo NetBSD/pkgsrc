@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/03/06 18:51:17 jdarrow Exp $
+# $NetBSD: Makefile,v 1.21 2003/01/28 22:04:29 jlam Exp $
 
 DISTNAME=	horde-2.0
 CATEGORIES=	www
@@ -24,6 +24,7 @@ MESSAGE_SUBST+=	HORDEDIR=${HORDEDIR}
 
 PKG_SYSCONFSUBDIR?=	httpd
 
+USE_PKGINSTALL=	yes
 CONF_FILES=	${EGDIR}/horde.conf ${PKG_SYSCONFDIR}/horde.conf
 CONF_FILES+=	${HORDEDIR}/config/horde.php.dist ${HORDEDIR}/config/horde.php
 SUPPORT_FILES+=	${HORDEDIR}/config/html.php.dist ${HORDEDIR}/config/html.php
@@ -62,5 +63,4 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${HORDEDIR}
 	${CHMOD} -R a-w ${HORDEDIR}
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

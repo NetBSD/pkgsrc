@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/12/23 15:05:34 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/28 22:03:54 jlam Exp $
 #
 
 DISTNAME=	openh323_1.10.4
@@ -20,6 +20,7 @@ WRKSRC=		${WRKDIR}/openh323
 MAKE_ENV+=	PWLIBDIR=${PREFIX} OPENH323DIR=${WRKSRC}
 
 USE_BUILDLINK2=	yes
+USE_PKGINSTALL=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 ALL_TARGET=	opt
@@ -46,5 +47,4 @@ do-install:
 
 .include "../../devel/pwlib/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

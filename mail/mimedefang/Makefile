@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/10/30 09:50:24 markd Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:34 jlam Exp $
 
 DISTNAME=		mimedefang-2.24
 CATEGORIES=		mail
@@ -18,6 +18,7 @@ DEPENDS+=		p5-MIME-tools>=5.411.1:../../mail/p5-MIME-tools
 DEPENDS+=		spamassassin>=2.31:../../mail/spamassassin
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_PERL5=		YES
 GNU_CONFIGURE=		YES
 PKG_SYSCONFSUBDIR?=	mimedefang
@@ -71,5 +72,4 @@ do-install:
 
 .include "../../mail/libmilter/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/01/11 04:31:53 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:27 jlam Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-3.2.1
@@ -14,6 +14,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 CONFLICTS+=		pgcc-[0-9]*
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_GMAKE=		YES
 
 HAS_CONFIGURE=		YES
@@ -64,7 +65,6 @@ post-install:
 		>> ${PLIST_SRC}
 
 .include "../../mk/texinfo.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # Make bootstrap with compiler != gcc possible.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/01/23 16:12:43 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/28 22:04:20 jlam Exp $
 
 DISTNAME=	xcdroast-0.98alpha13
 PKGNAME=	xcdroast-0.98a13
@@ -14,9 +14,10 @@ DEPENDS+=	cdrecord-xcdroast-0.98a13.*:../cdrecord-xcdroast
 .include "../../mk/bsd.prefs.mk"
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .if ${_OPSYS_HAS_OSSAUDIO} == "yes"
@@ -43,5 +44,5 @@ post-install:
 # gdk-pixbuf implies gtk, glib, gettext-lib
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
 .include "../../mk/ossaudio.buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
+
 .include "../../mk/bsd.pkg.mk"

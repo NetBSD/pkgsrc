@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/01/20 10:04:02 skrll Exp $
+# $NetBSD: Makefile,v 1.16 2003/01/28 22:04:35 jlam Exp $
 
 DISTNAME=	kdebase-3.0.5a
 PKGREVISION=	2
@@ -12,6 +12,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap}"
@@ -138,5 +139,4 @@ post-install:
 .include "../../x11/kde3/buildlink2.mk"
 .include "../../x11/kdelibs3/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

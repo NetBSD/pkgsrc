@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2003/01/11 15:23:43 tron Exp $
+# $NetBSD: Makefile,v 1.38 2003/01/28 22:04:25 jlam Exp $
 
 DISTNAME=       analog-5.31
 CATEGORIES=	www
@@ -16,6 +16,7 @@ MAKE_ENV+=	PREFIX=${PREFIX} SYSCONFDIR=${PKG_SYSCONFDIR}
 WRKDISTDIR=	${WRKDIR}/${DISTNAME}
 WRKSRC=		${WRKDISTDIR}/src
 
+USE_PKGINSTALL=	yes
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/analog.cfg ${PKG_SYSCONFDIR}/analog.cfg
 
@@ -31,5 +32,4 @@ do-install:
 	${INSTALL_DATA} -m 644 ${WRKDISTDIR}/analog.cfg \
 	  ${PREFIX}/share/examples/analog.cfg
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

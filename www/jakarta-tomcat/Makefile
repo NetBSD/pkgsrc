@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/12/28 22:34:13 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2003/01/28 22:04:29 jlam Exp $
 
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}-src
 PKGNAME=	${DISTNAME:S/-src$//}
@@ -16,7 +16,7 @@ DEPENDS+=	jakarta-ant>=1.4.1:../../devel/jakarta-ant
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK2=	yes
 MAKEFILE=	build.xml
 ALL_TARGET=	main
 INSTALL_TARGET=	dist
@@ -24,6 +24,7 @@ INSTALL_TARGET=	dist
 SAMPLECONFDIR=			${PREFIX}/tomcat/conf
 PKG_SYSCONFDIR.jakarta-tomcat=	${SAMPLECONFDIR}
 
+USE_PKGINSTALL=	yes
 OWN_DIRS=	${PREFIX}/tomcat
 MAKE_DIRS=	${PREFIX}/tomcat/conf
 MAKE_DIRS=	${PREFIX}/tomcat/logs
@@ -52,7 +53,6 @@ post-install:
 	${RM} ${PREFIX}/tomcat/webapps/examples.war
 
 .include "../../mk/java-vm.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
 
 MAKE_PROGRAM=	${LOCALBASE}/bin/ant

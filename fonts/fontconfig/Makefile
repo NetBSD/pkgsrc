@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/01/21 14:25:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/28 22:03:17 jlam Exp $
 #
 
 DISTNAME=	fcpackage.2_1
@@ -13,6 +13,7 @@ COMMENT=	Library for configuring and customizing font access
 
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_GMAKE=		YES
 USE_X11=		YES
 
@@ -41,5 +42,4 @@ post-install:
 
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

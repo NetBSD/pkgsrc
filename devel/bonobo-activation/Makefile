@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/01/05 14:07:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2003/01/28 22:03:13 jlam Exp $
 #
 
 DISTNAME=		bonobo-activation-2.1.1
@@ -16,6 +16,7 @@ USE_X11=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_PERL5=		build
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
@@ -38,5 +39,5 @@ post-install:
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../net/ORBit2/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
+
 .include "../../mk/bsd.pkg.mk"

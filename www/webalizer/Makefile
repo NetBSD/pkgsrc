@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/08/25 21:52:25 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2003/01/28 22:04:33 jlam Exp $
 #
 
 DISTNAME=	webalizer-2.01-09-src
@@ -17,6 +17,7 @@ COMMENT=	Web server log file analysis program
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_X11=		YES
 GNU_CONFIGURE=  	YES
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
@@ -34,6 +35,4 @@ post-build:
 	done
 
 .include "../../graphics/gd/buildlink2.mk"
-
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

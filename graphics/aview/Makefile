@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/08/26 19:39:21 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/28 22:03:22 jlam Exp $
 #
 
 DISTNAME=	aview-1.3.0rc1
@@ -16,9 +16,10 @@ CONFLICTS+=	aview-x11-[0-9]*
 WRKSRC=		${WRKDIR}/aview-1.3.0
 PLIST_SRC=	${WRKDIR}/PLIST
 
-GNU_CONFIGURE=	# defined
-USE_LIBTOOL=	# defined
-USE_BUILDLINK2=	# defined
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_BUILDLINK2=	yes
+USE_PKGINSTALL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -49,5 +50,4 @@ post-install:
 .include "../../graphics/aalib/buildlink2.mk"
 .include "../../graphics/netpbm/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2003/01/19 09:26:33 skrll Exp $
+# $NetBSD: Makefile,v 1.51 2003/01/28 22:03:12 jlam Exp $
 
 DISTNAME=	openldap-2.0.27
 PKGREVISION=	1
@@ -14,6 +14,7 @@ COMMENT=	Lightweight directory access protocol server and client package
 CONFLICTS+=	ldapsdk-[0-9]*
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/build/ltconfig
 
@@ -107,5 +108,4 @@ CONFIGURE_ARGS+=	--with-threads
 PLIST_SRC=		${.CURDIR}/PLIST.slurpd ${.CURDIR}/PLIST
 .endif
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/11/15 00:04:08 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/28 22:03:30 jlam Exp $
 
 PKGNAME=	courier-maildirmake-${BASE_VERS}
 PKGREVISION?=	1
@@ -6,6 +6,7 @@ COMMENT=	Courier Maildir utilities
 
 PERL5_REQD=	5.6.0
 USE_PERL5=	build
+USE_PKGINSTALL=	yes
 
 REPLACE_PERL=		sysconftool
 
@@ -40,5 +41,4 @@ post-install:
 		${DOCDIR}/README.sharedfolders
 
 .include "../../lang/perl5/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

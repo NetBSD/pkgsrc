@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/08/25 21:50:53 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2003/01/28 22:04:14 jlam Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -13,6 +13,7 @@ HOMEPAGE=		http://www.amanda.org/
 COMMENT=		Libraries and binaries used by both the client and server parts of amanda
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"
@@ -39,5 +40,4 @@ PKG_USERS=		${AMANDA_USER}:${AMANDA_GROUP}::Amanda\\ user::${SH}
 OWN_DIRS_PERMS=		${AMANDA_VAR} ${AMANDA_USER} ${AMANDA_GROUP} 0700
 OWN_DIRS_PERMS+=	${AMANDA_VAR}/gnutar-lists  ${AMANDA_USER} ${AMANDA_GROUP} 0700
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

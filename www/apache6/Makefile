@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2002/12/22 13:04:40 grant Exp $
+# $NetBSD: Makefile,v 1.67 2003/01/28 22:04:27 jlam Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -30,6 +30,7 @@ CONFLICTS=		apache-[0-9]* apache-*ssl-[0-9]* apache6-[0-9]*
 
 EXTRACT_ONLY=		${DISTFILES:N*.gif:N*.diff.gz}
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-layout="${WRKDIR}/config.layout:pkgsrc"
 CONFIGURE_ARGS+=	--enable-module=most \
@@ -181,5 +182,4 @@ post-install:
 .include "../../devel/libmm/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

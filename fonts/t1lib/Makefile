@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/09/19 14:47:34 tron Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/28 22:03:19 jlam Exp $
 
 DISTNAME=	t1lib-1.3.1
 CATEGORIES=	fonts devel graphics
@@ -9,6 +9,7 @@ MAINTAINER=	packages@netbsd.org
 COMMENT=	library for generating bitmaps from Adobe Type 1 fonts
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -39,5 +40,4 @@ post-install:
 	${SED}	${FILES_SUBST_SED}					\
 		${FILESDIR}/t1lib.config.sample > ${EGDIR}/t1lib.config.sample
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/10/23 06:09:41 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2003/01/28 22:04:30 jlam Exp $
 
 PKGNAME=		php-${BASE_VERS}
 PKGREVISION?=		2
@@ -20,6 +20,7 @@ CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php3
 DATADIR=		${PREFIX}/share/php3
 
+USE_PKGINSTALL=		yes
 OWN_DIRS=		${PREFIX}/${PHP_EXTENSION_DIR}
 CONF_FILES=		${EGDIR}/php3.ini.example ${PKG_SYSCONFDIR}/php3.ini
 
@@ -39,5 +40,4 @@ do-install:
 	cd ${WRKSRC}/examples; ${INSTALL_DATA} README* *.php3 ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/php3.ini.example ${EGDIR}
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

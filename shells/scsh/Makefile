@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/01/19 09:12:06 salo Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/28 22:04:12 jlam Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/07/15 15:00:30 cracauer Exp 
 #
 
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		yes
 
 ALL_TARGET=		enough
 
+USE_PKGINSTALL=		yes
 PKG_SHELL=		${PREFIX}/bin/scsh
 
 post-configure:
@@ -28,5 +29,4 @@ post-install:
 	${RM} -f ${PREFIX}/share/doc/scsh
 	${LN} -fs ${PREFIX}/lib/scsh/doc ${PREFIX}/share/doc/scsh
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

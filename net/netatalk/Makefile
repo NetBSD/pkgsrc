@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/09/30 09:25:22 abs Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/28 22:03:53 jlam Exp $
 
 DISTNAME=	netatalk-1.5.5
 CATEGORIES=	net print
@@ -10,6 +10,7 @@ HOMEPAGE=	http://sourceforge.net/projects/netatalk/
 COMMENT=	Netatalk appletalk file and print services
 
 GNU_CONFIGURE=	YES
+USE_PKGINSTALL=	YES
 USE_GMAKE=	YES
 USE_PERL5=	YES
 USE_LIBTOOL=	YES
@@ -39,5 +40,4 @@ pre-install:
 					${PREFIX}/share/examples/netatalk/
 .endfor
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/01/09 11:24:37 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/01/28 22:03:05 jlam Exp $
 
 DISTNAME=		unixbench-4.1.0
 PKGNAME=		bytebench-4.1.0
@@ -8,6 +8,8 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		root@garbled.net
 COMMENT=		BYTE Magazine's Public Domain benchmark for UNIX
+
+USE_PKGINSTALL=		yes
 
 BENCHMARK_ENV+=		BINDIR=${WRKSRC}/pgms
 BENCHMARK_ENV+=		SCRPDIR=${WRKSRC}/pgms
@@ -48,5 +50,4 @@ results:
 	@${MKDIR} /tmp/benches/`domainname`
 	-@${CP} ${WRKSRC}/bytebench.out /tmp/benches/`domainname`/bytebench.`uname`-`uname -m`-`uname -r`.`hostname`
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

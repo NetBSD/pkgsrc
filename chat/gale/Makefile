@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/10/09 17:58:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/28 22:03:06 jlam Exp $
 #
 
 DISTNAME=	gale-0.99a
@@ -10,6 +10,7 @@ HOMEPAGE=	http://gale.org
 COMMENT=	secure instant messaging system
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 USE_GNU_READLINE=	# needs rl_named_function()
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig ${WRKSRC}/liboopltconfig
@@ -49,5 +50,5 @@ post-install:
 .include "../../net/adns/buildlink2.mk"
 .include "../../security/rsaref/buildlink2.mk"
 .include "../../www/libwww/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
+
 .include "../../mk/bsd.pkg.mk"

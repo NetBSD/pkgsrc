@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/10/08 23:16:01 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2003/01/28 22:03:40 jlam Exp $
 
 DISTNAME=	sqwebmail-3.3.1
 CATEGORIES=	www
@@ -9,6 +9,7 @@ DEPENDS+=	courier-auth>=0.37.1nb1:../../mail/courier-auth
 DEPENDS+=	courier-maildirmake>=0.37.1nb1:../../mail/courier-maildirmake
 
 USE_PERL5=		yes
+USE_PKGINSTALL=		yes
 REPLACE_PERL=		sysconftool
 
 .include "../../mail/courier-auth/Makefile.common"
@@ -87,5 +88,4 @@ post-install:
 	cd ${WRKSRC}/sqwebmail; ${INSTALL_DATA} BUGS.html SECURITY.html	\
 		${HTMLDIR}/sqwebmail
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2002/12/25 14:25:27 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2003/01/28 22:03:25 jlam Exp $
 
 DISTNAME=	tiff-v3.5.7
 PKGNAME=	tiff-3.5.7
@@ -13,9 +13,9 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.libtiff.org/
 COMMENT=	Library and tools for reading and writing TIFF data files
 
-USE_BUILDLINK2=	# defined
-USE_LIBTOOL=	# defined
-HAS_CONFIGURE=	# defined
+USE_BUILDLINK2=	yes
+USE_LIBTOOL=	yes
+HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--noninteractive --site=${FILESDIR} --prefix=${PREFIX}
 
 .include "../../mk/bsd.prefs.mk"
@@ -51,10 +51,9 @@ pre-patch:
 .include "../../graphics/jpeg/buildlink2.mk"
 
 .if !empty(X11BASE:M*openwin)
-INSTALL_TMPL=	${.CURDIR}/INSTALL.OpenWindows
+USE_PKGINSTALL=	yes
 DEINSTALL_TMPL=	${INSTALL_TMPL}
-
-.  include "../../mk/bsd.pkg.install.mk"
+INSTALL_TMPL=	${.CURDIR}/INSTALL.OpenWindows
 .endif
 
 .include "../../mk/bsd.pkg.mk"

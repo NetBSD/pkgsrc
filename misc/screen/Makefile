@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2002/12/25 16:59:58 grant Exp $
+# $NetBSD: Makefile,v 1.41 2003/01/28 22:03:46 jlam Exp $
 
 DISTNAME=	screen-3.9.13
 CATEGORIES=	misc
@@ -9,7 +9,8 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/screen/screen.html
 COMMENT=	Multi-screen window manager
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 INFO_FILES=		screen.info
 PLIST_SUBST=		DISTNAME=${DISTNAME}
 TEXINFO_OVERRIDE=	YES
@@ -38,5 +39,4 @@ post-install:
 .endif
 
 .include "../../mk/texinfo.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

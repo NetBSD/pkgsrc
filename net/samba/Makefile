@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2002/11/21 08:09:07 martti Exp $
+# $NetBSD: Makefile,v 1.93 2003/01/28 22:03:55 jlam Exp $
 
 .include "Makefile.common"
 
@@ -6,7 +6,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite for UNIX
 
-USE_BUILDLINK2=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
 
 USE_GNU_READLINE=	# uses rl_event_hook interface to GNU readline
 CONFIGURE_ARGS+=	--with-readline
@@ -90,5 +91,4 @@ post-install:
 .include "../../devel/readline/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

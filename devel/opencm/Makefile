@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/01/07 13:36:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/28 22:03:15 jlam Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-1-src
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.opencm.org/
 COMMENT=	Secure, high-integrity replacement for CVS
 
 USE_BUILDLINK2=	YES
+USE_PKGINSTALL=	YES
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
 
@@ -32,5 +33,4 @@ WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base
 .include "../../security/openssl/buildlink2.mk"
 
 .include "../../mk/texinfo.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2002/12/23 16:15:03 cjep Exp $
+# $NetBSD: Makefile,v 1.27 2003/01/28 22:03:10 jlam Exp $
 # FreeBSD Id: Makefile,v 1.13 1998/01/03 10:58:40 obrien Exp
 #
 
@@ -16,9 +16,10 @@ BUILD_USES_MSGFMT=	yes
 DEPENDS+=	gkermit-[0-9]*:../../comms/gkermit
 DEPENDS+=	lrzsz-[0-9]*:../../comms/lrzsz
 
-USE_BUILDLINK2=		# defined
-USE_GMAKE=		# defined
-NO_CONFIGURE=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
+USE_GMAKE=		yes
+NO_CONFIGURE=		yes
 
 WRKSRC=			${WRKDIR}/${PKGNAME}/src
 PKG_SYSCONFSUBDIR=	minicom
@@ -41,5 +42,4 @@ pre-install:
 .endif
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

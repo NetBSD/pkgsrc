@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2003/01/23 02:23:21 grant Exp $
+# $NetBSD: Makefile,v 1.65 2003/01/28 22:04:07 jlam Exp $
 
 DISTNAME=		openssl-0.9.6g
 SVR4_PKGNAME=		ossl
@@ -20,6 +20,7 @@ CRYPTO=			YES
 LICENCE=		fee-based-commercial-use
 
 USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
 CONFIGURE_SCRIPT=	config
 CONFIGURE_ARGS=		shared --openssldir=${PKG_SYSCONFDIR} --prefix=${PREFIX}
 CONFIGURE_ENV=		CC="${CC}" PERL="${PERL5}"
@@ -87,5 +88,4 @@ CONFIGURE_SCRIPT=	Configure
 CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-${CC:C|.*/||}
 .endif
 
-.include  "../../mk/bsd.pkg.install.mk"
 .include  "../../mk/bsd.pkg.mk"

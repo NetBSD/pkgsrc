@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2002/12/23 16:31:29 cjep Exp $
+# $NetBSD: Makefile,v 1.20 2003/01/28 22:04:15 jlam Exp $
 
 DISTNAME=		apcupsd-3.8.5
 CATEGORIES=		sysutils
@@ -10,10 +10,11 @@ COMMENT=		UPS power management for APCC Products
 
 BUILD_USES_MSGFMT=	yes
 
-USE_BUILDLINK2=		# defined
-USE_GMAKE=		# defined
+USE_BUILDLINK2=		yes
+USE_PKGINSTALL=		yes
+USE_GMAKE=		yes
 
-GNU_CONFIGURE=		# defined
+GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR= apcupsd
 
@@ -106,6 +107,4 @@ post-install:
 .endfor
 
 .include "../../devel/gettext-lib/buildlink2.mk"
-
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/12/25 13:18:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2003/01/28 22:03:08 jlam Exp $
 
 DISTNAME=		efax-gtk-1.0.1b.src
 PKGNAME=		efax-gtk-1.0.1b
@@ -16,6 +16,7 @@ DEPENDS+=		efax>=0.9:../../comms/efax
 WRKSRC=			${WRKDIR}/efax-gtk
 GNU_CONFIGURE=		YES
 USE_BUILDLINK2= 	YES
+USE_PKGINSTALL=		YES
 
 CONFIGURE_ARGS+=	--with-spooldir=/var/spool/efax
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -34,5 +35,5 @@ pre-install:
 .include "../../devel/libsigc++/buildlink2.mk"
 .include "../../x11/gtk/buildlink2.mk"
 .include "../../x11/gtk--/buildlink2.mk"
-.include "../../mk/bsd.pkg.install.mk"
+
 .include "../../mk/bsd.pkg.mk"

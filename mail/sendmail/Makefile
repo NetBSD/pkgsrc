@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2002/10/03 10:09:03 markd Exp $
+# $NetBSD: Makefile,v 1.55 2003/01/28 22:03:39 jlam Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
@@ -89,10 +89,10 @@ post-install:
 	${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
 .endif
 
+USE_PKGINSTALL=	yes
 PKG_GROUPS=	smmsp
 PKG_USERS=	smmsp:smmsp::Sendmail\\ Message\\ Submission\\ Program
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # has to be below include for bsd.pkg.mk, else substition fails

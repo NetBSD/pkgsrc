@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/12/22 19:39:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.9 2003/01/28 22:03:58 jlam Exp $
 
 DISTNAME=       ytalk-3.1.1
 PKGREVISION=	1
@@ -11,11 +11,11 @@ COMMENT=	Multi-user replacement for UNIX talk
 
 GNU_CONFIGURE=	yes
 USE_X11=	yes
+USE_PKGINSTALL=	yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 EGDIR=		${PREFIX}/share/examples/ytalk
 CONF_FILES=	${EGDIR}/ytalkrc ${PKG_SYSCONFDIR}/ytalkrc
 
-.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
