@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/05/24 08:58:25 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/05/25 04:49:16 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
@@ -25,6 +25,15 @@
 READLINE_REQD?=		2.2
 
 .if defined(USE_GNU_READLINE)
+_NEED_GNU_READLINE=	YES
+.elif exists(/usr/include/readline.h) || \
+      exists(/usr/include/readline/readline.h)
+_NEED_GNU_READLINE=	NO
+.else
+_NEED_GNU_READLINE=	YES
+.endif
+
+.if ${_NEED_GNU_READLINE} == "YES"
 READLINE_INCDIR=	${LOCALBASE}/include/readline
 LIBREADLINE=		${LOCALBASE}/lib/libreadline.a
 LIBREADLINE+=		${LOCALBASE}/lib/libreadline.so*
@@ -40,20 +49,13 @@ LIBREADLINE+=		/usr/lib/libedit.so*
 LIBHISTORY=		/usr/lib/libedit.a
 LIBHISTORY+=		/usr/lib/libedit.so*
 HAVE_LIBEDIT_READLINE=	# defined
-.elif exists(/usr/include/readline/readline.h)
+.else # exists(/usr/include/readline/readline.h)
 READLINE_INCDIR=	/usr/include/readline
 LIBREADLINE=		/usr/lib/libedit.a
 LIBREADLINE+=		/usr/lib/libedit.so*
 LIBHISTORY=		/usr/lib/libedit.a
 LIBHISTORY+=		/usr/lib/libedit.so*
 HAVE_LIBEDIT_READLINE=	# defined
-.else
-READLINE_INCDIR=	${LOCALBASE}/include/readline
-LIBREADLINE=		${LOCALBASE}/lib/libreadline.a
-LIBREADLINE+=		${LOCALBASE}/lib/libreadline.so*
-LIBHISTORY=		${LOCALBASE}/lib/libhistory.a
-LIBHISTORY+=		${LOCALBASE}/lib/libhistory.so*
-DEPENDS+=		readline>=${READLINE_REQD}:../../devel/readline
 .endif
 .endif
 
@@ -68,15 +70,24 @@ BUILDLINK_TARGETS+=	link-readline-libs
 #
 link-readline-headers:
 	@${ECHO} "Linking readline headers into ${BUILDLINK_INCDIR}."
-	@${MKDIR} -p ${BUILDLINK_INCDIR}/readline
+	@${MKDIR} ${BUILDLINK_INCDIR}/readline
 	@${RM} -f ${BUILDLINK_INCDIR}/readline/*
 .if defined(READLINE_INCDIR)
 	@for inc in ${READLINE_INCDIR}/*; do				\
-		${LN} -sf $${inc} ${BUILDLINK_INCDIR}/readline;		\
+		dest=${BUILDLINK_INCDIR}/readline/`${BASENAME} $${inc}`; \
+		if [ -f $${inc} ]; then					\
+			${RM} -f $${dest};				\
+			${LN} -sf $${inc} $${dest};			\
+		fi;							\
 	done
 .else
-	@${LN} -sf ${READLINE_H} ${BUILDLINK_INCDIR}/readline
-	@${LN} -sf ${HISTORY_H} ${BUILDLINK_INCDIR}/readline
+	@for inc in ${READLINE_H} ${HISTORY_H}; do			\
+		dest=${BUILDLINK_INCDIR}/readline/`${BASENAME} $${inc}`; \
+		if [ -f $${inc} ]; then					\
+			${RM} -f $${dest};				\
+			${LN} -sf $${inc} $${dest};			\
+		fi;							\
+	done
 .endif
 
 # This target links the readline and history libraries into
@@ -84,12 +95,20 @@ link-readline-headers:
 #
 link-readline-libs:
 	@${ECHO} "Linking readline libraries into ${BUILDLINK_LIBDIR}."
-	@${MKDIR} -p ${BUILDLINK_LIBDIR}
+	@${MKDIR} ${BUILDLINK_LIBDIR}
 	@for lib in ${LIBREADLINE}; do					\
-		dest=`${BASENAME} $${lib} | ${SED} "s|libedit|libreadline|"`; \
-		${LN} -sf $${lib} ${BUILDLINK_LIBDIR}/$${dest};		\
+		name=`${BASENAME} $${lib} | ${SED} "s|libedit|libreadline|"`; \
+		dest=${BUILDLINK_LIBDIR}/$${name};			\
+		if [ -f $${lib} ]; then					\
+			${RM} -f $${dest};				\
+			${LN} -sf $${lib} $${dest};			\
+		fi;							\
 	done
 	@for lib in ${LIBHISTORY}; do					\
-		dest=`${BASENAME} $${lib} | ${SED} "s|libedit|libhistory|"`; \
-		${LN} -sf $${lib} ${BUILDLINK_LIBDIR}/$${dest};		\
+		name=`${BASENAME} $${lib} | ${SED} "s|libedit|libhistory|"`; \
+		dest=${BUILDLINK_LIBDIR}/$${name};			\
+		if [ -f $${lib} ]; then					\
+			${RM} -f $${dest};				\
+			${LN} -sf $${lib} $${dest};			\
+		fi;							\
 	done
