@@ -1,4 +1,4 @@
-This is Eric E. Fair's implementation of identd:
+This is Erik E. Fair's implementation of identd:
 
       A proper identification protocol (RFC 1413) implementation,
       providing all the utility, security, and authentication of
