@@ -1,0 +1,103 @@
+$NetBSD: patch-ab,v 1.7 2005/01/25 20:07:25 bouyer Exp $
+
+--- src/ftp-basic.c.orig	Sat Nov  8 20:17:55 2003
++++ src/ftp-basic.c	Sun Jan 23 22:20:35 2005
+@@ -267,7 +267,7 @@
+ 
+   /* Setting port to 0 lets the system choose a free port.  */
+   port = 0;
+-  err = bindport (&port, ip_default_family);
++  err = bindport (&port, AF_INET6);
+   if (err != BINDOK)	/* Bind the port.  */
+     return err;
+ 
+@@ -275,7 +275,8 @@
+   if (!conaddr (RBUF_FD (rbuf), &in_addr))
+     /* Huh?  This is not BINDERR! */
+     return BINDERR;
+-  inet_ntop (AF_INET6, &in_addr, ipv6, sizeof (ipv6));
++  inet_ntop (AF_INET6, in_addr.bytes, ipv6, sizeof (ipv6));
++  in_addr.family = AF_INET6;
+ 
+   /* Construct the argument of EPRT (of the form |2|IPv6.ascii|PORT.ascii|). */
+   bytes = alloca (3 + strlen (ipv6) + 1 + numdigit (port) + 1 + 1);
+@@ -319,8 +320,6 @@
+   char bytes[6 * 4 +1];
+ 
+   ip_address in_addr;
+-  ip4_address in_addr_4;
+-  unsigned char *in_addr4_ptr = (unsigned char *)&in_addr_4;
+ 
+   int nwritten;
+   unsigned short port;
+@@ -347,16 +346,14 @@
+   if (!conaddr (RBUF_FD (rbuf), &in_addr))
+     /* Huh?  This is not BINDERR! */
+     return BINDERR;
+-  if (!map_ip_to_ipv4 (&in_addr, &in_addr_4))
+-    return BINDERR;
+ 
+   /* Construct the argument of PORT (of the form a,b,c,d,e,f).  Port
+      is unsigned short so (unsigned) (port & 0xff000) >> 8 is the same
+      like port >> 8
+    */
+   sprintf (bytes, "%d,%d,%d,%d,%d,%d",
+-	   in_addr4_ptr[0], in_addr4_ptr[1], in_addr4_ptr[2], in_addr4_ptr[3],
+-	   port >> 8, port & 0xff);
++	   in_addr.bytes[0], in_addr.bytes[1], in_addr.bytes[2],
++           in_addr.bytes[3], port >> 8, port & 0xff);
+   /* Send PORT request.  */
+   request = ftp_request ("PORT", bytes);
+   nwritten = iwrite (RBUF_FD (rbuf), request, strlen (request));
+@@ -426,10 +423,12 @@
+     switch(remote.sa.sa_family)
+       {
+         case AF_INET6:
+-          memcpy (addr, &remote.sin6.sin6_addr, 16);
++          memcpy (&addr->bytes[0], &remote.sin6.sin6_addr, 16);
++          addr->family =   AF_INET6;
+ 	  break;
+ 	case AF_INET:  
+-          map_ipv4_to_ip ((ip4_address *)&ipv4_sock->sin_addr, addr);
++          memcpy (&addr->bytes[0], &remote.sin.sin_addr, 4);
++          addr->family =   AF_INET;
+ 	  break;
+ 	default:
+ 	  abort();
+@@ -454,15 +453,12 @@
+   unsigned char addr4[4];
+ 
+ #ifdef ENABLE_IPV6
+-  if (ip_default_family == AF_INET6) 
+-    {
+       err = ftp_epsv (rbuf, addr, port, "2");	/* try IPv6 with EPSV */
+       if (FTPOK == err) 
+         return FTPOK;
+       err = ftp_epsv (rbuf, addr, port, "1");	/* try IPv4 with EPSV */
+       if (FTPOK == err) 
+         return FTPOK;
+-    }
+ #endif  
+   /* Form the request.  */
+   request = ftp_request ("PASV", NULL);
+@@ -505,9 +501,8 @@
+           return FTPINVPASV;
+         }
+     }
+-
+-  /* Eventually make an IPv4 in IPv6 adress if needed */
+-  map_ipv4_to_ip ((ip4_address *)addr4, addr);
++  memcpy(addr->bytes, addr4, 4);
++  addr->family = AF_INET;
+ 
+   *port=0;
+   for (; ISDIGIT (*s); s++)
+@@ -526,7 +521,7 @@
+       port2 = (*s - '0') + 10 * port2;
+     *port = (*port) * 256 + port2;
+   }
+-  xfree (respline);
++  xfree (respline); 
+   return FTPOK;
+ }
+ 
