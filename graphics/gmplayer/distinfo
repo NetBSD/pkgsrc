@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2003/09/19 10:13:40 wiz Exp $
+$NetBSD: distinfo,v 1.39 2003/09/21 12:40:22 markd Exp $
 
 SHA1 (mplayer/MPlayer-1.0pre1.tar.bz2) = 34482db6102a0d4b2a3692617926a92e44116f81
 Size (mplayer/MPlayer-1.0pre1.tar.bz2) = 4190784 bytes
@@ -12,8 +12,8 @@ SHA1 (mplayer/CornerMP-1.0.tar.bz2) = 347ad066585386e11872e479dcecf6fb9242c3a4
 Size (mplayer/CornerMP-1.0.tar.bz2) = 237483 bytes
 SHA1 (mplayer/CornerMP-aqua-1.0.tar.bz2) = 7cceeb260a2d78e2af63ed451093a2a9cae0ff08
 Size (mplayer/CornerMP-aqua-1.0.tar.bz2) = 248102 bytes
-SHA1 (mplayer/Cyrus-1.0.tar.bz2) = b701688ccdf537541c2e62f9b0f8ebb0aced695d
-Size (mplayer/Cyrus-1.0.tar.bz2) = 228855 bytes
+SHA1 (mplayer/Cyrus-1.0.tar.bz2) = 54582822ade62334473a791aed2034f1c1a4eb48
+Size (mplayer/Cyrus-1.0.tar.bz2) = 228907 bytes
 SHA1 (mplayer/MidnightLove-1.5.tar.bz2) = 36fa598cee849f168d3a795131d2854792456647
 Size (mplayer/MidnightLove-1.5.tar.bz2) = 539660 bytes
 SHA1 (mplayer/WindowsMediaPlayer6-1.2.tar.bz2) = 3ae9d0053922ec0f43af38740c8d904a32b711e7
