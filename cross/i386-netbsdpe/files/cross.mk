@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.15 2003/09/05 10:54:06 seb Exp $
+#	$NetBSD: cross.mk,v 1.16 2003/09/05 13:06:34 seb Exp $
 #	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
 
@@ -53,7 +53,7 @@ binutils-install:
 	for i in addr2line ar as ld nm objcopy objdump ranlib size strings strip ${BINUTILS_EXTRAS}; do \
 		${LN} -f ${TARGET_DIR}/bin/$$i ${PREFIX}/bin/${TARGET_ARCH}-$$i; \
 	done
-.endif
+.endif # USE_CROSS_BINUTILS
 
 .if defined(USE_CROSS_GCC)
 GCC_DISTNAME=		gcc-2.95.2
@@ -63,14 +63,14 @@ GCC_LANGUAGES=		c # add to these below
 AUTOCONF_REQD=		2.13
 USE_MAKEINFO=		YES
 
-.if defined(GCC_CXX)
+.  if defined(GCC_CXX)
 CXX_CONFIGURE_ARGS+=	--with-gxx-include-dir=${TARGET_DIR}/include/c++
 GCC_LANGUAGES+=		c++
 PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-cxx
-.if defined(GCC_CXX_RUNTIME)
+.    if defined(GCC_CXX_RUNTIME)
 PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc-cxx-runtime
-.endif
-.endif
+.    endif
+.  endif # GCC_CXX
 
 # the main PLIST needs to go last to get the @dirrm's right
 PLIST_PRE+=		${GCC_PLIST_DIR}/PLIST-gcc
@@ -95,16 +95,16 @@ GCC_MAKE_FLAGS=	CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
 GCC_MAKE=		${SETENV} ${MAKE_ENV} \
 	                ${MAKE_PROGRAM} ${MAKE_FLAGS} ${GCC_MAKE_FLAGS}
 
-.if defined(GCC_FAKE_RUNTIME)
+.  if defined(GCC_FAKE_RUNTIME)
 CROSS_SYS_INCLUDE=	${WRKDIR}/include
-.endif
-.if defined(CROSS_SYS_INCLUDE)
+.  endif
+.  if defined(CROSS_SYS_INCLUDE)
 CFLAGS_FOR_TARGET+=	-idirafter ${CROSS_SYS_INCLUDE}
 GCC_MAKE_FLAGS+=	SYSTEM_HEADER_DIR="${CROSS_SYS_INCLUDE}"
-.endif
-.if defined(SYS_LIB)
+.  endif
+.  if defined(SYS_LIB)
 LDFLAGS_FOR_TARGET+=	-L${SYS_LIB}
-.endif
+.  endif
 
 pre-configure: gcc-configure
 do-build: gcc-build
@@ -128,21 +128,21 @@ gcc-configure:
 		${WRKSRC}/gcc/configure --prefix=${PREFIX} \
 		--host=${MACHINE_GNU_ARCH}--netbsd  --target=${TARGET_ARCH} \
 		${GCC_CONFIGURE_ARGS} ${CXX_CONFIGURE_ARGS}
-.if defined(GCC_FAKE_RUNTIME)
+.  if defined(GCC_FAKE_RUNTIME)
 	@${MKDIR} ${CROSS_SYS_INCLUDE} ${CROSS_SYS_INCLUDE}/machine ${CROSS_SYS_INCLUDE}/sys
 	@cd ${CROSS_SYS_INCLUDE} && ${TOUCH} ${TOUCH_FLAGS} machine/ansi.h \
 		sys/time.h stdlib.h unistd.h
-.endif
+.  endif
 
 gcc-build:
 	${LN} -s ${AS_FOR_TARGET} ${WRKOBJ}/gcc/as
 	${LN} -s ${LD_FOR_TARGET} ${WRKOBJ}/gcc/ld
 	@cd ${WRKOBJ} && make all-libiberty all-binutils all-gas all-ld
 	@cd ${WRKOBJ}/gcc && ${GCC_MAKE} all
-.if defined(GCC_CXX) && defined(GCC_CXX_RUNTIME)
+.  if defined(GCC_CXX) && defined(GCC_CXX_RUNTIME)
 	@cd ${WRKOBJ} && ${GCC_MAKE} configure-target-libio \
 		configure-target-libstdc++ all-target-libio all-target-libstdc++
-.endif
+.  endif
 
 gcc-install:
 	@cd ${WRKOBJ}/gcc && ${SETENV} ${MAKE_ENV} \
@@ -152,22 +152,22 @@ gcc-install:
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-gcc ${PREFIX}/bin/${TARGET_ARCH}-cc
 	${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-gcc ${TARGET_DIR}/bin/cc
 	${RM} ${PREFIX}/bin/${TARGET_ARCH}-gcj # install-driver installs gcj but we need not it
-.if defined(GCC_CXX)
+.  if defined(GCC_CXX)
 	@${MKDIR} ${TARGET_DIR}/include/c++
 	@for file in exception new new.h typeinfo; do \
 		${INSTALL_DATA} ${WRKSRC}/gcc/cp/inc/$$file ${TARGET_DIR}/include/c++; \
 	done
-.if defined(GCC_CXX_RUNTIME)
+.    if defined(GCC_CXX_RUNTIME)
 	@${MKDIR} ${TARGET_DIR}/include/g++/std
 	@cd ${WRKSRC} && ${GCC_MAKE} install-target-libstdc++
-.endif
+.    endif
 	for file in c++ c++filt g++; do \
 		${LN} -f ${PREFIX}/bin/${TARGET_ARCH}-$$file ${TARGET_DIR}/bin/$$file; \
 	done
-.endif
+.  endif # GCC_CXX
 	@${RMDIR} -p ${PREFIX}/info 2>/dev/null || ${TRUE}
 	@${RMDIR} -p ${PREFIX}/man/man1 2>/dev/null || ${TRUE}
-.endif
+.endif # USE_CROSS_GCC
 
 
 .if defined(CROSS_SYS_INCLUDE) && !defined(GCC_FAKE_RUNTIME)
