@@ -1,22 +1,16 @@
-$NetBSD: patch-ac,v 1.3 1999/08/26 20:25:44 mjl Exp $
+$NetBSD: patch-ac,v 1.4 2000/10/18 16:41:26 mjl Exp $
 
---- webalizer.1.orig	Thu Aug 26 21:34:42 1999
-+++ webalizer.1	Thu Aug 26 21:35:04 1999
-@@ -27,7 +27,7 @@
+--- webalizer.1.orig	Wed Oct 18 18:13:37 2000
++++ webalizer.1	Wed Oct 18 18:14:46 2000
+@@ -45,8 +45,9 @@
  A default configuration file is scanned for.  A file named
  \fIwebalizer.conf\fP is searched for in the current directory, and if
  found, it's configuration data is parsed.  If the file is not
 -present in the current directory,  the file \fI/etc/webalizer.conf\fP
-+present in the current directory,  the file \fI@@prefix@@/etc/webalizer.conf\fP
- is searched for and, if found, is used instead.
+-is searched for and, if found, is used instead.
++present in the current directory,  the files \fI@@prefix@@/etc/webalizer.conf\fP
++and then \fI/etc/webalizer.conf\fP
++are searched for and, if found, are used instead.
  .TP 8
  .B o
-@@ -515,7 +515,7 @@
- .TP 20
- .I webalizer.conf
- Default configuration file.  Is searched for in the current directory
--and if not found, in the \fI/etc/\fP directory.
-+and if not found, in the \fI@@prefix@@/etc/\fP directory.
- .TP 20
- .I webalizer.hist
- Monthly history file for previous 12 months.  (can be changed)
+ Any command line arguments given to the program are parsed.  This
