@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/05/10 05:33:06 tron Exp $
 
 DISTNAME=	raproxy3.0b1
 PKGNAME=	ra-pna-proxy-3.0b1
 CATEGORIES=	net
-MASTER_SITES=	# empty
+MASTER_SITES=	http://docs.real.com/proxykit/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://service.real.com/firewall/fdev.html
@@ -18,21 +18,9 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-DOWNLOAD=	http://proforma.real.com/mario/devzone/proxyform.html
-
 ALL_TARGET=	raproxy
 PROGNAME=	${PKGNAME:C/-[1-9].*//}
 WRKSRC=		${WRKDIR}/raproxy
-
-do-fetch:
-	@if [ ! -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${ECHO_MSG} "  The PNA Proxy Kit must be fetched into \"${DISTDIR}\""; \
-	    ${ECHO_MSG} "  via the Web formular available under this URL:"; \
-	    ${ECHO_MSG} "  ${DOWNLOAD}"; \
-	    ${ECHO_MSG} "==============================================================="; \
-	    ${FALSE}; \
-	fi
 
 post-build:
 	cd ${WRKSRC}; \
