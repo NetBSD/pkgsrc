@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.328 2004/02/12 07:08:21 minskim Exp $
+# $NetBSD: Packages.txt,v 1.329 2004/02/16 18:11:59 jmmv Exp $
 ###########################################################################
 
 			==========================
@@ -2606,6 +2606,7 @@ If your package contains interpreted perl scripts, set REPLACE_PERL to
 ensure that the proper interpreter path is set. REPLACE_PERL should
 contain a list of scripts, relative to WRKSRC, that you want adjusted.
 
+
  10.34 Packages with hardcoded paths to other interpreters
  =========================================================
 
@@ -2619,6 +2620,7 @@ _REPLACE.tcl.old=	.*/bin/tclsh
 _REPLACE.tcl.new=	${PREFIX}/bin/tclsh
 _REPLACE_FILES.tcl=	...list of tcl scripts which need to be fixed,
 			relative to ${WRKSRC}, just as in REPLACE_PERL
+
 
  10.35 Utilities for package management (pkgtools)
  =================================================
@@ -2673,6 +2675,137 @@ If you want to use pkgsrc as non-root user, you can set some variables
 to make pkgsrc work under these conditions. Please see 
 http://mail-index.netbsd.org/tech-pkg/2003/09/27/0023.html
 for more details.
+
+
+ 10.37 Packages installing GConf2 data files
+ ===========================================
+
+If a package installs .schemas or .entries files, used by GConf2, you need
+to do some extra steps to make sure they get registered in the database:
+
+ 1) Include "../../devel/GConf2/schemas.mk" instead of its buildlink[23].mk
+    file.  This takes care of rebuilding the GConf2 database at installation
+    and deinstallation time, and tells the package where to install GConf2
+    data files using some standard configure arguments.  It also disallows
+    any access to the database directly from the package.
+
+ 2) Ensure that the package installs its .schemas files under
+    ${PREFIX}/share/gconf/schemas.  If they get installed under ${PREFIX}/etc,
+    you will need to manually patch the package.  Please send your changes
+    back to authors!
+
+ 3) Check the PLIST and remove any entries under the etc/gconf directory,
+    as they will be handled automatically.  See section 10.27 for more
+    information.
+
+ 4) Define the GCONF2_SCHEMAS variable in your Makefile with a list of all
+    .schemas files installed by the package, if any.  Names must not contain
+    any directory in them.
+
+ 5) Define the GCONF2_ENTRIES variable in your Makefile with a list of all
+    .entries files installed by the package, if any.  Names must not contain
+    any directory in them.
+
+
+ 10.38 Packages installing scrollkeeper data files
+ =================================================
+
+If a package installs .omf files, used by scrollkeeper, you need to do some
+extra steps to make sure they get registered in the database:
+
+ 1) Include "../../textproc/scrollkeeper/omf.mk" instead of its
+    buildlink[23].mk file.  This takes care of rebuilding the scrollkeeper
+    database at installation and deinstallation time, and disallows any
+    access to it directly from the package.
+
+ 2) Check the PLIST and remove any entries under the libdata/scrollkeeper
+    directory, as they will be handled automatically.
+
+ 3) Do not remove the share/omf directory from the PLIST.  This will be
+    handled by scrollkeeper.
+
+
+ 10.39 Packages installing X11 fonts
+ ===================================
+
+If a package installs font files, you will need to rebuild the fonts database
+in the directory where they get installed at installation and deinstallation
+time.  This can be automatically done by using mk/fonts.mk, which you need to
+include in your Makefile.
+
+When the file is included, you can list the directories where fonts are
+installed in the FONTS_<TYPE>_DIRS variables, where <TYPE> can be one of TTF,
+TYPE1 or X11.  Also make sure that the database file "fonts.dir" is not listed
+in the PLIST.
+
+Note that you should not create new directories for fonts; instead use the
+standard ones to avoid the user having the manually configure the X server
+to find them.
+
+
+ 10.40 Packages installing GTK2 modules
+ ======================================
+
+If a package installs gtk2 immodules or loaders, you need to take some extra
+steps to get them registered in the GTK2 database properly:
+
+ 1) Include "../../x11/gtk2/modules.mk" instead of its buildlink[23].mk file.
+    This takes care of rebuilding the database at installation and
+    deinstallation time.
+
+ 2) Set GTK2_IMMODULES to YES if your package installs GTK2 immodules.
+
+ 3) Set GTK2_LOADERS to YES if your package installs GTK2 loaders.
+
+ 4) Patch the package to not touch any of the gtk2 databases directly.  These
+    are:
+
+        * libdata/gtk-2.0/gdk-pixbuf.loaders
+        * libdata/gtk-2.0/gtk.immodules
+
+ 4) Check the PLIST and remove any entries under the libdata/gtk-2.0 directory,
+    as they will be handled automatically.
+
+
+ 10.41 Packages installing SGML or XML data
+ ==========================================
+
+If a package installs SGML or XML data files that need to be registered in
+system-wide catalogs (like DTDs, sub-catalogs, etc.), you need to take some
+extra steps:
+
+ 1) Include "../../textproc/xmlcatmgr/catalogs.mk" in your Makefile, which
+    takes care of registering those files in system-wide catalogs at
+    installation and deinstallation time.
+
+ 2) Set SGML_CATALOGS to the full path of any SGML catalogs installed by
+    the package.
+
+ 3) Set XML_CATALOGS to the full path of any SGML catalogs installed by
+    the package.
+
+ 4) Set SGML_ENTRIES to individual entries to be added to the SGML catalog.
+    These come in groups of three strings; see xmlcatmgr(1) for more
+    information (concretely, arguments recognized by the 'add' action).
+    Note that you will normally not use this variable.
+
+ 5) Set XML_ENTRIES to individual entries to be added to the XML catalog.
+    These come in groups of three strings; see xmlcatmgr(1) for more
+    information (concretely, arguments recognized by the 'add' action).
+    Note that you will normally not use this variable.
+
+
+ 10.42 Packages using intltool
+ =============================
+
+If a package uses intltool during its build, include the
+"../../textproc/intltool/buildlink3.mk" file, which forces it to use the
+intltool package provided by pkgsrc, instead of the one bundled with the
+distribution file.
+
+This tracks intltool's build-time dependencies and uses the latest available
+version; this way, the package benefits of any bug fixes that may have appeared
+since it was released.
 
 
  11 Submitting & Committing
