@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2002/03/15 12:47:16 martti Exp $
+$NetBSD: distinfo,v 1.3 2003/03/03 11:30:58 mjl Exp $
 
-SHA1 (XML-SAX-0.09.tar.gz) = 5e4a834f46584609f40864d8320f599698437959
-Size (XML-SAX-0.09.tar.gz) = 57685 bytes
+SHA1 (XML-SAX-0.12.tar.gz) = afb89b85ed8d95a6aa4405aa1122bf96b80f6400
+Size (XML-SAX-0.12.tar.gz) = 59537 bytes
 SHA1 (patch-aa) = 2ccd087404b49884c2691a4f24a7a43001e9e3fd
