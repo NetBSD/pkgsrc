@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/09/25 22:05:46 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2005/01/10 17:11:36 jlam Exp $
 #
 # Run many buildlink transform tests in a single regression test to avoid
 # having to keep creating the wrapper scripts over and over again.
@@ -40,23 +40,15 @@ REGRESS_ENV+=		WRAPPER_DEBUG=yes
 # arguments.
 #
 REGRESS=		${ECHO}
-.if defined(PHASES_AFTER_WRAPPER)
-_WRAPPEES+=		REGRESS
+WRAPPEES+=		REGRESS
 _WRAP_ALIASES.REGRESS=	regress
-WRAPPER_PHASE=		wrapper
-.else
-_BLNK_WRAPPEES+=	REGRESS
-_ALIASES.REGRESS=	regress
-WRAPPER_PHASE=		buildlink
-WRAPPER_BINDIR=		${BUILDLINK_DIR}/bin
-.endif
 
-post-${WRAPPER_PHASE}:
-	@${RM} ${WRAPPER_BINDIR}/${REGRESS}
+post-wrapper:
+	@${RM} -f ${WRAPPER_BINDIR}/${REGRESS}
 
 .PHONY: regress do-regress
 
-regress: ${WRAPPER_PHASE} do-regress
+regress: wrapper do-regress
 
 FAILED_TESTS=	${WRKDIR}/failed
 PASSED_TESTS=	${WRKDIR}/passed
