@@ -1,0 +1,7 @@
+###########################################################################
+# pine.conf.fixed
+# Insert any statements from .../pine.conf here that you don't want your
+# users can change.
+###########################################################################
+# (This file is not part of the pine distribution!)
+###########################################################################
