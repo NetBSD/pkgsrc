@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.22 2001/05/09 16:33:52 abs Exp $
+$NetBSD: TODO,v 1.23 2001/05/09 21:02:57 zuntum Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -28,6 +28,10 @@ packages TODO (Suggested new packages)
 	loserjabber
 	GTK application which allows posting of journal entries to http://www.livejournal.com
 	http://loserjabber.sourceforge.net/
+
+	mytop
+	console-based tool for monitoring the threads and performance of MySQL
+	http://zuntum.net/pkgsrc/mytop.tar.gz [zuntum will import that]
 
 	qmail
 	secure, reliable, efficient, simple, and fast MTA for UNIX systems
