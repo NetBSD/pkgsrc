@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2004/05/15 11:17:14 grant Exp $
+# $NetBSD: Makefile,v 1.33 2004/05/29 23:36:10 recht Exp $
 #
 
 DISTNAME=	freetype-2.1.8
@@ -34,6 +34,16 @@ PKGCONFIG_OVERRIDE=	builds/unix/freetype2.in
 CFLAGS+= -DTT_CONFIG_OPTION_BYTECODE_INTERPRETER
 .endif
 BUILD_DEFS+= MKTTINTERP
+
+# reduce optimization level on alpha to avoid compiler bugs
+.if ${OPSYS} == "NetBSD"
+.  if ${MACHINE_ARCH} == "alpha"
+CPPFLAGS:=	${CPPFLAGS:C/-O[0-9]*/-O/g}
+CFLAGS:=	${CFLAGS:C/-O[0-9]*/-O/g}
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+=	CFLAGS="${CFLAGS}"
+.  endif
+.endif
 
 post-configure:
 	cd ${WRKSRC} && ${LN} -s builds/unix/unix.mk config.mk
