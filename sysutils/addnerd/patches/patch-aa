@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 1999/06/08 13:09:04 bad Exp $
+
+--- configure.orig	Wed May 27 10:06:54 1998
++++ configure	Tue Jun  8 15:05:28 1999
+@@ -46,6 +46,8 @@
+ infodir='${prefix}/info'
+ mandir='${prefix}/man'
+ 
++PATH=/usr/sbin:$PATH
++
+ # Initialize some other variables.
+ subdirs=
+ MFLAGS= MAKEFLAGS=
