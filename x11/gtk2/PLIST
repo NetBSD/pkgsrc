@@ -1,19 +1,23 @@
-@comment $NetBSD: PLIST,v 1.35 2004/12/04 22:19:18 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.36 2004/12/24 10:04:39 jmmv Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
+bin/gtk-update-icon-cache
 include/gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h
 include/gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlibrgb.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
+include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-core.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-enum-types.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-features.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-io.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-loader.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-marshal.h
+include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-transform.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixdata.h
 include/gtk-2.0/gdk/gdk.h
+include/gtk-2.0/gdk/gdkalias.h
 include/gtk-2.0/gdk/gdkcolor.h
 include/gtk-2.0/gdk/gdkcursor.h
 include/gtk-2.0/gdk/gdkdisplay.h
@@ -44,6 +48,7 @@ include/gtk-2.0/gdk/gdkvisual.h
 include/gtk-2.0/gdk/gdkwindow.h
 include/gtk-2.0/gdk/gdkx.h
 include/gtk-2.0/gtk/gtk.h
+include/gtk-2.0/gtk/gtkaboutdialog.h
 include/gtk-2.0/gtk/gtkaccelgroup.h
 include/gtk-2.0/gtk/gtkaccellabel.h
 include/gtk-2.0/gtk/gtkaccelmap.h
@@ -63,9 +68,12 @@ include/gtk-2.0/gtk/gtkcalendar.h
 include/gtk-2.0/gtk/gtkcelleditable.h
 include/gtk-2.0/gtk/gtkcelllayout.h
 include/gtk-2.0/gtk/gtkcellrenderer.h
+include/gtk-2.0/gtk/gtkcellrenderercombo.h
 include/gtk-2.0/gtk/gtkcellrendererpixbuf.h
+include/gtk-2.0/gtk/gtkcellrendererprogress.h
 include/gtk-2.0/gtk/gtkcellrenderertext.h
 include/gtk-2.0/gtk/gtkcellrenderertoggle.h
+include/gtk-2.0/gtk/gtkcellview.h
 include/gtk-2.0/gtk/gtkcheckbutton.h
 include/gtk-2.0/gtk/gtkcheckmenuitem.h
 include/gtk-2.0/gtk/gtkclipboard.h
@@ -90,6 +98,7 @@ include/gtk-2.0/gtk/gtkenums.h
 include/gtk-2.0/gtk/gtkeventbox.h
 include/gtk-2.0/gtk/gtkexpander.h
 include/gtk-2.0/gtk/gtkfilechooser.h
+include/gtk-2.0/gtk/gtkfilechooserbutton.h
 include/gtk-2.0/gtk/gtkfilechooserdialog.h
 include/gtk-2.0/gtk/gtkfilechooserwidget.h
 include/gtk-2.0/gtk/gtkfilefilter.h
@@ -111,6 +120,7 @@ include/gtk-2.0/gtk/gtkhscrollbar.h
 include/gtk-2.0/gtk/gtkhseparator.h
 include/gtk-2.0/gtk/gtkiconfactory.h
 include/gtk-2.0/gtk/gtkicontheme.h
+include/gtk-2.0/gtk/gtkiconview.h
 include/gtk-2.0/gtk/gtkimage.h
 include/gtk-2.0/gtk/gtkimagemenuitem.h
 include/gtk-2.0/gtk/gtkimcontext.h
@@ -132,8 +142,10 @@ include/gtk-2.0/gtk/gtkmenu.h
 include/gtk-2.0/gtk/gtkmenubar.h
 include/gtk-2.0/gtk/gtkmenuitem.h
 include/gtk-2.0/gtk/gtkmenushell.h
+include/gtk-2.0/gtk/gtkmenutoolbutton.h
 include/gtk-2.0/gtk/gtkmessagedialog.h
 include/gtk-2.0/gtk/gtkmisc.h
+include/gtk-2.0/gtk/gtkmodules.h
 include/gtk-2.0/gtk/gtknotebook.h
 include/gtk-2.0/gtk/gtkobject.h
 include/gtk-2.0/gtk/gtkoldeditable.h
@@ -212,6 +224,7 @@ include/gtk-2.0/gtk/gtkvscrollbar.h
 include/gtk-2.0/gtk/gtkvseparator.h
 include/gtk-2.0/gtk/gtkwidget.h
 include/gtk-2.0/gtk/gtkwindow.h
+lib/gtk-2.0/2.4.0/engines/libpixmap.la
 lib/gtk-2.0/2.4.0/immodules/im-am-et.la
 lib/gtk-2.0/2.4.0/immodules/im-cedilla.la
 lib/gtk-2.0/2.4.0/immodules/im-cyrillic-translit.la
@@ -250,6 +263,7 @@ lib/pkgconfig/gtk+-x11-2.0.pc
 man/man1/gdk-pixbuf-csource.1
 man/man1/gdk-pixbuf-query-loaders.1
 man/man1/gtk-query-immodules-2.0.1
+man/man1/gtk-update-icon-cache.1
 share/aclocal/gtk-2.0.m4
 share/doc/gdk-pixbuf/GdkPixbufLoader.html
 share/doc/gdk-pixbuf/apa.html
@@ -280,6 +294,10 @@ share/doc/gdk-pixbuf/home.png
 share/doc/gdk-pixbuf/index.html
 share/doc/gdk-pixbuf/index.sgml
 share/doc/gdk-pixbuf/ix01.html
+share/doc/gdk-pixbuf/ix02.html
+share/doc/gdk-pixbuf/ix03.html
+share/doc/gdk-pixbuf/ix04.html
+share/doc/gdk-pixbuf/ix05.html
 share/doc/gdk-pixbuf/left.png
 share/doc/gdk-pixbuf/license.html
 share/doc/gdk-pixbuf/right.png
@@ -353,6 +371,10 @@ share/doc/gdk/index.html
 share/doc/gdk/index.sgml
 share/doc/gdk/iron_cross.png
 share/doc/gdk/ix01.html
+share/doc/gdk/ix02.html
+share/doc/gdk/ix03.html
+share/doc/gdk/ix04.html
+share/doc/gdk/ix05.html
 share/doc/gdk/left.png
 share/doc/gdk/left_ptr.png
 share/doc/gdk/left_side.png
@@ -374,6 +396,7 @@ share/doc/gdk/right_ptr.png
 share/doc/gdk/right_side.png
 share/doc/gdk/right_tee.png
 share/doc/gdk/rightbutton.png
+share/doc/gdk/rotated-text.png
 share/doc/gdk/rtl_logo.png
 share/doc/gdk/sailboat.png
 share/doc/gdk/sb_down_arrow.png
@@ -407,6 +430,7 @@ share/doc/gtk/Actions.html
 share/doc/gtk/ButtonWidgets.html
 share/doc/gtk/DeprecatedObjects.html
 share/doc/gtk/DisplayWidgets.html
+share/doc/gtk/GtkAboutDialog.html
 share/doc/gtk/GtkAccelLabel.html
 share/doc/gtk/GtkAccessible.html
 share/doc/gtk/GtkAction.html
@@ -425,9 +449,12 @@ share/doc/gtk/GtkCalendar.html
 share/doc/gtk/GtkCellEditable.html
 share/doc/gtk/GtkCellLayout.html
 share/doc/gtk/GtkCellRenderer.html
+share/doc/gtk/GtkCellRendererCombo.html
 share/doc/gtk/GtkCellRendererPixbuf.html
+share/doc/gtk/GtkCellRendererProgress.html
 share/doc/gtk/GtkCellRendererText.html
 share/doc/gtk/GtkCellRendererToggle.html
+share/doc/gtk/GtkCellView.html
 share/doc/gtk/GtkCheckButton.html
 share/doc/gtk/GtkCheckMenuItem.html
 share/doc/gtk/GtkColorButton.html
@@ -446,6 +473,7 @@ share/doc/gtk/GtkEntryCompletion.html
 share/doc/gtk/GtkEventBox.html
 share/doc/gtk/GtkExpander.html
 share/doc/gtk/GtkFileChooser.html
+share/doc/gtk/GtkFileChooserButton.html
 share/doc/gtk/GtkFileChooserDialog.html
 share/doc/gtk/GtkFileChooserWidget.html
 share/doc/gtk/GtkFileSelection.html
@@ -467,6 +495,7 @@ share/doc/gtk/GtkIMContext.html
 share/doc/gtk/GtkIMContextSimple.html
 share/doc/gtk/GtkIMMulticontext.html
 share/doc/gtk/GtkIconTheme.html
+share/doc/gtk/GtkIconView.html
 share/doc/gtk/GtkImage.html
 share/doc/gtk/GtkImageMenuItem.html
 share/doc/gtk/GtkInputDialog.html
@@ -482,6 +511,7 @@ share/doc/gtk/GtkMenu.html
 share/doc/gtk/GtkMenuBar.html
 share/doc/gtk/GtkMenuItem.html
 share/doc/gtk/GtkMenuShell.html
+share/doc/gtk/GtkMenuToolButton.html
 share/doc/gtk/GtkMessageDialog.html
 share/doc/gtk/GtkMisc.html
 share/doc/gtk/GtkNotebook.html
@@ -564,9 +594,23 @@ share/doc/gtk/TextWidgetObjects.html
 share/doc/gtk/TreeWidget.html
 share/doc/gtk/TreeWidgetObjects.html
 share/doc/gtk/WindowWidgets.html
+share/doc/gtk/accel-label.png
+share/doc/gtk/button.png
 share/doc/gtk/ch01.html
+share/doc/gtk/ch02.html
+share/doc/gtk/check-button.png
 share/doc/gtk/checklist-gdkeventexpose-region.html
 share/doc/gtk/checklist-modifiers.html
+share/doc/gtk/color-button.png
+share/doc/gtk/colorsel.png
+share/doc/gtk/combo-box-entry.png
+share/doc/gtk/combo-box.png
+share/doc/gtk/entry.png
+share/doc/gtk/file-button.png
+share/doc/gtk/filechooser.png
+share/doc/gtk/font-button.png
+share/doc/gtk/fontsel.png
+share/doc/gtk/frame.png
 share/doc/gtk/glossary.html
 share/doc/gtk/gtk-Accelerator-Maps.html
 share/doc/gtk/gtk-Bindings.html
@@ -591,14 +635,18 @@ share/doc/gtk/gtk-changes-2-0.html
 share/doc/gtk/gtk-compiling.html
 share/doc/gtk/gtk-framebuffer.html
 share/doc/gtk/gtk-gtkfilefilter.html
+share/doc/gtk/gtk-migrating-GtkAboutDialog.html
 share/doc/gtk/gtk-migrating-GtkAction.html
+share/doc/gtk/gtk-migrating-GtkColorButton.html
 share/doc/gtk/gtk-migrating-GtkComboBox.html
 share/doc/gtk/gtk-migrating-GtkFileChooser.html
+share/doc/gtk/gtk-migrating-GtkIconView.html
 share/doc/gtk/gtk-migrating-checklist.html
 share/doc/gtk/gtk-query-immodules-2.0.html
 share/doc/gtk/gtk-question-index.html
 share/doc/gtk/gtk-resources.html
 share/doc/gtk/gtk-running.html
+share/doc/gtk/gtk-update-icon-cache.html
 share/doc/gtk/gtk-windows.html
 share/doc/gtk/gtk-x11.html
 share/doc/gtk/gtk.devhelp
@@ -610,16 +658,37 @@ share/doc/gtk/gtkfilechooser-new-features.html
 share/doc/gtk/gtkfilechooser-selection-modes.html
 share/doc/gtk/gtkobjects.html
 share/doc/gtk/home.png
+share/doc/gtk/icon-view.png
+share/doc/gtk/image.png
 share/doc/gtk/index.html
 share/doc/gtk/index.sgml
 share/doc/gtk/ix01.html
+share/doc/gtk/ix02.html
+share/doc/gtk/ix03.html
+share/doc/gtk/ix04.html
+share/doc/gtk/ix05.html
+share/doc/gtk/label.png
 share/doc/gtk/left.png
+share/doc/gtk/list-and-tree.png
+share/doc/gtk/menubar.png
+share/doc/gtk/messagedialog.png
 share/doc/gtk/migrating-GtkCombo.html
 share/doc/gtk/migrating-gnomeuiinfo.html
 share/doc/gtk/migrating.html
+share/doc/gtk/multiline-text.png
 share/doc/gtk/new-features-GtkComboBox.html
+share/doc/gtk/notebook.png
+share/doc/gtk/panes.png
+share/doc/gtk/progressbar.png
 share/doc/gtk/pt05.html
+share/doc/gtk/radio-group.png
 share/doc/gtk/right.png
+share/doc/gtk/scales.png
+share/doc/gtk/scrolledwindow.png
+share/doc/gtk/separator.png
+share/doc/gtk/spinbutton.png
+share/doc/gtk/statusbar.png
+share/doc/gtk/stock_about_24.png
 share/doc/gtk/stock_add_24.png
 share/doc/gtk/stock_align_center_24.png
 share/doc/gtk/stock_align_justify_24.png
@@ -634,6 +703,7 @@ share/doc/gtk/stock_clear_24.png
 share/doc/gtk/stock_close_24.png
 share/doc/gtk/stock_color_picker_25.png
 share/doc/gtk/stock_colorselector_24.png
+share/doc/gtk/stock_connect_24.png
 share/doc/gtk/stock_convert_24.png
 share/doc/gtk/stock_copy_24.png
 share/doc/gtk/stock_cut_24.png
@@ -642,13 +712,18 @@ share/doc/gtk/stock_dialog_error_48.png
 share/doc/gtk/stock_dialog_info_48.png
 share/doc/gtk/stock_dialog_question_48.png
 share/doc/gtk/stock_dialog_warning_48.png
+share/doc/gtk/stock_directory_24.png
+share/doc/gtk/stock_disconnect_24.png
 share/doc/gtk/stock_dnd_32.png
 share/doc/gtk/stock_dnd_multiple_32.png
 share/doc/gtk/stock_down_arrow_24.png
+share/doc/gtk/stock_edit_24.png
 share/doc/gtk/stock_exec_24.png
 share/doc/gtk/stock_exit_24.png
+share/doc/gtk/stock_file_24.png
 share/doc/gtk/stock_first_24.png
 share/doc/gtk/stock_font_24.png
+share/doc/gtk/stock_harddisk_24.png
 share/doc/gtk/stock_help_24.png
 share/doc/gtk/stock_home_24.png
 share/doc/gtk/stock_index_24.png
@@ -656,6 +731,15 @@ share/doc/gtk/stock_jump_to_24.png
 share/doc/gtk/stock_jump_to_rtl_24.png
 share/doc/gtk/stock_last_24.png
 share/doc/gtk/stock_left_arrow_24.png
+share/doc/gtk/stock_media_forward_24.png
+share/doc/gtk/stock_media_next_24.png
+share/doc/gtk/stock_media_pause_24.png
+share/doc/gtk/stock_media_play_24.png
+share/doc/gtk/stock_media_previous_24.png
+share/doc/gtk/stock_media_record_24.png
+share/doc/gtk/stock_media_rewind_24.png
+share/doc/gtk/stock_media_stop_24.png
+share/doc/gtk/stock_network_24.png
 share/doc/gtk/stock_new_24.png
 share/doc/gtk/stock_no_20.png
 share/doc/gtk/stock_ok_20.png
@@ -681,9 +765,11 @@ share/doc/gtk/stock_sort_descending_24.png
 share/doc/gtk/stock_spellcheck_24.png
 share/doc/gtk/stock_stop_24.png
 share/doc/gtk/stock_text_bold_24.png
+share/doc/gtk/stock_text_indent_24.png
 share/doc/gtk/stock_text_italic_24.png
 share/doc/gtk/stock_text_strikethrough_24.png
 share/doc/gtk/stock_text_underline_24.png
+share/doc/gtk/stock_text_unindent_24.png
 share/doc/gtk/stock_top_24.png
 share/doc/gtk/stock_trash_24.png
 share/doc/gtk/stock_undelete_24.png
@@ -697,14 +783,18 @@ share/doc/gtk/stock_zoom_fit_24.png
 share/doc/gtk/stock_zoom_in_24.png
 share/doc/gtk/stock_zoom_out_24.png
 share/doc/gtk/style.css
+share/doc/gtk/toggle-button.png
+share/doc/gtk/toolbar.png
 share/doc/gtk/ui-manager.html
 share/doc/gtk/up.png
+share/doc/gtk/window.png
 share/gtk-2.0/demo/alphatest.png
 share/gtk-2.0/demo/apple-red.png
 share/gtk-2.0/demo/appwindow.c
 share/gtk-2.0/demo/background.jpg
 share/gtk-2.0/demo/button_box.c
 share/gtk-2.0/demo/changedisplay.c
+share/gtk-2.0/demo/clipboard.c
 share/gtk-2.0/demo/colorsel.c
 share/gtk-2.0/demo/dialog.c
 share/gtk-2.0/demo/drawingarea.c
@@ -715,17 +805,21 @@ share/gtk-2.0/demo/floppybuddy.gif
 share/gtk-2.0/demo/gnome-applets.png
 share/gtk-2.0/demo/gnome-calendar.png
 share/gtk-2.0/demo/gnome-foot.png
+share/gtk-2.0/demo/gnome-fs-directory.png
+share/gtk-2.0/demo/gnome-fs-regular.png
 share/gtk-2.0/demo/gnome-gimp.png
 share/gtk-2.0/demo/gnome-gmush.png
 share/gtk-2.0/demo/gnome-gsame.png
 share/gtk-2.0/demo/gnu-keys.png
 share/gtk-2.0/demo/gtk-logo-rgb.gif
 share/gtk-2.0/demo/hypertext.c
+share/gtk-2.0/demo/iconview.c
 share/gtk-2.0/demo/images.c
 share/gtk-2.0/demo/list_store.c
 share/gtk-2.0/demo/menus.c
 share/gtk-2.0/demo/panes.c
 share/gtk-2.0/demo/pixbufs.c
+share/gtk-2.0/demo/rotated_text.c
 share/gtk-2.0/demo/sizegroup.c
 share/gtk-2.0/demo/stock_browser.c
 share/gtk-2.0/demo/textview.c
@@ -735,8 +829,6 @@ ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gtk20.mo
-${PKGLOCALEDIR}/locale/ang/LC_MESSAGES/gtk20-properties.mo
-${PKGLOCALEDIR}/locale/ang/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gtk20-properties.mo
@@ -849,6 +941,8 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gtk20-properties.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gtk20-properties.mo
@@ -904,13 +998,10 @@ share/themes/Emacs/gtk-2.0-key/gtkrc
 @exec ${MKDIR} %D/lib/gtk-2.0/modules
 @dirrm lib/gtk-2.0/modules
 @dirrm lib/gtk-2.0/include
-@exec ${MKDIR} %D/lib/gtk-2.0/engines
-@dirrm lib/gtk-2.0/engines
 @dirrm lib/gtk-2.0/2.4.0/loaders
 @dirrm lib/gtk-2.0/2.4.0/immodules
 @exec ${MKDIR} %D/lib/gtk-2.0/2.4.0/filesystems
 @dirrm lib/gtk-2.0/2.4.0/filesystems
-@exec ${MKDIR} %D/lib/gtk-2.0/2.4.0/engines
 @dirrm lib/gtk-2.0/2.4.0/engines
 @dirrm lib/gtk-2.0/2.4.0
 @dirrm lib/gtk-2.0
