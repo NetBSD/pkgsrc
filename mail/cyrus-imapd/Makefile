@@ -1,87 +1,82 @@
-# $NetBSD: Makefile,v 1.5 2000/10/25 08:01:25 rh Exp $
+# $NetBSD: Makefile,v 1.6 2000/12/10 09:45:32 jlam Exp $
 
 DISTNAME=		cyrus-imapd-1.6.24
+PKGNAME=		${DISTNAME}nb1
 CATEGORIES=		mail
-MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/
+MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
+			ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://asg.web.cmu.edu/cyrus/imapd/
 
-DEPENDS+=		tcl-8.3.2:../../lang/tcl
-DEPENDS+=		cyrus-sasl>=1.5.24:../../security/cyrus-sasl
+DEPENDS+=		tcl>=8.3.2:../../lang/tcl
+DEPENDS+=		cyrus-sasl>=1.5.24nb2:../../security/cyrus-sasl
 
-ONLY_FOR_PLATFORM=	NetBSD-1.5*-* \
-			SunOS-*-*
-
-USE_PERL5=		yes
-GNU_CONFIGURE=		yes
-
-CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
-CONFIGURE_ARGS+=	--with-statedir=/var/run
-CONFIGURE_ARGS+=	--enable-netscapehack
-CONFIGURE_ARGS+=	--with-auth=unix
-CONFIGURE_ARGS+=	--without-krb
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
-CPPFLAGS+=-I${PREFIX}/include/cyrus-sasl
-
-DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
-INSTALL_FILE=	${WRKDIR}/INSTALL
-
-CYRUS_USER?=	cyrus
-CYRUS_GROUP?=	mail
+USE_PERL5=		# defined
+USE_SSL=		# defined
+GNU_CONFIGURE=		# defined
 
 .include "../../mk/bsd.prefs.mk"
 
+# CYRUS_USER		username of the Cyrus administrator
+# CYRUS_GROUP		group of the Cyrus administrator
+#
+CYRUS_USER?=		cyrus
+CYRUS_GROUP?=		mail
+
+BUILD_DEFS+=		CYRUS_USER CYRUS_GROUP 
+
 CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
 CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
+CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
+CONFIGURE_ARGS+=	--with-statedir=/var/run
+CONFIGURE_ARGS+=	--with-sasldir=${LOCALBASE}
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+CONFIGURE_ARGS+=	--without-notify
+CONFIGURE_ARGS+=	--without-zephyr
+CONFIGURE_ARGS+=	--enable-netscapehack
 
-.if (${OPSYS} == "NetBSD") && exists(/usr/include/krb5/com_err.h)
-CPPFLAGS+=-I/usr/include/krb5
+.if exists(/usr/include/krb5/com_err.h)
+CONFIGURE_ARGS+=	--with-com_err=/usr
+CPPFLAGS+=		-I/usr/include/krb5
+.else
+CONFIGURE_ARGS+=	--with-com_err=yes
 .endif
 
 .if defined(KERBEROS) && ${KERBEROS} == 4
-USE_KERBEROS=		yes
-CONFIGURE_ARGS+=	--with-login=krb
-.endif
-
-.if !exists(/usr/include/openssl/rc4.h)
-DEPENDS+=	openssl-0.9.*:../../security/openssl
-CPPFLAGS+=-I${PREFIX}/include
-.endif
-
-.if ${OPSYS} == "NetBSD"
-.if exists(/usr/sbin/user)
-ADDUSER=	/usr/sbin/useradd
-ADDGROUP=	/usr/sbin/groupadd
+USE_KERBEROS=		# defined
+CONFIGURE_ARGS+=	--with-auth=krb
 .else
-DEPENDS+=	user>=20000313:../../sysutils/user
-ADDUSER=	${LOCALBASE}/sbin/useradd
-ADDGROUP=	${LOCALBASE}/sbin/groupadd
+CONFIGURE_ARGS+=	--with-auth=unix
+CONFIGURE_ARGS+=	--without-krb
 .endif
-.elif ${OPSYS} == "SunOS"
-ADDUSER=	useradd
-ADDGROUP=	groupadd
-.endif
+
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+=		LIBS="${LIBS}"
+LIBS+=			`sasl-config --libs`
+
+DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_FILE=		${WKRDIR}/INSTALL
+
+HTMLDIR=		${PREFIX}/share/doc/html/cyrus-imapd
+EGDIR=			${PREFIX}/share/examples/cyrus-imapd
 
 pre-install:
-	${SED}  -e 's|@CYUSER@|${CYRUS_USER}|g' \
-		-e 's|@CYGROUP@|${CYRUS_GROUP}|g' \
+	${SED}	-e "s,@AWK@,${AWK},g" \
+		-e "s,@CAT@,${CAT},g" \
+		-e "s,@RM@,${RM},g" \
 		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED}  -e 's|@CYUSER@|${CYRUS_USER}|g' \
-		-e 's|@CYGROUP@|${CYRUS_GROUP}|g' \
-		-e 's|@ADDUSER@|${ADDUSER}|g' \
-		-e 's|@ADDGROUP@|${ADDGROUP}|g' \
-		-e 's|@CHGRP@|${CHGRP}|g' \
-		-e 's|@ID@|${ID}|g' \
-		-e 's|@TOUCH@|${TOUCH}|g' \
-		-e 's|@RM@|${RM}|g' \
+	${SED}	-e "s,@CAT@,${CAT},g" \
+		-e "s,@CHMOD@,${CHMOD},g" \
+		-e "s,@CP@,${CP},g" \
 		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
-# Deliver must be executable by all on machines with local
-# users sending to cyrus mailboxes.
-
-#post-install:
-#	@${CHMOD} a+rx ${PREFIX}/cyrus/bin/deliver
+post-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${PREFIX}/cyrus/bin
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${EGDIR}
+	${INSTALL_DATA_DIR} ${HTMLDIR}
+	cd ${WRKSRC}/doc/html; ${INSTALL_DATA} *.html ${HTMLDIR}
+	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
