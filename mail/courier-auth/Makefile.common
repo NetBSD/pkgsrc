@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2002/02/05 15:03:19 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2002/10/08 23:15:58 jlam Exp $
 
 DISTNAME?=	courier-${DIST_VERS}
 CATEGORIES+=	mail
@@ -26,6 +26,7 @@ EGDIR=			${PREFIX}/share/examples/courier
 
 .include "../../mk/bsd.prefs.mk"
 
+USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR}
@@ -53,8 +54,8 @@ CONFIGURE_ARGS+=	--without-authpgsql
 CONFIGURE_ENV+=		EXPECT="${LOCALBASE}/bin/expect"
 
 .if ${OPSYS} == "SunOS"
-.include "../../databases/db/buildlink.mk"
-CPPFLAGS+=		-I${BUILDLINK_DIR}/include/db2
+.  include "../../databases/db/buildlink2.mk"
+CPPFLAGS+=		${BUILDLINK_CPPFLAGS.db}
 .endif
 
 configure-init:
