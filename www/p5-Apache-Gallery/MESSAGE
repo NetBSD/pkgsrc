@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2002/09/01 22:42:49 kim Exp $
+$NetBSD: MESSAGE,v 1.2 2005/01/23 18:26:39 kim Exp $
 
 The default Apache::Gallery templates have been installed in
 
@@ -19,5 +19,6 @@ For more configuration information, see the following files:
 
 	${AG_DOCDIR}/INSTALL
 	${AG_DOCDIR}/README
+	${AG_DOCDIR}/UPGRADE
 
 ===========================================================================
