@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/05/15 14:28:53 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2004/06/26 10:39:25 jmmv Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-2.6/gedit/bonobo-mdi-child.h
@@ -167,6 +167,7 @@ ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gedit-2.6.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gedit-2.6.mo
@@ -198,6 +199,7 @@ ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gedit-2.6.mo
+${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gedit-2.6.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gedit-2.6.mo
