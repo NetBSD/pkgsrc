@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2003/12/08 21:13:56 recht Exp $
+
+--- Include/weakrefobject.h.orig	2002-08-12 09:21:58.000000000 +0200
++++ Include/weakrefobject.h
+@@ -39,6 +39,8 @@ PyAPI_FUNC(PyObject *) PyWeakref_GetObje
+ 
+ PyAPI_FUNC(long) _PyWeakref_GetWeakrefCount(PyWeakReference *head);
+ 
++PyAPI_FUNC(void) _PyWeakref_ClearRef(PyWeakReference *self);
++
+ #define PyWeakref_GET_OBJECT(ref) (((PyWeakReference *)(ref))->wr_object)
+ 
+ 
