@@ -1,27 +1,14 @@
+$NetBSD: patch-df,v 1.7 2003/01/04 15:04:46 skrll Exp $
+
 --- ksysguard/ksysguardd/FreeBSD/netdev.c.orig	Tue Nov  5 02:41:09 2002
-+++ ksysguard/ksysguardd/FreeBSD/netdev.c	Tue Nov 26 11:56:27 2002
-@@ -1,7 +1,7 @@
- /*
-     KSysGuard, the KDE System Guard
-    
--	Copyright (c) 2001 Tobias Koenig <tokoe@kde.org>
-+	Copyright (c) 2001 Tobias Koenig <tokoe82@yahoo.de>
-     
-     This program is free software; you can redistribute it and/or
-     modify it under the terms of version 2 of the GNU General Public
-@@ -16,304 +16,269 @@
-     along with this program; if not, write to the Free Software
-     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
- 
--	$Id: patch-df,v 1.6 2003/01/02 09:12:35 skrll Exp $
-+	$Id: patch-df,v 1.6 2003/01/02 09:12:35 skrll Exp $
++++ ksysguard/ksysguardd/FreeBSD/netdev.c
+@@ -20,300 +20,265 @@
  */
  
--#include <sys/types.h>
-+#include <sys/types.h> /* for sys/socket.h, ifaddrs.h */
+ #include <sys/types.h>
 +#include <ifaddrs.h>
  #include <sys/socket.h>
-+#include <sys/param.h> /* for sys/sysctl.h */
++#include <sys/param.h>
  #include <sys/sysctl.h>
 -#include <sys/time.h>
 -
