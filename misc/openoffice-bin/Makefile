@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/03/03 22:47:34 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/16 18:33:41 wiz Exp $
 
 PKGNAME=		openoffice-bin-${OO_VER}
 CATEGORIES=		misc
@@ -46,7 +46,6 @@ DISTNAME=	OOo_${OO_VER}_SolarisSparc_install
 WRKSRC=		${WRKDIR}/OOo_${OO_VER}_Solaris_Sparc_install
 .  elif ${MACHINE_ARCH} == "i386"
 DISTNAME=	OOo_${OO_VER}_LinuxIntel_install
-SUPPORT_FILES=          /dev/null /emul/linux/etc/mtab
 .  endif
 
 .endif
@@ -72,9 +71,6 @@ pre-install:
 	${CP} ${FILESDIR}/install ${WRKSRC}/install
 	${CHMOD} +x ${WRKSRC}/install
 .endif
-#.     if ${OPSYS}=="NetBSD" && !exists(/emul/linux/etc/mtab)
-#	${CP} /dev/null /emul/linux/etc/mtab
-#.     endif
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/OpenOffice.org${OO_VER}/program
