@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/30 04:17:52 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/05/30 04:20:30 tv Exp $
 bin/runtest
 include/dejagnu.h
 man/man1/runtest.1
@@ -144,7 +144,7 @@ share/dejagnu/tip.exp
 share/dejagnu/util-defs.exp
 share/dejagnu/utils.exp
 share/dejagnu/xsh.exp
-@dirrm %D/share/dejagnu/libexec
-@dirrm %D/share/dejagnu/baseboards
-@dirrm %D/share/dejagnu/config
-@dirrm %D/share/dejagnu
+@dirrm share/dejagnu/libexec
+@dirrm share/dejagnu/baseboards
+@dirrm share/dejagnu/config
+@dirrm share/dejagnu
