@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.12 2000/09/01 15:58:37 toshii Exp $
+$NetBSD: patch-ab,v 1.13 2000/12/08 21:18:36 wiz Exp $
 
---- src/mixer.c.orig	Mon Jul 24 07:25:50 2000
-+++ src/mixer.c	Fri Sep  1 21:42:16 2000
+--- src/mixer.c.orig	Sun Dec  3 06:44:59 2000
++++ src/mixer.c
 @@ -265,6 +265,17 @@
  mixer_devinfo_t *infos;
  mixer_ctrl_t *values;
@@ -20,15 +20,13 @@ $NetBSD: patch-ab,v 1.12 2000/09/01 15:58:37 toshii Exp $
  void mixer_init(gint init_device_id)
  {
    int fd, i, ndev;
-@@ -306,7 +317,12 @@
-     if (infos[i].type == AUDIO_MIXER_VALUE) {
-       DeviceData *device = g_new0(DeviceData, 1);
-       device->device_id = i;
--      device->device_name = infos[i].label.name;
+@@ -309,7 +320,10 @@
+ 	/* if problem, revert back to this:
+       device->device_name = infos[i].label.name;
+ 	*/
+-      device->device_name = g_strconcat(infos[infos[i].mixer_class].label.name, "." ,infos[i].label.name, NULL);
 +      if (0 <= infos[i].mixer_class && infos[i].mixer_class < ndev)
-+	device->device_name =
-+	    catstr(infos[infos[i].mixer_class].label.name,
-+		   infos[i].label.name);
++	device->device_name = g_strconcat(infos[infos[i].mixer_class].label.name, "." ,infos[i].label.name, NULL);
 +      else
 +	device->device_name = infos[i].label.name;
        device->stereo = 1;
