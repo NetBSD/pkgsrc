@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.4 2003/11/18 16:10:55 jschauma Exp $
+
+--- samples/Makefile.am.orig	2003-11-07 08:32:08.000000000 -0600
++++ samples/Makefile.am	2003-11-17 20:51:29.000000000 -0600
+@@ -12,8 +12,7 @@
+ 
+ EXTRA_DIST = tkmap.c loadppm.c
+ 
+-LDADD = $(GLUT_LIBS) $(top_builddir)/$(GLU_DIR)/libGLU.la \
+-	$(top_builddir)/src/libGL.la -lm
++LDADD = $(GLUT_LIBS) -lGLU -lGL -lm
+ #LDFLAGS = -no-install
+ 
+ # default image
