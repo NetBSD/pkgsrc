@@ -1,0 +1,24 @@
+--- src/test_libFLAC++/Makefile.in.orig	2003-10-31 15:00:53.000000000 +1100
++++ src/test_libFLAC++/Makefile.in	2003-10-31 15:01:19.000000000 +1100
+@@ -142,8 +142,8 @@
+ 
+ noinst_PROGRAMS = test_libFLAC++
+ test_libFLAC___LDADD = \
+-	$(top_builddir)/src/share/grabbag/libgrabbag.a \
+-	$(top_builddir)/src/share/gain_analysis/libgain_analysis.a \
++	$(top_builddir)/src/share/grabbag/libgrabbag.la \
++	$(top_builddir)/src/share/gain_analysis/libgain_analysis.la \
+ 	$(top_builddir)/src/libFLAC++/libFLAC++.la \
+ 	$(top_builddir)/src/libFLAC/libFLAC.la \
+ 	-lm
+@@ -176,8 +176,8 @@
+ 	metadata_utils.$(OBJEXT)
+ test_libFLAC___OBJECTS = $(am_test_libFLAC___OBJECTS)
+ test_libFLAC___DEPENDENCIES = \
+-	$(top_builddir)/src/share/grabbag/libgrabbag.a \
+-	$(top_builddir)/src/share/gain_analysis/libgain_analysis.a \
++	$(top_builddir)/src/share/grabbag/libgrabbag.la \
++	$(top_builddir)/src/share/gain_analysis/libgain_analysis.la \
+ 	$(top_builddir)/src/libFLAC++/libFLAC++.la \
+ 	$(top_builddir)/src/libFLAC/libFLAC.la
+ test_libFLAC___LDFLAGS =
