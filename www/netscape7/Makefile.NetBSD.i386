@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.NetBSD.i386,v 1.8 2002/10/26 18:40:36 grant Exp $
+# $NetBSD: Makefile.NetBSD.i386,v 1.9 2002/12/05 05:51:20 grant Exp $
 #
 
 DIST_DIR_NAME=		linux22
@@ -7,7 +7,6 @@ DEPENDS+=		suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=		suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DEPENDS+=		suse_gtk>=7.3:../../emulators/${SUSE_DIR_PREFIX}_gtk
 
-MESSAGE_SRC=		${PKGDIR}/MESSAGE.${OPSYS}
 FIND_ARG=		-d .
 
 # installing over emulation files doesn't work (huh?), so clean out any
