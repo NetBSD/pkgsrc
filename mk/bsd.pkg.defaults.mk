@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.17 2001/11/25 19:29:56 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.18 2001/11/27 02:07:53 hubertf Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -519,7 +519,12 @@ FOX_USE_XUNICODE?=	YES
 # may be a problem with tags in other encodings (e.g. windows-1251 as
 # commonly used for russian-language tags).
 # Possible: yes, no, not defined
-# Default: not defined
+# Default: not defined (-> Japanese support enabled)
+
+#GQMPEG_NO_RUSSIAN?=	yes
+# Can be enabled to disable russian ID3 tag support
+# Possible: yes, no, not defined
+# Default: not defined (-> Russian support enabled)
 
 INN_DATA_DIR?= /var/news
 # Used by inn to specify the data directory.
