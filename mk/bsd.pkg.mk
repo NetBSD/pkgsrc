@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.102 1998/06/20 14:01:28 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.103 1998/06/22 09:12:48 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1077,12 +1077,13 @@ _PORT_USE: .USE
 .endfor
 .endif # !MANCOMPRESSED && MANZ
 .else
-	@(newmanpages=`/usr/bin/egrep '^man/([^/]*/)?man[1-9ln]/.*\.[1-9ln](\.gz)?' ${PLIST_SRC} || /usr/bin/true`; \
-	newcatpages=`/usr/bin/egrep '^man/([^/]*/)?cat[1-9ln]/.*\.0(\.gz)?' ${PLIST_SRC} || /usr/bin/true`; \
+	@(newmanpages=`/usr/bin/egrep 					\
+		'^([^/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$'	\
+		${PLIST_SRC} || /usr/bin/true`;				\
 	if [ X"${MANCOMPRESSED}" != X"" -a X"${MANZ}" = X"" ]; then	\
 		${ECHO_MSG} "===>   [Automatic manual page handling]";	\
 		${ECHO_MSG} "===>   Decompressing manual pages for ${PKGNAME}";	\
-		for manpage in $$newmanpages $$newcatpages; do		\
+		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
 			${GUNZIP_CMD} ${PREFIX}/$$manpage.gz;		\
 			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
@@ -1093,7 +1094,7 @@ _PORT_USE: .USE
 	if [ X"${MANCOMPRESSED}" = X"" -a X"${MANZ}" != X"" ]; then	\
 		${ECHO_MSG} "===>   [Automatic manual page handling]";	\
 		${ECHO_MSG} "===>   Compressing manual pages for ${PKGNAME}";	\
-		for manpage in $$newmanpages $$newcatpages; do		\
+		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
 			if [ -L ${PREFIX}/$$manpage ]; then		\
 				set - `${FILE} ${PREFIX}/$$manpage`;	\
