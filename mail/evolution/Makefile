@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2004/10/20 09:27:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.69 2004/10/29 14:57:15 jmmv Exp $
 
 DISTNAME=		evolution-2.0.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail time gnome
 MASTER_SITES=		ftp://ftp.ximian.com/pub/source/evolution/ \
 			${MASTER_SITE_GNOME:=sources/evolution/2.0/}
@@ -18,15 +18,11 @@ BUILDLINK_DEPENDS.gal2+=	gal2>=2.2.3
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
 BUILDLINK_DEPENDS.gtkhtml3+=	gtkhtml3>=3.2.3
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution
+PKG_SUPPORTED_OPTIONS=	ipv6 ssl
+
 .include "../../mk/bsd.prefs.mk"
-
-BUILD_DEFS+=		USE_INET6
-
-.if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--enable-ipv6=yes
-.else
-CONFIGURE_ARGS+=	--enable-ipv6=no
-.endif
+.include "../../mk/bsd.options.mk"
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
@@ -46,8 +42,7 @@ CPPFLAGS+=		-I/usr/include/krb5
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--with-openldap
 CONFIGURE_ARGS+=	--without-static-ldap
-CONFIGURE_ARGS+=	--enable-nss=no
-CONFIGURE_ARGS+=	--enable-openssl=yes
+CONFIGURE_ARGS+=	--enable-openssl=no
 CONFIGURE_ARGS+=	--enable-pilot-conduits=no
 CONFIGURE_ARGS+=	--enable-smime=no
 CONFIGURE_ARGS+=	--with-krb4=/usr
@@ -55,6 +50,29 @@ CONFIGURE_ARGS+=	--with-krb5=/usr
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 .if defined(PKGREVISION)
 CONFIGURE_ARGS+=	--with-sub-version=nb${PKGREVISION}
+.endif
+
+.if !empty(PKG_OPTIONS:Mipv6)
+CONFIGURE_ARGS+=	--enable-ipv6=yes
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mssl)
+CONFIGURE_ARGS+=	--enable-nss=yes
+# XXX We should have a standalone NSS package and use it here, instead of
+# depending on the whole mozilla-gtk2...
+BUILDLINK_DEPENDS.mozilla-gtk2+=	mozilla-gtk2>=1.7.3nb1
+# XXX Workaround for the following problem: addressbook/util/libeabutil.la
+# is compiled as a static library only which uses the NSS stuff.  When other
+# parts of the program use this .la archive, they get the right -L flags
+# (from the dependency_libs variable) but not the rpaths.  buildlink3 should
+# add rpath flags to the dependency_libs, but there is an strange comment
+# in the wrapper saying that it shouldn't.
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mozilla-gtk2}/lib/mozilla-gtk2
+.  include "../../www/mozilla-gtk2/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-nss
 .endif
 
 PKGCONFIG_OVERRIDE=	camel.pc.in
