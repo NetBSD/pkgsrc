@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/04/02 18:16:18 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/04/13 11:10:49 rh Exp $
 bin/corewars
+man/man6/corewars.6
 share/corewars/abez.cw
 share/corewars/agent.cw
 share/corewars/backspawner.cw
@@ -86,4 +87,13 @@ share/corewars/incendiarybomb.red
 share/corewars/safetyinnumbers.red
 share/corewars/silk.red
 share/corewars/wintermute.red
+share/corewars/blackhole.cw
+share/corewars/crazymonkeys.cw
+share/corewars/lizard.cw
+share/corewars/shooter.cw
+share/corewars/steal.cw
+share/corewars/steal2.cw
+share/corewars/throwncatch.cw
+share/corewars/gate.red
+share/corewars/imp.red
 @dirrm share/corewars
