@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.pre,v 1.2 1998/06/05 09:23:44 frueauf Exp $
+@comment $NetBSD: PLIST.pre,v 1.3 1998/06/15 19:06:24 tv Exp $
 ${MACHINE_GNU_ARCH}--netbsd/include/_G_config.h
 ${MACHINE_GNU_ARCH}--netbsd/lib/libiberty.a
 @dirrm ${MACHINE_GNU_ARCH}--netbsd/include
@@ -212,64 +212,64 @@ info/gcc.info-6
 info/gcc.info-7
 info/gcc.info-8
 info/gcc.info-9
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/SYSCALLS.c.X
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/cc1
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/cc1obj
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/cc1plus
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/collect2
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/cpp
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/f771
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/README
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/assert.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/exception
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/float.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/iso646.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/limits.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/math.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/new
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/new.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/objc/NXConstStr.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/objc/Object.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/objc/Protocol.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/objc/encoding.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/objc/hash.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/objc/objc-api.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/objc/objc-list.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/objc/objc.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/objc/sarray.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/objc/thr.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/objc/typedstream.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/proto.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/stdarg.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/stdbool.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/stddef.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/syslimits.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/typeinfo
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-alpha.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-arc.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-clipper.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-h8300.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-i860.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-i960.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-m32r.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-m88k.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-mips.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-mn10200.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-mn10300.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-pa.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-ppc.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-pyr.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-sh.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-sparc.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-spur.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/va-v850.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/varargs.h
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/libgcc.a
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/libobjc.a
-lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/specs
-@dirrm lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include/objc
-@dirrm lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34/include
-@dirrm lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.34
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/SYSCALLS.c.X
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/cc1
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/cc1obj
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/cc1plus
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/collect2
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/cpp
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/f771
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/README
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/assert.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/exception
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/float.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/iso646.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/limits.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/math.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/new
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/new.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/objc/NXConstStr.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/objc/Object.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/objc/Protocol.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/objc/encoding.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/objc/hash.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/objc/objc-api.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/objc/objc-list.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/objc/objc.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/objc/sarray.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/objc/thr.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/objc/typedstream.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/proto.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/stdarg.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/stdbool.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/stddef.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/syslimits.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/typeinfo
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-alpha.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-arc.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-clipper.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-h8300.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-i860.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-i960.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-m32r.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-m88k.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-mips.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-mn10200.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-mn10300.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-pa.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-ppc.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-pyr.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-sh.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-sparc.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-spur.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/va-v850.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/varargs.h
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/libgcc.a
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/libobjc.a
+lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/specs
+@dirrm lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include/objc
+@dirrm lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40/include
+@dirrm lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd/egcs-2.91.40
 @dirrm lib/gcc-lib/${MACHINE_GNU_ARCH}--netbsd
 @dirrm lib/gcc-lib
 lib/libf2c.a
