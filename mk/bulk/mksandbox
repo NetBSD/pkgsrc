@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.11 2002/11/20 16:23:09 agc Exp $
+# $NetBSD: mksandbox,v 1.12 2002/12/03 18:49:39 agc Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -129,6 +129,7 @@ packages=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=PACKAGES)`
 distfiles=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=DISTDIR)`
 localbase=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=LOCALBASE)`
 pkg_dbdir=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=PKG_DBDIR)`
+localpatches=`(cd $pkgsrc/pkgtools/pkglint; $bmakeprog show-var VARNAME=LOCALPATCHES)`
 
 $mkdirprog $sandbox
 cat > $sandbox_script <<EOS
@@ -216,6 +217,7 @@ $mountprog -t null $packages $sandbox/$packages
 $mountprog -t null $distfiles $sandbox/$distfiles
 echo "$packages $packages rw \\" >> $sandbox_script
 echo "$distfiles $distfiles rw \\" >> $sandbox_script
+test -n "$localpatches" && echo "$localpatches $localpatches rw \\" >> $sandbox_script
 
 cat >> $sandbox_script <<EOS
 "
