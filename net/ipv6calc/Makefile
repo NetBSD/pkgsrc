@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2003/01/11 08:46:40 salo Exp $
-#
+# $NetBSD: Makefile,v 1.13 2003/02/06 14:24:58 tron Exp $
 
 DISTNAME=	ipv6calc-0.45
+PKG_REVISON=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/
 
@@ -13,8 +13,10 @@ COMMENT=	Manipulates IPv6 adresses
 # be listed in README-IPv6.html. Leave this comment here to make it so!
 
 GNU_CONFIGURE=	yes
+USE_BUILDLINK=	yes
 USE_GMAKE=	yes
 MAKE_ENV+=	root=${PREFIX}
 INSTALL_TARGET=	installonly
 
+.include "../../security/openssl/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
