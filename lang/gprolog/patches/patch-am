@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.1.1.1 2000/07/03 10:27:50 agc Exp $
+
+--- Ma2Asm/sparc_any.c	2000/07/03 10:18:06	1.1
++++ Ma2Asm/sparc_any.c	2000/07/03 10:18:52
+@@ -23,6 +23,7 @@
+ /*-------------------------------------------------------------------------*/
+ #include <stdio.h>
+ #include <string.h>
++#include <stdarg.h>
+ 
+ #include "../EnginePl/pl_params.h"
+ #include "../EnginePl/obj_chain.h"

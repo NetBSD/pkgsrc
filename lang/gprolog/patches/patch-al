@@ -1,0 +1,55 @@
+$NetBSD: patch-al,v 1.1.1.1 2000/07/03 10:27:50 agc Exp $
+
+--- Makefile.in.orig	Wed Jun 28 03:33:40 2000
++++ Makefile.in	Fri Jun 30 12:54:15 2000
+@@ -1,6 +1,7 @@
+ #                               MAIN MAKEFILE
+ #                               -------------
+ 
++PREFIX                = @prefix@
+ ROOT_DIR              = @ROOT_DIR@
+ INSTALL_DIRNAME       = @INSTALL_DIRNAME@
+ INSTALL_DIR           = @INSTALL_DIR@
+@@ -38,6 +39,11 @@
+ SUB_DIRS_ALL   = TopComp EnginePl Wam2Ma Ma2Asm \
+                  $(LE_DIRS) $(W32GC_DIRS) \
+                  BipsPl Pl2Wam $(FD_DIRS)
++
++DOC_DIR        = @DOC_DIR@
++EXAMPLE_DIR    = @EXAMPLE_DIR@
++HTML_DIR       = @HTML_DIR@
++
+ DOC_FILES      = ../doc/???*.dvi ../doc/???*.ps
+ DOC_FILES_HTML = ../doc/Html/???*.html ../doc/Html/???*.gif
+ 
+@@ -115,24 +121,24 @@
+ 
+ install-doc:
+ 	for i in $(DOC_FILES) ; do \
+-$(INSTALL_DATA) $$i $(INSTALL_DIR)/doc/; done
++$(INSTALL_DATA) $$i $(DOC_DIR); done
+ 	for i in $(DOC_FILES_HTML) ; do \
+-$(INSTALL_DATA) $$i $(INSTALL_DIR)/doc/Html; done
++$(INSTALL_DATA) $$i $(HTML_DIR); done
+ 
+ 
+ install-examples:
+ 	for i in ../ExamplesPl/*; do \
+-$(INSTALL_DATA) $$i $(INSTALL_DIR)/ExamplesPl/; done
++$(INSTALL_DATA) $$i $(EXAMPLE_DIR)/ExamplesPl; done
+ 	for i in ../ExamplesFD/*; do \
+-$(INSTALL_DATA) $$i $(INSTALL_DIR)/ExamplesFD/; done
++$(INSTALL_DATA) $$i $(EXAMPLE_DIR)/ExamplesFD; done
+ 
+ 
+ 
+ install-dirs:
+ 	./mkinstalldirs $(INSTALL_DIR) $(INSTALL_DIR)/bin \
+                         $(INSTALL_DIR)/include $(INSTALL_DIR)/lib \
+-                        $(INSTALL_DIR)/doc $(INSTALL_DIR)/doc/Html \
+-	                $(INSTALL_DIR)/ExamplesPl $(INSTALL_DIR)/ExamplesFD
++                        $(DOC_DIR) $(HTML_DIR) \
++	                $(EXAMPLE_DIR)/ExamplesPl $(EXAMPLE_DIR)/ExamplesFD
+ 
+ 
+ install-links: clean-links

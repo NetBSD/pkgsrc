@@ -1,0 +1,4 @@
+GNU Prolog is a native Prolog compiler with constraint solving over
+finite domains (FD) developed by Daniel Diaz. A lot of work has been
+devoted to the ISO compatibility. GNU Prolog is very close to the ISO
+standard (http://www.logic-programming.org/prolog_std.html).
