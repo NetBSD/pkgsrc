@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2002/02/12 14:59:59 mrauch Exp $
+# $NetBSD: Makefile,v 1.39 2002/03/21 12:35:14 dmcmahill Exp $
 #
 
 DISTNAME=		pth-1.4.0
@@ -26,7 +26,7 @@ PTH_MAJOR=		14
 PTH_MINOR=		20
 PLIST_SUBST+=		PTH_MAJOR=${PTH_MAJOR} PTH_MINOR=${PTH_MINOR}
 
-test:
+test: build
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} test
 
 post-install:
