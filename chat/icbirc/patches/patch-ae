@@ -1,0 +1,11 @@
+$NetBSD: patch-ae,v 1.1 2004/04/01 16:00:42 tv Exp $
+
+--- irc.h.orig	Thu Apr  1 10:52:37 2004
++++ irc.h
+@@ -15,5 +15,6 @@ extern char irc_pass[256];
+ extern char irc_ident[256];
+ extern char irc_nick[256];
+ extern char irc_channel[256];
++extern int in_irc_channel;
+ 
+ #endif
