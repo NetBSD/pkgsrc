@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/03/30 16:19:51 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/03/31 05:34:32 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB3_BUILDLINK3_MK:=	${DB3_BUILDLINK3_MK}+
@@ -18,7 +18,7 @@ BUILDLINK_PKGSRCDIR.db3?=	../../databases/db3
 BUILDLINK_INCDIRS.db3?=		include/db3
 BUILDLINK_TRANSFORM+=		l:db-3:db3
 USE_DB185?=			yes
-.  !empty(USE_DB185:M[yY][eE][sS])
+.  if !empty(USE_DB185:M[yY][eE][sS])
 BUILDLINK_TRANSFORM+=		l:db:db3
 .  endif
 .endif	# DB3_BUILDLINK3_MK
