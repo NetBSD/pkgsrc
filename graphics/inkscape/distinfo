@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/01/12 20:54:52 reed Exp $
+$NetBSD: distinfo,v 1.3 2005/01/19 21:54:26 reed Exp $
 
 SHA1 (inkscape-0.40.tar.bz2) = 1dc713442abc887343c9dd966a7ea7470023036b
 Size (inkscape-0.40.tar.bz2) = 3822704 bytes
+SHA1 (patch-aa) = 3042766f99f4bd643c14e73a4774cf870891550a
