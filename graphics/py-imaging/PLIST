@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/25 13:23:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/06/27 10:11:59 drochner Exp $
 ${PYINC}/PIL/ImConfig.h
 ${PYINC}/PIL/ImPlatform.h
 ${PYINC}/PIL/Imaging.h
@@ -17,6 +17,8 @@ ${PYSITELIB}/PIL/DcxImagePlugin.py
 ${PYSITELIB}/PIL/DcxImagePlugin.pyc
 ${PYSITELIB}/PIL/EpsImagePlugin.py
 ${PYSITELIB}/PIL/EpsImagePlugin.pyc
+${PYSITELIB}/PIL/ExifTags.py
+${PYSITELIB}/PIL/ExifTags.pyc
 ${PYSITELIB}/PIL/FliImagePlugin.py
 ${PYSITELIB}/PIL/FliImagePlugin.pyc
 ${PYSITELIB}/PIL/FontFile.py
@@ -41,6 +43,8 @@ ${PYSITELIB}/PIL/Image.py
 ${PYSITELIB}/PIL/Image.pyc
 ${PYSITELIB}/PIL/ImageChops.py
 ${PYSITELIB}/PIL/ImageChops.pyc
+${PYSITELIB}/PIL/ImageColor.py
+${PYSITELIB}/PIL/ImageColor.pyc
 ${PYSITELIB}/PIL/ImageDraw.py
 ${PYSITELIB}/PIL/ImageDraw.pyc
 ${PYSITELIB}/PIL/ImageEnhance.py
@@ -53,6 +57,8 @@ ${PYSITELIB}/PIL/ImageFilter.py
 ${PYSITELIB}/PIL/ImageFilter.pyc
 ${PYSITELIB}/PIL/ImageFont.py
 ${PYSITELIB}/PIL/ImageFont.pyc
+${PYSITELIB}/PIL/ImageGrab.py
+${PYSITELIB}/PIL/ImageGrab.pyc
 ${PYSITELIB}/PIL/ImageOps.py
 ${PYSITELIB}/PIL/ImageOps.pyc
 ${PYSITELIB}/PIL/ImagePalette.py
@@ -65,6 +71,8 @@ ${PYSITELIB}/PIL/ImageStat.py
 ${PYSITELIB}/PIL/ImageStat.pyc
 ${PYSITELIB}/PIL/ImageTk.py
 ${PYSITELIB}/PIL/ImageTk.pyc
+${PYSITELIB}/PIL/ImageTransform.py
+${PYSITELIB}/PIL/ImageTransform.pyc
 ${PYSITELIB}/PIL/ImageWin.py
 ${PYSITELIB}/PIL/ImageWin.pyc
 ${PYSITELIB}/PIL/ImtImagePlugin.py
@@ -87,6 +95,8 @@ ${PYSITELIB}/PIL/PSDraw.py
 ${PYSITELIB}/PIL/PSDraw.pyc
 ${PYSITELIB}/PIL/PaletteFile.py
 ${PYSITELIB}/PIL/PaletteFile.pyc
+${PYSITELIB}/PIL/PalmImagePlugin.py
+${PYSITELIB}/PIL/PalmImagePlugin.pyc
 ${PYSITELIB}/PIL/PcdImagePlugin.py
 ${PYSITELIB}/PIL/PcdImagePlugin.pyc
 ${PYSITELIB}/PIL/PcfFontFile.py
@@ -115,6 +125,8 @@ ${PYSITELIB}/PIL/TiffImagePlugin.py
 ${PYSITELIB}/PIL/TiffImagePlugin.pyc
 ${PYSITELIB}/PIL/TiffTags.py
 ${PYSITELIB}/PIL/TiffTags.pyc
+${PYSITELIB}/PIL/WalImageFile.py
+${PYSITELIB}/PIL/WalImageFile.pyc
 ${PYSITELIB}/PIL/WmfImagePlugin.py
 ${PYSITELIB}/PIL/WmfImagePlugin.pyc
 ${PYSITELIB}/PIL/XVThumbImagePlugin.py
