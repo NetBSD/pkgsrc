@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.5 2000/08/23 12:39:37 jlam Exp $
+$NetBSD: patch-aa,v 1.6 2000/12/28 14:07:19 wulf Exp $
 
---- configure.in.orig	Mon Aug 21 04:15:51 2000
-+++ configure.in
-@@ -80,6 +80,11 @@
-   AC_DEFINE (ENABLE_NLS)
+--- configure.in.orig	Sun Dec 24 08:21:52 2000
++++ configure.in	Thu Dec 28 11:20:10 2000
+@@ -97,6 +97,11 @@
+ 	AC_DEFINE(ENABLE_NLS)
  fi
  
 +dnl NetBSD: set DATADIRNAME to "share"
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.5 2000/08/23 12:39:37 jlam Exp $
  LIBS="$LIBS `gtk-config --libs`"
  CFLAGS="$CFLAGS `gtk-config --cflags`"
  
-@@ -110,6 +115,7 @@
+@@ -127,6 +132,7 @@
  )
  
  
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.5 2000/08/23 12:39:37 jlam Exp $
  dnl Check if system supports the graphical libraries
  AC_CHECK_LIB(ungif, main, GLIBS="-lungif",
  	AC_CHECK_LIB(gif,main, GLIBS="-lgif"))
-@@ -124,6 +130,13 @@
+@@ -141,6 +147,13 @@
  	AC_DEFINE(HAVE_LIBGDK_IMLIB,1) ]
  	,AC_DEFINE(HAVE_LIBGDK_IMLIB,0)
  	,$GLIBS)
