@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2014 2003/04/23 08:19:07 rh Exp $
+$NetBSD: CHANGES,v 1.2015 2003/04/23 09:19:38 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1702,3 +1702,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmms-osd to 2.2.1 [jmmv 2003-04-22]
 	Updated jhead to 2.0 [wiz 2003-04-23]
 	Added swfdec-0.2.1 [rh 2003-04-23]
+	Updated url2pkg to 1.23 [rh 2003-04-23]
