@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.4 2003/08/29 00:56:25 dan Exp $
+# $NetBSD: buildlink2.mk,v 1.5 2003/08/29 04:48:33 wiz Exp $
 
 .if !defined(LIBMCRYPT_BUILDLINK2_MK)
 LIBMCRYPT_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libmcrypt
-BUILDLINK_DEPENDS.libmcrypt?=	libmcrypt>=2.5.7
+BUILDLINK_DEPENDS.libmcrypt?=	libmcrypt>=2.5.6
 BUILDLINK_PKGSRCDIR.libmcrypt?=	../../security/libmcrypt
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.libmcrypt=libmcrypt
