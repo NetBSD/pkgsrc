@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.20 2004/11/28 22:39:07 atatat Exp $
+$NetBSD: patch-ac,v 1.21 2004/11/30 02:02:13 atatat Exp $
 
 Incorporate a patch from the author that widens the NETBSDV definition
 to account for new current versioning system, properly handles the
@@ -15,7 +15,7 @@ support.
  LSOF_TSTXO=""
  LSOF_TSTXOC="${LSOF_TSTSUBD}/config.xobj"
  if test "X$LSOF_VERS" = "X"	# {
-@@ -2264,51 +2279,49 @@ return(0); }
+@@ -2264,51 +2265,49 @@ return(0); }
        # Validate the NetBSD version.
  
        case $LSOF_VSTR in	# {
@@ -82,7 +82,7 @@ support.
  	;;
        esac	# }
      fi	# }
-@@ -2316,7 +2329,7 @@ return(0); }
+@@ -2316,7 +2315,7 @@ return(0); }
      # Test for legal NetBSD version.
  
      case $LSOF_VERS in	# {
@@ -91,21 +91,19 @@ support.
        ;;
      *)
        echo "Unknown NetBSD version: $LSOF_VERS"
-@@ -2336,166 +2349,656 @@ return(0); }
+@@ -2336,166 +2335,637 @@ return(0); }
        fi	# }
      fi	# }
      LSOF_CFGF="$LSOF_CFGF $LSOF_TMP1"
 -    if test -r ${LSOF_INCLUDE}/nfs/nfsproto.h	# {
 +    if test -r ${LSOF_INCLUDE}/kvm.h	# {
-     then
--	LSOF_CFGF="$LSOF_CFGF -DHASNFSPROTO"
++    then
 +      grep -q kvm_getproc2 ${LSOF_INCLUDE}/kvm.h
 +      if test $? -eq 0	# {
 +      then
 +          LSOF_CFGF="$LSOF_CFGF -DHASKVMGETPROC2"
 +      fi	# }
-     fi	# }
--    if test -r ${LSOF_INCLUDE}/netinet/ip6.h	# {
++    fi	# }
 +
 +  # Here begin the dual tests on header files that may be in $LSOF_INCLUDE
 +  # or $NETBSD_SYS.
@@ -115,14 +113,16 @@ support.
 +
 +    LSOF_TMP1=0
 +    if test "X$NETBSD_SYS" = "X"	# {
-+    then
-+      if test -d /usr/src/sys	# {
+     then
+-	LSOF_CFGF="$LSOF_CFGF -DHASNFSPROTO"
++      if test -d /usr/src	# {
 +      then
 +	NETBSD_SYS="/usr/src/sys"
 +      else
 +        NETBSD_SYS=$LSOF_INCLUDE
 +      fi	# }
-+    fi	# }
+     fi	# }
+-    if test -r ${LSOF_INCLUDE}/netinet/ip6.h	# {
 +    LSOF_TMP2="nfs/nfsproto.h"
 +    if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
 +    then
@@ -298,52 +298,22 @@ support.
 +      fi	# }
 +    fi	# }
 +    LSOF_TMP2="sys/bufq.h"
++    LSOF_NBSD_BUFQH=0
 +    if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
 +    then
-+      LSOF_TMP3="${LSOF_INCLUDE}/$LSOF_TMP2"
-+      LSOF_TMP4=0
++      LSOF_CFGF="$LSOF_CFGF -DHASBUFQ_H"
 +    else
 +      if test -r ${NETBSD_SYS}/$LSOF_TMP2	# {
        then
 -	LSOF_CFGF="$LSOF_CFGF -DHASPROCFS_PFSROOT"
 -      fi #	}
-+	LSOF_TMP3="${NETBSD_SYS}/$LSOF_TMP2"
-+	LSOF_TMP4=1
-+      else
-+	LSOF_TMP3=""
-+      fi	# }
-     fi	# }
--    if test -d ${NETBSD_SYS}/isofs/cd9660	# {
-+    if test "X$LSOF_TMP3" != "X"	# {
-+    then
-+      LSOF_CFGF="$LSOF_CFGF -DHASBUFQ_H"
-+      if test $LSOF_TMP1 -eq 0 -a $LSOF_TMP4 -eq 1	# {
-+      then
-+	LSOF_TMP1=1
-+      fi	# }
-+    fi # }
-+    LSOF_TMP2="fs/ptyfs/ptyfs.h"
-+    if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
-+    then
-+      LSOF_TMP3="${LSOF_INCLUDE}/$LSOF_TMP2"
-+      LSOF_TMP4=0
-+    else
-+      if test -r ${NETBSD_SYS}/$LSOF_TMP2	# {
-+      then
-+	LSOF_TMP3="${NETBSD_SYS}/$LSOF_TMP2"
-+	LSOF_TMP4=1
-+      else
-+	LSOF_TMP3=""
++	if test $NETBSD_SYS != $LSOF_INCLUDE	# {
++	then
++          LSOF_CFGF="$LSOF_CFGF -DHASBUFQ_H"
++	  LSOF_NBSD_BUFQH=1
++	fi	# }
 +      fi	# }
 +    fi	# }
-+    if test "X$LSOF_TMP3" != "X"	# {
-+    then
-+      LSOF_CFGF="$LSOF_CFGF -DHASPTYFS"
-+      if test $LSOF_TMP1 -eq 0 -a $LSOF_TMP4 -eq 1	# {
-+      then
-+	LSOF_TMP1=1
-+      fi	# }
-+    fi # }
 +    LSOF_TMP2="isofs/cd9660"
 +    if test -d ${LSOF_INCLUDE}/$LSOF_TMP2	# {
 +    then
@@ -357,7 +327,8 @@ support.
 +      else
 +	LSOF_TMP3=""
 +      fi	# }
-+    fi	# }
+     fi	# }
+-    if test -d ${NETBSD_SYS}/isofs/cd9660	# {
 +    if test "X$LSOF_TMP3" != "X"	# {
      then
        LSOF_CFGF="$LSOF_CFGF -DHAS9660FS=1"
@@ -391,8 +362,9 @@ support.
 +	then
 +	  LSOF_TMP1=1
 +	fi	# }
-+      fi	# }
-+    fi	# }
+       fi	# }
+     fi	# }
+-    if test -d ${NETBSD_SYS}/msdosfs	# {
 +    LSOF_TMP2="msdosfs"
 +    if test -d ${LSOF_INCLUDE}/$LSOF_TMP2	# {
 +    then
@@ -405,9 +377,8 @@ support.
 +	LSOF_TMP4=1
 +      else
 +	LSOF_TMP3=""
-       fi	# }
-     fi	# }
--    if test -d ${NETBSD_SYS}/msdosfs	# {
++      fi	# }
++    fi	# }
 +    if test "X$LSOF_TMP3" != "X"	# {
      then
        LSOF_CFGF="$LSOF_CFGF -DHASMSDOSFS=1"
@@ -441,13 +412,11 @@ support.
 +	then
 +	  LSOF_TMP1=1
 +	fi	# }
-       fi	# }
-     fi	# }
--    if test -r ${NETBSD_SYS}/miscfs/kernfs/kernfs.h	# {
++      fi	# }
++    fi	# }
 +    LSOF_TMP2="miscfs/kernfs/kernfs.h"
 +    if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
-     then
--      grep -q "kt_name;" ${NETBSD_SYS}/miscfs/kernfs/kernfs.h
++    then
 +      LSOF_TMP3="${LSOF_INCLUDE}/$LSOF_TMP2"
 +      LSOF_TMP4=0
 +    else
@@ -457,10 +426,12 @@ support.
 +	LSOF_TMP4=1
 +      else
 +	LSOF_TMP3=""
-+      fi	# }
-+    fi	# }
+       fi	# }
+     fi	# }
+-    if test -r ${NETBSD_SYS}/miscfs/kernfs/kernfs.h	# {
 +    if test "X$LSOF_TMP3" != "X"	# {
-+    then
+     then
+-      grep -q "kt_name;" ${NETBSD_SYS}/miscfs/kernfs/kernfs.h
 +      grep -q "kt_name;" $LSOF_TMP3
        if test $? -eq 0	# {
  	then
@@ -554,10 +525,20 @@ support.
 +	    LSOF_TMP1=1
 +	  fi	# }
 +	fi	# }
++      fi	# }
++      grep -q i_ffs_effnlink $LSOF_TMP3
++      if test $? -eq 0	# {
++      then
++	LSOF_CFGF="$LSOF_CFGF -DHASEFFNLINK=i_ffs_effnlink"
++	if test $LSOF_TMP1 -eq 0 -a $LSOF_TMP4 -eq 1	# {
++	then
++	  LSOF_TMP1=1
++	fi	# }
        fi	# }
      fi	# }
 -    if test -r ${LSOF_INCLUDE}/nfs/nfsnode.h	# {
 +    LSOF_TMP2="sys/vnode.h"
++    LSOF_NBSD_PTYFS=0
 +    if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
      then
 -      grep -q "*n_vattr" ${LSOF_INCLUDE}/nfs/nfsnode.h
@@ -585,8 +566,7 @@ support.
 -	if test $? -eq 0	# {
 +	LSOF_CFGF="$LSOF_CFGF -DHASEXT2FS"
 +	if test $LSOF_TMP1 -eq 0 -a $LSOF_TMP4 -eq 1	# {
- 	then
--	  NETBSD_UVM="Y"
++	then
 +	  LSOF_TMP1=1
 +	fi	# }
 +	LSOF_TMP2="ufs/ufs/inode.h"
@@ -604,7 +584,8 @@ support.
 +	  fi	# }
 +        fi	# }
 +	if test "X$LSOF_TMP5" != "X"	# {
-+	then
+ 	then
+-	  NETBSD_UVM="Y"
 +	  grep -q "*e2fs_din" $LSOF_TMP5
 +	  if test $? -eq 0	# {
 +	  then
@@ -614,38 +595,55 @@ support.
 +	      LSOF_TMP1=$LSOF_TMP6
 +	    fi	# }
 +	  fi	# }
-+	fi	# }
-+      fi	# }
-+      grep -q VT_LFS $LSOF_TMP3
-+      if test $? -eq 0   # {
-+      then
-+	LSOF_CFGF="$LSOF_CFGF -DHASLFS"
-+	if test $LSOF_TMP1 -eq 0 -a $LSOF_TMP4 -eq 1	# {
-+	then
-+	  LSOF_TMP1=1
  	fi	# }
        fi	# }
-       if test "X$NETBSD_UVM" = "X"	# {
+-      if test "X$NETBSD_UVM" = "X"	# {
++      grep -q VT_LFS $LSOF_TMP3
++      if test $? -eq 0   # {
        then
 -	if test -r ${LSOF_INCLUDE}/sys/vnode.h	# {
-+	grep -q UVM $LSOF_TMP3
-+	if test $? -ne 0	# {
++	LSOF_CFGF="$LSOF_CFGF -DHASLFS"
++	if test $LSOF_TMP1 -eq 0 -a $LSOF_TMP4 -eq 1	# {
  	then
 -	  grep -q UVM ${LSOF_INCLUDE}/sys/vnode.h
 -	  if test $? -ne 0	# {
-+	  egrep -q "v_uvm;|v_uobj;" $LSOF_TMP3
-+	  if test $? -eq 0	# {
++	  LSOF_TMP1=1
++	fi	# }
++      fi	# }
++      grep -q VT_PTYFS $LSOF_TMP3
++      if test $? -eq 0   # {
++      then
++	LSOF_TMP2="fs/ptyfs/ptyfs.h"
++	if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
++	then
++	  LSOF_CFGF="$LSOF_CFGF -DHASPTYFS"
++	else
++	  if test -r ${NETBSD_SYS}/$LSOF_TMP2	# {
  	  then
 -	    egrep -q "v_uvm;|v_uobj;" ${LSOF_INCLUDE}/sys/vnode.h
 -	    if test $? -eq 0	# {
--	    then
++	    if test $NETBSD_SYS != $LSOF_INCLUDE	# {
+ 	    then
 -	      NETBSD_UVM="Y"
--	    fi	# }
-+	    NETBSD_UVM="Y"
++	      LSOF_CFGF="$LSOF_CFGF -DHASPTYFS"
++	      LSOF_NBSD_PTYFS=1
+ 	    fi	# }
  	  fi	# }
  	fi	# }
        fi	# }
-     fi	# }
++      if test "X$NETBSD_UVM" = "X"	# {
++      then
++	grep -q UVM $LSOF_TMP3
++	if test $? -ne 0	# {
++	then
++	  egrep -q "v_uvm;|v_uobj;" $LSOF_TMP3
++	  if test $? -eq 0	# {
++	  then
++	    NETBSD_UVM="Y"
++	  fi	# }
++	fi	# }
++      fi	# }
++    fi	# }
 +    LSOF_TMP2="nfs/nfsnode.h"
 +    if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
 +    then
@@ -685,7 +683,7 @@ support.
 +      else
 +	LSOF_TMP3=""
 +      fi	# }
-+    fi	# }
+     fi	# }
 +    if test "X$LSOF_TMP3" != "X"	# {
 +    then
 +      grep -q vop_advlock_args $LSOF_TMP3
@@ -777,30 +775,12 @@ support.
 +	LSOF_TMP1=1
 +      fi	# }
 +    fi	# }
-+    LSOF_TMP2="sys/statvfs.h"
-+    if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
++    if test -r ${LSOF_INCLUDE}/sys/statvfs.h 	# {
 +    then
-+      LSOF_TMP3="${LSOF_INCLUDE}/$LSOF_TMP2"
-+      LSOF_TMP4=0
-+    else
-+      if test -r ${NETBSD_SYS}/$LSOF_TMP2	# {
-+      then
-+	LSOF_TMP3="${NETBSD_SYS}/$LSOF_TMP2"
-+	LSOF_TMP4=1
-+      else
-+	LSOF_TMP3=""
-+      fi	# }
-+    fi	# }
-+    if test "X$LSOF_TMP3" != "X"	# {
-+    then
-+      grep -q '^struct statvfs {' $LSOF_TMP3
++      grep -q '^struct statvfs {' ${LSOF_INCLUDE}/sys/statvfs.h
 +      if test $? -eq 0	# {
 +      then
 +	LSOF_CFGF="$LSOF_CFGF -DHASSTATVFS"
-+	if test $LSOF_TMP1 -eq 0 -a $LSOF_TMP4 -eq 1	# {
-+	then
-+	  LSOF_TMP1=1
-+	fi	# }
 +      fi	# }
 +    fi	# }
 +
@@ -819,7 +799,7 @@ support.
      rm -rf dialects/n+obsd/include
      if test "X$NETBSD_UVM" = "XY" -o "X$NETBSD_UVM" = "Xy"	# {
      then
-@@ -2508,7 +3011,21 @@ return(0); }
+@@ -2508,10 +2978,22 @@ return(0); }
  	LSOF_CFGF="$LSOF_CFGF -DHAS_UVM_INCL"
        fi	# }
      fi	# }
@@ -828,12 +808,10 @@ support.
 +    if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
 +    then
 +      LSOF_TMP3="${LSOF_INCLUDE}/$LSOF_TMP2"
-+      LSOF_TMP4=0
 +    else
 +      if test -r ${NETBSD_SYS}/$LSOF_TMP2	# {
 +      then
 +	LSOF_TMP3="${NETBSD_SYS}/$LSOF_TMP2"
-+	LSOF_TMP4=1
 +      else
 +	LSOF_TMP3=""
 +      fi	# }
@@ -841,25 +819,38 @@ support.
 +    if test "X$LSOF_TMP3" != "X"	# {
      then
  
-       # Build the netexport.h header file for NetBSD.
-@@ -2553,59 +3070,6 @@ return(0); }
+-      # Build the netexport.h header file for NetBSD.
++      # Build a local NetBSD netexport.h header file.
+ 
+       LSOF_TMP1=${LSOF_TMPC}.edscr
+       LSOF_TMP2=${LSOF_TMPC}.netcred
+@@ -2553,59 +3035,48 @@ return(0); }
        if test $? -ne 0	# {
        then
  	LSOF_CFGF="$LSOF_CFGF -I`pwd`/dialects/n+obsd/include"
 -      fi
--    fi	# }
++      fi	# }
+     fi	# }
 -    if test -r ${LSOF_INCLUDE}/sys/lockf.h	# {
--    then
++    if test $LSOF_NBSD_BUFQH -eq 1	# {
+     then
 -      grep vop_advlock_args ${LSOF_INCLUDE}/sys/lockf.h > /dev/null
 -      if test $? -eq 0	# {
--      then
++
++    # Make a local copy of $NETBSD_SYS/sys/bufq.h.
++
++      if test ! -d dialects/n+obsd/include	# {
+       then
 -	LSOF_CFGF="$LSOF_CFGF -DHAS_ADVLOCK_ARGS"
--      fi	# }
++	mkdir dialects/n+obsd/include
+       fi	# }
 -      grep lf_lwp ${LSOF_INCLUDE}/sys/lockf.h > /dev/null
 -      if test $? -eq 0	# {
--      then
++      if test ! -d dialects/n+obsd/include/sys	# {
+       then
 -	LSOF_CFGF="$LSOF_CFGF -DHAS_LF_LWP"
--      fi	# }
++	mkdir dialects/n+obsd/include/sys
+       fi	# }
 -    fi	# }
 -    if test -r ${LSOF_INCLUDE}/sys/lwp.h	# {
 -    then
@@ -869,17 +860,27 @@ support.
 -    then
 -      grep IPV6_INRIA_VERSION ${LSOF_INCLUDE}/netinet/in.h > /dev/null
 -      if test $? -eq 0	# {
--      then
++      cp $NETBSD_SYS/sys/bufq.h dialects/n+obsd/include/sys
++      echo $LSOF_CFGF | grep /dialects/n+obsd/include > /dev/null 2>&1
++      if test $? -ne 0	# {
+       then
 -	LSOF_CFGF="$LSOF_CFGF -DHASIPv6 -DHASINRIAIPv6"
--      fi	# }
--    fi	# }
++	LSOF_CFGF="$LSOF_CFGF -I`pwd`/dialects/n+obsd/include"
+       fi	# }
+     fi	# }
 -    if test -r ${LSOF_INCLUDE}/sys/filedesc.h	# {
--    then
++    if test $LSOF_NBSD_PTYFS -eq 1	# {
+     then
 -      grep -q "^struct cwdinfo {" ${LSOF_INCLUDE}/sys/filedesc.h
 -      if test $? -eq 0	# {
--      then
++
++    # Make a local copy of $NETBSD_SYS/sys/fs/ptyfs/.
++
++      if test ! -d dialects/n+obsd/include	# {
+       then
 -	LSOF_CFGF="$LSOF_CFGF -DHASCWDINFO"
--      fi	# }
++	mkdir dialects/n+obsd/include
+       fi	# }
 -    fi	# }
 -    if test -r ${LSOF_INCLUDE}/sys/pipe.h	# {
 -    then
@@ -889,43 +890,39 @@ support.
 -    then
 -      grep -q '^struct statvfs {' ${LSOF_INCLUDE}/sys/statvfs.h
 -      if test $? -eq 0	# {
--      then
++      if test ! -d dialects/n+obsd/include/fs	# {
+       then
 -	LSOF_CFGF="$LSOF_CFGF -DHASSTATVFS"
--      fi	# }
++	mkdir dialects/n+obsd/include/fs
+       fi	# }
 -    fi	# }
 -    if test -r ${LSOF_INCLUDE}/kvm.h	# {
 -    then
 -      grep -q kvm_getproc2 ${LSOF_INCLUDE}/kvm.h
 -      if test $? -eq 0	# {
--      then
++      rm -rf dialects/n+obsd/include/fs/ptyfs
++      mkdir dialects/n+obsd/include/fs/ptyfs
++      cp $NETBSD_SYS/fs/ptyfs/*.h dialects/n+obsd/include/fs/ptyfs
++      echo $LSOF_CFGF | grep /dialects/n+obsd/include > /dev/null 2>&1
++      if test $? -ne 0	# {
+       then
 -          LSOF_CFGF="$LSOF_CFGF -DHASKVMGETPROC2"
++	LSOF_CFGF="$LSOF_CFGF -I`pwd`/dialects/n+obsd/include"
        fi	# }
      fi	# }
      LSOF_CFGL="$LSOF_CFGL -lkvm"
-@@ -3594,6 +4058,15 @@ return(0); }
-           # DEBUG -- End temporary hack for Solaris 10, build s10_44.
- 
- 	fi	# }
-+	if test -r ${LSOF_INCLUDE}/sys/vnode.h	# {
-+	then
-+	  grep v_path ${LSOF_INCLUDE}/sys/vnode.h > /dev/null 2>&1
-+	  if test $? -eq 0	# {
-+	  then
-+	    LSOF_CFGF="$LSOF_CFGF -DHAS_V_PATH"
-+	    LSOF_TSTVPATH=1
-+	  fi	# }
-+	fi	# }
+@@ -2897,6 +3368,14 @@ return(0); }
        fi	# }
-       if test -r ${LSOF_INCLUDE}/sys/zone.h	# {
-       then
-@@ -4192,6 +4665,10 @@ then
-   echo "-DLT_K64" >> $LSOF_TSTCFLG
- fi	# }
- echo "-DLT_VERS=$LSOF_VERS" >> $LSOF_TSTCFLG
-+if test $LSOF_TSTVPATH -eq 1	# {
-+then
-+  echo "-DLT_VPATH" >> $LSOF_TSTCFLG
-+fi	# }
- echo "$LSOF_TSTCFLG created"
- 
- # Create tests loader flags file.
+       LSOF_CFGF="$LSOF_CFGF -DHASEXT2FS=$LSOF_TMP1"
+     fi	# }
++    if test -r ${LSOF_INCLUDE}/ufs/ufs/inode.h	# {
++    then
++      grep -q i_effnlink ${LSOF_INCLUDE}/ufs/ufs/inode.h
++      if test $? -eq 0	# {
++      then
++	LSOF_CFGF="$LSOF_CFGF -DHASEFFNLINK=i_effnlink"
++      fi	# }
++    fi	# }
+     if test -r ${LSOF_INCLUDE}/sys/namei.h
+     then
+       grep -q nc_vpid ${LSOF_INCLUDE}/sys/namei.h
