@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5332 2004/03/29 00:55:55 minskim Exp $
+$NetBSD: CHANGES,v 1.5333 2004/03/29 00:59:23 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1558,6 +1558,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated XFree86 to 4.4.0 [xtraeme 2004-03-28]
 	Updated latex-mk to 1.2 [dmcmahill 2004-03-28]
 	Added py-textile-2.0 [minskim 2004-03-28]
-	Updated xv-3.10anb7 [dillo 2004-03-29]
-	Updated zoom-1.0.1anb2 [dillo 2004-03-29]
+	Updated xv to 3.10anb7 [dillo 2004-03-29]
+	Updated zoom to 1.0.1anb2 [dillo 2004-03-29]
 	Added libol-0.3.13 [minskim 2004-03-29]
