@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/02/08 12:38:08 cjep Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/04/13 01:29:15 salo Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
@@ -6,7 +6,6 @@ bin/ebrefile
 bin/ebunzip
 bin/ebzip
 bin/ebzipinfo
-etc/eb.conf
 include/eb/appendix.h
 include/eb/binary.h
 include/eb/defs.h
@@ -18,6 +17,12 @@ include/eb/zio.h
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/eb-ja.info
 info/eb-ja.info
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/eb-ja.info
+info/eb-ja.info-1
+info/eb-ja.info-2
+info/eb-ja.info-3
+info/eb-ja.info-4
+info/eb-ja.info-5
+info/eb-ja.info-6
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebfont-ja.info
 info/ebfont-ja.info
 @exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebfont-ja.info
@@ -45,8 +50,9 @@ info/ebzip.info
 lib/libeb.a
 lib/libeb.la
 lib/libeb.so
-lib/libeb.so.6
-lib/libeb.so.6.3
+lib/libeb.so.7
+lib/libeb.so.7.2
+share/aclocal/eb3.m4
 share/eb/appendix/LIST
 share/eb/appendix/LIST-ja
 share/eb/appendix/cencro-1.0/catalog
@@ -99,6 +105,15 @@ share/eb/appendix/dd75-2.0/chujiten.app
 share/eb/appendix/dd75-2.0/chujiten/appendix
 share/eb/appendix/dd75-2.0/koujien.app
 share/eb/appendix/dd75-2.0/koujien/appendix
+share/eb/appendix/gendai2000-1.0/CVS/Entries
+share/eb/appendix/gendai2000-1.0/CVS/Repository
+share/eb/appendix/gendai2000-1.0/CVS/Root
+share/eb/appendix/gendai2000-1.0/catalog
+share/eb/appendix/gendai2000-1.0/catalog.app
+share/eb/appendix/gendai2000-1.0/gn00eb01.app
+share/eb/appendix/gendai2000-1.0/gn00eb01/appendix
+share/eb/appendix/gendai2000-1.0/gn00eb02.app
+share/eb/appendix/gendai2000-1.0/gn00eb02/appendix
 share/eb/appendix/genius-1.0/catalog
 share/eb/appendix/genius-1.0/catalog.app
 share/eb/appendix/genius-1.0/genius.app
@@ -200,6 +215,10 @@ share/eb/appendix/readers2-2.0/catalogs
 share/eb/appendix/readers2-2.0/catalogs.app
 share/eb/appendix/readers2-2.0/readers.app
 share/eb/appendix/readers2-2.0/readers/data/furoku
+share/eb/appendix/ruigigo-1.0/catalogs
+share/eb/appendix/ruigigo-1.0/catalogs.app
+share/eb/appendix/ruigigo-1.0/ruigigo.app
+share/eb/appendix/ruigigo-1.0/ruigigo/data/furoku
 share/eb/appendix/superdic98-1.0/catalogs
 share/eb/appendix/superdic98-1.0/catalogs.app
 share/eb/appendix/superdic98-1.0/chujiten.app
@@ -216,7 +235,8 @@ share/eb/appendix/superdic98-1.0/kanjigen.app
 share/eb/appendix/superdic98-1.0/kanjigen/data/furoku
 share/eb/appendix/superdic98-1.0/koujien.app
 share/eb/appendix/superdic98-1.0/koujien/data/furoku
-share/eb/eb3.m4
+share/examples/eb/eb.conf.default
+@dirrm share/examples/eb
 @dirrm share/eb/appendix/superdic98-1.0/koujien/data
 @dirrm share/eb/appendix/superdic98-1.0/koujien
 @dirrm share/eb/appendix/superdic98-1.0/kanjigen/data
@@ -232,6 +252,9 @@ share/eb/eb3.m4
 @dirrm share/eb/appendix/superdic98-1.0/chujiten/data
 @dirrm share/eb/appendix/superdic98-1.0/chujiten
 @dirrm share/eb/appendix/superdic98-1.0
+@dirrm share/eb/appendix/ruigigo-1.0/ruigigo/data
+@dirrm share/eb/appendix/ruigigo-1.0/ruigigo
+@dirrm share/eb/appendix/ruigigo-1.0
 @dirrm share/eb/appendix/readers2-2.0/readers/data
 @dirrm share/eb/appendix/readers2-2.0/readers
 @dirrm share/eb/appendix/readers2-2.0
@@ -297,6 +320,10 @@ share/eb/eb3.m4
 @dirrm share/eb/appendix/genius2-1.1
 @dirrm share/eb/appendix/genius-1.0/genius
 @dirrm share/eb/appendix/genius-1.0
+@dirrm share/eb/appendix/gendai2000-1.0/gn00eb02
+@dirrm share/eb/appendix/gendai2000-1.0/gn00eb01
+@dirrm share/eb/appendix/gendai2000-1.0/CVS
+@dirrm share/eb/appendix/gendai2000-1.0
 @dirrm share/eb/appendix/dd75-2.0/koujien
 @dirrm share/eb/appendix/dd75-2.0/chujiten
 @dirrm share/eb/appendix/dd75-2.0

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/02/08 12:38:08 cjep Exp $
+# $NetBSD: Makefile,v 1.12 2003/04/13 01:29:15 salo Exp $
 # FreeBSD Id: ports/japanese/eb/Makefile,v 1.21 2000/08/21 03:39:42 kevlo Exp
+#
 
-DISTNAME=	eb-3.2.3
+DISTNAME=	eb-3.3.2
 CATEGORIES=	textproc japanese
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/misc/eb/appendix/ \
 		ftp://ftp.sra.co.jp/pub/misc/eb/
@@ -28,6 +29,7 @@ EB_APPENDICES=	\
 		daihyakka-1.0.tar.gz \
 		daijirin-2.0.tar.gz \
 		dd75-2.0.tar.gz \
+		gendai2000-1.0.tar.gz \
 		genius-1.0.tar.gz \
 		genius2-1.1.tar.gz \
 		global-2.0.tar.gz \
@@ -44,23 +46,33 @@ EB_APPENDICES=	\
 		plus-2.0.tar.gz \
 		readers-2.2.tar.gz \
 		readers2-2.0.tar.gz \
+		ruigigo-1.0.tar.gz \
 		superdic98-1.0.tar.gz
 EXTRACT_ONLY=	${EB_DISTFILES}
+DIST_SUBDIR=	eb
 
-DIST_SUBDIR=		eb
-USE_BUILDLINK2=		# Defined
-USE_LIBTOOL=		# Defined
-GNU_CONFIGURE=		# Defined
-CONFIGURE_ARGS+=	--with-zlib
-USE_GMAKE=		# Defined
+USE_BUILDLINK2=		YES
+USE_PKGINSTALL=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
 TEXINFO_OVERRIDE=	YES
+
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+CONFIGURE_ARGS+=	--with-zlib
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
+CONF_FILES=		${EGDIR}/eb.conf.default ${PKG_SYSCONFDIR}/eb.conf
+
 # For patterns like '... (install-info ...) ...'
 TEXINFO_SUBST_SED+=	-e "s!^\(	.*\)\([ 	'(]\)install-info\([ 	]\)!\1\2${INSTALL_INFO}\3!g"
 
 EB_APPENDIXDIR=	${PREFIX}/share/eb/appendix
+EGDIR=		${PREFIX}/share/examples/eb/
 
 post-extract:
-	cd ${WRKSRC} && ${RM} -rf zlib
+	${RM} -rf ${WRKSRC}/zlib
 
 post-install:
 	for f in ${EB_LISTS}; do \
@@ -69,6 +81,8 @@ post-install:
 	for f in ${EB_APPENDICES}; do \
 		${GTAR} -C ${EB_APPENDIXDIR} -zxmf ${_DISTDIR}/$${f}; \
 	done
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/eb.conf ${EGDIR}/eb.conf.default
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
