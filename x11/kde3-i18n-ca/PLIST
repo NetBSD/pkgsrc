@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/30 15:13:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/18 01:42:07 markd Exp $
 share/doc/kde/HTML/ca/kbugbuster/common
 share/doc/kde/HTML/ca/kbugbuster/index.cache.bz2
 share/doc/kde/HTML/ca/kbugbuster/index.docbook
@@ -238,6 +238,7 @@ share/kde/locale/ca/LC_MESSAGES/empath.mo
 share/kde/locale/ca/LC_MESSAGES/extensionproxy.mo
 share/kde/locale/ca/LC_MESSAGES/ffrs.mo
 share/kde/locale/ca/LC_MESSAGES/filetypes.mo
+share/kde/locale/ca/LC_MESSAGES/flashkard.mo
 share/kde/locale/ca/LC_MESSAGES/fontinst.mo
 share/kde/locale/ca/LC_MESSAGES/htmlsearch.mo
 share/kde/locale/ca/LC_MESSAGES/imagerename_plugin.mo
@@ -464,6 +465,7 @@ share/kde/locale/ca/LC_MESSAGES/kmines.mo
 share/kde/locale/ca/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/ca/LC_MESSAGES/kmix.mo
 share/kde/locale/ca/LC_MESSAGES/kmoon.mo
+share/kde/locale/ca/LC_MESSAGES/kmplot.mo
 share/kde/locale/ca/LC_MESSAGES/kmrml.mo
 share/kde/locale/ca/LC_MESSAGES/knewsticker.mo
 share/kde/locale/ca/LC_MESSAGES/knode.mo

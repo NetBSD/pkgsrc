@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/30 15:14:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/09/18 01:43:08 markd Exp $
 share/doc/kde/HTML/uk/common/1.png
 share/doc/kde/HTML/uk/common/10.png
 share/doc/kde/HTML/uk/common/2.png
@@ -313,6 +313,7 @@ share/kde/locale/uk/LC_MESSAGES/kfmclient.mo
 share/kde/locale/uk/LC_MESSAGES/kfmexec.mo
 share/kde/locale/uk/LC_MESSAGES/kfontviewpart.mo
 share/kde/locale/uk/LC_MESSAGES/kfouleggs.mo
+share/kde/locale/uk/LC_MESSAGES/kgantt.mo
 share/kde/locale/uk/LC_MESSAGES/kget.mo
 share/kde/locale/uk/LC_MESSAGES/kghostview.mo
 share/kde/locale/uk/LC_MESSAGES/kgpgcertmanager.mo
@@ -371,6 +372,7 @@ share/kde/locale/uk/LC_MESSAGES/konqsidebar_mediaplayer.mo
 share/kde/locale/uk/LC_MESSAGES/konqueror.mo
 share/kde/locale/uk/LC_MESSAGES/konquest.mo
 share/kde/locale/uk/LC_MESSAGES/konsole.mo
+share/kde/locale/uk/LC_MESSAGES/konsolekalendar.mo
 share/kde/locale/uk/LC_MESSAGES/kooka.mo
 share/kde/locale/uk/LC_MESSAGES/korganizer.mo
 share/kde/locale/uk/LC_MESSAGES/korn.mo
