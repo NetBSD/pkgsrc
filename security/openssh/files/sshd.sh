@@ -1,12 +1,14 @@
 #!/bin/sh
 #
-# $NetBSD: sshd.sh,v 1.2 2000/07/22 08:22:02 jlam Exp $
+# $NetBSD: sshd.sh,v 1.3 2000/07/24 16:44:52 jlam Exp $
 #
 
 name="sshd"
 pidfile="/var/run/${name}.pid"
 
-case $1 in
+command=${1:-start}
+
+case ${command} in
 start)
 	if [ ! -f @SSH_CONF_DIR@/ssh_host_key ]
 	then
