@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.11 1999/09/15 15:43:11 drochner Exp $
+# $NetBSD: Makefile,v 1.12 1999/09/15 16:49:10 drochner Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/07/19 19:43:36 fenner Exp
 #
 
-DISTNAME=	tcptrace.5.2.0
-PKGNAME=	tcptrace-5.2.0
+DISTNAME=	tcptrace.5.2.1
+PKGNAME=	tcptrace-5.2.1
 CATEGORIES=	net
-MASTER_SITES=	http://jarok.cs.ohiou.edu/software/tcptrace/files/5.2.0/
+MASTER_SITES=	http://jarok.cs.ohiou.edu/software/tcptrace/files/5.2.1/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://jarok.cs.ohiou.edu/software/tcptrace/tcptrace.html
 
-WRKSRC=         ${WRKDIR}/tcptrace_5.2.0
+WRKSRC=         ${WRKDIR}/tcptrace_5.2.1
 GNU_CONFIGURE=	yes
 
 ALL_TARGET=	tcptrace
