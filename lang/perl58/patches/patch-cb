@@ -1,0 +1,15 @@
+$NetBSD: patch-cb,v 1.1 2004/04/24 21:04:43 tv Exp $
+
+--- Makefile.SH.orig	Fri Apr 23 11:05:32 2004
++++ Makefile.SH	Fri Apr 23 11:06:03 2004
+@@ -58,6 +58,10 @@
+ 	sunos*)
+ 		linklibperl="-lperl"
+ 		;;
++	interix*)
++		linklibperl="-L. -lperl"
++		shrpldflags="$shrpldflags -Wl,--image-base,0x97000000"
++		;;
+ 	netbsd*|freebsd[234]*|openbsd*)
+ 		linklibperl="-L. -lperl"
+ 		;;
