@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/08/23 23:14:22 tron Exp $
+# $NetBSD: Makefile,v 1.8 2000/09/28 20:34:03 fredb Exp $
 
 DISTNAME=		dap-2.1.1
 CATEGORIES=		audio
@@ -8,7 +8,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		scw@netbsd.org
 HOMEPAGE=		http://www.cee.hw.ac.uk/~richardk/
 
-DEPENDS+=		xforms-0.88:../../x11/xforms
+DEPENDS+=		xforms>=0.88nb1:../../x11/xforms
 
 MAKEFILE=		Makefile.netbsd
 ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm32 *-*-i386 *-*-m68k *-*-sparc *-*-ns32k
