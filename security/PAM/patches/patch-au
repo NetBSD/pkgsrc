@@ -1,4 +1,4 @@
-$NetBSD: patch-au,v 1.4 2004/11/16 07:46:57 jlam Exp $
+$NetBSD: patch-au,v 1.5 2004/11/19 14:54:55 jlam Exp $
 
 --- modules/pam_filter/Makefile.orig	2001-11-11 02:43:54.000000000 -0500
 +++ modules/pam_filter/Makefile
@@ -15,7 +15,7 @@ $NetBSD: patch-au,v 1.4 2004/11/16 07:46:57 jlam Exp $
  	$(CC) $(CFLAGS) $(STATIC) $(CPPFLAGS) $(TARGET_ARCH) -c $< -o $@
  
 +%.lo : %.c
-+	$(SHLIBTOOL) --mode=compile $(CC) $(CFLAGS) $(INCLUDE_PAMMODUTILS) -DPAM_DYNAMIC $(TARGET_ARCH) -c $<
++	$(SHLIBTOOL) --mode=compile $(CC) $(CFLAGS) $(INCLUDE_PAMMODUTILS) $(LTCFLAGS) $(TARGET_ARCH) -c $<
 +
  ifdef DYNAMIC
  LIBSHARED = $(TITLE).so

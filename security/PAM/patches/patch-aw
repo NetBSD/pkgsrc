@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.4 2004/11/16 07:46:58 jlam Exp $
+$NetBSD: patch-aw,v 1.5 2004/11/19 14:54:55 jlam Exp $
 
 --- modules/pam_unix/Makefile.orig	2001-02-11 01:33:53.000000000 -0500
 +++ modules/pam_unix/Makefile
@@ -41,7 +41,7 @@ $NetBSD: patch-aw,v 1.4 2004/11/16 07:46:58 jlam Exp $
  	$(CC) $(CFLAGS) $(STATIC) $(CPPFLAGS) $(TARGET_ARCH) -c $< -o $@
  
 +%.lo : %.c
-+	$(SHLIBTOOL) --mode=compile $(CC) $(CFLAGS) $(CPPFLAGS) -DPAM_DYNAMIC $(TARGET_ARCH) -c $<
++	$(SHLIBTOOL) --mode=compile $(CC) $(CFLAGS) $(LTCFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c $<
 +
  dummy:
  	@echo "**** This is not a top-level Makefile "
