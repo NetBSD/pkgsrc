@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1091 2003/12/01 16:06:31 heinz Exp $
+$NetBSD: TODO,v 1.1092 2003/12/02 17:14:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -126,7 +126,7 @@ Suggested new packages
 Suggested package updates
 =========================
 
-	o Amaya-8.2
+	o Amaya-8.2 [pkg/23607]
 	o ImageViewer-0.6.3
 	o Lesstif-0.93.91
 	o R-1.8.1 [markd]
@@ -175,6 +175,7 @@ Suggested package updates
 	o cxref-1.5e
 	o cxunzip-0.98 [pkg/23404]
 	o cyrus-imapd21-2.1.16
+	o cyrus-sasl2-2.1.17
 	o dante-1.1.14
 	o dctc-0.85.6
 	o ddd-3.3.8
@@ -216,7 +217,7 @@ Suggested package updates
 	o gdm-2.4.4.4
 	o generator-0.35
 	o gentoo-0.11.44
-	o gettext-0.12.1
+	o gettext-0.13
 	o gforth-0.6.2
 	o gftp-2.0.16
 	o ghostscript-8.00 (apfl)
@@ -257,6 +258,7 @@ Suggested package updates
 	o icepref-2.2
 	o icu-2.6.1 [recht]
 	o inn-2.4.0
+	o intltool-0.27.2 [pkg/23618]
 	o iozone-3.203
 	o irssi-0.8.8 [pkg/23560]
 	o ispell-slovak-0.2.1 [salo]
@@ -450,6 +452,7 @@ Suggested package updates
 	o ysm-2.9.0
 	o zebra-0.94
 	o zenicb 1.31 (needs merge with lots of local changes)
+	o zlib-1.2.1
 	o zope-2.6.2
 	o gpsim-0.21.0 [bouyer]
 
