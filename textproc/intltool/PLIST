@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/06 13:15:21 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/02/01 16:08:15 jmmv Exp $
 bin/intltool-extract
 bin/intltool-merge
 bin/intltool-prepare
@@ -19,7 +19,10 @@ share/intltool/intltool-po-Makefile.in.in-patch-1
 share/intltool/intltool-po-Makefile.in.in-patch-2
 share/intltool/intltool-po-Makefile.in.in-patch-3
 share/intltool/intltool-po-Makefile.in.in-patch-4
+share/intltool/intltool-po-Makefile.in.in-patch-5
+share/intltool/intltool-po-Makefile.in.in-patch-6
 share/intltool/intltool-update.in
 share/intltool/xml-i18n-po-Makefile.in.in-patch-1
 share/intltool/xml-i18n-po-Makefile.in.in-patch-2
+share/intltool/xml-i18n-po-Makefile.in.in-patch-5
 @dirrm share/intltool
