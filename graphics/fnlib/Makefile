@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/06/01 11:23:27 rh Exp $
+# $NetBSD: Makefile,v 1.9 2000/06/21 01:02:10 jlam Exp $
 
 DISTNAME=		fnlib-0.5
 CATEGORIES=		x11 graphics
@@ -8,9 +8,11 @@ MAINTAINER=		root@garbled.net
 
 DEPENDS+=		imlib-*:../../graphics/imlib
 
-USE_X11BASE=		yes
-USE_PKGLIBTOOL=		yes
-GNU_CONFIGURE=		yes
+USE_X11BASE=		# defined
+GNU_CONFIGURE=		# defined
+
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fnlib
