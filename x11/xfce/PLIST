@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:08 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/14 10:04:53 martti Exp $
 bin/CDE2Xfcepal
 bin/glob
 bin/startxfce
@@ -34,6 +34,7 @@ etc/xfce/fvwmrc
 etc/xfce/xfbdrc
 etc/xfce/xfce3rc
 etc/xfce/xfce3rc.cs
+etc/xfce/xfce3rc.fr
 etc/xfce/xfce3rc.hu
 etc/xfce/xfce3rc.ja
 etc/xfce/xfce3rc.ko
@@ -126,6 +127,7 @@ share/xfce/backdrops/Eyes.xpm
 share/xfce/backdrops/Fire.xpm
 share/xfce/backdrops/Flames.xpm
 share/xfce/backdrops/Flow.xpm
+share/xfce/backdrops/Flower.jpg
 share/xfce/backdrops/Funkyblue.xpm
 share/xfce/backdrops/Gallets.xpm
 share/xfce/backdrops/Glasses.xpm
@@ -386,6 +388,7 @@ share/xfce/icons/X_server.xpm
 share/xfce/icons/Xmix.xpm
 share/xfce/icons/Xterm.xpm
 share/xfce/icons/Xv.xpm
+share/xfce/icons/xfsamba.xpm
 share/xfce/palettes/Alpine
 share/xfce/palettes/Altxfce
 share/xfce/palettes/Altxfce2
@@ -435,6 +438,7 @@ share/xfce/palettes/Mauve
 share/xfce/palettes/Metal
 share/xfce/palettes/Military
 share/xfce/palettes/Modern
+share/xfce/palettes/Modern2
 share/xfce/palettes/Moz9
 share/xfce/palettes/Moz9-2
 share/xfce/palettes/Nature
@@ -447,6 +451,7 @@ share/xfce/palettes/Plum
 share/xfce/palettes/Power
 share/xfce/palettes/Power2
 share/xfce/palettes/Prairie
+share/xfce/palettes/Prune
 share/xfce/palettes/Salmon
 share/xfce/palettes/Salmon2
 share/xfce/palettes/Sand
@@ -547,18 +552,18 @@ share/xfce/textures/oldwood.xpm
 share/xfce/textures/paper.xpm
 share/xfce/textures/silver.xpm
 share/xfce/textures/stripe.xpm
-@dirrm share/xfce/textures
-@dirrm share/xfce/sounds
-@dirrm share/xfce/palettes
-@dirrm share/xfce/icons
-@dirrm share/xfce/help/images
-@dirrm share/xfce/help/html/stylesheet-images
-@dirrm share/xfce/help/html
-@dirrm share/xfce/help
-@dirrm share/xfce/fonts
-@dirrm share/xfce/backdrops
-@dirrm share/xfce
+@dirrm etc/xfce
 @dirrm lib/gtk/themes/engines
 @dirrm lib/gtk/themes
 @dirrm lib/gtk
-@dirrm etc/xfce
+@dirrm share/xfce/backdrops
+@dirrm share/xfce/fonts
+@dirrm share/xfce/help/html/stylesheet-images
+@dirrm share/xfce/help/html
+@dirrm share/xfce/help/images
+@dirrm share/xfce/help
+@dirrm share/xfce/icons
+@dirrm share/xfce/palettes
+@dirrm share/xfce/sounds
+@dirrm share/xfce/textures
+@dirrm share/xfce
