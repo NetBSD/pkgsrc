@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/10/18 21:36:53 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/12/26 20:52:13 jlam Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of Xerces-J,
 # because although Xerces runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -30,5 +30,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/xercesSamples.jar ${PREFIX}/share/examples/java/xerces
 	cd ${WRKSRC}/data && ${PAX} -rwpp . ${PREFIX}/share/examples/java/xerces
 
-.include "../../mk/java.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

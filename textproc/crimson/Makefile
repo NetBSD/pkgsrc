@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/12/23 16:33:03 cjep Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/26 20:52:12 jlam Exp $
 #
 # We use the binary distribution of crimson because otherwise we
 # have a bootstrap-loop between jakarta-ant and crimson, each of which
@@ -28,5 +28,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/crimson
 	cd ${WRKSRC}/examples && ${PAX} -rwpp * ${PREFIX}/share/examples/java/crimson
 
-.include "../../mk/java.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/15 02:22:32 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/26 20:52:11 jlam Exp $
 #
 
 DISTNAME=	joos-0.2
@@ -17,5 +17,5 @@ do-install:
 	cd ${WRKSRC} && ${PAX} -s ,^./.*orig,, -rw . ${PREFIX}/joos
 	cd ${PREFIX}/joos/Bin && ${LN} -s joos.a- joos
 
-.include "../../mk/java.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
