@@ -1,7 +1,21 @@
-$NetBSD: manual-libtool.m4,v 1.6 2004/10/04 19:48:09 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.7 2004/10/08 17:37:50 tv Exp $
 
 --- libtool.m4.orig	2004-09-19 08:15:08.000000000 -0400
 +++ libtool.m4
+@@ -361,11 +361,11 @@ else
+ 
+   if test "X$echo" = Xecho; then
+     # We didn't find a better echo, so look for alternatives.
+-    if test "X`(print -r '\t') 2>/dev/null`" = 'X\t' &&
++    if test "X`(print -r - '\t') 2>/dev/null`" = 'X\t' &&
+        echo_testing_string=`(print -r "$echo_test_string") 2>/dev/null` &&
+        test "X$echo_testing_string" = "X$echo_test_string"; then
+       # This shell has a builtin print -r that does the trick.
+-      echo='print -r'
++      echo='print -r -'
+     elif (test -f /bin/ksh || test -f /bin/ksh$ac_exeext) &&
+ 	 test "X$CONFIG_SHELL" != X/bin/ksh; then
+       # If we have ksh, try running configure again with it.
 @@ -1201,6 +1201,7 @@ beos*)
  bsdi[[45]]*)
    version_type=linux
