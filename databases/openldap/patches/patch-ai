@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2004/03/07 12:12:38 markd Exp $
+
+--- configure.orig	2004-03-02 12:46:42.000000000 +1300
++++ configure
+@@ -10570,7 +10570,7 @@ LIBS="$ac_save_LIBS"
+ fi
+ if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  krb5crypto=des
++  krb5crypto="des -lcrypto"
+ else
+   echo "$ac_t""no" 1>&6
+ krb5crypto=crypto
