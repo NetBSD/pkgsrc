@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/02/09 16:08:58 bad Exp $
+# $NetBSD: Makefile,v 1.9 1999/09/06 04:48:53 sakamoto Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -19,10 +19,10 @@ PLIST_SRC=		${WRKDIR}/PLIST-src
 post-patch:
 	@machfiles="";							\
 	if [ ${MACHINE} = i386 ]; then					\
-		machfiles="$$machfiles ${PKGDIR}/PLIST.i386";		\
+		machfiles="$$machfiles ${PKGDIR}/PLIST.${MACHINE}";	\
 	fi ;								\
-	${CAT} ${PKGDIR}/PLIST.md $$machfiles ${PKGDIR}/PLIST.common |	\
-		${SED} -e 's|@OPSYS@|'`${ECHO} ${OPSYS} | ${TR} '[A-Z]' '[a-z]'`'|g' > ${PLIST_SRC}
+	${CAT} ${PKGDIR}/PLIST.md $$machfiles ${PKGDIR}/PLIST.common	\
+		> ${PLIST_SRC}
 
 post-configure:
 	@cd ${WRKSRC};							\
