@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/21 16:15:38 kim Exp $
+${PERL5_SITELIB}/Module/Build.pm
+${PERL5_SITELIB}/Module/Build/Base.pm
+${PERL5_SITELIB}/Module/Build/PPMMaker.pm
+${PERL5_SITELIB}/Module/Build/Cookbook.pm
+${PERL5_SITELIB}/Module/Build/Compat.pm
+${PERL5_SITELIB}/Module/Build/Platform/darwin.pm
+${PERL5_SITELIB}/Module/Build/Platform/VMS.pm
+${PERL5_SITELIB}/Module/Build/Platform/EBCDIC.pm
+${PERL5_SITELIB}/Module/Build/Platform/Amiga.pm
+${PERL5_SITELIB}/Module/Build/Platform/Windows.pm
+${PERL5_SITELIB}/Module/Build/Platform/MPEiX.pm
+${PERL5_SITELIB}/Module/Build/Platform/Unix.pm
+${PERL5_SITELIB}/Module/Build/Platform/MacOS.pm
+${PERL5_SITELIB}/Module/Build/Platform/VOS.pm
+${PERL5_SITELIB}/Module/Build/Platform/RiscOS.pm
+${PERL5_SITELIB}/Module/Build/Platform/Default.pm
