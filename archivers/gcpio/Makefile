@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/06/02 01:21:50 jschauma Exp $
+# $NetBSD: Makefile,v 1.17 2003/06/25 21:37:03 seb Exp $
 #
 
 DISTNAME=       cpio-2.4.2
@@ -15,6 +15,7 @@ USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 LIBS+=		-lgnumalloc
 
+USE_NEW_TEXINFO=	yes
 INFO_FILES=	cpio.info
 
 .include "../../mk/bsd.prefs.mk"
@@ -25,5 +26,4 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
