@@ -1,16 +1,15 @@
-$NetBSD: patch-ab,v 1.4 2001/04/09 16:44:59 drochner Exp $
+$NetBSD: patch-ab,v 1.5 2001/07/21 15:23:52 jlam Exp $
 
---- ../Makefile.in.orig	Fri Mar 23 22:50:48 2001
+--- ../Makefile.in.orig	Wed Feb 28 02:34:16 2001
 +++ ../Makefile.in
-@@ -364,11 +364,7 @@
- $(THOTDIR)/Options.in \
- $(THOTDIR)/configure.in \
- $(THOTDIR)/Makefile.in \
--$(THOTDIR)/libjpeg/Makefile.in \
- $(THOTDIR)/batch/Makefile.in \
--$(THOTDIR)/libjpeg/Makefile.in \
--$(THOTDIR)/libpng/Makefile.in \
--$(THOTDIR)/libpng/zlib/Makefile.in \
- $(THOTDIR)/tablelib/Makefile.in \
- $(THOTDIR)/thotlib/Makefile.in \
- $(THOTDIR)/thotlib/include/Makefile.in \
+@@ -186,8 +186,9 @@
+ 	  cd $(LIBWWW) ; unset LANG; \
+ 	  if [ ! -f Makefile -o ! -f wwwconf.h ] ; then \
+ 	  	$$libwwwdir/configure \
++			--prefix=${PREFIX} \
+ 			--disable-shared \
+-			--with-zlib="$$localdir/libz.a"; \
++			--with-zlib; \
+ 		$(ECHO) "libwww is configured" ; \
+ 	  fi)
+ 
