@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/03/19 08:48:17 skrll Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/02 21:42:37 wiz Exp $
 
 DISTNAME=	SNNSv4.2
 PKGNAME=	snns-4.2
@@ -15,8 +15,7 @@ CONFIGURE_ARGS= --enable-global --prefix=${LOCALBASE}
 
 XGUILOADPATH=	${LOCALBASE}/share/snns
 
-AUTOMAKE_PATTERNS+= \
-		config.hin
+AUTOMAKE_PATTERNS+= config.hin
 
 post-install:
 		${INSTALL_DATA_DIR} ${XGUILOADPATH};
