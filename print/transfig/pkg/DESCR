@@ -1,0 +1,5 @@
+TransFig is a set of tools for creating TeX documents with graphics
+which are portable, in the sense that they can be printed in a wide
+variety of environments.
+
+port-by: Tim Rightnour (root@garbled.futureone.com)
