@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/01/22 07:15:01 grant Exp $
+# $NetBSD: Makefile,v 1.27 2004/04/18 04:06:31 snj Exp $
 #
 
 DISTNAME=	xsidplay-1_5_4
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
 COMMENT=	Commodore 64 music player and SID chip emulator for X11
 
 WRKSRC=			${WRKDIR}/xsidplay-1.5.4
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
@@ -27,6 +27,6 @@ CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR}
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/src/xsidplay ${PREFIX}/bin
 
-.include "../../audio/libsidplay/buildlink2.mk"
-.include "../../x11/qt2-libs/buildlink2.mk"
+.include "../../audio/libsidplay/buildlink3.mk"
+.include "../../x11/qt2-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
