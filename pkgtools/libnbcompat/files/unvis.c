@@ -1,4 +1,4 @@
-/*	$NetBSD: unvis.c,v 1.1.1.1 2003/03/31 05:03:06 grant Exp $	*/
+/*	$NetBSD: unvis.c,v 1.2 2003/03/31 08:52:58 grant Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -45,7 +45,7 @@
 #if 0
 static char sccsid[] = "@(#)unvis.c	8.1 (Berkeley) 6/4/93";
 #else
-__RCSID("$NetBSD: unvis.c,v 1.1.1.1 2003/03/31 05:03:06 grant Exp $");
+__RCSID("$NetBSD: unvis.c,v 1.2 2003/03/31 08:52:58 grant Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -59,7 +59,7 @@ __RCSID("$NetBSD: unvis.c,v 1.1.1.1 2003/03/31 05:03:06 grant Exp $");
 #include <stdio.h>
 #include <vis.h>
 
-#if !HAVE_VIS_H
+#ifndef S_GROUND
 /*
  * decode driven by state machine
  */
@@ -72,10 +72,17 @@ __RCSID("$NetBSD: unvis.c,v 1.1.1.1 2003/03/31 05:03:06 grant Exp $");
 #define	S_OCTAL3	6	/* octal digit 3 */
 #define S_HEX1		7	/* hex digit */
 #define S_HEX2		8	/* hex digit 2 */
+#endif
 
+#ifndef isoctal
 #define	isoctal(c)	(((u_char)(c)) >= '0' && ((u_char)(c)) <= '7')
-#define xtod(c)		(isdigit(c) ? (c - '0') : ((tolower(c) - 'a') + 10))
+#endif
 
+#ifndef xtod
+#define xtod(c)		(isdigit(c) ? (c - '0') : ((tolower(c) - 'a') + 10))
+#endif
+
+#if !HAVE_UNVIS
 int
 unvis(cp, c, astate, flag)
 	char *cp;
@@ -267,6 +274,7 @@ __unvis13(cp, c, astate, flag)
 		return (UNVIS_SYNBAD);
 	}
 }
+#endif
 
 /*
  * strunvis - decode src into dst 
@@ -275,6 +283,7 @@ __unvis13(cp, c, astate, flag)
  *	Dst is null terminated.
  */
 
+#if !HAVE_STRUNVIS
 int
 strunvisx(dst, src, flag)
 	char *dst;
