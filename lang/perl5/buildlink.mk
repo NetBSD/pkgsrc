@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/11/25 23:09:19 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2001/11/25 23:18:23 jlam Exp $
 #
 # This Makefile fragment is included by packages that use perl.
 #
@@ -24,13 +24,19 @@ BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.perl}
 _CONFIG_PM=		${PERL5_ARCHLIB}/Config.pm
 _BUILDLINK_CONFIG_PM=	${_CONFIG_PM:S/${BUILDLINK_PREFIX.perl}\//${BUILDLINK_DIR}\//}
 
+_CPPFLAGS_LIBDIRS?=	${CPPFLAGS:M-I*:S/^-I//}
 _LDFLAGS_LIBDIRS?=	${LDFLAGS:M-L*:S/^-L//}
 
 _CONFIG_PM_SED=	\
 	-e "/^libpth=/s|${LOCALBASE}/lib|${_LDFLAGS_LIBDIRS}|g"		\
 	-e "/^libspath=/s|${LOCALBASE}/lib|${_LDFLAGS_LIBDIRS}|g"	\
+	-e "/^locincpth=/s|${LOCALBASE}/include|${_CPPFLAGS_LIBDIRS}|g"	\
+	-e "/^loclibpth=/s|${LOCALBASE}/lib|${_LDFLAGS_LIBDIRS}|g"	\
 	-e "s|-I${LOCALBASE}/include|${CPPFLAGS}|g"			\
 	-e "s|-L${LOCALBASE}/lib|${LDFLAGS}|g"
+
+REPLACE_RPATH_SED+=	-e "/^LD_RUN_PATH/s|${BUILDLINK_DIR}|${LOCALBASE}|g"
+REPLACE_RPATH_SED+=	-e "/^LD_RUN_PATH/s|${BUILDLINK_X11_DIR}|${X11BASE}|g"
 
 .if exists(${PERL5})
 .  if exists(${BUILDLINK_PREFIX.perl}/share/mk/bsd.perl.mk)
