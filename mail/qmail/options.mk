@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2004/12/21 05:32:56 schmonz Exp $
+# $NetBSD: options.mk,v 1.7 2005/01/26 03:48:21 schmonz Exp $
 
 .if ${OPSYS} == "Darwin"
 PKG_DEFAULT_OPTIONS+=	darwin
@@ -99,7 +99,7 @@ PLIST_SRC+=             ${PKGDIR}/PLIST.qregex
 .if !empty(PKG_OPTIONS:Mrealrcptto)
 REALRCPTTO_PATCH=	qmail-1.03-realrcptto-2004.08.20.patch
 PATCHFILES+=		${REALRCPTTO_PATCH}
-SITES_${REALRCPTTO_PATCH}=	http://multivac.cwru.edu/qmail/
+SITES_${REALRCPTTO_PATCH}=	http://code.dogmap.org/qmail/
 PATCH_DIST_STRIP.${REALRCPTTO_PATCH}=	-p1
 .endif
 
