@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/19 08:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:43:32 martti Exp $
 #
 
 DISTNAME=		TS-1.08
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.primate.wisc.edu/software/TS/
 
 MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.primate.wisc.edu/software/TS/
-COMMENT=		library of simple token-scanning routines
+COMMENT=		Library of simple token-scanning routines
 
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.bak

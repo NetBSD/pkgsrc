@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2003/07/17 21:34:28 grant Exp $
+# $NetBSD: Makefile,v 1.14 2003/07/21 16:44:35 martti Exp $
 #
 
 DISTNAME=		gedit-2.2.1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://gedit.sourceforge.net/
-COMMENT=		lightweight GNOME2 text editor
+COMMENT=		Lightweight GNOME2 text editor
 
 BUILD_USES_MSGFMT=	YES
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs

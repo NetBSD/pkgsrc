@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:34:42 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 16:44:37 martti Exp $
 
 DISTNAME=	Mule-UCS-0.84
 PKGREVISION=	4
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/Mule-UCS/
 
 MAINTAINER=	uebayasi@NetBSD.org
 #HOMEPAGE=	
-COMMENT=	another encoding conversion mechanism for Emacs
+COMMENT=	Another encoding conversion mechanism for Emacs
 
 # Mule 4.1 feature required by Mule-UCS was added to 20.7nb1.
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20

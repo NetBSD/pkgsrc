@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/20 23:25:19 sjg Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 16:43:32 martti Exp $
 #
 
 DISTNAME=	mk-20030714
@@ -9,7 +9,7 @@ MASTER_SITES=   ftp://ftp.NetBSD.org/pub/incoming/sjg/
 
 MAINTAINER=	sjg@NetBSD.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
-COMMENT=	portable *.mk files for the NetBSD portable bmake utility
+COMMENT=	Portable *.mk files for the NetBSD portable bmake utility
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

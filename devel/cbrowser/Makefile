@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:29:48 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:43:16 martti Exp $
 #
 
 DISTNAME=       cbrowser-0.6
@@ -7,7 +7,7 @@ MASTER_SITES=   http://www.ziplink.net/~felaco/cbrowser/
 
 MAINTAINER=     tech-pkg@NetBSD.org
 HOMEPAGE=       http://www.ziplink.net/~felaco/cbrowser/
-COMMENT=        graphical C/C++ source code browsing tool, and call graph viewer
+COMMENT=        Graphical C/C++ source code browsing tool, and call graph viewer
 
 DEPENDS+=	cscope-[0-9]*:../../devel/cscope
 

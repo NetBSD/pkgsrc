@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2003/07/17 21:31:10 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/07/21 16:43:24 martti Exp $
 #
 
 DISTNAME=	isect-1.6.2
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=isectd/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://isectd.sourceforge.net/
-COMMENT=	open source middleware daemon
+COMMENT=	Open source middleware daemon
 
 GNU_CONFIGURE=	yes
 USE_BUILDLINK2=	yes

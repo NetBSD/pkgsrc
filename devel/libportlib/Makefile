@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/19 08:54:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:43:30 martti Exp $
 #
 
 DISTNAME=		portlib-1.01
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.primate.wisc.edu/software/portlib/
 
 MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://www.primate.wisc.edu/software/portlib/
-COMMENT=		portable file locking and directory reading
+COMMENT=		Portable file locking and directory reading
 
 post-patch:
 	${MV} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.bak

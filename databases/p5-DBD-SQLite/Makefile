@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:28:31 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/21 16:39:07 martti Exp $
 #
 
 VER=		0.25
@@ -10,7 +10,7 @@ CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSERGEANT/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-COMMENT=	perl DBI/DBD driver for sqlite databases
+COMMENT=	Perl DBI/DBD driver for sqlite databases
 
 USE_BUILDLINK2=	YES
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/DBD/SQLite/.packlist

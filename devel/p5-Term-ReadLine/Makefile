@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 21:32:50 grant Exp $
+# $NetBSD: Makefile,v 1.7 2003/07/21 16:43:41 martti Exp $
 
 DISTNAME=	Term-ReadLine-Gnu-1.12
 PKGNAME=	p5-Term-ReadLine-1.12
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Term/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/Term-ReadLine-Gnu/
-COMMENT=	interface to the GNU Readline Library
+COMMENT=	Interface to the GNU Readline Library
 
 USE_BUILDLINK2=		yes
 USE_GNU_READLINE=	yes

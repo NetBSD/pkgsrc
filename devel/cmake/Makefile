@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:29:55 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/07/21 16:43:17 martti Exp $
 #
 
 DISTNAME=	cmake-1.6.6
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.cmake.org/files/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.cmake.org
-COMMENT=	cross platform make
+COMMENT=	Cross platform make
 
 GNU_CONFIGURE=	YES
 USE_BUILDLINK2=	YES

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2003/06/24 01:49:50 jschauma Exp $
+# $NetBSD: Makefile,v 1.58 2003/07/21 16:36:11 martti Exp $
 #
 
-COMMENT=	document format and character code converters
+COMMENT=	Document format and character code converters
 
 SUBDIR+=	2vcard
 SUBDIR+=	ack

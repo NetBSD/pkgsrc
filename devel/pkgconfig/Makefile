@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:33:08 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/07/21 16:43:44 martti Exp $
 #
 
 DISTNAME=	pkgconfig-0.15.0
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.freedesktop.org/software/pkgconfig/releases/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/software/pkgconfig/
-COMMENT=	system for managing library compile/link flags
+COMMENT=	System for managing library compile/link flags
 
 USE_BUILDLINK2=		YES
 GNU_CONFIGURE=		YES
