@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3100 2003/08/25 19:31:17 recht Exp $
+$NetBSD: CHANGES,v 1.3101 2003/08/25 19:35:28 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3336,3 +3336,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated verilog-current to 20030815 [drochner 2003-08-25]
 	Updated tnftp to 20030825 [lukem 2003-08-25]
 	Updated py-gtk2 to 1.99.18 [recht 2003-08-25]
+	Updated py-ORBit to 1.99.7 [recht 2003-08-25]
