@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.5 1999/10/26 01:31:04 hubertf Exp $
+
 --- sunaudio.c.orig	Sun Jul 18 20:57:36 1999
 +++ sunaudio.c	Thu Sep 30 01:43:33 1999
 @@ -17,7 +17,10 @@

@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.5 1999/10/26 01:31:07 hubertf Exp $
+
+--- play.orig	Tue Oct 26 03:16:27 1999
++++ play	Tue Oct 26 03:19:33 1999
+@@ -14,7 +14,7 @@
+ 
+ # Set up path so that it can find Sox if user's path doesn't already
+ # include it.
+-PATH=$PATH:/usr/local/bin
++PATH=$PATH:@PREFIX@/bin
+ program_name=`basename $0`
+ program_version="2.0"
+ 
+@@ -171,6 +171,12 @@
+     esac
+     if [ -z "$device" ]; then
+ 	device="/dev/audio"
++    fi
++    ;;
++  NetBSD)
++    arch_defines="-t sunau"
++    if [ -z "$device" ]; then
++        device="/dev/audio"
+     fi
+     ;;
+   Linux|FreeBSD)
