@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2002/04/04 09:46:55 tron Exp $
+$NetBSD: distinfo,v 1.7 2002/10/09 07:14:26 grant Exp $
 
 SHA1 (suse73/aaa_dir.rpm) = 1d72e879ca30db43c0bd016ca5b60dd0a1b241cd
 Size (suse73/aaa_dir.rpm) = 21765 bytes
-SHA1 (suse73/glibc-2.2.4-64.i386.rpm) = 0bd7fe9ec92ed137e135210e8074508eb6781f8b
-Size (suse73/glibc-2.2.4-64.i386.rpm) = 7626121 bytes
+SHA1 (suse73/glibc-2.2.4-77.i386.rpm) = b86609b8fea9566279e875bedff49fd63a049866
+Size (suse73/glibc-2.2.4-77.i386.rpm) = 7626501 bytes
 SHA1 (suse73/gppshare.rpm) = aed48270f42908201f4dd8bb92d583522fcb999a
 Size (suse73/gppshare.rpm) = 475345 bytes
 SHA1 (suse73/libz-1.1.3-597.i386.rpm) = af05da6bcd431e833a3df91544c8e2824a026be8
