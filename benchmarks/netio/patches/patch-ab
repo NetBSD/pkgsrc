@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2001/04/17 16:38:43 tron Exp $
+
+--- netio.c.orig	Wed Mar 28 13:17:28 2001
++++ netio.c	Tue Apr 17 18:33:19 2001
+@@ -282,6 +282,7 @@
+   bTimeOver = 0;
+   signal(SIGALRM, on_alarm);
+   alarm(nSeconds);
++  return 0;
+ }
+ 
+ int StartTimer(TIMER *nStart)
+@@ -603,7 +604,7 @@
+     {
+       while (!bTimeOver)
+       {
+-	if ((rc = send(server, cBuffer, tSizes[i], 0)) != tSizes[i] && errno != 0)
++	if ((rc = send(server, cBuffer, tSizes[i], 0)) != tSizes[i] && errno != 0 && errno != EINTR)
+ 	{
+ 	  psock_errno("send()");
+ 	  break;
