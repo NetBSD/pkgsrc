@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2002/04/30 15:10:01 veego Exp $
+@comment $NetBSD: PLIST,v 1.5 2002/05/06 11:13:45 wiz Exp $
 bin/mplayer
 man/man1/mplayer.1
 share/mplayer/DOCS/DVB
@@ -65,9 +65,6 @@ share/mplayer/DOCS/Polish/skin-en.html
 share/mplayer/DOCS/Polish/sound.html
 share/mplayer/DOCS/Polish/users_against_developers.html
 share/mplayer/DOCS/Polish/video.html
-share/mplayer/DOCS/SGML/DO_NOT_USE
-share/mplayer/DOCS/SGML/c
-share/mplayer/DOCS/SGML/docs.sgml
 share/mplayer/DOCS/bugreports.html
 share/mplayer/DOCS/cd-dvd.html
 share/mplayer/DOCS/codecs-in.html
@@ -104,7 +101,6 @@ share/mplayer/DOCS/users_against_developers.html
 share/mplayer/DOCS/video.html
 share/mplayer/codecs.conf
 @dirrm share/mplayer/DOCS/tech
-@dirrm share/mplayer/DOCS/SGML
 @dirrm share/mplayer/DOCS/Polish
 @dirrm share/mplayer/DOCS/Italian
 @dirrm share/mplayer/DOCS/Hungarian
