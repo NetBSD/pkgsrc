@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/14 13:02:55 agc Exp $
+
+--- Makefile.orig	Wed May  9 21:54:27 2001
++++ Makefile	Wed May  9 21:55:28 2001
+@@ -1,14 +1,14 @@
+ CC=gcc
+ CFLAGS=-O2 -s
+ 
+-FILES = szddinfo szddexpand SZDD
++FILES = szddinfo szddexpand
+ DISTFILES = Makefile SZDD SZDD.asm SZDD.c szddinfo szddinfo.c szddexpand \
+ 	szddexpand.c testme xfd_SZDD.readme
+ 
+ all: $(FILES)
+ 
+ clean:
+-	delete $(FILES)
++	rm $(FILES)
+ 
+ dist: all
+ 	-delete xfd_SZDD.lha
