@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.22 2000/08/25 00:51:21 wiz Exp $
+$NetBSD: md5,v 1.23 2000/12/05 18:56:45 drochner Exp $
 
-MD5 (lsof_4.51_W.tar.gz) = 10674b09649c19015134585c6dca3eee
+MD5 (lsof_4.52_W.tar.gz) = 256ee35b7d11c7b334e4c99c6c4fd0e1
