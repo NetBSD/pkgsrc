@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/16 16:54:26 recht Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/24 11:42:02 recht Exp $
 ${PYSITELIB}/SOAPpy/Client.py
 ${PYSITELIB}/SOAPpy/Client.pyc
 ${PYSITELIB}/SOAPpy/Client.pyo
@@ -8,6 +8,9 @@ ${PYSITELIB}/SOAPpy/Config.pyo
 ${PYSITELIB}/SOAPpy/Errors.py
 ${PYSITELIB}/SOAPpy/Errors.pyc
 ${PYSITELIB}/SOAPpy/Errors.pyo
+${PYSITELIB}/SOAPpy/GSIServer.py
+${PYSITELIB}/SOAPpy/GSIServer.pyc
+${PYSITELIB}/SOAPpy/GSIServer.pyo
 ${PYSITELIB}/SOAPpy/NS.py
 ${PYSITELIB}/SOAPpy/NS.pyc
 ${PYSITELIB}/SOAPpy/NS.pyo
@@ -62,8 +65,5 @@ ${PYSITELIB}/SOAPpy/wstools/XMLname.pyo
 ${PYSITELIB}/SOAPpy/wstools/__init__.py
 ${PYSITELIB}/SOAPpy/wstools/__init__.pyc
 ${PYSITELIB}/SOAPpy/wstools/__init__.pyo
-${PYSITELIB}/SOAPpy/wstools/ieee754.py
-${PYSITELIB}/SOAPpy/wstools/ieee754.pyc
-${PYSITELIB}/SOAPpy/wstools/ieee754.pyo
 @dirrm ${PYSITELIB}/SOAPpy/wstools
 @dirrm ${PYSITELIB}/SOAPpy
