@@ -1,16 +1,18 @@
-$NetBSD: patch-ac,v 1.5 2004/10/09 16:01:23 mjl Exp $
+$NetBSD: patch-ac,v 1.6 2004/10/09 19:33:47 mjl Exp $
 
 --- openh323u.mak.in.orig	2004-06-10 15:16:30.000000000 +0200
-+++ openh323u.mak.in	2004-10-09 17:48:43.000000000 +0200
-@@ -156,7 +156,7 @@
++++ openh323u.mak.in	2004-10-09 18:22:57.000000000 +0200
+@@ -156,8 +156,8 @@
  # Added auto inclusion of ptlib make rules
  #
  
 -PWLIBDIR	= @PWLIBDIR@
+-OPENH323DIR	= @OPENH323DIR@
 +PWLIBDIR	= $(PREFIX)
- OPENH323DIR	= @OPENH323DIR@
++OPENH323DIR?= $(PREFIX)
  STDCCFLAGS	+= @STDCCFLAGS@
  LDFLAGS		+= @LDFLAGS@
+ ENDLDLIBS	:= @ENDLDLIBS@ $(ENDLDLIBS)
 @@ -170,12 +170,12 @@
  NOTRACE	             = @NOTRACE@
  
