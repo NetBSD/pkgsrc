@@ -3,7 +3,7 @@
 # Date created:        28 October 1997
 # Whom:                Stefan Eßer <se@freebsd.org>
 #
-# $NetBSD: Makefile,v 1.2 1997/12/29 03:52:09 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1998/01/24 21:36:16 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -32,12 +32,12 @@ LIB_DEPENDS=	qt\\.1\\.3[0-9]:${PORTSDIR}/x11/qt \
 		mediatool\\.0\\.[6-9]:${PORTSDIR}/x11/kdelibs
 
 HAS_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--x-inc=$(X11BASE)/include -I$(PREFIX)/include -I$(PREFIX)/include/giflib" \
-		"--x-lib=$(X11BASE)/lib -L$(PREFIX)/lib" \
-		"--prefix=$(PREFIX)" \
-		"--datadir=$(PREFIX)/share/kde" \
-		"--with-qt-dir=$(PREFIX)" \
-		"--with-qt-includes=$(PREFIX)/include/qt"
+CONFIGURE_ARGS=	"--x-inc=${X11BASE}/include -I${PREFIX}/include -I${PREFIX}/include/giflib" \
+		"--x-lib=${X11BASE}/lib -L${PREFIX}/lib" \
+		"--prefix=${PREFIX}" \
+		"--datadir=${PREFIX}/share/kde" \
+		"--with-qt-dir=${PREFIX}" \
+		"--with-qt-includes=${PREFIX}/include/qt"
 
 WRKSRC=		${WRKDIR}/kdenetwork
 
