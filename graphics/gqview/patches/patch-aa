@@ -1,23 +1,13 @@
-$NetBSD: patch-aa,v 1.13 2002/09/27 11:18:38 wiz Exp $
+$NetBSD: patch-aa,v 1.14 2002/11/18 08:04:48 salo Exp $
 
---- configure.orig	Tue Jan  1 18:28:52 2002
-+++ configure
-@@ -2229,7 +2229,6 @@ else
-   FALSE_FALSE=
- fi
+--- src/Makefile.in.orig	Tue Jan  1 19:20:23 2002
++++ src/Makefile.in	Mon Nov 18 02:32:02 2002
+@@ -95,7 +95,7 @@
+ USE_NLS = @USE_NLS@
+ VERSION = @VERSION@
+ l = @l@
+-localedir = @localedir@
++localedir = $(prefix)/$(PKGLOCALEDIR)/locale
  
--localedir='${prefix}/share/locale'
- 
- 
- ALL_LINGUAS="cs da de es et fi fr hu it ja nl no pl pt_BR ru sk sl tr uk zh_CN.GB2312 zh_TW"
-@@ -4060,7 +4059,9 @@ fi
- 	< $srcdir/po/POTFILES.in > po/POTFILES
-   
- 
--
-+# Use ${PKGLOCALEDIR} for the location of installed locale files.
-+DATADIRNAME="${PKGLOCALEDIR}"
-+localedir='${prefix}/${DATADIRNAME}/locale'
- 
- 
- 
+ SUBDIRS = icons
+ DIST_SUBDIRS = icons
