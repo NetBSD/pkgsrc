@@ -1,11 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: nmbd.sh,v 1.5 2001/11/21 16:44:18 jlam Exp $
+# $NetBSD: nmbd.sh,v 1.6 2001/11/21 21:38:53 jlam Exp $
 #
 # PROVIDE: nmbd
 # REQUIRE: DAEMON
 
-if [ -d /etc/rc.d -a -f /etc/rc.subr ]
+if [ -e /etc/rc.subr ]
 then
 	. /etc/rc.subr
 fi
@@ -20,11 +20,11 @@ command_args="-D"		# _must_ start as daemon from rc.d;
 
 reload_cmd=":"			# avoid dumping debug output on SIGHUP
 
-if [ ! -d /etc/rc.d ]
+if [ -e /etc/rc.subr ]
 then
-	@ECHO@ -n ' ${name}'
-	${command} ${nmbd_flags} ${command_args}
-else
 	load_rc_config $name
 	run_rc_command "$1"
+else
+	@ECHO@ -n ' ${name}'
+	${command} ${nmbd_flags} ${command_args}
 fi
