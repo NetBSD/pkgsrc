@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 1998/08/29 12:31:44 garbled Exp $
+--- src/unexelf.c.orig	Fri Jul 24 06:17:28 1998
++++ src/unexelf.c	Fri Jul 24 06:17:36 1998
+@@ -419,3 +419,8 @@
+ #include <fcntl.h>
++#ifdef __NetBSD__ /* XXX this is a hack */
++#include "netbsd.elf.h"
++#include <sys/exec_elf.h>
++#else
+ #include <elf.h>
++#endif
+ #include <sys/mman.h>

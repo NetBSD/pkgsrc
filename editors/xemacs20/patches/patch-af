@@ -1,0 +1,9 @@
+$NetBSD: patch-af,v 1.3 1998/08/29 12:31:43 garbled Exp $
+--- src/m/alpha.h.orig	Fri Jul 24 02:30:29 1998
++++ src/m/alpha.h	Fri Jul 24 02:31:19 1998
+@@ -186,3 +186,5 @@
+ 
++#ifndef __NetBSD__
+ #define UNEXEC "unexalpha.o"
++#endif
+ 
