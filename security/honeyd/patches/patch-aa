@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/20 09:14:43 xtraeme Exp $
-
---- Makefile.in.orig	2004-04-20 11:00:09.000000000 +0200
-+++ Makefile.in	2004-04-20 11:01:05.000000000 +0200
-@@ -109,10 +109,10 @@
+--- Makefile.in.orig	2005-01-13 10:48:06.000000000 +0000
++++ Makefile.in	2005-01-13 10:52:09.000000000 +0000
+@@ -112,10 +112,10 @@
  libhoneyd_DATA = libhoneyd.so
  
  # Configuration files for Honeyd
@@ -15,12 +13,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/20 09:14:43 xtraeme Exp $
  
  
  honeydplugins = @PLUGINS@
-@@ -146,7 +146,7 @@
+@@ -152,7 +152,7 @@
  honeydctl_INCLUDES = @EDITINC@
  honeydctl_CFLAGS = -O2 -Wall
  
--CFLAGS = -O2 -Wall -g 	-DPATH_HONEYDINCLUDE="\"$(honeydincludedir)\"" 	-DPATH_HONEYDDATA="\"$(honeyddatadir)\"" 	-DPATH_HONEYDLIB="\"$(honeydlibdir)\"" 	-DHONEYD_PLUGINS_DECLARE="$(honeydpluginsdeclare)" 	-DHONEYD_PLUGINS="$(honeydplugins)"
-+CFLAGS += -DPATH_HONEYDINCLUDE="\"$(honeydincludedir)\"" 	-DPATH_HONEYDDATA="\"$(sysconfdir)\"" 	-DPATH_HONEYDLIB="\"$(honeydlibdir)\"" 	-DHONEYD_PLUGINS_DECLARE="$(honeydpluginsdeclare)" 	-DHONEYD_PLUGINS="$(honeydplugins)"
+-CFLAGS = -O2 -Wall -g 	-DPATH_HONEYDINCLUDE="\"$(honeydincludedir)\"" 	-DPATH_HONEYDDATA="\"$(honeyddatadir)\"" 	-DPATH_HONEYDLIB="\"$(honeydlibdir)\"" 	-DHONEYD_PLUGINS_DECLARE="$(honeydpluginsdeclare)" 	-DHONEYD_PLUGINS="$(honeydplugins)" 	-DPATH_RRDTOOL="\"$(PATH_RRDTOOL)\""
++CFLAGS += -DPATH_HONEYDINCLUDE="\"$(honeydincludedir)\"" 	-DPATH_HONEYDDATA="\"$(sysconfdir)\"" 	-DPATH_HONEYDLIB="\"$(honeydlibdir)\"" 	-DHONEYD_PLUGINS_DECLARE="$(honeydpluginsdeclare)" 	-DHONEYD_PLUGINS="$(honeydplugins)" 	-DPATH_RRDTOOL="\"$(PATH_RRDTOOL)\""
  
  
- INCLUDES = -I$(top_srcdir)/@DNETCOMPAT@ -I$(top_srcdir)/compat 	@PYTHONINC@ @EVENTINC@ @PCAPINC@ @DNETINC@
+ INCLUDES = -I$(top_srcdir)/@DNETCOMPAT@ -I$(top_srcdir)/compat 	@PYTHONINC@ @EVENTINC@ @PCAPINC@ @DNETINC@ @ZINC@
