@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.57 2004/11/01 16:39:06 gavan Exp $
+$NetBSD: distinfo,v 1.58 2004/12/10 06:05:16 markd Exp $
 
-SHA1 (kdebase-3.3.1.tar.bz2) = b3eafb32553ab621569301bb7628a5063a497dcf
-Size (kdebase-3.3.1.tar.bz2) = 19906317 bytes
+SHA1 (kdebase-3.3.2.tar.bz2) = 7807437bed2a2ee83591755f70ad42358a52a36e
+Size (kdebase-3.3.2.tar.bz2) = 19995043 bytes
 SHA1 (Daemon.png) = e77a42c644beecd66c4b95c0ae68c08c728a4e6d
 Size (Daemon.png) = 15725 bytes
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
@@ -15,6 +15,7 @@ SHA1 (patch-af) = ad9b3a97151c964d4adea2d8fecd780c6198b205
 SHA1 (patch-ag) = 89f50ee8b328cd654aebf1da5424e87eb6b42628
 SHA1 (patch-aj) = 2a0b38f4968bfca00e56ef4a6e06bfc3a874ae33
 SHA1 (patch-ak) = df7ff2bf5ed6bb2442d49df1c277712712a7f966
+SHA1 (patch-al) = f90dac7b597b12111e41d5f0c57b0f58d78cc83b
 SHA1 (patch-bb) = d4d352c9fb24792a2e5931ee9c5131cd735cec21
 SHA1 (patch-bc) = c236cc8b3f9caebf2540425232f2d90ec66c70d1
 SHA1 (patch-bx) = d58d16fd484fc0a46c1ae93267af19e73af6f990
@@ -31,7 +32,6 @@ SHA1 (patch-ff) = a027ccd5f578d41560e970aa54fca9b5760da0ac
 SHA1 (patch-fg) = 94cdd68ddeb14655b40b42f37ad263097ea4d195
 SHA1 (patch-fh) = 1d06d8f8f5fa00cca5c5aad74c9d1a27f2d1565c
 SHA1 (patch-fi) = 6bf3eec107f8c4ae9d82c05e84f5db0998536364
-SHA1 (patch-fj) = b7bdf2c069d6bd66af733ce6866295487ac716d3
 SHA1 (patch-fk) = b315f3338fcb2f960c4fa9daa00d80fbdbfb67a7
 SHA1 (patch-fl) = 7a51ca1c9b20b8dbab4437427812d9fda6a454d8
 SHA1 (patch-fm) = 9727089bbf03382ecd5d2fe5fa7d6c7ee7d1f765
@@ -42,7 +42,7 @@ SHA1 (patch-fq) = 4fa1c71a501808e28685cf4ea37ec11019e74e2a
 SHA1 (patch-fr) = 886c854a662157b500a85b99b9e0e61b2dcd1bf3
 SHA1 (patch-fs) = c4e130bef6cc202e12c9ebcf2b571ede0e0a34eb
 SHA1 (patch-ft) = 673763fa1329d943e32b0612262cde906c839ba7
-SHA1 (patch-fu) = 4765f271a7b5636cca4b94c8b261c55a76f8bf8c
+SHA1 (patch-fu) = e64dc64a4ba781e3ee09084680cbb2205be9e026
 SHA1 (patch-fv) = 8ec683f004e0e432b3820cbe8660f1d547d71fb6
 SHA1 (patch-fw) = bf0b590b6d416cfccbaed5dca4174002462db1ed
 SHA1 (patch-fx) = 95451a2c5c614d5e1ff4799991b2e2dc11eada0f
