@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2004/12/05 23:27:45 recht Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2004/12/06 07:56:38 recht Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/smtpd${PY_VER_SUFFIX}.py
@@ -1487,10 +1487,10 @@ lib/python${PY_VER_SUFFIX}/pipes.pyo
 lib/python${PY_VER_SUFFIX}/pkgutil.py
 lib/python${PY_VER_SUFFIX}/pkgutil.pyc
 lib/python${PY_VER_SUFFIX}/pkgutil.pyo
-lib/python${PY_VER_SUFFIX}/plat-${LOWER_OPSYS}/IN.py
-lib/python${PY_VER_SUFFIX}/plat-${LOWER_OPSYS}/IN.pyc
-lib/python${PY_VER_SUFFIX}/plat-${LOWER_OPSYS}/IN.pyo
-lib/python${PY_VER_SUFFIX}/plat-${LOWER_OPSYS}/regen
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.py
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.pyc
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.pyo
+lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/regen
 lib/python${PY_VER_SUFFIX}/platform.py
 lib/python${PY_VER_SUFFIX}/platform.pyc
 lib/python${PY_VER_SUFFIX}/platform.pyo
@@ -1821,9 +1821,9 @@ lib/python${PY_VER_SUFFIX}/test/test_al.pyo
 lib/python${PY_VER_SUFFIX}/test/test_anydbm.py
 lib/python${PY_VER_SUFFIX}/test/test_anydbm.pyc
 lib/python${PY_VER_SUFFIX}/test/test_anydbm.pyo
-lib/python${PY_VER_SUFFIX}/test/test_${LOWER_VENDOR}single.py
-lib/python${PY_VER_SUFFIX}/test/test_${LOWER_VENDOR}single.pyc
-lib/python${PY_VER_SUFFIX}/test/test_${LOWER_VENDOR}single.pyo
+lib/python${PY_VER_SUFFIX}/test/test_applesingle.py
+lib/python${PY_VER_SUFFIX}/test/test_applesingle.pyc
+lib/python${PY_VER_SUFFIX}/test/test_applesingle.pyo
 lib/python${PY_VER_SUFFIX}/test/test_array.py
 lib/python${PY_VER_SUFFIX}/test/test_array.pyc
 lib/python${PY_VER_SUFFIX}/test/test_array.pyo
