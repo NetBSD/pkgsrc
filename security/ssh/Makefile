@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2004/02/21 06:30:05 xtraeme Exp $
+# $NetBSD: Makefile,v 1.109 2004/02/21 13:55:01 grant Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -35,7 +35,8 @@ GNU_CONFIGURE=		YES
 SSH_CONF_DIR=		${PKG_SYSCONFDIR}
 
 CONFIGURE_ARGS+=	--with-etcdir=${SSH_CONF_DIR}
-MAKE_FLAGS+=		_OPSYS_RPATH_NAME=${_OPSYS_RPATH_NAME}
+X_LDFLAGS=		-Wl,${RPATH_FLAG}${X11BASE}/lib
+MAKE_ENV+=		X_LDFLAGS="${X_LDFLAGS}"
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-libwrap
