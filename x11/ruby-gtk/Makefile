@@ -1,43 +1,42 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:06:46 wiz Exp $
-# FreeBSD Id: ports/x11-toolkits/ruby-gtk/Makefile,v 1.3 1999/08/31 02:59:33 peter Exp
+# $NetBSD: Makefile,v 1.9 2001/06/30 15:23:01 taca Exp $
+# FreeBSD: ports/x11-toolkits/ruby-gtk/Makefile,v 1.16 2000/10/15 15:45:59 knu Exp
 
-DISTNAME=	ruby-gtk-0.23
+DISTNAME=	ruby-gtk-0.25
+PKGNAME=	${RUBY_PKGNAMEPREFIX}gtk-0.24
 CATEGORIES=	x11
-MASTER_SITES=	http://www.ueda.info.waseda.ac.jp/~igarashi/ruby/ \
-		ftp://ftp.netlab.co.jp/pub/lang/ruby/contrib/ \
-		ftp://ftp.TokyoNet.AD.JP/pub/misc/ruby/contrib/ \
-		ftp://ftp.iij.ad.jp/pub/lang/ruby/contrib/ \
-		ftp://blade.nagaokaut.ac.jp/pub/lang/ruby/contrib/ \
-		ftp://ftp.krnet.ne.jp/pub/ruby/contrib/ \
-		ftp://mirror.nucba.ac.jp/mirror/ruby/contrib/
+MASTER_SITES=	http://www.ruby-lang.org/gtk/download/
 
-MAINTAINER=	sakamoto@netbsd.org
+MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://www.ruby-lang.org/gtk/en/
 COMMENT=	Ruby interface to Gtk+ toolkits
 
-DEPENDS+=	ruby-1.4.*:../../lang/ruby
+WRKSRC=		${WRKDIR}/${DISTNAME:S/ruby-//}
+
+DIST_SUBDIR=	ruby
+USE_RUBY_EXTCONF= yes
+USE_X11=	yes
+
+INSTALL_TARGET=	site-install
+
 DEPENDS+=	imlib-*:../../graphics/imlib
 
-USE_X11=	YES
-WRKSRC=		${WRKDIR}/${DISTNAME:S/ruby-//}
-RUBY_VERSION=	1.4
-PLIST_SUBST=	RUBY_VERSION=${RUBY_VERSION}
-
-RUBY=		${PREFIX}/bin/ruby
+DOCS_EN=	README README.EXT doc/rbbr.rb
+DOCS_JA=	README.ja README.EXT.ja
 
 do-configure:
 	@(cd ${WRKSRC}; ${SETENV} ${CONFIGURE_ENV} ${RUBY} extconf.rb)
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/lib/*.rb ${PREFIX}/lib/ruby/${RUBY_VERSION}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ruby/gtk
-	${GTAR} Ccf ${WRKSRC}/sample - .|${GTAR} Cxf ${PREFIX}/share/examples/ruby/gtk -
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ruby/gtk/browser
-	${INSTALL_DATA} ${WRKSRC}/doc/*.rb ${PREFIX}/share/examples/ruby/gtk/browser
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ruby-gtk
-	${GTAR} Ccf ${WRKSRC}/doc - .happy api api-ja|${GTAR} Cxf ${PREFIX}/share/doc/ruby-gtk -
-.for f in BUGS MEMO-Imlib README README.EXT README.EXT.ja README.ja ToDo
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/ruby-gtk
-.endfor
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/gtk
+	${INSTALL_DATA} ${WRKSRC}/sample/*.rb ${RUBY_EXAMPLESDIR}/gtk
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/gtk/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/rbbr.rb \
+		${RUBY_EXAMPLESDIR}/gtk/doc
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/gtk/test
+	${INSTALL_DATA} ${WRKSRC}/sample/test/* ${RUBY_EXAMPLESDIR}/gtk/test
+	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/gtk/testgtk
+	${INSTALL_DATA} ${WRKSRC}/sample/testgtk/* \
+		${RUBY_EXAMPLESDIR}/gtk/testgtk
 
+.include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
