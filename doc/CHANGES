@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6696 2004/07/27 11:49:15 simonb Exp $
+$NetBSD: CHANGES,v 1.6697 2004/07/27 13:04:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3593,3 +3593,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated netscape7 to 7.1nb3 [atatat 2004-07-27]
 	Updated tnftp to 20030825nb1 [grant 2004-07-27]
 	Updated clamav to 0.75 [simonb 2004-07-27]
+	Updated arj to 3.10.21 [wiz 2004-07-27]
