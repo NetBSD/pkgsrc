@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/11/23 09:57:17 tron Exp $
+# $NetBSD: Makefile,v 1.7 1999/12/01 21:15:20 tron Exp $
 
 DISTNAME=	sendmail.8.9.3
 PKGNAME=	sendmail-8.9.3
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.sendmail.org/
 
-DEPENDS+=	db-2.7.7:../../databases/db
-
 LICENSE=	no-profit
 
 NO_CONFIGURE=	yes
@@ -20,6 +18,17 @@ MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 WRKSRC=		${WRKDIR}/${PKGNAME}
 OBJDIR!=	echo obj.`uname -srm | tr \  .`
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(USE_DB2) && ${USE_DB2} == YES
+DEPENDS+=	db-2.7.7:../../databases/db
+
+MAKE_ENV+=	DB_ENVDEF="-I${LOCALBASE}/include/db2" \
+		DB_LIBS="-L${LOCALBASE}/lib -ldb2"
+.else
+MAKE_ENV+=	DB_ENVDEF="" DB_LIBS=""
+.endif
 
 post-build:
 	${SED} -e 's#@@PKGNAME@@#${PKGNAME}#g' \
