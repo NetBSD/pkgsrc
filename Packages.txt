@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.155 2001/05/01 16:06:27 dmcmahill Exp $
+# $NetBSD: Packages.txt,v 1.156 2001/05/03 21:38:29 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1920,6 +1920,31 @@ CONFIGURE_ARGS+=	--with-curses=${LOCALBASE}
 
 Please note that the check for NEED_NCURSES has to be below the
 inclusion of bsd.prefs.mk, since the variable is set there.
+
+
+ 9.21 Automated security check
+ =============================
+
+Third party software as provided by pkgsrc unfortunately has it's bugs just
+as all other software has, and some of the bugs are security related. To
+aid in an automated check, users can install the
+pkgsrc/security/audit-packages package, which will provide two scripts:
+
+(1) download-vulnerability-list, an easy way to download a list of
+security vulnerabilities which have been published.  This list is kept
+up to date by the NetBSD security officer.  It is held at the
+well-known URL:
+
+ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/vulnerabilities
+
+(2) audit-packages, an easy way to audit the current machine, checking
+each vulnerability listed by the security officer.  If a vulnerable
+package is installed, it will be shown by output to stdout.
+
+Note to package developers: When a vulnerability is found, this should be
+noted in localsrc/security/advisories/pkg-vulnerabilities, and after the
+commit of that file, it should be copied to
+/pub/NetBSD/packages/distfiles/vulnerabilities on ftp.netbsd.org. 
 
 
  10 Submitting & Committing
