@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:32:03 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/27 18:32:34 jlam Exp $
 #
 
 DISTNAME=	gnya
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.shar
 MAINTAINER=	kei@netbsd.org
 HOMEPAGE=	http://www2.is.titech.ac.jp/~sadayosi/lab/h-takasi/h.html
 COMMENT=	Accessory with Bezier curve
-
-EXTRACT_CMD=    ${CAT} ${DOWNLOADED_DISTFILE} | ${SH}
 
 USE_IMAKE=	YES
 USE_XPM=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 15:22:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/01/27 18:32:34 jlam Exp $
 
 DISTNAME=	prag-1.0pl2
 PKGNAME=	prag-1.0.2
@@ -11,10 +11,6 @@ COMMENT=	replacement to "grap" graph generator backend to pic
 
 WRKSRC=		${WRKDIR}/prag-1.0
 NO_BUILD=	yes
-
-do-extract:
-	${MKDIR} ${WRKDIR}
-	(cd ${WRKDIR}; ${SH} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX})
 
 post-patch:
 	(cd ${WRKSRC}; ${MV} prag prag.orig)
