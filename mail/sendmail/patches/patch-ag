@@ -1,8 +1,32 @@
-$NetBSD: patch-ag,v 1.6 2003/09/15 11:47:28 markd Exp $
+$NetBSD: patch-ag,v 1.7 2004/07/13 12:27:13 markd Exp $
 
---- include/sm/conf.h.orig	2003-09-15 22:16:32.000000000 +1200
+--- include/sm/conf.h.orig	2004-01-07 13:52:16.000000000 +1300
 +++ include/sm/conf.h
-@@ -890,6 +890,9 @@ extern unsigned int sleepX __P((unsigned
+@@ -780,7 +780,11 @@ extern unsigned int sleepX __P((unsigned
+ #  ifndef LA_TYPE
+ #   define LA_TYPE	LA_SUBR
+ #  endif /* ! LA_TYPE */
++#if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
++#  define SFS_TYPE	SFS_STATVFS	/* use <sys/statvfs.h> statfs() impl */
++#else
+ #  define SFS_TYPE	SFS_MOUNT	/* use <sys/mount.h> statfs() impl */
++#endif
+ #  define SPT_TYPE	SPT_PSSTRINGS	/* use PS_STRINGS pointer */
+ # endif /* defined(BSD4_4) && !defined(__bsdi__) && !defined(__GNU__) */
+ 
+@@ -894,7 +898,11 @@ extern unsigned int sleepX __P((unsigned
+ #  ifndef LA_TYPE
+ #   define LA_TYPE	LA_SUBR
+ #  endif /* ! LA_TYPE */
++#if defined(__NetBSD__) && (__NetBSD_Version__ > 200030000)
++#  define SFS_TYPE	SFS_STATVFS	/* use <sys/statvfs.h> statfs() impl */
++#else
+ #  define SFS_TYPE	SFS_MOUNT	/* use <sys/mount.h> statfs() impl */
++#endif
+ #  if defined(__NetBSD__) && (NetBSD > 199307 || NetBSD0_9 > 1)
+ #   undef SPT_TYPE
+ #   define SPT_TYPE	SPT_BUILTIN	/* setproctitle is in libc */
+@@ -902,6 +910,9 @@ extern unsigned int sleepX __P((unsigned
  #  if defined(__NetBSD__) && ((__NetBSD_Version__ > 102070000) || (NetBSD1_2 > 8) || defined(NetBSD1_4) || defined(NetBSD1_3))
  #   define HASURANDOMDEV	1	/* has /dev/urandom(4) */
  #  endif /* defined(__NetBSD__) && ((__NetBSD_Version__ > 102070000) || (NetBSD1_2 > 8) || defined(NetBSD1_4) || defined(NetBSD1_3)) */
