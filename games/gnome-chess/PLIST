@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:52:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/07/17 13:11:44 rh Exp $
 bin/gnome-chess
 share/gnome-chess/glade/level.glade
 share/gnome-chess/glade/login.glade
@@ -77,3 +77,5 @@ share/pixmaps/gnome-chess/start.png
 @dirrm share/gnome/help/gnome-chess-manual
 @dirrm share/gnome-chess/glade
 @dirrm share/gnome-chess
+@unexec scrollkeeper-rebuilddb
+@exec scrollkeeper-rebuilddb
