@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2002/05/29 08:19:57 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2002/06/02 18:09:35 wiz Exp $
 #
 
 DISTNAME=		pth-1.4.1
-PKGNAME=		${DISTNAME:C/pth/&-syscall/}
+PKGNAME=		${DISTNAME:C/pth/pth-syscall/}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=pth/}
 
