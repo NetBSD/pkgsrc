@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.46 2003/02/13 06:35:45 jlam Exp $
+# $NetBSD: Makefile,v 1.46.2.1 2003/03/23 00:50:57 jmc Exp $
 
 DISTNAME=	cdrtools-2.0
 PKGNAME=	cdrecord-2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/
 
 MAINTAINER=	lukem@netbsd.org
 HOMEPAGE=	http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html
-COMMENT=	This program allows you to create CD's on a CD-Recorder
+COMMENT=	This program allows you to create CDs on a CD-Recorder
 
 CONFLICTS=	mkisofs-[0-9]*
 
@@ -28,6 +28,27 @@ MAKE_ENV+=      ARCH=""
 MAKE_ENV+=      MAKEPROG="gmake"
 MAKE_ENV+=	COPTX="${CFLAGS}"
 MAKE_ENV+=	LDOPTX="${LDFLAGS}"
+
+# allow us to override the default /etc/default/cdrecord by patching
+# the documentation appropriately. Additionally, we also provide a
+# MESSAGE stating the reasons we do this, as required by the license.
+CDRECORD_CONF?=	${PKG_SYSCONFDIR}/cdrecord.conf
+
+.if ${CDRECORD_CONF} != "/etc/default/cdrecord"
+MESSAGE_SRC+=	MESSAGE.cdrecord.conf
+MESSAGE_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV}
+MESSAGE_SUBST+=	CDRECORD_CONF=${CDRECORD_CONF}
+.endif
+
+CDRECORD_CONF_FILES=	cdrecord/defaults.c cdrecord/cdrecord.1
+CDRECORD_CONF_FILES+=	readcd/readcd.1
+
+post-patch:
+	@cd ${WRKSRC}; for file in ${CDRECORD_CONF_FILES}; do		\
+		${MV} ${WRKSRC}/$$file ${WRKSRC}/$${file}.old &&	\
+		${SED} -e 's|@CDRECORD_CONF@|${CDRECORD_CONF}|'	\
+			${WRKSRC}/$${file}.old > ${WRKSRC}/$$file;	\
+	done
 
 do-configure:
 	cd ${WRKSRC}/RULES;						\
