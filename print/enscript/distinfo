@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.4 2003/05/01 12:58:16 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2005/03/17 12:24:13 salo Exp $
 
-SHA1 (enscript-1.6.1.tar.gz) = f99e21a8366baf331daaa6675d7c9d2dc026eb27
-Size (enscript-1.6.1.tar.gz) = 645856 bytes
-SHA1 (patch-aa) = 7cab0636de9b4551391a6c2753eaf0c8c2a01679
-SHA1 (patch-ab) = 1cb3f286421dc772475246617ec270d887971018
+SHA1 (enscript-1.6.3.tar.gz) = 2189c1f9b80160d4b2acac0f60cc7c7ff05f10aa
+RMD160 (enscript-1.6.3.tar.gz) = 7aafd03dad2e9a1fb3bbf61ed9b95ed6bef02921
+Size (enscript-1.6.3.tar.gz) = 814308 bytes
+SHA1 (patch-aa) = 4f958c8e2b01cf6934beebe249f1f67da2fb3f11
+SHA1 (patch-ab) = 13885dbd3aa0d0e90f8aa07640c4d917d7feaf13
 SHA1 (patch-ac) = 9d4d412e3016b7490741f7c6ba31d43b2be1465b
+SHA1 (patch-ad) = b2f12cc6875289978194315927ccbc8e963476a2
+SHA1 (patch-ae) = 9a3209196eea1c6ed1f07f39fb7b4f1c35cdb850
