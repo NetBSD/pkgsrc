@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-#	$NetBSD: bsd.pkg.mk,v 1.64 1998/04/17 09:37:24 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.65 1998/04/19 02:49:46 tv Exp $
 #
 #	This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #	This file is in the public domain.
@@ -439,8 +439,8 @@ RUN_DEPENDS+=		perl5.00404:${PORTSDIR}/lang/perl5
 USE_GTEXINFO=		yes
 .endif
 .if defined(USE_GTEXINFO)
-BUILD_DEPENDS+=		${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
-RUN_DEPENDS+=		${PREFIX}/bin/install-info:${PORTSDIR}/devel/gtexinfo
+BUILD_DEPENDS+=		install-info:${PORTSDIR}/devel/gtexinfo
+RUN_DEPENDS+=		install-info:${PORTSDIR}/devel/gtexinfo
 .endif
 
 
