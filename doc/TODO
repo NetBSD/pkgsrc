@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.246 2003/02/09 15:51:23 wiz Exp $
+$NetBSD: TODO,v 1.247 2003/02/10 15:37:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -115,7 +115,7 @@ Suggested package updates
 	o fox-1.0.31
 	o freeciv-1.14.0
 	o fsviewer-0.2.5
-	o g-wrap-1.3.4
+	o g-wrap-1.3.4 [pkg/20270]
 	o gauche-0.6.7 [kei]
 	o gcc3-3.2.2
 	o gcombust-0.1.54
@@ -139,7 +139,7 @@ Suggested package updates
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99beta
 	o gnuboy-1.0.3 [pkg/19580]
-	o gnucash-1.8.0
+	o gnucash-1.8.0 [pkg/20271]
 	o gnuplot-3.7.3 [pkg/19663]
 	o gpa-0.6.1
 	o gpgme-0.4.0
@@ -238,8 +238,9 @@ Suggested package updates
 	o py-wxWindows-2.4.0.2
 	o pygtk-0.6.11
 	o qt3-3.1.1 [skrll]
+	o rdiff-backup-0.10.2 [pkg/20268]
 	o rep-gtk-0.16
-	o rocksndiamonds-2.2.0rc2
+	o rocksndiamonds-2.2.0rc3
 	o rox-1.2.2
 	o rox-session-0.1.17
 	o rrdtool-1.0.39
@@ -247,7 +248,7 @@ Suggested package updates
 	o ruby-1.6.8
 	o rxvt-2.7.9
 	o sablotron-0.97
-	o sane-backends-1.0.10
+	o sane-backends-1.0.11
 	o sane-frontends-1.0.10
 	o scmxx-0.6.3.5 [pkg/20017]
 	o scribus-0.8
@@ -289,6 +290,7 @@ Suggested package updates
 	o vfu-4.00
 	o vice-1.11
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
+	o wdm-1.22
 	o wine-20021219 [pkg/19747]
 	o wine-20030115
 	o wwwoffle-2.7h
@@ -300,6 +302,7 @@ Suggested package updates
 	o xmame-0.64.1rc2
 	o xmcd-3.2.0
 	o xmess-0.64.1rc2
+	o xosview-1.8.0 [pkg/20265]
 	o xpuyopuyo-0.9.5
 	o xsane-0.90
 	o xscreensaver-4.07
