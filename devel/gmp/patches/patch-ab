@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.5 2005/03/15 15:51:30 wiz Exp $
+
+--- gmp-impl.h.orig	2004-04-23 01:59:53.000000000 +0200
++++ gmp-impl.h
+@@ -2466,7 +2466,8 @@ typedef unsigned int UHWtype;
+ 
+ /* Define ieee_double_extract and _GMP_IEEE_FLOATS.  */
+ 
+-#if (defined (__arm__) && (defined (__ARMWEL__) || defined (__linux__)))
++#if (defined (__arm__) && !defined(__VFP_FP__) \
++    && (defined (__ARMWEL__) || defined (__linux__)))
+ /* Special case for little endian ARM since floats remain in big-endian.  */
+ #define _GMP_IEEE_FLOATS 1
+ union ieee_double_extract
+@@ -2483,6 +2484,7 @@ union ieee_double_extract
+ #else
+ #if defined (_LITTLE_ENDIAN) || defined (__LITTLE_ENDIAN__)		\
+  || defined (__alpha)							\
++ || (defined (__arm__) && defined (__VFP_FP__) && defined (__ARMEL__))	\
+  || defined (__clipper__)						\
+  || defined (__cris)							\
+  || defined (__i386__)							\
