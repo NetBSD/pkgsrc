@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4379 2004/01/07 14:36:39 keihan Exp $
+$NetBSD: CHANGES,v 1.4380 2004/01/07 15:14:23 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -84,3 +84,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added amule-1.2.3 [xtraeme 2004-01-06]
 	Added libpqxx-2.1.3 [is 2004-01-07]
 	Added libpqxx-doc-2.1.3 [is 2004-01-07]
+	Added upx-1.24 [ben 2004-01-07]
