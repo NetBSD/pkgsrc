@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/02 22:53:25 rh Exp $
+bin/gsymcheck
+man/man1/gsymcheck.1
+share/gEDA/system-gsymcheckrc
