@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/01/23 16:48:54 recht Exp $
+# $NetBSD: Makefile,v 1.10 2004/05/05 09:06:45 recht Exp $
 #
 
 DISTNAME=	xmltools-1.3.7
@@ -11,11 +11,12 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.logilab.org/xmltools/
 COMMENT=	High level tools to help using XML in python
 
-PYDISTUTILSPKG=	yes
-USE_BUILDLINK2=	YES
+DEPENDS=	${PYPKGPREFIX}-FourSuite>=0.12:../../textproc/py-FourSuite
 
-.include "../../textproc/py-xml/buildlink2.mk"
-.include "../../textproc/py-FourSuite/buildlink2.mk"
-.include "../../x11/pygtk/buildlink2.mk"
+PYDISTUTILSPKG=	yes
+USE_BUILDLINK3=	yes
+
+.include "../../textproc/py-xml/buildlink3.mk"
+.include "../../x11/pygtk/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
