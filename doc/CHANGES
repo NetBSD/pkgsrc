@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5251 2004/03/12 23:46:06 recht Exp $
+$NetBSD: CHANGES,v 1.5252 2004/03/13 09:56:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1461,3 +1461,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed avi-xmms [snj 2004-03-12]
 	Updated bittorrent to 3.4.1 [recht 2004-03-12]
 	Updated bittorrent-gui to 3.4.1 [recht 2004-03-12]
+	Updated libxslt to 1.1.4 [jmmv 2004-03-13]
