@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/29 03:31:15 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2005/02/24 12:13:50 agc Exp $
 
 SHA1 (iftop-0.16.tar.gz) = 6ac701e87b9ed3b7ce4d6e0a286006889d956701
+RMD160 (iftop-0.16.tar.gz) = 5423408f1bb5e8f4e16b0cb8f5523bd6cd424b32
 Size (iftop-0.16.tar.gz) = 153446 bytes

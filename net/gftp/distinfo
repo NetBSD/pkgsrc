@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.6 2004/04/05 02:45:45 xtraeme Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 12:13:46 agc Exp $
 
 SHA1 (gftp-2.0.17.tar.bz2) = beeb1edfac3aa5b9b7a4a02d0a0a3ed374fc2ce0
+RMD160 (gftp-2.0.17.tar.bz2) = 5327e7c563dcafa8da8f89e5faf1d559e44f3abc
 Size (gftp-2.0.17.tar.bz2) = 1228736 bytes

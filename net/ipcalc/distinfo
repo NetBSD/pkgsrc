@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.4 2002/02/10 22:11:36 zuntum Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 12:13:50 agc Exp $
 
 SHA1 (ipcalc-0.35/ipcalc.pl) = 9ed41594d999f68b28ac5b02602ce30c2ccfc0d3
+RMD160 (ipcalc-0.35/ipcalc.pl) = c14eb366c30992cfcb5054496a4b6c84a84a5c6d
 Size (ipcalc-0.35/ipcalc.pl) = 13992 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2005/01/12 12:28:04 cube Exp $
+$NetBSD: distinfo,v 1.7 2005/02/24 12:14:01 agc Exp $
 
 SHA1 (pptpd-1.2.1.tar.gz) = ffbeff5d8a8c0725125ec0682b0871e927aefba4
+RMD160 (pptpd-1.2.1.tar.gz) = c51eaf792d526755dde0aae591a598e02667bb1d
 Size (pptpd-1.2.1.tar.gz) = 180974 bytes
 SHA1 (patch-aa) = 40e5873fc582040112e97477e3709e729245d4c9
 SHA1 (patch-ab) = 43741ecf4f1f52113814ccd0f70a9ab173c0667f

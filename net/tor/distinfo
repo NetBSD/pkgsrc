@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/13 20:27:53 jschauma Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 12:14:05 agc Exp $
 
 SHA1 (tor-0.0.9.4.tar.gz) = 24e09332cb9c21eeddb70da3d514fd0a71d049ec
+RMD160 (tor-0.0.9.4.tar.gz) = 88a7ed7b584fab199654ae61e1bf2b77fe01f6b1
 Size (tor-0.0.9.4.tar.gz) = 542945 bytes
 SHA1 (patch-ac) = c036da74ca6f842af9c5426b96ee0e65215bb964
