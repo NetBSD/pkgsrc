@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/11/26 16:03:07 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/08 19:52:51 minskim Exp $
 #
 
 DISTNAME=		mod_aolserver-1.1
@@ -30,6 +30,6 @@ post-install:
 
 .include "../../databases/postgresql-lib/buildlink2.mk"
 .include "../../devel/libmm/buildlink2.mk"
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl83/buildlink2.mk"
 .include "../../www/apache/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
