@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.252 1999/04/13 14:18:11 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.253 1999/04/14 19:44:24 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1365,7 +1365,7 @@ root-install:
 			;;						\
 		"a.out")						\
 			${ECHO_MSG} "===>   [Automatic $$shlib_type shared object handling]";\
-			cnt=`${EGREP} -c -x '@exec[ 	]*${LDCONFIG}' ${PLIST}`; \
+			cnt=`${EGREP} -c -x '@exec[ 	]*${LDCONFIG}' ${PLIST} || ${TRUE}`; \
 			if [ $$cnt -eq 0 ]; then			\
 				${ECHO} "@exec ${LDCONFIG}" >> ${PLIST}; \
 				${ECHO} "@unexec ${LDCONFIG}" >> ${PLIST}; \
