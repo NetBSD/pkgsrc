@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2000/02/14 22:55:31 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2000/03/07 16:05:13 dmcmahill Exp $
 #
 
-DISTNAME=	verilog-20000212
+DISTNAME=	verilog-0.2
 CATEGORIES=	cad
-MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/snapshots/
+MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/v0.2/
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://icarus.com/eda/verilog/index.html
 
 BUILD_DEPENDS+=	bison:../../devel/bison
 
-GNU_CONFIGURE=	YES
+CONFLICTS+=	verilog-current
+
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
 
 .include "../../mk/bsd.pkg.mk"
