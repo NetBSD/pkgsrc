@@ -72,7 +72,7 @@
 + 	${CC} -fpic -DPIC ${CFLAGS} -c ${.IMPSRC} -o ${.TARGET}
 + 
 + libtiff.so.3.3: ${OBJS:S/o$/so/g}
-+ 	ld -Bshareable -o libtiff.so.3.3 ${OBJS:S/o$/so/g}
++ 	ld -x -Bshareable -Bforcearchive -o libtiff.so.3.3 ${OBJS:S/o$/so/g}
 + 
   ${OBJS}: tiffio.h tiff.h tiffcomp.h tiffiop.h tiffconf.h
   tif_fax3.o: tif_fax3.c g3states.h t4.h tif_fax3.h
