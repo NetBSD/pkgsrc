@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/05/07 11:54:35 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/12/04 12:01:39 wiz Exp $
 
 DISTNAME=		ppp-001107.src
 PKGNAME=		userppp-001107
@@ -12,10 +12,13 @@ COMMENT=		User-PPP package as found in FreeBSD and OpenBSD
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
+USE_BUILDLINK3=		YES
 WRKSRC=			${WRKDIR}/${DISTNAME:S/.src//}
 MANCOMPRESSED_IF_MANZ=	YES
 
 CFLAGS+=	-fno-strict-aliasing
+# fix build on -current for wrong is* arguments (char instead of unsigned char)
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 post-patch:
 	(cd ${WRKSRC};							\
