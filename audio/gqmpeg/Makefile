@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2003/05/30 07:02:57 agc Exp $
-#
+# $NetBSD: Makefile,v 1.71 2003/06/01 09:52:59 tron Exp $
 
 DISTNAME=		gqmpeg-0.20.0
 PKGREVISION=		1
@@ -12,7 +11,7 @@ COMMENT=		GTK+ front end to mpg123
 
 BUILD_USES_MSGFMT=	yes
 DEPENDS+=		gnome1-dirs>=1.0:../../misc/gnome1-dirs
-DEPENDS+=		mpg123-{,esound,nas}>=0.59.18:../../audio/mpg123
+DEPENDS+=		mpg123{,-esound,-nas}>=0.59.18:../../audio/mpg123
 DEPENDS+=		vorbis-tools>=1.0.0.6:../../audio/vorbis-tools
 DEPENDS+=		xmp>=2.0.2:../../audio/xmp
 
