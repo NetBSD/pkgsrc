@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5191 2004/03/10 18:17:50 wiz Exp $
+$NetBSD: CHANGES,v 1.5192 2004/03/10 18:20:11 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1384,3 +1384,12 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated firefox-gtk2 to 0.8nb1 [taya 2004-03-10]
 	Updated doclifter to 1.8 [wiz 2004-03-10]
 	Updated capc-calc to 2.11.9.2 [wiz 2004-03-10]
+	Removed ap-php3 [jlam 2004-03-10]
+	Removed php3 [jlam 2004-03-10]
+	Removed php3-gd [jlam 2004-03-10]
+	Removed php3-ldap [jlam 2004-03-10]
+	Removed php3-mysql [jlam 2004-03-10]
+	Removed php3-pcre [jlam 2004-03-10]
+	Removed php3-pdflib [jlam 2004-03-10]
+	Removed php3-pgsql [jlam 2004-03-10]
+	Removed php3-snmp [jlam 2004-03-10]

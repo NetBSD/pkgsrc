@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.308 2004/03/09 18:40:58 wiz Exp $
+# $NetBSD: Makefile,v 1.309 2004/03/10 18:20:11 jlam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -29,7 +29,6 @@ SUBDIR+=	ap-jserv
 SUBDIR+=	ap-layout
 SUBDIR+=	ap-mp3
 SUBDIR+=	ap-perl
-SUBDIR+=	ap-php3
 SUBDIR+=	ap-php4
 SUBDIR+=	ap-python
 SUBDIR+=	ap-ruby
@@ -190,7 +189,6 @@ SUBDIR+=	p5-libwww
 SUBDIR+=	pear-HTML_Common
 SUBDIR+=	pear-HTML_Select
 SUBDIR+=	php-FastTemplate
-SUBDIR+=	php3
 SUBDIR+=	php4
 SUBDIR+=	php4-apc
 SUBDIR+=	php4-curl
