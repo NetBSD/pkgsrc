@@ -1,26 +1,27 @@
-# $NetBSD: Makefile,v 1.4 2000/06/01 11:23:30 rh Exp $
+# $NetBSD: Makefile,v 1.5 2000/06/03 20:11:11 wiz Exp $
 #
 
-DISTNAME=	libungif-4.1.0
-CATEGORIES=	graphics
-MASTER_SITES=	ftp://prtr-13.ucsc.edu/pub/libungif/
+DISTNAME=		libungif-4.1.0
+CATEGORIES=		graphics
+MASTER_SITES=		ftp://prtr-13.ucsc.edu/pub/libungif/
 
-MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml
 
-CONFLICTS=	giflib-*
+CONFLICTS=		giflib-*
 
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=      ${WRKSRC}/ltconfig
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--without-x
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS=		--without-x
 
-DOCDIR=		${PREFIX}/share/doc/libungif
+DOCDIR=			${PREFIX}/share/doc/libungif
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-MAKE_ENV+=	CC="${CC} -I${LOCALBASE}/include"
+MAKE_ENV+=		CC="${CC} -I${LOCALBASE}/include"
 .endif
 
 post-patch:
