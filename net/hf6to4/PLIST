@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/23 13:30:35 hubertf Exp $
+sbin/hf6to4
+share/doc/hf6to4.html
+share/examples/hf6to4/hf6to4.conf
+man/man8/hf6to4.8
+@dirrm share/examples/hf6to4
