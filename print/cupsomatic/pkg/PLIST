@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/08 16:57:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/12/12 11:14:50 drochner Exp $
 libexec/cups/filter/cupsomatic
 share/cups/model/Apollo-P-1200-hpdj.ppd
 share/cups/model/Apollo-P-2200-cdj550.ppd
@@ -351,6 +351,7 @@ share/cups/model/HP-DeskJet_722C-pnm2ppa.ppd
 share/cups/model/HP-DeskJet_810C-cdj670.ppd
 share/cups/model/HP-DeskJet_810C-cdj880.ppd
 share/cups/model/HP-DeskJet_810C-stp.ppd
+share/cups/model/HP-DeskJet_812C-cdj550.ppd
 share/cups/model/HP-DeskJet_812C-cdj880.ppd
 share/cups/model/HP-DeskJet_812C-stp.ppd
 share/cups/model/HP-DeskJet_815C-cdj880.ppd
@@ -520,6 +521,7 @@ share/cups/model/Lexmark-1000-lm1100.ppd
 share/cups/model/Lexmark-1020-lm1100.ppd
 share/cups/model/Lexmark-1020_Business-hpdj.ppd
 share/cups/model/Lexmark-1100-lm1100.ppd
+share/cups/model/Lexmark-2030-pbm2l2030.ppd
 share/cups/model/Lexmark-2050-c2050.ppd
 share/cups/model/Lexmark-2070-c2070.ppd
 share/cups/model/Lexmark-3000-cdj550.ppd
