@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2001/02/17 17:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2001/05/05 19:51:19 jlam Exp $
 #
 
 DISTNAME=	catdoc-0.91.4
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fe.msk.ru/~vitus/catdoc/
 COMMENT=	reads MS-Word file and puts out its content as plain text
 
-DEPENDS=	tk-8.3.2:../../x11/tk
+DEPENDS=	tk>=8.3.2:../../x11/tk
 
 WRKSRC=		${WRKDIR}/catdoc
 

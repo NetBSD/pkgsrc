@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/17 17:42:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2001/05/05 19:51:19 jlam Exp $
 #
 
 DISTNAME=	tkcron-2.12
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tcl.gz
 MAINTAINER=	packages@netbsd.org
 COMMENT=	graphical frontend to crontab
 
-DEPENDS+=	tk-8.3.2:../../x11/tk
+DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 USE_X11=	yes
 EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} > tkcron.tcl
