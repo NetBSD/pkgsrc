@@ -1,0 +1,13 @@
+$NetBSD: patch-bi,v 1.3 2000/10/18 03:59:33 briggs Exp $
+--- etc/atalkd/route.c.orig	Tue Oct 17 23:29:04 2000
++++ etc/atalkd/route.c	Tue Oct 17 23:30:19 2000
+@@ -34,7 +34,8 @@
+     u_char	sam_family;
+     u_short	sam_pad;
+     u_short	sam_mask;
+-} mask = { sizeof( struct sockaddr_m ), 0, 0, 0xffff };
++    u_short	sam_pad2;
++} mask = { sizeof( struct sockaddr_m ), 0, 0, 0xffff, 0 };
+ 
+ struct rt_msg_at {
+     struct rt_msghdr	rtma_rtm;
