@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1686 2003/03/19 15:49:19 seb Exp $
+$NetBSD: CHANGES,v 1.1687 2003/03/19 16:12:56 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1195,3 +1195,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cvs to 1.11.5nb1 [grant 2003-03-18]
 	Updated ttcp to 1.12nb1 [tron 2003-03-19]
 	Added p5-DB_File-1.806 [seb 2003-03-19]
+	Added eclipse-2.0.2 [jschauma 2003-03-19]
