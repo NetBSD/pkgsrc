@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/03/29 14:40:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2005/04/06 18:24:23 wiz Exp $
 #
 
 DISTNAME=	docbook-xml-4.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.oasis-open.org/docbook/xml/4.2/
 EXTRACT_SUFX=	.zip
