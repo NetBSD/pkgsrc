@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.14 2001/01/15 15:18:24 jlam Exp $
+$NetBSD: patch-ab,v 1.15 2001/01/26 16:42:45 skrll Exp $
 
---- ltmain.in.orig	Fri May 26 21:53:15 2000
+--- ltmain.in.orig	Sat May 27 02:53:15 2000
 +++ ltmain.in
 @@ -819,6 +819,7 @@
      old_convenience=
@@ -36,6 +36,33 @@ $NetBSD: patch-ab,v 1.14 2001/01/15 15:18:24 jlam Exp $
        # Some other compiler flag.
        -* | +*)
  	# Unknown arguments in both finalize_command and compile_command need
+@@ -1656,7 +1676,7 @@
+ 
+ 	# Check that each of the things are valid numbers.
+ 	case "$current" in
+-	0 | [1-9] | [1-9][0-9]*) ;;
++	0 | [1-9] | [1-9][0-9] | [1-9][0-9][0-9]) ;;
+ 	*)
+ 	  $echo "$modename: CURRENT \`$current' is not a nonnegative integer" 1>&2
+ 	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
+@@ -1665,7 +1685,7 @@
+ 	esac
+ 
+ 	case "$revision" in
+-	0 | [1-9] | [1-9][0-9]*) ;;
++	0 | [1-9] | [1-9][0-9] | [1-9][0-9][0-9]) ;;
+ 	*)
+ 	  $echo "$modename: REVISION \`$revision' is not a nonnegative integer" 1>&2
+ 	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
+@@ -1674,7 +1694,7 @@
+ 	esac
+ 
+ 	case "$age" in
+-	0 | [1-9] | [1-9][0-9]*) ;;
++	0 | [1-9] | [1-9][0-9] | [1-9][0-9][0-9]) ;;
+ 	*)
+ 	  $echo "$modename: AGE \`$age' is not a nonnegative integer" 1>&2
+ 	  $echo "$modename: \`$vinfo' is not valid version information" 1>&2
 @@ -1772,7 +1792,7 @@
  	fi
  
