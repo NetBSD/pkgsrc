@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2001/07/17 15:00:48 nra Exp $
+
+SHA1 (logcheck-1.1.1.tar.gz) = 18f89f0dacfe9ff31076c006d58e1bcfedaa7f22
+Size (logcheck-1.1.1.tar.gz) = 30267 bytes
+SHA1 (patch-aa) = a0d57a4554d670add82c8df7df7ec84515497b3d
+SHA1 (patch-ab) = 8dd4c3a6c7bba07792c5fc6ac5caaf5e7cde7242
