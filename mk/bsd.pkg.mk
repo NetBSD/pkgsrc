@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.468 2000/06/03 20:58:46 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.469 2000/06/03 21:51:57 mycroft Exp $
 #
 # This file is in the public domain.
 #
@@ -1970,7 +1970,7 @@ clean: pre-clean
 	fi
 .ifdef WRKOBJDIR
 	-${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RMDIR} ${BUILD_DIR};						\
+	${RMDIR} ${BUILD_DIR} 2>/dev/null;				\
 	${RM} -f ${WRKDIR_BASENAME}
 .endif
 .else
@@ -1984,13 +1984,13 @@ clean: pre-clean
 .if !target(clean-depends)
 clean-depends:
 .if defined(BUILD_DEPENDS) || defined(DEPENDS) || defined(RUN_DEPENDS)
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//} \
-			          ${DEPENDS:C/^[^:]*://:C/:.*//} \
-			      ${RUN_DEPENDS:C/^[^:]*://:C/:.*//} | sort -u`; do \
-		if [ -d $$dir ] ; then					\
-			(cd $$dir && ${MAKE} ${MAKEFLAGS} CLEANDEPENDS=${CLEANDEPENDS} clean ); \
-		fi							\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//}	\
+			          ${DEPENDS:C/^[^:]*://:C/:.*//}	\
+			      ${RUN_DEPENDS:C/^[^:]*://:C/:.*//} |	\
+		    ${TR} '\040' '\012' | sort -u`; do			\
+		cd ${.CURDIR}/$$dir &&					\
+		${MAKE} ${MAKEFLAGS} CLEANDEPENDS=${CLEANDEPENDS} clean;\
 	done
 .endif
 .endif
@@ -2039,8 +2039,13 @@ fetch-list:
 fetch-list-recursive:
 	@${MAKE} ${MAKEFLAGS} fetch-list-one-pkg
 .if ${RECURSIVE_FETCH_LIST} != "NO"
-	@for dir in `${ECHO} "${BUILD_DEPENDS} ${DEPENDS} ${RUN_DEPENDS}" | ${TR} '\040' '\012' | ${SED} -e 's/^[^:]*://' -e 's/:.*//' | sort -u` ; do \
-		(cd $$dir && ${MAKE} ${MAKEFLAGS} fetch-list-recursive; );		\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	for dir in `${ECHO} ${BUILD_DEPENDS:C/^[^:]*://:C/:.*//}	\
+				  ${DEPENDS:C/^[^:]*://:C/:.*//}	\
+			      ${RUN_DEPENDS:C/^[^:]*://:C/:.*//} |	\
+		    ${TR} '\040' '\012' | sort -u` ; do			\
+		cd ${.CURDIR}/$$dir &&					\
+		${MAKE} ${MAKEFLAGS} fetch-list-recursive;		\
 	done
 .endif # ${RECURSIVE_FETCH_LIST} != "NO"
 .endif # !target(fetch-list-recursive)
@@ -2053,11 +2058,12 @@ fetch-list-one-pkg:
 	@(cd ${_DISTDIR};						\
 	for file in "" ${DISTFILES}; do					\
 		if [ "X$$file" = X"" ]; then continue; fi;		\
-		if [ ! -f $$file -a ! -f `${BASENAME} $$file` ]; then	\
-			${ECHO} -n "cd ${_DISTDIR} && [ -f $$file -o -f `${BASENAME} $$file` ] || " ; \
+		bfile=`${BASENAME} $$file`;				\
+		if [ ! -f $$file -a ! -f $$bfile ]; then		\
+			${ECHO} -n "cd ${_DISTDIR} && [ -f $$file -o -f $$bfile ] || "; \
 			for site in "" `${SORTED_MASTER_SITES_CMD}`; do	\
 				if [ "X$$site" = X"" ]; then continue; fi; \
-				${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} "${FETCH_AFTER_ARGS}" '|| ' ; \
+				${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} "${FETCH_AFTER_ARGS}" '|| '; \
 			done;						\
 			${ECHO} "${ECHO} $${file} not fetched";		\
 		fi							\
@@ -2067,10 +2073,11 @@ fetch-list-one-pkg:
 	@(cd ${_DISTDIR};						\
 	for file in "" ${PATCHFILES}; do				\
 		if [ "X$$file" = X"" ]; then continue; fi;		\
-		if [ ! -f $$file -a ! -f `${BASENAME} $$file` ]; then	\
-			${ECHO} -n "cd ${_DISTDIR} && [ -f $$file -o -f `${BASENAME} $$file` ] || " ; \
+		bfile=`${BASENAME} $$file`;				\
+		if [ ! -f $$file -a ! -f $$bfile ]; then		\
+			${ECHO} -n "cd ${_DISTDIR} && [ -f $$file -o -f $$bfile ] || "; \
 			for site in ${PATCH_SITES}; do			\
-				${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} "${FETCH_AFTER_ARGS}" '|| ' ; \
+				${ECHO} -n ${FETCH_CMD} ${FETCH_BEFORE_ARGS} $${site}$${file} "${FETCH_AFTER_ARGS}" '|| '; \
 			done;						\
 			${ECHO} "${ECHO} $${file} not fetched";		\
 		fi							\
