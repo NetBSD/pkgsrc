@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2005/02/23 14:45:27 agc Exp $
+$NetBSD: distinfo,v 1.12 2005/02/28 16:50:24 salo Exp $
 
-SHA1 (unzip551.tar.gz) = 4643ca31419cfb34c9de8a182aabebd79662ba04
-RMD160 (unzip551.tar.gz) = c38cf2c4c1341afcc75282caf088b3001bd99553
-Size (unzip551.tar.gz) = 1112594 bytes
+SHA1 (unzip552.tar.gz) = e24b538a27d89963b90ab0b890d2dfcb372bc12d
+RMD160 (unzip552.tar.gz) = 4504cc5ac71d6a5ce4841fb4190ec0be121fdf5f
+Size (unzip552.tar.gz) = 1139806 bytes
 SHA1 (patch-aa) = de66b7b5c45904167e8596ce5235d957c2df4d2a
 SHA1 (patch-ab) = dd426fdf4b774bd73f4ee46da470ffa3c2cf6513
