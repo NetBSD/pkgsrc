@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/02/16 14:38:47 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/02/26 07:23:56 jlam Exp $
 # FreeBSD Id: Makefile,v 1.7 1997/06/24 18:43:11 jfitz Exp
 
 DISTNAME=	Data-Dumper-2.101
@@ -20,3 +20,8 @@ do-configure:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"
+
+.if !defined(PERL5_SITEARCH)
+PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; \
+			${ECHO} $${installsitearch}
+.endif
