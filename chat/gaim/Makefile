@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2004/12/03 12:43:24 adam Exp $
+# $NetBSD: Makefile,v 1.76 2004/12/10 02:51:46 dogcow Exp $
 
 DISTNAME=	gaim-1.1.0
 CATEGORIES=	chat x11
@@ -23,6 +23,7 @@ GNU_CONFIGURE=		YES
 
 SHLIBTOOL_OVERRIDE=	libtool
 
+CONFIGURE_ARGS+=	--disable-binreloc
 CONFIGURE_ARGS+=	--with-silc-includes=${BUILDLINK_PREFIX.silc-toolkit}/include/silc
 CONFIGURE_ARGS+=	--with-silc-libs=${BUILDLINK_PREFIX.silc-toolkit}/lib/silc
 CONFIGURE_ARGS+=	--disable-nas
