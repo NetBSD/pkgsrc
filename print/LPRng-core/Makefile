@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/05/21 13:44:29 adam Exp $
+# $NetBSD: Makefile,v 1.11 2004/09/06 10:44:44 martti Exp $
 # FreeBSD Id: Makefile,v 1.5 1998/10/21 00:57:27 steve Exp
 
 DISTNAME=	LPRng-3.8.27
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.lprng.com/pub/LPRng/LPRng/ \
 		http://lprng.sourceforge.net/DISTRIB/LPRng/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.lprng.com/
 COMMENT=	Enhanced Printer Spooler
 
@@ -19,7 +19,7 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir="/etc"
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-lpd_perms_path="${LPD_PERMS_PATH}"
 CONFIGURE_ARGS+=	--with-lpd_printcap_path="${LPD_PRINTCAP_PATH}"
 CONFIGURE_ARGS+=	--with-printcap_path="${PRINTCAP_PATH}"
@@ -42,9 +42,9 @@ CONFIGURE_ARGS+=	--enable-priv_ports
 
 # Look for printer configuration files firstly in /etc, then ${PREFIX}/etc.
 #
-LPD_PERMS_PATH=		/etc/lpd.perms:${PREFIX}/etc/lpd.perms
-LPD_PRINTCAP_PATH=	/etc/lpd_printcap:${PREFIX}/etc/lpd_printcap
-PRINTCAP_PATH=		/etc/printcap:${PREFIX}/etc/printcap
+LPD_PERMS_PATH=		${PKG_SYSCONFDIR}/lpd/lpd.perms
+LPD_PRINTCAP_PATH=	${PKG_SYSCONFDIR}/printcap
+PRINTCAP_PATH=		${PKG_SYSCONFDIR}/printcap
 FILTER_DIR=		${PREFIX}/libexec/LPRng
 FILTER_LD_PATH=		/usr/lib:${PREFIX}/lib:/usr/local/lib
 FILTER_PATH=		${FILTER_DIR}:/sbin:/usr/sbin:/bin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin:/usr/local/sbin:/usr/local/bin
@@ -60,8 +60,10 @@ FILES_SUBST=		CAT=${CAT:Q}
 FILES_SUBST+=		CHMOD=${CHMOD:Q}
 FILES_SUBST+=		CMP=${CMP:Q}
 FILES_SUBST+=		CP=${CP:Q}
+FILES_SUBST+=		MKDIR=${MKDIR:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST+=		TRUE=${TRUE:Q}
+FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 pre-patch:
@@ -73,6 +75,7 @@ post-configure:
 		-e "s,@LPD_PRINTCAP_PATH@,${LPD_PRINTCAP_PATH},g" \
 		-e "s,@LPD_PERMS_PATH@,${LPD_PERMS_PATH},g" \
 		-e "s,@PRINTCAP_PATH@,${PRINTCAP_PATH},g" \
+		-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g" \
 		< ${WRKSRC}/man/lpd.conf.n.in > ${WRKSRC}/man/lpd.conf.n
 
 pre-install:

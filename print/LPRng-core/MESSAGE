@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/10/31 23:27:26 zuntum Exp $
+$NetBSD: MESSAGE,v 1.2 2004/09/06 10:44:44 martti Exp $
 
 To activate the LPRng printing system do the following:
 
@@ -10,10 +10,9 @@ To activate the LPRng printing system do the following:
 
 Note that LPRng uses:
 
-	/etc/printcap
-	/etc/lpd_printcap
-	/etc/lpd.conf
-	/etc/lpd.perms
+	${PKG_SYSCONFDIR}/etc/printcap
+	${PKG_SYSCONFDIR}/etc/lpd/lpd.conf
+	${PKG_SYSCONFDIR}/etc/lpd/lpd.perms
 
 Simple example configuration files are found at:
 
