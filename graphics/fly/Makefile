@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2003/07/21 16:51:39 martti Exp $
+# $NetBSD: Makefile,v 1.23 2003/09/02 13:27:45 seb Exp $
 
 DISTNAME=	fly-1.6.5
 PKGREVISION=	4
@@ -15,10 +15,10 @@ USE_BUILDLINK2=	YES
 USE_PERL5=	YES
 USE_X11=	YES
 
-REPLACE_PERL=	${WRKSRC}/examples/cgi-perl-example.pl \
-		${WRKSRC}/examples/fly-tester.pl \
-		${WRKSRC}/examples/size.pl \
-		${WRKSRC}/examples/perl.example
+REPLACE_PERL=	examples/cgi-perl-example.pl \
+		examples/fly-tester.pl \
+		examples/size.pl \
+		examples/perl.example
 
 pre-configure:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
