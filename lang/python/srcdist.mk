@@ -1,4 +1,4 @@
-# $NetBSD: srcdist.mk,v 1.3 2002/04/15 12:29:14 drochner Exp $
+# $NetBSD: srcdist.mk,v 1.4 2002/08/20 20:00:14 drochner Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -12,7 +12,7 @@ PYSUBDIR=	Python-2.2.1
 WRKSRC=		${WRKDIR}/${PYSUBDIR}
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.2.1/
 
-.elif ${_PYTHON_VERSION} == "21"
+.elif ${_PYTHON_VERSION} == "21" || ${_PYTHON_VERSION} == "21pth"
 
 DISTNAME=	Python-2.1.3
 EXTRACT_SUFX=	.tgz
