@@ -1,0 +1,17 @@
+$NetBSD: patch-aq,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/daemons/execd/ptf.h	2003-10-02 14:25:32.000000000 +0200
++++ source/daemons/execd/ptf.h	2003-09-30 16:21:00.000000000 +0200
+@@ -168,6 +168,12 @@
+ #    define PTF_MAX_PRIORITY     -10
+ #    define PTF_OS_MIN_PRIORITY   20
+ #    define PTF_OS_MAX_PRIORITY  -20
++#  elif defined(NETBSD)
++#    define ENFORCE_PRI_RANGE     1
++#    define PTF_MIN_PRIORITY      20
++#    define PTF_MAX_PRIORITY     -10
++#    define PTF_OS_MIN_PRIORITY   20
++#    define PTF_OS_MAX_PRIORITY  -20
+ #  endif
+ #  define PTF_BACKGROUND_JOB_PROPORTION 0.015
+ #  define PTF_BACKGROUND_JOB_PRIORITY NDPLOMAX

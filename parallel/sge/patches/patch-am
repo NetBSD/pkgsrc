@@ -1,0 +1,124 @@
+$NetBSD: patch-am,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/aimk.orig	2004-04-22 13:37:59.000000000 +0000
++++ source/aimk
+@@ -122,6 +122,72 @@ case "hp11-64":
+ case "irix6":
+    set BUILDARCH = IRIX6
+    breaksw
++case "nbsd-alpha":
++    set BUILDARCH = NETBSD_ALPHA
++    breaksw
++case "nbsd-arm":
++    set BUILDARCH = NETBSD_ARM
++    breaksw
++case "nbsd-arm32":
++    set BUILDARCH = NETBSD_ARM32
++    breaksw
++case "nbsd-armeb":
++    set BUILDARCH = NETBSD_ARMEB
++    breaksw
++case "nbsd-hppa":
++    set BUILDARCH = NETBSD_HPPA
++    breaksw
++case "nbsd-i386":
++    set BUILDARCH = NETBSD_I386
++    breaksw
++case "nbsd-m68000":
++    set BUILDARCH = NETBSD_M68000
++    breaksw
++case "nbsd-m68k":
++    set BUILDARCH = NETBSD_M68K
++    breaksw
++case "nbsd-mipseb":
++    set BUILDARCH = NETBSD_MIPSEB
++    breaksw
++case "nbsd-mipsel":
++    set BUILDARCH = NETBSD_MIPSEL
++    breaksw
++case "nbsd-ns32k":
++    set BUILDARCH = NETBSD_NS32K
++    breaksw
++case "nbsd-pdp10":
++    set BUILDARCH = NETBSD_PDP10
++    breaksw
++case "nbsd-powerpc":
++    set BUILDARCH = NETBSD_POWERPC
++    breaksw
++case "nbsd-sh3":
++    set BUILDARCH = NETBSD_SH3
++    breaksw
++case "nbsd-sh3eb":
++    set BUILDARCH = NETBSD_SH3EB
++    breaksw
++case "nbsd-sh3el":
++    set BUILDARCH = NETBSD_SH3EL
++    breaksw
++case "nbsd-sh5eb":
++    set BUILDARCH = NETBSD_SH5EB
++    breaksw
++case "nbsd-sh5el":
++    set BUILDARCH = NETBSD_SH5EL
++    breaksw
++case "nbsd-sparc":
++    set BUILDARCH = NETBSD_SPARC
++    breaksw
++case "nbsd-sparc64":
++    set BUILDARCH = NETBSD_SPARC64
++    breaksw
++case "nbsd-vax":
++    set BUILDARCH = NETBSD_VAX
++    breaksw
++case "nbsd-x86_64":
++    set BUILDARCH = NETBSD_X86_64
++    breaksw
+ case "necsx4":
+    set BUILDARCH = NECSX4
+    breaksw
+@@ -1091,6 +1157,46 @@ case FREEBSD_*:
+    set RM	= "rm -f"
+    breaksw 
+ 
++case NETBSD_*:
++   set COMPILE_DC = 1
++   set MAKE = gmake
++   set OFLAG = "-O"
++   set ARFLAGS     = rcv
++   set CC       = gcc
++   set CXX      = g++
++   set DLLIB	= ""
++   set DEPEND_FLAGS = "$CFLAGS $XMTINCD"
++   set PTHRDSFLAGS = "-D_REENTRANT -D__USE_REENTRANT"
++   set CFLAGS   = "$OFLAG -Wall -DNETBSD -D$BUILDARCH $DEBUG_FLAG $CFLAGS -I${X11BASE}/include"
++   set CXXFLAGS   = "$OFLAG -Wstrict-prototypes -DNETBSD -D$BUILDARCH $DEBUG_FLAG $CXXFLAGS"
++   set NOERR_CFLAG = "-Wno-error"
++   set GCC_NOERR_CFLAGS = "$CFLAGS -Wno-error"
++   set GCC_NOERR_CXXFLAGS = "$CXXFLAGS -Wno-error"
++   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -L${LOCALBASE}/lib -R${LOCALBASE}/lib"
++   set LIBS     = "$LIBS -lkvm"
++   set SHAREDLD = $CC
++   set SHARED_CFLAGS = "-fPIC"
++   set SHARED_LFLAGS = "-L. -shared" 
++   
++   if ( $STATIC == 1 ) then
++      echo "STATITCS"
++      set CFLAGS = "-static $CFLAGS"
++      set CXXFLAGS = "-static $CXXFLAGS"
++   endif
++
++   set KLIBS = "-lcrypto"
++
++   set XMTDEF   = ""
++   set XINCD    = "$XMTINCD $XINCD -I${X11BASE}/include"
++   set XCFLAGS  = "-Wno-strict-prototypes -Wno-error $XMTDEF $XINCD"
++   set XLIBD    = "-L${X11BASE}/lib -R${X11BASE}/lib -L${LOCALBASE}/lib -R${LOCALBASE}/lib"
++   set XLFLAGS  = "$XLIBD"
++   set XLIBS    = " -lXm -lXpm -lXt -lXext -lX11 -lSM -lICE -lXp"
++
++   set SGE_NPROCS_CFLAGS = "$CFLAGS"
++   set RM	= "rm -f"
++   breaksw 
++
+ case IRIX6*:
+    set COMPILE_DC = 1
+    set ARCH = $IRIX_ARCHDEF

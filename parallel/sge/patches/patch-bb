@@ -1,0 +1,33 @@
+$NetBSD: patch-bb,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/libs/uti/sge_nprocs.c	2003-10-02 14:25:50.000000000 +0200
++++ source/libs/uti/sge_nprocs.c	2003-09-30 18:37:06.000000000 +0200
+@@ -89,6 +89,11 @@
+ #   include <sys/sysctl.h>
+ #endif
+ 
++#if defined(NETBSD)
++#   include <sys/param.h>
++#   include <sys/sysctl.h>
++#endif
++
+ #ifdef NPROCS_TEST
+ #   include <stdio.h>
+ #   include <unistd.h>
+@@ -259,6 +264,16 @@
+    }
+ #endif
+ 
++#if defined(NETBSD)
++   int mib[2];
++   size_t nprocs_len;
++
++   nprocs_len = sizeof(nprocs);
++   mib[0] = CTL_HW; mib[1] = HW_NCPU;
++   if (sysctl(mib, 2, &nprocs, &nprocs_len, NULL, 0) == -1) {
++     nprocs = -1; }
++#endif
++
+ 
+    if (nprocs <= 0) {
+       nprocs = 1;

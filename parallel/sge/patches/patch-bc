@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/libs/uti/sge_pids.h	2003-10-02 14:25:50.000000000 +0200
++++ source/libs/uti/sge_pids.h	2003-09-30 17:52:04.000000000 +0200
+@@ -32,7 +32,7 @@
+  ************************************************************************/
+ /*___INFO__MARK_END__*/
+ 
+-#if defined(SUN4) || defined(LINUX) || defined(DARWIN) || defined(FREEBSD)
++#if defined(SUN4) || defined(LINUX) || defined(DARWIN) || defined(FREEBSD) || defined(NETBSD)
+ #  define PSCMD "/bin/ps -axc"
+ #elif defined(ALPHA)
+ #  define PSCMD "/bin/ps axo pid,ucomm"

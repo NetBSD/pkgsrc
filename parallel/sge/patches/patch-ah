@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1.1.1 2004/05/03 00:38:34 dmcmahill Exp $
+
+--- source/aimk.site.orig	2004-04-22 13:37:59.000000000 +0000
++++ source/aimk.site
+@@ -34,7 +34,7 @@
+ # OPENSSL_HOME the directory where the include and lib directory of openssl
+ # is installed
+ #
+-set OPENSSL_HOME = /vol2/tools/SW/openssl-0.9.7d-static/$buildarch
++set OPENSSL_HOME = @ssl_prefix@
+ 
+ # 
+ # KRB_HOME the directory where the include and lib directory of kerberos is
+@@ -63,7 +63,7 @@ set SWIG = /vol2/tools/SW/$buildarch/bin
+ #
+ # PERL path
+ #
+-set PERL = /vol2/tools/SW/$buildarch/bin/perl
++set PERL = @perl5@
+ 
+ #
+ # TCLSH path

@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/3rdparty/remote/rsh.c	2003-10-02 14:25:27.000000000 +0200
++++ source/3rdparty/remote/rsh.c	2003-09-30 16:37:02.000000000 +0200
+@@ -85,7 +85,7 @@
+ int rcmd(char **, u_short, char *, char *, char *, int *);
+ #endif
+ 
+-#if !defined(FREEBSD) && !defined(DARWIN)
++#if !defined(FREEBSD) && !defined(DARWIN) && !defined(NETBSD)
+ #include <values.h>
+ #endif
+ 

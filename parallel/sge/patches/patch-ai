@@ -1,0 +1,10 @@
+$NetBSD: patch-ai,v 1.1.1.1 2004/05/03 00:38:34 dmcmahill Exp $
+
+--- source/scripts/distinst.site.orig	2004-04-22 13:39:12.000000000 +0000
++++ source/scripts/distinst.site
+@@ -34,4 +34,4 @@
+ BASEDIR=/dist/OS-SGEDIST
+ 
+ # Base directory where the openssl binary resides
+-OPENSSL_HOME=/vol2/tools/SW/openssl-0.9.7d-static
++OPENSSL_HOME=@ssl_prefix@

@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2004/05/03 00:38:35 dmcmahill Exp $
+
+--- source/3rdparty/qtcsh/tc.alloc.c.orig	2004-03-03 13:09:22.000000000 +0000
++++ source/3rdparty/qtcsh/tc.alloc.c
+@@ -167,7 +167,7 @@ static	void	morecore	__P((int));
+ #endif
+ 
+ 
+-#if defined(SOLARIS) || defined(SOLARIS64) || defined(SOLARIS86) || defined(SUN4) || defined (HP11) || defined(LINUX5) || defined(ALPHA5) || defined(ALPHA4) || defined(ALINUX) || defined(LINUX60) || defined(LINUX6) || defined(SLINUX) || defined(FREEBSD)|| defined(DARWIN) || defined(IA64LINUX) || defined(LINUXAMD64)
++#if defined(SOLARIS) || defined(SOLARIS64) || defined(SOLARIS86) || defined(SUN4) || defined (HP11) || defined(LINUX5) || defined(ALPHA5) || defined(ALPHA4) || defined(ALINUX) || defined(LINUX60) || defined(LINUX6) || defined(SLINUX) || defined(FREEBSD)|| defined(NETBSD) || defined(DARWIN) || defined(IA64LINUX) || defined(LINUXAMD64)
+ # ifdef const
+ #  undef const
+ # endif
