@@ -1,4 +1,4 @@
-#	$NetBSD: CHANGES-1.6.1,v 1.1.2.11 2003/03/23 01:24:49 jmc Exp $
+#	$NetBSD: CHANGES-1.6.1,v 1.1.2.12 2003/04/06 21:02:27 grant Exp $
 
 Changes to the pkgsrc-1-6-1 branch:
 
@@ -374,3 +374,21 @@ net/samba/patches/patch-ar			1.2
 	particular) should never be exposed to untrusted networks.
 
 	[bouyer, ticket #1220]
+
+chat/bitchx/Makefile				1.16-1.17
+chat/bitchx/distinfo				1.7
+chat/bitchx/patches/patch-ag			1.1 (new)
+chat/bitchx/patches/patch-ah			1.1 (new)
+chat/bitchx/patches/patch-ai			1.1 (new)
+chat/bitchx/patches/patch-aj			1.1 (new)
+chat/bitchx/patches/patch-ak			1.1 (new)
+chat/bitchx/patches/patch-al			1.1 (new)
+
+	Bump PKGREVISION: fix several potential buffer overflows found by Timo
+	Sirainen <tss at iki dot fi>, see the following url for more details:
+
+	 http://securityfocus.com/archive/1/315057
+
+	Patch from bugtraq by <caf at guarana dor org>.
+
+	[salo, ticket #1239]
