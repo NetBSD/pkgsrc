@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2003/04/11 15:39:03 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2003/04/12 08:00:52 jmmv Exp $
 #
 
 DISTNAME=	gaim-0.59.8
@@ -11,11 +11,11 @@ MAINTAINER=	rafal@netbsd.org
 HOMEPAGE=	http://gaim.sourceforge.net/
 COMMENT=	GTK1-based client for the AOL Instant Messenger chat system
 
-DISTINFO_FILE=	${.CURDIR}/../gaim/distinfo
-FILESDIR=	${.CURDIR}/../gaim/files
-PATCHDIR=	${.CURDIR}/../gaim/patches
-PKGDIR=		${.CURDIR}/../gaim
-PLIST_SRC=      ${.CURDIR}/../gaim/PLIST.common
+DISTINFO_FILE=	${.CURDIR}/../gaim-gtk1/distinfo
+FILESDIR=	${.CURDIR}/../gaim-gtk1/files
+PATCHDIR=	${.CURDIR}/../gaim-gtk1/patches
+PKGDIR=		${.CURDIR}/../gaim-gtk1
+PLIST_SRC=      ${.CURDIR}/../gaim-gtk1/PLIST.common
 
 DEPENDS+=	gnome1-dirs>=1.0:../../misc/gnome1-dirs
 
