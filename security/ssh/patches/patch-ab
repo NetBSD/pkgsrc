@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 1999/05/10 21:34:46 tron Exp $
+$NetBSD: patch-ab,v 1.7 1999/09/18 21:08:20 kim Exp $
 
---- configure.in.orig	Mon May 10 23:27:44 1999
-+++ configure.in	Mon May 10 23:27:53 1999
-@@ -317,9 +317,9 @@
+--- configure.in.orig	Wed May 12 07:20:02 1999
++++ configure.in	Sat Sep 18 16:59:35 1999
+@@ -311,9 +311,9 @@
  
  export CFLAGS CC
  
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.6 1999/05/10 21:34:46 tron Exp $
  
  AC_MSG_CHECKING([that the compiler works])
  AC_TRY_RUN([ main(int ac, char **av) { return 0; } ],
-@@ -909,8 +909,8 @@
+@@ -903,8 +903,8 @@
      fi
      AC_MSG_RESULT(Assuming TIS headers and libraries are in $withval.)
      AC_DEFINE(HAVE_TIS)
@@ -26,7 +26,7 @@ $NetBSD: patch-ab,v 1.6 1999/05/10 21:34:46 tron Exp $
      AC_MSG_WARN(Remember to read README.TIS. The connection between sshd and TIS authentication
  server is clear text!)
      ;;
-@@ -1236,14 +1236,14 @@
+@@ -1227,14 +1227,14 @@
  [ case "$enableval" in
    no)
         AC_MSG_RESULT(no)
@@ -44,7 +44,7 @@ $NetBSD: patch-ab,v 1.6 1999/05/10 21:34:46 tron Exp $
  )
  
  AC_MSG_CHECKING(whether to enable TCP_NODELAY)
-@@ -1345,4 +1345,4 @@
+@@ -1336,4 +1336,4 @@
  AC_SUBST(SSHDCONFOBJS)
  AC_SUBST(SSHINSTALLMODE)
  
