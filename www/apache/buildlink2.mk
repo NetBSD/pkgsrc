@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:40:17 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/13 23:42:27 jlam Exp $
 
 .if !defined(APACHE_BUILDLINK2_MK)
 APACHE_BUILDLINK2_MK=	# defined
@@ -7,8 +7,8 @@ BUILDLINK_PACKAGES+=		apache
 BUILDLINK_DEPENDS.apache?=	apache{,6}-1.3.*
 BUILDLINK_PKGSRCDIR.apache?=	../../www/apache
 
-# For "apxs":
-BUILD_DEPENDS+=			perl>=${PERL5_REQD}:../../lang/perl5
+USE_PERL5?=			build	# for "apxs"
+
 .if defined(APACHE_MODULE)
 BUILDLINK_DEPMETHOD.apache?=	full
 .else
