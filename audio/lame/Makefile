@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/02/03 01:42:23 xtraeme Exp $
+# $NetBSD: Makefile,v 1.35 2004/02/11 08:33:51 xtraeme Exp $
 #
 
 DISTNAME=	lame-${VERS}
@@ -14,11 +14,11 @@ VERS=		3.95.1
 
 LICENSE=	fee-based-commercial-use
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
 
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-vorbis
@@ -27,26 +27,20 @@ LDFLAGS.SunOS+=		-lm
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "FreeBSD"
-PLIST_SUBST+=		AVAILABLE="@comment "
-.else
-PLIST_SUBST+=		AVAILABLE=
-.endif
-
 .if defined(LAME_USE_GTK)
 CONFIGURE_ENV+=		GTK_CONFIG=${BUILDLINK_PREFIX.gtk}/bin/gtk-config
-.  include "../../x11/gtk/buildlink2.mk"
+.  include "../../x11/gtk/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-analyzer
 .endif
 
 .if ${MACHINE_ARCH} == "alpha"
-.  include "../../math/libffm/buildlink2.mk"
+.  include "../../math/libffm/buildlink3.mk"
 # double is faster than float on Alpha
 CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 		-mfp-regs -fschedule-insns -fschedule-insns2 		  \
 		-finline-functions -DFLOAT=double
 .endif
 
-.include "../../devel/ncurses/buildlink2.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
