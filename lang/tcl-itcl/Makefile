@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/05/12 23:38:35 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2004/09/24 21:17:03 dmcmahill Exp $
 
 DISTNAME=	itcl3.2
 PKGNAME=	tcl-itcl-3.2
@@ -11,6 +11,8 @@ HOMEPAGE=	http://tcltk.com/itcl/
 COMMENT=	[incr Tcl] object-oriented extension to Tcl/Tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+CONFLICTS+=	tcl-itcl-current-[0-9]*      
 
 USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	yes
