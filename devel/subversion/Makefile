@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/01/30 17:48:54 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2003/02/03 20:19:00 drochner Exp $
 
 DISTNAME=	subversion-r4503
 PKGNAME=	subversion-0.17.1
@@ -17,6 +17,8 @@ USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 BUILDLINK_DEPENDS.apache=	apache>=2.0.44
+# we need apr shared libs at runtime
+BUILDLINK_DEPMETHOD.apache=	full
 
 PLIST_SUBST+=   INSTALL_INFO=${INSTALL_INFO}
 INFO_FILES+=	svn-design.info
