@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.103 1998/06/22 09:12:48 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.104 1998/06/22 14:47:49 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -531,49 +531,6 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 SCRIPTS_ENV+=	BATCH=yes
 .endif
 
-MANPREFIX?=	${PREFIX}
-CATPREFIX?=	${PREFIX}
-
-.for sect in 1 2 3 4 5 6 7 8 9
-MAN${sect}PREFIX?=	${MANPREFIX}
-CAT${sect}PREFIX?=	${CATPREFIX}
-.endfor
-MANLPREFIX?=	${MANPREFIX}
-MANNPREFIX?=	${MANPREFIX}
-CATLPREFIX?=	${CATPREFIX}
-CATNPREFIX?=	${CATPREFIX}
-
-MANLANG?=	""	# english only by default
-
-.for lang in ${MANLANG}
-
-.for sect in 1 2 3 4 5 6 7 8 9
-.if defined(MAN${sect})
-_MANPAGES+=	${MAN${sect}:S%^%${MAN${sect}PREFIX}/man/${lang}/man${sect}/%}
-.endif
-.if defined(CAT${sect})
-_CATPAGES+=	${CAT${sect}:S%^%${CAT${sect}PREFIX}/man/${lang}/cat${sect}/%}
-.endif
-.endfor
-
-.if defined(MANL)
-_MANPAGES+=	${MANL:S%^%${MANLPREFIX}/man/${lang}/manl/%}
-.endif
-
-.if defined(MANN)
-_MANPAGES+=	${MANN:S%^%${MANNPREFIX}/man/${lang}/mann/%}
-.endif
-
-.if defined(CATL)
-_CATPAGES+=	${CATL:S%^%${CATLPREFIX}/man/${lang}/catl/%}
-.endif
-
-.if defined(CATN)
-_CATPAGES+=	${CATN:S%^%${CATNPREFIX}/man/${lang}/catn/%}
-.endif
-
-.endfor
-
 .MAIN: all
 
 ################################################################
@@ -1057,26 +1014,6 @@ _PORT_USE: .USE
 			${SCRIPTDIR}/${.TARGET:S/^real-/post-/}; \
 	fi
 .if make(real-install)
-.if defined(_MANPAGES) || defined(_CATPAGES)
-.if defined(MANCOMPRESSED) && !defined(MANZ)
-	@${ECHO_MSG} "===>   Uncompressing manual pages for ${PKGNAME}"
-.for manpage in ${_MANPAGES} ${_CATPAGES}
-	@${GUNZIP_CMD} ${manpage}.gz
-.endfor
-.elif !defined(MANCOMPRESSED) && defined(MANZ)
-	@${ECHO_MSG} "===>   Compressing manual pages for ${PKGNAME}"
-.for manpage in ${_MANPAGES} ${_CATPAGES}
-	@if [ -L ${manpage} ]; then \
-		set - `${FILE} ${manpage}`; \
-		shift `expr $$# - 1`; \
-		${LN} -sf $${1}.gz ${manpage}.gz; \
-		${RM} ${manpage}; \
-	else \
-		${GZIP_CMD} ${manpage}; \
-	fi
-.endfor
-.endif # !MANCOMPRESSED && MANZ
-.else
 	@(newmanpages=`/usr/bin/egrep 					\
 		'^([^/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.0)(\.gz)?$$'	\
 		${PLIST_SRC} || /usr/bin/true`;				\
@@ -1109,7 +1046,6 @@ _PORT_USE: .USE
 			fi;						\
 		done;							\
 	fi)
-.endif # _MANPAGES || _CATPAGES
 .if !defined(NO_PKG_REGISTER)
 	@cd ${.CURDIR} && ${MAKE} ${.MAKEFLAGS} fake-pkg
 .endif # NO_PKG_REGISTER
@@ -1812,8 +1748,8 @@ tags:
 
 # generate ${PLIST} from ${PLIST_SRC} by:
 # - fixing list of man-pages according to MANCOMPRESSED/MANZ
-#   (we don't regard MANCOMPRESSED as many ports seem to have .gz pages in
-#   PLIST even when they install manpages without compressing them)
+#   (we don't take any notice of MANCOMPRESSED as many packages have .gz
+#   pages in PLIST even when they install manpages without compressing them)
 # - substituting machine architecture (uname -m) for <$ARCH>
 
 ${PLIST}: ${PLIST_SRC}
@@ -1824,10 +1760,8 @@ ${PLIST}: ${PLIST_SRC}
 .if defined(MANZ)
 	@if [ ! -z "${PLIST_SRC}" ] ; then \
 		${CAT} ${PLIST_SRC} | ${SED} \
-			-e '/man\/man.*[^g][^z]$$/s/$$/.gz/' \
-			-e '/man\/cat.*[^g][^z]$$/s/$$/.gz/' \
-			-e '/man\/${MANLANG}\/man.*[^g][^z]$$/s/$$/.gz/' \
-			-e '/man\/${MANLANG}\/cat.*[^g][^z]$$/s/$$/.gz/' \
+			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \
+			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]$$\)|\1.gz|' \
 			-e 's/<\$$ARCH>/'${ARCH}'/g' \
 			-e 's/\$${MACHINE_ARCH}/'${MACHINE_ARCH}'/g' \
 			-e 's/\$${MACHINE_GNU_ARCH}/'${MACHINE_GNU_ARCH}'/g' \
@@ -1836,10 +1770,8 @@ ${PLIST}: ${PLIST_SRC}
 .else   # !MANZ
 	@if [ ! -z "${PLIST_SRC}" ] ; then \
 		${CAT} ${PLIST_SRC} | ${SED} \
-			-e '/man\/man/s/\.gz$$//' \
-			-e '/man\/cat/s/\.gz$$//' \
-			-e '/man\/${MANLANG}\/man/s/\.gz$$//' \
-			-e '/man\/${MANLANG}\/cat/s/\.gz$$//' \
+			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]\)\.gz$$|\1|' \
+			-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]\)\.gz$$|\1|' \
 			-e 's/<\$$ARCH>/'${ARCH}'/g' \
 			-e 's/\$${MACHINE_ARCH}/'${MACHINE_ARCH}'/g' \
 			-e 's/\$${MACHINE_GNU_ARCH}/'${MACHINE_GNU_ARCH}'/g' \
