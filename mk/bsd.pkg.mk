@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1290 2003/09/25 02:25:12 danw Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1291 2003/09/28 08:52:13 grant Exp $
 #
 # This file is in the public domain.
 #
@@ -3146,7 +3146,7 @@ _SU_TARGET=								\
 			${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
 			${PRE_ROOT_CMD};				\
 		fi;                                             	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`${HOSTNAME_CMD}` to $$action ${PKGNAME}."; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`${HOSTNAME_CMD}` to $$action ${PKGBASE}."; \
 		${ECHO_MSG} -n "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
 		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH=$${PATH}:${SU_CMD_PATH_APPEND} ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
 	fi
@@ -3229,7 +3229,7 @@ reinstall:
 deinstall: do-su-deinstall
 
 do-su-deinstall: uptodate-pkgtools
-	@${ECHO_MSG} "${_PKGSRC_IN}> Deinstalling for ${PKGNAME}"
+	@${ECHO_MSG} "${_PKGSRC_IN}> Deinstalling for ${PKGBASE}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	realtarget="real-su-deinstall";					\
 	realflags="DEINSTALLDEPENDS=${DEINSTALLDEPENDS}";		\
