@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2004/11/27 15:45:57 taca Exp $
+# $NetBSD: Makefile,v 1.11 2005/01/28 14:08:01 taca Exp $
 #
 
 DISTNAME=	mysql-ruby-2.5.1
 PKGNAME=	${RUBY_PKGPREFIX}-mysql-2.5.1
+PKGREVISION=	1
 CATEGORIES=	databases ruby
 MASTER_SITES=	http://www.tmtm.org/mysql/ruby/
 
@@ -10,8 +11,8 @@ MAINTAINER=	neumann@s-direktnet.de
 HOMEPAGE=       http://www.tmtm.org/mysql/ruby/
 COMMENT=	Ruby extension for MySQL
 
-USE_BUILDLINK3=	yes
-
+RUBY_HAS_ARCHLIB=	yes
+USE_BUILDLINK3=		yes
 USE_RUBY_EXTCONF=	yes
 INSTALL_TARGET=		site-install
 CONFIGURE_ARGS+= --with-mysql-include-dir=${BUILDLINK_PREFIX.mysql-client}/include \

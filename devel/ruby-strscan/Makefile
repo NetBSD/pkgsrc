@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/11/28 06:04:04 taca Exp $
+# $NetBSD: Makefile,v 1.7 2005/01/28 14:08:01 taca Exp $
 # FreeBSD: ports/devel/ruby-strscan/Makefile,v 1.13 2001/01/27 09:41:20 knu Exp
 
 DISTNAME=	strscan-0.6.7
@@ -10,6 +10,7 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.loveruby.net/en/strscan.html
 COMMENT=	Fast string scanner class library for Ruby
 
+RUBY_HAS_ARCHLIB=	yes
 RUBY_VERSION=		${RUBY16_VERSION}
 USE_RUBY_SETUP=		yes
 RUBY_SETUP=		install.rb

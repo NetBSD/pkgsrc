@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/11/27 14:52:19 taca Exp $
+# $NetBSD: Makefile,v 1.2 2005/01/28 14:08:02 taca Exp $
 # FreeBSD: ports/lang/ruby-tcltklib/Makefile,v 1.21 2000/10/20 19:56:04 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -10,6 +10,7 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby interface to Tcl/Tk libraries
 
+RUBY_HAS_ARCHLIB=	yes
 RUBY_VERSION=		${RUBY16_VERSION}
 USE_BUILDLINK3=		yes
 USE_RUBY_EXTCONF=	yes
