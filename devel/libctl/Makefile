@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2003/01/10 11:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/01/10 12:02:53 wiz Exp $
 
-DISTNAME=	libctl-1.4.1
+DISTNAME=	libctl-2.2
 CATEGORIES=	devel
 MASTER_SITES=	http://ab-initio.mit.edu/libctl/
 
@@ -17,5 +17,5 @@ post-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} COPYING COPYRIGHT ChangeLog 	\
 		NEWS README ${PREFIX}/share/doc/libctl/
 
-.include "../../lang/guile14/buildlink2.mk"
+.include "../../lang/guile/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
