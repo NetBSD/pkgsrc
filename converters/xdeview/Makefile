@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/01/30 23:18:45 agc Exp $
+# $NetBSD: Makefile,v 1.13 1999/04/01 13:38:43 agc Exp $
 # FreeBSD Id: Makefile,v 1.11 1998/02/24 21:43:45 jseger Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/Apps/frank/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.informatik.uni-frankfurt.de/~fp/uudeview/
 
-DEPENDS+=	tk-8.0p2:../../x11/tk80
+DEPENDS+=	tk-8.0.5:../../x11/tk80
 DEPENDS+=	uulib-0.5.13:../../converters/uulib
 
 USE_X11BASE=	yes

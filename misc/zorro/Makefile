@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/04/22 14:22:46 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/04/01 13:38:45 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/11/22 19:55:25 jseger Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/sorted/apps/zorro-1.1p8/
 
 MAINTAINER=	shanee@augusta.de
 
-DEPENDS+=	tk-8.0p2:../../x11/tk80
+DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 NO_BUILD=	yes
 

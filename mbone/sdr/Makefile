@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/02/20 22:48:36 hubertf Exp $
+# $NetBSD: Makefile,v 1.19 1999/04/01 13:38:44 agc Exp $
 #
 
 DISTNAME=	sdr-2.5.8
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/experimental/
 MAINTAINER=	is@netbsd.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/
 
-DEPENDS+=	tk-8.0p2:../../x11/tk80
+DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 MIRROR_DISTFILE=	no
 WRKSRC=		${WRKDIR}/sdr

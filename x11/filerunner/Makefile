@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/01/30 23:18:55 agc Exp $
+# $NetBSD: Makefile,v 1.9 1999/04/01 13:38:45 agc Exp $
 # $FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:11 jseger Exp
 #
 
@@ -11,7 +11,7 @@ MASTER_SITE_SUBDIR=	X11/desktop
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.cd.chalmers.se/~hch/filerunner.html
 
-DEPENDS+=	tk-8.0p2:../../x11/tk80
+DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 USE_X11BASE=	yes
 

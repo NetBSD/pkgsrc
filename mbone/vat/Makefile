@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 1999/03/22 09:38:24 agc Exp $
+# $NetBSD: Makefile,v 1.21 1999/04/01 13:38:44 agc Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/11 03:54:43 fenner Exp 
 #
 
@@ -14,7 +14,7 @@ HOMEPAGE=	http://www-nrg.ee.lbl.gov/vat/
 # we can use this first BUILD_DEPENDS and save some work.
 #BUILD_DEPENDS=	${GSM_WORK}/inc/private.h:${GSM_DIR}:patch
 BUILD_DEPENDS=	${GSM_WORK}/lib/libgsm.a:${GSM_DIR}:build
-DEPENDS+=	tk-8.0p2:../../x11/tk80
+DEPENDS+=	tk-8.0.5:../../x11/tk80
 #DEPENDS+=	gsm-1.0.10:${GSM_DIR}
 
 NOT_FOR_ARCHS=	alpha	#filter.cc compiler error

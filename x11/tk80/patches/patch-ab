@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.8 1999/04/01 10:48:03 agc Exp $
+$NetBSD: patch-ab,v 1.9 1999/04/01 13:38:46 agc Exp $
 
 Adjust for libtool operation.
 
---- Makefile.in.orig	Tue Nov 25 09:41:56 1997
-+++ Makefile.in	Sat Sep 12 14:07:20 1998
+--- Makefile.in.orig	Tue Mar  9 06:53:50 1999
++++ Makefile.in	Thu Apr  1 13:47:14 1999
 @@ -56,7 +56,9 @@
  BIN_DIR =		$(exec_prefix)/bin
  
@@ -15,21 +15,16 @@ Adjust for libtool operation.
  
  # Top-level directory for manual entries:
  MAN_INSTALL_DIR =	$(INSTALL_ROOT)$(prefix)/man
-@@ -94,11 +96,11 @@
+@@ -112,7 +114,7 @@
  
  # Libraries to use when linking.  This definition is determined by the
  # configure script.
 -LIBS = @TCL_BUILD_LIB_SPEC@ @LIBS@ $(X11_LIB_SWITCHES) @DL_LIBS@ @MATH_LIBS@ -lc
 +LIBS = -L${.CURDIR}/.libs -L${prefix}/lib -ltcl80 @LIBS@ $(X11_LIB_SWITCHES) @DL_LIBS@ @MATH_LIBS@ -lc
  
- # To change the compiler switches, for example to change from -O
- # to -g, change the following line:
--CFLAGS = -O
-+CFLAGS = @CFLAGS@
- 
  # To turn off the security checks that disallow incoming sends when
  # the X server appears to be insecure, reverse the comments on the
-@@ -134,7 +136,7 @@
+@@ -148,7 +150,7 @@
  # "install" around;  better to use the install-sh script that comes
  # with the distribution, which is slower but guaranteed to work.
  
@@ -38,18 +33,18 @@ Adjust for libtool operation.
  INSTALL_PROGRAM =	${INSTALL}
  INSTALL_DATA =		${INSTALL} -m 644
  
-@@ -286,9 +288,7 @@
+@@ -307,9 +309,7 @@
  # The following target is configured by autoconf to generate either
  # a shared library or non-shared library for Tk.
- @TK_LIB_FILE@: ${OBJS}
--	rm -f @TK_LIB_FILE@
+ ${TK_LIB_FILE}: ${OBJS}
+-	rm -f ${TK_LIB_FILE}
 -	@MAKE_LIB@
--	$(RANLIB) @TK_LIB_FILE@
+-	$(RANLIB) ${TK_LIB_FILE}
 +	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
  
  # Make target which outputs the list of the .o contained in the Tk lib
  # usefull to build a single big shared library containing Tcl/Tk and other
-@@ -299,17 +299,18 @@
+@@ -320,18 +320,21 @@
  # case
  objs: ${OBJS}
  
@@ -57,21 +52,25 @@ Adjust for libtool operation.
  
  wish: $(WISH_OBJS) $(TK_LIB_FILE)
 -	$(CC) @LD_FLAGS@ $(WISH_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
-+	${LIBTOOL} --mode=link $(CC) @LD_FLAGS@ $(RPATH) $(WISH_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
++	${LIBTOOL} --mode=link $(CC) @LD_FLAGS@ $(RPATH) $(WISH_OBJS) \
++		${TK_LIB_FILE:.a=.la} $(LIBS) \
  		$(TK_CC_SEARCH_FLAGS) -o wish
  
  tktest: $(TKTEST_OBJS) $(TK_LIB_FILE)
 -	${CC} @LD_FLAGS@ $(TKTEST_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
-+	${LIBTOOL} --mode=link ${CC} @LD_FLAGS@ $(RPATH) $(TKTEST_OBJS) @TK_BUILD_LIB_SPEC@ $(LIBS) \
++	${LIBTOOL} --mode=link ${CC} @LD_FLAGS@ $(RPATH) $(TKTEST_OBJS) \
++		${TK_LIB_FILE:.a=.la} $(LIBS) \
  		$(TK_CC_SEARCH_FLAGS) -o tktest
  
  xttest: test.o tkTest.o tkSquare.o $(TK_LIB_FILE)
 -	${CC} @LD_FLAGS@ test.o tkTest.o tkSquare.o \
+-		@TK_BUILD_LIB_SPEC@ $(LIBS) \
 +	${LIBTOOL} --mode=link ${CC} @LD_FLAGS@ $(RPATH) test.o tkTest.o tkSquare.o \
- 		@TK_BUILD_LIB_SPEC@ $(LIBS) \
++		${TK_LIB_FILE:.a=.la} $(LIBS) \
  		@TK_LD_SEARCH_FLAGS@ -lXt -o xttest
  
-@@ -351,16 +352,17 @@
+ # Note, in the target below TCL_LIBRARY needs to be set or else
+@@ -376,16 +379,17 @@
  		fi; \
  	    done;
  	@echo "Installing $(TK_LIB_FILE)"
@@ -92,7 +91,7 @@ Adjust for libtool operation.
  		$(SCRIPT_INSTALL_DIR) $(SCRIPT_INSTALL_DIR)/images; \
  	    do \
  	    if [ ! -d $$i ] ; then \
-@@ -370,8 +372,19 @@
+@@ -395,8 +399,19 @@
  		else true; \
  		fi; \
  	    done;
@@ -114,7 +113,7 @@ Adjust for libtool operation.
  	for i in $(SRC_DIR)/library/*.tcl $(SRC_DIR)/library/tclIndex $(SRC_DIR)/library/prolog.ps $(UNIX_DIR)/tkAppInit.c; \
  	    do \
  	    echo "Installing $$i"; \
-@@ -430,7 +443,7 @@
+@@ -455,7 +470,7 @@
  	@cd $(SRC_DIR)/doc; for i in *.1; \
  	    do \
  	    echo "Installing doc/$$i"; \
@@ -123,7 +122,7 @@ Adjust for libtool operation.
  	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
  		    $$i > $(MAN1_INSTALL_DIR)/$$i; \
  	    chmod 444 $(MAN1_INSTALL_DIR)/$$i; \
-@@ -439,7 +452,7 @@
+@@ -464,7 +479,7 @@
  	@cd $(SRC_DIR)/doc; for i in *.3; \
  	    do \
  	    echo "Installing doc/$$i"; \
@@ -132,7 +131,7 @@ Adjust for libtool operation.
  	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
  		    $$i > $(MAN3_INSTALL_DIR)/$$i; \
  	    chmod 444 $(MAN3_INSTALL_DIR)/$$i; \
-@@ -448,7 +461,7 @@
+@@ -473,7 +488,7 @@
  	@cd $(SRC_DIR)/doc; for i in *.n; \
  	    do \
  	    echo "Installing doc/$$i"; \
@@ -141,7 +140,7 @@ Adjust for libtool operation.
  	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
  		    $$i > $(MANN_INSTALL_DIR)/$$i; \
  	    chmod 444 $(MANN_INSTALL_DIR)/$$i; \
-@@ -474,275 +487,267 @@
+@@ -499,275 +514,267 @@
  # because this doesn't work on some strange compilers (e.g. UnixWare).
  
  tkTestInit.o: $(UNIX_DIR)/tkAppInit.c
