@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2002/12/24 18:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2002/12/24 18:41:42 wiz Exp $
 
 DISTNAME=	kde-3.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
