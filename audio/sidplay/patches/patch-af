@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/02/09 13:09:56 frueauf Exp $
+
+--- console/audiodrv.cpp-orig	Tue Feb  9 13:15:41 1999
++++ console/audiodrv.cpp	Tue Feb  9 13:54:31 1999
+@@ -7,7 +7,7 @@
+ 
+ #include "audiodrv.h"
+ 
+-const char audioDriver::AUDIODEVICE[] = "/dev/dsp";
++const char audioDriver::AUDIODEVICE[] = "/dev/audio";
+ 
+ audioDriver::audioDriver()
+ {

@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/02/09 13:09:56 frueauf Exp $
+
+--- ./console/audio/linux/audiodrv.h.orig	Mon Oct  5 19:20:27 1998
++++ ./console/audio/linux/audiodrv.h	Sun Jan 31 11:21:24 1999
+@@ -16,8 +16,10 @@
+ 
+ #if defined(HAVE_LINUX) && defined(HAVE_LINUX_SOUNDCARD_H)
+   #include <linux/soundcard.h>
+-#elif defined(HAVE_FREEBSD) && defined((HAVE_MACHINE_SOUNDCARD_H)
++#elif defined(HAVE_FREEBSD) && defined(HAVE_MACHINE_SOUNDCARD_H)
+   #include <machine/soundcard.h>
++#elif defined(HAVE_NETBSD) && defined(HAVE_SOUNDCARD_H)
++  #include <soundcard.h>
+ #else
+   #error Audio driver not supported.
+ #endif
