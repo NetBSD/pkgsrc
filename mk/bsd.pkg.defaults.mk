@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.143 2003/05/05 06:06:56 grant Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.144 2003/05/05 21:45:41 seb Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1317,11 +1317,6 @@ PKG_LANG?=english
 # language.  Should be '<lang>_<lc>' or '<lang>', for example 'english_uk',
 # 'german' or 'portuguese_br'.
 # Default: english
-
-#PKGVULNDIR=
-# Where audit-packages searchs for the vulnerabilities file.
-# Possible: any path
-# Default: ${DISTDIR}
 
 #POP_WITH_DRAC=
 # Used in the following packages to enable the optional DRAC support:
