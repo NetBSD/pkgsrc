@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/03/19 01:15:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2005/03/25 23:11:19 kristerw Exp $
 
 DISTNAME=		cdbkup-1.0
 PKGREVISION=		1
@@ -14,7 +14,8 @@ COMMENT=		CD-R(W) backup/restore system
 .include "../../mk/bsd.prefs.mk"
 
 DEPENDS+=		cdrecord>=1.10:../../sysutils/cdrecord
-.if ${OPSYS} == "NetBSD" && (${OS_VERSION:M1.6[K-Z]} || ${OS_VERSION:M[2-9].*})
+.if ${OPSYS} == "NetBSD" && \
+	(!empty(OS_VERSION:M1.6[K-Z]) || !empty(OS_VERSION:M[2-9].*))
 DEPENDS+=		gtar-base>=1.13.25:../../archivers/gtar-base
 .endif
 
