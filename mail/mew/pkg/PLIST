@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2001/10/10 05:45:16 jun Exp $
+@comment $NetBSD: PLIST,v 1.10 2001/10/31 08:07:15 jun Exp $
 bin/incdir
 bin/incmbox
 bin/mewcat
@@ -8,10 +8,10 @@ bin/mewinc
 bin/mewls
 @unexec install-info --delete --info-dir=%D/info %D/info/mew.info
 info/mew.info
-@exec install-info --info-dir=%D/info %D/info/mew.info
 info/mew.info-1
 info/mew.info-2
 info/mew.info-3
+@exec install-info --info-dir=%D/info %D/info/mew.info
 lib/emacs/etc/Mew/Mew.img
 lib/emacs/etc/Mew/Mew.png
 lib/emacs/etc/Mew/Mew.xbm
