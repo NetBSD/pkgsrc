@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 1999/09/24 16:42:06 jlam Exp $
+
+--- misc.c.orig	1999/06/02 19:23:56	1.1.1.1
++++ misc.c	1999/06/03 12:44:50	1.2
+@@ -433,6 +433,9 @@
+ #   if defined(LINUX) && defined(SPARC)
+ 	GC_init_linuxsparc();
+ #   endif
++#   if defined(NETBSD) && defined(__ELF__)
++	GC_init_netbsd_elf();
++#   endif
+ #   ifdef SOLARIS_THREADS
+ 	GC_thr_init();
+ 	/* We need dirty bits in order to find live stack sections.	*/
