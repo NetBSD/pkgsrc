@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/29 01:18:33 abs Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/06 21:32:39 wiz Exp $
 #
 
 DISTNAME=	speedtouch-21062001
@@ -11,7 +11,7 @@ MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://www.xsproject.org/speedtouch/
 COMMENT=	Alcatel SpeedTouch USB ADSL modem driver
 
-DEPENDS+=	userppp:../../net/userppp
+DEPENDS+=	userppp-001107:../../net/userppp
 
 MAKE_ENV+=	PREFIX=${PREFIX} INSTALL_DATA="${INSTALL_DATA}"
 MAKE_ENV+=	INSTALL_PROGRAM="${INSTALL_PROGRAM}"
