@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1998/10/21 19:59:29 garbled Exp $
+# $NetBSD: Makefile,v 1.2 1998/11/16 21:02:20 agc Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -23,19 +23,26 @@ MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 NOW_ROOT=	${LOCALBASE}/now
 
-MACHINE_ARCH!=	uname -m
-
-.if (${MACHINE_ARCH} == "i386")
+.if (${MACHINE} == "i386")
 FLAGS= "-m486 -DL_ENDIAN"
 .endif
 
-MAKE_ENV+= OPSYS=${OPSYS} ARCH=${MACHINE_ARCH} NOW_ROOT=${NOW_ROOT}
+MAKE_ENV+= OPSYS=${OPSYS} ARCH=${MACHINE} NOW_ROOT=${NOW_ROOT}
 MAKE_ENV+= PORTSDIR=${PKGDIR} WRKDIR=${WRKDIR} FLAGS=${FLAGS}
 
-SCRIPTS_ENV+= ARCH=${MACHINE_ARCH} RM=${RM} NOW_ROOT=${NOW_ROOT}
+SCRIPTS_ENV+= ARCH=${MACHINE} RM=${RM} NOW_ROOT=${NOW_ROOT}
 
+# the glunix group needs to exist before building.
 pre-configure:
 	${CP} ${FILESDIR}/Makefile-2 ${WRKSRC}/Makefile
+	@addgroup=`${AWK} -F: 'BEGIN { found = gid = 0; }		\
+		$$1 == "glunix" { found = 1; exit 0; }			\
+		$$1 != "glunix" && $$1 != "nogroup" { if ($$3 > gid) { gid = $$3; } } \
+		END { if (found) { printf("--exists--"); } else { printf("glunix:*:%d:\n", gid + 1); }}' /etc/group`;\
+	if [ "$$addgroup" != "--exists--" ]; then			\
+		${ECHO} "Adding group $$addgroup";			\
+		${ECHO} "$$addgroup" >> /etc/group;			\
+	fi
 
 pre-install:
 	${SED} -e 's|\$${NOW_ROOT}|${NOW_ROOT}|g' ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
