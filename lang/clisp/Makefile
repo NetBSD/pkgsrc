@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/06/16 23:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/18 22:46:37 hubertf Exp $
 
 DISTNAME=		clisp-2000-03-06
 PKGNAME=		clisp-20000306
@@ -12,7 +12,9 @@ HOMEPAGE=		http://clisp.cons.org/
 
 NOT_FOR_PLATFORM=	*-*-alpha	# severe LP64 problems
 
-MIRROR_DISTFILE=	no
+RESTRICTED=		"Contract notify author when selling for profit."
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 GNU_CONFIGURE=		YES
 WRKSRC=			${WRKDIR}/${DISTNAME}/src

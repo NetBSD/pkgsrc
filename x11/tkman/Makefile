@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/04/18 06:49:17 fredb Exp $
+# $NetBSD: Makefile,v 1.22 2000/08/18 22:46:52 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.28 1997/12/08 15:51:20 tg Exp
 #
 
@@ -13,8 +13,12 @@ DEPENDS+=		tk-8.0.5:../../x11/tk80
 DEPENDS+=		rman-3.0.*:../../textproc/rman
 DEPENDS+=		glimpse-4.1:../../textproc/glimpse
 
+RESTRICTED=		"Don't sell for profit"
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+
 USE_X11=		yes
-NO_CDROM=		"Don't sell for profit"
-MIRROR_DISTFILE=	no
 
 .include "../../mk/bsd.pkg.mk"

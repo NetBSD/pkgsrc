@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/22 12:03:38 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/18 22:46:32 hubertf Exp $
 
 DISTNAME=	Atari800-0.9.9a
 PKGNAME=	atari800-0.9.9a
@@ -12,11 +12,13 @@ HOMEPAGE=	http://cas3.zlin.vutbr.cz/~stehlik/a800.htm
 
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 
-USE_X11=	yes
-RESTRICTED=	"copyrighted ROM images"
-NO_CDROM=	${RESTRICTED}
-MIRROR_DISTFILE=no
+RESTRICTED=		"copyrighted ROM images"
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
+USE_X11=		yes
 EXTRACT_CMD=	unzip -Loq ${DOWNLOADED_DISTFILE}
 MAKE_FLAGS=	LDFLAGS="${LDFLAGS} -L${X11BASE}/lib" OBJ="atari_x11.o" \
 		CFLAGS="-c ${CFLAGS} -DPREFIX=\\\"${PREFIX}\\\""

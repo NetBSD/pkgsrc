@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/07/28 19:58:56 rh Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/18 22:46:31 hubertf Exp $
 
 DISTNAME=	phylip
 PKGNAME=	phylip-3.573c
@@ -11,7 +11,9 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	babafou@babafou.eu.org
 HOMEPAGE=	http://evolution.genetics.washington.edu/phylip.html
 
-NO_CDROM=	"No commercial distribution without a royalty agreement with the author"
+RESTRICTED=		"No commercial distribution without a royalty agreement with the author"
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/phylip

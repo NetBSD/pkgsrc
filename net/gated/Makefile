@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/11/19 13:23:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/18 22:46:44 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.17 1998/04/26 18:47:12 peter Exp 
 #
 
@@ -10,7 +10,11 @@ MASTER_SITES=   ftp://ftp.gated.merit.edu/net-research/gated/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gated.org/
 
-MIRROR_DISTFILE=	no
+RESTRICTED=		"Required license from Merit"
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 ALL_TARGET=	gated
 

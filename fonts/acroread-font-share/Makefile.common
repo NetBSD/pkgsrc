@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2000/05/12 20:39:12 sakamoto Exp $
+# $NetBSD: Makefile.common,v 1.2 2000/08/18 22:46:33 hubertf Exp $
 #
 
 PKGNAME=	acroread-${DISTNAME}-4.0
@@ -10,8 +10,11 @@ HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
 DEPENDS+=	acroread-4.*:../../print/acroread
 
 RESTRICTED=	Redistribution not permitted
-NO_CDROM=	${RESTRICTED}
-MIRROR_DISTFILE=no
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+
 IS_INTERACTIVE=	yes
 
 NO_PATCH=	yes

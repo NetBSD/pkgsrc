@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/08/14 12:38:21 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2000/08/18 22:46:38 hubertf Exp $
 
 DISTNAME=	snapshot-20000531
 PKGNAME=	postfix-20000531
@@ -12,7 +12,6 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.postfix.org/
 
-MIRROR_DISTFILE= no
 DIST_SUBDIR=	postfix
 
 POSTFIX_SPOOL=	/var/spool/postfix

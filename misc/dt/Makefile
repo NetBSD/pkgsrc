@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/09/07 14:53:55 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/18 22:46:43 hubertf Exp $
 #
 
 DISTNAME=	dt-1.1.7
@@ -8,12 +8,12 @@ MASTER_SITES=   ${MASTER_SITE_LOCAL}
 
 MAINTAINER=	fb@enteract.com
 
+NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
+
 .BEGIN:
 .if (${MACHINE} != "mac68k") && (${MACHINE} != "macppc")
 IGNORE=		"is only useful for ports that have the adb and grf devices"
 .endif
-
-MIRROR_DISTFILE=no
 
 ALL_TARGET=	depend all
 DTDOCSDIR=	${PREFIX}/share/doc/dt

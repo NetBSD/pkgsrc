@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/02/05 04:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/08/18 22:46:47 hubertf Exp $
 # FreeBSD Id: ports/security/crack/Makefile,v 1.11 1999/09/04 19:24:50 obrien Exp
 
 DISTNAME=	crack5.0
@@ -11,8 +11,9 @@ MASTER_SITES=	ftp://ftp.win.tue.nl/pub/security/  \
 
 MAINTAINER=	bouyer@netbsd.org
 
-RESTRICTED=	"Crypto; export-controlled"
-MIRROR_DISTFILE= no
+RESTRICTED=		"Crypto; export-controlled"
+NO_SRC_ON_FTP=		${RESTRICTED}
+MIRROR_DISTFILE=	 no
 
 WRKSRC=		${WRKDIR}/c50a
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2000/04/28 02:20:21 mycroft Exp $
+# $NetBSD: Makefile,v 1.24 2000/08/18 22:46:49 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -29,7 +29,8 @@ CFLAGS=
 .endif
 
 RESTRICTED=	"Cryptographic software"
-MIRROR_DISTFILE=no
+NO_SRC_ON_FTP=	${RESTRICTED}
+
 PGPLIB=		${PREFIX}/share/pgp
 CFLAGS+=	-DPGP_SYSTEM_DIR=\\\"${PGPLIB}/\\\"
 

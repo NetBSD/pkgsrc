@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/06/01 09:45:42 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/18 22:46:35 hubertf Exp $
 #
 
 PKGNAME=		ns-flash-4.0r12
@@ -25,9 +25,11 @@ MASTER_SITES=		http://download.macromedia.com/pub/shockwave/flash/${SUB}/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.flash.com/
 
-NO_CDROM=               "Redistribution not permitted"
-RESTRICTED=             "Export-controlled"
-MIRROR_DISTFILE=        no
+RESTRICTED=             "Export-controlled, redistribution not permitted"
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/08/08 03:50:29 sakamoto Exp $
+# $NetBSD: Makefile,v 1.12 2000/08/18 22:46:34 hubertf Exp $
 #
 
 DISTNAME=	Rollemup
@@ -13,7 +13,10 @@ LICENSE=	no-commercial-use
 RESTRICTED=	You are not allowed to distribute the software by any means. \
 		You are allowed to download a copy from this site for personal use. \
 		See http://www.medialab.lostboys.nl/content/showcase/license.html
-MIRROR_DISTFILE=no
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EXTRACT_ONLY=	# empty
 NO_PATCH=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/06/13 10:40:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2000/08/18 22:46:39 hubertf Exp $
 #
 
 DISTNAME=		xfmail-1.3
@@ -15,7 +15,8 @@ DEPENDS+=		xforms-0.88:../../x11/xforms
 ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-sparc *-*-ns32k
 
 RESTRICTED=		"Selling this software requires permission of the authors."
-NO_CDROM=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES

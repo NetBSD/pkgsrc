@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/10/25 01:36:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 2000/08/18 22:46:36 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/03/11 03:08:12 vanilla Exp
 # 
 
@@ -12,7 +12,8 @@ MAINTAINER=     packages@netbsd.org
 HOMEPAGE=       http://www.foolabs.com/xpdf/
 
 RESTRICTED=	"Crypto; export-controlled"
-MIRROR_DISTFILE= no
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 CONFLICTS=	xpdf-0.[789][a0]
 

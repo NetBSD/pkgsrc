@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/05/03 17:44:27 rh Exp $
+# $NetBSD: Makefile,v 1.16 2000/08/18 22:46:46 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/28 06:49:06 obrien Exp
 #
 
@@ -14,8 +14,9 @@ HOMEPAGE=	http://www.socks.nec.com/
 
 CONFLICTS=	socks4-*
 
-NO_CDROM=	"NEC has a funky license for this software"
 RESTRICTED=	"no commercial use"
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 # here are some extra configure args you may wish to use
 # see the readme file before screwing with them

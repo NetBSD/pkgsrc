@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/03/17 23:38:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2000/08/18 22:46:51 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/07/17 19:29:07 andreas Exp
 #
 
@@ -11,7 +11,10 @@ MASTER_SITES=   ftp://ftp.cs.arizona.edu/glimpse/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://glimpse.cs.arizona.edu/
 
-NO_CDROM=	"Restrictive copyright (don't sell for profit)"
+RESTRICTED=	"Restrictive copyright (don't sell for profit)"
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 

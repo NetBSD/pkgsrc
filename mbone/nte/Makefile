@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2000/04/07 15:28:57 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 2000/08/18 22:46:42 hubertf Exp $
 #
 
 DISTNAME=		nt.1.5a23
@@ -14,7 +14,9 @@ DEPENDS+=		tk-8.0.5:../../x11/tk80
 NOT_FOR_PLATFORM=	*-*-alpha	# ANSI headers cause LP64 problems
 
 RESTRICTED=		"Contains DES encryption"
-MIRROR_DISTFILE=	no
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+
 NO_WRKSUBDIR=		yes
 USE_GMAKE=		yes
 # Pass this on to our child

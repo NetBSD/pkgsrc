@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2000/07/24 11:11:16 tron Exp $
+# $NetBSD: Makefile,v 1.17 2000/08/18 22:46:48 hubertf Exp $
 #
 
 DISTNAME=		openssl-0.9.5a
@@ -14,7 +14,8 @@ CONFLICTS=		SSLeay-* ssleay-*
 USE_PERL5=		yes
 
 RESTRICTED=		"Crypto; export-controlled"
-MIRROR_DISTFILE=	no
+NO_SRC_ON_FTP=	${RESTRICTED}
+
 # matches what's in `Configure' (except sparc64)
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
 			NetBSD-*-m68k NetBSD-*-mips NetBSD-*-mipseb \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2000/08/18 15:44:45 tron Exp $
+# $NetBSD: Makefile.common,v 1.17 2000/08/18 22:46:51 hubertf Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -76,10 +76,13 @@ MASTER_SITES=	ftp://ftp.netscape.org/pub/communicator/${SUB}/ \
 ONLY_FOR_PLATFORM= *-*-alpha *-*-i386 *-*-sparc
 
 MIRROR_DISTFILE=no
-NO_CDROM=	Licensed product
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://home.netscape.com/browsers/index.html
 RESTRICTED=	"No re-distribution without agreement from Netscape"
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 BUILD_DEFS+=	NS_ENCRYPTION
 DIST_SUBDIR=	netscape

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2000/07/31 04:14:10 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2000/08/18 22:46:47 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -16,6 +16,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
 RESTRICTED=	"Cryptographic software"
+NO_SRC_ON_FTP=	${RESTRICTED}
 MIRROR_DISTFILE=no
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/02 12:44:35 veego Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/18 22:46:52 hubertf Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -9,15 +9,17 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.javasoft.com/products/jfc/
 
-USE_JAVA=	yes
+RESTRICTED=	"Read license before redistributing the Java(tm) Foundation Classes"
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
+USE_JAVA=	yes
 WRKSRC=		${WRKDIR}/swing-1.1.1fcs
 NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=
-RESTRICTED=	"Read license before redistributing the Java(tm) Foundation Classes"
-NO_CDROM=	${RESTRICTED}
-MIRROR_DISTFILE=no
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/02/15 09:26:20 agc Exp $
+# $NetBSD: Makefile,v 1.3 2000/08/18 22:46:34 hubertf Exp $
 # Based on FreeBSD ports/games/quakeserver
 # FreeBSD: ports/games/quakeserver/Makefile,v 1.20 1999/08/31 06:44:23 mharo Exp
 #
@@ -16,10 +16,13 @@ HOMEPAGE=	http://www.idsoftware.com/
 BUILD_DEPENDS=	unzip:../../archivers/unzip
 BUILD_DEPENDS+=	lha:../../archivers/lha
 
+LICENSE+=	shareware
+RESTRICTED=	"This software is shareware"
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+
 NO_WRKSUBDIR=	YES
 NO_BUILD=	YES
-NO_CDROM=	"This software is shareware"
-LICENSE+=	shareware
 
 do-extract:
 		${RM} -rf ${WRKDIR}

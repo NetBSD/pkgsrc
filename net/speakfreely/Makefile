@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/29 03:12:19 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/18 22:46:46 hubertf Exp $
 #
 
 DISTNAME=		speak_freely-7.2
@@ -14,7 +14,9 @@ DEPENDS+=		gsm-1.0.10:../../audio/gsm
 USE_PERL=		# defined
 PERL_PATH=		${LOCALBASE}/bin/perl
 
-MIRROR_DISTFILE=	no			# source includes crypto code
+RESTRICTED=		Source includes crypto code
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
 
 NO_CONFIGURE=		# defined
 
