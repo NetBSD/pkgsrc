@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.62 2000/06/22 16:57:37 rh Exp $
+#	$NetBSD: Makefile,v 1.63 2000/07/15 06:54:12 rh Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += asr-manpages
@@ -26,6 +26,7 @@
     SUBDIR += gnome-utils
     SUBDIR += gnucash
     SUBDIR += gperiodic
+    SUBDIR += heyu
     SUBDIR += ical
     SUBDIR += jitterbug
     SUBDIR += jive
