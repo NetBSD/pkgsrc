@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/03/26 23:57:31 fredb Exp $
+# $NetBSD: Makefile,v 1.9 2000/03/30 06:51:55 jlam Exp $
 #
 
 DISTNAME=		openssh-1.2.3
@@ -13,7 +13,7 @@ HOMEPAGE=		http://www.openssh.com/
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/perl:../../lang/perl5
 
-.if !exists(/usr/bin/openssl)
+.if !exists(/usr/include/openssl/rsa.h)
 DEPENDS+=		openssl-[0-9]*:../../security/openssl
 .endif
 
