@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/18 05:05:43 snj Exp $
+# $NetBSD: Makefile,v 1.6 2004/08/26 10:20:41 seb Exp $
 #
 
 DISTNAME=	offlineimap_${_OFFLINEIMAP_VER}
@@ -14,19 +14,19 @@ WRKSRC=		${WRKDIR}/offlineimap
 USE_BUILDLINK3=	yes
 
 # This is only to placate pkglint
-_OFFLINEIMAP_VER=	4.0.0
+_OFFLINEIMAP_VER=	4.0.6
 
 PYTHON_VERSIONS_ACCEPTED=	22pth 23pth
 PYDISTUTILSPKG=			yes
 PYTHON_PATCH_SCRIPTS=		bin/offlineimap
 PLIST_SUBST+=			PYSITELIB=${PYSITELIB}
 
+INSTALLATION_DIRS=	man/man1 share/examples/offlineimap
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/offlineimap
 .for _f_ in offlineimap.conf offlineimap.conf.minimal
 	${INSTALL_DATA} ${WRKSRC}/${_f_} ${PREFIX}/share/examples/offlineimap/${_f_}
 .endfor
-	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/offlineimap.1 ${PREFIX}/man/man1/offlineimap.1
 
 .include "../../lang/python/extension.mk"
