@@ -1,20 +1,16 @@
-$NetBSD: patch-aa,v 1.3 1999/11/12 16:07:32 rh Exp $
+$NetBSD: patch-aa,v 1.4 2000/09/15 15:59:34 skrll Exp $
 
---- configure.orig	Sat Nov 21 18:12:59 1998
-+++ configure	Fri Nov 12 17:04:12 1999
-@@ -4457,6 +4457,7 @@
-   echo "$ac_t""no" 1>&6
- fi
+--- client-src/Makefile.in.orig	Sat Nov 21 17:33:45 1998
++++ client-src/Makefile.in
+@@ -285,9 +285,8 @@
+ getfsent_LDFLAGS = 
+ versionsuffix_SOURCES = versionsuffix.c
+ versionsuffix_OBJECTS =  versionsuffix.o
+-versionsuffix_LDADD = $(LDADD)
+-versionsuffix_DEPENDENCIES =  libamclient.$(LIB_EXTENSION) \
+-../common-src/libamanda.$(LIB_EXTENSION)
++versionsuffix_LDADD = ../common-src/libamanda.$(LIB_EXTENSION)
++versionsuffix_DEPENDENCIES = ../common-src/libamanda.$(LIB_EXTENSION)
+ versionsuffix_LDFLAGS = 
+ SCRIPTS =  $(libexec_SCRIPTS) $(sbin_SCRIPTS)
  
-+if false; then
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -4502,6 +4503,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
-+fi
- 
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
