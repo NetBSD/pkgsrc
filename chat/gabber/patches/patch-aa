@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/07/10 14:16:07 agc Exp $
+
+--- src/GabberLogger.cc.orig	Sat Apr 27 13:52:32 2002
++++ src/GabberLogger.cc	Sat Apr 27 13:53:35 2002
+@@ -66,9 +66,9 @@
+ void GabberLogger::initdir()
+ {
+      // Ensure _logdir is terminated with a /
+-     if (_logdir[_logdir.length()-1] != '/')
++//     if (_logdir[_logdir.length()-1] != '/')
+ 	  //_logdir.resize(_logdir.length() - 1);
+-	  _logdir += "/";
++//	  _logdir += "/";
+      // Replace ~ with $HOME
+      if (_logdir[0] == '~')
+ 	  _logdir.replace(0, 1, g_get_home_dir());

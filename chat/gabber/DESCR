@@ -1,0 +1,11 @@
+Gabber is a Free and Open Source GNOME client for an instant messaging
+system called Jabber. Jabber is a Free and Open Source distributed
+instant messaging system. It does not rely on a single server, and the
+protocol is well documented. Jabber allows communication with many
+different instant messaging systems, including ICQ and AIM. There are
+several different Jabber clients already, but no other GNOME clients
+as of this writing. Hopefully Gabber will serve the purpose of being a
+robust GNOME Jabber client well.
+
+For further information, see JabberCentral for end user news and
+Jabber.org for developer news.
