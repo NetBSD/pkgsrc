@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1476 2003/02/24 15:35:54 kei Exp $
+$NetBSD: CHANGES,v 1.1477 2003/02/24 16:11:18 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -822,3 +822,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated netatalk to 1.6.1 [fredb 2003-02-23]
 	Updated automake to 1.7.3 [wiz 2003-02-24]
 	Added dvipdfmx-0.0.0.20021230 [kei 2003-02-24]
+	Updated feh to 1.2.5 [salo 2003-02-24]
