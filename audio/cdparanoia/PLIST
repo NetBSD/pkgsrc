@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:27 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/03/04 14:45:12 itohy Exp $
 bin/cdparanoia
-include/cdda_interface.h
-include/cdda_paranoia.h
+include/cdparanoia/cdda_interface.h
+include/cdparanoia/cdda_paranoia.h
+include/cdparanoia/utils.h
 lib/libcdda_interface.a
 lib/libcdda_interface.la
 lib/libcdda_interface.so
 lib/libcdda_interface.so.0
-lib/libcdda_interface.so.0.97
+lib/libcdda_interface.so.0.98
 lib/libcdda_paranoia.a
 lib/libcdda_paranoia.la
 lib/libcdda_paranoia.so
 lib/libcdda_paranoia.so.0
-lib/libcdda_paranoia.so.0.97
+lib/libcdda_paranoia.so.0.98
 man/man1/cdparanoia.1
+@dirrm include/cdparanoia
