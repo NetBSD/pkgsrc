@@ -1,9 +1,17 @@
+# $NetBSD: Makefile,v 1.2 1997/11/18 17:21:26 is Exp $
+#
+# Packages collection makefile for:	sdr
+# Version required:			2.3a1
+# Date created:				18 November 1997
+# By:	      Ignatios Souvatzis <is@netbsd.org>
+#
+# Based on:
 # New ports collection makefile for:	sdr
 # Version required:			2.3a1
 # Date created:				5 September 1996
 # Whom:	      Bill Fenner <fenner@FreeBSD.ORG>
 #
-#   Id: Makefile,v 1.6 1997/10/15 20:35:20 fenner Exp
+#   Id: Makefile,v 1.6 1997/10/15 20:35:20 fenner Exp 
 #
 
 DISTNAME=	sdr.V2.3a1
@@ -11,7 +19,7 @@ PKGNAME=	sdr-2.3a1
 CATEGORIES=	mbone tk80
 MASTER_SITES=	ftp://cs.ucl.ac.uk/mice/sdr/
 
-MAINTAINER=	fenner@FreeBSD.org
+MAINTAINER=	is@netbsd.org
 
 LIB_DEPENDS=	tk80\\.1:${PORTSDIR}/x11/tk80
 
