@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1 1999/03/04 17:30:44 tron Exp $
+
+--- operation.c.orig	Mon Mar 23 22:39:51 1998
++++ operation.c	Thu Mar  4 18:27:22 1999
+@@ -909,12 +909,14 @@
+ 	    fontSet, "-*-helvetica-medium-r-normal-*-*-120-*-*-p-*-*-*"),
+     MI_FLAGCB("Helvetica Bold 12", MF_CHECK | MF_GROUP1,
+ 	      fontSet, "-*-helvetica-bold-r-normal-*-*-120-*-*-p-*-*-*"),
+-    MI_FLAGCB("Fixed 12", MF_CHECK | MF_GROUP1,
+-	      fontSet, "-*-fixed-medium-r-normal-*-*-120-*-*-m-*-*-*"),
++    MI_FLAGCB("Sony 16", MF_CHECK|MF_GROUP1,
++        fontSet, "-*-fixed-medium-r-normal--16-120-100-100-c-80-iso8859-1"),
++    MI_FLAGCB("Sony 24", MF_CHECK|MF_GROUP1,
++        fontSet, "-*-fixed-medium-r-normal--24-170-100-100-c-120-iso8859-1"),
+     MI_FLAGCB("Courier 12", MF_CHECK | MF_GROUP1,
+ 	      fontSet, "-*-courier-medium-r-normal-*-*-120-*-*-m-*-*-*"),
+     MI_SEPERATOR(),
+-#define FM_SELECT	11
++#define FM_SELECT 12
+     MI_FLAGCB("select", MF_CHECK | MF_GROUP1, fontSet, NULL),
+ };
+ 
