@@ -1,0 +1,14 @@
+$NetBSD: patch-cd,v 1.3 2004/03/30 08:17:46 agc Exp $
+
+--- src/client_side.c	2004/03/30 08:10:51	1.1
++++ src/client_side.c	2004/03/30 08:12:35
+@@ -2753,6 +2753,9 @@
+ 	    natLookup.nl_inip = http->conn->me.sin_addr;
+ 	    natLookup.nl_outip = http->conn->peer.sin_addr;
+ 	    natLookup.nl_flags = IPN_TCP;
++#ifndef IPL_NAT
++#define IPL_NAT	IPNAT_NAME
++#endif
+ 	    if (natfd < 0) {
+ 		int save_errno;
+ 		enter_suid();
