@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/02/07 15:26:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/02/21 14:50:22 kristerw Exp $
 
 DISTNAME=	gnome-extras-2.4.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,7 +15,7 @@ DEPENDS+=	conglomerate>=0.7.6nb6:../../editors/conglomerate
 DEPENDS+=	evolution>=1.4.5:../../mail/evolution
 DEPENDS+=	gaim>=0.75:../../chat/gaim
 DEPENDS+=	gnome>=2.4.2:../../meta-pkgs/gnome
-DEPENDS+=	gqview>=1.3.8:../../graphics/gqview-devel
+DEPENDS+=	gqview>=1.3.8:../../graphics/gqview
 DEPENDS+=	mergeant>=0.12.1:../../databases/mergeant
 DEPENDS+=	pan>=0.14.2:../../news/pan
 DEPENDS+=	seahorse>=0.7.3:../../security/seahorse
