@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.5 2004/05/06 12:12:59 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/06/28 17:45:56 jmmv Exp $
 #
 
-DISTNAME=		gst-plugins-0.8.1
+DISTNAME=		gst-plugins-0.8.2
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gst-plugins/0.8/}
 EXTRACT_SUFX=		.tar.bz2
@@ -42,6 +42,7 @@ CONFIGURE_ARGS+=	--disable-tests
 		cdparanoia \
 		cdrom \
 		divx \
+		dts \
 		dvdnav \
 		dvdread \
 		dxr3 \
@@ -69,6 +70,7 @@ CONFIGURE_ARGS+=	--disable-tests
 		libpng \
 		libpng \
 		librfb \
+		libvisual \
 		mad \
 		mikmod \
 		mpeg2dec \
@@ -79,6 +81,7 @@ CONFIGURE_ARGS+=	--disable-tests
 		ogg \
 		oggtest \
 		oss \
+		osx_audio \
 		pango \
 		qcam \
 		raw1394 \
@@ -90,6 +93,7 @@ CONFIGURE_ARGS+=	--disable-tests
 		sidplay \
 		smoothwave \
 		sndfile \
+		sunaudio \
 		speex \
 		swfdec \
 		tarkin \
