@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1.1.1 2001/10/20 22:19:43 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/10/23 01:43:09 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libyahoo.
 #
@@ -24,6 +24,8 @@ EVAL_PREFIX+=				BUILDLINK_PREFIX.libyahoo=libyahoo
 BUILDLINK_PREFIX.libyahoo_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.libyahoo=		include/libyahoo/*.h
 BUILDLINK_FILES.libyahoo+=		lib/libyahoo.a
+
+BUILDLINK_TRANSFORM.libyahoo=	-e "s|include/libyahoo/|include/|g"
 
 BUILDLINK_TARGETS.libyahoo=	libyahoo-buildlink
 BUILDLINK_TARGETS.libyahoo+=	libyahoo-buildlink-config-wrapper
