@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/14 13:53:56 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/03/08 12:48:12 wiz Exp $
 bin/zzcat
 bin/zzdir
 bin/zzip-config
@@ -22,10 +22,14 @@ include/zzip/wrap.h
 include/zzip/zzip.h
 lib/libzzip-0.so.10.82
 lib/libzzip-0.so.10
-lib/libzzip-0.so
 lib/libzzip.a
 lib/libzzip.la
 lib/libzzip.so
+lib/libzzipwrap-0.so.10
+lib/libzzipwrap-0.so.10.82
+lib/libzzipwrap.a
+lib/libzzipwrap.la
+lib/libzzipwrap.so
 lib/pkgconfig/zzip-zlib-config.pc
 lib/pkgconfig/zziplib.pc
 lib/pkgconfig/zzipwrap.pc
