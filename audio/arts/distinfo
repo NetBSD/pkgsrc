@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.25 2004/08/21 11:52:21 markd Exp $
+$NetBSD: distinfo,v 1.26 2004/10/13 11:39:23 markd Exp $
 
-SHA1 (arts-1.3.0.tar.bz2) = eab6abaf2cce385243c585e307bbb2f778fca9e7
-Size (arts-1.3.0.tar.bz2) = 967395 bytes
+SHA1 (arts-1.3.1.tar.bz2) = 9b65b4f8ad36150d0bfee16993efb5f452fe98c0
+Size (arts-1.3.1.tar.bz2) = 967242 bytes
 SHA1 (patch-aa) = ff582ade3d9913440cd20d92b342a5357991f555
 SHA1 (patch-ab) = 73c4ec5360ce671f69b6de4e226cda9478d098ee
 SHA1 (patch-ac) = de22843493a184f4aa8c20e011aa2a73ad794728
