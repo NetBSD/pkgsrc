@@ -1,4 +1,4 @@
-$NetBSD: README.AIX,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+$NetBSD: README.AIX,v 1.2 2005/02/16 21:38:41 reed Exp $
 
 You will need gcc.  The AIX xlC compiler doesn't work, but probably
 could be made to.  gcc-3.3.2 has been tested.
@@ -19,6 +19,9 @@ gcc from pkgsrc, lang/gcc3 is recommended.
 
 Post bootstrap setup
 --------------------
+
+Some versions of AIX don't ship with gzip so install it and set
+GUNZIP_CMD and GZCAT in mk.conf as needed.
 
 Here is an example mk.conf:
 
