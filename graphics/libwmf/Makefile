@@ -1,39 +1,28 @@
-# $NetBSD: Makefile,v 1.24 2001/08/29 22:41:19 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2001/10/15 15:47:43 kei Exp $
 #
 
-DISTNAME=		libwmf-0.1.21
+DISTNAME=		libwmf-0.2.1
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wvware/}
 
 MAINTAINER=		kei@netbsd.org
 HOMEPAGE=		http://www.wvware.com/libwmf.html
-COMMENT=		library for reading and converting WMF (Windows Meta Files)
+COMMENT=		library for reading and converting WMF (Windows Meta Files), version 2
 
 USE_BUILDLINK_ONLY=	YES
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--includedir="${PREFIX}/include/libwmf"
+CONFIGURE_ARGS+=	--includedir=${INCLUDEDIR}
+CONFIGURE_ARGS+=	--with-docdir=${HTMLDIR}
+USE_X11=		YES
+USE_LIBTOOL=		YES
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 INCLUDEDIR=		${PREFIX}/include/libwmf
 HTMLDIR=		${PREFIX}/share/doc/html/libwmf
-WRKSRC=			${WRKDIR}/libwmf
 
-post-extract:
-	${CHMOD} a-x ${WRKSRC}/doc/*.html
-
-pre-install:
-	${INSTALL_DATA_DIR} ${INCLUDEDIR}
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/myxpm.h ${INCLUDEDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}/pics
-	cd ${WRKSRC}; ${INSTALL_DATA} doc/*.html doc/*.gif \
-		COPYING CREDITS README ${HTMLDIR}
-	cd ${WRKSRC}; ${INSTALL_DATA} doc/pics/weave.jpg \
-		${HTMLDIR}/pics
-
-.include "../../graphics/freetype-lib/buildlink.mk"
+.include "../../graphics/freetype2/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
 .include "../../graphics/xpm/buildlink.mk"
+.include "../../textproc/libxml2/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
