@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.14 2003/07/02 16:07:02 grant Exp $
+# $NetBSD: texinfo.mk,v 1.15 2003/07/31 08:58:24 grant Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk when INFO_FILES and
 # USE_NEW_TEXINFO are defined.
@@ -11,6 +11,8 @@
 
 .if !defined(TEXINFO_MK)
 TEXINFO_MK=	# defined
+
+.include "../../mk/bsd.prefs.mk"
 
 #
 # This switch is here only until all packages are converted to use
