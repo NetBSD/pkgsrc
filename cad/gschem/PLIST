@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/12/13 05:19:51 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/03/09 06:18:26 dmcmahill Exp $
 bin/gschem
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gschemdoc.info
 info/gschemdoc.info
@@ -13,6 +13,7 @@ info/gschemdoc.info-15
 info/gschemdoc.info-16
 info/gschemdoc.info-17
 info/gschemdoc.info-18
+info/gschemdoc.info-19
 info/gschemdoc.info-2
 info/gschemdoc.info-3
 info/gschemdoc.info-4
@@ -51,6 +52,7 @@ ${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/geda-gschem.mo
 ${PKGLOCALEDIR}/locale/ja_JP/LC_MESSAGES/geda-gschem.mo
 ${PKGLOCALEDIR}/locale/nl_NL/LC_MESSAGES/geda-gschem.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/geda-gschem.mo
 @dirrm share/gEDA/bitmap
 @unexec ${RMDIR} %D/share/gEDA/scheme 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gEDA 2>/dev/null || ${TRUE}
