@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/12/24 00:09:55 ben Exp $
+
+--- meta-input.c.orig	2002-05-02 08:29:12.000000000 -0700
++++ meta-input.c
+@@ -411,7 +411,8 @@ static void stop (void)
+ 
+ static void pause (short p)
+ {
+-	meta_input_ip.output->pause (p);
++	/* for some reason this coredumps for me -Ben */
++	/* meta_input_ip.output->pause (p); */
+ }
+ 
+ static int get_time (void)

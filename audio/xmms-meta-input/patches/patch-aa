@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/24 00:09:55 ben Exp $
+
+--- Makefile.orig	2002-05-02 08:34:52.000000000 -0700
++++ Makefile
+@@ -1,4 +1,4 @@
+-CCOPT = -O6
++CCOPT = -fPIC
+ 
+ # Global XMMS directory
+ PLAYER_DIR = "\"`xmms-config --input-plugin-dir`/Meta\""
