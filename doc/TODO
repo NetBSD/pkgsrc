@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.814 2003/08/31 19:48:42 jschauma Exp $
+$NetBSD: TODO,v 1.815 2003/08/31 21:18:54 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -156,7 +156,6 @@ Suggested package updates
 	o hpijs-1.4.1
 	o hping-2.0.0.2 [pkg/22320]
 	o icepref-2.2
-	o icewm-1.2.11
 	o inform-6.21.3 [pkg/19298]
 	o inform-6.21.4 [pkg/21934]
 	o inn-2.4.0

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3180 2003/08/31 19:55:21 jdolecek Exp $
+$NetBSD: CHANGES,v 1.3181 2003/08/31 21:18:53 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3434,3 +3434,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated buildtool-doc to 0.13 [jmmv 2003-08-31]
 	Updated tcl-tclcl to 1.0rc13 [jschauma 2003-08-31]
 	Updated php to 4.3.3 [jdolecek 2003-08-31]
+	Updated icewm to 1.2.12 [xtraeme 2003-08-31]
+	Updated icewm-gnome to 1.2.12 [xtraeme 2003-08-31]
+	Updated icewm-imlib to 1.2.12 [xtraeme 2003-08-31]
