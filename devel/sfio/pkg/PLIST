@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/11/02 14:43:17 agc Exp $
+lib/libsfio.a
+lib/libstdio.a
+include/sfio/ast_common.h
+include/sfio/sfio.h
+include/sfio/sfio_t.h
+include/sfio/stdio.h
+man/man3/sfio.3
+@dirrm include/sfio
