@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1 2003/09/17 16:40:14 jmmv Exp $
+
+--- doc/Makefile.in.orig	2002-05-18 22:17:28.000000000 +0000
++++ doc/Makefile.in
+@@ -9,20 +9,20 @@ prefix		= @prefix@
+ exec_prefix	= @exec_prefix@
+ bindir		= @bindir@
+ mandir		= @mandir@
+-docdir		= $(prefix)/doc/nasm
++docdir		= $(prefix)/share/doc/nasm
++htmldocdir	= $(prefix)/share/doc/html/nasm
+ infodir		= @infodir@
+ 
+ INSTALL		= @INSTALL@
+ INSTALL_PROGRAM	= @INSTALL_PROGRAM@
+ INSTALL_DATA	= @INSTALL_DATA@
+ 
+-PERL		= perl
+-MAKEINFO	= makeinfo
++PERL		= ${PERL5}
+ TEXI2DVI        = texi2dvi
+ PS2PDF          = ps2pdf -dOptimize=true	# Part of GhostScript
+ 
+ SRCS		= nasmdoc.src
+-OUT		= nasm.info nasmdoc.ps nasmdoc.pdf
++OUT		= nasm.info nasmdoc.ps # nasmdoc.pdf
+ 
+ all: $(OUT)
+ 
+@@ -73,6 +73,7 @@ spotless: clean
+ 
+ install: all
+ 	$(INSTALL_DATA) info/* $(INSTALLROOT)$(infodir)
+-	mkdir -p $(INSTALLROOT)$(docdir)/html
+-	$(INSTALL_DATA) html/* $(INSTALLROOT)$(docdir)/html
+-	$(INSTALL_DATA) nasmdoc.ps nasmdoc.pdf nasmdoc.txt $(INSTALLROOT)$(docdir)
++	$(INSTALL_DATA_DIR) $(INSTALLROOT)$(docdir)
++	$(INSTALL_DATA_DIR) $(INSTALLROOT)$(htmldocdir)
++	$(INSTALL_DATA) html/* $(INSTALLROOT)$(htmldocdir)
++	$(INSTALL_DATA) nasmdoc.ps nasmdoc.txt $(INSTALLROOT)$(docdir)
