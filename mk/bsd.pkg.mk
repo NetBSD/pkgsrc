@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1157 2003/03/25 22:05:00 jschauma Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1158 2003/03/28 21:15:58 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1225,12 +1225,6 @@ UPDATE_TARGET=	${DEPENDS_TARGET}
 .if (defined(NO_CHECKSUM) && !target(checksum)) || exists(${EXTRACT_COOKIE})
 checksum: fetch
 	@${DO_NADA}
-.endif
-
-# Disable patch
-.if defined(NO_PATCH) && !target(patch)
-patch: extract
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${PATCH_COOKIE}
 .endif
 
 # Disable buildlink
