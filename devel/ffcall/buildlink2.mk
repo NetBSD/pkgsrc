@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/09/27 10:36:07 rh Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/05/11 07:12:50 jmc Exp $
 #
 # This Makefile fragment is included by packages that use ffcall.
 #
@@ -9,7 +9,7 @@
 FFCALL_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			ffcall
-BUILDLINK_DEPENDS.ffcall?=		ffcall>=1.8.4
+BUILDLINK_DEPENDS.ffcall?=		ffcall>=1.8.4nb1
 BUILDLINK_PKGSRCDIR.ffcall?=		../../devel/ffcall
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.ffcall=ffcall
