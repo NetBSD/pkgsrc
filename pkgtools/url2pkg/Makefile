@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2001/09/09 20:36:43 agc Exp $
+# $NetBSD: Makefile,v 1.16 2001/10/31 18:45:42 zuntum Exp $
 #
 
-DISTNAME=	url2pkg-1.15
+DISTNAME=	url2pkg-1.16
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# Nothing
 DISTFILES=	# Nothing
@@ -17,7 +17,7 @@ NO_PATCH=	yes
 EXTRACT_CMD=	${ECHO}
 
 do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/${DISTNAME:C/-.*$//} ${LOCALBASE}/bin/${DISTNAME:C/-.*$//}
+	${INSTALL_SCRIPT} ${FILESDIR}/${DISTNAME:C/-.*$//} ${PREFIX}/bin/${DISTNAME:C/-.*$//}
 	${INSTALL_MAN} ${FILESDIR}/${DISTNAME:C/-.*$//}.8 ${PREFIX}/man/man8
 
 .include "../../mk/bsd.pkg.mk"
