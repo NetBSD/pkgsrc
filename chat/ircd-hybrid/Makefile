@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/04/11 05:51:24 snj Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/11 16:08:55 snj Exp $
 #
 
 DISTNAME=	ircd-hybrid-6.2
@@ -13,7 +13,7 @@ COMMENT=	IRC server with many options
 
 GNU_CONFIGURE=	YES
 
-USE_BUILDLINK3=		# defined
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 
 PKG_SYSCONFSUBDIR=	ircd-hybrid
