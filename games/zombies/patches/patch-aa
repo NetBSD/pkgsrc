@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/06/26 14:50:33 simonb Exp $
+$NetBSD: patch-aa,v 1.2 2004/05/12 01:39:00 jschauma Exp $
 
---- Makefile.orig	Sun Jun 27 00:37:17 1999
-+++ Makefile	Sun Jun 27 00:43:54 1999
-@@ -3,7 +3,7 @@
+--- Makefile.orig	1999-06-26 10:37:17.000000000 -0400
++++ Makefile	2004-05-11 21:31:49.000000000 -0400
+@@ -3,16 +3,16 @@
  
  # ---- FILE LOCATIONS ----
  
@@ -11,6 +11,51 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/06/26 14:50:33 simonb Exp $
  BINDIR		= ${PREFIX}/bin
  MANDIR		= ${PREFIX}/man/man6
  SCOREFILE	= /var/games/zombies_score
+-BINOWN		= games
+-BINGRP		= games
+-BINMODE		= 2555
+-MANOWN		= root
+-MANGRP		= wheel
+-MANMODE		= 444
++#BINOWN		= games
++#BINGRP		= games
++#BINMODE		= 2555
++#MANOWN		= root
++#MANGRP		= wheel
++#MANMODE		= 444
+ SCOREMODE	= 664
+ 
+ # ---- COMPILER OPTIONS ----
+@@ -23,11 +23,11 @@
+ #CC		= cc
+ 
+ # For gcc with all sorts of checks
+-FLAGS		= -O2 -Wall -Wstrict-prototypes -Wmissing-prototypes \
+-		  -Wpointer-arith -Wreturn-type -Wcomment -Waggregate-return \
+-		  -Wunused -Wbad-function-cast -Wcast-align -Wcast-qual \
+-		  -Wchar-subscripts -Winline -Wmissing-declarations \
+-		  -Wpointer-arith -Wshadow
++#FLAGS		= -O2 -Wall -Wstrict-prototypes -Wmissing-prototypes \
++#		  -Wpointer-arith -Wreturn-type -Wcomment -Waggregate-return \
++#		  -Wunused -Wbad-function-cast -Wcast-align -Wcast-qual \
++#		  -Wchar-subscripts -Winline -Wmissing-declarations \
++#		  -Wpointer-arith -Wshadow
+ # For almost everything else
+ #FLAGS		= -O2
+ 
+@@ -49,9 +49,9 @@
+ # ---- INSTALLATION PROGRAMS ----
+ 
+ # BSDish
+-INSTALL_PROG	= install -c -s -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
+-INSTALL_MAN	= install -c -o ${MANOWN} -g ${MANGRP} -m ${MANMODE}
+-INSTALL_SCORE	= install -c -o ${BINOWN} -g ${BINGRP} -m ${SCOREMODE}
++INSTALL_PROG	= ${BSD_INSTALL_GAME}
++INSTALL_MAN	= ${BSD_INSTALL_MAN}
++INSTALL_SCORE	= ${BSD_INSTALL_DATA} -m ${SCOREMODE}
+ 
+ # SysVish
+ #INSTALL_PROG	= install -u ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 @@ -77,6 +77,7 @@
  install:	${PROG}
  		${INSTALL_PROG} ${PROG} ${BINDIR}
