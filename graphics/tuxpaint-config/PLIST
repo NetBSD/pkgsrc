@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/07 15:23:39 wiz Exp $
+bin/tuxpaint-config
+man/man1/tuxpaint-config.1.gz
+share/doc/tuxpaint-config/AUTHORS.txt
+share/doc/tuxpaint-config/CHANGES.txt
+share/doc/tuxpaint-config/COPYING.txt
+share/doc/tuxpaint-config/README.txt
+share/doc/tuxpaint-config/TODO.txt
+share/tuxpaint-config/images/icon-win32.ico
+share/tuxpaint-config/images/icon.png
+share/tuxpaint-config/images/icon16x16.png
+share/tuxpaint-config/images/icon32x32.png
+share/tuxpaint-config/images/icon32x32.xpm
+share/tuxpaint-config/images/icon48x48.png
+share/tuxpaint-config/images/win32-icon16x16x16.png
+share/tuxpaint-config/images/win32-icon16x16x256.png
+share/tuxpaint-config/images/win32-icon32x32x16.png
+share/tuxpaint-config/images/win32-icon32x32x256.png
+share/tuxpaint-config/images/win32-icon48x48x256.png
+@dirrm share/tuxpaint-config/images
+@dirrm share/tuxpaint-config
+@dirrm share/doc/tuxpaint-config
