@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/02 15:51:37 soren Exp $
+# $NetBSD: Makefile,v 1.3 2004/02/19 17:22:17 wiz Exp $
 #
 
 DISTNAME=	tpb-0.6.1
@@ -12,7 +12,7 @@ COMMENT=	Utility to enable the IBM ThinkPad(tm) special keys
 ONLY_FOR_PLATFORM= *-*-i386
 
 USE_X11=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 GNU_CONFIGURE=	YES
 
 post-install:
@@ -21,5 +21,8 @@ post-install:
 	${INSTALL_DATA}	${WRKSRC}/doc/${f}	${PREFIX}/share/doc/tpb
 .endfor
 
-.include "../../x11/xosd/buildlink2.mk"
+.include "../../x11/xosd/buildlink3.mk"
+
+.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
