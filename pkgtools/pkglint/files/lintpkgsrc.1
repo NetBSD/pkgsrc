@@ -1,0 +1,49 @@
+.\"	$NetBSD: lintpkgsrc.1,v 1.1 1999/04/19 07:32:10 abs Exp $
+.\"
+.\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
+.\" Absolutely no warranty.
+.\"
+.Dd April 19, 1999
+.Dt LINTPKGSRC 1
+.Sh NAME
+.Nm lintpkgsrc
+.Nd a verifier for the pkgsrc tree
+.Sh SYNOPSIS
+.Nm
+.Op Fl dhilmor
+.Sh DESCRIPTION
+.Nm
+tries to verify the entire contents of the pkgsrc tree.
+.Nm
+uses simple regular-expression matching for verifying
+files that make up a pkgsrc directory.
+Note that it does NOT implement complete Makefile parser.
+.Pp
+.Sy Options
+.Bl -tag -width Fl
+.It Fl h
+Basic help and usage.
+.It Fl d
+Extract the 'DEPENDS' listing from each pkgsrc package Makefile, then
+verify the version specified in each DEPEND correctly matches a current
+pkgsrc package.
+.It Fl i
+Check the version of each installed package against the current version in
+pkgsrc.
+.It Fl l
+Run pkglint on every package in pkgsrc.
+.It Fl m
+For each current distfile, verify its checksum against the appropriate
+package's md5 file. Also report if any package's md5 file references
+the same distfile with a different md5 checksum.
+.It Fl o
+Report any old distfile (not referenced by any package's md5 file).
+.It Fl r
+Remove distfiles which are not referenced in any package's md5 file, or has
+an incorrect checksum (usually due to an interrupted download). To remove
+one or the other type, additionally specify the -u or -m flag respectively.
+.El
+.Sh AUTHOR
+David Brownlee <abs@netbsd.org>
+.Sh BUGS
+Potentially, but non serious to date.
