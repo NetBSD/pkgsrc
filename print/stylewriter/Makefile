@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 22:52:39 grant Exp $
+# $NetBSD: Makefile,v 1.16 2005/03/17 12:44:42 salo Exp $
 #
 
 DISTNAME=	stylewriter
 PKGNAME=	stylewriter-0.9.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/
 
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.pobox.com/~monroe/styl/
 COMMENT=	Apple StyleWriter driver for un*x
 
-DEPENDS+=	enscript>=1.6.1:../../print/enscript
+DEPENDS+=	enscript>=1.6.3nb1:../../print/enscript
 
 NO_CONFIGURE=	yes
 
