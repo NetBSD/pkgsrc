@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1805 2004/06/03 23:02:24 xtraeme Exp $
+$NetBSD: TODO,v 1.1806 2004/06/04 12:15:11 shannonjr Exp $
 
 Suggested new packages
 ======================
@@ -199,7 +199,6 @@ Suggested package updates
 	o dact-0.8.37
 	o dar-2.1.2
 	o dctc-0.85.9
-	o ddd-3.3.8 [pkg/25546]
 	o delegate-8.9.2
 	o dict-client-1.9.11
 	o dict-server-1.9.11
