@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:21:59 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/20 09:51:44 jlam Exp $
 
 .if !defined(LIBYAHOO_BUILDLINK2_MK)
 LIBYAHOO_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libyahoo
-BUILDLINK_DEPENDS.libyahoo?=	libyahoo>=0.18.2
+BUILDLINK_DEPENDS.libyahoo?=	libyahoo>=0.18.4
 BUILDLINK_PKGSRCDIR.libyahoo?=	../../chat/libyahoo
 
 EVAL_PREFIX+=				BUILDLINK_PREFIX.libyahoo=libyahoo
