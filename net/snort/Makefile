@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/08/22 18:07:50 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2001/08/24 11:43:47 abs Exp $
 #
 
 DISTNAME=	snort-1.8.1-RELEASE
@@ -20,8 +20,8 @@ GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-DEPENDS+=	libpcap-0.4:../../net/libpcap
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
+DEPENDS+=	libpcap>=0.4:../../net/libpcap
 ROOTGROUP=	root
 .endif
 
