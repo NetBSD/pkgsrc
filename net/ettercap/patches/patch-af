@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2003/09/30 12:03:21 xtraeme Exp $
+
+--- src/ec_dissector_ssh.c.orig	2003-09-30 13:46:55.000000000 +0200
++++ src/ec_dissector_ssh.c	2003-09-30 13:48:01.000000000 +0200
+@@ -29,6 +29,7 @@
+ #else
+ 	#include <arpa/nameser.h>
+ #endif
++#include <des.h>
+ #include <openssl/ssl.h>
+ #include <openssl/rand.h>
+ #include <ctype.h>
