@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2003/06/23 15:56:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/06/24 08:20:59 wiz Exp $
 #
 
 DISTNAME=	gdchart0.11.4dev
 PKGNAME=	gdchart-0.11.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.fred.net/brv/chart/ \
 		ftp://ftp.nuug.no/pub/anders/distfiles/
