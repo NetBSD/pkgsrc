@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.3 2001/10/23 20:23:09 zuntum Exp $
+$NetBSD: distinfo,v 1.4 2003/09/22 16:18:07 wiz Exp $
 
 SHA1 (6tunnel-0.09.tar.gz) = 6af871f4f225372c5f41c2bc097fd173e16ae683
 Size (6tunnel-0.09.tar.gz) = 7389 bytes
+SHA1 (patch-aa) = a3c79786326afcdd65c99aa8284ec05e54e0654e
