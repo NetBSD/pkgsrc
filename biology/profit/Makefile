@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2004/04/11 04:07:49 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/08/14 20:52:09 ben Exp $
 #
 
 DISTNAME=		profit
 PKGNAME=		profit-2.2
 CATEGORIES=		biology
-MASTER_SITES=		http://www.rubic.rdg.ac.uk/~andrew/bioinf.org/software/profit/235216/
+MASTER_SITES=		http://acrmwww.biochem.ucl.ac.uk/software/profit/235216/
 
 MAINTAINER=		hdp@cs.nmsu.edu
-HOMEPAGE=		http://www.rubic.rdg.ac.uk/~andrew/bioinf.org/software/profit/index.html
+HOMEPAGE=		http://acrmwww.biochem.ucl.ac.uk/programs/profit/index.html
 COMMENT=		Performs least squares fits of two protein structures
 
 ALL_TARGET=		${DISTNAME}
