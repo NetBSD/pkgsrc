@@ -1,8 +1,7 @@
-$NetBSD: patch-am,v 1.5 1999/12/12 19:06:37 jdolecek Exp $
+$NetBSD: patch-am,v 1.6 2000/01/23 00:48:09 tron Exp $
 
-This patch is no longer needed in KDE2		jdolecek 1999/12/12
---- ./kdm/session.c	Fri Aug 20 20:35:10 1999
-+++ /usr/pkgsrc/x11/kdebase/work.i386.unpatched/kdebase-1.1.2/kdm/session.c	Fri Nov 12 05:10:30 1999
+--- kdm/session.c.orig	Fri Aug 20 20:35:10 1999
++++ kdm/session.c	Sun Jan 23 01:22:47 2000
 @@ -50,6 +50,7 @@
  #include <pwd.h>
  #include <grp.h>
@@ -11,6 +10,15 @@ This patch is no longer needed in KDE2		jdolecek 1999/12/12
  #ifdef AIXV3
  # include <usersec.h>
  #endif
+@@ -103,7 +104,7 @@
+ char *crypt(char *key, char *salt);
+ #endif
+ 
+-#ifdef HAVE_LOGIN_CAP_H
++#if defined(HAVE_LOGIN_CAP_H) && !defined(__NetBSD__)
+ #include <login_cap.h>		/* BSDI-like login classes */
+ #define HAVE_SETUSERCONTEXT	/* assume we have setusercontext if we have
+ 				 * the header file
 @@ -1089,7 +1090,7 @@
      return env;
  }
