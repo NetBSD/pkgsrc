@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/08/01 02:37:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2002/11/08 16:43:34 mrg Exp $
 #
 
 .if ${MACHINE_ARCH} == "sparc64"
@@ -15,6 +15,8 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/Releases/formal-1.5/index.html
 COMMENT=		32-bit shared libraries for NetBSD 1.5 (and earlier) compatibility
+
+CONFLICTS=              netbsd32_compat16-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-*-sparc64
 
