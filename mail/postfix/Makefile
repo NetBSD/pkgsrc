@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2001/11/30 10:26:55 martti Exp $
+# $NetBSD: Makefile,v 1.48 2001/12/01 12:24:23 martti Exp $
 
 DISTNAME=	postfix-20010228-pl08
 PKGNAME=	postfix-20010228pl8
@@ -11,7 +11,7 @@ PATCH_DIST_STRIP+=	-p1
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.postfix.org/
-COMMENT=	postfix smtp server and tools
+COMMENT=	Postfix SMTP server and tools
 
 DIST_SUBDIR=	postfix
 
@@ -19,14 +19,13 @@ POSTFIX_SPOOL=	/var/spool/postfix
 
 .include "../../mk/bsd.prefs.mk"
 
-.if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == YES
+.if defined(POSTFIX_USE_PCRE) && ${POSTFIX_USE_PCRE} == "YES"
 DEPENDS+=	pcre>=2.08:../../devel/pcre
 CCARGS+=	-DHAS_PCRE -I${LOCALBASE}/include
 AUXLIBS=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lpcre
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
+BUILD_DEFS+=	POSTFIX_USE_PCRE
 .endif
-
-BUILD_DEFS+=	POSTFIX_PCRE
 
 PLIST_SRC=	${PKGDIR}/PLIST
 
@@ -47,7 +46,7 @@ pre-configure:
 	    > ${WRKSRC}/INSTALL.sh
 
 do-configure:
-	(cd ${WRKSRC}; ${MAKE} makefiles)
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} makefiles)
 
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
