@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/06/23 00:22:34 itohy Exp $
+# $NetBSD: Makefile,v 1.23 2000/07/27 14:01:00 jlam Exp $
 #
 
 DISTNAME=		xfig.3.2.3a
@@ -31,11 +31,11 @@ pre-configure:
 XFIGEXAMPLES=		${PREFIX}/share/examples/xfig
 
 post-install:
-	@${MKDIR} ${XFIGEXAMPLES}
-	@${CP} ${WRKSRC}/Examples/*.fig ${XFIGEXAMPLES}
-	@${CP} ${WRKSRC}/Examples/*.gif ${XFIGEXAMPLES}
-	@${CP} ${WRKSRC}/Examples/*.jpg ${XFIGEXAMPLES}
-	@${CP} ${WRKSRC}/Examples/*.xbm ${XFIGEXAMPLES}
-	@${CP} ${WRKSRC}/Examples/*.xpm ${XFIGEXAMPLES}
+	${INSTALL_DATA_DIR} ${XFIGEXAMPLES}
+	${INSTALL_DATA} ${WRKSRC}/Examples/*.fig ${XFIGEXAMPLES}
+	${INSTALL_DATA} ${WRKSRC}/Examples/*.gif ${XFIGEXAMPLES}
+	${INSTALL_DATA} ${WRKSRC}/Examples/*.jpg ${XFIGEXAMPLES}
+	${INSTALL_DATA} ${WRKSRC}/Examples/*.xbm ${XFIGEXAMPLES}
+	${INSTALL_DATA} ${WRKSRC}/Examples/*.xpm ${XFIGEXAMPLES}
 
 .include "../../mk/bsd.pkg.mk"
