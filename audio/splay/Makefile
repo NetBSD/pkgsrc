@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/01/22 14:34:29 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/02/20 18:30:39 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/08/09 23:37:33 fenner Exp 
 #
 
@@ -14,6 +14,9 @@ MASTER_SITES=		http://my.netian.com/~polarb/ \
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://synergy.kaist.ac.kr/~jwj/
+
+# endian and alignment issues
+NOT_FOR_PLATFORM=      *-*-sparc *-*-m68k *-*-macppc *-*-sparc64
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--without-xsplay --without-pthread
