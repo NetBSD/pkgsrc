@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2001/05/31 15:49:03 agc Exp $
+# $NetBSD: Makefile,v 1.101 2001/07/08 14:28:10 simonb Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -86,6 +86,7 @@ SUBDIR+=	vfu
 SUBDIR+=	vttest
 SUBDIR+=	watch
 SUBDIR+=	xrolodex
+SUBDIR+=	xtail
 SUBDIR+=	xtend
 SUBDIR+=	xtide
 SUBDIR+=	zorro
