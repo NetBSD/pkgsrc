@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2003/11/23 06:46:54 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2003/11/23 08:35:05 jlam Exp $
 
 DISTNAME=	xpkgwedge-1.8
 WRKSRC=		${WRKDIR}
@@ -9,8 +9,6 @@ DISTFILES=	# empty
 MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/Packages.txt
 COMMENT=	Allows X11 pkgs to be built and used outside of $${X11BASE}
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	# defined
