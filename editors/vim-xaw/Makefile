@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/12/21 16:20:25 pooka Exp $
+# $NetBSD: Makefile,v 1.3 1999/12/21 17:36:33 pooka Exp $
 
 .include		"../vim-share/Makefile.common"
 
@@ -25,25 +25,18 @@ DEPENDS+=		ncurses-4.2:../../devel/ncurses
 .endif
 
 post-install:
-	@if [ -f ${PREFIX}/man/man1/vim.1.gz ]; then                           \
-		${LN} ${PREFIX}/man/man1/vim.1.gz ${PREFIX}/man/man1/gvim.1;   \
-		${LN} ${PREFIX}/man/man1/vim.1.gz ${PREFIX}/man/man1/gview.1;  \
-		${LN} ${PREFIX}/man/man1/vim.1.gz ${PREFIX}/man/man1/rgvim.1;  \
-		${LN} ${PREFIX}/man/man1/vim.1.gz ${PREFIX}/man/man1/rgview.1; \
-	else                                                                   \
-		${LN} ${PREFIX}/man/man1/vim.1 ${PREFIX}/man/man1/gvim.1;      \
-		${LN} ${PREFIX}/man/man1/vim.1 ${PREFIX}/man/man1/gview.1;     \
-		${LN} ${PREFIX}/man/man1/vim.1 ${PREFIX}/man/man1/rgvim.1;     \
-		${LN} ${PREFIX}/man/man1/vim.1 ${PREFIX}/man/man1/rgview.1;    \
-	fi
-	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/gvim
-	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/gview
-	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/rgvim
-	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/rgview
-	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/ex
-	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/view
-	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/rvim
-	@${LN} ${PREFIX}/bin/vim ${PREFIX}/bin/rview
+	${LN} -fs vim.1 ${PREFIX}/man/man1/gvim.1
+	${LN} -fs vim.1 ${PREFIX}/man/man1/gview.1
+	${LN} -fs vim.1 ${PREFIX}/man/man1/rgvim.1
+	${LN} -fs vim.1 ${PREFIX}/man/man1/rgview.1
+	${LN} -fs vim ${PREFIX}/bin/gvim
+	${LN} -fs vim ${PREFIX}/bin/gview
+	${LN} -fs vim ${PREFIX}/bin/rgvim
+	${LN} -fs vim ${PREFIX}/bin/rgview
+	${LN} -fs vim ${PREFIX}/bin/ex
+	${LN} -fs vim ${PREFIX}/bin/view
+	${LN} -fs vim ${PREFIX}/bin/rvim
+	${LN} -fs vim ${PREFIX}/bin/rview
 
 .include "../../mk/bsd.pkg.mk"
 
