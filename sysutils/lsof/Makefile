@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2000/06/28 00:40:44 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2000/06/30 23:28:18 wiz Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
-DISTNAME=		lsof_4.50D.n+obsd
-PKGNAME=		lsof-4.50.1
+DISTNAME=		lsof_4.50_W
+PKGNAME=		lsof-4.50.2
 WRKSRC=			${WRKDIR}/${SRCBALL_NAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
@@ -30,7 +30,6 @@ REAL_GROUP=		-g kmem
 MAKE_ENV+=		CPPFLAGS=
 .endif
 
-.if defined(${WE_WILL_NEED_THIS_FOR_THE_NEXT_RELEASE})
 post-extract:
 	@(cd ${WRKDIR} ; \
 	EXPMD5=`${GREP} MD5 README.${SRCBALL_NAME} | ${SED} 's/^[ ]*//'` ; \
@@ -46,7 +45,6 @@ post-extract:
 		${PAX} -r < ${SRCBALL_NAME}.tar; \
 	fi)
 	@( cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1 )
-.endif
 
 do-install:
 	${INSTALL} ${COPY} ${STRIP} -o ${BINOWN} -g ${BINGRP} -m 2755 ${REAL_GROUP} \
