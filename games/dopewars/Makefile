@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.25 2004/03/08 19:40:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2004/03/26 20:26:12 wiz Exp $
 
 DISTNAME=		dopewars-1.5.9
 PKGREVISION=		3
 CATEGORIES=		games
-MASTER_SITES=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/ \
-			${MASTER_SITE_SOURCEFORGE:=dopewars/} \
-			http://berlin.sfai.edu/~tobi/dopewars/files/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dopewars/}
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://bellatrix.pcl.ox.ac.uk/~ben/dopewars/
+HOMEPAGE=		http://dopewars.sourceforge.net/
 COMMENT=		Make a fortune dealing drugs on the streets of New York
 
 DEPENDS+=		xdg-dirs>=1.1:../../misc/xdg-dirs
@@ -27,7 +25,8 @@ CONFIGURE_ARGS+=	--without-esd
 CONFIGURE_ARGS+=	--without-sdl
 CONFIGURE_ARGS+=	--localstatedir=/var/games
 
-USE_NCURSES=		# KEY_RESIZE
+INCOMPAT_CURSES=	NetBSD-1.5* NetBSD-1.6[-_.]*
+INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
