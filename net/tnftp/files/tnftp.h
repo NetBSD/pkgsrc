@@ -1,4 +1,4 @@
-/* $Id: tnftp.h,v 1.2 2004/03/11 13:45:55 grant Exp $ */
+/* $Id: tnftp.h,v 1.3 2004/05/16 23:14:17 heinz Exp $ */
 
 #define	FTP_PRODUCT	"tnftp"
 #define	FTP_VERSION	"20030825"
@@ -23,7 +23,13 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <limits.h>
+#ifdef HAVE_RFC2553_NETDB
 #include <netdb.h>
+#else
+#define getaddrinfo non_rfc2553_getaddrinfo
+#include <netdb.h>
+#undef getaddrinfo
+#endif
 #include <pwd.h>
 #include <setjmp.h>
 #include <signal.h>
