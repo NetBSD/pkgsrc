@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/05 21:44:32 drochner Exp $
-dx/samples/callmodule/Readme
+@comment $NetBSD: PLIST,v 1.4 2004/04/20 22:11:48 drochner Exp $
+dx/samples/callmodule/README
 dx/samples/callmodule/Simple.c
 dx/samples/callmodule/ThunderStreamlines.c
 dx/samples/callmodule/makefile
@@ -21,8 +21,8 @@ dx/samples/data/MOS_states.dx
 dx/samples/data/MOS_zips.dx
 dx/samples/data/MRI.data
 dx/samples/data/Polylines.dx
+dx/samples/data/README
 dx/samples/data/ROM_ozone.dx
-dx/samples/data/Readme
 dx/samples/data/background.tiff
 dx/samples/data/block_example.data
 dx/samples/data/block_example.general
@@ -165,10 +165,12 @@ dx/samples/dxlink/Makefile_aviion
 dx/samples/dxlink/Makefile_hp700
 dx/samples/dxlink/Makefile_ibm6000
 dx/samples/dxlink/Makefile_intelnt
+dx/samples/dxlink/Makefile_linux
+dx/samples/dxlink/Makefile_macos
 dx/samples/dxlink/Makefile_sgi
 dx/samples/dxlink/Makefile_solaris
 dx/samples/dxlink/Makefile_sun4
-dx/samples/dxlink/Readme
+dx/samples/dxlink/README
 dx/samples/dxlink/Sealevel150.rgb
 dx/samples/dxlink/Sealevel150.size
 dx/samples/dxlink/cappediso150.rgb
@@ -221,7 +223,7 @@ dx/samples/outboard/Makefile_os2
 dx/samples/outboard/Makefile_sgi
 dx/samples/outboard/Makefile_solaris
 dx/samples/outboard/Makefile_sun4
-dx/samples/outboard/Readme
+dx/samples/outboard/README
 dx/samples/outboard/async.c
 dx/samples/outboard/async.mdf
 dx/samples/outboard/dummy.c
@@ -236,7 +238,7 @@ dx/samples/outboard/watchsocket.c
 dx/samples/outboard/watchsocket.cfg
 dx/samples/outboard/watchsocket.mdf
 dx/samples/outboard/watchsocket.net
-dx/samples/program_guide/Readme
+dx/samples/program_guide/README
 dx/samples/program_guide/add.c
 dx/samples/program_guide/add.cfg
 dx/samples/program_guide/add.mb
@@ -799,6 +801,7 @@ dx/samples/programs/ProbeText.cfg
 dx/samples/programs/ProbeText.net
 dx/samples/programs/QuantizeImage.cfg
 dx/samples/programs/QuantizeImage.net
+dx/samples/programs/README
 dx/samples/programs/RENDERING/FatLines.cfg
 dx/samples/programs/RENDERING/FatLines.net
 dx/samples/programs/RENDERING/Isolate.cfg
@@ -819,7 +822,6 @@ dx/samples/programs/RENDERING/VolumeRendering.cfg
 dx/samples/programs/RENDERING/VolumeRendering.net
 dx/samples/programs/RENDERING/VolumeRenderingSimple.cfg
 dx/samples/programs/RENDERING/VolumeRenderingSimple.net
-dx/samples/programs/Readme
 dx/samples/programs/Reduce.cfg
 dx/samples/programs/Reduce.net
 dx/samples/programs/Refine.cfg
@@ -1119,8 +1121,8 @@ dx/samples/scripts/Partition
 dx/samples/scripts/Plot
 dx/samples/scripts/Post
 dx/samples/scripts/Print
+dx/samples/scripts/README
 dx/samples/scripts/ReadImage
-dx/samples/scripts/Readme
 dx/samples/scripts/Reduce
 dx/samples/scripts/Refine
 dx/samples/scripts/Regrid
@@ -1170,7 +1172,7 @@ dx/samples/stereo/src/makefile
 dx/samples/stereo/src/mycams.c
 dx/samples/stereo/src/mymodes.c
 dx/samples/stereo/stereo.html
-dx/samples/supervise/complexdemo/ReadMe
+dx/samples/supervise/complexdemo/README
 dx/samples/supervise/complexdemo/data/frags.dx
 dx/samples/supervise/complexdemo/demo
 dx/samples/supervise/complexdemo/interactors/Makefile
@@ -1185,7 +1187,7 @@ dx/samples/supervise/complexdemo/nets/ShowSelected.net
 dx/samples/supervise/complexdemo/nets/hiliteObject.net
 dx/samples/supervise/complexdemo/nets/peruDX.cfg
 dx/samples/supervise/complexdemo/nets/peruDX.net
-dx/samples/supervise/imagedemo/ReadMe
+dx/samples/supervise/imagedemo/README
 dx/samples/supervise/imagedemo/demo
 dx/samples/supervise/imagedemo/demo.cfg
 dx/samples/supervise/imagedemo/demo.net
@@ -1200,10 +1202,10 @@ dx/samples/supervise/interactors/Makefile_ibm6000
 dx/samples/supervise/interactors/Makefile_sgi
 dx/samples/supervise/interactors/Makefile_solaris
 dx/samples/supervise/interactors/Makefile_sun4
-dx/samples/supervise/interactors/ReadMe
+dx/samples/supervise/interactors/README
 dx/samples/supervise/interactors/module_make
 dx/samples/supervise/interactors/myinteractors.c
-dx/samples/supervise/mediumdemo/ReadMe
+dx/samples/supervise/mediumdemo/README
 dx/samples/supervise/mediumdemo/demo
 dx/samples/supervise/mediumdemo/interactors/Makefile
 dx/samples/supervise/mediumdemo/interactors/Makefile_alphax
@@ -1213,7 +1215,7 @@ dx/samples/supervise/mediumdemo/interactors/Makefile_sgi
 dx/samples/supervise/mediumdemo/interactors/Makefile_solaris
 dx/samples/supervise/mediumdemo/interactors/interactors.c
 dx/samples/supervise/mediumdemo/interactors/module_make
-dx/samples/supervise/simpledemo/ReadMe
+dx/samples/supervise/simpledemo/README
 dx/samples/supervise/simpledemo/demo
 dx/samples/supervise/simpledemo/demo.cfg
 dx/samples/supervise/simpledemo/demo.net
@@ -1320,7 +1322,7 @@ dx/samples/user/Makefile_outboard_intelnt
 dx/samples/user/Makefile_outboard_sgi
 dx/samples/user/Makefile_outboard_solaris
 dx/samples/user/Makefile_outboard_sun4
-dx/samples/user/Readme
+dx/samples/user/README
 dx/samples/user/add.c
 dx/samples/user/hello.c
 dx/samples/user/hello_loadable.mdf
@@ -1329,6 +1331,8 @@ dx/samples/user/user_inboard.mdf
 dx/samples/user/user_loadable.mdf
 dx/samples/user/user_outboard.mdf
 dx/samples/util/Makefile.sample
+dx/samples/util/biorad-pic/PIC2dx.c
+dx/samples/util/biorad-pic/README
 dx/samples/util/dxf/MANIFEST
 dx/samples/util/dxf/Makefile.sample
 dx/samples/util/dxf/README
@@ -1361,6 +1365,7 @@ dx/samples/util/plot3d/README
 @dirrm dx/samples/util/mpeg
 @dirrm dx/samples/util/fluent
 @dirrm dx/samples/util/dxf
+@dirrm dx/samples/util/biorad-pic
 @dirrm dx/samples/util
 @dirrm dx/samples/user
 @dirrm dx/samples/tutorial
