@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/01/22 22:09:41 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/01/23 00:15:20 taca Exp $
 
 DISTNAME=	maildrop-1.3.7
 COMMENT=	Courier mail delivery agent with filtering abilities
@@ -10,7 +10,7 @@ DEPENDS+=	courier-maildirmake>=0.37.1:../../mail/courier-maildirmake
 
 USE_BUILDLINK_ONLY=	yes
 
-.include "../../scratch/courier-auth/Makefile.common"
+.include "../../mail/courier-auth/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-userdb
