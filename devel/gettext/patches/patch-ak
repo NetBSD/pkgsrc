@@ -1,0 +1,19 @@
+$NetBSD: patch-ak,v 1.1 2000/10/31 17:06:19 itojun Exp $
+
+use locally-built msgfmt.
+
+--- po/Makefile.in.in-	Wed Nov  1 01:46:43 2000
++++ po/Makefile.in.in	Wed Nov  1 01:47:00 2000
+@@ -30,9 +30,9 @@
+ 
+ CC = @CC@
+ GENCAT = @GENCAT@
+-GMSGFMT = PATH=../src:$$PATH @GMSGFMT@
+-MSGFMT = @MSGFMT@
+-XGETTEXT = PATH=../src:$$PATH @XGETTEXT@
++GMSGFMT = PATH=../src:$$PATH msgfmt
++MSGFMT = PATH=../src:$$PATH msgfmt
++XGETTEXT = PATH=../src:$$PATH xgettext
+ MSGMERGE = PATH=../src:$$PATH msgmerge
+ 
+ DEFS = @DEFS@
