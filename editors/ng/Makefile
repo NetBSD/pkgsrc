@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/19 23:54:37 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/21 22:27:12 wiz Exp $
 
 DISTNAME=	ng-1.4
 CATEGORIES=     editors japanese
@@ -6,7 +6,6 @@ MASTER_SITES=   http://ha3.seikyou.ne.jp/home/amura/archives/ng/
 
 MAINTAINER=     fk200329@fsinet.or.jp
 HOMEPAGE=	http://ha3.seikyou.ne.jp/home/amura/ng/
-
 
 .include "../../mk/bsd.prefs.mk"	# for USE_CANNA
 
