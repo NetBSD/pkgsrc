@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/12/21 22:16:01 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2004/12/22 10:07:21 adrianp Exp $
 
 DISTNAME=	freeradius-1.0.1
 PKGREVISION=	5
@@ -20,6 +20,8 @@ USE_PKGINSTALL=		YES
 USE_PERL5=		YES
 LIBTOOLIZE_PLIST=	NO
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
+FILES_SUBST+=		ROOT_USER=${ROOT_USER}
+FILES_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
 
 # This package currently breaks using our libtool.  It does not appear to use
 # libtool properly/fully and as a result the daemon does not compile correctly.
