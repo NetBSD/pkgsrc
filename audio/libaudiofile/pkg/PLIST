@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/06/09 06:41:53 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/10/15 03:04:28 jlam Exp $
 bin/audiofile-config
 bin/sfconvert
 bin/sfinfo
@@ -11,10 +11,16 @@ lib/libaudiofile.so.0.0
 share/aclocal/audiofile.m4
 share/doc/libaudiofile/afCloseFile
 share/doc/libaudiofile/afGetFrameSize
+share/doc/libaudiofile/afGetTrackBytes
 share/doc/libaudiofile/afIntro
 share/doc/libaudiofile/afNewFileSetup
 share/doc/libaudiofile/afOpenFile
+share/doc/libaudiofile/afQuery
 share/doc/libaudiofile/afReadFrames
+share/doc/libaudiofile/afReadMisc
+share/doc/libaudiofile/afSeekFrame
+share/doc/libaudiofile/afSetErrorHandler
+share/doc/libaudiofile/afSetVirtualByteOrder
 share/doc/libaudiofile/afWriteFrames
 share/doc/libaudiofile/sfconvert
 share/doc/libaudiofile/sfinfo
