@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2001/02/17 18:18:30 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2001/03/02 17:35:14 wiz Exp $
 #
 
 DISTNAME=		ORBit-0.5.6
@@ -13,7 +13,7 @@ DEPENDS+=		glib>=1.2.7:../../devel/glib
 DEPENDS+=		gindent-*:../../devel/gindent
 BUILD_DEPENDS+=		${LOCALBASE}/bin/autoconf:../../devel/autoconf
 BUILD_DEPENDS+=		${LOCALBASE}/bin/automake:../../devel/automake
-BUILD_DEPENDS+=		msgfmt:../../devel/gettext
+BUILD_DEPENDS+=		${LOCALBASE}/share/aclocal/gettext.m4:../../devel/gettext
 
 USE_LIBINTL=		YES
 USE_GMAKE=		YES
