@@ -12,7 +12,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.71 2002/09/24 14:01:38 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.72 2002/09/25 09:34:22 wiz Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1512,7 +1512,7 @@ sub category_check {
 	local($sub) = "";
 	local($contents);
 
-	$contents = readmakefile($file) or
+	$contents = readmakefile("$portdir/$file") or
 		&perror("FATAL: can't read $portdir/$file") and return 0;
 	if ($contents !~ /#(\s+)\$$rcsidstr([^\$]*)\$/) {
 		&perror("FATAL: no \$$rcsidstr\$ line in $file");
