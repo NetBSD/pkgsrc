@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 22:51:15 grant Exp $
+# $NetBSD: Makefile,v 1.6 2003/11/07 15:48:24 gavan Exp $
 #
 
 DISTNAME=	iperf-1.6.5-source
@@ -18,6 +18,7 @@ CONFIGURE_DIRS=	${WRKSRC}/cfg
 INSTALL_DIRS=	${WRKSRC}/src
 GNU_CONFIGURE=	YES
 MAKE_ENV+=	INSTALL_DIR=${PREFIX}/bin
+USE_GCC_SHLIB=	YES
 
 PTHREAD_OPTS=	native optional
 .include "../../mk/pthread.buildlink2.mk"

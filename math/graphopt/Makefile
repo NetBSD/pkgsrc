@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/21 16:57:13 martti Exp $
+# $NetBSD: Makefile,v 1.10 2003/11/07 15:24:10 gavan Exp $
 #
 
 DISTNAME=	graphopt-0.4.1
@@ -12,6 +12,7 @@ HOMEPAGE=	http://schmuhl.org/graphopt/
 COMMENT=	Optimize graph layouts
 
 USE_BUILDLINK2=	YES
+USE_GCC_SHLIB=	YES
 GNU_CONFIGURE=	YES
 
 post-install:
