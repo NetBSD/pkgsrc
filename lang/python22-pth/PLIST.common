@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2002/10/25 10:48:48 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2003/06/06 17:31:20 drochner Exp $
 bin/pydoc2p2
 bin/python2p2
 include/python2p2/Python.h
@@ -405,6 +405,9 @@ lib/python2p2/dumbdbm.pyo
 
 
 
+lib/python2p2/email/_parseaddr.py
+lib/python2p2/email/_parseaddr.pyc
+lib/python2p2/email/_parseaddr.pyo
 lib/python2p2/email/Charset.py
 lib/python2p2/email/Charset.pyc
 lib/python2p2/email/Charset.pyo
@@ -468,6 +471,55 @@ lib/python2p2/email/base64MIME.pyo
 lib/python2p2/email/quopriMIME.py
 lib/python2p2/email/quopriMIME.pyc
 lib/python2p2/email/quopriMIME.pyo
+lib/python2p2/email/test/__init__.py
+lib/python2p2/email/test/__init__.pyc
+lib/python2p2/email/test/__init__.pyo
+lib/python2p2/email/test/data/PyBanner048.gif
+lib/python2p2/email/test/data/audiotest.au
+lib/python2p2/email/test/data/msg_01.txt
+lib/python2p2/email/test/data/msg_02.txt
+lib/python2p2/email/test/data/msg_03.txt
+lib/python2p2/email/test/data/msg_04.txt
+lib/python2p2/email/test/data/msg_05.txt
+lib/python2p2/email/test/data/msg_06.txt
+lib/python2p2/email/test/data/msg_07.txt
+lib/python2p2/email/test/data/msg_08.txt
+lib/python2p2/email/test/data/msg_09.txt
+lib/python2p2/email/test/data/msg_10.txt
+lib/python2p2/email/test/data/msg_11.txt
+lib/python2p2/email/test/data/msg_12.txt
+lib/python2p2/email/test/data/msg_13.txt
+lib/python2p2/email/test/data/msg_14.txt
+lib/python2p2/email/test/data/msg_15.txt
+lib/python2p2/email/test/data/msg_16.txt
+lib/python2p2/email/test/data/msg_17.txt
+lib/python2p2/email/test/data/msg_18.txt
+lib/python2p2/email/test/data/msg_19.txt
+lib/python2p2/email/test/data/msg_20.txt
+lib/python2p2/email/test/data/msg_21.txt
+lib/python2p2/email/test/data/msg_22.txt
+lib/python2p2/email/test/data/msg_23.txt
+lib/python2p2/email/test/data/msg_24.txt
+lib/python2p2/email/test/data/msg_25.txt
+lib/python2p2/email/test/data/msg_26.txt
+lib/python2p2/email/test/data/msg_27.txt
+lib/python2p2/email/test/data/msg_28.txt
+lib/python2p2/email/test/data/msg_29.txt
+lib/python2p2/email/test/data/msg_30.txt
+lib/python2p2/email/test/data/msg_31.txt
+lib/python2p2/email/test/data/msg_32.txt
+lib/python2p2/email/test/data/msg_33.txt
+lib/python2p2/email/test/data/msg_34.txt
+lib/python2p2/email/test/data/msg_35.txt
+lib/python2p2/email/test/test_email.py
+lib/python2p2/email/test/test_email.pyc
+lib/python2p2/email/test/test_email.pyo
+lib/python2p2/email/test/test_email_codecs.py
+lib/python2p2/email/test/test_email_codecs.pyc
+lib/python2p2/email/test/test_email_codecs.pyo
+lib/python2p2/email/test/test_email_torture.py
+lib/python2p2/email/test/test_email_torture.pyc
+lib/python2p2/email/test/test_email_torture.pyo
 lib/python2p2/encodings/__init__.py
 lib/python2p2/encodings/__init__.pyc
 lib/python2p2/encodings/__init__.pyo
@@ -627,6 +679,9 @@ lib/python2p2/encodings/iso8859_9.pyo
 lib/python2p2/encodings/koi8_r.py
 lib/python2p2/encodings/koi8_r.pyc
 lib/python2p2/encodings/koi8_r.pyo
+lib/python2p2/encodings/koi8_u.py
+lib/python2p2/encodings/koi8_u.pyc
+lib/python2p2/encodings/koi8_u.pyo
 lib/python2p2/encodings/latin_1.py
 lib/python2p2/encodings/latin_1.pyc
 lib/python2p2/encodings/latin_1.pyo
@@ -1177,7 +1232,6 @@ lib/python2p2/test/greyrgb.uue
 lib/python2p2/test/output/test_MimeWriter
 lib/python2p2/test/output/test_asynchat
 lib/python2p2/test/output/test_augassign
-lib/python2p2/test/output/test_bastion
 lib/python2p2/test/output/test_binascii
 lib/python2p2/test/output/test_builtin
 lib/python2p2/test/output/test_cfgparser
