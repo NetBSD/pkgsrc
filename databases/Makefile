@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/06/10 18:34:58 bad Exp $
+# $NetBSD: Makefile,v 1.17 1999/07/07 15:18:42 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/07/30 11:47:51 tg Exp 
 #
 
@@ -22,6 +22,7 @@
     SUBDIR += py-gdbm
     SUBDIR += py-mysql
     SUBDIR += sdbm
+    SUBDIR += tcl-gdbm
 #    SUBDIR += typhoon
     SUBDIR += zope-mysql
 
