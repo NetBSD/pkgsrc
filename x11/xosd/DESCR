@@ -1,0 +1,4 @@
+XOSD is a simple library to display shaped text on your X display,
+like a TV On Screen Display. It also contains an XMMS plugin, and
+a simple example program that can display system logs overlayed on
+your desktop. 
