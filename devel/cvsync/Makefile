@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2004/08/12 20:37:28 minskim Exp $
+# $NetBSD: Makefile,v 1.67 2004/08/12 20:46:21 minskim Exp $
 #
 
 DISTNAME=	cvsync-0.24.16
@@ -24,6 +24,14 @@ MAKE_ENV+=	PTHREAD_PREFIX=${BUILDLINK_PREFIX.pthread}
 
 EGDIR=		${PREFIX}/share/examples/cvsync
 CONF_FILES+=	${EGDIR}/cvsync.conf ${PKG_SYSCONFDIR}/cvsync.conf
+
+.include "../../mk/bsd.prefs.mk"
+
+.ifdef ${OPSYS} == "AIX" || ${OPSYS} == "BSDOS" || ${OPSYS} == "Darwin" || \
+	${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
+MAKE_ENV+=	HASH_TYPE="openssl"
+.include "../../security/openssl/buildlink3.mk"
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
