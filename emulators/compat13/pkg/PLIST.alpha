@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.alpha,v 1.1 2001/05/07 12:51:26 dmcmahill Exp $
+${COMPAT_LIBDIR}/libcurses.so.2.1
+${COMPAT_LIBDIR}/libcurses.so.2
