@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/08/20 15:16:44 tsarna Exp $
+# $NetBSD: Makefile,v 1.10 1998/09/01 14:29:28 agc Exp $
 #
 
 # note: if updated, update shlib version number in patch-aa
@@ -9,8 +9,6 @@ MASTER_SITES=	ftp://ftp.digex.net/pub/database/mysql/Downloads/MySQL-3.21/ \
 
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.tcx.se/
-
-BUILD_DEPENDS=	${PREFIX}/bin/libtool:../../devel/libtool
 
 CONFLICTS=	mysql-3.21.31 mysql-3.21.32a
 
