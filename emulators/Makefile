@@ -1,11 +1,17 @@
-# $NetBSD: Makefile,v 1.123 2005/01/15 17:00:43 kristerw Exp $
+# $NetBSD: Makefile,v 1.124 2005/03/04 12:06:22 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
 
 SUBDIR+=	BasiliskII
 SUBDIR+=	Cygne-SDL
+SUBDIR+=	DatLib
+SUBDIR+=	DatUtil
+SUBDIR+=	MAMEDiff
 SUBDIR+=	NeoPop-SDL
+SUBDIR+=	ROMBuild
+SUBDIR+=	ROMInfo
+SUBDIR+=	ZIPIdent
 SUBDIR+=	aliados
 SUBDIR+=	aranym
 SUBDIR+=	arcem
