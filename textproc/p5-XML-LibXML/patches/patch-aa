@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.5 2005/03/16 15:05:35 rillig Exp $
+
+gcc-2.95.3 cannot handle declarations intermixed with code.
+
+--- perl-libxml-mm.c.orig	Wed Mar 31 21:32:08 2004
++++ perl-libxml-mm.c	Wed Mar 16 03:16:34 2005
+@@ -959,13 +959,14 @@ nodeC2Sv( const xmlChar * string,  xmlNo
+     if ( refnode != NULL ) {
+         xmlDocPtr real_doc = refnode->doc;
+         if ( real_doc != NULL && real_doc->encoding != NULL ) {
++            xmlChar * decoded;
+             xs_warn( " encode node !!" );
+             /* The following statement is to handle bad
+                values set by XML::LibXSLT */
+             if ( PmmNodeEncoding(real_doc) == XML_CHAR_ENCODING_NONE ) {
+                 PmmNodeEncoding(real_doc) = XML_CHAR_ENCODING_UTF8;
+             }
+-            xmlChar * decoded = PmmFastDecodeString( PmmNodeEncoding(real_doc) ,
++            decoded = PmmFastDecodeString( PmmNodeEncoding(real_doc) ,
+                                                      (const xmlChar *)string,
+                                                      (const xmlChar*)real_doc->encoding);
+             xs_warn( "push decoded string into SV" );
