@@ -1,33 +1,15 @@
-$NetBSD: patch-ab,v 1.3 2003/04/29 23:33:57 jtb Exp $
+$NetBSD: patch-ab,v 1.4 2004/04/05 02:31:06 xtraeme Exp $
 
---- /dev/null
-+++ objdir/liblua/Makefile
-@@ -0,0 +1,28 @@
-+LIB= lua
-+
-+SHLIB_MAJOR= 1
-+SHLIB_MINOR= 0
-+
-+LIBDIR= ${PREFIX}/lib
-+INCDIR= ${PREFIX}/include
-+
-+CPPFLAGS+= -I${.CURDIR}/../../include
-+
-+LDADD+= -lm
-+
-+NOLINT= 1
-+
-+.PATH:	${.CURDIR}/../../src
-+
-+INCLUDES= lua.h lauxlib.h
-+
-+SRCS= lapi.c lcode.c ldebug.c ldo.c ldump.c lfunc.c lgc.c llex.c lmem.c	\
-+      lobject.c lopcodes.c lparser.c lstate.c lstring.c ltable.c ltests.c	\
-+      ltm.c lundump.c lvm.c lzio.c
-+
-+afterinstall:
-+	for i in ${INCLUDES}; do					\
-+	${BSD_INSTALL_DATA} ${.CURDIR}/../../include/$$i ${INCDIR};	\
-+	done
-+
-+.include <bsd.lib.mk>
+--- Makefile.orig	Fri Apr 11 00:34:38 2003
++++ Makefile
+@@ -38,8 +38,8 @@ install: all strip
+ 
+ # shared libraries (for Linux)
+ so:
+-	ld -o lib/liblua.so.$V -shared src/*.o
+-	ld -o lib/liblualib.so.$V -shared src/lib/*.o
++	${CC} ${LDFLAGS} -o lib/liblua.so.$V -shared src/*.o
++	${CC} ${LDFLAGS} -o lib/liblualib.so.$V -shared src/lib/*.o
+ 	cd lib; ln -fs liblua.so.$V liblua.so; ln -fs liblualib.so.$V liblualib.so
+ 
+ # binaries using shared libraries
