@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2002/04/29 10:43:17 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2002/06/28 10:45:32 abs Exp $
 
---- Makefile.orig	Sat Apr  6 06:53:39 2002
+--- Makefile.orig	Sat Apr  6 05:53:39 2002
 +++ Makefile
-@@ -59,15 +59,15 @@
+@@ -59,15 +59,15 @@ PREFIX=	/usr/local
  
  # CONFIGURE: Set location of executable, it's group and mode.
  BINDIR=	${PREFIX}/bin
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.10 2002/04/29 10:43:17 wiz Exp $
  
  # CONFIGURE(Config): Add any OS-specific options here.
  COPTS=	
-@@ -79,7 +79,7 @@
+@@ -79,7 +79,7 @@ SRCS=	main.c argparse.c getproc.c
  OBJS=	main.o argparse.o getproc.o
  HDRS=	conf.h
  
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.10 2002/04/29 10:43:17 wiz Exp $
  
  all:	skill
  
-@@ -94,20 +94,20 @@
+@@ -94,20 +94,20 @@ ${OBJS}: ${HDRS}
  
  install: skill
  #(SysV)	filepriv -d ${DESTDIR}/${BINDIR}/skill
