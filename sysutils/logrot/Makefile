@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 17:42:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/08 05:41:13 lukem Exp $
 #
 
-DISTNAME=	logrot-1.5
+DISTNAME=	logrot-1.6
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.cs.rmit.edu.au/pub/utils/
 
