@@ -1,16 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2001/08/09 12:35:36 abs Exp $
+$NetBSD: patch-aa,v 1.5 2001/12/12 13:20:32 abs Exp $
 
---- checkbot.pl.orig	Sun Apr 15 20:34:30 2001
+--- checkbot.pl.orig	Thu Oct 25 20:46:42 2001
 +++ checkbot.pl
-@@ -47,8 +47,9 @@
- 
- checkbot [B<--debug>] [B<--help>] [B<--verbose>] [B<--url> start URL] 
+@@ -49,6 +49,7 @@
           [B<--match> match string] [B<--exclude> exclude string]
--         [B<--proxy> proxy URL] [B<--internal-only>]
--         [B<--ignore> ignore string] [B<-file> file name]
-+         [B<--skip> skip string] [B<--ignore> ignore string]
-+         [B<--proxy> proxy URL] [B<--internal-only>] [B<--match-url-base>]
-+         [B<--file> file name]
+          [B<--proxy> proxy URL] [B<--internal-only>]
+          [B<--ignore> ignore string] [B<--file> file name]
++         [B<--skip> skip string] [B<--match-url-base>]
           [B<--style> style file URL]
           [B<--mailto> email address]
           [B<--note> note] [B<--sleep> seconds] [B<--timeout> timeout]
@@ -56,7 +52,7 @@ $NetBSD: patch-aa,v 1.4 2001/08/09 12:35:36 abs Exp $
    # The default for opt_match will be set later, because we might want
    # to muck with opt_url first.
  
-@@ -353,7 +366,11 @@
+@@ -362,7 +375,11 @@
      my @matchurls;
      my $matchurl;
      foreach $matchurl (@starturls) {
@@ -69,7 +65,7 @@ $NetBSD: patch-aa,v 1.4 2001/08/09 12:35:36 abs Exp $
      }
      $main::opt_match = '(' . join('|', @matchurls) . ')';
      print STDERR "--match defaults to $main::opt_match\n" if $main::opt_verbose;
-@@ -781,7 +798,9 @@
+@@ -709,7 +726,9 @@
      print OUT "<tr><th align=left>--url</th><td>Start URL(s)</td><td>",
                join(',', @starturls), "</td></tr>\n";
      print OUT "<tr><th align=left>--match</th><td>Match regular expression</td><td>$main::opt_match</td></tr>\n";
@@ -79,7 +75,7 @@ $NetBSD: patch-aa,v 1.4 2001/08/09 12:35:36 abs Exp $
      print OUT "<tr><th align=left>--ignore</th><td>Ignore regular expression</td><td>$main::opt_ignore</td></tr>\n" if defined $main::opt_ignore;
      print OUT "<tr><th align=left>--dontwarn</th><td>Don't warn for these codes</td><td>$main::opt_dontwarn</td></tr>\n" if $main::opt_dontwarn ne 'xxx';
      print OUT "<tr><th align=left>--enable-virtual</th><td>Use virtual names only</td><td>yes</td></tr>\n" if $main::opt_enable_virtual;
-@@ -923,7 +942,7 @@
+@@ -851,7 +870,7 @@
  	  add_to_queue($url, $response->base);
  	  $doc_new++;
  	}
@@ -88,7 +84,7 @@ $NetBSD: patch-aa,v 1.4 2001/08/09 12:35:36 abs Exp $
  	# Add this as an external link if we can check the protocol later
  	if ($url =~ /^(http|ftp):/o) {
  	  print EXTERNAL $url . "|" . $response->base . "\n";
-@@ -947,8 +966,12 @@
+@@ -972,8 +991,12 @@
  sub add_to_queue {
    my ($url, $parent) = @_;
  
@@ -103,7 +99,7 @@ $NetBSD: patch-aa,v 1.4 2001/08/09 12:35:36 abs Exp $
  }
  
  sub print_server {
-@@ -1142,6 +1165,7 @@
+@@ -1167,6 +1190,7 @@
    print "  --match match      Check pages only if URL matches `match'\n";
    print "                     If no match is given, the start URL is used as a match\n";
    print "  --exclude exclude  Exclude pages if the URL matches 'exclude'\n";
@@ -111,7 +107,7 @@ $NetBSD: patch-aa,v 1.4 2001/08/09 12:35:36 abs Exp $
    print "  --ignore ignore    Do not list error messages for pages that the\n";
    print "                     URL matches 'ignore'\n";
    print "  --file file        Write results to file, default is checkbot.html\n";
-@@ -1154,8 +1178,9 @@
+@@ -1179,8 +1203,9 @@
    print "  --interval seconds Maximum time interval between updates (default 10800)\n";
    print "  --dontwarn codes   Do not write warnings for these HTTP response codes\n";
    print "  --enable-virtual   Use only virtual names, not IP numbers for servers\n";
