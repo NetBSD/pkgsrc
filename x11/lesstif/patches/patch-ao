@@ -1,17 +1,17 @@
-$NetBSD: patch-ao,v 1.7 2000/07/25 14:43:16 jlam Exp $
+$NetBSD: patch-ao,v 1.8 2000/10/23 19:45:18 jlam Exp $
 
---- lib/Mrm-2.0/Makefile.am.orig	Tue Jan  4 17:59:29 2000
-+++ lib/Mrm-2.0/Makefile.am	Tue Jul 25 08:18:13 2000
-@@ -41,8 +41,6 @@
- 		-DX_LIB_PATH=\"@x_libraries@\" \
- 		-DLESSTIFHOME=\"@prefix@\"
+--- lib/Mrm-2.0/Makefile.am.orig	Wed Aug 30 12:15:23 2000
++++ lib/Mrm-2.0/Makefile.am
+@@ -45,8 +45,6 @@
+           -DX_LIB_PATH=\"@x_libraries@\" \
+           -DLESSTIFHOME=\"@prefix@\"
  
 -libdir = $(prefix)/LessTif/Motif2.0/lib
 -
- lib_LTLIBRARIES=	libMrm.la
+ lib_LTLIBRARIES= libMrm.la
  
  libMrm_la_SOURCES= ${SRCS_1_2:%=../Mrm/%} ${SRCS_2_0}
-@@ -61,24 +59,4 @@
+@@ -67,24 +65,4 @@
  	      rm $$i; \
  	   fi ; \
  	  done

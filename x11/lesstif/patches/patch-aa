@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.14 2000/07/25 14:42:02 jlam Exp $
+$NetBSD: patch-aa,v 1.15 2000/10/23 19:45:10 jlam Exp $
 
 --- Makefile.am.orig	Tue May  2 17:05:14 2000
-+++ Makefile.am	Tue Jul 25 08:18:13 2000
-@@ -3,31 +3,38 @@
++++ Makefile.am
+@@ -3,29 +3,37 @@
  #
  
  MAINTAINERCLEANFILES=Makefile.in configure libtool config.guess config.sub ltconfig ltmain.sh aclocal.m4 config.h.in install-sh missing mkinstalldirs
@@ -19,8 +19,8 @@ $NetBSD: patch-aa,v 1.14 2000/07/25 14:42:02 jlam Exp $
  
  AUTOMAKE_OPTIONS = 1.4
  
-+EXTRA_DIST=	acconfig.h configure \
-+		BUG-REPORTING CREDITS KNOWN_BUGS RELEASE-POLICY NOTES
++EXTRA_DIST=    acconfig.h configure \
++               BUG-REPORTING CREDITS KNOWN_BUGS RELEASE-POLICY NOTES
 +
 +# Only install the documentation if installing 2.0-compatible libraries.
 +#
@@ -33,25 +33,24 @@ $NetBSD: patch-aa,v 1.14 2000/07/25 14:42:02 jlam Exp $
  #
 -rootdir=	$(exec_prefix)/LessTif
 -root_DATA=	AUTHORS BUG-REPORTING COPYING COPYING.LIB CREDITS \
--	KNOWN_BUGS NEWS README RELEASE-POLICY TODO release-notes.txt
--
++doc_DATA=	AUTHORS BUG-REPORTING COPYING COPYING.LIB CREDITS \
+ 	KNOWN_BUGS NEWS README RELEASE-POLICY TODO release-notes.txt
+ 
 -EXTRA_DIST=	acconfig.h configure \
 -		BUG-REPORTING CREDITS KNOWN_BUGS RELEASE-POLICY NOTES
-+doc_DATA=	AUTHORS BUG-REPORTING COPYING COPYING.LIB CREDITS \
-+	KNOWN_BUGS NEWS README RELEASE-POLICY TODO release-notes.txt \
-+	release-notes.html
- 
+-
  @MAINT@changelog:
  @MAINT@	@( cd $(srcdir)/lib/Xm ; cvs -Q log -rrelease_@MAJOR_VERSION@_@MINOR_VERSION@_@PICO_VERSION@: ) | $(srcdir)/scripts/parselog >ChangeLog
  
 -htmldir=	$(exec_prefix)/LessTif/doc
--html_DATA=	release-notes.html
--
+ html_DATA=	release-notes.html
+ 
  all-local: BUG-REPORTING
- 
- BUG-REPORTING: $(top_srcdir)/doc/www.lesstif.org/bugs.html
-@@ -50,3 +57,4 @@
- 
- #install-data-hook:
- #	${INSTALL_DATA} $(srcdir)/NOTES $(DESTDIR)$(htmldir)/release-notes.html
+@@ -47,6 +55,4 @@
+ release-notes.html:	$(srcdir)/NOTES
+ 	rm -f $@
+ 	cp $(srcdir)/NOTES $@
+-
+-#install-data-hook:
+-#	${INSTALL_DATA} $(srcdir)/NOTES $(DESTDIR)$(htmldir)/release-notes.html
 +endif
