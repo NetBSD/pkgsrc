@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/04/19 15:30:07 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/06/20 15:40:16 dmcmahill Exp $
 bin/R
 lib/R/COPYING
 lib/R/COPYRIGHTS
@@ -2921,6 +2921,7 @@ lib/R/library/ts/latex/ts-internal.tex
 lib/R/library/ts/latex/ts.plot.tex
 lib/R/library/ts/latex/ts.union.tex
 lib/R/library/ts/libs/ts.so
+man/man1/R.1
 @dirrm lib/R/library/ts/libs
 @dirrm lib/R/library/ts/latex
 @dirrm lib/R/library/ts/html
