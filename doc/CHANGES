@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7675 2004/11/03 15:33:18 adam Exp $
+$NetBSD: CHANGES,v 1.7676 2004/11/03 15:35:41 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5049,3 +5049,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated rocksndiamonds-sdl to 3.1.0 [adam 2004-11-03]
 	Added p5-Chart-2.3 [adrianp 2004-11-03]
 	Updated gentoo to 0.11.52 [adam 2004-11-03]
+	Updated gpgme to 1.0.1nb1 [jmmv 2004-11-03]
