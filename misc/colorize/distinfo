@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:37:29 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/05/21 05:43:22 zuntum Exp $
 
 SHA1 (colorize_0.2.8.tar.bz2) = 9018b79d21d8fc24e3cf414eea744c699121ef3e
+Size (colorize_0.2.8.tar.bz2) = 15598 bytes
