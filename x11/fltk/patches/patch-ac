@@ -1,48 +1,74 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $
+$NetBSD: patch-ac,v 1.2 1999/10/31 03:00:36 jlam Exp $
 
---- fluid/Makefile.orig	Mon Apr 19 23:01:23 1999
-+++ fluid/Makefile	Mon Apr 26 13:52:02 1999
-@@ -45,21 +45,20 @@
- 
- ################################################################
- 
--OBJECTS = $(CPPFILES:.cxx=.o)
-+OBJECTS = $(CPPFILES:.cxx=.lo)
+--- src/Makefile.orig	Mon Apr 26 08:36:17 1999
++++ src/Makefile	Sat Oct 30 00:30:16 1999
+@@ -146,30 +146,24 @@
  
  include ../makeinclude
  
--.SUFFIXES : .cxx .c .o
-+.SUFFIXES : .cxx .c .lo
+-LIBRARY = ../lib/$(LIBNAME)
++LIBRARY = $(LIBNAME)
  
--.cxx.o :
--	$(CXX) -I.. $(CXXFLAGS) -c $<
--.c.o :
--	$(CC) -I.. $(CFLAGS) -c $<
--.cxx :
--	$(CXX) -I.. $(CXXFLAGS) -o $@ $< -L../lib -lfltk $(LDLIBS)
+ OBJECTS = $(CPPFILES:.cxx=.o) $(CFILES:.c=.o)
+ 
+-all:	$(LIBRARY) $(DSONAME)
++all:	$(LIBRARY)
+ 
+ $(LIBRARY): $(OBJECTS)
+-	@echo $(LIBCOMMAND) $@ ...
+-	@$(LIBCOMMAND) $@ $(OBJECTS)
+-	@$(RANLIB) $@
 -
--$(PROGRAM) : $(OBJECTS) ../lib/$(LIBNAME)
--	$(CXX) $(CXXFLAGS) -o $(PROGRAM) $(OBJECTS) -L../lib -lfltk $(LDLIBS)
-+.cxx.lo :
+-libfltk.so.1 libfltk.sl.1: $(OBJECTS)
+-	@echo $(DSOCOMMAND) $@ ...
+-	@$(DSOCOMMAND) $@ $(OBJECTS)
++	$(LIBTOOL) --cplusplus --mode=link $(CXX) -o $@ $(OBJECTS:.o=.lo) -rpath $(prefix)/lib -version-info $(FLTK_MAJOR):$(FLTK_MINOR)
+ 
+ .SUFFIXES:	.cxx .h .o
+ 
+ .cxx.o :
+-	$(CXX) -I.. $(CXXFLAGS) -c $<
 +	$(LIBTOOL) --mode=compile $(CXX) -I.. $(CXXFLAGS) -c $<
-+.c.lo :
+ .c.o :
+-	$(CC) -I.. $(CFLAGS) -c -o $@ $<
 +	$(LIBTOOL) --mode=compile $(CC) -I.. $(CFLAGS) -c $<
-+
-+$(PROGRAM) : $(OBJECTS) ../src/$(LIBNAME)
-+	$(LIBTOOL) --mode=link $(CXX) $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) \
-+		../src/$(LIBNAME) $(LDLIBS)
  
  clean :
- 	-@ rm -f *.o $(PROGRAM) $(CLEAN) core *~ makedepend
-@@ -71,10 +70,7 @@
+-	-@ rm -f *.o *.do $(DSONAME) $(LIBRARY) $(CLEAN) core *~ ../include/*~ makedepend cmap
++	-@ rm -f *.o *.do $(LIBRARY) $(CLEAN) core *~ ../include/*~ makedepend cmap
+ 	@touch makedepend
  
- install: $(PROGRAM)
- 	@echo "Installing FLUID..."
--	@strip $(PROGRAM)
--	@-mkdir -p $(bindir)
--	@cp $(PROGRAM) $(bindir)/$(PROGRAM)
--	@chmod 755 $(bindir)/$(PROGRAM)
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $(PROGRAM) $(bindir)
+ depend:
+@@ -180,28 +174,11 @@
  
- uninstall:
- 	-@ rm -f $(bindir)/$(PROGRAM)
+ install: $(LIBRARY) $(DSONAME)
+ 	@echo "Installing libraries..."
+-	@-mkdir -p $(libdir)
+-	@rm -f $(libdir)/$(LIBNAME)
+-	@-cp $(LIBRARY) $(libdir)
+-	@-chmod 644 $(libdir)/$(LIBNAME)
+-	@if test "$(DSONAME)" = libfltk.so.1; then\
+-		rm -f $(libdir)/libfltk.so*;\
+-		cp libfltk.so.1 $(libdir); \
+-		chmod 755 $(libdir)/libfltk.so.1; \
+-		ln -s $(libdir)/libfltk.so.1 $(libdir)/libfltk.so;\
+-	fi
+-	@if test "$(DSONAME)" = libfltk.sl.1; then\
+-		rm -f $(libdir)/libfltk.sl*;\
+-		cp libfltk.sl.1 $(libdir); \
+-		chmod 755 $(libdir)/libfltk.sl.1; \
+-		ln -s $(libdir)/libfltk.sl.1 $(libdir)/libfltk.sl;\
+-	fi
++	$(BSD_INSTALL_DATA_DIR) $(libdir)
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIBNAME) $(libdir)
+ 	@echo "Installing include files..."
+-	@-mkdir -p $(includedir)
+-	@rm -rf $(includedir)/FL $(includedir)/Fl
+-	@-cp -r ../FL $(includedir)
+-	@-chmod 755 $(includedir)/FL
+-	@-chmod 644 $(includedir)/FL/*
++	$(BSD_INSTALL_DATA_DIR) $(includedir)/FL
++	$(BSD_INSTALL_DATA) ../FL/* $(includedir)/FL
+ 	@for file in $(includedir)/FL/*.H; do\
+ 		newfile="`basename $$file H`h";\
+ 		ln -s $$file $(includedir)/FL/$$newfile;\

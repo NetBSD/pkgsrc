@@ -1,13 +1,39 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/05/06 07:23:28 sakamoto Exp $
+$NetBSD: patch-aa,v 1.2 1999/10/31 03:00:36 jlam Exp $
 
---- makeinclude.in.orig	Fri Mar 26 00:26:28 1999
-+++ makeinclude.in	Mon Apr 26 13:41:23 1999
-@@ -42,7 +42,7 @@
- CXXFLAGS	=@CXXFLAGS@ @X_CFLAGS@
+--- fluid/Makefile.orig	Wed Aug 25 01:37:38 1999
++++ fluid/Makefile	Sat Oct 30 00:59:51 1999
+@@ -49,17 +49,17 @@
  
- # program to make the archive:
--LIBNAME		=@LIBNAME@
-+LIBNAME		=libfltk.la
- LIBCOMMAND	=@LIBCOMMAND@
- RANLIB		=@RANLIB@
- DSONAME		=@DSONAME@
+ include ../makeinclude
+ 
++LIB_TO_LINK = ../src/$(LIBNAME)
++
+ .SUFFIXES : .cxx .c .o
+ 
+ .cxx.o :
+ 	$(CXX) -I.. $(CXXFLAGS) -c $<
+ .c.o :
+ 	$(CC) -I.. $(CFLAGS) -c $<
+-.cxx :
+-	$(CXX) -I.. $(CXXFLAGS) -o $@ $< -L../lib -lfltk $(LDLIBS)
+ 
+-$(PROGRAM) : $(OBJECTS) ../lib/$(LIBNAME)
+-	$(CXX) $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) -L../lib -lfltk $(LDLIBS)
++$(PROGRAM) : $(OBJECTS) $(LIB_TO_LINK)
++	$(LIBTOOL) --mode=link $(CXX) $(LDFLAGS) -o $(PROGRAM) $(OBJECTS) $(LIB_TO_LINK) $(LDLIBS) $(GLDLIBS)
+ 
+ clean :
+ 	-@ rm -f *.o $(PROGRAM) $(CLEAN) core *~ makedepend
+@@ -71,10 +71,8 @@
+ 
+ install: $(PROGRAM)
+ 	@echo "Installing FLUID..."
+-	@strip $(PROGRAM)
+-	@-mkdir -p $(bindir)
+-	@cp $(PROGRAM) $(bindir)/$(PROGRAM)
+-	@chmod 755 $(bindir)/$(PROGRAM)
++	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) $(PROGRAM) $(bindir)
+ 
+ uninstall:
+ 	-@ rm -f $(bindir)/$(PROGRAM)
