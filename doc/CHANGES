@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2849 2003/07/21 12:51:55 seb Exp $
+$NetBSD: CHANGES,v 1.2850 2003/07/21 17:09:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2886,3 +2886,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bins to 1.1.22 [martti 2003-07-21]
 	Updated distcc to 2.9 [martti 2003-07-21]
 	Updated pgcc to 2.95.2.1nb1 [seb 2003-07-21]
+	Deleted ruby-openssl, renamed to ruby-ossl [taca 2003-07-21]
