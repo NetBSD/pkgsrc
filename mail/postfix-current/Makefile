@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2004/04/21 21:09:31 cube Exp $
+# $NetBSD: Makefile,v 1.32 2004/06/06 13:50:41 taca Exp $
 
-DISTNAME=	postfix-2.0.19-20040312
-PKGNAME=	postfix-20040312
+DISTNAME=	postfix-2.2-20040504
+PKGNAME=	postfix-20040504
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/ \
 		http://public.planetmirror.com.au/pub/postfix/experimental/
@@ -40,6 +40,7 @@ RCD_SCRIPTS=	postfix
 .endif
 
 FIX_RPATH+=	AUXLIBS
+REPLACE_PERL+=	examples/smtpd-policy/greylist.pl examples/smtpd-policy/spf.pl
 
 BUILD_DEFS+=	POSTFIX_USE_INET6
 #BUILD_DEFS+=	POSTFIX_USE_TLS
@@ -52,8 +53,8 @@ BUILD_DEFS+=	USE_SASL2
 
 .if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
 .  include "../../security/openssl/buildlink3.mk"
-PATCHFILES+=		tls+ipv6-1.22-pf-2.0.19-20040312.patch.gz
-PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.22/
+PATCHFILES+=		tls+ipv6-1.24-pf-2.2-20040504.patch.gz
+PATCH_SITES+=		ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.24/
 PATCH_DIST_STRIP=	-p1
 
 CCARGS+=	-DHAS_SSL
@@ -135,7 +136,7 @@ MAKE_ENV=	CC="${CC}" OPT="${CFLAGS}"
 MAKE_ENV+=	AUXLIBS="${AUXLIBS}" CCARGS="${CCARGS}"
 
 POSTFIX_CONF_FILES=	conf/main.cf src/util/sys_defs.h postfix-install
-POSTFIX_CONF_FILES+=	conf/sample-misc.cf src/global/mail_params.h
+POSTFIX_CONF_FILES+=	src/global/mail_params.h
 
 FILES_SUBST+=	SHAREDIR=${SHAREDIR}
 MESSAGE_SUBST+=	SHAREDIR=${SHAREDIR}
@@ -211,6 +212,15 @@ pre-install:
 do-install:
 	cd ${WRKSRC} && ${SETENV} config_directory="${SHAREDIR}"	\
 		${SH} postfix-install -non-interactive
+.if defined(POSTFIX_USE_INET6) && ${POSTFIX_USE_INET6} == "YES"
+	${INSTALL_DATA} ${WRKSRC}/conf/sample-ipv6.cf ${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/sample-tls.cf ${SHAREDIR}
+.endif
+	${INSTALL_DATA_DIR} ${SHAREDIR}/smtpd-policy
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/smtpd-policy/greylist.pl \
+		${SHAREDIR}/smtpd-policy
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/smtpd-policy/spf.pl \
+		${SHAREDIR}/smtpd-policy
 
 .if ${OPSYS} == "Linux"
 .  include "../../databases/db/buildlink3.mk"
