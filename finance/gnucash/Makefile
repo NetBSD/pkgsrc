@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2003/06/05 05:01:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.44 2003/06/30 19:46:22 seb Exp $
 
 DISTNAME=		gnucash-1.8.1
 PKGREVISION=		3
@@ -34,6 +34,9 @@ CONFIGURE_ENV+=		PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${X11BASE}/lib/pkgconf
 
 AM_MAKEFLAGS=		LIBTOOL='${PKGLIBTOOL} ${LIBTOOL_FLAGS}'
 MAKE_ENV+=		AM_MAKEFLAGS="${AM_MAKEFLAGS}"
+
+USE_NEW_TEXINFO=	YES
+INFO_FILES=		gnucash-design.info
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -87,5 +90,4 @@ post-patch:
 .include "../../www/gtkhtml/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
