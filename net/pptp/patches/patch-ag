@@ -1,0 +1,65 @@
+$NetBSD: patch-ag,v 1.1.1.1 2000/04/10 01:14:02 jtk Exp $
+
+Index: pptp.8
+--- /dev/null	Sun Apr  9 20:55:33 2000
++++ pptp.8	Sun Apr  9 20:55:52 2000
+@@ -0,0 +1,59 @@
++.\" Manual page for pptp-1.0.2
++.\" Information gleaned from USING file in the distribution
++.\" SH section heading
++.\" SS subsection heading
++.\" LP paragraph
++.\" IP indented paragraph
++.\" TP hanging label
++.Dd April 9, 2000
++.Dt pptp 8
++.Sh NAME
++.Nm pptp
++.Nd Point-to-Point Tunneling Protocol daemon
++.Sh SYNOPSIS
++.Nm
++.Ar hostname
++.Op Ar ppp-options
++.Sh DESCRIPTION
++.Nm
++manages
++a virtual private network (VPN) connection using Microsoft
++PPTP protocols using IP GRE tunneling protocols.
++.Nm
++uses
++.Xr pppd 8
++on a pseudo-tty
++to negotiate the connection with MS-CHAP authentication.
++.Pp
++Because
++.Nm
++uses GRE by using a raw IP socket, it will not work if your kernel has
++the
++.Xr gre 4
++pseudo-device
++configured.
++The
++.Ar hostname
++parameter specifies which host should be contacted as the PPTP server.
++Additional parameters are passed on to 
++.Ic pppd
++and typically include a remote username or a file containing options.
++.Pp
++.Nm
++must be run as root.
++
++.Sh EXAMPLE
++.Nm
++.Ar vpnhost.company.com
++.Ar file
++.Pa /etc/ppp/options.pptp.company.com
++.Sh FILES
++.Pa /var/run/pptp/<ip-address>
++is created as a socket.  It is used for communicating with an existing
++PPTP call manager for a given remote server host.
++.Sh SEE ALSO
++.Xr pppd 8 ,
++.Xr gre 4 ,
++.Pa ${PREFIX}/share/doc/pptp/USING
++
++
