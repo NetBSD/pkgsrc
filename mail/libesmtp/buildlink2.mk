@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2002/09/22 13:01:24 cjep Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/03/22 07:49:46 rh Exp $
 
 .if !defined(LIBESMTP_BUILDLINK2_MK)
 LIBESMTP_BUILDLINK2_MK=	# defined
@@ -14,7 +14,6 @@ BUILDLINK_FILES.libesmtp+=	include/auth-client.h
 BUILDLINK_FILES.libesmtp+=	include/auth-plugin.h
 BUILDLINK_FILES.libesmtp+=	lib/libesmtp.*
 LIBESMTP=			-lesmtp
-.endif
 
 CONFIGURE_ENV+=			LIBESMTP="${LIBESMTP}"
 MAKE_ENV+=			LIBESMTP="${LIBESMTP}"
