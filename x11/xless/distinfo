@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:16:00 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:56 skrll Exp $
 
-MD5 (xless-1.7.tar.gz) = 8b6322b7f08be533380ca2a32b7f2963
+SHA1 (xless-1.7.tar.gz) = 2fb2c468aa6c0237be1d2bc256fcaf754c98b20e
+Size (xless-1.7.tar.gz) = 45559 bytes
 SHA1 (patch-aa) = 40886d34888ab70deba4cec08a1f9f596c3a6a88
 SHA1 (patch-ab) = b8fcde6ce72bfc63bd20fcb2e131d57624ef5445

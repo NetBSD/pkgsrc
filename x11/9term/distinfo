@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:14:39 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:33 skrll Exp $
 
-MD5 (9term.1.6.3.tar.gz) = 064a4428aba417a7793d3252423faf0b
+SHA1 (9term.1.6.3.tar.gz) = deb6248c9e441934ad8af522871034e24cb2bf5b
+Size (9term.1.6.3.tar.gz) = 135169 bytes
 SHA1 (patch-aa) = 8f6736cb197d89b0518e69e2e1a5cb6f2659a3b4
 SHA1 (patch-ab) = 4724df42df3021bfe0878462a6d3529be06e681f
 SHA1 (patch-ac) = 500feea9198682d720314081d13a31e0e841940d

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 12:14:43 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/19 11:07:35 skrll Exp $
 
-MD5 (XmHTML-1.1.7.tar.gz) = 6d079435fb954bb7878f4dd0d3f7b8d8
+SHA1 (XmHTML-1.1.7.tar.gz) = 4d8c82f88cf0700f6fc8898323d865b83d2a1ff1
+Size (XmHTML-1.1.7.tar.gz) = 1289780 bytes
 SHA1 (patch-aa) = 6008cf68c80010399071ddaed56c00dac2ce060c
 SHA1 (patch-ab) = 2f9e88b74913c735caf139646c2637a77a1232cd
 SHA1 (patch-ac) = cf48e4eb9887df7bd5d82615aa505939ba97bee8
