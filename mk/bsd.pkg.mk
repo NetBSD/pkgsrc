@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.436 2000/05/17 03:32:43 fredb Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.437 2000/05/19 21:07:00 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -1078,7 +1078,7 @@ _FETCH_FILE=								\
 				fi;					\
 			fi						\
 		done;							\
-		${ECHO_MSG} "=> Couldn't fetch it - please try to retrieve this";\
+		${ECHO_MSG} "=> Couldn't fetch $$bfile - please try to retrieve this";\
 		${ECHO_MSG} "=> file manually into ${_DISTDIR} and try again."; \
 		exit 1;							\
 	fi
