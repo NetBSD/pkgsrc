@@ -21,8 +21,10 @@ AC_CHECK_HEADERS([ctype.h errno.h err.h fnctl.h fts.h getopt.h grp.h \
 AC_CHECK_HEADERS([sys/cdefs.h sys/ioctl.h sys/mtio.h sys/param.h \
 	sys/resource.h sys/stat.h sys/tape.h sys/time.h sys/types.h sys/uio.h \
 	sys/wait.h])
+AC_CHECK_MEMBERS([struct stat.st_flags],,, [#include <sys/stat.h>])
 
 # Checks for library functions.
+AC_CHECK_FUNCS([lutimes])
 AC_CHECK_FUNCS([getrlimit setrlimit])
 
 AC_CONFIG_FILES([Makefile])

@@ -1,4 +1,4 @@
-/*	$NetBSD: file_subs.c,v 1.8 2004/07/03 02:50:21 grant Exp $	*/
+/*	$NetBSD: file_subs.c,v 1.9 2004/08/21 03:28:56 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -36,15 +36,19 @@
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+#endif
+
 #include <nbcompat.h>
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#if defined(__RCSID) && !defined(lint)
+#if !defined(lint)
 #if 0
 static char sccsid[] = "@(#)file_subs.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: file_subs.c,v 1.8 2004/07/03 02:50:21 grant Exp $");
+__RCSID("$NetBSD: file_subs.c,v 1.9 2004/08/21 03:28:56 jlam Exp $");
 #endif
 #endif /* not lint */
 
@@ -774,7 +778,7 @@ set_ftime(char *fnm, time_t mtime, time_t atime, int frc)
 		 * set. We get the current values of the times if we need them.
 		 */
 		if (lstat(fnm, &sb) == 0) {
-#ifdef BSD4_4
+#if BSD4_4 && !HAVE_NBTOOL_CONFIG_H
 			if (!patime)
 				TIMESPEC_TO_TIMEVAL(&tv[0], &sb.st_atimespec);
 			if (!pmtime)
