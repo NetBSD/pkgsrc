@@ -1,3 +1,4 @@
+# $NetBSD: Makefile,v 1.2 1997/10/15 15:37:17 agc Exp $
 # New ports collection makefile for:	netpbm
 # Version required:	1mar1994
 # Date created:		?
