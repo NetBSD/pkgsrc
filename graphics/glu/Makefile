@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/10/27 17:58:12 bouyer Exp $
+# $NetBSD: Makefile,v 1.14 2002/11/18 07:49:25 jlam Exp $
 
 PKGNAME=		${DISTNAME:C/MesaLib/glu/}
 WRKSRC=			${WRKDIR}/${DISTNAME:C/Lib//}
@@ -12,27 +12,21 @@ CONFLICTS+=		Mesa<3.2.1
 
 USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
+BUILD_DIRS=		${WRKSRC}/src-glu
 
 .include "../../mk/bsd.prefs.mk"
 
 # Check if we got libGLU distributed with XFree86 4.x.
-.if exists(${X11BASE}/include/GL/glu.h)
+.if exists(${X11BASE}/include/GL/glu.h) && \
+    exists(${X11BASE}/lib/X11/config/X11.tmpl)
 _IS_BUILTIN_GLU!=	${EGREP} -c BuildGLULibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 _IS_BUILTIN_GLU=	0
 .endif
 
-.if ${_IS_BUILTIN_GLU} != "0"
+.if (${X11PREFIX} == ${X11BASE}) && (${_IS_BUILTIN_GLU} != "0")
 IGNORE=		"GLU has already been installed as part of XFree86-4.x"
 .endif
-
-do-build:
-	cd ${WRKSRC}/src-glu && ${SETENV} ${MAKE_ENV} \
-	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
-
-do-install:
-	cd ${WRKSRC}/src-glu && ${SETENV} ${MAKE_ENV} \
-	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
@@ -42,4 +36,5 @@ post-install:
 		${INSTALL_DATA} $${hdr} ${PREFIX}/include/GL;		\
 	done
 
+.include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

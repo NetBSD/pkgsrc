@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/10/27 13:50:09 bouyer Exp $
+# $NetBSD: Makefile,v 1.13 2002/11/18 07:49:25 jlam Exp $
 
 PKGNAME=		MesaLib-${MESA_VERSION}
 WRKSRC=			${WRKDIR}/${DISTNAME:S/Lib//}
@@ -10,27 +10,21 @@ COMMENT=		Graphics library similar to SGI's OpenGL
 USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 CONFIGURE_ARGS+=	--without-glut
+BUILD_DIRS=		${WRKSRC}/src
 
 .include "../../mk/bsd.prefs.mk"
 
 # Check if we got Mesa distributed with XFree86 4.x.
-.if exists(${X11BASE}/include/GL/glx.h)
+.if exists(${X11BASE}/include/GL/glx.h) && \
+    exists(${X11BASE}/lib/X11/config/X11.tmpl)
 _IS_BUILTIN_MESA!=	${EGREP} -c BuildGLXLibrary ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
 .else
 _IS_BUILTIN_MESA=	0
 .endif
 
-.if ${_IS_BUILTIN_MESA} != "0"
+.if (${X11PREFIX} == ${X11BASE}) && (${_IS_BUILTIN_MESA} != "0")
 IGNORE=		"MesaLib/GLX has already been installed as part of XFree-4.x"
 .endif
-
-do-build:
-	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} \
-	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
-
-do-install:
-	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV} \
-	${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${INSTALL_TARGET}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/GL
