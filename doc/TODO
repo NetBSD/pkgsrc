@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1044 2003/11/18 13:53:35 cjep Exp $
+$NetBSD: TODO,v 1.1045 2003/11/18 14:05:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -264,7 +264,7 @@ Suggested package updates
 	o lcms-1.0.9
 	o leafnode-1.9.46
 	o libao-0.8.4
-	o libgcrypt-1.1.43 [pkg/23322]
+	o libgcrypt-1.1.44 [pkg/23322]
 	o libgtop-2.0.6
 	o licq-1.2.7
 	o libmpeg3-1.5.3
@@ -317,7 +317,7 @@ Suggested package updates
 	o ogle-0.9.2
 	o ogmtools-1.1
 	o openbox-3.0 [pkgsrc-wip]
-	o opencdk-0.5.1 [pkg/23322]
+	o opencdk-0.5.3 [pkg/23322]
 	o openh323-1.11.2
 	o openldap-2.1.23
 	o openoffice-1.1 [skrll]
@@ -332,6 +332,7 @@ Suggested package updates
 	o php-4.3.4
 	o popa3d-0.6.4
 	o postfix-2.0.16
+	o postgresql-7.4
 	o proftpd-1.2.9
 	o pureftpd-1.0.16c
 	o py-curl-7.10.8
