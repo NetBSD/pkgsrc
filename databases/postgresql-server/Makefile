@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2002/10/19 03:03:51 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2002/10/19 19:03:59 jlam Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 COMMENT=		PostgreSQL database server programs
@@ -29,6 +29,7 @@ PGUSER?=		pgsql
 PGGROUP?=		pgsql
 PGHOME?=		${PREFIX}/${PGUSER}
 FILES_SUBST+=		PGUSER=${PGUSER}
+FILES_SUBST+=		PGGROUP=${PGGROUP}
 FILES_SUBST+=		PGHOME=${PGHOME}
 BUILD_DEFS=		PGUSER PGROUP PGHOME
 
@@ -36,7 +37,6 @@ PKG_USERS=		${PGUSER}:${PGGROUP}::PostgreSQL\\ database\\ administrator:${PGHOME
 PKG_GROUPS=		${PGGROUP}
 
 RCD_SCRIPTS=		pgsql
-OWN_DIRS_PERMS=		${PGHOME} ${PGUSER} ${PGGROUP} 0755
 
 post-buildlink:
 #
