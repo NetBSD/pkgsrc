@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/07/12 17:33:14 wiz Exp $
+
+SHA1 (libglade-2.0.0.tar.gz) = 73aa032f89a012f0727ebe1379148a9c0a1c3d70
+Size (libglade-2.0.0.tar.gz) = 353683 bytes
+SHA1 (patch-aa) = daa85a2941cd4900139dda63f4e9b62aa3c2a7ed
