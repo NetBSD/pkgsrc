@@ -1,10 +1,10 @@
-# $NetBSD: buildlink2.mk,v 1.1 2003/10/10 08:44:44 cube Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2003/10/28 16:57:00 cube Exp $
 
 .if !defined(LIBNIDS_BUILDLINK2_MK)
 LIBNIDS_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		libnids
-BUILDLINK_DEPENDS.libnids?=	libnids>=1.17
+BUILDLINK_DEPENDS.libnids?=	libnids>=1.18
 BUILDLINK_PKGSRCDIR.libnids?=	../../net/libnids
 
 BUILDLINK_DEPMETHOD.libnids?=	build
