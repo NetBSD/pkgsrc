@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 2001/02/23 22:19:42 tron Exp $
+$NetBSD: patch-ai,v 1.2 2001/02/24 22:40:40 tron Exp $
 
 --- src/server.c.orig	Fri Jan  9 18:16:22 1998
-+++ src/server.c	Fri Feb 23 22:41:48 2001
++++ src/server.c	Sat Feb 24 23:24:45 2001
 @@ -2,19 +2,21 @@
   *  Copyright (C) 1995, 1996  Karl-Johan Johnsson.
   */
@@ -26,7 +26,7 @@ $NetBSD: patch-ai,v 1.1 2001/02/23 22:19:42 tron Exp $
  struct SERVER {
      int		fd;
      char	*buffer;
-@@ -128,12 +130,12 @@
+@@ -128,30 +130,35 @@
   *  tell != 0   means tell about errors
   *  tell >  1   means say what you're doing
   */
@@ -35,9 +35,50 @@ $NetBSD: patch-ai,v 1.1 2001/02/23 22:19:42 tron Exp $
  {
      long	tmp;
  
-     server_close(server);
+-    server_close(server);
 -    server->fd = open_socket();
-+    server->fd = open_socket(AF_INET);
-     if (server->fd < 0) {
- 	set_message("Error: Failed to create socket!", True);
- 	return -1;
+-    if (server->fd < 0) {
+-	set_message("Error: Failed to create socket!", True);
+-	return -1;
+-    }
+-
+-    if (tell > 1)
+-	set_message("Server contacted, waiting for response...", False);
+-
+-    tmp = connect_socket(server->fd, addr);
+-
+-    if (tmp < 0 && would_block(server->fd, errno)) {
+-	if (tell == 0)
+-	    return 0; /* don't block */
+-
+-	tmp = 0;
+-	do_wait(&server->fd, True, server->quit_func, server);
+-	if (server->fd < 0)
++    while (addr) {
++	server_close(server);
++	server->fd = open_socket(addr);
++	if (server->fd < 0) {
++	    set_message("Error: Failed to create socket!", True);
+ 	    return -1;
++	}
++
++	if (tell > 1)
++	    set_message("Server contacted, waiting for response...", False);
++
++	tmp = connect_socket(server->fd, addr);
++
++	if (tmp < 0 && would_block(server->fd, errno)) {
++	    if (tell == 0)
++		return 0; /* don't block */
++
++	    tmp = 0;
++	    do_wait(&server->fd, True, server->quit_func, server);
++	    if (server->fd >= 0)
++		break;
++
++	}
++
++	addr = next_addr(addr);
+     }
+ 
+     server->buffer[0] = '\0';
