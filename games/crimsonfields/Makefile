@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/12/08 14:41:39 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2004/01/24 13:30:55 grant Exp $
 #
 
 DISTNAME=		crimson-0.3.7
@@ -13,7 +13,7 @@ HOMEPAGE=		http://crimson.seul.org/
 COMMENT=		Tactical war game in the tradition of Battle Isle
 
 USE_BUILDLINK2=		yes
-USE_GMAKE=		yes
+USE_GNU_TOOLS+=		make
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/07/13 13:51:54 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2004/01/24 13:30:57 grant Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -14,7 +14,7 @@ BUILD_USES_MSGFMT=	# defined
 
 USE_BUILDLINK2=		# defined
 USE_X11=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XRacer/.packlist
 
