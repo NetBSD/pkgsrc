@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1 1999/05/29 20:57:17 christos Exp $
+# $NetBSD: Makefile,v 1.2 1999/05/30 03:47:43 christos Exp $
 
+PKGNAME=	postfix-19990317pl05
 DISTNAME=	postfix-19990317-pl05
 CATEGORIES=	mail
 MASTER_SITES=	ftp://postfix.cloud9.net/official/
+DISTFILES=	postfix-19990317-pl05.tar.gz
 
 MAINTAINER=	christos@netbsd.org
 HOMEPAGE=	http://www.postfix.org
 
 MIRROR_DISTFILE= no
-#NO_WRKSUBDIR=   yes
-#NO_WRKSRC=   yes
 
 pre-patch:
 	${CP} ${WRKSRC}/Makefile ${WRKSRC}/Makefile.dist
