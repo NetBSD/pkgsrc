@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2003/03/29 12:42:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2003/07/12 00:32:19 zuntum Exp $
 #
 
-DISTNAME=	sms-1.9.1h
+DISTNAME=	sms-1.9.2d
 PKGNAME=	pol${DISTNAME}
 WRKSRC=		${WRKDIR}/sms
 CATEGORIES=	net
