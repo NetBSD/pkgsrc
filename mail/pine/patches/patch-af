@@ -1,0 +1,12 @@
+--- imap/src/mtest/mtest.c.orig	Fri Nov 13 10:59:21 1998
++++ imap/src/mtest/mtest.c	Fri Nov 13 10:59:43 1998
+@@ -52,6 +52,9 @@
+ 
+ /* Excellent reasons to hate ifdefs, and why my real code never uses them */
+ 
++#ifdef __NetBSD__
++#define unix 1
++#endif
+ #ifndef unix
+ # define unix 0
+ #endif
