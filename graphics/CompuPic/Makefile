@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/20 00:53:05 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/23 16:54:40 hubertf Exp $
 #
 
 DISTNAME=	compupic-current-i386-Linux
@@ -18,7 +18,9 @@ WRKSRC=		${WRKDIR}/compupic-4.6.1005-i386-Linux
 
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
-NO_PACKAGE=	"Commercial product, purcase at http://www.photodex.com/ordering/order.html"
+RESTRICTED=	"Commercial product, purcase at http://www.photodex.com/ordering/order.html"
+NO_PACKAGE=	${RESTRICTED}
+NO_CDROM=	${RESTRICTED}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/compupic

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/10/28 06:59:12 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 1999/11/23 16:54:40 hubertf Exp $
 #
 
 DISTNAME=	Rollemup
@@ -18,7 +18,8 @@ MIRROR_DISTFILE=no
 EXTRACT_ONLY=	# empty
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
-NO_PACKAGE=	yes
+NO_PACKAGE=	${RESTRICTED}
+NO_CDROM=	${RESTRICTED}
 
 PLIST_SRC=	${WRKDIR}/PLIST.src
 GAMES_DIR=	share/games
