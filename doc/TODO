@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2731 2004/12/21 00:03:01 xtraeme Exp $
+$NetBSD: TODO,v 1.2732 2004/12/21 00:16:43 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -990,7 +990,6 @@ Suggested package updates
 	o pygtk-2.4.1
 	o pysol-4.82
 	o qDecoder-7.1
-	o qmail-qfilter-2.0
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-designer-kde-2.3.2
