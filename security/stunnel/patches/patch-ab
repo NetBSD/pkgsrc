@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/04/03 09:25:36 martin Exp $
+
+--- configure.in.orig	Sun Apr  2 11:13:49 2000
++++ configure.in	Sun Apr  2 11:13:55 2000
+@@ -88,8 +88,9 @@
+ LIBS="-lwrap $saved_LIBS"
+ AC_TRY_LINK([int hosts_access(); int allow_severity, deny_severity;],
+ [hosts_access()],
+-[AC_MSG_RESULT(yes); AC_DEFINE(HAVE_LIBWRAP)],
+-[AC_MSG_RESULT(no)]; LIBS="$saved_LIBS")
++[AC_MSG_RESULT(yes); AC_DEFINE(HAVE_LIBWRAP) wrap_LIB="-lwrap"],
++[AC_MSG_RESULT(no)])
++LIBS="$saved_LIBS"
+ 
+ dnl Add SSL includes and libraries
+ CFLAGS="$CFLAGS -I$ssldir/include"
+@@ -122,6 +123,8 @@
+ 
+ dnl Checks for library functions.
+ AC_CHECK_FUNCS(getopt snprintf vsnprintf openpty _getpty)
++
++LIBS="$LIBS $wrap_LIB"
+ 
+ AC_OUTPUT(Makefile stunnel.8)
+ 
