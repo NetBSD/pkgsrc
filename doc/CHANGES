@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3551 2003/09/27 10:32:38 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3552 2003/09/27 12:04:21 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3966,3 +3966,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added liboop-0.9 [grant 2003-09-27]
 	Updated conglomerate to 0.7.4nb1 [xtraeme 2003-09-27]
 	Updated trickle to 1.06nb1 [xtraeme 2003-09-27]
+	Updated xplot to 0.90.7.1nb1 [tron 2003-09-27]
