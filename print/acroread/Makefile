@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/04/04 12:29:49 tron Exp $
+# $NetBSD: Makefile,v 1.30 2002/07/02 11:40:16 agc Exp $
 
 PKGNAME=	acroread-4.05
 CATEGORIES=	print
@@ -8,7 +8,6 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
 COMMENT=	View, distribute and print PDF documents
 
-#HF#IS_INTERACTIVE=	YES
 RESTRICTED=	"Original installer required to redistribute."
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
