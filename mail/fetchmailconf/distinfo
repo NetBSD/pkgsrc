@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.10 2002/01/10 14:10:23 wiz Exp $
+
+SHA1 (fetchmail-5.9.6.tar.gz) = c01aa4dbeafa36a9816eb72b7ca6bcb8d9681e49
+Size (fetchmail-5.9.6.tar.gz) = 866845 bytes
