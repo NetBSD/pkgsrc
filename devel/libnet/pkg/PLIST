@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/11/08 08:25:01 sakamoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/08/14 17:45:21 wiz Exp $
 bin/libnet-config
 include/libnet.h
 include/libnet/libnet-asn1.h
@@ -8,7 +8,9 @@ include/libnet/libnet-macros.h
 include/libnet/libnet-ospf.h
 include/libnet/libnet-structures.h
 lib/libnet.a
+lib/libnet.la
 lib/libnet.so.1.0
 man/man3/libnet.3
 @exec ln -s %D/share/doc/libnet/examples %D/share/examples/libnet
 @unexec rm %D/share/examples/libnet
+@dirrm include/libnet
