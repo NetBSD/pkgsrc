@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/01/26 12:31:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/01/26 12:42:02 jmmv Exp $
 #
 
 .include "Makefile.common"
@@ -20,5 +20,5 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 .include "../../graphics/Mesa/buildlink2.mk"
 .include "../../graphics/mng/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/xvidcore/buildlink2.mk"
+.include "../../multimedia/xvidcore/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
