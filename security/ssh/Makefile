@@ -3,7 +3,7 @@
 # Date created:				19971214
 # Whom:					hubertf@netbsd.org
 #
-# $NetBSD: Makefile,v 1.11 1998/02/12 14:27:00 mrg Exp $
+# $NetBSD: Makefile,v 1.12 1998/02/20 07:23:29 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 # Maximal ssh package requires a YES value for USE_PERL
@@ -32,9 +32,13 @@ GNU_CONFIGURE=	YES
 
 OPSYS!= uname -s
 .if (${OPSYS} == "FreeBSD")
+.if exists(/etc/make.conf)
 .include "/etc/make.conf"
+.endif
 .else
+.if exists(/etc/mk.conf)
 .include "/etc/mk.conf"
+.endif
 .endif
 
 # You can set USA_RESIDENT appropriately in /etc/mk.conf if this bugs you..
