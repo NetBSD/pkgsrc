@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1829 2003/04/03 04:04:54 gson Exp $
+$NetBSD: CHANGES,v 1.1830 2003/04/03 08:30:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1439,3 +1439,14 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libggi to 2.0.3 [wiz 2003-04-02]
 	Updated koth to 0.8.0 [wiz 2003-04-02]
 	Updated st to 1.4 [gson 2003-04-02]
+	Renamed SDL-mixer to SDL_mixer [wiz 2003-04-03]
+	Renamed SDL-image to SDL_image [wiz 2003-04-03]
+	Updated p5-SDL to 1.19.2nb1 [wiz 2003-04-03]
+	Updated icebreaker to 1.9.7nb1 [wiz 2003-04-03]
+	Updated lbreakout2 to 2.4.1nb1 [wiz 2003-04-03]
+	Updated lgeneral to 1.1.1nb1 [wiz 2003-04-03]
+	Updated ltris to 1.0.1nb1 [wiz 2003-04-03]
+	Updated mirrormagic-sdl to 2.0.1nb1 [wiz 2003-04-03]
+	Updated prboom to 2.2.3nb2 [wiz 2003-04-03]
+	Updated tuxracer to 0.61nb1 [wiz 2003-04-03]
+	Updated tuxpaint to 0.9.10nb1 [wiz 2003-04-03]
