@@ -1,22 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2002/02/18 18:40:41 abs Exp $
+# $NetBSD: Makefile,v 1.7 2003/03/24 16:42:56 bouyer Exp $
 # FreeBSD Id: ports/net/fping/Makefile,v 1.10 2000/04/20 20:18:57 mharo Exp
 
-DISTNAME=	part01
-PKGNAME=	fping-1.20
-PKGREVISION=	1
+DISTNAME=	fping-2.4b2_to
+PKGNAME=	fping-2.4b2
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.uu.net/usenet/comp.sources.unix/volume26/fping/ \
-		ftp://ftp.digital.com/pub/usenet/comp.sources.unix/volume26/fping/ \
-		ftp://ftp.wustl.edu/usenet/comp.sources.unix/volume26/fping/ \
-		ftp://ftp.isnet.is/pub/Usenet/Usenet.src/comp.sources.unix/v26/fping/
-EXTRACT_SUFX=	.Z
+MASTER_SITES=	http://www.fping.com/download/
 
 MAINTAINER=	abs@netbsd.org
+HOMEPAGE=	http://www.fping.com/
 COMMENT=	Quickly ping many hosts w/o flooding the network
 
-DIST_SUBDIR=	fping
-EXTRACT_CMD=	zcat ${DOWNLOADED_DISTFILE} | ${SED} -e '1,/Archive-Name/d' | ${SH}
-WRKSRC=		${WRKDIR}
+GNU_CONFIGURE=	YES
 
 post-install:
 	${CHMOD} 4555 ${LOCALBASE}/sbin/fping
