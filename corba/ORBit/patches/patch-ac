@@ -1,27 +1,24 @@
-$NetBSD: patch-ac,v 1.1 1998/08/20 22:07:25 agc Exp $
+$NetBSD: patch-ac,v 1.2 1999/04/04 19:20:10 tron Exp $
 
-Use NetBSD's libtool package
-Comment out erroneous setting of INSTALL variable.
-
---- configure	1998/08/19 10:37:24	1.1
-+++ configure	1998/08/19 10:38:11
-@@ -1236,6 +1236,7 @@
-   echo "$ac_t""no" 1>&6
+--- configure.orig	Wed Mar 24 22:32:13 1999
++++ configure	Sun Apr  4 18:28:33 1999
+@@ -1569,6 +1569,7 @@
  fi
  
+ 
 +if false; then
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags="--cache-file=$cache_file"
+ test "$enable_shared" = no && libtool_flags="$libtool_flags --disable-shared"
+@@ -1865,6 +1866,7 @@
+ 
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
-@@ -1281,6 +1282,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -3261,10 +3263,10 @@
+@@ -5424,10 +5426,10 @@
        *) # Relative path.
          ac_sub_cache_file="$ac_dots$cache_file" ;;
        esac

@@ -1,19 +1,19 @@
-$NetBSD: patch-ah,v 1.1 1999/03/05 00:25:10 tron Exp $
+$NetBSD: patch-ah,v 1.2 1999/04/04 19:20:10 tron Exp $
 
---- libIDL/configure.orig	Wed Feb 24 20:54:31 1999
-+++ libIDL/configure	Fri Mar  5 00:18:15 1999
-@@ -2185,6 +2185,7 @@
- fi
+--- libIDL/configure.orig	Thu Mar 25 20:15:02 1999
++++ libIDL/configure	Sun Apr  4 18:27:26 1999
+@@ -2446,6 +2446,7 @@
+ rm -f confcache
+ 
+ 
++if false; then
+ # Actually configure libtool.  ac_aux_dir is where install-sh is found.
+ CC="$CC" CFLAGS="$CFLAGS" CPPFLAGS="$CPPFLAGS" \
+ LD="$LD" NM="$NM" RANLIB="$RANLIB" LN_S="$LN_S" \
+@@ -2469,6 +2470,7 @@
  
  # Always use our own libtool.
-+if false; then
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
- # Check for any special flags to pass to ltconfig.
-@@ -2416,6 +2417,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
  # Redirect the config.log output again, so that the ltconfig log is not
