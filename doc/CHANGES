@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5691 2004/04/20 19:42:38 minskim Exp $
+$NetBSD: CHANGES,v 1.5692 2004/04/20 20:22:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2193,3 +2193,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated audacity to 1.2.0 [ben 2004-04-20]
 	Update php4 to 4.3.6 [jdolecek 2003-04-20]
 	Updated catclock to 0.0nb2 [minskim 2004-04-20]
+	Updated p5-XML-XSLT to 0.48 [minskim 2004-04-20]
