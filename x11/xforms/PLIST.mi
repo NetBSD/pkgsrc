@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.mi,v 1.2 2000/08/15 14:29:14 wiz Exp $
+@comment $NetBSD: PLIST.mi,v 1.1 2001/10/31 22:29:24 zuntum Exp $
 bin/fd2ps
 bin/fdesign
 include/X11/forms.h
