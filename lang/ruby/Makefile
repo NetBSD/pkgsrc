@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/04/11 07:35:15 sakamoto Exp $
+# $NetBSD: Makefile,v 1.12 2000/04/14 04:20:12 sakamoto Exp $
 #
 
 DISTNAME=	ruby-1.4.3
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+= --enable-ipv6
 .else
 CONFIGURE_ARGS+= --disable-ipv6
 .endif
-MAKE_ENV+=	DLDFLAGS="-L${LOCALBASE}/lib -R${LOCALBASE}/lib -L${X11BASE}/lib -R${X11BASE}/lib"
+MAKE_ENV+=	XLDFLAGS="${LDFLAGS}" DLDFLAGS="-L${LOCALBASE}/lib -R${LOCALBASE}/lib -L${X11BASE}/lib -R${X11BASE}/lib"
 
 PLIST_SUBST=	RUBY_VERSION=1.4
 
