@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/06/21 15:33:55 agc Exp $
+$NetBSD: distinfo,v 1.2 2003/07/02 13:15:35 agc Exp $
 
-SHA1 (wmsmixer-0.5.tar.gz) = 55cfd1293eac8c6abab20d4a64f3989993ff3e28
-Size (wmsmixer-0.5.tar.gz) = 26208 bytes
+SHA1 (wmsmixer-0.5.1.tar.gz) = 32473bf99b7c0dfa4a2b7d0d850288354aebde58
+Size (wmsmixer-0.5.1.tar.gz) = 33350 bytes
