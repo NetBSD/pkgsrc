@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/09/04 21:41:50 kim Exp $
+# $NetBSD: Makefile,v 1.2 2000/09/05 00:11:02 kim Exp $
 #
 
-DISTNAME=	wml-2.0.2
+DISTNAME=	wml-2.0.3
 CATEGORIES=	www perl5
 MASTER_SITES=	http://www.engelschall.com/sw/wml/distrib/
 
