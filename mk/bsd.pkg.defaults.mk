@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.74 2002/07/23 19:10:27 cjep Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.75 2002/07/29 07:25:38 grant Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -22,7 +22,14 @@
 
 #OBJHOSTNAME=
 # use hostname-specific object directories, e.g.  work.amnesiac, work.localhost
-# OBJHOSTNAME takes precedence over OBJMACHINE (see below).
+# OBJHOSTNAME takes precedence over OBJOSMACHINE and OBJMACHINE (see below).
+# Possible: defined, not defined
+# Default: not defined
+
+#OBJOSMACHINE=
+# use the OS name, version and machine type for object directories,
+# e.g. NetBSD-1.5-i386, SunOS-5.7-sparc
+# OBJOSMACHINE takes precedence over OBJMACHINE (see below).
 # Possible: defined, not defined
 # Default: not defined
 
