@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/08/10 22:39:24 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2000/08/16 05:09:30 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
@@ -8,7 +8,7 @@ CATEGORIES=	cad
 MASTER_SITES=	ftp://ic.eecs.berkeley.edu/pub/Spice3/
 EXTRACT_SUFX=   .tar.Z
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=	dmcmahill@netbsd.org
 HOMEPAGE=	http://bwrc.eecs.berkeley.edu/Classes/IcBook/SPICE/
 
 DEPENDS+=	readline>=4.0:../../devel/readline
@@ -24,7 +24,7 @@ NO_WRKSUBDIR=	yes
 
 do-configure:
 	${RM} -f ${WRKSRC}/makefile
-	${SED} 's@$${X11BASE}@${X11PREFIX}@' <${FILESDIR}/NetBSD \
+	${SED} 's;@WRKSRC@;${WRKSRC};g' <${FILESDIR}/NetBSD \
 		>${WRKSRC}/conf/NetBSD
 	${MV} ${WRKSRC}/conf/defaults ${WRKSRC}/conf/defaults.BAK
 	${SED} \
