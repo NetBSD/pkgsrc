@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2004/07/29 09:34:57 xtraeme Exp $
+# $NetBSD: Makefile,v 1.140 2004/08/29 15:58:17 recht Exp $
 #
 
 COMMENT=	Databases
@@ -51,7 +51,7 @@ SUBDIR+=	openldap
 SUBDIR+=	oraedit
 SUBDIR+=	p5-AddressBook
 SUBDIR+=	p5-Apache-DBI
-SUBDIR+= p5-BerkeleyDB
+SUBDIR+=	p5-BerkeleyDB
 SUBDIR+=	p5-DBD-CSV
 SUBDIR+=	p5-DBD-Google
 SUBDIR+=	p5-DBD-Oracle
@@ -62,7 +62,7 @@ SUBDIR+=	p5-DBD-mysql
 SUBDIR+=	p5-DBD-postgresql
 SUBDIR+=	p5-DBI
 SUBDIR+=	p5-DBI-Shell
-SUBDIR+=    p5-DBIWrapper
+SUBDIR+=	p5-DBIWrapper
 SUBDIR+=	p5-DBIx-Datasource
 SUBDIR+=	p5-DBIx-SearchBuilder
 SUBDIR+=	p5-DB_File
@@ -84,6 +84,7 @@ SUBDIR+=	php4-mssql
 SUBDIR+=	php4-mysql
 SUBDIR+=	php4-odbc
 SUBDIR+=	php4-pgsql
+SUBDIR+=	phpldapadmin
 SUBDIR+=	phpmyadmin
 SUBDIR+=	phppgadmin
 SUBDIR+=	postgresql73
