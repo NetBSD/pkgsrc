@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2015 2004/08/09 14:20:04 wiz Exp $
+$NetBSD: TODO,v 1.2016 2004/08/09 15:23:30 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -301,7 +301,7 @@ Suggested package updates
 	o maradns-1.0.23
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
-	o memtester-4.0.0
+	o memtester-4.0.0 [schmonz]
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o minicom-2.1
