@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/10/24 20:10:17 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 1999/10/27 11:11:10 tron Exp $
 include/kdlgloader.h
 lib/libkdlgloader.so.1.0
 lib/libkdlgloader.a
@@ -297,6 +297,7 @@ share/kde/applnk/Development/.directory
 @dirrm share/kde/apps/kdevelop/pics/mini
 @dirrm share/kde/apps/kdevelop/pics
 @dirrm share/kde/apps/kdevelop
+@dirrm share/kde/applnk/Development
 @dirrm share/doc/kde/HTML/zh_CN.GB2312/kdevelop
 @dirrm share/doc/kde/HTML/zh_CN.GB2312
 @dirrm share/doc/kde/HTML/sv/kdevelop
