@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2001/03/30 22:08:03 itojun Exp $
+# $NetBSD: Makefile,v 1.127 2001/04/01 20:39:59 zuntum Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -35,6 +35,7 @@ SUBDIR+=	checkbot
 SUBDIR+=	chimera
 SUBDIR+=	cocoon
 SUBDIR+=	communicator
+SUBDIR+=	cronolog
 SUBDIR+=	curl
 SUBDIR+=	galway
 SUBDIR+=	glibwww
