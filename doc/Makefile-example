@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.6 2004/05/14 18:58:26 wiz Exp $
+# $NetBSD: Makefile-example,v 1.7 2004/11/11 06:05:55 minskim Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
@@ -64,7 +64,7 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
-# buildlink[23] files should come after all variables have been set,
+# buildlink3 files should come after all variables have been set,
 # sorted alphabetically.
 .include "../../devel/gettext-lib/buildlink3.mk"
 
