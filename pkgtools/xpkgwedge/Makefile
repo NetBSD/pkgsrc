@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 1998/09/17 15:47:09 agc Exp $
+# $NetBSD: Makefile,v 1.12 1998/09/27 18:38:30 tron Exp $
 #
 
 DISTNAME=	xpkgwedge-0.4
-CATEGORIES=	devel x11
+CATEGORIES=	pkgtools devel x11
 DISTFILES=	# none
 
 MAINTAINER=	tv@netbsd.org
