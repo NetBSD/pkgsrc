@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.31 2004/11/27 01:31:20 kristerw Exp $
+$NetBSD: distinfo,v 1.32 2004/12/11 12:32:44 kristerw Exp $
 
 SHA1 (xmame-0.88.tar.bz2) = c0dbc5d7bd6f1c6032fe582b8f12d5fbf5eb1af8
 Size (xmame-0.88.tar.bz2) = 14799683 bytes
 SHA1 (patch-aa) = b9f486be58b306a815269f859c1031d24c966df1
 SHA1 (patch-ab) = be758f3dd91930a84dc798a40163fc8b970de56e
+SHA1 (patch-ac) = 0e2e90dd2ee21065fc34fae23a7789e77b3277e5
 SHA1 (patch-ae) = cf9b2684b4bdfdec7d2f09bcc424b7ee79d7f45a
