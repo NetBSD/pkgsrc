@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.112 2002/12/25 17:23:43 grant Exp $
+$NetBSD: TODO,v 1.113 2002/12/26 01:50:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -127,7 +127,7 @@ Suggested package updates
 	o gnomeicu-0.99beta
 	o gnucash-1.7.6 [devel]
 	o gnumeric-1.0.11
-	o gnumeric-1.1.11 [devel]
+	o gnumeric-1.1.14 [devel]
 	o gnustep-1.5.1
 	o gnustep-gui-0.8.3
 	o gpa-0.6.0
@@ -190,7 +190,6 @@ Suggested package updates
 	o ncurses-5.3
 	o netpbm-10.8
 	o netscape-7.01
-	o openbox-2.2.3
 	o openoffice-1.0.1 [skrll]
 	o openoffice-643 [post-1.0.1]
 	o openssh-3.5p1
@@ -230,6 +229,7 @@ Suggested package updates
 	o stunnel-4.03 [pkg/19310]
 	o suck-4.3.1
 	o swig-1.3.17
+	o sylpheed-0.8.8
 	o sylpheed-claws-0.8.7
 	o tcl/tk-8.4.1 [bjoern]
 	o tcpreplay-1.3.1
