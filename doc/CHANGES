@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9444 2005/03/06 17:05:30 thorpej Exp $
+$NetBSD: CHANGES,v 1.9445 2005/03/06 17:24:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1004,10 +1004,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated ruby18 to 1.8.2nb1 [taca 2005-02-21]
 	Updated dtcp to 20040611nb4 [taca 2005-02-21]
 	Updated instiki to 0.9.2nb2 [taca 2005-02-21]
-	Removed ruby-dbm [taca 2005-02-21]
-	Removed ruby-zlib [taca 2005-02-21]
-	Removed ruby-digest [taca 2005-02-21]
-	Removed ruby-openssl [taca 2005-02-21]
 	Updated dtcpclient-20040923nb1 [hamajima 2005-02-21]
 	Updated xorg-server to 6.8.1nb3 [hira 2005-02-21]
 	Added ap2-auth-ldap-2.16 [adrianp 2005-02-21]
@@ -1302,3 +1298,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sylpheed-claws-image-viewer to 1.0.1 [chris 2005-03-06]
 	Updated sylpheed-claws-trayicon to 1.0.1 [chris 2005-03-06]
 	Updated imap-uw to 2004c1nb2 [thorpej 2005-03-06]
+	Added ruby16-base-1.6.8 [taca 2005-03-06]
+	Added ruby18-base-1.8.2 [taca 2005-03-06]
