@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 1999/10/19 00:28:38 rvb Exp $
+@comment $NetBSD: PLIST,v 1.7 2000/02/09 02:30:39 fredb Exp $
 bin/filcon
 bin/norton
 bin/norton-reinit
 bin/reinit
+sbin/au
 sbin/auth2
 sbin/backup
 sbin/backup.sh
@@ -38,3 +39,4 @@ sbin/vice-setup-srvdir
 sbin/vice-setup-user
 sbin/volutil
 etc/rc.d/rc.vice
+@unexec rmdir %D/etc/rc.d 2>/dev/null || true
