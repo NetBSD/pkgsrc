@@ -39,6 +39,7 @@ mkdir $TMP
 
 exf=$TMP/exclude
 osf=$TMP/osversion_specific
+upload=$TMP/upload
 upload_specific=$TMP/upload_specific
 upload_others=$TMP/upload_others
 
@@ -65,12 +66,17 @@ RSFLAGS="-vap --progress $RSYNC_OPTS"
 failed=no
 cd $packages
 
+echo "#!/bin/sh" > $upload
+echo "packages=$packages" >> $upload
+echo "if ! cd $packages ; then" >> $upload
+echo "	echo \"could not cd to $packages\"" >> $upload
+echo "	exit 1" >> $upload
+echo "fi" >> $upload
+
 echo "Uploading OSVERSION_SPECIFIC pkgs"
 cmd="rsync $RSFLAGS --include '*/' --exclude-from=$exf --include-from=$osf \
 	--exclude '*' . $RSYNC_DST_SPECIFIC"
-echo "#!/bin/sh" > $upload_specific
-echo "packages=$packages" >> $upload_specific
-echo "cd $packages || (echo \"could not cd to $packages\" ; exit 1)" >> $upload_specific
+cp -f $upload $upload_specific
 echo $cmd >> $upload_specific
 chmod 755 $upload_specific
 echo $cmd
@@ -87,9 +93,7 @@ fi
 
 echo "Uploading non-OSVERSION_SPECIFIC pkgs"
 cmd="rsync $RSFLAGS --exclude-from=$exf --exclude-from=$osf . $RSYNC_DST_OTHER"
-echo "#!/bin/sh" > $upload_others
-echo "packages=$packages" >> $upload_others
-echo "cd $packages || (echo \"could not cd to $packages\" ; exit 1)" >> $upload_others
+cp -f $upload $upload_others
 echo $cmd >> $upload_others
 chmod 755 $upload_others
 echo $cmd
