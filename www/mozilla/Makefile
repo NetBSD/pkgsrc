@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.98 2002/08/19 23:03:27 fredb Exp $
+# $NetBSD: Makefile,v 1.99 2002/08/19 23:06:38 fredb Exp $
 
 MOZ_VER=	1.0
 DISTNAME=	mozilla-source-${MOZ_VER}
 PKGNAME=	mozilla-${MOZ_VER}
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=mozilla${MOZ_VER}/src/}
@@ -30,6 +30,8 @@ CONFIGURE_ARGS=	--disable-tests \
 
 SHAREMODE?=	644
 ALL_TARGET=
+
+UNLIMIT_RESOURCES=  datasize memorysize stacksize
 
 .include	"../../x11/gtk/buildlink.mk"
 .include	"../../graphics/gdk-pixbuf/buildlink.mk"
@@ -68,11 +70,8 @@ SCRIPTS_ENV+=	SETENV=${SETENV}
 
 PTHREAD_OPTS+=	native optional
 
-.if ${MACHINE_ARCH} == "m68k"
-DBG=
-.else
-CONFIGURE_ARGS+= --enable-optimize
-.endif
+COPTS?=		-O2
+CONFIGURE_ARGS+= --enable-optimize="${COPTS}"
 
 XPTCFILES+=	xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
 XPTCFILES+=	xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_netbsd.cpp
