@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2001/08/23 16:42:31 jlam Exp $
+$NetBSD: distinfo,v 1.8 2002/01/02 12:23:48 lukem Exp $
 
-SHA1 (libao-0.8.0.tar.gz) = 8685296e82724f70f5069e47a693693a90ccf59f
-Size (libao-0.8.0.tar.gz) = 158390 bytes
-SHA1 (patch-aa) = 355396b190e00b1f2fb3da9aa7fb221f59e2c601
+SHA1 (libao-0.8.2.tar.gz) = 8fab336aa453557e59f383c8013d949b67a5fcea
+Size (libao-0.8.2.tar.gz) = 206622 bytes
+SHA1 (patch-aa) = 9cc59790050564de60d8ddc430bee946a12ee83d
 SHA1 (patch-ab) = a2faed5b409e5810cefa62d67e9a4ad22d5f5062
