@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/01/20 00:48:12 ross Exp $
+# $NetBSD: Makefile,v 1.5 1999/02/20 22:26:22 hubertf Exp $
 #
 
 DISTNAME=	export.socks.cstc.4.2.2
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.ibs.net.pl/archive/Firewalls/socks/socks4/\
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.socks.nec.com/socksv4.html
 
-CONFLICTS=	socks5-1.0.2
+CONFLICTS=	socks5-*
 
 NO_CDROM=	"NEC has a funky license for this software"
 RESTRICTED=	"no commercial use"
