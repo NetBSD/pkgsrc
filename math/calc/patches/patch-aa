@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/11/26 23:35:19 jtb Exp $
+
+--- Makefile.orig	Mon Dec 16 04:50:45 1996
++++ Makefile
+@@ -32,7 +32,7 @@
+ EMACS    = emacs
+ TEX      = tex
+ TEXINDEX = texindex
+-MAKEINFO = makeinfo
++MAKEINFO = makeinfo --no-validate
+ MAKE	 = make
+ ECHO	 = @echo
+ REMOVE	 = -rm -f
+@@ -54,13 +54,10 @@
+ # to make the steps more explicit while the `make' is in progress.
+ all:
+ 	$(MAKE) compile
+-	$(MAKE) private
+ 	$(MAKE) info
+-	$(ECHO) "Calc is now installed."
+ 
+ install:
+ 	$(MAKE) compile
+-	$(MAKE) public
+ 	$(MAKE) info
+ 	$(ECHO) "Calc is now installed."
+ 
+@@ -83,9 +80,9 @@
+ # Format the Calc manual for the Info system using makeinfo.
+ info: calc.info
+ calc.info: calc.texinfo
+-	-$(MAKEINFO) calc.texinfo
+-	$(ECHO) "Please ignore warnings for Copying, Getting Started, and Interactive Tutorial."
+-	$(MAKE) texinfo
++	$(MAKEINFO) calc.texinfo
++#	$(ECHO) "Please ignore warnings for Copying, Getting Started, and Interactive Tutorial."
++#	$(MAKE) texinfo
+ 
+ 
+ # Format the Calc manual for the Info system using texinfo.el.
