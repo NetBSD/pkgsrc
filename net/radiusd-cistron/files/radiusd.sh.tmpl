@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# $NetBSD: radiusd.sh.tmpl,v 1.1 2001/10/11 09:57:21 martti Exp $
+#
+
+PREFIX=!!PREFIX!!
+
+case "$1" in
+	start)
+		${PREFIX}/sbin/radiusd -y && echo -n ' radiusd'
+		;;
+	stop)
+		if [ -f /var/run/radiusd.pid ]; then
+			kill `cat /var/run/radiusd.pid` && echo -n ' radiusd'
+			rm -f /var/run/radiusd.pid
+		fi
+		;;
+	*)
+		echo "$0 start | stop"
+		;;
+esac
