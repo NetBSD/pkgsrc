@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:52:38 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/05 13:40:11 drochner Exp $
 
 DISTNAME=	scribus-0.7.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://web2.altmuehlnet.de/fschmid/
 
