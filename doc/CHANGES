@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1863 2003/04/07 17:31:35 magick Exp $
+$NetBSD: CHANGES,v 1.1864 2003/04/07 17:41:29 tron Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1483,3 +1483,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sdig to 1.30 [bouyer 2003-04-07]
 	Updated samba to 2.2.8a [cjep 2003-04-07]
 	Updated xemacs-current to 21.5.11 [magick 2003-04-07]
+	Updated dialog to 0.6znb1 [jdc 2003-04-07]
