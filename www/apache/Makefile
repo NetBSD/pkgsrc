@@ -1,23 +1,28 @@
-# $NetBSD: Makefile,v 1.91 2002/02/28 05:45:33 jlam Exp $
+# $NetBSD: Makefile,v 1.92 2002/04/02 14:13:01 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
 
-DISTNAME=		apache_1.3.23
-PKGNAME=		apache-1.3.23
-PKGREVISION=		1
+DISTNAME=		apache_1.3.24
+PKGNAME=		apache-1.3.24
+PKGREVISION=		# empty
 CATEGORIES=		www
 MASTER_SITES=		http://httpd.apache.org/dist/httpd/ \
-			http://www.apache.de/dist/httpd/ \
-			http://www.netbsd.org/images/logos/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-			sitedrivenby.gif
+			http://www.apache.de/dist/httpd/
 
-MASTER_SITES+=		http://www.modssl.org/source/ \
-			ftp://ftp.uni-trier.de/pub/unix/security/mod_ssl/source/
-DISTFILES+=		${MODSSL_DISTNAME}${EXTRACT_SUFX}
-MODSSL_DISTNAME=	mod_ssl-2.8.7-1.3.23
+APACHE_DIST=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES=		${APACHE_DIST}
+
+NETBSD_LOGO=		sitedrivenby.gif
+SITES_${NETBSD_LOGO}=	http://www.netbsd.org/images/logos/
+DISTFILES+=		${NETBSD_LOGO}
+
+MODSSL_DISTNAME=	mod_ssl-2.8.8-1.3.24
+MODSSL_DIST=		${MODSSL_DISTNAME}${EXTRACT_SUFX}
 MODSSL_SRC=		${WRKDIR}/${MODSSL_DISTNAME}
+SITES_${MODSSL_DIST}=	http://www.modssl.org/source/ \
+			ftp://ftp.uni-trier.de/pub/unix/security/mod_ssl/source/
+DISTFILES+=		${MODSSL_DIST}
 
 MAINTAINER=		jlam@netbsd.org
 HOMEPAGE=		http://httpd.apache.org/
@@ -109,6 +114,8 @@ SUPPORT_FILES=	${EGDIR}/magic.default ${PKG_SYSCONFDIR}/magic
 SUPPORT_FILES+=	${EGDIR}/mime.types.default ${PKG_SYSCONFDIR}/mime.types
 RCD_SCRIPTS=	apache
 
+MAKE_DIRS=		${PREFIX}/share/httpd
+MAKE_DIRS+=		${PREFIX}/share/httpd/htdocs
 OWN_DIRS=		/var/log/httpd
 OWN_DIRS+=		/var/spool/httpd
 OWN_DIRS_PERMS+=	/var/spool/httpd/proxy nobody nobody 0755
