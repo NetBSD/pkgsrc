@@ -1,4 +1,4 @@
-/*	$NetBSD: setenv.c,v 1.7 2003/09/06 23:03:04 grant Exp $	*/
+/*	$NetBSD: setenv.c,v 1.8 2003/12/05 15:43:10 erh Exp $	*/
 
 /*
  * Copyright (c) 1987 Regents of the University of California.
@@ -31,7 +31,7 @@
 
 #if defined(LIBC_SCCS) && !defined(lint)
 /*static char *sccsid = "from: @(#)setenv.c	5.6 (Berkeley) 6/4/91";*/
-static char *rcsid = "$Id: setenv.c,v 1.7 2003/09/06 23:03:04 grant Exp $";
+static char *rcsid = "$Id: setenv.c,v 1.8 2003/12/05 15:43:10 erh Exp $";
 #endif /* LIBC_SCCS and not lint */
 
 #if HAVE_CONFIG_H
@@ -74,6 +74,7 @@ __findenv(name, offset)
 	return(NULL);
 }
 
+#if !HAVE_SETENV
 /*
  * setenv --
  *	Set the value of the environmental variable "name" to be
@@ -134,7 +135,9 @@ setenv(name, value, rewrite)
 		;
 	return (0);
 }
+#endif /* !HAVE_SETENV */
 
+#if !HAVE_UNSETENV
 /*
  * unsetenv(name) --
  *	Delete environmental variable "name".
@@ -153,3 +156,4 @@ unsetenv(name)
 			if (!(*P = *(P + 1)))
 				break;
 }
+#endif /* !HAVE_UNSETENV */
