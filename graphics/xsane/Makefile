@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2002/08/19 19:36:48 mycroft Exp $
+# $NetBSD: Makefile,v 1.34 2002/09/22 21:55:03 wiz Exp $
 #
 
 DISTNAME=	xsane-0.86
@@ -18,21 +18,18 @@ HOMEPAGE=	http://www.xsane.org/
 COMMENT=	New improved frontend for SANE
 
 BUILD_USES_MSGFMT=	yes
-BUILDLINK_DEPENDS.gtk?= gtk+>=1.2.5
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.2.1:../../graphics/png
-DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
-DEPENDS+=	gimp>=1.0.4:../../graphics/gimp
-DEPENDS+=	sane-backends>=1.0.4:../../graphics/sane-backends
 
 USE_LIBINTL=	YES
 GNU_CONFIGURE=	YES
 USE_GMAKE=	YES
 USE_X11BASE=	YES
+USE_BUILDLINK2=	YES
 
-LDFLAGS+=	-L${PREFIX}/lib/sane -Wl,-R${PREFIX}/lib/sane
-CPPFLAGS+=	-I${PREFIX}/include -I${LOCALBASE}/include
-LIBS=		-lintl
-
-.include "../../x11/gtk/buildlink.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/gimp-base/buildlink2.mk"
+.include "../../graphics/sane-backends/buildlink2.mk"
+.include "../../x11/gtk/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
