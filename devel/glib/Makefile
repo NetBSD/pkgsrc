@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2001/12/24 19:38:07 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2001/12/26 08:32:42 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -47,31 +47,31 @@ pre-configure:
 	@cd ${WRKSRC};							\
 	files="glib-config.in docs/glib-config.1.in glib.pc.in gmodule.pc.in gthread.pc.in"; \
 	for file in $${files}; do					\
-		${MV} -f $${file} $${file}.fixme;			\
 		${SED}	-e "s|@GLIB_VERSION@|${GLIB_VERSION}|g"		\
 			-e "s|@VERSION@|${GLIB_VERSION}|g"		\
-			$${file}.fixme > $${file};			\
-		${RM} $${file}.fixme;					\
+			$${file} > $${file}.fixed;			\
+		${MV} -f $${file}.fixed $${file};			\
 	done
 
 post-configure:
 	@cd ${WRKSRC};							\
 	files="config.status config.h glibconfig.h";			\
 	for file in $${files}; do					\
-		${MV} $${file} $${file}.fixme;				\
 		${SED}	-e "s|^\(#define.*GLIB_MAJOR_VERSION\).*|\1	${GLIB_MAJOR_VERSION}|" \
 			-e "s|^\(#define.*GLIB_MINOR_VERSION\).*|\1	${GLIB_MINOR_VERSION}|" \
 			-e "s|^\(#define.*GLIB_MICRO_VERSION\).*|\1	${GLIB_MICRO_VERSION}|" \
-			$${file}.fixme > $${file};			\
-		${RM} $${file}.fixme;					\
+			$${file} > $${file}.fixed;			\
+		${MV} $${file}.fixed $${file};				\
 	done;								\
 	${CHMOD} +x config.status
 .if exists(/usr/include/sys/null.h)
 	@cd ${WRKSRC};							\
-	${MV} glib.h glib.h.fixme;					\
-	${SED} -e 's|^#define.NULL.*|#include <sys/null.h>|'		\
-	    glib.h.fixme >glib.h;					\
-	${RM} glib.h.fixme
+	files="glib.h";							\
+	for file in $${files}; do					\
+		${SED}	-e "s|^#define.NULL.*|#include <sys/null.h>|"	\
+			$${file} > $${file}.fixed;			\
+		${MV} $${file}.fixed $${file};				\
+	done
 .endif
 
 .include "../../mk/pthread.buildlink.mk"
