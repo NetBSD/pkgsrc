@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.7 2003/12/16 11:10:47 adam Exp $
+
+--- dlls/netapi32/nbt.c.orig	2003-12-15 16:32:57.000000000 +0000
++++ dlls/netapi32/nbt.c
+@@ -72,8 +72,8 @@
+ #include "winbase.h"
+ #include "wine/debug.h"
+ #include "winreg.h"
+-#include "iphlpapi.h"
+ #include "winsock2.h"
++#include "iphlpapi.h"
+ #include "netbios.h"
+ #include "nbnamecache.h"
+ 
