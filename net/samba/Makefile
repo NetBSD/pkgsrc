@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/01/09 20:49:27 kleink Exp $
+# $NetBSD: Makefile,v 1.19 1999/01/29 10:39:18 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/10/23 15:17:43 max Exp
 #
 
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://samba.anu.edu.au/pub/samba/
 MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://samba.anu.edu.au/samba/samba.html
 
-CONFLICTS=      samba-1.9.18p8 samba-2.0.0beta2
+CONFLICTS=      samba-1.9.18p8 samba-2.*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 
