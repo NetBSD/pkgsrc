@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5501 2004/04/10 06:26:35 snj Exp $
+$NetBSD: CHANGES,v 1.5502 2004/04/10 08:58:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1871,3 +1871,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated snort to 2.1.2 [snj 2004-04-10]
 	Updated qmail to 1.03nb5 [schmonz 2004-04-10]
 	Updated abcde to 2.1.19 [snj 2004-04-10]
+	Updated py-libxml2 to 2.6.8 [minskim 2004-04-10]
