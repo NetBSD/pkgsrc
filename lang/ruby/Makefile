@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/01/15 18:46:29 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2000/01/22 13:31:44 itojun Exp $
 #
 
 DISTNAME=	ruby-1.4.3
@@ -19,8 +19,17 @@ DEPENDS+=	gdbm-1.7.3:../../databases/gdbm
 DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 DEPENDS+=	readline-4.0:../../devel/readline
 
+BUILD_DEFS+=    USE_INET6
+
+.include "../../mk/bsd.prefs.mk"
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --enable-shared
+.if defined(USE_INET6) && ${USE_INET6} == YES
+CONFIGURE_ARGS= --enable-ipv6
+.else
+CONFIGURE_ARGS= --disable-ipv6
+.endif
 MAKE_ENV+=	DLDFLAGS="-L${LOCALBASE}/lib -R${LOCALBASE}/lib -L${X11BASE}/lib -R${X11BASE}/lib"
 
 PLIST_SUBST=	RUBY_VERSION=1.4
