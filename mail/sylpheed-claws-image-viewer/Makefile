@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/03 18:49:45 reed Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/11 12:23:19 jmmv Exp $
 #
 
 PLUGIN_NAME=	image_viewer
@@ -11,7 +11,7 @@ COMMENT=	Plugin to allow Sylpheed-claws to display images attached to mails
 
 CONFIGURE_ARGS+=	--enable-image-viewer-plugin
 
-.include "../../x11/gtk/buildlink2.mk"
-.include "../../graphics/imlib/buildlink2.mk"
+.include "../../graphics/imlib/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
