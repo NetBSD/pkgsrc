@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.11 2001/11/02 01:24:06 hubertf Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.12 2001/11/08 12:47:13 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -292,17 +292,16 @@ PATCH_FUZZ_FACTOR?= -F0
 # Possible: any Fortran compiler
 # Default: none
 
-#PRE_ROOT_CMD=${CHMOD} -R o+w ${WRKDIR}
+PRE_ROOT_CMD?=	${TRUE}
 # Command to be run by normal user, just before becoming root (see
-# SU_CMD) to install the package.  For example, the command shown
-# would allow root to write and modify files below ${WRKDIR}, if on an
-# NFS -noroot file system.
+# SU_CMD) to install the package.  For example, "chmod -R o+w ${WRKDIR}"
+# would allow others to write and modify files below ${WRKDIR}.
 # Possible: any shell commands
 # Default: none
 
-#SU_CMD=
+SU_CMD?= su - root -c
 # Command to perform before "make install", if the user does not have
-# an effective uid of 0.  A possible substitute is "sudo -u root"
+# an effective uid of 0.  A possible substitute is "sudo sh -c"
 # Possible: su, sudo, or priv, with appropriate arguments
 # Default: ${SU} root -c
 
