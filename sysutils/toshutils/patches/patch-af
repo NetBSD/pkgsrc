@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
+
+--- src/alarm.c.orig	Fri Dec 17 14:07:03 1999
++++ src/alarm.c	Mon Dec 20 03:33:32 1999
+@@ -33,6 +33,11 @@
+ #ifdef __GLIBC__
+ #include<sys/perm.h>
+ #endif
++#ifdef __NetBSD__
++#include <sys/types.h>
++#include <machine/sysarch.h>
++#define iopl i386_iopl
++#endif
+ 
+ #include"sci.h"
+ #include"parsetime.h"

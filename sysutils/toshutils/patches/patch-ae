@@ -1,0 +1,29 @@
+$NetBSD: patch-ae,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
+
+--- src/parsetime.y.orig	Fri Dec 17 14:07:03 1999
++++ src/parsetime.y	Mon Dec 20 03:33:32 1999
+@@ -305,10 +305,24 @@
+     if (yyparse() == 0) {
+ 	exectime = mktime(&exectm);
+ 	if (isgmt) {
++#if __NetBSD__
++	    struct tm *tm;
++	    time_t t;
++
++	    time(&t);
++	    tm=localtime(&t);
++
++	    exectime += timezone;
++	    if (tm->tm_isdst) {
++		exectime -= 3600;
++	    }
++#else
++	/* the "daylight" variable is not part of the ANSI C spec - HF */
+ 	    exectime += timezone;
+ 	    if (daylight) {
+ 		exectime -= 3600;
+ 	    }
++#endif
+ 	}
+ 	if (time_only && (currtime > exectime)) {
+ 	    exectime += 24*3600;

@@ -1,0 +1,35 @@
+$NetBSD: patch-al,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
+
+--- src/tuxtime-conf.c.orig	Fri Dec 17 14:07:03 1999
++++ src/tuxtime-conf.c	Mon Dec 20 03:33:35 1999
+@@ -35,7 +35,12 @@
+ #include<signal.h>
+ #include<paths.h>
+ #include<pwd.h>
++#ifdef Linux
+ #include<features.h>
++#endif
++#ifdef __NetBSD__
++#include <err.h>
++#endif
+ #ifdef __GLIBC__
+ #include<sys/perm.h>
+ #endif
+@@ -167,10 +172,17 @@
+ 
+ 	/* get the necessary I/O permissions */
+ 
++#ifdef __NetBSD__
++        if (i386_iopl(3) == -1) { 
++                warn("i386_iopl");
++                return 1;
++        }
++#else
+ 	if (ioperm(0xb2, 1, 1)) {
+ 		fprintf(stderr, "tuxtime-conf: can't get I/O permissions.\n");
+ 		return 1;
+ 	}
++#endif
+ 
+ 	/* do a quick check on the laptop */
+ 

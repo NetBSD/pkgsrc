@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
+
+--- doc/Makefile.in.orig	Mon Dec 20 01:10:49 1999
++++ doc/Makefile.in	Mon Dec 20 01:11:24 1999
+@@ -36,7 +36,7 @@
+ .tex.pdf:
+ 	$(PDF) $<
+ 
+-all: hci sci toshiba
++all: #HF# hci sci toshiba
+ 
+ hci: hci.pdf
+ 
+@@ -48,7 +48,7 @@
+ install:
+ 	$(MANINSTALL) fan.1 $(MANDESTDIR)/man1/fan.1
+ 	$(MANINSTALL) svpw.1 $(MANDESTDIR)/man1/svpw.1
+-	$(MANINSTALL) hotkey.1x $(MANDESTDIR)/man1/hotkey.1x
++	$(MANINSTALL) hotkey.1x $(MANDESTDIR)/man1/hotkey.1
+ 	$(MANINSTALL) tpasswd.1 $(MANDESTDIR)/man1/tpasswd.1
+ 	$(MANINSTALL) alarm.1 $(MANDESTDIR)/man1/alarm.1
+ 	$(MANINSTALL) tdocked.1 $(MANDESTDIR)/man1/tdocked.1

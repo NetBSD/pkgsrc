@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
+
+--- configure.in.orig	Fri Dec 17 14:07:03 1999
++++ configure.in	Mon Dec 20 01:09:15 1999
+@@ -4,7 +4,7 @@
+ AC_REVISION([configure.in 1.1])
+ AC_INIT(src/sci.c)
+ 
+-PROGRAMS="fan svpw tpasswd alarm dispswitch tdocked thotswap"
++PROGRAMS="fan alarm dispswitch tdocked thotswap"
+ 
+ VERSION=1.2
+ 
+@@ -23,6 +23,8 @@
+ 
+ AC_CANONICAL_HOST
+ case "$host_os" in
++  netbsd*)
++  ;;
+   linux*)
+     OS_CFLAGS='-DLINUX'
+   ;;
