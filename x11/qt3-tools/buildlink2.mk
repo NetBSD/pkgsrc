@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.12 2003/08/01 15:31:10 drochner Exp $
+# $NetBSD: buildlink2.mk,v 1.13 2003/08/06 10:45:03 drochner Exp $
 
 .if !defined(QT3_TOOLS_BUILDLINK2_MK)
 QT3_TOOLS_BUILDLINK2_MK=	# defined
@@ -8,7 +8,7 @@ BUILDLINK_DEPENDS.qt3-tools?=	qt3-tools>=3.1.2nb3
 BUILDLINK_PKGSRCDIR.qt3-tools?=	../../x11/qt3-tools
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.qt3-tools=qt3-tools
-BUILDLINK_PREFIX.qt3-tools=	${X11PREFIX}
+BUILDLINK_PREFIX.qt3-tools_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.qt3-tools+=	qt3/lib/libeditor.*
 BUILDLINK_FILES.qt3-tools+=	qt3/lib/libqui.*
 BUILDLINK_FILES.qt3-tools+=	qt3/lib/libqassistantclient.*
