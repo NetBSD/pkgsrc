@@ -1,5 +1,9 @@
-# $NetBSD: Makefile.common,v 1.2 2004/03/05 13:03:47 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.3 2005/01/11 03:16:22 dmcmahill Exp $
 #
 
 DIST_SUBDIR=	geda
-PKGVERSION=	20040111
+PKGVERSION=	20041228
+MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/devel/${PKGVERSION}/ \
+		ftp://ieee.ing.uniroma1.it/pub/geda/devel/${PKGVERSION}/ \
+		http://www.geda.seul.org/devel/${PKGVERSION}/ \
+		http://www.geda.coelacanth.com/devel/${PKGVERSION}/

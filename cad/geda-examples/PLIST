@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/10 23:38:27 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/01/11 03:16:23 dmcmahill Exp $
 share/examples/geda/AUTHORS
 share/examples/geda/COPYING
 share/examples/geda/ChangeLog
@@ -8,6 +8,7 @@ share/examples/geda/Makefile.am
 share/examples/geda/Makefile.in
 share/examples/geda/NEWS
 share/examples/geda/README
+share/examples/geda/autogen.sh
 share/examples/geda/RF_Amp/5980-2396E.pdf
 share/examples/geda/RF_Amp/MSA-2643.cir
 share/examples/geda/RF_Amp/MSA-2643.sch
@@ -20,8 +21,7 @@ share/examples/geda/RF_Amp/Q2.cir
 share/examples/geda/RF_Amp/Q2.sch
 share/examples/geda/RF_Amp/README
 share/examples/geda/RF_Amp/Simulation.cmd
-share/examples/geda/RF_Amp/gnetlistrc
-share/examples/geda/RF_Amp/gschemrc
+share/examples/geda/RF_Amp/gafrc
 share/examples/geda/RF_Amp/model/BJTM1_Q1.mod
 share/examples/geda/RF_Amp/model/BJTM1_Q2.mod
 share/examples/geda/RF_Amp/model/DiodeM1_Q1.mod
@@ -45,9 +45,8 @@ share/examples/geda/TwoStageAmp/Makefile.am
 share/examples/geda/TwoStageAmp/Makefile.in
 share/examples/geda/TwoStageAmp/Simulation.cmd
 share/examples/geda/TwoStageAmp/TwoStageAmp.sch
-share/examples/geda/TwoStageAmp/gnetlistrc
-share/examples/geda/TwoStageAmp/gschemrc
 share/examples/geda/TwoStageAmp/spice.netlist
+share/examples/geda/TwoStageAmp/gafrc
 share/examples/geda/TwoStageAmp/sym/Makefile
 share/examples/geda/TwoStageAmp/sym/Makefile.am
 share/examples/geda/TwoStageAmp/sym/Makefile.in
@@ -96,8 +95,7 @@ share/examples/geda/lightning_detector/Makefile.am
 share/examples/geda/lightning_detector/Makefile.in
 share/examples/geda/lightning_detector/bom
 share/examples/geda/lightning_detector/bom.readme
-share/examples/geda/lightning_detector/gnetlistrc
-share/examples/geda/lightning_detector/gschemrc
+share/examples/geda/lightning_detector/gafrc
 share/examples/geda/lightning_detector/lightning.net
 share/examples/geda/lightning_detector/lightning.pcb
 share/examples/geda/lightning_detector/lightning.sch

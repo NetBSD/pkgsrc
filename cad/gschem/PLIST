@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/03/05 13:03:48 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.12 2005/01/11 03:16:23 dmcmahill Exp $
 bin/gschem
 man/man1/gschem.1
 share/doc/geda-doc/man/gschem.html
@@ -28,6 +28,7 @@ share/gEDA/scheme/list-keys.scm
 share/gEDA/scheme/print-NB-attribs.scm
 share/gEDA/system-gschemrc
 ${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/geda-gschem.mo
+${PKGLOCALEDIR}/locale/it_IT/LC_MESSAGES/geda-gschem.mo
 ${PKGLOCALEDIR}/locale/ja_JP/LC_MESSAGES/geda-gschem.mo
 ${PKGLOCALEDIR}/locale/nl_NL/LC_MESSAGES/geda-gschem.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/geda-gschem.mo

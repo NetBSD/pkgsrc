@@ -1,13 +1,12 @@
-$NetBSD: patch-ac,v 1.3 2004/03/05 13:03:48 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.4 2005/01/11 03:16:23 dmcmahill Exp $
 
---- scheme/gnet-cascade.scm.orig	Sun Jan  4 03:50:03 2004
-+++ scheme/gnet-cascade.scm
-@@ -76,7 +76,7 @@
- 		    (caadr sourcenet)
- 		    )
- 		)
--	      (cascade:write-source2 port (cdr pkgs) )
-+	      (cascade:write-source port (cdr pkgs) )
- 	      )
- 	  )
- 	;; the list of packages is now empty
+--- include/prototype.h.orig	2004-08-31 12:12:09.000000000 +0000
++++ include/prototype.h
+@@ -43,6 +43,7 @@ void i_vars_setnames(TOPLEVEL *w_current
+ /* parsecmd.c */
+ void usage(char *cmd);
+ int parse_commandline(int argc, char *argv[]);
++char *create_command_line(int argc, char *argv[]);
+ /* s_cpinlist.c */
+ CPINLIST *s_cpinlist_return_tail(CPINLIST *head);
+ CPINLIST *s_cpinlist_return_head(CPINLIST *tail);
