@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2000/06/01 15:10:45 minoura Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/06 01:26:11 minoura Exp $
 #
 # This patch won't work well :p
 #PATCH_SITES=	http://ecssg.ec.tmit.ac.jp/~izumi/sl/
@@ -12,7 +12,7 @@ MASTER_SITES=	http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/sl/
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	minoura@netbsd.org
-HOMEPAGE=	http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/sl/
+HOMEPAGE=	http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/
 
 BUILD_DEPENDS=	nkf:../../japanese/nkf
 
