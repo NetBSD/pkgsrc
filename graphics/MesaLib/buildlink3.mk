@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2003/09/02 07:12:16 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2003/09/05 11:39:02 jlam Exp $
 
 .if !defined(MESALIB_BUILDLINK3_MK)
 MESALIB_BUILDLINK3_MK=	# defined
@@ -11,11 +11,6 @@ MESA_REQD?=		3.4.2
 BUILDLINK_DEPENDS.MesaLib?=	MesaLib>=${MESA_REQD}
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 
-# If BUILDLINK_CHECK_BUILTIN.<pkg> is "YES", then _only_ run the check
-# to see whether this is builtin to the system.  The result can be found
-# by checking the value of BUILDLINK_IS_BUILTIN.<pkg> (either "YES" or
-# "NO").
-#
 BUILDLINK_CHECK_BUILTIN.MesaLib?=	NO
 
 _GL_GLX_H=	${X11BASE}/include/GL/glx.h
