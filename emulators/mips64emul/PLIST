@@ -1,17 +1,23 @@
-@comment $NetBSD: PLIST,v 1.5 2005/01/12 23:47:11 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/02/20 15:43:56 xtraeme Exp $
 bin/mips64emul
 man/man1/mips64emul.1
 share/doc/mips64emul/20041024-netbsd-arc-installed.gif
 share/doc/mips64emul/20041024-netbsd-arc-installed_small.gif
 share/doc/mips64emul/20041024-openbsd-arc-installed.gif
 share/doc/mips64emul/20041024-openbsd-arc-installed_small.gif
+share/doc/mips64emul/20041129-redhat_mips.png
+share/doc/mips64emul/20041129-redhat_mips_small.png
+share/doc/mips64emul/20041213-debian_4.png
+share/doc/mips64emul/20041213-debian_4_small.gif
 share/doc/mips64emul/BUGS
 share/doc/mips64emul/HISTORY
 share/doc/mips64emul/LICENSE
 share/doc/mips64emul/README
 share/doc/mips64emul/RELEASE
 share/doc/mips64emul/TODO
-share/doc/mips64emul/hello.c
+share/doc/mips64emul/hello_mips.c
+share/doc/mips64emul/hello_ppc.c
+share/doc/mips64emul/maddr.gif
 share/doc/mips64emul/netbsd-pmax-20040630.png
 share/doc/mips64emul/netbsd-pmax-20040630_small.png
 share/doc/mips64emul/openbsd-pmax-20040710.png
@@ -20,9 +26,4 @@ share/doc/mips64emul/sprite-20040711.png
 share/doc/mips64emul/sprite-20040711_small.png
 share/doc/mips64emul/ultrix4.5-20040706.png
 share/doc/mips64emul/ultrix4.5-20040706_small.gif
-share/doc/mips64emul/20041129-redhat_mips.png
-share/doc/mips64emul/20041129-redhat_mips_small.png
-share/doc/mips64emul/20041213-debian_4.png
-share/doc/mips64emul/20041213-debian_4_small.gif
-share/doc/mips64emul/maddr.gif
 @dirrm share/doc/mips64emul

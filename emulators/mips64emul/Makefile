@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/01/12 23:47:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2005/02/20 15:43:56 xtraeme Exp $
 #
 
-DISTNAME=	mips64emul-0.2.4
+DISTNAME=	mips64emul-0.3
 CATEGORIES=	emulators
 MASTER_SITES=	http://gavare.se/mips64emul/src/
 
