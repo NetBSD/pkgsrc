@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2001/03/13 21:14:19 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2001/03/14 16:20:32 jlam Exp $
 
 DISTNAME=       imap-2000c
 PKGNAME=        imap-uw-2000.0.3nb1
@@ -106,7 +106,7 @@ do-install:
 	${INST_PROG} ${WRKSRC}/ipopd/ipop2d ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop3d ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/mtest/mtest ${PREFIX}/sbin
-	${LN} -sf ../../libexec/imapd ${PREFIX}/sbin/rimapd
+	${LN} -sf ../libexec/imapd ${PREFIX}/sbin/rimapd
 	${INSTALL_MAN} ${WRKSRC}/src/imapd/imapd.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/src/ipopd/ipopd.8 ${PREFIX}/man/man8
 	${LN} -sf ipopd.8 ${PREFIX}/man/man8/ipop2d.8
