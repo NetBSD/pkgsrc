@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.642 2001/01/13 18:35:09 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.643 2001/01/15 19:46:29 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -422,11 +422,7 @@ WRKDIR_BASENAME?=	work.${MACHINE_ARCH}
 WRKDIR_BASENAME?=	work
 .endif
 
-.ifdef NO_WRKDIR
-WRKDIR?=		${BUILD_DIR}
-.else
 WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
-.endif # !NO_WRKDIR
 
 .if defined(NO_WRKSUBDIR)
 WRKSRC?=		${WRKDIR}
@@ -1365,7 +1361,6 @@ DOWNLOADED_DISTFILE=	${_DISTDIR}/$$file
 
 .if !target(do-extract)
 do-extract:
-.ifndef NO_WRKDIR
 .ifndef KEEP_WRKDIR
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${WRKDIR}
 .endif
@@ -1377,7 +1372,6 @@ do-extract:
 		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
 	fi
 .endif # WRKOBJDIR
-.endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for file in "" ${EXTRACT_ONLY}; do				\
 		if [ "X$$file" = X"" ]; then continue; fi;		\
@@ -2237,7 +2231,6 @@ clean: pre-clean
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} clean-depends
 .endif
 	@${ECHO_MSG} "${_PKGSRC_IN}> Cleaning for ${PKGNAME}"
-.if !defined(NO_WRKDIR)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -d ${WRKDIR} ]; then					\
 		if [ -w ${WRKDIR} ]; then				\
@@ -2250,12 +2243,6 @@ clean: pre-clean
 	-${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RMDIR} ${BUILD_DIR} 2>/dev/null;				\
 	${RM} -f ${WRKDIR_BASENAME}
-.endif
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RM} -f ${WRKDIR}/.*_done ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}	\
-		${BUILD_VERSION_FILE} ${BUILD_INFO_FILE} ${DESCR} 	\
-		${PLIST}
 .endif
 .endif
 
