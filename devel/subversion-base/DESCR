@@ -5,7 +5,7 @@ is released under an Apache/BSD-style open source license.
 This package contains all the Subversion programs and libraries except
 the Apache module mod_dav_svn (for which see the ap2-subversion
 package) and the Python bindings and some programs which use them (for
-which see the subversion-python package).  Installing this package
+which see the py-subversion package).  Installing this package
 alone will satisfy most people's needs, providing all three repository
 access layers (local, svn, and dav) and the server for the svn access
 layer.
