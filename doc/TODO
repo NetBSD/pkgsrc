@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1881 2004/06/29 13:35:16 wiz Exp $
+$NetBSD: TODO,v 1.1882 2004/06/29 13:49:34 cjep Exp $
 
 Suggested new packages
 ======================
@@ -315,7 +315,6 @@ Suggested package updates
 	o mrproject-0.9.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.1
-	o nail-10.8 [cjep looking at this]
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
