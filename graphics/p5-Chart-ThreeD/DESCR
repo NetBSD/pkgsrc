@@ -1,0 +1,3 @@
+Chart::ThreeD::Pie allows you to create 3D Piecharts very easily
+and emit the drawings as GIF files. You can customize almost everything
+using a large number of methods.
