@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8259 2004/12/04 22:40:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.8260 2004/12/04 22:47:16 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5764,3 +5764,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated glib2 to 2.4.8 [jmmv 2004-12-04]
 	Updated gtk2 to 2.4.14 [jmmv 2004-12-04]
 	Updated gnome2-games to 2.8.2 [jmmv 2004-12-04]
+	Updated eog2 to 2.8.2 [jmmv 2004-12-04]
