@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2001/06/10 11:32:39 wiz Exp $
+# $NetBSD: Makefile,v 1.218 2001/06/16 03:31:37 jlam Exp $
 #
 
 COMMENT=	Development utilities
@@ -54,6 +54,7 @@ SUBDIR+=	gal
 SUBDIR+=	gdb
 SUBDIR+=	gettext
 SUBDIR+=	gettext-lib
+SUBDIR+=	gettext-m4
 SUBDIR+=	gindent
 SUBDIR+=	glade
 SUBDIR+=	glib
