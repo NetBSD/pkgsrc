@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:28 zuntum Exp $
-sbin/dictd
-man/man8/dictd.8
+@comment $NetBSD: PLIST,v 1.2 2002/10/11 00:47:28 uebayasi Exp $
+bin/dictfmt
+bin/dictfmt_index2suffix
 bin/dictzip
-man/man1/dictzip.1
 etc/dictd.conf
+man/man1/dictfmt.1
+man/man1/dictzip.1
+man/man8/dictd.8
+sbin/dictd
 share/dictd/web1913.dict.dz
 share/dictd/web1913.index
 share/dictd/wn.dict.dz
