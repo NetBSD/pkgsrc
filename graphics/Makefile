@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.367 2005/01/29 03:05:24 hamajima Exp $
+# $NetBSD: Makefile,v 1.368 2005/02/02 21:33:45 drochner Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -91,7 +91,9 @@ SUBDIR+=	giftrans
 SUBDIR+=	gimageview
 SUBDIR+=	gimp
 SUBDIR+=	gimp-docs
+SUBDIR+=	gimp-rawphoto
 SUBDIR+=	gimp-refocus-it
+SUBDIR+=	gimp-ufraw
 SUBDIR+=	gimp-warp-sharp
 SUBDIR+=	gimp1
 SUBDIR+=	gimp1-base
