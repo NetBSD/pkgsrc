@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1999/01/11 22:35:14 kim Exp $
+$NetBSD: md5,v 1.4 1999/12/02 15:16:20 rh Exp $
 
-MD5 (libwww-perl-5.36.tar.gz) = b95248b0b7ed9b32c54848dd3413fae2
+MD5 (libwww-perl-5.46.tar.gz) = e5cd29d4146c070daa3540bf49214756
