@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2003/03/29 12:41:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2003/04/10 20:10:17 grant Exp $
 
 DISTNAME=		imaze1.3
 PKGNAME=		imaze-1.3
@@ -17,7 +17,7 @@ USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 
 post-build:
-	cd ${WRKSRC} && ${PAX} -rf ${DISTDIR}/imaze-sounds.tar
+	cd ${WRKSRC} && ${PAX} -O -rf ${DISTDIR}/imaze-sounds.tar
 
 .include "../../mk/motif.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
