@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2002/12/19 14:20:09 grant Exp $
+# $NetBSD: Makefile,v 1.66 2002/12/22 13:04:40 grant Exp $
 #
 # This package does not compile in mod_ssl support hooks, as it conflicts
 # with IPv6-enable patch.
@@ -112,14 +112,20 @@ LINK_LIBGCC_LDFLAGS=	-Wl,--whole-archive -lgcc -Wl,--no-whole-archive
 MAKE_ENV+=		LINK_LIBGCC_LDFLAGS="${LINK_LIBGCC_LDFLAGS}"
 .endif
 
+# Use operating system's db1 functions (where available)
 .include "../../databases/db/buildlink2.mk"
 BUILDLINK_DEPENDS.db=	db>=2.7.7
-CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_PREFIX.db}/include/db2"
-CONFIGURE_ENV+=		LIBS="-ldb2"
 
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib
+.if defined(BUILDLINK_PREFIX.db_DEFAULT)
+CONFIGURE_ENV+=		INCLUDES="-I${BUILDLINK_PREFIX.db}/include/db2"
+
+# on Solaris, we also need libdbm
+.  if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		LIBS="-ldbm -ldb2"
+LDFLAGS+=		-Wl,-R/usr/ucblib -L/usr/ucblib
+.  else
+CONFIGURE_ENV+=		LIBS="-ldb2"
+.  endif
 .endif
 
 BUILD_DEFS+=		APACHE_CUSTOM_CFLAGS
