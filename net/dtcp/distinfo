@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/06/05 07:43:25 hamajima Exp $
+
+SHA1 (dtcp-20030228.tar.gz) = bb9b4eea12eda6a31d35e2b1b7861aac0d74ae39
+Size (dtcp-20030228.tar.gz) = 17221 bytes
+SHA1 (patch-aa) = 6666ff340134f013311cd400d67ff7cdbbcfb930
