@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/05/12 04:37:53 fredb Exp $
+# $NetBSD: Makefile,v 1.10 2000/06/02 04:14:12 itohy Exp $
 #
 
 DISTNAME=		lynx2.8.3rel.1
@@ -79,7 +79,7 @@ post-install:
 	    ${CP} ${PREFIX}/share/lynx/lynx_doc/samples/lynx.lss ${PREFIX}/etc/; \
 	fi
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 
 # XXX Not yet
 #NM?=			/usr/bin/nm
@@ -130,6 +130,8 @@ CONFIGURE_ARGS+= 	--with-socks5
 DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
 .endif
+
+.include "../../mk/bsd.pkg.mk"
 
 .if (${SSLBASE} == /usr)
 SSLLIBS=	-lssl -lcrypto
