@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3567 2003/09/28 14:40:41 tron Exp $
+$NetBSD: CHANGES,v 1.3568 2003/09/28 15:59:40 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3994,3 +3994,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sylpheed to 0.9.6nb1 [xtraeme 2003-09-28]
 	Updated sylpheed-claws to 0.9.4nb1 [xtraeme 2003-09-28]
 	Updated netio to 1.14 [tron 2003-09-28]
+	Updated fxtv to 1.03nb3 [jmmv 2003-09-28]
