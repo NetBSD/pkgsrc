@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2000/10/23 17:32:07 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2001/01/13 16:21:20 tron Exp $
 #
 
 DISTNAME=	xpkgwedge-1.0
@@ -18,6 +18,15 @@ DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 INSTALL_FILE=	${WRKDIR}/INSTALL
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == SunOS)
+DEPENDS+=	diffutils>=2.7:../../textproc/diffutils
+DIFF=		${LOCALBASE}/bin/giff
+.else
+DIFF=		/usr/bin/diff
+.endif
+
 pre-extract:
 	@if [ ! -f ${X11BASE}/include/X11/X.h ]; then \
 		${ECHO} 'xpkgwedge requires $$X11BASE to point to the real X distribution.'; \
@@ -30,9 +39,8 @@ do-build:
 	${SED}  -e "s,@X11BASE@,${X11BASE},g" \
 		-e "s,@PREFIX@,${PREFIX},g" \
 		< ${FILESDIR}/pkgxmkmf.in > ${WRKDIR}/pkgxmkmf
-
-post-build:
 	${SED}	-e "s,@X11BASE@,${X11BASE},g" \
+		-e "s,@DIFF@,${DIFF},g" \
 		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 	${SED}	-e "s,@X11BASE@,${X11BASE},g" \
 		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
