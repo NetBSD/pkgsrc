@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/21 18:51:47 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2005/02/24 19:28:41 drochner Exp $
 bin/gramps
 lib/gramps/grampslib.so
 man/man1/gramps.1
@@ -659,7 +659,7 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gramps.mo
-${PKGLOCALEDIR}/locale/fr_FR/LC_MESSAGES/gramps.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gramps.mo
