@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2264 2004/10/27 17:54:48 wiz Exp $
+$NetBSD: TODO,v 1.2265 2004/10/27 17:59:59 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -572,7 +572,6 @@ Suggested package updates
 	o xmcd-3.3.0
 	o xmess-0.87
 	o xmlstarlet-0.9.5
-	o xmltv-0.5.36
 	o xmms-alarm-0.3.5
 	o xmms-crossfade-0.3.7
 	o xmms-iris-0.12
