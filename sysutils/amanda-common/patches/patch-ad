@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 1999/04/21 14:14:33 agc Exp $
+
+Use the correct name for the statvfs struct.
+
+--- common-src/statfs.c	1999/04/21 13:24:31	1.1
++++ common-src/statfs.c	1999/04/21 13:47:22
+@@ -55,7 +55,15 @@
+ */
+ #  include <sys/statvfs.h>
+ #  define STATFS_TYP		"SVR4 (Irix-5, Solaris-2)"
++#if defined(__sun__) && defined(__svr4__)
++#if defined(_LARGEFILE64_SOURCE)
++#  define STATFS_STRUCT	statvfs64_t
++#else
++#  define STATFS_STRUCT	statvfs_t
++#endif /* largefile source */
++#else
+ #  define STATFS_STRUCT	struct statvfs
++#endif /* !Solaris */
+ #  define STATFS_TOTAL(buf)	(buf).f_blocks
+ #  define STATFS_AVAIL(buf)	(buf).f_bavail
+ #  define STATFS_FREE(buf)	(buf).f_bfree

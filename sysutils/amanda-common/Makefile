@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/04/04 23:34:45 tron Exp $
+# $NetBSD: Makefile,v 1.4 1999/04/21 14:14:32 agc Exp $
 # FreeBSD Id: Makefile,v 1.9 1997/03/08 05:00:11 gpalmer Exp
 #
 
@@ -10,11 +10,19 @@ MASTER_SITES=		ftp://ftp.cs.umd.edu/pub/amanda/
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.amanda.org/
 
-DEPENDS+=		addnerd-1.6:../../sysutils/addnerd
-
 .include "../../mk/bsd.prefs.mk"
-AMANDA_USER?=		backup
+
+.if ${OPSYS} == "NetBSD"
+DEPENDS+=		addnerd-1.6:../../sysutils/addnerd
+ADDUSER_PROG=		addnerd
 AMANDA_GROUP=		operator
+.elif ${OPSYS} == "SunOS"
+ADDUSER_PROG=		useradd
+MAKE_ENV+=		CPPFLAGS=-D_LARGEFILE64_SOURCE
+AMANDA_GROUP=		sysadmin
+.endif
+
+AMANDA_USER?=		backup
 AMANDA_VAR?=		/var/amanda
 
 USE_LIBTOOL=		yes
@@ -31,8 +39,13 @@ CONFIGURE_ARGS+=	--with-user=${AMANDA_USER} \
 			--without-server --without-restore --without-client
 
 CONFIGURE_ENV+=		INSTALL_SCRIPT="${INSTALL_SCRIPT}"
+CPPFLAGS=		
 
 pre-install:
-	@${SETENV} ${MAKE_ENV} addnerd -g ${AMANDA_GROUP} ${AMANDA_USER}
+	case `${GREP} -c '^${AMANDA_USER}:' /etc/passwd || ${TRUE}` in	\
+	0)								\
+		${SETENV} ${MAKE_ENV} ${ADDUSER_PROG} -g ${AMANDA_GROUP} ${AMANDA_USER} \
+		;;							\
+	esac
 
 .include "../../mk/bsd.pkg.mk"
