@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/10 18:17:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/09/21 00:10:01 wiz Exp $
 bin/calc
 bin/cscript/4dsphere
 bin/cscript/fproduct
@@ -52,7 +52,6 @@ include/calc/jump.h
 include/calc/label.h
 include/calc/lib_util.h
 include/calc/longbits.h
-include/calc/longlong.h
 include/calc/math_error.h
 include/calc/md5.h
 include/calc/nametype.h
@@ -82,11 +81,13 @@ share/calc/chrem.cal
 share/calc/custhelp/argv
 share/calc/custhelp/devnull
 share/calc/custhelp/help
+share/calc/custhelp/pmodm127
 share/calc/custhelp/pzasusb8
 share/calc/custhelp/sysinfo
 share/calc/custom/argv.cal
 share/calc/custom/halflen.cal
 share/calc/custom/libcustcalc.a
+share/calc/custom/pmodm127.cal
 share/calc/custom/pzasusb8.cal
 share/calc/deg.cal
 share/calc/ellip.cal
@@ -170,6 +171,7 @@ share/calc/help/dereference
 share/calc/help/det
 share/calc/help/digit
 share/calc/help/digits
+share/calc/help/display
 share/calc/help/dp
 share/calc/help/environment
 share/calc/help/epsilon
