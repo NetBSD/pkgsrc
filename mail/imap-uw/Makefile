@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/12/13 21:26:53 tron Exp $
+# $NetBSD: Makefile,v 1.18 2000/12/17 17:07:56 jlam Exp $
 
 DISTNAME=       imap-2000a
 PKGNAME=        imap-uw-2000a
@@ -15,26 +15,29 @@ MESSAGE_FILE=	${WRKDIR}/MESSAGE
 
 INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
 INST_LIB=	${LIBTOOL} ${INSTALL_DATA}
+INC_DIR=	${PREFIX}/include/c-client
 DOC_DIR=	${PREFIX}/share/doc/imap-uw
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-BUILDNAME=	gso
+ALL_TARGET=	gso
 .else
-BUILDNAME=	neb
+ALL_TARGET=	neb
 .endif
 
-do-configure:
+NO_CONFIGURE=	# defined
+MAKE_ENV+=	EXTRACFLAGS="${CFLAGS}"
+
+post-build:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
 		< ${WRKSRC}/src/imapd/imapd.8c > ${WRKDIR}/imapd.8
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
 		< ${WRKSRC}/src/ipopd/ipopd.8c > ${WRKDIR}/ipopd.8
+
+pre-install:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' \
 		< ${PKGDIR}/MESSAGE > ${MESSAGE_FILE}
-
-do-build:
-	cd ${WRKSRC} && ${MAKE} ${BUILDNAME} PREFIX=${PREFIX} CC="${LIBTOOL} ${CC} -g"
 
 do-install:
 	${INST_LIB} ${WRKSRC}/c-client/libimapuw.la ${PREFIX}/lib
@@ -51,12 +54,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/FAQ ${DOC_DIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/RELNOTES ${DOC_DIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${DOC_DIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/include/c-client
+	${INSTALL_DATA_DIR} ${INC_DIR}
 	for i in linkage.h mail.h rfc822.h misc.h imap4r1.h osdep.h smtp.h \
 		nntp.h env_unix.h fs.h ftl.h nl.h  tcp.h env.h linkage.c; \
 	do \
-		${INSTALL_DATA} ${WRKSRC}/c-client/$$i \
-			${PREFIX}/include/c-client ; \
+		${INSTALL_DATA} ${WRKSRC}/c-client/$$i ${INC_DIR}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
