@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1999/05/10 04:06:51 sakamoto Exp $
-bin/lv
-bin/lgrep
-lib/lv/lv.hlp
-man/man1/lv.1
-@dirrm lib/lv

@@ -1,0 +1,14 @@
+==========================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 01:17:48 zuntum Exp $
+
+The necessary spool and configuration directories were created
+under /var/spool/smtpd. Please edit /var/spool/smtpd/etc/smtp_check_rules
+according to your taste.
+
+You will want to start smtpfwdd in rc.local, and add a line like
+
+smtp	stream	tcp	nowait	root	${PREFIX}/sbin/smtpd	smtpd
+
+to your /etc/inetd.conf when you are done.
+
+==========================================================================

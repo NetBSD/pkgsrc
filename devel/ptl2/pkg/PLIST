@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.7 2001/02/05 15:02:52 agc Exp $
-bin/ptlgcc
-bin/ptlg++
-lib/libPTL.a
-lib/libPTL.so
-lib/libPTL.so.2.0

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:33 zuntum Exp $
+bin/setiathome
+bin/xsetiathome
+man/cat1/setiathome.0

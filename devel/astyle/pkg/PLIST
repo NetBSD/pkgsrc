@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/15 13:32:35 hubertf Exp $
-bin/astyle
-share/doc/html/astyle/astyle.html
-share/doc/html/astyle/astyle_release_notes.html
-share/doc/html/astyle/license.html
-@dirrm share/doc/html/astyle

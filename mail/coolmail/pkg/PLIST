@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/19 13:11:50 tron Exp $
-bin/coolmail
-lib/X11/app-defaults/Coolmail
-man/man1/coolmail.1

@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:14 zuntum Exp $
+bin/pinfo
+@unexec install-info --delete %D/info/pinfo.info %D/info/dir
+info/pinfo.info
+@exec install-info %D/info/pinfo.info %D/info/dir
+man/man1/pinfo.1
+share/locale/cs/LC_MESSAGES/pinfo.mo
+share/locale/de/LC_MESSAGES/pinfo.mo
+share/locale/pl/LC_MESSAGES/pinfo.mo
+share/locale/ru/LC_MESSAGES/pinfo.mo
+share/locale/sv/LC_MESSAGES/pinfo.mo
+share/examples/pinforc
+@exec if [ ! -f %D/etc/pinforc ]; then cp %D/share/examples/pinforc %D/etc/; fi

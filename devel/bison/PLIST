@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:27 zuntum Exp $
+bin/bison
+@unexec install-info --delete %D/info/bison.info %D/info/dir
+info/bison.info
+info/bison.info-1
+info/bison.info-2
+info/bison.info-3
+info/bison.info-4
+info/bison.info-5
+@exec install-info %D/info/bison.info %D/info/dir
+man/man1/bison.1
+share/bison.simple
+share/bison.hairy
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bison.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bison.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bison.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/bison.mo

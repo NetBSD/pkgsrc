@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.solaris,v 1.1 2001/11/01 01:23:03 zuntum Exp $
+man/man1m/sudo.1m
+man/man1m/visudo.1m
+man/man4/sudoers.4

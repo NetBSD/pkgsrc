@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/28 15:41:04 zuntum Exp $
-bin/mtail
-share/doc/mtail.README
-share/examples/mtailrc.sample

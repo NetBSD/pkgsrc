@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/01 09:23:24 agc Exp $
-bin/flex
-bin/flex++
-include/FlexLexer.h
-lib/libfl.a
-man/man1/flex.1

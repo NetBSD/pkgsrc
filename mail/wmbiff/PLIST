@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:42 zuntum Exp $
+bin/wmbiff
+man/man1/wmbiff.1
+man/man5/wmbiffrc.5
+share/examples/wmbiff/sample.wmbiffrc
+@dirrm share/examples/wmbiff

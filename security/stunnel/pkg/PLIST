@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2000/12/19 07:03:23 jlam Exp $
-lib/stunnel.so
-man/man8/stunnel.8
-sbin/stunnel

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/04 21:16:36 thorpej Exp $
-bin/dmalloc
-include/dmalloc.h
-@unexec install-info --delete %D/info/dmalloc.info %D/info/dir
-info/dmalloc.info
-@exec install-info %D/info/dmalloc.info %D/info/dir
-lib/libdmalloc.a
-lib/libdmalloclp.a
-lib/libdmallocxx.a

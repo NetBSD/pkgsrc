@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:57:58 zuntum Exp $
+bin/xskat
+man/cat1/xskat.0
+man/cat1/xskat-de.0

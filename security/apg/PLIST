@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:31 zuntum Exp $
+bin/apg
+bin/apgcli
+sbin/apgd
+man/man1/apg.1
+man/man8/apgd.8

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:11 zuntum Exp $
+bin/gcmp
+bin/gdiff
+bin/gdiff3
+bin/gsdiff
+@unexec install-info --delete %D/info/diff.info %D/info/dir
+info/diff.info
+info/diff.info-1
+info/diff.info-2
+info/diff.info-3
+info/diff.info-4
+@exec install-info %D/info/diff.info %D/info/dir

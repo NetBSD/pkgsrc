@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:50 zuntum Exp $
+bin/gmake
+@unexec install-info --delete %D/info/make.info %D/info/dir
+info/make.info
+info/make.info-1
+info/make.info-2
+info/make.info-3
+info/make.info-4
+info/make.info-5
+info/make.info-6
+info/make.info-7
+info/make.info-8
+info/make.info-9
+info/make.info-10
+@exec install-info %D/info/make.info %D/info/dir
+man/man1/gmake.1
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/make.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/make.mo

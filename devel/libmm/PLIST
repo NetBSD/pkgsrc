@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:36 zuntum Exp $
+bin/mm-config
+man/man1/mm-config.1
+man/man3/mm.3
+include/mm.h
+lib/libmm.la
+lib/libmm.a
+lib/libmm.so
+lib/libmm.so.11
+lib/libmm.so.11.23

@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:00 zuntum Exp $
+bin/nessus-config
+include/nessus/getopt.h
+include/nessus/harglists.h
+include/nessus/libnessus.h
+include/nessus/libvers.h
+include/nessus/net/bpf.h
+include/nessus/pcap-namedb.h
+include/nessus/pcap.h
+include/peks/messages.h
+include/peks/peks.h
+lib/libhosts_gatherer.a
+lib/libhosts_gatherer.la
+lib/libhosts_gatherer.so
+lib/libhosts_gatherer.so.1
+lib/libhosts_gatherer.so.1.9
+lib/libnessus.a
+lib/libnessus.la
+lib/libnessus.so
+lib/libnessus.so.1
+lib/libnessus.so.1.9
+lib/libpcap-nessus.a
+lib/libpcap-nessus.la
+lib/libpcap-nessus.so
+lib/libpcap-nessus.so.1
+lib/libpcap-nessus.so.1.9
+lib/libpeks.a
+lib/libpeks.la
+lib/libpeks.so
+lib/libpeks.so.8
+lib/libpeks.so.8.18
+man/man1/nessus-config.1
+@dirrm include/peks
+@dirrm include/nessus/net
+@dirrm include/nessus

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/27 11:47:12 agc Exp $
-lib/libtokenscan.a
-include/tokenscan.h
-share/doc/libts/tokenscan.txt
-@dirrm share/doc/libts

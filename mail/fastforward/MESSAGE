@@ -1,0 +1,13 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 01:00:04 zuntum Exp $
+
+Be sure to read the documentation in /var/qmail/doc/fastforward/ALIASES
+for setting up and using fastforward.
+
+Also, consider configuring /etc/mailer.conf with the following contents:
+
+newaliases      ${LOCALBASE}/qmail/bin/newaliases
+
+See mailer.conf(5) and mailwrapper(8) for details.
+
+======================================================================

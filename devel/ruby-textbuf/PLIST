@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:34 zuntum Exp $
+${RUBY_SITEARCHLIBDIR}/textbuf.so
+${RUBY_DOCDIR}/textbuf/README.en
+${RUBY_DOCDIR}/textbuf/ja/README.ja
+@dirrm ${RUBY_DOCDIR}/textbuf/ja
+@dirrm ${RUBY_DOCDIR}/textbuf

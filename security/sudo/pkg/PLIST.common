@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.common,v 1.2 2000/12/06 06:33:40 jlam Exp $
-bin/sudo
-sbin/visudo
-share/doc/sudo/UPGRADE
-share/examples/sudo/sudoers
-share/examples/sudo/sudoers.sample
-@dirrm share/examples/sudo
-@dirrm share/doc/sudo

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.netbsd,v 1.1 2001/11/01 01:23:02 zuntum Exp $
+man/man5/sudoers.5
+man/man8/sudo.8
+man/man8/visudo.8
