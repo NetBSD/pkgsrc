@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/08/22 15:04:19 wennmach Exp $
+# $NetBSD: Makefile,v 1.12 2000/09/12 17:23:01 wennmach Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -7,8 +7,6 @@ MASTER_SITES=	ftp://jitterbug.samba.org/pub/jitterbug/
 
 MAINTAINER=	wennmach@netbsd.org
 HOMEPAGE=	http://jitterbug.samba.org/
-
-DEPENDS+=	apache-1.3.*:../../www/apache
 
 .if exists(/usr/sbin/user)
 ADDUSER=		/usr/sbin/useradd
@@ -88,8 +86,10 @@ pre-extract:
 	@${ECHO} "JB_GROUPID    -- jitterbug group id (default=${JB_GROUPID})"
 	@${ECHO} "JB_FQHOSTNAME -- fully qualified host name"
 	@${ECHO} "JB_LOCALMAIL  -- local mail alias for \$$JB_PACKAGE category."
+	@${ECHO}
 	@${ECHO} "jitterbug will send and receive e-mail for \$$JB_PACKAGE"
-	@${ECHO} "as '\$$JB_LOCALMAIL'@${JB_FQHOSTNAME}"
+	@${ECHO} "  as '\$$JB_LOCALMAIL'@${JB_FQHOSTNAME}"
+	@${ECHO} "  (default='${JB_LOCALMAIL}@${JB_FQHOSTNAME}')"
 	@${ECHO}
 .endif
 .if ${JB_FQHOSTNAME} == ${JB_HOSTNAME}
@@ -124,7 +124,7 @@ post-patch:
 
 pre-install:
 .if !defined(JB_USER)
-	@${ECHO} "Arrrgggghhh. JB_USER not defined. Send-pr!"
+	@${ECHO} "Arrrgggghhh. JB_USER not defined. Please send-pr!"
 	@${FALSE}
 .endif
 	@${SED}                                                               \
@@ -132,12 +132,9 @@ pre-install:
 		-e 's|@JB_USERID@|${JB_USERID}|g'                             \
 		-e 's|@JB_GROUP@|${JB_GROUP}|g'                               \
 		-e 's|@JB_GROUPID@|${JB_GROUPID}|g'                           \
-		-e 's|@JB_LOCALMAIL@|${JB_LOCALMAIL}|g'                       \
-		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'                           \
 		-e 's|@PREFIX@|${PREFIX}|g'                                   \
 		-e 's|@ADDUSER@|${ADDUSER}|g'				      \
 		-e 's|@ADDGROUP@|${ADDGROUP}|g'				      \
-		-e 's|@FILESDIR@|${FILESDIR}|g'                               \
 			<${PKGDIR}/REQ                                        \
 			>${REQ_FILE}
 	@${SED}                                                               \
@@ -162,6 +159,7 @@ pre-install:
 		-e 's|@JB_USER@|${JB_USER}|g'                                 \
 		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'                           \
 		-e 's|@PREFIX@|${PREFIX}|g'                                   \
+		-e 's|@JB_LOCALMAIL@|${JB_LOCALMAIL}|g'                       \
 			<${PKGDIR}/MESSAGE                                    \
 			>${MESSAGE_FILE}
 	@${SED}                                                               \
@@ -171,6 +169,12 @@ pre-install:
 		-e 's|@PREFIX@|${PREFIX}|g'                                   \
 			<${PKGDIR}/DEINSTALL                                  \
 			>${DEINSTALL_FILE}
+	@${SED}								      \
+		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'			      \
+		-e 's|@JB_USER@|${JB_USER}|g'				      \
+		-e 's|@PREFIX@|${PREFIX}|g'				      \
+			< ${FILESDIR}/httpd.conf			      \
+			> ${WRKDIR}/httpd.conf
 	${SH} ${REQ_FILE} ${PKGNAME} INSTALL
 
 do-install:
@@ -206,6 +210,7 @@ do-install:
 	[ -f ${PREFIX}/${JB_DATADIR}/users ] ||                               \
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
 		${CONFIGDIR}/users ${PREFIX}/${JB_DATADIR}
+	-${MKDIR} ${PREFIX}/${CGIBINDIR}
 	${INSTALL} -c -o root -g nobody -m 4710                               \
 		${WRKSRC}/jitterbug ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}
 	${LN} -f ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE} ${PREFIX}/${CGIBINDIR}/${JB_PACKAGE}.private
@@ -251,5 +256,8 @@ do-install:
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644             \
 		${PREFIX}/${JB_CONFIGDIR}/jitterbug.config                    \
 		${PREFIX}/etc/jitterbug/${JB_PACKAGE}.private
+	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644        	      \
+		${WRKDIR}/httpd.conf			                      \
+		${PREFIX}/etc/jitterbug/httpd.conf.add
 
 .include "../../mk/bsd.pkg.mk"
