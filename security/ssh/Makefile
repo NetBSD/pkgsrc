@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 1999/02/20 22:48:42 hubertf Exp $
+# $NetBSD: Makefile,v 1.41 1999/03/02 02:25:52 simonb Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -63,6 +63,11 @@ DEPENDS+=		socks4-2.2:../../net/socks4
 .else
 DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
+.endif
+
+# Enable support for TIS authentication server
+.if defined(USE_TIS) && ${USE_TIS} == YES
+CONFIGURE_ARGS+=	--with-tis=${LOCALBASE}
 .endif
 
 # Don't install "ssh" setuid
