@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1078 2002/10/28 17:36:04 bouyer Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1079 2002/10/28 18:53:37 bouyer Exp $
 #
 # This file is in the public domain.
 #
@@ -643,7 +643,7 @@ SIZE_PKG_FILE=		${WRKDIR}/.SizePkg
 SIZE_ALL_FILE=		${WRKDIR}/.SizeAll
 
 .ifndef PKG_ARGS_COMMON
-PKG_ARGS_COMMON=	-v -c -\"${COMMENT:Q}" "\" -d ${DESCR} -f ${PLIST}
+PKG_ARGS_COMMON=	-v -c -${COMMENT:Q}" " -d ${DESCR} -f ${PLIST}
 PKG_ARGS_COMMON+=	-l -b ${BUILD_VERSION_FILE} -B ${BUILD_INFO_FILE}
 PKG_ARGS_COMMON+=	-s ${SIZE_PKG_FILE} -S ${SIZE_ALL_FILE}
 PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list PACKAGE_DEPENDS_QUICK=true | ${SORT} -u`"
