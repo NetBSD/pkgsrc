@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.5 2004/03/31 20:18:46 seb Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.6 2004/06/12 03:19:52 grant Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  A package that uses
@@ -145,8 +145,16 @@ PKG_SKIP_REASON= "${PKGNAME} requires a working pthreads implementation."
 # Link the native pthread libraries and headers into ${BUILDLINK_DIR}.
 #
 BUILDLINK_PREFIX.pthread=	/usr
-BUILDLINK_CFLAGS.pthread=	-pthread
 BUILDLINK_LDFLAGS.pthread=	# empty
+
+# only pass -pthread on platforms known to support it.
+.  if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || \
+        ${OPSYS} == "NetBSD"
+BUILDLINK_CFLAGS.pthread=       -pthread
+.  else
+BUILDLINK_CFLAGS.pthread=       # empty
+.  endif
+
 #
 # Handle systems which have pthreads functions in libc_r such as
 # FreeBSD 5.x, or fall back to libc if we don't find libc_r.
