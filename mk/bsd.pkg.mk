@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1216.2.18 2003/08/16 09:08:48 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1216.2.19 2003/08/16 10:31:17 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -143,17 +143,13 @@ NO_MTREE=		yes
 PREFIX=			${LOCALBASE}
 .endif
 
+DEPOTBASE=		${LOCALBASE}/${DEPOT_SUBDIR}
 DEPOT_SUBDIR?=		packages
 .if empty(DEPOT_SUBDIR)
 PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
 .endif
 
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-.  if defined(USE_X11BASE)
-DEPOTBASE=		${X11PREFIX}/${DEPOT_SUBDIR}
-.  else
-DEPOTBASE=		${LOCALBASE}/${DEPOT_SUBDIR}
-.  endif
 PREFIX=			${DEPOTBASE}/${PKGNAME}
 PKG_DBDIR_MAKEFLAGS=	_REAL_PKG_DBDIR=${PKG_DBDIR} PKG_DBDIR=${DEPOTBASE}
 NO_MTREE=		yes

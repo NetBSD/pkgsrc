@@ -1,4 +1,4 @@
-$NetBSD: PKGVIEWS,v 1.1.2.8 2003/08/05 10:46:50 jlam Exp $
+$NetBSD: PKGVIEWS,v 1.1.2.9 2003/08/16 10:31:17 jlam Exp $
 
 Package views integration plan:
 ==============================
@@ -11,8 +11,8 @@ Package views integration plan:
     on pkg_view to copy the metadata files into /var/db/pkg as
     part of adding the package to the default view.  We only
     support the default view.  Depoted packages will install into
-    either ${LOCALBASE}/packages or ${X11BASE}/packages, but the
-    default view will be through ${LOCALBASE} for all packages.
+    ${LOCALBASE}/packages and the default view will be through
+    ${LOCALBASE} for all packages.
 
 Using this infrastructure, depoted packages that have been added to
 the default view should look and feel like a non-depoted package in
