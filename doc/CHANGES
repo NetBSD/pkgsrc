@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3787 2003/11/05 16:05:44 jschauma Exp $
+$NetBSD: CHANGES,v 1.3788 2003/11/05 19:18:35 gehenna Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4310,3 +4310,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fetchmail to 6.2.5 [itojun 2003-11-05]
 	Updated fetchmailconf to 6.2.5 [itojun 2003-11-05]
 	Updated skampi to 4.0.1 [jschauma 2003-11-05]
+	Updated cvsync to 0.24.12 [gehenna 2003-11-05]
