@@ -1,40 +1,31 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/17 13:02:44 drochner Exp $
-${PYSITELIB}/Crypto/Cipher/ARC2.py
-${PYSITELIB}/Crypto/Cipher/ARC2.pyc
-${PYSITELIB}/Crypto/Cipher/ARC4.py
-${PYSITELIB}/Crypto/Cipher/ARC4.pyc
-${PYSITELIB}/Crypto/Cipher/Blowfish.py
-${PYSITELIB}/Crypto/Cipher/Blowfish.pyc
-${PYSITELIB}/Crypto/Cipher/CAST.py
-${PYSITELIB}/Crypto/Cipher/CAST.pyc
-${PYSITELIB}/Crypto/Cipher/DES.py
-${PYSITELIB}/Crypto/Cipher/DES.pyc
-${PYSITELIB}/Crypto/Cipher/DES3.py
-${PYSITELIB}/Crypto/Cipher/DES3.pyc
-${PYSITELIB}/Crypto/Cipher/IDEA.py
-${PYSITELIB}/Crypto/Cipher/IDEA.pyc
-${PYSITELIB}/Crypto/Cipher/RC5.py
-${PYSITELIB}/Crypto/Cipher/RC5.pyc
+@comment $NetBSD: PLIST,v 1.3 2002/10/28 11:53:29 drochner Exp $
+${PYSITELIB}/Crypto/Cipher/AES.so
+${PYSITELIB}/Crypto/Cipher/ARC2.so
+${PYSITELIB}/Crypto/Cipher/ARC4.so
+${PYSITELIB}/Crypto/Cipher/Blowfish.so
+${PYSITELIB}/Crypto/Cipher/CAST.so
+${PYSITELIB}/Crypto/Cipher/DES.so
+${PYSITELIB}/Crypto/Cipher/DES3.so
+${PYSITELIB}/Crypto/Cipher/IDEA.so
+${PYSITELIB}/Crypto/Cipher/RC5.so
+${PYSITELIB}/Crypto/Cipher/XOR.so
 ${PYSITELIB}/Crypto/Cipher/__init__.py
 ${PYSITELIB}/Crypto/Cipher/__init__.pyc
-${PYSITELIB}/Crypto/Ciphers.py
-${PYSITELIB}/Crypto/Ciphers.pyc
 ${PYSITELIB}/Crypto/Hash/HMAC.py
 ${PYSITELIB}/Crypto/Hash/HMAC.pyc
-${PYSITELIB}/Crypto/Hash/MD2.py
-${PYSITELIB}/Crypto/Hash/MD2.pyc
+${PYSITELIB}/Crypto/Hash/MD2.so
+${PYSITELIB}/Crypto/Hash/MD4.so
 ${PYSITELIB}/Crypto/Hash/MD5.py
 ${PYSITELIB}/Crypto/Hash/MD5.pyc
-${PYSITELIB}/Crypto/Hash/RIPEMD.py
-${PYSITELIB}/Crypto/Hash/RIPEMD.pyc
+${PYSITELIB}/Crypto/Hash/RIPEMD.so
 ${PYSITELIB}/Crypto/Hash/SHA.py
 ${PYSITELIB}/Crypto/Hash/SHA.pyc
 ${PYSITELIB}/Crypto/Hash/__init__.py
 ${PYSITELIB}/Crypto/Hash/__init__.pyc
-${PYSITELIB}/Crypto/Hashes.py
-${PYSITELIB}/Crypto/Hashes.pyc
 ${PYSITELIB}/Crypto/Protocol/AllOrNothing.py
 ${PYSITELIB}/Crypto/Protocol/AllOrNothing.pyc
+${PYSITELIB}/Crypto/Protocol/Chaffing.py
+${PYSITELIB}/Crypto/Protocol/Chaffing.pyc
 ${PYSITELIB}/Crypto/Protocol/__init__.py
 ${PYSITELIB}/Crypto/Protocol/__init__.pyc
 ${PYSITELIB}/Crypto/PublicKey/DSA.py
@@ -59,13 +50,10 @@ ${PYSITELIB}/Crypto/Util/randpool.py
 ${PYSITELIB}/Crypto/Util/randpool.pyc
 ${PYSITELIB}/Crypto/Util/test.py
 ${PYSITELIB}/Crypto/Util/test.pyc
-${PYSITELIB}/Crypto/Util/testdata.py
-${PYSITELIB}/Crypto/Util/testdata.pyc
-${PYSITELIB}/Crypto/Utils.py
-${PYSITELIB}/Crypto/Utils.pyc
 ${PYSITELIB}/Crypto/__init__.py
 ${PYSITELIB}/Crypto/__init__.pyc
-${PYSITELIB}/Crypto/mxCrypto.so
+${PYSITELIB}/Crypto/test.py
+${PYSITELIB}/Crypto/test.pyc
 @dirrm ${PYSITELIB}/Crypto/Util
 @dirrm ${PYSITELIB}/Crypto/PublicKey
 @dirrm ${PYSITELIB}/Crypto/Protocol
