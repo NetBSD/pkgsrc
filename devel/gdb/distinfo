@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:18 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/08/07 14:18:27 jschauma Exp $
 
-SHA1 (gdb-4.18.tar.gz) = 4b8abe282a62e581ceb95dd8bf5e467a4521d971
-Size (gdb-4.18.tar.gz) = 11657032 bytes
-SHA1 (patch-aa) = a256a6a9e0fe126462ea92c8a5c8a3864333bb67
+SHA1 (gdb-5.2.1.tar.gz) = 516fc00911a661c6e29bfdb402f3863e5fc2a2aa
+Size (gdb-5.2.1.tar.gz) = 14715792 bytes
+SHA1 (patch-aa) = 11c29e1af9ec6301c81735310e85fe18e7407251

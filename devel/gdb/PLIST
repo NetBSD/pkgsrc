@@ -1,16 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/18 15:14:10 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/08/07 14:18:27 jschauma Exp $
 bin/gdb
-include/bfd.h
 include/ansidecl.h
+include/bfd.h
 include/bfdlink.h
-@unexec ${INSTALL_INFO} --delete %D/info/standards.info %D/info/dir
+include/dis-asm.h
+include/symcat.h
 @unexec ${INSTALL_INFO} --delete %D/info/mmalloc.info %D/info/dir
 @unexec ${INSTALL_INFO} --delete %D/info/bfd.info %D/info/dir
 @unexec ${INSTALL_INFO} --delete %D/info/gdb.info %D/info/dir
 @unexec ${INSTALL_INFO} --delete %D/info/gdbint.info %D/info/dir
 @unexec ${INSTALL_INFO} --delete %D/info/stabs.info %D/info/dir
-info/standards.info
-info/mmalloc.info
 info/bfd.info
 info/bfd.info-1
 info/bfd.info-2
@@ -18,9 +17,22 @@ info/bfd.info-3
 info/bfd.info-4
 info/bfd.info-5
 info/bfd.info-6
+info/bfd.info-7
+info/bfd.info-8
+info/bfd.info-9
+info/configure.info
+info/configure.info-1
+info/configure.info-2
+info/configure.info-3
 info/gdb.info
 info/gdb.info-1
 info/gdb.info-10
+info/gdb.info-11
+info/gdb.info-12
+info/gdb.info-13
+info/gdb.info-14
+info/gdb.info-15
+info/gdb.info-16
 info/gdb.info-2
 info/gdb.info-3
 info/gdb.info-4
@@ -33,12 +45,18 @@ info/gdbint.info
 info/gdbint.info-1
 info/gdbint.info-2
 info/gdbint.info-3
+info/gdbint.info-4
+info/gdbint.info-5
+info/gdbint.info-6
+info/mmalloc.info
 info/stabs.info
 info/stabs.info-1
 info/stabs.info-2
 info/stabs.info-3
 info/stabs.info-4
+info/standards.info
 @exec ${INSTALL_INFO} %D/info/standards.info %D/info/dir
+@exec ${INSTALL_INFO} %D/info/configure.info %D/info/dir
 @exec ${INSTALL_INFO} %D/info/mmalloc.info %D/info/dir
 @exec ${INSTALL_INFO} %D/info/bfd.info %D/info/dir
 @exec ${INSTALL_INFO} %D/info/gdb.info %D/info/dir
@@ -51,3 +69,14 @@ lib/libopcodes.a
 lib/libopcodes.la
 lib/libmmalloc.a
 man/man1/gdb.1
+share/locale/da/LC_MESSAGES/opcodes.mo
+share/locale/de/LC_MESSAGES/opcodes.mo
+share/locale/es/LC_MESSAGES/bfd.mo
+share/locale/es/LC_MESSAGES/opcodes.mo
+share/locale/fr/LC_MESSAGES/bfd.mo
+share/locale/fr/LC_MESSAGES/opcodes.mo
+share/locale/ja/LC_MESSAGES/bfd.mo
+share/locale/sv/LC_MESSAGES/bfd.mo
+share/locale/sv/LC_MESSAGES/opcodes.mo
+share/locale/tr/LC_MESSAGES/bfd.mo
+share/locale/tr/LC_MESSAGES/opcodes.mo
