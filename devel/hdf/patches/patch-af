@@ -1,37 +1,23 @@
-$NetBSD: patch-af,v 1.4 2001/03/19 13:37:29 dmcmahill Exp $
+$NetBSD: patch-af,v 1.5 2001/03/25 01:09:50 jtb Exp $
 
---- /dev/null	Fri Mar  9 22:17:51 2001
+--- /dev/null	Sun Mar 25 00:38:24 2001
 +++ mfhdf/libsrc/Makefile
-@@ -0,0 +1,41 @@
+@@ -0,0 +1,27 @@
 +.PATH: ${.CURDIR} ${.CURDIR}/../fortran ${.CURDIR}/../fortran/config
 +
 +LIB= mfhdf
-+
-+SHLIB_MAJOR= 0
-+SHLIB_MINOR= 0
 +
 +LIBDIR= ${PREFIX}/lib
 +
 +SRCS= array.c attr.c cdf.c dim.c file.c iarray.c error.c globdef.c	\
 +	putget.c putgetg.c sharray.c string.c var.c hdfsds.c mfsd.c	\
-+	nssdc.c xdrstdio.c jackets-fbsd.c mfsdf.c mfsdff.f
++	nssdc.c xdrposix.c jackets-fbsd.c mfsdf.c mfsdff.f
 +
-+HDFLIB= -L${.CURDIR}/../../hdf/src -ldf
-+HDFINC= -I${.CURDIR}/../../hdf/src
-+F2CLIB= -L${F2CBASE}/lib -lf2c
-+F2CINC= -I${F2CBASE}/include
-+
-+LDFLAGS+= ${HDFLIB} ${F2CLIB} -lm
-+
-+CPPFLAGS+= -Dunix -DHDF -DNDEBUG @SWAP@ -DUSE_XDRNCSTDIO
-+
-+.if (${MACHINE_ARCH} == "alpha")  || (${MACHINE_ARCH} == "sparc64")
-+CPPFLAGS+= -DBIG_LONGS
-+.endif
-+
-+CPPFLAGS+= ${HDFINC} ${F2CINC} -I${.CURDIR}
++CPPFLAGS+= -Dunix -DHDF -DNDEBUG @SWAP@
++CPPFLAGS+= -I${.CURDIR} -I${.CURDIR}/../../hdf/src
 +
 +NOLINT= 1
++MKPIC= no
 +MKPICINSTALL= no
 +MKPROFILE= no
 +
