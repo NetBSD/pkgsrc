@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/12/31 13:02:42 xtraeme Exp $
+
+--- bitlbee.c.orig	2003-12-31 13:58:26.000000000 +0100
++++ bitlbee.c	2003-12-31 13:58:41.000000000 +0100
+@@ -50,7 +50,7 @@
+ 		memset( &sig, 0, sizeof( sig ) );
+ 		sig.sa_handler = sighandler;
+ 		sigaction( SIGPIPE, &sig, &old );
+-		sig.sa_flags = SA_ONESHOT;
++		sig.sa_flags = SA_RESETHAND;
+ 		sigaction( SIGINT,  &sig, &old );
+ 		sigaction( SIGILL,  &sig, &old );
+ 		sigaction( SIGBUS,  &sig, &old );
