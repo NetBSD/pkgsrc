@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.335 2002/10/22 12:13:26 wiz Exp $
+$NetBSD: CHANGES,v 1.336 2002/10/22 12:41:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3357,3 +3357,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated guspatches to 1.0nb1 [wiz 2002-10-22]
 	Updated findutils to 4.1nb1 [wiz 2002-10-22]
 	Updated xlhtml to 0.5.1 [wiz 2002-10-22]
+	Updated tuxpaint to 2002.10.20 [wiz 2002-10-22]
