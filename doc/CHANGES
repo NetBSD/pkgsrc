@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.470 2002/11/06 11:05:14 mrg Exp $
+$NetBSD: CHANGES,v 1.471 2002/11/06 11:12:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3540,3 +3540,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated simh to 2.10-beta2nb2 (xq beta5) [thorpej 2002-11-06]
 	Updated tin to 1.4.6 [wiz 2002-11-06]
 	Updated bozohttpd to 20021106 [mrg 2002-11-06]
+	Updated xscreensaver-gnome to 4.06nb1 [wiz 2002-11-06]
+	Updated xscreensaver to 4.06nb1 [wiz 2002-11-06]
