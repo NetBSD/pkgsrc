@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8826 2005/01/20 00:44:34 xtraeme Exp $
+$NetBSD: CHANGES,v 1.8827 2005/01/20 04:29:16 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -430,3 +430,6 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dspam to 3.2.6 [xtraeme 2005-01-19]
 	Updated gtk-send-pr to 0.4.2 [jmmv 2005-01-19]
 	Updated zsnes to 1.41 [xtraeme 2005-01-19]
+	Updated icewm to 1.2.20 [xtraeme 2005-01-20]
+	Updated icewm-imlib to 1.2.20 [xtraeme 2005-01-20]
+	Updated icewm-gnome to 1.2.20 [xtraeme 2005-01-20]
