@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/10/09 17:49:20 kim Exp $
+
+--- scripts/RunCache.in.orig	Tue Aug  4 16:59:32 1998
++++ scripts/RunCache.in	Thu Oct  1 15:30:29 1998
+@@ -16,10 +16,10 @@
+ 
+ failcount=0
+ while : ; do
+-	echo "Running: squid -sY $conf >> $logdir/squid.out 2>&1"
++	echo "Running: squid -Y $conf >> $logdir/squid.out 2>&1"
+ 	echo "Startup: `date`" >> $logdir/squid.out
+ 	start=`date '+%d%H%M%S'`
+-	squid -sY $conf >> $logdir/squid.out 2>&1
++	squid -Y $conf >> $logdir/squid.out 2>&1
+ 	stop=`date '+%d%H%M%S'`
+ 	t=`expr $stop - $start`
+ 	if test 0 -le $t -a $t -lt 5 ; then

@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 1998/10/09 17:49:20 kim Exp $
+#
+
+PKGNAME=$1
+DEFCONF=$2
+
+case $3 in
+    PRE-INSTALL)
+	;;
+    POST-INSTALL)
+	echo ""
+	echo "    o you DO need running nameservice to start and run ${PKGNAME}"
+	echo ""
+	echo "    o use the ${PKGNAME} proxy and caching WWW Server by"
+	echo "      configuring your WWW Navigator (Netscape, Mosaic,...)"
+	echo "      to use it as a proxy server."
+	echo ""
+	echo "    o copy \"${DEFCONF}\" to \"/etc/squid.conf\""
+	echo "      and edit it as required. You should pay attention to"
+	echo "      the ACTUAL locations of the cache \"spool\" logfiles"
+	echo "      and pidfile."
+	echo ""
+	;;
+    *)
+	echo "Unexpected Argument $3!!!"
+	exit 1
+	;;
+esac
+exit 0
