@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:10:06 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/02/26 17:23:37 jmmv Exp $
 
-SHA1 (gnome-keyring-0.4.0.tar.bz2) = cdb69aaefcea83e203703cc06bbf9897fe72a17e
-RMD160 (gnome-keyring-0.4.0.tar.bz2) = 755a5516b7db12bdbaef02c85a9c723ceb36545d
-Size (gnome-keyring-0.4.0.tar.bz2) = 344937 bytes
+SHA1 (gnome-keyring-0.4.1.tar.bz2) = c847dd96408893f12660fdf3ce7787513f372938
+RMD160 (gnome-keyring-0.4.1.tar.bz2) = 222f886cb8b4c52087b352844a1b346daf359ee3
+Size (gnome-keyring-0.4.1.tar.bz2) = 367890 bytes
