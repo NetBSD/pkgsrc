@@ -1,0 +1,36 @@
+$NetBSD: patch-aw,v 1.1 2002/07/29 13:02:24 tron Exp $
+
+--- xv.c.orig	Mon Jul 29 14:50:12 2002
++++ xv.c	Mon Jul 29 14:51:19 2002
+@@ -1872,11 +1872,13 @@
+   if (filenum == LOADPIC) {
+     fullname = GetDirFullName();
+ 
++#ifdef BROKEN_PIPE_HANDLING_FROM_DIRECTORY_BOX
+     if (ISPIPE(fullname[0])) {    /* read from a pipe. */
+       strcpy(filename, fullname);
+       if (readpipe(fullname, filename)) goto FAILED;
+       frompipe = 1;
+     }
++#endif
+   }
+   else fullname = namelist[filenum];
+ 
+@@ -1902,6 +1904,7 @@
+   }
+ 
+ 
++#ifdef BROKEN_PIPE_HANDLING_FROM_DIRECTORY_BOX
+   if (filenum == LOADPIC && ISPIPE(fullname[0])) {
+     /* if we're reading from a pipe, 'filename' will have the /tmp/xvXXXXXX
+        filename, and we can skip a lot of stuff:  (such as prepending 
+@@ -1913,6 +1916,9 @@
+   }
+ 
+   else {  /* NOT reading from a PIPE */
++#else
++  {
++#endif
+ 
+     /* if fullname doesn't start with a '/' (ie, it's a relative path), 
+        (and it's not LOADPIC and it's not the special case '<stdin>') 
