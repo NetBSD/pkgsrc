@@ -1,0 +1,15 @@
+*** Imakefile.orig	Wed Feb 18 08:01:57 1998
+--- Imakefile	Wed Feb 18 08:04:32 1998
+***************
+*** 74,79 ****
+--- 74,83 ----
+  #endif
+  #endif
+  
++ #ifdef NetBSDArchitecture
++ DEFINES = $(DEFGDB)
++ #endif
++ 
+  # Add to use new multi window format
+  #DEFINES+=-DNEW_INTERFACE
+  # Add to open all windows at startup
