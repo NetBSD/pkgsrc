@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6456 2004/07/05 22:04:12 jmmv Exp $
+$NetBSD: CHANGES,v 1.6457 2004/07/06 07:30:29 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3264,3 +3264,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xmms-meta-input to 0.4nb1 [minskim 2004-07-05]
 	Added gqview-1.2.2 [wiz 2004-07-05]
 	Updated gdm to 2.6.0.3nb1 [jmmv 2004-07-05]
+	Added aranym-0.8.8beta [xtraeme 2004-07-06]
