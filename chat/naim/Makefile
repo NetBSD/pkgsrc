@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2003/12/02 03:57:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/01 17:46:33 snj Exp $
 #
 
-DISTNAME=	naim-0.11.6.4
+DISTNAME=	naim-0.11.6.5
 CATEGORIES=	chat
 MASTER_SITES=	http://shell.n.ml.org/n/naim/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	snj@NetBSD.org
 HOMEPAGE=	http://site.n.ml.org/info/naim/
 COMMENT=	Ncurses-based AIM, ICQ, IRC and Lily client
 
