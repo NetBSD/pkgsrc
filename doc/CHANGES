@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5459 2004/04/06 09:24:56 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5460 2004/04/06 09:52:16 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1797,3 +1797,13 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated glib2 to 2.4.0nb1 [jmmv 2004-04-06]
 	Updated mng to 1.0.7 [adam 2004-04-06]
 	Updated libgtop2 to 2.5.2nb1 [xtraeme 2004-04-06]
+	Updated gstreamer to 0.8.0nb1 [jmmv 2004-04-06]
+	Updated gst-plugins to 0.8.0nb2 [jmmv 2004-04-06]
+	Added gst-plugins-esound-0.8.0 [jmmv 2004-04-06]
+	Added gst-plugins-lame-0.8.0 [jmmv 2004-04-06]
+	Added gst-plugins-mad-0.8.0 [jmmv 2004-04-06]
+	Added gst-plugins-ogg-0.8.0 [jmmv 2004-04-06]
+	Added gst-plugins-oss-0.8.0 [jmmv 2004-04-06]
+	Added gst-plugins-vorbis-0.8.0 [jmmv 2004-04-06]
+	Added gst-plugins-png-0.8.0 [jmmv 2004-04-06]
+	Added gst-plugins-gnomevfs-0.8.0 [jmmv 2004-04-06]
