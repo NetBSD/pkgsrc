@@ -1,6 +1,6 @@
-#! /bin/sh
+#! @RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tomcat.sh,v 1.8 2002/12/28 22:34:14 jlam Exp $
+# $NetBSD: tomcat.sh,v 1.9 2003/12/04 15:00:57 grant Exp $
 #
 # PROVIDE: tomcat
 # REQUIRE: DAEMON
