@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 1998/08/10 22:27:47 tron Exp $
+bin/xzip
+man/man6/xzip.6
