@@ -1,0 +1,11 @@
+==============================================================================
+
+Zope is now installed.
+
+The command "zope-install" will create instances of Zope for use with
+Apache. Run it without any arguments for help and usage information.
+
+Alternately, you can run Zope standalone with ZopeHTTPServer.
+See the included documentation for information.
+
+==============================================================================
