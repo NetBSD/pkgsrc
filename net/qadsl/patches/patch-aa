@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/14 18:34:08 cjep Exp $
+$NetBSD: patch-aa,v 1.2 2004/01/27 13:45:36 grant Exp $
 
---- Makefile.orig	2001-10-20 14:45:47.000000000 +0100
+--- Makefile.orig	2001-10-20 23:45:47.000000000 +1000
 +++ Makefile
-@@ -2,21 +2,22 @@
+@@ -2,22 +2,23 @@
  
  PROG=qadsl
  CONF=qadsl.conf
@@ -22,12 +22,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/14 18:34:08 cjep Exp $
  
  ${PROG}: 
 -	${CC} -c ${SRC} 
+-	${CC} -o ${PROG} ${OBJS} 
 +	${CC} ${CFLAGS} -c ${SRC} 
- 	${CC} -o ${PROG} ${OBJS} 
++	${CC} -o ${PROG} ${OBJS} ${LIBS}
  
  bsd:
 -	${CC} -D${MACRO} -c ${SRC}
+-	${CC} -o ${PROG} ${OBJS}
 +	${CC} ${CFLAGS} -c ${SRC}
- 	${CC} -o ${PROG} ${OBJS}
++	${CC} -o ${PROG} ${OBJS} ${LIBS}
  
  clean:
+ 	rm -fr ${PROG} ${OBJS} 
