@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2004/11/29 14:56:21 adam Exp $
+# $NetBSD: Makefile,v 1.40 2005/01/05 09:15:45 adam Exp $
 
-DISTNAME=	tk8.4.8-src
-PKGNAME=	tk-8.4.8
+DISTNAME=	tk8.4.9-src
+PKGNAME=	tk-8.4.9
 CATEGORIES=	x11 lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
