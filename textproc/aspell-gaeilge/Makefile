@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/08/06 03:45:30 jschauma Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/16 03:12:14 jschauma Exp $
 
 DISTNAME=	aspell-gaeilge-2.0
 CATEGORIES=	textproc
@@ -14,7 +14,7 @@ ASPELLDATA=${PREFIX}/share/aspell/
 
 do-configure:
 	${ECHO} ${PREFIX}/lib/aspell/gaeilge > \
-			${WRKSRC}/ga-gaeilge-aspell.pwli
+		${WRKSRC}/ga-gaeilge-aspell.pwli
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gaeilge.dat ${ASPELLDATA}
