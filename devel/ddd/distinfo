@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.12 2004/06/04 11:19:32 shannonjr Exp $
+$NetBSD: distinfo,v 1.13 2005/01/11 09:04:16 martti Exp $
 
-SHA1 (ddd-3.3.8.tar.gz) = abf341271c5912a5fc6728cb8649c45653d755eb
-Size (ddd-3.3.8.tar.gz) = 8606382 bytes
-SHA1 (patch-ai) = 3998eceddf2e6379489d82eeef40dce51cb37dab
-SHA1 (patch-aj) = d6657a0fc1e574de53b481f5fb6d56d546ea4edb
-SHA1 (patch-ak) = 476151cd38404d7ec9d409905841cc2e0b3b7364
-SHA1 (patch-al) = 3ea62d81e02fe89153156be25e12b53a67d1958a
-SHA1 (patch-am) = 8f885993627b1ef490f8c6b92cb006140c47947a
-SHA1 (patch-an) = fb5bdabdbb578ed982407b9fac5a521a4ba722cd
-SHA1 (patch-ao) = 2754d1106740db9c563ef42391acee7174f4a06f
+SHA1 (ddd-3.3.10.tar.gz) = c58de1d48a6275052e9cb03ba3b35cb42950935c
+Size (ddd-3.3.10.tar.gz) = 7620458 bytes
+SHA1 (patch-ai) = 513621cb015cde43736ad9c28e1535358c398992
