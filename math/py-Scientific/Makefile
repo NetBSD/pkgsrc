@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/04/14 21:43:55 jtb Exp $
+# $NetBSD: Makefile,v 1.8 2001/04/22 20:15:46 jtb Exp $
 
 DISTNAME=	ScientificPython-2.2
 PKGNAME=	py-Scientific-2.2
@@ -46,13 +46,9 @@ post-build:
 do-install:
 	cd ${WRKSRC} && ${PYPREFIX}/bin/python setup.py install
 	${INSTALL_PROGRAM} ${WRKSRC}/Src/MPI/mpipython ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/${PYINC}/Scientific
-	${INSTALL_DATA}	${WRKSRC}/Include/Scientific/* 			\
-	${PREFIX}/${PYINC}/Scientific/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/py-Scientific
-	for f in README COPYRIGHT Doc/PDF/manual.pdf; do 		\
-	${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/py-Scientific/; \
-	done
+	cd ${WRKSRC} && ${INSTALL_DATA} README COPYRIGHT 		\
+		Doc/PDF/manual.pdf ${PREFIX}/share/doc/py-Scientific/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/py-Scientific
 	${INSTALL_DATA} ${WRKSRC}/Doc/HTML/* 				\
 	${PREFIX}/share/doc/html/py-Scientific/
