@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2004/12/17 18:20:32 reed Exp $
+$NetBSD: patch-ad,v 1.2 2005/02/05 16:30:39 jmmv Exp $
 
---- configure.orig	Thu Dec 16 17:58:45 2004
-+++ configure	Thu Dec 16 17:59:41 2004
-@@ -2046,7 +2046,7 @@
+--- configure.orig	2004-04-18 21:09:46.000000000 +0200
++++ configure
+@@ -2046,7 +2046,7 @@ if test -z "`$INTLTOOL_PERL -v | fgrep '
  echo "$as_me: error: perl 5.x required for intltool" >&2;}
     { (exit 1); exit 1; }; }
  fi
@@ -11,3 +11,12 @@ $NetBSD: patch-ad,v 1.1 2004/12/17 18:20:32 reed Exp $
  :
  else
     { { echo "$as_me:$LINENO: error: XML::Parser perl module is required for intltool" >&5
+@@ -22666,6 +22666,8 @@ else
+   BUILD_CONFIG_TOOL_TRUE='#'
+   BUILD_CONFIG_TOOL_FALSE=
+ fi
++BUILD_CONFIG_TOOL_TRUE='#'
++BUILD_CONFIG_TOOL_FALSE=
+ 
+ 
+ 
