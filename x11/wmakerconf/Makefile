@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2000/11/29 23:50:21 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2000/12/12 02:10:19 wiz Exp $
 #
 
 DISTNAME=	wmakerconf-2.7
@@ -11,7 +11,7 @@ HOMEPAGE=	http://ulli.linuxave.net/wmakerconf/
 
 DEPENDS+=	imlib-*:../../graphics/imlib
 DEPENDS+=	gtk+-1.2.*:../../x11/gtk
-DEPENDS+=	windowmaker-*:../../x11/windowmaker
+DEPENDS+=	windowmaker-*:../../wm/windowmaker
 
 USE_X11BASE=	yes
 USE_PERL5=	yes
