@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.27 1999/02/06 20:06:32 hwr Exp $
+# $NetBSD: Makefile,v 1.28 1999/02/19 09:02:25 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
+#
 
 DISTNAME=	postgresql-6.4.2
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
@@ -11,12 +12,10 @@ MASTER_SITES=	ftp://ftp.PostgreSQL.org/pub/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.PostgreSQL.ORG/
 
+BUILD_DEPENDS+=	bison:../../devel/bison
 DEPENDS+=	tk-8.0p2:../../x11/tk80
 DEPENDS+=	tcl-8.0p2:../../lang/tcl80
 DEPENDS+=	addnerd-1.6:../../sysutils/addnerd
-DEPENDS+=	bison-1.25:../../devel/bison
-
-CONFLICTS=	postgresql-6.3.2
 
 # Needs ELF clue, mips has no TAS implementation
 NOT_FOR_ARCHS=	alpha mips
