@@ -1,0 +1,12 @@
+--- doc/a2ps.info-orig	Sat May  9 13:35:39 1998
++++ doc/a2ps.info	Sat May  9 13:46:20 1998
+@@ -3,8 +3,7 @@
+ 
+ INFO-DIR-SECTION Printing Tools
+ START-INFO-DIR-ENTRY
+-* a2ps::                           PostScript Generating Utility
+-* PreScript: (a2ps) PreScript      Input language for a2ps
++* PreScript: (a2ps).		 PreScript Input language for a2ps
+ END-INFO-DIR-ENTRY
+ 
+    This document describes `a2ps' 4.9.9, a converter from various
