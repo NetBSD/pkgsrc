@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/03/30 18:32:33 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/31 09:39:24 sketch Exp $
 #
 
 DISTNAME=		chkrootkit
@@ -20,7 +20,7 @@ NO_CONFIGURE=		yes
 
 PROGRAMS=	chkdirs chklastlog chkproc chkwtmp ifpromisc strings-static
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "SunOS"
 PROGRAMS+=	check_wtmpx
