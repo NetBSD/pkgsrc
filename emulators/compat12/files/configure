@@ -1,12 +1,12 @@
 #!/bin/sh
-# $NetBSD: configure,v 1.1.1.1 1998/03/17 21:32:54 tv Exp $
+# $NetBSD: configure,v 1.2 1998/05/08 21:22:35 tron Exp $
 # Configure package and create its Makefile and PLIST
 
 echo Configuring compat12 package
 
 for file in lib*.so*; do
 	echo >>Makefile "FILES+=$file"
-	echo >>.PLIST "${PREFIX}/lib/$file"
+	echo >>.PLIST "lib/$file"
 done
 
 cat >>Makefile <<EOF
