@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15 2001/05/07 11:34:13 zuntum Exp $
+$NetBSD: TODO,v 1.16 2001/05/07 14:16:19 zuntum Exp $
 
 This file will eventually hold a current 'TODO' list for people
 working on pkgsrc.
@@ -46,6 +46,7 @@ packages TODO (Suggested new packages)
 
 package update TODO (Suggested package updates)
 ^^^^^^^^^^^^^^^^^^^
+	o update audio/bladeenc to 0.84.1
 	o update audio/icecast to 1.3.10 (security problems)
 	o update devel/pcre to 3.0.8
 		(zuntum has the patch, will update after freeze)
