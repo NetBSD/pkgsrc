@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/03/14 12:12:21 agc Exp $
+
+Don't build the programs - use the ones from the base system.
+
+--- Makefile	1995/10/11 04:30:25	1.102
++++ Makefile	2001/03/14 10:59:01
+@@ -196,7 +196,7 @@
+ 	  mv y.tab.o $@; \
+ 	  rm -f y.tab.c
+ 
+-all-languages:	munchable
++all-languages:
+ 	$(MAKE) LANGUAGE_TARGET=all SHELLDEBUG=$(SHELLDEBUG) language-subdirs
+ 
+ install: config.sh all install-basic install-dictbuild install-languages
