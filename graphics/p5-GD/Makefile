@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/10/03 00:14:56 tv Exp $
+# $NetBSD: Makefile,v 1.25 2004/12/19 00:01:43 jlam Exp $
 
 DISTNAME=	GD-2.16
 PKGNAME=	p5-${DISTNAME}
@@ -15,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/GD/.packlist
+PERL5_OPTIONS+=		threads
 
 MAKE_ENV+=		GD_LIBS="${LDFLAGS}"
 MAKE_PARAMS+=		-lib_gd_path=${BUILDLINK_PREFIX.gd}
