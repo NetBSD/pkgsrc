@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.17 2002/01/28 08:26:08 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.18 2002/03/11 09:25:37 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -23,6 +23,11 @@ case $hw_model in
     *AMD\ K6*)		FLAGS='-march=k6'		;;
     *586-class*)	FLAGS='-march=pentium'		;;
     *686-class*)	FLAGS='-march=pentiumpro'	;;
+    # m68k
+    *\(68020\))		FLAGS='-m68020'			;; # Untested
+    *\(68030\))		FLAGS='-m68030'			;; # Mac LC III
+    *\(68040\))		FLAGS='-m68040'			;; # Untested
+    *\(68060\))		FLAGS='-m68060'			;; # Untested
     #
     # sparc
     MB86904* | MB86907*) FLAGS="-mcpu=supersparc"	;; # ss5
@@ -35,7 +40,7 @@ case $hw_model in
     # under 1.5.1 -mcpu=ultrasparc chokes egcs-2.91.66 compiling perl
     SUNW,UltraSPARC*)	FLAGS="-mcpu=v9"		;; # Ultra
     #
-    # arm32
+    # arm
     ARM610*)		FLAGS="-mcpu=arm610"		;; # risc pc
     ARM710*)		FLAGS="-mcpu=arm710"		;; # risc pc
     SA-110*)	
