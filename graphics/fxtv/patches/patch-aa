@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/05/07 20:34:13 tron Exp $
+
+--- Makefile.orig	Fri Nov  5 01:43:51 1999
++++ Makefile	Sun May  7 22:30:05 2000
+@@ -3,7 +3,6 @@
+ #
+ 
+ HAVE_XFREE86 = YES
+-X11BASE      = /usr/X11R6
+ DEBUG        = NO
+ OS           = $(shell uname -s)
+ OS_MAJOR     = $(shell uname -r | cut -f1 -d\.)
+@@ -11,8 +10,8 @@
+ override CF_VERS           = -DVERS_STR=\"1.02\"
+ override VIDEOLIB_DIR      = ./videolib
+ override INC               = -I$(X11BASE)/include -I/usr/local/include \
+-	                     -I$(VIDEOLIB_DIR) -I.
+-override LIBDIRS           = $(X11BASE)/lib /usr/local/lib
++	                     -I$(VIDEOLIB_DIR) -I. -I/usr/pkg/include
++override LIBDIRS           = $(X11BASE)/lib /usr/local/lib /usr/pkg/lib
+ override SHELL             = /bin/sh
+ 
+ #

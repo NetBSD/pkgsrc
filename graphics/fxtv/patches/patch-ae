@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/05/07 20:34:13 tron Exp $
+
+--- tvcapture.c.orig	Sat Oct 16 22:48:29 1999
++++ tvcapture.c	Sun May  7 22:28:36 2000
+@@ -36,8 +36,7 @@
+ #include <errno.h>
+ #include <sys/mman.h>
+ #ifdef __NetBSD__
+-# include <dev/pci/bt848var.h>
+-# include <dev/pci/meteorvar.h>
++# include <dev/ic/bt8xx.h>
+ #else
+ # include <machine/ioctl_bt848.h>
+ #endif
