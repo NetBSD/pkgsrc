@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/01/20 22:21:09 snj Exp $
+# $NetBSD: Makefile,v 1.25 2004/06/26 10:42:42 grant Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -41,7 +41,7 @@ pre-fetch:
 	@${CAT} ${FILESDIR}/fetch-message
 
 pre-build:
-	${SED} -e "s|@PREFIX@|${PREFIX}|g" ${FILESDIR}/netscape.sh > 	\
+	@${SED} -e "s|@PREFIX@|${PREFIX}|g" ${FILESDIR}/netscape.sh > 	\
 		${WRKDIR}/netscape7
 	@delay=10;							\
 	${SED} -e "s|@WRKSRC@|${WRKSRC}|g" -e "s|@delay@|$${delay}|g"	\
@@ -50,11 +50,11 @@ pre-build:
 	${MKDIR} ${WRKSRC}/dest
 	${SED} -e "s|/usr/local/netscape|${WRKSRC}/dest|g" 		\
 		${WRKSRC}/config.ini > ${WRKSRC}/config.ini.new;	\
-       ${MV} ${WRKSRC}/config.ini.new ${WRKSRC}/config.ini
+	${MV} ${WRKSRC}/config.ini.new ${WRKSRC}/config.ini
 
 # we must wait for netscape to start up after build!
 do-build:
-	cd ${WRKSRC} && ${SH} netscape-installer
+	@cd ${WRKSRC} && ${SETENV} ${INST_ENV} ${SH} netscape-installer
 	@sleep 10
 
 # dynamic PLIST generation
