@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.23 2003/03/29 17:40:40 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.24 2003/04/15 05:29:47 grant Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -121,6 +121,11 @@ _PATCH_CAN_BACKUP=	no		# native patch(1) can make backups
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
 _USE_GNU_GETTEXT=	no		# Don't use GNU gettext
 _USE_RPATH=		yes		# add rpath to LDFLAGS
+
+# flags passed to the linker to extract all symbols from static archives.
+# XXX values for IRIX absent!
+#_OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
+#_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
 .if !defined(DEBUG_FLAGS)
 _STRIPFLAG_CC?=		-s	# cc(1) option to strip

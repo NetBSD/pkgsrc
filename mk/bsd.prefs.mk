@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.109 2003/03/31 02:58:01 jschauma Exp $
+# $NetBSD: bsd.prefs.mk,v 1.110 2003/04/15 05:29:46 grant Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -253,6 +253,11 @@ XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 # library search paths.
 #
 RPATH_FLAG?=	${_OPSYS_RPATH_NAME}
+
+# WHOLE_ARCHIVE_FLAG and NO_WHOLE_ARCHIVE_FLAG publically export the
+# linker flags to extract all symbols from a static archive.
+WHOLE_ARCHIVE_FLAG?=	${_OPSYS_WHOLE_ARCHIVE_FLAG}
+NO_WHOLE_ARCHIVE_FLAG?=	${_OPSYS_NO_WHOLE_ARCHIVE_FLAG}
 
 .ifndef DIGEST
 DIGEST:=		${LOCALBASE}/bin/digest
