@@ -1,0 +1,9 @@
+Mozilla is the freely available version of Netscape's browser. Because
+only freely distributable code is included, some features are not
+present. But that will change.
+
+This is a stable branch of mozilla.
+A select group of APIs have been marked "@FROZEN. Mozilla.org intends
+to maintain API compatibility for this set until next major release.
+This branch is targeted at the developer community and enables 
+the creation of Internet-based applications.
