@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.10 2004/08/07 11:01:23 wiz Exp $
+# $NetBSD: bsd.sites.mk,v 1.11 2004/09/19 12:55:53 tron Exp $
 #
 # Default MASTER_SITES
 
@@ -153,7 +153,7 @@ MASTER_SITE_MOZILLA+=   \
 	ftp://ftp.informatik.uni-bonn.de/pub/www/mozilla/ \
 	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.mozilla.org/pub/ \
 	ftp://sunsite.auc.dk/pub/mozilla/ \
-	ftp://ftp.funet.fi/pub/mirrors/ftp.mozilla.org/pub/ \
+	ftp://ftp.funet.fi/pub/mirrors/ftp.mozilla.org/ \
 	ftp://ftp.sunsite.kth.se/archive/www/ftp.mozilla.org/ \
 	http://public.planetmirror.com.au/pub/mozilla/releases/ \
 	ftp://ftp2.sinica.edu.tw/pub3/www/mozilla/ \
