@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST-md.shared,v 1.1 1997/11/22 04:50:48 hubertf Exp $
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Data/Dumper/Dumper.bs
+lib/perl5/site_perl/<$ARCH>-netbsd/auto/Data/Dumper/Dumper.so
+@dirrm lib/perl5/site_perl/<$ARCH>-netbsd/auto/Data/Dumper
