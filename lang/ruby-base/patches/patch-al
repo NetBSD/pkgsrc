@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2004/03/12 04:59:20 taca Exp $
+$NetBSD: patch-al,v 1.2 2004/03/20 04:39:34 taca Exp $
 
 --- eval.c.orig	2002-12-16 16:34:22.000000000 +0900
 +++ eval.c
@@ -12,3 +12,21 @@ $NetBSD: patch-al,v 1.1 2004/03/12 04:59:20 taca Exp $
      return Qfalse;
  }
  
+@@ -4489,7 +4490,7 @@ rb_call0(klass, recv, id, argc, argv, bo
+ 			rb_raise(rb_eArgError, "wrong # of arguments(%d for %d)",
+ 				 argc, i);
+ 		    }
+-		    if (node->nd_rest == -1) {
++		    if ((int)node->nd_rest == -1) {
+ 			int opt = i;
+ 			NODE *optnode = node->nd_opt;
+ 
+@@ -4525,7 +4526,7 @@ rb_call0(klass, recv, id, argc, argv, bo
+ 				rb_eval(recv, opt);
+ 			    }
+ 			}
+-			if (node->nd_rest >= 0) {
++			if ((int)node->nd_rest >= 0) {
+ 			    VALUE v;
+ 
+ 			    if (argc > 0)
