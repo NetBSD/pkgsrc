@@ -1,11 +1,9 @@
-# $NetBSD: buildlink2.mk,v 1.18 2004/01/22 12:58:19 adam Exp $
+# $NetBSD: buildlink2.mk,v 1.19 2004/01/25 17:26:07 jlam Exp $
 
 .if !defined(MESALIB_BUILDLINK2_MK)
 MESALIB_BUILDLINK2_MK=	# defined
 
-.include "../../graphics/Mesa/version.mk"
-
-BUILDLINK_DEPENDS.MesaLib?=	MesaLib>=${MESA_VERSION}
+BUILDLINK_DEPENDS.MesaLib?=	MesaLib>=6.0
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 
 BUILDLINK_PACKAGES+=		MesaLib
