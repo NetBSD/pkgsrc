@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2000/01/31 21:18:43 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2000/09/10 22:14:46 wiz Exp $
 
 DISTNAME=		bochs-2000_0104c
 PKGNAME=		bochs-2000.01.04c
@@ -12,6 +12,7 @@ NOT_FOR_PLATFORM=	*-*-alpha	#runs, SEGV.
 
 LICENSE=		shareware
 GNU_CONFIGURE=		yes
+USE_GMAKE=		yes
 #CONFIGURE_ARGS=		--enable-debugger --enable-disasm
 USE_X11=		yes
 
