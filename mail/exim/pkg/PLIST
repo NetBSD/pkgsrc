@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 1999/09/22 08:52:05 ad Exp $
+@comment $NetBSD: PLIST,v 1.5 1999/10/06 23:02:36 ad Exp $
 etc/exim/configure
+etc/exim/mailer.conf.exim
 etc/rc.d/exim.sh
-etc/mailer.conf.exim
 share/doc/exim/filter.html
 share/doc/exim/filter_1.html
 share/doc/exim/filter_10.html
