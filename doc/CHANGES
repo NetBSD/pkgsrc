@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2311 2003/05/24 19:22:44 wiz Exp $
+$NetBSD: CHANGES,v 1.2312 2003/05/25 02:22:31 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2134,3 +2134,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mencoder to 0.90nb2 [salo 2003-05-24]
 	Updated links to 2.1.0.11 [wiz 2003-05-24]
 	Updated links-gui to 2.1.0.11 [wiz 2003-05-24]
+	Updated p5-IO-Socket-SSL to 0.92 [heinz 2003-05-25]
