@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.70 2001/10/25 17:56:10 jwise Exp $
+$NetBSD: TODO,v 1.71 2001/10/25 20:48:05 jwise Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
@@ -54,8 +54,6 @@ packages TODO (Suggested new packages)
 
 package update TODO (Suggested package updates)
 ^^^^^^^^^^^^^^^^^^^
-	o update/add openldap 2.0.8
-		(skrll has a new package)
 	o update print/ghostscript to 6.51/7.00
 	o update autoconf to 2.52 (or newer)
 	o update automake to 1.5
