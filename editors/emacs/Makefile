@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/02/20 22:48:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.26 1999/02/25 17:08:33 sommerfe Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 #
 
@@ -20,6 +20,10 @@ INSTALL_PROGRAM= ${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 
 pre-install:
 	@find ${WRKSRC} -type f -name "*.orig" | xargs ${RM} -f
+
+post-build:
+	(cd ${WRKSRC}/lisp/mail; \
+	${WRKSRC}/src/emacs -batch -f batch-byte-compile mh-comp.el mh-utils.el)
 
 post-install:
 	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
