@@ -1,5 +1,4 @@
 This release of the NTP Version 4 (NTPv4) daemon for Unix incorporates
 new features and refinements to the NTP Version 3 (NTPv3) algorithms.
 However, it continues the tradition of retaining backwards compatibility
-with older versions. The NTPv4 version has been under development for
-quite a while and isn't finished yet.
+with older versions.
