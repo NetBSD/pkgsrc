@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 1999/02/19 23:07:20 tron Exp $
+@comment $NetBSD: PLIST.egcs,v 1.1 1999/03/05 22:13:56 tron Exp $
 bin/kdecode
 bin/kmail
 bin/knu
