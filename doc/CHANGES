@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2294 2003/05/23 09:40:47 wiz Exp $
+$NetBSD: CHANGES,v 1.2295 2003/05/23 09:44:06 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2104,3 +2104,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libsndfile to 1.0.5 [wiz 2003-05-23]
 	Updated xscreensaver to 4.10 [wiz 2003-05-23]
 	Updated xscreensaver-gnome to 4.10 [wiz 2003-05-23]
+	Updated moz-mplayer to 0.80 [salo 2003-05-23]
+	Updated moz-flash to 1.0nb4 [salo 2003-05-23]
