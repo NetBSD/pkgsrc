@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3349 2005/04/03 14:22:23 adrianp Exp $
+$NetBSD: TODO,v 1.3350 2005/04/03 21:40:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -270,7 +270,6 @@ Suggested package updates
 	o advancecomp-1.14
 	o aewm++-1.0.27
 	o afterstep-2.00.04
-	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
 	o amavis-0.3.12
@@ -798,7 +797,6 @@ Suggested package updates
 	o p5-Pod-POM-0.15
 	o p5-Regexp-Common-2.120
 	o p5-SQL-Abstract-1.18
-	o p5-SQL-Statement-1.09
 	o p5-SVN-Web-0.38
 	o p5-SWF-File-0.39
 	o p5-Safe-Hole-0.10
@@ -871,7 +869,6 @@ Suggested package updates
 	o proj-4.4.9
 	o proxsmtp-1.2
 	o pscal-1.16
-	o psi-0.9.3
 	o psiconv-0.9.7
 	o psmisc-21.5
 	o pstree-2.26
@@ -1051,7 +1048,6 @@ Suggested package updates
 	o tct-1.15
 	o tdir-1.67
 	o tds-1.6.2
-	o teTeX-3.0
 	o ted-2.17
 	o tela-2.01
 	o tfmxplay-1.1.6
