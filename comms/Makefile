@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2003/01/13 12:39:31 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2003/02/12 00:57:54 mjl Exp $
 #
 
 COMMENT=	Communication utilities
@@ -25,6 +25,8 @@ SUBDIR+=	malsync
 SUBDIR+=	mgetty+sendfax
 SUBDIR+=	minicom
 SUBDIR+=	modemd
+SUBDIR+=	p5-Device-Gsm
+SUBDIR+=	p5-Device-Modem
 SUBDIR+=	p5-Device-SerialPort
 SUBDIR+=	p5-pilot-link
 SUBDIR+=	pilot-link
