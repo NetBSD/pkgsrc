@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/10/02 13:10:02 itojun Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/10/04 02:35:51 itojun Exp $
 bin/apr-config
 bin/apu-config
 etc/rc.d/apache
@@ -454,6 +454,7 @@ share/httpd/manual/content-negotiation.xml.ja
 share/httpd/manual/custom-error.html.en
 share/httpd/manual/custom-error.html.ja.jis
 share/httpd/manual/custom-error.xml
+share/httpd/manual/custom-error.xml.ja
 share/httpd/manual/developer/API.html
 share/httpd/manual/developer/debugging.html
 share/httpd/manual/developer/documenting.html
@@ -474,7 +475,6 @@ share/httpd/manual/dso.html.ja.jis
 share/httpd/manual/dso.html.ko.euc-kr
 share/httpd/manual/dso.xml
 share/httpd/manual/dso.xml.ja
-share/httpd/manual/ebcdic.html
 share/httpd/manual/env.html.en
 share/httpd/manual/env.html.ja.jis
 share/httpd/manual/env.xml
@@ -539,6 +539,7 @@ share/httpd/manual/install.html.ja.jis
 share/httpd/manual/install.html.ko.euc-kr
 share/httpd/manual/install.xml
 share/httpd/manual/install.xml.de
+share/httpd/manual/install.xml.ja
 share/httpd/manual/invoking.html.en
 share/httpd/manual/invoking.html.ja.jis
 share/httpd/manual/invoking.xml
@@ -546,25 +547,28 @@ share/httpd/manual/invoking.xml.ja
 share/httpd/manual/logs.html.en
 share/httpd/manual/logs.html.ja.jis
 share/httpd/manual/logs.xml
+share/httpd/manual/logs.xml.ja
 share/httpd/manual/misc/custom_errordocs.html
 share/httpd/manual/misc/descriptors.html
 share/httpd/manual/misc/fin_wait_2.html
 share/httpd/manual/misc/footer.html
 share/httpd/manual/misc/header.html
-share/httpd/manual/misc/index.html
+share/httpd/manual/misc/index.html.en
+share/httpd/manual/misc/index.xml
 share/httpd/manual/misc/known_client_problems.html
-share/httpd/manual/misc/perf-tuning.html
-share/httpd/manual/misc/rewriteguide.html
+share/httpd/manual/misc/perf-tuning.html.en
+share/httpd/manual/misc/perf-tuning.xml
+share/httpd/manual/misc/rewriteguide.html.en
+share/httpd/manual/misc/rewriteguide.xml
 share/httpd/manual/misc/security_tips.html.en
 share/httpd/manual/misc/security_tips.xml
 share/httpd/manual/misc/tutorials.html
-share/httpd/manual/mod/allmodules.xml
-share/httpd/manual/mod/allmodules.xml.ja
 share/httpd/manual/mod/core.html.en
 share/httpd/manual/mod/core.xml
 share/httpd/manual/mod/directive-dict.html.en
 share/httpd/manual/mod/directive-dict.html.ja.jis
 share/httpd/manual/mod/directive-dict.xml
+share/httpd/manual/mod/directive-dict.xml.ja
 share/httpd/manual/mod/directives.html.en
 share/httpd/manual/mod/directives.html.ja.jis
 share/httpd/manual/mod/directives.xml
@@ -612,7 +616,9 @@ share/httpd/manual/mod/mod_cache.xml
 share/httpd/manual/mod/mod_cern_meta.html.en
 share/httpd/manual/mod/mod_cern_meta.xml
 share/httpd/manual/mod/mod_cgi.html.en
+share/httpd/manual/mod/mod_cgi.html.ja.jis
 share/httpd/manual/mod/mod_cgi.xml
+share/httpd/manual/mod/mod_cgi.xml.ja
 share/httpd/manual/mod/mod_cgid.html.en
 share/httpd/manual/mod/mod_cgid.xml
 share/httpd/manual/mod/mod_charset_lite.html.en
@@ -632,7 +638,9 @@ share/httpd/manual/mod/mod_dir.xml.ja
 share/httpd/manual/mod/mod_disk_cache.html.en
 share/httpd/manual/mod/mod_disk_cache.xml
 share/httpd/manual/mod/mod_echo.html.en
+share/httpd/manual/mod/mod_echo.html.ja.jis
 share/httpd/manual/mod/mod_echo.xml
+share/httpd/manual/mod/mod_echo.xml.ja
 share/httpd/manual/mod/mod_env.html.en
 share/httpd/manual/mod/mod_env.html.ja.jis
 share/httpd/manual/mod/mod_env.xml
@@ -652,13 +660,17 @@ share/httpd/manual/mod/mod_imap.xml
 share/httpd/manual/mod/mod_include.html.en
 share/httpd/manual/mod/mod_include.xml
 share/httpd/manual/mod/mod_info.html.en
+share/httpd/manual/mod/mod_info.html.ja.jis
 share/httpd/manual/mod/mod_info.xml
+share/httpd/manual/mod/mod_info.xml.ja
 share/httpd/manual/mod/mod_isapi.html.en
 share/httpd/manual/mod/mod_isapi.xml
 share/httpd/manual/mod/mod_ldap.html.en
 share/httpd/manual/mod/mod_ldap.xml
 share/httpd/manual/mod/mod_log_config.html.en
 share/httpd/manual/mod/mod_log_config.xml
+share/httpd/manual/mod/mod_logio.html.en
+share/httpd/manual/mod/mod_logio.xml
 share/httpd/manual/mod/mod_mem_cache.html.en
 share/httpd/manual/mod/mod_mem_cache.xml
 share/httpd/manual/mod/mod_mime.html.en
@@ -666,19 +678,25 @@ share/httpd/manual/mod/mod_mime.xml
 share/httpd/manual/mod/mod_mime_magic.html.en
 share/httpd/manual/mod/mod_mime_magic.xml
 share/httpd/manual/mod/mod_negotiation.html.en
+share/httpd/manual/mod/mod_negotiation.html.ja.jis
 share/httpd/manual/mod/mod_negotiation.xml
+share/httpd/manual/mod/mod_negotiation.xml.ja
 share/httpd/manual/mod/mod_proxy.html.en
 share/httpd/manual/mod/mod_proxy.xml
 share/httpd/manual/mod/mod_rewrite.html.en
 share/httpd/manual/mod/mod_rewrite.xml
 share/httpd/manual/mod/mod_setenvif.html.en
+share/httpd/manual/mod/mod_setenvif.html.ja.jis
 share/httpd/manual/mod/mod_setenvif.xml
+share/httpd/manual/mod/mod_setenvif.xml.ja
 share/httpd/manual/mod/mod_so.html.en
 share/httpd/manual/mod/mod_so.html.ja.jis
 share/httpd/manual/mod/mod_so.xml
 share/httpd/manual/mod/mod_so.xml.ja
 share/httpd/manual/mod/mod_speling.html.en
+share/httpd/manual/mod/mod_speling.html.ja.jis
 share/httpd/manual/mod/mod_speling.xml
+share/httpd/manual/mod/mod_speling.xml.ja
 share/httpd/manual/mod/mod_ssl.html.en
 share/httpd/manual/mod/mod_ssl.xml
 share/httpd/manual/mod/mod_status.html.en
@@ -688,7 +706,9 @@ share/httpd/manual/mod/mod_suexec.html.ja.jis
 share/httpd/manual/mod/mod_suexec.xml
 share/httpd/manual/mod/mod_suexec.xml.ja
 share/httpd/manual/mod/mod_unique_id.html.en
+share/httpd/manual/mod/mod_unique_id.html.ja.jis
 share/httpd/manual/mod/mod_unique_id.xml
+share/httpd/manual/mod/mod_unique_id.xml.ja
 share/httpd/manual/mod/mod_userdir.html.en
 share/httpd/manual/mod/mod_userdir.html.ja.jis
 share/httpd/manual/mod/mod_userdir.xml
@@ -700,6 +720,7 @@ share/httpd/manual/mod/mod_vhost_alias.xml
 share/httpd/manual/mod/module-dict.html.en
 share/httpd/manual/mod/module-dict.html.ja.jis
 share/httpd/manual/mod/module-dict.xml
+share/httpd/manual/mod/module-dict.xml.ja
 share/httpd/manual/mod/mpm_common.html.en
 share/httpd/manual/mod/mpm_common.html.ja.jis
 share/httpd/manual/mod/mpm_common.xml
@@ -716,6 +737,10 @@ share/httpd/manual/mod/prefork.html.en
 share/httpd/manual/mod/prefork.html.ja.jis
 share/httpd/manual/mod/prefork.xml
 share/httpd/manual/mod/prefork.xml.ja
+share/httpd/manual/mod/quickreference.html.en
+share/httpd/manual/mod/quickreference.html.ja.jis
+share/httpd/manual/mod/quickreference.xml
+share/httpd/manual/mod/quickreference.xml.ja
 share/httpd/manual/mod/worker.html.en
 share/httpd/manual/mod/worker.html.ja.jis
 share/httpd/manual/mod/worker.xml
@@ -732,8 +757,13 @@ share/httpd/manual/new_features_2_0.html.ja.jis
 share/httpd/manual/new_features_2_0.html.ko.euc-kr
 share/httpd/manual/new_features_2_0.xml
 share/httpd/manual/new_features_2_0.xml.de
+share/httpd/manual/new_features_2_0.xml.ja
+share/httpd/manual/platform/ebcdic.html.en
+share/httpd/manual/platform/ebcdic.xml
 share/httpd/manual/platform/footer.html
 share/httpd/manual/platform/header.html
+share/httpd/manual/platform/index.html.en
+share/httpd/manual/platform/index.xml
 share/httpd/manual/platform/netware.html.en
 share/httpd/manual/platform/netware.xml
 share/httpd/manual/platform/perf-hp.html.en
@@ -765,20 +795,26 @@ share/httpd/manual/sections.xml
 share/httpd/manual/server-wide.html.en
 share/httpd/manual/server-wide.html.ja.jis
 share/httpd/manual/server-wide.xml
+share/httpd/manual/server-wide.xml.ja
 share/httpd/manual/sitemap.html.en
 share/httpd/manual/sitemap.html.ja.jis
 share/httpd/manual/sitemap.xml
+share/httpd/manual/sitemap.xml.ja
 share/httpd/manual/ssl/footer.html
 share/httpd/manual/ssl/header.html
 share/httpd/manual/ssl/index.html.en
 share/httpd/manual/ssl/index.html.ja.jis
-share/httpd/manual/ssl/ssl_compat.html
+share/httpd/manual/ssl/index.xml
+share/httpd/manual/ssl/ssl_compat.html.en
+share/httpd/manual/ssl/ssl_compat.xml
 share/httpd/manual/ssl/ssl_cover_logo.jpg
 share/httpd/manual/ssl/ssl_cover_title.jpg
-share/httpd/manual/ssl/ssl_faq.html
-share/httpd/manual/ssl/ssl_glossary.html
-share/httpd/manual/ssl/ssl_howto.html
-share/httpd/manual/ssl/ssl_intro.html
+share/httpd/manual/ssl/ssl_faq.html.en
+share/httpd/manual/ssl/ssl_faq.xml
+share/httpd/manual/ssl/ssl_howto.html.en
+share/httpd/manual/ssl/ssl_howto.xml
+share/httpd/manual/ssl/ssl_intro.html.en
+share/httpd/manual/ssl/ssl_intro.xml
 share/httpd/manual/ssl/ssl_intro_fig1.gif
 share/httpd/manual/ssl/ssl_intro_fig2.gif
 share/httpd/manual/ssl/ssl_intro_fig3.gif
@@ -788,6 +824,7 @@ share/httpd/manual/ssl/ssl_template.imgdot-1x1-transp.gif
 share/httpd/manual/stopping.html.en
 share/httpd/manual/stopping.html.ja.jis
 share/httpd/manual/stopping.xml
+share/httpd/manual/stopping.xml.ja
 share/httpd/manual/style/common.dtd
 share/httpd/manual/style/css/manual-loose-100pc-b.css
 share/httpd/manual/style/css/manual-loose-100pc.css
@@ -818,11 +855,13 @@ share/httpd/manual/style/css/manual.css
 share/httpd/manual/style/lang/de.xml
 share/httpd/manual/style/lang/en.xml
 share/httpd/manual/style/lang/ja.xml
+share/httpd/manual/style/lang/ru.xml
 share/httpd/manual/style/lang/sv.xml
 share/httpd/manual/style/manual.de.xsl
 share/httpd/manual/style/manual.en.xsl
 share/httpd/manual/style/manual.ja.xsl
 share/httpd/manual/style/manual.pt-br.xsl
+share/httpd/manual/style/manual.ru.xsl
 share/httpd/manual/style/manual.sv.xsl
 share/httpd/manual/style/manualpage.dtd
 share/httpd/manual/style/modulesynopsis.dtd
@@ -831,11 +870,13 @@ share/httpd/manual/style/xsl/common.xsl
 share/httpd/manual/style/xsl/directiveindex.xsl
 share/httpd/manual/style/xsl/manualpage.xsl
 share/httpd/manual/style/xsl/moduleindex.xsl
+share/httpd/manual/style/xsl/quickreference.xsl
 share/httpd/manual/style/xsl/sitemap.xsl
 share/httpd/manual/style/xsl/synopsis.xsl
 share/httpd/manual/suexec.html.en
 share/httpd/manual/suexec.html.ja.jis
 share/httpd/manual/suexec.xml
+share/httpd/manual/suexec.xml.ja
 share/httpd/manual/upgrading.html.de
 share/httpd/manual/upgrading.html.en
 share/httpd/manual/upgrading.html.fr
@@ -847,6 +888,7 @@ share/httpd/manual/upgrading.xml.ja
 share/httpd/manual/urlmapping.html.en
 share/httpd/manual/urlmapping.html.ja.jis
 share/httpd/manual/urlmapping.xml
+share/httpd/manual/urlmapping.xml.ja
 share/httpd/manual/vhosts/details.html
 share/httpd/manual/vhosts/examples.html
 share/httpd/manual/vhosts/fd-limits.html.en
@@ -869,6 +911,9 @@ share/httpd/manual/vhosts/name-based.html.ja.jis
 @dirrm share/httpd/manual/programs
 @dirrm share/httpd/manual/search
 @dirrm share/httpd/manual/ssl
+@dirrm share/httpd/manual/style/xsl
+@dirrm share/httpd/manual/style/lang
+@dirrm share/httpd/manual/style/css
 @dirrm share/httpd/manual/style
 @dirrm share/httpd/manual/vhosts
 @dirrm share/httpd/manual
@@ -882,5 +927,3 @@ share/httpd/manual/vhosts/name-based.html.ja.jis
 @dirrm share/examples/httpd
 @dirrm lib/httpd
 @dirrm include/httpd
-
-
