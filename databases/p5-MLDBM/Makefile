@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/07/17 21:28:41 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/21 16:39:11 martti Exp $
 #
 
 DISTNAME=		MLDBM-2.00
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=MLDBM/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://theory.uwinnipeg.ca/CPAN/data/MLDBM/MLDBM.html
-COMMENT=		perl5 module for storing arbitrary data in tied hashes
+COMMENT=		Perl5 module for storing arbitrary data in tied hashes
 
 DEPENDS+= 		{p5-Data-Dumper-[0-9]*,perl>=5.6.1nb2}:${PERL5_PKGSRCDIR}
 

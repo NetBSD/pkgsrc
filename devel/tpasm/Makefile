@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:34:12 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 16:43:47 martti Exp $
 #
 
 DISTNAME=	tpasm1.0r
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.sqt.com
-COMMENT=	assembler for 6805, 68HC11, 6502, Surplus, 8051, Z80, PIC, and AVR
+COMMENT=	Assembler for 6805, 68HC11, 6502, Surplus, 8051, Z80, PIC, and AVR
 
 USE_GMAKE=	yes
 
