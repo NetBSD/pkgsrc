@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/03/18 08:36:26 skrll Exp $
+@comment $NetBSD: PLIST,v 1.9 2003/07/22 17:17:21 drochner Exp $
 qt3/bin/assistant
 qt3/bin/designer
 qt3/bin/linguist
@@ -6,6 +6,11 @@ qt3/bin/qm2ts
 qt3/bin/qmake
 qt3/bin/qtconfig
 qt3/bin/uic
+qt3/lib/libqassistantclient.a
+qt3/lib/libqassistantclient.la
+qt3/lib/libqassistantclient.so
+qt3/lib/libqassistantclient.so.1
+qt3/lib/libqassistantclient.so.1.0
 qt3/lib/libeditor.a
 qt3/lib/libeditor.la
 qt3/lib/libeditor.so
