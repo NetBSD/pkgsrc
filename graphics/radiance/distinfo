@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/02/16 22:17:33 jschauma Exp $
+
+SHA1 (rad3R6P1.tar.gz) = 71f46abd1c30be282a93237fa0c162d3bf0b1f99
+Size (rad3R6P1.tar.gz) = 7115997 bytes
+SHA1 (rad3R6P1supp.tar.gz) = 8a13227eae507a7a4947a49b6aa741c95198ed4e
+Size (rad3R6P1supp.tar.gz) = 4632166 bytes
+SHA1 (patch-aa) = ea43190811db3b3ae47c14c38bf3772be5dfc76a
+SHA1 (patch-ab) = 5d06bcf2216ed084a757724045391bfbe05d56d2
+SHA1 (patch-ac) = 8336144bb4c768e50af4559606e895d4d1e30836
+SHA1 (patch-ad) = f3f7c68305964965851c9caeca53f0e534014085
+SHA1 (patch-ae) = 26d2f239e45b944bb77ce9ea4fa07c0b3cd3f2ff
+SHA1 (patch-af) = 9a4c265a18a138166c8a041730cd5818430f9186
+SHA1 (patch-ag) = e7f8944d96aa51ce8dfdec5abb6d498c3ca193cc
+SHA1 (patch-ah) = a33746e1daae8f7dc6efabb1d73f85eecafb5152
+SHA1 (patch-ai) = 3f385778f0d9279a6744c85c9946066a54dc4af4
+SHA1 (patch-aj) = 5242f18c523bbebcfdd886fa20501434f07b74c0
+SHA1 (patch-ak) = 438bd7e9ad397663ddac09543ac484610b13086b
+SHA1 (patch-al) = 7133f2839a85d8f2db752813832a4af0223d4ecd
+SHA1 (patch-am) = bf4a456d905fbd5c9a9cabd3c32b1bb1c6c26620
+SHA1 (patch-an) = 396abe507a4700919ea3fdd9fc2f56773704d6df
+SHA1 (patch-ao) = 22e3e8f3b593bca0423390f696324f42e8b52098
+SHA1 (patch-ap) = 42bb1691b2c1d76bf5d19872d70ca50332d31987
+SHA1 (patch-aq) = 338ca0df287e797fbc784158e7d622f70ddcd35e
+SHA1 (patch-ar) = e2afaad398d61f152ce9a7f3ddf451547c359e13

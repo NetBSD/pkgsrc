@@ -1,0 +1,31 @@
+$NetBSD: patch-ai,v 1.1.1.1 2005/02/16 22:17:34 jschauma Exp $
+
+--- src/meta/Rmakefile.orig	2003-10-21 22:15:07.000000000 -0400
++++ src/meta/Rmakefile	2005-02-15 15:05:50.000000000 -0500
+@@ -5,14 +5,13 @@
+ 
+ OPT = -O
+ MACH =
+-CC = cc
+ MLIB = -lm
+-CFLAGS = -DMDIR=\"$(MLIBDIR)/\" $(OPT) $(MACH) -I../common -L../lib
++CFLAGS += -DMDIR=\"@PREFIX@/radiance/lib/meta/\" $(OPT) $(MACH) -I../common -L../lib ${LDFLAGS}
+ 
+-LIBDIR = /usr/local/lib
++LIBDIR = @WRKSRC@/radience/work.i386/ray/radiance/lib
+ MLIBDIR = $(LIBDIR)/meta
+ DESTDIR = .
+-INSTDIR = /usr/local/bin
++INSTDIR = @WRKSRC@/radience/work.i386/ray/radiance/bin
+ 
+ # target lists
+ common = mfio.o syscalls.o misc.o
+@@ -130,7 +129,7 @@
+ 	-ranlib ../lib/libmeta.a
+ 
+ ../lib/lib4014.a:
+-	cd lib4014; make INSTDIR=../../lib "CFLAGS=$(OPT)" install clean
++	cd lib4014; /usr/bin/make INSTDIR=../../lib install clean
+ 
+ $(DESTDIR)/bgraph:	bgraph.o mgvars.o mgraph.o ../lib/libmeta.a
+ 	$(CC) $(CFLAGS) -o bgraph bgraph.o mgvars.o mgraph.o \

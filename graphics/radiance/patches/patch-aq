@@ -1,0 +1,16 @@
+$NetBSD: patch-aq,v 1.1.1.1 2005/02/16 22:17:34 jschauma Exp $
+
+--- ./src/px/tiff/contrib/addtiffo/Makefile.orig	2005-02-15 15:19:59.000000000 -0500
++++ ./src/px/tiff/contrib/addtiffo/Makefile	2005-02-15 15:22:05.000000000 -0500
+@@ -4,9 +4,8 @@
+ #
+ LIBTIFF_DIR =	../../libtiff
+ #
+-CC	=	gcc
+-CFLAGS	=	-O -I$(LIBTIFF_DIR)
+-LIBS	=	$(LIBTIFF_DIR)/libtiff.a -lm
++CFLAGS	+=	-O -I$(LIBTIFF_DIR)
++LIBS	=	$(LIBTIFF_DIR)/libtiff.a -lm ${LDFLAGS}
+ 
+ addtiffo:	addtiffo.o tif_overview.o tif_ovrcache.o
+ 	$(CXX) $(CFLAGS) addtiffo.o tif_overview.o tif_ovrcache.o \
