@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.2 1998/08/29 18:06:47 kim Exp $
+
 --- ftp.pl.orig	Tue May 23 17:53:25 1995
 +++ ftp.pl	Sat Aug 29 12:08:42 1998
 @@ -430,7 +430,7 @@
