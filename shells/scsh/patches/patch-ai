@@ -1,10 +1,12 @@
-$NetBSD: patch-ai,v 1.1 2000/05/20 23:05:40 dmcmahill Exp $
+$NetBSD: patch-ai,v 1.2 2001/02/27 19:37:47 wiz Exp $
 
---- configure.in.orig	Sat May 20 17:07:20 2000
-+++ configure.in	Sat May 20 17:20:50 2000
-@@ -292,4 +292,5 @@
+--- configure.in.orig	Tue Feb 27 20:13:07 2001
++++ configure.in
+@@ -291,6 +291,7 @@
+   
    ## NetBSD and FreeBSD ( and maybe 386BSD also)
    *-*-*bsd* )
 +    LDFLAGS="-Wl,--export-dynamic"
      dir=bsd
+     SCSH_ELF
    ;;

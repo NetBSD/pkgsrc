@@ -9,15 +9,15 @@ rules.
 
 Scsh is also a full implementation of R4RS Scheme with some
 non-standard behavior (required for scripting). As a result, a wide
-varity of exiting Scheme code can be used.
+variety of existing Scheme code can be used.
 
 The underlying Scheme implementation is a virtual machine for compact
 byte code.
 
 The name of the installed program is "scsh", the manpage is scsh(1),
-other documentation is in (/usr/local/)lib/scsh/doc
+other documentation is in (/usr/pkg/)lib/scsh/doc
 
-To load slib, install slib into /usr/local/lib/slib and run 
+To load slib, install slib into (/usr/pkg/)lib/slib and run 
 (load "slib-init.scm") 
 in scsh. It requires no additional setup (paths or such).
 

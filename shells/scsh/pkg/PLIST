@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 1998/05/09 00:14:24 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/02/27 19:37:48 wiz Exp $
 bin/scsh
-man/man1/scsh.1.gz
+include/scheme48.h
 lib/scsh/big/array.scm
 lib/scsh/big/big-util.scm
 lib/scsh/big/bigbit.scm
@@ -42,6 +42,7 @@ lib/scsh/doc/scsh-manual/network.tex
 lib/scsh/doc/scsh-manual/procnotation.tex
 lib/scsh/doc/scsh-manual/rdelim.tex
 lib/scsh/doc/scsh-manual/running.tex
+lib/scsh/doc/scsh-manual/sre.tex
 lib/scsh/doc/scsh-manual/strings.tex
 lib/scsh/doc/scsh-manual/syscalls.tex
 lib/scsh/doc/scsh-manual/test.tex
@@ -128,6 +129,42 @@ lib/scsh/opt/analyze.scm
 lib/scsh/opt/expand.scm
 lib/scsh/opt/inline.scm
 lib/scsh/opt/tst.scm
+lib/scsh/scsh/rx/cond-package.scm
+lib/scsh/scsh/rx/let-match.scm
+lib/scsh/scsh/rx/loadem.scm
+lib/scsh/scsh/rx/modules.scm
+lib/scsh/scsh/rx/oldfuns.scm
+lib/scsh/scsh/rx/packages-old.scm
+lib/scsh/scsh/rx/packages-old2.scm
+lib/scsh/scsh/rx/packages.scm
+lib/scsh/scsh/rx/parse.scm
+lib/scsh/scsh/rx/posixstr.scm
+lib/scsh/scsh/rx/re-fold.scm
+lib/scsh/scsh/rx/re-high.scm
+lib/scsh/scsh/rx/re-low.scm
+lib/scsh/scsh/rx/re-subst.scm
+lib/scsh/scsh/rx/re-syntax.scm
+lib/scsh/scsh/rx/re.scm
+lib/scsh/scsh/rx/regress.scm
+lib/scsh/scsh/rx/rx-lib.scm
+lib/scsh/scsh/rx/simp.scm
+lib/scsh/scsh/rx/spencer.scm
+lib/scsh/scsh/rx/test.scm
+lib/scsh/scsh/lib/ccp-pack.scm
+lib/scsh/scsh/lib/ccp.scm
+lib/scsh/scsh/lib/list-lib.scm
+lib/scsh/scsh/lib/list-pack.scm
+lib/scsh/scsh/lib/string-lib.scm
+lib/scsh/scsh/lib/string-pack.scm
+lib/scsh/scsh/machine/bufpol.scm
+lib/scsh/scsh/machine/errno.scm
+lib/scsh/scsh/machine/fdflags.scm
+lib/scsh/scsh/machine/netconst.scm
+lib/scsh/scsh/machine/packages.scm
+lib/scsh/scsh/machine/signals.scm
+lib/scsh/scsh/machine/time_dep.scm
+lib/scsh/scsh/machine/tty-consts.scm
+lib/scsh/scsh/machine/waitcodes.scm
 lib/scsh/scsh/awk.scm
 lib/scsh/scsh/char-set.scm
 lib/scsh/scsh/db.scm
@@ -153,10 +190,10 @@ lib/scsh/scsh/ndbm.scm
 lib/scsh/scsh/network.scm
 lib/scsh/scsh/pty.scm
 lib/scsh/scsh/newports.scm
+lib/scsh/scsh/old-static.scm
 lib/scsh/scsh/oldtop.scm
 lib/scsh/scsh/procobj.scm
 lib/scsh/scsh/rdelim.scm
-lib/scsh/scsh/re.scm
 lib/scsh/scsh/rw.scm
 lib/scsh/scsh/scsh-condition.scm
 lib/scsh/scsh/scsh-interfaces.scm
@@ -167,7 +204,9 @@ lib/scsh/scsh/scsh.scm
 lib/scsh/scsh/select.scm
 lib/scsh/scsh/sighandlers.scm
 lib/scsh/scsh/startup.scm
+lib/scsh/scsh/static-heap.scm
 lib/scsh/scsh/static.scm
+lib/scsh/scsh/static1.scm
 lib/scsh/scsh/stringcoll.scm
 lib/scsh/scsh/syntax-helpers.scm
 lib/scsh/scsh/syntax.scm
@@ -223,6 +262,7 @@ lib/scsh/emacs/cmuscheme48.el
 lib/scsh/emacs/cmushell.el
 lib/scsh/emacs/comint.el
 lib/scsh/emacs/jar-hacks.el
+man/man1/scsh.1
 @exec ln -fs %D/lib/scsh/doc %D/share/doc/scsh
 @unexec rm -f %D/share/doc/scsh
 @dirrm lib/scsh/emacs
@@ -234,6 +274,9 @@ lib/scsh/emacs/jar-hacks.el
 @dirrm lib/scsh/link
 @dirrm lib/scsh/misc
 @dirrm lib/scsh/opt
+@dirrm lib/scsh/scsh/rx
+@dirrm lib/scsh/scsh/lib
+@dirrm lib/scsh/scsh/machine
 @dirrm lib/scsh/scsh
 @dirrm lib/scsh/rts
 @dirrm lib/scsh/vm
