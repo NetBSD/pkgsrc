@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2004/10/05 19:49:28 tsarna Exp $
+$NetBSD: patch-aa,v 1.2 2004/10/05 20:02:10 tsarna Exp $
 
 Treat more informational messages as non-fatal, and add an
 extension to allow an application to capture them.
@@ -30,7 +30,7 @@ extension to allow an application to capture them.
 +        # 6200-6299 SHOWPLAN output (Sybase)
 +        _output_hooks.get(conn, lambda c,m: None)(conn, msg)
 +    else:
-+        raise DatabaseError(_fmt_server(msg.text))
++        raise DatabaseError(_fmt_server(msg))
  
  def _row_bind(cmd, count = 1):
      '''Bind buffers for count rows of column data.
