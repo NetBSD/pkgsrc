@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1998/09/30 08:21:14 hubertf Exp $
+# $NetBSD: Makefile,v 1.20 1998/09/30 18:57:44 tron Exp $
 # FreeBSD Id: Makefile,v 1.23 1997/10/10 09:24:38 tg Exp
 #
 
@@ -13,7 +13,8 @@ DEPENDS+=	xpm-3.4k:../../graphics/xpm
 # XXX Mesa support disabled for security reasons
 #DEPENDS+=	Mesa-2.6:../../graphics/Mesa
 
-CONFLICTS=	xlockmore-4.07 xlockmore-4.08 xlockmore-4.09 xlockmore-4.10
+CONFLICTS=	xlockmore-4.07 xlockmore-4.08 xlockmore-4.09 xlockmore-4.10 \
+		xlockmore-4.11
 
 GNU_CONFIGURE=	yes
 # XXX Mesa support disabled for security reasons
