@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7921 2004/11/19 19:59:52 jmmv Exp $
+$NetBSD: CHANGES,v 1.7922 2004/11/20 00:32:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5350,3 +5350,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated pam-ldap to 176 [jlam 2004-11-19]
 	Updated hpijs to 1.7.1 [jdolecek 2004-11-19]
 	Updated gnome-session to 2.8.1nb1 [jmmv 2004-11-19]
+	Updated snownews to 1.5.5.1 [wiz 2004-11-20]
