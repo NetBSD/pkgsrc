@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.68 2003/11/12 03:39:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.69 2003/12/08 21:44:35 wiz Exp $
 
-DISTNAME=	wget-1.8.2
-PKGREVISION=	2
+DISTNAME=	wget-1.9.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=wget/}
 

@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.4 2002/12/16 11:39:02 wiz Exp $
+$NetBSD: patch-ag,v 1.5 2003/12/08 21:44:35 wiz Exp $
 
---- doc/Makefile.in.orig	Sat Nov 17 00:23:22 2001
+--- doc/Makefile.in.orig	Fri Oct 24 00:53:05 2003
 +++ doc/Makefile.in
 @@ -40,6 +40,7 @@ prefix     = @prefix@
  infodir    = @infodir@
@@ -19,7 +19,7 @@ $NetBSD: patch-ag,v 1.4 2002/12/16 11:39:02 wiz Exp $
  SAMPLERCTEXI = sample.wgetrc.munged_for_texi_inclusion
  
  #
-@@ -127,7 +128,7 @@ install.man: $(MAN)
+@@ -129,7 +130,7 @@ install.man: $(MAN)
  
  # install sample.wgetrc
  install.wgetrc: $(srcdir)/sample.wgetrc
