@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2004/06/03 22:07:50 shannonjr Exp $
+$NetBSD: distinfo,v 1.3 2004/06/28 20:43:54 shannonjr Exp $
 
-SHA1 (gdb-6.1.tar.bz2) = 588c967d164f226ed33eb966e765c046bac066a5
-Size (gdb-6.1.tar.bz2) = 12571495 bytes
+SHA1 (gdb-6.1.1.tar.bz2) = 39f239373e282061eb6b7d024f17516e2e6e2226
+Size (gdb-6.1.1.tar.bz2) = 12586670 bytes
 SHA1 (patch-Makefile_tpl) = b5c98fc990606e2f5c566864d02565d8fc9adeb4
 SHA1 (patch-ax_gdb_c) = bc9a4e5d77d571a6f06b88984fb2030beec37654
 SHA1 (patch-cli_cli_decode_c) = 19dbdb326643bf32a3d0c26cfea056cca19deb13
