@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6712 2004/07/28 11:55:56 wiz Exp $
+$NetBSD: CHANGES,v 1.6713 2004/07/28 13:42:22 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3614,3 +3614,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xpdf-chinese-traditional to 20040727 [wiz 2004-07-28]
 	Updated xpdf-japanese to 20040727 [wiz 2004-07-28]
 	Updated xpdf-korean to 20040727 [wiz 2004-07-28]
+	Added showimg-0.9.3 [markd 2004-07-28]
