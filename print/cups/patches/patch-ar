@@ -1,9 +1,8 @@
-$NetBSD: patch-ar,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+$NetBSD: patch-ar,v 1.2 1999/12/07 21:01:47 rh Exp $
 
---- ppd/Makefile.orig	Wed May 19 14:00:57 1999
-+++ ppd/Makefile	Sun Nov 28 21:06:28 1999
-@@ -47,8 +47,8 @@
- #
+--- ppd/Makefile.orig	Wed May 19 20:00:57 1999
++++ ppd/Makefile	Tue Dec  7 21:58:21 1999
+@@ -48,6 +48,6 @@
  
  install:
 -	-$(MKDIR) $(DATADIR)/model
@@ -12,4 +11,3 @@ $NetBSD: patch-ar,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
 +	$(BSD_INSTALL_DATA) $(FILES) $(DATADIR)/model
  
  #
- # End of "$Id: patch-ar,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $".

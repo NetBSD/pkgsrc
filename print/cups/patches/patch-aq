@@ -1,18 +1,15 @@
-$NetBSD: patch-aq,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
+$NetBSD: patch-aq,v 1.2 1999/12/07 21:01:47 rh Exp $
 
---- man/Makefile.orig	Mon Jun 21 11:27:44 1999
-+++ man/Makefile	Sun Nov 28 21:06:28 1999
-@@ -41,7 +41,7 @@
- # Make everything...
+--- man/Makefile.orig	Mon Jun 21 17:27:44 1999
++++ man/Makefile	Tue Dec  7 21:59:46 1999
+@@ -42,5 +42,5 @@
  #
  
 -all:	$(CAT1) $(CAT5) $(CAT8)
 +all:	# $(CAT1) $(CAT5) $(CAT8)
  
  #
- # Clean all config and object files...
-@@ -54,24 +54,15 @@
- #
+@@ -55,22 +55,13 @@
  
  install:
 -	-$(MKDIR) $(MANDIR)/man1
@@ -41,4 +38,3 @@ $NetBSD: patch-aq,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $
 -	$(LN) enable.$(CAT) $(MANDIR)/cat8/disable.$(CAT)
  
  #
- # End of "$Id: patch-aq,v 1.1.1.1 1999/11/29 02:18:54 jlam Exp $".
