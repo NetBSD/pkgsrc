@@ -1,0 +1,37 @@
+$NetBSD: patch-ba,v 1.1 1998/11/05 01:34:02 mycroft Exp $
+
+--- Makefile.in.orig	Sat Sep 12 09:16:32 1998
++++ Makefile.in	Wed Nov  4 20:08:24 1998
+@@ -124,21 +124,19 @@
+ 	[ -d $(installprefix)/$(RPMCONFIGDIR) ] ||  \
+ 		$(mkinstalldirs) $(installprefix)/$(RPMCONFIGDIR)
+ 	if [ -x ./rpm ]; then \
+-	    $(INSTALL_PROGRAM) -s -m 755 rpm $(installprefix)/$(RPMBINDIR); \
++	    $(BSD_INSTALL_PROGRAM) rpm $(installprefix)/$(RPMBINDIR); \
+ 	else \
+-	    $(INSTALL_PROGRAM) -s -m 755 rpm.shared $(installprefix)/$(RPMBINDIR)/rpm; \
++	    $(BSD_INSTALL_PROGRAM) rpm.shared $(installprefix)/$(RPMBINDIR)/rpm; \
+ 	fi
+-	$(INSTALL_PROGRAM) -m 755 $(srcdir)/gendiff $(installprefix)/$(BINDIR)
+-	$(INSTALL_PROGRAM) -m 755 $(topdir)/mkinstalldirs $(installprefix)/$(RPMCONFIGDIR)/mkinstalldirs
+-	$(INSTALL_PROGRAM) -m 755 $(topdir)/find-provides.sh $(installprefix)/$(RPMCONFIGDIR)/find-provides
+-	$(INSTALL_PROGRAM) -m 755 $(topdir)/find-requires.sh $(installprefix)/$(RPMCONFIGDIR)/find-requires
+-	$(INSTALL_PROGRAM) -s -m 755 rpm2cpio $(installprefix)/$(BINDIR)
+-	$(INSTALL_DATA) -m 644 $(srcdir)/rpm.8 $(installprefix)/$(MANDIR)
+-	$(INSTALL_DATA) -m 644 $(srcdir)/rpm2cpio.8 $(installprefix)/$(MANDIR)
+-	$(INSTALL_DATA) -m 644 $(topdir)/lib-rpmrc $(installprefix)/$(RPMCONFIGDIR)/rpmrc
+-	$(INSTALL_DATA) -m 644 $(srcdir)/rpmpopt $(installprefix)/$(RPMCONFIGDIR)/rpmpopt
+-	ln -sf $(RPMCONFIGDIR)/rpmrc $(installprefix)/$(LIBDIR)/rpmrc
+-	ln -sf $(RPMCONFIGDIR)/rpmpopt $(installprefix)/$(LIBDIR)/rpmpopt
++	$(BSD_INSTALL_SCRIPT) $(srcdir)/gendiff $(installprefix)/$(BINDIR)
++	$(BSD_INSTALL_SCRIPT) $(topdir)/mkinstalldirs $(installprefix)/$(RPMCONFIGDIR)/mkinstalldirs
++	$(BSD_INSTALL_SCRIPT) $(topdir)/find-provides.sh $(installprefix)/$(RPMCONFIGDIR)/find-provides
++	$(BSD_INSTALL_SCRIPT) $(topdir)/find-requires.sh $(installprefix)/$(RPMCONFIGDIR)/find-requires
++	$(BSD_INSTALL_PROGRAM) rpm2cpio $(installprefix)/$(BINDIR)
++	$(BSD_INSTALL_MAN) $(srcdir)/rpm.8 $(installprefix)/$(MANDIR)
++	$(BSD_INSTALL_MAN) $(srcdir)/rpm2cpio.8 $(installprefix)/$(MANDIR)
++	$(BSD_INSTALL_DATA) $(topdir)/lib-rpmrc $(installprefix)/$(RPMCONFIGDIR)/rpmrc
++	$(BSD_INSTALL_DATA) $(srcdir)/rpmpopt $(installprefix)/$(RPMCONFIGDIR)/rpmpopt
+ 	(cd lib; $(MAKE) LIBDIR=$(installprefix)/$(LIBDIR) INCDIR=$(installprefix)/$(INCDIR) install)
+ 	for d in $(INSTSUBDIRS); do \
+ 		(cd $$d; $(MAKE) installprefix=$(installprefix) LIBDIR=$(installprefix)/$(LIBDIR) INCDIR=$(installprefix)/$(INCDIR) install) ;\

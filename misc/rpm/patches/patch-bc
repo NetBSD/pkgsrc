@@ -1,0 +1,15 @@
+$NetBSD: patch-bc,v 1.1 1998/11/05 01:34:02 mycroft Exp $
+
+--- popt/Makefile.in.orig	Sun Sep 27 10:57:03 1998
++++ popt/Makefile.in	Wed Nov  4 20:11:39 1998
+@@ -63,8 +63,8 @@
+ install:
+ 	mkdir -p $(PREFIX)/$(INCLUDE)
+ 	mkdir -p $(PREFIX)/$(LIBS)
+-	$(INSTALL_DATA) -m 644 popt.h $(PREFIX)/$(INCLUDE)/popt.h
+-	$(INSTALL_DATA) -m 644 $(LIBPOPT) $(PREFIX)/$(LIBS)/$(LIBPOPT)
++	$(BSD_INSTALL_DATA) popt.h $(PREFIX)/$(INCLUDE)/popt.h
++	$(BSD_INSTALL_DATA) $(LIBPOPT) $(PREFIX)/$(LIBS)/$(LIBPOPT)
+ 
+ archive:
+ 	cvs tag -F $(CVSTAG) .
