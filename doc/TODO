@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2507 2004/11/27 01:05:13 wiz Exp $
+$NetBSD: TODO,v 1.2508 2004/11/27 01:27:26 hamajima Exp $
 
 Suggested new packages
 ======================
@@ -444,7 +444,6 @@ Suggested package updates
 	o dpkg-1.10.25
 	o drscheme-208
 	o dsssl-docbook-modular-1.79
-	o dtcp-20040611
 	o dvd+rw-tools-5.21.4.10.8
 	o dvdrip-0.51.2
 	o dvipng-1.2 [http://sourceforge.net/projects/dvipng/]
