@@ -1,15 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2000/06/23 16:33:22 hubertf Exp $
---- Makefile.orig	Tue Jan 16 06:36:38 1996
-+++ Makefile	Fri Nov 26 15:04:05 1999
-@@ -15,15 +15,17 @@
+$NetBSD: patch-ab,v 1.5 2001/05/22 05:48:15 jlam Exp $
+
+--- Makefile.orig	Tue Jan 16 00:36:38 1996
++++ Makefile	Tue May 22 01:33:10 2001
+@@ -15,21 +15,21 @@
  #
  # add -DUSE_READLINE	To compile in support for the GNU readline library.
  
 -CFLAGS= -s -O2 -DUSE_READLINE
-+CFLAGS+= -I${LOCALBASE}/include -DUSE_READLINE
- CC= gcc
--LIBS= -lreadline -ltermcap
-+LIBS= -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lreadline -ltermcap
+-CC= gcc
++CFLAGS+= -DUSE_READLINE
++#CC= gcc
+ LIBS= -lreadline -ltermcap
  ALLFILES= makefile cdgram.y cdlex.l cdecl.c cdecl.1 testset testset++
 -BINDIR= /usr/bin
 -MANDIR= /usr/man/man1
@@ -19,18 +20,15 @@ $NetBSD: patch-ab,v 1.4 2000/06/23 16:33:22 hubertf Exp $
 +BINDIR= ${PREFIX}/bin
 +MANDIR= ${PREFIX}/man/man1
 +CATDIR= ${PREFIX}/man/cat1
-+#INSTALL= install -c
-+INSTALL_DATA= ${BSD_INSTALL_DATA}
-+
-+all: cdecl
++INSTALL= ${BSD_INSTALL_PROGRAM}
++INSTALL_DATA= ${BSD_INSTALL_MAN}
  
  cdecl: c++decl
  	ln c++decl cdecl
-@@ -44,6 +46,7 @@
  
- install: cdecl
- 	$(INSTALL) cdecl $(BINDIR)
-+	rm -f ${BINDIR}/c++decl
- 	ln $(BINDIR)/cdecl $(BINDIR)/c++decl
- 	$(INSTALL_DATA) cdecl.1 $(MANDIR)
- 	$(INSTALL_DATA) c++decl.1 $(MANDIR)
+ c++decl: cdgram.c cdlex.c cdecl.c
+-	$(CC) $(CFLAGS) -o c++decl cdecl.c $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o c++decl cdecl.c $(LIBS)
+ 	rm -f cdecl
+ 
+ cdlex.c: cdlex.l

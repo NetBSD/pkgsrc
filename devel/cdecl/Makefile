@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/25 04:17:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/22 05:48:14 jlam Exp $
 #
 
 DISTNAME=	cdecl-2.5
@@ -10,13 +10,19 @@ MASTER_SITES=	ftp://ftp.netsw.org/netsw/SoftEng/Lang/C/Tools/cdecl/  \
 		ftp://ftp.uakom.sk/pub/linux/devel/lang/c/
 
 MAINTAINER=     packages@netbsd.org
-#HOMEPAGE=
 COMMENT=	utility to explain and compose C and C++ declarations
 
-DEPENDS+=	readline>=4.0:../../devel/readline
+ALL_TARGET=	cdecl
+
+.include "../../devel/readline/Makefile.readline"
+
+CFLAGS+=	-I${WRKINCDIR}
+LDFLAGS+=	-L${WRKINCDIR}
+
+EGDIR=		${PREFIX}/share/examples/cdecl
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cdecl
-	${INSTALL_DATA} ${WRKSRC}/testset* ${PREFIX}/share/doc/cdecl
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/testset* ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
