@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/02/25 04:17:58 hubertf Exp $
+# $NetBSD: Makefile,v 1.22 2001/06/26 00:21:47 wiz Exp $
 
 DISTNAME=	exim-3.20
 CATEGORIES=	mail net
@@ -35,14 +35,14 @@ pre-install:
 
 post-install:
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
-	    < ${FILESDIR}/exim.sh \
+	    ${FILESDIR}/exim \
 	    > ${PREFIX}/etc/rc.d/exim
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
-	    < ${FILESDIR}/exim_newaliases \
+	    ${FILESDIR}/exim_newaliases \
 	    > ${PREFIX}/sbin/exim_newaliases
 	${CHMOD} ugo+x ${PREFIX}/sbin/exim_newaliases
 	${SED} -e 's:@PREFIX@:${PREFIX}:' \
-	    < ${FILESDIR}/mailer.conf.exim \
+	    ${FILESDIR}/mailer.conf.exim \
 	    > ${PREFIX}/etc/exim/mailer.conf.exim
 	${CP} ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/exim
