@@ -1,0 +1,3 @@
+fooseti is a simple frontend for the Seti@home client. It shows the current
+status of the client in a GTK+ window, allowing to start and stop it when
+wanted. Note that it does not support account configuration.
