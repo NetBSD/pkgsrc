@@ -1,0 +1,55 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
+
+--- /dev/null	Wed Feb 28 22:06:41 2001
++++ hdf/src/Makefile
+@@ -0,0 +1,50 @@
++LIB= df
++
++SHLIB_MAJOR= 0
++SHLIB_MINOR= 0
++
++LIBDIR= ${PREFIX}/lib
++
++JPEGLIB= -R${JPEGBASE}/lib -L${JPEGBASE}/lib -ljpeg
++JPEGINC= -I${JPEGBASE}/include
++ZLIB= -lz
++F2CLIB= -L${F2CBASE}/lib -lf2c
++F2CINC= -I${F2CBASE}/include
++
++CPPFLAGS+= -Dunix -DMEM_LIST ${JPEGINC} ${F2CINC}
++
++LDADD+= ${JPEGLIB} ${ZLIB} ${F2CLIB} -lm
++
++NOLINT= 1
++MKPICINSTALL= no
++MKPROFILE= no
++
++SRCS= atom.c bitvect.c cdeflate.c cnbit.c cnone.c crle.c cskphuff.c	\
++	df24.c df24f.c dfan.c dfanf.c dfcomp.c dfconv.c dff.c dfgr.c	\
++	dfgroup.c dfimcomp.c dfjpeg.c dfkconv.c dfkcray.c dfkfuji.c	\
++	dfknat.c dfkswap.c dfkvms.c dfp.c dfpf.c dfr8.c dfr8f.c dfrle.c	\
++	dfsd.c dfsdf.c dfstubs.c dfufp2i.c dfunjpeg.c dfutil.c dfutilf.c\
++	dir_mac.c dynarray.c glist.c hbitio.c hblocks.c hbuffer.c	\
++	hchunks.c hcomp.c hcompri.c hdfalloc.c herr.c herrf.c hextelt.c	\
++	hfile.c hfiledd.c hfilef.c hkit.c linklist.c mcache.c		\
++	mfan.c mfanf.c mfgr.c mfgrf.c mstdio.c tbbt.c vattr.c vattrf.c	\
++	vconv.c vg.c vgf.c vgp.c vhi.c vio.c vparse.c vrw.c vsfld.c	\
++	df24ff.c dfanff.c dfff.c dfpff.c dfr8ff.c dfsdff.c dfufp2if.c	\
++	hfileff.c mfgrff.c vattrff.c vgff.c
++
++INCLUDES= atom.h bitvect.h cdeflate.h cnbit.h cnone.h crle.h cskphuff.h	\
++	df.h dfan.h dfconvrt.h dffunc.inc dfgr.h dfi.h dfivms.h	dfrig.h	\
++	dfsd.h dfstubs.h dfufp2i.h dir_mac.h dynarray.h glist.h		\
++	hbitio.h hchunks.h hcomp.h hcompi.h hconv.h hdf.h hdf.inc	\
++	hdfi.h herr.h hfile.h hkit.h hlimits.h hntdefs.h hproto.h	\
++	hqueue.h htags.h linklist.h maldebug.h mcache.h mfan.h mfgr.h	\
++	mstdio.h patchlevel.h src.inc sys_dir_mac.h tbbt.h trace.h	\
++	vattr.h vg.h vgint.h
++
++afterinstall:
++	${BSD_INSTALL_DATA_DIR} ${PREFIX}/include/hdf
++	for f in ${INCLUDES}; do					\
++		${BSD_INSTALL_DATA} $$f ${PREFIX}/include/hdf/$$f;	\
++	done
++
++.include <bsd.lib.mk>
