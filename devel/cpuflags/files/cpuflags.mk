@@ -1,4 +1,4 @@
-# $Id: cpuflags.mk,v 1.5 2002/07/16 10:42:45 abs Exp $
+# $Id: cpuflags.mk,v 1.6 2002/07/19 09:31:05 abs Exp $
 # Makefile include fragment to simplify use of cpuflags in pkgsrc
 # abs@netbsd.org - freely distributable, no warrenties, stick no bills.
 
@@ -14,25 +14,18 @@
 
 .ifndef CPU_FLAGS
 
-xCPU_FLAGS!=/usr/pkg/bin/cpuflags
-xCPU_DIR!=echo ${CPU_FLAGS} | sed 's/ //'
-# Make the flags available to sub makes
-.MAKEFLAGS+=CPU_FLAGS="${xCPU_FLAGS}" CPU_DIR="${xCPU_DIR}"
-CPU_FLAGS=${xCPU_FLAGS}
-CPU_DIR=${xCPU_DIR}
+CPU_FLAGS!=/usr/pkg/bin/cpuflags
+CPU_DIR!=echo ${CPU_FLAGS} | sed 's/ //'
+MAKEFLAGS+=CPU_FLAGS=${CPU_FLAGS} CPU_DIR="${CPU_DIR}" 		# For sub makes
+
 .endif
 
-.ifdef BSD_PKG_MK
-
-# Try to catch the various package mechanisms
+.ifdef BSD_PKG_MK			# Try to catch various package opts
 CFLAGS+=${CPU_FLAGS}
 CXXFLAGS+=${CPU_FLAGS}
-# Override CCOPTIONS for imake
-MAKE_FLAGS+=CCOPTIONS="${CPU_FLAGS}"
+MAKE_FLAGS+=CCOPTIONS="${CPU_FLAGS}"	# Override CCOPTIONS for imake
 
-.else
-
-# Assume we are in the standard build system, only touch COPTS
+.else					# Assume in base system, only COPTS
 COPTS+=${CPU_FLAGS}
 
 .endif
