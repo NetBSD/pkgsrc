@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2003/12/04 19:48:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.19 2003/12/14 19:47:26 jmmv Exp $
 #
 
-DISTNAME=		gnome-vfs-2.2.4
+DISTNAME=		gnome-vfs-2.4.1
 PKGNAME=		${DISTNAME:S/vfs/vfs2/}
-PKGREVISION=		6
 CATEGORIES=		sysutils gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -29,6 +28,8 @@ CONFIGURE_ARGS= 	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--enable-platform-gnome-2
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.cdparanoia}/include/cdparanoia
 
 PKG_SYSCONFSUBDIR=	gnome-vfs-2.0
 OWN_DIRS=		${PKG_SYSCONFDIR}/modules ${PKG_SYSCONFDIR}/vfolders
@@ -56,9 +57,8 @@ GCONF2_SCHEMAS=	system_http_proxy.schemas
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/glib2/buildlink2.mk"
 .include "../../devel/libbonobo/buildlink2.mk"
-.include "../../devel/bonobo-activation/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
 .include "../../devel/popt/buildlink2.mk"
-.include "../../devel/zlib/buildlink2.mk"
 .include "../../net/ORBit2/buildlink2.mk"
 .include "../../textproc/libxml2/buildlink2.mk"
 .include "../../security/openssl/buildlink2.mk"
