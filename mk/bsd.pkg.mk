@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.160 1998/09/14 17:07:46 garbled Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.161 1998/09/15 17:05:08 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -286,28 +286,34 @@ SHAREGRP = ${DOCGRP}
 SHAREMODE = ${DOCMODE}
 .endif
 
-.if !defined(NO_WRKDIR)
-.if defined(OBJMACHINE)
+# If WRKOBJDIR is set, use that tree to build
+.ifdef WRKOBJDIR
+__canonical_PKGSRCDIR!=	cd ${PKGSRCDIR}; pwd -P
+__canonical_CURDIR!=	cd ${.CURDIR}; pwd -P
+PKGSRC_SUBDIR=		${__canonical_CURDIR:S,${__canonical_PKGSRCDIR}/,,}
+BUILD_DIR?=		${WRKOBJDIR}/${PKGSRC_SUBDIR}
+.else
+BUILD_DIR?=		${.CURDIR}
+.endif # WRKOBJDIR
+
+# If OBJMACHINE is set, use ${MACHINE_ARCH} in the working directory name
+.ifdef OBJMACHINE
 WRKDIR_BASENAME?=	work.${MACHINE_ARCH}
-.else # OBJMACHINE
+.else
 WRKDIR_BASENAME?=	work
-.endif # OBJMACHINE
-WRKDIR?=		${.CURDIR}/${WRKDIR_BASENAME}
-.else # !NO_WRKDIR
-WRKDIR?=		${.CURDIR}
+.endif
+
+.ifdef NO_WRKDIR
+WRKDIR?=		${BUILD_DIR}
+.else
+WRKDIR?=		${BUILD_DIR}/${WRKDIR_BASENAME}
 .endif # !NO_WRKDIR
+
 .if defined(NO_WRKSUBDIR)
 WRKSRC?=		${WRKDIR}
 .else # NO_WRKSUBDIR
 WRKSRC?=		${WRKDIR}/${DISTNAME}
 .endif # NO_WRKSUBDIR
-
-.if defined(WRKOBJDIR)
-# XXX Is pwd -P available in FreeBSD's /bin/sh?
-__canonical_PKGSRCDIR!=	cd ${PKGSRCDIR}; pwd -P
-__canonical_CURDIR!=	cd ${.CURDIR}; pwd -P
-PORTSUBDIR=		${__canonical_CURDIR:S,${__canonical_PKGSRCDIR}/,,}
-.endif
 
 # A few aliases for *-install targets
 INSTALL_PROGRAM?= \
@@ -829,13 +835,14 @@ mirror-distfiles:
 
 .if !target(do-extract)
 do-extract:
-.if !defined(NO_WRKDIR)
-.if defined(WRKOBJDIR)
-	@${RM} -rf ${WRKOBJDIR}/${PORTSUBDIR}/${WRKDIR_BASENAME}
-	@${MKDIR} -p ${WRKOBJDIR}/${PORTSUBDIR}/${WRKDIR_BASENAME}
-	@echo "${WRKDIR} -> ${WRKOBJDIR}/${PORTSUBDIR}/${WRKDIR_BASENAME}"
-	@# XXX whatif a build is going on right now?  Is this wise?
-	@${LN} -sf ${WRKOBJDIR}/${PORTSUBDIR}/${WRKDIR_BASENAME} ${WRKDIR}
+.ifndef NO_WRKDIR
+.ifdef WRKOBJDIR
+	@${RM} -rf ${WRKOBJDIR}/${PKGSRC_SUBDIR}/${WRKDIR_BASENAME}
+	@${MKDIR} -p ${WRKOBJDIR}/${PKGSRC_SUBDIR}/${WRKDIR_BASENAME}
+	@if [ ${WRKDIR} != ${WRKOBJDIR}/${PKGSRC_SUBDIR}/${WRKDIR_BASENAME} ]; then \
+		${ECHO} "${WRKDIR} -> ${WRKOBJDIR}/${PKGSRC_SUBDIR}/${WRKDIR_BASENAME}"; \
+		@${LN} -sf ${WRKOBJDIR}/${PKGSRC_SUBDIR}/${WRKDIR_BASENAME} ${WRKDIR}; \
+	fi
 .else
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
@@ -1323,7 +1330,7 @@ clean: pre-clean
 	@${ECHO_MSG} "===>  Cleaning for ${PKGNAME}"
 .if !defined(NO_WRKDIR)
 .if  defined(WRKOBJDIR)
-	@${RM} -rf ${WRKOBJDIR}/${PORTSUBDIR}
+	@${RM} -rf ${WRKOBJDIR}/${PKGSRC_SUBDIR}
 	@${RM} -f ${WRKDIR}
 .else
 	@if [ -d ${WRKDIR} ]; then \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/08/24 18:11:40 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/15 17:05:04 agc Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1998/05/26 04:04:11 mph Exp
 #
 
@@ -11,7 +11,15 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=     packages@netbsd.org
 
-BUILD_DEPENDS=	${PKGSRCDIR}/graphics/urt/${WRKDIR:T}/include/rle.h:../../graphics/urt:patch
+.include "../../mk/bsd.prefs.mk"
+
+.ifdef WRKOBJDIR
+BUILD_ROOT=	${WRKOBJDIR}
+.else
+BUILD_ROOT=	${PKGSRCDIR}
+.endif
+
+BUILD_DEPENDS=	${BUILD_ROOT}/graphics/urt/${WRKDIR:T}/include/rle.h:../../graphics/urt:configure
 DEPENDS+=	urt-3.1b1:../../graphics/urt
 
 HAS_CONFIGURE=		yes
@@ -20,8 +28,9 @@ CONFIGURE_ARGS+=	< ${WRKDIR}/config.ans
 ALL_TARGET=
 
 pre-configure:
-	${SED} -e 's|@CFLAGS@|${CFLAGS}|g' -e 's|\$${PREFIX}|${PREFIX}|g' \
-		-e 's|\$${URTDIR}|${.CURDIR}/../../graphics/urt/${WRKDIR:T}|g' \
+	${SED} -e 's|@CFLAGS@|${CFLAGS}|g' 			\
+		-e 's|\$${PREFIX}|${PREFIX}|g'			\
+		-e 's|\$${URTDIR}|${BUILD_ROOT}/graphics/urt/${WRKDIR:T}|g' \
 		${FILESDIR}/config.ans > ${WRKDIR}/config.ans
 
 do-install:
