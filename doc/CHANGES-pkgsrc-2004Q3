@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.26 2004/11/19 17:45:08 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.27 2004/11/24 22:41:58 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -55,3 +55,5 @@ Pullup ticket 142 - requested by Takahiro Kambe
 security fix for ruby-base
 Pullup ticket 143 - requested by Takahiro Kambe
 security and usability fixes for ja-squirrelmail
+Pullup ticket 147 - requested by Julio M. Merino Vidal
+security fix for libxml
