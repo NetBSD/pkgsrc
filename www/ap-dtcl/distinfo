@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2001/10/09 17:25:02 jwise Exp $
+$NetBSD: distinfo,v 1.7 2002/04/19 18:32:37 jwise Exp $
 
-SHA1 (mod_dtcl-0.11.2.tar.gz) = a1e89ee3677ee63984ed0d52350541ee49376795
-Size (mod_dtcl-0.11.2.tar.gz) = 157550 bytes
-SHA1 (patch-aa) = a3c49a6adfa3383f115c4bfaf5b1139a6de23fe6
+SHA1 (mod_dtcl-0.11.6.tar.gz) = 8a48b2292bb1048b17fd268011d1a4307ef5770e
+Size (mod_dtcl-0.11.6.tar.gz) = 90374 bytes
+SHA1 (patch-aa) = 8dd25eb370d2cf598cac4c42842b863fa0943451
