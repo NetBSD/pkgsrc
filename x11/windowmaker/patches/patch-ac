@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.7 2000/04/06 22:38:19 jlam Exp $
+
+--- aclocal.m4.orig	Fri Mar 31 06:37:09 2000
++++ aclocal.m4	Sun Apr  2 11:59:58 2000
+@@ -366,7 +366,10 @@
+ 
+ # serial 40 AC_PROG_LIBTOOL
+ AC_DEFUN(AC_PROG_LIBTOOL,
+-[AC_REQUIRE([AC_LIBTOOL_SETUP])dnl
++[
++dnl Always use NetBSD's libtool
++if false; then
++AC_REQUIRE([AC_LIBTOOL_SETUP])dnl
+ 
+ # Save cache, so that ltconfig can load it
+ AC_CACHE_SAVE
+@@ -393,6 +396,7 @@
+ # Redirect the config.log output again, so that the ltconfig log is not
+ # clobbered by the next message.
+ exec 5>>./config.log
++fi
+ ])
+ 
+ AC_DEFUN(AC_LIBTOOL_SETUP,
