@@ -1,17 +1,32 @@
-$NetBSD: patch-ab,v 1.1 2004/04/19 04:14:35 simonb Exp $
+$NetBSD: patch-ab,v 1.2 2004/06/19 14:38:56 markd Exp $
 
---- lib/t1lib/t1base.c.orig	Sat Mar  6 12:58:04 2004
-+++ lib/t1lib/t1base.c
-@@ -138,7 +138,11 @@ void *T1_InitLib( int log)
-   char *logfilepath=NULL;
-   char *envlogreq=NULL;
-   int  usrforcelog=0;
+diff -ur t1lib-5.0.2/lib/t1lib/t1base.c t1lib-5.0.1/lib/t1lib/t1base.c
+--- t1lib-5.0.2/lib/t1lib/t1base.c	2004-03-06 14:58:04.000000000 +1300
++++ lib/t1lib/t1base.c	2004-02-02 14:16:16.000000000 +1300
+@@ -281,12 +276,7 @@
+ 		   T1LOG_WARNING);
+   }
+   
+-  /* Initialize builtin Standard Encoding */
+-  if ( !(Init_BuiltInEncoding()) ) {
+-      T1_PrintLog( "T1_InitLib()", "Unable initialize internal StandardEncoding!",
+-		   T1LOG_ERROR);
+-  }
 -  
-+  static int initdone;
 +
-+  if (initdone)
-+    return (pFontBase);
-+  initdone++;
+   /* Set the default encoding to the fonts' internal encoding */
+   pFontBase->default_enc=NULL;
    
-   
-   /* Reset T1_errno */
+@@ -507,12 +497,6 @@
+     else
+       error=1;
+ 
+-    /* Get rid of internal StandardEncoding vector */
+-    if ( StdEncArrayP != NULL ) {
+-      free( StdEncArrayP);
+-      StdEncArrayP = NULL;
+-    }
+-
+     /* Free search paths */
+     intT1_FreeSearchPaths();
+ 

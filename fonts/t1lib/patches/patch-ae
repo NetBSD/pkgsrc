@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 2004/06/19 14:38:56 markd Exp $
+
+diff -ur t1lib-5.0.2/lib/type1/fontfcn.c t1lib-5.0.1/lib/type1/fontfcn.c
+--- t1lib-5.0.2/lib/type1/fontfcn.c	2004-03-06 14:41:40.000000000 +1300
++++ lib/type1/fontfcn.c	2003-01-03 16:28:26.000000000 +1300
+@@ -57,6 +57,7 @@
+ 			 float line_thickness,
+ 			 float line_length,
+ 			 float strokewidth);
++extern  boolean Init_BuiltInEncoding( void);
+ void objFormatName(psobj *objP, int length, char *valueP);
+   
+ extern void T1io_reset( void);
+@@ -156,6 +157,7 @@
+ {
+   if (!(vm_init())) return(FALSE);
+   vm_base = vm_next_byte();
++  if (!(Init_BuiltInEncoding())) return(FALSE);
+   strcpy(CurFontName, "");    /* iniitialize to none */
+   FontP->vm_start = vm_next_byte();
+   FontP->FontFileName.len = 0;
