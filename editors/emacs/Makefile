@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 1999/12/03 12:55:44 agc Exp $
+# $NetBSD: Makefile,v 1.31 1999/12/05 23:02:36 bouyer Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 #
 
@@ -25,6 +25,6 @@ post-build:
 	${WRKSRC}/src/emacs -batch -f batch-byte-compile mh-comp.el mh-utils.el)
 
 post-install:
-	chown -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
 
 .include "../../mk/bsd.pkg.mk"
