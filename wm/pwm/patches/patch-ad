@@ -1,42 +1,13 @@
-$NetBSD: patch-ad,v 1.2 2001/07/28 21:44:37 jlam Exp $
+$NetBSD: patch-ad,v 1.3 2001/08/21 08:17:40 abs Exp $
 
---- system.mk.orig	Sat Jul  1 08:37:50 2000
-+++ system.mk
-@@ -7,7 +7,7 @@
- ## Installation directory prefix
- ##
+--- libtu/tester.c.orig	Mon Aug 20 22:05:33 2001
++++ libtu/tester.c
+@@ -18,7 +18,7 @@
+ 	
+ 	libtu_init(argv[0]);
+ 	
+-	if(!(tokz=tokz_open_file(stdin)))
++	if(!(tokz=tokz_open_file(stdin, NULL)))
+ 		return EXIT_FAILURE;
  
--PREFIX=/usr/local
-+#PREFIX=/usr/local
- 
- #EXTRA_INCLUDES = -I$(PREFIX)/include
- #EXTRA_LIBS = -L$(PREFIX)/lib
-@@ -17,7 +17,7 @@
- ## X libraries, includes and options
- ##
- 
--X11_PREFIX=/usr/X11R6
-+X11_PREFIX=${X11BASE}
- 
- # SunOS/Solaris
- #X11_PREFIX=/usr/openwin
-@@ -31,7 +31,7 @@
- ## C compiler
- ##
- 
--CC=gcc
-+#CC=gcc
- 
- # The POSIX_SOURCE, XOPEN_SOURCE and WARN options should not be necessary,
- # they're mainly for development use. So, if they cause trouble (not
-@@ -57,8 +57,8 @@
- 	-Wtrigraphs -Wformat -Wchar-subscripts -Wuninitialized \
- 	-Wparentheses -pedantic-errors
- 
--CFLAGS=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
--LDFLAGS=-g $(LIBS) $(EXTRA_LIBS)
-+CFLAGS+=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
-+LDFLAGS+=$(LIBS)
- 
- 
- ##
+ 	while(tokz_get_token(tokz, &tok)){
