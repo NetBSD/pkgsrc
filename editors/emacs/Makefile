@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2004/03/25 22:28:12 kristerw Exp $
+# $NetBSD: Makefile,v 1.71 2004/04/12 10:53:07 xtraeme Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-21.3
@@ -12,7 +12,7 @@ COMMENT=	GNU editing macros (editor)
 
 CONFLICTS=	mule-[0-9]*
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_X11=		yes
 USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
@@ -22,21 +22,21 @@ CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-x-toolkit=athena
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC}
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-xpm
-.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-jpeg
-.include "../../graphics/tiff/buildlink2.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-tiff
 # need 4.1.0b1 or higher (a bug in 4.1.0 can crash Emacs)
 BUILDLINK_DEPENDS.libungif=	libungif>=4.1.0.1
-.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/libungif/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gif
-.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/png/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-png
 
 .if defined(EMACS_USE_XAW3D) && !empty(EMACS_USE_XAW3D:M[Yy][Ee][Ss])
-.include "../../x11/Xaw3d/buildlink2.mk"
+.include "../../x11/Xaw3d/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.prefs.mk"

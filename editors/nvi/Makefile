@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2004/02/14 17:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2004/04/12 11:09:01 xtraeme Exp $
 #
 
 DISTNAME=	nvi-1.81.5
@@ -24,7 +24,7 @@ CONFIGURE_SCRIPT=	../dist/configure
 CONFIGURE_ARGS+=	--with-db3=${BUILDLINK_PREFIX.db3}
 CONFIGURE_ARGS+=	--program-transform-name='s,^,n,'
 USE_LIBTOOL=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 
-.include "../../databases/db3/buildlink2.mk"
+.include "../../databases/db3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
