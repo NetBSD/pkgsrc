@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2000/12/12 17:22:39 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2001/03/23 12:36:55 drochner Exp $
 
---- configure.orig	Thu Nov  2 19:09:25 2000
-+++ configure	Mon Dec 11 00:17:01 2000
+--- configure.orig	Thu Feb  8 00:27:38 2001
++++ configure	Mon Mar 12 16:13:43 2001
 @@ -823,8 +823,8 @@
  MESA_MAJOR=3
  MESA_MINOR=4
- MESA_TINY=0
+ MESA_TINY=1
 -LIBGL_VERSION=1:2:0${MESA_MAJOR}0${MESA_MINOR}0${MESA_TINY}
 -LIBGLU_VERSION=1:1:0${MESA_MAJOR}0${MESA_MINOR}0${MESA_TINY}
 +LIBGL_VERSION=${MESA_MAJOR}:${MESA_MINOR}:${MESA_TINY}
