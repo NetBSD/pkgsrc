@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/07/28 20:07:01 rh Exp $
+bin/clustalw
+share/doc/clustalw/clustalv.doc
+share/doc/clustalw/clustalw.doc
+share/doc/clustalw/clustalw.ms
+share/doc/clustalw/clustalw_help
+@dirrm share/doc/clustalw

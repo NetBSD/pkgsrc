@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/07/28 20:07:01 rh Exp $
+
+--- amenu.c.orig	Mon Dec  8 08:49:12 1997
++++ amenu.c	Sat Apr 10 22:07:58 1999
+@@ -13,7 +13,9 @@
+ static jmp_buf jmpbuf;
+ #ifndef VMS
+ #ifndef AIX
++#ifndef BADSIG
+ #define BADSIG (void (*)())-1
++#endif
+ #endif
+ #endif
+ 
