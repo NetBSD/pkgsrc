@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2000/03/07 03:35:45 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2000/07/31 07:37:00 jlam Exp $
 
---- src/wmtaskbar.cc.orig	Sun Feb  6 11:15:45 2000
-+++ src/wmtaskbar.cc	Mon Mar  6 22:20:48 2000
-@@ -253,7 +253,11 @@
+--- src/wmtaskbar.cc.orig	Sun Mar 19 08:34:58 2000
++++ src/wmtaskbar.cc	Mon Jul 31 01:47:42 2000
+@@ -254,7 +254,11 @@
      } else
          fClock = 0;
  #ifdef CONFIG_APM
