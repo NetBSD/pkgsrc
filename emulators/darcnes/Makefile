@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2000/03/08 01:42:12 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2000/06/03 10:57:11 wiz Exp $
 
-DISTNAME=	dn9a0305
-PKGNAME=	darcnes-20000305
+DISTNAME=	dn9a0530
+PKGNAME=	darcnes-20000530
 WRKSRC=		${WRKDIR}/darcnes
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.netway.com/~nyef/
@@ -14,10 +14,6 @@ LICENSE=	no-commercial-use
 
 USE_X11=	yes
 USE_GMAKE=	yes
-
-# make dependencies
-post-patch:
-	cd ${WRKSRC} && ${GMAKE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/darcnes ${PREFIX}/bin
