@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/11 17:31:29 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/10/02 22:09:46 adrianp Exp $
 lib/services/convert-db
-lib/services/example-ircservices.conf
-lib/services/example-modules.conf
 lib/services/helpfiles/help
 lib/services/languages/de
 lib/services/languages/en_us
@@ -52,6 +50,7 @@ lib/services/modules/operserv/sline.so
 lib/services/modules/protocol/bahamut.so
 lib/services/modules/protocol/dalnet.so
 lib/services/modules/protocol/dreamforge.so
+lib/services/modules/protocol/hybrid.so
 lib/services/modules/protocol/monkey.so
 lib/services/modules/protocol/ptlink.so
 lib/services/modules/protocol/rfc1459.so
@@ -60,8 +59,43 @@ lib/services/modules/protocol/ts8.so
 lib/services/modules/protocol/undernet-p9.so
 lib/services/modules/protocol/unreal.so
 lib/services/modules/statserv/main.so
+man/man8/convert-db.8
+man/man8/ircservices.8
 sbin/ircservices
 sbin/ircservices-chk
+share/examples/ircservices/modules.conf
+share/examples/ircservices/ircservices.conf
+share/doc/html/ircservices/0.html
+share/doc/html/ircservices/1.html
+share/doc/html/ircservices/2.html
+share/doc/html/ircservices/3.html
+share/doc/html/ircservices/4.html
+share/doc/html/ircservices/5.html
+share/doc/html/ircservices/6.html
+share/doc/html/ircservices/7.html
+share/doc/html/ircservices/COPYING.html
+share/doc/html/ircservices/a.html
+share/doc/html/ircservices/b.html
+share/doc/html/ircservices/c.html
+share/doc/html/ircservices/copyright.html
+share/doc/html/ircservices/faq.html
+share/doc/html/ircservices/index.html
+share/doc/html/ircservices/upgrade.html
+@dirrm share/doc/html/ircservices
+@dirrm share/examples/ircservices
+@dirrm lib/services/helpfiles/ircii/alias
+@dirrm lib/services/helpfiles/ircii/bind
+@dirrm lib/services/helpfiles/ircii/ctcp
+@dirrm lib/services/helpfiles/ircii/dcc
+@dirrm lib/services/helpfiles/ircii/ircii
+@dirrm lib/services/helpfiles/ircii/load
+@dirrm lib/services/helpfiles/ircii/note
+@dirrm lib/services/helpfiles/ircii/on
+@dirrm lib/services/helpfiles/ircii/set
+@dirrm lib/services/helpfiles/ircii/window
+@dirrm lib/services/helpfiles/ircii
+@dirrm lib/services/helpfiles
+@dirrm lib/services/languages
 @dirrm lib/services/modules/statserv
 @dirrm lib/services/modules/protocol
 @dirrm lib/services/modules/operserv
@@ -74,6 +108,4 @@ sbin/ircservices-chk
 @dirrm lib/services/modules/database
 @dirrm lib/services/modules/chanserv
 @dirrm lib/services/modules
-@dirrm lib/services/languages
-@dirrm lib/services/helpfiles
 @dirrm lib/services

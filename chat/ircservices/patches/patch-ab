@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2004/10/02 22:09:46 adrianp Exp $
+
+--- data/Makefile.orig	2004-10-02 20:44:29.000000000 +0100
++++ data/Makefile	2004-10-02 20:44:38.000000000 +0100
+@@ -12,8 +12,6 @@
+ all:	# Nothing to do
+ 
+ install: all $(DATDEST)/helpfiles
+-	$(INSTALL_DAT) example-ircservices.conf "$(DATDEST)/example-ircservices.conf"
+-	$(INSTALL_DAT) example-modules.conf "$(DATDEST)/example-modules.conf"
+ 
+ $(DATDEST)/helpfiles:
+ 	$(CP_ALL) helpfiles "$(DATDEST)"
