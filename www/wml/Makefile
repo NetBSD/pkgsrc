@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/12/25 19:25:28 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/10/25 18:07:35 wiz Exp $
 #
 
 DISTNAME=	wml-2.0.3
@@ -15,16 +15,14 @@ DEPENDS+=	p5-Image-Size>=2.6:../../graphics/p5-Image-Size
 DEPENDS+=	p5-Term-ReadKey>=2.11:../../devel/p5-Term-ReadKey
 #DEPENDS+=	tidy-[0-9]*:../../www/tidy
 
-USE_PERL5=	yes
-
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-perl=${PERL5} \
-		--with-incdir=${BUILDLINK_DIR}/include \
-		--with-libdir=${BUILDLINK_DIR}/lib \
+		--with-incdir=${BUILDLINK_PREFIX.ncurses}/include \
+		--with-libdir=${BUILDLINK_PREFIX.ncurses}/lib \
 		--with-openworld \
 		--with-tidy=${LOCALBASE}/bin/tidy
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=	yes
 
 # redrawwin()
 USE_NCURSES=	yes
@@ -46,5 +44,6 @@ post-install:
 test:
 	@cd ${WRKSRC} && ${MAKE} test
 
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
