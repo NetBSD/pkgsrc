@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.2.10.1 2005/03/02 22:15:42 salo Exp $
+
+--- lib/fsplib/lock.c.orig	2005-01-02 15:45:51.000000000 +0000
++++ lib/fsplib/lock.c	2005-03-02 14:26:27.000000000 +0000
+@@ -2,6 +2,10 @@
+ #include <stdio.h>
+ #include "lock.h"
+ 
++#if defined(__NetBSD__) || defined(sun)
++#define	_SEM_SEMUN_UNDEFINED	/**/
++#endif
++
+ /* ************ Locking functions ***************** */
+ #ifndef FSP_NOLOCKING
+ 
