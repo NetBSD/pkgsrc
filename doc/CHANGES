@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.769 2002/12/13 15:40:44 cjep Exp $
+$NetBSD: CHANGES,v 1.770 2002/12/13 16:30:07 cjep Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3937,3 +3937,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated mysql-server to 3.23.49nb1 [tron 2002-12-13]
 	Updated fetchmail to 6.2.0 [tron 2002-12-13]
 	Added arj-3.10b [cjep 2002-12-13]
+	Added xpk-0.1.4 [cjep 2002-12-13]
