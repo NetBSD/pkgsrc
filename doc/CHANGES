@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9644 2005/03/26 23:10:45 jschauma Exp $
+$NetBSD: CHANGES,v 1.9645 2005/03/27 12:20:31 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1771,3 +1771,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added lucy-1.18p [minskim 2005-03-26]
 	Updated ircservices to 5.0.49 [adrianp 2005-03-26]
 	Added sparsehash-0.1 [jschauma 2005-03-26]
+	Updated imp to 4.0.2 [adrianp 2005-03-27]
