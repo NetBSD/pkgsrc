@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/12/30 05:11:57 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/12/31 20:58:29 wiz Exp $
 bin/abc2ly
 bin/convert-ly
 bin/etf2ly
@@ -834,5 +834,8 @@ share/omf/lilypond/${PKGVERSION}/music-glossary.ps.gz.omf
 @dirrm share/lilypond/${PKGVERSION}/fonts
 @dirrm share/lilypond/${PKGVERSION}/dvips
 @dirrm share/lilypond/${PKGVERSION}
+@dirrm share/lilypond
 @dirrm lib/lilypond/${PKGVERSION}/python
+@dirrm lib/lilypond/${PKGVERSION}
+@dirrm lib/lilypond
 @dirrm info/lilypond
