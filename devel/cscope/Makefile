@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2001/10/03 14:57:21 seb Exp $
+# $NetBSD: Makefile,v 1.17 2001/10/03 15:06:15 wiz Exp $
 
 DISTNAME=	cscope-15.3
 CATEGORIES=	devel
@@ -23,8 +23,8 @@ LEX=			${LOCALBASE}/bin/flex
 
 CONFIGURE_ENV+=		LEX=${LEX}
 
-# touch some carefully selected auto* tools generated files to avoid
-# unnecessary regen of them after the pkg's patch had been applied
+# Touch some carefully selected auto*-tools-generated files to avoid their
+# unnecessary re-generation after the package's patches have been applied.
 pre-configure:
 	${TOUCH} ${WRKSRC}/aclocal.m4
 	${TOUCH} ${WRKSRC}/stamp-h.in
