@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/02/13 23:01:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2003/02/13 23:14:38 jmmv Exp $
 #
 
 DISTNAME=	gnome2-dirs-${GNOME_DIRS_VERSION}
@@ -28,6 +28,7 @@ GNOME_DIRS=	${GNOME_DIRS_COMMON}
 .endif
 
 GNOME_DIRS+=	share/applications
+GNOME_DIRS+=	share/application-registry
 GNOME_DIRS+=	share/control-center-2.0
 GNOME_DIRS+=	share/control-center-2.0/capplets
 GNOME_DIRS+=	share/gnome-2.0
