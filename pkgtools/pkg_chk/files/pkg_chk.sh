@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.11 2005/02/01 20:44:48 wiz Exp $
+# $Id: pkg_chk.sh,v 1.12 2005/02/09 09:50:26 abs Exp $
 #
 # TODO: Handle updates with dependencies via binary packages
 
@@ -164,7 +164,7 @@ fatal_maybe()
 get_build_ver()
     {
     if [ -n "$opt_b" -a -z "$opt_s" ] ; then
-	${PKG_INFO} -b $PACKAGES/$PKGNAME.tgz | tail +4 | ${SED} "s|^[^:]*/[^:]*:||" | ${GREP} .
+	${PKG_INFO} -. -b $PACKAGES/$PKGNAME.tgz | tail +4 | ${SED} "s|^[^:]*/[^:]*:||" | ${GREP} .
 	return
     fi
     files=""
