@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2003/03/22 03:13:37 salo Exp $
+# $NetBSD: Makefile.common,v 1.28 2003/04/01 08:04:54 mrg Exp $
 #
 
 MPLAYER_DIST_VERSION=	0.90rc5
@@ -54,9 +54,12 @@ CONFIGURE_ARGS+=	--with-win32libdir="${LOCALBASE}/lib/win32"
 .  if ${MPLAYER_ENABLE_RUNTIME_CPU_DETECTION} == YES
 CONFIGURE_ARGS+=	--enable-runtime-cpudetection
 .  endif
+BUILD_DEFS+=		MPLAYER_ENABLE_RUNTIME_CPU_DETECTION
+.endif
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "alpha"
 .  if ${MPLAYER_USE_REALMEDIA} == "YES"
 CONFIGURE_ARGS+=	--with-reallibdir="${LOCALBASE}/lib/RealPlayer8/Codecs"
 .  endif
-BUILD_DEFS+=		MPLAYER_ENABLE_RUNTIME_CPU_DETECTION
 BUILD_DEFS+=		MPLAYER_USE_REALMEDIA
 .endif
