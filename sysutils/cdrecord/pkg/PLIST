@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 1998/05/08 16:53:42 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/03/03 15:27:12 scw Exp $
 bin/cdrecord
+bin/cdda2wav
+bin/readcd
+man/man1/cdda2wav.1
 man/man1/cdrecord.1
 @exec [ -e /dev/scgx ] || ln -s /dev/cd0d /dev/scgx
 @unexec /bin/rm -f /dev/scgx
