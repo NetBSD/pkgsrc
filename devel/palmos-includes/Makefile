@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:38 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/04/06 19:25:02 dillo Exp $
 #
 
 DISTNAME=       sdk50-win
@@ -11,7 +11,7 @@ DISTFILES+=	sdk40-core.tar.gz sdk40upd1.tar.gz
 DISTFILES+=	sdk35.tar.gz sdk35-update1.tar.gz
 DISTFILES+=	sdk31a1.zip
 
-MAINTAINER=	dillo@giga.or.at
+MAINTAINER=	tech-pkg@giga.or.at
 HOMEPAGE=	http://www.palmos.com/dev/tools/gcc/index.html
 COMMENT=	Palm OS include files
 
