@@ -1,0 +1,12 @@
+*** win32/console.c.orig	Sun Feb 15 14:21:01 1998
+--- win32/console.c	Fri Mar  6 17:59:23 1998
+***************
+*** 10,14 ****
+--- 10,16 ----
+  #include <stdlib.h>
+  #include <unistd.h>
++ #ifndef __NetBSD__
+  #include <pty.h>
++ #endif
+  #include <termios.h>
+  #include <sys/ioctl.h>
