@@ -1,10 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/30 23:47:20 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/05 22:09:23 tv Exp $
 bin/sun15-appletviewer
+bin/sun15-apt
+bin/sun15-extcheck
+bin/sun15-idlj
 bin/sun15-jar
+bin/sun15-jarsigner
 bin/sun15-javac
 bin/sun15-javadoc
 bin/sun15-javah
 bin/sun15-javap
+bin/sun15-jdb
+bin/sun15-rmic
+bin/sun15-serialver
 java/sun-1.5/README.html
 java/sun-1.5/bin/HtmlConverter
 java/sun-1.5/bin/appletviewer
