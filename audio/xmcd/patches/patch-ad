@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.4 1999/06/28 07:49:06 tron Exp $
+
+--- install.sh.orig	Sat Apr 24 03:40:51 1999
++++ install.sh	Sat Jun 26 01:34:32 1999
+@@ -401,7 +401,7 @@
+ #
+ OS_SYS=`(uname -s) 2>/dev/null`
+ OS_VER=`(uname -r) 2>/dev/null`
+-OS_MACH=`(uname -m) 2>/dev/null`
++OS_MACH=$MACHINE_ARCH
+ 
+ if [ -z "$OS_SYS" ]
+ then
