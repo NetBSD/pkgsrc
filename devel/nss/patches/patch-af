@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1.1.1 2005/02/01 21:51:12 jschauma Exp $
+
+--- ../coreconf/NetBSD.mk.orig	Thu Jan 20 09:04:51 2005
++++ ../coreconf/NetBSD.mk	Thu Jan 20 09:06:49 2005
+@@ -58,12 +58,12 @@
+ 
+ OS_CFLAGS		= $(DSO_CFLAGS) $(OS_REL_CFLAGS) -ansi -Wall -pipe -DNETBSD -Dunix -DHAVE_STRERROR -DHAVE_BSD_FLOCK
+ 
+-OS_LIBS			= -lcompat
++OS_LIBS			= -lcompat $(BSD_LDOPTS)
+ 
+ ARCH			= netbsd
+ 
+ DSO_CFLAGS		= -fPIC -DPIC
+-DSO_LDOPTS		= -shared
++DSO_LDOPTS		= -shared $(BSD_LDOPTS)
+ DSO_LDFLAGS		=
+ ifeq ($(OBJECT_FMT),ELF)
+ DSO_LDOPTS		+= -Wl,-soname,lib$(LIBRARY_NAME)$(LIBRARY_VERSION).$(DLL_SUFFIX)
