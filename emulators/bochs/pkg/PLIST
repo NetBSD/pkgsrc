@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 1999/10/25 16:05:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2000/01/31 21:18:45 drochner Exp $
 bin/bochs
 share/bochs/doc/00README
 share/bochs/doc/3rdparty.license.html
@@ -19,11 +19,13 @@ share/bochs/doc/developers.html
 share/bochs/doc/faq.html
 share/bochs/doc/features.html
 share/bochs/doc/fpu.html
+share/bochs/doc/guestNT.html
 share/bochs/doc/index.html
 share/bochs/doc/install.html
 share/bochs/doc/instrumentation.html
 share/bochs/doc/licensing.html
 share/bochs/doc/mtools.html
+share/bochs/doc/sound.html
 share/bochs/doc/undercon.gif
 share/bochs/doc/whatisbochs.html
 share/bochs/doc/win32.html
