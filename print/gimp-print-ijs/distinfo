@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2002/10/22 17:27:25 drochner Exp $
+$NetBSD: distinfo,v 1.4 2002/11/27 16:12:36 drochner Exp $
 
-SHA1 (gimp-print-4.2.3.tar.gz) = 55ba8713fdd1db2acc316d7c7f383c84b0299309
-Size (gimp-print-4.2.3.tar.gz) = 4942372 bytes
+SHA1 (gimp-print-4.2.4.tar.gz) = d93e7abff8f968e9aa631ead0987d702f012d9fc
+Size (gimp-print-4.2.4.tar.gz) = 4938844 bytes
