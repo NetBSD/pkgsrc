@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 13:30:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/09/25 06:32:38 jlam Exp $
 #
 
 DISTNAME=	wmmixer-1.0-beta1
@@ -13,11 +13,12 @@ COMMENT=	mixer designed for WindowMaker (dockapp)
 
 WRKSRC=		${WRKDIR}/wmmixer
 
-USE_IMAKE=	YES
-USE_XPM=	YES
-NO_INSTALL_MANPAGES= YES
+USE_BUILDLINK2=		YES
+USE_IMAKE=		YES
+NO_INSTALL_MANPAGES=	YES
 
 pre-build:
 	${TOUCH} ${WRKSRC}/wmmixer.man
 
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
