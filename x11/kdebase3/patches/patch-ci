@@ -1,28 +1,28 @@
-$NetBSD: patch-ci,v 1.2 2002/08/25 19:23:41 jlam Exp $
+$NetBSD: patch-ci,v 1.3 2003/03/11 13:10:23 markd Exp $
 
---- konqueror/client/Makefile.am.orig	Wed Aug  9 18:10:36 2000
+--- konqueror/client/Makefile.am.orig	Mon Sep 16 09:08:52 2002
 +++ konqueror/client/Makefile.am
 @@ -1,12 +1,16 @@
  AM_CPPFLAGS = -DQT_NO_CAST_ASCII
  
  bin_PROGRAMS = kfmclient
 -lib_LTLIBRARIES = kfmclient.la
-+lib_LTLIBRARIES = libkfmclient_main.la kfmclient.la
++lib_LTLIBRARIES =  libkfmclient_main.la kfmclient.la
  
  INCLUDES= -I.. $(all_includes)
 +libkfmclient_main_la_LDFLAGS = $(all_libraries)
-+libkfmclient_main_la_LIBADD =  $(LIB_KFILE)
++libkfmclient_main_la_LIBADD =  $(LIB_KIO)
 +libkfmclient_main_la_SOURCES = kfmclient.cc KonquerorIface.stub KDesktopIface.stub
 +
  kfmclient_la_LDFLAGS = $(all_libraries) -module -avoid-version
--kfmclient_la_LIBADD =  $(LIB_KFILE)
+-kfmclient_la_LIBADD =  $(LIB_KIO)
 -kfmclient_la_SOURCES = kfmclient.cc KonquerorIface.stub KDesktopIface.stub
 +kfmclient_la_LIBADD =  libkfmclient_main.la
 +kfmclient_la_SOURCES = kfmclient_main.cc
  
  noinst_HEADERS = kfmclient.h
  METASOURCES = AUTO
-@@ -14,12 +18,9 @@
+@@ -14,12 +18,9 @@ METASOURCES = AUTO
  KonquerorIface_DIR =  $(srcdir)/..
  KDesktopIface_DIR = $(top_srcdir)/kdesktop
  

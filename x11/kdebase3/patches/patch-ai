@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.4 2003/01/02 09:12:33 skrll Exp $
+$NetBSD: patch-ai,v 1.5 2003/03/11 13:10:19 markd Exp $
 
---- kcontrol/access/Makefile.in.orig	Fri Dec 27 18:19:11 2002
+--- kcontrol/access/Makefile.in.orig	Fri Jan 17 09:03:04 2003
 +++ kcontrol/access/Makefile.in
-@@ -291,16 +291,20 @@ INCLUDES = $(all_includes)
+@@ -290,16 +290,20 @@ INCLUDES = $(all_includes)
  
  bin_PROGRAMS = kaccess
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ai,v 1.4 2003/01/02 09:12:33 skrll Exp $
  
  kcm_access_la_SOURCES = kcmaccess.cpp 
  kcm_access_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
-@@ -318,27 +322,32 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -317,27 +321,32 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES) $(lib_LTLIBRARIES)
  
@@ -72,31 +72,30 @@ $NetBSD: patch-ai,v 1.4 2003/01/02 09:12:33 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -346,13 +355,16 @@ CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
+@@ -346,12 +355,18 @@ LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/kaccess.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/kcmaccess.Plo $(DEPDIR)/main.Plo
+ am__depfiles_maybe = depfiles
+-#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/kaccess.Plo \
++#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/kaccess.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kaccess_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kaccess_main.Po \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/kcmaccess.Plo ./$(DEPDIR)/main.Plo
 -#>+ 5
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/kaccess_la.all_cpp.P  $(DEPDIR)/dummy.Po $(DEPDIR)/kaccess.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kcmaccess.Plo $(DEPDIR)/main.Plo
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   $(DEPDIR)/dummy.Po $(DEPDIR)/kaccess.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kcmaccess.Plo $(DEPDIR)/main.Plo
-+#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/kaccess.Plo $(DEPDIR)/kaccess_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kaccess_main.Po $(DEPDIR)/kcmaccess.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/main.Plo
-+#>+ 7
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/libkaccess_main_la.all_cpp.P  $(DEPDIR)/kaccess.Plo $(DEPDIR)/kaccess_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kaccess_main.Po $(DEPDIR)/kcmaccess.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   $(DEPDIR)/kaccess.Plo $(DEPDIR)/kaccess_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kaccess_main.Po $(DEPDIR)/kcmaccess.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/kaccess_la.all_cpp.P  ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/kaccess.Plo \
++#>+ 9
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =   $(DEPDIR)/libkaccess_main_la.all_cpp.P  ./$(DEPDIR)/kaccess.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kaccess_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kaccess_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kcmaccess.Plo ./$(DEPDIR)/main.Plo
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/kaccess.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =   ./$(DEPDIR)/kaccess.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kaccess_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kaccess_main.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kcmaccess.Plo ./$(DEPDIR)/main.Plo
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
- #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -374,13 +386,13 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
+@@ -374,13 +389,13 @@ CXXLINK = $(LIBTOOL) --mode=link --tag=C
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
  DIST_SOURCES = $(kaccess_la_SOURCES) $(kcm_access_la_SOURCES) \
@@ -112,36 +111,36 @@ $NetBSD: patch-ai,v 1.4 2003/01/02 09:12:33 skrll Exp $
  
  #>- all: all-am
  #>+ 1
-@@ -453,6 +465,8 @@ kaccess.la: $(kaccess_la_OBJECTS) $(kacc
+@@ -460,6 +475,8 @@ kaccess.la: $(kaccess_la_OBJECTS) $(kacc
  @KDE_USE_CLOSURE_TRUE@kcm_access.la: kcm_access.la.closure $(kcm_access_la_OBJECTS) $(kcm_access_la_DEPENDENCIES) 
  @KDE_USE_CLOSURE_FALSE@kcm_access.la: $(kcm_access_la_OBJECTS) $(kcm_access_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(kde_moduledir) $(kcm_access_la_LDFLAGS) $(kcm_access_la_OBJECTS) $(kcm_access_la_LIBADD) $(LIBS)
 +libkaccess_main.la: $(libkaccess_main_la_OBJECTS) $(libkaccess_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libkaccess_main_la_LDFLAGS) $(libkaccess_main_la_OBJECTS) $(libkaccess_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -487,8 +501,9 @@ mostlyclean-compile:
+@@ -499,8 +516,9 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kaccess.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kaccess_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kaccess_main.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kcmaccess.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kaccess.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kaccess_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kaccess_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kcmaccess.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
  
-@@ -583,7 +598,7 @@ distclean-tags:
- 
+@@ -609,7 +627,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=kaccess.h kcmaccess.desktop configure.in.in kaccess.desktop 
-+KDE_DIST=configure.in.in kcmaccess.desktop kaccess.desktop kaccess.h 
+-KDE_DIST=kaccess.h configure.in.in kcmaccess.desktop kaccess.desktop 
++KDE_DIST=kcmaccess.desktop kaccess.desktop kaccess.h configure.in.in 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -713,21 +728,18 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -745,21 +763,18 @@ uninstall-am: uninstall-binPROGRAMS unin
  messages:
  	$(XGETTEXT) $(kaccess_la_SOURCES) -o $(podir)/kaccess.pot
  	$(XGETTEXT) $(kcm_access_la_SOURCES) -o $(podir)/kcmaccess.pot
@@ -167,7 +166,7 @@ $NetBSD: patch-ai,v 1.4 2003/01/02 09:12:33 skrll Exp $
  #>+ 8
  kcm_access.la.closure: $(kcm_access_la_OBJECTS) $(kcm_access_la_DEPENDENCIES)
  	@echo "int main() {return 0;}" > kcm_access_la_closure.cpp
-@@ -739,7 +751,7 @@ kcm_access.la.closure: $(kcm_access_la_O
+@@ -771,7 +786,7 @@ kcm_access.la.closure: $(kcm_access_la_O
  
  #>+ 3
  clean-metasources:
@@ -176,7 +175,7 @@ $NetBSD: patch-ai,v 1.4 2003/01/02 09:12:33 skrll Exp $
  
  #>+ 3
  clean-closures:
-@@ -756,33 +768,33 @@ force-reedit:
+@@ -788,33 +803,33 @@ force-reedit:
  
  
  #>+ 11
@@ -223,7 +222,7 @@ $NetBSD: patch-ai,v 1.4 2003/01/02 09:12:33 skrll Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -792,7 +804,7 @@ kde-rpo-clean:
+@@ -824,7 +839,7 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 5

@@ -1,10 +1,10 @@
-$NetBSD: patch-bh,v 1.3 2003/01/02 09:12:39 skrll Exp $
+$NetBSD: patch-bh,v 1.4 2003/03/11 13:10:37 markd Exp $
 
---- kio/misc/Makefile.in.orig	Tue Nov 26 08:57:39 2002
+--- kio/misc/Makefile.in.orig	Thu Jan 23 12:30:39 2003
 +++ kio/misc/Makefile.in
-@@ -286,20 +286,24 @@ INCLUDES = -I$(srcdir)/.. -I$(top_srcdir
+@@ -306,17 +306,21 @@
  
- SUBDIRS = . ksendbugmail kpac kdesasl kssld
+ SUBDIRS = . ksendbugmail kpac kdesasl kssld kfile
  
 -lib_LTLIBRARIES = kio_uiserver.la
 +lib_LTLIBRARIES = libkio_uiserver_main.la kio_uiserver.la
@@ -16,15 +16,12 @@ $NetBSD: patch-bh,v 1.3 2003/01/02 09:12:39 skrll Exp $
 +kio_uiserver_LDADD = libkio_uiserver_main.la
  kio_uiserver_LDFLAGS = $(KDE_RPATH) $(all_libraries)
  
--#>- kio_uiserver_la_SOURCES = uiserver.cpp uiserver.skel observer.stub \
-+#>- libkio_uiserver_main_la_SOURCES = uiserver.cpp uiserver.skel observer.stub \
- #>- 	renamedlg.cpp skipdlg.cpp
- #>+ 2
--kio_uiserver_la_SOURCES=uiserver.cpp   \
-+libkio_uiserver_main_la_SOURCES=uiserver.cpp   \
- 	renamedlg.cpp skipdlg.cpp uiserver_skel.cpp observer_stub.cpp
- 
+-#>- kio_uiserver_la_SOURCES = uiserver.cpp uiserver.skel observer.stub
++#>- libkio_uiserver_main_la_SOURCES = uiserver.cpp uiserver.skel observer.stub
+ #>+ 1
+-kio_uiserver_la_SOURCES=uiserver.cpp   uiserver_skel.cpp observer_stub.cpp
 -kio_uiserver_la_LIBADD = $(LIB_KIO)
++libkio_uiserver_main_la_SOURCES=uiserver.cpp   uiserver_skel.cpp observer_stub.cpp
 +libkio_uiserver_main_la_LIBADD = $(LIB_KIO)
 +libkio_uiserver_main_la_LDFLAGS = $(all_libraries)
 +
@@ -33,27 +30,27 @@ $NetBSD: patch-bh,v 1.3 2003/01/02 09:12:39 skrll Exp $
  kio_uiserver_la_LDFLAGS = $(all_libraries) -module -avoid-version
  
  observer_DIR = $(top_srcdir)/kio/kio
-@@ -327,23 +331,28 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -344,23 +348,28 @@
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
 -kio_uiserver_la_DEPENDENCIES =
--am_kio_uiserver_la_OBJECTS = uiserver.lo renamedlg.lo skipdlg.lo
+-am_kio_uiserver_la_OBJECTS = uiserver.lo
 +kio_uiserver_la_DEPENDENCIES = libkio_uiserver_main.la
 +am_kio_uiserver_la_OBJECTS = kio_uiserver_main.lo
  #>- kio_uiserver_la_OBJECTS = $(am_kio_uiserver_la_OBJECTS)
 +#>+ 1
 +kio_uiserver_la_OBJECTS = kio_uiserver_main.lo
 +libkio_uiserver_main_la_DEPENDENCIES =
-+am_libkio_uiserver_main_la_OBJECTS = uiserver.lo renamedlg.lo skipdlg.lo
++am_libkio_uiserver_main_la_OBJECTS = uiserver.lo
 +#>- libkio_uiserver_main_la_OBJECTS = $(am_libkio_uiserver_main_la_OBJECTS)
  #>+ 4
 -kio_uiserver_la_final_OBJECTS = kio_uiserver_la.all_cpp.lo 
--kio_uiserver_la_nofinal_OBJECTS = uiserver.lo renamedlg.lo skipdlg.lo uiserver_skel.lo observer_stub.lo
+-kio_uiserver_la_nofinal_OBJECTS = uiserver.lo uiserver_skel.lo observer_stub.lo
 -@KDE_USE_FINAL_FALSE@kio_uiserver_la_OBJECTS = $(kio_uiserver_la_nofinal_OBJECTS)
 -@KDE_USE_FINAL_TRUE@kio_uiserver_la_OBJECTS = $(kio_uiserver_la_final_OBJECTS)
 +libkio_uiserver_main_la_final_OBJECTS = libkio_uiserver_main_la.all_cpp.lo 
-+libkio_uiserver_main_la_nofinal_OBJECTS = uiserver.lo renamedlg.lo skipdlg.lo uiserver_skel.lo observer_stub.lo
++libkio_uiserver_main_la_nofinal_OBJECTS = uiserver.lo uiserver_skel.lo observer_stub.lo
 +@KDE_USE_FINAL_FALSE@libkio_uiserver_main_la_OBJECTS = $(libkio_uiserver_main_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkio_uiserver_main_la_OBJECTS = $(libkio_uiserver_main_la_final_OBJECTS)
  bin_PROGRAMS = kio_uiserver$(EXEEXT) kmailservice$(EXEEXT) \
@@ -71,32 +68,32 @@ $NetBSD: patch-bh,v 1.3 2003/01/02 09:12:39 skrll Exp $
  am_kmailservice_OBJECTS = kmailservice.$(OBJEXT)
  #>- kmailservice_OBJECTS = $(am_kmailservice_OBJECTS)
  #>+ 1
-@@ -361,14 +370,20 @@ CPPFLAGS = @CPPFLAGS@
- LDFLAGS = @LDFLAGS@
+@@ -379,14 +388,20 @@
  LIBS = @LIBS@
  depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
--#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/dummy.Po $(DEPDIR)/kmailservice.Po \
-+#>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/kio_uiserver_main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kio_uiserver_main.Po \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kmailservice.Po \
- #>- @AMDEP_TRUE@	$(DEPDIR)/ktelnetservice.Po $(DEPDIR)/renamedlg.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/skipdlg.Plo $(DEPDIR)/uiserver.Plo
+ am__depfiles_maybe = depfiles
+-#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/kmailservice.Po \
++#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/kio_uiserver_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kio_uiserver_main.Po \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kmailservice.Po \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/ktelnetservice.Po \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/uiserver.Plo
 -#>+ 7
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/uiserver_skel.P $(DEPDIR)/observer_stub.P  $(DEPDIR)/kio_uiserver_la.all_cpp.P  $(DEPDIR)/dummy.Po $(DEPDIR)/kmailservice.Po \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/uiserver_skel.P $(DEPDIR)/observer_stub.P  $(DEPDIR)/kio_uiserver_la.all_cpp.P  ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/kmailservice.Po \
 +#>+ 11
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/uiserver_skel.P $(DEPDIR)/observer_stub.P  $(DEPDIR)/libkio_uiserver_main_la.all_cpp.P  $(DEPDIR)/kio_uiserver_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kio_uiserver_main.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kmailservice.Po \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/ktelnetservice.Po $(DEPDIR)/renamedlg.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/skipdlg.Plo $(DEPDIR)/uiserver.Plo
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/uiserver_skel.P $(DEPDIR)/observer_stub.P  $(DEPDIR)/dummy.Po $(DEPDIR)/kmailservice.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/uiserver_skel.P $(DEPDIR)/observer_stub.P  $(DEPDIR)/kio_uiserver_main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kio_uiserver_main.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kmailservice.Po \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/ktelnetservice.Po $(DEPDIR)/renamedlg.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/skipdlg.Plo $(DEPDIR)/uiserver.Plo
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/uiserver_skel.P $(DEPDIR)/observer_stub.P  $(DEPDIR)/libkio_uiserver_main_la.all_cpp.P  ./$(DEPDIR)/kio_uiserver_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kio_uiserver_main.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kmailservice.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/ktelnetservice.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/uiserver.Plo
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/uiserver_skel.P $(DEPDIR)/observer_stub.P  ./$(DEPDIR)/dummy.Po ./$(DEPDIR)/kmailservice.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/uiserver_skel.P $(DEPDIR)/observer_stub.P  ./$(DEPDIR)/kio_uiserver_main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kio_uiserver_main.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kmailservice.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/ktelnetservice.Po \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/uiserver.Plo
  
-@@ -391,7 +406,8 @@ CXXLD = $(CXX)
+@@ -409,7 +424,8 @@
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
@@ -106,7 +103,7 @@ $NetBSD: patch-bh,v 1.3 2003/01/02 09:12:39 skrll Exp $
  	$(kmailservice_SOURCES) $(ktelnetservice_SOURCES)
  DATA = $(kde_services_DATA) $(protocol_DATA)
  
-@@ -404,7 +420,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -422,7 +438,7 @@
  	uninstall-recursive check-recursive installcheck-recursive
  DIST_COMMON = $(kiomisc_HEADERS) Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -115,35 +112,35 @@ $NetBSD: patch-bh,v 1.3 2003/01/02 09:12:39 skrll Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -453,6 +469,8 @@ clean-libLTLIBRARIES:
- 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+@@ -469,6 +485,8 @@
+ 	done
  kio_uiserver.la: $(kio_uiserver_la_OBJECTS) $(kio_uiserver_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kio_uiserver_la_LDFLAGS) $(kio_uiserver_la_OBJECTS) $(kio_uiserver_la_LIBADD) $(LIBS)
 +libkio_uiserver_main.la: $(libkio_uiserver_main_la_OBJECTS) $(libkio_uiserver_main_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libkio_uiserver_main_la_LDFLAGS) $(libkio_uiserver_main_la_OBJECTS) $(libkio_uiserver_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -493,7 +511,8 @@ mostlyclean-compile:
+@@ -514,7 +532,8 @@
  distclean-compile:
  	-rm -f *.tab.c
  
--@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/dummy.Po@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kio_uiserver_main.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kio_uiserver_main.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kmailservice.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/ktelnetservice.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/renamedlg.Plo@am__quote@
-@@ -668,7 +687,7 @@ distclean-tags:
- 
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kio_uiserver_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kio_uiserver_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kmailservice.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ktelnetservice.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/uiserver.Plo@am__quote@
+@@ -702,7 +721,7 @@
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=rlogin.protocol renamedlg.cpp telnet.protocol rtsp.protocol skipdlg.cpp kmailservice.protocol kio_uiserver.desktop 
-+KDE_DIST=kio_uiserver.desktop renamedlg.cpp skipdlg.cpp kmailservice.protocol telnet.protocol rlogin.protocol rtsp.protocol 
+-KDE_DIST=rlogin.protocol telnet.protocol rtsp.protocol kmailservice.protocol kio_uiserver.desktop 
++KDE_DIST=kio_uiserver.desktop rlogin.protocol kmailservice.protocol telnet.protocol rtsp.protocol 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -815,6 +834,18 @@ dummy.cpp: uiserver.kidl
+@@ -855,6 +874,10 @@
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
  
@@ -151,18 +148,10 @@ $NetBSD: patch-bh,v 1.3 2003/01/02 09:12:39 skrll Exp $
 +uiserver.moc: $(srcdir)/uiserver.h
 +	$(MOC) $(srcdir)/uiserver.h -o uiserver.moc
 +
-+#>+ 3
-+skipdlg.moc: $(srcdir)/skipdlg.h
-+	$(MOC) $(srcdir)/skipdlg.h -o skipdlg.moc
-+
-+#>+ 3
-+renamedlg.moc: $(srcdir)/renamedlg.h
-+	$(MOC) $(srcdir)/renamedlg.h -o renamedlg.moc
-+
  #>+ 9
  uiserver.kidl: $(srcdir)/uiserver.h $(DCOP_DEPENDENCIES)
  	$(DCOPIDL) $(srcdir)/uiserver.h > uiserver.kidl || ( rm -f uiserver.kidl ; /bin/false )
-@@ -826,20 +857,8 @@ observer_stub.h: observer.kidl
+@@ -866,10 +889,6 @@
  	$(DCOPIDL2CPP) --c++-suffix cpp --no-signals --no-skel observer.kidl
  
  #>+ 3
@@ -170,33 +159,22 @@ $NetBSD: patch-bh,v 1.3 2003/01/02 09:12:39 skrll Exp $
 -	$(MOC) $(srcdir)/uiserver.h -o uiserver.moc
 -
 -#>+ 3
--renamedlg.moc: $(srcdir)/renamedlg.h
--	$(MOC) $(srcdir)/renamedlg.h -o renamedlg.moc
--
--#>+ 3
--skipdlg.moc: $(srcdir)/skipdlg.h
--	$(MOC) $(srcdir)/skipdlg.h -o skipdlg.moc
--
--#>+ 3
  clean-metasources:
--	-rm -f  uiserver.moc renamedlg.moc skipdlg.moc
-+	-rm -f  uiserver.moc skipdlg.moc renamedlg.moc
+ 	-rm -f  uiserver.moc
  
- #>+ 5
- clean-idl:
-@@ -858,33 +877,33 @@ force-reedit:
+@@ -890,33 +909,33 @@
  
  
  #>+ 11
--kio_uiserver_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/uiserver.cpp $(srcdir)/renamedlg.cpp $(srcdir)/skipdlg.cpp uiserver_skel.cpp observer_stub.cpp  uiserver.moc skipdlg.moc renamedlg.moc
+-kio_uiserver_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/uiserver.cpp uiserver_skel.cpp observer_stub.cpp  uiserver.moc
 -	@echo 'creating kio_uiserver_la.all_cpp.cpp ...'; \
 -	rm -f kio_uiserver_la.all_cpp.files kio_uiserver_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> kio_uiserver_la.all_cpp.final; \
-+libkio_uiserver_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/uiserver.cpp $(srcdir)/renamedlg.cpp $(srcdir)/skipdlg.cpp uiserver_skel.cpp observer_stub.cpp  uiserver.moc skipdlg.moc renamedlg.moc
++libkio_uiserver_main_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/uiserver.cpp uiserver_skel.cpp observer_stub.cpp  uiserver.moc
 +	@echo 'creating libkio_uiserver_main_la.all_cpp.cpp ...'; \
 +	rm -f libkio_uiserver_main_la.all_cpp.files libkio_uiserver_main_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkio_uiserver_main_la.all_cpp.final; \
- 	for file in uiserver.cpp renamedlg.cpp skipdlg.cpp uiserver_skel.cpp observer_stub.cpp ; do \
+ 	for file in uiserver.cpp uiserver_skel.cpp observer_stub.cpp ; do \
 -	  echo "#include \"$$file\"" >> kio_uiserver_la.all_cpp.files; \
 -	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kio_uiserver_la.all_cpp.final; \
 +	  echo "#include \"$$file\"" >> libkio_uiserver_main_la.all_cpp.files; \
@@ -231,22 +209,14 @@ $NetBSD: patch-bh,v 1.3 2003/01/02 09:12:39 skrll Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -894,13 +913,13 @@ kde-rpo-clean:
+@@ -926,7 +945,7 @@
  	-rm -f *.rpo
  
- #>+ 11
+ #>+ 5
 -uiserver.o: uiserver.moc 
-+skipdlg.o: skipdlg.moc 
- $(srcdir)/skipdlg.cpp: observer_stub.h 
- renamedlg.lo: renamedlg.moc 
--skipdlg.o: skipdlg.moc 
--observer_stub.cpp: observer_stub.h 
 -uiserver.lo: uiserver.moc 
- $(srcdir)/renamedlg.cpp: observer_stub.h 
-+$(srcdir)/uiserver.cpp: observer_stub.h 
- skipdlg.lo: skipdlg.moc 
+-observer_stub.cpp: observer_stub.h 
+ $(srcdir)/uiserver.cpp: observer_stub.h 
 +observer_stub.cpp: observer_stub.h 
 +uiserver.lo: uiserver.moc 
 +uiserver.o: uiserver.moc 
- renamedlg.o: renamedlg.moc 
--$(srcdir)/uiserver.cpp: observer_stub.h 

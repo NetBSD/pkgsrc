@@ -1,8 +1,8 @@
-$NetBSD: patch-eh,v 1.3 2003/01/02 09:12:36 skrll Exp $
+$NetBSD: patch-eh,v 1.4 2003/03/11 13:10:28 markd Exp $
 
---- kwin/clients/web/Makefile.in.orig	Fri Dec 27 18:19:11 2002
+--- kwin/clients/web/Makefile.in.orig	Fri Jan 17 09:03:12 2003
 +++ kwin/clients/web/Makefile.in
-@@ -311,7 +311,7 @@ noinst_HEADERS = \
+@@ -309,7 +309,7 @@ noinst_HEADERS = \
    WebButtonSticky.h
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-eh,v 1.3 2003/01/02 09:12:36 skrll Exp $
  kwin_web_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
  #>- METASOURCES = AUTO
  
-@@ -324,7 +324,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -322,7 +322,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,7 +20,7 @@ $NetBSD: patch-eh,v 1.3 2003/01/02 09:12:36 skrll Exp $
  am_kwin_web_la_OBJECTS = Web.lo WebButton.lo WebButtonClose.lo \
  	WebButtonHelp.lo WebButtonIconify.lo WebButtonLower.lo \
  	WebButtonMaximize.lo WebButtonSticky.lo
-@@ -663,40 +663,40 @@ kwin_web.la.closure: $(kwin_web_la_OBJEC
+@@ -679,40 +679,40 @@ kwin_web.la.closure: $(kwin_web_la_OBJEC
  
  
  #>+ 3
@@ -78,7 +78,7 @@ $NetBSD: patch-eh,v 1.3 2003/01/02 09:12:36 skrll Exp $
  
  #>+ 3
  clean-closures:
-@@ -713,7 +713,7 @@ force-reedit:
+@@ -729,7 +729,7 @@ force-reedit:
  
  
  #>+ 11
@@ -87,7 +87,7 @@ $NetBSD: patch-eh,v 1.3 2003/01/02 09:12:36 skrll Exp $
  	@echo 'creating kwin_web_la.all_cpp.cpp ...'; \
  	rm -f kwin_web_la.all_cpp.files kwin_web_la.all_cpp.final; \
  	echo "#define KDE_USE_FINAL 1" >> kwin_web_la.all_cpp.final; \
-@@ -749,19 +749,19 @@ kde-rpo-clean:
+@@ -765,19 +765,19 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 17

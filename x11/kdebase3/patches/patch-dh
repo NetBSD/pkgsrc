@@ -1,8 +1,8 @@
-$NetBSD: patch-dh,v 1.3 2003/01/02 09:12:35 skrll Exp $
+$NetBSD: patch-dh,v 1.4 2003/03/11 13:10:27 markd Exp $
 
---- kwin/Makefile.in.orig	Fri Dec 27 18:19:11 2002
+--- kwin/Makefile.in.orig	Fri Jan 17 09:03:11 2003
 +++ kwin/Makefile.in
-@@ -292,18 +292,22 @@ INCLUDES = $(all_includes)
+@@ -290,18 +290,22 @@ INCLUDES = $(all_includes)
  SUBDIRS = . kcmkwin pics clients
  
  bin_PROGRAMS = kwin
@@ -10,14 +10,14 @@ $NetBSD: patch-dh,v 1.3 2003/01/02 09:12:35 skrll Exp $
 +lib_LTLIBRARIES = libkwin.la kwin.la
  
  # workspace.cpp has to be first in order not to break --enable-final
--#>- kwin_la_SOURCES = workspace.cpp atoms.cpp  client.cpp main.cpp \
-+#>- libkwin_la_SOURCES = workspace.cpp atoms.cpp  client.cpp main.cpp \
- #>- 	tabbox.cpp options.cpp plugins.cpp events.cpp KWinInterface.skel \
+-#>- kwin_la_SOURCES = workspace.cpp placement.cpp atoms.cpp  client.cpp main.cpp \
++#>- libkwin_la_SOURCES = workspace.cpp placement.cpp atoms.cpp  client.cpp main.cpp \
+ #>- 	popupinfo.cpp tabbox.cpp options.cpp plugins.cpp events.cpp KWinInterface.skel \
  #>- 	killwindow.cpp kwinbutton.cpp
  #>+ 3
--kwin_la_SOURCES=workspace.cpp atoms.cpp  client.cpp main.cpp \
-+libkwin_la_SOURCES=workspace.cpp atoms.cpp  client.cpp main.cpp \
- 	tabbox.cpp options.cpp plugins.cpp events.cpp  \
+-kwin_la_SOURCES=workspace.cpp placement.cpp atoms.cpp  client.cpp main.cpp \
++libkwin_la_SOURCES=workspace.cpp placement.cpp atoms.cpp  client.cpp main.cpp \
+ 	popupinfo.cpp tabbox.cpp options.cpp plugins.cpp events.cpp  \
  	killwindow.cpp kwinbutton.cpp KWinInterface_skel.cpp
  
 -kwin_la_LIBADD = $(LIB_KDEUI) $(LIBXINERAMA)
@@ -29,16 +29,16 @@ $NetBSD: patch-dh,v 1.3 2003/01/02 09:12:35 skrll Exp $
  kwin_la_LDFLAGS = $(all_libraries) -module -avoid-version
  
  include_HEADERS = KWinInterface.h
-@@ -312,7 +316,7 @@ kwinincludedir = $(includedir)/kwin
+@@ -310,7 +314,7 @@ kwinincludedir = $(includedir)/kwin
  kwininclude_HEADERS = options.h client.h workspace.h kwinbutton.h
  
  kwin_SOURCES = kwin_main.cpp
--kwin_LDADD = kwin.la 
-+kwin_LDADD = libkwin.la 
+-kwin_LDADD = kwin.la
++kwin_LDADD = libkwin.la
  kwin_LDFLAGS = $(all_libraries) $(KDE_RPATH)
  
  KDE_ICON = kwin
-@@ -323,7 +327,6 @@ data_DATA = eventsrc
+@@ -321,7 +325,6 @@ data_DATA = eventsrc
  
  sounddir = $(kde_sounddir)
  sound_DATA = pop.wav
@@ -46,40 +46,38 @@ $NetBSD: patch-dh,v 1.3 2003/01/02 09:12:35 skrll Exp $
  update_DATA = kwin.upd pluginlibFix.pl
  updatedir = $(kde_datadir)/kconf_update
  subdir = kwin
-@@ -332,16 +335,23 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -330,18 +333,23 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(lib_LTLIBRARIES)
  
 -kwin_la_DEPENDENCIES =
--am_kwin_la_OBJECTS = workspace.lo atoms.lo client.lo main.lo tabbox.lo \
--	options.lo plugins.lo events.lo killwindow.lo kwinbutton.lo
+-am_kwin_la_OBJECTS = workspace.lo placement.lo atoms.lo client.lo \
 +kwin_la_DEPENDENCIES = libkwin.la
 +am_kwin_la_OBJECTS = kwin_main.lo
- #>- kwin_la_OBJECTS = $(am_kwin_la_OBJECTS)
--#>+ 5
--kwin_la_final_OBJECTS = kwin_la.all_cpp.lo 
--kwin_la_nofinal_OBJECTS = workspace.lo atoms.lo client.lo main.lo tabbox.lo \
--	options.lo plugins.lo events.lo killwindow.lo kwinbutton.lo KWinInterface_skel.lo
--@KDE_USE_FINAL_FALSE@kwin_la_OBJECTS = $(kwin_la_nofinal_OBJECTS)
--@KDE_USE_FINAL_TRUE@kwin_la_OBJECTS = $(kwin_la_final_OBJECTS)
++#>- kwin_la_OBJECTS = $(am_kwin_la_OBJECTS)
 +#>+ 1
 +kwin_la_OBJECTS = kwin_main.lo
 +libkwin_la_DEPENDENCIES =
-+am_libkwin_la_OBJECTS = workspace.lo atoms.lo client.lo main.lo \
-+	tabbox.lo options.lo plugins.lo events.lo killwindow.lo \
-+	kwinbutton.lo
++am_libkwin_la_OBJECTS = workspace.lo placement.lo atoms.lo client.lo \
+ 	main.lo popupinfo.lo tabbox.lo options.lo plugins.lo events.lo \
+ 	killwindow.lo kwinbutton.lo
+-#>- kwin_la_OBJECTS = $(am_kwin_la_OBJECTS)
 +#>- libkwin_la_OBJECTS = $(am_libkwin_la_OBJECTS)
-+#>+ 6
+ #>+ 6
+-kwin_la_final_OBJECTS = kwin_la.all_cpp.lo 
+-kwin_la_nofinal_OBJECTS = workspace.lo placement.lo atoms.lo client.lo \
 +libkwin_la_final_OBJECTS = libkwin_la.all_cpp.lo 
-+libkwin_la_nofinal_OBJECTS = workspace.lo atoms.lo client.lo main.lo \
-+	tabbox.lo options.lo plugins.lo events.lo killwindow.lo \
-+	kwinbutton.lo KWinInterface_skel.lo
++libkwin_la_nofinal_OBJECTS = workspace.lo placement.lo atoms.lo client.lo \
+ 	main.lo popupinfo.lo tabbox.lo options.lo plugins.lo events.lo \
+ 	killwindow.lo kwinbutton.lo KWinInterface_skel.lo
+-@KDE_USE_FINAL_FALSE@kwin_la_OBJECTS = $(kwin_la_nofinal_OBJECTS)
+-@KDE_USE_FINAL_TRUE@kwin_la_OBJECTS = $(kwin_la_final_OBJECTS)
 +@KDE_USE_FINAL_FALSE@libkwin_la_OBJECTS = $(libkwin_la_nofinal_OBJECTS)
 +@KDE_USE_FINAL_TRUE@libkwin_la_OBJECTS = $(libkwin_la_final_OBJECTS)
  bin_PROGRAMS = kwin$(EXEEXT)
  PROGRAMS = $(bin_PROGRAMS)
  
-@@ -349,7 +359,7 @@ am_kwin_OBJECTS = kwin_main.$(OBJEXT)
+@@ -349,7 +357,7 @@ am_kwin_OBJECTS = kwin_main.$(OBJEXT)
  #>- kwin_OBJECTS = $(am_kwin_OBJECTS)
  #>+ 1
  kwin_OBJECTS = kwin_main.$(OBJEXT)
@@ -88,44 +86,50 @@ $NetBSD: patch-dh,v 1.3 2003/01/02 09:12:35 skrll Exp $
  
  DEFS = @DEFS@
  DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
-@@ -359,23 +369,23 @@ LIBS = @LIBS@
- depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
- #>- @AMDEP_TRUE@DEP_FILES = $(DEPDIR)/atoms.Plo $(DEPDIR)/client.Plo \
- #>- @AMDEP_TRUE@	$(DEPDIR)/events.Plo $(DEPDIR)/killwindow.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/kwin_main.Po $(DEPDIR)/kwinbutton.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/options.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/plugins.Plo $(DEPDIR)/tabbox.Plo \
--#>- @AMDEP_TRUE@	$(DEPDIR)/workspace.Plo
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kwin_main.Plo $(DEPDIR)/kwin_main.Po \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/kwinbutton.Plo $(DEPDIR)/main.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/options.Plo $(DEPDIR)/plugins.Plo \
-+#>- @AMDEP_TRUE@	$(DEPDIR)/tabbox.Plo $(DEPDIR)/workspace.Plo
- #>+ 13
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/KWinInterface_skel.P  $(DEPDIR)/kwin_la.all_cpp.P  $(DEPDIR)/atoms.Plo $(DEPDIR)/client.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/KWinInterface_skel.P  $(DEPDIR)/libkwin_la.all_cpp.P  $(DEPDIR)/atoms.Plo $(DEPDIR)/client.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/events.Plo $(DEPDIR)/killwindow.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kwin_main.Po $(DEPDIR)/kwinbutton.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/options.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/plugins.Plo $(DEPDIR)/tabbox.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/workspace.Plo
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kwin_main.Plo $(DEPDIR)/kwin_main.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/kwinbutton.Plo $(DEPDIR)/main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/options.Plo $(DEPDIR)/plugins.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	$(DEPDIR)/tabbox.Plo $(DEPDIR)/workspace.Plo
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/KWinInterface_skel.P  $(DEPDIR)/atoms.Plo $(DEPDIR)/client.Plo \
- @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/events.Plo $(DEPDIR)/killwindow.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kwin_main.Po $(DEPDIR)/kwinbutton.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/main.Plo $(DEPDIR)/options.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/plugins.Plo $(DEPDIR)/tabbox.Plo \
--@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/workspace.Plo
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kwin_main.Plo $(DEPDIR)/kwin_main.Po \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/kwinbutton.Plo $(DEPDIR)/main.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/options.Plo $(DEPDIR)/plugins.Plo \
-+@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	$(DEPDIR)/tabbox.Plo $(DEPDIR)/workspace.Plo
+@@ -360,26 +368,26 @@ depcomp = $(SHELL) $(top_srcdir)/admin/d
+ am__depfiles_maybe = depfiles
+ #>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/atoms.Plo ./$(DEPDIR)/client.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/events.Plo ./$(DEPDIR)/killwindow.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/kwin_main.Po ./$(DEPDIR)/kwinbutton.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/main.Plo ./$(DEPDIR)/options.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/placement.Plo ./$(DEPDIR)/plugins.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/popupinfo.Plo ./$(DEPDIR)/tabbox.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/workspace.Plo
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kwin_main.Plo ./$(DEPDIR)/kwin_main.Po \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/kwinbutton.Plo ./$(DEPDIR)/main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/options.Plo ./$(DEPDIR)/placement.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/plugins.Plo ./$(DEPDIR)/popupinfo.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/tabbox.Plo ./$(DEPDIR)/workspace.Plo
+ #>+ 15
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/KWinInterface_skel.P  $(DEPDIR)/kwin_la.all_cpp.P  ./$(DEPDIR)/atoms.Plo ./$(DEPDIR)/client.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/KWinInterface_skel.P  $(DEPDIR)/libkwin_la.all_cpp.P  ./$(DEPDIR)/atoms.Plo ./$(DEPDIR)/client.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/events.Plo ./$(DEPDIR)/killwindow.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kwin_main.Po ./$(DEPDIR)/kwinbutton.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/main.Plo ./$(DEPDIR)/options.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/placement.Plo ./$(DEPDIR)/plugins.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/popupinfo.Plo ./$(DEPDIR)/tabbox.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/workspace.Plo
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kwin_main.Plo ./$(DEPDIR)/kwin_main.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/kwinbutton.Plo ./$(DEPDIR)/main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/options.Plo ./$(DEPDIR)/placement.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/plugins.Plo ./$(DEPDIR)/popupinfo.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/tabbox.Plo ./$(DEPDIR)/workspace.Plo
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/KWinInterface_skel.P  ./$(DEPDIR)/atoms.Plo ./$(DEPDIR)/client.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/events.Plo ./$(DEPDIR)/killwindow.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kwin_main.Po ./$(DEPDIR)/kwinbutton.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/main.Plo ./$(DEPDIR)/options.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/placement.Plo ./$(DEPDIR)/plugins.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/popupinfo.Plo ./$(DEPDIR)/tabbox.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/workspace.Plo
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kwin_main.Plo ./$(DEPDIR)/kwin_main.Po \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/kwinbutton.Plo ./$(DEPDIR)/main.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/options.Plo ./$(DEPDIR)/placement.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/plugins.Plo ./$(DEPDIR)/popupinfo.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/tabbox.Plo ./$(DEPDIR)/workspace.Plo
  
  #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
  #>- 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
-@@ -396,7 +406,7 @@ CXXLD = $(CXX)
+@@ -400,7 +408,7 @@ CXXLD = $(CXX)
  CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  CXXFLAGS = @CXXFLAGS@
@@ -134,7 +138,7 @@ $NetBSD: patch-dh,v 1.3 2003/01/02 09:12:35 skrll Exp $
  DATA = $(data_DATA) $(sound_DATA) $(update_DATA)
  
  HEADERS = $(include_HEADERS) $(kwininclude_HEADERS)
-@@ -409,7 +419,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
+@@ -413,7 +421,7 @@ RECURSIVE_TARGETS = info-recursive dvi-r
  DIST_COMMON = README $(include_HEADERS) $(kwininclude_HEADERS) \
  	Makefile.am Makefile.in
  DIST_SUBDIRS = $(SUBDIRS)
@@ -143,33 +147,33 @@ $NetBSD: patch-dh,v 1.3 2003/01/02 09:12:35 skrll Exp $
  
  #>- all: all-recursive
  #>+ 1
-@@ -458,6 +468,8 @@ clean-libLTLIBRARIES:
- 	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+@@ -460,6 +468,8 @@ clean-libLTLIBRARIES:
+ 	done
  kwin.la: $(kwin_la_OBJECTS) $(kwin_la_DEPENDENCIES) 
  	$(CXXLINK) -rpath $(libdir) $(kwin_la_LDFLAGS) $(kwin_la_OBJECTS) $(kwin_la_LIBADD) $(LIBS)
 +libkwin.la: $(libkwin_la_OBJECTS) $(libkwin_la_DEPENDENCIES) 
 +	$(CXXLINK) -rpath $(libdir) $(libkwin_la_LDFLAGS) $(libkwin_la_OBJECTS) $(libkwin_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  install-binPROGRAMS: $(bin_PROGRAMS)
  	@$(NORMAL_INSTALL)
- 	$(mkinstalldirs) $(DESTDIR)$(bindir)
-@@ -496,6 +508,7 @@ distclean-compile:
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/client.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/events.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/killwindow.Plo@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kwin_main.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kwin_main.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/kwinbutton.Plo@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/main.Plo@am__quote@
-@@ -706,7 +719,7 @@ distclean-tags:
- 
+@@ -503,6 +513,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/client.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/events.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/killwindow.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kwin_main.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kwin_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/kwinbutton.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Plo@am__quote@
+@@ -732,7 +743,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
  #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
  #>+ 4
--KDE_DIST=stdclient_bitmaps.h NEWCOLORSCHEME.README killwindow.h eventsrc atoms.h main.h killwindow.cpp kwin.upd pop.wav plugins.cpp pluginlibFix.pl tabbox.cpp hi16-app-kwin.png plugins.h events.h kwinbindings.cpp LICENSE hi48-app-kwin.png options.cpp kwinbutton.cpp hi32-app-kwin.png tabbox.h events.cpp 
-+KDE_DIST=pluginlibFix.pl kwinbutton.cpp kwin.upd events.cpp plugins.h options.cpp LICENSE killwindow.h main.h NEWCOLORSCHEME.README hi32-app-kwin.png tabbox.h hi48-app-kwin.png kwinbindings.cpp plugins.cpp pop.wav stdclient_bitmaps.h events.h atoms.h killwindow.cpp tabbox.cpp eventsrc hi16-app-kwin.png 
+-KDE_DIST=stdclient_bitmaps.h NEWCOLORSCHEME.README killwindow.h cr32-app-kwin.png eventsrc atoms.h main.h killwindow.cpp kwin.upd pop.wav plugins.cpp cr16-app-kwin.png pluginlibFix.pl tabbox.cpp placement.h plugins.h events.h kwinbindings.cpp LICENSE popupinfo.h options.cpp popupinfo.cpp kwinbutton.cpp cr48-app-kwin.png tabbox.h events.cpp 
++KDE_DIST=pluginlibFix.pl kwinbutton.cpp kwin.upd events.cpp plugins.h placement.h options.cpp LICENSE killwindow.h cr32-app-kwin.png main.h popupinfo.h NEWCOLORSCHEME.README cr48-app-kwin.png tabbox.h kwinbindings.cpp plugins.cpp pop.wav stdclient_bitmaps.h popupinfo.cpp events.h cr16-app-kwin.png atoms.h killwindow.cpp tabbox.cpp eventsrc 
  
  DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
  
-@@ -863,25 +876,15 @@ messages:
+@@ -895,25 +906,15 @@ messages:
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
  
@@ -198,7 +202,7 @@ $NetBSD: patch-dh,v 1.3 2003/01/02 09:12:35 skrll Exp $
  options.moc: $(srcdir)/options.h
  	$(MOC) $(srcdir)/options.h -o options.moc
  
-@@ -894,8 +897,18 @@ kwinbutton.moc: $(srcdir)/kwinbutton.h
+@@ -930,8 +931,18 @@ kwinbutton.moc: $(srcdir)/kwinbutton.h
  	$(MOC) $(srcdir)/kwinbutton.h -o kwinbutton.moc
  
  #>+ 3
@@ -213,24 +217,24 @@ $NetBSD: patch-dh,v 1.3 2003/01/02 09:12:35 skrll Exp $
 +
 +#>+ 3
  clean-metasources:
--	-rm -f  client.moc plugins.moc workspace.moc options.moc tabbox.moc kwinbutton.moc
-+	-rm -f  workspace.moc client.moc options.moc tabbox.moc kwinbutton.moc plugins.moc
+-	-rm -f  client.moc plugins.moc workspace.moc options.moc tabbox.moc popupinfo.moc kwinbutton.moc
++	-rm -f  workspace.moc client.moc options.moc tabbox.moc popupinfo.moc kwinbutton.moc plugins.moc
  
  #>+ 4
  clean-idl:
-@@ -927,33 +940,33 @@ force-reedit:
+@@ -963,33 +974,33 @@ force-reedit:
  
  
  #>+ 11
--kwin_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/workspace.cpp $(srcdir)/atoms.cpp $(srcdir)/client.cpp $(srcdir)/main.cpp $(srcdir)/tabbox.cpp $(srcdir)/options.cpp $(srcdir)/plugins.cpp $(srcdir)/events.cpp $(srcdir)/killwindow.cpp $(srcdir)/kwinbutton.cpp KWinInterface_skel.cpp  client.moc workspace.moc plugins.moc options.moc tabbox.moc kwinbutton.moc
+-kwin_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/workspace.cpp $(srcdir)/placement.cpp $(srcdir)/atoms.cpp $(srcdir)/client.cpp $(srcdir)/main.cpp $(srcdir)/popupinfo.cpp $(srcdir)/tabbox.cpp $(srcdir)/options.cpp $(srcdir)/plugins.cpp $(srcdir)/events.cpp $(srcdir)/killwindow.cpp $(srcdir)/kwinbutton.cpp KWinInterface_skel.cpp  client.moc workspace.moc plugins.moc options.moc tabbox.moc popupinfo.moc kwinbutton.moc
 -	@echo 'creating kwin_la.all_cpp.cpp ...'; \
 -	rm -f kwin_la.all_cpp.files kwin_la.all_cpp.final; \
 -	echo "#define KDE_USE_FINAL 1" >> kwin_la.all_cpp.final; \
-+libkwin_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/workspace.cpp $(srcdir)/atoms.cpp $(srcdir)/client.cpp $(srcdir)/main.cpp $(srcdir)/tabbox.cpp $(srcdir)/options.cpp $(srcdir)/plugins.cpp $(srcdir)/events.cpp $(srcdir)/killwindow.cpp $(srcdir)/kwinbutton.cpp KWinInterface_skel.cpp  workspace.moc client.moc tabbox.moc options.moc kwinbutton.moc plugins.moc
++libkwin_la.all_cpp.cpp: $(srcdir)/Makefile.in $(srcdir)/workspace.cpp $(srcdir)/placement.cpp $(srcdir)/atoms.cpp $(srcdir)/client.cpp $(srcdir)/main.cpp $(srcdir)/popupinfo.cpp $(srcdir)/tabbox.cpp $(srcdir)/options.cpp $(srcdir)/plugins.cpp $(srcdir)/events.cpp $(srcdir)/killwindow.cpp $(srcdir)/kwinbutton.cpp KWinInterface_skel.cpp  workspace.moc client.moc tabbox.moc options.moc kwinbutton.moc popupinfo.moc plugins.moc
 +	@echo 'creating libkwin_la.all_cpp.cpp ...'; \
 +	rm -f libkwin_la.all_cpp.files libkwin_la.all_cpp.final; \
 +	echo "#define KDE_USE_FINAL 1" >> libkwin_la.all_cpp.final; \
- 	for file in workspace.cpp atoms.cpp client.cpp main.cpp tabbox.cpp options.cpp plugins.cpp events.cpp killwindow.cpp kwinbutton.cpp KWinInterface_skel.cpp ; do \
+ 	for file in workspace.cpp placement.cpp atoms.cpp client.cpp main.cpp popupinfo.cpp tabbox.cpp options.cpp plugins.cpp events.cpp killwindow.cpp kwinbutton.cpp KWinInterface_skel.cpp ; do \
 -	  echo "#include \"$$file\"" >> kwin_la.all_cpp.files; \
 -	  test ! -f $(srcdir)/$$file || egrep '^#pragma +implementation' $(srcdir)/$$file >> kwin_la.all_cpp.final; \
 +	  echo "#include \"$$file\"" >> libkwin_la.all_cpp.files; \
@@ -265,26 +269,29 @@ $NetBSD: patch-dh,v 1.3 2003/01/02 09:12:35 skrll Exp $
  #>+ 3
  cvs-clean:
  	$(MAKE) admindir=$(top_srcdir)/admin -f $(top_srcdir)/admin/Makefile.common cvs-clean
-@@ -963,15 +976,15 @@ kde-rpo-clean:
+@@ -999,17 +1010,17 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
- #>+ 13
--kwinbutton.lo: kwinbutton.moc 
- kwinbutton.o: kwinbutton.moc 
--tabbox.lo: tabbox.moc 
--tabbox.o: tabbox.moc 
+ #>+ 15
++workspace.o: workspace.moc 
++options.lo: options.moc 
++tabbox.o: tabbox.moc 
++popupinfo.lo: popupinfo.moc 
++options.o: options.moc 
+ kwinbutton.lo: kwinbutton.moc 
+ tabbox.lo: tabbox.moc 
 -options.o: options.moc 
 -client.lo: client.moc 
- workspace.o: workspace.moc 
 -client.o: client.moc 
 -options.lo: options.moc 
- plugins.o: plugins.moc 
-+options.lo: options.moc 
+ kwinbutton.o: kwinbutton.moc 
+-tabbox.o: tabbox.moc 
+-popupinfo.o: popupinfo.moc 
+-workspace.o: workspace.moc 
 +client.o: client.moc 
-+tabbox.o: tabbox.moc 
+ plugins.o: plugins.moc 
  workspace.lo: workspace.moc 
+-popupinfo.lo: popupinfo.moc 
 +client.lo: client.moc 
-+options.o: options.moc 
++popupinfo.o: popupinfo.moc 
  plugins.lo: plugins.moc 
-+kwinbutton.lo: kwinbutton.moc 
-+tabbox.lo: tabbox.moc 

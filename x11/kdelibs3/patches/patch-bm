@@ -1,8 +1,8 @@
-$NetBSD: patch-bm,v 1.2 2002/08/25 19:23:54 jlam Exp $
+$NetBSD: patch-bm,v 1.3 2003/03/11 13:10:38 markd Exp $
 
---- kioslave/http/Makefile.am.orig	Fri Jan 18 16:04:23 2002
+--- kioslave/http/Makefile.am.orig	Sun Oct 27 11:18:24 2002
 +++ kioslave/http/Makefile.am
-@@ -9,19 +9,22 @@
+@@ -9,7 +9,7 @@
  ####### Files
  
  bin_PROGRAMS = kio_http_cache_cleaner
@@ -10,7 +10,8 @@ $NetBSD: patch-bm,v 1.2 2002/08/25 19:23:54 jlam Exp $
 +lib_LTLIBRARIES = libkio_http_cache_cleaner_main.la kio_http_cache_cleaner.la
  kde_module_LTLIBRARIES = kio_http.la
  
- kio_http_la_SOURCES = http.cc
+ kio_http_la_SOURCES = http.cc httpfilter.cc
+@@ -17,12 +17,15 @@
  kio_http_la_LIBADD = $(LIB_KIO) $(LIBZ)
  kio_http_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
  
@@ -30,7 +31,7 @@ $NetBSD: patch-bm,v 1.2 2002/08/25 19:23:54 jlam Exp $
  kio_http_cache_cleaner_la_LDFLAGS = -module -avoid-version
  
  noinst_HEADERS = http.h
-@@ -29,6 +32,3 @@
+@@ -30,6 +33,3 @@
  kdelnkdir = $(kde_servicesdir)
  kdelnk_DATA = http_cache_cleaner.desktop http.protocol https.protocol \
                webdav.protocol webdavs.protocol

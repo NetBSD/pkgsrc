@@ -1,8 +1,8 @@
-$NetBSD: patch-cy,v 1.2 2002/08/25 19:23:43 jlam Exp $
+$NetBSD: patch-cy,v 1.3 2003/03/11 13:10:24 markd Exp $
 
---- ksmserver/Makefile.am.orig	Wed May  8 19:22:50 2002
+--- ksmserver/Makefile.am.orig	Tue Jul  2 06:54:12 2002
 +++ ksmserver/Makefile.am
-@@ -20,18 +20,21 @@
+@@ -20,18 +20,21 @@ SUBDIRS = .
  INCLUDES=  $(all_includes)
  
  bin_PROGRAMS = ksmserver
@@ -12,9 +12,9 @@ $NetBSD: patch-cy,v 1.2 2002/08/25 19:23:43 jlam Exp $
  
  ksmserver_la_METASOURCES = AUTO
  # Order is important for --enable-final!
--ksmserver_la_SOURCES = main.cpp server.cpp shutdown.cpp
+-ksmserver_la_SOURCES = main.cpp server.cpp shutdown.cpp KSMServerInterface.skel
 -ksmserver_SOURCES = dummy.cpp
-+libksmserver_main_la_SOURCES = main.cpp server.cpp shutdown.cpp
++libksmserver_main_la_SOURCES = main.cpp server.cpp shutdown.cpp KSMServerInterface.skel
 +ksmserver_la_SOURCES = ksmserver_main.cpp
 +ksmserver_SOURCES = ksmserver_main.cpp
  
@@ -29,7 +29,7 @@ $NetBSD: patch-cy,v 1.2 2002/08/25 19:23:43 jlam Exp $
  
  picsdir = $(kde_datadir)/ksmserver/pics
  pics_DATA = shutdownkonq.png
-@@ -48,6 +51,3 @@
+@@ -47,6 +50,3 @@ testsh_LDADD = $(LIB_KDEUI) shutdown.lo
  
  messages:
  	$(XGETTEXT) *.cpp -o $(podir)/ksmserver.pot

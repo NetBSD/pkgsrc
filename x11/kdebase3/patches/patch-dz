@@ -1,8 +1,8 @@
-$NetBSD: patch-dz,v 1.3 2003/01/02 09:12:36 skrll Exp $
+$NetBSD: patch-dz,v 1.4 2003/03/11 13:10:28 markd Exp $
 
---- kwin/clients/quartz/Makefile.in.orig	Fri Dec 27 18:19:11 2002
+--- kwin/clients/quartz/Makefile.in.orig	Fri Jan 17 09:03:12 2003
 +++ kwin/clients/quartz/Makefile.in
-@@ -293,7 +293,7 @@ SUBDIRS = . config
+@@ -292,7 +292,7 @@ SUBDIRS = . config
  kde_module_LTLIBRARIES = kwin_quartz.la
  
  kwin_quartz_la_SOURCES = quartz.cpp
@@ -11,7 +11,7 @@ $NetBSD: patch-dz,v 1.3 2003/01/02 09:12:36 skrll Exp $
  kwin_quartz_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
  
  #>- METASOURCES = AUTO
-@@ -309,7 +309,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
+@@ -308,7 +308,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
  LTLIBRARIES = $(kde_module_LTLIBRARIES)
  
@@ -20,7 +20,7 @@ $NetBSD: patch-dz,v 1.3 2003/01/02 09:12:36 skrll Exp $
  am_kwin_quartz_la_OBJECTS = quartz.lo
  #>- kwin_quartz_la_OBJECTS = $(am_kwin_quartz_la_OBJECTS)
  #>+ 1
-@@ -747,5 +747,5 @@ kde-rpo-clean:
+@@ -764,5 +764,5 @@ kde-rpo-clean:
  	-rm -f *.rpo
  
  #>+ 3

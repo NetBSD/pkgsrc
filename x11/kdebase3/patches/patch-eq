@@ -1,13 +1,128 @@
-$NetBSD: patch-eq,v 1.4 2003/01/13 17:01:24 skrll Exp $
+$NetBSD: patch-eq,v 1.5 2003/03/11 13:10:29 markd Exp $
 
---- klipper/urlgrabber.cpp.orig	Mon Dec 16 02:44:19 2002
-+++ klipper/urlgrabber.cpp
-@@ -210,7 +210,7 @@ void URLGrabber::execute( const struct C
-         // the quotes have to be replaced as well as they might
-         // be part of config files from older klipper versions
-         // replace \%s to %s
--        int pos;
-+        int pos = 0;
-         while ( (pos = cmdLine.find("%s", pos)) >= 0 ) {
-             if ( pos > 0 && cmdLine.at( pos - 1 ) == '\\' ) {
-                 cmdLine.remove( pos -1, 1 ); // \%s -> %s
+--- legacyimport/Makefile.in.orig	Fri Jan 17 09:03:12 2003
++++ legacyimport/Makefile.in
+@@ -287,14 +287,18 @@ x_libraries = @x_libraries@
+ INCLUDES = $(all_includes)
+ 
+ bin_PROGRAMS = klegacyimport
+-lib_LTLIBRARIES = klegacyimport.la
++lib_LTLIBRARIES = libklegacyimport_main.la klegacyimport.la
+ 
+-klegacyimport_la_SOURCES = legacyimport.cpp
+-klegacyimport_la_LIBADD = $(LIB_KDEUI) $(LIB_KIO)
++libklegacyimport_main_la_SOURCES = legacyimport.cpp
++libklegacyimport_main_la_LIBADD = $(LIB_KDEUI) $(LIB_KIO)
++libklegacyimport_main_la_LDFLAGS = $(all_libraries)
++
++klegacyimport_la_SOURCES = klegacyimport_main.cpp
++klegacyimport_la_LIBADD = libklegacyimport_main.la
+ klegacyimport_la_LDFLAGS = $(all_libraries) -module -avoid-version
+ 
+-klegacyimport_SOURCES = dummy.cpp
+-klegacyimport_LDADD = klegacyimport.la
++klegacyimport_SOURCES = klegacyimport_main.cpp
++klegacyimport_LDADD = libklegacyimport_main.la
+ klegacyimport_LDFLAGS = $(all_libraries) $(KDE_RPATH)
+ 
+ noinst_HEADERS = legacyimport.h
+@@ -310,19 +314,25 @@ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+ 
+-klegacyimport_la_DEPENDENCIES =
+-am_klegacyimport_la_OBJECTS = legacyimport.lo
++klegacyimport_la_DEPENDENCIES = libklegacyimport_main.la
++am_klegacyimport_la_OBJECTS = klegacyimport_main.lo
+ #>- klegacyimport_la_OBJECTS = $(am_klegacyimport_la_OBJECTS)
+ #>+ 1
+-klegacyimport_la_OBJECTS = legacyimport.lo
++klegacyimport_la_OBJECTS = klegacyimport_main.lo
++libklegacyimport_main_la_DEPENDENCIES =
++am_libklegacyimport_main_la_OBJECTS = legacyimport.lo
++#>- libklegacyimport_main_la_OBJECTS = \
++#>- 	$(am_libklegacyimport_main_la_OBJECTS)
++#>+ 1
++libklegacyimport_main_la_OBJECTS = legacyimport.lo
+ bin_PROGRAMS = klegacyimport$(EXEEXT)
+ PROGRAMS = $(bin_PROGRAMS)
+ 
+-am_klegacyimport_OBJECTS = dummy.$(OBJEXT)
++am_klegacyimport_OBJECTS = klegacyimport_main.$(OBJEXT)
+ #>- klegacyimport_OBJECTS = $(am_klegacyimport_OBJECTS)
+ #>+ 1
+-klegacyimport_OBJECTS = dummy.$(OBJEXT)
+-klegacyimport_DEPENDENCIES = klegacyimport.la
++klegacyimport_OBJECTS = klegacyimport_main.$(OBJEXT)
++klegacyimport_DEPENDENCIES = libklegacyimport_main.la
+ 
+ DEFS = @DEFS@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+@@ -331,10 +341,12 @@ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+ am__depfiles_maybe = depfiles
+-#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Po \
++#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/klegacyimport_main.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/klegacyimport_main.Po \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/legacyimport.Plo
+-#>+ 3
+-@AMDEP_TRUE@DEP_FILES =   ./$(DEPDIR)/dummy.Po \
++#>+ 4
++@AMDEP_TRUE@DEP_FILES =   ./$(DEPDIR)/klegacyimport_main.Plo \
++@AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/klegacyimport_main.Po \
+ @AMDEP_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/legacyimport.Plo
+ 
+ #>- CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+@@ -356,13 +368,14 @@ CXXLD = $(CXX)
+ CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(KDE_CXXFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ CXXFLAGS = @CXXFLAGS@
+-DIST_SOURCES = $(klegacyimport_la_SOURCES) $(klegacyimport_SOURCES)
++DIST_SOURCES = $(klegacyimport_la_SOURCES) \
++	$(libklegacyimport_main_la_SOURCES) $(klegacyimport_SOURCES)
+ DATA = $(apps_DATA)
+ 
+ HEADERS = $(noinst_HEADERS)
+ 
+ DIST_COMMON = $(noinst_HEADERS) Makefile.am Makefile.in
+-SOURCES = $(klegacyimport_la_SOURCES) $(klegacyimport_SOURCES)
++SOURCES = $(klegacyimport_la_SOURCES) $(libklegacyimport_main_la_SOURCES) $(klegacyimport_SOURCES)
+ 
+ #>- all: all-am
+ #>+ 1
+@@ -409,6 +422,8 @@ clean-libLTLIBRARIES:
+ 	done
+ klegacyimport.la: $(klegacyimport_la_OBJECTS) $(klegacyimport_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(klegacyimport_la_LDFLAGS) $(klegacyimport_la_OBJECTS) $(klegacyimport_la_LIBADD) $(LIBS)
++libklegacyimport_main.la: $(libklegacyimport_main_la_OBJECTS) $(libklegacyimport_main_la_DEPENDENCIES) 
++	$(CXXLINK) -rpath $(libdir) $(libklegacyimport_main_la_LDFLAGS) $(libklegacyimport_main_la_OBJECTS) $(libklegacyimport_main_la_LIBADD) $(LIBS)
+ binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
+ install-binPROGRAMS: $(bin_PROGRAMS)
+ 	@$(NORMAL_INSTALL)
+@@ -448,7 +463,8 @@ mostlyclean-compile:
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/klegacyimport_main.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/klegacyimport_main.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/legacyimport.Plo@am__quote@
+ 
+ distclean-depend:
+@@ -538,7 +554,7 @@ distclean-tags:
+ 	-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH
+ #>- DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+ #>+ 4
+-KDE_DIST=configure.in.in klegacyimport.desktop 
++KDE_DIST=Makefile.am.rej klegacyimport.desktop configure.in.in dummy.cpp 
+ 
+ DISTFILES= $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST) $(KDE_DIST)
+ 
+@@ -705,5 +721,5 @@ kde-rpo-clean:
+ 	-rm -f *.rpo
+ 
+ #>+ 3
+-legacyimport.lo: legacyimport.moc 
+ legacyimport.o: legacyimport.moc 
++legacyimport.lo: legacyimport.moc 
