@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/01/08 19:39:42 xtraeme Exp $
+
+SHA1 (icecast-2.0.0.tar.gz) = 76f41f807bdff5dfb50d5b67075fc401de7e270a
+Size (icecast-2.0.0.tar.gz) = 684624 bytes
+SHA1 (patch-aa) = fa92a4a704a3f471a0669c9933b36a3586425dc5
+SHA1 (patch-ab) = 39cf0ed1e9da8c7d90fa192731307817e91496c9
