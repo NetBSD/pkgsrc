@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6612 2004/07/20 01:12:42 epg Exp $
+$NetBSD: CHANGES,v 1.6613 2004/07/20 11:54:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3460,3 +3460,8 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pkgse-0.1 [xtraeme 2004-07-19]
 	Updated ezmlm-idx to 0.421 [schmonz 2004-07-19]
 	Updated subversion to 1.0.6 [epg 2004-07-20]
+	Updated nessus-libraries to 2.0.11 [adam 2004-07-20]
+	Updated libnasl to 2.0.11 [adam 2004-07-20]
+	Updated nessus-core to 2.0.11 [adam 2004-07-20]
+	Updated nessus-plugins to 2.0.11 [adam 2004-07-20]
+	Updated nessus to 2.0.11 [adam 2004-07-20]
