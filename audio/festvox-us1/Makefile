@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 13:30:40 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/05/19 03:56:30 jlam Exp $
 
 DISTNAME=	festvox_us1
 PKGNAME=	festvox-us1-1.4.0
@@ -27,7 +27,7 @@ ONLY_FOR_PLATFORM=      NetBSD-*-i386
 
 post-extract:
 	@ ${CHMOD} -R a+r ${WRKSRC}
-	@ ${FIND} ${WRKSRC} -type d -print0 | xargs -0 ${CHMOD} 755
+	@ ${FIND} ${WRKSRC} -type d -print0 | ${XARGS} -0 ${CHMOD} 755
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -r -w * ${FHOME}

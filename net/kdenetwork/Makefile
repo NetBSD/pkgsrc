@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2001/02/17 18:19:02 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2001/05/19 03:56:38 jlam Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -50,7 +50,7 @@ CFLAGS+=		-I${LOCALBASE}/include
 
 post-install:
 .if (${GCC_VERSION:C/-.*$$//} != egcs)
-	@${FIND} ${KDEBASEDIR}/share/kde/locale -name ksirc.mo | xargs ${RM}
+	@${FIND} ${KDEBASEDIR}/share/kde/locale -name ksirc.mo | ${XARGS} ${RM}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
