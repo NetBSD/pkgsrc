@@ -1,0 +1,30 @@
+# $NetBSD: sunpro-cc-post-logic,v 1.1.2.1 2003/08/16 08:33:32 jlam Exp $
+#
+# Silently accept some GCC compiler arguments by silently converting
+# them to the SunPro compiler equivalents.  This makes the SunPro
+# compiler wrappers work with more software that seems to assume GCC
+# nowadays.
+
+case $arg in
+-Werror)
+	# "-errwarn" is the right way to convince the SunPro compiler
+	# to stop on compilation warnings.
+	#
+	arg="-errwarn"
+	addtoprivatecache=yes
+	;;
+-Wl,-R*)
+	# Directories for the runtime library search path are passed
+	# via simply "-R<dir>", not "-Wl,-R<dir>".
+	#
+	arg=`$echo "X$arg" | $Xsed -e "s|^-Wl,||g" -e "s|,| |g"`
+	addtoprivatecache=yes
+	;;
+-W*)
+	# In fact, SunPro compilers don't even understand any -W*
+	# arguments, so just silently ignore them all.
+	#
+	arg=
+	addtoprivatecache=yes
+	;;
+esac
