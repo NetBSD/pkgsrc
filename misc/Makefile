@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.205 2004/07/08 11:06:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.206 2004/07/26 23:40:07 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -67,8 +67,6 @@ SUBDIR+=	gnuls
 SUBDIR+=	gok
 SUBDIR+=	gone
 SUBDIR+=	gperiodic
-SUBDIR+=	gpsd
-SUBDIR+=	gpsdrive
 SUBDIR+=	granulate
 SUBDIR+=	gxmame
 SUBDIR+=	heyu
