@@ -1,7 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/07/22 09:14:55 garbled Exp $
---- Makefile.in.orig	Wed Mar 31 16:44:04 1999
-+++ Makefile.in	Thu Jul 22 01:57:53 1999
-@@ -54,19 +54,19 @@
+$NetBSD: patch-ab,v 1.2 2001/02/23 13:09:24 wiz Exp $
+
+--- Makefile.in.orig	Thu Apr  1 01:44:04 1999
++++ Makefile.in
+@@ -54,20 +54,21 @@
  	install -d $(prefix)/include/ptc/X11
  	install -d $(exec_prefix)/lib
  	install -d $(exec_prefix)/bin
@@ -25,5 +26,7 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/07/22 09:14:55 garbled Exp $
 -	  install -m 0755 library/$(PTC_LIBRARY_DYN) $(exec_prefix)/lib; \
 +	  install -c -m 0755 library/$(PTC_LIBRARY_DYN) $(exec_prefix)/lib; \
  	  cd $(exec_prefix)/lib ; ln -sf $(PTC_LIBRARY_DYN) libptc.so ; \
++	  	ln -sf $(PTC_LIBRARY_DYN) libptc.so.1 ; \
  	fi
+ 
  
