@@ -3,7 +3,7 @@
 # Date created:				26 August 1997
 # Whom:					Michael Elbel (me)
 #
-# $NetBSD: Makefile,v 1.5 1997/12/22 07:45:41 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 1998/01/24 04:59:54 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.1.1.1 1997/09/03 19:27:57 gj Exp
 #
 
@@ -11,35 +11,46 @@ DISTNAME=	xemacs-20.3
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.xemacs.org/pub/xemacs-20.3/ \
 		ftp://ftp.mpi-sb.mpg.de/pub/gnu/mirror/ftp.xemacs.org/xemacs-20.3/ \
-		ftp://ftp.usyd.edu.au:/pub/Xemacs/xemacs-20.3/ \
+		ftp://ftp.usyd.edu.au/pub/Xemacs/xemacs-20.3/ \
 		ftp://ftp.lab.kdd.co.jp/xemacs/xemacs-20.3/ \
-		ftp://ftp.th-darmstadt.de:/pub/editors/xemacs/xemacs-20.3/ \
+		ftp://ftp.th-darmstadt.de/pub/editors/xemacs/xemacs-20.3/ \
 		ftp://SunSITE.sut.ac.jp/pub/archives/xemacs/xemacs-20.3/ \
 		ftp://ftp.miranova.com/pub/xemacs/ \
 		ftp://ftp.gw.com/mirrors/pub/unix/xemacs/xemacs-20.3/
 DISTFILES=	xemacs-20.3.tar.gz xemacs-20.3-info.tar.gz
 
-LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
-		jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
-		png\\.0\\.:${PORTSDIR}/graphics/png
-
-USE_GMAKE=	yes
-STRIP=
-HAS_CONFIGURE=	yes
-
 OPSYS!=		uname -s
-
 .if (${OPSYS} == "FreeBSD")
 MAINTAINER=	me@FreeBSD.org
 WITH_SOUND=	--with-sound=native
 .elif (${OPSYS} == "NetBSD")
 MAINTAINER=	agc@netbsd.org
-WITH_SOUND=	
+WITH_SOUND=
+.endif
+
+LIB_DEPENDS=	Xpm\\.4\\.:${PORTSDIR}/graphics/xpm \
+		jpeg\\.7\\.:${PORTSDIR}/graphics/jpeg \
+		png\\.0\\.:${PORTSDIR}/graphics/png
+
+#USE_GMAKE=	yes
+STRIP=
+HAS_CONFIGURE=	yes
+
+# hack to avoid shipping binaries linked with Motif
+.if defined(MOTIF_STATIC)
+WITH_DIALOGS=	--with-dialogs=athena
+.endif
+
+.if defined(USE_MULE)
+WITH_MULE=	--with-mule
+DISTFILES+=	xemacs-20.3-mule.tar.gz
 .endif
 
 CONFIGURE_ARGS+=	${ARCH}--`echo ${OPSYS}|tr [A-Z] [a-z]` --prefix=${PREFIX} \
 		--site-includes=${PREFIX}/include \
 		${WITH_SOUND} \
+		--infodir=${PREFIX}/info \
+		--infopath=${PREFIX}/info \
 		--site-libraries=${PREFIX}/lib \
 		--sitelispdir="${PREFIX}/lib/xemacs/site-lisp ${PREFIX}/share/xemacs/site-lisp" \
 		${WITH_MULE} ${WITH_DIALOGS}
@@ -50,20 +61,10 @@ MAN1=		ctags.1 etags.1 gnuattach.1 gnuclient.1 gnudoit.1 \
 pre-configure:
 	@echo "To compile in the MULE features, set the environment variable USE_MULE"
 
-.if defined(USE_MULE)
-WITH_MULE=	--with-mule
-DISTFILES+=	xemacs-20.3-mule.tar.gz
-.endif
-
-# hack to avoid shipping binaries linked with Motif
-.if defined(MOTIF_STATIC)
-WITH_DIALOGS=	--with-dialogs=athena
-.endif
-
 post-install:
 .for file in b2m ctags etags gnuclient xemacs-20.3
 	strip ${PREFIX}/bin/${file}
 .endfor
-	mv ${PREFIX}/bin/send-pr ${PREFIX}/bin/xemacs-send-pr
+	${MV} ${PREFIX}/bin/send-pr ${PREFIX}/bin/xemacs-send-pr
 
 .include <bsd.port.mk>
