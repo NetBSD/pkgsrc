@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2003/05/13 23:33:02 salo Exp $
+# $NetBSD: Makefile,v 1.8 2003/05/14 18:53:38 salo Exp $
 #
 
-DISTNAME=		Xdialog-2.0.6
+DISTNAME=		Xdialog-2.1.1
 PKGNAME=		${DISTNAME:S/^X/x/}
 CATEGORIES=		x11 misc
-MASTER_SITES=		http://www.chez.com/godefroy/
+MASTER_SITES=		http://thgodef.nerim.net/xdialog/	\
+			http://thgodef.nerim.net/xdialog/archives/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@netbsd.org
-HOMEPAGE=		http://www.chez.com/godefroy/
+HOMEPAGE=		http://xdialog.dyns.net/
 COMMENT=		X11 drop-in replacement for the curses dialog program
 
 BUILD_USES_MSGFMT=	YES
