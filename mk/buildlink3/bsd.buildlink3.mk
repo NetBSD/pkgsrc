@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.135 2004/03/30 20:29:54 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.136 2004/03/31 07:12:31 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -68,20 +68,6 @@ PREPEND_PATH+=	${BUILDLINK_DIR}/bin
 # dependencies.
 #
 BUILDLINK_DEPENDS?=	# empty
-
-.if defined(USE_X11)
-X11_TYPE?=	native
-.  if ${X11_TYPE} == "native"
-.    include "../../pkgtools/x11-links/buildlink3.mk"
-.  elif ${X11_TYPE} == "XFree86"
-.    include "../../x11/XFree86-libs/buildlink3.mk"
-#.  elif ${X11_TYPE} == "xlibs"
-#.    include "../../x11/xlibs/buildlink3.mk"
-.  else
-PKG_FAIL_REASON+=	\
-	"${PKGNAME} uses X11, but \"${X11_TYPE}\" isn't a valid X11 type."
-.  endif
-.endif
 
 # For each package we use, check whether we are using the built-in
 # version of the package or if we are using the pkgsrc version.
@@ -190,6 +176,25 @@ BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 CHECK_BUILTIN.${_pkg_}=	no
 .endfor
 .include "../../mk/buildlink3/bsd.builtin.mk"
+
+# Check whether we should include the X11 buildlink3.mk file here since
+# USE_X11 may have been set indirectly by bsd.builtin.mk.
+#
+.if defined(USE_X11)
+X11_TYPE?=		native
+X11_PKGSRCDIR.native=	../../pkgtools/x11-links
+X11_PKGSRCDIR.XFree86=	../../x11/XFree86-libs
+X11_PKGSRCDIR.xlibs=	../../x11/xlibs
+.  if exists(${X11_PKGSRCDIR.${X11_TYPE}}/buildlink3.mk)
+.    include "${X11_PKGSRCDIR.${X11_TYPE}}/buildlink3.mk"
+.    if exists(${X11_PKGSRCDIR.${X11_TYPE}}/builtin.mk)
+.      include "${X11_PKGSRCDIR.${X11_TYPE}}/builtin.mk"
+.    endif
+.  else
+PKG_FAIL_REASON+=	\
+	"${PKGNAME} uses X11, but \"${X11_TYPE}\" isn't a valid X11 type."
+.  endif
+.endif
 
 # Set IGNORE_PKG.<pkg> if <pkg> is the current package we're building.  
 # We can then check for this value to avoid build loops.
