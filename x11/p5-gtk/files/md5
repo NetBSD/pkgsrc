@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 2000/08/28 20:30:34 jlam Exp $
+$NetBSD: md5,v 1.4 2001/02/28 14:01:15 wiz Exp $
 
-MD5 (Gtk-Perl-0.7003.tar.gz) = a257e1c59108ce983ef617e29fad6660
+MD5 (Gtk-Perl-0.7004.tar.gz) = f8f5d889e7a005667a93946ab1bf3e69
