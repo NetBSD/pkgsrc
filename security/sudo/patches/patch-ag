@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2003/04/01 16:07:22 wiz Exp $
+$NetBSD: patch-ag,v 1.5 2004/05/19 19:26:38 kim Exp $
 
---- configure.orig	Mon Mar 24 17:06:06 2003
-+++ configure
-@@ -873,6 +873,7 @@ Optional Packages:
+--- configure.orig	2003-05-06 11:22:27.000000000 -0400
++++ configure	2004-05-19 15:17:50.000000000 -0400
+@@ -873,6 +873,7 @@
    --with-devel            add development options
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
@@ -10,7 +10,7 @@ $NetBSD: patch-ag,v 1.4 2003/04/01 16:07:22 wiz Exp $
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey=DIR       enable S/Key support
    --with-opie=DIR       enable OPIE support
-@@ -1423,7 +1424,6 @@ CHECKSIA=true
+@@ -1423,7 +1424,6 @@
  test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
@@ -18,11 +18,10 @@ $NetBSD: patch-ag,v 1.4 2003/04/01 16:07:22 wiz Exp $
  
  
  
-@@ -1621,6 +1621,22 @@ echo "$as_me: WARNING: Ignoring unknown 
- esac
+@@ -1622,6 +1622,22 @@
  fi;
  
-+
+ 
 +# Check whether --with-nbsdops or --without-nbsdops was given.
 +if test "${with_nbsdops+set}" = set; then
 +  withval="$with_nbsdops"
@@ -38,6 +37,74 @@ $NetBSD: patch-ag,v 1.4 2003/04/01 16:07:22 wiz Exp $
 +		;;
 +esac
 +fi;
- 
++
  # Check whether --with-passwd or --without-passwd was given.
  if test "${with_passwd+set}" = set; then
+   withval="$with_passwd"
+@@ -13230,6 +13246,58 @@
+ _ACEOF
+ 
+ 	    SUDO_LIBS="${SUDO_LIBS} -lkrb5 -ldes -lcom_err -lasn1"
++	    echo "$as_me:$LINENO: checking for main in -lcrypto" >&5
++echo $ECHO_N "checking for main in -lcrypto... $ECHO_C" >&6
++if test "${ac_cv_lib_crypto_main+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lcrypto  $LIBS"
++cat >conftest.$ac_ext <<_ACEOF
++#line $LINENO "configure"
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++
++
++int
++main ()
++{
++main ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++         { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  ac_cv_lib_crypto_main=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++ac_cv_lib_crypto_main=no
++fi
++rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++echo "$as_me:$LINENO: result: $ac_cv_lib_crypto_main" >&5
++echo "${ECHO_T}$ac_cv_lib_crypto_main" >&6
++if test $ac_cv_lib_crypto_main = yes; then
++  SUDO_LIBS="${SUDO_LIBS} -lcrypto"
++fi
++
+ 	    echo "$as_me:$LINENO: checking for main in -lroken" >&5
+ echo $ECHO_N "checking for main in -lroken... $ECHO_C" >&6
+ if test "${ac_cv_lib_roken_main+set}" = set; then
+@@ -13282,7 +13350,6 @@
+   SUDO_LIBS="${SUDO_LIBS} -lroken"
+ fi
+ 
+-
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
