@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/10/13 20:07:55 ben Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/13 20:11:16 ben Exp $
 #
 
 DISTNAME=		#defined
@@ -41,20 +41,20 @@ OWN_DIRS=               ${FPDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-#.if ${OPSYS} == "NetBSD"
-#MASTER_SITES=		ftp://ftp.f-prot.com/pub/bsd/
-#DISTNAME=		fp-netbsd-ws-${PKGVERSION}
-#.endif
-#
-#.if ${OPSYS} == "Linux"
-#MASTER_SITES=		ftp://ftp.f-prot.com/pub/linux/
-#DISTNAME=		fp-linux-ws-${PKGVERSION}
-#.endif
-#
-#.if ${OPSYS} == "SunOS"
+.if ${OPSYS} == "NetBSD"
+MASTER_SITES=		ftp://ftp.f-prot.com/pub/bsd/
+DISTNAME=		fp-netbsd-ws-${PKGVERSION}
+.endif
+
+.if ${OPSYS} == "Linux"
+MASTER_SITES=		ftp://ftp.f-prot.com/pub/linux/
+DISTNAME=		fp-linux-ws-${PKGVERSION}
+.endif
+
+.if ${OPSYS} == "SunOS"
 MASTER_SITES=		ftp://ftp.f-prot.com/pub/solaris/
 DISTNAME=		fp-solaris-sparc-ws-${PKGVERSION}
-#.endif
+.endif
 
 DIST_SUBDIR=		${DISTNAME}
 
