@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/03/02 00:05:16 tron Exp $
 share/doc/uudeview/HOWTO
 share/doc/uudeview/porting.notes
 man/man1/uudeview.1.gz
