@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/21 17:01:23 martti Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/27 02:24:09 snj Exp $
 
 DISTNAME=	ControlX10-CM17-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl5 module for controlling the X10 CM17A controller
 
 DEPENDS+=	p5-Device-SerialPort>=0.07:../../comms/p5-Device-SerialPort
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/ControlX10/CM17/.packlist
 
 # We don't actually install the example perl script, but we patch it
