@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 1998/08/20 15:17:13 tsarna Exp $
+# $NetBSD: Makefile,v 1.20 1998/09/27 18:07:21 tron Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/28 00:04:18 se Exp
 #
 
 DISTNAME=	kdeutils-1.0
 CATEGORIES=	misc kde
-MASTER_SITES=	ftp://ftp.us.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/ \
-		ftp://ftp.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/
+MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/ \
+		ftp://ftp.de.kde.org/pub/kde/stable/1.0/distribution/tar/generic/source/
 
 MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.kde.org/
