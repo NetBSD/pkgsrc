@@ -1,7 +1,16 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/12/09 11:07:20 ad Exp $
+$NetBSD: patch-ae,v 1.2 2003/01/27 23:39:03 ad Exp $
 
---- dpteng/osd_unix.c.orig	Fri Dec  6 07:56:59 2002
-+++ dpteng/osd_unix.c	Sat Dec  7 17:15:49 2002
+--- dpteng/osd_unix.c.orig	Tue Aug 13 16:02:26 2002
++++ dpteng/osd_unix.c	Fri Dec 13 14:15:13 2002
+@@ -2588,7 +2588,7 @@
+ 
+         BufferID = shmget(IPC_PRIVATE,(int)(toLoggerTotalSize +
+                           fromLoggerTotalSize),
+-                          SHM_ALLRD | SHM_ALLWR | IPC_CREAT);
++                          SHM_URD | SHM_UWR | IPC_CREAT);
+ 
+   /* If We Got The Segment, Try To Attach To It */
+ 
 @@ -3676,7 +3676,7 @@
     uCHAR DataBuff[100];
     EATA_CP pkt;
