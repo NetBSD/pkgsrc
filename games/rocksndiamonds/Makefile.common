@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2003/12/15 14:47:37 adam Exp $
+# $NetBSD: Makefile.common,v 1.6 2003/12/17 21:30:39 heinz Exp $
 #
 
 DISTNAME=	rocksndiamonds-3.0.8
@@ -11,10 +11,17 @@ HOMEPAGE=	http://www.artsoft.org/rocksndiamonds/
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 USE_X11=		YES
+USE_PKGINSTALL=		YES
 
 PLIST_SRC=	${WRKDIR}/PLIST ../rocksndiamonds/PLIST
 PLIST_SUBST+=	SCORE_PATH=${SCORE_PATH}
-PLIST_SUBST+=	ROCK_INSTALL_DIR="${INSTALL} -d -o games -g games -m 775"
+PLIST_SUBST+=	ROCK_INSTALL_DIR="${INSTALL} -d -o ${RND_USER} -g ${RND_GROUP} -m 775"
+
+PKG_GROUPS=	${RND_GROUP}
+PKG_USERS=	${RND_USER}:${RND_GROUP}
+
+RND_USER=	games
+RND_GROUP=	games
 
 .if ( ${MACHINE} == "i386" || ${MACHINE} == "prep" || ${MACHINE} == "cats" || \
       ${MACHINE} == "shark" )
@@ -29,13 +36,13 @@ pre-configure:
 	  ${MV} ${WRKSRC}/Makefile.fixed ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} -o games -g games -m 2755 \
+	${INSTALL_PROGRAM} -o ${RND_USER} -g ${RND_GROUP} -m 2755 \
 		${WRKSRC}/rocksndiamonds ${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/rocksndiamonds.1 ${PREFIX}/man/man1/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/rocksndiamonds
 	cd ${WRKSRC} && ${PAX} -rw sounds graphics levels music \
 		${PREFIX}/share/rocksndiamonds/
-	${CHOWN} -R games:games ${PREFIX}/share/rocksndiamonds
+	${CHOWN} -R ${RND_USER}:${RND_GROUP} ${PREFIX}/share/rocksndiamonds
 	${CHMOD} -R a-w ${PREFIX}/share/rocksndiamonds
 	${INSTALL_DATA_DIR} ${SCORE_PATH}/scores
 	${CHMOD} 755 ${SCORE_PATH}
@@ -47,7 +54,7 @@ do-install:
 	    ${INSTALL_DATA_DIR} ${SCORE_PATH}/scores/$${directory}; \
 	    ${CHMOD} 775 ${SCORE_PATH}/scores/$${directory}; \
 	  done
-	${CHOWN} -R games:games ${SCORE_PATH}
+	${CHOWN} -R ${RND_USER}:${RND_GROUP} ${SCORE_PATH}
 	# auto-generated PLIST
 	${RM} -f ${WRKDIR}/PLIST
 .for levdir in Boulderdash Classic_Games Contributions_1995-2000 \
