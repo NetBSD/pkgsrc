@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/08/02 17:28:10 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/08/22 00:10:51 schmonz Exp $
 bin/bouncesaying
 bin/condredirect
 bin/datemail
@@ -146,7 +146,7 @@ man/man8/qmail-tcpok.8
 man/man8/qmail-tcpto.8
 man/man8/splogger.8
 share/doc/qmail/FAQ
-share/doc/qmail/INSTALL${OSXSUFX}
+share/doc/qmail/INSTALL${DARWINSUFX}
 share/doc/qmail/INSTALL.alias
 share/doc/qmail/INSTALL.ctl
 share/doc/qmail/INSTALL.ids
@@ -165,7 +165,7 @@ share/doc/qmail/PIC.rem2local
 share/doc/qmail/README.pkgsrc
 share/doc/qmail/REMOVE.binmail
 share/doc/qmail/REMOVE.sendmail
-share/doc/qmail/SENDMAIL${OSXSUFX}
+share/doc/qmail/SENDMAIL${DARWINSUFX}
 share/doc/qmail/TEST.deliver
 share/doc/qmail/TEST.receive
 share/doc/qmail/UPGRADE
