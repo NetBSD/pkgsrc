@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.7 2001/07/13 05:42:05 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.8 2001/07/20 01:54:54 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gtk.
 #
@@ -20,7 +20,7 @@ GTK_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.gtk?=	gtk+>=1.2.8
 DEPENDS+=		${BUILDLINK_DEPENDS.gtk}:../../x11/gtk
 
-BUILDLINK_PREFIX.gtk=	${X11PREFIX}
+EVAL_PREFIX+=		BUILDLINK_PREFIX.gtk=gtk
 BUILDLINK_FILES.gtk=	include/gdk/*
 BUILDLINK_FILES.gtk+=	include/gtk/*
 BUILDLINK_FILES.gtk+=	include/gtk-*/*/*
@@ -28,9 +28,9 @@ BUILDLINK_FILES.gtk+=	lib/libgdk.*
 BUILDLINK_FILES.gtk+=	lib/libgtk.*
 
 REPLACE_BUILDLINK_SED+=	\
-	-e "s|-I${BUILDLINK_DIR}/\(include/gtk-[^/]*/\)|-I${X11PREFIX}/\1|g"
+	-e "s|-I${BUILDLINK_DIR}/\(include/gtk-[^/]*/\)|-I${BUILDLINK_PREFIX.gtk}/\1|g"
 BUILDLINK_CONFIG_WRAPPER_SED+=	\
-	-e "s|-I${X11PREFIX}/\(include/gtk-[^/]*/\)|-I${BUILDLINK_DIR}/\1|g"
+	-e "s|-I${BUILDLINK_PREFIX.gtk}/\(include/gtk-[^/]*/\)|-I${BUILDLINK_DIR}/\1|g"
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../devel/glib/buildlink.mk"
@@ -39,7 +39,7 @@ BUILDLINK_TARGETS.gtk=	gtk-buildlink
 BUILDLINK_TARGETS.gtk+=	gtk-buildlink-config-wrapper
 BUILDLINK_TARGETS+=	${BUILDLINK_TARGETS.gtk}
 
-BUILDLINK_CONFIG.gtk=		${X11PREFIX}/bin/gtk-config
+BUILDLINK_CONFIG.gtk=		${BUILDLINK_PREFIX.gtk}/bin/gtk-config
 BUILDLINK_CONFIG_WRAPPER.gtk=	${BUILDLINK_DIR}/bin/gtk-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)

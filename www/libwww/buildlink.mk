@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/07/02 05:34:00 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/07/20 01:54:53 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libwww.
 #
@@ -20,7 +20,7 @@ LIBWWW_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.libwww?=	libwww>=5.3.2
 DEPENDS+=	${BUILDLINK_DEPENDS.libwww}:../../www/libwww
 
-BUILDLINK_PREFIX.libwww=	${LOCALBASE}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.libwww=libwww
 BUILDLINK_FILES.libwww=		include/wwwconf.h
 BUILDLINK_FILES.libwww+=	include/w3c-libwww/*
 BUILDLINK_FILES.libwww+=	lib/libmd5.*
@@ -55,8 +55,8 @@ BUILDLINK_TARGETS.libwww=	libwww-buildlink
 BUILDLINK_TARGETS.libwww+=	libwww-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.libwww}
 
-BUILDLINK_CONFIG.libwww=		${LOCALBASE}/bin/libwww-config
-BUILDLINK_CONFIG_WRAPPER.libwww=	${BUILDLINK_DIR}/bin/libwww-config
+BUILDLINK_CONFIG.libwww=	${BUILDLINK_PREFIX.libwww}/bin/libwww-config
+BUILDLINK_CONFIG_WRAPPER.libwww=${BUILDLINK_DIR}/bin/libwww-config
 
 .if defined(USE_CONFIG_WRAPPER) && defined(GNU_CONFIGURE)
 LIBWWW_CONFIG?=		${BUILDLINK_CONFIG_WRAPPER.libwww}

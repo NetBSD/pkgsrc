@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/02 05:34:01 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/20 01:54:56 jlam Exp $
 #
 # This Makefile fragment is included by packages that use wxGTK.
 #
@@ -20,18 +20,18 @@ WXGTK_BUILDLINK_MK=	# defined
 BUILDLINK_DEPENDS.wxGTK?=	wxGTK>=2.2.2
 DEPENDS+=			${BUILDLINK_DEPENDS.wxGTK}:../../x11/wxGTK
 
-BUILDLINK_PREFIX.wxGTK=		${X11PREFIX}
+EVAL_PREFIX+=			BUILDLINK_PREFIX.wxGTK=wxGTK
 BUILDLINK_FILES.wxGTK=		include/wx/*
 BUILDLINK_FILES.wxGTK+=		include/wx/*/*
 BUILDLINK_FILES.wxGTK+=		lib/wx/include/wx/gtk/*
 BUILDLINK_FILES.wxGTK+=		lib/libwx_gtk.*
 
 REPLACE_BUILDLINK_SED+=	\
-	-e "s|-I${BUILDLINK_DIR}/\(include/wx/\)|${X11PREFIX}/\1|g"	\
-	-e "s|-I${BUILDLINK_DIR}/\(lib/wx/include/\)|${X11PREFIX}/\1|g"
+	-e "s|-I${BUILDLINK_DIR}/\(include/wx/\)|${BUILDLINK_PREFIX.wxGTK}/\1|g"	\
+	-e "s|-I${BUILDLINK_DIR}/\(lib/wx/include/\)|${BUILDLINK_PREFIX.wxGTK}/\1|g"
 BUILDLINK_CONFIG_WRAPPER_SED+=	\
-	-e "s|-I${X11PREFIX}/\(include/wx/\)|-I${BUILDLINK_DIR}/\1|g"	\
-	-e "s|-I${X11PREFIX}/\(lib/wx/include/\)|-I${BUILDLINK_DIR}/\1|g"
+	-e "s|-I${BUILDLINK_PREFIX.wxGTK}/\(include/wx/\)|-I${BUILDLINK_DIR}/\1|g"	\
+	-e "s|-I${BUILDLINK_PREFIX.wxGTK}/\(lib/wx/include/\)|-I${BUILDLINK_DIR}/\1|g"
 
 .include "../../graphics/jpeg/buildlink.mk"
 .include "../../graphics/png/buildlink.mk"
@@ -43,8 +43,8 @@ BUILDLINK_TARGETS.wxGTK+=	wxGTK-1-buildlink-config-wrapper
 BUILDLINK_TARGETS.wxGTK+=	wxGTK-2-buildlink-config-wrapper
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.wxGTK}
 
-BUILDLINK_CONFIG.wxGTK-1=		${X11PREFIX}/bin/wx-config
-BUILDLINK_CONFIG.wxGTK-2=		${X11PREFIX}/bin/wxgtk-config
+BUILDLINK_CONFIG.wxGTK-1=		${BUILDLINK_PREFIX.wxGTK}/bin/wx-config
+BUILDLINK_CONFIG.wxGTK-2=		${BUILDLINK_PREFIX.wxGTK}/bin/wxgtk-config
 BUILDLINK_CONFIG_WRAPPER.wxGTK-1=	${BUILDLINK_DIR}/bin/wx-config
 BUILDLINK_CONFIG_WRAPPER.wxGTK-2=	${BUILDLINK_DIR}/bin/wxgtk-config
 
