@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2002/04/04 13:58:26 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/12 03:17:13 dmcmahill Exp $
 bin/gawk
 bin/${PKGNAME}
 bin/igawk
 bin/pgawk
+bin/p${PKGNAME}
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gawk.info
 @unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/gawkinet.info
 info/gawk.info
@@ -30,6 +31,12 @@ share/awk/passwd.awk
 share/awk/readable.awk
 share/awk/rewind.awk
 share/awk/round.awk
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gawk.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gawk.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gawk.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gawk.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gawk.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gawk.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gawk.mo
 @dirrm share/awk
 @dirrm libexec/awk
