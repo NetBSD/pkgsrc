@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:35 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/12/30 16:24:58 taca Exp $
 ${RUBY_ARCHLIBDIR}/tcltklib.so
 ${RUBY_LIBDIR}/tcltk.rb
-${RUBY_DOCDIR}/tcltklib/ja/MANUAL.euc
-${RUBY_DOCDIR}/tcltklib/ja/README.euc
-@dirrm ${RUBY_DOCDIR}/tcltklib/ja
+${RUBY_DOCDIR}/tcltklib/MANUAL.ja
+${RUBY_DOCDIR}/tcltklib/README.ja
 @dirrm ${RUBY_DOCDIR}/tcltklib
 ${RUBY_EXAMPLESDIR}/tcltklib/batsu.gif
 ${RUBY_EXAMPLESDIR}/tcltklib/maru.gif

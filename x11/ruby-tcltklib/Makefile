@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/06/30 08:19:52 taca Exp $
+# $NetBSD: Makefile,v 1.2 2001/12/30 16:24:58 taca Exp $
 # FreeBSD: ports/lang/ruby-tcltklib/Makefile,v 1.21 2000/10/20 19:56:04 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -52,8 +52,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/sample/* ${RUBY_EXAMPLESDIR}/tcltklib
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/tcltklib/demo
 	${INSTALL_DATA} ${WRKSRC}/demo/* ${RUBY_EXAMPLESDIR}/tcltklib/demo
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/tcltklib/ja
-	${INSTALL_DATA} ${WRKSRC}/*.euc ${RUBY_DOCDIR}/tcltklib/ja
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/tcltklib
+	${INSTALL_DATA} ${WRKSRC}/MANUAL.euc ${RUBY_DOCDIR}/tcltklib/MANUAL.ja
+	${INSTALL_DATA} ${WRKSRC}/README.euc ${RUBY_DOCDIR}/tcltklib/README.ja
 
 .include "../../lang/ruby-base/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
