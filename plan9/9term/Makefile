@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/24 09:20:36 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/05/08 15:42:24 agc Exp $
 # FreeBSD Id: Makefile,v 1.5 1996/12/07 23:43:56 asami Exp
 #
 
@@ -20,6 +20,6 @@ MANCOMPRESSED=	yes
 MAN1=		9term.1
 
 NO_WRKSUBDIR=	yes
-MAKE_ENV+=	WRKDIR=${WRKDIR}
+MAKE_ENV+=	WRKDIR=${WRKDIR} PKGSRCDIR=${PKGSRCDIR}
 
 .include "../../mk/bsd.pkg.mk"
