@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/01/30 23:18:52 agc Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/01 13:36:56 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1998/09/25 10:07:44 asami Exp
 #
 
@@ -10,8 +10,8 @@ MASTER_SITES=	http://www-cad.eecs.berkeley.edu/HomePages/aml/abacus/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www-cad.eecs.berkeley.edu/HomePages/aml/abacus/abacus.html
 
-DEPENDS+=	tcl-8.0p2:../../lang/tcl80
-DEPENDS+=	tk-8.0p2:../../x11/tk80
+DEPENDS+=	tcl-8.0.5:../../lang/tcl80
+DEPENDS+=	tk-8.0.5:../../x11/tk80
 
 USE_GMAKE=	yes
 USE_X11BASE=	yes

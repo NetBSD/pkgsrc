@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 1999/04/01 09:59:04 agc Exp $
+$NetBSD: patch-ab,v 1.7 1999/04/01 13:36:56 agc Exp $
 
 Use -fPIC on NetBSD
 On Solaris, fix up the tcl library name, so it's the same as NetBSD
@@ -6,12 +6,11 @@ for pkgsrc internal use (PLIST entries)
 On Solaris, do not use dots in version names for the library (same
 reason as previous)
 Use -fPIC on Solaris too, otherwise we overflow a 2048 entry table.
-Set LDFLAGS to the correct value
 Set TCL_SHARED_BUILD to 1.
 
---- configure.orig	Tue Nov 25 16:31:42 1997
-+++ configure	Thu Sep 17 11:36:29 1998
-@@ -3781,7 +3781,7 @@
+--- configure.orig	Tue Mar  9 06:51:26 1999
++++ configure	Thu Apr  1 14:12:15 1999
+@@ -4096,7 +4096,7 @@
  if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
    echo "$ac_t""yes" 1>&6
    
@@ -20,7 +19,7 @@ Set TCL_SHARED_BUILD to 1.
  	    SHLIB_LD="ld -Bshareable -x"
  	    SHLIB_LD_LIBS=""
  	    SHLIB_SUFFIX=".so"
-@@ -3909,7 +3909,7 @@
+@@ -4224,7 +4224,7 @@
  	TCL_LIB_VERSIONS_OK=nodots
  	;;
      SunOS-5*)
@@ -29,31 +28,22 @@ Set TCL_SHARED_BUILD to 1.
  	SHLIB_LD="/usr/ccs/bin/ld -G -z text"
  
  	# Note: need the LIBS below, otherwise Tk won't find Tcl's
-@@ -3921,6 +3921,9 @@
+@@ -4236,6 +4236,9 @@
  	DL_LIBS="-ldl"
  	LD_FLAGS=""
  	LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
-+	TCL_SHARED_LIB_SUFFIX='`echo ${VERSION} | tr -d .`.so.1.0'
-+	TCL_UNSHARED_LIB_SUFFIX='`echo ${VERSION} | tr -d .`.a'
++	    TCL_SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
++	    TCL_UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
 +	TCL_LIB_VERSIONS_OK=nodots
  	;;
      ULTRIX-4.*)
  	SHLIB_CFLAGS="-G 0"
-@@ -4345,6 +4348,8 @@
-     MAKE_LIB="ar cr ${TCL_LIB_FILE} \${OBJS}"
+@@ -4679,6 +4682,8 @@
+     eval "TCL_LIB_FILE=libtcl${TCL_UNSHARED_LIB_SUFFIX}"
+     MAKE_LIB="ar cr \${TCL_LIB_FILE} \${OBJS}"
  fi
- 
-+TCL_SHARED_BUILD=1
 +
++TCL_SHARED_BUILD=1
+ 
  # Note:  in the following variable, it's important to use the absolute
  # path name of the Tcl directory rather than "..":  this is because
- # AIX remembers this path and will attempt to use it at run-time to look
-@@ -4518,7 +4523,7 @@
- s%@BUILD_DLTEST@%$BUILD_DLTEST%g
- s%@DL_LIBS@%$DL_LIBS%g
- s%@DL_OBJS@%$DL_OBJS%g
--s%@LD_FLAGS@%$LD_FLAGS%g
-+s%@LD_FLAGS@%$LDFLAGS%g
- s%@MAKE_LIB@%$MAKE_LIB%g
- s%@MATH_LIBS@%$MATH_LIBS%g
- s%@SHLIB_CFLAGS@%$SHLIB_CFLAGS%g
