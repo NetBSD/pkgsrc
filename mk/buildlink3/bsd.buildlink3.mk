@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.113 2004/03/12 18:03:53 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.114 2004/03/12 18:45:20 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -136,13 +136,14 @@ _BLNK_PACKAGES+=	${_pkg_}
 .endfor
 
 # _BLNK_DEPENDS contains all of the elements of BUILDLINK_DEPENDS that
-# that shouldn't be skipped and that name packages for which we aren't
-# using the built-in software and hence need to add a dependency.
+# shouldn't be skipped and that name packages for which we aren't using
+# the built-in software and hence need to add a dependency.
 #
 _BLNK_DEPENDS=	# empty
 .for _pkg_ in ${BUILDLINK_DEPENDS}   
 USE_BUILTIN.${_pkg_}?=	no
 .  if empty(_BLNK_DEPENDS:M${_pkg_}) && !defined(IGNORE_PKG.${_pkg_}) && \
+      !empty(_BLNK_PACKAGES:M${_pkg_}) && \
       !empty(USE_BUILTIN.${_pkg_}:M[nN][oO])
 _BLNK_DEPENDS+=	${_pkg_}
 .    endif
@@ -153,29 +154,34 @@ _BLNK_DEPENDS+=	${_pkg_}
 BUILDLINK_DEPMETHOD.${_pkg_}?=	full
 .endfor
 
+# We skip the dependency calculation for some phases since they never
+# use the dependency information.
+#
+_BLNK_PHASES_SKIP_DEPENDS=	fetch patch tools buildlink configure	\
+				build test
+.if !empty(_BLNK_PHASES_SKIP_DEPENDS:M${PKG_PHASE})
+_BLNK_DEPENDS_LIST=	# empty
+.else
+_BLNK_DEPENDS_LIST=	${_BLNK_DEPENDS}
+.endif
+
 # Add the proper dependency on each package pulled in by buildlink3.mk
 # files.  BUILDLINK_DEPMETHOD.<pkg> contains a list of either "full" or
 # "build", and if any of that list is "full" then we use a full dependency
 # on <pkg>, otherwise we use a build dependency on <pkg>.
 #
-# We skip the dependency calculation for some phases since they never
-# use the dependency information.
-#
-_BLNK_PHASES_SKIP_DEPENDS=	fetch patch tools buildlink configure build
-.if empty(_BLNK_PHASES_SKIP_DEPENDS:M${PKG_PHASE})
 _BLNK_ADD_TO.DEPENDS=		# empty
 _BLNK_ADD_TO.BUILD_DEPENDS=	# empty
 _BLNK_ADD_TO.RECOMMENDED=	# empty
-.  for _pkg_ in ${_BLNK_DEPENDS}
-BUILDLINK_DEPMETHOD.${_pkg_}?=	full
-.    if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
+.for _pkg_ in ${_BLNK_DEPENDS_LIST}
+.  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
 _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.DEPENDS
 _BLNK_RECMETHOD.${_pkg_}=	_BLNK_ADD_TO.RECOMMENDED
-.    elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
+.  elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
 _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
-.    endif
-.    if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
-        defined(BUILDLINK_PKGSRCDIR.${_pkg_})
+.  endif
+.  if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
+      defined(BUILDLINK_PKGSRCDIR.${_pkg_})
 #
 # BEGIN dependency reduction
 #
@@ -192,64 +198,63 @@ _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
 _BLNK_DEPENDS.${_pkg_}=		# empty
 _BLNK_GE_DEPENDS.${_pkg_}=	${BUILDLINK_DEPENDS.${_pkg_}:N*\{*:M*>=[0-9]*}
 _BLNK_STRICTEST_DEPENDS.${_pkg_}?=	none
-.      for _depend_ in ${_BLNK_GE_DEPENDS.${_pkg_}}
-.        for _dep2pkg_ in ${_depend_:S/>=/-/}
-.          if ${_BLNK_STRICTEST_DEPENDS.${_pkg_}} == "none"
+.    for _depend_ in ${_BLNK_GE_DEPENDS.${_pkg_}}
+.      for _dep2pkg_ in ${_depend_:S/>=/-/}
+.        if ${_BLNK_STRICTEST_DEPENDS.${_pkg_}} == "none"
 _BLNK_PKG_SATISFIES_DEP.${_pkg_}=	YES
-.            for _dep_ in ${_BLNK_GE_DEPENDS.${_pkg_}}
-.              if !empty(_BLNK_PKG_SATISFIES_DEP.${_pkg_}:M[yY][eE][sS])
+.          for _dep_ in ${_BLNK_GE_DEPENDS.${_pkg_}}
+.            if !empty(_BLNK_PKG_SATISFIES_DEP.${_pkg_}:M[yY][eE][sS])
 _BLNK_PKG_SATISFIES_DEP.${_pkg_}!=	\
 	if ${PKG_ADMIN} pmatch '${_dep_}' ${_dep2pkg_}; then		\
 		${ECHO} "YES";						\
 	else								\
 		${ECHO} "NO";						\
 	fi
-.              endif
-.            endfor
-.            if !empty(_BLNK_PKG_SATISFIES_DEP.${_pkg_}:M[yY][eE][sS])
-_BLNK_STRICTEST_DEPENDS.${_pkg_}=	${_depend_}
 .            endif
+.          endfor
+.          if !empty(_BLNK_PKG_SATISFIES_DEP.${_pkg_}:M[yY][eE][sS])
+_BLNK_STRICTEST_DEPENDS.${_pkg_}=	${_depend_}
 .          endif
-.        endfor
+.        endif
 .      endfor
-.      if ${_BLNK_STRICTEST_DEPENDS.${_pkg_}} == "none"
+.    endfor
+.    if ${_BLNK_STRICTEST_DEPENDS.${_pkg_}} == "none"
 #
 # If the dependencies simply conflict, then pass them on through to the
 # normal dependency handling code.
 #
 _BLNK_DEPENDS.${_pkg_}+=	${BUILDLINK_DEPENDS.${_pkg_}}
-.      else
-.        for _depend_ in ${BUILDLINK_DEPENDS.${_pkg_}}
-.          if empty(_BLNK_GE_DEPENDS.${_pkg_}:M${_depend_})
+.    else
+.      for _depend_ in ${BUILDLINK_DEPENDS.${_pkg_}}
+.        if empty(_BLNK_GE_DEPENDS.${_pkg_}:M${_depend_})
 _BLNK_DEPENDS.${_pkg_}+=	${_depend_}
-.          endif
-.        endfor
+.        endif
+.      endfor
 _BLNK_DEPENDS.${_pkg_}+=	${_BLNK_STRICTEST_DEPENDS.${_pkg_}}
-.      endif
+.    endif
 #
 # END dependency reduction
 #
-.      for _depend_ in ${_BLNK_DEPENDS.${_pkg_}}
-.        if empty(${_BLNK_DEPMETHOD.${_pkg_}}:M${_depend_}\:*)
+.    for _depend_ in ${_BLNK_DEPENDS.${_pkg_}}
+.      if empty(${_BLNK_DEPMETHOD.${_pkg_}}:M${_depend_}\:*)
 ${_BLNK_DEPMETHOD.${_pkg_}}+=	${_depend_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
-.        endif
-.      endfor
-.    endif
-.    if defined(BUILDLINK_RECOMMENDED.${_pkg_}) && \
-        defined(BUILDLINK_PKGSRCDIR.${_pkg_})
-.      for _rec_ in ${BUILDLINK_RECOMMENDED.${_pkg_}}
-.        if empty(${_BLNK_RECMETHOD.${_pkg_}}:M${_depend_}\:*)
+.      endif
+.    endfor
+.  endif
+.  if defined(BUILDLINK_RECOMMENDED.${_pkg_}) && \
+      defined(BUILDLINK_PKGSRCDIR.${_pkg_})
+.    for _rec_ in ${BUILDLINK_RECOMMENDED.${_pkg_}}
+.      if empty(${_BLNK_RECMETHOD.${_pkg_}}:M${_depend_}\:*)
 ${_BLNK_RECMETHOD.${_pkg_}}+=	${_rec_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
-.        endif
-.      endfor
-.    endif
-.  endfor
-.  for _depmethod_ in DEPENDS BUILD_DEPENDS RECOMMENDED
+.      endif
+.    endfor
+.  endif
+.endfor
+.for _depmethod_ in DEPENDS BUILD_DEPENDS RECOMMENDED
 .  if !empty(_BLNK_ADD_TO.${_depmethod_})
 ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 .  endif
-.  endfor
-.endif
+.endfor	# _BLNK_DEPENDS_LIST
 
 .if !empty(PHASES_AFTER_BUILDLINK:M${PKG_PHASE})
 # Generate default values for:
