@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/05/07 01:14:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/06/03 20:13:03 abs Exp $
 #
 
 DISTNAME=	columba-unix-1.0_M2-bin
@@ -14,7 +14,7 @@ COMMENT=	Graphical Email Client written in JAVA (TM)
 NO_BUILD=		yes
 USE_BUILDLINK2=		yes
 USE_JAVA2=		yes
-PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk13
+PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk13 jdk14
 
 SUBST_CLASSES=		columba
 SUBST_STAGE.columba=	pre-configure
