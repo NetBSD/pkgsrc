@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 1999/10/06 06:07:24 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2001/03/22 14:00:40 wiz Exp $
 
---- ./panel.c.orig	Sun Aug 29 20:28:35 1999
-+++ ./panel.c	Wed Oct  6 01:56:48 1999
+--- panel.c.orig	Mon Aug 30 02:28:35 1999
++++ panel.c
 @@ -128,7 +128,7 @@
  		return (-2);
  
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.1 1999/10/06 06:07:24 jlam Exp $
  			(HeightOfScreen (DefaultScreenOfDisplay (settings->dpy)) - WMWidgetHeight(panel->win))/2);
  		
 -		WMSetWindowUSize (panel->win, WMWidgetWidth (panel->win), WMWidgetHeight (panel->win));
-+		WMSetWindowInitialSize (panel->win, WMWidgetWidth (panel->win), WMWidgetHeight (panel->win));
++		WMSetWindowBaseSize (panel->win, WMWidgetWidth (panel->win), WMWidgetHeight (panel->win));
  	} else if (settings->nearmouse == True) {
  		int x, y, x2, y2;
  		unsigned int mask;

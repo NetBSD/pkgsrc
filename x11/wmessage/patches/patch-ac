@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2001/03/22 14:00:40 wiz Exp $
+
+--- wmessage.h.orig	Mon Aug 30 01:07:59 1999
++++ wmessage.h
+@@ -25,7 +25,7 @@
+ 
+ #include <wraster.h>
+ 
+-#include <WINGs.h>
++#include <WINGs/WINGs.h>
+ 
+ #include <unistd.h>
+ #include <stdio.h>
+@@ -38,7 +38,7 @@
+ 
+ #include <X11/keysym.h>
+ 
+-#include <WUtil.h>
++#include <WINGs/WUtil.h>
+ 
+ #include "wconfig.h"
+ 
