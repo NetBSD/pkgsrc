@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.4 2000/08/01 02:56:43 hubertf Exp $
+#	$Id: bsd.bulk-pkg.mk,v 1.5 2000/08/01 21:19:21 dmcmahill Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -77,7 +77,7 @@ bulk-check-uptodate:
 			${ECHO_MSG} >&2 ">> ${REF} is up to date." ; \
 		fi ; \
 	else \
-		${ECHO_MSG} >&2 ">> Package ${PKGNAME} not build yet, packaging..." ; \
+		${ECHO_MSG} >&2 ">> Package ${PKGNAME} not built yet, packaging..." ; \
 		uptodate=0 ; \
 	fi ; \
 	if [ "$$uptodate" = "1" ]; then \
