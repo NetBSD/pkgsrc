@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/11/28 12:28:23 martti Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/20 17:46:01 seb Exp $
 #
 
 DISTNAME=	Net-ICQ2000-0.2.1
@@ -10,10 +10,8 @@ MAINTAINER=	shell@shellhung.org
 HOMEPAGE=	http://icq2000.phase3solutions.com/
 COMMENT=	perl5 modules for the ICQv7 protocol realisation
 
-USE_PERL5=	# defined
-PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Net/ICQ2000/.packlist
+USE_BUILDLINK2=		YES
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Net/ICQ2000/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

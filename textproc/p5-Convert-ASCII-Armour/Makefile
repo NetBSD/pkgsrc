@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/11/26 06:50:19 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/10/20 17:46:04 seb Exp $
 #
 
 DISTNAME=		Convert-ASCII-Armour-1.4
@@ -15,11 +15,8 @@ DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Convert/ASCII/Armour/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
