@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2000/09/19 13:30:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.37 2000/09/19 13:37:07 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.washington.edu/pine/
 
 # This pkg doesn't build pico or libpico; the pico pkg does that part.
 DEPENDS+=	pico-3.7:../../editors/pico
-DEPENDS+=	imap-uw>=4.7rc6:../../mail/imap-uw
+DEPENDS+=	imap-uw>=4.7c6:../../mail/imap-uw
 
 USE_LIBTOOL=	yes
 CONFIGURE_ENV+=	LT=${LIBTOOL}
