@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4907 2004/02/18 21:59:13 heinz Exp $
+$NetBSD: CHANGES,v 1.4908 2004/02/19 00:24:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -920,3 +920,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added ipgrab-0.9.8 [minskim 2004-02-18]
 	Updated rpm2pkg to 2.0 [tron 2004-02-18]
 	Updated p5-Crypt-OpenSSL-RSA 0.21 [heinz 2004-02-18]
+	Added py-fonttools-2.0b1 [minskim 2004-02-19]
