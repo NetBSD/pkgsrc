@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1841 2004/06/20 18:48:44 xtraeme Exp $
+$NetBSD: TODO,v 1.1842 2004/06/20 19:39:37 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -156,11 +156,6 @@ Suggested new packages
 	Putty [Already in pkgsrc-wip, wip/putty]
 	http://www.chiark.greenend.org.uk/~sgtatham/putty/
 	SSH client
-
-	WebSVN [pkgsrc-wip]
-	http://websvn.tigris.org/
-	WebSVN offers a view onto your subversion repositories that's been 
-	designed to reflect the Subversion methodology. 
 
 Suggested package updates
 =========================
