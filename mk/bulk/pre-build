@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.27.2.5 2003/08/31 06:39:36 jlam Exp $
+# $NetBSD: pre-build,v 1.27.2.6 2003/08/31 08:12:38 jlam Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -71,58 +71,35 @@ fi
 PKG_DBDIR=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=PKG_DBDIR)`
 DEPOTBASE=`(cd ${PKGLINT_PKG_DIR}; ${BMAKE} show-var VARNAME=DEPOTBASE)`
 
-echo Removing all installed packages in ${PKG_DBDIR}
-
-if [ -d ${PKG_DBDIR} ]; then
-	cd ${PKG_DBDIR}
-	for pkg in *
-	do
-		case "${DEPOTBASE}" in
-		"${PKG_DBDIR}")
-			if `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
+for dbdir in ${PKG_DBDIR} ${DEPOTBASE}; do
+	echo Removing all installed packages in $dbdir
+	if [ -d $dbdir ]; then
+		cd $dbdir
+		for pkg in *
+		do
+			if `pkg_info -K $dbdir -qe $pkg`; then
 				echo pkg_delete -r $pkg
-				pkg_delete -K ${PKG_DBDIR} -r $pkg
+				pkg_delete -K $dbdir -r $pkg
 			fi
-			;;
-		*)
-			if `pkg_info -K ${DEPOTBASE} -qe $pkg`; then
-				echo pkg_delete -r $pkg
-				pkg_delete -K ${DEPOTBASE} -r $pkg
-			elif `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
-				echo pkg_delete -r $pkg
-				pkg_delete -K ${PKG_DBDIR} -r $pkg
-			fi
-			;;
-		esac
-	done
-	# this should have removed everything.  Now force any broken pkgs
-	# to deinstall
-	for pkg in *
-	do
-		case "${DEPOTBASE}" in
-		"${PKG_DBDIR}")
-			if `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
+		done
+		#
+		# this should have removed everything.
+		# Now force any broken pkgs to deinstall.
+		#
+		for pkg in *
+		do
+			if `pkg_info -K $dbdir -qe $pkg`; then
 				echo pkg_delete -f $pkg
-				pkg_delete -K ${PKG_DBDIR} -f $pkg
+				pkg_delete -K $dbdir -f $pkg
 			fi
-			;;
-		*)
-			if `pkg_info -K ${DEPOTBASE} -qe $pkg`; then
-				echo pkg_delete -f $pkg
-				pkg_delete -K ${DEPOTBASE} -f $pkg
-			elif `pkg_info -K ${PKG_DBDIR} -qe $pkg`; then
-				echo pkg_delete -f $pkg
-				pkg_delete -K ${PKG_DBDIR} -f $pkg
-			fi
-			;;
-		esac
-	done
+		done
 	
-	# We've tried our best to get rid of the pkgs, now do it the hard way
-	# If it wasn't for stuff in $X11BASE, I wouldn't have hard feelings
-	# about this!
-	rm -fr *
-fi
+		# We've tried our best to get rid of the pkgs, now do it
+		# the hard way.  If it wasn't for stuff in $X11BASE, I
+		# wouldn't have hard feelings about this!
+		rm -fr *
+	fi
+done
 
 cd $LOCALBASE && rm -fr * && rm -fr .??*;
 if [ x"$BMAKE" = x"bmake" ]; then
