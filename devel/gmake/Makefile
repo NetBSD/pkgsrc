@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2003/07/10 22:40:31 seb Exp $
+# $NetBSD: Makefile,v 1.48 2003/07/12 13:17:56 dillo Exp $
 
 DISTNAME=	make-3.80
 PKGNAME=	gmake-3.80
@@ -16,6 +16,11 @@ USE_PKGLOCALEDIR=	YES
 USE_NEW_TEXINFO=	YES
 TEXINFO_REQD=		4.0
 INFO_FILES=		make.info
+
+# NOTE:  the 'test' target requires perl, but since gmake does
+# not otherwise require it, perl is not listed as an explicit
+# dependency
+TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,14 +42,6 @@ post-install:
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
 	${LN} -sf ${GNU_PROGRAM_PREFIX}make ${PREFIX}/bin/gmake
 .endif
-
-# NOTE:  the 'test' target requires perl, but since gmake does
-# not otherwise require it, perl is not listed as an explicit
-# dependency
-test: build
-	cd ${WRKSRC} && \
-		${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
-		tee ${WRKDIR}/tests.log
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
