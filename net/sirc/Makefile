@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/04/06 11:43:48 hubertf Exp $
+# $NetBSD: Makefile,v 1.14 2000/04/06 23:24:32 wiz Exp $
 
 DISTNAME=	sirc-2.211
 CATEGORIES=	net
@@ -8,7 +8,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}	\
 		${SIRC_SCRIPTS}
 
 MAINTAINER=	hubertf@netbsd.org
-HOMEPAGE=	http://www.eleves.ens.fr:8080/home/espel/sirc/
+HOMEPAGE=	http://www.iagora.com/~espel/sirc/sirc.html
 
 USE_PERL5=	YES
 
@@ -26,9 +26,13 @@ SIRC_SCRIPTS= \
 		nocolor.pl			\
 		patattack.pl			\
 		prefix.pl			\
+		quiet.pl			\
 		quit.pl				\
 		ssfe.diff			\
-		www.pl
+		thx.pl				\
+		winnuke.pl			\
+		www.pl				\
+		yiff.pl
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
