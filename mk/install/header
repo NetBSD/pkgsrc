@@ -2,7 +2,7 @@
 #
 # start of header
 #
-# $NetBSD: header,v 1.25 2004/02/15 03:01:08 lukem Exp $
+# $NetBSD: header,v 1.26 2004/04/27 18:31:08 tv Exp $
 
 PKGNAME=$1
 STAGE=$2
@@ -17,6 +17,7 @@ CMP="@CMP@"
 CP="@CP@"
 DIRNAME="@DIRNAME@"
 ECHO="@ECHO@"
+ECHO_N="@ECHO_N@"
 EGREP="@EGREP@"
 EXPR="@EXPR@"
 FALSE="@FALSE@"
