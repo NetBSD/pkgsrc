@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/09/22 08:09:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/10/13 12:29:05 markd Exp $
 bin/egroupwarewizard
 bin/groupwarewizard
 bin/ical2vcal
@@ -731,6 +731,7 @@ share/kde/apps/kmail/pics/key_ok.png
 share/kde/apps/kmail/pics/key_unknown.png
 share/kde/apps/kmail/pics/kmgroupware_folder_calendar.png
 share/kde/apps/kmail/pics/kmgroupware_folder_contacts.png
+share/kde/apps/kmail/pics/kmgroupware_folder_journals.png
 share/kde/apps/kmail/pics/kmgroupware_folder_notes.png
 share/kde/apps/kmail/pics/kmgroupware_folder_tasks.png
 share/kde/apps/kmail/pics/kmmsgattachment.png
@@ -946,18 +947,30 @@ share/kde/apps/korganizer/tips
 share/kde/apps/kpilot/icons/crystalsvg/16x16/actions/backup.png
 share/kde/apps/kpilot/icons/crystalsvg/16x16/actions/busysync.png
 share/kde/apps/kpilot/icons/crystalsvg/16x16/actions/fastsync.png
+share/kde/apps/kpilot/icons/crystalsvg/16x16/actions/fullsync.png
 share/kde/apps/kpilot/icons/crystalsvg/16x16/actions/hotsync.png
+share/kde/apps/kpilot/icons/crystalsvg/16x16/actions/listsync.png
 share/kde/apps/kpilot/icons/crystalsvg/16x16/actions/nosync.png
 share/kde/apps/kpilot/icons/crystalsvg/16x16/actions/restore.png
 share/kde/apps/kpilot/icons/crystalsvg/16x16/apps/kpalmdoc.png
 share/kde/apps/kpilot/icons/crystalsvg/22x22/actions/backup.png
 share/kde/apps/kpilot/icons/crystalsvg/22x22/actions/busysync.png
 share/kde/apps/kpilot/icons/crystalsvg/22x22/actions/fastsync.png
+share/kde/apps/kpilot/icons/crystalsvg/22x22/actions/fullsync.png
 share/kde/apps/kpilot/icons/crystalsvg/22x22/actions/hotsync.png
+share/kde/apps/kpilot/icons/crystalsvg/22x22/actions/listsync.png
 share/kde/apps/kpilot/icons/crystalsvg/22x22/actions/nosync.png
 share/kde/apps/kpilot/icons/crystalsvg/22x22/actions/restore.png
 share/kde/apps/kpilot/icons/crystalsvg/22x22/apps/kpalmdoc.png
+share/kde/apps/kpilot/icons/crystalsvg/32x32/actions/fastsync.png
+share/kde/apps/kpilot/icons/crystalsvg/32x32/actions/fullsync.png
+share/kde/apps/kpilot/icons/crystalsvg/32x32/actions/hotsync.png
+share/kde/apps/kpilot/icons/crystalsvg/32x32/actions/listsync.png
 share/kde/apps/kpilot/icons/crystalsvg/32x32/apps/kpalmdoc.png
+share/kde/apps/kpilot/icons/crystalsvg/48x48/actions/fastsync.png
+share/kde/apps/kpilot/icons/crystalsvg/48x48/actions/fullsync.png
+share/kde/apps/kpilot/icons/crystalsvg/48x48/actions/hotsync.png
+share/kde/apps/kpilot/icons/crystalsvg/48x48/actions/listsync.png
 share/kde/apps/kpilot/icons/crystalsvg/48x48/apps/kpalmdoc.png
 share/kde/apps/kpilot/kpilot-address.png
 share/kde/apps/kpilot/kpilot-bhotsync.png
@@ -1298,7 +1311,9 @@ share/kde/servicetypes/kpilotconduit.desktop
 @dirrm share/kde/apps/ksync
 @dirrm share/kde/apps/kpilot/sysinfoconduit
 @dirrm share/kde/apps/kpilot/icons/crystalsvg/48x48/apps
+@dirrm share/kde/apps/kpilot/icons/crystalsvg/48x48/actions
 @dirrm share/kde/apps/kpilot/icons/crystalsvg/32x32/apps
+@dirrm share/kde/apps/kpilot/icons/crystalsvg/32x32/actions
 @dirrm share/kde/apps/kpilot/icons/crystalsvg/22x22/apps
 @dirrm share/kde/apps/kpilot/icons/crystalsvg/22x22/actions
 @dirrm share/kde/apps/kpilot/icons/crystalsvg/16x16/apps
