@@ -1,0 +1,6 @@
+Ncview is an X Windows visual browser for netCDF data format files.
+Ncview displays a 2-dimensional, color representation of data in a
+netCDF file.  You can animate the data in time (making simple movies),
+flip or enlarge the picture, scan through various axes, change
+colormaps, etc.  You can also plot the data in X-Y plots and then
+print those, courtesy of the SciPlot widget.
