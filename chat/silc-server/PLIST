@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/11/30 23:33:34 hubertf Exp $
+sbin/silcd
+share/doc/silcd/CHANGES
+share/doc/silcd/COPYING
+share/doc/silcd/CREDITS
+share/doc/silcd/CodingStyle
+share/doc/silcd/FAQ
+share/doc/silcd/INSTALL
+share/doc/silcd/README
+share/doc/silcd/TODO
+share/doc/silcd/silcd.conf.default
+@dirrm share/doc/silcd

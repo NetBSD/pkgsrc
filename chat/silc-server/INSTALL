@@ -1,0 +1,95 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2001/11/30 23:33:34 hubertf Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+CAT="@CAT@"
+CHMOD="@CHMOD@"
+CHOWN="@CHOWN@"
+CP="@CP@"
+MKDIR="@MKDIR@"
+
+SERVERROOT="@SILCD_CONF_DIR@"
+LOGDIR=/var/log/silcd
+SAMPLECONFDIR=${PKG_PREFIX}/share/doc/silcd
+CONFDIR=${SERVERROOT}
+CONFFILES="silcd.conf"
+PUBKEY="silcd.pub"
+PRIVKEY="silcd.prv"
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+
+POST-INSTALL)
+        ${CAT} << EOF
+===========================================================================
+
+  * creating directory for log files owned by root, group nobody:
+
+EOF
+
+	${MKDIR} ${SERVERROOT}
+	${MKDIR} ${LOGDIR}
+	${CHOWN} root:nobody ${LOGDIR}
+	${CHMOD} 2775 ${LOGDIR}
+	echo "        ${LOGDIR}"
+
+        ${CAT} << EOF
+
+  * don't forget to change this if you will setup silcd to run with
+    different UID and GID in silcd.conf!
+
+===========================================================================
+
+  * installing configuration files:
+
+EOF
+     
+	for file in ${CONFFILES}
+	do
+		FILE=${CONFDIR}/${file}
+		SAMPLEFILE=${SAMPLECONFDIR}/${file}.default
+		if [ -f ${FILE} ]
+		then
+			echo "        ${FILE} already exists"
+		else
+			echo "        ${FILE}"
+			${CP} ${SAMPLEFILE} ${FILE}
+			${CHMOD} 600 ${FILE}
+		fi
+	done
+	${CAT} << EOF
+
+  * you might need to customize your configuration file
+
+===========================================================================
+
+EOF
+
+	if [ -f ${CONFDIR}/${PUBKEY} ] && [ -f ${CONFDIR}/${PRIVKEY} ]
+	then
+	  echo "  * ${PUBKEY} and ${PRIVKEY} already exist:"
+	  echo
+	  echo "        ${CONFDIR}/${PUBKEY}"
+	  echo "        ${CONFDIR}/${PRIVKEY}"
+	else
+	  echo "  * one or all of your server keys is missing,"
+	  echo
+	  ${PKG_PREFIX}/sbin/silcd -C ${CONFDIR}
+	fi
+
+        ${CAT} << EOF
+
+===========================================================================
+EOF
+	;;
+
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0
