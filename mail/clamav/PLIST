@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/26 18:55:17 agc Exp $
+bin/clamscan
+bin/freshclam
+bin/sigtool
+etc/clamav.conf
+include/clamav.h
+lib/libclamav.a
+lib/libclamav.la
+lib/libclamav.so
+lib/libclamav.so.1
+lib/libclamav.so.1.2
+man/man1/clamdscan.1
+man/man1/clamscan.1
+man/man1/freshclam.1
+man/man1/sigtool.1
+man/man5/clamav.conf.5
+man/man8/clamd.8
+share/clamav/viruses.db
+share/clamav/viruses.db2
+@dirrm share/clamav
