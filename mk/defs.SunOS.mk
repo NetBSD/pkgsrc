@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.70 2003/10/11 02:44:17 grant Exp $
+# $NetBSD: defs.SunOS.mk,v 1.71 2003/10/11 05:09:39 grant Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -55,11 +55,9 @@ MTREE?=		${ZOULARISBASE}/bin/mtree
 MV?=		/usr/bin/mv
 NICE?=		/usr/xpg4/bin/nice
 .if exists(/usr/bin/gpatch)
-PATCH?=		/usr/bin/gpatch -b
-.elif exists(${LOCALBASE}/bin/gpatch)
-PATCH?=		${LOCALBASE}/bin/gpatch -b
+PATCH?=		/usr/bin/gpatch
 .else
-PATCH?=		${LOCALBASE}/bin/patch -b
+PATCH?=		${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}patch
 .endif
 .if exists(${LOCALBASE}/bin/pax)
 PAX?=		${LOCALBASE}/bin/pax
@@ -131,7 +129,7 @@ _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no		# -lpthread needed for pthreads
 _OPSYS_RPATH_NAME=	-R		# name of symbol in rpath directive to linker 
 _PATCH_CAN_BACKUP=	yes		# native patch(1) can make backups
-_PATCH_BACKUP_ARG= 	-V simple -z	# switch to patch(1) for backup suffix
+_PATCH_BACKUP_ARG= 	-b -V simple -z	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	man		# directory where catman pages are
 _USE_GNU_GETTEXT=	yes		# Use GNU gettext
 _USE_RPATH=		yes		# add rpath to LDFLAGS
