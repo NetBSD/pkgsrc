@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2004/05/14 21:10:54 jdolecek Exp $
+$NetBSD: MESSAGE,v 1.7 2004/11/01 19:50:45 jdolecek Exp $
 
 To process PHP scripts, you will need a PHP-enabled HTTP server.  You may
 either configure the HTTP server to use PHP as a CGI program, or install a
@@ -7,8 +7,8 @@ PHP module for your HTTP server, e.g. ap-php4.
 
 Some additional packages you may wish to install are:
 
-	php4-dba	DBM database access
-	php4-iconv	character set conversion
+	php-dba		DBM database access
+	php-iconv	character set conversion
 
 Note that php4-pcre, php4-session and php4-xml are no longer
 separate packages since 4.3.3, the main PHP4 package has them built-in now.
