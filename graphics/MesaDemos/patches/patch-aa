@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/12/05 15:20:22 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2003/03/09 19:04:53 jschauma Exp $
 
---- book/Makefile.X11.orig	Thu Nov 21 12:25:24 2002
-+++ book/Makefile.X11	Thu Nov 21 12:25:44 2002
-@@ -9,8 +9,8 @@
+--- book/Makefile.X11.orig	Tue Feb 15 20:09:06 2000
++++ book/Makefile.X11	Sat Mar  8 18:59:50 2003
+@@ -9,10 +9,10 @@
  
  ##### MACROS #####
  
@@ -11,7 +11,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/12/05 15:20:22 jschauma Exp $
 +INCDIR = ${X11PREFIX}/include
 +LIBDIR = ${X11PREFIX}/lib
  
- GL_LIBS = -L$(LIBDIR) -lglut -lGLU -lGL $(APP_LIB_DEPS)
+-GL_LIBS = -L$(LIBDIR) -lglut -lGLU -lGL $(APP_LIB_DEPS)
++GL_LIBS = ${LDFLAGS} -L$(LIBDIR) -lglut -lGLU -lGL $(APP_LIB_DEPS)
+ 
+ LIB_DEP = $(LIBDIR)/$(GL_LIB) $(LIBDIR)/$(GLU_LIB) $(LIBDIR)/$(GLUT_LIB)
  
 @@ -22,7 +22,7 @@
  	lines list material mipmap model movelight nurbs pickdepth \

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2002/11/20 22:13:22 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/03/09 19:04:54 jschauma Exp $
 
 .if !defined(GLU_BUILDLINK2_MK)
 GLU_BUILDLINK2_MK=	# defined
@@ -8,6 +8,11 @@ GLU_BUILDLINK2_MK=	# defined
 MESA_REQD?=			3.4.2
 BUILDLINK_DEPENDS.glu?=		glu>=${MESA_REQD}
 BUILDLINK_PKGSRCDIR.glu?=	../../graphics/glu
+
+# XXX should be >= 3.4.2
+.if !empty(MESA_REQD:M5.[0-9]*)
+_NEED_GLU=		YES
+.else
 
 # Check if we got libGLU distributed with XFree86 4.x or if we need to
 # depend on the glu package.
@@ -46,10 +51,12 @@ _NEED_GLU!= \
 .  endif
 .endif
 
+.endif  # MESA_REQD
+
 .if ${_NEED_GLU} == "YES"
 BUILDLINK_PACKAGES+=		glu
 EVAL_PREFIX+=			BUILDLINK_PREFIX.glu=glu
-BUILDLINK_PREFIX.glu_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.glu_DEFAULT=	${LOCALBASE}
 .else
 BUILDLINK_PREFIX.glu=		${X11BASE}
 .endif

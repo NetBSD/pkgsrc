@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2002/11/17 08:37:20 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2003/03/09 19:04:54 jschauma Exp $
 
 PKGNAME=		${DISTNAME:S/MesaLib/glut/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -27,3 +27,7 @@ post-install:
 
 .include "../../graphics/MesaLib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
+
+# must be below bsd.pkg.mk to overwrite values
+PREFIX=		${LOCALBASE}
+X11PREFIX=	${LOCALBASE}
