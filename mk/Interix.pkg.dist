@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: Interix.pkg.dist,v 1.17 2004/12/24 12:28:58 jmmv Exp $
+#	$NetBSD: Interix.pkg.dist,v 1.18 2005/01/04 09:01:45 jmmv Exp $
 #
 
 /set type=dir uid=197108 gid=131616 mode=0775
@@ -731,6 +731,10 @@
                 ..
             ..
             ms
+                LC_MESSAGES
+                ..
+            ..
+            my_MM
                 LC_MESSAGES
                 ..
             ..
