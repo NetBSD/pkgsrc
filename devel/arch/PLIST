@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2002/02/07 19:09:37 jonb Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/07 23:51:58 jonb Exp $
 bin/arch
 bin/arch--release-arch--1.0--patch-6-cfg
 bin/arch--release-arch-cfg
@@ -539,6 +539,59 @@ libexec/arch/web/patch-set-web
 libexec/arch/web/revisions-right-index.awk
 libexec/arch/web/right-index.awk
 libexec/arch/web/update-distributions
+share/doc/html/arch/arbitrary-patching.html
+share/doc/html/arch/arch.html
+share/doc/html/arch/archive-format.html
+share/doc/html/arch/archives.html
+share/doc/html/arch/automatic-triggers.html
+share/doc/html/arch/basic-branching-and-merging.html
+share/doc/html/arch/basic-rc.html
+share/doc/html/arch/configurations.html
+share/doc/html/arch/data-sheet.html
+share/doc/html/arch/development-paths.html
+share/doc/html/arch/document-license.html
+share/doc/html/arch/getting-started.html
+share/doc/html/arch/idempotent-merging.html
+share/doc/html/arch/implementing-policies.html
+share/doc/html/arch/in-general.html
+share/doc/html/arch/indexes.html
+share/doc/html/arch/introduction.html
+share/doc/html/arch/inventory.html
+share/doc/html/arch/logs-after-merging.html
+share/doc/html/arch/multi-tree-projects.html
+share/doc/html/arch/on-hacking.html
+share/doc/html/arch/overview.html
+share/doc/html/arch/patch-logs.html
+share/doc/html/arch/patch-set-format.html
+share/doc/html/arch/patches.html
+share/doc/html/arch/preparing-to-merge.html
+share/doc/html/arch/pristine-cache.html
+share/doc/html/arch/project-names.html
+share/doc/html/arch/project-trees.html
+share/doc/html/arch/reconciling.html
+share/doc/html/arch/revision-lib.html
+share/doc/html/arch/source-license.html
+share/doc/html/arch/star-topology.html
+share/doc/html/arch/system-requirements.html
+share/doc/html/arch/theory-of-patches.html
+share/doc/html/arch/triggers.html
+share/doc/html/arch/user-names.html
+share/doc/html/arch/using-triggers.html
+share/doc/html/arch/web-site.html
+share/examples/arch/README.000.first-steps
+share/examples/arch/README.010.first-archive
+share/examples/arch/README.020.branching-arch
+share/examples/arch/README.030.importing-arch-releases
+share/examples/arch/README.040.importing-other-releases
+share/examples/arch/browser/=browser
+share/examples/arch/browser/=configs
+share/examples/arch/browser/=dists
+share/examples/arch/notifier/=browser-opts
+share/examples/arch/notifier/=rules.archives
+@dirrm share/examples/arch/notifier
+@dirrm share/examples/arch/browser
+@dirrm share/examples/arch
+@dirrm share/doc/html/arch
 @dirrm libexec/arch/web
 @dirrm libexec/arch/user
 @dirrm libexec/arch/remote
