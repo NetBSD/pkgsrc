@@ -1,6 +1,19 @@
-$NetBSD: patch-ae,v 1.1 2005/01/24 18:16:20 manu Exp $
+$NetBSD: patch-ae,v 1.2 2005/02/20 10:51:32 manu Exp $
 --- configure.orig	2005-01-24 17:31:35.000000000 +0100
 +++ configure	2005-01-24 17:33:04.000000000 +0100
+@@ -216,10 +216,10 @@
+ 		if test $? -eq 0
+ 		then
+ 			echo "Found passwd entry for user $USERDATA"
+ 		else
+-			echo "FAILURE: The user $BBUSER does not exist. Create user and try again."
+-			exit 1
++#			echo "FAILURE: The user $BBUSER does not exist. Create user and try again."
++#			exit 1
+ 		fi
+ 		echo ""; echo ""
+ 
+ 		HOMEDIR="`echo $USERDATA|cut -d: -f6`"
 @@ -302,12 +302,12 @@
  		fi
  		echo ""; echo ""
