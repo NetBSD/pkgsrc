@@ -1,5 +1,7 @@
-$NetBSD: patch-sum,v 1.4 2001/04/17 09:22:32 skrll Exp $
+$NetBSD: distinfo,v 1.1 2001/04/17 10:40:28 skrll Exp $
 
+SHA1 (kdemultimedia-2.1.tar.bz2) = e21c9ceac48d1469839a97aa9193895cd120a9ff
+Size (kdemultimedia-2.1.tar.bz2) = 4509946 bytes
 SHA1 (patch-aa) = 2bfbac804f2170546163ad56cedb3e6501f9f841
 SHA1 (patch-ab) = 364d905ff5379535285d3c5d462607c0020451d3
 SHA1 (patch-ac) = 9981b9eae552aead074cee46bd0c065dca2e1fca
