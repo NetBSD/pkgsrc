@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/23 14:26:54 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/08/07 12:04:34 wiz Exp $
+bin/jed
 bin/xjed
 bin/rgrep
 man/man1/jed.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/07/23 14:26:54 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/08/07 12:04:34 wiz Exp $
 #
 
 DISTNAME=		jed-B0.99-15
@@ -26,4 +26,5 @@ post-install:
 	${RMDIR} ${PREFIX}/share/xjed/bin
 
 .include "../../devel/libslang/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
