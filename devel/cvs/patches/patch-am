@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.1 1999/04/20 15:01:11 mycroft Exp $
+$NetBSD: patch-am,v 1.2 2000/02/23 01:32:11 mycroft Exp $
 
 --- src/cvs.h.orig	Sun Jul 26 22:54:11 1998
-+++ src/cvs.h	Tue Apr 20 10:15:03 1999
++++ src/cvs.h	Tue Feb 22 20:25:09 2000
 @@ -383,6 +383,7 @@
  
  extern int trace;		/* Show all commands */
@@ -10,3 +10,11 @@ $NetBSD: patch-am,v 1.1 1999/04/20 15:01:11 mycroft Exp $
  extern int logoff;		/* Don't write history entry */
  
  extern int top_level_admin;
+@@ -636,6 +637,7 @@
+ #define	RUN_STDOUT_APPEND	0x0004	/* append to stdout, don't truncate */
+ #define	RUN_STDERR_APPEND	0x0008	/* append to stderr, don't truncate */
+ #define	RUN_SIGIGNORE		0x0010	/* ignore interrupts for command */
++#define	RUN_UNSETXID		0x0020	/* undo setgid in child */
+ #define	RUN_TTY		(char *)0	/* for the benefit of lint */
+ 
+ void run_arg PROTO((const char *s));
