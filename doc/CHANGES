@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5674 2004/04/20 09:52:18 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5675 2004/04/20 09:59:11 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2105,3 +2105,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added oinkmaster-0.8 [xtraeme 2004-04-20]
 	Added adodb-4.00 [xtraeme 2004-04-20]
 	Added acid-0.9.6b23 [xtraeme 2004-04-20]
+	Removed gtk10 [xtraeme 2004-04-20]
