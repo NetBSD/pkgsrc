@@ -1,4 +1,5 @@
-MBROLA based British English male voice for the festival speech synthesis system.
+MBROLA based British English male voice for the festival speech
+synthesis system.
 
 This voice provides a British RP English male voice using the MBROLA
 wave synthesis method (via the MBROLA package). It uses a modified
