@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2001/06/11 06:34:33 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2001/06/21 05:06:17 jlam Exp $
 
 DISTNAME=		freeciv-${FC_VERS}
 FC_VERS=		1.11.4
@@ -16,6 +16,6 @@ DISTINFO_FILE=		${.CURDIR}/../../games/freeciv-share/distinfo
 PATCHDIR=		${.CURDIR}/../../games/freeciv-share/patches
 
 GNU_CONFIGURE=		# defined
-USE_LIBINTL=		# defined
+#USE_LIBINTL=		# defined
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../devel/gettext-lib/buildlink.mk"
