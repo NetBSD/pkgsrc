@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.5 2000/03/18 09:45:02 itojun Exp $
+
+--- configure.in-	Sat Mar 18 18:19:09 2000
++++ configure.in	Sat Mar 18 18:19:25 2000
+@@ -1128,7 +1128,9 @@
+     }
+   }
+ 
+-  if (inet6 != 2 || inet4 != 2)
++  if (inet4 != 0 && inet4 != 2)
++    goto bad;
++  if (inet6 != 0 && inet6 != 2)
+     goto bad;
+ 
+   if (aitop)
