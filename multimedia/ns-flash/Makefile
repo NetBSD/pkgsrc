@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/26 14:50:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/24 22:44:50 wiz Exp $
 
 DISTNAME=		flash_${DISTUNAME}
 CATEGORIES=		multimedia www
@@ -44,7 +44,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_BUILDLINK2=		yes
+NO_BUILDLINK=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 CHECK_SHLIBS=		no
