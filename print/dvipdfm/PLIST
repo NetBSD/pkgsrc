@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/08 11:54:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/31 19:00:33 wiz Exp $
 bin/dvipdfm
 bin/dvipdft
 bin/ebb
@@ -15,5 +15,5 @@ share/texmf/dvipdfm/config/t1fonts.map
 @dirrm share/texmf/dvipdfm/config
 @dirrm share/texmf/dvipdfm/base
 @dirrm share/texmf/dvipdfm
-@exec mktexlsr
-@unexec mktexlsr
+@exec %D/bin/mktexlsr
+@unexec %D/bin/mktexlsr
