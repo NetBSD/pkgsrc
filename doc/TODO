@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3119 2005/02/26 15:42:01 wiz Exp $
+$NetBSD: TODO,v 1.3120 2005/02/26 16:28:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -445,7 +445,6 @@ Suggested package updates
 	o elk-3.99.6
 	o elm-2.5.7
 	o elm-me-2.5plalpha4
-	o emacs-21.4a
 	o emacs-w3m-1.4.3
 	o emech-2.8.5.1
 	o enscript-1.6.4
@@ -629,7 +628,6 @@ Suggested package updates
 	o lcc-4.2
 	o leafnode-1.10.8
 	o leafpad-0.7.9
-	o leim-21.4
 	o libarchive-1.02.009
 	o libart2-2.3.17
 	o libcdio-0.72
