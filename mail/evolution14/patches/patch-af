@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1.1.1 2004/09/21 17:17:43 jmmv Exp $
+
+--- e-util/e-db3-utils.c.orig	2002-11-02 09:25:00.000000000 +0100
++++ e-util/e-db3-utils.c
+@@ -13,9 +13,9 @@
+ #include <libgnome/gnome-util.h>
+ 
+ #if DB_VERSION_MAJOR != 3 || \
+-    DB_VERSION_MINOR != 1 || \
+-    DB_VERSION_PATCH != 17
+-#error Including wrong DB3.  Need libdb 3.1.17.
++    DB_VERSION_MINOR != 3 || \
++    DB_VERSION_PATCH != 11
++#error Including wrong DB3.  Need libdb 3.3.11.
+ #endif
+ 
+ static char *
