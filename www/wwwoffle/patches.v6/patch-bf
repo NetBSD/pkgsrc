@@ -1,8 +1,8 @@
-$NetBSD: patch-bf,v 1.2 1999/09/03 21:10:54 tron Exp $
+$NetBSD: patch-bf,v 1.3 1999/11/26 06:09:01 itohy Exp $
 
---- wwwoffle.c.orig	Tue Aug 24 19:33:32 1999
-+++ wwwoffle.c	Tue Aug 24 19:41:22 1999
-@@ -216,7 +216,7 @@
+--- wwwoffle.c.orig	Fri Oct 15 18:26:54 1999
++++ wwwoffle.c	Thu Nov 25 20:00:36 1999
+@@ -245,7 +245,7 @@
  
      if(!strcmp(argv[i],"-p"))
        {
@@ -11,7 +11,7 @@ $NetBSD: patch-bf,v 1.2 1999/09/03 21:10:54 tron Exp $
  
         if(++i>=argc)
           {fprintf(stderr,"wwwoffle: The '-p' argument requires a hostname and optionally a port number.\n"); exit(1);}
-@@ -224,7 +224,7 @@
+@@ -253,7 +253,7 @@
         if(ConfigFile)
           {fprintf(stderr,"wwwoffle: The '-p' and '-c' options cannot be used together.\n"); exit(1);}
  
@@ -20,7 +20,7 @@ $NetBSD: patch-bf,v 1.2 1999/09/03 21:10:54 tron Exp $
           {
            *colon++=0;
  
-@@ -234,7 +234,14 @@
+@@ -263,7 +263,14 @@
              {fprintf(stderr,"wwwoffle: The port number %d '%s' is invalid.\n",port,argv[i]); exit(1);}
           }
  
@@ -36,7 +36,7 @@ $NetBSD: patch-bf,v 1.2 1999/09/03 21:10:54 tron Exp $
  
         argv[i-1]=NULL;
         argv[i]=NULL;
-@@ -344,12 +351,12 @@
+@@ -379,12 +386,12 @@
         host=(char*)malloc(strlen(env)+1);
         strcpy(host,env);
  
