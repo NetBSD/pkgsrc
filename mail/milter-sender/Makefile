@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2003/12/24 09:53:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/24 22:56:32 snj Exp $
 #
 
 DISTNAME=		milter-sender-0.41
-DISTFILES=		libsnert-1.23.tgz milter-sender-0.41.tgz
 CATEGORIES=		mail
 MASTER_SITES=		http://www.snert.com/Software/download/
+DISTFILES=		libsnert-1.23.tgz milter-sender-0.41.tgz
 
 MAINTAINER=		manu@NetBSD.org
 HOMEPAGE=		http://www.snert.com/Software/download/
@@ -14,7 +14,7 @@ WRKSRC=			${WRKDIR}/com/snert/src/milter-sender
 GNU_CONFIGURE=		yes
 MAKEFILE=		makefile
 #CFLAGS+=		-I${WRKDIR}
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 LICENSE=		snert-license
 RESTRICTED=		"Redistribution not permitted"
@@ -28,8 +28,8 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/milter-sender ${PREFIX}/sbin
 	${INSTALL} -d -o smmsp -g smmsp /var/milter-sender
 
-.include "../../mail/libmilter/buildlink2.mk"
-.include "../../mail/libsnert/buildlink2.mk"
-.include "../../databases/db3/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../mail/libmilter/buildlink3.mk"
+.include "../../mail/libsnert/buildlink3.mk"
+.include "../../databases/db3/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
