@@ -1,14 +1,14 @@
-$NetBSD: patch-ah,v 1.2 1999/08/29 12:37:04 rh Exp $
+$NetBSD: patch-ah,v 1.3 1999/11/15 18:47:56 rh Exp $
 
---- libart_lgpl/configure.orig	Fri Aug 20 21:45:16 1999
-+++ libart_lgpl/configure	Sun Aug 29 12:58:28 1999
-@@ -1922,7 +1922,9 @@
- LIBTOOL_DEPS="$ac_aux_dir/ltconfig $ac_aux_dir/ltmain.sh"
+--- libart_lgpl/configure.orig	Mon Nov 15 19:20:56 1999
++++ libart_lgpl/configure	Mon Nov 15 19:20:56 1999
+@@ -1624,7 +1624,9 @@
+ fi
  
  # Always use our own libtool.
 +if false; then
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 +fi
  
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags=
