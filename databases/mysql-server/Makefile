@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/06/16 21:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2002/08/23 03:34:41 jschauma Exp $
 #
 
 .include "../mysql-client/Makefile.common"
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--without-berkeley-db
 # platforms on which included mit-pthreads is usable
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386	\
 			NetBSD-*-sparc NetBSD-*-m68k SunOS-*-sparc	\
-			NetBSD-*-powerpc
+			NetBSD-*-powerpc Linux-*-*
 
 DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
 
