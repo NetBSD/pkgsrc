@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/09/29 14:04:34 agc Exp $
+# $NetBSD: Makefile,v 1.19 2000/02/05 07:04:47 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/04/30 23:49:14 asami Exp
 #
 
@@ -36,6 +36,6 @@ MAKE_ENV+=	INSTALL_MAN="${INSTALL_MAN}" \
 
 pre-configure:
 	${CP} ${FILESDIR}/defaults.${CONF} ${WRKSRC}/.defaults
-	chmod a-x ${WRKSRC}/install
+	${CHMOD} a-x ${WRKSRC}/install
 
 .include "../../mk/bsd.pkg.mk"
