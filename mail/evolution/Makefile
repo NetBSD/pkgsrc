@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2004/02/14 17:21:44 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2004/02/20 13:03:09 jmmv Exp $
 
 DISTNAME=		evolution-1.4.5
 PKGREVISION=		5
@@ -35,7 +35,7 @@ GNU_CONFIGURE=		YES
 USE_GNU_TOOLS+=		make
 USE_X11=		YES
 USE_LIBTOOL=		YES
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 YACC=			${PREFIX}/bin/bison -y
 
@@ -75,24 +75,25 @@ pre-configure:
 
 .if !exists(/usr/include/semaphore.h)
 LDFLAGS+=	-lsemaphore
-.include "../../devel/pthread-sem/buildlink2.mk"
+.include "../../devel/pthread-sem/buildlink3.mk"
 .endif
-.include "../../databases/db3/buildlink2.mk"
-.include "../../databases/openldap/buildlink2.mk"
+.include "../../databases/db3/buildlink3.mk"
+.include "../../databases/openldap/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../devel/gal2/buildlink2.mk"
-.include "../../devel/libbonoboui/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
-.include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
-.include "../../graphics/libgnomecanvas/buildlink2.mk"
-.include "../../print/libgnomeprint/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
-.include "../../sysutils/gnome-vfs2/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
-.include "../../textproc/libunicode/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gal2/buildlink3.mk"
+.include "../../devel/libbonoboui/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
+.include "../../print/libgnomeprint/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libunicode/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../www/gtkhtml3/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../www/gtkhtml3/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
