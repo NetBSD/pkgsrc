@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.7 2001/04/19 08:52:04 tron Exp $
+
+--- popper/popauth.c.orig	Tue Sep 12 00:34:48 2000
++++ popper/popauth.c	Thu Apr 19 10:46:18 2001
+@@ -158,7 +158,7 @@
+ #define APOP_AUTH   1
+     { "apopauth"  },
+ #define POP_AUTH    2 
+-    { "popauth"   },
++    { "qpopauth"   },
+ #define OTHER       3
+     { NULL        }
+ };
