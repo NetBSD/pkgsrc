@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/05/03 18:03:29 rh Exp $
+bin/wterm
+man/man1/wterm.1
