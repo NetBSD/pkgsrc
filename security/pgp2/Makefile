@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/04/27 11:45:40 tv Exp $
+# $NetBSD: Makefile,v 1.8 1998/05/08 10:18:54 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/27 13:06:01 ache Exp
 #
 
@@ -58,10 +58,10 @@ ASMFLAG=	-DPORTABLE -DMPORTABLE
 pre-fetch:
 	@${ECHO}
 	@${ECHO} The variable USE_RSAREF2 must be set to either YES or NO
-	@${ECHO} in order to build this package.  USA residents not at the
-	@${ECHO} Massachusetts Institute of Technology MUST set this
-	@${ECHO} variable to YES.  Users outside the USA MUST set this
-	@${ECHO} variable to NO.  People at MIT may choose -- NO is faster.
+	@${ECHO} in order to build this package.  USA residents that are
+	@${ECHO} no licensees of the RSA algorithm MUST set this variable
+	@${ECHO} to YES.  Users outside the USA MUST set this variable to
+	@${ECHO} NO.  Licensees may choose -- NO is faster.
 	@${FALSE}
 .endif
 
