@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.3 1999/11/25 18:51:47 erh Exp $
+$NetBSD: patch.netbsd-ae,v 1.1 2000/05/10 12:28:44 veego Exp $
 
 --- crypto/Makefile.ssl.orig	Mon Aug  2 16:44:47 1999
 +++ crypto/Makefile.ssl	Wed Oct 20 17:31:16 1999
