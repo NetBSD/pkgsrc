@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9518 2005/03/20 11:10:22 jmmv Exp $
+$NetBSD: CHANGES,v 1.9519 2005/03/20 12:11:38 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1420,3 +1420,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated crypto++ to 5.2.1 [wiz 2005-03-19]
 	Updated ncmpc to 0.11.1 [wiz 2005-03-19]
 	Updated streamtuner to 0.2.0 [jmmv 2005-03-20]
+	Updated avr-gcc to 3.3.2003.05.11nb1 [jmmv 2005-03-20]
