@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.11 2004/03/07 09:29:25 grant Exp $
+# $NetBSD: subst.mk,v 1.12 2004/06/06 04:22:23 schmonz Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a paricular
@@ -16,7 +16,7 @@
 #
 # SUBST_MESSAGE.<class>
 #	message to display, noting what is being substituted
-#                                      
+#
 # SUBST_FILES.<class>
 #	files on which to run the substitution; these are relative to
 #	${WRKSRC}
@@ -27,6 +27,10 @@
 # SUBST_FILTER_CMD.<class>
 #	filter used to perform the actual substitution on the specified
 #	files.  Defaults to ${SED} ${SUBST_SED.<class>}.
+#
+# SUBST_POSTCMD.<class>
+#	command to clean up after sed(1). Defaults to ${RM} -f
+#	$$file.subst.sav. For debugging, set it to ${DO_NADA}.
 
 ECHO_SUBST_MSG?=	${ECHO}
 
@@ -39,6 +43,7 @@ _SUBST_COOKIE.${_class_}=	${WRKDIR}/.subst_${_class_}_done
 
 .  if defined(SUBST_SED.${_class_}) && !empty(SUBST_SED.${_class_})
 SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
+SUBST_POSTCMD.${_class_}?=	${RM} -f $$file.subst.sav
 .  else
 SUBST_FILTER_CMD.${_class_}?=	# empty
 .  endif
@@ -88,6 +93,7 @@ ${_SUBST_COOKIE.${_class_}}:
 				if ${CMP} -s $$file.subst.sav $$file; then \
 					${MV} -f $$file.subst.sav $$file; \
 				else					\
+					${SUBST_POSTCMD.${_class_}};	\
 					${ECHO} $$file >> ${.TARGET};	\
 				fi;					\
 			fi;						\
