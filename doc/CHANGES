@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2037 2003/04/25 06:34:39 rh Exp $
+$NetBSD: CHANGES,v 1.2038 2003/04/25 06:40:31 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1731,3 +1731,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added gnome-media-2.2.1.1 as gnome2-media [rh 2003-04-25]
 	Updated glade2 to 2.0.0 [rh 2003-04-25]
 	Updated ggv2 to 2.0.0 [rh 2003-04-25]
+	Added gnome-2.2 as gnome2 [rh 2003-04-25]
