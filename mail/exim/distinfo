@@ -1,13 +1,12 @@
-$NetBSD: distinfo,v 1.18 2004/06/04 00:10:34 reed Exp $
+$NetBSD: distinfo,v 1.19 2004/06/06 22:10:51 abs Exp $
 
-SHA1 (exim-4.33.tar.bz2) = 2e18138793e416a4934e6f2ac8d2cd9262ffae07
-Size (exim-4.33.tar.bz2) = 1327741 bytes
-SHA1 (exiscan-acl-4.33-20.patch.bz2) = e50b2570f5485827f63949eed944f90acdcc11e0
-Size (exiscan-acl-4.33-20.patch.bz2) = 74187 bytes
+SHA1 (exim-4.34.tar.bz2) = ed77428c4dfa4718c1bd4ddb5de2d99d37cec2de
+Size (exim-4.34.tar.bz2) = 1328742 bytes
+SHA1 (exiscan-acl-4.34-22.patch.bz2) = 30134a680d0bb863b8d7241cefbd838582f3d671
+Size (exiscan-acl-4.34-22.patch.bz2) = 76947 bytes
 SHA1 (patch-aa) = 07ce41a5ee3a29c29a05ad556f5fef53a5a2285b
 SHA1 (patch-ab) = 5134367d16c56ad7c2820393e102a9aad73511c8
 SHA1 (patch-ac) = 48160bf4ef4379f4b4ce5dafeb33c85ddcfde65c
 SHA1 (patch-ad) = 6323899062b33ec34610fd93dfc181cdc9d7f369
 SHA1 (patch-ae) = b806857f4fa0c9d4c3603e8ee5f9c4419e643956
 SHA1 (patch-af) = 483fe63aa9c6b524ab61a53a20968e5a7fa3d095
-SHA1 (patch-ag) = 359c0b16da0ec85dea41472a4c67108b1f06824a
