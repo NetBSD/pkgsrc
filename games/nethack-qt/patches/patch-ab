@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2002/03/22 17:26:28 pooka Exp $
+$NetBSD: patch-ab,v 1.4 2002/03/22 17:26:26 pooka Exp $
 
 --- sys/unix/Makefile.top.orig	Fri Mar 22 17:15:28 2002
 +++ sys/unix/Makefile.top	Fri Mar 22 17:24:57 2002
