@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2001/03/22 13:53:58 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/01 23:10:06 jschauma Exp $
 
-DISTNAME=	ispell-gaeilge-0.1
+DISTNAME=	ispell-gaeilge-2.0
 CATEGORIES=	textproc
 MASTER_SITES=   http://borel.slu.edu/~kps/ispell/
 
