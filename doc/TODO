@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1408 2004/02/22 16:39:57 minskim Exp $
+$NetBSD: TODO,v 1.1409 2004/02/22 22:30:12 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -365,7 +365,6 @@ Suggested package updates
 	o xmcd-3.2.1
 	o xmms-1.2.9
 	o xmms-crossfade-0.3.4
-	o xnc-5.0.2
 	o xorp-0.5
 	o xpad-1.13
 	o xpdf-3.00
