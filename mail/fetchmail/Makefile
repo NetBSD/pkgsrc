@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/06/03 13:10:25 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/06/18 15:25:24 agc Exp $
 # $FreeBSD Id: Makefile,v 1.55 1998/01/29 17:13:07 ache Exp
 #
 
@@ -10,7 +10,6 @@ MAINTAINER=	ve@sci.fi
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=  LDFLAGS="${CFLAGS}"
-MAN1=		fetchmail.1
 
 .include "../../mk/bsd.prefs.mk"
 

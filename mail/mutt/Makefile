@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/05/22 18:44:57 tron Exp $
+# $NetBSD: Makefile,v 1.9 1998/06/18 15:25:24 agc Exp $
 
 DISTNAME=	mutt-0.91.1i
 CATEGORIES=	mail
@@ -17,8 +17,6 @@ MIRROR_DISTFILE= no
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-curses=${PREFIX} --with-exec-shell=/bin/ksh
 CONFIGURE_ENV+=	LDFLAGS=-s
-
-MAN1=		mutt.1
 
 post-install:
 	${MKDIR} ${PREFIX}/share/doc/mutt
