@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/01 14:26:16 taca Exp $
+$NetBSD: distinfo,v 1.2 2002/01/19 09:30:33 taca Exp $
 
-SHA1 (ruby/icmp-0.1.1.tar.gz) = c519b3b7900bb347acbbfcbb9396aa2fd031eefb
-Size (ruby/icmp-0.1.1.tar.gz) = 5921 bytes
+SHA1 (ruby/icmp-0.2.1.tar.gz) = b7cf9aaf49b397b6626023277f6f2259c49f0d23
+Size (ruby/icmp-0.2.1.tar.gz) = 7958 bytes
