@@ -1,0 +1,3 @@
+To run Quake 3, you must place the file 'pak0.pk3' from your Quake 3 CD into:
+
+ ${LOCALBASE}/lokigames/quake3arena/baseq3/
