@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/15 12:39:12 kei Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/04 12:44:07 cjep Exp $
 
 DISTNAME=	minivmac-0.1.7.src
 PKGNAME=	minivmac-0.1.7
@@ -20,7 +20,7 @@ DOCDIR=		${PREFIX}/share/doc/html/minivmac
 
 do-build:
 		cd ${WRKSRC}/tool/bash; \
-		${SETENV} ${SCRIPTS_ENV} ${SHELL} build
+		${SETENV} ${SCRIPTS_ENV} ${SH} build
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/drv/minivmac ${PREFIX}/bin; \
