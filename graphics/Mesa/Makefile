@@ -3,39 +3,41 @@
 # Date created:         Tue Feb  7 12:02:49  1995
 # Whom:                 hsu
 #
-# $NetBSD: Makefile,v 1.2 1997/11/03 00:39:10 hubertf Exp $
-# FreeBSD Id: Makefile,v 1.19 1997/09/30 19:21:40 max Exp
+# $Id: Makefile,v 1.3 1997/11/03 00:46:13 hubertf Exp $
 #
 
-DISTNAME=       Mesa-2.2
+DISTNAME=       MesaLib-2.4
+PKGNAME=	Mesa-2.4
 CATEGORIES=	graphics
 MASTER_SITES= 	ftp://iris.ssec.wisc.edu/pub/Mesa/
+DISTFILES=	MesaLib-${SHLIB_VERSION}${EXTRACT_SUFX} \
+		MesaDemos-${SHLIB_VERSION}${EXTRACT_SUFX}
 
 MAINTAINER=	ports@FreeBSD.ORG
 
-ALL_TARGET=	freebsd
+WRKSRC=         ${WRKDIR}/${PKGNAME}
+ALL_TARGET=	netbsd
 USE_X11=	yes
 LIBS=		libMesaGL libMesaGLU libMesaaux libMesatk
-SHLIB_VERSION=	13.2
+SHLIB_VERSION=	2.4
 
 do-install:
 .for file in ${LIBS}
-	${INSTALL_DATA} ${WRKSRC}/lib/${file}.a ${PREFIX}/lib
-	ranlib ${PREFIX}/lib/${file}.a
+	${INSTALL_DATA} ${WRKSRC}/lib/${file}_pic.a ${PREFIX}/lib
+	ranlib ${PREFIX}/lib/${file}_pic.a
 	${INSTALL_DATA} ${WRKSRC}/lib/${file}.so.${SHLIB_VERSION} ${PREFIX}/lib
 .endfor
 .for file in GL GLU
-	@ln -fs ${PREFIX}/lib/libMesa${file}.a ${PREFIX}/lib/lib${file}.a
+	@ln -fs ${PREFIX}/lib/libMesa${file}_pic.a ${PREFIX}/lib/lib${file}_pic.a
 	@ln -fs ${PREFIX}/lib/libMesa${file}.so.${SHLIB_VERSION} ${PREFIX}/lib/lib${file}.so.${SHLIB_VERSION}
 .endfor
-	@${MKDIR} ${PREFIX}/include/GL
+	@${MKDIR} -p ${PREFIX}/include/GL
 	${INSTALL_DATA} ${WRKSRC}/include/GL/* ${PREFIX}/include/GL
-	@${MKDIR} ${PREFIX}/share/examples/Mesa
+	@${MKDIR} -p ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/samples ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/demos ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/book ${PREFIX}/share/examples/Mesa
 	${CP} -Rp ${WRKSRC}/widgets-sgi ${PREFIX}/share/examples/Mesa
-	@${RM} -f ${PREFIX}/share/examples/Mesa/widgets-sgi/Makefile~
 	${LDCONFIG} -m ${PREFIX}/lib
 
 .include <bsd.port.mk>
