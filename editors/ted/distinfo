@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2002/04/09 02:30:24 markd Exp $
+$NetBSD: distinfo,v 1.6 2002/04/21 23:19:54 markd Exp $
 
 SHA1 (ted-2.11.src.tar.gz) = d4f0ff443a2632d7f665cea8999045b2dbea40a6
 Size (ted-2.11.src.tar.gz) = 2377582 bytes
@@ -6,3 +6,5 @@ SHA1 (patch-aa) = d8673fb67176c17beb90a87adebb9ab94a1e15ba
 SHA1 (patch-ab) = fddf769a9e48c68a61512fdb60973415a43ea0e6
 SHA1 (patch-ac) = e7e575a50f7e8ee4140f573f16fe8bd2c3e32f0b
 SHA1 (patch-ad) = 8dbde13c8e2470deac088c64d1bc901ed1944a92
+SHA1 (patch-ae) = 9cea02ede59d7f6a88a0c8ec1f93e5d814e6b994
+SHA1 (patch-af) = 369a2d0324538860c50653a140d660d50c2383b9
