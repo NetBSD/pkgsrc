@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2003/06/23 10:01:35 adam Exp $
-
-SHA1 (php-4.2.3.tar.gz) = 3e57e8c056bd2f173bba8705293cdfa15aeb93bc
-Size (php-4.2.3.tar.gz) = 3413829 bytes
-SHA1 (php-4.2.3-gd-2.0.8.patch) = 6c907c8e3ce5ad75845e25f5de8714d9a006a4bf
-Size (php-4.2.3-gd-2.0.8.patch) = 4439 bytes
