@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/02/18 15:14:09 seb Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/22 17:39:07 wiz Exp $
 #
 
 DISTNAME=		diffutils-2.7
@@ -9,11 +9,16 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/diffutils/diffutils.html
 COMMENT=		GNU diff utilities - find the differences between files
 
-ONLY_FOR_PLATFORM=	SunOS-*-*	# in NetBSD base system
-
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--program-prefix=g
 INFO_FILES=		diff.info
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(GNU_PROGRAM_PREFIX)
+CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
+.endif
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
+BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
