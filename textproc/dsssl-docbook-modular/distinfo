@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2004/05/07 16:37:06 hrs Exp $
+$NetBSD: distinfo,v 1.4 2005/02/18 16:17:43 wiz Exp $
 
-SHA1 (docbook-dsssl-1.78.tar.gz) = 65b7d1c769e1967f976f2500835a52763d7234a6
-Size (docbook-dsssl-1.78.tar.gz) = 388310 bytes
-SHA1 (docbook-dsssl-doc-1.78.tar.gz) = 3a8b9adb0f7d8c3b09ed4c9918eaf42abd8fd073
-Size (docbook-dsssl-doc-1.78.tar.gz) = 237519 bytes
+SHA1 (docbook-dsssl-1.79.tar.bz2) = 0ee935247c9f850e930f3b5c162dbc03915469cd
+Size (docbook-dsssl-1.79.tar.bz2) = 277650 bytes
+SHA1 (docbook-dsssl-doc-1.79.tar.bz2) = d050b99eb05e920ae8a6431559fefd8e5ee35adc
+Size (docbook-dsssl-doc-1.79.tar.bz2) = 142278 bytes
