@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2004/10/09 09:18:28 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.34 2004/10/13 07:28:36 jmmv Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -285,6 +285,7 @@ share/doc/gdk-pixbuf/license.html
 share/doc/gdk-pixbuf/right.png
 share/doc/gdk-pixbuf/rn01.html
 share/doc/gdk-pixbuf/rn02.html
+share/doc/gdk-pixbuf/style.css
 share/doc/gdk-pixbuf/up.png
 share/doc/gdk/GdkDisplay.html
 share/doc/gdk/GdkDisplayManager.html
@@ -386,6 +387,7 @@ share/doc/gdk/sizing.png
 share/doc/gdk/spider.png
 share/doc/gdk/spraycan.png
 share/doc/gdk/star.png
+share/doc/gdk/style.css
 share/doc/gdk/target.png
 share/doc/gdk/tcross.png
 share/doc/gdk/top_left_arrow.png
@@ -694,6 +696,7 @@ share/doc/gtk/stock_zoom_1_24.png
 share/doc/gtk/stock_zoom_fit_24.png
 share/doc/gtk/stock_zoom_in_24.png
 share/doc/gtk/stock_zoom_out_24.png
+share/doc/gtk/style.css
 share/doc/gtk/ui-manager.html
 share/doc/gtk/up.png
 share/gtk-2.0/demo/alphatest.png
