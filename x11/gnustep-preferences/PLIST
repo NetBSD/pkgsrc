@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/10 21:30:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/09/15 11:10:39 wiz Exp $
 share/GNUstep/System/Applications/Preferences.app/Preferences
 share/GNUstep/System/Applications/Preferences.app/Resources/English.lproj/Localizable.strings
 share/GNUstep/System/Applications/Preferences.app/Resources/English.lproj/Preferences.gorm
@@ -49,4 +49,5 @@ share/GNUstep/System/Library/Preferences/Keyboard.prefs/stamp.make
 @dirrm share/GNUstep/System/Applications/Preferences.app/Resources
 @dirrm share/GNUstep/System/Applications/Preferences.app
 @dirrm share/GNUstep/Network/Library/Preferences
+@unexec ${RMDIR} %D/share/GNUstep/Network/Library 2>/dev/null || ${TRUE}
 @dirrm share/GNUstep/Local/Library/Preferences
