@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2003/02/12 15:29:25 yyamano Exp $
+
+--- pstree.c.orig	Mon Dec 17 21:18:02 2001
++++ pstree.c
+@@ -177,7 +177,7 @@
+ #  define UID2USER
+ #  define PSCMD 	"ps laxw"
+ #  define PSFORMAT 	"%*s %ld %ld %ld %*d %*g %*d %*d %*21c %*s %[^\n]"
+-#elif defined(__NetBSD__) || defined(__OpenBSD__)
++#elif defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__)
+ /* NetBSD contributed by Gary D. Duzan <gary@wheel.tiac.net> */
+ #  define HAS_PGID
+ #  define PSCMD 	"ps -axwwo user,pid,ppid,pgid,command"
