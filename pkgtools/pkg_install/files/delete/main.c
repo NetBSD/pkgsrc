@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.12 2004/03/29 02:25:06 tv Exp $	*/
+/*	$NetBSD: main.c,v 1.13 2004/03/29 20:28:05 tv Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.11 1997/10/08 07:46:48 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.12 2004/03/29 02:25:06 tv Exp $");
+__RCSID("$NetBSD: main.c,v 1.13 2004/03/29 20:28:05 tv Exp $");
 #endif
 #endif
 
@@ -184,9 +184,11 @@ main(int argc, char **argv)
 		warnx("missing package name(s)");
 		usage();
 	}
+#ifndef __INTERIX
 	if (!Fake && getuid() != 0) {
 		warnx("not running as root - trying to delete anyways");
 	}
+#endif
 	if (OnlyDeleteFromPkgDB) {
 		/* Only delete the given packages' files from pkgdb, do not
 		 * touch the pkg itself. Used by "make reinstall" in
