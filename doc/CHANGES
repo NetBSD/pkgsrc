@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5243 2004/03/12 21:53:53 recht Exp $
+$NetBSD: CHANGES,v 1.5244 2004/03/12 22:15:27 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1451,3 +1451,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated asc to 1.14.0.0 [wiz 2004-03-12]
 	Updated db4 to 4.1.25nb1 [jlam 2004-03-12]
 	Updated awstats to 6.0 [recht 2004-03-12]
+	Updated postgresql_autodoc to 1.21 [recht 2004-03-12]
