@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/11/25 19:52:43 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/12/09 20:23:40 wiz Exp $
 
 DISTNAME=	apr_20021123173453
 PKGNAME=	apr-0.20021123173453
@@ -9,6 +9,8 @@ DISTFILES=	apr_20021123173453.tar.gz apr-util_20021123173519.tar.gz
 MAINTAINER=	joelw@unix.se
 HOMEPAGE=	http://apr.apache.org/
 COMMENT=	Apache Portable Run-time, a system portability layer
+
+CONFLICTS+=	apache>=2.0 # www/apache2 package
 
 AUTOCONF_REQD=	2.56
 GNU_CONFIGURE=	yes
