@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8828 2005/01/20 10:17:41 kei Exp $
+$NetBSD: CHANGES,v 1.8829 2005/01/20 10:29:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -434,3 +434,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated icewm-imlib to 1.2.20 [xtraeme 2005-01-20]
 	Updated icewm-gnome to 1.2.20 [xtraeme 2005-01-20]
 	Updated htmllint to 20050110 [kei 2005-01-20]
+	Updated bluefish to 1.0 [adam 2005-01-20]
