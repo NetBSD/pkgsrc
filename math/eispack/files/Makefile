@@ -1,12 +1,10 @@
 LIB	= eispack
+
 LIBDIR	= ${PREFIX}/lib
 
-FORTRAN = %%FORTRAN%%
-FOPTS	= -O3
+all:	lib$(LIB).a
 
-all:	lib$(LIB)
-
-OBJ = 	csroot.o epslon.o pythag.o bakvec.o balanc.o balbak.o bandr.o	\
+OBJS = 	csroot.o epslon.o pythag.o bakvec.o balanc.o balbak.o bandr.o	\
 	bandv.o	bisect.o bqr.o cbabk2.o	cbal.o cg.o ch.o cinvit.o	\
 	combak.o comhes.o comlr.o comlr2.o comqr.o comqr2.o cortb.o	\
 	corth.o	elmbak.o elmhes.o eltran.o figi.o figi2.o hqr.o	hqr2.o	\
@@ -18,15 +16,12 @@ OBJ = 	csroot.o epslon.o pythag.o bakvec.o balanc.o balbak.o bandr.o	\
 	trbak1.o trbak3.o tred1.o tred2.o tred3.o tridib.o tsturm.o	\
 	cdiv.o
 
-lib$(LIB):	$(OBJ)
-	@$(LIBTOOL) --mode=link $(FORTRAN) $(FFLAGS) $(FOPTS) \
-	-O -o lib$(LIB).la $(OBJ:.o=.lo) --version-info 0:0 -rpath $(LIBDIR)
+lib$(LIB).a:	$(OBJS)
+	$(AR) cru $@ $?
+	$(RANLIB) $@
 
-.f.o:
-	@$(LIBTOOL) --mode=compile $(FORTRAN) $(FFLAGS) $(FOPTS) -c $*.f
-
-install:	lib$(LIB)
-	@$(LIBTOOL) --mode=install install -c lib$(LIB).la $(LIBDIR)
+install:	lib$(LIB).a
+	$(BSD_INSTALL_DATA) lib$(LIB).a $(LIBDIR)
 
 clean:
-	rm -rf *.o *.lo .libs lib$(LIB).la
+	rm -f *.o lib$(LIB).a
