@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.34 2005/04/03 03:40:04 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q1,v 1.1.2.35 2005/04/03 17:37:02 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q1 branch:
@@ -69,3 +69,5 @@ Pullup ticket 415 - requested by Lubomir Sedlacik
 security fix for gdk-pixbuf
 Pullup ticket 413 - requested by Min Sik Kim
 portability fix for dbench
+Pullup ticket 418 - requested by Min Sik Kim
+portability fix for gnutls
