@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.6 2003/07/30 15:36:49 markd Exp $
+# $NetBSD: buildlink2.mk,v 1.7 2003/08/04 21:48:01 drochner Exp $
 #
 # This Makefile fragment is included by packages that use kdeutils.
 #
@@ -13,7 +13,7 @@ BUILDLINK_DEPENDS.kdeutils?=		kdeutils>=3.1.2nb1
 BUILDLINK_PKGSRCDIR.kdeutils?=		../../misc/kdeutils3
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdeutils=kdeutils
-BUILDLINK_PREFIX.kdeutils_DEFAULT=	${X11PREFIX}
+BUILDLINK_PREFIX.kdeutils_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.kdeutils+=	include/kmultiformlistbox.h
 BUILDLINK_FILES.kdeutils+=	include/kmultiformlistboxentry.h
 BUILDLINK_FILES.kdeutils+=	include/kmultiformlistboxfactory.h
