@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/04/22 17:14:48 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/10 09:52:31 wiz Exp $
 #
 
 DISTNAME=	libtar-1.2.5
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www-dev.cso.uiuc.edu/libtar/
 COMMENT=	library for manipulating POSIX tar files
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
-.include "../../devel/zlib/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
