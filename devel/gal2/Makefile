@@ -1,34 +1,29 @@
-# $NetBSD: Makefile,v 1.11 2003/12/04 19:48:24 xtraeme Exp $
+# $NetBSD: Makefile,v 1.12 2003/12/06 17:50:02 recht Exp $
 #
 
-DISTNAME=		gal2-0-0.0.7
-PKGNAME=		${DISTNAME:S/-0-/-/}
-PKGREVISION=		6
-CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gal2-0/0.0/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	gal-1.99.10
+PKGNAME=	${DISTNAME:S/gal/gal2/}
+CATEGORIES=	devel gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gal/1.99/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
-COMMENT=		GNOME2 Application Libraries
+MAINTAINER=	recht@NetBSD.org
+HOMEPAGE=	http://www.gnome.org/
+COMMENT=	Library functions that came from Gnumeric and Evolution
 
-BUILD_USES_MSGFMT=	YES
-
-GNU_CONFIGURE=		YES
-USE_BUILDLINK2=		YES
-USE_PKGLOCALEDIR=	YES
-USE_GMAKE=		YES
-USE_X11=		YES
-USE_LIBTOOL=		YES
+USE_X11=		yes
+USE_GMAKE=		yes
+USE_BUILDLINK2=		yes
+USE_PKGLOCALEDIR=	yes
+BUILD_USES_MSGFMT=	yes
+USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-PKGCONFIG_OVERRIDE=	${WRKSRC}/gal-2.0.pc.in
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/gal2/html
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/gal-2.0.pc.in
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS=		--enable-gtk-doc=no
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
-.include "../../graphics/libgnomecanvas/buildlink2.mk"
-.include "../../print/libgnomeprintui/buildlink2.mk"
-.include "../../converters/libiconv/buildlink2.mk"
-.include "../../textproc/gtk-doc/buildlink2.mk"
-.include "../../textproc/libxml2/buildlink2.mk"
 .include "../../devel/libgnomeui/buildlink2.mk"
-.include "../../devel/libglade2/buildlink2.mk"
+.include "../../print/libgnomeprintui/buildlink2.mk"
+.include "../../textproc/intltool/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
