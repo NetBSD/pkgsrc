@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.50 1999/04/13 15:31:07 agc Exp $
+# $NetBSD: mk.conf.example,v 1.51 1999/04/15 20:41:32 tron Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -313,11 +313,11 @@ PAPERSIZE=	A4		# Default paper size for packages.
 # ftp2.au.netbsd.org if your link to University of Queensland is
 # cheaper/faster than your link to RMIT University (Melbourne).
 #
-#MASTER_SITE_XCONTRIB=	ftp://mirror.aarnet.edu.au/X11/contrib/%SUBDIR%/
-#MASTER_SITE_GNU=	ftp://mirror.aarnet.edu.au/gnu/%SUBDIR%/
-#MASTER_SITE_PERL_CPAN=	ftp://mirror.aarnet.edu.au/perl/CPAN/modules/by-module/%SUBDIR%/
-#MASTER_SITE_TEX_CTAN=	ftp://mirror.aarnet.edu.au/tex-archive/%SUBDIR%/
-#MASTER_SITE_SUNSITE=	ftp://mirror.aarnet.edu.au/sunsite.unc.edu/%SUBDIR%/
+#MASTER_SITE_XCONTRIB=	ftp://mirror.aarnet.edu.au/X11/contrib/
+#MASTER_SITE_GNU=	ftp://mirror.aarnet.edu.au/gnu/
+#MASTER_SITE_PERL_CPAN=	ftp://mirror.aarnet.edu.au/perl/CPAN/modules/by-module/
+#MASTER_SITE_TEX_CTAN=	ftp://mirror.aarnet.edu.au/tex-archive/
+#MASTER_SITE_SUNSITE=	ftp://mirror.aarnet.edu.au/sunsite.unc.edu/
 #MASTER_SITE_BACKUP=	\
 #	ftp://ftp.au.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/ \
 #	ftp://ftp2.au.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
@@ -327,13 +327,13 @@ PAPERSIZE=	A4		# Default paper size for packages.
 
 # Finland
 #
-#MASTER_SITE_XCONTRIB=	ftp://ftp.funet.fi/pub/X11/contrib/%SUBDIR%/
-#MASTER_SITE_GNU= 	ftp://ftp.funet.fi/pub/gnu/gnu/%SUBDIR%/
+#MASTER_SITE_XCONTRIB=	ftp://ftp.funet.fi/pub/X11/contrib/
+#MASTER_SITE_GNU= 	ftp://ftp.funet.fi/pub/gnu/gnu/
 #MASTER_SITE_PERL_CPAN=	\
-#	ftp://ftp.funet.fi/pub/languages/perl/CPAN/modules/by-module/%SUBDIR%/
-#MASTER_SITE_TEX_CTAN=	ftp://ftp.funet.fi/pub/TeX/CTAN/%SUBDIR%/
+#	ftp://ftp.funet.fi/pub/languages/perl/CPAN/modules/by-module/
+#MASTER_SITE_TEX_CTAN=	ftp://ftp.funet.fi/pub/TeX/CTAN/
 #MASTER_SITE_SUNSITE=	\
-#	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/%SUBDIR%/
+#	ftp://ftp.funet.fi/pub/mirrors/sunsite.unc.edu/pub/Linux/
 #MASTER_SITE_BACKUP=	\
 #	ftp://ftp.fi.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
 #MASTER_SITE_LOCAL=	\
@@ -341,31 +341,31 @@ PAPERSIZE=	A4		# Default paper size for packages.
 
 # Austria
 #
-#MASTER_SITE_XCONTRIB=	ftp://ftp.at.netbsd.org/hci/X11/contrib/%SUBDIR%/
-#MASTER_SITE_GNU=	ftp://ftp.at.netbsd.org/gnu/gnusrc/%SUBDIR%/
-#MASTER_SITE_PERL_CPAN=	ftp://ftp.at.netbsd.org/languages/perl/CPAN/modules/by-module/%SUBDIR%/
-#MASTER_SITE_TEX_CTAN=	ftp://ftp.at.netbsd.org/publishing/tex/CTAN/%SUBDIR%/
-#MASTER_SITE_SUNSITE=	ftp://ftp.univie.ac.at/systems/linux/sunsite/%SUBDIR%/
+#MASTER_SITE_XCONTRIB=	ftp://ftp.at.netbsd.org/hci/X11/contrib/
+#MASTER_SITE_GNU=	ftp://ftp.at.netbsd.org/gnu/gnusrc/
+#MASTER_SITE_PERL_CPAN=	ftp://ftp.at.netbsd.org/languages/perl/CPAN/modules/by-module/
+#MASTER_SITE_TEX_CTAN=	ftp://ftp.at.netbsd.org/publishing/tex/CTAN/
+#MASTER_SITE_SUNSITE=	ftp://ftp.univie.ac.at/systems/linux/sunsite/
 #MASTER_SITE_BACKUP=	ftp://ftp.at.netbsd.org/opsys/NetBSD/packages/distfiles/${DIST_SUBDIR}/
 #MASTER_SITE_LOCAL=	ftp://ftp.at.netbsd.org/opsys/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 # Denmark
 #
-#MASTER_SITE_XCONTRIB=	ftp://ftp.sunsite.auc.dk/mirrors/ftp.x.org/contrib/%SUBDIR%/
-#MASTER_SITE_GNU=	ftp://ftp.sunsite.auc.dk/pub/gnu/%SUBDIR%/
-#MASTER_SITE_PERL_CPAN=	ftp://ftp.sunsite.auc.dk/pub/languages/perl/CPAN/modules/by-module/%SUBDIR%/
-#MASTER_SITE_TEX_CTAN=	ftp://ftp.sunsite.auc.dk/pub/tex/ctan/%SUBDIR%/
-#MASTER_SITE_SUNSITE=	ftp://ftp.sunsite.auc.dk/mirrors/sunsite.unc.edu/pub/Linux/%SUBDIR%/
+#MASTER_SITE_XCONTRIB=	ftp://ftp.sunsite.auc.dk/mirrors/ftp.x.org/contrib/
+#MASTER_SITE_GNU=	ftp://ftp.sunsite.auc.dk/pub/gnu/
+#MASTER_SITE_PERL_CPAN=	ftp://ftp.sunsite.auc.dk/pub/languages/perl/CPAN/modules/by-module/
+#MASTER_SITE_TEX_CTAN=	ftp://ftp.sunsite.auc.dk/pub/tex/ctan/
+#MASTER_SITE_SUNSITE=	ftp://ftp.sunsite.auc.dk/mirrors/sunsite.unc.edu/pub/Linux/
 #MASTER_SITE_BACKUP=	ftp://ftp.dk.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
 #MASTER_SITE_LOCAL=	ftp://ftp.dk.netbsd.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 # Japan
 #
-#MASTER_SITE_XCONTRIB=	ftp://ftp.ring.gr.jp/pub/X/opengroup/contrib/%SUBDIR%/
-#MASTER_SITE_GNU=	ftp://ftp.ring.gr.jp/pub/GNU/%SUBDIR%/
-#MASTER_SITE_PERL_CPAN=	ftp://ftp.ring.gr.jp/pub/lang/perl/CPAN/modules/by-module/%SUBDIR%/
-#MASTER_SITE_TEX_CTAN=	ftp://ftp.ring.gr.jp/pub/text/CTAN/%SUBDIR%/
-#MASTER_SITE_SUNSITE=	ftp://sunsite.sut.ac.jp/pub/archives/linux/%SUBDIR%/
+#MASTER_SITE_XCONTRIB=	ftp://ftp.ring.gr.jp/pub/X/opengroup/contrib/
+#MASTER_SITE_GNU=	ftp://ftp.ring.gr.jp/pub/GNU/
+#MASTER_SITE_PERL_CPAN=	ftp://ftp.ring.gr.jp/pub/lang/perl/CPAN/modules/by-module/
+#MASTER_SITE_TEX_CTAN=	ftp://ftp.ring.gr.jp/pub/text/CTAN/
+#MASTER_SITE_SUNSITE=	ftp://sunsite.sut.ac.jp/pub/archives/linux/
 #MASTER_SITE_BACKUP=	\
 #	ftp://ftp.ring.gr.jp/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/ \
 #	ftp://ftp.jp.netbsd.org/pub/NetBSD/packages/distfiles/${DIST_SUBDIR}/
