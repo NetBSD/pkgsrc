@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.194 2002/07/01 15:51:48 wiz Exp $
+# $NetBSD: Makefile,v 1.195 2002/07/25 10:54:57 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -27,6 +27,7 @@ SUBDIR+=	camediaplay
 SUBDIR+=	cdlabelgen
 SUBDIR+=	clanlib
 SUBDIR+=	claraocr
+SUBDIR+=	compface
 SUBDIR+=	cqcam
 SUBDIR+=	denemo
 SUBDIR+=	dia
