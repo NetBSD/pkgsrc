@@ -1,11 +1,11 @@
-PKG_VIEW(1)                 NetBSD Reference Manual                PKG_VIEW(1)
+PKG_VIEW(1)             NetBSD General Commands Manual             PKG_VIEW(1)
 
 NNAAMMEE
      ppkkgg__vviieeww - add and delete instances of depoted packages in views
 
 SSYYNNOOPPSSIISS
-     ppkkgg__vviieeww [_n_V_v] [--dd _s_t_o_w_d_i_r] [--ii _i_g_n_o_r_e] [--kk _p_k_g___d_b_d_i_r] [--WW _v_i_e_w_b_a_s_e] [--ww
-              _v_i_e_w] _c_o_m_m_a_n_d _p_a_c_k_a_g_e _._._.
+     ppkkgg__vviieeww [_n_V_v] [--dd _s_t_o_w_d_i_r] [--ii _i_g_n_o_r_e] [--kk _p_k_g___d_b_d_i_r] [--WW _v_i_e_w_b_a_s_e]
+              [--ww _v_i_e_w] _c_o_m_m_a_n_d _p_a_c_k_a_g_e _._._.
 
 DDEESSCCRRIIPPTTIIOONN
      The ppkkgg__vviieeww command is used to add and delete instances of depoted pack-
@@ -141,4 +141,4 @@ SSEEEE AALLSSOO
 AAUUTTHHOORRSS
      The ppkkgg__vviieeww utility was written by Alistair G. Crooks <agc@netbsd.org>.
 
-NetBSD 1.6.1_STABLE            September 8, 2003                             3
+NetBSD 1.6                     September 8, 2003                    NetBSD 1.6
