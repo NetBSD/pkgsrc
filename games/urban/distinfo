@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 23:12:03 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/03/14 14:48:20 rillig Exp $
 
 SHA1 (urban-1.5.2.tar.gz) = 3f388da8053a26cd34749aa6989cebd528925c2c
 RMD160 (urban-1.5.2.tar.gz) = f63be0cb0f09e84b31587d1d5cdc9a603521941f
@@ -13,3 +13,5 @@ SHA1 (patch-ad) = 0cc28ab990d79fdf34a094ad392a1e5a5e742f0e
 SHA1 (patch-ae) = 637883461b08a002fc75bb49ae18298f1d35bd79
 SHA1 (patch-af) = 5e0b228e0abe748d310c3b0c4964263cfafc6167
 SHA1 (patch-ag) = 05388b585cb59e46d17409b1f2c241b5c07c0edb
+SHA1 (patch-ah) = 67441b0103dbd128ffc55348284aead501c79ec7
+SHA1 (patch-ai) = 923fb922ca1679c9a09f9ee28b2fcbc9fb627ca8
