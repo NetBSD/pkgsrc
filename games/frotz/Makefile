@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/06/29 01:48:52 kristerw Exp $
+# $NetBSD: Makefile,v 1.10 2002/08/07 06:10:35 jlam Exp $
 #
 
 DISTNAME=	frotz-2.42
@@ -18,7 +18,7 @@ COMMENT=	Curses-based interpreter for Infocom-compatible games
 USE_BUILDLINK_ONLY=	yes
 
 # setscrreg()
-INCOMPAT_CURSES=	1.5 1.5.* 1.5[A-V]
+INCOMPAT_CURSES=	NetBSD-1.5-* NetBSD-1.5.*-* NetBSD-1.5[A-V]-*
 
 SAMPLEDIR=	${PREFIX}/share/examples/frotz
 DOCDIR=		${PREFIX}/share/doc/frotz

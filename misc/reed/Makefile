@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/12/25 17:32:01 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/07 06:10:35 jlam Exp $
 
 DISTNAME=	reed-4.6
 CATEGORIES=	misc
@@ -13,7 +13,7 @@ USE_BUILDLINK_ONLY=	YES
 REPLACE_PERL=		scripts/breed scripts/wrap
 
 # wgetnstr()
-INCOMPAT_CURSES=	1.5 1.5.* 1.5[A-U]
+INCOMPAT_CURSES=	NetBSD-1.5-* NetBSD-1.5.*-* NetBSD-1.5[A-U]-*
 
 .include "../../devel/ncurses/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.13 2002/02/21 12:08:32 wiz Exp $
+# $NetBSD: buildlink.mk,v 1.14 2002/08/07 06:10:33 jlam Exp $
 #
 # This Makefile fragment is included by packages that use gettext.
 #
@@ -21,10 +21,23 @@ BUILDLINK_DEPENDS.gettext?=	gettext-lib>=0.10.35nb1
 
 .if defined(USE_GNU_GETTEXT)
 _NEED_GNU_GETTEXT=	YES
-.elif exists(/usr/include/libintl.h)
-_NEED_GNU_GETTEXT=	NO
 .else
+.  if exists(/usr/include/libintl.h)
+_NEED_GNU_GETTEXT=	NO
+.  else
 _NEED_GNU_GETTEXT=	YES
+.  endif
+#
+# Solaris has broken (for the purposes of pkgsrc) version of zlib and
+# gettext.
+#
+_INCOMPAT_GETTEXT=	SunOS-*-*
+INCOMPAT_GETTEXT?=	# empty
+.  for _pattern_ in ${_INCOMPAT_GETTEXT} ${INCOMPAT_GETTEXT}
+.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+_NEED_GNU_GETTEXT=	YES
+.    endif
+.  endfor
 .endif
 
 .if ${_NEED_GNU_GETTEXT} == "YES"
@@ -41,26 +54,23 @@ BUILDLINK_FILES.gettext+=	lib/libintl.*
 BUILDLINK_TARGETS.gettext=	gettext-buildlink
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.gettext}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "Linux"
-.if defined(GNU_CONFIGURE)
-#
 # Add -lintl to LIBS in CONFIGURE_ENV to work around broken gettext.m4:
 # gettext.m4 does not add -lintl where it should, and the resulting
 # configure script fails to detect if libintl.a is the genuine GNU gettext
 # or not.
 #
-INTLLIBS=			-L${BUILDLINK_DIR}/lib
+_BLNK_INTLLIBS=		# empty
 .if ${_NEED_GNU_GETTEXT} == "YES"
-.if ${_USE_RPATH} == "yes"
-INTLLIBS+=			-Wl,-R${BUILDLINK_PREFIX.gettext}/lib
+_BLNK_INTLLIBS+=	-L${BUILDLINK_DIR}/lib
+.  if ${_USE_RPATH} == "yes"
+_BLNK_INTLLIBS+=	-Wl,-R${BUILDLINK_PREFIX.gettext}/lib
+.  endif
 .endif
-.endif
-INTLLIBS+=			-lintl
-LIBS+=				${INTLLIBS}
-CONFIGURE_ENV+=			INTLLIBS="${INTLLIBS}"
-.endif
+_BLNK_INTLLIBS+=	-lintl
+.if defined(GNU_CONFIGURE)
+INTLLIBS=		${_BLNK_INTLLIBS}
+LIBS+=			${INTLLIBS}
+CONFIGURE_ENV+=		INTLLIBS="${INTLLIBS}"
 .endif
 
 pre-configure: ${BUILDLINK_TARGETS.gettext}
