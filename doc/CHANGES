@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3693 2003/10/15 00:07:54 grant Exp $
+$NetBSD: CHANGES,v 1.3694 2003/10/15 00:23:30 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4202,3 +4202,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated nethack-tty to 3.4.2nb1 [pooka 2003-10-14]
 	Updated nethack-x11 to 3.4.2nb1 [pooka 2003-10-14]
 	Updated ipv6calc to 0.46 [hubertf 2003-10-15]
+	Updated createbuildlink to 2.8 [salo 2003-10-15]
