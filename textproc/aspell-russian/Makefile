@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:19 tv Exp $
+# $NetBSD: Makefile,v 1.9 2004/12/24 03:13:38 wiz Exp $
 #
 
-DISTNAME=	aspell-ru-0.50-2
-PKGNAME=	${DISTNAME:C/ru-(.*)-(.*)$/russian-\1.\2/}
-PKGREVISION=	2
+DISTNAME=	aspell6-ru-0.99f7-1
+PKGNAME=	${DISTNAME:C/6-ru-(.*)-(.*)$/-russian-\1.\2/}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/ru/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,9 +13,6 @@ COMMENT=	Russian language support for aspell
 
 USE_BUILDLINK3=	YES
 HAS_CONFIGURE=	YES
-
-CONFIGURE_ENV+=	ASPELL=${PREFIX}/bin/aspell
-CONFIGURE_ENV+=	WORD_LIST_COMPRESS=${PREFIX}/bin/word-list-compress
 
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
