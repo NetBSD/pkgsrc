@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.738 2003/07/23 15:40:27 jmmv Exp $
+$NetBSD: TODO,v 1.739 2003/07/24 06:32:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -100,6 +100,7 @@ Suggested package updates
 	o echoping-5.0.1
 	o elm-me-2.4pl102
 	o ettercap-0.6.b
+	o evilwm-0.99.15
 	o evolution-1.4
 	o exim-4.12 [pkg/19850|ad]
 	o exim-4.20
@@ -169,6 +170,7 @@ Suggested package updates
 	o lwm-1.01
 	o lynx-current-2.8.5dev9
 	o maildrop-1.5.2
+	o mailman-2.1.2 [pkgsrc-wip]
 	o mailsync-5.1.0
 	o memtest86-3.0
 	o mgetty-1.1.30
@@ -208,6 +210,7 @@ Suggested package updates
 	o py-soappy-0.10.1 [pkg/21735]
 	o pygtk-0.6.11
 	o rdiff-backup-0.12.0 [pkg/22095]
+	o rdiff-backup-0.12.1
 	o rep-gtk-0.17
 	o rosegarden-2.1.4 [pkg/21904]
 	o rox-1.2.2
