@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.11 2000/04/24 04:17:38 mbw Exp $
+# $NetBSD: Makefile,v 1.12 2000/07/05 22:10:05 nathanw Exp $
 
-DISTNAME=	Hugs98-May1999
-PKGNAME=	Hugs98-199905
+DISTNAME=	hugs98-Feb2000
+PKGNAME=	hugs98-200002
 CATEGORIES=	lang
-MASTER_SITES=	http://www.cse.ogi.edu/~mpj/Hugs98/
+MASTER_SITES=	ftp://www.cse.ogi.edu/pub/pacsoft/hugs/
 
 MAINTAINER=	nathanw@mit.edu
 HOMEPAGE=	http://www.haskell.org/hugs/
 
 DEPENDS+=	readline-*:../../devel/readline
 
-WRKSRC=		${WRKDIR}/Hugs98/src
+WRKSRC=		${WRKDIR}/hugs98/src
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-readline
 
