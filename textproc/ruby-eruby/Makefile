@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2001/07/07 03:07:46 taca Exp $
+# $NetBSD: Makefile,v 1.3 2002/01/05 06:16:36 taca Exp $
 # FreeBSD: ports/textproc/eruby/Makefile,v 1.9 2000/12/12 14:04:26 knu Exp
 
-DISTNAME=	eruby-0.9.5
+DISTNAME=	eruby-0.9.6
 PKGNAME=	${RUBY_PKGNAMEPREFIX}${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.modruby.net/archive/
@@ -12,7 +12,6 @@ COMMENT=	Interprets Ruby code embedded in a text file
 
 DIST_SUBDIR=	ruby
 USE_RUBY_RD=	yes
-
 RUBY_REQD=	1.6
 
 HAS_CONFIGURE=	yes
@@ -24,20 +23,16 @@ DEFAULT_CHARSET?= ISO-8859-1
 
 MAN1=		eruby.1
 
-DOCS_EN=	ChangeLog README.en eruby.rd eruby.html
-DOCS_JA=	README.ja
+DOCS=		ChangeLog README.en README.ja eruby.rd eruby.html
 EXAMPLES=	e2r.rb foo.rhtml test.rb test.rhtml
 
 post-build:
 	cd ${WRKSRC}; ${RUBY_RD} eruby.rd > eruby.html
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/eruby/ja
-.for f in ${DOCS_EN}
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/eruby
+.for f in ${DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/eruby
-.endfor
-.for f in ${DOCS_JA}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/eruby/ja
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/eruby
 .for f in ${EXAMPLES}
