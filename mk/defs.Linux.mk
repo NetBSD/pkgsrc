@@ -1,4 +1,4 @@
-# $NetBSD: defs.Linux.mk,v 1.36 2002/12/03 19:24:27 agc Exp $
+# $NetBSD: defs.Linux.mk,v 1.37 2002/12/03 20:53:41 agc Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -82,6 +82,7 @@ ZOULARISBASE?=		/usr/pkg
 _DO_SHLIB_CHECKS=	no	# on installation, fixup PLIST for shared libs
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	yes	# GNU make is standard
+_OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	no	# no MANZ for gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	no	# libossaudio is available
 _OPSYS_LIBTOOL_REQD=	1.4.20010614nb9 # base version of libtool required

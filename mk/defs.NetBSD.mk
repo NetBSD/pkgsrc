@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.36 2002/12/03 19:24:28 agc Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.37 2002/12/03 20:53:41 agc Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -92,6 +92,7 @@ ULIMIT_CMD_memorysize?=	ulimit -m `ulimit -H -m`
 _DO_SHLIB_CHECKS=	yes	# fixup PLIST for shared libs/run ldconfig
 _IMAKE_MAKE=		${MAKE}	# program which gets invoked by imake
 _OPSYS_HAS_GMAKE=	no	# GNU make is not standard
+_OPSYS_HAS_JAVA=	no	# Java is not standard
 _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
 _OPSYS_LIBTOOL_REQD=	1.4.20010614nb9 # base version of libtool required
