@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/05/29 06:36:01 rh Exp $
+
+--- config.h.in.orig	Sat May 27 05:11:10 2000
++++ config.h.in	Sat May 27 05:11:28 2000
+@@ -173,7 +173,7 @@
+ #undef HAVE_GETOPT_H
+ 
+ /* Define if you have the <jpeglib.h> header file.  */
+-#undef HAVE_JPEGLIB_H
++#define HAVE_JPEGLIB_H
+ 
+ /* Define if you have the <limits.h> header file.  */
+ #undef HAVE_LIMITS_H

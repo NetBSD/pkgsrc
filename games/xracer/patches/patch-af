@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/05/29 06:36:01 rh Exp $
+
+--- tools/mkcraft/xracer-mkcraft.pl.orig	Sat May 27 06:05:22 2000
++++ tools/mkcraft/xracer-mkcraft.pl	Sat May 27 06:05:30 2000
+@@ -31,7 +31,7 @@
+ 
+ GetOptions ("output=s" => \$outputfilename,
+ 	    "verbose" => \$verbose,
+-	    "help|?" => \$help);
++	    "help" => \$help);
+ 
+ if ($help)
+   {
