@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/02/02 04:10:04 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/02/10 14:21:38 ben Exp $
 #
 
-DISTNAME=		fp-netbsd-ws-4.3.2
-PKGNAME=		fprot-workstation-bin-4.3.2
+DISTNAME=		fp-netbsd-ws-4.3.3
+PKGNAME=		fprot-workstation-bin-4.3.3
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.f-prot.com/pub/bsd/
 
