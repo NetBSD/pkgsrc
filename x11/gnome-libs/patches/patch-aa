@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 1999/03/07 12:52:40 tron Exp $
+$NetBSD: patch-aa,v 1.5 1999/05/01 17:31:04 tron Exp $
 
---- configure.orig	Mon Mar  1 20:51:08 1999
-+++ configure	Sun Mar  7 12:49:50 1999
-@@ -2082,6 +2082,7 @@
+--- configure.orig	Sat Apr 10 02:29:31 1999
++++ configure	Sat May  1 19:06:55 1999
+@@ -2079,6 +2079,7 @@
  fi
  
  # Always use our own libtool.
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.4 1999/03/07 12:52:40 tron Exp $
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
  # Check for any special flags to pass to ltconfig.
-@@ -2313,6 +2314,7 @@
+@@ -2310,6 +2311,7 @@
  ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.4 1999/03/07 12:52:40 tron Exp $
  
  # Redirect the config.log output again, so that the ltconfig log is not
  # clobbered by the next message.
-@@ -5523,7 +5525,7 @@
+@@ -5589,7 +5591,7 @@
    
  # AM_GNOME_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
@@ -27,7 +27,16 @@ $NetBSD: patch-aa,v 1.4 1999/03/07 12:52:40 tron Exp $
  
  
  echo $ac_n "checking for main in -lm""... $ac_c" 1>&6
-@@ -11275,10 +11277,10 @@
+@@ -10858,7 +10860,7 @@
+ GTKXMHTML_LIBS="-lgtkxmhtml $LIBGTKXMHTML_LIBS"
+ ZVT_LIBS="-lzvt $UTIL_LIBS $GTK_LIBS"
+ 
+-GNOME_LIBDIR='-L${libdir}'
++GNOME_LIBDIR='-L${libdir} -Wl,-R${libdir}'
+ GNOME_INCLUDEDIR='-I${includedir} -DNEED_GNOMESUPPORT_H -I${pkglibdir}/include'
+ GNOME_IDLDIR='-I${datadir}/idl'
+ 
+@@ -11435,10 +11437,10 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
@@ -42,7 +51,7 @@ $NetBSD: patch-aa,v 1.4 1999/03/07 12:52:40 tron Exp $
  
    echo creating "$ac_file"
    rm -f "$ac_file"
-@@ -11548,10 +11550,10 @@
+@@ -11708,10 +11710,10 @@
        *) # Relative path.
          ac_sub_cache_file="$ac_dots$cache_file" ;;
        esac
