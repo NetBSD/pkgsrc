@@ -1,0 +1,26 @@
+$NetBSD: patch-cj,v 1.1 2005/03/17 09:46:36 markd Exp $
+
+--- kio/kssl/ksslpeerinfo.cc.orig	2003-06-02 19:05:20.000000000 +1200
++++ kio/kssl/ksslpeerinfo.cc
+@@ -30,6 +30,9 @@
+ #include <ksockaddr.h>
+ #include <kextsock.h>
+ #include <netsupp.h>
++#ifndef Q_WS_WIN //TODO kresolver not ported
++#include "network/kresolver.h"
++#endif
+ 
+ #include "ksslx509map.h"
+ 
+@@ -59,7 +62,11 @@ void KSSLPeerInfo::setPeerHost(QString r
+ 	while(d->peerHost.endsWith("."))
+ 		d->peerHost.truncate(d->peerHost.length()-1);
+ 
++#ifdef Q_WS_WIN //TODO kresolver not ported
+ 	d->peerHost = d->peerHost.lower();
++#else	
++	d->peerHost = QString::fromLatin1(KNetwork::KResolver::domainToAscii(d->peerHost));
++#endif	
+ }
+ 
+ bool KSSLPeerInfo::certMatchesAddress() {
