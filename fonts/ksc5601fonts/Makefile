@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/10/29 08:04:56 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2000/10/29 09:00:45 itojun Exp $
 #
 
-DISTNAME=	ksc5601fonts-20000904
+DISTNAME=	ksc5601fonts-20001029
 CATEGORIES=	fonts x11 korean
-DISTFILES=	${BAEKMUK} ${MIZI} ${HANYANG} ${PINETREE}
+DISTFILES=	${KAIST} ${BAEKMUK} ${MIZI} ${HANYANG} ${PINETREE}
 
 MAINTAINER=	packages@netbsd.org
 
@@ -13,6 +13,10 @@ EXTRACT_ONLY=	# empty
 MAKE_ENV+=	FONTDIR=${FONTDIR} GZIP_CMD="${GZIP_CMD}"
 
 # fonts
+MASTER_SITES+=	ftp://ftp.kr.freebsd.org/pub/FreeBSD-kr/distfiles/
+KAIST=		kaist-newmj18.bdf.gz ks_philgi16.bdf.gz \
+		kaist-newmj16.bdf.gz ks_iyagi16.bdf.gz
+
 MASTER_SITES+=	ftp://ftp.mizi.com/pub/baekmuk/ \
 		http://zinc.skku.ac.kr/~wkpark/baekmuk/
 BAEKMUK=	baekmuk-2.0.tar.gz
@@ -54,6 +58,11 @@ FONTDIR=${PREFIX}/lib/X11/fonts/local
 
 post-extract:
 	${MKDIR} ${WRKSRC}
+.if defined(KAIST)
+	for i in ${KAIST}; do \
+		${CP} ${_DISTDIR}$$i ${WRKDIR}; ${GUNZIP_CMD} ${WRKDIR}/$$i; \
+	done
+.endif
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 	(cd ${WRKSRC}; ${MAKE} prepare)
 
