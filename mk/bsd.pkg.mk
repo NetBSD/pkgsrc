@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.123 1998/07/22 07:30:22 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.124 1998/07/22 09:18:46 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -1723,6 +1723,13 @@ README_NAME=	${TEMPLATES}/README.pkg
 README_NAME=	${TEMPLATES}/README.port
 .endif
 
+# set up the correct license information as a sed expression
+.ifdef LICENSE
+SED_LICENSE_EXPR=       -e 's|%%LICENSE%%|<p>Please note that this package has a ${LICENSE} license.</p>|'
+.else
+SED_LICENSE_EXPR=       -e 's|%%LICENSE%%||'
+.endif
+
 README.html:
 	@${MAKE} depends-list PACKAGE_NAME_AS_LINK=YES | sort -u >> $@.tmp1
 	@[ -s $@.tmp1 ] || echo "<I>(none)</I>" >> $@.tmp1
@@ -1735,6 +1742,7 @@ README.html:
 		${SED} -e 's|%%PORT%%|'"`${MAKE} package-path | ${HTMLIFY}`"'|g' \
 			-e '/%%PKG%%/r$@.tmp3' \
 			-e '/%%PKG%%/d' \
+			${SED_LICENSE_EXPR} \
 			-e '/%%COMMENT%%/r${PKGDIR}/COMMENT' \
 			-e '/%%COMMENT%%/d' \
 			-e '/%%BUILD_DEPENDS%%/r$@.tmp1' \
