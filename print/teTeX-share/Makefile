@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/08/24 14:21:40 tron Exp $
-# FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
+# $NetBSD: Makefile,v 1.4 2000/03/06 02:59:49 hubertf Exp $
 #
 
 DISTNAME=	teTeX-texmf-1.0
@@ -20,11 +19,14 @@ NO_MTREE=	yes
 do-install:
 	@${ECHO} ""
 	@${ECHO} "Extracting ${DISTFILES} to ${PREFIX}/share/texmf"
-	@${ECHO} "  Get yourself a shower and a big mug of coffee, this "
-	@${ECHO} "  will take _very_ long!"
+	@${ECHO} ""
+	@${ECHO} "  ** Get yourself a shower and a big mug of coffee,"
+	@${ECHO} "  ** this will take _very_ long!"
 	@${ECHO} ""
 	${MKDIR} ${PREFIX}/share/texmf
-	${GTAR} plzxCXf ${PREFIX}/share/texmf ${FILESDIR}/exclude \
-	  ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}
+	${GTAR} -plzx \
+		-C ${PREFIX}/share/texmf \
+		-X ${FILESDIR}/exclude \
+		-f ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES}
 
 .include "../../mk/bsd.pkg.mk"
