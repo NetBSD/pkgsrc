@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 1998/10/11 20:27:04 kim Exp $
+$NetBSD: md5,v 1.3 2000/09/19 20:00:04 agc Exp $
 
-MD5 (ntop-1.0.src.tar.gz) = 25ad6dc31771e96ceacb0cd824f20d1c
+MD5 (ntop-1.1-src.tar.gz) = 4630ed141d9d5f16f929a9b64b70a45c

@@ -1,14 +1,27 @@
-$NetBSD: patch-ag,v 1.1 1999/07/06 08:06:30 jlam Exp $
+$NetBSD: patch-ag,v 1.2 2000/09/19 20:00:04 agc Exp $
 
---- Makefile.in.orig	Tue Oct  6 11:27:31 1998
-+++ Makefile.in	Fri Jul  2 14:19:28 1999
-@@ -42,7 +42,8 @@
+Make sure CPPFLAGS is propagated through to build stage
+
+Do not install the program setuid or setgid, to avoid
+unsafe practices - see http://www.securityfocus.com/advisories/2520
+
+--- Makefile.in.orig	Mon May  3 09:03:10 1999
++++ Makefile.in	Tue Sep 19 11:39:18 2000
+@@ -54,7 +54,7 @@
  DEFS = @DEFS@
  
  # Standard CFLAGS
--CFLAGS = $(CCOPT) $(DEFS) $(INCLS)
-+CPPFLAGS = @CPPFLAGS@
-+CFLAGS = $(CCOPT) $(CPPFLAGS) $(DEFS) $(INCLS)
+-CFLAGS = $(CCOPT) $(DEFS) @G_THREAD_CFLAGS@ @LSOF_DEFS@ @OS_DEFS@ $(INCLS) 
++CFLAGS = $(CCOPT) $(DEFS) @G_THREAD_CFLAGS@ @LSOF_DEFS@ @OS_DEFS@ $(INCLS) $(CPPFLAGS)
  
  # Standard LDFLAGS
  LDFLAGS = @LDFLAGS@
+@@ -105,7 +105,7 @@
+ report.c: ntop.h
+ 
+ install:
+-	$(INSTALL) -m 6550 $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
++	$(INSTALL) -m 550 $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
+ 
+ install-man:
+ 	$(INSTALL) -m 444 $(PROG).8 $(DESTDIR)$(MANDEST)/man8/$(PROG).8
