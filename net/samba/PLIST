@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2004/01/12 03:33:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2004/02/17 00:01:26 xtraeme Exp $
 bin/findsmb
 bin/net
 bin/nmblookup
@@ -10,11 +10,14 @@ bin/smbcacls
 bin/smbclient
 bin/smbcontrol
 bin/smbcquotas
+${SMBMOUNT}bin/smbmnt
+${SMBMOUNT}bin/smbmount
 bin/smbpasswd
 bin/smbspool
 bin/smbstatus
 bin/smbtar
 bin/smbtree
+${SMBMOUNT}bin/smbumount
 bin/tdbbackup
 bin/tdbdump
 bin/testparm

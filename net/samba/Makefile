@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2004/02/06 19:04:25 jlam Exp $
+# $NetBSD: Makefile,v 1.114 2004/02/17 00:01:26 xtraeme Exp $
 
 DISTNAME=		samba-3.0.1
 PKGREVISION=		1
@@ -121,6 +121,13 @@ FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-smbmount
+PLIST_SUBST+=		SMBMOUNT=
+.else
+PLIST_SUBST+=		SMBMOUNT="@comment "
+.endif
 
 USE_PKGINSTALL=		yes
 CONF_FILES=		${EGDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
