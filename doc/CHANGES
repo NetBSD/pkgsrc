@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3668 2003/10/08 20:25:18 itojun Exp $
+$NetBSD: CHANGES,v 1.3669 2003/10/09 00:13:55 fredb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4130,3 +4130,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated rocksndiamonds-sdl to 3.0.6 [adam 2003-10-08]
 	Updated fetchmail to 6.2.4nb2 [itojun 2003-10-08]
 	Updated fetchmailconf to 6.2.4nb2 [itojun 2003-10-08]
+	Updated unrar to 3.2.3 [fredb 2003-10-09]
