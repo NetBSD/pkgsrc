@@ -1,0 +1,43 @@
+# New ports collection makefile for:	xdeview
+# Version Required:	0.5.13
+# Date Created:		9 Feb 1997
+# Whom:			Tim Vanderhoek <ac199@freenet.hamilton.on.ca>
+#
+# $FreeBSD Id: Makefile,v 1.11 1998/02/24 21:43:45 jseger Exp
+#
+
+DISTNAME=	uudeview-0.5.13
+PKGNAME=	xdeview-0.5.13
+CATEGORIES=	converters tk81
+MASTER_SITES=	http://www.uni-frankfurt.de/~fp/uudeview/Apps/frank/ \
+		ftp://tsx-11.mit.edu/pub/linux/sources/usr.bin/
+
+MAINTAINER=	hoek@FreeBSD.ORG
+
+LIB_DEPENDS=    tk81\\.1\\.:${PORTSDIR}/x11/tk81 \
+		uu\\.1\\.:${PORTSDIR}/converters/uulib
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--enable-tcl="${PREFIX}" --enable-tk="${PREFIX}"
+# Season to taste --- anything over tcl7.5
+CONFIGURE_ENV=	CPPFLAGS="-I${PREFIX}/include/tcl8.1 -I${PREFIX}/include/tk8.1"
+
+ALL_TARGET=	xdeview
+INSTALL_TARGET=	install-tcl
+MAN1=		xdeview.1
+
+PORTDOCDIR?=	share/doc/xdeview
+DOCFILES=	${FILESDIR}/porting.notes ${WRKSRC}/HOWTO
+
+post-install:
+	strip ${PREFIX}/bin/uuwish
+.if !defined(NOPORTDOCS)
+	@${ECHO_MSG} "===>  Copying documents to ${PREFIX}/${PORTDOCDIR}"
+	@${MKDIR} ${PREFIX}/${PORTDOCDIR}
+	${INSTALL_MAN} ${DOCFILES} ${PREFIX}/${PORTDOCDIR}
+.else
+	@${ECHO_MSG} "===>  Not copying available documents"
+.endif
+	${INSTALL_MAN} ${WRKSRC}/man/xdeview.1 ${PREFIX}/man/man1
+
+.include <bsd.port.mk>
