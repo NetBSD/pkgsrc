@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2004/08/08 07:05:38 minoura Exp $
+# $NetBSD: Makefile,v 1.24 2004/08/18 13:51:50 minoura Exp $
 #
 
 DISTNAME=	Gauche-0.8.1
@@ -11,17 +11,6 @@ HOMEPAGE=	http://www.shiro.dreamhost.com/scheme/gauche/index.html
 COMMENT=	R5RS Scheme implementation aimed to be a handy tool for daily works
 
 DEPENDS+=	slib-[0-9]*:../../devel/slib
-
-# Due to GC dynamic loading support, this package runs on limited platforms
-# Plus, it is not LP64-safe
-ONLY_FOR_PLATFORM= NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-mipsel NetBSD-*-powerpc
-ONLY_FOR_PLATFORM+= Linux-*-* SunOS-*-* Darwin-*-*
-.include "../../mk/bsd.prefs.mk"
-.if (${MACHINE_ARCH} == "i386" && ${OPSYS} == "NetBSD")
-.  if ${OBJECT_FMT} != "ELF"
-BROKEN=Test required on NetBSD/i386 a.out
-.  endif
-.endif
 
 GNU_CONFIGURE=	yes
 USE_BUILDLINK3=	yes
