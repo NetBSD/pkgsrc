@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1 1999/08/17 11:18:41 agc Exp $
+
+Avoid conflicts with the definition in <sys/param.h>
+
+--- src/main.c	1999/08/17 08:01:56	1.1
++++ src/main.c	1999/08/17 08:02:42
+@@ -196,7 +196,7 @@
+ 
+     stkbase = &foo;
+     Stack_Grows_Down = Check_Stack_Grows_Down ();
+-    ALIGN(stkbase);
++    ELK_ALIGN(stkbase);
+     Make_Heap (heap);
+     Init_Everything ();
+ #ifdef ATEXIT
