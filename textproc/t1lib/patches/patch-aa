@@ -1,16 +1,7 @@
-$NetBSD: patch-aa,v 1.4 1999/12/02 21:19:13 fredb Exp $
+$NetBSD: patch-aa,v 1.5 2000/06/21 01:58:35 jlam Exp $
 
 --- configure.orig	Sun Oct 24 06:00:22 1999
 +++ configure	Thu Dec  2 14:34:33 1999
-@@ -2277,7 +2277,7 @@
- fi
- 
- # Always use our own libtool.
--LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-+#LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
- # Check for any special flags to pass to ltconfig.
- libtool_flags=
 @@ -2380,11 +2380,11 @@
  
  # Use test -z because SunOS4 sh mishandles braces in ${var-val}.
