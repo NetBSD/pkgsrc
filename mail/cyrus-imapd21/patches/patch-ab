@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.3 2003/09/13 23:03:18 jlam Exp $
+
+--- acconfig.h.orig	Sat Sep 13 16:49:05 2003
++++ acconfig.h	Sat Sep 13 17:01:59 2003
+@@ -270,8 +270,16 @@
+ #define shutdown(fd, mode) 0
+ #endif
+ 
++#ifdef HAVE_PATHS_H
++#include <paths.h>
++#endif
++
+ /* sendmail configuration parameters */
++#if defined(_PATH_SENDMAIL)
++#define DEFAULT_SENDMAIL (_PATH_SENDMAIL)
++#else
+ #define DEFAULT_SENDMAIL ("/usr/lib/sendmail")
++#endif
+ #define DEFAULT_POSTMASTER ("postmaster")
+ 
+ #define SENDMAIL (config_getstring("sendmail", DEFAULT_SENDMAIL))
