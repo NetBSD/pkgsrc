@@ -1,4 +1,12 @@
-$NetBSD: patch-sum,v 1.1.1.1 2000/12/15 07:42:32 garbled Exp $
+$NetBSD: patch-sum,v 1.2 2001/01/04 01:08:56 wiz Exp $
 
-MD5 (patch-aa) = 025ea5c07590e611e12ed341f8b2a1de
-MD5 (patch-ab) = 10fc30a3bc944fab025f46ba96442826
+MD5 (patch-aa) = fc280de89f38b5ae1aa7d6bba23c21b2
+MD5 (patch-ab) = 613bfdd8024e10953325595f862f26c8
+MD5 (patch-ad) = afed8b52af35aa833ff0cdea64190372
+MD5 (patch-ae) = 7145999a981ce403bd1d1ee7e31d7237
+MD5 (patch-af) = 2e37b2cc00bf296fcb2f45bca69f51ba
+MD5 (patch-ag) = 981b1d2a1b0c417616301c2fe71ee49d
+MD5 (patch-ah) = a5632faaca21c16235e34be99001e9ec
+MD5 (patch-aj) = f5c950b7547ffcd95ab406dbf63531be
+MD5 (patch-ak) = 6a3c6f8fa7a47a137ea451d3df63c357
+MD5 (patch-al) = 011dc5607dad88db9da89f6ef1ac967d
