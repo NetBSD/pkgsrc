@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/05/18 11:39:29 rh Exp $
+bin/ripe-whois
+bin/ripe-networkupdate
+bin/ripe-cryptpw
+man/man1/ripe-whois.1
