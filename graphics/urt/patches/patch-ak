@@ -1,32 +1,24 @@
-$NetBSD: patch-ak,v 1.2 2001/02/23 13:33:06 wiz Exp $
+$NetBSD: patch-ak,v 1.3 2001/02/26 16:56:35 agc Exp $
 
 --- lib/makefile.src.orig	Wed Mar  4 20:32:53 1992
 +++ lib/makefile.src
-@@ -26,7 +26,10 @@
- 	vaxshort.o \
- 	$(OPT_OBJS)
+@@ -9,6 +9,8 @@
+ RANLIB = ranlib
+ #endif
  
--LIBNAME = librle.a
-+SOOBJS = $(OBJS:.o=.so)
++CC= ${LIBTOOL} --mode=compile gcc
 +
-+LIBANAME = librle.a
-+LIBSONAME = librle.so.1.0
+ # If nothing else is specified, default is to build the library.
+ default: buildlib
  
- # Just rebuild the object files.
- objs: $(OBJS)
-@@ -37,23 +40,15 @@
+@@ -36,40 +38,13 @@
+ #  is more useful to have a non-debug version than nothing at all.)
  # Do nothing if $(DEST) is empty (or not defined)
  install: buildlib
- 	@sh -c "if test '$(DEST)x' != x ; then \
+-	@sh -c "if test '$(DEST)x' != x ; then \
 -		echo cp $(LIBNAME) $(DEST)/$(LIBNAME) ; \
 -		cp $(LIBNAME) $(DEST)/$(LIBNAME) ; \
-+		echo cp $(LIBANAME) $(DEST)/$(LIBANAME) ; \
-+		cp $(LIBANAME) $(DEST)/$(LIBANAME) ; \
-+		echo cp $(LIBSONAME) $(DEST)/$(LIBSONAME) ; \
-+		cp $(LIBSONAME) $(DEST)/$(LIBSONAME) ; \
-+		ln -sf $(LIBSONAME) $(DEST)/librle.so.1 ; \
-+		ln -sf $(LIBSONAME) $(DEST)/librle.so ; \
- 		if test x$(RANLIB) != x ; then \
+-		if test x$(RANLIB) != x ; then \
 -			echo ranlib $(DEST)/$(LIBNAME) ; \
 -			ranlib $(DEST)/$(LIBNAME) ; \
 -		else \
@@ -41,54 +33,24 @@ $NetBSD: patch-ak,v 1.2 2001/02/23 13:33:06 wiz Exp $
 -				true ; \
 -			fi ; \
 -			ranlib $(DEST)/debug/$(LIBNAME) ; \
-+			echo ranlib $(DEST)/$(LIBANAME) ; \
-+			ranlib $(DEST)/$(LIBANAME) ; \
- 		else \
- 			true ; \
- 		fi ; \
-@@ -63,14 +58,24 @@
+-		else \
+-			true ; \
+-		fi ; \
+-	else \
+-		true ; \
+-	fi"
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${LIBNAME:.a=.la} ${PREFIX}/lib
  	touch install
  
  # Rebuild the library from all the .o files.
--buildlib: $(OBJS)
--	-rm -f $(LIBNAME)
+ buildlib: $(OBJS)
+ 	-rm -f $(LIBNAME)
 -	ar rc $(LIBNAME)
 -	ar q $(LIBNAME) $(OBJS)
-+buildlib: $(LIBANAME) $(LIBSONAME)
-+
-+$(LIBANAME): $(OBJS)
-+	-rm -f $@
-+	ar rc $@ $?
- #ifndef NO_RANLIB
+-#ifndef NO_RANLIB
 -	ranlib $(LIBNAME)
-+	ranlib $@
- #endif
--	touch buildlib
-+
-+.SUFFIXES: .so .o
-+
-+.c.so:
-+	$(CC) -fPIC -DPIC $(CFLAGS) -c $*.c -o $*.so
-+	$(LD) -X -r $*.so
-+
-+$(LIBSONAME): $(SOOBJS)
-+	-rm -f $@
-+	ld -Bshareable -o $@ $>
+-#endif
++	${LIBTOOL} --mode=link cc -o ${LIBNAME:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
+ 	touch buildlib
  
  # Clean up installed stuff and binaries
- pristine: clean
-@@ -86,9 +91,12 @@
- # Get rid of everything which must be recompiled on a different computer.
- clean:
- 	-rm -f *.o
-+	-rm -f *.so
- 	-@if test x$(DEST) != x ; then \
--		echo rm -f $(LIBNAME) ; \
--		rm -f $(LIBNAME) ; \
-+		echo rm -f $(LIBANAME) ; \
-+		rm -f $(LIBANAME) ; \
-+		echo rm -f $(LIBSONAME) ; \
-+		rm -f $(LIBSONAME) ; \
- 	else \
- 		true ; \
- 	fi
