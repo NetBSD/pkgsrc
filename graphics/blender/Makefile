@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2005/02/26 20:34:43 reinoud Exp $
+# $NetBSD: Makefile,v 1.39 2005/03/04 16:04:59 reinoud Exp $
 #
 
 DISTNAME=		blender-2.36
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.cs.umn.edu/pub/blender.org/source/ \
 			http://download.blender.org/source/
@@ -37,12 +38,21 @@ do-build:
 		${PREFIX}/bin/scons -C ${WRKSRC} prefix=${PREFIX}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/blender ${PREFIX}/bin
+	${CP} -f ${WRKSRC}/blender ${WRKSRC}/blender-bin
+	${SED} -e "s|__PREFIX__|${PREFIX}|g" files/blender > ${TMP}/blender
+	${CHMOD} +x ${TMP}/blender
+	${INSTALL_PROGRAM} ${WRKSRC}/blender-bin ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/blender/scripts
+	${INSTALL_DATA} ${WRKSRC}/release/scripts/* ${PREFIX}/share/blender/scripts
+	${INSTALL} ${TMP}/blender ${PREFIX}/bin
 
 .if defined(BLENDER_INSTALL_DOC)
 DEPENDS+=		blender-doc:../../graphics/blender-doc
 .endif
 
+#
+# disabled these options; they ought to be re-instantiated one day
+#
 .if 0
 .if defined(BLENDER_USE_OGG)
 CONFIGURE_ARGS+=	--with-ogg=${PREFIX}
