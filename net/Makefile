@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.439 2004/02/17 04:30:17 minskim Exp $
+# $NetBSD: Makefile,v 1.440 2004/02/17 22:42:53 heinz Exp $
 #
 
 COMMENT=	Networking tools
@@ -190,6 +190,7 @@ SUBDIR+=	p5-IO-Interface
 SUBDIR+=	p5-IO-Socket-Multicast
 SUBDIR+=	p5-Net
 SUBDIR+=	p5-Net-Bind
+SUBDIR+=	p5-Net-CIDR-Lite
 SUBDIR+=	p5-Net-DNS
 SUBDIR+=	p5-Net-Daemon
 SUBDIR+=	p5-Net-Gnats
