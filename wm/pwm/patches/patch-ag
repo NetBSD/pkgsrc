@@ -1,0 +1,42 @@
+$NetBSD: patch-ag,v 1.1 2001/08/21 08:17:41 abs Exp $
+
+--- system.mk.orig	Sat Jul  1 12:37:50 2000
++++ system.mk
+@@ -7,7 +7,7 @@
+ ## Installation directory prefix
+ ##
+ 
+-PREFIX=/usr/local
++#PREFIX=/usr/local
+ 
+ #EXTRA_INCLUDES = -I$(PREFIX)/include
+ #EXTRA_LIBS = -L$(PREFIX)/lib
+@@ -17,7 +17,7 @@
+ ## X libraries, includes and options
+ ##
+ 
+-X11_PREFIX=/usr/X11R6
++X11_PREFIX=${X11BASE}
+ 
+ # SunOS/Solaris
+ #X11_PREFIX=/usr/openwin
+@@ -31,7 +31,7 @@
+ ## C compiler
+ ##
+ 
+-CC=gcc
++#CC=gcc
+ 
+ # The POSIX_SOURCE, XOPEN_SOURCE and WARN options should not be necessary,
+ # they're mainly for development use. So, if they cause trouble (not
+@@ -57,8 +57,8 @@
+ 	-Wtrigraphs -Wformat -Wchar-subscripts -Wuninitialized \
+ 	-Wparentheses -pedantic-errors
+ 
+-CFLAGS=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
+-LDFLAGS=-g $(LIBS) $(EXTRA_LIBS)
++CFLAGS+=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
++LDFLAGS+=$(LIBS)
+ 
+ 
+ ##
