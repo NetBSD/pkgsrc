@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.emacs,v 1.1 2002/09/14 02:45:40 uebayasi Exp $
+@comment $NetBSD: PLIST.emacs,v 1.2 2002/10/19 06:58:24 minoura Exp $
 ${EMACS_LISPPREFIX}/semi/signature.el
 ${EMACS_LISPPREFIX}/semi/signature.elc
 ${EMACS_LISPPREFIX}/semi/pgg-def.el
@@ -37,6 +37,7 @@ ${EMACS_LISPPREFIX}/semi/mime-image.el
 ${EMACS_LISPPREFIX}/semi/mime-image.elc
 ${EMACS_LISPPREFIX}/semi/mime-bbdb.el
 ${EMACS_LISPPREFIX}/semi/mime-w3.el
+${EMACS_LISPPREFIX}/semi/mime-w3.elc
 ${EMACS_LISPPREFIX}/semi/mime-setup.el
 ${EMACS_LISPPREFIX}/semi/mime-setup.elc
 @dirrm ${EMACS_LISPPREFIX}/semi
