@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:30 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 03:33:59 jschauma Exp $
 bin/chimera
-man/cat1/chimera.0
+${IMAKE_MAN_DIR}/chimera.${IMAKE_MANNEWSUFFIX}
 share/doc/chimera/HINTS
 share/doc/chimera/INFO
 share/doc/chimera/LICENSE
