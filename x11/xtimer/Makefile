@@ -3,7 +3,7 @@
 # Date created:		05 Apr 1997
 # Whom:			candy@fct.kgc.co.jp
 #
-# $NetBSD: Makefile,v 1.3 1998/01/25 00:53:16 hubertf Exp $
+# $NetBSD: Makefile,v 1.4 1998/03/10 16:50:29 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/06/15 10:44:39 asami Exp
 #
 
@@ -15,6 +15,6 @@ MASTER_SITES=	http://spock.vector.co.jp/authors/VA004959/xtimer/
 MAINTAINER=	candy@fct.kgc.co.jp
 
 USE_IMAKE=	yes
-MAN1=		xtimer.1
+CAT1=		xtimer.0
 
 .include <bsd.port.mk>
