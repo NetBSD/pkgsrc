@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2000/06/01 15:10:46 minoura Exp $
-bin/sl
-man/ja_JP.EUC/man1/sl.1

@@ -1,0 +1,11 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 00:54:15 zuntum Exp $
+
+You can run the tty version of nethack by executing:
+"nethack"  or "nethack tty"
+The X11 version:  "nethack x11"
+The QT version:   "nethack qt"
+
+Happy Hacking!
+
+======================================================================

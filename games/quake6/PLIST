@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:55:22 zuntum Exp $
+bin/quake-x11
+bin/qw-client-x11
+bin/qw-server

@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:48:36 zuntum Exp $
+bin/libgeda-config
+include/libgeda/colors.h
+include/libgeda/defines.h
+include/libgeda/funcs.h
+include/libgeda/globals.h
+include/libgeda/libgeda.h
+include/libgeda/o_types.h
+include/libgeda/pcb_struct.h
+include/libgeda/prototype.h
+include/libgeda/struct.h
+lib/libgeda.a
+lib/libgeda.la
+lib/libgeda.so
+lib/libgeda.so.13
+lib/libgeda.so.13.0
+@dirrm include/libgeda
