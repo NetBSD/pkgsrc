@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/12/05 15:00:47 agc Exp $
+# $NetBSD: Makefile,v 1.3 2002/04/11 12:41:53 wiz Exp $
 #
 
 DISTNAME=	dhisd-5.0
@@ -9,7 +9,7 @@ MAINTAINER=	hubertf@netbsd.org
 HOMEPAGE=	http://www.dhis.org
 COMMENT=	DynDNS server
 
-DEPENDS+=	gmp-3.*:../../devel/gmp
+DEPENDS+=	gmp>=3.0:../../devel/gmp
 
 do-install:
 		${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dhisd
