@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2003/12/27 23:01:32 salo Exp $
+# $NetBSD: Makefile,v 1.173 2003/12/29 17:50:03 xtraeme Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -51,6 +51,7 @@ SUBDIR+=	gnome1-dirs
 SUBDIR+=	gnome2-dirs
 SUBDIR+=	gnome2-user-docs
 SUBDIR+=	gnome2-utils
+SUBDIR+=	gok
 SUBDIR+=	gone
 SUBDIR+=	gperiodic
 SUBDIR+=	gpsd
