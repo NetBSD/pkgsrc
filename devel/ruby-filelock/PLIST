@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:19 zuntum Exp $
-${RUBY_SITEARCHLIBDIR}/_filelock.so
+@comment $NetBSD: PLIST,v 1.2 2004/12/04 17:20:46 taca Exp $
+${RUBY_SITEARCHLIBDIR}/_filelock.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/filelock.rb
 ${RUBY_EXAMPLESDIR}/filelock/test.rb
 ${RUBY_EXAMPLESDIR}/filelock/tst1.rb

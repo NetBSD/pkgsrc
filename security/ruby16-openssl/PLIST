@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/27 14:47:36 taca Exp $
-${RUBY_SITEARCHLIBDIR}/openssl.so
+@comment $NetBSD: PLIST,v 1.2 2004/12/04 17:20:47 taca Exp $
+${RUBY_SITEARCHLIBDIR}/openssl.${RUBY_DLEXT}
 ${RUBY_SITELIBDIR}/net/https.rb
 ${RUBY_SITELIBDIR}/net/protocols.rb
 ${RUBY_SITELIBDIR}/net/telnets.rb
