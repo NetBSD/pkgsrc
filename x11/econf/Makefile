@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/06/24 19:16:52 drochner Exp $
+# $NetBSD: Makefile,v 1.4 1999/08/30 09:13:02 jlam Exp $
 
 DISTNAME=		enlightenment-conf-0.15
 PKGNAME=		econf-0.15
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://www.rasterman.com/pub/enlightenment/enlightenment/
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.enlightenment.org/
 
-DEPENDS+=		control-center-1.0.5:../../x11/controlcenter
+DEPENDS+=		control-center-1.0.6:../../x11/controlcenter
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
