@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/01/02 03:36:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/02/09 15:22:35 tron Exp $
 
 DISTNAME=		ClanLib-0.2.2
 CATEGORIES=		graphics games devel x11
@@ -9,7 +9,7 @@ HOMEPAGE=		http://www.clanlib.org/
 
 DEPENDS+=		Hermes-1.2.6*:../../graphics/hermes
 DEPENDS+=		Mesa-*:../../graphics/Mesa
-DEPENDS+=		png-1.0.3:../../graphics/png
+DEPENDS+=		png-*:../../graphics/png
 DEPENDS+=		pth-*:../../devel/pth
 
 USE_X11BASE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/10/08 21:12:51 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2000/02/09 15:22:32 tron Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/08/29 12:17:50 tg Exp
 #
 
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.danbbs.dk/~torsten/xpaint/
 DEPENDS+=	xpm-3.4k:../../graphics/xpm
 DEPENDS+=	tiff-*:../../graphics/tiff
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png-1.0.3:../../graphics/png
+DEPENDS+=	png-*:../../graphics/png
 
 USE_IMAKE=      yes
 
