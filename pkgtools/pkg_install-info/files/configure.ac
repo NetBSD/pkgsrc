@@ -1,5 +1,5 @@
 #                                               -*- Autoconf -*-
-# $NetBSD: configure.ac,v 1.1.1.1 2003/06/09 22:16:15 seb Exp $
+# $NetBSD: configure.ac,v 1.2 2003/06/10 20:20:40 seb Exp $
 #
 # Process this file with autoconf to produce a configure script.
 
@@ -14,7 +14,7 @@ AC_CONFIG_HEADER([config.h])
 
 # Checks for header files.
 AC_HEADER_STDC
-AC_CHECK_HEADERS([fcntl.h limits.h memory.h stdlib.h string.h strings.h sys/file.h unistd.h])
+AC_CHECK_HEADERS([fcntl.h limits.h locale.h memory.h stdlib.h string.h strings.h sys/file.h unistd.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_HEADER_STAT
@@ -26,8 +26,20 @@ dnl AC_FUNC_ERROR_AT_LINE
 dnl AC_FUNC_MALLOC
 dnl AC_FUNC_REALLOC
 dnl AC_FUNC_STRCOLL
-dnl AC_CHECK_FUNCS([strchr])
+AC_CHECK_FUNCS([setlocale])
 AC_REPLACE_FUNCS([strdup strerror strncasecmp])
+
+#
+if test $ac_cv_header_locale_h = yes; then
+	AC_CACHE_CHECK([for LC_MESSAGES], am_cv_val_LC_MESSAGES,
+		[AC_TRY_LINK([#include <locale.h>], [return LC_MESSAGES],
+		am_cv_val_LC_MESSAGES=yes, am_cv_val_LC_MESSAGES=no)]) 
+	if test $am_cv_val_LC_MESSAGES = yes; then
+		AC_DEFINE(HAVE_LC_MESSAGES, 1, 
+			[Define if your <locale.h> file defines LC_MESSAGES.])
+	fi
+fi
+
 
 #
 AC_CONFIG_FILES([Makefile])
