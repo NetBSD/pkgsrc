@@ -1,8 +1,30 @@
-$NetBSD: patch-ac,v 1.2 2002/01/28 09:09:16 drochner Exp $
+$NetBSD: patch-ac,v 1.3 2002/04/09 04:14:41 jlam Exp $
 
---- setup.py.orig	Thu Dec 27 22:51:02 2001
-+++ setup.py	Sun Jan 27 15:53:18 2002
-@@ -265,13 +265,13 @@
+--- setup.py.orig	Thu Dec 27 16:51:02 2001
++++ setup.py
+@@ -145,11 +145,16 @@
+         return platform
+ 
+     def detect_modules(self):
+-        # Ensure that /usr/local is always used
+-        if '/usr/local/lib' not in self.compiler.library_dirs:
+-            self.compiler.library_dirs.insert(0, '/usr/local/lib')
+-        if '/usr/local/include' not in self.compiler.include_dirs:
+-            self.compiler.include_dirs.insert(0, '/usr/local/include' )
++        # Add the buildlink directories for pkgsrc
++	if os.environ.has_key('BUILDLINK_DIR'):
++            dir = os.environ['BUILDLINK_DIR']
++            libdir = dir + '/lib'
++            incdir = dir + '/include'
++            if libdir not in self.compiler.library_dirs:
++                self.compiler.library_dirs.insert(0, libdir)
++            if incdir not in self.compiler.include_dirs:
++                self.compiler.include_dirs.insert(0, incdir)
++	
+ 
+         # lib_dirs and inc_dirs are used to search for files;
+         # if a file is found in one of those directories, it can
+@@ -265,13 +270,13 @@
          # These represent audio samples or images as strings:
  
          # Disabled on 64-bit platforms
@@ -20,7 +42,35 @@ $NetBSD: patch-ac,v 1.2 2002/01/28 09:09:16 drochner Exp $
  
          # readline
          if self.compiler.find_library_file(lib_dirs, 'readline'):
-@@ -417,8 +417,8 @@
+@@ -296,14 +301,10 @@
+         # socket(2)
+         # Detect SSL support for the socket module
+         ssl_incs = find_file('openssl/ssl.h', inc_dirs,
+-                             ['/usr/local/ssl/include',
+-                              '/usr/contrib/ssl/include/'
+-                             ]
++                             []
+                              )
+         ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
+-                                     ['/usr/local/ssl/lib',
+-                                      '/usr/contrib/ssl/lib/'
+-                                     ] )
++                                     [] )
+ 
+         if (ssl_incs is not None and
+             ssl_libs is not None):
+@@ -408,8 +409,8 @@
+ 
+         if (self.compiler.find_library_file(lib_dirs, 'ncurses')):
+             curses_libs = ['ncurses']
+-            exts.append( Extension('_curses', ['_cursesmodule.c'],
+-                                   libraries = curses_libs) )
++#            exts.append( Extension('_curses', ['_cursesmodule.c'],
++#                                   libraries = curses_libs) )
+         elif (self.compiler.find_library_file(lib_dirs, 'curses')) and platform[:6] != 'darwin':
+         	# OSX has an old Berkeley curses, not good enough for the _curses module.
+             if (self.compiler.find_library_file(lib_dirs, 'terminfo')):
+@@ -417,8 +418,8 @@
              else:
                  curses_libs = ['curses', 'termcap']
  
@@ -31,7 +81,7 @@ $NetBSD: patch-ac,v 1.2 2002/01/28 09:09:16 drochner Exp $
  
          # If the curses module is enabled, check for the panel module
          if (os.path.exists('Modules/_curses_panel.c') and
-@@ -609,7 +609,7 @@
+@@ -609,7 +610,7 @@
            ext_modules=[Extension('struct', ['structmodule.c'])],
  
            # Scripts to install
