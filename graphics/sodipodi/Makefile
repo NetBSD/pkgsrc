@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2003/03/10 23:02:18 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2003/03/13 14:33:20 wiz Exp $
 #
 
 DISTNAME=	sodipodi-0.31
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sodipodi/}
 
@@ -17,6 +18,11 @@ USE_PKGLOCALEDIR=	YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 USE_X11BASE=		YES
+
+# force usage of Xft
+CONFIGURE_ARGS+=	--with-xft
+# needed by configure script for Xft detection
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.freetype2}/include/freetype2
 
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
