@@ -1,0 +1,4 @@
+mod_auth_script makes it possible to have Apache authentication and
+authorization done by an external program. The external program can
+be provided as CGI, PHP or other schemes which allow dynamic content
+to Apache.
