@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/06/06 13:04:24 grant Exp $
+# $NetBSD: Makefile,v 1.23 2004/09/17 19:25:03 wiz Exp $
 # FreeBSD Id: Makefile,v 1.17 1999/04/24 09:25:32 kuriyama Exp
 
 DISTNAME=	docbook-dsssl-1.78
@@ -22,7 +22,7 @@ INSTDIR=	${PREFIX}/share/sgml/docbook/dsssl/modular
 SGML_CATALOGS=	${INSTDIR}/catalog
 
 do-build:
-	@${RM} -Rf ${WRKSRC}/docsrc
+	@${RM} -rf ${WRKSRC}/docsrc
 
 pre-install:
 	${INSTALL_DATA_DIR} ${INSTDIR}
