@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2002/09/26 12:29:56 jlam Exp $
+$NetBSD: patch-ad,v 1.3 2002/12/02 20:29:49 drochner Exp $
 
---- wavplay.c.orig	Tue Jul 17 12:39:14 2001
-+++ wavplay.c
-@@ -14,6 +14,14 @@
+--- src/wavplay.c.orig	Mon Dec  2 20:48:24 2002
++++ src/wavplay.c	Mon Dec  2 20:52:36 2002
+@@ -19,6 +19,14 @@
  #include <unistd.h>
  #include <fcntl.h>
  #include <string.h>
@@ -15,20 +15,11 @@ $NetBSD: patch-ad,v 1.2 2002/09/26 12:29:56 jlam Exp $
 +# endif
 +#endif
  #if defined(linux) || defined(__CYGWIN32__)
- #include <getopt.h>
+ # include <getopt.h>
  #endif
-@@ -22,7 +30,7 @@
- #include <sys/soundcard.h>
- #include <sys/ioctl.h>
- #endif
--#ifdef sun 
-+#if defined(sun) || (defined(__NetBSD__) && !defined(HAVE_OSS))
- #include <sys/audioio.h>
- #endif
- #ifdef hpux
-@@ -48,8 +56,8 @@ guchar waveHdr[44];
+@@ -64,8 +72,8 @@
  gint abuf_size;
- gchar *audiobuf;
+ guchar *audiobuf;
  
 -#if defined(linux) || defined(__FreeBSD__)
 -#define DEFAULT_AUDIO_DEVICE "/dev/dsp"
@@ -37,8 +28,8 @@ $NetBSD: patch-ad,v 1.2 2002/09/26 12:29:56 jlam Exp $
  #elif defined (aix)
  #define DEFAULT_AUDIO_DEVICE ""
  #else
-@@ -59,7 +67,7 @@ gchar *audiobuf;
- #define DEFAULT_BUFFER_SIZE 32768
+@@ -299,7 +307,7 @@
+ #endif
  
  
 -#if defined(linux) || defined(__FreeBSD__)
@@ -46,35 +37,34 @@ $NetBSD: patch-ad,v 1.2 2002/09/26 12:29:56 jlam Exp $
  
  /* open the sound-device of linux and set cd-quality */
  
-@@ -110,7 +118,7 @@ gint flags;
+@@ -350,7 +358,7 @@
  
  #endif
  
--#ifdef sun
-+#if defined(sun) || (defined(__NetBSD__) && !defined(HAVE_OSS))
+-#if defined(sun) || defined(__OpenBSD__)
++#if defined(sun) || defined(__OpenBSD__) || (defined(__NetBSD__) && !defined(HAVE_OSS))
  
  /* open the sound-device of solaris and set cd-quality */
  
-@@ -137,7 +145,9 @@ gint flags;
+@@ -377,7 +385,7 @@
  	info.play.precision = 16;
  	info.play.encoding = AUDIO_ENCODING_LINEAR;
  	info.play.buffer_size = abuf_size;
-+#ifndef __NetBSD__
+-#ifndef __OpenBSD__
++#if !defined(__OpenBSD__) && !defined(__NetBSD__)
  	info.output_muted = 0;
-+#endif
+ #endif
  
- 	if (ioctl(audio, AUDIO_SETINFO, &info) == -1) {
- 		g_warning("Unable to set audio parameters\n");
-@@ -332,10 +342,10 @@ gchar tmpswap;
- 	}
+@@ -678,10 +686,10 @@
  
- 	/* this sets also the global abuf_size-variable */
+ 	/* the open sets also the global abuf_size-variable */
+ 
 -#if defined(linux) || defined(__FreeBSD__)
 +#if defined(linux) || defined(__FreeBSD__) || (defined(__NetBSD__) && defined(HAVE_OSS))
  	audio = open_linux_audio(audio_dev);
  #endif
--#ifdef sun
-+#if defined(sun) || (defined(__NetBSD__) && !defined(HAVE_OSS))
+-#if defined(sun) || defined(__OpenBSD__)
++#if defined(sun) || defined(__OpenBSD__) || (defined(__NetBSD__) && !defined(HAVE_OSS))
  	audio = open_solaris_audio(audio_dev);
  #endif
- #ifdef hpux
+ #ifdef aix
