@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: adsl.sh,v 1.2 2002/07/18 00:10:07 abs Exp $
+# $NetBSD: adsl.sh,v 1.3 2002/08/21 14:11:43 abs Exp $
 #
 # PROVIDE: adsl
 # REQUIRE: ipnat
@@ -12,7 +12,7 @@ adsl_start()
 {
 	echo "Starting speedtouch adsl."
 	# Ensure we have at least tun0 - NetBSD 1.6 and later
-	ifconfig tun0 2>/dev/null || ifconfig tun0 create
+	ifconfig tun0 >/dev/null 2>&1 || ifconfig tun0 create
 	@PREFIX@/sbin/modem_run -f @PREFIX@/libdata/alcaudsl.sys -m
 	@PREFIX@/sbin/ppp -ddial adsl
 }
