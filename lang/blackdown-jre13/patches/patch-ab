@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2002/09/08 09:59:52 schmonz Exp $
+$NetBSD: patch-ab,v 1.2 2002/11/29 21:15:43 schmonz Exp $
 
 --- bin/.java_wrapper.orig	Sat Mar 16 07:18:50 2002
 +++ bin/.java_wrapper
@@ -12,3 +12,16 @@ $NetBSD: patch-ab,v 1.1 2002/09/08 09:59:52 schmonz Exp $
      *)
          proc="`uname -m`"
          ;;
+@@ -70,7 +73,11 @@ JREHOME="`${jre}/bin/realpath ${JREHOME}
+ export APPHOME JREHOME
+ 
+ # Interpret THREADS_FLAG environment variable, if set.
+-DEFAULT_THREADS_FLAG=native
++if [ "${proc}" = "ppc" ]; then
++	DEFAULT_THREADS_FLAG=green
++else
++	DEFAULT_THREADS_FLAG=native
++fi
+ if [ "${THREADS_FLAG}" = green -o "${THREADS_FLAG}" = native ]; then
+     THREADS_TYPE="${THREADS_FLAG}_threads"
+ elif [ "x${THREADS_FLAG}" = x ]; then
