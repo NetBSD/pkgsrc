@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7320 2004/10/02 14:09:09 jmmv Exp $
+$NetBSD: CHANGES,v 1.7321 2004/10/02 14:27:48 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4520,3 +4520,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated intltool to 0.31.3 [jmmv 2004-10-02]
 	Updated freeradius to 1.0.1nb1 [adrianp 2004-10-02]
 	Added mail-notification-0.6.2 [jmmv 2004-10-02]
+	Added suse_fileutils-7.3 [dmcmahill 2004-10-02]
