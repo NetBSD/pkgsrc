@@ -1,4 +1,4 @@
-# $NetBSD: tools.mk,v 1.4.2.3 2003/08/16 09:08:50 jlam Exp $
+# $NetBSD: tools.mk,v 1.4.2.4 2003/08/19 20:11:09 jlam Exp $
 #
 # This Makefile creates a ${TOOLS_DIR} directory and populates the bin
 # subdir with tools that hide the ones outside of ${TOOLS_DIR}.
@@ -115,6 +115,12 @@ ${TOOLS_DIR}/bin/makeinfo: ${_GNU_MISSING}
 
 _TOOLS=		awk grep sed
 
+.if defined(_IGNORE_USE_GNU_TOOLS)
+USE_GNU_TOOLS:=		# empty
+.else
+USE_GNU_TOOLS?=		# empty
+.endif
+
 # These platforms already have GNU versions of the tools in the base
 # system, so no need to pull in the pkgsrc versions; we will use these
 # instead.
@@ -131,7 +137,7 @@ _TOOLS_OPSYS_HAS_GNU.sed+=	Linux-*-*
 #
 _TOOLS_REPLACE_OPSYS.awk+=	SunOS-*-*
 _TOOLS_REPLACE_OPSYS.grep+=	SunOS-*-*
-_TOOLS_REPLACE_OPSYS.sed+=	# empty
+_TOOLS_REPLACE_OPSYS.sed+=	SunOS-*-*
 
 # These platforms have completely unusable versions of these tools, and
 # no suitable replacement is available.
@@ -166,15 +172,17 @@ _TOOLS_NEED_GNU.${_tool_}=	NO
 _TOOLS_NEED_GNU.${_tool_}=	YES
 .    endif
 .  endfor
+.endfor	# USE_GNU_TOOLS
 #
 # Are we using a GNUish system tool in place of the needed GNU tool?
 #
+.for _tool_ in ${_TOOLS}
 .  for _pattern_ in ${_TOOLS_REPLACE_OPSYS.${_tool_}}
 .    if !empty(MACHINE_PLATFORM:M${_pattern_})
-TOOLS_REPLACE.${_tool_}=	YES
+_TOOLS_REPLACE.${_tool_}=	YES
 .    endif
 .  endfor
-.endfor	# USE_GNU_TOOLS
+.endfor	_TOOLS
 
 .if ${_TOOLS_REPLACE.awk} == "YES"
 _TOOLS_OVERRIDE.awk=	YES
@@ -185,6 +193,10 @@ BUILD_DEPENDS+=		gawk>=3.1.1:../../lang/gawk
 _TOOLS_OVERRIDE.awk=	YES
 _TOOLS_PROGNAME.awk=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}awk
 AWK:=			${_TOOLS_PROGNAME.awk}
+.endif
+.if !empty(PKGPATH:Mlang/gawk)
+_TOOLS_OVERRIDE.awk=	NO
+MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
 .endif
 
 .if ${_TOOLS_REPLACE.grep} == "YES"
@@ -197,6 +209,10 @@ _TOOLS_OVERRIDE.grep=	YES
 _TOOLS_PROGNAME.grep=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}grep
 GREP:=			${_TOOLS_PROGNAME.grep}
 .endif
+.if !empty(PKGPATH:Mtextproc/grep)
+_TOOLS_OVERRIDE.grep=	NO
+MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
+.endif
 
 .if ${_TOOLS_REPLACE.sed} == "YES"
 _TOOLS_OVERRIDE.sed=	YES
@@ -207,6 +223,10 @@ BUILD_DEPENDS+=		gsed>=3.0.2:../../textproc/gsed
 _TOOLS_OVERRIDE.sed=	YES
 _TOOLS_PROGNAME.sed=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}sed
 SED:=			${_TOOLS_PROGNAME.sed}
+.endif
+.if !empty(PKGPATH:Mtextproc/gsed)
+_TOOLS_OVERRIDE.sed=	NO
+MAKEFLAGS+=		_IGNORE_USE_GNU_TOOLS=
 .endif
 
 # If _TOOLS_OVERRIDE.<tool> is actually set to "YES", then we override
