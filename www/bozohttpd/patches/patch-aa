@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
+$NetBSD: patch-aa,v 1.15 2004/06/21 01:45:22 lukem Exp $
 
 --- bozohttpd.c.orig	2004-02-19 00:11:57.000000000 +1100
 +++ bozohttpd.c
-@@ -136,6 +136,9 @@
+@@ -118,6 +118,9 @@
+ #undef NO_SSL_SUPPORT		/* don't support ssl (https) */
+ #endif
+ 
++/* XXXPKGSRC: change in sync with PKGREVISION */
++#define SERVER_SOFTWARE	"bozohttpd/20040218nb6"
++
+ #ifndef INDEX_HTML
+ #define INDEX_HTML	"index.html"
+ #endif
+@@ -136,6 +139,9 @@
  #ifndef REDIRECT_FILE
  #define REDIRECT_FILE	".bzredirect"
  #endif
@@ -12,7 +22,7 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  
  /*
   * And so it begins ..
-@@ -329,7 +332,7 @@ static	void	process_request(http_req *);
+@@ -329,7 +335,7 @@ static	void	process_request(http_req *);
  static	void	check_special_files(http_req *, const char *);
  static	int	check_direct_access(http_req *request);
  static	char	*transform_request(http_req *, int *);
@@ -21,7 +31,7 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  static	void	print_header(http_req *, struct stat *, const char *,
  			     const char *);
  
-@@ -1186,7 +1189,7 @@ process_request(request)
+@@ -1186,7 +1192,7 @@ process_request(request)
  	if (fstat(fd, &sb) < 0)
  		http_error(500, request, "can't fstat");
  	if (S_ISDIR(sb.st_mode))
@@ -30,7 +40,18 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  		/* NOTREACHED */
  	/* XXX RFC1945 10.9 If-Modified-Since (http code 304) */
  
-@@ -1438,6 +1441,9 @@ check_special_files(http_req *request, c
+@@ -1346,9 +1352,8 @@ static void
+ sigchild(signo)
+ 	int signo;
+ {
+-	int status;
+ 
+-	while (waitpid(-1, &status, WNOHANG) != -1)
++	while (waitpid(-1, NULL, WNOHANG) > 0)
+ 		;
+ }
+ #endif /* NO_DAEMON_MODE */
+@@ -1438,6 +1443,9 @@ check_special_files(http_req *request, c
  	if (strcmp(name, REDIRECT_FILE) == 0)
  		http_error(403, request,
  		    "no permission to open redirect file");
@@ -40,7 +61,7 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  #ifdef DO_HTPASSWD
  	if (strcmp(name, AUTH_FILE) == 0)
  		http_error(403, request,
-@@ -1454,8 +1460,8 @@ check_bzredirect(http_req *request)
+@@ -1454,8 +1462,8 @@ check_bzredirect(http_req *request)
  {
  	struct stat sb;
  	char dir[MAXPATHLEN], redir[MAXPATHLEN], redirpath[MAXPATHLEN];
@@ -51,7 +72,7 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  
  
  	/*
-@@ -1477,19 +1483,35 @@ check_bzredirect(http_req *request)
+@@ -1477,19 +1485,35 @@ check_bzredirect(http_req *request)
  	}
  
  	snprintf(redir, sizeof(redir), "%s/%s", dir, REDIRECT_FILE);
@@ -93,7 +114,7 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  }
  
  /*
-@@ -1602,7 +1624,7 @@ transform_request(request, isindex)
+@@ -1602,7 +1626,7 @@ transform_request(request, isindex)
  			if (asprintf(&slashindexhtml, "/%s", index_html) < 0)
  				error(1, "asprintf");
  			debug((DEBUG_FAT, "rflag: redirecting %s to %s", url, slashindexhtml));
@@ -102,7 +123,7 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  			/* NOTREACHED */
  		}
  	}
-@@ -1619,7 +1641,7 @@ transform_request(request, isindex)
+@@ -1619,7 +1643,7 @@ transform_request(request, isindex)
  		if (url[2] == '\0')
  			http_error(404, request, "missing username");
  		if (strchr(url + 2, '/') == NULL)
@@ -111,7 +132,7 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  			/* NOTREACHED */
  		debug((DEBUG_FAT, "calling transform_user"));
  		return (transform_user(request, isindex));
-@@ -1733,9 +1755,10 @@ transform_user(request, isindex)
+@@ -1733,9 +1757,10 @@ transform_user(request, isindex)
   * do automatic redirection
   */
  static void
@@ -123,7 +144,7 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  {
  	char *urlbuf;
  	char portbuf[20];
-@@ -1755,16 +1778,24 @@ handle_redirect(request, url)
+@@ -1755,16 +1780,24 @@ handle_redirect(request, url)
  	(void)bozoprintf("%s 301 Document Moved\r\n", request->hr_proto);
  	if (request->hr_proto != http_09) 
  		print_header(request, NULL, "text/html", NULL);
@@ -153,7 +174,7 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  	(void)bozoprintf("</body></html>\n");
  head:
  	fflush(stdout);
-@@ -1951,6 +1982,7 @@ process_cgi(request)
+@@ -1951,6 +1984,7 @@ process_cgi(request)
  	spsetenv("SERVER_PROTOCOL", request->hr_proto, curenvp++);
  	spsetenv("REQUEST_METHOD", request->hr_methodstr, curenvp++);
  	spsetenv("SCRIPT_NAME", url, curenvp++);
@@ -161,7 +182,7 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  	spsetenv("SERVER_SOFTWARE", server_software, curenvp++);
  	spsetenv("REQUEST_URI", request->hr_url, curenvp++);
  	spsetenv("DATE_GMT", date, curenvp++);
-@@ -1977,8 +2009,8 @@ process_cgi(request)
+@@ -1977,8 +2011,8 @@ process_cgi(request)
  
  	/* may as well wait as long as possible */
  print_cgi_header:
@@ -171,7 +192,7 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  		debug((DEBUG_OBESE, "process_cgi:  writing HTTP header .."));
  		if (request->hr_proto != http_09)
  			print_header(NULL, NULL, NULL, NULL);
-@@ -1988,8 +2020,6 @@ print_cgi_header:
+@@ -1988,8 +2022,6 @@ print_cgi_header:
  	} else
  		debug((DEBUG_OBESE, "process_cgi:  not-writing HTTP header .."));
  
@@ -180,7 +201,37 @@ $NetBSD: patch-aa,v 1.14 2004/04/29 12:12:31 lukem Exp $
  	debug((DEBUG_FAT, "process_cgi: going exec %s, %s %s %s",
  	    path, argv[0], strornull(argv[1]), strornull(argv[2])));
  
-@@ -2291,6 +2321,7 @@ static struct content_map content_map[] 
+@@ -2078,7 +2110,7 @@ escape_html(request)
+ 	request->hr_url = tmp;
+ }
+ 
+-/* this fixes the %HH hack that RFC1738 requires.  */
++/* this fixes the %HH hack that RFC2396 requires.  */
+ static void
+ fix_url_percent(request)
+ 	http_req *request;
+@@ -2089,19 +2121,7 @@ fix_url_percent(request)
+ 	url = request->hr_url;
+ 
+ 	/* make sure we don't translate *too* much */
+-#ifndef NO_CGIBIN_SUPPORT
+-	/*
+-	 * XXX somewhat duplicate cgibin check here, but this one lets
+-	 * and encoded "/cgi-bin" work, but not to stop everything past
+-	 * the '?' being not fixed.
+-	 *
+-	 * XXX cgihandlers support
+-	 */
+-	if (cgibin && strncmp(url + 1, CGIBIN_PREFIX, CGIBIN_PREFIX_LEN) == 0) {
+-		end = strchr(request->hr_url + CGIBIN_PREFIX_LEN, '?');
+-	} else
+-#endif /* NO_CGIBIN_SUPPORT */
+-		end = 0;
++	end = strchr(request->hr_url, '?');
+ 
+ 	/* fast forward to the first % */
+ 	if ((s = strchr(url, '%')) == NULL)
+@@ -2291,6 +2311,7 @@ static struct content_map content_map[] 
  	{ ".ppt",	"application/powerpoint",	"",		"", NULL },
  	{ ".rtf",	"application/rtf",		"",		"", NULL },
  	{ ".bcpio",	"application/x-bcpio",		"",		"", NULL },
