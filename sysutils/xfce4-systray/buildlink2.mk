@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2003/09/27 06:57:16 martti Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2003/12/03 05:34:08 martti Exp $
 #
 # This Makefile fragment is included by packages that use xfce4-systray.
 #
@@ -9,7 +9,7 @@
 XFCE4_SYSTRAY_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			xfce4-systray
-BUILDLINK_DEPENDS.xfce4-systray?=		xfce4-systray>=4.0.0
+BUILDLINK_DEPENDS.xfce4-systray?=		xfce4-systray>=4.0.1
 BUILDLINK_PKGSRCDIR.xfce4-systray?=		../../sysutils/xfce4-systray
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.xfce4-systray=xfce4-systray
