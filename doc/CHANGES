@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5555 2004/04/12 14:24:42 grant Exp $
+$NetBSD: CHANGES,v 1.5556 2004/04/12 15:55:20 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1928,3 +1928,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated milter-greylist to 1.0.2nb1 [tron 2004-04-12]
 	Updated oidentd to 2.0.7nb1 [tron 2004-04-12]
 	Added p5-Schedule-RateLimiter-0.01 [grant 2004-04-12]
+	Updated libgtop2 to 2.6.0nb1 [jmmv 2004-04-12]
