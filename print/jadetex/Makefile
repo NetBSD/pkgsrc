@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:51:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/09/02 17:07:02 hubertf Exp $
 #
 
 DISTNAME=	jadetex-2.20
+PKGNAME=	${DISTNAME}nb1
 CATEGORIES=	print
 MASTER_SITES=	http://www.tug.org/applications/jadetex/
 EXTRACT_SUFX=	.zip
@@ -37,5 +38,14 @@ do-install:
 	for i in ${WRKSRC}/test/* ; do \
 		${INSTALL_MAN} $$i ${PREFIX}/share/examples/jadetex; \
 	done
+	:
+	: Complete the set that the textproc/jade pkg started. We
+	: use our files here as that is what the jadetex.fmt file is
+	: really made from:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/sgml/jade
+	${INSTALL_DATA} ${WRKSRC}/jadetex.dtx ${PREFIX}/share/sgml/jade
+	${INSTALL_DATA} ${WRKSRC}/jadetex.ini ${PREFIX}/share/sgml/jade
+	${INSTALL_DATA} ${WRKSRC}/jadetex.ins ${PREFIX}/share/sgml/jade
+	${INSTALL_DATA} ${WRKSRC}/pdfjadetex.ini ${PREFIX}/share/sgml/jade
 
 .include "../../mk/bsd.pkg.mk"
