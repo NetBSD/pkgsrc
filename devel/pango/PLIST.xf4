@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST.xf4,v 1.1 2002/07/03 01:29:39 dmcmahill Exp $
+include/pango-1.0/pango/pangoxft.h
+lib/libpangoxft-1.0.a
+lib/libpangoxft-1.0.la
+lib/libpangoxft-1.0.so
+lib/libpangoxft-1.0.so.0
+lib/libpangoxft-1.0.so.0.3
+lib/pango/1.0.0/modules/pango-arabic-xft.a
+lib/pango/1.0.0/modules/pango-arabic-xft.la
+lib/pango/1.0.0/modules/pango-arabic-xft.so
+lib/pango/1.0.0/modules/pango-basic-xft.a
+lib/pango/1.0.0/modules/pango-basic-xft.la
+lib/pango/1.0.0/modules/pango-basic-xft.so
+lib/pango/1.0.0/modules/pango-hebrew-xft.a
+lib/pango/1.0.0/modules/pango-hebrew-xft.la
+lib/pango/1.0.0/modules/pango-hebrew-xft.so
+lib/pango/1.0.0/modules/pango-tamil-xft.a
+lib/pango/1.0.0/modules/pango-tamil-xft.la
+lib/pango/1.0.0/modules/pango-tamil-xft.so
+lib/pkgconfig/pangoxft.pc
