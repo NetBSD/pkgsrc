@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/02/05 16:07:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2000/05/28 15:00:34 dmcmahill Exp $
 
 DISTNAME=	wmtime-1.0b2
 CATEGORIES=	x11
@@ -16,4 +16,10 @@ post-extract:
 	${CP} ${WRKSRC}/../Imakefile ${WRKSRC}/Imakefile
 	${TOUCH} ${WRKSRC}/wmtime.man
 
-.include <../../mk/bsd.pkg.mk>
+do-configure:
+	cd ${WRKSRC} && imake -DUseInstalled -DUseGccMakeDepend -I${X11BASE}/lib/X11/config && \
+	${MAKE} Makefiles && \
+	${MAKE} includes && \
+	${MAKE} depend
+
+.include "../../mk/bsd.pkg.mk"
