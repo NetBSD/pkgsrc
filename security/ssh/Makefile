@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 1999/09/03 22:00:53 tron Exp $
+# $NetBSD: Makefile,v 1.58 1999/09/06 05:30:19 sommerfeld Exp $
 # FreeBSD Id: Makefile,v 1.47 1997/11/10 22:04:42 dima Exp
 #
 
@@ -93,6 +93,7 @@ PATCH_SITES+=		ftp://ftp.kyoto.wide.ad.jp/IPv6/ssh/
 PATCHFILES+=		ssh-1.2.27-IPv6-1.5-patch.gz
 PATCH_DIST_STRIP+=	-p1
 PATCHDIR=		${WRKDIR}/.patches
+PATCH_SUM_FILE=		${FILESDIR}/patch-sum-v6
 .else
 MASTER_SITES+=		ftp://ftp.kyoto.wide.ad.jp/IPv6/ssh/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
