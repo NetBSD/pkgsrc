@@ -1,27 +1,24 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/10/16 05:39:57 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2001/12/31 23:57:39 jlam Exp $
 
---- config.m4.orig	Mon May 21 20:38:46 2001
+--- config.m4.orig	Tue Aug  7 12:18:04 2001
 +++ config.m4
-@@ -49,10 +49,11 @@
- 
+@@ -65,8 +65,8 @@
    if test "$PHP_IMAP_SSL" != "no"; then
+     AC_DEFINE(HAVE_IMAP_SSL,1,[ ])
      PHP_ADD_LIBPATH($PHP_IMAP_SSL/lib, IMAP_SHARED_LIBADD)
--    PHP_ADD_LIBRARY_DEFER(crypto)
--    PHP_ADD_LIBRARY_DEFER(ssl)
+-    PHP_ADD_LIBRARY_DEFER(ssl,, IMAP_SHARED_LIBADD)
+-    PHP_ADD_LIBRARY_DEFER(crypto,, IMAP_SHARED_LIBADD)
 +    PHP_ADD_LIBRARY_WITH_PATH(crypto, $PHP_IMAP_SSL/lib, IMAP_SHARED_LIBADD)
 +    PHP_ADD_LIBRARY_WITH_PATH(ssl, $PHP_IMAP_SSL/lib, IMAP_SHARED_LIBADD)
- 
+   else
      old_LIBS=$LIBS
-+    LIBS="$LIBS -lssl -lcrypto"
-     LIBS="$LIBS -lc-client"
-     if test $PHP_KERBEROS != "no"; then
-       LIBS="$LIBS -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err"
-@@ -133,8 +134,7 @@
+     LIBS="$LIBS -L$IMAP_LIBDIR -l$IMAP_LIB"
+@@ -162,8 +162,7 @@
      fi
  
      PHP_ADD_INCLUDE($IMAP_INC_DIR)
 -    PHP_ADD_LIBPATH($IMAP_LIBDIR, IMAP_SHARED_LIBADD)
--    PHP_ADD_LIBRARY_DEFER($IMAP_LIB)
+-    PHP_ADD_LIBRARY_DEFER($IMAP_LIB,, IMAP_SHARED_LIBADD)
 +    PHP_ADD_LIBRARY_WITH_PATH($IMAP_LIB, $IMAP_LIBDIR, IMAP_SHARED_LIBADD)
      PHP_IMAP_KRB_CHK
      PHP_IMAP_SSL_CHK
