@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.32 2004/10/08 22:49:56 mjl Exp $
+# $NetBSD: Makefile,v 1.33 2004/10/09 14:01:03 mjl Exp $
 #
 
-DISTNAME=		pwlib_1.5.2
-PKGNAME=		${DISTNAME:S/_/-/}
+DISTNAME=		pwlib-v1_8_2-src
+PKGNAME=		${DISTNAME:S/_/./g:S/-src//:S/-v/-/}
 # PKGREVISION=		3
+EXTRACT_SUFX=	-tar.gz
 CATEGORIES=		devel
-MASTER_SITES=		http://www.openh323.org/bin/
-COUNTRY_MIRRORS=	at us1 us2 ru de cz
-.for COUNTRY in ${COUNTRY_MIRRORS}
-MASTER_SITES+=		ftp://www.${COUNTRY}.openh323.org/bin/
-.endfor
+# MASTER_SITES=  ${MASTER_SITE_SOURCEFORGE:=openh323/}
+MASTER_SITES+=	http://www.voxgratia.org/releases/
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.openh323.org/
+HOMEPAGE=		http://sourceforge.net/projects/openh323/
 COMMENT=		Portable Windows Libary
 
 BUILD_DEPENDS=		bison-[0-9]*:../../devel/bison
@@ -24,15 +22,17 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
+CONFIGURE_ARHS+=	--disable-sasl --disable-openldap --disable-openssl --disable-expat --disable-video --disable-qos
 PTHREAD_OPTS+=		require
 
-MAKE_ENV+=		PWLIBDIR="${WRKSRC}"
-MAKE_ENV+=		CC="${CC}"
-MAKE_ENV+=		CPLUS="${CXX}"
+MAKE_ENV+=		PWLIBDIR="${WRKSRC}" CC="${CC}" CPLUS="${CXX}"
 ALL_TARGET=		opt
 
 FILES_SUBST+=		LIBTOOL="${LIBTOOL}"
 FILES_SUBST+=		PTHREADS_PREFIX="${BUILDLINK_PREFIX.pthread}"
+
+post-extract:
+	cd ${WRKDIR}; ${TAR} -xf ${DISTNAME:S/$/-tar/}
 
 post-patch:
 	${_PKG_SILENT}cd ${WRKSRC}/make;				\
@@ -44,18 +44,17 @@ post-patch:
 
 do-install:
 	${_PKG_SILENT}cd ${WRKSRC}/src/ptlib/unix && ${MAKE_ENV} ${GMAKE} install
-	${_PKG_SILENT}cd ${WRKSRC}/tools/asnparser && ${MAKE_ENV} ${GMAKE} install
+	${INSTALL_DATA_DIR} ${PREFIX}/share/pwlib/make
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptclib
 	${INSTALL_DATA_DIR} ${PREFIX}/include/ptlib/unix/ptlib
-	${INSTALL_DATA} ${WRKSRC}/version.h ${PREFIX}/include/ptlib
-	cd ${WRKSRC};						\
-	for f in `${FIND} include -name CVS -prune -o -type f -print`; do	\
-		${INSTALL_DATA} $$f ${PREFIX}/$$f;	\
-	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pwlib/make
 	cd ${WRKSRC}/make;						\
 	for f in *.mak; do		\
 		${INSTALL_DATA} $$f ${PREFIX}/share/pwlib/make;		\
+	done
+	${INSTALL_DATA} ${WRKSRC}/version.h ${PREFIX}/include/ptlib
+	cd ${WRKSRC};						\
+	for f in `${FIND} include -name CVS -prune -o -name wince -prune -o -name msos -prune -o -type f -print`; do	\
+		${INSTALL_DATA} $$f ${PREFIX}/$$f;	\
 	done
 
 .include "../../mk/pthread.buildlink3.mk"

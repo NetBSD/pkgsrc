@@ -1,16 +1,13 @@
-$NetBSD: patch-ba,v 1.1 2004/10/08 21:02:54 mjl Exp $
+$NetBSD: patch-ba,v 1.2 2004/10/09 14:01:03 mjl Exp $
 
-Work around a C/C++ difference in openssl/dh.h
-
---- src/ptclib/pssl.cxx.orig	2004-10-08 19:13:06.000000000 +0200
-+++ src/ptclib/pssl.cxx	2004-10-08 19:43:28.000000000 +0200
-@@ -732,6 +732,9 @@
+--- src/ptclib/pssl.cxx.orig	2004-10-09 13:31:30.000000000 +0200
++++ src/ptclib/pssl.cxx	2004-10-09 13:33:39.000000000 +0200
+@@ -743,7 +743,7 @@
+     DH_free(dh);
  }
  
- 
-+#define d2i_DHparams_bio(bp,x) (DH *)ASN1_d2i_bio((char *(*)(...))DH_new, \
-+      (char *(*)(...))d2i_DHparams,(bp),(unsigned char **)(x))
-+
- BOOL PSSLDiffieHellman::Load(const PFilePath & dhFile,
-                              PSSLFileTypes fileType)
- {
+-#ifdef __BEOS__
++#if defined(__BEOS__) || defined(__NetBSD__)
+ // 2/21/04 Yuri Kiryanov - fix for compiler choke on BeOS for usage of
+ // SSL function d2i_DHparams_bio below in PSSLDiffieHellman::Load
+ #undef  d2i_DHparams_bio

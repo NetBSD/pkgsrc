@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/10/08 22:31:02 mjl Exp $
+$NetBSD: patch-aa,v 1.6 2004/10/09 14:01:03 mjl Exp $
 
---- make/unix.mak.orig	2003-07-25 00:01:42.000000000 +0200
-+++ make/unix.mak	2004-10-09 00:28:36.000000000 +0200
-@@ -66,13 +66,13 @@
+--- make/unix.mak.orig	2004-09-01 01:52:31.000000000 +0200
++++ make/unix.mak	2004-10-09 12:52:29.000000000 +0200
+@@ -122,13 +122,13 @@
  #
  
  ifndef PWLIBDIR
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.5 2004/10/08 22:31:02 mjl Exp $
  
  ###############################################################################
  #
-@@ -381,9 +381,9 @@
+@@ -427,9 +427,9 @@
  
  ifeq ($(OSTYPE),OpenBSD)
  
@@ -31,40 +31,39 @@ $NetBSD: patch-aa,v 1.5 2004/10/08 22:31:02 mjl Exp $
  
  LDLIBS		+= -lossaudio
  
-@@ -404,9 +404,9 @@
+@@ -444,13 +444,9 @@
  
  ifeq ($(OSTYPE),NetBSD)
  
 -ifeq ($(MACHTYPE),x86)
 -STDCCFLAGS	+= -m486
 -endif
-+# ifeq ($(MACHTYPE),x86)
-+# STDCCFLAGS	+= -m486
-+# endif
+-
+ LDLIBS		+= -lossaudio
  
- ifndef OSRELASE
- OSRELEASE   := $(shell /sbin/sysctl -n kern.osrevision)
-@@ -853,7 +853,7 @@
+-STDCCFLAGS += -I$(UNIX_INC_DIR) -I$(PWLIBDIR)/include
++STDCCFLAGS += -I$(PWLIBDIR)/include
+ 
+ # enable the USE_PTH line to compile using pth
+ # enable the USE_NATIVE_THREADS line to compile using native threads
+@@ -832,13 +828,14 @@
  endif
  
  ifeq ($(P_SHAREDLIB),1)
 -LIB_SUFFIX	= $(SHAREDLIBEXT)
 +LIB_SUFFIX	= la
+ LIB_TYPE	=
  else   
  LIB_SUFFIX	= a 
- ifndef DEBUG
-@@ -865,8 +865,9 @@
- LIB_TYPE	=
- endif
+-LIB_TYPE	= _s
++LIB_TYPE	= 
+ endif # P_SHAREDLIB
  
 +INSTALL_DIR = ${PREFIX}
  ifndef INSTALL_DIR
--INSTALL_DIR	= /usr/local
-+INSTALL_DIR	= /usr/pkg
+ INSTALL_DIR	= /usr/local
  endif
- 
- ifndef INSTALLBIN_DIR
-@@ -891,11 +892,11 @@
+@@ -865,11 +862,11 @@
  
  # Directories
  
@@ -80,7 +79,7 @@ $NetBSD: patch-aa,v 1.5 2004/10/08 22:31:02 mjl Exp $
  
  ifndef UNIX_SRC_DIR
  UNIX_SRC_DIR	= $(PWLIBDIR)/src/ptlib/unix
-@@ -904,7 +905,7 @@
+@@ -878,7 +875,7 @@
  PW_LIBDIR	= $(PWLIBDIR)/lib
  
  # set name of the PT library
@@ -89,7 +88,7 @@ $NetBSD: patch-aa,v 1.5 2004/10/08 22:31:02 mjl Exp $
  PTLIB_FILE	= lib$(PTLIB_BASE)$(LIB_TYPE).$(LIB_SUFFIX)
  PT_OBJBASE	= obj_$(PLATFORM_TYPE)_$(OBJDIR_SUFFIX)
  PT_OBJDIR	= $(PW_LIBDIR)/$(PT_OBJBASE)
-@@ -972,6 +973,6 @@
+@@ -946,6 +943,6 @@
  # add library directory to library path and include the library
  LDFLAGS		+= -L$(PW_LIBDIR)
  
