@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.4 2003/10/20 08:17:17 junyoung Exp $
+
+--- misc.c.orig	2003-10-05 16:23:49.000000000 -0500
++++ misc.c
+@@ -913,7 +913,6 @@ char *SysErrorMsg (n)
+     extern char *sys_errlist[];
+ #endif
+ #endif
+-    extern int sys_nerr;
+ 
+     return ((n >= 0 && n < sys_nerr) ? sys_errlist[n] : "unknown error");
+ }
