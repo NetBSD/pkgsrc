@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2980 2003/08/04 00:03:19 wulf Exp $
+$NetBSD: CHANGES,v 1.2981 2003/08/04 07:52:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3189,3 +3189,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated beecrypt to 3.0.0 [jmmv 2003-08-03]
 	Added gputils-0.11.6 [wulf 2003-08-04]
 	Removed gpasm [wulf 2003-08-04]
+	Updated gnugo to 3.4 [wiz 2003-08-04]
