@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.385 2003/03/20 11:09:27 wiz Exp $
+$NetBSD: TODO,v 1.386 2003/03/20 11:15:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -137,7 +137,6 @@ Suggested package updates
 	o gpa-0.6.1
 	o gperiodic-2.0.2
 	o grace-5.1.12
-	o graphopt-0.3
 	o gsed-4.0.6
 	o gtetrinet-0.7.0
 	o gtk2-pan-0.13.91
