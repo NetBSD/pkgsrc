@@ -1,0 +1,33 @@
+$NetBSD: patch-ac,v 1.1 2000/08/24 01:25:44 kim Exp $
+
+--- ospfd/Makefile.am.orig	Thu Aug 17 04:27:22 2000
++++ ospfd/Makefile.am	Wed Aug 23 16:22:52 2000
+@@ -4,6 +4,8 @@
+ DEFS = @DEFS@ -DSYSCONFDIR=\"$(sysconfdir)/\"
+ INSTALL_SDATA=@INSTALL@ -m 600
+ 
++sysconfdatadir=$(datadir)/examples/zebra
++
+ noinst_LIBRARIES = libospf.a
+ sbin_PROGRAMS = ospfd
+ 
+@@ -30,14 +32,14 @@
+ 
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
++	$(mkinstalldirs) $(DESTDIR)$(sysconfdatadir)
+ 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	  if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_SDATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdir)/$$p"; \
+-	    $(INSTALL_SDATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdir)/$$p; \
++	    echo " $(INSTALL_SDATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdatadir)/$$p"; \
++	    $(INSTALL_SDATA) $(srcdir)/$$p $(DESTDIR)$(sysconfdatadir)/$$p; \
+ 	  else if test -f $$p; then \
+-	    echo " $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdir)/$$p"; \
+-	    $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdir)/$$p; \
++	    echo " $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdatadir)/$$p"; \
++	    $(INSTALL_SDATA) $$p $(DESTDIR)$(sysconfdatadir)/$$p; \
+ 	  fi; fi; \
+ 	done
+ 
