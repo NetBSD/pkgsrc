@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8150 2004/11/29 15:15:22 wiz Exp $
+$NetBSD: CHANGES,v 1.8151 2004/11/29 15:17:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5639,3 +5639,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Class-Accessor to 0.19 [wiz 2004-11-29]
 	Updated efont-unicode to 0.4.2 [uebayasi 2004-11-29]
 	Updated inkscape to 0.39nb2 [wiz 2004-11-29]
+	Updated classpath to 0.12 [wiz 2004-11-29]
+	Updated classpath-gui to 0.12 [wiz 2004-11-29]
