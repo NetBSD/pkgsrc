@@ -1,0 +1,9 @@
+--- src/zbuf/Makefile.default.orig	Wed May  6 23:28:17 1998
++++ src/zbuf/Makefile.default	Wed May  6 23:28:26 1998
+@@ -44,5 +44,5 @@
+ #
+ # for generic machine use (timers not supported)
+-CFLAGS = -O -DOTHER
++CFLAGS = -O2 -DOTHER
+ # for most machines running 4.2/3 use (only necessary if timers are needed)
+ #CFLAGS = -O -DFOUR
