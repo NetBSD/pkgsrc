@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2003/04/07 16:30:47 cjep Exp $
+# $NetBSD: Makefile.common,v 1.9 2003/09/14 22:15:21 jlam Exp $
 
 DISTNAME=		samba-${SAMBA_DIST_VERS}
 SAMBA_DIST_VERS=	2.2.8a
@@ -24,6 +24,7 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 .include "../../mk/bsd.prefs.mk"
 
 PKG_SYSCONFSUBDIR?=	samba
+PKG_SYSCONFVAR=		samba
 
 VARDIR?=		/var
 SAMBA_ETCDIR?=		${PKG_SYSCONFDIR}
