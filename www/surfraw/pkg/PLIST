@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/08/12 12:16:04 proff Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/09/06 10:26:21 jlam Exp $
 bin/W
 bin/altavista
 bin/appwatch
@@ -24,6 +24,7 @@ bin/slashdot
 bin/sundocs
 bin/sunsolve
 bin/surfraw
+bin/surfraw-netscape-remote
 bin/thesaurus
 bin/translate
 bin/webster
