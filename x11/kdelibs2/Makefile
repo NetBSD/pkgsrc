@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2004/05/01 23:57:00 snj Exp $
+# $NetBSD: Makefile,v 1.64 2004/07/03 16:34:59 wiz Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	11
@@ -96,7 +96,7 @@ post-install:
 
 # XXX See below for NetBSD/alpha issues.
 .if ${MACHINE_ARCH} == "alpha"
-USE_PKGSRC_GCC=	# defined
+GCC_REQD+=	2.95
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
