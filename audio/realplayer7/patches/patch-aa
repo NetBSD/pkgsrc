@@ -1,42 +1,73 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/03/22 08:42:30 rh Exp $
+$NetBSD: patch-aa,v 1.2 2000/08/06 04:34:43 jlam Exp $
 
---- mimeinstall.sh.orig	Sat Mar 11 17:17:22 2000
-+++ mimeinstall.sh	Mon Mar 20 20:03:14 2000
-@@ -17,8 +17,8 @@
- }
+--- mimeinstall.sh.orig	Wed Jun  7 19:58:28 2000
++++ mimeinstall.sh	Sat Aug  5 23:57:15 2000
+@@ -12,9 +12,12 @@
+ # 3 mimetypes (space sep)
+ # 4 mime.types location
  
++REALPLAY=@@PREFIX@@/bin/realplay
++LOC=@@REALPLAYER_HOME@@
++
+ if [ ! -f realplay ] ;  then
+-    echo "This shell script should only be run from the installed location of the"
+-    echo "RealPlayer.  Please cd to that directory and try again"
++    echo "This shell script should only be run from ${LOC}."
++    echo "Please cd to that directory and try again."
+     exit
+ fi
+ 
+@@ -33,7 +36,8 @@
+                     sed s:__EXT__:$kdestyleexts:g > $filename
+     fi
+     mkdir -p `dirname $2/$1`
+-    cat $filename | sed s:__LOCATION__:`pwd`:g > $2/$1.kdelnk
++    cat $filename | sed s:__LOCATION__:${LOC}:g \
++		| sed s:__REALPLAY__:${REALPLAY}:g > $2/$1.kdelnk
+     rm $filename
+     filesmodified=$2/$1.kdelnk
+ 
+@@ -50,7 +54,7 @@
+  # how come gnome doesn't let you do absolute paths?
+     printf "\topen=realplay %%f &\n" >> $GNOMEDEST/realplay.keys
+     printf "\tview=realplay %%f &\n" >> $GNOMEDEST/realplay.keys
+-    printf "\ticon-filename=`pwd`/rp7doc.png\n" >> $GNOMEDEST/realplay.keys
++    printf "\ticon-filename=${LOC}/rp7doc.png\n" >> $GNOMEDEST/realplay.keys
+     filesmodified="$filesmodified $GNOMEDEST/realplay.keys"
+ 
+     mkdir -p $GNOMEDEST
+@@ -85,7 +89,7 @@
+             if [ -f $mailcapdest ] ; then
+ 		    grep -v $1 $mailcapdest > /tmp/$$ && cp /tmp/$$ $mailcapdest && rm -f /tmp/$$
+ 	    fi
+-	    echo "$1;`pwd`/realplay %u" >> $mailcapdest
++	    echo "$1;@@PREFIX@@/bin/realplay %u" >> $mailcapdest
+ 	    filesmodified="$filesmodified $mailcapdest"
+     done
+ 
+@@ -100,9 +104,6 @@
+     exit 1
+ }
  
 -REALPLAY=`pwd`/realplay
 -LOC=`pwd`
-+REALPLAY=@@PREFIX@@/bin/realplay
-+LOC=@@PREFIX@@/lib/RealPlayer7
+-
+ if [ "$2" = "global" ];
+ then 
+     STDDEST=global
+@@ -126,11 +127,13 @@
  
+ # first install the app
+ mkdir -p $KDEAPPDEST
+-cat app.kdelnk | sed "s:__LOCATION__:`pwd`:g" > $KDEAPPDEST/RealPlayer.kdelnk
++cat app.kdelnk | sed "s:__LOCATION__:${LOC}:g" \
++	| sed "s:__REALPLAY__:${REALPLAY}:g" > $KDEAPPDEST/RealPlayer.kdelnk
+ echo "Installed Realplayer link for KDE"
  
- if [ -f "$HOME/.mime.types" ] ; then
-@@ -42,7 +42,7 @@
- fi
+ mkdir -p $GNOMEAPPDEST
+-cat realplay.desktop | sed "s:__LOCATION__:`pwd`:g" > $GNOMEAPPDEST/realplayer.desktop
++cat realplay.desktop | sed "s:__LOCATION__:${LOC}:g" \
++	| sed "s:__REALPLAY__:${REALPLAY}:g" > $GNOMEAPPDEST/realplayer.desktop
+ echo "Installed Realplayer link for Gnome"
  
- 
--if [ "%1" = "MP3" ] ; then
-+if [ "$1" = "MP3" ] ; then
- if [ -f "$HOME/.mime.types" ] ; then
-     if grep x-pn-mp3 $HOME/.mime.types > /dev/null 2>&1 ; then
-         echo "Found MP3 mimetype in $HOME/.mime.types"
-@@ -71,7 +71,7 @@
- audio/vnd.rn-realaudio;$REALPLAY %u
- application/smil;$REALPLAY %u
- EOF
--	if [ "%1" = "MP3" ] ; then
-+	if [ "$1" = "MP3" ] ; then
-         echo "Added MP3 mimetype to $HOME/.mailcap"
-         cat >> $HOME/.mailcap << EOF
- audio/x-pn-mp3;$REALPLAY %u
-@@ -84,7 +84,7 @@
- audio/vnd.rn-realaudio;$REALPLAY %u
- application/smil;$REALPLAY %u
- EOF
--    if [ "%1" = "MP3" ] ; then
-+    if [ "$1" = "MP3" ] ; then
-         echo "Added MP3 mimetype to $HOME/.mailcap"
-         cat >> $HOME/.mailcap << EOF
- audio/x-pn-mp3;$REALPLAY %u
+ printf "%-30s%-50s\n" MIMETYPE "INSTALLED LOCATION" 
