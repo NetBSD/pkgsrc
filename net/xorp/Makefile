@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 14:50:06 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/02/14 15:29:15 jlam Exp $
 #
 
 DISTNAME=	xorp-0.3
@@ -12,11 +12,8 @@ COMMENT=	Open router software platform
 # cli/libtecla/configure.in bombs if ncurses is installed
 CONFLICTS+=	ncurses-[0-9]*
 
-HAS_CONFIGURE=	YES
-GNU_CONFIGURE=	YES
-USE_GNU_TOOLS+=	make
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
-CONFIG_GUESS_OVERRIDE=	${WRKSRC}/cli/libtecla/config.guess
-CONFIG_SUB_OVERRIDE=	${WRKSRC}/cli/libtecla/config.sub
+GNU_CONFIGURE=		YES
+USE_GNU_TOOLS+=		make
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.pkg.mk"
