@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.16 1998/11/12 23:20:10 frueauf Exp $
+$NetBSD: patch-aa,v 1.17 1998/12/15 10:34:34 mycroft Exp $
 
---- makefile.unix.orig	Wed Oct 21 08:20:43 1998
-+++ makefile.unix	Sun Oct 25 04:03:24 1998
+--- makefile.unix.orig	Sun Dec  6 04:26:46 1998
++++ makefile.unix	Tue Dec 15 04:06:03 1998
 @@ -39,7 +39,7 @@
  # GNU MAKE is MANDATORY !!!
  # so please give me the path...
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.16 1998/11/12 23:20:10 frueauf Exp $
  # else ...
  # MAKE=/usr/people/jantonio/bin/gmake
  
-@@ -106,18 +106,18 @@
+@@ -105,18 +105,18 @@
  # *** Select destination directory for your compiled program , manual page
  # and binary distribution ( if you want to... )
  # ( only needed to install, not to compile... )
@@ -35,32 +35,21 @@ $NetBSD: patch-aa,v 1.16 1998/11/12 23:20:10 frueauf Exp $
  
  # *** Where is cheat.dat ? 
  CHEATFILE = \"/usr/games/lib/$(NAME)/cheat.dat\"
-@@ -132,7 +132,9 @@
- ##############################################################################
- 
- # *** To enable joystick support uncomment next line
--# JOY		= -DUSE_JOYSTICK
-+ifeq (${NETBSD_JOYSTICK},yes)
-+JOY		= -DUSE_JOYSTICK
-+endif
- 
- # if you have selected joystick support , select your preferences:
- #
-@@ -148,7 +150,9 @@
+@@ -145,7 +145,9 @@
  # JSLIB   = -lXi
  
  # On iX86 based OS's, if supported, you can use standard joystick driver
--# JS	= -DI386_JOYSTICK
+-# JSI386 = -DI386_JOYSTICK
 +ifeq (${NETBSD_JOYSTICK},yes)
-+JS	= -DI386_JOYSTICK
++JSI386 = -DI386_JOYSTICK
 +endif
  
  # Linux FM-TOWNS game PAD joystick emulation support
  # Thanks to Osamu Kurati for provided patch
-@@ -169,8 +173,8 @@
+@@ -165,8 +167,8 @@
+ # *** If your system supports query audio buffer size (like IRIX or Linux )
  # you might decide to use these feature. Otherwise, you should use a 
- # timer based audio code and ajust in src/unix/sound.h AUDIO_TIMER_FREQ item
- #
+ # timer based audio code.
 -S_TIM = -DDONTUSE_TIMER
 -# S_TIM = -DUSE_TIMER
 +# S_TIM = -DDONTUSE_TIMER
@@ -68,33 +57,30 @@ $NetBSD: patch-aa,v 1.16 1998/11/12 23:20:10 frueauf Exp $
  
  # *** When using timer, you should provide the frequency to generate audio sample
  # frames in your system. See readme.unix notes about these item
-@@ -223,7 +227,7 @@
- # note: x11 is the only one supported on all platforms
- 
- ### normal X11
--DISPLAY_METHOD = x11
-+#DISPLAY_METHOD = x11
- ### XFree86's DGA extension, only tested under linux
- #DISPLAY_METHOD = xf86_dga
- ### svgalib, only supported under linux
-@@ -244,19 +248,23 @@
+@@ -245,16 +247,18 @@
  # uncomment following section to support them ( you should have libxpm 
  # available :-) )
  # COMMENT IT if your are not compiling for normal x11
 -# XPM	= -DHAS_XPM
--# XPMLIB	= -lXpm -L/usr/X11R6/lib
-+ifeq (${DISPLAY_METHOD},x11)
+-# XPMLIB	= -lXpm
 +XPM	= -DHAS_XPM
-+XPMLIB	= -lXpm -L/usr/X11R6/lib
-+endif
++XPMLIB	= -lXpm
   
  # *** If you don't have the MIT-Shared Memory X Extensions, comment the
  # following: ( Test if available by mean of xdpyinfo command )
-+ifeq (${DISPLAY_METHOD},x11)
  MSHM	= -DUSE_MITSHM
+ 
+ #if you are running xfree86 and wnat to use DGA, uncomment the following:
+-# DGA     = -DUSE_DGA
+-# DGALIBS = -lXxf86dga -lXxf86vm
++ifeq (${NETBSD_DGA},yes)
++DGA     = -DUSE_DGA
++DGALIBS = -lXxf86dga -lXxf86vm
 +endif
  
- # standard location for X11 
+ # *** If you have the XIL library (Solaris 2.5.1 and higher), uncomment
+ # the following lines:
+@@ -265,8 +269,8 @@
  # X11INC		= -I/usr/include/X11
  # X11LIB		= -L/usr/lib/X11
  # standard location for XFree86
@@ -102,10 +88,10 @@ $NetBSD: patch-aa,v 1.16 1998/11/12 23:20:10 frueauf Exp $
 -X11LIB		= -L/usr/X11R6/lib
 +X11INC		= -I${PREFIX}/include
 +X11LIB		= -L${PREFIX}/lib
- # for Sun systems 
+ # for Sun systems
  # X11INC		= -I/usr/openwin/include
  # X11LIB		= -L/usr/openwin/lib
-@@ -273,11 +281,11 @@
+@@ -283,11 +287,11 @@
  
  # OpenGL include path
  
@@ -119,7 +105,7 @@ $NetBSD: patch-aa,v 1.16 1998/11/12 23:20:10 frueauf Exp $
  
  # OpenGL libs
  
-@@ -310,11 +318,12 @@
+@@ -320,11 +324,12 @@
  ######## Alpha/Linux
  # ARCH  = linux_alpha
  ######## ix86/Linux
@@ -134,7 +120,7 @@ $NetBSD: patch-aa,v 1.16 1998/11/12 23:20:10 frueauf Exp $
  ######## Sparc/SunOS ( no sound )
  # ARCH  = sunos
  ######## ix86/Solaris
-@@ -351,7 +360,11 @@
+@@ -364,7 +369,11 @@
  DEFS.linux_alpha   = -Dlinux -DLSB_FIRST -DAXP_ASM -DACORN
  DEFS.linux_i386    = -Dlinux -DLSB_FIRST -DX86_ASM
  DEFS.FREEBSD       = -DLSB_FIRST -DX86_ASM -Dlinux -DFREEBSD_SOUND_WORKAROUND
@@ -147,17 +133,17 @@ $NetBSD: patch-aa,v 1.16 1998/11/12 23:20:10 frueauf Exp $
  DEFS.sunos	   = -Dsun -DCLOCKS_PER_SEC=1000000 -DACORN
  DEFS.solaris	   = -Dsun -DACORN 
  DEFS.solaris_i386  = -DLSB_FIRST -Dsun -Dsolaris
-@@ -371,12 +384,14 @@
- LIBS.irix          = -laudio
+@@ -389,12 +398,14 @@
  LIBS.irix_al       = -laudio
  LIBS.aix           = -lUMSobj
+ LIBS.unixware7	   = -lsocket
 +LIBS.netbsd	   = -lm
  
  ##############################################################################
  # **** Architecture dependent cflags. Only change if you know what're you doing...
  ##############################################################################
  CFLAGS.linux_powerpc = -fsigned-char
- CFLAGS.aix	     = -I/usr/include/UMS -I/usr/lpp/som/include 
+ CFLAGS.aix	     = -I/usr/include/UMS -I/usr/lpp/som/include
 +CFLAGS.netbsd	     = -fstrength-reduce -funroll-loops -fomit-frame-pointer
  
  #############################################################################
