@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2003/08/08 12:41:25 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2004/04/14 21:59:24 kim Exp $
 
 DISTNAME=		trn-4.0-test76
 PKGNAME=		trn-4.76
+PKGREVISION=		1
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=trn/} \
 			ftp://trn.sourceforge.net/pub/trn/
@@ -11,6 +12,8 @@ HOMEPAGE=		http://trn.sourceforge.net/
 COMMENT=		Threaded version of rn, the classic news reader
 
 LICENSE=		trn-license
+
+PKG_SYSCONFSUBDIR=	nntp
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,7 +36,7 @@ CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ENV=		PREFIX=${PREFIX}
 CONFIGURE_ARGS=		-d -e -D bin=${PREFIX}/bin \
 			-D binexp=${PREFIX}/bin \
-			-D phost=${PREFIX}'/etc/nntp/domainname' \
+			-D phost=${PKG_SYSCONFDIR}'/domainname' \
 			-D filexp=${PREFIX}'/share/trn/filexp' \
 			-D hostbits=${TRN_HOSTBITS} \
 			-D installbin=${PREFIX}'/bin' \
@@ -43,14 +46,14 @@ CONFIGURE_ARGS=		-d -e -D bin=${PREFIX}/bin \
 			-D mansrc=${PREFIX}'/man/man1' \
 			-D mansrcexp=${PREFIX}'/man/man1' \
 			-D mimecap=${PREFIX}'/etc/mimecap' \
-			-D orgname=${PREFIX}'/etc/nntp/organization' \
+			-D orgname=${PKG_SYSCONFDIR}'/organization' \
 			-D perl=${PERL5} \
 			-D perlpath=${PERL5} \
 			-D prefix=${PREFIX} \
 			-D prefixexp=${PREFIX} \
 			-D privlib=${PREFIX}'/share/trn' \
 			-D privlibexp=${PREFIX}'/share/trn' \
-			-D servername=${PREFIX}'/etc/nntp/server' \
+			-D servername=${PKG_SYSCONFDIR}'/server' \
 			-D d_nntp \
 			-U d_local \
 			-D libs=' ' \
