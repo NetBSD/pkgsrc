@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2001/01/24 11:09:59 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/01/24 11:24:12 tsutsui Exp $
 lib/ldscripts/armnbsd.x
 lib/ldscripts/armnbsd.xbn
 lib/ldscripts/armnbsd.xn
@@ -78,6 +78,12 @@ lib/ldscripts/m68kelf.xn
 lib/ldscripts/m68kelf.xr
 lib/ldscripts/m68kelf.xs
 lib/ldscripts/m68kelf.xu
+lib/ldscripts/m68kelfnbsd.x
+lib/ldscripts/m68kelfnbsd.xbn
+lib/ldscripts/m68kelfnbsd.xn
+lib/ldscripts/m68kelfnbsd.xr
+lib/ldscripts/m68kelfnbsd.xs
+lib/ldscripts/m68kelfnbsd.xu
 lib/ldscripts/m68knbsd.x
 lib/ldscripts/m68knbsd.xbn
 lib/ldscripts/m68knbsd.xn
