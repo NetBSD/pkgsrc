@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.8 1999/06/20 20:38:39 kim Exp $
+
+--- utils.c.orig	Thu Oct 29 08:26:08 1998
++++ utils.c	Sun Jun 20 16:35:35 1999
+@@ -19,8 +19,6 @@
+ /* our perror */
+ 
+ extern void uerror(char *s) {
+-	extern int sys_nerr;
+-	extern char *sys_errlist[];
+ 	if (errno > sys_nerr)
+ 		return;
+ 	if (s != NULL)
