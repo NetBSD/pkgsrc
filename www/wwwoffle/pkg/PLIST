@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 1998/06/06 17:03:59 tron Exp $
+bin/wwwoffle
+bin/wwwoffle-tools
+bin/wwwoffle-ls
+bin/wwwoffle-mv
+bin/wwwoffle-rm
+etc/rc.d/wwwoffle.sh
+man/man1/wwwoffle.1
+man/man5/wwwoffle.conf.5
+man/man8/wwwoffled.8
+sbin/wwwoffled
+etc/wwwoffle/wwwoffle.conf.default
+@exec cp %F %D/etc/wwwoffle/wwwoffle.conf
+@unexec rm -f %D/etc/wwwoffle/wwwoffle.conf
+@dirrm etc/wwwoffle
