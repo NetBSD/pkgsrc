@@ -1,54 +1,35 @@
-$NetBSD: patch-ab,v 1.9 1999/10/01 10:31:59 agc Exp $
+$NetBSD: patch-ab,v 1.10 1999/10/01 10:49:52 agc Exp $
 
 --- Makefile.in.orig	Wed Sep 22 06:27:27 1999
-+++ Makefile.in	Fri Oct  1 11:26:25 1999
-@@ -82,14 +82,25 @@
++++ Makefile.in	Fri Oct  1 11:45:47 1999
+@@ -82,9 +82,16 @@
  ETAGS = etags
  CTAGS = ctags
  
 +OPSYS!= uname -s
 +
 +.if ${OPSYS} == "SunOS"
++MD5OBJ= md5c.o
++MD5SRC= ${srcdir}/md5c.c
++.endif
++
  protobjs = rcfile_y.o rcfile_l.o socket.o getpass.o pop2.o pop3.o imap.o \
         etrn.o fetchmail.o env.o options.o daemon.o driver.o sink.o \
-        rfc822.o smtp.o xmalloc.o uid.o mxget.o md5c.o md5ify.o rpa.o \
+-       rfc822.o smtp.o xmalloc.o uid.o mxget.o md5c.o md5ify.o rpa.o \
++       rfc822.o smtp.o xmalloc.o uid.o mxget.o ${MD5OBJ} md5ify.o rpa.o \
         interface.o netrc.o base64.o error.o unmime.o conf.o checkalias.o \
         smbdes.o smbencrypt.o smbmd4.o smbutil.o
-+.else
-+protobjs = rcfile_y.o rcfile_l.o socket.o getpass.o pop2.o pop3.o imap.o \
-+       etrn.o fetchmail.o env.o options.o daemon.o driver.o sink.o \
-+       rfc822.o smtp.o xmalloc.o uid.o mxget.o md5ify.o rpa.o \
-+       interface.o netrc.o base64.o error.o unmime.o conf.o checkalias.o \
-+       smbdes.o smbencrypt.o smbmd4.o smbutil.o
-+.endif
  
- objs = $(protobjs) $(extras) $(EXTRAOBJ)
- 
-+.if ${OPSYS} == "SunOS"
- srcs = $(srcdir)/socket.c $(srcdir)/getpass.c $(srcdir)/pop2.c 		\
-        $(srcdir)/pop3.c $(srcdir)/imap.c $(srcdir)/etrn.c 		\
-        $(srcdir)/fetchmail.c $(srcdir)/env.c				\
-@@ -101,6 +112,19 @@
+@@ -96,7 +103,7 @@
+        $(srcdir)/options.c $(srcdir)/daemon.c $(srcdir)/driver.c	\
+        $(srcdir)/sink.c $(srcdir)/rfc822.c $(srcdir)/smtp.c		\
+        $(srcdir)/xmalloc.c $(srcdir)/uid.c $(srcdir)/mxget.c 		\
+-       $(srcdir)/md5c.c $(srcdir)/md5ify.c $(srcdir)/rpa.c	  	\
++       ${MD5SRC} $(srcdir)/md5ify.c $(srcdir)/rpa.c	  	\
+        $(srcdir)/interface.c $(srcdir)/netrc.c $(srcdir)/base64.c	\
         $(srcdir)/error.c $(srcdir)/unmime.c $(srcdir)/conf.c		\
         $(srcdir)/checkalias.c $(srcdir)/smbdes.c $(srcdir)/smbencrypt.c \
-        $(srcdir)/smbmd4.c $(srcdir)/smbutil.c
-+.else
-+srcs = $(srcdir)/socket.c $(srcdir)/getpass.c $(srcdir)/pop2.c 		\
-+       $(srcdir)/pop3.c $(srcdir)/imap.c $(srcdir)/etrn.c 		\
-+       $(srcdir)/fetchmail.c $(srcdir)/env.c				\
-+       $(srcdir)/options.c $(srcdir)/daemon.c $(srcdir)/driver.c	\
-+       $(srcdir)/sink.c $(srcdir)/rfc822.c $(srcdir)/smtp.c		\
-+       $(srcdir)/xmalloc.c $(srcdir)/uid.c $(srcdir)/mxget.c 		\
-+       $(srcdir)/md5ify.c $(srcdir)/rpa.c              \
-+       $(srcdir)/interface.c $(srcdir)/netrc.c $(srcdir)/base64.c	\
-+       $(srcdir)/error.c $(srcdir)/unmime.c $(srcdir)/conf.c		\
-+       $(srcdir)/checkalias.c $(srcdir)/smbdes.c $(srcdir)/smbencrypt.c \
-+       $(srcdir)/smbmd4.c $(srcdir)/smbutil.c
-+.endif
- 
- .SUFFIXES:
- .SUFFIXES: .o .c .h .y .l .ps .dvi .info .texi
-@@ -151,7 +175,7 @@
+@@ -151,7 +158,7 @@
  	@echo "Installing fetchmail binary..."
  	$(INSTALL_PROGRAM) ./fetchmail $(bindir)/fetchmail
  	@echo "Installing fetchmail configurator..."
