@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.12 2001/03/19 11:25:39 dmcmahill Exp $
+# $NetBSD: post-build,v 1.13 2001/05/03 21:46:32 dmcmahill Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -42,6 +42,19 @@ $reportf=basename($REPORT);
 # these have defaults set by bsd.bulk-pkg.mk and may be overridden in /etc/mk.conf
 chomp($BROKENFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=BROKENFILE )`); 
 
+# also extract the names of the cache files used during the bulk build.  We'll save a copy of 
+# those to help debug if the build messed up.
+chomp($DEPENDSTREEFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=DEPENDSTREEFILE )`); 
+chomp($DEPENDSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=DEPENDSFILE )`); 
+chomp($SUPPORTSFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=SUPPORTSFILE )`); 
+chomp($INDEXFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=INDEXFILE )`); 
+chomp($ORDERFILE=`( cd $USR_PKGSRC/pkgtools/pkglint ; make show-var VARNAME=ORDERFILE )`); 
+$dtfile=basename($DEPENDSTREEFILE);
+$depfile=basename($DEPENDSFILE);
+$supfile=basename($SUPPORTSFILE);
+$indfile=basename($INDEXFILE);
+$ordfile=basename($ORDERFILE);
+
 $verbose=1;
 
 if ($verbose) {
@@ -57,6 +70,13 @@ system("mkdir -p ${FTP}");
 # Copy over the output from the build process
 chdir("$USR_PKGSRC");
 system("tar plcf - $BROKENFILE */*/$BROKENFILE | ( cd ${FTP} ; tar plxf - )");
+
+# Copy over the cache files used during the build
+if (-f $DEPENDSTREEFILE ) {system("cp $DEPENDSTREEFILE ${FTP}");}
+if (-f $DEPENDSFILE ) {system("cp $DEPENDSFILE ${FTP}");}
+if (-f $SUPPORTSFILE ) {system("cp $SUPPORTSFILE ${FTP}");}
+if (-f $INDEXFILE ) {system("cp $INDEXFILE ${FTP}");}
+if (-f $ORDERFILE ) {system("cp $ORDERFILE ${FTP}");}
 
 
 open(HTML,">$REPORT") or die "Can't write $REPORT: $!\n";
@@ -155,6 +175,17 @@ $ntotal=$nunpackaged+$nbroken+$nbrokendep;
 print HTML <<EOHTML
 </TABLE>
 
+<HR>
+<P>
+The following cache files were used during the build:
+<UL>
+<LI>The <a href=$dtfile>depends tree file</a>.
+<LI>The <a href=$depfile>depends file</a>.
+<LI>The <a href=$supfile>supports file</a>.
+<LI>The <a href=$indfile>index file</a>.
+<LI>The <a href=$ordfile>build order file</a>.
+</UL>
+<P>
 <HR>
 
 <TABLE>
