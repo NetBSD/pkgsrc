@@ -1,20 +1,15 @@
-$NetBSD: distinfo,v 1.10 2005/02/23 22:24:22 agc Exp $
+$NetBSD: distinfo,v 1.11 2005/02/25 09:52:47 adam Exp $
 
-SHA1 (netcdf-3.5.0.tar.Z) = e9c5a9847d8ff9b3e1b8a18f5e216f6a1508bce8
-RMD160 (netcdf-3.5.0.tar.Z) = 4313e00fc56273e871c003bfb27c533d4a7f556f
-Size (netcdf-3.5.0.tar.Z) = 1319419 bytes
-SHA1 (patch-ab) = 37bf389e76316b03cc3590a1c13855636907b8a5
-SHA1 (patch-ac) = 8a73893ae7c98dd45d61d795592c57abe76d3fde
-SHA1 (patch-ad) = 85f57ffe815df04a5222924285af791dd12e6f5a
-SHA1 (patch-ae) = e91f8111387c7ca3111e640dcbc16d9bca8ed898
-SHA1 (patch-af) = 42a96275cc048d796452c20c7c6f24ac651e8877
-SHA1 (patch-ag) = 214b7c241bc71e5ebbef1e3f9f8a661acaf05228
-SHA1 (patch-ah) = 11083d7a775ca6199162fe3b14776ca24b5c009a
-SHA1 (patch-ai) = fb8386c47a2b0e2468bf31a424738979c472de94
-SHA1 (patch-aj) = 7721c70d1ec33477a51863626cbfb68e2ed689bb
-SHA1 (patch-ak) = 334ba2656119c9b3682cb6795030a2320c8b6d98
-SHA1 (patch-al) = e34833121ee90a18318948705af40da7a4513afc
-SHA1 (patch-am) = ac8ade3c79380833a1339b7f4c99224e89b231e7
-SHA1 (patch-an) = 5e8e3d13f65664af37ef276d0968b9206de120e9
-SHA1 (patch-ao) = 873ed1497741ed4cc449f19f499f3e55c4d4f6ea
-SHA1 (patch-ap) = 90951e89f433f231d66ffa31f48e8527f24a82c7
+SHA1 (netcdf-3.6.0-p1.tar.gz) = 7e02a62a1abe9c1f00222f44ed44d63def3cc3d2
+RMD160 (netcdf-3.6.0-p1.tar.gz) = f59877c5f1f70b7099f263f0a34c1b1bd12d41d9
+Size (netcdf-3.6.0-p1.tar.gz) = 842025 bytes
+SHA1 (patch-ab) = cbe412d8b7473dcee689b70f3a829109d2237f61
+SHA1 (patch-ac) = 82db04a3ed00b649c4f85ec0f72d1c9242244bfe
+SHA1 (patch-ad) = deadd0acf929a05b54fca49843ef1c4f9c00c9c5
+SHA1 (patch-ae) = 0813f13bb333f46042dac1d86730807bc17cce2e
+SHA1 (patch-af) = c15c86f7bad1959b66062ff43ad319f860f8038e
+SHA1 (patch-ag) = 49b2077ec60c05c32f0fc9f782cf0c6972039989
+SHA1 (patch-ah) = 49eb830457f1544cbd63c82671ef77267d544455
+SHA1 (patch-ai) = b6f3f113e9f952c4041daf1080b56f64590d2a75
+SHA1 (patch-al) = 2157008ecc8cc0f3330a41ee8a646233f19c5dbb
+SHA1 (patch-an) = 4cbf9b83f380d36a58ee3840bcd3e5a27404b58e
