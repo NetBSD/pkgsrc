@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/12/23 17:02:30 bjoern Exp $
+# $NetBSD: Makefile,v 1.15 2002/03/20 18:04:04 jlam Exp $
 #
 
 DISTNAME=		tcl8.3.4
@@ -53,6 +53,13 @@ post-patch:
 		>> mkLinks;						\
 	${RM} -f mkLinks.tmp;						\
 	${CHMOD} +x mkLinks;
+
+pre-install:
+	cd ${WRKSRC}; for file in					\
+		tclUnixInit.o libtcl83.so tclsh;			\
+	do								\
+		${TOUCH} $${file};					\
+	done
 
 post-install:
 	${CHMOD} -R ugo-w ${WRKDIR}/man
