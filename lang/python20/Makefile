@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2004/12/19 05:34:07 grant Exp $
+# $NetBSD: Makefile,v 1.26 2005/01/30 12:44:39 jmmv Exp $
 #
 
 DISTNAME=	Python-2.0.1
 PKGNAME=	python20-2.0.1
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0.1/
 EXTRACT_SUFX=	.tgz
@@ -12,6 +12,7 @@ MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
 
+CONFLICTS+=	python-[0-9]*
 CONFLICTS+=	python-2.0.*
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
