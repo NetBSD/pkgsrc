@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/29 15:32:49 tsarna Exp $
+@exec mkdir -p %D/lib/netscape/plugins
+lib/netscape/plugins/README.Linux
+lib/netscape/plugins/ShockwaveFlash.class
+lib/netscape/plugins/libflashplayer.so
+@unexec rmdir %D/lib/netscape/plugins 2>/dev/null || true
