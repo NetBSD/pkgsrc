@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.101 2002/08/29 07:07:47 itojun Exp $
+# $NetBSD: Makefile,v 1.102 2002/08/29 15:11:06 taya Exp $
 
 MOZ_VER=	1.1
 DISTNAME=	mozilla-source-${MOZ_VER}
 PKGNAME=	mozilla-${MOZ_VER}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/mozilla
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=mozilla${MOZ_VER}/src/}
@@ -30,7 +31,7 @@ CONFIGURE_ARGS=	--disable-tests \
 SHAREMODE?=	644
 ALL_TARGET=
 
-UNLIMIT_RESOURCES=  datasize memorysize stacksize
+UNLIMIT_RESOURCES=	datasize memorysize stacksize
 
 .include	"../../x11/gtk/buildlink.mk"
 .include	"../../graphics/gdk-pixbuf/buildlink.mk"
@@ -42,7 +43,8 @@ UNLIMIT_RESOURCES=  datasize memorysize stacksize
 # NetBSD-*-m68k builds, but "regchrome" dumps core.
 NOT_FOR_PLATFORM=	NetBSD-1.4.*-* NetBSD-*-m68k
 
-MOZ_LIBDIR=	${PREFIX}/lib/mozilla
+MOZILLA=	mozilla
+MOZ_LIBDIR=	${PREFIX}/lib/${MOZILLA}
 MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
 CONFIGURE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
 MAKE_ENV+=	MOZ_INTERNAL_LIBART_LGPL=1
@@ -53,11 +55,18 @@ LDFLAGS+=	-Wl,-R${MOZ_LIBDIR}
 # directory
 SCRIPTS_ENV+=	HOME="${WRKDIR}"
 
-PLIST_SRC=      ${PKGDIR}/PLIST-${OBJECT_FMT}
+PLIST_SUBST+=	MOZILLA="${MOZILLA}"
+.if ${OBJECT_FMT} == "ELF"
+SO_SUFFIX=	"so"
+.else
+SO_SUFFIX=	"so.1.0"
+.endif
+PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX}
 
 SCRIPTS_ENV+=	OBJECT_FMT=${OBJECT_FMT}
 SCRIPTS_ENV+=	PLIST_SRC=${PLIST_SRC}
 SCRIPTS_ENV+=	SED=${SED}
+SCRIPTS_ENV+=	RM=${RM}
 SCRIPTS_ENV+=	EGREP=${EGREP}
 SCRIPTS_ENV+=	CHOWN=${CHOWN}
 SCRIPTS_ENV+=	CHGRP=${CHGRP}
@@ -66,11 +75,13 @@ SCRIPTS_ENV+=	BINOWN=${BINOWN}
 SCRIPTS_ENV+=	BINGRP=${BINGRP}
 SCRIPTS_ENV+=	BINMODE=${BINMODE}
 SCRIPTS_ENV+=	SETENV=${SETENV}
+SCRIPTS_ENV+=   MOZILLA=${MOZILLA}
+SCRIPTS_ENV+=	SO_SUFFIX=${SO_SUFFIX}
 
 PTHREAD_OPTS+=	native optional
 
-COPTS?=		-O2
-CONFIGURE_ARGS+= --enable-optimize="${COPTS}"
+COPTS?=			-O2
+CONFIGURE_ARGS+=	--enable-optimize="${COPTS}"
 
 XPTCFILES+=	xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
 XPTCFILES+=	xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_netbsd.cpp

@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.6 2002/07/04 03:45:32 taya Exp $
+$NetBSD: patch-am,v 1.7 2002/08/29 15:11:14 taya Exp $
 
 diff -ru ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c ./nsprpub/pr/src/pthreads/ptio.c
---- ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c	Fri Apr 12 03:14:39 2002
-+++ ./nsprpub/pr/src/pthreads/ptio.c	Sun Jun 30 16:29:38 2002
+--- ../Orig/mozilla/nsprpub/pr/src/pthreads/ptio.c	Fri Jun 14 02:59:21 2002
++++ ./nsprpub/pr/src/pthreads/ptio.c	Wed Aug 28 11:22:04 2002
 @@ -192,7 +192,7 @@
  #elif defined(IRIX) || defined(OSF1) || defined(AIX) || defined(HPUX) \
      || defined(LINUX) || defined(FREEBSD) || defined(BSDI) || defined(VMS) \
