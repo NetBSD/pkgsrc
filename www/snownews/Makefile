@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2004/01/23 21:50:50 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/23 21:55:48 jmmv Exp $
 
-DISTNAME=       snownews-1.4.2
-PKGREVISION=     1
-CATEGORIES=     www
-MASTER_SITES=   http://home.kcore.de/~kiza/software/snownews/download/
+DISTNAME=	snownews-1.4.2
+PKGREVISION=	1
+CATEGORIES=	www
+MASTER_SITES=	http://home.kcore.de/~kiza/software/snownews/download/
 
-MAINTAINER=     pkgsrc@bjan.freeshell.org
+MAINTAINER=	pkgsrc@bjan.freeshell.org
 HOMEPAGE=	http://home.kcore.de/~kiza/software/snownews/
-COMMENT=        Small, curses based RSS feed reader
+COMMENT=	Small, curses based RSS feed reader
 
 BUILD_USES_MSGFMT=	YES
 
