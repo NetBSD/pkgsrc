@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/03/09 21:48:11 fredb Exp $
-#
+# $NetBSD: Makefile,v 1.13 2002/11/19 09:30:50 tron Exp $
 
 DISTNAME=	htdig-3.1.6
 CATEGORIES=	www databases
@@ -16,7 +15,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://htdig.sourceforge.net/
 COMMENT=	WWW indexing and searching system
 
-DEPENDS+=	db-2.7.7:../../databases/db
+DEPENDS+=	db>=2.7.7:../../databases/db
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
