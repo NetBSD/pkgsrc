@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2002/03/19 16:04:30 itojun Exp $
+
+--- install.pl-	Wed Mar 20 00:57:35 2002
++++ install.pl	Wed Mar 20 00:57:48 2002
+@@ -55,7 +55,7 @@
+ 
+ 
+ ($err = `cp vicq $bindir`) and fail($err);
+-($err = `pod2man vicq --section=1 --release="vICQ 0.3" --center="vICQ manual page" | gzip -c >  $mandir/man1/vicq.1.gz`) and &fail($err);
++($err = `pod2man vicq --section=1 --release="vICQ 0.3" --center="vICQ manual page" >  $mandir/man1/vicq.1`) and &fail($err);
+ print "Instalation complete\n";
+ sub fail
+ {
