@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3886 2003/12/01 15:22:18 ben Exp $
+$NetBSD: CHANGES,v 1.3887 2003/12/01 16:01:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4703,3 +4703,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated p5-razor-agents to 2.36 [heinz 2003-12-01]
 	Updated qt3 to 3.1.2nb4 [tron 2003-12-01]
 	Updated screen to 4.0.1nb2 [ben 2003-12-01]
+	Updated wine to 20031118 [adam 2003-12-01]
