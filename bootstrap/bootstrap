@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.24 2004/11/20 04:31:35 grant Exp $
+# $NetBSD: bootstrap,v 1.25 2005/01/05 21:51:19 tv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -181,7 +181,7 @@ copy_src()
 	if [ ! -d $wrkdir/$_dst ]; then
 		mkdir_p $wrkdir/$_dst
 	fi
-	$cpprog -Rp $_src/* $wrkdir/$_dst
+	$cpprog -R $_src/* $wrkdir/$_dst
 }
 
 build_start=`date`
