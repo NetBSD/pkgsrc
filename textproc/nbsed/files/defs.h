@@ -1,4 +1,4 @@
-/*	$NetBSD: defs.h,v 1.5 2004/09/08 08:37:38 jmmv Exp $	*/
+/*	$NetBSD: defs.h,v 1.6 2004/11/20 06:41:35 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993
@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)defs.h	8.1 (Berkeley) 6/6/93
- *	$NetBSD: defs.h,v 1.5 2004/09/08 08:37:38 jmmv Exp $
+ *	$NetBSD: defs.h,v 1.6 2004/11/20 06:41:35 grant Exp $
  */
 
 /*-
@@ -70,7 +70,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)defs.h	8.1 (Berkeley) 6/6/93
- *	$NetBSD: defs.h,v 1.5 2004/09/08 08:37:38 jmmv Exp $
+ *	$NetBSD: defs.h,v 1.6 2004/11/20 06:41:35 grant Exp $
  */
 
 /*
@@ -79,7 +79,7 @@
 enum e_atype {
 	AT_RE,					/* Line that match RE */
 	AT_LINE,				/* Specific line */
-	AT_LAST,				/* Last line */
+	AT_LAST					/* Last line */
 };
 
 /*
@@ -161,7 +161,7 @@ struct s_appends {
 
 enum e_spflag {
 	APPEND,					/* Append to the contents. */
-	REPLACE,				/* Replace the contents. */
+	REPLACE					/* Replace the contents. */
 };
 
 /*
