@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/03 02:51:03 jschauma Exp $
 bin/gv
 lib/X11/app-defaults/GV
 lib/X11/gv/gv_class.ad
 lib/X11/gv/gv_system.ad
 lib/X11/gv/gv_user.ad
-man/cat1/gv.0
+${IMAKE_MAN_PATH}/gv.${IMAKE_MANNEWSUFFIX}
 share/doc/gv/comments.doc.gz
 share/doc/gv/gs.interface.gz
 share/doc/gv/gv-faq.txt.gz
