@@ -1,0 +1,6 @@
+This is a full multiplayer (1-4) implementation of the classic board
+game, with computer players, and over 118,000 word dictionary (the
+Official Scrabble Players Dictionary, edition 3, as used in
+U.S. tournaments). This was a joint project, with Matthew Badham, who
+implemented the back end routines. There is a high score table, a best
+single goes list, a handy setup window, and load/save facilities.
