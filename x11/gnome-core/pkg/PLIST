@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 1999/11/14 23:27:39 tron Exp $
+@comment $NetBSD: PLIST,v 1.15 2000/01/20 14:25:20 tron Exp $
 bin/another_clock_applet
 bin/asclock_applet
 bin/battery_applet
@@ -264,6 +264,33 @@ share/gnome/help/gnome-terminal/C/options.html
 share/gnome/help/gnome-terminal/C/pointerusage.html
 share/gnome/help/gnome-terminal/C/terminal.html
 share/gnome/help/gnome-terminal/C/topic.dat
+share/gnome/help/gnome-terminal/da/index.html
+share/gnome/help/gnome-terminal/da/topic.dat
+share/gnome/help/gnome-terminal/da/authors.html
+share/gnome/help/gnome-terminal/da/classes.html
+share/gnome/help/gnome-terminal/da/config.html
+share/gnome/help/gnome-terminal/da/emulation.html
+share/gnome/help/gnome-terminal/da/enviroment.html
+share/gnome/help/gnome-terminal/da/ln9.html
+share/gnome/help/gnome-terminal/da/menus.html
+share/gnome/help/gnome-terminal/da/options.html
+share/gnome/help/gnome-terminal/da/pointerusage.html
+share/gnome/help/gnome-terminal/da/terminal.html
+share/gnome/help/gnome-terminal/da/termtech.html
+share/gnome/help/gnome-terminal/da/docbook.css
+share/gnome/help/gnome-terminal/es/index.html
+share/gnome/help/gnome-terminal/es/topic.dat
+share/gnome/help/gnome-terminal/es/authors.html
+share/gnome/help/gnome-terminal/es/classes.html
+share/gnome/help/gnome-terminal/es/config.html
+share/gnome/help/gnome-terminal/es/emulation.html
+share/gnome/help/gnome-terminal/es/environment.html
+share/gnome/help/gnome-terminal/es/ln15.html
+share/gnome/help/gnome-terminal/es/menus.html
+share/gnome/help/gnome-terminal/es/options.html
+share/gnome/help/gnome-terminal/es/pointerusage.html
+share/gnome/help/gnome-terminal/es/terminal.html
+share/gnome/help/gnome-terminal/es/docbook.css
 share/gnome/help/gnome-terminal/no/authors.html
 share/gnome/help/gnome-terminal/no/classes.html
 share/gnome/help/gnome-terminal/no/config.html
@@ -284,6 +311,11 @@ share/gnome/help/help-browser/C/help-browser.html
 share/gnome/help/help-browser/C/index.html
 share/gnome/help/help-browser/C/topic.dat
 share/gnome/help/help-browser/ca/default-page.html
+share/gnome/help/help-browser/da/help-browser.html
+share/gnome/help/help-browser/da/topic.dat
+share/gnome/help/help-browser/da/default-page.html
+share/gnome/help/help-browser/da/index.html
+share/gnome/help/help-browser/el/default-page.html
 share/gnome/help/help-browser/es/default-page.html
 share/gnome/help/help-browser/es/help-browser.html
 share/gnome/help/help-browser/es/index.html
@@ -351,6 +383,7 @@ share/locale/eu/LC_MESSAGES/gnome-core.mo
 share/locale/fi/LC_MESSAGES/gnome-core.mo
 share/locale/fr/LC_MESSAGES/gnome-core.mo
 share/locale/ga/LC_MESSAGES/gnome-core.mo
+share/locale/gl/LC_MESSAGES/gnome-core.mo
 share/locale/hu/LC_MESSAGES/gnome-core.mo
 share/locale/it/LC_MESSAGES/gnome-core.mo
 share/locale/ja/LC_MESSAGES/gnome-core.mo
@@ -359,6 +392,7 @@ share/locale/nl/LC_MESSAGES/gnome-core.mo
 share/locale/no/LC_MESSAGES/gnome-core.mo
 share/locale/pl/LC_MESSAGES/gnome-core.mo
 share/locale/pt/LC_MESSAGES/gnome-core.mo
+share/locale/pt_BR/LC_MESSAGES/gnome-core.mo
 share/locale/ro/LC_MESSAGES/gnome-core.mo
 share/locale/ru/LC_MESSAGES/gnome-core.mo
 share/locale/sk/LC_MESSAGES/gnome-core.mo
@@ -590,24 +624,28 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/help-browser/eu
 @dirrm share/gnome/help/help-browser/et
 @dirrm share/gnome/help/help-browser/es
+@dirrm share/gnome/help/help-browser/el
+@dirrm share/gnome/help/help-browser/da
 @dirrm share/gnome/help/help-browser/ca
 @dirrm share/gnome/help/help-browser/C
 @dirrm share/gnome/help/help-browser
+@dirrm share/gnome/help/gnome-terminal/es
+@dirrm share/gnome/help/gnome-terminal/da
 @dirrm share/gnome/help/gnome-terminal/no
 @dirrm share/gnome/help/gnome-terminal/C
 @dirrm share/gnome/help/gnome-terminal
 @dirrm share/gnome/help/gnome-intro/C/pix
 @dirrm share/gnome/help/gnome-intro/C
 @dirrm share/gnome/help/gnome-intro
-@dirrm share/gnome/apps/Utilities
-@dirrm share/gnome/apps/System
-@dirrm share/gnome/apps/Settings
-@dirrm share/gnome/apps/Multimedia
-@dirrm share/gnome/apps/Internet
-@dirrm share/gnome/apps/Graphics
-@dirrm share/gnome/apps/Games
-@dirrm share/gnome/apps/Applications
-@dirrm share/gnome/apps
+@unexec rmdir %D/share/gnome/apps/Utilities 2>/dev/null || true
+@unexec rmdir %D/share/gnome/apps/System 2>/dev/null || true
+@unexec rmdir %D/share/gnome/apps/Settings 2>/dev/null || true
+@unexec rmdir %D/share/gnome/apps/Multimedia 2>/dev/null || true
+@unexec rmdir %D/share/gnome/apps/Internet 2>/dev/null || true
+@unexec rmdir %D/share/gnome/apps/Graphics 2>/dev/null || true
+@unexec rmdir %D/share/gnome/apps/Games 2>/dev/null || true
+@unexec rmdir %D/share/gnome/apps/Applications 2>/dev/null || true
+@unexec rmdir %D/share/gnome/apps 2>/dev/null || true
 @dirrm share/asclock/shaped
 @dirrm share/asclock/classic
 @dirrm share/asclock/beats
