@@ -1,6 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: snmpd.sh,v 1.7 2002/09/23 15:21:40 grant Exp $
+# $NetBSD: snmpd.sh,v 1.8 2003/03/06 23:00:15 hubertf Exp $
+#
+# PROVIDE: snmpd
+# REQUIRE: DAEMON LOGIN network
 #
 # PID file:
 PF=/var/run/snmpd.pid
