@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/02/17 15:33:52 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/30 18:32:33 jlam Exp $
 #
 
 DISTNAME=		chkrootkit
@@ -12,7 +12,7 @@ COMMENT=		Locally checks for signs of a rootkit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 DIST_SUBDIR=		${PKGNAME}
 USE_GNU_TOOLS+=		make
 USE_BUILDLINK3=		yes
