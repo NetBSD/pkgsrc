@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:00 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/12 20:40:17 agc Exp $
 bin/exmh
 bin/exmh-async
 bin/exmh-bg
@@ -50,7 +50,6 @@ lib/${PKGNAME}/folder.tcl
 lib/${PKGNAME}/folderNew.tcl
 lib/${PKGNAME}/fontsel.tcl
 lib/${PKGNAME}/ftoc.tcl
-lib/${PKGNAME}/ftocColor.tcl
 lib/${PKGNAME}/ftocFind.tcl
 lib/${PKGNAME}/ftp_get.tcl
 lib/${PKGNAME}/getnews.tcl
@@ -175,6 +174,8 @@ lib/${PKGNAME}/seditQP.tcl
 lib/${PKGNAME}/seditSel.tcl
 lib/${PKGNAME}/select.tcl
 lib/${PKGNAME}/send.tcl
+lib/${PKGNAME}/sequences.tcl
+lib/${PKGNAME}/seqwin.tcl
 lib/${PKGNAME}/sound.tcl
 lib/${PKGNAME}/source.tcl
 lib/${PKGNAME}/tclIndex
@@ -184,7 +185,6 @@ lib/${PKGNAME}/textSelect.tcl
 lib/${PKGNAME}/thread.tcl
 lib/${PKGNAME}/timer.bitmap
 lib/${PKGNAME}/tioga.tcl
-lib/${PKGNAME}/unseenwin.tcl
 lib/${PKGNAME}/uri.tcl
 lib/${PKGNAME}/url.bitmap
 lib/${PKGNAME}/urlFace.tcl
