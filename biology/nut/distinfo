@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2003/07/12 12:23:13 wiz Exp $
+$NetBSD: distinfo,v 1.4 2003/08/11 07:26:00 wiz Exp $
 
-SHA1 (nut-8.10.tar.gz) = 5d69a814ace32f6a50d678af4460d1d3ebce2eaa
-Size (nut-8.10.tar.gz) = 844871 bytes
-SHA1 (patch-ab) = 717e1a502295b1bf57fa9db6e55e00c2b64b5761
+SHA1 (nut-9.0.tar.gz) = dd40b5bf958ad9ea660c6ab60db0a8cfc57ec1ac
+Size (nut-9.0.tar.gz) = 900128 bytes
+SHA1 (patch-ab) = db5aa9edf54a610c890f97b172fd82fd843cfdf7
 SHA1 (patch-ac) = 525d65d517f637ed908d1df95672d34713dcf2bd
