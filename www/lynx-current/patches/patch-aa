@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2000/05/08 01:46:57 fredb Exp $
+
+--- configure.orig	Sat Apr 22 20:16:38 2000
++++ configure	Sun May  7 19:57:45 2000
+@@ -6597,7 +6597,10 @@
+ echo "$ac_t""$cf_cv_screen" 1>&6
+ 
+ case $cf_cv_screen in
+-ncurses|slang)
++ncurses)
++	cf_cv_ncurses_header=ncurses.h
++	;;
++slang)
+ 	;;
+ pdcurses)
+ 	cf_cv_ncurses_header=xcurses.h
+@@ -7171,6 +7174,12 @@
+ 
+ case $cf_cv_ncurses_header in # (vi
+ */ncurses.h)
++	cat >> confdefs.h <<\EOF
++#define HAVE_NCURSES_H 1
++EOF
++
++	;;
++ncurses.h)
+ 	cat >> confdefs.h <<\EOF
+ #define HAVE_NCURSES_H 1
+ EOF
