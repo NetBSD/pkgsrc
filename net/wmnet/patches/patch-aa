@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2000/07/31 17:02:25 tron Exp $
+
+--- Imakefile.orig	Fri May  5 02:34:29 2000
++++ Imakefile	Mon Jul 31 19:01:24 2000
+@@ -10,14 +10,16 @@
+ LOCAL_LIBRARIES = $(XLIB) -lm 
+ #endif
+ 
+-#if defined (FreeBSDArchitecture) || defined (OpenBSDArchitecture)
++#if defined (FreeBSDArchitecture) || defined (OpenBSDArchitecture) || \
++    defined (NetBSDArchitecture)
+ LOCAL_LIBRARIES = $(XLIB) -lm -lkvm
+ INSTPGMFLAGS = -s -g kmem -m 2755 
+ #endif
+ 
+ LINTLIBS = $(LINTXLIB)
+ 
+-#if defined (FreeBSDArchitecture) || defined (OpenBSDArchitecture)
++#if defined (FreeBSDArchitecture) || defined (OpenBSDArchitecture) || \
++    defined (NetBSDArchitecture)
+ SRCS = wmnet.c drivers.c getopt.c getopt1.c
+ OBJS = wmnet.o drivers.o getopt.o getopt1.o
+ #else
