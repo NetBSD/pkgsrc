@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/11/08 16:46:27 shannonjr Exp $
+# $NetBSD: Makefile,v 1.12 2004/11/15 11:39:14 shannonjr Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -126,7 +126,7 @@ pre-configure:
 	(cd ${WRKDIR}/.buildlink && ${MKDIR} ${RALT_GCC_RTS} && \
 	cd ${RALT_GCC_RTS} && ${LN} -sf ${ALT_GCC_RTS}/libgnat.a .)
 	(cd ${ALT_GCC:H} && \
-	files=`${FIND} . -type f \( -perm -0100 \)` && \
+	files=`${FIND} . -type f \( -perm -0100 \) -print` && \
 	cd ${GCC_DIR}/bin/ && \
 	for file in ${ALT_GCC:T} $${files} ; do \
 		${ECHO} '#!${TOOLS_SHELL}' > $${file}; \
