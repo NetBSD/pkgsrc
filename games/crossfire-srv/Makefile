@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/10/26 10:43:54 agc Exp $
+# $NetBSD: Makefile,v 1.8 2001/10/26 11:10:35 agc Exp $
 #
 
 DISTNAME=	crossfire-1.0.0
@@ -12,6 +12,7 @@ HOMEPAGE=	http://crossfire.real-time.com/
 COMMENT=	X11 multi/single player game similar to gauntlet and nethack
 
 DEPENDS+=	png>=1.0.11:../../graphics/png
+DEPENDS+=	dmalloc-[0-9]*:../../devel/dmalloc
 
 EXTRACT_ONLY=	${CF_SRC}
 
@@ -26,6 +27,8 @@ GNU_CONFIGURE=	yes
 USE_PERL5=	yes
 CONFIGURE_ARGS+=	--prefix=${LOCALBASE}
 CONFIGURE_ARGS+=	--with-includes=-I${LOCALBASE}/include
+
+MAKE_ENV+=	EXTRA_INCLUDES=-I${LOCALBASE}/include
 
 REPLACE_PERL=	lib/xpmtopix.pl lib/adm/check-xpm.pl lib/adm/make_xpm_file.pl
 REPLACE_PERL+=	lib/adm/map_expand.pl lib/adm/mapslitter.pl
