@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/07/13 21:56:01 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2001/07/13 23:12:18 itojun Exp $
 
 DISTNAME=	lambd-20010714
 CATEGORIES=	sysutils
@@ -7,6 +7,9 @@ DISTFILES=	# none
 
 MAINTAINER=	itojun@netbsd.org
 COMMENT=	shutdown switch monitoring daemon for Wildlab LAMB
+
+EXTRACT_ONLY=	# none
+NO_CHECKSUM=	yes
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
