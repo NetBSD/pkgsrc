@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/25 04:17:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/04/22 22:18:10 zuntum Exp $
 # FreeBSD: ports/mail/rblcheck/Makefile,v 1.6 1999/08/25 06:50:47 obrien Exp
 #
 
@@ -15,12 +15,8 @@ DOCS=		BUGS CHANGES CREDITS INSTALL PLATFORMS TODO
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rblcheck ${PREFIX}/bin
-.if !defined(NOPORTDOCS)
-	dst=${PREFIX}/share/doc/rblcheck; \
-	${INSTALL_DATA_DIR} $$dst; \
-	for i in ${DOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/docs/$$i $$dst; \
-	done
-.endif
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rblcheck
+	cd ${WRKSRC}/docs &&						\
+		${INSTALL_DATA} ${DOCS} ${PREFIX}/share/doc/rblcheck
 
 .include "../../mk/bsd.pkg.mk"
