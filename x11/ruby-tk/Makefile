@@ -1,30 +1,36 @@
-# $NetBSD: Makefile,v 1.9 2004/03/17 04:13:46 taca Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/27 14:50:45 taca Exp $
 # FreeBSD: ports/x11-toolkits/ruby-tk/Makefile,v 1.21 2000/10/20 19:56:04 knu Exp
 
 DISTNAME=	${RUBY_DISTNAME}
-PKGNAME=	${RUBY_PKGNAMEPREFIX}tk-${RUBY_VERSION}
-PKGREVISION=	2
+PKGNAME=	${RUBY_PKGPREFIX}-tk-${RUBY_VERSION}
 CATEGORIES=	x11 ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.ruby-lang.org/en/
+HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby interface to the Tk widget set
 
-DEPENDS+=	${RUBY_PKGNAMEPREFIX}tcltklib>=${RUBY_VERSION}:../../x11/ruby-tcltklib
+DEPENDS+=	${RUBY_PKGPREFIX}-tcltklib>=${RUBY_VERSION}:../../x11/ruby-tcltklib
 
-WRKSRC=		${RUBY_WRKSRC}/ext/tk
-DIST_SUBDIR=	ruby
+RUBY_VERSION_SUPPORTED=	18
+USE_BUILDLINK3=		yes
+USE_RUBY_EXTCONF=	yes
+USE_X11=		yes
+EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/tk
+WRKSRC=			${RUBY_WRKSRC}/ext/tk
 
-EXTRACT_ELEMENTS= ${RUBY_DISTNAME}/ext/tk
-USE_RUBY_EXTCONF= yes
+REPLACE_RUBY_DIRS=	sample
 
 post-patch:
-	@${FIND} ${WRKSRC} -name '*.orig' -exec rm -f {} \;
+	@${FIND} ${WRKSRC} \( -name '*.orig' -o -name '*.bak' \) \
+		-exec rm -f {} \;
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/tk
-	${INSTALL_DATA} ${WRKSRC}/sample/* ${RUBY_EXAMPLESDIR}/tk
+	${CP} -r ${WRKSRC}/sample/* ${RUBY_EXAMPLESDIR}/tk
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/Makefile.common"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

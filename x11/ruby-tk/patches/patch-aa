@@ -1,13 +1,19 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/30 08:20:26 taca Exp $
+$NetBSD: patch-aa,v 1.2 2004/11/27 14:50:45 taca Exp $
 
---- sample/tkbiff.rb.orig	Fri Aug 13 14:37:52 1999
+--- sample/tkbiff.rb.orig	2003-08-02 15:42:44.000000000 +0900
 +++ sample/tkbiff.rb
-@@ -12,7 +12,7 @@
+@@ -11,8 +11,12 @@ end
+ if ARGV.length == 0
    if ENV['MAIL']
      $spool = ENV['MAIL']
-   else  
--    $spool = '/usr/spool/mail/' + ENV['USER']
-+    $spool = '/var/mail/' + ENV['USER']
+-  else  
+-    $spool = '/var/spool/mail/' + ENV['USER']
++  else
++    dir = '/var/spool/mail'
++    unless FileTest.directory?(dir)
++      dir = '/var/mail'
++    end
++    $spool = dir + '/' + ENV['USER']
    end
  else 
    $spool = ARGV[0]
