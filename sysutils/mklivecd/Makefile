@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/26 17:28:58 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/26 17:30:33 xtraeme Exp $
 
 DISTNAME=	mklivecd-0.4
 CATEGORIES=	sysutils
@@ -8,7 +8,7 @@ DISTFILES=	# empty
 MAINTAINER=	xtraeme@NetBSD.org
 COMMENT=	Build a NetBSD i386 Live CD via command line
 
-#DEPENDS+=	cdrecord-[0-9]*:../../sysutils/cdrecord
+DEPENDS+=	cdrecord-[0-9]*:../../sysutils/cdrecord
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
