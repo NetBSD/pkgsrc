@@ -1,55 +1,51 @@
-# $NetBSD: Makefile,v 1.10 2003/06/02 01:16:23 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/23 07:52:39 jlam Exp $
 #
 
-DISTNAME=	xerces-c-src1_3_0
-PKGNAME=	xerces-c-1.3.0
-PKGREVISION=	1
-WRKSRC=		${WRKDIR}/xerces-c-src1_3_0/src/
+DISTNAME=	xerces-c-src1_7_0
+PKGNAME=	${DISTNAME:S/-src/-/:S/_/./g}
+WRKSRC=		${WRKDIR}/${DISTNAME}/src/xercesc
 CATEGORIES=	textproc
-MASTER_SITES=	http://xml.apache.org/dist/xerces-c/stable/
+MASTER_SITES=	http://xml.apache.org/dist/xerces-c/stable/archives/Xerces-C_${DISTNAME:S/xerces-c-src//}/
 
 MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://xml.apache.org/xerces-c/
-COMMENT=	The Apache Project's validating XML parser with DOM and SAX support
+COMMENT=	validating C++ XML parser with DOM and SAX support
 
-GNU_CONFIGURE=	YES
-USE_GMAKE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK2=		YES
+USE_GMAKE=		YES
 
-ICUROOT=	${BUILDLINK_PREFIX.icu}
+.include "../../mk/bsd.prefs.mk"
+.if ${LOWER_OPSYS} == "SunOS"
+XERCES_PLATFORM=	solaris
+.elif ${LOWER_OPSYS} == "Darwin"
+XERCES_PLATFORM=	macosx
+.else
+XERCES_PLATFORM=	${LOWER_OPSYS}
+.endif
+XERCES_ENV+=		XERCESCROOT="${WRKDIR}/${DISTNAME}"
+XERCES_ENV+=		ICUROOT="${BUILDLINK_PREFIX.icu}"
 
-SCRIPT_ENV+=	ICUROOT="${BUILDLINK_PREFIX.icu}"
+HAS_CONFIGURE=		YES
+CONFIGURE_SCRIPT=	./runConfigure
+CONFIGURE_ARGS+=	-P ${PREFIX}		# installation prefix
+CONFIGURE_ARGS+=	-p ${XERCES_PLATFORM}	# platform
+CONFIGURE_ARGS+=	-n socket		# net accessor
+CONFIGURE_ARGS+=	-m icu			# message loader
+CONFIGURE_ARGS+=	-t icu			# transcoder
+CONFIGURE_ARGS+=	-r none			# threading
 
-FLAGS+=		-O2 -I${ICUROOT}/include \
-		-DXML_USE_ICU_TRANSCODER \
-		-DXML_USE_NETACCESSOR_SOCKET \
-		-DAPP_NO_THREADS
-
-CFLAGS+=	${FLAGS}
-CXXFLAGS+=	${FLAGS}
-LIBS=		-L${ICUROOT}/lib -Wl,${RPATH_FLAG}${ICUROOT}/lib
-LIBS+=		-L${ICUROOT}/lib/icu/current -Wl,${RPATH_FLAG}${ICUROOT}/lib/icu/current
-
-CONFIGURE_ENV+=	XERCESCROOT="${WRKDIR}/xerces-c-src1_3_0" \
-		ICUROOT=${ICUROOT} \
-		NETACCESSOR=Socket \
-		TRANSCODER=ICU
-
-MAKE_ENV+=	XERCESCROOT="${WRKDIR}/xerces-c-src1_3_0" \
-		ICUROOT="${BUILDLINK_PREFIX.icu}" \
-		NETACCESSOR=Socket \
-		TRANSCODER=ICU \
+CONFIGURE_ENV+=		${XERCES_ENV}
+MAKE_ENV+=		${XERCES_ENV}
 
 post-extract:
 	${MKDIR} ${WRKSRC}/util/Platforms/NetBSD
-	${CP} \
-		${FILESDIR}/Makefile.in \
-		${FILESDIR}/NetBSDDefs.hpp \
-		${FILESDIR}/NetBSDPlatformUtils.cpp \
+	${CP}	${FILESDIR}/Makefile.in					\
+		${FILESDIR}/NetBSDDefs.hpp				\
+		${FILESDIR}/NetBSDPlatformUtils.cpp			\
 		${WRKSRC}/util/Platforms/NetBSD
 
 pre-configure:
-	${CHMOD} a+x ${WRKSRC}/configure
+	${CHMOD} +x ${WRKSRC}/${CONFIGURE_SCRIPT}
 
 .include "../../textproc/icu/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

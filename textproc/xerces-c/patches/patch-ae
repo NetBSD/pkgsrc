@@ -1,12 +1,14 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/01/13 16:38:27 skrll Exp $
+$NetBSD: patch-ae,v 1.2 2003/06/23 07:52:41 jlam Exp $
 
---- internal/Makefile.in.orig	Sat Sep 30 18:37:28 2000
-+++ internal/Makefile.in
-@@ -119,5 +119,5 @@
- 	$(RM2) $(addprefix $(XML_INC_DIR)/$(MODULE)/,$(INTERNAL_CPP_PUBHEADERS))
- 
- install::
--	-mkdir -p $(PREFIX)/$(MODULE)
--	$(CP) $(INTERNAL_CPP_PUBHEADERS) $(INTERNAL_C_FILES) $(PREFIX)/$(MODULE)
-+	-mkdir -p $(PREFIX)/include/$(MODULE)
-+	$(CP) $(INTERNAL_CPP_PUBHEADERS) $(INTERNAL_C_FILES) $(PREFIX)/include/$(MODULE)
+--- util/Compilers/Makefile.in.orig	Fri Jun 20 05:37:23 2003
++++ util/Compilers/Makefile.in
+@@ -135,6 +135,9 @@ ifeq (${CXX},c++)
+     ifeq (${PLATFORM},MACOSX)
+         CPP_OBJECTS = GCCDefs.$(TO)
+     endif
++    ifeq (${PLATFORM},NETBSD)
++        CPP_OBJECTS = GCCDefs.$(TO)
++    endif
+ endif
+ ifeq (${CXX},cc)
+     ifeq (${PLATFORM},MACOSX)
