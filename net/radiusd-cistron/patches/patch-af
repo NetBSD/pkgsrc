@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.2 2001/12/20 10:05:50 martti Exp $
+$NetBSD: patch-af,v 1.3 2003/12/16 19:19:41 martti Exp $
 
---- src/radwho.c.orig	Mon May  7 22:33:45 2001
-+++ src/radwho.c	Thu Dec 20 09:38:25 2001
+--- src/radwho.c.orig	Wed Jul  2 12:39:03 2003
++++ src/radwho.c	Tue Dec 16 20:20:12 2003
 @@ -20,6 +20,7 @@
  #include <errno.h>
  #include <sys/stat.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.2 2001/12/20 10:05:50 martti Exp $
  #include <time.h>
  #include <ctype.h>
  #include <netinet/in.h>
-@@ -40,18 +41,21 @@
+@@ -40,18 +41,20 @@
   *	Header above output and format.
   */
  char *hdr1 = 
@@ -21,24 +21,23 @@ $NetBSD: patch-af,v 1.2 2001/12/20 10:05:50 martti Exp $
  char *ufmt1r = "%s,%s,%s,%s,%s,%s,%s%s";
 -char *rfmt1 = "%-10.10s %-17.17s %-5.5s %s%-3d %-9.9s %-9.9s %-.19s%s";
 +char *rfmt1 = "%-16.16s %-17.17s %-5.5s %s%-3d %-9.9s %-9.9s %-.*s%s";
- char *rfmt1r = "%s,%s,%s,%s%d,%s,%s,%s%s";
-+#define FMT1_HOST_SIZE        13
+ char *rfmt1r = "%s,%s,%s,%s%u,%s,%s,%s%s";
++#define FMT1_HOST_SIZE	13
  
  char *hdr2 = 
 -"Login      Port    What   When          From       Location";
 -char *ufmt2 = "%-10.10s %-6.6d %-7.7s %-13.13s %-10.10s %-.16s%s";
 +"Login           Port    What   When          From       Location";
 +char *ufmt2 = "%-16.16s %-6.6d %-7.7s %-13.13s %-10.10s %-.*s%s";
- char *ufmt2r = "%s,%d,%s,%s,%s,%s%s";
+ char *ufmt2r = "%s,%u,%s,%s,%s,%s%s";
 -char *rfmt2 = "%-10.10s %s%-5d  %-6.6s %-13.13s %-10.10s %-.28s%s";
 +char *rfmt2 = "%-16.16s %s%-5d  %-6.6s %-13.13s %-10.10s %-.*s%s";
- char *rfmt2r = "%s,%s%d,%s,%s,%s,%s%s";
-+#define FMT2_HOST_SIZE        19
-+
+ char *rfmt2r = "%s,%s%u,%s,%s,%s,%s%s";
++#define FMT2_HOST_SIZE	19
  
  char *eol = "\n";
  NAS *naslist;
-@@ -307,7 +311,8 @@
+@@ -307,7 +310,8 @@
  		return tmp;
  	}
  	if (strncmp(tty, "cu", 2) == 0) {
@@ -48,7 +47,7 @@ $NetBSD: patch-af,v 1.2 2001/12/20 10:05:50 martti Exp $
  	}
  	return "??";
  }
-@@ -371,6 +376,8 @@
+@@ -371,6 +375,8 @@
   */
  int main(int argc, char **argv)
  {
@@ -57,7 +56,7 @@ $NetBSD: patch-af,v 1.2 2001/12/20 10:05:50 martti Exp $
  	FILE *fp;
  	struct radutmp rt;
  	struct utmp ut;
-@@ -388,6 +395,11 @@
+@@ -389,6 +395,11 @@
  	char *p, *q, *portind;
  	int c, portno;
  
@@ -69,7 +68,7 @@ $NetBSD: patch-af,v 1.2 2001/12/20 10:05:50 martti Exp $
  	while((c = getopt(argc, argv, "Dd:flhnsipcru:")) != EOF) switch(c) {
  		case 'D':
  			use_dns = 0;
-@@ -485,14 +497,17 @@
+@@ -486,14 +497,17 @@
  		while(fread(&ut, sizeof(ut), 1, fp) == 1) {
  #ifdef USER_PROCESS
  			if (ut.ut_user[0] && ut.ut_line[0] &&
@@ -92,7 +91,7 @@ $NetBSD: patch-af,v 1.2 2001/12/20 10:05:50 martti Exp $
  					"shell",
  					ttyshort(ut.ut_line),
  #ifdef __svr4__
-@@ -501,10 +516,11 @@
+@@ -502,10 +516,11 @@
  					dotime(ut.ut_time),
  #endif
  					ut.ut_host,
@@ -105,7 +104,7 @@ $NetBSD: patch-af,v 1.2 2001/12/20 10:05:50 martti Exp $
  					ttyshort(ut.ut_line),
  					"shell",
  #ifdef __svr4__
-@@ -513,6 +529,7 @@
+@@ -514,6 +529,7 @@
  					dotime(ut.ut_time),
  #endif
  					ut.ut_host,
@@ -113,7 +112,7 @@ $NetBSD: patch-af,v 1.2 2001/12/20 10:05:50 martti Exp $
  					myname, eol);
  			}
  		}
-@@ -557,6 +574,7 @@
+@@ -560,6 +576,7 @@
  				portind, portno,
  				dotime(rt.time),
  				nasname(ntohl(rt.nas_address)),
@@ -121,7 +120,7 @@ $NetBSD: patch-af,v 1.2 2001/12/20 10:05:50 martti Exp $
  				hostname(rt.framed_address), eol);
  			else
  			    printf((rawoutput == 0? rfmt2: rfmt2r),
-@@ -565,6 +583,7 @@
+@@ -568,6 +585,7 @@
  				proto(rt.proto, rt.porttype),
  				dotime(rt.time),
  				nasname(ntohl(rt.nas_address)),
