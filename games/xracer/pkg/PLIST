@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/29 06:36:00 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/05/29 12:29:23 rh Exp $
 bin/xracer
 bin/xracer-blenderexport.py
 bin/xracer-blender2track.pl
@@ -66,8 +66,12 @@ share/doc/xracer-0.96.9/faq.txt
 share/doc/xracer-0.96.9/faq.html
 share/doc/xracer-0.96.9/index.html
 share/doc/xracer-0.96.9/AUTHORS
+lib/perl5/site_perl/XRacer/BVRML.pm
+lib/perl5/site_perl/XRacer/BlenderImport.pm
+lib/perl5/site_perl/XRacer/Math.pm
 lib/perl5/site_perl/i386-netbsd/auto/XRacer/.packlist
 @dirrm lib/perl5/site_perl/i386-netbsd/auto/XRacer
+@dirrm lib/perl5/site_perl/XRacer
 @dirrm share/doc/xracer-0.96.9
 @dirrm share/xracer/fonts
 @dirrm share/xracer/tracks
