@@ -1,0 +1,3 @@
+  This is the canvas widget library for GNOME2.  Libgnomecanvas was
+originally part of the gnome-libs package, but has been split out into
+a separate package for GNOME2.
