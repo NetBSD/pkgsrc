@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.7 2004/08/27 06:29:06 jlam Exp $
+$NetBSD: distinfo,v 1.8 2004/12/03 12:15:54 adam Exp $
 
-SHA1 (eggdrop1.6.15.tar.bz2) = 8740800b066b35c745c7e753e7f58daac9929f3a
-Size (eggdrop1.6.15.tar.bz2) = 760615 bytes
-SHA1 (patch-aa) = 25f5b1202a8eee7cd04c5830256f280eec6fbb1e
-SHA1 (patch-ab) = 87c5697a2b33488b96c0f457414187e6caa5881b
-SHA1 (patch-ac) = a1c5648e2748f5efbcb890b5ed8a3e8faac5f0a5
-SHA1 (patch-ad) = 8b9f740e82d44df7daeede770fce7f5add751407
-SHA1 (patch-ae) = 370fe00ada6b9432483ab3e0ef9c349f7c7dd00f
-SHA1 (patch-af) = 1915d3f9ac55e49d829613c6f003b2800f62a734
-SHA1 (patch-ag) = 9cb1acc1be5ad4186dc7c9fac9f20955a9f51292
-SHA1 (patch-ah) = b9f6e10f0a1a8f73f014ceae5015dc157f8fe124
-SHA1 (patch-ai) = 0bbf9e3be1368897e2a9399c9ea58f28c8f84e0c
-SHA1 (patch-aj) = 7701eefed77228fe46360bea717403314386de03
-SHA1 (patch-ak) = c2239684483a78dd294055c4f14239cae531d056
+SHA1 (eggdrop1.6.17.tar.bz2) = 0e8a0b5506dde4a99f2be9f0700d6da65f54357f
+Size (eggdrop1.6.17.tar.bz2) = 805376 bytes
+SHA1 (patch-aa) = bdc5a3560672599e5645e14ef283cc2205780346
+SHA1 (patch-ab) = ac7aa4b3cb32e53b7e6abe828191afe153a1bbb1
+SHA1 (patch-ac) = c71d67618a5b53a3de2f3041ed8fa098a89e4471
+SHA1 (patch-ad) = eaa3d342f47e0f3060dd29b6d64ef1f984eda6a8
+SHA1 (patch-ae) = bdbb616282b7dc643182a35c606401850b33fdca
+SHA1 (patch-af) = 8f314d65d1a396b85e17400ee046f2ad4324a690
+SHA1 (patch-ag) = 61a030dc33de4f78cb19653035bebf7661f57c50
+SHA1 (patch-ah) = a5360c748e16cbc3d6ae4f2968799e96007971f1
+SHA1 (patch-ai) = ee0cfe95a1aa9a883fd95db0fbc0cef60deb8e3a
+SHA1 (patch-ak) = 92f269a3f382a9f917d7e58c2cee5bb1d500ab6d

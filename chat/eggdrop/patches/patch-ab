@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.3 2003/05/24 16:43:05 salo Exp $
+$NetBSD: patch-ab,v 1.4 2004/12/03 12:15:54 adam Exp $
 
---- src/main.c.orig	2003-05-04 22:15:53.000000000 +0200
-+++ src/main.c	2003-05-24 16:56:20.000000000 +0200
-@@ -70,7 +70,7 @@
- #define _POSIX_SOURCE 1
+--- src/main.c.orig	2004-07-02 21:21:08.000000000 +0000
++++ src/main.c
+@@ -72,7 +72,7 @@
+ #  define _POSIX_SOURCE 1 /* Solaris needs this */
  #endif
  
 -extern char origbotname[], userfile[], botnetnick[];
@@ -11,16 +11,16 @@ $NetBSD: patch-ab,v 1.3 2003/05/24 16:43:05 salo Exp $
  extern int dcc_total, conmask, cache_hit, cache_miss, max_logs, quick_logs;
  extern struct dcc_t *dcc;
  extern struct userrec *userlist;
-@@ -101,7 +101,7 @@
-                                  * stats? */
- int term_z = 0;                 /* Foreground: use the terminal as a party
-                                  * line? */
--char configfile[121] = "eggdrop.conf";  /* Name of the config file */
-+char configfile[121] = __PKG_SYSCONFDIR__ "eggdrop.conf";  /* Name of the config file */
- char helpdir[121] = "help/";    /* Directory of help files (if used) */
- char textdir[121] = "text/";    /* Directory for text files that get dumped */
- int keep_all_logs = 0;          /* Never erase logfiles, no matter how old
-@@ -735,6 +735,8 @@
+@@ -102,7 +102,7 @@ int con_chan = 0;       /* Foreground: c
+ int term_z = 0;         /* Foreground: use the terminal as a partyline?  */
+ int use_stderr = 1;     /* Send stuff to stderr instead of logfiles?     */
+ 
+-char configfile[121] = "eggdrop.conf";  /* Default config file name */
++char configfile[121] = __PKG_SYSCONFDIR__ "eggdrop.conf";  /* Default config file name */
+ char pid_file[120];                     /* Name of the pid file     */
+ char helpdir[121] = "help/";            /* Directory of help files  */
+ char textdir[121] = "text/";            /* Directory for text files */
+@@ -726,6 +726,8 @@ int main(int argc, char **argv)
    }
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.3 2003/05/24 16:43:05 salo Exp $
    /* Initialise context list */
    for (i = 0; i < 16; i++)
      Context;
-@@ -834,7 +836,8 @@
+@@ -825,7 +827,8 @@ int main(int argc, char **argv)
    cache_miss = 0;
    cache_hit = 0;
    if (!pid_file[0])

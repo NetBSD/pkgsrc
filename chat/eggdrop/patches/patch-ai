@@ -1,18 +1,18 @@
-$NetBSD: patch-ai,v 1.2 2003/05/24 16:43:06 salo Exp $
+$NetBSD: patch-ai,v 1.3 2004/12/03 12:15:54 adam Exp $
 
---- src/mod/share.mod/share.c.orig	2003-05-04 22:15:53.000000000 +0200
-+++ src/mod/share.mod/share.c	2003-05-24 17:05:28.000000000 +0200
-@@ -1113,7 +1113,8 @@
+--- src/mod/share.mod/share.c.orig	2004-07-02 21:02:02.000000000 +0000
++++ src/mod/share.mod/share.c
+@@ -1120,7 +1120,8 @@ static void share_ufsend(int idx, char *
    int i, sock;
    FILE *f;
  
--  egg_snprintf(s, sizeof s, ".share.%s.%lu.users", botnetnick, now);
+-  egg_snprintf(s, sizeof s, ".share.%s.%li.users", botnetnick, now);
 +  egg_snprintf(s, sizeof s, "%.100s/.share.%.32s.%lu.users",
-+               tempdir, botnetnick, now);
++		tempdir, botnetnick, now);
    if (!(b_status(idx) & STAT_SHARE)) {
      dprintf(idx, "s e You didn't ask; you just started sending.\n");
      dprintf(idx, "s e Ask before sending the userfile.\n");
-@@ -1883,8 +1884,8 @@
+@@ -1889,8 +1890,8 @@ static void start_sending_users(int idx)
    struct chanuserrec *ch;
    struct chanset_t *cst;
  

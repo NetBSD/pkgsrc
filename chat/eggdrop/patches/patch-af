@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.1 2004/03/11 06:37:50 minskim Exp $
+$NetBSD: patch-af,v 1.2 2004/12/03 12:15:54 adam Exp $
 
---- src/mod/uptime.mod/uptime.c.orig	2003-05-04 17:05:33.000000000 -0500
+--- src/mod/uptime.mod/uptime.c.orig	2004-06-14 01:14:07.000000000 +0000
 +++ src/mod/uptime.mod/uptime.c
-@@ -34,8 +34,8 @@
- #define MAKING_UPTIME
+@@ -35,8 +35,8 @@
+ 
  #include "uptime.h"
  #include "../module.h"
 -#include "../server.mod/server.h"
