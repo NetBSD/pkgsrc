@@ -4,7 +4,7 @@
 PREFIX=		@prefix@
 INSTALL=	@INSTALL@
 
-mandir=		${PREFIX}/man
+mandir=		@mandir@
 mandircat1=	${mandir}/cat1
 
 CC=		@CC@
@@ -37,4 +37,4 @@ clean:
 install:
 	${INSTALL} ${PROG} ${PREFIX}/sbin
 	${INSTALL} -m 755 -d ${mandircat1}
-	${INSTALL} -m 444 ${PROG}.cat1 ${mandircat1}/${PROG}.1
+	${INSTALL} -m 444 ${PROG}.cat1 ${mandircat1}/${PROG}.0
