@@ -1,0 +1,57 @@
+*** libg++/src/ACG.cc.orig	Sat Jun 24 17:40:39 1995
+--- libg++/src/ACG.cc	Thu Apr  9 07:34:24 1998
+***************
+*** 172,178 ****
+  //
+  
+  static const _G_uint32_t LC_A = 66049;
+! static const _G_uint32_t LC_C = 3907864577;
+  static inline _G_uint32_t LCG(_G_uint32_t x)
+  {
+      return( x * LC_A + LC_C );
+--- 172,178 ----
+  //
+  
+  static const _G_uint32_t LC_A = 66049;
+! static const _G_uint32_t LC_C = 3907864577U;
+  static inline _G_uint32_t LCG(_G_uint32_t x)
+  {
+      return( x * LC_A + LC_C );
+*** libg++/src/hash.cc.orig	Sat Jun 24 12:45:40 1995
+--- libg++/src/hash.cc	Thu Apr  9 07:34:51 1998
+***************
+*** 41,47 ****
+  unsigned int multiplicativehash(int x)
+  {
+    // uses a const close to golden ratio * pow(2,32)
+!   return ((unsigned)x) * 2654435767;
+  }
+  
+  
+--- 41,47 ----
+  unsigned int multiplicativehash(int x)
+  {
+    // uses a const close to golden ratio * pow(2,32)
+!   return ((unsigned)x) * 2654435767U;
+  }
+  
+  
+*** libg++/src/timer.c.orig	Sat Jun 24 12:45:41 1995
+--- libg++/src/timer.c	Thu Apr  9 08:51:48 1998
+***************
+*** 29,35 ****
+  
+  #if 1
+  
+! #include <_G_config.h>
+  #include <sys/types.h>
+  #if _G_HAVE_SYS_RESOURCE
+  #include <sys/time.h>
+--- 29,35 ----
+  
+  #if 1
+  
+! #include <g++/_G_config.h>
+  #include <sys/types.h>
+  #if _G_HAVE_SYS_RESOURCE
+  #include <sys/time.h>

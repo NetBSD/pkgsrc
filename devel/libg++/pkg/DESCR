@@ -1,0 +1,9 @@
+The GNU C++ Class Library is a set of C++ classes that ease implementation
+of many common concepts left out of even the most recent C++ standards. 
+It includes regular expressions, dynamically linked lists, and more.  This
+library requires the libstdc++ available in NetBSD 1.4, and will not work
+on earlier releases (earlier releases shipped with a libg++ appropriate
+for that release).
+
+The libg++ package also includes gperf, a "perfect hash function
+generator" program, which uses libg++ as its base class library. 
