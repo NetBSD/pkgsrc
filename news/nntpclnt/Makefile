@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/09/20 19:21:21 kim Exp $
+# $NetBSD: Makefile,v 1.9 2000/01/10 00:57:16 wiz Exp $
 #
 
 DISTNAME=	nntpclnt-1.6.1
@@ -17,7 +17,7 @@ CONFIG_SH=	${FILESDIR}/config.${OPSYS}.sh
 
 do-configure:
 	${SED} -e s,@PREFIX@,${PREFIX}, ${CONFIG_SH} >${WRKSRC}/config.sh
-	@cd ${WRKSRC} && sh Makefile.SH && sh config.h.SH
+	@cd ${WRKSRC} && ${SH} Makefile.SH && ${SH} config.h.SH
 
 post-build:
 	cd ${WRKSRC} && \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 1999/09/23 16:28:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.23 2000/01/10 00:57:15 wiz Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/05/14 10:35:13 torstenb Exp
 #
 
@@ -30,7 +30,6 @@ DEPENDS+=               socks5-1.0.2:../../net/socks5
 .endif
 .endif
 
-
 pre-install:
 	@(if [ "X${MANZ}" != X"" ]; then \
 		GZSUFFIX=.gz; \
@@ -40,7 +39,7 @@ pre-install:
 post-install:
 	@if [ "X${MANZ}" != X"" ]; then \
 		${ECHO} Compressing help files; \
-		find ${PREFIX}/share/irc/help -type f -print | xargs ${GZIP_CMD}; \
+		${FIND} ${PREFIX}/share/irc/help -type f -print | xargs ${GZIP_CMD}; \
 	fi
 	${RM} -f ${PREFIX}/man/man1/irc.1
 	${LN} -s ircII.1 ${PREFIX}/man/man1/irc.1
