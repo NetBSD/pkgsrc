@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2573 2004/11/29 09:08:08 adam Exp $
+$NetBSD: TODO,v 1.2574 2004/11/29 09:28:40 markd Exp $
 
 Suggested new packages
 ======================
@@ -636,7 +636,6 @@ Suggested package updates
 	o kmymoney2-0.6.4
 	o knights-0.6
 	o kodos-2.4.5
-	o krusader-1.50
 	o ksi-3.4.2
 	o kth-krb4-1.2.2
 	o lablgtk-1.2.7
