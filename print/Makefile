@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2002/09/11 00:03:05 jlam Exp $
+# $NetBSD: Makefile,v 1.83 2002/09/11 18:38:14 jlam Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -35,6 +35,7 @@ SUBDIR+=	gv
 SUBDIR+=	hpijs
 SUBDIR+=	html2ps
 SUBDIR+=	if-psprint
+SUBDIR+=	ijs
 SUBDIR+=	ja-a2ps
 SUBDIR+=	ja-vflib
 SUBDIR+=	ja-vflib-lib
