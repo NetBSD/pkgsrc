@@ -1,27 +1,35 @@
-# $NetBSD: Makefile,v 1.16 2001/06/29 13:58:52 zuntum Exp $
+# $NetBSD: Makefile,v 1.17 2001/07/10 17:51:14 nra Exp $
 #
 
 DISTNAME=       fvwm-${PKG_VERSION}
 PKGNAME=	xpmroot-${PKG_VERSION}
-PKG_VERSION=	2.2.5
 CATEGORIES=	x11
-MASTER_SITES=   ftp://ftp.hpc.uh.edu/pub/fvwm/version-2/ \
-		ftp://ftp.ics.es.osaka-u.ac.jp/pub/CFAN/sources/2.0.x/ \
-		ftp://ftp.ics.es.osaka-u.ac.jp/pub/CFAN/fvwm-users-jp/kits/ \
-		ftp://ftp.TokyoNet.AD.JP/pub/X/fvwm/sources/2.0.x/ \
-		ftp://ftp.TokyoNet.AD.JP/pub/X/fvwm/fvwm-users-jp/kits/
+MASTER_SITES=   ftp://ftp.fvwm.org/pub/fvwm/version-2/ \
+		ftp://ftp.hpc.uh.edu/pub/fvwm/version-2/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.fvwm.org/generated/manpages/xpmroot.html
 COMMENT=	Sets the root window to an Xpm pixmap
 
+PKG_VERSION=		2.4.0
 USE_BUILDLINK_ONLY=	YES
-USE_X11BASE=	YES
-WRKSRC=		${WRKDIR}/${DISTNAME}/utils
+USE_X11BASE=		YES
+GNU_CONFIGURE=		YES
 
 MAKE_ENV+=	INSTALL_PROGRAM='${INSTALL_PROGRAM}'
 MAKE_ENV+=	INSTALL_MAN='${INSTALL_MAN}'
 MAKE_ENV+=	VERSION=${PKG_VERSION}
+CONFIGURE_ARGS+=	--without-extras --disable-dmalloc --without-gnome
+
+do-build:
+	@(cd ${WRKSRC}/libs && \
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} all)
+	@(cd ${WRKSRC}/utils && \
+		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} xpmroot)
+
+do-install:
+	${INSTALL_PROGRAM}	${WRKSRC}/utils/xpmroot	${PREFIX}/bin
+	${INSTALL_MAN}		${WRKSRC}/utils/xpmroot.1 ${PREFIX}/man/man1
 
 .include "../../graphics/xpm/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
