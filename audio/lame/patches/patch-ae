@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2004/11/15 15:30:30 sketch Exp $
+
+--- libmp3lame/gain_analysis.c.orig	2004-11-15 15:21:54.010807000 +0000
++++ libmp3lame/gain_analysis.c	2004-11-15 15:22:08.332150000 +0000
+@@ -247,7 +247,7 @@
+ 
+ /* returns GAIN_ANALYSIS_OK if successful, GAIN_ANALYSIS_ERROR if not */
+ 
+-static __inline double fsqr(const double d)
++static inline double fsqr(const double d)
+ {  return d*d;
+ }
+ 
