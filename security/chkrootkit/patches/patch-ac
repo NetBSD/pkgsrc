@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2004/09/28 10:41:59 adrianp Exp $
+
+--- chkrootkit.orig	Wed Sep 22 11:03:02 2004
++++ chkrootkit	Wed Sep 22 11:04:02 2004
+@@ -1175,7 +1175,7 @@
+ $1 >= 3.0) print 1; else print 0}'` -eq 1 ] && \
+              STATUS=${NOT_INFECTED} || STATUS=${INFECTED};;
+         2) [ "${SYSTEM}" = "FreeBSD"  -o ${SYSTEM} = "NetBSD" -o ${SYSTEM} = \
+-"OpenBSD" -a `echo ${V} | ${awk} '{ if ($1 >= 2.8) print 1; print 0 }'` -eq 1 ] && STATUS=${NOT_INFECTED} || STATUS=${INFECTED};;
++"OpenBSD" -a `echo ${V} | ${awk} '{ if ($1 >= 2.8) print 1; else print 0 }'` -eq 1 ] && STATUS=${NOT_INFECTED} || STATUS=${INFECTED};;
+         7) [ "${SYSTEM}" = "HP-UX" ] && STATUS=${NOT_INFECTED} || STATUS=${INFECTED};;
+         *) STATUS=${INFECTED};;
+         esac
