@@ -1,15 +1,10 @@
-$NetBSD: TODO,v 1.62 2001/07/30 17:26:00 jlam Exp $
+$NetBSD: TODO,v 1.63 2001/07/31 22:55:49 jlam Exp $
 
 packages TODO (Suggested new packages)
 ^^^^^^^^^^^^^
 	compat_solaris8
 	Solaris and Intel compat libraries
 	http://www.sun.com/software/solaris/binaries/download.html
-
-	courier-imap
-	IMAP server for access to Maildir-style mailboxes
-	http://www.inter7.com/courierimap/
-	jlam has a package that may be committed after more testing
 
 	cvsup.nogui
 	cvsup daemon and client
