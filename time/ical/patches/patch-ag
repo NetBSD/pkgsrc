@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2004/04/01 00:52:39 minskim Exp $
+
+--- dispatch.h.orig	1993-06-01 12:18:39.000000000 -0500
++++ dispatch.h
+@@ -40,6 +40,6 @@ struct Dispatch_Entry {
+  * The array is delimited by a NULL command field in the last entry.
+  */
+ 
+-extern int Dispatch(Dispatch_Entry*, ClientData, Tcl_Interp*, int, char*[]);
++extern int Dispatch(Dispatch_Entry*, ClientData, Tcl_Interp*, int, const char*[]);
+ 
+ #endif /* _DISPATCH_H */

@@ -1,0 +1,27 @@
+$NetBSD: patch-aj,v 1.1 2004/04/01 00:52:39 minskim Exp $
+
+--- object.C.orig	1994-05-19 22:22:04.000000000 -0500
++++ object.C
+@@ -8,7 +8,7 @@
+ #include "ical.h"
+ #include "object.h"
+ 
+-static int obj_handle(ClientData, Tcl_Interp*, int, char*[]);
++static int obj_handle(ClientData, Tcl_Interp*, int, const char*[]);
+ 
+ Object::Object(Tcl_Interp* t, char const* type) {
+     /* Generate handle */
+@@ -52,11 +52,11 @@ Object* Object::find(Tcl_Interp* tcl, ch
+     return 0;
+ }
+ 
+-int Object::method(int, char*[]) {
++int Object::method(int, const char*[]) {
+     TCL_Error(interp, "Object has no methods");
+ }
+ 
+-int obj_handle(ClientData c, Tcl_Interp* tcl, int argc, char* argv[]) {
++int obj_handle(ClientData c, Tcl_Interp* tcl, int argc, const char* argv[]) {
+     Object* object = (Object*) c;
+ 
+     assert(object->tcl() == tcl);
