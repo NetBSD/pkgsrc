@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.6 1998/07/13 15:42:41 hubertf Exp $
+$NetBSD: README,v 1.7 1998/08/21 19:11:10 perry Exp $
 
 Welcome to the NetBSD Packages Collection
 =========================================
@@ -70,6 +70,5 @@ To see what binary packages are available, see:
 where <release> is the NetBSD release, and <arch> is the hardware
 architecture.
 
-For more information on the packages collection see:
-
-	http://www.netbsd.org/Documentation/netbsd/Packages.txt
+For more information on the packages collection see the file
+Packages.txt in this directory.
