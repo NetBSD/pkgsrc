@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5182 2004/03/10 02:19:32 snj Exp $
+$NetBSD: CHANGES,v 1.5183 2004/03/10 07:41:23 martti Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1355,3 +1355,24 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tkdiff to 4.0b2 [minskim 2004-03-10]
 	Updated tileworld to 1.1.3 [snj 2004-03-10]
 	Updated gtkballs to 3.0.1nb7 [snj 2004-03-10]
+	Updated libxfce4gui to 4.0.4 [martti 2004-03-10]
+	Updated libxfce4mcs to 4.0.4 [martti 2004-03-10]
+	Updated libxfce4util to 4.0.4 [martti 2004-03-10]
+	Updated xfce4 to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-desktop to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-fm to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-fm-icons to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-gtk2-engine to 2.1.9 [martti 2004-03-10]
+	Updated xfce4-iconbox to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-mcs-manager to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-mcs-plugins to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-mixer to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-panel to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-print to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-systray to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-themes to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-toys to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-trigger-launcher to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-utils to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-wm to 4.0.4 [martti 2004-03-10]
+	Updated xfce4-wm-themes to 4.0.4 [martti 2004-03-10]
