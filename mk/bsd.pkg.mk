@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.194 1998/11/16 11:25:08 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.195 1998/11/19 22:59:03 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1148,7 +1148,14 @@ _PORT_USE: .USE
 		${ECHO_MSG} "===>   Decompressing manual pages for ${PKGNAME}";	\
 		for manpage in $$newmanpages; do			\
 			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
-			${GUNZIP_CMD} ${PREFIX}/$$manpage.gz;		\
+			if [ -L ${PREFIX}/$$manpage.gz ]; then		\
+				set - `${FILE} ${PREFIX}/$$manpage.gz | ${SED} -e 's|\.gz$$||'`;	\
+				shift `expr $$# - 1`;			\
+				${LN} -sf $${1} ${PREFIX}/$$manpage;	\
+				${RM} ${PREFIX}/$$manpage.gz;		\
+			else						\
+				${GUNZIP_CMD} ${PREFIX}/$$manpage.gz;	\
+			fi;						\
 			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
 				${ECHO_MSG} "$$manpage";		\
 			fi;						\
