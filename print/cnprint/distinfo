@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/07/02 00:24:35 hubertf Exp $
+$NetBSD: distinfo,v 1.2 2002/08/01 10:46:45 wiz Exp $
 
 SHA1 (cnprint-3.30b/cnprint330b.c) = a496e1b042c9e02540de517915950b29c1fe332d
 Size (cnprint-3.30b/cnprint330b.c) = 176774 bytes
@@ -28,6 +28,6 @@ SHA1 (cnprint-3.30b/cc48s.1.gz) = aa979e6b516bdf3e0d5409c4e6b7dc4cfdae3fa6
 Size (cnprint-3.30b/cc48s.1.gz) = 461404 bytes
 SHA1 (cnprint-3.30b/cc48s.2.gz) = c0755c8440177a44d1de48e0fcfd1770853f8935
 Size (cnprint-3.30b/cc48s.2.gz) = 391896 bytes
-SHA1 (cnprint-3.30b/hbf.tar.gz) = 0ff6238f90f3c390047cde7a694b0a6c948fa75a
+SHA1 (cnprint-3.30b/hbf.tar.gz) = dafc6514235fe6d36d1d805a473ea649a2e9bd1e
 Size (cnprint-3.30b/hbf.tar.gz) = 3512320 bytes
 SHA1 (patch-aa) = b9ab727c530a197bd7a8de75d57f8f163e886dc1
