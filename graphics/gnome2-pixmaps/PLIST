@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/12/14 22:10:53 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/04/01 18:35:51 jmmv Exp $
 share/pixmaps/advanced-directory.png
 share/pixmaps/apple-green.png
 share/pixmaps/apple-red.png
@@ -83,3 +83,4 @@ share/pixmaps/kterm.xpm
 share/pixmaps/launcher-program.png
 share/pixmaps/monitor.png
 share/pixmaps/vnterm.xpm
+@comment in xdg-dirs: @dirrm share/pixmaps
