@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.common,v 1.1 2000/11/29 17:24:53 wiz Exp $
+#
+
+DISTNAME=		gdk-pixbuf-0.9.0
+CATEGORIES=		graphics devel
+MASTER_SITES=		${MASTER_SITE_GNOME:=unstable/sources/gdk-pixbuf/}
+
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.gnome.org/
+
+BUILD_DEPENDS+=		autoreconf:../../devel/autoconf
+BUILD_DEPENDS+=		automake:../../devel/automake
+DEPENDS+=		png>=1.0.8:../../graphics/png
+DEPENDS+=		tiff>=3.5.5:../../graphics/tiff
+DEPENDS+=		jpeg-6b:../../graphics/jpeg
+
+USE_GMAKE=		# defined
+USE_X11BASE=		# defined
+USE_LIBTOOL=		# defined
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+GNU_CONFIGURE=		# defined
+CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
+CPPFLAGS+=		-I${LOCALBASE}/include
+LDFLAGS+=		-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
+PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
+
+FILESDIR=		${.CURDIR}/../gdk-pixbuf/files
+PATCHDIR=		${.CURDIR}/../gdk-pixbuf/patches
+
+pre-configure:
+	cd ${WRKSRC} && ${SETENV} autoconf && ${SETENV} automake
