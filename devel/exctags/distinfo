@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/09/30 10:26:10 seb Exp $
+$NetBSD: distinfo,v 1.2 2001/11/13 15:23:24 seb Exp $
 
-SHA1 (ctags-5.0.1.tar.gz) = 1da6ccad75b9738dec7f5a451bb1006884dc3ea5
-Size (ctags-5.0.1.tar.gz) = 186179 bytes
-SHA1 (patch-aa) = b3532fd217a8e4fc95ccc831356128fb0f7732f3
-SHA1 (patch-ab) = 2f01921edea7e2938dc98d31d2242b95efb84f00
+SHA1 (ctags-5.1.tar.gz) = a3a58b324e8faee1a2a8a998fc196eff411e09ce
+Size (ctags-5.1.tar.gz) = 215187 bytes
+SHA1 (patch-aa) = bc41ca1e2fe101c1f5f4335578bde4b3c06a7543
+SHA1 (patch-ab) = 1afe5f8425111b6b95b9e3dd72a193d4100063bf
