@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2002/11/21 16:08:49 tron Exp $
+# $NetBSD: Makefile,v 1.31 2003/01/08 19:56:34 jmmv Exp $
 
 VERS=			0.80.2
 DISTNAME=		WindowMaker-${VERS}
 PKGNAME=		windowmaker-${VERS}
-# PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		x11 wm
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/source/release/ \
 			ftp://ftp.ics.es.osaka-u.ac.jp/mirrors/WindowMaker/source/release/
@@ -21,6 +21,7 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-usermenu \
+			--sysconfdir=${PKG_SYSCONFBASE} \
 			--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ENV+=		LINGUAS=yes
 CONFIGURE_ENV+=		CPP_PATH="${CPP}"
@@ -28,6 +29,14 @@ CONFIGURE_ENV+=		CPP_PATH="${CPP}"
 INSTALL_TARGET=		install-strip
 
 .include "../../mk/bsd.prefs.mk"
+
+PKG_SYSCONFSUBDIR=	WindowMaker
+EGDIR=			${PREFIX}/share/examples/WindowMaker
+CONF_FILES=
+.for f in WMGLOBAL WMRootMenu WMState WMWindowAttributes WindowMaker
+CONF_FILES+=		${EGDIR}/$f ${PKG_SYSCONFDIR}/$f
+.endfor
+.undef f
 
 # WINDOWMAKER_OPTIONS is a space-separated list of compile-time options
 # to support.  Currently supported options:
@@ -81,6 +90,7 @@ post-install:
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # "egcs" has an optimizer problem on "arm32".
