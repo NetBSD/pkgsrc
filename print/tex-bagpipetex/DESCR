@@ -1,0 +1,21 @@
+BagpipeTex is a set of MusixTeX macros to typeset bagpipe music.
+
+Bagpipe music is written slightly differently than regular music and
+sequences of gracenotes are often viewed as tokens rather than sequences
+of individual notes.  These differences make it very difficult to
+typeset bagpipe music with plain old MusixTeX.  Therefore BagpipeTeX has
+been written by Walt Innes (walt@slac.stanford.edu).  This is a macro
+package for use on top of MusixTex, which is itself a macro package for
+use with LaTeX.
+
+Once BagpipeTeX is installed, you can then process BagpipeTeX files
+exactly the same as you would a regular MusixTeX file.  For example:
+
+	musixtex foo
+	musixflx foo
+	musixtex foo
+
+This will give you foo.dvi which then can be processed like any other
+.dvi.  Use dvips to convert it into a postscript file or print it to a
+Postscript printer.  Then ps2pdf may be used to convert the Postscript
+file into a PDF file.

@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/01/23 18:13:47 fredb Exp $
+
+--- bagpipe.tex.orig	Wed Jul 24 17:54:51 2002
++++ bagpipe.tex	Sun Jan 19 04:48:48 2003
+@@ -97,12 +97,12 @@
+ %
+ \ifx\bagpipeisloaded\relax\endinput\else\let\bagpipeisloaded=\relax\fi
+ %
+-%\let\usemusixtex\relax% this sets the flag to use MusiXTeX instead of MusicTeX
++\let\usemusixtex\relax% this sets the flag to use MusiXTeX instead of MusicTeX
+ %
+ %
+- \ifx\usemusixtex\undefined %       the musictex version
++\ifx\usemusixtex\undefined %       the musictex version
+ %
+- \input musicnft
++\input musicnft
+ %
+ %  Select one set of nine point font declarations:
+ %
+@@ -112,8 +112,8 @@
+ \font\musicnine=musikn09%  % for use with 16 pt musicsize if
+ \font\beamnine=beamn09%    % 9 pt fonts are available%
+ %
+- \input musictex%
+- \input musicvbm%
++% \input musictex%
++% \input musicvbm%
+ %
+ %  at signs are now letters and can be used in control sequences
+  \def\makeatletter{\catcode`\@=11}
