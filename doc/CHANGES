@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1416 2003/02/17 12:33:34 kei Exp $
+$NetBSD: CHANGES,v 1.1417 2003/02/17 12:55:18 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -720,3 +720,4 @@ Changes to the packages collection and infrastructure in 2003:
         Added xmill-0.7 [grant 2003-02-17]
 	Added proxycheck-0.41 [zuntum 2003-02-17]
 	Updated boehm-gc to 6.1nb2 [kei 2003-02-17]
+	Updated less to 381 [grant 2003-02-17]
