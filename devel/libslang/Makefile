@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2003/03/04 22:30:45 mjl Exp $
+# $NetBSD: Makefile,v 1.39 2003/03/14 23:53:01 jschauma Exp $
 #
 
 DISTNAME=	slang-1.4.8
@@ -28,5 +28,17 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/slang
 	${MV} ${PREFIX}/share/doc/slang/slangdoc.html \
 		${PREFIX}/share/doc/html/slang
+
+.include "../../mk/bsd.prefs.mk"
+
+# Debian doesn't have ltermcap, use ncurses instead
+.if ${OPSYS} == "Linux" && ${LOWER_VENDOR} == "debian"
+post-patch:
+	${SED} -e 's/ -ltermcap / /' ${WRKSRC}/src/Makefile.in > \
+		${WRKSRC}/src/Makefile.in.tmp &&		\
+		${MV} ${WRKSRC}/src/Makefile.in.tmp ${WRKSRC}/src/Makefile.in
+
+. include "../../devel/ncurses/buildlink2.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
