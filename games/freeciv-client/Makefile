@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/10/24 22:10:56 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2002/09/23 10:02:49 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 COMMENT=		Freeciv client with Xaw interface
@@ -9,7 +9,8 @@ CONFLICTS=		freeciv-client-gtk<=1.11.4
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
+USE_X11=		# defined
 
 CONFIGURE_ARGS+=	--disable-server
 CONFIGURE_ARGS+=	--disable-make-data
@@ -25,8 +26,8 @@ do-install:
 	cd ${WRKSRC}/client; ${SETENV} ${MAKE_ENV} \
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../mk/xaw.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../mk/xaw.buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

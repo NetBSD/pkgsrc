@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/09/10 16:06:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/23 09:55:18 jlam Exp $
 
 DISTNAME=	gnome-chess-0.3.3
 PKGREVISION=	3
@@ -9,10 +9,10 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://arcavia.com/rd/gnome-chess/
 COMMENT=	GNOME's graphical interface for playing chess
 
-GNU_CONFIGURE=	yes
-USE_X11BASE=	yes
-CONFIGURE_ARGS+=--localstatedir=${X11PREFIX}/var/lib
+USE_BUILDLINK2=		yes
+USE_X11BASE=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--localstatedir=${X11PREFIX}/var/lib
 
-.include "../../x11/gnome-core/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/05/09 14:36:49 agc Exp $
+# $NetBSD: Makefile,v 1.3 2002/09/23 09:54:03 jlam Exp $
 
 DISTNAME=		sather-1.2.1
 CATEGORIES=		lang
@@ -8,6 +8,8 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.gnu.org/software/sather/index.html
 COMMENT=		Compiler for the Sather object oriented programming language
 
+USE_BUILDLINK2=		# defined
+USE_X11=		# defined
 USE_GMAKE=		# defined
 
 ALL_TARGET=		full optional
@@ -15,7 +17,8 @@ ALL_TARGET=		full optional
 INFO_FILES=		sather.info sather-tutorial.info sather-mode.info
 
 do-configure:
-	for f in ${WRKSRC}/Boot/sacomp.code/Makefile			\
+	for f in							\
+		${WRKSRC}/Boot/sacomp.code/Makefile			\
 		${WRKSRC}/Library/System/unix.sa			\
 		${WRKSRC}/System/Common/CONFIG.proto			\
 		${WRKSRC}/System/Platforms/netbsd/CONFIG		\
@@ -28,16 +31,18 @@ do-configure:
 		${WRKSRC}/Browser/Web/gen_html_top_level		\
 		${WRKSRC}/Browser/Web/gen_mml_sa_files			\
 		${WRKSRC}/Browser/Web/gen_mml_shortflat			\
-		${WRKSRC}/Browser/Web/graph2dot; do			\
-	${SED} -e 's:@CC@:${CC}:g'					\
-		-e 's:@CFLAGS@:${CFLAGS}:g'				\
-		-e 's:@GMAKE@:${GMAKE}:g'				\
-		-e 's:@PREFIX@:${PREFIX}:g'				\
-		-e 's:@X11BASE@:${X11BASE}:g'				\
-		-e 's:@GC_PREFIX@:${LOCALBASE}:g'			\
-		-e 's:@TCL_PREFIX@:${LOCALBASE}:g'			\
-		-e 's:@TK_PREFIX@:${LOCALBASE}:g'			\
-		$$f > $$f.tmp && ${MV} -f $$f.tmp $$f;			\
+		${WRKSRC}/Browser/Web/graph2dot;			\
+	do								\
+		${SED}	-e 's:@CC@:${CC}:g'				\
+			-e 's:@CFLAGS@:${CFLAGS}:g'			\
+			-e 's:@GMAKE@:${GMAKE}:g'			\
+			-e 's:@PREFIX@:${PREFIX}:g'			\
+			-e 's:@X11BASE@:${X11BASE}:g'			\
+			-e 's:@GC_PREFIX@:${BUILDLINK_PREFIX.boehm-gc}:g' \
+			-e 's:@TCL_PREFIX@:${BUILDLINK_PREFIX.tcl}:g'	\
+			-e 's:@TK_PREFIX@:${BUILDLINK_PREFIX.tk}:g'	\
+			$$f > $$f.tmp;					\
+		${MV} -f $$f.tmp $$f;					\
 	done
 
 post-build:
@@ -79,8 +84,8 @@ do-install:
 post-install:
 	${RM} -fr ${PREFIX}/lib/sather/System/Platforms/dualgui/dual_gui_server.code/
 
-.include "../../devel/boehm-gc/buildlink.mk"
-.include "../../x11/tk/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../devel/boehm-gc/buildlink2.mk"
+.include "../../x11/tk/buildlink2.mk"
+
 .include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
