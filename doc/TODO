@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.606 2003/06/02 10:32:22 jmmv Exp $
+$NetBSD: TODO,v 1.607 2003/06/02 16:05:38 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -261,6 +261,7 @@ Suggested package updates
 	o vfu-4.00
 	o vnc-3.3.4 [http://www.realvnc.com/download.html]
 	o vttest-20030301
+	o wdm-1.24
 	o wine-20030508
 	o wmbiff-0.4.15
 	o wmweather-2.4.0
