@@ -1,19 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2004/01/03 18:49:45 reed Exp $
+# $NetBSD: Makefile,v 1.45 2004/01/04 21:37:09 rh Exp $
 
-DISTNAME=		evolution-1.2.4
-PKGREVISION=		6
+DISTNAME=		evolution-1.4.5
 CATEGORIES=		mail time gnome
-MASTER_SITES=		ftp://ftp.ximian.com/pub/ximian-evolution/source/ \
-			ftp://ximian.netnitco.net/pub/mirrors/ximian/ximian-evolution/source/ \
-			http://public.planetmirror.com/pub/ximian/ximian-evolution/source/ \
-			ftp://mirror.pa.msu.edu/ximian/ximian-evolution/source/ \
-			ftp://titan.pcis.net/mirrors/ximian/ximian-evolution/source/ \
-			ftp://www.linux.org.ar/pub/ximian/ximian-evolution/source/ \
-			ftp://www.mirror.ac.uk/sites/ftp.ximian.com/pub/ximian-evolution/source/ \
-			ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.ximian.com/ximian-evolution/source/ \
-			ftp://ftp.tux.is/ximian/ximian-evolution/source/ \
-			ftp://sunsite.cnlab-switch.ch/mirror/ximian/ximian-evolution/source/ \
-			${MASTER_SITE_GNOME:=sources/evolution/1.2/}
+MASTER_SITES=		ftp://ftp.ximian.com/pub/source/evolution/ \
+			${MASTER_SITE_GNOME:=sources/evolution/1.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -26,9 +16,9 @@ DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
 
 # Using a wildcard here doesn't make sense because the version number of
-# "db3" is hardcoded in the "configure" script and some source modules.
+# "db3" is hardcoded in the "configure" script and some source modules
+# to make sure locally stored mails remain in the same format!
 BUILDLINK_DEPENDS.db3=		db3-3.11.2{,nb*}
-BUILDLINK_DEPENDS.libxml=	libxml>=1.8.17
 
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
@@ -50,38 +40,38 @@ REPLACE_PERL+=		tools/killev
 CPPFLAGS+=		-I/usr/include/krb5 -I/usr/include/gssapi
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--with-openldap --without-static-ldap
-CONFIGURE_ARGS+=	--enable-nntp=yes
 CONFIGURE_ARGS+=	--enable-openssl=yes
 CONFIGURE_ARGS+=	--with-krb5=/usr --with-krb4=/usr
 CONFIGURE_ARGS+=	--with-db3-includes=${LOCALBASE}/include/db3
 CONFIGURE_ARGS+=	--with-db3-libs=${LOCALBASE}/lib
 CONFIGURE_ENV+=		PKG_CONFIG_PATH="${LOCALBASE}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
 
+.include "../../mk/bsd.prefs.mk"
+
 pre-configure:
-	for i in ${WRKSRC}/widgets/*/Makefile.in			\
-		 ${WRKSRC}/mail/*/Makefile.in				\
-		 ${WRKSRC}/shell/*/Makefile.in ; do			\
+	for i in ${WRKSRC}/camel/providers/*/Makefile.in ; do		\
 		${SED} <$$i >$$i.fixed					\
-		 -e 's/^\(LTCOMPILE.*\)$$/\1 $${BONOBO_GNOME_CFLAGS}/'	\
-		 -e 's/^\(COMPILE.*\)$$/\1 $${BONOBO_GNOME_CFLAGS}/' &&	\
+		 -e 's|^\(lib.*_la_LIBADD.*\)$$|\1 ../../libcamel.la|' &&\
 		${MV} $$i.fixed $$i ;					\
 	done
 
-.include "../../mk/bsd.prefs.mk"
 
-.include "../../textproc/libunicode/buildlink2.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
-.include "../../sysutils/gnome-vfs/buildlink2.mk"
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../print/gnome-print/buildlink2.mk"
-.include "../../security/openssl/buildlink2.mk"
 .include "../../databases/db3/buildlink2.mk"
 .include "../../databases/openldap/buildlink2.mk"
-.include "../../www/gtkhtml/buildlink2.mk"
-.include "../../devel/bonobo/buildlink2.mk"
-.include "../../devel/bonobo-conf/buildlink2.mk"
-.include "../../devel/oaf/buildlink2.mk"
-.include "../../devel/gal/buildlink2.mk"
-.include "../../net/ORBit/buildlink2.mk"
+.include "../../devel/GConf2/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink2.mk"
+.include "../../devel/gal2/buildlink2.mk"
+.include "../../devel/libbonoboui/buildlink2.mk"
+.include "../../devel/libglade2/buildlink2.mk"
+.include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../graphics/libgnomecanvas/buildlink2.mk"
 .include "../../net/soup/buildlink2.mk"
+.include "../../print/libgnomeprint/buildlink2.mk"
+.include "../../security/openssl/buildlink2.mk"
+.include "../../sysutils/gnome-vfs2/buildlink2.mk"
+.include "../../textproc/libxml2/buildlink2.mk"
+.include "../../textproc/libunicode/buildlink2.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../www/gtkhtml3/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
