@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/13 07:51:38 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/10/13 08:19:55 jlam Exp $
 
 .if !defined(SUN_JDK14_BUILDLINK2_MK)
 SUN_JDK14_BUILDLINK2_MK=	# defined
@@ -7,6 +7,7 @@ BUILDLINK_PACKAGES+=		sun-jdk14
 BUILDLINK_PKGBASE.sun-jdk14?=	sun-jdk14
 BUILDLINK_DEPENDS.sun-jdk14?=	sun-jdk14-[0-9]*
 BUILDLINK_PKGSRCDIR.sun-jdk14?=	../../lang/sun-jdk14
+BUILDLINK_DEPMETHOD.sun-jdk14?=	build
 
 BUILDLINK_PREFIX.sun-jdk14=	${LOCALBASE}
 BUILDLINK_FILES_CMD.sun-jdk14= \
