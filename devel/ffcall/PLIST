@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/02 16:05:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/05/03 16:33:45 jmmv Exp $
 include/avcall.h
 include/callback.h
 include/trampoline.h
@@ -22,8 +22,9 @@ man/man3/callback.3
 man/man3/trampoline.3
 man/man3/trampoline_r.3
 man/man3/vacall.3
-share/html/avcall.html
-share/html/callback.html
-share/html/trampoline.html
-share/html/trampoline_r.html
-share/html/vacall.html
+share/doc/ffcall/avcall.html
+share/doc/ffcall/callback.html
+share/doc/ffcall/trampoline.html
+share/doc/ffcall/trampoline_r.html
+share/doc/ffcall/vacall.html
+@dirrm share/doc/ffcall
