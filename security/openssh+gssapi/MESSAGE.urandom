@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.urandom,v 1.1.1.1 2003/07/24 21:01:23 jwise Exp $
-
-You will need a working /dev/urandom.  Please make sure you have a kernel
-compiled from a config file containing the line:
-
-	pseudo-device	rnd
-===========================================================================

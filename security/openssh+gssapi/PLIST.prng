@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.prng,v 1.1.1.1 2003/07/24 21:01:23 jwise Exp $
-libexec/ssh-rand-helper
-share/examples/openssh/ssh_prng_cmds
