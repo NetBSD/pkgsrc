@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 22:56:48 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/08/30 22:24:31 jmmv Exp $
 
-DISTNAME=		wdm-1.24
-PKGREVISION=		1
+DISTNAME=		wdm-1.25
 CATEGORIES=		x11 windowmaker
 MASTER_SITES=		http://voins.program.ru/wdm/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://voins.program.ru/wdm/
 COMMENT=		WINGs display manager
 
@@ -21,6 +20,7 @@ CONFIGURE_ARGS+=	--with-wdmdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--with-gfx-incs=${BUILDLINK_DIR}/include/WINGs
 CONFIGURE_ARGS+=	--with-gfx-libs=${BUILDLINK_DIR}/lib
+CONFIGURE_ENV+=		SYSTEM_SHELL="${SH}"
 
 RCD_SCRIPTS=		wdm
 
@@ -61,4 +61,5 @@ pre-install:
 .include "../../graphics/tiff/buildlink2.mk"
 .include "../../wm/windowmaker/buildlink2.mk"
 
+.include "../../mk/subst.mk"
 .include "../../mk/bsd.pkg.mk"
