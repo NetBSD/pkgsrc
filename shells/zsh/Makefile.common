@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2004/02/16 09:07:23 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2004/02/16 20:24:25 jlam Exp $
 
 DISTNAME=       zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -17,7 +17,6 @@ COMMENT=	The Z shell
 USE_BUILDLINK2=		YES
 USE_PKGINSTALL=		YES
 GNU_CONFIGURE=		YES
-CONFIG_STATUS_OVERRIDE=	# empty
 
 USE_MAKEINFO=		YES
 INFO_FILES=		zsh.info
