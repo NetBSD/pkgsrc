@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/10/16 16:39:07 tron Exp $
+# $NetBSD: Makefile,v 1.9 2001/10/19 21:31:09 jlam Exp $
 
 DISTNAME=       sane-backends-1.0.5
 CATEGORIES=	graphics
@@ -9,20 +9,19 @@ MASTER_SITES=	ftp://ftp.mostang.com/pub/sane/sane-1.0.5/ \
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.mostang.com/sane/
-COMMENT=	API for access to scanners, digitals camera, frame grabbers etc
-
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
+COMMENT=	API for access to scanners, digitals camera, frame grabbers etc.
 
 CONFLICTS+=	sane<=1.0.3
 
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_LIBTOOL=	yes
-LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
-CPPFLAGS+=	-I${PREFIX}/include
-
-# -O to work around a bug with -O2 and egcs.
-CFLAGS=		-O -I${LOCALBASE}/include
+USE_BUILDLINK_ONLY=	YES
+GNU_CONFIGURE=		YES
+USE_GMAKE=		YES
+USE_LIBTOOL=		YES
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 .include "../../devel/libusb/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
+
+# -O to work around a bug with -O2 and egcs.
+CFLAGS+=	-O

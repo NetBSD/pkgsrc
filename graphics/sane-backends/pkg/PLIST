@@ -1,64 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2001/10/15 21:27:20 veego Exp $
+@comment $NetBSD: PLIST,v 1.3 2001/10/19 21:31:10 jlam Exp $
 bin/sane-config
 bin/sane-find-scanner
 bin/scanimage
-doc/sane-1.0.5/AUTHORS
-doc/sane-1.0.5/COPYING
-doc/sane-1.0.5/ChangeLog
-doc/sane-1.0.5/LEVEL2
-doc/sane-1.0.5/LICENSE
-doc/sane-1.0.5/NEWS
-doc/sane-1.0.5/PROBLEMS
-doc/sane-1.0.5/PROJECTS
-doc/sane-1.0.5/README
-doc/sane-1.0.5/README.aix
-doc/sane-1.0.5/README.hp-ux
-doc/sane-1.0.5/README.linux
-doc/sane-1.0.5/README.os2
-doc/sane-1.0.5/README.solaris
-doc/sane-1.0.5/README.unixware2
-doc/sane-1.0.5/README.unixware7
-doc/sane-1.0.5/TODO
-doc/sane-1.0.5/backend-writing.txt
-doc/sane-1.0.5/canon/canon.changes
-doc/sane-1.0.5/canon/canon.install2700F.txt
-doc/sane-1.0.5/mustek/mustek.CHANGES
-doc/sane-1.0.5/sane.dvi
-doc/sane-1.0.5/sane.ps
-doc/sane-1.0.5/umax/negative-types.txt
-doc/sane-1.0.5/umax/sane-logo.jpg
-doc/sane-1.0.5/umax/sane-logo2.jpg
-doc/sane-1.0.5/umax/sane-umax-advanced-options-doc.html
-doc/sane-1.0.5/umax/sane-umax-advanced.jpg
-doc/sane-1.0.5/umax/sane-umax-astra-doc.html
-doc/sane-1.0.5/umax/sane-umax-config-doc.html
-doc/sane-1.0.5/umax/sane-umax-doc.dvi
-doc/sane-1.0.5/umax/sane-umax-doc.html
-doc/sane-1.0.5/umax/sane-umax-doc.tex
-doc/sane-1.0.5/umax/sane-umax-histogram.jpg
-doc/sane-1.0.5/umax/sane-umax-mailinglist.html
-doc/sane-1.0.5/umax/sane-umax-mirage-doc.html
-doc/sane-1.0.5/umax/sane-umax-not-listed-doc.html
-doc/sane-1.0.5/umax/sane-umax-old-scanners-doc.html
-doc/sane-1.0.5/umax/sane-umax-options-doc.html
-doc/sane-1.0.5/umax/sane-umax-others-doc.html
-doc/sane-1.0.5/umax/sane-umax-parport-doc.html
-doc/sane-1.0.5/umax/sane-umax-powerlook-doc.html
-doc/sane-1.0.5/umax/sane-umax-scanner-clones-doc.html
-doc/sane-1.0.5/umax/sane-umax-scanners-doc.html
-doc/sane-1.0.5/umax/sane-umax-speed-doc.html
-doc/sane-1.0.5/umax/sane-umax-standard-options-doc.html
-doc/sane-1.0.5/umax/sane-umax-standard.jpg
-doc/sane-1.0.5/umax/sane-umax-text.jpg
-doc/sane-1.0.5/umax/sane-umax-text2.jpg
-doc/sane-1.0.5/umax/sane-umax-text4.jpg
-doc/sane-1.0.5/umax/sane-umax-uc-doc.html
-doc/sane-1.0.5/umax/sane-umax-vista-doc.html
-doc/sane-1.0.5/umax/sane-umax.jpg
-doc/sane-1.0.5/umax/umax.BUGS
-doc/sane-1.0.5/umax/umax.CHANGES
-doc/sane-1.0.5/umax/umax.FAQ
-doc/sane-1.0.5/umax/umax.TODO
 etc/sane.d/abaton.conf
 etc/sane.d/agfafocus.conf
 etc/sane.d/apple.conf
@@ -324,10 +267,65 @@ man/man5/sane-umax_pp.5
 man/man5/sane-v4l.5
 man/man7/sane.7
 sbin/saned
-@dirrm doc/sane-1.0.5/umax
-@dirrm doc/sane-1.0.5/mustek
-@dirrm doc/sane-1.0.5/canon
-@dirrm doc/sane-1.0.5
-@dirrm etc/sane.d
-@dirrm include/sane
+share/doc/sane-1.0.5/AUTHORS
+share/doc/sane-1.0.5/COPYING
+share/doc/sane-1.0.5/ChangeLog
+share/doc/sane-1.0.5/LEVEL2
+share/doc/sane-1.0.5/LICENSE
+share/doc/sane-1.0.5/NEWS
+share/doc/sane-1.0.5/PROBLEMS
+share/doc/sane-1.0.5/PROJECTS
+share/doc/sane-1.0.5/README
+share/doc/sane-1.0.5/README.aix
+share/doc/sane-1.0.5/README.hp-ux
+share/doc/sane-1.0.5/README.linux
+share/doc/sane-1.0.5/README.os2
+share/doc/sane-1.0.5/README.solaris
+share/doc/sane-1.0.5/README.unixware2
+share/doc/sane-1.0.5/README.unixware7
+share/doc/sane-1.0.5/TODO
+share/doc/sane-1.0.5/backend-writing.txt
+share/doc/sane-1.0.5/canon/canon.changes
+share/doc/sane-1.0.5/canon/canon.install2700F.txt
+share/doc/sane-1.0.5/mustek/mustek.CHANGES
+share/doc/sane-1.0.5/umax/negative-types.txt
+share/doc/sane-1.0.5/umax/sane-logo.jpg
+share/doc/sane-1.0.5/umax/sane-logo2.jpg
+share/doc/sane-1.0.5/umax/sane-umax-advanced-options-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-advanced.jpg
+share/doc/sane-1.0.5/umax/sane-umax-astra-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-config-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-doc.dvi
+share/doc/sane-1.0.5/umax/sane-umax-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-doc.tex
+share/doc/sane-1.0.5/umax/sane-umax-histogram.jpg
+share/doc/sane-1.0.5/umax/sane-umax-mailinglist.html
+share/doc/sane-1.0.5/umax/sane-umax-mirage-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-not-listed-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-old-scanners-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-options-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-others-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-parport-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-powerlook-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-scanner-clones-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-scanners-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-speed-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-standard-options-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-standard.jpg
+share/doc/sane-1.0.5/umax/sane-umax-text.jpg
+share/doc/sane-1.0.5/umax/sane-umax-text2.jpg
+share/doc/sane-1.0.5/umax/sane-umax-text4.jpg
+share/doc/sane-1.0.5/umax/sane-umax-uc-doc.html
+share/doc/sane-1.0.5/umax/sane-umax-vista-doc.html
+share/doc/sane-1.0.5/umax/sane-umax.jpg
+share/doc/sane-1.0.5/umax/umax.BUGS
+share/doc/sane-1.0.5/umax/umax.CHANGES
+share/doc/sane-1.0.5/umax/umax.FAQ
+share/doc/sane-1.0.5/umax/umax.TODO
+@dirrm share/doc/sane-1.0.5/umax
+@dirrm share/doc/sane-1.0.5/mustek
+@dirrm share/doc/sane-1.0.5/canon
+@dirrm share/doc/sane-1.0.5
 @dirrm lib/sane
+@dirrm include/sane
+@dirrm etc/sane.d
