@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2003/10/30 22:52:34 grant Exp $
+# $NetBSD: Makefile,v 1.31 2003/10/30 22:53:02 grant Exp $
 #
 
 DISTNAME=	fltk-1.0.11-source
@@ -21,7 +21,7 @@ COMMENT=	Fast Light Tool Kit for graphical user interfaces
 
 USE_BUILDLINK2=		# defined
 USE_GCC_SHLIB=		# defined
-USE_GMAKE=		# defined
+USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		# defined
 USE_X11BASE=		# defined
 TEST_TARGET=		test
