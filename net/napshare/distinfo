@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/14 14:41:01 tron Exp $
+$NetBSD: distinfo,v 1.2 2001/09/22 16:22:30 tron Exp $
 
 SHA1 (napshare-0.1.tar.gz) = cf2ec9e3663048cdc9cfa9eecc7a050e25bae833
 Size (napshare-0.1.tar.gz) = 162000 bytes
-SHA1 (patch-aa) = 336124f8dbb247149790c2468f9bd90941bf5bee
+SHA1 (patch-aa) = 0ee2e27b3b8d915d656a30fc695a5c216d8e6857
