@@ -7679,7 +7679,7 @@ echo "${ECHO_T}$ac_cv_func_statfs" >&6
 if test $ac_cv_func_statfs = yes; then
 
 	case $host_os in
-	sunos*|solaris*)
+	irix*|sunos*|solaris*)
 		echo "$as_me:$LINENO: checking for statvfs" >&5
 echo $ECHO_N "checking for statvfs... $ECHO_C" >&6
 if test "${ac_cv_func_statvfs+set}" = set; then
