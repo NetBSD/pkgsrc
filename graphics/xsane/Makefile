@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2004/10/03 00:14:59 tv Exp $
+# $NetBSD: Makefile,v 1.48 2004/11/05 13:54:02 adam Exp $
 
-DISTNAME=	xsane-0.93
-PKGREVISION=	1
+DISTNAME=	xsane-0.96
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.xsane.org/download/ \
 		http://gd.tuwien.ac.at/hci/sane/xsane/ \
