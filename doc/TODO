@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.833 2003/09/05 09:10:46 wiz Exp $
+$NetBSD: TODO,v 1.834 2003/09/05 16:17:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -168,7 +168,6 @@ Suggested package updates
 	o kaffe-1.1.0 [pkg/22155]
 	o lavaps-2.3
 	o lcms-1.0.9
-	o leafnode-1.9.42
 	o libgcrypt-1.1.42
 	o libgda-0.90.0
 	o libgnomedb-0.90.0
@@ -281,10 +280,6 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.5.0
 	o xfstt-1.6
-	o xine-lib-0.9.21 [pkg/21625]
-	o xine-lib-0.9.22
-	o xine-lib-1.0rc1
-	o xine-ui-0.9.21 [pkg/21625]
 	o xisp-2.7 [pkg/19566]
 	o xmcd-3.2.1
 	o xmms-1.2.8
