@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/02/21 20:18:49 veego Exp $
+# $NetBSD: Makefile,v 1.23 2001/02/24 19:10:12 tron Exp $
 #
 
 DISTNAME=	xsane-0.72
@@ -10,7 +10,8 @@ MASTER_SITES=	http://www.xsane.org/download/ \
 		ftp://ftp.de.mostang.com/pub/sane/xsane/ \
 		ftp://gd.tuwien.ac.at/hci/sane/xsane/ \
 		ftp://ftp.u-aizu.ac.jp/pub/misc/device/scsi/scanner/sane/xsane/ \
-		ftp://sunsite.uio.no/pub/sane/xsane/
+		ftp://sunsite.uio.no/pub/sane/xsane/ \
+		ftp://ftp.informatik.uni-oldenburg.de/pub/sane/xsane/
 
 MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.xsane.org/
