@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.3 2002/09/29 00:08:51 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.4 2002/09/29 01:24:00 jlam Exp $
 
 .if !defined(GCC_BUILDLINK2_MK)
 GCC_BUILDLINK2_MK=	# defined
@@ -32,7 +32,7 @@ _GCC_PREFIX=		${BUILDLINK_PREFIX.gcc}/${_GCC_SUBPREFIX}
 _GCC_ARCHSUBDIR=	lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3
 _GCC_ARCHDIR=		${_GCC_PREFIX}${_GCC_ARCHSUBDIR}
 
-BUILDLINK_LDFLAGS.gcc=	-Wl,-R${_GCC_ARCHDIR}
+BUILDLINK_LDFLAGS.gcc=	-L${_GCC_ARCHDIR} -Wl,-R${_GCC_ARCHDIR}
 
 .if defined(USE_PKGSRC_GCC)
 _NEED_PKGSRC_GCC=	YES
@@ -68,7 +68,9 @@ CXX=		${_GCC_PREFIX}bin/g++
 F77=		${_GCC_PREFIX}bin/g77
 PKG_FC=		${F77}
 
+.  if defined(USE_CXX)
 LDFLAGS+=		${BUILDLINK_LDFLAGS.gcc}
+.  endif
 BUILDLINK_WRAPPER_ENV+=	\
 	COMPILER_PATH="${BUILDLINK_DIR}/bin"; export COMPILER_PATH
 .endif	# _NEED_PKGSRC_GCC == YES
