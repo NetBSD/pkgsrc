@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2002/10/30 00:52:11 rh Exp $
+# $NetBSD: Makefile.common,v 1.2 2002/11/30 16:24:36 salo Exp $
 #
 
 DISTNAME?=		libgda-0.8.199
@@ -13,6 +13,7 @@ USE_X11=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 USE_BUILDLINK2=		YES
+USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
