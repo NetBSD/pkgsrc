@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2002/01/22 17:05:21 taca Exp $
+$NetBSD: patch-ab,v 1.2 2002/03/02 09:10:55 taca Exp $
 
---- configure.orig	Tue Dec 11 02:12:35 2001
+--- configure.orig	Mon Feb 11 03:05:48 2002
 +++ configure
-@@ -5648,6 +5648,7 @@
+@@ -5444,6 +5444,7 @@
  s%@setup@%$setup%g
  s%@MINIRUBY@%$MINIRUBY%g
  s%@PREP@%$PREP%g

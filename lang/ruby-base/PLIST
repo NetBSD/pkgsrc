@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/01/04 09:44:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/03/02 09:10:54 taca Exp $
 bin/irb
 bin/ruby
 bin/ruby${_RUBY_SUFFIX}
@@ -123,8 +123,18 @@ ${RUBY_LIBDIR}/telnet.rb
 ${RUBY_LIBDIR}/tempfile.rb
 ${RUBY_LIBDIR}/thread.rb
 ${RUBY_LIBDIR}/thwait.rb
+${RUBY_LIBDIR}/time.rb
 ${RUBY_LIBDIR}/timeout.rb
 ${RUBY_LIBDIR}/tracer.rb
+${RUBY_LIBDIR}/uri.rb
+${RUBY_LIBDIR}/uri/common.rb
+${RUBY_LIBDIR}/uri/ftp.rb
+${RUBY_LIBDIR}/uri/generic.rb
+${RUBY_LIBDIR}/uri/http.rb
+${RUBY_LIBDIR}/uri/https.rb
+${RUBY_LIBDIR}/uri/ldap.rb
+${RUBY_LIBDIR}/uri/mailto.rb
+@dirrm ${RUBY_LIBDIR}/uri
 ${RUBY_LIBDIR}/weakref.rb
 @exec ${MKDIR} -p %D/${RUBY_SITEARCHLIBDIR}
 @unexec ${RMDIR} %D/${RUBY_SITEARCHLIBDIR} 2>/dev/null || ${TRUE}
@@ -135,6 +145,7 @@ ${RUBY_LIBDIR}/weakref.rb
 @unexec ${RMDIR} %D/lib/ruby 2>/dev/null || ${TRUE}
 man/man1/ruby16.1
 man/man1/ruby.1
+${RUBY_DOCDIR}/ChangeLog
 ${RUBY_DOCDIR}/NEWS
 ${RUBY_DOCDIR}/README
 ${RUBY_DOCDIR}/README.EXT
@@ -213,7 +224,6 @@ ${RUBY_EXAMPLESDIR}/rcs.awk
 ${RUBY_EXAMPLESDIR}/rcs.dat
 ${RUBY_EXAMPLESDIR}/rcs.rb
 ${RUBY_EXAMPLESDIR}/regx.rb
-${RUBY_EXAMPLESDIR}/rename.rb
 ${RUBY_EXAMPLESDIR}/sieve.rb
 ${RUBY_EXAMPLESDIR}/svr.rb
 ${RUBY_EXAMPLESDIR}/test.rb
