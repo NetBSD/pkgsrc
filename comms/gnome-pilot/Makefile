@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/01/27 13:01:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2003/01/27 19:51:26 jmmv Exp $
 #
 
 DISTNAME=		gnome-pilot-0.1.71
@@ -27,7 +27,6 @@ CONFIGURE_ARGS+=	--with-pisock=${LOCALBASE}
 .include "../../comms/pilot-link-libs/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
-.include "../../misc/gnome1-dirs/buildlink2.mk"
 .include "../../textproc/libxml/buildlink2.mk"
 .include "../../x11/gnome-core/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
