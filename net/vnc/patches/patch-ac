@@ -1,23 +1,16 @@
-$NetBSD: patch-ac,v 1.4 1999/02/17 19:11:36 tls Exp $
+$NetBSD: patch-ac,v 1.5 2000/11/10 16:57:25 abs Exp $
 
-*** vncserver.orig	Tue Jul 28 16:16:07 1998
---- vncserver	Tue Jul 28 16:17:02 1998
-***************
-*** 144,151 ****
-  
-  # Add font path and color database stuff here, e.g.:
-  #
-! # $cmd .= " -fp /usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
-! # $cmd .= " -co /usr/lib/X11/rgb";
-  #
-  
-  foreach $arg (@ARGV) {
---- 144,151 ----
-  
-  # Add font path and color database stuff here, e.g.:
-  #
-! $cmd .= " -fp /usr/X11R6/lib/X11/fonts/misc/,/usr/X11R6/lib/X11/fonts/75dpi/";
-! $cmd .= " -co /usr/X11R6/lib/X11/rgb";
-  #
-  
-  foreach $arg (@ARGV) {
+--- Xvnc/config/imake/imakemdep.h.orig	Sun Jul 27 03:41:05 1997
++++ Xvnc/config/imake/imakemdep.h
+@@ -287,6 +287,11 @@
+  *     that support multiple operating systems).
+  */
+ 
++#ifdef __NetBSD__
++#undef unix
++#define unix 42
++#endif
++
+ #define	ARGUMENTS 50	/* number of arguments in various arrays */
+ char *cpp_argv[ARGUMENTS] = {
+ 	"cc",		/* replaced by the actual program to exec */

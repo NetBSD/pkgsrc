@@ -1,15 +1,15 @@
-$NetBSD: patch-ae,v 1.1 1999/09/02 21:29:31 tron Exp $
+$NetBSD: patch-ae,v 1.2 2000/11/10 16:57:25 abs Exp $
 
-*** vncviewer/Imakefile.orig	Thu Sep  2 11:45:25 1999
---- vncviewer/Imakefile	Thu Sep  2 11:45:44 1999
-***************
-*** 35,38 ****
-  
-  OBJS = $(SRCS:.c=.o)
-  
-! ComplexProgramTarget(vncviewer)
---- 35,38 ----
-  
-  OBJS = $(SRCS:.c=.o)
-  
-! ComplexProgramTargetNoMan(vncviewer)
+--- vncserver.orig	Wed Jan 12 16:57:12 2000
++++ vncserver
+@@ -146,8 +146,8 @@
+ 
+ # Add font path and color database stuff here, e.g.:
+ #
+-# $cmd .= " -fp /usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
+-# $cmd .= " -co /usr/lib/X11/rgb";
++$cmd .= " -fp /usr/X11R6/lib/X11/fonts/misc/,/usr/X11R6/lib/X11/fonts/75dpi/";
++$cmd .= " -co /usr/X11R6/lib/X11/rgb";
+ #
+ 
+ foreach $arg (@ARGV) {
