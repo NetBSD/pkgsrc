@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2002/12/28 17:18:01 kristerw Exp $
+# $NetBSD: Makefile,v 1.14 2002/12/30 21:40:10 kristerw Exp $
 
 DISTNAME=		s9xs139
 PKGNAME=		snes9x-1.39
-PKGREVISION=		1
+PKGREVISION=		2
 WRKSRC=			${WRKDIR}/release
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.snes9x.com/zips/
@@ -41,7 +41,7 @@ MAKE_ENV+=	FILEFORMAT=aoutb
 MAKE_ENV+=	_ASM_UNDERBARS=1
 .else
 MAKE_ENV+=	FILEFORMAT=elf
-# use assembler part only for ELF, since it doesn't link on a.out
+.endif
 MAKE_ENV+=	ZSNESFX=1
 MAKE_ENV+=	ZSNESC4=1
 MAKE_ENV+=	ASMCPU=1
@@ -49,7 +49,6 @@ MAKE_ENV+=	ASMCPU=1
 MAKE_ENV+=	ASMKREED=1
 .endif
 BUILD_DEFS+=	USE_MMX
-.endif
 .endif
 
 .if exists(${X11BASE}/lib/libXxf86dga.a)
