@@ -1,0 +1,7 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2001/01/04 18:43:41 wiz Exp $
+
+This program is a little bit buggy, so to see anything, you have to
+change 'Viewing Mode' to something different after startup.
+
+======================================================================
