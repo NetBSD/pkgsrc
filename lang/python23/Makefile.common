@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2004/11/24 20:45:10 jschauma Exp $
+# $NetBSD: Makefile.common,v 1.22 2004/12/19 05:34:07 grant Exp $
 #
 
 DISTNAME=	Python-2.3.4
@@ -104,5 +104,6 @@ post-extract:
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
