@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 23:32:14 wiz Exp $
+bin/asclock-gtk
+share/doc/asclock-gtk/README.THEMES
+@dirrm share/doc/asclock-gtk

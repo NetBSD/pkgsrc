@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 23:32:10 wiz Exp $
+
+--- configure.orig	Wed Oct 22 01:52:57 1997
++++ configure	Tue Apr  6 01:03:05 1999
+@@ -1089,8 +1089,8 @@
+ 
+ #### Check that the library files exist
+ echo $ac_n "checking for installed Tcl/Tk library files""... $ac_c" 1>&6
+-lib1="${TCL_EXEC_PREFIX}/lib/${TCL_LIB_FILE}"
+-lib2="${TK_EXEC_PREFIX}/lib/${TK_LIB_FILE}"
++eval lib1="${TCL_EXEC_PREFIX}/lib/${TCL_LIB_FILE}"
++eval lib2="${TK_EXEC_PREFIX}/lib/${TK_LIB_FILE}"
+ for f in "$lib1" "$lib2"; do
+     if test ! -f "$f"; then
+ 	echo "$ac_t""$f not found" 1>&6

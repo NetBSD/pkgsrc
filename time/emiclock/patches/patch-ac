@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/12/17 23:32:18 wiz Exp $
+
+--- config.h.orig	Sat Jan 11 11:35:43 1997
++++ config.h	Sun May 23 10:17:24 1999
+@@ -43,7 +43,7 @@
+  *  ＧＵＩの設定
+  */
+ 
+-#undef	USE_XAW3D			/* Xaw3d を使う？ */
++#include "xawconfig.h"
+ #undef	USE_XAWI18N			/* X11R5 の Xaw I18N を使う？ */
+ 
+ 
+@@ -51,7 +51,7 @@
+  *  サウンド関係の設定
+  */
+ 
+-#undef	USE_SOUND			/* サウンドを使う？ */
++#define	USE_SOUND			/* サウンドを使う？ */
+ 
+ /* #define	EmiClockLib	/usr/local/lib/X11/EmiClock */
+ /* $(LIBDIR)/EmiClock 以外の場所にサウンドファイルをインストール */
