@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.32 2004/02/14 17:21:43 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2004/03/02 10:32:47 adam Exp $
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
-PKGNAME=		p5-PerlMagick-${DISTVERSION}
+PKGNAME=	p5-PerlMagick-${DISTVERSION}
 
-SVR4_PKGNAME=		p5pma
+SVR4_PKGNAME=	p5pma
 
-MAINTAINER=		tron@NetBSD.org
-HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
-COMMENT=		Object-oriented Perl interface to ImageMagick
+MAINTAINER=	tron@NetBSD.org
+HOMEPAGE=	http://www.simplesystems.org/ImageMagick/
+COMMENT=	Object-oriented Perl interface to ImageMagick
 
-DISTINFO_FILE=		${.CURDIR}/../../graphics/ImageMagick/distinfo
-FILESDIR=		${.CURDIR}/../../graphics/ImageMagick/files
-PATCHDIR=		${.CURDIR}/../../graphics/ImageMagick/patches
+DISTINFO_FILE=	${.CURDIR}/../../graphics/ImageMagick/distinfo
+FILESDIR=	${.CURDIR}/../../graphics/ImageMagick/files
+PATCHDIR=	${.CURDIR}/../../graphics/ImageMagick/patches
 
+USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
-USE_BUILDLINK2=		YES
 
 USE_PERL5=		run
 PERL5_CONFIGURE=	NO
@@ -32,6 +32,6 @@ CONFIGURE_ARGS+=	--with-perl=${PERL5}
 
 post-configure: perl5-configure
 
-.include "../../graphics/ImageMagick/buildlink2.mk"
+.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
