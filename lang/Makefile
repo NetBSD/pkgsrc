@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.199 2004/11/25 22:02:49 jlam Exp $
+# $NetBSD: Makefile,v 1.200 2004/11/27 14:16:05 taca Exp $
 #
 
 COMMENT=	Programming languages
@@ -129,7 +129,9 @@ SUBDIR+=	python23-pth
 SUBDIR+=	rexx-imc
 SUBDIR+=	rexx-regina
 SUBDIR+=	ruby
-SUBDIR+=	ruby-base
+SUBDIR+=	ruby16
+SUBDIR+=	ruby18
+#SUBDIR+=	ruby-base
 SUBDIR+=	sablevm
 SUBDIR+=	sablevm-classpath
 SUBDIR+=	sablevm-classpath-gui
