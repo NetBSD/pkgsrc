@@ -1,12 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2002/05/20 21:54:18 kleink Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/03/16 10:21:03 kleink Exp $
 bin/scmxx
 man/man1/scmxx.1
 share/doc/scmxx/doc_sources.txt
-share/doc/scmxx/greekchars.txt
 share/doc/scmxx/gsmcharset.txt
-share/doc/scmxx/specialchars.txt
 share/examples/scmxx/phonebook
-share/examples/scmxx/sms
-share/examples/scmxx/vCalendar
+share/examples/scmxx/sms.txt
+share/examples/scmxx/vCalendar.vcs
+share/examples/scmxx/vCard.vcf
 @dirrm share/doc/scmxx
 @dirrm share/examples/scmxx
