@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.14 2000/07/29 08:52:22 jlam Exp $
+
+--- dialects/n+obsd/dlsof.h.orig	Thu Jun 22 08:55:29 2000
++++ dialects/n+obsd/dlsof.h	Sat Jul 29 04:45:23 2000
+@@ -47,6 +47,7 @@
+ #include <unistd.h>
+ #include <sys/filedesc.h>
+ #include <sys/mbuf.h>
++#include <sys/param.h>
+ 
+ # if	defined(NETBSDV)
+ #include <sys/buf.h>
+@@ -183,6 +184,9 @@
+ #define _KERNEL
+ #include <sys/file.h>
+ #include <sys/fcntl.h>
++#if defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 105030000)
++struct vop_advlock_args { int dummy; };	/* to pacify lf_advlock() prototype */
++#endif
+ #include <sys/lockf.h>
+ #undef	KERNEL
+ #undef	_KERNEL
+@@ -197,10 +201,14 @@
+ #include <uvm/uvm.h>
+ # endif	/* defined(UVM) */
+ 
++#if defined(__NetBSD_Version__) && (__NetBSD_Version__ < 105020000)
+ #include <vm/vm.h>
+ #include <vm/vm_map.h>
+ #include <vm/vm_object.h>
+ #include <vm/vm_pager.h>
++#else
++#include <uvm/uvm_extern.h>
++#endif
+ 
+ # if	defined(OPENBSDV)
+ #  if	OPENBSDV==2030 && defined(__sparc__)
