@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2000/10/22 09:33:24 rh Exp $
+$NetBSD: patch-aa,v 1.6 2002/01/24 13:59:57 wiz Exp $
 
 --- configure.orig	Wed Oct 18 11:06:28 2000
 +++ configure
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.5 2000/10/22 09:33:24 rh Exp $
    rm -rf conftest*
    CATOBJEXT=.mo
 -		   DATADIRNAME=lib
-+		   DATADIRNAME=share
++		   DATADIRNAME=${PKGLOCALEDIR}
  fi
  rm -f conftest*
  		INSTOBJEXT=.mo
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.5 2000/10/22 09:33:24 rh Exp $
  		 CATOBJEXT=.cat
  		 INSTOBJEXT=.cat
 -		 DATADIRNAME=lib
-+		 DATADIRNAME=share
++		 DATADIRNAME=${PKGLOCALEDIR}
  		 INTLDEPS='$(top_builddir)/intl/libintl.a'
  		 INTLLIBS=$INTLDEPS
  		 LIBS=`echo $LIBS | sed -e 's/-lintl//'`
