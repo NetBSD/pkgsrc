@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.694 2003/07/11 23:44:32 wiz Exp $
+$NetBSD: TODO,v 1.695 2003/07/12 00:37:08 zuntum Exp $
 
 Suggested new packages
 ======================
@@ -218,7 +218,6 @@ Suggested package updates
 	o pine-4.56
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12 [pkg/21667]
-	o polsms-1.9.2 [zuntum]
 	o povray-3.5
 	o proftpd-1.2.9rc1
 	o pureftpd-1.0.15 [pkg/21941]
