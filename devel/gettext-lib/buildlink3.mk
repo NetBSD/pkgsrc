@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2004/02/06 19:04:24 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2004/02/11 11:30:49 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
@@ -18,6 +18,18 @@ BUILDLINK_IS_BUILTIN.gettext=	NO
 .  if exists(/usr/include/libintl.h)
 BUILDLINK_IS_BUILTIN.gettext=	YES
 .  endif
+#
+# The listed platforms have a broken (for the purposes of pkgsrc) version
+# of gettext-lib.  
+#
+_INCOMPAT_GETTEXT=	SunOS-*-*
+INCOMPAT_GETTEXT?=	# empty
+.  for _pattern_ in ${_INCOMPAT_GETTEXT} ${INCOMPAT_GETTEXT}
+.    if !empty(MACHINE_PLATFORM:M${_pattern_})
+BUILDLINK_IS_BUILTIN.gettext=	NO
+.    endif
+.  endfor
+MAKEFLAGS+=	BUILDLINK_IS_BUILTIN.gettext=${BUILDLINK_IS_BUILTIN.gettext}
 .endif
 
 .if !empty(PREFER_PKGSRC:M[yY][eE][sS]) || \
@@ -52,20 +64,8 @@ BUILDLINK_USE_BUILTIN.gettext!=	\
 	fi
 .      endif
 .    endfor
-#
-# The listed platforms have a broken (for the purposes of pkgsrc) version
-# of gettext-lib.  
-#
-_INCOMPAT_GETTEXT=	SunOS-*-*
-INCOMPAT_GETTEXT?=	# empty
-.    for _pattern_ in ${_INCOMPAT_GETTEXT} ${INCOMPAT_GETTEXT}
-.      if !empty(MACHINE_PLATFORM:M${_pattern_})
-BUILDLINK_USE_BUILTIN.gettext=	NO
-.      endif
-.    endfor
 .  endif
-MAKEFLAGS+=	\
-	BUILDLINK_USE_BUILTIN.gettext=${BUILDLINK_USE_BUILTIN.gettext}
+MAKEFLAGS+=	BUILDLINK_USE_BUILTIN.gettext=${BUILDLINK_USE_BUILTIN.gettext}
 .endif
 
 .if !empty(BUILDLINK_USE_BUILTIN.gettext:M[nN][oO])
