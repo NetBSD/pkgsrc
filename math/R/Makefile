@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2005/01/12 22:49:35 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2005/01/12 22:50:20 jlam Exp $
 
 DISTNAME=		R-2.0.1
 CATEGORIES=		math
@@ -93,6 +93,17 @@ SUBST_SED.fix-R=	${SUBST_SED.unwrap}				\
 			-e "s|${BUILDLINK_DIR}/|${LOCALBASE}/|g"	\
 			-e "s|${BUILDLINK_X11_DIR}/|${X11BASE}/|g"
 
+BUILDLINK_DEPENDS.zlib+= zlib>=1.2.1
+
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../math/blas/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
+
 # Generate the PLIST dynamically as it changes in each version only in a
 # specific subtree.  This will make maintaining this package a little easier
 # when updating.
@@ -118,14 +129,4 @@ post-install:
 	${ECHO} "@exec R CMD ${PERL5} %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null" >> ${PLIST_SRC}
 	${ECHO} "@exec ${CAT} %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null" >> ${PLIST_SRC}
 
-BUILDLINK_DEPENDS.zlib+= zlib>=1.2.1
-
-.include "../../archivers/bzip2/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
