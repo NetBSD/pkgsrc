@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.25 1999/03/20 00:17:19 tron Exp $
+# $NetBSD: Makefile,v 1.26 1999/04/16 11:00:31 jlam Exp $
 
-DISTNAME=		WindowMaker-0.51.2
-PKGNAME=		windowmaker-0.51.2
+DISTNAME=		WindowMaker-0.52.0
+PKGNAME=		windowmaker-0.52.0
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.windowmaker.org/pub/beta/srcs/ \
 			ftp://shadowmere.student.utwente.nl/pub/WindowMaker/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-			WindowMaker-data.tar.gz
+
+MAINTAINER=		jlam@netbsd.org
+HOMEPAGE=		http://www.windowmaker.org/
 
 DEPENDS+=		libproplist-0.8.3:../../devel/libproplist
 DEPENDS+=		giflib-3.0:../../graphics/giflib
@@ -14,9 +15,6 @@ DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		png-1.0.3:../../graphics/png
 DEPENDS+=		tiff-3.4:../../graphics/tiff
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
-
-MAINTAINER=		lamj@stat.cmu.edu
-HOMEPAGE=		http://www.windowmaker.org/
 
 USE_LIBTOOL=		yes
 USE_X11BASE=		yes
@@ -36,7 +34,7 @@ CONFIGURE_ENV+=		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 #	kde		enable support for kde/kwm window manager hints
 #	gnome		enable support for GNOME window manager hints
 #	openlook	enable support for OPEN LOOK(tm) window manager hints
-#	lite		remove Window Maker redundancies with KDE
+#	lite		remove Window Maker redundancies with KDE and GNOME
 #
 WINDOWMAKER_OPTIONS?=	gnome kde
 
@@ -70,19 +68,19 @@ CONFIGURE_ARGS+=	--enable-kanji
 .endif # LINGUAS
 
 post-extract:
-	${RM} -f ${WRKDIR}/WindowMaker-data/pixmaps/tile.xpm
 	${RM} -f ${WRKSRC}/WindowMaker/Defaults/WMState \
 		 ${WRKSRC}/WindowMaker/Defaults/WMWindowAttributes \
 		 ${WRKSRC}/WindowMaker/Defaults/WindowMaker
 
 pre-configure:
+.if !defined(LINGUAS)
 	@${ECHO} "To compile with i18n support, set the variable LINGUAS"
 	@${ECHO} "to the list of locales to install."
+.else
+	@${ECHO} "Compiling support for locales: ${LINGUAS}"
+.endif
 
 post-install:
-	(cd ${WRKDIR}/WindowMaker-data/pixmaps/ ; for i in * ; do \
-	 ${INSTALL_DATA} "$$i" ${PREFIX}/share/WindowMaker/Pixmaps/ ; \
-	 done )
 	${INSTALL_DATA_DIR} ${PREFIX}/share/WindowMaker/SoundSets
 	${INSTALL_DATA_DIR} ${PREFIX}/share/WindowMaker/Sounds
 	${TOUCH} ${PREFIX}/share/WindowMaker/SoundSets/.keep_me
