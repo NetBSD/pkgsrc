@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:19:21 zuntum Exp $
+bin/wmMoonClock
+man/man1/wmMoonClock.1

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 10:04:21 agc Exp $
-bin/es
-bin/esdebug
-man/man1/es.1.gz
