@@ -1,3 +1,4 @@
+$NetBSD: patch-ac,v 1.2 2000/02/05 04:52:06 wiz Exp $
 --- src/plugins/land/land.c.orig	Mon Mar 22 15:05:37 1999
 +++ src/plugins/land/land.c	Mon Mar 22 15:14:21 1999
 @@ -11,13 +11,6 @@

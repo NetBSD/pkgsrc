@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.2 2000/02/05 04:52:06 wiz Exp $
 --- src/plugins/ftp_misc_overflows/ftp_misc_overflows.c.old	Thu Mar 18 22:25:23 1999
 +++ src/plugins/ftp_misc_overflows/ftp_misc_overflows.c	Thu Mar 18 22:25:31 1999
 @@ -43,7 +43,6 @@
