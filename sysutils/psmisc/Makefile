@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:51 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2001/06/18 10:55:03 jlam Exp $
 
 DISTNAME=		psmisc-20.1
 CATEGORIES=		sysutils
@@ -15,13 +15,7 @@ GNU_CONFIGURE=		# defined
 # Don't match tgetstr() to libncurses, but force fall-through to libtermcap.
 CONFIGURE_ENV+=		ac_lib_var_ncurses_tgetstr=no
 
-# killall uses getopt_long(), which only appeared since the NetBSD 1.5 release.
-.if !exists(/usr/include/getopt.h)
-DEPENDS+=		libgetopt>=1.3:../../devel/libgetopt
-EVAL_PREFIX+=		GETOPTDIR=libgetopt
-CPPFLAGS+=		-I${GETOPTDIR}/include
-LDFLAGS+=		-Wl,-R${GETOPTDIR} -L${GETOPTDIR} -lgetopt
-.endif
+.include "../../devel/libgetopt/buildlink.mk"
 
 # "make install" doesn't install the link from killall -> pidof.
 post-install:
