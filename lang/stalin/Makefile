@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/10 11:07:31 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/10 12:20:47 jtb Exp $
 
 DISTNAME=		stalin
 PKGNAME=		stalin-0.8
@@ -21,6 +21,8 @@ ALL_TARGET=		all-alpha
 ALL_TARGET=		all-32
 .endif
 
+STALIN="${PREFIX}/bin/stalin -I ${PREFIX}/lib/stalin -I ${PREFIX}/include -I ${PREFIX}/lib -I ${GC_PREFIX}/include -I ${GC_PREFIX}/lib"
+
 post-patch:
 	@${RM} -f ${WRKSRC}/benchmarks/*.orig
 	@for i in stalin.sc stalin-32.c stalin-alpha.c stalin.1 \
@@ -32,7 +34,8 @@ post-patch:
 	${SED} -e 's:%%PREFIX%%:'${PREFIX}':g' \
 	-e 's:%%GC_PREFIX%%:'${GC_PREFIX}':g' \
 	-e 's:%%MESA_PREFIX%%:'${MESA_PREFIX}':g' \
-	-e 's:%%X11BASE%%:'${X11BASE}':g' < ${WRKSRC}/$$i > \
+	-e 's:%%X11BASE%%:'${X11BASE}':g' \
+	-e 's:%%STALIN%%:'${STALIN}':g' < ${WRKSRC}/$$i > \
 	${WRKSRC}/$$i.tmp && ${MV} -f ${WRKSRC}/$$i.tmp ${WRKSRC}/$$i ; done
 
 do-install:
