@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/11 17:46:41 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/10/12 08:30:46 jmmv Exp $
 bin/dbus-glib-tool
 bin/dbus-monitor
+include/dbus-1.0/dbus/dbus-glib-error-enum.h
+include/dbus-1.0/dbus/dbus-glib-lowlevel.h
+include/dbus-1.0/dbus/dbus-glib.h
 lib/libdbus-glib-1.la
 lib/pkgconfig/dbus-glib-1.pc
 man/man1/dbus-monitor.1
+@comment in dbus: @dirrm include/dbus-1.0/dbus
