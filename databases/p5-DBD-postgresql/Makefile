@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.21 2003/01/05 20:14:24 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2003/01/17 16:41:37 mjl Exp $
 #
 
-VER=		1.13
+VER=		1.21
 DISTNAME=	DBD-Pg-${VER}
 PKGNAME=	p5-DBD-postgresql-${VER}
-PKGREVISION=	3
+# PKGREVISION=	3
 SVR4_PKGNAME=	p5dpo
 CATEGORIES=	databases perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/JBAKER/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBD/}
 
 MAINTAINER=	jwise@netbsd.org
-HOMEPAGE=	http://www.postgresql.org/
+HOMEPAGE=	http://gborg.postgresql.org/project/dbdpg/projdisplay.php
 COMMENT=	perl DBI/DBD driver for PostgreSQL databases
 
 USE_BUILDLINK2=	YES
