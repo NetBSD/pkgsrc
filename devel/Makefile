@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 1999/09/03 06:27:51 sakamoto Exp $
+# $NetBSD: Makefile,v 1.74 1999/09/03 17:22:28 kim Exp $
 # FreeBSD Id: Makefile,v 1.78 1997/10/01 08:32:59 cracauer Exp
 #
 
@@ -71,6 +71,7 @@
 #    SUBDIR += omniORB
     SUBDIR += p5-AtExit
 #    SUBDIR += p5-B
+    SUBDIR += p5-Bit-Vector
 #    SUBDIR += p5-BSD-Resource
 #    SUBDIR += p5-C-Scan
 #    SUBDIR += p5-ConfigReader
@@ -85,10 +86,11 @@
 #    SUBDIR += p5-Devel-Symdump
 #    SUBDIR += p5-Errno
 #    SUBDIR += p5-File-BasicFlock
-    SUBDIR += p5-FileKGlob
 #    SUBDIR += p5-File-Lock
+    SUBDIR += p5-File-PathConvert
 #    SUBDIR += p5-File-Slurp
 #    SUBDIR += p5-File-Tools
+    SUBDIR += p5-FileKGlob
 #    SUBDIR += p5-Filter
 #    SUBDIR += p5-FreezeThaw
 #    SUBDIR += p5-Include
