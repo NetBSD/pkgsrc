@@ -1,8 +1,18 @@
-$NetBSD: patch-ac,v 1.3 2003/11/27 23:36:42 taya Exp $
+$NetBSD: patch-ac,v 1.4 2004/12/04 03:50:40 taya Exp $
 
---- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/Makefile.in	2003-01-28 06:52:51.000000000 +0900
-+++ ./xpcom/reflect/xptcall/src/md/unix/Makefile.in	2003-03-14 16:58:41.000000000 +0900
-@@ -129,7 +129,7 @@
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2004-04-22 22:50:05.000000000 +0200
++++ xpcom/reflect/xptcall/src/md/unix/Makefile.in
+@@ -49,6 +49,9 @@ ifneq (,$(filter FreeBSD NetBSD OpenBSD 
+ ifeq (86,$(findstring 86,$(OS_TEST)))
+ CPPSRCS		:= xptcinvoke_unixish_x86.cpp xptcstubs_unixish_x86.cpp
+ endif
++ifeq (amd64,$(OS_TEST))
++CPPSRCS                := xptcinvoke_unixish_amd64.cpp xptcstubs_unixish_amd64.cpp
++endif
+ endif
+ #
+ # New code for Linux, et. al., with gcc
+@@ -140,7 +143,7 @@ endif
  # NetBSD/ARM
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -11,7 +21,7 @@ $NetBSD: patch-ac,v 1.3 2003/11/27 23:36:42 taya Exp $
  CPPSRCS		:= xptcinvoke_arm_netbsd.cpp xptcstubs_arm_netbsd.cpp
  endif
  endif
-@@ -163,7 +163,7 @@
+@@ -174,7 +177,7 @@ endif
  # NetBSD/m68k
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -20,7 +30,15 @@ $NetBSD: patch-ac,v 1.3 2003/11/27 23:36:42 taya Exp $
  CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
  endif
  endif
-@@ -287,6 +287,13 @@
+@@ -257,6 +260,7 @@ endif
+ ifneq (,$(filter NetBSDmacppc NetBSDbebox NetBSDofppc NetBSDprep NetBSDamigappc,$(OS_ARCH)$(OS_TEST)))                           
+ CPPSRCS		:= xptcinvoke_ppc_netbsd.cpp xptcstubs_ppc_netbsd.cpp
+ ASFILES		:= xptcinvoke_asm_ppc_netbsd.s xptcstubs_asm_ppc_netbsd.s
++AS		:= $(CC) -c -x assembler-with-cpp
+ endif
+ 
+ #
+@@ -305,6 +309,13 @@ ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc)
  CPPSRCS		:= xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
  ASFILES		:= xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
  endif
