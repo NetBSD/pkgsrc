@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2001/02/16 15:22:28 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2001/03/04 09:06:13 tron Exp $
 
 DISTNAME=	netpbm-9.7
 CATEGORIES=	graphics
@@ -10,7 +10,7 @@ HOMEPAGE=	http://netpbm.sourceforge.net/
 COMMENT=	toolkit for conversion of images between different formats
 
 DEPENDS+=	tiff>=3.5.4:../../graphics/tiff
-DEPENDS+=	png>=1.0.6:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes

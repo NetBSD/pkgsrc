@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:06:43 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/04 09:06:21 tron Exp $
 #
 USE_MESA=	yes
 
@@ -8,7 +8,7 @@ PKGNAME=	qt2-libs-${QTVERSION}
 
 COMMENT=	C++ X GUI toolkit
 
-DEPENDS+=	png-*:../../graphics/png
+DEPENDS+=	png>1.0.9:../../graphics/png
 DEPENDS+=	jpeg-*:../../graphics/jpeg
 
 CONFIGURE_ENV+=	QTDIR=${WRKSRC}
