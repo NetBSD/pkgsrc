@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/11/26 06:49:52 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/10/13 22:22:47 seb Exp $
 
 DISTNAME=	Make-1.00
 PKGNAME=	p5-Make-1.00
@@ -10,11 +10,8 @@ MAINTAINER=	packages@netbd.org
 HOMEPAGE=	http://www.ni-s.u-net.com/
 COMMENT=	Perl5 module implementing 'make' in Perl
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Make/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/02/14 16:02:50 mjl Exp $
+# $NetBSD: Makefile,v 1.9 2002/10/13 22:22:54 seb Exp $
 #
 
 DISTNAME=	SQL-Statement-1.002
@@ -11,11 +11,8 @@ MAINTAINER=	packages@netbsd.org
 # HOMEPAGE=	http://
 COMMENT=	small, abstract SQL engine
 
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SQL/Statement/.packlist
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
-
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
