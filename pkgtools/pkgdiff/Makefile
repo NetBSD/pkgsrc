@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2004/02/10 02:22:50 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2004/02/10 23:53:33 jlam Exp $
 #
 
 DISTNAME=	pkgdiff-0.113
@@ -20,6 +20,7 @@ NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}
 USE_BUILDLINK3=	yes
+USE_LANGUAGES=	# empty
 
 MAKE_ENV=	PKGSRCDIR=${_PKGSRCDIR:Q}
 
