@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/05/31 13:59:28 skrll Exp $
+$NetBSD: patch-ad,v 1.2 2003/01/02 09:12:30 skrll Exp $
 
---- kppp/pppstats.cpp.orig	Wed May  8 19:30:04 2002
+--- kppp/pppstats.cpp.orig	Mon Dec 16 03:02:45 2002
 +++ kppp/pppstats.cpp
-@@ -217,27 +217,29 @@
+@@ -218,27 +218,29 @@ bool PPPStats::initStats() {
  
-   strcpy(ifr.ifr_name, unitName);
+   strlcpy(ifr.ifr_name, unitName, sizeof(ifr.ifr_name));
  
 +  local_ip_address = "";
    if (ioctl(s, SIOCGIFADDR, &ifr) < 0) {
