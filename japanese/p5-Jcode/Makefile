@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/05/15 23:27:57 taca Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/15 23:49:06 taca Exp $
 #
 
 DISTNAME=	Jcode-0.70
@@ -16,7 +16,7 @@ USE_PERL5=	# defined
 PERL5_PACKLIST=	${PERL5_SITEARCH}/auto/Jcode/.packlist
 ALL_TARGET=	all test
 
-pre-patch:
+pre-configure:
 	@cd ${WRKSRC}; ${RM} -f mac_install.pl win_install.pl
 
 do-configure:
