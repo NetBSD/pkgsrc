@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2723 2003/07/10 19:53:11 jmmv Exp $
+$NetBSD: CHANGES,v 1.2724 2003/07/11 07:43:35 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2740,3 +2740,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gmplayer to 0.90nb4 [wiz 2003-07-10]
 	Updated mencoder to 0.90nb4 [wiz 2003-07-10]
 	Updated gabber to 0.8.8 [jmmv 2003-07-10]
+	Updated vm to 7.17 [jtb 2003-07-11]
