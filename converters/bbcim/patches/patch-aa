@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/06/07 19:05:21 skrll Exp $
+
+--- bbc_crc.c.orig	Fri Jul  4 08:33:20 1997
++++ bbc_crc.c	Sun Jun  4 16:57:24 2000
+@@ -68,9 +68,9 @@
+      #ifdef NL
+      printf("Naam van het te controleren archief bestand?");
+      #else
+-     printf("Name of the archive file to be checked?");
++     printf("Name of the archive file to be checked?\n");
+      #endif
+-     scanf("%50s", archivefile);
++     exit(1);
+      } else strcpy(archivefile, argv[2+options]);
+ */
+ 

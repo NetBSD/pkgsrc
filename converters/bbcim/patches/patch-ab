@@ -1,0 +1,69 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/06/07 19:05:21 skrll Exp $
+
+--- bbcim.c.orig	Fri Jul  4 09:07:28 1997
++++ bbcim.c	Sun Jun  4 16:57:24 2000
+@@ -87,7 +87,6 @@
+ 
+ /*************** CONFIGURATION *********************/
+ /* Comment out for english messages: */
+-#define NL
+ 
+ #define UNIX_MKDIR
+ 
+@@ -280,9 +279,9 @@
+     #ifdef NL
+     printf("Welke optie?");
+     #else
+-    printf("Which option?");
++    printf("Which option?\n");
+     #endif
+-    scanf("%20s", optstring); options=0;
++    exit(1);
+   }
+   else strcpy(optstring, argv[1]);
+ 
+@@ -426,7 +425,7 @@
+     #else
+     printf("Name of the bbc disk image?");
+     #endif
+-    scanf("%50s", disk);
++    exit(1);
+   } else strcpy(disk, argv[1+options]);
+ 
+ 
+@@ -475,7 +474,7 @@
+     #ifdef NL
+     printf("Bestand %s is niet te openen\n\n",disk);
+     #else
+-    printf("File %s cannot be opened\n\n",disk);
++    printf("File %s cannot be opened\n",disk);
+     #endif
+     exit(1);
+   }
+@@ -526,7 +525,7 @@
+     #ifdef NL
+     printf("niets op het diskbeeld\n\n");
+     #else
+-    printf("nothing on the diskimage\n\n");
++    printf("nothing on the diskimage\n");
+     #endif
+ 
+     exit(1);
+@@ -794,7 +793,7 @@
+                " bij bestand %s\n\n", bbcfile_naam);
+             #else
+ 	    printf("unexpected end of the diskimage" \
+-               " at file %s\n\n", bbcfile_naam);
++               " at file %s\n", bbcfile_naam);
+             #endif
+             exit(1);
+ 	  }
+@@ -832,7 +831,7 @@
+                " bij bestand %s\n\n", bbcfile_naam);
+              #else
+ 	    printf("unexpected end of the diskimage" \
+-               " at file %s\n\n", bbcfile_naam);
++               " at file %s\n", bbcfile_naam);
+              #endif
+ 	    exit(1);
+ 	  }
