@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/05/22 10:42:13 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/06/26 00:38:28 zuntum Exp $
 
 DISTNAME=		WindowMaker-0.65.0
 PKGNAME=		windowmaker-0.65.0
@@ -13,12 +13,8 @@ COMMENT=		GNUStep-compliant NEXTSTEP(tm) window manager clone
 
 BUILD_DEPENDS+=		automake-1.4:../../devel/automake
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		libproplist-0.10.*:../../devel/libproplist
-DEPENDS+=		libungif-*:../../graphics/libungif
-DEPENDS+=		jpeg-6b:../../graphics/jpeg
-DEPENDS+=		png>=1.0.11:../../graphics/png
-DEPENDS+=		tiff-*:../../graphics/tiff
 
+USE_BUILDLINK_ONLY=	YES
 USE_LIBTOOL=		YES
 USE_LIBINTL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
@@ -26,11 +22,7 @@ USE_X11BASE=		YES
 USE_XPM=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-usermenu \
-			--with-nlsdir=${PREFIX}/share/locale \
-			--with-incs-from="-I${LOCALBASE}/include" \
-			--with-libs-from=" \
-				-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib \
-				-Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
+			--with-nlsdir=${PREFIX}/share/locale
 CONFIGURE_ENV+=		LINGUAS=yes
 
 INSTALL_TARGET=		install-strip
@@ -88,4 +80,9 @@ post-install:
 		FAQ FAQ.I18N \
 		${PREFIX}/share/doc/WindowMaker
 
+.include "../../devel/libproplist/buildlink.mk"
+.include "../../graphics/libungif/buildlink.mk"
+.include "../../graphics/jpeg/buildlink.mk"
+.include "../../graphics/png/buildlink.mk"
+.include "../../graphics/tiff/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
