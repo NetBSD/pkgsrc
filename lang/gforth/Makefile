@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/05/09 23:33:40 itohy Exp $
+# $NetBSD: Makefile,v 1.6 2000/05/09 23:36:43 itohy Exp $
 
 DISTNAME=		gforth-0.4.0
 CATEGORIES=		lang
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_GNU:=gforth/}
 MAINTAINER=		simonb@netbsd.org
 HOMEPAGE=		http://www.complang.tuwien.ac.at/forth/gforth/
 
-ONLY_FOR_PLATFORM=	*-*-i386 *-*-m68k
+ONLY_FOR_PLATFORM=	*-*-alpha *-*-i386 *-*-m68k
 
 GNU_CONFIGURE=		YES
 # Make sure elisp will be installed even if no emacs installed.
