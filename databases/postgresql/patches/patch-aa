@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.6 2000/05/20 19:34:16 jlam Exp $
+
+--- Makefile.global.in.orig	Sun Apr 16 23:44:56 2000
++++ Makefile.global.in	Sat May 20 00:14:18 2000
+@@ -208,8 +208,9 @@
+ YACC= @YACC@
+ LEX= @LEX@
+ AROPT= @AROPT@
+-CFLAGS= -I$(SRCDIR)/include -I$(SRCDIR)/backend @CPPFLAGS@ @CFLAGS@
++CFLAGS= -I$(SRCDIR)/include -I$(SRCDIR)/backend $(CPPFLAGS) @CFLAGS@
+ CFLAGS_SL= @SHARED_LIB@
++CPPFLAGS= @CPPFLAGS@
+ LIBS= @LIBS@
+ LDFLAGS= @LDFLAGS@ $(LIBS)
+ LDREL= -r

@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.7 2000/05/20 19:34:18 jlam Exp $
+
+--- configure.in.orig	Wed May  3 15:10:55 2000
++++ configure.in	Sat May 20 00:14:18 2000
+@@ -655,10 +655,6 @@
+ AC_SUBST(YFLAGS)
+ 
+ AC_CHECK_LIB(sfio,     main)
+-for curses in ncurses curses ; do
+-	AC_CHECK_LIB(${curses}, main,
+-		[LIBS="-l${curses} $LIBS"; break])
+-done
+ AC_CHECK_LIB(termcap,  main)
+ AC_CHECK_LIB(readline, main)
+ AC_CHECK_LIB(readline, using_history, AC_DEFINE(HAVE_HISTORY_IN_READLINE),
