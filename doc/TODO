@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7 2002/11/26 12:16:18 skrll Exp $
+$NetBSD: TODO,v 1.8 2002/11/26 22:06:37 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -123,7 +123,6 @@ Suggested package updates
 	o guile-1.6.0
 	o htmldoc-1.8.23
 	o icewm-1.2.2
-	o id3lib-3.8.1
 	o imlib2-1.0.6 [pkg/19144]
 	o irssi-0.8.6
 	o ivtools-1.0.5
