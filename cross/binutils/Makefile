@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1999/01/04 22:37:31 tv Exp $
+# $NetBSD: Makefile,v 1.2 1999/01/06 21:43:34 tv Exp $
 #
 # GNU binutils configured to hold `as many targets as the cross system is
 # capable of using'.  Configures and builds everything except gas, which
@@ -17,7 +17,9 @@ USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-64-bit-bfd \
-			--enable-targets=${ENABLE_TARGETS_LIST}
+			--enable-targets=${ENABLE_TARGETS_LIST} \
+			--target=powerpc-eabi
+# --target above ensures that --host is not included as default
 MAKE_ARGS+=		CFLAGS="${CFLAGS}"
 ALL_TARGET=		all-binutils all-gprof all-ld
 
