@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/15 01:07:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/05 02:54:22 wiz Exp $
 #
 
 DISTNAME=		aspell-.33.7.1
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 
 # halfdelay()
 USE_NCURSES=		yes
@@ -22,6 +22,7 @@ USE_NCURSES=		yes
 CONFIGURE_ARGS+=	--enable-doc-dir=${PREFIX}/share/doc/aspell
 CONFIGURE_ARGS+=	--enable-curses=ncurses
 
-.include "../../devel/ncurses/buildlink.mk"
-.include "../../textproc/libpspell/buildlink.mk"
+.include "../../devel/libtool/buildlink2.mk"
+.include "../../devel/ncurses/buildlink2.mk"
+.include "../../textproc/libpspell/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
