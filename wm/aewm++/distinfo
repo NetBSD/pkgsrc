@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/12 03:21:37 jschauma Exp $
+
+SHA1 (aewm++-1.0.22.tar.bz2) = 49fb1aac02ec64896f607513d786a8e2628ac2a5
+Size (aewm++-1.0.22.tar.bz2) = 42517 bytes
+SHA1 (patch-aa) = 1a0efa88f1b6d3f4582b0ca1acc8670a42d6521e

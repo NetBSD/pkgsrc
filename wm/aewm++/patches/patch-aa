@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/03/12 03:21:38 jschauma Exp $
+
+--- Makefile.orig	Fri Nov 15 18:28:08 2002
++++ Makefile	Tue Mar 11 22:07:31 2003
+@@ -1,11 +1,13 @@
+-CC       = g++
+-CFLAGS   = -g -O2 -Wall
++#CC       = g++
++#CFLAGS   = -g -O2 -Wall
+ 
+-prefix   = /usr
+-INCLUDES = -I$(prefix)/include
+-LDPATH   = -L/usr/X11R6/lib
++prefix   = ${PREFIX}
++INCLUDES = -I${X11PREFIX}/include
++LDPATH   = ${LDFLAGS}
+ LIBS     = -lXext -lX11
+ 
++.SUFFIXES:	.o .cc
++
+ # SHAPE = Shape Extension
+ # NEED_SETENV = Does your Unix not support the setenv function? Use this!
+ DEFINES  = -DSHAPE #-DNEED_SETENV 
+@@ -28,16 +30,17 @@
+ all: aewm++
+ 
+ aewm++: $(OBJS)
+-	$(CC) $(OBJS) $(LDPATH) $(LIBS) -o $@
++	$(CXX) $(OBJS) $(LDPATH) $(LIBS) -o $@
+ 
+-$(OBJS): %.o: %.cc $(HEADERS)
+-	$(CC) $(CFLAGS) $(DEFINES) $(INCLUDES) -c $< -o $@
++.cc.o: $(HEADERS)
++	echo $<
++	$(CXX) $(CXXFLAGS) $(DEFINES) $(INCLUDES) -c $< -o $@
+ 
+ install: all
+ 	mkdir -p $(DESTDIR)$(prefix)/bin
+ 	mkdir -p $(DESTDIR)$(prefix)/man/man1
+ 	install -s aewm++ $(DESTDIR)$(prefix)/bin
+-	install -m 644 aewm++.1x  $(DESTDIR)$(prefix)/man/man1
++	install -m 644 aewm++.1  $(DESTDIR)$(prefix)/man/man1
+ 	
+ clean:
+ 	rm -f aewm++ $(OBJS) core
