@@ -1,0 +1,31 @@
+*** doc/cvs.texinfo.orig	Wed Oct  2 02:03:43 1996
+--- doc/cvs.texinfo	Sun Nov 16 23:08:07 1997
+***************
+*** 24,29 ****
+--- 24,33 ----
+  @setfilename cvs.info
+  @include CVSvn.texi
+  @settitle CVS---Concurrent Versions System
++ @dircategory Programming & development tools
++ @direntry
++ * CVS: (cvs)			CVS Reference Manual.
++ @end direntry
+  @setchapternewpage odd
+  
+  @c -- TODO list:
+*** doc/cvsclient.texi.orig	Mon Sep 30 12:35:33 1996
+--- doc/cvsclient.texi	Sun Nov 16 23:21:00 1997
+***************
+*** 3,8 ****
+--- 3,13 ----
+  @setfilename cvsclient.info
+  @include CVSvn.texi
+  
++ @dircategory Programming & development tools
++ @direntry
++ * CVS-CLIENT: (cvsclient).	CVS client/server Reference Manual.
++ @end direntry
++ 
+  @node Top
+  @top CVS Client/Server
+  
