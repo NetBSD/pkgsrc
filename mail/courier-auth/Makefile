@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2004/05/12 23:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/07/14 20:07:07 jlam Exp $
 
 PKGNAME=	courier-auth-${BASE_VERS}
 CATEGORIES=	security
-COMMENT=	Authentication modules for Courier mail packages
+COMMENT=	authentication modules for Courier mail packages
 
 CONFLICTS=	courier-imap<=1.4.0
-CONFLICTS+=	courier-imap-ldap-*
+CONFLICTS+=	courier-imap-ldap-[0-9]*
 
 USE_PERL5=		yes
 REPLACE_PERL=		sysconftool
@@ -17,13 +17,15 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 .include "../courier-auth/Makefile.authdaemond"
 
 WRKSRC_FILES+=		imap/system-auth.authpam
+WRKSRC_SUBDIRS+=	liblog
 
-INSTALL_DIRS=		${WRKSRC}/makedat ${WRKSRC}/userdb ${WRKSRC}/authlib
+INSTALL_DIRS=		${WRKSRC}/liblog ${WRKSRC}/makedat		\
+			${WRKSRC}/userdb ${WRKSRC}/authlib
 
 GEN_FILES=		authdaemonrc
 FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
 
-OWN_DIRS_PERMS=		/var/authdaemon ${ROOT_USER} ${ROOT_GROUP} 700
+OWN_DIRS_PERMS=		${AUTHDAEMONVAR} ${ROOT_USER} ${ROOT_GROUP} 700
 CONF_FILES_PERMS=	# empty
 .for FILE in ${GEN_FILES}
 CONF_FILES_PERMS+=	${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}	\
@@ -32,6 +34,8 @@ CONF_FILES_PERMS+=	${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}	\
 RCD_SCRIPTS=		authdaemond
 
 post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/authlib/README.authdebug.html ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/authlib/authdaemonrc			\
 		${EGDIR}/authdaemonrc.dist
