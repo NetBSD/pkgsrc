@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.5 2004/11/16 16:21:40 tv Exp $
+# $NetBSD: IRIX.mk,v 1.6 2004/11/16 18:04:00 tv Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -92,6 +92,7 @@ TYPE?=		/sbin/type
 WC?=		/sbin/wc
 XARGS?=		/sbin/xargs
 
+CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
@@ -170,7 +171,6 @@ LIBABISUFFIX=		${ABI}
 # to avoid a test required by the libtool script that takes forever.
 .if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
 _OPSYS_MAX_CMDLEN!=	/usr/sbin/sysconf ARG_MAX
-CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
 .endif
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
