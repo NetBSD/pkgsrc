@@ -1,12 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2004/02/10 21:54:32 garbled Exp $
---- bin/mklib.freebsd.orig	Thu Dec 11 17:24:35 2003
-+++ bin/mklib.freebsd	Tue Feb 10 14:30:35 2004
-@@ -37,7 +37,7 @@
+$NetBSD: patch-ad,v 1.2 2004/02/10 23:58:36 jlam Exp $
+
+--- bin/mklib.freebsd.orig	Thu Dec 11 16:24:35 2003
++++ bin/mklib.freebsd
+@@ -47,7 +47,7 @@ ${RM} -f ${LIBRARY}.a ${LIBRARY}.so.${VE
+ ${AR} qv ${LIBRARY}.a ${OBJECTS}
  
- OBJECTS=$*
- 
--DEPLIBS="-lGL -lGLU -L${X11BASE}/lib -lXmu"
-+DEPLIBS="-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -lGL -lGLU -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXmu"
- 
- #--platform------------------------------------------------------------
- 
+ # FreeBSD specific build
+-${CC} -shared -Wl,-soname,${LIBRARY}.so.${VERSION} -o ${LIBRARY}.so.${VERSION} ${OBJECTS} ${DEPLIBS}
++${CC} -shared -Wl,-soname,${LIBRARY}.so.${VERSION} -o ${LIBRARY}.so.${VERSION} ${OBJECTS} ${LDFLAGS} ${DEPLIBS}
+ if [ ${ARCHFLAGS##*-} != "debug" ]; then
+     ${STRIP_CMD} ${LIBRARY}.so.${VERSION}
+     ${ECHO_CMD} "library has been stripped (non-debug build)."
