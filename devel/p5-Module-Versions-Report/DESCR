@@ -1,0 +1,2 @@
+Module::Versions::Report allows a PERL program to list all currently
+loaded extensions in memory.
