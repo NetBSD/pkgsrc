@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.6 2004/01/12 11:19:58 seb Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 14:59:25 agc Exp $
 
 SHA1 (pcb-1.6.3.tgz) = 79cca1a0ed9567cefd2e98556e1895c86e453010
+RMD160 (pcb-1.6.3.tgz) = b560711587ec777295ff1d434da56950faf74edd
 Size (pcb-1.6.3.tgz) = 577803 bytes
 SHA1 (pcb-docs-1.6.3.tar.gz) = d645df42d7a9758f2112f02f47530eb2c05128a7
+RMD160 (pcb-docs-1.6.3.tar.gz) = 9ab1da0b6884c83f08ab00124252f5847c1aac1a
 Size (pcb-docs-1.6.3.tar.gz) = 252728 bytes
 SHA1 (patch-aa) = 348159ad2c6d0eef4c61bbbd0ff2b30eec3f5728
 SHA1 (patch-ab) = 8c34420992a047c93a29dbc3d51f8516a0c9b8d3

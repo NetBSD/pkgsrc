@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 16:27:01 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/02/23 14:59:25 agc Exp $
 
 SHA1 (oregano-0.20.tar.gz) = 6d4a00ca33685cb26d19e8632a70bccf4ca3a090
+RMD160 (oregano-0.20.tar.gz) = 5182ca1a8e45eb68d35750f0c6be8f232c43b343
 Size (oregano-0.20.tar.gz) = 429285 bytes

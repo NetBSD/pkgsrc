@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2005/02/03 12:42:01 dmcmahill Exp $
+$NetBSD: distinfo,v 1.7 2005/02/23 14:59:24 agc Exp $
 
 SHA1 (geda/geda-20041228.tar.gz) = 6755093bcffddc785d311139caf6f838070c60ff
+RMD160 (geda/geda-20041228.tar.gz) = a866969cfc2c730e9081f96069e71b6d03a9153b
 Size (geda/geda-20041228.tar.gz) = 390623 bytes
 SHA1 (patch-aa) = 27f6766661153845e8333d4f83a1b2fbc42b70d1
 SHA1 (patch-ab) = ca6c6c341fe3407b16d13efc154c2a9f93198c58

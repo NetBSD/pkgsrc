@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2004/12/02 13:33:32 dmcmahill Exp $
+$NetBSD: distinfo,v 1.8 2005/02/23 14:59:25 agc Exp $
 
 SHA1 (ng-spice-rework-15c.tar.gz) = 9cd62308a78134119479afaad620842c0923767c
+RMD160 (ng-spice-rework-15c.tar.gz) = 3099cb6e1f7b9d3411336d134b178467618e2e29
 Size (ng-spice-rework-15c.tar.gz) = 8730359 bytes
 SHA1 (patch-ab) = bea9a7f0270ecaa10e58830c724c5e93333f7eb6
 SHA1 (patch-ac) = 319b43356e1b2f37fb21ef8fcdf7f64b405fe810

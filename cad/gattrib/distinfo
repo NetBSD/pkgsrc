@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/01/17 19:33:06 kristerw Exp $
+$NetBSD: distinfo,v 1.5 2005/02/23 14:59:24 agc Exp $
 
 SHA1 (geda/geda-gattrib-20041228.tar.gz) = cd6943e027240267e96f6c6d401b3918bbb4b026
+RMD160 (geda/geda-gattrib-20041228.tar.gz) = cabdac7be94c6acab1d205a4319ce9bf745bf164
 Size (geda/geda-gattrib-20041228.tar.gz) = 309312 bytes
 SHA1 (patch-aa) = 3cb9d0dcc4992e3ea2a81fe5de1774b3d10ddc14
