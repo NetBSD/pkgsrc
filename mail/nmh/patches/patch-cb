@@ -1,7 +1,7 @@
-$NetBSD: patch-cb,v 1.5 2000/03/02 00:23:15 hubertf Exp $
+$NetBSD: patch-cb,v 1.6 2000/03/02 05:11:45 kim Exp $
 
---- config.h.in.orig	Sun Feb  6 13:40:21 2000
-+++ config.h.in	Thu Mar  2 00:47:13 2000
+--- config.h.in.orig	Sun Feb  6 07:40:21 2000
++++ config.h.in	Wed Mar  1 23:31:04 2000
 @@ -1,5 +1,12 @@
  /* config.h.in.  Generated automatically from configure.in by autoheader.  */
  
@@ -15,7 +15,19 @@ $NetBSD: patch-cb,v 1.5 2000/03/02 00:23:15 hubertf Exp $
  /****** BEGIN USER CONFIGURATION SECTION *****/
  
  /*
-@@ -405,9 +412,6 @@
+@@ -58,6 +65,11 @@
+ /* #define REALLYDUMB  1 */
+ 
+ /*
++ * Replace & in the GCOS field with the login name.
++ */
++#define GCOS_HACK 1
++
++/*
+  * Directs inc/slocal to extract the envelope sender from "From "
+  * line.  If inc/slocal is saving message to folder, then this
+  * sender information is then used to create a Return-Path
+@@ -405,9 +417,6 @@
  
  /* Define if you have the <sys/ndir.h> header file.  */
  #undef HAVE_SYS_NDIR_H
