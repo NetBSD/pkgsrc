@@ -1,4 +1,4 @@
-# $NetBSD: defs.UnixWare.mk,v 1.3 2004/05/12 14:10:18 jschauma Exp $
+# $NetBSD: defs.UnixWare.mk,v 1.4 2004/05/31 16:47:00 jschauma Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -61,6 +61,9 @@ PS?=		/usr/bin/ps
 PWD_CMD?=	/usr/bin/pwd	# needs to print physical path
 RM?=		/usr/bin/rm
 RMDIR?=		/usr/bin/rmdir
+# XXX: default from bsd.pkg.defaults.mk.  Verify/corerct for this platform
+# and remove this comment.
+RSH?=		/usr/bin/rsh
 .if exists(${LOCALBASE}/bin/nbsed)
 SED?=		${LOCALBASE}/bin/nbsed
 .else
