@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2001/10/01 09:09:20 jlam Exp $
+
+--- Makefile.PL.orig	Sun Jul 11 12:38:07 1999
++++ Makefile.PL
+@@ -4,7 +4,6 @@
+ WriteMakefile(
+     'NAME'	=> 'Parse::Yapp',
+     'VERSION_FROM' => 'lib/Parse/Yapp/Driver.pm', # finds $VERSION
+-    'MAN3PODS' => { 'lib/Parse/Yapp.pm' => '$(INST_MAN3DIR)/Parse::Yapp.3' },
+     'PM' => {
+               'lib/Parse/Yapp.pm' => '$(INST_LIBDIR)/Yapp.pm',
+               'lib/Parse/Yapp/Options.pm' => '$(INST_LIBDIR)/Yapp/Options.pm',
