@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2123 2003/05/02 08:51:20 seb Exp $
+$NetBSD: CHANGES,v 1.2124 2003/05/02 12:01:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1828,3 +1828,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated sun-jre13 to 1.0.8 [abs 2003-05-02]
 	Updated sun-jdk13 to 1.0.8 [abs 2003-05-02]
 	Updated libdnet to 1.7 [seb 2003-05-02]
+	Updated pth to 2.0.0 [skrll 2003-05-02]
+	Lots of packages updated because of pth library major bump
+		[wiz 2003-05-02]
