@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2001/02/17 17:49:59 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/09/19 03:43:52 mjl Exp $
 #
 
-DISTNAME=	Digest-MD5-2.12
+DISTNAME=	Digest-MD5-2.16
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Digest/}
