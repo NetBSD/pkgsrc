@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/01/22 07:51:12 grant Exp $
+# $NetBSD: Makefile,v 1.26 2004/04/11 07:05:33 snj Exp $
 #
 
 DISTNAME=		scmxx-0.6.4
@@ -10,7 +10,7 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.hendrik-sattler.de/scmxx/
 COMMENT=		Data exchange utility for Siemens mobile phones
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR}
 
 GNU_CONFIGURE=		yes
@@ -32,5 +32,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/vCard.vcf			\
 	    ${PREFIX}/share/examples/scmxx
 
-.include "../../converters/libiconv/buildlink2.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
