@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.2 2000/07/28 05:34:35 itojun Exp $
 --- server/misc.c~	Fri Jul 29 12:03:54 1994
 +++ server/misc.c	Fri Jun 30 10:16:39 2000
 @@ -788,12 +788,19 @@
