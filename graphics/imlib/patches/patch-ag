@@ -1,0 +1,116 @@
+$NetBSD: patch-ag,v 1.1 2002/03/11 08:03:05 skrll Exp $
+
+--- configure.orig	Tue Jul 31 16:34:51 2001
++++ configure
+@@ -5571,6 +5571,43 @@
+ fi
+ 
+ 
++# Extract the first word of "glib-config", so it can be a program name with args.
++set dummy glib-config; ac_word=$2
++echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
++echo "configure:5578: checking for $ac_word" >&5
++if eval "test \"`echo '$''{'ac_cv_path_GLIB_CONFIG'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  case "$GLIB_CONFIG" in
++  /*)
++  ac_cv_path_GLIB_CONFIG="$GLIB_CONFIG" # Let the user override the test with a path.
++  ;;
++  ?:/*)			 
++  ac_cv_path_GLIB_CONFIG="$GLIB_CONFIG" # Let the user override the test with a dos path.
++  ;;
++  *)
++  IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
++  ac_dummy="$PATH"
++  for ac_dir in $ac_dummy; do 
++    test -z "$ac_dir" && ac_dir=.
++    if test -f $ac_dir/$ac_word; then
++      ac_cv_path_GLIB_CONFIG="$ac_dir/$ac_word"
++      break
++    fi
++  done
++  IFS="$ac_save_ifs"
++  test -z "$ac_cv_path_GLIB_CONFIG" && ac_cv_path_GLIB_CONFIG="no"
++  ;;
++esac
++fi
++GLIB_CONFIG="$ac_cv_path_GLIB_CONFIG"
++if test -n "$GLIB_CONFIG"; then
++  echo "$ac_t""$GLIB_CONFIG" 1>&6
++else
++  echo "$ac_t""no" 1>&6
++fi
++
++
+ dynworks=false
+ if test x$with_modules = xno; then
+ 	echo "$ac_t""no" 1>&6
+@@ -5580,8 +5617,8 @@
+ if test "x$GDK_IMLIB" != x; then
+   oLIBS="$LIBS"
+   oCFLAGS="$CFLAGS"
+-  LIBS="$LIBS `glib-config --libs gmodule`"
+-  CFLAGS="$CFLAGS `glib-config --cflags gmodule`"
++  LIBS="$LIBS `$GLIB_CONFIG --libs gmodule`"
++  CFLAGS="$CFLAGS `$GLIB_CONFIG --cflags gmodule`"
+   if test "$cross_compiling" = yes; then
+     { echo "configure: error: can not run test program while cross compiling" 1>&2; exit 1; }
+ else
+@@ -5631,8 +5668,8 @@
+ #define USE_GMODULE 1
+ EOF
+ 
+-   GMODULE_LIBS="`glib-config --libs gmodule`"
+-   GMODULE_FLAGS="`glib-config --cflags gmodule`"
++   GMODULE_LIBS="`$GLIB_CONFIG --libs gmodule`"
++   GMODULE_FLAGS="`$GLIB_CONFIG --cflags gmodule`"
+    
+    
+ fi
+@@ -7490,7 +7527,9 @@
+   GX_LIBS="$GTK_LIBS"
+ fi
+ 
+-CPPFLAGS="$CPPFLAGS -I$includedir -I$prefix/include"
++if test -z "$X_LDFLAGS"; then
++  X_LDFLAGS=
++fi
+ 
+ SUPPORT_LIBS=""
+ 
+@@ -7795,8 +7834,8 @@
+ fi
+ if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
+   echo "$ac_t""yes" 1>&6
+-  TIFFLIBS="-ltiff"
+-    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff"; cat >> confdefs.h <<\EOF
++  TIFFLIBS="-ltiff -ljpeg -lz"
++    SUPPORT_LIBS="$SUPPORT_LIBS -ltiff -ljpeg -lz"; cat >> confdefs.h <<\EOF
+ #define HAVE_LIBTIFF 1
+ EOF
+ 
+@@ -8272,6 +8311,7 @@
+ 
+ 
+ 
++
+ trap '' 1 2 15
+ cat > confcache <<\EOF
+ # This file is a shell script that caches the results of configure
+@@ -8463,6 +8503,7 @@
+ s%@GTK_CONFIG@%$GTK_CONFIG%g
+ s%@GTK_CFLAGS@%$GTK_CFLAGS%g
+ s%@GTK_LIBS@%$GTK_LIBS%g
++s%@GLIB_CONFIG@%$GLIB_CONFIG%g
+ s%@GMODULE_LIBS@%$GMODULE_LIBS%g
+ s%@GMODULE_FLAGS@%$GMODULE_FLAGS%g
+ s%@TIFFLIBS@%$TIFFLIBS%g
+@@ -8493,6 +8534,7 @@
+ s%@HAVE_JPEG_FALSE@%$HAVE_JPEG_FALSE%g
+ s%@SUPPORT_LIBS@%$SUPPORT_LIBS%g
+ s%@GDK_SUPPORT_LIBS@%$GDK_SUPPORT_LIBS%g
++s%@X_LDFLAGS@%$X_LDFLAGS%g
+ 
+ CEOF
+ EOF
