@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7349 2004/10/05 12:08:29 adam Exp $
+$NetBSD: CHANGES,v 1.7350 2004/10/05 12:15:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4550,3 +4550,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated dcraw to 1.208 [seb 2004-10-05]
 	Updated xfce4-utils to 4.0.6nb2 [martti 2004-10-05]
 	Updated ImageMagick to 6.1.0-2 [adam 2004-10-05]
+	Updated glib to 1.2.10nb8 [minskim 2004-10-05]
+
