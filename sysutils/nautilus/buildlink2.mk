@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.10 2004/02/14 00:02:42 jmmv Exp $
+# $NetBSD: buildlink2.mk,v 1.11 2004/02/14 00:03:32 jmmv Exp $
 #
 # This Makefile fragment is included by packages that use nautilus.
 #
@@ -20,19 +20,9 @@ BUILDLINK_FILES.nautilus+=	lib/bonobo/libnautilus-history-view.*
 BUILDLINK_FILES.nautilus+=	lib/bonobo/libnautilus-image-properties-view.*
 BUILDLINK_FILES.nautilus+=	lib/bonobo/libnautilus-notes-view.*
 BUILDLINK_FILES.nautilus+=	lib/bonobo/libnautilus-tree-view.*
-BUILDLINK_FILES.nautilus+=	lib/bonobo/servers/Nautilus_ComponentAdapterFactory_std.server
-BUILDLINK_FILES.nautilus+=	lib/bonobo/servers/Nautilus_Control_throbber.server
-BUILDLINK_FILES.nautilus+=	lib/bonobo/servers/Nautilus_View_emblem.server
-BUILDLINK_FILES.nautilus+=	lib/bonobo/servers/Nautilus_View_history.server
-BUILDLINK_FILES.nautilus+=	lib/bonobo/servers/Nautilus_View_image_properties.server
-BUILDLINK_FILES.nautilus+=	lib/bonobo/servers/Nautilus_View_notes.server
-BUILDLINK_FILES.nautilus+=	lib/bonobo/servers/Nautilus_View_text.server
-BUILDLINK_FILES.nautilus+=	lib/bonobo/servers/Nautilus_View_tree.server
-BUILDLINK_FILES.nautilus+=	lib/bonobo/servers/Nautilus_shell.server
 BUILDLINK_FILES.nautilus+=	lib/libnautilus-adapter.*
 BUILDLINK_FILES.nautilus+=	lib/libnautilus-private.*
 BUILDLINK_FILES.nautilus+=	lib/libnautilus.*
-BUILDLINK_FILES.nautilus+=	lib/pkgconfig/libnautilus.pc
 
 BUILDLINK_DEPENDS.esound=	esound>=0.2.27
 
