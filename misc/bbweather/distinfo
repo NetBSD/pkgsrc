@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2003/01/13 15:10:32 jschauma Exp $
+$NetBSD: distinfo,v 1.6 2004/04/24 18:09:35 jschauma Exp $
 
-SHA1 (bbweather-0.6.tar.bz2) = f41f475eac2ecf1beeaa4461c0d83d8d3b315ad0
-Size (bbweather-0.6.tar.bz2) = 80306 bytes
+SHA1 (bbweather-0.6.2.tar.bz2) = bdb3359876434a6d698a70a975312ca29b2116c4
+Size (bbweather-0.6.2.tar.bz2) = 80487 bytes
