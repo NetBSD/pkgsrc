@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/10/27 17:57:01 manu Exp $
+
+SHA1 (libsnert-1.23.tgz) = 3bfdba152d1dbdd1da850809c2bb998cd272b819
+Size (libsnert-1.23.tgz) = 155678 bytes
+SHA1 (patch-aa) = 889cb0bf31c1f52ff7c75ddf0f55aeaad076748b
+SHA1 (patch-ab) = eae0da5674a1242c35477123dc3a13c699d5b0cb
+SHA1 (patch-ac) = 79a5e429d739ab9425a6720b4e92383ac9b46ac3
