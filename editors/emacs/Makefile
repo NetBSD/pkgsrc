@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2003/04/12 10:16:39 uebayasi Exp $
+# $NetBSD: Makefile,v 1.54 2003/04/14 03:39:05 uebayasi Exp $
 # FreeBSD Id: Makefile,v 1.30 1997/12/14 02:03:53 asami Exp
 
 DISTNAME=	emacs-21.3
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
@@ -32,6 +33,15 @@ BUILDLINK_DEPENDS.libungif=	libungif>=4.1.0.1
 CONFIGURE_ARGS+=	--with-gif
 .include "../../graphics/png/buildlink2.mk"
 CONFIGURE_ARGS+=	--with-png
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.6[Q-Z]*)
+# If using GNU ld 2.13.2.1 or later, avoid creating combined reloc
+# sections and .data reloc sections, both of which Emacs can't handle
+# properly.  Analyzed by Stephen Ma.
+LDFLAGS+=	-Wl,-z,nocombreloc
+.endif
 
 INFO_FILES=	emacs vip viper forms gnus mh-e cl sc dired-x ediff \
 		    ccmode message widget reftex forms
