@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.122 2003/01/03 05:49:02 rh Exp $
+$NetBSD: TODO,v 1.123 2003/01/03 14:58:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -63,34 +63,38 @@ Suggested new packages
 Suggested package updates
 =========================
 
+	o ImageMagick-5.5.3
 	o acroread-5.1
+	o adobe-cmap-1.5 [pkg/19646]
 	o amaya-7.0
 	o anjuta-1.0.1
 	o aspell-0.50.3
 	o auctex-11.14
 	o aumix-2.8
 	o autotrace-0.31.1
-	o balsa-1.4.1
-	o balsa-2.0.3
-	o binutils-2.13.1
+	o balsa-1.4.2
+	o balsa-2.0.4
+	o binutils-2.13.2.1
 	o bitchx-1.0c19 [pkg/19296]
 	o bluefish-0.8
-	o bonnie++-1.03
+	o bonnie++-1.93b
 	o bzflag-1.7g0
+	o capc-calc-2.11.6
 	o cdlabelgen-2.5.0
 	o cdrecord-1.11a39 [pkg/19073]
-	o cdrecord-1.11a40
-	o centericq-4.9.0
+	o cdrecord-2.0
+	o centericq-4.9.1
 	o cfengine-1.6.5 [pkg/19459|seb]
 	o citrix-ica [pkg/19210]
 	o clisp-2.30
-	o courier-0.40 [jlam]
-	o courier-imap-1.6 [jlam]
+	o courier-0.40.2 [jlam]
+	o courier-imap-1.6.2 [jlam]
 	o crafty-19.1
 	o crossfire-1.4.0
 	o ctwm-3.6
+	o cvs-1.11.4
 	o dante-1.1.13
-	o db4-4.1.24
+	o db4-4.1.25
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
 	o eggdrop-1.6.13
@@ -105,6 +109,7 @@ Suggested package updates
 	o fltk-1.1.1
 	o fox-1.0.28
 	o freeciv-1.13.0
+	o gaim-0.59.7
 	o galeon-1.2.7
 	o gcc-3.2.1
 	o gcvs-1.0b4
@@ -115,7 +120,7 @@ Suggested package updates
 	o ghostscript-8.00 (apfl)
 	o gkrellm-2.1.3
 	o glade2-1.1.3 [pkg/19154]
-	o gmp-4.1.1
+	o gmp-4.1.2
 	o gnome-applets-2.0.0
 	o gnome-file-manager-2.0.1
 	o gnome-python-1.4.4
@@ -123,10 +128,13 @@ Suggested package updates
 	o gnome-vfs2-2.1.4 [jmmv]
 	o gnome2-terminal-2.0.2 [pkg/19415]
 	o gnomeicu-0.99beta
+	o gnuboy-1.0.3 [pkg/19580]
 	o gnucash-1.7.6 [devel]
 	o gnumeric-1.0.11
-	o gnumeric-1.1.14 [devel]
+	o gnumeric-1.1.15 [devel]
 	o gpa-0.6.0
+	o gpgme-0.4.0
+	o grepmail-4.91
 	o groff-1.18.1
 	o grub-0.93
 	o gtkmm-2.1.0
@@ -139,7 +147,7 @@ Suggested package updates
 	o imlib2-1.0.6 [pkg/19144]
 	o imp-3.1 [pkg/19497]
 	o inform-6.21.3 [pkg/19298]
-	o inn 2.3.4
+	o inn 2.3.4 [waiting for IPv6 patch]
 	o intltool-0.23 [pkg/18891]
 	o ircu-2.10.11.03
 	o iozone-3.147
@@ -155,8 +163,12 @@ Suggested package updates
 	o lbreakout2-2.4
 	o lcms-1.0.9
 	o lftp-2.6.3 [pkg/19419]
+	o libbonoboui-2.0.3.3
+	o libgnomecanvas-2.0.5
 	o libgnomeprint-2.1.3 [jmmv]
 	o libgnomeprintui-2.1.3 [jmmv]
+	o libgnome-2.0.6
+	o libgnomeui-2.0.6
 	o libole2-2.2.8
 	o libmcrypt-2.5.4
 	o libmng-1.0.5rc2
@@ -169,6 +181,7 @@ Suggested package updates
 	o lout-3.26 [pkg/18687]
 	o lsh-1.4.1
 	o lynx-2.8.5dev9 (lynx-current)
+	o maildrop-1.5.1
 	o mcrypt-2.6.3
 	o memtest86-3.0
 	o metacity-2.4.8
@@ -185,12 +198,15 @@ Suggested package updates
 	o ncurses-5.3
 	o netpbm-10.8
 	o netscape-7.01
+	o novawm-0.8
 	o openoffice-1.0.1 [skrll]
 	o openoffice-643 [post-1.0.1]
 	o openssh-3.5p1
-	o openssl-0.9.6h
+	o openssl-0.9.7
 	o opensp-1.5
+	o pan-0.13.3 (gtk2-pan)
 	o pen-0.9.5 [pkg/19216]
+	o php-4.3.0
 	o pilot-link-0.11.4 [dillo]
 	o plib-1.6.0
 	o postfix-2.0
@@ -203,17 +219,20 @@ Suggested package updates
 	o pygtk-1.9.13
 	o qt-3.1.1
 	o rep-gtk-0.16
+	o rocksndiamonds-2.2.0rc1
 	o rox-filer-1.3.3
 	o rox-session-0.1.17
 	o rrdtool-1.0.39
 	o rt-2.1.15
+	o ruby-1.6.8
 	o rxvt-2.7.9
 	o sawfish-1.2
-	o scmxx-0.6.3.3
+	o scmxx-0.6.3.5
 	o scribus-0.8
 	o scrollkeeper-0.3.11
 	o sed-4.0.5
 	o sendfile-20010424
+	o sendmail-8.12.7
 	o siag-office-3.5.3
 	o smalltalk-2.0.10
 	o smarteiffel-1.0 [replacing smalleiffel]
@@ -237,13 +256,13 @@ Suggested package updates
 	o wwwoffle-2.7g
 	o xalan-c-1.4
 	o xbae-4.50.0
-	o xcdroast-0.98alpha12
+	o xcdroast-0.98alpha13
 	o xerces-c-2.1.0 [heinz]
 	o xforms-1.0RC4
 	o xfstt-1.4
 	o xmcd-3.2.0
 	o xpuyopuyo-0.9.5
-	o xsidplay-1.6.5pre15
+	o xsidplay-1.6.5pre20
 	o yudit-2.7.2
 
 
