@@ -1,0 +1,45 @@
+This patch fixes a potential denial-of-service vulnerability in
+Apache 1.3.2 and 1.3.3.  It is strongly recommended that you apply
+it or upgrade to a more recent version of Apache when it is available.
+
+Thanks to Studenten Net Twente for finding and reporting the problem.
+
+Index: include/http_log.h
+===================================================================
+RCS file: /home/cvs/apache-1.3/src/include/http_log.h,v
+retrieving revision 1.31
+diff -u -r1.31 http_log.h
+--- src/include/http_log.h	1998/08/06 17:30:24	1.31
++++ src/include/http_log.h	1998/10/30 02:23:06
+@@ -105,6 +105,15 @@
+ #define APLOG_MARK	__FILE__,__LINE__
+ 
+ void ap_open_logs (server_rec *, pool *p);
++
++/* The two primary logging functions, ap_log_error and ap_log_rerror,
++ * use a printf style format string to build the log message.  It is
++ * VERY IMPORTANT that you not include any raw data from the network,
++ * such as the request-URI or request header fields, within the format
++ * string.  Doing so makes the server vulnerable to a denial-of-service
++ * attack and other messy behavior.  Instead, use a simple format string
++ * like "%s", followed by the string containing the untrusted data.
++ */
+ API_EXPORT(void) ap_log_error(const char *file, int line, int level,
+ 			     const server_rec *s, const char *fmt, ...)
+ 			    __attribute__((format(printf,5,6)));
+Index: main/http_core.c
+===================================================================
+RCS file: /home/cvs/apache-1.3/src/main/http_core.c,v
+retrieving revision 1.237
+diff -u -r1.237 http_core.c
+--- src/main/http_core.c	1998/10/23 20:07:39	1.237
++++ src/main/http_core.c	1998/10/30 02:23:07
+@@ -2783,7 +2783,7 @@
+ 	else {
+ 	    emsg = ap_pstrcat(r->pool, emsg, r->filename, r->path_info, NULL);
+ 	}
+-	ap_log_rerror(APLOG_MARK, APLOG_ERR|APLOG_NOERRNO, r, emsg);
++	ap_log_rerror(APLOG_MARK, APLOG_ERR|APLOG_NOERRNO, r, "%s", emsg);
+ 	return HTTP_NOT_FOUND;
+     }
+     if (r->method_number != M_GET) {
