@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/04/12 14:58:09 wennmach Exp $
+# $NetBSD: Makefile,v 1.13 2001/06/04 20:49:31 jtb Exp $
 
 DISTNAME=		cyrus-imapd-1.6.24
 PKGNAME=		${DISTNAME}nb1
@@ -12,6 +12,8 @@ COMMENT=		IMAP server
 
 DEPENDS+=		tcl>=8.3.2:../../lang/tcl
 DEPENDS+=		cyrus-sasl>=1.5.24nb2:../../security/cyrus-sasl
+
+LICENSE=		cyrus-imapd-license
 
 USE_PERL5=		# defined
 USE_SSL=		# defined
