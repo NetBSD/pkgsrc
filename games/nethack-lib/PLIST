@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/03/25 20:32:25 pooka Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/09/16 15:50:02 agc Exp $
 bin/nethack
 bin/recover
 man/man6/nethack.6
@@ -128,12 +128,14 @@ share/nethackdir340/soko3-1.lev
 share/nethackdir340/soko3-2.lev
 share/nethackdir340/soko4-1.lev
 share/nethackdir340/soko4-2.lev
-share/nethackdir340/opthelp
-share/nethackdir340/history
 share/nethackdir340/cmdhelp
-share/nethackdir340/hh
 share/nethackdir340/help
-share/nethackdir340/rumors
+share/nethackdir340/hh
+share/nethackdir340/history
+share/nethackdir340/logfile
 share/nethackdir340/perm
+share/nethackdir340/opthelp
+share/nethackdir340/record
+share/nethackdir340/rumors
 share/doc/nethack/Guidebook
 @dirrm share/doc/nethack
