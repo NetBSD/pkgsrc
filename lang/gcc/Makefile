@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2002/09/09 03:23:06 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.46 2002/09/27 09:41:40 jlam Exp $
 
 # Make sure that the version number in "Makefile.gcc" matches this.
 DISTNAME=		gcc-2.95.3
@@ -52,8 +52,8 @@ post-extract:
 	${CP} ${FILESDIR}/xm-netbsd.h .; \
 	${CP} ${FILESDIR}/xm-target64.h .; \
 	for FILE in ${FILESDIR}/*_* ; do \
-	  ARCH=`basename $${FILE} | cut -d_ -f1`; \
-	  DEST=`basename $${FILE} | sed -e "s/$${ARCH}_//"`; \
+	  ARCH=`${BASENAME} $${FILE} | cut -d_ -f1`; \
+	  DEST=`${BASENAME} $${FILE} | sed -e "s/$${ARCH}_//"`; \
 	  ${MKDIR} $${ARCH}; \
 	  ${CP} $${FILE} $${ARCH}/$${DEST}; \
 	done; \
@@ -71,7 +71,7 @@ post-build:
 	  ${SED} -e 's#@@MAKE@@#${MAKE}#g' \
 		 -e 's#@@PKGNAME@@#${PKGNAME}#g' \
 		 -e 's#@@PREFIX@@#${PREFIX}#g' \
-	   <$$FILE >${WRKDIR}/`basename $$FILE`; \
+	   <$$FILE >${WRKDIR}/`${BASENAME} $$FILE`; \
 	done
 .endif
 
@@ -92,7 +92,7 @@ post-install:
 	${FIND} ${PREFIX}/${PKGNAME} -type l -print | ${SORT} -r | ${SED} 's;${PREFIX}/;;g' >> ${PLIST_SRC}
 	${FIND} ${PREFIX}/${PKGNAME} -type d -print | ${SORT} -r | ${SED} 's;${PREFIX}/;@dirrm ;g' >> ${PLIST_SRC}
 .else
-# remove empy file and directories that show up when one
+# remove empty file and directories that show up when one
 # does make install; make deinstall; make install
 post-install:
 	-cd ${GCC_PREFIX}/lib/gcc-lib/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include && \
