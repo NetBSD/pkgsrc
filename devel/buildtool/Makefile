@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2003/07/24 10:12:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/07/25 11:52:53 jmmv Exp $
 #
 
 DISTNAME=	buildtool-0.12
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buildtool/}
+
+PATCHFILES=	${DISTNAME}-ldflags.diff
+PATCH_SITES=	${HOMEPAGE}
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://buildtool.sourceforge.net/
