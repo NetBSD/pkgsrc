@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.11 2001/10/15 22:46:21 skrll Exp $
+# $NetBSD: buildlink.mk,v 1.12 2001/11/01 18:32:03 tron Exp $
 #
 # This Makefile fragment is included by packages that use kdelibs2.
 #
@@ -24,7 +24,7 @@ DEPENDS+=	${BUILDLINK_DEPENDS.kdelibs2}:../../x11/kdelibs2
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.kdelibs2=kdelibs
 BUILDLINK_PREFIX.kdelibs2_DEFAULT=	${X11PREFIX}
-BUILDLINK_FILES.kdelibs2!=	${GREP} "^\(include\|lib\)" ${.CURDIR}/../../x11/kdelibs2/pkg/PLIST
+BUILDLINK_FILES.kdelibs2!=	${GREP} "^\(include\|lib\)" ${.CURDIR}/../../x11/kdelibs2/PLIST
 BUILDLINK_FILES.kdelibs2+=	bin/dcopserver
 
 BUILDLINK_DEPENDS.audiofile=	libaudiofile>=0.1.9
