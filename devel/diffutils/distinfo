@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:15 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/01/19 05:15:21 wiz Exp $
 
-SHA1 (diffutils-2.7.tar.gz) = 1638f4ee4a7bd269411c57874f9e761ddee6d5ae
-Size (diffutils-2.7.tar.gz) = 312312 bytes
+SHA1 (diffutils-2.8.1.tar.gz) = a4c467c3a6a08cde9f3d94d02067ec26436e7dc5
+Size (diffutils-2.8.1.tar.gz) = 780086 bytes
