@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 1999/11/21 22:09:26 tron Exp $
+# $NetBSD: Makefile,v 1.39 1999/11/30 20:33:33 tron Exp $
 #
 # The fourth number in the PKGNAME version indicates a NetBSD pkg revision
 # (to indicate changes in the shipped third party patches such as the mod_ssl
@@ -47,7 +47,6 @@ CONFIGURE_ARGS+=	--enable-suexec --suexec-caller=www \
 .endif
 
 .if defined(APACHE_PERF_TUNING) && ${APACHE_PERF_TUNING} == YES
-CONFIGURE_ARGS+=	--disable-rule=STATUS
 OPTIM+=			-DBUFFERED_LOGS
 CFLAGS+=		-O6 -fomit-frame-pointer -fexpensive-optimizations
 .endif
