@@ -1,11 +1,11 @@
+@comment this list changes by some files if gdbm is installed - hubertf
 bin/a2p
 bin/c2ph
 bin/find2perl
 bin/h2ph
 bin/h2xs
+bin/perl
 bin/perl5.00401
-@exec ln -fs %D/%F %B/perl
-@unexec rm %B/perl
 bin/perlbug
 bin/perldoc
 bin/pl2pm
@@ -15,10 +15,16 @@ bin/pod2man
 bin/pod2text
 bin/pstruct
 bin/s2p
-bin/sperl5.00401
-@exec ln -f %D/%F %B/suidperl
-@unexec rm %B/suidperl
 bin/splain
+@comment some empty dirs perl creates
+@exec	mkdir -p %D/lib/perl5/IO
+@unexec	rmdir    %D/lib/perl5/IO
+@exec	mkdir -p %D/lib/perl5/i386-netbsd/5.00401/auto/Text/ParseWords
+@unexec	rmdir    %D/lib/perl5/i386-netbsd/5.00401/auto/Text/ParseWords
+@exec	mkdir -p %D/lib/perl5/site_perl/i386-netbsd
+@unexec rmdir    %D/lib/perl5/site_perl/i386-netbsd
+@exec	mkdir -p %D/lib/perl5/site_perl
+@unexec rmdir    %D/lib/perl5/site_perl
 lib/perl5/AnyDBM_File.pm
 lib/perl5/AutoLoader.pm
 lib/perl5/AutoSplit.pm
@@ -155,7 +161,6 @@ lib/perl5/<$ARCH>-netbsd/5.00401/CORE/handy.h
 lib/perl5/<$ARCH>-netbsd/5.00401/CORE/hv.h
 lib/perl5/<$ARCH>-netbsd/5.00401/CORE/keywords.h
 lib/perl5/<$ARCH>-netbsd/5.00401/CORE/libperl.a
-@exec ranlib %D/%F
 lib/perl5/<$ARCH>-netbsd/5.00401/CORE/mg.h
 lib/perl5/<$ARCH>-netbsd/5.00401/CORE/nostdio.h
 lib/perl5/<$ARCH>-netbsd/5.00401/CORE/op.h
@@ -171,7 +176,6 @@ lib/perl5/<$ARCH>-netbsd/5.00401/CORE/proto.h
 lib/perl5/<$ARCH>-netbsd/5.00401/CORE/regcomp.h
 lib/perl5/<$ARCH>-netbsd/5.00401/CORE/regexp.h
 lib/perl5/<$ARCH>-netbsd/5.00401/CORE/scope.h
-lib/perl5/<$ARCH>-netbsd/5.00401/CORE/sperl.o
 lib/perl5/<$ARCH>-netbsd/5.00401/CORE/sv.h
 lib/perl5/<$ARCH>-netbsd/5.00401/CORE/unixish.h
 lib/perl5/<$ARCH>-netbsd/5.00401/CORE/util.h
@@ -198,7 +202,6 @@ lib/perl5/<$ARCH>-netbsd/5.00401/auto/DB_File/DB_File.bs
 lib/perl5/<$ARCH>-netbsd/5.00401/auto/DB_File/DB_File.so
 lib/perl5/<$ARCH>-netbsd/5.00401/auto/DB_File/autosplit.ix
 lib/perl5/<$ARCH>-netbsd/5.00401/auto/DynaLoader/DynaLoader.a
-@exec ranlib %D/%F
 lib/perl5/<$ARCH>-netbsd/5.00401/auto/DynaLoader/autosplit.ix
 lib/perl5/<$ARCH>-netbsd/5.00401/auto/DynaLoader/dl_expandspec.al
 lib/perl5/<$ARCH>-netbsd/5.00401/auto/DynaLoader/dl_find_symbol_anywhere.al
@@ -375,127 +378,127 @@ lib/perl5/less.pm
 lib/perl5/lib.pm
 lib/perl5/locale.pm
 lib/perl5/look.pl
-lib/perl5/man/man3/AnyDBM_File.3.gz
-lib/perl5/man/man3/AutoLoader.3.gz
-lib/perl5/man/man3/AutoSplit.3.gz
-lib/perl5/man/man3/Benchmark.3.gz
-lib/perl5/man/man3/Bundle::CPAN.3.gz
-lib/perl5/man/man3/CGI.3.gz
-lib/perl5/man/man3/CGI::Apache.3.gz
-lib/perl5/man/man3/CGI::Carp.3.gz
-lib/perl5/man/man3/CGI::Fast.3.gz
-lib/perl5/man/man3/CGI::Push.3.gz
-lib/perl5/man/man3/CGI::Switch.3.gz
-lib/perl5/man/man3/CPAN.3.gz
-lib/perl5/man/man3/CPAN::FirstTime.3.gz
-lib/perl5/man/man3/CPAN::Nox.3.gz
-lib/perl5/man/man3/Carp.3.gz
-lib/perl5/man/man3/Class::Struct.3.gz
-lib/perl5/man/man3/Config.3.gz
-lib/perl5/man/man3/Cwd.3.gz
-lib/perl5/man/man3/DB_File.3.gz
-lib/perl5/man/man3/Devel::SelfStubber.3.gz
-lib/perl5/man/man3/DirHandle.3.gz
-lib/perl5/man/man3/DynaLoader.3.gz
-lib/perl5/man/man3/English.3.gz
-lib/perl5/man/man3/Env.3.gz
-lib/perl5/man/man3/Exporter.3.gz
-lib/perl5/man/man3/ExtUtils::Command.3.gz
-lib/perl5/man/man3/ExtUtils::Embed.3.gz
-lib/perl5/man/man3/ExtUtils::Install.3.gz
-lib/perl5/man/man3/ExtUtils::Liblist.3.gz
-lib/perl5/man/man3/ExtUtils::MM_OS2.3.gz
-lib/perl5/man/man3/ExtUtils::MM_Unix.3.gz
-lib/perl5/man/man3/ExtUtils::MM_VMS.3.gz
-lib/perl5/man/man3/ExtUtils::MM_Win32.3.gz
-lib/perl5/man/man3/ExtUtils::MakeMaker.3.gz
-lib/perl5/man/man3/ExtUtils::Manifest.3.gz
-lib/perl5/man/man3/ExtUtils::Miniperl.3.gz
-lib/perl5/man/man3/ExtUtils::Mkbootstrap.3.gz
-lib/perl5/man/man3/ExtUtils::Mksymlists.3.gz
-lib/perl5/man/man3/ExtUtils::testlib.3.gz
-lib/perl5/man/man3/Fcntl.3.gz
-lib/perl5/man/man3/File::Basename.3.gz
-lib/perl5/man/man3/File::CheckTree.3.gz
-lib/perl5/man/man3/File::Compare.3.gz
-lib/perl5/man/man3/File::Copy.3.gz
-lib/perl5/man/man3/File::DosGlob.3.gz
-lib/perl5/man/man3/File::Find.3.gz
-lib/perl5/man/man3/File::Path.3.gz
-lib/perl5/man/man3/File::stat.3.gz
-lib/perl5/man/man3/FileCache.3.gz
-lib/perl5/man/man3/FileHandle.3.gz
-lib/perl5/man/man3/FindBin.3.gz
-lib/perl5/man/man3/Getopt::Long.3.gz
-lib/perl5/man/man3/Getopt::Std.3.gz
-lib/perl5/man/man3/I18N::Collate.3.gz
-lib/perl5/man/man3/IO.3.gz
-lib/perl5/man/man3/IO::File.3.gz
-lib/perl5/man/man3/IO::Handle.3.gz
-lib/perl5/man/man3/IO::Pipe.3.gz
-lib/perl5/man/man3/IO::Seekable.3.gz
-lib/perl5/man/man3/IO::Select.3.gz
-lib/perl5/man/man3/IO::Socket.3.gz
-lib/perl5/man/man3/IPC::Open2.3.gz
-lib/perl5/man/man3/IPC::Open3.3.gz
-lib/perl5/man/man3/Math::BigFloat.3.gz
-lib/perl5/man/man3/Math::BigInt.3.gz
-lib/perl5/man/man3/Math::Complex.3.gz
-lib/perl5/man/man3/Math::Trig.3.gz
-lib/perl5/man/man3/NDBM_File.3.gz
-lib/perl5/man/man3/Net::Ping.3.gz
-lib/perl5/man/man3/Net::hostent.3.gz
-lib/perl5/man/man3/Net::netent.3.gz
-lib/perl5/man/man3/Net::protoent.3.gz
-lib/perl5/man/man3/Net::servent.3.gz
-lib/perl5/man/man3/Opcode.3.gz
-lib/perl5/man/man3/POSIX.3.gz
-lib/perl5/man/man3/Pod::Html.3.gz
-lib/perl5/man/man3/Pod::Text.3.gz
-lib/perl5/man/man3/SDBM_File.3.gz
-lib/perl5/man/man3/Safe.3.gz
-lib/perl5/man/man3/Search::Dict.3.gz
-lib/perl5/man/man3/SelectSaver.3.gz
-lib/perl5/man/man3/SelfLoader.3.gz
-lib/perl5/man/man3/Shell.3.gz
-lib/perl5/man/man3/Socket.3.gz
-lib/perl5/man/man3/Symbol.3.gz
-lib/perl5/man/man3/Sys::Hostname.3.gz
-lib/perl5/man/man3/Sys::Syslog.3.gz
-lib/perl5/man/man3/Term::Cap.3.gz
-lib/perl5/man/man3/Term::Complete.3.gz
-lib/perl5/man/man3/Term::ReadLine.3.gz
-lib/perl5/man/man3/Test::Harness.3.gz
-lib/perl5/man/man3/Text::Abbrev.3.gz
-lib/perl5/man/man3/Text::ParseWords.3.gz
-lib/perl5/man/man3/Text::Soundex.3.gz
-lib/perl5/man/man3/Text::Tabs.3.gz
-lib/perl5/man/man3/Text::Wrap.3.gz
-lib/perl5/man/man3/Tie::Hash.3.gz
-lib/perl5/man/man3/Tie::RefHash.3.gz
-lib/perl5/man/man3/Tie::Scalar.3.gz
-lib/perl5/man/man3/Tie::SubstrHash.3.gz
-lib/perl5/man/man3/Time::Local.3.gz
-lib/perl5/man/man3/Time::gmtime.3.gz
-lib/perl5/man/man3/Time::localtime.3.gz
-lib/perl5/man/man3/Time::tm.3.gz
-lib/perl5/man/man3/UNIVERSAL.3.gz
-lib/perl5/man/man3/User::grent.3.gz
-lib/perl5/man/man3/User::pwent.3.gz
-lib/perl5/man/man3/autouse.3.gz
-lib/perl5/man/man3/blib.3.gz
-lib/perl5/man/man3/constant.3.gz
-lib/perl5/man/man3/diagnostics.3.gz
-lib/perl5/man/man3/integer.3.gz
-lib/perl5/man/man3/less.3.gz
-lib/perl5/man/man3/lib.3.gz
-lib/perl5/man/man3/locale.3.gz
-lib/perl5/man/man3/ops.3.gz
-lib/perl5/man/man3/overload.3.gz
-lib/perl5/man/man3/sigtrap.3.gz
-lib/perl5/man/man3/strict.3.gz
-lib/perl5/man/man3/subs.3.gz
-lib/perl5/man/man3/vars.3.gz
+lib/perl5/man/man3/AnyDBM_File.3
+lib/perl5/man/man3/AutoLoader.3
+lib/perl5/man/man3/AutoSplit.3
+lib/perl5/man/man3/Benchmark.3
+lib/perl5/man/man3/Bundle::CPAN.3
+lib/perl5/man/man3/CGI.3
+lib/perl5/man/man3/CGI::Apache.3
+lib/perl5/man/man3/CGI::Carp.3
+lib/perl5/man/man3/CGI::Fast.3
+lib/perl5/man/man3/CGI::Push.3
+lib/perl5/man/man3/CGI::Switch.3
+lib/perl5/man/man3/CPAN.3
+lib/perl5/man/man3/CPAN::FirstTime.3
+lib/perl5/man/man3/CPAN::Nox.3
+lib/perl5/man/man3/Carp.3
+lib/perl5/man/man3/Class::Struct.3
+lib/perl5/man/man3/Config.3
+lib/perl5/man/man3/Cwd.3
+lib/perl5/man/man3/DB_File.3
+lib/perl5/man/man3/Devel::SelfStubber.3
+lib/perl5/man/man3/DirHandle.3
+lib/perl5/man/man3/DynaLoader.3
+lib/perl5/man/man3/English.3
+lib/perl5/man/man3/Env.3
+lib/perl5/man/man3/Exporter.3
+lib/perl5/man/man3/ExtUtils::Command.3
+lib/perl5/man/man3/ExtUtils::Embed.3
+lib/perl5/man/man3/ExtUtils::Install.3
+lib/perl5/man/man3/ExtUtils::Liblist.3
+lib/perl5/man/man3/ExtUtils::MM_OS2.3
+lib/perl5/man/man3/ExtUtils::MM_Unix.3
+lib/perl5/man/man3/ExtUtils::MM_VMS.3
+lib/perl5/man/man3/ExtUtils::MM_Win32.3
+lib/perl5/man/man3/ExtUtils::MakeMaker.3
+lib/perl5/man/man3/ExtUtils::Manifest.3
+lib/perl5/man/man3/ExtUtils::Miniperl.3
+lib/perl5/man/man3/ExtUtils::Mkbootstrap.3
+lib/perl5/man/man3/ExtUtils::Mksymlists.3
+lib/perl5/man/man3/ExtUtils::testlib.3
+lib/perl5/man/man3/Fcntl.3
+lib/perl5/man/man3/File::Basename.3
+lib/perl5/man/man3/File::CheckTree.3
+lib/perl5/man/man3/File::Compare.3
+lib/perl5/man/man3/File::Copy.3
+lib/perl5/man/man3/File::DosGlob.3
+lib/perl5/man/man3/File::Find.3
+lib/perl5/man/man3/File::Path.3
+lib/perl5/man/man3/File::stat.3
+lib/perl5/man/man3/FileCache.3
+lib/perl5/man/man3/FileHandle.3
+lib/perl5/man/man3/FindBin.3
+lib/perl5/man/man3/Getopt::Long.3
+lib/perl5/man/man3/Getopt::Std.3
+lib/perl5/man/man3/I18N::Collate.3
+lib/perl5/man/man3/IO.3
+lib/perl5/man/man3/IO::File.3
+lib/perl5/man/man3/IO::Handle.3
+lib/perl5/man/man3/IO::Pipe.3
+lib/perl5/man/man3/IO::Seekable.3
+lib/perl5/man/man3/IO::Select.3
+lib/perl5/man/man3/IO::Socket.3
+lib/perl5/man/man3/IPC::Open2.3
+lib/perl5/man/man3/IPC::Open3.3
+lib/perl5/man/man3/Math::BigFloat.3
+lib/perl5/man/man3/Math::BigInt.3
+lib/perl5/man/man3/Math::Complex.3
+lib/perl5/man/man3/Math::Trig.3
+lib/perl5/man/man3/NDBM_File.3
+lib/perl5/man/man3/Net::Ping.3
+lib/perl5/man/man3/Net::hostent.3
+lib/perl5/man/man3/Net::netent.3
+lib/perl5/man/man3/Net::protoent.3
+lib/perl5/man/man3/Net::servent.3
+lib/perl5/man/man3/Opcode.3
+lib/perl5/man/man3/POSIX.3
+lib/perl5/man/man3/Pod::Html.3
+lib/perl5/man/man3/Pod::Text.3
+lib/perl5/man/man3/SDBM_File.3
+lib/perl5/man/man3/Safe.3
+lib/perl5/man/man3/Search::Dict.3
+lib/perl5/man/man3/SelectSaver.3
+lib/perl5/man/man3/SelfLoader.3
+lib/perl5/man/man3/Shell.3
+lib/perl5/man/man3/Socket.3
+lib/perl5/man/man3/Symbol.3
+lib/perl5/man/man3/Sys::Hostname.3
+lib/perl5/man/man3/Sys::Syslog.3
+lib/perl5/man/man3/Term::Cap.3
+lib/perl5/man/man3/Term::Complete.3
+lib/perl5/man/man3/Term::ReadLine.3
+lib/perl5/man/man3/Test::Harness.3
+lib/perl5/man/man3/Text::Abbrev.3
+lib/perl5/man/man3/Text::ParseWords.3
+lib/perl5/man/man3/Text::Soundex.3
+lib/perl5/man/man3/Text::Tabs.3
+lib/perl5/man/man3/Text::Wrap.3
+lib/perl5/man/man3/Tie::Hash.3
+lib/perl5/man/man3/Tie::RefHash.3
+lib/perl5/man/man3/Tie::Scalar.3
+lib/perl5/man/man3/Tie::SubstrHash.3
+lib/perl5/man/man3/Time::Local.3
+lib/perl5/man/man3/Time::gmtime.3
+lib/perl5/man/man3/Time::localtime.3
+lib/perl5/man/man3/Time::tm.3
+lib/perl5/man/man3/UNIVERSAL.3
+lib/perl5/man/man3/User::grent.3
+lib/perl5/man/man3/User::pwent.3
+lib/perl5/man/man3/autouse.3
+lib/perl5/man/man3/blib.3
+lib/perl5/man/man3/constant.3
+lib/perl5/man/man3/diagnostics.3
+lib/perl5/man/man3/integer.3
+lib/perl5/man/man3/less.3
+lib/perl5/man/man3/lib.3
+lib/perl5/man/man3/locale.3
+lib/perl5/man/man3/ops.3
+lib/perl5/man/man3/overload.3
+lib/perl5/man/man3/sigtrap.3
+lib/perl5/man/man3/strict.3
+lib/perl5/man/man3/subs.3
+lib/perl5/man/man3/vars.3
 lib/perl5/newgetopt.pl
 lib/perl5/open2.pl
 lib/perl5/open3.pl
@@ -558,63 +561,107 @@ lib/perl5/termcap.pl
 lib/perl5/timelocal.pl
 lib/perl5/validate.pl
 lib/perl5/vars.pm
-@unexec rm -rf %B
-man/man1/a2p.1.gz
-man/man1/c2ph.1.gz
-man/man1/h2ph.1.gz
-man/man1/h2xs.1.gz
-man/man1/perl.1.gz
-man/man1/perlapio.1.gz
-man/man1/perlbook.1.gz
-man/man1/perlbot.1.gz
-man/man1/perlbug.1.gz
-man/man1/perlcall.1.gz
-man/man1/perldata.1.gz
-man/man1/perldebug.1.gz
-man/man1/perldelta.1.gz
-man/man1/perldiag.1.gz
-man/man1/perldoc.1.gz
-man/man1/perldsc.1.gz
-man/man1/perlembed.1.gz
-man/man1/perlfaq.1.gz
-man/man1/perlfaq1.1.gz
-man/man1/perlfaq2.1.gz
-man/man1/perlfaq3.1.gz
-man/man1/perlfaq4.1.gz
-man/man1/perlfaq5.1.gz
-man/man1/perlfaq6.1.gz
-man/man1/perlfaq7.1.gz
-man/man1/perlfaq8.1.gz
-man/man1/perlfaq9.1.gz
-man/man1/perlform.1.gz
-man/man1/perlfunc.1.gz
-man/man1/perlguts.1.gz
-man/man1/perlipc.1.gz
-man/man1/perllocale.1.gz
-man/man1/perllol.1.gz
-man/man1/perlmod.1.gz
-man/man1/perlmodlib.1.gz
-man/man1/perlobj.1.gz
-man/man1/perlop.1.gz
-man/man1/perlpod.1.gz
-man/man1/perlre.1.gz
-man/man1/perlref.1.gz
-man/man1/perlrun.1.gz
-man/man1/perlsec.1.gz
-man/man1/perlstyle.1.gz
-man/man1/perlsub.1.gz
-man/man1/perlsyn.1.gz
-man/man1/perltie.1.gz
-man/man1/perltoc.1.gz
-man/man1/perltoot.1.gz
-man/man1/perltrap.1.gz
-man/man1/perlvar.1.gz
-man/man1/perlxs.1.gz
-man/man1/perlxstut.1.gz
-man/man1/pl2pm.1.gz
-man/man1/pod2html.1.gz
-man/man1/pod2man.1.gz
-man/man1/pstruct.1.gz
-man/man1/s2p.1.gz
-man/man1/splain.1.gz
-man/man1/xsubpp.1.gz
+man/man1/a2p.1
+man/man1/c2ph.1
+man/man1/h2ph.1
+man/man1/h2xs.1
+man/man1/perl.1
+man/man1/perlapio.1
+man/man1/perlbook.1
+man/man1/perlbot.1
+man/man1/perlbug.1
+man/man1/perlcall.1
+man/man1/perldata.1
+man/man1/perldebug.1
+man/man1/perldelta.1
+man/man1/perldiag.1
+man/man1/perldoc.1
+man/man1/perldsc.1
+man/man1/perlembed.1
+man/man1/perlfaq.1
+man/man1/perlfaq1.1
+man/man1/perlfaq2.1
+man/man1/perlfaq3.1
+man/man1/perlfaq4.1
+man/man1/perlfaq5.1
+man/man1/perlfaq6.1
+man/man1/perlfaq7.1
+man/man1/perlfaq8.1
+man/man1/perlfaq9.1
+man/man1/perlform.1
+man/man1/perlfunc.1
+man/man1/perlguts.1
+man/man1/perlipc.1
+man/man1/perllocale.1
+man/man1/perllol.1
+man/man1/perlmod.1
+man/man1/perlmodlib.1
+man/man1/perlobj.1
+man/man1/perlop.1
+man/man1/perlpod.1
+man/man1/perlre.1
+man/man1/perlref.1
+man/man1/perlrun.1
+man/man1/perlsec.1
+man/man1/perlstyle.1
+man/man1/perlsub.1
+man/man1/perlsyn.1
+man/man1/perltie.1
+man/man1/perltoc.1
+man/man1/perltoot.1
+man/man1/perltrap.1
+man/man1/perlvar.1
+man/man1/perlxs.1
+man/man1/perlxstut.1
+man/man1/pl2pm.1
+man/man1/pod2html.1
+man/man1/pod2man.1
+man/man1/pstruct.1
+man/man1/s2p.1
+man/man1/splain.1
+man/man1/xsubpp.1
+@dirrm lib/perl5/Bundle
+@dirrm lib/perl5/CGI
+@dirrm lib/perl5/CPAN
+@dirrm lib/perl5/Class
+@dirrm lib/perl5/Devel
+@dirrm lib/perl5/ExtUtils
+@dirrm lib/perl5/File
+@dirrm lib/perl5/Getopt
+@dirrm lib/perl5/I18N
+@dirrm lib/perl5/IPC
+@dirrm lib/perl5/Math
+@dirrm lib/perl5/Net
+@dirrm lib/perl5/Pod
+@dirrm lib/perl5/Search
+@dirrm lib/perl5/Sys
+@dirrm lib/perl5/Term
+@dirrm lib/perl5/Test
+@dirrm lib/perl5/Text
+@dirrm lib/perl5/Tie
+@dirrm lib/perl5/Time
+@dirrm lib/perl5/User
+@dirrm lib/perl5/auto/Text/ParseWords
+@dirrm lib/perl5/auto/Text
+@dirrm lib/perl5/auto
+@dirrm lib/perl5/i386-netbsd/5.00401/CORE
+@dirrm lib/perl5/i386-netbsd/5.00401/IO
+@dirrm lib/perl5/i386-netbsd/5.00401/auto/DB_File
+@dirrm lib/perl5/i386-netbsd/5.00401/auto/DynaLoader
+@dirrm lib/perl5/i386-netbsd/5.00401/auto/Fcntl
+@dirrm lib/perl5/i386-netbsd/5.00401/auto/IO
+@dirrm lib/perl5/i386-netbsd/5.00401/auto/NDBM_File
+@dirrm lib/perl5/i386-netbsd/5.00401/auto/Opcode
+@dirrm lib/perl5/i386-netbsd/5.00401/auto/POSIX
+@dirrm lib/perl5/i386-netbsd/5.00401/auto/SDBM_File
+@dirrm lib/perl5/i386-netbsd/5.00401/auto/Socket
+@dirrm lib/perl5/i386-netbsd/5.00401/auto/Text
+@dirrm lib/perl5/i386-netbsd/5.00401/auto/sdbm
+@dirrm lib/perl5/i386-netbsd/5.00401/auto
+@dirrm lib/perl5/i386-netbsd/5.00401/pod
+@dirrm lib/perl5/i386-netbsd/5.00401
+@dirrm lib/perl5/i386-netbsd
+@dirrm lib/perl5/man/man3
+@dirrm lib/perl5/man
+@dirrm lib/perl5/pod
+@dirrm lib/perl5
