@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1.1.1 2000/03/26 14:44:41 jlam Exp $
+
+--- nondsp.c.orig	Mon Sep 28 08:41:22 1998
++++ nondsp.c	Thu Dec 10 23:39:26 1998
+@@ -264,10 +264,11 @@
+ 
+   NewGame ();
+ 
+-  gets (s);			/* skip "setup" command */
++  fgets (s, 80, stdin);			/* skip "setup" command */
++  s[79] = '\0';
+   for (r = 7; r >= 0; r--)
+     {
+-      gets (s);
++      fgets (s, 80, stdin); s[79] = '\0';
+       for (c = 0; c <= 7; c++)
+ 	{
+ 	  ch = s[c];
+@@ -617,7 +618,7 @@
+   if (!T[0])
+     {
+       printz (CP[61]);
+-      gets (T);
++      fgets (T, 64, stdin); T[63] = '\0';
+     }
+   strcat (T, "XX");
+   /* skip whitespace */
