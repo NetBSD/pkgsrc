@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.396 2003/08/11 15:02:39 drochner Exp $
+# $NetBSD: Makefile,v 1.397 2003/08/13 07:27:46 itojun Exp $
 #
 
 COMMENT=	Networking tools
@@ -228,6 +228,7 @@ SUBDIR+=	py-soappy
 SUBDIR+=	py-xmlrpclib
 SUBDIR+= 	pyslsk
 SUBDIR+=	qadsl
+SUBDIR+=	quagga
 SUBDIR+=	ra-pna-proxy
 SUBDIR+=	ra-rtsp-proxy
 SUBDIR+=	radiusd-cistron
