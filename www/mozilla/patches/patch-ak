@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.6 2000/11/09 07:26:29 mycroft Exp $
+
+--- nsprpub/pr/src/io/prsocket.c.orig	Wed Apr 26 21:27:38 2000
++++ nsprpub/pr/src/io/prsocket.c	Thu Nov  9 07:08:43 2000
+@@ -1302,6 +1302,7 @@
+     if (listenSock == INVALID_SOCKET) {
+         goto failed;
+     }
++    memset(&selfAddr, 0, sizeof(selfAddr));
+     selfAddr.sin_family = AF_INET;
+     selfAddr.sin_port = 0;
+     selfAddr.sin_addr.s_addr = htonl(INADDR_LOOPBACK); /* BugZilla: 35408 */

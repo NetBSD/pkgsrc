@@ -1,0 +1,28 @@
+$NetBSD: patch-al,v 1.4 2000/11/09 07:26:29 mycroft Exp $
+
+--- nsprpub/pr/src/misc/prnetdb.c.orig	Wed Mar  8 16:27:18 2000
++++ nsprpub/pr/src/misc/prnetdb.c	Thu Nov  9 07:20:40 2000
+@@ -924,6 +924,7 @@
+     PRStatus rv = PR_SUCCESS;
+     if (!_pr_initialized) _PR_ImplicitInitialization();
+ 
++	memset(addr, 0, sizeof(*addr));
+ 	addr->inet.family = AF_INET;
+ 	addr->inet.port = htons(port);
+ 	switch (val)
+@@ -949,6 +950,7 @@
+     PRStatus rv = PR_SUCCESS;
+     if (!_pr_initialized) _PR_ImplicitInitialization();
+ 
++    memset(addr, 0, sizeof(*addr));
+     addr->raw.family = af;
+     if (af == PR_AF_INET6)
+     {
+@@ -1275,6 +1277,7 @@
+     PRStatus status = PR_SUCCESS;
+     PRIntn rv;
+ 
++    memset(addr, 0, sizeof(*addr));
+ #if defined(_PR_INET6)
+     rv = inet_pton(AF_INET6, string, &addr->ipv6.ip);
+     if (1 == rv)
