@@ -11,7 +11,7 @@
 # Freely redistributable.  Absolutely no warranty.
 #
 # From Id: portlint.pl,v 1.64 1998/02/28 02:34:05 itojun Exp
-# $NetBSD: pkglint.pl,v 1.88 2003/05/27 17:14:52 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.89 2003/07/14 15:36:29 martti Exp $
 #
 # This version contains lots of changes necessary for NetBSD packages
 # done by Hubert Feyrer <hubertf@netbsd.org>,
@@ -1242,6 +1242,9 @@ EOF
 	}
 	if ($tmp2 =~ /^(a|an) /i) {
 		&perror("WARN: COMMENT should not begin with '$1 '.");
+	}
+	if ($tmp2 =~ /^[a-z]/) {
+		&perror("WARN: COMMENT should start with a capital letter.");
 	}
 	if (length($tmp2) > 70) {
 		&perror("WARN: COMMENT should not be longer than 70 characters.");
