@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/06/02 13:08:29 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2000/06/03 17:31:44 rh Exp $
 #
 
 DISTNAME=	gnome-applets-1.2.0
@@ -10,9 +10,10 @@ HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	gnome-core-*:../../x11/gnome-core
 
-USE_X11BASE=	yes
-GNU_CONFIGURE=	YES
 USE_GMAKE=	yes
+USE_X11BASE=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include"
 
 .include "../../mk/bsd.prefs.mk"
 
