@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/10/11 14:02:53 agc Exp $
+@comment $NetBSD: PLIST,v 1.1 2001/10/31 19:22:36 zuntum Exp $
 bin/tik
 libexec/tik/balloonhelp.tcl
 libexec/tik/buddylist.tcl
