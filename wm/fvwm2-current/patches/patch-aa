@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/20 14:54:36 rh Exp $
+$NetBSD: patch-aa,v 1.2 2001/04/27 15:14:59 zuntum Exp $
 
 --- utils/Makefile.in.orig	Fri Mar  2 19:38:46 2001
 +++ utils/Makefile.in
@@ -6,12 +6,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/20 14:54:36 rh Exp $
  xpm_CFLAGS = @xpm_CFLAGS@
  xpm_LIBS = @xpm_LIBS@
  
--bin_PROGRAMS = @XPMROOT@ xselection
-+bin_PROGRAMS = xselection
+-bin_PROGRAMS = @XPMROOT@
++bin_PROGRAMS =
  bin_SCRIPTS = fvwm-config fvwmbug fvwm-menu-xlock fvwm-menu-directory 	fvwm-menu-desktop fvwm-menu-headlines fvwm24_convert
  
  
- EXTRA_PROGRAMS = xpmroot
+ EXTRA_PROGRAMS = xpmroot xselection
  
 -man_MANS = xpmroot.1 fvwmbug.1 fvwmrc_convert.1 fvwm24_convert.1 	fvwm-menu-xlock.1 fvwm-menu-directory.1 	fvwm-menu-desktop.1 fvwm-menu-headlines.1
 +man_MANS = fvwmbug.1 fvwmrc_convert.1 fvwm24_convert.1 	fvwm-menu-xlock.1 fvwm-menu-directory.1 	fvwm-menu-desktop.1 fvwm-menu-headlines.1
