@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.186 1998/10/26 17:40:57 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.187 1998/10/26 18:29:10 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -528,10 +528,7 @@ DISTFILES?=		${DISTNAME}${EXTRACT_SUFX}
 PKGNAME?=		${DISTNAME}
 
 # Latest version of pkgtools required for this file.
-.ifdef PKG_RELATIVE_SYMLINKS
-PKGTOOLS_REQD=		19981019
-.endif
-PKGTOOLS_REQD?=		19980908
+PKGTOOLS_REQD=		19981026
 
 # Check that we're using up-to-date pkg_* tools with this file.
 .ifndef _PKGTOOLS_VER
@@ -1931,7 +1928,7 @@ fake-pkg: ${PLIST} ${DESCR}
 .if defined(FORCE_PKG_REGISTER)
 	@${RM} -rf ${PKG_DBDIR}/${PKGNAME}
 .endif
-	@${RM} ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
+	@${RM} -f ${BUILD_VERSION_FILE} ${BUILD_INFO_FILE}
 	@files="";							\
 	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
 		if [ -f $$f ]; then					\
