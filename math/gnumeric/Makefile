@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2002/01/17 11:57:44 martti Exp $
+# $NetBSD: Makefile,v 1.42 2002/01/25 01:39:53 rh Exp $
 #
 
 DISTNAME=		gnumeric-1.0.2
@@ -41,6 +41,5 @@ pre-configure:
 .include "../../devel/libole2/buildlink.mk"
 .include "../../devel/oaf/buildlink.mk"
 .include "../../devel/gal/buildlink.mk"
-.include "../../lang/gb/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"

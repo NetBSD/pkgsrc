@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/17 13:12:00 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/25 01:39:53 rh Exp $
 bin/gnumeric
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.a
 lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix/applix.la
@@ -753,12 +753,10 @@ share/pixmaps/gnumeric/right_border
 share/pixmaps/gnumeric/stf-druid.png
 share/pixmaps/gnumeric/top_border
 @dirrm share/pixmaps/gnumeric
-@dirrm share/oaf
-@dirrm share/mime-info
-@dirrm share/mc/templates
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/templates
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/idl
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/gnome/ui
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/gnome
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/glade
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/List
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/General
@@ -766,9 +764,11 @@ share/pixmaps/gnumeric/top_border
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/Colourful
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/Classical
 @dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates/3D
+@dirrm share/gnumeric/${PKGVERSION}-bonobo/autoformat-templates
+@dirrm share/gnumeric/${PKGVERSION}-bonobo
+@dirrm share/gnumeric
 @dirrm share/gnome/help/gnumeric/C/images
 @dirrm share/gnome/help/gnumeric/C
-@dirrm share/gnome/apps/Applications
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/xml_sax
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/xbase
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/sylk
@@ -783,4 +783,7 @@ share/pixmaps/gnumeric/top_border
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/dif
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/derivatives
 @dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins/applix
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo/plugins
+@dirrm lib/gnumeric/${PKGVERSION}-bonobo
+@dirrm lib/gnumeric
 @unexec rmdir %D/share/mc/templates >/dev/null 2>&1 || true
