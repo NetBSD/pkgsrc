@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/07/12 23:03:57 mycroft Exp $
+# $NetBSD: Makefile,v 1.4 2002/08/13 10:01:57 agc Exp $
 #
 
 DISTNAME=		mrproject-0.5.1
@@ -19,6 +19,7 @@ CFLAGS+=		-I${BUILDLINK_DIR}/include/gconf/1
 LIBTOOL_OVERRIDE=       ${WRKSRC}/libtool
 
 DEPENDS+=		skill-[0-9]*:../../sysutils/skill
+DEPENDS+=		evolution>=1.0.8:../../mail/evolution
 
 post-extract:
 	# This is an ugly hack to fix the missing file error in 0.5.1
