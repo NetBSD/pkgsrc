@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/17 21:30:25 grant Exp $
+# $NetBSD: Makefile,v 1.6 2004/02/17 12:45:56 cube Exp $
 #
 
-VERS=		0.43b
+VERS=		0.51b3
 DISTNAME=	${PKGNAME}-portable
 PKGNAME=	elfsh-${VERS}
 CATEGORIES=	devel
@@ -13,20 +13,29 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://devhell.org/projects/elfsh/
 COMMENT=	ELF format exploration shell
 
-WRKSRC=		${WRKDIR}/elfsh_0.43
+WRKSRC=		${WRKDIR}/${PKGNAME}
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=		yes
+USE_GNU_READLINE=	yes
+
+SUBST_STAGE.elfsh=	post-patch
+SUBST_FILES.elfsh=	vm/include/elfsh.h
+SUBST_SED.elfsh=	-e s,@@SH@@,${SH}, -e s,@@PREFIX@@,${PREFIX},
+SUBST_CLASSES+=		elfsh
 
 # XXX This package should be converted to use libtool
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/elfsh/elfsh ${PREFIX}/bin/elfsh
+	${INSTALL_PROGRAM} ${WRKSRC}/vm/elfsh ${PREFIX}/bin/elfsh
 	${INSTALL_DATA} ${WRKSRC}/libelfsh/libelfsh.a ${PREFIX}/lib/libelfsh.a
 	${INSTALL_DATA} ${WRKSRC}/libelfsh/libelfsh.so ${PREFIX}/lib/libelfsh.so
 	${INSTALL_DATA} ${WRKSRC}/libelfsh/include/libelfsh.h ${PREFIX}/include/libelfsh.h
+	${INSTALL_DATA_DIR} ${PREFIX}/lib/elfsh
+	${INSTALL_DATA} ${WRKSRC}/modules/modremap.so ${PREFIX}/lib/elfsh
+	${INSTALL_DATA} ${WRKSRC}/modules/modtest.so ${PREFIX}/lib/elfsh
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/elfsh
-	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/elfsh/README
+	${INSTALL_DATA} ${WRKSRC}/doc/elfsh-ref.txt ${PREFIX}/share/doc/elfsh/elfsh-ref.txt
 	${INSTALL_DATA} ${WRKSRC}/doc/libelfsh-ref.txt ${PREFIX}/share/doc/elfsh/libelfsh-ref.txt
 
-.include "../../devel/readline/buildlink2.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
