@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/04/17 13:21:48 minskim Exp $
+
+SHA1 (same-1.3.tar.gz) = 0638d10e53c022470e0ef724679f2c476607ebb2
+Size (same-1.3.tar.gz) = 9119 bytes
+SHA1 (patch-ab) = 7df4a5ee747bf542911c5c2f7208494c68ce9561

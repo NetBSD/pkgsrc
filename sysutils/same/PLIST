@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/17 13:21:48 minskim Exp $
+bin/same
+man/man1/same.1
