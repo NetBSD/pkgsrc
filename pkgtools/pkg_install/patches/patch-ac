@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2002/07/03 22:43:40 abs Exp $
+$NetBSD: patch-ac,v 1.5 2002/08/01 09:31:16 martti Exp $
 
---- add/perform.c.orig	Tue Apr  2 16:08:33 2002
-+++ add/perform.c
-@@ -347,7 +347,11 @@
+--- add/perform.c.orig	Thu Aug  1 10:46:30 2002
++++ add/perform.c	Thu Aug  1 10:56:47 2002
+@@ -182,7 +182,11 @@
  						goto bomb;
  					}
  				}
