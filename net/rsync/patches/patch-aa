@@ -1,18 +1,18 @@
-$NetBSD: patch-aa,v 1.4 1998/09/28 10:53:29 frueauf Exp $
+$NetBSD: patch-aa,v 1.5 1998/11/05 00:24:38 mycroft Exp $
 
---- receiver.c-orig	Wed Sep  9 08:23:27 1998
-+++ receiver.c	Tue Sep 15 14:40:30 1998
-@@ -369,6 +369,9 @@
+--- receiver.c.orig	Tue Nov  3 17:00:46 1998
++++ receiver.c	Wed Nov  4 18:59:23 1998
+@@ -387,6 +387,9 @@
  			continue;
  		}
  
 +#ifdef HAVE_MKSTEMP
-+		fd2 = mkstemp(fnametmp);
++		fd2 = do_mkstemp(fnametmp);
 +#else
  		if (NULL == do_mktemp(fnametmp)) {
  			rprintf(FERROR,"mktemp %s failed\n",fnametmp);
  			receive_data(f_in,buf,-1,NULL,file->length);
-@@ -384,6 +387,7 @@
+@@ -402,6 +405,7 @@
  		   this out */
  		fd2 = do_open(fnametmp,O_WRONLY|O_CREAT|O_EXCL,
  			      file->mode & ACCESSPERMS);
