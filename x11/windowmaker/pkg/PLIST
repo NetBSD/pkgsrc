@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.nolinguas,v 1.8 1999/10/05 20:46:55 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2000/04/06 22:38:20 jlam Exp $
 GNUstep/Apps/WPrefs.app/WPrefs
 GNUstep/Apps/WPrefs.app/WPrefs.tiff
 GNUstep/Apps/WPrefs.app/WPrefs.xpm
@@ -11,7 +11,6 @@ GNUstep/Apps/WPrefs.app/tiff/cycleworkspaces.tiff
 GNUstep/Apps/WPrefs.app/tiff/dock.tiff
 GNUstep/Apps/WPrefs.app/tiff/dontlinkworkspaces.tiff
 GNUstep/Apps/WPrefs.app/tiff/ergonomic.tiff
-GNUstep/Apps/WPrefs.app/tiff/ergowood.tiff
 GNUstep/Apps/WPrefs.app/tiff/expert.tiff
 GNUstep/Apps/WPrefs.app/tiff/fonts.tiff
 GNUstep/Apps/WPrefs.app/tiff/iconprefs.tiff
@@ -22,7 +21,6 @@ GNUstep/Apps/WPrefs.app/tiff/menualign1.tiff
 GNUstep/Apps/WPrefs.app/tiff/menualign2.tiff
 GNUstep/Apps/WPrefs.app/tiff/menuprefs.tiff
 GNUstep/Apps/WPrefs.app/tiff/menus.tiff
-GNUstep/Apps/WPrefs.app/tiff/miscprefs2.tiff
 GNUstep/Apps/WPrefs.app/tiff/moreanim.tiff
 GNUstep/Apps/WPrefs.app/tiff/mousesettings.tiff
 GNUstep/Apps/WPrefs.app/tiff/mousespeed.tiff
@@ -48,7 +46,6 @@ GNUstep/Apps/WPrefs.app/tiff/speed4.tiff
 GNUstep/Apps/WPrefs.app/tiff/speed4s.tiff
 GNUstep/Apps/WPrefs.app/tiff/tdel.tiff
 GNUstep/Apps/WPrefs.app/tiff/tedit.tiff
-GNUstep/Apps/WPrefs.app/tiff/temp.tiff
 GNUstep/Apps/WPrefs.app/tiff/textr.tiff
 GNUstep/Apps/WPrefs.app/tiff/theme.tiff
 GNUstep/Apps/WPrefs.app/tiff/timer0.tiff
@@ -67,6 +64,7 @@ GNUstep/Apps/WPrefs.app/tiff/tnew.tiff
 GNUstep/Apps/WPrefs.app/tiff/whandling.tiff
 GNUstep/Apps/WPrefs.app/tiff/windowfocus.tiff
 GNUstep/Apps/WPrefs.app/tiff/workspace.tiff
+GNUstep/Apps/WPrefs.app/tiff/workspacename.tiff
 GNUstep/Apps/WPrefs.app/tiff/xis.tiff
 GNUstep/Apps/WPrefs.app/xpm/advancetonewworkspace.xpm
 GNUstep/Apps/WPrefs.app/xpm/animations.xpm
@@ -77,7 +75,6 @@ GNUstep/Apps/WPrefs.app/xpm/cycleworkspaces.xpm
 GNUstep/Apps/WPrefs.app/xpm/dock.xpm
 GNUstep/Apps/WPrefs.app/xpm/dontlinkworkspaces.xpm
 GNUstep/Apps/WPrefs.app/xpm/ergonomic.xpm
-GNUstep/Apps/WPrefs.app/xpm/ergowood.xpm
 GNUstep/Apps/WPrefs.app/xpm/expert.xpm
 GNUstep/Apps/WPrefs.app/xpm/fonts.xpm
 GNUstep/Apps/WPrefs.app/xpm/iconprefs.xpm
@@ -88,7 +85,6 @@ GNUstep/Apps/WPrefs.app/xpm/menualign1.xpm
 GNUstep/Apps/WPrefs.app/xpm/menualign2.xpm
 GNUstep/Apps/WPrefs.app/xpm/menuprefs.xpm
 GNUstep/Apps/WPrefs.app/xpm/menus.xpm
-GNUstep/Apps/WPrefs.app/xpm/miscprefs2.xpm
 GNUstep/Apps/WPrefs.app/xpm/moreanim.xpm
 GNUstep/Apps/WPrefs.app/xpm/mousesettings.xpm
 GNUstep/Apps/WPrefs.app/xpm/mousespeed.xpm
@@ -114,7 +110,6 @@ GNUstep/Apps/WPrefs.app/xpm/speed4.xpm
 GNUstep/Apps/WPrefs.app/xpm/speed4s.xpm
 GNUstep/Apps/WPrefs.app/xpm/tdel.xpm
 GNUstep/Apps/WPrefs.app/xpm/tedit.xpm
-GNUstep/Apps/WPrefs.app/xpm/temp.xpm
 GNUstep/Apps/WPrefs.app/xpm/textr.xpm
 GNUstep/Apps/WPrefs.app/xpm/theme.xpm
 GNUstep/Apps/WPrefs.app/xpm/timer0.xpm
@@ -133,8 +128,11 @@ GNUstep/Apps/WPrefs.app/xpm/tnew.xpm
 GNUstep/Apps/WPrefs.app/xpm/whandling.xpm
 GNUstep/Apps/WPrefs.app/xpm/windowfocus.xpm
 GNUstep/Apps/WPrefs.app/xpm/workspace.xpm
+GNUstep/Apps/WPrefs.app/xpm/workspacename.xpm
 GNUstep/Apps/WPrefs.app/xpm/xis.xpm
+bin/get-wings-flags
 bin/get-wraster-flags
+bin/get-wutil-flags
 bin/geticonset
 bin/getstyle
 bin/seticons
@@ -162,7 +160,7 @@ lib/libWINGs.a
 lib/libWMaker.a
 lib/libWUtil.a
 lib/libwraster.a
-lib/libwraster.so.3.0
+lib/libwraster.so.2.0
 man/man1/geticonset.1
 man/man1/getstyle.1
 man/man1/seticons.1
@@ -190,10 +188,14 @@ share/WindowMaker/Icons/GNUstepGlow.tiff
 share/WindowMaker/Icons/GNUstepGlow.xpm
 share/WindowMaker/Icons/GNUterm.tiff
 share/WindowMaker/Icons/GNUterm.xpm
+share/WindowMaker/Icons/Terminal.tiff
+share/WindowMaker/Icons/Terminal.xpm
+share/WindowMaker/Icons/TerminalGNUstep.tiff
+share/WindowMaker/Icons/TerminalGNUstep.xpm
+share/WindowMaker/Icons/TerminalLinux.tiff
+share/WindowMaker/Icons/TerminalLinux.xpm
 share/WindowMaker/Icons/clip.tiff
 share/WindowMaker/Icons/clip.xpm
-share/WindowMaker/Icons/clip2.tiff
-share/WindowMaker/Icons/clip2.xpm
 share/WindowMaker/Icons/defaultAppIcon.tiff
 share/WindowMaker/Icons/defaultAppIcon.xpm
 share/WindowMaker/Icons/defaultterm.tiff
@@ -232,8 +234,8 @@ share/WindowMaker/Pixmaps/tile.tiff
 share/WindowMaker/Pixmaps/tile.xpm
 share/WindowMaker/README
 share/WindowMaker/README.themes
-share/WindowMaker/SoundSets/.keep_me
-share/WindowMaker/Sounds/.keep_me
+share/WindowMaker/SoundSets/.directory
+share/WindowMaker/Sounds/.directory
 share/WindowMaker/Styles/Autumn.style
 share/WindowMaker/Styles/Black.style
 share/WindowMaker/Styles/BlackTexture.style
@@ -246,6 +248,7 @@ share/WindowMaker/Styles/Chumbo.style
 share/WindowMaker/Styles/Copper.style
 share/WindowMaker/Styles/DarkBlue.style
 share/WindowMaker/Styles/DarkRed.style
+share/WindowMaker/Styles/Emerald.style
 share/WindowMaker/Styles/Fire.style
 share/WindowMaker/Styles/Food.style
 share/WindowMaker/Styles/Golden.style
@@ -260,6 +263,7 @@ share/WindowMaker/Styles/Purple.style
 share/WindowMaker/Styles/Purplish.style
 share/WindowMaker/Styles/Red.style
 share/WindowMaker/Styles/RednBlue.style
+share/WindowMaker/Styles/Spring.style
 share/WindowMaker/Styles/Summer.style
 share/WindowMaker/Styles/Traditional.style
 share/WindowMaker/Styles/VioletBlue.style
@@ -301,26 +305,67 @@ share/WindowMaker/plmenu.de
 share/WindowMaker/plmenu.fr
 share/WindowMaker/plmenu.hr
 share/WindowMaker/plmenu.it
+share/WindowMaker/plmenu.ko
+share/WindowMaker/plmenu.pl
 share/WindowMaker/plmenu.zh_CN
 share/WindowMaker/wmmacros
 share/WindowMaker/xtree.dat
+share/doc/WindowMaker/FAQ
+share/doc/WindowMaker/FAQ.I18N
 share/doc/WindowMaker/README
 share/doc/WindowMaker/README.GNOME
 share/doc/WindowMaker/README.KDE
-@dirrm GNUstep/Apps/WPrefs.app/tiff
+share/doc/WindowMaker/README.definable-cursor
+share/locale/cs/LC_MESSAGES/WPrefs.mo
+share/locale/cs/LC_MESSAGES/WindowMaker.mo
+share/locale/da/LC_MESSAGES/WindowMaker.mo
+share/locale/de/LC_MESSAGES/WPrefs.mo
+share/locale/de/LC_MESSAGES/WindowMaker.mo
+share/locale/el/LC_MESSAGES/WindowMaker.mo
+share/locale/es/LC_MESSAGES/WPrefs.mo
+share/locale/es/LC_MESSAGES/WindowMaker.mo
+share/locale/fi/LC_MESSAGES/WPrefs.mo
+share/locale/fi/LC_MESSAGES/WindowMaker.mo
+share/locale/fr/LC_MESSAGES/WPrefs.mo
+share/locale/fr/LC_MESSAGES/WindowMaker.mo
+share/locale/gl/LC_MESSAGES/WindowMaker.mo
+share/locale/hr/LC_MESSAGES/WPrefs.mo
+share/locale/hr/LC_MESSAGES/WindowMaker.mo
+share/locale/it/LC_MESSAGES/WPrefs.mo
+share/locale/it/LC_MESSAGES/WindowMaker.mo
+share/locale/ja/LC_MESSAGES/WPrefs.mo
+share/locale/ja/LC_MESSAGES/WindowMaker.mo
+share/locale/ko/LC_MESSAGES/WPrefs.mo
+share/locale/ko/LC_MESSAGES/WindowMaker.mo
+share/locale/nl/LC_MESSAGES/WindowMaker.mo
+share/locale/no/LC_MESSAGES/WindowMaker.mo
+share/locale/pl/LC_MESSAGES/WindowMaker.mo
+share/locale/pt/LC_MESSAGES/WPrefs.mo
+share/locale/pt/LC_MESSAGES/WindowMaker.mo
+share/locale/ro/LC_MESSAGES/WindowMaker.mo
+share/locale/ru/LC_MESSAGES/WPrefs.mo
+share/locale/ru/LC_MESSAGES/WindowMaker.mo
+share/locale/se/LC_MESSAGES/WindowMaker.mo
+share/locale/sk/LC_MESSAGES/WindowMaker.mo
+share/locale/tr/LC_MESSAGES/WindowMaker.mo
+share/locale/zh_CN/LC_MESSAGES/WPrefs.mo
+share/locale/zh_CN/LC_MESSAGES/WindowMaker.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/WPrefs.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/WindowMaker.mo
+@dirrm share/doc/WindowMaker
+@dirrm share/WindowMaker/Themes
+@dirrm share/WindowMaker/Styles
+@dirrm share/WindowMaker/Sounds
+@dirrm share/WindowMaker/SoundSets
+@dirrm share/WindowMaker/Pixmaps
+@dirrm share/WindowMaker/Icons
+@dirrm share/WindowMaker/IconSets
+@dirrm share/WindowMaker/Backgrounds
+@dirrm share/WindowMaker
+@dirrm share/WINGs
+@dirrm etc/WindowMaker
 @dirrm GNUstep/Apps/WPrefs.app/xpm
+@dirrm GNUstep/Apps/WPrefs.app/tiff
 @dirrm GNUstep/Apps/WPrefs.app
 @dirrm GNUstep/Apps
 @dirrm GNUstep
-@dirrm etc/WindowMaker
-@dirrm share/WINGs
-@dirrm share/WindowMaker/Backgrounds
-@dirrm share/WindowMaker/IconSets
-@dirrm share/WindowMaker/Icons
-@dirrm share/WindowMaker/Pixmaps
-@dirrm share/WindowMaker/SoundSets
-@dirrm share/WindowMaker/Sounds
-@dirrm share/WindowMaker/Styles
-@dirrm share/WindowMaker/Themes
-@dirrm share/WindowMaker
-@dirrm share/doc/WindowMaker
