@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2002/10/06 03:36:20 jlam Exp $
+
+--- filters/kontour/wmf/Makefile.in.orig	Sat Oct  5 06:09:22 2002
++++ filters/kontour/wmf/Makefile.in
+@@ -253,7 +253,7 @@ noinst_HEADERS = wmfimport.h wmfimport_f
+ 
+ service_DATA = killustrator_wmf_import.desktop
+ servicedir = $(kde_servicesdir)
+-data_DATA = x-wmf.desktop
++data_DATA = # x-wmf.desktop (already installed by kdelibs3)
+ datadir = $(kde_mimedir)/image
+ mkinstalldirs = $(SHELL) $(top_srcdir)/admin/mkinstalldirs
+ CONFIG_HEADER = ../../../config.h

@@ -1,0 +1,30 @@
+$NetBSD: patch-ap,v 1.1 2002/10/06 03:36:23 jlam Exp $
+
+--- qt3stuff/qrichtext.cpp.orig	Wed Mar 27 06:14:54 2002
++++ qt3stuff/qrichtext.cpp
+@@ -1054,19 +1054,21 @@ void QTextCursor::gotoWordRight()
+     QTextString *s = string->string();
+     bool allowSame = FALSE;
+     for ( int i = idx; i < (int)s->length(); ++i ) {
+-	if ( s->at( i ).c.isSpace() || s->at( i ).c == '\t' || s->at( i ).c == '.' ||
+-	     s->at( i ).c == ',' || s->at( i ).c == ':' || s->at( i ).c == ';' ) {
++       if ( ! ( s->at( i ).c.isSpace() || s->at( i ).c == '\t' || s->at( i ).c == '.' ||
++            s->at( i ).c == ',' || s->at( i ).c == ':' || s->at( i ).c == ';' ) ) {
+ 	    if ( !allowSame )
+ 		continue;
+ 	    idx = i;
+ 	    return;
+ 	}
+-	if ( !allowSame && !( s->at( i ).c.isSpace() || s->at( i ).c == '\t' || s->at( i ).c == '.' ||
++       if ( !allowSame && ( s->at( i ).c.isSpace() || s->at( i ).c == '\t' || s->at( i ).c == '.' ||
+ 			      s->at( i ).c == ',' || s->at( i ).c == ':' || s->at( i ).c == ';'  ) )
+ 	    allowSame = TRUE;
+     }
+ 
+-    if ( string->next() ) {
++    if ( idx < ((int)s->length()-1) ) {
++        gotoLineEnd();
++    } else if ( string->next() ) {
+ 	string = string->next();
+ 	while ( !string->isVisible() )
+ 	    string = string->next();
