@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/20 12:08:40 agc Exp $
+# $NetBSD: Makefile,v 1.3 2004/04/11 04:07:05 snj Exp $
 #
 
 DISTNAME=		MUMmer3.04
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.tigr.org/software/mummer/
 COMMENT=		System for aligning whole genome sequences
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_GNU_TOOLS+=		make
 
 MAKE_ENV+=		SH="${SH}"
@@ -43,5 +43,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/${DOC} ${PREFIX}/share/doc/mummer
 .endfor
 
-.include "../../lang/perl5/buildlink2.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
