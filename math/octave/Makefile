@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/11/26 00:48:51 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/11/26 00:51:10 tron Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/09/27 20:10:45 steve Exp
 
 DISTNAME=	octave-2.0.13
@@ -34,7 +34,6 @@ IGNORE=		"cannot be built with egcs yet"
 .endif
 
 post-extract:
-	echo ${GCC_VERSION:C/-.*$$//}
 	${MKDIR} ${WRKDIR}/include
 	${LN} -s ${PREFIX}/include/ncurses.h ${WRKDIR}/include
 
@@ -51,4 +50,3 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/faq/Octave-FAQ.ps ${PREFIX}/share/octave/2.0.13/doc
 
 .include <../../mk/bsd.pkg.mk>
-
