@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.450 2002/11/03 12:44:47 wiz Exp $
+$NetBSD: CHANGES,v 1.451 2002/11/03 21:33:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3517,3 +3517,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Added ggv-1.99.95 as ggv2 [rh 2002-11-03]
 	Updated links to 2.1.0.5 [wiz 2002-11-03]
 	Updated links-gui to 2.1.0.5 [wiz 2002-11-03]
+	Updated dctc to 0.83.7 [wiz 2002-11-03]
+	Updated dc_gui to 0.64 [wiz 2002-11-03]
