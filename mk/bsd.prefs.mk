@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.168 2004/09/27 12:05:53 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.169 2004/10/06 20:51:47 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -222,8 +222,8 @@ PKGSRC_TOPDIR=	${.CURDIR}
 .endif
 
 # include the defaults file
-.if exists(${PKGSRC_TOPDIR}/mk/bsd.pkg.defaults.mk)
-.  include "${PKGSRC_TOPDIR}/mk/bsd.pkg.defaults.mk"
+.if exists(${PKGSRC_TOPDIR}/mk/defaults/mk.conf)
+.  include "${PKGSRC_TOPDIR}/mk/defaults/mk.conf"
 .endif
 
 .if ${OPSYS} == "NetBSD"
@@ -257,10 +257,10 @@ SHAREMODE?=		${DOCMODE}
 
 # Load the OS-specific definitions for program variables.  Default to loading
 # the NetBSD ones if an OS-specific file doesn't exist.
-.if exists(${PKGSRC_TOPDIR}/mk/defs.${OPSYS}.mk)
-.  include "${PKGSRC_TOPDIR}/mk/defs.${OPSYS}.mk"
-.elif exists(${PKGSRC_TOPDIR}/mk/defs.NetBSD.mk)
-.  include "${PKGSRC_TOPDIR}/mk/defs.NetBSD.mk"
+.if exists(${PKGSRC_TOPDIR}/mk/platform/${OPSYS}.mk)
+.  include "${PKGSRC_TOPDIR}/mk/platform/${OPSYS}.mk"
+.elif exists(${PKGSRC_TOPDIR}/mk/platform/NetBSD.mk)
+.  include "${PKGSRC_TOPDIR}/mk/platform/NetBSD.mk"
 .endif
 
 PKGDIRMODE?=		755
