@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:13 wiz Exp $
+$NetBSD: distinfo,v 1.3 2001/05/21 12:42:38 kim Exp $
 
-SHA1 (delegate6.1.22.tar.gz) = cc9bdf0b0bedba4d6a2216dc41a43a80e5f1ac16
-Size (delegate6.1.22.tar.gz) = 942869 bytes
-SHA1 (patch-aa) = 2fa4166443f33da29ee6efba3d10873a2ac69b75
+SHA1 (delegate7.3.1.tar.gz) = 41182ade35f38e6bf3ff7ad7310fca4efe9859f3
+Size (delegate7.3.1.tar.gz) = 946223 bytes
+SHA1 (patch-aa) = 61db1418c4f8cc40e1ac76a2c8cf5e32c4c206ed
 SHA1 (patch-ab) = b5b5b67856a2a79d2c522be2c3973b0b0e44760e
