@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.118.2.3 2003/07/24 22:00:10 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.118.2.4 2003/07/29 20:34:19 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -284,6 +284,7 @@ PKG_CREATE_CMD?=	${PKG_TOOLS_BIN}/pkg_create
 PKG_DELETE_CMD?=	${PKG_TOOLS_BIN}/pkg_delete
 PKG_INFO_CMD?=		${PKG_TOOLS_BIN}/pkg_info
 PKG_VIEW_CMD?=		${PKG_TOOLS_BIN}/pkg_view
+LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 
 PKG_ADD?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_ADD_CMD}
 PKG_ADMIN?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_ADMIN_CMD}
@@ -291,6 +292,7 @@ PKG_CREATE?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_CREATE_CMD}
 PKG_DELETE?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_DELETE_CMD}
 PKG_INFO?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_INFO_CMD}
 PKG_VIEW?=		${PKG_VIEW_CMD}
+LINKFARM?=		${LINKFARM_CMD}
 
 DEPOT_PKG_DELETE?=	PKG_DBDIR=${DEPOTBASE} ${PKG_DELETE_CMD}
 DEPOT_PKG_INFO?=	PKG_DBDIR=${DEPOTBASE} ${PKG_INFO_CMD}
