@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/11 22:07:17 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/01/29 21:15:07 jmmv Exp $
 share/sgml/iso8879/ISOamsa
 share/sgml/iso8879/ISOamsb
 share/sgml/iso8879/ISOamsc
@@ -19,7 +19,5 @@ share/sgml/iso8879/ISOnum
 share/sgml/iso8879/ISOpub
 share/sgml/iso8879/ISOtech
 share/sgml/iso8879/catalog
-@exec %D/bin/xmlcatmgr -c %D/share/sgml/catalog add CATALOG %D/share/sgml/iso8879/catalog
-@unexec %D/bin/xmlcatmgr -c %D/share/sgml/catalog remove %D/share/sgml/iso8879/catalog
 @dirrm share/sgml/iso8879
 @comment in xmlcatmgr: @dirrm share/sgml

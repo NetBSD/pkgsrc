@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2003/01/11 22:07:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/29 21:15:07 jmmv Exp $
 # FreeBSD Id: Makefile,v 1.9 1999/02/11 16:01:16 jfieber Exp
 #
 
 DISTNAME=	isoENTS
 PKGNAME=	iso8879-1986
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://fallout.campusview.indiana.edu/ports/distfiles/
 EXTRACT_SUFX=	.zip
@@ -21,6 +21,8 @@ WRKSRC=		${WRKDIR}
 
 INSTDIR=	${PREFIX}/share/sgml/iso8879
 
+SGML_CATALOGS=	${INSTDIR}/catalog
+
 pre-install:
 	${INSTALL_DATA_DIR} ${INSTDIR}
 
@@ -29,8 +31,6 @@ do-install:
 	@${INSTALL_DATA} ${FILESDIR}/catalog ${INSTDIR}/catalog
 	@${CHMOD} ${SHAREMODE} ${INSTDIR}/*
 	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTDIR}
-	${PREFIX}/bin/xmlcatmgr -c ${PREFIX}/share/sgml/catalog add \
-		CATALOG ${INSTDIR}/catalog
 
-.include "../../textproc/xmlcatmgr/buildlink2.mk"
+.include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
