@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/02 16:59:44 jdolecek Exp $
-${EMULSUBDIR}/etc/mtab
+@comment $NetBSD: PLIST,v 1.2 2005/04/02 17:10:19 jdolecek Exp $
+@comment this plist intentionally left empty
