@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2004/02/14 17:21:53 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2004/02/25 19:02:39 minskim Exp $
 
 DISTNAME=		WindowMaker-0.80.2
 PKGNAME=		windowmaker-0.80.2
@@ -14,7 +14,7 @@ COMMENT=		GNUStep-compliant NEXTSTEP(tm) window manager clone
 
 BUILD_USES_MSGFMT=	YES
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_X11BASE=		YES
 USE_PKGLOCALEDIR=	YES
@@ -86,12 +86,12 @@ post-install:
 		FAQ FAQ.I18N \
 		${PREFIX}/share/doc/WindowMaker
 
-.include "../../devel/gettext-lib/buildlink2.mk"
-.include "../../graphics/hermes/buildlink2.mk"
-.include "../../graphics/libungif/buildlink2.mk"
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/hermes/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
