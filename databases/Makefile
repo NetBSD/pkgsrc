@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2001/12/10 18:12:28 martti Exp $
+# $NetBSD: Makefile,v 1.72 2001/12/20 17:23:08 agc Exp $
 #
 
 COMMENT=	Databases
@@ -62,6 +62,7 @@ SUBDIR+=	py-ldap
 SUBDIR+=	py-mysqldb
 SUBDIR+=	py-postgresql
 SUBDIR+=	quicklist
+SUBDIR+=	rdb
 SUBDIR+=	rrdtool
 SUBDIR+=	ruby-DBD-postgresql
 SUBDIR+=	ruby-DBI
