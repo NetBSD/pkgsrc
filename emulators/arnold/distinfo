@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/24 10:53:27 dillo Exp $
+
+SHA1 (arnsrc27012002.zip) = de3102b954d79176dce259375dc1824189027f8e
+Size (arnsrc27012002.zip) = 916680 bytes
+SHA1 (patch-aa) = 83ba9c44664d7d6fb938db0d250b4fc24702c09f
+SHA1 (patch-ab) = 3a733e50ee6f12dc2c37c378409e765a8b4d0c8d
