@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/08/25 12:35:40 veego Exp $
+# $NetBSD: Makefile,v 1.2 2000/08/25 15:25:37 jlam Exp $
 
 DISTNAME=		cyrus-imapd-1.6.24
 CATEGORIES=		mail
@@ -8,7 +8,7 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://asg.web.cmu.edu/cyrus/imapd/
 
 DEPENDS+=		tcl-8.0.5:../../lang/tcl80
-DEPENDS+=		cyrus-sasl-1.5.24:../../mail/cyrus-sasl
+DEPENDS+=		cyrus-sasl-1.5.24:../../security/cyrus-sasl
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5*-* \
 			SunOS-*-*
