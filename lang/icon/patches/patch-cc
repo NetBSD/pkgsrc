@@ -2,11 +2,12 @@
 --- src/h/sys.h	Wed Mar  1 15:43:55 1995
 ***************
 *** 181,192 ****
---- 181,195 ----
+--- 181,196 ----
   #include <sys/ioctl.h>
   #include <errno.h>
   #include <sys/signal.h>
-+ #ifdef __FreeBSD__
++ #include <sys/param.h>
++ #if (defined(BSD) && BSD >= 199306)
 + #include <sgtty.h>
 + #endif
   #endif					/* HaveTioc */
@@ -24,7 +25,7 @@
 *** 24,29 ****
 --- 24,33 ----
   
-  #ifdef FreeBSD
+  #ifdef GenericBSD
   
 + /* Look at the DL_GETERRNO constant, if it exists this is FreeBSD 1.1.5
 +    or 2.0. If it doesn't exist this must be post 2.0 with an dlerror */
