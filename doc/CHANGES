@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9717 2005/04/02 11:26:17 jdolecek Exp $
+$NetBSD: CHANGES,v 1.9718 2005/04/02 11:34:55 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1860,3 +1860,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated scribus to 1.2.1 [drochner 2005-04-01]
 	Updated gimp-ufraw to 0.4 [drochner 2005-04-01]
 	Added qca-1.0 [jdolecek 2005-04-02]
+	Updated psi to 0.9.3 [jdolecek 2005-04-02]
