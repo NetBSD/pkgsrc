@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.503 2003/04/27 00:45:18 rh Exp $
+$NetBSD: TODO,v 1.504 2003/04/27 02:08:52 rh Exp $
 
 Suggested new packages
 ======================
@@ -27,13 +27,6 @@ Suggested new packages
 	GTK application which allows posting of journal entries to
 	  http://www.livejournal.com/ .
 	http://loserjabber.sourceforge.net/
-
-	nautilus
-	Full featured file manager for GNOME. FreeBSD has a port
-	  mostly working now.
-	  [rh: I have checked in a mostly-working package into wip,
-                 which might be a good starting point]
-	http://cvs.gnome.org/lxr/source/nautilus/
 
 	resin
 	Fast JSP server. (I will import this when we have a native
