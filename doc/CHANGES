@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8144 2004/11/29 14:31:45 uebayasi Exp $
+$NetBSD: CHANGES,v 1.8145 2004/11/29 14:49:04 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5633,3 +5633,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Archive-Tar to 1.22 [he 2004-11-29]
 	Added jpegpixi-1.0.3 [wiz 2004-11-29]
 	Updated mew to 4.1 [uebayasi 2004-11-29]
+	Updated p5-BerkeleyDB to 0.26 [he 2004-11-29]
