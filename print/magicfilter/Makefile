@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 1999/10/07 17:41:57 tron Exp $
+# $NetBSD: Makefile,v 1.20 2000/01/10 00:57:16 wiz Exp $
 
 DISTNAME=	magicfilter-1.2
 CATEGORIES=	print
@@ -33,8 +33,8 @@ post-install:
 	    ${ECHO} "Installing $$FILTER as $$TARGET"; \
 	    ${SED} 's/-sOutputFile=-/-sOutputFile=- -sPAPERSIZE='$$paper'/' \
 		<$$FILTER >${PREFIX}/${FILTER_DIR}/$$FILTER; \
-	    chown ${BINOWN}:${BINGRP} $$TARGET; \
-	    chmod ${BINMODE} $$TARGET; \
+	    ${CHOWN} ${BINOWN}:${BINGRP} $$TARGET; \
+	    ${CHMOD} ${BINMODE} $$TARGET; \
 	    ${ECHO} ${FILTER_DIR}/$$FILTER >>${PLIST_SRC}; \
 	  done)
 	@${ECHO} "@dirrm ${FILTER_DIR}" >>${PLIST_SRC}

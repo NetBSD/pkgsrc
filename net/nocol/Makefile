@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/12/06 21:09:12 abs Exp $
+# $NetBSD: Makefile,v 1.6 2000/01/10 00:57:16 wiz Exp $
 #
 
 DISTNAME=	nocol-4.2.2beta4
@@ -16,7 +16,7 @@ INSTALL_TARGET=	install root
 post-patch:
 	@(hostname=`/bin/hostname`;					\
 	dir="";								\
-	for d in /usr/bin /usr/sbin `${ECHO} $$PATH | tr ':' ' '`; do	\
+	for d in /usr/bin /usr/sbin `${ECHO} $$PATH | ${TR} ':' ' '`; do \
 		if [ -x $$d/host ]; then				\
 			dir=$$d;					\
 			break;						\

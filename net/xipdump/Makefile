@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/12/24 02:58:31 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/10 00:57:16 wiz Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
@@ -22,7 +22,7 @@ CONFIGURE_ENV+=	CFLAGS="`${LIBNET_CONFIG} --cflags` `${LIBNET_CONFIG} --defines`
 
 post-build:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	@(cd ${WRKSRC}/data; find pkc pkt ! -type d | \
+	@(cd ${WRKSRC}/data; ${FIND} pkc pkt ! -type d | \
 		${SED} -e 's|^|share/xipdump/|' >> ${PLIST_SRC})
 	@${ECHO} "@dirrm share/xipdump/pkt" >> ${PLIST_SRC}
 	@${ECHO} "@dirrm share/xipdump/pkc" >> ${PLIST_SRC}
