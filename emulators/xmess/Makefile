@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.50 2004/04/16 21:27:01 kristerw Exp $
+# $NetBSD: Makefile,v 1.51 2004/05/16 00:28:23 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.81.1
-PKGNAME=		xmess-0.81.1
+DISTNAME=		xmame-0.82.1
+PKGNAME=		xmess-0.82.1
 CATEGORIES=		emulators games x11
-MASTER_SITES=		ftp://ftp.rx3.net/pub/arc/xmame/0.81.1/
+MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		kristerw@NetBSD.org
@@ -86,7 +86,6 @@ MAKE_FLAGS+=		JOY_USB=1
 .endif
 
 .include "../../mk/compiler.mk"
-
 .if !empty(CC_VERSION:Mgcc-2*)
 # Prevent memory explosion for gcc 2.95 and older.
 MAKE_FLAGS+=		LOW_MEM=1
@@ -109,6 +108,7 @@ post-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${TARGET}.${MAME_DISP_METHOD}	\
 		${PREFIX}/bin/${TARGET}
+	${INSTALL_PROGRAM} ${WRKSRC}/imgtool ${PREFIX}/bin/imgtool
 	${INSTALL_MAN} ${WRKSRC}/doc/${TARGET}.6			\
 		${PREFIX}/man/man6/${TARGET}.6
 	${INSTALL_DATA_DIR} ${ROMPATH}
