@@ -1,7 +1,6 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/07/15 22:57:28 heinz Exp $
+$NetBSD: MESSAGE,v 1.3 2004/12/22 18:36:51 schmonz Exp $
 
-See http://www.superscript.com/qtools/examples.html for examples of
-usage.  Note that where /usr/local is used, this package uses ${PREFIX}.
+For examples, see http://www.superscript.com/qtools/examples.html.
 
 ===========================================================================
