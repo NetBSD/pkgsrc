@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/02 12:09:16 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2004/05/04 23:36:16 minskim Exp $
 
---- configure.orig	2003-12-13 08:32:17.000000000 +0100
-+++ configure	2003-12-13 08:33:16.000000000 +0100
-@@ -19717,13 +19717,13 @@
+--- configure.orig	2004-04-07 05:19:43.000000000 -0500
++++ configure
+@@ -20463,13 +20463,13 @@ echo $ECHO_N "checking for libgtop sysde
  	  libgtop_sysdeps_dir=freebsd
  	  libgtop_use_machine_h=yes
  	  libgtop_need_server=yes
@@ -18,3 +18,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/04/02 12:09:16 jmmv Exp $
  	  ;;
          aix*)
  	  libgtop_sysdeps_dir=aix
+@@ -30110,7 +30110,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 
+ _ACEOF
+ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
+-  $EGREP "f_type;" >/dev/null 2>&1; then
++  $EGREP "f_type;|struct statvfs" >/dev/null 2>&1; then
+   ok=yes
+ fi
+ rm -f conftest*
