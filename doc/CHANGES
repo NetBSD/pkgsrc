@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7844 2004/11/13 08:58:59 taya Exp $
+$NetBSD: CHANGES,v 1.7845 2004/11/13 13:44:04 seb Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5263,3 +5263,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gaim to 1.0.3nb1 [jmmv 2004-11-13]
 	Updated firefox to 1.0nb1 [taya 2004-11-13]
 	Updated firefox-gtk2 to 1.0nb1 [taya 2004-11-13]
+	Updated p5-Archive-Tar to 1.21 [seb 2004-11-13]
