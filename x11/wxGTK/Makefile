@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2004/02/15 21:38:45 recht Exp $
+# $NetBSD: Makefile,v 1.30 2004/03/03 22:25:58 minskim Exp $
 #
 
 DISTNAME=		wxGTK-2.4.2
@@ -42,6 +42,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENCE.txt ${DOCDIR}/LICENSE
 
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
