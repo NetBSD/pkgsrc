@@ -1,0 +1,60 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2002/07/11 16:09:36 agc Exp $
+${MACHINE_GNU_PLATFORM}/bin/ar
+${MACHINE_GNU_PLATFORM}/bin/as
+${MACHINE_GNU_PLATFORM}/bin/ld
+${MACHINE_GNU_PLATFORM}/bin/nm
+${MACHINE_GNU_PLATFORM}/bin/ranlib
+${MACHINE_GNU_PLATFORM}/bin/strip
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf32_${MACHINE_GNU_ARCH}.x
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf32_${MACHINE_GNU_ARCH}.xbn
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf32_${MACHINE_GNU_ARCH}.xn
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf32_${MACHINE_GNU_ARCH}.xr
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf32_${MACHINE_GNU_ARCH}.xs
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf32_${MACHINE_GNU_ARCH}.xu
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf64_${MACHINE_GNU_ARCH}.x
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf64_${MACHINE_GNU_ARCH}.xbn
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf64_${MACHINE_GNU_ARCH}.xn
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf64_${MACHINE_GNU_ARCH}.xr
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf64_${MACHINE_GNU_ARCH}.xs
+${MACHINE_GNU_PLATFORM}/lib/ldscripts/elf64_${MACHINE_GNU_ARCH}.xu
+bin/addr2line
+bin/ar
+bin/as
+bin/c++filt
+bin/gasp
+bin/gprof
+bin/ld
+bin/nm
+bin/objcopy
+bin/objdump
+bin/ranlib
+bin/readelf
+bin/size
+bin/strings
+bin/strip
+include/ansidecl.h
+include/bfd.h
+include/bfdlink.h
+lib/libbfd.a
+lib/libbfd.la
+lib/libiberty.a
+lib/libopcodes.a
+lib/libopcodes.la
+man/man1/addr2line.1
+man/man1/ar.1
+man/man1/as.1
+man/man1/c++filt.1
+man/man1/gprof.1
+man/man1/ld.1
+man/man1/nlmconv.1
+man/man1/nm.1
+man/man1/objcopy.1
+man/man1/objdump.1
+man/man1/ranlib.1
+man/man1/size.1
+man/man1/strings.1
+man/man1/strip.1
+@dirrm ${MACHINE_GNU_PLATFORM}/lib/ldscripts
+@dirrm ${MACHINE_GNU_PLATFORM}/lib
+@dirrm ${MACHINE_GNU_PLATFORM}/bin
+@dirrm ${MACHINE_GNU_PLATFORM}
