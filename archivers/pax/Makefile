@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/12/05 16:38:38 erh Exp $
+# $NetBSD: Makefile,v 1.10 2003/12/20 04:47:38 grant Exp $
 #
 
-DISTNAME=		pax-20031205
+DISTNAME=		pax-20031220
 CATEGORIES=		archivers pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
