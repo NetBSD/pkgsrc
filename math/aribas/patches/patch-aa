@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/25 19:56:25 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/01/28 05:44:52 jtb Exp $
 
---- Makefile.orig	Sun May  2 21:42:31 1999
+--- Makefile.orig	Fri Jan 26 09:05:22 2001
 +++ Makefile
-@@ -4,15 +4,15 @@
- # date: 99-04-30
+@@ -4,8 +4,8 @@
+ # date: 2001-01-25
  #############################################################
  
 -CC = cc
@@ -13,11 +13,30 @@ $NetBSD: patch-aa,v 1.1.1.1 2000/11/25 19:56:25 jtb Exp $
  # for some compilers it might be necessary to remove the -O flag
  # If you have the GNU gcc compiler on your system, you may wish
  # to use gcc. Then outcomment the first two lines and activate 
- # the next two lines.
- 
+@@ -14,7 +14,7 @@
  #CC = gcc
--#CFLAGS = -DUNiX -DPROTO -O -v
-+CFLAGS = -DUNiX -DPROTO -O
+ #CFLAGS = -DUNiX -DPROTO -O -v
  
- #MEMFLAG = -DMEM=4
+-MEMFLAG = -DMEM=6
++#MEMFLAG = -DMEM=6
  # MEM may be set to any integer value from 1 to 16.
+ # This is the size of the ARIBAS heap in Megabytes
+ # The value should not exceed one half of the RAM of your machine
+@@ -34,14 +34,14 @@
+ terminal.o:	logscr.inc
+ 
+ .c.o:
+-	$(CC) $(CFLAGS) -c $<
++	$(CC) $(CPPFLAGS) $(CFLAGS) -c $<
+ 
+ alloc.o:    alloc.c common.h
+-	$(CC) $(CFLAGS) $(MEMFLAG) -c alloc.c
++	$(CC) $(CPPFLAGS) $(CFLAGS) $(MEMFLAG) -c alloc.c
+ 
+ $(PROGRAM): $(OBJECTS)
+ 	$(CC) -o $(PROGRAM) $(OBJECTS)
+-	strip $(PROGRAM)
++
+ clean:
+ 	\rm *.o
+ 
