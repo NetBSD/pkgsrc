@@ -1,0 +1,58 @@
+$NetBSD: patch-aa,v 1.1.1.1 2005/01/23 05:07:44 hamajima Exp $
+
+--- Makefile.orig	2004-06-21 14:18:18.000000000 +0900
++++ Makefile	2005-01-23 12:25:32.000000000 +0900
+@@ -34,7 +34,7 @@
+ MAN=		dtcpclient.8
+ 
+ BINDIR=		$(PREFIX)/sbin
+-SCRIPTSDIR=	$(PREFIX)/etc
++SCRIPTSDIR=	$(PREFIX)/sbin
+ EXAMPLESDIR=	$(PREFIX)/share/examples/dtcpclient
+ 
+ .if ($(OPSYS) == "NetBSD")
+@@ -61,9 +61,10 @@
+ 		dtcpclient $(BINDIR)/dtcpclient
+ 	$(INSTALL) -d $(EXAMPLESDIR)
+ 	$(INSTALL) $(COPY) -o $(BINOWN) -g $(BINGRP) -m 555 \
+-		dtcpclient.script $(EXAMPLESDIR)/dtcpclient.script
+-	if [ ! -f $(SCRIPTSDIR)/dtcpclient.script ]; then \
+-		cp -p $(EXAMPLESDIR)/dtcpclient.script $(SCRIPTSDIR)/; \
++		dtcpclient.script $(EXAMPLESDIR)/dtcpclient-script
++	if [ ! -f $(SCRIPTSDIR)/dtcpclient-script ]; then \
++		cp -p $(EXAMPLESDIR)/dtcpclient-script \
++		    $(SCRIPTSDIR)/dtcpclient-script; \
+ 	fi
+ 
+ dist:
+--- dtcpclient.c.orig	2005-01-23 12:17:28.000000000 +0900
++++ dtcpclient.c	2005-01-23 12:17:56.000000000 +0900
+@@ -73,7 +73,7 @@
+ 
+ #define PIDFILE		_PATH_VARRUN "/dtcpclient.pid"
+ #define PASSWDFILE	PREFIX "/etc/dtcpclient.auth"
+-#define SCRIPTFLIE	PREFIX "/etc/dtcpclient.script"
++#define SCRIPTFLIE	PREFIX "/sbin/dtcpclient-script"
+ 
+ typedef enum {
+ 	FALSE = 0,
+--- dtcpclient.8.orig	2004-06-24 00:18:18.000000000 +0900
++++ dtcpclient.8	2005-01-23 12:31:48.000000000 +0900
+@@ -97,7 +97,7 @@
+ .It Fl s Ar script
+ Specify the command to invoke on DTCP session is established or
+ closed.  The default is
+-.Pa /usr/local/etc/dtcpclient.script .
++.Pa /usr/local/sbin/dtcpclient-script .
+ .It Fl t Ar tuntype
+ The spec defines several kind of tunnel requests.
+ .Nm
+@@ -180,7 +180,7 @@
+ .Nm
+ does not ask for your password.  The format is a colon-separated list of
+ the server name, the user name and the password.
+-.It Pa /usr/local/etc/dtcpclient.script
++.It Pa /usr/local/sbin/dtcpclient-script
+ Default script invoked for setup or cleanup tunnel when DTCP session
+ is established or closed.
+ .It Pa /var/run/dtcpclient.pid
