@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2003/02/15 05:56:58 salo Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/06/29 02:04:20 jlam Exp $
 bin/centericq
 bin/cicqconv
 bin/cicqsync
 man/man1/centericq.1
+man/man1/cicqconv.1
+man/man1/cicqsync.1
 share/centericq/contrib/spanish/COPYING
 share/centericq/contrib/spanish/ChangeLog
 share/centericq/contrib/spanish/FAQ
