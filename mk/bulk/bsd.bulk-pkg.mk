@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.67 2005/01/11 18:44:10 tv Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.68 2005/01/12 22:51:54 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -207,8 +207,8 @@ bulk-check-uptodate:
 	fi ; \
 	if [ "$$uptodate" = "1" ]; then \
 		${SHCOMMENT} "Check required binary packages" ; \
-		deps=${DEPENDS:C/:.*//:Q} ; \
-		for dep in $$deps ; do \
+		(${DEPENDS:C/:.*$//:@d@${ECHO} ${d:Q};@} ${TRUE}) | \
+		while read dep; do \
 			${SHCOMMENT} "check against the binary pkg that pkg_add would pick, too:" ; \
 			${SHCOMMENT} "(Only one should be returned here, really...)" ; \
 			pkg=`${PKG_ADMIN} lsbest "${PACKAGES}/All/$$dep"` ; \
