@@ -1,12 +1,12 @@
-$NetBSD: patch-ak,v 1.1.1.1 2004/11/09 13:05:35 xtraeme Exp $
+$NetBSD: patch-ak,v 1.2 2004/11/15 11:35:30 xtraeme Exp $
 
---- Makefile.orig	2004-11-09 13:24:28.000000000 +0100
-+++ Makefile	2004-11-09 13:25:58.000000000 +0100
+--- Makefile.orig	2004-11-15 11:54:34.000000000 +0100
++++ Makefile	2004-11-15 11:56:25.000000000 +0100
 @@ -1,13 +1,13 @@
- include config-host.mak
+ -include config-host.mak
  
--CFLAGS=-Wall -O2 -g
-+#CFLAGS=-Wall -O2 -g
+-CFLAGS=-Wall -O2 -g -fno-strict-aliasing 
++#CFLAGS=-Wall -O2 -g -fno-strict-aliasing 
  ifdef CONFIG_DARWIN
  CFLAGS+= -mdynamic-no-pic
  endif
@@ -16,9 +16,9 @@ $NetBSD: patch-ak,v 1.1.1.1 2004/11/09 13:05:35 xtraeme Exp $
 -LDFLAGS=-g
 +#LDFLAGS=-g
  LIBS=
- DEFINES+=-D_GNU_SOURCE
- ifndef CONFIG_WIN32
-@@ -47,17 +47,17 @@
+ DEFINES+=-D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
+ TOOLS=qemu-img
+@@ -43,18 +43,18 @@
          done
  
  install: all 
@@ -33,6 +33,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2004/11/09 13:05:35 xtraeme Exp $
 +	$(BSD_INSTALL_DATA) pc-bios/bios.bin pc-bios/vgabios.bin \
                         pc-bios/vgabios-cirrus.bin \
                         pc-bios/ppc_rom.bin \
+                        pc-bios/proll.bin \
 -                       pc-bios/linux_boot.bin "$(datadir)"
 -	mkdir -p "$(docdir)"
 -	install -m 644 qemu-doc.html  qemu-tech.html "$(docdir)"
