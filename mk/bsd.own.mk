@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.own.mk,v 1.12 1999/03/08 17:26:54 agc Exp $
+#	$NetBSD: bsd.own.mk,v 1.13 1999/03/08 20:38:15 agc Exp $
 # From:  NetBSD: bsd.own.mk,v 1.113 1999/02/07 17:21:09 hubertf Exp 
 
 .if !defined(_PKGSRC_BSD_OWN_MK_)
@@ -12,6 +12,9 @@ _PKGSRC_BSD_OWN_MK_=1
 
 # set the default local base.
 LOCALBASE?=	/usr/pkg
+
+# set the default operating system
+OS?=		NetBSD
 
 .if ${OS} == "SunOS.5"
 BSDDIR=${LOCALBASE}/bsd
