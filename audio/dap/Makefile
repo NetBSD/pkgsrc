@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/07/24 13:51:33 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2002/09/21 00:31:17 jlam Exp $
 
 DISTNAME=		dap-2.1.2
 PKGREVISION=		1
@@ -15,7 +15,7 @@ MAKEFILE=		Makefile.netbsd
 MAKE_ENV+=		X11PREFIX=${X11PREFIX}
 
 USE_X11BASE=		yes
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/main/DAP ${PREFIX}/bin/dap
@@ -23,8 +23,8 @@ do-install:
 	@${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/TODO ${WRKSRC}/COPYING \
 		${WRKSRC}/FEATURES ${PREFIX}/share/doc/dap
 
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/xpm/buildlink.mk"
-.include "../../x11/xforms/buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/xforms/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"

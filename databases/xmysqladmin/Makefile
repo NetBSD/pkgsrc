@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/05/11 23:26:55 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2002/09/21 00:35:10 jlam Exp $
 #
 
 DISTNAME=	xmysqladmin-1.0
@@ -14,15 +14,17 @@ MAINTAINER=	bad@netbsd.org
 HOMEPAGE=	http://www.mysql.com/
 COMMENT=	Graphical front end for administering MySQL databases
 
-DEPENDS=	mysql-client>=3.23.35:../../databases/mysql-client
-DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	xforms>=0.9999:../../x11/xforms
+BUILDLINK_DEPENDS.mysql-client=	mysql-client>=3.23.35
 
+USE_BUILDLINK2=	YES
+USE_X11=	YES
 MAKE_ENV+=	X11PREFIX=${X11PREFIX}
 
-USE_X11=	YES
-USE_XPM=	YES
-
 ALL_TARGET=	xmysqladmin
+
+.include "../../databases/mysql-client/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/xforms/buildlink2.mk"
 
 .include "../../mk/bsd.pkg.mk"
