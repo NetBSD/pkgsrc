@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2000/10/22 16:55:21 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2000/12/03 04:33:11 wiz Exp $
 bin/sdl-config
 include/SDL/SDL.h
 include/SDL/SDL_active.h
@@ -25,9 +25,9 @@ include/SDL/SDL_version.h
 include/SDL/SDL_video.h
 include/SDL/begin_code.h
 include/SDL/close_code.h
-lib/libSDL.so.5.0
 lib/libSDL.a
 lib/libSDL.la
+lib/libSDL.so.5.1
 lib/libSDLmain.a
 man/man3/SDLKey.3
 man/man3/SDL_ActiveEvent.3
@@ -70,6 +70,7 @@ man/man3/SDL_DestroyCond.3
 man/man3/SDL_DestroyMutex.3
 man/man3/SDL_DestroySemaphore.3
 man/man3/SDL_DisplayFormat.3
+man/man3/SDL_DisplayFormatAlpha.3
 man/man3/SDL_DisplayYUVOverlay.3
 man/man3/SDL_EnableKeyRepeat.3
 man/man3/SDL_EnableUNICODE.3
@@ -90,12 +91,16 @@ man/man3/SDL_GLattr.3
 man/man3/SDL_GetAppState.3
 man/man3/SDL_GetAudioStatus.3
 man/man3/SDL_GetCursor.3
+man/man3/SDL_GetGamma.3
+man/man3/SDL_GetGammaRamp.3
 man/man3/SDL_GetKeyName.3
 man/man3/SDL_GetKeyState.3
 man/man3/SDL_GetModState.3
 man/man3/SDL_GetMouseState.3
 man/man3/SDL_GetRGB.3
+man/man3/SDL_GetRGBA.3
 man/man3/SDL_GetRelativeMouseState.3
+man/man3/SDL_GetThreadID.3
 man/man3/SDL_GetTicks.3
 man/man3/SDL_GetVideoInfo.3
 man/man3/SDL_GetVideoSurface.3
@@ -129,6 +134,7 @@ man/man3/SDL_LockAudio.3
 man/man3/SDL_LockSurface.3
 man/man3/SDL_LockYUVOverlay.3
 man/man3/SDL_MapRGB.3
+man/man3/SDL_MapRGBA.3
 man/man3/SDL_MixAudio.3
 man/man3/SDL_MouseButtonEvent.3
 man/man3/SDL_MouseMotionEvent.3
@@ -155,12 +161,15 @@ man/man3/SDL_SemValue.3
 man/man3/SDL_SemWait.3
 man/man3/SDL_SemWaitTimeout.3
 man/man3/SDL_SetAlpha.3
-man/man3/SDL_SetClipping.3
+man/man3/SDL_SetClipRect.3
 man/man3/SDL_SetColorKey.3
 man/man3/SDL_SetColors.3
 man/man3/SDL_SetCursor.3
 man/man3/SDL_SetEventFilter.3
+man/man3/SDL_SetGamma.3
+man/man3/SDL_SetGammaRamp.3
 man/man3/SDL_SetModState.3
+man/man3/SDL_SetPalette.3
 man/man3/SDL_SetTimer.3
 man/man3/SDL_SetVideoMode.3
 man/man3/SDL_ShowCursor.3
@@ -184,6 +193,7 @@ man/man3/SDL_WM_ToggleFullScreen.3
 man/man3/SDL_WaitEvent.3
 man/man3/SDL_WaitThread.3
 man/man3/SDL_WarpMouse.3
+man/man3/SDL_WasInit.3
 man/man3/SDL_keysym.3
 man/man3/SDL_mutexP.3
 man/man3/SDL_mutexV.3
