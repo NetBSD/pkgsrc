@@ -1,27 +1,17 @@
-$NetBSD: patch-ab,v 1.6 2004/04/27 11:56:26 adam Exp $
+$NetBSD: patch-ab,v 1.7 2004/07/28 10:44:56 recht Exp $
 
---- configure.orig	2004-04-19 11:09:08.000000000 +0000
-+++ configure
-@@ -6132,6 +6132,9 @@ case "$GXX_VERSION" in
-      ;;
- esac
- 
-+CONFIG_LSHARED="${CONFIG_LSHARED} ${PKG_LDFLAGS}"
-+CONFIG_BSHARED="${CONFIG_BSHARED} ${PKG_LDFLAGS}"
-+
- #--------------------------------------------------------------------
- # Enable debug and optimizations
- #--------------------------------------------------------------------
-@@ -6195,10 +6198,10 @@ case "$enable_optimize" in
+--- configure.orig	2004-07-28 12:21:22.000000000 +0200
++++ configure	2004-07-28 12:25:37.000000000 +0200
+@@ -3544,10 +3544,10 @@
+ case "$enable_optimize" in
      yes)
  	# keep optimization options
-   	echo "$as_me:$LINENO: result: enabling optimizations, $CONFIG_CXXOPTIMIZE" >&5
--echo "${ECHO_T}enabling optimizations, $CONFIG_CXXOPTIMIZE" >&6 ;;
-+echo "${ECHO_T}enabling optimizations, $CONFIG_CXXOPTIMIZE ${PKG_CXXFLAGS}" >&6 ;;
+-  	echo "$ac_t""enabling optimizations, $CONFIG_CXXOPTIMIZE" 1>&6 ;;
++  	echo "$ac_t""enabling optimizations, $CONFIG_CXXOPTIMIZE ${PKG_CXXFLAGS}" 1>&6 ;;
      no-inline)
  	optimize_no_inline="-fno-default-inline -fno-inline"
 -	CONFIG_CXXOPTIMIZE="$CONFIG_CXXOPTIMIZE $optimize_no_inline"
 +	CONFIG_CXXOPTIMIZE="$CONFIG_CXXOPTIMIZE ${PKG_CXXFLAGS} $optimize_no_inline"
-   	echo "$as_me:$LINENO: result: enabling optimizations, $CONFIG_CXXOPTIMIZE" >&5
- echo "${ECHO_T}enabling optimizations, $CONFIG_CXXOPTIMIZE" >&6 ;;
+   	echo "$ac_t""enabling optimizations, $CONFIG_CXXOPTIMIZE" 1>&6 ;;
      no)
+ 	CONFIG_CXXOPTIMIZE=""
