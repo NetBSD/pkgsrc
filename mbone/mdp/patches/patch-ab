@@ -1,7 +1,5 @@
-$NetBSD: patch-ab,v 1.1 2002/08/13 08:33:10 agc Exp $
-
---- Makefile.netbsd	2002/08/13 08:19:37	1.1
-+++ Makefile.netbsd	2002/08/13 08:21:02
+--- Makefile.netbsd.orig	2002-01-08 06:18:57.000000000 +1100
++++ Makefile.netbsd	2003-10-10 13:25:32.000000000 +1000
 @@ -10,26 +10,26 @@
  
  # 1) Where to find the Tcl standard library scripts
@@ -36,12 +34,14 @@ $NetBSD: patch-ab,v 1.1 2002/08/13 08:33:10 agc Exp $
  SYSTEM_LIBS =  
  
  # 6) System specific capabilities
-@@ -62,7 +62,7 @@
+@@ -62,8 +62,8 @@ SYSTEM_LIBS =  
  # (We export these for other Makefiles as needed)
  #
  
 -export SYSTEM_HAVES =  -DHAVE_GETLOGIN -DHAVE_ASSERT -DHAVE_FLOCK -DHAVE_DIRFD $(DNETSEC) 
 +export SYSTEM_HAVES =  -DHAVE_GETLOGIN -DHAVE_ASSERT -DHAVE_FLOCK -DHAVE_DIRFD $(DNETSEC) -D__socklen_t_defined=1
  
- export CC = gcc
+-export CC = gcc
++export CC = g++
  
+ include Makefile.common
