@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.617 2003/06/04 16:50:58 wiz Exp $
+$NetBSD: TODO,v 1.618 2003/06/05 06:55:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -108,7 +108,6 @@ Suggested package updates
 	o doxygen-1.3.1
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
-	o easytag-0.28
 	o elm-me-2.4pl102
 	o ettercap-0.6.a
 	o exim-4.12 [pkg/19850]
@@ -151,7 +150,7 @@ Suggested package updates
 	o gtkglext-1.0.0
 	o gtkmm-2.2.2
 	o guile-1.6.4
-	o host-20030527
+	o host-20030604
 	o hpijs-1.4
 	o icepref-2.2
 	o inform-6.21.3 [pkg/19298]

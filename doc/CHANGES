@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2429 2003/06/05 06:31:11 wiz Exp $
+$NetBSD: CHANGES,v 1.2430 2003/06/05 06:55:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2331,3 +2331,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated lilypond to 1.4.13nb1 [uebayasi 2003-06-05]
 	Updated galway to 0.33nb3 [uebayasi 2003-06-05]
 	Updated naim to 0.11.5.8 [wiz 2003-06-05]
+	Updated easytag to 0.28 [wiz 2003-06-05]
