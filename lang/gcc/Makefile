@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/09/22 01:51:56 fredb Exp $
+# $NetBSD: Makefile,v 1.7 2000/09/22 21:15:36 tron Exp $
 
 DISTNAME=		gcc-2.95.2
 CATEGORIES=		lang
@@ -9,8 +9,8 @@ HOMEPAGE=		http://www.gnu.org/software/gcc/gcc.html
 
 BUILD_DEPENDS+=		${LOCALBASE}/bin/bison:../../devel/bison
 
-# NetBSD-arm32 and NetBSD-i386 are the only tested platform so far.
-# If you got it working on other platforms please add them.
+# NetBSD-arm32, NetBSD-i386 and NetBSD-m68k are the only tested platforms
+# so far. If you got it working on other platforms please add them.
 ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k
 
 .include "../../mk/bsd.prefs.mk"
