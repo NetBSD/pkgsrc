@@ -1,17 +1,19 @@
-$NetBSD: patch-ac,v 1.5 2002/10/02 03:08:51 rh Exp $
+$NetBSD: patch-ac,v 1.6 2002/10/27 08:31:54 rh Exp $
 
---- pan/pan.c.orig	Fri Nov  9 10:53:07 2001
+--- pan/pan.c.orig	Mon Jul 15 04:04:34 2002
 +++ pan/pan.c
-@@ -42,6 +42,24 @@
+@@ -43,6 +43,27 @@
  #include <pan/thread-watch.h>
  #include <pan/util.h>
  
 +#ifdef __NetBSD__
-+#include <gtk/gtk.h>
 +#include <pthread.h>
 +
++#ifdef _PTH_PTHREAD_H_
++#include <gtk/gtk.h>
++
 +/*
-+ * NetBSD uses non-preemptive pth, so we yield the processor periodically
++ * Pth is non-preemptive, so we yield the processor periodically
 + */
 +
 +gint
@@ -22,17 +24,18 @@ $NetBSD: patch-ac,v 1.5 2002/10/02 03:08:51 rh Exp $
 +	return TRUE;
 +}
 +#endif
++#endif
 +
 +
  static gint save_session (GnomeClient        * client,
  			  gint                 phase,
  			  GnomeSaveStyle       save_style,
-@@ -196,6 +214,10 @@
+@@ -197,6 +218,10 @@ main (int argc, char *argv[])
  				newsrc_import (s, newsrc_filename, newsrc_port_subscribed_only);
  		}
  	}
 +
-+#ifdef __NetBSD__
++#ifdef _PTH_PTHREAD_H_
 +	gtk_timeout_add (200, pth_nbschedule, NULL);
 +#endif
  
