@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/09/27 23:18:27 jschauma Exp $
+
+SHA1 (profit.tar.gz) = ddf74ebea7e855f5f3319fe0ca64d8a1672a7562
+Size (profit.tar.gz) = 242960 bytes
+SHA1 (patch-aa) = 3c2f745109183b38ac56799e3576997f931c93b3
