@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2004/07/01 08:28:11 cjep Exp $
+# $NetBSD: Makefile,v 1.47 2004/07/01 09:54:55 cjep Exp $
 #
 
 DISTNAME=		balsa-1.4.3
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		mail gnome
 MASTER_SITES=		http://www.theochem.kth.se/~pawsa/balsa/ \
 			ftp://ftp.newton.cx/pub/balsa/
