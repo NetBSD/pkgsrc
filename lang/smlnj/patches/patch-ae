@@ -1,0 +1,187 @@
+$NetBSD: patch-ae,v 1.1.1.1 2003/03/21 22:20:56 wiz Exp $
+
+--- src/runtime/mach-dep/SPARC.prim.asm.orig	Fri Jun 15 15:05:19 2001
++++ src/runtime/mach-dep/SPARC.prim.asm
+@@ -307,7 +307,7 @@ pending_sigs:	/* there are pending signa
+ 	mov	ALLOCPTR,LIMITPTR	    /* (delay slot) */
+ 
+ 
+-#if defined(OPSYS_SUNOS) || defined(OPSYS_NEXTSTEP)
++#if defined(OPSYS_SUNOS) || defined(OPSYS_NEXTSTEP) || defined(OPSYS_NETBSD)
+ /* ZeroLimitPtr:
+  *
+  * Zero the heap limit pointer so that a trap will be generated on the next limit
+@@ -622,13 +622,62 @@ _ml_mul:
+ 	mov	%g1,%l1			  /* save %g1 which may get trashed */
+ 	mov	%g2,%l2
+ 	mov	%g3,%l3
++#ifdef OPSYS_NETBSD
++			/* NetBSDs .mul trashes these */
++	mov     %i4,%l4
++	mov     %i5,%l5
++	mov	%i0,%l6
++	mov	%i1,%l7
++#endif
+ 	mov	%i2,%o0
+ 	call	.mul
+ 	mov	%i3,%o1			  /* (delay slot) */
+ 	mov	%l1,%g1			  /* restore %g1 */
+ 	mov	%l2,%g2
+ 	mov	%l3,%g3
++#ifdef OPSYS_NETBSD
++	mov     %l4,%i4
++	mov	%l5,%i5
++	mov	%l6,%i0
++	mov	%l7,%i1
++			/* the code below is a hack:
++			 * NetBSDs .mul does a 32x32->64 bit signed multiply
++			 * The SML code assumes that the multiply
++			 * overflowed (over 32bit) if the Z flag is
++			 * clear on return from .mul 
++			 * NetBSDs .mul doesn't do that, so we have to check
++			 * for overflow. This is done in the following way:
++			 * - If the upper 32 bits are clear:
++	 		 *    + if bit 31 is set => overflow
++		         *    + if bit 31 is clear => OK
++			 * - If the upper 32 bits are != -1 => overflow
++			 * - If the upper 32 bits are == -1:
++			 *    + If bit 31 is clear => overflow
++			 *    + If bit 31 is set   => OK
++			 *
++		   	 * I should be shot for this code ...
++			 */
++	cmp %o1,0
++	bnz 4f
++	nop
++	/* is bit 31 of %o0 set ? */
++	addcc %o0,%o0,%o1
++	bcc 2f
++	nop
++5:      restore %o0,0,%o2                 /* result in %o2 (delay slot) */
++        t       ST_INT_OVERFLOW         /* generate overflow trap */
++
++	
++4:	cmp %o1,-1			/* upper 32 bits == -1 ? */
++	bnz 5
++	nop
++	addcc %o0,%o0,%o1		/* bit 31 clear ? */
++	bcc 2f
++	nop
++#else
+ 	bnz	1f			  /* if z is clear, then overflow */
++#endif
++2:
+ 	restore %o0,0,%o2		  /* result in %o2 (delay slot) */
+ 	retl
+ 	nop
+@@ -642,7 +691,15 @@ _ml_mul:
+  * locals of the new window, since .div is a leaf routine.
+  */
+ _ml_div:
+-	save	%sp,-SA(WINDOWSIZE),%sp
++#ifdef OPSYS_NETBSD
++		/* hack time again: NetBSDs .div trashes too many registers
++		 * we have to store them in the stack frame, so make room
++		 * for six registers (o0-o5) 
++		 */
++	save	%sp,-SA(WINDOWSIZE+24),%sp
++#else
++        save    %sp,-SA(WINDOWSIZE+24),%sp
++#endif
+ 	addcc	%i3,%g0,%o1		/* %o1 is divisor (and check for zero) */
+ 	bz	1f
+ 				    /* save %g1, %g2 and %g3 (using new window) */
+@@ -650,9 +707,30 @@ _ml_div:
+ 	mov	%g1,%l1			/* (delay slot) */
+ 	mov	%g2,%l2
+ 	mov	%g3,%l3
++#ifdef OPSYS_NETBSD
++	/* save g6,g7,o0-o5, they get trashed. 
++	   Note that %o0-%o5 are now %i0-%i5, since we did a 'save'
++	   Since %g6 is the global AllocPtr for SML, this 
++	   is rather bad :-)
++	 */  
++	mov %g6,%l4
++	mov %g7,%l5
++	std	%i0,[%fp-16]
++	std	%i2,[%fp-24]
++	std	%i4,[%fp-32]
++#endif
++
+ 	call	.div
+ 	mov	%i2,%o0			/* (delay slot) */
+ 				    /* restore %g1, %g2 and %g3 */
++#ifdef OPSYS_NETBSD
++	mov %l4,%g6
++	mov %l5,%g7
++	ldd	[%fp-32],%i4
++	ldd	[%fp-24],%i2
++	ldd	[%fp-16],%i0
++#endif
++
+ 	mov	%l3,%g3
+ 	mov	%l2,%g2
+ 	mov	%l1,%g1
+@@ -679,11 +757,24 @@ _ml_umul:
+ 	mov	%g2,%l2
+ 	mov	%g3,%l3
+ 	mov	%i2,%o0
++#ifdef OPSYS_NETBSD
++		/* Save what might be trashed by NetBSDs .umul */
++	mov	%i4,%l4
++	mov	%i5,%l5
++	mov	%i0,%l6
++	mov 	%i1,%l7
++#endif
+ 	call	.umul
+ 	mov	%i3,%o1			  /* (delay slot) */
+ 	mov	%l1,%g1			  /* restore %g1 */
+ 	mov	%l2,%g2
+ 	mov	%l3,%g3
++#ifdef OPSYS_NETBSD
++	mov	%l4,%i4
++	mov	%l5,%i5
++	mov	%l6,%i0
++	mov	%l7,%i1
++#endif
+ 	ret
+ 	restore %o0,0,%o2		  /* result in %o2 (delay slot) */
+ 
+@@ -694,7 +785,12 @@ _ml_umul:
+  * locals of the new window, since .div is a leaf routine.
+  */
+ _ml_udiv:
+-	save	%sp,-SA(WINDOWSIZE),%sp
++#ifdef OPSYS_NETBSD
++		/* see comment for _ml__div_ */
++	save	%sp,-SA(WINDOWSIZE+24),%sp
++#else
++        save    %sp,-SA(WINDOWSIZE+24),%sp 
++#endif
+ 	addcc	%i3,%g0,%o1		/* %o1 is divisor (and check for zero) */
+ 	bz	1f
+ 				    /* save %g1, %g2 and %g3 (using new window) */
+@@ -702,9 +798,23 @@ _ml_udiv:
+ 	mov	%g1,%l1			/* (delay slot) */
+ 	mov	%g2,%l2
+ 	mov	%g3,%l3
++#ifdef OPSYS_NETBSD
++	mov	%g6,%l4
++	mov 	%g7,%l5
++        std     %i0,[%fp-16]
++        std     %i2,[%fp-24]
++        std     %i4,[%fp-32]
++#endif
+ 	call	.udiv
+ 	mov	%i2,%o0			/* (delay slot) */
+ 				    /* restore %g1, %g2 and %g3 */
++#ifdef OPSYS_NETBSD
++	mov 	%l4,%g6
++	mov 	%l5,%g7
++        ldd     [%fp-32],%i4
++        ldd     [%fp-24],%i2
++        ldd     [%fp-16],%i0
++#endif
+ 	mov	%l3,%g3
+ 	mov	%l2,%g2
+ 	mov	%l1,%g1
