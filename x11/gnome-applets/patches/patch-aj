@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 2000/07/30 09:33:52 jlam Exp $
+
+--- applet-docs.make.orig	Thu Apr 20 04:08:39 2000
++++ applet-docs.make	Sun Jul 30 04:51:07 2000
+@@ -10,6 +10,7 @@
+ # include $(top_srcdir)/applet-docs.make
+ 
+ docdir = $(datadir)/gnome/help/$(applet)_applet/$(lang)
++helpdir = $(docdir)
+ doc_DATA =	\
+ 	index.html	\
+ 	topic.dat	\
