@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2002/12/24 18:55:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/08 03:15:49 jmc Exp $
 #
 
 DISTNAME=		twin-src-3.1.14
 PKGNAME=		twin-3.1.14
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.willows.com/pub/twin/
 
@@ -16,12 +17,20 @@ USE_X11=		yes
 WRKSRC=			${WRKDIR}/twin
 ALL_TARGET=		depend world
 AUTOCONF_REQD=		2.13
+CONFIGURE_ARGS=		--enable-debugger
+PLIST_SRC=		${WRKDIR}/PLIST
 
 pre-configure:
 	cd ${WRKSRC} && ${AUTORECONF} --force
 
 pre-build:
 	${CP} ${WRKSRC}/windows/Execfreebsd.c ${WRKSRC}/windows/Execnetbsd.c
+
+pre-install:
+	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+.if exists(${PKGDIR}/PLIST.${MACHINE_ARCH})
+	@${CAT} ${PKGDIR}/PLIST.${MACHINE_ARCH} >> ${PLIST_SRC}
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/twin
