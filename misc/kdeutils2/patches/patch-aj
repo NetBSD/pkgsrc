@@ -1,0 +1,28 @@
+$NetBSD: patch-aj,v 1.1 2004/04/08 19:37:19 kristerw Exp $
+
+--- klprfax/klprfax/klprfax.cpp.orig	2004-04-08 21:19:09.000000000 +0200
++++ klprfax/klprfax/klprfax.cpp	2004-04-08 21:20:44.000000000 +0200
+@@ -37,7 +37,7 @@
+ AddressBook::ErrorCode err;
+ AddressBook   *bk;
+ int            n,i;
+-QString        name,fax0,fax1,fax2,fax3;
++QString        name2,fax0,fax1,fax2,fax3;
+ QString        nil="";
+ 
+    app=_app;
+@@ -74,12 +74,12 @@
+                      AddressBook::Entry e;
+      err=bk->getKey(i,k);
+      err=bk->getEntry(k,e);
+-     if (NameFax(e,name,fax0,fax1,fax2,fax3)) {klprfax_widget *tmp;
++     if (NameFax(e,name2,fax0,fax1,fax2,fax3)) {klprfax_widget *tmp;
+ 
+ 	rows+=1;if (rows>=names->numRows()) { names->setNumRows(rows+1); }
+ 
+ 	tmp=new klprfax_widget(rows,0,names);
+-	tmp->add(name);
++	tmp->add(name2);
+ 	tmp->commit();
+ 	tmp->adjustSize();
+ 	if (tmp->width()>col0) { col0=tmp->widget()->width()+5; }
