@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1 1999/07/14 20:46:39 tron Exp $
+
+--- gnome-faq/Makefile.in.orig	Tue Jun  1 22:08:57 1999
++++ gnome-faq/Makefile.in	Wed Jul 14 22:11:26 1999
+@@ -153,8 +153,8 @@
+ 
+ # Make rules for the `gnome-libs' module
+ 
+-@INSIDE_GNOME_DOCU_TRUE@htmldir = $(datadir)/html
+-@INSIDE_GNOME_DOCU_FALSE@htmldir = $(prefix)/html
++@INSIDE_GNOME_DOCU_TRUE@htmldir = $(datadir)/doc/gnome-libs/html
++@INSIDE_GNOME_DOCU_FALSE@htmldir = $(datadir)/doc/gnome-libs/html
+ 
+ @INSIDE_GNOME_DOCU_TRUE@html_subdirs = gnome-faq
+ 
