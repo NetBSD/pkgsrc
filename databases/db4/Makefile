@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/11/16 23:45:25 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2004/11/17 06:04:43 jlam Exp $
 
 DISTNAME=		db-4.2.52
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -30,6 +30,8 @@ CONFIGURE_ARGS+=	--enable-compat185
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/db4
 CONFIGURE_ARGS+=	--program-transform-name=s,db_,db4_,
 
+.include "../../mk/bsd.prefs.mk"
+
 # NetBSD-sparc64-1.6*'s f77 makes configure failing and as f77 is not
 # needed for this package the following does no harm on other platform.
 CONFIGURE_ENV+=		F77=${FALSE}
@@ -43,8 +45,9 @@ OPSYSVARS+=		LIBSO_LIBS
 LIBSO_LIBS.SunOS+=	-lnsl
 CONFIGURE_ENV+=		LIBSO_LIBS="${LIBSO_LIBS}"
 
+.include "../../mk/pthread.buildlink3.mk"
+
 post-install:
 	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/doc/html/db4
 
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
