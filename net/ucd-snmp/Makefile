@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1999/05/04 03:51:57 tv Exp $
+# $NetBSD: Makefile,v 1.13 1999/08/15 09:44:00 tron Exp $
 # FreeBSD Id: Makefile,v 1.18 1998/04/06 20:50:31 andreas Exp
 #
 
@@ -18,9 +18,6 @@ CONFIGURE_ARGS+=--with-defaults --with-libwrap --with-logfile="/var/log/snmpd"
 
 # this might make it easier to use scotty's mibs, and local ones too
 CONFIGURE_ARGS+=--with-mibdirs="${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tnm2.1.8/mibs:/usr/local/share/snmp/mibs"
-
-# provide path to libtool's lib directory:
-MAKE_ENV=	CC_RUNTIME_ARG="-L../snmplib/.libs -L../../snmplib/.libs"
 
 # deal with libwrap bogosity by providing these variables to programs which
 # do not supply them:
