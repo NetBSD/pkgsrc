@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: slapd.sh,v 1.2 2002/02/05 06:04:37 jlam Exp $
+# $NetBSD: slapd.sh,v 1.3 2002/09/12 10:19:11 jlam Exp $
 #
 # OpenLDAP standalone LDAP daemon
 #
@@ -22,6 +22,7 @@ extra_commands="reload"
 if [ -f /etc/rc.subr ]
 then
 	load_rc_config $name
+	eval [ -z "\$${rcvar}" ] && eval ${rcvar}=NO
 	run_rc_command "$1"
 else
 	@ECHO@ -n " ${name}"
