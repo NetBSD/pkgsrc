@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.9 2003/04/15 08:28:19 wiz Exp $
+$NetBSD: patch-aa,v 1.10 2004/09/23 06:43:45 cube Exp $
 
 --- params.h.orig	Sat Apr 12 16:16:01 2003
 +++ params.h
@@ -20,6 +20,15 @@ $NetBSD: patch-aa,v 1.9 2003/04/15 08:28:19 wiz Exp $
  
  #if DAEMON_LIBWRAP
  /*
+@@ -99,7 +99,7 @@
+  * A pseudo-user to run as before authentication. The user and its UID
+  * must not be used for any other purpose.
+  */
+-#define POP_USER			POP_SERVER
++#define POP_USER			@@POPA3D_USER@@
+ 
+ /*
+  * An empty directory to chroot to before authentication. The directory
 @@ -144,8 +144,8 @@
   *
   * Note that there's no built-in password aging support.
