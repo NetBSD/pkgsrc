@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2002/09/30 21:20:06 martin Exp $
+$NetBSD: patch-af,v 1.5 2002/10/26 18:02:17 bouyer Exp $
 
 --- src/logging.c.orig	Mon Sep 30 22:44:27 2002
 +++ src/logging.c	Mon Sep 30 23:00:46 2002
@@ -6,7 +6,7 @@ $NetBSD: patch-af,v 1.4 2002/09/30 21:20:06 martin Exp $
  void
  rxvt_update_lastlog(const char *fname, const char *pty, const char *host)
  {
-+# ifdef RXVT_UTMP_AS_UTMPX
++# if defined(RXVT_UTMP_AS_UTMPX) && !defined(SunOS)
 +    struct lastlogx ll;
 +    char filename[FILENAME_MAX];
 +
