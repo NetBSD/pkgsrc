@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/24 08:29:33 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/24 09:34:07 jlam Exp $
 
 DISTNAME=	net-snmp-5.0.6
 CATEGORIES=	net
@@ -52,6 +52,11 @@ CONFIGURE_ARGS+=	--with-mibdirs="${NET_SNMP_MIBDIRS}"
 # when they shouldn't.
 #
 CONFIGURE_ARGS+=	--with-dummy-values
+#
+# Install the UCD-SNMP look-alike headers and libraries to ease porting of
+# older software to use net-snmp.
+#
+CONFIGURE_ARGS+=	--enable-ucd-snmp-compatibility
 
 .if !exists(/usr/bin/lpstat)
 CONFIGURE_ENV+=		ac_cv_path_LPSTAT_PATH=no
