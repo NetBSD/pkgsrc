@@ -1,3 +1,4 @@
+$NetBSD: patch-ad,v 1.2 1999/12/28 04:56:52 wiz Exp $
 --- configure.BAK	Wed Sep  8 17:36:21 1999
 +++ configure	Wed Sep  8 17:36:27 1999
 @@ -583,7 +583,7 @@
