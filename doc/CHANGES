@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1676 2003/03/17 21:03:21 agc Exp $
+$NetBSD: CHANGES,v 1.1677 2003/03/17 21:18:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1180,3 +1180,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated silc-client to 0.9.12 [salo 2003-03-17]
 	Updated silc-server to 0.9.13 [salo 2003-03-17]
 	Added sfs-0.7.2 [agc 2003-03-17]
+	Updated win32-codecs to 020909nb2 [wiz 2003-03-17]
