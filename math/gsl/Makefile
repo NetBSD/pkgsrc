@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2002/05/03 21:41:31 jtb Exp $
+# $NetBSD: Makefile,v 1.9 2002/11/10 00:35:07 grant Exp $
 #
 
 DISTNAME=	gsl-1.1.1
@@ -17,7 +17,7 @@ MASTER_SITES=	ftp://sources.redhat.com/pub/gsl/ \
 		ftp://sunsite.org.uk/Mirrors/sourceware.cygnus.com/pub/gsl/ \
 		ftp://unix.hensa.ac.uk/mirrors/sourceware.cygnus.com/pub/gsl/
 
-MAINTAINER=	David Maxwell <david@maxwell.net>
+MAINTAINER=	david@maxwell.net
 HOMEPAGE=	http://sources.redhat.com/gsl/
 COMMENT=	The GNU Scientific Library
 

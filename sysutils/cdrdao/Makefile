@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/10/29 16:47:52 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2002/11/10 00:35:08 grant Exp $
 #
 
 DISTNAME=		${PKGNAME}.src
@@ -7,7 +7,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdrdao/}
 
-MAINTAINER=		David Maxwell <david@maxwell.net>
+MAINTAINER=		david@maxwell.net
 HOMEPAGE=		http://cdrdao.sourceforge.net/
 COMMENT=		Records audio or data CD-Rs in disk-at-once (DAO) mode
 
