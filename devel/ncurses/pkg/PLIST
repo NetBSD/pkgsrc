@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1998/06/21 04:29:07 tv Exp $
+@comment $NetBSD: PLIST,v 1.8 1998/07/15 10:34:56 agc Exp $
 bin/tic
 bin/toe
 bin/infocmp
@@ -23,8 +23,6 @@ lib/libmenu_g.a
 lib/libform.so.3.4
 lib/libform.a
 lib/libform_g.a
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 man/man1/captoinfo.1
 man/man1/infocmp.1
 man/man1/tic.1
