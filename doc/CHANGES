@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5684 2004/04/20 16:26:35 wiz Exp $
+$NetBSD: CHANGES,v 1.5685 2004/04/20 16:28:22 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2185,3 +2185,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome2-games to 2.6.1 [jmmv 2004-04-20]
 	Updated cyrus-imapd to 2.2.3nb2 [recht 2004-04-20]
 	Updated pkg_tarup to 1.5.2 [wiz 2004-04-20]
+	Updated libgda to 1.0.4 [jmmv 2004-04-20]
+	Updated libgnomedb to 1.0.4 [jmmv 2004-04-20]
