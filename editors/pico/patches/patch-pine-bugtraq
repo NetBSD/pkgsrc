@@ -1,0 +1,33 @@
+Date: Sat, 25 Apr 1998 14:24:43 +0200
+From: Michal Zalewski <lcamtuf@BOSS.STASZIC.WAW.PL>
+To: BUGTRAQ@NETSPACE.ORG
+Subject: pine/pico vt control characters bug
+
+Pico, an editor included with pine 3.96 package, handles vt control
+characters (eg. 0x9B) improperly, so it's possible to do almost anything
+when normal text file is viewed with pico. Example? Try viewing file
+containing only two characters: 0x9B and 0x63... That's not all, pico is
+called by pine when you're replying to mail message. Anyone may insert any
+control chars (using quoted-printable encoding) to his signature.
+
+Fix (edited for NetBSD's pkg system):
+
+--- pico/display.c.orig	Sun Apr 26 00:16:06 1998
++++ pico/display.c	Sun Apr 26 00:17:12 1998
+@@ -266,7 +266,7 @@
+ 	}
+         while ((vtcol&0x07) != 0);
+     }
+-    else if (c.c < 0x20 || c.c == 0x7F) {
++    else if (c.c < 0x20 || c.c == 0x7F || c.c == 0x9B) {
+ 	ac.c = '^';
+         vtputc(ac);
+ 	ac.c = (c.c ^ 0x40);
+
+(should help, at least in above situation)
+
+_______________________________________________________________________
+Michal Zalewski [lcamtuf@boss.staszic.waw.pl] <= finger for pub PGP key
+Iterowac jest rzecza ludzka, wykonywac rekursywnie - boska [P. Deutsch]
+[echo "\$0&\$0">_;chmod +x _;./_] <=------=> [tel +48 (0) 22 813 25 86]
+
