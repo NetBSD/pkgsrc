@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:18:05 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/22 16:26:58 adam Exp $
 bin/ftpgw.tcl
 bin/zebedee
 man/man1/ftpgw.tcl.1
@@ -6,6 +6,7 @@ man/man1/zebedee.1
 share/doc/zebedee/CHANGES.txt
 share/doc/zebedee/GPL2.txt
 share/doc/zebedee/LICENCE.txt
+share/doc/zebedee/NOTICE.txt
 share/doc/zebedee/README.txt
 share/doc/zebedee/client1.key
 share/doc/zebedee/client2.key
