@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/07/13 10:31:15 tron Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/07/13 10:40:59 tron Exp $
 
 SUSE_VERSION=		9.1
 
@@ -36,6 +36,16 @@ RPM2PKGARGS+=		-i ${TEMP}
 .for TEMP in ${RPMFILES}
 RPM2PKGARGS+=		${DISTDIR}/${DIST_SUBDIR}/${TEMP}
 .endfor
+
+.if ${OPSYS} == "NetBSD"
+pre-fetch:
+	@${ECHO} "======================================================================"
+	@${ECHO} ""
+	@${ECHO} "Warning:"
+	@${ECHO} "NetBSD's Linux emulation doesn't work stable with this package (yet)."
+	@${ECHO} ""
+	@${ECHO} "======================================================================"
+.endif
 
 .if !target(do-install)
 do-install:
