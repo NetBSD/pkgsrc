@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2004/04/24 23:03:25 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/11/02 20:08:15 jdolecek Exp $
 
-DISTNAME=	apc-1.1.0pl1
-PKGNAME=	php-apc-1.1.0.1
-MODNAME=	${DISTNAME:C/-[^-]*$//}
-CATEGORIES+=	www
-MASTER_SITES=	http://apc.communityconnect.com/sources/
-EXTRACT_SUFX=	.tar.gz
+DISTNAME=	APC-2.0.4
+PKGNAME=	php-${DISTNAME:tl}
+MODNAME=	${DISTNAME:C/-[^-]*$//:tl}
+CATEGORIES+=	sysutils
+MASTER_SITES=	http://pecl.php.net/get/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://apc.communityconnect.com/
@@ -17,19 +17,18 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_BUILDLINK3=		YES
 DISTINFO_FILE=		${.CURDIR}/distinfo
 
-.include "../../www/php4/Makefile.module"
+PHP_VERSION_REQD=	4		# PHP 4.x only
+.include "../../lang/php/ext.mk"
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 
 PLIST_SRC+=		${.CURDIR}/PLIST.extras
 PLIST_SUBST+=		PKGBASE="${PKGBASE}"
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} \
-		GORY_DETAILS INSTALL LICENSE README.compiler ${DOCDIR}
-	cd ${WRKSRC}; ${INSTALL_DATA} extras/apcinfo.php ${EGDIR}
+		INSTALL LICENSE NOTICE ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
