@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/14 02:34:52 taya Exp $
+$NetBSD: patch-aa,v 1.2 2001/07/24 01:07:14 taya Exp $
 
-diff -ru ../Orig/galeon-0.11.1/configure.in ./configure.in
---- ../Orig/galeon-0.11.1/configure.in	Sat Jun 30 19:25:04 2001
-+++ ./configure.in	Wed Jul  4 12:41:44 2001
+diff -ru ../Orig/galeon-0.11.2/configure.in ./configure.in
+--- ../Orig/galeon-0.11.2/configure.in	Sun Jul 22 02:42:20 2001
++++ ./configure.in	Tue Jul 24 02:10:21 2001
 @@ -174,10 +174,10 @@
  LDFLAGS="$_save_ldflags -L$_mozilla_lib_place"
  
@@ -26,13 +26,3 @@ diff -ru ../Orig/galeon-0.11.1/configure.in ./configure.in
  
  dnl gtk moz embed library
  LDFLAGS="$_save_ldflags -L$_mozilla_lib_place $_mozilla_all_nspr_flags -lgtkembedmoz $_mozilla_xpcom_libs $_mozilla_gtk_super_win_libs"
-@@ -319,7 +319,8 @@
- dnl ====================================
- 
- dnl Add the languages which your application supports here.
--ALL_LINGUAS="az ca cs da de es et fi fr gl hr hu it ja ko lt nl no pl pt_BR ro ru sk sl sv tr uk zh_TW.Big5 ms zh_CN.GB2312"
-+#ALL_LINGUAS="az ca cs da de es et fi fr gl hr hu it ja ko lt nl no pl pt_BR ro ru sk sl sv tr uk zh_TW.Big5 ms zh_CN.GB2312"
-+ALL_LINGUAS="az ca cs da de es et fi fr gl hr hu it ja ko lt nl no pl pt_BR ro ru sk sl sv tr uk ms zh_CN.GB2312"
- AM_GNOME_GETTEXT
- 
- dnl Set PACKAGE_LOCALE_DIR in config.h.
