@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/01/22 15:56:33 manu Exp $
+--- Makefile.in.orig	Mon Jan 13 15:05:58 2003
++++ Makefile.in	Mon Jan 13 15:06:08 2003
+@@ -545,9 +545,8 @@
+ 	echo "Installing sample config file $$cfile..."; \
+ 	$(PERL) -I $(DESTDIR)$(SBINDIR) $(DESTDIR)$(SBINDIR)/sympa_wizard.pl -c $$cfile; \
+ 	chown $(USER) $(DESTDIR)$(CONFDIR)/$$cfile; \
+ 	chgrp $(GROUP) $(DESTDIR)$(CONFDIR)/$$cfile; \
+-	INITCONF='1'; \
+ 	fi \
+ 	done; \
+ 	if [ "$$INITCONF" ] ; then \
+ 	echo "###############################################"; \

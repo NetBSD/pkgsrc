@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/01/22 15:56:33 manu Exp $
+
+SHA1 (sympa-3.4.2.tar.gz) = c3cfba1619bc6246847ab24e8c183a1c36c88842
+Size (sympa-3.4.2.tar.gz) = 2002685 bytes
+SHA1 (patch-aa) = 2cef611dc6bb5463488888f05cb8afaf6e77e49a
+SHA1 (patch-ab) = 7aea917192e77e75ba986624bf12d6880e7a6b59
+SHA1 (patch-ac) = 24ce9f71c938a2ce3ea4c6716632748ae4b8d1b0
+SHA1 (patch-ad) = e6fe0c83c8bed18db2a8a7823d01b22d9d381b66
