@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.common,v 1.1 2003/04/16 13:27:21 mjl Exp $
+
+IM_MAJOR_VER=		5.5.6
+IM_MINOR_VER=		NONE
+IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}-Q16
+
+.if (${IM_MINOR_VER} != NONE)
+DISTSUFFIX=		${IM_MAJOR_VER}-${IM_MINOR_VER}
+.else
+DISTSUFFIX=		${IM_MAJOR_VER}
+.endif
+
+DISTNAME=		ImageMagick-${DISTSUFFIX}
+
+WRKSRC=			${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
+
+CATEGORIES=		graphics
+MASTER_SITES=		ftp://ftp.nluug.nl/pub/ImageMagick/ \
+			ftp://ftp.yggdrasil.com/mirrors/site/ftp.simplesystems.org/pub/ImageMagick/ \
+			ftp://ftp.fu-berlin.de/unix/X11/graphics/ImageMagick/ \
+			ftp://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/ \
+			ftp://ftp.fu-berlin.de/unix/X11/graphics/ImageMagick/
+EXTRACT_SUFX=		.tar.bz2
+
+# For things for which we do not specify an explicit dependency above, disable
+# so that we don't cause implicit "hidden" dependencies.  Users may reenable
+# any of these manually as desired (PerlMagick should probably be a separate
+# pkg, however).
+CONFIGURE_ARGS+=	--without-dps --without-fpx \
+			--without-hdf --without-jbig --without-threads \
+			--without-ttf --without-wmf --without-xml \
+			--without-lcms
