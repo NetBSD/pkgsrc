@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.5 2001/11/22 16:25:37 taya Exp $
+$NetBSD: patch-ay,v 1.6 2001/12/27 15:02:41 taya Exp $
 
 diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.h ./netwerk/base/src/nsSocketTransport.h
---- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.h	Tue Oct  9 07:17:25 2001
-+++ ./netwerk/base/src/nsSocketTransport.h	Thu Nov 22 12:30:57 2001
+--- ../Orig/mozilla/netwerk/base/src/nsSocketTransport.h	Wed Nov 28 09:42:57 2001
++++ ./netwerk/base/src/nsSocketTransport.h	Sat Dec 22 13:02:38 2001
 @@ -123,6 +123,11 @@
    eSocketDNS_Wait             = 0x2020
  };
@@ -15,7 +15,7 @@ diff -ru ../Orig/mozilla/netwerk/base/src/nsSocketTransport.h ./netwerk/base/src
  //
  // This is the default timeout value (in milliseconds) for sockets which have
  // no activity...
-@@ -246,7 +251,7 @@
+@@ -249,7 +254,7 @@
      PRIntervalTime                  mLastActiveTime;
      PRCList                         mListLink;
      PRMonitor*                      mMonitor;

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-ELF,v 1.2 2001/11/22 16:25:36 taya Exp $
+@comment $NetBSD: PLIST-ELF,v 1.3 2001/12/27 15:02:37 taya Exp $
 bin/mozilla
 @comment begin PROGRAMS
 lib/mozilla/dirver
@@ -29,6 +29,7 @@ lib/mozilla/components/libcookie.so
 lib/mozilla/components/libdocshell.so
 lib/mozilla/components/libeditor.so
 lib/mozilla/components/libembedcomponents.so
+lib/mozilla/components/libfileview.so
 lib/mozilla/components/libgfx2.so
 lib/mozilla/components/libgfx_gtk.so
 lib/mozilla/components/libgfxps.so
@@ -46,6 +47,7 @@ lib/mozilla/components/libimgpng.so
 lib/mozilla/components/libimgppm.so
 lib/mozilla/components/libimpText.so
 lib/mozilla/components/libimport.so
+lib/mozilla/components/libinspector.so
 lib/mozilla/components/libjar50.so
 lib/mozilla/components/libjsd.so
 lib/mozilla/components/libjsdom.so
@@ -65,6 +67,7 @@ lib/mozilla/components/libmsgcompose.so
 lib/mozilla/components/libmsgdb.so
 lib/mozilla/components/libmsgimap.so
 lib/mozilla/components/libmsgnews.so
+lib/mozilla/components/libmsgsmime.so
 lib/mozilla/components/libnecko.so
 lib/mozilla/components/libnecko2.so
 lib/mozilla/components/libnkcache.so
@@ -72,6 +75,7 @@ lib/mozilla/components/libnsappshell.so
 lib/mozilla/components/libnslocale.so
 lib/mozilla/components/libnsprefm.so
 lib/mozilla/components/liboji.so
+lib/mozilla/components/libpipboot.so
 lib/mozilla/components/libpipnss.so
 lib/mozilla/components/libpippki.so
 lib/mozilla/components/libpref.so
@@ -79,7 +83,6 @@ lib/mozilla/components/libprofile.so
 lib/mozilla/components/librdf.so
 lib/mozilla/components/libregviewer.so
 lib/mozilla/components/libshistory.so
-lib/mozilla/components/libsmimestb.so
 lib/mozilla/components/libstrres.so
 lib/mozilla/components/libtimer_gtk.so
 lib/mozilla/components/libtransformiix.so
@@ -136,12 +139,13 @@ lib/mozilla/chrome/chromelist.txt
 lib/mozilla/chrome/classic.jar
 lib/mozilla/chrome/comm.jar
 lib/mozilla/chrome/content-packs.jar
-lib/mozilla/chrome/embed.jar
+lib/mozilla/chrome/embed-sample.jar
 lib/mozilla/chrome/en-US.jar
 lib/mozilla/chrome/en-mac.jar
 lib/mozilla/chrome/en-unix.jar
 lib/mozilla/chrome/en-win.jar
 lib/mozilla/chrome/help.jar
+lib/mozilla/chrome/inspector.jar
 lib/mozilla/chrome/installed-chrome.txt
 lib/mozilla/chrome/messenger.jar
 lib/mozilla/chrome/modern.jar
@@ -178,6 +182,7 @@ lib/mozilla/components/dom_xul.xpt
 lib/mozilla/components/editor.xpt
 lib/mozilla/components/embed_base.xpt
 lib/mozilla/components/exthandler.xpt
+lib/mozilla/components/filepicker.xpt
 lib/mozilla/components/find.xpt
 lib/mozilla/components/gfx.xpt
 lib/mozilla/components/gfx2.xpt
@@ -185,6 +190,7 @@ lib/mozilla/components/helperAppDlg.xpt
 lib/mozilla/components/history.xpt
 lib/mozilla/components/imglib2.xpt
 lib/mozilla/components/import.xpt
+lib/mozilla/components/inspector.xpt
 lib/mozilla/components/intl.xpt
 lib/mozilla/components/jar.xpt
 lib/mozilla/components/jsconsole-clhandler.js
@@ -209,6 +215,7 @@ lib/mozilla/components/msgimap.xpt
 lib/mozilla/components/msglocal.xpt
 lib/mozilla/components/msgnews.xpt
 lib/mozilla/components/msgsearch.xpt
+lib/mozilla/components/msgsmime.xpt
 lib/mozilla/components/necko.xpt
 lib/mozilla/components/necko_about.xpt
 lib/mozilla/components/necko_cache.xpt
@@ -229,6 +236,7 @@ lib/mozilla/components/nsProxyAutoConfig.js
 lib/mozilla/components/nsSidebar.js
 lib/mozilla/components/nsXmlRpcClient.js
 lib/mozilla/components/oji.xpt
+lib/mozilla/components/pipboot.xpt
 lib/mozilla/components/pipnss.xpt
 lib/mozilla/components/pippki.xpt
 lib/mozilla/components/plugin.xpt
@@ -243,6 +251,7 @@ lib/mozilla/components/search.xpt
 lib/mozilla/components/shistory.xpt
 lib/mozilla/components/sidebar.xpt
 lib/mozilla/components/signonviewer.xpt
+lib/mozilla/components/smime-service.js
 lib/mozilla/components/transformiix.xpt
 lib/mozilla/components/txmgr.xpt
 lib/mozilla/components/txtsvc.xpt
@@ -277,20 +286,22 @@ lib/mozilla/defaults/pref/all.js
 lib/mozilla/defaults/pref/config.js
 lib/mozilla/defaults/pref/editor.js
 lib/mozilla/defaults/pref/initpref.js
+lib/mozilla/defaults/pref/inspector.js
 lib/mozilla/defaults/pref/mailnews.js
 lib/mozilla/defaults/pref/security-prefs.js
+lib/mozilla/defaults/pref/smime.js
 lib/mozilla/defaults/pref/unix.js
 lib/mozilla/defaults/pref/xpinstall.js
 lib/mozilla/defaults/profile/US/bookmarks.html
-lib/mozilla/defaults/profile/US/chrome/userChrome.css
-lib/mozilla/defaults/profile/US/chrome/userContent.css
+lib/mozilla/defaults/profile/US/chrome/userChrome-example.css
+lib/mozilla/defaults/profile/US/chrome/userContent-example.css
 lib/mozilla/defaults/profile/US/localstore.rdf
 lib/mozilla/defaults/profile/US/mimeTypes.rdf
 lib/mozilla/defaults/profile/US/panels.rdf
 lib/mozilla/defaults/profile/US/search.rdf
 lib/mozilla/defaults/profile/bookmarks.html
-lib/mozilla/defaults/profile/chrome/userChrome.css
-lib/mozilla/defaults/profile/chrome/userContent.css
+lib/mozilla/defaults/profile/chrome/userChrome-example.css
+lib/mozilla/defaults/profile/chrome/userContent-example.css
 lib/mozilla/defaults/profile/localstore.rdf
 lib/mozilla/defaults/profile/mimeTypes.rdf
 lib/mozilla/defaults/profile/panels.rdf
@@ -306,6 +317,7 @@ lib/mozilla/dtd/mathml.dtd
 lib/mozilla/icons/mozicon16.xpm
 lib/mozilla/icons/mozicon50.xpm
 lib/mozilla/res/arrow.gif
+lib/mozilla/res/broken-image.gif
 lib/mozilla/res/builtin/htmlBindings.xml
 lib/mozilla/res/builtin/platformHTMLBindings.xml
 lib/mozilla/res/builtin/xbl-forms.css
@@ -330,7 +342,6 @@ lib/mozilla/res/forms.css
 lib/mozilla/res/gfx/icon_0.gif
 lib/mozilla/res/gfx/icon_1.gif
 lib/mozilla/res/html.css
-lib/mozilla/res/html/broken-image.gif
 lib/mozilla/res/html/gopher-audio.gif
 lib/mozilla/res/html/gopher-binary.gif
 lib/mozilla/res/html/gopher-find.gif
@@ -340,11 +351,12 @@ lib/mozilla/res/html/gopher-movie.gif
 lib/mozilla/res/html/gopher-telnet.gif
 lib/mozilla/res/html/gopher-text.gif
 lib/mozilla/res/html/gopher-unknown.gif
-lib/mozilla/res/html/loading-image.gif
+lib/mozilla/res/inspector/search-registry.rdf
+lib/mozilla/res/inspector/viewer-registry.rdf
 lib/mozilla/res/langGroups.properties
 lib/mozilla/res/language.properties
+lib/mozilla/res/loading-image.gif
 lib/mozilla/res/mathml.css
-lib/mozilla/res/nssifail.txt
 lib/mozilla/res/quirk.css
 lib/mozilla/res/rdf/article.gif
 lib/mozilla/res/rdf/document.gif
@@ -707,7 +719,6 @@ include/mozilla/content/nsIXBLDocumentInfo.h
 include/mozilla/content/nsIXBLInsertionPoint.h
 include/mozilla/content/nsIXBLPrototypeBinding.h
 include/mozilla/content/nsIXBLPrototypeHandler.h
-include/mozilla/content/nsIXBLPrototypeProperty.h
 include/mozilla/content/nsIXBLService.h
 include/mozilla/content/nsIXMLContent.h
 include/mozilla/content/nsIXMLContentSink.h
@@ -758,6 +769,7 @@ include/mozilla/docshell/nsIWebNavigation.h
 include/mozilla/dom/domstubs.h
 include/mozilla/dom/nsDOMCID.h
 include/mozilla/dom/nsDOMError.h
+include/mozilla/dom/nsIDOM3Node.h
 include/mozilla/dom/nsIDOMAbstractView.h
 include/mozilla/dom/nsIDOMAttr.h
 include/mozilla/dom/nsIDOMBarProp.h
@@ -880,6 +892,7 @@ include/mozilla/dom/nsIDOMMouseMotionListener.h
 include/mozilla/dom/nsIDOMMutationEvent.h
 include/mozilla/dom/nsIDOMMutationListener.h
 include/mozilla/dom/nsIDOMNSDocument.h
+include/mozilla/dom/nsIDOMNSEvent.h
 include/mozilla/dom/nsIDOMNSHTMLAnchorElement.h
 include/mozilla/dom/nsIDOMNSHTMLAreaElement.h
 include/mozilla/dom/nsIDOMNSHTMLButtonElement.h
@@ -937,6 +950,7 @@ include/mozilla/dom/nsIDOMXULImageElement.h
 include/mozilla/dom/nsIDOMXULLabelElement.h
 include/mozilla/dom/nsIDOMXULLabeledControlEl.h
 include/mozilla/dom/nsIDOMXULListener.h
+include/mozilla/dom/nsIDOMXULPopupElement.h
 include/mozilla/dom/nsIDOMXULSelectCntrlEl.h
 include/mozilla/dom/nsIDOMXULSelectCntrlItemEl.h
 include/mozilla/dom/nsIDOMXULTreeElement.h
@@ -985,6 +999,7 @@ include/mozilla/exthandler/nsHelperAppRDF.h
 include/mozilla/exthandler/nsIExternalHelperAppService.h
 include/mozilla/exthandler/nsIExternalProtocolService.h
 include/mozilla/exthandler/nsOSHelperAppService.h
+include/mozilla/filepicker/nsIFileView.h
 include/mozilla/find/nsIWebBrowserFind.h
 include/mozilla/gfx/imgScaler.h
 include/mozilla/gfx/nsColor.h
@@ -1073,6 +1088,19 @@ include/mozilla/import/nsIImportMimeEncode.h
 include/mozilla/import/nsIImportModule.h
 include/mozilla/import/nsIImportService.h
 include/mozilla/import/nsIImportSettings.h
+include/mozilla/inspector/inIBitmap.h
+include/mozilla/inspector/inIBitmapDepot.h
+include/mozilla/inspector/inIBitmapURI.h
+include/mozilla/inspector/inICSSValueSearch.h
+include/mozilla/inspector/inIDOMUtils.h
+include/mozilla/inspector/inIDOMView.h
+include/mozilla/inspector/inIDeepTreeWalker.h
+include/mozilla/inspector/inIFileSearch.h
+include/mozilla/inspector/inIFlasher.h
+include/mozilla/inspector/inIPNGEncoder.h
+include/mozilla/inspector/inIScreenCapturer.h
+include/mozilla/inspector/inISearchObserver.h
+include/mozilla/inspector/inISearchProcess.h
 include/mozilla/intl/nsIStringBundle.h
 include/mozilla/jar/nsIJAR.h
 include/mozilla/jar/nsIZipReader.h
@@ -1208,9 +1236,11 @@ include/mozilla/layout/nsIMutableStyleContext.h
 include/mozilla/layout/nsIObjectFrame.h
 include/mozilla/layout/nsIOutlinerBoxObject.h
 include/mozilla/layout/nsIOutlinerColFrame.h
+include/mozilla/layout/nsIOutlinerContentView.h
 include/mozilla/layout/nsIOutlinerSelection.h
 include/mozilla/layout/nsIOutlinerView.h
 include/mozilla/layout/nsIPageSequenceFrame.h
+include/mozilla/layout/nsIPercentHeightObserver.h
 include/mozilla/layout/nsIPopupBoxObject.h
 include/mozilla/layout/nsIPopupSetFrame.h
 include/mozilla/layout/nsIPresContext.h
@@ -1222,7 +1252,6 @@ include/mozilla/layout/nsIPrintPreviewContext.h
 include/mozilla/layout/nsIRadioControlFrame.h
 include/mozilla/layout/nsIReflowCallback.h
 include/mozilla/layout/nsIReflowCommand.h
-include/mozilla/layout/nsISVGFrame.h
 include/mozilla/layout/nsIScrollBoxObject.h
 include/mozilla/layout/nsIScrollableFrame.h
 include/mozilla/layout/nsIScrollableViewProvider.h
@@ -1239,7 +1268,9 @@ include/mozilla/layout/nsITreeFrame.h
 include/mozilla/layout/nsLayoutCID.h
 include/mozilla/layout/nsOutlinerBodyFrame.h
 include/mozilla/layout/nsOutlinerColFrame.h
+include/mozilla/layout/nsOutlinerContentView.h
 include/mozilla/layout/nsOutlinerSelection.h
+include/mozilla/layout/nsOutlinerUtils.h
 include/mozilla/layout/nsPIBoxObject.h
 include/mozilla/layout/nsStyleChangeList.h
 include/mozilla/layout/nsStyleConsts.h
@@ -1593,6 +1624,10 @@ include/mozilla/msgnews/nsNewsUtils.h
 include/mozilla/msgnews/nsNntpIncomingServer.h
 include/mozilla/msgnews/nsNntpService.h
 include/mozilla/msgnews/nsNntpUrl.h
+include/mozilla/msgsmime/nsIMsgSMIMECompFields.h
+include/mozilla/msgsmime/nsIMsgSMIMEHeaderSink.h
+include/mozilla/msgsmime/nsMsgComposeSecure.h
+include/mozilla/msgsmime/nsMsgSMIMECID.h
 include/mozilla/necko/mozITXTToHTMLConv.h
 include/mozilla/necko/netCore.h
 include/mozilla/necko/nsHTTPChunkConv.h
@@ -1622,6 +1657,7 @@ include/mozilla/necko/nsIJARChannel.h
 include/mozilla/necko/nsIJARProtocolHandler.h
 include/mozilla/necko/nsIJARURI.h
 include/mozilla/necko/nsILoadGroup.h
+include/mozilla/necko/nsIMultiPartChannel.h
 include/mozilla/necko/nsINetModRegEntry.h
 include/mozilla/necko/nsINetModuleMgr.h
 include/mozilla/necko/nsINetNotify.h
@@ -1834,6 +1870,9 @@ include/mozilla/oji/nsIThreadManager.h
 include/mozilla/oji/nsJVMManager.h
 include/mozilla/oji/nsJVMPluginTagInfo.h
 include/mozilla/oji/nsjvm.h
+include/mozilla/pipboot/nsIBufEntropyCollector.h
+include/mozilla/pipboot/nsISSLStatusProvider.h
+include/mozilla/pipboot/nsISecurityWarningDialogs.h
 include/mozilla/pipnss/nsIBadCertListener.h
 include/mozilla/pipnss/nsICMS.h
 include/mozilla/pipnss/nsICMSSecureMessage.h
@@ -1986,6 +2025,7 @@ include/mozilla/uconv/nsICharRepresentable.h
 include/mozilla/uconv/nsICharsetAlias.h
 include/mozilla/uconv/nsICharsetConverterManager.h
 include/mozilla/uconv/nsICharsetConverterManager2.h
+include/mozilla/uconv/nsIConverterInputStream.h
 include/mozilla/uconv/nsICurrentCharsetListener.h
 include/mozilla/uconv/nsIMappingCache.h
 include/mozilla/uconv/nsIPlatformCharset.h
@@ -2031,7 +2071,6 @@ include/mozilla/util/nsITimeRecorder.h
 include/mozilla/util/nsTimer.h
 include/mozilla/util/stopwatch.h
 include/mozilla/util/xp_obs.h
-include/mozilla/view/nsIClipView.h
 include/mozilla/view/nsICompositeListener.h
 include/mozilla/view/nsIEventProcessor.h
 include/mozilla/view/nsIScrollPositionListener.h
@@ -2330,21 +2369,19 @@ include/mozilla/xultmpl/nsIXULTemplateBuilder.h
 @exec env LD_LIBRARY_PATH=%D/lib/mozilla MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regxpcom
 @exec env LD_LIBRARY_PATH=%D/lib/mozilla MOZILLA_FIVE_HOME=%D/lib/mozilla %D/lib/mozilla/regchrome
 @unexec rm %D/lib/mozilla/component.reg
-@unexec rm %D/lib/mozilla/chrome/user-locales.rdf
-@unexec rm %D/lib/mozilla/chrome/user-skins.rdf
-@unexec rm %D/lib/mozilla/chrome/all-locales.rdf
-@unexec rm %D/lib/mozilla/chrome/all-packages.rdf
-@unexec rm %D/lib/mozilla/chrome/all-skins.rdf
+@unexec rm %D/lib/mozilla/chrome/chrome.rdf
 @unexec rm %D/lib/mozilla/chrome/overlayinfo/communicator/content/overlays.rdf
 @unexec rm %D/lib/mozilla/chrome/overlayinfo/editor/content/overlays.rdf
 @unexec rm %D/lib/mozilla/chrome/overlayinfo/messenger/content/overlays.rdf
 @unexec rm %D/lib/mozilla/chrome/overlayinfo/navigator/content/overlays.rdf
+@unexec rm %D/lib/mozilla/chrome/overlayinfo/inspector/content/overlays.rdf
 @unexec rm %D/lib/mozilla/components/xpti.dat
-@unexec rm %D/lib/mozilla/components/xptitemp.dat
 @dirrm lib/mozilla/chrome/overlayinfo/navigator/content
 @dirrm lib/mozilla/chrome/overlayinfo/navigator
 @dirrm lib/mozilla/chrome/overlayinfo/messenger/content
 @dirrm lib/mozilla/chrome/overlayinfo/messenger
+@dirrm lib/mozilla/chrome/overlayinfo/inspector/content
+@dirrm lib/mozilla/chrome/overlayinfo/inspector
 @dirrm lib/mozilla/chrome/overlayinfo/editor/content
 @dirrm lib/mozilla/chrome/overlayinfo/editor
 @dirrm lib/mozilla/chrome/overlayinfo/communicator/content
@@ -2356,6 +2393,7 @@ include/mozilla/xultmpl/nsIXULTemplateBuilder.h
 @dirrm lib/mozilla/res/samples/sampleimages
 @dirrm lib/mozilla/res/samples
 @dirrm lib/mozilla/res/rdf
+@dirrm lib/mozilla/res/inspector
 @dirrm lib/mozilla/res/html
 @dirrm lib/mozilla/res/gfx
 @dirrm lib/mozilla/res/fonts
@@ -2421,6 +2459,7 @@ include/mozilla/xultmpl/nsIXULTemplateBuilder.h
 @dirrm include/mozilla/plugin
 @dirrm include/mozilla/pippki
 @dirrm include/mozilla/pipnss
+@dirrm include/mozilla/pipboot
 @dirrm include/mozilla/oji
 @dirrm include/mozilla/nspr/private
 @dirrm include/mozilla/nspr/obsolete
@@ -2429,6 +2468,7 @@ include/mozilla/xultmpl/nsIXULTemplateBuilder.h
 @dirrm include/mozilla/nkcache
 @dirrm include/mozilla/necko2
 @dirrm include/mozilla/necko
+@dirrm include/mozilla/msgsmime
 @dirrm include/mozilla/msgnews
 @dirrm include/mozilla/msglocal
 @dirrm include/mozilla/msgimap
@@ -2457,6 +2497,7 @@ include/mozilla/xultmpl/nsIXULTemplateBuilder.h
 @dirrm include/mozilla/java
 @dirrm include/mozilla/jar
 @dirrm include/mozilla/intl
+@dirrm include/mozilla/inspector
 @dirrm include/mozilla/import
 @dirrm include/mozilla/imglib2
 @dirrm include/mozilla/htmlparser
@@ -2466,6 +2507,7 @@ include/mozilla/xultmpl/nsIXULTemplateBuilder.h
 @dirrm include/mozilla/gfx2
 @dirrm include/mozilla/gfx
 @dirrm include/mozilla/find
+@dirrm include/mozilla/filepicker
 @dirrm include/mozilla/exthandler
 @dirrm include/mozilla/expat
 @dirrm include/mozilla/embedcomponents
