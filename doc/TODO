@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2451 2004/11/25 16:24:46 dillo Exp $
+$NetBSD: TODO,v 1.2452 2004/11/25 16:32:10 ben Exp $
 
 Suggested new packages
 ======================
@@ -535,7 +535,6 @@ Suggested package updates
 	o generator-0.35
 	o getmail-4.2.4
 	o gettext-0.14.1
-	o gfract-0.30
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
 	o ghostscript-8.33

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7987 2004/11/25 15:32:19 wiz Exp $
+$NetBSD: CHANGES,v 1.7988 2004/11/25 16:32:10 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5423,3 +5423,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ne to 1.31 [adam 2004-11-25]
 	Added p5-chkjis-0.18 [taca 2004-11-25]
 	Updated cvs2cl to 2.58 [wiz 2004-11-25]
+	Updated gfract to 0.3 [ben 2004-11-25]
