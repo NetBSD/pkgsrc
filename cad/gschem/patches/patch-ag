@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1 2005/01/11 03:16:24 dmcmahill Exp $
+
+--- src/x_fileselect.c.orig	2004-12-29 04:09:21.000000000 +0000
++++ src/x_fileselect.c
+@@ -628,7 +628,7 @@ void x_fileselect_saveas_close(GtkWidget
+ 
+   if (f_current->filesel_type == SAVEAS_NEW) {
+     w_current->page_current->CHANGED = 0;
+-    i_callback_file_new(w_current, 0, NULL);
++    i_callback_gedafile_new(w_current, 0, NULL);
+   }
+ #endif
+ 
+@@ -681,7 +681,7 @@ void x_fileselect_saveas(GtkWidget * w, 
+     } else if (f_current->filesel_type == SAVEAS_OPEN) {
+       i_callback_file_open(w_current, 0, NULL);
+     } else if (f_current->filesel_type == SAVEAS_NEW) {
+-      i_callback_file_new(w_current, 0, NULL);
++      i_callback_gedafile_new(w_current, 0, NULL);
+     } else if (f_current->filesel_type == SAVEAS_CLOSE) {
+       i_callback_page_close(w_current, 0, NULL);
+     }
