@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.164 2000/06/22 16:50:42 rh Exp $
+# $NetBSD: Makefile,v 1.165 2000/07/01 04:14:45 danw Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -64,6 +64,7 @@
     SUBDIR += p5-gtk
     SUBDIR += polclock
     SUBDIR += py-Tk
+    SUBDIR += rep-gtk
     SUBDIR += qt
     SUBDIR += qt1
     SUBDIR += qt21
@@ -75,6 +76,7 @@
     SUBDIR += ruby-Tk
     SUBDIR += ruby-gtk
     SUBDIR += rxvt
+    SUBDIR += sawfish
     SUBDIR += scwm
     SUBDIR += speyes
     SUBDIR += sunclock
