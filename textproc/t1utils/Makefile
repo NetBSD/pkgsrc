@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2001/06/29 19:41:14 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2001/07/26 22:46:03 dillo Exp $
 #
 
-DISTNAME=	t1utils-1.20
+DISTNAME=	t1utils-1.23
 CATEGORIES=	textproc converters
 MASTER_SITES=	http://www.lcdf.org/~eddietwo/type/
 
