@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.745 2003/07/28 11:17:45 adam Exp $
+$NetBSD: TODO,v 1.746 2003/07/28 15:56:52 adam Exp $
 
 Suggested new packages
 ======================
@@ -201,7 +201,6 @@ Suggested package updates
 	o pcre-4.3
 	o pdmenu-1.2.81
 	o php4-4.3.2
-	o pine-4.56
 	o plib-1.6.0 [pkg/19015]
 	o pnm2ppa-1.12 [pkg/21667]
 	o povray-3.5
