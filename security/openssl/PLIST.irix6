@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.irix6,v 1.1 2002/12/24 03:57:04 jschauma Exp $
+lib/libcrypto.so
+lib/libcrypto.so.300
+lib/libcrypto.so.300.0
+lib/libssl.so
+lib/libssl.so.300
+lib/libssl.so.300.0
