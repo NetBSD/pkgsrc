@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3038 2005/02/18 14:43:25 wiz Exp $
+$NetBSD: TODO,v 1.3039 2005/02/18 14:51:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -267,7 +267,6 @@ Suggested package updates
 	o PAM-0.78
 	o TeXmacs-1.0.4-R3
 	o Xaw3d-1.5E
-	o Xbae-4.51.01
 	o YoSucker-65
 	o aap-0.144
 	o abiword1-1.0.7
