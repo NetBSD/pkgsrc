@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2348 2003/05/28 14:56:03 seb Exp $
+$NetBSD: CHANGES,v 1.2349 2003/05/28 15:54:48 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2187,3 +2187,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added xmbmon-201 [agc 2003-05-28]
 	Added adobeps-win-1.0.6 [jlam 2003-05-28]
 	Updated pkgdiff to 0.109 [seb 2003-05-28]
+	Updated blender to 2.27 [jschauma 2003-05-28]
