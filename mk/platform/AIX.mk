@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.9 2005/02/16 08:03:44 grant Exp $
+# $NetBSD: AIX.mk,v 1.10 2005/03/12 11:08:04 garbled Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -67,7 +67,11 @@ PAX?=		${LOCALBASE}/bin/pax
 .else
 PAX?=		/bin/pax
 .endif
+.if exists(${LOCALBASE}/bin/perl)
 PERL5?=		${LOCALBASE}/bin/perl
+.else
+PERL5?=		/usr/bin/perl
+.endif
 PKGLOCALEDIR?=	share
 PS?=		/bin/ps
 PWD_CMD?=	/bin/pwd	# needs to print physical path
