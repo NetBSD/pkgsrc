@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/03/29 03:40:42 itojun Exp $
+# $NetBSD: Makefile,v 1.34 2001/04/12 03:35:25 itojun Exp $
 #
 
 DISTNAME=	bind-${BIND_VERSION}
@@ -19,11 +19,9 @@ BIND_VERSION=	9.1.1
 DIST_SUBDIR=	bind/${BIND_VERSION}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-threads	# Until we have real threads
-# dnssec-keygen needs "good enough" random number, use /dev/urandom
 CONFIGURE_ARGS+=--with-libtool=yes \
 		--sysconfdir=/etc \
-		--localstatedir=/var \
-		--with-randomdev=/dev/urandom
+		--localstatedir=/var
 LDFLAGS+=	-Wl,-R${LOCALBASE}/pthreads/lib -L${LOCALBASE}/pthreads/lib
 # use external OpenSSL.  comment the following two lines out to use
 # OpenSSL shipped with BIND9.
