@@ -1,3 +1,4 @@
+$NetBSD: patch-ba,v 1.2 2003/04/21 20:22:49 cjep Exp $
 --- remote.c.orig	Fri Jan 10 02:18:28 2003
 +++ remote.c	Fri Jan 10 02:18:32 2003
 @@ -33,6 +33,8 @@
