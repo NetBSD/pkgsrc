@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7005 2004/08/26 18:28:42 wennmach Exp $
+$NetBSD: CHANGES,v 1.7006 2004/08/26 21:28:59 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4055,3 +4055,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnupg to 1.2.6 [wiz 2004-08-26]
 	Added gst-plugins-faad-0.8.2 [seb 2004-08-26]
 	Added duplicity-0.4.1 [wennmach 2004-08-26]
+	Updated imlib2 to 1.1.1 [recht 2004-08-26]
+	Updated enlightenment to 0.16.7.1 [recht 2004-08-26]
