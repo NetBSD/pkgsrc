@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2002/08/06 15:34:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/09/16 10:07:39 martti Exp $
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
 share/squirrelmail/ChangeLog
 share/squirrelmail/INSTALL
-share/squirrelmail/MIRRORS
 share/squirrelmail/README
 share/squirrelmail/ReleaseNotes
 share/squirrelmail/UPGRADE
@@ -14,14 +13,14 @@ share/squirrelmail/config/index.php
 share/squirrelmail/config/ri_once.pl
 share/squirrelmail/configure
 share/squirrelmail/contrib/RPM/RPM.readme
-share/squirrelmail/contrib/RPM/cleanup.cron
 share/squirrelmail/contrib/RPM/config.php.rh7
+share/squirrelmail/contrib/RPM/squirrelmail.conf
+share/squirrelmail/contrib/RPM/squirrelmail.cron
 share/squirrelmail/contrib/RPM/squirrelmail.spec
 share/squirrelmail/data/.htaccess
 share/squirrelmail/data/default_pref
 share/squirrelmail/data/index.php
 share/squirrelmail/doc/README.russian_apache
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-${PKGVERSION}.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.0.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.1.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.2.txt
@@ -29,6 +28,7 @@ share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.3.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.4.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.5
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.6.txt
+share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.7.txt
 share/squirrelmail/doc/addressbook.txt
 share/squirrelmail/doc/compose.txt
 share/squirrelmail/doc/db-backend.txt
@@ -92,6 +92,15 @@ share/squirrelmail/help/cs_CZ/main_folder.hlp
 share/squirrelmail/help/cs_CZ/options.hlp
 share/squirrelmail/help/cs_CZ/read_mail.hlp
 share/squirrelmail/help/cs_CZ/search.hlp
+share/squirrelmail/help/da_DK/FAQ.hlp
+share/squirrelmail/help/da_DK/addresses.hlp
+share/squirrelmail/help/da_DK/basic.hlp
+share/squirrelmail/help/da_DK/compose.hlp
+share/squirrelmail/help/da_DK/folders.hlp
+share/squirrelmail/help/da_DK/main_folder.hlp
+share/squirrelmail/help/da_DK/options.hlp
+share/squirrelmail/help/da_DK/read_mail.hlp
+share/squirrelmail/help/da_DK/search.hlp
 share/squirrelmail/help/en_US/FAQ.hlp
 share/squirrelmail/help/en_US/addresses.hlp
 share/squirrelmail/help/en_US/basic.hlp
@@ -241,6 +250,7 @@ share/squirrelmail/images/down_pointer.png
 share/squirrelmail/images/index.php
 share/squirrelmail/images/minus.gif
 share/squirrelmail/images/plus.gif
+share/squirrelmail/images/sec_remove_da_DK.png
 share/squirrelmail/images/sec_remove_eng.png
 share/squirrelmail/images/sec_remove_es_ES.png
 share/squirrelmail/images/sec_remove_id_ID.png
@@ -248,7 +258,6 @@ share/squirrelmail/images/sec_remove_ko_KR.png
 share/squirrelmail/images/sec_remove_lt_LT.png
 share/squirrelmail/images/sec_remove_ru.png
 share/squirrelmail/images/sec_remove_sl_SI.png
-share/squirrelmail/images/sm_logo.jpg
 share/squirrelmail/images/sm_logo.png
 share/squirrelmail/images/sort_none.png
 share/squirrelmail/images/up_pointer.png
@@ -452,6 +461,7 @@ share/squirrelmail/src/folders_delete.php
 share/squirrelmail/src/folders_rename_do.php
 share/squirrelmail/src/folders_rename_getname.php
 share/squirrelmail/src/folders_subscribe.php
+share/squirrelmail/src/global.php
 share/squirrelmail/src/help.php
 share/squirrelmail/src/image.php
 share/squirrelmail/src/index.php
@@ -508,9 +518,11 @@ share/squirrelmail/themes/maize_theme.php
 share/squirrelmail/themes/methodical_theme.php
 share/squirrelmail/themes/midnight.php
 share/squirrelmail/themes/monostochastic.php
+share/squirrelmail/themes/penguin.php
 share/squirrelmail/themes/plain_blue_theme.php
 share/squirrelmail/themes/purple_theme.php
 share/squirrelmail/themes/random.php
+share/squirrelmail/themes/saloon.php
 share/squirrelmail/themes/sandstorm_theme.php
 share/squirrelmail/themes/seaspray_theme.php
 share/squirrelmail/themes/servery_theme.php
@@ -624,6 +636,7 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/help/fi_FI
 @dirrm share/squirrelmail/help/es_ES
 @dirrm share/squirrelmail/help/en_US
+@dirrm share/squirrelmail/help/da_DK
 @dirrm share/squirrelmail/help/cs_CZ
 @dirrm share/squirrelmail/help/ca_ES
 @dirrm share/squirrelmail/help
