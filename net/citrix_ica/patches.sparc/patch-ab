@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1 2001/05/05 17:24:13 dmcmahill Exp $
+
+--- setupwfc.orig	Fri Dec 15 12:05:20 2000
++++ setupwfc	Fri May  4 21:46:40 2001
+@@ -402,5 +402,5 @@
+                ;;
+         NetBSD)
+-                PLATFORM=netbsd
++                PLATFORM=solaris
+                 DISP_PLATFORM="NetBSD"
+                 ;;
