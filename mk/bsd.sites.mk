@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.1 2004/06/04 13:45:26 xtraeme Exp $
+# $NetBSD: bsd.sites.mk,v 1.2 2004/06/04 15:28:39 xtraeme Exp $
 #
 # Default MASTER_SITES
 
@@ -115,6 +115,22 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.dataplus.se/pub/linux/gnome/ \
 	ftp://ftp.dit.upm.es/linux/gnome/ \
 	ftp://ftp.mirror.ac.uk/sites/ftp.gnome.org/pub/GNOME/
+
+MASTER_SITE_SOURCEFORGE+=	\
+	http://belnet.dl.sourceforge.net/sourceforge/ \
+	http://cesnet.dl.sourceforge.net/sourceforge/ \
+	http://easynews.dl.sourceforge.net/sourceforge/ \
+	http://heanet.dl.sourceforge.net/sourceforge/ \
+	http://keihanna.dl.sourceforge.net/sourceforge/ \
+	http://osdn.dl.sourceforge.net/sourceforge/ \
+	http://telia.dl.sourceforge.net/sourceforge/ \
+	http://twtelecom.dl.sourceforge.net/sourceforge/ \
+	http://umn.dl.sourceforge.net/sourceforge/ \
+	http://unc.dl.sourceforge.net/sourceforge/ \
+	ftp://ftp3.sourceforge.net/pub/sourceforge/ \
+	ftp://ftp.tuwien.ac.at/linux/sourceforge/
+#	http://flow.dl.sourceforge.net/sourceforge/
+#	http://aleron.dl.sourceforge.net/sourceforge/
 
 MASTER_SITE_SUSE+=	\
 	http://altruistic.lbl.gov/mirrors/suse/${MACHINE_ARCH}/${SUSE_VERSION}/suse/ \
