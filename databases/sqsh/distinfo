@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 16:11:05 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/05/22 05:28:23 jlam Exp $
 
 SHA1 (sqsh-1.7-src.tar.gz) = 8526cced3350024ef262a0a572d2822c6059159c
 Size (sqsh-1.7-src.tar.gz) = 296618 bytes
-SHA1 (patch-aa) = 7e77466ff759f95676375b844dc850a08ee7de61
+SHA1 (patch-aa) = d17732cee36c9af5cdced2d6da6ff362deeb7bbb
+SHA1 (patch-ab) = 15a11b0063dc8dec57028cf4da9e51a3ea9b28bd
+SHA1 (patch-ac) = d86ad97113bc8521764ed5b6898ab524a0079285
+SHA1 (patch-ad) = 435a1abadf38e63bf97c9c872e6664fee1729368
+SHA1 (patch-ae) = 6d4e9374336059026dea53d81e8f7898202cb9dd
