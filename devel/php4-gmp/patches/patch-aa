@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/10/16 06:42:12 jlam Exp $
+
+--- config.m4.orig	Tue Mar 27 15:34:27 2001
++++ config.m4
+@@ -23,5 +23,6 @@
+ 
+   PHP_EXTENSION(gmp, $ext_shared)
+   AC_DEFINE(HAVE_GMP, 1, [ ])
+-  PHP_ADD_LIBRARY_WITH_PATH(gmp, $GMP_DIR/lib)
++  PHP_SUBST(GMP_SHARED_LIBADD)
++  PHP_ADD_LIBRARY_WITH_PATH(gmp, $GMP_DIR/lib, GMP_SHARED_LIBADD)
+ fi
