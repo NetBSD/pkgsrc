@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/02/19 01:18:52 minskim Exp $
+
+SHA1 (pyOpenSSL-0.5.1.tar.gz) = d65639255f9266b8ebeb86661a46567624b68b69
+Size (pyOpenSSL-0.5.1.tar.gz) = 176151 bytes
