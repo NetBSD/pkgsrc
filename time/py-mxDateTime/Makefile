@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/09/21 23:46:59 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/19 02:45:06 jlam Exp $
 #
 
 DISTNAME=	mxDateTime-1.3.0
@@ -16,17 +16,21 @@ RESTRICTED=	No commercial distribution
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-PYTHON_VERSIONS_ACCEPTED=	20 21 # 22 doesn't work
+PYTHON_VERSIONS_ACCEPTED=	20 21 22
 USE_PYPKGPREFIX=	yes
 PY_PATCHPLIST=		yes
+USE_BUILDLINK2=		yes
 
 do-configure:
-	( cd ${WRKSRC}/mxDateTime; ${MAKE_PROGRAM} -f Makefile.pre.in boot PYTHONBIN=${PYTHONBIN})
+	cd ${WRKSRC}/mxDateTime; ${SETENV} ${MAKE_ENV}			\
+		${MAKE_PROGRAM} -f Makefile.pre.in boot PYTHONBIN=${PYTHONBIN}
 
 do-build:
-	( cd ${WRKSRC}/mxDateTime; ${MAKE_PROGRAM} )
-	( cd ${WRKSRC}; ${PYTHONBIN} ${PREFIX}/${PYLIB}/compileall.py . )
-	( cd ${WRKSRC}; ${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py . )
+	cd ${WRKSRC}/mxDateTime; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
+		${PYTHONBIN} ${PREFIX}/${PYLIB}/compileall.py .
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
+		${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py .
 
 do-install:
 	@${INSTALL_SCRIPT_DIR} ${PREFIX}/${PYSITELIB}/DateTime
