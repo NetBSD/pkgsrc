@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/05/05 02:26:41 snj Exp $
+# $NetBSD: Makefile,v 1.16 2004/06/27 13:36:04 grant Exp $
 #
 
 DISTNAME=	gimp-print-4.2.6
@@ -24,4 +24,5 @@ USE_BUILDLINK3=	yes
 
 .include "../../print/gimp-print-lib/buildlink3.mk"
 .include "../../print/cups/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
