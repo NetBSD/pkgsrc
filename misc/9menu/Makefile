@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2003/07/17 21:48:39 grant Exp $
+# $NetBSD: Makefile,v 1.12 2004/11/26 21:58:30 snj Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/09/08 12:23:55 tg Exp
 #
 
-DISTNAME=		9menu-1.7
+DISTNAME=		9menu-1.8
 CATEGORIES=		misc plan9
 MASTER_SITES=		ftp://ftp.freefriends.org/arnold/Source/
 EXTRACT_SUFX=		.shar.gz
