@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/03/28 00:33:37 jlam Exp $
+
+--- po/Makefile.in.in.orig	Sat Jul 17 04:46:56 1999
++++ po/Makefile.in.in	Sun Mar 26 13:56:41 2000
+@@ -120,7 +120,7 @@
+ 	  cat=`basename $$cat`; \
+ 	  case "$$cat" in \
+ 	    *.gmo) destdir=$(gnulocaledir);; \
+-	    *)     destdir=$(localedir);; \
++	    *)     destdir=$(gnulocaledir);; \
+ 	  esac; \
+ 	  lang=`echo $$cat | sed 's/\$(CATOBJEXT)$$//'`; \
+ 	  dir=$$destdir/$$lang/LC_MESSAGES; \
