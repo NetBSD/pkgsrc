@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6087 2004/06/01 21:03:04 jmmv Exp $
+$NetBSD: CHANGES,v 1.6088 2004/06/01 21:59:33 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2722,3 +2722,25 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gcc-3.4 [shannonjr 2004-06-01]
 	Added gdb6 [shannonjr 2004-06-01]
 	Updated gaim to 0.78 [jmmv 2004-06-01]
+	Removed m68k-netbsd [kristerw 2004-06-01]
+	Removed chkpt [kristerw 2004-06-01]
+	Removed mit-pthreads [kristerw 2004-06-01]
+	Removed unproven-pthreads [kristerw 2004-06-01]
+	Removed water [kristerw 2004-06-01]
+	Removed plasma [kristerw 2004-06-01]
+	Removed pacman [kristerw 2004-06-01]
+	Removed egcs [kristerw 2004-06-01]
+	Removed rlab [kristerw 2004-06-01]
+	Removed drwright [kristerw 2004-06-01]
+	Removed dsbr100 [kristerw 2004-06-01]
+	Removed archie [kristerw 2004-06-01]
+	Removed xarchie [kristerw 2004-06-01]
+	Removed netatalk-umic [kristerw 2004-06-01]
+	Removed netatalk-asun [kristerw 2004-06-01]
+	Removed openssh+gssapi [kristerw 2004-06-01]
+	Removed ssh [kristerw 2004-06-01]
+	Removed c++rt0 [kristerw 2004-06-01]
+	Removed sysbuild [kristerw 2004-06-01]
+	Removed arena [kristerw 2004-06-01]
+	Removed Mosaic [kristerw 2004-06-01]
+	Removed lesstif12 [kristerw 2004-06-01]
