@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/07/17 21:41:42 grant Exp $
+# $NetBSD: Makefile,v 1.13 2003/10/05 07:39:14 hamajima Exp $
 #
 
 DISTNAME=       mgl2-alpha-020
@@ -11,12 +11,10 @@ MAINTAINER=     fk200329@fsinet.or.jp
 HOMEPAGE=	http://www.NetBSD.org/Ports/hpcmips/mgl2.html
 COMMENT=	Graphics library for NEC Mobilegear/PocketBSD, NetBSD/hpcmips
 
-DEPENDS+= 	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.2.1:../../graphics/png
-DEPENDS+=	libungif>=4.1.0:../../graphics/libungif
 DEPENDS+=	mglfonts>=0.1:../../fonts/mglfonts
 
-USE_GMAKE= yes
+USE_GMAKE=	yes
+USE_BUILDLINK2=	yes
 
 MGLDOCS=	im.doc mgl1.doc shlib.doc
 MGL2DOCS=	AppConvert.doc Build.doc CALIBRATE.doc CHANGES.doc \
@@ -107,4 +105,7 @@ post-install:
 	@${INSTALL_DATA} ${WRKSRC}/nine/${i} ${PREFIX}/share/doc/mgl2/nine/
 .endfor
 
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/libungif/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
