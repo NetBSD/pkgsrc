@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2002/11/26 09:39:10 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2002/11/26 10:00:35 jlam Exp $
 #
 
 DISTNAME=	bash-2.05b
@@ -72,8 +72,8 @@ LDFLAGS=	# empty
 LIBINTL_LIST!=	set ${GETTEXT_PREFIX}/lib/libintl.*; ${ECHO} $$1
 .if ${LIBINTL_LIST} != "${GETTEXT_PREFIX}/lib/libintl.*"
 LDFLAGS+=	-L${GETTEXTDIR}/lib
-.if ${_USE_RPATH} == "yes"
+.  if ${_USE_RPATH} == "yes"
 LDFLAGS+=	-Wl,-R${GETTEXT_PREFIX}/lib
-.endif
+.  endif
 LIBS+=		${LDFLAGS} -lintl
 .endif
