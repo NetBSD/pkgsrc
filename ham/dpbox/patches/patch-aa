@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2000/05/21 13:40:31 wulf Exp $
+$NetBSD: patch-aa,v 1.3 2003/06/07 15:20:31 jmmv Exp $
 
---- Makefile.netbsd.orig	Thu Apr 27 22:18:57 2000
-+++ Makefile.netbsd	Sun May 21 22:50:24 2000
+--- Makefile.netbsd.orig	2000-04-27 14:48:57.000000000 +0200
++++ Makefile.netbsd
 @@ -1,9 +1,9 @@
  ###############################################################################
  #                                                                             #
@@ -15,14 +15,14 @@ $NetBSD: patch-aa,v 1.2 2000/05/21 13:40:31 wulf Exp $
  # Author :     Berndt Josef Wulf, VK5ABN                                      #
  #                                                                             #
  ###############################################################################
-@@ -19,11 +19,13 @@
+@@ -19,11 +19,12 @@ INSTALL_DATA	= ${INSTALL} -m 444
  INSTALL_CONF	= ${INSTALL} -m 440
  MKDIR		= mkdir -p
  LN		= ln -sf
 -
+-prefix		= /usr/pkg
 +CHMOD		= /bin/chmod
 +SED		= /usr/bin/sed
- prefix		= /usr/pkg
  bindir		= $(prefix)/bin
  sbindir		= $(prefix)/sbin
  confdir		= $(prefix)/share/dpbox/conf
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.2 2000/05/21 13:40:31 wulf Exp $
  docdir		= $(prefix)/share/doc/dpbox
  landir		= $(prefix)/share/dpbox/language
  spooldir	= /var/spool/dpbox
-@@ -100,7 +102,8 @@
+@@ -100,7 +101,8 @@ install: all
  	$(INSTALL_PROGRAM) dpputlinks $(bindir)
  	$(INSTALL_PROGRAM) dpcodeconv $(bindir)
  	$(INSTALL_PROGRAM) dpmybbs $(bindir)
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.2 2000/05/21 13:40:31 wulf Exp $
  
  	$(MKDIR) $(docdir)
  	$(INSTALL_DATA) ../document/* $(docdir)
-@@ -148,6 +151,9 @@
+@@ -148,6 +150,9 @@ install: all
  	  echo "*  and manually adjust the configuration files where      *"; \
  	  echo "*  necessary.                                             *"; \
  	  echo "*                                                         *"; \
@@ -50,7 +50,7 @@ $NetBSD: patch-aa,v 1.2 2000/05/21 13:40:31 wulf Exp $
  	  echo "***********************************************************"; \
  	else \
  	  $(MKDIR) $(confdir); \
-@@ -158,24 +164,45 @@
+@@ -158,24 +163,45 @@ install: all
  	  $(INSTALL_CONF) ../sf/* $(confdir)/sf; \
  	fi
  
@@ -114,7 +114,7 @@ $NetBSD: patch-aa,v 1.2 2000/05/21 13:40:31 wulf Exp $
  
  clean:
  	$(RM)  *.o *~ .*~ *.orig *.bak *.s *.core  
-@@ -193,4 +220,3 @@
+@@ -193,4 +219,3 @@ dep:
  ifeq (.depend,$(wildcard .depend))
  include .depend
  endif
