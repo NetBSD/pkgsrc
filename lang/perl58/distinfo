@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/07/22 21:50:37 jlam Exp $
+
+SHA1 (perl-5.8.0.tar.gz) = be1e05876ca734464f8a770d61b1f15cca555719
+Size (perl-5.8.0.tar.gz) = 11023084 bytes
+SHA1 (patch-ah) = 72f8f113eacd913f72cf50dc37ac0bb95615b102
