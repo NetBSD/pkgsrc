@@ -1,16 +1,30 @@
-$NetBSD: patch-ae,v 1.2 2002/11/13 20:15:12 jschauma Exp $
+$NetBSD: patch-ae,v 1.3 2003/06/23 19:48:22 jtb Exp $
 
---- EnginePl/gp_config.h.orig	Wed Nov 13 13:35:46 2002
-+++ EnginePl/gp_config.h	Wed Nov 13 13:36:56 2002
-@@ -30,7 +30,10 @@
- /* #undef HAVE_SYS_IOCTL_COMPAT_H */
- 
+--- EnginePl/gp_config.h.in.orig
++++ EnginePl/gp_config.h.in
+@@ -31,7 +31,10 @@
  /* Define if you have termios.h */
--#define HAVE_TERMIOS_H 1
-+#undef HAVE_TERMIOS_H
-+
+ #undef HAVE_TERMIOS_H
+ 
+-/* Define if you have termios.h */
 +/* Define if you have termio.h */
 +#undef HAVE_TERMIO_H
++
++/* Define if you have malloc.h */
+ #undef HAVE_MALLOC_H
  
- /* Define if you have termios.h */
- #define HAVE_MALLOC_H 1
+ /* Define if you have a working `mmap' system call */
+@@ -151,9 +154,12 @@
+ /* Define if the system is a powerpc/linux */
+ #undef M_powerpc_linux
+ 
+-/* Define if the system is a powerpc/bsd */
++/* Define if the system is a powerpc/darwin */
+ #undef M_powerpc_darwin
+ 
++/* Define if the system is a powerpc/bsd */
++#undef M_powerpc_bsd
++
+ 
+ 
+ /* Constant definitions */
