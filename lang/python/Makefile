@@ -3,7 +3,7 @@
 # Date created:		1 January 1998
 # Whom:			tsarna@endicor.com
 #
-# $NetBSD: Makefile,v 1.1 1998/02/01 01:48:50 tron Exp $
+# $NetBSD: Makefile,v 1.2 1998/02/01 01:54:43 tron Exp $
 #
 
 DISTNAME=	python1.5
@@ -17,7 +17,6 @@ WRKSRC=		${WRKDIR}/Python-1.5
 GNU_CONFIGURE=	yes
 MAKE_FLAGS+=	'OPT=${CFLAGS}'
 MAN1=		python.1
-
 
 # Handle the module setup file:
 #   - disable some modules on 64 bit platforms
