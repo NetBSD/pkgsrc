@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/03/21 22:54:39 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2004/04/09 23:19:37 snj Exp $
 
---- config/targets.orig	Thu Oct 10 12:02:10 2002
+--- config/targets.orig	2003-11-04 18:50:53.000000000 +0100
 +++ config/targets
-@@ -41,7 +41,7 @@ request ml-lex
+@@ -38,7 +38,7 @@ request ml-lex
  
  # build ML-Burg
  #
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2003/03/21 22:54:39 wiz Exp $
  
  # pre-compile and install the remaining components of the SML/NJ library
  # (everything except smlnj-lib.cm, aka Util, itself)
-@@ -50,7 +50,7 @@ request smlnj-lib
+@@ -47,7 +47,7 @@ request smlnj-lib
  
  # pre-compile and install CM "portable graph" utility library
  #
@@ -20,13 +20,16 @@ $NetBSD: patch-aa,v 1.2 2003/03/21 22:54:39 wiz Exp $
  
  # pre-compile and install Concurrent ML, which is a library for message-passing
  # concurrency.
-@@ -65,12 +65,12 @@ request cml-lib
+@@ -62,7 +62,7 @@ request cml-lib
  # pre-compile and install eXene, which is a library for X-Windows programming.
  # EXene requires CML.
  #
 -#request eXene
 +request eXene
  
+ # pre-compile (certain) parts of MLRISC that are not already part of the SML/NJ
+ # compiler itself
+@@ -72,7 +72,7 @@ request mlrisc
  # pre-compile and install the C-Kit, which is a library for parsing and
  # type-checking C programs
  #
@@ -35,7 +38,7 @@ $NetBSD: patch-aa,v 1.2 2003/03/21 22:54:39 wiz Exp $
  
  # pre-compile and install the ML-NLFFI Library, which is the core of
  # a new foreign function interface (where "foreign" functions are
-@@ -79,7 +79,7 @@ request cml-lib
+@@ -81,7 +81,7 @@ request mlrisc
  # the new FFI.
  # This preview release currently works only under X86/Linux.
  #
@@ -44,7 +47,7 @@ $NetBSD: patch-aa,v 1.2 2003/03/21 22:54:39 wiz Exp $
  
  # build ML-NLFFI-Gen, a program generator tool used in conjunction with
  # the new "NLFFI" foreign function interface.  The tool generates ML
-@@ -87,13 +87,13 @@ request cml-lib
+@@ -89,13 +89,13 @@ request mlrisc
  # (Requires ckit!)
  # This preview release currently works only under X86/Linux.
  #
@@ -60,7 +63,7 @@ $NetBSD: patch-aa,v 1.2 2003/03/21 22:54:39 wiz Exp $
  
  # Build and install the 'nowhere' program translator.
  # This tool translates programs with conditional patterns (where clauses) 
-@@ -101,7 +101,7 @@ request cml-lib
+@@ -103,7 +103,7 @@ request mlrisc
  # (bad) documentation.
  # (Requires the mlrisc-tools library!)
  #
