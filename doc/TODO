@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2139 2004/09/20 21:13:25 snj Exp $
+$NetBSD: TODO,v 1.2140 2004/09/20 21:58:17 snj Exp $
 
 Suggested new packages
 ======================
@@ -269,7 +269,6 @@ Suggested package updates
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
-	o giblib-1.2.4
 	o gimageview-0.2.25
 	o gimp-print-4.2.7
 	o glpk-4.6
