@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2002/08/15 06:54:54 uebayasi Exp $
+# $NetBSD: Makefile,v 1.35 2002/08/25 21:50:50 jlam Exp $
 
 DISTNAME=       zsh-4.0.6
 CATEGORIES=	shells
@@ -13,9 +13,10 @@ MAINTAINER=	uebayasi@soum.co.jp
 HOMEPAGE=	http://sunsite.dk/zsh/
 COMMENT=	The Z shell
 
-GNU_CONFIGURE=	yes
-INFO_FILES=	zsh.info
-TEXINFO_OVERRIDE=	YES
+USE_BUILDLINK2=		yes
+GNU_CONFIGURE=		yes
+INFO_FILES=		zsh.info
+TEXINFO_OVERRIDE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
