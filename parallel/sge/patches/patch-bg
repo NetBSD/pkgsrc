@@ -1,0 +1,58 @@
+$NetBSD: patch-bg,v 1.1 2004/06/15 00:26:07 dmcmahill Exp $
+
+--- source/common/basis_types.h.orig	Wed Mar  3 13:09:42 2004
++++ source/common/basis_types.h
+@@ -52,7 +52,7 @@
+ 
+ 
+ 
+-#if defined(FREEBSD)
++#if defined(FREEBSD) || defined(NETBSD)
+ #  define U32CFormat "%u"
+ #  define u32c(x)  (unsigned int)(x)
+ 
+@@ -92,7 +92,7 @@ extern "C" {
+ #  define u_long32 u_int
+ #elif defined(WIN32NATIVE)
+ #  define u_long32 unsigned long
+-#elif defined(FREEBSD)
++#elif defined(FREEBSD) || defined(NETBSD)
+ #  define u_long32 uint32_t
+ #else
+ #  define u_long32 u_long
+@@ -100,7 +100,7 @@ extern "C" {
+ 
+ /* set u32 and x32 for 64 or 32 bit machines */
+ /* uu32 for strictly unsigned, not nice, but did I use %d for an unsigned? */
+-#if defined(ALPHA) || defined(IRIX6) || defined(CRAY) || defined(SOLARIS64) || defined(NECSX4) || defined(NECSX5) || defined(ALINUX) || defined(IA64LINUX) || defined(LINUXAMD64) ||defined(FREEBSD)
++#if defined(ALPHA) || defined(IRIX6) || defined(CRAY) || defined(SOLARIS64) || defined(NECSX4) || defined(NECSX5) || defined(ALINUX) || defined(IA64LINUX) || defined(LINUXAMD64) ||defined(FREEBSD) || defined(NETBSD)
+ #  define u32    "%d"
+ #  define uu32   "%u"
+ #  define x32    "%x"
+@@ -116,7 +116,7 @@ extern "C" {
+    solaris (who else - it's IRIX?) uses long 
+    variables for uid_t, gid_t and pid_t 
+ */
+-#if defined(FREEBSD)
++#if defined(FREEBSD) || defined(NETBSD)
+ #  define uid_t_fmt "%u"
+ #else 
+ #  define uid_t_fmt pid_t_fmt
+@@ -132,7 +132,7 @@ extern "C" {
+ #  define gid_t_fmt    "%ld"
+ #elif defined(LINUX5)
+ #  define gid_t_fmt    "%hu"
+-#elif defined(LINUX6) || defined(FREEBSD)
++#elif defined(LINUX6) || defined(FREEBSD) || defined(NETBSD)
+ #  define gid_t_fmt    "%u"
+ #else
+ #  define gid_t_fmt    "%d"
+@@ -185,7 +185,7 @@ typedef char stringTlong[4*MAX_STRING_SI
+ #define SN_UNLIMITED  "%s"
+ 
+ /* used for shepherd and procfs */
+-#if defined(LINUX) || defined(SUN4) || defined(AIX4) || defined(HP10) || defined(HP11) || defined(FREEBSD)
++#if defined(LINUX) || defined(SUN4) || defined(AIX4) || defined(HP10) || defined(HP11) || defined(FREEBSD) || defined(NETBSD)
+ #  define MAX_GROUPS NGROUPS
+ #elif defined(IRIX6) || defined(SOLARIS)
+ #  define MAX_GROUPS NGROUPS_UMAX
