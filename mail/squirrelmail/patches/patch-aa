@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2003/04/15 09:25:08 martti Exp $
+$NetBSD: patch-aa,v 1.6 2003/09/01 11:51:27 martti Exp $
 
---- config/config_default.php.orig	Sat Jan  4 08:01:24 2003
-+++ config/config_default.php	Tue Apr 15 11:31:46 2003
+--- config/config_default.php.orig	Mon Jul  7 10:28:21 2003
++++ config/config_default.php	Mon Sep  1 09:41:14 2003
 @@ -193,7 +193,7 @@
   * false. (Cyrus works fine whether it's true OR false).
   */
@@ -12,10 +12,10 @@ $NetBSD: patch-aa,v 1.5 2003/04/15 09:25:08 martti Exp $
  /**
   * This option controls what character set is used when sending mail
 @@ -220,7 +220,7 @@
-  *   $data_dir = '../data/';
+  *   $data_dir = SM_PATH . 'data/';
   */
  global $data_dir;
--$data_dir = '../data/';
+-$data_dir = SM_PATH . 'data/';
 +$data_dir = '@USER_PREFS_DIR@/';
  
  /**
