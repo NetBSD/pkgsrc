@@ -1,0 +1,9 @@
+--- ./xtp/Imakefile~	Sun Jan  4 05:01:33 1998
++++ ./xtp/Imakefile	Sat Jan 24 19:20:19 1998
+@@ -41,5 +41,5 @@
+ 
+ NormalProgramTarget(xtp,$(XTPObjects),NullParameter,NullParameter,NullParameter)
+ InstallProgram(xtp,$(LOCALDIR))
+-InstallMultipleMan(xtp.1,$(LOCALMAN))
++InstallMultipleMan(xtp,$(LOCALMAN1))
+ DependTarget()
