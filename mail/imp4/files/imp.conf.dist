@@ -1,12 +1,12 @@
-# $NetBSD: imp.conf.dist,v 1.1.1.1 2005/01/16 21:36:28 adrianp Exp $
+# $NetBSD: imp.conf.dist,v 1.2 2005/02/17 11:56:26 adrianp Exp $
 #
 # IMP configuration file fragment for Apache
 
 <IfModule mod_alias.c>
-    Alias /imp/ "/usr/pkg/share/horde/imp/"
+    Alias /imp/ "@IMPDIR@/"
 </IfModule>
 
-<Directory "/usr/pkg/share/horde">
+<Directory "@IMPDIR@">
     DirectoryIndex index.php
     <IfModule mod_php4.c>
         php_flag file_uploads On
