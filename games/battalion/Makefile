@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/09/22 06:11:37 garbled Exp $
+# $NetBSD: Makefile,v 1.9 1998/09/30 20:03:18 tron Exp $
 #
 
 DISTNAME=	battalion
@@ -13,7 +13,7 @@ NOT_FOR_ARCHS=	alpha	# relies on Mesa (gcc)
 MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.evl.uic.edu/aej/AndyBattalion.html
 
-DEPENDS+=	Mesa-2.6:../../graphics/Mesa
+DEPENDS+=	Mesa-3.0:../../graphics/Mesa
 
 EXTRACT_ONLY=	battalionSource1.4.tar.Z
 USE_X11=	yes
