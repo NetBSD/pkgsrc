@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2002/04/10 04:22:59 itojun Exp $
+# $NetBSD: Makefile,v 1.186 2002/04/10 08:12:44 itojun Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -78,7 +78,6 @@ SUBDIR+=	lynx
 SUBDIR+=	lynx-current
 SUBDIR+=	make_album
 SUBDIR+=	mozilla
-SUBDIR+=	mozilla-flashplugin
 SUBDIR+=	navigator
 SUBDIR+=	navigator3
 SUBDIR+=	neon
