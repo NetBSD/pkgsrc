@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/05 19:47:19 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/04 22:24:54 jmmv Exp $
 bin/menu2wm
 man/man1/menu2wm.1
 share/doc/${PKGNAME}/CHANGES
@@ -7,5 +7,7 @@ share/doc/${PKGNAME}/PEOPLE
 share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/TODO
 share/examples/${PKGNAME}/ex1.xml
+share/xml/menu2wm.dtd
+@comment in xmlcatmgr: @dirrm share/xml
 @dirrm share/examples/${PKGNAME}
 @dirrm share/doc/${PKGNAME}
