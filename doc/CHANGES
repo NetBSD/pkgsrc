@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8033 2004/11/27 00:06:40 epg Exp $
+$NetBSD: CHANGES,v 1.8034 2004/11/27 00:07:37 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5469,6 +5469,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-IO-Interface to 0.98 [he 2004-11-26]
 	Updated brandybasic to 1.0.16 [abs 2004-11-26]
 	Updated cambeva to 2.2 [abs 2004-11-26]
-	Updated fvwm-devel to 2.5.12 [epg 2004-11-27]
+	Updated fvwm-devel to 2.5.12 [epg 2004-11-26]
 	Updated gnuserv to 3.12.7 [epg 2004-11-27]
 
