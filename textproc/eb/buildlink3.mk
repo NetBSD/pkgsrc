@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/12/06 09:09:48 uebayasi Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/12/16 13:11:19 uebayasi Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EB_BUILDLINK3_MK:=	${EB_BUILDLINK3_MK}+
@@ -15,7 +15,8 @@ _EB_REQD=		3.3.2nb1
 # XXX We need something generic.
 .include "../../mk/bsd.prefs.mk"
 PKG_SYSCONFDIR.eb!=						\
-	if ${PKG_ADMIN} pmatch 'eb>=${_EB_REQD}' 2>/dev/null; then \
+	if ${PKG_ADMIN} pmatch 'eb>=${_EB_REQD}'		\
+	    `${PKG_INFO} -e eb` 2>/dev/null; then		\
 		${PKG_INFO} -B eb 2>/dev/null |			\
 		    ${SED} -ne '/^PKG_SYSCONFDIR/ {		\
 			s/^PKG_SYSCONFDIR=//; p; }';		\
