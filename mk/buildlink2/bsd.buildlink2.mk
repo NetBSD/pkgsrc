@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.67 2002/12/26 17:08:56 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.68 2002/12/26 17:17:32 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -629,6 +629,12 @@ _BLNK_WRAP_PRIVATE_CACHE.LD=		${BUILDLINK_DIR}/bin/.ld-cache
 _BLNK_WRAP_PRIVATE_POST_CACHE.LD=	${BUILDLINK_DIR}/bin/.ld-post-cache
 _BLNK_WRAP_POST_LOGIC.LD=		${BUILDLINK_DIR}/bin/.ld-logic
 
+_BLNK_WRAP_PRIVATE_PRE_CACHE.LIBTOOL=	${_BLNK_WRAP_PRIVATE_PRE_CACHE}
+_BLNK_WRAP_PRIVATE_CACHE_ADD.LIBTOOL=	${BUILDLINK_DIR}/bin/.libtool-cache-add
+_BLNK_WRAP_PRIVATE_CACHE.LIBTOOL=	${BUILDLINK_DIR}/bin/.libtool-cache
+_BLNK_WRAP_PRIVATE_POST_CACHE.LIBTOOL=	${BUILDLINK_DIR}/bin/.libtool-post-cache
+_BLNK_WRAP_POST_LOGIC.LIBTOOL=		${BUILDLINK_DIR}/bin/.libtool-logic
+
 # Allow BUILDLINK_SETENV.<wrappee> to override _BLNK_WRAP_SETENV.<wrappee>.
 .for _wrappee_ in ${_BLNK_WRAPPEES}
 .  if defined(BUILDLINK_SETENV.${_wrappee_})
@@ -804,6 +810,11 @@ ${_BLNK_WRAP_PRIVATE_POST_CACHE.LD}:					\
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CP} -f ${.ALLSRC} ${.TARGET}
 
+${_BLNK_WRAP_PRIVATE_POST_CACHE.LIBTOOL}:				\
+		${.CURDIR}/../../mk/buildlink2/libtool-post-cache
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CP} -f ${.ALLSRC} ${.TARGET}
+
 ${_BLNK_WRAP_PRE_CACHE}: ${.CURDIR}/../../mk/buildlink2/pre-cache
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CP} -f ${.ALLSRC} ${.TARGET}
@@ -857,6 +868,10 @@ ${_BLNK_WRAP_LOGIC_TRANSFORM}:						\
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_BLNK_WRAP_POST_LOGIC.LD}: ${.CURDIR}/../../mk/buildlink2/ld-logic
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${CP} -f ${.ALLSRC} ${.TARGET}
+
+${_BLNK_WRAP_POST_LOGIC.LIBTOOL}: ${.CURDIR}/../../mk/buildlink2/libtool-logic
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CP} -f ${.ALLSRC} ${.TARGET}
 
