@@ -1,4 +1,4 @@
-# $NetBSD: defs.OpenBSD.mk,v 1.35 2004/06/18 11:22:41 kristerw Exp $
+# $NetBSD: defs.OpenBSD.mk,v 1.36 2004/07/21 21:50:41 xtraeme Exp $
 #
 # Variable definitions for the OpenBSD operating system.
 
@@ -174,11 +174,10 @@ SERIAL_DEVICES?=	/dev/null
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
-# FIXME: Adjust to work on this system and enable the lines below.
-#.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
-#_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
-#CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
-#.endif
+.if defined(GNU_CONFIGURE) && defined(USE_LIBTOOL)
+_OPSYS_MAX_CMDLEN!=	/sbin/sysctl -n kern.argmax
+CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN}
+.endif
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
 # (it defaults to 'no' as per bsd.pkg.defaults.mk).
