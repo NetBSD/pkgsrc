@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2003/11/02 05:36:56 grant Exp $
+@comment $NetBSD: PLIST,v 1.9.4.1 2004/05/26 10:51:31 grant Exp $
 bin/checkgid
 bin/dbmmanage
 bin/htdigest
@@ -83,6 +83,7 @@ share/httpd/htdocs/index.html.el
 share/httpd/htdocs/index.html.en
 share/httpd/htdocs/index.html.es
 share/httpd/htdocs/index.html.fr
+share/httpd/htdocs/index.html.hu
 share/httpd/htdocs/index.html.he.iso8859-8
 share/httpd/htdocs/index.html.it
 share/httpd/htdocs/index.html.ja.jis
@@ -103,7 +104,6 @@ share/httpd/htdocs/index.html.ru.ucs4
 share/httpd/htdocs/index.html.ru.utf8
 share/httpd/htdocs/index.html.se
 share/httpd/htdocs/index.html.zh-tw.big5
-share/httpd/htdocs/manual/FAQ.html
 share/httpd/htdocs/manual/LICENSE
 share/httpd/htdocs/manual/bind.html.en
 share/httpd/htdocs/manual/bind.html.fr
@@ -174,7 +174,9 @@ share/httpd/htdocs/manual/invoking.html.html
 share/httpd/htdocs/manual/keepalive.html.en
 share/httpd/htdocs/manual/keepalive.html.html
 share/httpd/htdocs/manual/keepalive.html.ja.jis
-share/httpd/htdocs/manual/location.html
+share/httpd/htdocs/manual/location.html.en
+share/httpd/htdocs/manual/location.html.html
+share/httpd/htdocs/manual/location.html.ja.jis
 share/httpd/htdocs/manual/logs.html
 share/httpd/htdocs/manual/man-template.html
 share/httpd/htdocs/manual/misc/API.html
@@ -243,7 +245,9 @@ share/httpd/htdocs/manual/mod/mod_auth_anon.html
 share/httpd/htdocs/manual/mod/mod_auth_db.html
 share/httpd/htdocs/manual/mod/mod_auth_dbm.html
 share/httpd/htdocs/manual/mod/mod_auth_digest.html
-share/httpd/htdocs/manual/mod/mod_autoindex.html
+share/httpd/htdocs/manual/mod/mod_autoindex.html.en
+share/httpd/htdocs/manual/mod/mod_autoindex.html.html
+share/httpd/htdocs/manual/mod/mod_autoindex.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_browser.html
 share/httpd/htdocs/manual/mod/mod_cern_meta.html
 share/httpd/htdocs/manual/mod/mod_cgi.html.en
@@ -273,6 +277,8 @@ share/httpd/htdocs/manual/mod/mod_log_common.html
 share/httpd/htdocs/manual/mod/mod_log_config.html.en
 share/httpd/htdocs/manual/mod/mod_log_config.html.html
 share/httpd/htdocs/manual/mod/mod_log_config.html.ja.jis
+share/httpd/htdocs/manual/mod/mod_log_forensic.html.en
+share/httpd/htdocs/manual/mod/mod_log_forensic.html.html
 share/httpd/htdocs/manual/mod/mod_log_referer.html
 share/httpd/htdocs/manual/mod/mod_mime.html.en
 share/httpd/htdocs/manual/mod/mod_mime.html.html
@@ -345,7 +351,6 @@ share/httpd/htdocs/manual/programs/suexec.html.en
 share/httpd/htdocs/manual/programs/suexec.html.html
 share/httpd/htdocs/manual/programs/suexec.html.ja.jis
 share/httpd/htdocs/manual/readme-tpf.html
-share/httpd/htdocs/manual/search/manual-index.cgi
 share/httpd/htdocs/manual/sections.html.en
 share/httpd/htdocs/manual/sections.html.html
 share/httpd/htdocs/manual/sections.html.ja.jis
@@ -391,6 +396,7 @@ share/httpd/htdocs/manual/win_service.html.en
 share/httpd/htdocs/manual/win_service.html.html
 share/httpd/htdocs/manual/win_service.html.ja.jis
 share/httpd/htdocs/manual/windows.html.en
+share/httpd/htdocs/manual/windows.html.html
 share/httpd/htdocs/manual/windows.html.ja.jis
 share/httpd/htdocs/sitedrivenby.gif
 share/httpd/icons/README
@@ -614,7 +620,6 @@ share/httpd/icons/world2.png
 @dirrm share/httpd/icons/small
 @dirrm share/httpd/icons
 @dirrm share/httpd/htdocs/manual/vhosts
-@dirrm share/httpd/htdocs/manual/search
 @dirrm share/httpd/htdocs/manual/programs
 @dirrm share/httpd/htdocs/manual/mod
 @dirrm share/httpd/htdocs/manual/misc
