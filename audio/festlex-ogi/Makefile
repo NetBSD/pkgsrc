@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/04/04 22:03:15 proff Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/14 04:50:21 proff Exp $
 
 DISTNAME=	festlex-ogi-1.4
 WRKSRC=		${WRKDIR}/festival
@@ -12,7 +12,7 @@ HOMEPAGE=	http://cslu.cse.ogi.edu/tts
 DEPENDS+=	festival-1.3.1:../festival \
 		festlex-poslex-1.3.1:../festlex-poslex
 
-LICENSE=	no-commercial-use
+LICENSE=	non-commercial-use
 
 NO_BUILD=	yes
 
