@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2001/07/10 01:17:33 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2001/07/23 13:29:40 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -50,6 +50,7 @@ SUBDIR+=	festvox-tll
 SUBDIR+=	festvox-us1
 SUBDIR+=	festvox-us2
 SUBDIR+=	festvox-us3
+SUBDIR+=	flac
 SUBDIR+=	freezetag
 SUBDIR+=	gdcd
 SUBDIR+=	gmodplay
