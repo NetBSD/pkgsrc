@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/01/14 17:44:48 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2002/02/24 17:22:20 wiz Exp $
 #
 
 DISTNAME=	linuxq3apoint-1.17.x86
@@ -13,7 +13,7 @@ COMMENT=	Quake 3 Arena -- first person shooter (binary only, no data files)
 
 DEPENDS+=	suse_base>=6.3:../../emulators/suse_base
 DEPENDS+=	suse_x11>=6.3:../../emulators/suse_x11
-DEPENDS+=	suse_glx-6.4:../../emulators/suse_glx
+DEPENDS+=	suse_glx>=6.4:../../emulators/suse_glx
 
 CONFLICTS=	quake3arena-demo-[0-9]*
 
