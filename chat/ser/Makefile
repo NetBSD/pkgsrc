@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/23 22:08:02 itojun Exp $
+# $NetBSD: Makefile,v 1.2 2003/08/28 03:50:15 jmc Exp $
 #
 
 DISTNAME=	ser-0.8.10_src
@@ -17,4 +17,5 @@ USE_GMAKE=	YES
 
 .include "../../databases/mysql-client/buildlink2.mk"
 .include "../../textproc/expat/buildlink2.mk"
+.include "../../mk/pthread.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
