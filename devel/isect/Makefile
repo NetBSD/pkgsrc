@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/02 01:20:43 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2003/06/23 11:16:49 seb Exp $
 #
 
 DISTNAME=	isect-1.6.2
@@ -16,8 +16,13 @@ USE_PKGINSTALL=	yes
 USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 PTHREAD_OPTS+=	require
+USE_PKGINSTALL=	YES
+USE_NEW_TEXINFO=	YES
+INFO_FILES=	isect.info
 
 RCD_SCRIPTS=	isect
+
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 
 DOCDIR=		${PREFIX}/share/doc/isect
 EGDIR=		${PREFIX}/share/examples/isect
@@ -33,5 +38,4 @@ post-install:
 
 .include "../../www/libwww/buildlink2.mk"
 .include "../../mk/pthread.buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
