@@ -1,13 +1,42 @@
-$NetBSD: patch-ah,v 1.1 1999/07/06 07:51:05 jlam Exp $
+$NetBSD: patch-ah,v 1.2 2000/01/15 18:39:31 jlam Exp $
 
---- form/form.h.orig	Wed Feb 11 07:13:43 1998
-+++ form/form.h	Fri Jul  2 02:46:17 1999
-@@ -33,7 +33,7 @@
- #ifndef FORM_H
- #define FORM_H
+--- tack/Makefile.in.orig	Sat Sep 18 19:33:48 1999
++++ tack/Makefile.in	Sat Jan 15 11:25:18 2000
+@@ -26,11 +26,13 @@
+ libdir		= @libdir@
+ includedir	= @includedir@
+ datadir		= @datadir@
++mandir		= @mandir@
  
--#include <curses.h>
-+#include <ncurses.h>
- #include <eti.h>
+ ticdir		= $(datadir)/terminfo
  
- #ifdef __cplusplus
+ INSTALL		= @INSTALL@
+ INSTALL_PROGRAM	= @INSTALL_PROGRAM@
++INSTALL_DATA	= @INSTALL_DATA@
+ 
+ AWK		= @AWK@
+ LN_S		= @LN_S@
+@@ -51,7 +53,7 @@
+ CFLAGS_DEFAULT	= $(CFLAGS_@DFT_UPR_MODEL@)
+ 
+ LD		= @LD@
+-LINK		= $(CC)
++LINK		= @LINK_PROGS@ $(CC)
+ LDFLAGS		= @EXTRA_LDFLAGS@ \
+ 		@PROG_ARGS@ @LDFLAGS@ @LD_MODEL@ @LIBS@ @EXTRA_LIBS@
+ 
+@@ -84,10 +86,12 @@
+ uninstall.libs:
+ 
+ install.tack: $(PROGS) $(INSTALL_PREFIX)$(bindir)
+-	$(INSTALL_PROGRAM) tack$x    $(INSTALL_PREFIX)$(bindir)/tack$x
++	$(LIBTOOL) $(INSTALL_PROGRAM) tack$x    $(INSTALL_PREFIX)$(bindir)/tack$x
++	$(INSTALL_DATA) tack.1 $(INSTALL_PREFIX)$(mandir)/man1/tack.1
+ 
+ uninstall.tack:
+-	-@rm -f $(INSTALL_PREFIX)$(bindir)/tack$x
++	-@$(LIBTOOL) rm -f $(INSTALL_PREFIX)$(bindir)/tack$x
++	-@rm -f $(INSTALL_PREFIX)$(mandir)/man1/tack.1
+ 
+ $(INSTALL_PREFIX)$(bindir) :
+ 	$(srcdir)/../mkinstalldirs $@

@@ -1,12 +1,13 @@
-$NetBSD: patch-ac,v 1.3 1999/07/06 07:51:04 jlam Exp $
+$NetBSD: patch-ac,v 1.4 2000/01/15 18:39:30 jlam Exp $
 
---- misc/run_tic.sh.orig	Wed Feb 11 07:13:50 1998
-+++ misc/run_tic.sh	Tue Jun 29 19:03:00 1999
-@@ -120,6 +120,7 @@
- # to find terminfo under /usr/lib.  That is, we'll _try_ to do that.  Not
- # all systems support symbolic links, and those that do provide a variety
- # of options for 'test'.
-+exit 0 # don't do this
- if test "$TICDIR" != "$TERMINFO" ; then
- 	( rm -f $TICDIR 2>/dev/null )
- 	if ( cd $TICDIR 2>/dev/null )
+--- man/Makefile.in.orig	Wed Feb 11 07:13:49 1998
++++ man/Makefile.in	Sat Jan 15 11:24:46 2000
+@@ -63,7 +63,7 @@
+ # We compose terminfo.5 from the real sources...
+ CAPLIST=$(srcdir)/../include/Caps
+ terminfo.5: $(srcdir)/terminfo.head $(CAPLIST) $(srcdir)/terminfo.tail Makefile $(srcdir)/MKterminfo.sh
+-	sh $(srcdir)/MKterminfo.sh $(srcdir)/terminfo.head $(CAPLIST) $(srcdir)/terminfo.tail >terminfo.5
++	sh $(srcdir)/MKterminfo.sh $(srcdir)/terminfo.head $(CAPLIST) $(srcdir)/terminfo.tail | tbl >terminfo.5
+ 
+ mostlyclean :
+ 	-rm -f core tags TAGS *~ *.ln *.atac trace
