@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.6 2002/04/05 04:50:23 mycroft Exp $
+$NetBSD: patch-af,v 1.7 2002/04/06 11:16:44 wiz Exp $
 
---- configure.in.orig	Mon Mar 18 23:01:26 2002
-+++ configure.in	Thu Apr  4 18:48:21 2002
+--- configure.in.orig	Tue Mar 19 00:01:26 2002
++++ configure.in
 @@ -1512,7 +1512,7 @@
    if test "$have_kerberos5" = yes ; then
      # from Matt Knopp <mhat@infocalypse.netlag.com>
@@ -11,3 +11,12 @@ $NetBSD: patch-af,v 1.6 2002/04/05 04:50:23 mycroft Exp $
    elif test "$have_kerberos" = yes ; then
      # from Tim Showalter <tjs@psaux.com> for FreeBSD 4.2
      PASSWD_LIBS="$PASSWD_LIBS -lkrb -ldes -lcom_err"
+@@ -2988,7 +2988,7 @@
+   GTK_ICONDIR='$(GNOME_DATADIR)/pixmaps'
+ elif test "$have_gtk" = yes; then
+   # should this be "$(prefix)/share/pixmaps"? But /usr/X11R6/share/ is wrong...
+-  GTK_ICONDIR='/usr/share/pixmaps'
++  GTK_ICONDIR='$(prefix)/share/pixmaps'
+ else
+   GTK_ICONDIR=''
+ fi
