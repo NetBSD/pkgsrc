@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.308 2002/10/19 03:51:37 jlam Exp $
+$NetBSD: CHANGES,v 1.309 2002/10/19 14:46:34 seb Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3328,3 +3328,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated tcl-postgresql to 7.2.3 [jlam 2002-10-19]
 	Updated tk-postgresql to 7.2.3 [jlam 2002-10-19]
 	Updated odbc-postgresql to 7.2.3 [jlam 2002-10-19]
+	Updated p5-XML-Node to 0.10nb2 [seb 2002-10-19]
