@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/09/04 18:33:46 christos Exp $
+# $NetBSD: Makefile,v 1.2 1998/09/12 22:13:02 frueauf Exp $
 
 DISTNAME=	mush-7.2.6.b4
 CATEGORIES=	mail
@@ -16,6 +16,7 @@ STD_PATCH_FILES=patch-7.2.6-alpha-1 \
 		patch-7.2.6-beta-3 \
 		patch-7.2.6-beta-4
 DISTFILES=	${EXTRACT_ONLY} ${STD_PATCH_FILES}
+DIST_SUBDIR=	mush
 
 RESTRICTED=	"Z-Code license"
 MIRROR_DISTFILE= no
