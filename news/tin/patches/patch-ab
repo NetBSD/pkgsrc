@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2001/05/23 13:15:34 dillo Exp $
+
+--- src/active.c.orig	Tue May 22 14:01:24 2001
++++ src/active.c	Tue May 22 14:00:54 2001
+@@ -110,6 +110,9 @@
+ 
+ 	vWriteNewsrc ();
+ 	read_news_active_file ();
++#if !defined(INDEX_DAEMON) && defined(HAVE_MH_MAIL_HANDLING)
++        read_mail_active_file ();
++#endif /* !INDEX_DAEMON && HAVE_MH_MAIL_HANDLING */
+ 
+ 	if (read_cmd_line_groups ())
+ 		command_line = TRUE;

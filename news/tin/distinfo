@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.3 2001/05/21 00:28:43 hubertf Exp $
+$NetBSD: distinfo,v 1.4 2001/05/23 13:15:34 dillo Exp $
 
 SHA1 (tin-1.4.5.tar.bz2) = e28e05e080cf05ed9576cacbc96ad984633f8a87
 Size (tin-1.4.5.tar.bz2) = 690031 bytes
 SHA1 (patch-aa) = da46ab8dee8c3319a5e8fd18580cd573b611cbca
+SHA1 (patch-ab) = 31d7ce5fa40cff4ec34e87d5547e0943ca58a8a1
+SHA1 (patch-ac) = 072fc6aab131e515262e204bb87ef0cf999d7c68
