@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.2 2002/08/25 21:52:31 jlam Exp $
+$NetBSD: patch-ae,v 1.3 2004/06/02 12:48:18 recht Exp $
 
---- src/command.c.orig	Thu Sep  6 18:38:07 2001
-+++ src/command.c
+--- src/command.c.orig	2004-05-20 12:10:08.000000000 +0200
++++ src/command.c	2004-05-20 12:09:37.000000000 +0200
 @@ -1146,6 +1146,11 @@
      num_fds = getdtablesize();
  #endif
@@ -14,7 +14,34 @@ $NetBSD: patch-ae,v 1.2 2002/08/25 21:52:31 jlam Exp $
  #ifdef META8_OPTION
      meta_char = (Options & Opt_meta8 ? 0x80 : 033);
      if (rs_modifier
-@@ -2024,7 +2029,7 @@
+@@ -1763,16 +1768,21 @@
+ 		}
+ 		break;
+ 
++	    case XK_F1:		/* "\033OP" */
++	    case XK_F2:		/* "\033OQ" */
++	    case XK_F3:		/* "\033OR" */
++	    case XK_F4:		/* "\033OS" */
++		len = 3;
++		STRCPY(kbuf, "\033OP");
++		kbuf[2] += (keysym - XK_F1);
++		break;
++
+ #define FKEY(n, fkey)							\
+     len = 5;								\
+     sprintf((char *) kbuf,"\033[%02d~", (int)((n) + (keysym - fkey)))
+ 
+-	    case XK_F1:		/* "\033[11~" */
+-	    case XK_F2:		/* "\033[12~" */
+-	    case XK_F3:		/* "\033[13~" */
+-	    case XK_F4:		/* "\033[14~" */
+ 	    case XK_F5:		/* "\033[15~" */
+-		FKEY(11, XK_F1);
++		FKEY(15, XK_F5);
+ 		break;
+ 
+ 	    case XK_F6:		/* "\033[17~" */
+@@ -2024,7 +2034,7 @@
  #endif
  
      /* See if we can read from the application */
