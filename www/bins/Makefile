@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2002/07/30 02:06:30 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2002/07/30 09:46:32 dmcmahill Exp $
 #
 
 DISTNAME=	bins-1.1.10
+PKGREVISION=	1
 CATEGORIES=	www graphics
 MASTER_SITES=	http://jsautret.free.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,6 +30,11 @@ USE_PERL5=	YES
 # have previous versions in pkgsrc.
 REPLACE_PERL=	bins bins_edit bins-edit-gui bins_txt2xml
 
+post-patch:
+	${MV} ${WRKSRC}/bins ${WRKSRC}/bins.bak
+	${SED} 's;@pkgsysconfdir@;${PKG_SYSCONFDIR};g' \
+		${WRKSRC}/bins.bak > ${WRKSRC}/bins
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bins ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bins_edit ${PREFIX}/bin
@@ -40,6 +46,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bins/templates.default
 	${INSTALL_DATA} ${WRKSRC}/templates/*.html \
 		${PREFIX}/share/examples/bins/templates.default
+	${INSTALL_DATA} ${WRKSRC}/binsrc \
+		${PREFIX}/share/examples/bins
 	for lang in de fr it pl; do \
 		${INSTALL_DATA} ${WRKSRC}/intl/$$lang.mo \
 		${PREFIX}/${PKGLOCALEDIR}/locale/$$lang/LC_MESSAGES/bins.mo; \
