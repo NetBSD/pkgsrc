@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2001/07/24 23:56:49 jtb Exp $
+# $NetBSD: Makefile,v 1.19 2002/07/29 23:38:09 perry Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/08/27 19:31:37 jmacd Exp
 #
 
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://s48.org
-COMMENT=		The Scheme Underground's implementation of R4RS
+COMMENT=		The Scheme Underground's implementation of R5RS
 
 NOT_FOR_PLATFORM=	*-*-alpha	# *severe* problems.  Bus error, alignment
 
