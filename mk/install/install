@@ -1,6 +1,6 @@
 # start of install
 #
-# $NetBSD: install,v 1.22 2003/09/05 11:34:27 jlam Exp $
+# $NetBSD: install,v 1.23 2003/09/12 05:15:07 jlam Exp $
 
 if [ -z "${CONF_FILES}" -a -z "${CONF_FILES_PERMS}" -a			\
      -z "${SUPPORT_FILES}" -a -z "${SUPPORT_FILES_PERMS}" -o		\
@@ -378,9 +378,7 @@ VIEW-INSTALL)
 		(${GREP} -v ${PKG_SHELL} /etc/shells.pkgsrc."$$" || ${TRUE}; ${ECHO} ${PKG_SHELL}) > /etc/shells
 		${RM} /etc/shells.pkgsrc."$$"
 	fi
-	if [ "${_PKG_CONFIG}" = "YES" -a				\
-	     -n "${PKG_SYSCONFVIEWBASE}" -a				\
-	     -n "${PKG_SYSCONFDEPOTBASE}" ]; then
+	if [ "${_PKG_CONFIG}" = "YES" -a -n "${PKG_SYSCONFDEPOTBASE}" ]; then
 		if [ -n "${CONF_FILES}" -o				\
 		     -n "${CONF_FILES_PERMS}" -o			\
 		     -n "${SUPPORT_FILES}" -o				\
