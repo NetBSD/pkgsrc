@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1999/03/22 16:08:33 bad Exp $
+# $NetBSD: Makefile,v 1.19 1999/04/13 15:31:07 agc Exp $
 # FreeBSD Id: Makefile,v 1.26 1997/06/27 23:03:27 ache Exp 
 #
 
@@ -8,12 +8,7 @@ DISTNAME=       bash-${V}
 CATEGORIES=	shells
 MASTER_SITES=	ftp://slc2.ins.cwru.edu/pub/dist/  \
 		${MASTER_SITE_GNU:=/bash/}
-
-.include "../../mk/bsd.prefs.mk"
-
-.if !defined(NOPORTDOCS)
 DISTFILES=      bash-${V}.tar.gz bash-doc-${DV}.tar.gz
-.endif
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
@@ -29,7 +24,6 @@ post-install:
 	${CP} /etc/shells /etc/shells.bak
 	(${GREP} -v ${PREFIX}/bin/bash /etc/shells.bak; ${ECHO} ${PREFIX}/bin/bash) >/etc/shells
 	${RM} /etc/shells.bak
-.if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/bash
 	${INSTALL_MAN}  \
 		${WRKDIR}/doc/article.ps  \
@@ -43,6 +37,5 @@ post-install:
 		${WRKDIR}/doc/article.txt  \
 		${PREFIX}/share/doc/bash
 	${GZIP_CMD} ${PREFIX}/share/doc/bash/*.ps
-.endif
 
 .include "../../mk/bsd.pkg.mk"

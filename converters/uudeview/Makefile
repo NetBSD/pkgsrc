@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/09/28 13:43:35 tron Exp $
+# $NetBSD: Makefile,v 1.11 1999/04/13 15:31:05 agc Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/02/18 22:19:58 hoek Exp
 #
 
@@ -17,16 +17,10 @@ CONFIGURE_ENV=	LDFLAGS=-s
 
 PORTDOCDIR?=	share/doc/uudeview
 
-.include "../../mk/bsd.prefs.mk"
-
 post-install:
-.if !defined(NOPORTDOCS)
 	@${ECHO_MSG} "===>  Copying documents to ${PREFIX}/${PORTDOCDIR}"
 	@${MKDIR} ${PREFIX}/${PORTDOCDIR}
 	@${INSTALL_MAN} ${WRKSRC}/HOWTO ${PREFIX}/${PORTDOCDIR}
 	@${INSTALL_MAN} ${FILESDIR}/porting.notes ${PREFIX}/${PORTDOCDIR}
-.else
-	@${ECHO_MSG} "===>  Not copying available documents"
-.endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/04/01 13:38:43 agc Exp $
+# $NetBSD: Makefile,v 1.10 1999/04/13 15:31:05 agc Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/24 21:43:24 jseger Exp
 #
 
@@ -20,13 +20,9 @@ post-extract:
 do-install:
 	(cd ${WRKSRC}/tkcvs; ${SETENV} ${MAKE_ENV} sh ./doinstall)
 
-.include "../../mk/bsd.prefs.mk"
-
 post-install:
-.if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/tkcvs
 	${INSTALL_DATA} ${WRKSRC}/README.tkcvs ${PREFIX}/share/doc/tkcvs/
 	${INSTALL_DATA} ${WRKSRC}/tkdiff/README ${PREFIX}/share/doc/tkcvs/README.tkdiff
-.endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1999/01/30 23:18:45 agc Exp $
+# $NetBSD: Makefile,v 1.9 1999/04/13 15:31:05 agc Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/06/08 09:21:37 tg Exp
 #
 
@@ -49,10 +49,8 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/man3/mfb.3 ${PREFIX}/man/man3/mfb.3
 
 post-install:
-.if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/examples/spice3
 	${INSTALL_DATA} ${WRKSRC}/examples/*.cir ${PREFIX}/share/examples/spice3
-.endif
 
 .include "../../mk/bsd.pkg.mk"
 

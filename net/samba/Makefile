@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/04/09 10:55:33 agc Exp $
+# $NetBSD: Makefile,v 1.26 1999/04/13 15:31:06 agc Exp $
 
 DISTNAME=	samba-2.0.3
 CATEGORIES=	net
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+= --with-swatdir=${PREFIX}/share/swat \
 PLIST_SRC= ${WRKDIR}/.PLIST-src
 
 post-install:
-.if !defined(NOPORTDOCS)
 	${MKDIR} ${PREFIX}/share/doc/samba/faq
 	${MKDIR} ${PREFIX}/share/doc/samba/textdocs
 	for i in ${WRKDIR}/${DISTNAME}/docs/NT4_PlainPassword.reg \
@@ -43,7 +42,6 @@ post-install:
 	for i in ${WRKDIR}/${DISTNAME}/docs/textdocs/* ; do \
 		${INSTALL_DATA} $$i ${PREFIX}/share/doc/samba/textdocs; \
 	done
-.endif
 	@${ECHO} "Installing ${STARTUP_SCRIPT} startup file.";          \
 	${ECHO} '#!/bin/sh' > ${STARTUP_SCRIPT};                        \
 	${ECHO} 'smbd=${PREFIX}/sbin/smbd' >> ${STARTUP_SCRIPT};        \

@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.49 1999/03/31 09:04:19 agc Exp $
+# $NetBSD: mk.conf.example,v 1.50 1999/04/13 15:31:07 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -222,11 +222,6 @@
 NMH_MTA=	smtp		# default MTA for use in nmh.
                                 # Possible: smtp or sendmail.
                                 # Default: smtp
-
-#NOPORTDOCS=			# If defined, used to stop installation of
-                                # any documentation.
-                                # Possible: defined, not defined
-                                # Default: not defined.
 
 #NOMANINSTALL=			# Used in expact package to stop installation
                                 # of manual pages.
