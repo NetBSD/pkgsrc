@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/01 15:14:45 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/05/22 10:09:53 adam Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -6,6 +6,7 @@ bin/gnutls-serv
 bin/gnutls-srpcrypt
 bin/libgnutls-config
 bin/libgnutls-extra-config
+bin/srptool
 include/gnutls/compat4.h
 include/gnutls/compat8.h
 include/gnutls/extra.h
@@ -17,18 +18,18 @@ include/gnutls/x509.h
 lib/libgnutls-extra.a
 lib/libgnutls-extra.la
 lib/libgnutls-extra.so
-lib/libgnutls-extra.so.13
-lib/libgnutls-extra.so.13.8
+lib/libgnutls-extra.so.12
+lib/libgnutls-extra.so.12.13
 lib/libgnutls-openssl.a
 lib/libgnutls-openssl.la
 lib/libgnutls-openssl.so
-lib/libgnutls-openssl.so.13
-lib/libgnutls-openssl.so.13.8
+lib/libgnutls-openssl.so.12
+lib/libgnutls-openssl.so.12.13
 lib/libgnutls.a
 lib/libgnutls.la
 lib/libgnutls.so
-lib/libgnutls.so.13
-lib/libgnutls.so.13.8
+lib/libgnutls.so.12
+lib/libgnutls.so.12.13
 man/man1/certtool.1
 man/man1/gnutls-cli-debug.1
 man/man1/gnutls-cli.1
@@ -54,7 +55,6 @@ share/doc/gnutls/ex-client-resume.tex
 share/doc/gnutls/ex-client-srp.tex
 share/doc/gnutls/ex-client2.tex
 share/doc/gnutls/ex-crq.tex
-share/doc/gnutls/ex-pgp-keyserver.tex
 share/doc/gnutls/ex-pkcs12.tex
 share/doc/gnutls/ex-rfc2818.tex
 share/doc/gnutls/ex-serv-export.tex
@@ -99,7 +99,6 @@ share/examples/gnutls/ex-client-srp.c
 share/examples/gnutls/ex-client1.c
 share/examples/gnutls/ex-client2.c
 share/examples/gnutls/ex-crq.c
-share/examples/gnutls/ex-pgp-keyserver.c
 share/examples/gnutls/ex-pkcs12.c
 share/examples/gnutls/ex-rfc2818.c
 share/examples/gnutls/ex-serv-export.c
