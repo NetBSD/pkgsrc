@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2001/05/16 04:42:39 jlam Exp $
+# $NetBSD: Makefile,v 1.138 2001/05/17 21:04:33 jlam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -106,6 +106,7 @@ SUBDIR+=	php4-imap
 SUBDIR+=	php4-ldap
 SUBDIR+=	php4-mcrypt
 SUBDIR+=	php4-mysql
+SUBDIR+=	php4-pcre
 SUBDIR+=	php4-pgsql
 SUBDIR+=	py-pcgi
 SUBDIR+=	py-zpublisher
