@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7787 2004/11/09 13:03:48 adam Exp $
+$NetBSD: CHANGES,v 1.7788 2004/11/09 13:08:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5184,3 +5184,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ap2-perl to 1.99.17 [adam 2004-11-09]
 	Updated xps to 4.2 [adam 2004-11-09]
 	Updated dar to 2.1.5 [adam 2004-11-09]
+	Added qemu-0.6.0 [xtraeme 2004-11-09]
