@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/12/28 02:47:41 reed Exp $
+# $NetBSD: Makefile,v 1.15 2005/03/31 01:23:14 seb Exp $
 #
 
 DISTNAME=	ircd-hybrid-6.2
@@ -7,7 +7,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ircd-hybrid/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	seb@pbox.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ircd-hybrid.net/
 COMMENT=	IRC server with many options
 
