@@ -1,0 +1,21 @@
+   GNU Smalltalk is an implementation that closely follows the
+Smalltalk-80 language as described in the book `Smalltalk-80: the
+Language and its Implementation' by Adele Goldberg and David Robson.
+
+   The Smalltalk programming language is an object oriented programming
+language.  This means, for one thing, that when programming you are
+thinking of not only the data that an object contains, but also of the
+operations available on that object.
+
+   In the Smalltalk language, everything is an object.  This includes
+numbers, executable procedures (methods), stack frames (called method
+contexts or block contexts), etc.  Each object is an "instance" of a
+"class".  A class can be thought of as a datatype and the set of
+functions that operate on that datatype.  An instance is a particular
+variable of that datatype. When you want to perform an operation on an
+object, you send it a "message", and the object performs an operation
+that corresponds to that message.
+
+   Unlike other Smalltalks (including Smalltalk-80), GNU Smalltalk
+emphasizes Smalltalk's rapid prototyping features rather than the
+graphical and easy-to-use nature of the programming environment.
