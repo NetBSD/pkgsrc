@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.586 2003/05/25 08:01:59 jmmv Exp $
+$NetBSD: TODO,v 1.587 2003/05/25 10:36:41 epg Exp $
 
 Suggested new packages
 ======================
@@ -247,10 +247,9 @@ Suggested package updates
 	o squeak-3.5
 	o srp_client-1.7.5 [jlam]
 	o stella-1.3
-	o subversion-0.22.2 [pkg/21570, epg has new framework]
 	o sun-jdk14-1.4.2
 	o sun-jre14-1.4.2
-	o swig-1.3.17
+	o swig-1.3.17 (started --epg)
 	o sylpheed-0.9.0 [pkg/21579]
 	o t1lib-5.0.0
 	o tcl/tk-8.4.3
