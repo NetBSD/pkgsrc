@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2000/10/23 15:04:07 wiz Exp $
+# $NetBSD: Makefile,v 1.181 2000/10/29 23:48:12 jlam Exp $
 # FreeBSD Id: Makefile,v 1.156 1997/09/30 07:54:42 asami Exp
 #
 
@@ -82,6 +82,7 @@
     SUBDIR += ruby-gtk
     SUBDIR += rxvt
     SUBDIR += sawfish
+    SUBDIR += sawfish-replibs
     SUBDIR += scwm
     SUBDIR += speyes
     SUBDIR += sunclock
