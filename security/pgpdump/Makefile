@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2001/12/10 09:26:03 jun Exp $
+# $NetBSD: Makefile,v 1.10 2002/06/28 23:48:11 jun Exp $
 #
 
-DISTNAME=	pgpdump-0.16
+DISTNAME=	pgpdump-0.17
 CATEGORIES=	security
 MASTER_SITES=	ftp://pgp.iijlab.net/pub/pgp/tools/
 
