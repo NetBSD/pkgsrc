@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2001/02/16 13:30:44 wiz Exp $
-# FreeBSD Id: Makefile,v 1.2 1999/01/27 08:31:48 fenner Exp
+# $NetBSD: Makefile,v 1.19 2001/03/02 18:03:10 wiz Exp $
 #
 
-DISTNAME=		audiofile-0.1.11
+DISTNAME=		audiofile-0.2.1
 PKGNAME=		lib${DISTNAME}
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.68k.org/pub/michael/ \
