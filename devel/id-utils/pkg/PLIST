@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1998/02/27 02:52:43 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.5 1998/10/01 21:03:33 garbled Exp $
 bin/mkid
 bin/lid
 bin/fid
@@ -11,7 +11,6 @@ bin/defid
 @unexec %D/bin/install-info --delete %D/info/id-utils.info %D/info/dir
 info/id-utils.info
 @exec %D/bin/install-info %D/info/id-utils.info %D/info/dir
-share/emacs/site-lisp/id-utils.elc
 share/id-lang.map
 share/locale/de/LC_MESSAGES/id-utils.mo
 share/locale/fr/LC_MESSAGES/id-utils.mo
