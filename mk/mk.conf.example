@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.131 2000/04/02 08:22:44 fredb Exp $
+# $NetBSD: mk.conf.example,v 1.132 2000/04/11 22:51:48 tron Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -294,12 +294,6 @@
 # appropriate one.  E.g, if X11R5 or later is found, lucid will be used.
 # Possible: yes, no, not defined, athena, lucid, motif
 # Default: not defined
-
-#GLX_CHIPSET=
-# Used to select chipset to build "Mesa-glx" package for.  Either
-# Matrox MGA 200/400 or Riva TNT/TNT 2 can be supported.
-# Possible: mga, tnt
-# Default: mga
 
 #IRRD_USE_PGP=
 # Used by irrd package to specify the version of PGP to use, if any.
