@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/09/26 05:36:18 jlam Exp $
+bin/macfork
+share/doc/macfork/README
+@dirrm share/doc/macfork
