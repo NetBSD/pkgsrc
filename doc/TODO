@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1406 2004/02/21 07:18:15 minskim Exp $
+$NetBSD: TODO,v 1.1407 2004/02/21 14:54:57 jlam Exp $
 
 Suggested new packages
 ======================
@@ -147,10 +147,6 @@ Suggested package updates
 	o clisp-2.32
 	o cocoon-2.1.4
 	o conserver-8.1.1
-	o courier-0.42.2 [pkg/22373]
-	o courier-0.44.2
-	o courier-auth-0.42.2 [pkg/22371]
-	o courier-auth-0.43
 	o courier-imap-2.0 [pkg/22374]
 	o courier-imap-2.1
 	o crafty-19.5
