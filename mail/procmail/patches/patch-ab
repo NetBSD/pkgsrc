@@ -1,11 +1,12 @@
-$NetBSD: patch-ab,v 1.5 2001/04/13 04:18:34 kim Exp $
+$NetBSD: patch-ab,v 1.6 2001/11/08 12:05:59 bouyer Exp $
 
---- config.h.orig	Tue Aug 22 00:26:34 2000
-+++ config.h	Fri Apr 13 00:06:57 2001
-@@ -62,10 +62,12 @@
+--- config.h.orig	Tue Sep 11 06:53:50 2001
++++ config.h	Thu Nov  8 12:45:46 2001
+@@ -73,11 +73,12 @@
+    TRUSTED_IDS should be defined as a comma-separated null-terminated
     list of strings;  if unauthorised users use the -f option, an extra
     >From_ field will be added in the header */
- 
+-
 +#if 0
  #define TRUSTED_IDS	{"root","daemon","uucp","mail","x400","network",\
  			 "list","slist","lists","news",0}
@@ -15,4 +16,4 @@ $NetBSD: patch-ab,v 1.5 2001/04/13 04:18:34 kim Exp $
 +#define NO_fcntl_LOCK		/* uncomment any of these three if you	     */
  /*#define NO_lockf_LOCK		/* definitely do not want procmail to make   */
  /*#define NO_flock_LOCK		/* use of those kernel-locking methods	     */
- 
+ 				/* If you set LOCKINGTEST to a binary number
