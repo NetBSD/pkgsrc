@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.32 1999/11/10 07:54:46 soren Exp $
+# $NetBSD: Makefile,v 1.33 2000/01/20 18:54:49 soren Exp $
 #
 
-DISTNAME=		xmame-0.36b8.1
+DISTNAME=		xmame-0.36b14.1
 CATEGORIES=		emulators games x11
-MASTER_SITES=		http://xmame.retrogames.com/download/
+MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		soren@netbsd.org
-HOMEPAGE=		http://xmame.retrogames.com/
+HOMEPAGE=		http://x.mame.net/
 
 DEPENDS=		unzip-5.40:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
@@ -41,8 +41,10 @@ post-patch:
 		xmamerc.dist >xmamerc)
 
 do-install:
-	(cd ${WRKSRC} && ${INSTALL_PROGRAM} xmame.${DISPLAY_METHOD} ${PREFIX}/bin/xmame)
-	(cd ${WRKSRC}/doc && ${INSTALL_MAN} xmame.man ${PREFIX}/man/man6/xmame.6)
+	(cd ${WRKSRC} && ${INSTALL_PROGRAM} xmame.${DISPLAY_METHOD} \
+		${PREFIX}/bin/xmame)
+	(cd ${WRKSRC}/doc && ${INSTALL_MAN} xmame.man \
+		${PREFIX}/man/man6/xmame.6)
 	${MKDIR} ${ROMPATH}
 	(cd ${WRKSRC}/doc && ${INSTALL_DATA} xmamerc ${ROMPATH}/xmamerc)
 	@${ECHO} Remember to set ROMPATH to ${ROMPATH}.
