@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2002/10/30 07:45:17 martti Exp $
+# $NetBSD: Makefile,v 1.28 2002/11/15 04:54:14 jlam Exp $
 
 DISTNAME=	squirrelmail-1.2.9
 CATEGORIES=	mail www
@@ -17,6 +17,8 @@ DEPENDS+=	php-gettext>=4.0.6:../../devel/php4-gettext
 DEPENDS+=	php-session>=4.0.6:../../devel/php4-session
 DEPENDS+=	php-pcre>=4.0.6:../../devel/php4-pcre
 
+USE_BUILDLINK2=	# defined
+NO_BUILD=	# defined
 REPLACE_PERL=	config/conf.pl config/ri_once.pl
 
 .include "../../mk/bsd.prefs.mk"
@@ -53,8 +55,6 @@ post-patch:
 	${FIND} . \( -name "*.orig" -o -name ".cvsignore" \) -print	\
 		| ${XARGS} ${RM} -f
 
-do-build:	# nothing
-
 pre-install:
 	@${SED}	${FILES_SUBST_SED} ${FILESDIR}/squirrelmail.conf.dist	\
 		> ${WRKDIR}/squirrelmail.conf.dist
@@ -67,6 +67,6 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
 	${CHMOD} -R a-w ${SMDIR}
 
-.include "../../lang/perl5/buildlink.mk"
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
