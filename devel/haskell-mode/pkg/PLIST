@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/30 02:29:27 jtb Exp $
+share/emacs/site-lisp/haskell-mode/haskell-decl-scan.el
+share/emacs/site-lisp/haskell-mode/haskell-decl-scan.elc
+share/emacs/site-lisp/haskell-mode/haskell-doc.el
+share/emacs/site-lisp/haskell-mode/haskell-doc.elc
+share/emacs/site-lisp/haskell-mode/haskell-font-lock.el
+share/emacs/site-lisp/haskell-mode/haskell-font-lock.elc
+share/emacs/site-lisp/haskell-mode/haskell-hugs.el
+share/emacs/site-lisp/haskell-mode/haskell-hugs.elc
+share/emacs/site-lisp/haskell-mode/haskell-indent.el
+share/emacs/site-lisp/haskell-mode/haskell-indent.elc
+share/emacs/site-lisp/haskell-mode/haskell-mode.el
+share/emacs/site-lisp/haskell-mode/haskell-mode.elc
+share/emacs/site-lisp/haskell-mode/haskell-simple-indent.el
+share/emacs/site-lisp/haskell-mode/haskell-simple-indent.elc
+@dirrm share/emacs/site-lisp/haskell-mode

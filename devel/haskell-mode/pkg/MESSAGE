@@ -1,0 +1,19 @@
+=============================================================================
+
+You will need to add something like the following to your .emacs.el (or
+default.el) file to autoload Haskell mode for Emacs.
+
+(setq auto-mode-alist
+      (append auto-mode-alist
+              '(("\\.[hg]s$"  . haskell-mode)
+		("\\.hi$"     . haskell-mode)
+		("\\.l[hg]s$" . literate-haskell-mode))))
+(autoload 'haskell-mode "haskell-mode"
+  "Major mode for editing Haskell scripts." t)
+(autoload 'literate-haskell-mode "haskell-mode"
+  "Major mode for editing literate Haskell scripts." t)
+
+This is taken from the haskell-mode.el file (in the 'site-lisp/haskell-mode/'
+directory) which you should consult for details of further customizations.
+
+=============================================================================
