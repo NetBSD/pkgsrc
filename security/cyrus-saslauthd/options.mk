@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/01/14 00:08:46 jlam Exp $
+# $NetBSD: options.mk,v 1.5 2005/01/14 05:15:40 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-saslauthd
 PKG_SUPPORTED_OPTIONS=	PAM kerberos ldap gssapi
@@ -8,8 +8,8 @@ PKG_SUPPORTED_OPTIONS=	PAM kerberos ldap gssapi
 ### PAM (Pluggable Authentication Mechanism)
 ###
 .if !empty(PKG_OPTIONS:MPAM)
-.  include "../../security/PAM/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.linux-pam}
+.  include "../../mk/pam.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pam=${PAMBASE}
 .endif
 
 ###

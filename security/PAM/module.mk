@@ -1,14 +1,14 @@
-# $NetBSD: module.mk,v 1.3 2005/01/14 00:08:46 jlam Exp $
+# $NetBSD: module.mk,v 1.4 2005/01/14 05:15:39 jlam Exp $
 
 .if !defined(PAM_MODULE_MK)
 PAM_MODULE_MK=	# defined
 
 .if empty(USE_BUILDLINK3:M[nN][oO])
-.  include "../../security/PAM/buildlink3.mk"
+.  include "../../mk/pam.buildlink3.mk"
 .endif
 
-.if defined(DEFAULT_VIEW.linux-pam)
-DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.linux-pam}
+.if defined(DEFAULT_VIEW.${PAM_TYPE})
+DEFAULT_VIEW.${PKGBASE}=	${DEFAULT_VIEW.${PAM_TYPE}}
 .endif
 
 PAM_MODULEDIR=		${VIEWBASE}/lib/security

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/12/28 02:47:48 reed Exp $
+# $NetBSD: Makefile,v 1.48 2005/01/14 05:15:39 jlam Exp $
 
 .include "Makefile.common"
 
@@ -23,8 +23,8 @@ PKG_SUPPORTED_OPTIONS=	PAM gssapi kerberos
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:MPAM)
-.  include "../../security/PAM/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.pam}
+.  include "../../mk/pam.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pam=${PAMBASE}
 .endif
 
 .if !empty(PKG_OPTIONS:Mkerberos)

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2004/12/22 21:46:25 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2005/01/14 05:15:40 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,7 +25,7 @@ PATCH_DIST_STRIP=	-p1
 .if !empty(PKG_OPTIONS:MPAM)
 # XXX: PAM authentication causes memory faults, and haven't tracked down
 # XXX: why yet.  For the moment, disable PAM authentication for non-Linux.
-.include "../../security/PAM/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
 PLIST_SRC+=		${.CURDIR}/PLIST.pam
 MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam

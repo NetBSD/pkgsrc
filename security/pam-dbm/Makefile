@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/11/15 17:54:50 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2005/01/14 05:15:40 jlam Exp $
 #
 
 DISTNAME=		pam_dbm-0.2
@@ -15,6 +15,6 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 BDB_ACCEPTED=		db1
 
-.include "../../security/PAM/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/11/25 22:55:54 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2005/01/14 05:15:39 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CYRUS_SASL_BUILDLINK3_MK:=	${CYRUS_SASL_BUILDLINK3_MK}+
@@ -21,7 +21,7 @@ BUILDLINK_PKGSRCDIR.cyrus-sasl?=	../../security/cyrus-sasl
 PKG_OPTIONS.cyrus-sasl?=	${PKG_DEFAULT_OPTIONS}
 
 .if !empty(PKG_OPTIONS.cyrus-sasl:MPAM)
-.  include "../../security/PAM/buildlink3.mk"
+.  include "../../mk/pam.buildlink3.mk"
 .endif
 
 # Cyrus SASL mechanisms are shared modules loaded via dlopen().

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2004/12/28 02:47:46 reed Exp $
+# $NetBSD: Makefile,v 1.32 2005/01/14 05:15:39 jlam Exp $
 
 .include "Makefile.common"
 
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--enable-cups
 .endif
 
 .if defined(USE_PAM)
-.  include "../../security/PAM/buildlink3.mk"
+.  include "../../mk/pam.buildlink3.mk"
 BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--with-pam
 .endif
