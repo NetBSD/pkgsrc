@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 1999/12/03 16:23:18 rh Exp $
+$NetBSD: patch-aa,v 1.4 2000/10/19 04:26:40 hubertf Exp $
 
---- Makefile.in.orig	Tue Sep 16 00:00:15 1997
-+++ Makefile.in	Fri Sep 19 21:42:41 1997
+--- Makefile.in.orig	Wed Oct 11 17:00:00 2000
++++ Makefile.in
 @@ -3,7 +3,7 @@
  #
  
  TITLE	= FD-
 -PREFIX	= /usr/local
 +PREFIX	?= /usr/local
+ MANSEC	= 1
  TOPDIR	= $(PREFIX)
  BINDIR	= $(TOPDIR)/bin
- MANDIR	= $(TOPDIR)/man__LANGDIR__/man$(MANSEC)
