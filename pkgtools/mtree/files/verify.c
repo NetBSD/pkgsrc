@@ -1,4 +1,4 @@
-/*	$NetBSD: verify.c,v 1.2 2003/09/05 04:38:48 grant Exp $	*/
+/*	$NetBSD: verify.c,v 1.3 2004/04/16 23:43:36 heinz Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993
@@ -40,7 +40,7 @@
 #if 0
 static char sccsid[] = "@(#)verify.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: verify.c,v 1.2 2003/09/05 04:38:48 grant Exp $");
+__RCSID("$NetBSD: verify.c,v 1.3 2004/04/16 23:43:36 heinz Exp $");
 #endif
 #endif /* not lint */
 
@@ -294,7 +294,7 @@ miss(NODE *p, char *tail)
 				printf("%s: permissions not set: %s\n",
 				    path, strerror(errno));
 		}
-#if HAVE_STRUCT_STAT_ST_FLAGS
+#if HAVE_FILE_FLAGS
 		if ((p->flags & F_FLAGS) && p->st_flags) {
 			if (iflag)
 				flags = p->st_flags;
@@ -304,6 +304,6 @@ miss(NODE *p, char *tail)
 				printf("%s: file flags not set: %s\n",
 				    path, strerror(errno));
 		}
-#endif	/* HAVE_STRUCT_STAT_ST_FLAGS */
+#endif	/* HAVE_FILE_FLAGS */
 	}
 }

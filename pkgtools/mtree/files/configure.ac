@@ -25,6 +25,15 @@ AC_TYPE_OFF_T
 AC_TYPE_SIZE_T
 AC_CHECK_MEMBERS([struct stat.st_rdev])
 AC_CHECK_MEMBERS([struct stat.st_flags])
+AC_CHECK_DECLS([UF_SETTABLE, SF_SETTABLE])
+AH_BOTTOM([/* define HAVE_FILE_FLAGS if the user- and root-changeable masks
+were detected */
+#if defined(HAVE_STRUCT_STAT_ST_FLAGS) && (HAVE_DECL_UF_SETTABLE == 1) && (HAVE_DECL_SF_SETTABLE == 1)
+#define HAVE_FILE_FLAGS 1
+#else
+#define HAVE_FILE_FLAGS 0
+#endif
+])
 AC_HEADER_TIME
 
 # Checks for library functions.
