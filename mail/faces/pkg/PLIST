@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1998/03/08 02:31:57 agc Exp $
+@comment $NetBSD: PLIST,v 1.6 1998/07/15 12:17:02 agc Exp $
 @cwd @localbase@
 share/faces/machine.tab
 share/faces/people.tab
@@ -9,8 +9,6 @@ man/man1/compface.1.gz
 man/man1/uncompface.1.gz
 lib/libcompface.a
 lib/libcompface.so.1.0
-@exec /sbin/ldconfig || /usr/bin/true
-@unexec /sbin/ldconfig || /usr/bin/true
 include/compface.h
 man/man3/compface.3.gz
 man/man3/uncompface.3.gz

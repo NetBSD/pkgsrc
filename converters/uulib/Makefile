@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/07/14 22:58:24 tron Exp $
+# $NetBSD: Makefile,v 1.9 1998/07/15 11:57:30 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/18 22:20:02 hoek Exp
 #
 
@@ -25,7 +25,6 @@ DOCFILES=	HISTORY doc/Makefile doc/README doc/binhex.fig \
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/uulib/libuu.so.1.0 ${PREFIX}/lib
-	@${LDCONFIG} || ${TRUE}
 	${INSTALL_DATA} ${WRKSRC}/uulib/libuu.a ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/uulib/uudeview.h ${PREFIX}/include/uu.h
 	${SED} -e 's|FUNKYTOKENHERE|${PREFIX}|g' <${FILESDIR}/uulib.3 >${WRKSRC}/uulib.3
