@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/11/28 14:42:07 taca Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/29 05:53:40 taca Exp $
 # FreeBSD: ports/japanese/ruby-uconv/Makefile,v 1.8 2001/01/30 19:26:22 knu Exp
 
 DISTNAME=	uconv-0.4.12
@@ -16,7 +16,6 @@ WRKSRC=			${WRKDIR}/uconv
 INSTALL_TARGET=		site-install
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/uconv
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/uconv
 	${INSTALL_DATA} ${WRKSRC}/README ${RUBY_DOCDIR}/uconv
 	${INSTALL_DATA} ${WRKSRC}/README.ja ${RUBY_DOCDIR}/uconv
