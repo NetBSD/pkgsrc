@@ -1,0 +1,31 @@
+$NetBSD: patch-ad,v 1.1.1.1 1999/10/28 19:52:27 kim Exp $
+
+--- common/option.c.orig	Fri Sep  3 16:47:22 1999
++++ common/option.c	Thu Oct 21 17:59:08 1999
+@@ -826,8 +826,8 @@
+   read_str(&mpres[(int) R_DSIDED],    "doubleSided") ;
+   read_str(&mpres[(int) R_ADDHDRS],   "addHeaders") ;
+   read_str(&mpres[(int) R_REMHDRS],   "removeHeaders") ;
+-  read_str(&mpres[(int) R_ALIAS],     "aliasName") ;
+   read_str(&mpres[(int) R_PROLOG],    "prologueName") ;
++  read_str(&mpres[(int) R_ALIAS],     "aliasName") ;
+   read_str(&mpres[(int) R_NCOLUMNS],  "numberColumns") ;
+   read_str(&mpres[(int) R_TABSIZE],   "tabSize") ;
+   read_str(&mpres[(int) R_NAMEC],     "nameChars") ;
+@@ -847,13 +847,15 @@
+   read_str(&mpres[(int) R_LMARGIN],   "leftMargin") ;
+   read_str(&mpres[(int) R_RMARGIN],   "rightMargin") ;
+   read_str(&mpres[(int) R_TMARGIN],   "topMargin") ;
+-  read_str(&mpres[(int) R_BANNERS],   "banners") ;
+ 
+ #ifdef MIME_SUPPORT
+   read_str(&mpres[(int) R_BOUNDARY],  "boundary") ;
+   read_str(&mpres[(int) R_TYPESIZE],  "typeSize") ;
+   read_str(&mpres[(int) R_PAGINATE],  "paginate") ;
+ #endif /*MIME_SUPPORT*/
++
++  read_str(&mpres[(int) R_BANNERS],   "banners") ;
++  read_str(&mpres[(int) R_NEWPAGE],   "newPage") ;
+  
+   rDB = NULL ;                   /* X Resource database. */
+ }

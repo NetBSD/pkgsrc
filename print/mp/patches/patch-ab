@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/10/28 19:52:27 kim Exp $
+
+--- mp/Makefile.orig	Mon Mar 31 15:59:14 1997
++++ mp/Makefile	Thu Oct 21 13:50:56 1999
+@@ -78,8 +78,6 @@
+ 
+ #=================================================================
+ 
+-.KEEP_STATE:
+-
+ SRCS     = header.c input.c main.c ../common/option.c print.c
+ OBJS     = header.o input.o main.o option.o print.o
+ HDRS     = header.h input.h print.h
+@@ -99,7 +97,7 @@
+ #                                                         mp
+ 	   -if [ -f mp ]; then \
+ 		cp mp $(MPBINDIR); \
+-		chmod 751 $(MPBINDIR)/mp; \
++		chmod 755 $(MPBINDIR)/mp; \
+ 		strip $(MPBINDIR)/mp; \
+ 	   fi
+ #                                                         mp.1
+@@ -159,7 +157,7 @@
+ 	   -for name in $(MAILPNAMES); do \
+ 		echo -n $$name " "; \
+ 		rm -f $(MPBINDIR)/$$name; \
+-		ln -s $(MPBINDIR)/mp $(MPBINDIR)/$$name; \
++		ln -s mp $(MPBINDIR)/$$name; \
+ 	   done
+ 	   @echo
+ 
