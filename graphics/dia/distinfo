@@ -1,4 +1,6 @@
-$NetBSD: distinfo,v 1.3 2001/08/26 01:27:14 mjl Exp $
+$NetBSD: distinfo,v 1.4 2002/09/01 00:38:08 mjl Exp $
 
-SHA1 (dia-0.88.1.tar.gz) = 0c53f006bd73e166cdedfe3ca0c77b241786ed17
-Size (dia-0.88.1.tar.gz) = 1975480 bytes
+SHA1 (dia-0.90.tar.gz) = 7e9705dbf3f3ce62a58169f531dbc635140a88d8
+Size (dia-0.90.tar.gz) = 2888211 bytes
+SHA1 (patch-aa) = ed5bb19334fcacc772aa1c504fc3c3e4dab933b4
+SHA1 (patch-ab) = 9ec08acce0b9a2fe5f2e6b8b15cf294d961aabe1
