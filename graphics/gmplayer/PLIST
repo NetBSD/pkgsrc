@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/05/06 11:13:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/05/14 22:13:34 veego Exp $
 bin/gmplayer
 man/man1/gmplayer.1
 share/gmplayer/DOCS/DVB
@@ -59,12 +59,14 @@ share/gmplayer/DOCS/Polish/encoding.html
 share/gmplayer/DOCS/Polish/faq.html
 share/gmplayer/DOCS/Polish/formats.html
 share/gmplayer/DOCS/Polish/gcc-2.96-3.0.html
-share/gmplayer/DOCS/Polish/mencoder.1
 share/gmplayer/DOCS/Polish/mplayer.1
-share/gmplayer/DOCS/Polish/skin-en.html
+share/gmplayer/DOCS/Polish/skin-pl.html
 share/gmplayer/DOCS/Polish/sound.html
 share/gmplayer/DOCS/Polish/users_against_developers.html
 share/gmplayer/DOCS/Polish/video.html
+share/gmplayer/DOCS/SGML/DO_NOT_USE
+share/gmplayer/DOCS/SGML/c
+share/gmplayer/DOCS/SGML/docs.sgml
 share/gmplayer/DOCS/bugreports.html
 share/gmplayer/DOCS/cd-dvd.html
 share/gmplayer/DOCS/codecs-in.html
@@ -74,7 +76,6 @@ share/gmplayer/DOCS/encoding.html
 share/gmplayer/DOCS/faq.html
 share/gmplayer/DOCS/formats.html
 share/gmplayer/DOCS/gcc-2.96-3.0.html
-share/gmplayer/DOCS/mencoder.1
 share/gmplayer/DOCS/mplayer.1
 share/gmplayer/DOCS/skin-en.html
 share/gmplayer/DOCS/sound.html
@@ -94,6 +95,7 @@ share/gmplayer/DOCS/tech/osd.txt
 share/gmplayer/DOCS/tech/patches.txt
 share/gmplayer/DOCS/tech/playtree
 share/gmplayer/DOCS/tech/playtree-hun
+share/gmplayer/DOCS/tech/subcp.txt
 share/gmplayer/DOCS/tech/tech-eng.txt
 share/gmplayer/DOCS/tech/vidix.txt
 share/gmplayer/DOCS/tech/vop.txt
@@ -150,6 +152,35 @@ share/gmplayer/Skin/BlueHeart/stop.png
 share/gmplayer/Skin/BlueHeart/sub.png
 share/gmplayer/Skin/BlueHeart/symbols.fnt
 share/gmplayer/Skin/BlueHeart/symbols.png
+share/gmplayer/Skin/CornerMP-aqua/README
+share/gmplayer/Skin/CornerMP-aqua/about.png
+share/gmplayer/Skin/CornerMP-aqua/back.png
+share/gmplayer/Skin/CornerMP-aqua/eqls.png
+share/gmplayer/Skin/CornerMP-aqua/exit.png
+share/gmplayer/Skin/CornerMP-aqua/font.fnt
+share/gmplayer/Skin/CornerMP-aqua/font.png
+share/gmplayer/Skin/CornerMP-aqua/forwd.png
+share/gmplayer/Skin/CornerMP-aqua/full.png
+share/gmplayer/Skin/CornerMP-aqua/icnf.png
+share/gmplayer/Skin/CornerMP-aqua/load.png
+share/gmplayer/Skin/CornerMP-aqua/main.png
+share/gmplayer/Skin/CornerMP-aqua/menu.png
+share/gmplayer/Skin/CornerMP-aqua/menu_ko.png
+share/gmplayer/Skin/CornerMP-aqua/menus.png
+share/gmplayer/Skin/CornerMP-aqua/menus_ko.png
+share/gmplayer/Skin/CornerMP-aqua/next.png
+share/gmplayer/Skin/CornerMP-aqua/pause.png
+share/gmplayer/Skin/CornerMP-aqua/play.png
+share/gmplayer/Skin/CornerMP-aqua/plst.png
+share/gmplayer/Skin/CornerMP-aqua/pos.png
+share/gmplayer/Skin/CornerMP-aqua/prev.png
+share/gmplayer/Skin/CornerMP-aqua/skin
+share/gmplayer/Skin/CornerMP-aqua/stop.png
+share/gmplayer/Skin/CornerMP-aqua/sub.png
+share/gmplayer/Skin/CornerMP-aqua/subt.png
+share/gmplayer/Skin/CornerMP-aqua/symbols.fnt
+share/gmplayer/Skin/CornerMP-aqua/symbols.png
+share/gmplayer/Skin/CornerMP-aqua/vol.png
 share/gmplayer/Skin/CornerMP/README
 share/gmplayer/Skin/CornerMP/about.png
 share/gmplayer/Skin/CornerMP/back.png
@@ -312,6 +343,26 @@ share/gmplayer/Skin/default/subload.png
 share/gmplayer/Skin/default/symbols.fnt
 share/gmplayer/Skin/default/symbols.png
 share/gmplayer/Skin/default/volume.png
+share/gmplayer/Skin/hwswskin/button-about.png
+share/gmplayer/Skin/hwswskin/button-exit.png
+share/gmplayer/Skin/hwswskin/button-forward.png
+share/gmplayer/Skin/hwswskin/button-fullscr.png
+share/gmplayer/Skin/hwswskin/button-next.png
+share/gmplayer/Skin/hwswskin/button-open.png
+share/gmplayer/Skin/hwswskin/button-pause.png
+share/gmplayer/Skin/hwswskin/button-play.png
+share/gmplayer/Skin/hwswskin/button-playlst.png
+share/gmplayer/Skin/hwswskin/button-prev.png
+share/gmplayer/Skin/hwswskin/button-rewind.png
+share/gmplayer/Skin/hwswskin/button-skinbr.png
+share/gmplayer/Skin/hwswskin/button-stop.png
+share/gmplayer/Skin/hwswskin/font.fnt
+share/gmplayer/Skin/hwswskin/font.png
+share/gmplayer/Skin/hwswskin/main.png
+share/gmplayer/Skin/hwswskin/pos.png
+share/gmplayer/Skin/hwswskin/skin
+share/gmplayer/Skin/hwswskin/sub.png
+share/gmplayer/Skin/hwswskin/vol.png
 share/gmplayer/Skin/mentalic/VERSION
 share/gmplayer/Skin/mentalic/about.png
 share/gmplayer/Skin/mentalic/back.png
@@ -565,6 +616,7 @@ share/gmplayer/codecs.conf
 @dirrm share/gmplayer/Skin/neutron
 @dirrm share/gmplayer/Skin/netscape4
 @dirrm share/gmplayer/Skin/mentalic
+@dirrm share/gmplayer/Skin/hwswskin
 @dirrm share/gmplayer/Skin/default
 @dirrm share/gmplayer/Skin/avifile
 @dirrm share/gmplayer/Skin/WindowsMediaPlayer6
@@ -572,10 +624,12 @@ share/gmplayer/codecs.conf
 @dirrm share/gmplayer/Skin/Cyrus
 @dirrm share/gmplayer/Skin/CubicPlayer
 @dirrm share/gmplayer/Skin/CornerMP
+@dirrm share/gmplayer/Skin/CornerMP-aqua
 @dirrm share/gmplayer/Skin/BlueHeart
 @dirrm share/gmplayer/Skin/AlienMind
 @dirrm share/gmplayer/Skin
 @dirrm share/gmplayer/DOCS/tech
+@dirrm share/gmplayer/DOCS/SGML
 @dirrm share/gmplayer/DOCS/Polish
 @dirrm share/gmplayer/DOCS/Italian
 @dirrm share/gmplayer/DOCS/Hungarian

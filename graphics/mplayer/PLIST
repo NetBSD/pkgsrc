@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/05/06 11:13:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/05/14 22:13:35 veego Exp $
 bin/mplayer
 man/man1/mplayer.1
 share/mplayer/DOCS/DVB
@@ -59,12 +59,14 @@ share/mplayer/DOCS/Polish/encoding.html
 share/mplayer/DOCS/Polish/faq.html
 share/mplayer/DOCS/Polish/formats.html
 share/mplayer/DOCS/Polish/gcc-2.96-3.0.html
-share/mplayer/DOCS/Polish/mencoder.1
 share/mplayer/DOCS/Polish/mplayer.1
-share/mplayer/DOCS/Polish/skin-en.html
+share/mplayer/DOCS/Polish/skin-pl.html
 share/mplayer/DOCS/Polish/sound.html
 share/mplayer/DOCS/Polish/users_against_developers.html
 share/mplayer/DOCS/Polish/video.html
+share/mplayer/DOCS/SGML/DO_NOT_USE
+share/mplayer/DOCS/SGML/c
+share/mplayer/DOCS/SGML/docs.sgml
 share/mplayer/DOCS/bugreports.html
 share/mplayer/DOCS/cd-dvd.html
 share/mplayer/DOCS/codecs-in.html
@@ -74,7 +76,6 @@ share/mplayer/DOCS/encoding.html
 share/mplayer/DOCS/faq.html
 share/mplayer/DOCS/formats.html
 share/mplayer/DOCS/gcc-2.96-3.0.html
-share/mplayer/DOCS/mencoder.1
 share/mplayer/DOCS/mplayer.1
 share/mplayer/DOCS/skin-en.html
 share/mplayer/DOCS/sound.html
@@ -94,6 +95,7 @@ share/mplayer/DOCS/tech/osd.txt
 share/mplayer/DOCS/tech/patches.txt
 share/mplayer/DOCS/tech/playtree
 share/mplayer/DOCS/tech/playtree-hun
+share/mplayer/DOCS/tech/subcp.txt
 share/mplayer/DOCS/tech/tech-eng.txt
 share/mplayer/DOCS/tech/vidix.txt
 share/mplayer/DOCS/tech/vop.txt
@@ -101,6 +103,7 @@ share/mplayer/DOCS/users_against_developers.html
 share/mplayer/DOCS/video.html
 share/mplayer/codecs.conf
 @dirrm share/mplayer/DOCS/tech
+@dirrm share/mplayer/DOCS/SGML
 @dirrm share/mplayer/DOCS/Polish
 @dirrm share/mplayer/DOCS/Italian
 @dirrm share/mplayer/DOCS/Hungarian
