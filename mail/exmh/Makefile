@@ -3,6 +3,7 @@
 # Date released:		1 Jan 97
 # Whom:				Peter Wemm <peter@freebsd.org>
 #
+# $NetBSD: Makefile,v 1.2 1997/11/19 14:49:49 agc Exp $
 # FreeBSD Id: Makefile,v 1.17 1997/10/06 06:49:45 peter Exp
 #
 
@@ -32,7 +33,7 @@ WISH=		wish8.0
 TCLSH=		tclsh8.0
 
 # exmh is pretty useless without this, but it's not needed to build it.
-RUN_DEPENDS+=	repl:${PORTSDIR}/mail/mh
+RUN_DEPENDS+=	repl:${PORTSDIR}/mail/nmh
 
 # full mime support needs mmencode/mmdecode from metamail
 RUN_DEPENDS+=	mmencode:${PORTSDIR}/mail/metamail
