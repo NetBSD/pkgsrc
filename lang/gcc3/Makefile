@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2003/07/02 19:34:22 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2003/07/03 04:25:27 rafal Exp $
 #
 
 DISTNAME=		gcc-3.3
@@ -36,7 +36,7 @@ INFO_FILES=		cpp.info g77.info gcc.info gcj.info
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/pthread.h)
-CONFIGURE_ARGS=		--host=${MACHINE_GNU_ARCH}--netbsdelf2.0
+CONFIGURE_ARGS+=	--host=${MACHINE_GNU_ARCH}--netbsdelf2.0
 PTHREAD_OPTS+=		require native
 .include "../../mk/pthread.buildlink2.mk"
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include
