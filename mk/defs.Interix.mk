@@ -1,4 +1,4 @@
-# $NetBSD: defs.Interix.mk,v 1.16 2004/04/25 13:52:53 tv Exp $
+# $NetBSD: defs.Interix.mk,v 1.17 2004/04/27 01:49:15 tv Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -77,9 +77,12 @@ TYPE?=		type				# Shell builtin
 WC?=		/bin/wc
 XARGS?=		/bin/xargs
 
-# XXXTV
-USERADD?=	${FALSE}
-GROUPADD?=	${FALSE}
+USERADD?=	${LOCALBASE}/sbin/useradd
+GROUPADD?=	${LOCALBASE}/sbin/groupadd
+_PKG_USER_HOME?=# empty by default
+.if defined(USE_USERADD) || defined(USE_GROUPADD)
+DEPENDS+=	user>=20040426:../../sysutils/user_interix
+.endif
 
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		002
@@ -87,7 +90,7 @@ EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
-NOLOGIN?=		/sbin/nologin
+NOLOGIN?=		/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 PKGDIRMODE?=		775
 ROOT_CMD?=		${SU} - ${ROOT_USER} -c
