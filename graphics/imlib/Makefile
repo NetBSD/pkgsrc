@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 1998/11/21 22:59:33 tron Exp $
+# $NetBSD: Makefile,v 1.6 1998/12/13 21:42:02 tron Exp $
 #
 
-DISTNAME=	imlib-1.7
+DISTNAME=	imlib-1.8.1
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.labs.redhat.com/pub/imlib/TAR/
+MASTER_SITES=	ftp://ftp.gnome.org/pub/imlib/TAR/
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.labs.redhat.com/imlib/
@@ -14,6 +14,8 @@ DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-1.0.2:../../graphics/png
 DEPENDS+=	giflib-3.0:../../graphics/giflib
 
+CONFLICTS=	imlib-1.7
+
 USE_X11=	yes
 USE_LIBTOOL=	yes
 USE_GMAKE=	yes
@@ -22,10 +24,5 @@ GNU_CONFIGURE=	yes
 LDFLAGS+=		-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-gtk-prefix=${X11BASE}
 CONFIGURE_ENV+=		CPPFLAGS='-I${LOCALBASE}/include -I${LOCALBASE}/include/giflib'
-
-WRKSRC=		${WRKDIR}/imlib
-
-post-extract:
-	${RM} ${WRKSRC}/config/imrc
 
 .include "../../mk/bsd.pkg.mk"
