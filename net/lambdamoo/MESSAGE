@@ -1,0 +1,5 @@
+To start LambdaMOO automatically on boot, add the following to /etc/rc.local
+	su - lambdamoo -c "./restart.sh LambdaCore-12Apr99 7777"
+
+To log in
+	telnet localhost 7777
