@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2001/07/23 10:21:12 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2002/01/20 01:32:55 mjl Exp $
 #
 
-DISTNAME=	smalltalk-1.95.4
+DISTNAME=	smalltalk-1.95.9
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=smalltalk/}
 
@@ -14,10 +14,11 @@ USE_GNU_READLINE=	YES
 USE_BUILDLINK_ONLY=	YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS=		--with-included-regex
-CONFIGURE_ARGS+=	--with-readline
+CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_DIR}/lib
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_DIR}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_DIR}/lib
+CONFIGURE_ARGS+=	--without-libiconv
+CONFIGURE_ARGS+=	--without-glib --without-gtk
 
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
