@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2003/09/04 11:30:20 grant Exp $
+# $NetBSD: Makefile,v 1.11 2003/09/05 05:59:49 wiz Exp $
 #
 
 DISTNAME=		# see Makefile.${OPSYS}.${ARCH}
@@ -14,7 +14,6 @@ ONLY_FOR_PLATFORM=	Linux-*-i[3-6]86 NetBSD-*-i386 SunOS-5.[789]*-sparc
 
 CONFLICTS+=		phoenix-linux-[0-9]*
 
-PKGVER!=		${DATE} +%Y%m%d
 DIST_SUBDIR=		${PKGNAME}
 NO_CHECKSUM=		# defined
 NO_CONFIGURE=		# defined
@@ -23,6 +22,8 @@ NO_SRC_ON_FTP=		# defined
 USE_PKGINSTALL=		YES
 
 .include "../../mk/bsd.prefs.mk"
+
+PKGVER!=		${DATE} +%Y%m%d
 
 FILES_SUBST+=		PLATFORM=${PLATFORM}
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
