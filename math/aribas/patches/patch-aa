@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.2 2001/01/28 05:44:52 jtb Exp $
+$NetBSD: patch-aa,v 1.3 2002/07/17 11:30:41 agc Exp $
 
---- Makefile.orig	Fri Jan 26 09:05:22 2001
-+++ Makefile
+--- Makefile.orig	Mon Mar  4 16:11:32 2002
++++ Makefile	Wed Jul 17 12:27:27 2002
 @@ -4,8 +4,8 @@
- # date: 2001-01-25
+ # date: 2002-03-03
  #############################################################
  
 -CC = cc
@@ -17,12 +17,12 @@ $NetBSD: patch-aa,v 1.2 2001/01/28 05:44:52 jtb Exp $
  #CC = gcc
  #CFLAGS = -DUNiX -DPROTO -O -v
  
--MEMFLAG = -DMEM=6
-+#MEMFLAG = -DMEM=6
+-MEMFLAG1 = -DMEM=6
++#MEMFLAG1 = -DMEM=6
  # MEM may be set to any integer value from 1 to 16.
  # This is the size of the ARIBAS heap in Megabytes
  # The value should not exceed one half of the RAM of your machine
-@@ -34,14 +34,14 @@
+@@ -37,14 +37,14 @@
  terminal.o:	logscr.inc
  
  .c.o:

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2002/05/21 11:18:11 wiz Exp $
+$NetBSD: distinfo,v 1.5 2002/07/17 11:30:41 agc Exp $
 
 SHA1 (aribas-1.30.tar.gz) = 3861ea1342e4996d0b5e9c372bf045ac80cffe8a
 Size (aribas-1.30.tar.gz) = 250747 bytes
-SHA1 (patch-aa) = 0923d0f36e3d1e8d6fa2b558c8d7bb3aaf08110c
+SHA1 (patch-aa) = 3479b648eb023a77ee5a8931781854a84b92e71f
