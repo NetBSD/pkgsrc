@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2002/03/04 14:36:54 martti Exp $
+# $NetBSD: Makefile,v 1.4 2002/03/13 17:37:09 fredb Exp $
 
 DISTNAME=	gtkam-0.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-nls
 CPPFLAGS+=		-I${LOCALBASE}/include -DHAVE_CONFIG_H -I${WRKSRC}
 
-BUILDLINK_DEPENDS.gdk-pixbuf=   gdk-pixbuf>=0.9.0
+BUILDLINK_DEPENDS.gdk-pixbuf=   gdk-pixbuf>=0.11.0nb1
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../graphics/gdk-pixbuf/buildlink.mk"

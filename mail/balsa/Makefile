@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2002/03/11 05:55:24 jmc Exp $
+# $NetBSD: Makefile,v 1.16 2002/03/13 17:37:21 fredb Exp $
 #
 
 DISTNAME=	balsa-1.2.4
+PKGREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://www.theochem.kth.se/~pawsa/balsa/ \
 		ftp://ftp.newton.cx/pub/balsa/
@@ -11,12 +12,12 @@ HOMEPAGE=	http://www.balsa.net/
 COMMENT=	GNOME EMail client
 
 DEPENDS+=	glib>=1.2.1:../../devel/glib
-DEPENDS+=	imlib>=1.9.2:../../graphics/imlib
-DEPENDS+=	gnome-libs>=1.2.1:../../x11/gnome-libs
-DEPENDS+=	gnome-print>=0.25:../../print/gnome-print
+DEPENDS+=	imlib>=1.9.11nb1:../../graphics/imlib
+DEPENDS+=	gnome-libs>=1.4.1.2nb1:../../x11/gnome-libs
+DEPENDS+=	gnome-print>=0.29nb1:../../print/gnome-print
 DEPENDS+=	libpspell>=0.8.3:../../textproc/libpspell
 DEPENDS+=	pcre-[0-9]*:../../devel/pcre
-DEPENDS+=	gtkhtml-[0-9]*:../../www/gtkhtml
+DEPENDS+=	gtkhtml>=1.0.1nb1:../../www/gtkhtml
 DEPENDS+=	libiconv-*:../../converters/libiconv
 
 GNU_CONFIGURE=		yes

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/04 14:51:50 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/13 17:37:39 fredb Exp $
 #
 
 DISTNAME=	eurosym-1.0
 PKGNAME=	tex-${DISTNAME}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/eurosym
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_LOCAL}

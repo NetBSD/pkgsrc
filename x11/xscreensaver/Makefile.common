@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.25 2002/03/01 13:27:35 fredb Exp $
+# $NetBSD: Makefile.common,v 1.26 2002/03/13 17:38:05 fredb Exp $
 #
 
 DISTNAME=		xscreensaver-4.01
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${HOMEPAGE} \
 			ftp://ftp.fu-berlin.de/unix/X11/graphics/xscreensaver/
@@ -11,7 +12,7 @@ HOMEPAGE=		http://www.jwz.org/xscreensaver/
 
 DEPENDS+=		gtk+-1.2.*:../../x11/gtk
 DEPENDS+=		gle-[0-9]*:../../graphics/gle
-DEPENDS+=		gdk-pixbuf>=0.10.1:../../graphics/gdk-pixbuf
+DEPENDS+=		gdk-pixbuf>=0.11.0nb1:../../graphics/gdk-pixbuf
 DEPENDS+=		jpeg-6b:../../graphics/jpeg
 DEPENDS+=		libxml-1.8.16:../../textproc/libxml
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2002/02/28 21:20:41 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2002/03/13 17:37:13 fredb Exp $
 #
 
 DISTNAME=	GD-1.32
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5bd
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GD/}

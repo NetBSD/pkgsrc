@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2001/09/30 07:39:48 tron Exp $
+# $NetBSD: Makefile,v 1.26 2002/03/13 17:37:55 fredb Exp $
 
 DISTNAME=	gdm-2.2.0
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/gdm/} \
 		${MASTER_SITE_LOCAL}
@@ -10,8 +11,8 @@ MAINTAINER=	mjl@netbsd.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
-DEPENDS+=	gnome-libs-[0-9]*:../../x11/gnome-libs
-DEPENDS+=	libglade>=0.16:../../devel/libglade
+DEPENDS+=	gnome-libs>=1.4.1.2nb1:../../x11/gnome-libs
+DEPENDS+=	libglade>=0.17nb1:../../devel/libglade
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 

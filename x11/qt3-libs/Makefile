@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/01/07 08:07:57 skrll Exp $
+# $NetBSD: Makefile,v 1.2 2002/03/13 17:38:02 fredb Exp $
 #
 
 .include "../qt3-libs/Makefile.common"
 
 PKGNAME=		qt3-libs-${QTVERSION}
+PKGREVISION=		1
 COMMENT=		C++ X GUI toolkit
 
 USE_BUILDLINK_ONLY=	yes

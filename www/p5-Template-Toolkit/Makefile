@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2001/10/18 15:20:51 veego Exp $
+# $NetBSD: Makefile,v 1.4 2002/03/13 17:37:52 fredb Exp $
 #
 
 DISTNAME=	Template-Toolkit-2.04
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5tto
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}

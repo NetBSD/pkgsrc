@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2001/04/24 18:33:29 rh Exp $
+# $NetBSD: Makefile,v 1.19 2002/03/13 17:37:43 fredb Exp $
 
 DISTNAME=		gtop-1.0.13
+PKGREVISION=		1
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=stable/sources/gtop/}
 
@@ -9,8 +10,8 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME system monitor - top like, memory graphs, process viewer
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gnome-core>1.4.0:../../x11/gnome-core
-DEPENDS+=		libgtop>=1.0.12:../../devel/libgtop
+DEPENDS+=		gnome-core>=1.4.0.4nb1:../../x11/gnome-core
+DEPENDS+=		libgtop>=1.0.12nb2:../../devel/libgtop
 
 OSVERSION_SPECIFIC=	YES
 USE_GMAKE=		YES

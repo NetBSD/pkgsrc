@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2001/12/02 14:40:20 tron Exp $
+# $NetBSD: Makefile,v 1.38 2002/03/13 17:37:32 fredb Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	news x11
 MASTER_SITES=	http://www.matematik.su.se/~kjj/
 
@@ -12,7 +12,7 @@ COMMENT=	X11 newsreader with support for threading and MIME
 
 DEPENDS+=	faces>=1.6.1:../../mail/faces
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.11:../../graphics/png
+DEPENDS+=	png>=1.2.1:../../graphics/png
 
 CONFLICTS=	knews-1.0b0
 

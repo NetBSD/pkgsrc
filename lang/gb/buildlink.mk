@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2001/10/03 20:56:51 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.3 2002/03/13 17:37:21 fredb Exp $
 #
 # This Makefile fragment is included by packages that use gb.
 #
@@ -17,7 +17,7 @@ GB_BUILDLINK_MK=	# defined
 
 .include "../../mk/bsd.buildlink.mk"
 
-BUILDLINK_DEPENDS.gb?=		gb>=0.0.20
+BUILDLINK_DEPENDS.gb?=		gb>=0.0.20nb1
 DEPENDS+=	${BUILDLINK_DEPENDS.gb}:../../lang/gb
 
 EVAL_PREFIX+=			BUILDLINK_PREFIX.gb=gb

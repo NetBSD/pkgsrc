@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2001/10/15 21:28:42 veego Exp $
+# $NetBSD: Makefile,v 1.32 2002/03/13 17:37:19 fredb Exp $
 #
 
 DISTNAME=	xsane-0.80
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.xsane.org/download/ \
 		http://gd.tuwien.ac.at/hci/sane/xsane/ \
@@ -20,7 +21,7 @@ COMMENT=	New improved frontend for SANE
 BUILD_USES_MSGFMT=	yes
 BUILDLINK_DEPENDS.gtk?= gtk+>=1.2.5
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
-DEPENDS+=	png>=1.0.11:../../graphics/png
+DEPENDS+=	png>=1.2.1:../../graphics/png
 DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
 DEPENDS+=	gimp>=1.0.4:../../graphics/gimp
 DEPENDS+=	sane-backends>=1.0.4:../../graphics/sane-backends

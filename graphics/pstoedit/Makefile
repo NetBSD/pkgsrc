@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2001/02/25 04:17:52 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2002/03/13 17:37:16 fredb Exp $
 
 DISTNAME=	pstoedit_3_20
 PKGNAME=	pstoedit-3.20
+PKGREVISION=	1
 CATEGORIES=	converters graphics print
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Network/1958/pstoedit/
 EXTRACT_SUFX=	.zip
@@ -11,7 +12,7 @@ HOMEPAGE=	http://www.geocities.com/SiliconValley/Network/1958/pstoedit/
 COMMENT=	Convert PostScript / PDF into various vector graphic formats
 
 # Requires C++ support of plotutils.
-DEPENDS+=	plotutils-2.4.1:../../graphics/plotutils
+DEPENDS+=	plotutils>=2.4.1nb1:../../graphics/plotutils
 # Any ghostscript pkg will probably do, if not a font pkg.
 DEPENDS+=	ghostscript-[^f]*:../../print/ghostscript
 
