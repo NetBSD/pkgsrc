@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.14 2004/10/03 16:06:18 taca Exp $
+$NetBSD: patch-aa,v 1.15 2004/12/14 14:27:07 taca Exp $
 
---- src/Makefile.in.orig	2004-10-01 18:30:32.000000000 +0900
+--- src/Makefile.in.orig	2004-09-26 06:37:59.000000000 +0900
 +++ src/Makefile.in
 @@ -380,14 +380,15 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
  DEFAULT_CACHE_LOG = $(DEFAULT_LOG_PREFIX)/cache.log
@@ -66,7 +66,7 @@ $NetBSD: patch-aa,v 1.14 2004/10/03 16:06:18 taca Exp $
  
  uninstall-info: uninstall-info-recursive
  
-@@ -1151,19 +1152,12 @@ repl_modules.c: repl_modules.sh Makefile
+@@ -1151,20 +1152,12 @@ repl_modules.c: repl_modules.sh Makefile
  auth_modules.c: auth_modules.sh Makefile
  	@$(SHELL) $(srcdir)/auth_modules.sh $(AUTH_MODULES) >auth_modules.c
  
@@ -83,12 +83,13 @@ $NetBSD: patch-aa,v 1.14 2004/10/03 16:06:18 taca Exp $
 -	        echo "$(INSTALL_DATA) squid.conf.default $(DESTDIR)$(DEFAULT_CONFIG_FILE)"; \
 -	        $(INSTALL_DATA) squid.conf.default $(DESTDIR)$(DEFAULT_CONFIG_FILE); \
 -	fi
+-	$(mkinstalldirs) $(DESTDIR)$(DEFAULT_LOG_PREFIX)
 +install-data-local: install-dataDATA
 +	@mkdir -p $(DESTDIR)$(EXAMPLES_DIR)
 +	@echo "$(INSTALL_DATA) $(srcdir)/mime.conf.default $(DESTDIR)$(EXAMPLES_DIR)/mime.conf" ;\
 +	        $(INSTALL_DATA) $(srcdir)/mime.conf.default $(DESTDIR)$(EXAMPLES_DIR)/mime.conf
 +	@echo "$(INSTALL_DATA) squid.conf.default $(DESTDIR)$(EXAMPLES_DIR)/suqid.conf"; \
 +	        $(INSTALL_DATA) squid.conf.default $(DESTDIR)$(EXAMPLES_DIR)/squid.conf
- 	$(mkinstalldirs) $(DESTDIR)$(DEFAULT_LOG_PREFIX)
  
  uninstall-local:
+ 	@if test -f $(DESTDIR)$(DEFAULT_MIME_TABLE) ; then \
