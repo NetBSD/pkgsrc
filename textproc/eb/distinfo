@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2002/08/25 18:40:00 jlam Exp $
+$NetBSD: distinfo,v 1.6 2003/02/08 12:38:08 cjep Exp $
 
-SHA1 (eb/eb-3.2.2.tar.gz) = ae6fa87b996c239d95a8e24a4514eadb3cd9fb80
-Size (eb/eb-3.2.2.tar.gz) = 1010300 bytes
+SHA1 (eb/eb-3.2.3.tar.gz) = 1812f7773f5352403d3fd40a5d7c75b0f02c4ea8
+Size (eb/eb-3.2.3.tar.gz) = 1011232 bytes
 SHA1 (eb/LIST) = 03cc7f7c41b415fd7ea9c119ee1cb9c445617cdd
 Size (eb/LIST) = 9136 bytes
 SHA1 (eb/LIST-ja) = f21e7765c637ad13beb8171edf70b0587f298e19
@@ -30,6 +30,8 @@ SHA1 (eb/dd75-2.0.tar.gz) = f2a0141a259bcaeddb972d2b228fa1ed8e712c37
 Size (eb/dd75-2.0.tar.gz) = 4062 bytes
 SHA1 (eb/genius-1.0.tar.gz) = 4dc04040ee19ed5d0817015db8b621fc4ead9b46
 Size (eb/genius-1.0.tar.gz) = 2241 bytes
+SHA1 (eb/genius2-1.1.tar.gz) = 16b3b16aa30f42088074f006b3103a9aad47e56e
+Size (eb/genius2-1.1.tar.gz) = 887 bytes
 SHA1 (eb/global-2.0.tar.gz) = e7df085181d795ade8e1e743e05a56d15119db06
 Size (eb/global-2.0.tar.gz) = 4034 bytes
 SHA1 (eb/heritage-2.2.tar.gz) = 32f22976e72f214dbed0322f20f6f5d1a6a3cc3f

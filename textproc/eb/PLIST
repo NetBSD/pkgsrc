@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/08/25 18:39:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/02/08 12:38:08 cjep Exp $
 bin/ebappendix
 bin/ebfont
 bin/ebinfo
@@ -15,38 +15,38 @@ include/eb/error.h
 include/eb/font.h
 include/eb/text.h
 include/eb/zio.h
-@unexec install-info --delete --info-dir=%D/info %D/info/eb-ja.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebfont-ja.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebfont.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebinfo-ja.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebinfo.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebrefile-ja.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebrefile.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebzip-ja.info
-@unexec install-info --delete --info-dir=%D/info %D/info/ebzip.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/eb-ja.info
 info/eb-ja.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/eb-ja.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebfont-ja.info
 info/ebfont-ja.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebfont-ja.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebfont.info
 info/ebfont.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebfont.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebinfo-ja.info
 info/ebinfo-ja.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebinfo-ja.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebinfo.info
 info/ebinfo.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebinfo.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebrefile-ja.info
 info/ebrefile-ja.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebrefile-ja.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebrefile.info
 info/ebrefile.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebrefile.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebzip-ja.info
 info/ebzip-ja.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebzip-ja.info
+@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/ebzip.info
 info/ebzip.info
-@exec install-info --info-dir=%D/info %D/info/ebzip.info
-@exec install-info --info-dir=%D/info %D/info/ebzip-ja.info
-@exec install-info --info-dir=%D/info %D/info/ebrefile.info
-@exec install-info --info-dir=%D/info %D/info/ebrefile-ja.info
-@exec install-info --info-dir=%D/info %D/info/ebinfo.info
-@exec install-info --info-dir=%D/info %D/info/ebinfo-ja.info
-@exec install-info --info-dir=%D/info %D/info/ebfont.info
-@exec install-info --info-dir=%D/info %D/info/ebfont-ja.info
-@exec install-info --info-dir=%D/info %D/info/eb-ja.info
+@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/ebzip.info
 lib/libeb.a
 lib/libeb.la
 lib/libeb.so
 lib/libeb.so.6
-lib/libeb.so.6.2
+lib/libeb.so.6.3
 share/eb/appendix/LIST
 share/eb/appendix/LIST-ja
 share/eb/appendix/cencro-1.0/catalog
@@ -81,9 +81,9 @@ share/eb/appendix/crownfj2-1.0/catalog
 share/eb/appendix/crownfj2-1.0/catalog.app
 share/eb/appendix/crownfj2-1.0/crfre.app
 share/eb/appendix/crownfj2-1.0/crfre/appendix
+share/eb/appendix/crowngj-1.0/catalog
 share/eb/appendix/crowngj-1.0/catalog.app
 share/eb/appendix/crowngj-1.0/crger.app
-share/eb/appendix/crowngj-1.0/catalog
 share/eb/appendix/crowngj-1.0/crger/appendix
 share/eb/appendix/daihyakka-1.0/catalog
 share/eb/appendix/daihyakka-1.0/catalog.app
@@ -103,6 +103,10 @@ share/eb/appendix/genius-1.0/catalog
 share/eb/appendix/genius-1.0/catalog.app
 share/eb/appendix/genius-1.0/genius.app
 share/eb/appendix/genius-1.0/genius/appendix
+share/eb/appendix/genius2-1.1/catalogs
+share/eb/appendix/genius2-1.1/catalogs.app
+share/eb/appendix/genius2-1.1/genius.app
+share/eb/appendix/genius2-1.1/genius/data/furoku
 share/eb/appendix/global-2.0/catalogs
 share/eb/appendix/global-2.0/catalogs.app
 share/eb/appendix/global-2.0/gejcje.app
@@ -288,6 +292,9 @@ share/eb/eb3.m4
 @dirrm share/eb/appendix/global-2.0/gejcje/data
 @dirrm share/eb/appendix/global-2.0/gejcje
 @dirrm share/eb/appendix/global-2.0
+@dirrm share/eb/appendix/genius2-1.1/genius/data
+@dirrm share/eb/appendix/genius2-1.1/genius
+@dirrm share/eb/appendix/genius2-1.1
 @dirrm share/eb/appendix/genius-1.0/genius
 @dirrm share/eb/appendix/genius-1.0
 @dirrm share/eb/appendix/dd75-2.0/koujien
