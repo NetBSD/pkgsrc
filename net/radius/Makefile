@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/03/22 04:29:53 kim Exp $
+# $NetBSD: Makefile,v 1.3 1999/04/24 22:41:53 tron Exp $
 #
 # Tempted to install another radius package?
 #
@@ -11,15 +11,15 @@ DISTNAME=	radius-3.6B
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.merit.edu/radius/releases/ \
 		http://www.mr.net/~bradley/radius/
-DISTFILES=	${EXTRACT_ONLY} ${EXTRA_FILES}
+DISTFILES=	radius.3.6B.basic.tar.gz \
+		radius.3.6B-skey.tar.gz \
+		radius.3.6B-ftp.tar \
+		radius.3.6B-simultd.tar
 
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.merit.edu/aaa/
 
-EXTRACT_ONLY=	radius.3.6B.basic.tar.gz \
-		radius.3.6B-skey.tar.gz
-EXTRA_FILES=	radius.3.6B-ftp.tar \
-		radius.3.6B-simultd.tar
+DECOMPRESS_CMD=	${GZCAT} -f
 
 DIST_SUBDIR=	radius
 NO_WRKSUBDIR=	yes
@@ -35,11 +35,9 @@ RADLIBS=	-lkrb -ldes
 .endif
 
 post-extract:
-	@cd ${WRKSRC} ; \
-	for i in ${EXTRA_FILES} ; \
-	do \
-	    ${GTAR} -xf ${_DISTDIR}/$${i} ; \
-	done
+.for FILE in ${EXTRA_FILES}
+	${GTAR} xCf ${WRKSRC} ${_DISTDIR}/${FILE}
+.endfor
 
 pre-patch:
 	@cd ${WRKSRC} ; \
