@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/09/14 11:58:43 tron Exp $
+# $NetBSD: Makefile,v 1.12 2003/10/30 08:36:03 cube Exp $
 
 DISTNAME=	net-snmp-5.0.9
 CATEGORIES=	net
@@ -17,9 +17,8 @@ BUILD_DEFS+=	USE_INET6
 
 NET_SNMP_SYS_CONTACT?=		default_user@contact.domain
 NET_SNMP_SYS_LOCATION?=		defaultlocation
-NET_SNMP_LOGFILE?=		/var/log/snmpd.log
 NET_SNMP_PERSISTENTDIR?=	/var/net-snmp
-NET_SNMP_MIBDIRS?=		\$$HOME/.snmp/mibs:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm2.1.10/mibs:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm3.0.0/mibs
+NET_SNMP_MIBDIRS?=		\$$HOME/.snmp/mibs:${PREFIX}/share/snmp/mibs:${PREFIX}/lib/tcl/tnm2.1.10/mibs:/usr/local/share/snmp/mibs:${PREFIX}/lib/tcl/tnm3.0.0/mibs
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
@@ -57,7 +56,7 @@ CONFIGURE_ARGS+=	--with-sys-location="${NET_SNMP_SYS_LOCATION}"
 # daemon must be stopped to cycle it properly.  Remember rc.d/snmpd
 # will use '-s' to enable standard syslog logging anyway.
 #
-CONFIGURE_ARGS+=	--without-logfile
+CONFIGURE_ARGS+=	--with-logfile=none
 CONFIGURE_ARGS+=	--with-persistent-directory="${NET_SNMP_PERSISTENTDIR}"
 .if !empty(NET_SNMP_MIBDIRS)
 CONFIGURE_ARGS+=	--with-mibdirs="${NET_SNMP_MIBDIRS}"
