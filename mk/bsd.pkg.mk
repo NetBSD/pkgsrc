@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1082 2002/11/10 18:20:44 hubertf Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1083 2002/11/11 21:46:51 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -3740,6 +3740,21 @@ print-run-depends-list:
 	@${ECHO} -n `${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`
 	@${ECHO} '" to run.'
 .  endif
+.endif
+
+# This target is used by the mk/bulk/mkreadme script to generate
+# README.html files
+.if !target(print-summary-data)
+print-summary-data:
+	@${ECHO} "depends ${PKGPATH} ${DEPENDS}" 
+	@${ECHO} "build_depends ${PKGPATH} ${BUILD_DEPENDS}" 
+	@${ECHO} "conflicts ${PKGPATH} ${CONFLICTS}" 
+	@${ECHO} "index ${PKGPATH} ${PKGNAME}"
+	@${ECHO} htmlname ${PKGPATH} ${HTML_PKGNAME:Q}
+	@${ECHO} homepage ${PKGPATH} ${HOMEPAGE:Q}
+	@${ECHO} wildcard ${PKGPATH} ${PKGWILDCARD:Q}
+	@${ECHO} comment ${PKGPATH} ${COMMENT:Q}
+	@${ECHO} license ${PKGPATH} ${LICENSE:Q}
 .endif
 
 .if !target(show-license)
