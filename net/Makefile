@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.409 2003/09/19 12:21:43 wiz Exp $
+# $NetBSD: Makefile,v 1.410 2003/09/25 14:13:51 xtraeme Exp $
 #
 
 COMMENT=	Networking tools
@@ -131,6 +131,7 @@ SUBDIR+=	libpcap
 SUBDIR+=	libsscript
 SUBDIR+=	linc
 SUBDIR+=	lopster
+SUBDIR+=	maradns
 SUBDIR+=	md-whois
 SUBDIR+=	mirror
 SUBDIR+=	mldonkey
