@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3400 2003/09/16 13:40:15 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3401 2003/09/16 13:47:33 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3720,3 +3720,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated hf6to4 to 1.1 [hubertf 2003-09-16]
 	Updated mhonarc to 2.6.8 [xtraeme 2003-09-16]
 	Updated p5-GDGraph to 1.4.3 [xtraeme 2003-09-16]
+	Updated p5-Net-Server to 0.85 [xtraeme 2003-09-16]
