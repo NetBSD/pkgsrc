@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:55 skrll Exp $
-
-SHA1 (xhangglider-0.94.0.tar.gz) = db4808c1953aff5496d4f97d2f413fac76705b12
-Size (xhangglider-0.94.0.tar.gz) = 35189 bytes
-SHA1 (patch-aa) = 2c5eac5581090f74e804cf541fd519d4596b814e
-SHA1 (patch-ab) = a7014b0d0f35de1435538b04bc57196155657785
-SHA1 (patch-ac) = 2246d75886378b56fdb9437397ca6621a9de74bd
-SHA1 (patch-ad) = 10428ec51d7cb9e8b7ce27c77d5afca92cf0f196

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/27 02:27:47 dan Exp $
-bin/tcpdump2xplot
-bin/xplot
-share/doc/xplot/ANNOUNCE
-share/doc/xplot/README
-share/doc/xplot/README.tcp_plots
-@dirrm share/doc/xplot

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/09/26 19:29:13 wrstuden Exp $
-
-SHA1 (robodoc-3.2.3.tar.gz) = e082883583ba9f8e4cbe82233caa3c9cdd3bb530
-Size (robodoc-3.2.3.tar.gz) = 105278 bytes
-SHA1 (patch-aa) = d9a26a78b8df348b965a15f88024dcdcd41d65a8
-SHA1 (patch-ab) = 90f3848a15b3edda2dfa2a9ad915cbd99fc5ed3b
-SHA1 (patch-ac) = 8b6a9cf8b4c0592c63f995461ed80f7fb8f32ac0
-SHA1 (patch-ad) = c39f68e0555d32444c3ee9548e4999249acb4246

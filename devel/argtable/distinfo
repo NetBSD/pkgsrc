@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:10 wiz Exp $
-
-SHA1 (argtable-1.2.tar.gz) = 2750b4334471dfecf6f83e9889a6daec0900e516
-Size (argtable-1.2.tar.gz) = 509716 bytes
-SHA1 (patch-aa) = bca5920fbb9b88d5d9bda6d5d393ab7c4cd9d31f

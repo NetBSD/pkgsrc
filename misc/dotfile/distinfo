@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:52:10 agc Exp $
-
-SHA1 (dotfile-2.4.1.tar.gz) = dfbd922ec6c0f34b41a0ec78276f222621bf1c05
-Size (dotfile-2.4.1.tar.gz) = 1015756 bytes
-SHA1 (patch-aa) = 0b17889ba0a5dca52b01614777092096e86e4306
-SHA1 (patch-ab) = 6730793b2b479c2a4df0df1337dccc30780bb140

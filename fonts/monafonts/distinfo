@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/12/23 12:52:29 toshii Exp $
-
-SHA1 (monafont-2.22.tar.bz2) = e1afdced81efd7cc2854113fef95ee7aac7779a7
-Size (monafont-2.22.tar.bz2) = 679935 bytes
-SHA1 (patch-aa) = 3fc21159dbe3a282b919ef73fd722db79f67732c

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/04/03 04:15:45 gson Exp $
-
-SHA1 (st-1.4.tar.gz) = 15065a9ef5982d1de77f40ad7e2d583dc7784b77
-Size (st-1.4.tar.gz) = 80245 bytes
-SHA1 (patch-aa) = 45ad36a0957ad9130b857eaa6eb6b5d693e9a1c8
-SHA1 (patch-ab) = d8b024bd5382c844dd42720d637f3adfb8cb0ac2
-SHA1 (patch-ac) = df0c40d3acafd38155377475c7745f8398f920d5

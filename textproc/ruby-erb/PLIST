@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/03/16 03:39:30 taca Exp $
-${RUBY_SITELIBDIR}/erb/compile.rb
-${RUBY_SITELIBDIR}/erb/erb.rb
-${RUBY_SITELIBDIR}/erb/erbcgi.rb
-${RUBY_SITELIBDIR}/erb/erbl.rb
-${RUBY_SITELIBDIR}/erb/erbu.rb
-${RUBY_SITELIBDIR}/erb/main.rb
-${RUBY_SITELIBDIR}/erb/strio.rb
-@dirrm ${RUBY_SITELIBDIR}/erb

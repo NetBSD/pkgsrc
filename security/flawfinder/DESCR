@@ -1,4 +1,0 @@
-flawfinder is a program that examines source code and reports
-possible security weaknesses (``flaws'') sorted by risk level. It's
-very useful for quickly finding and removing at least some potential
-security problems before a program is widely released to the public.

@@ -1,6 +1,0 @@
-ftplibpp is a C++ class providing ftp client functionality. It is a
-direct derivate from the great ftplib C library by Thomas Pfau. It was
-ported to C++, modified and some features added to fit today's FTP
-standards, like resuming up- and downloads, fxp support, SSL/TLS encryption
-and logging functionality. However the very base of ftplibpp is still the
-nice code from Thomas Pfau.

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:33 zuntum Exp $
-bin/doscmd
-man/man1/doscmd.1
-man/cat1/doscmd.0
-libexec/doscmd.kernel
-libexec/instbsdi.exe

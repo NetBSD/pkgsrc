@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/21 10:16:05 xtraeme Exp $
-man/man8/clamsmtpd.8
-man/man5/clamsmtpd.conf.5
-sbin/clamsmtpd
-share/examples/clamsmtp/clamsmtpd.conf
-@dirrm share/examples/clamsmtp

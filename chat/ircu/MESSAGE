@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2004/09/28 12:32:17 adrianp Exp $
-
-You should create an "ircd.motd" MOTD file for local connect users,
-and an "remote.motd" MOTD file for remote users.
-
-===========================================================================

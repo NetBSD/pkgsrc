@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2004/11/15 15:43:16 dillo Exp $
-
-SHA1 (tin-1.6.2.tar.bz2) = 9ab37d0b2712c074e60d99d0cf5bb3a774be75db
-Size (tin-1.6.2.tar.bz2) = 1186877 bytes
-SHA1 (patch-aa) = 0551171473f2f7ba26ec703d4844f73ca20b2040

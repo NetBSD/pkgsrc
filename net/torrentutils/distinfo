@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/08/29 19:46:45 wiz Exp $
-
-SHA1 (torrentutils-0.3.0.tar.gz) = d9487551e5de128c31abe7fc404ec3a51d6a83a0
-Size (torrentutils-0.3.0.tar.gz) = 21697 bytes
-SHA1 (patch-aa) = 634e8f4e3a14f239731924a5aa5078f8cd78b8a6

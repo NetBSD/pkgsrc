@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/08/27 06:29:10 jlam Exp $
-
-SHA1 (bbdate-0.2.4.tar.gz) = c48052eec337dfdca5fdfe6b87cd2bccf3a03921
-Size (bbdate-0.2.4.tar.gz) = 60644 bytes
-SHA1 (patch-aa) = f3dcd43ff15b065b2e4e63a07743178490c1634d
-SHA1 (patch-ab) = 4ba9c43992b476e8d515fb56fb18dad586533a3a

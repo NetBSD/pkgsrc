@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.2 2004/01/24 08:13:14 grant Exp $
-lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb.so

@@ -1,4 +1,0 @@
-Asnap is the ancestor of xsnap, a program which allows one
-to take a "snapshot" of a region of the screen.  Asnap adds the
-ability to save the image in either "xwd" or "ATK raster" format,
-and this can be done none-interactively as well.

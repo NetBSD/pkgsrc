@@ -1,7 +1,0 @@
-xdg-x11-dirs installs a set of shared directories used by freedesktop.org
-XDG based systems (kde 3.2 and gnome 2.4).  It is useful to simplify PLIST
-handling in other packages.
-
-This package differs from xdg-dirs in that shared directories are created
-under X11's tree.  Has no effect if using xpkgwedge, other than depending
-directly on xdg-dirs.

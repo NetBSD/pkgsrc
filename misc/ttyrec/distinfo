@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/07/02 12:59:38 wiz Exp $
-
-SHA1 (ttyrec-1.0.4.tar.gz) = 5bcb1cbbca3fee3ce1876cc2c0584b8984df58ea
-Size (ttyrec-1.0.4.tar.gz) = 6341 bytes
-SHA1 (patch-aa) = f08dcddcfbcf68131a1e9e9086bffc2016ae702a

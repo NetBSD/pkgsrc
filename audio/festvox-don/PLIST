@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:16:00 zuntum Exp $
-share/festival/lib/voices/english/don_diphone/COPYING
-share/festival/lib/voices/english/don_diphone/diphlocs.txt
-share/festival/lib/voices/english/don_diphone/lpcdiphs.bin
-share/festival/lib/voices/english/don_diphone/festvox/don_diphone.scm
-@dirrm share/festival/lib/voices/english/don_diphone/festvox
-@dirrm share/festival/lib/voices/english/don_diphone

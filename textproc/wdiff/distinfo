@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/01/24 14:12:03 itohy Exp $
-
-SHA1 (wdiff-0.5.tar.gz) = 44e18850e16518633139cf24a83165e62e3baa95
-Size (wdiff-0.5.tar.gz) = 129267 bytes
-SHA1 (patch-aa) = ae9ed3d3f993f5ee2ed22599b9ce5ac7b47be0ab
-SHA1 (patch-ab) = 9c969894e3a5ef8f9454c6577e230ca9d1e06a06
-SHA1 (patch-ac) = 97311dd14a9a47688463ba325aec7874f69887a9
-SHA1 (patch-ad) = 57c285a1fa9d79c543cdc7811255446dba6eaaa1
-SHA1 (patch-ae) = 8889518350ee790575bf24b02ba5c01e6ee76f9e

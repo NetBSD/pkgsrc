@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/06/18 12:09:25 agc Exp $
-
-SHA1 (lhs-0.1.tar.gz) = 74fbb0a982cd00c668c9f07b7c3c583759f14fd6
-Size (lhs-0.1.tar.gz) = 10665 bytes
-SHA1 (patch-aa) = 02c2bdd8e28c2e209ba60fe85065519b128c1eb4
-SHA1 (patch-ab) = 23fef016758618b8b6fdda949c7094aa8256c4fd
-SHA1 (patch-ac) = 14b197556274187aefda11c67dd800d5dd58537b

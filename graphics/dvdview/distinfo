@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2003/02/13 19:04:47 drochner Exp $
-
-SHA1 (dvdview-1.2.2.tar.gz) = d7d00aee0a5553f97b5a7673d7fa7174d173c12e
-Size (dvdview-1.2.2.tar.gz) = 209143 bytes
-SHA1 (patch-aa) = b691e2988b1394002a1e57512216cdf55a592665
-SHA1 (patch-ab) = 6509989ade7aff868c15436b859679ddd6b35a36

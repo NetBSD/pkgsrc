@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/03/05 13:03:47 dmcmahill Exp $
-
-SHA1 (geda/geda-20040111.tar.gz) = cfa387e046658c9a39eb976c2792b00663f24ce2
-Size (geda/geda-20040111.tar.gz) = 329653 bytes
-SHA1 (patch-aa) = 27f6766661153845e8333d4f83a1b2fbc42b70d1

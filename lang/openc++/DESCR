@@ -1,9 +1,0 @@
-OpenC++ is a version of C++ with a Metaobject Protocol. In other
-words, it is a tool of source-code translation for C++. Programmers
-can easily implement various kinds of translation so that they can
-define new syntax, new annotation, and new object behavior. OpenC++ is
-useful if they need, for example: developing extensions to C++, to
-provide support for things like parallelism, distribution,
-concurrency, and persistence; Adding domain-, application-, or
-class-specific compiler optimizations; Building their own version of
-(runtime) MOP for C++.

@@ -1,9 +1,0 @@
-The UCB/LBNL video tool, vic, is a real-time, multimedia application
-for video conferencing over the Internet.
-
-Vic was designed with a flexible and extensible architecture to support
-heterogeneous environments and configurations.  For example, in high
-bandwidth settings, multi-megabit full-motion JPEG streams can be
-sourced using hardware assisted compression, while in low bandwidth
-environments like the Internet, aggressive low bit-rate coding can
-be carried out in software.

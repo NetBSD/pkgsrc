@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.voxware,v 1.2 2003/02/25 02:22:29 jschauma Exp $
-bin/nasd
-${IMAKE_MAN_DIR}/auvoxware.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/nasd.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/nasd.conf.${IMAKE_MANNEWSUFFIX}
-share/examples/nas/nasd.conf.eg
-@dirrm share/examples/nas

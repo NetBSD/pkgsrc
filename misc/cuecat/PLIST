@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:52 zuntum Exp $
-bin/read_cuecat
-share/doc/cuecat/README
-@dirrm share/doc/cuecat

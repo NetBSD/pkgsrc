@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:50 zuntum Exp $
-lib/libdes.a
-bin/libdes
-man/man3/libdes_crypt.3
-man/man1/libdes.1
-include/libdes.h

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/12/22 19:39:26 jmmv Exp $
-
-SHA1 (ytalk-3.1.1.tar.gz) = be7828b46bac5cb0c3a1a95052e49b9d8337ea27
-Size (ytalk-3.1.1.tar.gz) = 83244 bytes
-SHA1 (patch-aa) = 7c5cd9207b19016c471a26fbb66148adf5f24e0a
-SHA1 (patch-ab) = 65db8d60db07ec7bc4530a8fca84f6d411b61db2

@@ -1,5 +1,0 @@
-Kaffe is a clean room implementation of Java virtual machine plus associated
-class libraries needed to provide a Java runtime environment.
-
-This package provides a plugin which enables sound support through the
-Enlightened Sound Daemon (esd, for short).

@@ -1,9 +1,0 @@
-$NetBSD: patch-af,v 1.1.1.1 2002/03/22 23:01:52 tron Exp $
-
---- examples/chrony.keys.example.orig	Sun Feb 17 23:23:19 2002
-+++ examples/chrony.keys.example
-@@ -3,3 +3,3 @@
- #
--# This is an example chrony keys file.  You should copy it to /etc/chrony.keys
-+# This is an example chrony keys file.  You should copy it to @PREFIX@/etc/chrony.keys
- # after editing it to set up the key(s) you want to use.  In most situations,

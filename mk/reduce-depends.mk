@@ -1,4 +1,4 @@
-# $NetBSD: reduce-depends.mk,v 1.2 2004/10/06 21:51:41 jlam Exp $
+# $NetBSD: reduce-depends.mk,v 1.2.2.1 2004/11/22 22:48:05 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,16 +39,8 @@
 # creates a smaller set of dependencies in ${REDUCED_DEPENDS} that imply
 # the same dependency relationships as ${DEPENDS}.
 
-# We skip the dependency calculation for some phases since they never
-# use the dependency information.  In these cases, ${REDUCED_DEPENDS}
-# is simply empty.
-#
-_PHASES_SKIP_DEPENDS=	fetch patch tools wrapper configure build test
-.if !empty(_PHASES_SKIP_DEPENDS:M${PKG_PHASE})
-_DEPENDS=	# empty
-.else
-_DEPENDS=	${DEPENDS}
-.endif
+# Create temporary variable for the reduction work.
+_DEPENDS:=	${DEPENDS}
 
 # _DEPENDS_PKGPATHS contains the full physical paths to the pkgsrc
 #	directories for dependencies.
@@ -123,3 +115,5 @@ REDUCED_DEPENDS+=	${_depend_}:${_DEPENDS_PKGPATH.${_path_}}
 REDUCED_DEPENDS+=	${_STRICTEST_DEPENDS.${_path_}}:${_DEPENDS_PKGPATH.${_path_}}
 .  endif
 .endfor
+
+DEPENDS:=		${REDUCED_DEPENDS}

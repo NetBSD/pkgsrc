@@ -1,9 +1,0 @@
-$NetBSD: patch-am,v 1.2 2001/03/21 15:29:00 wennmach Exp $
-
---- mpe/profiling/nupshot/tkAppInit.c.orig	Thu Aug  6 05:46:29 1998
-+++ mpe/profiling/nupshot/tkAppInit.c	Thu Aug  6 05:46:42 1998
-@@ -100,3 +100,3 @@
- 
--    tcl_RcFileName = "~/.wishrc";
-+/*    tcl_RcFileName = "~/.wishrc";*/
-     return TCL_OK;

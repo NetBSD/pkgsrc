@@ -1,3 +1,0 @@
-vICQ is simple ICQ client written in perl with look & feel of micq
-and works fine with v7 protocol of ICQ. It is based on Net::ICQ2000
-module written by Robin Fisher.

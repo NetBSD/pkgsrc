@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/01/03 21:10:16 wiz Exp $
-
-SHA1 (NovaWM-0.8_alpha.tar.gz) = 6b881ca2f1673b1da785a6ba9a1421b88f634703
-Size (NovaWM-0.8_alpha.tar.gz) = 1103082 bytes
-SHA1 (patch-aa) = 8c4b80cce3c5a55a76031fd69bc051155841352c

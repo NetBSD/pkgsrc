@@ -1,5 +1,0 @@
-This traceroute implements an unique feature: it can query a whois server
-and report the Autonomous System number (AS, see RFC1930) of the routers
-along the path.
-This packages also contains `aslookup' a command line utility for querying
-a whois server and returning the AS number of supplied IP addresses.

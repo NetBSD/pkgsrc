@@ -1,3 +1,0 @@
-'patch' takes a patch file containing a difference listing
-produced by diff and applies those differences to one or
-more original files, producing patched versions.

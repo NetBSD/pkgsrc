@@ -1,8 +1,0 @@
-$NetBSD: patch-ac,v 1.5 2004/02/15 07:34:03 martti Exp $
-
---- Makefile.in.orig	Mon Jan 19 09:28:44 2004
-+++ Makefile.in	Sun Feb 15 09:18:46 2004
-@@ -40,2 +40,3 @@
- 	$(PERL) -0777 -p -i~ -e 's@GRAPHFMT="...";@GRAPHFMT="$(GDFORM_EXT)";@' $(top_srcdir)/bin/mrtg $(top_srcdir)/bin/indexmaker
-+	$(PERL) -0777 -p -i~ -e "s@__PREFIX__@${prefix}@g" $(top_srcdir)/bin/cfgmaker $(top_srcdir)/bin/mrtg $(top_srcdir)/bin/indexmaker
- 

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/10/07 15:40:23 wiz Exp $
-
-SHA1 (tuxpaint-config-0.0.5.tar.gz) = fc3056b24743377366cef630584cd5cb7262dc55
-Size (tuxpaint-config-0.0.5.tar.gz) = 82736 bytes
-SHA1 (patch-aa) = 033b4cf539b1fff0039575249c402fb3258c321b

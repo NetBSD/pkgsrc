@@ -1,7 +1,0 @@
-The Count program is a standard CGI program to count raw access hits in web
-pages. This is a graphic counter, that means it only counts if the browser
-support graphics.  It keeps the hits in text files. The program tries to
-maintain data integrity by locking the datafile. Among its many features,
-it also can be used to show time, date (of any timezone in the world),
-and countdown to a date. This single program can be used for any number
-of web pages, for any number of users.

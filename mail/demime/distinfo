@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2004/08/17 19:19:27 tv Exp $
-
-SHA1 (demime-1.1d/demime.1.1d) = bb525a0060723853a7adfeea3c001570ccce7697
-Size (demime-1.1d/demime.1.1d) = 93746 bytes
-SHA1 (demime-1.1d/demime_junkmail.cf) = 9bfcdf203111a7eb7135ac4d38d405d9b41448a9
-Size (demime-1.1d/demime_junkmail.cf) = 15234 bytes
-SHA1 (patch-aa) = fd399750d676983f6c843e92dfec654443cb33d3

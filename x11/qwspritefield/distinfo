@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2001/10/12 20:02:27 tron Exp $
-
-SHA1 (QwSpriteField1.6.tar.gz) = 44e55d8a2613eb33dbf1a2ad194e39159760f6d7
-Size (QwSpriteField1.6.tar.gz) = 607801 bytes
-SHA1 (patch-aa) = d0cb9816fd429d01b98e68269997e101b9c20216
-SHA1 (patch-ab) = 09e46d84f7d3ec29b1927bb96d27229eee832a76

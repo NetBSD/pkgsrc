@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.osf-alpha,v 1.1 2001/11/01 20:42:28 zuntum Exp $
-lib/netscape/${BINNAME}-${NS_VERS}/plugins/libnullplugin.so

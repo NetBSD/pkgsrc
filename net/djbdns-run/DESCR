@@ -1,5 +1,0 @@
-This package creates all the needed basic config files to run djbdns
-services, and provides NetBSD-style rc.d scripts. It also includes
-Jonathan de Boyne Pollard's dnscache-showctl and tinydns-showctl,
-useful if you run services configured with dnscache-conf(8) or
-tinydns-conf(8).

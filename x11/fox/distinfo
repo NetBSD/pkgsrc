@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.8 2004/02/16 11:08:21 sketch Exp $
-
-SHA1 (fox-1.0.43.tar.gz) = 1c56abb70c5d731226754808efa97bdad97a761d
-Size (fox-1.0.43.tar.gz) = 2132787 bytes
-SHA1 (patch-aa) = 0d56368c0d106d944956bfa1a33672f141cae69b
-SHA1 (patch-ab) = 705946d84fd48666479abbd4c59c4e75ca914436
-SHA1 (patch-ac) = c338e3747b5cb717794be526837ffa70330f9069
-SHA1 (patch-ad) = 33f032fcc13c32ab5e31a3224278626b5083838d
-SHA1 (patch-ae) = df65abd799df39f109e4314f65d9c6d82aa57e31

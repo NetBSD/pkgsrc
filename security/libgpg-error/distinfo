@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/10/15 18:21:56 minskim Exp $
-
-SHA1 (libgpg-error-1.0.tar.gz) = 1c91787f208c30a91678ebb2f173308f8fab3d36
-Size (libgpg-error-1.0.tar.gz) = 323724 bytes
-SHA1 (patch-aa) = 04f2918c2b61250693a279cd30a94a22fa4cad0a
-SHA1 (patch-ab) = 43ccbcfc284735255111438a015837bc69dac938
-SHA1 (patch-ac) = add7f9971bd3a087db518d5e1ce12a14f2d84d6a
-SHA1 (patch-ad) = ddb86ddf354cc9228eec28154d41f1fa62f474f3

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/02/15 08:34:20 salo Exp $
-
-SHA1 (gcombust-0.1.54.tar.gz) = 768dbc5e8d88eb2d106e1c19b1012f94a89816d3
-Size (gcombust-0.1.54.tar.gz) = 786628 bytes
-SHA1 (patch-ab) = 437e15e09601345b75afac2f9d6b3e755e4c936d

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.11 2004/01/15 08:11:20 wiz Exp $
-
-SHA1 (xcdroast-0.98alpha15.tar.gz) = f354ea9ffe918c4ec11312d5537e6e245730fecc
-Size (xcdroast-0.98alpha15.tar.gz) = 3282794 bytes
-SHA1 (gtk2locale.patch) = bb3d2f2c7edede86af6c367c8b5b09339251250c
-Size (gtk2locale.patch) = 643 bytes
-SHA1 (patch-aa) = 0beee32a5550646cd360459d90281cb0ec9a826a
-SHA1 (patch-ad) = 417a82344e14ae2a9f602254b152337c33afae4a

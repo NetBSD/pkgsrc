@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/08/25 19:22:59 jlam Exp $
-
-SHA1 (libtabe-0.2.5.tar.gz) = 487f3b34fa6e560c4baad5ac37af509f2850bc82
-Size (libtabe-0.2.5.tar.gz) = 1615825 bytes
-SHA1 (patch-aa) = b9c996a2aa9d78a64486836fd7baab1fd3d81411

@@ -1,6 +1,0 @@
-Midnight Commander is a visual shell much like a file manager, only with way
-more features.  It is text mode, but also includes mouse support if you are
-running GPM.  Its coolest feature is the ability to ftp, view tar, zip
-files, and poke into RPMs for specific files.
-
-This package has the GNOME interface to the Midnight Commander.

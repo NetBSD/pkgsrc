@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/10/05 06:11:30 tron Exp $
-
-SHA1 (logsurfer-1.5b.tar.gz) = a0c0f7e81278fb1bf4dd6bfd1c36b980c65aa1f4
-Size (logsurfer-1.5b.tar.gz) = 193000 bytes
-SHA1 (patch-aa) = 4c4f4e2f8093d38b08c5a119e9c84ba32b7a7648
-SHA1 (patch-ab) = 65289a445b062fabee11064d00aa8bb44caf89c8

@@ -1,7 +1,0 @@
-iDesk gives users of minimal window managers (like fluxbox, pekwm,
-windowmaker...) icons on their desktop.  The icon graphics are either
-from a PNG or SVG (vector) file and support some eyecandy effects like
-transparency.  Each icon can be configured to run one or more shell
-commands and the actions which run those commands are completely
-configurable.  In a nutshell if you want icons on your desktop and you
-don't have or don't want KDE or GNOME doing it, you can use idesk.

@@ -1,5 +1,0 @@
-There are many archiving programs for the Commodore 64, all of which
-are incompatible with archiving programs on other systems. This
-cbmconvert utility tries to address this problem. It extracts files
-from most known file formats and writes them to several different
-formats, including some formats used by some Commodore 64 emulators.

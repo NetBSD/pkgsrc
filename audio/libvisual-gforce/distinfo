@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/11/05 22:31:35 wiz Exp $
-
-SHA1 (libvisual-gforce-0.1.1.tar.gz) = 120af63ebc3621efa8dcab5b2c9ae712d252e607
-Size (libvisual-gforce-0.1.1.tar.gz) = 526944 bytes
-SHA1 (patch-aa) = d8c75e64396dec65415a4f6460e588047f286ce6

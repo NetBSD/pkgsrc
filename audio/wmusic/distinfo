@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/09/01 15:00:59 reed Exp $
-
-SHA1 (wmusic-1.5.0.tar.gz) = 7cbf62e23b200a7e07ea458034144f44cfae256a
-Size (wmusic-1.5.0.tar.gz) = 46276 bytes
-SHA1 (patch-aa) = 3c23078841f0c7dffde427050ac1cfcfa67f53cd

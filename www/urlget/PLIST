@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:59 zuntum Exp $
-bin/urlget
-man/man1/urlget.1

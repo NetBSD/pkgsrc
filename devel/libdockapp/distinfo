@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:26 wiz Exp $
-
-SHA1 (libdockapp-0.4.0.tar.gz) = 796b2791e779eed04ff9de2865633d43d728a607
-Size (libdockapp-0.4.0.tar.gz) = 108566 bytes
-SHA1 (patch-aa) = 7459a075e01e6708c7becace6cad4976db62cf9b

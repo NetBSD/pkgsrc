@@ -1,4 +1,0 @@
-This is the C version of the RANDLIB library. It includes numerous
-routines for the generation of pseudo-random numbers of different
-distributions including beta, chi-square, exponential, F, gamma,
-multivariate, univariate, binomial, Poisson, etc.

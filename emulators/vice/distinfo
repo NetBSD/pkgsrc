@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.16 2004/08/31 15:53:09 dillo Exp $
-
-SHA1 (vice-1.15.tar.gz) = 094f371fd79bded492473708910de8cc637b4e19
-Size (vice-1.15.tar.gz) = 3912194 bytes
-SHA1 (patch-aa) = fa152c1d14aad31c0b50fe96c83b4e5cfa06de5f
-SHA1 (patch-ab) = e9cebe89629f2dacb500695e4205cc33fab18bfe
-SHA1 (patch-ac) = bb648b8dc668a12540eab9f1be6374aab8cda35a
-SHA1 (patch-ad) = 9f26a52a0f60658b147ad62a8cadc37ddd99fe04
-SHA1 (patch-ae) = c2ede31953ebaf033c9ae1aa1985012fb0e5f3b6

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:52:12 agc Exp $
-
-SHA1 (granulate-0.1.tar.gz) = dd8b458ea2330b2adea61e3010ea9715fabedce4
-Size (granulate-0.1.tar.gz) = 10444 bytes
-SHA1 (patch-aa) = 75c04296f16da1b3d0a81c08b9534ad1df45d7c2

@@ -1,7 +1,0 @@
-Yodl is a package that implements a pre-document language and tools to
-process it.  The idea of Yodl is that you write up a document in a
-pre-language, then use the tools (e.g.  yodl2html) to convert it to
-some final document language.  Current converters are for HTML, ms,
-man, LaTeX SGML and texinfo, plus a poor-man's text converter.  Main
-document types are "article", "report", "book" and "manpage".  The
-Yodl document language is designed to be easy to use and extensible.

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.pre,v 1.1 2001/10/31 23:10:16 zuntum Exp $
-lib/python2.0/site-packages/ts_regex.py
-lib/python2.0/site-packages/ts_regex.pyc
-lib/python2.0/site-packages/ts_regex.pyo

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/08 14:29:51 simonb Exp $
-
-SHA1 (xtail-2.1.tar.gz) = 1188baaf47e19a1ed6176a17ee6d144078657c17
-Size (xtail-2.1.tar.gz) = 26769 bytes
-SHA1 (patch-aa) = 93ba9954b01cfc744adea0ace1d1d39a545459ac
-SHA1 (patch-ab) = 5c23b1fdb81ee6a47f3fe4a44066f7b63de6b8ee

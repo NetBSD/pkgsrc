@@ -1,4 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:15 wiz Exp $
-
-SHA1 (identd.c) = 9e1161c6e513571db3b0ecdfa64e2ac674a9f0d3
-Size (identd.c) = 2535 bytes

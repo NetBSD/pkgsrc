@@ -1,8 +1,0 @@
-       Elm is an interactive screen-oriented mailer program  that
-       supersedes mail and mailx.
-
-       It is itself superseeded by mutt, in the view of many people.
-
-       This is the ME extended version which deals with MIME messages
-       a lot better than the regular elm. The regular elm can be found
-       in the mail/elm package.

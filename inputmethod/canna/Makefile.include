@@ -1,5 +1,0 @@
-# $NetBSD: Makefile.include,v 1.2 2004/03/05 19:09:22 minskim Exp $
-#
-
-.include "../../devel/nbitools/buildlink3.mk"
-.include "../../mk/bsd.pkg.mk"

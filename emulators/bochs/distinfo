@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.16 2004/02/12 01:57:52 hubertf Exp $
-
-SHA1 (bochs-2.1.1.tar.gz) = 4d3ab662a4fb01d85cc77d7f8ddbd1f7a19b08e7
-Size (bochs-2.1.1.tar.gz) = 3653487 bytes
-SHA1 (patch-aa) = efa5e0be4b19b36032f4f15b60ecc13054852af9
-SHA1 (patch-ab) = 55f4c9d7de56ffe02673e627717648e80f9a1bd4
-SHA1 (patch-ad) = 8287d00e11892b6c78bc0c89590acd91e992ca69

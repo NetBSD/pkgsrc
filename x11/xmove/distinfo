@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:58 skrll Exp $
-
-SHA1 (xmove.2.0beta2.tar.gz) = a34292d88c72db2e1839fe27ddd18456ef069429
-Size (xmove.2.0beta2.tar.gz) = 639187 bytes
-SHA1 (patch-aa) = 76399aeaaba1c282440d1524409f3f7dd632093e

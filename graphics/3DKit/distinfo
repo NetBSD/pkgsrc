@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/09/29 06:12:51 rh Exp $
-
-SHA1 (3DKit/DevManual.pdf) = 1a30f0ce948f231f100e71844e8c7e6a5ff9e985
-Size (3DKit/DevManual.pdf) = 159821 bytes
-SHA1 (3DKit/3DKit-0.3.1r2.tar.gz) = 780e7dc975cb2ac0b96f8f605aa6ad0b3af596b9
-Size (3DKit/3DKit-0.3.1r2.tar.gz) = 216093 bytes

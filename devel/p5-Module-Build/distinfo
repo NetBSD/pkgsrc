@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/12/29 11:54:49 grant Exp $
-
-SHA1 (Module-Build-0.21.tar.gz) = 9f8f88c387c4892fea9bd6393d24da9c06d88975
-Size (Module-Build-0.21.tar.gz) = 92982 bytes
-SHA1 (patch-aa) = 1a80e08e32a3310bd5be6b0ee0a855e9ce54aeec

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:13 zuntum Exp $
-bin/ipv6socket_scrub
-man/man1/ipv6socket_scrub.1

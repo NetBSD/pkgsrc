@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:34 wiz Exp $
-
-SHA1 (tac_plus.F4.0.4.alpha.tar.Z) = 23ccb0b7db6909bd45dcf6762ef32917d3465dd6
-Size (tac_plus.F4.0.4.alpha.tar.Z) = 193771 bytes
-SHA1 (patch-aa) = daaf8f737441d17b1339bb1c6b7f865a95f706bc
-SHA1 (patch-ab) = 394c640e01d12f44e40741baa2ddbb60495e5e22
-SHA1 (patch-ac) = 11ea986ede6d2a277747cd9abc3bdcade1bf1e7a

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/07 13:56:43 cube Exp $
-bin/inews
-include/nntp.h
-lib/libnntpclnt.a
-man/man3/nntpclnt.3
-@exec ${MKDIR} ${PKG_SYSCONFDIR} 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} ${PKG_SYSCONFDIR} 2>/dev/null || ${TRUE}

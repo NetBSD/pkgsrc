@@ -1,5 +1,0 @@
-$NetBSD: distinfo.japanese,v 1.4 2003/08/01 20:39:54 jschauma Exp $
-
-SHA1 (netscape/7.1/japanese/netscape-i686-pc-linux-gnu-sea.tar.gz) = 105f986c68fffaa848235549ece532443965232f
-Size (netscape/7.1/japanese/netscape-i686-pc-linux-gnu-sea.tar.gz) = 17193612 bytes
-SHA1 (patch-aa) = afdb1766ebdbf914eb9688cc4782f8275db3aeb2

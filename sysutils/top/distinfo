@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2004/09/16 13:32:16 he Exp $
-
-SHA1 (top-3.6alpha7.tar.gz) = b0336ddc2482b6a52f5345855bf46e0de7d8438a
-Size (top-3.6alpha7.tar.gz) = 295433 bytes
-SHA1 (patch-aj) = 0a15ee8d2581e6150bfdc6c893971147d30cb914
-SHA1 (patch-ak) = 899d1263df15d8389c9391d173369141170ab7ea
-SHA1 (patch-al) = e9619f30350d9357a2a20a1d509a69eadf2b287e
-SHA1 (patch-am) = 565aa4a0dda8d0171f3f11d4edde79a53677a436
-SHA1 (patch-an) = aa2abb6a2e656ae3a7b379cc5a1867fe673e51e5

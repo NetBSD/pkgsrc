@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 09:13:29 agc Exp $
-
-SHA1 (xengine/part01.z) = c56961f548c4b653f97075027069a8dec962da88
-Size (xengine/part01.z) = 8176 bytes
-SHA1 (xengine/patch1.z) = b633b0e88389fbdd2b9c9f6243099043040dd4d1
-Size (xengine/patch1.z) = 3506 bytes
-SHA1 (patch-aa) = 00a3636ceed86cd2112679a1fdee289d3948bbac

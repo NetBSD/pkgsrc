@@ -1,4 +1,0 @@
-#!/bin/sh
-export ICAROOT=DESTINATION
-mkdir -p ~/.ICAClient
-exec $ICAROOT/wfcmgr

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/04/27 08:23:01 adam Exp $
-
-SHA1 (pfaedit_full-040310.tgz) = 60660c687363bcfe7a681d61c750d852418f53ce
-Size (pfaedit_full-040310.tgz) = 4349085 bytes
-SHA1 (patch-aa) = 4625e539f6f1e336c90ed76fa7e1b18b5476aabd

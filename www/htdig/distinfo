@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/03/09 21:48:11 fredb Exp $
-
-SHA1 (htdig-3.1.6.tar.gz) = 603fc244ba59ee1efcbe8f2ba087567cb14468d0
-Size (htdig-3.1.6.tar.gz) = 2068675 bytes
-SHA1 (patch-ab) = 504136ce6ac0a2beed574c88ee6d9b8ef90d6564
-SHA1 (patch-ac) = d1f6ef3c4c7a2995217f391a4bf9d544e10f5a00
-SHA1 (patch-ad) = a727a2c3afdd697f0e2e46355f1e89bc70775bbf
-SHA1 (patch-ae) = 1be8e82b97bb9b16dcc301f3f02e642a41945878

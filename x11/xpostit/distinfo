@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/05/21 21:58:15 wiz Exp $
-
-SHA1 (xpostit3.3.1.tar.Z) = 8ba13bb544d9c99308e36fff2590623ad9a16fef
-Size (xpostit3.3.1.tar.Z) = 53910 bytes
-SHA1 (patch-aa) = f958b6cfdf3d6ac269d0a73efb4c483fcba1a273
-SHA1 (patch-ab) = 6a61ec1ed69e0311a98bea7bca30f09a74e386a3

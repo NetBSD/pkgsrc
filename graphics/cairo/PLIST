@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:32 jlam Exp $
-include/cairo-features.h
-include/cairo.h
-lib/libcairo.la
-lib/pkgconfig/cairo.pc

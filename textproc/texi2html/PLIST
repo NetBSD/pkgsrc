@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:01 zuntum Exp $
-bin/texi2html
-man/man1/texi2html.1

@@ -1,9 +1,0 @@
-$NetBSD: patch-am,v 1.1 2000/03/09 02:28:05 wiz Exp $
-
---- cf/netbsd.h.orig	Sat Feb 22 00:06:26 1997
-+++ cf/netbsd.h	Thu Mar  9 03:09:11 2000
-@@ -76,3 +76,4 @@
- 
- #define _PATH_MPOOL_PID	"/var/run/mpoold.pid"
- #define _PATH_LOGIN	"/usr/bin/login"
-+#define _PATH_TTYLOCK	"/var/spool/lock/LCK..%s"

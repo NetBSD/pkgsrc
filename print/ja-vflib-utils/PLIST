@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/25 21:50:32 jlam Exp $
-bin/disol
-bin/fmtest
-bin/kban
-bin/ktest
-bin/vfperf
-bin/vftest

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/03/03 11:09:44 mjl Exp $
-
-SHA1 (SQL-Statement-1.005.tar.gz) = 066b658732f15faea203764996b543eed12f0de9
-Size (SQL-Statement-1.005.tar.gz) = 53841 bytes
-SHA1 (patch-aa) = c8ff44669e45201262d042612fbce32bc430efbc

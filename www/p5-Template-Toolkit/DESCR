@@ -1,6 +1,0 @@
-
-The Template Toolkit is a perl5 module which implements a fast, flexible,
-powerful and extensible template processing system.  It was originally
-designed and remains primarily useful for generating dynamic web content,
-but can be used equally well for processing other kinds of text based
-documents: HTML, XML, POD, PostScript, LaTex, etc.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/04/16 23:20:50 kei Exp $
-
-SHA1 (Mule-UCS-0.84.tar.gz) = aa796d3d9cce8b3c444752e8a3fc74ecf3d76979
-Size (Mule-UCS-0.84.tar.gz) = 565222 bytes
-SHA1 (patch-aa) = 12ea72b6549e643c438171cc1ef2107d051e6ca6
-SHA1 (patch-ab) = aff0bcad70ef62a32409cba3f6e2e052993617c3

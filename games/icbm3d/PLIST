@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:53:14 zuntum Exp $
-bin/icbm3d
-share/doc/icbm3d/README.txt
-@dirrm share/doc/icbm3d

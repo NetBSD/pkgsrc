@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/06 04:10:24 heinz Exp $
-bin/razor-admin
-bin/razor-check
-bin/razor-report
-bin/razor-revoke

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/10 12:44:31 salo Exp $
-bin/base64tool
-bin/mkvextract
-bin/mkvinfo
-bin/mkvmerge
-man/man1/base64tool.1
-man/man1/mkvextract.1
-man/man1/mkvinfo.1
-man/man1/mkvmerge.1

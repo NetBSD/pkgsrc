@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:10:07 agc Exp $
-
-SHA1 (xmailbox-2.5.tar.gz) = 5a213b7551c1d288bb5d5eb16b857c24ac72be38
-Size (xmailbox-2.5.tar.gz) = 43535 bytes
-SHA1 (patch-aa) = 31682497caef92bed7b0cde4c1ace990079938af
-SHA1 (patch-ab) = de5e0dc8ec927827c156d61a1e4291ddaa6973dc

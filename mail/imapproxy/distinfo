@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/12/09 03:17:20 rh Exp $
-
-SHA1 (imapproxy-1.0.tar.gz) = 844acba24633430d15cb9b3a586164aef5051583
-Size (imapproxy-1.0.tar.gz) = 75668 bytes
-SHA1 (patch-aa) = 2148477ad9e5e3c50854cba3b042220d469c5ace

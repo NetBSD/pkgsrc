@@ -1,5 +1,0 @@
-mtr combines the functionality of the "traceroute" and "ping" programs
-into a single network diagnostic tool.
-
-Authors:   Matt Kimball <mkimball@xmission.com> is the primary author of mtr.
-	   Roger Wolff <R.E.Wolff@BitWizard.nl> is currently maintaining mtr.

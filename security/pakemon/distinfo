@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/10/02 19:11:59 dillo Exp $
-
-SHA1 (pakemon-0.3.1.tar.gz) = 27708ac303a58432222b53b71b6ca13e71502f7e
-Size (pakemon-0.3.1.tar.gz) = 110065 bytes
-SHA1 (patch-aa) = 22155e703130a28ba4bf34922b3926411cb917b8
-SHA1 (patch-ab) = d35a76ae3ef96d51526f20d9973d1743c038cf81
-SHA1 (patch-ac) = 2f259e12f54742789e8ac36f8a1eead4afcfac14

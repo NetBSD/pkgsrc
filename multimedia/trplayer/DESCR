@@ -1,7 +1,0 @@
-The Text-Mode RealMedia Player (TRPlayer) is a RealMedia player for
-Linux with a command-line interface. It can play (streaming) RealAudio,
-RealVideo, MP3, and all other media types supported by RealPlayer 8
-under Linux. TRPlayer was designed especially for blind Unix users, who
-don't yet have access to the graphical user interface.  However, it is
-also useful to others; it is a good tool for background audio playback
-and for use on low-end hardware.

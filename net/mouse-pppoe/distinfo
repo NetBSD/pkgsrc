@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:22 wiz Exp $
-
-SHA1 (pppoe.20000912.tar.gz) = e077e02e42cad1266316cdfa87c31bde191e530e
-Size (pppoe.20000912.tar.gz) = 9621 bytes
-SHA1 (patch-aa) = 9c1b59a7138a7f02329fbabd36026b5554ca1197

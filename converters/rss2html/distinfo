@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/03/07 20:24:52 minskim Exp $
-
-SHA1 (rss2html-0.6.tar.gz) = 50e8f74cfa141e4aca4cdc1f1755216162dfb5be
-Size (rss2html-0.6.tar.gz) = 5057 bytes
-SHA1 (patch-aa) = ce3e4fb21796fe5bb96aa1a4591f57ab9e8bb2dc

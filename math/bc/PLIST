@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/07 21:57:21 seb Exp $
-bin/bc
-bin/dc
-man/man1/bc.1
-man/man1/dc.1

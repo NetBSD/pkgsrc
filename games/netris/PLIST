@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:54:42 zuntum Exp $
-bin/netris
-share/doc/netris/README
-share/doc/netris/FAQ
-share/doc/netris/robot_desc
-@dirrm share/doc/netris

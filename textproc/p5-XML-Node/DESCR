@@ -1,8 +1,0 @@
-If you are only interested in processing certain nodes in an XML
-file, this module can help you simplify your Perl scripts significantly.
-
-The XML::Node module allows you to register callback functions
-or variables for any XML node. If you register a call back function,
-it will be called when the node of the type you specified are
-encountered. If you register a variable, the content of a XML node
-will be appended to that variable automatically.

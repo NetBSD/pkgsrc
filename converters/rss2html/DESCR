@@ -1,4 +1,0 @@
-Rss2Html is a simple converter to see Rss/Rdf/Xml news databases into
-html on console mode, or embedded on a web page.
-
-i.e:  $ rss2html http://slashdot.org/index.rss | lynx -stdin

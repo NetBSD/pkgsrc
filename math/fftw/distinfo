@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2003/07/08 14:05:30 wiz Exp $
-
-SHA1 (fftw-3.0.1.tar.gz) = e392a005dd93583f47de29ec4992687aa21bf3a2
-Size (fftw-3.0.1.tar.gz) = 1946361 bytes
-SHA1 (fftw-3.0.1-fma.tar.gz) = e2c931168f1ff1e21d34bbdced2c07798fcc853a
-Size (fftw-3.0.1-fma.tar.gz) = 1961977 bytes

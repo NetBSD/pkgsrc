@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/01/29 16:19:03 drochner Exp $
-
-SHA1 (pyunit-1.4.1.tar.gz) = 5c2e4daa6cf49be85de0823896dc8226c4c3c1e3
-Size (pyunit-1.4.1.tar.gz) = 23636 bytes
-SHA1 (patch-aa) = 9d6c4a32ce69ed9cb3afe7e7317acaaef4343813

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/12/01 13:49:39 salo Exp $
-
-SHA1 (ee-0.3.12.tar.gz) = 7a7bcd75485de3d16d1b2fc25f4ac499e3c7c932
-Size (ee-0.3.12.tar.gz) = 437916 bytes
-SHA1 (patch-aa) = 3cb285731f60dc868266c66af77d17bc9da2a464
-SHA1 (patch-ab) = 9a606712b78dcbceddf65ced8f5572a3860c7bad

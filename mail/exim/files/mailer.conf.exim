@@ -1,8 +1,0 @@
-#	$NetBSD: mailer.conf.exim,v 1.2 2003/09/02 10:33:41 abs Exp $
-#
-# Use "exim" as replacement for "sendmail".
-#
-sendmail	@PREFIX@/sbin/exim
-send-mail	@PREFIX@/sbin/exim
-mailq		@PREFIX@/sbin/exim
-newaliases	@PREFIX@/sbin/exim

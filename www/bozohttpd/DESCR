@@ -1,8 +1,0 @@
-bozohttpd is a small and secure HTTP version 1.1 server. Its main
-feature is the lack of features, reducing the code size and improving
-verifiability.
-
-It supports CGI/1.1, HTTP/1.1, HTTP/1.0, HTTP/0.9, ~user translations,
-virtual hosting support, as well as multiple IP-based servers on a
-single machine. It is capable of servicing pages via the IPv6 protocol.
-It has SSL support. It has no configuration file by design.

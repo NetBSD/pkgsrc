@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2002/11/05 06:20:27 itojun Exp $
-
-SHA1 (LaBrea2_3.tgz) = f78d51afc9b2f3c3a27cee45629ef9d489e7d581
-Size (LaBrea2_3.tgz) = 27951 bytes
-SHA1 (patch-aa) = aeb62428e0105d092c4c26cf9af21d171d310bd8

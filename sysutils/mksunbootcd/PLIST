@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:33 zuntum Exp $
-sbin/mksunbootcd
-man/man8/mksunbootcd.8
-man/cat8/mksunbootcd.0

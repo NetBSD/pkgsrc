@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.12 2003/07/13 13:16:03 grant Exp $
-share/examples/${DISTNAME}/mk.conf
-@dirrm share/examples/${DISTNAME}

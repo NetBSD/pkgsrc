@@ -1,9 +1,0 @@
-Flow-tools is a set of utilities for collecting and storing NetFlow
-data, and doing some limited analysis of it.
-
-NetFlow is a Cisco-developed protocol for transferring network traffic
-flow information (usually from a router or switch) to another system
-that collects and stores this information. More information on NetFlow
-is available at
-
-    http://www.cisco.com/warp/public/cc/pd/iosw/ioft/neflct/tech/napps_wp.htm

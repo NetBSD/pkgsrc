@@ -1,4 +1,0 @@
-IcePref is a graphical configuration utility for IceWM.  It is written
-in python and uses the Gtk toolkit via the PyGTK bindings.  It is
-capable of configuring all of the settings contained in the
-'preferences' file.  More features are forthcoming.

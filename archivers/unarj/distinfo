@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 11:21:09 agc Exp $
-
-SHA1 (unarj-2.43.tgz) = 0d814c93a723087fd4d229f92f0354166ee53660
-Size (unarj-2.43.tgz) = 20728 bytes
-SHA1 (patch-aa) = d864780eb564e8035379b06f20b5c8a8e19d5f83
-SHA1 (patch-ac) = 59245f61d731e2fd6dc101fefe0f62db0c55b55e

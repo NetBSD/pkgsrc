@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/15 22:26:05 minskim Exp $
-${PYSITELIB}/madmodule.so

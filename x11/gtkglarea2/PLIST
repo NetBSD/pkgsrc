@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:59 jlam Exp $
-include/gtkgl-2.0/gtkgl/gdkgl.h
-include/gtkgl-2.0/gtkgl/gtkglarea.h
-lib/pkgconfig/gtkgl-2.0.pc
-lib/libgtkgl-2.0.la
-@dirrm include/gtkgl-2.0/gtkgl
-@dirrm include/gtkgl-2.0

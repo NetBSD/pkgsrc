@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 12:02:41 skrll Exp $
-
-SHA1 (VRML-1.04.tar.gz) = c8c27ca4ff3ecfb6b364a34df4de3fb4fd57a9b0
-Size (VRML-1.04.tar.gz) = 71530 bytes
-SHA1 (patch-aa) = d8e6b10a2d5e98f399356bf9c2a65115cc556ba1

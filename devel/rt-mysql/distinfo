@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/02/04 22:19:09 abs Exp $
-
-SHA1 (rt-2-0-15.tar.gz) = 9469f83b383f4c62e952d43ce3d63413ff5d4656
-Size (rt-2-0-15.tar.gz) = 356046 bytes
-SHA1 (patch-aa) = e05e449de52e4500965f9310d16154c956720eb3

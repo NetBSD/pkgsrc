@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/04/26 16:16:51 taca Exp $
-
-SHA1 (rexml_2.4.8.tgz) = 45b9997571479ac27e2e927578a31103c8e81a7d
-Size (rexml_2.4.8.tgz) = 289110 bytes
-SHA1 (patch-aa) = e1d79be5c56ee1495a14a5dc165b0a46b8640af9

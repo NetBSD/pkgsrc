@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2003/05/01 21:32:46 jmmv Exp $
-sbin/portsentry
-share/doc/portsentry/README.install
-share/doc/portsentry/README.methods
-share/examples/portsentry/portsentry.conf
-share/examples/portsentry/portsentry.ignore
-@dirrm share/examples/portsentry
-@dirrm share/doc/portsentry

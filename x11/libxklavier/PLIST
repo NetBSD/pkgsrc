@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:10:05 jlam Exp $
-include/libxklavier/xklavier.h
-include/libxklavier/xklavier_config.h
-lib/libxklavier.la
-lib/pkgconfig/libxklavier.pc
-share/libxklavier/xfree86.xml
-@dirrm share/libxklavier
-@dirrm include/libxklavier

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:29:09 agc Exp $
-
-SHA1 (sysinfo-3.5.1.tar.gz) = 720d687aa7c65c41792c415a355962e9ca76fbd5
-Size (sysinfo-3.5.1.tar.gz) = 259920 bytes
-SHA1 (patch-aa) = 029b5d9431bb36da83225c22ad0a22584dbb6dcf

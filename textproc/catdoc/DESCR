@@ -1,7 +1,0 @@
-catdoc behaves much like cat(1) but reads MS-Word file and
-produces  human-readable text on standard output.  Option-
-ally it can use latex(1) escape sequences  for  characters
-which  have special meaning for LaTeX.  It also makes some
-effort to recognize  MS-Word  tables,  although  it  never
-tries  to write correct headers for LaTeX tabular environ-
-ment.

@@ -1,6 +1,0 @@
-OpenAL is a 3D positional spatialized sound library analogous to OpenGL:
-instead of micromanaging each aspect of sound playback and effect, the
-application writer may limit himself to placing sounds in the scene and
-letting the native OpenAL implementation determine the correct amount of
-pitch alteration, gain attenuation, phase shift, etc., required to render
-the sounds correctly.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/06/27 18:26:54 nra Exp $
-
-SHA1 (xmailwatcher.tar.gz) = eed0c1b39a0877471ab4a862a49f1fd8b5bfacfc
-Size (xmailwatcher.tar.gz) = 15393 bytes
-SHA1 (patch-aa) = f9af02cab5c4b3244e1a5ac346b8fff123fcf441

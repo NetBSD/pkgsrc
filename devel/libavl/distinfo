@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 00:44:26 wiz Exp $
-
-SHA1 (avl-1.4.0.tar.gz) = 44bf7e95a7fb0d6231dd698b0c32616cf4953011
-Size (avl-1.4.0.tar.gz) = 128589 bytes
-SHA1 (patch-aa) = 1020d5ef34f3f6090e5800db4266902c99988b42

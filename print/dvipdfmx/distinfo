@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/02/07 04:59:43 minskim Exp $
-
-SHA1 (dvipdfmx-20031116.tar.gz) = 8ad9c9a2a7a7ac7e7430e7f678d1cc49ba604b6e
-Size (dvipdfmx-20031116.tar.gz) = 325457 bytes
-SHA1 (patch-aa) = eac64f0d6608ee238839a84a1daa92d8812aaa0a

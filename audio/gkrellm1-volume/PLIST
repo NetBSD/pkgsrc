@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/24 22:33:50 cube Exp $
-lib/gkrellm/plugins/volume.so

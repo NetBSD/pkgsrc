@@ -1,4 +1,0 @@
-XTEL can emulate a Minitel 1B, 2, TVR and Iminitel on a X display. It is
-networked, that is, a server drives the MODEM connected to Teletel services,
-and clients talk with the server via TCP/IP. Local usage is also possible,
-client and server runs on the same machine.

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2003/10/01 23:13:13 recht Exp $
-bin/p0f
-man/man1/p0f.1
-share/doc/p0f.README
-share/doc/p0frep
-share/examples/p0f/p0f.fp
-share/examples/p0f/p0fa.fp
-share/examples/p0f/p0fr.fp
-@dirrm share/examples/p0f

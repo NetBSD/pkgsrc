@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:33:49 zuntum Exp $
-lib/libodepack.a
-share/doc/odepack/doc
-share/doc/odepack/readme
-@dirrm share/doc/odepack

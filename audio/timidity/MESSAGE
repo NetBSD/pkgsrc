@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/12 17:06:59 wiz Exp $
-
-  To use this program, you'll have to install either the eawpatches
-  or guspatches packages, located in pkgsrc/audio/eawpatches resp.
-  pkgsrc/audio/guspatches.
-
-===========================================================================

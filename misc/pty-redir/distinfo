@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:52:19 agc Exp $
-
-SHA1 (pty-redir-0.1.tar.gz) = ce83bd5271a332dc62e6741d23e626c350b6e929
-Size (pty-redir-0.1.tar.gz) = 8405 bytes
-SHA1 (patch-aa) = 28f8a1c22a9bf602e0e447ca45736e7cde6fddd5

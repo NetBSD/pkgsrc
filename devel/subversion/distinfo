@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.36 2004/10/23 06:11:09 epg Exp $
-
-SHA1 (subversion-1.1.1.tar.gz) = b9afbcc211673ce2a1bf9778b6fa519f740e7ebd
-Size (subversion-1.1.1.tar.gz) = 8101813 bytes
-SHA1 (patch-aa) = 593ff1e235cc918e533f75f2d56fb575adcc7f6d
-SHA1 (patch-ac) = 7f0669a6f684583ff0ca4a443be356ae2fca06db

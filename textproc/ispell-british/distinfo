@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:04:59 skrll Exp $
-
-SHA1 (ispell-3.1.20.tar.gz) = f8f849a3868ef3d88c1ba6fe5b49505f75de786e
-Size (ispell-3.1.20.tar.gz) = 677987 bytes
-SHA1 (patch-aa) = cf8e0863e62103526d75ba5f0f25c760d4ee8e32
-SHA1 (patch-ab) = 210d80ca55fc1d4fb5aa308205d8630a7f4bfb67
-SHA1 (patch-ac) = a3474192676a326f33e10266e57ace5dfb1ba7eb
-SHA1 (patch-ad) = 6e465c39e145da7ec48e0c1cbe3631f21d9eecb6

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.12 2004/11/20 04:37:08 grant Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.12.2.1 2004/11/22 22:48:05 tv Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -70,7 +70,7 @@ PREPEND_PATH+=		${WRAPPER_BINDIR}
 ###
 ### BEGIN: after "wrapper" phase
 ###
-.if !empty(PHASES_AFTER_WRAPPER:M${PKG_PHASE})
+.if !empty(PKG_PHASES:Mwrapper)
 
 WRAPPER_DEBUG?=		yes
 CONFIGURE_ENV+=		WRAPPER_DEBUG="${WRAPPER_DEBUG}"
@@ -292,6 +292,11 @@ _WRAP_SUBST_SED=							\
 	-e "s|@_WRAP_LOG@|${_WRAP_LOG:Q}|g"				\
 	-e "s|@_WRAP_REORDERLIBS@|${_WRAP_REORDERLIBS:Q}|g"		\
 	-e "s|@_WRAP_SHELL_LIB@|${_WRAP_SHELL_LIB:Q}|g"
+
+BUILD_ENV?=		# empty
+.if !empty(BUILD_ENV)
+_WRAP_SUBST_SED+=	-e 's|@BUILD_ENV@|export '${BUILD_ENV:Q}'|'
+.endif
 
 .for _wrappee_ in ${_WRAPPEES}
 .  if defined(PKG_${_wrappee_})
@@ -638,12 +643,9 @@ SUBST_SED.unwrap=	${_UNWRAP_SED}
 SUBST_POSTCMD.unwrap=	${DO_NADA}
 .endif
 
-.endif	# PHASES_AFTER_WRAPPER
+.endif	# !empty(PKG_PHASES:Mwrapper)
 ###
 ### END: after "wrapper" phase
 ###
 
-.if !target(do-wrapper)
-do-wrapper:
-	@${DO_NADA}
-.endif
+do-wrapper: .OPTIONAL

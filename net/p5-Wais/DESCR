@@ -1,4 +1,0 @@
-This Perl module provides access to the freeWAIS-sf libraries
-for interacting with WAIS servers and accessing local WAIS databases
-maintained by the freeWAIS-sf server.  It also contains support routines
-used by SFgate.

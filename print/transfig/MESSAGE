@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/03/27 21:59:22 rh Exp $
-
-Please note that Ghostscript is required if you want to convert Xfig
-drawings to Postscript, PDF, or related formats.  You need to install
-one of the Ghostscript packages (see pkgsrc/print/ghostscript*) for
-this.
-===========================================================================

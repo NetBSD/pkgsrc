@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/03/04 18:07:07 wiz Exp $
-
-SHA1 (aumix-2.8.tar.bz2) = 5cea563ae91f628433a1950a36efd23681da4bf4
-Size (aumix-2.8.tar.bz2) = 157503 bytes
-SHA1 (patch-ad) = fc610f71143b892b68f798e3556bc756875dd26c

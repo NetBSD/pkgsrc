@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/10/15 23:23:05 kristerw Exp $
-
-SHA1 (ketm-0.0.6.tar.bz2) = 3275b6be9178e30478609db9b8f897ae212df049
-Size (ketm-0.0.6.tar.bz2) = 1836502 bytes
-SHA1 (patch-aa) = 559b492c3a5d336061c741d7920a5f0a893d37b9
-SHA1 (patch-ab) = 33edc5d12a930308f51994130859e6b3f30afb75

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2002/04/05 01:33:25 hubertf Exp $
-
-SHA1 (xdu-3.0.tar.Z) = 196e2ba03253fd6b8a88fafe6b00e40632183d0c
-Size (xdu-3.0.tar.Z) = 20114 bytes
-SHA1 (patch-aa) = 05ec21899437eb15159615ce40e63e5e07073581

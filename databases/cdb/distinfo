@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/01/31 01:23:16 kristerw Exp $
-
-SHA1 (cdb-0.75.tar.gz) = 555749be5b2617e29e44b5326a2536813d62c248
-Size (cdb-0.75.tar.gz) = 54162 bytes
-SHA1 (patch-aa) = 7e7a4e20ca36c3e773c729c0f0d751ac6340ccda

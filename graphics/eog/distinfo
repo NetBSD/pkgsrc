@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2001/07/22 01:34:20 wiz Exp $
-
-SHA1 (eog-0.6.tar.gz) = 1e3b8d548c422ab98846e214d0c9add0ab499e9f
-Size (eog-0.6.tar.gz) = 425084 bytes
-SHA1 (patch-aa) = b4f65adfac291922a82e963070094dba79454284

@@ -1,8 +1,0 @@
-Send a broadcast message to all clients of a subnet containing
-a magic packet to boot the machine up.
-
-Usage: wakeup xx:xx:xx:xx:xx:xx
-
-xx:xx:xx:xx:xx:xx is the MAC address of the machine you want to
-wake up. Can be obtained via "arp -a" (remote) or "ifconfig -a"
-(local),

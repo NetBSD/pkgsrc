@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 11:07:38 skrll Exp $
-
-SHA1 (AfterStep-1.0.tar.gz) = 397664c493beb1c0a4aca98e3121774a483d83df
-Size (AfterStep-1.0.tar.gz) = 601903 bytes
-SHA1 (patch-aa) = c353ae6a4916128f39b9d69c85588f4a3050c68f
-SHA1 (patch-ab) = e644b57d966eadee04775f7344b80e0be144d570

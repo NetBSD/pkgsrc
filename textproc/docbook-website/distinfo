@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/01/28 10:43:43 grant Exp $
-
-SHA1 (website-2.3.tar.gz) = 895c98b09cc99a60f4ed6d52b588b07f7dd91733
-Size (website-2.3.tar.gz) = 80545 bytes
-SHA1 (patch-aa) = 14249023b2b1b3f1891e5f8d973f86337a2e9eee

@@ -1,4 +1,0 @@
-Guile-pg is a Guile module providing access and allowing updates to
-PostgreSQL databases from Guile scripts. Guile is the GNU interpreter
-for the Scheme language and PostgreSQL is a free relational database
-management system.

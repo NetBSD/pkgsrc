@@ -1,3 +1,0 @@
-Kodos is an application to aid in the creation and debugging of regular
-expressions in python. The GUI for Kodos should eliminate the need for
-using the python interpreter for regex design in most instances.

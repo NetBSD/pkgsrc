@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/07/23 00:31:23 reed Exp $
-
-SHA1 (ucblogo-5.3.tar.gz) = abe27b2a36cc5d8dc4208fba04569e82cc163719
-Size (ucblogo-5.3.tar.gz) = 1180188 bytes
-SHA1 (patch-aa) = 5392d5d0430830f40f468449f57905ec69151b33

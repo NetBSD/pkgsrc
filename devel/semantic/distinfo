@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2003/01/11 08:56:33 uebayasi Exp $
-
-SHA1 (semantic-1.4.2.tar.gz) = a8898745055319de676c61a5d529d4dfb6eb2878
-Size (semantic-1.4.2.tar.gz) = 313881 bytes
-SHA1 (patch-aa) = 7747913d4db505d1bc287b1d9bd986cbfaf53c7a

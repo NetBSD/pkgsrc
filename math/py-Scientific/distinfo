@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/01/18 23:57:50 recht Exp $
-
-SHA1 (ScientificPython-2.4.5.tar.gz) = 452b04a20dd065fd9ea01092ae2e1e726406d2be
-Size (ScientificPython-2.4.5.tar.gz) = 487379 bytes
-SHA1 (patch-aa) = 651049ac032c3b0a232ec052e80e2cdb1134b4e0
-SHA1 (patch-ab) = b682b71ecfbe0c815203f74bf19ae5870d113f8f

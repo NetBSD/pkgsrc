@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.11 2004/02/17 01:58:08 minskim Exp $
-
-SHA1 (validate/validate-1.2) = 38be485a1e2a7024cae927910bb89cd4f944220e
-Size (validate/validate-1.2) = 23258 bytes
-SHA1 (validate/wdg-sgml-lib-1.1.3.tar.gz) = 46a3e05c713b5881d4472e78cda7f1e40cdc4bf5
-Size (validate/wdg-sgml-lib-1.1.3.tar.gz) = 319133 bytes
-SHA1 (validate/README) = 433bc1e5311fb4972a97f0c46de7b910a1e96526
-Size (validate/README) = 2424 bytes

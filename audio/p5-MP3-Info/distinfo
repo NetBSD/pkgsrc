@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/12/30 23:12:40 kim Exp $
-
-SHA1 (MP3-Info-1.01.tar.gz) = 78434f1487343e549c5cfe5465b266288b66d810
-Size (MP3-Info-1.01.tar.gz) = 51394 bytes
-SHA1 (patch-aa) = 8b4ca0d0d1766c180dd8b88369e77a7b462f7d50

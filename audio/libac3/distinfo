@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 12:14:31 agc Exp $
-
-SHA1 (ac3dec-0.6.1.tar.gz) = 5c3315a58425be508bfbf076054e636451b685fd
-Size (ac3dec-0.6.1.tar.gz) = 84978 bytes
-SHA1 (patch-aa) = 57c06d31e672a69d72cbb02f4998aa5ed9d58c28
-SHA1 (patch-ab) = 2f0997ad1e9135d213c3f882b55be59e86b05325

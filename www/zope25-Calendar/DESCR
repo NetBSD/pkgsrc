@@ -1,5 +1,0 @@
-Calendar DTML Tag
-
-  Renders a calendar user interface.  The template code is executed to
-  render the individual day cells. The template is called with several
-  predefined variables.

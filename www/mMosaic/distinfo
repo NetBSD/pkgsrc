@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2002/10/08 12:51:58 jlam Exp $
-
-SHA1 (mMosaic-3.7.2.tar.gz) = f26d4fd115a0fb7fc09947506b59e1a3790b6ac7
-Size (mMosaic-3.7.2.tar.gz) = 507612 bytes
-SHA1 (patch-aa) = 028e9836c6994ab58e9d9e425d74022dd0c1adec
-SHA1 (patch-ab) = 64cb25fda5e4100251072184dec9f50e8de4be97
-SHA1 (patch-ac) = 98479482a48a19b3f64ce4ed7a33cec04c90d070
-SHA1 (patch-ad) = d0da529ed866a9295010419882a004997bba17a7

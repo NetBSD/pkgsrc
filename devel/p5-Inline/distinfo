@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2003/09/06 03:33:19 kim Exp $
-
-SHA1 (Inline-0.44.tar.gz) = a6bfcf271325cb8c4bfca497427d67b2b2f795ef
-Size (Inline-0.44.tar.gz) = 91450 bytes
-SHA1 (patch-aa) = 4b22fa4022617813587e59fdd6b7b4d1a7bf456a

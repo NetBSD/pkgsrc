@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/15 23:10:35 recht Exp $
-bin/prngd
-man/man1/prngd.1
-share/doc/prngd/00DESIGN
-share/doc/prngd/00README
-share/doc/prngd/00README.gatherers
-share/examples/prngd/prngd.conf.netbsd
-@dirrm share/examples/prngd
-@dirrm share/doc/prngd

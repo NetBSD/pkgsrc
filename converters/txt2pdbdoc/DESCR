@@ -1,8 +1,0 @@
-txt2pdbdoc is a Unix-based Text-to-Doc file conversion program.  (It
-also converts Doc files to plain text.)  A Doc file is a defacto
-standard file format for text documents for PalmOS document reader
-applications.  The motivation for writing txt2pdbdoc was that such
-software at the time was crufty and poorly documented.  In contrast,
-txt2pdbdoc is well written and well documented.  Unix-style "man"
-pages are included for the program, utility scripts, and the Doc file
-format itself.  The source code is also generously commented.

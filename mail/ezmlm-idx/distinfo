@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/07/19 23:50:22 schmonz Exp $
-
-SHA1 (ezmlm-idx-0.421.tar.gz) = d7c2c7c87d58ae1c3aeb26f6fa34101fdfa71ab6
-Size (ezmlm-idx-0.421.tar.gz) = 540727 bytes
-SHA1 (ezmlm-0.53.tar.gz) = 3a7b618737fed8b774bec69c272d70f4142c1e30
-Size (ezmlm-0.53.tar.gz) = 62693 bytes
-SHA1 (patch-aa) = e4b25f667ade7ffc853b1f116c5de44a015f9aeb
-SHA1 (patch-ab) = 3d51bc1ab750f5c9324815070f392f6f6aaa2da1

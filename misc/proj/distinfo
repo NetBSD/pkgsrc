@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2003/07/12 12:18:10 jtb Exp $
-
-SHA1 (proj-4.4.7.tar.gz) = 7da5ec181d29ca2628578738632be7843a567e23
-Size (proj-4.4.7.tar.gz) = 459333 bytes
-SHA1 (proj-nad27-1.1.tar.gz) = 0885c8ca5c9311bbe9c99faf8c2c51ded3b7dd23
-Size (proj-nad27-1.1.tar.gz) = 1816642 bytes

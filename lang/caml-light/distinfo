@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2004/03/20 22:35:04 bouyer Exp $
-
-SHA1 (cl74unix.tar.gz) = feae4a53af78b6c500a03c618dc11444e8b5dc47
-Size (cl74unix.tar.gz) = 999170 bytes
-SHA1 (patch-aa) = e9a564183d445a61c00e0f6e134dee9029856bea

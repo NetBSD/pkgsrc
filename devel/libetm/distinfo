@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2004/04/14 15:08:31 ben Exp $
-
-SHA1 (ETM-1.09.tar.gz) = 6b0883e595c5b4d6900a154b77625ec1233237ed
-Size (ETM-1.09.tar.gz) = 25677 bytes
-SHA1 (patch-aa) = 73f77ee114db93ff1b4ca7c78aaffff2511f82b4

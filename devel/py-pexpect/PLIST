@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/23 16:25:03 minskim Exp $
-${PYSITELIB}/pexpect.py
-${PYSITELIB}/pexpect.pyc
-${PYSITELIB}/pexpect.pyo

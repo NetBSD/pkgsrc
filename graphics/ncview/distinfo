@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2003/06/30 00:11:24 jtb Exp $
-
-SHA1 (ncview-1.92d.tar.gz) = 259b7897dfbd4fa4835c9cc5dcbead5796659458
-Size (ncview-1.92d.tar.gz) = 833480 bytes
-SHA1 (patch-aa) = 77ce989232b1a926e7cdfbbbe9e0e22f653bfb23
-SHA1 (patch-ab) = 6dbdfaea8b37ef792571320c38e9113709bcbbd4

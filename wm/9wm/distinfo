@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2001/04/17 16:03:42 agc Exp $
-
-SHA1 (9wm-1.1.shar.gz) = 43a4e28a0665d54331d81d9691abae65927738ac
-Size (9wm-1.1.shar.gz) = 19517 bytes
-SHA1 (patch-aa) = 3e0c11e450876ee882694fb653fa8222ee53340a

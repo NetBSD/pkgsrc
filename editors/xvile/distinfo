@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2004/03/22 11:48:39 wiz Exp $
-
-SHA1 (vile-9.4.tgz) = 5b7f58a16799e8e021ffddb4e8e237023fab696b
-Size (vile-9.4.tgz) = 1549606 bytes
-SHA1 (patch-aa) = cfbefb53eb64535fd0fb6500ec7d84cf9f4c9762
-SHA1 (patch-ab) = 6ec9232a2b42e95f5a2b5c724deb3323d0a63cf3
