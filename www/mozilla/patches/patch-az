@@ -1,8 +1,8 @@
-$NetBSD: patch-az,v 1.8 2002/04/25 15:52:46 taya Exp $
+$NetBSD: patch-az,v 1.9 2002/05/14 00:16:38 taya Exp $
 
-diff -ru ../mozilla-current.orig/mozilla/directory/c-sdk/ldap/include/portable.h ./directory/c-sdk/ldap/include/portable.h
---- ../mozilla-current.orig/mozilla/directory/c-sdk/ldap/include/portable.h	Wed Apr  3 00:31:24 2002
-+++ ./directory/c-sdk/ldap/include/portable.h	Sun Apr  7 01:18:35 2002
+diff -ru ../Orig/mozilla/directory/c-sdk/ldap/include/portable.h ./directory/c-sdk/ldap/include/portable.h
+--- ../Orig/mozilla/directory/c-sdk/ldap/include/portable.h	Wed Apr 10 11:32:18 2002
++++ ./directory/c-sdk/ldap/include/portable.h	Sat May 11 20:11:35 2002
 @@ -116,7 +116,7 @@
   * some systems don't have the BSD re_comp and re_exec routines
   */
