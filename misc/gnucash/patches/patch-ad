@@ -1,0 +1,15 @@
+*** gnucash-1.1.25.orig/src/engine/Makefile.in	Sat Jan  2 20:55:32 1999
+--- gnucash-1.1.25/src/engine/Makefile.in	Mon Mar 22 10:54:03 1999
+***************
+*** 35,39 ****
+  INDEP_SRCS := AccInfo.c Account.c DateUtils.c FileIO.c Group.c \
+                LedgerUtils.c QIFIO.c Query.c Scrub.c Session.c  \
+!               Transaction.c TransLog.c date.c util.c
+  ######################################################################
+  
+--- 35,39 ----
+  INDEP_SRCS := AccInfo.c Account.c DateUtils.c FileIO.c Group.c \
+                LedgerUtils.c QIFIO.c Query.c Scrub.c Session.c  \
+!               Transaction.c TransLog.c date.c util.c asprintf.c
+  ######################################################################
+  
