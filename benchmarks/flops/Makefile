@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/16 13:37:48 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/03/31 10:09:04 zuntum Exp $
 
 DISTNAME=		flops
 PKGNAME=		flops-2.0
@@ -18,11 +18,11 @@ do-extract:
 	${CP} ${DISTDIR}/flops.doc ${WRKSRC}/flops.doc
 
 do-build:
-	(cd ${WRKSRC} ; ${CC} -O2 -DUNIX -o flops flops.c -lm)
+	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -DUNIX -o flops flops.c -lm)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/flops ${PREFIX}/bin
-	${MKDIR} ${PREFIX}/share/doc/flops
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/flops
 	${INSTALL_DATA} ${WRKSRC}/flops.doc ${PREFIX}/share/doc/flops
 
 benchmark:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/16 13:37:54 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/31 10:09:04 zuntum Exp $
 
 DISTNAME=		linpackc
 PKGNAME=		linpack-940225
@@ -16,8 +16,8 @@ do-extract:
 	${CP} ${DISTDIR}/linpackc ${WRKSRC}/linpack.c
 
 do-build:
-	(cd ${WRKSRC} ; ${CC} -O2 -DROLL -DDP -o linpackd linpack.c -lm)
-	(cd ${WRKSRC} ; ${CC} -O2 -DROLL -DSP -o linpacks linpack.c -lm)
+	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -DROLL -DDP -o linpackd linpack.c -lm)
+	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -DROLL -DSP -o linpacks linpack.c -lm)
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/linpackd ${PREFIX}/bin
