@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2003/05/30 22:14:29 seb Exp $
+$NetBSD: MESSAGE,v 1.6 2004/11/10 21:34:46 soren Exp $
 
-See http://sourceware.cygnus.com/gnats/ for the official web page
+See http://www.gnu.org/software/gnats/ for the official web page
 and don't forget to run ${PREFIX}/libexec/gnats/mkcat as gnats.
 
 Add the following line to /etc/inetd.conf to activate GNATS:
