@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.8 2003/07/14 10:07:12 jmmv Exp $
+$NetBSD: patch-ac,v 1.9 2004/01/23 23:22:41 wiz Exp $
 
 --- vfu/vfu.cpp.orig	2002-05-24 18:55:36.000000000 +0200
 +++ vfu/vfu.cpp
-@@ -485,8 +485,6 @@ void vfu_help()
+@@ -9,6 +9,7 @@
+  *
+  */
+ 
++#include <stdarg.h>
+ #include "vfu.h"
+ #include "vfuopt.h"
+ #include "vfufiles.h"
+@@ -485,8 +486,6 @@ void vfu_help()
    mb.push( "        1. $HOME/$RC_PREFIX/vfu/vfu.conf");
    mb.push( "        2. $HOME/.vfu/vfu.conf");
    mb.push( "        3. " FILENAME_CONF_GLOBAL0 );
@@ -11,7 +19,7 @@ $NetBSD: patch-ac,v 1.8 2003/07/14 10:07:12 jmmv Exp $
    mb.push( "" );
    vfu_menu_box( 1, 4, "VFU Help ( PageUp/PageDown to scroll )" );
    mb.zap();
-@@ -604,10 +602,6 @@ void vfu_init()
+@@ -604,10 +603,6 @@ void vfu_init()
      { /* cannot find local/user conf file, try globals */
      if ( access( FILENAME_CONF_GLOBAL0, R_OK ) == 0 ) 
        filename_conf = FILENAME_CONF_GLOBAL0;
