@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 10:01:52 agc Exp $
+@comment $NetBSD: PLIST,v 1.3 1998/08/14 19:59:00 tron Exp $
 bin/linuxls
 bin/dircolors
 bin/dir
