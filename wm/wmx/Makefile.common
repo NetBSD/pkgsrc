@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2004/06/02 15:38:00 minskim Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/06/02 15:43:09 minskim Exp $
 
 DISTNAME=	wmx-6
 WMX_VERS=	6.0
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.all-day-breakfast.com/wmx/
 
 CONFLICTS+=	wmx-[0-9]* wmx-gnome-[0-9]*
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=	yes
 USE_X11BASE=	# defined
 USE_GCC_SHLIB=	# defined
@@ -20,6 +22,8 @@ ALL_TARGET=	depend all
 DISTINFO_FILE=	${.CURDIR}/../../wm/wmx/distinfo
 PATCHDIR=	${.CURDIR}/../../wm/wmx/patches
 PLIST_SRC=	${.CURDIR}/../../wm/wmx/PLIST
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wmx ${PREFIX}/bin
