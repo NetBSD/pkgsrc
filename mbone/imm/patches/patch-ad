@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2000/08/30 23:53:12 jwise Exp $
+$NetBSD: patch-ad,v 1.7 2003/01/19 07:13:50 salo Exp $
 --- Makefile.orig	Mon Feb 10 08:56:48 1997
 +++ Makefile	Sun Sep 13 07:56:03 1998
 @@ -1,9 +1,9 @@
@@ -32,7 +32,7 @@ $NetBSD: patch-ad,v 1.6 2000/08/30 23:53:12 jwise Exp $
  ##############
  # common defines
 -INSTALL=cp
-+INSTALL=${INSTALL_PROGRAM}
++INSTALL=${BSD_INSTALL_PROGRAM}
  VERSION=36a1
  EXECS=imm immserv mnm mdpsniff
  
