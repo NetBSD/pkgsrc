@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.2 2001/09/19 17:18:41 drochner Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.3 2001/09/21 19:50:28 jlam Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -64,9 +64,16 @@ X11BASE=	/usr/X11R6
 # Default: /usr/X11R6
 
 #MOTIFBASE?=	/usr/X11R6
-# Where Motif is installed on the system.
+# Where Motif-2.0-compatible headers and libraries are installed
+# on the system.
 # Possible: any path
-# Default: not defined
+# Default: ${X11PREFIX} or where openmotif or lesstif is installed
+
+#MOTIF12BASE?=	/usr/X11R6
+# Where Motif-1.2-compatible headers and libraries are installed
+# on the system.
+# Possible: any path
+# Default: ${X11PREFIX} or where lesstif12 is installed
 
 DISTDIR?=	${PKGSRCDIR}/distfiles
 # Directory where original distribution
@@ -684,11 +691,35 @@ MAJORDOMO_USER?= majordom
 # Possible: any
 # Default: majordom
 
-MOTIF_TYPE?=lesstif
-# Used a hint to motif.buildlink.mk for which Motif-compatible installation
-# to use.  This value is ignored if MOTIFBASE is explicitly set.
+#MOTIF_TYPE?=	openmotif
+# Used by motif.buildlink.mk to choose which Motif-2.0-compatible
+# installation to use.  This value is also automatically set by
+# motif.buildlink.mk to whichever Motif-2.0 installation represented by
+# the possible values below is already installed, but defaults to
+# ${MOTIF_TYPE_DEFAULT}.  This value is ignored if MOTIFBASE is
+# explicitly set.
 # Possible: openmotif, lesstif, dt (for Solaris only)
-# Default: lesstif
+# Default: ${MOTIF_TYPE_DEFAULT}
+
+#MOTIF_TYPE_DEFAULT?=	openmotif
+# Used by motif.buildlink.mk as the final default value for MOTIF_TYPE.
+# Possible:  openmotif, lesstif, dt (for Solaris only)
+# Default: openmotif, or dt (for Solaris only)
+
+#MOTIF12_TYPE?=	lesstif12
+# Used by motif.buildlink.mk to choose which Motif-1.2-compatible
+# installation to use.  This value is also automatically set by
+# motif.buildlink.mk to whichever Motif-1.2 installation represented by
+# the possible values below is already installed, but defaults to
+# ${MOTIF12_TYPE_DEFAULT}.  This value is ignored if MOTIF12BASE is
+# explicitly set.
+# Possible: lesstif12, dt (for Solaris only)
+# Default: ${MOTIF12_TYPE_DEFAULT}
+
+#MOTIF12_TYPE_DEFAULT?=	lesstif12
+# Used by motif.buildlink.mk as the final default value for MOTIF12_TYPE.
+# Possible:  lesstif12, dt (for Solaris only)
+# Default: lesstif12, or dt (for Solaris only)
 
 #MTOOLS_ENABLE_FLOPPYD=
 # Used by the mtools package to determine whether or not the floppyd
