@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/04/20 11:56:23 frueauf Exp $
+# $NetBSD: Makefile,v 1.9 1998/04/23 09:36:41 mycroft Exp $
 # FreeBSD Id: Makefile,v 1.19 1997/12/04 17:34:28 asami Exp
 #
 
@@ -27,10 +27,13 @@ do-install:
 	@zcat ${DISTDIR}/${DISTNAME}.tar.gz |(cd ${PREFIX}; pax -r)
 
 post-install:
+	${RM} ${PREFIX}/lib/libc.so.5.4.23
+	ln -sf libc.so.5.3.12 ${PREFIX}/lib/libc.so.5
+	ln -sf ../../lib/libc.so.5.3.12 ${PREFIX}/usr/lib/libc.so
 	-${PREFIX}/sbin/ldconfig || ${TRUE}
 	${MKDIR} ${PREFIX}/usr/lib/zoneinfo
 	ln -sf /etc/localtime ${PREFIX}/usr/lib/zoneinfo/localtime
 	${MKDIR} ${PREFIX}/dev
-	ln -s /dev/sound ${PREFIX}/dev/dsp
+	ln -sf /dev/sound ${PREFIX}/dev/dsp
 
 .include "../../mk/bsd.pkg.mk"
