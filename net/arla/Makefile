@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2002/07/12 20:40:31 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2002/08/07 08:30:50 jlam Exp $
 #
 
 DISTNAME=		arla-0.35.8
@@ -88,8 +88,6 @@ post-install:
 		${FILESDIR}/services ${PREFIX}/share/examples/arla
 	@${INSTALL_DATA}                                                      \
 		 ${FILESDIR}/fstab ${PREFIX}/share/examples/arla
-	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${FILESDIR}/arlad.sh               \
-		> ${PREFIX}/etc/rc.d/arlad.sh
 	@${SED} -e 's|@PREFIX@|${PREFIX}|' ${FILESDIR}/arlad                  \
 		> ${PREFIX}/etc/rc.d/arlad
 	@${ECHO} " "
