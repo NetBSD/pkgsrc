@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8637 2005/01/06 15:54:39 mrauch Exp $
+$NetBSD: CHANGES,v 1.8638 2005/01/06 16:51:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -147,3 +147,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated bugzilla to 2.18rc3nb1 [adrianp 2005-01-06]
 	Updated daapd to 0.2.4a [mjl 2005-01-06]
 	Updated openoffice to 1.1.4 [mrauch 2005-01-06]
+	Updated enchant to 1.1.5 [wiz 2005-01-06]
