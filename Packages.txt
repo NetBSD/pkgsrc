@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.237 2002/03/13 06:30:12 hubertf Exp $
+# $NetBSD: Packages.txt,v 1.238 2002/03/23 15:33:15 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -2278,6 +2278,14 @@ message. (Generally, it executes ${ECHO}). As of this writing, the following
 packages use this: audio/realplayer, cad/simian, devel/ipv6socket,
 emulators/vmare-module, fonts/acroread-jpnfont, sysutils/storage-manager,
 www/ap-aolserver, www/openacs. Try to be consistent with them.
+
+
+ 10.26 Using pkgsrc on non-NetBSD (Linux, Solaris, Darwin, MacOS X)
+ ==================================================================
+
+In order to use pkgsrc on a non-NetBSD operating system, you must first
+bootstrap the necessary utilities (BSD make, pkg_*, ...). See 
+http://www.zoularis.org/ for information on boostrapping.
 
 
  11 Submitting & Committing
