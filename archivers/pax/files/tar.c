@@ -1,4 +1,4 @@
-/*	$NetBSD: tar.c,v 1.1.1.1 2003/06/23 11:46:41 grant Exp $	*/
+/*	$NetBSD: tar.c,v 1.2 2003/06/23 13:45:07 grant Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -47,7 +47,7 @@
 #if 0
 static char sccsid[] = "@(#)tar.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: tar.c,v 1.1.1.1 2003/06/23 11:46:41 grant Exp $");
+__RCSID("$NetBSD: tar.c,v 1.2 2003/06/23 13:45:07 grant Exp $");
 #endif
 #endif /* not lint */
 
@@ -1243,7 +1243,7 @@ name_split(char *name, int len)
 	len = start - name;
 
 	/*
-	 * NOTE: /str where the length of str == TNMSZ can not be stored under
+	 * NOTE: /str where the length of str == TNMSZ cannot be stored under
 	 * the p1003.1-1990 spec for ustar. We could force a prefix of / and
 	 * the file would then expand on extract to //str. The len == 0 below
 	 * makes this special case follow the spec to the letter.
@@ -1319,7 +1319,7 @@ tar_gnutar_X_compat(path)
 
 	fp = fopen(path, "r");
 	if (fp == NULL) {
-		tty_warn(1, "can not open %s: %s", path,
+		tty_warn(1, "cannot open %s: %s", path,
 		    strerror(errno));
 		return(-1);
 	}
