@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.2 2000/06/13 08:19:22 wennmach Exp $
+$NetBSD: md5,v 1.3 2000/10/12 13:49:45 wennmach Exp $
 
-MD5 (xdm-krb4-3.3.6.1.tar.gz) = 56659f3f00a9a6c2f115f3e6cb1b381c
+MD5 (xdm-krb4-3.3.6.2.tar.gz) = e655f9288b18e5ef434835f2001107bd
