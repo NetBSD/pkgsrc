@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1998/05/09 00:14:29 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 1998/05/18 14:05:44 tv Exp $
 #
 
 BROKEN=		"Designed for NetBSD 1.4 - 1.3(.x) comes with this in-tree"
@@ -15,8 +15,7 @@ LIB_DEPENDS=	stdc++.1.:	# only from NetBSD's source tree
 MAKE_ENV+=	GXXVERSION="${GXXVERSION}"
 PLIST_SRC=	${WRKSRC}/.PLIST
 
-MAN1=		gperf.1
-INFO_FILES=	gperf.info libg++.info
+INFO_FILES=	libg++.info
 
 do-configure:
 	@${CP} ${FILESDIR}/Makefile ${WRKSRC}
@@ -26,9 +25,7 @@ pre-install:
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/genclass ${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/gperf ${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/gperf.info ${WRKSRC}/libg++.info ${PREFIX}/info/
-	${INSTALL_DATA} ${WRKSRC}/libg++/gperf/gperf.1 ${PREFIX}/man/man1/
+	${INSTALL_DATA} ${WRKSRC}/libg++.info ${PREFIX}/info/
 	@(${CAT} ${PKGDIR}/PLIST.pre; cd ${PREFIX}; \
 		/bin/ls 2>/dev/null -1d lib/libg++*.a lib/libg++.so*) \
 		>${PLIST_SRC}
