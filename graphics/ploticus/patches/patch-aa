@@ -1,15 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/11/24 20:29:10 rh Exp $
+$NetBSD: patch-aa,v 1.2 2000/04/12 06:38:25 rh Exp $
 
---- Makefile.orig	Thu Oct 28 21:22:36 1999
-+++ Makefile	Wed Nov 24 20:42:01 1999
-@@ -25,22 +25,22 @@
+--- Makefile.orig	Wed Mar 15 22:21:08 2000
++++ Makefile	Wed Apr 12 08:30:56 2000
+@@ -28,7 +28,7 @@
  ## and porting.
  
  
 -CC = gcc
 +#CC = gcc
+ ADDLIBS =
+ SLEEPLIB =
  
- ######## Choose one of the platforms below 
+@@ -36,15 +36,15 @@
  ######## and comment out the others:
  
  ## For Solaris 2.x
@@ -26,32 +28,30 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/11/24 20:29:10 rh Exp $
 -# PLATFORM = BSD
 -# XLIBDIR = /usr/X11R6/lib
 -# XINCLUDEDIR = /usr/X11R6/include
--# SLEEPLIB = 
 +PLATFORM = BSD
 +XLIBDIR = ${X11BASE}/lib
 +XINCLUDEDIR = ${X11BASE}/include
-+SLEEPLIB = 
  
- ## For AIX 3.2.5
- # PLATFORM = BSD
-@@ -96,9 +96,9 @@
- 
+ ## For AIX 3.2.5, HP-UX 10.20
+ # (note for HP-UX it was necessary to do: ln gd_io.h gd16
+@@ -120,9 +120,9 @@
  
  
--LIBS = $(XLIBS) -lm 
-+LIBS = ${LDFLAGS} ${XLIBS} -lm 
  
--CFLAGS = -D$(PLATFORM) -DPLOTICUS -DDIST $(XCFLAGS) $(FLAGS)
-+CFLAGS+= -D${PLATFORM} -DPLOTICUS -DDIST ${XCFLAGS} ${FLAGS}
+-LIBS = $(XLIBS) -lm $(ADDLIBS)
++LIBS = ${LDFLAGS} ${XLIBS} -lm $(ADDLIBS)
+ 
+-CFLAGS = -D$(PLATFORM) -DPLOTICUS -DDIST $(XCFLAGS) $(FLAGS) $(LOCALE_FLAG)
++CFLAGS+= -D${PLATFORM} -DPLOTICUS -DDIST ${XCFLAGS} ${FLAGS} ${LOCALE_FLAG}
  
  OBJ = 	custom.o execplfile.o lib.o areadef.o page.o axis.o getdata.o parsedata.o \
  	drawcommands.o annotate.o tabulate.o lineplot.o bars.o bevelrect.o units.o line.o \
-@@ -139,7 +139,7 @@
+@@ -163,7 +163,7 @@
  gd16files: 
  	$(CC) -c grgd.c -DGDPNG -I./gd16 -I./ -o grgd16.o
  	$(CC) -c devstuff.c -DGDPNG -o devstuff16.o
 -	$(CC) -c -I./gd16 -I./ $(GD16H) gd16.c gd_io.c gd_io_dp.c gd_io_file.c gd_png.c
 +	$(CC) -c -I./gd16 -I./ -I${PREFIX}/include $(GD16H) gd16.c gd_io.c gd_io_dp.c gd_io_file.c gd_png.c
  
- dev: pl.o $(OBJ) 
- 	$(CC) pl.o $(FLAGS) $(OBJ) $(GD13) $(GD) $(XOBJ) $(LIBS) -o pl
+ install:
+ 	mv pl pltab plpng pltabpng ../bin
