@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.10 1999/08/28 09:36:33 rh Exp $
+$NetBSD: patch-ac,v 1.11 2001/03/10 10:50:38 drochner Exp $
 
---- gtk/Makefile.in.orig	Tue Aug 24 00:08:04 1999
-+++ gtk/Makefile.in	Fri Aug 27 20:53:31 1999
-@@ -136,7 +136,7 @@
+--- gtk/Makefile.in.orig	Fri Mar  2 20:49:26 2001
++++ gtk/Makefile.in	Wed Mar  7 21:58:19 2001
+@@ -135,7 +135,7 @@
  
  # libtool stuff: set version and export symbols for resolving
- libgtkincludedir = $(includedir)/gtk
+ libgtkincludedir = $(includedir)/gtk-1.2/gtk
 -libgtk_la_LDFLAGS = @STRIP_BEGIN@ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)		-release $(LT_RELEASE) 						-export-dynamic							@GLIB_DEPLIBS@ 							@x_ldflags@							@x_libs@ 							-lm							@STRIP_END@
 +libgtk_la_LDFLAGS = @STRIP_BEGIN@ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)	-export-dynamic							@GLIB_DEPLIBS@ 							@x_ldflags@							@x_libs@ 							-lm							@STRIP_END@
  
