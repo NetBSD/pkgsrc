@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2001/11/26 06:49:40 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/07/02 23:57:21 hubertf Exp $
 #
 
-DISTNAME=		DBD-Sybase-0.23
+DISTNAME=		DBD-Sybase-0.94
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5dsy
 CATEGORIES=		databases perl5
@@ -20,7 +20,12 @@ LDFLAGS+=		-Wl,-R${BUILDLINK_PREFIX.freetds}/freetds/lib
 MAKE_ENV+=		SYBASE=${BUILDLINK_DIR}/freetds
 
 do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
+	@cd ${WRKSRC}; \
+	( \
+		${ECHO_MSG} "undef" ; \
+		${ECHO_MSG} "" ; \
+		${ECHO_MSG} "undef" ; \
+	) | ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL ${MAKE_PARAMS}
 
 .include "../../databases/freetds/buildlink.mk"
 .include "../../lang/perl5/buildlink.mk"
