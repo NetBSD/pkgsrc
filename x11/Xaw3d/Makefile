@@ -1,9 +1,9 @@
 # New ports collection Makefile for: Xaw3d
 # Version required:	1.3
 # Date created:         30th November 1997
-# Whom:                 tron@lyssa.owl.de
+# Whom:                 tron@lyssa.owl.de, soren@t.dk
 #
-# $NetBSD: Makefile,v 1.2 1997/12/29 02:31:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 1997/12/29 02:33:41 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 09:33:26 asami Exp
 #
 
