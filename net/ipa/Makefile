@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2003/01/28 22:03:51 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2003/03/05 07:11:41 wiz Exp $
 
-DISTNAME=	ipa-1.3
+DISTNAME=	ipa-1.3.1
 CATEGORIES=	net sysutils
-MASTER_SITES=	http://www.simon.org.ua/ipa/ \
-		http://ipa-system.sourceforge.net/ \
+MASTER_SITES=	http://ipa-system.sourceforge.net/ \
 		http://www.mirrors.wiretapped.net/security/network-monitoring/ipa/ \
 		ftp://ftp.mirrors.wiretapped.net/pub/security/network-monitoring/ipa/ \
-		http://www.outloud.org/ipa/ \
 		http://ipa.it-ss.be/
 
-MAINTAINER=	simon@simon.org.ua
-HOMEPAGE=	http://www.simon.org.ua/ipa/
+MAINTAINER=	simon@comsys.ntu-kpi.kiev.ua
+HOMEPAGE=	http://ipa-system.sourceforge.net/
 COMMENT=	IP accounting software
 
 RESTRICTED=		"Needs to be built uniquely for each host"
@@ -20,7 +18,7 @@ NO_PACKAGE=		${RESTRICTED}
 
 USE_BUILDLINK2=		yes
 USE_PKGINSTALL=		yes
-ALL_TARGET=		NetBSD
+ALL_TARGET=		# empty
 
 CFLAGS+=		-DCFGFILE=\\\"${PKG_SYSCONFDIR}/ipa.conf\\\"
 
@@ -32,4 +30,5 @@ RCD_SCRIPTS=		ipa
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ipa
 
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
