@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:16:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/02 16:15:09 fredb Exp $
 bin/ebrowser
 bin/gnome-gtkhtml-editor
 bin/gtkhtml-properties-capplet
@@ -100,7 +100,6 @@ lib/libgtkhtml.so
 lib/libgtkhtml.so.17
 lib/libgtkhtml.so.17.0
 share/control-center/Documents/gtkhtml-properties.desktop
-share/control-center/capplets/gtkhtml-properties.desktop
 share/gnome/apps/Settings/Documents/gtkhtml-properties.desktop
 share/gnome/html/gtkhtml/gtkhtml-gtkhtml-enums.html
 share/gnome/html/gtkhtml/gtkhtml-gtkhtml-stream.html
