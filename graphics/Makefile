@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2002/03/22 15:37:14 wiz Exp $
+# $NetBSD: Makefile,v 1.186 2002/04/21 08:08:27 rh Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -69,6 +69,7 @@ SUBDIR+=	giram
 SUBDIR+=	gle
 SUBDIR+=	glu
 SUBDIR+=	glut
+SUBDIR+=	gmplayer
 SUBDIR+=	gnome-iconedit
 SUBDIR+=	gnuplot
 SUBDIR+=	gphoto
