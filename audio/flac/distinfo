@@ -1,28 +1,9 @@
-$NetBSD: distinfo,v 1.9 2005/02/23 20:39:45 agc Exp $
+$NetBSD: distinfo,v 1.10 2005/02/28 14:09:19 wiz Exp $
 
-SHA1 (flac-1.1.1.tar.gz) = 97832e5acad2f20867aafc30f219e47d26b853ac
-RMD160 (flac-1.1.1.tar.gz) = 2bf336514bf76d7d12279a896deb919a4194b36c
-Size (flac-1.1.1.tar.gz) = 1467204 bytes
-SHA1 (patch-aa) = 8389e42e3a90877af795d8e401c438de98ddcc8f
-SHA1 (patch-ab) = abf4df5033956d9c4214064660f82a82619cb3fd
-SHA1 (patch-ac) = 4da64f547cc44cc48a0fb0a761ce7654aa32704a
-SHA1 (patch-ae) = a9ea14a0d0f05c0b49db08e8e62c46589e2b0f2e
-SHA1 (patch-af) = b679103dcd19573bc340426573b027e97c725f8b
-SHA1 (patch-ag) = db7f1db8bc3283fdc698be41754e27bfe344d29e
-SHA1 (patch-ah) = df7c6432123988b2b3675ce93e8faf3c1c9ef691
-SHA1 (patch-ai) = 7c3844526cfd7ec5a8e59ff4052bdb86da0a61e0
-SHA1 (patch-aj) = 71bf6ecc177a58d4e809424feb5f541d8203594f
-SHA1 (patch-ak) = 5e360edc4dfe585f6ea06e23ccd986397280610d
-SHA1 (patch-al) = 09209de67a72a7d3bf01bfc4d347ce160028f837
-SHA1 (patch-am) = e7b4eaf58e92fd851084347029557f330a78b874
-SHA1 (patch-an) = c1c7fcc50e7fcff14895bdb39b4bde8b7951ab2e
-SHA1 (patch-ao) = d0b10b55eace36c763b70ad2b8307fbd82702144
-SHA1 (patch-ap) = 36a6271b5a76b1e6f974206e60cdc73adb115ddc
-SHA1 (patch-aq) = cb470aa3b5960c7aeef09b10a2c80f4073278944
-SHA1 (patch-ar) = c8c8eb0e4e3111782aecbcf156761b8f15a801bc
-SHA1 (patch-as) = 22ca67dc39346476d771c30d66d5576ca61e99f2
-SHA1 (patch-at) = 30fae8796b6d3c52ae6195dc6072dc4ce8cefa54
-SHA1 (patch-au) = 4be24f28f1b6fe73cf8141a3150a3ec9c0d0b4cc
-SHA1 (patch-av) = 5428cb54b0df1cf3efab0c8493b395d67dc549f9
-SHA1 (patch-aw) = 2b1b16c8519598981ce19b96b9228ecc92649ae7
-SHA1 (patch-ax) = 360964ea0ed90a587a738d94283f178a934e4975
+SHA1 (flac-1.1.2.tar.gz) = 65501f3547df99b153951edb2ee7bfc13dd56946
+RMD160 (flac-1.1.2.tar.gz) = 58656837b02e211eaed5010d84c4ed59841c82d3
+Size (flac-1.1.2.tar.gz) = 1516235 bytes
+SHA1 (patch-aa) = debaf60c08f942682aca8a8461475a743c53034f
+SHA1 (patch-ab) = 232db53797c1533bfbe8bb619e713d771ddf27d1
+SHA1 (patch-ac) = 1d305f4a48d96dc3e7cd80fd02f73340a643a982
+SHA1 (patch-ae) = 60e14c3d6622d616b5ff2987224f57145c7fb504
