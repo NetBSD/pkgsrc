@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: authdaemond.sh,v 1.1.1.1 2005/02/10 03:21:31 jlam Exp $
+# $NetBSD: authdaemond.sh,v 1.2 2005/02/21 17:08:39 jlam Exp $
 #
 # Courier user authentication daemon
 #
@@ -12,7 +12,7 @@
 name="authdaemond"
 rcvar=${name}
 command="@PREFIX@/sbin/courierlogger"
-ctl_command="@PREFIX@/@AUTHLIBEXECDIR@/authdaemond"
+ctl_command="@PREFIX@/sbin/authdaemond"
 pidfile="@AUTHDAEMONVAR@/pid"
 required_files="@PKG_SYSCONFDIR@/authdaemonrc"
 
