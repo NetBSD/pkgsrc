@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3979 2003/12/05 11:29:00 adam Exp $
+$NetBSD: CHANGES,v 1.3980 2003/12/05 14:14:44 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4975,3 +4975,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ProjectCenter to 0.3.6 [adam 2003-12-05]
 	Updated Pantomime to 1.1.1 [adam 2003-12-05]
 	Updated GNUMail to 1.1.1 [adam 2003-12-05]
+	Added gnetcat-0.7.0 [recht 2003-12-05]
