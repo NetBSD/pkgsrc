@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 1998/06/22 09:10:24 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/08/08 12:35:42 frueauf Exp $
 #
 
 DISTNAME=	catdoc-0.35
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.go.dlr.de/fresh/unix/src/contrib/
 
-MAINTAINER=	frueauf@netbsd.org
+MAINTAINER=	packages@netbsd.org
 
 DEPENDS=	tk-8.0p2:../../x11/tk80
 

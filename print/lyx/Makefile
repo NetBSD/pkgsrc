@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/07/04 09:19:05 mycroft Exp $
+# $NetBSD: Makefile,v 1.10 1998/08/08 12:35:41 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/02/14 16:46:50 andreas Exp
 #
 
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.via.ecp.fr/pub/lyx/stable/ \
 		ftp://la1ad.uio.no/pub/lyx/
 
-MAINTAINER=	frueauf@netbsd.org
+MAINTAINER=	packages@netbsd.org
 
 BUILD_DEPENDS=	latex:../../print/teTeX
 RUN_DEPENDS=	latex:../../print/teTeX \
