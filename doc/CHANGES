@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2573 2003/06/24 01:51:13 jschauma Exp $
+$NetBSD: CHANGES,v 1.2574 2003/06/24 06:02:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2531,7 +2531,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated g2 to 0.49anb1 [adam 2003-06-23]
 	Updated ploticus to 2.10nb2 [adam 2003-06-23]
 	Updated png2html to 1.1nb2 [adam 2003-06-23]
-	Updated py20-gd to 1.3nb2 [adam 2003-06-23]
+	Updated py-gd to 1.3nb2 [adam 2003-06-23]
 	Updated mrtg to 2.9.29nb1 [adam 2003-06-23]
 	Updated netsaint-base to 0.0.7nb3 [adam 2003-06-23]
 	Updated ups-nut-cgi to 1.2.1nb2 [adam 2003-06-23]
