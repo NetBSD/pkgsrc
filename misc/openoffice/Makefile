@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.56 2004/12/04 23:09:06 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2005/01/06 15:52:19 mrauch Exp $
 
-DISTNAME=		openoffice-1.1.1
-PKGREVISION=		2
+DISTNAME=		openoffice-1.1.4
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/1.1.1/}
-DISTFILES=		OOo_1.1.1p1_source.tar.bz2
+MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/1.1.4/}
+DISTFILES=		OOo_1.1.4_source.tar.gz
 DISTFILES+=		gpc231.tar.Z
-DISTFILES+=		ooo_addons_111p1.tar.bz2
+DISTFILES+=		ooo_addons_114.tar.bz2
 SITES_gpc231.tar.Z= 	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/
-SITES_ooo_addons_111p1.tar.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
+SITES_ooo_addons_114p1.tar.bz2=http://www.fs.tum.de/~mrauch/OpenOffice/download/\
 			ftp://ftp.NetBSD.org/pub/NetBSD/misc/mrauch/
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
@@ -21,7 +20,7 @@ BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
-WRKSRC=			${WRKDIR}/oo_1.1.1_src/config_office
+WRKSRC=			${WRKDIR}/config_office
 USE_BUILDLINK3=		yes
 GCC_REQD=		3.0
 USE_LANGUAGES+=		c c++
@@ -41,16 +40,21 @@ ONLY_FOR_PLATFORM=	NetBSD-1.6Z[G-Z]*-i386 NetBSD-[2-9]*-i386
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+= 	--enable-mozilla --disable-java
-CONFIGURE_ARGS+= 	--with-lang=ALL --with-dict=ALL
+CONFIGURE_ARGS+= 	--with-lang="AFRIK","ARAB","BASQUE","CHINSIM","CHINTRAD","CZECH","DAN","DTCH","ENUS","ESTONIAN","FINN","FREN","GAL","GREEK","HEBREW","HUNG","ITAL","JAPN","KOREAN","LITHUANIAN","NORBOK","NORNYN","NSOTHO","POL","PORT","PORTBR","RUSS","SLOVAK","SLOVENIAN","SPAN","SWED","TURK","WELSH","ZULU"
+CONFIGURE_ARGS+=	--with-dict=ALL
 
 TEMP?=			${WRKSRC}
 UNLIMIT_RESOURCES+=	datasize
 
 PLIST_SRC+=		PLIST.common
 PLIST_SUBST+=		OPENOFFICE_DLLSUFFIX=${OPENOFFICE_DLLSUFFIX}
+PLIST_SUBST+=		OPENOFFICE_VERSION=${OPENOFFICE_VERSION}
 .if exists(${PKGDIR}/PLIST.${OPSYS})
 PLIST_SRC+=             ${PKGDIR}/PLIST.${OPSYS}
 . endif
+MESSAGE_SUBST+=		OPENOFFICE_VERSION=${OPENOFFICE_VERSION}
+
+OPENOFFICE_VERSION=	OpenOffice.org1.1.4
 
 post-extract:
 # bring the two files from GPC into place
@@ -81,12 +85,16 @@ pre-install:
 
 do-install:
 	${SH} -c "cd ${WRKSRC}/../instsetoo/${OPENOFFICE_OUTPATH}.pro/${OPENOFFICE_LANGCODE}/normal; ./install --prefix=${PREFIX}"
+	${TOUCH} ${PREFIX}/${OPENOFFICE_VERSION}/help/${OPENOFFICE_HELPCODE}/common.tree
+	${TOUCH} ${PREFIX}/${OPENOFFICE_VERSION}/help/${OPENOFFICE_HELPCODE}/schart.tree
+	${TOUCH} ${PREFIX}/${OPENOFFICE_VERSION}/help/${OPENOFFICE_HELPCODE}/sdraw.tree
 	${RM} -f ${PREFIX}/bin/soffice.orig
 	${SED}	-e "s|@@PREFIX@@|${PREFIX}|g"				\
+		-e "s|@@OPENOFFICE_VERSION@@|${OPENOFFICE_VERSION}|g"	\
 		< ${FILESDIR}/soffice > ${PREFIX}/bin/soffice
 	${CHMOD} +x ${PREFIX}/bin/soffice
 .for i in scalc sdraw simpress swriter
-	${LN} -sf ${PREFIX}/OpenOffice.org1.1.1/program/$i ${PREFIX}/bin/$i
+	${LN} -sf ${PREFIX}/${OPENOFFICE_VERSION}/program/$i ${PREFIX}/bin/$i
 .endfor
 
 # everything specific to your OS/Arch goes into its own Makefile
