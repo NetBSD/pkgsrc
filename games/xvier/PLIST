@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/17 14:59:31 zuntum Exp $
+bin/xvier
+man/cat6/xvier.0
+libexec/xvier_prog

@@ -1,0 +1,6 @@
+xvier is a (not) simple game where you and the computer alternately
+throw stones into free columns. The stones pile up in the columns,
+and the goal is to get four stones in a row, column, or diagonally.
+
+The default grid is 7 columns by 6 rows. It can be sized from 4x4 to
+13x13. It has 10 levels of difficulty.
