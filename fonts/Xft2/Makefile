@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/02/16 12:49:29 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.28 2004/02/16 21:05:57 jlam Exp $
 
 DISTNAME=	xft-2.1.2
 PKGNAME=	Xft2-2.1.2
@@ -21,7 +20,7 @@ USE_GNU_TOOLS+=		awk
 PKGCONFIG_OVERRIDE=	xft.pc.in
 MAKE_ENV+=		EGREP="${EGREP}"
 
-BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8.2
+BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
 
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
