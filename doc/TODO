@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.394 2003/03/22 00:09:20 wiz Exp $
+$NetBSD: TODO,v 1.395 2003/03/22 01:02:09 salo Exp $
 
 Suggested new packages
 ======================
@@ -105,7 +105,6 @@ Suggested package updates
 	o distcc-1.2.2
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
-	o ekg-1.0rc1 [pkg/20807]
 	o elm-me-2.4pl101
 	o evolution-1.2.2
 	o exim-4.12 [pkg/19850]
