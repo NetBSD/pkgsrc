@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/02/17 01:52:31 chris Exp $
+# $NetBSD: Makefile,v 1.6 2004/03/11 12:26:28 jmmv Exp $
 #
 
 DISTNAME=	gpgme-0.3.16
+PKGNAME=	${DISTNAME:S/-/03-/}
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 
@@ -21,7 +22,5 @@ PTHREAD_OPTS+=		require
 .if ${PTHREAD_TYPE} == "native"
 CONFIGURE_ARGS+=	--without-pth --without-pth-test
 .endif
-
-INFO_FILES=		gpgme.info
 
 .include "../../mk/bsd.pkg.mk"
