@@ -1,0 +1,85 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/12/28 10:42:20 rh Exp $
+
+--- configure.orig	Fri Dec 17 15:05:01 1999
++++ configure	Tue Dec 28 11:28:11 1999
+@@ -13,7 +13,7 @@
+ # $CXX
+ #
+ 
+-$echo 'Checking C++ compiler... \c';
++$echo -n 'Checking C++ compiler... ';
+ cat <<EOF >$tmp_file.C;
+ #include <iostream.h>
+ int main(int, char **) {
+@@ -38,7 +38,7 @@
+ # $SYS_POLL_MISSING
+ #
+ 
+-$echo 'Checking <sys/poll.h>... \c';
++$echo -n 'Checking <sys/poll.h>... ';
+ SYS_POLL_MISSING=unknown;
+ cat <<EOF >$tmp_file.C;
+ #ifdef SYS_POLL_MISSING /* { */
+@@ -78,7 +78,7 @@
+ # $SOCKET_LIBRARIES
+ #
+ 
+-$echo 'Checking for socket libraries... \c';
++$echo -n 'Checking for socket libraries... ';
+ SOCKET_LIBRARIES=unknown;
+ cat >$tmp_file.C <<EOF;
+ extern "C" int socket();
+@@ -108,7 +108,7 @@
+ # $BOOL_DEFINITION
+ #
+ 
+-$echo 'Checking "bool"... \c';
++$echo -n 'Checking "bool"... ';
+ BOOL_DEFINITION=unknown;
+ cat <<EOF >$tmp_file.C;
+ #ifdef BOOL_DEFINITION
+@@ -145,7 +145,7 @@
+ # $EXPLICIT
+ #
+ 
+-$echo 'Checking "explicit"... \c';
++$echo -n 'Checking "explicit"... ';
+ EXPLICIT=unknown;
+ cat <<EOF >$tmp_file.C;
+ struct C {
+@@ -176,7 +176,7 @@
+ # $LIBSTDCXX_INCLUDES, $LIBSTDCXX_LIBS
+ #
+ 
+-$echo 'Checking Standard C++ library... \c';
++$echo -n 'Checking Standard C++ library... ';
+ cat <<EOF >$tmp_file.C;
+ #include <string>
+ #include <list>
+@@ -203,7 +203,7 @@
+ # $AUTO_PTR_BROKEN
+ #
+ AUTO_PTR_BROKEN="";
+-$echo 'Checking "auto_ptr"... \c';
++$echo -n 'Checking "auto_ptr"... ';
+ cat <<EOF >$tmp_file.C;
+ #include <memory>
+ #include <string>
+@@ -234,7 +234,7 @@
+ # $MAKEDEPEND_INCLUDES
+ #
+ MAKEDEPEND_INCLUDES="";
+-$echo 'Checking "makedepend" includes... \c';
++$echo -n 'Checking "makedepend" includes... ';
+ echo "#include <iostream.h>" >$tmp_file.C;
+ MAKEDEPEND_INCLUDES=`$CXX -E $tmp_file.C 2>/dev/null |
+ sed -n \
+@@ -267,7 +267,7 @@
+   MAKEDEPEND_INCLUDES; \
+ do cmd="$cmd -e \"s|@$i@|\$$i|g\""; done;
+ for dir in $makedirs; do
+-  $echo "Creating \"$dir/Makefile\" from \"$dir/Makefile.in\"... \\c";
++  $echo -n "Creating \"$dir/Makefile\" from \"$dir/Makefile.in\"... ";
+   cat <<EOF >$dir/Makefile;
+ 
+ #

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/28 10:42:20 rh Exp $
+bin/html2text
+man/man1/html2text.1
+man/man5/html2textrc.5

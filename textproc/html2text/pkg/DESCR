@@ -1,0 +1,12 @@
+  Html2text reads HTML 3.2 documents from the input-urls, formats each
+into a stream of ASCII characters and writes the result to standard
+output (or into output-file, if the -o command line option is used).
+It also accepts syntactically incorrect input and attempts to inter-
+pret it "reasonably".
+
+  Documents that are specified by a URL that begins with "http:" are
+retrieved with the Hypertext Transfer Protocol. URLs that begin with
+"file:" and URLs that do not contain a colon specify local files.
+
+  Html2text was written by Arno Unkrig and is available under a
+BSD-style licence.
