@@ -1,0 +1,101 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/04/19 00:07:13 recht Exp $
+#
+# This Makefile fragment is included by all PostgreSQL packages built from
+# the main sources of the PostgreSQL distribution except jdbc-postgresql.
+#
+# The PostgreSQL package naming scheme, aside from the obvious piecewise
+# packages, is as follows:
+#
+#	<lang>-postgresql	client-side interface to PostgreSQL
+#	postgresql-<lang>	server-side module for PostgreSQL backend
+
+DISTNAME?=		postgresql-${DIST_VERS}
+CATEGORIES+=		databases
+MASTER_SITES?=		http://www.postgresql.org/ftpsite/source/v${DIST_VERS}/ \
+			ftp://ftp.postgresql.org/pub/source/v${DIST_VERS}/ \
+			ftp://ftp.de.postgresql.org/mirror/postgresql/source/v${DIST_VERS}/ \
+			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/source/v${DIST_VERS}/ \
+			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/source/v${DIST_VERS}/ \
+			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/source/v${DIST_VERS}/
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER?=		recht@NetBSD.org
+HOMEPAGE?=		http://www.postgresql.org/
+
+CONFLICTS+=		postgresql-[0-6]* postgresql-7.0*
+
+DISTINFO_FILE?=		${.CURDIR}/../postgresql74/distinfo
+COMMON_FILESDIR?=	${.CURDIR}/../postgresql74/files
+PATCHDIR?=		${.CURDIR}/../postgresql74/patches
+
+# Version numbering scheme:
+#
+# DIST_VERS		version number on the postgresql distfile
+# BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
+#
+# Note: Do not forget jdbc-postgresql when updating version
+DIST_VERS?=		7.4.2
+BASE_VERS?=		${DIST_VERS}
+
+BUILDLINK_DEPENDS.postgresql-lib?=	postgresql-lib>=${BASE_VERS}
+BUILDLINK_DEPENDS.tcl-postgresql?=	tcl-postgresql>=${BASE_VERS}
+
+USE_BUILDLINK3=		yes
+GNU_CONFIGURE=		yes
+BUILD_USES_MSGFMT=	yes
+USE_PKGLOCALEDIR=	yes
+USE_GNU_TOOLS+=		make yacc
+PKG_SYSCONFSUBDIR=	postgresql
+
+.include "../../mk/bsd.prefs.mk"
+
+# Add support for hierarchical queries with Oracle like CONNECT BY syntax.
+# see http://gppl.terminal.ru/README.html for details.
+.if defined(PGSQL_USE_HIER) && !empty(PGSQL_USE_HIER:M[yY][eE][sS])
+PATCH_SITES=		http://gppl.terminal.ru/
+PATCHFILES=		hier-Pg7.4-0.5.2.tar.gz
+PATCH_DIST_STRIP=	-p1
+.endif
+BUILD_DEFS+=	PGSQL_USE_HIER
+
+PGSQL_TEMPLATE.SunOS=		solaris
+.if !defined(PGSQL_TEMPLATE.${OPSYS})
+PGSQL_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
+.endif
+
+CONFIGURE_ARGS+=	--with-template="${PGSQL_TEMPLATE.${OPSYS}}"
+CONFIGURE_ARGS+=	--without-readline
+CONFIGURE_ARGS+=	--with-zlib
+CONFIGURE_ARGS+=	--enable-nls
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/html/postgresql
+
+CONFIGURE_ARGS+=	--without-java
+CONFIGURE_ARGS+=	--without-perl
+CONFIGURE_ARGS+=	--without-python
+CONFIGURE_ARGS+=	--without-tcl
+CONFIGURE_ARGS+=	--without-tk
+
+# Postgresql explicitly forbids any use of -ffast-math
+CFLAGS:=		${CFLAGS:S/-ffast-math//}
+
+post-extract:
+	if [ -d ${WRKSRC}/src ]; then					\
+		${RM} -f ${WRKSRC}/src/Makefile.custom;			\
+		${CP} -f ${COMMON_FILESDIR}/Makefile.custom		\
+			${WRKSRC}/src/Makefile.custom;			\
+	fi
+	if [ -d ${WRKSRC}/src/interfaces/libpq ]; then			\
+		${RM} -f ${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
+		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpq		\
+			${WRKSRC}/src/interfaces/libpq/GNUmakefile;	\
+	fi
+	if [ -d ${WRKSRC}/src/interfaces/libpgtcl ]; then		\
+		${RM} -f ${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+		${CP} -f ${COMMON_FILESDIR}/GNUmakefile.libpgtcl	\
+			${WRKSRC}/src/interfaces/libpgtcl/GNUmakefile;	\
+	fi
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
