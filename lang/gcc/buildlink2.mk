@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.16 2004/02/01 02:11:06 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.17 2004/02/01 14:09:04 jlam Exp $
 
 # Do not directly include this file in package Makefiles. It is
 # automatically included when required based on USE_GCC2.
@@ -6,8 +6,10 @@
 .if !defined(GCC2_BUILDLINK2_MK)
 GCC2_BUILDLINK2_MK=	# defined
 
+.include "../../mk/bsd.prefs.mk"
+
 BUILDLINK_PACKAGES+=		gcc
-BUILDLINK_DEPENDS.gcc?=		gcc>=${GCC_REQD}
+BUILDLINK_DEPENDS.gcc?=		gcc>=${_GCC_REQD}
 BUILDLINK_PKGSRCDIR.gcc?=	../../lang/gcc
 #
 # Packages that link against shared gcc libraries need a full
