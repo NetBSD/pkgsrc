@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.25 2002/07/11 15:52:36 grant Exp $
+# $NetBSD: defs.SunOS.mk,v 1.26 2002/07/15 16:24:01 schmonz Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -74,6 +74,7 @@ GROUPADD?=		/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	dt		# default 1.2 compatible libs type
 NOLOGIN?=		${FALSE}
+ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		root
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null
