@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.26 2005/01/12 11:30:37 agc Exp $
+# $NetBSD: bootstrap,v 1.27 2005/01/12 16:42:13 jschauma Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -250,6 +250,7 @@ IRIX*)
 	opsys=IRIX
 	need_sed=yes
 	set_opsys=yes
+	machine_arch=mipseb
 	;;
 Linux)
 	if [ -f /etc/debian_version ]; then
