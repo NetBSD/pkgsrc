@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2000/01/06 16:31:06 fredb Exp $
+# $NetBSD: Makefile,v 1.23 2000/01/06 16:57:16 fredb Exp $
 # $FreeBSD Id: Makefile,v 1.17 1997/11/26 23:16:51 jseger Exp
 #
 
@@ -40,7 +40,7 @@ do-install:
 	  esac; \
 	done
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if defined(KERMIT_SUID_UUCP)
 .if ${KERMIT_SUID_UUCP} == "yes" || ${KERMIT_SUID_UUCP} == "YES"
@@ -69,3 +69,5 @@ KFLAGS+=	-DSOCKS -DCK_SOCKS5
 LIBS+=		-lsocks
 .endif
 .endif
+
+.include "../../mk/bsd.pkg.mk"
