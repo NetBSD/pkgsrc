@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/02/16 14:38:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:27 jlam Exp $
 #
 
 DISTNAME=	isect-1.0
@@ -16,7 +16,6 @@ USE_LIBTOOL=	yes
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 
 CPPFLAGS+=	-I${LOCALBASE}/include	# for w3c-libwww/WWWlib.h
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 
 DOCDIR=		${PREFIX}/share/doc/isect
 EGDIR=		${PREFIX}/share/examples/isect

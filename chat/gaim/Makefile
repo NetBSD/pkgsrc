@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/06/05 22:49:48 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2001/06/11 06:34:21 jlam Exp $
 #
 
 DISTNAME=	gaim-0.11.0pre11
@@ -18,6 +18,6 @@ USE_X11BASE=	YES
 GNU_CONFIGURE=	YES
 
 # for pthread.h
-CONFIGURE_ENV+=	CPPFLAGS=-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/05/22 09:32:24 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2001/06/11 06:34:39 jlam Exp $
 #
 
 DISTNAME=		kaffe-1.0.6
@@ -23,7 +23,6 @@ ONLY_FOR_PLATFORM=	*-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS=		--prefix=${PREFIX}/kaffe
 CONFIGURE_ARGS+=	--with-rtlibraries="${LOCALBASE}/lib ${X11BASE}/lib"
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 CPPFLAGS+=		-Dunix -I${LOCALBASE}/include -I${X11BASE}/include
 

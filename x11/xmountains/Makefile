@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/17 17:07:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/06/11 06:34:59 jlam Exp $
 #
 
 DISTNAME=	xmountains_2.5
@@ -17,7 +17,7 @@ NO_WRKSUBDIR=	yes
 USE_IMAKE=	yes
 
 DIST_SUBDIR=	xmountains
-MAKE_ENV+=	CPPFLAGS="-DVROOT"
+CPPFLAGS+=	-DVROOT
 
 # XXX Hack. We really want an OTHER_SITES/OTHERFILES mechanism for this.
 do-patch:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/28 01:35:25 briggs Exp $
+# $NetBSD: Makefile,v 1.12 2001/06/11 06:34:36 jlam Exp $
 
 DISTNAME=	gphoto-0.4.3
 CATEGORIES=	graphics
@@ -15,6 +15,5 @@ USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-I${LOCALBASE}/include
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"

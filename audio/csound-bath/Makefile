@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/04/27 17:17:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/11 06:34:17 jlam Exp $
 #
 
 DISTNAME=		Csound4.12
@@ -16,8 +16,6 @@ NO_SRC_ON_CDROM=	"no for-fee-redistribution"
 NO_BIN_ON_CDROM=	${NO_SRC_ON_CDROM}
 
 DIST_SUBDIR=		csound
-MAKE_ENV=		CPPFLAGS="-I${LOCALBASE}/include" \
-			LDFLAGS="-L${LOCALBASE}/lib"
 CONFLICTS=		csound-4*
 
 #pre-build:

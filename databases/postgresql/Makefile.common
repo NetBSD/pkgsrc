@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2001/06/11 02:05:08 jlam Exp $
+# $NetBSD: Makefile.common,v 1.20 2001/06/11 06:34:24 jlam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution.
@@ -75,7 +75,6 @@ CONFIGURE_ARGS+=	--enable-syslog
 CONFIGURE_ARGS+=	--with-CXX
 CONFIGURE_ARGS+=	--with-template="${LOWER_OPSYS}"
 
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 MAKE_ENV+=		CUSTOM_COPT="${CFLAGS}"
 

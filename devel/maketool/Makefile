@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2001/04/02 20:06:12 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2001/06/11 06:34:28 jlam Exp $
 #
 
 DISTNAME=	maketool-0.6.1
@@ -18,6 +18,6 @@ USE_LIBINTL=	yes
 USE_X11=	yes
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include"
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 .include "../../mk/bsd.pkg.mk"

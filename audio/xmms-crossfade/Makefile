@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/23 20:17:22 rh Exp $
+# $NetBSD: Makefile,v 1.2 2001/06/11 06:34:19 jlam Exp $
 #
 
 DISTNAME=		xmms-crossfade-0.2.7
@@ -20,6 +20,5 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 LDFLAGS+=		-lossaudio
 CPPFLAGS+=		-I${LOCALBASE}/include
 CPPFLAGS+=		-D_POSIX_THREAD_SYSCALL_SOFT=1
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"

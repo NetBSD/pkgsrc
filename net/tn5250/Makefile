@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/02/17 18:19:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2001/06/11 06:34:47 jlam Exp $
 #
 
 DISTNAME=	tn5250-0.12.51
@@ -16,7 +16,6 @@ REPLACE_NCURSES=	${WRKSRC}/cursesterm.cc ${WRKSRC}/configure
 .include "../../mk/bsd.prefs.mk"
 
 .if ${NEED_NCURSES} == "YES"
-CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=		-I${LOCALBASE}/include
 .endif
 
