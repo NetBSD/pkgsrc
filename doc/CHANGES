@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5935 2004/05/14 15:01:31 minskim Exp $
+$NetBSD: CHANGES,v 1.5936 2004/05/14 15:44:21 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2528,3 +2528,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xterm to 188 [grant 2004-05-14]
 	Updated net-snmp to 5.1.1 [adam 2004-05-14]
 	Updated mathomatic to 11.1b [minskim 2004-05-14]
+	Added raw-0.1.0 [dillo 2004-05-14]
