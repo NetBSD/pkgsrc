@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.14 2001/12/03 23:33:01 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.15 2001/12/24 13:25:47 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -54,9 +54,17 @@ case $hw_model in
 		fi
 	esac	;;
     #
-    # vax / unknown
+    # alpha / vax / unknown
     *)
 	case $hw_machine in
+	    alpha)
+		# cpu0 at mainbus0: ID 0 (primary), 21164A-0 (unknown ...
+		if egrep -q '^cpu0.*21164A' /var/run/dmesg.boot 2>/dev/null \
+									; then
+		    FLAGS="-mcpu=21164a"
+		fi
+		# Need to confirm how other CPUs probe
+		;;	# No VAX specific gcc flags :(
 	    vax)
 		;;	# No VAX specific gcc flags :(
 	    *)
@@ -69,21 +77,22 @@ esac
 if [ -n "$FLAGS" ]; then
     gcc_ver=`gcc -v 2>&1 | awk '/gcc version/ {sub("egcs-","");print $3}'`
     FLAGS=`awk -v "flags=$FLAGS" -v "gcc_ver=$gcc_ver" '
-	{if (gcc_ver < $1){map["-m"$2] = "-m"$3}}
-	END{if (map[flags]) {print map[flags]}else {print flags}}
+	{if (gcc_ver < $1){map[$2] = ""$3}}
+	END{if (flags in map) {print map[flags]}else {print flags}}
 	' <<EOD
-2.90	arch=i386		no-486
-2.90	arch=i486		486
-2.90	arch=pentium		486
-2.90	arch=pentiumpro		486
-2.90	cpu=supersparc		supersparc
-2.90	cpu=sparclite		sparclite
-2.90	cpu=cypress		cypress
-2.90	cpu=v9			v8
-2.90	cpu=arm610		6
-2.90	cpu=strongarm110	6
-2.90	cpu=arm710		6
-2.95	arch=k6			arch=pentium
+2.90	-mcpu=21164a	
+2.90	-march=i386		-mno-486
+2.90	-march=i486		-m486
+2.90	-march=pentium		-m486
+2.90	-march=pentiumpro	-m486
+2.90	-mcpu=supersparc	-msupersparc
+2.90	-mcpu=sparclite		-msparclite
+2.90	-mcpu=cypress		-mcypress
+2.90	-mcpu=v9		-mv8
+2.90	-mcpu=arm610		-m6
+2.90	-mcpu=strongarm110	-m6
+2.90	-mcpu=arm710		-m6
+2.95	-march=k6		-march=pentium
 EOD
 `
 fi
