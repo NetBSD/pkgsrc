@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/09/24 00:28:01 rh Exp $
+
+--- src/objc/Makefile.in.orig	2002-05-18 20:57:50.000000000 +1000
++++ src/objc/Makefile.in
+@@ -79,7 +79,7 @@ POSTLINKFILES=\
+ 	-$(RM) $*.m
+ 
+ .ym.$(OBJSUFFIX):
+-	$(YACC) $*.ym
++	$(YACC) -d $*.ym
+ 	-$(CP) $(YTABH) $*.h
+ 	-$(CP) $(YTABC) $*.m
+ 	$(OBJC) -c $(MFLAGS) $(IFLAGS) $*.m
