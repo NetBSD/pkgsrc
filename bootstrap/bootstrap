@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.11 2004/04/07 12:05:37 jmmv Exp $
+# $NetBSD: bootstrap,v 1.12 2004/04/11 03:17:12 heinz Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -306,6 +306,18 @@ Interix)
 	# for bootstrap only; pkgsrc uses CPPFLAGS
 	CC="gcc -D_ALL_SOURCE"; export CC
 	;;
+UnixWare)
+	root_group=sys
+	need_pax=yes
+	need_mtree=yes
+	need_bsd_install=no
+	BSTRAP_ENV="INSTALL=/usr/ucb/install $BSTRAP_ENV"
+	need_mkdir=yes
+	need_sed=yes
+	whoamiprog=/usr/ucb/whoami
+	set_opsys=no
+	CC="gcc -DUNIXWARE"; export CC
+	;;
 *)
 	echo "This platform ($opsys) is untried - good luck, and thanks for using pkgsrc"
 	root_group=wheel
@@ -504,6 +516,11 @@ fi
 if [ "$need_fixed_strip" = "yes" ] ; then
 	echo_msg "Installing fixed strip script"
 	run_cmd "(cd files; $shprog ./install-sh -c -o $user -g $group -m 755 strip-sh $prefix/bin/strip)"
+fi
+
+if [ "$need_mkdir" = "yes" ]; then
+	echo_msg "Installing fixed mkdir script \"mkdir-p.sh\""
+	run_cmd "(cd files; $shprog ./install-sh -c -o $user -g $group -m 755 mkdir-p.sh $prefix/sbin/mkdir-p.sh)"
 fi
 
 echo_msg "Installing bmake"
