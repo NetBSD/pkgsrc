@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2003/05/18 13:45:09 magick Exp $
+$NetBSD: distinfo,v 1.23 2003/07/04 16:36:45 magick Exp $
 
-SHA1 (nxtvepg-2.5.1.tar.gz) = 01fb2522897c93bd597e6d2926013a98c9c15e6d
-Size (nxtvepg-2.5.1.tar.gz) = 1006564 bytes
+SHA1 (nxtvepg-2.5.2.tar.gz) = 4e79d70081d0deb68b8c471ffa9405fc51b73159
+Size (nxtvepg-2.5.2.tar.gz) = 1007291 bytes
 SHA1 (patch-aa) = 00ac7056a66e3a0cc88f3f62a1bef889bbbb029d
 SHA1 (patch-ab) = 634cfd179fd1043e3272ce27836a9052b199d1f4
 SHA1 (patch-ac) = 28d5d7a9a31e1a17f8416d271abdefa708b3480b
