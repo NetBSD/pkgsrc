@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.4 2000/11/13 14:34:41 abs Exp $
+
+--- Xvnc/programs/Xserver/include/servermd.h.orig	Mon Jul 28 15:17:34 1997
++++ Xvnc/programs/Xserver/include/servermd.h
+@@ -336,7 +336,7 @@
+ 
+ #endif /* luna */
+ 
+-#if (defined(i386) && (defined(SVR4) || defined(SYSV) || (defined(sun) && defined(SVR4))) || defined(__bsdi__) || (defined(__NetBSD__) && defined(__i386__)) || (defined(__OpenBSD__) && defined(__i386__)) || defined(__FreeBSD__) || defined(MACH386) || (defined(linux) && !defined(__mc68000__)) || (defined(AMOEBA) && defined(i80386)) || defined(MINIX) || defined(__EMX__) || (defined(Lynx) && defined(__i386__)))
++#if (defined(i386) && (defined(SVR4) || defined(SYSV) || (defined(sun) && defined(SVR4))) || defined(__bsdi__) || (defined(__NetBSD__) && (defined(__i386__) || defined(__arm32__) || defined(__powerpc__))) || (defined(__OpenBSD__) && defined(__i386__)) || defined(__FreeBSD__) || defined(MACH386) || (defined(linux) && !defined(__mc68000__)) || (defined(AMOEBA) && defined(i80386)) || defined(MINIX) || defined(__EMX__) || (defined(Lynx) && defined(__i386__)))
+ 
+ #ifndef IMAGE_BYTE_ORDER
+ #define IMAGE_BYTE_ORDER	LSBFirst

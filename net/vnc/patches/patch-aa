@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2000/11/13 10:26:16 abs Exp $
+$NetBSD: patch-aa,v 1.8 2000/11/13 14:34:40 abs Exp $
 
---- Imakefile.orig	Mon May 18 14:18:46 1998
+--- Imakefile.orig	Thu Oct 26 14:28:32 2000
 +++ Imakefile
 @@ -1,7 +1,7 @@
  #define IHaveSubdirs

@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2000/11/10 16:57:25 abs Exp $
+$NetBSD: patch-ac,v 1.6 2000/11/13 14:34:41 abs Exp $
 
 --- Xvnc/config/imake/imakemdep.h.orig	Sun Jul 27 03:41:05 1997
 +++ Xvnc/config/imake/imakemdep.h
