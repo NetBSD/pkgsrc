@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2004/03/22 03:22:01 kristerw Exp $
+# $NetBSD: Makefile,v 1.24 2004/05/08 15:08:06 minskim Exp $
 
 DISTNAME=	mlterm-2.8.0
 PKGNAME=	${DISTNAME}pl1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 
@@ -26,9 +26,7 @@ GNU_CONFIGURE=		yes
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--with-imagelib=imlib
-.if exists(${X11BASE}/lib/libXft.a)
 CONFIGURE_ARGS+=	--enable-anti-alias
-.endif
 CONFIGURE_ARGS+=	--without-libiconv-prefix
 
 SUBST_CLASSES+=		link
@@ -45,6 +43,7 @@ SUBST_SED.link=		-e 's|-module|-R${X11BASE}/lib -module|g' \
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
