@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/07/09 12:34:57 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/08/29 04:24:29 mycroft Exp $
 bin/xmess
-share/mess/xmessrc
-@dirrm share/mess
+share/xmess/xmessrc
+@dirrm share/xmess
