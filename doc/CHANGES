@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2729 2003/07/11 15:28:38 abs Exp $
+$NetBSD: CHANGES,v 1.2730 2003/07/11 19:05:21 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2746,3 +2746,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xchat to 2.0.3nb1 [jmmv 2003-07-11]
 	Added libkver-0.1 [seb 2003-07-11]
 	Updated jdbc-postgresql to 7.3.3 [abs 2003-07-11]
+	Updated gnome-panel to 2.2.2.2 [jmmv 2003-07-11]
