@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1378 2004/02/14 03:17:35 jlam Exp $
+$NetBSD: TODO,v 1.1379 2004/02/15 07:34:12 martti Exp $
 
 Suggested new packages
 ======================
@@ -247,7 +247,6 @@ Suggested package updates
 	o mowitz-0.3.0
 	o moz-bin-plugger-1.5
 	o mrproject-0.9.1
-	o mrtg-2.10.13
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.0.5
 	o nano-1.2.2
