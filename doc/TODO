@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.599 2003/05/28 21:03:55 salo Exp $
+$NetBSD: TODO,v 1.600 2003/05/28 22:08:24 grant Exp $
 
 Suggested new packages
 ======================
@@ -72,6 +72,7 @@ Suggested package updates
 	o abcde-2.1.4
 	o angband-3.0.3
 	o anjuta-1.0.2
+	o apache-2.0.46 [denial of service in previous releases]
 	o arch-1.0pre17 [pkg/20776]
 	o arch-1.0pre24
 	o asm2html-1.4 [pkg/21319]
