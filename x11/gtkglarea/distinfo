@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 17:36:12 wiz Exp $
+$NetBSD: distinfo,v 1.4 2005/03/24 09:52:28 adam Exp $
 
-SHA1 (gtkglarea-1.2.2.tar.gz) = acb8bc15b4ae64f579d72433b9a281134d061e40
-RMD160 (gtkglarea-1.2.2.tar.gz) = 5b685c4a9b434ae649a303749f0b5084dc0d86ba
-Size (gtkglarea-1.2.2.tar.gz) = 173949 bytes
-SHA1 (patch-aa) = 5c0e4542c291035943758d040136cc5abb8b1f2c
+SHA1 (gtkglarea-1.2.3.tar.gz) = 90ba606881601b1d7faad3a6b828ab4eb7cecb74
+RMD160 (gtkglarea-1.2.3.tar.gz) = 23b658d3b767e94971eca9aaa32f906b99df8e16
+Size (gtkglarea-1.2.3.tar.gz) = 291368 bytes
+SHA1 (patch-aa) = b5765afd457fdf652e4e254d4e06385062238215

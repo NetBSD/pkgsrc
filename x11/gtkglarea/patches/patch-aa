@@ -1,26 +1,26 @@
-$NetBSD: patch-aa,v 1.5 2001/04/07 19:34:32 rh Exp $
+$NetBSD: patch-aa,v 1.6 2005/03/24 09:52:28 adam Exp $
 
---- configure.orig	Wed Feb 16 21:30:35 2000
+--- configure.orig	2001-08-25 13:05:33.000000000 +0000
 +++ configure
-@@ -1965,7 +1965,7 @@
+@@ -12748,7 +12748,7 @@ echo "${ECHO_T}$have_GL" >&6
  
- echo $ac_n "checking Mesa""... $ac_c" 1>&6
- echo "configure:1968: checking Mesa" >&5
+ echo "$as_me:12749: checking Mesa" >&5
+ echo $ECHO_N "checking Mesa... $ECHO_C" >&6
 -LIBS="$saved_LIBS $GTK_LIBS $GL_LDOPTS -lMesaGL"
 +LIBS="$saved_LIBS $GTK_LIBS $GL_LDOPTS -lGL"
- cat > conftest.$ac_ext <<EOF
- #line 1971 "configure"
+ cat >conftest.$ac_ext <<_ACEOF
+ #line 12753 "configure"
  #include "confdefs.h"
-@@ -1989,7 +1989,7 @@
+@@ -12786,7 +12786,7 @@ echo "${ECHO_T}$have_MesaGL" >&6
  if test "x$have_MesaGL" = "xno"; then
-  echo $ac_n "checking Mesa with pthreads""... $ac_c" 1>&6
- echo "configure:1992: checking Mesa with pthreads" >&5
+  echo "$as_me:12787: checking Mesa with pthreads" >&5
+ echo $ECHO_N "checking Mesa with pthreads... $ECHO_C" >&6
 - LIBS="$saved_LIBS $GTK_LIBS $GL_LDOPTS -lMesaGL -lpthread"
 + LIBS="$saved_LIBS $GTK_LIBS $GL_LDOPTS -lGL -lpthread"
-  cat > conftest.$ac_ext <<EOF
- #line 1995 "configure"
+  cat >conftest.$ac_ext <<_ACEOF
+ #line 12791 "configure"
  #include "confdefs.h"
-@@ -2025,9 +2025,9 @@
+@@ -12837,9 +12837,9 @@ echo "$as_me: error: Missing GL library"
  elif test "x$with_lib_MesaGL" = "xyes"; then
  
   if test "x$have_MesaGL" = "xyes"; then
@@ -30,9 +30,9 @@ $NetBSD: patch-aa,v 1.5 2001/04/07 19:34:32 rh Exp $
 -  GL_LIBS="$GL_LDOPTS -lMesaGLU -lMesaGL -lpthread"
 +  GL_LIBS="$GL_LDOPTS -lGLU -lGL -lpthread"
   else
-   { echo "configure: error: Missing MesaGL library" 1>&2; exit 1; }
-  fi
-@@ -2037,9 +2037,9 @@
+   { { echo "$as_me:12844: error: Missing MesaGL library" >&5
+ echo "$as_me: error: Missing MesaGL library" >&2;}
+@@ -12851,9 +12851,9 @@ else
   if test "x$have_GL" = "xyes"; then
    GL_LIBS="$GL_LDOPTS -lGLU -lGL"
   elif test "x$have_MesaGL" = "xyes"; then
@@ -42,5 +42,5 @@ $NetBSD: patch-aa,v 1.5 2001/04/07 19:34:32 rh Exp $
 -  GL_LIBS="$GL_LDOPTS -lMesaGLU -lMesaGL -lpthread"
 +  GL_LIBS="$GL_LDOPTS -lGLU -lGL -lpthread"
   else
-   { echo "configure: error: You need GL or MesaGL libraries" 1>&2; exit 1; }
-  fi
+   { { echo "$as_me:12858: error: You need GL or MesaGL libraries" >&5
+ echo "$as_me: error: You need GL or MesaGL libraries" >&2;}
