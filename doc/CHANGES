@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4588 2004/01/24 09:20:12 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4589 2004/01/24 10:55:48 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -455,3 +455,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added XFree86-man-4.3.0 [xtraeme 2004-01-24]
 	Added XFree86-docs-4.3.0 [xtraeme 2004-01-24]
 	Added XFree86-4.3.0 [xtraeme 2004-01-24]
+	Updated mjpegtools to 1.6.1.93 [jmmv 2004-01-24]
