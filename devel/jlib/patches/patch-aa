@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/10/15 17:16:05 rh Exp $
+
+--- src/Makefile.in.orig	Sat Sep 16 16:59:49 2000
++++ src/Makefile.in
+@@ -87,7 +87,7 @@
+ 
+ lib_LTLIBRARIES = libj.la
+ libj_la_SOURCES = QuotedPrintable.C TmpFile.C MimeType.C SUtil.C Blob.C Stream.C Exception.C IOException.C EOFException.C SMTPException.C DataStream.C FileStream.C SockStream.C Properties.C Base64.C  EmailWriter.C EmailReader.C Email.C POP3.C IMAP4.C Regex.C Fetch.C AudioPlayer.C WavFile.C Directory.C scp.C socketstream.cc Date.cc
+-libj_la_LDFLAGS = -version-info $(LIBJ_SO_VERSION) -release $(JLIB_RELEASE) -no-undefined
++libj_la_LDFLAGS = -version-info $(LIBJ_SO_VERSION) -no-undefined
+ 
+ include_HEADERS = jlib.h
+ pkginclude_HEADERS = POP3.h SUtil.h Blob.h Stream.h Exception.h IOException.h EOFException.h SMTPException.h DataStream.h FileStream.h SockStream.h Properties.h Base64.h  EmailWriter.h EmailReader.h Email.h IMAP4.h Fetch.h Regex.h TmpFile.h MimeType.h QuotedPrintable.h AudioPlayer.h AudioFile.h WavFile.h Directory.h scp.h socketstream.hh Date.hh
