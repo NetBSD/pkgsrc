@@ -1,0 +1,19 @@
+$NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- lib/pvmd.orig	Thu Aug 28 13:13:16 1997
++++ lib/pvmd	Fri Aug  7 03:31:27 1998
+@@ -15,2 +15,5 @@
+ 
++PVM_ROOT=XXPKGXX
++PVM_ARCH=NETBSD
++
+ case "x$PVM_ROOT" in x )
+@@ -81,3 +84,3 @@
+ 
+-if [ ! -f $PVM_ROOT/lib/$PVM_ARCH/pvmd3$sfx ]; then
++if [ ! -f $PVM_ROOT/libexec/pvmd3$sfx ]; then
+ 	echo "pvmd: $PVM_ROOT/lib/$PVM_ARCH/pvmd3$sfx doesn't exist." >&2
+@@ -86,3 +89,3 @@
+ fi
+-exec $PVM_ROOT/lib/$PVM_ARCH/pvmd3$sfx $@
++exec $PVM_ROOT/libexec/pvmd3$sfx $@
+ exit 1

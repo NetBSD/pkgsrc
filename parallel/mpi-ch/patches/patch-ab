@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- romio/configure.orig	Wed Aug  5 09:47:54 1998
++++ romio/configure	Wed Aug  5 09:50:05 1998
+@@ -691,2 +691,24 @@
+ fi    
++if test -n "$arch_netbsd" ; then
++    CC=${CC:-gcc}
++    F77=${FC:-f77}
++    CFLAGS="$CFLAGS -D__FREEBSD"
++    longlongsize=${longlongsize:-0}
++# printf doesn't work properly and no integer*8 as far as I can tell
++    if test $DEBUG = 1; then
++        CFLAGS="$CFLAGS -g -D__NO_AIO"
++    else 
++        CFLAGS="$CFLAGS -O -D__NO_AIO"
++    fi
++    if test -z "$MPI" ; then
++        MPI=mpich
++        mpi_mpich=1
++    fi
++    if test -z "$FILE_SYSTEM" ; then
++        file_system_ufs=1
++        file_system_nfs=1
++        FILE_SYSTEM="ufs nfs"
++        echo "configuring for file systems ufs and nfs"
++    fi
++fi    
+ #

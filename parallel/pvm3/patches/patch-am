@@ -1,0 +1,18 @@
+$NetBSD: patch-am,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- src/global.h.orig	Fri Aug  7 01:36:40 1998
++++ src/global.h	Fri Aug  7 01:38:54 1998
+@@ -232,3 +232,3 @@
+ #ifndef	DEFBINDIR
+-#define	DEFBINDIR	"$HOME/pvm3/bin/$PVM_ARCH:$PVM_ROOT/bin/$PVM_ARCH"
++#define	DEFBINDIR	LOCALBASE "/libexec"
+ #endif
+@@ -243,3 +243,3 @@
+ #else
+-#define	PVMDFILE	"lib/pvmd"
++#define	PVMDFILE	LOCALBASE "/bin/pvmd"
+ #endif
+@@ -248,3 +248,3 @@
+ #ifndef	PVMDPATH
+-#define	PVMDPATH	"$PVM_ROOT/lib/pvmd"
++#define	PVMDPATH	LOCALBASE "/bin/pvmd"
+ #endif

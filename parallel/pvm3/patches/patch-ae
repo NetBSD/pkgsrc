@@ -1,0 +1,7 @@
+$NetBSD: patch-ae,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- src/task.c.orig	Fri Aug  7 00:41:01 1998
++++ src/task.c	Fri Aug  7 00:41:17 1998
+@@ -145,2 +145,3 @@
+ #ifdef NEEDMENDIAN
++#include <sys/types.h>
+ #include <machine/endian.h>

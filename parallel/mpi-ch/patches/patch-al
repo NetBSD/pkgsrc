@@ -1,0 +1,431 @@
+$NetBSD: patch-al,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- util/mpiinstall.in.orig	Sun Jul 12 08:28:14 1998
++++ util/mpiinstall.in	Thu Aug  6 23:35:41 1998
+@@ -122,3 +122,3 @@
+ #   trialname=`sed -n -e "s/DEFAULT_MACHINE='\(.*\)'/\1/p" \
+-#	lib/$ARCH/$COMM/config.status`
++#	libdata/$ARCH/$COMM/config.status`
+ #   if [ -n "$trialname" ] ; then 
+@@ -126,4 +126,4 @@
+ #   fi
+-    if [ $inlib = 0 -a -x lib/$ARCH/$COMM/mpiinstall ] ; then
+-        ./lib/$ARCH/$COMM/mpiinstall -inlib "$@"
++    if [ $inlib = 0 -a -x libdata/$ARCH/$COMM/mpiinstall ] ; then
++        ./libdata/$ARCH/$COMM/mpiinstall -inlib "$@"
+         exit $?
+@@ -136,5 +136,5 @@
+ NFLIB_PATH=`echo "@FLIB_PATH@" | \
+-	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/lib/$ARCH/$COMM%g"`
++	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/libdata/$ARCH/$COMM%g"`
+ NF90LIB_PATH=`echo "@F90LIB_PATH@" | \
+-	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/lib/$ARCH/$COMM%g"`
++	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/libdata/$ARCH/$COMM%g"`
+ NF90INC=`echo "@F90INC@" | \
+@@ -144,3 +144,3 @@
+ NCPPFLAGS=`echo "A$CPPFLAGS" | \
+-    sed -e "s%-I.*/MPI-2-C++/src%-I$PREFIX/lib/$ARCH/$COMM/c++%g" \
++    sed -e "s%-I.*/MPI-2-C++/src%-I$PREFIX/libdata/$ARCH/$COMM/c++%g" \
+         -e "s/^A//g"`
+@@ -271,5 +271,6 @@
+         sed \
++	-e "s%/lib/%/libdata/%g" \
+ 	-e "s%\#ARCH\#%$ARCH%g" \
+ 	-e "s%\#AUTOMOUNTFIX\#%@AUTOMOUNTFIX@%g" \
+-        -e "s%\#BITMAP_DIR\#%$PREFIX/lib/bitmaps%g" \
++        -e "s%\#BITMAP_DIR\#%$PREFIX/libdata/bitmaps%g" \
+ 	-e "s%\#CC\#%@CC@%g" \
+@@ -282,3 +283,3 @@
+ 	-e "s%\#DEFAULT_MACHINE\#%$DEFAULT_MACHINE%g" \
+-       	-e "s%\#EXECER_DIR\#%$PREFIX/util%g" \
++       	-e "s%\#EXECER_DIR\#%$PREFIX/share/util%g" \
+ 	-e "s%\#F77\#%@F77@%g" \
+@@ -344,3 +345,3 @@
+     NLIBPATH=`echo "@LIB_PATH@" | \
+-	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/lib/$ARCH/$COMM%g"`
++	sed -e "s%^\([^/ ]*\)/[^ ]*%\1$PREFIX/libdata/$ARCH/$COMM%g"`
+ if [ -d $2 ] ; then
+@@ -358,2 +359,3 @@
+         sed \
++	-e "s%/lib/%/libdata/%g" \
+ 	-e "s%[@]ARCH[@]%$ARCH%g" \
+@@ -362,3 +364,3 @@
+ 	-e "s%[@]F90INC[@]%$NF90INC%g" \
+-        -e "s%[@]BITMAP_DIR[@]%$PREFIX/lib/bitmaps%g" \
++        -e "s%[@]BITMAP_DIR[@]%$PREFIX/libdata/bitmaps%g" \
+ 	-e "s%[@]CC[@]%@CC@%g" \
+@@ -377,3 +379,3 @@
+ 	-e "s%[@]DEFAULT_MACHINE[@]%$DEFAULT_MACHINE%g" \
+-       	-e "s%[@]EXECER_DIR[@]%$PREFIX/util%g" \
++       	-e "s%[@]EXECER_DIR[@]%$PREFIX/share/util%g" \
+ 	-e "s%[@]F77[@]%@F77@%g" \
+@@ -457,18 +459,19 @@
+ 
+-MkDir $PREFIX/lib
+-MkDir $PREFIX/lib/$ARCH
+-MkDir $PREFIX/lib/$ARCH/$COMM
+-MkDir $PREFIX/lib/bitmaps
++MkDir $PREFIX/libdata
++MkDir $PREFIX/libdata/$ARCH
++MkDir $PREFIX/libdata/$ARCH/$COMM
++MkDir $PREFIX/libdata/bitmaps
+ if [ -n "$CPP_DIR" -a "$buildcpp" = 1 ] ; then 
+-    MkDir $PREFIX/$CPP_DIR
+-    MkDir $PREFIX/$CPP_DIR/examples
+-    MkDir $PREFIX/lib/$ARCH/$COMM/c++
++#    MkDir $PREFIX/libdata/$CPP_DIR
++    MkDir $PREFIX/share/examples/$CPP_DIR
++    MkDir $PREFIX/libdata/$ARCH/$COMM/c++
+ fi
+-MkDir $PREFIX/util
+-MkDir $PREFIX/util/machines
++MkDir $PREFIX/share/util
++MkDir $PREFIX/share/util/machines
+ MkDir $PREFIX/include
+-MkDir $PREFIX/examples
++MkDir $PREFIX/share/examples/mpi
+ MkDir $PREFIX/bin
+ MkDir $PREFIX/man
+-MkDir $PREFIX/doc
++MkDir $PREFIX/share/doc
++MkDir $PREFIX/share/doc/mpi
+ if [ -z "$libonly" ] ; then
+@@ -480,3 +483,3 @@
+     FixupFile util/mpiman.in $PREFIX/bin/mpiman $XMODE
+-    CopyFile $PREFIX/bin/mpiman $PREFIX/lib/$ARCH/$COMM $XMODE
++    CopyFile $PREFIX/bin/mpiman $PREFIX/libdata/$ARCH/$COMM $XMODE
+     #
+@@ -490,3 +493,3 @@
+         if [ -n "@TCL_DIR@" -a -z "$cpnupshot" -a -n "@TK_DIR@" -a \
+-	   "@TK_VERSION@" = "3.6" ] ; then 
++	   "@TK_VERSION@" = "8.0" ] ; then 
+             echo "Attempting to build nupshot... "
+@@ -528,4 +531,4 @@
+         FixupFile $file $PREFIX/bin/$bfile $XMODE
+-        $Show /bin/rm -f $PREFIX/lib/$ARCH/$COMM/$bfile 
+-        CopyFile $PREFIX/bin/$bfile $PREFIX/lib/$ARCH/$COMM $XMODE
++        $Show /bin/rm -f $PREFIX/libdata/$ARCH/$COMM/$bfile 
++        CopyFile $PREFIX/bin/$bfile $PREFIX/libdata/$ARCH/$COMM $XMODE
+     done
+@@ -533,7 +536,7 @@
+     echo "/bin/rm -f $PREFIX/bin/mpirun" >> $UNINSTALLFILE
+-    $Show mv $PREFIX/lib/$ARCH/$COMM/mpirun.sh $PREFIX/lib/$ARCH/$COMM/mpirun
+-    echo "/bin/rm -f $PREFIX/lib/$ARCH/$COMM/mpirun" >> $UNINSTALLFILE
+-    if [ ! -r $PREFIX/lib/$ARCH/$COMM/tarch ] ; then
+-	( cd $PREFIX/lib/$ARCH/$COMM ; 	ln -s ../../../bin/tarch tarch )
+-        echo "/bin/rm -f $PREFIX/lib/$ARCH/$COMM/tarch" >> $UNINSTALLFILE
++    $Show mv $PREFIX/libdata/$ARCH/$COMM/mpirun.sh $PREFIX/libdata/$ARCH/$COMM/mpirun
++    echo "/bin/rm -f $PREFIX/libdata/$ARCH/$COMM/mpirun" >> $UNINSTALLFILE
++    if [ ! -r $PREFIX/libdata/$ARCH/$COMM/tarch ] ; then
++	( cd $PREFIX/libdata/$ARCH/$COMM ; 	ln -s ../../../bin/tarch tarch )
++        echo "/bin/rm -f $PREFIX/libdata/$ARCH/$COMM/tarch" >> $UNINSTALLFILE
+     fi
+@@ -545,3 +548,3 @@
+     FixupFile util/mpireconfig.in $PREFIX/bin/mpireconfig $XMODE
+-    CopyFile $PREFIX/bin/mpireconfig $PREFIX/lib/$ARCH/$COMM $XMODE
++    CopyFile $PREFIX/bin/mpireconfig $PREFIX/libdata/$ARCH/$COMM $XMODE
+     $Show /bin/rm -f $PREFIX/bin/execer
+@@ -551,7 +554,7 @@
+     FixupFileWithAt util/mpicc.in $PREFIX/bin/mpicc $XMODE
+-    CopyFile $PREFIX/bin/mpicc $PREFIX/lib/$ARCH/$COMM $XMODE
++    CopyFile $PREFIX/bin/mpicc $PREFIX/libdata/$ARCH/$COMM $XMODE
+     FixupFileWithAt util/mpif77.in $PREFIX/bin/mpif77 $XMODE
+-    CopyFile $PREFIX/bin/mpif77 $PREFIX/lib/$ARCH/$COMM $XMODE
++    CopyFile $PREFIX/bin/mpif77 $PREFIX/libdata/$ARCH/$COMM $XMODE
+     FixupFileWithAt util/mpif90.in $PREFIX/bin/mpif90 $XMODE
+-    CopyFile $PREFIX/bin/mpif90 $PREFIX/lib/$ARCH/$COMM $XMODE
++    CopyFile $PREFIX/bin/mpif90 $PREFIX/libdata/$ARCH/$COMM $XMODE
+     #
+@@ -560,3 +563,3 @@
+ 	FixupFileWithAt util/mpiCC.in $PREFIX/bin/mpiCC $XMODE
+-        CopyFile $PREFIX/bin/mpiCC $PREFIX/lib/$ARCH/$COMM $XMODE
++        CopyFile $PREFIX/bin/mpiCC $PREFIX/libdata/$ARCH/$COMM $XMODE
+     fi
+@@ -570,24 +573,24 @@
+         if [ $verbose = 1 ] ; then 
+-            echo "Creating $PREFIX/lib/$ARCH/$COMM/$bfile from $file"
++            echo "Creating $PREFIX/libdata/$ARCH/$COMM/$bfile from $file"
+ 	fi
+-        FixupFile $file $PREFIX/lib/$ARCH/$COMM/$bfile $XMODE
++        FixupFile $file $PREFIX/libdata/$ARCH/$COMM/$bfile $XMODE
+     done
+-    $Show mv $PREFIX/lib/$ARCH/$COMM/mpirun.sh $PREFIX/lib/$ARCH/$COMM/mpirun
+-    if [ ! -r $PREFIX/lib/$ARCH/$COMM/tarch ] ; then
+-	( cd $PREFIX/lib/$ARCH/$COMM ; 	ln -s ../../../bin/tarch tarch )
+-        echo "/bin/rm -f $PREFIX/lib/$ARCH/$COMM/tarch" >> $UNINSTALLFILE
++    $Show mv $PREFIX/libdata/$ARCH/$COMM/mpirun.sh $PREFIX/libdata/$ARCH/$COMM/mpirun
++    if [ ! -r $PREFIX/libdata/$ARCH/$COMM/tarch ] ; then
++	( cd $PREFIX/libdata/$ARCH/$COMM ; 	ln -s ../../../bin/tarch tarch )
++        echo "/bin/rm -f $PREFIX/libdata/$ARCH/$COMM/tarch" >> $UNINSTALLFILE
+     fi
+-    FixupFileWithAt util/mpicc.in $PREFIX/lib/$ARCH/$COMM/mpicc $XMODE
++    FixupFileWithAt util/mpicc.in $PREFIX/libdata/$ARCH/$COMM/mpicc $XMODE
+     if [ -n "@CPP_COMPILER@" ] ; then
+-        FixupFileWithAt util/mpiCC.in $PREFIX/lib/$ARCH/$COMM/mpiCC $XMODE
++        FixupFileWithAt util/mpiCC.in $PREFIX/libdata/$ARCH/$COMM/mpiCC $XMODE
+     fi
+-    FixupFileWithAt util/mpif77.in $PREFIX/lib/$ARCH/$COMM/mpif77 $XMODE
+-    FixupFileWithAt util/mpif90.in $PREFIX/lib/$ARCH/$COMM/mpif90 $XMODE
+-    FixupFile util/mpireconfig.in $PREFIX/lib/$ARCH/$COMM/mpireconfig $XMODE
+-    CopyFile lib/$ARCH/$COMM/mpichconf.h $PREFIX/lib/$ARCH/$COMM
+-    CopyFile lib/$ARCH/$COMM/mpidefs.h $PREFIX/lib/$ARCH/$COMM
+-    CopyFile lib/$ARCH/$COMM/mpif.h    $PREFIX/lib/$ARCH/$COMM
++    FixupFileWithAt util/mpif77.in $PREFIX/libdata/$ARCH/$COMM/mpif77 $XMODE
++    FixupFileWithAt util/mpif90.in $PREFIX/libdata/$ARCH/$COMM/mpif90 $XMODE
++    FixupFile util/mpireconfig.in $PREFIX/libdata/$ARCH/$COMM/mpireconfig $XMODE
++    CopyFile lib/$ARCH/$COMM/mpichconf.h $PREFIX/libdata/$ARCH/$COMM
++    CopyFile lib/$ARCH/$COMM/mpidefs.h $PREFIX/libdata/$ARCH/$COMM
++    CopyFile lib/$ARCH/$COMM/mpif.h    $PREFIX/libdata/$ARCH/$COMM
+     if [ -s romio/include/mpio.h ] ; then
+-        CopyFile romio/include/mpio.h $PREFIX/lib/$ARCH/$COMM
+-        CopyFile romio/include/mpiof.h $PREFIX/lib/$ARCH/$COMM
++        CopyFile romio/include/mpio.h $PREFIX/libdata/$ARCH/$COMM
++        CopyFile romio/include/mpiof.h $PREFIX/libdata/$ARCH/$COMM
+     fi
+@@ -601,8 +604,8 @@
+     CopyFile mpid/ch_p4/p4/bin/serv_p4 $PREFIX/bin $XMODE
+-    CopyFile $PREFIX/bin/serv_p4 $PREFIX/lib/$ARCH/$COMM $XMODE
++    CopyFile $PREFIX/bin/serv_p4 $PREFIX/libdata/$ARCH/$COMM $XMODE
+     $Show /bin/rm -f util/chp4_servs
+-    FixupFile util/chp4_servs.in $PREFIX/util/chp4_servs $XMODE
+-    CopyFile $PREFIX/util/chp4_servs $PREFIX/lib/$ARCH/$COMM $XMODE
+-    CopyFile util/chkserv $PREFIX/util/chkserv $XMODE
+-    CopyFile $PREFIX/util/chkserv $PREFIX/lib/$ARCH/$COMM $XMODE
++    FixupFile util/chp4_servs.in $PREFIX/share/util/chp4_servs $XMODE
++    CopyFile $PREFIX/share/util/chp4_servs $PREFIX/libdata/$ARCH/$COMM $XMODE
++    CopyFile util/chkserv $PREFIX/share/util/chkserv $XMODE
++    CopyFile $PREFIX/share/util/chkserv $PREFIX/libdata/$ARCH/$COMM $XMODE
+ fi
+@@ -617,8 +620,8 @@
+ 	CopyFile mpid/server/server $PREFIX/bin $XMODE
+-        CopyFile mpid/server/server $PREFIX/lib/$ARCH/$COMM $XMODE
++        CopyFile mpid/server/server $PREFIX/libdata/$ARCH/$COMM $XMODE
+ 	$Show /bin/rm -f util/chp4_servs
+-	FixupFile util/chp4_servs.in $PREFIX/util/chp4_servs $XMODE
+-	CopyFile $PREFIX/util/chp4_servs $PREFIX/lib/$ARCH/$COMM $XMODE
+-	CopyFile util/chkserv $PREFIX/util/chkserv $XMODE
+-	CopyFile $PREFIX/util/chkserv $PREFIX/lib/$ARCH/$COMM $XMODE
++	FixupFile util/chp4_servs.in $PREFIX/share/util/chp4_servs $XMODE
++	CopyFile $PREFIX/share/util/chp4_servs $PREFIX/libdata/$ARCH/$COMM $XMODE
++	CopyFile util/chkserv $PREFIX/share/util/chkserv $XMODE
++	CopyFile $PREFIX/share/util/chkserv $PREFIX/libdata/$ARCH/$COMM $XMODE
+     else
+@@ -631,7 +634,7 @@
+     # Machines database
+-    #	if [ ! -d $PREFIX/util/machines.anl ] ; then \
+-    #	    mkdir $PREFIX/util/machines.anl ; fi
+-    #	$CPRP -r util/machines $PREFIX/util/machines.anl
++    #	if [ ! -d $PREFIX/share/util/machines.anl ] ; then \
++    #	    mkdir $PREFIX/share/util/machines.anl ; fi
++    #	$CPRP -r util/machines $PREFIX/share/util/machines.anl
+     for file in util/machines/machines* ; do
+-        CopyFile $file $PREFIX/util/machines
++        CopyFile $file $PREFIX/share/util/machines
+     done
+@@ -639,3 +642,3 @@
+ 	if [ -f $file ] ; then 
+-            CopyFile $file $PREFIX/lib/bitmaps
++            CopyFile $file $PREFIX/libdata/bitmaps
+ 	fi
+@@ -651,4 +654,4 @@
+     CopyFile include/patchlevel.h $PREFIX/include
+-    CopyFile lib/$ARCH/$COMM/mpichconf.h $PREFIX/lib/$ARCH/$COMM
+-    CopyFile lib/$ARCH/$COMM/mpidefs.h $PREFIX/lib/$ARCH/$COMM
++    CopyFile lib/$ARCH/$COMM/mpichconf.h $PREFIX/libdata/$ARCH/$COMM
++    CopyFile lib/$ARCH/$COMM/mpidefs.h $PREFIX/libdata/$ARCH/$COMM
+     CopyFile mpe/mpe.h $PREFIX/include
+@@ -659,4 +662,4 @@
+     if [ -s romio/include/mpio.h ] ; then
+-        CopyFile romio/include/mpio.h $PREFIX/lib/$ARCH/$COMM
+-        CopyFile romio/include/mpiof.h $PREFIX/lib/$ARCH/$COMM
++        CopyFile romio/include/mpio.h $PREFIX/libdata/$ARCH/$COMM
++        CopyFile romio/include/mpiof.h $PREFIX/libdata/$ARCH/$COMM
+     fi
+@@ -666,7 +669,7 @@
+ if [ -n "$CPP_DIR" -a "$buildcpp" = 1 ] ; then 
+-    if [ ! -d $PREFIX/lib/$ARCH/$COMM/c++ ] ; then
+-        MkDir $PREFIX/lib/$ARCH/$COMM/c++
++    if [ ! -d $PREFIX/libdata/$ARCH/$COMM/c++ ] ; then
++        MkDir $PREFIX/libdata/$ARCH/$COMM/c++
+     fi
+     for file in `ls MPI-2-C++/src/*.h`; do 
+-        CopyFile $file $PREFIX/lib/$ARCH/$COMM/c++
++        CopyFile $file $PREFIX/libdata/$ARCH/$COMM/c++
+     done
+@@ -677,3 +680,3 @@
+     if [ -f $file ] ; then 
+-        CopyFileP $file $PREFIX/lib/$ARCH/$COMM
++        CopyFileP $file $PREFIX/libdata/$ARCH/$COMM
+     fi
+@@ -686,3 +689,3 @@
+     if [ -x lib/$ARCH/$COMM/$file ] ; then 
+-        CopyFileP lib/$ARCH/$COMM/$file $PREFIX/lib/$ARCH/$COMM
++        CopyFileP lib/$ARCH/$COMM/$file $PREFIX/libdata/$ARCH/$COMM
+     fi
+@@ -698,4 +701,4 @@
+             if [ -f lib/$ARCH/mpich.En_US.cat ] ; then 
+-                $Show ln -s $PREFIX/lib/$ARCH/mpich.En_US.cat \
+-	   		    $PREFIX/lib/$ARCH/mpich.cat
++                $Show ln -s $PREFIX/libdata/$ARCH/mpich.En_US.cat \
++	   		    $PREFIX/libdata/$ARCH/mpich.cat
+             fi
+@@ -703,3 +706,3 @@
+ 	    # This will handle the case of no mpich.* matches
+-            CopyFile $file $PREFIX/lib/$ARCH
++            CopyFile $file $PREFIX/libdata/$ARCH
+         fi
+@@ -709,3 +712,3 @@
+ # Other files in lib need to be updated...
+-CopyFile lib/$ARCH/$COMM/mpidefs.h $PREFIX/lib/$ARCH/$COMM
++CopyFile lib/$ARCH/$COMM/mpidefs.h $PREFIX/libdata/$ARCH/$COMM
+ #
+@@ -737,3 +740,3 @@
+ 	if [ -f $file ] ; then 
+-            CopyFile doc/$file $PREFIX/doc
++            CopyFile doc/$file $PREFIX/share/doc/mpi
+ 	fi
+@@ -742,6 +745,6 @@
+     if [ -f ref/adiman.ps.Z ] ; then 
+-        CopyFile ref/adiman.ps.Z $PREFIX/doc
++        CopyFile ref/adiman.ps.Z $PREFIX/share/doc/mpi
+     fi
+     if [ -f ref/mpiman.ps.Z ] ; then 
+-        CopyFile ref/mpiman.ps.Z $PREFIX/doc
++        CopyFile ref/mpiman.ps.Z $PREFIX/share/doc/mpi
+     fi
+@@ -757,12 +760,12 @@
+ 	sed -e "s%MPIR_HOME=.*\$%MPIR_HOME='$PREFIX'%g" \
+-    -e "s%^LIB_PATH=\([^/ ]*\)/[^ ']*%LIB_PATH=\1$PREFIX/lib/$ARCH/$COMM%g" \
+-    -e "s%^FLIB_PATH=\([^/ ]*\)/[^ ']*%FLIB_PATH=\1$PREFIX/lib/$ARCH/$COMM%g" \
++    -e "s%^LIB_PATH=\([^/ ]*\)/[^ ']*%LIB_PATH=\1$PREFIX/libdata/$ARCH/$COMM%g" \
++    -e "s%^FLIB_PATH=\([^/ ]*\)/[^ ']*%FLIB_PATH=\1$PREFIX/libdata/$ARCH/$COMM%g" \
+ 		-e "s%MPE_DIR=.*\$%MPE_DIR='$PREFIX/mpe'%g" \
+-    -e "s%^MPICC=\([^/ ]*\)/.*\$%MPICC=$PREFIX/lib/$ARCH/$COMM/mpicc%g" \
+-    -e "s%^MPIF77=\([^/ ]*\)/.*\$%MPIF77=$PREFIX/lib/$ARCH/$COMM/mpif77%g" \
+-    -e "s%^MPIF90=\([^/ ]*\)/.*\$%MPIF90=$PREFIX/lib/$ARCH/$COMM/mpif90%g" \
+-    -e "s%^MPICPLUSPLUS=\([^/ ]*\)/.*\$%MPICPLUSPLUS=$PREFIX/lib/$ARCH/$COMM/mpiCC%g" \
+-		        > $PREFIX/lib/$ARCH/$COMM/config.status 
+-    echo "/bin/rm -f $PREFIX/lib/$ARCH/$COMM/config.status" >> $UNINSTALLFILE
+-    chmod $XMODE $PREFIX/lib/$ARCH/$COMM/config.status 
++    -e "s%^MPICC=\([^/ ]*\)/.*\$%MPICC=$PREFIX/libdata/$ARCH/$COMM/mpicc%g" \
++    -e "s%^MPIF77=\([^/ ]*\)/.*\$%MPIF77=$PREFIX/libdata/$ARCH/$COMM/mpif77%g" \
++    -e "s%^MPIF90=\([^/ ]*\)/.*\$%MPIF90=$PREFIX/libdata/$ARCH/$COMM/mpif90%g" \
++    -e "s%^MPICPLUSPLUS=\([^/ ]*\)/.*\$%MPICPLUSPLUS=$PREFIX/libdata/$ARCH/$COMM/mpiCC%g" \
++		        > $PREFIX/libdata/$ARCH/$COMM/config.status 
++    echo "/bin/rm -f $PREFIX/libdata/$ARCH/$COMM/config.status" >> $UNINSTALLFILE
++    chmod $XMODE $PREFIX/libdata/$ARCH/$COMM/config.status 
+ else 
+@@ -771,11 +774,11 @@
+ 	sed -e "s%MPIR_HOME=.*\$%MPIR_HOME='$PREFIX'%g" \
+-    -e "s%^LIB_PATH=\([^/ ]*\)/[^ ']*%LIB_PATH=\1$PREFIX/lib/$ARCH/$COMM%g" \
+-    -e "s%^FLIB_PATH=\([^/ ]*\)/[^ ']*%FLIB_PATH=\1$PREFIX/lib/$ARCH/$COMM%g" \
++    -e "s%^LIB_PATH=\([^/ ]*\)/[^ ']*%LIB_PATH=\1$PREFIX/libdata/$ARCH/$COMM%g" \
++    -e "s%^FLIB_PATH=\([^/ ]*\)/[^ ']*%FLIB_PATH=\1$PREFIX/libdata/$ARCH/$COMM%g" \
+ 		-e "s%MPE_DIR=.*\$%MPE_DIR='$PREFIX/mpe'%g" \
+-    -e "s%^MPICC=\([^/ ]*\)/.*\$%MPICC=$PREFIX/lib/$ARCH/$COMM/mpicc%g" \
+-    -e "s%^MPIF77=\([^/ ]*\)/.*\$%MPIF77=$PREFIX/lib/$ARCH/$COMM/mpif77%g" \
+-    -e "s%^MPIF90=\([^/ ]*\)/.*\$%MPIF90=$PREFIX/lib/$ARCH/$COMM/mpif90%g" \
+-    -e "s%^MPICPLUSPLUS=\([^/ ]*\)/.*\$%MPICPLUSPLUS=$PREFIX/lib/$ARCH/$COMM/mpiCC%g" \
+-		        > $PREFIX/lib/$ARCH/$COMM/config.status
+-    chmod $XMODE $PREFIX/lib/$ARCH/$COMM/config.status 
++    -e "s%^MPICC=\([^/ ]*\)/.*\$%MPICC=$PREFIX/libdata/$ARCH/$COMM/mpicc%g" \
++    -e "s%^MPIF77=\([^/ ]*\)/.*\$%MPIF77=$PREFIX/libdata/$ARCH/$COMM/mpif77%g" \
++    -e "s%^MPIF90=\([^/ ]*\)/.*\$%MPIF90=$PREFIX/libdata/$ARCH/$COMM/mpif90%g" \
++    -e "s%^MPICPLUSPLUS=\([^/ ]*\)/.*\$%MPICPLUSPLUS=$PREFIX/libdata/$ARCH/$COMM/mpiCC%g" \
++		        > $PREFIX/libdata/$ARCH/$COMM/config.status
++    chmod $XMODE $PREFIX/libdata/$ARCH/$COMM/config.status 
+ .
+@@ -783,7 +786,7 @@
+ if [ -z "$libonly" ] ; then
+-    #CopyFile $PREFIX/lib/$ARCH/$COMM/config.status $PREFIX
++    #CopyFile $PREFIX/libdata/$ARCH/$COMM/config.status $PREFIX
+     #
+-    $Show /bin/rm -f $PREFIX/examples/mpif.h
+-    $Show ln -s $PREFIX/include/mpif.h $PREFIX/examples/mpif.h
+-    echo "/bin/rm -f $PREFIX/examples/mpif.h" >> $UNINSTALLFILE
++    $Show /bin/rm -f $PREFIX/share/examples/mpi/mpif.h
++    $Show ln -s $PREFIX/include/mpif.h $PREFIX/share/examples/mpi/mpif.h
++    echo "/bin/rm -f $PREFIX/share/examples/mpi/mpif.h" >> $UNINSTALLFILE
+ fi
+@@ -791,3 +794,3 @@
+ # Example programs
+-CopyFile installtest/Makefile.in $PREFIX/examples
++CopyFile installtest/Makefile.in $PREFIX/share/examples/mpi
+ #
+@@ -796,24 +799,24 @@
+ PREFIX=$APREFIX
+-#FixupFile installtest/makefile.proto $PREFIX/examples/Makefile
+-(cd $PREFIX/examples ; $PREFIX/lib/$ARCH/$COMM/mpireconfig Makefile )
+-echo "(cd $PREFIX/examples ; $MAKE clean)" >> $UNINSTALLFILE
+-echo "/bin/rm -f $PREFIX/examples/Makefile" >> $UNINSTALLFILE
++#FixupFile installtest/makefile.proto $PREFIX/share/examples/mpi/Makefile
++(cd $PREFIX/share/examples/mpi ; $PREFIX/libdata/$ARCH/$COMM/mpireconfig Makefile )
++echo "(cd $PREFIX/share/examples/mpi ; $MAKE clean)" >> $UNINSTALLFILE
++echo "/bin/rm -f $PREFIX/share/examples/mpi/Makefile" >> $UNINSTALLFILE
+ PREFIX=$Savevar
+-CopyFile $PREFIX/examples/Makefile $PREFIX/lib/$ARCH/$COMM/Makefile.sample
+-CopyFile installtest/cpi.c $PREFIX/examples
+-CopyFile installtest/pi3.f $PREFIX/examples
+-CopyFile installtest/cpilog.c $PREFIX/examples
+-CopyFile installtest/hello++.cc $PREFIX/examples
++CopyFile $PREFIX/share/examples/mpi/Makefile $PREFIX/libdata/$ARCH/$COMM/Makefile.sample
++CopyFile installtest/cpi.c $PREFIX/share/examples/mpi
++CopyFile installtest/pi3.f $PREFIX/share/examples/mpi
++CopyFile installtest/cpilog.c $PREFIX/share/examples/mpi
++CopyFile installtest/hello++.cc $PREFIX/share/examples/mpi
+ if [ -s romio/test/simple.c ] ; then 
+-    CopyFile romio/test/simple.c $PREFIX/examples/simpleio.c
++    CopyFile romio/test/simple.c $PREFIX/share/examples/mpi/simpleio.c
+ fi
+-CopyFile installtest/README $PREFIX/examples
++CopyFile installtest/README $PREFIX/share/examples/mpi
+ #
+ # Test build the examples
+-$Show "(cd $PREFIX/examples ; /bin/rm -f mpirun ; \
++$Show "(cd $PREFIX/share/examples/mpi ; /bin/rm -f mpirun ; \
+ 	  ln -s ../bin/mpirun mpirun )"
+-echo "/bin/rm -f $PREFIX/examples/mpirun" >> $UNINSTALLFILE
++echo "/bin/rm -f $PREFIX/share/examples/mpi/mpirun" >> $UNINSTALLFILE
+ #
+ echo "About to run installation test..."
+-$Show "(cd $PREFIX/examples; $MAKE all )"
++$Show "(cd $PREFIX/share/examples/mpi; $MAKE all )"
+ #
+@@ -823,24 +826,24 @@
+     # C++ Example programs 
+-    CopyFile installtest/mpi-2-c++/Makefile.in $PREFIX/$CPP_DIR/examples
++    CopyFile installtest/mpi-2-c++/Makefile.in $PREFIX/share/examples/$CPP_DIR
+     #
+     PREFIX=$APREFIX
+-    (cd $PREFIX/$CPP_DIR/examples ; $PREFIX/lib/$ARCH/$COMM/mpireconfig Makefile )
+-    echo "(cd $PREFIX/$CPP_DIR/examples ; $MAKE clean)" >> $UNINSTALLFILE
+-    echo "/bin/rm -f $PREFIX/$CPP_DIR/examples/Makefile" >> $UNINSTALLFILE
++    (cd $PREFIX/share/examples/$CPP_DIR ; $PREFIX/libdata/$ARCH/$COMM/mpireconfig Makefile )
++    echo "(cd $PREFIX/share/examples/$CPP_DIR ; $MAKE clean)" >> $UNINSTALLFILE
++    echo "/bin/rm -f $PREFIX/share/examples/$CPP_DIR/Makefile" >> $UNINSTALLFILE
+     PREFIX=$Savevar
+-    CopyFile $CPP_DIR/contrib/examples/hello_world.cc $PREFIX/$CPP_DIR/examples
+-    CopyFile $CPP_DIR/contrib/examples/ring.cc $PREFIX/$CPP_DIR/examples
+-    CopyFile $CPP_DIR/contrib/examples/topology.cc $PREFIX/$CPP_DIR/examples
+-    CopyFile $CPP_DIR/contrib/examples/user_bcast.cc $PREFIX/$CPP_DIR/examples
+-    CopyFile $CPP_DIR/contrib/examples/chapter_10_mpi2.cc $PREFIX/$CPP_DIR/examples
+-    CopyFile $CPP_DIR/contrib/examples/pi.cc $PREFIX/$CPP_DIR/examples
+-    CopyFile $CPP_DIR/contrib/examples/README $PREFIX/$CPP_DIR/examples
++    CopyFile $CPP_DIR/contrib/examples/hello_world.cc $PREFIX/share/examples/$CPP_DIR
++    CopyFile $CPP_DIR/contrib/examples/ring.cc $PREFIX/share/examples/$CPP_DIR
++    CopyFile $CPP_DIR/contrib/examples/topology.cc $PREFIX/share/examples/$CPP_DIR
++    CopyFile $CPP_DIR/contrib/examples/user_bcast.cc $PREFIX/share/examples/$CPP_DIR
++    CopyFile $CPP_DIR/contrib/examples/chapter_10_mpi2.cc $PREFIX/share/examples/$CPP_DIR
++    CopyFile $CPP_DIR/contrib/examples/pi.cc $PREFIX/share/examples/$CPP_DIR
++    CopyFile $CPP_DIR/contrib/examples/README $PREFIX/share/examples/$CPP_DIR
+     #
+     # Test build the C++ examples
+-    $Show "(cd $PREFIX/$CPP_DIR/examples ; /bin/rm -f mpirun ; \
++    $Show "(cd $PREFIX/share/examples/$CPP_DIR ; /bin/rm -f mpirun ; \
+ 	      ln -s ../../bin/mpirun mpirun )"
+-    echo "/bin/rm -f $PREFIX/$CPP_DIR/examples/mpirun" >> $UNINSTALLFILE
++    echo "/bin/rm -f $PREFIX/share/examples/$CPP_DIR/mpirun" >> $UNINSTALLFILE
+     #
+     echo "About to run C++ installation test..."
+-    $Show "(cd $PREFIX/$CPP_DIR/examples; $MAKE)"
++    $Show "(cd $PREFIX/share/examples/$CPP_DIR; $MAKE)"
+     #

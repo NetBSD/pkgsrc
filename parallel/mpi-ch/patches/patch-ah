@@ -1,0 +1,7 @@
+$NetBSD: patch-ah,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- romio/.config_params.orig	Thu Aug  6 00:40:54 1998
++++ romio/.config_params	Thu Aug  6 00:41:03 1998
+@@ -18,2 +18,3 @@
+ _freebsd_
++_netbsd_
+ _LINUX_

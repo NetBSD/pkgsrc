@@ -1,0 +1,10 @@
+$NetBSD: patch-ak,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- mpe/profiling/nupshot/Makefile.in.orig	Thu Aug  6 03:30:37 1998
++++ mpe/profiling/nupshot/Makefile.in	Thu Aug  6 03:31:16 1998
+@@ -34,4 +34,4 @@
+ 
+-TCL_INC     = -I$(TCL_DIR)/include
+-TK_INC      = -I$(TK_DIR)/include
++TCL_INC     = -I$(TCL_DIR)/include/tcl8.0
++TK_INC      = -I$(TK_DIR)/include/tk8.0
+ TCLTK_INC   = $(TCL_INC) $(TK_INC)

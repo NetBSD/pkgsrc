@@ -1,0 +1,9 @@
+$NetBSD: patch-ad,v 1.1.1.1 1998/10/13 23:31:04 garbled Exp $
+--- mpid/ch_shmem/p2ptest/configure.orig	Wed Aug  5 09:56:05 1998
++++ mpid/ch_shmem/p2ptest/configure	Wed Aug  5 09:56:43 1998
+@@ -143,2 +143,5 @@
+ fi
++if test -n "$p4arch_NETBSD"; then
++P4ARCH=NETBSD
++fi
+ if test -n "$p4arch_FREEBSD"; then
