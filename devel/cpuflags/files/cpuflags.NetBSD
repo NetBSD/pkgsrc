@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.43 2003/10/19 00:24:28 rh Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.44 2003/12/04 10:13:26 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -31,7 +31,8 @@ case $hw_machine_arch in
 	    *[\(\ ]2106[46][-A\ \)]*)	FLAGS="-mcpu=21064"	;;
 	    *[\(\ ]21164[-\ \)]*)	FLAGS="-mcpu=21164"	;;
 	    *[\(\ ]21164A[-\ \)]*)	FLAGS="-mcpu=21164a"	;;
-	    *[\(\ ]21264B[-\ \)]*)	FLAGS="-mcpu=21264"	;;
+	    *[\(\ ]21264[-\ \)]*)	FLAGS="-mcpu=21264"	;;
+	    *[\(\ ]21264[AB][-\ \)]*)	FLAGS="-mcpu=21264a"	;;
 	esac
 	;;
 
@@ -59,21 +60,23 @@ case $hw_machine_arch in
 	esac ;;
 
     i386) case $hw_model in
-	*Intel\ Pentium\ II\ *) FLAGS='-march=pentium2'		;;
-	*Intel\ Pentium\ III\ *) FLAGS='-march=pentium3'	;;
-	*Intel\ Pentium\ 4\ *)	FLAGS='-march=pentium4'		;;
-	*AMD\ K6-III*)		FLAGS='-march=k6-3'		;;
-	*AMD\ K6-2*)		FLAGS='-march=k6-2'		;;
-	*AMD\ K6*)		FLAGS='-march=k6'		;;
-	*AMD\ Duron*)		FLAGS='-march=athlon'		;;
-	*AMD\ Athlon\ 4*)	FLAGS='-march=athlon-4'		;;
-	*AMD\ Athlon\ MP*)	FLAGS='-march=athlon-mp'	;;
-	*AMD\ Athlon\ XP*)	FLAGS='-march=athlon-xp'	;;
-	*AMD\ K7*|*AMD\ Athlon*) FLAGS='-march=athlon'		;;
-	*386-class*)		FLAGS='-march=i386'		;;
-	*486-class*)		FLAGS='-march=i486'		;;
-	*586-class*)		FLAGS='-march=pentium'		;;
-	*686-class*)		FLAGS='-march=pentiumpro'	;;
+	*Intel\ Pentium\ II\ *)		FLAGS='-march=pentium2'		;;
+	*Intel\ Pentium\ III\ *)	FLAGS='-march=pentium3'		;;
+	*Intel\ Mobile\ Pentium\ III\ *) FLAGS='-march=pentium3'	;;
+	*Intel\ Pentium\ M\ *)		FLAGS='-march=pentium3'		;;
+	*Intel\ Pentium\ 4\ *)		FLAGS='-march=pentium4'		;;
+	*AMD\ K6-III*)			FLAGS='-march=k6-3'		;;
+	*AMD\ K6-2*)			FLAGS='-march=k6-2'		;;
+	*AMD\ K6*)			FLAGS='-march=k6'		;;
+	*AMD\ Duron*)			FLAGS='-march=athlon'		;;
+	*AMD\ Athlon\ 4*)		FLAGS='-march=athlon-4'		;;
+	*AMD\ Athlon\ MP*)		FLAGS='-march=athlon-mp'	;;
+	*AMD\ Athlon\ XP*)		FLAGS='-march=athlon-xp'	;;
+	*AMD\ K7*|*AMD\ Athlon*)	FLAGS='-march=athlon'		;;
+	*386-class*)			FLAGS='-march=i386'		;;
+	*486-class*)			FLAGS='-march=i486'		;;
+	*586-class*)			FLAGS='-march=pentium'		;;
+	*686-class*)			FLAGS='-march=pentiumpro'	;;
     esac ;;
 
     m68k) case $hw_model in				   # Examples
@@ -112,7 +115,7 @@ case $hw_machine_arch in
 	601\ *)			FLAGS='-mcpu=601'	;; # Untested
 	602\ *)			FLAGS='-mcpu=602'	;; # Untested
 	603\ *)			FLAGS='-mcpu=603'	;; # Untested
-	603ev\ *)		FLAGS='-mcpu=603e'	;; # PM 4400
+	603e\ *|603ev\ *)	FLAGS='-mcpu=603e'	;; # Umax C500 / PM4400
 	604\ *)			FLAGS='-mcpu=604'	;; # Mac 8500
 	604ev\ *)		FLAGS='-mcpu=604e'	;; # upgr B&W G3
 	7450\ *)		FLAGS='-mcpu=740'	;; # tibook 550
@@ -176,6 +179,7 @@ if [ -n "$FLAGS" ]; then
 3.0	-march=athlon-4		-march=pentiumpro
 3.0	-march=athlon-mp	-march=pentiumpro
 3.0	-march=athlon-xp	-march=pentiumpro
+3.1	-mcpu=21264a		-mcpu=21264
 3.2	-march=k6-2		-march=k6
 3.2	-march=k6-3		-march=k6
 3.2	-march=pentium2		-march=pentiumpro
