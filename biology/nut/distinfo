@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:26:01 agc Exp $
+
+MD5 (nut4.tar.gz) = 73f13faa3354df924435a91be96312a1
+SHA1 (patch-aa) = de3211e59a0b46497e7cb2738e704d14bee6e76a
+SHA1 (patch-ab) = cf2dba8e86457a0aaf538777a829532f854f95e4
+SHA1 (patch-ac) = fef6ab92ea087a3bcfc94ecd2e4c7ff20bdd1be7

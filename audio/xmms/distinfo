@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:44 agc Exp $
+
+MD5 (xmms-1.0.1.tar.gz) = 2d34665f32006ed83892de1d057176fd
+SHA1 (patch-aa) = 328ca958fe0e4db2e4399f258e9c87e2c0b44252
+SHA1 (patch-ab) = de97f29193ba3932cce6cfe8f64cb704a58edcb8
+SHA1 (patch-ac) = 97b57d828734e04edb5d57ff7862589545d30e39
+SHA1 (patch-ad) = fbe5031b1b023966e326434595313086da7f42fe
+SHA1 (patch-ag) = 03099003e3a929901d1658339397f270b80a0c2d
+SHA1 (patch-ah) = 2cb6b1dde1e8762ea23aaafb366922f0c44eaf73
+SHA1 (patch-ai) = 16ac90947f445869b1ec164a769e2f085b844aee
+SHA1 (patch-aj) = 95e965c5033dea5d2b0be2a22058f19504da0031
+SHA1 (patch-ak) = 53605fe5a6aea44f8b4e2f46d203be9371216608
+SHA1 (patch-al) = dcf021f40f15fb01c9063e00ae900bb70874935d
+SHA1 (patch-am) = a898b5f66fee94b65d45915768b794a06fc0c296
+SHA1 (patch-an) = 2fefc124367d1cd3527c8e2f8fad053ff380da52

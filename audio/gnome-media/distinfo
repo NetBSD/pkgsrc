@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:01 agc Exp $
+
+MD5 (gnome-media-1.2.0.tar.gz) = c7cda6054b47f71aa46aaabe9db6fb4c
+SHA1 (patch-ab) = 06b03bde5a185323dbf9c5569a19089d7f038dc9
+SHA1 (patch-ac) = e6324db74f737f11e2264849e5e5094f5233d950
+SHA1 (patch-ae) = 217b2c7233ef536089e5af54737da259372def38
+SHA1 (patch-af) = bc3fe755bc8e12be3436e121da5a1c059883cd11

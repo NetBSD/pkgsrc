@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:14 agc Exp $
+
+MD5 (liveice-0.20001121/liveice.tar.gz) = 6b1c9c98225757c26f91083b233da0ff
+SHA1 (patch-aa) = ac203f84011c1c7d2d0212f74612975620802b53
+SHA1 (patch-ab) = f51d021070c6cc2d1d7ff45d3b08433ab02c6ae9
+SHA1 (patch-ac) = 4c34e79b391a9ab5feb3323cd1a44951ac25628a
+SHA1 (patch-ad) = 0747e01148f1aa5fa72bc3262e3fbbd0c9118dca
+SHA1 (patch-ae) = 4ab165f7780732e2e3c0aa5201126a93004de070
+SHA1 (patch-af) = 1eff5e733457accfeb298eb314cbaf21cbdecde0
+SHA1 (patch-ag) = afd356eb44cbfef37c32a2bc92bc3cea155b0a67
+SHA1 (patch-ah) = 58be03b1970f8ebe2f32936bef9c1989342aed2d
+SHA1 (patch-ai) = a8567695607ea92ad13fb404cb3899deb7330153

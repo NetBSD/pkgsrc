@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:23 agc Exp $
+
+MD5 (musicbox-1.01p2.tgz) = cdaad5a34c33c78af568bc6e589aa257
+SHA1 (patch-aa) = 4620fd2be979f34bb08b4bb3cd1133ac9cd94570
+SHA1 (patch-ab) = a59f798aebc8df7b61cfb3036add624c385a3884
+SHA1 (patch-ac) = e4dc17b497577209aa83a320413bb23456ecfd60
+SHA1 (patch-ad) = 0e7032f2d5efce2a6b0eafdb2584267b4d164c56
+SHA1 (patch-ae) = c8c6c17dad38c705eba931f11cbbb1a515def9f0

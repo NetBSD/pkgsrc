@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:31:34 agc Exp $
+
+MD5 (ircii-pana-1.0c18.tar.gz) = 737276281ae911c5e1e17b028ebee045
+SHA1 (patch-aa) = a772d3e2a9d21f3fcabb85107f61d96bce4558f3
+SHA1 (patch-ab) = c0fc1dd62c9af33abc6d8a37cecdbfe0c439951c

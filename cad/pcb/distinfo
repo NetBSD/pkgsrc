@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:30:23 agc Exp $
+
+MD5 (pcb-1.6.3.tgz) = 2649927fd49b89d71a524082b633849e
+MD5 (pcb-docs-1.6.3.tar.gz) = 28756be714b203533c8bea5c80d0571c
+SHA1 (patch-aa) = 348159ad2c6d0eef4c61bbbd0ff2b30eec3f5728
+SHA1 (patch-ab) = 8b2a39f3301766cdc1108ebe1d3f280d7ec93cfb
+SHA1 (patch-ac) = 39f423dddd3bce9bd6c625cde9aa5ccb1831ac9d

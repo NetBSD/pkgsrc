@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:15 agc Exp $
+
+MD5 (maplay1_2.tar.Z) = 2e3e0cd4d200fa476360eda0c9195ea1
+SHA1 (patch-aa) = 5d4c4122bc25ee9118f7d262851fc46793379652
+SHA1 (patch-ab) = 68a32083b650820c0611543af352f2f4d3169703
+SHA1 (patch-ac) = 79f5f342e0115bd1fc459c32e8494cee3051564c
+SHA1 (patch-ad) = bc9447abffc474c672f3913ce0df3178b94cd22a

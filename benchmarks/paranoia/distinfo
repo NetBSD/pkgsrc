@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:26:34 agc Exp $
+
+MD5 (paranoia.c) = 8a9a935b59e148b6581e66f15920003e
+SHA1 (patch-aa) = 596225abb8d2e4c7458ba9fd33c39313121d5e5c

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:31:50 agc Exp $
+
+MD5 (xchat-1.6.2.tar.bz2) = afa178e358a06616d4c25468eae1bd33
+SHA1 (patch-aa) = 50d880fa4b6ba8f0d22d1726e81f1661a1c99177
+SHA1 (patch-ab) = 4b20419c5881a7342889b9a337196ad6c9af4223
+SHA1 (patch-ac) = 08e8e29b8e2e9ed1f2b87bbcd4e795c80dfc0ead

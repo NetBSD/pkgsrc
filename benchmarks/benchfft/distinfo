@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:26:23 agc Exp $
+
+MD5 (benchfft-2.0.tar.gz) = 1de7d8945ab8de7b6fceef86d0cdd78d
+MD5 (fftw-2.0.1.tar.gz) = ebd79d36f85e995bab49bb675ec6847e
+SHA1 (patch-aa) = 11c7d759af18a51da99231c964a079147656c9cc
+SHA1 (patch-ab) = 1c1be2e043ea9280f70dddd8082d20e929ea9d49
+SHA1 (patch-ac) = 91214ddd89c6eed3ff3b172e02bab720afc84b52
+SHA1 (patch-ad) = 6a40bc4f223029a5c654f6e8cbf4e476d40a6e56
+SHA1 (patch-ae) = 15985b9db54402feeddbcde1e74b9fc8c4320018

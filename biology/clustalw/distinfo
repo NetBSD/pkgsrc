@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:25:59 agc Exp $
+
+MD5 (clustalw1.8.UNIX.tar.gz) = 89f55306771e497e614f4bd1206aecea
+SHA1 (patch-aa) = 96f95acb4a312c96440275ca65f7f908c9b9032f
+SHA1 (patch-ab) = 75fb21b88132bdf18e7f6bc13d1d35051a1babea

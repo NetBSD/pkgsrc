@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:42 agc Exp $
+
+MD5 (xmix-2.1.mixers.patch) = 26786ade59dd22f01700be2e8d2239c3
+MD5 (xmix-2.1.tar.gz) = 9216b84746fc66179dcd93696b139d68
+SHA1 (patch-aa) = 3dd594ff7cc257c47a4f591f058245a3e5d6df94
+SHA1 (patch-ab) = a6201bea678a64b41d71dd52830a79250e72a461

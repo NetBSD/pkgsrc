@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:29 agc Exp $
+
+MD5 (rio500-0.7.tar.gz) = f624c255d6a538205a63a9bada4e5d89
+SHA1 (patch-aa) = c52b1eb1ffbd083c6ae3c4f9cee51a278e2e8d0c
+SHA1 (patch-ab) = 668eca0fcdc2a3c55c12f8fe1a8c59c8e7ee0ba2
+SHA1 (patch-ac) = 6dcf08fcfb89177844b311bffb07a4eb9683d131
+SHA1 (patch-ad) = 04fa62f4246d7dfe7208a5424505676b0cb7b5d8
+SHA1 (patch-ae) = 57a64b9b9cb9301d9a183786510019bf7f618a50

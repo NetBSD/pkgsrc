@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:22:38 agc Exp $
+
+SHA1 (esound-0.2.22.tar.gz) = 85defeb1fc46cdef5d1fd99d82e58c7e24187061
+SHA1 (patch-ab) = e10a9ecc1b3c2d906e0be60375ae95b2fc8aa318
+SHA1 (patch-ac) = 3f42e4438282e9b31e191fcf985b2334ff656525

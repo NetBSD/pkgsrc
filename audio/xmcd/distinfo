@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:41 agc Exp $
+
+MD5 (xmcd-2.6.tar.gz) = ce3208e21d8e37059e44ce9310d08f5f
+SHA1 (patch-aa) = 868ecceae5e48a320161c21bbf4db4301fd9467e
+SHA1 (patch-ab) = cfd1ff49451ad6d0ddbf80ea9eb4c3e5ed9a379a
+SHA1 (patch-ac) = b0748c7be1a1f9d8f40c970b3a00414ffcc9f0b4
+SHA1 (patch-ad) = d748cce51bf0efc6cf7290dd020ab05f4a76ea96
+SHA1 (patch-ae) = 215f60cff3a2f42e8f7106799780d02c946bd952
+SHA1 (patch-af) = 9dae4544584a6af075675ad7cee347eb8fe4eb42

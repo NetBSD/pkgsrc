@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:23:20 agc Exp $
+
+MD5 (mikmod-3.1.6-a.tar.gz) = eb66900fac76e9cc280a1c85efec3733
+SHA1 (patch-aa) = 6c2a0cab092e15818c6eaa8a8381ca55da178a89
