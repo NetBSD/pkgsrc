@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.10 2004/04/27 16:10:46 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.11 2004/04/27 16:17:26 xtraeme Exp $
 #
 # Copyright (c) 2004 Juan RP <xtraeme@NetBSD.org>
 # All rights reserved.
@@ -270,7 +270,7 @@ do_cdlive()
 		fi
 	;;
 	base)
-		chown root:wheel $ISODIR/netbsd $ISODIR/grub/*
+		chown -R root:wheel $ISODIR/netbsd $ISODIR/$BOOTDIR
 
 		for F in ${BASE_SETS}
 		do
@@ -343,7 +343,7 @@ do_cdlive()
 		cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.10 2004/04/27 16:10:46 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.11 2004/04/27 16:17:26 xtraeme Exp $
 # 
 
 # PROVIDE: root
