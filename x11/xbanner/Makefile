@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2001/09/14 03:19:22 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/10 13:05:13 wiz Exp $
 
 DISTNAME=		XBanner1.31
 PKGNAME=		xbanner-1.31
 CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.digital.com/pub/linux/XBanner/
+MASTER_SITES=		# empty
 
 MAINTAINER=		root@garbled.net
-HOMEPAGE=		http://chaos.fullerton.edu/XBanner/
+HOMEPAGE=		http://www.hijinks.com/~spade/linux/XBanner/
 COMMENT=		Make XDM login screen look pretty
 
+USE_BUILDLINK2=		YES
 USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES
 DOCDIR=			${PREFIX}/share/doc/xbanner
@@ -28,5 +29,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/samples/XBanner.ad			\
 		${PREFIX}/lib/X11/app-defaults/XBanner
 
-.include "../../graphics/xpm/buildlink.mk"
+.include "../../graphics/xpm/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
