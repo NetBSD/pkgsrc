@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.3 1998/11/19 15:40:47 agc Exp $
+# $NetBSD: Makefile,v 1.4 1998/12/04 00:31:01 tv Exp $
 #
 
-DISTNAME=	mod_fastcgi-2.0.17
-PKGNAME=	ap-fastcgi-2.0.17
+DISTNAME=	mod_fastcgi-2.0.18
+PKGNAME=	ap-fastcgi-2.0.18
 CATEGORIES=	www
 MASTER_SITES=	http://www.fastcgi.com/
 
 MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.fastcgi.com/
 
-DEPENDS+=	apache-1.3.2:../../www/apache
-
-USE_PERL5=	yes	# for "apxs"
+DEPENDS+=	apache-1.3.3.1:../../www/apache
+# For "apxs":
+BUILD_DEPENDS=	${PREFIX}/bin/perl:../../lang/perl5
 
 do-build:
 	@cd ${WRKSRC} && ${PREFIX}/sbin/apxs -c -o mod_fastcgi.so \
@@ -20,9 +20,9 @@ do-build:
 do-install:
 	@cd ${WRKSRC} && ${PREFIX}/sbin/apxs -i mod_fastcgi.so
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_fastcgi
-	${INSTALL_DATA} ${WRKSRC}/docs/mod_fastcgi.html \
-		${PREFIX}/share/doc/mod_fastcgi/
 	${INSTALL_DATA} ${WRKSRC}/conf/httpd.conf \
 		${PREFIX}/share/doc/mod_fastcgi/httpd.conf.example
+	${INSTALL_DATA} ${WRKSRC}/docs/mod_fastcgi.html \
+		${PREFIX}/share/httpd/htdocs/manual/mod/
 
 .include "../../mk/bsd.pkg.mk"
