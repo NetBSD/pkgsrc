@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8482 2004/12/28 00:03:11 minskim Exp $
+$NetBSD: CHANGES,v 1.8483 2004/12/28 00:05:19 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6601,3 +6601,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated kmysqladmin to 0.7.0 [markd 2004-12-27]
 	Added ap-rivet-0.4.0.1 [minskim 2004-12-27]
 	Added py-urwid-0.8.4 [minskim 2004-12-27]
+	Added xenvstat-20041127 [xtraeme 2004-12-27]
