@@ -1,4 +1,4 @@
-.\"	$NetBSD: createbuildlink.8,v 1.6 2004/01/14 08:53:57 rh Exp $
+.\"	$NetBSD: createbuildlink.8,v 1.7 2004/01/14 14:17:47 wiz Exp $
 .\"
 .\" Copyright (c) 2002 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -42,7 +42,7 @@
 .Nd automatic pkgsrc buildlink2.mk and buildlink3.mk generator
 .Sh SYNOPSIS
 .Nm
-.Op Fl j23
+.Op Fl 23j
 .Sh DESCRIPTION
 .Nm
 reads in the
@@ -56,15 +56,15 @@ file on stdout.
 .Pp
 The following options are available:
 .Bl -tag -width indent
+.It Fl 2
+Create buildlink2.mk style output (the default).
+.It Fl 3
+Create buildlink3.mk style output.
 .It Fl j
 Join together all .h files in an include directory and list as *.h.
 Be careful with this option and only use it if you are sure that the
 package in question is the only one providing header files in the PLISTed
 directory.
-.It Fl 2
-Create buildlink2.mk style output (the default).
-.It Fl 3
-Create buildlink3.mk style output.
 .El
 .Pp
 While
