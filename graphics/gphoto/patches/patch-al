@@ -1,0 +1,16 @@
+$NetBSD: patch-al,v 1.1 1999/11/30 01:30:50 hubertf Exp $
+
+--- konica_qmxxx/dcx.c.orig	Tue Nov 30 01:34:40 1999
++++ konica_qmxxx/dcx.c	Tue Nov 30 01:38:17 1999
+@@ -2291,7 +2291,11 @@
+ {
+ 	//dcx_debug(1);
+ 	os_debug(1);
++#ifdef __NetBSD__
++	dcx_init("/dev/tty00", QM100 );
++#else
+ 	dcx_init("/dev/ttyS0", QM100 );
++#endif
+ 	dcx_open();
+ 	dcx_close();
+ }
