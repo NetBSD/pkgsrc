@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2003/12/08 22:51:15 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2004/01/12 19:02:11 jdc Exp $
 
 DISTNAME=	ogle-0.9.2
 CATEGORIES=	graphics
@@ -12,6 +12,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5.[23]*-i386 NetBSD-1.5[Y-Z]*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-1.[6-9]*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-1.6[D-Z]*-powerpc NetBSD-1.[7-9]*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
+ONLY_FOR_PLATFORM+=	NetBSD-1.6Z*-alpha NetBSD-[2-9]*-alpha
 
 USE_BUILDLINK2=		yes
 USE_X11=		yes
