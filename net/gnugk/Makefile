@@ -1,43 +1,37 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/09 20:47:21 mjl Exp $
-#
+# $NetBSD: Makefile,v 1.2 2004/12/02 12:27:08 adam Exp $
 
-DISTNAME=		gnugk-2.0.8
-CATEGORIES=		net
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openh323gk/}
-EXTRACT_SUFX=		.tgz
+DISTNAME=	gnugk-2.2.0
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openh323gk/}
+EXTRACT_SUFX=	.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://openh323gk.sourceforge.net/
-COMMENT=		H.323 Gatekeeper
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.gnugk.org/
+COMMENT=	H.323 Gatekeeper
 
-WRKSRC=			${WRKDIR}/openh323gk
 USE_BUILDLINK3=		yes
 USE_GNU_TOOLS=		make
-USE_PKGINSTALL=         YES
-NO_CONFIGURE=		YES
-ALL_TARGET=		opt
+USE_PKGINSTALL=         yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		ac_cv_path_PTLIB_CONFIG=${PREFIX}/bin/ptlib-config
+CONFIGURE_ENV+=		PWLIBDIR=${PREFIX}/share/pwlib
+CONFIGURE_ENV+=		OPENH323DIR=${PREFIX}/share/openh323
+
+CFLAGS+=	-fexceptions
+MAKE_ENV+=	LIBTOOL="${LIBTOOL}" SYSLIBDIR="${PREFIX}/lib"
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-
 CONF_FILES=		${EGDIR}/gnugk.ini ${PKG_SYSCONFDIR}/gnugk.ini
-RCD_SCRIPTS=	gnugk
-
-MAKE_ENV+=		PWLIBDIR=${PREFIX} OPENH323DIR=${PREFIX} SYSLIBDIR=${PREFIX}/lib
-MAKE_ENV+=		NO_RADIUS=1 NO_LDAP=1 NO_MYSQL=1 NO_PGSQL=1 LIBTOOL=${LIBTOOL}
+RCD_SCRIPTS=		gnugk
 
 post-install:
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/doc/${PKGBASE}
 	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}/docs; \
-	for f in `find . -type f -print` ; do \
-	  ${INSTALL_DATA} $$f ${PREFIX}/doc/${PKGBASE}; done
-	cd ${WRKSRC}/etc; \
-	for f in `find . -type f -print` ; do \
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
+	cd ${WRKSRC}/docs; for f in `find . -type f -print` ; do \
+	  ${INSTALL_DATA} $$f ${PREFIX}/share/doc/${PKGBASE}; done
+	cd ${WRKSRC}/etc; for f in `find . -type f -print` ; do \
 	  ${INSTALL_DATA} $$f ${EGDIR}; done
 
-.include "../../devel/pwlib/buildlink3.mk"
 .include "../../net/openh323/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
