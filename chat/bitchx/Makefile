@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2001/09/30 13:52:57 blymn Exp $
+# $NetBSD: Makefile,v 1.10 2002/05/30 06:03:50 grant Exp $
 
 DISTNAME=	ircii-pana-1.0c18
 PKGNAME=	bitchx-1.0.3.18
 WRKSRC=		${WRKDIR}/BitchX
 CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.bitchx.org/pub/BitchX/source/
+
+# /old/ is for when pkgsrc is not up to date
+MASTER_SITES=	ftp://ftp.bitchx.org/pub/BitchX/source/ \
+		ftp://ftp.bitchx.org/pub/BitchX/source/old/
 
 MAINTAINER=	jmcneill@invisible.yi.org
 HOMEPAGE=	http://www.bitchx.org/
