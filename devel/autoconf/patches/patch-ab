@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.5 2001/08/28 14:58:16 skrll Exp $
+
+--- autoconf.texi-orig	Tue Jan  5 14:28:37 1999
++++ autoconf.texi	Wed Jan  6 16:36:16 1999
+@@ -4,6 +4,7 @@
+ @settitle Autoconf
+ @c For double-sided printing, uncomment:
+ @c @setchapternewpage odd
++@dircategory Programming & development tools
+ @c %**end of header
+ 
+ @set EDITION 2.13
