@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/06/02 04:14:12 itohy Exp $
+# $NetBSD: Makefile,v 1.11 2000/07/20 13:31:00 rh Exp $
 #
 
 DISTNAME=		lynx2.8.3rel.1
@@ -16,8 +16,9 @@ HOMEPAGE=		http://lynx.browser.org/
 
 DEPENDS+=		gettext-0.10.*:../../devel/gettext
 
-NO_PACKAGE=		${RESTRICTED}
 RESTRICTED=		"Crypto; export-controlled"
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/lynx2-8-3
 
