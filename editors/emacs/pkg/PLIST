@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2000/06/24 17:03:39 minoura Exp $
+@comment $NetBSD: PLIST,v 1.27 2001/09/17 15:35:15 drochner Exp $
 bin/emacs
 bin/emacs-20.7
 bin/emacs-b2m
@@ -125,19 +125,19 @@ info/viper-5
 @unexec install-info --delete %D/info/widget %D/info/dir
 info/widget
 @exec   install-info          %D/info/widget %D/info/dir
-libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/cvtmail
-libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/digest-doc
-libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/emacsserver
-libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/fakemail
-libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/fns-20.7.1.el
-libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/hexl
-libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/movemail
-libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/profile
-libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/rcs2log
-libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/sorted-doc
-libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/vcdiff
-libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}/yow
-@dirrm libexec/emacs/20.7/${MACHINE_GNU_ARCH}-${LOWER_VENDOR}-${LOWER_OPSYS}
+libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}/cvtmail
+libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}/digest-doc
+libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}/emacsserver
+libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}/fakemail
+libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}/fns-20.7.1.el
+libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}/hexl
+libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}/movemail
+libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}/profile
+libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}/rcs2log
+libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}/sorted-doc
+libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}/vcdiff
+libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}/yow
+@dirrm libexec/emacs/20.7/${MACHINE_GNU_PLATFORM}
 @dirrm libexec/emacs/20.7
 @dirrm libexec/emacs
 man/man1/emacs-ctags.1
