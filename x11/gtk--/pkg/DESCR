@@ -1,1 +1,2 @@
-C++ wrapper for gtk, a x11 graphics library
+C++ wrapper for the gimp toolkit, a set of libraries for building complex
+X11 user interfaces. Used by e.g. Gimp and Gnome.
