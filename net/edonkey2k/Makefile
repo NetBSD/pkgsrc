@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/03/26 04:05:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.6 2003/03/28 21:14:25 wiz Exp $
 #
 
 DISTNAME=	donkey
@@ -22,7 +22,6 @@ DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	YES
-NO_PATCH=	YES
 NO_CONFIGURE=	YES
 CHECK_SHLIBS=	NO
 

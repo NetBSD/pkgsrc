@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/12/26 20:52:12 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2003/03/28 21:14:37 wiz Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of Xalan-J,
 # because although Xalan runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -17,7 +17,6 @@ DEPENDS+=	xerces-j>=1.2.0:../../textproc/xerces-j
 
 USE_JAVA=	run
 USE_BUILDLINK2=
-NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=
 

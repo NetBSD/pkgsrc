@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2002/09/13 06:53:35 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2003/03/28 21:14:24 wiz Exp $
 #
 
 DISTNAME=	netbsd-doc-print-1.1
@@ -15,7 +15,6 @@ DEPENDS+=	netbsd-doc-1.2:../netbsd-doc
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/08/25 21:49:10 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2003/03/28 21:14:13 wiz Exp $
 
 DISTNAME=	gzip-1.2.4a
 PKGNAME=	gzip-info-1.2.4a
@@ -15,7 +15,6 @@ INFO_FILES=	gzip.info
 
 USE_BUILDLINK2=	yes
 
-NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
