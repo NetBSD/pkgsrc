@@ -1,0 +1,2 @@
+SableCC is a java based framework for compiler construction.
+It generates LALR(1) parsers from an EBNF grammar syntax.
