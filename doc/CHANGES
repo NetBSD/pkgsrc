@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3509 2003/09/24 10:56:29 dillo Exp $
+$NetBSD: CHANGES,v 1.3510 2003/09/25 04:15:29 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3920,3 +3920,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added sma-1.3.2 [tron 2003-09-24]
 	Updated naim to 0.11.6.1 [xtraeme 2003-09-24]
 	Added arnold-20020127 [dillo 2003-09-24]
+	Updated raptor to 1.0.0 [xtraeme 2003-09-25]
