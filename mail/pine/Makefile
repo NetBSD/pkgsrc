@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2005/01/31 19:09:16 tv Exp $
+# $NetBSD: Makefile,v 1.102 2005/03/15 17:03:17 kim Exp $
 
 DISTNAME=	pine4.62
 PKGNAME=	pine-4.62
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.cac.washington.edu/pine/ \
 		ftp://ftp.fu-berlin.de/unix/mail/pine/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kim@tac.nyc.ny.us
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Program for Internet News and E-mail
 
