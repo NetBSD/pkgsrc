@@ -3,7 +3,8 @@
 # Date created:         24 Jan 1995
 # Whom:                 ache
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/27 02:18:59 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/27 03:22:10 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.9 1997/08/10 22:31:19 fenner Exp 
 #
 
 DISTNAME=       ha0999

@@ -3,7 +3,8 @@
 # Date created:         28 Dec 1994
 # Whom:                 ache
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/27 02:19:05 hubertf Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/27 03:22:24 hubertf Exp $
+# FreeBSD Id: Makefile,v 1.10 1997/08/10 22:31:33 fenner Exp 
 #
 
 DISTNAME=       unrar-2.01
