@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/04/11 08:35:23 snj Exp $
+# $NetBSD: Makefile,v 1.20 2004/06/29 02:33:52 snj Exp $
 #
 
 DISTNAME=		zsnes136src
@@ -8,7 +8,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=zsnes/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.zsnes.com/sourceforge.php
+HOMEPAGE=		http://www.zsnes.com/
 COMMENT=		Super NES emulator
 
 BUILD_DEPENDS+=		nasm-[0-9]*:../../devel/nasm
