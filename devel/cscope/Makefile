@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2001/12/04 06:14:59 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2002/10/13 14:06:04 wiz Exp $
 #
 
 DISTNAME=	cscope-15.3
@@ -10,9 +10,9 @@ HOMEPAGE=	http://cscope.sourceforge.net/
 COMMENT=	interactive C program browser
 
 GNU_CONFIGURE=		YES
-USE_BUILDLINK_ONLY=	YES
+USE_BUILDLINK2=		YES
 
-CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-ncurses=${BUILDLINK_PREFIX.ncurses}
 CONFIGURE_ARGS+=	--with-flex
 
 .include "../../mk/bsd.prefs.mk"
@@ -24,5 +24,5 @@ LEX=			${LOCALBASE}/bin/flex
 
 CONFIGURE_ENV+=		LEX=${LEX}
 
-.include "../../devel/ncurses/buildlink.mk"
+.include "../../devel/ncurses/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
