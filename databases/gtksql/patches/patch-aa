@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 1999/02/19 14:28:08 rh Exp $
+$NetBSD: patch-aa,v 1.3 1999/05/27 15:20:22 kleink Exp $
 
 --- Makefile.orig	Wed Aug  5 21:10:26 1998
 +++ Makefile	Thu Feb 18 17:33:28 1999
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.2 1999/02/19 14:28:08 rh Exp $
  # Here, what you need for Pgsql
 -PGSQLIBS    = -L/usr/local/pgsql/lib -lpq
 -PGSQLCFLAGS = -I/usr/local/pgsql/include
-+PGSQLIBS    = -L${LOCALBASE}/pgsql/lib -lpq
++PGSQLIBS    = -L${LOCALBASE}/pgsql/lib -Wl,-R${LOCALBASE}/pgsql/lib -lpq
 +PGSQLCFLAGS = -I${LOCALBASE}/pgsql/include
  # Your favorite compilation options here :-)
  MCFLAGS  = -Wall -O -g
