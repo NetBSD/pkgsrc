@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/02/15 11:25:24 markd Exp $
+$NetBSD: patch-aa,v 1.5 2004/04/20 14:15:41 markd Exp $
 
---- configure.orig	2004-01-26 08:14:50.000000000 +1300
+--- configure.orig	2004-04-06 02:57:52.000000000 +1200
 +++ configure
-@@ -36447,7 +36447,7 @@ ac_link='rm -rf SunWS_cache; ${CXX-g++} 
+@@ -38961,7 +38961,7 @@ ac_link='rm -rf SunWS_cache; ${CXX-g++} 
  
      save_CXXFLAGS="$CXXFLAGS"
  
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.4 2004/02/15 11:25:24 markd Exp $
 +    CXXFLAGS="$CXXFLAGS $X_CFLAGS -ldb4"
  
      cat >conftest.$ac_ext <<_ACEOF
- /* #line $LINENO "configure" */
-@@ -37480,9 +37480,9 @@ fi
+ /* confdefs.h.  */
+@@ -40101,9 +40101,9 @@ fi
  
    test -n "$TAR" && break
  done

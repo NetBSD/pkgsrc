@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2004/02/15 11:25:24 markd Exp $
+$NetBSD: patch-ac,v 1.5 2004/04/20 14:15:41 markd Exp $
 
---- lib/catalog/Makefile.in.orig	2004-01-26 08:14:46.000000000 +1300
+--- lib/catalog/Makefile.in.orig	2004-04-06 02:57:47.000000000 +1200
 +++ lib/catalog/Makefile.in
-@@ -332,7 +332,7 @@ xdg_menudir = @xdg_menudir@
+@@ -395,7 +395,7 @@ xdg_menudir = @xdg_menudir@
  INCLUDES = $(all_includes)
  lib_LTLIBRARIES = libkdevcatalog.la
  libkdevcatalog_la_SOURCES = tag.cpp
 -libkdevcatalog_la_LIBADD = -ldb
 +libkdevcatalog_la_LIBADD = -ldb4
- 
  kdevcatalogincludedir = $(includedir)/kdevelop/catalog
  kdevcataloginclude_HEADERS = gcatalog.h gcatalog.tcc catalog.h tag.h
+ #>- all: all-am

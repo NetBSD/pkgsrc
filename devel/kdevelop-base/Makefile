@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2004/03/26 02:27:38 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2004/04/20 14:15:41 markd Exp $
 
-DISTNAME=	kdevelop-3.0.2
-PKGNAME=	kdevelop-base-3.0.2
-PKGREVISION=	1
+DISTNAME=	kdevelop-3.0.3
+PKGNAME=	kdevelop-base-3.0.3
 CATEGORIES=	devel kde
 
 HOMEPAGE=       http://www.kdevelop.org/
@@ -11,7 +10,7 @@ COMMENT=	Base modules for IDE for Unix/X11/KDE
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 BUILD_USES_MSGFMT=	yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 
 DEPENDS+=		automake>=1.7:../../devel/automake
 DEPENDS+=		doxygen>=1.3.5:../../devel/doxygen
@@ -24,7 +23,7 @@ DEPENDS+=		qt3-tools>=3.1.1:../../x11/qt3-tools
 
 CONFLICTS+=	kdevelop<=1.3
 
-USE_PERL5=	yes
+USE_PERL5=	run
 
 REPLACE_PERL= \
 	kdevprj2kdevelop \
@@ -47,8 +46,10 @@ CONFIGURE_ARGS+= \
 
 CPPFLAGS+= -I${BUILDLINK_PREFIX.db4}/include/db4
 
-.include "../../databases/db4/buildlink2.mk"
-.include "../../devel/kdesdk3/buildlink2.mk"
-.include "../../meta-pkgs/kde3/buildlink2.mk"
-.include "../../x11/kdebase3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/kde3.mk"
+
+.include "../../databases/db4/buildlink3.mk"
+.include "../../devel/kdesdk3/buildlink3.mk"
+.include "../../x11/kdebase3/buildlink3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
