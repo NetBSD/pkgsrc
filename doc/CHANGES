@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3828 2003/11/14 19:45:54 jdolecek Exp $
+$NetBSD: CHANGES,v 1.3829 2003/11/14 21:20:18 cube Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4604,3 +4604,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated klavg to 1.1nb3 [wiz 2003-11-14]
 	Updated kpsql-1.0nb4 [wiz 2003-11-14]
 	Updated opera7 to 7.22 [jdolecek 2003-11-14]
+	Updated maradns to 1.0.18nb1 [cube 2003-11-14]
