@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2087 2004/08/30 14:39:56 wiz Exp $
+$NetBSD: TODO,v 1.2088 2004/08/30 18:41:41 martti Exp $
 
 Suggested new packages
 ======================
@@ -327,7 +327,6 @@ Suggested package updates
 	o mp3splt-2.0e
 	o mpi-ch-1.2.6
 	o mrproject-0.9.1
-	o mrtg-2.10.15
 	o msmtp-1.2.0 [pkg/26425]
 	o msmtp-1.2.2
 	o multi-gnome-terminal-1.6.2
