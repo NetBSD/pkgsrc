@@ -1,0 +1,32 @@
+$NetBSD: patch-ag,v 1.3 1998/11/16 16:22:05 tv Exp $
+
+--- pine/mailpart.c.orig	Mon Nov 16 10:43:42 1998
++++ pine/mailpart.c	Mon Nov 16 10:55:26 1998
+@@ -1314,7 +1314,6 @@
+ 		
+     int         r, is_text, over = 0, we_cancel = 0;
+     long        len, orig_size;
+-    PARAMETER  *param;
+     gf_io_t     pc;
+     STORE_S    *store;
+     static ESCKEY_S att_save_opts[] = {
+@@ -1328,16 +1327,11 @@
+     /*-------  Figure out suggested file name ----*/
+     filename[0] = full_filename[0] = '\0';
+     att_name	= "filename";
+-    if(a->body->disposition.type){
+-	param = a->body->disposition.parameter;
+-    }
+-    else{
+-	param = a->body->parameter;
+-	att_name += 4;
+-    }
+ 
+     /* warning: overload "err" use */
+-    if(err = rfc2231_get_param(param, att_name, NULL, NULL)){
++    if((a->body->disposition.type &&
++	(err = rfc2231_get_param(a->body->disposition.parameter, att_name, NULL, NULL))) ||
++       (err = rfc2231_get_param(a->body->parameter, att_name + 4, NULL, NULL))){
+ 	strncpy(filename, err, MAXPATH);
+ 	filename[MAXPATH] = '\0';
+ 	fs_give((void **) &err);
