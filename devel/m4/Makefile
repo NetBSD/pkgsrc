@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2003/06/02 01:20:37 jschauma Exp $
+# $NetBSD: Makefile,v 1.21 2003/06/19 21:48:04 seb Exp $
 #
 
 DISTNAME=	m4-1.4
@@ -11,8 +11,9 @@ COMMENT=	GNU version of Unix m4 macro-processor
 
 USE_BUILDLINK2=		yes
 GNU_CONFIGURE=		yes
+USE_NEW_TEXINFO=	yes
 INFO_FILES=		m4.info
-TEXINFO_OVERRIDE=	YES
+USE_MAKEINFO=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,5 +39,4 @@ post-install:
 	${LN} -sf ${GNU_PROGRAM_PREFIX}m4 ${PREFIX}/bin/gm4
 .endif
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
