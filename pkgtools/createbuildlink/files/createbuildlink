@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.24 2004/07/06 23:40:11 wiz Exp $
+#	$NetBSD: createbuildlink,v 1.25 2004/07/21 22:27:35 jmmv Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.24 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.25 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
@@ -114,7 +114,7 @@ sed -f $sedrules <<EOF
 # @@ID@@
 # XXX
 # XXX This file was created automatically using createbuildlink-@PKGVERSION@.
-# XXX After this file as been verified as correct, the comment lines
+# XXX After this file has been verified as correct, the comment lines
 # XXX beginning with "XXX" should be removed.  Please do not commit
 # XXX unverified buildlink3.mk files.
 # XXX
