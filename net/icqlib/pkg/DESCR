@@ -1,0 +1,4 @@
+icqlib is the most feature complete, open source, library implementation of 
+Mirabilis' ICQ protocol available on the Internet. icqlib currently supports 
+approximately 90% of the ICQ UDP v5 protocol and 80% of the ICQ TCP v2 
+protocol, including new UIN registration, chat, and file transfer.

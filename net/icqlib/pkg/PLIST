@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/31 20:30:43 tron Exp $
+include/icq.h
+lib/libicq.a
+lib/libicq.la
+lib/libicq.so.1.0
