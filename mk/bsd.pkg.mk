@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.742 2001/05/18 16:23:20 skrll Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.743 2001/05/20 00:54:09 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1751,7 +1751,7 @@ real-su-install: ${MESSAGE}
 		exit 1;							\
 	fi
 .endif # !NO_PKG_REGISTER && !NO_FORCE_REGISTER
-	${_PKG_SILENT}${_PKG_DEBUG}if [ `${SH} -c umask` != ${DEF_UMASK} ]; then \
+	${_PKG_SILENT}${_PKG_DEBUG}if [ `${SH} -c umask` -ne ${DEF_UMASK} ]; then \
 		${ECHO_MSG} "${_PKGSRC_IN}>  Warning: your umask is \"`${SH} -c umask`"\".; \
 		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK})"; \
 		${ECHO_MSG} "and install this package again by \`\`${MAKE} deinstall reinstall''."; \
@@ -2745,7 +2745,7 @@ install-depends: uptodate-pkgtools
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	pkg="${dep:C/:.*//}";						\
 	dir="${dep:C/[^:]*://:C/:.*$//}";				\
-	found="`${PKG_INFO} -e \"$$pkg\" || ${TRUE}`";			\
+	found=`${PKG_INFO} -e "$$pkg" || ${TRUE}`;			\
 	if [ "$$found" != "" ]; then					\
 		instobjfmt=`${PKG_INFO} -B "$$pkg" | ${AWK} '/^OBJECT_FMT/ {print $$2}' | ${HEAD} -1`; \
 		if [ "$$instobjfmt" = "" ]; then			\
