@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2004/06/05 04:10:21 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2004/06/05 04:30:44 minskim Exp $
 #
 
 DISTNAME=	scotty-2.1.11
@@ -11,7 +11,7 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://wwwhome.cs.utwente.nl/~schoenw/scotty/
 COMMENT=	Graphical network discovery and monitoring tool based on scotty
 
-DEPENDS+=	tcl-scotty>=2.1.11:../../net/tcl-scotty
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/unix
 USE_BUILDLINK3=	yes
@@ -27,6 +27,9 @@ DISTINFO_FILE=	${.CURDIR}/../../net/tcl-scotty/distinfo
 FILESDIR=	${.CURDIR}/../../net/tcl-scotty/files
 PATCHDIR=	${.CURDIR}/../../net/tcl-scotty/patches
 
+INSTALLATION_DIRS=	man/man1
+
+.include "../../net/tcl-scotty/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 
 do-install:
