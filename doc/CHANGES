@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9087 2005/02/09 12:34:42 markd Exp $
+$NetBSD: CHANGES,v 1.9088 2005/02/09 13:10:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -810,4 +810,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated krusader to 1.51 [markd 2005-02-09]
 	Updated py-numarray to 1.1.1 [markd 2005-02-09]
 	Updated py-pytables to 0.9.1 [markd 2005-02-09]
+	Added kftpgrabber-0.5.0 [markd 2005-02-09]
 
