@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/04/06 17:18:01 tron Exp $
+$NetBSD: patch-ac,v 1.2 1999/04/26 23:30:00 tron Exp $
 
 --- src/Imakefile.orig	Thu Mar 18 00:15:19 1999
 +++ src/Imakefile	Sun Mar 21 02:34:05 1999
@@ -15,7 +15,7 @@ $NetBSD: patch-ac,v 1.1.1.1 1999/04/06 17:18:01 tron Exp $
 +#endif
  
 -STD_INCLUDES = -I/usr/local/include -I/usr/X11R6/include
-+WMSOUNDLIB = -L${LOCALBASE}/lib -lPropList -L../lib -lwmsnd $(ESDLIB) $(OSSLIB)
++WMSOUNDLIB = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lPropList -L../lib -lwmsnd $(ESDLIB) $(OSSLIB)
 +
 +STD_INCLUDES = -I${LOCALBASE}/include -I${X11BASE}/include
  DEPLIBS = $(DEPXLIB) 
