@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2004/03/26 02:27:43 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2004/04/22 21:31:22 ben Exp $
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
 # upgrade this package you *must* test it on a system *without* Kerberos
@@ -15,7 +15,7 @@ MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://www.washington.edu/imap/
 COMMENT=	University of Washington's IMAP, POP2, and POP3 servers
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	# defined
 USE_LIBTOOL=	# defined
 
 INST_PROG=	${LIBTOOL} ${INSTALL_PROGRAM}
@@ -161,7 +161,7 @@ do-install:
 	${FIND} ${DOC_DIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
 .if !defined(IMAP_UW_NO_SSL) || ${IMAP_UW_NO_SSL} != "YES"
-.include "../../security/openssl/buildlink2.mk"
+.include "../../security/openssl/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"
