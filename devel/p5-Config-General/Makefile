@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/15 11:43:45 mjl Exp $
+# $NetBSD: Makefile,v 1.4 2004/04/25 04:10:21 minskim Exp $
 #
 
 DISTNAME=	Config-General-2.26
@@ -11,7 +11,9 @@ MAINTAINER=	sketch@rd.bbc.co.uk
 HOMEPAGE=	http://www.daemon.de/config-general/
 COMMENT=	Perl Generic Config module
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Config/General/.packlist
 
 .include "../../lang/perl5/module.mk"
