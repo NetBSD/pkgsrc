@@ -1,22 +1,17 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: xfstt.sh,v 1.2 2002/09/20 04:05:45 grant Exp $
+# $NetBSD: xfstt.sh,v 1.3 2002/09/27 14:47:06 grant Exp $
 #
+# PROVIDE: xfstt
+# REQUIRE: DAEMON
 
-PREFIX=%%PREFIX%%
+. /etc/rc.subr
 
-case "$1" in
+name="xfstt"
+command="@PREFIX@/bin/${name}"
+command_flags="--user nobody --notcp --daemon &"
+pidfile="/var/run/${name}.pid"
+start_precmd="${command} --sync >/dev/null"
 
-start)
-	${PREFIX}/bin/xfstt --sync >/dev/null
-	${PREFIX}/bin/xfstt --user nobody --notcp --daemon && echo -n ' xfstt'
-	;;
-stop)
-	kill `ps -auxwww | grep xfstt | awk '{ print $2 }'`
-	echo -n ' xfstt'
-	;;
-*)
-	echo "$0 start | stop"
-	;;
-
-esac
+load_rc_config $name
+run_rc_command "$1"
