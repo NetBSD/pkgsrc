@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2000/10/18 16:41:23 mjl Exp $
+# $NetBSD: Makefile,v 1.12 2000/11/14 00:01:27 briggs Exp $
 #
 
 DISTNAME=	webalizer-2.01-06-src
@@ -13,10 +13,12 @@ MAINTAINER=	mjl@netbsd.org
 HOMEPAGE=	http://www.mrunix.net/webalizer/
 
 DEPENDS+=	gd-1.*:../../graphics/gd
+DEPENDS+=	freetype-lib>=1.3.1:../../graphics/freetype-lib
 
 WRKSRC=		${WRKDIR}/webalizer-2.01-06
 
 USE_X11=	yes
+USE_XPM=	yes
 GNU_CONFIGURE=  yes
 CONFIGURE_ARGS=	--with-gd=${LOCALBASE}/include
 
