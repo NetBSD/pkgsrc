@@ -1,18 +1,24 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/21 08:16:06 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/30 15:01:06 jmmv Exp $
 #
 
-DISTNAME=	buildtool-0.6
+DISTNAME=	buildtool-0.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=buildtool/}
 
-MAINTAINER=	jmmv@hispabsd.org
+MAINTAINER=	jmmv@netbsd.org
 HOMEPAGE=	http://buildtool.sourceforge.net/
-COMMENT=	Build infrastructure for source packages
+COMMENT=	Portable BSD-like build infrastructure
 
-INFO_FILES+=	buildtool.info
+USE_BUILDLINK2=	yes
+
+TEXINFO_REQD=	4.0
+INFO_FILES=	buildtool.info
+
+PKG_SYSCONFSUBDIR=	buildtool
 
 do-configure:
-	cd ${WRKSRC} && ./configure -p ${LOCALBASE}
+	@cd ${WRKSRC} && ${CONFIGURE_ENV} ./configure -p ${LOCALBASE} \
+	    -c ${PKG_SYSCONFDIR}
 
 .include "../../mk/texinfo.mk"
 
