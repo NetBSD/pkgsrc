@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2003/09/05 11:39:02 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2003/09/07 19:36:26 jlam Exp $
 
 .if !defined(MESALIB_BUILDLINK3_MK)
 MESALIB_BUILDLINK3_MK=	# defined
@@ -36,7 +36,7 @@ _NEED_MESALIB=	NO
 _NEED_MESALIB=	YES
 .  else
 #
-# Create an appropriate package name for the built-in freetype2 distributed
+# Create an appropriate package name for the built-in Mesa/GLX distributed
 # with the system.  This package name can be used to check against
 # BUILDLINK_DEPENDS.<pkg> to see if we need to install the pkgsrc version
 # or if the built-in one is sufficient.
