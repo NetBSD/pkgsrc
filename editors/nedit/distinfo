@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2004/01/22 17:34:48 recht Exp $
+$NetBSD: distinfo,v 1.10 2004/05/21 12:13:05 adam Exp $
 
 SHA1 (nedit-5.4-source.tar.gz) = ef63d6ca803cc7f68ab7d9ba9140857d9cdfa9a2
 Size (nedit-5.4-source.tar.gz) = 1226732 bytes
-SHA1 (patch-aa) = 409a79b643fbfd5e21aa88f43b861f0fe9a2eea7
+SHA1 (patch-aa) = 29cf7e55b23e437b0203e0dde09cc053d65f245c
