@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1383 2003/02/15 13:32:04 jmmv Exp $
+$NetBSD: CHANGES,v 1.1384 2003/02/15 16:30:22 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -683,3 +683,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gnome-panel to 2.2.0.1nb1 [jmmv 2003-02-15]
 	Added distcc-1.1 [martti 2003-02-15]
 	Updated libgnome to 2.2.0.1nb1 [jmmv 2003-02-15]
+	Updated gnome-vfs2 to 2.2.2nb1 [jmmv 2003-02-15]
