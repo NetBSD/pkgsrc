@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2003/09/12 15:54:44 grant Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2004/02/01 02:11:06 jlam Exp $
 
 # Do not directly include this file in package Makefiles. It is
 # automatically included when required based on USE_GCC3.
@@ -6,6 +6,7 @@
 .if !defined(GCC3_BUILDLINK2_MK)
 GCC3_BUILDLINK2_MK=	# defined
 
+BUILDLINK_PACKAGES+=		gcc
 BUILDLINK_DEPENDS.gcc?=		gcc3>=${GCC_REQD}
 BUILDLINK_PKGSRCDIR.gcc?=	../../lang/gcc3
 
@@ -19,18 +20,6 @@ BUILDLINK_DEPMETHOD.gcc?=	build
 .endif
 
 BUILDLINK_PREFIX.gcc=	${LOCALBASE}
-_GCC_PREFIX=		${BUILDLINK_PREFIX.gcc}/${_GCC_SUBPREFIX}
-_GCC_LIBGCCDIR!=						\
-  if [ -x ${_GCC_PREFIX}bin/gcc ]; then				\
-    dirname `${_GCC_PREFIX}bin/gcc --print-libgcc-file-name`;	\
-  else								\
-    ${ECHO} not-defined;					\
-  fi
-_GCC_ARCHSUBDIR= \
-  ${_GCC_LIBGCCDIR:S|^${BUILDLINK_PREFIX.gcc}/${_GCC_SUBPREFIX}||}
-
-BUILDLINK_PACKAGES+=	gcc
-
 BUILDLINK_WRAPPER_ENV+=	\
 	COMPILER_PATH="${BUILDLINK_DIR}/bin"; export COMPILER_PATH
 
@@ -58,7 +47,14 @@ BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/libstdc++.*
 BUILDLINK_FILES.gcc+=	${_GCC_SUBPREFIX}lib/libsupc++.*
 
 BUILDLINK_TARGETS+=	gcc-buildlink
+BUILDLINK_TARGETS+=	libstdc++-buildlink-la
 
 gcc-buildlink: _BUILDLINK_USE
+
+libstdc++-buildlink-la:               
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	lafile="${BUILDLINK_DIR}/lib/libstdc++.la";			\
+	libpattern="/usr/lib/libstdc++.*";				\
+	${BUILDLINK_FAKE_LA}
 
 .endif	# GCC3_BUILDLINK2_MK
