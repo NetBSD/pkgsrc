@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2003/07/17 22:56:46 grant Exp $
+# $NetBSD: Makefile,v 1.24 2004/01/05 11:24:18 jlam Exp $
 
 DISTNAME=	tk8.3.4
 PKGNAME=	tk-8.3.4
@@ -11,13 +11,15 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.tcltk.com/
 COMMENT=	Graphical toolkit for TCL
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 MAKE_ENV+=		TOUCH="${TOUCH}"
 
 USE_X11=		yes
 USE_LIBTOOL=		yes
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 TEST_TARGET=		test
 
 # Initially install the man pages into ${WRKDIR}/man, as we need a staged
@@ -84,5 +86,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../unix/tkUnixInt.h ${PREFIX}/include/tk/unix
 	${INSTALL_DATA} ${WRKSRC}/../unix/tkUnixPort.h ${PREFIX}/include/tk/unix
 
-.include "../../lang/tcl/buildlink2.mk"
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
