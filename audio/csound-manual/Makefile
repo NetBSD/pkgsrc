@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/06/05 16:54:04 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2002/03/12 22:31:04 jmc Exp $
 #
 
 DISTNAME=		csound-manual-4.10
@@ -20,8 +20,9 @@ HOMEPAGE=		http://www.csound.org
 COMMENT=		Manuals and examples for Csound
 
 LICENSE=		csound-license
-NO_SRC_ON_CDROM=	"no for-fee-redistribution"
-NO_BIN_ON_CDROM=	${NO_SRC_ON_CDROM}
+RESTRICTED=		"no for-fee-redistribution"
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 DIST_SUBDIR=		csound-4.10
 
 NO_BUILD=		yes
