@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/01/11 05:12:56 hamajima Exp $
+# $NetBSD: Makefile,v 1.9 2005/02/21 21:18:28 veego Exp $
 #
 
 .if ${MACHINE_ARCH} == "sparc64"
@@ -47,11 +47,6 @@ EMULSUBDIR=		emul/netbsd32
 COMPAT_LIBDIR=		${PREFIX}/${EMULSUBDIR}/usr/lib
 COMPAT_LIBEXECDIR=	${PREFIX}/${EMULSUBDIR}/usr/libexec
 COMPAT_XLIBDIR=		${PREFIX}/${EMULSUBDIR}/usr/X11R6/lib
-
-PLIST_SRC+=		${PKGDIR}/PLIST
-.if exists(${PKGDIR}/PLIST.${MACHINE32_ARCH})
-PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE32_ARCH}
-.endif
 
 PLIST_SUBST+=		COMPAT_EMULSUBDIR=${EMULSUBDIR}
 
