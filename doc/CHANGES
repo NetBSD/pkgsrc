@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3620 2003/10/03 02:59:10 explorer Exp $
+$NetBSD: CHANGES,v 1.3621 2003/10/03 07:24:20 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4056,4 +4056,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated fuse to 0.6.1.1 [adam 2003-10-02]
 	Updated cpuflags to 0.57 [abs 2003-10-02]
 	Updated p5-MP3-Tag to 0.40 [explorer 2003-10-02]
-
+	Updated xchat to 1.8.11nb4 [xtraeme 2003-10-03]
+	Updated xchat-gnome to 1.8.11nb4 [xtraeme 2003-10-03]
+	Updated xchat2 to 2.0.5nb1 [xtraeme 2003-10-03]
