@@ -1,4 +1,5 @@
-#	$PEACE: cross.mk,v 1.6 2001/10/19 07:43:10 kent Exp $
+#	$NetBSD: cross.mk,v 1.9 2002/03/18 03:04:40 kent Exp $
+#	$PEACE: cross.mk,v 1.9 2002/03/18 01:18:11 kent Exp $
 #	based on pkgsrc/cross/COMMON/cross.mk
 #	NetBSD: cross.mk,v 1.16 2000/11/09 13:04:55 wiz Exp 
 
@@ -29,11 +30,13 @@ pre-install-dirs:
 	${INSTALL_DATA_DIR} ${TARGET_DIR}/lib
 
 .if defined(USE_CROSS_BINUTILS)
-BINUTILS_DISTNAME=	binutils-2.11.2
-BINUTILS_WRKSRC=	${WRKDIR}/${BINUTILS_DISTNAME}
+BINUTILS_DISTNAME=	binutils-2.11.92-20011113-src
+#BINUTILS_WRKSRC=	${WRKDIR}/${BINUTILS_DISTNAME}
+BINUTILS_WRKSRC=	${WRKDIR}/binutils-2.11.92-20011113
 
 CROSS_DISTFILES+=	${BINUTILS_DISTNAME}.tar.gz
-MASTER_SITES+=		${MASTER_SITE_GNU:=binutils/}
+#MASTER_SITES+=		${MASTER_SITE_GNU:=binutils/}
+MASTER_SITES+=		http://prdownloads.sourceforge.net/mingw/
 CONFIGURE_ARGS+=	--with-gnu-as --with-gnu-ld
 #DEPENDS+=		cross-binutils>=2.9.1.1:../../cross/binutils
 PLIST_PRE+=		${COMMON_DIR}/PLIST-binutils
