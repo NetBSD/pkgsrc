@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2003/09/22 21:55:55 recht Exp $
+# $NetBSD: Makefile,v 1.19 2003/09/27 15:41:53 grant Exp $
 #
 
 DISTNAME=	xft-2.1.2
@@ -30,6 +30,7 @@ MAKE_ENV+=		EGREP=${EGREP}
 BUILDLINK_DEPENDS.Xrender=	Xrender>=0.8.2
 
 .include "../../devel/pkgconfig/buildlink2.mk"
+.include "../../devel/zlib/buildlink2.mk"
 .include "../../fonts/fontconfig/buildlink2.mk"
 .include "../../graphics/freetype2/buildlink2.mk"
 .include "../../x11/Xrender/buildlink2.mk"
