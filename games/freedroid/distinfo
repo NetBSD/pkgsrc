@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/06/24 15:25:59 dillo Exp $
+$NetBSD: distinfo,v 1.2 2004/06/27 23:53:45 dillo Exp $
 
 SHA1 (freedroid-1.0.2.tar.gz) = 69593c8e4d204d8e523f6e4b4f1091dd69fdef24
 Size (freedroid-1.0.2.tar.gz) = 4819173 bytes
-SHA1 (patch-aa) = a8241dc9aba994c4f51ddcc98fe41cb5898196e4
+SHA1 (patch-aa) = 565c87632ff093158743068048dd303f774320e9
