@@ -1,0 +1,16 @@
+$NetBSD: patch-as,v 1.3 2004/04/26 20:06:58 jlam Exp $
+
+--- src/modules/standard/mod_auth_db.c.orig	Mon Feb  3 12:13:27 2003
++++ src/modules/standard/mod_auth_db.c
+@@ -170,7 +170,10 @@ static char *get_db_pw(request_rec *r, c
+     q.data = user;
+     q.size = strlen(q.data);
+ 
+-#if defined(DB3) || defined(DB4)
++#if defined(DB4)
++    if (   db_create(&f, NULL, 0) != 0 
++        || f->open(f, NULL, auth_dbpwfile, NULL, DB_HASH, DB_RDONLY, 0664) != 0) {
++#elif defined(DB3)
+     if (   db_create(&f, NULL, 0) != 0 
+         || f->open(f, auth_dbpwfile, NULL, DB_HASH, DB_RDONLY, 0664) != 0) {
+ #elif defined(DB2)
