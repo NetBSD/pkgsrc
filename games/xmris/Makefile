@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1998/08/20 15:16:58 tsarna Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/16 15:11:03 wiz Exp $
 
 DISTNAME=		xmris.4.04
 PKGNAME=		xmris-4.04
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.cs.bris.ac.uk/~nathan/xmris/
+COMMENT=		Version of the Mr Do video arcade game for X
 
 USE_IMAKE=		yes
 ALL_TARGET=		initialize xmris xmred

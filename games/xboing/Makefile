@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/01/12 12:35:14 dent Exp $
+# $NetBSD: Makefile,v 1.8 2001/02/16 15:11:00 wiz Exp $
 #
 
 DISTNAME=		xboing2.4
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.techrescue.org/xboing/
+COMMENT=		Breakout style game for X11
 
 USE_IMAKE=		YES
 USE_XPM=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2000/08/23 23:14:24 tron Exp $
+# $NetBSD: Makefile,v 1.14 2001/02/16 15:11:01 wiz Exp $
 #
 
 DISTNAME=       xdemineur-2.1.1
@@ -8,6 +8,7 @@ MASTER_SITES=	ftp://ftp.babafou.eu.org/pub/babafou/ \
 
 MAINTAINER=	bouyer@netbsd.org
 HOMEPAGE=	http://www.spinne.com/x/games/xdemineur/
+COMMENT=	Minesweeper game for the X Window System
 
 USE_IMAKE=	YES
 USE_XPM=	YES

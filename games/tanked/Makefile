@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/08/23 23:14:25 tron Exp $
+# $NetBSD: Makefile,v 1.6 2001/02/16 15:10:59 wiz Exp $
 #
 
 DISTNAME=		tanked-0.90
@@ -7,6 +7,7 @@ MASTER_SITES=		http://ogresoft.dyn.ml.org/
 
 MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://ogresoft.dyn.ml.org/tanked.html
+COMMENT=		Multiplayer internet tank game for X11
 
 USE_X11BASE=		YES
 USE_XPM=		YES

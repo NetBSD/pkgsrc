@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/11/08 15:09:36 abs Exp $
+# $NetBSD: Makefile,v 1.11 2001/02/16 15:10:52 wiz Exp $
 
 DISTNAME=	kdetoys-1.1.2
 CATEGORIES=	games kde
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.kde.org/
+COMMENT=	Toys for the KDE integrated X11 desktop
 
 DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
 

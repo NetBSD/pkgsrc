@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/02/12 15:56:47 abs Exp $
+# $NetBSD: Makefile,v 1.5 2001/02/16 15:10:59 wiz Exp $
 #
 
 DISTNAME=	tscp173
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	abs@netbsd.org
 HOMEPAGE=	http://ucsu.colorado.edu/~kerrigat/
+COMMENT=	Tom Kerrigan's Simple Chess Program
 
 RESTRICTED= No distribtion without authorisation from Tom Kerrigan
 
