@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.753 2003/07/30 13:45:53 wiz Exp $
+$NetBSD: TODO,v 1.754 2003/07/30 13:50:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -126,7 +126,6 @@ Suggested package updates
 	o gkrellm-volume-2.1.7 [pkgsrc-wip]
 	o gliblib-1.2.3 [pkg/21776]
 	o global-4.6
-	o gnet-2.0.4
 	o gnome-python-1.99.13
 	o gnomeicu-0.99
 	o gnucash-1.8.4
