@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.15 2001/12/24 13:25:47 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.16 2002/01/01 17:01:26 abs Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -30,6 +30,7 @@ case $hw_model in
     MB86930* | MB86934*) FLAGS="-mcpu=sparclite"	;; # from gcc
     MB86900/1A*)	FLAGS="-mcpu=cypress"		;; # ss1+
     CY7C601*)		FLAGS="-mcpu=cypress"		;; # ss2
+    W8601/8701*)	FLAGS="-mcpu=cypress"		;; # elc
     # under 1.5.1 -mcpu=ultrasparc chokes egcs-2.91.66 compiling perl
     SUNW,UltraSPARC*)	FLAGS="-mcpu=v9"		;; # Ultra
     #
