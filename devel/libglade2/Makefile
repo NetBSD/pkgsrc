@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2004/12/24 08:04:26 reed Exp $
+# $NetBSD: Makefile,v 1.30 2004/12/28 21:41:45 jmmv Exp $
 #
 
-DISTNAME=		libglade-2.4.0
+DISTNAME=		libglade-2.4.1
 PKGNAME=		${DISTNAME:S/libglade/libglade2/}
-PKGREVISION=		2
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade/2.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -23,6 +22,7 @@ PKGCONFIG_OVERRIDE=	libglade-2.0.pc.in
 
 CONFIGURE_ENV+=		jh_cv_path_python="${PYTHONBIN}"
 CONFIGURE_ARGS+=	--with-html-dir="${PREFIX}/share/doc/html"
+CONFIGURE_ARGS+=	--without-xml-catalog
 
 XML_ENTRIES=	system http://glade.gnome.org/glade-2.0.dtd \
 		${PREFIX}/share/xml/libglade/glade-2.0.dtd
