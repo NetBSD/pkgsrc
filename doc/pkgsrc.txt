@@ -89,7 +89,7 @@ I. The pkgsrc user's guide
 
     6. Frequently Asked Questions
 
-        6.1. Is there a mailing list for pkg-related discussion?
+        6.1. Are there any mailing lists for pkg-related discussion?
         6.2. Where's the pkgviews documentation?
         6.3. Utilities for package management (pkgtools)
         6.4. How to use pkgsrc as non-root
@@ -204,6 +204,7 @@ II. The pkgsrc developer's guide
             12.5.15. Packages installing SGML or XML data
             12.5.16. Packages installing extensions to the MIME database
             12.5.17. Packages using intltool
+            12.5.18. Packages installing startup scripts
 
         12.6. Feedback to the author
 
@@ -429,7 +430,7 @@ Table of Contents
 
 6. Frequently Asked Questions
 
-    6.1. Is there a mailing list for pkg-related discussion?
+    6.1. Are there any mailing lists for pkg-related discussion?
     6.2. Where's the pkgviews documentation?
     6.3. Utilities for package management (pkgtools)
     6.4. How to use pkgsrc as non-root
@@ -1446,7 +1447,7 @@ Chapter 6. Frequently Asked Questions
 
 Table of Contents
 
-6.1. Is there a mailing list for pkg-related discussion?
+6.1. Are there any mailing lists for pkg-related discussion?
 6.2. Where's the pkgviews documentation?
 6.3. Utilities for package management (pkgtools)
 6.4. How to use pkgsrc as non-root
@@ -1466,14 +1467,26 @@ This section contains hints, tips & tricks on special things in pkgsrc that we
 didn't find a better place for in the previous chapters, and it contains items
 for both pkgsrc users and developers.
 
-6.1. Is there a mailing list for pkg-related discussion?
+6.1. Are there any mailing lists for pkg-related discussion?
 
-Yes, <tech-pkg@NetBSD.org> is the list for discussing package related issues.
-To subscribe do:
+The following mailing lists may be of interest to pkgsrc users:
 
-% echo subscribe tech-pkg | mail majordomo@NetBSD.org
+  * pkgsrc-bugs -- a list where problem reports related to pkgsrc are sent and
+    discussed
 
-An archive of the list is available at http://mail-index.NetBSD.org/tech-pkg/.
+  * pkgsrc-bulk -- a list where the results of pkgsrc bulk builds are sent and
+    discussed
+
+  * pkgsrc-changes -- a list where all commit messages to pkgsrc are sent
+
+  * tech-pkg -- a general discussion list for all things related to pkgsrc
+
+To subscribe, do:
+
+% echo subscribe listname | mail majordomo@NetBSD.org
+
+Archives for all these mailing lists are available from http://
+mail-index.NetBSD.org/.
 
 6.2. Where's the pkgviews documentation?
 
@@ -1781,7 +1794,7 @@ The following message is displayed as part of the audit-packages installation
 procedure:
 
 ===========================================================================
-$NetBSD: faq.xml,v 1.4 2005/01/11 16:05:20 wiz Exp $
+$NetBSD: faq.xml,v 1.5 2005/02/24 14:24:32 jschauma Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
@@ -1903,6 +1916,7 @@ Table of Contents
         12.5.15. Packages installing SGML or XML data
         12.5.16. Packages installing extensions to the MIME database
         12.5.17. Packages using intltool
+        12.5.18. Packages installing startup scripts
 
     12.6. Feedback to the author
 
@@ -3303,6 +3317,7 @@ Table of Contents
     12.5.15. Packages installing SGML or XML data
     12.5.16. Packages installing extensions to the MIME database
     12.5.17. Packages using intltool
+    12.5.18. Packages installing startup scripts
 
 12.6. Feedback to the author
 
@@ -3396,7 +3411,7 @@ The format for a BUILD_DEPENDS and a DEPENDS definition is:
 <pre-req-package-name>:../../<category>/<pre-req-package>
 
 Please note that the "pre-req-package-name" may include any of the wildcard
-version numbers recognised by pkg_info(1).
+version numbers recognized by pkg_info(1).
 
  1. If your package needs another package's binaries or libraries to build or
     run, and if that package has a buildlink3.mk file available, use it:
@@ -4191,6 +4206,14 @@ This tracks intltool's build-time dependencies and uses the latest available
 version; this way, the package benefits of any bug fixes that may have appeared
 since it was released.
 
+12.5.18. Packages installing startup scripts
+
+If a package contains a rc.d script, it won't be copied into the startup
+directory by default, but you can enable it, by adding the option
+PKG_RCD_SCRIPTS=YES in /etc/mk.conf. This option will copy the scripts into /
+etc/rc.d when a package is installed, and it will automatically remove the
+scripts when the package is deinstalled.
+
 12.6. Feedback to the author
 
 If you have found any bugs in the package you make available, if you had to do
@@ -4369,7 +4392,7 @@ are various reasons for this:
     list, so that they can make tactical decisions about when to upgrade the
     package.
 
-Please also recognise that, just because a new version of a package has been
+Please also recognize that, just because a new version of a package has been
 released, it should not automatically be upgraded in the CVS repository. We
 prefer to be conservative in the packages that are included in pkgsrc -
 development or beta packages are not really the best thing for most places in
@@ -4839,7 +4862,7 @@ The procedure to edit the pkgsrc guide is:
 
   * Until the webserver on www.NetBSD.org is really updated automatically to
     pick up changes to the pkgsrc guide automatically, also run make
-    install-htdoc HTDOCSDIR=../../../htdocs (or similar, adjust HTDOCSDIR!).
+    install-htdocs HTDOCSDIR=../../../htdocs (or similar, adjust HTDOCSDIR!).
 
   * cvs commit htdocs/Documentation/pkgsrc
 
