@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2002/03/13 17:37:59 fredb Exp $
+# $NetBSD: Makefile,v 1.18 2002/10/21 13:48:54 wiz Exp $
 #
 
 DISTNAME=	khostchooser-0.3
@@ -11,25 +11,22 @@ MAINTAINER=	root@garbled.net
 COMMENT=	KDE Chooser replacement for X
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=	kdelibs-1.1.2nb1:../../x11/kdelibs
-DEPENDS+=	libungif-[0-9]*:../../graphics/libungif
 
 WRKSRC=		${WRKDIR}/khostchooser
 
+USE_BUILDLINK2=	YES
 USE_X11BASE=	YES
-USE_XPM=	YES
 USE_GMAKE=	YES
 GNU_CONFIGURE=	YES
 
-EVAL_PREFIX+=	QT1DIR=qt1
-CONFIGURE_ARGS=	--datadir=${PREFIX}/share/kde \
-		--with-qt-dir=${QT1DIR}/qt1
 CFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-Wl,-R${QT1DIR}/qt1/lib
+CONFIGURE_ARGS=	--datadir=${PREFIX}/share/kde \
+		--with-qt-dir=${QTDIR}
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
-		QTDIR=${QT1DIR}/qt1 \
-		MOC=${QT1DIR}/qt1/bin/moc \
 		CXXFLAGS="${CFLAGS}" \
 		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
 
+.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/kdelibs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
