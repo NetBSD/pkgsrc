@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2004/02/14 17:21:41 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2004/02/20 17:02:06 jmmv Exp $
 
 DISTNAME=	dia-0.92.2
 PKGREVISION=	5
@@ -11,7 +11,7 @@ COMMENT=	Program for creating diagrams of all kinds
 
 DEPENDS+=		gnome2-dirs>=1.2:../../misc/gnome2-dirs
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GNU_TOOLS+=		make
@@ -32,8 +32,18 @@ post-patch:
 	${MV} ${INTL_FILE} ${INTL_FILE}.pre
 	${SED}  -e "s,%%PREFIX%%,${PREFIX},g" ${INTL_FILE}.pre > ${INTL_FILE}
 
-.include "../../devel/libgnomeui/buildlink2.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/libart2/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../textproc/intltool/buildlink2.mk"
-.include "../../x11/py-gtk2/buildlink2.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
