@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2004/02/14 03:16:58 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2004/02/14 07:45:36 jlam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=	# empty
+PKGREVISION=	1
 SVR4_PKGNAME=	csasl
 COMMENT=	Simple Authentication and Security Layer
 
@@ -12,9 +12,10 @@ GNU_MISSING_OVERRIDE=	config/missing
 
 # Authentication mechanisms
 CONFIGURE_ARGS+=	--enable-anon		# ANONYMOUS
-CONFIGURE_ARGS+=	--enable-plain		# PLAIN
+CONFIGURE_ARGS+=	--enable-checkapop	# CHECKAPOP
 CONFIGURE_ARGS+=	--enable-cram		# CRAM-MD5
 CONFIGURE_ARGS+=	--enable-otp		# OTP
+CONFIGURE_ARGS+=	--enable-plain		# PLAIN
 
 CONFIGURE_ARGS+=	--enable-digest		# DIGEST-MD5
 CONFIGURE_ARGS+=	--with-rc4
