@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7726 2004/11/05 22:21:30 jmmv Exp $
+$NetBSD: CHANGES,v 1.7727 2004/11/05 22:25:29 he Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5109,3 +5109,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added php5-xsl 5.0.2 [jdolecek 2004-11-05]
 	Updated dirmngr to 0.5.6nb2 [jmmv 2004-11-05]
 	Updated gnupg-devel to 1.9.11nb1 [jmmv 2004-11-05]
+	Added p5-Apache-Session-Wrapper-0.17 [he 2004-11-05]
