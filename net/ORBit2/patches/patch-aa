@@ -1,0 +1,31 @@
+--- linc2/src/linc-protocols.c.orig	2004-02-02 17:29:05.000000000 +0100
++++ linc2/src/linc-protocols.c	2004-05-22 19:37:12.000000000 +0200
+@@ -21,6 +21,10 @@
+ 
+ static char *link_tmpdir = NULL;
+ 
++#if defined(__NetBSD__) && defined(__RES__) && (__RES >= 20030124)
++extern struct __res_state _res;
++#endif
++
+ /*
+  * make_local_tmpdir:
+  * @dirname: directory name.
+@@ -359,7 +363,7 @@
+ 	        int i;
+ 
+ 		LINK_RESOLV_UNSET_IPV6;
+-#ifdef HAVE_RESOLV_H
++#if defined(HAVE_RESOLV_H)
+ 		if (!(_res.options & RES_INIT))
+ 			res_init();
+ #endif
+@@ -455,7 +459,7 @@
+ 	return (struct sockaddr *)saddr;
+ #else
+ 
+-#ifdef HAVE_RESOLV_H
++#if defined(HAVE_RESOLV_H)
+ 	if (!(_res.options & RES_INIT))
+ 		res_init();
+ #endif
