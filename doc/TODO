@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1928 2004/07/14 00:51:54 xtraeme Exp $
+$NetBSD: TODO,v 1.1929 2004/07/14 00:54:20 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -332,6 +332,7 @@ Suggested package updates
 	o p5-Exception-Class-1.17
 	o pdmenu-1.2.81
 	o pgplot-5.2 [grant]
+	o php-5.0.0
 	o phppgadmin-3.4 [pkg/26130]
 	o physfs-1.0.0
 	o plib-1.7.0
