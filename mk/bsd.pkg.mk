@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1546 2004/12/10 04:25:09 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1547 2004/12/17 16:24:22 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -336,6 +336,9 @@ MAKEFLAGS+=		PERL5_ARCHLIB=${PERL5_ARCHLIB:Q}
 .endif       # USE_PERL5 == run
 
 .if defined(USE_FORTRAN)
+.  if defined(USE_LIBTOOL)
+LIBTOOL_REQD?=		1.5.10nb7
+.  endif
 .  if !exists(/usr/bin/f77)
 PKG_FC?=		f2c-f77
 .  endif
