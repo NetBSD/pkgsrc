@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2002/08/22 05:13:37 grant Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/10/27 10:29:43 grant Exp $
 bin/sylpheed
 man/man1/sylpheed.1
+share/gnome/apps/Internet/sylpheed.desktop
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/sylpheed.mo
@@ -15,7 +17,9 @@ ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sylpheed.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sylpheed.mo
+share/pixmaps/sylpheed.png
 share/sylpheed/faq/de/sylpheed-faq-1.html
 share/sylpheed/faq/de/sylpheed-faq-2.html
 share/sylpheed/faq/de/sylpheed-faq-3.html
@@ -23,10 +27,12 @@ share/sylpheed/faq/de/sylpheed-faq.html
 share/sylpheed/faq/en/sylpheed-faq-1.html
 share/sylpheed/faq/en/sylpheed-faq-2.html
 share/sylpheed/faq/en/sylpheed-faq-3.html
+share/sylpheed/faq/en/sylpheed-faq-4.html
 share/sylpheed/faq/en/sylpheed-faq.html
 share/sylpheed/faq/es/sylpheed-faq-1.html
 share/sylpheed/faq/es/sylpheed-faq-2.html
 share/sylpheed/faq/es/sylpheed-faq-3.html
+share/sylpheed/faq/es/sylpheed-faq-4.html
 share/sylpheed/faq/es/sylpheed-faq.html
 share/sylpheed/faq/fr/sylpheed-faq-1.html
 share/sylpheed/faq/fr/sylpheed-faq-2.html
@@ -70,6 +76,7 @@ share/sylpheed/manual/en/sylpheed-18.html
 share/sylpheed/manual/en/sylpheed-19.html
 share/sylpheed/manual/en/sylpheed-2.html
 share/sylpheed/manual/en/sylpheed-20.html
+share/sylpheed/manual/en/sylpheed-21.html
 share/sylpheed/manual/en/sylpheed-3.html
 share/sylpheed/manual/en/sylpheed-4.html
 share/sylpheed/manual/en/sylpheed-5.html
@@ -152,3 +159,5 @@ share/sylpheed/manual/ja/sylpheed.sgml
 @dirrm share/sylpheed/faq/de
 @dirrm share/sylpheed/faq
 @dirrm share/sylpheed
+@dirrm share/gnome/apps/Internet
+@dirrm share/gnome/apps
