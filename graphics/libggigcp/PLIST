@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/21 09:56:35 wiz Exp $
+include/ggi/gcp.h
+include/ggi/internal/gcp.h
+lib/ggi/gcp/default/color.a
+lib/ggi/gcp/default/color.la
+lib/ggi/gcp/default/color.so
+lib/libggigcp.a
+lib/libggigcp.la
+lib/libggigcp.so
+lib/libggigcp.so.0
+lib/libggigcp.so.0.8
+share/examples/libggigcp/libggigcp.conf
+@dirrm lib/ggi/gcp/default
+@dirrm lib/ggi/gcp
+@dirrm share/examples/libggigcp
