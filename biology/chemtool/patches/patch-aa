@@ -1,10 +1,40 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/25 20:10:55 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2001/02/12 02:16:03 jtb Exp $
 
---- Imakefile.orig	Sat May 13 10:01:16 2000
-+++ Imakefile
-@@ -9,5 +9,3 @@
- NormalProgramTarget(chemtool,$(OBJS), , , )
+--- Makefile.orig	Tue Feb  6 18:52:54 2001
++++ Makefile
+@@ -1,15 +1,15 @@
+-PREFIX=/usr/local
+-LOCALEDIR=/usr/share/locale
+-CFLAGS=-O2 -Wall
+-CC=gcc
+-CP=/bin/cp
+-RM=/bin/rm -f
++#PREFIX=/usr/local
++LOCALEDIR=${PREFIX}/share/locale
++#CFLAGS=-O2 -Wall
++#CC=gcc
++#CP=/bin/cp
++#RM=/bin/rm -f
  
- InstallProgram(chemtool,$(BINDIR))
--
--#InstallAppDefaults(Chemtool)
+ SRCS = main.c chemproc.c graph.c draw.c inout.c 
+ OBJS = main.o chemproc.o graph.o draw.o inout.o 
+ 
+ 
+-EXTRA_INCLUDES = `gtk-config --cflags`  # -DDISABLE_NLS
++EXTRA_INCLUDES = `gtk-config --cflags`  -I${LOCALBASE}/include # -DDISABLE_NLS
+ SYS_LIBRARIES = `gtk-config --libs` -lm
+ 
+ all: chemtool cht
+@@ -25,9 +25,9 @@
+ 	${CC} ${CFLAGS} ${EXTRA_INCLUDES} -c ${SRCS}
+ 
+ install: chemtool src-cht/cht
+-	${CP} chemtool src-cht/cht ${PREFIX}/bin
+-	${CP} chemtool.1 ${PREFIX}/man/man1
+-	for L in `ls locales`; do ${CP} locales/$$L/chemtool.mo ${LOCALEDIR}/$$L/LC_MESSAGES;done
++	${BSD_INSTALL_PROGRAM} chemtool src-cht/cht ${PREFIX}/bin
++	${BSD_INSTALL_MAN} chemtool.1 ${PREFIX}/man/man1
++	for L in `ls locales`; do ${BSD_INSTALL_DATA} locales/$$L/chemtool.mo ${LOCALEDIR}/$$L/LC_MESSAGES;done
+  
+ clean:
+ 	${RM} *.o *~ src-cht/*.o src-cht/*~ chemtool src-cht/cht

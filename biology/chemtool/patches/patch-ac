@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1 2001/02/12 02:16:03 jtb Exp $
+
+--- src-cht/Makefile.orig	Mon Feb 12 02:13:11 2001
++++ src-cht/Makefile
+@@ -1,4 +1,4 @@
+ default: cht
+ 
+ cht:	cht-1.3.c
+-	gcc -O cht-1.3.c -lm -o cht
++	$(CC) $(CFLAGS) cht-1.3.c -lm -o cht
