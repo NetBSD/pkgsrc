@@ -1,7 +1,8 @@
-$NetBSD: patch-bs,v 1.1 2004/06/02 15:09:01 taya Exp $
+$NetBSD: patch-bs,v 1.2 2004/06/23 16:47:12 taya Exp $
 
---- config/mkdepend/imakemdep.h.orig	2004-05-30 11:16:09.000000000 +0900
-+++ config/mkdepend/imakemdep.h	2004-05-30 11:17:01.000000000 +0900
+diff -ru ../Orig/mozilla/config/mkdepend/imakemdep.h ./config/mkdepend/imakemdep.h
+--- ../Orig/mozilla/config/mkdepend/imakemdep.h	1998-09-05 13:22:25.000000000 +0900
++++ ./config/mkdepend/imakemdep.h	2004-06-15 23:56:48.000000000 +0900
 @@ -277,6 +277,9 @@
  # ifdef __i386__
  	"-D__i386__",
