@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/20 16:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/26 07:27:27 jlam Exp $
 #
 
 DISTNAME=	perl-mk-1.0
@@ -30,9 +30,15 @@ do-install:
 .include "../../mk/bsd.pkg.mk"
 
 # needs PERL5 defined from bsd.pkg.mk
+.if !defined(PERL5_SITELIB)
 PERL5_SITELIB!=		eval `${PERL5} -V:installsitelib 2>/dev/null`; \
 			${ECHO} $${installsitelib}
+.endif
+.if !defined(PERL5_SITEARCH)
 PERL5_SITEARCH!=	eval `${PERL5} -V:installsitearch 2>/dev/null`; \
 			${ECHO} $${installsitearch}
+.endif
+.if !defined(PERL5_ARCHLIB)
 PERL5_ARCHLIB!=		eval `${PERL5} -V:installarchlib 2>/dev/null`; \
 			${ECHO} $${installarchlib}
+.endif
