@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/08/29 12:22:38 skrll Exp $
+# $NetBSD: Makefile,v 1.11 2001/10/04 04:01:00 jlam Exp $
 
 DISTNAME=	libao-0.8.0
 CATEGORIES=	devel
@@ -10,12 +10,16 @@ COMMENT=	cross-platform audio library
 BUILD_DEPENDS+=	automake>=1.4:../../devel/automake
 
 PLIST_SUBST+=	VERSION="${DISTNAME}"
+
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-alsa
+CONFIGURE_ARGS+=	--disable-arts
+CONFIGURE_ARGS+=	--disable-esd
+
 USE_GMAKE=		yes
 USE_LIBTOOL=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-CONFIGURE_ENV+=		ac_cv_path_ESD_CONFIG=no
 
 .include "../../mk/ossaudio.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
