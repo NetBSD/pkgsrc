@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2432 2003/06/05 10:16:39 jmmv Exp $
+$NetBSD: CHANGES,v 1.2433 2003/06/05 12:55:00 markd Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2335,3 +2335,9 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated giblib to 1.2.3 [wiz 2003-06-05]
 	Updated feh to 1.2.6 [wiz 2003-06-05]
 	Added adocman-0.10 [jmmv 2003-06-05]
+	Updated dvipdfm to 0.13.2cnb1 [markd 2003-06-05]
+	Updated teTeX2-share to 2.0.2nb1 [markd 2003-06-05]
+	Added ess-5.1.24 [markd 2003-06-05]
+	Updated emacs-packages to 0.3 [markd 2003-06-05]
+	Added airport2basestationconfig-2.0.1 [markd 2003-06-05]
+	Added kdirstat-2.3.7 [markd 2003-06-05]
