@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6243 2004/06/20 20:18:34 minskim Exp $
+$NetBSD: CHANGES,v 1.6244 2004/06/20 20:22:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2976,3 +2976,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gtk2 to 2.4.3 [jmmv 2004-06-20]
 	Updated epiphany to 1.2.6 [jmmv 2004-06-20]
 	Updated ap2-perl to 1.99.14 [minskim 2004-06-20]
+	Updated liferea to 0.5.0 [minskim 2004-06-20]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1844 2004/06/20 20:16:36 jmmv Exp $
+$NetBSD: TODO,v 1.1845 2004/06/20 20:22:12 minskim Exp $
 
 Suggested new packages
 ======================
@@ -286,7 +286,6 @@ Suggested package updates
 	o libnet-1.1.1
 	o libole2-2.2.8
 	o licq-1.2.7
-	o liferea-0.4.9
 	o lilypond-2.2
 	o lmbench-2.0.4
 	o lout-3.29
