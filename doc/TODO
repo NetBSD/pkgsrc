@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3223 2005/03/15 16:21:34 wennmach Exp $
+$NetBSD: TODO,v 1.3224 2005/03/16 13:00:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -271,12 +271,14 @@ Suggested package updates
 	o aalib-x11-1.4rc5
 	o aap-0.144
 	o acpi-iasl-20040715
+	o acroread7-7.0.0
 	o advancecomp-1.14
 	o aewm++-1.0.27
 	o afterstep-2.00.03
 	o aim-1.5.286
 	o ald-0.1.6 [pkg/26431]
 	o algae-4.3.6
+	o amarok-1.2.2
 	o amavis-0.3.12
 	o amaya-9.1
 	o amule-2.0.0rc8 [pkg/28762]
@@ -456,6 +458,7 @@ Suggested package updates
 	o fluxbox-0.9.12
 	o fmsx-3.0
 	o fondu-040927
+	o fontconfig-2.3.1
 	o fop-0.20.5
 	o fort77-1.18
 	o fox-1.4.7
@@ -477,7 +480,7 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdeskcal-0.57.1
 	o gdm1-2.2.5.5
-	o getmail-4.3.3
+	o getmail-4.3.4
 	o gettext-0.14.1
 	o ghc-6.2.2
 	o ghostscript-8.00 (apfl)
@@ -505,6 +508,7 @@ Suggested package updates
 	o gnome-utils-1.4.1.3
 	o gnome-vfsmm26-2.8.0?
 	o gnumeric-1.4.3
+	o gnupg-1.4.1
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.39
 	o gogo-3.11p1
@@ -659,7 +663,7 @@ Suggested package updates
 	o minicom-2.1
 	o minivmac-2.5.0
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-1.4.0
+	o mkvtoolnix-1.4.1
 	o mlview-0.7.1
 	o mmix-20041014
 	o mono-1.0.6
@@ -674,7 +678,7 @@ Suggested package updates
 	o mplayer-plugin-firefox-2.80
 	o mrproject-0.9.1
 	o mserv-devel-0.41
-	o msmtp-1.3.8
+	o msmtp-1.3.9
 	o mtail-1.1.1
 	o mtools-3.9.10
 	o multi-gnome-terminal-1.6.2
@@ -879,7 +883,7 @@ Suggested package updates
 	o poedit-1.3.2
 	o poppy-4.01
 	o posh-0.3.14
-	o postfix-2.2.0
+	o postfix-2.2.1
 	o potrace-1.7
 	o pptp-1.5.0 [http://pptpclient.sourceforge.net/]
 	o pptpd-1.2.3
@@ -1046,6 +1050,8 @@ Suggested package updates
 	o stunnel-4.08
 	o subtitleripper-0.3.4
 	o sudo-1.6.8pl7
+	o sun-jdk15-5.0.2
+	o sun-jre15-5.0.2
 	o swfdec-0.3.2
 	o swi-prolog-5.5.7
 	o swig-build-1.3.24 [newer versions break subversion]
@@ -1074,6 +1080,7 @@ Suggested package updates
 	o tela-2.01
 	o tfmxplay-1.1.6
 	o thunderbird-bin-1.0
+	o tiff-3.7.2
 	o tinc-1.0.3
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
@@ -1163,11 +1170,11 @@ Suggested package updates
 	o xlispstat-3.52.20
 	o xlog-1.1
 	o xm7-303
-	o xmame-0.92
+	o xmame-0.94
 	o xmcd-3.3.0
-	o xmess-0.92
+	o xmess-0.94
 	o xmlsec1-1.2.7
-	o xmlstarlet-1.0.0
+	o xmlstarlet-1.0.1
 	o xmms-crossfade-0.3.7
 	o xmms-dspectogram-1.2.1
 	o xmms-fmradio-1.5
