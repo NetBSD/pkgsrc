@@ -1,24 +1,23 @@
-$NetBSD: patch-ad,v 1.4 2000/08/15 03:42:22 itojun Exp $
-use KANJI_SYMBOL to determine the language for configuration screen.
+$NetBSD: patch-ad,v 1.5 2000/10/14 01:22:42 itojun Exp $
 
---- rc.c.orig	Mon Jun  5 20:17:04 2000
-+++ rc.c	Tue Aug 15 12:36:56 2000
-@@ -58,3 +58,3 @@
+--- rc.c.orig	Wed Jun 14 19:18:51 2000
++++ rc.c	Wed Oct 11 15:36:29 2000
+@@ -52,3 +52,3 @@
  
 -#if LANG == JA
 +#if KANJI_SYMBOL
  #define CMT_HELPER	 "外部ビューアの編集"
-@@ -130,3 +130,3 @@
+@@ -129,3 +129,3 @@
  #define CMT_SAVEHIST     "Save URL history"
 -/* #define CMT_KANJICODE    "Display Kanji Code" */
 +#define CMT_KANJICODE    "Display Kanji Code"
  #define CMT_FRAME        "Automatic rendering of frame"
-@@ -214,3 +214,3 @@
+@@ -218,3 +218,3 @@
  {
 -#if LANG== JA
 +#if KANJI_SYMBOL
      {0, "black", "黒"},
-@@ -364,3 +364,3 @@
+@@ -367,3 +367,3 @@
  {
 -#if LANG == JA
 +#if KANJI_SYMBOL
