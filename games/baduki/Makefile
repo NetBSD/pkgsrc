@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/01/31 22:33:50 bad Exp $
+# $NetBSD: Makefile,v 1.3 1999/02/19 14:30:08 rh Exp $
 
 DISTNAME=	baduki-0.2
 CATEGORIES=	games
@@ -8,11 +8,12 @@ MAINTAINER=	bad@netbsd.org
 HOMEPAGE=	http://soback.kornet21.net/~artist/baduk/baduki.html
 
 DEPENDS+=	gettext-0.10.35:../../devel/gettext
-DEPENDS+=	gtk+-1.0.6:../../x11/gtk10
+DEPENDS+=	gtk10-1.0.6:../../x11/gtk10
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-gtk-prefix=${X11BASE} --without-included-gettext
+CONFIGURE_ENV+=	GTK_CONFIG="${X11BASE}/bin/gtk10-config"
 LDFLAGS+=	-L$(LOCALBASE)/lib
 CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
