@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2004/03/31 10:17:36 tron Exp $
+$NetBSD: distinfo,v 1.9 2004/04/21 11:14:40 tron Exp $
 
-SHA1 (php-4.3.4.tar.bz2) = 3047089b499c004728c90db359a3e42b50f4c1f3
-Size (php-4.3.4.tar.bz2) = 3774324 bytes
+SHA1 (php-4.3.6.tar.bz2) = c5696d778f0684fae94ee2ca6463f37c97228441
+Size (php-4.3.6.tar.bz2) = 3957796 bytes
 SHA1 (patch-aa) = 8f7027758c3fe1d59187e7777ee46e73d126738a
