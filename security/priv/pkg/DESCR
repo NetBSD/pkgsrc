@@ -1,0 +1,20 @@
+priv allows authorised users to execute commands that run as different
+users.
+
+When priv is invoked, it reads a list of authorised commands from a
+database file called
+
+	${PREFIX}/etc/priv/<username>
+
+Each line of the database file is a colon-seperated list of fields. 
+The first two fields must be specified.  Blank lines or lines
+beginning with a ``#'' character are ignored.  The fields, in order,
+are:
+
+	expiry date
+	user name to run command as
+	flags
+	command name
+
+The format of the expiry date is YYYYMMDDhhmm.  A date of ``0'' is
+interpreted as no expiry date.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/14 10:53:26 agc Exp $
+bin/priv
+man/man1/priv.1
+@dirrm etc/priv
