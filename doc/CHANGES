@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1154 2003/01/18 08:33:47 martti Exp $
+$NetBSD: CHANGES,v 1.1155 2003/01/18 09:18:24 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -319,3 +319,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xemacs-current to 21.5.10 [uebayasi 2002-01-18]
 	Updated keychain to 2.0.2 [martti 2002-01-18]
 	Updated stunnel to 4.04 [martti 2002-01-18]
+	Updated docbook-website to 2.3nb1 [grant 2002-01-18]
