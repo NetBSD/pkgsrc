@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/08/02 20:33:23 jdolecek Exp $
+# $NetBSD: Makefile,v 1.19 2002/08/03 15:11:40 jdolecek Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -75,7 +75,7 @@ DISPLAY= ':2'
 pre-build: checkforx
 
 do-build:
-	tcsh -c "setenv DISPLAY '${DISPLAY}'; cd ${WRKSRC}/..&& 	\
+	${_ULIMIT_CMD}tcsh -c "setenv DISPLAY '${DISPLAY}'; cd ${WRKSRC}/..&& \
 		   ./bootstrap&& source *.Set&& dmake"
 			
 pre-install: checkforx
