@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 1997/10/12 23:38:25 hubertf Exp $
 # New ports collection makefile for:    icon
 # Version required:     9.3
 # Date created:         05 April 1995
 # Whom:                 thomas@ghpc8.ihf.rwth-aachen.de
 #
+# $NetBSD: Makefile,v 1.4 1998/01/24 20:18:31 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.8 1997/02/12 08:39:15 tg Exp
 #
 
