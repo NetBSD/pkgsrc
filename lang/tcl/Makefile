@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2004/11/29 14:55:32 adam Exp $
+# $NetBSD: Makefile,v 1.44 2004/12/30 17:01:27 kristerw Exp $
 
 DISTNAME=	tcl8.4.8-src
 PKGNAME=	tcl-8.4.8
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -30,7 +31,7 @@ CONFIGURE_ARGS+=	--mandir=${WRKDIR}/man
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-.if empty(OS_VERSION:M1.[56].*)
+.if empty(OS_VERSION:M1.[56]*)
 CONFIGURE_ARGS+=	--enable-threads
 .else
 CONFIGURE_ARGS+=	--disable-threads
@@ -41,7 +42,7 @@ CONFIGURE_ARGS+=	--disable-threads
 CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
 
 .if ${OPSYS} == "NetBSD"
-.if empty(OS_VERSION:M1.[56].*)
+.if empty(OS_VERSION:M1.[56]*)
 .include "../../mk/pthread.buildlink3.mk"
 .endif
 .endif
