@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5903 2004/05/11 12:03:01 seb Exp $
+$NetBSD: CHANGES,v 1.5904 2004/05/11 12:09:11 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2456,3 +2456,17 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated openssh to 3.8.1.1 [wiz 2004-05-10]
 	Updated fprot-workstation-bin to 4.4.2 [simonb 2004-05-11]
 	Updated py-bsddb3 to 4.2.4nb1 [seb 2004-05-11]
+	Updated ted to 2.16 [markd 2004-05-11]
+	Updated ted-cs to 2.16 [markd 2004-05-11]
+	Updated ted-da to 2.16 [markd 2004-05-11]
+	Updated ted-de to 2.16 [markd 2004-05-11]
+	Updated ted-en-gb to 2.16 [markd 2004-05-11]
+	Updated ted-en-us to 2.16 [markd 2004-05-11]
+	Updated ted-es to 2.16 [markd 2004-05-11]
+	Updated ted-fr to 2.16 [markd 2004-05-11]
+	Updated ted-it to 2.16 [markd 2004-05-11]
+	Updated ted-nl to 2.16 [markd 2004-05-11]
+	Updated ted-no to 2.16 [markd 2004-05-11]
+	Updated ted-pl to 2.16 [markd 2004-05-11]
+	Updated ted-pt to 2.16 [markd 2004-05-11]
+	Updated ted-sv to 2.16 [markd 2004-05-11]

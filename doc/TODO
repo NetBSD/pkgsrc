@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1732 2004/05/11 11:56:53 dillo Exp $
+$NetBSD: TODO,v 1.1733 2004/05/11 12:09:11 markd Exp $
 
 Suggested new packages
 ======================
@@ -357,7 +357,6 @@ Suggested package updates
 	o tcpreplay-2.1.1
 	o tct-1.14
 	o teapop-0.3.8
-	o ted-2.15 [do not update per tech-pkg mail from Jonathan on 20040404]
 	o texi2html-1.70
 	o texinfo-4.7
 	o thunderbird-0.6
