@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/10/08 16:41:32 heinz Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/10/20 20:09:05 heinz Exp $
 @comment bin/spamassassin
 @comment bin/spamc
 @comment bin/spamd
@@ -6,12 +6,12 @@ etc/rc.d/spamd
 @comment etc/spamassassin/local.cf
 @comment etc/spamassassin/netbsd_lists.cf
 @comment etc/spamassassin/user_prefs.template
+share/doc/html/spamassassin/ninjabutton.png
 share/doc/spamassassin/INSTALL
 share/doc/spamassassin/License
 share/doc/spamassassin/README
 share/doc/spamassassin/STATISTICS.txt
 share/doc/spamassassin/TRADEMARK
-share/doc/spamassassin/html/ninjabutton.png
 share/doc/spamassassin/masses/CORPUS_POLICY
 share/doc/spamassassin/masses/CORPUS_SUBMIT
 share/doc/spamassassin/masses/README
@@ -73,6 +73,6 @@ share/spamassassin/user_prefs.template
 @dirrm share/doc/spamassassin/masses/lib/Mail
 @dirrm share/doc/spamassassin/masses/lib
 @dirrm share/doc/spamassassin/masses
-@dirrm share/doc/spamassassin/html
 @dirrm share/doc/spamassassin
+@dirrm share/doc/html/spamassassin
 @comment @dirrm etc/spamassassin

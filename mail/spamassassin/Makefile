@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2002/10/08 16:41:32 heinz Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/20 20:09:05 heinz Exp $
 
-DISTNAME=	Mail-SpamAssassin-2.42
-PKGNAME=	spamassassin-2.42
-PKGREVISION=	1
+DISTNAME=	Mail-SpamAssassin-2.43
+PKGNAME=	spamassassin-2.43
+PKGREVISION=	0
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}			\
@@ -59,8 +59,11 @@ test:	build
 pre-configure: perl5-configure
 
 post-configure:
-.for f in README lib/Mail/SpamAssassin/Conf.pm spamd/README.spamd-vpopmail
-	@${SED} -e "s,/usr/share,${PREFIX}/share,"			\
+.for f in INSTALL README lib/Mail/SpamAssassin/Conf.pm			\
+	  spamd/README.spamd-vpopmail sql/README
+	@${SED} -e "s,/usr/share,${PREFIX}/share,g"			\
+		-e "s,/usr/bin,${PREFIX}/bin,g"				\
+		-e "s,/usr/lib,${PREFIX}/lib,g"				\
 		-e "s,/etc/mail,${PKG_SYSCONFBASE},g"			\
 		${WRKSRC}/${f} > ${WRKSRC}/${f}.fixed &&		\
 	  ${MV} ${WRKSRC}/${f}.fixed ${WRKSRC}/${f}
@@ -68,16 +71,18 @@ post-configure:
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-.for d in html masses/lib/Mail spamd sql tools
+.for d in masses/lib/Mail spamd sql tools
 	${INSTALL_DATA_DIR}  ${DOCDIR}/$d
 .endfor
+	${INSTALL_DATA_DIR}  ${PREFIX}/share/doc/html/spamassassin
+	${INSTALL_DATA} ${WRKSRC}/ninjabutton.png                       \
+	  ${PREFIX}/share/doc/html/spamassassin/
 .for f in INSTALL License README TRADEMARK sample-nonspam.txt		\
 	  sample-spam.txt sql/README sql/spamassassin.sql		\
 	  spamd/README.spamd spamd/README.spamd-vpopmail
 	${INSTALL_DATA} ${WRKSRC}/$f ${DOCDIR}/$f
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/rules/STATISTICS.txt ${DOCDIR}/
-	${INSTALL_DATA} ${WRKSRC}/ninjabutton.png ${DOCDIR}/html/
 	${INSTALL_DATA} ${WRKSRC}/masses/lib/Mail/ArchiveIterator.pm	\
 	  ${DOCDIR}/masses/lib/Mail/ArchiveIterator.pm
 	@(cd ${WRKSRC}/masses/;						\
