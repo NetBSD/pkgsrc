@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/07/08 13:30:04 bjh21 Exp $
+bin/as31
+man/man1/as31.1
+man/cat1/as31.0

@@ -1,0 +1,2 @@
+This is a simple assembler for 8031/8051 type microcontrollers.  It works
+from a single input file, and produces output in various hex formats.
