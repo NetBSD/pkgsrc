@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/12/13 21:07:27 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2000/12/17 13:21:19 tron Exp $
 
 DISTNAME=	opera-4.0-b4-20001211.012-static.i386
 PKGNAME=	opera-4.0b4
@@ -14,8 +14,7 @@ HOMEPAGE=	http://www.opera.com/
 
 DEPENDS+=	suse_libjpeg>=6.4:../../emulators/suse_libjpeg
 DEPENDS+=	suse_libpng>=6.4:../../emulators/suse_libpng
-DEPENDS+=	suse_x11>=6.3:../../emulators/suse_x11
-DEPENDS+=	suse_libpng>=7.0:../../emulators/suse_libpng
+DEPENDS+=	suse_x11>=6.4:../../emulators/suse_x11
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
