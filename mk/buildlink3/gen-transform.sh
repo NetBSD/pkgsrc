@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.23 2004/02/12 20:29:34 jlam Exp $
+# $NetBSD: gen-transform.sh,v 1.24 2004/02/19 18:39:27 jlam Exp $
 
 transform="@_BLNK_TRANSFORM_SEDFILE@"
 untransform="@_BLNK_UNTRANSFORM_SEDFILE@"
@@ -234,12 +234,6 @@ s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.so\.[0-9]*|-L\1 -l\2|g
 s|\($2\)/lib\([^/$_sep]*\)\.so\.[0-9]*|-L\1 -l\2|g
 s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.so|-L\1 -l\2|g
 s|\($2\)/lib\([^/$_sep]*\)\.so|-L\1 -l\2|g
-s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.[0-9]*\.[0-9]*\.[0-9]*\.dylib|-L\1 -l\2|g
-s|\($2\)/lib\([^/$_sep]*\)\.[0-9]*\.[0-9]*\.[0-9]*\.dylib|-L\1 -l\2|g
-s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.[0-9]*\.[0-9]*\.dylib|-L\1 -l\2|g
-s|\($2\)/lib\([^/$_sep]*\)\.[0-9]*\.[0-9]*\.dylib|-L\1 -l\2|g
-s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.[0-9]*\.dylib|-L\1 -l\2|g
-s|\($2\)/lib\([^/$_sep]*\)\.[0-9]*\.dylib|-L\1 -l\2|g
 s|\($2/[^$_sep]*\)/lib\([^/$_sep]*\)\.dylib|-L\1 -l\2|g
 s|\($2\)/lib\([^/$_sep]*\)\.dylib|-L\1 -l\2|g
 EOF
