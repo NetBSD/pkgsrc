@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/07/29 22:23:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2002/10/18 21:37:52 jlam Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of Xalan-J,
 # because although Xalan runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -16,6 +16,7 @@ COMMENT=	the Apache Project's XSLT implementation
 DEPENDS+=	xerces-j>=1.2.0:../../textproc/xerces-j
 
 USE_JAVA=	run
+USE_BUILDLINK2=
 NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=
@@ -30,4 +31,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/xalan
 	cd ${WRKSRC}/samples && ${PAX} -rwpp . ${PREFIX}/share/examples/java/xalan
 
+.include "../../mk/java.mk"
 .include "../../mk/bsd.pkg.mk"
