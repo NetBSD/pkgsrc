@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/19 04:54:23 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/11/30 23:32:22 salo Exp $
 bin/gnp
 man/man1/gnp.1
 share/gnome/apps/Applications/gnotepad+.desktop
@@ -107,9 +107,9 @@ share/gnotepad+/xpm/tb_undo.xpm
 share/gnotepad+/xpm/tb_unordered.xpm
 share/gnotepad+/xpm/tb_winclose.xpm
 share/gnotepad+/xpm/tb_winnew.xpm
-share/locale/da/LC_MESSAGES/gnotepad+.mo
-share/locale/fr/LC_MESSAGES/gnotepad+.mo
-share/locale/ja/LC_MESSAGES/gnotepad+.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnotepad+.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnotepad+.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnotepad+.mo
 @dirrm share/gnotepad+/xpm
 @dirrm share/gnotepad+
 @dirrm share/gnome/help/gnotepad+/C
