@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/11/11 11:49:15 grant Exp $
+# $NetBSD: Makefile,v 1.8 2004/11/11 11:51:12 grant Exp $
 #
 
 DISTNAME=		ipsec-tools-0.5.pre20041109
@@ -22,6 +22,7 @@ PKG_SUPPORTED_OPTIONS+=	radius
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mradius)
+.  include "../../net/libradius/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libradius
 .endif
 
@@ -51,6 +52,5 @@ post-install:
 	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-natt ${EXAMPLE_DIR}
 	${INSTALL_DATA} ${SAMPLE_DIR}/racoon.conf.sample-plainrsa ${EXAMPLE_DIR}
 
-.include "../../net/libradius/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
