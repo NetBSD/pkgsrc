@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.128 2004/09/12 05:00:53 jlam Exp $
+# $NetBSD: Makefile,v 1.129 2004/09/14 17:18:05 jlam Exp $
 
-DISTNAME=		samba-3.0.5
+DISTNAME=		samba-3.0.7
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/old-versions/ \
 			ftp://ring.asahi-net.or.jp/pub/net/samba/old-versions/ \
@@ -10,7 +10,6 @@ COUNTRY_MIRRORS=	au1 ca fi fr it pl ru sg se us1 us6
 .for COUNTRY in ${COUNTRY_MIRRORS}
 MASTER_SITES+=		ftp://${COUNTRY}.samba.org/pub/samba/old-versions/
 .endfor
-#EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.samba.org/
@@ -46,12 +45,12 @@ FILES_SUBST+=		SAMBA_PRIVATE=${SAMBA_PRIVATE}
 FILES_SUBST+=		SAMBA_VARDIR=${SAMBA_VARDIR}
 
 CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
+CONFIGURE_ARGS+=	--with-libdir=${SAMBA_LIBDIR}
 CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
 CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR}
 CONFIGURE_ARGS+=	--with-piddir=${SAMBA_PIDDIR}
 CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE}
 CONFIGURE_ARGS+=	--localstatedir=${SAMBA_VARDIR}
-CONFIGURE_ARGS+=	--libdir=${SAMBA_LIBDIR}
 
 CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/samba/swat
 CONFIGURE_ARGS+=	--with-libsmbclient
@@ -112,17 +111,17 @@ post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/deluser.sh > ${WRKDIR}/deluser.sh
 
 post-install:
-	-cd ${PREFIX}/lib && ln -s libsmbclient.so libsmbclient.so.0
-.for d in auth idmap pdb rpc
-	${RMDIR} ${SAMBA_LIBDIR}/${d}
-.endfor
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	-cd ${SAMBA_LIBDIR} && ln -s libsmbclient.so libsmbclient.so.0
+	for d in auth idmap pdb rpc; do					\
+		${RMDIR} ${SAMBA_LIBDIR}/$$d;				\
+	done
 .if !empty(NSS_WINBIND)
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/${NSS_WINBIND} ${PREFIX}/lib
 .endif
 .if !empty(NSS_WINS)
 	${INSTALL_LIBRARY} ${WRKSRC}/nsswitch/${NSS_WINS} ${PREFIX}/lib
 .endif
+	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}/../docs/registry; for file in *.reg; do		\
 		${INSTALL_DATA} $$file ${DOCDIR}/$$file;		\
 	done
