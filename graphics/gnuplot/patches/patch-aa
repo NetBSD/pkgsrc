@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.4 1999/02/09 13:36:09 bad Exp $
+
 --- readline.c.orig	Tue Nov  3 13:53:59 1998
 +++ readline.c	Mon Feb  1 00:37:36 1999
 @@ -143,7 +144,7 @@
