@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/02/16 13:56:22 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2001/04/05 01:48:31 dmcmahill Exp $
 #
 
 DISTNAME=	plptools-0.6
@@ -17,5 +17,8 @@ USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		CPPFLAGS="-I${PREFIX}/include/" LIBS="-ltermlib"
+
+.include "../../mk/bsd.prefs.mk"
+CONFIGURE_ARGS+=	--with-serial=${DEFAULT_SERIAL_DEVICE}
 
 .include "../../mk/bsd.pkg.mk"
