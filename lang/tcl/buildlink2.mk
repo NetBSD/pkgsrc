@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 18:39:28 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/08/29 17:19:25 jlam Exp $
 
 .if !defined(TCL_BUILDLINK2_MK)
 TCL_BUILDLINK2_MK=	# defined
@@ -19,5 +19,7 @@ BUILDLINK_FILES.tcl+=	lib/libtclstub83.*
 BUILDLINK_TARGETS+=	tcl-buildlink
 
 tcl-buildlink: _BUILDLINK_USE
+
+TCLCONFIG_SH?=		${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 
 .endif	# TCL_BUILDLINK2_MK
