@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1999/08/30 08:44:47 jlam Exp $
+# $NetBSD: Makefile,v 1.8 1999/09/21 18:18:50 tron Exp $
 #
 
 DISTNAME=	wmakerconf-2.2
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www-info2.informatik.uni-wuerzburg.de/staff/ulli/wmakerconf/
 
-DEPENDS+=	windowmaker-0.60.0:../../x11/windowmaker
+DEPENDS+=	windowmaker-*:../../x11/windowmaker
 DEPENDS+=	imlib-1.9.4:../../graphics/imlib
 DEPENDS+=	libproplist-0.8.3:../../devel/libproplist
 DEPENDS+=	gtk+-1.2.4:../../x11/gtk
