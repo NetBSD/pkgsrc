@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/26 17:04:31 tv Exp $
+# $NetBSD: Makefile,v 1.3 1999/12/16 12:03:20 abs Exp $
 
 DISTNAME=       hpack79${USE_RSAREF2:S/YES/u/:C/[^u]*//g}src
 PKGNAME=        hpack-0.79
@@ -20,7 +20,7 @@ MAKE_FLAGS=	CFLAGS="-c -DBSD386 -D__UNIX__ -DPREFIX=\\\"${PREFIX}\\\" -I. ${CFLA
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_RSAREF2) && ${USE_RSAREF2} == YES
-DEPENDS+=	rsaref-2.0p2:../../security/rsaref
+DEPENDS+=	rsaref-2.0p3:../../security/rsaref
 LDFLAGS+=	-L${LOCALBASE}/lib -lrsaref
 CFLAGS+=	-I${LOCALBASE}/include -DRSAREF
 .endif
