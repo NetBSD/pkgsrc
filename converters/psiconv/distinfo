@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.7 2004/01/26 13:15:18 grant Exp $
+$NetBSD: distinfo,v 1.8 2004/10/08 13:19:26 adam Exp $
 
-SHA1 (psiconv-0.8.3.tar.gz) = 19bab16895385904f152af5dea294fe029207b7b
-Size (psiconv-0.8.3.tar.gz) = 326460 bytes
-SHA1 (patch-aa) = efe63d69692430900b79b80e8b06066e9182d739
-SHA1 (patch-af) = 628abc563c0f548baf813954a12355bcf2f7255d
-SHA1 (patch-ag) = c840310b5417dd2caa7d120398b0910043820276
-SHA1 (patch-ah) = a35166070aa15b56f4d5e30f07411bc42556eaeb
-SHA1 (patch-ai) = 03ab0625c0c08d94d31f886829eef9248e214169
+SHA1 (psiconv-0.9.6.tar.gz) = 3bdf547ed6e8f69bea41ea4c25cbe96225099755
+Size (psiconv-0.9.6.tar.gz) = 497086 bytes
+SHA1 (patch-aa) = 7580f79866a3081f282ca1c405b9428aefd6a2ab

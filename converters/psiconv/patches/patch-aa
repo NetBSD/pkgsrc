@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2003/09/03 12:18:29 adam Exp $
+$NetBSD: patch-aa,v 1.4 2004/10/08 13:19:26 adam Exp $
 
---- Makefile.in.orig	2003-09-03 14:03:07.000000000 +0200
+--- Makefile.in.orig	2004-04-30 12:07:58.000000000 +0000
 +++ Makefile.in
-@@ -85,7 +85,7 @@ am__quote = @am__quote@
- cflags_set = @cflags_set@
- install_sh = @install_sh@
- 
--SUBDIRS = compat lib program formats extra docs
-+SUBDIRS = compat lib program extra docs
- EXTRA_DIST = autogen.sh
- subdir = .
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -179,7 +179,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = compat lib program formats docs etc
++SUBDIRS = compat lib program docs etc
+ EXTRA_DIST = autogen.sh 
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
