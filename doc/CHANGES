@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.190 2002/10/07 10:34:32 itojun Exp $
+$NetBSD: CHANGES,v 1.191 2002/10/07 11:36:15 skrll Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3139,3 +3139,6 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ruby-rd-mode to 0.6.11nb1 [taca 2002-10-06]
 	Updated xv to 3.10anb4 [he 2002-10-06]
 	Updated bind4 to 4.9.10 [itojun 2002-10-07]
+	Updated mplayer to 0.90rc8nb2 [skrll 2002-10-07]
+	Updated gmplayer to 0.90rc8nb2 [skrll 2002-10-07]
+	Updated mplayer-share to 0.90rc8 [skrll 2002-10-07]
