@@ -8,3 +8,11 @@ allows an application to read and inject Ethernet frames into the network
 stack.  tap(4) devices can be created and used individually for system-wide
 configurations, but an application can also use a special clonable device
 node to create interfaces on demand.
+
+As a LKM must be compiled with the same environment as the kernel with respect
+to a handful of definition (DEBUG, DIAGNOSTIC, MULTIPROCESSOR, LOCKDEBUG and
+MALLOCLOG), the package provides a variable, TAP_KERNEL_ENV, to hold the
+correct addition to the compilation command line.  For example, you might want
+to define it the following way in mk.conf:
+
+  TAP_KERNEL_ENV=    -DDIAGNOSTIC -DMULTIPROCESSOR
