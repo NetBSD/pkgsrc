@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.18 2002/02/01 16:04:39 jlam Exp $
+$NetBSD: patch-aa,v 1.19 2002/06/20 17:12:37 taca Exp $
 
---- Makefile.tmpl.orig	Fri Feb  1 10:05:43 2002
+--- Makefile.tmpl.orig	Fri Jun 21 02:02:43 2002
 +++ Makefile.tmpl
-@@ -324,11 +324,6 @@
+@@ -100,6 +100,8 @@
+ PERL            = @PERL@
+ TAR		= @TAR@
+ TAROPT		= @TAROPT@
++BINOWN		= @BINOWN@
++BINGRP		= @BINGRP@
+ 
+ #   installation name of Apache webserver
+ TARGET          = @TARGET@
+@@ -324,11 +326,6 @@
  	$(MKDIR) $(root)$(mandir)/man1
  	$(MKDIR) $(root)$(mandir)/man8
  	$(MKDIR) $(root)$(sysconfdir)
@@ -14,7 +23,7 @@ $NetBSD: patch-aa,v 1.18 2002/02/01 16:04:39 jlam Exp $
  	$(MKDIR) $(root)$(htdocsdir)
  	$(MKDIR) $(root)$(manualdir)
  	$(MKDIR) $(root)$(iconsdir)
-@@ -387,34 +382,6 @@
+@@ -387,34 +384,6 @@
  			file=`echo $${mod} | sed -e 's;^.*/\([^/]*\);\1;'`; \
  			echo "$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}"; \
  			$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}; \
@@ -49,7 +58,7 @@ $NetBSD: patch-aa,v 1.18 2002/02/01 16:04:39 jlam Exp $
  		done; \
  	fi
  	@echo "<=== [programs]"
-@@ -533,7 +500,7 @@
+@@ -533,7 +502,7 @@
  #   icons and distributed CGI scripts.
  install-data:
  	@echo "===> [data: Installing initial data files]"
@@ -58,7 +67,25 @@ $NetBSD: patch-aa,v 1.18 2002/02/01 16:04:39 jlam Exp $
  		echo "[PRESERVING EXISTING DATA SUBDIR: $(root)$(htdocsdir)/]"; \
  	else \
  		echo "Copying tree $(TOP)/htdocs/ -> $(root)$(htdocsdir)/"; \
-@@ -555,9 +522,10 @@
+@@ -541,6 +510,8 @@
+ 		(cd $(root)$(htdocsdir)/ && $(TAR) -xf -); \
+ 		find $(root)$(htdocsdir)/ -type d -exec chmod a+rx {} \; ; \
+ 		find $(root)$(htdocsdir)/ -type f -print | xargs chmod a+r ; \
++		find $(root)$(htdocsdir)/ -print | \
++			xargs chown ${BINOWN}:${BINGRP} ; \
+ 	fi
+ 	-@if [ -d $(TOP)/htdocs/manual ]; then \
+ 		echo "Copying tree $(TOP)/htdocs/manual -> $(root)/$(manualdir)/"; \
+@@ -548,6 +519,8 @@
+ 		(cd $(root)$(manualdir)/ && $(TAR) -xf -); \
+ 		find $(root)$(manualdir)/ -type d -exec chmod a+rx {} \; ; \
+ 		find $(root)$(manualdir)/ -type f -print | xargs chmod a+r ; \
++		find $(root)$(manualdir)/ -print | \
++			xargs chown ${BINOWN}:${BINGRP} ; \
+ 	fi
+ 	-@if [ -f $(root)$(cgidir)/printenv ]; then \
+ 		echo "[PRESERVING EXISTING CGI SUBDIR: $(root)$(cgidir)/]"; \
+@@ -555,23 +528,25 @@
  		for script in printenv test-cgi; do \
  			cat $(TOP)/cgi-bin/$${script} |\
  			sed -e 's;^#!/.*perl;#!$(PERL);' \
@@ -71,7 +98,15 @@ $NetBSD: patch-aa,v 1.18 2002/02/01 16:04:39 jlam Exp $
  		done; \
  	fi
  	@echo "Copying tree $(TOP)/icons/ -> $(root)$(iconsdir)/"; \
-@@ -571,7 +539,7 @@
+ 	(cd $(TOP)/icons/ && $(TAR) $(TAROPT) - *) |\
+ 	(cd $(root)$(iconsdir)/ && $(TAR) -xf -); \
+ 	find $(root)$(iconsdir)/ -type d -exec chmod a+rx {} \; ;\
+-	find $(root)$(iconsdir)/ -type f -exec chmod a+r {} \;
++	find $(root)$(iconsdir)/ -type f -exec chmod a+r {} \; ;\
++	chown -R ${BINOWN}:${BINGRP} $(root)$(iconsdir)/.
+ 	@echo "<=== [data]"
+ 
+ #   create the initial configuration by providing default files
  #   and initial config files while preserving existing ones.
  install-config:
  	@echo "===> [config: Installing Apache configuration files]"
