@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2004/02/19 17:48:17 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2004/02/19 17:56:11 jlam Exp $
 # FreeBSD Id: Makefile,v 1.2 1998/08/06 14:55:12 vanilla Exp
 #
 
@@ -66,7 +66,7 @@ pre-configure:
 
 post-configure:
 	@cd ${WRKSRC};							\
-	files="config.status config.h glibconfig.h";			\
+	files="config.status.overridden config.h glibconfig.h";		\
 	for f in $${files}; do						\
 		${SED}	-e "s|^\(#define.*GLIB_MAJOR_VERSION\).*|\1	${GLIB_MAJOR_VERSION}|" \
 			-e "s|^\(#define.*GLIB_MINOR_VERSION\).*|\1	${GLIB_MINOR_VERSION}|" \
