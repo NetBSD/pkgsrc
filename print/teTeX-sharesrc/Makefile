@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/03/14 03:13:37 lukem Exp $
+# $NetBSD: Makefile,v 1.12 2002/09/21 01:51:36 jlam Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -16,6 +16,7 @@ DEPENDS+=	teTeX-share>=1.0.2nb1:../teTeX-share
 
 DIST_SUBDIR=	teTeX
 WRKSRC=		${WRKDIR}
+USE_BUILDINK2=	yes
 EXTRACT_ONLY=	# empty
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
