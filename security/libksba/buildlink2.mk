@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1.1.1 2004/01/25 00:14:56 kleink Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2004/01/25 22:29:50 kleink Exp $
 #
 # This Makefile fragment is included by packages that use libksba.
 #
@@ -9,7 +9,7 @@
 LIBKSBA_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			libksba
-BUILDLINK_DEPENDS.libksba?=		libksba>=0.9.1
+BUILDLINK_DEPENDS.libksba?=		libksba>=0.9.1nb1
 BUILDLINK_PKGSRCDIR.libksba?=		../../security/libksba
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.libksba=libksba
