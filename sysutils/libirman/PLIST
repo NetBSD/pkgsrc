@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/17 11:32:51 abs Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/05/17 13:06:09 abs Exp $
+bin/irman_test_func
+bin/irman_test_io
+bin/irman_test_name
 bin/workmanir
 lib/libirman.a
 sbin/lirmand
+share/doc/libirman.README
 share/examples/irman.conf
