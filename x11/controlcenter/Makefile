@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/07/31 10:49:16 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2000/08/01 21:39:21 tron Exp $
 
 DISTNAME=		control-center-1.2.0
 CATEGORIES=		x11 gnome
@@ -19,7 +19,8 @@ LOCALSTATEDIR=		/var/gnome
 
 CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
 			--with-glib-prefix=${LOCALBASE}
-CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
+CONFIGURE_ENV+=		CPPFLAGS=-I${LOCALBASE}/include \
+			LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
 
 post-install:
 	${RMDIR} ${PREFIX}/share/gnome/help/control-center/C/stylesheet-images
