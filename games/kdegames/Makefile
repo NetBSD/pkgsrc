@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/01/30 23:18:48 agc Exp $
+# $NetBSD: Makefile,v 1.25 1999/02/15 21:41:32 tron Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:49 asami Exp
 #
 
@@ -14,6 +14,8 @@ DEPENDS+=	kdebase-1.0:../../x11/kdebase
 DEPENDS+=	kdesupport-1.0:../../converters/kdesupport
 
 CONFLICTS=	kdegames-2.1b kdegames-3.1b kdegames-4.1b
+
+IGNORE=		"needs to be updated"
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
