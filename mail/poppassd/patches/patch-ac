@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/06/10 15:15:07 taca Exp $
+$NetBSD: patch-ac,v 1.2 2002/05/02 16:16:56 martti Exp $
 
---- password/poppassd.c.orig	Sun Jun 10 22:54:40 2001
-+++ password/poppassd.c
+--- password/poppassd.c.orig	Fri Apr  5 04:38:36 2002
++++ password/poppassd.c	Thu May  2 09:03:15 2002
 @@ -167,8 +167,13 @@
  /* LANMAN allows up to 14 char passwords (truncates if longer), but tacacs
     only seems to allow 11. */
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/06/10 15:15:07 taca Exp $
  
  #include "config.h"
  
-@@ -294,6 +299,7 @@
+@@ -283,6 +288,7 @@
  
  static char *P1[] =
     {
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/06/10 15:15:07 taca Exp $
       "changing password for *\nold password: ",  /* shadow */
       "enter login password: ",                   /* Solaris */
       "old smb password: ",                       /* smb */
-@@ -353,7 +359,7 @@
+@@ -342,7 +348,7 @@
      char           oldpass [BUFSIZE]   = "";
      char           newpass [BUFSIZE]   = "";
      int            nopt                = -1;
@@ -33,7 +33,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/06/10 15:15:07 taca Exp $
      int            mode                = 0;
      char          *ptr                 = NULL;
      POP            p;
-@@ -375,8 +381,6 @@
+@@ -364,8 +370,6 @@
              pname = ptr + 1;
      }
  
@@ -42,7 +42,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/06/10 15:15:07 taca Exp $
      /*
       * Set up some stuff in -p- so we can call Qpopper routines
       */
-@@ -384,6 +388,17 @@
+@@ -373,6 +377,17 @@
      p.AuthType            = noauth;
      p.myname              = pname;
  
@@ -60,7 +60,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/06/10 15:15:07 taca Exp $
      /*
       * Handle command-line options
       */
-@@ -392,9 +407,9 @@
+@@ -381,9 +396,9 @@
      {
          switch (nopt)
          {
@@ -73,7 +73,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/06/10 15:15:07 taca Exp $
                                    "[-t trace-file] [-v] [-y log-facility]\n",
                            pname );
                  exit (1);
-@@ -411,20 +426,34 @@
+@@ -400,20 +415,34 @@
                  verbose = TRUE;
                  break;
  
@@ -110,7 +110,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/06/10 15:15:07 taca Exp $
                  break;
  
             case 't':
-@@ -781,6 +810,11 @@
+@@ -770,6 +799,11 @@
  
     chdir ("/");
     umask (0);
