@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.671 2003/07/01 09:46:27 wiz Exp $
+$NetBSD: TODO,v 1.672 2003/07/01 16:20:37 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -193,7 +193,6 @@ Suggested package updates
 	o net-snmp-5.0.7 [pkg/19939]
 	o net-snmp-5.0.8
 	o netatalk-1.6.3 [pkg/21930]
-	o netscape7-7.1
 	o newscache-0.99.22p1
 	o nmap-3.30
 	o ns-flash-6.0.79
