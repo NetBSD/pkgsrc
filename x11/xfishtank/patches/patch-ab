@@ -1,6 +1,6 @@
---- Imakefile.orig	Wed Dec 16 01:04:35 1992
-+++ Imakefile	Tue Jun 17 08:36:51 1997
-@@ -2,7 +2,7 @@
+--- Imakefile.orig	Wed Dec 16 00:04:35 1992
++++ Imakefile	Mon Oct 27 11:52:06 1997
+@@ -2,10 +2,16 @@
  LOCAL_LIBRARIES = $(XLIB)
          DEPLIBS = $(DEPXLIB)
    SYS_LIBRARIES = -lm
@@ -9,3 +9,12 @@
  
             SRCS = xfish.c medcut.c read.c gifread.c
             OBJS = xfish.o medcut.o read.o gifread.o
++
++XCOMM agc - there's no man page in this piece of software,
++XCOMM so fool imake, by redefining the InstallManPageLong macro
++
++#undef InstallManPageLong
++#define InstallManPageLong(file,destdir,dest)
+ 
+ ComplexProgramTarget(xfishtank)
+ 
