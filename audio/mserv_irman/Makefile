@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/18 16:33:47 abs Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/26 02:05:35 wiz Exp $
 #
 
 DISTNAME=	mserv_irman-0.14
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.mono.org/abs/tools/mserv_irman/
 COMMENT=	Control mserv mp3 jukebox program via infra-red remote
 
 DEPENDS+=	mserv-[0-9]*:../../audio/mserv
-DEPENDS+=	libirman>=0.4.1bnb3:../../sysutils/libirman
+DEPENDS+=	libirman>=0.4.1.2nb3:../../sysutils/libirman
 DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Config-IniFiles-[0-9]*:../../devel/p5-Config-IniFiles
 
