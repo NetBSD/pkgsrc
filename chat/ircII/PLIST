@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2002/03/21 16:30:59 mrg Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/04/03 13:42:01 mrg Exp $
 bin/irc
-bin/irc-20020322
+bin/irc-20020403
 bin/ircbug
 bin/ircflush
 bin/ircio
@@ -144,6 +144,7 @@ share/irc/help/load/2.9script@.GZ@
 share/irc/help/load/action@.GZ@
 share/irc/help/load/alias@.GZ@
 share/irc/help/load/autoop@.GZ@
+share/irc/help/load/autoquery@.GZ@
 share/irc/help/load/basical@.GZ@
 share/irc/help/load/bigcheese@.GZ@
 share/irc/help/load/brc@.GZ@
@@ -245,6 +246,7 @@ share/irc/help/on/connect@.GZ@
 share/irc/help/on/ctcp@.GZ@
 share/irc/help/on/ctcp_reply@.GZ@
 share/irc/help/on/dcc_chat@.GZ@
+share/irc/help/on/dcc_list@.GZ@
 share/irc/help/on/dcc_raw@.GZ@
 share/irc/help/on/disconnect@.GZ@
 share/irc/help/on/exec@.GZ@
@@ -503,6 +505,7 @@ share/irc/help/window/stack@.GZ@
 share/irc/help/window/sticky@.GZ@
 share/irc/help/window/swap@.GZ@
 share/irc/help/window/unbind@.GZ@
+share/irc/help/window/where@.GZ@
 share/irc/help/window/window@.GZ@
 share/irc/help/xecho@.GZ@
 share/irc/help/xtype@.GZ@
@@ -511,6 +514,7 @@ share/irc/script/2.9script
 share/irc/script/action
 share/irc/script/alias
 share/irc/script/autoop
+share/irc/script/autoquery
 share/irc/script/basical
 share/irc/script/bigcheese
 share/irc/script/brc
