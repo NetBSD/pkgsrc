@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2003/09/15 16:27:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2003/11/26 13:58:31 jlam Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/03/12 08:21:35 asami Exp
 #
 
 DISTNAME=	xneko
 PKGNAME=	xneko-4.4
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/pub/bsd-sources/4.4BSD-Lite/usr/src/games/xneko
 CATEGORIES=	x11 games
 MASTER_SITES=	ftp://ftp.cdrom.com/pub/bsd-sources/4.4BSD-Lite/usr/src/games/
@@ -11,7 +12,7 @@ MASTER_SITES=	ftp://ftp.cdrom.com/pub/bsd-sources/4.4BSD-Lite/usr/src/games/
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	Classic BSD4.4 cat-and-mouse
 
-USE_X11BASE=	yes
+USE_X11=	yes
 MANCOMPRESSED_IF_MANZ=	yes
 
 PLIST_SRC=	${WRKDIR}/PLIST
