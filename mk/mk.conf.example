@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.82 1999/10/14 12:06:18 hubertf Exp $
+# $NetBSD: mk.conf.example,v 1.83 1999/10/19 08:49:48 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -220,7 +220,7 @@
                                 #           FQDN.
                                 # Default: none
 
-#DONT_USE_IDEA=			# Used in ssh package to stop IDEA encryption
+#SSH_DONT_USE_IDEA=		# Used in ssh package to stop IDEA encryption
                                 # Possible: defined, not defined
                                 # Default: not defined
 
