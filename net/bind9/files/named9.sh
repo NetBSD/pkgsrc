@@ -1,19 +1,22 @@
 #!/bin/sh
 #
-# $NetBSD: named9.sh,v 1.1 2005/03/16 13:56:25 tron Exp $
+# $NetBSD: named9.sh,v 1.2 2005/03/18 01:14:32 tron Exp $
 #
+
 # PROVIDE: named
 # REQUIRE: SERVERS
+# BEFORE:  DAEMON
+# KEYWORD: chrootdir
 
 . /etc/rc.subr
 
 name="named"
-rcvar=${name}9
+rcvar="${name}9"
 command="@PREFIX@/sbin/${name}"
-
+pidfile="/var/run/${name}.pid"
+start_precmd="named_precmd"
 extra_commands="reload"
-
-load_rc_config ${name}9		# check /etc/rc.conf.d/named9
+required_dirs="$named_chrootdir"	# if it is set, it must exist
 
 named_precmd()
 {
@@ -23,7 +26,26 @@ named_precmd()
 	"disable 'named' when setting 'named9'!"
 		return 1
 	fi
-}
-start_precmd="named_precmd"
 
+	if [ -z "$named_chrootdir" ]; then
+		return 0;
+	fi
+
+	if [ ! -c "${named_chrootdir}/dev/null" ]; then
+		@RM@ -f "${named_chrootdir}/dev/null"
+		( cd /dev ; @PAX@ -rw -pe null "${named_chrootdir}/dev" )
+	fi
+	if [ -f /etc/localtime ]; then
+		@CMP@ -s /etc/localtime "${named_chrootdir}/etc/localtime" || \
+		    @CP@ -p /etc/localtime "${named_chrootdir}/etc/localtime"
+	fi
+	@RM@ -f ${pidfile}
+	@LN@ -s "${named_chrootdir}${pidfile}" ${pidfile}
+
+	#	Change run_rc_commands()'s internal copy of $named_flags
+	#
+	rc_flags="-u @BIND_USER@ -t ${named_chrootdir} $rc_flags"
+}
+
+load_rc_config "$rcvar"
 run_rc_command "$1"
