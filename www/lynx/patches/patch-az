@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 1999/07/02 08:34:37 jlam Exp $
+$NetBSD: patch-az,v 1.1 2000/01/15 17:37:56 hubertf Exp $
 
 --- src/chrtrans/makefile.in.orig	Sat May  8 13:46:28 1999
 +++ src/chrtrans/makefile.in	Fri Jul  2 03:59:44 1999
