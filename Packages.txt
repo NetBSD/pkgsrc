@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.64 1999/08/30 22:54:26 tron Exp $
+# $NetBSD: Packages.txt,v 1.65 1999/08/31 08:38:57 rh Exp $
 ###########################################################################
 
 			==========================
@@ -1036,13 +1036,10 @@ perform the equivalent of:
       error or pressing Control-C, e.g. through
       "make update REINSTALL=1".
 
-    - INSTALL_TARGET:
-      Install target to use for the package to update.  Defaults
-      to "install".  E.g. "make update INSTALL_TARGET=package"
-
     - DEPENDS_TARGET:
-      Install target to use for the depending packages.  Defaults
-      to "install".  E.g. "make update DEPENDS_TARGET=package"
+      Install target to use for the updated package and the
+      dependent packages.  Defaults to "install".  E.g.
+      "make update DEPENDS_TARGET=package"
 
  * readme:
    This target generates a README.html file, which can be viewed using a
