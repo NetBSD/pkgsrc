@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 1998/09/13 22:13:09 garbled Exp $
+$NetBSD: patch-aa,v 1.5 1998/09/14 06:54:00 garbled Exp $
 --- Makefile.orig	Tue Feb  8 21:11:37 1994
-+++ Makefile	Sun Sep 13 14:59:44 1998
++++ Makefile	Sun Sep 13 23:44:23 1998
 @@ -10,12 +10,12 @@
  EDITOR = makelev
  # Directory where games binaries are stored
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.4 1998/09/13 22:13:09 garbled Exp $
  # Font used to display score
  SCOREFONT = -adobe-times-bold-r-normal--18-180-75-75-p-99-iso8859-1
  # Height of SCOREFONT
-@@ -28,25 +28,24 @@
+@@ -28,25 +28,26 @@
  # Some common choices for CFLAGS.
  #CFLAGS = -O2
  #CFLAGS = -O
@@ -40,7 +40,9 @@ $NetBSD: patch-aa,v 1.4 1998/09/13 22:13:09 garbled Exp $
  # the levels.  Remove this line to have better security.
 -	chmod 4755 ${BIN}/${EDITOR}
 -	touch ${LIB}/scores
-+	install -o bin -g games -m 0664 /dev/null /var/games/golddig.scores
++	cat /dev/null >>/var/games/golddig.scores
++	chown bin:games /var/games/golddig.scores
++	chmod 664 /var/games/golddig.scores
  # Allow anyone to modify the high score file.  An alternative is to
  # change the mode bits of ${GAME} to be 4755.
 -	chmod 666 ${LIB}/scores
