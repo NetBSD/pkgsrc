@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1458 2003/02/21 22:06:34 mycroft Exp $
+$NetBSD: CHANGES,v 1.1459 2003/02/21 22:07:11 mycroft Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -797,3 +797,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated postgresql-server to 7.3.2 [mycroft 2003-02-21]
 	Updated timidity to 2.11.3nb2 [mycroft 2003-02-21]
 	Updated xscreensaver to 4.08 [mycroft 2003-02-21]
+	Updated xscreensaver-gnome to 4.08 [mycroft 2003-02-21]
