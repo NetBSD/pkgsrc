@@ -1,0 +1,32 @@
+# $NetBSD: Makefile.vtkdist,v 1.1.1.1 2004/08/02 13:13:40 drochner Exp $
+
+.include "../../graphics/vtk/Makefile.common"
+
+# they change minor releases w/o changing distfile names
+VTKDIST_VERSION=	4.2.6
+DISTNAME=		VTK-4.2-LatestRelease
+DIST_SUBDIR=		VTK-4.2.6
+WRKSRC=       		${WRKDIR}/VTK
+
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vtk/}
+
+DISTINFO_FILE=		${.CURDIR}/../vtk/distinfo
+PATCHDIR=		${.CURDIR}/../vtk/patches
+
+BUILD_DEPENDS+=		cmake>=1.6.6:../../devel/cmake
+
+VTK_LIBDIR=	${PREFIX}/lib/vtk
+
+VTK_CMAKE_OPT+= -DCMAKE_INSTALL_PREFIX:STRING=${PREFIX} \
+	-DCMAKE_SHARED_LINKER_FLAGS:STRING=-Wl,${RPATH_FLAG}${VTK_LIBDIR} \
+	-DCMAKE_MODULE_LINKER_FLAGS:STRING=-Wl,${RPATH_FLAG}${VTK_LIBDIR} \
+	-DVTK_USE_HYBRID:BOOL=ON
+
+do-configure:
+	cd ${WRKSRC} && cmake . ${VTK_CMAKE_OPT}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} != "mips" || ${MACHINE_ARCH} != "vax"
+VTK_CMAKE_OPT+=		-DBUILD_SHARED_LIBS:BOOL=ON
+.endif

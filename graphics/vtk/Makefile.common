@@ -1,0 +1,7 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2004/08/02 13:13:40 drochner Exp $
+
+VTK_VERSION=		4.2
+
+CATEGORIES=		graphics
+MAINTAINER=		dotz@irc.pl
+HOMEPAGE=		http://www.vtk.org/
