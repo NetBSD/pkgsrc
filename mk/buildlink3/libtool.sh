@@ -1,6 +1,6 @@
 #!@BUILDLINK_SHELL@
 #
-# $NetBSD: libtool.sh,v 1.13 2004/01/29 07:14:30 jlam Exp $
+# $NetBSD: libtool.sh,v 1.14 2004/01/30 10:56:11 jlam Exp $
 
 Xsed='@SED@ -e 1s/^X//'
 sed_quote_subst='s/\([\\`\\"$\\\\]\)/\\\1/g'
@@ -19,14 +19,16 @@ cache="@_BLNK_WRAP_CACHE@"
 post_cache="@_BLNK_WRAP_POST_CACHE@"
 logic="@_BLNK_WRAP_LOGIC@"
 post_logic="@_BLNK_WRAP_POST_LOGIC@"
+reorderlibs="@_BLNK_REORDERLIBS@"
 
 wrapperlog="${BUILDLINK_WRAPPER_LOG-@_BLNK_WRAP_LOG@}"
 
 libtool_fix_la="@_BLNK_LIBTOOL_FIX_LA@"
 fixlibpath=${BUILDLINK_FIX_IMPROPER_LIBTOOL_LIBPATH-yes}
 
-updatecache=${BUILDLINK_UPDATE_CACHE-yes}
-cacheall=${BUILDLINK_CACHE_ALL-no}
+updatecache="${BUILDLINK_UPDATE_CACHE-yes}"
+cacheall="${BUILDLINK_CACHE_ALL-no}"
+reorder="${BUILDLINK_REORDER-no}"
 
 cat="@CAT@"
 echo="@ECHO@"
@@ -163,6 +165,13 @@ install)
 	done
 	;;
 esac
+
+# Reorder the libraries so that the library dependencies are correct.
+case $reorder in
+yes)
+	. $reorderlibs
+esac
+
 cmd="$cmd $ldflags $libs"
 
 @_BLNK_WRAP_ENV@

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.64 2004/01/27 12:19:03 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.65 2004/01/30 10:56:11 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -876,6 +876,13 @@ _BLNK_TRANSFORM+=	rpath:${_BLNK_MANGLE_DIR.${_dir_}}:${_dir_}
 _BLNK_TRANSFORM+=	mangle:${_BLNK_MANGLE_DIR.${_dir_}}:${_dir_}
 .endfor
 
+# Only do the (expensive) reordering step if we have reordering
+# transformations.
+#
+.if !empty(_BLNK_TRANSFORM:Mreorder\:*)
+MAKE_ENV+=	BUILDLINK_REORDER=yes
+.endif
+
 _BLNK_TRANSFORM_SED+=	-f ${_BLNK_TRANSFORM_SEDFILE}
 _BLNK_UNTRANSFORM_SED+=	-f ${_BLNK_UNTRANSFORM_SEDFILE}
 
@@ -991,6 +998,7 @@ _BLNK_FAKE_LA=			${BUILDLINK_DIR}/bin/.fake-la
 _BLNK_GEN_TRANSFORM=		${BUILDLINK_DIR}/bin/.gen-transform
 _BLNK_TRANSFORM_SEDFILE=	${BUILDLINK_DIR}/bin/.transform.sed
 _BLNK_UNTRANSFORM_SEDFILE=	${BUILDLINK_DIR}/bin/.untransform.sed
+_BLNK_REORDERLIBS=		${BUILDLINK_DIR}/bin/.reorderlibs
 
 .for _wrappee_ in ${_BLNK_WRAPPEES}
 #
@@ -1154,6 +1162,7 @@ _BLNK_WRAPPER_TRANSFORM_SED.${_wrappee_}=				\
 	-e "s|@TEST@|${TEST:Q}|g"					\
 	-e "s|@TOUCH@|${TOUCH:Q}|g"					\
 	-e "s|@_BLNK_LIBTOOL_FIX_LA@|${_BLNK_LIBTOOL_FIX_LA:Q}|g"	\
+	-e "s|@_BLNK_REORDERLIBS@|${_BLNK_REORDERLIBS:Q}|g"		\
 	-e "s|@_BLNK_WRAP_LOG@|${_BLNK_WRAP_LOG:Q}|g"			\
 	-e "s|@_BLNK_WRAP_EXTRA_FLAGS@|${_BLNK_WRAP_EXTRA_FLAGS.${_wrappee_}:Q}|g" \
 	-e "s|@_BLNK_WRAP_BUILDCMD@|${_BLNK_WRAP_BUILDCMD.${_wrappee_}:Q}|g" \
@@ -1618,6 +1627,7 @@ ${_BLNK_GEN_TRANSFORM}: ${.CURDIR}/../../mk/buildlink3/gen-transform.sh
 	${_PKG_SILENT}${_PKG_DEBUG}${SED}				\
 		-e "s|@_BLNK_TRANSFORM_SEDFILE@|${_BLNK_TRANSFORM_SEDFILE:Q}|g" \
 		-e "s|@_BLNK_UNTRANSFORM_SEDFILE@|${_BLNK_UNTRANSFORM_SEDFILE:Q}|g" \
+		-e "s|@_BLNK_REORDERLIBS@|${_BLNK_REORDERLIBS:Q}|g"	\
 		-e "s|@_COMPILER_LD_FLAG@|${_COMPILER_LD_FLAG:Q}|g"     \
 		-e "s|@_OPSYS_RPATH_NAME@|${_OPSYS_RPATH_NAME:Q}|g"     \
 		-e "s|@BUILDLINK_SHELL@|${BUILDLINK_SHELL:Q}|g"         \
@@ -1626,7 +1636,8 @@ ${_BLNK_GEN_TRANSFORM}: ${.CURDIR}/../../mk/buildlink3/gen-transform.sh
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
-${_BLNK_TRANSFORM_SEDFILE} ${_BLNK_UNTRANSFORM_SEDFILE}: ${_BLNK_GEN_TRANSFORM}
+${_BLNK_TRANSFORM_SEDFILE} ${_BLNK_UNTRANSFORM_SEDFILE} ${_BLNK_REORDERLIBS}: \
+		${_BLNK_GEN_TRANSFORM}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${_BLNK_GEN_TRANSFORM}		\
 		${_BLNK_TRANSFORM}

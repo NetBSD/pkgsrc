@@ -1,4 +1,4 @@
-# $NetBSD: buildcmd,v 1.3 2004/01/29 06:06:41 jlam Exp $
+# $NetBSD: buildcmd,v 1.4 2004/01/30 10:56:11 jlam Exp $
 #
 # Append $arg to $cmd to build up the command line to be executed, but
 # directly add the next few arguments to $cmd if $skipargs > 0.
@@ -40,8 +40,8 @@ else
 		;;
 	-l*)
 		#
-		# Extra libraries are suppressed only if they're
-		# repeated, e.g. "-lm -lm -lm -lm" -> "-lm".
+		# Suppressed sequentially repeated libraries,
+		# e.g. "-lm -lm -lm -lm" -> "-lm".
 		#
 		case "$libs" in
 		*" "$arg)	     ;;
