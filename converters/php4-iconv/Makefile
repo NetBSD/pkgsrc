@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/04/25 00:30:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2004/06/03 23:07:29 heinz Exp $
 
 MODNAME=		iconv
-CATEGORIES+=		devel
+CATEGORIES+=		converters
 PKGREVISION=		# empty
 COMMENT=		PHP4 extension for character set conversion
 
