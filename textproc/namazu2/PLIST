@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:01:41 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/09/04 12:52:24 taca Exp $
 bin/adnmz
 bin/bnamazu
 bin/gcnmz
@@ -34,8 +34,8 @@ include/namazu/wakati.h
 lib/libnmz.a
 lib/libnmz.la
 lib/libnmz.so
-lib/libnmz.so.5
-lib/libnmz.so.5.0
+lib/libnmz.so.6
+lib/libnmz.so.6.0
 @exec ${MKDIR} %D/libdata/namazu 2>/dev/null|| /usr/bin/true
 @exec ${MKDIR} %D/libdata/namazu/index 2>/dev/null || /usr/bin/true
 @dirrm libdata/namazu/index
@@ -60,8 +60,8 @@ share/namazu/doc/ja/tutorial.html
 share/namazu/doc/namazu.css
 @dirrm share/namazu/doc
 share/namazu/etc/AUTHORS
-share/namazu/etc/CREDITS
 share/namazu/etc/COPYING
+share/namazu/etc/CREDITS
 share/namazu/etc/ChangeLog
 share/namazu/etc/ChangeLog.1
 share/namazu/etc/HACKING
@@ -116,18 +116,22 @@ share/namazu/template/NMZ.body.es
 share/namazu/template/NMZ.body.fr
 share/namazu/template/NMZ.body.ja
 share/namazu/template/NMZ.foot
+share/namazu/template/NMZ.foot.de
 share/namazu/template/NMZ.foot.es
 share/namazu/template/NMZ.foot.fr
 share/namazu/template/NMZ.foot.ja
 share/namazu/template/NMZ.head
+share/namazu/template/NMZ.head.de
 share/namazu/template/NMZ.head.es
 share/namazu/template/NMZ.head.fr
 share/namazu/template/NMZ.head.ja
 share/namazu/template/NMZ.result.normal
+share/namazu/template/NMZ.result.normal.de
 share/namazu/template/NMZ.result.normal.es
 share/namazu/template/NMZ.result.normal.fr
 share/namazu/template/NMZ.result.normal.ja
 share/namazu/template/NMZ.result.short
+share/namazu/template/NMZ.result.short.de
 share/namazu/template/NMZ.result.short.es
 share/namazu/template/NMZ.result.short.fr
 share/namazu/template/NMZ.result.short.ja
