@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/04/15 00:20:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2004/07/02 20:53:20 wiz Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	1
@@ -23,7 +23,7 @@ DEPENDS+=	suse_glx>=6.4:../../emulators/${SUSE_DIR_PREFIX}_glx
 .include "../../emulators/suse_linux/Makefile.application"
 .else
 USE_X11=	yes
-.include "../../graphics/MesaLib/buildlink2.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .endif
 
 NO_SRC_ON_FTP=	no
