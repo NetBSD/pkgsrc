@@ -1,7 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2004/12/22 10:17:28 wennmach Exp $
+$NetBSD: patch-aa,v 1.4 2005/01/03 15:33:55 wennmach Exp $
 
---- SRC/Makefile.orig	Thu Nov  4 20:26:09 1999
-+++ SRC/Makefile	Wed Dec 22 10:52:43 2004
+Enable all routines (single & double precision, single and double
+complex, auxilary routines in the "all" target. Enable libtool.
+
+--- SRC/Makefile.orig	1999-11-04 20:26:09.000000000 +0100
++++ SRC/Makefile	2004-12-23 09:22:31.000000000 +0100
 @@ -1,4 +1,4 @@
 -include ../make.inc
 +#include ../make.inc
@@ -33,10 +36,10 @@ $NetBSD: patch-aa,v 1.3 2004/12/22 10:17:28 wennmach Exp $
 -	$(ARCH) $(ARCHFLAGS) ../$(LAPACKLIB) $(ZLASRC) $(ALLAUX) \
 -	$(DZLAUX)
 -	$(RANLIB) ../$(LAPACKLIB)
-+all: $(ALLAUX) $(SCLAUX) $(SLASRC) $(CLASRC) $(DLASRC) $(ZLASRC)
-+	${LIBTOOL} --mode=link --tag=CC ${FC} -o ../liblapack.la \
-+	$(ALLAUX:.o=.lo) $(SCLAUX:.o=.lo) $(SLASRC:.o=.lo)       \
-+	$(DLASRC:.o=.lo) $(CLASRC:.o=.lo) $(ZLASRC:.o=.lo)       \
++all: $(ALLAUX) $(SCLAUX) $(DZLAUX) $(SLASRC) $(CLASRC) $(DLASRC) $(ZLASRC)
++	${LIBTOOL} --mode=link --tag=CC ${FC} -o ../liblapack.la            \
++	$(ALLAUX:.o=.lo) $(SCLAUX:.o=.lo) $(DZLAUX:.o=.lo) $(SLASRC:.o=.lo) \
++	$(DLASRC:.o=.lo) $(CLASRC:.o=.lo) $(ZLASRC:.o=.lo)                  \
 +	-rpath ${PREFIX}/lib -version-info 3:0
  
  $(ALLAUX): $(FRC)
