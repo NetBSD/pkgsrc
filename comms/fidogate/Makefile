@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2001/02/22 03:00:14 tv Exp $
+# $NetBSD: Makefile,v 1.12 2001/02/22 15:28:56 tv Exp $
 #
 
 DISTNAME=	fidogate-4.4.2
@@ -13,7 +13,10 @@ USE_GMAKE=	yes
 USE_PERL5=	yes
 
 INFO_FILES=	fidogate.info
-MAKE_ENV=	PKGPREFIX=${PREFIX} DEBUG="${CFLAGS} -Werror"
+MAKE_ENV=	DEBUG="${CFLAGS} -Werror" CC="${CC} ${STRIPFLAG}"
+
+post-extract:
+	@${CP} ${WRKSRC}/examples/orodruin/fidogate.conf ${WRKSRC}/
 
 # This ugliness is because config.make is parsed by both make(1) and
 # subst.pl, which does only simplistic substitution.
@@ -26,9 +29,12 @@ pre-build:
 	${RM} -f ${WRKSRC}/doc/fidogate.info*
 	cd ${WRKSRC}/doc && makeinfo --no-split fidogate.texi && \
 		${TOUCH} fidogate.txt html/fidogate_toc.html
+	${PERL} ${WRKSRC}/subst.pl -t${WRKSRC} ${WRKSRC}/fidogate.conf \
+		>${WRKSRC}/fidogate.conf.dist
 
 pre-install:
 	${INSTALL_DATA_DIR} \
+		${PREFIX}/etc/fidogate \
 		${PREFIX}/lib/fidogate \
 		${PREFIX}/lib/fidogate/bin \
 		${PREFIX}/share/doc/fidogate \
@@ -47,5 +53,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/maintenance/rc.fidogate \
 		${PREFIX}/etc/rc.d/fidogate
 	${INSTALL_DATA} ${WRKSRC}/doc/fidogate.txt ${PREFIX}/share/doc/fidogate/
+	${INSTALL_DATA} ${WRKSRC}/fidogate.conf.dist ${PREFIX}/etc/fidogate/
 
 .include "../../mk/bsd.pkg.mk"
