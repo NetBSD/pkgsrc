@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2002/12/28 22:47:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2003/01/04 23:04:14 cjep Exp $
 
 DISTNAME=		gimp-1.2.3
 PKGNAME=		gimp-base-1.2.3
@@ -69,7 +69,7 @@ post-install:
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../graphics/mpeg-lib/buildlink2.mk"
-.if defined(GIMP_WITH_HELPBROWSER) && ${GIMP_WITH_HELPBROWSER} != "no" 
+.if defined(GIMP_WITH_HELPBROWSER) && ${GIMP_WITH_HELPBROWSER} != "no"
 PLIST_SUBST+=	HELPBROWSER=""
 .include "../../x11/gnome-libs/buildlink2.mk"
 .else
