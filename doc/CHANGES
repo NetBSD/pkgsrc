@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8428 2004/12/25 02:56:07 wiz Exp $
+$NetBSD: CHANGES,v 1.8429 2004/12/25 03:14:16 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6526,3 +6526,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated openssl to 0.9.7e [jlam 2004-12-24]
 	Updated p5-Filter to 1.30 [jlam 2004-12-24]
 	Updated gnupg to 1.4.0 [wiz 2004-12-25]
+	Updated p5-Scalar-List-Utils to 1.14 [jlam 2004-12-25]
