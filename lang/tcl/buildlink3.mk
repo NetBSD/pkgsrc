@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2004/10/30 05:48:51 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2004/11/25 22:55:54 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TCL_BUILDLINK3_MK:=	${TCL_BUILDLINK3_MK}+
@@ -29,8 +29,6 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/tcl$$/ \
 				{ print "@comment in tcl: " $$0; next; }
 .endif	# TCL_BUILDLINK3_MK
 
-.if !defined(_TCL_NOTHREAD)
-.include "../../mk/pthread.buildlink3.mk"
-.endif
+.include "../../mk/dlopen.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
