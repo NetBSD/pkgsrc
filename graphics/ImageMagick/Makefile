@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2001/06/20 22:24:44 jlam Exp $
+# $NetBSD: Makefile,v 1.70 2001/06/21 01:48:43 jlam Exp $
 
 DISTNAME=		ImageMagick-5.2.8
 CATEGORIES=		graphics
@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.simplesystems.org/ImageMagick/
 COMMENT=		Package for display and interactive manipulation of images
 
 CONFLICTS=		geomview-*    # both have a program named 'animate'
+
+DEPENDS+=		mpeg2codec-1.2:../../graphics/mpeg2codec
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
