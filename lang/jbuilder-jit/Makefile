@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2001/10/31 14:32:58 tv Exp $
+# $NetBSD: Makefile,v 1.7 2002/07/31 19:33:20 schmonz Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -10,8 +10,8 @@ MAINTAINER=	tv@netbsd.org
 HOMEPAGE=	http://www.inprise.com/jbuilder/foundation/linux.html
 COMMENT=	Just-In-Time compiler for Linux Java Virtual Machine
 
-# works with both 1.2.2 and 1.3 JVMs
-DEPENDS=	sun-jre-[0-9]*:../../lang/sun-jre13
+USE_JAVA=	run
+PKG_JVM=	sun-jdk13 # works with both 1.2.2 and 1.3 JVMs
 
 WRKSRC=		${WRKDIR}/javacomp-1.2.15
 EXTRACT_ELEMENTS= LinuxJIT/javacomp-1.2.15.tar.gz

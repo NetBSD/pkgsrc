@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2002/06/15 21:08:50 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2002/07/31 19:33:20 schmonz Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		1
@@ -30,7 +30,9 @@ BUILD_DEPENDS+=		gmake-[0-9]*:../../devel/gmake
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 BUILD_DEPENDS+=		stlport>=4.0nb1:../../devel/stlport
-BUILD_DEPENDS+=		sun-jdk>=1.3.0:../../lang/sun-jdk13
+
+USE_JAVA=		build
+PKG_JVM=		sun-jdk
 
 .include "../../lang/perl5/buildlink.mk"
 .include "../../mk/pthread.buildlink.mk"

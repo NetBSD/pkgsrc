@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/10/17 12:32:17 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/07/31 19:33:19 schmonz Exp $
 #
 
 DISTNAME=	javadeps-1.1
@@ -10,7 +10,7 @@ MAINTAINER=	ben@wongs.net
 HOMEPAGE=	http://www.vet.com.au/java/javadeps/
 COMMENT=	Automatic dependency tracking for Java
 
-DEPENDS=	sun-jdk-[0-9]*:../../lang/sun-jdk13
+USE_JAVA=	run
 
 WRKSRC=		${WRKDIR}/JavaDeps-1.1
 
