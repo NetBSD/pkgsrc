@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.8 2001/12/02 06:56:46 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2001/12/17 22:11:46 jlam Exp $
 #
 
 DISTNAME=		cvsweb-1.112
@@ -9,8 +9,6 @@ MASTER_SITES=		http://stud.fh-heilbronn.de/~zeller/download/
 MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://stud.fh-heilbronn.de/~zeller/cgi/cvsweb.cgi/
 COMMENT=		Web interface for browsing a CVS repository
-
-DEPENDS+=		apache{,6}-[0-9]*:../../www/apache
 
 USE_BUILDLINK_ONLY=	YES
 WRKSRC=			${WRKDIR}/cvsweb
