@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/25 00:14:56 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/25 18:08:27 minskim Exp $
 bin/ksba-config
 include/ksba.h
-info/ksba.info
 lib/libksba.a
 lib/libksba.la
 lib/libksba.so
-lib/libksba.so.9
-lib/libksba.so.9.0
+lib/libksba.so.10
+lib/libksba.so.10.0
 share/aclocal/ksba.m4
