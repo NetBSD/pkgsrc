@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/08 01:54:18 minskim Exp $
+lib/X11/fonts/TTF/UnBatang.ttf
+lib/X11/fonts/TTF/UnBatangBold.ttf
+lib/X11/fonts/TTF/UnBom.ttf
+lib/X11/fonts/TTF/UnDotum.ttf
+lib/X11/fonts/TTF/UnDotumBold.ttf
+lib/X11/fonts/TTF/UnGraphic.ttf
+lib/X11/fonts/TTF/UnGungseo.ttf
+lib/X11/fonts/TTF/UnPen.ttf
+lib/X11/fonts/TTF/UnPenheulim.ttf
+lib/X11/fonts/TTF/UnPilgi.ttf
+lib/X11/fonts/TTF/UnPilgiBold.ttf
+lib/X11/fonts/TTF/UnShinmun.ttf
+lib/X11/fonts/TTF/UnYetgul.ttf
