@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/10/08 21:02:53 mjl Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/10/08 22:09:55 mjl Exp $
 bin/asnparser
 include/ptclib/asnber.h
 include/ptclib/asner.h
@@ -122,6 +122,7 @@ include/ptlib/unix/ptlib/video.h
 include/ptlib/unix/ptlib/videoio.h
 include/ptlib/unix/ptlib/videoio1394avc.h
 include/ptlib/vconvert.h
+include/ptlib/version.h
 include/ptlib/vfakeio.h
 include/ptlib/video.h
 include/ptlib/videoio.h
