@@ -1,11 +1,10 @@
 #!/bin/sh
 #
-# $NetBSD: clamd.sh,v 1.5 2004/08/03 11:28:37 tv Exp $
+# $NetBSD: clamd.sh,v 1.6 2004/08/03 11:29:57 tv Exp $
 #
 # clamd does anti-virus checking.
 #
 # PROVIDE: clamd
-# REQUIRE: LOGIN
 # BEFORE: mail local
 # KEYWORD: shutdown
 
