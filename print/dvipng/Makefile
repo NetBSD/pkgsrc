@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2004/11/27 23:07:05 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2005/03/23 21:59:32 wiz Exp $
 
 DISTNAME=	dvipng-1.0
 PKGREVISION=	2
 CATEGORIES=	textproc converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvipng/}
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://dvipng.sourceforge.net/dvipng.html
 COMMENT=	Convert DVI files to PNG files
 
