@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/29 04:57:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/07/29 06:36:33 xtraeme Exp $
 
 DISTNAME=	X11R6.7.0-src1
 PKGNAME=	xorg-fontsEncodings-${XORG_VER}
@@ -11,9 +11,6 @@ COMMENT=	X.org Encoding fonts
 
 BUILD_DEPENDS=	xorg-clients>=6.7.0:../../x11/xorg-clients
 
-CONFLICTS=	XFree86-fontsEncodings-[0-9]*
-
-NO_XFREE86_TARGETS=	# defined
 CHECK_X11_TYPE=		# defined
 XBUILD_DIRS=		fonts/encodings
 

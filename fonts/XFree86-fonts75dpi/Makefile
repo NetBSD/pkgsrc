@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/07/29 05:54:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2004/07/29 06:36:33 xtraeme Exp $
 
 DISTNAME=	XFree86-4.4.0-src-4
 PKGNAME=	XFree86-fonts75dpi-${XF_VER}
@@ -12,8 +12,6 @@ COMMENT=	XFree86 bitmap 75dpi fonts
 
 NO_XFREE86_TARGETS=	# defined
 WRKSRC=			${WRKDIR}/xc/fonts/bdf/75dpi
-
-CONFLICTS=	xorg-fonts75dpi-[0-9]*
 
 .include "../../fonts/XFree86-fontsEncodings/Makefile.common"
 .include "../../meta-pkgs/XFree86/Makefile.common"
