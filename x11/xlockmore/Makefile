@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2003/06/30 07:45:47 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2003/07/15 14:49:05 hubertf Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,11 +22,6 @@ PKGREVISION=	# empty
 COMMENT=	like the XLock session-locker/screensaver, but with more
 
 CONFIGURE_ARGS+=	--with-mesagl
-
-# xlock is installed setuid-root, so mark it as such in the binary package.
-#
-USE_PKGINSTALL=		YES
-SPECIAL_PERMS=		${PREFIX}/bin/xlock ${SETUID_ROOT_PERMS}
 
 .include "../../audio/esound/buildlink2.mk"
 .include "../../graphics/MesaLib/buildlink2.mk"
