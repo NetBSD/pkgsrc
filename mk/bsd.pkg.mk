@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1370 2004/02/05 03:37:47 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1371 2004/02/05 05:05:54 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2562,7 +2562,7 @@ real-su-install: ${MESSAGE}
 	if [ "$$found" != "" ]; then					\
 		${ECHO_MSG} "${_PKGSRC_IN}> $$found is already installed - perhaps an older version?"; \
 		${ECHO_MSG} "*** If so, you may use either of:"; \
-		${ECHO_MSG} "***  - \"pkg_delete $$found\" and \"${MAKE} reinstall\" to upgrade properly"; \
+		${ECHO_MSG} "***  - \"${MAKE} deinstall\" and \"${MAKE} reinstall\" to upgrade properly"; \
 		${ECHO_MSG} "***  - \"${MAKE} update\" to rebuild the package and all of its dependencies"; \
 		${ECHO_MSG} "***  - \"${MAKE} replace\" to replace only the package without re-linking"; \
 		${ECHO_MSG} "***    dependencies, risking various problems."; \
