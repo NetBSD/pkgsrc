@@ -1,3 +1,4 @@
+$NetBSD: patch-ba,v 1.2 2002/05/20 18:19:41 cjep Exp $
 --- fishmon.c.orig	Sat Jan 19 05:37:10 2002
 +++ fishmon.c	Sat Jan 19 05:42:15 2002
 @@ -1017,6 +1017,8 @@
