@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.844 2001/11/08 12:47:12 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.845 2001/11/09 08:58:19 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -517,9 +517,21 @@ COMMENT!=	(${CAT} ${PKGDIR}/COMMENT || ${ECHO} -n "(no description)") 2>/dev/nul
 .endif
 
 DESCR=			${WRKDIR}/.DESCR
+.if !defined(DESCR_SRC)
+.  if !exists(${PKGDIR}/DESCR) && exists(${.CURDIR}/DESCR) 
+DESCR_SRC?=		${.CURDIR}/DESCR
+.  else
 DESCR_SRC?=		${PKGDIR}/DESCR
+.  endif
+.endif
 PLIST=			${WRKDIR}/.PLIST
+.if !defined(PLIST_SRC)
+.  if !exists(${PKGDIR}/PLIST) && exists(${.CURDIR}/PLIST) 
+PLIST_SRC?=		${.CURDIR}/PLIST
+.  else
 PLIST_SRC?=		${PKGDIR}/PLIST
+.  endif
+.endif
 DLIST=			${WRKDIR}/.DLIST
 DDIR=			${WRKDIR}/.DDIR
 
@@ -555,17 +567,23 @@ PLIST_SUBST+=	PERL5_ARCHLIB=${PERL5_ARCHLIB:S/^${LOCALBASE}\///}
 # Set INSTALL_FILE to be the name of any INSTALL file
 .if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
 INSTALL_FILE=		${PKGDIR}/INSTALL
+.elif !defined(INSTALL_FILE) && exists(${.CURDIR}/INSTALL)
+INSTALL_FILE=		${.CURDIR}/INSTALL
 .endif
 
 # Set DEINSTALL_FILE to be the name of any DEINSTALL file
 .if !defined(DEINSTALL_FILE) && exists(${PKGDIR}/DEINSTALL)
 DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
+.elif !defined(DEINSTALL_FILE) && exists(${.CURDIR}/DEINSTALL)
+DEINSTALL_FILE=		${.CURDIR}/DEINSTALL
 .endif
 
 # Set MESSAGE_SRC to be the name of any MESSAGE file, if ${MESSAGE}
 # hasn't be defined
 .if !defined(MESSAGE_SRC) && !defined(MESSAGE) && exists(${PKGDIR}/MESSAGE)
 MESSAGE_SRC=		${PKGDIR}/MESSAGE
+.elif !defined(MESSAGE_SRC) && !defined(MESSAGE) && exists(${.CURDIR}/MESSAGE)
+MESSAGE_SRC=		${.CURDIR}/MESSAGE
 .endif
 
 .if defined(MESSAGE_SRC)
