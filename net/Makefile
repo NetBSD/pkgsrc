@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2001/02/28 15:31:26 hubertf Exp $
+# $NetBSD: Makefile,v 1.196 2001/03/01 13:46:43 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -90,9 +90,9 @@ SUBDIR+=	p5-ispman
 SUBDIR+=	p5-Net
 SUBDIR+=	p5-Net-DNS
 SUBDIR+=	p5-Net-SNMP
-SUBDIR+=	p5-Net-SNMP
 SUBDIR+=	p5-Net-TFTP
 SUBDIR+=	p5-Net-Telnet
+SUBDIR+=	p5-SNMP
 SUBDIR+=	p5-SNMP_Session
 SUBDIR+=	p5-Socket6
 SUBDIR+=	p5-Wais
@@ -115,8 +115,8 @@ SUBDIR+=	sdist
 SUBDIR+=	sendfile
 SUBDIR+=	sftp
 SUBDIR+=	sitescooper
-SUBDIR+=	sniffit
 SUBDIR+=	smb2www
+SUBDIR+=	sniffit
 SUBDIR+=	snort
 SUBDIR+=	socks4
 SUBDIR+=	socks5
