@@ -1,0 +1,23 @@
+  This is a library for generating form letters, building HTML pages,
+or filling in templates generally.  A `template' is a piece of text
+that has little Perl programs embedded in it here and there.  When
+you `fill in' a template, you evaluate the little programs and
+replace them with their values.  Here's an example of a template:
+
+        Dear {$title} {$lastname},
+
+        It has come to our attention that you are delinquent in your
+        {$monthname[$last_paid_month]} payment.  Please remit
+        ${sprintf("%.2f", $amount)} immediately, or your patellae may
+        be needlessly endangered.
+
+
+The result of filling in this template is a string, which might look
+something like this:
+
+        Dear Mr. Gates,
+
+        It has come to our attention that you are delinquent in your
+        February payment.  Please remit
+        $392.12 immediately, or your patellae may
+        be needlessly endangered.
