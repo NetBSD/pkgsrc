@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/05/20 20:09:50 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/08/24 18:55:27 bad Exp $
 #
 
 DISTNAME=	mysql-3.22.22
@@ -27,6 +27,8 @@ USE_PERL5=	yes
 USE_LIBTOOL=	yes
 
 INFO_FILES=	mysql.info
+
+EXTRACT_USING_PAX=	yes
 
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/Docs/mysql.info ${PREFIX}/info
