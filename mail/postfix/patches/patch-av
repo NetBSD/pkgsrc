@@ -1,9 +1,9 @@
-$NetBSD: patch-av,v 1.2 1999/08/26 13:05:08 mrg Exp $
+$NetBSD: patch-av,v 1.3 2000/04/10 00:19:17 bad Exp $
 
 --- postdrop/Makefile.orig	Sun May 30 18:49:13 1999
 +++ postdrop/Makefile	Sun May 30 18:49:13 1999
 @@ -0,0 +1,20 @@
-+#	$NetBSD: patch-av,v 1.2 1999/08/26 13:05:08 mrg Exp $
++#	$NetBSD: patch-av,v 1.3 2000/04/10 00:19:17 bad Exp $
 +.include "../conf/main.cf"
 +
 +PROG=	postdrop
@@ -19,7 +19,7 @@ $NetBSD: patch-av,v 1.2 1999/08/26 13:05:08 mrg Exp $
 +
 +.if !POSTFIX_NOSETGID
 +BINGRP=	maildrop
-+BINMODE=2755
++BINMODE=2555
 +.endif
 +
 +.include <bsd.prog.mk>

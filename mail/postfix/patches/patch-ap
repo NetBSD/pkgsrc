@@ -1,9 +1,9 @@
-$NetBSD: patch-ap,v 1.1 1999/05/30 18:18:32 tron Exp $
+$NetBSD: patch-ap,v 1.2 2000/04/10 00:19:17 bad Exp $
 
---- masterlib/Makefile.orig	Sun May 30 18:49:13 1999
-+++ masterlib/Makefile	Sun May 30 18:49:13 1999
-@@ -0,0 +1,14 @@
-+#	$NetBSD: patch-ap,v 1.1 1999/05/30 18:18:32 tron Exp $
+--- masterlib/Makefile.orig	Sat Apr  8 22:14:35 2000
++++ masterlib/Makefile	Sat Apr  8 23:32:22 2000
+@@ -0,0 +1,17 @@
++#	$NetBSD: patch-ap,v 1.2 2000/04/10 00:19:17 bad Exp $
 +
 +.PATH: ${.CURDIR}/../master
 +LIB=	master
@@ -12,6 +12,9 @@ $NetBSD: patch-ap,v 1.1 1999/05/30 18:18:32 tron Exp $
 +MKLINT=		no
 +MKPIC=		no
 +MKPROFILE=	no
++NOLINT=		yes
++NOPIC=		yes
++NOPROFILE=	yes
 +
 +# only needed during build
 +libinstall::
