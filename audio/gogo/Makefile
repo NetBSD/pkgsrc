@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/08/18 22:46:30 hubertf Exp $
+# $NetBSD: Makefile,v 1.3 2000/09/27 13:42:23 agc Exp $
 #
 
 DISTNAME=		gogo235
@@ -21,15 +21,17 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 LICENSE=		fee-based-commercial-use
 
-do-install:
-	@ ${INSTALL_PROGRAM} ${WRKSRC}/gogo ${PREFIX}/bin
-	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gogo
-	@ ${INSTALL_DATA} ${WRKSRC}/readme*.txt ${PREFIX}/share/doc/gogo
-
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .if (${OBJECT_FMT} == "a.out")
 MAKE_FLAGS+=	ASFLAGS="-f aoutb -D__unix__ -DAOUT ${E3DN}"
 .else
 MAKE_FLAGS+=	ASFLAGS="-f elf -D__unix__ ${E3DN}"
 .endif
+
+do-install:
+	@ ${INSTALL_PROGRAM} ${WRKSRC}/gogo ${PREFIX}/bin
+	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gogo
+	@ ${INSTALL_DATA} ${WRKSRC}/readme*.txt ${PREFIX}/share/doc/gogo
+
+.include "../../mk/bsd.pkg.mk"
