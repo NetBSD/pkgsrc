@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8860 2005/01/22 03:05:46 minskim Exp $
+$NetBSD: CHANGES,v 1.8861 2005/01/22 03:59:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -483,3 +483,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated festival-doc to 1.4.0.1nb2 [wiz 2005-01-21]
 	Updated vigor to 0.016nb1 [minskim 2005-01-22]
 	Updated cqcam to 0.45anb2 [minskim 2005-01-22]
+	Updated XF86Setup to 3.3.6nb2 [minskim 2005-01-22]
