@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/07/03 01:23:43 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/07/12 19:19:51 wiz Exp $
 bin/gdk-pixbuf-csource
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
@@ -729,20 +729,6 @@ share/themes/Emacs/gtk-2.0-key/gtkrc
 @dirrm share/themes/Default/gtk-2.0
 @dirrm share/themes/Default
 @dirrm share/themes
-@dirrm ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/vi
-@dirrm ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/ms
-@dirrm ${PKGLOCALEDIR}/locale/ia/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/ia
-@dirrm ${PKGLOCALEDIR}/locale/he/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/he
-@dirrm ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/fa
-@dirrm ${PKGLOCALEDIR}/locale/en@IPA/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/en@IPA
-@dirrm ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES
-@dirrm ${PKGLOCALEDIR}/locale/cy
 @dirrm share/gtk-doc/html/gtk
 @dirrm share/gtk-doc/html/gdk-pixbuf
 @dirrm share/gtk-doc/html/gdk
