@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1280 2003/09/13 14:40:40 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1281 2003/09/13 18:26:15 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1806,7 +1806,7 @@ show-downlevel:
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .  else
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	found="`${PKG_BEST_EXISTS} \"${PKGBASE}\" || ${TRUE}`";		\
+	found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "X$$found" != "X" -a "X$$found" != "X${PKGNAME}" ]; then	\
 		${ECHO} "${PKGBASE} package: $$found installed, pkgsrc version ${PKGNAME}"; \
 		if [ "X$$STOP_DOWNLEVEL_AFTER_FIRST" != "X" ]; then	\
@@ -1835,12 +1835,13 @@ show-needs-update:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for i in `${MAKE} show-all-depends-dirs`; do			\
 		cd ${_PKGSRCDIR}/$$i;					\
-		want=`make show-vars VARNAMES=PKGNAME`;			\
-		have=`${PKG_BEST_EXISTS} "$${want%-*}" || true`;	\
+		want=`make show-var VARNAME=PKGNAME`;			\
+		wild=`make show-var VARNAME=PKGWILDCARD`;		\
+		have=`${PKG_BEST_EXISTS} "$$wild" || ${TRUE}`;		\
 		if [ -z "$$have" ]; then				\
-			echo "$$i => (none) => needs install of $$want"; \
+			${ECHO} "$$i => (none) => needs install of $$want"; \
 		elif [ "$$have" != "$$want" ]; then			\
-			echo "$$i => $$have => needs update to $$want";	\
+			${ECHO} "$$i => $$have => needs update to $$want"; \
 		fi;							\
 	done
 .  endif
@@ -3441,7 +3442,7 @@ real-su-replace:
 		exit 1;							\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	oldpkgname=`${PKG_BEST_EXISTS} "${PKGBASE}"`;			\
+	oldpkgname=`${PKG_BEST_EXISTS} "${PKGWILDCARD}"`;		\
 	newpkgname=${PKGNAME};						\
 	${ECHO} "$$oldpkgname" > ${WRKDIR}/.replace;			\
 	replace_action="${MAKE} install";				\
