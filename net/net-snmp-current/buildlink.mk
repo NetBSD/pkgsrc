@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.2 2002/04/05 07:57:16 tron Exp $
+# $NetBSD: buildlink.mk,v 1.3 2002/04/05 08:44:30 tron Exp $
 #
 # This Makefile fragment is included by packages that use libraries from
 # net-snmp.
@@ -24,7 +24,7 @@ DEPENDS+=	${BUILDLINK_DEPENDS.net-snmp}:../../net/net-snmp
 EVAL_PREFIX+=			BUILDLINK_PREFIX.net-snmp=net-snmp
 BUILDLINK_PREFIX.net-snmp_DEFAULT=	${LOCALBASE}
 BUILDLINK_FILES.net-snmp=		include/net-snmp/*
-BUILDLINK_FILES.net-snmp=		include/ucd-snmp/*
+BUILDLINK_FILES.net-snmp+=		include/ucd-snmp/*
 BUILDLINK_FILES.net-snmp+=		lib/libnetsnmp*
 
 BUILDLINK_TARGETS.net-snmp=	net-snmp-buildlink
