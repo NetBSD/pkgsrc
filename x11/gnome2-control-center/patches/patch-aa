@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.4 2003/10/18 12:58:58 cjep Exp $
 --- configure.orig	Sun Aug 31 16:33:12 2003
 +++ configure	Sun Aug 31 16:33:04 2003
 @@ -11136,7 +11136,7 @@
