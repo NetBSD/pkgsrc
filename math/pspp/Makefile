@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2000/01/15 18:46:29 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2000/04/16 08:56:15 mycroft Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -15,17 +15,16 @@ MASTER_SITES=	ftp://franz.stat.wisc.edu/pub/PSPP/ \
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.gnu.org/software/pspp/
 
+BUILD_DEPENDS+=	${LOCALBASE}/bin/autoconf:../../devel/autoconf
 DEPENDS+=	gettext-0.10.*:../../devel/gettext
-DEPENDS+=	ncurses>=4.2:../../devel/ncurses
-
-.if !exists(/usr/include/readline.h)
-DEPENDS+=       readline-4.0:../../devel/readline
-.endif
 
 GNU_CONFIGURE=	yes
 USE_GTEXINFO=	yes
-CPPFLAGS+=	-Dunix=1 -I${LOCALBASE}/include
+CPPFLAGS+=	-Dunix=1
 CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 MAKE_ENV+=	pkgsysconfdir="${PREFIX}/etc/pspp"
+
+pre-configure:
+	cd ${WRKSRC}; ${LOCALBASE}/bin/autoconf
 
 .include "../../mk/bsd.pkg.mk"
