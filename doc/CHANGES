@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1051 2003/01/08 19:57:50 jmmv Exp $
+$NetBSD: CHANGES,v 1.1052 2003/01/08 23:22:06 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -148,3 +148,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated pkg_comp to 1.5 [jmmv 2003-01-08]
 	Updated GutenMark-words to 20030107 [wiz 2003-01-08]
 	Updated windowmaker to 0.80.2nb1 [jmmv 2003-01-08]
+	Added screentest-1.0 [jmmv 2003-01-08]
