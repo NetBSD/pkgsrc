@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.9 2003/07/22 23:44:46 jmmv Exp $
+# $NetBSD: module.mk,v 1.10 2003/07/30 15:12:28 jmmv Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -47,7 +47,7 @@ perl5-configure:
 
 .if defined(PERL5_CONFIGURE) && !empty(PERL5_CONFIGURE:M[yY][eE][sS])
 do-configure: perl5-configure
-.if !target(do-configure)
+.if !commands(do-configure)
 	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
 .endif
 .endif
