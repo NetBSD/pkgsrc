@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2002/10/15 23:08:59 dillo Exp $
+# $NetBSD: Makefile,v 1.5 2003/03/29 07:56:59 jmc Exp $
 #
 
 DISTNAME=       sdk50-win
@@ -61,6 +61,17 @@ pre-fetch: install-depends
 	fi
 .    endif
 .  endfor
+
+EXTRACT_NORMAL=sdk40-core.tar.gz sdk40upd1.tar.gz sdk35.tar.gz sdk35-update1.tar.gz sdk31a1.zip
+
+do-extract: ${WRKDIR}
+.  for file in ${EXTRACT_NORMAL}
+	@extract_file="${DISTDIR}/${file}"; export extract_file;    \
+	cd ${WRKDIR}; ${EXTRACT_CMD}
+.  endfor
+	@extract_file="${DISTDIR}/sdk50-win.zip"; export extract_file;	\
+	cd ${WRKDIR}; ${MKDIR} Palm_OS_5_SDK_dr12; cd Palm_OS_5_SDK_dr12; \
+	${EXTRACT_CMD}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PALMDEV}
