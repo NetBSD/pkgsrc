@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2003/07/06 15:26:57 taca Exp $
+# $NetBSD: Makefile,v 1.261 2003/07/06 15:50:14 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -174,6 +174,7 @@ SUBDIR+=	qDecoder
 SUBDIR+=	quanta
 SUBDIR+=	quanta-docs
 SUBDIR+=	quanta3
+SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-htmlsplit
 SUBDIR+=	ruby-tag
 SUBDIR+=	ruby-webrick
