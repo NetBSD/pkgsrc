@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2004/08/27 06:29:08 jlam Exp $
+# $NetBSD: options.mk,v 1.9 2004/09/23 16:10:07 martti Exp $
 
 # Global and legacy options
 #
@@ -17,7 +17,7 @@ PKG_DEFAULT_OPTIONS+=	inet6
 PKG_DEFAULT_OPTIONS+=	tls
 .endif
 .if defined(POSTFIX_USE_PCRE) && !empty(POSTFIX_USE_PCRE:M[yY][eE][sS])
-PKG_DEFAULT_OPTIONS+=	pcre 
+PKG_DEFAULT_OPTIONS+=	pcre
 .endif
 .if defined(POSTFIX_USE_MYSQL) && !empty(POSTFIX_USE_MYSQL:M[yY][eE][sS])
 PKG_DEFAULT_OPTIONS+=	mysql
@@ -43,7 +43,7 @@ PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql mysql4 pcre pgsql sasl tls
 .  if empty(PKG_OPTIONS:Mtls)
 PKG_OPTIONS+=		tls
 .  endif
-IPV6TLS_PATCH=		tls+ipv6-1.25-pf-2.1.4.patch.gz
+IPV6TLS_PATCH=		tls+ipv6-1.25-pf-2.1.5.patch.gz
 PATCHFILES+=		${IPV6TLS_PATCH}
 SITES_${IPV6TLS_PATCH}=	ftp://ftp.stack.nl/pub/postfix/tls+ipv6/1.25/
 PATCH_DIST_STRIP.${IPV6TLS_PATCH}=	-p1
