@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.611 2002/11/26 15:12:16 jmmv Exp $
+$NetBSD: CHANGES,v 1.612 2002/11/26 17:03:57 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3731,3 +3731,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated imlib to 1.9.14nb2 [jmmv 2002-11-26]
 	Added hackbot-2.15 [pooka 2002-11-26]
 	Updated dillo to 0.6.6nb1 [jmmv 2002-11-26]
+	Updated libbonoboui to 2.0.3.2 [jmmv 2002-11-26]
