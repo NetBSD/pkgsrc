@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 1999/08/17 23:01:33 tron Exp $
+
+--- Makefile.in.orig	Wed Jun 16 07:46:57 1999
++++ Makefile.in	Wed Aug 18 00:41:39 1999
+@@ -58,7 +58,7 @@
+ 
+ #### End of system configuration section. ####
+ 
+-ALLPROGS = access afm2tfm bibtex dialog dmp dvicopy dvilj dvilj2p dvilj4 \
++ALLPROGS = access afm2tfm bibtex dmp dvicopy dvilj dvilj2p dvilj4 \
+   dvilj4l dvips dvitomp dvitype etex gftodvi gftopk gftype gsftopk \
+   install-info kpsestat kpsewhich mag makeindex makeinfo mf mfw \
+   mft mpost mpto newer odvicopy odvips odvitype ofm2opl omega opl2ofm \
