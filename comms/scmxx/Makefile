@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/03/10 08:14:19 kleink Exp $
+# $NetBSD: Makefile,v 1.6 2002/03/10 08:29:50 kleink Exp $
 #
 
 DISTNAME=		scmxx-0.5.14
@@ -18,7 +18,11 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/scmxx
 	${INSTALL_DATA} ${WRKSRC}/docs/README				\
 	    ${PREFIX}/share/doc/scmxx
+	${INSTALL_DATA} ${WRKSRC}/docs/greekchars.txt			\
+	    ${PREFIX}/share/doc/scmxx
 	${INSTALL_DATA} ${WRKSRC}/docs/gsmcharset.txt			\
+	    ${PREFIX}/share/doc/scmxx
+	${INSTALL_DATA} ${WRKSRC}/docs/specialchars.txt			\
 	    ${PREFIX}/share/doc/scmxx
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/scmxx
 	${INSTALL_DATA} ${WRKSRC}/examples/phonebook			\
