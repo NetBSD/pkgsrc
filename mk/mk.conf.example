@@ -1,4 +1,4 @@
-# $NetBSD: mk.conf.example,v 1.172 2001/02/09 16:21:37 jlam Exp $
+# $NetBSD: mk.conf.example,v 1.173 2001/02/15 14:22:18 agc Exp $
 #
 
 # Sample /etc/mk.conf file, which can be used to set specific values
@@ -146,7 +146,10 @@
 # Enable it if you are okay to build/use shareware.
 #ACCEPTABLE_LICENSES+=	kermit-license
 # Enable it if you accept the redistribution license for ckermit and would
-# like to build ckermit.  see pkgsrc/comms/kermit.
+# like to build ckermit.  see pkgsrc/licenses/kermit-license
+#ACCEPTABLE_LICENSES+=	opera-license
+# Enable it if you accept the redistribution license for opera and would
+# like to build opera.  see pkgsrc/licenses/opera-license
 #ACCEPTABLE_LICENSES+=	 sun-jsdk20-license
 # Enable it if you accept the download license for Sun JSDK and would
 # like to build Sun JSDK.  see pkgsrc/lang/jdk.
