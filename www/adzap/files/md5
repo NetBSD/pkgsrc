@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.7 2001/03/05 20:21:20 wiz Exp $
+$NetBSD: md5,v 1.8 2001/04/04 07:17:05 simonb Exp $
 
-MD5 (adzap-20010227.tar.gz) = 2c8f9c957d320630c0550a3415790bcb
+SHA1 (adzap-20010403.tar.gz) = f3e498a4c78120b40ef9b338e02dc0838557c1d7
