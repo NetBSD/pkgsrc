@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:10:36 agc Exp $
+
+MD5 (xquote-2.2.tar.gz) = 2fd42d7318931b6db142214ccd69a8b0
+SHA1 (patch-aa) = f3a8209dd3d25e1ec6b85a3d5c42ecd85e9f380a
+SHA1 (patch-ab) = 26c943dc5e22ea91641503cb7da35e6eeb47cec4
+SHA1 (patch-ac) = 2d9b18f22724f2ba92931077cafca38115a10eb4
+SHA1 (patch-ad) = 36f3d15cddd53b4cf0de17a96213a6fee84c38a2
+SHA1 (patch-ae) = 4aeb6076e76b40bd07d29530a5d2ed029bff7a63
