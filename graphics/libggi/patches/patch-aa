@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2004/09/20 22:39:03 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2005/03/25 02:47:31 wiz Exp $
 
---- configure.orig	2004-09-14 21:31:55.000000000 +0200
+--- configure.orig	2004-11-30 22:11:36.000000000 +0100
 +++ configure
-@@ -18135,7 +18135,7 @@ cat >>confdefs.h <<_ACEOF
+@@ -18455,7 +18455,7 @@ cat >>confdefs.h <<_ACEOF
  _ACEOF
  
  cat >>confdefs.h <<_ACEOF
