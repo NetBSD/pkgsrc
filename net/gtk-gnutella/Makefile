@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/10 10:40:42 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/11 14:53:44 agc Exp $
 #
 
 DISTNAME=		gtk-gnutella-0.12
@@ -14,6 +14,6 @@ DEPENDS=		gtk+-1.2.*:../../x11/gtk
 USE_GMAKE=		yes
 USE_X11=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-gtk-prefix="`${PKG_INFO} -qp gtk+ | ${AWK} '{print $$2}'`"
+CONFIGURE_ARGS+=	--with-gtk-prefix="`${MAKE} show-gtk+-prefix`"
 
 .include "../../mk/bsd.pkg.mk"

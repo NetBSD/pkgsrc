@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2000/07/10 16:03:49 agc Exp $
+# $NetBSD: Makefile,v 1.3 2000/07/11 14:53:47 agc Exp $
 #
 
 DISTNAME=	qtarch-2.0-1
@@ -16,7 +16,7 @@ DEPENDS+=	png-*:../../graphics/png
 USE_X11=	yes
 USE_GMAKE=	yes
 
-MAKE_ENV=	QTDIR=`${PKG_INFO} -qp qt2 | ${AWK} '{print $$2}'`/qt2
+MAKE_ENV=	QTDIR=`${MAKE} show-qt2-prefix`/qt2
 PATH=		${QTDIR}/bin:$$PATH
 
 do-install:

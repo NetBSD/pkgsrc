@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2000/07/10 15:08:16 agc Exp $
+# $NetBSD: Makefile,v 1.15 2000/07/11 14:53:39 agc Exp $
 
 DISTNAME=	kdevelop-1.2
 CATEGORIES=	devel kde
@@ -22,9 +22,9 @@ USE_PKGLIBTOOL=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-extra-includes=${LOCALBASE}/include \
 		--with-extra-libs=${LOCALBASE}/lib \
-		--with-qt-dir=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1
+		--with-qt-dir=`${MAKE} show-qt1-prefix`/qt1
 
 CFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	"KDEDIR=${PREFIX} QTDIR=`${PKG_INFO} -qp qt1 | ${AWK} '{ print $$2 }'`/qt1"
+CONFIGURE_ENV=	"KDEDIR=${PREFIX} QTDIR=`${MAKE} show-qt1-prefix`/qt1"
 
 .include "../../mk/bsd.pkg.mk"
