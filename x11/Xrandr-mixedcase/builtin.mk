@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2004/11/08 12:38:19 markd Exp $
+# $NetBSD: builtin.mk,v 1.7 2005/03/01 18:56:43 xtraeme Exp $
 
 _X11_TMPL=	${X11BASE}/lib/X11/config/X11.tmpl
 
@@ -28,8 +28,10 @@ _XRANDR_1.0=	4.3 4.3.[0-9] 4.3.[0-9].* 4.3.[1-8][0-9]* 4.3.9[0-8]*
 _XRANDR_1.0+=	4.3.99.* 4.[4-9]* 4.[1-9][0-9]*
 .      if !defined(XF86_VERSION)
 XF86_VERSION=	3.3
-.        if exists(${X11BASE}/lib/X11/config/xorg.cf)
-_X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/xorg.cf
+.        if exists(${X11BASE}/lib/X11/config/xorgversion.def)
+_X11_CONFIG_VERSION_DEF=	${X11BASE}/lib/X11/config/xorgversion.def
+.        elif exists(${X11BASE}/lib/X11/config/xorg.cf)
+_X11_CONFIG_VERSION_DEF=        ${X11BASE}/lib/X11/config/xorg.cf
 _XORG_MAJOR!=	\
 	${AWK} '/\#define[ 	]*XORG_VERSION_MAJOR/ { print $$3 }'	\
 		${_X11_CONFIG_VERSION_DEF}
