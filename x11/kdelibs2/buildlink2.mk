@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.12 2002/12/13 21:40:33 tron Exp $
+# $NetBSD: buildlink2.mk,v 1.13 2003/03/13 14:19:22 hubertf Exp $
 
 .if !defined(KDELIBS2_BUILDLINK2_MK)
 KDELIBS2_BUILDLINK2_MK=	# defined
@@ -7,7 +7,10 @@ KDELIBS2_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=		kdelibs2
 BUILDLINK_PKGBASE.kdelibs2?=	kdelibs
-BUILDLINK_DEPENDS.kdelibs2?=	kdelibs>=2.2.2nb4
+.if !defined(BUILDLINK_DEPENDS.kdelibs2)
+BUILDLINK_DEPENDS.kdelibs2+=	kdelibs>=2.2.2nb4
+BUILDLINK_DEPENDS.kdelibs2+=	kdelibs<3.0	# qt2-designer-kde wants KDE_2_
+.endif
 BUILDLINK_PKGSRCDIR.kdelibs2?=	../../x11/kdelibs2
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.kdelibs2=kdelibs
