@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/01 12:27:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/01/15 11:38:08 markd Exp $
 share/doc/kde/HTML/en_GB/kaddressbook/common
 share/doc/kde/HTML/en_GB/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/en_GB/kaddressbook/index.docbook
@@ -282,6 +282,7 @@ share/kde/locale/en_GB/LC_MESSAGES/appletproxy.mo
 share/kde/locale/en_GB/LC_MESSAGES/ark.mo
 share/kde/locale/en_GB/LC_MESSAGES/artsbuilder.mo
 share/kde/locale/en_GB/LC_MESSAGES/artscontrol.mo
+share/kde/locale/en_GB/LC_MESSAGES/artsmodules.mo
 share/kde/locale/en_GB/LC_MESSAGES/atlantik.mo
 share/kde/locale/en_GB/LC_MESSAGES/atlantikdesigner.mo
 share/kde/locale/en_GB/LC_MESSAGES/babelfish.mo
@@ -307,12 +308,14 @@ share/kde/locale/en_GB/LC_MESSAGES/desktop_kdesdk.mo
 share/kde/locale/en_GB/LC_MESSAGES/desktop_kdetoys.mo
 share/kde/locale/en_GB/LC_MESSAGES/desktop_kdeutils.mo
 share/kde/locale/en_GB/LC_MESSAGES/dirfilterplugin.mo
+share/kde/locale/en_GB/LC_MESSAGES/dockbarextension.mo
 share/kde/locale/en_GB/LC_MESSAGES/domtreeviewer.mo
 share/kde/locale/en_GB/LC_MESSAGES/drkonqi.mo
 share/kde/locale/en_GB/LC_MESSAGES/dub.mo
 share/kde/locale/en_GB/LC_MESSAGES/extensionproxy.mo
 share/kde/locale/en_GB/LC_MESSAGES/ffrs.mo
 share/kde/locale/en_GB/LC_MESSAGES/filetypes.mo
+share/kde/locale/en_GB/LC_MESSAGES/flashkard.mo
 share/kde/locale/en_GB/LC_MESSAGES/fontinst.mo
 share/kde/locale/en_GB/LC_MESSAGES/htmlsearch.mo
 share/kde/locale/en_GB/LC_MESSAGES/imagerename_plugin.mo
@@ -482,7 +485,6 @@ share/kde/locale/en_GB/LC_MESSAGES/kfile_xbm.mo
 share/kde/locale/en_GB/LC_MESSAGES/kfindpart.mo
 share/kde/locale/en_GB/LC_MESSAGES/kfloppy.mo
 share/kde/locale/en_GB/LC_MESSAGES/kfmclient.mo
-share/kde/locale/en_GB/LC_MESSAGES/kfmexec.mo
 share/kde/locale/en_GB/LC_MESSAGES/kfontviewpart.mo
 share/kde/locale/en_GB/LC_MESSAGES/kfouleggs.mo
 share/kde/locale/en_GB/LC_MESSAGES/kgantt.mo
@@ -499,7 +501,9 @@ share/kde/locale/en_GB/LC_MESSAGES/kicker.mo
 share/kde/locale/en_GB/LC_MESSAGES/kiconedit.mo
 share/kde/locale/en_GB/LC_MESSAGES/kinetd.mo
 share/kde/locale/en_GB/LC_MESSAGES/kio_audiocd.mo
+share/kde/locale/en_GB/LC_MESSAGES/kio_devices.mo
 share/kde/locale/en_GB/LC_MESSAGES/kio_finger.mo
+share/kde/locale/en_GB/LC_MESSAGES/kio_fish.mo
 share/kde/locale/en_GB/LC_MESSAGES/kio_floppy.mo
 share/kde/locale/en_GB/LC_MESSAGES/kio_imap4.mo
 share/kde/locale/en_GB/LC_MESSAGES/kio_lan.mo
@@ -513,6 +517,7 @@ share/kde/locale/en_GB/LC_MESSAGES/kio_sftp.mo
 share/kde/locale/en_GB/LC_MESSAGES/kio_smb.mo
 share/kde/locale/en_GB/LC_MESSAGES/kio_smbro.mo
 share/kde/locale/en_GB/LC_MESSAGES/kio_smtp.mo
+share/kde/locale/en_GB/LC_MESSAGES/kioexec.mo
 share/kde/locale/en_GB/LC_MESSAGES/kit.mo
 share/kde/locale/en_GB/LC_MESSAGES/kiten.mo
 share/kde/locale/en_GB/LC_MESSAGES/kjobviewer.mo
