@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9136 2005/02/14 11:20:41 grant Exp $
+$NetBSD: CHANGES,v 1.9137 2005/02/14 14:53:49 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -871,3 +871,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated dovecot to 0.99.14 [xtraeme 2005-02-14]
 	Updated libusb to 0.1.10 [adam 2005-02-14]
 	Updated clamav to 0.83 [grant 2005-02-14]
+	Updated docbook-xsl to 1.68.1 [jmmv 2005-02-14]
