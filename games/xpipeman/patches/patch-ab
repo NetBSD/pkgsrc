@@ -1,0 +1,10 @@
+--- Imakefile.orig	Sat Aug  1 01:16:57 1998
++++ Imakefile	Sat Aug  1 01:19:02 1998
+@@ -1,5 +1,5 @@
+ 
+-     SCORE_FILE = -DSCORE_FILE=\"/usr/games/lib/xpipescores\"
++     SCORE_FILE = -DSCORE_FILE=\"$(X11BASE)/share/xpipeman/xpipescores\"
+       MAXSCORES = -DMAXSCORES=20
+-        DEFINES = $(SCORE_FILE) $(MAXSCORES) -DSYSV
++        DEFINES = $(SCORE_FILE) $(MAXSCORES)
+ 
