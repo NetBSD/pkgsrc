@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2998 2005/02/05 16:59:38 adrianp Exp $
+$NetBSD: TODO,v 1.2999 2005/02/06 23:12:44 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -1106,7 +1106,6 @@ Suggested package updates
 	o vcdimager-0.7.21
 	o vera-1.14
 	o vfu-4.03
-	o vice-1.16
 	o vifm-0.2
 	o vipec-3.2.0
 	o vlc-0.8.1
