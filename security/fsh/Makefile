@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2001/09/27 23:18:38 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/18 13:29:29 drochner Exp $
 #
 
 DISTNAME=	fsh-1.1
@@ -10,9 +10,10 @@ MAINTAINER=	fredb@netbsd.org
 HOMEPAGE=	http://www.lysator.liu.se/fsh/
 COMMENT=	fast remote command execution
 
-DEPENDS+=	python-[0-9]*:../../lang/python
-
 GNU_CONFIGURE=	YES
 USE_GTEXINFO=	YES
 
+CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
+
+.include "../../lang/python/application.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
