@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/02/07 16:20:19 agc Exp $
+
+--- portsentry.conf	1999/11/09 02:45:42	1.13
++++ portsentry.conf	2000/02/07 15:11:33
+@@ -80,11 +80,11 @@
+ ######################
+ #
+ # Hosts to ignore
+-IGNORE_FILE="/usr/local/psionic/portsentry/portsentry.ignore"
++IGNORE_FILE="@PREFIX@/etc/portsentry.ignore"
+ # Hosts that have been denied (running history)
+-HISTORY_FILE="/usr/local/psionic/portsentry/portsentry.history"
++HISTORY_FILE="@PREFIX@/etc/portsentry.history"
+ # Hosts that have been denied this session only (temporary until next restart)
+-BLOCKED_FILE="/usr/local/psionic/portsentry/portsentry.blocked"
++BLOCKED_FILE="@PREFIX@/etc/portsentry.blocked"
+ 
+ ###################
+ # Response Options#
+@@ -158,10 +158,10 @@
+ #KILL_ROUTE="/sbin/route add -host $TARGET$ reject"
+ 
+ # Generic BSD (BSDI, OpenBSD, NetBSD, FreeBSD)
+-#KILL_ROUTE="/sbin/route add $TARGET$ 333.444.555.666"
++@netbsd@KILL_ROUTE="/sbin/route add $TARGET$ 333.444.555.666"
+ 
+ # Generic Sun 
+-#KILL_ROUTE="/usr/sbin/route add $TARGET$ 333.444.555.666 1"
++@solaris@KILL_ROUTE="/usr/sbin/route add $TARGET$ 333.444.555.666 1"
+ 
+ # NEXTSTEP
+ #KILL_ROUTE="/usr/etc/route add $TARGET$ 127.0.0.1 1"
