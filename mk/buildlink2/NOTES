@@ -1,0 +1,35 @@
+$NetBSD: NOTES,v 1.11.4.2 2002/12/28 23:01:26 schmonz Exp $
+
+ Caching
+ =======
+
+The caching problems seem to be related to correct manipulation of
+variables containing values with escaped metacharacters by the shell.  The
+current code only does partial caching, which doesn't cache "special"
+arguments that contain escaped metacharacters or other oddly quoted values.
+On certain platforms listed in _BLNK_CACHE_ALL in bsd.buildlink2.mk, we do
+full caching, which has enormous speed benefits since it avoids an extra
+sed invocation per "special" argument.
+
+The test process for buildlink2 consists of building and installing:
+
+	shells/tcsh		tests handling of specially-quoted arguments
+	devel/gettext-lib	same as above, but uses libtool
+	x11/xearth		tests imake wrapper
+
+Full caching can be tested be adding ${MACHINE_PLATFORM} to _BLNK_CACHE_ALL
+and performing the tests above, but only building the packages is needed.
+
+Platform			Working?	Full caching?
+--------			--------	-------------
+FreeBSD 4.7			N/A		N/A
+IRIX 6.5 (jschauma)		Yes!		Yes!
+Linux				N/A		N/A
+Darwin 5.5 (schmonz)		Yes!		No
+Darwin 6.2 (grant)		Yes!		Yes!
+NetBSD 1.5.x (gendalia)		N/A		N/A
+NetBSD 1.6 (jlam)		Yes!		Yes!
+OpenBSD (cjep)			N/A		N/A
+Solaris 7			N/A		N/A
+Solaris 8 (grant)		Yes!		Yes!
+Solaris 9 (salo)		N/A		N/A
