@@ -1,13 +1,19 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/03/21 22:20:56 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2003/07/01 23:10:34 jtb Exp $
 
---- config/_arch-n-opsys.orig        Fri Oct 20 18:02:25 2000
-+++ config/_arch-n-opsys     Fri Mar  9 14:07:05 2001
-@@ -107,6 +107,7 @@
+--- config/_arch-n-opsys.orig
++++ config/_arch-n-opsys
+@@ -106,11 +106,13 @@
+   NetBSD)
+     OPSYS=netbsd
+     HEAP_OPSYS=bsd
+-    case `uname -m` in
++    case `uname -p` in
+       i386) ARCH=x86;;
        i486) ARCH=x86;;
        i586) ARCH=x86;;
        i686) ARCH=x86;;
++      powerpc) ARCH=ppc;;
 +      sparc) ARCH=sparc;;
        *) exit 1;;
      esac
      ;;
-
