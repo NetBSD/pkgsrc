@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/26 02:27:52 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2004/05/23 15:09:06 heinz Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 PKGREVISION=	5
@@ -82,9 +82,9 @@ TEXFAMILY_DVIPSVERSION=	1.5g
 TEXFAMILY_MENDEXVERSION=2.5
 
 pre-extract:
-	if [ ! -e ${WRKSRC} ]; then \
+	if [ ! -r ${WRKSRC} ]; then \
 		cd ../../print/teTeX1-bin && ${MAKE} patch; \
-	elif [ ! -e ${WRKSRC}/texk/texfam.ac ]; then \
+	elif [ ! -r ${WRKSRC}/texk/texfam.ac ]; then \
 		cd ../../print/teTeX1-bin && ${MAKE} clean; ${MAKE} patch; \
 	fi
 
