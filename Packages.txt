@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.92 2000/06/30 11:09:53 wiz Exp $
+# $NetBSD: Packages.txt,v 1.93 2000/07/01 20:12:03 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -1505,6 +1505,18 @@ When making fixes to an existing package it can be useful to change
 the version number in PKGNAME. To avoid conflicting with future versions
 by the original author, use a 'nb1' suffix (later versions should
 increment this to give 'nb2' and so on).
+
+ 9.18 "Could not find bsd.own.mk" - what's wrong?
+ ================================================
+
+You didn't install the compiler set, comp.tgz, when you installed your
+NetBSD machine. Please get it and install it, by extracting it in /:
+
+	tar --unlink -pvxf .../comp.tgz
+
+comp.tgz is part of every NetBSD release, please get the one matching 
+the release you have installed (determine via "uname -r").
+
 
  10 Submitting
  =============
