@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/01/15 19:11:17 tron Exp $
+# $NetBSD: Makefile,v 1.2 2004/01/15 19:58:07 tron Exp $
 
 DISTNAME=	connect
 PKGNAME=	${DISTNAME}-1.69
@@ -12,9 +12,19 @@ COMMENT=	Open a TCP connection using a SOCKS4/5 or HTTP proxy server
 
 EXTRACT_ONLY=	# empty
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == Darwin
+LIBS=	-lresolv
+.elif ${OPSYS} == SunOS
+LIBS=	-lsocket -lnsl
+.else
+LIBS=
+.endif
+
 do-build:
 	${MKDIR} ${WRKSRC}
-	${CC} ${DISTDIR}/${DISTFILES} ${CFLAGS} -o ${WRKSRC}/connect
+	${CC} ${DISTDIR}/${DISTFILES} ${CFLAGS} -o ${WRKSRC}/connect ${LIBS}
 	${EGREP} '^ \*(| .*)$$' ${DISTDIR}/${DISTFILES} | \
 	${CUT} -c 4- >${WRKSRC}/README
 
