@@ -1,16 +1,17 @@
-$NetBSD: patch-ai,v 1.1 2002/07/11 14:24:00 abs Exp $
+$NetBSD: patch-ai,v 1.2 2003/01/30 12:22:48 jlam Exp $
 
---- Plugin/plugin.c.orig	Mon Jun 12 09:24:09 2000
+--- Plugin/plugin.c.orig	Mon Jun 12 01:24:09 2000
 +++ Plugin/plugin.c
 @@ -162,7 +162,11 @@ NPP_New(NPMIMEType pluginType,
  
  		FlashSetCursorOnOffMethod(This->fh, cursorOnOff, (void*)instance);
  
-+#ifdef __NetBSD__
-+		FlashSoundInit(This->fh, "/dev/sound");
-+#else
- 		FlashSoundInit(This->fh, "/dev/dsp");
+-		FlashSoundInit(This->fh, "/dev/dsp");
++#ifndef DEV_DSP
++#define DEV_DSP	"/dev/dsp"
 +#endif
++
++		FlashSoundInit(This->fh, DEV_DSP);
  
  		return NPERR_NO_ERROR;
  	}

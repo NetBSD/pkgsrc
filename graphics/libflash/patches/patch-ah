@@ -1,39 +1,49 @@
-$NetBSD: patch-ah,v 1.4 2002/07/11 14:24:00 abs Exp $
+$NetBSD: patch-ah,v 1.5 2003/01/30 12:22:48 jlam Exp $
 
---- Plugin/Makefile.orig	Tue Sep 28 13:13:38 1999
+--- Plugin/Makefile.orig	Tue Sep 28 05:13:38 1999
 +++ Plugin/Makefile
-@@ -21,7 +21,7 @@
+@@ -21,34 +21,30 @@
  
  PLUGIN_DEFINES= -DXP_UNIX
  OPTIMIZER=
 -FLASH=../Lib
-+FLASH=${LOCALBASE}/include/flash
  
  # Solaris
  #LIBCXX=/usr/lib/libC.so
-@@ -31,12 +31,12 @@ LIBCXX=
- # Solaris (Sun compiler/linker)
- #SHARED=-G
- # FreeBSD
--#SHARED=-Bshareable
-+SHARED=-Bshareable
- # Linux
--SHARED=-shared
-+#SHARED=-shared
+ # gcc
+ LIBCXX=
  
+-# Solaris (Sun compiler/linker)
+-#SHARED=-G
+-# FreeBSD
+-#SHARED=-Bshareable
+-# Linux
+-SHARED=-shared
+-
 -CFLAGS=  $(OPTIMIZER) $(PLUGIN_DEFINES) -I$(FLASH) -I/usr/X11R6/include
 -LDFLAGS= $(FLASH)/libflash.a $(LIBCXX) ../Jpeg/libjpeg.a ../Zlib/libz.a
-+CFLAGS=  $(OPTIMIZER) -fPIC $(PLUGIN_DEFINES) -I$(FLASH) -I${X11BASE}/include
-+LDFLAGS= -lflash $(LIBCXX) -L${LOCALBASE}/lib -R${LOCALBASE}/lib -L${X11BASE}/lib -R${X11BASE}/lib -lXt -lX11 -ljpeg -lz -lossaudio
++CFLAGS+=  $(OPTIMIZER) $(PLUGIN_DEFINES) $(CPPFLAGS)
++LIBS= -lflash $(LIBCXX) -ljpeg -lz $(LIBOSSAUDIO) -lX11 -lXt
  
  SRC= plugin.c npunix.c
  OBJ= plugin.o npunix.o
-@@ -48,7 +48,7 @@ default all: $(SHAREDTARGET)
- $(SHAREDTARGET): $(OBJ) $(FLASH)/libflash.a
- 	$(LD) $(SHARED) -o $(SHAREDTARGET) $(OBJ) $(LDFLAGS)
+ 
+ SHAREDTARGET=npflash.so
+ 
+-default all: $(SHAREDTARGET)
++.c.o:
++	$(SHLIBTOOL) --mode=compile $(CC) -c $(CPPFLAGS) $(CFLAGS) $<
++
++default all: npflash.la
+ 
+-$(SHAREDTARGET): $(OBJ) $(FLASH)/libflash.a
+-	$(LD) $(SHARED) -o $(SHAREDTARGET) $(OBJ) $(LDFLAGS)
++npflash.la: $(OBJ)
++	$(SHLIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $(OBJ:.o=.lo) $(LIBS) -avoid-version -module -rpath $(MOZ_PLUGDIR)
  
 -plugin.o: $(FLASH)/flash.h
-+plugin.o: ${LOCALBASE}/include/flash/flash.h
++$(SHAREDTARGET): $(OBJ)
++	$(LD) $(SHARED) -o $(SHAREDTARGET) $(OBJ) $(LDFLAGS) $(LIBS)
  
  clean:
  	$(RM) $(OBJ) $(SHAREDTARGET)
