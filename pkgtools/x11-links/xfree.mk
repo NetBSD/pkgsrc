@@ -1,4 +1,4 @@
-# $NetBSD: xfree.mk,v 1.1 2003/09/02 07:14:44 jlam Exp $
+# $NetBSD: xfree.mk,v 1.2 2003/09/07 19:30:23 jlam Exp $
 
 FILES_LIST=	${FILESDIR}/xfree
 
@@ -10,6 +10,7 @@ BUILDLINK_CHECK_BUILTIN.${_module_}=	YES
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
 
