@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/05/18 22:01:36 mjl Exp $
+# $NetBSD: Makefile,v 1.5 1999/06/22 07:34:16 tron Exp $
 #
 
 DISTNAME=		slrn-0.9.5.6
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://space.mit.edu/pub/davis/slrn/ \
 MAINTAINER=		mjl@netbsd.org
 HOMEPAGE=		http://space.mit.edu/%7Edavis/slrn.html
 
-DEPENDS+=		libslang-1.2.2:../../devel/libslang
+DEPENDS+=		libslang-1.3.7:../../devel/libslang
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-X --prefix=${PREFIX}
