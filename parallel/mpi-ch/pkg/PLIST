@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2001/04/02 22:52:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/04/05 17:56:20 wennmach Exp $
 bin/tarch
 bin/tdevice
 bin/mpiman
@@ -25,6 +25,17 @@ bin/mpereconfig
 bin/mpereconfig.dat
 bin/logviewer
 bin/upshot
+lib/libfmpich.a
+lib/libmpe_nompi.a
+lib/libmpich.a
+lib/libmpichfsup.a
+lib/libpmpich++.a
+lib/libpmpich.a
+lib/libampe.a
+lib/liblmpe.a
+lib/libmpe.a
+lib/libtmpe.a
+lib/mpe_prof.o
 etc/mpif77.conf
 etc/mpichlib.conf
 etc/mpichconf.h.dat
