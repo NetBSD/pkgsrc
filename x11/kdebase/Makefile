@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 1999/07/15 13:54:30 tron Exp $
+# $NetBSD: Makefile,v 1.41 1999/07/19 09:43:07 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.1
@@ -39,6 +39,7 @@ KDE_DIRS=	share/doc/kde/HTML/cs share/doc/kde/HTML/da \
 
 post-extract:
 	@${LN} -fs ${FILESDIR}/info_netbsd.cpp ${WRKSRC}/kcontrol/info
+	@${LN} -fs ${FILESDIR}/memory_netbsd.cpp ${WRKSRC}/kcontrol/info
 
 post-install:
 	@${CHMOD} u+s ${PREFIX}/bin/klock
