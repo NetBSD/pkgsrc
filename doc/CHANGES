@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4393 2004/01/08 16:10:45 adam Exp $
+$NetBSD: CHANGES,v 1.4394 2004/01/08 17:57:14 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -118,3 +118,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated atari800 to 1.3.2 [adam 2004-01-08]
 	Updated openmortal to 0.4 [xtraeme 2004-01-08]
 	Updated dlcompat to 20030629 [adam 2004-01-08]
+	Added fragroute-1.2 [agc 2004-01-08]
