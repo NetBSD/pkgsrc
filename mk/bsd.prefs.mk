@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.118.2.8 2003/08/16 21:14:52 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.118.2.9 2003/08/21 02:06:15 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -249,6 +249,9 @@ X11PREFIX=		${X11BASE}
 XMKMF_CMD?=		${X11PREFIX}/bin/xmkmf
 .endif
 
+DEPOT_SUBDIR?=		packages
+DEPOTBASE=		${LOCALBASE}/${DEPOT_SUBDIR}
+
 # RPATH_FLAG publicly exports the linker flag used to specify run-time
 # library search paths.
 #
@@ -276,7 +279,8 @@ DIGEST_VERSION!= 	${DIGEST} -V 2>/dev/null
 MAKEFLAGS+=		DIGEST_VERSION="${DIGEST_VERSION}"
 .endif
 
-PKG_DBDIR?=		${DESTDIR}/var/db/pkg
+# This is the package database directory for the default view.
+PKG_DBDIR_DFLT?=	${DESTDIR}/var/db/pkg
 
 PKG_ADD_CMD?=		${PKG_TOOLS_BIN}/pkg_add
 PKG_ADMIN_CMD?=		${PKG_TOOLS_BIN}/pkg_admin
@@ -286,18 +290,18 @@ PKG_INFO_CMD?=		${PKG_TOOLS_BIN}/pkg_info
 PKG_VIEW_CMD?=		${PKG_TOOLS_BIN}/pkg_view
 LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 
+# Views are rooted in ${LOCALBASE}, and the all packages are depoted in
+# ${DEPOTBASE}.
+#
+PKG_VIEW_ARGS?=		-W ${LOCALBASE} -d ${DEPOTBASE}
+
 PKG_ADD?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_ADD_CMD}
 PKG_ADMIN?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_ADMIN_CMD}
 PKG_CREATE?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_CREATE_CMD}
 PKG_DELETE?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_DELETE_CMD}
 PKG_INFO?=		PKG_DBDIR=${PKG_DBDIR} ${PKG_INFO_CMD}
-PKG_VIEW?=		${PKG_VIEW_CMD}
+PKG_VIEW?=		PKG_DBDIR_DFLT=${PKG_DBDIR_DFLT} ${PKG_VIEW_CMD} ${PKG_VIEW_ARGS}
 LINKFARM?=		${LINKFARM_CMD}
-
-DEPOT_PKG_ADD?=		PKG_DBDIR=${DEPOTBASE} ${PKG_ADD_CMD}
-DEPOT_PKG_ADMIN?=	PKG_DBDIR=${DEPOTBASE} ${PKG_ADMIN_CMD}
-DEPOT_PKG_DELETE?=	PKG_DBDIR=${DEPOTBASE} ${PKG_DELETE_CMD}
-DEPOT_PKG_INFO?=	PKG_DBDIR=${DEPOTBASE} ${PKG_INFO_CMD}
 
 .ifndef PKGTOOLS_VERSION
 PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.9 2003/08/19 02:50:57 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.10 2003/08/21 02:06:16 jlam Exp $
 #
 # Assume PKG_INSTALLATION_TYPE == "pkgviews".
 
@@ -29,9 +29,9 @@ BUILDLINK_PKGSRCDIR.x11-links=	../../pkgtools/x11-links
 
 X11_LINKS_SUBDIR=		share/x11-links
 BUILDLINK_X11_DIR!=							\
-	if ${DEPOT_PKG_INFO} -qe "${BUILDLINK_DEPENDS.x11-links}"; then	\
+	if ${PKG_INFO} -qe "${BUILDLINK_DEPENDS.x11-links}"; then	\
 		cd ${DEPOTBASE};					\
-		${DEPOT_PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.x11-links}"; \
+		${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.x11-links}"; \
 	else								\
 		${ECHO} "${LOCALBASE}/${X11_LINKS_SUBDIR}";		\
 	fi
@@ -81,9 +81,9 @@ BUILDLINK_PKGBASE.${_pkg_}?=	${_pkg_}
 .  endif
 .  if !defined(BUILDLINK_DEPOT.${_pkg_})
 BUILDLINK_DEPOT.${_pkg_}!=						\
-	if ${DEPOT_PKG_INFO} -qe "${BUILDLINK_DEPENDS.${_pkg_}}"; then	\
+	if ${PKG_INFO} -qe "${BUILDLINK_DEPENDS.${_pkg_}}"; then	\
 		cd ${DEPOTBASE};					\
-		${DEPOT_PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}"; \
+		${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}"; \
 	else								\
 		${ECHO} "${LOCALBASE}";					\
 	fi
