@@ -1,0 +1,33 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/07/16 14:25:34 xtraeme Exp $
+
+--- Makefile.orig	2004-07-16 14:57:16.000000000 +0200
++++ Makefile	2004-07-16 14:57:30.000000000 +0200
+@@ -1,8 +1,8 @@
+ # use assembler optimizations
+-ASM_X86=1
++#ASM_X86=1
+ 
+ # use debugger: 1 - by default, 2 - compile in but don't use by default
+-GDEBUG=2
++#GDEBUG=2
+ 
+ # by default, no window will open until fb address is set
+ # or video mode is specified. some programs might not reach that stage.
+@@ -18,7 +18,7 @@
+ MEMHACK=0
+ 
+ # specify the cpu used (for -march, check gcc manual)
+-CPU=i686
++#CPU=i686
+ #CPU=athlon-xp
+ 
+ # add here optimization flags
+@@ -28,7 +28,7 @@
+ OPENGL=GL
+ 
+ # compilator
+-CC=gcc
++#CC=gcc
+ 
+ # if byteswap.h is present
+ USE_BYTESWAP_H=1
