@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1210 2003/01/23 22:49:04 jmmv Exp $
+$NetBSD: CHANGES,v 1.1211 2003/01/23 23:05:19 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -388,3 +388,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cassowary to 0.60nb1 [kristerw 2003-01-23]
 	Updated R to 1.6.2 [markd 2003-01-23]
 	Updated kermit to 8.0.206nb1 [jmmv 2003-01-23]
+	Updated cups to 1.1.18nb1 [jlam 2003-01-23]
