@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 1999/12/18 13:35:56 abs Exp $
+# $NetBSD: Makefile,v 1.9 2000/03/05 07:51:09 kim Exp $
 
 DISTNAME=		cyrus-imapd-v1.5.14
-PKGNAME=		cyrus-imapd-1.5.14
+PKGNAME=		cyrus-1.5.14
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/
 
@@ -32,6 +32,10 @@ USE_KERBEROS=		yes
 CONFIGURE_ARGS+=	--with-login=krb
 .endif
 
-.include "../../mk/bsd.pkg.mk"
+# Deliver must be executable by all on machines with local
+# users sending to cyrus mailboxes.
 
-PKGNAME!=		${ECHO} "${DISTNAME}" | ${SED} -e 's/-imapd-v/-/'
+post-install:
+	@chmod a+rx ${PREFIX}/cyrus/bin/deliver
+
+.include "../../mk/bsd.pkg.mk"
