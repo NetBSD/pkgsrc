@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/07/01 16:44:55 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2003/07/12 13:17:57 dillo Exp $
 
 DISTNAME=		glib-2.2.2
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -31,9 +31,7 @@ CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
-test: build
-	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE_PROGRAM} check 2>&1 | \
-		tee ${WRKDIR}/check.log
+TEST_TARGET=		check
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
