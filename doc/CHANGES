@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3305 2003/09/10 06:48:55 wiz Exp $
+$NetBSD: CHANGES,v 1.3306 2003/09/10 09:07:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3602,3 +3602,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated python23 to 2.3nb1 [recht 2003-09-10]
 	Updated python23-pth to 2.3nb1 [recht 2003-09-10]
 	Updated neon to 0.24.1 [epg 2003-09-10]
+	Updated csound-manual to 4.23 [wiz 2003-09-10]
