@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.477 2000/06/05 07:25:13 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.478 2000/06/05 18:49:29 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -2456,7 +2456,7 @@ binpkg-list:
 	*)								\
 		cd ${PACKAGES}/../..;					\
 		for i in [1-9].*/*; do  				\
-			if cd ${PACKAGES}/../../$$i/${PKGREPOSITORYSUBDIR}; then \
+			if cd ${PACKAGES}/../../$$i/${PKGREPOSITORYSUBDIR} 2>/dev/null; then \
 				for j in ${PKGWILDCARD}${PKG_SUFX};	\
 				do 					\
 					if [ -f "$$j" ]; then		\
