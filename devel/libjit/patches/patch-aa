@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/05/16 01:12:15 xtraeme Exp $
+
+--- jit/jit-interp.cpp.orig	2004-05-16 03:06:50.000000000 +0200
++++ jit/jit-interp.cpp	2004-05-16 03:07:31.000000000 +0200
+@@ -30,6 +30,7 @@
+ #include "jit-rules.h"
+ #include "jit-memory.h"
+ #include <config.h>
++#include <stdlib.h>
+ #if HAVE_ALLOCA_H
+ 	#include <alloca.h>
+ #endif
