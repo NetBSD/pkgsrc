@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2000/01/17 05:34:32 christos Exp $
+# $NetBSD: Makefile,v 1.2 2000/01/17 05:38:54 christos Exp $
 #
 
 DISTNAME=		openssh-1.2.1pre26
 PKGNAME=		openssh-1.2.1-26
 CATEGORIES=		security
-MASTER_SITES=		ftp://thermo.stat.ncsu.edu/pub/openssh/files
+MASTER_SITES=		ftp://thermo.stat.ncsu.edu/pub/openssh/files/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssh.org/
@@ -30,7 +30,8 @@ GNU_CONFIGURE=		yes
 SSH_CONF_DIR?=		/etc
 CONFIGURE_ARGS=		--prefix=${PREFIX} --sysconfdir=${SSH_CONF_DIR}
 
-DEPENDS=		openssl-0.9.4
+DEPENDS=		openssl-0.9.4:../../security/openssl
+
 CONFIGURE_ARGS+=	openssl
 
 .include "../../mk/bsd.pkg.mk"
