@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2001/11/29 19:46:11 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2001/12/12 14:59:13 wiz Exp $
 
 DISTNAME=		gnome-games-1.4.0.3
 CATEGORIES=		games gnome
@@ -18,16 +18,15 @@ CONFLICTS=		xbill-[0-9]*
 
 USE_GMAKE=		YES
 USE_X11BASE=		YES
-USE_CURSES=		YES
 USE_LIBTOOL=		YES
-USE_LIBINTL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 BUILD_USES_GETTEXT_M4=	YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ENV+=		LOCALEDIR=${LOCALEDIR}
+CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
 CONFIGURE_ARGS+=	--localstatedir=/var
-CFLAGS+=		-I${LOCALBASE}/include
+
+USE_CONFIG_WRAPPER=	YES
 
 INSTALL_FILE=		${WRKDIR}/INSTALL
 
@@ -41,21 +40,7 @@ post-build:
 	${SED} -e 's#@@INSTALL@@#${INSTALL}#' \
 	  ${PKGDIR}/INSTALL >${INSTALL_FILE}
 
-.include "../../mk/bsd.prefs.mk"
-
-# The directory in which locale files are found is:
-#
-#	${PREFIX}/${LOCALEDIR}/locale/<lang>/LC_MESSAGES
-#
-.if ${OPSYS} == "SunOS"
-LOCALEDIR=		lib
-.else
-LOCALEDIR=		share
-.endif
-
-.if ${NEED_NCURSES} == "YES"
-CONFIGURE_ARGS+=--with-ncurses=${LOCALBASE}
-.endif
-
+.include "../../devel/gettext-lib/buildlink.mk"
+.include "../../devel/ncurses/buildlink.mk"
 .include "../../x11/gnome-core/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
