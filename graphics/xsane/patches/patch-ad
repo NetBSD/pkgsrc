@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.3 1999/11/27 12:09:10 rh Exp $
+
+--- frontend/xsane-device-preferences.c.orig	Fri Nov 19 21:44:10 1999
++++ frontend/xsane-device-preferences.c	Sat Nov 27 12:29:58 1999
+@@ -116,7 +116,11 @@
+       xsane_rc_io_w_string(w, &name);
+     }
+ 
++#ifdef ENODATA
+     if (w->status == ENODATA) /* eof */
++#else
++    if (w->status == EAGAIN) /* eof */
++#endif
+     {
+       if (keep_going) /* we had a reload otpions? */
+       {
