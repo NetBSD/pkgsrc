@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:22:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/09 02:51:47 dmcmahill Exp $
 #
 
 DISTNAME=		Apache-ASP-0.05
@@ -12,7 +12,7 @@ COMMENT=		perl5/Apache module of Perl-coded Active Server Pages
 
 DEPENDS+=		ap-perl>=1.19:../../www/ap-perl
 DEPENDS+=		p5-Devel-Symdump>=2.00:../../devel/p5-Devel-Symdump
-DEPENDS+=		p5-MLDBM>=2.00:../../devel/p5-MLDBM
+DEPENDS+=		p5-MLDBM>=2.00:../../databases/p5-MLDBM
 DEPENDS+=		p5-libwww>=5.48:../../www/p5-libwww
 
 USE_PERL5=		# defined
