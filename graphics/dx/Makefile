@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2002/09/04 14:47:36 agc Exp $
+# $NetBSD: Makefile,v 1.17 2002/09/22 00:49:32 jlam Exp $
 
 DISTNAME=	dx-4.1.3
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.research.ibm.com/dx/
 COMMENT=	Open Visualization Data Explorer
 
-USE_BUILDLINK_ONLY=	yes
+USE_BUILDLINK2=		yes
 USE_X11BASE=		yes
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
@@ -19,32 +19,18 @@ CONFIGURE_ENV+=		LEX="flex -l"
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
-CPPFLAGS+=		-I${BUILDLINK_DIR}/include/freetype	# freetype.h
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.freetype-lib}/include/freetype
 
 # Override ARCH to avoid picking up a bad ${ARCH} during the build.
 MAKE_ENV+=		ARCH=""
 CONFIGURE_ENV+=		ARCH=""
 
-# Remove "-I/usr/include -I/usr/local/include" from the INCLUDES, and
-# "-L/usr/X11R6/lib -L/usr/local/lib" from the *_LDADD  passed to
-# the compiler, as this defeats buildlink.
-#
-post-patch:
-	cd ${WRKSRC};							\
-	files=`${FIND} . -name "Makefile.in" -print`;			\
-	for file in $${files}; do					\
-		${SED}	-e "/^INCLUDES.*=.*/s|[ 	]*-I/usr/include[ 	]*-I/usr/local/include||" \
-			-e "/^[^ ]*LDADD.*=.*/s|[ 	]*-L/usr/X11R6/lib[ 	]*-L/usr/local/lib||" \
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
+.include "../../devel/netcdf/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/freetype-lib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
+.include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/tiff/buildlink2.mk"
+.include "../../mk/motif.buildlink2.mk"
 
-.include "../../devel/netcdf/buildlink.mk"
-.include "../../graphics/Mesa/buildlink.mk"
-.include "../../graphics/freetype-lib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
-.include "../../graphics/png/buildlink.mk"
-.include "../../graphics/tiff/buildlink.mk"
-.include "../../mk/motif.buildlink.mk"
-.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
