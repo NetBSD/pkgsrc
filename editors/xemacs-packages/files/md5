@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.6 2000/10/05 09:23:08 martin Exp $
+$NetBSD: md5,v 1.7 2000/10/05 09:37:06 martin Exp $
 
 MD5 (xemacs-packages-1.4/xemacs-base-1.37-pkg.tar.gz) = 08ae3bd521b19cfa59cd80a9892f2656
 MD5 (xemacs-packages-1.4/xemacs-devel-1.25-pkg.tar.gz) = 521f5b549326278261ec1d2dd293dd65
