@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2002/01/24 11:36:10 kent Exp $
+# $NetBSD: Makefile,v 1.6 2002/01/24 16:10:35 kent Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-1.2
 PKGREVISION=		2
@@ -136,7 +136,7 @@ mingw-install:
 	libcoldname libmoldname libm libmingwthrd profile/libgmon ; do \
 		${INSTALL_DATA} ${MINGW_WRKSRC}/$$file.a ${TARGET_DIR}/lib; \
 	done
-	${INSTALL_PROGRAM} ${MINGW_WRKSRC}/mingwm10.dll ${TARGET_DIR}/lib
+	${INSTALL_DATA} ${MINGW_WRKSRC}/mingwm10.dll ${TARGET_DIR}/lib
 	for file in crt1 dllcrt1 crt2 dllcrt2  CRT_noglob crtmt crtst \
 	profile/gcrt1 profile/gcrt2; do \
 		${INSTALL_DATA} ${MINGW_WRKSRC}/$$file.o ${TARGET_DIR}/lib; \
