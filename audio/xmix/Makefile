@@ -3,7 +3,8 @@
 # Date created:		30 June 1995
 # Whom:			janek@gaja.ipan.lublin.pl
 #
-# $Id: Makefile,v 1.1.1.1 1997/10/28 23:19:27 augustss Exp $
+# $NetBSD: Makefile,v 1.2 1997/10/30 00:30:18 augustss Exp $
+# FreeBSD Id: Makefile,v 1.5 1996/11/18 13:56:53 asami Exp 
 #
 
 DISTNAME=	xmix-2.1
@@ -14,13 +15,16 @@ MASTER_SITE_SUBDIR=	apps/sound/mixers
 PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	xmix-2.1.mixers.patch
 
+# FreeBSD maintainer
 MAINTAINER=	janek@gaja.ipan.lublin.pl
 
 USE_IMAKE=	yes
 WRKSRC=		$(WRKDIR)/xmix
 
-pre-install:
+pre-configure:
 	${CP} ${WRKSRC}/xmix.1 ${WRKSRC}/xmix.man
+
+pre-install:
 	${INSTALL_DATA} $(WRKSRC)/XMix ${PREFIX}/lib/X11/app-defaults
 
 .include <bsd.port.mk>
