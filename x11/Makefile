@@ -30,6 +30,7 @@
 #    SUBDIR += getbdf
 #    SUBDIR += gwm
 #    SUBDIR += iv
+    SUBDIR += kde
     SUBDIR += kdebase
     SUBDIR += kdelibs
     SUBDIR += lesstif
