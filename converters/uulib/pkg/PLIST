@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/03/01 22:28:59 tron Exp $
 lib/libuu.a
 lib/libuu.so.1.0
 include/uu.h
@@ -12,6 +13,7 @@ share/doc/uulib/td-v3.c
 share/doc/uulib/test.txt
 share/doc/uulib/porting.notes
 share/doc/uulib/HISTORY
-man/man3/uulib.3.gz
-@exec /sbin/ldconfig -m %D/lib
 @dirrm share/doc/uulib
+man/man3/uulib.3.gz
+@exec /sbin/ldconfig || /usr/bin/true
+@unexec /sbin/ldconfig || /usr/bin/true
