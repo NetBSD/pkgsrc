@@ -1,0 +1,2 @@
+French language support for aspell, e.g. `aspell -d francais -c $myfile'.
+Other sub-dictionary available in this package: suisse.
