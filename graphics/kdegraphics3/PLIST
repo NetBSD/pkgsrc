@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/05 08:58:02 skrll Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/08/27 12:15:22 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -9,6 +9,7 @@ bin/kiconedit
 bin/kpaint
 bin/kruler
 bin/ksnapshot
+bin/kuickshow
 bin/kview
 bin/kviewshell
 include/kmultipageInterface.h
@@ -24,6 +25,9 @@ lib/kde3/kfile_png.so
 lib/kde3/kfile_ps.a
 lib/kde3/kfile_ps.la
 lib/kde3/kfile_ps.so
+lib/kuickshow.a
+lib/kuickshow.la
+lib/kuickshow.so
 lib/kview.a
 lib/kview.la
 lib/kview.so
@@ -121,6 +125,7 @@ share/kde/applnk/Graphics/kiconedit.desktop
 share/kde/applnk/Graphics/kpaint.desktop
 share/kde/applnk/Graphics/kruler.desktop
 share/kde/applnk/Graphics/ksnapshot.desktop
+share/kde/applnk/Graphics/kuickshow.desktop
 share/kde/applnk/Graphics/kview.desktop
 share/kde/apps/kdvi/kdvi_part.rc
 share/kde/apps/kdvi/tips
@@ -180,6 +185,16 @@ share/kde/apps/kruler/kruler-north.png
 share/kde/apps/kruler/kruler-south.png
 share/kde/apps/kruler/kruler-west.png
 share/kde/apps/kruler/move.wav
+share/kde/apps/kuickshow/im_palette.pal
+share/kde/apps/kuickshow/pics/about.png
+share/kde/apps/kuickshow/pics/calibrate.png
+share/kde/apps/kuickshow/pics/handcursor.png
+share/kde/apps/kuickshow/pics/imageviewer-medium.png
+share/kde/apps/kuickshow/pics/imageviewer-small.png
+share/kde/apps/kuickshow/pics/ksslide.png
+share/kde/apps/kuickshow/pics/kuickshow-day.jpg
+share/kde/apps/kuickshow/pics/kuickshow-night.jpg
+share/kde/apps/kuickshow/pics/logo.png
 share/kde/apps/kview/kview_part.rc
 share/kde/apps/kview/kview_popup.rc
 share/kde/apps/kview/kviewui.rc
@@ -196,6 +211,7 @@ share/kde/icons/hicolor/16x16/apps/kiconedit.png
 share/kde/icons/hicolor/16x16/apps/kpaint.png
 share/kde/icons/hicolor/16x16/apps/kruler.png
 share/kde/icons/hicolor/16x16/apps/ksnapshot.png
+share/kde/icons/hicolor/16x16/apps/kuickshow.png
 share/kde/icons/hicolor/16x16/apps/kview.png
 share/kde/icons/hicolor/16x16/apps/kviewshell.png
 share/kde/icons/hicolor/32x32/apps/kcoloredit.png
@@ -207,6 +223,7 @@ share/kde/icons/hicolor/32x32/apps/kiconedit.png
 share/kde/icons/hicolor/32x32/apps/kpaint.png
 share/kde/icons/hicolor/32x32/apps/kruler.png
 share/kde/icons/hicolor/32x32/apps/ksnapshot.png
+share/kde/icons/hicolor/32x32/apps/kuickshow.png
 share/kde/icons/hicolor/32x32/apps/kview.png
 share/kde/icons/hicolor/32x32/apps/kviewshell.png
 share/kde/icons/hicolor/48x48/apps/kdvi.png
@@ -220,7 +237,9 @@ share/kde/icons/hicolor/48x48/apps/ksnapshot.png
 share/kde/icons/hicolor/48x48/apps/kview.png
 share/kde/icons/hicolor/48x48/apps/kviewshell.png
 share/kde/icons/locolor/16x16/apps/kcoloredit.png
+share/kde/icons/locolor/16x16/apps/kuickshow.png
 share/kde/icons/locolor/32x32/apps/kcoloredit.png
+share/kde/icons/locolor/32x32/apps/kuickshow.png
 share/kde/services/kfile_pdf.desktop
 share/kde/services/kfile_png.desktop
 share/kde/services/kfile_ps.desktop
@@ -234,6 +253,8 @@ share/kde/services/kfile_ps.desktop
 @dirrm share/kde/apps/kviewerpart
 @dirrm share/kde/apps/kview/toolbar
 @dirrm share/kde/apps/kview
+@dirrm share/kde/apps/kuickshow/pics
+@dirrm share/kde/apps/kuickshow
 @dirrm share/kde/apps/kruler
 @dirrm share/kde/apps/kpaint/toolbar
 @dirrm share/kde/apps/kpaint

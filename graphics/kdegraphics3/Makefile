@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/07/17 07:54:05 skrll Exp $
+# $NetBSD: Makefile,v 1.3 2002/08/27 12:15:22 markd Exp $
 
 DISTNAME=	kdegraphics-3.0.2
 CATEGORIES=	graphics
@@ -21,7 +21,7 @@ LIBS=			-Wl,--export-dynamic
 .endif
 
 #.include "../../graphics/tiff/buildlink.mk"
-#.include "../../graphics/imlib/buildlink.mk"
+.include "../../graphics/imlib/buildlink.mk"
 .include "../../x11/kde3/buildlink.mk"
 .include "../../x11/kdebase3/buildlink.mk"
 .include "../../mk/x11.buildlink.mk"
