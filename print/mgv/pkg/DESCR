@@ -1,0 +1,3 @@
+mgv is a Motif/LessTif based viewer for PostScript files which uses
+Ghostscript as the underlying PostScript rendering engine. Limited
+PDF support is also supplied.
