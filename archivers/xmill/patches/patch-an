@@ -1,9 +1,0 @@
-$NetBSD: patch-an,v 1.2 2003/10/18 13:20:32 cjep Exp $
---- src/Decode.cpp.orig	2003-10-07 02:21:58.000000000 +1000
-+++ src/Decode.cpp	2003-10-07 02:22:05.000000000 +1000
-@@ -84,3 +84,4 @@
- }
- 
- #endif
-\ No newline at end of file
-+
