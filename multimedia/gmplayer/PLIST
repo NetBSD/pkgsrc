@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/30 09:01:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/10/20 20:02:13 tron Exp $
 bin/gmplayer
 share/mplayer/Skin/AlienMind/README
 share/mplayer/Skin/AlienMind/VERSION
@@ -27,6 +27,52 @@ share/mplayer/Skin/AlienMind/skin
 share/mplayer/Skin/AlienMind/stop.png
 share/mplayer/Skin/AlienMind/sub.png
 share/mplayer/Skin/AlienMind/volume.png
+share/mplayer/Skin/Blue/README
+share/mplayer/Skin/Blue/VERSION
+share/mplayer/Skin/Blue/about.png
+share/mplayer/Skin/Blue/bareqb.png
+share/mplayer/Skin/Blue/barexit.png
+share/mplayer/Skin/Blue/barffwd.png
+share/mplayer/Skin/Blue/barfwd.png
+share/mplayer/Skin/Blue/barmute.png
+share/mplayer/Skin/Blue/barplay.png
+share/mplayer/Skin/Blue/barrev.png
+share/mplayer/Skin/Blue/barrevv.png
+share/mplayer/Skin/Blue/barstop.png
+share/mplayer/Skin/Blue/barzoom.png
+share/mplayer/Skin/Blue/eqb.png
+share/mplayer/Skin/Blue/exit.png
+share/mplayer/Skin/Blue/font-pl.png
+share/mplayer/Skin/Blue/font.fnt
+share/mplayer/Skin/Blue/forward.png
+share/mplayer/Skin/Blue/icons/icon32x32.png
+share/mplayer/Skin/Blue/icons/icon48x48.png
+share/mplayer/Skin/Blue/load.png
+share/mplayer/Skin/Blue/main-silver.png
+share/mplayer/Skin/Blue/main.png
+share/mplayer/Skin/Blue/menu.png
+share/mplayer/Skin/Blue/menus.png
+share/mplayer/Skin/Blue/minimize.png
+share/mplayer/Skin/Blue/mute.png
+share/mplayer/Skin/Blue/next.png
+share/mplayer/Skin/Blue/play.png
+share/mplayer/Skin/Blue/playbar.png
+share/mplayer/Skin/Blue/playlist.png
+share/mplayer/Skin/Blue/pos.png
+share/mplayer/Skin/Blue/prefs.png
+share/mplayer/Skin/Blue/prev.png
+share/mplayer/Skin/Blue/progres-long2c.png
+share/mplayer/Skin/Blue/progres-long2d.png
+share/mplayer/Skin/Blue/rev.png
+share/mplayer/Skin/Blue/skin
+share/mplayer/Skin/Blue/skinb.png
+share/mplayer/Skin/Blue/stop.png
+share/mplayer/Skin/Blue/subblue.png
+share/mplayer/Skin/Blue/subload.png
+share/mplayer/Skin/Blue/symbols.fnt
+share/mplayer/Skin/Blue/symbols2.png
+share/mplayer/Skin/Blue/symbolsg.fnt
+share/mplayer/Skin/Blue/zoom-3.png
 share/mplayer/Skin/BlueHeart/README
 share/mplayer/Skin/BlueHeart/VERSION
 share/mplayer/Skin/BlueHeart/eq.png
@@ -215,6 +261,7 @@ share/mplayer/Skin/avifile/sub.png
 share/mplayer/Skin/avifile/symbols.fnt
 share/mplayer/Skin/avifile/symbols.png
 share/mplayer/Skin/avifile/volume.png
+share/mplayer/Skin/default
 share/mplayer/Skin/gnome/README
 share/mplayer/Skin/gnome/VERSION
 share/mplayer/Skin/gnome/back.png
@@ -529,6 +576,8 @@ share/mplayer/Skin/xine-lcd/volume.png
 @dirrm share/mplayer/Skin/Cyrus
 @dirrm share/mplayer/Skin/CornerMP-aqua
 @dirrm share/mplayer/Skin/CornerMP
+@dirrm share/mplayer/Skin/Blue/icons
+@dirrm share/mplayer/Skin/Blue
 @dirrm share/mplayer/Skin/BlueHeart
 @dirrm share/mplayer/Skin/AlienMind
 @dirrm share/mplayer/Skin
