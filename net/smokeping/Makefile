@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2004/06/08 12:24:00 cjep Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/23 22:25:44 adrianp Exp $
 
-DISTNAME=	smokeping-1.28
+DISTNAME=	smokeping-1.30
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/smokeping/pub/
 
@@ -15,21 +15,31 @@ DEPENDS+=	p5-libwww>=5.64:../../www/p5-libwww
 
 USE_PERL5=	YES
 PERL5_REQD+=	5.6.0
-USE_PKGINSTALL=	yes
+USE_PKGINSTALL=	YES
 
 BUILD_DEFS+=	USE_INET6
 
 PKG_SYSCONFSUBDIR?=     smokeping
 MESSAGE_SUBST+=         PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-EGDIR=${PREFIX}/share/examples/smokeping
-CONF_FILES= ${EGDIR}/basepage.html.dist ${PKG_SYSCONFDIR}/basepage.html
-CONF_FILES+= ${EGDIR}/smokemail.dist ${PKG_SYSCONFDIR}/smokemail
+EGDIR=		${PREFIX}/share/examples/smokeping
+CONF_FILES= 	${EGDIR}/basepage.html.dist ${PKG_SYSCONFDIR}/basepage.html
+CONF_FILES+= 	${EGDIR}/smokemail.dist ${PKG_SYSCONFDIR}/smokemail
 RCD_SCRIPTS=	smokeping
+REPLACE_PERL=	bin/smokeping.dist
+
+BUILD_DEFS+=	USE_SPEEDY
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
 DEPENDS+=	p5-Socket6-*:../../net/p5-Socket6
+.endif
+
+.if defined(USE_SPEEDY) && ${USE_SPEEDY} == "YES"
+DEPENDS+=	SpeedyCGI-*:../../www/SpeedyCGI
+INTERP=		speedy
+.else
+INTERP=		perl
 .endif
 
 do-build:
@@ -38,6 +48,7 @@ do-build:
 	     <${WRKSRC}/bin/smokeping.dist >${WRKDIR}/smokeping.pl
 	${SED} -e s#@PREFIX@#${PREFIX}#g \
 	     -e s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g \
+	     -e s#@INTERP@#${INTERP}#g \
 	    <${WRKSRC}/htdocs/smokeping.cgi.dist >${WRKDIR}/smokeping.cgi
 	${SED} -e s#@PREFIX@#${PREFIX}#g \
 	     -e s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g \
