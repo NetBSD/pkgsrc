@@ -1,26 +1,14 @@
-$NetBSD: patch-al,v 1.1 1999/09/29 00:41:26 christos Exp $
+$NetBSD: patch-al,v 1.2 1999/11/26 22:12:38 hubertf Exp $
 
---- murgil/serverserve.c.orig	Tue Sep 28 19:20:05 1999
-+++ murgil/serverserve.c	Tue Sep 28 19:21:56 1999
-@@ -20,6 +20,9 @@
- int timeisup;
- 
- sighandler gotalarm();
-+#ifndef __FDS_BITS
-+# define __FDS_BITS(set) ((set)->fds_bits)
-+#endif
- 
- serverserve()
+diff -x *.orig -urN ./murgil/getrname.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/murgil/getrname.c
+--- ./murgil/getrname.c	Fri Feb 24 22:19:41 1995
++++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/murgil/getrname.c	Fri Nov 26 22:56:29 1999
+@@ -14,7 +14,7 @@
  {
-@@ -81,9 +84,9 @@
- 
- 	/* examine set of file descriptors */
- 	for (b = 0, y = 0; b <= (howmany(highestfd, 32) - 1); b++, y += 32) {
--	    if (!fdr.fds_bits[b])
-+	    if (!__FDS_BITS(&fdr)[b])
- 		continue;
--	    bits = fdr.fds_bits[b];
-+	    bits = __FDS_BITS(&fdr)[b];
- 	    for (x = y; bits; x++, bits >>= 01)
- 		if (bits & 01)
- 			if (x == port_fd) {
+ 	static char rname[24];
+ 	struct hostent *host;
+-#if defined(linux)
++#if defined(linux) || defined(__NetBSD__)
+ #define PEER_CAST (struct sockaddr *)
+ #define HOST_CAST (char *)
+ #else
