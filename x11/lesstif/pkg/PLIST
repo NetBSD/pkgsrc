@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2000/01/31 20:45:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2000/02/12 03:54:53 wiz Exp $
 LessTif/FAQ
 LessTif/Motif1.2/include/Mrm/MrmAppl.h
 LessTif/Motif1.2/include/Mrm/MrmDecls.h
@@ -365,6 +365,7 @@ man/man3/XmToggleButtonGadget.3
 man/man3/XmVendorShell.3
 man/man3/XmWorld.3
 man/man5/mwmrc.5
+share/aclocal/ac_find_motif.m4
 share/doc/lesstif/AUTHORS
 share/doc/lesstif/Advocacy.html
 share/doc/lesstif/All.html
@@ -423,3 +424,6 @@ share/doc/lesstif/images/ltsunlogo.jpg
 share/doc/lesstif/images/ltsunlogo.png
 @dirrm share/doc/lesstif/images
 @dirrm share/doc/lesstif
+@exec test %D = ${LOCALBASE} || ln -fs %D/share/aclocal/ac_find_motif.m4 ${LOCALBASE}/share/aclocal/ac_find_motif.m4
+@unexec test %D = ${LOCALBASE} || rm ${LOCALBASE}/share/aclocal/ac_find_motif.m4
+@unexec rmdir %D/share/aclocal 2>/dev/null || true
