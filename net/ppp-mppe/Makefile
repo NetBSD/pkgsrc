@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/01/19 15:12:11 kim Exp $
+# $NetBSD: Makefile,v 1.13 2002/01/19 15:22:53 kim Exp $
 
 DISTNAME=	ppp-2.3.9
 PKGNAME=	ppp-mppe-2.3.9
@@ -14,10 +14,6 @@ OPENSSL_SRC=	${_PKGSRCDIR}/security/openssl/${WRKDIR:T}/openssl-${OPENSSL_VERS}
 
 HAS_CONFIGURE=  yes
 MANCOMPRESSED_IF_MANZ=	yes
-
-.for OPT in ${MANINSTALL}
-PLIST_SRC+=	${PKGDIR}/PLIST.${OPT}
-.endfor
 
 post-extract:
 	if [ ! -e ${OPENSSL_SRC}/crypto/rc4 ]; then			\
@@ -58,3 +54,7 @@ pre-build:
 .endif
 
 .include "../../mk/bsd.pkg.mk"
+
+.for OPT in ${MANINSTALL}
+PLIST_SRC+=	${PKGDIR}/PLIST.${OPT}
+.endfor
