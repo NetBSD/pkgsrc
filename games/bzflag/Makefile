@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2002/11/08 11:24:25 mrg Exp $
+# $NetBSD: Makefile,v 1.3 2002/12/08 13:07:42 cjep Exp $
 
 DISTNAME=	bzflag-1.7e6
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/e/.5./}
+PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=bzflag/}
 EXTRACT_SUFX=   .tgz
@@ -15,7 +15,7 @@ USE_X11BASE=	yes
 USE_BUILDLINK2=	yes
 USE_GMAKE=	yes
 MAKE_ENV+=	X11BASE=${X11BASE} INSTALL_PREFIX=${X11PREFIX}
- 
+
 ALL_TARGET=	netbsd default
 
 do-install:
