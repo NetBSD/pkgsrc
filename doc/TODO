@@ -1,22 +1,10 @@
-$NetBSD: TODO,v 1.1120 2003/12/03 23:04:49 xtraeme Exp $
+$NetBSD: TODO,v 1.1121 2003/12/04 00:41:22 heinz Exp $
 
 Suggested new packages
 ======================
 
 	any unresolved PRs (if you have commit access)
 	http://www.netbsd.org/Gnats/category/pkg.html
-
-	Crypt::OpenSSL::DSA
-	Crypt::OpenSSL::RSA
-	Crypt::OpenSSL::Bignum
-	Crypt::OpenSSL::Random
-	  Perl wrappers around OpenSSL functions, see
-	  perl-openssl.sourceforge.net
-	[ done by heinz, waiting for end of freeze ]
-
-	Digest::BubbleBabble
-	  creates fingerprints of MD5 or SHA1 digests 
-	[ done by heinz, waiting for end of freeze ]
 
 	figfonts
 	More fonts for figlet.
@@ -36,10 +24,6 @@ Suggested new packages
 	  http://www.livejournal.com/ .
 	http://loserjabber.sourceforge.net/
 
-	Net::DNS::SEC
-	  extension of Net::DNS for dealing with DNSSEC
-	[ done by heinz, waiting for end of freeze ]
-	
 	resin
 	Fast JSP server. (I will import this when we have a native
 	  Java 2 -- it can't be built with our native jdk. [jwise])
