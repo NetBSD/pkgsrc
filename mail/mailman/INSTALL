@@ -1,0 +1,8 @@
+# $NetBSD: INSTALL,v 1.1.2.1 2005/02/22 22:13:28 snj Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+    # Fix file permissions
+    ${PKG_PREFIX}/lib/mailman/bin/check_perms -f
+    ;;
+esac
