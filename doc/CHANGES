@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8370 2004/12/20 11:32:23 grant Exp $
+$NetBSD: CHANGES,v 1.8371 2004/12/20 13:26:08 grant Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -6430,3 +6430,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-X11-Protocol to 0.53nb1 [grant 2004-12-20]
 	Updated p5-gtk to 0.7009nb2 [grant 2004-12-20]
 	Updated p5-gtk2 to 1.042nb2 [grant 2004-12-20]
+	Updated perl58 to 5.8.5nb6 [grant 2004-12-20]
