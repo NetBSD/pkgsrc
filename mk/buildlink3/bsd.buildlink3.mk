@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.147 2004/08/10 15:16:29 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.148 2004/08/13 00:48:05 dmcmahill Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -614,7 +614,7 @@ ${_BLNK_COOKIE.${_pkg_}}:
 	${_BLNK_FILES_CMD.${_pkg_}} |					\
 	while read file; do						\
 		src="${BUILDLINK_PREFIX.${_pkg_}}/$$file";		\
-		if [ ! -f $$src ]; then					\
+		if [ ! -f "$$src" ]; then					\
 			msg="$$src: not found";				\
 		else							\
 			if [ -z "${BUILDLINK_TRANSFORM.${_pkg_}:Q}" ]; then \
@@ -625,20 +625,20 @@ ${_BLNK_COOKIE.${_pkg_}}:
 				dest=`${ECHO} $$dest | ${SED} ${BUILDLINK_TRANSFORM.${_pkg_}}`; \
 				msg="$$src -> $$dest";			\
 			fi;						\
-			dir=`${DIRNAME} $$dest`;			\
-			if [ ! -d $$dir ]; then				\
-				${MKDIR} $$dir;				\
+			dir=`${DIRNAME} "$$dest"`;			\
+			if [ ! -d "$$dir" ]; then				\
+				${MKDIR} "$$dir";				\
 			fi;						\
-			${RM} -f $$dest;				\
-			case $$src in					\
+			${RM} -f "$$dest";				\
+			case "$$src" in					\
 			*.la)						\
-				${CAT} $$src |				\
+				${CAT} "$$src" |			\
 				${_BLNK_LT_ARCHIVE_FILTER.${_pkg_}}	\
-					> $$dest;			\
+					> "$$dest";			\
 				msg="$$msg (created)";			\
 				;;					\
 			*)						\
-				${LN} -sf $$src $$dest;			\
+				${LN} -sf "$$src" "$$dest";		\
 				;;					\
 			esac;						\
 		fi;							\
