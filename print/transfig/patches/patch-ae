@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2003/11/10 03:06:12 danw Exp $
+$NetBSD: patch-ae,v 1.2 2004/05/20 21:04:17 wiz Exp $
 
---- fig2dev/fig2dev.h.orig	Sun Nov  9 21:59:10 2003
-+++ fig2dev/fig2dev.h	Sun Nov  9 21:59:12 2003
+--- fig2dev/fig2dev.h.orig	Wed Dec 18 22:45:28 2002
++++ fig2dev/fig2dev.h
 @@ -22,7 +22,6 @@
  #include <sys/file.h>
  #include <signal.h>
@@ -10,3 +10,12 @@ $NetBSD: patch-ae,v 1.1 2003/11/10 03:06:12 danw Exp $
  #include <pwd.h>
  #include <errno.h>
  #include <time.h>
+@@ -210,7 +209,7 @@ struct Cmap {
+ #endif /* MAXPATHLEN */
+ #endif /* PATH_MAX */
+ 
+-#if ( !defined(__NetBSD__) && !defined(__DARWIN__))
++#if ( !defined(__NetBSD__) && !defined(__DARWIN__) && !defined(__FreeBSD__))
+ extern int		sys_nerr, errno;
+ #endif
+ 
