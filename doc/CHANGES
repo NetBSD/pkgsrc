@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3529 2003/09/25 22:03:19 recht Exp $
+$NetBSD: CHANGES,v 1.3530 2003/09/25 22:14:13 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3939,3 +3939,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated dmake to 4.1nb1 [wiz 2003-09-25]
 	Added py-SimpleParse 2.0.0 [recht 2003-09-25]
 	Updated filerunner to 2.5.1 [recht 2003-09-25]
+	Updated hping to 2.0.0.2 [recht 2003-09-25]
