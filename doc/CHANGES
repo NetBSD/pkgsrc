@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2938 2003/07/30 14:05:56 wiz Exp $
+$NetBSD: CHANGES,v 1.2939 2003/07/30 14:51:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3072,3 +3072,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated gif2png to 2.4.7 [wiz 2003-07-30]
 	Updated gnet to 2.0.4 [wiz 2003-07-30]
 	Updated gperiodic to 2.0.5 [wiz 2003-07-30]
+	Updated freeradius to 0.7nb3 [jmmv 2003-07-30]
