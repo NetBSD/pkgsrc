@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.200 2004/03/29 18:14:30 tv Exp $
+# $NetBSD: Makefile,v 1.201 2004/03/29 18:31:28 tv Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -109,6 +109,7 @@ SUBDIR+=	p5-Mail-Audit
 SUBDIR+=	p5-Mail-ClamAV
 SUBDIR+=	p5-Mail-IMAPClient
 SUBDIR+=	p5-Mail-ListDetector
+SUBDIR+=	p5-Mail-Milter
 SUBDIR+=	p5-Mail-SPF-Query
 SUBDIR+=	p5-Mail-Sendmail
 SUBDIR+=	p5-MailTools
