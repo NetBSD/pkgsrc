@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.11 2004/06/07 17:01:50 cube Exp $
+$NetBSD: patch-ab,v 1.12 2004/06/07 17:28:44 cube Exp $
 
 --- src/sysdeps/netbsd.c.orig	2004-05-01 19:46:38.000000000 +0200
 +++ src/sysdeps/netbsd.c
@@ -171,7 +171,7 @@ $NetBSD: patch-ab,v 1.11 2004/06/07 17:01:50 cube Exp $
     gboolean	found_sensors = FALSE;
  
     /* check if some sensor is configured */
-@@ -336,3 +421,70 @@ gkrellm_sys_sensors_init(void)
+@@ -336,3 +421,68 @@ gkrellm_sys_sensors_init(void)
     return found_sensors;
  }
  
@@ -200,7 +200,6 @@ $NetBSD: patch-ab,v 1.11 2004/06/07 17:01:50 cube Exp $
 +{
 +	int i, n_disks, mib[3] = { CTL_HW, HW_DISKSTATS, sizeof(struct disk_sysctl) };
 +	size_t size;
-+	char buf[20];
 +	guint64 rbytes, wbytes;
 +	struct disk_sysctl *dk_drives;
 +
@@ -223,8 +222,7 @@ $NetBSD: patch-ab,v 1.11 2004/06/07 17:01:50 cube Exp $
 +		wbytes = 0;
 +#endif
 +
-+		snprintf(buf, sizeof(buf), "%s%c", _("Disk"), 'A' + i);
-+		gkrellm_disk_assign_data_by_name(buf, rbytes, wbytes);
++		gkrellm_disk_assign_data_by_name(dk_drives[i].dk_name, rbytes, wbytes);
 +	}
 +
 +	free(dk_drives);
