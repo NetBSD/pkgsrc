@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9351 2005/02/28 04:54:20 ben Exp $
+$NetBSD: CHANGES,v 1.9352 2005/02/28 05:30:38 veego Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1181,7 +1181,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated compat14 to 1.4.3.1nb1 [veego 2005-02-27]
 	Updated compat14-crypto to 1.4.3.1nb1 [veego 2005-02-27]
 	Updated twin to 3.1.14nb2 [veego 2005-02-27]
-	Updated blackdown to jdk13-1nb5 [veego 2005-02-27]
+	Updated blackdown-jdk13 to 1nb5 [veego 2005-02-27]
 	Updated transcode to 0.6.12nb5 [veego 2005-02-27]
 	Updated devilspie to 0.8 [wiz 2005-02-27]
 	Updated mtr to 0.69 [wiz 2005-02-27]
