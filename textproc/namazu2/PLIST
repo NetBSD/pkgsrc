@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/12/15 13:09:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2005/02/13 09:52:00 taca Exp $
 bin/adnmz
 bin/bnamazu
 bin/gcnmz
@@ -33,6 +33,9 @@ lib/libnmz.la
 libexec/cgi-bin/namazu.cgi
 man/man1/mknmz.1
 man/man1/namazu.1
+share/examples/namazu/mknmzrc
+share/examples/namazu/namazurc
+@dirrm share/examples/namazu
 share/namazu/doc/en/manual.html
 share/namazu/doc/en/nmz.html
 share/namazu/doc/en/tips.html
@@ -60,11 +63,8 @@ share/namazu/etc/README-es
 share/namazu/etc/README-ja
 share/namazu/etc/THANKS
 share/namazu/etc/TODO
-share/namazu/etc/namazu.png
 @dirrm share/namazu/etc
-share/examples/namazu/mknmzrc
-share/examples/namazu/namazurc
-@dirrm share/examples/namazu
+share/namazu/etc/namazu.png
 share/namazu/filter/apachecache.pl
 share/namazu/filter/bzip2.pl
 share/namazu/filter/compress.pl
@@ -86,8 +86,8 @@ share/namazu/filter/pdf.pl
 share/namazu/filter/postscript.pl
 share/namazu/filter/powerpoint.pl
 share/namazu/filter/rfc.pl
-share/namazu/filter/rtf.pl
 share/namazu/filter/rpm.pl
+share/namazu/filter/rtf.pl
 share/namazu/filter/taro.pl
 share/namazu/filter/taro56.pl
 share/namazu/filter/taro7_10.pl
@@ -110,7 +110,6 @@ share/namazu/template/NMZ.body.es
 share/namazu/template/NMZ.body.fr
 share/namazu/template/NMZ.body.ja
 share/namazu/template/NMZ.body.pl
-share/namazu/template/NMZ.tips.pl
 share/namazu/template/NMZ.foot
 share/namazu/template/NMZ.foot.de
 share/namazu/template/NMZ.foot.es
@@ -139,5 +138,6 @@ share/namazu/template/NMZ.tips
 share/namazu/template/NMZ.tips.es
 share/namazu/template/NMZ.tips.fr
 share/namazu/template/NMZ.tips.ja
+share/namazu/template/NMZ.tips.pl
 @dirrm share/namazu/template
 @dirrm share/namazu
