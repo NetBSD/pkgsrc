@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3146 2003/08/30 14:26:37 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3147 2003/08/30 15:10:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3392,3 +3392,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ruby-unit to 0.5.6 [taca 2003-08-30]
 	Updated p5-Net-Telnet to 3.0.3 [xtraeme 2003-08-30]
 	Added artwiz-fonts-1.0 [xtraeme 2003-08-30]
+	Updated nasm-devel to 0.98.37 [wiz 2003-08-30]
