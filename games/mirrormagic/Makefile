@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1999/04/15 20:39:42 tron Exp $
+# $NetBSD: Makefile,v 1.6 2000/01/02 03:20:12 wiz Exp $
 #
 
 DISTNAME=		mirrormagic-1.3
@@ -15,14 +15,14 @@ do-install:
 	${INSTALL_PROGRAM} -o bin -g games -m 2755 ${WRKSRC}/mirrormagic ${X11BASE}/bin
 	${MKDIR} ${X11BASE}/share/mirrormagic/sounds
 	${MKDIR} ${X11BASE}/share/mirrormagic/graphics
-	chown bin:games ${X11BASE}/share/mirrormagic
-	chmod 775 ${X11BASE}/share/mirrormagic
+	${CHOWN} bin:games ${X11BASE}/share/mirrormagic
+	${CHMOD} 775 ${X11BASE}/share/mirrormagic
 	${INSTALL_DATA} ${WRKSRC}/sounds/* ${X11BASE}/share/mirrormagic/sounds
 	${INSTALL_DATA} ${WRKSRC}/graphics/* ${X11BASE}/share/mirrormagic/graphics
 	${INSTALL_DATA} ${WRKSRC}/RAY.* ${X11BASE}/share/mirrormagic
 	${GUNZIP_CMD} ${X11BASE}/share/mirrormagic/graphics/*.gz
 	${TOUCH} ${X11BASE}/share/mirrormagic/RAY.score
-	chown bin:games ${X11BASE}/share/mirrormagic/RAY.score
-	chmod 664 ${X11BASE}/share/mirrormagic/RAY.score
+	${CHOWN} bin:games ${X11BASE}/share/mirrormagic/RAY.score
+	${CHMOD} 664 ${X11BASE}/share/mirrormagic/RAY.score
 
 .include "../../mk/bsd.pkg.mk"

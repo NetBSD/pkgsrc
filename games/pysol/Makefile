@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/12/23 08:07:04 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 2000/01/02 03:20:13 wiz Exp $
 # FreeBSD Id: ports/games/pysol/Makefile,v 1.20 1999/12/08 11:01:01 tg Exp
 
 DISTNAME=       pysol-3.10
@@ -29,9 +29,9 @@ do-install:
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	@(cd ${PREFIX}; \
-	  find share/pysol \( -type f -or -type l \) | \
+	  ${FIND} share/pysol \( -type f -or -type l \) | \
 	    sort >> ${PLIST_SRC}; \
-	  for DIR in `find share/pysol -type d | sort -r`; do \
+	  for DIR in `${FIND} share/pysol -type d | sort -r`; do \
 	  ${ECHO} "@dirrm $$DIR" >> ${PLIST_SRC}; \
 	  done)
 

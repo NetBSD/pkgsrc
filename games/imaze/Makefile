@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/04/15 20:39:42 tron Exp $
+# $NetBSD: Makefile,v 1.7 2000/01/02 03:20:11 wiz Exp $
 
 DISTNAME=		imaze1.3
 PKGNAME=		imaze-1.3
@@ -16,6 +16,6 @@ USE_MOTIF=		yes
 USE_X11BASE=		yes
 
 post-build:
-	cd ${WRKSRC} && /bin/pax -rf ${DISTDIR}/imaze-sounds.tar
+	cd ${WRKSRC} && ${PAX} -rf ${DISTDIR}/imaze-sounds.tar
 
 .include "../../mk/bsd.pkg.mk"
