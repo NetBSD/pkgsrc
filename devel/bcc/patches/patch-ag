@@ -1,0 +1,11 @@
+--- as/as.c.orig	Thu Jul 16 17:18:03 1998
++++ as/as.c	Thu Jul 16 17:18:13 1998
+@@ -160,7 +160,7 @@
+ {
+     char *arg;
+     bool_t isnextarg;
+-    char *nextarg;
++    char *nextarg = NULL;
+ 
+     if (argc <= 1)
+ 	usage();

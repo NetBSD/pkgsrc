@@ -1,0 +1,11 @@
+--- ld/table.c.orig	Thu Jul 16 14:14:41 1998
++++ ld/table.c	Thu Jul 16 14:14:54 1998
+@@ -48,7 +48,7 @@
+ char *name;
+ {
+     struct symstruct **hashptr;
+-    struct symstruct *oldsymptr;
++    struct symstruct *oldsymptr = NULL;
+     struct symstruct *symptr;
+ 
+     hashptr = gethashptr(name);

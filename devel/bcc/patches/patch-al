@@ -1,0 +1,11 @@
+--- as/pops.c.orig	Thu Jul 16 20:24:45 1998
++++ as/pops.c	Thu Jul 16 20:25:42 1998
+@@ -72,7 +72,7 @@
+ register struct sym_s *symptr;
+ {
+     if ((symptr->type & LABIT ||
+-	 symptr->data & IMPBIT && !(symptr->data & UNDBIT)) &&
++	 (symptr->data & IMPBIT && !(symptr->data & UNDBIT))) &&
+ 	((symptr->data ^ lcdata) & (RELBIT | SEGM)))
+     {
+ 	error(SEGREL);
