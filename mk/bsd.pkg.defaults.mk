@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.5 2001/10/01 04:16:43 tv Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.6 2001/10/09 10:01:11 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -57,7 +57,7 @@ CROSSBASE?=	${LOCALBASE}/cross
 # Possible: any path
 # Default: ${LOCALBASE}/cross
 
-X11BASE=	/usr/X11R6
+X11BASE?=	/usr/X11R6
 # Where X11 is installed on the system.
 # (and the default install path of X11 pkgs)
 # Possible: any path
