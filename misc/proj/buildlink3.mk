@@ -1,4 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/10/23 08:08:26 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/26 17:11:03 wiz Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+PROJ_BUILDLINK3_MK:=	${PROJ_BUILDLINK3_MK}+
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	proj
