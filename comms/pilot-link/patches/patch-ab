@@ -1,0 +1,31 @@
+--- Makefile.in.orig	Fri Jul 17 16:30:38 1998
++++ Makefile.in	Fri Jul 17 16:48:57 1998
+@@ -44,7 +44,7 @@
+ libcclib = @libcclib@
+ cclib = @cclib@
+ 
+-INSTALL = $(LIBTOOL) @INSTALL@
++INSTALL = @INSTALL@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+ YACC = @YACC@
+@@ -112,12 +112,15 @@
+ 	$(SHELL) ${srcdir}/scripts/mkinstalldirs $(bindir) $(includedir) $(libdir) $(pixdir) $(mandir1) $(mandir7)
+ 
+ install: $(EXECS) installdirs $(PILIB) $(PICCLIB)
+-	$(INSTALL_DATA) $(PILIB) $(libdir)/libpisock.la
++	$(LIBTOOL) --mode=install $(INSTALL_DATA) $(PILIB) $(libdir)/libpisock.la
+ 	if test -n "$(PICCLIB)"; then \
+-		$(INSTALL_DATA) $(PICCLIB) $(libdir)/libpicc.la; \
++		$(LIBTOOL) --mode=install $(INSTALL_DATA) $(PICCLIB) $(libdir)/libpicc.la; \
+ 	fi
+-	for p in $(EXECS); do \
+-		$(INSTALL_PROGRAM) $$p $(bindir)/$$p; \
++	for p in $(CEXECS); do \
++		$(LIBTOOL) --mode=install $(INSTALL_PROGRAM) $$p $(bindir)/$$p; \
++	done
++	for p in $(PERLEXECS); do \
++		$(LIBTOOL) --mode=install $(INSTALL_SCRIPT) $$p $(bindir)/$$p; \
+ 	done
+ 	for h in include/*.h $(srcdir)/include/*.h include/*.hxx $(srcdir)/include/*.hxx; do \
+ 		$(INSTALL_DATA) $$h $(includedir)/`basename $$h`; \
