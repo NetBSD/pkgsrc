@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2000/02/09 20:20:58 tron Exp $
+# $NetBSD: Makefile,v 1.21 2000/02/10 09:24:39 tron Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -55,7 +55,7 @@ GLOBAL_EXCLUDE_ARG=	-c
 EXCLUDE_ARG=		--exclude
 .endif
 EXTRACT_ELEMENTS=	${GLOBAL_EXCLUDE_ARG}
-.for DONT_EXTRACT_SUBDIR in jpeg-* libpng>=1.0.3 zlib-*
+.for DONT_EXTRACT_SUBDIR in jpeg-* libpng-* zlib-*
 EXTRACT_ELEMENTS+=	${EXCLUDE_ARG} Arena-*/Auxiliary/${DONT_EXTRACT_SUBDIR}
 .endfor
 
