@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2003/07/17 21:31:12 grant Exp $
+# $NetBSD: Makefile,v 1.38 2003/07/30 15:19:21 markd Exp $
 
-DISTNAME=	kdbg-1.2.7
-PKGREVISION=	2
+DISTNAME=	kdbg-1.2.8
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kdbg/} \
 		ftp://ftp.eudaptics.com/pub/people/jsixt/
@@ -21,6 +20,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--with-kde-version=3
 
-.include "../../x11/kde3/buildlink2.mk"
+.include "../../meta-pkgs/kde3/buildlink2.mk"
 .include "../../x11/kdebase3/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
