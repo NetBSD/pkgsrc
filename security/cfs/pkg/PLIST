@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/05 10:29:38 agc Exp $
+libexec/cfsd
+bin/cattach
+bin/cdetach
+bin/cmkdir
+bin/cpasswd
+bin/cfssh
+bin/cname
+bin/ccat
+bin/cmkkey
+man/man1/cattach.1
+man/man8/ccat.8
+man/man1/cdetach.1
+man/man8/cfsd.8
+man/man1/cfssh.1
+man/man1/cmkdir.1
+man/man1/cmkkey.1
+man/man8/cname.8
+man/man1/cpasswd.1
