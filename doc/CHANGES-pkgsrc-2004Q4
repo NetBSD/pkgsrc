@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.61 2005/02/04 08:04:10 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.62 2005/02/05 17:23:52 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -131,3 +131,5 @@ Pullup ticket 266 - requested by Adrian Portelli
 security fix for dillo
 Pullup ticket 267 - requested by Adrian Portelli
 security fix for snort
+Pullup ticket 268 - requested by Johnny C. Lam
+security fix for perl58
