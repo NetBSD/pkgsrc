@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2000/05/01 06:07:45 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2000/05/12 15:22:26 is Exp $
 
-DISTNAME=		magicpoint-1.06a
+DISTNAME=		magicpoint-1.07a
 CATEGORIES=		x11 graphics
 MASTER_SITES=		ftp://ftp.mew.org/pub/MagicPoint/
 
@@ -39,7 +39,7 @@ post-install:
 		SYNTAX USAGE USAGE.jp ${PREFIX}/share/doc/mgp
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mgp
 	cd ${WRKSRC}/sample; \
-	${INSTALL_DATA} README* *.gif *.eps *.mgp *.xbm mgprc-sample \
+	${INSTALL_DATA} README* *.jpg *.eps *.mgp *.xbm mgprc-sample \
 		${PREFIX}/share/examples/mgp
 
 .include "../../mk/bsd.pkg.mk"
