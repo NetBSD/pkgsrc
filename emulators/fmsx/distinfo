@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:06:09 agc Exp $
+
+MD5 (fMSX22.tar.Z) = 15f9e0d4cd28f16d9de81f75cfd63ce4
+SHA1 (patch-aa) = 4b029e0cdcdb9ea6ea9d2a57445fd7b65697d23a
+SHA1 (patch-ab) = a4d074accf3718f50778bc086b175a86916e627f
+SHA1 (patch-ac) = 884f137a757be514a87005c82f2f3a0c4031190d
+SHA1 (patch-ad) = 2d5d3a1eaae53256210a88b3cabe12608c579e7d

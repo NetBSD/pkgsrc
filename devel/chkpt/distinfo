@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:06:02 agc Exp $
+
+MD5 (chkpt-1.7.1.tar.gz) = 0ca0714544d15d07963366d03da78a74
+SHA1 (patch-aa) = 1b9a9bd40701950c64d06ff3b2710668930ef979
+SHA1 (patch-ab) = daaf4763ee951e5a366e0e94ba3362806e239f8d

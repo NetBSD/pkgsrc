@@ -1,4 +1,0 @@
-$NetBSD: md5,v 1.5 2001/04/13 05:33:17 itojun Exp $
-
-SHA1 (cvs-1.11.tar.gz) = 809932302b085491bdb868e558b5474f61f68f8a
-SHA1 (cvs-1.11-v6-20010413.diff.gz) = b2629d71ccd330f1e1db716e9dec78cf001fcc8f

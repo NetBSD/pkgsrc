@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:06:20 agc Exp $
+
+SHA1 (mmix-20000918/mmix.tar.gz) = 8436221d4f078716941b19873acb3f89c7013d95
+SHA1 (patch-aa) = 927eabd1b0d1180fb909ca943b511fa325601c7e

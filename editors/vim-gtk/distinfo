@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 10:58:24 agc Exp $
+
+MD5 (vim-5.7-src.tar.gz) = 0b2bca69c7018a8777d8d5390e23d06e
+MD5 (vim-5.7-rt.tar.gz) = b7d9cbc64479e26f52e2bc58d312bd84

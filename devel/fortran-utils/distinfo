@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:06:29 agc Exp $
+
+MD5 (fortran-utils-1.1.tar.gz) = eccd2275677457e92e0db715c34881f8
+SHA1 (patch-aa) = ee581aa30dca69444485225695d2e9e013251b6d
+SHA1 (patch-ab) = 997cc5596047c4dc4c3dd07119e7045c0c5b89f8

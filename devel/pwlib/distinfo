@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:08:20 agc Exp $
+
+MD5 (pwlib_min_1.1pl17.tar.gz) = 4089db2aafb42cd019b8d96e9b4407a6
+SHA1 (patch-aa) = dff2b41d6ad6f2c7c009c3d5739c57f72f2345c5
+SHA1 (patch-ab) = f861afd35b4cbac46e8b7deba17f3ffd27160a1c
+SHA1 (patch-ac) = b217fd258e8012313765094a1ddaaae06441cdee
+SHA1 (patch-ad) = 1b59a8281c465b82334e1454bd7861402d590ae6
+SHA1 (patch-ae) = b2b7f21bdef6a05d17da564bc99c3c6bdf3b949f
+SHA1 (patch-af) = a2ddeef36b1f7d280a39270902b45ae5fb6bebf1
+SHA1 (patch-ag) = 1607f6e50c73ca0cd017c93b87ad97ef8873a492
+SHA1 (patch-ah) = 9119804a6229a50a0cecdc5d2c5c5ae0aa3c29d6

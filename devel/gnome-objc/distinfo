@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1 2001/04/17 11:06:50 agc Exp $
+
+MD5 (gnome-objc-1.0.40.tar.gz) = 5128635f4d8d143e5f9b4646456b3025
+SHA1 (patch-aa) = 016522cbaae51425bd240a1d454d3d2660fc325a
