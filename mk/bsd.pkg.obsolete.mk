@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.obsolete.mk,v 1.6 2001/12/26 21:20:26 jlam Exp $
+# $NetBSD: bsd.pkg.obsolete.mk,v 1.7 2002/01/31 21:18:38 jlam Exp $
 #
 # This file holds make(1) logic to allow obsolete or deprecated variables
 # still to be used.  These may eventually disappear over time as the contents
@@ -27,6 +27,10 @@ PKG_SYSCONFDIR.php?=			${PHP_CONFDIR}
 
 .if defined(VTUN_SYSCONFDIR)
 PKG_SYSCONFDIR.vtun?=			${VTUN_SYSCONFDIR}
+.endif
+
+.if defined(POSTFIX_USE_SASL_AUTH)
+USE_SASL=				YES
 .endif
 
 .if defined(SAMBA_WITH_CUPS)
