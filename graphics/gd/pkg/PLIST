@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 1999/11/01 03:29:31 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2000/03/17 21:05:20 he Exp $
 bin/pngtogd
 bin/pngtogd2
 bin/gdtopng
@@ -16,4 +16,4 @@ include/gdfontmb.h
 include/gdfonts.h
 include/gdfontt.h
 lib/libgd.a
-lib/libgd.so.1.7
+lib/libgd.so.1.8
