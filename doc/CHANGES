@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4355 2004/01/05 04:38:19 grant Exp $
+$NetBSD: CHANGES,v 1.4356 2004/01/05 04:43:35 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -57,3 +57,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libggi to 2.0.4 [xtraeme 2003-01-05]
 	Updated gnus to 5.10.6 [lha 2003-01-05]
 	Updated p5-Net-Server to 0.86 [grant 2003-01-05]
+	Updated cvsup to 16.1.h [xtraeme 2003-01-05]
+	Updated cvsup-gui to 16.1.h [xtraeme 2003-01-05]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1277 2004/01/04 21:38:33 rh Exp $
+$NetBSD: TODO,v 1.1278 2004/01/05 04:43:35 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -134,7 +134,6 @@ Suggested package updates
 	o crossfire-1.5.0
 	o cssc-0.16alpha.pl0
 	o cvs-1.12.3
-	o cvsup-16.1.h [pkg/22870]
 	o cxref-1.5e
 	o cxunzip-0.98 [pkg/23404]
 	o cyrus-imapd21-2.1.16
