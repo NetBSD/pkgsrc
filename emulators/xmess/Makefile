@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/01/12 22:53:16 kristerw Exp $
+# $NetBSD: Makefile,v 1.19 2002/03/06 23:03:33 kristerw Exp $
 #
 
 DISTNAME=		xmame-0.56.2
@@ -87,7 +87,7 @@ MAKE_FLAGS+=		DISPLAY_METHOD="${MAME_DISP_METHOD}"
 MAKE_FLAGS+=		MY_CPU="${MAME_CPU.${MACHINE_ARCH}}"
 MAKE_FLAGS+=		ARCH="${MAME_ARCH.${OPSYS}}"
 
-.if exists({${X11BASE}/include/X11/extensions/xf86dga.h)
+.if exists(${X11BASE}/include/X11/extensions/xf86dga.h)
 MAKE_FLAGS+=		X11_DGA=1
 .endif
 
