@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/07/19 11:38:33 jlam Exp $
+
+--- Makefile.orig	Tue Jun 22 07:30:37 1999
++++ Makefile	Mon Jul 19 07:19:04 1999
+@@ -26,7 +26,7 @@
+ #      DHIS(c)  Dynamic Host Information System Release 3.0
+ 
+ CC=cc
+-CFLAGS=
++CFLAGS+=-O2
+ LFLAGS=
+ LIBS=
+ RM=rm -f
