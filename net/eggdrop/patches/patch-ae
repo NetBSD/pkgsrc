@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 1998/12/10 04:29:47 tv Exp $
+
+--- src/mod/ctcp.mod/ctcp.c.orig	Wed Dec  9 23:18:06 1998
++++ src/mod/ctcp.mod/ctcp.c	Wed Dec  9 23:18:55 1998
+@@ -117,9 +117,9 @@
+ 	    /* do me a favour and don't change this back to a CTCP reply, */
+ 	    /* CTCP replies are NOTICE's this has to be a PRIVMSG */
+ 	    /* -poptix 5/1/97 */
+-	    dprintf(DP_SERVER, "PRIVMSG %s :\001DCC CHAT chat %lu %u\001\n",
++	    dprintf(DP_SERVER, "PRIVMSG %s :\001DCC CHAT chat %u %u\001\n",
+ 		    nick, 
+-		    iptolong(natip[0]?(IP) inet_addr(natip):getmyip()),
++		    (unsigned)iptolong(natip[0]?(IP) inet_addr(natip):getmyip()),
+ 		    dcc[ix].port);
+ 	 }
+       }
