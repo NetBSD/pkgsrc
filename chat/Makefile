@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/06/06 14:27:53 manu Exp $
+# $NetBSD: Makefile,v 1.38 2002/06/20 01:08:32 grant Exp $
 #
 
 COMMENT=	communication programs
@@ -37,6 +37,7 @@ SUBDIR+=	micq
 SUBDIR+=	naim
 SUBDIR+=	p5-Net-AIM
 SUBDIR+=	p5-Net-AOLIM
+SUBDIR+=	p5-Net-Goofey
 SUBDIR+=	p5-Net-ICQ2000
 SUBDIR+=	silc-client
 SUBDIR+=	silc-server
