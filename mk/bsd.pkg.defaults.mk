@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.64 2002/05/25 07:40:36 veego Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.65 2002/06/10 12:23:44 sakamoto Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -579,6 +579,11 @@ IMAP_UW_CCLIENT_MBOX_FMT?=	unix
 #
 # Possible: not defined, YES
 # Default: not defined
+
+IMDICTDIR?=	/var/dict
+# Specify the directory for input method's dictionary installation.
+# Possible: any valid location
+# Default: /var/dict 
 
 INN_DATA_DIR?= /var/news
 # Used by inn to specify the data directory.
