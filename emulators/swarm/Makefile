@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2003/08/14 09:31:39 agc Exp $
+# $NetBSD: Makefile,v 1.11 2004/07/11 00:30:10 wiz Exp $
 #
 
 DISTNAME=	swarm-0.61
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.dcs.gla.ac.uk/~michael/phd/bin/
+MASTER_SITES=	http://www.cl.cam.ac.uk/~mwd24/phd/bin/
 
 MAINTAINER=	agc@NetBSD.org
-HOMEPAGE=	http://www.dcs.gla.ac.uk/~michael/phd/swarm.html
+HOMEPAGE=	http://www.cl.cam.ac.uk/~mwd24/phd/swarm.html
 COMMENT=	Software arm7M core emulator
 
 WRKSRC=		${WRKDIR}/swarm/src
