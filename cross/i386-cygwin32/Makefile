@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/11/06 05:31:42 minoura Exp $
+# $NetBSD: Makefile,v 1.4 2000/11/06 05:40:28 minoura Exp $
 #
 
 DISTVERSION=		1.0.0.0
@@ -19,6 +19,12 @@ TARGET_ARCH=		i386-cygwin32
 
 BINUTILS_EXTRAS=	dlltool windres
 
+## XXX
+## These headers are required to build libgcc.
+## We have to use the Cygwin versions of the headers, but for now
+## these are enough.
+## Actually we have to install Cygwin headers and libraries with this package;
+## the header files from NetBSD should be deleted at that time.
 post-configure:
 	${CP} ${FILESDIR}/i386_limits.h ${SYS_INCLUDE}/machine/limits.h
 	${CP} ${FILESDIR}/syslimits.h ${SYS_INCLUDE}/sys/
