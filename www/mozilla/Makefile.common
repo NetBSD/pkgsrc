@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2003/03/14 19:38:02 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12 2003/03/17 16:07:32 taya Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-source-${MOZ_DIST_VER}
@@ -52,6 +52,10 @@ LDFLAGS+=	-Wl,${RPATH_FLAG}${MOZ_LIBDIR}
 MAKE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
 CONFIGURE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
 CONFIGURE_ARGS+=	--enable-svg
+.endif
+
+.ifdef BUILD_CALENDAR
+CONFIGURE_ARGS+=	--enable-calendar
 .endif
 
 # avoid creating a .mozilla directory in the users home

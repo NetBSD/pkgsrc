@@ -1,8 +1,9 @@
-$NetBSD: patch-bo,v 1.1 2003/02/02 08:08:05 taya Exp $
+$NetBSD: patch-bo,v 1.2 2003/03/17 16:07:35 taya Exp $
 
---- ../Orig/mozilla/nsprpub/configure.in	2002-09-26 21:46:25.000000000 +0900
-+++ ./nsprpub/configure.in	2003-01-31 00:45:26.000000000 +0900
-@@ -2127,7 +2127,14 @@
+diff -ru ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
+--- ../Orig/mozilla/nsprpub/configure.in	2003-01-21 05:49:52.000000000 +0900
++++ ./nsprpub/configure.in	2003-03-14 16:59:14.000000000 +0900
+@@ -2144,7 +2144,14 @@
  	        _PTHREAD_LDFLAGS="-lc_r"
  	    fi
  	    ;;
