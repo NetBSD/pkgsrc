@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2001/12/03 08:21:21 martti Exp $
+# $NetBSD: Makefile,v 1.61 2002/02/05 04:17:31 jlam Exp $
 
 DISTNAME=		openssh-3.0.2p1
 PKGNAME=		openssh-3.0.2.1
@@ -24,11 +24,8 @@ CRYPTO=			yes
 # retain the following line, for IPv6-ready pkgsrc webpage 
 BUILD_DEFS+=		USE_INET6
 #BUILD_DEFS+=		KERBEROS
-BUILD_DEFS+=		SSH_CONF_DIR
+BUILD_DEFS+=		PKG_SYSCONFDIR
 BUILD_DEFS+=		SSH_SUID
-
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
 
 # matches what's in `Configure' (except sparc64 and alpha, see PR 10984)
 ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 \
@@ -38,20 +35,38 @@ ONLY_FOR_PLATFORM=	NetBSD-*-arm32 NetBSD-*-i386 \
 
 .include "../../mk/bsd.prefs.mk"
 
-SSH_CONF_DIR?=		/etc
+INSTALL_TARGET=		install-nokeys
+PLIST_SRC=		# empty
+MESSAGE_SRC=		${.CURDIR}/MESSAGE
 
-MESSAGE_SUBST+=		SSH_CONF_DIR=${SSH_CONF_DIR}
+SSH_PID_DIR=		/var/run	# default directory for PID files
+SSH_PID_DIR.SunOS=	/etc		# Solaris doesn't have a /var/run
+
+.if defined(SSH_PID_DIR.${OPSYS})
+SSH_PID_DIR=		${SSH_PID_DIR.${OPSYS}}
+.endif
 
 USE_BUILDLINK_ONLY=	yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${SSH_CONF_DIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_DIR}
+CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_DIR}
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--with-tcp-wrappers
+# XXX: PAM authentication causes memory faults, and I haven't tracked down
+# XXX: why yet.  For the moment, disable PAM authentication.
+#
+#.if defined(USE_PAM)
+#.include "../../security/PAM/buildlink.mk"
+#CONFIGURE_ARGS+=	--with-pam
+#PLIST_SRC+=		${.CURDIR}/PLIST.pam
+#MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
+#.endif
+
 # XXX: we have 4 args (4: sslen) to skeychallenge instead of 3
+#.if ${OPSYS} == "NetBSD"
 #CONFIGURE_ARGS+=	--with-skey=/usr
-.endif
+#.endif
 
 # XXX: <krb.h>
 #.if defined(KERBEROS)
@@ -64,68 +79,59 @@ CONFIGURE_ARGS+=	--with-tcp-wrappers
 CONFIGURE_ARGS+=	--disable-suid-ssh
 .endif
 
-# Solaris normaly doesn't have a /var/run, thats why we put it in /etc
-.if (${OPSYS} == SunOS)
-CONFIGURE_ARGS+=	--with-pid-dir=/etc
-SSH_PID_DIR=		/etc
-.else
-SSH_PID_DIR=		/var/run
-.endif
-
 # The ssh-askpass program is in ${X11BASE}/bin or ${X11PREFIX}/bin depending
 # on if it's part of the X11 distribution, or if it's installed from pkgsrc
-# (security/ssh-askpass).  The configure process will lie about the compiled
-# location of the ssh-askpass program.  In reality, it uses what we give it
-# below.
+# (security/ssh-askpass).
 #
 .if exists(${X11BASE}/bin/ssh-askpass)
-MAKE_ENV+=		ASKPASS_PROGRAM=${X11BASE}/bin/ssh-askpass
+ASKPASS_PROGRAM=	${X11BASE}/bin/ssh-askpass
 .else
-MAKE_ENV+=		ASKPASS_PROGRAM=${X11PREFIX}/bin/ssh-askpass
+ASKPASS_PROGRAM=	${X11PREFIX}/bin/ssh-askpass
+.endif
+CONFIGURE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM}
+MAKE_ENV+=		ASKPASS_PROGRAM=${ASKPASS_PROGRAM}
+
+CONFS=			ssh_config sshd_config
+SUPPS=			moduli
+
+.if exists(/dev/urandom)
+MESSAGE_SRC+=		${.CURDIR}/MESSAGE.urandom
+.else
+CONFIGURE_ARGS+=	--without-random
+CONFS+=			ssh_prng_cmds
+PLIST_SRC+=		${.CURDIR}/PLIST.prng
 .endif
 
-CHECK_FILES=	bin/slogin man/man1/slogin.1 \
-		share/examples/openssh/ssh_prng_cmds
-PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES=		# empty
+.for FILE in ${CONFS}
+CONF_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+.endfor
+SUPPORT_FILES=		# empty
+.for FILE in ${SUPPS}
+SUPPORT_FILES+=		${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+.endfor
+RCD_SCRIPTS=		sshd
 
-.if (${OPSYS} == SunOS)
-INSTALL_FILE=		${WRKDIR}/INSTALL.SunOS
-.endif
-
-#post-patch:
-#	cd ${WRKSRC} ; autoreconf --force
+PLIST_SRC+=		${.CURDIR}/PLIST
+FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR}
+MESSAGE_SUBST+=		EGDIR=${EGDIR}
 
 post-build:
-	for FILE in \
-		${PKGDIR}/DEINSTALL	\
-		${PKGDIR}/INSTALL	\
-		${PKGDIR}/INSTALL.SunOS	\
-		${FILESDIR}/sshd.sh;	\
-	do \
-		${SED}	-e 's#@SSH_CONF_DIR@#${SSH_CONF_DIR}#g' \
-			-e 's#@SSH_PID_DIR@#${SSH_PID_DIR}#g' \
-			-e 's#@MKDIR@#${MKDIR}#g' \
-			-e 's#@PREFIX@#${PREFIX}#g' \
-			-e 's#@INSTALL_DATA@#${INSTALL_DATA}#g' \
-			< $${FILE} > ${WRKDIR}/`basename $${FILE}`; \
-	done
-
-pre-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
+	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/sshd.sh > ${WRKDIR}/sshd
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/sshd.sh ${PREFIX}/etc/rc.d/sshd
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	cd ${PREFIX}; \
-	for FILE in ${CHECK_FILES}; do \
-	  if [ ! -f $${FILE} ]; then \
-	    ${MV} ${PLIST_SRC} ${PLIST_SRC}.old; \
-	    ${GREP} -v "^$${FILE}" ${PLIST_SRC}.old >${PLIST_SRC}; \
-	    ${RM} ${PLIST_SRC}.old; \
-	  fi; \
+	${INSTALL_DATA_DIR} ${EGDIR}
+	cd ${WRKSRC}; for file in ${CONFS} ${SUPPS}; do			\
+		${INSTALL_DATA} $${file}.out ${EGDIR}/$${file};		\
 	done
+#.if defined(USE_PAM)
+#	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.freebsd ${EGDIR}/sshd.pam
+#.endif
+	${INSTALL_SCRIPT} ${WRKDIR}/sshd ${PREFIX}/etc/rc.d/sshd
 
 .include "../../devel/zlib/buildlink.mk"
 .include "../../security/openssl/buildlink.mk"
+.include "../../security/tcp_wrappers/buildlink.mk"
+.include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,16 +1,8 @@
-$NetBSD: patch-ah,v 1.15 2001/12/03 08:21:23 martti Exp $
+$NetBSD: patch-ah,v 1.16 2002/02/05 04:17:32 jlam Exp $
 
---- Makefile.in.orig	Mon Nov 12 00:34:23 2001
-+++ Makefile.in	Mon Dec  3 09:07:51 2001
-@@ -9,6 +9,7 @@
- mandir=@mandir@
- mansubdir=@mansubdir@
- sysconfdir=@sysconfdir@
-+examplesdir=@prefix@/share/examples/openssh
- piddir=@piddir@
- srcdir=@srcdir@
- top_srcdir=@top_srcdir@
-@@ -16,7 +17,7 @@
+--- Makefile.in.orig	Sun Nov 11 18:34:23 2001
++++ Makefile.in
+@@ -16,7 +16,7 @@
  DESTDIR=
  VPATH=@srcdir@
  SSH_PROGRAM=@bindir@/ssh
@@ -19,31 +11,24 @@ $NetBSD: patch-ah,v 1.15 2001/12/03 08:21:23 martti Exp $
  SFTP_SERVER=$(libexecdir)/sftp-server
  
  PATHS= -DETCDIR=\"$(sysconfdir)\" \
-@@ -30,6 +31,7 @@
+@@ -30,6 +30,7 @@
  CFLAGS=@CFLAGS@
  CPPFLAGS=-I. -I$(srcdir) @CPPFLAGS@ $(PATHS) @DEFS@
  LIBS=@LIBS@
-+WRAP=@TCPW_LIB@
++TCPW_LIB=@TCPW_LIB@
  AR=@AR@
  RANLIB=@RANLIB@
  INSTALL=@INSTALL@
-@@ -98,7 +100,7 @@
+@@ -98,7 +99,7 @@
  	$(LD) -o $@ $(SSHOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
  
  sshd$(EXEEXT): libssh.a	$(LIBCOMPAT) $(SSHDOBJS)
 -	$(LD) -o $@ $(SSHDOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
-+	$(LD) -o $@ $(SSHDOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(WRAP) $(LIBS)
++	$(LD) -o $@ $(SSHDOBJS) $(LDFLAGS) -lssh -lopenbsd-compat $(TCPW_LIB) $(LIBS)
  
  scp$(EXEEXT): $(LIBCOMPAT) libssh.a scp.o
  	$(LD) -o $@ scp.o $(LDFLAGS) -lssh -lopenbsd-compat $(LIBS)
-@@ -176,13 +178,13 @@
- 	autoreconf
- 	(cd scard && $(MAKE) -f Makefile.in distprep)
- 
--install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files host-key
-+install: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
- install-nokeys: $(CONFIGFILES) $(MANPAGES) $(TARGETS) install-files
- 
+@@ -182,7 +183,7 @@
  scard-install:
  	(cd scard && $(MAKE) DESTDIR=$(DESTDIR) install)
  
@@ -52,53 +37,3 @@ $NetBSD: patch-ah,v 1.15 2001/12/03 08:21:23 martti Exp $
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(sbindir)
  	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)
-@@ -190,6 +192,7 @@
- 	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)1
- 	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/$(mansubdir)8
- 	$(srcdir)/mkinstalldirs $(DESTDIR)$(libexecdir)
-+	$(srcdir)/mkinstalldirs $(DESTDIR)$(examplesdir)
- 	$(INSTALL) -m $(SSH_MODE) -s ssh $(DESTDIR)$(bindir)/ssh
- 	$(INSTALL) -m 0755 -s scp $(DESTDIR)$(bindir)/scp
- 	$(INSTALL) -m 0755 -s ssh-add $(DESTDIR)$(bindir)/ssh-add
-@@ -216,23 +219,11 @@
- 	if [ ! -d $(DESTDIR)$(sysconfdir) ]; then \
- 		$(srcdir)/mkinstalldirs $(DESTDIR)$(sysconfdir); \
- 	fi
--	if [ ! -f $(DESTDIR)$(sysconfdir)/ssh_config ]; then \
--		$(INSTALL) -m 644 ssh_config.out $(DESTDIR)$(sysconfdir)/ssh_config; \
--	else \
--		echo "$(DESTDIR)$(sysconfdir)/ssh_config already exists, install will not overwrite"; \
--	fi
--	if [ ! -f $(DESTDIR)$(sysconfdir)/sshd_config ]; then \
--		$(INSTALL) -m 644 sshd_config.out $(DESTDIR)$(sysconfdir)/sshd_config; \
--	else \
--		echo "$(DESTDIR)$(sysconfdir)/sshd_config already exists, install will not overwrite"; \
--	fi
-+	$(INSTALL) -m 644 ssh_config.out $(DESTDIR)$(examplesdir)/ssh_config; \
-+	$(INSTALL) -m 644 sshd_config.out $(DESTDIR)$(examplesdir)/sshd_config; \
- 	if [ -f ssh_prng_cmds -a ! -z "$(INSTALL_SSH_PRNG_CMDS)" ]; then \
- 		$(PERL) $(srcdir)/fixprogs ssh_prng_cmds $(ENT); \
--		if [ ! -f $(DESTDIR)$(sysconfdir)/ssh_prng_cmds ] ; then \
--			$(INSTALL) -m 644 ssh_prng_cmds.out $(DESTDIR)$(sysconfdir)/ssh_prng_cmds; \
--		else \
--			echo "$(DESTDIR)$(sysconfdir)/ssh_prng_cmds already exists, install will not overwrite"; \
--		fi ; \
-+		$(INSTALL) -m 644 ssh_prng_cmds.out $(DESTDIR)$(examplesdir)/ssh_prng_cmds; \
- 	fi
- 	if [ ! -f $(DESTDIR)$(sysconfdir)/moduli ]; then \
- 		if [ -f $(DESTDIR)$(sysconfdir)/primes ]; then \
-@@ -270,10 +261,10 @@
- 	./ssh-keygen -t rsa -f $(DESTDIR)$(sysconfdir)/ssh_host_rsa_key -N ""
- 
- uninstallall:	uninstall
--	-rm -f $(DESTDIR)$(sysconfdir)/ssh_config
--	-rm -f $(DESTDIR)$(sysconfdir)/sshd_config
--	-rm -f $(DESTDIR)$(sysconfdir)/ssh_prng_cmds
--	-rmdir $(DESTDIR)$(sysconfdir)
-+	-rm -f $(DESTDIR)$(examplesdir)/ssh_config
-+	-rm -f $(DESTDIR)$(examplesdir)/sshd_config
-+	-rm -f $(DESTDIR)$(examplesdir)/ssh_prng_cmds
-+	-rmdir $(DESTDIR)$(examplesdir)
- 	-rmdir $(DESTDIR)$(bindir)
- 	-rmdir $(DESTDIR)$(sbindir)
- 	-rmdir $(DESTDIR)$(mandir)/$(mansubdir)1

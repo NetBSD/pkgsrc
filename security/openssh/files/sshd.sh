@@ -1,56 +1,97 @@
 #!/bin/sh
 #
-# $NetBSD: sshd.sh,v 1.6 2001/10/19 09:42:08 veego Exp $
+# $NetBSD: sshd.sh,v 1.7 2002/02/05 04:17:32 jlam Exp $
 #
 # PROVIDE: sshd
 # REQUIRE: DAEMON LOGIN
 
+if [ -f /etc/rc.subr ]
+then
+	. /etc/rc.subr
+fi
+
 name="sshd"
+rcvar=$name
+command="@PREFIX@/sbin/${name}"
+keygen_command="@PREFIX@/bin/ssh-keygen"
 pidfile="@SSH_PID_DIR@/${name}.pid"
+required_files="@PKG_SYSCONFDIR@/sshd_config"
+extra_commands="keygen reload"
 
-command=${1:-start}
+sshd_keygen()
+{
+	(
+	umask 022
+	if [ -f @PKG_SYSCONFDIR@/ssh_host_key ]; then
+		@ECHO@ "You already have an RSA host key in @PKG_SYSCONFDIR@/ssh_host_key"
+		@ECHO@ "Skipping protocol version 1 RSA Key Generation"
+	else
+		${keygen_command} -t rsa1 -b 1024 -f @PKG_SYSCONFDIR@/ssh_host_key -N ''
+	fi
 
-case ${command} in
-start)
-	if [ ! -f @SSH_CONF_DIR@/ssh_host_key ]
-	then
-		@PREFIX@/bin/ssh-keygen -t rsa1 -N "" -f /etc/ssh_host_key
-	fi
-	if [ ! -f @SSH_CONF_DIR@/ssh_host_rsa_key ]
-	then
-		@PREFIX@/bin/ssh-keygen -t rsa -N "" -f /etc/ssh_host_rsa_key
-	fi
-	if [ ! -f @SSH_CONF_DIR@/ssh_host_dsa_key ]
-	then
-		@PREFIX@/bin/ssh-keygen -t dsa -N "" -f /etc/ssh_host_dsa_key
-	fi
-	if [ -x @PREFIX@/sbin/sshd -a -f @SSH_CONF_DIR@/sshd_config ]
-	then
-		echo "Starting ${name}."
-		@PREFIX@/sbin/sshd
-	fi
-	;;
-stop)
-	if [ -f ${pidfile} ]; then
-		pid=`head -1 ${pidfile}`
-		echo "Stopping ${name}."
-		kill -TERM ${pid}
+	if [ -f @PKG_SYSCONFDIR@/ssh_host_dsa_key ]; then
+		@ECHO@ "You already have a DSA host key in @PKG_SYSCONFDIR@/ssh_host_dsa_key"
+		@ECHO@ "Skipping protocol version 2 DSA Key Generation"
 	else
-		echo "${name} not running?"
+		${keygen_command} -t dsa -f @PKG_SYSCONFDIR@/ssh_host_dsa_key -N ''
 	fi
-	;;
-restart)
-	( $0 stop )
-	sleep 1
-	$0 start
-	;;
-status)
-	if [ -f ${pidfile} ]; then
-		pid=`head -1 ${pidfile}`
-		echo "${name} is running as pid ${pid}."
+
+	if [ -f @PKG_SYSCONFDIR@/ssh_host_rsa_key ]; then
+		@ECHO@ "You already have a RSA host key in @PKG_SYSCONFDIR@/ssh_host_rsa_key"
+		@ECHO@ "Skipping protocol version 2 RSA Key Generation"
 	else
-		echo "${name} is not running."
+		${keygen_command} -t rsa -f @PKG_SYSCONFDIR@/ssh_host_rsa_key -N ''
 	fi
-	;;
-esac
-exit 0
+	)
+}
+
+sshd_precmd()
+{
+	if [ ! -f @PKG_SYSCONFDIR@/ssh_host_key -o \
+	     ! -f @PKG_SYSCONFDIR@/ssh_host_dsa_key -o \
+	     ! -f @PKG_SYSCONFDIR@/ssh_host_rsa_key ]; then
+		$0 keygen
+	fi
+}
+
+keygen_cmd=sshd_keygen
+start_precmd=sshd_precmd
+
+if [ -f /etc/rc.subr ]
+then
+	load_rc_config $name
+	run_rc_command "$1"
+else
+	case ${1:-start} in
+	start)
+		if [ -x ${command} -a -f ${required_files} ]
+		then
+			@ECHO@ "Starting ${name}."
+			eval ${start_precmd}
+			eval ${command} ${sshd_flags} ${command_args}
+		fi
+		;;
+	stop)
+		if [ -f ${pidfile} ]; then
+			pid=`@HEAD@ -1 ${pidfile}`
+			@ECHO@ "Stopping ${name}."
+			kill -TERM ${pid}
+		else
+			@ECHO@ "${name} not running?"
+		fi
+		;;
+	restart)
+		( $0 stop )
+		sleep 1
+		$0 start
+		;;
+	status)
+		if [ -f ${pidfile} ]; then
+			pid=`@HEAD@ -1 ${pidfile}`
+			@ECHO@ "${name} is running as pid ${pid}."
+		else
+			@ECHO@ "${name} is not running."
+		fi
+		;;
+	esac
+fi

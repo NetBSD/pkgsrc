@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/02/05 04:17:31 jlam Exp $
 bin/scp
 bin/sftp
 bin/slogin
@@ -20,7 +20,7 @@ man/man1/ssh.1
 man/man8/sftp-server.8
 man/man8/sshd.8
 sbin/sshd
+share/examples/openssh/moduli
 share/examples/openssh/ssh_config
-share/examples/openssh/ssh_prng_cmds
 share/examples/openssh/sshd_config
 @dirrm share/examples/openssh
