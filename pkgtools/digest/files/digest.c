@@ -1,7 +1,7 @@
-/*	$NetBSD: digest.c,v 1.9 2005/03/22 10:16:15 agc Exp $ */
+/*	$NetBSD: digest.c,v 1.10 2005/03/23 14:32:19 agc Exp $ */
 
 /*
- * Copyright (c) 2001 Alistair G. Crooks.  All rights reserved.
+ * Copyright (c) 2001-2005 Alistair G. Crooks.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -37,9 +37,9 @@
 #include <digest-types.h>
 
 #ifndef lint
-__COPYRIGHT("@(#) Copyright (c) 2001 \
+__COPYRIGHT("@(#) Copyright (c) 2001-2005 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: digest.c,v 1.9 2005/03/22 10:16:15 agc Exp $");
+__RCSID("$NetBSD: digest.c,v 1.10 2005/03/23 14:32:19 agc Exp $");
 #endif
 
 
@@ -57,6 +57,7 @@ __RCSID("$NetBSD: digest.c,v 1.9 2005/03/22 10:16:15 agc Exp $");
 #include <stdlib.h>
 #include <string.h>
 #include <tiger.h>
+#include <whirlpool.h>
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif
@@ -75,13 +76,14 @@ typedef struct alg_t {
 	HASH_end	hash_end;
 	HASH_file	hash_file;
 	union {
-		MD5_CTX		m;
-		SHA1_CTX	sha;
-		RMD160_CTX	rmd;
-		SHA256_CTX	sha256;
-		SHA384_CTX	sha384;
-		SHA512_CTX	sha512;
-		tiger_context_t	tiger;
+		MD5_CTX			m;
+		SHA1_CTX		sha;
+		RMD160_CTX		rmd;
+		SHA256_CTX		sha256;
+		SHA384_CTX		sha384;
+		SHA512_CTX		sha512;
+		tiger_context_t		tiger;
+		whirlpool_context_t	whirlpool;
 	} hash_ctx, hash_ctx2;
 } alg_t;
 
@@ -107,7 +109,10 @@ static alg_t algorithms[] = {
 	  (HASH_end) SHA512_End,	(HASH_file) SHA512_File },
 	{ "TIGER",	20,
 	  (HASH_init) TIGERInit,	(HASH_update) TIGERUpdate,
-	  (HASH_end) TIGEREnd,	(HASH_file) TIGERFile },
+	  (HASH_end) TIGEREnd,		(HASH_file) TIGERFile },
+	{ "WHIRLPOOL",	WHIRLPOOL_DIGEST_BYTES,
+	  (HASH_init) whirlpool_init,	(HASH_update) whirlpool_update,
+	  (HASH_end) whirlpool_end,	(HASH_file) whirlpool_file },
 	{ NULL }
 };
 

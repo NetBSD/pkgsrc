@@ -7,5 +7,6 @@ This utility is a wrapper for the
 	+ sha384
 	+ sha512
 	+ tiger
+	+ whirlpool
 
 message digest routines.
