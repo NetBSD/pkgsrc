@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.33 2004/03/07 17:42:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2004/03/08 15:24:40 jmmv Exp $
 #
 
 DISTNAME=		gnome-session-2.4.2
 PKGREVISION=		4
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.4/}
-SITES_${SPLASH_NAME}=	${MASTER_SITE_LOCAL:=gnome-splash/}
+SITES_gnome-splash-2.4.2.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
 EXTRACT_SUFX=		.tar.bz2
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${SPLASH_NAME}
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.4.2.png
 
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
@@ -26,14 +26,13 @@ USE_X11=		yes
 USE_PERL5=		build
 USE_LIBTOOL=		yes
 
-SPLASH_NAME=		gnome-splash-2.4.2.png
-
 GCONF2_SCHEMAS= 	gnome-session.schemas
 
 post-extract:
 	${MV} ${WRKSRC}/gnome-session/gnome-splash.png \
 	    ${WRKSRC}/gnome-session/gnome-splash-orig.png
-	${CP} ${DISTDIR}/${SPLASH_NAME} ${WRKSRC}/gnome-session/gnome-splash.png
+	${CP} ${DISTDIR}/gnome-splash-2.4.2.png \
+	    ${WRKSRC}/gnome-session/gnome-splash.png
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/gnome-session/gnome-splash-orig.png \
