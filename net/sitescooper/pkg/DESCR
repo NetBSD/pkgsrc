@@ -1,0 +1,23 @@
+  Sitescooper is a perl script which you run on your Palm Computing
+handheld organizer's hotsync machine.  It will retrieve news stories
+automatically from various news websites and convert them into Palm
+DOC, iSilo, RichReader or text format; in addition, it can now
+convert into any other format for which you have a conversion program
+that takes text or HTML input. 
+
+  Multiple types of sites can be snarfed: 
+
+     1-level sites, where the text to be converted is all present on
+     one page, (such as Slashdot, Linux Weekly News, BluesNews,
+     NTKnow, Ars Technica); 
+
+     2-level sites, where the text to be converted is linked to from
+     a Table of Contents page (such as Wired News, BBC News, and I,
+     Cringely); 
+
+     3-level sites, where the text to be converted is linked to from
+     a Table of Contents page, which in turned is linked to from a
+     list of issues page (such as PalmPower or New Scientist). 
+
+  In addition sites that post news as items on one big page, such as
+Slashdot, Ars Technica, and BluesNews, are supported using diff. 
