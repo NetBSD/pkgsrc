@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1016 2003/11/11 10:49:48 wiz Exp $
+$NetBSD: TODO,v 1.1017 2003/11/11 15:38:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -125,7 +125,7 @@ Suggested package updates
 	o MozillaFirebird-bin-0.7 [grant]
 	o R-1.8.0 [markd]
 	o SDL_gfx-2.0.9
-	o TeXmacs-1.0.2.6
+	o TeXmacs-1.0.2.7
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
 	o abiword-2.0.1
@@ -180,6 +180,7 @@ Suggested package updates
 	o elk-3.99.5
 	o elm-me-2.4pl108
 	o enlightenment-0.16.6
+	o epic4-1.1.15
 	o ettercap-0.6.b
 	o evilwm-0.99.17
 	o evolution-1.4.4
