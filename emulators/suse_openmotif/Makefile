@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/04/15 12:00:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2002/11/25 11:01:16 schmonz Exp $
 
 DISTNAME=		openmotif
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
@@ -12,7 +12,7 @@ COMMENT=		Linux compatibility package for the Motif libraries
 
 DEPENDS+=		suse_x11>=${SUSE_VERSION}:../suse_x11
 
-ONLY_FOR_PLATFORM=      NetBSD-*-i386
+ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
