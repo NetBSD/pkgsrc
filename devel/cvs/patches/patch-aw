@@ -1,5 +1,7 @@
---- configure.orig	Wed Oct 18 04:35:53 2000
-+++ configure	Wed Oct 18 04:36:01 2000
+$NetBSD: patch-aw,v 1.5 2000/10/21 19:29:06 wiz Exp $
+
+--- configure.orig	Tue Aug  1 18:13:25 2000
++++ configure
 @@ -2820,19 +2820,22 @@
    
  fi
