@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2004/02/29 17:54:13 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2004/03/22 03:22:01 kristerw Exp $
 
 DISTNAME=	mlterm-2.8.0
 PKGNAME=	${DISTNAME}pl1
@@ -14,7 +14,8 @@ HOMEPAGE=	http://mlterm.sourceforge.net/
 COMMENT=	Multilingual terminal emulator
 
 # CODESET is only supported on NetBSD in 1.5T and later - see <langinfo.h>
-ONLY_FOR_PLATFORM=	NetBSD-1.5[T-Z]-* NetBSD-1.5Z[A-Z]-* NetBSD-1.[6-9]*
+ONLY_FOR_PLATFORM=	NetBSD-1.5[T-Z]-* NetBSD-1.5Z[A-Z]-* NetBSD-1.[6-9]* \
+			NetBSD-[2-9]*
 
 USE_BUILDLINK3=		yes
 USE_X11=		yes
