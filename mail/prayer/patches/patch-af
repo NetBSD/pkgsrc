@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.1 2003/06/16 16:54:32 jmc Exp $
+$NetBSD: patch-af,v 1.2 2003/06/16 16:57:02 jmc Exp $
 
---- mydb_db3.c.orig	Mon Jun 16 11:16:13 2003
-+++ mydb_db3.c	Mon Jun 16 11:24:26 2003
+--- prayer/mydb_db3.c.orig	Mon Jun 16 11:16:13 2003
++++ prayer/mydb_db3.c	Mon Jun 16 11:24:26 2003
 @@ -239,13 +239,18 @@
  
      assert(dbinit);
