@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2001/08/27 14:35:10 tron Exp $
+# $NetBSD: Makefile,v 1.22 2001/12/20 09:48:03 tron Exp $
 
 DISTNAME=		xfmail-1.4.7
 CATEGORIES=		mail x11
@@ -20,6 +20,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
+CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE}
 
 pre-configure:
 	cd ${WRKSRC} && ( ${LN} -sf config/configure.in . && ${LN} -sf config/acconfig.h . )
