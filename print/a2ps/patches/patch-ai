@@ -1,5 +1,5 @@
 --- contrib/Makefile.in.orig	Thu Jun 25 16:25:28 1998
-+++ contrib/Makefile.in	Wed Jul  1 22:14:38 1998
++++ contrib/Makefile.in	Thu Jul  9 13:34:49 1998
 @@ -74,7 +74,7 @@
  INSTALL = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -9,6 +9,15 @@
  transform = @program_transform_name@
  
  NORMAL_INSTALL = :
+@@ -161,7 +161,7 @@
+ l = @l@
+ lispdir = @lispdir@
+ 
+-SUBDIRS = sample emacs
++SUBDIRS = sample
+ 
+ bin_SCRIPTS = texi2dvi4a2ps card psmandup fixps pdiff
+ bin_PROGRAMS = fixnt
 @@ -418,7 +418,7 @@
  uninstall: uninstall-recursive uninstall-am
  
