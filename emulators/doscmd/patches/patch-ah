@@ -1,0 +1,74 @@
+$NetBSD: patch-ah,v 1.1 1999/12/18 01:46:29 christos Exp $
+
+--- doscmd_loader.c.orig	Fri Dec 17 20:40:25 1999
++++ doscmd_loader.c	Sun Dec  5 18:11:38 1999
+@@ -31,38 +31,52 @@
+  */
+ 
+ #include <stdio.h>
+-#include <a.out.h>
++#include <unistd.h>
++#include "loadfile.h"
+ 
+ /*
+  * reserve space in "low" memory for the interrupt vector table
+  */
+ static const char filler[4096] = { 0, };
+ 
+-#define _PATH_DOS_KERNEL_DIR	"%PREFIX%/libexec/"
++#define _PATH_DOS_KERNEL_DIR	"/usr/pkg/libexec/"
+ #define _PATH_DOS_KERNEL	"doscmd.kernel"
+ 
+-int
++static char *locations[] = {
++	_PATH_DOS_KERNEL,
++	"obj/" _PATH_DOS_KERNEL,
++	_PATH_DOS_KERNEL_DIR _PATH_DOS_KERNEL,
++	NULL
++};
++
++#define COUNT (COUNT_TEXT|COUNT_DATA|COUNT_BSS)
++#define LOAD (LOAD_TEXT|LOAD_DATA|LOAD_BSS)
++
++u_long
+ load_kernel(void)
+ {
+-	FILE *fp;
+-	struct exec exec;
+ 	int start_address;
++	int i;
++	u_long marks[MARK_MAX];
+ 
+-	if ((fp = fopen(_PATH_DOS_KERNEL, "r")) == NULL &&
+-	    (fp = fopen("obj/" _PATH_DOS_KERNEL, "r")) == NULL &&
+-	    (fp = fopen(_PATH_DOS_KERNEL_DIR _PATH_DOS_KERNEL, "r")) == NULL)
++	for (i = 0; locations[i] != NULL; i++) {
++		if (access(locations[i], R_OK) != -1)
++			break;
++	}
++	if (locations[i] == NULL)
+ 		err(1, "load_kernel");
+ 
+-	if (fread(&exec, sizeof(exec), 1, fp) != 1 || N_GETMAGIC(exec) != OMAGIC)
+-		errx(1, "bad kernel file format");
++	memset(marks, 0, sizeof(marks));
++	if (loadfile(locations[i], marks, COUNT) == -1)
++		err(1, "loadfile(COUNT)");
+ 
+-	start_address = exec.a_entry & (~(getpagesize() - 1));
+-	if (brk(start_address + exec.a_text + exec.a_data + exec.a_bss) < 0)
+-		err(1, "load_kernel");
+-	fread((char *)start_address, exec.a_text + exec.a_data, 1, fp);
+-	bzero((char *)(start_address + exec.a_text + exec.a_data), exec.a_bss);
+-	fclose(fp);
+-	return(exec.a_entry);
++	if (brk((void *)marks[MARK_END]) == -1)
++		err(1, "brk");
++
++	if (loadfile(locations[i], marks, LOAD) == -1)
++		err(1, "loadfile(LOAD)");
++
++	return(marks[MARK_ENTRY]);
+ }
+ 
+ void

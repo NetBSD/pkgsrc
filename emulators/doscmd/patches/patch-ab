@@ -1,44 +1,90 @@
-$NetBSD: patch-ab,v 1.3 1998/10/28 01:29:16 hubertf Exp $
+$NetBSD: patch-ab,v 1.4 1999/12/18 01:46:29 christos Exp $
 
---- Makefile.orig	Thu May  2 19:55:19 1996
-+++ Makefile	Wed Oct 28 02:07:49 1998
-@@ -8,30 +8,33 @@
- 	int1a.c int2f.c intff.c \
- 	mem.c mouse.c net.c null.c port.c setver.c signal.c timer.c trace.c trap.c tty.c xms.c
- 
-+BINDIR= ${PREFIX}/bin
-+MANDIR=	${PREFIX}/man
-+
- BINGRP=	kmem
- EXEGRP=	bin
- BINMODE=2555
- EXEMODE=444
--CFLAGS+=-I/usr/X11/include -DDISASSEMBLER -g
--LDFLAGS+=-L/usr/X11/lib
-+CFLAGS+=-I${X11BASE}/include -DDISASSEMBLER
-+LDFLAGS+=-L${X11BASE}/lib
- LDADD+=	-lX11 -li386 -lgcc -lc -lgcc
- DPADD+=	/usr/X11/lib/libX11.a ${LIBC} ${LIBGCC}
- 
- afterinstall:
- 	install ${COPY} -o ${BINOWN} -g ${EXEGRP} -m ${EXEMODE} \
--		doscmd.kernel ${DESTDIR}/usr/libexec/doscmd.kernel
-+		doscmd.kernel ${PREFIX}/libexec/doscmd.kernel
- 	install -c -o ${BINOWN} -g ${EXEGRP} -m ${EXEMODE} \
--		${.CURDIR}/instbsdi.exe ${DESTDIR}/usr/dos/
-+		${.CURDIR}/instbsdi.exe ${PREFIX}/libexec/
- 
- doscmd: doscmd.kernel ${LIBCRT0} doscmd_loader.o
--	ld -N -Bstatic -o doscmd ${LDFLAGS} ${LIBCRT0} doscmd_loader.o ${LDADD}
-+	ld -N -Bstatic -o doscmd ${LDFLAGS:S/^-Wl,//g} ${LIBCRT0} doscmd_loader.o ${LDADD}
- 
- .include <bsd.prog.mk>
- 
- .depend: doscmd_loader.c
- 
- doscmd.kernel: crt0.o ${OBJS}
--	ld -N -Bstatic -T 110000 -o doscmd.kernel ${LDFLAGS} crt0.o ${OBJS} ${LDADD}
-+	ld -N -Bstatic -T 110000 -o doscmd.kernel ${LDFLAGS:S/^-Wl,//g} crt0.o ${OBJS} ${LDADD}
- 
- doscmd.0: doscmd.1
- 	tbl ${.IMPSRC} | nroff -mandoc > ${.TARGET}
+*** Makefile.orig	Thu May  2 13:55:19 1996
+--- Makefile	Fri Dec 17 20:27:36 1999
+***************
+*** 8,37 ****
+  	int1a.c int2f.c intff.c \
+  	mem.c mouse.c net.c null.c port.c setver.c signal.c timer.c trace.c trap.c tty.c xms.c
+  
+  BINGRP=	kmem
+  EXEGRP=	bin
+  BINMODE=2555
+  EXEMODE=444
+! CFLAGS+=-I/usr/X11/include -DDISASSEMBLER
+! LDFLAGS+=-L/usr/X11/lib
+  LDADD+=	-lX11 -li386 -lgcc -lc -lgcc
+! DPADD+=	/usr/X11/lib/libX11.a ${LIBC} ${LIBGCC}
+  
+  afterinstall:
+  	install ${COPY} -o ${BINOWN} -g ${EXEGRP} -m ${EXEMODE} \
+! 		doscmd.kernel ${DESTDIR}/usr/libexec/doscmd.kernel
+  	install -c -o ${BINOWN} -g ${EXEGRP} -m ${EXEMODE} \
+! 		${.CURDIR}/instbsdi.exe ${DESTDIR}/usr/dos/
+  
+! doscmd: doscmd.kernel ${LIBCRT0} doscmd_loader.o
+! 	ld -N -Bstatic -o doscmd ${LDFLAGS} ${LIBCRT0} doscmd_loader.o ${LDADD}
+  
+! .include <bsd.prog.mk>
+  
+  .depend: doscmd_loader.c
+  
+  doscmd.kernel: crt0.o ${OBJS}
+! 	ld -N -Bstatic -T 110000 -o doscmd.kernel ${LDFLAGS} crt0.o ${OBJS} ${LDADD}
+  
+  doscmd.0: doscmd.1
+  	tbl ${.IMPSRC} | nroff -mandoc > ${.TARGET}
+--- 8,60 ----
+  	int1a.c int2f.c intff.c \
+  	mem.c mouse.c net.c null.c port.c setver.c signal.c timer.c trace.c trap.c tty.c xms.c
+  
++ BINDIR= ${PREFIX}/bin
++ MANDIR=	${PREFIX}/man
++ 
+  BINGRP=	kmem
+  EXEGRP=	bin
+  BINMODE=2555
+  EXEMODE=444
+! CFLAGS+=-I${X11BASE}/include -DDISASSEMBLER -g
+! LDFLAGS+=-L${X11BASE}/lib -R${X11BASE}/lib
+  LDADD+=	-lX11 -li386 -lgcc -lc -lgcc
+! DPADD+=	${X11BASE}/lib/libX11.a ${LIBC} ${LIBGCC}
+! # XXX: For loadfile
+! LIBSA=	/usr/src/sys/lib/libsa
+! CLEANFILES+= loadfile.c loadfile.h
+! 
+! .include <bsd.prog.mk>
+! .if ${OBJECT_FMT} == "ELF"
+! TEXT=-e start -Ttext
+! CRTBEGIN=/usr/lib/crtbegin.o
+! .else
+! TEXT=-e _start -T
+! CRTBEGIN=
+! .endif
+! 
+  
+  afterinstall:
+  	install ${COPY} -o ${BINOWN} -g ${EXEGRP} -m ${EXEMODE} \
+! 		doscmd.kernel ${PREFIX}/libexec/doscmd.kernel
+  	install -c -o ${BINOWN} -g ${EXEGRP} -m ${EXEMODE} \
+! 		${.CURDIR}/instbsdi.exe ${PREFIX}/libexec/
+  
+! doscmd: doscmd.kernel ${LIBCRT0} ${CRTBEGIN} doscmd_loader.o loadfile.o
+! 	ld -N -Bstatic -o doscmd ${LDFLAGS:S/^-Wl,//g} ${LIBCRT0} ${CRTBEGIN} doscmd_loader.o loadfile.o ${LDADD}
+  
+! 
+! loadfile.c: ${LIBSA}/loadfile.c
+! 	@cp $> $@
+! 
+! loadfile.h: ${LIBSA}/loadfile.h
+! 	@cp $> $@
+! 
+! doscmd_loader.o: loadfile.h
+  
+  .depend: doscmd_loader.c
+  
+  doscmd.kernel: crt0.o ${OBJS}
+! 	ld -N -Bstatic ${TEXT} 0x110000 -o doscmd.kernel ${LDFLAGS:S/^-Wl,//g} crt0.o ${OBJS} ${LDADD}
+  
+  doscmd.0: doscmd.1
+  	tbl ${.IMPSRC} | nroff -mandoc > ${.TARGET}
