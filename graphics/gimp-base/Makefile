@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/03/13 17:37:08 fredb Exp $
+# $NetBSD: Makefile,v 1.3 2002/03/17 02:40:57 jmc Exp $
 
 DISTNAME=		gimp-1.2.3
 PKGNAME=		gimp-base-1.2.3
@@ -38,6 +38,9 @@ MAKE_ENV+=		X11BASE=${X11BASE}
 
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
+CONFIG_EXISTS!=		/bin/sh -c "type gtk-config glib-config > /dev/null"; \
+			if [ $$? = 0 ]; then echo yes; else echo no; fi
+.if (${CONFIG_EXISTS} == "yes") 
 # make sure the installed "gimptool" doesn't refer to .buildlink
 ORIG_GTK_CFLAGS!=	gtk-config --cflags
 GIMPTOOL_SUBST=		-e "s|@ORIG_GTK_CFLAGS@|${ORIG_GTK_CFLAGS}|g"
@@ -52,6 +55,7 @@ GIMPTOOL_SUBST+=	-e "s|@ORIG_CFLAGS@|${ORIG_CFLAGS}|g"
 ORIG_LDFLAGS=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib
 ORIG_LDFLAGS+=		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib
 GIMPTOOL_SUBST+=	-e "s|@ORIG_LDFLAGS@|${ORIG_LDFLAGS}|g"
+.endif
 
 # Remove -I$(includedir) from the INCLUDES passed to the compiler as this
 # defeats buildlink.
