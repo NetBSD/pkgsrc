@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1385 2004/02/15 23:55:53 wiz Exp $
+$NetBSD: TODO,v 1.1386 2004/02/16 01:40:20 minskim Exp $
 
 Suggested new packages
 ======================
@@ -242,6 +242,7 @@ Suggested package updates
 	o marbles-1.0.6
 	o matchbox-0.8
 	o memtest86-3.0
+	o metacity-2.6.5
 	o micq-0.4.10.5
 	o midnight-commander-4.6.0
 	o mimedefang-2.39 [markd|pkg/24295]
@@ -264,6 +265,7 @@ Suggested package updates
 	o nut-9.9
 	o ocaml-3.07pl2
 	o onyx-5.0.1
+	o openal-20040215
 	o openh323-1.11.2
 	o openldap-2.1.25
 	o openoffice-1.1 [skrll]
