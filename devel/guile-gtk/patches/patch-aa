@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2002/12/13 15:17:45 jschauma Exp $
+$NetBSD: patch-aa,v 1.6 2003/02/05 21:35:07 dmcmahill Exp $
 
---- Makefile.in.orig	Fri Dec 13 10:08:53 2002
-+++ Makefile.in	Fri Dec 13 10:11:29 2002
-@@ -617,7 +617,7 @@
+--- Makefile.in.orig	Wed Jul 26 19:24:58 2000
++++ Makefile.in
+@@ -617,7 +617,7 @@ install-data-local:
  	$(INSTALL_DATA) ./gtk/config.scm  $(gtkmoduledir)/config.scm
  	$(INSTALL_DATA) $(srcdir)/gtk/event-repl.scm $(gtkmoduledir)/event-repl.scm
  .c.x:
@@ -11,3 +11,24 @@ $NetBSD: patch-aa,v 1.5 2002/12/13 15:17:45 jschauma Exp $
  
  gtk-glue.c: $(gtkdefs) $(gdkdefs) build-guile-gtk
  	$(BUILD) -I $(srcdir) glue $(gtkdefs) >tmpt && mv tmpt $@
+@@ -641,3 +641,20 @@ dist-hook:
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
++
++# problems with optimization. triggers internal compiler errors
++
++COMPILE_NOOPT=${COMPILE:C/-O[0-9]*//g}
++LTCOMPILE_NOOPT=${LTCOMPILE:C/-O[0-9]*//g}
++
++.if (${MACHINE_ARCH} == "alpha")
++
++gdk-glue.o: gdk-glue.c
++	$(COMPILE_NOOPT) -c gdk-glue.c
++
++gdk-glue.lo: gdk-glue.c
++	@echo "Compiling without optimization to work around gcc -O* compiler bug"
++	$(LTCOMPILE_NOOPT) -c gdk-glue.c
++
++.endif
++
