@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.13 2004/04/16 23:47:02 heinz Exp $
+# $NetBSD: bootstrap,v 1.14 2004/04/21 20:35:18 tv Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -293,6 +293,9 @@ Interix)
 			return 1
 		fi
 		return 0
+	}
+	mkdir_p () {
+		mkdir -p "$@" # allows umask to take effect
 	}
 	root_user=`id -un`
 	root_group=+Administrators
