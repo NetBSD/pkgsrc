@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2001/05/19 18:09:53 jtb Exp $
+# $NetBSD: Makefile,v 1.100 2001/05/31 15:49:03 agc Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -87,6 +87,7 @@ SUBDIR+=	vttest
 SUBDIR+=	watch
 SUBDIR+=	xrolodex
 SUBDIR+=	xtend
+SUBDIR+=	xtide
 SUBDIR+=	zorro
 
 .include "../mk/bsd.pkg.subdir.mk"
