@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/06/05 05:01:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.18 2003/06/24 14:39:16 seb Exp $
 
 DISTNAME=	g-wrap-1.3.4
 PKGREVISION=	2
@@ -17,6 +17,10 @@ GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 
+USE_NEW_TEXINFO=	YES
+USE_MAKEINFO=		YES
+INFO_FILES=		g-wrap.info
+
 CONFIGURE_ARGS+=	--with-modules-dir=${GUILE14_PREFIX}/share/guile
 CONFIGURE_ENV+=		GUILE=${GUILE14}
 CONFIGURE_ENV+=		BUILD_GUILE=${GUILE14_CONFIG}
@@ -28,5 +32,4 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 .include "../../devel/glib/buildlink2.mk"
 .include "../../lang/guile14/buildlink2.mk"
 .include "../../devel/guile-gtk/buildlink2.mk"
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
