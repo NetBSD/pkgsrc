@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2003/07/17 21:49:42 grant Exp $
+# $NetBSD: Makefile,v 1.4 2003/07/21 17:01:24 martti Exp $
 
 DISTNAME=		Mac-Macbinary-0.04
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Mac/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
-COMMENT=		perl5 module for decoding Macbinary files
+COMMENT=		Perl5 module for decoding Macbinary files
 
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Mac/Macbinary/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/07/17 21:49:58 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/07/21 17:01:27 martti Exp $
 #
 
 DISTNAME=	tds-1.4.2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://tds.dive-in.to/dist/stable/
 
 MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://tds.dive-in.to/
-COMMENT=	web diary system
+COMMENT=	Web diary system
 
 USE_PERL5=	YES
 GNU_CONFIGURE=	YES

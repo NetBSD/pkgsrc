@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2003/07/17 21:49:24 grant Exp $
+# $NetBSD: Makefile,v 1.10 2003/07/21 17:01:16 martti Exp $
 #
 
 DISTNAME=       less-381
@@ -9,7 +9,7 @@ MASTER_SITES=   http://www.greenwoodsoftware.com/less/ \
 
 MAINTAINER=     bouyer@NetBSD.org
 HOMEPAGE=       http://www.greenwoodsoftware.com/less/
-COMMENT=	pager similar to more and pg
+COMMENT=	Pager similar to more and pg
 
 GNU_CONFIGURE=  	yes
 USE_BUILDLINK2=		yes
