@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1189 2003/01/22 03:52:18 lukem Exp $
+$NetBSD: CHANGES,v 1.1190 2003/01/22 08:29:56 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -361,3 +361,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgtop2 to 2.0.0nb2 [rh 2003-01-21]
 	Updated libtool to 1.4.20010614nb12 [grant 2003-01-21]
 	Updated mozilla to 1.2.1nb4 [lukem 2003-01-22]
+	Updated linc to 1.0.1 [jmmv 2003-01-22]
