@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2004/02/14 19:06:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.118 2004/02/22 01:40:44 minskim Exp $
 #
 
 COMMENT=	Databases
@@ -52,6 +52,7 @@ SUBDIR+=	p5-DBD-XBase
 SUBDIR+=	p5-DBD-mysql
 SUBDIR+=	p5-DBD-postgresql
 SUBDIR+=	p5-DBI
+SUBDIR+=	p5-DBI-Shell
 SUBDIR+=	p5-DBIx-Datasource
 SUBDIR+=	p5-DBIx-SearchBuilder
 SUBDIR+=	p5-DB_File
