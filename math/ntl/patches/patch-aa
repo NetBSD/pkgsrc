@@ -1,0 +1,183 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/01/26 23:46:23 jtb Exp $
+
+--- makefile.orig	Sun Nov 19 14:11:21 2000
++++ makefile
+@@ -7,7 +7,7 @@
+ ###############################################################
+ 
+ 
+-CC=gcc
++#CC=gcc
+ # A C or C++ compiler, e. g., gcc, cc, xlc.
+ # There are a few components written in C which may be compiled
+ # under C++, but C compilers tend to generate slightly better code.
+@@ -15,11 +15,11 @@
+ # compatible code.
+ 
+ 
+-CXX=g++
++#CXX=g++
+ # A C++ compiler, e.g., g++, CC, xlC
+ 
+ 
+-CFLAGS=-O2
++#CFLAGS=-O2
+ # Flags for the C compiler
+ # Some useful flags:
+ #   -O2   --  recommended level of optimization
+@@ -31,7 +31,7 @@
+ 
+ 
+ 
+-CXXFLAGS=$(CFLAGS)
++#CXXFLAGS=$(CFLAGS)
+ # Flags for the C++ compiler (usually the same as CFLAGS)
+ # Some useful flags:
+ #   -+  -- needed with xlC to make it treat .c files as C++ files
+@@ -40,16 +40,16 @@
+ # The defaults should almost always be OK.
+ 
+ 
+-AR=ar
++#AR=ar
+ # command to make a library
+ 
+-ARFLAGS=ruv
++#ARFLAGS=ruv
+ # arguments for AR
+ 
+-RANLIB=ranlib
++#RANLIB=ranlib
+ # set to echo if you want to disable it completely
+ 
+-LDFLAGS=
++#LDFLAGS=
+ # arguments for linker for C++ programs
+ 
+ LDFLAGS_CXX=$(LDFLAGS)
+@@ -61,13 +61,13 @@
+ LDLIBS_CXX=$(LDLIBS)
+ # libraries for linking C++ programs
+ 
+-CPPFLAGS=
++#CPPFLAGS=
+ # arguments for the C preprocessor
+ 
+-PREFIX=/usr/local
++#PREFIX=/usr/local
+ LIBDIR=$(PREFIX)/lib
+ INCLUDEDIR=$(PREFIX)/include
+-DOCDIR=$(PREFIX)/doc
++DOCDIR=$(PREFIX)/share/doc
+ # where to install NTL
+ 
+ ###############################################################
+@@ -87,15 +87,15 @@
+ ###############################################################
+ 
+ 
+-GMP_INCDIR=
++GMP_INCDIR= -I${GMP_PREFIX}/include
+ # Set to -I<directory containing gmp.h> if using GMP and GMP
+ # is not installed in a standard system directory, empty otherwise
+ 
+-GMP_LIBDIR=
++GMP_LIBDIR= -Wl,-R${GMP_PREFIX}/lib -L${GMP_PREFIX}/lib
+ # Set to -L<directory containing libgmp.a> if using GMP and GMP
+ # is not installed in a standard system directory, empty otherwise
+ 
+-GMP_LIB=
++GMP_LIB= -lgmp
+ # Set to -lgmp if using GMP, empty otherwise
+ 
+ ###############################################################
+@@ -291,7 +291,7 @@
+ 	make setup2
+ 	make setup3
+ 	make setup4
+-	make ntl.a
++	make libntl.a
+ 
+ 
+ # setup1 generates the file ../incluse/NTL/mach_desc.h
+@@ -325,9 +325,9 @@
+ 	sh Wizard $(WIZARD)
+ 
+ 
+-ntl.a:	$(OBJ) 
+-	$(AR) $(ARFLAGS) ntl.a $(OBJ)
+-	- $(RANLIB) ntl.a
++libntl.a:	$(OBJ) 
++	$(AR) $(ARFLAGS) $@ $(OBJ)
++	- $(RANLIB) $@
+ 
+ lip.o:	lip.c g_lip.c c_lip.c lip_gmp_aux.c
+ 	$(COMPILE) $(GMP_INCDIR) lip.c
+@@ -344,7 +344,7 @@
+ 	$(COMPILE_CXX) $<
+ 
+ .c: 
+-	$(LINK_CXX) -o $@ $< ntl.a  $(GMP_LIBDIR) $(GMP_LIB) $(LDLIBS_CXX) 
++	$(LINK_CXX) -o $@ $< libntl.la  $(GMP_LIBDIR) $(GMP_LIB) $(LDLIBS_CXX) 
+ 
+ #################################################################
+ #
+@@ -372,17 +372,24 @@
+ 
+ 
+ install:
+-	mkdir -p $(LIBDIR)
+-	cp ntl.a $(LIBDIR)/libntl.a
+-	mkdir -p $(INCLUDEDIR)
+-	- rm -r $(INCLUDEDIR)/NTL
+-	mkdir $(INCLUDEDIR)/NTL
+-	cp ../include/NTL/*.h $(INCLUDEDIR)/NTL
+-	mkdir -p $(DOCDIR)
+-	- rm -r $(DOCDIR)/NTL
+-	mkdir $(DOCDIR)/NTL
+-	cp ../doc/*.txt $(DOCDIR)/NTL
+-	cp ../doc/*.html $(DOCDIR)/NTL
++	$(INSTALL_DATA_DIR) $(LIBDIR)
++	$(INSTALL_DATA) libntl.a $(LIBDIR)
++	$(INSTALL_DATA_DIR) $(INCLUDEDIR)
++	$(INSTALL_DATA_DIR) $(INCLUDEDIR)/NTL
++	@for d in ../include/NTL/*.h; do \
++		c="$(INSTALL_DATA) $$d $(INCLUDEDIR)/NTL/"; \
++		echo $$c; $$c; \
++	done
++	$(INSTALL_DATA_DIR) $(DOCDIR)
++	$(INSTALL_DATA_DIR) $(DOCDIR)/NTL
++	@for d in ../doc/*.txt; do \
++		c="$(INSTALL_DATA) $$d $(DOCDIR)/NTL/"; \
++		echo $$c; $$c; \
++	done
++	@for d in ../doc/*.html; do \
++		c="$(INSTALL_DATA) $$d $(DOCDIR)/NTL/"; \
++		echo $$c; $$c; \
++	done
+ 
+ 
+ uninstall:
+@@ -402,16 +409,16 @@
+ #################################################################
+ 
+ clobber:	
+-	- rm ntl.a mach_desc.h ../include/NTL/mach_desc.h  GetTime.c 
+-	- rm lip_gmp_aux.c ../include/NTL/gmp_aux.h
++	- rm -f libntl.a mach_desc.h ../include/NTL/mach_desc.h  GetTime.c 
++	- rm -f lip_gmp_aux.c ../include/NTL/gmp_aux.h
+ 	- sh RemoveProg $(PROGS) MakeDesc TestGetTime gen_lip_gmp_aux gen_gmp_aux
+-	- rm *.o
+-	- rm -r small
++	- rm -f *.o
++	- rm -fr small
+ 
+ clean:
+-	- rm *.o 
++	- rm -f *.o 
+ 	- sh RemoveProg MakeDesc TestGetTime gen_lip_gmp_aux gen_gmp_aux
+-	- rm -r small
++	- rm -fr small
+ 
+ #################################################################
+ #
