@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/22 15:56:30 manu Exp $
+# $NetBSD: Makefile,v 1.2 2003/01/28 09:40:15 uebayasi Exp $
 #
 
 DISTNAME=	sympa-3.4.2
@@ -6,10 +6,9 @@ CATEGORIES=	mail
 MASTER_SITES=	http://www.sympa.org/distribution/
 
 MAINTAINER=	manu@netbsd.org
-HOMEPAGE=	http://www.sympa.org
+HOMEPAGE=	http://www.sympa.org/
 COMMENT=	Mailing list manager
 
-DEPENDS+=	perl>=5.005:../../lang/perl5
 DEPENDS+=	p5-CGI>=2.52:../../www/p5-CGI
 DEPENDS+=	p5-FCGI>=0.48:../../www/p5-FCGI
 DEPENDS+=	p5-Digest-MD5>=2.00:../../security/p5-Digest-MD5
@@ -25,18 +24,20 @@ DEPENDS+=	p5-DBD-postgresql>=0.90:../../databases/p5-DBD-postgresql
 DEPENDS+=	p5-perl-ldap>=0.10:../../databases/p5-perl-ldap
 
 USE_BUILDLINK2=	YES
-HAS_CONFIGURE=	YES
-CONFIGURE_SCRIPT=	./configure
-CONFIGURE_ARGS+=	--prefix=${PREFIX}/sympa
-CONFIGURE_ARGS+=	--with-confdir=${PREFIX}/etc
+GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-piddir=/var/run
+
+PERL5_REQD=	5.005
 
 PKG_GROUPS?=	sympa
 PKG_USERS?=	sympa:sympa
 
 # We do not support set-uid scripts...
 post-install:
-	${CHMOD} ug-s ${PREFIX}/sympa/bin/wwsympa.fcgi
+	${CHMOD} ug-s ${PREFIX}/bin/wwsympa.fcgi
 
+.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.install.mk"
 .include "../../mk/bsd.pkg.mk"
+
+PREFIX=	${LOCALBASE}/sympa
