@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2763 2003/07/12 19:40:16 hubertf Exp $
+$NetBSD: CHANGES,v 1.2764 2003/07/12 22:37:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2785,3 +2785,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated bogofilter to 0.13.6.2 [itojun 2003-07-12]
 	Updated vtun to 2.6 [taca 2003-07-12]
 	Add gqmpeg-skins-20030712 [hubertf 2003-07-12]
+	Updated vorbis-tools to 1.0.0.8nb3 [wiz 2003-07-12]
