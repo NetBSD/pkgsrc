@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.18 2001/06/30 19:08:22 jlam Exp $
+$NetBSD: patch-aa,v 1.19 2001/09/19 16:50:40 drochner Exp $
 
---- Makefile.am.orig	Sat Jun  2 08:28:36 2001
-+++ Makefile.am
-@@ -3,7 +3,11 @@
- #
+--- Makefile.am.orig	Mon Jul  2 11:40:03 2001
++++ Makefile.am	Wed Sep 19 17:58:44 2001
+@@ -7,7 +7,11 @@
+ 		     missing mkinstalldirs \
+ 		     FAQ Install release-notes.html release-notes.txt
  
- MAINTAINERCLEANFILES=Makefile.in configure libtool config.guess config.sub ltconfig ltmain.sh aclocal.m4 config.h.in install-sh missing mkinstalldirs release-notes.html release-notes.txt
 +if Version_1_2
-+SUBDIRS	     = include lib
++SUBDIRS	     = . include lib
 +else
- SUBDIRS	     = include scripts lib clients doc @BuildTestDir@
+ SUBDIRS	     = . include scripts lib clients doc @BuildTestDir@
 +endif
  
  DIST_SUBDIRS = include scripts lib clients doc test
  
-@@ -15,13 +19,16 @@
+@@ -19,15 +23,18 @@
  # Lets put the informational stuff in a sub directory to avoid 
  # poluting /usr/local for default installs.
  #
@@ -22,25 +22,27 @@ $NetBSD: patch-aa,v 1.18 2001/06/30 19:08:22 jlam Exp $
 +if Version_2_0
 +rootdir=	$(docdir)
  root_DATA=	AUTHORS BUG-REPORTING COPYING COPYING.LIB CREDITS \
-                 KNOWN_BUGS README RELEASE-POLICY release-notes.txt
+                 FAQ  Install KNOWN_BUGS \
+ 		README RELEASE-POLICY release-notes.txt
 +endif
  
  EXTRA_DIST=	acconfig.h configure \
- 		BUG-REPORTING CREDITS KNOWN_BUGS RELEASE-POLICY NOTES
+ 		BUG-REPORTING CREDITS FAQ Install KNOWN_BUGS RELEASE-POLICY \
+ 		NOTES
  
 +if Version_2_0
  @MAINT@changelog:
  @MAINT@	@ (cd $(srcdir); cvs -Q -z9 log -rrelease_@MAJOR_VERSION@_@MINOR_VERSION@_@PICO_VERSION@: \
  @MAINT@                  acconfig.h acinclude.m4 configure.in Makefile.am \
-@@ -34,7 +41,6 @@
+@@ -40,7 +47,6 @@
  @MAINT@                  doc/lessdox ) \
  @MAINT@	    | $(srcdir)/scripts/parselog release_@MAJOR_VERSION@_@MINOR_VERSION@_@PICO_VERSION@ >$(srcdir)/ChangeLog
  
 -htmldir=	$(prefix)/LessTif/doc
  html_DATA=	release-notes.html
  
- all-local: BUG-REPORTING
-@@ -51,6 +57,7 @@
+ all-local: BUG-REPORTING  FAQ  Install
+@@ -64,6 +70,7 @@
  
  #install-data-hook:
  #	${INSTALL_DATA} $(srcdir)/NOTES $(DESTDIR)$(htmldir)/release-notes.html
