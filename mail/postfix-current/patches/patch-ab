@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2004/03/06 15:08:32 grant Exp $
+$NetBSD: patch-ab,v 1.6 2004/07/02 08:03:04 martti Exp $
 
 --- src/lmtp/lmtp.h.orig	2003-09-10 02:48:03.000000000 +0200
 +++ src/lmtp/lmtp.h	2004-01-20 20:30:12.000000000 +0100
