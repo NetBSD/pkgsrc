@@ -1,0 +1,101 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/01/14 17:20:19 jwise Exp $
+README
+src/javax/servlet/Servlet.java
+src/javax/servlet/ServletConfig.java
+src/javax/servlet/ServletContext.java
+src/javax/servlet/ServletException.java
+src/javax/servlet/ServletInputStream.java
+src/javax/servlet/ServletOutputStream.java
+src/javax/servlet/ServletRequest.java
+src/javax/servlet/ServletResponse.java
+src/javax/servlet/UnavailableException.java
+src/javax/servlet/SingleThreadModel.java
+src/javax/servlet/GenericServlet.java
+src/javax/servlet/http/HttpUtils.java
+src/javax/servlet/http/HttpServlet.java
+src/javax/servlet/http/HttpServletRequest.java
+src/javax/servlet/http/HttpServletResponse.java
+src/javax/servlet/http/HttpSession.java
+src/javax/servlet/http/HttpSessionBindingEvent.java
+src/javax/servlet/http/HttpSessionBindingListener.java
+src/javax/servlet/http/HttpSessionContext.java
+src/javax/servlet/http/Cookie.java
+doc/servlet_tutorial.html
+doc/images/banner.gif
+doc/images/survey-reply.gif
+doc/apidoc/packages.html
+doc/apidoc/Package-javax.servlet.html
+doc/apidoc/javax.servlet.Servlet.html
+doc/apidoc/javax.servlet.ServletConfig.html
+doc/apidoc/javax.servlet.ServletContext.html
+doc/apidoc/javax.servlet.ServletRequest.html
+doc/apidoc/javax.servlet.ServletResponse.html
+doc/apidoc/javax.servlet.SingleThreadModel.html
+doc/apidoc/javax.servlet.GenericServlet.html
+doc/apidoc/javax.servlet.ServletInputStream.html
+doc/apidoc/javax.servlet.ServletOutputStream.html
+doc/apidoc/AllNames.html
+doc/apidoc/javax.servlet.ServletException.html
+doc/apidoc/javax.servlet.UnavailableException.html
+doc/apidoc/Package-javax.servlet.http.html
+doc/apidoc/javax.servlet.http.HttpServletRequest.html
+doc/apidoc/javax.servlet.http.HttpServletResponse.html
+doc/apidoc/javax.servlet.http.HttpSession.html
+doc/apidoc/javax.servlet.http.HttpSessionBindingListener.html
+doc/apidoc/javax.servlet.http.HttpSessionContext.html
+doc/apidoc/javax.servlet.http.Cookie.html
+doc/apidoc/javax.servlet.http.HttpServlet.html
+doc/apidoc/tree.html
+doc/apidoc/images/java.awt/GridBagEx.gif
+doc/apidoc/images/OpenBookIcon.gif
+doc/apidoc/images/class-index.gif
+doc/apidoc/images/blue-ball.gif
+doc/apidoc/images/blue-ball-small.gif
+doc/apidoc/images/constructors.gif
+doc/apidoc/images/cyan-ball-small.gif
+doc/apidoc/images/constructor-index.gif
+doc/apidoc/images/cyan-ball.gif
+doc/apidoc/images/interface-index.gif
+doc/apidoc/images/green-ball.gif
+doc/apidoc/images/exception-index.gif
+doc/apidoc/images/magenta-ball.gif
+doc/apidoc/images/green-ball-small.gif
+doc/apidoc/images/methods.gif
+doc/apidoc/images/magenta-ball-small.gif
+doc/apidoc/images/red-ball.gif
+doc/apidoc/images/method-index.gif
+doc/apidoc/images/package-index.gif
+doc/apidoc/images/red-ball-small.gif
+doc/apidoc/images/variables.gif
+doc/apidoc/images/yellow-ball.gif
+doc/apidoc/images/variable-index.gif
+doc/apidoc/images/error-index.gif
+doc/apidoc/images/yellow-ball-small.gif
+doc/apidoc/javax.servlet.http.HttpSessionBindingEvent.html
+doc/apidoc/javax.servlet.http.HttpUtils.html
+examples/JdcSurvey.html
+examples/servlet.properties
+examples/SessionServlet.java
+examples/SimpleServlet.java
+examples/SnoopServlet.java
+examples/SurveyServlet.java
+examples/SessionServlet.class
+examples/SimpleServlet.class
+examples/SnoopServlet.class
+examples/SurveyServlet.class
+bin/servletrunner
+lib/jsdk.jar
+@dirrm src/javax/servlet/http
+@dirrm src/javax/servlet
+@dirrm src/javax
+@dirrm src
+@dirrm doc/images
+@dirrm doc/apidoc/images/java.awt
+@dirrm doc/apidoc/images
+@dirrm doc/apidoc
+@dirrm doc
+@dirrm examples
+@dirrm bin
+@dirrm lib
+@comment leave this as it is, as dirrm doesn't do %D substitution
+@unexec rmdir %D
