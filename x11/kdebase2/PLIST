@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2001/12/03 15:37:18 skrll Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/01/17 10:01:43 skrll Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -567,6 +567,8 @@ lib/libkhotkeys_main.so.0.0
 lib/libkicker.a
 lib/libkicker.la
 lib/libkicker.so
+lib/libkicker.so.0
+lib/libkicker.so.0.0
 lib/libkjobviewer_main.a
 lib/libkjobviewer_main.la
 lib/libkjobviewer_main.so
