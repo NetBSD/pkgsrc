@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.5 2001/07/02 08:06:16 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.6 2001/07/02 14:16:54 jlam Exp $
 #
 # This Makefile fragment is included by packages that use freetype2.
 #
@@ -18,11 +18,23 @@ FREETYPE2_BUILDLINK_MK=	# defined
 .include "../../mk/bsd.buildlink.mk"
 
 BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.0.1
-CHECK_FREETYPE2=		# defined
 
+# Check if we got FreeType2 distributed with XFree86 4.x or if we need to
+# depend on the freetype2 package.
+#
 .include "../../mk/bsd.prefs.mk"
+.if exists(${X11BASE}/include/freetype2/freetype/freetype.h)
+_IS_BUILTIN_FREETYPE2!=	${EGREP} -c BuildFreetype2Library ${X11BASE}/lib/X11/config/X11.tmpl || ${TRUE}
+.else
+_IS_BUILTIN_FREETYPE2=	0
+.endif
+.if ${_IS_BUILTIN_FREETYPE2} == "0"
+_NEED_FREETYPE2=	YES
+.else
+_NEED_FREETYPE2=	NO
+.endif
 
-.if ${HAVE_BUILTIN_FREETYPE2} == "NO"
+.if ${_NEED_FREETYPE2} == "YES"
 DEPENDS+=	${BUILDLINK_DEPENDS.freetype2}:../../graphics/freetype2
 BUILDLINK_PREFIX.freetype2=	${LOCALBASE}
 .else
@@ -39,7 +51,7 @@ BUILDLINK_FILES.freetype2+=	lib/libfreetype.*
 BUILDLINK_TARGETS+=		${BUILDLINK_TARGETS.freetype2}
 BUILDLINK_TARGETS.freetype2=	freetype2-buildlink
 
-.if ${HAVE_BUILTIN_FREETYPE2} == "NO"
+.if ${_NEED_FREETYPE2} == "YES"
 BUILDLINK_TARGETS.freetype2+=	freetype2-buildlink-config-wrapper
 
 BUILDLINK_CONFIG.freetype2=		${LOCALBASE}/bin/freetype-config
@@ -51,7 +63,7 @@ CONFIGURE_ENV+=		FREETYPE_CONFIG="${FREETYPE_CONFIG}"
 .endif
 
 freetype2-buildlink-config-wrapper: _BUILDLINK_CONFIG_WRAPPER_USE
-.endif	# HAVE_BUILTIN_FREETYPE
+.endif	# _NEED_FREETYPE2
 
 pre-configure: ${BUILDLINK_TARGETS.freetype2}
 freetype2-buildlink: _BUILDLINK_USE
