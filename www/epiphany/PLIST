@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/09/21 17:07:58 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/10/07 16:14:18 jmmv Exp $
 bin/epiphany
 include/epiphany-1.4/epiphany/ephy-bookmarks.h
 include/epiphany-1.4/epiphany/ephy-command-manager.h
@@ -54,6 +54,7 @@ share/doc/epiphany/right.png
 share/doc/epiphany/style.css
 share/doc/epiphany/up.png
 share/epiphany/art/epiphany-bookmarks.png
+share/epiphany/art/epiphany-close-tab.png
 share/epiphany/art/epiphany-download.png
 share/epiphany/art/epiphany-entry.png
 share/epiphany/art/epiphany-history.png
