@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:59 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:21 wiz Exp $
 
 SHA1 (lukemftpd-1.0.tar.gz) = fe3ecf68823aaaa62979b6a565a9acb316bc2793
+Size (lukemftpd-1.0.tar.gz) = 159806 bytes

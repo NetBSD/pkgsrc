@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2001/04/17 11:51:20 agc Exp $
+$NetBSD: distinfo,v 1.2 2001/04/21 11:23:15 wiz Exp $
 
-MD5 (fping/part01.Z) = b472b9936f814051370f5cada5e3ab0a
+SHA1 (fping/part01.Z) = 5da77db8996539095e4da7b253f0f80b6f3896bc
+Size (fping/part01.Z) = 21232 bytes
 SHA1 (patch-aa) = 8f4708bb6a2c869ee32d06d318104d9b2c04a00e
 SHA1 (patch-ab) = adbd934d37550e3268f3ba8bdaa8d675fda70978
 SHA1 (patch-ac) = 8c380714dc73a57b2571bbeb51f5f8b660b786e7
