@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2002/09/29 06:35:20 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2002/10/29 06:53:45 jlam Exp $
 
 .if !defined(BINUTILS_BUILDLINK2_MK)
 BINUTILS_BUILDLINK2_MK=	# defined
@@ -42,6 +42,8 @@ AS=	${BUILDLINK_PREFIX.binutils}/bin/as
 LD=	${BUILDLINK_PREFIX.binutils}/bin/ld
 NM=	${BUILDLINK_PREFIX.binutils}/bin/nm
 RANLIB=	${BUILDLINK_PREFIX.binutils}/bin/ranlib
+
+BUILDLINK_TARGETS+=	binutils-buildlink
 .endif	# _NEED_BINUTILS == YES
 
 BUILDLINK_FILES.binutils+=	include/ansidecl.h
@@ -50,8 +52,6 @@ BUILDLINK_FILES.binutils+=	include/bfdlink.h
 BUILDLINK_FILES.binutils+=	lib/libbfd.*
 BUILDLINK_FILES.binutils+=	lib/libiberty.*
 BUILDLINK_FILES.binutils+=	lib/libopcodes.*
-
-BUILDLINK_TARGETS+=	binutils-buildlink
 
 binutils-buildlink: _BUILDLINK_USE
 
