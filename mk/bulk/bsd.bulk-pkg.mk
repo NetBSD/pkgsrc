@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.12 2000/08/25 12:43:28 dmcmahill Exp $
+#	$Id: bsd.bulk-pkg.mk,v 1.13 2000/09/02 13:53:06 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -102,19 +102,21 @@ bulk-check-uptodate:
 # rebuild binpkg if any of the pkg files is newer than the binary archive
 # set DO to ":" to not actually do anything (debugging, ...)
 bulk-package:
-	@if [ "${KEEP}" = "no" ]; then \
+	@if [ -f ${BROKENFILE} ]; then \
+		${ECHO_MSG} "BULK> *** Package ${PKGNAME} seems broken and needs attention:" ; \
+		${LS} -la ${BROKENFILE}; \
+		exit 1; \
+	fi
+	@( \
+	if [ "${KEEP}" = "no" ]; then \
 		${ECHO_MSG} '' ; \
 		${ECHO_MSG} '' ; \
 		${ECHO_MSG} '###' ; \
 		${ECHO_MSG} '### ${MAKE} ${.TARGET} for ${PKGNAME}' ; \
 		${ECHO_MSG} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} ^d | wc -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
 		${ECHO_MSG} '###' ; \
-	fi
-	@if [ -f ${BROKENFILE} ]; then \
-		${ECHO_MSG} "BULK> *** Package ${PKGNAME} seems broken and needs attention:" ; \
-		${LS} -la ${BROKENFILE}; \
-		exit 1; \
-	fi
+	fi \
+	) 2>&1 | tee -a ${BUILDLOG}
 	@uptodate=`${MAKE} ${MAKEFLAGS} bulk-check-uptodate REF=${PKGFILE}` ; \
 	if ${PKG_INFO} -qe "${PKGNAME:C/-[^-]*$/-[0-9]*/}" ; then \
 		installed=1; \
@@ -122,16 +124,17 @@ bulk-package:
 		installed=0; \
 	fi ; \
 	if [ $$uptodate = 1 ]; then \
-		if [ $$installed = 1 ]; then \
+		( if [ $$installed = 1 ]; then \
 			echo "BULK> Package ${PKGNAME} is upto-date, and still installed" ; \
 			echo "    removing installed package." ; \
 			${ECHO_MSG} ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
 			${DO}       ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
 		else \
 			echo "BULK> Nothing to be done." ; \
-		fi ; \
+		fi \
+		) 2>&1 | tee -a ${BUILDLOG}; \
 	else \
-		if [ $$installed = 1 ]; then \
+		( if [ $$installed = 1 ]; then \
 			echo "BULK> Removing outdated (installed) package ${PKGNAME} first." ; \
 			${ECHO_MSG} ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
 			${DO}       ${MAKE} deinstall DEINSTALLDEPENDS=YES ; \
@@ -146,18 +149,21 @@ bulk-package:
 			${ECHO_MSG} ${MAKE} -k clean CLEANDEPENDS=YES ; \
 			${DO}       ${MAKE} -k clean CLEANDEPENDS=YES ; \
 		fi ; \
-		${ECHO_MSG} ${MAKE} install-depends '(${PKGNAME})' 2>&1 | tee -a ${BUILDLOG}; \
-		${DO}     ( ${MAKE} install-depends 2>&1 | tee -a ${BUILDLOG} ) || true; \
-		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 | tee -a ${BUILDLOG}; \
-		${DO}     ( ${MAKE} package 2>&1 | tee -a ${BUILDLOG} ) || true; \
+		${ECHO_MSG} ${MAKE} install-depends '(${PKGNAME})' 2>&1; \
+		${DO}     ( ${MAKE} install-depends 2>&1 ); \
+		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 ; \
+		${DO}     ( ${MAKE} package 2>&1 ); \
+		) 2>&1 | tee -a ${BUILDLOG} ; \
 		if [ -f ${PKGFILE} ]; then \
-			${RM} ${BUILDLOG} ; \
+			echo ${RM} ${BUILDLOG} ; \
 		else \
+			( \
 			${MV} ${BUILDLOG} ${BROKENFILE} ; \
 			${ECHO_MSG} "BULK> ${PKGNAME} was marked as broken:" ; \
 			${LS} -la ${BROKENFILE} ; \
 			nerrors=`${GREP} '^\*\*\* Error code' ${BROKENFILE} | ${WC} -l`; \
 			${ECHO_MSG} "$$nerrors ${PKGPATH}/${BROKENFILE}" >>../../${BROKENFILE}; \
+			) 2>&1 | tee -a ${BUILDLOG}; \
 		fi ; \
 		${ECHO_MSG} ${MAKE} clean CLEANDEPENDS=YES ; \
 		${DO}       ${MAKE} clean CLEANDEPENDS=YES ; \
@@ -169,7 +175,7 @@ bulk-package:
 		fi ; \
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
-		${ECHO_MSG} "BULK>" Build for ${PKGNAME} was not successful, aborting. ; \
+		${ECHO_MSG} "BULK>" Build for ${PKGNAME} was not successful, aborting. | tee -a ${BUILDLOG} ; \
 		false; \
 	fi
 
