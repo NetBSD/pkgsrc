@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2405 2003/06/03 11:53:14 salo Exp $
+$NetBSD: CHANGES,v 1.2406 2003/06/03 13:08:19 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2285,3 +2285,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed lmule [jmmv 2003-06-03]
 	Added xmule-1.4.0 [jmmv 2003-06-03]
 	Updated hatari to 0.30 [salo 2003-06-03]
+	Updated wdm to 1.24 [jmmv 2003-06-03]
