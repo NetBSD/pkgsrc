@@ -1,0 +1,30 @@
+$NetBSD: patch-ag,v 1.1 1998/09/14 19:34:23 garbled Exp $
+--- scores.cpp.orig	Mon Sep 14 12:06:20 1998
++++ scores.cpp	Mon Sep 14 12:08:28 1998
+@@ -11,7 +11,7 @@
+ #include "Maelstrom_Globals.h"
+ #include "dialog.h"
+ 
+-#define MAELSTROM_SCORES	"Maelstrom-Scores"
++#define MAELSTROM_SCORES	"/var/games/Maelstrom-Scores"
+ #define NUM_SCORES		10		// Do not change this!
+ 
+ /* Everyone can write to scores file if defined to 0 */
+@@ -49,7 +49,7 @@
+ 			gNetScores = 0;
+ 		}
+ 	}
+-	scoresfile = file2libpath(MAELSTROM_SCORES);
++	scoresfile = MAELSTROM_SCORES;
+ 	memset(&hScores, 0, sizeof(hScores));
+ 	if ( (scores_fp=fopen(scoresfile, "r")) == NULL )
+ 		return;
+@@ -72,7 +72,7 @@
+ 	if ( gNetScores )
+ 		return;
+ 
+-	scoresfile = file2libpath(MAELSTROM_SCORES);
++	scoresfile = MAELSTROM_SCORES;
+ #ifndef __WIN95__
+ 	omask=umask(SCORES_PERMMASK);
+ #endif
