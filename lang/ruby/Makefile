@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/02/21 15:35:53 taca Exp $
+# $NetBSD: Makefile,v 1.32 2005/03/06 13:05:38 taca Exp $
 # FreeBSD: ports/lang/ruby/Makefile,v 1.40 2001/01/18 19:53:38 knu Exp
 
 DISTNAME=	ruby-${RUBY_VERSION}
@@ -29,9 +29,9 @@ RUBY_COMMANDS+=	erb h2rb rdoc ri testrb
 do-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 .if ${RUBY_NAME} != "ruby"
-.for file in ${RUBY_COMMANDS}
-	${LN} -sf ${file}${RUBY_VER} ${LOCALBASE}/bin/${file}
-	${ECHO} bin/${file} >> ${PLIST_SRC}
+.for f in ${RUBY_COMMANDS}
+	${LN} -sf ${f}${RUBY_VER} ${LOCALBASE}/bin/${f}
+	${ECHO} bin/${f} >> ${PLIST_SRC}
 .endfor
 	${LN} -sf ${RUBY_NAME}.1 ${PREFIX}/man/man1/ruby.1
 	${ECHO} man/man1/ruby.1 >> ${PLIST_SRC}

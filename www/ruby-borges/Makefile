@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/11/28 05:37:04 taca Exp $
+# $NetBSD: Makefile,v 1.9 2005/03/06 13:10:32 taca Exp $
 
 DISTNAME=	borges-1.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ BORGES_SHARE_DIR=		data/doc data/examples
 .if !empty(RUBY_SUFFIX)
 pre-configure:
 .for d in ${BORGES_SHARE_DIR}
-	cd ${WRKSRC}; ${MV} $d/ruby $d/${RUBY_NAME}
+	cd ${WRKSRC}; ${MV} ${d}/ruby ${d}/${RUBY_NAME}
 .endfor
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/01/28 14:08:02 taca Exp $
+# $NetBSD: Makefile,v 1.10 2005/03/06 13:09:10 taca Exp $
 #
 
 DISTNAME=	ruby-quota-0.5.1
@@ -21,7 +21,7 @@ DOCSDIR=	${RUBY_DOCDIR}/quota
 post-install:
 	${INSTALL_DATA_DIR} ${DOCSDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/$f ${DOCSDIR}/$f
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}/${f}
 .endfor
 
 .include "../../lang/ruby/modules.mk"
