@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 1999/11/15 21:30:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2000/01/31 20:45:45 drochner Exp $
 LessTif/FAQ
 LessTif/Motif1.2/include/Mrm/MrmAppl.h
 LessTif/Motif1.2/include/Mrm/MrmDecls.h
@@ -305,21 +305,10 @@ lib/libXm.so.2.0
 @dirrm lib/X11/lesstif
 man/man1/lesstif.1
 man/man1/mwm.1
+man/man1/xbae.1
+man/man1/xlt.1
 man/man1/xmbind.1
-man/man3/ApplicationShell.3
-man/man3/Composite.3
-man/man3/Constraint.3
-man/man3/Core.3
 man/man3/LessTifInternals.3
-man/man3/Object.3
-man/man3/OverrideShell.3
-man/man3/Rect.3
-man/man3/Shell.3
-man/man3/TopLevelShell.3
-man/man3/TransientShell.3
-man/man3/UnNamedObj.3
-man/man3/VendorShell.3
-man/man3/WmShell.3
 man/man3/XmArrowButton.3
 man/man3/XmArrowButtonGadget.3
 man/man3/XmBulletinBoard.3
@@ -404,7 +393,6 @@ share/doc/lesstif/Xbae.html
 share/doc/lesstif/Xlt.html
 share/doc/lesstif/XmStrings.txt
 share/doc/lesstif/apps.html
-share/doc/lesstif/bug-reporting.html
 share/doc/lesstif/bugs.html
 share/doc/lesstif/cdrom.html
 share/doc/lesstif/core.html
@@ -412,13 +400,6 @@ share/doc/lesstif/current.html
 share/doc/lesstif/cvs.html
 share/doc/lesstif/download.html
 share/doc/lesstif/help.html
-share/doc/lesstif/images/hungry.gif
-share/doc/lesstif/images/lesstif-realsmall.gif
-share/doc/lesstif/images/lesstif-small.gif
-share/doc/lesstif/images/lesstif.gif
-share/doc/lesstif/images/ltsunlogo.gif
-share/doc/lesstif/imgs/lesstif.jpg
-share/doc/lesstif/imgs/ltsunlogo.gif
 share/doc/lesstif/index.html
 share/doc/lesstif/known.html
 share/doc/lesstif/links.html
@@ -433,6 +414,12 @@ share/doc/lesstif/testers.html
 share/doc/lesstif/thread.html
 share/doc/lesstif/versions.html
 share/doc/lesstif/web_button.html
-@dirrm share/doc/lesstif/imgs
+share/doc/lesstif/images/hungry.png
+share/doc/lesstif/images/lesstif-realsmall.png
+share/doc/lesstif/images/lesstif-small.png
+share/doc/lesstif/images/lesstif.jpg
+share/doc/lesstif/images/lesstif.png
+share/doc/lesstif/images/ltsunlogo.jpg
+share/doc/lesstif/images/ltsunlogo.png
 @dirrm share/doc/lesstif/images
 @dirrm share/doc/lesstif
