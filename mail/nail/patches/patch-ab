@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/12/09 10:37:17 cjep Exp $
+$NetBSD: patch-ab,v 1.2 2003/12/05 22:21:17 cjep Exp $
 
---- mime.c	Tue Sep 17 13:40:18 2002
-+++ mime.c.nb	Wed Nov 20 17:40:00 2002
-@@ -62,7 +62,7 @@
+--- mime.c.orig	2003-03-23 04:15:01.000000000 +0000
++++ mime.c
+@@ -62,7 +62,7 @@ static char sccsid[]  = "@(#)mime.c	2.15
   * You won't guess what these are for.
   */
  static const char basetable[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
