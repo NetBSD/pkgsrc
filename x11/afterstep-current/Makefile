@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 1999/08/04 05:53:24 fredb Exp $
+# $NetBSD: Makefile,v 1.3 1999/08/04 11:28:35 fredb Exp $
 
 DISTNAME=		AfterStep-1.7.126
-PKGNAME=		afterstep-1.7.128
+PKGNAME=		afterstep-1.7.129
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.afterstep.org/devel/snapshots/ \
 			ftp://ftp.afterstep.org/devel/archives/1.7/ \
@@ -18,7 +18,8 @@ PATCH_SITES=		ftp://ftp.afterstep.org/devel/patches/ \
 	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/contrib/ \
 	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/archive/
 PATCHFILES=		1.7.126-01-sasha-endian_deps.patch.gz \
-			1.7.126-02-allanon-security_and_avoidcover.patch.gz
+			1.7.126-02-allanon-security_and_avoidcover.patch.gz \
+			1.7.126-03-allanon-depend.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		fb@enteract.com
