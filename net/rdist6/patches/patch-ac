@@ -1,13 +1,11 @@
-$NetBSD: patch-ac,v 1.1 1999/08/29 12:26:22 kim Exp $
+$NetBSD: patch-ac,v 1.2 2000/01/15 18:09:30 christos Exp $
 
---- include/filesys.h.orig	Mon Dec 11 19:46:47 1995
-+++ include/filesys.h	Sun Aug 29 07:50:07 1999
-@@ -111,7 +111,7 @@
- 	typedef struct statvfs		statfs_t;
- #	define statfs(mp,sb)		statvfs(mp,sb)
- #else
--#if defined(BSD386) || defined(__bsdi__) || defined(FREEBSD) || STATFS_TYPE == STATFS_OSF1
-+#if defined(BSD386) || defined(__bsdi__) || defined(FREEBSD) || defined(NETBSD) || STATFS_TYPE == STATFS_OSF1
- 	typedef struct statfs		statfs_t;
- #else
- #	include <sys/vfs.h>
+--- config/mf.netbsd.orig	Sat Jan 15 13:05:52 2000
++++ config/mf.netbsd	Sat Jan 15 13:05:59 2000
+@@ -53,6 +53,3 @@
+ # System dependent options for compiling
+ #
+ #CFLAGS_OS	=
+-
+-MAN_1_DIR	= /usr/local/man/man1
+-MAN_8_DIR	= /usr/local/man/man8
