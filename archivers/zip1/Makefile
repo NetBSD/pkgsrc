@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/11/22 19:36:10 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2004/11/22 21:01:37 tv Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -13,8 +13,6 @@ COMMENT=	Create/update ZIP files compatible with pkzip version 1
 RESTRICTED=	"Do not modify.  Do not sell for profit."
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
-
-NOT_FOR_PLATFORM+= Interix-*-* # needs porting
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -35,7 +33,7 @@ ALL_TARGET+=	zipcloak
 CRYPTO=		yes
 .endif
 
-.if ${OPSYS} == "Linux"
+.if ${OPSYS} == "Linux" || ${OPSYS} == "Interix"
 MAKE_FLAGS=	CFLAGS="${CFLAGS} -DSYSV"
 .else
 MAKE_FLAGS=	CFLAGS="${CFLAGS} -DDIRENT" LFLAGS2="-lcompat"
