@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2162 2004/09/23 19:54:52 adrianp Exp $
+$NetBSD: TODO,v 1.2163 2004/09/24 12:13:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -270,7 +270,6 @@ Suggested package updates
 	o gnomeicu-0.99.5
 	o gnucash-1.8.9
 	o gnunet-0.6.3a
-	o gnustep-1.10.0
 	o gogo-3.11p1
 	o gossip-0.7.7
 	o gpsdrive-2.09
@@ -305,14 +304,16 @@ Suggested package updates
 	o latex2rtf-1.9.15
 	o lavaps-2.5
 	o lbreakout-2.5
-	o leafnode-1.10.5
+	o leafnode-1.10.6
 	o libmpeg3-1.5.4
 	o libnet-1.1.2.1
 	o libnids-1.19
+	o libogg-1.1.1
 	o libole2-2.2.8
 	o libpng-1.2.7
 	o libsigc++-2.0.3
 	o libtool-1.5.10
+	o libvorbis-1.1.0
 	o licq-1.2.7
 	o liferea-0.6.0
 	o lilypond-2.2
@@ -325,9 +326,10 @@ Suggested package updates
 	o maradns-1.0.23
 	o marbles-1.0.6
 	o matchbox-0.8.3 [pkgsrc-wip]
-	o mathomatic-11.3e
+	o mathomatic-11.3f
 	o micq-0.4.11
 	o midnight-commander-4.6.0
+	o mimedefang-2.45
 	o minicom-2.1
 	o mldonkey-2.5.22
 	o mowitz-0.3.0
@@ -342,7 +344,7 @@ Suggested package updates
 	o multitail-3.2.2
 	o mummer-3.15
 	o mysql-4.0.21
-	o nail-11.7 [cjep - after freeze]
+	o nail-11.8 [cjep - after freeze]
 	o namazu-2.0.13
 	o nano-1.2.4
 	o nap-1.5.2
@@ -416,11 +418,13 @@ Suggested package updates
 	o snownews-1.5.3
 	o socat-1.4.0.2
 	o sox-12.17.5
+	o spamassassin-3.0.0
 	o sqlite-3.0.7
 	o squid-2.5.6 [taca]
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
 	o streamtuner-0.12.5
+	o subversion-1.0.8
 	o sweep-0.8.3
 	o sylpheed-claws-0.9.12a
 	o tcl-8.4.7
@@ -439,7 +443,7 @@ Suggested package updates
 	o tkman-2.2
 	o treecc-0.3.2 [pkg/27013]
 	o tripwire-2.3.1 [see also pkg/22362]
-	o txt2html-2.30 [wennmach]
+	o txt2html-2.31 [wennmach]
 	o uptimec-0.2p3 [pkg/26082]
 	o uvscan-4.3.2 [jlam]
 	o vba-1.7.2
@@ -471,7 +475,7 @@ Suggested package updates
 	o xmcd-3.3.0
 	o xmlstarlet-0.9.5
 	o xmms-alarm-0.3.5
-	o xmms-crossfade-0.3.6
+	o xmms-crossfade-0.3.7
 	o xmms-iris-0.12
 	o xmmsctrl-0.8
 	o xpad-1.13.1
