@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2433 2004/11/23 20:25:51 markd Exp $
+$NetBSD: TODO,v 1.2434 2004/11/23 21:46:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -584,7 +584,6 @@ Suggested package updates
 	o ipcheck-0.219
 	o iperf-2.0.1
 	o ipgrab-0.9.9
-	o ipv6calc-0.47
 	o ircd-hybrid-7.0.4
 	o iroffer-1.309
 	o irrd-2.2.0
