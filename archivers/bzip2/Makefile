@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.19 2002/08/25 21:48:59 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2002/10/31 22:08:15 grant Exp $
 #
 
 DISTNAME=	bzip2-1.0.2
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://sourceware.cygnus.com/pub/bzip2/v102/
+MASTER_SITES=	ftp://sources.redhat.com/pub/bzip2/v102/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://sourceware.cygnus.com/bzip2/
+HOMEPAGE=	http://sources.redhat.com/bzip2/
 COMMENT=	Block-sorting file compressor
 
 USE_BUILDLINK2=		# defined
