@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2001/02/08 16:23:07 tron Exp $
+$NetBSD: patch-ac,v 1.9 2004/07/24 23:55:28 grant Exp $
 
---- Makefile.global.in.orig	Thu Jan 11 09:55:23 2001
-+++ Makefile.global.in	Thu Feb  8 13:58:22 2001
-@@ -169,10 +169,10 @@
+--- Makefile.global.in.orig	2004-01-08 09:47:19.000000000 +1100
++++ Makefile.global.in
+@@ -225,10 +225,10 @@ PATHINBAD       = $(PATHINCOMING)/bad
  PATHOVERVIEW    = $(PATHSPOOL)/overview
  PATHOUTGOING    = $(PATHSPOOL)/outgoing
  
