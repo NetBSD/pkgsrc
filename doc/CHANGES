@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6088 2004/06/01 21:59:33 kristerw Exp $
+$NetBSD: CHANGES,v 1.6089 2004/06/01 22:14:58 chris Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2744,3 +2744,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed arena [kristerw 2004-06-01]
 	Removed Mosaic [kristerw 2004-06-01]
 	Removed lesstif12 [kristerw 2004-06-01]
+	Updated sylpheed to 0.9.11 [chris 2004-06-01]
