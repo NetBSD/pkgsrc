@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.112 1998/07/11 21:12:59 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.113 1998/07/12 00:20:04 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -968,7 +968,7 @@ _PORT_USE: .USE
 .if make(real-install)
 .if !defined(NO_PKG_REGISTER) && !defined(FORCE_PKG_REGISTER)
 .if defined(CONFLICTS)
-	@for i in "${CONFLICTS}"; do \
+	@for i in ${CONFLICTS}; do \
 		if /usr/sbin/pkg_info -e "$$i" >${WRKDIR}/.CONFLICT.$$$$; then \
 			${ECHO_MSG} "===>  ${PKGNAME} conflicts with already installed pkg(s) "`${CAT} ${WRKDIR}/.CONFLICT.$$$$`.; \
 			${ECHO_MSG} "      They install the same files into the same place, its therefor not"; \
