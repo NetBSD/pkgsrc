@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2004/07/10 13:55:09 salo Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/24 22:35:43 grant Exp $
 
---- Makefile.orig	Sat Jul 10 15:43:55 2004
-+++ Makefile	Sat Jul 10 15:44:27 2004
+--- Makefile.orig	2004-07-25 08:33:58.000000000 +1000
++++ Makefile
 @@ -2,10 +2,10 @@
  
  PROG	= psify
@@ -17,3 +17,11 @@ $NetBSD: patch-aa,v 1.1 2004/07/10 13:55:09 salo Exp $
  #GREP	= grep
  #LIBS	= `$(GREP) -q FLEX_SCANNER lex.yy.c || echo -ll`
  
+@@ -26,5 +26,5 @@ clean:
+ 	rm -f $(PROG) *.o lex.yy.c *~
+ 
+ install: all
+-	install -c -s -m 755 psify $(prefix)/bin/psify
+-	install -c -m 644 psify.man $(prefix)/man/man1/psify.1
++	${BSD_INSTALL} -c -s -m 755 psify $(prefix)/bin/psify
++	${BSD_INSTALL} -c -m 644 psify.man $(prefix)/man/man1/psify.1
