@@ -1,0 +1,5 @@
+BYTE's UNIX benchmarking suite is small enough to port easily to any UNIX
+system, yet diverse and flexible enough to be useful for a wide spectrum of
+benchmarking requirements. Besides, they're in the public domain, so they can
+be obtained for little, if any, cost. What better reason do you need to use
+them?
