@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/06/26 16:39:28 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/07/31 19:30:49 tv Exp $
 lib/X11/config/xpkgwedge.def
+@exec echo "updating %D/lib/X11/config/host.def"; cp %D/lib/X11/config/host.def %D/lib/X11/config/host.def.bak; (grep -v xpkgwedge %D/lib/X11/config/host.def.bak; echo '#include <xpkgwedge.def>') >%D/lib/X11/config/host.def
 @unexec echo "updating %D/lib/X11/config/host.def"; cp %D/lib/X11/config/host.def %D/lib/X11/config/host.def.bak; (grep -v xpkgwedge %D/lib/X11/config/host.def.bak || true) >%D/lib/X11/config/host.def
