@@ -1,0 +1,9 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/06/21 05:59:30 martti Exp $
+
+--- panel-plugin/config_dialog.c.orig	2004-06-11 22:03:04.000000000 +0000
++++ panel-plugin/config_dialog.c	2004-06-11 22:03:23.000000000 +0000
+@@ -216,3 +216,3 @@
+         column = gtk_tree_view_column_new_with_attributes("Labels to display", renderer,
+-                        "text", 0);
++                        "text", 0, NULL);
+         gtk_tree_view_append_column(GTK_TREE_VIEW(dialog->lst_xmloption), column);
