@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/10/07 22:17:22 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2002/10/07 22:35:36 jschauma Exp $
 
 DISTNAME=		gnome-vfs-1.0.3
 CATEGORIES=		sysutils gnome
@@ -18,12 +18,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux"
-.  include "../../archivers/bzip2/buildlink2.mk"
-.endif
-
+.include "../../archivers/bzip2/buildlink2.mk"
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../devel/GConf/buildlink2.mk"
 
