@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1331 2004/01/23 22:43:25 wiz Exp $
+$NetBSD: TODO,v 1.1332 2004/01/23 22:57:03 recht Exp $
 
 Suggested new packages
 ======================
@@ -144,7 +144,6 @@ Suggested package updates
 	o crimsonfields-0.3.8
 	o crossfire-1.5.0
 	o cssc-0.16alpha.pl0
-	o curl-7.11.0
 	o cvs-1.12.3
 	o cxref-1.5e
 	o cxunzip-0.98 [pkg/23404]
