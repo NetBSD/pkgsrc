@@ -1,25 +1,16 @@
-# $NetBSD: Makefile,v 1.3 1999/09/30 05:49:41 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 1999/11/16 09:28:49 sakamoto Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/04/05 04:46:33 max Exp $
 
-DISTNAME=	kakasi-2.3.0
+DISTNAME=	kakasi-2.3.1
 CATEGORIES=	japanese
 MASTER_SITES=	ftp://kakasi.namazu.org/pub/kakasi/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} kakasidict.940620.gz
-
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	tech-pkg-ja@jp.netbsd.org
 HOMEPAGE=	http://kakasi.namazu.org/
 
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-
+USE_GMAKE=	YES
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
-ALL_TARGET=	all dict
-INSTALL_TARGET=	install dict-install
-
-post-extract:
-	@${GZCAT} ${DISTDIR}/kakasidict.940620.gz > ${WRKSRC}/kakasidict
 
 post-configure:
 	@${RM} -f ${WRKSRC}/libtool

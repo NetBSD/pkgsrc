@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.4 1999/11/16 09:28:53 sakamoto Exp $
+
+--- ./src/mkkanwa.c.orig	Fri Oct 29 14:18:45 1999
++++ ./src/mkkanwa.c	Tue Nov 16 18:14:40 1999
+@@ -26,10 +26,8 @@
+ #include "jj2.h"
+ 
+-static void usage(argv, options)
++static void usage(argv)
+      char **argv;
+-     char *options;
+ {
+-    (void)fprintf(stderr, "usage: %s kanwadict %s dict1 [dict2,,,]\n",
+-		  argv[0], options);
++    (void)fprintf(stderr, "usage: %s kanwadict dict1 [dict2,,,]\n", argv[0]);
+     exit (2);
+ }
+@@ -80,9 +78,9 @@
+ 	  case 'h':
+ 	  default:
+-	    usage(argv, options);
++	    usage(argv);
+ 	}
+     }
+     if (optind >= argc)
+-	usage(argv, options);
++	usage(argv);
+     if ((kdict = fopen(argv[optind],"wb")) == NULL) {
+ 	perror(argv[optind]);
