@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2002/04/19 17:59:18 jwise Exp $
+# $NetBSD: Makefile,v 1.15 2002/09/26 10:07:15 abs Exp $
 #
 
-DISTNAME=		postgresql-7.2.1
+DISTNAME=		postgresql-${VERSION}
 PKGNAME=		jdbc-${DISTNAME}
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/interfaces/jdbc
 CATEGORIES=		databases
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://ftp.PostgreSQL.org/pub/ \
 			ftp://ftp.sunsite.auc.dk/mirrors/www.postgresql.org/pub/ \
 			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
 
+VERSION=		7.2.2
 MAINTAINER=		jwise@netbsd.org
 HOMEPAGE=		http://www.PostgreSQL.ORG/
 COMMENT=		100% Java JDBC driver for PostgreSQL
@@ -28,7 +29,7 @@ CLASSPATH:=		${CLASSPATH}:.
 HELP_FILES=		README Implementation CHANGELOG
 
 pre-build:
-	${ECHO} "VERSION=7.2.1" > ${WRKSRC}/../../../src/Makefile.global
+	${ECHO} "VERSION=${VERSION}" > ${WRKSRC}/../../../src/Makefile.global
 	${ECHO} "ANT=${LOCALBASE}/bin/ant" >> ${WRKSRC}/../../../src/Makefile.global
 	${ECHO} "srcdir=." >> ${WRKSRC}/../../../src/Makefile.global
 	${ECHO} "DEF_PGPORT=5432" >> ${WRKSRC}/../../../src/Makefile.global
