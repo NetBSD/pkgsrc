@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/06/15 09:14:23 rh Exp $
+bin/jpilot
+share/locale/da/LC_MESSAGES/jpilot.mo
+share/locale/de/LC_MESSAGES/jpilot.mo
+share/locale/fr/LC_MESSAGES/jpilot.mo
+share/locale/sv/LC_MESSAGES/jpilot.mo
+share/locale/ja/LC_MESSAGES/jpilot.mo
+share/jpilot/jpilotrc.blue
+share/jpilot/jpilotrc.default
+share/jpilot/jpilotrc.green
+share/jpilot/jpilotrc.purple
+share/jpilot/jpilotrc.steel
+share/jpilot/DatebookDB.pdb
+share/jpilot/AddressDB.pdb
+share/jpilot/ToDoDB.pdb
+share/jpilot/MemoDB.pdb
+@dirrm share/jpilot
