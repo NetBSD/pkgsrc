@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/08/29 12:42:56 rh Exp $
+# $NetBSD: Makefile,v 1.25 1999/09/03 01:57:03 jlam Exp $
 #
 
 DISTNAME=		gnome-core-1.0.9
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.gnome.org/
 DEPENDS+=		esound-0.2.8:../../audio/esound
 DEPENDS+=		gnome-libs-1.0.14:../../x11/gnome-libs
 # "libgtop" packages is broken at the moment.
-#DEPENDS+=		libgtop-1.0.1:../../devel/libgtop
+#DEPENDS+=		libgtop-1.0.2:../../devel/libgtop
 
 NOT_FOR_PLATFORM=	*-*-alpha	# problems with gtk
 
@@ -22,8 +22,7 @@ USE_LIBTOOL=		yes
 
 LOCALSTATEDIR=		/var/gnome
 
-CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR} \
-			--with-glib-prefix=${LOCALBASE}
+CONFIGURE_ARGS+=	--localstatedir=${LOCALSTATEDIR}
 CPPFLAGS=		-I${LOCALBASE}/include -I${WRKDIR}
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE} X11BASE=${X11BASE} \
 			CPPFLAGS="${CPPFLAGS}"
