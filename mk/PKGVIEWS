@@ -1,4 +1,4 @@
-$NetBSD: PKGVIEWS,v 1.1.2.1 2003/07/16 09:33:46 jlam Exp $
+$NetBSD: PKGVIEWS,v 1.1.2.2 2003/07/24 09:17:57 jlam Exp $
 
 Package views integration plan:
 ==============================
@@ -48,19 +48,19 @@ Possible problems:
     nowadays are to handle: users/groups, config files, directories,
     info files, and shell registration.  There are some things that we
     only want to happen once, when the package is installed into its
-    depot directory: handling users/group creation, config files,
-    non-${PREFIX} directories, and shell registration.  There are some
-    things that we want to happen every time a package is added to a
-    view: adding info files to info/dir.  How do we modify pkg_add(1)
+    depot directory: handling users/group creation, config files, and
+    non-${PREFIX} directories.  There are some things that we want to
+    happen every time a package is added to a view: adding info files
+    to info/dir and shell registration.  How do we modify pkg_add(1)
     and pkg_view(1) to do this?
 
 (3) DEINSTALL scripts also do several things.  The main things are to
     remove: config files, directories, info files, and de-register
     shells.  We only want some things to happen once when the package
-    is pkg_delete'd from it's depot directory: removing config files,
-    non-${PREFIX} directories, and de-registering shells.  We want
-    some things to happen every time a package is removed from a view:
-    removing info file entries from info/dir.  How do we modify
+    is pkg_delete'd from it's depot directory: removing config files
+    and non-${PREFIX} directories.  We want some things to happen every
+    time a package is removed from a view: removing info file entries
+    from info/dir and de-registering shells.  How do we modify
     pkg_delete(1) and pkg_view(1) to do this?
 
 I think we need to have the scripts learn two new actions:
