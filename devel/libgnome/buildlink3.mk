@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/04/01 18:22:04 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/09/21 16:46:14 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOME_BUILDLINK3_MK:=	${LIBGNOME_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgnome}
 BUILDLINK_PACKAGES+=	libgnome
 
 .if !empty(LIBGNOME_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libgnome+=	libgnome>=2.6.0
+BUILDLINK_DEPENDS.libgnome+=	libgnome>=2.8.0
 BUILDLINK_PKGSRCDIR.libgnome?=	../../devel/libgnome
 .endif	# LIBGNOME_BUILDLINK3_MK
 
