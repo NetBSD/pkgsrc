@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/08 15:21:05 sakamoto Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/30 16:13:12 sakamoto Exp $
 #
 
 DISTNAME=	psiconv-0.6.1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://huizen.dds.nl/~frodol/psiconv/
 DEPENDS+=	libgetopt-[0-9]*:../../devel/libgetopt
 LIBS=		-lgetopt
 .endif
-DEPENDS+=	ImageMagick-*:../../graphics/ImageMagick
+DEPENDS+=	ImageMagick>=5.2.2:../../graphics/ImageMagick
 
 MAGICK_CONFIG=	${LOCALBASE}/bin/Magick-config
 
