@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/07 03:34:51 uebayasi Exp $
+share/gauche/site/lib/wiliki.scm
+share/gauche/site/lib/wiliki/db.scm
+share/gauche/site/lib/wiliki/edit.scm
+share/gauche/site/lib/wiliki/format.scm
+share/gauche/site/lib/wiliki/history.scm
+share/gauche/site/lib/wiliki/log.scm
+share/gauche/site/lib/wiliki/macro.scm
+share/gauche/site/lib/wiliki/mcatalog.scm
+share/gauche/site/lib/wiliki/msgs.jp
+share/gauche/site/lib/wiliki/pasttime.scm
+share/gauche/site/lib/wiliki/rss.scm
+share/gauche/site/lib/wiliki/rssmix.scm
+share/gauche/site/lib/wiliki/util.scm
+share/gauche/site/lib/wiliki/version.scm
+@dirrm share/gauche/site/lib/wiliki
