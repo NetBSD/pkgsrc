@@ -93,7 +93,7 @@ I. The pkgsrc user's guide
         6.2. Where's the pkgviews documentation?
         6.3. Utilities for package management (pkgtools)
         6.4. How to use pkgsrc as non-root
-        6.5. How to resume transferencies with pkgsrc?
+        6.5. How to resume transfers when fetching distfiles?
         6.6. How can I install/use XFree86 from pkgsrc?
         6.7. How can I install/use X.org from pkgsrc?
         6.8. How to fetch files from behind a firewall
@@ -431,7 +431,7 @@ Table of Contents
     6.2. Where's the pkgviews documentation?
     6.3. Utilities for package management (pkgtools)
     6.4. How to use pkgsrc as non-root
-    6.5. How to resume transferencies with pkgsrc?
+    6.5. How to resume transfers when fetching distfiles?
     6.6. How can I install/use XFree86 from pkgsrc?
     6.7. How can I install/use X.org from pkgsrc?
     6.8. How to fetch files from behind a firewall
@@ -1435,7 +1435,7 @@ Table of Contents
 6.2. Where's the pkgviews documentation?
 6.3. Utilities for package management (pkgtools)
 6.4. How to use pkgsrc as non-root
-6.5. How to resume transferencies with pkgsrc?
+6.5. How to resume transfers when fetching distfiles?
 6.6. How can I install/use XFree86 from pkgsrc?
 6.7. How can I install/use X.org from pkgsrc?
 6.8. How to fetch files from behind a firewall
@@ -1539,12 +1539,16 @@ Utilities for people maintaining pkgsrc (or more obscure pkg utilities)
 If you want to use pkgsrc as non-root user, you can set some variables to make
 pkgsrc work under these conditions. Please see this message for more details.
 
-6.5. How to resume transferencies with pkgsrc?
+6.5. How to resume transfers when fetching distfiles?
 
-By default resuming transferencies in pkgsrc is disabled, but you can enable
-this feature adding the option PKG_RESUME_TRANSFERS=YES into mk.conf, if a
-previous transfer wasn't completed, it will try to resume it saving your
-bandwidth.
+By default resuming transfers in pkgsrc is disabled, but you can enable this
+feature by adding the option PKG_RESUME_TRANSFERS=YES into /etc/mk.conf. If,
+during a fetch step, an incomplete distfile is found, pkgsrc will try to resume
+it.
+
+You can also use a different program than the default ftp(1) by changing the
+FETCH_CMD variable. Don't forget to set FETCH_RESUME_ARGS and FETCH_OUTPUT_ARGS
+if you are not using default values.
 
 For example, if you want to use wget to resume downloads, you'll have to use
 something like:
@@ -1557,13 +1561,10 @@ something like:
         .endif
 
 
-Don't forget to set FETCH_RESUME_ARGS and FETCH_OUTPUT_ARGS if you are not
-using default values.
-
 6.6. How can I install/use XFree86 from pkgsrc?
 
 If you want to use XFree86 from pkgsrc instead of your system's own X11 (/usr/
-X11R6, /usr/openwin, ...), you will have to add the following line into
+X11R6, /usr/openwin, ...), you will have to add the following line into /etc/
 mk.conf:
 
       X11_TYPE=XFree86
@@ -1572,7 +1573,8 @@ mk.conf:
 6.7. How can I install/use X.org from pkgsrc?
 
 If you want to use X.org from pkgsrc instead of your system's own X11 (/usr/
-X11R6, /usr/openwin, ...) you will have to add the following line into mk.conf:
+X11R6, /usr/openwin, ...) you will have to add the following line into /etc/
+mk.conf:
 
       X11_TYPE=xorg
 
@@ -1764,7 +1766,7 @@ The following message is displayed as part of the audit-packages installation
 procedure:
 
 ===========================================================================
-$NetBSD: faq.xml,v 1.2 2004/11/20 13:25:22 hubertf Exp $
+$NetBSD: faq.xml,v 1.4 2005/01/11 16:05:20 wiz Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
