@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6967 2004/08/21 16:26:51 markd Exp $
+$NetBSD: CHANGES,v 1.6968 2004/08/22 00:15:16 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4013,3 +4013,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Removed kde3-i18n-lt [markd 2004-08-21]
 	Removed quanta3 [markd 2004-08-21]
 	Removed kimagemapeditor [markd 2004-08-21]
+	Updated qmail to 1.03nb9 [schmonz 2004-08-22]
+	Removed netqmail [schmonz 2004-08-22]
