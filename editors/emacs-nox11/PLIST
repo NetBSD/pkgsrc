@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/16 16:31:08 jmc Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/04/24 13:39:30 jmc Exp $
 bin/emacs
 bin/emacs-${PKGVERSION}
 bin/emacs-b2m
@@ -181,6 +181,8 @@ share/emacs/${PKGVERSION}/etc/TUTORIAL
 share/emacs/${PKGVERSION}/etc/TUTORIAL.cs
 share/emacs/${PKGVERSION}/etc/TUTORIAL.de
 share/emacs/${PKGVERSION}/etc/TUTORIAL.es
+share/emacs/${PKGVERSION}/etc/TUTORIAL.fr
+share/emacs/${PKGVERSION}/etc/TUTORIAL.it
 share/emacs/${PKGVERSION}/etc/TUTORIAL.ja
 share/emacs/${PKGVERSION}/etc/TUTORIAL.ko
 share/emacs/${PKGVERSION}/etc/TUTORIAL.nl
@@ -188,7 +190,9 @@ share/emacs/${PKGVERSION}/etc/TUTORIAL.pl
 share/emacs/${PKGVERSION}/etc/TUTORIAL.ro
 share/emacs/${PKGVERSION}/etc/TUTORIAL.sk
 share/emacs/${PKGVERSION}/etc/TUTORIAL.sl
+share/emacs/${PKGVERSION}/etc/TUTORIAL.sv
 share/emacs/${PKGVERSION}/etc/TUTORIAL.th
+share/emacs/${PKGVERSION}/etc/TUTORIAL.translators
 share/emacs/${PKGVERSION}/etc/WHY-FREE
 share/emacs/${PKGVERSION}/etc/Xkeymap.txt
 share/emacs/${PKGVERSION}/etc/celibacy.1
@@ -1126,7 +1130,6 @@ share/emacs/${PKGVERSION}/lisp/play/tetris.elc
 share/emacs/${PKGVERSION}/lisp/play/yow.elc
 share/emacs/${PKGVERSION}/lisp/play/zone.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/auto-show.el
-share/emacs/${PKGVERSION}/lisp/obsolete/c-mode.el
 share/emacs/${PKGVERSION}/lisp/obsolete/cplus-md.el
 share/emacs/${PKGVERSION}/lisp/obsolete/hilit19.el
 share/emacs/${PKGVERSION}/lisp/obsolete/hscroll.el
@@ -1142,7 +1145,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/uncompress.el
 share/emacs/${PKGVERSION}/lisp/obsolete/x-apollo.el
 share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.el
 share/emacs/${PKGVERSION}/lisp/obsolete/auto-show.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/c-mode.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cplus-md.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/hilit19.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/hscroll.elc
@@ -1248,6 +1250,8 @@ share/emacs/${PKGVERSION}/lisp/international/ogonek.el
 share/emacs/${PKGVERSION}/lisp/international/quail.el
 share/emacs/${PKGVERSION}/lisp/international/swedish.el
 share/emacs/${PKGVERSION}/lisp/international/titdic-cnv.el
+share/emacs/${PKGVERSION}/lisp/international/ucs-tables.el
+share/emacs/${PKGVERSION}/lisp/international/utf-16.el
 share/emacs/${PKGVERSION}/lisp/international/utf-8.el
 share/emacs/${PKGVERSION}/lisp/international/ccl.elc
 share/emacs/${PKGVERSION}/lisp/international/characters.elc
@@ -1275,6 +1279,8 @@ share/emacs/${PKGVERSION}/lisp/international/quail.elc
 share/emacs/${PKGVERSION}/lisp/international/swedish.elc
 share/emacs/${PKGVERSION}/lisp/international/titdic-cnv.elc
 share/emacs/${PKGVERSION}/lisp/international/utf-8.elc
+share/emacs/${PKGVERSION}/lisp/international/ucs-tables.elc
+share/emacs/${PKGVERSION}/lisp/international/utf-16.elc
 share/emacs/${PKGVERSION}/lisp/eshell/em-alias.el
 share/emacs/${PKGVERSION}/lisp/eshell/em-banner.el
 share/emacs/${PKGVERSION}/lisp/eshell/em-basic.el
