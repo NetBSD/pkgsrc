@@ -4,7 +4,7 @@
 # Date created:		03 September 1994
 # Whom:			mr
 #
-# $NetBSD: Makefile,v 1.6 1998/02/11 23:44:56 tv Exp $
+# $NetBSD: Makefile,v 1.7 1998/02/12 00:26:27 tv Exp $
 # FreeBSD Id: Makefile,v 1.21 1997/03/26 02:12:07 ache Exp
 #
 
@@ -28,13 +28,13 @@ do-build:
 	cd ${WRKSRC} && ./build neb
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pico/libpico.a ${PREFIX}/lib/libpico.a
+	${INSTALL_DATA} ${WRKSRC}/pico/libpico.a ${PREFIX}/lib/libpico.a
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pico ${PREFIX}/bin/pico
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pilot ${PREFIX}/bin/pilot
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${PREFIX}/bin/pine
-	${INSTALL_PROGRAM} ${FILESDIR}/pgpencrypt ${PREFIX}/bin/pgpencrypt
-	${INSTALL_PROGRAM} ${FILESDIR}/pgpdecode ${PREFIX}/bin/pgpdecode
-	${INSTALL_PROGRAM} ${FILESDIR}/pgpsign ${PREFIX}/bin/pgpsign
+	${INSTALL_SCRIPT} ${FILESDIR}/pgpencrypt ${PREFIX}/bin/pgpencrypt
+	${INSTALL_SCRIPT} ${FILESDIR}/pgpdecode ${PREFIX}/bin/pgpdecode
+	${INSTALL_SCRIPT} ${FILESDIR}/pgpsign ${PREFIX}/bin/pgpsign
 	${INSTALL_DATA}    ${FILESDIR}/dot.pinerc.pgp.sample ${PREFIX}/etc/dot.pinerc.pgp.sample
 	${INSTALL_MAN}     ${WRKSRC}/doc/pico.1 ${PREFIX}/man/man1/pico.1
 	${INSTALL_MAN}     ${WRKSRC}/doc/pilot.1 ${PREFIX}/man/man1/pilot.1
