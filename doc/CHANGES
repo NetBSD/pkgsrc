@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2487 2003/06/10 23:49:33 fredb Exp $
+$NetBSD: CHANGES,v 1.2488 2003/06/11 06:42:58 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2435,3 +2435,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xmcd to 3.0.2nb2 [jdc 2003-06-10]
 	Updated openssh to 3.6.1p2 [jschauma 2003-06-10]
 	Updated gcc3 to 3.3nb1 [fredb 2003-06-10]
+	Updated bozohttpd to 20030409 [mrg 2003-06-11]
