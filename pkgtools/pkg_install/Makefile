@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2002/12/21 05:05:28 schmonz Exp $
+# $NetBSD: Makefile,v 1.62 2002/12/22 08:58:05 salo Exp $
 
 # Notes to package maintainers:
 #
@@ -50,5 +50,8 @@ post-install:
 		fi; \
 		${PKG_ADMIN} rebuild ; \
 	fi
+.if defined(ZOULARISBASE)
+	${ECHO} "ZOULARIS_VERSION=${VERSION}" > ${ZOULARISBASE}/share/mk/zoularis.mk
+.endif
 
 .include "../../mk/bsd.pkg.mk"
