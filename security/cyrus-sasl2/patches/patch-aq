@@ -1,0 +1,55 @@
+$NetBSD: patch-aq,v 1.1 2004/08/06 06:36:18 jlam Exp $
+
+--- sasldb/Makefile.in.orig	Fri Jul  2 15:40:18 2004
++++ sasldb/Makefile.in
+@@ -235,28 +235,18 @@ extra_common_sources = db_none.c db_ndbm
+ EXTRA_DIST = NTMakefile
+ 
+ noinst_LTLIBRARIES = libsasldb.la
+-noinst_LIBRARIES = libsasldb.a
+ 
+ libsasldb_la_SOURCES = allockey.c sasldb.h
+ EXTRA_libsasldb_la_SOURCES = $(extra_common_sources)
+ libsasldb_la_DEPENDENCIES = $(SASL_DB_BACKEND)
+ libsasldb_la_LIBADD = $(SASL_DB_BACKEND) 
+ 
+-LOCAL_SASL_DB_BACKEND_STATIC := $(shell echo $(SASL_DB_BACKEND_STATIC) | sed -e "s%\.\./sasldb/%%g")
+-
+-# Prevent make dist stupidity
+-libsasldb_a_SOURCES = 
+-EXTRA_libsasldb_a_SOURCES = 
+ subdir = sasldb
+ mkinstalldirs = $(SHELL) $(top_srcdir)/config/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
+ LIBRARIES = $(noinst_LIBRARIES)
+ 
+-libsasldb_a_AR = $(AR) cru
+-libsasldb_a_LIBADD =
+-am_libsasldb_a_OBJECTS =
+-libsasldb_a_OBJECTS = $(am_libsasldb_a_OBJECTS)
+ LTLIBRARIES = $(noinst_LTLIBRARIES)
+ 
+ libsasldb_la_LDFLAGS =
+@@ -276,10 +266,9 @@ LTCOMPILE = $(LIBTOOL) --mode=compile $(
+ CCLD = $(CC)
+ LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+-DIST_SOURCES = $(libsasldb_a_SOURCES) $(EXTRA_libsasldb_a_SOURCES) \
+-	$(libsasldb_la_SOURCES) $(EXTRA_libsasldb_la_SOURCES)
++DIST_SOURCES = $(libsasldb_la_SOURCES) $(EXTRA_libsasldb_la_SOURCES)
+ DIST_COMMON = Makefile.am Makefile.in
+-SOURCES = $(libsasldb_a_SOURCES) $(EXTRA_libsasldb_a_SOURCES) $(libsasldb_la_SOURCES) $(EXTRA_libsasldb_la_SOURCES)
++SOURCES = $(libsasldb_la_SOURCES) $(EXTRA_libsasldb_la_SOURCES)
+ 
+ all: all-am
+ 
+@@ -540,8 +529,6 @@ uninstall-am: uninstall-info-am
+ 	tags uninstall uninstall-am uninstall-info-am
+ 
+ 
+-libsasldb.a: libsasldb.la $(LOCAL_SASL_DB_BACKEND_STATIC)
+-	$(AR) cru .libs/$@ $(LOCAL_SASL_DB_BACKEND_STATIC)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
