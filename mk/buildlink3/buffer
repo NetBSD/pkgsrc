@@ -1,4 +1,4 @@
-# $NetBSD: buffer,v 1.1 2003/10/09 12:15:15 jlam Exp $
+# $NetBSD: buffer,v 1.2 2004/01/07 17:31:02 jlam Exp $
 #
 # Fill the buffer if it's empty, and shift the arguments.  The next
 # argument checked by the cache and logic files is taken from the
@@ -35,14 +35,22 @@ case ${buf1}${buf2}${buf3}${buf4}${buf5} in
 		arg=`$echo "X$arg" | $Xsed -e "s|^"$R"||g"`
 		allargs="$@"
 		save_IFS="${IFS}"; IFS=":"
+		dirlist=
 		set -- $arg
 		while $test $# -gt 0; do
-			if   $test -z "$buf1"; then buf1="$R$1"; shift
-			elif $test -z "$buf2"; then buf2="$R$1"; shift
-			elif $test -z "$buf3"; then buf3="$R$1"; shift
-			elif $test -z "$buf4"; then buf4="$R$1"; shift
-			elif $test -z "$buf5"; then buf5="$R$1"; shift
-			fi
+			case "$dirlist" in
+			"$1"|"$1 "*) ;;
+			*" $1 "*|*" $1") ;;
+			*)	dirlist="$dirlist $1"
+				if   $test -z "$buf1"; then buf1="$R$1"
+				elif $test -z "$buf2"; then buf2="$R$1"
+				elif $test -z "$buf3"; then buf3="$R$1"
+				elif $test -z "$buf4"; then buf4="$R$1"
+				elif $test -z "$buf5"; then buf5="$R$1"
+				fi
+				;;
+			esac
+			shift
 		done
 		IFS="${save_IFS}"
 		if $test -n "$allargs"; then
