@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2001/02/16 13:56:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/23 08:26:01 skrll Exp $
 
 DISTNAME=	plp_1_8
 PKGNAME=	plp-1.8
@@ -11,6 +11,8 @@ COMMENT=	Tools to talk to the PSION organiser
 
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
+
+MAKE_ENV+=	REALCXX="${CXX}"
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/utils/libplputils.la ${PREFIX}/lib
