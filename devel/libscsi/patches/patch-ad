@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 1999/01/24 06:02:13 mycroft Exp $
+
+--- scsi.c.orig	Sat Jan 23 17:52:33 1999
++++ scsi.c	Sun Jan 24 00:47:43 1999
+@@ -37,7 +37,7 @@
+ #include <ctype.h>
+ #include <string.h>
+ #include <sys/scsiio.h>
+-#include <sys/errno.h>
++#include <errno.h>
+ #include <stdarg.h>
+ #include <fcntl.h>
+ 
