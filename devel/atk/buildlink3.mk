@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/09/21 16:43:25 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2004/10/03 00:13:25 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ATK_BUILDLINK3_MK:=	${ATK_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	atk
 
 .if !empty(ATK_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.atk+=		atk>=1.8.0
+BUILDLINK_RECOMMENDED.atk+=	atk>=1.8.0nb1
 BUILDLINK_PKGSRCDIR.atk?=	../../devel/atk
 .endif	# ATK_BUILDLINK3_MK
 

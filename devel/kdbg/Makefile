@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2004/05/29 13:01:42 markd Exp $
+# $NetBSD: Makefile,v 1.49 2004/10/03 00:13:29 tv Exp $
 
 DISTNAME=	kdbg-1.2.10
+PKGREVISION=	1
 CATEGORIES=	devel kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kdbg/} \
 		ftp://ftp.eudaptics.com/pub/people/jsixt/

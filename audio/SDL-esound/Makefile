@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2004/02/14 17:21:32 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:13:04 tv Exp $
 #
 
 .include "../../devel/SDL/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/SDL/SDL-esound/}
+PKGREVISION=	1
+
 CATEGORIES+=	audio gnome
 
 COMMENT=	SDL plugin to output sound through the esound daemon

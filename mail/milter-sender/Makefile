@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/04/24 22:56:32 snj Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:12:53 tv Exp $
 #
 
 DISTNAME=		milter-sender-0.41
+PKGREVISION=	1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.snert.com/Software/download/
 DISTFILES=		libsnert-1.23.tgz milter-sender-0.41.tgz

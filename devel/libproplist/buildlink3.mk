@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:11 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:13:30 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBPROPLIST_BUILDLINK3_MK:=	${LIBPROPLIST_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libproplist
 
 .if !empty(LIBPROPLIST_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libproplist+=		libproplist>=0.10.1
+BUILDLINK_RECOMMENDED.libproplist+=	libproplist>=0.10.1nb1
 BUILDLINK_PKGSRCDIR.libproplist?=	../../devel/libproplist
 .endif	# LIBPROPLIST_BUILDLINK3_MK
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2004/07/20 11:47:41 adam Exp $
+# $NetBSD: Makefile,v 1.18 2004/10/03 00:18:10 tv Exp $
 
 DISTNAME=	nessus-libraries-${VERS}
+PKGREVISION=	1
 .include 	"../nessus/Makefile.common"
 
 COMMENT=	Libs required by the Nessus Network security scanner

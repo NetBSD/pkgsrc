@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2004/02/14 17:21:42 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2004/10/03 00:14:52 tv Exp $
 
 DISTNAME=		Hermes-1.3.3
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.clanlib.org/download/files/
 EXTRACT_SUFX=		.tar.bz2

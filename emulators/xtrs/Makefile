@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/25 16:26:47 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:14:41 tv Exp $
 #
 
 DISTNAME=	xtrs-4.9
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.tim-mann.org/trs80/
 

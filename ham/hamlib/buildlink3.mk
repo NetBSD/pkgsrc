@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/11 07:17:47 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:14:59 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HAMLIB_BUILDLINK3_MK:=	${HAMLIB_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	hamlib
 
 .if !empty(HAMLIB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.hamlib+=	hamlib>=1.1.4
+BUILDLINK_RECOMMENDED.hamlib+=	hamlib>=1.2.2nb1
 BUILDLINK_PKGSRCDIR.hamlib?=	../../ham/hamlib
 .endif	# HAMLIB_BUILDLINK3_MK
 

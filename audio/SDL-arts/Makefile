@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2004/02/14 17:21:32 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/03 00:13:04 tv Exp $
 #
 
 .include "../../devel/SDL/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/SDL/SDL-arts/}
-CATEGORIES+=	audio kde
+PKGREVISION=	2
 
-PKGREVISION=	1
+CATEGORIES+=	audio kde
 
 COMMENT=	SDL plugin to output sound through the aRts sound daemon
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/20 14:08:39 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:29 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDESDK_BUILDLINK3_MK:=	${KDESDK_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	kdesdk
 
 .if !empty(KDESDK_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.kdesdk+=	kdesdk>=3.2.0
-BUILDLINK_RECOMMENDED.kdesdk?=	kdesdk>=3.2.2
+BUILDLINK_RECOMMENDED.kdesdk?=	kdesdk>=3.3.0nb1
 BUILDLINK_PKGSRCDIR.kdesdk?=	../../devel/kdesdk3
 .endif	# KDESDK_BUILDLINK3_MK
 

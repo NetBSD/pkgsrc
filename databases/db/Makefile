@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2004/01/20 12:12:49 agc Exp $
+# $NetBSD: Makefile,v 1.20 2004/10/03 00:13:18 tv Exp $
 
 DISTNAME=	db-2.7.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/ \
 		ftp://ftp.cdrom.com/pub/perl/CPAN/src/misc/ \

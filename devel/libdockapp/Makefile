@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/03/07 14:10:39 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2004/10/03 00:13:29 tv Exp $
 #
 
 DISTNAME=	libdockapp-0.4.0
+PKGREVISION=	1
 CATEGORIES=	devel wm
 MASTER_SITES=	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/
 

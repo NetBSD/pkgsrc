@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/09/10 03:34:29 atatat Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/03 00:18:21 tv Exp $
 #
 
 DISTNAME=		gcal-3.01
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		time
 MASTER_SITES=		${MASTER_SITE_GNU:=gcal/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/04/25 04:05:10 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/10/03 00:13:30 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGPHOTO2_BUILDLINK3_MK:=	${LIBGPHOTO2_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libgphoto2
 
 .if !empty(LIBGPHOTO2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libgphoto2+=		libgphoto2>=2.1.2
+BUILDLINK_RECOMMENDED.libgphoto2+=	libgphoto2>=2.1.4nb2
 BUILDLINK_PKGSRCDIR.libgphoto2?=	../../devel/libgphoto2
 .endif	# LIBGPHOTO2_BUILDLINK3_MK
 

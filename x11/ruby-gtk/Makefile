@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2004/04/24 22:21:39 snj Exp $
+# $NetBSD: Makefile,v 1.27 2004/10/03 00:18:38 tv Exp $
 # FreeBSD: ports/x11-toolkits/ruby-gtk/Makefile,v 1.16 2000/10/15 15:45:59 knu Exp
 
 DISTNAME=	ruby-gtk-0.25
 PKGNAME=	${RUBY_PKGNAMEPREFIX}gtk-0.25
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11 ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ruby-gnome/}
 

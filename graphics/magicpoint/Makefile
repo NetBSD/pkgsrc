@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2004/05/25 01:30:22 danw Exp $
+# $NetBSD: Makefile,v 1.40 2004/10/03 00:14:56 tv Exp $
 
 DISTNAME=		magicpoint-1.10a
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 graphics
 MASTER_SITES=		ftp://ftp.mew.org/pub/MagicPoint/
 

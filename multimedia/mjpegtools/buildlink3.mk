@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:13 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:13:03 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MJPEGTOOLS_BUILDLINK3_MK:=	${MJPEGTOOLS_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	mjpegtools
 
 .if !empty(MJPEGTOOLS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.mjpegtools+=		mjpegtools>=1.6.1.90nb3
+BUILDLINK_RECOMMENDED.mjpegtools+=	mjpegtools>=1.6.2nb2
 BUILDLINK_PKGSRCDIR.mjpegtools?=	../../multimedia/mjpegtools
 .endif	# MJPEGTOOLS_BUILDLINK3_MK
 

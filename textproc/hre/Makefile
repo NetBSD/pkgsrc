@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/09/12 06:04:45 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:18:19 tv Exp $
 #
 
 DISTNAME=	hre-0.9.8a
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://kldp.net/download.php/1489/
 

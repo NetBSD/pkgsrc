@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2004/04/24 00:19:40 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2004/10/03 00:14:51 tv Exp $
 
 DISTNAME=	gif2png-2.5.0
+PKGREVISION=	1
 CATEGORIES=	graphics converters
 MASTER_SITES=	http://www.catb.org/~esr/gif2png/
 

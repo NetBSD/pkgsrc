@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/07/28 02:47:34 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 00:13:04 tv Exp $
 #
 
 DISTNAME=	lzop-1.01
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.lzop.org/download/
 

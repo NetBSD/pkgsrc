@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2004/05/23 11:41:35 recht Exp $
+# $NetBSD: Makefile,v 1.16 2004/10/03 00:18:27 tv Exp $
 
 DISTNAME=	ZPhotoSlides-1.1b
 PKGNAME=	zope25-ZPhotoSlides-1.1b
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/p3b/ZPhotoSlides/
 

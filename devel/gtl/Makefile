@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2004/05/03 20:49:33 snj Exp $
+# $NetBSD: Makefile,v 1.16 2004/10/03 00:13:28 tv Exp $
 
 DISTNAME=		GTL-0.3.3
 PKGNAME=		gtl-0.3.3
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://infosun.fmi.uni-passau.de/GTL/archive/
 

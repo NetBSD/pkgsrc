@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/18 09:12:11 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:13:33 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SWIG_PERL_BUILDLINK3_MK:=	${SWIG_PERL_BUILDLINK3_MK}+
@@ -14,6 +14,7 @@ BUILDLINK_PACKAGES+=	swig-perl
 
 .if !empty(SWIG_PERL_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.swig-perl+=	swig-perl>=${SWIG_VERSION}
+BUILDLINK_RECOMMENDED.swig-perl+=	swig-perl>=1.3.19nb1
 BUILDLINK_PKGSRCDIR.swig-perl?=	../../devel/swig-perl
 .endif	# SWIG_PERL_BUILDLINK3_MK
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.75 2004/06/27 17:28:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.76 2004/10/03 00:12:58 tv Exp $
 
 DISTNAME=		gnome-utils-1.4.1.2
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		misc x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/1.4/}
 EXTRACT_SUFX=		.tar.bz2

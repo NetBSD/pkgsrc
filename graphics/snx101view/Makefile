@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/05 07:36:58 hamajima Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:14:58 tv Exp $
 #
 
 DISTNAME=	snx101util-0.2
+PKGREVISION=	1
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://www2.starcat.ne.jp/~takam/bsd/
 

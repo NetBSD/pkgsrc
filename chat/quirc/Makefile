@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/05/31 07:25:58 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/03 00:13:15 tv Exp $
 #
 
 DISTNAME=	quirc-0.9.84
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://quirc.org/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2004/07/14 20:10:39 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2004/10/03 00:12:53 tv Exp $
 
 DISTNAME=	maildrop-1.3.9
-PKGREVISION=	1
+PKGREVISION=	2
 EXTRACT_SUFX=	.tar.gz
 COMMENT=	Courier mail delivery agent with filtering abilities
 HOMEPAGE=	http://www.flounder.net/~mrsam/maildrop/

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2004/09/11 20:16:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2004/10/03 00:13:07 tv Exp $
 
 DISTNAME=	madman-0.93
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=madman/}
 

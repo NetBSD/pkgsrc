@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2004/05/11 12:18:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/10/03 00:13:10 tv Exp $
 # FreeBSD: ports/audio/xamp/Makefile,v 1.5 1999/08/25 04:36:22 obrien Exp
 #
 
 DISTNAME=	xamp-0.8-10
 PKGNAME=	xamp-0.8.10
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://andrej.co.ru/~andrej/programs/xamp/ \
 		http://andrej.co.ru/~andrej/programs/xamp/backs/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/07 00:39:43 snj Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:14:46 tv Exp $
 #
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
@@ -7,7 +7,7 @@
 .include "../rocksndiamonds/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-sdl-/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Game like Boulder Dash, Emerald Mine, or Sokoban (SDL build)
 
 ALL_TARGET=	sdl

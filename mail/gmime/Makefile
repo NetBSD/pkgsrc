@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/07/23 15:08:56 recht Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:12:53 tv Exp $
 #
 
 DISTNAME=	gmime-2.1.7
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://spruce.sourceforge.net/gmime/sources/v2.1/
 

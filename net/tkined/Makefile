@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2004/06/05 04:30:44 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 00:18:00 tv Exp $
 #
 
 DISTNAME=	scotty-2.1.11
 PKGNAME=	tkined-1.4.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net tcl tk
 MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/
 

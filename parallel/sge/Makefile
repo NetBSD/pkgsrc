@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/07/20 22:34:03 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:18:03 tv Exp $
 #
 
 DISTNAME=		sge-5.3p6
+PKGREVISION=	1
 CATEGORIES=		parallel sysutils
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2004/07/28 16:37:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/03 00:14:38 tv Exp $
 #
 
 .include "Makefile.common"
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT+=		, tty version
 

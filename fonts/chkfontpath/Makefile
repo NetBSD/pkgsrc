@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/04/19 05:34:58 snj Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/03 00:14:42 tv Exp $
 #
 
 DISTNAME=	chkfontpath-1.9.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	ftp://ftp.redhat.com/pub/redhat/linux/9/en/os/i386/SRPMS/
 EXTRACT_SUFX=	-1.src.rpm

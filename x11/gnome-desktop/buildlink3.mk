@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/09/21 16:54:06 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2004/10/03 00:18:31 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_DESKTOP_BUILDLINK3_MK:=	${GNOME_DESKTOP_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	gnome-desktop
 
 .if !empty(GNOME_DESKTOP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gnome-desktop+=	gnome-desktop>=2.8.0
+BUILDLINK_RECOMMENDED.gnome-desktop+=	gnome-desktop>=2.8.0nb1
 BUILDLINK_PKGSRCDIR.gnome-desktop?=	../../x11/gnome-desktop
 
 PRINT_PLIST_AWK+=	/^@dirrm share\/gnome\/vfolders$$/ \

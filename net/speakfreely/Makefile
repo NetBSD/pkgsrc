@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2004/04/24 23:53:51 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2004/10/03 00:17:59 tv Exp $
 #
 
 DISTNAME=		speak_freely-7.2
 PKGNAME=		speakfreely-7.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net audio
 MASTER_SITES=		http://www.fourmilab.ch/speakfree/unix/
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/06/17 11:35:56 grant Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/03 00:12:54 tv Exp $
 # FreeBSD Id: ports/mail/ssmtp/Makefile,v 1.10 2003/04/14 08:41:04 leeym Exp
 #
 # TLS functionality needs testing. Please let me know the result,
@@ -9,7 +9,7 @@
 
 DISTNAME=	ssmtp_2.60.3
 PKGNAME=	ssmtp-2.60.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/ssmtp/}
 

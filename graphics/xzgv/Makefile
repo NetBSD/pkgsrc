@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2004/04/26 04:36:24 snj Exp $
+# $NetBSD: Makefile,v 1.24 2004/10/03 00:14:59 tv Exp $
 
 DISTNAME=	xzgv-0.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	http://xzgv.browser.org/ \
 		ftp://ftp.ibiblio.org/pub/Linux/apps/graphics/viewers/X/

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2004/07/28 16:37:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/03 00:14:38 tv Exp $
 #
 
 .include "../ce/Makefile.common"
 
 PKGNAME=		ce-x11-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT+=		, X11 version
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

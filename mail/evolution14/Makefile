@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/10/01 12:51:47 rh Exp $
+# $NetBSD: Makefile,v 1.6 2004/10/03 00:12:52 tv Exp $
 
 DISTNAME=		evolution-1.4.6
 PKGNAME=		${DISTNAME:S/evolution/evolution14/}
+PKGREVISION=		1
 CATEGORIES=		mail time gnome
 MASTER_SITES=		ftp://ftp.ximian.com/pub/source/evolution/ \
 			${MASTER_SITE_GNOME:=sources/evolution/1.4/}

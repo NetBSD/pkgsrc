@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/05/29 20:45:34 kristerw Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/10/03 00:18:20 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSP_BUILDLINK3_MK:=	${OPENSP_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	opensp
 
 .if !empty(OPENSP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.opensp+=	opensp>=1.5.1
+BUILDLINK_RECOMMENDED.opensp+=	opensp>=1.5.1nb2
 BUILDLINK_PKGSRCDIR.opensp?=	../../textproc/opensp
 .endif	# OPENSP_BUILDLINK3_MK
 

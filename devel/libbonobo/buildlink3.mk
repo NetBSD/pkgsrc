@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/09/21 16:45:12 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2004/10/03 00:13:29 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBBONOBO_BUILDLINK3_MK:=	${LIBBONOBO_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libbonobo
 
 .if !empty(LIBBONOBO_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libbonobo+=	libbonobo>=2.8.0
+BUILDLINK_RECOMMENDED.libbonobo+=	libbonobo>=2.8.0nb1
 BUILDLINK_PKGSRCDIR.libbonobo?=	../../devel/libbonobo
 
 BUILDLINK_FILES.libbonobo+=	share/idl/bonobo-2.0/*

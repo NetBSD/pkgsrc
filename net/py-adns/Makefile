@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2004/07/22 09:16:03 recht Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:17:57 tv Exp $
 #
 
 DISTNAME=       adns-python-1.0.0
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=     net python
 MASTER_SITES=   http://dustman.net/andy/python/adns-python/1.0.0/
 

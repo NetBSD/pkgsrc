@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/05/06 13:34:19 taca Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:19 tv Exp $
 #
 
 DISTNAME=		ipadic-2.7.0
+PKGREVISION=	1
 CATEGORIES=		japanese textproc
 MASTER_SITES=		http://chasen.aist-nara.ac.jp/stable/ipadic/
 

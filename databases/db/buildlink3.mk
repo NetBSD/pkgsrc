@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2004/08/27 06:29:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2004/10/03 00:13:18 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB_BUILDLINK3_MK:=	${DB_BUILDLINK3_MK}+
@@ -14,6 +14,7 @@ BUILDLINK_PACKAGES+=	db2
 
 .if !empty(DB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.db2+=		db>=2.7.3
+BUILDLINK_RECOMMENDED.db2+=	db>=2.7.7nb2
 BUILDLINK_PKGSRCDIR.db2?=	../../databases/db
 .  if defined(USE_DB185)
 BUILDLINK_INCDIRS.db2?=		include/db2

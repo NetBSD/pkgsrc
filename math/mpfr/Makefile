@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/05 22:11:38 rh Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:12:56 tv Exp $
 #
 
 DISTNAME=		mpfr-2.0.3
+PKGREVISION=	1
 CATEGORIES=		math
 MASTER_SITES=		http://www.mpfr.org/mpfr-current/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${GMP}${EXTRACT_SUFX}

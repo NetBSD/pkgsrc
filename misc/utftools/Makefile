@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2004/04/25 06:31:48 snj Exp $
+# $NetBSD: Makefile,v 1.5 2004/10/03 00:13:00 tv Exp $
 #
 
 DISTNAME=	utftools-1.6
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.cs.yorku.ca/pub/wily/misc/
 

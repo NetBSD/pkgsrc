@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2004/05/31 16:43:45 kristerw Exp $
+# $NetBSD: Makefile,v 1.20 2004/10/03 00:18:28 tv Exp $
 #
 
 DISTNAME=		dxpc-3.8.1
+PKGREVISION=	1
 CATEGORIES=		x11
 MASTER_SITES=		http://www.vigor.nu/dxpc/3.8.1/
 

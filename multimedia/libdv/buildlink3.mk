@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/06/26 18:33:00 grant Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:02 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBDV_BUILDLINK3_MK:=	${LIBDV_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libdv
 
 .if !empty(LIBDV_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libdv+=	libdv>=0.102
+BUILDLINK_RECOMMENDED.libdv+=	libdv>=0.102nb1
 BUILDLINK_PKGSRCDIR.libdv?=	../../multimedia/libdv
 .endif	# LIBDV_BUILDLINK3_MK
 

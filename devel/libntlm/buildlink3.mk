@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 19:25:11 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:13:30 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBNTLM_BUILDLINK3_MK:=	${LIBNTLM_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libntlm
 
 .if !empty(LIBNTLM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libntlm+=	libntlm>=0.3.2
+BUILDLINK_RECOMMENDED.libntlm+=	libntlm>=0.3.6nb1
 BUILDLINK_PKGSRCDIR.libntlm?=	../../devel/libntlm
 .endif	# LIBNTLM_BUILDLINK3_MK
 

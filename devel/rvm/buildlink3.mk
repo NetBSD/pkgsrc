@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/27 04:29:17 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:33 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RVM_BUILDLINK3_MK:=	${RVM_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	rvm
 
 .if !empty(RVM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.rvm+=	rvm>=1.3
+BUILDLINK_RECOMMENDED.rvm+=	rvm>=1.8nb1
 BUILDLINK_PKGSRCDIR.rvm?=	../../devel/rvm
 .endif	# RVM_BUILDLINK3_MK
 

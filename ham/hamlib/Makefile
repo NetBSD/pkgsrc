@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/09/22 22:33:13 wulf Exp $
+# $NetBSD: Makefile,v 1.10 2004/10/03 00:14:59 tv Exp $
 #
 
 DISTNAME=	hamlib-1.2.2
+PKGREVISION=	1
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
 #EXTRACT_SUFX=	.tar.bz2

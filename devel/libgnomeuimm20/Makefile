@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/06 20:44:05 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:13:30 tv Exp $
 #
 
 DISTNAME=		libgnomeuimm-2.0.0
 PKGNAME=		libgnomeuimm20-2.0.0
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgnomeuimm/2.0/}
 EXTRACT_SUFX=		.tar.bz2

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2004/09/21 17:22:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:13:05 tv Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=		2
+PKGREVISION=		3
 
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-mp3/--enable-mp3/}
 CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-oss/--enable-oss/}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/05/09 05:20:25 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:18:20 tv Exp $
 
 DISTNAME=	XML-Sablotron-0.98
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5xsb
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}

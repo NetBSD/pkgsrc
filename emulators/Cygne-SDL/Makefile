@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/07/23 19:01:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:14:40 tv Exp $
 #
 
 DISTNAME=		Cygne-SDL-0.1-src
 PKGNAME=		${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=		emulators
 MASTER_SITES=		http://sdlemu.ngemu.com/OpenProjects/
 

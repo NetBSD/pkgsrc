@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/08/13 00:42:31 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:13:26 tv Exp $
 #
 
 DISTNAME=	elf-0.5.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kerneled.com/projects/elf/
 

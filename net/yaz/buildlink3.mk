@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/08 07:37:41 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:02 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 YAZ_BUILDLINK3_MK:=	${YAZ_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	yaz
 
 .if !empty(YAZ_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.yaz+=	yaz>=2.0
+BUILDLINK_RECOMMENDED.yaz+=	yaz>=2.0nb2
 BUILDLINK_PKGSRCDIR.yaz?=	../../net/yaz
 .endif	# YAZ_BUILDLINK3_MK
 

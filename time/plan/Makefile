@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2004/06/10 22:42:42 jschauma Exp $
+# $NetBSD: Makefile,v 1.19 2004/10/03 00:18:22 tv Exp $
 
 DISTNAME=	plan-1.8.4
+PKGREVISION=	1
 CATEGORIES=	x11 time
 MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/graphics/plan/
 

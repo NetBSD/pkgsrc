@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/07/31 22:13:38 salo Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:14 tv Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	file
 
 .if !empty(FILE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.file+=	file>=4.09
+BUILDLINK_RECOMMENDED.file+=	file>=4.09nb1
 BUILDLINK_PKGSRCDIR.file?=	../../sysutils/file
 .endif	# FILE_BUILDLINK3_MK
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2004/07/10 21:29:34 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2004/10/03 00:12:53 tv Exp $
 #
 
 DISTNAME=	mailsync_4.4.4-1
 PKGNAME=	mailsync-4.4.4
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailsync/}
 

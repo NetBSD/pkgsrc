@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2004/04/22 15:00:08 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2004/10/03 00:13:28 tv Exp $
 
 DISTNAME=		hdf5-1.6.2
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://hdf.ncsa.uiuc.edu/HDF5/hdf5-1.6.2/src/ \
 			ftp://sunsite.doc.ic.ac.uk/packages/HDF/HDF5/hdf5-1.6.2/src/ \

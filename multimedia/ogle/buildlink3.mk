@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/29 02:49:46 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:03 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OGLE_BUILDLINK3_MK:=	${OGLE_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	ogle
 
 .if !empty(OGLE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.ogle+=	ogle>=0.9.2
+BUILDLINK_RECOMMENDED.ogle+=	ogle>=0.9.2nb2
 BUILDLINK_PKGSRCDIR.ogle?=	../../multimedia/ogle
 .endif	# OGLE_BUILDLINK3_MK
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/05/04 23:46:37 snj Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:21 tv Exp $
 #
 
 DISTNAME=		regexx-0.98.1
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=regexx/}
 

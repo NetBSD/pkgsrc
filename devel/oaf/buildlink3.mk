@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:13:32 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OAF_BUILDLINK3_MK:=	${OAF_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	oaf
 
 .if !empty(OAF_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.oaf+=		oaf>=0.6.10nb4
+BUILDLINK_RECOMMENDED.oaf+=	oaf>=0.6.10nb5
 BUILDLINK_PKGSRCDIR.oaf?=	../../devel/oaf
 .endif	# OAF_BUILDLINK3_MK
 

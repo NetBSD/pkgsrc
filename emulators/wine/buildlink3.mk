@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/04 13:55:15 recht Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:14:41 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WINE_BUILDLINK3_MK:=	${WINE_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	wine
 
 .if !empty(WINE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.wine+=	wine>=20040309
+BUILDLINK_RECOMMENDED.wine+=	wine>=20040505nb1
 BUILDLINK_PKGSRCDIR.wine?=	../../emulators/wine
 .endif	# WINE_BUILDLINK3_MK
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/07/10 22:35:32 salo Exp $
+# $NetBSD: Makefile,v 1.14 2004/10/03 00:13:16 tv Exp $
 #
 
 DISTNAME=	conserver-7.2.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.conserver.com/conserver/
 

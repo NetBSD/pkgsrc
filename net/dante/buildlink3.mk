@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/12 21:54:27 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:17:49 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DANTE_BUILDLINK3_MK:=	${DANTE_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	dante
 
 .if !empty(DANTE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.dante+=	dante>=1.1.13
+BUILDLINK_RECOMMENDED.dante+=	dante>=1.1.14nb1
 BUILDLINK_PKGSRCDIR.dante?=	../../net/dante
 .endif	# DANTE_BUILDLINK3_MK
 

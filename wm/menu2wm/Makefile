@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/07/04 22:22:41 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:18:23 tv Exp $
 #
 
 DISTNAME=	menu2wm-0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=menu2wm/}
 

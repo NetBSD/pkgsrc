@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/28 20:46:52 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:29 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBFFI_BUILDLINK3_MK:=	${LIBFFI_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libffi
 
 .if !empty(LIBFFI_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libffi+=	libffi>=1.20
+BUILDLINK_RECOMMENDED.libffi+=	libffi>=2.0betanb1
 BUILDLINK_PKGSRCDIR.libffi?=	../../devel/libffi
 .endif	# LIBFFI_BUILDLINK3_MK
 

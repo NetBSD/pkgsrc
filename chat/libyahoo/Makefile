@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/03/29 08:00:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:13:15 tv Exp $
 
 DISTNAME=	libyahoo-0.18.4
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libyahoo/}
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2004/05/31 22:13:16 kristerw Exp $
+# $NetBSD: Makefile,v 1.30 2004/10/03 00:18:03 tv Exp $
 
 DISTNAME=		mpich-1.2.5.2
+PKGREVISION=	1
 CATEGORIES=		parallel
 MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} mpich-docs.tgz

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2004/04/18 05:44:18 snj Exp $
+# $NetBSD: Makefile,v 1.20 2004/10/03 00:12:54 tv Exp $
 #
 
 DISTNAME=       spruce-0.5.17
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=spruce/}
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2004/07/22 09:16:04 recht Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/03 00:17:57 tv Exp $
 #
 
 DISTNAME=	ZSI-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pywebsvcs/}
 

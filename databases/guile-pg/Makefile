@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2004/08/13 09:00:57 recht Exp $
+# $NetBSD: Makefile,v 1.17 2004/10/03 00:13:18 tv Exp $
 #
 
 DISTNAME=	guile-pg-0.07
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=guile-pg/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/05/04 23:46:36 snj Exp $
+# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:19 tv Exp $
 # FreeBSD Id: Makefile,v 1.14 1998/04/05 04:46:33 max Exp $
 
 DISTNAME=	kakasi-2.3.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese textproc
 MASTER_SITES=	ftp://kakasi.namazu.org/pub/kakasi/stable/
 

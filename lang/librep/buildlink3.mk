@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/09/05 16:59:28 danw Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2004/10/03 00:15:01 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBREP_BUILDLINK3_MK:=	${LIBREP_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	librep
 
 .if !empty(LIBREP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.librep+=	librep>=0.17
+BUILDLINK_RECOMMENDED.librep+=	librep>=0.17nb1
 BUILDLINK_PKGSRCDIR.librep?=	../../lang/librep
 MAKE_FLAGS+=			rep_LIBTOOL=${LIBTOOL}
 .endif	# LIBREP_BUILDLINK3_MK

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2004/06/21 08:48:41 mrg Exp $
+# $NetBSD: Makefile,v 1.14 2004/10/03 00:15:02 tv Exp $
 
 DISTNAME=	onyx-${VERS}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.canonware.com/download/onyx/
 EXTRACT_SUFX=	.tar.bz2

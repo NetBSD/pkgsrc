@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/04/25 00:56:00 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:13:18 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FREETDS_BUILDLINK3_MK:=	${FREETDS_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	freetds
 
 .if !empty(FREETDS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.freetds+=	freetds>=0.61.2
+BUILDLINK_RECOMMENDED.freetds+=	freetds>=0.61.2nb1
 BUILDLINK_PKGSRCDIR.freetds?=	../../databases/freetds
 BUILDLINK_INCDIRS.freetds+=	freetds/include
 BUILDLINK_LIBDIRS.freetds+=	freetds/lib

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/05/05 03:16:02 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:18 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 IODBC_BUILDLINK3_MK:=	${IODBC_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	iodbc
 
 .if !empty(IODBC_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.iodbc+=	iodbc>=2.50.3
+BUILDLINK_RECOMMENDED.iodbc+=	iodbc>=2.50.3nb1
 BUILDLINK_PKGSRCDIR.iodbc?=	../../databases/iodbc
 .endif	# IODBC_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/12 05:11:44 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:27 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCONFMM_BUILDLINK3_MK:=	${GCONFMM_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	gconfmm
 
 .if !empty(GCONFMM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gconfmm+=	gconfmm>=2.0.1nb5
+BUILDLINK_RECOMMENDED.gconfmm+=	gconfmm>=2.0.2nb1
 BUILDLINK_PKGSRCDIR.gconfmm?=	../../devel/gconfmm
 .endif	# GCONFMM_BUILDLINK3_MK
 

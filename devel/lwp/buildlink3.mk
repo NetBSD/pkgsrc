@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/27 04:29:17 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:31 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LWP_BUILDLINK3_MK:=	${LWP_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	lwp
 
 .if !empty(LWP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.lwp+=	lwp>=1.6
+BUILDLINK_RECOMMENDED.lwp+=	lwp>=1.10nb1
 BUILDLINK_PKGSRCDIR.lwp?=	../../devel/lwp
 .endif	# LWP_BUILDLINK3_MK
 

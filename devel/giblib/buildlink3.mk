@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:13:27 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GIBLIB_BUILDLINK3_MK:=	${GIBLIB_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	giblib
 
 .if !empty(GIBLIB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.giblib+=	giblib>=1.2.3nb3
+BUILDLINK_RECOMMENDED.giblib+=	giblib>=1.2.4nb1
 BUILDLINK_PKGSRCDIR.giblib?=	../../devel/giblib
 .endif	# GIBLIB_BUILDLINK3_MK
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/06/05 10:20:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/03 00:18:33 tv Exp $
 #
 
 DISTNAME=	GTK2-Industrial
 PKGNAME=	gtk2-engines-industrial-20030725
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=teams/art.gnome.org/themes/gtk2/}
 

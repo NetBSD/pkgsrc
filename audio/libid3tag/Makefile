@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/03/20 02:30:03 snj Exp $
+# $NetBSD: Makefile,v 1.12 2004/10/03 00:13:07 tv Exp $
 #
 
 DISTNAME=	libid3tag-0.15.1b
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/} \
 		ftp://ftp.mars.org/pub/mpeg/

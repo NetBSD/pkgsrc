@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/05/07 01:14:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 00:14:51 tv Exp $
 #
 
 DISTNAME=	gpaint-0.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpaint/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/13 23:32:17 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:12:57 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PARI_BUILDLINK3_MK:=	${PARI_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	pari
 
 .if !empty(PARI_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.pari+=	pari>=2.1.5nb1
-BUILDLINK_RECOMMENDED.pari+=	pari>=2.1.5nb3
+BUILDLINK_RECOMMENDED.pari+=	pari>=2.1.5nb4
 BUILDLINK_PKGSRCDIR.pari?=	../../math/pari
 .endif	# PARI_BUILDLINK3_MK
 

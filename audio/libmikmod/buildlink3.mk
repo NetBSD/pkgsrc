@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/03/18 09:12:08 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/10/03 00:13:07 tv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMIKMOD_BUILDLINK3_MK:=	${LIBMIKMOD_BUILDLINK3_MK}+
@@ -14,6 +14,7 @@ BUILDLINK_PACKAGES+=	libmikmod
 
 .if !empty(LIBMIKMOD_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libmikmod+=	libmikmod>=3.1.9
+BUILDLINK_RECOMMENDED.libmikmod+=	libmikmod>=3.1.11.1nb1
 BUILDLINK_PKGSRCDIR.libmikmod?=	../../audio/libmikmod
 .endif	# LIBMIKMOD_BUILDLINK3_MK
 

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile.common,v 1.9 2004/04/25 02:13:45 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.10 2004/10/03 00:18:28 tv Exp $
 #
 
 DISTNAME=	dfm-0.99.9
-PKGREVISION=	2
 MASTER_SITES=	http://www.kaisersite.de/dfm/
 
 WRKSRC=			${WRKDIR}/dfm

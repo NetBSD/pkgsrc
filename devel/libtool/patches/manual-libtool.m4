@@ -1,30 +1,28 @@
-$NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
+$NetBSD: manual-libtool.m4,v 1.5 2004/10/03 00:13:31 tv Exp $
 
---- libtool.m4.orig	Thu Apr  1 22:46:14 2004
+--- libtool.m4.orig	2004-09-19 08:15:08.000000000 -0400
 +++ libtool.m4
-@@ -1183,8 +1183,9 @@ beos*)
-   ;;
- 
- bsdi4*)
--  version_type=linux
-+  version_type=sunos
+@@ -1201,6 +1201,7 @@ beos*)
+ bsdi[[45]]*)
+   version_type=linux
    need_version=no
 +  need_lib_prefix=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -1300,15 +1301,15 @@ kfreebsd*-gnu)
+@@ -1315,16 +1316,17 @@ kfreebsd*-gnu)
+   ;;
  
  freebsd*)
++  version_type=linux
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
 -  version_type=freebsd-$objformat
 -  case $version_type in
 -    freebsd-elf*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
-+  version_type=sunos
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
 +  case $objformat in
 +    elf*)
++      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
 +      soname_spec='${libname}${release}${shared_ext}$major'
        need_version=no
        need_lib_prefix=no
@@ -32,15 +30,16 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
 -    freebsd-*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix $libname${shared_ext}$versuffix'
 +    *)
++      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
        need_version=yes
        ;;
    esac
-@@ -1384,15 +1385,22 @@ hpux9* | hpux10* | hpux11*)
+@@ -1400,15 +1402,22 @@ hpux9* | hpux10* | hpux11*)
    postinstall_cmds='chmod 555 $lib'
    ;;
  
 +interix3*)
-+  version_type=sunos
++  version_type=linux
 +  need_lib_prefix=no
 +  need_version=no
 +  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
@@ -60,47 +59,38 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
 -	else
 -		version_type=irix
 -	fi ;;
-+    *) version_type=sunos ;;
++    *) version_type=irix ;;
    esac
    need_lib_prefix=no
    need_version=no
-@@ -1428,7 +1436,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -1485,11 +1494,11 @@ knetbsd*-gnu)
+   ;;
  
- # This must be Linux ELF.
- linux*)
--  version_type=linux
-+  version_type=sunos
+ netbsd*)
+-  version_type=sunos
++  version_type=linux
    need_lib_prefix=no
    need_version=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -1552,7 +1560,7 @@ sco3.2v5*)
+   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
+-    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
+     finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+     dynamic_linker='NetBSD (a.out) ld.so'
+   else
+@@ -1520,10 +1529,10 @@ nto-qnx*)
    ;;
  
- solaris*)
--  version_type=linux
-+  version_type=sunos
+ openbsd*)
+-  version_type=sunos
++  version_type=linux
    need_lib_prefix=no
    need_version=no
-   library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -2110,10 +2118,13 @@ beos*)
-   lt_cv_deplibs_check_method=pass_all
-   ;;
- 
--bsdi4*)
--  lt_cv_deplibs_check_method='file_magic ELF [[0-9]][[0-9]]*-bit [[ML]]SB (shared object|dynamic lib)'
--  lt_cv_file_magic_cmd='/usr/bin/file -L'
--  lt_cv_file_magic_test_file=/shlib/libc.so
-+# Versions of BSD/OS prior to 4.0 did no have real dynamic linking
-+bsdi1*|bsdi2*|bsdi3*)
-+  dynamic_linker=no
-+  ;;  
-+
-+bsdi*)  
-+  lt_cv_deplibs_check_method=pass_all
-   ;;
- 
- cygwin*)
-@@ -2171,6 +2182,10 @@ hpux10.20* | hpux11*)
+-  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix'
++  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
+   finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
+   shlibpath_var=LD_LIBRARY_PATH
+   if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
+@@ -2198,6 +2207,10 @@ hpux10.20* | hpux11*)
    esac
    ;;
  
@@ -111,7 +101,7 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
  irix5* | irix6* | nonstopux*)
    case $LD in
    *-32|*"-32 ") libmagic=32-bit;;
-@@ -3089,6 +3104,8 @@ case $host_os in
+@@ -3091,6 +3104,8 @@ case $host_os in
  	;;
      esac
      ;;
@@ -120,7 +110,7 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
    irix5* | irix6*)
      case $cc_basename in
        CC)
-@@ -3197,6 +3214,13 @@ case $host_os in
+@@ -3210,6 +3225,13 @@ case $host_os in
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
        _LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
        wlarc=
@@ -134,7 +124,7 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
        _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='-R$libdir'
        _LT_AC_TAGVAR(hardcode_direct, $1)=yes
        _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-@@ -3622,6 +3646,14 @@ if AC_TRY_EVAL(ac_compile); then
+@@ -3651,6 +3673,14 @@ if AC_TRY_EVAL(ac_compile); then
      esac
    done
  
@@ -149,7 +139,7 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
    # Clean up.
    rm -f a.out a.exe
  else
-@@ -4555,9 +4587,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4591,9 +4621,11 @@ AC_MSG_CHECKING([for $compiler option to
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -162,7 +152,7 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -4579,6 +4613,10 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4615,6 +4647,10 @@ AC_MSG_CHECKING([for $compiler option to
  	;;
        esac
        ;;
@@ -173,7 +163,7 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -4643,6 +4681,8 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4689,6 +4725,8 @@ AC_MSG_CHECKING([for $compiler option to
  	    ;;
  	esac
  	;;
@@ -182,7 +172,7 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
        irix5* | irix6* | nonstopux*)
  	case $cc_basename in
  	  CC)
-@@ -4808,9 +4848,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4854,9 +4892,11 @@ AC_MSG_CHECKING([for $compiler option to
        ;;
  
      darwin* | rhapsody*)
@@ -195,7 +185,7 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
        ;;
  
      msdosdjgpp*)
-@@ -4839,6 +4881,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -4885,6 +4925,11 @@ AC_MSG_CHECKING([for $compiler option to
        esac
        ;;
  
@@ -207,7 +197,7 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
      *)
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
        ;;
-@@ -5131,6 +5178,17 @@ EOF
+@@ -5187,6 +5232,17 @@ EOF
        fi
        ;;
  
@@ -225,12 +215,10 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
      netbsd*)
        if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
  	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -5534,6 +5592,20 @@ $echo "local: *; };" >> $output_objdir/$
- 	  ;;
- 	esac
+@@ -5592,6 +5648,20 @@ $echo "local: *; };" >> $output_objdir/$
        fi
-+      ;;
-+
+       ;;
+ 
 +    interix3*)
 +      # Oy, what a hack.
 +      # Because shlibs are not compiled -fPIC due to broken code, we must
@@ -243,6 +231,8 @@ $NetBSD: manual-libtool.m4,v 1.4 2004/04/23 01:17:25 danw Exp $
 +      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
 +      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-h,$libdir'
 +      _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-       ;;
- 
++      ;;
++
      irix5* | irix6* | nonstopux*)
+       if test "$GCC" = yes; then
+ 	_LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'

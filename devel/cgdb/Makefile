@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/09/08 14:00:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:25 tv Exp $
 #
 
 DISTNAME=	cgdb-0.4.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cgdb/}
 

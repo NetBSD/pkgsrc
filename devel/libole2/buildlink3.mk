@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/25 06:10:09 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:30 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBOLE2_BUILDLINK3_MK:=	${LIBOLE2_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libole2
 
 .if !empty(LIBOLE2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libole2+=	libole2>=0.2.4nb1
+BUILDLINK_RECOMMENDED.libole2+=	libole2>=0.2.4nb2
 BUILDLINK_PKGSRCDIR.libole2?=	../../devel/libole2
 .endif	# LIBOLE2_BUILDLINK3_MK
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2004/05/11 04:07:52 snj Exp $
+# $NetBSD: Makefile,v 1.12 2004/10/03 00:17:57 tv Exp $
 #
 
 DISTNAME=	Wais-2.311
 PKGNAME=	p5-Wais-2.311
+PKGREVISION=	1
 SVR4_PKGNAME=	p5wai
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Wais/}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2004/05/07 11:54:35 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2004/10/03 00:17:55 tv Exp $
 #
 
 DISTNAME=	lopster-1.2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lopster/}
 

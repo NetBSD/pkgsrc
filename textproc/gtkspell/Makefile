@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2004/02/14 18:26:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.16 2004/10/03 00:18:19 tv Exp $
 #
 
 DISTNAME=		gtkspell-2.0.5
+PKGREVISION=		1
 CATEGORIES=		textproc devel
 MASTER_SITES=		http://gtkspell.sourceforge.net/download/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2004/06/26 06:40:08 grant Exp $
+# $NetBSD: Makefile,v 1.30 2004/10/03 00:14:51 tv Exp $
 #
 
+PKGREVISION=		1
 SVR4_PKGNAME=		gplot
 CATEGORIES+=		x11
 

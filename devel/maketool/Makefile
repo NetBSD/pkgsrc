@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2004/04/22 04:02:46 snj Exp $
+# $NetBSD: Makefile,v 1.29 2004/10/03 00:13:31 tv Exp $
 #
 
 DISTNAME=	maketool-0.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.alphalink.com.au/~gnb/maketool/
 EXTRACT_SUFX=	-src.tar.gz

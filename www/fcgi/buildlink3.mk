@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/27 03:19:59 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:25 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FCGI_BUILDLINK3_MK:=	${FCGI_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	fcgi
 
 .if !empty(FCGI_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.fcgi+=	fcgi>=2.2.2nb1
+BUILDLINK_RECOMMENDED.fcgi+=	fcgi>=2.4.0nb1
 BUILDLINK_PKGSRCDIR.fcgi?=	../../www/fcgi
 .endif	# FCGI_BUILDLINK3_MK
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2004/01/11 20:23:15 ben Exp $
+# $NetBSD: Makefile,v 1.16 2004/10/03 00:14:50 tv Exp $
 #
 
 DISTNAME=		gfract-0.21
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics x11
 MASTER_SITES=		http://www.cs.Helsinki.FI/u/salerma/gfract/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gfract-palettes-0.1.tar.gz

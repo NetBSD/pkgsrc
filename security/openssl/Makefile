@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.95 2004/08/22 19:32:52 jlam Exp $
+# $NetBSD: Makefile,v 1.96 2004/10/03 00:18:11 tv Exp $
 
 DISTNAME=		openssl-0.9.6m
+PKGREVISION=	1
 SVR4_PKGNAME=		ossl
 CATEGORIES=		security
 MASTER_SITES=		http://mirrors.isc.org/pub/openssl/source/ \

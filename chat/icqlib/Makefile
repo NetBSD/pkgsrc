@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2004/01/22 07:49:20 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/10/03 00:13:14 tv Exp $
 
 DISTNAME=		icqlib-1.0.0
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icqlib/}
 

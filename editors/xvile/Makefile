@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2004/04/12 15:17:09 xtraeme Exp $
+# $NetBSD: Makefile,v 1.41 2004/10/03 00:14:40 tv Exp $
 # FreeBSD Id: Makefile,v 1.13 1997/09/06 19:58:03 gj Exp
 #
 
 DISTNAME=		vile-9.4
 PKGNAME=		xvile-9.4
+PKGREVISION=	1
 CATEGORIES=		editors
 MASTER_SITES=		ftp://dickey.his.com/vile/ \
 			ftp://invisible-island.net/vile/

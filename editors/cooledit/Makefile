@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2004/04/11 08:08:22 snj Exp $
+# $NetBSD: Makefile,v 1.12 2004/10/03 00:14:38 tv Exp $
 #
 
 DISTNAME=	cooledit-3.17.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	http://cooledit.sourceforge.net/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/27 00:35:46 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:12:56 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FFTW_BUILDLINK3_MK:=	${FFTW_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	fftw
 
 .if !empty(FFTW_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.fftw+=	fftw>=3.0
+BUILDLINK_RECOMMENDED.fftw+=	fftw>=3.0.1nb1
 BUILDLINK_PKGSRCDIR.fftw?=	../../math/fftw
 .endif	# FFTW_BUILDLINK3_MK
 

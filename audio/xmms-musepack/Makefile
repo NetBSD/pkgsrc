@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2004/06/25 12:48:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:13:11 tv Exp $
 #
 
 DISTNAME=	xmms-musepack-1.00
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpegplus/}
 

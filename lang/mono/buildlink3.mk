@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/08/27 22:02:47 recht Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2004/10/03 00:15:02 tv Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MONO_BUILDLINK3_MK:=	${MONO_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	mono
 
 .if !empty(MONO_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.mono+=	mono>=1.0.1
+BUILDLINK_RECOMMENDED.mono+=	mono>=1.0.1nb1
 BUILDLINK_PKGSRCDIR.mono?=	../../lang/mono
 .endif	# MONO_BUILDLINK3_MK
 

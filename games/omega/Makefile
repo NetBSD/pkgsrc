@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2004/08/02 03:11:04 jschauma Exp $
+# $NetBSD: Makefile,v 1.24 2004/10/03 00:14:46 tv Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
-PKGREVISION=			1
+PKGREVISION=			2
 CATEGORIES=	games
 MASTER_SITES=	http://www.alcyone.com/binaries/omega/
 

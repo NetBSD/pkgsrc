@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2004/04/22 23:57:53 minskim Exp $
+# $NetBSD: Makefile,v 1.38 2004/10/03 00:13:27 tv Exp $
 #
 
 DISTNAME=	indent-2.2.8a
 PKGNAME=	g${DISTNAME:S/a/.1/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://home.hccnet.nl/d.ingamells/
 #MASTER_SITES=	${MASTER_SITE_GNU:=indent/}

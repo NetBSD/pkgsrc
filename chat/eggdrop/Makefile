@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2004/08/22 21:47:58 cube Exp $
+# $NetBSD: Makefile,v 1.14 2004/10/03 00:13:14 tv Exp $
 #
 
 DISTNAME=	eggdrop1.6.15
 PKGNAME=	${DISTNAME:S/eggdrop/eggdrop-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/
 EXTRACT_SUFX=	.tar.bz2

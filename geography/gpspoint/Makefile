@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/04/11 08:40:15 snj Exp $
+# $NetBSD: Makefile,v 1.4 2004/10/03 00:14:47 tv Exp $
 
 DISTNAME=		gpspoint-2.030521
+PKGREVISION=		1
 CATEGORIES=		geography
 MASTER_SITES=		http://gpspoint.dnsalias.net/gpspoint2/download/
 
