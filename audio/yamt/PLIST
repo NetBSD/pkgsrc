@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2002/06/23 09:23:28 kent Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/09 16:01:13 tron Exp $
 bin/yamt
 share/gnome/apps/Applications/yamt.desktop
 share/gnome/help/yamt/C/about.html
@@ -30,4 +30,4 @@ share/pixmaps/yamt/yamt-logo.png
 @dirrm share/pixmaps/yamt
 @dirrm share/gnome/help/yamt/C
 @dirrm share/gnome/help/yamt
-@unexec ${RMDIR} -p %D/share/gnome/apps/Applications 2> /dev/null || true
+@unexec ${RMDIR} -p %D/share/gnome/apps/Applications 2> /dev/null || ${TRUE}

@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/11 15:54:57 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/09 16:01:22 tron Exp $
 lib/X11/fonts/TrueType/cyberbit.ttf
 share/doc/cyberbit-ttf/License.wri
 share/doc/cyberbit-ttf/Orders.wri
 share/doc/cyberbit-ttf/ReadMe.htm
 share/doc/cyberbit-ttf/Readme.wri
 @dirrm share/doc/cyberbit-ttf
-@unexec ${RMDIR} -p %D/lib/X11/fonts/TrueType 2> /dev/null || true
+@unexec ${RMDIR} -p %D/lib/X11/fonts/TrueType 2> /dev/null || ${TRUE}

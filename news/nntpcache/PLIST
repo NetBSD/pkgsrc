@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/07/19 04:54:24 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/12/09 16:01:36 tron Exp $
 etc/nntpcache/VERSION
 etc/nntpcache/innreport.conf-dist
 etc/nntpcache/innreport.pl
@@ -21,7 +21,7 @@ etc/nntpcache/http/nntpcache.jpg
 @exec ${MKDIR} %D/etc/nntpcache/http/innreport/pics
 @exec ${CHOWN} -R news:news %D/etc/nntpcache
 @exec ${CHMOD} 700 %D/etc/nntpcache
-@unexec ${RMDIR} -p %D/etc/nntpcache/http/innreport/pics 2>/dev/null || true
+@unexec ${RMDIR} -p %D/etc/nntpcache/http/innreport/pics 2>/dev/null || ${TRUE}
 etc/rc.d/nntpcached
 sbin/innreport.sh
 sbin/newshound
@@ -33,7 +33,7 @@ libexec/nntpcache-gdb.sh
 libexec/nntpcache.gdb
 man/man8/newshound.8
 man/man8/nntpcached.8
-@unexec ${RMDIR} %D/etc/nntpcache 2>/dev/null || true
+@unexec ${RMDIR} %D/etc/nntpcache 2>/dev/null || ${TRUE}
 @exec ${MKDIR} /var/spool/nntpcache
 @exec cp %D/etc/nntpcache/VERSION /var/spool/nntpcache/VERSION
 @exec ${CHOWN} -R news:news /var/spool/nntpcache

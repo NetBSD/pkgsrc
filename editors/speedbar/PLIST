@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/02/18 15:14:18 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/09 16:01:20 tron Exp $
 ${LISPDIR}/dframe.el
 ${LISPDIR}/dframe.elc
 ${LISPDIR}/sb-dir-minus.xpm
@@ -21,4 +21,4 @@ ${LISPDIR}/speedbar.elc
 info/speedbar.info
 @exec ${INSTALL_INFO} %D/info/speedbar.info %D/info/dir
 @exec install-info %D/info/speedbar.info %D/info/dir
-@unexec ${RMDIR} %D/${LISPDIR} 2>/dev/null || true
+@unexec ${RMDIR} %D/${LISPDIR} 2>/dev/null || ${TRUE}

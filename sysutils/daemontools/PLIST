@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:59 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:43 tron Exp $
 bin/envdir
 bin/envuidgid
 bin/fghack
@@ -29,4 +29,4 @@ man/man8/tai64n.8
 man/man8/tai64nlocal.8
 share/examples/daemontools/svscan.sh.sample
 @dirrm share/examples/daemontools
-@exec ${MKDIR} ${SERVICEDIR} || true
+@exec ${MKDIR} ${SERVICEDIR} || ${TRUE}

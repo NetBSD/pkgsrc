@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/08/28 07:15:40 skrll Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/12/09 16:01:58 tron Exp $
 bin/appletproxy
 bin/chooser
 bin/conttest
@@ -2939,7 +2939,7 @@ share/kde/wallpapers/triplegears.jpg
 @comment dirrm share/kde/icons/hicolor/16x16/apps
 @comment dirrm share/kde/icons/hicolor/16x16/actions
 @comment dirrm share/kde/icons
-@unexec ${RM} -f %D/share/kde/config/kdm/kdmsts 2>/dev/null || true
+@unexec ${RM} -f %D/share/kde/config/kdm/kdmsts 2>/dev/null || ${TRUE}
 @dirrm share/kde/config/kdm
 @comment dirrm share/kde/config
 @dirrm share/kde/apps/naughtyapplet/pics

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:42 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:26 tron Exp $
 bin/xpuyopuyo
 man/man6/xpuyopuyo.6
 share/gnome/apps/Games/xpuyopuyo.desktop
@@ -124,5 +124,5 @@ share/xpuyopuyo/xpuyopuyo.txt
 @dirrm share/xpuyopuyo/themes
 @dirrm share/xpuyopuyo/sounds
 @dirrm share/xpuyopuyo
-@unexec ${RMDIR} -p %D/share/pixmaps 2>/dev/null || true
-@unexec ${RMDIR} -p %D/share/gnome/apps/Games 2>/dev/null || true
+@unexec ${RMDIR} -p %D/share/pixmaps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} -p %D/share/gnome/apps/Games 2>/dev/null || ${TRUE}

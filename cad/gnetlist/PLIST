@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/05/18 18:08:41 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/09 16:01:14 tron Exp $
 bin/gnetlist
 bin/gschem2pcb
 bin/mk_verilog_syms
@@ -27,5 +27,5 @@ share/gEDA/scheme/gnet-verilog.scm
 share/gEDA/scheme/gnet-vhdl.scm
 share/gEDA/scheme/gnet-vipec.scm
 share/gEDA/scheme/gnetlist.scm
-@unexec ${RMDIR} %D/share/gEDA/scheme 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gEDA 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gEDA/scheme 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gEDA 2>/dev/null || ${TRUE}

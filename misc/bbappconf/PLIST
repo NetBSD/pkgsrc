@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/08/04 16:24:21 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/09 16:01:34 tron Exp $
 bin/bbappconf
 share/bbtools/bbappconf.bb
 share/bbtools/bbappconf.nobb
 share/bbtools/README.bbappconf
 man/man1/bbappconf.1
-@unexec ${RMDIR} %D/share/bbtools 2>/dev/null || true
+@unexec ${RMDIR} %D/share/bbtools 2>/dev/null || ${TRUE}

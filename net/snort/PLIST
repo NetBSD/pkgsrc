@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/10/13 04:42:12 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/12/09 16:01:36 tron Exp $
 bin/snort
 etc/snort/SnortCommonMIB.txt
 etc/snort/SnortIDAlertMIB.txt
@@ -78,4 +78,4 @@ share/snort/rules/x11.rules
 @dirrm share/doc/snort
 @dirrm etc/snort
 @exec install -d -m 700 -o root -g wheel /var/log/snort
-@unexec ${RMDIR} /var/log/snort 2>/dev/null || true
+@unexec ${RMDIR} /var/log/snort 2>/dev/null || ${TRUE}

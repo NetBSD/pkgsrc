@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:54 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:35 tron Exp $
 bin/mirror
 bin/do_unlinks
 bin/pkgs_to_mmin
@@ -11,4 +11,4 @@ lib/mirror/ftp.pl
 lib/mirror/lsparse.pl
 lib/mirror/mirror.defaults.dist
 @exec if [ ! -f %D/lib/mirror/mirror.defaults ]; then cp -p %D/lib/mirror/mirror.defaults.dist %D/lib/mirror/mirror.defaults; fi
-@unexec ${RMDIR} %D/lib/mirror 2>/dev/null || true
+@unexec ${RMDIR} %D/lib/mirror 2>/dev/null || ${TRUE}

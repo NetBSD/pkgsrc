@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2002/08/25 18:40:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2002/12/09 16:01:55 tron Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -585,18 +585,18 @@ share/type-convert/type.convert
 @dirrm share/type-convert
 @dirrm share/mime-info
 @dirrm share/gtk-doc/html/libart
-@unexec ${RMDIR} %D/share/gtk-doc/html 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/html/zvt 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/html/gnorba 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gtk-doc/html 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/html/zvt 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/html/gnorba 2>/dev/null || ${TRUE}
 @dirrm share/gnome/html/gnomeui
 @dirrm share/gnome/html/gnome
 @dirrm share/gnome/html
 @dirrm share/gnome/help/gnome-dev-info/C
 @dirrm share/gnome/help/gnome-dev-info
 @dirrm share/gnome/help
-@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome 2>/dev/null || ${TRUE}
 @dirrm share/doc/gnome-libs
 @dirrm lib/gnome-libs/include
 @dirrm lib/gnome-libs

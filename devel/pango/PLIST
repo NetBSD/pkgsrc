@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/10/21 03:02:24 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/12/09 16:01:19 tron Exp $
 bin/pango-querymodules
 etc/pango/pango.modules
 etc/pango/pangox.aliases
@@ -107,8 +107,8 @@ share/gtk-doc/html/pango/pango.html
 share/gtk-doc/html/pango/pangomarkupformat.html
 share/gtk-doc/html/pango/rendering.html
 @dirrm share/gtk-doc/html/pango
-@unexec ${RMDIR} %D/share/gtk-doc/html 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gtk-doc/html 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gtk-doc 2>/dev/null || ${TRUE}
 @dirrm lib/pango/1.0.0/modules
 @dirrm lib/pango/1.0.0
 @dirrm lib/pango

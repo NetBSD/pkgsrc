@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/02/15 10:12:44 skrll Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:27 tron Exp $
 bin/dc21x_cam
 bin/gphoto
 bin/gphoto-exifdump
@@ -125,6 +125,6 @@ share/gphoto/gallery/RedNGray/thumbnail.html
 @dirrm share/gphoto/gallery
 @dirrm share/gphoto/doc
 @dirrm share/gphoto
-@unexec ${RMDIR} %D/share/gnome/apps/Graphics 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/apps/Graphics 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/apps 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome 2>/dev/null || ${TRUE}

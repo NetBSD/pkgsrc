@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:30:09 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2002/12/09 16:01:55 tron Exp $
 bin/gdm
 bin/gdmchooser
 bin/gdmconfig
@@ -75,6 +75,6 @@ share/pixmaps/nohost.png
 @dirrm etc/gdm/PreSession.default
 @dirrm etc/gdm/PostSession.default
 @dirrm etc/gdm/Init.default
-@unexec ${RMDIR} %D/etc/gdm/Sessions %D/etc/gdm/PreSession %D/etc/gdm/PostSession %D/etc/gdm/Init %D/etc/gdm 2>/dev/null || true
+@unexec ${RMDIR} %D/etc/gdm/Sessions %D/etc/gdm/PreSession %D/etc/gdm/PostSession %D/etc/gdm/Init %D/etc/gdm 2>/dev/null || ${TRUE}
 @exec ${INSTALL} -d -o ${GDMOWN} -g ${GDMGRP} -m 750 ${LOCALSTATEDIR}/gdm
 @unexec ${RM} -rf ${LOCALSTATEDIR}/gdm

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/22 13:09:41 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/09 16:01:23 tron Exp $
 lib/X11/fonts/TrueType/32768no.ttf
 lib/X11/fonts/TrueType/7hours.ttf
 lib/X11/fonts/TrueType/actionj.ttf
@@ -75,4 +75,4 @@ lib/X11/fonts/TrueType/yikatu.ttf
 lib/X11/fonts/TrueType/zincboom.ttf
 share/doc/dbz-ttf/readme.txt
 @dirrm share/doc/dbz-ttf
-@unexec ${RMDIR} -p %D/lib/X11/fonts/TrueType 2> /dev/null || true
+@unexec ${RMDIR} -p %D/lib/X11/fonts/TrueType 2> /dev/null || ${TRUE}

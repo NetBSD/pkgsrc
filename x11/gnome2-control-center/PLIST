@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/15 05:48:52 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/09 16:01:57 tron Exp $
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-background-properties
 bin/gnome-control-center
@@ -142,14 +142,14 @@ share/pixmaps/keyboard-shortcut.png
 share/pixmaps/mouse-capplet.png
 share/pixmaps/sound-capplet.png
 @dirrm share/pixmaps/gnomecc-2
-@unexec ${RMDIR} %D/share/gnome/vfolders 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome/cursor-fonts 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome-2.0/ui 2>/dev/null || true
-@unexec ${RMDIR} %D/share/gnome 2>/dev/null || true
+@unexec ${RMDIR} %D/share/gnome/vfolders 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/cursor-fonts 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome-2.0/ui 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome 2>/dev/null || ${TRUE}
 @dirrm share/control-center-2.0/pixmaps
 @dirrm share/control-center-2.0/interfaces
 @dirrm share/control-center-2.0/icons
 @dirrm share/control-center-2.0/capplets
 @dirrm share/control-center-2.0
-@unexec ${RMDIR} %D/share/applications 2>/dev/null || true
+@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}
 @dirrm include/gnome-window-settings-2.0

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/03 23:45:14 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/12/09 16:01:29 tron Exp $
 bin/gri
 bin/${PKGNAME}
 bin/gri_merge
@@ -339,5 +339,5 @@ share/gri/${PKGVERSION}/startup.msg
 @dirrm share/doc/html/gri/screenshots
 @dirrm share/doc/html/gri/resources
 @dirrm share/doc/html/gri
-@unexec ${RMDIR} %D/share/emacs 2>/dev/null || true
-@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || true
+@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/09/07 00:36:53 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/12/09 16:01:16 tron Exp $
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
 include/gconf/2/gconf/gconf-client.h
@@ -58,9 +58,9 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/GConf2.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/GConf2.mo
 @exec ${MKDIR} %D/share/gtk-doc/html/gconf
 @dirrm share/gtk-doc/html/gconf
-@unexec ${RMDIR} -p %D/gtk-doc/html 2>/dev/null || true
+@unexec ${RMDIR} -p %D/gtk-doc/html 2>/dev/null || ${TRUE}
 @dirrm lib/GConf/2
-@unexec ${RMDIR} -p %D/lib/GConf 2>/dev/null || true
+@unexec ${RMDIR} -p %D/lib/GConf 2>/dev/null || ${TRUE}
 @dirrm include/gconf/2/gconf
 @dirrm include/gconf/2
-@unexec ${RMDIR} -p %D/include/gconf 2>/dev/null || true
+@unexec ${RMDIR} -p %D/include/gconf 2>/dev/null || ${TRUE}
