@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/03 18:49:55 reed Exp $
+# $NetBSD: Makefile,v 1.17 2004/03/11 17:22:55 xtraeme Exp $
 #
 
 DISTNAME=	fox-1.0.43
@@ -10,7 +10,7 @@ MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://www.fox-toolkit.org/
 COMMENT=	Fast and extensive C++ GUI toolkit
 
-USE_BUILDLINK2=	# defined
+USE_BUILDLINK3=	# defined
 USE_X11=	# defined
 USE_LIBTOOL=	# defined
 GNU_CONFIGURE=	# defined
@@ -20,9 +20,9 @@ CONFIGURE_ARGS+=	--with-x
 CONFIFURE_ARGS+=	--with-shm=yes
 CONFIGURE_ARGS+=	--enable-release
 
-.include "../../graphics/jpeg/buildlink2.mk"
-.include "../../graphics/png/buildlink2.mk"
-.include "../../graphics/tiff/buildlink2.mk"
-.include "../../graphics/MesaLib/buildlink2.mk"
-.include "../../graphics/glu/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
