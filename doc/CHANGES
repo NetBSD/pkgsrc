@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6101 2004/06/02 18:53:26 bouyer Exp $
+$NetBSD: CHANGES,v 1.6102 2004/06/02 22:21:36 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2759,3 +2759,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated firefox-gtk2 to 0.8nb3 [taya 2004-06-02]
 	Updated Gorm to 0.7.6 [adam 2004-06-02]
 	Updated squirrelmail to 1.4.3nb1 [bouyer 2004-06-02]
+	Updated aterm to 0.4.2b5 [recht 2004-06-02]
+	Updated ngrep to 1.42nb1 [recht 2004-06-02]
