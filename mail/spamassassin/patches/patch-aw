@@ -1,0 +1,14 @@
+$NetBSD: patch-aw,v 1.1 2004/10/12 00:11:10 heinz Exp $
+
+--- t/spamc_l.t.orig	Fri Aug 27 18:37:38 2004
++++ t/spamc_l.t
+@@ -18,6 +18,8 @@ q{ spamc: connect(AF_INET) to spamd at 1
+ );
+ 
+ # connect on port 9 (discard): should always fail
+-ok (scrunwithstderr ("-l -p 9 < data/etc/hello.txt", \&patterns_run_cb));
++# pkgsrc: port 8 is 'unassigned' according to IANA
++# see also http://bugzilla.spamassassin.org/show_bug.cgi?id=3747
++ok (scrunwithstderr ("-l -p 8 < data/etc/hello.txt", \&patterns_run_cb));
+ ok_all_patterns();
+ 
