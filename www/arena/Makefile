@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1999/10/14 07:27:35 fredb Exp $
+# $NetBSD: Makefile,v 1.15 2000/01/10 19:11:10 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.10 1998/05/04 20:22:31 jseger Exp
 #
 
@@ -10,7 +10,7 @@ MASTER_SITES=		ftp://ftp.yggdrasil.com/pub/dist/web/arena/
 MAINTAINER=		tv@netbsd.org
 HOMEPAGE=		http://www.yggdrasil.com/Products/Arena/
 
-DEPENDS=		gettext-0.10.35:../../devel/gettext \
+DEPENDS=		gettext-0.10.*:../../devel/gettext \
 			jpeg-6b:../../graphics/jpeg \
 			libwww-5.2.8:../../www/libwww \
 			png-1.0.3:../../graphics/png \
