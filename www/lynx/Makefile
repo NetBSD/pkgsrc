@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2001/02/03 19:04:50 fredb Exp $
+# $NetBSD: Makefile,v 1.36 2001/02/06 06:06:32 itojun Exp $
 #
 
 DISTNAME=		lynx2.8.3rel.1
@@ -154,9 +154,12 @@ DEPENDS+=		socks5-1.0.2:../../net/socks5
 .endif
 
 # Do IPV6 on systems which can support it.
+# XXX this clause works only for 1.5, not for current
 .if defined(USE_INET6) && ${USE_INET6} == YES
 CPPFLAGS+=	-DINET6
 .endif
+# current needs below
+#CONFIGURE_ENV+=CPPFLAGS="${CPPFLAGS}"
 
 .include "../../mk/bsd.pkg.mk"
 
