@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.151 2001/04/17 12:50:04 agc Exp $
+# $NetBSD: Packages.txt,v 1.152 2001/04/25 07:27:44 skrll Exp $
 ###########################################################################
 
 			==========================
@@ -914,7 +914,7 @@ Here's how to use libtool in a pkg in seven simple steps:
 3. For the linking of the library, remove any "ar", "ranlib", and "ld
    -Bshareable" commands, and use instead:
 
-	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info major:minor
+	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info major:minor
 
    Note that the library is changed to have a .la extension, and the
    objects are changed to have a .lo extension.  Change OBJS as necessary.
