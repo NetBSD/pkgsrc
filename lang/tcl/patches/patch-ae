@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2004/10/01 13:35:37 adam Exp $
+$NetBSD: patch-ae,v 1.6 2004/11/26 10:30:01 adam Exp $
 
---- configure.in.orig	2004-07-26 21:40:46.000000000 +0000
+--- configure.in.orig	2004-11-19 18:49:51.000000000 +0000
 +++ configure.in
-@@ -478,7 +478,7 @@ elif test "$SHARED_BUILD" = "0" || test 
+@@ -479,7 +479,7 @@ elif test "$SHARED_BUILD" = "0" || test 
          TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
      fi
      TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.5 2004/10/01 13:35:37 adam Exp $
  else
      TCL_BUILD_EXP_FILE="lib.exp"
      eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -508,13 +508,19 @@ VERSION=${TCL_VERSION}
+@@ -509,13 +509,19 @@ VERSION=${TCL_VERSION}
  #--------------------------------------------------------------------
  
  if test "$FRAMEWORK_BUILD" = "1" ; then

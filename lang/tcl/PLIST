@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/10/30 05:18:52 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/11/26 10:30:01 adam Exp $
 bin/tclsh
 bin/tclsh8.4
 include/tcl.h
@@ -102,8 +102,8 @@ lib/tcl8.4/encoding/tis-620.enc
 lib/tcl8.4/history.tcl
 lib/tcl8.4/http1.0/http.tcl
 lib/tcl8.4/http1.0/pkgIndex.tcl
-lib/tcl8.4/http2.4/http.tcl
-lib/tcl8.4/http2.4/pkgIndex.tcl
+lib/tcl8.4/http2.5/http.tcl
+lib/tcl8.4/http2.5/pkgIndex.tcl
 lib/tcl8.4/init.tcl
 lib/tcl8.4/ldAix
 lib/tcl8.4/ldAout.tcl
@@ -422,6 +422,7 @@ man/man3/Tcl_MacConvertTextResource.3
 man/man3/Tcl_MacEvalResource.3
 man/man3/Tcl_MacFindResource.3
 man/man3/Tcl_MacSetEventProc.3
+man/man3/Tcl_Main.3
 man/man3/Tcl_MakeFileChannel.3
 man/man3/Tcl_MakeSafe.3
 man/man3/Tcl_MakeTcpClientChannel.3
@@ -671,7 +672,6 @@ man/mann/info.n
 man/mann/interp.n
 man/mann/join.n
 man/mann/lappend.n
-man/mann/library.n
 man/mann/lindex.n
 man/mann/linsert.n
 man/mann/list.n
@@ -687,11 +687,9 @@ man/mann/msgcat.n
 man/mann/namespace.n
 man/mann/open.n
 man/mann/package.n
-man/mann/packagens.n
 man/mann/parray.n
 man/mann/pid.n
 man/mann/pkg::create.n
-man/mann/pkgMkIndex.n
 man/mann/pkg_mkIndex.n
 man/mann/proc.n
 man/mann/puts.n
@@ -704,7 +702,6 @@ man/mann/regsub.n
 man/mann/rename.n
 man/mann/resource.n
 man/mann/return.n
-man/mann/safe.n
 man/mann/scan.n
 man/mann/seek.n
 man/mann/set.n
@@ -736,7 +733,7 @@ man/mann/while.n
 @dirrm lib/tcl8.4/tcltest2.2
 @dirrm lib/tcl8.4/opt0.4
 @dirrm lib/tcl8.4/msgcat1.3
-@dirrm lib/tcl8.4/http2.4
+@dirrm lib/tcl8.4/http2.5
 @dirrm lib/tcl8.4/http1.0
 @dirrm lib/tcl8.4/encoding
 @dirrm lib/tcl8.4
