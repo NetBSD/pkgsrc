@@ -1,0 +1,50 @@
+$NetBSD: patch-aa,v 1.8 2001/05/14 14:52:38 jlam Exp $
+
+--- configure.in.orig	Sat May  5 16:05:37 2001
++++ configure.in
+@@ -150,6 +150,15 @@
+ 
+ 
+ #
++# Readline support
++#
++AC_MSG_CHECKING([whether to build with readline support])
++PGAC_ARG_BOOL(enable, readline, yes,
++              [  --disable-readline      disable readline support])
++AC_MSG_RESULT([$enable_readline])
++
++
++#
+ # Locale (--enable-locale)
+ #
+ AC_MSG_CHECKING([whether to build with locale support])
+@@ -401,6 +410,18 @@
+ [AC_MSG_RESULT(no)])
+ AC_SUBST(with_python)
+ 
++# If python is enabled (above), then optionally byte-compile the modules.
++AC_MSG_CHECKING([whether to byte-compile Python modules])
++if test "$with_python" = yes; then
++  PGAC_ARG_BOOL(with, python_compile, no,
++    [  --with-python-compile   byte-compile modules if Python is enabled])
++else
++  with_python_compile=no
++fi
++AC_MSG_RESULT([$with_python_compile])
++AC_SUBST([with_python_compile])
++
++
+ #
+ # Optionally build the Java/JDBC tools
+ #
+@@ -649,8 +670,10 @@
+ ## Libraries
+ ##
+ 
++if test "$enable_readline" = yes; then
+ PGAC_CHECK_READLINE
+ AC_SEARCH_LIBS(using_history, history, [AC_DEFINE(HAVE_HISTORY_FUNCTIONS)])
++fi
+ 
+ if test "$PORTNAME" != "aix" -a "$PORTNAME" != "alpha"
+ then

@@ -1,0 +1,8 @@
+# $NetBSD: Makefile.ssl,v 1.1 2001/05/14 14:52:36 jlam Exp $
+#
+# This Makefile fragment *must* be included by PostgreSQL packages built from
+# the main sources of the PostgreSQL distribution that use the PostgreSQL
+# libraries.
+
+USE_SSL=		# defined
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
