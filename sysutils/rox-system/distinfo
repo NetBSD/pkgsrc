@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/06/04 17:47:58 cjep Exp $
+
+SHA1 (rox/System-0.1.2.tgz) = aafe4e16e5f689c009785f3dee47339ca34c369d
+Size (rox/System-0.1.2.tgz) = 44875 bytes
+SHA1 (patch-aa) = 2bcca73b001805a2114138ce8dff1e7568bcefa4
+SHA1 (patch-ab) = dbc24fe667212e54ef24dbe07fdaa630b6538b95
