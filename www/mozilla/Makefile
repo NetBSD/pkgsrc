@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2002/08/19 23:06:38 fredb Exp $
+# $NetBSD: Makefile,v 1.100 2002/08/19 23:07:31 fredb Exp $
 
 MOZ_VER=	1.0
 DISTNAME=	mozilla-source-${MOZ_VER}
@@ -82,7 +82,7 @@ post-extract:
 .endfor
 
 pre-configure:
-	(cd ${WRKSRC} && autoconf)
+	cd ${WRKSRC} && autoconf
 
 post-build:
 	${ECHO} skin,install,select,classic/1.0 >> ${WRKSRC}/dist/bin/chrome/installed-chrome.txt
