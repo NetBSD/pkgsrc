@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2001/06/28 20:20:49 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2003/05/01 22:03:50 jmmv Exp $
 
 --- Makefile.orig	Wed Sep  6 22:24:02 1995
 +++ Makefile
@@ -131,7 +131,7 @@ $NetBSD: patch-aa,v 1.6 2001/06/28 20:20:49 jlam Exp $
  
  
 +install.conf:
-+	${INSTALL} -m 0644 socks.conf ${PREFIX}/etc
++	${INSTALL} -m 0644 socks.conf ${PREFIX}/share/examples/socks4
 +
 +install.lib:
 +	${INSTALL} -m 0644 lib/libsocks.a ${PREFIX}/lib/libsocks4.a
