@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2001/11/28 04:21:46 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.27 2001/11/28 16:52:20 wiz Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -51,11 +51,7 @@ pre-install:
 	cd ${WRKSRC}/examples && ${MAKE_PROGRAM} distclean
 
 post-install:
-	${INSTALL_DATA} ${PREFIX}/${SCIBASE}/X11_defaults/Xscilab \
-		${X11BASE}/lib/X11/app-defaults
-	${INSTALL_DATA} ${PREFIX}/${SCIBASE}/X11_defaults/Metanet-color \
-		${X11BASE}/lib/X11/app-defaults
-	${LN} -sf ${X11BASE}/bin/xless ${PREFIX}/${SCIBASE}/bin/xless
+	${LN} -sf ${X11PREFIX}/bin/xless ${PREFIX}/${SCIBASE}/bin/xless
 
 # the "SCI=0 && unset SCI" is done because some of the tests really will
 # fail if SCI is set to anything.
