@@ -1,13 +1,16 @@
-$NetBSD: patch-bf,v 1.1 2000/07/31 18:33:56 abs Exp $
+$NetBSD: patch-bf,v 1.2 2000/08/02 11:43:03 abs Exp $
 
---- config/AppleVolumes.system.orig	Thu Feb  4 07:49:04 1999
-+++ config/AppleVolumes.system	Mon Jul 31 18:55:46 2000
-@@ -26,7 +26,7 @@
- .html	TEXT	MOS!
- .rtf	TEXT	MSWD
- .doc	WDBN	MSWD
--.pdf	CARO	PDF
-+.pdf	PDF	CARO
- 
- # compressed archives
- .bin	BINA	MB2P
+--- libatalk/dsi/dsi_tcp.c.orig	Wed Aug  2 10:16:25 2000
++++ libatalk/dsi/dsi_tcp.c	Wed Aug  2 10:17:02 2000
+@@ -108,6 +108,11 @@
+       exit(1);
+     }
+     newact.sa_handler = timeout_handler;
++    sigemptyset(&newact.sa_mask);
++    newact.sa_flags = 0;
++    oldact.sa_handler = NULL;
++    sigemptyset(&oldact.sa_mask);
++    oldact.sa_flags = 0;
+     if (sigaction(SIGALRM, &newact, &oldact) < 0) {
+ 	syslog(LOG_ERR, "dsi_tcp_open: sigaction: %m");
+ 	exit(1);
