@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/06/23 10:19:32 adam Exp $
+# $NetBSD: Makefile,v 1.9 2003/06/23 15:56:10 wiz Exp $
 #
 
 DISTNAME=	gdchart0.11.4dev
@@ -15,6 +15,8 @@ MAKEFILE=	makefile
 
 USE_BUILDLINK2=	YES
 USE_LIBTOOL=	YES
+
+TEST_TARGET=	gdc_samp1 gdc_samp2 gdc_pie_samp ft_samp
 
 post-patch:
 	for fn in ${WRKSRC}/*.[ch]; do					      \
