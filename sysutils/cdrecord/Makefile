@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2000/06/02 14:08:31 tron Exp $
+# $NetBSD: Makefile,v 1.31 2000/07/06 00:05:22 dmcmahill Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/11/05 23:55:31 asami Exp
 #
 
@@ -16,6 +16,8 @@ USE_GMAKE=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME:C/a.*//}
 TARGET_ARCH=	${MACHINE_ARCH}-netbsd-cc
 TARGET_DIR=	OBJ/${TARGET_ARCH}
+#override ARCH to avoid picking up a bad ${ARCH} during the build
+MAKE_ENV+=	ARCH=""
 
 post-configure:
 	${MKDIR} ${WRKSRC}/include/sys
