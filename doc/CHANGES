@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.696 2002/12/05 19:56:41 chris Exp $
+$NetBSD: CHANGES,v 1.697 2002/12/05 21:24:30 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3830,3 +3830,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added GutenMark-words-20021124 [wiz 2002-12-05]
 	Updated lesstif to 0.93.36 [drochner 2002-12-05]
 	Updated tremor to 1.0.2nb2 [chris 2002-12-05]
+	Added tkpasman-2.2 [jmmv 2002-12-05]
