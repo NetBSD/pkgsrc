@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/02/16 14:17:41 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/04 14:04:36 mjl Exp $
 
 DISTNAME=	sqsh-1.7-src
 PKGNAME=	sqsh-1.7
@@ -9,7 +9,7 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://www.voicenet.com/~gray/sqsh.html
 COMMENT=	Sybase SQL shell
 
-DEPENDS+=       freetds-0.50:../../databases/freetds
+DEPENDS+=       freetds>=0.50:../../databases/freetds
 DEPENDS+=       readline>=4.0:../../devel/readline
 
 ALL_TARGET=	sqsh
