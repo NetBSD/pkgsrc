@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/26 19:03:18 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/31 17:15:58 abs Exp $
 #
 
 DISTNAME=		netatalk-990130
@@ -10,7 +10,8 @@ MASTER_SITES=		ftp://terminator.rs.itd.umich.edu/unix/netatalk/
 MAINTAINER=		wrstuden@netbsd.org
 HOMEPAGE=		http://www.umich.edu/~rsug/netatalk/
 
-CONFLICTS=		netatalk-19981109
+CONFLICTS=		netatalk-asun-[0-9]*
+CONFLICTS+=		netatalk-19981109
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/sys/netbsd/rc.atalk ${PREFIX}/etc
