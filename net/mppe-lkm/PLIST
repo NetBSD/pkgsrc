@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/02 02:52:56 cube Exp $
+lkm/mppe.o
