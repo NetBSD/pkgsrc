@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2416 2004/11/22 15:28:53 adam Exp $
+$NetBSD: TODO,v 1.2417 2004/11/22 15:40:23 adam Exp $
 
 Suggested new packages
 ======================
@@ -517,7 +517,6 @@ Suggested package updates
 	o gnocatan-0.8.1.30
 	o gnotime-2.2.1
 	o gnugk-2.2.0
-	o gnugo-3.6
 	o gnunet-0.6.5
 	o gnupg-devel-1.9.12
 	o gnuserv-3.12.7
