@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/06/21 06:32:15 martti Exp $
+# $NetBSD: Makefile,v 1.9 2004/07/23 04:28:01 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -18,6 +18,7 @@ do-install:	# empty
 .include "../../audio/xfce4-xmms-plugin/buildlink3.mk"
 .include "../../graphics/xfce4-artwork/buildlink3.mk"
 .include "../../misc/xfce4-weather-plugin/buildlink3.mk"
+.include "../../net/xfce4-wavelan-plugin/buildlink3.mk"
 .include "../../time/xfce4-datetime-plugin/buildlink3.mk"
 .include "../../sysutils/xfce4-cpugraph-plugin/buildlink3.mk"
 .include "../../sysutils/xfce4-diskperf-plugin/buildlink3.mk"
