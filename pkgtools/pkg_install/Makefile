@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2004/04/28 11:10:37 tv Exp $
+# $NetBSD: Makefile,v 1.102 2004/08/09 06:21:24 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -71,8 +71,12 @@ do-extract:
 	@${CP} -Rp ${FILESDIR} ${WRKSRC}
 
 pre-configure:
-	@cd ${LIBNBCOMPAT_SRCDIR} && ${SETENV} ${CONFIGURE_ENV:NLIBS=*}	\
-		CC=${CC} CPPFLAGS=${CPPFLAGS:Q} ./configure && ${MAKE_PROGRAM}
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	cd ${LIBNBCOMPAT_SRCDIR} && ${SETENV}				\
+		AWK="${AWK}" CC="${CC}" CFLAGS="${CFLAGS:M*}"		\
+		CPPFLAGS="${CPPFLAGS:M*}"				\
+		${CONFIGURE_ENV:NLIBS=*} ${CONFIG_SHELL}		\
+		${CONFIGURE_SCRIPT} && ${MAKE_PROGRAM}
 
 post-install:
 	if [ ! -f ${PKG_DBDIR}/pkgdb.byfile.db ]; then			\
