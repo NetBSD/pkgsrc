@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.4 2003/11/25 11:42:09 jlam Exp $
+# $NetBSD: apache.mk,v 1.5 2003/12/11 13:51:28 grant Exp $
 #
 # This Makefile fragment handles Apache dependencies and make variables,
 # and is meant to be included by packages that require Apache either at
@@ -124,7 +124,7 @@ _APACHE_PKGSRCDIR=	../../www/apache6
 
 _APACHE_BL_SRCDIR?=	../../www/apache
 
-_APACHE_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_APACHE}:${_APACHE_PKGSRCDIR}
+_APACHE_DEPENDENCY?=	${BUILDLINK_DEPENDS.${_PKG_APACHE}}:${_APACHE_PKGSRCDIR}
 
 # Add a runtime dependency on the apache server.
 # This may or may not create an actual dependency depending on
