@@ -1,0 +1,57 @@
+@comment $NetBSD: PLIST,v 1.3 2002/07/23 11:36:01 agc Exp $
+bin/intop
+bin/ntop
+bin/ntop-config
+lib/libicmpPlugin.a
+lib/libicmpPlugin.so
+lib/libicmpPlugin.so.0
+lib/libicmpPlugin.so.0.0
+lib/liblastSeenPlugin.a
+lib/liblastSeenPlugin.so
+lib/liblastSeenPlugin.so.0
+lib/liblastSeenPlugin.so.0.0
+lib/libnetflowPlugin.a
+lib/libnetflowPlugin.so
+lib/libnetflowPlugin.so.0
+lib/libnetflowPlugin.so.0.0
+lib/libnfsPlugin.a
+lib/libnfsPlugin.so
+lib/libnfsPlugin.so.0
+lib/libnfsPlugin.so.0.0
+lib/libntop-${PKGVERSION}.so
+lib/libntop-${PKGVERSION}.so.0
+lib/libntop-${PKGVERSION}.so.0.0
+lib/libntop.a
+lib/libntop.la
+lib/libntop.so
+lib/libntopreport-${PKGVERSION}.so
+lib/libntopreport-${PKGVERSION}.so.0
+lib/libntopreport-${PKGVERSION}.so.0.0
+lib/libntopreport.a
+lib/libntopreport.la
+lib/libntopreport.so
+lib/libpdaPlugin.a
+lib/libpdaPlugin.so
+lib/libpdaPlugin.so.0
+lib/libpdaPlugin.so.0.0
+lib/libsflowPlugin.a
+lib/libsflowPlugin.so
+lib/libsflowPlugin.so.0
+lib/libsflowPlugin.so.0.0
+lib/ntop/plugins/icmpPlugin.so
+lib/ntop/plugins/lastSeenPlugin.so
+lib/ntop/plugins/netflowPlugin.so
+lib/ntop/plugins/nfsPlugin.so
+lib/ntop/plugins/pdaPlugin.so
+lib/ntop/plugins/sflowPlugin.so
+man/man1/intop.1
+man/man8/ntop.8
+@dirrm share/ntop/html/statsicons/os
+@dirrm share/ntop/html/statsicons/flags
+@dirrm share/ntop/html/statsicons
+@dirrm share/ntop/html
+@dirrm share/ntop
+@exec ${MKDIR} %D/lib/plugins
+@dirrm lib/plugins
+@dirrm lib/ntop/plugins
+@dirrm lib/ntop
