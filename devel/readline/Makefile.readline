@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.readline,v 1.1 2001/05/16 04:39:12 jlam Exp $
+# $NetBSD: Makefile.readline,v 1.2 2001/05/16 05:05:48 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
@@ -29,16 +29,14 @@ LIBHISTORY=		/usr/lib/libedit.a
 LIBHISTORY+=		/usr/lib/libedit.so*
 HAVE_LIBEDIT_READLINE=	# defined
 .elif exists(/usr/include/readline/readline.h)
-READLINE_H=		/usr/include/readline/readline.h
-HISTORY_H=		/usr/include/readline/history.h
+READLINE_INCDIR=	/usr/include/readline
 LIBREADLINE=		/usr/lib/libedit.a
 LIBREADLINE+=		/usr/lib/libedit.so*
 LIBHISTORY=		/usr/lib/libedit.a
 LIBHISTORY+=		/usr/lib/libedit.so*
 HAVE_LIBEDIT_READLINE=	# defined
 .else
-READLINE_H=		${LOCALBASE}/readline/readline.h
-HISTORY_H=		${LOCALBASE}/readline/history.h
+READLINE_INCDIR=	${LOCALBASE}/include/readline
 LIBREADLINE=		${LOCALBASE}/lib/libreadline.a
 LIBREADLINE+=		${LOCALBASE}/lib/libreadline.so*
 LIBHISTORY=		${LOCALBASE}/lib/libhistory.a
@@ -54,10 +52,15 @@ WRKLIBDIR?=		${WRKDIR}/lib
 #
 link-readline-headers:
 	${MKDIR} -p ${WRKINCDIR}/readline
-	${RM} -f ${WRKINCDIR}/readline/readline.h
-	${RM} -f ${WRKINCDIR}/readline/history.h
+	${RM} -f ${WRKINCDIR}/readline/*
+.if defined(READLINE_INCDIR)
+	for inc in ${READLINE_INCDIR}/*; do				\
+		${LN} -sf $${inc} ${WRKINCDIR}/readline;		\
+	done
+.else
 	${LN} -sf ${READLINE_H} ${WRKINCDIR}/readline
 	${LN} -sf ${HISTORY_H} ${WRKINCDIR}/readline
+.endif
 
 # This target links the readline and history libraries into ${WRKLIBDIR},
 # which should be searched first by the linker.
