@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.4 1999/12/02 15:50:45 frueauf Exp $
+$NetBSD: patch-ab,v 1.5 2000/03/02 08:21:33 wiz Exp $
 
 Make this work on NetBSD.
 For Solaris, make the DATADIRNAME share.
 
---- configure.orig	Tue Sep  7 17:12:37 1999
-+++ configure	Thu Dec  2 16:03:10 1999
-@@ -2505,7 +2505,7 @@
+--- ./configure.orig	Thu Dec 16 10:15:33 1999
++++ ./configure	Thu Mar  2 01:50:58 2000
+@@ -1995,7 +1995,7 @@
              CFLAGS_RDYNAMIC="-Wl,-E"
              ;;
  
@@ -14,17 +14,17 @@ For Solaris, make the DATADIRNAME share.
              CFLAGS_RDYNAMIC=""
              ;;
  
-@@ -2553,6 +2553,9 @@
+@@ -2043,6 +2043,9 @@
          NAME_OF_DEV_URANDOM="/dev/urandom"
          DYNLINK_MOD_CFLAGS="-shared -rdynamic -fpic -Wl,-Bshareable -Wl,-x"
          ;;
 +    *-netbsd*)
-+	DYNLINK_MOD_CFLAGS="-shared -rdynamic -fpic -Wl,-Bshareable -Wl,-x"
++        DYNLINK_MOD_CFLAGS="-shared -rdynamic -fpic -Wl,-Bshareable -Wl,-x"
 +	;;
      *)
          NAME_OF_DEV_RANDOM="/dev/random"
          NAME_OF_DEV_URANDOM="/dev/urandom"
-@@ -3921,7 +3924,7 @@
+@@ -3441,7 +3444,7 @@
    cat conftest.$ac_ext >&5
    rm -rf conftest*
    CATOBJEXT=.mo
