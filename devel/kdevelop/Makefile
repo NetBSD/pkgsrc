@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2003/07/17 21:31:13 grant Exp $
+# $NetBSD: Makefile,v 1.38 2004/02/15 12:06:12 markd Exp $
 
-DISTNAME=	kdevelop-2.1.5
-PKGREVISION=	1
+DISTNAME=	kdevelop-3.0.0
 CATEGORIES=	devel kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,8 +9,8 @@ MAINTAINER=	skrll@NetBSD.org
 HOMEPAGE=       http://www.kdevelop.org/
 COMMENT=	Integrated Development Enviroment for Unix/X11/KDE
 
-DEPENDS+=	c-cpp-reference>=2.0:../c-cpp-reference
-DEPENDS+=	kdbg>=1.2.5:../kdbg
+DEPENDS+=	c-cpp-reference>=2.0.2nb2:../../devel/c-cpp-reference
+DEPENDS+=	kdbg>=1.2.5:../../devel/kdbg
 
 NO_CHECKSUM=	YES
 NO_BUILD=	YES
