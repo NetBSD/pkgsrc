@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.131 2004/04/19 00:10:58 recht Exp $
+# $NetBSD: Makefile,v 1.132 2004/04/20 09:52:18 xtraeme Exp $
 #
 
 COMMENT=	Databases
 
 SUBDIR+=	abook
+SUBDIR+=	acid
+SUBDIR+=	adodb
 SUBDIR+=	bdb-xml
 SUBDIR+=	cdb
 SUBDIR+=	db
