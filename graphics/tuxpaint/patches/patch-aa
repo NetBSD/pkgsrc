@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2004/10/07 14:52:57 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2004/10/07 15:32:57 wiz Exp $
 
 --- Makefile.orig	2004-10-04 00:32:26.000000000 +0200
 +++ Makefile
@@ -69,7 +69,7 @@ $NetBSD: patch-aa,v 1.8 2004/10/07 14:52:57 wiz Exp $
  	@echo
  	@echo "...Linking Tux Paint..."
 -	@$(CC) $(CFLAGS) $(SDL_CFLAGS) $(DEFS) \
-+	@$(CC) $(CFLAGS) $(LD_FLAGS) $(SDL_CFLAGS) $(DEFS) \
++	@$(CC) $(CFLAGS) $(LDFLAGS) $(SDL_CFLAGS) $(DEFS) \
  		-o tuxpaint obj/tuxpaint.o $(HQXX_O) \
  		$(ARCH_LIBS) $(SDL_LIBS) \
  		-lm $(ARCH_LINKS)
