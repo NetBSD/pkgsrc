@@ -3,7 +3,7 @@
 # Date created:         30th November 1997
 # Whom:                 tron@lyssa.owl.de, soren@t.dk
 #
-# $NetBSD: Makefile,v 1.5 1998/01/15 16:25:55 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/01/16 17:39:17 agc Exp $
 # FreeBSD Id: Makefile,v 1.14 1997/06/19 09:33:26 asami Exp
 #
 
@@ -14,6 +14,9 @@ MASTER_SITE_SUBDIR=	widgets/Xaw3d/R6.1
 
 USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/xc/lib/Xaw3d
+
+post-extract:
+	@(cd ${WRKSRC};ln -s .. X11)
 
 post-install:
 	${LDCONFIG} -m ${PREFIX}/lib
