@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2003/02/12 07:23:40 martti Exp $
+@comment $NetBSD: PLIST,v 1.11 2003/04/15 09:25:08 martti Exp $
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
@@ -7,13 +7,30 @@ share/squirrelmail/INSTALL
 share/squirrelmail/README
 share/squirrelmail/ReleaseNotes
 share/squirrelmail/UPGRADE
+share/squirrelmail/class/deliver/Deliver.class.php
+share/squirrelmail/class/deliver/Deliver_IMAP.class.php
+share/squirrelmail/class/deliver/Deliver_SMTP.class.php
+share/squirrelmail/class/deliver/Deliver_SendMail.class.php
+share/squirrelmail/class/deliver/index.php
+share/squirrelmail/class/helper/VCard.class.php
+share/squirrelmail/class/html.class.php
+share/squirrelmail/class/index.php
+share/squirrelmail/class/mime.class.php
+share/squirrelmail/class/mime/AddressStructure.class.php
+share/squirrelmail/class/mime/ContentType.class.php
+share/squirrelmail/class/mime/Disposition.class.php
+share/squirrelmail/class/mime/Language.class.php
+share/squirrelmail/class/mime/Message.class.php
+share/squirrelmail/class/mime/MessageHeader.class.php
+share/squirrelmail/class/mime/Rfc822Header.class.php
+share/squirrelmail/class/mime/SMimeMessage.class.php
+share/squirrelmail/class/mime/index.php
 share/squirrelmail/config/conf.pl
 share/squirrelmail/config/config_default.php
+share/squirrelmail/config/config_local.php
 share/squirrelmail/config/index.php
-share/squirrelmail/config/ri_once.pl
 share/squirrelmail/configure
-share/squirrelmail/contrib/RPM/RPM.readme
-share/squirrelmail/contrib/RPM/config.php.rh7
+share/squirrelmail/contrib/RPM/config.php.redhat
 share/squirrelmail/contrib/RPM/squirrelmail.conf
 share/squirrelmail/contrib/RPM/squirrelmail.cron
 share/squirrelmail/contrib/RPM/squirrelmail.spec
@@ -23,16 +40,16 @@ share/squirrelmail/data/index.php
 share/squirrelmail/doc/README.russian_apache
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.0.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.1.txt
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.10.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.2.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.3.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.4.txt
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.5
 share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.6.txt
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.7.txt
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.8.txt
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.9.txt
+share/squirrelmail/doc/ReleaseNotes/1.3/Notes-1.3.0.txt
+share/squirrelmail/doc/ReleaseNotes/1.3/Notes-1.3.1.txt
+share/squirrelmail/doc/ReleaseNotes/1.3/Notes-1.3.2.txt
 share/squirrelmail/doc/addressbook.txt
+share/squirrelmail/doc/authentication.txt
 share/squirrelmail/doc/compose.txt
 share/squirrelmail/doc/db-backend.txt
 share/squirrelmail/doc/ie_ssl.txt
@@ -49,7 +66,6 @@ share/squirrelmail/functions/abook_global_file.php
 share/squirrelmail/functions/abook_ldap_server.php
 share/squirrelmail/functions/abook_local_file.php
 share/squirrelmail/functions/addressbook.php
-share/squirrelmail/functions/array.php
 share/squirrelmail/functions/attachment_common.php
 share/squirrelmail/functions/auth.php
 share/squirrelmail/functions/constants.php
@@ -58,14 +74,16 @@ share/squirrelmail/functions/db_prefs.php
 share/squirrelmail/functions/display_messages.php
 share/squirrelmail/functions/file_prefs.php
 share/squirrelmail/functions/gettext.php
+share/squirrelmail/functions/global.php
+share/squirrelmail/functions/html.php
 share/squirrelmail/functions/i18n.php
 share/squirrelmail/functions/imap.php
 share/squirrelmail/functions/imap_general.php
 share/squirrelmail/functions/imap_mailbox.php
 share/squirrelmail/functions/imap_messages.php
+share/squirrelmail/functions/imap_parse.php
 share/squirrelmail/functions/imap_search.php
-share/squirrelmail/functions/imap_utf7_decode_local.php
-share/squirrelmail/functions/imap_utf7_encode_local.php
+share/squirrelmail/functions/imap_utf7_local.php
 share/squirrelmail/functions/index.php
 share/squirrelmail/functions/mailbox_display.php
 share/squirrelmail/functions/mime.php
@@ -73,10 +91,18 @@ share/squirrelmail/functions/options.php
 share/squirrelmail/functions/page_header.php
 share/squirrelmail/functions/plugin.php
 share/squirrelmail/functions/prefs.php
-share/squirrelmail/functions/smtp.php
 share/squirrelmail/functions/strings.php
 share/squirrelmail/functions/tree.php
 share/squirrelmail/functions/url_parser.php
+share/squirrelmail/help/bg_BG/FAQ.hlp
+share/squirrelmail/help/bg_BG/addresses.hlp
+share/squirrelmail/help/bg_BG/basic.hlp
+share/squirrelmail/help/bg_BG/compose.hlp
+share/squirrelmail/help/bg_BG/folders.hlp
+share/squirrelmail/help/bg_BG/main_folder.hlp
+share/squirrelmail/help/bg_BG/options.hlp
+share/squirrelmail/help/bg_BG/read_mail.hlp
+share/squirrelmail/help/bg_BG/search.hlp
 share/squirrelmail/help/ca_ES/FAQ.hlp
 share/squirrelmail/help/ca_ES/addresses.hlp
 share/squirrelmail/help/ca_ES/basic.hlp
@@ -168,6 +194,15 @@ share/squirrelmail/help/it_IT/main_folder.hlp
 share/squirrelmail/help/it_IT/options.hlp
 share/squirrelmail/help/it_IT/read_mail.hlp
 share/squirrelmail/help/it_IT/search.hlp
+share/squirrelmail/help/ja_JP/FAQ.hlp
+share/squirrelmail/help/ja_JP/addresses.hlp
+share/squirrelmail/help/ja_JP/basic.hlp
+share/squirrelmail/help/ja_JP/compose.hlp
+share/squirrelmail/help/ja_JP/folders.hlp
+share/squirrelmail/help/ja_JP/main_folder.hlp
+share/squirrelmail/help/ja_JP/options.hlp
+share/squirrelmail/help/ja_JP/read_mail.hlp
+share/squirrelmail/help/ja_JP/search.hlp
 share/squirrelmail/help/ko_KR/FAQ.hlp
 share/squirrelmail/help/ko_KR/addresses.hlp
 share/squirrelmail/help/ko_KR/basic.hlp
@@ -267,15 +302,6 @@ share/squirrelmail/help/th_TH/main_folder.hlp
 share/squirrelmail/help/th_TH/options.hlp
 share/squirrelmail/help/th_TH/read_mail.hlp
 share/squirrelmail/help/th_TH/search.hlp
-share/squirrelmail/help/zh_CN/FAQ.hlp
-share/squirrelmail/help/zh_CN/addresses.hlp
-share/squirrelmail/help/zh_CN/basic.hlp
-share/squirrelmail/help/zh_CN/compose.hlp
-share/squirrelmail/help/zh_CN/folders.hlp
-share/squirrelmail/help/zh_CN/main_folder.hlp
-share/squirrelmail/help/zh_CN/options.hlp
-share/squirrelmail/help/zh_CN/read_mail.hlp
-share/squirrelmail/help/zh_CN/search.hlp
 share/squirrelmail/images/down_pointer.png
 share/squirrelmail/images/index.php
 share/squirrelmail/images/minus.gif
@@ -285,14 +311,25 @@ share/squirrelmail/images/sec_remove_eng.png
 share/squirrelmail/images/sec_remove_es_ES.png
 share/squirrelmail/images/sec_remove_fr_FR.png
 share/squirrelmail/images/sec_remove_id_ID.png
+share/squirrelmail/images/sec_remove_ja_JP.png
 share/squirrelmail/images/sec_remove_ko_KR.png
 share/squirrelmail/images/sec_remove_lt_LT.png
 share/squirrelmail/images/sec_remove_ru.png
 share/squirrelmail/images/sec_remove_sl_SI.png
+share/squirrelmail/images/sec_remove_sr_YU.png
 share/squirrelmail/images/sm_logo.png
 share/squirrelmail/images/sort_none.png
 share/squirrelmail/images/up_pointer.png
+share/squirrelmail/include/index.php
+share/squirrelmail/include/load_prefs.php
+share/squirrelmail/include/options/display.php
+share/squirrelmail/include/options/folder.php
+share/squirrelmail/include/options/index.php
+share/squirrelmail/include/options/personal.php
+share/squirrelmail/include/validate.php
 share/squirrelmail/index.php
+share/squirrelmail/locale/ar/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/ar/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/bg_BG/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/bg_BG/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/ca_ES/LC_MESSAGES/squirrelmail.mo
@@ -303,6 +340,8 @@ share/squirrelmail/locale/da_DK/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/da_DK/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/de_DE/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/de_DE/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/el_GR/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/el_GR/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/es_ES/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/es_ES/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/et_EE/LC_MESSAGES/squirrelmail.mo
@@ -311,6 +350,9 @@ share/squirrelmail/locale/fi_FI/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/fi_FI/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/fr_FR/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/fr_FR/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/he_HE/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/he_IL/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/he_IL/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/hr_HR/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/hr_HR/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/hu_HU/LC_MESSAGES/squirrelmail.mo
@@ -322,6 +364,8 @@ share/squirrelmail/locale/is_IS/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/is_IS/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/it_IT/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/it_IT/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/ja_JP/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/ja_JP/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/ko_KR/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/ko_KR/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/lt_LT/LC_MESSAGES/squirrelmail.mo
@@ -357,11 +401,16 @@ share/squirrelmail/locale/tr_TR/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/tr_TR/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/uk_UA/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/uk_UA/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/vi_VN/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/vi_VN/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/zh_CN/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/zh_CN/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/zh_TW/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/zh_TW/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/plugins/README.plugins
+share/squirrelmail/plugins/abook_take/README
+share/squirrelmail/plugins/abook_take/setup.php
+share/squirrelmail/plugins/abook_take/take.php
 share/squirrelmail/plugins/administrator/INSTALL
 share/squirrelmail/plugins/administrator/auth.php
 share/squirrelmail/plugins/administrator/defines.php
@@ -399,6 +448,8 @@ share/squirrelmail/plugins/filters/index.php
 share/squirrelmail/plugins/filters/options.php
 share/squirrelmail/plugins/filters/setup.php
 share/squirrelmail/plugins/filters/spamoptions.php
+share/squirrelmail/plugins/fortune/INSTALL
+share/squirrelmail/plugins/fortune/setup.php
 share/squirrelmail/plugins/index.php
 share/squirrelmail/plugins/info/README
 share/squirrelmail/plugins/info/functions.php
@@ -416,6 +467,10 @@ share/squirrelmail/plugins/mail_fetch/index.php
 share/squirrelmail/plugins/mail_fetch/options.php
 share/squirrelmail/plugins/mail_fetch/setup.php
 share/squirrelmail/plugins/make_archive.pl
+share/squirrelmail/plugins/message_details/message_details_bottom.php
+share/squirrelmail/plugins/message_details/message_details_main.php
+share/squirrelmail/plugins/message_details/message_details_top.php
+share/squirrelmail/plugins/message_details/setup.php
 share/squirrelmail/plugins/newmail/HISTORY
 share/squirrelmail/plugins/newmail/README
 share/squirrelmail/plugins/newmail/index.php
@@ -486,7 +541,6 @@ share/squirrelmail/src/addressbook.php
 share/squirrelmail/src/compose.php
 share/squirrelmail/src/delete_message.php
 share/squirrelmail/src/download.php
-share/squirrelmail/src/draft_actions.php
 share/squirrelmail/src/empty_trash.php
 share/squirrelmail/src/folders.php
 share/squirrelmail/src/folders_create.php
@@ -494,21 +548,16 @@ share/squirrelmail/src/folders_delete.php
 share/squirrelmail/src/folders_rename_do.php
 share/squirrelmail/src/folders_rename_getname.php
 share/squirrelmail/src/folders_subscribe.php
-share/squirrelmail/src/global.php
 share/squirrelmail/src/help.php
 share/squirrelmail/src/image.php
 share/squirrelmail/src/index.php
 share/squirrelmail/src/left_main.php
-share/squirrelmail/src/load_prefs.php
 share/squirrelmail/src/login.php
 share/squirrelmail/src/move_messages.php
 share/squirrelmail/src/options.php
-share/squirrelmail/src/options_display.php
-share/squirrelmail/src/options_folder.php
 share/squirrelmail/src/options_highlight.php
 share/squirrelmail/src/options_identities.php
 share/squirrelmail/src/options_order.php
-share/squirrelmail/src/options_personal.php
 share/squirrelmail/src/printer_friendly_bottom.php
 share/squirrelmail/src/printer_friendly_main.php
 share/squirrelmail/src/printer_friendly_top.php
@@ -517,8 +566,9 @@ share/squirrelmail/src/redirect.php
 share/squirrelmail/src/right_main.php
 share/squirrelmail/src/search.php
 share/squirrelmail/src/signout.php
-share/squirrelmail/src/validate.php
 share/squirrelmail/src/vcard.php
+share/squirrelmail/src/view_header.php
+share/squirrelmail/src/view_text.php
 share/squirrelmail/src/webmail.php
 share/squirrelmail/themes/README.themes
 share/squirrelmail/themes/alien_glow.php
@@ -554,7 +604,6 @@ share/squirrelmail/themes/penguin.php
 share/squirrelmail/themes/plain_blue_theme.php
 share/squirrelmail/themes/purple_theme.php
 share/squirrelmail/themes/random.php
-share/squirrelmail/themes/saloon.php
 share/squirrelmail/themes/sandstorm_theme.php
 share/squirrelmail/themes/seaspray_theme.php
 share/squirrelmail/themes/servery_theme.php
@@ -576,20 +625,25 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/plugins/sent_subfolders
 @dirrm share/squirrelmail/plugins/newmail/sounds
 @dirrm share/squirrelmail/plugins/newmail
+@dirrm share/squirrelmail/plugins/message_details
 @dirrm share/squirrelmail/plugins/mail_fetch
 @dirrm share/squirrelmail/plugins/listcommands
 @dirrm share/squirrelmail/plugins/info
+@dirrm share/squirrelmail/plugins/fortune
 @dirrm share/squirrelmail/plugins/filters/bulkquery
 @dirrm share/squirrelmail/plugins/filters
 @dirrm share/squirrelmail/plugins/delete_move_next
 @dirrm share/squirrelmail/plugins/calendar
 @dirrm share/squirrelmail/plugins/bug_report
 @dirrm share/squirrelmail/plugins/administrator
+@dirrm share/squirrelmail/plugins/abook_take
 @dirrm share/squirrelmail/plugins
 @dirrm share/squirrelmail/locale/zh_TW/LC_MESSAGES
 @dirrm share/squirrelmail/locale/zh_TW
 @dirrm share/squirrelmail/locale/zh_CN/LC_MESSAGES
 @dirrm share/squirrelmail/locale/zh_CN
+@dirrm share/squirrelmail/locale/vi_VN/LC_MESSAGES
+@dirrm share/squirrelmail/locale/vi_VN
 @dirrm share/squirrelmail/locale/uk_UA/LC_MESSAGES
 @dirrm share/squirrelmail/locale/uk_UA
 @dirrm share/squirrelmail/locale/tr_TR/LC_MESSAGES
@@ -624,6 +678,8 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/locale/lt_LT
 @dirrm share/squirrelmail/locale/ko_KR/LC_MESSAGES
 @dirrm share/squirrelmail/locale/ko_KR
+@dirrm share/squirrelmail/locale/ja_JP/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ja_JP
 @dirrm share/squirrelmail/locale/it_IT/LC_MESSAGES
 @dirrm share/squirrelmail/locale/it_IT
 @dirrm share/squirrelmail/locale/is_IS/LC_MESSAGES
@@ -634,6 +690,10 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/locale/hu_HU
 @dirrm share/squirrelmail/locale/hr_HR/LC_MESSAGES
 @dirrm share/squirrelmail/locale/hr_HR
+@dirrm share/squirrelmail/locale/he_IL/LC_MESSAGES
+@dirrm share/squirrelmail/locale/he_IL
+@dirrm share/squirrelmail/locale/he_HE/LC_MESSAGES
+@dirrm share/squirrelmail/locale/he_HE
 @dirrm share/squirrelmail/locale/fr_FR/LC_MESSAGES
 @dirrm share/squirrelmail/locale/fr_FR
 @dirrm share/squirrelmail/locale/fi_FI/LC_MESSAGES
@@ -642,6 +702,8 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/locale/et_EE
 @dirrm share/squirrelmail/locale/es_ES/LC_MESSAGES
 @dirrm share/squirrelmail/locale/es_ES
+@dirrm share/squirrelmail/locale/el_GR/LC_MESSAGES
+@dirrm share/squirrelmail/locale/el_GR
 @dirrm share/squirrelmail/locale/de_DE/LC_MESSAGES
 @dirrm share/squirrelmail/locale/de_DE
 @dirrm share/squirrelmail/locale/da_DK/LC_MESSAGES
@@ -652,9 +714,12 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/locale/ca_ES
 @dirrm share/squirrelmail/locale/bg_BG/LC_MESSAGES
 @dirrm share/squirrelmail/locale/bg_BG
+@dirrm share/squirrelmail/locale/ar/LC_MESSAGES
+@dirrm share/squirrelmail/locale/ar
 @dirrm share/squirrelmail/locale
+@dirrm share/squirrelmail/include/options
+@dirrm share/squirrelmail/include
 @dirrm share/squirrelmail/images
-@dirrm share/squirrelmail/help/zh_CN
 @dirrm share/squirrelmail/help/th_TH
 @dirrm share/squirrelmail/help/sv_SE
 @dirrm share/squirrelmail/help/sr_YU
@@ -666,22 +731,29 @@ share/squirrelmail/themes/spice_of_life_lite.php
 @dirrm share/squirrelmail/help/nl_NL
 @dirrm share/squirrelmail/help/lt_LT
 @dirrm share/squirrelmail/help/ko_KR
+@dirrm share/squirrelmail/help/ja_JP
 @dirrm share/squirrelmail/help/it_IT
 @dirrm share/squirrelmail/help/id_ID
 @dirrm share/squirrelmail/help/fr_FR
 @dirrm share/squirrelmail/help/fi_FI
 @dirrm share/squirrelmail/help/es_ES
 @dirrm share/squirrelmail/help/en_US
-@dirrm share/squirrelmail/help/da_DK
 @dirrm share/squirrelmail/help/de_DE
+@dirrm share/squirrelmail/help/da_DK
 @dirrm share/squirrelmail/help/cs_CZ
 @dirrm share/squirrelmail/help/ca_ES
+@dirrm share/squirrelmail/help/bg_BG
 @dirrm share/squirrelmail/help
 @dirrm share/squirrelmail/functions
+@dirrm share/squirrelmail/doc/ReleaseNotes/1.3
 @dirrm share/squirrelmail/doc/ReleaseNotes/1.2
 @dirrm share/squirrelmail/doc/ReleaseNotes
 @dirrm share/squirrelmail/doc
 @dirrm share/squirrelmail/data
 @dirrm share/squirrelmail/contrib/RPM
 @dirrm share/squirrelmail/contrib
+@dirrm share/squirrelmail/class/mime
+@dirrm share/squirrelmail/class/helper
+@dirrm share/squirrelmail/class/deliver
+@dirrm share/squirrelmail/class
 @dirrm share/examples/squirrelmail
