@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2695 2004/12/05 20:45:33 wiz Exp $
+$NetBSD: TODO,v 1.2696 2004/12/05 21:02:20 he Exp $
 
 Suggested new packages
 ======================
@@ -738,7 +738,6 @@ Suggested package updates
 	o oss-3.99.1i
 	o overnet-1.0.1
 	o p5-Apache-ASP-2.57
-	o p5-Apache-DBILogConfig-0.02
 	o p5-Apache-Gallery-0.9.1
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-1.70_01
