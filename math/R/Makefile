@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2004/04/27 11:24:31 markd Exp $
+# $NetBSD: Makefile,v 1.53 2004/05/07 22:47:26 markd Exp $
 
 DISTNAME=		R-1.9.0
 CATEGORIES=		math
@@ -52,6 +52,10 @@ CONFIGURE_ENV+=		ac_cv_lib_blas_dgemm_=yes
 #
 USE_FORTRAN=		# defined
 USE_LANGUAGES=		c fortran
+
+# Package assumes it can append to files (specifically DESCRIPTION) that have
+# been installed SHAREMODE
+SHAREMODE=		644
 
 .include "../../mk/bsd.prefs.mk"
 
