@@ -1,115 +1,41 @@
-$NetBSD: patch-aa,v 1.2 1998/11/01 23:22:19 tron Exp $
+$NetBSD: patch-aa,v 1.3 1999/01/02 19:50:17 tron Exp $
 
-Make sure we always use our own (pkglibtool) version of libtool on NetBSD.
-
-Generalise the freebsd directory to be bsd.
-
---- configure	1998/10/05 15:33:19	1.1
-+++ configure	1998/10/05 15:34:46
-@@ -1934,7 +1934,8 @@
+--- configure.orig	Thu Dec 17 18:18:58 1998
++++ configure	Sat Jan  2 20:25:49 1999
+@@ -1951,6 +1951,7 @@
  
  
- 
--# Always use our own libtool.
-+# Always use our own libtool for NetBSD.
-+if false; then
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
- 
- 
-@@ -2014,6 +2015,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
-+fi
- 
- 
- 	
-@@ -3263,7 +3265,12 @@
- 	  libgtop_need_server=yes
- 	  ;;
- 	freebsd*)
--	  libgtop_sysdeps_dir=freebsd
-+	  libgtop_sysdeps_dir=bsd
-+	  libgtop_use_machine_h=yes
-+	  libgtop_need_server=yes
-+	  ;;
-+	netbsd*)
-+	  libgtop_sysdeps_dir=bsd
- 	  libgtop_use_machine_h=yes
- 	  libgtop_need_server=yes
- 	  ;;
-@@ -3381,7 +3388,7 @@
- 
- 
- 	saved_ldflags="$LDFLAGS"
--	saved_cppflags="$CPPFLAGS"
-+	saved_cppflags="$CPPFLAGS -I$LOCALBASE/include"
- 	LDFLAGS="$LDFLAGS $GNOME_LIBDIR"
- 
- 	echo $ac_n "checking for main in -lqthreads""... $ac_c" 1>&6
-@@ -3847,7 +3854,7 @@
- 	
- 
- 	LDFLAGS="$saved_ldflags $GUILE_LIBS"
--	CPPFLAGS="$saved_cppflags $GUILE_INCS"
-+	CPPFLAGS="$saved_cppflags $GUILE_INCS -I$LOCALBASE/include"
- 
- 	echo $ac_n "checking whether guile works""... $ac_c" 1>&6
- echo "configure:3854: checking whether guile works" >&5
-@@ -3895,7 +3902,7 @@
- 	fi
- 
- 	LDFLAGS="$saved_ldflags"
--	CPPFLAGS="$saved_cppflags"
-+	CPPFLAGS="$saved_cppflags -I$LOCALBASE/include"
- 
- 	
- 	
-@@ -4073,6 +4080,7 @@
- 
- 
- 
-+if false; then
  # Always use our own libtool.
++if false; then
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
  
-@@ -4153,6 +4161,7 @@
+ 
+@@ -2030,7 +2031,7 @@
+ ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
+ $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
+ || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
+-
++fi
+ 
+ 
+   # Check whether --enable-compile-warnings or --disable-compile-warnings was given.
+@@ -4391,6 +4392,7 @@
+ 
+ 
+ # Always use our own libtool.
++if false; then
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ 
+@@ -4470,6 +4472,7 @@
  ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig \
  $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
  || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
 +fi
  
  
- 
-@@ -7722,6 +7731,9 @@
- 	freebsd*)
- 	  fu_cv_sys_stat_statfs2_bsize=yes
- 	  ;;
-+	netbsd*)
-+	  fu_cv_sys_stat_statfs2_bsize=yes
-+	  ;;
- 	osf*)
- 	  fu_cv_sys_stat_statfs3_osf1=yes
- 	  ;;
-@@ -8882,7 +8894,7 @@
- sysdeps/osf1/Makefile
- sysdeps/linux/Makefile
- sysdeps/kernel/Makefile
--sysdeps/freebsd/Makefile
-+sysdeps/bsd/Makefile
- src/Makefile
- src/daemon/Makefile
- src/inodedb/Makefile
-@@ -9107,7 +9119,7 @@
- sysdeps/osf1/Makefile
- sysdeps/linux/Makefile
- sysdeps/kernel/Makefile
--sysdeps/freebsd/Makefile
-+sysdeps/bsd/Makefile
- src/Makefile
- src/daemon/Makefile
- src/inodedb/Makefile
-@@ -9151,10 +9163,10 @@
+ # Check whether --with-glib-prefix or --without-glib-prefix was given.
+@@ -9890,10 +9895,10 @@
      top_srcdir="$ac_dots$ac_given_srcdir" ;;
    esac
  
