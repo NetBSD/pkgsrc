@@ -1,0 +1,16 @@
+--- src/build_sources/Makefile.in.orig	Sun Aug 23 07:09:33 1998
++++ src/build_sources/Makefile.in	Mon Aug 24 20:03:46 1998
+@@ -324,10 +324,12 @@
+ 
+ $(gensourcedir)/%.h: $(srcdir)/%.h.m4
+ 	rm -f $(gensourcedir)/$(notdir $*).h
+-	m4 $(srcdir)/$(notdir $*).h.m4 >$(gensourcedir)/$(notdir $*).h
++	gm4 $(srcdir)/$(notdir $*).h.m4 >$(gensourcedir)/$(notdir $*).h
+ 
+ $(gensourcedir)/%.cc $(gensourcedir)/%.h: $(srcdir)/../%.gen_h $(srcdir)/../gensig/gensig.cc
+ 	../gensig/gensig $(srcdir)/../$(notdir $*).gen_h $(gensourcedir)/$(notdir $*)
++	perl -pi -e 's/^#line.*$$//' $(gensourcedir)/$(notdir $*).h
++	perl -pi -e 's/^#line.*$$//' $(gensourcedir)/$(notdir $*).cc
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
