@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1 2000/03/07 23:03:13 tron Exp $
+$NetBSD: patch-ah,v 1.2 2001/05/06 18:23:52 rh Exp $
 
 --- libxmms/util.c.orig	Mon Nov 15 17:50:37 1999
-+++ libxmms/util.c	Tue Mar  7 23:53:13 2000
++++ libxmms/util.c
 @@ -56,7 +56,7 @@
  
  gboolean xmms_check_realtime_priority(void)
@@ -11,3 +11,12 @@ $NetBSD: patch-ah,v 1.1 2000/03/07 23:03:13 tron Exp $
  #ifdef __FreeBSD__
  	/*
  	 * Check if priority scheduling is enabled in the kernel
+@@ -94,5 +94,8 @@
+ 	usec -= tv.tv_sec * 1000;
+ 	req.tv_usec = usec;
+ 	select(0,NULL,NULL,NULL,&tv);
++#endif
++#ifdef __NetBSD__
++	pthread_yield_np();
+ #endif
+ }

@@ -1,8 +1,32 @@
-$NetBSD: patch-ai,v 1.1 2000/03/12 20:36:27 tron Exp $
+$NetBSD: patch-ai,v 1.2 2001/05/06 18:23:52 rh Exp $
 
 --- xmms/main.c.orig	Mon Jan 31 19:35:16 2000
-+++ xmms/main.c	Sun Mar 12 14:58:05 2000
-@@ -2945,7 +2945,7 @@
++++ xmms/main.c
+@@ -34,6 +34,23 @@
+ #include "libxmms/util.h"
+ #include "libxmms/dga.h"
+ 
++#ifdef __NetBSD__
++#include <gtk/gtk.h>
++#include <pthread.h>
++
++/*
++ * NetBSD uses non-preemptive pth, so we yield the processor periodically
++ */
++
++gint
++pth_nbschedule (gpointer data)
++{
++	pthread_yield_np();
++
++	return TRUE;
++}
++#endif
++
+ GtkWidget *mainwin, *mainwin_filesel = NULL, *mainwin_url_window = NULL;
+ GtkWidget *mainwin_jtt = NULL, *mainwin_jtf = NULL;
+ GtkItemFactory *mainwin_options_menu, *mainwin_songname_menu, *mainwin_vis_menu;
+@@ -2945,7 +2962,7 @@
  	gchar *filename;
  	gint i;
  	gboolean have_display = FALSE;
@@ -11,7 +35,7 @@ $NetBSD: patch-ai,v 1.1 2000/03/12 20:36:27 tron Exp $
  	struct sched_param sparam;
  
  #endif
-@@ -2988,7 +2988,7 @@
+@@ -2988,7 +3005,7 @@
  
  	if (geteuid() == 0)
  	{
@@ -20,3 +44,15 @@ $NetBSD: patch-ai,v 1.1 2000/03/12 20:36:27 tron Exp $
  		if (cfg.use_realtime)
  		{
  			sparam.sched_priority = sched_get_priority_max(SCHED_RR);
+@@ -3106,6 +3123,11 @@
+ 	playlist_start_get_info_thread();
+ 
+ 	sm_init(argc, argv);
++
++#ifdef __NetBSD__
++	gtk_timeout_add (200, pth_nbschedule, NULL);
++#endif
++
+ 	gtk_main();
+ 
+ 	return 0;

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2001/02/16 13:30:54 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2001/05/06 18:23:51 rh Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.0.1
+PKGNAME=	${DISTNAME}nb1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.xmms.org/xmms/1.0/ \
 		ftp://ftp.uk.xmms.org/xmms/1.0/ \
@@ -19,16 +20,16 @@ DEPENDS+=	gtk+>=1.2.7:../../x11/gtk
 DEPENDS+=	libmikmod>=3.1.7:../libmikmod
 DEPENDS+=	libxml>=1.8.5:../../textproc/libxml
 
-BROKEN=		Compiles, but does not work; probably threads problem. See pkg/11091.
-
 USE_LIBTOOL=	yes
 USE_X11=	yes
 USE_MESA=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --without-gnome
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}" \
-		XML_CONFIG="${LOCALBASE}/bin/xml-config"
+
+CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-D_POSIX_THREAD_SYSCALL_SOFT=1
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS}"
+CONFIGURE_ENV+=	XML_CONFIG="${LOCALBASE}/bin/xml-config"
+CONFIGURE_ARGS+=--without-gnome
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,0 +1,23 @@
+$NetBSD: patch-af,v 1.3 2001/05/06 18:23:52 rh Exp $
+
+--- Output/OSS/audio.c.orig	Sun May  6 19:45:56 2001
++++ Output/OSS/audio.c
+@@ -574,10 +574,16 @@
+ 	unpause = FALSE;
+ 	remove_prebuffer = FALSE;
+ 
++#ifdef __NetBSD__
++#define	DSPNAME	"/dev/sound"
++#else
++#define	DSPNAME	"/dev/dsp"
++#endif
++
+ 	if (oss_cfg.audio_device > 0)
+-		device_name = g_strdup_printf("/dev/dsp%d", oss_cfg.audio_device);
++		device_name = g_strdup_printf(DSPNAME "%d", oss_cfg.audio_device);
+ 	else
+-		device_name = g_strdup("/dev/dsp");
++		device_name = g_strdup(DSPNAME);
+ 	fd = open(device_name, O_WRONLY);
+ 	if (fd == -1)
+ 	{
