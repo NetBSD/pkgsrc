@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/05/06 13:50:20 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/06/28 14:08:56 jmmv Exp $
 lib/pkgconfig/gnome-icon-theme.pc
 share/icons/gnome/12x12/emblems/emblem-symbolic-link.png
 share/icons/gnome/12x12/filesystems/gnome-fs-directory-accept.png
@@ -851,6 +851,7 @@ share/icons/hicolor/16x16/stock/io/stock_save-as.png
 share/icons/hicolor/16x16/stock/io/stock_save-pdf.png
 share/icons/hicolor/16x16/stock/io/stock_save-template.png
 share/icons/hicolor/16x16/stock/io/stock_save.png
+share/icons/hicolor/16x16/stock/io/stock_save_as.png
 share/icons/hicolor/16x16/stock/io/stock_up-one-dir.png
 share/icons/hicolor/16x16/stock/media/stock_effects-sound.png
 share/icons/hicolor/16x16/stock/media/stock_insert-video-plugin.png
@@ -1102,6 +1103,7 @@ share/icons/hicolor/16x16/stock/table/stock_insert-cells.png
 share/icons/hicolor/16x16/stock/table/stock_insert-columns.png
 share/icons/hicolor/16x16/stock/table/stock_insert-names-define.png
 share/icons/hicolor/16x16/stock/table/stock_insert-rows.png
+share/icons/hicolor/16x16/stock/table/stock_select-cell.png
 share/icons/hicolor/16x16/stock/table/stock_select-column.png
 share/icons/hicolor/16x16/stock/table/stock_select-row.png
 share/icons/hicolor/16x16/stock/table/stock_select-table.png
@@ -1637,6 +1639,7 @@ share/icons/hicolor/24x24/stock/io/stock_save-as.png
 share/icons/hicolor/24x24/stock/io/stock_save-pdf.png
 share/icons/hicolor/24x24/stock/io/stock_save-template.png
 share/icons/hicolor/24x24/stock/io/stock_save.png
+share/icons/hicolor/24x24/stock/io/stock_save_as.png
 share/icons/hicolor/24x24/stock/media/stock_effects-sound.png
 share/icons/hicolor/24x24/stock/media/stock_insert-video-plugin.png
 share/icons/hicolor/24x24/stock/media/stock_line_in.png
@@ -1823,6 +1826,7 @@ share/icons/hicolor/24x24/stock/table/stock_insert-cells.png
 share/icons/hicolor/24x24/stock/table/stock_insert-columns.png
 share/icons/hicolor/24x24/stock/table/stock_insert-names-define.png
 share/icons/hicolor/24x24/stock/table/stock_insert-rows.png
+share/icons/hicolor/24x24/stock/table/stock_select-cell.png
 share/icons/hicolor/24x24/stock/table/stock_select-column.png
 share/icons/hicolor/24x24/stock/table/stock_select-row.png
 share/icons/hicolor/24x24/stock/table/stock_select-table.png
