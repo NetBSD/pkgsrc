@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.5 2003/07/10 19:41:20 salo Exp $
+$NetBSD: patch-ag,v 1.6 2004/04/10 20:42:11 salo Exp $
 
 --- system.mk.orig	Thu Dec 28 15:08:05 2000
 +++ system.mk	Thu Jul 10 21:30:50 2003
@@ -42,7 +42,7 @@ $NetBSD: patch-ag,v 1.5 2003/07/10 19:41:20 salo Exp $
  # libtu/ uses POSIX_SOURCE
  
 -POSIX_SOURCE=-ansi -D_POSIX_SOURCE
-+POSIX_SOURCE=-D_POSIX_SOURCE
++POSIX_SOURCE=-D_POSIX_SOURCE -D_ISOC99_SOURCE
  
  # and . (ion) XOPEN_SOURCE.
  # There is variation among systems what should be used and how they interpret
