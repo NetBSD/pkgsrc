@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.7 2003/07/13 13:52:56 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.8 2003/12/09 06:54:29 xtraeme Exp $
 
 .if !defined(LINC_BUILDLINK2_MK)
 LINC_BUILDLINK2_MK=	# defined
@@ -13,7 +13,6 @@ BUILDLINK_FILES.linc=	include/linc-1.0/linc/*
 BUILDLINK_FILES.linc+=	lib/liblinc.*
 
 .include "../../devel/glib2/buildlink2.mk"
-.include "../../devel/pkgconfig/buildlink2.mk"
 
 BUILDLINK_TARGETS+=	linc-buildlink
 
