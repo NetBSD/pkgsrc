@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/01/05 11:00:26 adam Exp $
+# $NetBSD: Makefile,v 1.28 2005/03/22 08:46:26 adam Exp $
 
 DISTNAME=	atari800-1.3.5
 CATEGORIES=	emulators
@@ -16,11 +16,11 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
-USE_BUILDLINK3=		YES
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		make
-USE_X11=		YES
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--target=x11
+GNU_CONFIGURE=		yes
+
+.include "options.mk"
 
 # override HOME to avoid picking up a bad ${HOME}/.atari800 during the build
 MAKE_FLAGS+=	HOME=${WRKSRC}
@@ -34,6 +34,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/atari800
 	${INSTALL_DATA} ${WRKDIR}/*.rom ${WRKDIR}/*.xfd ${WRKDIR}/*.atr \
 		${WRKSRC}/atari800.cfg ${PREFIX}/share/atari800/
+
+.include "../../devel/zlib/buildlink3.mk"
 
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
