@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/02/01 04:44:49 jtb Exp $
+# $NetBSD: Makefile,v 1.3 2001/02/02 02:06:43 jtb Exp $
 
 DISTNAME=		rlab-2.1.05
 CATEGORIES=		math
@@ -9,6 +9,7 @@ HOMEPAGE=		http://rlab.sourceforge.net/
 
 DEPENDS+=		boehm-gc>=5.3:../../devel/boehm-gc
 DEPENDS+=		readline>=4.0:../../devel/readline
+DEPENDS+=		superlu-[0-9]*:../../math/superlu
 BUILD_DEPENDS+=		autoconf:../../devel/autoconf
 
 GNU_CONFIGURE=		YES
@@ -16,6 +17,7 @@ USE_FORTRAN=		YES
 
 EVAL_PREFIX+=		GC_PREFIX=boehm-gc
 CONFIGURE_ARGS+=	"--with-GC=${GC_PREFIX}"
+CONFIGURE_ARGS+=	"--enable-SUPERLU"
 
 PLIST_SRC=		${PKGDIR}/PLIST
 
