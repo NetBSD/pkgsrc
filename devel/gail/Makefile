@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/02/11 10:43:59 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2004/02/13 17:05:35 jmmv Exp $
 #
 
 DISTNAME=	gail-1.4.1
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
