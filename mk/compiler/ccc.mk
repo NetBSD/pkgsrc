@@ -1,4 +1,4 @@
-# $NetBSD: ccc.mk,v 1.2 2004/11/20 05:54:36 grant Exp $
+# $NetBSD: ccc.mk,v 1.3 2004/11/23 00:46:26 dmcmahill Exp $
 
 .if !defined(COMPILER_CCC_MK)
 COMPILER_CCC_MK=	defined
@@ -26,6 +26,7 @@ _CCC_CC=		${_CCC_DIR}/cc
 _CCC_LINKS+=	_CCC_CC
 PKG_CC=			${_CCC_CC}
 CC=			${PKG_CC:T}
+CCPATH=			/usr/bin/cc
 .endif
 
 .if exists(/usr/bin/cxx)
@@ -33,6 +34,7 @@ _CCC_CXX=		${_CCC_DIR}/cxx
 _CCC_LINKS+=		_CCC_CXX
 PKG_CXX=		${_CCC_CXX}
 CXX=			${PKG_CXX:T}
+CXXPATH=		/usr/bin/cxx
 .endif
 
 .if exists(/usr/bin/cc) && !defined(CC_VERSION_STRING)
