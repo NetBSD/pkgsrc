@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 1998/12/13 21:46:52 tron Exp $
+# $NetBSD: Makefile,v 1.8 1998/12/15 09:46:59 tron Exp $
 #
 
 DISTNAME=	gnome-libs-0.30.1
@@ -22,6 +22,8 @@ DEPENDS+=	ORBit-0.3.0:../../corba/ORBit
 NOT_FOR_ARCHS=	alpha	# problems with gtk
 
 CONFLICTS=	gnome-libs-0.27
+
+IGNORE=		"can\'t be built before a new snapshot is released."
 
 GNU_CONFIGURE=	yes
 USE_X11=	yes
