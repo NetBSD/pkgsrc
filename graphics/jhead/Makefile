@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2001/10/14 07:14:24 veego Exp $
+# $NetBSD: Makefile,v 1.4 2001/12/23 04:38:05 toshii Exp $
 #
 
 DISTNAME=	jhead
-PKGNAME=	jhead-1.4
+PKGNAME=	jhead-1.5
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.sentex.net/~mwandel/jhead/
 EXTRACT_SUFX=	.zip
