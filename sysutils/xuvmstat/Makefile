@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/02/19 12:15:16 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2001/02/19 13:26:21 wiz Exp $
 #
 
-DISTNAME=	xuvmstat20010217
-PKGNAME=	${DISTNAME:S/2/-2/}
+DISTNAME=	${PKGNAME:S/-//}
+PKGNAME=	xuvmstat-20010217
 CATEGORIES=	sysutil
 MASTER_SITES=	http://www.netbsd.org/~chuck/gz/
 
