@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/21 06:32:05 xtraeme Exp $
+lib/AbiWord-2.0/plugins/libAbiApplix.la
+lib/AbiWord-2.0/plugins/libAbiBMP.la
+lib/AbiWord-2.0/plugins/libAbiBZ2.la
+lib/AbiWord-2.0/plugins/libAbiClarisWorks.la
+lib/AbiWord-2.0/plugins/libAbiCommand.la
+lib/AbiWord-2.0/plugins/libAbiDocBook.la
+lib/AbiWord-2.0/plugins/libAbiEML.la
+lib/AbiWord-2.0/plugins/libAbiGdkPixbuf.la
+lib/AbiWord-2.0/plugins/libAbiJPEG.la
+lib/AbiWord-2.0/plugins/libAbiKWord.la
+lib/AbiWord-2.0/plugins/libAbiLaTeX.la
+lib/AbiWord-2.0/plugins/libAbiMSWrite.la
+lib/AbiWord-2.0/plugins/libAbiWML.la
+lib/AbiWord-2.0/plugins/libAbiXHTML.la
+lib/AbiWord-2.0/plugins/libAbiXSLFO.la
+@dirrm lib/AbiWord-2.0/plugins
+@dirrm lib/AbiWord-2.0
