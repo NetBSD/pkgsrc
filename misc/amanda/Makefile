@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1997/10/13 15:06:07 agc Exp $
+# $NetBSD: Makefile,v 1.4 1997/10/15 16:54:39 agc Exp $
 # New ports collection makefile for:	amanda
 # Version required:			2.3.0
 # Date created:				28th Feb 1995
@@ -19,6 +19,11 @@ MAN8=		amanda.8 amadmin.8 amcheck.8 amcleanup.8 amdump.8 \
 
 pre-configure:
 	echo "${CFLAGS}" > /tmp/build-ports-misc-amanda-cflags
+	find ${WRKDIR} -type f -print|xargs grep -l '/usr/local' > ${WRKDIR}/prefix-list
+	for f in `cat ${WRKDIR}/prefix-list`; do \
+		${SED} -e 's:/usr/local:'${PREFIX}':g' < $$f > $$f.pdone && mv $$f.pdone $$f; \
+	done
+	rm ${WRKDIR}/prefix-list
 
 post-install:
 	mkdir -p ${PREFIX}/share/examples/amanda
