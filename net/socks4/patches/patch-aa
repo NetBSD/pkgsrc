@@ -1,0 +1,82 @@
+--- Makefile.orig	Thu Sep  7 03:24:02 1995
++++ Makefile	Thu Jun 11 14:50:45 1998
+@@ -19,7 +19,7 @@
+ # It should be this current directory.
+ 
+ # If your system has getcwd() but no getwd(), uncomment the next line:
+-#GETCWD=-DGETCWD
++GETCWD=-DGETCWD
+ 
+ #If your system doesn't have waitpid(), uncomment the nextline:
+ #NO_WAITPID=-DNO_WAITPID
+@@ -43,16 +43,16 @@
+ 
+ # Define RCMD and SUPPORT_RCMD if you want to support Rrcmd, which is required
+ # for SOCKSified rlogin, rsh, and rcp.
+-#RCMD=Rrcmd.o
+-#SUPPORT_RCMD=-DSUPPORT_RCMD
++RCMD=Rrcmd.o
++SUPPORT_RCMD=-DSUPPORT_RCMD
+ 
+ # Define FOR_PS if your system is not SYSV and you want to have the
+ # command 'ps' show some details of sockd's activity.
+ #FOR_PS=-DFOR_PS
+ 
+ # optimization flag for cc
+-OPTIMIZE=-g
+-#OPTIMIZE=-O
++#OPTIMIZE=-g
++OPTIMIZE=-O
+ # Be careful with the OPTIMIZE flag. SunPro's SC2.0.1, for example, is
+ # knwon to produce incorrect code when -O is used.
+ 
+@@ -73,13 +73,13 @@
+ #BIND_RESOLVER=-DBIND_RESOLVER
+ 
+ # Directory into which to install the man pages
+-MAN_DEST_DIR = /usr/local/man
++MAN_DEST_DIR = ${PREFIX}/man
+ 
+ # Directory into which the SOCKS server should be installed
+-SERVER_BIN_DIR = /usr/etc
++SERVER_BIN_DIR = ${PREFIX}/libexec
+ 
+ # Directory into the client programs should be installed
+-CLIENTS_BIN_DIR = /usr/local/bin
++CLIENTS_BIN_DIR = ${PREFIX}/bin
+ 
+ # SunOS 4.1.x should use
+ #CC=cc
+@@ -174,13 +174,13 @@
+ #RESOLV_LIB=-linet -lc_s
+ 
+ # netBSD should use
+-#OTHER_CFLAGS = $(GETCWD) $(SHORTENED_RBIND) $(FASCIST) $(TRY_PASV)
+-#CC=cc
+-#RANLIB=ranlib
+-#OS=netbsd0.9
+-#INSTALL=install
+-#GETPASS=
+-#RESOLV_LIB=
++OTHER_CFLAGS = $(GETCWD) $(SHORTENED_RBIND) $(FASCIST) $(TRY_PASV)
++CC=cc
++RANLIB=ranlib
++OS=netbsd0.9
++INSTALL=install -c
++GETPASS=
++RESOLV_LIB=
+ 
+ # FreeBSD should use:
+ #CC=cc
+@@ -413,3 +413,11 @@
+ 		( cd $$i ; $(MAKE) clean) done
+ 
+ 
++install.conf:
++	${INSTALL} -m 0644 socks.conf ${PREFIX}/etc
++
++install.lib:
++	${INSTALL} -m 0644 lib/libsocks.a ${PREFIX}/lib/libsocks4.a
++	${RANLIB} ${PREFIX}/lib/libsocks4.a
++
++install: install.server install.clients install.man install.conf install.lib
