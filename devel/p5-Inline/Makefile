@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/09/06 03:33:18 kim Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/05 22:16:25 jlam Exp $
 #
 
 DISTNAME=     	Inline-0.44
@@ -14,7 +14,9 @@ COMMENT=	Perl5 module for writing Perl subroutines in other languages
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Parse-RecDescent-[0-9]*:../../devel/p5-Parse-RecDescent
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Inline/.packlist
 
 .include "../../lang/perl5/module.mk"

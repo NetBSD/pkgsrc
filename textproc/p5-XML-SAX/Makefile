@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/17 22:54:41 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/01/05 22:16:25 jlam Exp $
 
 DISTNAME=	XML-SAX-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,11 @@ COMMENT=	Perl interface to the SAX2 XML Parser
 DEPENDS+=	p5-XML-NamespaceSupport>=0.03:../../textproc/p5-XML-NamespaceSupport
 DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/XML/SAX/.packlist
+MAKE_ENV+=		PERL5LIB="${PREFIX}/${PERL5_SUB_INSTALLSITELIB}"
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
