@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2002/04/15 15:23:19 christos Exp $
+# $NetBSD: Makefile,v 1.53 2002/04/24 17:48:29 atatat Exp $
 #
 
-DISTNAME=		lsof_4.62
-PKGNAME=		lsof-4.62
+DISTNAME=		lsof_4.63
+PKGNAME=		lsof-4.63
 TMPWRK=			${WRKDIR}/${DISTNAME}
 WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}
 CATEGORIES=		sysutils
