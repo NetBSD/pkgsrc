@@ -1,13 +1,27 @@
-$NetBSD: patch-aa,v 1.1 1998/08/18 21:54:39 tron Exp $
-
---- Imakefile.orig	Thu May 15 13:38:25 1997
-+++ Imakefile	Tue Aug 18 01:44:23 1998
-@@ -8,3 +8,3 @@
+--- Imakefile.orig	Thu May 15 22:38:25 1997
++++ Imakefile	Wed Aug 19 00:21:21 1998
+@@ -6,15 +6,15 @@
+ 
+ XCOMM Install directory:
  
 -LOCALBINDIR=/usr/X11/bin
-+LOCALBINDIR=$(X11BASE)/bin
- ETCDIR=/etc/X11/xdm
-@@ -25,4 +25,4 @@
+-ETCDIR=/etc/X11/xdm
++LOCALBINDIR=${X11BASE}/bin
++ETCDIR=${X11BASE}/lib/X11/xdm
+ 
+ XCOMM ***** No need to touch anything below this! *****
+ 
+ XCOMM Compile directives
+ 
+ XCOMM *** Remove following line if you don't have XPM!
+-DEFINES=-DHAS_XPM
++DEFINES=-DHAS_XPM -DX11BASE=\"${X11BASE}\"
+ 
+ AllTarget($(PROGRAMS))
+ SingleProgramTarget(xbanner, backg.o colors.o effect.o linger.o pix.o plasma.o ripples.o util.o xbanner.o xres.o , /**/ , -lXpm -lX11 -lm )
+@@ -23,6 +23,6 @@
+ SingleProgramTarget(random_effect, random_effect.o , /**/ , /**/ )
+ 
  XCOMM Install directives
 -InstallTarget(install,xbanner, --strip --mode "0755" --owner root --group bin , $(LOCALBINDIR))
 -InstallTarget(install,freetemp, --strip --mode "0755" --owner root --group bin , $(LOCALBINDIR))
