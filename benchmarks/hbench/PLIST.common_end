@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.common_end,v 1.1 2005/02/21 20:51:21 veego Exp $
+@dirrm bin/hbench/${LOWER_OPSYS}${OS_VERSION}-${MACHINE_ARCH}
+@dirrm bin/hbench
+@dirrm share/doc/hbench
+@dirrm share/hbench/Results
+@dirrm share/hbench/conf
+@dirrm share/hbench
