@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1212 2003/12/16 07:53:44 recht Exp $
+$NetBSD: TODO,v 1.1213 2003/12/16 08:07:15 recht Exp $
 
 Suggested new packages
 ======================
@@ -251,7 +251,6 @@ Suggested package updates
 	o p5-BSD-Resource-1.23 [grant]
 	o p5-CGI-3.00
 	o p5-CGI-Application-3.1
-	o p5-Socket6 [pkg/23764]
 	o pdmenu-1.2.81
 	o plib-1.7.0
 	o ploticus-2.20
