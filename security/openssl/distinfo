@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2003/09/10 01:57:06 jlam Exp $
+$NetBSD: distinfo,v 1.21 2003/09/10 16:05:09 jlam Exp $
 
 SHA1 (openssl-0.9.6g.tar.gz) = 5b3cdad1d33134c97f659a8ad5dbf4ca4cf3d9c8
 Size (openssl-0.9.6g.tar.gz) = 2170570 bytes
@@ -6,7 +6,7 @@ SHA1 (openssl-0.9.6g-20020810-netbsd.patch.gz) = 37cf5db32ba045b8a23af71ea95ab2f
 Size (openssl-0.9.6g-20020810-netbsd.patch.gz) = 27608 bytes
 SHA1 (patch-aa) = c4766edba4704374ae67d75c2f9454bc70782eea
 SHA1 (patch-ab) = 9bdac032996bd97834b00cb661f79c00dc31bac1
-SHA1 (patch-ac) = cae2a44ac400833cef8b74fb051b5ef51a21436c
+SHA1 (patch-ac) = 3d8fcb927da1dcf51a87b5c0cd89fadccafe0955
 SHA1 (patch-ad) = 950d57633fcb494564641f9b7e6385b96912c05d
 SHA1 (patch-ae) = f4bf6ae5aa41b55d9978376e4e50ee10c10dd288
 SHA1 (patch-af) = 25481e491acd7c2e3cd9587fe038a37e41071a24
