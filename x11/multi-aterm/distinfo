@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/07/02 13:28:30 jmmv Exp $
+
+SHA1 (multi-aterm-0.0.4.tar.gz) = a0d5843b5d98ba29c873d8a37c7676d5686a7ec1
+Size (multi-aterm-0.0.4.tar.gz) = 214408 bytes
+SHA1 (patch-aa) = 4d2cc181e0f9c6be7fc84a4bdb9819d853dd5b6a
