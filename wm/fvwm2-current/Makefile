@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/05/14 13:36:07 zuntum Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/25 09:49:49 zuntum Exp $
 #
 
 DISTNAME=	fvwm-${FVWM_VERSION}
@@ -21,7 +21,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 CONFLICTS=	fvwm-2.*
 
-FVWM_VERSION=	2.3.32
+FVWM_VERSION=	2.3.33
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=	--with-xpm-includes=${XPMDIR}/include
 CONFIGURE_ARGS+=	--with-readline-includes=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-rplay-includes=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-iconpath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11BASE}/include/X11/bitmaps:${X11BASE}/include/X11/pixmaps
+CONFIGURE_ARGS+=	--without-gnome
 
 post-extract:
 	cd ${WRKDIR} && ${MKDIR} icons && cd icons && \
