@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/08/07 11:41:49 seb Exp $
+# $NetBSD: Makefile,v 1.13 2003/08/07 11:42:25 seb Exp $
 #
 
 DISTNAME=	tnt-1.9.1
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://excelsior.kullen.rwth-aachen.de/pub/packet_radio/tnt/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wulf@ping.net.au
-HOMEPAGE=	http://excelsior.kullen.rwth-aachen.de
+HOMEPAGE=	http://excelsior.kullen.rwth-aachen.de/
 COMMENT=	Amateur packet radio terminal program for TNC2, AEA PK232 and PK88
 
 DEPENDS+=	dialog>=0.6z:../../misc/dialog
