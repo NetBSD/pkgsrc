@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2000/09/29 06:37:37 rh Exp $
+
+--- configure.orig	Fri Sep 29 08:31:22 2000
++++ configure
+@@ -2724,7 +2724,7 @@
+   echo $ac_n "checking for BONOBO - version >= $min_bonobo_version""... $ac_c" 1>&6
+ echo "configure:2726: checking for BONOBO - version >= $min_bonobo_version" >&5
+   no_bonobo=""
+-  if test "$GNOME_CONFIG" = "no" ; then
++  if true ; then
+     no_bonobo=yes
+   else
+     BONOBO_CFLAGS=`$GNOME_CONFIG $bonoboconf_args --cflags bonobo`
