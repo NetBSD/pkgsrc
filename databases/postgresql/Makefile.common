@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2001/05/24 08:54:27 jlam Exp $
+# $NetBSD: Makefile.common,v 1.17 2001/05/25 14:56:34 jlam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution.
@@ -79,6 +79,9 @@ CONFIGURE_ENV+=		CPPFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		LIBS="${LIBS}"
 MAKE_ENV+=		CUSTOM_COPT="${CFLAGS}"
 
+BUILDLINK_INCDIR=	${WRKDIR}/include
+BUILDLINK_LIBDIR=	${WRKDIR}/lib
+
 CPPFLAGS+=		-I${BUILDLINK_INCDIR}
 CFLAGS+=		-I${BUILDLINK_INCDIR}
 LDFLAGS+=		-L${BUILDLINK_LIBDIR}
@@ -91,7 +94,8 @@ LDFLAGS+=		-L${BUILDLINK_LIBDIR}
 CFLAGS+=		-L${BUILDLINK_LIBDIR}
 
 post-extract:
-	${MKDIR} ${BUILDLINK_INCDIR} ${BUILDLINK_LIBDIR}
+	${MKDIR} ${BUILDLINK_INCDIR}
+	${MKDIR} ${BUILDLINK_LIBDIR}
 	if [ -d ${WRKSRC}/src ]; then					\
 		${RM} -f ${WRKSRC}/src/Makefile.custom;			\
 		${CP} -f ${COMMON_FILESDIR}/Makefile.custom		\
