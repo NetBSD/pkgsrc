@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/18 20:52:34 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/03/25 15:35:48 wiz Exp $
 bin/bdftops
 bin/dvipdf
 bin/eps2eps
@@ -72,14 +72,10 @@ man/man1/ps2pdfwr.1
 man/man1/ps2ps.1
 man/man1/wftopfa.1
 share/doc/html/ghostscript/API.htm
-share/doc/html/ghostscript/Bug-form.htm
-share/doc/html/ghostscript/Bug-info.htm
 share/doc/html/ghostscript/C-style.htm
 share/doc/html/ghostscript/CJK.htm
 share/doc/html/ghostscript/CJKTTCID.htm
 share/doc/html/ghostscript/Changes.htm
-share/doc/html/ghostscript/Commprod.htm
-share/doc/html/ghostscript/Copying.htm
 share/doc/html/ghostscript/Current.htm
 share/doc/html/ghostscript/DLL.htm
 share/doc/html/ghostscript/Develop.htm
@@ -110,12 +106,10 @@ share/doc/html/ghostscript/Ps-style.htm
 share/doc/html/ghostscript/Ps2epsi.htm
 share/doc/html/ghostscript/Ps2pdf.htm
 share/doc/html/ghostscript/Psfiles.htm
-share/doc/html/ghostscript/Public.htm
 share/doc/html/ghostscript/README
 share/doc/html/ghostscript/Readme.htm
 share/doc/html/ghostscript/Release.htm
 share/doc/html/ghostscript/Source.htm
-share/doc/html/ghostscript/Tester.htm
 share/doc/html/ghostscript/Unix-lpr.htm
 share/doc/html/ghostscript/Use.htm
 share/doc/html/ghostscript/Xfonts.htm
