@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2004/01/02 03:16:24 wiz Exp $
+# $NetBSD: Makefile,v 1.175 2004/01/06 15:36:54 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -156,6 +156,7 @@ SUBDIR+=	vfu
 SUBDIR+=	visual-regexp
 SUBDIR+=	vttest
 SUBDIR+=	watch
+SUBDIR+=	xchm
 SUBDIR+=	xjdic
 SUBDIR+=	xrolodex
 SUBDIR+=	xtail
