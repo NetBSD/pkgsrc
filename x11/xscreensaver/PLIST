@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2002/03/19 15:34:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2002/04/06 11:16:43 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -393,5 +393,12 @@ man/man1/xspirograph.1
 man/man1/xsublim.1
 man/man1/xteevee.1
 man/man1/zoom.1
+share/pixmaps/screensaver-cmndln.xpm
+share/pixmaps/screensaver-colorselector.xpm
+share/pixmaps/screensaver-diagnostic.xpm
+share/pixmaps/screensaver-locking.xpm
+share/pixmaps/screensaver-power.xpm
+share/pixmaps/screensaver-snap.xpm
+share/pixmaps/xscreensaver.xpm
 @dirrm libexec/xscreensaver/config
 @dirrm libexec/xscreensaver
