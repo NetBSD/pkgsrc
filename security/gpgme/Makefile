@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2004/11/02 19:51:58 gavan Exp $
+# $NetBSD: Makefile,v 1.26 2004/11/03 15:35:08 jmmv Exp $
 #
 
 DISTNAME=	gpgme-1.0.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/ \
 		ftp://ftp.gnupg.org/gcrypt/alpha/gpgme/
@@ -9,8 +10,6 @@ MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/ \
 MAINTAINER=	oishi@ims.ac.jp
 HOMEPAGE=	http://www.gnupg.org/gpgme.html
 COMMENT=	GnuPG Made Easy
-
-#DEPENDS+=	gnupg>=1.2.2:../../security/gnupg
 
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
@@ -44,7 +43,6 @@ INFO_FILES=		gpgme.info
 .if ${OPSYS} != "SunOS"
 .include "../../devel/librfuncs/buildlink3.mk"
 .endif
-.include "../../mk/bsd.pkg.mk"
 
 ##
 ## Option to build with gpgsm. This provides SMIME support
@@ -53,4 +51,8 @@ INFO_FILES=		gpgme.info
 .include "../../security/gnupg-devel/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gpgsm=${BUILDLINK_PREFIX.gnupg-devel}/bin/gpgsm
 CONFIGURE_ARGS+=	--with-gpg=${BUILDLINK_PREFIX.gnupg-devel}/bin/gpg2
+.else
+DEPENDS+=		gnupg>=1.2.2:../../security/gnupg
 .endif
+
+.include "../../mk/bsd.pkg.mk"
