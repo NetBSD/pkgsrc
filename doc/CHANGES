@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1533 2003/03/04 09:15:42 uebayasi Exp $
+$NetBSD: CHANGES,v 1.1534 2003/03/04 09:21:00 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -906,3 +906,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated postfix to 2.0.5 [martti 2003-03-04]
 	Added flyspell-1.7c [uebayasi 2003-03-04]
 	Added ispell-emacs-3.6 [uebayasi 2003-03-04]
+	Updated emacs-packages to 0.1 [uebayasi 2003-03-04]
