@@ -1,0 +1,10 @@
+$NetBSD: patch-fd,v 1.1 2003/07/13 04:13:05 wulf Exp $
+
+--- kcontrol/fileshare/fileshareset.orig	2003-07-13 13:25:36.000000000 +0930
++++ kcontrol/fileshare/fileshareset	2003-07-13 13:26:04.000000000 +0930
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -T
++#!/usr/bin/env perl
+ use strict;
+ 
+ ########################################
