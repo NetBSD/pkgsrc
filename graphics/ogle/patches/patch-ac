@@ -1,34 +1,22 @@
-$NetBSD: patch-ac,v 1.1 2002/05/20 23:03:37 veego Exp $
+$NetBSD: patch-ac,v 1.2 2002/06/16 18:12:58 wiz Exp $
 
---- mpeg2_video/video_output_x11.c.orig	Sun Dec  2 22:38:00 2001
-+++ mpeg2_video/video_output_x11.c	Tue May 21 00:47:58 2002
-@@ -1751,7 +1751,7 @@
- 			      window.video_area.width) / 2;
-   window.video_area.y = (int)(window.window_area.height -
- 			      window.video_area.height) / 2;
--  
-+  if(use_xshm) {
-   XvShmPutImage(mydisplay, xv_port, dwin->win, mygc, xv_image, 
- 		0, 0, 
- 		dwin->image->info->picture.horizontal_size,
-@@ -1761,9 +1761,18 @@
- 		window.video_area.width,
- 		window.video_area.height,
- 		True);
--  
-+  } else {
-+    XvPutImage(mydisplay, xv_port, dwin->win, mygc, xv_image, 
-+	       0, 0, 
-+	       dwin->image->info->picture.horizontal_size,
-+	       dwin->image->info->picture.vertical_size,
-+	       window.video_area.x,
-+	       window.video_area.y,
-+	       window.video_area.width,
-+	       window.video_area.height);
-+  }
-   //XFlush(mydisplay); ??
--  {
-+  if(use_xshm) {
-     XEvent ev;
-     XEvent *e;
-     e = &ev;
+--- configure.orig	Wed Jun 12 00:11:32 2002
++++ configure	Thu Jun 13 12:02:17 2002
+@@ -7367,7 +7367,7 @@
+ 
+ if test "x$enable_obsdaudio" != xno; then
+     case "$host" in
+-    *-openbsd*)
++    *-netbsd*|*-openbsd*)
+ 
+         cat >> confdefs.h <<\EOF
+ #define LIBOGLEAO_OBSD 
+@@ -7386,7 +7386,7 @@
+ 
+ if test "x$enable_sunaudio" != xno; then
+     case "$host" in
+-    *-sun-solaris*|*-netbsd*)
++    *-sun-solaris*)
+ 
+         cat >> confdefs.h <<\EOF
+ #define LIBOGLEAO_SOLARIS 
