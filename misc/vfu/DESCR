@@ -7,7 +7,7 @@ Main features are:
    * Overwrite prompt when copy/move (Yes/No/Always/Never/...).
    * Fast One-Key Commands.
    * Filename completion (incl. extended completion: `*some[az].zip' )
-   * Powerfull ChangeDir function (w. History, Preset favourite dirs...)
+   * Powerful ChangeDir function (w. History, Preset favourite dirs...)
    * Directory(ies) size calculation (single dir/all dirs).
    * Run-Time dirs' sizes calculation! (with dir sizes cache as option)
    * Extensive user-defined external support/utils!
