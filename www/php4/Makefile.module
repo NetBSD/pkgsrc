@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.module,v 1.5 2001/05/01 17:34:43 jlam Exp $
+# $NetBSD: Makefile.module,v 1.6 2001/05/03 13:40:33 jlam Exp $
 #
 # This Makefile is provided to ease creating PHP4 packages for the extension
 # modules distributed in the PHP4 sources.
@@ -29,8 +29,10 @@ MESSAGE_SUBST+=		MODNAME=${MODNAME}				\
 
 PLIST_SRC=		${.CURDIR}/../../www/php4/pkg/PLIST.module
 
-# Ensure we export symbols in the linked shared objects.
+# Ensure we export symbols in the linked ELF shared objects.
+.if (${OBJECT_FMT} == "ELF")
 LDFLAGS+=		-Wl,-E
+.endif
 
 do-build:
 	@cd ${EXTDIR}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${ALL_TARGET}
