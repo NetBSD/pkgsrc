@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2003/04/08 11:00:05 martti Exp $
+# $NetBSD: Makefile,v 1.18 2003/04/12 14:45:08 martti Exp $
 #
 
 DISTNAME=	bins-1.1.21
+PKGREVISION=	1
 CATEGORIES=	www graphics
 MASTER_SITES=	http://jsautret.free.fr/BINS/
 EXTRACT_SUFX=	.tar.bz2
@@ -30,7 +31,7 @@ USE_PKGLOCALEDIR=	YES
 # bins-edit-gui not installed because many needed packages are missing
 # bins_txt2xml not installed because it's an upgrade tool, and we didn't
 # have previous versions in pkgsrc.
-REPLACE_PERL=	bins bins_edit bins-edit-gui bins_txt2xml
+REPLACE_PERL=	bins bins_edit bins-edit-gui bins_cleanupgallery bins_txt2xml
 
 post-patch:
 	${MV} ${WRKSRC}/bins ${WRKSRC}/bins.bak
@@ -40,6 +41,7 @@ post-patch:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/bins ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bins_cleanupgallery ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bins_edit ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/bins.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/bins_edit.1 ${PREFIX}/man/man1
