@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.551 2002/11/19 07:20:51 schmonz Exp $
+$NetBSD: CHANGES,v 1.552 2002/11/19 11:24:40 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3657,3 +3657,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Added mudsh-20010311 [cjep 2002-11-18]
 	Updated db to 2.7.7nb1 [jlam 2002-11-18]
 	Updated dlcompat to 20021117 [schmonz 2002-11-19]
+	Updated mrtg to 2.9.26.2nb1 [martti 2002-11-19]
