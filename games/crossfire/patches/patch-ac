@@ -1,0 +1,72 @@
+--- config/crosssite.def.orig	Sat May 16 05:27:10 1998
++++ config/crosssite.def	Fri Jun 26 16:15:22 1998
+@@ -36,9 +36,8 @@
+  * (mwedel@pyramid.com)
+  */
+ 
+-/*
+ #define XPM_PIX
+-#define Xpm_LibDir /usr/local/lib/
++/*#define Xpm_LibDir /usr/local/lib/
+ */
+ /* If your include files are someplace odd */
+ /*#define Xpm_Include	/usr/local/include*/
+@@ -51,9 +50,10 @@
+  * This is a top root directory of all game staff as in UNIX-style
+  * overall. 
+  */
+-#define CTop /home/hugin/a/crossfire/crossfire
++/*#define CTop /home/hugin/a/crossfire/crossfire*/
+ /* #define CTop /net/contrib/crossfire */
+ /*#define CTop /usr/local/games/crossfire*/
++#define CTop @X11BASE@
+ 
+ /* Binaries location If this is undefined, it default to the
+    standard location for X binaries on your machine. */
+@@ -61,7 +61,7 @@
+ 
+ /* Libraries location If this is undefined it defaults to the
+   standard location for X lib files/crossfire on your machine */
+-#define CLibDir Concat(CTop,/lib)
++#define CLibDir Concat(CTop,/lib/crossfire)
+ 
+ /* define and put a path here if you want it other than CLibDir/adm */
+ #undef CAdmDir 
+@@ -70,7 +70,7 @@
+  * location for misc fonts on your machine
+  */
+ 
+-#define CFontDir Concat(CTop,/fonts)
++/*#define CFontDir Concat(CTop,/lib/X11/fonts)*/
+ 
+ 
+ /* Crossfire manual location If this is undefined it defaults to the
+@@ -103,9 +103,9 @@
+  * use the -l form or put in the complete path name.
+  * Linux users may need to add -lcrypt
+  */
+-/*
+-#define Extra_Libraries -lcrypt
+-*/
++
++#define Extra_Libraries -lcrypt -lcompat
++
+ 
+ /* Force CC to be a specific compilator? Define this to be the
+  * actual compiler (see example).  If defined, the default
+@@ -161,11 +161,11 @@
+  * too distant future, it probably isn't worth fixing here.
+  */
+ 
+-/*
++
+ #define Rplay_Sound
+-#define RPlayLibDir /usr/local/lib
+-#define RPlayIncDir /usr/local/include
+-*/
++#define RPlayLibDir @LOCALBASE@/lib
++#define RPlayIncDir @LOCALBASE@/include
++
+ 
+ /* define this if using OpenWindows as your enviroment. This only
+  * needs to be set if the openwindows server you use is

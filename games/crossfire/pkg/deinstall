@@ -1,0 +1,17 @@
+#!/usr/pkg/bin/perl
+open (FILE,"XXXLOCALBASEXXX/etc/rplay.conf");
+open (OUT,">tmp");
+@data = <DATA>;
+while (<FILE>) {
+   $found=0;
+   foreach $datum (@data) {
+	$found++ if ($datum eq $_);	  
+   }
+   print OUT "$_" if ($found == 0);
+}
+close(OUT);
+close(FILE);
+system("mv tmp XXXLOCALBASEXXX/etc/rplay.conf");
+system("XXXX11BASEXXX/bin/mkfontdir XXXX11BASEXXX/lib/X11/fonts/misc");
+__END__
+

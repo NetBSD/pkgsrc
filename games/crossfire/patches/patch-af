@@ -1,0 +1,7 @@
+--- server/main.c.orig	Fri Feb 20 03:46:30 1998
++++ server/main.c	Fri Feb 20 03:46:30 1998
+@@ -597,3 +597,3 @@
+ 
+-#ifdef RPLAY_SOUND
++#ifdef RPLAY_SND
+ 	if (pl->play_count > 0)
