@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.14 1999/12/22 22:07:31 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.15 2000/01/03 15:21:45 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -354,7 +354,10 @@ sub parse_makefile
 		$test = parse_expand_vars($1, \%vars);
 		# XX This is _so_ wrong - need to parse this correctly
 		$test =~ s/"//g;
-		if ( $test =~ /^(\S+)\s+==\s+(\S+)$/ && $1 ne $2 )
+
+		if ( $test =~ /^defined\((\S+)\)$/ && !defined($vars{$1}) )
+		    { ++$if_false; }
+		elsif ( $test =~ /^(\S+)\s+==\s+(\S+)$/ && $1 ne $2 )
 		    { ++$if_false; }
 		}
 	    }
