@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2001/03/19 12:57:44 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 2001/04/06 22:19:16 rh Exp $
 include/gal/util/e-util.h
 include/gal/util/e-xml-utils.h
 include/gal/util/e-cache.h
@@ -132,6 +132,7 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gal.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gal.mo
+@exec mkdir -p -m 0755 %D/share/gal/html/gal
 @dirrm share/gal/html/gal
 @dirrm share/gal/html
 @dirrm share/gal/0.5/glade
