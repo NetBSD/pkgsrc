@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2002/02/03 21:27:20 jlam Exp $
+$NetBSD: distinfo,v 1.9 2002/03/15 05:04:05 itohy Exp $
 
 SHA1 (ghostscript/ghostscript-6.01.tar.bz2) = 405a8ab16453a8c3f846eae2aa4abbea6a093300
 Size (ghostscript/ghostscript-6.01.tar.bz2) = 2974476 bytes
@@ -26,13 +26,12 @@ SHA1 (ghostscript/gdevlips-2.3.6.tar.gz) = 2aedfd54a55356d6241fe3cbc8ba1aece9b69
 Size (ghostscript/gdevlips-2.3.6.tar.gz) = 64940 bytes
 SHA1 (ghostscript/gdevrpdl.tar.gz) = 927f2f858821ab6a445bfc860d8f87ab40f6e2de
 Size (ghostscript/gdevrpdl.tar.gz) = 1664 bytes
-SHA1 (ghostscript/gdevprsc-0.3.tar.gz) = 7abd8e0685971e2c19276ee31131f05cc36f3dc7
-Size (ghostscript/gdevprsc-0.3.tar.gz) = 12484 bytes
+SHA1 (ghostscript/gdevprsc-0.4.tar.gz) = 74f63fd055f2f1f097f6588d73ade5c8c2d3e31a
+Size (ghostscript/gdevprsc-0.4.tar.gz) = 12680 bytes
 SHA1 (ghostscript/samsung-gdi-driver.tar.gz) = d9e29d5e018a27832e5d4681221387d35f703083
 Size (ghostscript/samsung-gdi-driver.tar.gz) = 8909 bytes
 SHA1 (ghostscript/gs6.01-jpdf-exp.patch.gz) = 21f427a4c80871edab8c4d748b1fe1b7796cd876
 Size (ghostscript/gs6.01-jpdf-exp.patch.gz) = 59034 bytes
-SHA1 (patch-bug-workaround) = 99f4e197b35a8f33b8a1219a38f6d9fc2c307eb6
 SHA1 (patch-ab) = 26cea522dbe2e2cc57a5fdc60130f309c76c6991
 SHA1 (patch-ac) = 576e0bc659d771f9d634921a0cc6752ab9739a92
 SHA1 (patch-ad) = 9b6e66132583a698ebef277caf343c6919f42f72
