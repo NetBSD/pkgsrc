@@ -1,25 +1,17 @@
-$NetBSD: patch-af,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+$NetBSD: patch-af,v 1.2 2001/08/11 18:39:25 rh Exp $
 
---- shell/e-setup.c.orig	Wed Apr 25 18:42:46 2001
-+++ shell/e-setup.c
-@@ -224,9 +224,18 @@
- 			  _("Cannot copy files into\n`%s'."), evolution_directory);
- 		retval = FALSE;
- 	} else {
--		e_notice (NULL, GNOME_MESSAGE_BOX_INFO,
-+		char *cmd2 = g_strconcat ("chmod -R u+w ", evolution_directory,
-+			       NULL);
-+
-+		if (system (cmd2) != 0) {
-+			e_notice (NULL, GNOME_MESSAGE_BOX_ERROR,
-+			  _("Cannot chmod files in\n`%s'."), evolution_directory);
-+			retval = FALSE;
-+		} else {
-+			e_notice (NULL, GNOME_MESSAGE_BOX_INFO,
- 			  _("Evolution files successfully installed."));
--		retval = TRUE;
-+			retval = TRUE;
-+		}
- 	}
+--- e-util/e-db3-utils.c.orig	Fri Jun  1 03:02:11 2001
++++ e-util/e-db3-utils.c
+@@ -14,9 +14,9 @@
+ #include <libgnome/gnome-util.h>
  
- 	g_free (command);
+ #if DB_VERSION_MAJOR != 3 || \
+-    DB_VERSION_MINOR != 1 || \
+-    DB_VERSION_PATCH != 17
+-#error Including wrong DB3.  Need libdb 3.1.17.
++    DB_VERSION_MINOR != 2 || \
++    DB_VERSION_PATCH != 9
++#error Including wrong DB3.  Need libdb 3.2.9.
+ #endif
+ 
+ static char *

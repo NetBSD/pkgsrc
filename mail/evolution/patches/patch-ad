@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+$NetBSD: patch-ad,v 1.2 2001/08/11 18:39:25 rh Exp $
 
---- camel/providers/imap/camel-imap-store.c.orig	Tue Apr 24 17:50:27 2001
+--- camel/providers/imap/camel-imap-store.c.orig	Thu Jul 26 21:07:40 2001
 +++ camel/providers/imap/camel-imap-store.c
-@@ -22,6 +22,10 @@
+@@ -24,6 +24,11 @@
   *
   */
  
@@ -10,6 +10,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
 +#undef	_POSIX_THREAD_SYSCALL_SOFT
 +#endif
 +#define	_POSIX_THREAD_SYSCALL_SOFT	0
- 
++
+ #ifdef HAVE_CONFIG_H
  #include <config.h>
- 
+ #endif

@@ -1,22 +1,17 @@
-$NetBSD: patch-ag,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+$NetBSD: patch-ag,v 1.2 2001/08/11 18:39:25 rh Exp $
 
---- calendar/cal-client/Makefile.in.orig	Tue Mar 13 21:13:06 2001
-+++ calendar/cal-client/Makefile.in
-@@ -212,7 +212,7 @@
- client_test_INCLUDES =  	$(INCLUDES)				-DG_LOG_DOMAIN=\"client-test\"
+--- e-util/e-dbhash.c.orig	Sat Jul 28 00:14:12 2001
++++ e-util/e-dbhash.c
+@@ -16,9 +16,9 @@
+ #include "md5-utils.h"
  
+ #if DB_VERSION_MAJOR != 3 || \
+-    DB_VERSION_MINOR != 1 || \
+-    DB_VERSION_PATCH != 17
+-#error Including wrong DB3.  Need libdb 3.1.17.
++    DB_VERSION_MINOR != 2 || \
++    DB_VERSION_PATCH != 9
++#error Including wrong DB3.  Need libdb 3.2.9.
+ #endif
  
--client_test_LDADD =  	$(BONOBO_VFS_GNOME_LIBS)					$(EXTRA_GNOME_LIBS)						-lunicode							$(top_builddir)/calendar/cal-util/libcal-util.la		$(top_builddir)/libversit/libversit.la				$(top_builddir)/libical/src/libical/libical.la			libcal-client.la
-+client_test_LDADD =  	$(BONOBO_VFS_GNOME_LIBS)					$(EXTRA_GNOME_LIBS)						-lunicode							$(top_builddir)/calendar/cal-util/libcal-util.la		$(top_builddir)/libversit/libversit.la	-L`pwd` -lical			libcal-client.la
- 
- 
- BUILT_SOURCES = $(CORBA_GENERATED)
-@@ -360,6 +360,8 @@
- maintainer-clean-noinstPROGRAMS:
- 
- client-test: $(client_test_OBJECTS) $(client_test_DEPENDENCIES)
-+	cp $(top_builddir)/libical/src/libical/.libs/libical.a .
-+	-cp $(top_builddir)/libical/src/libical/.libs/libical.so* .
- 	@rm -f client-test
- 	$(LINK) $(client_test_LDFLAGS) $(client_test_OBJECTS) $(client_test_LDADD) $(LIBS)
- 
+ struct _EDbHashPrivate 

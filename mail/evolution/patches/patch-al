@@ -1,22 +1,31 @@
-$NetBSD: patch-al,v 1.1 2001/05/25 06:16:18 rh Exp $
+$NetBSD: patch-al,v 1.2 2001/08/11 18:39:26 rh Exp $
 
---- calendar/gui/alarm-notify/Makefile.in.orig	Fri May 25 07:40:13 2001
-+++ calendar/gui/alarm-notify/Makefile.in
-@@ -185,7 +185,7 @@
- evolution_alarm_notify_SOURCES =  	$(CORBA_GENERATED)			alarm-notify.c				alarm-notify.h				alarm-queue.c				alarm-queue.h				notify-main.c
+--- camel/camel-disco-diary.c.orig	Tue May 29 23:07:11 2001
++++ camel/camel-disco-diary.c
+@@ -270,14 +270,14 @@
+ 	off_t size;
+ 	double pc;
  
+-	fseeko (diary->file, 0, SEEK_END);
+-	size = ftello (diary->file);
++	fseek (diary->file, 0, SEEK_END);
++	size = ftell (diary->file);
+ 	g_return_if_fail (size != 0);
+ 	rewind (diary->file);
  
--evolution_alarm_notify_LDADD =  	libalarm.a							$(top_builddir)/calendar/cal-client/libcal-client.la		$(top_builddir)/calendar/cal-util/libcal-util.la		$(top_builddir)/libical/src/libical/libical.la			$(BONOBO_VFS_GNOME_LIBS)					$(EXTRA_GNOME_LIBS)						$(INTLLIBS)
-+evolution_alarm_notify_LDADD =  	libalarm.a							$(top_builddir)/calendar/cal-client/libcal-client.la		$(top_builddir)/calendar/cal-util/libcal-util.la		-L`pwd` -lical			$(BONOBO_VFS_GNOME_LIBS)					$(EXTRA_GNOME_LIBS)						$(INTLLIBS)
+ 	camel_operation_start (NULL, _("Resynchronizing with server"));
+ 	while (!camel_exception_is_set (ex)) {
+-		pc = ftello (diary->file) / size;
++		pc = ftell (diary->file) / size;
+ 		camel_operation_progress (NULL, pc * 100);
  
+ 		if (camel_file_util_decode_uint32 (diary->file, &action) == -1)
+@@ -399,7 +399,7 @@
+ gboolean
+ camel_disco_diary_empty  (CamelDiscoDiary *diary)
+ {
+-	return ftello (diary->file) == 0;
++	return ftell (diary->file) == 0;
+ }
  
- # evolution_alarm_client_SOURCES =	\
-@@ -337,6 +337,8 @@
- 	done
- 
- evolution-alarm-notify: $(evolution_alarm_notify_OBJECTS) $(evolution_alarm_notify_DEPENDENCIES)
-+	cp $(top_builddir)/libical/src/libical/.libs/libical.a .
-+	-cp $(top_builddir)/libical/src/libical/.libs/libical.so* .
- 	@rm -f evolution-alarm-notify
- 	$(LINK) $(evolution_alarm_notify_LDFLAGS) $(evolution_alarm_notify_OBJECTS) $(evolution_alarm_notify_LDADD) $(LIBS)
- 
+ void

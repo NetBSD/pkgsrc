@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
+$NetBSD: patch-ac,v 1.2 2001/08/11 18:39:25 rh Exp $
 
---- shell/main.c.orig	Tue Apr 24 17:31:26 2001
+--- shell/main.c.orig	Mon Jul 30 16:22:50 2001
 +++ shell/main.c
-@@ -35,6 +35,23 @@
- 
- #include "e-shell.h"
+@@ -53,6 +53,23 @@
+ static gboolean no_splash = FALSE;
+ extern char *evolution_debug_log;
  
 +#ifdef __NetBSD__
 +#include <gtk/gtk.h>
@@ -24,12 +24,12 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/04/26 05:57:22 rh Exp $
 +#endif
 +
  
- #define STARTUP_URI "evolution:/local/Inbox"
- 
-@@ -206,6 +223,10 @@
+ static void
+ no_views_left_cb (EShell *shell, gpointer data)
+@@ -273,6 +290,10 @@
  	}
  
- 	gtk_idle_add (idle_cb, evolution_directory);
+ 	gtk_idle_add (idle_cb, uri_list);
 +
 +#ifdef __NetBSD__
 +	gtk_timeout_add (200, pth_nbschedule, NULL);

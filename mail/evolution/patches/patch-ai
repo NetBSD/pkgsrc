@@ -1,22 +1,16 @@
-$NetBSD: patch-ai,v 1.2 2001/05/25 06:16:18 rh Exp $
+$NetBSD: patch-ai,v 1.3 2001/08/11 18:39:26 rh Exp $
 
---- wombat/Makefile.in.orig	Thu Apr 26 23:53:05 2001
-+++ wombat/Makefile.in
-@@ -172,7 +172,7 @@
- wombat_SOURCES =  	wombat-moniker.c		wombat-moniker.h		wombat.c
+--- camel/camel-transport.c.orig	Thu Jun 28 00:43:00 2001
++++ camel/camel-transport.c
+@@ -24,6 +24,11 @@
+  * USA
+  */
  
- 
--wombat_LDADD =  	$(EXTRA_GNOME_LIBS)						$(BONOBO_VFS_GNOME_LIBS)					$(top_builddir)/addressbook/backend/pas/libpas.a		$(top_builddir)/addressbook/backend/ebook/libebook.la		$(top_builddir)/e-util/ename/libename.la			$(top_builddir)/calendar/pcs/libpcs.a				$(top_builddir)/calendar/cal-util/libcal-util.la		$(top_builddir)/libical/src/libical/libical.la			$(top_builddir)/libversit/libversit.la				$(top_builddir)/e-util/libeutil.la				$(LDAP_LIBS)
-+wombat_LDADD =  	$(EXTRA_GNOME_LIBS)						$(BONOBO_VFS_GNOME_LIBS)					$(top_builddir)/addressbook/backend/pas/libpas.a		$(top_builddir)/addressbook/backend/ebook/libebook.la		$(top_builddir)/e-util/ename/libename.la			$(top_builddir)/calendar/pcs/libpcs.a				$(top_builddir)/calendar/cal-util/libcal-util.la		-L`pwd` -lical			$(top_builddir)/libversit/libversit.la				$(top_builddir)/e-util/libeutil.la				$(LDAP_LIBS)
- 
- 
- oafdir = $(datadir)/oaf
-@@ -295,6 +295,8 @@
- maintainer-clean-libtool:
- 
- wombat: $(wombat_OBJECTS) $(wombat_DEPENDENCIES)
-+	cp $(top_builddir)/libical/src/libical/.libs/libical.a .
-+	-cp $(top_builddir)/libical/src/libical/.libs/libical.so* .
- 	@rm -f wombat
- 	$(LINK) $(wombat_LDFLAGS) $(wombat_OBJECTS) $(wombat_LDADD) $(LIBS)
- 
++#ifdef	_POSIX_THREAD_SYSCALL_SOFT
++#undef	_POSIX_THREAD_SYSCALL_SOFT
++#endif
++#define	_POSIX_THREAD_SYSCALL_SOFT	0
++
+ #ifdef HAVE_CONFIG_H
+ #include <config.h>
+ #endif

@@ -1,22 +1,17 @@
-$NetBSD: patch-aj,v 1.2 2001/05/25 06:16:18 rh Exp $
+$NetBSD: patch-aj,v 1.3 2001/08/11 18:39:26 rh Exp $
 
---- calendar/gui/Makefile.in.orig	Thu May 24 07:19:17 2001
-+++ calendar/gui/Makefile.in
-@@ -186,7 +186,7 @@
- evolution_calendar_SOURCES =  	$(IDL_GENERATED)				calendar-config.c				calendar-config.h				calendar-commands.c				calendar-commands.h				calendar-model.c				calendar-model.h				calendar-summary.c				calendar-summary.h				comp-util.c					comp-util.h					control-factory.c				control-factory.h				component-factory.c				component-factory.h				e-calendar-table.h				e-calendar-table.c				e-day-view-main-item.c				e-day-view-main-item.h				e-day-view-time-item.c				e-day-view-time-item.h				e-day-view-top-item.c				e-day-view-top-item.h				e-day-view.c					e-day-view.h					e-itip-control.h				e-itip-control.c				e-meeting-edit.h				e-meeting-edit.c				e-week-view-event-item.c			e-week-view-event-item.h			e-week-view-main-item.c				e-week-view-main-item.h				e-week-view-titles-item.c			e-week-view-titles-item.h			e-week-view.c					e-week-view.h					e-tasks.c					e-tasks.h					event-editor.c					event-editor.h					gnome-cal.c					gnome-cal.h					goto.c						goto.h						itip-utils.c					itip-utils.h					main.c						print.c						print.h						tag-calendar.c					tag-calendar.h					tasks-control-factory.c				tasks-control-factory.h				tasks-control.c					tasks-control.h					tasks-migrate.c					tasks-migrate.h					weekday-picker.c				weekday-picker.h				widget-util.c					widget-util.h
+--- addressbook/backend/pas/pas-backend-file.c.orig	Tue Jul 10 06:49:49 2001
++++ addressbook/backend/pas/pas-backend-file.c
+@@ -18,9 +18,9 @@
+ #include <e-util/e-db3-utils.h>
  
+ #if DB_VERSION_MAJOR != 3 || \
+-    DB_VERSION_MINOR != 1 || \
+-    DB_VERSION_PATCH != 17
+-#error Including wrong DB3.  Need libdb 3.1.17.
++    DB_VERSION_MINOR != 2 || \
++    DB_VERSION_PATCH != 9
++#error Including wrong DB3.  Need libdb 3.2.9.
+ #endif
  
--evolution_calendar_LDADD =  	alarm-notify/libalarm.a									$(top_builddir)/shell/libeshell.a							$(top_builddir)/calendar/cal-client/libcal-client.la					$(top_builddir)/calendar/cal-util/libcal-util.la					$(top_builddir)/e-util/libeutil.la							$(top_builddir)/executive-summary/evolution-services/libevolution-services.la		$(top_builddir)/libversit/libversit.la							$(top_builddir)/libical/src/libical/libical.la						$(top_builddir)/widgets/meeting-time-sel/libevolutionmtsel.a				$(top_builddir)/widgets/misc/libemiscwidgets.a						$(top_builddir)/widgets/menus/libmenus.la						dialogs/libcal-dialogs.a								$(BONOBO_HTML_GNOME_LIBS)								$(BONOBO_VFS_GNOME_LIBS)								$(EXTRA_GNOME_LIBS)									$(INTLLIBS)
-+evolution_calendar_LDADD =  	alarm-notify/libalarm.a									$(top_builddir)/shell/libeshell.a							$(top_builddir)/calendar/cal-client/libcal-client.la					$(top_builddir)/calendar/cal-util/libcal-util.la					$(top_builddir)/e-util/libeutil.la							$(top_builddir)/executive-summary/evolution-services/libevolution-services.la		$(top_builddir)/libversit/libversit.la							-L`pwd` -lical						$(top_builddir)/widgets/meeting-time-sel/libevolutionmtsel.a				$(top_builddir)/widgets/misc/libemiscwidgets.a						$(top_builddir)/widgets/menus/libmenus.la						dialogs/libcal-dialogs.a								$(BONOBO_HTML_GNOME_LIBS)								$(BONOBO_VFS_GNOME_LIBS)								$(EXTRA_GNOME_LIBS)									$(INTLLIBS)
- 
- 
- #evolution_calendar_LDFLAGS = `gnome-config --libs gdk_pixbuf`
-@@ -328,6 +328,8 @@
- maintainer-clean-libtool:
- 
- evolution-calendar: $(evolution_calendar_OBJECTS) $(evolution_calendar_DEPENDENCIES)
-+	cp $(top_builddir)/libical/src/libical/.libs/libical.a .
-+	-cp $(top_builddir)/libical/src/libical/.libs/libical.so* .
- 	@rm -f evolution-calendar
- 	$(LINK) $(evolution_calendar_LDFLAGS) $(evolution_calendar_OBJECTS) $(evolution_calendar_LDADD) $(LIBS)
- 
+ #include <gtk/gtksignal.h>
