@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2000/05/20 19:52:50 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2000/05/24 11:19:30 rh Exp $
 #
 
-DISTNAME=	pgaccess-0.98.5
+DISTNAME=	pgaccess-0.98.6
 WRKSRC=		${WRKDIR}/pgaccess
 CATEGORIES=	databases
-MASTER_SITES=	ftp://ftp.flex.ro/pub/pgaccess/
+MASTER_SITES=	ftp://speedy.flex.ro/pub/pgaccess/ \
+		ftp://ftp.flex.ro/pub/pgaccess/ \
+		ftp://ftp.sai.msu.su/pub/unix/database/pgsql.app/ \
+		ftp://crydee.sai.msu.ru/zeus/unix/database/pgsql.app/
 
 MAINTAINER=	jlam@netbsd.org
 HOMEPAGE=	http://www.flex.ro/pgaccess/
