@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2003/07/29 16:29:09 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2003/07/29 16:30:06 wiz Exp $
 
 DISTNAME=		inn-${INN_VERSION}
 PKGREVISION=		1
@@ -7,15 +7,15 @@ MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
 
+PATCH_SITES=		ftp://ftp.north.ad.jp/pub/IPv6/INN/
+PATCHFILES=		inn-${INN_VERSION}-v6-20030327.diff.gz
+PATCH_DIST_STRIP=	-p1
+
 MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.isc.org/inn.html
 COMMENT=		The public release of InterNet News (INN)
 
 CONFLICTS+=		nntpclnt-[0-9]*
-
-PATCH_SITES=		ftp://ftp.north.ad.jp/pub/IPv6/INN/
-PATCHFILES=		inn-${INN_VERSION}-v6-20030327.diff.gz
-PATCH_DIST_STRIP=	-p1
 
 INN_VERSION=		2.3.5
 .include "Makefile.common"
