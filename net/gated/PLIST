@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/07/10 21:00:00 wiz Exp $
 bin/gdc
 bin/ospf_monitor
 bin/ripquery
@@ -99,3 +99,4 @@ share/doc/gated/warning.gif
 @dirrm share/doc/gated/member_info/membership
 @dirrm share/doc/gated/member_info
 @dirrm share/doc/gated/operation_guide
+@dirrm share/doc/gated
