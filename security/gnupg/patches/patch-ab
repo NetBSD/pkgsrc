@@ -1,13 +1,20 @@
-$NetBSD: patch-ab,v 1.13 2002/05/07 18:48:47 wiz Exp $
-
---- cipher/Makefile.in.orig	Mon Apr 29 17:06:11 2002
-+++ cipher/Makefile.in
-@@ -129,7 +129,7 @@
- am__quote = @am__quote@
- install_sh = @install_sh@
+$NetBSD: patch-ab,v 1.14 2002/10/09 14:16:56 itojun Exp $
  
--DYNLINK_MOD_CFLAGS = -DIS_MODULE @DYNLINK_MOD_CFLAGS@
-+DYNLINK_MOD_CFLAGS = -DIS_MODULE -fPIC @DYNLINK_MOD_CFLAGS@
- 
- INCLUDES = -I.. -I$(top_srcdir)/include -I$(top_srcdir)/intl
- 
+--- configure.ac.orig	Sat Sep 21 12:19:15 2002
++++ configure.ac	Sun Sep 29 23:40:20 2002
+@@ -453,8 +453,14 @@
+ NAME_OF_DEV_RANDOM="/dev/random"
+ NAME_OF_DEV_URANDOM="/dev/urandom"
+ case "${target}" in
+-    *-openbsd* | *-netbsd*)
++    *-openbsd*)
+         NAME_OF_DEV_RANDOM="/dev/srandom"
++        NAME_OF_DEV_URANDOM="/dev/urandom"
++        DYNLINK_MOD_CFLAGS="-shared -rdynamic $CFLAGS_PIC -Wl,-Bshareable -Wl,-x"
++        ;;
++
++    *-netbsd*)
++        NAME_OF_DEV_RANDOM="/dev/random"
+         NAME_OF_DEV_URANDOM="/dev/urandom"
+         ;;
+ esac
