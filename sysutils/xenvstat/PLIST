@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/28 00:01:07 xtraeme Exp $
+bin/xenvstat
+lib/X11/app-defaults/Xenvstat
