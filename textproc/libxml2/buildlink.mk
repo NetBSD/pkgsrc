@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.10 2001/10/03 20:56:53 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.11 2002/04/28 22:37:11 wiz Exp $
 #
 # This Makefile fragment is included by packages that use libxml2.
 #
@@ -29,7 +29,7 @@ BUILDLINK_FILES.libxml2+=	lib/xml2Conf.sh
 # The libxml2 headers should be found at the same location as for libxml.I
 BUILDLINK_TRANSFORM.libxml2=	-e "s|/include/libxml2/|/include/|g"
 BUILDLINK_CONFIG_WRAPPER_SED+=  \
-	-e "s|-I${BUILDLINK_PREFIX.libxml2}/include/libxml2/|-I${BUILDLINK_DIR}/include/|g"
+	-e "s|-I${BUILDLINK_PREFIX.libxml2}/include/libxml2|-I${BUILDLINK_DIR}/include/libxml -I${BUILDLINK_DIR}/include/|g"
 
 .include "../../devel/zlib/buildlink.mk"
 .include "../../converters/libiconv/buildlink.mk"
