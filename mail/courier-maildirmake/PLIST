@@ -1,2 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:59:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2002/01/22 22:06:06 jlam Exp $
+bin/deliverquota
 bin/maildirmake
+man/man1/deliverquota.8
+man/man1/maildirmake.1
+man/man1/maildirquota.7
+share/doc/courier/README.maildirquota
+share/doc/courier/README.sharedfolders
+@unexec ${RMDIR} -p %D/share/doc/courier 2>/dev/null || ${TRUE}
