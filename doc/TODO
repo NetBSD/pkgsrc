@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.932 2003/10/10 10:01:26 grant Exp $
+$NetBSD: TODO,v 1.933 2003/10/11 07:50:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -133,8 +133,8 @@ Suggested package updates
 	o findutils-4.1.20
 	o fltk-1.1.3
 	o foomatic-2.9.1 [jlam]
-	o freetds-0.61.2 [tarball still called 0.61]
 	o fsviewer-0.2.5
+	o gaim-0.71
 	o gauche-0.7 [kei]
 	o gcpio-2.5 [pkg/20799]
 	o gcvs-1.0-1
@@ -199,6 +199,7 @@ Suggested package updates
 	o mailsync-5.1.0
 	o marbles-1.0.6
 	o memtest86-3.0
+	o micq-0.4.10.5
 	o midnight-commander-4.6.0
 	o mimedefang-2.38
 	o minicom-2.1
@@ -302,6 +303,7 @@ Suggested package updates
 	o xmcd-3.2.1
 	o xmms-1.2.8
 	o xmms-crossfade-0.3.4
+	o xmule-1.6.1
 	o xosview-1.8.0 [pkg/20265]
 	o xps-4.2
 	o xpuyopuyo-0.9.5
