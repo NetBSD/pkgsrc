@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2004/05/15 12:01:07 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.7 2004/05/15 17:25:42 minskim Exp $
 #
 
 DISTNAME=	librsvg-2.6.5
@@ -24,4 +24,5 @@ CONFIGURE_ARGS+=	--with-gimp=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/librsvg2
 CONFIGURE_ARGS+=	--with-tags=
 
+.include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
