@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.191 1998/11/07 16:08:41 mycroft Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.192 1998/11/09 14:41:30 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1890,6 +1890,11 @@ README.html:
 		${RM} -f $@.BAK ; \
 	fi
 	@${RM} -f $@.tmp1 $@.tmp2 $@.tmp3 $@.tmp4 $@.tmp5
+
+.if !target(print-pkgtools_ver)
+print-pkgtools_ver:
+	@${ECHO} _PKGTOOLS_VER = ${_PKGTOOLS_VER}
+.endif
 
 .if !target(print-depends-list)
 print-depends-list:
