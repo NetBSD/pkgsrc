@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.23 2003/06/02 01:15:46 jschauma Exp $
+# $NetBSD: Makefile,v 1.24 2003/07/12 14:30:06 zuntum Exp $
 #
 
 DISTNAME=		Eterm-0.9.2
 PKGNAME=		${DISTNAME:S/^E/e/}
 PKGREVISION=		3
 CATEGORIES=		x11
-MASTER_SITES=		ftp://ftp.eterm.org/pub/Eterm/ \
-			ftp://alien.eterm.org/pub/Eterm/ \
-			ftp://ftp.dti.ad.jp/pub/X/Eterm/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=eterm/} \
+                        ftp://ftp.dti.ad.jp/pub/X/Eterm/
 DISTFILES=		${ETERM_SRCS} ${PIXMAP_FILES}
+
+SITES_Eterm-bg-scale-1.tar.gz= ${MASTER_SITE_BACKUP}
+SITES_Eterm-bg-scale-2.tar.gz= ${MASTER_SITE_BACKUP}
+SITES_Eterm-bg-tile.tar.gz=    ${MASTER_SITE_BACKUP}
 
 MAINTAINER=		tech-pkg@netbsd.org
 HOMEPAGE=		http://www.eterm.org/
