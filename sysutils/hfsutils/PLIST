@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:53:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/04/05 10:43:31 wiz Exp $
 bin/hattrib
 bin/hcd
 bin/hcopy
@@ -13,13 +13,13 @@ bin/hrename
 bin/hrmdir
 bin/humount
 bin/hvol
-man/man1/hfsutils.1
 man/man1/hattrib.1
 man/man1/hcd.1
 man/man1/hcopy.1
 man/man1/hdel.1
 man/man1/hdir.1
 man/man1/hformat.1
+man/man1/hfsutils.1
 man/man1/hls.1
 man/man1/hmkdir.1
 man/man1/hmount.1
