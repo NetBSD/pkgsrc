@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2003/01/13 10:55:11 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2003/05/08 09:55:31 wiz Exp $
 
-DISTNAME=	unrarsrc-3.1.3
+DISTNAME=	unrarsrc-3.2.1
 PKGNAME=	${DISTNAME:S/src//}
 WRKSRC=		${WRKDIR}/unrar
 CATEGORIES=	archivers
@@ -18,6 +18,7 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 USE_BUILDLINK2=	# defined
+USE_GMAKE=	# defined
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unrar
