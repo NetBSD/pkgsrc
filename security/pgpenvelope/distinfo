@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2005/01/10 18:24:31 tv Exp $
+
+SHA1 (pgpenvelope-2.10.2.tar.gz) = 1266a9d2184e5f4ccc0c43a6f32008e4c4218536
+Size (pgpenvelope-2.10.2.tar.gz) = 282070 bytes
+SHA1 (patch-aa) = 8a1a79f6276d24d6dbf8e5dacaeca227a139ae34
