@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2004/03/08 19:40:36 jmmv Exp $
+# $NetBSD: Makefile,v 1.23 2004/04/11 16:53:36 xtraeme Exp $
 #
 
 DISTNAME=	gdcd-0.2.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	http://gdcd.undergrid.net/source_archive/
 
@@ -12,12 +12,12 @@ COMMENT=	CD player for the X Window System using the GIMP Tool Kit (GTK)
 
 DEPENDS+=	xdg-x11-dirs>=1.1:../../misc/xdg-x11-dirs
 
-USE_X11BASE=	YES
+USE_X11=	YES
 GNU_CONFIGURE=	YES
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 
-.include "../../audio/libcdaudio/buildlink2.mk"
-.include "../../graphics/gdk-pixbuf/buildlink2.mk"
-.include "../../x11/gnome-libs/buildlink2.mk"
-.include "../../x11/gtk/buildlink2.mk"
+.include "../../audio/libcdaudio/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../x11/gnome-libs/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
