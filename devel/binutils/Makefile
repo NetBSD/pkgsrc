@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2004/04/02 02:23:05 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2004/06/30 16:18:03 shannonjr Exp $
 
-DISTNAME=	binutils-2.14
-PKGNAME=	binutils-2.14.0.0
+DISTNAME=	binutils-2.15
+PKGNAME=	binutils-2.15.0.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 
