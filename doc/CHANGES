@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6150 2004/06/05 21:45:20 reed Exp $
+$NetBSD: CHANGES,v 1.6151 2004/06/05 22:13:49 rh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2806,3 +2806,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added howl-0.9.5 [nathanw 2004-06-05]
 	Added daapd-0.2.2b [nathanw 2004-06-05]
 	Added pine-pgp-filters-1.1 [reed 2004-06-05]
+	Added mpfr-2.0.3 [rh 2004-06-06]
