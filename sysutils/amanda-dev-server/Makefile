@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2004/01/24 15:06:57 grant Exp $
+# $NetBSD: Makefile,v 1.4 2004/05/04 03:40:50 snj Exp $
 #
 
 PKGNAME=		amanda-server-${VERS}
 
 COMMENT=		Server part of Amanda, a network backup system
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PERL5=		yes
 USE_GNU_TOOLS+=		make
 
@@ -48,5 +48,5 @@ pre-install:
 	${SED} -e 's|^libexec/chg-scsi$$|@comment libexec/chg-scsi needs headers...|' ${PKGDIR}/PLIST > ${PLIST_SRC}
 .endif
 
-.include "../../sysutils/amanda-dev-common/buildlink2.mk"
+.include "../../sysutils/amanda-dev-common/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
