@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/02/08 16:21:44 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2004/02/10 20:45:01 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMAD_BUILDLINK3_MK:=		${LIBMAD_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	libmad
 
 .if !empty(LIBMAD_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		libmad
-BUILDLINK_DEPENDS.libmad+=	libmad>=0.15.0bnb1
+BUILDLINK_DEPENDS.libmad+=	libmad>=0.15.0b
 BUILDLINK_PKGSRCDIR.libmad?=	../../audio/libmad
 .endif	# LIBMAD_BUILDLINK3_MK
 
