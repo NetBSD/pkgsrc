@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/05/29 15:10:59 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/10/03 13:54:00 wiz Exp $
 share/tt2/docs/README
 share/tt2/docs/html/FAQ/FAQ.html
 share/tt2/docs/html/FAQ/index.html
@@ -15,6 +15,7 @@ share/tt2/docs/html/Manual/Intro.html
 share/tt2/docs/html/Manual/Plugins.html
 share/tt2/docs/html/Manual/Refs.html
 share/tt2/docs/html/Manual/Syntax.html
+share/tt2/docs/html/Manual/VMethods.html
 share/tt2/docs/html/Manual/Variables.html
 share/tt2/docs/html/Manual/Views.html
 share/tt2/docs/html/Manual/index.html
@@ -27,6 +28,7 @@ share/tt2/docs/html/Modules/Template/Document.html
 share/tt2/docs/html/Modules/Template/Exception.html
 share/tt2/docs/html/Modules/Template/Filters.html
 share/tt2/docs/html/Modules/Template/Iterator.html
+share/tt2/docs/html/Modules/Template/Namespace/Constants.html
 share/tt2/docs/html/Modules/Template/Parser.html
 share/tt2/docs/html/Modules/Template/Plugin.html
 share/tt2/docs/html/Modules/Template/Plugin/Autoformat.html
@@ -56,8 +58,11 @@ share/tt2/docs/html/Modules/Template/Plugin/GD/Text.html
 share/tt2/docs/html/Modules/Template/Plugin/GD/Text/Align.html
 share/tt2/docs/html/Modules/Template/Plugin/GD/Text/Wrap.html
 share/tt2/docs/html/Modules/Template/Plugin/HTML.html
+share/tt2/docs/html/Modules/Template/Plugin/Image.html
 share/tt2/docs/html/Modules/Template/Plugin/Iterator.html
+share/tt2/docs/html/Modules/Template/Plugin/Math.html
 share/tt2/docs/html/Modules/Template/Plugin/Pod.html
+share/tt2/docs/html/Modules/Template/Plugin/Procedural.html
 share/tt2/docs/html/Modules/Template/Plugin/String.html
 share/tt2/docs/html/Modules/Template/Plugin/Table.html
 share/tt2/docs/html/Modules/Template/Plugin/URL.html
@@ -116,6 +121,7 @@ share/tt2/docs/src/Manual/Intro.html
 share/tt2/docs/src/Manual/Plugins.html
 share/tt2/docs/src/Manual/Refs.html
 share/tt2/docs/src/Manual/Syntax.html
+share/tt2/docs/src/Manual/VMethods.html
 share/tt2/docs/src/Manual/Variables.html
 share/tt2/docs/src/Manual/Views.html
 share/tt2/docs/src/Manual/index.html
@@ -128,6 +134,7 @@ share/tt2/docs/src/Modules/Template/Document.html
 share/tt2/docs/src/Modules/Template/Exception.html
 share/tt2/docs/src/Modules/Template/Filters.html
 share/tt2/docs/src/Modules/Template/Iterator.html
+share/tt2/docs/src/Modules/Template/Namespace/Constants.html
 share/tt2/docs/src/Modules/Template/Parser.html
 share/tt2/docs/src/Modules/Template/Plugin.html
 share/tt2/docs/src/Modules/Template/Plugin/Autoformat.html
@@ -157,8 +164,11 @@ share/tt2/docs/src/Modules/Template/Plugin/GD/Text.html
 share/tt2/docs/src/Modules/Template/Plugin/GD/Text/Align.html
 share/tt2/docs/src/Modules/Template/Plugin/GD/Text/Wrap.html
 share/tt2/docs/src/Modules/Template/Plugin/HTML.html
+share/tt2/docs/src/Modules/Template/Plugin/Image.html
 share/tt2/docs/src/Modules/Template/Plugin/Iterator.html
+share/tt2/docs/src/Modules/Template/Plugin/Math.html
 share/tt2/docs/src/Modules/Template/Plugin/Pod.html
+share/tt2/docs/src/Modules/Template/Plugin/Procedural.html
 share/tt2/docs/src/Modules/Template/Plugin/String.html
 share/tt2/docs/src/Modules/Template/Plugin/Table.html
 share/tt2/docs/src/Modules/Template/Plugin/URL.html
@@ -1365,6 +1375,7 @@ share/tt2/templates/splash/ttpower
 @dirrm share/tt2/docs/src/Modules/Template/Plugin/GD/Graph
 @dirrm share/tt2/docs/src/Modules/Template/Plugin/GD
 @dirrm share/tt2/docs/src/Modules/Template/Plugin
+@dirrm share/tt2/docs/src/Modules/Template/Namespace
 @dirrm share/tt2/docs/src/Modules/Template
 @dirrm share/tt2/docs/src/Modules
 @dirrm share/tt2/docs/src/Manual
@@ -1382,6 +1393,7 @@ share/tt2/templates/splash/ttpower
 @dirrm share/tt2/docs/html/Modules/Template/Plugin/GD/Graph
 @dirrm share/tt2/docs/html/Modules/Template/Plugin/GD
 @dirrm share/tt2/docs/html/Modules/Template/Plugin
+@dirrm share/tt2/docs/html/Modules/Template/Namespace
 @dirrm share/tt2/docs/html/Modules/Template
 @dirrm share/tt2/docs/html/Modules
 @dirrm share/tt2/docs/html/Manual
