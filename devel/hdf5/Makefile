@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/11/24 20:42:59 jtb Exp $
+# $NetBSD: Makefile,v 1.2 2000/11/25 19:18:08 jtb Exp $
 #
 
 DISTNAME=	hdf5-1.2.2
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://hdf.ncsa.uiuc.edu/HDF5/hdf5-1.2.2/src/ \
 MAINTAINER=	jtb@netbsd.org
 HOMEPAGE=	http://hdf.ncsa.uiuc.edu/HDF5/
 
-DEPENDS+= jpeg-[0-9]*:../../graphics/jpeg
+DEPENDS+=	jpeg-[0-9]*:../../graphics/jpeg
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
