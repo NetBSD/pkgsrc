@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.4 2002/05/03 14:50:42 wiz Exp $
+
+--- libdha/mtrr.c.orig	Sun Apr 28 00:42:24 2002
++++ libdha/mtrr.c
+@@ -13,9 +13,12 @@
+ #include "AsmMacros.h"
+ 
+ #if defined (__i386__) && defined (__NetBSD__)
++#include <sys/param.h>
++#if __NetBSD_Version__ > 105240000
+ #include <stdint.h>
+-#include <stdlib.h>
+ #include <machine/mtrr.h>
++#endif
++#include <stdlib.h>
+ #include <machine/sysarch.h>
+ #endif
+ 
+@@ -46,7 +49,7 @@
+ 	return wr_len == strlen(sout) ? 0 : EPERM;
+     }
+     return ENOSYS;
+-#elif defined (__NetBSD__)
++#elif defined (__NetBSD__) && (__NetBSD_Version__ > 105240000)
+     struct mtrr *mtrrp;
+     int n;
+ 
