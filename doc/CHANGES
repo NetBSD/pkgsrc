@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.586 2002/11/24 09:33:54 jdolecek Exp $
+$NetBSD: CHANGES,v 1.587 2002/11/24 11:02:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3699,3 +3699,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated icepref to 1.1nb1 [wiz 2002-11-24]
 	Updated pkg_install to 20021123 [jschauma 2002-11-23]
 	Added py-kqueue-2.0 [jdolecek 2002-11-24]
+	Updated squid to 2.5.1nb1 [taca 2002-11-24]
