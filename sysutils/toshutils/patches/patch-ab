@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2000/01/07 06:38:00 soren Exp $
 
 --- configure.orig	Fri Dec 17 14:07:03 1999
-+++ configure	Mon Dec 20 01:09:21 1999
++++ configure	Fri Jan  7 07:33:46 2000
 @@ -526,7 +526,7 @@
  
  
@@ -20,3 +20,12 @@ $NetBSD: patch-ab,v 1.1.1.1 1999/12/20 03:05:16 hubertf Exp $
    linux*)
      OS_CFLAGS='-DLINUX'
    ;;
+@@ -2770,7 +2772,7 @@
+ if test "$have_x" = "yes"; then
+   XLIB="-lX11 $X_EXTRA_LIBS"
+   EXTRAFLAGS=""
+-  PROGRAMS="$PROGRAMS hotkey wmtuxtime"       # programs to build if X11 found
++  PROGRAMS="$PROGRAMS hotkey"       # programs to build if X11 found
+ else
+   { echo "configure: error: *** libX11 not found. Check 'config.log' for more details." 1>&2; exit 1; }
+   XLIB=""
