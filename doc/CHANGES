@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3700 2003/10/17 09:46:18 agc Exp $
+$NetBSD: CHANGES,v 1.3701 2003/10/17 13:55:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4211,3 +4211,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated slurm to 0.3.1 [cube 2003-10-16]
 	Updated quagga to 0.96.3 [itojun 2003-10-17]
 	Updated audit-packages to 1.24 [agc 2003-10-17]
+	Updated wine to 20031016 [adam 2003-10-17]
