@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/05/30 11:45:41 agc Exp $
+# $NetBSD: Makefile,v 1.2 2002/12/24 18:55:43 wiz Exp $
 
 DISTNAME=		texi2roff-2.0
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_TEX_CTAN:=support/texi2roff/}
 
-MAINTAINER=		collver@linuxfreemail.com
+MAINTAINER=		collver1@attbi.com
 HOMEPAGE=		http://texinfo.org/texi2roff/
 COMMENT=		Texinfo-to-ROFF direct translator
 
