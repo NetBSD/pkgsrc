@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/10/27 19:43:25 drochner Exp $
+$NetBSD: distinfo,v 1.3 2004/11/03 19:12:19 minskim Exp $
 
 SHA1 (exif-0.6.9.tar.gz) = ea40ce0ab77db4d95ad71cb11efa85712ea9900e
 Size (exif-0.6.9.tar.gz) = 369598 bytes
-SHA1 (patch-aa) = 50ab63fbcd53d646fc230031f36c3539fdcb88a8
+SHA1 (patch-aa) = cf2bf0ba5e2e2c611f0711717ca227a1c5edf26d
