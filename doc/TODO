@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2948 2005/01/21 14:58:26 wiz Exp $
+$NetBSD: TODO,v 1.2949 2005/01/21 15:06:32 drochner Exp $
 
 Suggested new packages
 ======================
@@ -460,7 +460,6 @@ Suggested package updates
 	o fondu-040927
 	o fop-0.20.5
 	o fort77-1.18
-	o fortunes-de-0.19
 	o fox-1.2.13
 	o fprot-workstation-bin-4.5.2
 	o freetds-0.62.4
@@ -476,7 +475,6 @@ Suggested package updates
 	o gattrib-20041120
 	o gauche-0.8.3
 	o gbib-0.1.3rc1
-	o gcc3-3.3.5
 	o gcombust-0.1.55
 	o gconfmm26-2.8.0?
 	o gcpio-2.6
@@ -513,7 +511,6 @@ Suggested package updates
 	o gnome-utils-1.4.1.3
 	o gnome-vfsmm26-2.8.0?
 	o gnucash-docs-1.8.5
-	o gnumeric-1.4.2
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.39
 	o gogo-3.11p1
@@ -523,7 +520,6 @@ Suggested package updates
 	o gpsim-devel-20041104
 	o gputils-0.12.4
 	o grace-5.1.18
-	o gramps-1.0.8
 	o grap-1.32
 	o grepmail-5.3030
 	o gri-2.12.8
@@ -937,7 +933,6 @@ Suggested package updates
 	o py-qt3-modules-3.13
 	o py-qt3-qscintilla-3.13
 	o py-qt3-sip-4.1.1
-	o py-reportlab-1.20
 	o py-rpy-0.4.0
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.6
@@ -1072,7 +1067,6 @@ Suggested package updates
 	o tex-musixtex-112
 	o texi2html-1.70
 	o tfmxplay-1.1.6
-	o tgif-4.1.44
 	o thunderbird-bin-1.0
 	o tinc-1.0.3
 	o tinyproxy-1.7.0
@@ -1185,7 +1179,6 @@ Suggested package updates
 	o xtux-20030306
 	o xzgv-0.8
 	o xzip-182
-	o yacas-1.0.55
 	o yafc-1.1
 	o yamt-0.6
 	o yasm-0.4.0
