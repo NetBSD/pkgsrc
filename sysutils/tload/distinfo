@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2003/09/23 08:47:17 wiz Exp $
+$NetBSD: distinfo,v 1.5 2003/09/23 08:49:16 wiz Exp $
 
 SHA1 (procps-2.0.6.tar.gz) = 8006cbc096922c53d340cdfe1e8dd9504cd2e203
 Size (procps-2.0.6.tar.gz) = 188674 bytes
-SHA1 (patch-aa) = bad2c06427292e4c4ff6276d451de34f2ce5a6ca
+SHA1 (patch-aa) = c626a4811317358d2a1c90d55cdcbbbc8e541cc2
