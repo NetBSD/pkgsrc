@@ -1,13 +1,14 @@
-$NetBSD: patch-ae,v 1.5 2002/03/30 13:57:03 pooka Exp $
+$NetBSD: patch-ae,v 1.6 2002/12/16 11:39:02 wiz Exp $
 
---- configure.orig	Thu Jul 26 06:52:57 2001
-+++ configure
-@@ -3715,7 +3715,7 @@
-   cat conftest.$ac_ext >&5
- fi
- rm -f conftest*
--      LDFLAGS=$ODL_LDFLAGS
-+      LDFLAGS=$OLD_LDFLAGS
-       test -n "$dash_r" && break
-     done ;;
- esac
+--- src/recur.c.orig	Mon May 27 16:00:06 2002
++++ src/recur.c
+@@ -254,7 +254,8 @@ retrieve_tree (const char *start_url)
+ 	  DEBUGP (("Already downloaded \"%s\", reusing it from \"%s\".\n",
+ 		   url, file));
+ 
+-	  if (string_set_contains (downloaded_html_set, file))
++	  if (downloaded_html_set
++	      && string_set_contains (downloaded_html_set, file))
+ 	    descend = 1;
+ 	}
+       else
