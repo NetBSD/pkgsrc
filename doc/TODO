@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.127 2003/01/03 18:30:56 wiz Exp $
+$NetBSD: TODO,v 1.128 2003/01/03 19:09:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -97,7 +97,7 @@ Suggested package updates
 	o cdlabelgen-2.5.0
 	o centericq-4.9.1
 	o cfengine-1.6.5 [pkg/19459|seb]
-	o citrix_ica [pkg/19210]
+	o citrix_ica-6.30.1052 [pkg/19210]
 	o clisp-2.30
 	o courier-0.40.2 [jlam]
 	o courier-imap-1.6.2 [jlam]
