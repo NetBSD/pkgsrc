@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/05/12 18:45:25 bouyer Exp $
+$NetBSD: patch-aa,v 1.6 2004/11/12 12:13:44 mjl Exp $
 
---- Makefile.in.orig	2004-01-08 19:21:29.000000000 +0100
-+++ Makefile.in	2004-05-12 15:21:00.000000000 +0200
-@@ -168,20 +168,16 @@
+--- Makefile.in.orig	2004-10-22 15:12:38.000000000 +0200
++++ Makefile.in	2004-11-08 00:35:11.000000000 +0100
+@@ -277,19 +277,15 @@
  # order is significant, don't change it arbitrarily
  SUBDIRS = \
  	config \
@@ -16,16 +16,15 @@ $NetBSD: patch-aa,v 1.5 2004/05/12 18:45:25 bouyer Exp $
 -	man docs example
 +	man
  
- 
 -pkgdata_DATA = \
 -	COPYRIGHT			\
 -	COPYRIGHT-APACHE		\
 -	COPYRIGHT-REGEX
 +pkgdata_DATA =
  
- 
  EXTRA_DIST = $(SNAPSHOT_STAMP) \
-@@ -506,7 +502,7 @@
+ 	$(pkgdata_DATA)			\
+@@ -676,7 +672,7 @@
  uninstall: uninstall-recursive
  
  install-am: all-am
