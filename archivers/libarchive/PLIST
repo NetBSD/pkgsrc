@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/02 18:01:13 xtraeme Exp $
+include/archive.h
+include/archive_entry.h
+lib/libarchive.a
+man/man3/archive_entry.3
+man/man3/archive_read.3
+man/man3/archive_util.3
+man/man3/archive_write.3
+man/man3/libarchive.3
+man/man5/libarchive-formats.5
+man/man5/tar.5
