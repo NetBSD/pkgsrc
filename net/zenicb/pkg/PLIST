@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1998/12/09 06:18:21 thorpej Exp $
+share/@EMACS@/site-lisp/zenicb-8ball.el
+share/@EMACS@/site-lisp/zenicb-add.el
+share/@EMACS@/site-lisp/zenicb-away.el
+share/@EMACS@/site-lisp/zenicb-example.el
+share/@EMACS@/site-lisp/zenicb-fortran.el
+share/@EMACS@/site-lisp/zenicb-history.el
+share/@EMACS@/site-lisp/zenicb-meditate.el
+share/@EMACS@/site-lisp/zenicb-nologout.el
+share/@EMACS@/site-lisp/zenicb-signal.el
+share/@EMACS@/site-lisp/zenicb-stamp.el
+share/@EMACS@/site-lisp/zenicb-trigger.el
+share/@EMACS@/site-lisp/zenicb-whereis.el
+share/@EMACS@/site-lisp/zenicb-yow.el
+share/@EMACS@/site-lisp/zenicb.el
