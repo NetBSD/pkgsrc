@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2002/10/03 15:30:41 wiz Exp $
+$NetBSD: distinfo,v 1.3 2003/01/13 13:00:03 wiz Exp $
 
-SHA1 (a2ps.pl-1.44) = 7adc79f6b11e4aa729facad1739ed0d2ebe84ffe
-Size (a2ps.pl-1.44) = 27804 bytes
-SHA1 (patch-aa) = b2d5aa6640dd538d9043f9495d18774dda94ed51
+SHA1 (a2ps.pl-1.45) = 1a938099322767bced3eae525426b80164584d8c
+Size (a2ps.pl-1.45) = 27952 bytes
+SHA1 (patch-aa) = 5ddff79884bbfad848f0a90080a18ccad755051e

@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2002/09/30 02:40:52 kei Exp $
+$NetBSD: patch-aa,v 1.2 2003/01/13 13:00:05 wiz Exp $
 
---- a2ps.pl-1.44.orig	Fri Mar 15 22:22:10 2002
-+++ a2ps.pl-1.44	Fri Mar 15 22:24:14 2002
+--- a2ps.pl-1.45.orig	Fri Mar 15 22:22:10 2002
++++ a2ps.pl-1.45	Fri Mar 15 22:24:14 2002
 @@ -496,8 +496,6 @@
  /inch {72 mul} bind def
  ---
