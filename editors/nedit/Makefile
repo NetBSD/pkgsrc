@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1998/06/20 14:03:12 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/06/22 12:27:09 agc Exp $
 
 DISTNAME=	nedit_source
 PKGNAME=	nedit-5.0.2
@@ -12,8 +12,6 @@ USE_MOTIF=	yes
 NO_WRKSUBDIR=	yes
 NO_CONFIGURE=	yes
 ALL_TARGET=	netbsd_nedit
-
-MAN1=		nc.1 nedit.1
 
 post-extract:
 .for DIR in source util

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/04/15 10:38:22 agc Exp $
+# $NetBSD: Makefile,v 1.6 1998/06/22 12:27:09 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1996/11/17 07:01:28 obrien Exp
 #
 
@@ -12,7 +12,6 @@ MAINTAINER=	explorer@netbsd.org
 
 ALL_TARGET=	joe
 WRKSRC=		${WRKDIR}/joe
-MAN1=		joe.1
 
 CFLAGS+=	-DTERMINFO
 
