@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2004/01/03 18:49:41 reed Exp $
+# $NetBSD: Makefile,v 1.108 2004/02/01 01:43:29 jlam Exp $
 
 .include "Makefile.common"
 
@@ -22,7 +22,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	Magick++/lib/ImageMagick++.pc.in
 PKGCONFIG_OVERRIDE+=	magick/ImageMagick.pc.in
 
-GCC_REQD=		2.95.3
+GCC_REQD+=		2.95.3
 
 PLIST_SUBST+=		IM_MAJOR_VER=${IM_MAJOR_VER}
 PLIST_SUBST+=		IM_MAJOR_LIB_VER=${IM_MAJOR_LIB_VER}
@@ -30,7 +30,7 @@ PLIST_SUBST+=		IM_MAJOR_LIB_VER=${IM_MAJOR_LIB_VER}
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
-GCC_REQD=		3.0
+GCC_REQD+=		3.0
 .endif
 
 # Avoid compiler bug on "mipsel" (cobalt?)

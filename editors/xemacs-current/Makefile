@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2004/01/25 12:44:34 kristerw Exp $
+# $NetBSD: Makefile,v 1.35 2004/02/01 01:43:29 jlam Exp $
 
 DISTNAME=	xemacs-21.5.16
 PKGREVISION=	1
@@ -16,7 +16,7 @@ PLIST_SUBST+=	EMACSVER=xemacs-21.5-b16
 MESSAGE_SUBST+=	EMACSVER=xemacs-21.5-b16
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD=		2.95.3
+GCC_REQD+=		2.95.3
 .endif
 
 .include "../../mk/bsd.prefs.mk"

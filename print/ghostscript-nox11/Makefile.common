@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2004/01/24 14:58:00 grant Exp $
+# $NetBSD: Makefile.common,v 1.52 2004/02/01 01:43:30 jlam Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 GS_VERS=		6.01
@@ -136,9 +136,9 @@ ALL_TARGET=		std
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-GCC_REQD=		2.95.3
+GCC_REQD+=		2.95.3
 .elif ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD=		3.0
+GCC_REQD+=		3.0
 .endif
 
 .if defined(ZOULARISBASE)

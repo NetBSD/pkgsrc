@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2004/01/23 21:50:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.61 2004/02/01 01:43:30 jlam Exp $
 
 DISTNAME=	kdelibs-2.2.2
 PKGREVISION=	10
@@ -100,7 +100,7 @@ USE_PKGSRC_GCC=	# defined
 .endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD=	3.0
+GCC_REQD+=	3.0
 .endif
 
 .include "../../archivers/bzip2/buildlink2.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/01/19 13:15:52 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/02/01 01:43:28 jlam Exp $
 #
 
 DISTNAME=		gmp-4.1.2
@@ -27,7 +27,7 @@ TEST_TARGET=		check
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 # The configure script thinks gcc 2.95 for ARM is too buggy to use.
-GCC_REQD=		3.0
+GCC_REQD+=		3.0
 .endif
 
 .include "../../mk/bsd.pkg.mk"

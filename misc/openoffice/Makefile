@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2004/01/24 14:11:10 grant Exp $
+# $NetBSD: Makefile,v 1.45 2004/02/01 01:43:29 jlam Exp $
 
 DISTNAME=		openoffice-0.0.0.641
 PKGREVISION=		2
@@ -20,7 +20,7 @@ USE_BUILDLINK2=		yes
 .include "../../mk/bsd.prefs.mk"
 
 # OpenOffice requires gcc 2.95.2 or better.
-GCC_REQD=		2.95.2
+GCC_REQD+=		2.95.2
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
