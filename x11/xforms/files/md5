@@ -1,10 +1,11 @@
-$NetBSD: md5,v 1.8 2000/02/29 19:43:59 dmcmahill Exp $
+$NetBSD: md5,v 1.9 2000/03/01 01:50:13 dmcmahill Exp $
 
 MD5 (xforms-alpha/bxform-088.tgz) = 2593c141d312a43b1d8fb9ab8d7dbc5c
 MD5 (xforms-arm32/bxform-088.tgz) = 709b4094b6cbcb718d66c979882de471
 MD5 (xforms-i386/bxform-088.tgz) = 0e54cf437813298ccf6874d47fd01db1
 MD5 (xforms-i386/bxform-088-ELF.tgz) = 3fc6f2e95ad041d7fa3c37f28485366c
 MD5 (xforms-m68k/bxform-088.tgz) = aac3b9873af7ed8c8daa6d79edf4d796
+MD5 (xforms-mipsel/bxform-088.tgz) = a86cec624fb87df94f90879f9806b39b
 MD5 (xforms-ns32k/bxform-088.tgz) = e84b3226eda1cce93bcd54e037d6a72f
 MD5 (xforms-powerpc/bxform-088.tgz) = 5fecafe04bf7e47bcdafcfd16724e7d4
 MD5 (xforms-sparc/bxform-088.tgz) = 0ce08b5fefc0876ac1e7e3904ff1045f
