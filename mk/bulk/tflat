@@ -1,4 +1,4 @@
-# $NetBSD: tflat,v 1.12 2004/01/30 11:10:47 grant Exp $
+# $NetBSD: tflat,v 1.13 2004/04/09 18:43:14 jschauma Exp $
 #
 # Copyright (c) 2001 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -67,11 +67,12 @@ BEGIN {
 				topdepends[$1] = " " $2 " ";
 			}
 
-			# Note that it is possible for a package "foo/bar" to never
-			# appear in $1.  In fact if foo/bar is not depended upon by
-			# anything and it has depends then it will not show up in $1
-			# however, we need to make sure we get a topdepends[foo/bar]
-			# entry so add it here if its not already there.
+			# Note that it is possible for a package "foo/bar" to
+			# never appear in $1.  In fact if foo/bar is not
+			# depended upon by anything and it has depends then it
+			# will not show up in $1 however, we need to make sure
+			# we get a topdepends[foo/bar] entry so add it here if
+			# its not already there.
 			if (!($2 in topdepends))
 				topdepends[$2] = "";
 		}
@@ -106,13 +107,13 @@ BEGIN {
 }
 
 function find_all_depends(pkg,pkgreg,i,deps){
-	# if we find the package already has been fully depended
-	# then return the depends list
+	# If we find the package already has been fully depended
+	# then return the depends list.
 	if (pkg in alldepends){
 		return(alldepends[pkg]);	
 	}
 
-	# if we find the package listed in its own depends list, then
+	# If we find the package listed in its own depends list, then
 	# return an empty list if we're going down the depends tree.
 	# When a package lists itself in the depends tree file, it simply
 	# is a place holder and means the package has no depends.  However
@@ -122,14 +123,15 @@ function find_all_depends(pkg,pkgreg,i,deps){
 		return(alldepends[pkg]);	
 	}
 
-	# otherwise recursively gather depends that each of the depends
-	# has
+	# Otherwise recursively gather depends that each of the depends
+	# has.
 	pkgreg=reg2str(pkg);
 	split(topdepends[pkg],deps);
 	i=1;
 	alldepends[pkg] = " ";
 	while ( i in deps ){
-		# don't add ourselves to the list (a possibility when going up the tree)
+		# Don't add ourselves to the list (a possibility when going up
+		# the tree).
 		if (" "deps[i]" "!~pkgreg){
 			alldepends[pkg] = alldepends[pkg] " " deps[i] " " find_all_depends(deps[i]);
 		}
@@ -140,7 +142,7 @@ function find_all_depends(pkg,pkgreg,i,deps){
 }
 
 #
-# take a string which has special characters like '+' in it and
+# Take a string which has special characters like '+' in it and
 # escape them.  Also put a space before and after since that's how
 # we'll distinguish things like gnome from gnome-libs
 #
@@ -151,7 +153,7 @@ function reg2str(reg){
 }
 
 #
-# take the depends lists and uniq them.
+# Take the depends lists and uniq them.
 #
 function uniq(list,deps,i,ulist){
 	
