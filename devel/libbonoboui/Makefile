@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/11 23:57:02 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/15 05:35:27 rh Exp $
 #
 
 DISTNAME=	libbonoboui-2.0.3
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=2.0.1/sources/libbonoboui/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +17,7 @@ GNU_CONFIGURE=		yes
 USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_GNU_GETTEXT=	yes
-USE_X11BASE=		yes
+USE_X11=		yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

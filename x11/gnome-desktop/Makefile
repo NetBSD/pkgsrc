@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/09/14 07:01:42 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/15 05:35:28 rh Exp $
 #
 
 DISTNAME=		gnome-desktop-2.0.8
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=2.0.1/sources/gnome-desktop/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,7 +18,7 @@ USE_BUILDLINK2=		yes
 USE_GMAKE=		yes
 USE_GNU_GETTEXT=	yes
 USE_PERL5=		yes
-USE_X11BASE=		yes
+USE_X11=		yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
