@@ -1,3 +1,4 @@
+$NetBSD: patch-ab,v 1.6 2002/05/20 17:47:23 cjep Exp $
 --- source/cmsmtrx.c.orig	Thu May 18 23:08:13 2000
 +++ source/cmsmtrx.c	Tue May 14 22:38:58 2002
 @@ -31,6 +31,7 @@
