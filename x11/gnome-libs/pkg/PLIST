@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 1999/07/14 20:45:30 tron Exp $
+@comment $NetBSD: PLIST,v 1.16 1999/08/29 12:37:04 rh Exp $
 bin/dns-helper
 bin/gconfigger
 bin/gnome-bug
@@ -50,6 +50,9 @@ include/libart_lgpl/art_alphagamma.h
 include/libart_lgpl/art_pixbuf.h
 include/libart_lgpl/art_rect_svp.h
 include/libart_lgpl/art_rgb_pixbuf_affine.h
+include/libart_lgpl/art_svp_point.h
+include/libart_lgpl/art_svp_wind.h
+include/libart_lgpl/art_vpath_dash.h
 include/libgnome/gnome-config.h
 include/libgnome/gnome-defs.h
 include/libgnome/gnome-fileconvert.h
@@ -145,9 +148,14 @@ include/libgnomeui/libgnomeui.h
 include/libgnomeui/gnome-color-picker.h
 include/libgnomeui/gnome-popup-menu.h
 include/libgnomeui/gnome-winhints.h
+include/libgnomeui/gnome-druid.h
+include/libgnomeui/gnome-druid-page.h
+include/libgnomeui/gnome-druid-page-start.h
+include/libgnomeui/gnome-druid-page-standard.h
+include/libgnomeui/gnome-druid-page-finish.h
 include/libgnorba/gnorba.h
 include/libgnorba/gnome-factory.h
-include/libgnorba/GnomeObject.h
+include/libgnorba/gnome-unknown.h
 include/libgnorba/Table.h
 include/gtk-xmhtml/miniparse.h
 include/gtk-xmhtml/HTML.h
@@ -164,21 +172,21 @@ include/zvt/vt.h
 lib/gnome-libs/include/gnomesupport.h
 lib/gnomeConf.sh
 lib/libart_lgpl.a
-lib/libart_lgpl.so.2.0
+lib/libart_lgpl.so.3.0
 lib/libartConf.sh
 lib/libgnome.a
 lib/libgnomesupport.a
 lib/libgnomesupport.so.0.0
 lib/libgnomeui.a
-lib/libgnomeui.so.41.1
+lib/libgnomeui.so.42.1
 lib/libgnorba.a
-lib/libgnorba.so.28.5
+lib/libgnorba.so.28.7
 lib/libgnorbagtk.a
 lib/libgnorbagtk.so.0.0
 lib/libgtkxmhtml.a
 lib/libgtkxmhtml.so.1.1
 lib/libzvt.a
-lib/libzvt.so.4.3
+lib/libzvt.so.4.5
 man/man1/gnome.1
 man/man1/gnome-config.1
 share/locale/de/LC_MESSAGES/gnome-libs.mo
@@ -204,6 +212,8 @@ share/locale/wa/LC_MESSAGES/gnome-libs.mo
 share/locale/sk/LC_MESSAGES/gnome-libs.mo
 share/locale/hr/LC_MESSAGES/gnome-libs.mo
 share/locale/en_GB/LC_MESSAGES/gnome-libs.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/gnome-libs.mo
+share/locale/el/LC_MESSAGES/gnome-libs.mo
 sbin/gnome-pty-helper
 share/aclocal/libart.m4
 share/doc/gnome-libs/gnome-doc.el
@@ -223,6 +233,86 @@ share/doc/gnome-libs/html/gnome-faq.html
 share/doc/gnome-libs/html/gnome-sections.txt
 share/doc/gnome-libs/html/gnome.html
 share/doc/gnome-libs/html/gnome/book1.html
+share/doc/gnome-libs/html/addauth.html
+share/doc/gnome-libs/html/altpol.html
+share/doc/gnome-libs/html/arch.html
+share/doc/gnome-libs/html/book1.html
+share/doc/gnome-libs/html/codstd.html
+share/doc/gnome-libs/html/cvs.html
+share/doc/gnome-libs/html/dialogapputil-docs.html
+share/doc/gnome-libs/html/event-driven-programming.html
+share/doc/gnome-libs/html/gnome-actionarea.html
+share/doc/gnome-libs/html/gnome-app-helper-convenience-macros.html
+share/doc/gnome-libs/html/gnome-app-helper-functions.html
+share/doc/gnome-libs/html/gnome-app-helper-gnomeuiinfo.html
+share/doc/gnome-libs/html/gnome-app-helper-keybindings-config.html
+share/doc/gnome-libs/html/gnome-app-helper-quick-example.html
+share/doc/gnome-libs/html/gnome-app-helper.html
+share/doc/gnome-libs/html/gnome-app-util.html
+share/doc/gnome-libs/html/gnome-app.html
+share/doc/gnome-libs/html/gnome-canvas-coordinates.html
+share/doc/gnome-libs/html/gnome-canvas-getting-started.html
+share/doc/gnome-libs/html/gnome-canvas-object-arguments.html
+share/doc/gnome-libs/html/gnome-canvas.html
+share/doc/gnome-libs/html/gnome-canvas-organization-of-items.html
+share/doc/gnome-libs/html/gnome-client.html
+share/doc/gnome-libs/html/gnome-color-selector.html
+share/doc/gnome-libs/html/gnome-defs.html
+share/doc/gnome-libs/html/gnome-dentry.html
+share/doc/gnome-libs/html/gnome-dialog.html
+share/doc/gnome-libs/html/gnome-dns.html
+share/doc/gnome-libs/html/gnome-fileconvert.html
+share/doc/gnome-libs/html/gnome-font-selector.html
+share/doc/gnome-libs/html/gnome-help.html
+share/doc/gnome-libs/html/gnome-history.html
+share/doc/gnome-libs/html/gnome-hook.html
+share/doc/gnome-libs/html/gnome-i18n.html
+share/doc/gnome-libs/html/gnome-ice.html
+share/doc/gnome-libs/html/gnome-mdi-docs.html
+share/doc/gnome-libs/html/gnome-messagebox.html
+share/doc/gnome-libs/html/gnome-mime.html
+share/doc/gnome-libs/html/intro.html
+share/doc/gnome-libs/html/gnome-net.html
+share/doc/gnome-libs/html/gnome-pixmap.html
+share/doc/gnome-libs/html/gnome-plugins.html
+share/doc/gnome-libs/html/gnome-properties.html
+share/doc/gnome-libs/html/gnome-score.html
+share/doc/gnome-libs/html/gnome-scores.html
+share/doc/gnome-libs/html/gnome-session.html
+share/doc/gnome-libs/html/gnome-startup.html
+share/doc/gnome-libs/html/gnome-stock-imlib.html
+share/doc/gnome-libs/html/gnome-stock-xpm.html
+share/doc/gnome-libs/html/gnome-stock.html
+share/doc/gnome-libs/html/gnome-string.html
+share/doc/gnome-libs/html/gnome-triggers.html
+share/doc/gnome-libs/html/gnome-util.html
+share/doc/gnome-libs/html/gnomeappbar.html
+share/doc/gnome-libs/html/graphics-contexts.html
+share/doc/gnome-libs/html/gtk-clock.html
+share/doc/gnome-libs/html/gtk-ted.html
+share/doc/gnome-libs/html/libgnome.html
+share/doc/gnome-libs/html/libgnomeui.html
+share/doc/gnome-libs/html/libgnorba-docs.html
+share/doc/gnome-libs/html/ln14.html
+share/doc/gnome-libs/html/nontech.html
+share/doc/gnome-libs/html/orbitgtk.html
+share/doc/gnome-libs/html/start.html
+share/doc/gnome-libs/html/thisdoc.html
+share/doc/gnome-libs/html/tut-doc.html
+share/doc/gnome-libs/html/tut-i18n.html
+share/doc/gnome-libs/html/tut-menus.html
+share/doc/gnome-libs/html/tut-parsing.html
+share/doc/gnome-libs/html/tut-sm.html
+share/doc/gnome-libs/html/tutorial.html
+share/doc/gnome-libs/html/visuals.html
+share/doc/gnome-libs/html/what.html
+share/doc/gnome-libs/html/whatis.html
+share/doc/gnome-libs/html/x-concepts-docs.html
+share/doc/gnome-libs/html/x1453.html
+share/doc/gnome-libs/html/x2161.html
+share/doc/gnome-libs/html/x2674.html
+share/doc/gnome-libs/html/x671.html
+share/doc/gnome-libs/html/docbook.css
 share/doc/gnome-libs/html/gnome/gnome-gnome-config.html
 share/doc/gnome-libs/html/gnome/gnome-gnome-defs.html
 share/doc/gnome-libs/html/gnome/gnome-gnome-dentry.html
@@ -334,6 +424,7 @@ share/idl/GnomeObject.idl
 share/idl/Table.idl
 share/idl/gnome-factory.idl
 share/idl/name-service.idl
+share/idl/gnome-unknown.idl
 share/mime-info/gnome.mime
 share/pixmaps/calculator-font.png
 share/pixmaps/gnome-info.png
@@ -347,9 +438,46 @@ share/gtkrc
 share/gtkrc.ja
 share/gtkrc.ko
 share/gtkrc.ru
+share/gtkrc.el
+share/gtkrc.eo
+share/gtkrc.he
+share/gtkrc.hy
+share/gtkrc.vi_VN.tcvn
+share/gtkrc.vi_VN.viscii
+share/gtkrc.tr
+share/gtkrc.th
+share/gtkrc.uk
+share/gtkrc.zh_CN
+share/gtkrc.iso88592
+share/gtkrc.iso88595
+share/gtkrc.zh_TW.Big5
+share/gtkrc.ka_GE.georgianps
+share/gtkrc.ka_GE.georgianacademy
 share/type-convert/gnome-make-postscript-mimes
 share/type-convert/type.convert
 share/type-convert/postscript.convert
+share/gnome/html/zvt/book1.html
+share/gnome/html/zvt/x119.html
+share/gnome/html/zvt/x144.html
+share/gnome/html/zvt/x152.html
+share/gnome/html/zvt/x192.html
+share/gnome/html/zvt/x222.html
+share/gnome/html/zvt/x243.html
+share/gnome/html/zvt/x263.html
+share/gnome/html/zvt/x98.html
+share/gnome/html/zvt/zvtterm-future.html
+share/gnome/html/zvt/zvtterm-input-output.html
+share/gnome/html/zvt/zvtterm-notes.html
+share/gnome/html/zvt/zvtterm-properties.html
+share/gnome/html/zvt/zvtterm-reference.html
+share/gnome/html/zvt/zvtterm-window-hints.html
+share/gnome/html/zvt/zvtterm.html
+share/gnome/html/gnorba-decl.txt
+share/gnome/html/gnorba-sections.txt
+share/gnome/html/gnorba/gnorba-gnorba.html
+share/gnome/html/gnorba/gnorba-goad.html
+share/gnome/html/gnorba/index.html
+share/gnome/html/gnorba/libgnorba.html
 @dirrm etc/sound/events
 @dirrm etc/sound
 @dirrm include/libgnorba
@@ -364,6 +492,10 @@ share/type-convert/postscript.convert
 @dirrm share/doc/gnome-libs/html/gnome
 @dirrm share/doc/gnome-libs/html
 @dirrm share/doc/gnome-libs
+@dirrm share/gnome/html/zvt
+@dirrm share/gnome/html/gnorba
+@dirrm share/gnome/html
+@dirrm share/gnome
 @dirrm share/idl
 @dirrm share/mime-info
 @dirrm share/pixmaps
