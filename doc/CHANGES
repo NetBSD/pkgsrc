@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9371 2005/03/01 11:18:51 taca Exp $
+$NetBSD: CHANGES,v 1.9372 2005/03/01 12:09:06 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1212,3 +1212,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gqview to 2.0.0 [snj 2005-02-28]
 	Added xmms-wma-1.0.4 [xtraeme 2005-03-01]
 	Updated squid to 2.5.9 [taca 2005-03-01]
+	Updated gerbv to 1.0.1 [dmcmahill 2005-03-01]
