@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/27 17:20:36 wennmach Exp $
+
+share/doc/kde/HTML/en/kdbg/index.html
+share/doc/kde/HTML/en/kdbg/types.html
+@dirrm share/doc/kde/HTML/en/kdbg
+bin/kdbg
+share/kde/applnk/Development/kdbg.kdelnk
+share/kde/icons/kdbg.xpm
+share/kde/icons/mini/mini-kdbg.xpm
+share/kde/apps/kdbg/pics/brkpt.xpm
+share/kde/apps/kdbg/pics/pgmfinish.xpm
+share/kde/apps/kdbg/pics/pgmnext.xpm
+share/kde/apps/kdbg/pics/pgmrun.xpm
+share/kde/apps/kdbg/pics/pgmstep.xpm
+share/kde/apps/kdbg/pics/execopen.xpm
+share/kde/apps/kdbg/pics/brkena.xpm
+share/kde/apps/kdbg/pics/brkdis.xpm
+share/kde/apps/kdbg/pics/brktmp.xpm
+share/kde/apps/kdbg/pics/brkcond.xpm
+share/kde/apps/kdbg/pics/pcinner.xpm
+share/kde/apps/kdbg/pics/pcup.xpm
+share/kde/apps/kdbg/pics/search.xpm
+share/kde/apps/kdbg/pics/pointer.xpm
+share/kde/apps/kdbg/types/qt.kdbgtt
+share/kde/apps/kdbg/types/qt2.kdbgtt
+share/kde/apps/kdbg/types/kdecore.kdbgtt
+share/kde/apps/kdbg/types/kdecore3.kdbgtt
+share/kde/apps/kdbg/types/X11.kdbgtt
+@dirrm share/kde/apps/kdbg/types
+@dirrm share/kde/apps/kdbg/pics
+@dirrm share/kde/apps/kdbg
+share/kde/locale/cs/LC_MESSAGES/kdbg.mo
+share/kde/locale/da/LC_MESSAGES/kdbg.mo
+share/kde/locale/de/LC_MESSAGES/kdbg.mo
+share/kde/locale/fr/LC_MESSAGES/kdbg.mo
+share/kde/locale/hr/LC_MESSAGES/kdbg.mo
+share/kde/locale/it/LC_MESSAGES/kdbg.mo
+share/kde/locale/no/LC_MESSAGES/kdbg.mo
+share/kde/locale/pl/LC_MESSAGES/kdbg.mo
+share/kde/locale/pt/LC_MESSAGES/kdbg.mo
+share/kde/locale/ro/LC_MESSAGES/kdbg.mo
+share/kde/locale/ru/LC_MESSAGES/kdbg.mo
+share/kde/locale/sk/LC_MESSAGES/kdbg.mo
+share/kde/locale/zh_CN.GB2312/LC_MESSAGES/kdbg.mo
