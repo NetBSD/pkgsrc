@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.2.4.1 2005/04/03 03:39:44 snj Exp $
+
+--- fileio.c.orig	Wed Oct 15 20:59:00 2003
++++ fileio.c
+@@ -19,6 +19,10 @@
+ */
+ 
+ #include "dbench.h"
++#ifdef __APPLE__
++#include <sys/aio.h>
++#define fdatasync fsync
++#endif
+ 
+ #define MAX_FILES 200
+ 
