@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/10/27 17:14:02 agc Exp $
+# $NetBSD: Makefile,v 1.7 1999/10/28 01:02:37 hubertf Exp $
 
 DISTNAME=	festvox-aec-2.0
 WRKSRC=		${WRKDIR}/festival
@@ -8,8 +8,6 @@ DISTFILES=	voice_aec_di-2.0.tar.gz
 
 MAINTAINER=	proff@iq.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts
-
-BROKEN=		PLIST errors
 
 DEPENDS+=	festival-1.4.0:../festival \
 		festlex-ogi-2.0:../festlex-ogi
@@ -21,8 +19,9 @@ NO_BUILD=	yes
 FHOME=		${PREFIX}/share/festival
 
 post-extract:
-	@ chmod -R a+r ${WRKSRC}
-	@ find ${WRKSRC} -type d -print0 | xargs -0 chmod 755
+	${CHMOD} -R a+r ${WRKSRC}
+	find ${WRKSRC} -type d -print0 | xargs -0 chmod 755
+	find ${WRKSRC} -type d -name CVS | xargs rm -fr
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
