@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2003/12/23 10:16:21 xtraeme Exp $
+
+--- configure.orig	2003-05-10 11:40:14.000000000 +0200
++++ configure	2003-05-10 11:41:01.000000000 +0200
+@@ -32,7 +32,7 @@
+ LDFLAGS="$LDFLAGS"
+ LIBS="$LIBS"
+ XLDFLAGS="$XLDFLAGS "
+-JHOME=`pwd`
++JHOME=${PKG_SYSCONFDIR}
+ 
+ ##
+ # Print a cool header
