@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.3 2000/10/15 17:38:57 rh Exp $
+
+--- src/global-gnome-font.c.orig	Sat Sep 30 19:13:49 2000
++++ src/global-gnome-font.c
+@@ -23,11 +23,10 @@
+ void
+ global_gnome_font_init (void)
+ {
+-	GnomeFontClass *gfc = gtk_type_class (gnome_font_get_type ());
+ 	int i;
+ 	GList *l, *ll;
+ 
+-	l = gnome_font_family_list (gfc);
++	l = gnome_font_family_list ();
+ 
+ 	for (ll = l; ll; ll = ll->next){
+ 		gnumeric_font_family_list = g_list_insert_sorted (
