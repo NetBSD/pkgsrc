@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.elf,v 1.1 2000/07/05 23:49:30 hubertf Exp $
+@comment $NetBSD: PLIST.elf,v 1.2 2000/10/18 00:00:00 jlam Exp $
 lib/gdk-pixbuf/loaders/libpixbufloader-bmp.a
 lib/gdk-pixbuf/loaders/libpixbufloader-bmp.la
 lib/gdk-pixbuf/loaders/libpixbufloader-bmp.so.1.0
@@ -26,3 +26,5 @@ lib/gdk-pixbuf/loaders/libpixbufloader-tiff.so.1.0
 lib/gdk-pixbuf/loaders/libpixbufloader-xpm.a
 lib/gdk-pixbuf/loaders/libpixbufloader-xpm.la
 lib/gdk-pixbuf/loaders/libpixbufloader-xpm.so.1.0
+@dirrm lib/gdk-pixbuf/loaders
+@dirrm lib/gdk-pixbuf
