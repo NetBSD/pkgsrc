@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.28 2004/10/25 15:25:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.29 2004/12/21 00:00:34 xtraeme Exp $
 
-DISTNAME=		dovecot-0.99.11
+DISTNAME=		dovecot-0.99.12.1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/
 
+.if 0
 PATCH_SITES=		http://www.roughtrade.net/dovecot/
 PATCHFILES=		dovecot-crammd5-0.99.11.diff
 PATCH_DIST_STRIP=	-p1
+.endif
 
 MAINTAINER=		tom@replic8.net
 HOMEPAGE=		http://www.dovecot.org/
@@ -14,6 +16,7 @@ COMMENT=		Secure IMAP and POP3 server
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+WRKSRC=			${WRKDIR}/${DISTNAME:S/.1$//}
 USE_BUILDLINK3=		YES
 USE_LIBTOOL=		YES
 USE_PKGINSTALL= 	YES
