@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2005/01/12 23:06:50 kleink Exp $
+$NetBSD: patch-aa,v 1.5 2005/01/27 20:38:02 kleink Exp $
 
 --- example/jwhois.conf.orig	2003-06-30 19:16:45.000000000 +0200
-+++ example/jwhois.conf	2005-01-12 23:58:07.000000000 +0100
++++ example/jwhois.conf	2005-01-27 21:33:30.000000000 +0100
 @@ -55,7 +55,42 @@
  	"^[0-9]+\\.[0-9]+\\.[0-9]+/[0-9]+-[0-9]+$" = "whois.nic.br";
   
@@ -55,7 +55,7 @@ $NetBSD: patch-aa,v 1.4 2005/01/12 23:06:50 kleink Exp $
  	"\\.fj$" = "whois.usp.ac.fj";
  	"\\.fm$" = "www.dot.fm";
  	"\\.fo$" = "whois.ripe.net";
-@@ -371,6 +406,12 @@
+@@ -371,6 +406,15 @@
  	"80.0.0.0/8" = "whois.ripe.net";
  	"81.0.0.0/8" = "whois.ripe.net";
  	"82.0.0.0/8" = "whois.ripe.net";
@@ -65,10 +65,13 @@ $NetBSD: patch-aa,v 1.4 2005/01/12 23:06:50 kleink Exp $
 +	"86.0.0.0/8" = "whois.ripe.net";
 +	"87.0.0.0/8" = "whois.ripe.net";
 +	"88.0.0.0/8" = "whois.ripe.net";
++	"124.0.0.0/8" = "whois.apnic.net";
++	"125.0.0.0/8" = "whois.apnic.net";
++	"126.0.0.0/8" = "whois.apnic.net";
  	"150.217.0.0/16" = "whois.ripe.net";
  	"151.3.0.0/16" = "whois.ripe.net";
  	"151.4.0.0/15" = "whois.ripe.net";
-@@ -724,10 +765,10 @@
+@@ -724,10 +768,10 @@
  
  #
  # The cache feature is used to provide a local cache with Whois information.
@@ -81,7 +84,7 @@ $NetBSD: patch-aa,v 1.4 2005/01/12 23:06:50 kleink Exp $
  
  #
  # This is the time after which an entry expires from the cache in hours.
-@@ -743,7 +784,7 @@
+@@ -743,7 +787,7 @@
  #
  # Path to the browser to use for HTTP servers.
  #

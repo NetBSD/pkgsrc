@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2005/01/12 04:42:18 kim Exp $
+# $NetBSD: Makefile,v 1.47 2005/01/27 20:38:02 kleink Exp $
 #
 
 DISTNAME=		jwhois-3.2.2
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=jwhois/}
 
