@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/13 23:58:32 wiz Exp $
+bin/quake3arena
+lib/lokigames/quake3arena/libMesaVoodooGL.so.3.2
+lib/lokigames/quake3arena/q3ded
+lib/lokigames/quake3arena/quake3arena
+lib/lokigames/quake3arena/baseq3/pak1.pk3
+lib/lokigames/quake3arena/baseq3/pak2.pk3
+lib/lokigames/quake3arena/baseq3/pak3.pk3
+share/doc/lokigames/quake3arena-Help/Q3A_EULA.html
+share/doc/lokigames/quake3arena-Help/Q3A_EULA.txt
+share/doc/lokigames/quake3arena-Help/Q3A_FAQ.html
+share/doc/lokigames/quake3arena-README
+@dirrm share/doc/lokigames/quake3arena-Help
+@dirrm share/doc/lokigames
+@dirrm lib/lokigames/quake3arena/baseq3
+@dirrm lib/lokigames/quake3arena
+@dirrm lib/lokigames
