@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2002/10/25 12:34:08 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2002/11/09 01:58:29 itojun Exp $
 # FreeBSD Id: Makefile,v 1.11 1999/04/17 10:51:03 itojun Exp
 
 DISTNAME=	nvi-1.79
@@ -54,6 +54,11 @@ AUTODETECT.iso-2022-kr=kr
 
 ENCODING+=	iso-2022-cn iso-2022-jp iso-2022-kr
 ENCODING+=	euc-jp euc-cn euc-kr sjis big5 euc-tw hz
+
+post-patch:
+.if ${OPSYS} == "NetBSD"
+	${RM} -f ${WRKSRC}/../include/sys/queue.h
+.endif
 
 post-build:
 .for encoding in ${ENCODING}
