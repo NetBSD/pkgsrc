@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2002/10/08 00:49:18 heinz Exp $
+# $NetBSD: Makefile,v 1.10 2002/10/08 16:41:32 heinz Exp $
 
 DISTNAME=	Mail-SpamAssassin-2.42
 PKGNAME=	spamassassin-2.42
+PKGREVISION=	1
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}			\
@@ -39,6 +40,9 @@ RULESDIR=		${PREFIX}/share/spamassassin
 CONF_FILES+=		${EGDIR}/local.cf  ${PKG_SYSCONFDIR}/local.cf
 CONF_FILES+=		${PREFIX}/share/spamassassin/user_prefs.template\
 			  ${PKG_SYSCONFDIR}/user_prefs.template
+SUPPORT_FILES_PERMS+=	${EGDIR}/netbsd_lists.cf			\
+			  ${PKG_SYSCONFDIR}/netbsd_lists.cf ${SHAREOWN}	\
+			  ${SHAREGRP} ${SHAREMODE}
 
 .include "../../mk/bsd.prefs.mk"
 # the 'spamd' RCD_SCRIPT behaves differently if we run NetBSD 1.6 or later
@@ -91,6 +95,7 @@ pre-install:
 	  done)
 	${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${EGDIR}/procmailrc.example
 	${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${EGDIR}/local.cf
+	${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${EGDIR}/
 .for f in check_whitelist speedtest translation_prep.pl
 	@(cd ${WRKSRC}/tools/;						\
 	  ${SED} -e "1s,/usr/bin/perl,${PERL5},"			\
@@ -104,7 +109,6 @@ pre-install:
 post-install:
 	${CHOWN} ${SHAREOWN} ${RULESDIR}/*
 	${CHGRP} ${SHAREGRP} ${RULESDIR}/*
-	${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${PKG_SYSCONFDIR}/
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.install.mk"
