@@ -1,0 +1,26 @@
+#!/bin/sh
+
+PKGNAME=$1
+
+case $2 in
+    PRE-INSTALL)
+	;;
+    POST-INSTALL)
+	echo ""
+	echo "    o you DO need running nameservice to start and run ${PKGNAME}"
+	echo ""
+	echo "    o use the ${PKGNAME} proxy and caching WWW Server by"
+	echo "      configuring your WWW Navigator (Netscape, Mosaic,...)"
+	echo "      to use it as a proxy server."
+	echo ""
+	echo "    o copy \"squid.conf.default\" to \"squid.conf\" and edit it"
+	echo "      as required. You should pay attention to the ACTUAL"
+	echo "      locations of the cache \"spool\" logfiles and pidfile."
+	echo ""
+	;;
+    *)
+	echo "Unexpected Argument $2!!!"
+	exit 1
+	;;
+esac
+exit 0
