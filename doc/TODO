@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3063 2005/02/19 18:27:09 wiz Exp $
+$NetBSD: TODO,v 1.3064 2005/02/19 18:44:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -809,7 +809,6 @@ Suggested package updates
 	o p5-Test-Cmd-1.05
 	o p5-Test-Harness-2.45_02
 	o p5-Test-Inline-0.16
-	o p5-Test-Simple-0.50
 	o p5-Text-Autoformat-1.12
 	o p5-Text-Balanced-1.95
 	o p5-Text-BibTeX-0.34
