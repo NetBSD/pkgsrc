@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2003/12/23 09:13:57 xtraeme Exp $
+
+--- configure.orig	2003-12-14 18:18:21.000000000 -0600
++++ configure
+@@ -2816,6 +2816,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+ 
+ 	#ifdef __NetBSD__
+ 	#include <soundcard.h>
++	#include <sys/ioccom.h>
+ 	#else
+ 	#include <sys/soundcard.h>
+ 	#endif
