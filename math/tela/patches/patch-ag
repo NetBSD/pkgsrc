@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1.1.1 2001/02/28 22:34:09 jtb Exp $
+$NetBSD: patch-ag,v 1.2 2001/03/01 21:16:53 jtb Exp $
 
 --- t/docview.t.orig	Thu Sep  7 14:05:06 2000
 +++ t/docview.t
@@ -7,7 +7,16 @@ $NetBSD: patch-ag,v 1.1.1.1 2001/02/28 22:34:09 jtb Exp $
 +choiceViewing = smenu("Choose viewing method","ASCII","xdvi","Emacs");
  
 -directory = "/usr/local/lib/tela";
-+directory = "@PREFIX@/share/tela";
++directory = "/usr/pkg/share/tela";
  
  choiceDoc = smenu("Choose document to view",
  				 "Basic help file",
+@@ -19,7 +19,7 @@
+ 	system(#("less -Ms ",directory,"/",file,".txt"));
+ } else if (strstarteq(choiceViewing,"xdvi")) {
+ 	system(#("xdvi -geometry 847x570+0+0 -s 3 ",directory,"/",file,".dvi&"));
+-} else if (strstarteq(choiceViewing,"Xemacs")) {
++} else if (strstarteq(choiceViewing,"Emacs")) {
+ 	system(#("emacs ",directory,"/",file,".txt&"));
+ };
+ 

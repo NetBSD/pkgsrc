@@ -1,13 +1,31 @@
-$NetBSD: patch-ah,v 1.1.1.1 2001/02/28 22:34:09 jtb Exp $
+$NetBSD: patch-ah,v 1.2 2001/03/01 21:16:53 jtb Exp $
 
---- t/std.t.orig	Wed Feb 28 19:00:03 2001
+--- t/std.t.orig	Thu Nov 30 11:06:14 2000
 +++ t/std.t
 @@ -95,7 +95,7 @@
  // kinds of Tela documentation.
  local(directory,choicViewing,choiceDoc,editor,env)
  {
 -	directory = "/usr/local/lib/tela";
-+	directory = "@PREFIX@/share/tela";
++	directory = "/usr/pkg/share/tela";
  	editor = "emacs";
  	pager = "less -Ms";
  	env = getenv("EDITOR");
+@@ -109,7 +109,7 @@
+ 						 "HTML/Xmosaic (requires X)",
+ 						 "HTML/Lynx",
+ 						 "Xdvi (requires X)",
+-						 "Xemacs (requires X)",
++						 "Emacs (requires X)",
+ 						 "Cancel");
+ 	if (strstarteq(choiceViewing,"Cancel")) return;
+ 	choiceDoc = smenu("Choose document to view",
+@@ -134,7 +134,7 @@
+ 		system(#("cd ",directory,"/html; lynx ",file,".html"))
+ 	else if (strstarteq(choiceViewing,"Xdvi"))
+ 		system(#("xdvi -geometry 847x570+0+0 -s 3 ",directory,"/",file,".dvi&"))
+-	else if (strstarteq(choiceViewing,"Xemacs"))
++	else if (strstarteq(choiceViewing,"Emacs"))
+ 		system(#(editor," ",directory,"/",file,".txt&"));
+ };
+ 

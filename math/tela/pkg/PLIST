@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/28 22:34:07 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/03/01 21:16:54 jtb Exp $
 bin/ctpp
 bin/tela
 bin/telakka
@@ -17,6 +17,9 @@ lib/tela/numerics.o
 lib/tela/plotmtv.o
 lib/tela/sppc.o
 lib/tela/std.o
+man/man1/ctpp.1
+man/man1/tela.1
+man/man1/telakka.1
 share/tela/ct/CDF.ct
 share/tela/ct/ani.ct
 share/tela/ct/binops.ct
