@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9223 2005/02/19 21:09:46 wiz Exp $
+$NetBSD: CHANGES,v 1.9224 2005/02/19 21:20:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -969,3 +969,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated p5-xmltv to 0.5.38 [wiz 2005-02-19]
 	Updated p5-XML-LibXML to 1.58 [wiz 2005-02-19]
 	Updated cdrtools-ossdvd to 2.01.1.32 [wiz 2005-02-19]
+	Updated boehm-gc to 6.4 [wiz 2005-02-19]

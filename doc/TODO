@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3070 2005/02/19 21:09:47 wiz Exp $
+$NetBSD: TODO,v 1.3071 2005/02/19 21:20:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -322,7 +322,6 @@ Suggested package updates
 	o blender-2.36
 	o blitz++-0.8
 	o boaconstructor-0.3.1
-	o boehm-gc-6.4
 	o bomberclone-0.11.5
 	o bonobo-conf-0.16
 	o boost-1.32.0
