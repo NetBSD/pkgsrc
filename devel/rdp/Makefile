@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.1 1998/07/31 16:32:22 agc Exp $
+# $NetBSD: Makefile,v 1.2 1998/08/01 22:30:26 frueauf Exp $
 
-DISTNAME=	rdp1_5
-PKGNAME=	rdp-1.5
-CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.dcs.rhbnc.ac.uk/pub/rdp/
-EXTRACT_SUFX=	.tar
+DISTNAME=		rdp1_5
+PKGNAME=		rdp-1.5
+CATEGORIES=		devel
+MASTER_SITES=		ftp://ftp.dcs.rhbnc.ac.uk/pub/rdp/
+EXTRACT_SUFX=		.zip
 
-MAINTAINER=	packages@netbsd.org
+MAINTAINER=		packages@netbsd.org
 
-EXTRACT_BEFORE_ARGS=	xf
+BUILD_DEPENDS=		unzip:../../archivers/unzip
 
-WRKSRC=		${WRKDIR}/rdp
-MAKEFILE=	makefile
+EXTRACT_CMD=		unzip
+EXTRACT_BEFORE_ARGS=	-Laqo
 
-NO_CONFIGURE=	yes
+WRKSRC=			${WRKDIR}/rdp
+MAKEFILE=		makefile
+
+NO_CONFIGURE=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rdp ${PREFIX}/bin
