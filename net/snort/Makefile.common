@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2002/11/09 13:44:43 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6.2.1 2003/03/07 07:46:24 jmc Exp $
 #
 
-DISTNAME?=	snort-1.9.0
-CATEGORIES?=	net security
-MASTER_SITES?=	http://www.snort.org/releases/				\
+DISTNAME=	snort-1.9.1
+CATEGORIES=	net security
+MASTER_SITES=	http://www.snort.org/releases/				\
 		ftp://the.wiretapped.net/pub/security/network-intrusion-detection/snort/ \
 		http://www.centus.com/snort/				\
 		http://snort.whitehats.com/				\
@@ -11,30 +11,56 @@ MASTER_SITES?=	http://www.snort.org/releases/				\
 		ftp://gd.tuwien.ac.at/infosys/security/snort/		\
 		http://snort.sourcefire.com/releases/
 
-MAINTAINER?=	packages@netbsd.org
-HOMEPAGE?=	http://www.snort.org/
+MAINTAINER=	packages@netbsd.org
+HOMEPAGE=	http://www.snort.org/
 
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--with-libpcap-includes=${BUILDLINK_PREFIX.libpcap}/include
-CONFIGURE_ARGS+=--with-libpcap-libraries=${BUILDLINK_PREFIX.libpcap}/lib
+USE_PKGINSTALL=		YES
+GNU_CONFIGURE=		YES
+
+CONFIGURE_ARGS+=	--with-libpcap-includes=${BUILDLINK_PREFIX.libpcap}/include
+CONFIGURE_ARGS+=	--with-libpcap-libraries=${BUILDLINK_PREFIX.libpcap}/lib
+
+PKG_SYSCONFSUBDIR=	snort
+
+RCD_SCRIPTS=		snort
+
+SNORT_USER?=		snort
+SNORT_GROUP?=		snort
+PKG_GROUPS=		${SNORT_GROUP}
+PKG_USERS=		${SNORT_USER}:${SNORT_GROUP}::Snort\\ user
+FILES_SUBST+=		SNORT_USER="${SNORT_USER}" SNORT_GROUP="${SNORT_GROUP}"
+
+OWN_DIRS_PERMS=		/var/log/snort ${SNORT_USER} ${SNORT_GROUP} 700
+CONF_FILES=		${EGDIR}/snort.conf.default \
+			${PKG_SYSCONFDIR}/snort.conf
+CONF_FILES+=		${EGDIR}/classification.config \
+			${PKG_SYSCONFDIR}/classification.config
+CONF_FILES+=		${EGDIR}/reference.config \
+			${PKG_SYSCONFDIR}/reference.config
+
+EGDIR=			${PREFIX}/share/examples/snort
+
+post-configure:
+	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/etc/snort.conf > \
+		${WRKDIR}/snort.conf.default
 
 post-install:
-	${INSTALL_DATA_DIR} -m 700 -o ${ROOT_USER} -g ${ROOT_GROUP} /var/log/snort
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/snort
-	cd ${WRKSRC}/etc ; \
-	for i in `ls | grep -v Makefile` ; do \
-		${INSTALL_DATA} $$i ${PREFIX}/etc/snort ; \
-	done
-	:
+	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/classification.config \
+			${WRKSRC}/etc/reference.config \
+			${WRKDIR}/snort.conf.default ${EGDIR}/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snort
 	cd ${WRKSRC}/doc ; \
-	for i in `ls | grep -v Makefile` ; do \
+	for i in `${LS} | ${GREP} -v Makefile` ; do \
 		${INSTALL_DATA} $$i ${PREFIX}/share/doc/snort ; \
 	done
-	:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/snort/rules
+	cd ${WRKSRC}/etc ; \
+	for i in *.map *.txt sid ; do \
+		${INSTALL_DATA} $$i ${PREFIX}/share/snort/rules ; \
+	done
 	cd ${WRKSRC}/rules ; \
-	for i in `ls | grep -v Makefile` ; do \
+	for i in `${LS} | ${GREP} -v Makefile` ; do \
 		${INSTALL_DATA} $$i ${PREFIX}/share/snort/rules ; \
 	done
 	${INSTALL_MAN} ${WRKSRC}/snort.8 ${PREFIX}/man/man8
