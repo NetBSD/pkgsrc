@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/03 01:36:12 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/05/13 03:47:29 xtraeme Exp $
 bin/amaya
 lib/Amaya/amaya/Amaya.svg
 lib/Amaya/amaya/AmayaPage.html
@@ -11,6 +11,8 @@ lib/Amaya/amaya/HTML.STR
 lib/Amaya/amaya/HTML.conf
 lib/Amaya/amaya/HTML.en
 lib/Amaya/amaya/HTML.trans
+lib/Amaya/amaya/HTML.trans.es
+lib/Amaya/amaya/HTML.trans.fr
 lib/Amaya/amaya/HTMLP.PRS
 lib/Amaya/amaya/HTMLPBW.PRS
 lib/Amaya/amaya/HTMLPL.PRS
@@ -29,6 +31,8 @@ lib/Amaya/amaya/MathML.STR
 lib/Amaya/amaya/MathML.conf
 lib/Amaya/amaya/MathML.en
 lib/Amaya/amaya/MathML.trans
+lib/Amaya/amaya/MathML.trans.es
+lib/Amaya/amaya/MathML.trans.fr
 lib/Amaya/amaya/MathMLP.PRS
 lib/Amaya/amaya/MathMLT.TRA
 lib/Amaya/amaya/MathMLTX.TRA
@@ -336,6 +340,7 @@ lib/Amaya/doc/html/Tables.html.es
 lib/Amaya/doc/html/Tables.html.fr
 lib/Amaya/doc/html/Transform.html
 lib/Amaya/doc/html/Transform.html.es
+lib/Amaya/doc/html/Tutorial.html.fr
 lib/Amaya/doc/html/Views.html
 lib/Amaya/doc/html/Views.html.de
 lib/Amaya/doc/html/Views.html.es
@@ -706,7 +711,6 @@ lib/Amaya/doc/images/ColorMenu-fr.gif
 lib/Amaya/doc/images/ColorMenu.gif
 lib/Amaya/doc/images/CooperationMenu.gif
 lib/Amaya/doc/images/CooperationPreferences.gif
-lib/Amaya/doc/images/Cour.gif
 lib/Amaya/doc/images/DL.gif
 lib/Amaya/doc/images/Editor.gif
 lib/Amaya/doc/images/Em.gif
@@ -720,6 +724,7 @@ lib/Amaya/doc/images/H2.gif
 lib/Amaya/doc/images/H3.gif
 lib/Amaya/doc/images/IDMenu.png
 lib/Amaya/doc/images/Image.gif
+lib/Amaya/doc/images/Langue.png
 lib/Amaya/doc/images/LangueNegotiation-fr.gif
 lib/Amaya/doc/images/LangueNegotiation.gif
 lib/Amaya/doc/images/LibraryDocDefaultStyle.gif
@@ -744,10 +749,12 @@ lib/Amaya/doc/images/SaveAs.gif
 lib/Amaya/doc/images/Strong.gif
 lib/Amaya/doc/images/TemplatesMenu-fr.gif
 lib/Amaya/doc/images/TemplatesMenu.gif
+lib/Amaya/doc/images/View.png
 lib/Amaya/doc/images/align-de.png
 lib/Amaya/doc/images/alternateview-de.jpg
 lib/Amaya/doc/images/alternateview.jpg
 lib/Amaya/doc/images/amaya.gif
+lib/Amaya/doc/images/anim.gif
 lib/Amaya/doc/images/annot.png
 lib/Amaya/doc/images/annotationicon-de.png
 lib/Amaya/doc/images/annotationicon-es.png
@@ -785,6 +792,9 @@ lib/Amaya/doc/images/configuration_for_annotations.png
 lib/Amaya/doc/images/configurebox-fr.png
 lib/Amaya/doc/images/configurebox.png
 lib/Amaya/doc/images/createRule-de.png
+lib/Amaya/doc/images/create_image-fr.png
+lib/Amaya/doc/images/create_link-fr.png
+lib/Amaya/doc/images/create_table-fr.png
 lib/Amaya/doc/images/css-fr.gif
 lib/Amaya/doc/images/css.gif
 lib/Amaya/doc/images/dialog_save_as-de.png
@@ -802,17 +812,21 @@ lib/Amaya/doc/images/geometry_preferences-de.png
 lib/Amaya/doc/images/geometry_preferences-es.png
 lib/Amaya/doc/images/geometry_preferences.png
 lib/Amaya/doc/images/graphics_palette-de.png
+lib/Amaya/doc/images/home.gif
 lib/Amaya/doc/images/image_button.gif
+lib/Amaya/doc/images/invalid_profile-fr.png
 lib/Amaya/doc/images/language_negotiation-de.png
 lib/Amaya/doc/images/language_negotiation-es.png
 lib/Amaya/doc/images/language_negotiation.png
 lib/Amaya/doc/images/left.gif
+lib/Amaya/doc/images/libsvg.gif
 lib/Amaya/doc/images/linksview-de.jpg
 lib/Amaya/doc/images/linksview.jpg
 lib/Amaya/doc/images/linkwindow.png
 lib/Amaya/doc/images/localfilter-es.png
 lib/Amaya/doc/images/localfilter.png
 lib/Amaya/doc/images/math_palette-de.png
+lib/Amaya/doc/images/not_well_formed-fr.png
 lib/Amaya/doc/images/open.png
 lib/Amaya/doc/images/printoptions_w32-de.png
 lib/Amaya/doc/images/profiles_preferences-de.png
@@ -828,9 +842,12 @@ lib/Amaya/doc/images/put.gif
 lib/Amaya/doc/images/right.gif
 lib/Amaya/doc/images/scenario_graphique.png
 lib/Amaya/doc/images/search_and_replace-de.png
+lib/Amaya/doc/images/search_and_replace-fr.png
 lib/Amaya/doc/images/sourceview-de.jpg
 lib/Amaya/doc/images/sourceview.jpg
 lib/Amaya/doc/images/spellchecking-de.png
+lib/Amaya/doc/images/spellchecking-fr.png
+lib/Amaya/doc/images/stop.gif
 lib/Amaya/doc/images/structureview-de.jpg
 lib/Amaya/doc/images/structureview.jpg
 lib/Amaya/doc/images/table.gif
@@ -850,6 +867,9 @@ lib/Amaya/fonts/icones.ff
 lib/Amaya/fonts/icones.pcf
 lib/Amaya/fonts/icones1.fb
 lib/Amaya/fonts/icones11.fb
+lib/Amaya/resources/xrc/InitConfirmDlgWX.xrc
+@dirrm lib/Amaya/resources/xrc
+@dirrm lib/Amaya/resources
 @dirrm lib/Amaya/fonts
 @dirrm lib/Amaya/doc/images
 @dirrm lib/Amaya/doc/html/viewing

@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.9 2003/12/03 01:36:12 xtraeme Exp $
+$NetBSD: patch-ac,v 1.10 2004/05/13 03:47:29 xtraeme Exp $
 
---- ../thotlib/include/ustring.h.orig	Fri Jul  4 14:35:37 2003
-+++ ../thotlib/include/ustring.h
+--- ../thotlib/include/ustring.h.orig	2004-05-13 05:33:50.000000000 +0200
++++ ../thotlib/include/ustring.h	2004-05-13 05:34:13.000000000 +0200
 @@ -6,6 +6,11 @@
  #include <windows.h>
- #endif /* _WINDOWS */
+ #endif /* _WINGUI */
  
 +#include "config.h" 
 +#ifdef HAVE_WCHAR_H 
