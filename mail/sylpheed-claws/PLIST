@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2004/02/09 15:41:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2004/06/02 07:56:19 adam Exp $
 bin/sylpheed
 include/sylpheed/account.h
 include/sylpheed/action.h
@@ -77,12 +77,14 @@ include/sylpheed/gtk/colorlabel.h
 include/sylpheed/gtk/colorsel.h
 include/sylpheed/gtk/description_window.h
 include/sylpheed/gtk/filesel.h
+include/sylpheed/gtk/foldersort.h
 include/sylpheed/gtk/gtkaspell.h
 include/sylpheed/gtk/gtksctree.h
 include/sylpheed/gtk/gtkshruler.h
 include/sylpheed/gtk/gtkstext.h
 include/sylpheed/gtk/gtkutils.h
 include/sylpheed/gtk/gtkvscrollbutton.h
+include/sylpheed/gtk/inputdialog.h
 include/sylpheed/gtk/logwindow.h
 include/sylpheed/gtk/manage_window.h
 include/sylpheed/gtk/menu.h
@@ -93,12 +95,12 @@ include/sylpheed/gtk/sslcertwindow.h
 include/sylpheed/headerview.h
 include/sylpheed/html.h
 include/sylpheed/imap.h
+include/sylpheed/imap_gtk.h
 include/sylpheed/import.h
 include/sylpheed/importldif.h
 include/sylpheed/importmutt.h
 include/sylpheed/importpine.h
 include/sylpheed/inc.h
-include/sylpheed/inputdialog.h
 include/sylpheed/jpilot.h
 include/sylpheed/ldapctrl.h
 include/sylpheed/ldaplocate.h
@@ -118,10 +120,12 @@ include/sylpheed/mbox.h
 include/sylpheed/message_search.h
 include/sylpheed/messageview.h
 include/sylpheed/mh.h
+include/sylpheed/mh_gtk.h
 include/sylpheed/mimeview.h
 include/sylpheed/msgcache.h
 include/sylpheed/mutt.h
 include/sylpheed/news.h
+include/sylpheed/news_gtk.h
 include/sylpheed/noticeview.h
 include/sylpheed/passphrase.h
 include/sylpheed/pgpmime.h
