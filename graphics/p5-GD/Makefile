@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2003/10/02 04:32:41 explorer Exp $
+# $NetBSD: Makefile,v 1.17 2003/10/03 03:10:57 explorer Exp $
 #
 
 DISTNAME=	GD-2.07
@@ -17,6 +17,7 @@ USE_X11=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/GD/.packlist
 
 MAKE_ENV+=		GD_LIBS="${LDFLAGS}"
+MAKE_PARAMS+=		-lib_gd_path=${PREFIX}
 
 .include "../../graphics/gd/buildlink2.mk"
 .include "../../lang/perl5/module.mk"
