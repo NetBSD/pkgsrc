@@ -1,0 +1,159 @@
+$NetBSD: patch-ah,v 1.1.1.1 2004/04/11 18:11:14 jmmv Exp $
+
+--- beep/dirbrowser.c.orig	Wed Dec 24 17:17:01 2003
++++ beep/dirbrowser.c
+@@ -263,15 +263,16 @@ static guint64 bmp_db_get_nodeidx_from_i
+ static gchar *bmp_db_sanify_tag(gchar * value)
+ {
+ 
+-    if (!value)
+-	return "(unknown)";
+-
+     gchar *frag = NULL;
+     gchar **branches;
+     guint ctr = 0;
+     gboolean bracket_open = FALSE;
++    GString *chunk;
++
++    if (!value)
++	return "(unknown)";
+ 
+-    GString *chunk = g_string_new(NULL);
++    chunk = g_string_new(NULL);
+     branches = g_strsplit(g_strstrip(value), " ", 0);
+ 
+     while (frag || (ctr == 0)) {
+@@ -346,6 +347,7 @@ static void bmp_db_create_dirtree(GtkTre
+     GList *list = NULL;
+     gboolean first = TRUE;
+     gchar *from_real;
++    GdkPixbuf *buf_dir, *buf_file, *buf_cda;
+ 
+     from = g_locale_from_utf8(from, -1, NULL, NULL, NULL);
+     from_real = bmp_db_get_path_real(from, model, &parent_iter);
+@@ -354,17 +356,17 @@ static void bmp_db_create_dirtree(GtkTre
+     /* It's not really a waste creating both beforehand since we will
+      * certainly need the folder one at least once, and most probably
+      * the audio one too anyway */
+-    GdkPixbuf *buf_dir = gdk_pixbuf_new_from_inline(sizeof(folder_pixbuf),
++    buf_dir = gdk_pixbuf_new_from_inline(sizeof(folder_pixbuf),
+ 						    folder_pixbuf,
+ 						    TRUE,
+ 						    NULL);
+ 
+-    GdkPixbuf *buf_file = gdk_pixbuf_new_from_inline(sizeof(audio_pixbuf),
++    buf_file = gdk_pixbuf_new_from_inline(sizeof(audio_pixbuf),
+ 						     audio_pixbuf,
+ 						     TRUE,
+ 						     NULL);
+ 
+-    GdkPixbuf *buf_cda = gdk_pixbuf_new_from_inline(sizeof(cda_pixbuf),
++    buf_cda = gdk_pixbuf_new_from_inline(sizeof(cda_pixbuf),
+ 						    cda_pixbuf,
+ 						    TRUE,
+ 						    NULL);
+@@ -647,6 +649,7 @@ static void bmp_db_row_activated(GtkTree
+     GtkTreeIter iter;
+     GList *paths = NULL;
+     GList *paths_f = NULL;
++    GtkWidget *store;
+ 
+     gchar *node_name;
+     gchar *path;
+@@ -681,7 +684,7 @@ static void bmp_db_row_activated(GtkTree
+ 	paths = paths->next;
+     }
+ 
+-    GtkWidget *store =
++    store =
+ 	GTK_WIDGET(bmp_db_return_filestore_model_fresh(paths_f));
+ 
+     gtk_tree_view_set_model(user_data, GTK_TREE_MODEL(store));
+@@ -733,9 +736,9 @@ static void bmp_db_filestore_row_activat
+ 
+ 	if (entry_type == IS_ALBUM) {
+ 	    if (gtk_tree_model_iter_children(model, &iter_child, &iter)) {
++		gboolean valid = TRUE;
+ 		if (click_play)
+ 		    playlist_clear();
+-		gboolean valid = TRUE;
+ 		while (valid) {
+ 		    gtk_tree_model_get(GTK_TREE_MODEL(model), &iter_child,
+ 				       FILENAME_COL, &node_name, -1);
+@@ -1308,12 +1311,15 @@ static GtkTreeModel *bmp_db_return_files
+ {
+ 
+     GtkTreeStore *file_store;
++    GtkTreeModel *sort_model;
++    gdouble length_pl;
++    int ctr = 0;
+ 
+ 
+     file_store =
+ 	gtk_tree_store_new(5, GDK_TYPE_PIXBUF, G_TYPE_STRING, G_TYPE_INT,
+ 			   G_TYPE_STRING, G_TYPE_INT);
+-    GtkTreeModel *sort_model =
++    sort_model =
+ 	gtk_tree_model_sort_new_with_model(GTK_TREE_MODEL(file_store));
+ 
+ 
+@@ -1321,17 +1327,16 @@ static GtkTreeModel *bmp_db_return_files
+ 					    bmp_db_mdb_sort_func, NULL, NULL);
+ 
+ 
+-    gdouble length_pl = g_list_length(paths);
++    length_pl = g_list_length(paths);
+     gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progressbar_db), 0.0);
+ 
+-    int ctr = 0;
+-
+     while (paths) {
+ 
+ 	gchar *path = paths->data;
+-	ctr++;
+ 
+ 	GList *files = bmp_db_return_files_from_path(path);
++        gdouble frac;
++	ctr++;
+ 
+ 	while (files) {
+ 	    gchar *title;
+@@ -1356,7 +1361,7 @@ static GtkTreeModel *bmp_db_return_files
+ 	    files = files->next;
+ 	}
+ 
+-	gdouble frac = 1 / length_pl;
++	frac = 1 / length_pl;
+ 	gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(progressbar_db),
+ 				      frac * ctr);
+ 	while (gtk_events_pending()) {
+@@ -1413,6 +1418,9 @@ GtkWidget *bmp_db_create(gchar * current
+     GtkWidget *paned;
+ 
+     if (!window) {
++	GtkWidget *fstore;
++	GList *paths;
++	GtkTreeSelection *sel;
+ 
+ 	/* create window, etc */
+ 	/* yes this is all messed up */
+@@ -1489,17 +1497,16 @@ GtkWidget *bmp_db_create(gchar * current
+ 			 G_CALLBACK(bmp_db_keypress), window);
+ 
+ 	gtk_container_add(GTK_CONTAINER(sw), treeview);
+-	GtkWidget *fstore;
+ 
+ 	/* FIXME: clean up variables, move them to start */
+ 
+ 	/* FIXME: paths is not freed, and is resetted every iteration */
+-	GList *paths = NULL;
++	paths = NULL;
+ 	paths = g_list_append(paths, g_strdup(g_get_home_dir()));
+ 	fstore = bmp_db_return_filestore_fresh(paths);
+ 	gtk_container_add(GTK_CONTAINER(sw_right), fstore);
+ 
+-	GtkTreeSelection *sel =
++	sel =
+ 	    gtk_tree_view_get_selection(GTK_TREE_VIEW(treeview));
+ 	g_signal_connect(G_OBJECT(sel), "changed",
+ 			 G_CALLBACK(bmp_db_row_activated), fstore);
