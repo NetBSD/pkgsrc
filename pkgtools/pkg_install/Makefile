@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2002/12/22 09:12:11 salo Exp $
+# $NetBSD: Makefile,v 1.64 2002/12/24 07:46:09 schmonz Exp $
 
 # Notes to package maintainers:
 #
@@ -17,7 +17,9 @@ MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.netbsd.org/
 COMMENT=		NetBSD-current's pkg_* tools
 
-USE_BUILDLINK2=		no
+USE_BUILDLINK2=		# defined
+
+USE_DB185=		# defined
 
 GNU_CONFIGURE=		# defined
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR}
@@ -51,4 +53,5 @@ post-install:
 		${PKG_ADMIN} rebuild ; \
 	fi
 
+.include "../../databases/db/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
