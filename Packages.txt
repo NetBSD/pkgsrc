@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.340 2004/07/04 17:41:58 wiz Exp $
+# $NetBSD: Packages.txt,v 1.341 2004/07/24 01:57:07 hubertf Exp $
 ###########################################################################
 
 			==========================
@@ -711,11 +711,13 @@ The MASTER_SITES may be set to one of the predefined sites:
 	${MASTER_SITE_XEMACS}
 
 If one of these predefined sites is chosen, you may require the ability to
-specify a subdirectory of that site.  Since these macros may expand to
-more than one actual site, you MUST use the following construct to specify
-a subdirectory:
+specify a subdirectory of that site.  This is in fact almost always the
+case with all of the above.  Since these macros may expand to more than one
+actual site, you MUST use the following construct to specify a
+subdirectory:
 
 	${MASTER_SITE_GNU:=subdirectory/name/}
+	${MASTER_SITE_SOURCEFORGE:=project_name/}
 
 (Note the trailing slash after the subdirectory name.) Use of the deprecated
 MASTER_SITE_SUBDIR will not work.
@@ -832,15 +834,40 @@ invoking "make makepatchsum".
 
 This directory contains files that are used by the patch(1) command to
 modify the sources as distributed in the distribution file into a form that
-will compile and run perfectly on NetBSD. The files are applied
+will compile and run perfectly on NetBSD.  The files are applied
 successively in alphabetic order (as returned by a shell "patches/patch-*"
 glob expansion), so patch-aa is applied before patch-ab etc.
 
-The patch-?? files should be in "diff -bu" format, and apply without
-a fuzz to avoid problems (To force patches to apply with fuzz you
-can set PATCH_FUZZ_FACTOR=-F2).  Furthermore, do not put changes
-for more than one file into a single patch-file, as this will make
-future modifications more difficult.
+Patch files which are optional and will depend on local site configuration
+can be included with names matching the pattern "patches/patch-optional-*".
+Their suffixes should match the configuration options.  The selected
+optional patch file names should be assigned to the variable
+$OPTIONAL_PATCHFILES.  They will not be applied by default.
+
+For example if a package data file needs patching to indicate the default
+local printer paper size as specified in the $PAPERSIZE file you can
+include patches for all the possible paper sizes other than the one the
+package comes configured for by default.  In this case you might have a
+patch called "patch-optional-Letter-papersize" and/or another patch called
+"patch-optional-A4-papersize".  In your Makefile you would select between
+them with the following construct:
+
+   PATCHDIR=	${.CURDIR}/patches
+   .if exists(${PATCHDIR}/patch-optional-${PAPERSIZE}-papersize)
+	OPTIONAL_PATCHFILES+= ${PATCHDIR}/patch-optional-${PAPERSIZE}-papersize
+   .endif
+
+Note that you have to define the value of $PATCHDIR in order to use it in a
+".if" statement like this as otherwise it's not defined until too late
+during the processing of the Makefile.  You should use a ".if" statement in
+order to avoid problems should the configuration item ($PAPERSIZE in this
+example) be set to an unexpected value.
+
+The patch-* files should be in "diff -bu" format, and apply without a fuzz
+to avoid problems (to force patches to apply with fuzz you can set
+PATCH_FUZZ_FACTOR=-F2).  Furthermore, do not put changes for more than one
+file into a single patch-file, as this will make future modifications more
+difficult.
 
 Similar, a file should be patched at most once, not several times by
 several different patches. If a file needs several patches, they should
@@ -866,6 +893,9 @@ with the previously existing one with patchdiff.
 When you have finished a package, remember to generate the checksums
 for the patch files by using the "make makepatchsum" command, see
 section 4.2.
+
+Patch files that are distributed by the author or other maintainers can be
+listed in $PATCHFILES.
 
 If it is desired to store any patches that should not be committed into
 pkgsrc, they can be kept outside the pkgsrc tree in the $LOCALPATCHES
@@ -1136,7 +1166,7 @@ Here's how to use libtool in a pkg in seven simple steps:
 3. For the linking of the library, remove any "ar", "ranlib", and "ld
    -Bshareable" commands, and use instead:
 
-	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info major:minor
+	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info CURRENT:REVISION:AGE
 
    Note that the library is changed to have a .la extension, and the
    objects are changed to have a .lo extension.  Change OBJS as necessary.
@@ -1144,6 +1174,29 @@ Here's how to use libtool in a pkg in seven simple steps:
    symlinks (if necessary) in the build directory. Be sure to include
    the -version-info especially when major and minor are zero, as libtool
    will otherwise strip off the shared library version.
+
+   PLIST gets all of the .a, .la and so, .so.major and .so.major.minor
+   entries.
+
+   From the libtool manual:
+
+	libtool library versions are described by three integers:
+
+	CURRENT
+	     The most recent interface number that this library implements.
+
+	REVISION
+	     The implementation number of the CURRENT interface.
+
+	AGE
+	     The difference between the newest and oldest interfaces that this
+	     library implements.  In other words, the library implements all the
+	     interface numbers in the range from number `CURRENT - AGE' to
+	     `CURRENT'.
+
+	If two libraries have identical CURRENT and AGE numbers, then the
+	dynamic linker chooses the library with the greater REVISION
+	number.
 
    The "-release" option will produce different results for a.out and ELF
    (excluding symlinks) in only one case. An ELF library of the form
@@ -1185,8 +1238,9 @@ Here's how to use libtool in a pkg in seven simple steps:
    This will install the static .a, shared library, any needed symlinks,
    and run "ldconfig."
 
-7. In your PLIST, include all of the .a, .la, and so, .so.major and
-   .so.major.minor files (this is a change from the previous behaviour).
+7. In your PLIST, include all of the .a, .la, and so, .so.CURRENT and
+   .so.CURRENT.REVISION files (this is a change from the previous
+   behaviour).
 
 
  6.3 Using libtool on GNU packages that already support libtool
@@ -1260,6 +1314,9 @@ and for packages that need automake and autoconf:
 
 	...
 	.include "../mk/automake.mk"
+
+Packages which use GNU Automake will almost certainly require GNU Make, but
+that's automatically provided for you in "mk/automake.mk".
 
 There are times when the configure process makes additional changes to the
 generated files, which then causes the build process to try to re-execute
@@ -1923,8 +1980,8 @@ look at the package for pkgsrc/editors/sam, which uses a gzipped shell archive
 (shar), but the quick solution is to set EXTRACT_SUFX to the name after the
 DISTNAME field, and add the following to your package's Makefile:
 
-	EXTRACT_SUFX=   .msg.gz
-	EXTRACT_CMD=            zcat
+	EXTRACT_SUFX=		.msg.gz
+	EXTRACT_CMD=		zcat -d < ${DOWNLOADED_DISTFILE} | ${SH}
 
 
  10.3 Packages not creating their own subdirectory
@@ -2169,8 +2226,8 @@ first part of the "do-configure" target pkgsrc/print/ghostscript5 package
 (it relies on the jpeg sources being present in source form during the
 build):
 
-	if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then \
-		cd ${_PKGSRCDIR}/../../graphics/jpeg && ${MAKE} extract;              \
+	if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then	\
+		cd ${_PKGSRCDIR}/../../graphics/jpeg && ${MAKE} extract;	\
 	fi
 
 If you build any other packages that way, please make sure the working
@@ -2243,7 +2300,7 @@ crept in.
 When compiling the pkgsrc/pkgtools/pkg_install package, you get the error
 from make that it doesn't know how to make /usr/share/tmac/tmac.andoc? This
 indicates that you don't have installed the "text" set on your machine
-(nroff, ...). It is recommended to do that.
+(nroff, ...). It is recommended that you do that.
 
 In the case of the pkg_install package, you can get away with setting
 NOMAN=YES either in the environment or in /etc/mk.conf.
@@ -3429,7 +3486,7 @@ Disk space needed: unknown.
 
 ###########################################################################
 # Local Variables:
-# mode:				Text
+# mode:				Indented-Text
 # fill-column:			75
-# sentence-end-double-space:	nil
+# sentence-end-double-space:	t
 # End:
