@@ -1,0 +1,52 @@
+$NetBSD: patch-an,v 1.3 2004/08/04 06:43:52 minskim Exp $
+
+--- sshd.c.orig	Sun Mar 21 16:36:01 2004
++++ sshd.c
+@@ -52,6 +52,9 @@ RCSID("$OpenBSD: sshd.c,v 1.290 2004/03/
+ #include <sys/security.h>
+ #include <prot.h>
+ #endif
++#ifdef __INTERIX
++#include <interix/security.h>
++#endif /* __INTERIX */
+ 
+ #include "ssh.h"
+ #include "ssh1.h"
+@@ -570,10 +573,15 @@ privsep_preauth_child(void)
+ 	/* XXX not ready, too heavy after chroot */
+ 	do_setusercontext(pw);
+ #else
++#ifdef __INTERIX
++	if (setuser(SSH_PRIVSEP_USER, NULL, SU_COMPLETE) != 0)
++		fatal("setuser: %s, %.100s", SSH_PRIVSEP_USER, strerror(errno));
++#else /* __INTERIX */
+ 	gidset[0] = pw->pw_gid;
+ 	if (setgroups(1, gidset) < 0)
+ 		fatal("setgroups: %.100s", strerror(errno));
+ 	permanently_set_uid(pw);
++#endif /* __INTERIX */
+ #endif
+ }
+ 
+@@ -817,8 +825,10 @@ main(int ac, char **av)
+ 	av = saved_argv;
+ #endif
+ 
++#ifndef __INTERIX
+ 	if (geteuid() == 0 && setgroups(0, NULL) == -1)
+ 		debug("setgroups(): %.200s", strerror(errno));
++#endif
+ 
+ 	/* Initialize configuration options to their default values. */
+ 	initialize_server_options(&options);
+@@ -1062,8 +1072,10 @@ main(int ac, char **av)
+ 	 * to create a file, and we can't control the code in every
+ 	 * module which might be used).
+ 	 */
++#ifndef __INTERIX
+ 	if (setgroups(0, NULL) < 0)
+ 		debug("setgroups() failed: %.200s", strerror(errno));
++#endif /* __INTERIX */
+ 
+ 	/* Initialize the log (it is reinitialized below in case we forked). */
+ 	if (debug_flag && !inetd_flag)
