@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/17 15:08:18 tron Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/17 15:10:05 tron Exp $
 
 DISTNAME=	coreutils-5.0
 PKGREVISION=	1
@@ -27,12 +27,14 @@ CONFIGURE_ARGS=		--program-prefix=${GNU_PROGRAM_PREFIX}
 .  if ${GNU_PROGRAM_PREFIX} == "g"
 CONFLICTS+=		id-utils-[0-9]* gnome-utils<1.4.1.2nb2
 .  endif
-.  if ${GNU_PROGRAM_PREFIX} == "g"
 # print/teTeX*-bin installs a 'readlink' program, so conflict with it if
 # GNU_PROGRAM_PREFIX == ''
 .  if ${GNU_PROGRAM_PREFIX} == ""
 CONFLICTS+=		teTeX-bin-[0-9]*
 .  endif
+.else
+# see above
+CONFLICTS+=		teTeX-bin-[0-9]*
 .endif
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
