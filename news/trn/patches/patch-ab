@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1 1999/06/02 18:21:23 christos Exp $
+
+--- rcstuff.c.orig	Sat Aug 20 16:47:59 1994
++++ rcstuff.c	Mon May  3 14:09:15 1999
+@@ -704,7 +704,7 @@
+ 	    set_toread(i);
+ 	*(rcline[i] + rcnums[i] - 1) = RCCHAR(rcchar[i]);
+ 	if (toread[i] > 0)
+-	    sprintf(tmpbuf,"%3d %6ld   ",i,(long)toread[i]);
++	    sprintf(tmpbuf,"%3d %8ld ",i,(long)toread[i]);
+ 	else
+ 	    sprintf(tmpbuf,"%3d %7s  ",i,status[-toread[i]]);
+ 	safecpy(tmpbuf+13,rcline[i],2034);
+--- ngstuff.c.orig	Sat Nov 19 01:01:21 1994
++++ ngstuff.c	Mon May  3 14:08:30 1999
+@@ -353,7 +353,7 @@
+     bool saveit = FALSE;
+     
+     if (toplevel) {
+-	printf("%-6ld ",art);
++	printf("%-8ld ",art);
+ 	fflush(stdout);
+     }
+     perform_cnt++;
