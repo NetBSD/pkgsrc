@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/05/02 09:35:47 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2001/05/14 13:36:07 zuntum Exp $
 #
 
 DISTNAME=	fvwm-${FVWM_VERSION}
@@ -21,7 +21,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 CONFLICTS=	fvwm-2.*
 
-FVWM_VERSION=	2.3.31
+FVWM_VERSION=	2.3.32
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
