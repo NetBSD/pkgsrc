@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.635 2002/11/28 20:00:52 jmmv Exp $
+$NetBSD: CHANGES,v 1.636 2002/11/29 01:29:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3761,3 +3761,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated nas to 1.6 [markd 2002-11-28]
 	Updated 2vcard to 0.4 [jschauma 2002-11-28]
 	Added sysbuild-1.0 [jmmv 2002-11-28]
+	Updated yafc to 0.7.10 [markd 2002-11-29]
