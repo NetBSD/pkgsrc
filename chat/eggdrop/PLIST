@@ -1,0 +1,90 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/26 03:48:13 kent Exp $
+bin/eggdrop
+etc/eggdrop.conf.dist
+lib/eggdrop/assoc.so
+lib/eggdrop/blowfish.so
+lib/eggdrop/channels.so
+lib/eggdrop/compress.so
+lib/eggdrop/console.so
+lib/eggdrop/ctcp.so
+lib/eggdrop/dns.so
+lib/eggdrop/filesys.so
+lib/eggdrop/irc.so
+lib/eggdrop/notes.so
+lib/eggdrop/seen.so
+lib/eggdrop/server.so
+lib/eggdrop/share.so
+lib/eggdrop/transfer.so
+lib/eggdrop/uptime.so
+lib/eggdrop/wire.so
+man/man1/eggdrop.1
+share/eggdrop/BOTNET
+share/eggdrop/help/cmds1.help
+share/eggdrop/help/cmds2.help
+share/eggdrop/help/core.help
+share/eggdrop/help/set/cmds1.help
+share/eggdrop/help/set/cmds2.help
+share/eggdrop/html/about.html
+share/eggdrop/html/app-problems.html
+share/eggdrop/html/app-textsub.html
+share/eggdrop/html/app-tricks.html
+share/eggdrop/html/app-weird.html
+share/eggdrop/html/authors.html
+share/eggdrop/html/bans.html
+share/eggdrop/html/botnet.html
+share/eggdrop/html/compiling.html
+share/eggdrop/html/egg-core.html
+share/eggdrop/html/faqs.html
+share/eggdrop/html/features.html
+share/eggdrop/html/index.html
+share/eggdrop/html/install.html
+share/eggdrop/html/mod-assoc.html
+share/eggdrop/html/mod-blowfish.html
+share/eggdrop/html/mod-channels.html
+share/eggdrop/html/mod-compress.html
+share/eggdrop/html/mod-console.html
+share/eggdrop/html/mod-ctcp.html
+share/eggdrop/html/mod-dns.html
+share/eggdrop/html/mod-filesys.html
+share/eggdrop/html/mod-irc.html
+share/eggdrop/html/mod-notes.html
+share/eggdrop/html/mod-seen.html
+share/eggdrop/html/mod-server.html
+share/eggdrop/html/mod-share.html
+share/eggdrop/html/mod-uptime.html
+share/eggdrop/html/mod-wire.html
+share/eggdrop/html/mod-woobie.html
+share/eggdrop/html/news.html
+share/eggdrop/html/party.html
+share/eggdrop/html/readme.html
+share/eggdrop/html/starting.html
+share/eggdrop/html/tcl-commands.html
+share/eggdrop/html/users.html
+share/eggdrop/language/core.english.lang
+share/eggdrop/language/core.french.lang
+share/eggdrop/language/core.german.lang
+share/eggdrop/scripts/CONTENTS
+share/eggdrop/scripts/action.fix.tcl
+share/eggdrop/scripts/alltools.tcl
+share/eggdrop/scripts/autobotchk
+share/eggdrop/scripts/botchk
+share/eggdrop/scripts/cmd_resolve.tcl
+share/eggdrop/scripts/compat.tcl
+share/eggdrop/scripts/getops.tcl
+share/eggdrop/scripts/klined.tcl
+share/eggdrop/scripts/notes2.tcl
+share/eggdrop/scripts/ques5.tcl
+share/eggdrop/scripts/sentinel.tcl
+share/eggdrop/scripts/userinfo.tcl
+share/eggdrop/scripts/weed
+share/eggdrop/tcl-commands.doc
+share/eggdrop/tricks
+@comment The directory does not exist for NOPIC, so don't issue an error.
+@unexec rmdir %D/lib/eggdrop 2>/dev/null || true
+@dirrm share/eggdrop/help/set
+@dirrm share/eggdrop/help/msg
+@dirrm share/eggdrop/help
+@dirrm share/eggdrop/html
+@dirrm share/eggdrop/language
+@dirrm share/eggdrop/scripts
+@dirrm share/eggdrop
