@@ -1,0 +1,233 @@
+$NetBSD: patch-ae,v 1.1.1.1 2000/07/18 07:46:40 itohy Exp $
+
+Don't add spaces at the end of lines
+since fig2dev (in transfig) doesn't like them.
+
+--- drvfig.cpp.orig	Mon Jun  5 03:49:29 2000
++++ drvfig.cpp	Fri Jul 14 08:28:42 2000
+@@ -217,19 +217,19 @@
+   //  const Point & p;
+   for (unsigned int n = 0; n < numberOfElementsInPath(); n++) {
+     const basedrawingelement & elem = pathElement(n);
+-    if (j == 0) { buffer << "\t"; }
++    if (j == 0) { buffer << "\t"; } else buffer << " ";
+     switch(elem.getType()) {
+         case lineto:
+         case moveto: {
+             const Point & p = pathElement(n).getPoint(0);
+ 	    buffer << (int)(PntFig * p.x_) << " "
+-	           << (int)(y_offset - (PntFig * p.y_)) << " ";
++	           << (int)(y_offset - (PntFig * p.y_));
+             }
+             break;
+         case closepath: {
+             const Point & p = pathElement(0).getPoint(0);
+ 	    buffer << (int)(PntFig * p.x_) << " "
+-	           << (int)(y_offset - (PntFig * p.y_)) << " ";
++	           << (int)(y_offset - (PntFig * p.y_));
+             }
+             break;
+         default:
+@@ -248,6 +248,10 @@
+ void drvFIG::prpoint(ostream & os, const Point& p) const {
+ 	os << (int)(PntFig * p.x_) << " " << (int)(y_offset - (PntFig * p.y_)) << " ";
+ }
++
++void drvFIG::prpointnl(ostream & os, const Point& p) const {
++	os << (int)(PntFig * p.x_) << " " << (int)(y_offset - (PntFig * p.y_)) << endl;
++}
+ // print segments without x-splines
+ void drvFIG::print_spline_coords_noxsplines(int linestyle,float localLineWidth)
+ {
+@@ -275,9 +279,8 @@
+        // 4.0 is the gap spec. we could also derive this from the input
+ 		buffer << 2 << "\n\t";
+ 		prpoint(buffer,currentPoint);
+-		prpoint(buffer,p);
++		prpointnl(buffer,p);
+ 		currentPoint=p;
+-		buffer << endl;
+ 		}
+ 		break;
+ 	}
+@@ -295,9 +298,8 @@
+ 		prpoint(buffer,currentPoint);
+ 		prpoint(buffer,elem.getPoint(0));
+ 		prpoint(buffer,elem.getPoint(1));
+-		prpoint(buffer,elem.getPoint(2));
++		prpointnl(buffer,elem.getPoint(2));
+ 		currentPoint=elem.getPoint(2);
+-		buffer <<  endl;
+ 		// 32 buffer << "\n\t0.000 1.000 1.000 0.000" << endl;
+ 	break;
+ 	}
+@@ -312,9 +314,8 @@
+        // 4.0 is the gap spec. we could also derive this from the input
+ 		buffer << 2 << "\n\t";
+ 		prpoint(buffer,currentPoint);
+-		prpoint(buffer,firstPoint);
++		prpointnl(buffer,firstPoint);
+ 		currentPoint=firstPoint;
+-		buffer << endl;
+ 		break;
+ 	}
+ 	break;
+@@ -332,14 +333,14 @@
+   int j = 0;
+ 
+   for (unsigned int n = 0; n < numberOfElementsInPath(); n++) {
+-    if (j == 0) { buffer << "\t"; }
++    if (j == 0) { buffer << "\t"; } else { buffer << " "; }
+     const basedrawingelement & elem = pathElement(n);
+     switch (elem.getType()) {
+       case moveto:
+       case lineto: {
+ 	const Point & p = elem.getPoint(0);
+ 	buffer << (int)(PntFig * p.x_) << " "
+-	       << (int)(y_offset - (PntFig * p.y_)) <<	" ";
++	       << (int)(y_offset - (PntFig * p.y_));
+ 	}
+     	j++; if (j == 5) { j=0; buffer << "\n"; }
+ 	break;
+@@ -347,16 +348,17 @@
+         if ((format == 31)) {
+ 		const Point & p = elem.getPoint(2);
+ 		buffer << (int)(PntFig * p.x_) << " "
+-		       << (int)(y_offset - (PntFig * p.y_)) <<	" ";
++		       << (int)(y_offset - (PntFig * p.y_));
+     		j++; if (j == 5) { j=0; buffer << "\n"; }
+ 	} else {
+ 		// put all points, middle points will have control value 1
+ 		for (unsigned int cp = 0 ; cp < 3; cp++ ) {
+ 			const Point & p = elem.getPoint(cp);
+ 			buffer << (int)(PntFig * p.x_) << " "
+-		       	<< (int)(y_offset - (PntFig * p.y_)) <<	" ";
++		       	<< (int)(y_offset - (PntFig * p.y_));
+     			j++; if (j == 5) { j=0; buffer << "\n"; }
+     			if ((j == 0) && (cp != 2) && ( n+1 != (numberOfElementsInPath()))) { buffer << "\t"; }
++    			if ((j != 0) && (cp != 2) && ( n+1 != (numberOfElementsInPath()))) { buffer << " "; }
+ 		}
+ 	}
+ 	}
+@@ -364,7 +366,7 @@
+       case closepath: {
+ 	const Point & p = pathElement(0).getPoint(0);
+ 	buffer << (int)(PntFig * p.x_) << " "
+-	       << (int)(y_offset - (PntFig * p.y_)) <<	" ";
++	       << (int)(y_offset - (PntFig * p.y_));
+ 	}
+     	j++; if (j == 5) { j=0; buffer << "\n"; }
+ 	break;
+@@ -397,14 +399,14 @@
+     switch (elem.getType()) {
+       case moveto: {
+         if (format == 31) {
+-		buffer << "\t0.0 0.0 ";
++		buffer << "\t0.0 0.0";
+ 	} else {
+-		buffer << " 0 ";
++		buffer << " 0";
+ 	}
+ 	j++; if (j == maxj) { 
+ 		j=0; buffer << "\n"; 
+     		if ( (n+1) != numberOfElementsInPath()) { buffer << "\t"; }
+-	}
++	} else if (n+1 != numberOfElementsInPath()) { buffer << " "; }
+ 	lastp = elem.getPoint(0);
+ 	}
+ 	break;
+@@ -412,23 +414,23 @@
+         if (format == 31) {
+ 		const Point & p = elem.getPoint(0);
+ 		buffer << (float)(PntFig * lastp.x_) << " "
+-		       << (float)(y_offset - (PntFig * lastp.y_)) <<  " ";
++		       << (float)(y_offset - (PntFig * lastp.y_));
+ 		j++; if (j == maxj) { 
+ 			j=0; buffer << "\n\t"; 
+-		}
++		} else if (n+1 != numberOfElementsInPath()) { buffer << " "; }
+ 		buffer << (float)(PntFig * p.x_) << " "
+-		       << (float)(y_offset - (PntFig * p.y_)) <<	" ";
++		       << (float)(y_offset - (PntFig * p.y_));
+ 		j++; if (j == maxj) { 
+ 			j=0; buffer << "\n"; 
+     			if ( (n+1) != numberOfElementsInPath()) { buffer << "\t"; }
+-		}
++		} else if (n+1 != numberOfElementsInPath()) { buffer << " "; }
+ 		lastp = elem.getPoint(0);
+ 	} else {
+-		buffer << " 0 ";
++		buffer << " 0";
+ 		j++; if (j == maxj) { 
+ 			j=0; buffer << "\n"; 
+     			if ((n+1) != numberOfElementsInPath()) { buffer << "\t"; }
+-		}
++		} else if (n+1 != numberOfElementsInPath()) { buffer << " "; }
+ 	}
+ 	}
+ 	break;
+@@ -436,23 +438,23 @@
+         if (format == 31) {
+ 		const Point & p = pathElement(0).getPoint(0);
+ 		buffer << (float)(PntFig * lastp.x_) << " "
+-		       << (float)(y_offset - (PntFig * lastp.y_)) <<  " ";
++		       << (float)(y_offset - (PntFig * lastp.y_));
+ 		j++; if (j == maxj) { 
+ 			j=0; buffer << "\n\t"; 
+-		}
++		} else buffer << " ";
+ 		buffer << (float)(PntFig * p.x_) << " "
+-		       << (float)(y_offset - (PntFig * p.y_)) <<	" ";
++		       << (float)(y_offset - (PntFig * p.y_));
+ 		j++; if (j == maxj) { 
+ 			j=0; buffer << "\n"; 
+     			if ( (n+1) != numberOfElementsInPath()) { buffer << "\t"; }
+-		}
++		} else if (n+1 != numberOfElementsInPath()) { buffer << " "; }
+ 		lastp = pathElement(0).getPoint(0);
+ 	} else {
+-		buffer << " 0 ";
++		buffer << " 0";
+ 		j++; if (j == maxj) { 
+ 			j=0; buffer << "\n"; 
+     			if ( (n+1) != numberOfElementsInPath()) { buffer << "\t"; }
+-		}
++		} else if (n+1 != numberOfElementsInPath()) { buffer << " "; }
+ 	}
+ 	}
+ 	break;
+@@ -461,21 +463,21 @@
+ 	  	for (unsigned int cp = 0 ; cp < 2; cp++ ) {
+ 		    	const Point & p = elem.getPoint(cp);
+ 			    buffer << (float)(PntFig * p.x_) << " "
+-				   << (float)(y_offset - (PntFig * p.y_)) <<  " ";
++				   << (float)(y_offset - (PntFig * p.y_));
+ 		    	j++; if (j == maxj) { 
+ 				j=0; buffer << "\n"; 
+     		    		if (!((cp == 2) && ( (n+1) == numberOfElementsInPath()))) { buffer << "\t"; }
+-		    	}
++		    	} else if (n+1 != numberOfElementsInPath()) { buffer << " "; }
+ 		  }
+ 	} else {
+ 		// put all points, middle points will have control value 1
+ 		const char * sk = "110";
+ 		for (unsigned int i = 0 ; i < 3; i++ ){
+-			buffer << " " << sk[i] << " ";
++			buffer << " " << sk[i];
+ 		    	j++; if (j == maxj) { 
+ 				j=0; buffer << "\n"; 
+     		    		if (!((i == 2) && ((n+1) == numberOfElementsInPath()))) { buffer << "\t"; }
+-		    	}
++		    	} else if (!(i == 2 && n+1 == numberOfElementsInPath())) { buffer << " "; }
+ 		}
+ 	}
+ 	lastp = elem.getPoint(2);
+@@ -488,7 +490,7 @@
+     }
+   }
+   if (format == 31) {
+-  	if (j == maxj) { j=0; buffer << "\n\t"; }
++  	if (j == maxj) { j=0; buffer << "\n\t"; } else buffer << " ";
+   	buffer << "0.0 0.0\n";
+   } else {
+ 	if (j != 0) { buffer << endl; }
