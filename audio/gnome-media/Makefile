@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2002/05/30 22:43:04 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.13 2002/07/17 13:22:49 rh Exp $
 
 DISTNAME=	gnome-media-1.2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=stable/sources/gnome-media/}
 
@@ -16,6 +16,7 @@ USE_LIBTOOL=	YES
 USE_X11BASE=	YES
 USE_GMAKE=	YES
 BUILD_USES_MSGFMT=	YES
+CONFIGURE_ARGS+=--localstatedir=${X11PREFIX}/var/lib
 
 CONFIGURE_ENV+=	XGETTEXT="${LOCALBASE}/bin/xgettext"
 CPPFLAGS+=	-I${LOCALBASE}/include
