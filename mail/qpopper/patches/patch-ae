@@ -1,11 +1,8 @@
-$NetBSD: patch-ae,v 1.8 1999/09/15 21:30:59 tron Exp $
+$NetBSD: patch-ae,v 1.9 1999/09/15 21:36:35 tron Exp $
 
 --- popauth.8.orig	Fri Jul 10 01:44:08 1998
 +++ popauth.8	Wed Sep 15 23:28:17 1999
-@@ -2,25 +2,25 @@
- .\"	
- .\"	@(MHWARNING)
- .\" @(#)$Id: patch-ae,v 1.8 1999/09/15 21:30:59 tron Exp $
+@@ -5,22 +5,22 @@
 -.TH POPAUTH 8
 +.TH QPOPAUTH 8
  .SH NAME
