@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1 2003/10/02 12:31:30 mycroft Exp $
+$NetBSD: patch-al,v 1.2 2003/10/03 17:49:27 mycroft Exp $
 
 --- src/libw32dll/wine/win32.c.orig	2003-10-02 12:25:52.000000000 +0000
 +++ src/libw32dll/wine/win32.c	2003-10-02 12:21:50.000000000 +0000
-@@ -440,9 +442,8 @@
+@@ -440,9 +440,8 @@
  
      alccnt--;
  
@@ -14,20 +14,22 @@ $NetBSD: patch-al,v 1.1 2003/10/02 12:31:30 mycroft Exp $
  	pthread_mutex_destroy(&memmut);
  
      //if (alccnt < 40000) printf("MY_RELEASE: %p\t%ld    (%d)\n", header, header->size, alccnt);
-@@ -1349,11 +1350,10 @@
- #endif
+@@ -1350,10 +1349,12 @@
  	printf("wine/win32: Win32 Warning: Accessed uninitialized Critical Section (%p)!\n", c);
      }
--    if(cs->locked)
-+    if(cs->locked++)
- 	if(cs->id==pthread_self())
+     if(cs->locked)
+-	if(cs->id==pthread_self())
++	if(cs->id==pthread_self()) {
++	    cs->locked++;
  	    return;
++	}
      pthread_mutex_lock(&(cs->mutex));
 -    cs->locked=1;
++    cs->locked++;	/* should always be 1 */
      cs->id=pthread_self();
      return;
  }
-@@ -1371,8 +1371,8 @@
+@@ -1371,8 +1372,8 @@
  	printf("Win32 Warning: Leaving uninitialized Critical Section %p!!\n", c);
  	return;
      }
