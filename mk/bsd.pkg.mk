@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.750 2001/06/07 15:34:16 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.751 2001/06/07 15:40:15 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -123,17 +123,12 @@ MOTIFBASE?=		${X11PREFIX}
 .endif
 .endif  # USE_MOTIF
 
-MAKE_PROGRAM=		${MAKE}
-
 .if defined(USE_IMAKE) || defined(USE_MOTIF) || defined(USE_X11BASE)
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
     exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 BUILD_DEPENDS+=		xpkgwedge>=1.0:../../pkgtools/xpkgwedge
 .endif
 PREFIX=			${X11PREFIX}
-.if (${OPSYS} == "SunOS")
-MAKE_PROGRAM=		/usr/ccs/bin/make
-.endif
 .elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
 NO_MTREE=		yes
@@ -145,6 +140,12 @@ PREFIX=			${LOCALBASE}
 BUILD_DEPENDS+=		gmake>=3.78:../../devel/gmake
 MAKE_PROGRAM=		${GMAKE}
 GMAKE?=			gmake
+.else
+.if (${OPSYS} == "SunOS") && defined(USE_IMAKE)
+MAKE_PROGRAM=		/usr/ccs/bin/make
+.else
+MAKE_PROGRAM=		${MAKE}
+.endif
 .endif
 CONFIGURE_ENV+=		MAKE="${MAKE_PROGRAM}"
 
