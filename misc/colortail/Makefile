@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/03/16 20:53:03 zuntum Exp $
+# $NetBSD: Makefile,v 1.4 2001/03/31 11:24:53 zuntum Exp $
 # FreeBSD Id: ports/misc/colortail/Makefile,v 1.10 2000/06/28 17:20:27 alex Exp
 
 DISTNAME=	colortail-0.3.0
@@ -18,8 +18,6 @@ post-install:
 	cd ${WRKSRC}/example-conf/ && \
 	${INSTALL_DATA} conf.kernel conf.messages conf.secure \
 		conf.xferlog conf.daemon ${PREFIX}/share/examples/colortail
-	${SED} \
-		-e 's|@PREFIX@|${PREFIX}|' \
-		<${PKGDIR}/DESCR >${DESCR_SRC}
+	${SED} 's,@PREFIX@,${PREFIX},' ${PKGDIR}/DESCR > ${DESCR_SRC}
 
 .include "../../mk/bsd.pkg.mk"
