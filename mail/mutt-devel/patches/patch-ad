@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.3 2001/11/07 09:19:04 tron Exp $
+
+--- sendlib.c	2001/10/11 07:58:26	2.88
++++ sendlib.c	2001/10/17 16:22:48	2.89
+@@ -1831,6 +1831,13 @@
+ 	if (dup (1) < 0)
+ 	  _exit (S_ERR);
+       }
++      else 
++      {
++	if (open ("/dev/null", O_WRONLY | O_APPEND) < 0)	/* stdout */
++	  _exit (S_ERR);
++	if (open ("/dev/null", O_RDWR | O_APPEND) < 0)		/* stderr */
++	  _exit (S_ERR);
++      }
+ 
+       execv (path, args);
+       _exit (S_ERR);
