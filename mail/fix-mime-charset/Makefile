@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/12/28 10:34:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/04/18 19:30:52 wiz Exp $
 #
 
 DISTNAME=		fix-mime-charset-0.5.2
@@ -9,7 +9,7 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://fix-mime-chr.sourceforge.net/
 COMMENT=		Correct MIME charset type in mail headers
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 USE_PKGLOCALEDIR=	yes
 USE_PERL5=		build
 GNU_CONFIGURE=		yes
