@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2002/09/26 19:32:25 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2002/09/29 03:29:47 jlam Exp $
 
 DISTNAME=	gabber-0.8.7
 PKGREVISION=	2
@@ -18,18 +18,14 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-xmms --disable-sigctest
 
-GCC_VERSION!=           gcc --version
-.if (${GCC_VERSION:C/-.*$$//} == egcs)
-# "egcs" cannot be used, as this package tickles c++ compiler bugs
-.include "../../lang/gcc/Makefile.gcc"
-.endif
-
 .include "../../devel/gal/buildlink2.mk"
 .include "../../devel/libglade/buildlink2.mk"
 .include "../../devel/libsigc++/buildlink2.mk"
+.include "../../lang/gcc/buildlink2.mk"
 .include "../../graphics/freetype-lib/buildlink2.mk"
 .include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../x11/gtk--/buildlink2.mk"
 .include "../../x11/gnome--/buildlink2.mk"
 .include "../../x11/gnome-libs/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
