@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2002/10/15 12:43:06 kei Exp $
+# $NetBSD: Makefile,v 1.74 2002/11/08 16:44:49 mrg Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -26,7 +26,8 @@ SUBDIR+=	linuxppc_lib
 SUBDIR+=	minivmac
 SUBDIR+=	mmix
 SUBDIR+=	netbsd32_compat14
-SUBDIR+=	netbsd32_compat15
+#SUBDIR+=	netbsd32_compat15
+SUBDIR+=	netbsd32_compat16
 SUBDIR+=	osf1_lib
 SUBDIR+=	p11
 SUBDIR+=	pcemu
