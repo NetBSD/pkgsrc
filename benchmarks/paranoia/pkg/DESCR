@@ -1,0 +1,5 @@
+test a computer's floating-point arithmetic, C, 31 July 1986
+
+Please understand, this test really is paranoia, it is known to
+report failures on i386 when compiled with -O2.  Don't get
+overly upset about the results it spits out.
