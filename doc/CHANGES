@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9359 2005/02/28 14:09:49 wiz Exp $
+$NetBSD: CHANGES,v 1.9360 2005/02/28 15:17:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1200,3 +1200,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated gtexinfo to 4.8 [wiz 2005-02-28]
 	Updated gsasl to 0.2.5 [wiz 2005-02-28]
 	Updated flac to 1.1.2 [wiz 2005-02-28]
+	Updated bibtex2html to 1.75 [minskim 2005-02-28]
