@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/08/22 20:27:24 rh Exp $
+bin/ggv
+etc/CORBA/servers/application-ps.gnorba
+share/locale/de/LC_MESSAGES/ggv.mo
+share/locale/fr/LC_MESSAGES/ggv.mo
+share/locale/sv/LC_MESSAGES/ggv.mo
+share/locale/es/LC_MESSAGES/ggv.mo
+share/locale/ru/LC_MESSAGES/ggv.mo
+share/locale/hu/LC_MESSAGES/ggv.mo
+share/locale/pt/LC_MESSAGES/ggv.mo
+share/locale/no/LC_MESSAGES/ggv.mo
+share/locale/pl/LC_MESSAGES/ggv.mo
+share/locale/fi/LC_MESSAGES/ggv.mo
+share/locale/ko/LC_MESSAGES/ggv.mo
+share/locale/pt_BR/LC_MESSAGES/ggv.mo
+share/locale/ja/LC_MESSAGES/ggv.mo
+share/gnome/help/ggv/C/index.html
+share/gnome/help/ggv/C/topic.dat
+share/gnome/help/ggv/C/intro.html
+share/gnome/help/ggv/C/ln21.html
+share/gnome/help/ggv/C/mainwin.html
+share/gnome/help/ggv/C/prefs.html
+share/gnome/help/ggv/C/probs.html
+share/gnome/help/ggv/C/docbook.css
+share/gnome/apps/Graphics/ggv.desktop
+@dirrm share/gnome/help/ggv/C
+@dirrm share/gnome/help/ggv
+@dirrm share/gnome/apps/Graphics
