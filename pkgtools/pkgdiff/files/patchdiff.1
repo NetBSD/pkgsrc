@@ -1,10 +1,10 @@
-.\"	$NetBSD: patchdiff.1,v 1.1.1.1 2000/06/28 01:42:43 wiz Exp $
+.\"	$NetBSD: patchdiff.1,v 1.2 2001/12/03 19:03:22 wiz Exp $
 .\"
 .\" Copyright (c) 2000 by Thomas Klausner <wiz@netbsd.org>
 .\" All Rights Reserved.  Absolutely no warranty.
 .\"
 .Dd June 25, 2000
-.Dt patchdiff
+.Dt PATCHDIFF 1
 .Os
 .Sh NAME
 .Nm patchdiff
@@ -17,18 +17,19 @@
 is a perl script that simplifies comparing a set of previously
 existing patches with a new one created with
 .Xr mkpatches 1 .
-
+.Pp
 .Nm
 must be called from the package's main directory, that is
-$PKGSRC/category/program. For each patch existing in either the
-patches or the $WRKDIR/.newpatches directory (the second of which can
-be overridden by the argument of the
+.Pa ${PKGSRC}/category/program .
+For each patch existing in either the
+patches or the
+.Pa ${WRKDIR}/.newpatches
+directory (the second of which can be overridden by the argument of the
 .Fl d
 option), a matching patch is
 looked for in the other directory, and, if one is found, the two are
 compared with
 .Xr diff 1 .
-.Pp
 .Sh SEE ALSO
 .Xr diff 1 ,
 .Xr patchdiff 1 ,

@@ -3,11 +3,11 @@
 .\"
 .\"	Written by John F. Woods <jfw@jfwhome.funhouse.com>
 .\"
-.\"	$NetBSD: gtar.1,v 1.1.1.2 1999/09/18 14:50:14 kim Exp $
+.\"	$NetBSD: gtar.1,v 1.2 2001/12/03 19:03:19 wiz Exp $
 .\"	from NetBSD: tar.1,v 1.8 1997/06/06 07:59:54 jeremy Exp
 .\"
-.Dd 6 August 1994
-.Os NetBSD
+.Dd August 6, 1994
+.Os
 .Dt GTAR 1
 .Sh NAME
 .Nm gtar
@@ -24,8 +24,8 @@
 .Op Fl C Ar directory-name
 .Sh DESCRIPTION
 .Nm
-is short for 
-.Dq tape archiver,
+is short for
+.Dq tape archiver ,
 so named for historical reasons; the
 .Nm
 program creates, adds files to, or extracts files from an archive file
@@ -69,7 +69,7 @@ to the end of the archive (erasing the old end-of-archive block).
 This has the effect of adding the files contained in the named file to
 the first archive, rather than adding the second archive as an element
 of the first.
-.Em Note:
+.Em Note :
 This option requires a rewritable tarfile,
 and therefore does not work on quarter-inch cartridge tapes.
 .It Fl c
@@ -221,7 +221,7 @@ Extract files to standard output.
 Extract all protection information.
 .It Fl -preserve
 Has the effect of
-.Fl p s.
+.Fl p s .
 .It Fl P
 .It Fl -absolute-paths
 Don't strip leading `/'s from file names.
@@ -246,7 +246,7 @@ one per line.
 Modifies behavior of
 .Fl T
 to expect null-terminated names; disables
-.Fl C.
+.Fl C .
 .It Fl -totals
 Prints total bytes written with
 .Fl -create .
@@ -305,6 +305,33 @@ Don't recurse into subdirectories when creating.
 .It Fl -unlink
 Unlink files before creating them.
 .El
+.Sh ENVIRONMENT
+The
+.Nm
+program examines the following environment variables:
+.Bl -tag -width "POSIXLY-CORRECT"
+.It Ev POSIXLY-CORRECT
+Normally,
+.Nm
+will process flag arguments that appear in the file list.
+If set in the environment, this flag causes
+.Nm
+to consider the first
+non-flag argument to terminate flag processing, as per the POSIX specification.
+.It Ev SHELL
+In interactive mode, a permissible response to the prompt is to
+request to spawn a subshell, which will be "/bin/sh" unless the
+.Ev SHELL
+variable is set.
+.It Ev TAPE
+Changes the default tape drive (which is still overridden by the
+.Fl f
+flag).
+.El
+.Sh FILES
+.Bl -tag -width "/dev/rst0"
+.It Pa /dev/rst0
+The default tape drive.
 .Sh EXAMPLES
 To create an archive on tape drive
 .Pa /dev/rst0
@@ -352,33 +379,6 @@ which will add the files contained in archive2.tar onto the end of
 archive1.tar (note that this can't be done by simply typing
 .Dl cat archive2.tar >> archive1.tar
 because of the end-of-file block at the end of a tar archive).
-.Sh ENVIRONMENT
-The
-.Nm
-program examines the following environment variables:
-.Bl -tag -width "POSIXLY-CORRECT"
-.It Ev POSIXLY-CORRECT
-Normally, 
-.Nm
-will process flag arguments that appear in the file list.
-If set in the environment, this flag causes
-.Nm
-to consider the first
-non-flag argument to terminate flag processing, as per the POSIX specification.
-.It Ev SHELL
-In interactive mode, a permissible response to the prompt is to
-request to spawn a subshell, which will be "/bin/sh" unless the
-.Ev SHELL
-variable is set.
-.It Ev TAPE
-Changes the default tape drive (which is still overridden by the
-.Fl f
-flag).
-.El
-.Sh FILES
-.Bl -tag -width "/dev/rst0"
-.It Pa /dev/rst0
-The default tape drive.
 .El
 .\" This next request is for sections 1, 6, 7 & 8 only
 .\"     (command return values (to shell) and fprintf/stderr type diagnostics)
