@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2001/03/24 20:22:50 zuntum Exp $
+# $NetBSD: Makefile,v 1.14 2001/06/12 20:33:01 jlam Exp $
 #
 
 VERS=		3.87
@@ -45,7 +45,6 @@ CFLAGS+=	-O2 -Wall -fomit-frame-pointer -ffast-math -funroll-loops \
 		-finline-functions -DFLOAT=double
 # optimized libffm (free fast math library)
 LIBS+=		-L${PREFIX}/lib -Wl,-R${PREFIX}/lib -lffm -lm
-CONFIGURE_ENV+=	LIBS="${LIBS}"
 .endif
 
 .include "../../mk/bsd.pkg.mk"

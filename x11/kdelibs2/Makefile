@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/05/24 22:18:22 skrll Exp $
+# $NetBSD: Makefile,v 1.5 2001/06/12 20:33:10 jlam Exp $
 #
 
 DISTNAME=	kdelibs-2.1
@@ -11,6 +11,7 @@ DEPENDS+=		tiff-*:../../graphics/tiff
 DEPENDS+=		qt2-libs>=2.2.4:../../x11/qt2-libs
 DEPENDS+=		libaudiofile-*:../../audio/libaudiofile
 DEPENDS+=		jade>=1.2.1:../../textproc/jade
+
 .include "../../x11/kde2/Makefile.part2"
 
 USE_LTDL=		yes
@@ -22,8 +23,8 @@ LTCONFIG_OVERRIDE+=	${WRKSRC}/ksgmltools/ltconfig
 DEPENDS+=		pcre>=3.4:../../devel/pcre
 .endif
 
-CONFIGURE_ENV+=		LIBS="-Wl,--export-dynamic" \
-			KJS_USE_PCRE="${KJS_USE_PCRE}"
+CONFIGURE_ENV+=		KJS_USE_PCRE="${KJS_USE_PCRE}"
+LIBS=			-Wl,--export-dynamic
 
 MKDIRS=	share/kde/icons/locolor/32x32/actions/kde \
 	share/kde/icons/locolor/22x22/mimetypes \
