@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 1998/06/12 12:59:43 frueauf Exp $
+# $NetBSD: Makefile,v 1.2 1998/07/04 09:18:57 mycroft Exp $
 #
 
 DISTNAME=		freeciv-1.6.3
@@ -7,7 +7,7 @@ MASTER_SITES=		freeciv.ultraviolet.org:/pub/freeciv/
 
 MAINTAINER=		root@garbled.net
 
-DEPENDS=		xpm-3.4j:../../graphics/xpm
+DEPENDS=		xpm-3.4k:../../graphics/xpm
 
 USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 1998/07/04 05:11:14 mycroft Exp $
+# $NetBSD: Makefile,v 1.13 1998/07/04 09:19:05 mycroft Exp $
 #
 
 DISTNAME=	knews-1.0b.0
@@ -10,7 +10,7 @@ MAINTAINER=	tron@netbsd.org
 
 DEPENDS+=	jpeg-6b:../../graphics/jpeg
 DEPENDS+=	png-0.96:../../graphics/png
-DEPENDS+=	xpm-3.4j:../../graphics/xpm
+DEPENDS+=	xpm-3.4k:../../graphics/xpm
 
 USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/knews

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 1998/06/22 12:29:06 agc Exp $
+# $NetBSD: Makefile,v 1.9 1998/07/04 09:18:57 mycroft Exp $
 #
 
 DISTNAME=		xmame-0.30.1_src
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		mycroft@NetBSD.ORG
 
 RUN_DEPENDS=		unzip:../../archivers/unzip
-DEPENDS+=		xpm-3.4j:../../graphics/xpm
+DEPENDS+=		xpm-3.4k:../../graphics/xpm
 
 WRKSRC=			${WRKDIR}/xmame-0.30.1
 USE_X11=		yes

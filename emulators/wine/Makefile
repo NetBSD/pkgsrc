@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1998/06/19 23:20:16 tron Exp $
+# $NetBSD: Makefile,v 1.10 1998/07/04 09:18:56 mycroft Exp $
 
 DISTNAME=		Wine-980614
 PKGNAME=		wine-980614
@@ -11,7 +11,7 @@ MAINTAINER=	mycroft@NetBSD.ORG
 
 CONFLICTS=	wine-980215
 
-DEPENDS+=       xpm-3.4j:../../graphics/xpm
+DEPENDS+=       xpm-3.4k:../../graphics/xpm
 
 USE_X11=	yes
 GNU_CONFIGURE=	yes
