@@ -1,4 +1,4 @@
-#	$Id: bsd.bulk-pkg.mk,v 1.3 2000/07/31 22:22:33 hubertf Exp $
+#	$Id: bsd.bulk-pkg.mk,v 1.4 2000/08/01 02:56:43 hubertf Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -147,8 +147,8 @@ bulk-package:
 			${ECHO_MSG} ${MAKE} -k clean CLEANDEPENDS=YES ; \
 			${DO}       ${MAKE} -k clean CLEANDEPENDS=YES ; \
 		fi ; \
-		${ECHO_MSG} ${MAKE} depends '(${PKGNAME})' 2>&1 | tee -a ${BUILDLOG}; \
-		${DO}     ( ${MAKE} depends 2>&1 | tee -a ${BUILDLOG} ) || true; \
+		${ECHO_MSG} ${MAKE} install-depends '(${PKGNAME})' 2>&1 | tee -a ${BUILDLOG}; \
+		${DO}     ( ${MAKE} install-depends 2>&1 | tee -a ${BUILDLOG} ) || true; \
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 | tee -a ${BUILDLOG}; \
 		${DO}     ( ${MAKE} package 2>&1 | tee -a ${BUILDLOG} ) || true; \
 		if [ -f ${PKGFILE} ]; then \
@@ -179,7 +179,7 @@ bulk-package:
 bulk-install:
 	@if [ `${MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
 		if ! ${PKG_INFO} -e ${PKGNAME} ; then \
-			${DO} ${MAKE} depends ; \
+			${DO} ${MAKE} install-depends ; \
 			${ECHO_MSG} ">> " ${PKG_ADD} ${PKGFILE} ; \
 			${DO} ${PKG_ADD} ${PKGFILE} ; \
 		fi ; \
