@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2004/06/09 01:54:16 lukem Exp $
+
+--- INSTALL.orig	2004-05-09 00:13:40.000000000 +1000
++++ INSTALL
+@@ -49,6 +49,7 @@ of this document.
+    configuration notes.  You'll need version 2.0 or newer.
+ 
+ 2) Copy cvsweb.conf to a configuration directory, typically
++   /usr/pkg/etc/cvsweb/cvsweb.conf or
+    /usr/local/etc/cvsweb/cvsweb.conf.
+    Edit cvsweb.conf to fit your needs, you'll probably need to tweak the
+    CVS root(s) of the Repository(ies) you want to view.
