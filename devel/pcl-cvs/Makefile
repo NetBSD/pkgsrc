@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/06/02 01:20:19 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/06/23 22:27:05 seb Exp $
 #
 
 DISTNAME=	pcl-cvs-2.9.9
@@ -20,8 +20,8 @@ EMACS_VERSIONS_ACCEPTED=	emacs20
 
 MAKE_ENV+=	PREFIX=${PREFIX}
 ALL_TARGET= 	default
+USE_NEW_TEXINFO=	YES
 INFO_FILES=	pcl-cvs.info
 MESSAGE_SUBST+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX:Q}
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
