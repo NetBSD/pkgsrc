@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2001/07/03 20:59:05 zuntum Exp $
+# $NetBSD: Makefile,v 1.37 2001/08/09 13:45:43 wiz Exp $
 #
 
 DISTNAME=       bxform-088
@@ -26,8 +26,9 @@ ARCH_SUBDIR=    netBSD-${MACHINE_ARCH}
 
 DIST_SUBDIR=		xforms-${MACHINE_ARCH}
 
-ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 NetBSD-*-m68k \
-			NetBSD-*-mipsel NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
+ONLY_FOR_PLATFORM=	NetBSD-*-alpha NetBSD-*-arm32 NetBSD-*-i386 \
+			NetBSD-*-m68k NetBSD-*-mipsel NetBSD-*-ns32k \
+			NetBSD-*-sparc NetBSD-*-powerpc SunOS-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,6 +37,16 @@ DISTNAME=	bxform-088-ELF
 .endif
 .if ${MACHINE_ARCH} == "sparc" && ${OBJECT_FMT} == "ELF"
 DISTNAME=	bxform-088-ELF
+.endif
+
+.if ${OPSYS} == "SunOS"
+DISTNAME=	bxform-088
+.if ${MACHINE_ARCH} == "sparc"
+ARCH_SUBDIR=	sun/Solaris
+.elif ${MACHINE_ARCH} == "i386"
+ARCH_SUBDIR=	solaris-x86/2.7
+.endif
+DIST_SUBDIR=	xforms-${OPSYS}-${MACHINE_ARCH}
 .endif
 
 ## Define OBJMACHINE so WRKDIR is defined to be ${MACHINE_ARCH}-specific.
