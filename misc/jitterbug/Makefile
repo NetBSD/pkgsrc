@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/10/11 13:39:03 wennmach Exp $
+# $NetBSD: Makefile,v 1.3 1999/10/22 14:43:06 agc Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -11,13 +11,15 @@ HOMEPAGE=	http://jitterbug.samba.org/
 DEPENDS+=	addnerd:../../sysutils/addnerd
 DEPENDS+=	apache-1.3.*:../../www/apache
 
-PLIST_SRC=	${WRKDIR}/PLIST.tmp
+PLIST_SRC=	${WRKDIR}/PLIST-src
 REQ_FILE=	${WRKDIR}/REQ
 DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
 MESSAGE_FILE=	${WRKDIR}/MESSAGE
 CONFIGDIR=	${WRKDIR}/${PKGNAME}/config
 DOCSDIR=	${WRKDIR}/${PKGNAME}/docs
 CGIBINDIR=	libexec/cgi-bin
+
+.include "../../mk/bsd.prefs.mk"
 
 JB_PACKAGE?=	test
 
@@ -34,13 +36,11 @@ JB_LOCALMAIL?=	${JB_PACKAGE}-bugs
 .if !defined(JB_FQHOSTNAME)
 JB_FQHOSTNAME!=	hostname
 .endif
-JB_HOSTNAME!=	hostname -s
+JB_HOSTNAME!=	echo '${JB_FQHOSTNAME}' | sed -e 's|\..*||'
 JB_EMAIL?=	${JB_LOCALMAIL}@${JB_FQHOSTNAME}
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
-
-.include "../../mk/bsd.prefs.mk"
 
 pre-extract:
 .if ${JB_PACKAGE} == "test"
