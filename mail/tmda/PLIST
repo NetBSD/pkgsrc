@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2003/09/23 01:57:18 kim Exp $
+@comment $NetBSD: PLIST,v 1.9 2004/01/28 00:12:53 kim Exp $
 bin/tmda-address
 bin/tmda-check-address
 bin/tmda-filter
@@ -92,15 +92,23 @@ ${HTMLDIR}/config-pre.html
 ${HTMLDIR}/config-server.html
 ${HTMLDIR}/config-vars.html
 ${HTMLDIR}/config.html
+${HTMLDIR}/donations.html
 ${HTMLDIR}/download.html
 ${HTMLDIR}/features.html
 ${HTMLDIR}/filter-sources.html
 ${HTMLDIR}/history.html
 ${HTMLDIR}/howto-template.html
 ${HTMLDIR}/howtos.html
+${HTMLDIR}/img/tmda-186x253.png
+${HTMLDIR}/img/tmda-47x64.png
+${HTMLDIR}/img/tmda-562x765.png
+${HTMLDIR}/img/tmda-70x95.png
+${HTMLDIR}/img/tmda-93x127.png
+${HTMLDIR}/img/tmda-nt-616x616.png
 ${HTMLDIR}/index.html
 ${HTMLDIR}/install.html
 ${HTMLDIR}/inuse.html
+${HTMLDIR}/logos.html
 ${HTMLDIR}/mirrors.html
 ${HTMLDIR}/press.html
 ${HTMLDIR}/requirements.html
@@ -143,6 +151,7 @@ ${SHAREDIR}/confirm_request.txt
 @dirrm ${SHAREDIR}
 @dirrm ${DOCDIR}/contrib
 @dirrm ${DOCDIR}
+@dirrm ${HTMLDIR}/img
 @dirrm ${HTMLDIR}
 @dirrm ${PYSITELIB}/TMDA/pythonlib/email
 @dirrm ${PYSITELIB}/TMDA/pythonlib
