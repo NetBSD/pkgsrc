@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 1998/05/09 15:24:42 frueauf Exp $
+# $NetBSD: Makefile,v 1.11 1998/06/03 12:43:25 agc Exp $
 # FreeBSD Id: Makefile,v 1.22 1997/12/24 01:21:37 alex Exp
 
 DISTNAME=	postgresql-6.2.1
@@ -46,6 +46,8 @@ MANL=		abort.l alter_table.l begin.l close.l cluster.l \
 		update.l vacuum.l
 
 MANPREFIX=	${PREFIX}/pgsql
+
+.include "../../mk/bsd.prefs.mk"
 
 post-build:
 	@ ${ECHO} "------------------------------------------------------------"
