@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2004/10/03 00:18:22 tv Exp $
+# $NetBSD: Makefile,v 1.9 2004/10/08 06:23:08 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	0.3.0
+XFCE4_VERSION=	0.3.1
 
 DISTNAME=	xfce4-datetime-plugin-${XFCE4_VERSION}
-PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://download.berlios.de/xfce-goodies/
 COMMENT=	XFce4 calendar plugin
