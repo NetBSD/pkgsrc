@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2002/10/08 06:12:21 itojun Exp $
+# $NetBSD: Makefile,v 1.3 2002/10/08 23:45:52 jlam Exp $
 
 DISTNAME=	sendmail.8.11.6
 PKGNAME=	sendmail-8.11.6
@@ -25,6 +25,7 @@ COMMENT=	The well known Mail Transport Agent
 
 LICENSE=	no-profit
 
+USE_BUILDLINK2=	# defined
 MAKE_ENV+=	BSD_BINOWN="${BINOWN}" BSD_BINGRP="${BINGRP}" \
 		BSD_MANOWN="${MANOWN}" BSD_MANGRP="${MANGRP}" \
 		BUILDLINK_DIR="${BUILDLINK_DIR}"
@@ -38,34 +39,31 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
 .include "../../mk/bsd.prefs.mk"
-# Make sure that ${BUILDLINK_DIR} is defined even no "buildlink.mk" gets
-# included below.
-.include "../../mk/bsd.buildlink.mk"
 
 .if ${OPSYS} == "SunOS"
 USE_DB2?=	YES
 .else
 USE_DB2?=	NO
 .endif
-.if ${USE_DB2} == YES
-.include "../../databases/db/buildlink.mk"
+.if ${USE_DB2} == "YES"
+.  include "../../databases/db/buildlink2.mk"
 .endif
 
-.if defined(USE_LDAP) && ${USE_LDAP} == YES
-.include "../../databases/openldap/buildlink.mk"
+.if defined(USE_LDAP) && (${USE_LDAP} == "YES")
+.  include "../../databases/openldap/buildlink2.mk"
 .endif
 
-.if defined(USE_SASL) && ${USE_SASL} == YES
-.include "../../security/cyrus-sasl/buildlink.mk"
+.if defined(USE_SASL) && (${USE_SASL} == "YES")
+.  include "../../security/cyrus-sasl/buildlink2.mk"
 .endif
 
-.if defined(USE_STARTTLS) && ${USE_STARTTLS} == YES
-.include "../../security/openssl/buildlink.mk"
+.if defined(USE_STARTTLS) && (${USE_STARTTLS} == "YES")
+.  include "../../security/openssl/buildlink2.mk"
 .endif
 
 USE_TCPWRAPPERS?=	YES
-.if ${USE_TCPWRAPPERS} == YES
-.include "../../security/tcp_wrappers/buildlink.mk"
+.if ${USE_TCPWRAPPERS} == "YES"
+.  include "../../security/tcp_wrappers/buildlink2.mk"
 .endif
 
 post-patch:
@@ -107,14 +105,14 @@ post-patch:
 	${ECHO} >>${DESCR_SRC}
 
 do-build:
-	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build
 
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
 	  <${FILESDIR}/mailer.conf >${WRKDIR}/mailer.conf.sendmail
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
-.if ${USE_DB2} == YES
+.if ${USE_DB2} == "YES"
 	${ECHO} "" >>${MESSAGE_SRC}
 	${ECHO} "If you are upgrading from \"sendmail\" 8.8.x don't forget to rebuild all" >>${MESSAGE_SRC}
 	${ECHO} "databases with \"${PREFIX}/bin/newaliases\" and \"${PREFIX}/sbin/makemap\"." >>${MESSAGE_SRC}
@@ -129,11 +127,11 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf.sendmail ${PREFIX}/etc
 	${CP} -pr ${WRKSRC}/cf ${PREFIX}/share/sendmail
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/sendmail
-.if ${USE_DB2} == YES
+.if ${USE_DB2} == "YES"
 	${MV} -f /usr/sbin/makemap /usr/sbin/makemap.8.8 || ${TRUE}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
 
 # has to be below include for bsd.pkg.mk, else substition fails
-OBJDIR!=	${ECHO} obj.`uname -srm | ${TR} \  .`
+OBJDIR!=	${ECHO} obj.`${UNAME} -srm | ${TR} \  .`
