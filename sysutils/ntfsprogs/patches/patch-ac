@@ -1,0 +1,43 @@
+$NetBSD: patch-ac,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+
+--- libntfs/attrib.c.orig	Sat Sep  4 06:16:32 2004
++++ libntfs/attrib.c
+@@ -709,7 +709,7 @@ map_rl:
+  */
+ s64 ntfs_attr_pread(ntfs_attr *na, const s64 pos, s64 count, void *b)
+ {
+-	s64 br, to_read, ofs, total, total2;
++	s64 br, to_read, ofs, total, total2, origcount;
+ 	ntfs_volume *vol;
+ 	runlist_element *rl;
+ 
+@@ -737,6 +737,7 @@ s64 ntfs_attr_pread(ntfs_attr *na, const
+ 	}
+ 	if (!count)
+ 		return 0;
++	origcount = count;
+ 	/* Truncate reads beyond end of attribute. */
+ 	if (pos + count > na->data_size) {
+ 		if (pos >= na->data_size)
+@@ -818,7 +819,7 @@ res_err_out:
+ 			continue;
+ 		}
+ 		/* It is a real lcn, read it into @dst. */
+-		to_read = min(count, (rl->length << vol->cluster_size_bits) -
++		to_read = min(origcount, (rl->length << vol->cluster_size_bits) -
+ 				ofs);
+ retry:
+ 		Dprintf("%s(): Reading 0x%llx bytes from vcn 0x%llx, lcn 0x%llx, "
+@@ -826,6 +827,12 @@ retry:
+ 				rl->vcn, rl->lcn, ofs);
+ 		br = ntfs_pread(vol->dev, (rl->lcn << vol->cluster_size_bits) +
+ 				ofs, to_read, b);
++		/* Zero any overage that we may have read */
++		if (br > count) {
++			memset(b + count, 0, br - count);
++			total += count;
++			return total + total2;
++		}
+ 		/* If everything ok, update progress counters and continue. */
+ 		if (br > 0) {
+ 			total += br;

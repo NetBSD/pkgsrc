@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+
+--- include/ntfs/types.h.orig	Sat Sep  4 06:16:32 2004
++++ include/ntfs/types.h
+@@ -59,6 +59,16 @@ typedef s64 LCN;
+  */
+ typedef s64 LSN;
+ 
++/* XXX For some reason, including sys/mount.h on osx defines TRUE and FALSE
++ * so clear them here.
++ */
++#ifdef FALSE
++#undef FALSE
++#endif
++#ifdef TRUE
++#undef TRUE
++#endif
++
+ /*
+  * Cygwin has a collusion between our BOOL and <windef.h>'s
+  * As long as this file will be included after <windows.h> were fine.
