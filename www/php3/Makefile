@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/05/03 19:45:43 tv Exp $
+# $NetBSD: Makefile,v 1.4 1999/05/03 21:32:46 tv Exp $
 #
 
 DISTNAME=	php-${PHP_VERSION}
@@ -14,10 +14,12 @@ PHP_VERSION=	3.0.7
 
 .if defined(BUILDING_EXTENSION_MODULE) || defined(BUILDING_SERVER_MODULE)
 DEPENDS+=	php-${PHP_VERSION}:../../www/php3
+FILESDIR?=	${PKGSRCDIR}/www/php3/files
+PATCHDIR?=	${PKGSRCDIR}/www/php3/patches
 .endif
 
-.if !defined(BUILDING_EXTENSION_MODULE)
 # Here we configure only for what NetBSD ships.  We add the rest via modules.
+GNU_CONFIGURE=  YES
 CONFIGURE_ARGS+=--with-system-regex --without-gd \
 		--with-yp --with-zlib --with-dbase --with-filepro \
 		--with-config-file-path=${PREFIX}/etc \
@@ -26,9 +28,8 @@ CONFIGURE_ARGS+=--with-system-regex --without-gd \
 		--enable-discard-path --enable-memory-limit \
 		--enable-sysvsem --enable-sysvshm
 
-GNU_CONFIGURE=  YES
-LDFLAGS=	-Wl,-R${PREFIX}/lib/php3
-CONFIGURE_ENV=	CPPFLAGS="-DPHP_INTERNAL_FUNCS"
+.if !defined(BUILDING_EXTENSION_MODULE)
+CONFIGURE_ENV+=	CPPFLAGS="-DPHP_INTERNAL_FUNCS"
 
 post-extract:
 	@${CP} ${FILESDIR}/abstractions.c ${WRKSRC}
@@ -38,14 +39,10 @@ post-build:
 	@cd ${WRKSRC}/convertor && ${MAKE}
 
 # The PHP includes are not easily detachable from the source tree in this
-# release, so we extract the PHP sources with every module, and only install
-# config.h so that `./configure' need not be run every time.
+# release, so we extract the PHP sources with every module.
 # This should improve in PHP 3.1 or 4.0.
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/php3 ${PREFIX}/include/php3
-	cd ${WRKSRC} && \
-		${INSTALL_DATA} config.h ${PREFIX}/include/php3/
 	${INSTALL_PROGRAM} ${WRKSRC}/php ${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/convertor/convertor \
 		${PREFIX}/bin/php2convert
@@ -59,6 +56,10 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/php3
 	${INSTALL_DATA} ${WRKSRC}/examples/README* ${WRKSRC}/examples/*.php3 \
 		${PREFIX}/share/examples/php3/
+	@${SED} s,@PREFIX@,${PREFIX}, ${FILESDIR}/php3.ini.example \
+		> ${WRKDIR}/php3.ini.example
+	${INSTALL_DATA} ${WRKDIR}/php3.ini.example ${PREFIX}/etc/
+	@[ -f ${PREFIX}/etc/php3.ini ] || ${CP} ${PREFIX}/etc/php3.ini.example ${PREFIX}/etc/php3.ini
 .endif
 .endif
 

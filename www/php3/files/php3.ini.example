@@ -1,0 +1,3 @@
+#	$NetBSD: php3.ini.example,v 1.1 1999/05/03 21:35:06 tv Exp $
+
+extension_dir=@PREFIX@/lib/php3
