@@ -1,30 +1,40 @@
-$NetBSD: patch-ae,v 1.2 2003/12/13 10:32:53 xtraeme Exp $
+$NetBSD: patch-ae,v 1.3 2004/03/02 23:14:31 snj Exp $
 
---- src/bzflag/Makefile.in.orig	Wed Dec 10 09:09:45 2003
-+++ src/bzflag/Makefile.in	Thu Dec 11 02:09:15 2003
-@@ -168,7 +168,6 @@
+--- src/bzflag/Makefile.in.orig	2004-03-02 14:27:33.000000000 -0800
++++ src/bzflag/Makefile.in	2004-03-02 14:32:25.000000000 -0800
+@@ -241,7 +241,6 @@ bzflag_SOURCES = \
  @MACOS_FALSE@	../scene/libSceneDB.a		\
  @MACOS_FALSE@	../geometry/libGeometry.a	\
  @MACOS_FALSE@	../mediafile/libMediaFile.a	\
 -@MACOS_FALSE@	../zlib/libz.a			\
  @MACOS_FALSE@	$(RESOURCE)			\
  @MACOS_FALSE@	$(GLIBS)
- # This is required to hook in ogg/vorbis libraries
-@@ -176,7 +175,7 @@
  
+@@ -265,7 +264,7 @@ bzflag_SOURCES = \
+ #	$(ALIBS)
  AM_CPPFLAGS = $(X_CFLAGS)
  
 -bzflag_LDFLAGS = ../date/buildDate.o
 +bzflag_LDFLAGS = ../date/buildDate.o -lz ${LIBOSSAUDIO}
+ subdir = src/bzflag
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ../../include/config.h
- CONFIG_CLEAN_FILES = 
-@@ -207,7 +206,7 @@
- @MACOS_FALSE@../common/libCommon.a ../obstacle/libObstacle.a \
- @MACOS_FALSE@../platform/libPlatform.a ../ogl/libGLKit.a \
- @MACOS_FALSE@../scene/libSceneDB.a ../geometry/libGeometry.a \
--@MACOS_FALSE@../mediafile/libMediaFile.a ../zlib/libz.a
-+@MACOS_FALSE@../mediafile/libMediaFile.a
- CXXFLAGS = @CXXFLAGS@
- CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
- CXXLD = $(CXX)
+ CONFIG_HEADER = $(top_builddir)/include/config.h
+@@ -296,7 +295,7 @@ bzflag_LDADD = $(LDADD)
+ @MACOS_FALSE@@WIN32_TRUE@	../scene/libSceneDB.a \
+ @MACOS_FALSE@@WIN32_TRUE@	../geometry/libGeometry.a \
+ @MACOS_FALSE@@WIN32_TRUE@	../mediafile/libMediaFile.a \
+-@MACOS_FALSE@@WIN32_TRUE@	../zlib/libz.a bzflag.res
++@MACOS_FALSE@@WIN32_TRUE@	bzflag.res
+ @MACOS_FALSE@@WIN32_FALSE@bzflag_DEPENDENCIES = ../net/libNet.a \
+ @MACOS_FALSE@@WIN32_FALSE@	../common/libCommon.a \
+ @MACOS_FALSE@@WIN32_FALSE@	../obstacle/libObstacle.a \
+@@ -304,8 +303,7 @@ bzflag_LDADD = $(LDADD)
+ @MACOS_FALSE@@WIN32_FALSE@	../ogl/libGLKit.a \
+ @MACOS_FALSE@@WIN32_FALSE@	../scene/libSceneDB.a \
+ @MACOS_FALSE@@WIN32_FALSE@	../geometry/libGeometry.a \
+-@MACOS_FALSE@@WIN32_FALSE@	../mediafile/libMediaFile.a \
+-@MACOS_FALSE@@WIN32_FALSE@	../zlib/libz.a
++@MACOS_FALSE@@WIN32_FALSE@	../mediafile/libMediaFile.a
+ @MACOS_TRUE@@WIN32_TRUE@bzflag_DEPENDENCIES = ../net/libNet.a \
+ @MACOS_TRUE@@WIN32_TRUE@	../common/libCommon.a \
+ @MACOS_TRUE@@WIN32_TRUE@	../obstacle/libObstacle.a \
