@@ -1,5 +1,7 @@
---- vdcomp.c.orig	Mon Jan 13 21:38:49 2003
-+++ vdcomp.c	Mon Jan 13 21:47:04 2003
+$NetBSD: patch-ab,v 1.5.2.1 2003/03/02 10:46:01 agc Exp $
+
+--- vdcomp.c.orig	Sat Mar  1 10:42:12 2003
++++ vdcomp.c
 @@ -109,12 +109,16 @@
       !defined(__bsd43)                   && \
       !defined(aux)                       && \
@@ -13,12 +15,13 @@
  #  if defined(hp300) || defined(hp800) || defined(NeXT)
  #   include <sys/malloc.h>                /* it's in 'sys' on HPs and NeXT */
  #  else
- #   if !defined(__386BSD__) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+-#   if !defined(__386BSD__) && !defined(__FreeBSD__) && !defined(__NetBSD__)
++#   if !defined(__386BSD__) && !defined(__FreeBSD__) && !defined(__NetBSD__) \
 +     && !defined(__Darwin__)
      /* 
       I want to use BSD macro for checking if this OS is *BSD or not,
       but the macro is defined in <sys/parm.h>, which I don't know all
-@@ -437,10 +441,13 @@
+@@ -437,10 +441,13 @@ int host;
  {
    short   shortint;
    typedef long    off_t;
@@ -33,7 +36,7 @@
    }
  
    if (host == 1 | host == 2) {
-@@ -482,13 +489,17 @@
+@@ -482,13 +489,17 @@ int host;
        printf("\n  3.  VICAR format.");
        printf("\n  4.  Unlabelled binary array.\n");
        printf("\n  Enter format number:");
