@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2004/01/24 14:50:06 grant Exp $
+# $NetBSD: Makefile,v 1.17 2004/04/25 08:02:50 snj Exp $
 #
 
 DISTNAME=	sms-1.9.2d
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.ceti.pl/~miki/komputery/sms.html
 COMMENT=	Send SMS to cellular phones in Poland (Plus, Idea, Era)
 
 WRKSRC=		${WRKDIR}/sms
-USE_BUILDLINK2=	YES
+USE_BUILDLINK3=	YES
 USE_GNU_TOOLS+=	make
 
 do-install:
@@ -26,5 +26,5 @@ do-install:
 	cd ${WRKSRC}/contrib && ${INSTALL_DATA} mimecut procmailrc	\
 		sms.cgi sms.html ${PREFIX}/share/sms/contrib
 
-.include "../../databases/gdbm/buildlink2.mk"
+.include "../../databases/gdbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
