@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2003/12/13 00:45:25 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2003/12/14 23:09:02 xtraeme Exp $
 #
 
-DISTNAME=		nautilus-2.2.3.1
-PKGREVISION=		9
+DISTNAME=		nautilus-2.4.1
 CATEGORIES=		sysutils gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.4/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -21,16 +20,7 @@ GNU_CONFIGURE=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libnautilus/libnautilus.pc.in
 
-#
-# Nautilus has it's own idea of what versions of packages it wants, so make
-# it happy.
-#
-BUILDLINK_DEPENDS.esound=	esound>=0.2.27
-
-
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
-MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
 GCONF2_SCHEMAS=		apps_nautilus_preferences.schemas
 
@@ -50,26 +40,13 @@ CONF_FILES+=		${EGDIR}/${conffile} ${PKG_SYSCONFDIR}/${conffile}
 .endfor
 .undef conffile
 
-pre-build:
-	for d in libnautilus libnautilus-adapter libnautilus-private src ; \
-	do								\
-		cd ${WRKSRC}/$$d &&					\
-		for x in *.idl ; do					\
-			${PREFIX}/bin/orbit-idl-2			\
-			    -I${LOCALBASE}/share/idl/bonobo-2.0		\
-			    -I${LOCALBASE}/share/idl/bonobo-activation-2.0 \
-			    -I..					\
-			    -D__nautilus_view_component_COMPILATION $$x ; \
-			${TOUCH} `${ECHO} $$x | ${SED} s/\.idl/_idl_stamp/\
-			    | ${SED} s/-/_/g` ;				\
-		done ;							\
-	done
-
 .include "../../devel/GConf2/schemas.mk"
+.include "../../devel/libgsf/buildlink2.mk"
 .include "../../devel/eel2/buildlink2.mk"
 .include "../../graphics/imlib2/buildlink2.mk"
 .include "../../graphics/librsvg2/buildlink2.mk"
 .include "../../sysutils/fam/buildlink2.mk"
 .include "../../textproc/intltool/buildlink2.mk"
 .include "../../x11/gnome-desktop/buildlink2.mk"
+
 .include "../../mk/bsd.pkg.mk"
