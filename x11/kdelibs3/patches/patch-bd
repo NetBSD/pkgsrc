@@ -1,0 +1,106 @@
+$NetBSD: patch-bd,v 1.1.1.1 2002/05/31 13:16:47 skrll Exp $
+
+--- kio/kssl/kopenssl.cc.orig	Wed May  8 19:28:06 2002
++++ kio/kssl/kopenssl.cc
+@@ -173,7 +173,7 @@
+   _me = NULL;
+ }
+ 
+-#ifdef __OpenBSD__
++#if defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <qdir.h>
+ #include <qstring.h>
+ #include <qstringlist.h>
+@@ -236,26 +236,22 @@
+ 
+    delete cfg;
+ 
+-#ifdef __OpenBSD__
+-   {
+-   QString libname = findMostRecentLib("/usr/lib", "crypto");
+-   if (!libname.isNull())
+-         _cryptoLib = ll->globalLibrary(libname.latin1());
+-   }
+-#else
+    libpaths 
+-            #ifdef _AIX
++#ifdef _AIX
+             << "/opt/freeware/lib/"
+-	    #endif
++#endif
+ 	    << "/usr/lib/"
++#if !defined(__NetBSD__) && !defined(__OpenBSD__)
+ 	    << "/usr/ssl/lib/"
+             << "/usr/local/lib/"
+             << "/usr/local/openssl/lib/"
+             << "/usr/local/ssl/lib/"
+             << "/opt/openssl/lib/"
+             << "/lib/"
++#endif
+             << "";
+ 
++#if !defined(__NetBSD__) && !defined(__OpenBSD__)
+ // FIXME: #define here for the various OS types to optimize
+    libnamess 
+ 	     #ifdef hpux
+@@ -284,10 +280,16 @@
+ 	     << "libcrypto.so.0.9.6"
+              #endif
+ 	     ;
++#endif
+ 
+    for (QStringList::Iterator it = libpaths.begin();
+                               it != libpaths.end();
+                               ++it) {
++#if defined(__NetBSD__) || defined(__OpenBSD__)
++      QString libname = findMostRecentLib(*it, "crypto");
++      if (!libname.isNull())
++            _cryptoLib = ll->globalLibrary(libname.latin1());
++#else
+       for (QStringList::Iterator shit = libnamesc.begin();
+                                  shit != libnamesc.end();
+                                  ++shit) {
+@@ -299,9 +301,9 @@
+             _cryptoLib = ll->globalLibrary(alib.latin1());
+          if (_cryptoLib) break;
+       }
++#endif
+       if (_cryptoLib) break;
+    }
+-#endif
+ 
+    if (_cryptoLib) {
+ #ifdef HAVE_SSL 
+@@ -399,16 +401,14 @@
+ #endif
+    }
+ 
+-#ifdef __OpenBSD__
+-   {
+-   QString libname = findMostRecentLib("/usr/lib", "ssl");
+-   if (!libname.isNull())
+-         _sslLib = ll->globalLibrary(libname.latin1());
+-   }
+-#else
+    for (QStringList::Iterator it = libpaths.begin();
+                               it != libpaths.end();
+                               ++it) {
++#if defined(__OpenBSD__) || defined(__NetBSD__)
++      QString libname = findMostRecentLib(*it, "ssl");
++      if (!libname.isNull())
++           _sslLib = ll->globalLibrary(libname.latin1());
++#else
+       for (QStringList::Iterator shit = libnamess.begin();
+                                  shit != libnamess.end();
+                                  ++shit) {
+@@ -420,9 +420,9 @@
+          	_sslLib = ll->globalLibrary(alib.latin1());
+          if (_sslLib) break;
+       }
++#endif
+       if (_sslLib) break;
+    }
+-#endif
+ 
+    if (_sslLib) {
+ #ifdef HAVE_SSL 
