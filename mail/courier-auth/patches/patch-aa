@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/02/21 14:43:16 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2004/07/14 20:07:07 jlam Exp $
 
---- authlib/Makefile.in.orig	Sat Nov 15 12:54:45 2003
-+++ authlib/Makefile.in
-@@ -54,7 +54,7 @@ AUTHUSERDB = @AUTHUSERDB@
+--- authlib/Makefile.in.orig	Mon May 24 22:34:24 2004
++++ authlib/Makefile.in	Tue Jul 13 03:20:40 2004
+@@ -54,7 +54,7 @@
  AUTOCONF = @AUTOCONF@
  AUTOHEADER = @AUTOHEADER@
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2004/02/21 14:43:16 jlam Exp $
  AWK = @AWK@
  CC = @CC@
  CCDEPMODE = @CCDEPMODE@
-@@ -1281,7 +1281,7 @@ info-am:
+@@ -1313,7 +1313,7 @@
  
  install-data-am: install-data-local
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.2 2004/02/21 14:43:16 jlam Exp $
  
  install-info: install-info-am
  
-@@ -1489,9 +1489,36 @@ authinfodaemondlist.c: authdaemondstatic
+@@ -1521,9 +1521,40 @@
  authdaemondstaticlist.c: config.status
  	@SHELL@ $(srcdir)/mkmodulelist.sh @DAEMON_STATIC_LIST@ >authdaemondstaticlist.c
  
@@ -30,6 +30,10 @@ $NetBSD: patch-aa,v 1.2 2004/02/21 14:43:16 jlam Exp $
 +install-exec-local:
 +	for d in $(sbindir) $(libexecdir) $(libexecdir)/authlib ; do \
 +			$(mkinstalldirs) $(DESTDIR)$$d || exit 1; done
++	for f in authenumerate authinfo ; do \
++		rm -rf $(DESTDIR)$(sbindir)/$$f; \
++		$(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) $$f \
++			$(DESTDIR)$(sbindir)/$$f ; done
 +	for f in `cat ../authlib/installlist`; do test -z "$$f" && continue; \
 +		test -f ../authlib/$$f || continue; \
 +		$(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) ../authlib/$$f \
@@ -58,7 +62,7 @@ $NetBSD: patch-aa,v 1.2 2004/02/21 14:43:16 jlam Exp $
  	test "$(man_LINKS)" = "" && exit 0; \
  	$(mkinstalldirs) $(DESTDIR)$(man7dir) ; \
  	for f in $(man_MANS) "" ; do \
-@@ -1501,7 +1528,6 @@ install-data-local: install-authldaprc i
+@@ -1533,7 +1564,6 @@
  		for f in $(man_LINKS) "" ; do \
  			test "$$f" = "" && continue ; \
  			rm -f $$f; $(LN_S) authlib.7 $$f ; \

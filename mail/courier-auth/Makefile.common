@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/02/23 23:24:32 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/07/14 20:07:07 jlam Exp $
 
 DISTNAME?=	courier-${DIST_VERS}
 CATEGORIES+=	mail
@@ -13,7 +13,7 @@ HOMEPAGE?=	http://www.courier-mta.org/
 # DIST_VERS	version number on the distfile
 # BASE_BERS	pkgsrc-manged version number
 #
-DIST_VERS=	0.44.2
+DIST_VERS=	0.45.6
 BASE_VERS=	${DIST_VERS}
 
 USE_GNU_TOOLS+=		make
@@ -26,12 +26,15 @@ DOCDIR=			${PREFIX}/share/doc/courier
 HTMLDIR=		${PREFIX}/share/doc/html/courier
 EGDIR=			${PREFIX}/share/examples/courier
 
+SYSCONFTOOL=		${DATADIR}/sysconftool
+FILES_SUBST+=		SYSCONFTOOL=${SYSCONFTOOL:Q}
+
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${DATADIR}
 CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR}
-CONFIGURE_ARGS+=	--localstatedir=/var
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 CONFIGURE_ARGS+=	--enable-unicode
@@ -49,16 +52,22 @@ CONFIGURE_ARGS+=	--disable-root-check
 CONFIGURE_ARGS+=	--with-waitfunc=wait3
 .endif
 
-# Build authdaemon, but explicitly disable certain methods (ldap, mysql, pgsql)
-# that are built in separate packages.  We also disable authcustom since it's
-# a template authentication method.
+# Build authdaemon, but explicitly disable certain methods (ldap, mysql,
+# pgsql) that are built in separate packages.  We also disable authcustom
+# since it's just a sample template authentication method, and authvchkpw
+# since vpopmail is very explicitly *not* officially supported by the
+# Courier author (though it's possible to work around this deficiency by
+# using vchkpw2userdb(8)).
 #
+AUTHDAEMONVAR?=		${VARBASE}/authdaemon
+FILES_SUBST+=		AUTHDAEMONVAR=${AUTHDAEMONVAR}
 CONFIGURE_ARGS+=	--with-authdaemon
-CONFIGURE_ARGS+=	--with-authdaemonvar=/var/authdaemon
+CONFIGURE_ARGS+=	--with-authdaemonvar=${AUTHDAEMONVAR}
 CONFIGURE_ARGS+=	--without-authcustom
 CONFIGURE_ARGS+=	--without-authldap
 CONFIGURE_ARGS+=	--without-authmysql
 CONFIGURE_ARGS+=	--without-authpgsql
+CONFIGURE_ARGS+=	--without-authvchkpw
 
 CONFIGURE_ENV+=		EXPECT=${LOCALBASE}/bin/expect
 CONFIGURE_ENV+=		PERL=${PERL5}

@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2004/04/23 22:07:53 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/07/14 20:07:07 jlam Exp $
 libexec/courier/authdaemon.passwd
 libexec/courier/authlib/authdaemon
 libexec/courier/authlib/authdaemond
 libexec/courier/authlib/authdaemond.plain
 libexec/courier/authsystem.passwd
 libexec/courier/makedatprog
+man/man1/courierlogger.1
 man/man7/authcram.7
 man/man7/authdaemon.7
 man/man7/authdaemond.7
@@ -21,7 +22,9 @@ man/man8/pw2userdb.8
 man/man8/userdb.8
 man/man8/userdbpw.8
 man/man8/vchkpw2userdb.8
-sbin/authdaemon.sysconftool
+sbin/authenumerate
+sbin/authinfo
+sbin/courierlogger
 sbin/makeuserdb
 sbin/pw2userdb
 sbin/userdb
@@ -30,11 +33,14 @@ sbin/vchkpw2userdb
 share/courier/authsystem.passwd
 share/courier/makeuserdb
 share/courier/pw2userdb
+share/courier/sysconftool
 share/courier/userdb
 share/courier/vchkpw2userdb
+share/doc/courier/README.authdebug.html
 share/examples/courier/authdaemonrc.dist
 share/examples/courier/system-auth.authpam
 @unexec ${RMDIR} -p %D/share/examples/courier 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} -p %D/share/doc/courier 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/share/courier 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/libexec/courier/authlib 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} -p %D/libexec/courier 2>/dev/null || ${TRUE}
