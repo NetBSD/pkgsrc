@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1 1999/09/20 04:58:32 sakamoto Exp $
+
+--- ./libImaging/Makefile.in.orig	Sun Jan 10 05:00:22 1999
++++ ./libImaging/Makefile.in	Mon Sep 20 09:02:53 1999
+@@ -31,5 +31,5 @@
+ 
+ INCLDIR=	$(srcdir)/.
+-JPEGINCLUDE=	/usr/local/include
++JPEGINCLUDE=	$(PREFIX)/include
+ OPT=		@OPT@
+ #OPT=		-g
