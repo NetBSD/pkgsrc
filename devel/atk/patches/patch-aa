@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/03/24 20:28:05 dmcmahill Exp $
+
+--- atk.pc.in.orig	Tue Mar  5 12:27:29 2002
++++ atk.pc.in
+@@ -7,5 +7,5 @@
+ Description: Accessibility Toolkit
+ Version: @VERSION@
+ Requires: @GLIB_PACKAGES@
+-Libs: -L${libdir} -latk-@ATK_API_VERSION@
++Libs: -L${libdir} -R${libdir} -latk-@ATK_API_VERSION@
+ Cflags: -I${includedir}/atk-1.0
