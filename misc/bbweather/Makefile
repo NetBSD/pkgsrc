@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/09/24 10:25:16 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/01/11 22:36:45 jschauma Exp $
 #
 
-DISTNAME=	bbweather-0.5
+DISTNAME=	bbweather-0.6
 CATEGORIES=	misc
 MASTER_SITES=	http://www.netmeister.org/apps/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,10 +16,10 @@ USE_BUILDLINK2=		YES
 USE_X11=		YES
 GNU_CONFIGURE=		YES
 REPLACE_PERL=		GrabWeather
+USE_PERL5=		run
 
 post-install:
 	cd ${PREFIX}/man/man1 && ${GUNZIP_CMD} GrabWeather.1.gz
 	cd ${PREFIX}/man/man1 && ${GUNZIP_CMD} bbweather.1.gz
 
-.include "../../lang/perl5/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
