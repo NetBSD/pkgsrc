@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/05/30 11:13:18 agc Exp $
+
+--- Makefile.in.orig	Sun Mar  4 06:16:31 2001
++++ Makefile.in
+@@ -19,6 +19,8 @@
+ SYS_OBJS = sys/nix/nix.o $(ASM_OBJS)
+ SYS_INCS = -I/usr/local/include @XINCS@ -I./sys/nix
+ 
++OSS_LIB = @OSS_LIB@
++
+ FB_OBJS = @FB_OBJS@ @JOY@ @SOUND@
+ FB_LIBS = 
+ 
+@@ -37,13 +39,13 @@
+ include Rules
+ 
+ fbgnuboy: $(OBJS) $(SYS_OBJS) $(FB_OBJS)
+-	$(LD) $(LDFLAGS) $(OBJS) $(SYS_OBJS) $(FB_OBJS) -o $@ $(FB_LIBS)
++	$(LD) $(LDFLAGS) $(OBJS) $(SYS_OBJS) $(FB_OBJS) -o $@ $(FB_LIBS) $(OSS_LIB)
+ 
+ sgnuboy: $(OBJS) $(SYS_OBJS) $(SVGA_OBJS)
+-	$(LD) $(LDFLAGS) $(OBJS) $(SYS_OBJS) $(SVGA_OBJS) -o $@ $(SVGA_LIBS)
++	$(LD) $(LDFLAGS) $(OBJS) $(SYS_OBJS) $(SVGA_OBJS) -o $@ $(SVGA_LIBS) $(OSS_LIB)
+ 
+ sdlgnuboy: $(OBJS) $(SYS_OBJS) $(SDL_OBJS)
+-	$(LD) $(LDFLAGS) $(OBJS) $(SYS_OBJS) $(SDL_OBJS) -o $@ $(SDL_LIBS)
++	$(LD) $(LDFLAGS) $(OBJS) $(SYS_OBJS) $(SDL_OBJS) -o $@ $(SDL_LIBS) $(OSS_LIB)
+ 
+ sys/sdl/sdl.o: sys/sdl/sdl.c
+ 	$(MYCC) $(SDL_CFLAGS) -c $< -o $@
+@@ -52,7 +54,7 @@
+ 	$(MYCC) $(SDL_CFLAGS) -c $< -o $@
+ 
+ xgnuboy: $(OBJS) $(SYS_OBJS) $(X11_OBJS)
+-	$(LD) $(LDFLAGS) $(OBJS) $(SYS_OBJS) $(X11_OBJS) -o $@ $(X11_LIBS)
++	$(LD) $(LDFLAGS) $(OBJS) $(SYS_OBJS) $(X11_OBJS) -o $@ $(X11_LIBS) $(OSS_LIB)
+ 
+ install: all
+ 	$(INSTALL) -m 755 $(TARGETS) $(prefix)$(bindir)
