@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/20 00:31:29 hubertf Exp $
+bin/dmesg2gif
