@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.105 2003/11/03 22:43:38 kim Exp $
+# $NetBSD: Makefile,v 1.106 2003/11/12 03:39:42 jschauma Exp $
 
 .include "Makefile.common"
-PKGREVISION=		4
+PKGREVISION=		5
 
 MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.samba.org/

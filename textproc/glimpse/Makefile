@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2003/07/17 22:54:15 grant Exp $
+# $NetBSD: Makefile,v 1.20 2003/11/12 03:39:43 jschauma Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/07/17 19:29:07 andreas Exp
 #
 
 DISTNAME=	glimpse-4.17.2
+PKGREVISION=	1
 CATEGORIES=	textproc databases
 MASTER_SITES=   http://webglimpse.net/trial/
 
