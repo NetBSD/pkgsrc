@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2001/11/26 06:49:43 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/11/28 21:16:13 kleink Exp $
 #
 
-DISTNAME=     	perl-ldap-0.23
+DISTNAME=     	perl-ldap-0.25
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	pldap
 CATEGORIES=	databases net devel perl5
@@ -15,6 +15,7 @@ DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Convert-ASN1-[0-9]*:../../textproc/p5-Convert-ASN1
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:security/p5-IO-Socket-SSL
 
 USE_BUILDLINK_ONLY=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/perl-ldap/.packlist
