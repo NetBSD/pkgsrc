@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2004/03/16 02:01:09 taca Exp $
+# $NetBSD: Makefile,v 1.10 2004/11/27 15:34:29 taca Exp $
 #
 
 DISTNAME=	ruby-termios-0.9.4
-PKGNAME=	${RUBY_PKGNAMEPREFIX}termios-0.9.4
-PKGREVISION=	1
+PKGNAME=	${RUBY_PKGPREFIX}-termios-0.9.4
 CATEGORIES=	comms ruby
 MASTER_SITES=	http://arika.org/archive/
 
@@ -11,11 +10,12 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://arika.org/ruby/termios
 COMMENT=	Ruby extension to termios library
 
-DIST_SUBDIR=	ruby
-USE_RUBY_EXTCONF= yes
-DOCS=		ChangeLog README TODO.ja
-EXAMPLES=	modem_check0.rb modem_check1.rb modem_check2.rb \
-		secret_input1.rb secret_input2.rb
+USE_BUILDLINK3=		yes
+USE_RUBY_EXTCONF=	yes
+
+DOCS=			ChangeLog README TODO.ja
+EXAMPLES=		modem_check0.rb modem_check1.rb modem_check2.rb \
+			secret_input1.rb secret_input2.rb
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/termios
@@ -27,5 +27,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/$f ${RUBY_EXAMPLESDIR}/termios
 .endfor
 
-.include "../../lang/ruby-base/Makefile.common"
+.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
