@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2000/11/25 14:16:36 rh Exp $
+# $NetBSD: Makefile,v 1.3 2000/12/30 18:41:20 rh Exp $
 #
 
-DISTNAME=	gb-0.0.15
+DISTNAME=	gb-0.0.17
 CATEGORIES=	lang gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=unstable/sources/gb/}
 
@@ -15,5 +15,7 @@ USE_X11BASE=	YES
 USE_LIBTOOL=	YES
 
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+
+CONFIGURE_ENV+=	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include"
 
 .include "../../mk/bsd.pkg.mk"
