@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2003/09/29 09:20:12 seb Exp $
+# $NetBSD: Makefile,v 1.6 2003/12/04 09:27:01 seb Exp $
 #
 
 DISTNAME=	xpaste-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 WRKSRC=		${WRKDIR}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
