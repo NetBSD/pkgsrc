@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2000/09/12 14:05:16 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2000/09/12 14:52:43 jlam Exp $
 #
 
 DISTNAME=	mod_ssl-2.6.6-1.3.12
@@ -55,6 +55,7 @@ post-install:
 
 	@cd ${PREFIX}/lib/httpd; ${MV} -f libssl.so mod_ssl.so
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg.sslsup/mkcert.sh ${PREFIX}/sbin
+	${INSTALL_DATA} ${FILESDIR}/mod_ssl.conf ${PREFIX}/etc/httpd
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/htdocs/manual/mod/mod_ssl
 	cd ${WRKSRC}/pkg.ssldoc && ${INSTALL_DATA} *.html *.gif *.jpg \
