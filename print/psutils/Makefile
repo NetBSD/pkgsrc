@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/10/05 13:59:57 agc Exp $
+# $NetBSD: Makefile,v 1.17 2001/01/11 01:53:28 wiz Exp $
 # FreeBSD Id: Makefile,v 1.15 1998/01/08 18:52:13 fenner Exp
 #
 
@@ -45,8 +45,8 @@ post-patch:
 	${SED} -e 's|@prefix@|${PREFIX}|g' ${WRKSRC}/psutil.c.in > ${WRKSRC}/psutil.c
 
 post-install:
-	for file in epsffit psbook psnup psresize psselect pstops; do	\
-		strip ${PREFIX}/bin/$$file;				\
+	for f in epsffit psbook psnup psresize psselect pstops; do	\
+		strip ${PREFIX}/bin/$$f;				\
 	done
 	low=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`;		\
 	if [ ! -f ${PREFIX}/etc/psutils.cfg ]; then			\
