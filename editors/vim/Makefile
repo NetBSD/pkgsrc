@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.21 1999/11/12 16:55:11 agc Exp $
+# $NetBSD: Makefile,v 1.22 1999/11/22 08:49:12 tron Exp $
 
-DISTNAME=		vim-5.4
+DISTNAME=		vim-5.5
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.oce.nl/pub/vim/unix/ \
-			ftp://ftp.vim.org/pub/misc/editors/vim/unix/ \
-			ftp://uiarchive.uiuc.edu/pub/packages/vim/ \
+MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
+			ftp://ftp.nuxi.com/pub/vim/unix/ \
+			ftp://ftp.fu-berlin.de/misc/editors/vim/unix/ \
+			ftp://ftp.medasys-digital-systems.fr/pub/vim/unix/ \
 			ftp://ftp.progsoc.uts.edu.au/pub/vim/unix/
 DISTFILES=		${DISTNAME}-src${EXTRACT_SUFX} \
 			${DISTNAME}-rt${EXTRACT_SUFX}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		pooka@iki.fi
 HOMEPAGE=		http://www.vim.org/
 
 CONFLICTS=		vim-gtk-*
