@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2003/02/13 23:25:05 grant Exp $
+# $NetBSD: Makefile,v 1.8 2003/02/14 00:58:06 grant Exp $
 #
 
 DISTNAME=		rdesktop-1.2.0
@@ -19,7 +19,7 @@ ALL_TARGET=		rdesktop
 USE_X11=		YES
 
 DATADIR=		${PREFIX}/share/rdesktop
-KEYMAP_PATH=		${DATADIR}/keymaps
+KEYMAP_PATH=		${DATADIR}/keymaps/
 
 CFLAGS+=		-DWITH_OPENSSL
 CFLAGS+=		-DKEYMAP_PATH=\\\"${KEYMAP_PATH}\\\"
