@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7647 2004/11/01 23:05:49 xtraeme Exp $
+$NetBSD: CHANGES,v 1.7648 2004/11/01 23:08:44 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5010,3 +5010,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added pear-SOAP-0.7.5 [jdolecek 2004-11-01]
 	Added php5-mysqli-5.0.2 [jdolecek 2004-11-01]
 	Updated swapd to 1.0.2 [xtraeme 2004-11-01]
+	Updated clamsmtp to 1.1 [xtraeme 2004-11-01]
