@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.1 2000/06/12 20:10:58 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.2 2000/06/12 20:30:41 dmcmahill Exp $
 
 makes 
   install-info --delete %D/info/dinotrace.info %D/info/dir
 actually work.
 
---- work.i386/dinotrace-9.0g/dinotrace.info.orig	Tue Jan 25 16:39:51 2000
-+++ work.i386/dinotrace-9.0g/dinotrace.info	Mon Jun 12 16:08:18 2000
+--- dinotrace.info.orig	Tue Jan 25 16:39:51 2000
++++ dinotrace.info	Mon Jun 12 16:08:18 2000
 @@ -4,5 +4,5 @@
  INFO-DIR-SECTION Signal waveform tracing tool
  START-INFO-DIR-ENTRY
