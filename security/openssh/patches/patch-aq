@@ -1,8 +1,8 @@
-$NetBSD: patch-aq,v 1.3 2004/08/04 06:43:53 minskim Exp $
+$NetBSD: patch-aq,v 1.4 2004/08/31 11:27:12 wiz Exp $
 
---- packet.c.orig	Fri Nov 21 22:02:42 2003
+--- packet.c.orig	2004-06-22 04:56:02.000000000 +0200
 +++ packet.c
-@@ -1406,7 +1406,7 @@ packet_not_very_much_data_to_write(void)
+@@ -1405,7 +1405,7 @@ packet_not_very_much_data_to_write(void)
  static void
  packet_set_tos(int interactive)
  {

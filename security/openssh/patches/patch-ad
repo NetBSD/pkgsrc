@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.7 2004/08/04 06:43:52 minskim Exp $
+$NetBSD: patch-ad,v 1.8 2004/08/31 11:27:12 wiz Exp $
 
---- loginrec.c.orig	Thu Apr  8 01:16:06 2004
+--- loginrec.c.orig	2004-08-15 11:12:52.000000000 +0200
 +++ loginrec.c
 @@ -415,7 +415,7 @@ login_write (struct logininfo *li)
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.7 2004/08/04 06:43:52 minskim Exp $
  	syslogin_write_entry(li);
  #endif
  #ifdef USE_LASTLOG
-@@ -584,7 +584,7 @@ line_abbrevname(char *dst, const char *s
+@@ -589,7 +589,7 @@ line_abbrevname(char *dst, const char *s
   ** into account.
   **/
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.7 2004/08/04 06:43:52 minskim Exp $
  
  /* build the utmp structure */
  void
-@@ -720,8 +720,6 @@ construct_utmpx(struct logininfo *li, st
+@@ -725,8 +725,6 @@ construct_utmpx(struct logininfo *li, st
  	line_stripname(utx->ut_line, li->line, sizeof(utx->ut_line));
  	set_utmpx_time(li, utx);
  	utx->ut_pid = li->pid;
@@ -29,7 +29,7 @@ $NetBSD: patch-ad,v 1.7 2004/08/04 06:43:52 minskim Exp $
  
  	if (li->type == LTYPE_LOGOUT)
  		return;
-@@ -731,6 +729,8 @@ construct_utmpx(struct logininfo *li, st
+@@ -736,6 +734,8 @@ construct_utmpx(struct logininfo *li, st
  	 * for logouts.
  	 */
  
@@ -38,7 +38,7 @@ $NetBSD: patch-ad,v 1.7 2004/08/04 06:43:52 minskim Exp $
  # ifdef HAVE_HOST_IN_UTMPX
  	strncpy(utx->ut_host, li->hostname, MIN_SIZEOF(utx->ut_host, li->hostname));
  # endif
-@@ -1333,7 +1333,7 @@ wtmpx_get_entry(struct logininfo *li)
+@@ -1357,7 +1357,7 @@ wtmpx_get_entry(struct logininfo *li)
   ** Low-level libutil login() functions
   **/
  
