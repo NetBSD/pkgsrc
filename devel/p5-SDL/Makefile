@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/01/02 00:43:40 explorer Exp $
+# $NetBSD: Makefile,v 1.3 2003/01/02 10:01:33 wiz Exp $
 
 DISTNAME=	SDL_perl-1.19.2
 PKGNAME=	p5-SDL-1.19.2
@@ -8,14 +8,11 @@ MASTER_SITES=	ftp://sdlperl.org/SDL_perl/
 MAINTAINER=	packages@netbsd.org
 COMMENT=	Perl module for SDL
 
-DEPENDS+=	SDL>=1.2.5:../../devel/SDL
-DEPENDS+=	SDL-image>=1.2.2:../../graphics/SDL-image
-DEPENDS+=	SDL-mixer>=1.2.4:../../audio/SDL-mixer
-DEPENDS+=	SDL_ttf>=2.0.3:../../devel/SDL_ttf
-DEPENDS+=	SDL_gfx>=2.0.3:../../devel/SDL_gfx
-
 USE_BUILDLINK2=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SDL_perl/.packlist
+
+BUILDLINK_DEPENDS.SDL=		SDL>=1.2.5
+BUILDLINK_DEPENDS.SDL-mixer=	SDL-mixer>=1.2.4
 
 .include "../../devel/SDL/buildlink2.mk"
 .include "../../audio/SDL-mixer/buildlink2.mk"
@@ -25,8 +22,6 @@ PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/SDL_perl/.packlist
 .include "../../devel/smpeg/buildlink2.mk"
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
-
-.include "../../mk/x11.buildlink2.mk"
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
