@@ -1,13 +1,36 @@
-$NetBSD: patch-aa,v 1.8 1999/06/20 20:38:39 kim Exp $
+$NetBSD: patch-aa,v 1.9 1999/08/03 15:00:58 agc Exp $
+
+Use the strerror(3) function - it's much better at this than we are,
+and hides the internals of the error list.
 
 --- utils.c.orig	Thu Oct 29 08:26:08 1998
 +++ utils.c	Sun Jun 20 16:35:35 1999
-@@ -19,8 +19,6 @@
+@@ -2,6 +2,7 @@
+ 
+ #include <errno.h>
+ #include <setjmp.h>
++#include <string.h>
+ #include "rc.h"
+ #include "jbwrap.h"
+ 
+@@ -19,6 +20,7 @@
  /* our perror */
  
  extern void uerror(char *s) {
--	extern int sys_nerr;
--	extern char *sys_errlist[];
++#if 0
+ 	extern int sys_nerr;
+ 	extern char *sys_errlist[];
  	if (errno > sys_nerr)
- 		return;
- 	if (s != NULL)
+@@ -27,6 +29,12 @@
+ 		fprint(2, "%s: %s\n", s, sys_errlist[errno]);
+ 	else
+ 		fprint(2, "%s\n", sys_errlist[errno]);
++#else
++	if (s != (char *) NULL) {
++		fprint(2, "%s: ", s);
++	}
++	fprint(2, "%s\n", strerror(errno));
++#endif
+ }
+ 
+ /* Die horribly. This should never get called. Please let me know if it does. */
