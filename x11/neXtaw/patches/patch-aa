@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/08/02 20:10:47 jlam Exp $
+
+--- X11/neXtaw/XawI18n.h.orig	Fri Jan  4 08:00:43 2002
++++ X11/neXtaw/XawI18n.h
+@@ -30,7 +30,9 @@ in this Software without prior written a
+ #ifdef HAS_WCTYPE_H
+ #include <wctype.h>
+ #if !defined(__linux__)
++#ifndef NO_WIDEC_H
+ #include <widec.h>
++#endif
+ #ifdef HAVE_WCSLEN
+ #define wcslen(c) wslen(c)
+ #endif
