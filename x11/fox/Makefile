@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/04/13 19:27:05 sakamoto Exp $
+# $NetBSD: Makefile,v 1.4 2001/04/18 20:00:39 dmcmahill Exp $
 # FreeBSD Id: ports/x11-toolkits/fox/Makefile,v 1.14 2001/02/23 19:00:05 knu Exp
 
 DISTNAME=	fox-0.99.167
@@ -10,8 +10,8 @@ MAINTAINER=	sakamoto@netbsd.org
 HOMEPAGE=	http://www.cfdrc.com/FOX/fox.html
 COMMENT=	Fast and extensive C++ GUI toolkit
 
-DEPENDS=	jpeg-*:../../graphics/jpeg \
-		png-*:../../graphics/png
+DEPENDS+=	jpeg-*:../../graphics/jpeg
+DEPENDS+=	png-*:../../graphics/png
 
 .if !defined(USE_XUNICODE) || ${USE_XUNICODE} == "YES"
 
