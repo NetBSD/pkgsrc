@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2000/11/26 09:32:11 tron Exp $
+# $NetBSD: Makefile,v 1.47 2000/11/27 11:35:45 itojun Exp $
 
 DISTNAME=		libgtop-1.0.9
 CATEGORIES=		devel gnome
@@ -8,7 +8,7 @@ MAINTAINER=		tron@netbsd.org
 HOMEPAGE=		http://www.home-of-linux.org/gnome/libgtop/
 
 BUILD_DEPENDS=		${PERL5}:../../lang/perl5-base
-DEPENDS+=		gettext>=0.10.35nb1:../../devel/gettext
+BUILD_DEPENDS+=		msgfmt:../../devel/gettext
 DEPENDS+=		gnome-libs-*:../../x11/gnome-libs
 DEPENDS+=		guile-[0-9]*:../../lang/guile
 
@@ -31,6 +31,7 @@ IGNORE+=		"(More information can be found in libgtop.info.)"
 USE_X11BASE=		# defined
 USE_GMAKE=		# defined
 USE_LIBTOOL=		# defined
+USE_LIBINTL=		# defined
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 CPPFLAGS+=		-I${LOCALBASE}/include	# libintl.h
