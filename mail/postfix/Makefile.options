@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.options,v 1.7 2004/07/30 21:44:43 jlam Exp $
+# $NetBSD: Makefile.options,v 1.8 2004/07/31 05:07:19 jlam Exp $
 
 # Global and legacy options
 #
@@ -165,7 +165,7 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MESSAGE_SUBST+=	SASLLIBDIR=${SASLLIBDIR}
 .endif
 
-.if ${OPSYS} == "Linux" 
+.if ${OPSYS} == "Linux"
 .  include "../../databases/db/buildlink3.mk"
 CCARGS+=	-I${BUILDLINK_PREFIX.db2}/include/db2
 AUXLIBS+=	-L${BUILDLINK_PREFIX.db2}/lib				\
