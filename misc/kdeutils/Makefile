@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 1999/02/19 21:26:10 tron Exp $
+# $NetBSD: Makefile,v 1.26 1999/03/23 18:59:41 tron Exp $
 # FreeBSD Id: Makefile,v 1.4 1997/11/28 00:04:18 se Exp
 #
 
@@ -16,11 +16,12 @@ DEPENDS+=	kdebase-1.1:../../x11/kdebase
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include" \
-		"--x-lib=${PREFIX}/lib -L${LOCALBASE}/lib" \
-		"--with-qt-dir=${PREFIX}" \
+CONFIGURE_ARGS=	"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
+CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
+		CXXFLAGS="${CFLAGS}" \
+                all_libraries="-L${LOCALBASE}/lib" \
 		INSTALL_DATA="${INSTALL_DATA}" \
 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
 		INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
