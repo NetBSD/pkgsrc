@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.1.2.14 2003/08/23 09:37:16 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.1.2.15 2003/08/25 19:37:48 jlam Exp $
 
 ECHO_BUILDLINK_MSG=	${TRUE}
 BUILDLINK_DIR=		${WRKDIR}/.buildlink
@@ -28,7 +28,7 @@ BUILDLINK_PKGSRCDIR.x11-links=	../../pkgtools/x11-links
 
 _BLNK_X11_LINKS_PREFIX!=						\
 	if ${PKG_INFO} -qe "${BUILDLINK_DEPENDS.x11-links}"; then	\
-		cd ${PKG_DBDIR};					\
+		cd ${_PKG_DBDIR};					\
 		${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.x11-links}"; \
 	else								\
 		${ECHO} "${LOCALBASE}";					\
@@ -81,7 +81,7 @@ BUILDLINK_PKGBASE.${_pkg_}?=	${_pkg_}
 .  if !defined(BUILDLINK_PREFIX.${_pkg_})
 BUILDLINK_PREFIX.${_pkg_}!=						\
 	if ${PKG_INFO} -qe "${BUILDLINK_DEPENDS.${_pkg_}}"; then	\
-		cd ${PKG_DBDIR};					\
+		cd ${_PKG_DBDIR};					\
 		${PKG_ADMIN} -s "" lsbest "${BUILDLINK_DEPENDS.${_pkg_}}"; \
 	else								\
 		${ECHO} "${LOCALBASE}";					\
