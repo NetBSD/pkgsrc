@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/04/25 19:10:11 thorpej Exp $
+# $NetBSD: Makefile,v 1.4 2000/04/27 14:55:54 itojun Exp $
 #
 
 DISTNAME=		isakmpd-000220
@@ -7,7 +7,7 @@ CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.appli.se/pub/isakmpd/
 
 PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
-PATCHFILES=		isakmpd-20000220-20000328a.diff.gz
+PATCHFILES=		isakmpd-20000220-20000427a.diff.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		itojun@kame.net
@@ -21,7 +21,7 @@ IGNORE+=		"requires ipsec-ready NetBSD"
 # RSA already exists in the OpenSSL built as part of the
 # base distribution.
 .if !defined(PATENTEDOPENSSLSRC)
-DEPENDS+=		openssl-0.9.4:../../security/openssl
+DEPENDS+=		openssl-0.9.*:../../security/openssl
 .endif
 DEPENDS+=		gmp-*:../../devel/gmp
 
