@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1989 2004/08/01 05:18:59 schmonz Exp $
+$NetBSD: TODO,v 1.1990 2004/08/01 08:36:34 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -230,7 +230,6 @@ Suggested package updates
 	o gcvs-1.0
 	o gdb-6.2
 	o generator-0.35
-	o getmail-4.0.2 [schmonz]
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
