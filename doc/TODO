@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.236 2003/02/01 01:05:29 salo Exp $
+$NetBSD: TODO,v 1.237 2003/02/01 16:10:23 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -146,7 +146,6 @@ Suggested package updates
 	o imp-3.1 [pkg/19497]
 	o inform-6.21.3 [pkg/19298]
 	o inn 2.3.4 [waiting for IPv6 patch]
-	o intltool-0.23 [pkg/18891]
 	o ircu-2.10.11.04
 	o iozone-3.147
 	o jakarta-ant-1.5 [pkg/18322]
