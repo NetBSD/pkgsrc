@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:34 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/03/02 19:47:25 jschauma Exp $
 bin/xart
-man/cat1/xart.0
+${IMAKE_MAN_DIR}/xart.${IMAKE_MANNEWSUFFIX}
 lib/X11/app-defaults/XArt
