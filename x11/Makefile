@@ -86,6 +86,7 @@
 #    SUBDIR += xfce
 #    SUBDIR += xfed
 #    SUBDIR += xfedor
+    SUBDIR += xfinans
     SUBDIR += xfishtank
 #    SUBDIR += xfm
 #    SUBDIR += xforms
