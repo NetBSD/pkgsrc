@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:09:56 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/07/18 20:04:11 martin Exp $
 
-SHA1 (elm-2.4ME+78.tar.gz) = 614e93c880a90995466535a1c9aa44c8b1a28fe6
-Size (elm-2.4ME+78.tar.gz) = 814957 bytes
-SHA1 (patch-aa) = 22f5b0219ada56c90cd26b47e9f5beac3af00c4a
-SHA1 (patch-ab) = 288893a202522d3197cd5092273c1dfbcd31f3da
-SHA1 (patch-ac) = c76cbb5adc548bdc68fc860063e5280ff90d7e59
-SHA1 (patch-ad) = ba58d8ca684d16e165f45ccb08ac76e560bf293e
+SHA1 (elm2.5.5.tar.gz) = 608f46d80a259eb3439b624d2947eede201a157d
+Size (elm2.5.5.tar.gz) = 605728 bytes
+SHA1 (patch-aa) = 496848b87b31bdfa688cbf09f67f29428e2805b4
+SHA1 (patch-ab) = 0d3a39f6fb0179bf75095ed7aa1910d94506fbe8
+SHA1 (patch-ac) = 3216e1f8a00200efd93ada37c8250c5277abfbfe
+SHA1 (patch-ad) = de6e99072ad6379126bb1e6d798bc2cd851a92ed
+SHA1 (patch-ae) = c72dedb41a4a777af81a2351a7c7cd4d2c3b6137
+SHA1 (patch-af) = 7e08a1595ff31bcb1f45433d20693b4e0c5bf824
