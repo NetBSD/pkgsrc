@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2002/06/03 13:06:20 shell Exp $
+$NetBSD: distinfo,v 1.8 2003/03/17 01:29:33 seb Exp $
 
-SHA1 (libnet-1.12.tar.gz) = 51f3bc4fb76d72ec6fb8c9264b5324b5ae44737a
-Size (libnet-1.12.tar.gz) = 65841 bytes
+SHA1 (libnet-1.13.tar.gz) = ad2ffd88669b77ea7a42c2018c20dd302315461f
+Size (libnet-1.13.tar.gz) = 66212 bytes
 SHA1 (patch-aa) = 655b2ee1c751818c7f90123dfde0cb06a8237b34
