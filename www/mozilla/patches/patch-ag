@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.7 2000/10/29 22:59:32 mycroft Exp $
+$NetBSD: patch-ag,v 1.8 2000/11/05 02:20:38 mycroft Exp $
 
---- config/rules.mk.orig	Thu Sep 28 13:02:15 2000
-+++ config/rules.mk	Sun Oct 29 21:45:18 2000
-@@ -354,6 +354,18 @@
+--- config/rules.mk.orig	Thu Sep 28 00:02:15 2000
++++ config/rules.mk	Wed Nov  1 08:59:03 2000
+@@ -354,6 +354,27 @@
  endif
  
  #
@@ -17,7 +17,25 @@ $NetBSD: patch-ag,v 1.7 2000/10/29 22:59:32 mycroft Exp $
 +endif
 +endif
 +
++ifeq ($(OS_ARCH),NetBSD)
++ifneq (,$(filter arc cobalt hpcmips mipsco newsmips pmax sgimips,$(OS_TEST)))
++ifeq ($(MODULE),layout)
++OS_CFLAGS += -Wa,-xgot
++OS_CXXFLAGS += -Wa,-xgot
++endif
++endif
++endif
++
 +#
  # HP-UXBeOS specific section: for COMPONENTS only, add -Bsymbolic flag
  # which uses internal symbols first
  #
+@@ -1393,7 +1414,7 @@
+ 	@echo "OS_CFLAGS          = $(OS_CFLAGS)"
+ 	@echo "COMPILE_CFLAGS     = $(COMPILE_CFLAGS)"
+ 	@echo "CXXFLAGS           = $(CXXFLAGS)"
+-	@echo "OS_CXXFLAGS        = $(OS_CFXXFLAGS)"
++	@echo "OS_CXXFLAGS        = $(OS_CXXFLAGS)"
+ 	@echo "COMPILE_CXXFLAGS   = $(COMPILE_CXXFLAGS)"
+ 	@echo "LDFLAGS            = $(LDFLAGS)"
+ 	@echo "OS_LDFLAGS         = $(OS_LDFLAGS)"
