@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 1998/05/20 14:58:04 agc Exp $
-bin/addnerd
-share/addnerd.defaults
+@comment $NetBSD: PLIST,v 1.2 1998/05/21 16:52:18 agc Exp $
 man/man1/addnerd.1
+sbin/addnerd
+share/addnerd/.cshrc.example
+share/addnerd/.login.example
+share/addnerd/.profile.example
+share/addnerd/defaults.example
+@unexec rmdir %D/share/addnerd || /usr/bin/true
