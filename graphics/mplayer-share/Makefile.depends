@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.depends,v 1.21 2003/09/17 19:40:31 grant Exp $
+# $NetBSD: Makefile.depends,v 1.22 2003/10/06 05:49:24 mycroft Exp $
 #
 
 DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../graphics/mplayer-share
@@ -36,6 +36,7 @@ USE_X11=	YES
 .include "../../graphics/jpeg/buildlink2.mk"
 .include "../../graphics/libungif/buildlink2.mk"
 .include "../../graphics/png/buildlink2.mk"
+.include "../../graphics/xvidcore/buildlink2.mk"
 .include "../../misc/libdvdread/buildlink2.mk"
 
 .if defined(USE_OSS)
