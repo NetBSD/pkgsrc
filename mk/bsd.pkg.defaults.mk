@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.100 2002/10/20 23:12:50 jlam Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.101 2002/10/21 01:18:55 wiz Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -1435,11 +1435,6 @@ USE_DB2?= NO
 # problems; future revisions might have no support at all)
 # Also used by tiff-library to enable LZW compression support.
 # Possible: defined, not defined
-# Default: not defined
-
-#USE_GLX=
-# Use Mesa-glx instead of Mesa
-# Possible: not defined, YES
 # Default: not defined
 
 USE_IDEA?=	NO
