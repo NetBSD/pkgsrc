@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1.1.1 2003/03/15 20:40:56 kei Exp $
+
+ALIAS=@FONTDIR@/fonts.alias
+
+case ${STAGE} in
+PRE-INSTALL)
+	;;
+
+POST-INSTALL)
+	${ECHO} '-- BEGIN Kappa20 --' >> ${ALIAS}
+	${CAT} @ALIAS_KAPPA@ >> ${ALIAS}
+	${ECHO} >> ${ALIAS}
+	${ECHO} '!! kappa20 generic aliases' >> ${ALIAS}
+	$CAT @ALIAS_KAPPA@ | \
+		${GREP} 'kappa-.*-kappa-' | \
+		${SED} -e 's,kappa-,misc-,' >> ${ALIAS}
+	${CAT} @ALIAS_KAPPA@ | \
+		${GREP} 10x20 | \
+		${AWK} '{print $2, $2}' | \
+		${SED} -e 's,kappa-,misc-,' >> ${ALIAS}
+	${ECHO} '-- END Kappa20 --' >> ${ALIAS}
+	mkfontdir @FONTDIR@
+	;;
+
+*)
+	${ECHO} "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+
+esac
