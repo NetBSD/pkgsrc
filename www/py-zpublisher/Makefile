@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/03/08 10:29:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/01/29 17:02:32 drochner Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
@@ -11,7 +11,7 @@ MAINTAINER=	tsarna@netbsd.org
 HOMEPAGE=	http://classic.zope.org:8080/Documentation/Reference/ORB
 COMMENT=	The Zope ORB. Publishes a collection of Python objects as Web resources
 
-DEPENDS+=	py-extclass>=2.2.2:../../lang/python
+DEPENDS+=	py-extclass>=2.2.2:../../lang/py-extclass
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 EXTRACT_ELEMENTS=	${DISTNAME}/lib/python/ZPublisher
@@ -33,5 +33,5 @@ do-install:
 		-type d -print | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 	${LN} -sf ../${PY_SITEPATH}/ZPublisher/Test.py ${PREFIX}/bin/bobo
 
-.include "../../lang/python/Makefile.inc"
+.include "../../lang/python20/Makefile.inc"
 .include "../../mk/bsd.pkg.mk"
