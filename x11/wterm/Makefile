@@ -1,30 +1,30 @@
-# $NetBSD: Makefile,v 1.12 2001/09/27 23:19:03 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2001/10/05 13:33:28 wiz Exp $
 #
 
-DISTNAME=	wterm-6.2.6
+DISTNAME=	wterm-6.2.9
 CATEGORIES=	x11
-MASTER_SITES=	http://wm.current.nu/files/
+MASTER_SITES=	http://largo.windowmaker.org/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rh@netbsd.org
-HOMEPAGE=	http://wm.current.nu/files.php\#wterm
+HOMEPAGE=	http://largo.windowmaker.org/files.php\#wterm
 COMMENT=	NeXTStep(tm) style X11 terminal emulator for WindowMaker
 
-DEPENDS+=	windowmaker-[0-9]*:../../wm/windowmaker
-
-USE_X11BASE=	YES
-GNU_CONFIGURE=	YES
-
-CFLAGS+=	-I${LOCALBASE}/include -I${X11BASE}/include/WINGs
+GNU_CONFIGURE=		YES
+# some /usr/X11R6/lib references sneak in
+# USE_BUILDLINK_ONLY=	YES
 
 CONFIGURE_ARGS+= --enable-utmp --enable-wtmp --enable-xpm-background
 CONFIGURE_ARGS+= --enable-menubar --enable-graphics --enable-next-scroll
 CONFIGURE_ARGS+= --enable-half-shadow
 
 post-install:
-		${INSTALL_DATA} ${WRKSRC}/wterm.tiff \
-			${PREFIX}/share/WindowMaker/Icons
-		${INSTALL_DATA} ${WRKSRC}/wtermthai.tiff \
-			${PREFIX}/share/WindowMaker/Icons
+	${CHMOD} 4755 ${PREFIX}/bin/wterm
+	${INSTALL_DATA} ${WRKSRC}/wterm.tiff \
+		${PREFIX}/share/WindowMaker/Icons
+	${INSTALL_DATA} ${WRKSRC}/wtermthai.tiff \
+		${PREFIX}/share/WindowMaker/Icons
 
+.include "../../wm/windowmaker/buildlink.mk"
+.include "../../mk/x11.buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
