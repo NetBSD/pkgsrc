@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:29:57 wiz Exp $
-
-This package does not install a standalone gaim binary. You must add
-the gaim applet to your GNOME pannel by right clicking on the pannel
-and selecting it from the Applets menu. Otherwise, you can launch it
-by running gaim_applet from the command line.
-
-===========================================================================
