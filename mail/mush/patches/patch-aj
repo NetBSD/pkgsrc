@@ -1,0 +1,35 @@
+*** mush.1.orig	Fri Oct  9 07:24:11 1998
+--- mush.1	Fri Oct  9 07:29:26 1998
+***************
+*** 2766,2771 ****
+--- 2766,2772 ----
+  .in +2
+  +<num>	keep only the first <num> messages matched (head).
+  \-<num>	keep only the last <num> messages matched (tail).
++ \-D	pick messages that have the same body as others.
+  \-ago <format>	search for messages relative to today's date.
+  \-d [+|\-]date	messages sent on or [+ after] [`\-' before] date.
+  \-e	take all remaining arguments to be the pattern.
+***************
+*** 2786,2791 ****
+--- 2787,2793 ----
+  .IR \-a .
+  Only one of \-a, \-d, \-f, \-h, \-p, \-s and \-t can be specified at once,
+  but multiple \-p options may be specified to select several priorities.
++ A <pattern> must be specified for all arguments, except \-D.
+  Entire messages are scanned for the <pattern>
+  unless \-a, \-d, \-f, \-h, \-p, \-s or \-t is specified.
+  Messages marked for deletion are also searched.
+***************
+*** 2858,2863 ****
+--- 2860,2869 ----
+  February 5, 1987, that contain the subject "mail stuff" and send them
+  to the printer.
+  .sp
++ .ti +2
++ pick -D | delete
++ .sp
++ Deletes all duplicate messages.
+  .ti +2
+  pick -s Re: | delete
+  .sp
