@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2002/03/20 11:33:04 martti Exp $
+# $NetBSD: Makefile,v 1.16 2002/06/16 22:03:03 wiz Exp $
 #
 
 DISTNAME=		Msql-Mysql-modules-1.2219
@@ -13,6 +13,8 @@ COMMENT=		Perl DBI/DBD driver for MySQL databases
 
 DEPENDS+=		p5-DBI>=1.13:../../databases/p5-DBI
 DEPENDS+=		p5-Data-ShowTable-3.3:../../devel/p5-Data-ShowTable
+
+BUILDLINK_DEPENDS.mysql-client?=	mysql-client>=3.23.49nb1
 
 USE_PERL5=		# defined
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Msql-Mysql-modules/.packlist
