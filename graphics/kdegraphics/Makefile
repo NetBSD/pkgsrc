@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 1999/10/07 17:41:53 tron Exp $
+# $NetBSD: Makefile,v 1.25 1999/10/09 20:14:08 jlam Exp $
 #
 
 DISTNAME=	kdegraphics-1.1.2
@@ -11,18 +11,17 @@ MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.kde.org/
 
 DEPENDS+=	kdebase-1.1.2:../../x11/kdebase
+DEPENDS+=	libungif-*:../../graphics/libungif
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	"--x-inc=${PREFIX}/include -I${LOCALBASE}/include -I${LOCALBASE}/include/giflib" \
-		"--x-lib=${PREFIX}/lib -L${LOCALBASE}/lib" \
-		"--datadir=${PREFIX}/share/kde" \
+CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
 		"--with-qt-dir=${PREFIX}" \
 		"--with-qt-includes=${PREFIX}/include/qt"
-CFLAGS+=	-I${LOCALBASE}/include/giflib -I${LOCALBASE}/include
+CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=  KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib"
+		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib"
 
 .include "../../mk/bsd.pkg.mk"
