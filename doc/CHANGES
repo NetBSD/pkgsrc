@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1909 2003/04/11 19:16:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.1910 2003/04/11 20:53:28 grant Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1540,6 +1540,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Added tcpflow-0.20 [wiz 2003-04-10]
 	Updated xmahjongg to 3.61 [salo 2003-04-10]
 	Added gltron-0.62 [salo 2003-04-10]
+	Updated pkg_install to 20030410 [grant 2003-04-10]
 	Updated rsync to 2.5.6nb1 [salo 2003-04-11]
 	Added ogmtools-1.0.1 [salo 2003-04-11]
 	Updated xine-lib to 1.0rc10 [rh 2003-04-11]
@@ -1558,3 +1559,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated ircservices to 5.0.16nb1 [salo 2003-04-11]
 	Added libao-arts-0.8.3 [jmmv 2003-04-11]
 	Added libao-esound-0.8.3 [jmmv 2003-04-11]
+	Updated pkg_install to 20030411 [grant 2003-04-11]
