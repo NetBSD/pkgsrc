@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.128 2003/01/24 10:04:58 agc Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.128.2.1 2003/03/23 00:52:10 jmc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -517,6 +517,14 @@ ATERM_USE_GREEK?= NO
 # list.
 # Possible: category/pkg
 # Default: not defined
+
+#CDRECORD_CONF= ${PKG_SYSCONFDIR}/cdrecord.conf
+# The location of the cdrtools/cdrecord configuration file. The
+# sysutils/cdrecord pkg issues a warning if the cdrtools default of
+# /etc/default/cdrecord is changed, and the man pages are updated
+# accordingly. This is required by the cdrtools license.
+# Possible: any file name
+# Default: ${PKG_SYSCONFDIR}/cdrecord.conf
 
 CUPS_GROUP?=	sys
 # Used in cups to specify the group to run CUPS commands as.
