@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2003/11/05 21:59:00 markd Exp $
+
+--- kdevelop/doctreeview.cpp.orig	2003-01-20 02:21:37.000000000 +1300
++++ kdevelop/doctreeview.cpp
+@@ -826,7 +826,7 @@ public:
+     void changePathes();
+     virtual void refresh();
+     #if KDE_QTVER >= 3
+-    void DocTreeKDELibsFolder::appendBooks(QDir dir);
++    void appendBooks(QDir dir);
+     #endif
+ };
+ 
