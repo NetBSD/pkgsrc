@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2001/04/17 07:49:46 tron Exp $
+# $NetBSD: Makefile,v 1.43 2001/06/25 20:38:43 jlam Exp $
 #
 
 DISTNAME=	cvs-1.11
@@ -16,12 +16,10 @@ USE_GTEXINFO=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	USE_INET6
+BUILD_DEFS+=		USE_INET6
+USE_BUILDLINK_ONLY=	yes
 
-.if (${OPSYS} == "SunOS")
-DEPENDS+=	zlib-*:../../devel/zlib
-CFLAGS+=	-I${PREFIX}/include		# zlib.h
-.else
+.if (${OPSYS} == "NetBSD")
 PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
 PATCHFILES=		cvs-1.11-v6-20010413.diff.gz
 PATCH_DIST_STRIP=	-p1
@@ -35,7 +33,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 post-patch:
-	(cd ${WRKSRC}; autoreconf)
+	cd ${WRKSRC}; ${LOCALBASE}/bin/autoreconf --force
 .endif
 
 .if defined(KERBEROS)
@@ -52,4 +50,5 @@ CONFIGURE_ENV+=	perl_path=${PERL5}
 
 INFO_FILES=	cvs.info cvsclient.info
 
+.include "../../devel/zlib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
