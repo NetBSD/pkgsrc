@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/10/04 22:35:17 shannonjr Exp $
+# $NetBSD: Makefile,v 1.8 2005/02/22 15:22:02 shannonjr Exp $
 #
 
 DISTNAME=		gdb-6.2.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		ftp://sources.redhat.com/pub/gdb/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -22,6 +22,7 @@ GNU_CONFIGURE=		yes
 AUTOCONF_REQD=		2.13
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/gdb6
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/gdb6
+CONFIGURE_ARGS+=	--enable-libada
 
 USE_MAKEINFO=		yes
 INFO_FILES=		annotate.info bfd.info configure.info
