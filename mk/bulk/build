@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.47 2004/12/11 02:49:57 kristerw Exp $
+# $NetBSD: build,v 1.48 2005/01/14 15:32:34 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -167,7 +167,7 @@ unset DISPLAY		# allow sane failure for gimp, xlispstat
 
 # Check that the pkg_tools are up to date
 (cd ${USR_PKGSRC}/pkgtools/pkglint && 					\
-	${BMAKE} uptodate-pkgtools >/dev/null 2>&1) ||			\
+	${BMAKE} fetch >/dev/null 2>&1 ) ||				\
 	( echo "Updating pkgtools" && 					\
 	  cd ${USR_PKGSRC}/pkgtools/pkg_install && ${BMAKE} clean &&	\
 		${BMAKE} install && ${BMAKE} clean )
