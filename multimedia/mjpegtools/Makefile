@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2004/10/03 00:13:03 tv Exp $
+# $NetBSD: Makefile,v 1.10 2005/02/03 23:04:40 reed Exp $
 
 DISTNAME=	mjpegtools-1.6.2
 PKGREVISION=	2
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--enable-large-file
 CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
 # XXX fix me
 CONFIGURE_ARGS+=	--without-avifile
+
+INFO_FILES=		mjpeg-howto.info
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
