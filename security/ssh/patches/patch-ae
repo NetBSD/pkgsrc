@@ -1,22 +1,13 @@
-$NetBSD: patch-ae,v 1.4 1998/08/07 11:13:49 agc Exp $
+$NetBSD: patch-ae,v 1.5 1998/11/04 23:43:39 tron Exp $
 
-Index: server_config.sample
-*** server_config.sample.orig	Tue Jan 20 05:20:14 1998
---- server_config.sample	Tue Jan 20 20:40:35 1998
-***************
-*** 16,22 ****
-  FascistLogging no
-  PrintMotd yes
-  KeepAlive yes
-! SyslogFacility DAEMON
-  RhostsAuthentication no
-  RhostsRSAAuthentication yes
-  RSAAuthentication yes
---- 16,22 ----
-  FascistLogging no
-  PrintMotd yes
-  KeepAlive yes
-! SyslogFacility AUTH
-  RhostsAuthentication no
-  RhostsRSAAuthentication yes
-  RSAAuthentication yes
+--- server_config.sample.orig	Wed Jul  8 18:40:08 1998
++++ server_config.sample	Thu Nov  5 00:28:07 1998
+@@ -16,7 +16,7 @@
+ FascistLogging no
+ PrintMotd yes
+ KeepAlive yes
+-SyslogFacility DAEMON
++SyslogFacility AUTH
+ RhostsAuthentication no
+ RhostsRSAAuthentication yes
+ RSAAuthentication yes
