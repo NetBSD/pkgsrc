@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5377 2004/03/30 18:58:10 minskim Exp $
+$NetBSD: CHANGES,v 1.5378 2004/03/30 20:00:33 ben Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1615,3 +1615,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tex2rtf to 2.0.1 [ben 2004-03-30]
 	Updated pxtools to 0.0.20 [ben 2004-03-30]
 	Updated dar to 2.0.2nb1 [minskim 2004-03-30]
+	Updated mplex to 1.6.2 [ben 2004-03-30]
