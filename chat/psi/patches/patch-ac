@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 2002/08/04 17:08:21 jdolecek Exp $
+
 --- src/common.cpp.orig	Wed Jun 12 13:03:22 2002
 +++ src/common.cpp	Tue Jun 11 23:24:46 2002
 @@ -1130,7 +1130,7 @@
