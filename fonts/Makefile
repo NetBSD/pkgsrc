@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2002/07/15 10:51:32 uebayasi Exp $
+# $NetBSD: Makefile,v 1.30 2002/07/16 15:17:17 wiz Exp $
 #
 
 COMMENT=	Fonts
@@ -10,6 +10,7 @@ SUBDIR+=	acroread-font-share
 SUBDIR+=	acroread-jpnfont
 SUBDIR+=	acroread-korfont
 SUBDIR+=	arphic-ttf
+SUBDIR+=	baekmuk-ttf
 SUBDIR+=	bakoma-fonts
 SUBDIR+=	cyr-rfx-bulgarian-mik
 SUBDIR+=	cyr-rfx-ibm-cp866
