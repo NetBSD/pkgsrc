@@ -1,13 +1,9 @@
-$NetBSD: patch-aa,v 1.8 2000/01/15 18:39:29 jlam Exp $
+$NetBSD: patch-aa,v 1.9 2000/07/14 21:29:09 jlam Exp $
 
 --- c++/Makefile.in.orig	Sat Oct 23 16:13:02 1999
-+++ c++/Makefile.in	Sat Jan 15 11:24:46 2000
-@@ -74,13 +74,13 @@
- REL_VERSION     = @cf_cv_rel_version@
- ABI_VERSION	= @cf_cv_abi_version@
- 
--LINK		= @LINK_PROGS@ $(CXX) @CXXLDFLAGS@
-+LINK		= @LINK_PROGS@ --cplusplus $(CXX) @CXXLDFLAGS@
++++ c++/Makefile.in	Fri Jul 14 15:55:55 2000
+@@ -77,10 +77,10 @@
+ LINK		= @LINK_PROGS@ $(CXX) @CXXLDFLAGS@
  
  LIBROOT	= ncurses++
 -LIBNAME	= @LIB_PREFIX@$(LIBROOT).a
