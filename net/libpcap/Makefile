@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/02/18 18:44:37 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/11 20:50:07 reed Exp $
 
 DISTNAME=		libpcap-0.7.2
 SVR4_PKGNAME=		lpcap
@@ -11,12 +11,11 @@ COMMENT=		System-independent interface for user-level packet capture
 
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
+USE_GNU_TOOLS+=		lex yacc
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-BUILD_DEPENDS+=		flex-[0-9]*:../../devel/flex
 .  if exists(/usr/include/netinet/ip6.h)
 CONFIGURE_ARGS+=	--enable-ipv6
 .  endif
