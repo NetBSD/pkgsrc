@@ -1,8 +1,8 @@
-$NetBSD: patch-bd,v 1.1 2004/07/26 17:22:40 dillo Exp $
+$NetBSD: patch-bd,v 1.2 2004/07/30 20:32:01 kristerw Exp $
 
---- configure.orig	Fri May 14 11:30:32 2004
-+++ configure
-@@ -9127,6 +9793,379 @@ fi
+--- configure.orig	Sun Jan 25 22:06:42 2004
++++ configure	Fri Jul 30 21:58:16 2004
+@@ -9127,6 +9127,379 @@
  
  
  
@@ -382,3 +382,12 @@ $NetBSD: patch-bd,v 1.1 2004/07/26 17:22:40 dillo Exp $
  
  fi
  
+@@ -12095,7 +12468,7 @@
+ 
+ 
+ 
+-if test x"$is_win32" = "xno" -a test x"$is_riscos" = "xno"; then
++if test x"$is_win32" = "xno" -a x"$is_riscos" = "xno"; then
+ 
+ for ac_func in usleep
+ do
