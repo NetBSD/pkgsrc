@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 08:45:44 agc Exp $
+$NetBSD: distinfo,v 1.3 2002/10/02 20:56:34 dillo Exp $
 
 SHA1 (rlab-2.1.05.tar.gz) = 5b465b45ac1225c89f8375fc0945c485c0b1fa4b
 Size (rlab-2.1.05.tar.gz) = 2767728 bytes
-SHA1 (patch-aa) = d9225f401879e9eee9b11856c9cdef0dbf9a469e
+SHA1 (patch-aa) = 6b177a66de9262c4f6fcd6fcd48bc897f3a7bbe2
 SHA1 (patch-ab) = e1270ade1b430b67f8264eba76ef9bd220db7d9f
 SHA1 (patch-ac) = 44004dd04c217494dc556fe678c087b4a5a15cc2
 SHA1 (patch-ad) = 595ef1b4f1ebc21fbdf6b3fec61a9380f61936ca
@@ -17,3 +17,4 @@ SHA1 (patch-al) = 824c825d0ab47328ed43127a0680067c666a7ac0
 SHA1 (patch-am) = efa48be1acecfee52d091d01eb68b07c72a8d0e2
 SHA1 (patch-an) = b489b9b02bd1a717f1312e88c827dbdbbca5b487
 SHA1 (patch-ao) = 203a9ba6e25a7e7d7e2aff60979f66e619c2160c
+SHA1 (patch-ap) = a96d358d5f44f92ea718abfadc74b88d9f0ae93e
