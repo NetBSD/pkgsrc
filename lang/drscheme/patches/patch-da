@@ -1,0 +1,27 @@
+$NetBSD: patch-da,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+
+--- ../wxxt/src/make.env.orig	Sat May 20 15:15:35 2000
++++ ../wxxt/src/make.env	Sat May 20 15:24:07 2000
+@@ -71,9 +71,9 @@
+ 
+ # Default LDLIBS
+ LDLIBS = -lwx$(GUISUFFIX) -lXaw -lXmu -lXt -lXpm -limage_xt \
+-         -lX11 -lXext -lm
++         -lSM -lICE -lX11 -lXext -lm
+ # Appended to LDLIBS when not building a static executable:
+-LDNONSTATICLIBS = -ldl
++#LDNONSTATICLIBS = -ldl
+ 
+ # Don't change these
+ OBJSUFF = o
+@@ -83,8 +83,8 @@
+ ########################## Directories ###############################
+ 
+ # Replace X include/lib directories with your own
+-XINCLUDE = -I/usr/X11R6/include/X11
+-XLIB = -L/usr/X11R6/lib
++XINCLUDE = -I/usr/X11R6/include
++XLIB = -Wl,-R/usr/X11R6/lib -L/usr/X11R6/lib
+ 
+ 
+ # Shouldn't need to change these...

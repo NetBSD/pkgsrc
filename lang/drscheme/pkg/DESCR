@@ -1,0 +1,14 @@
+DrScheme is a graphical environment for developing programs using the Scheme,
+MzScheme, and MrEd programming languages. DrScheme runs under Windows 95/98/NT,
+MacOS, and Unix/X. 
+
+ DrScheme's features include: 
+
+     * Source text highlighting of syntax and run-time errors 
+     * Support for multiple levels of Scheme from Beginning Student to
+       Full Scheme 
+     * An algebraic stepper for the Beginning Student language 
+     * Interactive and graphical static analysis 
+     * A graphical user interface (GUI) library 
+     * Objects, threads, modules, exceptions, TCP/IP, and regular expressions,
+       and filesystem support

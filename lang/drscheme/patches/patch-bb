@@ -1,0 +1,126 @@
+$NetBSD: patch-bb,v 1.1.1.1 2000/05/22 20:26:59 groo Exp $
+
+--- gc/gcconfig.h.orig	Thu Oct 21 22:06:14 1999
++++ gc/gcconfig.h	Mon Jan  3 09:08:17 2000
+@@ -27,6 +27,11 @@
+ #    define LINUX
+ # endif
+ 
++# if defined(__NetBSD__)
++#    define NETBSD
++#    define unix /* symbol no longer defined by NetBSD */
++# endif
++
+ /* Determine the machine type: */
+ # if defined(sun) && defined(mc68000)
+ #    define M68K
+@@ -50,9 +55,12 @@
+ # endif
+ # if defined(__NetBSD__) && defined(m68k)
+ #    define M68K
+-#    define NETBSD
+ #    define mach_type_known
+ # endif
++# if defined(__NetBSD__) && defined(__powerpc__)
++#    define POWERPC
++#    define mach_type_unknown
++# endif
+ # if defined(vax)
+ #    define VAX
+ #    ifdef ultrix
+@@ -106,7 +114,7 @@
+ #   define mach_type_known
+ # endif
+ # if defined(sparc) && defined(unix) && !defined(sun) && !defined(linux) \
+-     && !defined(__OpenBSD__)
++     && !defined(__OpenBSD__) && !defined(__NetBSD__)
+ #   define SPARC
+ #   define DRSNX
+ #   define mach_type_known
+@@ -115,6 +123,10 @@
+ #   define RS6000
+ #   define mach_type_known
+ # endif
++# if defined(__NetBSD__) && defined(__sparc__)
++#   define SPARC
++#   define mach_type_known
++# endif
+ # if defined(_M_XENIX) && defined(_M_SYSV) && defined(_M_I386)
+ 	/* The above test may need refinement	*/
+ #   define I386
+@@ -154,7 +166,7 @@
+ # endif
+ # if defined(__alpha) || defined(__alpha__)
+ #   define ALPHA
+-#   if !defined(LINUX)
++#   if !defined(LINUX) && !defined(NETBSD)
+ #     define OSF1	/* a.k.a Digital Unix */
+ #   endif
+ #   define mach_type_known
+@@ -203,7 +215,6 @@
+ # endif
+ # if defined(__NetBSD__) && defined(i386)
+ #   define I386
+-#   define NETBSD
+ #   define mach_type_known
+ # endif
+ # if defined(bsdi) && defined(i386)
+@@ -533,6 +544,14 @@
+ #     define STACKBOTTOM ((ptr_t) 0xc0000000)
+ #     define DATAEND	/* not needed */
+ #   endif
++#   ifdef NETBSD
++#     define ALIGNMENT 4
++#     define OS_TYPE "NETBSD"
++#     define HEURISTIC2
++      extern char etext;
++#     define DATASTART GC_data_start
++#     define DYNAMIC_LOADING
++#   endif
+ # endif
+ 
+ # ifdef VAX
+@@ -562,7 +581,6 @@
+ #   define MACH_TYPE "SPARC"
+ #   define ALIGNMENT 4	/* Required by hardware	*/
+ #   define ALIGN_DOUBLE
+-    extern int etext;
+ #   ifdef SUNOS5
+ #	define OS_TYPE "SUNOS5"
+ 	extern int _etext;
+@@ -634,8 +652,20 @@
+ #   ifdef OPENBSD
+ #     define OS_TYPE "OPENBSD"
+ #     define STACKBOTTOM ((ptr_t) 0xf8000000)
++      extern int etext;
+ #     define DATASTART ((ptr_t)(&etext))
+ #   endif
++#   ifdef NETBSD
++#     define OS_TYPE "NETBSD"
++#     define HEURISTIC2
++#     ifdef __ELF__
++#       define DATASTART GC_data_start
++#       define DYNAMIC_LOADING
++#     else
++        extern char etext;
++#       define DATASTART ((ptr_t)(&etext))
++#     endif
++#   endif
+ # endif
+ 
+ # ifdef I386
+@@ -925,6 +955,14 @@
+ # ifdef ALPHA
+ #   define MACH_TYPE "ALPHA"
+ #   define ALIGNMENT 8
++#   ifdef NETBSD
++#     define OSTYPE "NETBSD"
++#     define HEURISTIC2
++#     define DATASTART GC_data_start
++#     define ELF_CLASS ELFCLASS64
++#     define CPP_WORDSZ 64
++#     define DYNAMIC_LOADING
++#   endif
+ #   ifdef OSF1
+ #	define OS_TYPE "OSF1"
+ #   	define DATASTART ((ptr_t) 0x140000000)
