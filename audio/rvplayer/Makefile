@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 1999/09/01 18:33:34 tron Exp $
+# $NetBSD: Makefile,v 1.3 1999/11/25 00:05:10 hubertf Exp $
 #
 
 DISTNAME=	rv50_linux20
@@ -15,11 +15,7 @@ RESTRICTED=		"Export-controlled"
 MIRROR_DISTFILE=	no
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
-NO_CONFIGURE=		yes
-
-.if !exists(/emul/linux/lib/ld-linux.so.1)
-IGNORE=		requires Linux glibc2 libraries - see compat_linux(8)
-.endif
+DEPENDS=	suse_linux-6.1p1:../../emulators/suse_linux
 
 REAL_HOME=	${PREFIX}/lib/rvplayer
 DOCDIR=		${PREFIX}/share/doc/rvplayer
