@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/12/03 13:30:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/12 02:57:37 snj Exp $
 #
 
 DISTNAME=	xmms-musepack-0.94
@@ -10,7 +10,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.sourceforge.net/projects/mpegplus/
 COMMENT=	Musepack audio output plugin for XMMS
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_LIBTOOL=	yes
 
 CFLAGS+=	-DVERSION='"${PKGVERSION}"'
@@ -30,5 +30,5 @@ do-install:
 	cd ${WRKSRC} && ${SHLIBTOOL} --mode=install \
 		${INSTALL_DATA} libmusepack.la ${PREFIX}/lib/xmms/Input
 
-.include "../../audio/xmms/buildlink2.mk"
+.include "../../audio/xmms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
