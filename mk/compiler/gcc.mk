@@ -1,9 +1,9 @@
-# $NetBSD: gcc.mk,v 1.36 2004/02/05 03:35:20 jlam Exp $
+# $NetBSD: gcc.mk,v 1.37 2004/02/05 04:12:28 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
 
-GCC_REQD?=	2.8.0
+GCC_REQD+=	2.8.0
 
 # _GCC_DIST_VERSION is the highest version of GCC installed by the pkgsrc
 # without the PKGREVISIONs.
