@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2004/11/15 17:03:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2004/11/16 09:24:50 xtraeme Exp $
 
 DISTNAME=		distcc-2.18.2
 CATEGORIES=		devel
@@ -19,6 +19,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	distcc
 RCD_SCRIPTS=		distccd
+
+DISTCC_PIDDIR?=		${VARBASE}/run/distccd
+OWN_DIRS_PERMS=		${DISTCC_PIDDIR} nobody nobody 0750
+
+FILES_SUBST+=		DISTCC_PIDDIR=${DISTCC_PIDDIR}
 
 SUBST_CLASSES=		doc
 SUBST_STAGE.doc=	post-patch
