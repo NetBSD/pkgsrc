@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/19 15:00:48 agc Exp $
+$NetBSD: distinfo,v 1.3 2001/06/13 14:23:15 zuntum Exp $
 
-SHA1 (awka-0.7.0.tar.gz) = 2852974aeb5ce2a361c75b8fc3548bac81870c34
-Size (awka-0.7.0.tar.gz) = 381227 bytes
+SHA1 (awka-0.7.4.tar.gz) = db22fa7f069058ba75a4b582adafd11ba14f6653
+Size (awka-0.7.4.tar.gz) = 397200 bytes
