@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.3 2003/09/14 14:53:07 dmcmahill Exp $
+
+--- const/gsl_const.h.orig	Fri Jul 25 15:18:18 2003
++++ const/gsl_const.h
+@@ -21,7 +21,7 @@
+ #define __GSL_CONST__
+ 
+ #include <gsl/gsl_const_num.h>
+-#include <gsl/gsl_const_cgs.h>
+-#include <gsl/gsl_const_mks.h>
++#include <gsl/gsl_const_cgsm.h>
++#include <gsl/gsl_const_mksa.h>
+ 
+ #endif /* __GSL_CONST__ */
