@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.21 2002/12/01 05:36:51 grant Exp $
+$NetBSD: distinfo,v 1.22 2002/12/03 16:58:56 wiz Exp $
 
 SHA1 (squid-2.5.STABLE1.tar.bz2) = 6705006527f5fa0753e7c9f14347f36b1b787e62
 Size (squid-2.5.STABLE1.tar.bz2) = 1006600 bytes
 SHA1 (squid-2.5.STABLE1-disable-ident-lookups.patch) = 8b21d1c40c85a86c575e039021b10010e0ab55a8
 Size (squid-2.5.STABLE1-disable-ident-lookups.patch) = 695 bytes
-SHA1 (squid-2.5.STABLE1-disable-http-violations.patch) = 16c24d98ca41a0aaa15c4f58fafc3b5adfd3d375
-Size (squid-2.5.STABLE1-disable-http-violations.patch) = 405 bytes
+SHA1 (squid-2.5.STABLE1-disable-http-violations.patch) = 18bc6685a7ee054e75f5260f6db15064671df361
+Size (squid-2.5.STABLE1-disable-http-violations.patch) = 1903 bytes
 SHA1 (squid-2.5.STABLE1-proxy_auth.patch) = acbe54df4e2f6f00ac17d20e8b65a33c8fb27c32
 Size (squid-2.5.STABLE1-proxy_auth.patch) = 6507 bytes
 SHA1 (squid-2.5.STABLE1-max_user_ip.patch) = fcab373dc21c2b79e397a594469e18a308c13f41
