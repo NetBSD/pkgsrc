@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.43 2003/05/05 16:33:46 taca Exp $
-#
+# $NetBSD: Makefile,v 1.44 2003/05/06 15:48:24 tron Exp $
 
 DISTNAME=	gnupg-1.2.2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
-		ftp://ftp.planetmirror.com/pub/gnupg/ \
+		ftp://ftp.planetmirror.com/pub/gnupg/gnupg/ \
 		ftp://ftp.ring.gr.jp/pub/pgp/ \
-		ftp://gd.tuwien.ac.at/privacy/gnupg/ \
-		ftp://ftp.jyu.fi/pub/crypt/gcrypt/ \
+		ftp://gd.tuwien.ac.at/privacy/gnupg/gnupg/ \
+		ftp://ftp.jyu.fi/pub/crypt/gcrypt/gnupg/ \
 		ftp://ftp.cert.dfn.de/pub/tools/crypt/gcrypt/ \
 		ftp://hal.csd.auth.gr/mirrors/gnupg/
 EXTRACT_SUFX=	.tar.bz2
