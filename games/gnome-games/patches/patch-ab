@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 1999/11/18 23:20:18 tron Exp $
+
+--- xbill/Makefile.in.orig	Wed Oct  6 07:32:38 1999
++++ xbill/Makefile.in	Thu Nov 18 23:13:21 1999
+@@ -125,7 +125,7 @@
+ ZVT_LIBS = @ZVT_LIBS@
+ l = @l@
+ 
+-SUBDIRS = pixmaps cursors
++SUBDIRS = cursors
+ 
+ # This is where the high score file goes ...
+ scoredir = $(localstatedir)/games
