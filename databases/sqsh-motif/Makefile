@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/29 12:50:04 grant Exp $
+# $NetBSD: Makefile,v 1.2 2004/05/03 22:46:56 wiz Exp $
 
 PKGNAME=		sqsh-motif-2.1
 
@@ -12,6 +12,6 @@ DISTINFO_FILE=		${.CURDIR}/../../databases/sqsh/distinfo
 PLIST_SRC=		${.CURDIR}/../../databases/sqsh/PLIST
 DESCR_SRC=		${.CURDIR}/../../databases/sqsh/DESCR
 
-.include "../../mk/motif.buildlink2.mk"
+.include "../../mk/motif.buildlink3.mk"
 
 .include "../../databases/sqsh/Makefile.common"
