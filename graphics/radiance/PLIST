@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/16 22:17:33 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/02/16 23:20:24 jschauma Exp $
 radiance/bin/arch2rad
 radiance/bin/bgraph
 radiance/bin/cnt
@@ -238,6 +238,33 @@ radiance/lib/winxmit.cal
 radiance/lib/woodpat.cal
 radiance/lib/woodtex.cal
 radiance/lib/wrinkle.cal
+radiance/lib/clockface.hex
+radiance/lib/glaze1.cal
+radiance/lib/glaze2.cal
+radiance/lib/illum.cal
+radiance/lib/lamp.tab
+radiance/lib/rayinit.cal
+radiance/lib/rev.cal
+radiance/lib/skybright.cal
+radiance/lib/source.cal
+radiance/lib/surf.cal
+radiance/lib/tcl/do_action.tcl
+radiance/lib/tcl/do_file.tcl
+radiance/lib/tcl/do_options.tcl
+radiance/lib/tcl/do_results.tcl
+radiance/lib/tcl/do_scene.tcl
+radiance/lib/tcl/do_views.tcl
+radiance/lib/tcl/do_zone.tcl
+radiance/lib/tcl/file.hlp
+radiance/lib/tcl/getfile.tcl
+radiance/lib/tcl/gethelp.tcl
+radiance/lib/tcl/help.hlp
+radiance/lib/tcl/tclIndex
+radiance/lib/tcl/trad.hlp
+radiance/lib/tcl/trad.icon
+radiance/lib/tcl/util.tcl
+radiance/lib/tilt.cal
+radiance/lib/tmesh.cal
 radiance/man/cat1/.DS_Store
 radiance/man/cat1/arch2rad.1
 radiance/man/cat1/bgraph.1
@@ -683,6 +710,7 @@ share/doc/radiance/ray.pdf
 @dirrm radiance/lib/source
 @dirrm radiance/lib/meta
 @dirrm radiance/lib/lib
+@dirrm radiance/lib/tcl
 @dirrm radiance/lib
 @dirrm radiance/obj/alpha
 @dirrm radiance/obj/cabin/anim1
