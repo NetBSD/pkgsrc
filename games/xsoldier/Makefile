@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/01/28 22:03:21 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2004/03/07 23:06:39 snj Exp $
 #
 
 DISTNAME=		xsoldier-0.96
@@ -9,7 +9,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.surfline.ne.jp/hachi/xsoldier.html
 COMMENT=		Updated xgalaga type game with awesome graphics
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES
@@ -23,5 +23,5 @@ SUPPORT_FILES_PERMS=	${PREFIX}/share/xsoldier/xsoldier.score.dist	\
 post-patch:
 	${TOUCH} ${WRKSRC}/xsoldier.man
 
-.include "../../graphics/xpm/buildlink2.mk"
+.include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
