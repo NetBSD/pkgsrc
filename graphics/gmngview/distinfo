@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2003/03/04 13:56:31 wiz Exp $
+$NetBSD: distinfo,v 1.4 2004/04/24 00:31:30 wiz Exp $
 
-SHA1 (libmng-1.0.5.tar.gz) = 236c92061c629adacf0ded8c98781333081f584c
-Size (libmng-1.0.5.tar.gz) = 623279 bytes
+SHA1 (libmng-1.0.7.tar.gz) = 05e5575ddd3928f3299d9f2b450d01994c2b2102
+Size (libmng-1.0.7.tar.gz) = 501577 bytes
 SHA1 (patch-aa) = ec08f03b2930bfd4946f8980e730f810b725c591
