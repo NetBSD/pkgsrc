@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/06/26 02:27:41 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2000/11/27 22:59:46 hubertf Exp $
+bin/jadetex
+bin/pdfjadetex
+@exec cp %D/share/texmf/web2c/texmf.cnf %D/share/texmf/web2c/texmf.cnf-before-jadetex
+share/texmf/web2c/texmf.cnf
+@unexec mv %D/share/texmf/web2c/texmf.cnf-before-jadetex %D/share/texmf/web2c/texmf.cnf
 share/texmf/web2c/pdfjadetex.fmt
 share/texmf/web2c/jadetex.fmt
 share/texmf/tex/jadetex/dsssl.def
@@ -47,6 +52,4 @@ share/examples/jadetex/test-tables.sgm
 share/examples/jadetex/test-tables.tex
 @dirrm share/examples/jadetex
 @dirrm share/texmf/tex/jadetex
-@unexec rm -f %D/share/texmf/web2c/texmf.cnf
-@unexec mv %D/share/texmf/web2c/texmf.cnf-before-jadetex %D/share/texmf/web2c/texmf.cnf
 @unexec %D/bin/mktexlsr
