@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2004/03/26 02:27:59 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2004/04/01 18:40:09 jmmv Exp $
 #
 
-DISTNAME=	control-center-2.4.0
+DISTNAME=	control-center-2.6.0
 PKGNAME=	gnome2-${DISTNAME}
-PKGREVISION=	10
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -14,7 +13,9 @@ COMMENT=	GNOME2 configuration utility
 
 BUILD_USES_MSGFMT=	yes
 DEPENDS=		gnome2-dirs>=1.5:../../misc/gnome2-dirs
+DEPENDS+=		gnome-icon-theme>=1.1.7:../../graphics/gnome-icon-theme
 
+USE_MSGFMT_PLURALS=	yes
 GNU_CONFIGURE=		yes
 USE_BUILDLINK3=		yes
 USE_PKGINSTALL=		yes
@@ -23,11 +24,14 @@ USE_GNU_TOOLS+=		make
 USE_LIBTOOL=		yes
 USE_X11=		yes
 
+CONFIGURE_ARGS+=	--disable-alsa
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 GCONF2_SCHEMAS= 	apps_gnome_settings_daemon_default_editor.schemas
+GCONF2_SCHEMAS+=	apps_gnome_settings_daemon_keybindings.schemas
 GCONF2_SCHEMAS+=	apps_gnome_settings_daemon_screensaver.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_font_rendering.schemas
+GCONF2_SCHEMAS+=	desktop_gnome_peripherals_keyboard_xkb.schemas
 GCONF2_SCHEMAS+=	themus.schemas
 GCONF2_SCHEMAS+=	fontilus.schemas
 
@@ -63,5 +67,6 @@ post-install:
 .include "../../wm/metacity/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,21 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2003/12/15 02:55:53 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2004/04/01 18:40:09 jmmv Exp $
 
---- vfs-methods/themus/Makefile.in.orig	2003-12-15 03:29:42.000000000 +0100
-+++ vfs-methods/themus/Makefile.in	2003-12-15 03:30:13.000000000 +0100
-@@ -236,7 +236,7 @@
+--- vfs-methods/themus/Makefile.in.orig	2004-03-11 06:35:24.000000000 +0100
++++ vfs-methods/themus/Makefile.in
+@@ -229,7 +229,7 @@ libthemus_theme_properties_view_la_SOURC
+ Gladedir = $(GNOMECC_GLADE_DIR)
+ Glade_DATA = apply-font.glade
+ 
+-vfsmoduleconfdir = $(sysconfdir)/gnome-vfs-2.0/modules
++vfsmoduleconfdir = $(datadir)/examples/gnome2-control-center
+ vfsmoduleconf_DATA = theme-method.conf
+ 
  vfsdirectorydir = $(datadir)/gnome/vfolders
- vfsdirectory_DATA = theme-method.directory
- 
--schemasdir = $(sysconfdir)/gconf/schemas
-+schemasdir = $(datadir)/gconf/schemas
- schemas_in_files = themus.schemas.in
- schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
- 
-@@ -255,7 +255,6 @@
- EXTRA_DIST = \
-   apply-font.glade \
-   theme-method.directory.in \
--  theme-method.conf \
-   themus.schemas.in \
-   Themus_Properties_View.server.in.in \
-   themus.applications \
