@@ -1,22 +1,21 @@
-# $NetBSD: Makefile,v 1.8 2003/07/17 22:51:20 grant Exp $
+# $NetBSD: Makefile,v 1.9 2003/10/10 08:44:44 cube Exp $
 # $FreeBSD: ports/net/libnids/Makefile,v 1.5 2000/04/24 07:42:58 kris Exp $
 #
 
-DISTNAME=	libnids-1.14
+DISTNAME=	libnids-1.17
 CATEGORIES=	net security
-MASTER_SITES=	http://www.packetfactory.net/Projects/Libnids/dist/
+MASTER_SITES=	http://www.avet.com.pl/~nergal/libnids/dist/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.packetfactory.net/Projects/Libnids/
+HOMEPAGE=	http://www.avet.com.pl/~nergal/libnids/
 COMMENT=	Network monitoring library with TCP/IP reassembly
 
-DEPENDS=	libnet-[0-9]*:../../devel/libnet
-
+USE_BUILDLINK2=	yes
 GNU_CONFIGURE=	yes
 
-do-install:
-		${INSTALL_DATA} ${WRKSRC}/src/nids.h ${PREFIX}/include
-		${INSTALL_DATA} ${WRKSRC}/src/libnids.a ${PREFIX}/lib
-		${INSTALL_DATA} ${WRKSRC}/src/libnids.3 ${PREFIX}/man/man3
+BUILDLINK_DEPMETHOD.libnet=	build
+BUILDLINK_DEPMETHOD.libpcap=	build
 
+.include "../../devel/libnet/buildlink2.mk"
+.include "../../net/libpcap/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
