@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2215 2004/10/14 02:39:19 xtraeme Exp $
+$NetBSD: TODO,v 1.2216 2004/10/14 09:47:57 taca Exp $
 
 Suggested new packages
 ======================
@@ -425,7 +425,6 @@ Suggested package updates
 	o source-highlight-1.11
 	o sox-12.17.5
 	o sqlite-3.0.7
-	o squid-2.5.6 [taca]
 	o srp_client-1.7.5 [jlam]
 	o staroffice-7p1
 	o streamtuner-0.12.5
