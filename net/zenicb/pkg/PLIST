@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2000/08/04 13:09:17 martin Exp $
-share/${EMACS}/site-lisp/zenicb-8ball.el
-share/${EMACS}/site-lisp/zenicb-add.el
-share/${EMACS}/site-lisp/zenicb-away.el
-share/${EMACS}/site-lisp/zenicb-example.el
-share/${EMACS}/site-lisp/zenicb-fortran.el
-share/${EMACS}/site-lisp/zenicb-history.el
-share/${EMACS}/site-lisp/zenicb-meditate.el
-share/${EMACS}/site-lisp/zenicb-nologout.el
-share/${EMACS}/site-lisp/zenicb-signal.el
-share/${EMACS}/site-lisp/zenicb-stamp.el
-share/${EMACS}/site-lisp/zenicb-trigger.el
-share/${EMACS}/site-lisp/zenicb-whereis.el
-share/${EMACS}/site-lisp/zenicb-yow.el
-share/${EMACS}/site-lisp/zenicb.el
+@comment $NetBSD: PLIST,v 1.3 2000/08/04 18:50:37 martin Exp $
+${ELISPDIR}/zenicb-8ball.el
+${ELISPDIR}/zenicb-add.el
+${ELISPDIR}/zenicb-away.el
+${ELISPDIR}/zenicb-example.el
+${ELISPDIR}/zenicb-fortran.el
+${ELISPDIR}/zenicb-history.el
+${ELISPDIR}/zenicb-meditate.el
+${ELISPDIR}/zenicb-nologout.el
+${ELISPDIR}/zenicb-signal.el
+${ELISPDIR}/zenicb-stamp.el
+${ELISPDIR}/zenicb-trigger.el
+${ELISPDIR}/zenicb-whereis.el
+${ELISPDIR}/zenicb-yow.el
+${ELISPDIR}/zenicb.el
