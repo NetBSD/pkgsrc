@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/04/16 15:03:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2004/04/16 15:17:21 xtraeme Exp $
 #
 
 DISTNAME=	quake2-0.2.1
@@ -16,6 +16,8 @@ USE_GNU_TOOLS+=	make
 USE_LIBTOOL=	yes
 USE_X11=	yes
 GNU_CONFIGURE=	yes
+
+CFLAGS+=	-DDEVOSSAUDIO=\"\\\"${DEVOSSAUDIO}\\\"\"
 
 BUILDLINK_TRANSFORM+=	S:-Werror:
 CONFIGURE_ARGS+=	--program-transform-name='s/^quake2$$/quake2forge/'
