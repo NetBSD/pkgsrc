@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.3 2003/10/07 10:19:09 jlam Exp $
+# $NetBSD: subst.mk,v 1.3.2.1 2003/12/11 09:55:31 agc Exp $
 #
 # This Makefile fragment implements a general text replacement facility
 # for different classes of files in ${WRKSRC}.  For each class of files,
@@ -55,8 +55,10 @@ subst-${_class_}: ${_SUBST_TARGETS.${_class_}}
 
 .PHONY: subst-${_class_}-message
  subst-${_class_}-message:
+.if defined(SUBST_MESSAGE.${_class_})
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO_SUBST_MSG} "=> ${SUBST_MESSAGE.${_class_}}"
+.endif
 
 .PHONY: subst-${_class_}-cookie
  subst-${_class_}-cookie:
