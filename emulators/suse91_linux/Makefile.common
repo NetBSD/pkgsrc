@@ -1,15 +1,17 @@
-# $NetBSD: Makefile.common,v 1.8 2005/01/29 09:11:36 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.9 2005/02/09 20:25:13 tv Exp $
 
 SUSE_VERSION=		9.1
 
 .include "../../emulators/suse91_linux/arch.mk"
 
 MASTER_SITE_SUSE91?=	ftp://ftp.suse.com/pub/suse/${SUSE_ARCH_DIR}/9.1/suse/${SUSE_ARCH}/ \
-			ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/suse/${SUSE_ARCH_DIR}/9.1/suse/${SUSE_ARCH}/ \
-			ftp://gd.tuwien.ac.at/linux/suse.com/suse/${SUSE_ARCH_DIR}/9.1/suse/${SUSE_ARCH}/ \
 			ftp://ftp.suse.com/pub/suse/${SUSE_ARCH_DIR}/update/9.1/rpm/${SUSE_ARCH}/ \
+			ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/suse/${SUSE_ARCH_DIR}/9.1/suse/${SUSE_ARCH}/ \
 			ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/suse/${SUSE_ARCH_DIR}/update/9.1/rpm/${SUSE_ARCH}/ \
-			ftp://gd.tuwien.ac.at/linux/suse.com/suse/${SUSE_ARCH_DIR}/update/9.1/rpm/${SUSE_ARCH}/
+			ftp://gd.tuwien.ac.at/linux/suse.com/suse/${SUSE_ARCH_DIR}/9.1/suse/${SUSE_ARCH}/ \
+			ftp://gd.tuwien.ac.at/linux/suse.com/suse/${SUSE_ARCH_DIR}/update/9.1/rpm/${SUSE_ARCH}/ \
+			ftp://mirror.mcs.anl.gov/pub/ftp.suse.com/${SUSE_ARCH_DIR}/9.1/suse/${SUSE_ARCH}/ \
+			ftp://mirror.mcs.anl.gov/pub/ftp.suse.com/${SUSE_ARCH_DIR}/update/9.1/rpm/${SUSE_ARCH}/
 
 DIST_SUBDIR?=		suse${SUSE_VERSION:S/.//}/${SUSE_ARCH}
 
