@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2001/03/27 03:19:53 hubertf Exp $
+# $NetBSD: Makefile,v 1.6 2001/04/24 12:30:18 wulf Exp $
 #
 
 DISTNAME=	popt-1.2
+PKGNAME=	popt-1.2nb1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.redhat.com/redhat/code/popt/
 
