@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2002/04/03 19:14:35 jwise Exp $
+# $NetBSD: Makefile,v 1.12 2002/07/29 22:23:27 jlam Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 # because although FOP runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -21,7 +21,7 @@ MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://xml.apache.org/fop/
 COMMENT=	the Apache Project's XSL Formatting Objects implementation
 
-USE_JAVA=	yes
+USE_JAVA=	run
 NO_PATCH=
 NO_CONFIGURE=
 NO_BUILD=

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/07/13 15:46:59 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2002/07/29 22:23:26 jlam Exp $
 #
 
 DISTNAME=	jini-1_2_1-src
@@ -23,7 +23,7 @@ NO_SRC_ON_FTP=  ${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=  ${RESTRICTED}
 
-USE_JAVA=	yes
+USE_JAVA=	run
 PKG_JVM=	sun-jdk
 
 .include "../../mk/bsd.prefs.mk"
