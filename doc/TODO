@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1269 2004/01/03 17:28:56 wiz Exp $
+$NetBSD: TODO,v 1.1270 2004/01/03 18:36:05 reed Exp $
 
 Suggested new packages
 ======================
@@ -208,7 +208,6 @@ Suggested package updates
 	o libcroco-0.4.0 [pkg/23793]
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
-	o libtiff-3.6.1
 	o libtool-1.5 [skrll]
 	o licq-1.2.7
 	o lilypond-2.0.0
