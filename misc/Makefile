@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.50 1999/09/15 03:24:18 jlam Exp $
+#	$NetBSD: Makefile,v 1.51 1999/10/05 12:40:05 wennmach Exp $
 # FreeBSD Id: Makefile,v 1.117 1997/10/13 04:41:07 max Exp
 
     SUBDIR += astrolog
@@ -25,6 +25,7 @@
     SUBDIR += gnucash
     SUBDIR += gperiodic
     SUBDIR += ical
+    SUBDIR += jitterbug
     SUBDIR += jive
     SUBDIR += kdeutils
     SUBDIR += kp
