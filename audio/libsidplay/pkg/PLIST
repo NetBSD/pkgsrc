@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/06/19 22:45:59 pooka Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:19 agc Exp $
 include/sidplay/compconf.h
 include/sidplay/libcfg.h
 include/sidplay/emucfg.h
@@ -9,7 +9,9 @@ include/sidplay/mytypes.h
 include/sidplay/player.h
 include/sidplay/sidtune.h
 include/sidplay/version.h
-lib/libsidplay.so.1.0
-lib/libsidplay.la
 lib/libsidplay.a
+lib/libsidplay.la
+lib/libsidplay.so
+lib/libsidplay.so.1
+lib/libsidplay.so.1.0
 @dirrm include/sidplay

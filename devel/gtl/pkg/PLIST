@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/12/04 15:38:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:28 agc Exp $
 include/GTL/GTL.h
 include/GTL/algorithm.h
 include/GTL/bfs.h
@@ -30,6 +30,8 @@ include/GTL/topsort.h
 include/GTL/version.h
 lib/libGTL.a
 lib/libGTL.la
+lib/libGTL.so
+lib/libGTL.so.0
 lib/libGTL.so.0.3
 share/doc/html/GTL/GML_error.html
 share/doc/html/GTL/GTL-GTL-h.html

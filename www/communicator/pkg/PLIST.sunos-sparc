@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST.sunos-sparc,v 1.1 2000/05/09 13:23:20 abs Exp $
+@comment $NetBSD: PLIST.sunos-sparc,v 1.2 2001/01/04 15:10:57 agc Exp $
 bin/${BINNAME}-${NS_VERS}_nis
 bin/netscape_nis
 lib/netscape/${BINNAME}-${NS_VERS}/netscape_nis
+lib/netscape/${BINNAME}-${NS_VERS}/libjsd.so
+lib/netscape/${BINNAME}-${NS_VERS}/libjsd.so.1
 lib/netscape/${BINNAME}-${NS_VERS}/libjsd.so.1.0
 lib/netscape/${BINNAME}-${NS_VERS}/dynfonts/libTrueDoc.so
 lib/netscape/${BINNAME}-${NS_VERS}/plugins/libnullplugin.so

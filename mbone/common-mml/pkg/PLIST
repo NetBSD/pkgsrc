@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/12/17 09:46:00 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:50 agc Exp $
 lib/libuclmmbase.a
 lib/libuclmmbase.la
+lib/libuclmmbase.so
+lib/libuclmmbase.so.1
 lib/libuclmmbase.so.1.2
 include/common-mml/acconfig.h
 include/common-mml/addrinfo.h

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2000/07/07 13:37:09 wulf Exp $
+@comment $NetBSD: PLIST,v 1.6 2001/01/04 15:11:03 agc Exp $
 qt1/share/doc/qt/html/abstractwidgets.html
 qt1/share/doc/qt/html/aclock-aclock-cpp.html
 qt1/share/doc/qt/html/annotated.html
@@ -904,6 +904,8 @@ qt1/include/qwmatrix.h
 qt1/include/qxt.h
 qt1/lib/libqt.a
 qt1/lib/libqt.la
+qt1/lib/libqt.so
+qt1/lib/libqt.so.1
 qt1/lib/libqt.so.1.44
 qt1/man/man1/moc.1
 qt1/man/man3/QAccel.3

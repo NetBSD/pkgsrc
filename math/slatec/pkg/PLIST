@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2000/11/28 00:26:53 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/01/04 15:10:49 agc Exp $
 lib/libslatec.a
 lib/libslatec.la
+lib/libslatec.so
+lib/libslatec.so.0
 lib/libslatec.so.0.0

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2000/11/29 23:12:58 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2001/01/04 15:11:04 agc Exp $
 include/bitmaps/1x1
 include/bitmaps/2x2
 include/bitmaps/black
@@ -273,9 +273,13 @@ include/xview_private/xv_path_util.h
 @dirrm include/images
 @dirrm include/bitmaps
 lib/libolgx.a
+lib/libolgx.so
+lib/libolgx.so.3
 lib/libolgx.so.3.2
 lib/libxview.a
 lib/libxview.sa.3.2
+lib/libxview.so
+lib/libxview.so.3
 lib/libxview.so.3.2
 lib/.text_extras_menu
 lib/.textswrc

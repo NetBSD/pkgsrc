@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2000/01/10 20:54:27 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:23 agc Exp $
 bin/recode
 include/recode.h
 include/recodext.h
@@ -10,9 +10,11 @@ info/recode.info-3
 info/recode.info-4
 info/recode.info-5
 @exec install-info %D/info/recode.info %D/info/dir
-lib/librecode.so.0.0
-lib/librecode.la
 lib/librecode.a
+lib/librecode.la
+lib/librecode.so
+lib/librecode.so.0
+lib/librecode.so.0.0
 man/man1/recode.1
 share/locale/fr/LC_MESSAGES/recode.mo
 share/locale/sv/LC_MESSAGES/recode.mo

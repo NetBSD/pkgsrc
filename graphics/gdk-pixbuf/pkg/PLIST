@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2000/12/06 19:46:10 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2001/01/04 15:10:38 agc Exp $
 bin/gdk-pixbuf-config
 include/gdk-pixbuf/gdk-pixbuf-features.h
 include/gdk-pixbuf/gdk-pixbuf-loader.h
@@ -36,9 +36,13 @@ lib/gdk_pixbufConf.sh
 lib/gdk_pixbuf_xlibConf.sh
 lib/libgdk_pixbuf.a
 lib/libgdk_pixbuf.la
+lib/libgdk_pixbuf.so
+lib/libgdk_pixbuf.so.2
 lib/libgdk_pixbuf.so.2.0
 lib/libgdk_pixbuf_xlib.a
 lib/libgdk_pixbuf_xlib.la
+lib/libgdk_pixbuf_xlib.so
+lib/libgdk_pixbuf_xlib.so.2
 lib/libgdk_pixbuf_xlib.so.2.0
 share/aclocal/gdk-pixbuf.m4
 share/gnome/html/gdk-pixbuf-decl.txt
