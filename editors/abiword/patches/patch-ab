@@ -1,13 +1,15 @@
-$NetBSD: patch-ab,v 1.7 2003/01/28 13:57:53 martti Exp $
+$NetBSD: patch-ab,v 1.8 2003/12/26 18:26:59 wiz Exp $
 
---- src/Makefile.orig	2002-06-24 09:13:48.000000000 +0300
-+++ src/Makefile	2003-01-28 15:44:36.000000000 +0200
-@@ -142,7 +142,7 @@
- endif
+--- src/af/util/xp/ut_iconv.cpp.orig	Thu Jul 17 15:12:55 2003
++++ src/af/util/xp/ut_iconv.cpp	Thu Jul 17 15:16:40 2003
+@@ -295,8 +295,8 @@
+     return (size_t)-1;
  
- # The generic target
--install: build canonical
-+install:
- ifeq ($(ABI_NATIVE),unix)
- 	@echo
- 	@echo Using prefix value of [$(prefix)]...
+ 
+-  ICONV_CONST char ** buf = const_cast<ICONV_CONST char**>(inbuf);
+-  return iconv( cd, buf, inbytesleft, outbuf, outbytesleft );
++  //ICONV_CONST char ** buf = const_cast<ICONV_CONST char**>(inbuf);
++  return iconv( cd, inbuf, inbytesleft, outbuf, outbytesleft );
+ }
+ 
+ int  UT_iconv_close( UT_iconv_t cd )
