@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4202 2003/12/20 16:01:21 martti Exp $
+$NetBSD: CHANGES,v 1.4203 2003/12/20 17:39:00 veego Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -5263,3 +5263,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated tnftpd to 20031217nb1 [grant 2003-12-20]
 	Added mysql-client-4.0.17 [martti 2003-12-20]
 	Added mysql-server-4.0.17 [martti 2003-12-20]
+	Updated p5-perl-ldap to 0.30 [veego 2003-12-20]
