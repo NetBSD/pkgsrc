@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4984 2004/02/24 17:08:35 jmmv Exp $
+$NetBSD: CHANGES,v 1.4985 2004/02/24 19:40:38 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1010,3 +1010,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-Getopt-Simple-1.46 [minskim 2004-02-24]
 	Updated bozohttpd to 20040218nb1 [wiz 2004-02-24]
 	Added drwright-0.17 [jmmv 2004-02-24]
+	Updated abcde to 2.1.15 [snj 2004-02-24]
