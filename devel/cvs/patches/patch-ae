@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2003/07/12 09:19:18 wiz Exp $
+$NetBSD: patch-ae,v 1.6 2003/12/12 22:05:55 wiz Exp $
 
---- src/rcs.c.orig	Tue Mar 18 01:28:06 2003
+--- src/rcs.c.orig	Wed Nov 19 21:17:38 2003
 +++ src/rcs.c
-@@ -3394,7 +3394,7 @@ struct rcs_keyword
+@@ -3517,7 +3517,7 @@ struct rcs_keyword
      size_t len;
  };
  #define KEYWORD_INIT(s) (s), sizeof (s) - 1
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.5 2003/07/12 09:19:18 wiz Exp $
  {
      { KEYWORD_INIT ("Author") },
      { KEYWORD_INIT ("Date") },
-@@ -3407,6 +3407,7 @@ static const struct rcs_keyword keywords
+@@ -3530,6 +3530,7 @@ static const struct rcs_keyword keywords
      { KEYWORD_INIT ("Revision") },
      { KEYWORD_INIT ("Source") },
      { KEYWORD_INIT ("State") },
@@ -19,7 +19,7 @@ $NetBSD: patch-ae,v 1.5 2003/07/12 09:19:18 wiz Exp $
      { NULL, 0 }
  };
  enum keyword
-@@ -3421,7 +3422,8 @@ enum keyword
+@@ -3544,7 +3545,8 @@ enum keyword
      KEYWORD_RCSFILE,
      KEYWORD_REVISION,
      KEYWORD_SOURCE,
@@ -29,7 +29,7 @@ $NetBSD: patch-ae,v 1.5 2003/07/12 09:19:18 wiz Exp $
  };
  
  /* Convert an RCS date string into a readable string.  This is like
-@@ -3558,6 +3560,11 @@ expand_keywords (rcs, ver, name, log, lo
+@@ -3681,6 +3683,11 @@ expand_keywords (rcs, ver, name, log, lo
  	return;
      }
  
@@ -41,7 +41,7 @@ $NetBSD: patch-ae,v 1.5 2003/07/12 09:19:18 wiz Exp $
      /* If we are using -kkvl, dig out the locker information if any.  */
      locker = NULL;
      if (expand == KFLAG_KVL)
-@@ -3649,6 +3656,7 @@ expand_keywords (rcs, ver, name, log, lo
+@@ -3772,6 +3779,7 @@ expand_keywords (rcs, ver, name, log, lo
  
  	    case KEYWORD_HEADER:
  	    case KEYWORD_ID:
@@ -49,7 +49,7 @@ $NetBSD: patch-ae,v 1.5 2003/07/12 09:19:18 wiz Exp $
  		{
  		    char *path;
  		    int free_path;
-@@ -4281,7 +4289,7 @@ RCS_checkout (rcs, workfile, rev, nameta
+@@ -4404,7 +4412,7 @@ RCS_checkout (rcs, workfile, rev, nameta
  	if (info != NULL)
  	{
  	    /* If the size of `devtype' changes, fix the sscanf call also */

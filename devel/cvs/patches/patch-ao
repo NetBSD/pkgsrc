@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.4 2003/07/12 09:19:19 wiz Exp $
+$NetBSD: patch-ao,v 1.5 2003/12/12 22:05:56 wiz Exp $
 
---- src/lock.c.orig	Fri Feb 28 22:46:48 2003
+--- src/lock.c.orig	Tue Nov 11 02:20:10 2003
 +++ src/lock.c
-@@ -413,7 +413,7 @@ Reader_Lock (xrepository)
+@@ -405,7 +405,7 @@ Reader_Lock (xrepository)
  	(void) fprintf (stderr, "%s-> Reader_Lock(%s)\n", CLIENT_SERVER_STR,
                          xrepository);
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.4 2003/07/12 09:19:19 wiz Exp $
  	return (0);
  
      /* we only do one directory at a time for read locks! */
-@@ -485,7 +485,7 @@ Writer_Lock (list)
+@@ -477,7 +477,7 @@ Writer_Lock (list)
  {
      char *wait_repos;
  
