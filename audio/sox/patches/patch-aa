@@ -1,16 +1,13 @@
-$NetBSD: patch-aa,v 1.5 1999/10/26 01:31:04 hubertf Exp $
+$NetBSD: patch-aa,v 1.6 2002/07/12 19:30:50 mycroft Exp $
 
---- sunaudio.c.orig	Sun Jul 18 20:57:36 1999
-+++ sunaudio.c	Thu Sep 30 01:43:33 1999
-@@ -17,7 +17,10 @@
-  */
+--- Makefile.in.orig	Sun Dec 16 22:47:37 2001
++++ Makefile.in	Fri Jul 12 19:22:14 2002
+@@ -78,7 +78,7 @@
+ 	$(CC) $(LDFLAGS) -o sox sox.o $(LIBS)
  
- #include <sys/ioctl.h>
--#ifdef __SVR4
-+#if defined(__SVR4) || defined(__NetBSD__)
-+#ifdef __NetBSD__
-+#include <sys/types.h>
-+#endif
- #include <sys/audioio.h>
- #else
- #include <sun/audioio.h>
+ soxmix.o: sox.c
+-	$(CC) $(CFLAGS) -DSOXMIX -c -o soxmix.o $<
++	$(CC) $(CFLAGS) -DSOXMIX -c -o soxmix.o sox.c
+ 
+ soxmix: libst.a $(GSM_$(GSM_SUPPORT)) soxmix.o
+ 	$(CC) $(LDFLAGS) -o soxmix soxmix.o $(LIBS)
