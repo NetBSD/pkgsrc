@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/02/28 15:17:54 hwr Exp $
+
+--- Makefile.orig	Sun Feb 28 15:36:30 1999
++++ Makefile	Sun Feb 28 15:37:40 1999
+@@ -37,32 +37,32 @@
+ # TIFF and JPEG are not currently supported along with scripting
+ 
+ #DEFINES	= -DUSE_TIFF
+-DEFINES		= 
++DEFINES		= -DPOSIX -DUSE_ZLIB
+ EXTRALIBS	= 
+ 
+ # ------------------- SWIG related stuff ----------------------------------
+ SWIG		= swig
+ 
+-PDFLIB_TCL	= BINDINGS/TCL/pdflib.so
+-SWIGOPT_TCL	= -tcl -DTCL -d pdflib_tcl
+-TCL_OBJS	= pdftcl_wrap.o
+-TCL_INC		= 
+-
+-PDFLIB_PYTHON	= BINDINGS/PYTHON/pdflib.so
+-SWIGOPT_PYTHON	= -python -d pdflib_python
+-PYTHON_OBJS	= pdfpython_wrap.o
+-PYTHON_INC	= -I/usr/include/python1.4
+-
+-PDFLIB_PERL	= BINDINGS/PERL/pdflib.so
+-SWIGOPT_PERL	= -perl5 -shadow -DPERL5 -d pdflib_perl
+-PERL_OBJS	= pdfperl_wrap.o
+-PERL_INC	= -I/usr/lib/perl5/i586-linux/5.004/CORE
++#PDFLIB_TCL	= BINDINGS/TCL/pdflib.so
++#SWIGOPT_TCL	= -tcl -DTCL -d pdflib_tcl
++#TCL_OBJS	= pdftcl_wrap.o
++#TCL_INC		= -I/@PREFIX@/include/tcl8.0
++
++#PDFLIB_PYTHON	= BINDINGS/PYTHON/pdflib.so
++#SWIGOPT_PYTHON	= -python -d pdflib_python
++#PYTHON_OBJS	= pdfpython_wrap.o
++#PYTHON_INC	= -I/usr/include/python1.4
++
++#PDFLIB_PERL	= BINDINGS/PERL/pdflib.so
++#SWIGOPT_PERL	= -perl5 -shadow -DPERL5 -d pdflib_perl
++#PERL_OBJS	= pdfperl_wrap.o
++#PERL_INC	= -I/usr/local/lib/perl5/i386-netbsd/5.00404/CORE
+ 
+ SWIG_OBJS	= $(TCL_OBJS) $(PYTHON_OBJS) $(PERL_OBJS)
+ 
+ # ------------------- Make variables for Linux/Gnu Compiler ----------------
+ # Additional include directories, e.g. for TIFF and ZLIB library headers
+-INCDIR	= -I/usr/local/include $(TCL_INC) $(PYTHON_INC) $(PERL_INC)
++INCDIR	= -I/usr/local/include -I/usr/pkg/include $(TCL_INC) $(PYTHON_INC) $(PERL_INC)
+ CC	= gcc
+ 
+ # needed only for swig
