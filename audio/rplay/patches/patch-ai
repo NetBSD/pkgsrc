@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1 1999/07/19 23:46:20 hubertf Exp $
+
+--- rplayd/timer.h.orig	Tue Jul 20 01:33:57 1999
++++ rplayd/timer.h	Tue Jul 20 01:34:12 1999
+@@ -27,6 +27,7 @@
+ #include "config.h"
+ #endif
+ 
++#include <signal.h>
+ #include <sys/types.h>
+ 
+ extern double timer_rate;
