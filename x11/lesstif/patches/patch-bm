@@ -1,8 +1,14 @@
-$NetBSD: patch-bm,v 1.4 2003/07/18 10:50:08 adam Exp $
+$NetBSD: patch-bm,v 1.5 2003/08/20 10:37:38 markd Exp $
 
---- lib/config/Makefile.in.orig	2003-07-18 01:04:27.000000000 +0200
-+++ lib/config/Makefile.in	2003-07-18 12:09:08.000000000 +0200
-@@ -155,7 +155,7 @@
+--- lib/config/Makefile.in.orig	Fri Jul 18 11:04:27 2003
++++ lib/config/Makefile.in
+@@ -150,12 +150,12 @@ xmVer = @xmVer@
+ MAINTAINERCLEANFILES = Makefile.in
+ bin_SCRIPTS = mxmkmf
+ 
+-configdir = $(libdir)/LessTif/config
++configdir = $(libdir)/X11/config
+ 
  EXTRA_DIST = LessTif.rules LessTif.tmpl host.def Imake.tmpl
  
  # so being R5 
