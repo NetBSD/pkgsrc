@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1 2004/05/07 01:44:45 danw Exp $
+
+--- src/fasthenry/readGeom.c.orig	Sun May  2 21:44:00 2004
++++ src/fasthenry/readGeom.c
+@@ -3,7 +3,7 @@
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <string.h>
+-#include <malloc.h>
++#include <stdlib.h>
+ #include <math.h>
+ #include "induct.h"
+ 
