@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/28 22:18:39 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/03/25 01:09:54 jtb Exp $
 bin/fp2hdf
 bin/hdf24to8
 bin/hdf2jpeg
@@ -77,13 +77,7 @@ include/hdf/vattr.h
 include/hdf/vg.h
 include/hdf/vgint.h
 lib/libdf.a
-lib/libdf.so
-lib/libdf.so.0
-lib/libdf.so.0.0
 lib/libmfhdf.a
-lib/libmfhdf.so
-lib/libmfhdf.so.0
-lib/libmfhdf.so.0.0
 man/cat1/hdf.0
 man/cat1/hdfncdump.0
 man/cat1/hdfncgen.0

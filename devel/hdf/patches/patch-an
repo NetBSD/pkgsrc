@@ -1,25 +1,23 @@
-$NetBSD: patch-an,v 1.1 2001/03/22 23:19:17 jtb Exp $
+$NetBSD: patch-an,v 1.2 2001/03/25 01:09:51 jtb Exp $
 
---- /dev/null	Thu Mar 22 22:34:52 2001
+--- /dev/null	Sun Mar 25 00:39:12 2001
 +++ mfhdf/nctest/Makefile
-@@ -0,0 +1,27 @@
+@@ -0,0 +1,25 @@
 +PROG= nctest
 +
 +SRCS = varget.c vargetg.c varput.c varputg.c vardef.c vartests.c	\
 +	vputget.c vputgetg.c driver.c cdftests.c dimtests.c rec.c	\
 +	atttests.c misctest.c add.c error.c emalloc.c val.c slabs.c
 +
-+MFHDFLIB= -L${.CURDIR}/../libsrc -lmfhdf
-+MFHDFINC= -I${.CURDIR}/../libsrc
++CPPFLAGS+= -Dunix -DNDEBUG
++CPPFLAGS+= -I${.CURDIR}/../../hdf/src
++CPPFLAGS+= -I${.CURDIR}/../libsrc
 +
-+HDFLIB= -L${.CURDIR}/../../hdf/src -ldf
-+HDFINC= -I${.CURDIR}/../../hdf/src
++LDFLAGS+= -L${.CURDIR}/../libsrc
++LDFLAGS+= -L${.CURDIR}/../../hdf/src
++LDFLAGS+= -Wl,-R${JPEGBASE}/lib -L${JPEGBASE}/lib
 +
-+JPEGLIB= -R${JPEGBASE}/lib -L${JPEGBASE}/lib -ljpeg
-+
-+LDFLAGS+= -Wl,-R{LIBDIR} ${MFHDFLIB} ${HDFLIB} ${JPEGLIB}
-+
-+CPPFLAGS+= -Dunix -DNDEBUG ${MFHDFINC} ${HDFINC}
++LDADD+= -lmfhdf -ldf -ljpeg -lz -lm
 +
 +NOMAN= 1
 +
