@@ -1,6 +1,7 @@
 
-SHA1 (linpack-20010427.tar.gz) = d11362c325059363180888d29e921b53be316b4f
-Size (linpack-20010427.tar.gz) = 336068 bytes
+
+SHA1 (linpack-20010427.tar.gz) = 3c7bfc4f98abf6a987705a9afad556510b601ad8
+Size (linpack-20010427.tar.gz) = 334832 bytes
 SHA1 (patch-aa) = 07195ee4920fe53559ef68f8fe696d7728b67337
 SHA1 (patch-ab) = 2c6ea54300b0bca78268d5ca6e23637e8059b201
 SHA1 (patch-ac) = c83d40137147445a8dd9fb72c97004759ce8366a
