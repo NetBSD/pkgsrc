@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.13 2004/12/05 22:38:06 grant Exp $
+# $NetBSD: bsd.options.mk,v 1.14 2004/12/05 23:23:50 schmonz Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -176,13 +176,13 @@ _PKG_OPTIONS_WORDWRAP_FILTER=						\
 		END { if (length(line) > 0) print "	"line }		\
 	'
 
-.if !defined(_PKG_OPTIONS_AVAILABLE) && defined(PKG_SUPPORTED_OPTIONS)
+.if !defined(_PKG_OPTIONS_AVAILABLE) && defined(PKG_SUPPORTED_OPTIONS) && !empty(PKG_SUPPORTED_OPTIONS)
 _PKG_OPTIONS_AVAILABLE!=	${ECHO} ${PKG_SUPPORTED_OPTIONS} | ${XARGS} -n 1 | ${SORT}
 .endif
-.if !defined(_PKG_OPTIONS_DEFAULT) && defined(PKG_DEFAULT_OPTIONS)
+.if !defined(_PKG_OPTIONS_DEFAULT) && defined(PKG_DEFAULT_OPTIONS) && !empty(PKG_DEFAULT_OPTIONS)
 _PKG_OPTIONS_DEFAULT!=		${ECHO} ${PKG_DEFAULT_OPTIONS} | ${XARGS} -n 1 | ${SORT}
 .endif
-.if !defined(_PKG_OPTIONS_ENABLED) && defined(PKG_OPTIONS)
+.if !defined(_PKG_OPTIONS_ENABLED) && defined(PKG_OPTIONS) && !empty(PKG_OPTIONS)
 _PKG_OPTIONS_ENABLED!=		${ECHO} ${PKG_OPTIONS} | ${XARGS} -n 1 | ${SORT}
 .endif
 
