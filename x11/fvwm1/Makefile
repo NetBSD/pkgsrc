@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 1998/08/20 15:17:33 tsarna Exp $
+# $NetBSD: Makefile,v 1.12 1998/09/16 18:05:05 garbled Exp $
 # FreeBSD Id: Makefile,v 1.12 1997/10/11 10:42:43 jkh Exp
 #
 
@@ -20,9 +20,13 @@ post-extract:
 	cd ${WRKSRC}/modules; \
 	for FILE in Fvwm*/Imakefile; do \
 	    ${MV} $${FILE} $${FILE}.orig; \
-	    ${SED} s/ComplexProgramTarget/ComplexProgramTargetNoMan/ \
+	    ${SED} -e 's/ComplexProgramTarget/ComplexProgramTargetNoMan/' \
+	           -e 's@#ifdef AlphaArchitecture@#if defined(AlphaArchitecture) \&\& !defined(NetBSDArchitecture)@' \
 		<$${FILE}.orig >$${FILE}; \
 	done
+	${MV} ${WRKSRC}/modules/GoodStuff/Imakefile ${WRKSRC}/modules/GoodStuff/Imakefile.orig
+	${SED} -e 's@#ifdef AlphaArchitecture@#if defined(AlphaArchitecture) \&\& !defined(NetBSDArchitecture)@' \
+		<${WRKSRC}/modules/GoodStuff/Imakefile.orig >${WRKSRC}/modules/GoodStuff/Imakefile
 
 post-install:
 	@${MKDIR} ${PREFIX}/lib/X11/fvwm/pixmaps
