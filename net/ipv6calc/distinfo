@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:18 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/02/24 04:33:02 hubertf Exp $
 
-SHA1 (ipv6calc-0.19.tar.gz) = c8207d964c038a550a0a5c680fd204cfe648b67f
-Size (ipv6calc-0.19.tar.gz) = 42464 bytes
+SHA1 (ipv6calc-0.36.tar.gz) = 0bfdb3da46f7ec004bc95aecc02e54ff6063a228
+Size (ipv6calc-0.36.tar.gz) = 70284 bytes
