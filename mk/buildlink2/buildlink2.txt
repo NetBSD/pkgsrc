@@ -1,4 +1,4 @@
-$NetBSD: buildlink2.txt,v 1.5 2002/08/29 14:02:28 wiz Exp $
+$NetBSD: buildlink2.txt,v 1.6 2002/08/29 17:08:49 jlam Exp $
 
 The buildlink2 framework is a departure from the original buildlink
 framework, which tries to do its work up-front before the configure
@@ -20,8 +20,8 @@ To-do list:
 
 Here are some FAQs and answers regarding buildlink2:
 
-Q: Why is the buildlink2 framework better than the existing one?
-A: There are several reasons:
+Q1: Why is the buildlink2 framework better than the existing one?
+A1: There are several reasons:
 
     (1) The new framework makes it simpler to buildinkify a package because
 	we just convert dependencies into including the equivalent
@@ -51,32 +51,32 @@ A: There are several reasons:
 	process, so we don't accidentally trigger rebuilds of those files
 	during the install process.
 
-Q: How does this affect packages that use the existing buildlink framework?
-A: The buildlink and buildlink2 frameworks can coexist within pkgsrc, but
-   packages that use the new framework must use it exclusively, i.e. a
-   package Makefile can't include both buildlink.mk and buildlink2.mk
-   files.  Packages that use the old framework can continue to do so, but
-   it is encouraged that they convert to the new buildlink2 framework for
-   the benefits listed earlier.
+Q2: How does this affect packages that use the existing buildlink framework?
+A2: The buildlink and buildlink2 frameworks can coexist within pkgsrc, but
+    packages that use the new framework must use it exclusively, i.e. a
+    package Makefile can't include both buildlink.mk and buildlink2.mk
+    files.  Packages that use the old framework can continue to do so, but
+    it is encouraged that they convert to the new buildlink2 framework for
+    the benefits listed earlier.
 
-Q: Can I make strongly buildlinked packages that use imake?
-A: Yes.  Packages that use imake to drive the configuration and build
-   processes can now be strongly buildlinked as well.
+Q3: Can I make strongly buildlinked packages that use imake?
+A3: Yes.  Packages that use imake to drive the configuration and build
+    processes can now be strongly buildlinked as well.
 
-Q: How do I use compilers other than the system-supplied cc?  I currently
-   set CC=/my/special/c-compiler in /etc/mk.conf.
-A: It should Just Work.  The wrapper scripts automatically handle this
-   situation.  The software is told to use CC=cc, which points to the
-   special compiler wrapper script in ${BUILDLINK_DIR}/bin/cc, but the
-   wrapper itself will call the CC that you explicitly set.
+Q4: How do I use compilers other than the system-supplied cc?  I currently
+    set CC=/my/special/c-compiler in /etc/mk.conf.
+A4: It should Just Work.  The wrapper scripts automatically handle this
+    situation.  The software is told to use CC=cc, which points to the
+    special compiler wrapper script in ${BUILDLINK_DIR}/bin/cc, but the
+    wrapper itself will call the CC that you explicitly set.
 
-Q: So what's bad about the new buildlink2 framework?
-A: The full build now takes longer than it used to.  Since we are using
-   wrapper scripts in place of the compilers, we bear the cost of the extra
-   shell processes invoked as a result.
+Q5: So what's bad about the new buildlink2 framework?
+A5: The full build now takes longer than it used to.  Since we are using
+    wrapper scripts in place of the compilers, we bear the cost of the extra
+    shell processes invoked as a result.
 
-Q: What happened to x11.buildlink.mk?
-A: x11.buildlink.mk is now deprecated, as it's all handled directly by
-   the buildlink2.mk framework.  However, in converting packages to use
-   buildlink2, if it uses x11.buildlink.mk, then you will need to define
-   USE_X11 if USE_X11BASE is not already defined.
+Q6: What happened to x11.buildlink.mk?
+A6: x11.buildlink.mk is now deprecated, as it's all handled directly by
+    the buildlink2.mk framework.  However, in converting packages to use
+    buildlink2, if it uses x11.buildlink.mk, then you will need to define
+    USE_X11 if USE_X11BASE is not already defined.
