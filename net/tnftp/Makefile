@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2003/08/25 12:24:04 lukem Exp $
+# $NetBSD: Makefile,v 1.3 2003/12/18 01:47:07 grant Exp $
 #
 
 DISTNAME=		tnftp-20030825
@@ -8,24 +8,24 @@ CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
 
 MAINTAINER=		lukem@NetBSD.org
-COMMENT=		The enhanced ftp client in NetBSD
+COMMENT=		The enhanced FTP client in NetBSD
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
 # Include SOCKS firewall support
-.if defined(USE_SOCKS) && (${USE_SOCKS} == 4 || ${USE_SOCKS} == 5)
-.if ${USE_SOCKS} == 4
+.if defined(USE_SOCKS) && (${USE_SOCKS} == "4" || ${USE_SOCKS} == "5")
+  .if ${USE_SOCKS} == "4"
 DEPENDS+=		socks4-2.2:../../net/socks4
 CONFIGURE_ARGS+=	--with-socks4
-.else
+.  else
 DEPENDS+=		socks5-1.0.2:../../net/socks5
 CONFIGURE_ARGS+=	--with-socks5
-.endif
+.  endif
 .endif
 
-.if defined(USE_INET6) && ${USE_INET6} == YES
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
