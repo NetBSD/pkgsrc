@@ -1,21 +1,25 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/08/18 03:18:44 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2001/12/14 22:30:08 jlam Exp $
 
---- Makefile.in.orig	Tue Aug  7 13:00:29 2001
-+++ Makefile.in
-@@ -333,20 +333,6 @@
+--- Makefile.in.orig	Mon Dec 10 12:58:48 2001
++++ Makefile.in	Fri Dec 14 17:11:51 2001
+@@ -333,24 +333,6 @@
  
  
  install-data-local:
 -	mkdir -p $(DESTDIR)$(sysconfdir)
 -	file=$(DESTDIR)$(sysconfdir)/slp.reg;\
--        if [ -f $$file ]; then cp -f $$file $$file.bak; else true; fi
--	cp -f $(srcdir)/etc/slp.reg $(DESTDIR)$(sysconfdir)
+-        if [ -f $$file ]; then true;\
+-	else cp -f $(srcdir)/etc/slp.reg $(DESTDIR)$(sysconfdir);\
+-	fi
 -	file=$(DESTDIR)$(sysconfdir)/slp.conf;\
--	if [ -f $$file ]; then cp -f $$file $$file.bak; else true; fi
--	cp -f $(srcdir)/etc/slp.conf $(DESTDIR)$(sysconfdir)
+-	if [ -f $$file ]; then true;\
+-	else cp -f $(srcdir)/etc/slp.conf \
+-	$(DESTDIR)$(sysconfdir);\
+-	fi
 -	file=$(DESTDIR)$(sysconfdir)/slp.spi;\
--	if [ -f $$file ]; then cp -f $$file $$file.bak; else true; fi
--	cp -f $(srcdir)/etc/slp.spi $(DESTDIR)$(sysconfdir)
+-	if [ -f $$file ]; then true;\
+-	else cp -f $(srcdir)/etc/slp.spi $(DESTDIR)$(sysconfdir);\
+-	fi
 -	rm -rf $(DESTDIR)$(DOC_DIR)
 -	mkdir -p $(DESTDIR)$(DOC_DIR)
 -	cp -r $(srcdir)/doc/* $(DESTDIR)$(DOC_DIR)
