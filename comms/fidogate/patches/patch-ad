@@ -1,11 +1,13 @@
-$NetBSD: patch-ad,v 1.3 1998/08/07 10:36:36 agc Exp $
+$NetBSD: patch-ad,v 1.4 2001/02/22 03:00:15 tv Exp $
 
---- subst.pl.orig	Sat Sep 28 04:13:51 1996
-+++ subst.pl	Thu Jul 16 18:35:06 1998
-@@ -41,5 +41,6 @@
- 	s/<$s>/$r/g;
+--- src/tick/ftntick.c.orig	Wed Feb 21 17:37:28 2001
++++ src/tick/ftntick.c	Wed Feb 21 17:38:48 2001
+@@ -528,7 +528,7 @@
+ 	if(tic->size != st.st_size)
+ 	{
+ 	    log("ERROR: wrong size for file %s: got %lu, expected %lu",
+-		name, st.st_size, tic->size                           );
++		name, (unsigned long)st.st_size, tic->size);
+ 	    return ERROR;
+ 	}
      }
- 
-+    s/\$\{PREFIX\}/$ENV{'PREFIX'}/g;
-     print;
- }

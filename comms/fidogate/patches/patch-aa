@@ -1,106 +1,107 @@
-$NetBSD: patch-aa,v 1.3 1998/12/08 17:12:23 tv Exp $
+$NetBSD: patch-aa,v 1.4 2001/02/22 03:00:15 tv Exp $
 
---- config.make.orig	Sat Oct 11 17:24:15 1997
-+++ config.make	Tue Dec  8 10:54:14 1998
-@@ -14,35 +14,35 @@
- # OS2 = OS/2 with EMX GCC
+--- config.make.orig	Tue Apr 11 08:02:25 2000
++++ config.make	Wed Feb 21 20:03:27 2001
+@@ -56,13 +56,13 @@
+ #
  
- # FIDOGATE Directories
--BINDIR		= /usr/local/bin
--LIBDIR		= /usr/local/lib/fidogate
-+BINDIR		= ${PREFIX}/bin
-+LIBDIR		= ${PREFIX}/lib/fidogate
- SPOOLDIR	= /var/spool/fido
- LOGDIR		= /var/log/fido
+ # variable parameters, can be changed at run-time, DO NOT DELETE ANYTHING!!!
+-DEFAULT_V_CONFIGDIR	= /etc/fidogate
+-DEFAULT_V_LIBDIR	= /usr/lib/fidogate
+-DEFAULT_V_BINDIR	= $(DEFAULT_V_LIBDIR)/bin
+-DEFAULT_V_LOGDIR	= /var/log/fidogate
+-DEFAULT_V_VARDIR	= /var/lib/fidogate
+-DEFAULT_V_LOCKDIR	= /var/lock/fidogate
+-DEFAULT_V_SPOOLDIR	= /var/spool/fidogate
++DEFAULT_V_CONFIGDIR	= @PREFIX@/etc/fidogate
++DEFAULT_V_LIBDIR	= @PREFIX@/lib/fidogate
++DEFAULT_V_BINDIR	= @PREFIX@/lib/fidogate/bin
++DEFAULT_V_LOGDIR	= /var/log/fido
++DEFAULT_V_VARDIR	= /var/spool/fido
++DEFAULT_V_LOCKDIR	= /var/spool/fido/lock
++DEFAULT_V_SPOOLDIR	= /var/spool/fido
+ DEFAULT_V_BTBASEDIR	= /var/spool/bt
+ DEFAULT_V_INBOUND	= $(DEFAULT_V_BTBASEDIR)/in
+ DEFAULT_V_PINBOUND	= $(DEFAULT_V_BTBASEDIR)/pin
+@@ -83,17 +83,17 @@
  
- # Doc directories
--INFODIR		= /usr/local/info
-+INFODIR		= ${PREFIX}/info
- HTMLDIR		= /home/mj/public_html/fidogate
+ # fixed parameters, DO NOT DELETE ANYTHING!!!
+ # INN (Redhat 5.2)
+-DEFAULT_F_NEWSETCDIR	= /etc/news
+-DEFAULT_F_NEWSVARDIR	= /var/lib/news
++DEFAULT_F_NEWSETCDIR	= /var/news/etc
++DEFAULT_F_NEWSVARDIR	= /var/news
+ # INN 1.7
+ #DEFAULT_F_NEWSLIBDIR	= /usr/lib/news
+ #DEFAULT_F_NEWSSPOOLDIR	= /var/spool/news
+ # INN 2.2
+-DEFAULT_F_NEWSLIBDIR	= /usr/lib
+-DEFAULT_F_NEWSSPOOLDIR	= /var/spool/news/articles
++DEFAULT_F_NEWSLIBDIR	= @PREFIX@/inn/lib
++DEFAULT_F_NEWSSPOOLDIR	= /var/news/spool/articles
+ # ifcico-3.0.cm.alpha-4.1
+ #DEFAULT_F_IFMAILDIR     = /usr/lib/ifmail
+-DEFAULT_F_IFMAILDIR     = /usr/lib/ifcico
++DEFAULT_F_IFMAILDIR     = @PREFIX@/sbin
  
- # Outbound *base* directory, i.e. outbound is OUTBOUND/out.xxx
--OUTBOUND	= /var/spool/bt
-+OUTBOUND	= /var/spool/fido/bt
- # Normal (i.e. insecure) inbound
--INBOUND		= /var/spool/bt/in
-+INBOUND		= /var/spool/fido/bt/in
- # Protected inbound
--PINBOUND	= /var/spool/bt/pin
-+PINBOUND	= /var/spool/fido/bt/pin
- # Inbound for uuencoded mails (used by recvuu)
--UUINBOUND	= /var/spool/bt/uuin
-+UUINBOUND	= /var/spool/fido/bt/uuin
+ # old-style config
+ #DEFAULT_F_CONFIG_GATE	= %C/gate.conf
+@@ -146,15 +146,15 @@
  
- # INN directories
--NEWSETCDIR	= /etc/news
-+NEWSETCDIR	= ${PREFIX}/etc/news
- NEWSVARDIR	= /var/lib/news
--NEWSLIBDIR	= /usr/lib/news
-+NEWSLIBDIR	= ${PREFIX}/lib/news
- NEWSSPOOLDIR	= /var/spool/news
  
- # Ifmail directory
--IFMAILDIR       = /usr/local/lib/ifmail
-+IFMAILDIR       = ${PREFIX}/lib/ifmail
+ # The perl interpreter used by subst.pl
+-PERL			= /usr/bin/perl
++PERL			= @PREFIX@/bin/perl
  
- # perl
--PERL		= /usr/bin/perl
-+PERL		= ${PREFIX}/bin/perl
+ # Directory with sendmail m4 configuration files
+-SENDMAIL_CF_DIR		= /usr/lib/sendmail-cf
++SENDMAIL_CF_DIR		= /usr/share/sendmail
  
- # OS2: comment out
-  SHELL		= /bin/sh
-@@ -57,20 +57,20 @@
+ # Directories for installing documentation, not used by subst.pl
+-INFODIR			= /usr/info
+-HTMLDIR			= /html/fidogate
+-HTMLLOGDIR		= /html/log
++INFODIR			= @PREFIX@/info
++HTMLDIR			= @PREFIX@/share/doc/fidogate
++HTMLLOGDIR		= @PREFIX@/share/fidogate
+ 
+ # RedHat RPM related dirs
+ RPMBASEDIR	= /usr/src/redhat
+@@ -194,20 +194,17 @@
  # install permissions
-  PERM_PROG	= 755
-  PERM_DATA	= 644
-- PERM_SETUID	= 4755
-+ PERM_SETUID	= 4111
-  PERM_DIR	= 755
+ PERM_PROG	= 755
+ PERM_DATA	= 644
+-PERM_SETUID	= 4755
++PERM_SETUID	= 4111
+ PERM_DIR	= 755
  
  # C compiler / flags
-  CC		= gcc
+-CC		= gcc
 -# YACC		= yacc					# Use yacc, not bison
-- YACC		= bison -y
-+ YACC		= yacc					# Use yacc, not bison
-+# YACC		= bison -y
-  AR		= ar
+-YACC		= bison -y
++YACC		= yacc					# Use yacc, not bison
+ AR		= ar
  # RANLIB	= @echo >/dev/null			# No ranlib
-  RANLIB		= ranlib
+ RANLIB		= ranlib
  # RANLIB	= ar s					# OS2
  
--# DEBUG		= -O2
-- DEBUG		= -g
-+ DEBUG		= -O2
-+# DEBUG		= -g
+ # DEBUG		= -O2
+-DEBUG		= -g
  
-  INCLUDE	= -I$(TOPDIR) -I$(TOPDIR)/src/include
+ INCLUDE		= -I$(TOPDIR) -I$(TOPDIR)/src/include
  
-@@ -87,7 +87,7 @@
- # LFLAGS	= $(DEBUG) -L$(TOPDIR)/src/common -posix
- # OS2
- # LFLAGS	= -Zexe $(DEBUG) -L$(TOPDIR)/src/common
-- LFLAGS		= $(DEBUG) -L$(TOPDIR)/src/common
-+ LFLAGS		= $(DEBUG) -L$(TOPDIR)/src/common/.libs $(LDFLAGS)
- 
- # ISC 3.x
- # LIBS		= -lfidogate -linet -lPW -lcposix
-@@ -99,13 +99,12 @@
+@@ -236,10 +233,10 @@
  # MSDOS, OS2, WIN32
  # EXE		= .exe
-  EXE		=
-- INSTALL_PROG	= $(INSTALL) -c -g $(GROUP) -o $(OWNER) -m $(PERM_PROG)
-- INSTALL_DATA	= $(INSTALL) -c -g $(GROUP) -o $(OWNER) -m $(PERM_DATA)
-- INSTALL_SETUID	= $(INSTALL) -c -g $(GROUP) -o $(OWNER) -m $(PERM_SETUID)
-- INSTALL_DIR	= $(INSTALL) -g $(GROUP) -o $(OWNER) -m $(PERM_DIR) -d
--# extra prefix for installation
-- PREFIX         =
-+ INSTALL_PROG	= $(BSD_INSTALL_PROGRAM)
-+ INSTALL_SCRIPT	= $(BSD_INSTALL_SCRIPT)
-+ INSTALL_DATA	= $(BSD_INSTALL_DATA)
-+ INSTALL_SETUID	= $(BSD_INSTALL_PROGRAM) -g $(GROUP) -o $(OWNER) -m $(PERM_SETUID)
-+ INSTALL_DIR	= $(BSD_INSTALL_DATA_DIR) -g $(GROUP) -o $(OWNER) -m $(PERM_DIR)
+ EXE		=
+-INSTALL_PROG	= $(INSTALL) -c -g $(GROUP) -o $(OWNER) -m $(PERM_PROG)
+-INSTALL_DATA	= $(INSTALL) -c -g $(GROUP) -o $(OWNER) -m $(PERM_DATA)
+-INSTALL_SETUID	= $(INSTALL) -c -g $(GROUP) -o $(OWNER) -m $(PERM_SETUID)
+-INSTALL_DIR	= $(INSTALL) -g $(GROUP) -o $(OWNER) -m $(PERM_DIR) -d
++INSTALL_PROG	= $(BSD_INSTALL_SCRIPT)
++INSTALL_DATA	= $(BSD_INSTALL_DATA)
++INSTALL_SETUID	= $(BSD_INSTALL_PROGRAM) -g $(GROUP) -o $(OWNER) -m $(PERM_SETUID)
++INSTALL_DIR	= $(BSD_INSTALL_DATA_DIR) -g $(GROUP) -o $(OWNER) -m $(PERM_DIR) -d
+ # extra prefix for installation
+ PREFIX		=
  
- # library name
- # LIB		= fidogate.a			# OS2
-- LIB		= libfidogate.a
-+ LIB		= libfidogate.la
