@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/31 17:18:45 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2005/03/02 05:35:27 minskim Exp $
 
 --- setup.py.orig	2003-12-17 14:55:18.000000000 -0600
 +++ setup.py
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/31 17:18:45 minskim Exp $
  
    LIBS =        ["dbxml-1.2",
 -                 "db_cxx-4.2",
-+                 "db4_cxx-4.2",
++                 "db4_cxx-4.3",
                   "pathan", "xerces-c"]
  
    DATAFILES =   []
