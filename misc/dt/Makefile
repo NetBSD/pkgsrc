@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2001/07/13 14:41:20 fredb Exp $
+# $NetBSD: Makefile,v 1.13 2002/02/10 22:49:53 fredb Exp $
 #
 
 DISTNAME=	dt-1.1.7
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=   ${MASTER_SITE_LOCAL}
 
