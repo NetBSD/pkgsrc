@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/05/31 12:59:56 seb Exp $
+$NetBSD: distinfo,v 1.2 2002/09/16 08:47:27 uebayasi Exp $
 
 SHA1 (TeXfamily/texfam-1.2.tar.gz) = 510ef7048c1353a75d84d548738e8e2a94d83be9
 Size (TeXfamily/texfam-1.2.tar.gz) = 154286 bytes
@@ -14,16 +14,16 @@ SHA1 (TeXfamily/dvi2ps-3.2j.tar.gz) = 3f055f7388ebe9f9bf873374eda7c612462207fe
 Size (TeXfamily/dvi2ps-3.2j.tar.gz) = 171083 bytes
 SHA1 (TeXfamily/jmakeindex.tar.gz) = 14e68b3cbd0f80ae383b540a5391d8ccecc4ba57
 Size (TeXfamily/jmakeindex.tar.gz) = 283656 bytes
-SHA1 (TeXfamily/ptex-src-2.1.10.tar.gz) = d5d1cfe0f56d9b4bcd660486d1af8923bc935426
-Size (TeXfamily/ptex-src-2.1.10.tar.gz) = 132496 bytes
-SHA1 (TeXfamily/dvipsk-jpatch-p1.5e.tar.gz) = 568bb4ed176603f43e3f5f0c25c6ff778d093399
-Size (TeXfamily/dvipsk-jpatch-p1.5e.tar.gz) = 23009 bytes
-SHA1 (TeXfamily/mendexk2.4f.tar.gz) = aa65a16a2bc965877fb19e8798ee80790917c588
-Size (TeXfamily/mendexk2.4f.tar.gz) = 22371 bytes
-SHA1 (TeXfamily/ptex2.1.10-11.patch) = 8fcef65143761e1862d9e9c80f98a2e5211f57b0
-Size (TeXfamily/ptex2.1.10-11.patch) = 4430 bytes
-SHA1 (patch-aa) = dfc441babfff2fefee43dd38a6f1393859f1d370
-SHA1 (patch-ab) = 6dc92be09afbce61d62468873c21add1564ac02c
+SHA1 (TeXfamily/ptex-src-3.0.1.tar.gz) = 132ac11c5fad0ffb34a10739d9eeb5fa8a5b0db3
+Size (TeXfamily/ptex-src-3.0.1.tar.gz) = 136635 bytes
+SHA1 (TeXfamily/dvipsk-jpatch-p1.5g.tar.gz) = 0280863c8c4908d84b4f79475ec5407ad0ab8f81
+Size (TeXfamily/dvipsk-jpatch-p1.5g.tar.gz) = 24053 bytes
+SHA1 (TeXfamily/mendexk2.5.tar.gz) = 223695d92aec02b4814b247bc1dbf5a6332f140d
+Size (TeXfamily/mendexk2.5.tar.gz) = 25850 bytes
+SHA1 (TeXfamily/ptex-src-3.0.1.patch) = f2d3f1d3a9e69241ea4da08fbb4c8cc11693c80a
+Size (TeXfamily/ptex-src-3.0.1.patch) = 1169 bytes
+SHA1 (patch-aa) = 03e327921d44ffb12f6ce8547553935fb0273f1c
+SHA1 (patch-ab) = c6c2ed23121e14e9e123bfb6298743cfbd34f959
 SHA1 (patch-ac) = eeb266e3fc5a6b646ffc498c08107a9dd76c6660
 SHA1 (patch-ad) = 3292baba0f31f191c13a12dd3cd39e8bd2e091f7
 SHA1 (patch-ae) = 644182534b6001d167b45b25378c33873563ef61

@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/05/31 12:59:50 seb Exp $
+# $NetBSD: Makefile,v 1.2 2002/09/16 08:48:29 uebayasi Exp $
 
 DISTNAME=	TeXfamily-share-1.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	japanese print
 MASTER_SITES=	ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2/ \
 		ftp://ftp.math.s.chiba-u.ac.jp/tex/texfam-1.2.1/ \
 		ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/tetex/ \
 		ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/jvf/
-DISTFILES=	ptex-texmf-1.10${EXTRACT_SUFX} \
+DISTFILES=	ptex-texmf-2.0${EXTRACT_SUFX} \
 		texfam-texmf-latex209${EXTRACT_SUFX} \
 		texfam-texmf-j1.9${EXTRACT_SUFX} \
 		texfam-texmf-j1.9.1${EXTRACT_SUFX} \
 		texfam-texmf-m0.8${EXTRACT_SUFX} \
 		mulfonts-vf${EXTRACT_SUFX} mulfonts-subtfm${EXTRACT_SUFX} \
-		nmin-ngoth${EXTRACT_SUFX} standard${EXTRACT_SUFX} \
-		morisawa${EXTRACT_SUFX}
+		jis${EXTRACT_SUFX} nmin-ngoth${EXTRACT_SUFX} \
+		standard${EXTRACT_SUFX} morisawa${EXTRACT_SUFX}
 
 MAINTAINER=	kei@netbsd.org
 COMMENT=	Machine-independent part of TeXfamily (pTeX, JTeX, MuLTeX)
@@ -23,8 +23,8 @@ DEPENDS+=	teTeX>=1.0.7nb1:../../print/teTeX
 
 DIST_SUBDIR=	TeXfamily
 WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	nmin-ngoth${EXTRACT_SUFX} standard${EXTRACT_SUFX} \
-		morisawa${EXTRACT_SUFX}
+EXTRACT_ONLY=	jis${EXTRACT_SUFX} nmin-ngoth${EXTRACT_SUFX} \
+		standard${EXTRACT_SUFX} morisawa${EXTRACT_SUFX}
 NO_PATCH=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
@@ -33,9 +33,9 @@ PLIST_SRC=	${WRKDIR}/PLIST_SRC
 
 do-install:
 	@${INSTALL_DATA_DIR} ${LOCALBASE}/share/texmf.local
-.for f in ptex-texmf-1.10 texfam-texmf-latex209 texfam-texmf-j1.9 \
+.for f in ptex-texmf-2.0 texfam-texmf-latex209 texfam-texmf-j1.9 \
     texfam-texmf-j1.9.1 texfam-texmf-m0.8 \
-    mulfonts-vf mulfonts-subtfm nmin-ngoth standard morisawa
+    mulfonts-vf mulfonts-subtfm jis nmin-ngoth standard morisawa
 	@${GTAR} -plzx -C ${LOCALBASE}/share/texmf.local \
 		-f ${DISTDIR}/${DIST_SUBDIR}/${f}${EXTRACT_SUFX} \
 		--exclude=ls-R
@@ -43,7 +43,7 @@ do-install:
 	@${INSTALL_DATA_DIR} ${LOCALBASE}/share/texmf.local/doc/fonts
 	@${GTAR} Ccf ${WRKDIR}/morisawa/tfm/ptex - . | \
 		${GTAR} Cxf ${LOCALBASE}/share/texmf.local/fonts/tfm/ptex -
-.for font in nmin-ngoth standard morisawa
+.for font in jis nmin-ngoth standard morisawa
 	@${GTAR} Ccf ${WRKDIR}/${font} - tfm/dvips vf | \
 		${GTAR} Cxf ${LOCALBASE}/share/texmf.local/fonts -
 	@${INSTALL_DATA} ${WRKDIR}/${font}/README.txt \

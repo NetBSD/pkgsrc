@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/05/31 12:59:56 seb Exp $
+$NetBSD: patch-aa,v 1.2 2002/09/16 08:47:28 uebayasi Exp $
 
---- texk/web2c/ptex-src-2.1.10/Makefile.in.orig	Thu Feb  8 17:56:34 2001
-+++ texk/web2c/ptex-src-2.1.10/Makefile.in	Tue Oct 23 14:47:40 2001
+--- texk/web2c/ptex-3.0.1/Makefile.in.orig	Fri Jan 18 17:25:31 2002
++++ texk/web2c/ptex-3.0.1/Makefile.in
 @@ -4,10 +4,15 @@
  
  default: programs formats
@@ -19,8 +19,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 12:59:56 seb Exp $
  
  # Used for triptrap.
  DIFF = diff
-@@ -105,6 +110,9 @@
- 	fi
+@@ -96,6 +101,9 @@
+ 	$(srcdir)/tie -c ptex.ch ptex.web ptex-base.ch $(srcsp)
  
  ### TFtoPL
 +ptftopl: tftopl
@@ -28,9 +28,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 12:59:56 seb Exp $
 +	$(LN) tftopl ptftopl
  tftopl: tftopl.o $(plib_o) $(kpathsea) $(proglib)
  	$(kpathsea_link) tftopl.o $(plib_o) $(LOADLIBES)
- tftopl.o: tftopl.c kanji.h maintain.h ptexhelp.h
-@@ -115,6 +123,9 @@
- 	$(srcdir)/tie -m tftopl.web $(srcdir)/tftopl.web $(srcdir)/tftopl.ch
+ tftopl.o: tftopl.c kanji.h ptexhelp.h
+@@ -114,6 +122,9 @@
+ 
  
  ### PLtoTF
 +ppltotf: pltotf
@@ -38,8 +38,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 12:59:56 seb Exp $
 +	$(LN) pltotf ppltotf
  pltotf: pltotf.o $(plib_o) $(kpathsea) $(proglib)
  	$(kpathsea_link) pltotf.o $(plib_o) $(LOADLIBES)
- pltotf.o: pltotf.c kanji.h maintain.h ptexhelp.h
-@@ -135,6 +146,9 @@
+ pltotf.o: pltotf.c kanji.h ptexhelp.h
+@@ -141,6 +152,9 @@
  	$(LN) $(srcdir)/dvitype.web pdvitype.web
  
  ### jBibTeX
@@ -48,8 +48,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 12:59:56 seb Exp $
 +	$(LN) jbibtex pjbibtex
  jbibtex: jbibtex.o jbibextra.o $(plib_o) $(kpathsea) $(proglib)
  	$(kpathsea_link) jbibtex.o jbibextra.o $(plib_o) $(LOADLIBES)
- jbibtex.o: jbibtex.c jbibextra.h kanji.h maintain.h ptexhelp.h
-@@ -175,7 +189,12 @@
+ jbibtex.o: jbibtex.c jbibextra.h kanji.h ptexhelp.h
+@@ -182,7 +196,12 @@
  texmf.cnf: $(kpathsea_dir)/texmf.cnf
  	$(SHELL) $(thisdir)/mkconf $< > texmf.cnf
  
@@ -63,7 +63,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 12:59:56 seb Exp $
  
  ptex.fmt: ptex texmf.cnf
  	$(dumpenv) $(MAKE) $(makeargs) files="--progname=ptex ptex.tex min10.tfm" prereq-check
-@@ -183,7 +202,7 @@
+@@ -190,7 +209,7 @@
  
  platex.fmt: ptex texmf.cnf
  	$(dumpenv) $(MAKE) $(makeargs) files="--progname=platex platex.ltx" prereq-check
@@ -72,7 +72,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/05/31 12:59:56 seb Exp $
  
  # This is meant to be called recursively, with $(files) set.
  prereq-check: $(kpathsea_dir)/kpsewhich
-@@ -212,31 +231,31 @@
+@@ -219,31 +238,31 @@
  
  # The actual binary executables and pool files.
  install-programs: $(programs)
