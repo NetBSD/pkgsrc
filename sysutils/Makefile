@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2002/06/01 20:12:27 cjep Exp $
+# $NetBSD: Makefile,v 1.139 2002/06/02 08:46:58 cjep Exp $
 #
 
 COMMENT=	System utilities
@@ -84,6 +84,7 @@ SUBDIR+=	rox
 SUBDIR+=	rox-base
 SUBDIR+=	rox-edit
 SUBDIR+=	rox-lib
+SUBDIR+=	rox-memo
 SUBDIR+=	rox-session
 SUBDIR+=	rox-wrappers
 SUBDIR+=	rtty
