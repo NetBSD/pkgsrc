@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/11/07 13:22:53 frueauf Exp $
+
+*** Makefile.orig	Sat Nov  7 00:12:47 1998
+--- Makefile	Sat Nov  7 00:20:43 1998
+***************
+*** 18,25 ****
+  CC=gcc
+  CFLAGS= -O2 -Wall -fsigned-char
+  
+! GDLIB = /usr/local/include/gd
+! LIBS= -lgd -lm
+  
+  all: webalizer
+  
+--- 18,25 ----
+  CC=gcc
+  CFLAGS= -O2 -Wall -fsigned-char
+  
+! GDLIB = ${PREFIX}/include/gd
+! LIBS= -L${PREFIX}/lib -lgd -lm
+  
+  all: webalizer
+  
