@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2001/01/15 16:32:27 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2001/01/15 16:51:58 jlam Exp $
 
 .include "../../www/php4/Makefile.common"
 
+PKGNAME=		php-${PHP_VERS}
 CATEGORIES+=		lang
 
 MAINTAINER=		jlam@netbsd.org
