@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.4 2004/11/04 10:35:56 adam Exp $
+# $NetBSD: Makefile,v 1.5 2005/03/29 12:59:32 adam Exp $
 
-DISTNAME=	libsigc++-2.0.6
-PKGNAME=	libsigc++2-2.0.6
+DISTNAME=	libsigc++-2.0.10
+PKGNAME=	libsigc++2-2.0.10
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libsigc/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsigc++/2.0/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bsieker@freenet.de
 HOMEPAGE=	http://libsigc.sourceforge.net/
 COMMENT=	Type-safe callback system for C++ programs
 
-USE_BUILDLINK3=		YES
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+USE_BUILDLINK3=		yes
 USE_GNU_TOOLS+=		m4 make
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE=	sigc++-2.0.pc.in
 
