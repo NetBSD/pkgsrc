@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.1.1.1 2004/03/11 13:03:59 grant Exp $
+$NetBSD: README.Solaris,v 1.2 2004/03/15 14:21:37 grant Exp $
 
 You will need a working C compiler. Both gcc 2.95.3 and Sun
 WorkShop 5 have been tested.
@@ -10,7 +10,6 @@ process and to build packages.
 	- SUNWarc
 	- SUNWbtool
 	- SUNWtoo
-	- SUNWlibm
 
 Please note the use of GNU binutils on Solaris is not supported.
 
