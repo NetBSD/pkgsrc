@@ -1,0 +1,57 @@
+--- info/customize~	Mon Sep 15 03:56:06 1997
++++ info/customize	Fri Aug 28 22:11:30 1998
+@@ -1,6 +1,11 @@
+ This is Info file ../info/customize, produced by Makeinfo version 1.68
+ from the input file customize.texi.
+ 
++INFO-DIR-SECTION Editors
++START-INFO-DIR-ENTRY
++* Customize: (customize).	The GNU Emacs customization tool.
++END-INFO-DIR-ENTRY
++
+ Distribution
+ ************
+ 
+--- info/info~	Thu May 28 14:14:49 1998
++++ info/info	Fri Aug 28 22:12:46 1998
+@@ -1,6 +1,11 @@
+ This is Info file ../info/info, produced by Makeinfo version 1.68 from
+ the input file info.texi.
+ 
++INFO-DIR-SECTION Editors
++START-INFO-DIR-ENTRY
++* Info: (info).		The on-line, menu-driven GNU documentation system.
++END-INFO-DIR-ENTRY
++
+    This file describes how to use Info, the on-line, menu-driven GNU
+ documentation system.
+ 
+--- info/reftex~	Sun Apr 26 15:19:42 1998
++++ info/reftex	Fri Aug 28 22:13:45 1998
+@@ -1,6 +1,12 @@
+ This is Info file ../info/reftex, produced by Makeinfo version 1.68
+ from the input file reftex.texi.
+ 
++INFO-DIR-SECTION Editors
++START-INFO-DIR-ENTRY
++* RefTeX: (reftex).	Labels, references and citations for LaTeX
++			documents with Emacs.
++END-INFO-DIR-ENTRY
++
+    This file documents RefTeX, a package to do labels, references and
+ citations for LaTeX documents with Emacs.
+ 
+--- info/widget~	Mon Mar 30 00:12:27 1998
++++ info/widget	Fri Aug 28 22:14:36 1998
+@@ -1,6 +1,11 @@
+ This is Info file ../info/widget, produced by Makeinfo version 1.68
+ from the input file widget.texi.
+ 
++INFO-DIR-SECTION Editors
++START-INFO-DIR-ENTRY
++* Widget: (widget).	The GNU Emacs text widget package.
++END-INFO-DIR-ENTRY
++
+ 
+ File: widget,  Node: Top,  Next: Introduction,  Prev: (dir),  Up: (dir)
+ 

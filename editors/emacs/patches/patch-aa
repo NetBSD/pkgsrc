@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 1998/08/31 20:29:28 tron Exp $
+$NetBSD: patch-aa,v 1.6 1998/09/01 20:04:34 mellon Exp $
 
 --- ./man/widget.texi.orig    Sat Oct 11 04:47:03 1997
 +++ ./man/widget.texi Sat Oct 11 04:46:38 1997
@@ -152,35 +152,3 @@ $NetBSD: patch-aa,v 1.5 1998/08/31 20:29:28 tron Exp $
  @comment !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  @comment @setchapternewpage odd !! we don't want blank pages !!
  @comment %**end of header (This is for running Texinfo on a region)
---- man/Makefile.in.orig	Sat May 16 21:00:22 1998
-+++ man/Makefile.in	Mon Aug 31 00:53:10 1998
-@@ -14,7 +14,7 @@
- MAKEINFO = makeinfo
- INFO_TARGETS = ../info/emacs ../info/ccmode ../info/cl ../info/customize \
- 	        ../info/dired-x ../info/ediff ../info/forms ../info/gnus \
--		../info/info ../info/message ../info/mh-e ../info/reftex \
-+		../info/message ../info/mh-e ../info/reftex \
- 		../info/sc ../info/vip ../info/viper ../info/widget
- DVI_TARGETS = emacs.dvi cc-mode.dvi cl.dvi  customize.dvi dired-x.dvi \
- 		 ediff.dvi forms.dvi gnus.dvi message.dvi mh-e.dvi \
-@@ -70,6 +70,7 @@
- 	${srcdir}/glossary.texi \
- 	${srcdir}/ack.texi
- 
-+all: info
- info: $(INFO_TARGETS)
- 
- dvi: $(DVI_TARGETS)
-@@ -78,12 +79,6 @@
- # in srcdir.  There is no provision for Info files
- # to exist in the build directory.
- # In a distribution of Emacs, the Info files should be up to date.
--
--../info/info: ${INFOSOURCES}
--	cd $(srcdir); $(MAKEINFO) --no-split info.texi
--
--info.dvi: ${INFOSOURCES}
--	$(ENVADD) $(TEXI2DVI) ${srcdir}/info.texi
- 
- ../info/emacs: ${EMACSSOURCES}
- 	cd $(srcdir); $(MAKEINFO) emacs.texi
