@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/05/08 02:06:07 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2004/07/27 15:39:21 recht Exp $
 
---- configure.orig	Fri Sep  5 01:16:52 2003
-+++ configure	Fri Sep  5 01:16:58 2003
-@@ -8710,7 +8710,7 @@
+--- configure.orig	2004-05-08 04:24:24.000000000 +0200
++++ configure	2004-07-27 17:32:35.000000000 +0200
+@@ -20100,7 +20100,7 @@
        LIBS="$LIBS -l$dbname"
        echo "$as_me:$LINENO: checking for libdb (-l$dbname)" >&5
  echo $ECHO_N "checking for libdb (-l$dbname)... $ECHO_C" >&6
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/05/08 02:06:07 xtraeme Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    if test "$cross_compiling" = yes; then
-@@ -8790,7 +8790,7 @@
+@@ -20179,7 +20179,7 @@
  echo "${ECHO_T}$found_libdb" >&6
        CFLAGS="$ac_save_CFLAGS"
        LIBS="$ac_save_LIBS"
