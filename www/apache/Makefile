@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2004/02/18 13:33:41 jlam Exp $
+# $NetBSD: Makefile,v 1.139 2004/02/28 22:18:35 snj Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -160,7 +160,7 @@ PKG_GROUPS=		${APACHE_GROUP}
 PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\\ user
 
 MAKE_ENV+=		CHMOD="${CHMOD}" CHOWN="${CHOWN}" XARGS="${XARGS}"
-MAKE_ENV+=		FIND="${FIND}"
+MAKE_ENV+=		FIND="${FIND}" CHGRP="${CHGRP}"
 
 post-extract:
 	@${CP} ${FILESDIR}/ap_include_extern.h ${WRKSRC}/src/include
