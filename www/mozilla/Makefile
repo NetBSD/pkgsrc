@@ -3,10 +3,10 @@
 # Date created:		08 Apr 1998
 # Whom:			fvdl
 #
-# $NetBSD: Makefile,v 1.2 1998/04/09 08:21:54 frueauf Exp $
+# $NetBSD: Makefile,v 1.3 1998/04/09 09:59:55 fvdl Exp $
 #
 
-DISTNAME=	unix
+DISTNAME=	unix_19980331
 PKGNAME=	mozilla
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/mozilla/1998-03-31/ \
