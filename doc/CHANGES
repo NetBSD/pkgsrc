@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3080 2003/08/23 15:06:24 drochner Exp $
+$NetBSD: CHANGES,v 1.3081 2003/08/23 16:43:46 recht Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3312,3 +3312,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Added hf6to4-1.0 [hubertf 2003-03-23]
 	Updated qt3-qscintilla to 1.2 [drochner 2003-03-23]
 	Updated py-qt3 to 3.8 [drochner 2003-03-23]
+	Updated mbmon to 2.03 [recht 2003-03-23]
+	Updated xmbmon to 2.03 [recht 2003-03-23]
