@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2499 2004/11/27 00:24:56 epg Exp $
+$NetBSD: TODO,v 1.2500 2004/11/27 00:27:49 hubertf Exp $
 
 Suggested new packages
 ======================
@@ -1295,7 +1295,6 @@ Suggested package updates
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vobcopy-0.5.14
-	o vpnc-0.3.2
 	o vsftpd-2.01 [pkg/26811]
 	o vttest-20041107
 	o w32api-3.1
@@ -1338,7 +1337,6 @@ Suggested package updates
 	o xine-lib-1-rc7
 	o xkbset-0.5
 	o xlispstat-3.52.20
-	o xlockmore-5.14.1
 	o xm7-303
 	o xmame-0.88
 	o xmbdfed-4.5
