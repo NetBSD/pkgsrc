@@ -1,18 +1,19 @@
-# Makefile for:		macutil
+# New packages collection makefile for:		macutil
 # Version required:	2.0b3
 # Date created:		13 March 1998
 # Whom:			mycroft
 #
-# $NetBSD: Makefile,v 1.2 1998/03/13 22:21:12 mycroft Exp $
+# $NetBSD: Makefile,v 1.3 1998/03/16 10:44:43 frueauf Exp $
 
 DISTNAME=	macutil
 PKGNAME=	macutil-2.0b3
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.cwi.nl/pub/dik/
 DISTFILES=	macutil2.0b3.shar.Z
-MAKEFILE=	makefile
 
 MAINTAINER=	mycroft@NetBSD.ORG
+
+MAKEFILE=	makefile
 
 MAN1=		macunpack.1 hexbin.1 macsave.1 macstream.1 binhex.1 tomac.1 \
 		frommac.1 macutil.1
@@ -20,7 +21,7 @@ MAN1=		macunpack.1 hexbin.1 macsave.1 macstream.1 binhex.1 tomac.1 \
 do-extract:
 	@${RM} -rf ${WRKDIR}
 	@${MKDIR} ${WRKDIR}
-	cd ${WRKDIR} && gunzip <${_DISTDIR}/${DISTFILES} | sh
+	cd ${WRKDIR} && ${GUNZIP_CMD} <${_DISTDIR}/${DISTFILES} | sh
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/macunpack/macunpack \
