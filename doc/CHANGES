@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7276 2004/09/27 14:19:44 wiz Exp $
+$NetBSD: CHANGES,v 1.7277 2004/09/27 16:12:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4470,3 +4470,6 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated xscreensaver to 4.18 [wiz 2004-09-27]
 	Updated xscreensaver-demo to 4.18 [wiz 2004-09-27]
 	Updated xscreensaver-gnome to 4.18 [wiz 2004-09-27]
+	Updated gtar-base to 1.14 [wiz 2004-09-27]
+	Updated gtar-info to 1.14 [wiz 2004-09-27]
+	Updated gtar to 1.14 [wiz 2004-09-27]
