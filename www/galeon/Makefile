@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2002/06/12 03:00:44 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2002/07/16 13:16:05 agc Exp $
 
 DISTNAME=	galeon-1.2.5
 CATEGORIES=	www
@@ -11,7 +11,6 @@ COMMENT=	GNOME web browser based on gecko (mozilla rendering engine)
 CONFLICTS=	galeon-current-[0-9]*
 
 BUILD_DEPENDS+=	xml-i18n-tools>=0.8.1:../../textproc/xml-i18n-tools
-DEPENDS+=	scrollkeeper>=0.2:../../textproc/scrollkeeper
 DEPENDS+=	mozilla>=1.0:../../www/mozilla
 
 USE_X11BASE=	yes
@@ -30,6 +29,7 @@ CONFIGURE_ARGS+= --with-mozilla-includes=${PREFIX}/include/mozilla \
 .include	"../../devel/GConf/buildlink.mk"
 .include	"../../devel/oaf/buildlink.mk"
 .include	"../../textproc/libxml/buildlink.mk"
+.include	"../../textproc/scrollkeeper/buildlink.mk"
 .include	"../../converters/libiconv/buildlink.mk"
 .include	"../../graphics/gdk-pixbuf-gnome/buildlink.mk"
 .include	"../../devel/gettext-lib/buildlink.mk"
