@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/09/22 22:33:13 wulf Exp $
 include/hamlib/rig.h
 include/hamlib/riglist.h
 include/hamlib/rig_dll.h
@@ -31,11 +31,18 @@ lib/hamlib-sartek.la
 lib/hamlib-tapr.la
 lib/hamlib-rotorez.la
 lib/libhamlib++.la
+lib/hamlib-kit.la
+lib/hamlib-skanti.la
+lib/hamlib-winradio.la
 bin/rigctl
+bin/rigmem
+bin/rigswr
 bin/rotctl
 sbin/rpc.rigd
 sbin/rpc.rotd
 man/man1/rigctl.1
+man/man1/rigmem.1
+man/man1/rigswr.1
 man/man1/rotctl.1
 man/man8/rpc.rigd.8
 man/man8/rpc.rotd.8
