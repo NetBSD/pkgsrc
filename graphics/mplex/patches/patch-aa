@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2003/12/19 18:25:57 agc Exp $
+
+--- mplex/multplex.cc	2003/12/19 18:16:29	1.1
++++ mplex/multplex.cc	2003/12/19 18:17:25
+@@ -3,6 +3,7 @@
+ #include <math.h>
+ #include <stdlib.h>
+ #include <unistd.h>
++#include <assert.h>
+ 
+ #include <mjpeg_types.h>
+ #include <mjpeg_logging.h>
