@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/28 05:56:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2004/12/04 17:20:47 taca Exp $
 ${RUBY_DOCDIR}/fox/apes02.html
 ${RUBY_DOCDIR}/fox/apes03.html
 ${RUBY_DOCDIR}/fox/book.html
@@ -198,7 +198,7 @@ ${RUBY_SITELIBDIR}/fox/signal.rb
 ${RUBY_SITELIBDIR}/fox/timeout.rb
 ${RUBY_SITELIBDIR}/fox/undolist.rb
 ${RUBY_SITELIBDIR}/fox/version.rb
-${RUBY_SITEARCHLIBDIR}/fox.so
+${RUBY_SITEARCHLIBDIR}/fox.${RUBY_DLEXT}
 @dirrm ${RUBY_DOCDIR}/fox/images
 @dirrm ${RUBY_DOCDIR}/fox
 @dirrm ${RUBY_EXAMPLESDIR}/fox/textedit

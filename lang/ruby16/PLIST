@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/27 14:14:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/12/04 17:20:46 taca Exp $
 bin/irb${RUBY_VER}
 bin/${RUBY_NAME}
 lib/libruby${RUBY_VER}.so
@@ -8,23 +8,23 @@ ${RUBY_ARCHLIBDIR}/config.h
 ${RUBY_ARCHLIBDIR}/defines.h
 ${RUBY_ARCHLIBDIR}/dln.h
 ${RUBY_ARCHLIBDIR}/env.h
-${RUBY_ARCHLIBDIR}/etc.so
-${RUBY_ARCHLIBDIR}/fcntl.so
+${RUBY_ARCHLIBDIR}/etc.${RUBY_DLEXT}
+${RUBY_ARCHLIBDIR}/fcntl.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/intern.h
 ${RUBY_ARCHLIBDIR}/lib${RUBY_NAME}.a
-${RUBY_ARCHLIBDIR}/nkf.so
+${RUBY_ARCHLIBDIR}/nkf.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/node.h
-${RUBY_ARCHLIBDIR}/pty.so
+${RUBY_ARCHLIBDIR}/pty.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/rbconfig.rb
 ${RUBY_ARCHLIBDIR}/re.h
 ${RUBY_ARCHLIBDIR}/regex.h
 ${RUBY_ARCHLIBDIR}/ruby.h
 ${RUBY_ARCHLIBDIR}/rubyio.h
 ${RUBY_ARCHLIBDIR}/rubysig.h
-${RUBY_ARCHLIBDIR}/sdbm.so
-${RUBY_ARCHLIBDIR}/socket.so
+${RUBY_ARCHLIBDIR}/sdbm.${RUBY_DLEXT}
+${RUBY_ARCHLIBDIR}/socket.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/st.h
-${RUBY_ARCHLIBDIR}/syslog.so
+${RUBY_ARCHLIBDIR}/syslog.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/util.h
 ${RUBY_ARCHLIBDIR}/version.h
 @dirrm ${RUBY_ARCHLIBDIR}
