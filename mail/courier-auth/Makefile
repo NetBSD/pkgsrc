@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/02/21 14:43:15 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2004/02/22 02:18:31 jlam Exp $
 
 PKGNAME=	courier-auth-${BASE_VERS}
 CATEGORIES=	security
@@ -15,6 +15,8 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 .include "../courier-auth/Makefile.authdaemond"
+
+WRKSRC_FILES+=		imap/system-auth.authpam
 
 .if defined(_STRIPFLAG_INSTALL) && !empty(_STRIPFLAG_INSTALL:M-s)
 INSTALL_TARGET=		install-strip
@@ -36,6 +38,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/authlib/authdaemonrc			\
 		${EGDIR}/authdaemonrc.dist
+	${INSTALL_DATA} ${WRKSRC}/imap/system-auth.authpam ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${SYSCONFTOOL}
 
 .include "../../mk/bsd.pkg.mk"
