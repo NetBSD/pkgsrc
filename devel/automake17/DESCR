@@ -5,5 +5,5 @@ conform to the GNU standards for Makefile variables and targets.
 Automake assumes the project uses autoconf.  If you want automatic
 dependency tracking support, the use of GNU make is also required.
 
-This package contains the latest release of the 1.7 version of
-automake.
+This package contains the latest release of the old 1.7 version of
+automake.  For new development please use the ``automake'' package.
