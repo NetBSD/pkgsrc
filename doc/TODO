@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1555 2004/03/31 04:47:55 snj Exp $
+$NetBSD: TODO,v 1.1556 2004/03/31 04:59:18 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -133,7 +133,6 @@ Suggested package updates
 	o SDL-1.2.7
 	o Xaw3d-1.5E
 	o Xbae-4.50.0
-	o abiword-2.0.5
 	o afio-2.5
 	o amanda-2.4.4p2 [pkg/24550]
 	o ap-python-2.7.10
