@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/06/01 11:23:24 rh Exp $
+# $NetBSD: Makefile,v 1.5 2000/07/25 08:28:03 jlam Exp $
 #
 
 DISTNAME=	netcdf-3.4
@@ -11,10 +11,9 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://www.unidata.ucar.edu/packages/netcdf/index.html
 
+USE_FORTRAN=	# defined
+USE_LIBTOOL=	# defined
+GNU_CONFIGURE=	# defined
 CONFIGURE_ENV+=	CPPFLAGS="-Df2cFortran -Dunix"
-
-USE_FORTRAN=	yes
-USE_PKGLIBTOOL=	yes
-GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.pkg.mk"
