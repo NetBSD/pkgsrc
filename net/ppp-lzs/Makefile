@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/27 00:16:52 reed Exp $
+# $NetBSD: Makefile,v 1.2 2004/10/15 20:29:58 kristerw Exp $
 
 DISTNAME=	ppp-lzs-1.2
 CATEGORIES=	net
@@ -14,6 +14,7 @@ ONLY_FOR_PLATFORM= 	NetBSD-*-*
 .include "../../mk/bsd.prefs.mk"
 
 MAKE_ENV+=	NETBSDSRCDIR="${NETBSDSRCDIR}"
+MAKE_ENV+=	S="${NETBSDSRCDIR}/sys"
 MESSAGE_SUBST+= PREFIX="${PREFIX}"
 
 pre-extract:
