@@ -1,0 +1,150 @@
+$NetBSD: patch-aa,v 1.1.1.1 1999/09/16 13:35:34 wennmach Exp $
+
+--- /dev/null	Thu Aug 26 16:32:52 1999
++++ f90.0	Thu Aug 26 16:55:13 1999
+@@ -0,0 +1,145 @@
++
++NAME
++  f90    - Fortran 90 Compiler            
++           Fortran 90 to Fortran 77 Translator 
++           Version 3.4 M     (1.03.9) 
++
++USAGE
++  f90     [<f90_option>]... [<g77_option>]... 
++          [-Wv,<v_option>[,<v_option>]...] [files]
++
++DESCRIPTION
++  The f90 command compiles Fortran 90 files by invoking
++  the vf90 precompiler and the g77 Fortran compiler.
++
++  Most g77 compiler options are accepted by f90.
++  Options to vf90 may be passed using the -Wv "hand off" option. 
++
++  Input files for f90 may be one or more of the following: 
++
++  1. filename with a .f90 suffix: free format Fortran 90 source file.
++  2. filename with a .f suffix:   fixed format Fortran 90 source file.
++  3. filename with a .m suffix:   Fortran 90 module file.
++  4. filename with a .s suffix:   assembler source file.
++  5. filename with a .o suffix:   object file.
++  6. filename with a .a suffix:   archive file. 
++
++Options:
++  -c         suppress the link editing phase of the 
++             compilation and do not remove any object 
++             files produced.
++
++  -dryrun    display but do not execute f90 internal 
++             commands. f90 will still check for the 
++             existence of essential executable files.
++
++
++  -l<suffix> search the library file lib<suffix>.a.    
++
++  -L<dir>    search directory <dir> for libraries prior
++             to searching the default directories.
++
++  -o<name>   name the final output file <name>. When used
++             with -c, names the object file, otherwise 
++             names the link edited output file. (The 
++             default link edited output file is named 
++             a.out.) -o is ignored if the -vo option is
++             used.
++
++  -v         display f90 internal commands as execution
++             progresses.
++
++  -vo        execute vf90 pass only. Certain compiler options
++             included on the command line may be ignored.
++
++  -vn        execute g77 compiler only. vf90 options
++             included on the command line are ignored.
++             Note that the -vo and -vn options are 
++             mutually exclusive.
++
++  -w         suppress warning messages
++
++  -Wv        hand off arguments to pass vf90.  vf90 options 
++             must be separated by commas and may not 
++             contain embedded blank space characters. 
++             Examples:      
++                -Wv,-da     
++                -Wv,-e78,-da
++             The -o vf90 option may not be used. 
++
++  -Yvc,<path> substitute for g77 an alternate executable
++             whose pathname is specified by <path>.
++
++  -Yvv,<path> substitute for vf90 an alternate executable
++             whose pathname is specified by <path>.
++
++
++  <v_option> represents any vf90 option except the -o option.
++
++  <g77_option> represents any g77 compiler option except those
++             listed as unsupported. (See below.)
++
++
++  f90 options and input files may appear in any order.
++
++  For a detailed description of each option, please refer
++  to the vf90 User's Guide.
++
++EXAMPLES
++
++    f90 -c -Wv,-ya,-yb file1.f90 
++
++    Runs vf90 with free format input and free format output
++    disabled on file1.f90, compiles the intermediate 
++    file Vfile1.f, and produces the object file file1.o.
++    The linker is not invoked. Note that the .f90 
++    extension implies that the file is free format,
++    hence these flags are necessary if the code is in
++    fixed format.
++
++CAVEATS
++  Module files (files with .m extensions) should 
++  be specified on the f90 command line before
++  the Fortran 90 source file(s) which use them.
++
++  The following g77 options are not fully supported by f90:
++     -S 
++     -E 
++     -D 
++     -U 
++  
++  A warning or error message will be output whenever
++  an unsupported option is encountered.
++  
++
++FILES
++  file.f90             free format Fortran 90 source
++                       file
++  file.f               fixed format Fortran 90 source
++                       file
++  file.m               Fortran 90 module file
++  file.o               object file
++  file.s               assembly language file
++  Vfile.f              intermediate file produced after 
++                       pass vf90. Contains preprocessed 
++                       Fortran 77 source code. 
++  a.out                link edited output file
++  TMPDIR/*             temporary files
++  BINDIR/g77           Fortran 77 compiler
++  BINDIR/ld            link editor
++
++  Executable files corresponding to g77 passes
++  are not listed nor are the intermediate files
++  produced by g77.
++
++WARNINGS
++  Use of the -Yvc,<path>  and -Yvv,<path> options will 
++  disable most of the command line argument error checks  
++  performed by f90. 
++
++SEE ALSO
++  g77(1) vf90(1) ld(1)
++
++DIAGNOSTICS
++  Returns 0 upon successful completion.
++

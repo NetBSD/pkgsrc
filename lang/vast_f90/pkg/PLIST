@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/09/16 13:35:34 wennmach Exp $
+emul/linux/usr/bin/f90
+emul/linux/usr/bin/vf90
+emul/linux/usr/lib/libvast90.a
+emul/linux/usr/man/cat1/f90.0
+emul/linux/usr/share/doc/vast_f90/90to77.ps
+emul/linux/usr/share/doc/vast_f90/LICENSE
+emul/linux/usr/share/doc/vast_f90/README
+emul/linux/usr/share/doc/vast_f90/restrict.txt
+emul/linux/usr/share/doc/vast_f90/vastf90.pdf
+emul/linux/usr/share/doc/vast_f90/versions.txt
+@dirrm emul/linux/usr/man/cat1
+@dirrm emul/linux/usr/share/doc/vast_f90
+bin/f90
+bin/vf90
+man/cat1/f90.0
+man/cat1/vf90.0
+share/doc/vast_f90/90to77.ps
+share/doc/vast_f90/LICENSE
+share/doc/vast_f90/README
+share/doc/vast_f90/restrict.txt
+share/doc/vast_f90/vastf90.pdf
+share/doc/vast_f90/versions.txt
+@dirrm share/doc/vast_f90
