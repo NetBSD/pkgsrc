@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2003/05/23 09:39:52 wiz Exp $
-@comment bin/screensaver-properties-capplet
+@comment $NetBSD: PLIST,v 1.14 2003/06/24 10:22:47 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-demo
@@ -18,6 +17,7 @@ libexec/xscreensaver/atunnel
 libexec/xscreensaver/barcode
 libexec/xscreensaver/blaster
 libexec/xscreensaver/blitspin
+libexec/xscreensaver/blocktube
 libexec/xscreensaver/bouboule
 libexec/xscreensaver/bouncingcow
 libexec/xscreensaver/boxed
@@ -41,6 +41,7 @@ libexec/xscreensaver/config/atunnel.xml
 libexec/xscreensaver/config/barcode.xml
 libexec/xscreensaver/config/blaster.xml
 libexec/xscreensaver/config/blitspin.xml
+libexec/xscreensaver/config/blocktube.xml
 libexec/xscreensaver/config/bouboule.xml
 libexec/xscreensaver/config/bouncingcow.xml
 libexec/xscreensaver/config/boxed.xml
@@ -59,6 +60,7 @@ libexec/xscreensaver/config/cosmos.xml
 libexec/xscreensaver/config/critical.xml
 libexec/xscreensaver/config/crystal.xml
 libexec/xscreensaver/config/cubenetic.xml
+libexec/xscreensaver/config/cubestorm.xml
 libexec/xscreensaver/config/cynosure.xml
 libexec/xscreensaver/config/dangerball.xml
 libexec/xscreensaver/config/decayscreen.xml
@@ -89,6 +91,8 @@ libexec/xscreensaver/config/gears.xml
 libexec/xscreensaver/config/gflux.xml
 libexec/xscreensaver/config/glblur.xml
 libexec/xscreensaver/config/glforestfire.xml
+libexec/xscreensaver/config/glknots.xml
+libexec/xscreensaver/config/glmatrix.xml
 libexec/xscreensaver/config/glplanet.xml
 libexec/xscreensaver/config/glslideshow.xml
 libexec/xscreensaver/config/glsnake.xml
@@ -103,6 +107,7 @@ libexec/xscreensaver/config/helix.xml
 libexec/xscreensaver/config/hopalong.xml
 libexec/xscreensaver/config/hyperball.xml
 libexec/xscreensaver/config/hypercube.xml
+libexec/xscreensaver/config/hypertorus.xml
 libexec/xscreensaver/config/ifs.xml
 libexec/xscreensaver/config/imsmap.xml
 libexec/xscreensaver/config/interference.xml
@@ -207,6 +212,7 @@ libexec/xscreensaver/coral
 libexec/xscreensaver/critical
 libexec/xscreensaver/crystal
 libexec/xscreensaver/cubenetic
+libexec/xscreensaver/cubestorm
 libexec/xscreensaver/cynosure
 libexec/xscreensaver/dangerball
 libexec/xscreensaver/decayscreen
@@ -236,6 +242,8 @@ libexec/xscreensaver/gears
 libexec/xscreensaver/gflux
 libexec/xscreensaver/glblur
 libexec/xscreensaver/glforestfire
+libexec/xscreensaver/glknots
+libexec/xscreensaver/glmatrix
 libexec/xscreensaver/glplanet
 libexec/xscreensaver/glslideshow
 libexec/xscreensaver/glsnake
@@ -249,6 +257,7 @@ libexec/xscreensaver/helix
 libexec/xscreensaver/hopalong
 libexec/xscreensaver/hyperball
 libexec/xscreensaver/hypercube
+libexec/xscreensaver/hypertorus
 libexec/xscreensaver/ifs
 libexec/xscreensaver/imsmap
 libexec/xscreensaver/interference
@@ -352,6 +361,7 @@ man/man1/atunnel.1
 man/man1/barcode.1
 man/man1/blaster.1
 man/man1/blitspin.1
+man/man1/blocktube.1
 man/man1/bouboule.1
 man/man1/bouncingcow.1
 man/man1/boxed.1
@@ -363,11 +373,13 @@ man/man1/bumps.1
 man/man1/cage.1
 man/man1/ccurve.1
 man/man1/circuit.1
+man/man1/cloudlife.1
 man/man1/compass.1
 man/man1/coral.1
 man/man1/critical.1
 man/man1/crystal.1
 man/man1/cubenetic.1
+man/man1/cubestorm.1
 man/man1/cynosure.1
 man/man1/dangerball.1
 man/man1/decayscreen.1
@@ -397,6 +409,8 @@ man/man1/gears.1
 man/man1/gflux.1
 man/man1/glblur.1
 man/man1/glforestfire.1
+man/man1/glknots.1
+man/man1/glmatrix.1
 man/man1/glplanet.1
 man/man1/glslideshow.1
 man/man1/glsnake.1
@@ -410,6 +424,7 @@ man/man1/helix.1
 man/man1/hopalong.1
 man/man1/hyperball.1
 man/man1/hypercube.1
+man/man1/hypertorus.1
 man/man1/ifs.1
 man/man1/imsmap.1
 man/man1/interference.1
@@ -509,10 +524,6 @@ man/man1/xspirograph.1
 man/man1/xsublim.1
 man/man1/xteevee.1
 man/man1/zoom.1
-@comment share/applications/screensaver-properties.desktop
-@comment share/control-center-2.0/capplets/screensaver-properties.desktop
-@comment share/control-center/Desktop/screensaver-properties.desktop
-@comment share/control-center/capplets/screensaver-properties.desktop
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xscreensaver.mo
@@ -535,14 +546,14 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xscreensaver.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xscreensaver.mo
-share/xscreensaver/screensaver-cmndln.xpm
-share/xscreensaver/screensaver-colorselector.xpm
-share/xscreensaver/screensaver-diagnostic.xpm
-share/xscreensaver/screensaver-locking.xpm
-share/xscreensaver/screensaver-power.xpm
-share/xscreensaver/screensaver-snap.xpm
+share/pixmaps/xscreensaver.xpm
+share/xscreensaver/screensaver-cmndln.png
+share/xscreensaver/screensaver-colorselector.png
+share/xscreensaver/screensaver-diagnostic.png
+share/xscreensaver/screensaver-locking.png
+share/xscreensaver/screensaver-power.png
+share/xscreensaver/screensaver-snap.png
 share/xscreensaver/xscreensaver-demo.glade2
-share/xscreensaver/xscreensaver.xpm
 @dirrm share/xscreensaver
 @dirrm libexec/xscreensaver/config
 @dirrm libexec/xscreensaver
