@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2004/12/19 18:59:12 jlam Exp $
+# $NetBSD: Makefile,v 1.19.2.1 2004/12/22 10:49:10 salo Exp $
 
 DISTNAME=	freeradius-1.0.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -20,6 +20,8 @@ USE_PKGINSTALL=		YES
 USE_PERL5=		YES
 LIBTOOLIZE_PLIST=	NO
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
+FILES_SUBST+=		ROOT_USER=${ROOT_USER}
+FILES_SUBST+=		ROOT_GROUP=${ROOT_GROUP}
 
 # This package currently breaks using our libtool.  It does not appear to use
 # libtool properly/fully and as a result the daemon does not compile correctly.
