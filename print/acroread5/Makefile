@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/01/04 12:58:24 cjep Exp $
+# $NetBSD: Makefile,v 1.5.2.1 2003/06/24 09:51:19 grant Exp $
 
 DISTNAME=	acroread5	# Overridden below
-PKGNAME=	acroread5-5.06
+PKGNAME=	acroread5-5.07
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/5.x/
 
@@ -32,17 +32,17 @@ PLATFORM=	unknown
 .if ${OPSYS} == "NetBSD"
 . if (${MACHINE_ARCH} == "i386")
 DEPENDS=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-DISTNAME=	linux-506
+DISTNAME=	linux-507
 PLATFORM=	intellinux
 . elif (${MACHINE_ARCH} == "sparc")
 .  if !exists(/emul/svr4/usr/lib/ld.so)
 PKG_FAIL_REASON= '${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 .  endif
-DISTNAME=	solaris-506
+DISTNAME=	sol-507
 PLATFORM=	sparcsolaris
 . endif
 .elif ${OPSYS} == "SunOS"
-DISTNAME=	solaris-506
+DISTNAME=	sol-507
 PLATFORM=	sparcsolaris
 .endif
 
