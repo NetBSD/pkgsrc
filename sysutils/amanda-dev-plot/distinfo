@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/05/02 13:28:15 bouyer Exp $
-
-SHA1 (amanda-2.4.3b3.tar.gz) = 7028e5f060ee159d05c35635e79c5fd4701f08ee
-Size (amanda-2.4.3b3.tar.gz) = 1167303 bytes
-SHA1 (patch-aa) = c98871c70e5b5a290abf0138695a0dd636178695
-SHA1 (patch-ab) = 00833fb7f08cf753c4d9e38f312ee08d38afee76
-SHA1 (patch-ac) = e3f2b28d1cccc6d1edcef3127491cd7e7143d56d

@@ -1,9 +1,0 @@
-Amanda is a backup system designed to archive many computers on a network to a
-single large-capacity tape drive.  This is a package of a developement
-snapshot of the 2.4.3 branch.
-
-This package does not contain anything by itself -- it is a
-"meta-package" that depends on the amanda-client, amanda-server,
-and amanda-plot packages.  Its purpose is to require dependencies
-so users can install this package only and have the complete
-Amanda software pulled in by the port/package dependency mechanism.
