@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.3 2000/12/08 22:29:48 jtb Exp $
+
+--- cf/sysloc.in.orig	Wed May 10 20:47:53 2000
++++ cf/sysloc.in
+@@ -20,9 +20,9 @@
+ 
+ DPLIBSTR=-ldpnetwork
+ ITKLIBSTR=-litk
+-TKLIBSTR=-ltk
++TKLIBSTR=-ltk83
+ ITCLLIBSTR=-litcl
+-TCLLIBSTR=-ltcl
++TCLLIBSTR=-ltcl83
+ XLIBSTR=-lX11
+ 
+ # ----------------------------------------------------------------------------
