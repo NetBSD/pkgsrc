@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2002/09/29 09:29:56 rh Exp $
+$NetBSD: distinfo,v 1.2 2004/04/11 00:15:08 rh Exp $
 
-SHA1 (ImageViewer-0.6.0.tar.gz) = 965b0f339f9a2b6afc1f8c8dae24d102abef325f
-Size (ImageViewer-0.6.0.tar.gz) = 49303 bytes
+SHA1 (ImageViewer-0.6.2.tar.gz) = b8f043cc387fcf050d50c05e98728b03168efb31
+Size (ImageViewer-0.6.2.tar.gz) = 50806 bytes
