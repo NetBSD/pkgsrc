@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.248 2003/02/11 19:28:51 wiz Exp $
+$NetBSD: TODO,v 1.249 2003/02/11 21:35:14 grant Exp $
 
 Suggested new packages
 ======================
@@ -193,9 +193,9 @@ Suggested package updates
 	o libslang-1.4.7
 	o libsndfile-1.0.4
 	o libxml-2.5.2 [problems with kde2(?)|pkg/20229]
-	o libxml-2.5.3
+	o libxml-2.5.3 [pkg/20302]
 	o libxslt-1.0.25 [problems with kde2(?)|pkg/20230]
-	o libxslt-1.0.26
+	o libxslt-1.0.26 [pkg/20300]
 	o lilypond-1.6.6
 	o lmbench-2.0.4
 	o lout-3.26 [pkg/18687]
