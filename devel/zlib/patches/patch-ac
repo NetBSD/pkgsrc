@@ -1,0 +1,46 @@
+$NetBSD: patch-ac,v 1.1.2.2 2003/06/19 00:51:33 grant Exp $
+
+--- configure.orig	1998-07-08 20:19:35.000000000 +0200
++++ configure	2003-03-05 04:04:33.000000000 +0100
+@@ -181,6 +181,32 @@
+   echo Checking for mmap support... No.
+ fi
+ 
++cat > $test.c <<EOF
++#include <stdio.h>
++char *p;
++int main() { return snprintf(p, 10, "1234567890"); }
++EOF
++if test "`($CC -c $CFLAGS $test.c) 2>&1`" = ""; then
++  echo "Checking for snprintf... Yes."
++  CFLAGS="$CFLAGS -DHAS_snprintf"
++else
++  echo "Checking for snprintf... No."
++fi
++
++cat > $test.c <<EOF
++#include <stdio.h>
++#include <stdarg.h>
++char *p;
++va_list ap;
++int main() { return vsnprintf(p, 10, "1234567890", ap); }
++EOF
++if test "`($CC -c $CFLAGS $test.c) 2>&1`" = ""; then
++  echo "Checking for vsnprintf... Yes."
++  CFLAGS="$CFLAGS -DHAS_vsnprintf"
++else
++  echo "Checking for vsnprintf... No."
++fi
++
+ CPP=${CPP-"$CC -E"}
+ case $CFLAGS in
+   *ASMV*)
+@@ -195,7 +221,7 @@
+ rm -f $test.[co] $test$shared_ext
+ 
+ # udpate Makefile
+-sed < Makefile.in "
++sed < lt.mk "
+ /^CC *=/s%=.*%=$CC%
+ /^CFLAGS *=/s%=.*%=$CFLAGS%
+ /^CPP *=/s%=.*%=$CPP%
