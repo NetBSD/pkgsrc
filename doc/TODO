@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2302 2004/11/03 15:55:42 adam Exp $
+$NetBSD: TODO,v 1.2303 2004/11/04 10:16:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -572,7 +572,6 @@ Suggested package updates
 	o txt2html-2.31 [wennmach]
 	o ubs-0.20
 	o unarj-2.65
-	o unrar-3.4.3
 	o uptimec-0.2p3 [pkg/26082]
 	o upx-1.25
 	o uvscan-4.3.2 [jlam]
