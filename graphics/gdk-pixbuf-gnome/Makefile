@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/02/15 12:47:35 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2004/06/04 16:35:06 minskim Exp $
 
 .include "../../graphics/gdk-pixbuf/Makefile.common"
 
@@ -12,6 +12,8 @@ CONFLICTS+=	gdk-pixbuf<0.10.1
 #CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
+
+INSTALLATION_DIRS=	include/gdk-pixbuf-1.0/gdk-pixbuf lib
 
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .include "../../x11/gnome-libs/buildlink3.mk"
