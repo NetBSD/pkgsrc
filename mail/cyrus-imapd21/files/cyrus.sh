@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: cyrus.sh,v 1.1.1.1 2002/10/27 16:08:53 chris Exp $
+# $NetBSD: cyrus.sh,v 1.2 2003/02/27 13:21:52 seb Exp $
 #
 # PROVIDE: cyrus
 # REQUIRE: DAEMON
@@ -17,7 +17,8 @@ rcd_dir=`@DIRNAME@ $0`
 name="cyrus"
 rcvar=$name
 command="@PREFIX@/cyrus/bin/master"
-command_args="& sleep 2"
+command_args="-d"
+pidfile="/var/run/cyrus-master.pid"
 required_files="@PKG_SYSCONFDIR@/cyrus.conf @IMAPDCONF@"
 extra_commands="mkimap reload"
 

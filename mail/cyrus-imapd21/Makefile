@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2003/01/28 22:03:31 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2003/02/27 13:21:51 seb Exp $
 
-DISTNAME=		cyrus-imapd-2.1.11
+DISTNAME=		cyrus-imapd-2.1.12
 SVR4_PKGNAME=		cimap
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
@@ -20,7 +20,7 @@ AUTOCONF_REQD=		2.13
 
 .if defined(CYRUS_USE_INET6) && ${CYRUS_USE_INET6} == "YES"
 PATCH_SITES=		http://www.imasy.or.jp/~ume/ipv6/
-PATCHFILES=		${DISTNAME}-ipv6-20021205.diff.gz
+PATCHFILES=		${DISTNAME}-ipv6-20030204.diff.gz
 .endif
 
 # CYRUS_USER		username of the Cyrus administrator
@@ -37,7 +37,8 @@ CONFIGURE_ARGS+=	--with-cyrus-user=${CYRUS_USER}
 CONFIGURE_ARGS+=	--with-cyrus-group=${CYRUS_GROUP}
 CONFIGURE_ARGS+=	--with-cyrus-prefix=${PREFIX}/cyrus
 CONFIGURE_ARGS+=	--with-statedir=/var/run
-CONFIGURE_ARGS+=	--with-dbdir=${BUILDLINK_PREFIX.db3}
+CONFIGURE_ARGS+=	--with-bdb-libdir=${BUILDLINK_PREFIX.db3}/lib
+CONFIGURE_ARGS+=	--with-bdb-incdir=${BUILDLINK_PREFIX.db3}/include/db3
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
 CONFIGURE_ARGS+=	--without-ucdsnmp
