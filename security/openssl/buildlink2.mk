@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:17 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/05 12:44:21 jlam Exp $
 #
 # Optionally define USE_OPENSSL_VERSION to the mininum OpenSSL version
 # number in <openssl/opensslv.h>, i.e. 0x0090600fL, etc.
@@ -82,8 +82,7 @@ SSLCERTS=			${PKG_SYSCONFBASE}/openssl/certs
 .endif
 BUILD_DEFS+=			SSLBASE SSLCERTS
 
-BUILDLINK_FILES.openssl=	bin/openssl
-BUILDLINK_FILES.openssl+=	include/openssl/*
+BUILDLINK_FILES.openssl=	include/openssl/*
 BUILDLINK_FILES.openssl+=	lib/libRSAglue.*
 BUILDLINK_FILES.openssl+=	lib/libcrypto.*
 BUILDLINK_FILES.openssl+=	lib/libssl.*
