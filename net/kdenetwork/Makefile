@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2000/07/15 20:39:23 agc Exp $
+# $NetBSD: Makefile,v 1.48 2000/07/17 13:58:21 agc Exp $
 # FreeBSD Id: Makefile,v 1.3 1997/11/05 04:19:54 asami Exp
 #
 
@@ -23,10 +23,10 @@ USE_GMAKE=		yes
 USE_PKGLIBTOOL=		yes
 LIBTOOL_FLAGS=		--cplusplus --install-la
 GNU_CONFIGURE=		yes
-EVAL_PREFIX+=		QT1DIR=qt1
-CONFIGURE_ARGS=		"--datadir=${PREFIX}/share/kde" \
+EVAL_PREFIX+=		QT1DIR=qt1 KDEBASEDIR=kdebase
+CONFIGURE_ARGS=		"--datadir=${KDEBASEDIR}/share/kde" \
 			"--with-qt-dir=${QT1DIR}/qt1" 
-CONFIGURE_ENV=  	KDEDIR=${PREFIX} \
+CONFIGURE_ENV=  	KDEDIR=${KDEBASEDIR} \
 			CPPFLAGS="${CPPFLAGS}" \
 			CXXFLAGS="${CFLAGS}" \
 			all_libraries="-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib"
@@ -51,7 +51,7 @@ CFLAGS+=		-I${LOCALBASE}/include
 
 post-install:
 .if (${GCC_VERSION:C/-.*$$//} != egcs)
-	@${FIND} ${PREFIX}/share/kde/locale -name ksirc.mo | xargs ${RM}
+	@${FIND} ${KDEBASEDIR}/share/kde/locale -name ksirc.mo | xargs ${RM}
 .endif
 
 .include "../../mk/bsd.pkg.mk"

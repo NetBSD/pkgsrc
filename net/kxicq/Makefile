@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/07/15 20:39:23 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/07/17 13:58:22 agc Exp $
 
 DISTNAME=		kxicq-03132000
 CATEGORIES=		net kde
@@ -16,10 +16,10 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-EVAL_PREFIX+=		QT1DIR=qt1
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/kde \
+EVAL_PREFIX+=		QT1DIR=qt1 KDEBASEDIR=kdebase
+CONFIGURE_ARGS+=	--datadir=${KDEBASEDIR}/share/kde \
 			--with-qt-dir=${QT1DIR}/qt1
-CONFIGURE_ENV+=		KDEDIR=${PREFIX} \
+CONFIGURE_ENV+=		KDEDIR=${KDEBASEDIR} \
 			CPPFLAGS="${CPPFLAGS}" \
 			CXXFLAGS="${CFLAGS}" \
 			all_libraries="-Wl,-R${QT1DIR}/qt1/lib -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -ltiff -ljpeg -lpng -lz"
