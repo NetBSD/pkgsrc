@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.9 2002/12/24 05:48:28 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.10 2003/10/28 18:55:36 reed Exp $
 
 .if !defined(FREETYPE2_BUILDLINK2_MK)
 FREETYPE2_BUILDLINK2_MK=	# defined
@@ -63,7 +63,8 @@ BUILDLINK_PREFIX.freetype2=	${X11BASE}
 USE_X11=			# defined
 .endif
 
-BUILDLINK_FILES.freetype2=	include/ft2build.h
+BUILDLINK_FILES.freetype2=	bin/freetype-config
+BUILDLINK_FILES.freetype2+=	include/ft2build.h
 BUILDLINK_FILES.freetype2+=	include/freetype2/ft2build.h
 BUILDLINK_FILES.freetype2+=	include/freetype2/freetype/*
 BUILDLINK_FILES.freetype2+=	include/freetype2/freetype/cache/*
