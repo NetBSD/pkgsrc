@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2003/02/06 23:34:11 dmcmahill Exp $
+$NetBSD: distinfo,v 1.4 2003/12/19 19:15:06 agc Exp $
 
 SHA1 (i2cb-6.0_ALPHA.tar.gz) = 6d2ddd234403fe33426ece3fd4de4104cf1a6257
 Size (i2cb-6.0_ALPHA.tar.gz) = 73607 bytes
@@ -12,4 +12,9 @@ SHA1 (patch-ag) = e2bf71557fa486371e0d26ff8d5716ae0924a498
 SHA1 (patch-ah) = 1785c0f09a7a0f83b7cb886e9e749959b1753972
 SHA1 (patch-ai) = f2b83d20f6357dd6cb3e468b573c46d6123cae39
 SHA1 (patch-aj) = 11d36d24e7574b32b0bd0eee62f8dc98bcbb8ec3
-SHA1 (patch-ak) = 3200ffae42c7ec93862485b8a23ffd5ab4050255
+SHA1 (patch-ak) = 0b907a2f7104e0e05a3ec62859190c9203960a91
+SHA1 (patch-al) = 4c8b87c515fd7278dcfb37b62a44317e7d95442d
+SHA1 (patch-am) = 24d700b5e95248bc54253893bfbf4a664db50ace
+SHA1 (patch-an) = 2b6db4e59da609a03c6cbe23d1866e01a48af756
+SHA1 (patch-ao) = 73d6915d68bd02fbfc0e481f42f4626bbce18882
+SHA1 (patch-ap) = f04fea14ab6a07095f6b2f95c693988563aa4f3a
