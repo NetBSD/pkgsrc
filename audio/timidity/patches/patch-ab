@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.7 1999/11/24 13:49:03 hubertf Exp $
+$NetBSD: patch-ab,v 1.8 2000/07/28 21:47:51 jlam Exp $
 
---- Makefile.orig	Sun May 26 11:26:46 1996
-+++ Makefile	Wed Nov 24 14:50:18 1999
+--- Makefile.orig	Sun May 26 05:26:46 1996
++++ Makefile	Fri Jul 28 17:19:20 2000
 @@ -24,22 +24,23 @@
  # But where to change without revealing my secret identity?
  
@@ -68,8 +68,8 @@ $NetBSD: patch-ab,v 1.7 1999/11/24 13:49:03 hubertf Exp $
  SYSEXTRAS += ncurs_c.c
 -EXTRAINCS += -I/usr/include/ncurses
 -EXTRALIBS += -lncurses
-+EXTRAINCS += -I${PREFIX}/include
-+EXTRALIBS += -L${PREFIX}/lib -lncurses -Wl,-R${PREFIX}/lib
++#EXTRAINCS += -I/usr/include/ncurses
++#EXTRALIBS += -lncurses
  
  ## Select the S-Lang full-screen interface
  #SYSTEM += -DIA_SLANG
