@@ -1,4 +1,4 @@
-# $NetBSD: Packages.txt,v 1.161 2001/06/16 04:15:08 jlam Exp $
+# $NetBSD: Packages.txt,v 1.162 2001/06/19 16:23:33 jlam Exp $
 ###########################################################################
 
 			==========================
@@ -873,6 +873,13 @@ to when dealing with the PLIST file (or files, see below!).
    to do this, use these two variables in PLIST. ${OPSYS} will be replaced
    by output from "uname -s", ${OS_VERSION} will be set to what "uname -r"
    gives.
+
+ * ${PKGLOCALEDIR}:
+   Packages that install locale files should list them in the PLIST as
+   "${PKGLOCALEDIR}/locale/de/LC_MESSAGES/..." instead of
+   "share/locale/de/LC_MESSAGES/...".  This properly handles the fact that
+   different OSes expect locale files to be either in "share" or "lib" by
+   default.
 
  * Manpage-compression:
    Manpages should be installed in compressed form if MANZ is set (in
