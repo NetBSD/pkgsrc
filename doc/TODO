@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.126 2003/01/03 18:24:54 wiz Exp $
+$NetBSD: TODO,v 1.127 2003/01/03 18:30:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -97,7 +97,7 @@ Suggested package updates
 	o cdlabelgen-2.5.0
 	o centericq-4.9.1
 	o cfengine-1.6.5 [pkg/19459|seb]
-	o citrix-ica [pkg/19210]
+	o citrix_ica [pkg/19210]
 	o clisp-2.30
 	o courier-0.40.2 [jlam]
 	o courier-imap-1.6.2 [jlam]
@@ -204,7 +204,6 @@ Suggested package updates
 	o openssh-3.5p1
 	o openssl-0.9.7
 	o opensp-1.5
-	o pan-0.13.3 (gtk2-pan)
 	o pen-0.9.5 [pkg/19216]
 	o php4-4.3.0
 	o pilot-link-0.11.4 [dillo]
