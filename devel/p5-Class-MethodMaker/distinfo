@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/03/29 18:55:46 tv Exp $
+$NetBSD: distinfo,v 1.2 2005/02/19 11:21:37 wiz Exp $
 
-SHA1 (Class-MethodMaker-1.12.tar.gz) = 2e13cc6353d40127f137fd49bd9433fbca78ddc8
-Size (Class-MethodMaker-1.12.tar.gz) = 45290 bytes
+SHA1 (Class-MethodMaker-2.05.tar.gz) = 8bb763c9541dec6f072dcf464a21c1fe5dd81614
+Size (Class-MethodMaker-2.05.tar.gz) = 88127 bytes
