@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/12/19 11:14:51 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/21 00:21:56 minskim Exp $
 #
 
 DISTNAME=	overnetclc-1.0.1
@@ -30,15 +30,6 @@ DEPENDS+=	suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
 
 post-install:
 	${LN} -fs ../${EMULSUBDIR}/usr/bin/overnetclc ${PREFIX}/bin
-
-no-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/overnet
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/overnet
-	${INSTALL_DATA_DIR} ${PREFIX}/share/overnet
-	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/overnet
-	@# keep modes, as it doesn't work unless contact.dat is executable
-	${CP} -p ${WRKSRC}/contact.dat ${PREFIX}/share/examples/overnet
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/overnet
 
 .include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
