@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.937 2002/03/02 16:09:14 wiz Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.938 2002/03/04 11:47:25 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -3749,6 +3749,19 @@ _MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$
 .  endif # MANZ
 .endif
 
+.if defined(MANINSTALL)
+_MANINSTALL_CMD= ${AWK} 'BEGIN{						\
+		start="^([^\/]*\/)*man\/([^\/]*\/)?";			\
+		end="[1-9ln]"; }					\
+		{ if (!"${MANINSTALL:Mmaninstall}" && 			\
+				match($$0, start "man" end)) {next;}	\
+		if (!"${MANINSTALL:Mcatinstall}" && 			\
+				match($$0, start "cat" end)) {next;}	\
+		print $$0; }' |
+.else
+_MANINSTALL_CMD=
+.endif
+
 .if defined(USE_IMAKE) && ${_PREFORMATTED_MAN_DIR} == "man"
 _IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0(\.gz)?$$/ { \
 	sect = $$0; n = match(sect, "/cat[1-9ln]");			\
@@ -3798,6 +3811,7 @@ ${PLIST}: ${PLIST_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	{ ${CAT} ${PLIST_SRC};						\
 	  ${PERL5_GENERATE_PLIST}; } | 					\
+		${_MANINSTALL_CMD}					\
 		${_MANZ_NAWK_CMD} 					\
 		${_IMAKE_MAN_CMD} 					\
 		${SED} 	${_MANZ_EXPRESSION}				\
