@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/09/27 23:18:20 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2002/08/13 22:10:21 kim Exp $
 # FreeBSD: Makefile,v 1.42 1997/12/24 01:21:07 alex Exp
 #
 
@@ -37,6 +37,10 @@ post-install:
 		${INSTALL_DATA} \
 			${FILESDIR}/elm.mimetypes ${PREFIX}/lib; \
 	fi
+
+post-configure:
+	${TOUCH} ${WRKSRC}/config.sh
+	${TOUCH} ${WRKSRC}/config.h
 
 .include "../../devel/gettext-lib/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
