@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.296 2002/10/18 09:31:23 rh Exp $
+$NetBSD: CHANGES,v 1.297 2002/10/18 09:37:42 rh Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3308,3 +3308,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated sendfile to 2.1.0.2 [wiz 2002-10-17]
 	Updated gnustep-gui to 0.8.2 [rh 2002-10-18]
 	Updated gnustep-back to 0.8.2 [rh 2002-10-18]
+	Added Gorm-0.1.9 [rh 2002-10-18]
