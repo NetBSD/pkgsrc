@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/23 12:38:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/05/01 15:01:49 jmmv Exp $
 bin/newaliases
 bin/mailq
 bin/hoststat
 bin/purgestat
 bin/vacation
-etc/mailer.conf.sendmail
 libexec/sendmail/sendmail
 libexec/sendmail/smrsh
 man/cat1/mailq.0
@@ -19,6 +18,7 @@ man/cat8/sendmail.0
 sbin/mailstats
 sbin/makemap
 sbin/praliases
+share/examples/sendmail/mailer.conf
 share/misc/helpfile
 share/sendmail/README
 share/sendmail/cf/Build
@@ -189,3 +189,4 @@ share/sendmail/siteconfig/uucp.ucbvax.m4
 @dirrm share/sendmail/domain
 @unexec ${RM} -rf %D/share/sendmail/cf
 @dirrm share/sendmail
+@dirrm share/examples/sendmail
