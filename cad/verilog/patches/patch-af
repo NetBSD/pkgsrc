@@ -1,0 +1,11 @@
+$NetBSD: patch-af,v 1.1.1.1 2000/01/26 15:28:41 dmcmahill Exp $
+
+--- ./vvm/Makefile.in.orig	Wed Jan 12 22:35:35 2000
++++ ./vvm/Makefile.in	Sat Jan 22 15:33:32 2000
+@@ -85,5 +85,5 @@
+ 
+ $(libdir)/libvvm.a: ./libvvm.a
+-	$(INSTALL_PROGRAM) ./libvvm.a $(libdir)/libvvm.a
++	$(INSTALL_DATA) ./libvvm.a $(libdir)/libvvm.a
+ 
+ $(includedir)/vvm.h: $(srcdir)/vvm.h

@@ -1,0 +1,36 @@
+$NetBSD: patch-ad,v 1.1.1.1 2000/01/26 15:28:41 dmcmahill Exp $
+
+*use INSTALL_SCRIPT for installing a shell script.
+*don't use -O2 on parse.cc because of compiler bugs on sparc and pmax
+ (maybe others).
+*check for libdl, don't assume it is there.
+
+--- Makefile.in.orig	Sun Jan  9 12:43:28 2000
++++ Makefile.in	Mon Jan 24 13:02:12 2000
+@@ -40,4 +40,5 @@
+ CXX = @CXX@
+ INSTALL = @INSTALL@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
+@@ -92,5 +93,6 @@
+ 	    -e 's;@$(tmp2)@;@libdir@;' \
+ 	    -e 's;@$(tmp3)@;@includedir@;' \
+-	    -e 's;@$(tmp4)@;@CXX@;' < $< > $@
++	    -e 's;@$(tmp4)@;@CXX@;' \
++	    -e 's;@dllib@;@DLLIB@;' < $< > $@
+ 
+ ivl: $O
+@@ -109,4 +111,5 @@
+ 
+ parse.o dep/parse.d: parse.cc
++	$(CXX) -c -I. $(CPPFLAGS)  $< 
+ 
+ parse.h parse.cc: $(srcdir)/parse.y
+@@ -123,5 +126,5 @@
+ 
+ $(bindir)/verilog: ./verilog
+-	$(INSTALL_PROGRAM) ./verilog $(bindir)/verilog
++	$(INSTALL_SCRIPT) ./verilog $(bindir)/verilog
+ 
+ $(bindir)/gverilog: ./gverilog
