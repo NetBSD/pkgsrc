@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2001/04/18 16:10:58 agc Exp $
+$NetBSD: distinfo,v 1.3 2004/04/27 02:04:06 snj Exp $
 
 SHA1 (gtranscript-0.0.1.tar.gz) = e70c6663b83d5ee6c641277956bf9ec41c0f1f0f
 Size (gtranscript-0.0.1.tar.gz) = 84164 bytes
+SHA1 (patch-aa) = cf68a89ccd3aa7afa21f9b79db2c1318d23a7ae0
 SHA1 (patch-ab) = 99e57ffa114f0bd6d2ef483dcb54c1f2cabc1bb1
