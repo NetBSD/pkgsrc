@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/01/10 21:59:29 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2004/01/11 00:00:28 jlam Exp $
 
 DISTNAME=		heimdal-0.6
 CATEGORIES=		security
@@ -9,6 +9,8 @@ MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/heimdal/src/		\
 MAINTAINER=		jlam@NetBSD.org
 HOMEPAGE=		http://www.pdc.kth.se/heimdal/
 COMMENT=		Kerberos 5 implementation
+
+CONFLICTS+=		mit-krb5-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
