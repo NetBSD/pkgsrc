@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 15:04:57 skrll Exp $
+$NetBSD: distinfo,v 1.3 2003/03/21 23:44:06 salo Exp $
 
-SHA1 (icu-1.7.tgz) = 36b4375201e828a3cd46559a5517c7fa11de8b90
-Size (icu-1.7.tgz) = 6089550 bytes
-SHA1 (patch-aa) = b7e671a0e7991539beb92f7e1649aa1f2aff180d
-SHA1 (patch-ab) = c64cf88893be5b67d1e47552154ce0fb9c399113
-SHA1 (patch-ac) = 24822cec39a3bd42b256499cea164384f17bf7c1
-SHA1 (patch-ad) = 8a2d92de7b29592a3005aab2b1183d79e96f37d2
-SHA1 (patch-ae) = 5b53e9234486aa7ac61494c7aba2c381a9f95ddb
-SHA1 (patch-af) = 8ab896f1547f8f3fb38eb83c43b6bda333acc0c4
+SHA1 (icu-2.4.tgz) = 6a0a9cb521b874bdd86d08a04b038ca6ad1a2b89
+Size (icu-2.4.tgz) = 7652187 bytes
+SHA1 (patch-aa) = 9aa4a0d8cc298fbe282ff3cf0e0099558f964cc4
+SHA1 (patch-ab) = ab0f327275c40247f7d790b6fcb529e5dd88fc06
+SHA1 (patch-ac) = 1a8bcfb5d6684c06487cb796a3f5d4f41a0c9568
+SHA1 (patch-ad) = 2b05b04287db43fc8adce79985c6f0f069595979
