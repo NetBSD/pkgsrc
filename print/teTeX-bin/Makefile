@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2005/01/24 15:22:16 kei Exp $
+# $NetBSD: Makefile,v 1.61 2005/02/04 01:48:51 minskim Exp $
 
 DISTNAME=	tetex-src-${TETEX_BIN_VERS}
 PKGNAME=	teTeX-bin-${TETEX_BIN_VERS}
@@ -44,7 +44,7 @@ post-install:
 .  endif
 .endif
 	${LOCALBASE}/bin/texconfig font ro
-	${LOCALBASE}/bin/texconfig font vardir /var/spool/texfonts
+	${LOCALBASE}/bin/texconfig font vardir ${VARBASE}/spool/texfonts
 	${LOCALBASE}/bin/texconfig font options appendonlydir varfonts
 
 .include "../../print/teTeX-bin/Makefile.common"
