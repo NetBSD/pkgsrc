@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST-md.static,v 1.1 1998/02/01 01:48:54 tron Exp $
+@unexec rm -rf %D/lib/python1.5
