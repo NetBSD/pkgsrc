@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2000/12/28 14:10:03 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2000/12/30 20:14:26 rh Exp $
 #
 
     SUBDIR += PAM
@@ -52,6 +52,7 @@
     SUBDIR += ssh-ip-tunnel
     SUBDIR += ssh6
     SUBDIR += ssldump
+    SUBDIR += sslwrap
     SUBDIR += stunnel
     SUBDIR += sudo
     SUBDIR += tripwire
