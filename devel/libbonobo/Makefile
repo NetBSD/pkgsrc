@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2004/02/15 07:43:50 minskim Exp $
+# $NetBSD: Makefile,v 1.25 2004/03/10 05:02:42 reed Exp $
 
 DISTNAME=		libbonobo-2.4.3
 CATEGORIES=		devel gnome
@@ -16,7 +16,7 @@ USE_BUILDLINK3=		YES
 USE_PKGINSTALL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-USE_GNU_TOOLS+=		make
+USE_GNU_TOOLS+=		make yacc
 
 PKGCONFIG_OVERRIDE=	bonobo/libbonobo-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	bonobo-activation/bonobo-activation-2.0.pc.in
