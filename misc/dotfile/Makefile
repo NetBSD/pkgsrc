@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.20 2001/12/05 15:00:47 agc Exp $
+# $NetBSD: Makefile,v 1.21 2004/03/06 05:37:41 minskim Exp $
 # FreeBSD Id: Makefile,v 1.5 1997/04/20 13:19:30 wosch Exp
 #
 
 DISTNAME=	dotfile-2.4.1
 CATEGORIES=	misc tk
-MASTER_SITES=	ftp://ftp.imada.ou.dk/pub/dotfile/
+MASTER_SITES=	http://www.blackie.dk/dotfile/download/
 
 MAINTAINER=	oly@world.std.com
-HOMEPAGE=	http://www.imada.ou.dk/~blackie/dotfile/
+HOMEPAGE=	http://www.blackie.dk/dotfile/
 COMMENT=	GUI dotfile generator program to create .config files
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
