@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.defaults.mk,v 1.117 2002/12/23 14:10:00 wiz Exp $
+# $NetBSD: bsd.pkg.defaults.mk,v 1.118 2002/12/24 09:08:47 agc Exp $
 #
 
 # A file providing defaults for pkgsrc and the packages collection.
@@ -789,7 +789,7 @@ IRCD_HYBRID_INIT_LOG_LEVEL?=	L_NOTICE
 # Used by ircd-hybrid. Specify initial minimum level from which the daemon logs
 # events. This is unrelated from syslog() level.
 # Possible: L_CRIT, L_ERROR, L_WARN, L_NOTICE, L_TRACE, L_INFO, L_DEBUG
-$ Default: L_NOTICE
+# Default: L_NOTICE
 
 IRCD_HYBRID_IRC_USER?=		irc
 # Used by ircd-hybrid. Specify the user name under which the daemon runs.
