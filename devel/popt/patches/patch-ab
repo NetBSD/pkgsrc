@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2002/11/26 06:50:22 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2003/11/12 01:25:25 salo Exp $
 
---- Makefile.in.orig	Sat Oct 19 18:32:02 2002
-+++ Makefile.in	Sat Oct 19 19:07:20 2002
+--- Makefile.in.orig	2002-08-31 15:22:18.000000000 +0200
++++ Makefile.in	2003-11-11 16:20:23.000000000 +0100
 @@ -133,13 +133,13 @@
  noinst_PROGRAMS = test1 test2 test3
  test1_SOURCES = test1.c
@@ -19,3 +19,12 @@ $NetBSD: patch-ab,v 1.4 2002/11/26 06:50:22 jlam Exp $
  
  noinst_SCRIPTS = testit.sh
  
+@@ -187,7 +187,7 @@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I.
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ @INTLLIBS@
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/findme.Plo ./$(DEPDIR)/popt.Plo \
