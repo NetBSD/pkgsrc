@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2003/05/12 20:40:18 agc Exp $
+$NetBSD: distinfo,v 1.5 2005/02/24 09:59:22 agc Exp $
 
 SHA1 (exmh-2.6.3/exmh-2.6.3.tar.gz) = 3d41d4c735b7248cb10937950ea2adb0e3f4033c
+RMD160 (exmh-2.6.3/exmh-2.6.3.tar.gz) = 3ccb20b27bed115b73e55351ef6633d30044b551
 Size (exmh-2.6.3/exmh-2.6.3.tar.gz) = 910556 bytes
 SHA1 (patch-aw) = 396ef41611de11a9ba48f15711e20f4e44f73da9

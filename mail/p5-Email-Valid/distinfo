@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/12/05 19:06:05 he Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 09:59:25 agc Exp $
 
 SHA1 (Email-Valid-0.15.tar.gz) = 3586f4eabd4eab9022e3d583bb2ce1ee21d43574
+RMD160 (Email-Valid-0.15.tar.gz) = a4a62574adde0dc4fca3488fb588833b6c729550
 Size (Email-Valid-0.15.tar.gz) = 8504 bytes

@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/12/03 12:31:09 wiz Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 09:59:29 agc Exp $
 
 SHA1 (spamass-milter-0.2.0.tar.gz) = 24c745f15198e601b6beeaade5f5aad3ca07a440
+RMD160 (spamass-milter-0.2.0.tar.gz) = af70e2a3b33c7839e700db5167e5ee8dadffb46e
 Size (spamass-milter-0.2.0.tar.gz) = 113894 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2005/01/09 00:07:46 schmonz Exp $
+$NetBSD: distinfo,v 1.9 2005/02/24 09:59:27 agc Exp $
 
 SHA1 (prayer-1.0.12.tar.gz) = 8ea568f9e0e1fe925102e80451b3c9432f5fed15
+RMD160 (prayer-1.0.12.tar.gz) = 76edc3896d0936c87378f848334bc42d648317f3
 Size (prayer-1.0.12.tar.gz) = 544239 bytes
 SHA1 (patch-aa) = 0161f04e22a8e67b5d5cb0990f7ac90bf4b8c93e
 SHA1 (patch-ab) = 72f6b8768303222a8798ca07e83efccdefa8fe25

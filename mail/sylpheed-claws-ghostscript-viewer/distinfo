@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2004/01/05 16:53:04 cube Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 09:59:29 agc Exp $
 
 SHA1 (ghostscript-viewer-0.6.tar.bz2) = dede76895d33c9bb120ec372f01165994f11e73a
+RMD160 (ghostscript-viewer-0.6.tar.bz2) = de67be050335659701f681770c090919d12c4437
 Size (ghostscript-viewer-0.6.tar.bz2) = 244060 bytes
 SHA1 (patch-aa) = 64816218e52857ccc65041e00201c761775343fe

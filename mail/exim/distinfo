@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.24 2005/02/03 12:58:03 abs Exp $
+$NetBSD: distinfo,v 1.25 2005/02/24 09:59:22 agc Exp $
 
 SHA1 (exim-4.44.tar.bz2) = c344674b85c734d399b7db4ce18cc49a90644654
+RMD160 (exim-4.44.tar.bz2) = b723fc51f959b36718acfb08f832c4220666eefb
 Size (exim-4.44.tar.bz2) = 1364290 bytes
 SHA1 (exiscan-acl-4.44-28.patch.bz2) = bafddb72e08f5988fe6d214e6878d7c54a3ae071
+RMD160 (exiscan-acl-4.44-28.patch.bz2) = 66f5ad353a1e6770e4353aad3c5a50fd9cd5ebd0
 Size (exiscan-acl-4.44-28.patch.bz2) = 83434 bytes
 SHA1 (patch-aa) = ab149803121eb1ce7dc6875d8626a44454c2ae0a
 SHA1 (patch-ab) = efdbfd11ade8b7b6ab6a5b0511a1322abbc4c3d7

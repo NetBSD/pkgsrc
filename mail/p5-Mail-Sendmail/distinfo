@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2001/04/20 13:10:01 agc Exp $
+$NetBSD: distinfo,v 1.3 2005/02/24 09:59:26 agc Exp $
 
 SHA1 (Mail-Sendmail-0.78.tar.gz) = f217efff5228c59236ee347fdccdb033c7b4c615
+RMD160 (Mail-Sendmail-0.78.tar.gz) = 1274b8d354389a6463e0f9c2a243e8d14991ef29
 Size (Mail-Sendmail-0.78.tar.gz) = 14927 bytes

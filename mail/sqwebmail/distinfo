@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/18 22:12:56 jlam Exp $
+$NetBSD: distinfo,v 1.6 2005/02/24 09:59:29 agc Exp $
 
 SHA1 (sqwebmail-5.0.0.tar.bz2) = 1ed79941b05f8072ebac928e93e6cdb7004f3e00
+RMD160 (sqwebmail-5.0.0.tar.bz2) = d5c90bb1ad773ab7a19b4372c35f377b6039a768
 Size (sqwebmail-5.0.0.tar.bz2) = 3146311 bytes
 SHA1 (patch-aa) = 80feddb9bf74b964bbb485cbfa4e4a3a01733176
 SHA1 (patch-ad) = 9f58af84b70854738870652538ba2a345eae3ad7
