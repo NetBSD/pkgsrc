@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2000/01/18 19:48:23 jwise Exp $
+# $NetBSD: Makefile,v 1.5 2000/02/10 16:19:05 jwise Exp $
 
 DISTNAME=	ApacheJServ-1.1
 PKGNAME=	ap-jserv-1.1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://java.apache.org/jserv/dist/
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://java.apache.org/
 
-DEPENDS+=	apache-1.3.9*:../../www/apache
+DEPENDS+=	apache-1.3.*:../../www/apache
 # yes, this needs _exactly_ version 2.0
 DEPENDS+=	jsdk-2.0:../../www/jsdk20
 # For "apxs":
