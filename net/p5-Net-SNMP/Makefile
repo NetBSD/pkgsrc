@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2004/12/20 11:31:06 grant Exp $
+# $NetBSD: Makefile,v 1.16 2005/01/14 15:25:25 jschauma Exp $
 #
 
-DISTNAME=	Net-SNMP-4.1.2
+DISTNAME=	Net-SNMP-5.0.1
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5nsn
-PKGREVISION=	1
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
