@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2001/07/01 14:06:44 taca Exp $
+# $NetBSD: Makefile,v 1.111 2001/07/03 14:34:35 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -71,6 +71,7 @@ SUBDIR+=	rfcutil
 SUBDIR+=	rman
 SUBDIR+=	rtf-tools
 SUBDIR+=	rtfm
+SUBDIR+=	ruby-erb
 SUBDIR+=	ruby-eruby
 SUBDIR+=	ruby-html-parser
 SUBDIR+=	ruby-rdtool
