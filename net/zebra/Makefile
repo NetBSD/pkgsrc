@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2004/04/25 07:49:56 snj Exp $
+# $NetBSD: Makefile,v 1.63 2004/09/04 23:40:43 wiz Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -14,7 +14,6 @@ COMMENT=	Free multithreaded routing daemon software
 
 .include "../../mk/bsd.prefs.mk"
 
-AUTOMAKE_REQD=		1.8
 USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		# defined
 PKG_SYSCONFSUBDIR?=	zebra
