@@ -1,16 +1,16 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
+$NetBSD: patch-ad,v 1.2 2001/03/11 13:50:50 martin Exp $
 
---- configure.in.orig	Sat Dec  2 17:18:03 2000
-+++ configure.in	Thu Dec 14 16:26:56 2000
-@@ -11,6 +11,7 @@
+--- configure.in.orig	Sat Mar 10 16:43:14 2001
++++ configure.in	Sat Mar 10 16:55:21 2001
+@@ -16,6 +16,7 @@
  STATEPATH="/var/state/ups"
  MODELPATH="$prefix/bin"
  CGIPATH="$prefix/cgi-bin"
 +GRAPHLIB_PATH="/usr/local"
  RUN_AS_USER="nobody"
  RUN_AS_GROUP="nogroup"
- ### 
-@@ -61,9 +62,45 @@
+ PIDPATH="/var/run"
+@@ -120,9 +121,45 @@
  	], [], [])
  fi
  
@@ -18,16 +18,16 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
 +AC_ARG_WITH(graphics,
 +[ --with-graphics=PATH         Path for graphics library files],
 +[       case "$withval" in
-+        yes|no)
-+                AC_MSG_RESULT(using default: $GRAPHLIB_PATH)
-+                ;;
-+        *)
-+                AC_MSG_RESULT($withval)
-+                AC_DEFINE_UNQUOTED(GRAPHLIB_PATH, "$withval")
-+                GRAPHLIB_PATH=$withval
-+                ;;
-+        esac],
-+        AC_MSG_RESULT(using default: $GRAPHLIB_PATH)
++	yes|no)
++		AC_MSG_RESULT(using default: $GRAPHLIB_PATH)
++		;;
++	*)
++		AC_MSG_RESULT($withval)
++		AC_DEFINE_UNQUOTED(GRAPHLIB_PATH, "$withval")
++		GRAPHLIB_PATH=$withval
++		;;
++	esac],
++	AC_MSG_RESULT(using default: $GRAPHLIB_PATH)
 +)
 +GRAPHICS_LIBS="-L$GRAPHLIB_PATH/lib"
 +GRAPHICS_INCLUDES="-I$GRAPHLIB_PATH/include"
@@ -36,7 +36,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
 +CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
 +CPPFLAGS="$CPPFLAGS_save $GRAPHICS_INCLUDES"
 +
-+dnl Include in case GD was compiled with True Type support
++dnl Include in case GD was compiled with internationalization support
 +AC_CHECK_LIB(intl, gettext,
 +[ LIBINTL="-lintl"],[ LIBINTL=""] )
 +GRAPHICS_LIBS="$GRAPHICS_LIBS $LIBINTL"
@@ -56,7 +56,12 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
  
  dnl Include in case GD was compiled with Xpm support
  AC_CHECK_LIB(X11, XBell,
-@@ -81,67 +118,33 @@
+@@ -137,70 +174,37 @@
+                 )
+         ],
+ )
++GRAPHICS_LIBS="$GRAPHICS_LIBS $LIBX"
++CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
  
  dnl Include in case GD was compiled with Xpm support
  AC_CHECK_LIB(Xpm, XpmReadFileToXpmImage,
@@ -77,7 +82,6 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
  )
 +GRAPHICS_LIBS="$GRAPHICS_LIBS $LIBXPM"
 +CFLAGS="$CFLAGS_save $GRAPHICS_LIBS"
-+
  
  AC_CHECK_LIB(gd, gdImagePng,
  [
@@ -141,7 +145,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
  
  dnl  Would really like to *test* for the necessity of -R (and how to use
  dnl  it) but I have no clue how :-/  
-@@ -151,7 +154,7 @@
+@@ -210,7 +214,7 @@
     for lib in `echo $LD_LIBRARY_PATH | $AWK -F: '{ for (i = NF; i > 0; --i) print $i }' | sort | uniq`; do
        if test -f ${lib}/libpng.so; then
           AC_CHECK_LIB(png, png_info_init,
@@ -150,9 +154,9 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/12/28 16:07:51 martin Exp $
  	 ],
  	 [],
  	 [-lm -R${lib}],)
-@@ -310,7 +313,8 @@
- 
+@@ -431,7 +435,8 @@
  AC_SUBST(LIBOBJ)
+ AC_SUBST(BUILDOBJ)
  AC_SUBST(NETLIBS)
 -AC_SUBST(GFXLIBS)
 +AC_SUBST(GRAPHICS_LIBS)
