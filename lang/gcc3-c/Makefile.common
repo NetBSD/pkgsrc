@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2004/02/06 19:04:25 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2004/02/12 22:53:47 jlam Exp $
 
 GCC_VERSION=	3.3.2
 DISTNAME=	gcc-${GCC_VERSION}
@@ -89,6 +89,17 @@ CONFIGURE_ARGS+=	--disable-shared
 GCC_ARCHSUBDIR=	${GCC_SUBPREFIX}/lib/gcc-lib/${GCC_PLATFORM}/${GCC_VERSION}
 GCC_ARCHDIR=	${PREFIX}/${GCC_ARCHSUBDIR}
 
+# Create the directories for the build, patch the ltconfig script to
+# always use "sunos" shared library numbering (for consistent PLISTs
+# across platforms), and touch all the necessary files so that they're
+# not regenerated after the configure script is run.
+#
 pre-configure:
 	${MKDIR} ${BUILD_DIRS}
+	cd ${WRKSRC}; for file in ltconfig boehm-gc/ltconfig; do	\
+		${MV} -f $$file $$file.bak;				\
+		${SED} -e "s|\(version_type\)=linux|\1=sunos|g"		\
+			$$file.bak > $$file;				\
+		${CHMOD} +x $$file;					\
+	done
 	cd ${WRKSRC} && contrib/gcc_update --touch
