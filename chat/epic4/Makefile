@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2001/09/15 13:49:51 zuntum Exp $
+# $NetBSD: Makefile,v 1.15 2002/05/03 11:00:23 zuntum Exp $
 #
 
 DISTNAME=	epic4-1.0.1
@@ -16,8 +16,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}				\
 # to get USE_INET6
 .include "../../mk/bsd.prefs.mk"
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
-PATCH_SITES=    http://www.t17.ds.pwr.wroc.pl/~misiek/ipv6/		\
-		http://zuntum.utech.lublin.pl/patches/
+PATCH_SITES=    http://www.t17.ds.pwr.wroc.pl/~misiek/ipv6/
 PATCHFILES=     epic4-1.0.1-ipv6-20010418.patch.gz
 PATCH_DIST_STRIP=	-p1
 .endif
