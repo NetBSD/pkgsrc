@@ -1,43 +1,18 @@
-$NetBSD: patch-ab,v 1.6 1999/03/14 20:59:42 tron Exp $
+$NetBSD: patch-ab,v 1.7 1999/03/14 23:07:55 tron Exp $
 
---- vfs/Makefile.in.orig	Mon May 25 06:16:04 1998
-+++ vfs/Makefile.in	Sun Oct  4 09:07:34 1998
-@@ -91,25 +91,25 @@
+--- vfs/Make-mc.in.orig	Sat Mar 13 03:02:30 1999
++++ vfs/Make-mc.in	Sun Mar 14 23:25:48 1999
+@@ -192,11 +192,11 @@
+ 	          $(DESTDIR)$(libdir)/extfs/$$I; \
+ 	done
+ 	for I in $(EXTFS_CONST) ; do \
+-	    $(INSTALL_PROGRAM) $(srcdir)/extfs/$$I \
++	    $(INSTALL_SCRIPT) $(srcdir)/extfs/$$I \
+ 	             $(DESTDIR)$(libdir)/extfs/$$I; \
+ 	done
+ 	for I in $(EXTFS_OUT) ; do \
+-	    $(INSTALL_PROGRAM) $(builddir)/vfs/extfs/$$I \
++	    $(INSTALL_SCRIPT) $(builddir)/vfs/extfs/$$I \
+ 	             $(DESTDIR)$(libdir)/extfs/$$I; \
+ 	done
  
- install: @mcserv@ install.extfs
- 	-(if test x@mcserv@ != x; then \
--	    $(INSTALL_PROGRAM) mcserv $(DESTDIR)$(bindir)/$(binprefix)mcserv; \
-+	    $(INSTALL_PROGRAM) mcserv $(DESTDIR)$(sbindir)/$(binprefix)mcserv; \
- 	fi)
- 
- install.extfs:
- 	$(INSTALL_DATA) $(srcdir)/extfs/README $(DESTDIR)$(libdir)/extfs/README
- 	$(INSTALL_DATA) $(srcdir)/extfs/extfs.ini $(DESTDIR)$(libdir)/extfs/extfs.ini
--	$(INSTALL_PROGRAM) $(srcdir)/extfs/a $(DESTDIR)$(libdir)/extfs/a
--	$(INSTALL_PROGRAM) $(srcdir)/extfs/arfs $(DESTDIR)$(libdir)/extfs/arfs
--	$(INSTALL_PROGRAM) $(srcdir)/extfs/rpm  $(DESTDIR)$(libdir)/extfs/rpm
--	$(INSTALL_PROGRAM) $(srcdir)/extfs/hp48  $(DESTDIR)$(libdir)/extfs/hp48
-+	$(INSTALL_DATA) $(srcdir)/extfs/a $(DESTDIR)$(libdir)/extfs/a
-+	$(INSTALL_DATA) $(srcdir)/extfs/arfs $(DESTDIR)$(libdir)/extfs/arfs
-+	$(INSTALL_DATA) $(srcdir)/extfs/rpm  $(DESTDIR)$(libdir)/extfs/rpm
-+	$(INSTALL_DATA) $(srcdir)/extfs/hp48  $(DESTDIR)$(libdir)/extfs/hp48
- 	
--	$(INSTALL_PROGRAM) extfs/cpio $(DESTDIR)$(libdir)/extfs/cpio
--	$(INSTALL_PROGRAM) extfs/deb  $(DESTDIR)$(libdir)/extfs/deb
--	$(INSTALL_PROGRAM) extfs/ftplist $(DESTDIR)$(libdir)/extfs/ftplist
--	$(INSTALL_PROGRAM) extfs/lslR $(DESTDIR)$(libdir)/extfs/lslR
--	$(INSTALL_PROGRAM) extfs/lha $(DESTDIR)$(libdir)/extfs/lha
--	$(INSTALL_PROGRAM) extfs/rar $(DESTDIR)$(libdir)/extfs/rar
--	$(INSTALL_PROGRAM) extfs/zip $(DESTDIR)$(libdir)/extfs/zip
--	$(INSTALL_PROGRAM) extfs/zoo $(DESTDIR)$(libdir)/extfs/zoo
-+	$(INSTALL_DATA) extfs/cpio $(DESTDIR)$(libdir)/extfs/cpio
-+	$(INSTALL_DATA) extfs/deb  $(DESTDIR)$(libdir)/extfs/deb
-+	$(INSTALL_DATA) extfs/ftplist $(DESTDIR)$(libdir)/extfs/ftplist
-+	$(INSTALL_DATA) extfs/lslR $(DESTDIR)$(libdir)/extfs/lslR
-+	$(INSTALL_DATA) extfs/lha $(DESTDIR)$(libdir)/extfs/lha
-+	$(INSTALL_DATA) extfs/rar $(DESTDIR)$(libdir)/extfs/rar
-+	$(INSTALL_DATA) extfs/zip $(DESTDIR)$(libdir)/extfs/zip
-+	$(INSTALL_DATA) extfs/zoo $(DESTDIR)$(libdir)/extfs/zoo
- 
- uninstall:
- 	-$(RMF) $(DESTDIR)$(libdir)/extfs/rpm
