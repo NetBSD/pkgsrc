@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2002/08/25 21:51:19 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2003/09/07 09:32:48 wiz Exp $
 #
 
-DISTNAME=	lq-sp-1.3.4.7
+DISTNAME=	lq-sp-1.3.4.9
 CATEGORIES=	www
 MASTER_SITES=	http://www.htmlhelp.com/tools/validator/offline/
 
