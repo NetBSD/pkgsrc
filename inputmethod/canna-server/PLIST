@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/04/23 22:07:53 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/06/25 16:58:10 wiz Exp $
 bin/addwords
 bin/canlisp
 bin/cannacheck
@@ -35,6 +35,7 @@ man/ja_JP.EUC/man1/cannakill.1
 man/ja_JP.EUC/man1/cannaserver.1
 man/ja_JP.EUC/man1/cannastat.1
 man/ja_JP.EUC/man1/catdic.1
+man/ja_JP.EUC/man1/chmoddic.1
 man/ja_JP.EUC/man1/cpdic.1
 man/ja_JP.EUC/man1/cshost.1
 man/ja_JP.EUC/man1/ctow.1
@@ -56,6 +57,7 @@ man/man1/cannakill.1
 man/man1/cannaserver.1
 man/man1/cannastat.1
 man/man1/catdic.1
+man/man1/chmoddic.1
 man/man1/cpdic.1
 man/man1/cshost.1
 man/man1/ctow.1
