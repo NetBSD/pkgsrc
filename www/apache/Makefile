@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 1998/06/22 13:14:31 agc Exp $
+# $NetBSD: Makefile,v 1.14 1998/07/21 21:34:09 cjs Exp $
 #
 
 DISTNAME=       apache_1.3.0
@@ -18,6 +18,12 @@ CONFIGURE_ARGS+=--compat --prefix=${PREFIX}/http --exec-prefix=${PREFIX} \
 # Note that there is NO static compile module hook here.  This is intentional.
 # Under Apache 1.3, modules can be compiled to link dynamically to the server
 # using the "apxs" program.  See apxs(8).
+
+# Create dummy files because there's no way (that I can see --cjs)
+# to make an empty directory with pkg_add.
+post-install:
+	touch ${PREFIX}/http/logs/.keep_me
+	touch ${PREFIX}/http/proxy/.keep_me
 
 .include "../../mk/bsd.pkg.mk"
 
