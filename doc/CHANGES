@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9271 2005/02/23 01:12:32 wiz Exp $
+$NetBSD: CHANGES,v 1.9272 2005/02/23 11:13:10 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1045,3 +1045,4 @@ Changes to the packages collection and infrastructure in 2005:
 		integrity of dist files and dist patches [agc 2005-02-22]
 	Updated gnome2-control-center to 2.8.2 [jmmv 2005-02-22]
 	Updated fxtv to 1.03nb8 [wiz 2005-02-23]
+	Updated dinotrace to 9.2a [dmcmahill 2005-02-23]
