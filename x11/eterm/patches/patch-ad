@@ -1,28 +1,12 @@
-$NetBSD: patch-ad,v 1.1 1999/10/28 00:33:10 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2001/04/28 11:07:35 zuntum Exp $
 
---- utils/Etbg.c.orig	Fri Mar 26 20:13:46 1999
-+++ utils/Etbg.c	Mon Oct 25 17:50:41 1999
-@@ -26,12 +26,20 @@
+--- utils/Etbg.c.orig	Thu Oct 28 02:18:26 1999
++++ utils/Etbg.c
+@@ -24,7 +24,6 @@
+  */
+ 
  #include <stdio.h>
- #include <string.h>
+-#include <string.h>
  
-+#ifdef FALSE
-+#undef FALSE
-+#endif
-+#define FALSE	0
-+
-+#ifdef TRUE
-+#undef TRUE
-+#endif
-+#define TRUE	1
-+
- int 
- main(int argc, char **argv)
- {
--  enum {
--    FALSE, TRUE
--  } scale = FALSE, trans = FALSE;
-+  int scale = FALSE, trans = FALSE;
-   unsigned int i, pic = 0, tint = 0, shade = 0;
- 
-   for (i = 1; i < argc; i++) {
+ #ifndef FALSE
+ # define FALSE (0)

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2001/02/17 17:06:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2001/04/28 11:07:34 zuntum Exp $
 
-DISTNAME=		Eterm-0.8.9
-PKGNAME=		eterm-0.8.9
+DISTNAME=		Eterm-0.8.10
+PKGNAME=		eterm-0.8.10
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.eterm.org/pub/Eterm/ \
 			ftp://alien.eterm.org/pub/Eterm/ \
@@ -22,18 +22,10 @@ PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
 
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
+LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
-
-pre-build:
-	@if ${PKG_INFO} -qe 'eterm<0.8.9'; then				\
-		${ECHO} "**** An older version of Eterm is installed";	\
-		${ECHO} "**** ${PKGNAME} cannot be built with it installed."; \
-		${ECHO} "**** Please delete it before building";	\
-		${ECHO} "**** or use \"${MAKE} update\".";		\
-		${FALSE};						\
-	fi
 
 post-extract:
 	${LN} -sf ${WRKSRC} ${WRKDIR}/Eterm
