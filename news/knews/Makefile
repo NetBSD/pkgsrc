@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2003/03/03 02:48:35 jschauma Exp $
+# $NetBSD: Makefile,v 1.41 2003/04/02 05:25:13 fredb Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0
@@ -15,7 +15,7 @@ CONFLICTS=	knews-1.0b0
 USE_BUILDLINK2=	YES
 USE_IMAKE=	YES
 
-BUILD_DEFS+=	KNEWS_DOMAIN_NAME KNEWS_DOMAIN_FILE
+BUILD_DEFS+=	KNEWS_DOMAIN_NAME KNEWS_DOMAIN_FILE USE_INET6
 
 .include "../../mk/bsd.prefs.mk"
 
