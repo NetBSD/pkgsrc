@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/01/24 14:50:05 grant Exp $
+# $NetBSD: Makefile,v 1.21 2004/02/21 07:29:26 snj Exp $
 #
 
 DISTNAME=	ipv6calc-0.46
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.bieringer.de/linux/IPv6/ipv6calc/
-COMMENT=	Manipulates IPv6 adresses
+COMMENT=	Manipulates IPv6 addresses
 
 # This package does not set or evaluate USE_INET6, but it should still
 # be listed in README-IPv6.html. Leave this comment here to make it so!
