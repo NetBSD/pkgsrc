@@ -11,5 +11,5 @@ over "classic" TTCP:
 	* Can be started via inetd
 	* Output can be customized on the commnad line
 	* Centralized reporting of the measurements
-	* Trafic checksumming to detect failures in UDP transmissions
+	* Traffic checksumming to detect failures in UDP transmissions
 	* Multicast support
