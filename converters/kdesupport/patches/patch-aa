@@ -1,46 +1,11 @@
-$NetBSD: patch-aa,v 1.6 1999/11/22 20:31:31 jdolecek Exp $
+$NetBSD: patch-aa,v 1.7 2000/08/22 21:23:24 skrll Exp $
 
 The libtool staff pulled to KDE in rev. 331 of
 	kde-common/admin/acinclude.m4.in (jdolecek)
 
---- ./configure	Tue Sep  7 17:24:53 1999
-+++ /usr/pkgsrc/converters/kdesupport/work.i386.unpatched/kdesupport-1.1.2/configure	Fri Nov 12 06:31:53 1999
-@@ -1973,6 +1973,8 @@
- kde_save_cflags="$CFLAGS"
- CC=$CXX
- CFLAGS="$CXXFLAGS"
-+
-+if false; then
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool --silent'
- 
-@@ -2206,6 +2208,7 @@
- ${CONFIG_SHELL-/bin/sh} $ac_aux_dir/ltconfig --no-reexec \
- $libtool_flags --no-verify $ac_aux_dir/ltmain.sh $host \
- || { echo "configure: error: libtool configure failed" 1>&2; exit 1; }
-+fi
- 
- # Redirect the config.log output again, so that the ltconfig log is not
- # clobbered by the next message.
-@@ -3265,7 +3268,7 @@
- 
- 
- 
--
-+if false; then
- echo $ac_n "checking for Qt""... $ac_c" 1>&6
- echo "configure:3271: checking for Qt" >&5
- LIBQT="-lqt -lXext -lX11 $LIBSOCKET"
-@@ -3600,7 +3603,7 @@
- 
- 
- LIB_QT='-lqt $(LIB_X11)'
--
-+fi
- 
- 
- 
-@@ -5479,7 +5482,7 @@
+--- configure.orig	Tue Sep  7 16:24:53 1999
++++ configure	Mon Aug 14 17:50:44 2000
+@@ -5479,7 +5479,7 @@
  
  
  
@@ -49,7 +14,7 @@ The libtool staff pulled to KDE in rev. 331 of
  echo $ac_n "checking for main in -ljs""... $ac_c" 1>&6
  echo "configure:5485: checking for main in -ljs" >&5
  ac_lib_var=`echo js'_'main | sed 'y%./+-%__p_%'`
-@@ -5525,7 +5528,7 @@
+@@ -5525,7 +5525,7 @@
  For this have a look at http://people.ssh.fi/mtr/js
  " 1>&2
   	TOPSUBDIRS="$TOPSUBDIRS js"
