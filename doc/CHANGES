@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5787 2004/05/02 04:31:15 grant Exp $
+$NetBSD: CHANGES,v 1.5788 2004/05/02 09:21:28 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2312,3 +2312,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated p5-Digest-SHA1 to 2.10 [heinz 2004-05-02]
 	Added gmpc-0.10.2 [grant 2004-05-02]
 	Added kmp-0.01 [grant 2004-05-02]
+	Updated rhythmbox to 0.8.2 [jmmv 2004-05-02]
