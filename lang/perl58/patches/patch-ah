@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.3 2003/10/05 07:07:14 jlam Exp $
+$NetBSD: patch-ah,v 1.4 2004/01/23 23:26:25 jlam Exp $
 
---- perl.c.orig	Thu Sep 11 14:42:33 2003
-+++ perl.c	Tue Sep 30 01:16:04 2003
-@@ -3943,12 +3943,33 @@
+--- perl.c.orig	Mon Nov  3 00:04:27 2003
++++ perl.c
+@@ -3975,12 +3975,33 @@ S_init_perllib(pTHX)
      }
  
  /* Use the ~-expanded versions of APPLLIB (undocumented),
@@ -37,7 +37,7 @@ $NetBSD: patch-ah,v 1.3 2003/10/05 07:07:14 jlam Exp $
  #ifdef ARCHLIB_EXP
      incpush(ARCHLIB_EXP, FALSE, FALSE, TRUE);
  #endif
-@@ -3980,27 +4001,6 @@
+@@ -4012,27 +4033,6 @@ S_init_perllib(pTHX)
      incpush(PRIVLIB_EXP, TRUE, FALSE, TRUE);
  #else
      incpush(PRIVLIB_EXP, FALSE, FALSE, TRUE);
