@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/11/30 10:16:14 seb Exp $
+# $NetBSD: Makefile,v 1.26 2004/12/03 11:42:57 seb Exp $
 #
 
 DISTNAME=	graphviz-1.16
@@ -23,6 +23,7 @@ PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 .include "../../mk/bsd.prefs.mk"
 
+CONFIGURE_ARGS+=	--with-mylibgd
 CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH}
 CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH}
 CONFIGURE_ENV+=		X11PREFIX=${X11PREFIX} X11BASE=${X11BASE}
