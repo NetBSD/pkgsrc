@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.51 2003/12/03 17:13:02 sketch Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.52 2004/01/17 06:22:20 grant Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -55,7 +55,7 @@ USE_BULK_CACHE?=	no
 
 # Shall we remove any packages which are installed, but not required
 # to build this package
-PRECLEAN?=      yes
+PRECLEAN?=	yes
 
 # If OBJHOSTNAME is set, use first component of hostname in cache and log files
 # If OBJMACHINE is set, use ${MACHINE_ARCH} in the cache and log files
@@ -63,11 +63,11 @@ PRECLEAN?=      yes
 .  if !defined(_HOSTNAME)
 _HOSTNAME!= ${UNAME} -n
 .  endif
-BULK_ID?=       .${_HOSTNAME:C|\..*||}
+BULK_ID?=	.${_HOSTNAME:C|\..*||}
 .elif defined(OBJMACHINE)
-BULK_ID?=       .${MACHINE_ARCH}
+BULK_ID?=	.${MACHINE_ARCH}
 .else
-BULK_ID?=     
+BULK_ID?=
 .endif
 
 # This file exists to mark a package as broken
@@ -89,7 +89,7 @@ DEPENDSFILE?=	${_PKGSRCDIR}/.depends${BULK_ID}
 
 # This is a top level file which lists the entire pkgsrc depends tree in the format:
 # devel/libfoo is depended upon by: foo/bar graphics/gtkfoo ...
-# ie, to build foo/bar we need  devel/libfoo to be installed.
+# ie, to build foo/bar we need devel/libfoo to be installed.
 #     to build graphics/gtkfoo we need devel/libfoo to be installed
 SUPPORTSFILE?=	${_PKGSRCDIR}/.supports${BULK_ID}
 
@@ -146,8 +146,8 @@ bulk-check-uptodate:
 	@uptodate=1 ; \
 	if [ -f "${REF}" ]; then \
 		${SHCOMMENT} "Check files of this package" ; \
-		newfiles="`${FIND} . -type f -newer "${REF}" -print  | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' || ${TRUE}`" ; \
-		nnewfiles="`${FIND} . -type f -newer "${REF}" -print  | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' | ${WC} -l`" ; \
+		newfiles="`${FIND} . -type f -newer "${REF}" -print | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' || ${TRUE}`" ; \
+		nnewfiles="`${FIND} . -type f -newer "${REF}" -print | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' | ${WC} -l`" ; \
 		if [ "$$nnewfiles" -gt 0 ]; then \
 			${ECHO_MSG} >&2 "BULK> Package ${PKGNAME} ($$newfiles) modified since last 'make package' re-packaging..." ; \
 			uptodate=0 ; \
@@ -164,7 +164,7 @@ bulk-check-uptodate:
 		for dep in $$deps ; do \
 			${SHCOMMENT} "check against the binary pkg that pkg_add would pick, too:" ; \
 			${SHCOMMENT} "(Only one should be returned here, really...)" ; \
-			pkg=`${PKG_ADMIN} lsbest "${PACKAGES}/All/$$dep"` ;  \
+			pkg=`${PKG_ADMIN} lsbest "${PACKAGES}/All/$$dep"` ; \
 			if [ -z "$$pkg" ]; then \
 				${ECHO_MSG} >&2 "BULK> Required binary package $$dep does not exist, rebuilding... " ; \
 				uptodate=0 ; \
@@ -230,7 +230,7 @@ bulk-package:
 				${DO} ${RM} -f ${PACKAGES}/$$cat/${PKGNAME}${PKG_SUFX}; \
 			done ;\
 		fi; \
-		${ECHO_MSG} "BULK> Full rebuild  in progress..." ; \
+		${ECHO_MSG} "BULK> Full rebuild in progress..." ; \
 		${ECHO_MSG} "BULK> Cleaning package and its depends" ;\
 		if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 			for pkgdir in ${PKGPATH} `${GREP} "^${PKGPATH} " ${DEPENDSFILE} | ${SED} -e 's;^.*:;;g'`; do \
@@ -265,7 +265,7 @@ bulk-package:
 									;; \
 							esac ; \
 						else \
-							${ECHO_MSG} "BULK> ${PKGNAME}  requires installed package $$pkgname ($$pkgdir) to build." ;\
+							${ECHO_MSG} "BULK> ${PKGNAME} requires installed package $$pkgname ($$pkgdir) to build." ;\
 						fi ;\
 					fi ;\
 				else \
@@ -287,10 +287,10 @@ bulk-package:
 				pkgfile=${PACKAGES}/All/$${pkgname}.tgz ;\
 				if ! ${PKG_INFO} -qe $$pkgname ; then \
 					if [ -f $$pkgfile ]; then \
-						${ECHO_MSG} "BULK>  ${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile"; \
-						${DO} ${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile || ${ECHO_MSG} "warning:  could not add $$pkgfile." ; \
+						${ECHO_MSG} "BULK> ${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile"; \
+						${DO} ${PKG_ADD} ${PKG_ARGS_ADD} $$pkgfile || ${ECHO_MSG} "warning: could not add $$pkgfile." ; \
 					else \
-						${ECHO_MSG} "BULK> warning:  $$pkgfile does not exist.  It will be rebuilt." ;\
+						${ECHO_MSG} "BULK> warning: $$pkgfile does not exist.  It will be rebuilt." ;\
 					fi ;\
 				else \
 					${ECHO_MSG} "BULK> Required package $$pkgname ($$pkgdir) is already installed" ; \
@@ -320,7 +320,7 @@ bulk-package:
 				for pkgdir in `${GREP} "^${PKGPATH} " ${SUPPORTSFILE} | ${SED} -e 's;^.*:;;g'`; do \
 					pkgname=`${GREP} "^$$pkgdir " ${INDEXFILE} | ${AWK} '{print $$2}'` ;\
 					if [ -z "$$pkgname" ]; then pkgname=unknown ; fi ; \
-					${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken:  $$pkgname ($$pkgdir)";\
+					${ECHO_MSG} "BULK> marking package that requires ${PKGNAME} as broken: $$pkgname ($$pkgdir)";\
 					pkgerr="-1"; \
 					pkgignore=`(cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_FAIL_REASON)`; \
 					pkgskip=`(cd ${_PKGSRCDIR}/$$pkgdir && ${MAKE} show-var VARNAME=PKG_SKIP_REASON)`; \
