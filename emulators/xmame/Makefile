@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 1998/09/07 22:54:50 mycroft Exp $
+# $NetBSD: Makefile,v 1.19 1998/09/07 22:58:24 mycroft Exp $
 #
 
 DISTNAME=		xmame-0.34b2.2
@@ -23,7 +23,6 @@ MAKE_ENV+=		OPSYS=${OPSYS} ARCH=${ARCH} DESTDIR=${DESTDIR} \
 			DISPLAY_METHOD="${DISPLAY_METHOD}"
 MAKEFILE=		makefile.unix
 DISPLAY_METHOD=		x11
-ALL_TARGET=		xmame.${DISPLAY_METHOD}
 
 ROMPATH=		${PREFIX}/share/xmame
 SPOOLDIR=		/var/games/xmame
