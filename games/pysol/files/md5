@@ -1,2 +1,4 @@
+$NetBSD: md5,v 1.2 1999/12/14 00:44:51 sakamoto Exp $
+
 MD5 (pysol-3.00.tar.gz) = 827925c7b1204897dcad539cfe42c7dd
 MD5 (pysol-cardsets-3.00.tar.gz) = 9db290fb2f2bcf71ed2f8314089ca3e2
