@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 09:59:23 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/03/15 14:05:52 wiz Exp $
 
 SHA1 (mh-6.8.4-JP-3.05.tar.gz) = cb531f80be4326cd56d33d6fa9efba4d2d63d0ce
 RMD160 (mh-6.8.4-JP-3.05.tar.gz) = a092a9447370a09f770121baa2ae7eced130ff0f
@@ -15,6 +15,7 @@ Size (mh-6.8.4-JP-3.05-20031023.patch.gz) = 307 bytes
 SHA1 (mh-6.8.4-JP-3.05-20031106.patch.gz) = daaf41afb5e83143dceb5ae6444e26f1f9ca5bf8
 RMD160 (mh-6.8.4-JP-3.05-20031106.patch.gz) = b0585c5c5aebdafa619e129917f0b7d7db987b02
 Size (mh-6.8.4-JP-3.05-20031106.patch.gz) = 311 bytes
+SHA1 (patch-aa) = 4c13941b541283222eaa1ad488384fe95b018ede
 SHA1 (patch-al) = 59bd51d6b67beb0492b3a3d3acc05242474bac7b
 SHA1 (patch-as) = 786c7bf7988806023d9fd5a2ced5a9d31550ff54
 SHA1 (patch-at) = 5594d3beac4e911cfa3ff277d4ae034a6dccdccb
