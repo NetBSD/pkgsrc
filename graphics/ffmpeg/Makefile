@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2002/10/09 14:24:03 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2002/12/23 01:42:08 wiz Exp $
 
 DISTNAME=	ffmpeg-0.4.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ffmpeg/}
 
@@ -23,12 +23,24 @@ CONFIGURE_ARGS=	--cc=${CC} --disable-grab --disable-mmx --prefix=${PREFIX}
 WRKSRC=		${WRKDIR}/ffmpeg
 
 post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/include/libav
+	${INSTALL_DATA_DIR} ${PREFIX}/include/libavcodec
+	${INSTALL_DATA_DIR} ${PREFIX}/include/libavcodec/i386
+	${INSTALL_DATA_DIR} ${PREFIX}/include/libavcodec/libac3
+	${INSTALL_DATA} ${WRKSRC}/libav/*.h ${PREFIX}/include/libav
+	${INSTALL_DATA} ${WRKSRC}/libavcodec/*.h ${PREFIX}/include/libavcodec
+	${INSTALL_DATA} ${WRKSRC}/libavcodec/i386/*.h \
+		${PREFIX}/include/libavcodec/i386
+	${INSTALL_DATA} ${WRKSRC}/libavcodec/libac3/*.h \
+		${PREFIX}/include/libavcodec/libac3
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ffmpeg \
-	  ${PREFIX}/share/examples/ffmpeg
+		${PREFIX}/share/examples/ffmpeg
+	${INSTALL_DATA} ${WRKSRC}/libavcodec/apiexample.c \
+		${PREFIX}/share/doc/ffmpeg
 	${INSTALL_DATA} ${WRKSRC}/README ${WRKSRC}/doc/* \
-	  ${PREFIX}/share/doc/ffmpeg
+		${PREFIX}/share/doc/ffmpeg
 	${MV} ${PREFIX}/share/doc/ffmpeg/ffserver.conf \
-	  ${PREFIX}/share/examples/ffmpeg
+		${PREFIX}/share/examples/ffmpeg
 
 .include "../../devel/libgetopt/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
