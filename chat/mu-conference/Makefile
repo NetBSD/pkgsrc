@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/12/14 19:38:19 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2004/12/28 02:47:41 reed Exp $
 #
 
 DISTNAME=		mu-conference-0.6.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		chat
 MASTER_SITES=		http://jabber.terrapin.com/JCR/ http://www.jabberstudio.org/projects/mu-conference/releases/download.php?file=
 DISTFILES=		${DISTNAME}.tar.gz jcr-0.1.2.tar.gz

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/12/03 13:55:48 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2004/12/28 02:47:46 reed Exp $
 
 DISTNAME=	    jftpgw-0.13.4
+PKGREVISION=	    1
 CATEGORIES=	    net
 MASTER_SITES=	    http://www.mcknight.de/jftpgw/
 

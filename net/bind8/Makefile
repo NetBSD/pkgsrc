@@ -1,11 +1,12 @@
 #
-# $NetBSD: Makefile,v 1.27 2004/04/18 13:53:40 seb Exp $
+# $NetBSD: Makefile,v 1.28 2004/12/28 02:47:46 reed Exp $
 #
 # FreeBSD Id: Makefile,v 1.12 1999/06/28 21:25:07 billf Exp
 #
 
 DISTNAME=	bind
 PKGNAME=	bind-${BIND_VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind/src/${BIND_VERSION}/
 DISTFILES=	${DISTNAME}-src.tar.gz ${DISTNAME}-doc.tar.gz
