@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2002/03/03 23:49:49 hubertf Exp $
+$NetBSD: patch-ab,v 1.5 2002/03/29 11:34:51 rh Exp $
 
---- doc/example_silcd.conf.in.orig	Wed Feb 27 17:47:05 2002
-+++ doc/example_silcd.conf.in	Fri Mar  1 18:53:08 2002
+--- doc/example_silcd.conf.in.orig	Sun Mar 17 14:39:17 2002
++++ doc/example_silcd.conf.in	Wed Mar 27 21:05:25 2002
 @@ -36,7 +36,7 @@
  	# This is the default path where to search modules.  If omitted
  	# built-in modules will be used.  Built-in modules will also be
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.4 2002/03/03 23:49:49 hubertf Exp $
  
  	# If both passphrase and public key authentication is set for a
  	# connection the public key authentication is the preferred one
-@@ -123,37 +123,37 @@
+@@ -139,8 +139,8 @@
  	#
  	# Server FQDN and IP address
  	#
@@ -22,31 +22,16 @@ $NetBSD: patch-ab,v 1.4 2002/03/03 23:49:49 hubertf Exp $
  	port = 706;
  
  	#
- 	# ServerType field specifies the purpose of this server
- 	# This is only a descriptive field.
- 	#
--	ServerType = "Test Server";
-+	ServerType = "NetBSD Test Server";
- 
+@@ -152,7 +152,7 @@
  	#
  	# Geographic location
  	#
 -	Location = "Kuopio, Finland";
-+	Location = "Default City, Default Country";
++	Location = "Generic City, Generic Country";
  
  	#
  	# Full admin name
- 	#
--	Admin = "Foo T. Bar";
-+	Admin = "Root of All Evil";
- 
- 	#
- 	# Admin's email address
- 	#
--	AdminEmail = "foo-admin@bar.com";
-+	AdminEmail = "root@localhost";
- 
- 	#
+@@ -168,8 +168,8 @@
  	# Run SILC server as specific user and group. The server must be 
  	# initially run as root.
  	#
@@ -57,7 +42,7 @@ $NetBSD: patch-ab,v 1.4 2002/03/03 23:49:49 hubertf Exp $
  
  	#
  	# Public and private keys
-@@ -166,12 +166,12 @@
+@@ -182,7 +182,7 @@
  	#
  	# Specifies the text file displayed on client connection
  	#
@@ -66,22 +51,16 @@ $NetBSD: patch-ab,v 1.4 2002/03/03 23:49:49 hubertf Exp $
  
  	#
  	# Pid file
+@@ -209,7 +209,7 @@
+ 	# reduces memory usage.  By default it is false and log files are
+ 	# written with FlushDelay timeout.
  	#
--	PidFile = "@PIDFILE@";
-+	PidFile = "/var/run/silcd.pid";
- };
- 
- #
-@@ -193,7 +193,7 @@
- 	# real-time. This causes a bit more CPU and HDD activity, but
- 	# reduces memory usage. (if unsure say true).
- 	#
--	QuickLogs = false;
+-	#QuickLogs = true;
 +	QuickLogs = true;
  
- 	#
- 	# (Only if QuickLogs is false)
-@@ -327,9 +327,9 @@
+ 	# FlushDelay tells log files update delay (seconds) in case you 
+ 	# have chosen buffering output.  This setting has effect only if
+@@ -368,9 +368,9 @@
  # required.
  #
  Admin {
@@ -92,30 +71,30 @@ $NetBSD: patch-ab,v 1.4 2002/03/03 23:49:49 hubertf Exp $
 +	User = "admin";
 +	Nick = "admin";
  	Passphrase = "verysecret";
- 	# Publickey = "/path/to/the/public.key";
+ 	# PublicKey = "/path/to/the/public.key";
  };
-@@ -352,13 +352,13 @@
+@@ -393,13 +393,13 @@
  # to true. For normal connections set it false. If it is set to true then
  # this server will be backup router.
  #
 -ServerConnection {
 -	Host = "10.2.1.7";
 -	Passphrase = "verysecret";
--	#Publickey = "/path/to/the/public.key";
+-	#PublicKey = "/path/to/the/public.key";
 -	Params = "normal";
 -	Backup = false;
 -};
 +#ServerConnection {
 +#	Host = "10.2.1.7";
 +#	Passphrase = "verysecret";
-+#	#Publickey = "/path/to/the/public.key";
++#	#PublicKey = "/path/to/the/public.key";
 +#	Params = "normal";
 +#	Backup = false;
 +#};
  
  #
  # Configured router connections
-@@ -385,17 +385,17 @@
+@@ -426,17 +426,17 @@
  # backup router is in our cell then set the "BackupLocal" option to true.
  # If the backup router is in other cell then set it to false.
  #
@@ -123,7 +102,7 @@ $NetBSD: patch-ab,v 1.4 2002/03/03 23:49:49 hubertf Exp $
 -	Host = "10.2.1.100";
 -	Port = 706;
 -	Passphrase = "verysecret";
--	#Publickey = "/path/to/the/public.key";
+-	#PublicKey = "/path/to/the/public.key";
 -	Params = "normal";
 -	Initiator = true;
 -	#BackupHost = "10.2.1.6";
@@ -134,7 +113,7 @@ $NetBSD: patch-ab,v 1.4 2002/03/03 23:49:49 hubertf Exp $
 +#	Host = "10.2.1.100";
 +#	Port = 706;
 +#	Passphrase = "verysecret";
-+#	#Publickey = "/path/to/the/public.key";
++#	#PublicKey = "/path/to/the/public.key";
 +#	Params = "normal";
 +#	Initiator = true;
 +#	#BackupHost = "10.2.1.6";
