@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8972 2005/01/29 14:59:27 abs Exp $
+$NetBSD: CHANGES,v 1.8973 2005/01/29 15:37:11 abs Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -654,4 +654,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated mathomatic to 11.7 [minskim 2005-01-29]
 	Updated mad123 to 0.8.5 [scw 2005-01-29]
 	Updated cpuflags to 0.81 [abs 2005-01-29]
+	Updated pkg_chk to 1.53 [abs 2005-01-29]
 
