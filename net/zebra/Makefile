@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2000/08/27 08:32:55 itojun Exp $
+# $NetBSD: Makefile,v 1.26 2000/10/13 15:13:54 itojun Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
-DISTNAME=	zebra-0.88
+DISTNAME=	zebra-0.89
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.zebra.org/pub/zebra/
 # you might need debugging, it's a developer release !
@@ -14,11 +14,13 @@ HOMEPAGE=	http://www.zebra.org/
 BUILD_DEPENDS+=	automake:../../devel/automake
 BUILD_DEPENDS+=	autoreconf:../../devel/autoconf
 
+.include "../../mk/bsd.prefs.mk"
+
 # libedit does not work due to missing functions.
 .if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"
 DEPENDS+=	readline-*:../../devel/readline
 CONFIGURE_ARGS+=--enable-vtysh
-CONFIGURE_ENV+=	LIBS=-L${LOCALBASE}/lib CFLAGS=-I${LOCALBASE}/include
+CONFIGURE_ENV+=	LIBS=-L${LOCALBASE}/lib CPPFLAGS=-I${LOCALBASE}/include
 .else
 CONFIGURE_ARGS+=--disable-vtysh
 .endif
@@ -46,6 +48,7 @@ post-patch:
 .if defined(USE_ZEBRA_VTYSH) && ${USE_ZEBRA_VTYSH} == "YES"
 		${CAT} ${PKGDIR}/PLIST.vtysh >> ${PLIST_SRC}
 .endif
+		${ECHO} '@dirrm share/examples/zebra' >>${PLIST_SRC}
 
 pre-configure:
 		cd ${WRKSRC} && autoreconf
