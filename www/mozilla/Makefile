@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 1998/08/20 15:17:31 tsarna Exp $
+# $NetBSD: Makefile,v 1.15 1998/09/27 03:29:34 tv Exp $
 #
 
 DISTNAME=	mozilla-19980728
@@ -15,6 +15,8 @@ USE_X11=	yes
 USE_GMAKE=	yes
 USE_PERL5=	yes
 USE_MOTIF=	yes
+
+NOT_FOR_ARCHS=	arm32	# Cause not yet known
 
 CONFLICTS=	mozilla-19980603 mozilla-19980429
 
