@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.14.2.3 2003/08/16 09:08:50 jlam Exp $
+# $NetBSD: texinfo.mk,v 1.14.2.4 2003/08/19 20:11:08 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk when INFO_FILES is
 # not empty or USE_MAKEINFO is not "no".
@@ -47,16 +47,6 @@ FILES_SUBST+=		INFO_FILES=${INFO_FILES:Q}
 FILES_SUBST+=		INSTALL_INFO=${INSTALL_INFO:Q}
 FILES_SUBST+=		INFO_DIR=${INFO_DIR:Q}
 .endif # INFO_FILES
-
-# When not using buildlink2 set INSTALL_INFO in environment to ${TRUE}
-# so the package build/install step does not register itself the info
-# files as this is the job of the INSTALL script.
-# This is far from being 100% robust but it is "Mostly Harmless"
-# when it fails to catch some install-info invocations.
-.if !empty(USE_BUILDLINK2:M[nN][oO])
-CONFIGURE_ENV+=		INSTALL_INFO="${TRUE}"
-MAKE_ENV+=		INSTALL_INFO="${TRUE}"
-.endif
 
 .if empty(USE_MAKEINFO:M[nN][oO])
 #
@@ -120,20 +110,6 @@ MAKEINFO=		${_GTEXINFO_PREFIX}/bin/makeinfo ${MAKEINFO_ARGS}
 MAKEINFO_ARGS+=		${_MAKEINFO_SPLIT_SIZE_ARG}
 .    endif
 MAKEINFO=		${_MAKEINFO} ${MAKEINFO_ARGS}
-.  endif
-
-# When not using buildlink2 set MAKEINFO in environment to the pathname
-# of the right makeinfo command.
-.  if !empty(USE_BUILDLINK2:M[nN][oO])
-CONFIGURE_ENV+=		MAKEINFO="${MAKEINFO}"
-MAKE_ENV+=		MAKEINFO="${MAKEINFO}"
-.  endif
-
-.else # !USE_MAKEINFO
-# When not using buildlink2 set MAKEINFO in environment to ${FALSE}
-.  if !empty(USE_BUILDLINK2:M[nN][oO])
-CONFIGURE_ENV+=		MAKEINFO="${FALSE}"
-MAKE_ENV+=		MAKEINFO="${FALSE}"
 .  endif
 .endif # USE_MAKEINFO
 
