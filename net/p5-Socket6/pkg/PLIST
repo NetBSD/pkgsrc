@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/05/26 14:55:57 itojun Exp $
+lib/perl5/site_perl/Socket6.pm
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Socket6/.packlist
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Socket6/Socket6.bs
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Socket6/Socket6.so
+@dirrm lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Socket6
