@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2385 2004/11/19 10:11:07 adam Exp $
+$NetBSD: TODO,v 1.2386 2004/11/19 11:06:44 adam Exp $
 
 Suggested new packages
 ======================
@@ -472,7 +472,6 @@ Suggested package updates
 	o phylip-3.62
 	o pilot-link-0.11.8
 	o plib-1.7.0
-	o ploticus-2.30
 	o pnet-0.6.8 [pkg/27013]
 	o pnet-0.6.10
 	o poedit-1.3.1
