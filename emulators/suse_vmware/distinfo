@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2001/04/25 21:24:28 tron Exp $
+$NetBSD: distinfo,v 1.3 2002/04/04 09:47:09 tron Exp $
 
-SHA1 (suse64/fileutil.rpm) = 1b19fc7e308d6d9ec04de3aa0a73d77011f2e87b
-Size (suse64/fileutil.rpm) = 433156 bytes
+SHA1 (suse73/fileutils-4.1-154.i386.rpm) = 1056af49636e8e91787521700ec6b3fe525f6475
+Size (suse73/fileutils-4.1-154.i386.rpm) = 541040 bytes
