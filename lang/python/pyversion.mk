@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.2 2002/01/15 17:18:01 drochner Exp $
+# $NetBSD: pyversion.mk,v 1.3 2002/01/16 18:45:09 drochner Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -74,8 +74,7 @@ DEPENDS+=	python21>=2.1:../../lang/python21
 PYTHONBIN=	${LOCALBASE}/bin/python2.1
 PYPKGPREFIX=	py21
 .elif ${_PYTHON_VERSION} == "20"
-#DEPENDS+=	python20>=2.0:../../lang/python20
-DEPENDS+=	python-2.0.1:../../lang/python
+DEPENDS+=	python20>=2.0:../../lang/python20
 PYTHONBIN=	${LOCALBASE}/bin/python2.0
 PYPKGPREFIX=	py20
 .endif
