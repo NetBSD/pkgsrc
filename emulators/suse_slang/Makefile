@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2004/04/14 11:31:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2004/04/19 00:28:59 wiz Exp $
 
 DISTNAME=		slang
 PKGREVISION=		1
@@ -15,9 +15,9 @@ DEPENDS+=		suse_base>=${SUSE_VERSION}:../suse_base
 
 ONLY_FOR_PLATFORM=      NetBSD-*-i386 NetBSD-*-powerpc FreeBSD-*-i386
 
-USE_BUILDLINK2=		# defined
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
+NO_BUILDLINK=		YES
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		${DISTNAME}${EXTRACT_SUFX}

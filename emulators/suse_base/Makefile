@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2004/04/14 11:31:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.48 2004/04/19 00:28:59 wiz Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 PKGREVISION=		5
@@ -18,7 +18,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-1.6[L-Z]-powerpc NetBSD-1.6Z[A-Z]-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-1.[7-9]*-powerpc NetBSD-[2-9]*-powerpc
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
 
-USE_BUILDLINK2=		# defined
+NO_BUILDLINK=		YES
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
