@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/23 08:15:40 rh Exp $
+bin/swf_play
+etc/gtk-2.0/gdk-pixbuf.loaders
+include/swfdec/swf.h
+include/swfdec/swfdec.h
+lib/gtk-2.0/2.2.0/loaders/swf_loader.a
+lib/gtk-2.0/2.2.0/loaders/swf_loader.la
+lib/gtk-2.0/2.2.0/loaders/swf_loader.so
+lib/libswfdec.a
+lib/libswfdec.la
+lib/libswfdec.so
+lib/libswfdec.so.0
+lib/libswfdec.so.0.0
+lib/pkgconfig/swfdec.pc
+@dirrm include/swfdec
