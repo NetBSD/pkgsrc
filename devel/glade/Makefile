@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2003/02/18 14:55:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2003/02/20 23:19:01 salo Exp $
 #
 
-DISTNAME=	glade-0.6.2
-PKGREVISION=	5
+DISTNAME=	glade-0.6.4
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_GNOME:=sources/glade/0.6/}
 
@@ -14,6 +13,8 @@ GNU_CONFIGURE=		yes
 USE_X11BASE=		yes
 USE_BUILDLINK2=		yes
 USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ARGS+=	--with-bonobo
 
