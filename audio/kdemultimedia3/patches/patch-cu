@@ -1,0 +1,13 @@
+$NetBSD: patch-cu,v 1.1 2003/11/08 16:05:49 jdolecek Exp $
+
+--- arts/runtime/artsbuilderloader_impl.cc.orig	2003-11-08 14:02:27.000000000 +0100
++++ arts/runtime/artsbuilderloader_impl.cc	2003-11-08 14:02:37.000000000 +0100
+@@ -22,7 +22,7 @@
+ 
+ #include "artsbuilder.h"
+ #include "debug.h"
+-#include <fstream.h>
++#include <fstream>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <stdio.h>

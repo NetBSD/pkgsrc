@@ -1,0 +1,18 @@
+$NetBSD: patch-cv,v 1.1 2003/11/08 16:05:49 jdolecek Exp $
+
+--- arts/modules/env_mixeritem_impl.cc.orig	2003-11-08 14:03:31.000000000 +0100
++++ arts/modules/env_mixeritem_impl.cc	2003-11-08 14:03:42.000000000 +0100
+@@ -4,10 +4,12 @@
+ #include "connect.h"
+ #include "../runtime/sequenceutils.h"
+ #include <stdio.h>
+-#include <vector.h>
++#include <vector>
+ 
+ #include <klocale.h>
+ 
++using namespace std;
++
+ namespace Arts {
+ namespace Environment {
+ 
