@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2004/01/27 00:53:11 heinz Exp $
+# $NetBSD: Makefile,v 1.16 2004/03/07 09:29:04 seb Exp $
 
 DISTNAME=		sather-1.2.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=sather/}
 
@@ -21,35 +21,34 @@ INFO_FILES=		sather.info sather-tutorial.info sather-mode.info
 
 REPLACE_PERL=		Browser/Web/ps2gif
 
-do-configure:
-	for f in								\
-		${WRKSRC}/Boot/sacomp.code/Makefile				\
-		${WRKSRC}/Library/System/unix.sa				\
-		${WRKSRC}/System/Common/CONFIG.proto				\
-		${WRKSRC}/System/Platforms/netbsd/CONFIG			\
-		${WRKSRC}/System/Platforms/X/Platform.module			\
-		${WRKSRC}/debian/bin-wrapper					\
-		${WRKSRC}/Browser/Web/convert-1.1				\
-		${WRKSRC}/Browser/Web/gen_html_class_index			\
-		${WRKSRC}/Browser/Web/gen_html_sa_files				\
-		${WRKSRC}/Browser/Web/gen_html_shortflat			\
-		${WRKSRC}/Browser/Web/gen_html_top_level			\
-		${WRKSRC}/Browser/Web/gen_mml_sa_files				\
-		${WRKSRC}/Browser/Web/gen_mml_shortflat				\
-		${WRKSRC}/Browser/Web/graph2dot;				\
-	do									\
-		${SED}	-e 's:@CC@:${CC}:g'					\
-			-e 's:@CFLAGS@:${CFLAGS}:g'				\
-			-e 's:@GMAKE@:${GMAKE}:g'				\
-			-e 's:@PREFIX@:${PREFIX}:g'				\
-			-e 's:@X11BASE@:${X11BASE}:g'				\
-			-e 's:@GC_PREFIX@:${BUILDLINK_PREFIX.boehm-gc}:g'	\
-			-e 's:@TCL_PREFIX@:${BUILDLINK_PREFIX.tcl}:g'		\
-			-e 's:@TK_PREFIX@:${BUILDLINK_PREFIX.tk}:g'		\
-			-e 's:@_OPSYS_RPATH_NAME@:${_OPSYS_RPATH_NAME}:g'	\
-			$$f > $$f.tmp;						\
-		${MV} -f $$f.tmp $$f;						\
-	done
+SUBST_CLASSES+=		sather-configure
+SUBST_STAGE.sather-configure=	configure
+SUBST_MESSAGE.sather-configure=	"Configuring sources"
+SUBST_FILES.sather-configure=			\
+	Boot/sacomp.code/Makefile		\
+	Library/System/unix.sa			\
+	System/Common/CONFIG.proto		\
+	System/Platforms/netbsd/CONFIG		\
+	System/Platforms/X/Platform.module	\
+	debian/bin-wrapper			\
+	Browser/Web/convert-1.1			\
+	Browser/Web/gen_html_class_index	\
+	Browser/Web/gen_html_sa_files		\
+	Browser/Web/gen_html_shortflat		\
+	Browser/Web/gen_html_top_level		\
+	Browser/Web/gen_mml_sa_files		\
+	Browser/Web/gen_mml_shortflat		\
+	Browser/Web/graph2dot
+SUBST_SED.sather-configure=					\
+	-e 's:@CC@:${CC}:g'					\
+	-e 's:@CFLAGS@:${CFLAGS}:g'				\
+	-e 's:@GMAKE@:${GMAKE}:g'				\
+	-e 's:@PREFIX@:${PREFIX}:g'				\
+	-e 's:@X11BASE@:${X11BASE}:g'				\
+	-e 's:@GC_PREFIX@:${BUILDLINK_PREFIX.boehm-gc}:g'	\
+	-e 's:@TCL_PREFIX@:${BUILDLINK_PREFIX.tcl}:g'		\
+	-e 's:@TK_PREFIX@:${BUILDLINK_PREFIX.tk}:g'		\
+	-e 's:@_OPSYS_RPATH_NAME@:${_OPSYS_RPATH_NAME}:g'
 
 post-build:
 	cd ${WRKSRC}/Emacs; ${MAKEINFO} sather.texinfo; 		\
@@ -68,7 +67,9 @@ do-install:
 	cd ${PREFIX}/bin;						\
 		 ${LN} -sf ../lib/sather/Bin/bin-wrapper sacomp;	\
 		 ${LN} -sf ../lib/sather/Bin/bin-wrapper sabrowse;	\
-	cd ${WRKSRC} && ${PAX} -rw Library System/FORBID System/Debug	\
+	cd ${WRKSRC} && ${PAX} -s ',.*\.sav,,' -rw Library		\
+		System/FORBID						\
+		System/Debug						\
 		System/Common/*.c System/Common/*.h			\
 		System/Common/*.module System/Common/CONFIG		\
 		System/Platforms/f77 System/Platforms/netbsd		\
@@ -81,7 +82,8 @@ do-install:
 		-o -name \*.orig -print | ${XARGS} ${RM} -f
 	${INSTALL_DATA} ${WRKSRC}/Emacs/*.info* ${PREFIX}/info
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sather
-	cd ${WRKSRC}/Doc && ${PAX} -rw . ${PREFIX}/share/doc/sather
+	cd ${WRKSRC}/Doc && ${PAX} -rw -s ',.*/man.*,,' .		\
+		${PREFIX}/share/doc/sather
 	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sacomp.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sabrowse.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
