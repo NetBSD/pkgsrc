@@ -1,18 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2004/11/21 07:57:38 jlam Exp $
-#
-# XXX Support for the following variables will be removed after the
-# XXX pkgsrc-2004Q4 branch is released:
-# XXX
-# XXX APR_USE_DB4
-# XXX APR_USE_OPENLDAP
-
-.if defined(APR_USE_DB4) && !empty(APR_USE_DB4:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	db4
-.endif
-
-.if defined(APR_USE_OPENLDAP) && !empty(APR_USE_OPENLDAP:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	ldap
-.endif
+# $NetBSD: options.mk,v 1.4 2004/12/22 21:46:25 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apr
 PKG_SUPPORTED_OPTIONS=	db4 ldap

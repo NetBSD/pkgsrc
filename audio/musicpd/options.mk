@@ -1,39 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2004/11/25 20:16:52 xtraeme Exp $
-#
-# XXX Support for the following variables will be removed after the
-# XXX pkgsrc-2004Q4 branch is released:
-# XXX
-# XXX MUSICPD_WITH_AAC
-# XXX MUSICPD_WITH_AUDIOFILE
-# XXX MUSICPD_WITH_FLAC
-# XXX MUSICPD_WITH_ICONV
-# XXX MUSICPD_WITH_ID3
-# XXX MUSICPD_WITH_OGG
-
-.if defined(MUSICPD_WITH_AAC) && !empty(MUSICPD_WITH_AAC:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	aac
-.endif
-
-.if defined(MUSICPD_WITH_AUDIOFILE) && \
-    !empty(MUSICPD_WITH_AUDIOFILE:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	audiofile
-.endif
-
-.if defined(MUSICPD_WITH_FLAC) && !empty(MUSICPD_WITH_FLAC:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	flac
-.endif
-
-.if defined(MUSICPD_WITH_ICONV) && !empty(MUSICPD_WITH_ICONV:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	iconv
-.endif
-
-.if defined(MUSICPD_WITH_ID3) && !empty(MUSICPD_WITH_ID3:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	id3
-.endif
-
-.if defined(MUSICPD_WITH_OGG) && !empty(MUSICPD_WITH_OGG:M[Yy][Ee][Ss])
-PKG_DEFAULT_OPTIONS+=	ogg
-.endif
+# $NetBSD: options.mk,v 1.2 2004/12/22 21:46:24 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
 PKG_SUPPORTED_OPTIONS=	aac audiofile flac iconv id3 ogg
