@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4913 2004/02/19 16:47:44 minskim Exp $
+$NetBSD: CHANGES,v 1.4914 2004/02/19 16:51:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -926,3 +926,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gpdf to 0.122.1 [jmmv 2004-02-19]
 	Updated metacity to 2.6.5 [jmmv 2004-02-19]
 	Updated rss2html to 0.6 [minskim 2004-02-19]
+	Updated gtk-doc to 1.2 [jmmv 2004-02-19]
