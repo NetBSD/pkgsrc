@@ -1,15 +1,14 @@
---- configure.orig	Wed Jun 10 14:53:21 1998
-+++ configure	Sun Jun 21 23:08:27 1998
-@@ -2950,58 +2950,6 @@
-   echo "$ac_t""no" 1>&6
- fi
+--- configure.orig	Wed Jul  8 10:51:31 1998
++++ configure	Fri Jul 17 11:33:30 1998
+@@ -2897,57 +2897,6 @@
+ # For compress in zlib
+ #AC_CHECK_LIB(z,compress)
  
--
 -# Check for gtty if termio.h doesn't exists
--if test "$ac_cv_header_termio_h" = "no"
+-if test "$ac_cv_header_termio_h" = "no" -a "$ac_cv_header_termios_h" = "no"
 -then
 -  echo $ac_n "checking for gtty in -lcompat""... $ac_c" 1>&6
--echo "configure:2959: checking for gtty in -lcompat" >&5
+-echo "configure:2905: checking for gtty in -lcompat" >&5
 -ac_lib_var=`echo compat'_'gtty | sed 'y%./+-%__p_%'`
 -if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
 -  echo $ac_n "(cached) $ac_c" 1>&6
@@ -17,7 +16,7 @@
 -  ac_save_LIBS="$LIBS"
 -LIBS="-lcompat  $LIBS"
 -cat > conftest.$ac_ext <<EOF
--#line 2967 "configure"
+-#line 2913 "configure"
 -#include "confdefs.h"
 -/* Override any gcc2 internal prototype to avoid an error.  */
 -/* We use char because int might match the return type of a gcc2
@@ -28,7 +27,7 @@
 -gtty()
 -; return 0; }
 -EOF
--if { (eval echo configure:2978: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
+-if { (eval echo configure:2924: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest; then
 -  rm -rf conftest*
 -  eval "ac_cv_lib_$ac_lib_var=yes"
 -else
