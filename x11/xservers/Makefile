@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2001/04/30 15:03:32 tron Exp $#
+# $NetBSD: Makefile,v 1.4 2001/12/26 10:01:08 tron Exp $#
 
 DISTNAME=	xservers-3.3.6.0
 CATEGORIES=	x11
@@ -54,7 +54,7 @@ do-configure:
 post-install:
 	cd ${PREFIX} && \
 	for LINK in ${X11_LINKS}; do \
-	  ${LN} -fs ${PREFIX}/$$LINK ${PREFIX}/${X11_SUBDIR}/$$LINK; \
+	  ${LN} -fs ${X11BASE}/$$LINK ${PREFIX}/${X11_SUBDIR}/$$LINK; \
 	done && \
 	${FIND} ${X11_SUBDIR} \! -type d | sort >${PLIST_SRC} && \
 	${FIND} ${X11_SUBDIR} -type d | sort -r | \
