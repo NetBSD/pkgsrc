@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST-mi,v 1.1.1.1 1999/12/02 16:39:36 rh Exp $
+lib/perl5/site_perl/Filter/cpp.pm
+lib/perl5/site_perl/Filter/sh.pm
+lib/perl5/site_perl/Filter/exec.pm
+lib/perl5/site_perl/Filter/Util/Call.pm
+lib/perl5/site_perl/Filter/Util/Exec.pm
+lib/perl5/site_perl/Filter/decrypt.pm
+lib/perl5/site_perl/Filter/tee.pm
+lib/perl5/man/man3/Filter::Util::Call.3
+lib/perl5/man/man3/Filter::Util::Exec.3
+lib/perl5/man/man3/Filter::decrypt.3
+lib/perl5/man/man3/Filter::tee.3
+lib/perl5/man/man3/Filter::sh.3
+lib/perl5/man/man3/Filter::cpp.3
+lib/perl5/man/man3/Filter::exec.3
+lib/perl5/site_perl/${MACHINE_ARCH}-${LOWER_OPSYS}/auto/Filter/.packlist
+@dirrm lib/perl5/site_perl/Filter/Util
+@dirrm lib/perl5/site_perl/Filter
