@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2000/03/17 07:14:54 garbled Exp $
+# $NetBSD: Makefile,v 1.6 2000/08/03 14:21:57 wiz Exp $
 
 DISTNAME=	ethemes-0.1
 CATEGORIES=	x11
@@ -8,7 +8,7 @@ DISTFILES=	${E_THEMES}
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://e.themes.org/
 
-DEPENDS+=	enlightenment-0.16.2:../../x11/enlightenment
+DEPENDS+=	enlightenment>=0.16.2:../../x11/enlightenment
 
 DIST_SUBDIR=	ethemes
 USE_X11BASE=	yes
