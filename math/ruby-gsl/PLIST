@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/15 00:18:31 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/11/27 16:27:45 taca Exp $
 ${RUBY_SITEARCHLIBDIR}/GSL.so
+${RUBY_DOCDIR}/gsl/AUTHORS
+${RUBY_DOCDIR}/gsl/HISTORY
 ${RUBY_DOCDIR}/gsl/HOWTO
 ${RUBY_DOCDIR}/gsl/IMPLEMENTED
 ${RUBY_DOCDIR}/gsl/README
+${RUBY_DOCDIR}/gsl/THANKS
 ${RUBY_DOCDIR}/gsl/TODO
 ${RUBY_DOCDIR}/gsl/doc.rd
 ${RUBY_EXAMPLESDIR}/gsl/array.rb
@@ -26,6 +29,7 @@ ${RUBY_EXAMPLESDIR}/gsl/matrix.rb
 ${RUBY_EXAMPLESDIR}/gsl/matrix_complex.rb
 ${RUBY_EXAMPLESDIR}/gsl/min.rb
 ${RUBY_EXAMPLESDIR}/gsl/monte.rb
+${RUBY_EXAMPLESDIR}/gsl/monteI.rb
 ${RUBY_EXAMPLESDIR}/gsl/multi.rb
 ${RUBY_EXAMPLESDIR}/gsl/perm.rb
 ${RUBY_EXAMPLESDIR}/gsl/poly.rb
@@ -37,6 +41,7 @@ ${RUBY_EXAMPLESDIR}/gsl/rng.rb
 ${RUBY_EXAMPLESDIR}/gsl/shuffle.rb
 ${RUBY_EXAMPLESDIR}/gsl/siman.rb
 ${RUBY_EXAMPLESDIR}/gsl/solve.rb
+${RUBY_EXAMPLESDIR}/gsl/sort.rb
 ${RUBY_EXAMPLESDIR}/gsl/special.rb
 ${RUBY_EXAMPLESDIR}/gsl/spline.rb
 ${RUBY_EXAMPLESDIR}/gsl/stats.rb
