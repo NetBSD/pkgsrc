@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/05/22 05:35:10 sekiya Exp $
+
+SHA1 (ifp-line-0.2.4.tar.gz) = 59757dad93662d93c14a557448c868044926fd2e
+Size (ifp-line-0.2.4.tar.gz) = 20214 bytes
+SHA1 (patch-aa) = c936da6026ac26cd40673f99c0cc97230ddb8b8f
