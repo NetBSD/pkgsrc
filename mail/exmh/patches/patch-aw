@@ -1,3 +1,7 @@
+$NetBSD: patch-aw,v 1.2 1998/08/18 10:46:20 agc Exp $
+
+Modify default threading offsets so that standard scan format is correct.
+
 --- lib/thread.tcl	1998/08/17 13:43:05	1.1
 +++ lib/thread.tcl	1998/08/17 13:43:15
 @@ -141,17 +141,17 @@
