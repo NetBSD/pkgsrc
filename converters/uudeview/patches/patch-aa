@@ -1,0 +1,12 @@
+diff -ud --recursive ./Makefile.in /usr/devel/ports/uudeview/src/Makefile.in
+--- ./Makefile.in	Sat Jul 20 17:43:22 1996
++++ /usr/devel/ports/uudeview/src/Makefile.in	Thu Aug  1 20:07:25 1996
+@@ -144,7 +144,7 @@
+ 	cat uudeview-$(VERSION).$(PATCH).tar.gz >> uudeview-sfx-$(VERSION).$(PATCH).sh
+ 	chmod 755 uudeview-sfx*
+ 
+-uudeview:	unix/config.h libuu.a
++uudeview:	unix/config.h
+ 	(cd unix;  $(MAKE) CC='$(CC)' CFLAGS='$(CFLAGS)' LIBS='$(LIBS)' )
+ 
+ xdeview:	tcl/config.h libuu.a
