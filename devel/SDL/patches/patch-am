@@ -1,20 +1,20 @@
-$NetBSD: patch-aj,v 1.10 2002/07/13 16:17:33 wiz Exp $
+$NetBSD: patch-am,v 1.3 2002/07/13 16:17:33 wiz Exp $
 
---- configure.in.orig	Thu Nov  8 08:28:00 2001
-+++ configure.in
-@@ -374,10 +374,7 @@
-                   , enable_nas=yes)
+--- configure.orig	Thu Nov  8 08:28:08 2001
++++ configure
+@@ -3588,10 +3588,7 @@
      if test x$enable_audio = xyes -a x$enable_nas = xyes; then
-         AC_MSG_CHECKING(for NAS audio support)
+         echo $ac_n "checking for NAS audio support""... $ac_c" 1>&6
+ echo "configure:3591: checking for NAS audio support" >&5
 -        have_nas=no
 -        if test -r /usr/X11R6/include/audio/audiolib.h; then
 -            have_nas=yes
 -        fi
 +        have_nas=yes
-         AC_MSG_RESULT($have_nas)
+         echo "$ac_t""$have_nas" 1>&6
          if test x$have_nas = xyes; then
              CFLAGS="$CFLAGS -DNAS_SUPPORT"
-@@ -429,7 +426,7 @@
+@@ -3683,7 +3680,7 @@
                    NASMFLAGS="-f win32"
                    ;;
                *)
@@ -22,8 +22,8 @@ $NetBSD: patch-aj,v 1.10 2002/07/13 16:17:33 wiz Exp $
 +                  test -n "$NASMFLAGS" || NASMFLAGS="-f elf"
                    ;;
              esac
-             AC_SUBST(NASMFLAGS)
-@@ -999,8 +996,8 @@
+             
+@@ -5582,8 +5579,8 @@
              pthread_lib="-pthread"
              ;;
          *-*-netbsd*)
@@ -34,7 +34,7 @@ $NetBSD: patch-aj,v 1.10 2002/07/13 16:17:33 wiz Exp $
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -1465,11 +1462,13 @@
+@@ -6588,11 +6585,13 @@
          CheckDummyVideo
          CheckDiskAudio
          CheckNASM
@@ -48,20 +48,37 @@ $NetBSD: patch-aj,v 1.10 2002/07/13 16:17:33 wiz Exp $
          CheckAAlib
          CheckOpenGL
          CheckPTHREAD
-@@ -1770,7 +1769,11 @@
-             COPY_ARCH_SRC(src/thread, linux, SDL_systhread_c.h)
-             COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex.c)
-             COPY_ARCH_SRC(src/thread, linux, SDL_sysmutex_c.h)
--            COPY_ARCH_SRC(src/thread, linux, SDL_syssem.c)
+@@ -7553,7 +7552,20 @@
+ __EOF__
+   cat >>$new <$old
+ 
+-            
 +	    if test x$use_pthreads = xyes -a x$enable_pthread_sem != xyes; then
-+		COPY_ARCH_SRC(src/thread, generic, SDL_syssem.c)
++		
++  echo "Copying src/thread/generic/SDL_syssem.c -> src/thread/SDL_syssem.c"
++  old="$srcdir/src/thread/generic/SDL_syssem.c"
++  new="$srcdir/src/thread/SDL_syssem.c"
++  cat >$new <<__EOF__
++/* WARNING:  This file was automatically generated!
++ * Original: $old
++ */
++__EOF__
++  cat >>$new <$old
++
 +	    else
-+		COPY_ARCH_SRC(src/thread, linux, SDL_syssem.c)
++		
+   echo "Copying src/thread/linux/SDL_syssem.c -> src/thread/SDL_syssem.c"
+   old="$srcdir/src/thread/linux/SDL_syssem.c"
+   new="$srcdir/src/thread/SDL_syssem.c"
+@@ -7564,6 +7576,7 @@
+ __EOF__
+   cat >>$new <$old
+ 
 +	    fi
-             COPY_ARCH_SRC(src/thread, generic, SDL_syssem_c.h)
-             COPY_ARCH_SRC(src/thread, linux, SDL_syscond.c)
-             COPY_ARCH_SRC(src/thread, generic, SDL_syscond_c.h)
-@@ -2157,6 +2160,10 @@
+             
+   echo "Copying src/thread/generic/SDL_syssem_c.h -> src/thread/SDL_syssem_c.h"
+   old="$srcdir/src/thread/generic/SDL_syssem_c.h"
+@@ -8842,6 +8855,10 @@
  
  if test $ARCH = solaris; then
    SDL_RLD_FLAGS="-R\${exec_prefix}/lib"
