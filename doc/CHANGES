@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5921 2004/05/13 08:50:59 cjs Exp $
+$NetBSD: CHANGES,v 1.5922 2004/05/13 09:24:14 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2505,3 +2505,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added p5-I18N-LangTags-0.30 [mjl 2004-05-13]
 	Added p5-Locale-Maketext-10.8 [mjl 2004-05-13]
 	Updated global to 4.7 [cjs 2004-05-13]
+	Added p5-CGI-Kwiki-0.18 [mjl 2004-05-13]
