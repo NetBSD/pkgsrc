@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2000/09/13 22:19:59 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2000/09/14 14:07:49 jlam Exp $
 # $FreeBSD Id: Makefile,v 1.11 1996/11/16 10:49:52 asami Exp
 #
 
@@ -7,7 +7,7 @@ PKGNAME=		xview-clients-3.2.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		packages@netbsd.org
+MAINTAINER=		jlam@netbsd.org
 
 DEPENDS=		xview-lib>=3.2.1:../../x11/xview-lib
 
