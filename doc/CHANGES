@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9150 2005/02/15 20:54:37 rillig Exp $
+$NetBSD: CHANGES,v 1.9151 2005/02/15 21:07:01 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -886,3 +886,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated awstats to 6.3nb4 [minskim 2005-02-15]
 	Updated jabberd2 to 2.0s6nb1 [rillig 2005-02-15]
 	Updated rcs to 5.7nb3 [rillig 2005-02-15]
+	Updated pkglint to 4.05 [rillig 2005-02-15]
