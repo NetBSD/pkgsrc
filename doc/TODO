@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2754 2004/12/25 20:09:19 wiz Exp $
+$NetBSD: TODO,v 1.2755 2004/12/25 20:17:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -10,8 +10,8 @@ Suggested new packages
 	http://pkgsrc-wip.sourceforge.net/
 
 	jgloss
-	application for adding reading and translation annotations to Japanese
-	  text documents
+	application for adding reading and translation annotations
+	to Japanese text documents
 	http://jgloss.sourceforge.net/
 
 	loserjabber
@@ -20,14 +20,14 @@ Suggested new packages
 	http://loserjabber.sourceforge.net/
 
 	k3b
-	CD and DVD burning application optimized for KDE.  (This is
-	  a front-end for CLI utilities.  It claims to be comfortable
-	  for beginners, yet advanced enough for experienced users.)
+	CD and DVD burning application optimized for KDE.  (This
+	is a front-end for CLI utilities.  It claims to be comfortable
+	for beginners, yet advanced enough for experienced users.)
 	http://k3b.plainblack.com/
 
 	resin
 	Fast JSP server. (I will import this when we have a native
-	  Java 2 -- it can't be built with our native jdk. [jwise])
+	Java 2 -- it can't be built with our native jdk. [jwise])
 	http://www.caucho.com/products/resin/index.xtp
 
 	squirm
@@ -36,12 +36,12 @@ Suggested new packages
 
 	smsclient
 	Send SMS messages to mobile phones and pagers on wide range
-	  of providers. [pkg/16430 is relevant]
+	of providers. [pkg/16430 is relevant]
 	http://www.smsclient.org/
 
 	SquirrelMail plugins
 	SquirrelMail has a plugin feature and several plugins exist.
-	  (See mail/sq-squirrelspell for an example.)
+	(See mail/sq-squirrelspell for an example.)
 	http://www.squirrelmail.org/index.php3?page=15
 
 	tutos [wip/tutos]
@@ -169,11 +169,13 @@ Suggested new packages
 
 	rkhunter
 	http://www.rkhunter.org/projects/rootkit_hunter.html
-	Security auditing scanner for rootkits, backdoors, local exploits and more.
+	Security auditing scanner for rootkits, backdoors, local
+	exploits and more.
 
 	logrider
 	http://ilya-evseev.narod.ru/posix/logrider/
-	Scan system logs for alert/hacking signatures based on set of static filters.
+	Scan system logs for alert/hacking signatures based on set
+	of static filters.
 
 	swatch
 	http://swatch.sourceforge.net/
@@ -181,7 +183,8 @@ Suggested new packages
 
 	ardour
 	http://ardour.org/
-	Digital audio workstation with plugins, professional mixer, multichannel recording, and more.
+	Digital audio workstation with plugins, professional mixer,
+	multichannel recording, and more.
 
 	libdisassemble
 	http://www.immunitysec.com/resources-freesoftware.shtml
@@ -194,7 +197,8 @@ Suggested new packages
 
 	pdftk
 	http://www.accesspdf.com/pdftk/
-	PDF manipulation tool for merging, splitting, decrypting, encrypting, and more.
+	PDF manipulation tool for merging, splitting, decrypting,
+	encrypting, and more.
 	[use Java classes in C++ program]
 
 	guipdftk
@@ -203,11 +207,13 @@ Suggested new packages
 
 	ttf-freefont
 	http://packages.qa.debian.org/t/ttf-freefont.html
-	TrueType fonts covering the UCS character sets similar to Helvetica, Times and Courier.
+	TrueType fonts covering the UCS character sets similar to
+	Helvetica, Times and Courier.
 
 	LingoTeach
 	http://www.lingoteach.org/
-	Language teaching program with various lessons (with GTK+ interface).
+	Language teaching program with various lessons (with GTK+
+	interface).
 
 	GraphicsMagick
 	http://www.graphicsmagick.org/
@@ -226,33 +232,33 @@ Suggested new packages
 	Updated version of memtest86 memory tester
 
 	coda6
-	Version 6 of coda
 	http://www.coda.cs.cmu.edu/
+	Version 6 of coda
 
 	Blackdown JDK/JRE 1.4
-	1.4 version of Blackdown's Java for Linux
 	http://www.blackdown.org/java-linux/java2-status/jdk1.4-status.html
+	1.4 version of Blackdown's Java for Linux
 
 	ntop3
-	Major version 3 of ntop
 	http://sourceforge.net/project/showfiles.php?group_id=17233&release_id=99153
+	Major version 3 of ntop
 
 	ices-mp3-v2
-	Major version 2 of ices-mp3
 	http://www.icecast.org/ices.php
+	Major version 2 of ices-mp3
 
 	cricket 1.0.5
 	http://cricket.sourceforge.net
 	Monitoring & graphing system based on RRDtool
 
-	The Ur-Quan Masters
+	The Ur-Quan Masters [wip/uqm]
 	http://sc2.sourceforge.net
 	Open source version of the classic game "Star Control 2"
-	[pkgsrc-wip/uqm]
 
 	Webware for Python
 	http://www.webwareforpython.org/
-	Suite of software components for developing object-oriented, web-based applications
+	Suite of software components for developing object-oriented,
+	web-based applications.
 
 
 Suggested package updates
