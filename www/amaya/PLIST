@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/22 06:46:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2003/05/24 14:38:17 salo Exp $
 bin/amaya
+lib/Amaya/amaya/Amaya.svg
 lib/Amaya/amaya/AmayaPage.html
 lib/Amaya/amaya/AmayaPage.html.de
+lib/Amaya/amaya/AmayaPage.html.es
 lib/Amaya/amaya/AmayaPage.html.fr
 lib/Amaya/amaya/AmayaSrcSyncIndex.gif
 lib/Amaya/amaya/Annot.conf
@@ -123,8 +125,10 @@ lib/Amaya/config/fi-amayamsg
 lib/Amaya/config/fi-corrdialogue
 lib/Amaya/config/fi-libdialogue
 lib/Amaya/config/fonts.gl
+lib/Amaya/config/fonts.gl.deb
 lib/Amaya/config/fonts.tmpl
 lib/Amaya/config/fonts.unix
+lib/Amaya/config/fonts.unix.deb
 lib/Amaya/config/fonts.win
 lib/Amaya/config/fr-amayadialogue
 lib/Amaya/config/fr-amayamsg
@@ -329,6 +333,7 @@ lib/Amaya/doc/html/Views.html.de
 lib/Amaya/doc/html/Views.html.es
 lib/Amaya/doc/html/Views.html.fr
 lib/Amaya/doc/html/WebDAV.html
+lib/Amaya/doc/html/WebDAV.html.es
 lib/Amaya/doc/html/Xml.html
 lib/Amaya/doc/html/Xml.html.de
 lib/Amaya/doc/html/Xml.html.es
@@ -342,6 +347,19 @@ lib/Amaya/doc/html/accessibility_in_amaya/about_producing_accessible_content.htm
 lib/Amaya/doc/html/accessibility_in_amaya/accessibility_in_amaya.html
 lib/Amaya/doc/html/accessibility_in_amaya/accessibility_in_amaya.html.de
 lib/Amaya/doc/html/accessibility_in_amaya/accessibility_in_amaya.html.es
+lib/Amaya/doc/html/attaching_annotations/About_Reading_Annotations.html.de
+lib/Amaya/doc/html/attaching_annotations/About_Storing_Local_Annotations.html.de
+lib/Amaya/doc/html/attaching_annotations/About_Storing_Remote_Annotations.html.de
+lib/Amaya/doc/html/attaching_annotations/Annotation_Issues.html.de
+lib/Amaya/doc/html/attaching_annotations/Annotation_Menu.html.de
+lib/Amaya/doc/html/attaching_annotations/Configuring_Annotation_Settings.html.de
+lib/Amaya/doc/html/attaching_annotations/Configuring_Icons.html.de
+lib/Amaya/doc/html/attaching_annotations/Creating_an_Annotation.html.de
+lib/Amaya/doc/html/attaching_annotations/Loading_and_Presenting_Annotations.html.de
+lib/Amaya/doc/html/attaching_annotations/Moving_Annotations.html.de
+lib/Amaya/doc/html/attaching_annotations/Navigating_Annotations.html.de
+lib/Amaya/doc/html/attaching_annotations/Replying_To_Annotations.html.de
+lib/Amaya/doc/html/attaching_annotations/What_is_an_Annotation.html.de
 lib/Amaya/doc/html/attaching_annotations/about_reading_annotations.html
 lib/Amaya/doc/html/attaching_annotations/about_reading_annotations.html.de
 lib/Amaya/doc/html/attaching_annotations/about_reading_annotations.html.es
@@ -501,7 +519,6 @@ lib/Amaya/doc/html/editing_tables/remove_column.html.es
 lib/Amaya/doc/html/editing_tables/working_with_tables.html
 lib/Amaya/doc/html/editing_tables/working_with_tables.html.de
 lib/Amaya/doc/html/editing_tables/working_with_tables.html.es
-lib/Amaya/doc/html/elements/about_white_space_handling.html.es
 lib/Amaya/doc/html/elements/buttons_and_types_menu.html
 lib/Amaya/doc/html/elements/buttons_and_types_menu.html.de
 lib/Amaya/doc/html/elements/buttons_and_types_menu.html.es
@@ -511,7 +528,6 @@ lib/Amaya/doc/html/elements/changing_the_document_title.html.es
 lib/Amaya/doc/html/elements/creating_nested_structures.html
 lib/Amaya/doc/html/elements/creating_nested_structures.html.de
 lib/Amaya/doc/html/elements/creating_nested_structures.html.es
-lib/Amaya/doc/html/elements/creating_new_documents.html.es
 lib/Amaya/doc/html/elements/exiting_anchors.html
 lib/Amaya/doc/html/elements/exiting_anchors.html.de
 lib/Amaya/doc/html/elements/exiting_anchors.html.es
@@ -619,9 +635,13 @@ lib/Amaya/doc/html/style_sheets/working_with_styles.html.es
 lib/Amaya/doc/html/tans_annot.html.de
 lib/Amaya/doc/html/timeline_help.html
 lib/Amaya/doc/html/using_graphics/AddSVGLib.html
+lib/Amaya/doc/html/using_graphics/AddSVGLib.html.es
 lib/Amaya/doc/html/using_graphics/ChangeSVGLibPresentation.html
+lib/Amaya/doc/html/using_graphics/ChangeSVGLibPresentation.html.es
 lib/Amaya/doc/html/using_graphics/SVGLibrary.html
+lib/Amaya/doc/html/using_graphics/SVGLibrary.html.es
 lib/Amaya/doc/html/using_graphics/UseSVGLib.html
+lib/Amaya/doc/html/using_graphics/UseSVGLib.html.es
 lib/Amaya/doc/html/using_graphics/creating_graphics_with_the_palette.html
 lib/Amaya/doc/html/using_graphics/creating_graphics_with_the_palette.html.de
 lib/Amaya/doc/html/using_graphics/creating_graphics_with_the_palette.html.es
@@ -721,11 +741,11 @@ lib/Amaya/doc/images/ProfilesMenu-fr.gif
 lib/Amaya/doc/images/ProfilesMenu.gif
 lib/Amaya/doc/images/ProxyMenu-fr.gif
 lib/Amaya/doc/images/ProxyMenu.gif
-lib/Amaya/doc/images/PublishMenu-es.gif
 lib/Amaya/doc/images/PublishMenu-fr.gif
 lib/Amaya/doc/images/PublishMenu.gif
 lib/Amaya/doc/images/Reload.gif
 lib/Amaya/doc/images/Reload.png
+lib/Amaya/doc/images/SVGLibrary.gif
 lib/Amaya/doc/images/SaveAs-fr.gif
 lib/Amaya/doc/images/SaveAs.gif
 lib/Amaya/doc/images/Strong.gif
@@ -763,7 +783,6 @@ lib/Amaya/doc/images/color_preferences.png
 lib/Amaya/doc/images/configuration_for_annotations-de.png
 lib/Amaya/doc/images/configuration_for_annotations-es.png
 lib/Amaya/doc/images/configuration_for_annotations.png
-lib/Amaya/doc/images/configurebox-es.png
 lib/Amaya/doc/images/configurebox-fr.png
 lib/Amaya/doc/images/configurebox.png
 lib/Amaya/doc/images/createRule-de.png
@@ -860,6 +879,7 @@ lib/Amaya/fonts/icones11.fb
 @dirrm lib/Amaya/doc/html
 @dirrm lib/Amaya/doc
 @dirrm lib/Amaya/dicopar
+@exec ${MKDIR} %D/lib/Amaya/davlib
 @dirrm lib/Amaya/davlib
 @dirrm lib/Amaya/config/libconfig
 @dirrm lib/Amaya/config
