@@ -1,0 +1,132 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/25 16:12:05 seb Exp $
+bin/digikam
+bin/digikamcameraclient
+include/digikam/albuminfo.h
+include/digikam/albummanager.h
+include/digikam/digikamio.h
+include/digikam/plugin.h
+include/digikam/thumbnailjob.h
+lib/kde3/kio_digikamthumbnail.la
+lib/kde3/kio_digikamthumbnail.so
+lib/libdigikam.la
+lib/libdigikam.so
+lib/libdigikam.so.0
+lib/libdigikam.so.0.0
+man/man1/digikam.1
+man/man1/digikamcameraclient.1
+share/doc/kde/HTML/da/digikam/addcamera.png
+share/doc/kde/HTML/da/digikam/cameraclient.png
+share/doc/kde/HTML/da/digikam/imageviewer.png
+share/doc/kde/HTML/da/digikam/index.docbook
+share/doc/kde/HTML/da/digikam/index_da.po
+share/doc/kde/HTML/da/digikam/mainwindow.png
+share/doc/kde/HTML/da/digikam/setupalbum.png
+share/doc/kde/HTML/de/digikam/addcamera.png
+share/doc/kde/HTML/de/digikam/cameraclient.png
+share/doc/kde/HTML/de/digikam/imageviewer.png
+share/doc/kde/HTML/de/digikam/index.docbook
+share/doc/kde/HTML/de/digikam/index_de.po
+share/doc/kde/HTML/de/digikam/mainwindow.png
+share/doc/kde/HTML/de/digikam/setupalbum.png
+share/doc/kde/HTML/en/digikam/addcamera.png
+share/doc/kde/HTML/en/digikam/cameraclient.png
+share/doc/kde/HTML/en/digikam/common
+share/doc/kde/HTML/en/digikam/imageviewer.png
+share/doc/kde/HTML/en/digikam/index.cache.bz2
+share/doc/kde/HTML/en/digikam/index.docbook
+share/doc/kde/HTML/en/digikam/index_en.pot
+share/doc/kde/HTML/en/digikam/mainwindow.png
+share/doc/kde/HTML/en/digikam/setupalbum.png
+share/doc/kde/HTML/es/digikam/addcamera.png
+share/doc/kde/HTML/es/digikam/cameraclient.png
+share/doc/kde/HTML/es/digikam/imageviewer.png
+share/doc/kde/HTML/es/digikam/index.docbook
+share/doc/kde/HTML/es/digikam/index_es.po
+share/doc/kde/HTML/es/digikam/mainwindow.png
+share/doc/kde/HTML/es/digikam/setupalbum.png
+share/doc/kde/HTML/fr/digikam/addcamera.png
+share/doc/kde/HTML/fr/digikam/cameraclient.png
+share/doc/kde/HTML/fr/digikam/imageviewer.png
+share/doc/kde/HTML/fr/digikam/index.docbook
+share/doc/kde/HTML/fr/digikam/index_fr.po
+share/doc/kde/HTML/fr/digikam/mainwindow.png
+share/doc/kde/HTML/fr/digikam/setupalbum.png
+share/doc/kde/HTML/it/digikam/addcamera.png
+share/doc/kde/HTML/it/digikam/cameraclient.png
+share/doc/kde/HTML/it/digikam/imageviewer.png
+share/doc/kde/HTML/it/digikam/index.docbook
+share/doc/kde/HTML/it/digikam/index_it.po
+share/doc/kde/HTML/it/digikam/mainwindow.png
+share/doc/kde/HTML/it/digikam/setupalbum.png
+share/kde/applnk/Graphics/digikam.desktop
+share/kde/apps/digikam/data/image_broken.png
+share/kde/apps/digikam/digikam-splash.png
+share/kde/apps/digikam/digikamui.rc
+share/kde/apps/digikam/icons/hicolor/32x32/actions/addimagefolder.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/albumfoldercomment.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/albumfoldernew.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/digitalcam.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/editimage.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/exifinfo.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/flip_image.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/imagecomment.png
+share/kde/apps/digikam/icons/hicolor/32x32/actions/importfolders2albums.png
+share/kde/apps/digikam/tips
+share/kde/apps/digikamcameraclient/digikamcameraui.rc
+share/kde/apps/digikamcameraclient/icons/documents.png
+share/kde/apps/digikamcameraclient/icons/generic.png
+share/kde/apps/digikamcameraclient/icons/hicolor/32x32/actions/cameraconnect.png
+share/kde/apps/digikamcameraclient/icons/hicolor/32x32/actions/camerainfo.png
+share/kde/apps/digikamcameraclient/icons/hicolor/32x32/actions/deleteimage.png
+share/kde/apps/digikamcameraclient/icons/hicolor/32x32/actions/downloadcamera.png
+share/kde/apps/digikamcameraclient/icons/hicolor/32x32/actions/hidecamerafolders.png
+share/kde/apps/digikamcameraclient/icons/hicolor/32x32/actions/uploadcamera.png
+share/kde/apps/digikamcameraclient/icons/multimedia.png
+share/kde/apps/digikamcameraclient/icons/new.png
+share/kde/apps/digikamcameraclient/icons/pictures.png
+share/kde/apps/digikamcameraclient/icons/sound.png
+share/kde/icons/hicolor/16x16/apps/digikam.png
+share/kde/icons/hicolor/16x16/apps/digikamcameraclient.png
+share/kde/icons/hicolor/22x22/apps/digikam.png
+share/kde/icons/hicolor/22x22/apps/digikamcameraclient.png
+share/kde/icons/hicolor/32x32/apps/digikam.png
+share/kde/icons/hicolor/32x32/apps/digikamcameraclient.png
+share/kde/icons/hicolor/48x48/apps/digikam.png
+share/kde/icons/hicolor/48x48/apps/digikamcameraclient.png
+share/kde/icons/locolor/16x16/apps/digikam.png
+share/kde/icons/locolor/16x16/apps/digikamcameraclient.png
+share/kde/icons/locolor/22x22/apps/digikam.png
+share/kde/icons/locolor/22x22/apps/digikamcameraclient.png
+share/kde/icons/locolor/32x32/apps/digikam.png
+share/kde/icons/locolor/32x32/apps/digikamcameraclient.png
+share/kde/icons/locolor/48x48/apps/digikam.png
+share/kde/icons/locolor/48x48/apps/digikamcameraclient.png
+share/kde/locale/cs/LC_MESSAGES/digikam.mo
+share/kde/locale/da/LC_MESSAGES/digikam.mo
+share/kde/locale/de/LC_MESSAGES/digikam.mo
+share/kde/locale/es/LC_MESSAGES/digikam.mo
+share/kde/locale/fr/LC_MESSAGES/digikam.mo
+share/kde/locale/hu/LC_MESSAGES/digikam.mo
+share/kde/locale/it/LC_MESSAGES/digikam.mo
+share/kde/locale/nl/LC_MESSAGES/digikam.mo
+share/kde/locale/pl/LC_MESSAGES/digikam.mo
+share/kde/services/digikamthumbnail.protocol
+share/kde/servicetypes/digikamplugin.desktop
+@dirrm share/kde/apps/digikamcameraclient/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/digikamcameraclient/icons/hicolor/32x32
+@dirrm share/kde/apps/digikamcameraclient/icons/hicolor
+@dirrm share/kde/apps/digikamcameraclient/icons
+@dirrm share/kde/apps/digikamcameraclient
+@dirrm share/kde/apps/digikam/icons/hicolor/32x32/actions
+@dirrm share/kde/apps/digikam/icons/hicolor/32x32
+@dirrm share/kde/apps/digikam/icons/hicolor
+@dirrm share/kde/apps/digikam/icons
+@dirrm share/kde/apps/digikam/data
+@dirrm share/kde/apps/digikam
+@dirrm share/doc/kde/HTML/it/digikam
+@dirrm share/doc/kde/HTML/fr/digikam
+@dirrm share/doc/kde/HTML/es/digikam
+@dirrm share/doc/kde/HTML/en/digikam
+@dirrm share/doc/kde/HTML/de/digikam
+@dirrm share/doc/kde/HTML/da/digikam
+@dirrm include/digikam
