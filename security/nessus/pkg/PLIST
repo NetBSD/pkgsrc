@@ -1,8 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1999/02/08 17:17:49 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 1999/03/22 16:40:28 bouyer Exp $
 bin/nessusd
 bin/nessus
-man/man1
 man/man1/nessus.1
+share/nessus/plugins/ExAir_dos.nes
+share/nessus/plugins/fakebo_overflow.nes
+share/nessus/plugins/iis_perl_problem.nes
+share/nessus/plugins/iis_scripts_browsable.nes
+share/nessus/plugins/netbus_pro.nes
+share/nessus/plugins/router_dos.nes
+share/nessus/plugins/sendmail_relaying.nes
+share/nessus/plugins/slmail_helo.nes
+share/nessus/plugins/slmail_vrfy.nes
+share/nessus/plugins/tcp_chorusing.nes
+share/nessus/plugins/unfsd_bug.nes
 share/nessus/plugins/WebSite.nes
 share/nessus/plugins/annex_dos.nes
 share/nessus/plugins/ascend_kill.nes
@@ -83,7 +93,6 @@ share/nessus/plugins/msql_debug.nes
 share/nessus/plugins/msql_init.nes
 share/nessus/plugins/mountd_overflow.nes
 share/nessus/plugins/nestea.nes
-share/nessus/plugins/netbus.nes
 share/nessus/plugins/netscape_PageServices.nes
 share/nessus/plugins/netscape_fasttrack.nes
 share/nessus/plugins/nfs_world_export.nes
