@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2003/02/16 23:50:18 seb Exp $
+# $NetBSD: Makefile,v 1.4 2003/05/23 07:19:41 seb Exp $
 
-DISTNAME=	flow-tools-0.63
+DISTNAME=	flow-tools-0.66
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.eng.oar.net/pub/flow-tools/
 
@@ -21,15 +21,11 @@ MAKE_DIRS+=	${PKG_SYSCONFDIR}/cfg
 
 # These files are config files that are unlikely to be modified in most cases
 # so we install them via SUPPORT_FILES.
-_SYM_FILES=	asn ip-prot ip-type tcp-port
+_SYM_FILES=	ip-prot.sym ip-type.sym tcp-port.sym asn.sym tag.sym
 .for _f_ in ${_SYM_FILES}
 SUPPORT_FILES+=	${EGDIR}/sym/${_f_} ${PKG_SYSCONFDIR}/sym/${_f_}
 .endfor
-
-# These files are example config files that we should not blindly install
-# so we stuff them in EGDIR and we're done.
-# note: filter-acl and flow.acl are nearly the same files
-_CFG_FILES=	filter flow.acl map stats # filter-acl
+MESSAGE_SUBST+=	EGDIR=${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -59,21 +55,6 @@ post-patch:
 		   < $${f}.bak > $${f};					\
 		done;							\
 	done
-
-post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}/sym
-	${INSTALL_DATA_DIR} ${EGDIR}/cfg
-	${INSTALL_DATA_DIR} ${EGDIR}/bin
-.for _f_ in ${_SYM_FILES}
-	${INSTALL_DATA} ${WRKSRC}/configs/${_f_} ${EGDIR}/sym/${_f_}
-.endfor
-.for _f_ in ${_CFG_FILES}
-	${INSTALL_DATA} ${WRKSRC}/configs/${_f_} ${EGDIR}/cfg/${_f_}
-.endfor
-.for _f_ in flow-mirror flow-rsync flow-search
-	${INSTALL_DATA} ${WRKSRC}/bin/${_f_} ${EGDIR}/bin/${_f_}
-.endfor
 
 .include "../../devel/zlib/buildlink2.mk"
 .include "../../security/tcp_wrappers/buildlink2.mk"

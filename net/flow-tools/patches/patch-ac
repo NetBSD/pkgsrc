@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2003/02/16 23:50:20 seb Exp $
+$NetBSD: patch-ac,v 1.2 2003/05/23 07:19:43 seb Exp $
 
---- docs/Makefile.am.orig	Sun Dec  1 04:11:10 2002
+--- docs/Makefile.am.orig	2003-02-23 23:58:11.000000000 +0000
 +++ docs/Makefile.am
 @@ -23,6 +23,3 @@ SUFFIXES = .sgml .1 .html .1.in .html.in
  
