@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5607 2004/04/16 13:48:37 jmmv Exp $
+$NetBSD: CHANGES,v 1.5608 2004/04/16 14:04:40 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1997,3 +1997,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated neon to 0.24.5 [xtraeme 2004-04-16]
 	Updated gst-plugins-theora to 0.8.1nb1 [jmmv 2004-04-15]
 	Updated gconf-editor to 2.6.1 [jmmv 2004-04-15]
+	Updated bug-buddy to 2.6.1 [jmmv 2004-04-15]
