@@ -1,4 +1,4 @@
-Cdrecord cwallows you to burn CDs with a CD-R/CD-RW recorder. It
+Cdrecord allows you to burn CDs with a CD-R/CD-RW recorder. It
 works as a burn engine for several applications. Cdrecord supports
 CD recorders from many different vendors; all SCSI-3/mmc and
 ATAPI/mmc compliant drives should also work.  Supported features
