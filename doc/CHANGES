@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2206 2003/05/10 00:04:48 jtb Exp $
+$NetBSD: CHANGES,v 1.2207 2003/05/10 00:30:35 jtb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1929,3 +1929,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xlockmore to 5.08.1 [hubertf 2003-05-09]
 	Updated vsftpd to 1.1.3 [salo 2003-05-09]
 	Updated hdf5 to 1.4.5.2 [jtb 2003-05-09]
+	Updated STk to 4.0.1 [jtb 2003-05-09]
