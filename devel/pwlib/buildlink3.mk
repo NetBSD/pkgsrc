@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/10/09 14:01:03 mjl Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2004/12/01 13:11:46 adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PWLIB_BUILDLINK3_MK:=	${PWLIB_BUILDLINK3_MK}+
@@ -11,9 +11,11 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npwlib}
 BUILDLINK_PACKAGES+=	pwlib
 
 .if !empty(PWLIB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.pwlib+=	pwlib>=1.8.2
-BUILDLINK_RECOMMENDED.pwlib+=	pwlib>=1.8.2
+BUILDLINK_DEPENDS.pwlib+=	pwlib>=1.8.3
+BUILDLINK_RECOMMENDED.pwlib+=	pwlib>=1.8.3
 BUILDLINK_PKGSRCDIR.pwlib?=	../../devel/pwlib
 .endif	# PWLIB_BUILDLINK3_MK
+
+.include "../../security/openssl/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
