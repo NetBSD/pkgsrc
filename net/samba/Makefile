@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.119 2004/03/28 08:36:47 jlam Exp $
+# $NetBSD: Makefile,v 1.120 2004/04/15 16:26:31 jmmv Exp $
 
 DISTNAME=		samba-3.0.2a
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.samba.org/pub/samba/ \
 			ftp://ring.asahi-net.or.jp/pub/net/samba/ \
@@ -149,6 +150,7 @@ post-build:
 	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/deluser.sh > ${WRKDIR}/deluser.sh
 
 post-install:
+	cd ${PREFIX}/lib && ln -s libsmbclient.so libsmbclient.so.0
 	${RMDIR} ${SAMBA_LIBDIR}/auth
 	${RMDIR} ${SAMBA_LIBDIR}/idmap
 	${RMDIR} ${SAMBA_LIBDIR}/pdb
