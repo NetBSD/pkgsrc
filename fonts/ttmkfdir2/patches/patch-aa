@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2004/03/29 22:04:09 recht Exp $
+
+--- Makefile.orig	2002-11-07 06:28:44.000000000 +0100
++++ Makefile
+@@ -1,12 +1,9 @@
+-FREETYPE_BASE=/usr/include/freetype2
+-FREETYPE_INCL=-I$(FREETYPE_BASE)/.
+-FREETYPE_LIB=/usr/lib/libfreetype.so
+-
+-DEBUG=-ggdb
+-CXX=g++
+-CXXFLAGS=-Wall -pedantic $(FREETYPE_INCL) $(DEBUG)
++FREETYPE_INCL=`freetype-config --cflags`
++FREETYPE_LIB=`freetype-config --libs`
+ 
+-LDFLAGS=$(FREETYPE_LIB) $(DEBUG)
++CXXFLAGS+=$(FREETYPE_INCL)
++
++LDFLAGS+=$(FREETYPE_LIB)
+ 
+ .PHONY: clean
+ 
+@@ -19,7 +16,7 @@ ttmkfdir: ttmkfdir.o directory.o command
+ 	libtool --mode=link $(CXX) -o $@ $^ $(LDFLAGS)
+ 
+ parser.cpp: encoding.l
+-	    flex -i -8 -o$@ $<
++	    lex -i -8 -o$@ $<
+ 
+ clean:
+ 	-rm -f *.o *~ ttmkfdir core parser.cpp
