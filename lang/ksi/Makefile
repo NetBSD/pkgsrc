@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/08/30 21:23:43 jtb Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2003/12/09 12:19:53 agc Exp $
 
 DISTNAME=		ksi-3.4.1
 CATEGORIES=		lang
@@ -18,6 +18,8 @@ CPPFLAGS+=		-Dunix
 USE_NEW_TEXINFO=	YES
 USE_MAKEINFO=		YES
 INFO_FILES=		ksi-lang.info ksi-lib.info ksi.info
+
+BROKEN=			throws SIGSEGV when invoking ksi interpreter during build
 
 .include "../../devel/readline/buildlink2.mk"
 .include "../../devel/zlib/buildlink2.mk"
