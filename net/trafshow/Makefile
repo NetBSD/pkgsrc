@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2001/02/25 04:18:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.8 2001/03/22 06:46:11 itojun Exp $
 # $FreeBSD: ports/net/trafshow/Makefile,v 1.14 2000/06/28 12:53:15 alex Exp $
 #
 
@@ -6,6 +6,10 @@ DISTNAME=	trafshow-3.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.nsk.su/pub/RinetSoftware/
 EXTRACT_SUFX=	.tgz
+
+PATCHFILES=	trafshow-31-v6-20010322a.diff.gz
+PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
+PATCH_DIST_STRIP+=	-p1
 
 MAINTAINER=     packages@netbsd.org
 HOMEPAGE=	http://soft.risp.ru/trafshow/index.shtml
@@ -15,6 +19,14 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/autoreconf:../../devel/autoconf
 
 GNU_CONFIGURE=	yes
 ALL_TARGET=	trafshow
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=	USE_INET6
+
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
+CONFIGURE_ENV+=	CPPFLAGS=-DINET6
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && ${LOCALBASE}/bin/autoreconf
