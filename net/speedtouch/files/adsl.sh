@@ -1,9 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: adsl.sh,v 1.7 2005/02/02 22:09:50 tron Exp $
+# $NetBSD: adsl.sh,v 1.8 2005/02/04 19:32:45 tron Exp $
 #
 # PROVIDE: adsl
-# REQUIRE: NETWORKING
+# REQUIRE: mountcritremote
 # BEFORE: ipnat
 #
 # On systems with rc.d you will need to copy this to /etc/rc.d and set
