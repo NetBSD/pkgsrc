@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2000/04/08 05:59:41 itojun Exp $
+# $NetBSD: Makefile,v 1.4 2000/11/11 17:49:26 tron Exp $
 # FreeBSD: ports/mail/rblcheck/Makefile,v 1.6 1999/08/25 06:50:47 obrien Exp
 #
 
 DISTNAME=	rblcheck-1.4
 CATEGORIES=	mail
-MASTER_SITES=	http://download.sourceforge.net/rblcheck/ \
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rblcheck/} \
 		http://www.xnet.com/%7Eemarshal/rblcheck/
 
 MAINTAINER=	itojun@itojun.org

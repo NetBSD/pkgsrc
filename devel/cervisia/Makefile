@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2000/11/05 16:52:13 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2000/11/11 17:49:24 tron Exp $
 #
 
 DISTNAME=	cervisia-0.7.2
 CATEGORIES=	kde devel
-MASTER_SITES=	http://download.sourceforge.net/cervisia/ \
-		ftp://ftp.sourceforge.net/pub/cervisia/ \
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cervisia/} \
 		ftp://ftp.kde.org/pub/kde/unstable/apps/utils/
 
 MAINTAINER=	hubertf@netbsd.org
