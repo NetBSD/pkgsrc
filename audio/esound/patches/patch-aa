@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 1998/12/28 17:26:17 garbled Exp $
+--- configure.orig	Mon Dec 28 10:20:08 1998
++++ configure	Mon Dec 28 10:20:50 1998
+@@ -1198,7 +1198,7 @@
+ fi
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++LIBTOOL='$(PREFIX)/bin/pkglibtool'
+ 
+ # Check for any special flags to pass to ltconfig.
+ libtool_flags=
