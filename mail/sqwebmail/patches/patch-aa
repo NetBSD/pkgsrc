@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/02/18 22:12:56 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2005/03/23 04:55:36 jlam Exp $
 
 --- Makefile.in.orig	2004-12-09 21:54:15.000000000 -0500
 +++ Makefile.in
@@ -28,11 +28,3 @@ $NetBSD: patch-aa,v 1.4 2005/02/18 22:12:56 jlam Exp $
  @HAVE_HTMLPAGES_TRUE@NEWS_SOURCE = html/main.html
  all: config.h
  	$(MAKE) $(AM_MAKEFLAGS) all-recursive
-@@ -829,7 +828,6 @@ install-data-local:
- 		$(INSTALL_DATA) $(srcdir)/sqwebmail/images/$$f $(DESTDIR)@imagedir@/$$f ;\
- 		done
- 	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
--	cp /dev/null $(DESTDIR)$(sysconfdir)/nodsn
- 	@cat sqwebmail/sqwebmail.msg
- 
- uninstall-local:
