@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2001/03/07 00:17:30 hubertf Exp $
+
+Index: Makefile.inc
+===================================================================
+RCS file: /cvsroot/basesrc/usr.sbin/pkg_install/Makefile.inc,v
+retrieving revision 1.14
+diff -u -r1.14 Makefile.inc
+--- Makefile.inc	2001/01/07 08:00:58	1.14
++++ Makefile.inc	2001/03/06 23:54:39
+@@ -3,6 +3,9 @@
+ 
+ .include <bsd.own.mk>
+ 
++.if !defined(PRINTOBJDIR)
++PRINTOBJDIR=   printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -B -s -f-
++.endif
+ LIBINSTALL != cd ${.CURDIR}/../lib && ${PRINTOBJDIR}
+ CPPFLAGS+=-I${.CURDIR}/../lib ${DEBUG} -DBINDIR='"${BINDIR}"'
+ 
