@@ -1,27 +1,26 @@
-# $NetBSD: options.mk,v 1.2 2004/08/05 03:30:16 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2004/08/22 19:32:51 jlam Exp $
 
 # Global and legacy options
-.if defined(MUTT_USE_SLANG) || defined(MUTT_USE_NCURSES) || \
-    defined(MUTT_USE_SSL) || defined(MUTT_USE_SASL)
-.  if !defined(PKG_OPTIONS.mutt)
-.    if defined(MUTT_USE_SLANG) && !empty(MUTT_USE_SLANG:M[yY][eE][sS])
-PKG_OPTIONS.mutt+=	slang
-.    endif
-.    if defined(MUTT_USE_NCURSES) && !empty(MUTT_USE_NCURSES:M[yY][eE][sS])
-PKG_OPTIONS.mutt+=	ncurses
-.    endif
-.    if defined(MUTT_USE_SSL) && !empty(MUTT_USE_SSL:M[yY][eE][sS])
-PKG_OPTIONS.mutt+=	ssl
-.    endif
-.    if defined(MUTT_USE_SASL) && !empty(MUTT_USE_SASL:M[yY][eE][sS])
-PKG_OPTIONS.mutt+=	sasl
-.    endif
-.  endif
+.if defined(MUTT_USE_SLANG) && !empty(MUTT_USE_SLANG:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	slang
+.endif
+.if defined(MUTT_USE_NCURSES) && !empty(MUTT_USE_NCURSES:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	ncurses
+.endif
+.if defined(MUTT_USE_SSL) && !empty(MUTT_USE_SSL:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	ssl
+.endif
+.if defined(MUTT_USE_SASL) && !empty(MUTT_USE_SASL:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	sasl
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
-PKG_OPTIONS.mutt?=	ssl
 PKG_SUPPORTED_OPTIONS=	slang ncurses ssl sasl
+
+.if !defined(PKG_OPTIONS.mutt)
+PKG_DEFAULT_OPTIONS+=	ssl
+.endif
+
 .include "../../mk/bsd.options.mk"
 
 ###

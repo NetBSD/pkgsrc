@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/08/09 22:37:34 seb Exp $
+# $NetBSD: Makefile,v 1.9 2004/08/22 19:32:52 jlam Exp $
 
 DISTNAME=	flow-tools-0.67
 CATEGORIES=	net
@@ -27,12 +27,13 @@ SUPPORT_FILES+=	${EGDIR}/sym/${_f_} ${PKG_SYSCONFDIR}/sym/${_f_}
 .endfor
 MESSAGE_SUBST+=	EGDIR=${EGDIR}
 
-# legacy options
-.if defined(FLOW_TOOLS_USE_MYSQL) && !empty(FLOW_TOOLS_USE_MYSQL:M[yY][eE][sS])
-PKG_OPTIONS.flow-tools+=	mysql
+.if defined(FLOW_TOOLS_USE_MYSQL) && \
+    !empty(FLOW_TOOLS_USE_MYSQL:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	mysql
 .endif
-.if defined(FLOW_TOOLS_USE_POSTGRESQL) && !empty(FLOW_TOOLS_USE_POSTGRESQL:M[yY][eE][sS])
-PKG_OPTIONS.flow-tools+=	postgresql
+.if defined(FLOW_TOOLS_USE_POSTGRESQL) && \
+    !empty(FLOW_TOOLS_USE_POSTGRESQL:M[yY][eE][sS])
+PKG_DEFAULT_OPTIONS+=	postgresql
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.flow-tools
