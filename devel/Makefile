@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2001/09/05 17:33:06 jlam Exp $
+# $NetBSD: Makefile,v 1.240 2001/09/14 13:05:42 hubertf Exp $
 #
 
 COMMENT=	Development utilities
@@ -36,6 +36,7 @@ SUBDIR+=	cvs2cl
 SUBDIR+=	cvs2html
 SUBDIR+=	cvslock
 SUBDIR+=	cvsup
+SUBDIR+=	cvsup-gui
 SUBDIR+=	cweb
 SUBDIR+=	cxref
 SUBDIR+=	ddd
