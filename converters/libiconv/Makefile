@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/08/25 18:38:18 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2002/09/01 20:24:17 tron Exp $
 #
 
 DISTNAME=		libiconv-1.8
@@ -19,7 +19,9 @@ LIBTOOL_OVERRIDE+=	${WRKSRC}/libcharset/libtool
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == SunOS)
-PLIST_SRC=		${PKGDIR}/PLIST.${OPSYS}
+PLIST_SUBST+=		SUNOS=
+.else
+PLIST_SUBST+=		SUNOS="@comment "
 .endif
 
 # remove any existing charset.alias; if it already exists, libiconv does
