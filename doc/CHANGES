@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6244 2004/06/20 20:22:12 minskim Exp $
+$NetBSD: CHANGES,v 1.6245 2004/06/20 20:28:01 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -2977,3 +2977,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated epiphany to 1.2.6 [jmmv 2004-06-20]
 	Updated ap2-perl to 1.99.14 [minskim 2004-06-20]
 	Updated liferea to 0.5.0 [minskim 2004-06-20]
+	Added gst-plugins-artsd-0.8.1 [agc 2004-06-20]
