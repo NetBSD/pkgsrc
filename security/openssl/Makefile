@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2001/11/29 01:12:46 hubertf Exp $
+# $NetBSD: Makefile,v 1.50 2002/05/08 11:44:51 kleink Exp $
 
 DISTNAME=		openssl-0.9.6
 PKGREVISION=		2
 SVR4_PKGNAME=		ossl
 CATEGORIES=		security
-MASTER_SITES=		ftp://ftp.openssl.org/source/ \
-			ftp://ftp.uni-trier.de/pub/unix/security/openssl/
+MASTER_SITES=		ftp://ftp.openssl.org/source/
 
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www.openssl.org/
