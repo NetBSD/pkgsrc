@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2000/05/25 09:07:31 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2000/07/11 08:38:01 agc Exp $
 #
 
 DISTNAME=	crossfire-0.94.2
@@ -31,7 +31,7 @@ MAKE_ENV+=	LOCALBASE=${LOCALBASE}
 post-patch:
 	@${MV} ${WRKSRC}/config/crosssite.def \
 		${WRKSRC}/config/crosssite.def-orig
-	@${SED} -e 's|@X11BASE@|${X11BASE}|g' \
+	@${SED} -e 's|@X11BASE@|${X11PREFIX}|g' \
 		-e 's|@LOCALBASE@|${LOCALBASE}|g' \
 		${WRKSRC}/config/crosssite.def-orig \
 		> ${WRKSRC}/config/crosssite.def
@@ -40,7 +40,7 @@ post-patch:
 		-e 's|XXXDBXXX|${PKG_DBDIR}/${DISTNAME}|' \
 		${PKGDIR}/deinstall > ${DEINSTALL_FILE}
 	@${SED} -e 's|XXXLOCALBASEXXX|${LOCALBASE}|' \
-		-e 's|XXXX11BASEXXX|${X11BASE}|' \
+		-e 's|XXXX11BASEXXX|${X11PREFIX}|' \
 		${PKGDIR}/install > ${INSTALL_FILE}
 	@cd ${WRKSRC}/utils && \
 		${MV} mktable.script mktable.script.orig && \
@@ -52,23 +52,23 @@ post-patch:
 			mapconv.script
 
 post-install:
-	cd ${X11BASE}/lib/crossfire && \
+	cd ${X11PREFIX}/lib/crossfire && \
 	    ${GZCAT} ${DISTDIR}/${CF_MAPS} | ${GTAR} xmf -
-	cd ${X11BASE}/lib/crossfire && \
+	cd ${X11PREFIX}/lib/crossfire && \
 	    ${GZCAT} ${DISTDIR}/${CF_SOUND} | ${GTAR} xmf -
-	@${FIND} ${X11BASE}/lib/crossfire/sounds -name \*.au -type f \
+	@${FIND} ${X11PREFIX}/lib/crossfire/sounds -name \*.au -type f \
 		> ${WRKDIR}/.RPLAY
 	@${CAT} ${WRKDIR}/.RPLAY >> ${LOCALBASE}/etc/rplay.conf
 	@${CAT} ${WRKDIR}/.RPLAY >> ${DEINSTALL_FILE}
 	@${CAT} ${WRKDIR}/.RPLAY >> ${INSTALL_FILE}
 	@${ECHO} "EOF" >> ${INSTALL_FILE}
-	@${CHOWN} root:games ${X11BASE}/bin/crossfire
-	@${CHMOD} 2755 ${X11BASE}/bin/crossfire
-	@${CHOWN} -R root:games ${X11BASE}/lib/crossfire
-	@${CHMOD} 775 ${X11BASE}/lib/crossfire/players
-	@${CHMOD} 775 ${X11BASE}/lib/crossfire/unique-items
-	@${CHMOD} 775 ${X11BASE}/lib/crossfire
-	@${CHMOD} 664 ${X11BASE}/lib/crossfire/highscore
+	@${CHOWN} root:games ${X11PREFIX}/bin/crossfire
+	@${CHMOD} 2755 ${X11PREFIX}/bin/crossfire
+	@${CHOWN} -R root:games ${X11PREFIX}/lib/crossfire
+	@${CHMOD} 775 ${X11PREFIX}/lib/crossfire/players
+	@${CHMOD} 775 ${X11PREFIX}/lib/crossfire/unique-items
+	@${CHMOD} 775 ${X11PREFIX}/lib/crossfire
+	@${CHMOD} 664 ${X11PREFIX}/lib/crossfire/highscore
 
 pre-clean:
 	@${RM} -f ${DEINSTALL_FILE} ${INSTALL_FILE} ${WRKDIR}/.RPLAY
