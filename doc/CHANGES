@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2293 2003/05/23 09:30:35 wiz Exp $
+$NetBSD: CHANGES,v 1.2294 2003/05/23 09:40:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2102,3 +2102,5 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mtr to 0.54 [wiz 2003-05-23]
 	Updated mtr-gtk to 0.54 [wiz 2003-05-23]
 	Updated libsndfile to 1.0.5 [wiz 2003-05-23]
+	Updated xscreensaver to 4.10 [wiz 2003-05-23]
+	Updated xscreensaver-gnome to 4.10 [wiz 2003-05-23]
