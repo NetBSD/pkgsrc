@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2004/08/14 13:21:14 simonb Exp $
+$NetBSD: distinfo,v 1.8 2004/11/11 03:17:07 simonb Exp $
 
-SHA1 (mpd-0.11.4.tar.gz) = 03e90f7791e0addb59b38dc6b53782373c75ab35
-Size (mpd-0.11.4.tar.gz) = 1120087 bytes
+SHA1 (mpd-0.11.5.tar.gz) = 5661008b3eb799f8d76949a37bc439917dbbb68a
+Size (mpd-0.11.5.tar.gz) = 1127523 bytes
