@@ -1,8 +1,6 @@
-$NetBSD: patch-ak,v 1.2 1998/08/07 10:36:24 agc Exp $
-
---- FWF/FWF.rules.orig	Mon Jan 29 18:55:22 1996
-+++ FWF/FWF.rules	Sat Feb 21 20:45:05 1998
-@@ -23,9 +23,6 @@
+--- FWF/FWF.rules.orig	Thu Aug 13 01:27:07 1998
++++ FWF/FWF.rules	Fri Oct 22 15:13:20 1999
+@@ -23,13 +23,11 @@
  libdir/libname:: objlist						@@\
  	-@(if [ ! -f libdir/libname ]; then \				@@\
  		$(MKDIRHIER) libdir ; \					@@\
@@ -12,7 +10,13 @@ $NetBSD: patch-ak,v 1.2 1998/08/07 10:36:24 agc Exp $
  	fi; exit 0)							@@\
  	@echo Adding objlist To Library libdir/libname			@@\
  	$(ARMERGE) libdir/libname objlist				@@\
-@@ -44,16 +41,6 @@
+-	RanLibrary(libdir/libname)
++	RanLibrary(libdir/libname)					@@\
++	sleep 1
+ #endif /* AddToLibraryTarget */
+ 
+ /*
+@@ -44,16 +42,6 @@
  #endif /* FileCopyWhenNeeded */
  
  /*
@@ -29,7 +33,17 @@ $NetBSD: patch-ak,v 1.2 1998/08/07 10:36:24 agc Exp $
   * RequireThisFileForInit(file)
   *
   */
-@@ -244,18 +231,6 @@
+@@ -146,7 +134,8 @@
+ #define InstallLibraryFile(srcdir,lib,destdir)				@@\
+ install:: srcdir/lib							@@\
+ 	$(INSTALL) -c $(INSTLIBFLAGS) srcdir/lib destdir		@@\
+-	RanLibrary($(RANLIBINSTFLAGS) destdir/lib)
++	RanLibrary($(RANLIBINSTFLAGS) destdir/lib)			@@\
++	sleep 1
+ #endif /* InstallLibraryFile */
+ 
+ /*
+@@ -244,18 +233,6 @@
  #endif /* ObjectRuleWithFlags */
  
  /*
@@ -48,7 +62,7 @@ $NetBSD: patch-ak,v 1.2 1998/08/07 10:36:24 agc Exp $
   * SqueakyCleanTarget()
   *
   */
-@@ -282,3 +257,6 @@
+@@ -282,3 +259,6 @@
  #define SqueakyCleanSubdirs(dirs)					@@\
  NamedSqueakyCleanSubdirs(squeakyclean,dirs)
  #endif
