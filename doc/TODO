@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2617 2004/12/01 14:00:38 adam Exp $
+$NetBSD: TODO,v 1.2618 2004/12/01 15:00:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -550,10 +550,9 @@ Suggested package updates
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
 	o gtranslator-1.0.1
-	o guile-1.6.6
 	o guile-gtk-0.40.90 [in wip]
 	o guile-oops-1.0.2
-	o guile-pg-0.22 [pkgsrc-wip]
+	o guile-pg-0.23 [pkgsrc-wip]
 	o guile-www-1.1.1
 	o gv-3.6.0
 	o hackbot-2.21
