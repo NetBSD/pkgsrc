@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/03/09 20:05:08 jschauma Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/30 22:58:41 jschauma Exp $
 
 DISTNAME=	bzflag-1.7e6
 PKGNAME=	${DISTNAME:S/e/.5./}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games x11
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=bzflag/}
 EXTRACT_SUFX=   .tgz
