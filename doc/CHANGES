@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.3936 2003/12/03 18:54:15 xtraeme Exp $
+$NetBSD: CHANGES,v 1.3937 2003/12/03 19:05:20 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -4793,3 +4793,6 @@ Changes to the packages collection and infrastructure in 2003:
 	Added postal-0.62 [xtraeme 2003-12-03]
 	Added boson-0.8 [xtraeme 2003-12-03]
 	Added openmortal-0.3 [xtraeme 2003-12-03]
+	Added devIL-1.6.6 [xtraeme 2003-12-03]
+	Added ode-0.039 [xtraeme 2003-12-03]
+	Added ogre-0.12.1 [xtraeme 2003-12-03]
