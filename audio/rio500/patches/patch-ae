@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1 2000/08/22 14:07:54 ad Exp $
+$NetBSD: patch-ae,v 1.2 2000/08/22 15:40:12 dmcmahill Exp $
 
 --- lib/usbdrvlinux.c.orig	Tue Aug 22 14:58:45 2000
 +++ lib/usbdrvlinux.c	Tue Aug 22 14:59:00 2000
@@ -7,7 +7,7 @@ $NetBSD: patch-ae,v 1.1 2000/08/22 14:07:54 ad Exp $
  
  #ifdef WORDS_BIGENDIAN
 -# include <byteswap.h>
-+# include <sys/bswap.h>
++# include <machine/bswap.h>
  #endif
  
  #if TIME_WITH_SYS_TIME
