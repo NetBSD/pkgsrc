@@ -1,28 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2001/01/04 15:10:37 agc Exp $
+@comment $NetBSD: PLIST,v 1.5 2001/02/15 14:21:27 wiz Exp $
 bin/clanlib-config
 lib/libclanCore.so
 lib/libclanCore.so.0
-lib/libclanCore.so.0.4
 lib/libclanCore.so.0.4.4
-lib/ClanLib/libclan-input-tty.so
-lib/ClanLib/libclan-input-tty.so.0
-lib/ClanLib/libclan-input-tty.so.0.4
 lib/ClanLib/libclan-input-tty.so.0.4.4
-lib/ClanLib/libclan-display-x11.so
-lib/ClanLib/libclan-display-x11.so.0
-lib/ClanLib/libclan-display-x11.so.0.4
 lib/ClanLib/libclan-display-x11.so.0.4.4
-lib/ClanLib/libclan-display-glx.so
-lib/ClanLib/libclan-display-glx.so.0
-lib/ClanLib/libclan-display-glx.so.0.4
 lib/ClanLib/libclan-display-glx.so.0.4.4
-lib/ClanLib/libclan-sound.so
-lib/ClanLib/libclan-sound.so.0
-lib/ClanLib/libclan-sound.so.0.4
 lib/ClanLib/libclan-sound.so.0.4.4
-lib/ClanLib/libclan-network.so
-lib/ClanLib/libclan-network.so.0
-lib/ClanLib/libclan-network.so.0.4
 lib/ClanLib/libclan-network.so.0.4.4
 include/ClanLib/Core/Display/cliprect.h
 include/ClanLib/Core/Display/display.h
