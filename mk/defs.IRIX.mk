@@ -1,4 +1,4 @@
-# $NetBSD: defs.IRIX.mk,v 1.52 2004/05/31 16:47:00 jschauma Exp $
+# $NetBSD: defs.IRIX.mk,v 1.53 2004/06/18 11:22:41 kristerw Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -97,7 +97,6 @@ DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		${FALSE}
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
-MOTIF12_TYPE_DEFAULT?=	dt		# default 1.2 compatible libs type
 NOLOGIN?=		${FALSE}
 ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		sys
