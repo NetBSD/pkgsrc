@@ -1,4 +1,4 @@
-# $NetBSD: srcdist.mk,v 1.1 2002/01/28 09:04:07 drochner Exp $
+# $NetBSD: srcdist.mk,v 1.2 2002/01/29 19:21:58 drochner Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -33,6 +33,16 @@ PATCHDIR=	${.CURDIR}/../../lang/python20/patches
 PYSUBDIR=	Python-2.0.1
 WRKSRC=		${WRKDIR}/${PYSUBDIR}
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0.1/
+
+.elif ${_PYTHON_VERSION} == "15"
+
+DISTNAME=	py152
+EXTRACT_SUFX=	.tgz
+DISTINFO_FILE=	${.CURDIR}/../../lang/python15/distinfo
+PATCHDIR=	${.CURDIR}/../../lang/python15/patches
+PYSUBDIR=	Python-1.5.2
+WRKSRC=		${WRKDIR}/${PYSUBDIR}
+MASTER_SITES=	http://www.python.org/ftp/python/src/
 
 .endif
 
