@@ -1,0 +1,18 @@
+$NetBSD: patch-aj,v 1.1 1999/08/24 10:16:40 fredb Exp $
+
+--- lib/Makefile.in.orig
++++ lib/Makefile.in
+@@ -11,11 +11,9 @@
+ 
+ OBJSDLL         = $(OBJS)
+ 
+-PROG            = libafterstep.a
+-DYNPROG         = libafterstep.so
+-LIBVER          = 1.5
++PROG            = libafterstep.la
+ LIBVERMAJOR     = 1
+-#INSTALLONBUILD  = install
++LIBVERMINOR     = 5
+ 
+ @MAKEFILECOMMONLIB@
+ 

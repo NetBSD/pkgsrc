@@ -1,12 +1,18 @@
-$NetBSD: patch-ad,v 1.1.1.1 1999/07/31 10:36:46 fredb Exp $
+$NetBSD: patch-ad,v 1.2 1999/08/24 10:16:40 fredb Exp $
 
---- configure.orig	Thu Dec 10 05:52:19 1998
-+++ configure	Tue Dec 29 00:26:35 1998
-@@ -4012,6 +4012,7 @@
- s%@DEFS@%$DEFS%g
- s%@LDFLAGS@%$LDFLAGS%g
- s%@LIBS@%$LIBS%g
-+s%@LOCALBASE@%$LOCALBASE%g
- s%@exec_prefix@%$exec_prefix%g
- s%@prefix@%$prefix%g
- s%@program_transform_name@%$program_transform_name%g
+--- src/Config/Makefile.in.orig	Sun Jul 11 12:33:27 1999
++++ src/Config/Makefile.in	Sun Aug 22 11:44:16 1999
+@@ -5,11 +5,9 @@
+ OBJS            = Pager.o Base.o MyStyle.o ASetRoot.o
+ OBJSDLL         = $(OBJS)
+ 
+-PROG            = libasConfig.a
+-DYNPROG         = libasConfig.so
+-LIBVER          = 1.0
++PROG            = libasConfig.la
+ LIBVERMAJOR     = 1
+-#INSTALLONBUILD  = install
++LIBVERMINOR     = 0
+ 
+ @MAKEFILECOMMONLIB@
+ 
