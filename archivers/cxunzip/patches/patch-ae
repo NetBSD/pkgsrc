@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2004/12/17 20:49:40 minskim Exp $
+
+--- src/prefs.cc.orig	2003-10-12 11:36:01.000000000 -0500
++++ src/prefs.cc
+@@ -21,7 +21,7 @@
+ #include <stdio.h>
+ #include <config.h>
+ 
+-#include <gnome.h>
++#include <safe_gnome.h>
+ 
+ #include <string>
+ 
