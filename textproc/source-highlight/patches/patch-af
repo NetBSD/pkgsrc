@@ -1,16 +1,166 @@
-$NetBSD: patch-af,v 1.1 2002/12/23 22:27:50 seb Exp $
+$NetBSD: patch-af,v 1.2 2003/02/16 20:53:48 seb Exp $
 
---- src/Makefile.in.orig	Wed Oct 30 18:21:55 2002
+--- src/Makefile.in.orig	2003-02-09 09:23:04.000000000 +0000
 +++ src/Makefile.in
-@@ -103,6 +103,7 @@ am__quote = @am__quote@
- install_sh = @install_sh@
+@@ -138,6 +138,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
  source_highlightdatadir = @source_highlightdatadir@
  source_highlightdocdir = @source_highlightdocdir@
 +source_highlightdochtmldir = @source_highlightdochtmldir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
  
- bin_PROGRAMS = source-highlight source-highlight-cgi
- bin_SCRIPTS = java2html cpp2html
-@@ -599,26 +600,26 @@ uninstall-info: uninstall-info-recursive
+@@ -246,19 +247,8 @@ SCRIPTS = $(bin_SCRIPTS)
+ 
+ 
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
+-depcomp = $(SHELL) $(top_srcdir)/depcomp
+-am__depfiles_maybe = depfiles
+-@AMDEP_TRUE@DEP_FILES = $(DEPDIR)/getopt.Po $(DEPDIR)/getopt1.Po \
+-@AMDEP_TRUE@	$(DEPDIR)/yywrap.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/changelog_scanner.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/cpp_scanner.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/flex_scanner.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/java_scanner.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/perl_scanner.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/php3_scanner.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/prolog_scanner.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/python_scanner.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/source-highlight.Po
++depcomp =
++am__depfiles_maybe =
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+@@ -293,7 +283,7 @@ all: $(BUILT_SOURCES)
+ .SUFFIXES: .c .cc .ll .o .obj
+ $(srcdir)/Makefile.in:  Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+ 	cd $(top_srcdir) && \
+-	  $(AUTOMAKE) --gnu  src/Makefile
++	  $(AUTOMAKE) --gnu  --ignore-deps src/Makefile
+ Makefile:  $(srcdir)/Makefile.in  $(top_builddir)/config.status
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
+ java2html: $(top_builddir)/config.status java2html.in
+@@ -357,65 +347,17 @@ mostlyclean-compile:
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/getopt.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/getopt1.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@$(DEPDIR)/yywrap.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/changelog_scanner.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpp_scanner.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/flex_scanner.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/java_scanner.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/perl_scanner.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/php3_scanner.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/prolog_scanner.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/python_scanner.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/source-highlight.Po@am__quote@
+-
+-distclean-depend:
+-	-rm -rf $(DEPDIR) ./$(DEPDIR)
+-
+ .c.o:
+-@am__fastdepCC_TRUE@	if $(COMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" \
+-@am__fastdepCC_TRUE@	  -c -o $@ `test -f '$<' || echo '$(srcdir)/'`$<; \
+-@am__fastdepCC_TRUE@	then mv "$(DEPDIR)/$*.Tpo" "$(DEPDIR)/$*.Po"; \
+-@am__fastdepCC_TRUE@	else rm -f "$(DEPDIR)/$*.Tpo"; exit 1; \
+-@am__fastdepCC_TRUE@	fi
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+-@am__fastdepCC_FALSE@	$(COMPILE) -c `test -f '$<' || echo '$(srcdir)/'`$<
++	$(COMPILE) -c `test -f '$<' || echo '$(srcdir)/'`$<
+ 
+ .c.obj:
+-@am__fastdepCC_TRUE@	if $(COMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" \
+-@am__fastdepCC_TRUE@	  -c -o $@ `if test -f '$<'; then $(CYGPATH_W) '$<'; else $(CYGPATH_W) '$(srcdir)/$<'; fi`; \
+-@am__fastdepCC_TRUE@	then mv "$(DEPDIR)/$*.Tpo" "$(DEPDIR)/$*.Po"; \
+-@am__fastdepCC_TRUE@	else rm -f "$(DEPDIR)/$*.Tpo"; exit 1; \
+-@am__fastdepCC_TRUE@	fi
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@@am__fastdepCC_FALSE@	$(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+-@am__fastdepCC_FALSE@	$(COMPILE) -c `if test -f '$<'; then $(CYGPATH_W) '$<'; else $(CYGPATH_W) '$(srcdir)/$<'; fi`
++	$(COMPILE) -c `if test -f '$<'; then $(CYGPATH_W) '$<'; else $(CYGPATH_W) '$(srcdir)/$<'; fi`
+ 
+ .cc.o:
+-@am__fastdepCXX_TRUE@	if $(CXXCOMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" \
+-@am__fastdepCXX_TRUE@	  -c -o $@ `test -f '$<' || echo '$(srcdir)/'`$<; \
+-@am__fastdepCXX_TRUE@	then mv "$(DEPDIR)/$*.Tpo" "$(DEPDIR)/$*.Po"; \
+-@am__fastdepCXX_TRUE@	else rm -f "$(DEPDIR)/$*.Tpo"; exit 1; \
+-@am__fastdepCXX_TRUE@	fi
+-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+-@am__fastdepCXX_FALSE@	$(CXXCOMPILE) -c -o $@ `test -f '$<' || echo '$(srcdir)/'`$<
++	$(CXXCOMPILE) -c -o $@ `test -f '$<' || echo '$(srcdir)/'`$<
+ 
+ .cc.obj:
+-@am__fastdepCXX_TRUE@	if $(CXXCOMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" \
+-@am__fastdepCXX_TRUE@	  -c -o $@ `if test -f '$<'; then $(CYGPATH_W) '$<'; else $(CYGPATH_W) '$(srcdir)/$<'; fi`; \
+-@am__fastdepCXX_TRUE@	then mv "$(DEPDIR)/$*.Tpo" "$(DEPDIR)/$*.Po"; \
+-@am__fastdepCXX_TRUE@	else rm -f "$(DEPDIR)/$*.Tpo"; exit 1; \
+-@am__fastdepCXX_TRUE@	fi
+-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
+-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	depfile='$(DEPDIR)/$*.Po' tmpdepfile='$(DEPDIR)/$*.TPo' @AMDEPBACKSLASH@
+-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+-@am__fastdepCXX_FALSE@	$(CXXCOMPILE) -c -o $@ `if test -f '$<'; then $(CYGPATH_W) '$<'; else $(CYGPATH_W) '$(srcdir)/$<'; fi`
++	$(CXXCOMPILE) -c -o $@ `if test -f '$<'; then $(CYGPATH_W) '$<'; else $(CYGPATH_W) '$(srcdir)/$<'; fi`
+ 
+ .ll.cc:
+ 	$(SHELL) $(YLWRAP) `test -f '$<' || echo '$(srcdir)/'`$< $(LEX_OUTPUT_ROOT).c $@ -- $(LEXCOMPILE)
+@@ -631,24 +573,24 @@ distclean-generic:
+ maintainer-clean-generic:
+ 	@echo "This command is intended for maintainers to use"
+ 	@echo "it deletes files that may require special tools to rebuild."
+-	-rm -f java_scanner.cc
+-	-rm -f python_scanner.cc
+-	-rm -f prolog_scanner.cc
+-	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
+-	-rm -f php3_scanner.cc
+-	-rm -f perl_scanner.cc
+ 	-test -z "$(MAINTAINERCLEANFILES)" || rm -f $(MAINTAINERCLEANFILES)
++	-rm -f php3_scanner.cc
+ 	-rm -f flex_scanner.cc
+-	-rm -f changelog_scanner.cc
++	-rm -f prolog_scanner.cc
+ 	-rm -f cpp_scanner.cc
++	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
++	-rm -f java_scanner.cc
++	-rm -f python_scanner.cc
++	-rm -f changelog_scanner.cc
++	-rm -f perl_scanner.cc
+ clean: clean-recursive
+ 
+ clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
+ 
+ distclean: distclean-recursive
+ 
+-distclean-am: clean-am distclean-compile distclean-depend \
+-	distclean-generic distclean-tags
++distclean-am: clean-am distclean-compile distclean-generic \
++	distclean-tags
+ 
+ dvi: dvi-recursive
+ 
+@@ -691,10 +633,10 @@ uninstall-info: uninstall-info-recursive
+ 
+ .PHONY: $(RECURSIVE_TARGETS) CTAGS GTAGS all all-am check check-am clean \
+ 	clean-binPROGRAMS clean-generic clean-recursive ctags \
+-	ctags-recursive distclean distclean-compile distclean-depend \
+-	distclean-generic distclean-recursive distclean-tags distdir \
+-	dvi dvi-am dvi-recursive info info-am info-recursive install \
+-	install-am install-binPROGRAMS install-binSCRIPTS install-data \
++	ctags-recursive distclean distclean-compile distclean-generic \
++	distclean-recursive distclean-tags distdir dvi dvi-am \
++	dvi-recursive info info-am info-recursive install install-am \
++	install-binPROGRAMS install-binSCRIPTS install-data \
+ 	install-data-am install-data-recursive install-exec \
+ 	install-exec-am install-exec-recursive install-info \
+ 	install-info-am install-info-recursive install-man \
+@@ -710,26 +652,26 @@ uninstall-info: uninstall-info-recursive
  
  
  startapp-cgi.o: $(srcdir)/startapp.cc
