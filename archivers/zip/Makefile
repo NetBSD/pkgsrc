@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1999/12/13 13:15:22 rh Exp $
+# $NetBSD: Makefile,v 1.17 1999/12/28 03:59:01 wiz Exp $
 # FreeBSD Id: Makefile,v 1.10 1997/04/27 16:06:15 ache Exp 
 #
 
@@ -35,8 +35,8 @@ do-install:
 	    ${INSTALL_PROGRAM} zip zipnote zipsplit zipcloak ${PREFIX}/bin
 	cd ${WRKSRC}/man && \
 	    ${INSTALL_MAN} zip.1 ${PREFIX}/man/man1
-	ln -f -s zip.1 ${PREFIX}/man/man1/zipcloak.1
-	ln -f -s zip.1 ${PREFIX}/man/man1/zipnote.1
-	ln -f -s zip.1 ${PREFIX}/man/man1/zipsplit.1
+	${LN} -f -s zip.1 ${PREFIX}/man/man1/zipcloak.1
+	${LN} -f -s zip.1 ${PREFIX}/man/man1/zipnote.1
+	${LN} -f -s zip.1 ${PREFIX}/man/man1/zipsplit.1
 
 .include "../../mk/bsd.pkg.mk"
