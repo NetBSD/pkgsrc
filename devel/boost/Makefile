@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/06/06 23:51:36 tv Exp $
+# $NetBSD: Makefile,v 1.21 2004/06/07 01:36:19 tv Exp $
 #
 
 COMMENT=		Free, portable libraries that integrate with the ISO C++ Stdlib
@@ -31,8 +31,9 @@ do-install:
 		-s':^libs/.*/test$$::' \
 		-s':^libs/.*/test/.*$$::' \
 		*.gif *.css *.htm libs more ${HTMLDIR}
-	${FIND} ${HTMLDIR} -type f -print | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
-	${FIND} ${HTMLDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${PREFIX}/include/boost-1_31 -type f -print | ${XARGS} ${TOUCH}
+	${FIND} ${HTMLDIR} ${PREFIX}/include/boost-1_31 \
+		-type f -print | ${XARGS} ${CHOWN} ${SHAREOWN}:${SHAREGRP}
+	${FIND} ${HTMLDIR} ${PREFIX}/include/boost-1_31 \
+		-type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 
 .include "../../mk/bsd.pkg.mk"
