@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4807 2004/02/13 06:34:26 minskim Exp $
+$NetBSD: CHANGES,v 1.4808 2004/02/13 11:19:32 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -802,3 +802,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated gnome-vfs2 to 2.4.2nb3 [jmmv 2004-02-12]
 	Updated libtar to 1.2.11 [seb 2004-02-13]
 	Added xchat-systray-integration-2.4.0 [minskim 2004-02-13]
+	Updated amule to 1.2.5 [jmmv 2004-02-13]

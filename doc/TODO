@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1372 2004/02/13 03:26:43 minskim Exp $
+$NetBSD: TODO,v 1.1373 2004/02/13 11:19:32 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -125,7 +125,6 @@ Suggested package updates
 	o Xbae-4.50.0
 	o abcde-2.1.14
 	o amanda-2.4.4p1
-	o amule-1.2.5
 	o anjuta-1.2.0 [cube]
 	o asc-1.14.0
 	o aspell-0.50.5
