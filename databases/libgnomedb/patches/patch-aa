@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.7 2005/03/06 21:27:13 kristerw Exp $
+
+--- libgnomedb/gnome-db-find-dialog.c.orig	Sat Mar  5 20:22:31 2005
++++ libgnomedb/gnome-db-find-dialog.c	Sat Mar  5 20:23:05 2005
+@@ -216,11 +216,12 @@
+ GtkWidget *
+ gnome_db_find_dialog_new_with_model (const gchar *title, GdaDataModel *dm)
+ {
++	GnomeDbFindDialog *dialog;
+ 	g_return_val_if_fail (GDA_IS_DATA_MODEL (dm), NULL);
+ 	
+ 	g_object_ref (dm);
+ 	
+-	GnomeDbFindDialog *dialog = gnome_db_find_dialog_new (title);
++	dialog = gnome_db_find_dialog_new (title);
+ 	gnome_db_find_dialog_add_fields_from_model (dialog, dm);
+ 
+ 	g_object_unref (dm);
