@@ -1,0 +1,18 @@
+The delta generator portion of this program is a delta algorithm which
+searches for substring matches between the files and then outputs
+instructions to reconstruct the new file from the old file.  It produces a
+set of copy/insert instructions that tell how to reconstruct the file as a
+sequence of copies from the FROM file and inserts from the delta itself. 
+In this regard, the program is much closer to a compression program than
+to a diff program.  However, the delta is not "compressed", in that the
+delta's entropy H(P) will be very similar to the entropy of the portions
+of the TO file not found within the FROM file.  The delta will compress
+just as well as the TO file will.  This is a fundamentally different
+method of computing deltas than in the traditional "diff" program.  The
+diff program and it's variants use a least-common-subsequence (LCS)
+algorithm to find a list of inserts and deletes that will modify the FROM
+file into the TO file.  LCS is more expensive to compute and is sometimes
+more useful, especially to the human reader.  Since LCS is a fairly
+expensive algorithm, diff programs usually divide the input files into
+newline-separated "atoms" before computing a delta.  This is a fine
+approximation for text files, but not binary files.
