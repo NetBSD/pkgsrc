@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2003/07/30 14:05:26 wiz Exp $
+$NetBSD: distinfo,v 1.6 2003/12/14 12:38:30 wiz Exp $
 
-SHA1 (gperiodic-2.0.5.tar.gz) = 25f94b175c91c772a7157355617fc75088528efa
-Size (gperiodic-2.0.5.tar.gz) = 47663 bytes
-SHA1 (patch-aa) = 2ae8d15525aa868ed95ac4b03d0fb247850919c7
-SHA1 (patch-ab) = 24058fac21d3418a11752cb8ca2cd9777c7350d1
-SHA1 (patch-ac) = 1465c4c96a0b848773cce15041e02b5efa025f2e
+SHA1 (gperiodic-2.0.7.tar.gz) = fa1277c4f1d34fbdb2da95b38a6b7f59e23caf03
+Size (gperiodic-2.0.7.tar.gz) = 124798 bytes
+SHA1 (patch-aa) = 9fe15e0b2cf721db3f4618cec7763f300b2cad69
+SHA1 (patch-ab) = 6f79492b0ce20681288323c8b113f6240a649bb2
+SHA1 (patch-ac) = b46b521544d4dff146e8b71e66ac8811b6b8525f

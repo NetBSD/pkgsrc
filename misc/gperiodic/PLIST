@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2003/07/30 14:05:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/14 12:38:30 wiz Exp $
 bin/gperiodic
 share/gnome/apps/Applications/gperiodic.desktop
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gperiodic.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gperiodic.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gperiodic.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gperiodic.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gperiodic.mo
 share/pixmaps/gperiodic.png
 share/pixmaps/gperiodic-crystal.png
