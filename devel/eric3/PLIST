@@ -1,0 +1,1090 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/22 17:34:44 drochner Exp $
+bin/eric3
+bin/helpviewer
+bin/qtunittest
+${PYSITELIB}/eric3/Checks/SyntaxCheckerDialog.py
+${PYSITELIB}/eric3/Checks/SyntaxCheckerDialog.pyc
+${PYSITELIB}/eric3/Checks/SyntaxCheckerForm.py
+${PYSITELIB}/eric3/Checks/SyntaxCheckerForm.pyc
+${PYSITELIB}/eric3/Checks/Tabnanny.py
+${PYSITELIB}/eric3/Checks/Tabnanny.pyc
+${PYSITELIB}/eric3/Checks/TabnannyDialog.py
+${PYSITELIB}/eric3/Checks/TabnannyDialog.pyc
+${PYSITELIB}/eric3/Checks/TabnannyForm.py
+${PYSITELIB}/eric3/Checks/TabnannyForm.pyc
+${PYSITELIB}/eric3/Checks/__init__.py
+${PYSITELIB}/eric3/Checks/__init__.pyc
+${PYSITELIB}/eric3/Debugger/AsyncIO.py
+${PYSITELIB}/eric3/Debugger/AsyncIO.pyc
+${PYSITELIB}/eric3/Debugger/BreakpointDialog.py
+${PYSITELIB}/eric3/Debugger/BreakpointDialog.pyc
+${PYSITELIB}/eric3/Debugger/BreakpointForm.py
+${PYSITELIB}/eric3/Debugger/BreakpointForm.pyc
+${PYSITELIB}/eric3/Debugger/Config.py
+${PYSITELIB}/eric3/Debugger/Config.pyc
+${PYSITELIB}/eric3/Debugger/DebugClient.py
+${PYSITELIB}/eric3/Debugger/DebugClient.pyc
+${PYSITELIB}/eric3/Debugger/DebugClientNoQt.py
+${PYSITELIB}/eric3/Debugger/DebugClientNoQt.pyc
+${PYSITELIB}/eric3/Debugger/DebugClientThreads.py
+${PYSITELIB}/eric3/Debugger/DebugClientThreads.pyc
+${PYSITELIB}/eric3/Debugger/DebugIcons.py
+${PYSITELIB}/eric3/Debugger/DebugIcons.pyc
+${PYSITELIB}/eric3/Debugger/DebugProtocol.py
+${PYSITELIB}/eric3/Debugger/DebugProtocol.pyc
+${PYSITELIB}/eric3/Debugger/DebugServer.py
+${PYSITELIB}/eric3/Debugger/DebugServer.pyc
+${PYSITELIB}/eric3/Debugger/DebugThread.py
+${PYSITELIB}/eric3/Debugger/DebugThread.pyc
+${PYSITELIB}/eric3/Debugger/DebugUI.py
+${PYSITELIB}/eric3/Debugger/DebugUI.pyc
+${PYSITELIB}/eric3/Debugger/ExceptionLogger.py
+${PYSITELIB}/eric3/Debugger/ExceptionLogger.pyc
+${PYSITELIB}/eric3/Debugger/ExceptionsFilterDialog.py
+${PYSITELIB}/eric3/Debugger/ExceptionsFilterDialog.pyc
+${PYSITELIB}/eric3/Debugger/ExceptionsFilterForm.py
+${PYSITELIB}/eric3/Debugger/ExceptionsFilterForm.pyc
+${PYSITELIB}/eric3/Debugger/PyCoverage.py
+${PYSITELIB}/eric3/Debugger/PyCoverage.pyc
+${PYSITELIB}/eric3/Debugger/PyProfile.py
+${PYSITELIB}/eric3/Debugger/PyProfile.pyc
+${PYSITELIB}/eric3/Debugger/StartDialog.py
+${PYSITELIB}/eric3/Debugger/StartDialog.pyc
+${PYSITELIB}/eric3/Debugger/StartForm.py
+${PYSITELIB}/eric3/Debugger/StartForm.pyc
+${PYSITELIB}/eric3/Debugger/VariableDetailDialog.py
+${PYSITELIB}/eric3/Debugger/VariableDetailDialog.pyc
+${PYSITELIB}/eric3/Debugger/VariableDetailForm.py
+${PYSITELIB}/eric3/Debugger/VariableDetailForm.pyc
+${PYSITELIB}/eric3/Debugger/VariablesFilterDialog.py
+${PYSITELIB}/eric3/Debugger/VariablesFilterDialog.pyc
+${PYSITELIB}/eric3/Debugger/VariablesFilterForm.py
+${PYSITELIB}/eric3/Debugger/VariablesFilterForm.pyc
+${PYSITELIB}/eric3/Debugger/VariablesViewer.py
+${PYSITELIB}/eric3/Debugger/VariablesViewer.pyc
+${PYSITELIB}/eric3/Debugger/__init__.py
+${PYSITELIB}/eric3/Debugger/__init__.pyc
+${PYSITELIB}/eric3/Documentation/Source/Checks/SyntaxCheckerDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Checks/SyntaxCheckerDialog/SyntaxCheckerDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Checks/SyntaxCheckerForm.html
+${PYSITELIB}/eric3/Documentation/Source/Checks/SyntaxCheckerForm/SyntaxCheckerForm.html
+${PYSITELIB}/eric3/Documentation/Source/Checks/Tabnanny.html
+${PYSITELIB}/eric3/Documentation/Source/Checks/Tabnanny/NannyNag.html
+${PYSITELIB}/eric3/Documentation/Source/Checks/Tabnanny/Whitespace.html
+${PYSITELIB}/eric3/Documentation/Source/Checks/TabnannyDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Checks/TabnannyDialog/TabnannyDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Checks/TabnannyForm.html
+${PYSITELIB}/eric3/Documentation/Source/Checks/TabnannyForm/TabnannyForm.html
+${PYSITELIB}/eric3/Documentation/Source/Checks/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Checks/index.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/AsyncIO.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/AsyncIO/AsyncFile.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/AsyncIO/AsyncIO.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/BreakpointDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/BreakpointDialog/BreakpointDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/BreakpointForm.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/BreakpointForm/BreakpointForm.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/Config.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugClient.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugClient/DebugClient.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugClientNoQt.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugClientNoQt/AsyncFile.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugClientNoQt/AsyncIO.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugClientNoQt/DebugClient.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugClientThreads.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugClientThreads/DebugClient.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugIcons.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugProtocol.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugServer.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugServer/DebugServer.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugThread.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugThread/DebugThread.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugUI.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugUI/DebugUI.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/ExceptionLogger.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/ExceptionLogger/ExceptionLogger.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/ExceptionsFilterDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/ExceptionsFilterDialog/ExceptionsFilterDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/ExceptionsFilterForm.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/ExceptionsFilterForm/ExceptionsFilterForm.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/PyCoverage.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/PyCoverage/coverage.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/PyProfile.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/PyProfile/PyProfile.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/StartDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/StartDialog/StartDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/StartForm.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/StartForm/StartForm.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/VariableDetailDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/VariableDetailDialog/VariableDetailDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/VariableDetailForm.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/VariableDetailForm/VariableDetailForm.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/VariablesFilterDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/VariablesFilterDialog/VariablesFilterDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/VariablesFilterForm.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/VariablesFilterForm/VariablesFilterForm.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/VariablesViewer.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/VariablesViewer/VariablesViewer.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Debugger/index.html
+${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/HappydocConfigDialog.html
+${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/HappydocConfigDialog/HappydocConfigDialog.html
+${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/HappydocConfigForm.html
+${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/HappydocConfigForm/HappydocConfigForm.html
+${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/HappydocExecDialog.html
+${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/HappydocExecDialog/HappydocExecDialog.html
+${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/HappydocExecForm.html
+${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/HappydocExecForm/HappydocExecForm.html
+${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/__init__/DocumentationTools.html
+${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/index.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/BookmarkDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/BookmarkDialog/BookmarkDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/BookmarkForm.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/BookmarkForm/BookmarkForm.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/HelpIcons.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/HelpWindow.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/HelpWindow/HelpWindow.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/SearchDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/SearchDialog/SearchDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/SearchForm.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/SearchForm/SearchForm.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Helpviewer/index.html
+${PYSITELIB}/eric3/Documentation/Source/Icons/FileIcons.html
+${PYSITELIB}/eric3/Documentation/Source/Icons/Icons.html
+${PYSITELIB}/eric3/Documentation/Source/Icons/Icons/IconProvider.html
+${PYSITELIB}/eric3/Documentation/Source/Icons/ToolIcons.html
+${PYSITELIB}/eric3/Documentation/Source/Icons/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Icons/index.html
+${PYSITELIB}/eric3/Documentation/Source/LICENSE.GPL.html
+${PYSITELIB}/eric3/Documentation/Source/Preferences/PreferencesDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Preferences/PreferencesDialog/PreferencesDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Preferences/PreferencesForm.html
+${PYSITELIB}/eric3/Documentation/Source/Preferences/PreferencesForm/PreferencesForm.html
+${PYSITELIB}/eric3/Documentation/Source/Preferences/PreferencesLexer.html
+${PYSITELIB}/eric3/Documentation/Source/Preferences/PreferencesLexer/PreferencesLexer.html
+${PYSITELIB}/eric3/Documentation/Source/Preferences/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Preferences/__init__/Prefs.html
+${PYSITELIB}/eric3/Documentation/Source/Preferences/index.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddDirectoryDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddDirectoryDialog/AddDirectoryDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddDirectoryForm.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddDirectoryForm/AddDirForm.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddFileDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddFileDialog/AddFileDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddFileForm.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddFileForm/AddFileForm.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddFoundFilesDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddFoundFilesDialog/AddFoundFilesDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddFoundFilesForm.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddFoundFilesForm/AddFoundFilesForm.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddLanguageDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddLanguageDialog/AddLanguageDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddLanguageForm.html
+${PYSITELIB}/eric3/Documentation/Source/Project/AddLanguageForm/AddLanguageForm.html
+${PYSITELIB}/eric3/Documentation/Source/Project/Project.html
+${PYSITELIB}/eric3/Documentation/Source/Project/Project/Project.html
+${PYSITELIB}/eric3/Documentation/Source/Project/ProjectBrowser.html
+${PYSITELIB}/eric3/Documentation/Source/Project/ProjectBrowser/PBrowser.html
+${PYSITELIB}/eric3/Documentation/Source/Project/ProjectBrowser/ProjectBrowser.html
+${PYSITELIB}/eric3/Documentation/Source/Project/ProjectBrowser/ProjectBrowserDirectory.html
+${PYSITELIB}/eric3/Documentation/Source/Project/ProjectBrowser/ProjectBrowserSimpleDir.html
+${PYSITELIB}/eric3/Documentation/Source/Project/ProjectBrowser/ProjectFormsBrowser.html
+${PYSITELIB}/eric3/Documentation/Source/Project/ProjectBrowser/ProjectOthersBrowser.html
+${PYSITELIB}/eric3/Documentation/Source/Project/ProjectBrowser/ProjectSourcesBrowser.html
+${PYSITELIB}/eric3/Documentation/Source/Project/ProjectBrowser/ProjectTranslationsBrowser.html
+${PYSITELIB}/eric3/Documentation/Source/Project/ProjectIcons.html
+${PYSITELIB}/eric3/Documentation/Source/Project/PropertiesDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Project/PropertiesDialog/PropertiesDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Project/PropertiesForm.html
+${PYSITELIB}/eric3/Documentation/Source/Project/PropertiesForm/PropertiesForm.html
+${PYSITELIB}/eric3/Documentation/Source/Project/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Project/index.html
+${PYSITELIB}/eric3/Documentation/Source/PyUnit/UnittestDialog.html
+${PYSITELIB}/eric3/Documentation/Source/PyUnit/UnittestDialog/QtTestResult.html
+${PYSITELIB}/eric3/Documentation/Source/PyUnit/UnittestDialog/UnittestDialog.html
+${PYSITELIB}/eric3/Documentation/Source/PyUnit/UnittestForm.html
+${PYSITELIB}/eric3/Documentation/Source/PyUnit/UnittestForm/UnittestForm.html
+${PYSITELIB}/eric3/Documentation/Source/PyUnit/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/PyUnit/index.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/Editor.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/Editor/Editor.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/EditorIcons.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/GotoDialog.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/GotoDialog/GotoDialog.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/GotoForm.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/GotoForm/GotoForm.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/Lexer.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/Lexer/Lexer.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerCPP.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerCPP/LexerCPP.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerCSharp.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerCSharp/LexerCSharp.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerHTML.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerHTML/LexerHTML.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerIDL.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerIDL/LexerIDL.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerJava.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerJava/LexerJava.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerJavaScript.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerJavaScript/LexerJavaScript.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerPython.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerPython/LexerPython.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerSQL.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerSQL/LexerSQL.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/Printer.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/Printer/Printer.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/SearchReplaceDialog.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/SearchReplaceDialog/SearchReplaceDialog.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/SearchReplaceForm.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/SearchReplaceForm/SearchReplaceForm.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/ZoomDialog.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/ZoomDialog/ZoomDialog.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/ZoomForm.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/ZoomForm/ZoomForm.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/QScintilla/index.html
+${PYSITELIB}/eric3/Documentation/Source/README.html
+${PYSITELIB}/eric3/Documentation/Source/UI/Browser.html
+${PYSITELIB}/eric3/Documentation/Source/UI/Browser/Browser.html
+${PYSITELIB}/eric3/Documentation/Source/UI/Browser/BrowserClass.html
+${PYSITELIB}/eric3/Documentation/Source/UI/Browser/BrowserDirectory.html
+${PYSITELIB}/eric3/Documentation/Source/UI/Browser/BrowserFile.html
+${PYSITELIB}/eric3/Documentation/Source/UI/Browser/BrowserMethod.html
+${PYSITELIB}/eric3/Documentation/Source/UI/Browser/BrowserNode.html
+${PYSITELIB}/eric3/Documentation/Source/UI/Browser/BrowserSysPath.html
+${PYSITELIB}/eric3/Documentation/Source/UI/CodeMetrics.html
+${PYSITELIB}/eric3/Documentation/Source/UI/CodeMetrics/Parser.html
+${PYSITELIB}/eric3/Documentation/Source/UI/CodeMetrics/SourceStat.html
+${PYSITELIB}/eric3/Documentation/Source/UI/CodeMetrics/Token.html
+${PYSITELIB}/eric3/Documentation/Source/UI/CodeMetricsDialog.html
+${PYSITELIB}/eric3/Documentation/Source/UI/CodeMetricsDialog/CodeMetricsDialog.html
+${PYSITELIB}/eric3/Documentation/Source/UI/CodeMetricsForm.html
+${PYSITELIB}/eric3/Documentation/Source/UI/CodeMetricsForm/CodeMetricsForm.html
+${PYSITELIB}/eric3/Documentation/Source/UI/FindFileDialog.html
+${PYSITELIB}/eric3/Documentation/Source/UI/FindFileDialog/FindFileDialog.html
+${PYSITELIB}/eric3/Documentation/Source/UI/FindFileForm.html
+${PYSITELIB}/eric3/Documentation/Source/UI/FindFileForm/FindFileForm.html
+${PYSITELIB}/eric3/Documentation/Source/UI/Info.html
+${PYSITELIB}/eric3/Documentation/Source/UI/LogView.html
+${PYSITELIB}/eric3/Documentation/Source/UI/LogView/LogView.html
+${PYSITELIB}/eric3/Documentation/Source/UI/LogView/LogViewViewport.html
+${PYSITELIB}/eric3/Documentation/Source/UI/LogView/LogViewWidget.html
+${PYSITELIB}/eric3/Documentation/Source/UI/LogWidget.html
+${PYSITELIB}/eric3/Documentation/Source/UI/LogWidget/LogWidget.html
+${PYSITELIB}/eric3/Documentation/Source/UI/PyCoverageDialog.html
+${PYSITELIB}/eric3/Documentation/Source/UI/PyCoverageDialog/PyCoverageDialog.html
+${PYSITELIB}/eric3/Documentation/Source/UI/PyCoverageForm.html
+${PYSITELIB}/eric3/Documentation/Source/UI/PyCoverageForm/PyCoverageForm.html
+${PYSITELIB}/eric3/Documentation/Source/UI/PyProfileDialog.html
+${PYSITELIB}/eric3/Documentation/Source/UI/PyProfileDialog/ProfileListViewItem.html
+${PYSITELIB}/eric3/Documentation/Source/UI/PyProfileDialog/PyProfileDialog.html
+${PYSITELIB}/eric3/Documentation/Source/UI/PyProfileForm.html
+${PYSITELIB}/eric3/Documentation/Source/UI/PyProfileForm/PyProfileForm.html
+${PYSITELIB}/eric3/Documentation/Source/UI/SBVviewer.html
+${PYSITELIB}/eric3/Documentation/Source/UI/SBVviewer/SBVviewer.html
+${PYSITELIB}/eric3/Documentation/Source/UI/Shell.html
+${PYSITELIB}/eric3/Documentation/Source/UI/Shell/Shell.html
+${PYSITELIB}/eric3/Documentation/Source/UI/ToolConfigurationDialog.html
+${PYSITELIB}/eric3/Documentation/Source/UI/ToolConfigurationDialog/ToolConfigurationDialog.html
+${PYSITELIB}/eric3/Documentation/Source/UI/ToolConfigurationForm.html
+${PYSITELIB}/eric3/Documentation/Source/UI/ToolConfigurationForm/ToolConfigurationForm.html
+${PYSITELIB}/eric3/Documentation/Source/UI/UserInterface.html
+${PYSITELIB}/eric3/Documentation/Source/UI/UserInterface/Redirector.html
+${PYSITELIB}/eric3/Documentation/Source/UI/UserInterface/UserInterface.html
+${PYSITELIB}/eric3/Documentation/Source/UI/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/UI/index.html
+${PYSITELIB}/eric3/Documentation/Source/Utilities/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Utilities/eric3dbgstub.html
+${PYSITELIB}/eric3/Documentation/Source/Utilities/eric3dbgstub_noqt.html
+${PYSITELIB}/eric3/Documentation/Source/Utilities/eric3dbgstub_threads.html
+${PYSITELIB}/eric3/Documentation/Source/Utilities/index.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/CommandOptionsDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/CommandOptionsDialog/vcsCommandOptionsDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/CommandOptionsForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/CommandOptionsForm/vcsCommandOptionsForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/Config.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/LoginDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/LoginDialog/vcsLoginDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/LoginForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/LoginForm/vcsLoginForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/LogoutDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/LogoutDialog/vcsLogoutDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/LogoutForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/LogoutForm/vcsLogoutForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/NewProjectDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/NewProjectDialog/vcsNewProjectOptionsDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/NewProjectForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/NewProjectForm/vcsNewProjectOptionsForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/OptionsDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/OptionsDialog/vcsOptionsDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/OptionsForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/OptionsForm/vcsOptionsForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/VersionControl.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/VersionControl/VersionControl.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CommandDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CommandDialog/CvsCommandDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CommandForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CommandForm/CommandForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CommitDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CommitDialog/CvsCommitDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CommitForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CommitForm/CommitForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CvsDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CvsDialog/CvsDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CvsForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CvsForm/CvsForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/DiffDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/DiffDialog/CvsDiffDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/HistoryDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/HistoryDialog/CvsHistoryDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/HistoryForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/HistoryForm/HistoryForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/LogDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/LogDialog/CvsLogDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/LogForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/LogForm/LogForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/MergeDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/MergeDialog/CvsMergeDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/MergeForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/MergeForm/MergeForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/StatusDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/StatusDialog/CvsStatusDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/SwitchDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/SwitchDialog/CvsSwitchDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/SwitchForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/SwitchForm/SwitchForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/TagDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/TagDialog/CvsTagDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/TagForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/TagForm/TagForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/cvs.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/cvs/Cvs.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/index.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/index.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/AuthDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/AuthDialog/AuthDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/AuthForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/AuthForm/svnAuthForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CommandDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CommandDialog/SvnCommandDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CommandForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CommandForm/CommandForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CommitDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CommitDialog/SvnCommitDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CommitForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CommitForm/CommitForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CopyDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CopyDialog/SvnCopyDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CopyForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CopyForm/CopyForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/DiffDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/DiffDialog/SvnDiffDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/LogDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/LogDialog/SvnLogDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/LogForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/LogForm/LogForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/MergeDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/MergeDialog/SvnMergeDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/MergeForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/MergeForm/MergeForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/PropListDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/PropListDialog/SvnPropListDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/PropListForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/PropListForm/PropListForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/PropSetDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/PropSetDialog/SvnPropSetDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/PropSetForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/PropSetForm/PropSetForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/StatusDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/StatusDialog/SvnStatusDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/StatusForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/StatusForm/StatusForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/SvnDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/SvnDialog/SvnDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/SvnForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/SvnForm/SvnForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/SwitchDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/SwitchDialog/SvnSwitchDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/SwitchForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/SwitchForm/SwitchForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/TagBranchListDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/TagBranchListDialog/SvnTagBranchListDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/TagBranchListForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/TagBranchListForm/TagBranchListForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/TagDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/TagDialog/SvnTagDialog.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/TagForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/TagForm/TagForm.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/index.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/subversion.html
+${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/subversion/Subversion.html
+${PYSITELIB}/eric3/Documentation/Source/ViewManager/Config.html
+${PYSITELIB}/eric3/Documentation/Source/ViewManager/Listspace.html
+${PYSITELIB}/eric3/Documentation/Source/ViewManager/Listspace/Listspace.html
+${PYSITELIB}/eric3/Documentation/Source/ViewManager/Tabview.html
+${PYSITELIB}/eric3/Documentation/Source/ViewManager/Tabview/Tabview.html
+${PYSITELIB}/eric3/Documentation/Source/ViewManager/ViewManager.html
+${PYSITELIB}/eric3/Documentation/Source/ViewManager/ViewManager/ViewManager.html
+${PYSITELIB}/eric3/Documentation/Source/ViewManager/Workspace.html
+${PYSITELIB}/eric3/Documentation/Source/ViewManager/Workspace/Workspace.html
+${PYSITELIB}/eric3/Documentation/Source/ViewManager/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/ViewManager/index.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/ColorDialogWizard/ColorDialogWizard.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/ColorDialogWizard/ColorDialogWizard/ColorDialogWizard.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/ColorDialogWizard/ColorDialogWizardDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/ColorDialogWizard/ColorDialogWizardDialog/ColorDialogWizardDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/ColorDialogWizard/ColorDialogWizardForm.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/ColorDialogWizard/ColorDialogWizardForm/ColorDialogWizardForm.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/ColorDialogWizard/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/ColorDialogWizard/index.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FileDialogWizard/FileDialogWizard.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FileDialogWizard/FileDialogWizard/FileDialogWizard.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FileDialogWizard/FileDialogWizardDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FileDialogWizard/FileDialogWizardDialog/FileDialogWizardDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FileDialogWizard/FileDialogWizardForm.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FileDialogWizard/FileDialogWizardForm/FileDialogWizardForm.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FileDialogWizard/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FileDialogWizard/index.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FontDialogWizard/FontDialogWizard.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FontDialogWizard/FontDialogWizard/FontDialogWizard.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FontDialogWizard/FontDialogWizardDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FontDialogWizard/FontDialogWizardDialog/FontDialogWizardDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FontDialogWizard/FontDialogWizardForm.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FontDialogWizard/FontDialogWizardForm/FontDialogWizardForm.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FontDialogWizard/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/FontDialogWizard/index.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/InputDialogWizard/InputDialogWizard.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/InputDialogWizard/InputDialogWizard/InputDialogWizard.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/InputDialogWizard/InputDialogWizardDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/InputDialogWizard/InputDialogWizardDialog/InputDialogWizardDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/InputDialogWizard/InputDialogWizardForm.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/InputDialogWizard/InputDialogWizardForm/InputDialogWizardForm.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/InputDialogWizard/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/InputDialogWizard/index.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/MessageBoxWizard/MessageBoxWizard.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/MessageBoxWizard/MessageBoxWizard/MessageBoxWizard.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/MessageBoxWizard/MessageBoxWizardDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/MessageBoxWizard/MessageBoxWizardDialog/MessageBoxWizardDialog.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/MessageBoxWizard/MessageBoxWizardForm.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/MessageBoxWizard/MessageBoxWizardForm/MessageBoxWizardForm.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/MessageBoxWizard/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/MessageBoxWizard/index.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/Wizard.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/Wizard/Wizards.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/WizardIFace.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/WizardIFace/WizardIFace.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/__init__.html
+${PYSITELIB}/eric3/Documentation/Source/Wizards/index.html
+${PYSITELIB}/eric3/Documentation/Source/home/detlev/Development/Python/Eric/eric3/Documentation/Source/eric3.html
+${PYSITELIB}/eric3/Documentation/Source/home/detlev/Development/Python/Eric/eric3/Documentation/Source/helpviewer.html
+${PYSITELIB}/eric3/Documentation/Source/home/detlev/Development/Python/Eric/eric3/Documentation/Source/qtunittest.html
+${PYSITELIB}/eric3/Documentation/Source/index.html
+${PYSITELIB}/eric3/Documentation/mod_python.html
+${PYSITELIB}/eric3/DocumentationTools/HappydocConfigDialog.py
+${PYSITELIB}/eric3/DocumentationTools/HappydocConfigDialog.pyc
+${PYSITELIB}/eric3/DocumentationTools/HappydocConfigForm.py
+${PYSITELIB}/eric3/DocumentationTools/HappydocConfigForm.pyc
+${PYSITELIB}/eric3/DocumentationTools/HappydocExecDialog.py
+${PYSITELIB}/eric3/DocumentationTools/HappydocExecDialog.pyc
+${PYSITELIB}/eric3/DocumentationTools/HappydocExecForm.py
+${PYSITELIB}/eric3/DocumentationTools/HappydocExecForm.pyc
+${PYSITELIB}/eric3/DocumentationTools/__init__.py
+${PYSITELIB}/eric3/DocumentationTools/__init__.pyc
+${PYSITELIB}/eric3/Examples/eric3dbgstub.py
+${PYSITELIB}/eric3/Examples/eric3dbgstub.pyc
+${PYSITELIB}/eric3/Examples/hallo.py
+${PYSITELIB}/eric3/Examples/hallo.pyc
+${PYSITELIB}/eric3/Examples/modpython.py
+${PYSITELIB}/eric3/Examples/modpython.pyc
+${PYSITELIB}/eric3/Examples/modpython_dbg.py
+${PYSITELIB}/eric3/Examples/modpython_dbg.pyc
+${PYSITELIB}/eric3/Examples/rhallo.py
+${PYSITELIB}/eric3/Examples/rhallo.pyc
+${PYSITELIB}/eric3/Helpviewer/BookmarkDialog.py
+${PYSITELIB}/eric3/Helpviewer/BookmarkDialog.pyc
+${PYSITELIB}/eric3/Helpviewer/BookmarkForm.py
+${PYSITELIB}/eric3/Helpviewer/BookmarkForm.pyc
+${PYSITELIB}/eric3/Helpviewer/HelpIcons.py
+${PYSITELIB}/eric3/Helpviewer/HelpIcons.pyc
+${PYSITELIB}/eric3/Helpviewer/HelpWindow.py
+${PYSITELIB}/eric3/Helpviewer/HelpWindow.pyc
+${PYSITELIB}/eric3/Helpviewer/SearchDialog.py
+${PYSITELIB}/eric3/Helpviewer/SearchDialog.pyc
+${PYSITELIB}/eric3/Helpviewer/SearchForm.py
+${PYSITELIB}/eric3/Helpviewer/SearchForm.pyc
+${PYSITELIB}/eric3/Helpviewer/__init__.py
+${PYSITELIB}/eric3/Helpviewer/__init__.pyc
+${PYSITELIB}/eric3/Icons/FileIcons.py
+${PYSITELIB}/eric3/Icons/FileIcons.pyc
+${PYSITELIB}/eric3/Icons/Icons.py
+${PYSITELIB}/eric3/Icons/Icons.pyc
+${PYSITELIB}/eric3/Icons/ToolIcons.py
+${PYSITELIB}/eric3/Icons/ToolIcons.pyc
+${PYSITELIB}/eric3/Icons/__init__.py
+${PYSITELIB}/eric3/Icons/__init__.pyc
+${PYSITELIB}/eric3/LICENSE.GPL
+${PYSITELIB}/eric3/Preferences/PreferencesDialog.py
+${PYSITELIB}/eric3/Preferences/PreferencesDialog.pyc
+${PYSITELIB}/eric3/Preferences/PreferencesForm.py
+${PYSITELIB}/eric3/Preferences/PreferencesForm.pyc
+${PYSITELIB}/eric3/Preferences/PreferencesLexer.py
+${PYSITELIB}/eric3/Preferences/PreferencesLexer.pyc
+${PYSITELIB}/eric3/Preferences/__init__.py
+${PYSITELIB}/eric3/Preferences/__init__.pyc
+${PYSITELIB}/eric3/Project/AddDirectoryDialog.py
+${PYSITELIB}/eric3/Project/AddDirectoryDialog.pyc
+${PYSITELIB}/eric3/Project/AddDirectoryForm.py
+${PYSITELIB}/eric3/Project/AddDirectoryForm.pyc
+${PYSITELIB}/eric3/Project/AddFileDialog.py
+${PYSITELIB}/eric3/Project/AddFileDialog.pyc
+${PYSITELIB}/eric3/Project/AddFileForm.py
+${PYSITELIB}/eric3/Project/AddFileForm.pyc
+${PYSITELIB}/eric3/Project/AddFoundFilesDialog.py
+${PYSITELIB}/eric3/Project/AddFoundFilesDialog.pyc
+${PYSITELIB}/eric3/Project/AddFoundFilesForm.py
+${PYSITELIB}/eric3/Project/AddFoundFilesForm.pyc
+${PYSITELIB}/eric3/Project/AddLanguageDialog.py
+${PYSITELIB}/eric3/Project/AddLanguageDialog.pyc
+${PYSITELIB}/eric3/Project/AddLanguageForm.py
+${PYSITELIB}/eric3/Project/AddLanguageForm.pyc
+${PYSITELIB}/eric3/Project/Project.py
+${PYSITELIB}/eric3/Project/Project.pyc
+${PYSITELIB}/eric3/Project/ProjectBrowser.py
+${PYSITELIB}/eric3/Project/ProjectBrowser.pyc
+${PYSITELIB}/eric3/Project/ProjectIcons.py
+${PYSITELIB}/eric3/Project/ProjectIcons.pyc
+${PYSITELIB}/eric3/Project/PropertiesDialog.py
+${PYSITELIB}/eric3/Project/PropertiesDialog.pyc
+${PYSITELIB}/eric3/Project/PropertiesForm.py
+${PYSITELIB}/eric3/Project/PropertiesForm.pyc
+${PYSITELIB}/eric3/Project/__init__.py
+${PYSITELIB}/eric3/Project/__init__.pyc
+${PYSITELIB}/eric3/PyUnit/UnittestDialog.py
+${PYSITELIB}/eric3/PyUnit/UnittestDialog.pyc
+${PYSITELIB}/eric3/PyUnit/UnittestForm.py
+${PYSITELIB}/eric3/PyUnit/UnittestForm.pyc
+${PYSITELIB}/eric3/PyUnit/__init__.py
+${PYSITELIB}/eric3/PyUnit/__init__.pyc
+${PYSITELIB}/eric3/QScintilla/Editor.py
+${PYSITELIB}/eric3/QScintilla/Editor.pyc
+${PYSITELIB}/eric3/QScintilla/EditorIcons.py
+${PYSITELIB}/eric3/QScintilla/EditorIcons.pyc
+${PYSITELIB}/eric3/QScintilla/GotoDialog.py
+${PYSITELIB}/eric3/QScintilla/GotoDialog.pyc
+${PYSITELIB}/eric3/QScintilla/GotoForm.py
+${PYSITELIB}/eric3/QScintilla/GotoForm.pyc
+${PYSITELIB}/eric3/QScintilla/Lexer.py
+${PYSITELIB}/eric3/QScintilla/Lexer.pyc
+${PYSITELIB}/eric3/QScintilla/LexerCPP.py
+${PYSITELIB}/eric3/QScintilla/LexerCPP.pyc
+${PYSITELIB}/eric3/QScintilla/LexerCSharp.py
+${PYSITELIB}/eric3/QScintilla/LexerCSharp.pyc
+${PYSITELIB}/eric3/QScintilla/LexerHTML.py
+${PYSITELIB}/eric3/QScintilla/LexerHTML.pyc
+${PYSITELIB}/eric3/QScintilla/LexerIDL.py
+${PYSITELIB}/eric3/QScintilla/LexerIDL.pyc
+${PYSITELIB}/eric3/QScintilla/LexerJava.py
+${PYSITELIB}/eric3/QScintilla/LexerJava.pyc
+${PYSITELIB}/eric3/QScintilla/LexerJavaScript.py
+${PYSITELIB}/eric3/QScintilla/LexerJavaScript.pyc
+${PYSITELIB}/eric3/QScintilla/LexerPython.py
+${PYSITELIB}/eric3/QScintilla/LexerPython.pyc
+${PYSITELIB}/eric3/QScintilla/LexerSQL.py
+${PYSITELIB}/eric3/QScintilla/LexerSQL.pyc
+${PYSITELIB}/eric3/QScintilla/Printer.py
+${PYSITELIB}/eric3/QScintilla/Printer.pyc
+${PYSITELIB}/eric3/QScintilla/SearchReplaceDialog.py
+${PYSITELIB}/eric3/QScintilla/SearchReplaceDialog.pyc
+${PYSITELIB}/eric3/QScintilla/SearchReplaceForm.py
+${PYSITELIB}/eric3/QScintilla/SearchReplaceForm.pyc
+${PYSITELIB}/eric3/QScintilla/ZoomDialog.py
+${PYSITELIB}/eric3/QScintilla/ZoomDialog.pyc
+${PYSITELIB}/eric3/QScintilla/ZoomForm.py
+${PYSITELIB}/eric3/QScintilla/ZoomForm.pyc
+${PYSITELIB}/eric3/QScintilla/__init__.py
+${PYSITELIB}/eric3/QScintilla/__init__.pyc
+${PYSITELIB}/eric3/Tools/gen_pyqt_api.py
+${PYSITELIB}/eric3/Tools/gen_pyqt_api.pyc
+${PYSITELIB}/eric3/Tools/gen_python_api.py
+${PYSITELIB}/eric3/Tools/gen_python_api.pyc
+${PYSITELIB}/eric3/UI/Browser.py
+${PYSITELIB}/eric3/UI/Browser.pyc
+${PYSITELIB}/eric3/UI/CodeMetrics.py
+${PYSITELIB}/eric3/UI/CodeMetrics.pyc
+${PYSITELIB}/eric3/UI/CodeMetricsDialog.py
+${PYSITELIB}/eric3/UI/CodeMetricsDialog.pyc
+${PYSITELIB}/eric3/UI/CodeMetricsForm.py
+${PYSITELIB}/eric3/UI/CodeMetricsForm.pyc
+${PYSITELIB}/eric3/UI/FindFileDialog.py
+${PYSITELIB}/eric3/UI/FindFileDialog.pyc
+${PYSITELIB}/eric3/UI/FindFileForm.py
+${PYSITELIB}/eric3/UI/FindFileForm.pyc
+${PYSITELIB}/eric3/UI/Info.py
+${PYSITELIB}/eric3/UI/Info.pyc
+${PYSITELIB}/eric3/UI/LogView.py
+${PYSITELIB}/eric3/UI/LogView.pyc
+${PYSITELIB}/eric3/UI/LogWidget.py
+${PYSITELIB}/eric3/UI/LogWidget.pyc
+${PYSITELIB}/eric3/UI/PyCoverageDialog.py
+${PYSITELIB}/eric3/UI/PyCoverageDialog.pyc
+${PYSITELIB}/eric3/UI/PyCoverageForm.py
+${PYSITELIB}/eric3/UI/PyCoverageForm.pyc
+${PYSITELIB}/eric3/UI/PyProfileDialog.py
+${PYSITELIB}/eric3/UI/PyProfileDialog.pyc
+${PYSITELIB}/eric3/UI/PyProfileForm.py
+${PYSITELIB}/eric3/UI/PyProfileForm.pyc
+${PYSITELIB}/eric3/UI/SBVviewer.py
+${PYSITELIB}/eric3/UI/SBVviewer.pyc
+${PYSITELIB}/eric3/UI/Shell.py
+${PYSITELIB}/eric3/UI/Shell.pyc
+${PYSITELIB}/eric3/UI/ToolConfigurationDialog.py
+${PYSITELIB}/eric3/UI/ToolConfigurationDialog.pyc
+${PYSITELIB}/eric3/UI/ToolConfigurationForm.py
+${PYSITELIB}/eric3/UI/ToolConfigurationForm.pyc
+${PYSITELIB}/eric3/UI/UserInterface.py
+${PYSITELIB}/eric3/UI/UserInterface.pyc
+${PYSITELIB}/eric3/UI/__init__.py
+${PYSITELIB}/eric3/UI/__init__.pyc
+${PYSITELIB}/eric3/Utilities/__init__.py
+${PYSITELIB}/eric3/Utilities/__init__.pyc
+${PYSITELIB}/eric3/Utilities/eric3dbgstub.py
+${PYSITELIB}/eric3/Utilities/eric3dbgstub.pyc
+${PYSITELIB}/eric3/Utilities/eric3dbgstub_noqt.py
+${PYSITELIB}/eric3/Utilities/eric3dbgstub_noqt.pyc
+${PYSITELIB}/eric3/Utilities/eric3dbgstub_threads.py
+${PYSITELIB}/eric3/Utilities/eric3dbgstub_threads.pyc
+${PYSITELIB}/eric3/VCS/CommandOptionsDialog.py
+${PYSITELIB}/eric3/VCS/CommandOptionsDialog.pyc
+${PYSITELIB}/eric3/VCS/CommandOptionsForm.py
+${PYSITELIB}/eric3/VCS/CommandOptionsForm.pyc
+${PYSITELIB}/eric3/VCS/Config.py
+${PYSITELIB}/eric3/VCS/Config.pyc
+${PYSITELIB}/eric3/VCS/LoginDialog.py
+${PYSITELIB}/eric3/VCS/LoginDialog.pyc
+${PYSITELIB}/eric3/VCS/LoginForm.py
+${PYSITELIB}/eric3/VCS/LoginForm.pyc
+${PYSITELIB}/eric3/VCS/LogoutDialog.py
+${PYSITELIB}/eric3/VCS/LogoutDialog.pyc
+${PYSITELIB}/eric3/VCS/LogoutForm.py
+${PYSITELIB}/eric3/VCS/LogoutForm.pyc
+${PYSITELIB}/eric3/VCS/NewProjectDialog.py
+${PYSITELIB}/eric3/VCS/NewProjectDialog.pyc
+${PYSITELIB}/eric3/VCS/NewProjectForm.py
+${PYSITELIB}/eric3/VCS/NewProjectForm.pyc
+${PYSITELIB}/eric3/VCS/OptionsDialog.py
+${PYSITELIB}/eric3/VCS/OptionsDialog.pyc
+${PYSITELIB}/eric3/VCS/OptionsForm.py
+${PYSITELIB}/eric3/VCS/OptionsForm.pyc
+${PYSITELIB}/eric3/VCS/VersionControl.py
+${PYSITELIB}/eric3/VCS/VersionControl.pyc
+${PYSITELIB}/eric3/VCS/__init__.py
+${PYSITELIB}/eric3/VCS/__init__.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/CommandDialog.py
+${PYSITELIB}/eric3/VCS/cvsPackage/CommandDialog.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/CommandForm.py
+${PYSITELIB}/eric3/VCS/cvsPackage/CommandForm.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/CommitDialog.py
+${PYSITELIB}/eric3/VCS/cvsPackage/CommitDialog.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/CommitForm.py
+${PYSITELIB}/eric3/VCS/cvsPackage/CommitForm.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/CvsDialog.py
+${PYSITELIB}/eric3/VCS/cvsPackage/CvsDialog.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/CvsForm.py
+${PYSITELIB}/eric3/VCS/cvsPackage/CvsForm.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/DiffDialog.py
+${PYSITELIB}/eric3/VCS/cvsPackage/DiffDialog.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/HistoryDialog.py
+${PYSITELIB}/eric3/VCS/cvsPackage/HistoryDialog.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/HistoryForm.py
+${PYSITELIB}/eric3/VCS/cvsPackage/HistoryForm.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/LogDialog.py
+${PYSITELIB}/eric3/VCS/cvsPackage/LogDialog.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/LogForm.py
+${PYSITELIB}/eric3/VCS/cvsPackage/LogForm.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/MergeDialog.py
+${PYSITELIB}/eric3/VCS/cvsPackage/MergeDialog.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/MergeForm.py
+${PYSITELIB}/eric3/VCS/cvsPackage/MergeForm.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/StatusDialog.py
+${PYSITELIB}/eric3/VCS/cvsPackage/StatusDialog.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/SwitchDialog.py
+${PYSITELIB}/eric3/VCS/cvsPackage/SwitchDialog.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/SwitchForm.py
+${PYSITELIB}/eric3/VCS/cvsPackage/SwitchForm.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/TagDialog.py
+${PYSITELIB}/eric3/VCS/cvsPackage/TagDialog.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/TagForm.py
+${PYSITELIB}/eric3/VCS/cvsPackage/TagForm.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/__init__.py
+${PYSITELIB}/eric3/VCS/cvsPackage/__init__.pyc
+${PYSITELIB}/eric3/VCS/cvsPackage/cvs.py
+${PYSITELIB}/eric3/VCS/cvsPackage/cvs.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/AuthDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/AuthDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/AuthForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/AuthForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/CommandDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/CommandDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/CommandForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/CommandForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/CommitDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/CommitDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/CommitForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/CommitForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/CopyDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/CopyDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/CopyForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/CopyForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/DiffDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/DiffDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/LogDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/LogDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/LogForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/LogForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/MergeDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/MergeDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/MergeForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/MergeForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/PropListDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/PropListDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/PropListForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/PropListForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/PropSetDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/PropSetDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/PropSetForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/PropSetForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/StatusDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/StatusDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/StatusForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/StatusForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/SvnDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/SvnDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/SvnForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/SvnForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/SwitchDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/SwitchDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/SwitchForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/SwitchForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/TagBranchListDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/TagBranchListDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/TagBranchListForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/TagBranchListForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/TagDialog.py
+${PYSITELIB}/eric3/VCS/subversionPackage/TagDialog.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/TagForm.py
+${PYSITELIB}/eric3/VCS/subversionPackage/TagForm.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/__init__.py
+${PYSITELIB}/eric3/VCS/subversionPackage/__init__.pyc
+${PYSITELIB}/eric3/VCS/subversionPackage/subversion.py
+${PYSITELIB}/eric3/VCS/subversionPackage/subversion.pyc
+${PYSITELIB}/eric3/ViewManager/Config.py
+${PYSITELIB}/eric3/ViewManager/Config.pyc
+${PYSITELIB}/eric3/ViewManager/Listspace.py
+${PYSITELIB}/eric3/ViewManager/Listspace.pyc
+${PYSITELIB}/eric3/ViewManager/Tabview.py
+${PYSITELIB}/eric3/ViewManager/Tabview.pyc
+${PYSITELIB}/eric3/ViewManager/ViewManager.py
+${PYSITELIB}/eric3/ViewManager/ViewManager.pyc
+${PYSITELIB}/eric3/ViewManager/Workspace.py
+${PYSITELIB}/eric3/ViewManager/Workspace.pyc
+${PYSITELIB}/eric3/ViewManager/__init__.py
+${PYSITELIB}/eric3/ViewManager/__init__.pyc
+${PYSITELIB}/eric3/Wizards/01_MessageBoxWizard.e3w
+${PYSITELIB}/eric3/Wizards/02_FileDialogWizard.e3w
+${PYSITELIB}/eric3/Wizards/03_InputDialogWizard.e3w
+${PYSITELIB}/eric3/Wizards/04_Separator.e3w
+${PYSITELIB}/eric3/Wizards/05_ColorDialogWizard.e3w
+${PYSITELIB}/eric3/Wizards/06_FontDialogWizard.e3w
+${PYSITELIB}/eric3/Wizards/ColorDialogWizard/ColorDialogWizard.py
+${PYSITELIB}/eric3/Wizards/ColorDialogWizard/ColorDialogWizard.pyc
+${PYSITELIB}/eric3/Wizards/ColorDialogWizard/ColorDialogWizardDialog.py
+${PYSITELIB}/eric3/Wizards/ColorDialogWizard/ColorDialogWizardDialog.pyc
+${PYSITELIB}/eric3/Wizards/ColorDialogWizard/ColorDialogWizardForm.py
+${PYSITELIB}/eric3/Wizards/ColorDialogWizard/ColorDialogWizardForm.pyc
+${PYSITELIB}/eric3/Wizards/ColorDialogWizard/__init__.py
+${PYSITELIB}/eric3/Wizards/ColorDialogWizard/__init__.pyc
+${PYSITELIB}/eric3/Wizards/FileDialogWizard/FileDialogWizard.py
+${PYSITELIB}/eric3/Wizards/FileDialogWizard/FileDialogWizard.pyc
+${PYSITELIB}/eric3/Wizards/FileDialogWizard/FileDialogWizardDialog.py
+${PYSITELIB}/eric3/Wizards/FileDialogWizard/FileDialogWizardDialog.pyc
+${PYSITELIB}/eric3/Wizards/FileDialogWizard/FileDialogWizardForm.py
+${PYSITELIB}/eric3/Wizards/FileDialogWizard/FileDialogWizardForm.pyc
+${PYSITELIB}/eric3/Wizards/FileDialogWizard/__init__.py
+${PYSITELIB}/eric3/Wizards/FileDialogWizard/__init__.pyc
+${PYSITELIB}/eric3/Wizards/FontDialogWizard/FontDialogWizard.py
+${PYSITELIB}/eric3/Wizards/FontDialogWizard/FontDialogWizard.pyc
+${PYSITELIB}/eric3/Wizards/FontDialogWizard/FontDialogWizardDialog.py
+${PYSITELIB}/eric3/Wizards/FontDialogWizard/FontDialogWizardDialog.pyc
+${PYSITELIB}/eric3/Wizards/FontDialogWizard/FontDialogWizardForm.py
+${PYSITELIB}/eric3/Wizards/FontDialogWizard/FontDialogWizardForm.pyc
+${PYSITELIB}/eric3/Wizards/FontDialogWizard/__init__.py
+${PYSITELIB}/eric3/Wizards/FontDialogWizard/__init__.pyc
+${PYSITELIB}/eric3/Wizards/InputDialogWizard/InputDialogWizard.py
+${PYSITELIB}/eric3/Wizards/InputDialogWizard/InputDialogWizard.pyc
+${PYSITELIB}/eric3/Wizards/InputDialogWizard/InputDialogWizardDialog.py
+${PYSITELIB}/eric3/Wizards/InputDialogWizard/InputDialogWizardDialog.pyc
+${PYSITELIB}/eric3/Wizards/InputDialogWizard/InputDialogWizardForm.py
+${PYSITELIB}/eric3/Wizards/InputDialogWizard/InputDialogWizardForm.pyc
+${PYSITELIB}/eric3/Wizards/InputDialogWizard/__init__.py
+${PYSITELIB}/eric3/Wizards/InputDialogWizard/__init__.pyc
+${PYSITELIB}/eric3/Wizards/MessageBoxWizard/MessageBoxWizard.py
+${PYSITELIB}/eric3/Wizards/MessageBoxWizard/MessageBoxWizard.pyc
+${PYSITELIB}/eric3/Wizards/MessageBoxWizard/MessageBoxWizardDialog.py
+${PYSITELIB}/eric3/Wizards/MessageBoxWizard/MessageBoxWizardDialog.pyc
+${PYSITELIB}/eric3/Wizards/MessageBoxWizard/MessageBoxWizardForm.py
+${PYSITELIB}/eric3/Wizards/MessageBoxWizard/MessageBoxWizardForm.pyc
+${PYSITELIB}/eric3/Wizards/MessageBoxWizard/__init__.py
+${PYSITELIB}/eric3/Wizards/MessageBoxWizard/__init__.pyc
+${PYSITELIB}/eric3/Wizards/Wizard.py
+${PYSITELIB}/eric3/Wizards/Wizard.pyc
+${PYSITELIB}/eric3/Wizards/WizardIFace.py
+${PYSITELIB}/eric3/Wizards/WizardIFace.pyc
+${PYSITELIB}/eric3/Wizards/__init__.py
+${PYSITELIB}/eric3/Wizards/__init__.pyc
+${PYSITELIB}/eric3/eric3.py
+${PYSITELIB}/eric3/eric3.pyc
+${PYSITELIB}/eric3/eric3_de.qm
+${PYSITELIB}/eric3/helpviewer.py
+${PYSITELIB}/eric3/helpviewer.pyc
+${PYSITELIB}/eric3/pixmaps/eric-icon.xpm
+${PYSITELIB}/eric3/pixmaps/eric.png
+${PYSITELIB}/eric3/pixmaps/listspace.png
+${PYSITELIB}/eric3/pixmaps/tabview.png
+${PYSITELIB}/eric3/pixmaps/workspace.png
+${PYSITELIB}/eric3/qtunittest.py
+${PYSITELIB}/eric3/qtunittest.pyc
+${PYSITELIB}/eric3/sitecustomize.py
+${PYSITELIB}/eric3/sitecustomize.pyc
+${PYSITELIB}/sitecustomize.py
+${PYSITELIB}/sitecustomize.pyc
+@dirrm ${PYSITELIB}/eric3/pixmaps
+@dirrm ${PYSITELIB}/eric3/Wizards/MessageBoxWizard
+@dirrm ${PYSITELIB}/eric3/Wizards/InputDialogWizard
+@dirrm ${PYSITELIB}/eric3/Wizards/FontDialogWizard
+@dirrm ${PYSITELIB}/eric3/Wizards/FileDialogWizard
+@dirrm ${PYSITELIB}/eric3/Wizards/ColorDialogWizard
+@dirrm ${PYSITELIB}/eric3/Wizards
+@dirrm ${PYSITELIB}/eric3/ViewManager
+@exec ${MKDIR} %D/${PYSITELIB}/eric3/Various
+@dirrm ${PYSITELIB}/eric3/Various
+@dirrm ${PYSITELIB}/eric3/VCS/subversionPackage
+@dirrm ${PYSITELIB}/eric3/VCS/cvsPackage
+@dirrm ${PYSITELIB}/eric3/VCS
+@dirrm ${PYSITELIB}/eric3/Utilities
+@dirrm ${PYSITELIB}/eric3/UI
+@dirrm ${PYSITELIB}/eric3/Tools
+@dirrm ${PYSITELIB}/eric3/QScintilla
+@dirrm ${PYSITELIB}/eric3/PyUnit
+@dirrm ${PYSITELIB}/eric3/Project
+@dirrm ${PYSITELIB}/eric3/Preferences
+@dirrm ${PYSITELIB}/eric3/Icons
+@dirrm ${PYSITELIB}/eric3/Helpviewer
+@dirrm ${PYSITELIB}/eric3/Examples
+@dirrm ${PYSITELIB}/eric3/DocumentationTools
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/home/detlev/Development/Python/Eric/eric3/Documentation/Source
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/home/detlev/Development/Python/Eric/eric3/Documentation
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/home/detlev/Development/Python/Eric/eric3
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/home/detlev/Development/Python/Eric
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/home/detlev/Development/Python
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/home/detlev/Development
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/home/detlev
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/home
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/WizardIFace
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/Wizard
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/MessageBoxWizard/MessageBoxWizardForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/MessageBoxWizard/MessageBoxWizardDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/MessageBoxWizard/MessageBoxWizard
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/MessageBoxWizard
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/InputDialogWizard/InputDialogWizardForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/InputDialogWizard/InputDialogWizardDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/InputDialogWizard/InputDialogWizard
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/InputDialogWizard
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/FontDialogWizard/FontDialogWizardForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/FontDialogWizard/FontDialogWizardDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/FontDialogWizard/FontDialogWizard
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/FontDialogWizard
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/FileDialogWizard/FileDialogWizardForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/FileDialogWizard/FileDialogWizardDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/FileDialogWizard/FileDialogWizard
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/FileDialogWizard
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/ColorDialogWizard/ColorDialogWizardForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/ColorDialogWizard/ColorDialogWizardDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/ColorDialogWizard/ColorDialogWizard
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards/ColorDialogWizard
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Wizards
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/ViewManager/Workspace
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/ViewManager/ViewManager
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/ViewManager/Tabview
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/ViewManager/Listspace
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/ViewManager
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/subversion
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/TagForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/TagDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/TagBranchListForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/TagBranchListDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/SwitchForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/SwitchDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/SvnForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/SvnDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/StatusForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/StatusDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/PropSetForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/PropSetDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/PropListForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/PropListDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/MergeForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/MergeDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/LogForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/LogDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/DiffDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CopyForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CopyDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CommitForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CommitDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CommandForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/CommandDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/AuthForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage/AuthDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/subversionPackage
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/cvs
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/TagForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/TagDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/SwitchForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/SwitchDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/StatusDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/MergeForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/MergeDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/LogForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/LogDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/HistoryForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/HistoryDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/DiffDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CvsForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CvsDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CommitForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CommitDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CommandForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage/CommandDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/cvsPackage
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/VersionControl
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/OptionsForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/OptionsDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/NewProjectForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/NewProjectDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/LogoutForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/LogoutDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/LoginForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/LoginDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/CommandOptionsForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS/CommandOptionsDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/VCS
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Utilities
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/UserInterface
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/ToolConfigurationForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/ToolConfigurationDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/Shell
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/SBVviewer
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/PyProfileForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/PyProfileDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/PyCoverageForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/PyCoverageDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/LogWidget
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/LogView
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/FindFileForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/FindFileDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/CodeMetricsForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/CodeMetricsDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/CodeMetrics
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI/Browser
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/UI
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/ZoomForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/ZoomDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/SearchReplaceForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/SearchReplaceDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/Printer
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerSQL
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerPython
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerJavaScript
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerJava
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerIDL
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerHTML
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerCSharp
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/LexerCPP
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/Lexer
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/GotoForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/GotoDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla/Editor
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/QScintilla
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/PyUnit/UnittestForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/PyUnit/UnittestDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/PyUnit
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project/PropertiesForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project/PropertiesDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project/ProjectBrowser
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project/Project
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project/AddLanguageForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project/AddLanguageDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project/AddFoundFilesForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project/AddFoundFilesDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project/AddFileForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project/AddFileDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project/AddDirectoryForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project/AddDirectoryDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Project
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Preferences/__init__
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Preferences/PreferencesLexer
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Preferences/PreferencesForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Preferences/PreferencesDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Preferences
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Icons/Icons
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Icons
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Helpviewer/SearchForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Helpviewer/SearchDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Helpviewer/HelpWindow
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Helpviewer/BookmarkForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Helpviewer/BookmarkDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Helpviewer
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/__init__
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/HappydocExecForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/HappydocExecDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/HappydocConfigForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/DocumentationTools/HappydocConfigDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/DocumentationTools
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/VariablesViewer
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/VariablesFilterForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/VariablesFilterDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/VariableDetailForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/VariableDetailDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/StartForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/StartDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/PyProfile
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/PyCoverage
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/ExceptionsFilterForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/ExceptionsFilterDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/ExceptionLogger
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugUI
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugThread
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugServer
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugClientThreads
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugClientNoQt
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/DebugClient
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/BreakpointForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/BreakpointDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger/AsyncIO
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Debugger
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Checks/TabnannyForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Checks/TabnannyDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Checks/Tabnanny
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Checks/SyntaxCheckerForm
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Checks/SyntaxCheckerDialog
+@dirrm ${PYSITELIB}/eric3/Documentation/Source/Checks
+@dirrm ${PYSITELIB}/eric3/Documentation/Source
+@dirrm ${PYSITELIB}/eric3/Documentation
+@dirrm ${PYSITELIB}/eric3/Debugger
+@dirrm ${PYSITELIB}/eric3/Checks
+@dirrm ${PYSITELIB}/eric3
