@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2001/09/09 20:36:22 agc Exp $
+# $NetBSD: Makefile,v 1.12 2002/09/09 19:03:40 wiz Exp $
 #
 
 DISTNAME=		freebsd_lib-2.2.7
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.flame.org/NetBSD/
 
@@ -21,6 +22,8 @@ do-install:
 		${INSTALL_DATA} $$file ${PREFIX}/emul/freebsd/$$file; \
 	done
 	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} - POST-INSTALL
+	@${INSTALL_DATA_DIR} ${PREFIX}/emul/freebsd/var/run
+	@${TOUCH} ${PREFIX}/emul/freebsd/var/run/ld.so.hints
 
 show-shlib-type:
 	@${ECHO} a.out
