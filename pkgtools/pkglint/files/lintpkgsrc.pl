@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.3 1999/06/05 00:32:40 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.4 1999/06/24 23:40:13 abs Exp $
 
 # (Somewhat quickly) Written by David Brownlee <abs@anim.dreamworks.com>.
 # Caveats:
@@ -11,25 +11,29 @@
 #	fastcap (which does strange things anyway).
 
 require 'getopts.pl';
-if (! &Getopts('dhilmor') || $opt_h || ! (defined($opt_o) || defined($opt_d) ||
-					defined($opt_l) || defined($opt_i) ||
-					defined($opt_m) || defined($opt_r) ))
+$^W=1;
+use strict;
+use File::Find;
+use vars qw($opt_d $opt_h $opt_i $opt_l $opt_m $opt_o $opt_p $opt_r);
+my(%pkg2dir,@oldprebuiltpackages);
+
+if (! &Getopts('dhilmopr') || $opt_h ||
+	! ( defined($opt_d) || defined($opt_i) || defined($opt_l) ||
+	    defined($opt_m) || defined($opt_o) || defined($opt_p) ||
+	    defined($opt_r) ))
     { &usage_and_exit; }
 $|=1;
 
-$^W=1;
-use strict;
-use vars ('$opt_o','$opt_d','$opt_h','$opt_i','$opt_l','$opt_m','$opt_r');
 
 # main
     {
-    my($pkgsrcdir,%pkg2dir,$pkglint_flags);
+    my($pkgsrcdir,$pkglint_flags);
 
     $pkglint_flags='-a -b -c -v';
     $pkgsrcdir=&set_pkgsrcdir;  # Parse /etc/mk.conf (if present) for PKGSRCDIR
 
-    if ($opt_r && !$opt_o && !$opt_m)
-	{ $opt_o=$opt_m=1; }
+    if ($opt_r && !$opt_o && !$opt_m && !$opt_p)
+	{ $opt_o=$opt_m=$opt_p=1; }
     if ($opt_o || $opt_m)
 	{
 	my(@baddist);
@@ -43,6 +47,20 @@ use vars ('$opt_o','$opt_d','$opt_h','$opt_i','$opt_l','$opt_m','$opt_r');
 		{ unlink($_); }
 	    }
 	}
+
+    if ($opt_p)
+	{
+	if (!%pkg2dir)
+	    { %pkg2dir=&scan_pkgsrc_makefiles($pkgsrcdir); }
+	find(\&check_prebuilt_packages,"$pkgsrcdir/packages");
+	if ($opt_r)
+	    {
+	    &verbose("Unlinking 'old' prebuiltpackages\n");
+	    foreach (@oldprebuiltpackages)
+		{ unlink($_); }
+	    }
+	}
+
     if ($opt_d)
 	{ %pkg2dir=&scan_pkgsrc_makefiles($pkgsrcdir,1); }
     if ($opt_i)
@@ -53,12 +71,24 @@ use vars ('$opt_o','$opt_d','$opt_h','$opt_i','$opt_l','$opt_m','$opt_r');
 	if (!%pkg2dir)
 	    { %pkg2dir=&scan_pkgsrc_makefiles($pkgsrcdir); }
 	foreach $pkg ( @pkgs )
-	    { &list_possible_versions($pkg,%pkg2dir); }
+	    { &list_possible_versions($pkg); }
 	}
     if ($opt_l)
 	{ &pkglint_all_pkgsrc($pkgsrcdir,$pkglint_flags); }
     }
 exit;
+
+sub check_prebuilt_packages
+    {
+    if (/(.*)\.tgz$/)
+	{
+	if (!defined($pkg2dir{$1}))
+	    {
+	    print "$File::Find::dir/$_\n";
+	    push(@oldprebuiltpackages,"$File::Find::dir/$_");
+	    }
+	}
+    }
 
 sub fail
     { print STDERR @_,"\n"; exit(3); }
@@ -67,7 +97,7 @@ sub fail
 #
 sub list_possible_versions
     {
-    my($pkg,%pkg2dir)=@_;
+    my($pkg)=@_;
     my($pkgname,@maybe,$fail);
 
     if (!defined($pkg2dir{$pkg}))
@@ -409,7 +439,8 @@ opts:	-d : Check each Makefile's 'DEPENDS' matches current pkgsrc versions.
 	-l : Run pkglint on every package in pkgsrc.
 	-m : Report md5 mismatches for files in 'distfiles'.
 	-o : Report old/obsolete 'distfiles' (not referenced by any md5).
-	-r : Remove any 'bad' distfiles (Without -m or -o, implies both).
+	-p : Report old/obsolete prebuilt packages (in PKGSRCDIR/packages/...)
+	-r : Remove any 'bad' distfiles (Without -m, -o, or -p, implies all).
 
 If pkgsrc is not in /usr/pkgsrc, set PKGSRCDIR in /etc/mk.conf
 ";
