@@ -1,12 +1,11 @@
-$NetBSD: patch-aa,v 1.6 1999/01/01 07:58:29 garbled Exp $
---- src/polluted.c.orig	Thu Dec 31 23:09:13 1998
-+++ src/polluted.c	Fri Jan  1 00:47:48 1999
-@@ -197,7 +197,7 @@
-     if (find_key_by_name(keyname, key)!=0)
-       return -1;
-     addata->length= strlen(adstr);
+--- sdr/src/polluted.c.orig	Tue Jun 22 16:54:15 1999
++++ sdr/src/polluted.c	Sat Oct  2 20:39:08 1999
+@@ -514,7 +514,7 @@
+     if (find_key_by_name(argv[6], key)!=-1) {
+       strncpy(encstatus, "success", ENCSTATUSLEN);
+       strncpy(encmessage,"Des has been successful", ENCMESSAGELEN);
 -#ifdef NEVER
 +#ifndef NEVER
-     encrypt_announcement(adstr, &encdata, &(addata->length), key);
+       strncpy(argv[8], "des", strlen(argv[8]));
  #else
-     encrypt_announcement(adstr, &encdata, (int *)addata->length, key);
+       strcpy(argv[8], "des");
