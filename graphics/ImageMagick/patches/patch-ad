@@ -1,0 +1,19 @@
+--- magick/magick.h.orig	Wed Feb  4 19:18:20 1998
++++ magick/magick.h	Thu Feb  5 23:02:25 1998
+@@ -14,6 +14,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <paths.h>
+ #if defined(_VISUALC_)
+ #include <direct.h>
+ #else
+@@ -119,7 +120,7 @@
+ #define PICTCommand  "|picttoppm %s"
+ #define PostscriptMonoDevice  "pbmraw"
+ #define ReadBinaryType  "rb"
+-#define TemporaryDirectory  "/usr/tmp"
++#define TemporaryDirectory  _PATH_VARTMP
+ #define UncompressCommand  "|uncompress -c %s"
+ #define UndoCache  "16"
+ #define WriteBinaryType  "wb"
