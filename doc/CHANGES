@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9239 2005/02/20 21:52:13 cube Exp $
+$NetBSD: CHANGES,v 1.9240 2005/02/21 00:06:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -988,3 +988,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added scid-3.6.1 [minskim 2005-02-20]
 	Updated amarok to 1.2 [wiz 2005-02-20]
 	Updated netbsd-tap to 20050220 [cube 2005-02-20]
+	Updated squid to 2.5.8nb2 [taca 2005-02-20]
