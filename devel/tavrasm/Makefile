@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2003/07/21 16:43:47 martti Exp $
+# $NetBSD: Makefile,v 1.8 2003/09/11 18:08:44 jmmv Exp $
 #
 
 DISTNAME=	tavrasm
-PKGNAME=	${DISTNAME}-1.17
+PKGNAME=	${DISTNAME}-1.19
 CATEGORIES=	devel
 MASTER_SITES=	http://www.tavrasm.org/
 
@@ -12,7 +12,7 @@ COMMENT=	Assembler for the Atmel AVR series of microcontrollers
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
-WRKSRCTOP=	${WRKDIR}/tavrasm.117
+WRKSRCTOP=	${WRKDIR}/${PKGNAME_NOREV:S/.//:S/-/./}
 WRKSRC=		${WRKSRCTOP}/src
 MAKEFILE=	makefile
 
