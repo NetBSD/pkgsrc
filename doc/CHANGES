@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9535 2005/03/21 22:57:56 xtraeme Exp $
+$NetBSD: CHANGES,v 1.9536 2005/03/21 23:33:30 recht Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1439,3 +1439,5 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated monotone to 0.17 [jmmv 2005-03-21]
 	Updated monotone-server to 0.17 [jmmv 2005-03-21]
 	Updated libarchive to 1.02.016 [xtraeme 2005-03-21]
+	Updated libxml2 to 2.6.18 [recht 2005-03-21]
+	Updated libxslt to 1.1.13 [recht 2005-03-21]
