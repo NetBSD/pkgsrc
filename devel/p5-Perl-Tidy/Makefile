@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2004/12/20 11:31:02 grant Exp $
+# $NetBSD: Makefile,v 1.3 2005/02/04 14:35:19 wiz Exp $
 #
 
-DISTNAME=	Perl-Tidy-20021130
+DISTNAME=	Perl-Tidy-20031021
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5pt
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=perltidy/}
 
