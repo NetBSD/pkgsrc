@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2003/01/10 14:26:38 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2003/05/24 07:51:34 uebayasi Exp $
 
 DISTNAME=		zenicb-19981202
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -11,8 +12,7 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 .include "../../mk/emacs.mk"
 
-# Works fine on XEmacs 21.1. XEmacs 21.5 is probably okay too.
-EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20 xemacs211 xemacs215
+EMACS_VERSIONS_ACCEPTED=	emacs21 emacs20 xemacs214 xemacs215
 
 .if defined(USE_XEMACS)
 MAKEFLAGS+=		USE_XEMACS=${USE_XEMACS}
