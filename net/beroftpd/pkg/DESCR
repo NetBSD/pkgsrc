@@ -6,7 +6,3 @@ when an anonymous user uploads a file, better support for on-the-fly
 in ftpaccess, an internal ls command (optional, currently experimental),
 the ability to run as standalone daemon, and support for Kerberos5 and
 AFS authentication.
-
-No homepage.
-
-Bill Fumerola <billf@chc-chimes.com>

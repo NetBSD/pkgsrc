@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 1999/03/07 16:51:44 rh Exp $
+
+--- Makefile.in.orig	Sun Feb  7 15:01:07 1999
++++ Makefile.in	Sun Mar  7 16:53:16 1999
+@@ -58,5 +58,8 @@
+ 	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftpservers.5 $(mandir)/man5/ftpservers.5
+ 	@INSTALL_DATA@ -o bin -g bin -m 644 doc/xferlog.5 $(mandir)/man5/xferlog.5
+ 	@INSTALL_DATA@ -o bin -g bin -m 644 doc/ftprestart.8 $(mandir)/man8/ftprestart.8
+-	@if test ! -f @CONFDIR@/ftpaccess; then echo "Since you didn't have a ftpaccess file, the sample has been"; echo "installed to @CONFDIR@/ftpaccess."; echo "You will probably want to edit it."; @INSTALL@ -c -o bin -g bin -m 644 doc/examples/ftpaccess @CONFDIR@/ftpaccess; fi
+-	@if test ! -f @CONFDIR@/ftpconversions; then echo "Since you didn't have a ftpconversions file, the sample has been"; echo "installed to @CONFDIR@/ftpconversions."; echo "You will probably want to edit it."; @INSTALL@ -c -o bin -g bin -m 644 doc/examples/ftpconversions @CONFDIR@/ftpconversions; fi
++	@INSTALL_DATA@ -o bin -g bin -m 644 doc/examples/ftpaccess @CONFDIR@/ftpaccess.example
++	@INSTALL_DATA@ -o bin -g bin -m 644 doc/examples/ftpconversions @CONFDIR@/ftpconversions.example
++	@INSTALL_DATA@ -o bin -g bin -m 644 doc/examples/ftpusers @CONFDIR@/ftpusers.example
++	@INSTALL_DATA@ -o bin -g bin -m 644 doc/examples/ftpgroups @CONFDIR@/ftpgroups.example
++	@INSTALL_DATA@ -o bin -g bin -m 644 doc/examples/ftphosts @CONFDIR@/ftphosts.example
