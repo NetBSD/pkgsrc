@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2003/09/13 11:54:23 jdolecek Exp $
+$NetBSD: distinfo,v 1.9 2004/12/07 21:14:38 jdolecek Exp $
 
-SHA1 (vmware-netbsd-3.2.1.5.tar.bz2) = bf756163e4ffd8f5d6eb5a622a41eb1742b574fa
-Size (vmware-netbsd-3.2.1.5.tar.bz2) = 81677 bytes
+SHA1 (vmware-netbsd-3.2.1.6.tar.bz2) = 2808f3e06510a7860ab77d6c93ce3fa355d39068
+Size (vmware-netbsd-3.2.1.6.tar.bz2) = 81651 bytes
 SHA1 (patch-ab) = 412a3fa0a49aebe5f52cb46015fb9b981625f4ac
