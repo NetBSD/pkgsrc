@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/12/29 22:13:56 schmonz Exp $
+$NetBSD: patch-aa,v 1.5 2005/02/08 05:29:07 schmonz Exp $
 
---- idx.h.orig	2004-12-01 23:30:11.000000000 -0500
+--- idx.h.orig	2005-02-03 18:04:22.000000000 -0500
 +++ idx.h
-@@ -241,7 +241,7 @@
+@@ -250,7 +250,7 @@
  /* ezmlm-make looks first (unless the -c switch is specified) before  */
  /* falling back to the (usually unchanged) version in the ezmlm bin   */
  /* directory. */
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2004/12/29 22:13:56 schmonz Exp $
  
  /* same name added to auto_bin. Note leading slash! */
  #define TXT_EZMLMRC "/ezmlmrc"
-@@ -256,7 +256,7 @@
+@@ -265,7 +265,7 @@
  #define TXT_LOOPNUM "loopnum"
  
  /* ezmlm-cgi config file for normal SUID root install */
