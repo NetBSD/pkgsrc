@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 1999/08/13 21:24:11 abs Exp $
+# $NetBSD: Makefile,v 1.18 1999/08/18 08:56:13 agc Exp $
 #
 # Every effort has been made to keep the communicator and navigator
 # Makefiles as similar as possible.
@@ -7,6 +7,9 @@ BINNAME=	navigator
 NS_VERS=	4.61
 NS_VERS_SHORT=	461
 NS_ENCRYPTION?=	export
+
+BUILD_DEFS+=	NS_ENCRYPTION
+
 #
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
