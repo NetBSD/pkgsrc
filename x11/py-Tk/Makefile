@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.26 2004/03/08 20:27:17 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2004/03/10 19:29:31 minskim Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-Tk-0
+PKGREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.python.org/topics/tkinter/
 COMMENT=	Tkinter -- Python interface to Tcl/Tk
 
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 USE_X11=	yes
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_tkinter.c \
@@ -32,7 +33,7 @@ do-patch:
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/srcdist.mk"
-.include "../../lang/tcl83/buildlink2.mk"
-.include "../../x11/tk83/buildlink2.mk"
+.include "../../lang/tcl/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
