@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 1999/01/30 14:19:00 tron Exp $
+$NetBSD: patch-ab,v 1.2 1999/06/27 10:51:49 tron Exp $
 
 --- wmutil.c.orig	Sat Jan 16 05:50:25 1999
-+++ wmutil.c	Sat Jan 30 14:37:40 1999
-@@ -319,15 +319,12 @@
++++ wmutil.c	Sun Jun 27 12:37:41 1999
+@@ -319,15 +320,12 @@
      if (path = check_file(prefix, folders, resource))
        return path;
  

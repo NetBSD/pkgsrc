@@ -1,49 +1,20 @@
-$NetBSD: patch-aa,v 1.2 1999/01/23 14:31:50 tron Exp $
+$NetBSD: patch-aa,v 1.3 1999/06/27 10:51:49 tron Exp $
 
---- WMMail.defaults.orig	Sat Jan 16 05:41:46 1999
-+++ WMMail.defaults	Sat Jan 23 15:30:07 1999
-@@ -6,24 +6,24 @@
-   DisplayFont = "-*-helvetica-medium-r-*-*-10-*-*-*-*-*-*-*";
-   DisplayLocation = (0, 10);
-   ExecuteOnClick = "xterm -geom 80x25 -name pine -T PINE -e pine -i";
--  ExecuteOnNew = "play /usr/local/GNUstep/Apps/WMMail.app/Sounds/doorbell.au";
-+  ExecuteOnNew = "play @@X11BASE@@/GNUstep/Apps/WMMail.app/Sounds/doorbell.au";
-   ExecuteOnNewOnce = No;
-   Animations = {
-     Empty = {
-       Delay = 10;
--      Frames = ("/usr/local/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm");
-+      Frames = ("@@X11BASE@@/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm");
-     };
-     Old = {
-       Delay = 10;
--      Frames = ("/usr/local/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm");
-+      Frames = ("@@X11BASE@@/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm");
-     };
-     New = {
-       Delay = 2;
-       Frames = (
--        "/usr/local/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm",
--        "/usr/local/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail2.xpm",
--        "/usr/local/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail3.xpm",
--        "/usr/local/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail2.xpm"
-+        "@@X11BASE@@/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm",
-+        "@@X11BASE@@/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail2.xpm",
-+        "@@X11BASE@@/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail3.xpm",
-+        "@@X11BASE@@/GNUstep/Apps/WMMail.app/Anims/NeXT/Mail2.xpm"
-       );
-     };
-   };
-@@ -32,10 +32,10 @@
-       Name = "Home";
-       Type = mbox;
-       UpdateInterval = 15;
--      ExecuteOnUpdate = "/usr/local/bin/fetchmail";
-+      ExecuteOnUpdate = "@@LOCALBASE@@/bin/fetchmail";
-       Options = {
-         CheckTimeStampOnly = No;
--        Path = "/var/spool/mail/bryan";
-+        Path = "/var/mail/bryan";
-       };
-     },
-     {
+--- Makefile.in.orig	Wed Mar 31 05:34:59 1999
++++ Makefile.in	Sun Jun 27 12:42:49 1999
+@@ -90,13 +90,13 @@
+ DEFS = @DEFS@ -I. -I$(srcdir) 
+ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lSM -lICE
+ WMMail_OBJECTS =  global.o imap.o list.o maildir.o mbox.o mh.o net.o \
+ pop3.o properties.o std_icons.o wmmail.o wmutil.o
+ WMMail_LDADD = $(LDADD)
+ WMMail_DEPENDENCIES = 
+ WMMail_LDFLAGS = 
+-CFLAGS = @CFLAGS@
++CFLAGS = @CFLAGS@ -DPREFIX=\"@prefix@\"
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+ LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
