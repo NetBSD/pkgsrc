@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2000/07/06 21:09:41 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.4 2000/07/11 10:15:41 agc Exp $
 #
 
 DISTNAME=	xbatt-1.3pr1
@@ -19,7 +19,7 @@ USE_IMAKE=	yes
 ALL_TARGET=	xbatt
 
 post-install:
-		${INSTALL_DATA} ${FILESDIR}/XBatt ${X11BASE}/lib/X11/app-defaults/XBatt
+		${INSTALL_DATA} ${FILESDIR}/XBatt ${X11PREFIX}/lib/X11/app-defaults/XBatt
 		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/xbatt
 		${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/xbatt
 		${INSTALL_MAN} ${WRKSRC}/README.jp ${PREFIX}/share/doc/xbatt
