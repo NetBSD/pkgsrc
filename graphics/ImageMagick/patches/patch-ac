@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2000/08/10 08:59:04 tron Exp $
+$NetBSD: patch-ac,v 1.7 2001/09/17 15:17:32 tron Exp $
 
---- magick/xwindows.c.orig	Wed Aug  2 00:09:23 2000
-+++ magick/xwindows.c	Thu Aug 10 10:19:48 2000
-@@ -2460,6 +2460,7 @@
+--- magick/xwindow.c.orig	Sun Sep  9 04:04:32 2001
++++ magick/xwindow.c	Mon Sep 17 16:40:54 2001
+@@ -2424,6 +2424,7 @@
    annotate_info->previous=(XAnnotateInfo *) NULL;
    annotate_info->next=(XAnnotateInfo *) NULL;
    (void) setlocale(LC_ALL,"");

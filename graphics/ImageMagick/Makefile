@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.75 2001/08/29 22:41:14 jlam Exp $
+# $NetBSD: Makefile,v 1.76 2001/09/17 15:17:32 tron Exp $
 
-DISTNAME=		ImageMagick-5.2.8
+DISTNAME=		ImageMagick-5.3.9
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tar.bz2
