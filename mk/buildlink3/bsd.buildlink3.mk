@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.11 2003/09/13 07:43:11 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.12 2003/09/14 01:00:18 jlam Exp $
 #
 # An example package buildlink3.mk file:
 #
@@ -20,7 +20,7 @@
 #
 # .include "../../category/baz/buildlink3.mk"
 #
-# BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/\+$//}	# pop
+# BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:C/\+$//}	# pop
 # .endif # FOO_BUILDLINK3_MK
 # -------------8<-------------8<-------------8<-------------8<-------------
 #
