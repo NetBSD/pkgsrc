@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:23:41 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/09/10 20:44:18 jmmv Exp $
 
 DISTNAME=	wavesurfer-1.4.6
 CATEGORIES=	audio
@@ -10,7 +10,6 @@ COMMENT=	Tool for sound visualization and manipulation
 
 USE_BUILDLINK2=		YES
 NO_BUILD=		YES
-DIST_SUBDIR=		${PKGNAME}
 
 do-install:
 	${CP} ${WRKSRC}/wavesurfer.tcl ${PREFIX}/bin/wavesurfer
