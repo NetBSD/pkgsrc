@@ -1,0 +1,15 @@
+--- sample.fvwmrc/Imakefile.dist	Thu Apr 25 23:23:35 1996
++++ sample.fvwmrc/Imakefile	Thu Jan 30 15:47:29 1997
+@@ -8,5 +8,12 @@
+ NullMake()
+ 
+ #if InstallSample
++/* FreeBSD ports -- maybe a bug(typo?). reported. */
+ InstallNonExecFile(system$(FVWMRC),$(FVWMDIR))
++/* FreeBSD ports */
++/* FreeBSD ports -- More informations are welcomed :-) */
++InstallNonExecFile(decor_examples,$(FVWMDIR))
++InstallNonExecFile(system.fvwm2rc-sample-1,$(FVWMDIR))
++InstallNonExecFile(system.fvwm2rc-sample-2,$(FVWMDIR))
++/* FreeBSD ports */
+ #endif
