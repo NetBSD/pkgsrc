@@ -1,12 +1,12 @@
 #! /bin/sh
 #
-# $NetBSD: getpapersize,v 1.3 2000/07/11 10:06:41 agc Exp $
+# $NetBSD: getpapersize,v 1.4 2002/07/05 23:24:20 wiz Exp $
 #
 # Small shell script to show the default papersize for packages
 #
 
 if [ $# -eq 0 ]; then
-	pkgs="a2ps ddd enscript magicfilter psutils";
+	pkgs="a2ps ddd enscript ghostscript magicfilter psutils";
 else 
 	pkgs=$@
 fi
@@ -33,6 +33,18 @@ while [ $# -gt 0 ]; do
 		if [ -e $f ]; then
 			echo -n "$1 has default papersize: "
 			awk '/^DefaultMedia:.*/ { gsub(".*:", "", $0); print $0; }' $f
+		fi
+		;;
+	ghostscript)
+		f=`ls @localbase@/share/ghostscript/*/lib/gs_init.ps 2>/dev/null | tail -1`
+		if [ -e $f ]; then
+			echo -n "$1 has default papersize: "
+			gssize=`sed -n -e '/^% Optionally choose a default paper size other than U.S. letter.$/N' -e 's/^% Optionally.*\n[[:space:]]*(\(.*\)) \/PAPERSIZE where.*$/\1/p' $f`
+			if [ -z "$gssize" ] ; then
+				echo "(unknown)"
+			else
+				echo $gssize
+			fi
 		fi
 		;;
 	magicfilter)
