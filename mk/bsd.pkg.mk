@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1083 2002/11/11 21:46:51 dmcmahill Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1084 2002/11/12 13:42:50 dmcmahill Exp $
 #
 # This file is in the public domain.
 #
@@ -3374,6 +3374,7 @@ bin-install:
 PACKAGE_NAME_TYPE?=	name
 
 # Nobody should want to override this unless PKGNAME is simply bogus.
+HTML_PKGNAME=<a href="../../${PKGPATH:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}/README.html">${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</A>
 
 .if !target(package-name)
 package-name:
