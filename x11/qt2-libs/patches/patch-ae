@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.4 2000/12/11 23:02:37 skrll Exp $
+$NetBSD: patch-ae,v 1.5 2000/12/26 13:00:15 skrll Exp $
 
---- src/Makefile.in.orig	Wed Nov  8 17:06:56 2000
+--- src/Makefile.in.orig	Tue Dec 12 11:16:33 2000
 +++ src/Makefile.in
 @@ -2,7 +2,7 @@
  
@@ -19,8 +19,8 @@ $NetBSD: patch-ae,v 1.4 2000/12/11 23:02:37 skrll Exp $
 +DESTDIR = 
  VER_MAJ = 2
  VER_MIN = 2
- VER_PATCH = 2
-@@ -370,19 +370,7 @@
+ VER_PATCH = 3
+@@ -369,19 +369,7 @@
  .SUFFIXES: .cpp .cxx .cc .C .c
  
  .cpp.o:
