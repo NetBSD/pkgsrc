@@ -1,8 +1,12 @@
-# $NetBSD: options.mk,v 1.5 2004/12/22 03:59:10 jlam Exp $
+# $NetBSD: options.mk,v 1.6 2004/12/22 04:36:33 jlam Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
-PKG_SUPPORTED_OPTIONS=	PAM kerberos ldap
+PKG_SUPPORTED_OPTIONS=	PAM kerberos ldap skey
+.if ${OPSYS} == "NetBSD"
+PKG_DEFAULT_OPTIONS+=	skey
+.endif
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:MPAM)
@@ -24,4 +28,10 @@ CONFIGURE_ARGS+=	--without-kerb5
 DL_AUTO_VARS=		yes
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap}
 CONFIGURE_ARGS+=	--with-ldap-conf-file=${PKG_SYSCONFDIR}/ldap.conf
+.endif
+
+.if !empty(PKG_OPTIONS:Mskey)
+CONFIGURE_ARGS+=	--with-skey
+.else
+CONFIGURE_ARGS+=	--without-skey
 .endif
