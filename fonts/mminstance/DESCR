@@ -1,0 +1,4 @@
+Utilities for making instances of Multiple master fonts.  The first,
+mmpfb, creates a normal type 1 font from a given Multiple master
+font.  The other, mmafm, creates a standard AFM file from the given
+AMFM and AFM files supplied with the Multiple master font.
