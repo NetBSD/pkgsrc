@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2002/09/01 04:26:11 hubertf Exp $
+# $NetBSD: Makefile,v 1.86 2002/10/20 14:30:03 wiz Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 
 DISTNAME=	kdebase-1.1.2
@@ -12,26 +12,18 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=       http://www.kde.org/
 COMMENT=	Base modules for the KDE integrated X11 desktop
 
-BUILD_USES_MSGFMT=	yes
-DEPENDS+=	kdelibs-1.1.2nb1:../../x11/kdelibs
-# kdebase doesn't manipulate GIFs, but KDE packages depending on kdebase
-# often do, so put the dependency here.
-#
-DEPENDS+=	libungif-[0-9]*:../../graphics/libungif
+BUILD_USES_MSGFMT=	YES
 
+USE_BUILDLINK2=		YES
 USE_X11BASE=		YES
-USE_MESA=		YES
 USE_RMAN=		YES
-USE_XPM=		YES
 USE_GMAKE=		YES
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/admin/ltconfig
 GNU_CONFIGURE=		YES
 
-EVAL_PREFIX+=	QT1DIR=qt1
 CONFIGURE_ARGS=	"--datadir=${PREFIX}/share/kde" \
-		"--with-qt-dir=${QT1DIR}/qt1"
-CFLAGS+=	-I${LOCALBASE}/include
+		"--with-qt-dir=${QTDIR}/qt1"
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 		CXXFLAGS="${CFLAGS} -DRMAN='\"${RMAN}\"'" \
 		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
@@ -49,20 +41,13 @@ KDE_DIRS=	share/doc/kde/HTML/cs share/doc/kde/HTML/da \
 		share/doc/kde/HTML/pl share/doc/kde/HTML/pt \
 		share/doc/kde/HTML/sv
 
+CONFIGURE_ENV+= GL_INCLUDE="${BUILDLINK_PREFIX.Mesa}/include"
+
 .include "../../mk/bsd.prefs.mk"
-
-.if ${HAVE_BUILTIN_MESA} == "NO"
-EVAL_PREFIX+=	MESABASE=Mesa
-.else
-MESABASE=	${X11BASE}
-.endif
-
-CONFIGURE_ENV+= GL_INCLUDE="${MESABASE}/include"
 
 .if ${OPSYS} == "SunOS"
 PLIST_INIT=	${PKGDIR}/PLIST-${OPSYS}
 .else
-DEPENDS+=	ncurses>=4.2:../../devel/ncurses
 PLIST_INIT=	${PKGDIR}/PLIST
 .endif
 
@@ -105,4 +90,11 @@ post-install:
 	# Make template links writeable, to prevent "Permission denied"
 	${CHMOD} u+w ${PREFIX}/share/kde/apps/kfm/Desktop/Templates/*.kdelnk
 
+.include "../../devel/ncurses/buildlink2.mk"
+# kdebase doesn't manipulate GIFs, but KDE packages depending on kdebase
+# often do, so put the dependency here.
+.include "../../graphics/libungif/buildlink2.mk"
+.include "../../graphics/Mesa/buildlink2.mk"
+.include "../../graphics/xpm/buildlink2.mk"
+.include "../../x11/kdelibs/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
