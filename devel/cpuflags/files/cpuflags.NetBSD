@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.42 2003/10/02 16:10:00 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.43 2003/10/19 00:24:28 rh Exp $
 
 if [ -x /sbin/sysctl ] ;then
     SYSCTL=/sbin/sysctl
@@ -66,10 +66,10 @@ case $hw_machine_arch in
 	*AMD\ K6-2*)		FLAGS='-march=k6-2'		;;
 	*AMD\ K6*)		FLAGS='-march=k6'		;;
 	*AMD\ Duron*)		FLAGS='-march=athlon'		;;
-	*AMD\ K7*|*AMD\ Athlon*^[4XM]*) FLAGS='-march=athlon'	;;
 	*AMD\ Athlon\ 4*)	FLAGS='-march=athlon-4'		;;
 	*AMD\ Athlon\ MP*)	FLAGS='-march=athlon-mp'	;;
 	*AMD\ Athlon\ XP*)	FLAGS='-march=athlon-xp'	;;
+	*AMD\ K7*|*AMD\ Athlon*) FLAGS='-march=athlon'		;;
 	*386-class*)		FLAGS='-march=i386'		;;
 	*486-class*)		FLAGS='-march=i486'		;;
 	*586-class*)		FLAGS='-march=pentium'		;;
