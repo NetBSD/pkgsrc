@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.5 2002/07/01 02:23:17 kristerw Exp $
+--- ../thotlib/include/ustring.h.orig	Mon Jul  1 02:49:43 2002
++++ ../thotlib/include/ustring.h	Mon Jul  1 02:55:09 2002
+@@ -5,7 +5,11 @@
+ #ifdef _WINDOWS
+ #include <windows.h>
+ #endif /* _WINDOWS */
++
++#include "config.h"
++#ifdef HAVE_WCHAR_H
+ #include <wchar.h>
++#endif /* HAVE_WCHAR_H */
+ 
+ #ifdef _WINDOWS
+ #define strncasecmp _strnicmp

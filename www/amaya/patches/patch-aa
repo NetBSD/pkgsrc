@@ -1,7 +1,15 @@
-$NetBSD: patch-aa,v 1.7 2001/08/09 19:03:19 jlam Exp $
-
---- ../configure.orig	Tue Jul  3 07:23:50 2001
-+++ ../configure
+$NetBSD: patch-aa,v 1.8 2002/07/01 02:23:17 kristerw Exp $
+--- ../configure.orig	Tue Jul  3 13:23:50 2001
++++ ../configure	Mon Jul  1 02:48:37 2002
+@@ -3049,7 +3049,7 @@
+ fi
+ 
+ 
+-for ac_hdr in stdio.h
++for ac_hdr in stdio.h wchar.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
+ echo $ac_n "checking for $ac_hdr""... $ac_c" 1>&6
 @@ -6425,12 +6425,6 @@
  
  
