@@ -1,0 +1,6 @@
+    skkserv is a dictionary server for SKK (Simple Kana to
+Kanji conversion) programs, including skk.el (Emacs Lisp),
+skkfep (tty-based frontend), and skkinput (X11 frontend).
+
+    This package also contains manipulation tools of
+SKK-format dictionaries.
