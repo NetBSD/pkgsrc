@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.35 2004/11/30 23:32:29 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q3,v 1.1.2.36 2004/12/01 00:28:03 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q3 branch:
@@ -55,6 +55,8 @@ Pullup ticket 139 - requested by Thomas Klausner
 security fixes for mozilla and firefox
 Pullup ticket 140 - requested by Quentin Garnier
 security fix for sudo
+Pullup ticket 141 - requested by David Brownlee
+security fix for apache
 Pullup ticket 142 - requested by Takahiro Kambe
 security fix for ruby-base
 Pullup ticket 143 - requested by Takahiro Kambe
