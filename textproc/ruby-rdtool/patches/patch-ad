@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2004/11/27 15:28:30 taca Exp $
+
+--- rd2.orig	2003-03-08 21:45:07.000000000 +0900
++++ rd2
+@@ -240,7 +240,7 @@ out = $Visitor.visit(tree)
+ out = Kconv.kconv(out, Kconv::NAME2CONST[out_code], Kconv::AUTO) if out_code
+ 
+ if output_file
+-  filename = output_file + "." + $Visitor.type::OUTPUT_SUFFIX
++  filename = output_file + "." + $Visitor.class::OUTPUT_SUFFIX
+   file = open(filename, "w")
+   file.print(out)
+   file.close
