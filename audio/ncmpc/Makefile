@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/14 10:33:33 grant Exp $
+# $NetBSD: Makefile,v 1.3 2004/07/14 10:47:57 grant Exp $
 
 DISTNAME=		ncmpc-0.11.0
 CATEGORIES=		audio
@@ -15,7 +15,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
 INCOMPAT_CURSES=	NetBSD-1.4*-* NetBSD-1.5*-*
-INCOMPAT_CURSES+=	NetBSD-1.6.*-* NetBSD-1.6_*-* NetBSD-2*-*
+INCOMPAT_CURSES+=	NetBSD-1.6.*-* NetBSD-1.6_*-*
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
