@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:09 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2003/04/27 12:42:52 cjep Exp $
 bin/dox
 bin/e_cache_clean
 bin/e_cache_query
@@ -2679,20 +2679,20 @@ share/enlightenment/themes/ShinyMetal/tooltips/tooltips.cfg.japanese
 share/enlightenment/themes/ShinyMetal/ttfonts/rothwell.ttf
 share/enlightenment/themes/ShinyMetal/ttfonts/zirkle.ttf
 share/enlightenment/themes/ShinyMetal/windowmatches.cfg
-share/locale/de/LC_MESSAGES/enlightenment.mo
-share/locale/es/LC_MESSAGES/enlightenment.mo
-share/locale/fr/LC_MESSAGES/enlightenment.mo
-share/locale/hu/LC_MESSAGES/enlightenment.mo
-share/locale/ko/LC_MESSAGES/enlightenment.mo
-share/locale/nl/LC_MESSAGES/enlightenment.mo
-share/locale/no/LC_MESSAGES/enlightenment.mo
-share/locale/pt/LC_MESSAGES/enlightenment.mo
-share/locale/ru/LC_MESSAGES/enlightenment.mo
-share/locale/sv/LC_MESSAGES/enlightenment.mo
-share/locale/tr/LC_MESSAGES/enlightenment.mo
-share/locale/dk/LC_MESSAGES/enlightenment.mo
-share/locale/en_US/LC_MESSAGES/enlightenment.mo
-share/locale/pt_BR/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/de/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/es/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/fr/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/hu/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/ko/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/nl/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/no/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/pt/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/ru/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/sv/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/tr/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/dk/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/en_US/LC_MESSAGES/enlightenment.mo
+${PKGLOCALEDIR}/pt_BR/LC_MESSAGES/enlightenment.mo
 @exec	ln -sf BrushedMetal-Tigert %D/share/enlightenment/themes/DEFAULT
 @unexec	rm -f %D/share/enlightenment/themes/DEFAULT
 @dirrm share/enlightenment/themes/ShinyMetal/ttfonts
