@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.31 2003/08/31 19:56:05 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.32 2003/11/08 06:58:10 jdolecek Exp $
 
 DISTNAME?=		php-${PHP_DIST_VERS}
 CATEGORIES+=		www php4
 MASTER_SITES?=		http://www.php.net/distributions/ \
 			http://php3.de/distributions/ \
 			ftp://ftp.php.net/pub/distributions/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER?=		jlam@NetBSD.org
 HOMEPAGE?=		http://www.php.net/
@@ -14,7 +15,7 @@ HOMEPAGE?=		http://www.php.net/
 # PHP_DIST_VERS		version number on the php distfile
 # PHP_BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
-PHP_DIST_VERS=		4.3.3
+PHP_DIST_VERS=		4.3.4
 PHP_BASE_VERS=		${PHP_DIST_VERS}
 
 DISTFILES?=		${PHP_DISTFILE}
