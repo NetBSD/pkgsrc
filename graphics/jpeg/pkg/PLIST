@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 1998/07/15 12:51:37 agc Exp $
+@comment $NetBSD: PLIST,v 1.8 1998/07/17 14:33:53 tv Exp $
 bin/cjpeg
 bin/djpeg
 bin/jpegtran
@@ -9,7 +9,6 @@ include/jpeglib.h
 include/jmorecfg.h
 include/jerror.h
 lib/libjpeg.a
-lib/libjpeg.la
 lib/libjpeg.so.62.0
 man/man1/cjpeg.1.gz
 man/man1/djpeg.1.gz
