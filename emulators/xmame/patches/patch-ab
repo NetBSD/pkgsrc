@@ -1,18 +1,32 @@
-$NetBSD: patch-ab,v 1.30 2004/11/27 01:30:40 kristerw Exp $
+$NetBSD: patch-ab,v 1.31 2005/04/02 20:56:28 kristerw Exp $
 
---- src/unix/unix.mak.orig	Mon Nov 22 00:09:03 2004
-+++ src/unix/unix.mak	Mon Nov 22 00:12:39 2004
-@@ -545,11 +545,11 @@
+--- src/unix/unix.mak.orig	2005-04-02 20:38:46.000000000 +0200
++++ src/unix/unix.mak	2005-04-02 20:50:17.000000000 +0200
+@@ -258,7 +258,7 @@
+ 	$(COREDEFS) $(SOUNDDEFS) $(CPUDEFS) $(ASMDEFS) \
+ 	$(INCLUDES) $(INCLUDE_PATH)
+ 
+-MY_LIBS = $(LIBS) $(LIBS.$(ARCH)) $(LIBS.$(DISPLAY_METHOD)) -lz
++MY_LIBS = $(LIBS.$(ARCH)) $(LIBS.$(DISPLAY_METHOD)) -lz -lexpat
+ 
+ ifdef SEPARATE_LIBM
+ MY_LIBS += -lm
+@@ -578,15 +578,15 @@
  
  romcmp: $(OBJ)/romcmp.o $(OBJ)/unzip.o $(ZLIB)
  	$(CC_COMMENT) @echo 'Linking $@...'
 -	$(CC_COMPILE) $(LD) $(LDFLAGS) $^ $(LIBS) -o $@
-+	$(CC_COMPILE) $(LD) $(LDFLAGS) $^ -lz $(LIBS) -o $@
++	$(CC_COMPILE) $(LD) $(LDFLAGS) $^ -lz -o $@
  
- chdman: $(OBJ)/chdman.o $(OBJ)/chd.o $(OBJ)/chdcd.o $(OBJ)/md5.o $(OBJ)/sha1.o $(OBJ)/version.o $(ZLIB)
+ chdman: $(OBJ)/chdman.o $(OBJ)/chd.o $(OBJ)/chdcd.o $(OBJ)/cdrom.o $(OBJ)/md5.o $(OBJ)/sha1.o $(OBJ)/version.o $(ZLIB)
  	$(CC_COMMENT) @echo 'Linking $@...'
 -	$(CC_COMPILE) $(LD) $(LDFLAGS) $^ $(LIBS) -o $@
-+	$(CC_COMPILE) $(LD) $(LDFLAGS) $^ -lz $(LIBS) -o $@
++	$(CC_COMPILE) $(LD) $(LDFLAGS) $^ -lz -o $@
  
  xml2info: $(OBJ)/xml2info.o $(EXPAT)
  	$(CC_COMMENT) @echo 'Linking $@...'
+-	$(CC_COMPILE) $(LD) $(LDFLAGS) $^ $(LIBS) -o $@
++	$(CC_COMPILE) $(LD) $(LDFLAGS) $^ -lexpat -lz -o $@
+ 
+ dat2html: $(DAT2HTML_OBJS)
+ 	$(CC_COMMENT) @echo 'Compiling $@...'
