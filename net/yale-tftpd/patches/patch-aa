@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/30 19:43:49 nra Exp $
+$NetBSD: patch-aa,v 1.2 2002/04/23 15:27:16 seb Exp $
 
 --- Makefile.orig	Fri Oct  7 01:41:10 1994
 +++ Makefile
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/07/30 19:43:49 nra Exp $
  
 -ETCDIR?=${DESTDIR}/etc
 -BINDIR?=${DESTDIR}/usr/libexec
-+ETCDIR=${PREFIX}/etc
++ETCDIR=${PKG_SYSCONFDIR}
 +BINDIR=${PREFIX}/libexec
 +MANDIR=${PREFIX}/man
  
