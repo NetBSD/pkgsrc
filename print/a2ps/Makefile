@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 1998/07/24 01:57:01 tv Exp $
+# $NetBSD: Makefile,v 1.17 1998/07/28 11:18:58 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.12 1998/02/15 21:24:42 steve Exp
 #
 
@@ -15,6 +15,7 @@ STRIP=
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-medium=${PAPERSIZE}
 CONFIGURE_ENV+=	LPR=lpr
+USE_PERL5=	YES
 USE_GTEXINFO=	YES
 USE_LIBTOOL=	yes
 INFO_FILES=	a2ps.info ogonkify.info regex.info
