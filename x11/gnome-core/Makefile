@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2000/01/20 14:25:19 tron Exp $
+# $NetBSD: Makefile,v 1.37 2000/01/20 21:17:24 tron Exp $
 
 DISTNAME=		gnome-core-1.0.55
 CATEGORIES=		x11 gnome
@@ -33,7 +33,7 @@ PLIST_SRC=		${WRKDIR}/PLIST
 
 pre-configure:
 	@${MKDIR} ${WRKDIR}/sys
-	@${LN} -s /usr/include/soundcard.h ${WRKDIR}/sys
+	@${LN} -fs /usr/include/soundcard.h ${WRKDIR}/sys
 
 post-install:
 	@if [ -x ${PREFIX}/bin/cpumemusage_applet ]; then \
