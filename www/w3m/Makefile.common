@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.27 2004/04/25 04:16:43 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.28 2004/05/14 08:42:29 wiz Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=w3m/}
 
@@ -17,8 +17,8 @@ USE_GNU_TOOLS+=	make	# Needed for some combinations of options...
 
 W3M_VERS=	0.5
 
-# For manuals.
-USE_PERL5=	build
+# For w3mman, xface2xpm, cgi scripts.
+USE_PERL5=	run
 
 DOCDIR=		share/doc/w3m
 
