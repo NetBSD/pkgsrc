@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/10/20 18:08:35 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2004/11/03 00:08:02 kristerw Exp $
 
 DISTNAME=	HTML-LinkExtractor-0.121
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~podmaster/${DISTNAME}/
 COMMENT=	Extract links from an HTML document
+
+EXTRACT_USING_PAX=	# defined
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
