@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 1999/10/22 14:43:06 agc Exp $
+# $NetBSD: Makefile,v 1.4 1999/10/26 16:38:09 wennmach Exp $
 
 DISTNAME=	jitterbug-1.6.2
 WRKSRC=		${WRKDIR}/${PKGNAME}/source
@@ -21,6 +21,12 @@ CGIBINDIR=	libexec/cgi-bin
 
 .include "../../mk/bsd.prefs.mk"
 
+.if exists(/usr/sbin/nslookup)
+NSLOOKUP=	/usr/sbin/nslookup
+.elif exists(/usr/bin/nslookup)
+NSLOOKUP=	/usr/bin/nslookup
+.endif
+
 JB_PACKAGE?=	test
 
 JB_USER?=	jitter
@@ -33,10 +39,11 @@ JB_DATADIR=	${JB_USER}/${JB_PACKAGE}/bug_tracking
 JB_CONFIGDIR=	${JB_USER}/config
 
 JB_LOCALMAIL?=	${JB_PACKAGE}-bugs
+
 .if !defined(JB_FQHOSTNAME)
-JB_FQHOSTNAME!=	hostname
+JB_HOSTNAME!=	/bin/hostname
+JB_FQHOSTNAME!=	${NSLOOKUP} ${JB_HOSTNAME} | /usr/bin/grep Name: | /usr/bin/awk '{ print $$2 }'
 .endif
-JB_HOSTNAME!=	echo '${JB_FQHOSTNAME}' | sed -e 's|\..*||'
 JB_EMAIL?=	${JB_LOCALMAIL}@${JB_FQHOSTNAME}
 
 HAS_CONFIGURE=	yes
@@ -62,7 +69,7 @@ pre-extract:
 	@${ECHO} "JB_FQHOSTNAME -- fully qualified host name"
 	@${ECHO} "JB_LOCALMAIL  -- local mail alias for \$$JB_PACKAGE category."
 	@${ECHO} "jitterbug will send and receive e-mail for \$$JB_PACKAGE"
-	@${ECHO} "as \$$JB_LOCALMAIL@\$$JB_FQHOSTNAME"
+	@${ECHO} "as '\$$JB_LOCALMAIL'@${JB_FQHOSTNAME}"
 	@${ECHO}
 .endif
 .if (${JB_FQHOSTNAME} == ${JB_HOSTNAME})
