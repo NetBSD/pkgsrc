@@ -1,11 +1,15 @@
-$NetBSD: patch-ab,v 1.3 2004/02/29 13:45:48 jdc Exp $
+$NetBSD: patch-ab,v 1.4 2005/03/16 20:44:17 rillig Exp $
 
---- all.c.orig	1995-12-22 12:05:56.000000000 +0000
-+++ all.c	2004-02-29 13:17:51.000000000 +0000
-@@ -639,4 +639,6 @@
+--- all.c.orig	Fri Dec 22 13:05:56 1995
++++ all.c	Wed Mar 16 21:30:19 2005
+@@ -637,8 +637,10 @@ FUNCARG((stream),
+  * returns the error string, or NULL
+  */
  {
-+#ifndef __NetBSD__
++#if !defined(__NetBSD__) && !defined(__linux__)
    extern int sys_nerr;
    extern char *sys_errlist[];
 +#endif
+   
+   int   error;
    
