@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7038 2004/08/30 13:40:30 schmonz Exp $
+$NetBSD: CHANGES,v 1.7039 2004/08/30 14:46:26 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4107,3 +4107,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated suse91_base to 9.1nb2 [wiz 2004-08-29]
 	Updated clamsmtp to 0.7 [xtraeme 2004-08-30]
 	Updated safecat to 1.12 [schmonz 2004-08-30]
+	Updated ht to 0.8.0 [jmmv 2004-08-30]
