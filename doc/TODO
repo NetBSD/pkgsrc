@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.731 2003/07/18 20:13:28 grant Exp $
+$NetBSD: TODO,v 1.732 2003/07/19 14:18:25 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -331,3 +331,6 @@ Suggested cleanups in pkgsrc
 
 	o Make packages utilize USE_X11 instead of USE_X11BASE if there is no
 	  good reason to install them into X11BASE.
+
+	o Set USE_GCC_SHLIB in packages that link against any GCC library but
+	  are missing to define this variable.
