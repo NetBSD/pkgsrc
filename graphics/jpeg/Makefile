@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/10/03 14:48:40 salo Exp $
+# $NetBSD: Makefile,v 1.26 2004/01/05 20:38:35 jlam Exp $
 #
 
 DISTNAME=		jpegsrc.v6b
@@ -13,7 +13,9 @@ MAINTAINER=		mycroft@NetBSD.org
 HOMEPAGE=		http://www.ijg.org/
 COMMENT=		IJG's jpeg compression utilities
 
-USE_BUILDLINK2=		yes
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
@@ -25,6 +27,7 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-static
 
 INSTALL_TARGET=		install install-lib
+INSTALLATION_DIRS=	bin lib include man/man1
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jpeg
