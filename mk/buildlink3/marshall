@@ -1,4 +1,4 @@
-# $NetBSD: marshall,v 1.9 2004/02/13 16:49:53 jlam Exp $
+# $NetBSD: marshall,v 1.10 2004/03/19 00:04:42 danw Exp $
 #
 # Handle cases where multiple consecutive arguments must be processed
 # together, either by merging the arguments or "skipping" the extra
@@ -38,7 +38,7 @@ case $arg in
 	skipargs=1
 	;;
 #
-# Darwin's special GCC uses:
+# Darwin's linker uses:
 #
 #	-dylib_file /path/shlib:/path2/shlib
 #	-dylib_install_name /path/shlib
@@ -46,9 +46,10 @@ case $arg in
 #
 # to pass the installed locations for the shared libraries to the linker,
 # and we need to protect the full path from "/path/shlib" -> "-L/path -lshlib"
-# transformation.
+# transformation. (-seg_addr_table_filename's purpose is more obscure,
+# but darwin's imake rules use it.)
 #
--dylib_file|-dylib_install_name|-install_name)
+-dylib_file|-dylib_install_name|-install_name|-seg_addr_table_filename)
 	skipargs=1
 	;;
 esac
