@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2003/07/22 05:14:44 martti Exp $
+# $NetBSD: Makefile,v 1.9 2003/07/22 19:34:30 jmmv Exp $
 
 DISTNAME=	gmodplay-0.08
 PKGREVISION=	2
@@ -18,8 +18,9 @@ ONLY_FOR_PLATFORM=	*-*-alpha *-*-arc *-*-cobalt *-*-dreamcast \
 USE_BUILDLINK2=		YES
 USE_GMAKE=		YES
 
-# for libslang
-LDFLAGS+=	-lossaudio -lcurses
+# for libslang and ossaudio
+CFLAGS+=	-DAUDIO_DEV="\"\\\"$(DEVOSSAUDIO)\\\"\""
+LDFLAGS+=	${LIBOSSAUDIO} -lcurses
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gmodplay ${PREFIX}/bin/gmodplay
@@ -29,4 +30,5 @@ do-install:
 
 .include "../../devel/libslang/buildlink2.mk"
 .include "../../devel/glib/buildlink2.mk"
+.include "../../mk/ossaudio.buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
