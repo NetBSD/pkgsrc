@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2004/09/02 09:39:26 grant Exp $
+# $NetBSD: Makefile,v 1.14 2004/09/02 10:39:04 grant Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -13,6 +13,7 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=	tech-pkg@NetBSD.org
 COMMENT=	The Cubic Circle POP3 mail server
 
+USE_BUILDLINK3=	YES
 USE_PKGINSTALL=	YES
 
 LICENSE=	shareware
@@ -24,6 +25,17 @@ MAKE_ENV+=	ROOT_GROUP="${ROOT_GROUP}"
 
 MAKE_DIRS+=	${PREFIX}/share/cucipop/bulletins
 SPECIAL_PERMS+=	${PREFIX}/sbin/cucipop ${ROOT_USER} ${ROOT_GROUP} 2755
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.cucipop
+PKG_SUPPORTED_OPTIONS=	db
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdb)
+BDB_ACCEPTED=	db2
+CFLAGS+=	-DUSE_DB
+MAKE_ENV+=	LIBS=${BUILDLINK_LIBS.bdb}
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -49,4 +61,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/cucipop.8 ${PREFIX}/man/man8
 	${INSTALL_MAN} ${WRKSRC}/makevpopdb.8 ${PREFIX}/man/man8
 
+.if !empty(PKG_OPTIONS:Mdb)
+.  include "../../mk/bdb.buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
