@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 05:20:48 martti Exp $
+lib/xfce4/panel-plugins/libnotes.a
+lib/xfce4/panel-plugins/libnotes.la
+lib/xfce4/panel-plugins/libnotes.so
+share/xfce4/notes/note.png
+@dirrm share/xfce4/notes
