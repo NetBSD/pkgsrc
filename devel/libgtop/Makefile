@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 1998/11/01 23:21:46 tron Exp $
+# $NetBSD: Makefile,v 1.5 1998/11/01 23:26:43 tron Exp $
 #
 
 DISTNAME=	libgtop-0.26.0
-CATEGORIES=	sysutils
+CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.jimpick.com/pub/mirrors/gnome/sources/ \
 		ftp://ftp.gnome.org/pub/GNOME/sources/ \
 		ftp://ftp.geo.net/pub/gnome/sources/
