@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/01/21 18:45:03 zuntum Exp $
+# $NetBSD: Makefile,v 1.7 2002/01/28 17:57:08 zuntum Exp $
 #
 
 DISTNAME=	qmail-1.03
@@ -27,7 +27,6 @@ DEPENDS+=	qmail-users>=1.0:../../mail/qmail-users
 ALL_TARGET= 	it man
 INSTALL_TARGET=	setup check
 
-IS_INTERACTIVE=	YES
 NO_PACKAGE=	YES
 
 OWN_DIRS+=	${QMAILDIR}
