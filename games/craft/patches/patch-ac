@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 1998/10/13 00:37:33 garbled Exp $
+--- craft_def.h.orig	Fri Feb 21 04:49:57 1997
++++ craft_def.h	Thu Sep 24 09:19:35 1998
+@@ -17,9 +17,9 @@
+ #define max_land_types      5000
+ #define max_pics_per_player 6000
+ 
+-#define pic_cata_name "hcraft/pic_cata_new"
+-#define pic_names     "hcraft/pic"
+-#define info_name     "hcraft/infos"
++#define pic_cata_name "@PREFIX@/share/craft/hcraft/pic_cata_new"
++#define pic_names     "@PREFIX@/share/craft/hcraft/pic"
++#define info_name     "@PREFIX@/share/craft/hcraft/infos"
+ 
+ #define pic_dx             30
+ #define pic_dy             30

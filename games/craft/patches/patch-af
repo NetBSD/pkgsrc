@@ -1,0 +1,15 @@
+--- paramreader.hc.orig	Thu Sep 24 12:00:23 1998
++++ paramreader.hc	Thu Sep 24 12:00:59 1998
+@@ -101,8 +101,11 @@
+ .  open_param_file   
+      {char file_name [128];
+ 
+-      strcpy (file_name, param_file_name);
++      strcpy (file_name, getenv("HOME"));
++      strcat (file_name, "/");
++      strcat (file_name, param_file_name);
+       strcat (file_name, ".params");
++
+       f [0]        = fopen (file_name, "r");
+       num_includes = 1;
+      }.
