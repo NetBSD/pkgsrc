@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2002/12/01 15:38:01 salo Exp $
+# $NetBSD: Makefile,v 1.28 2002/12/22 14:22:38 chris Exp $
 
-DISTNAME=	sylpheed-0.8.6
-PKGREVISION=	1
+DISTNAME=	sylpheed-0.8.7
 CATEGORIES=	mail news x11
 MASTER_SITES=	http://sylpheed.good-day.net/sylpheed/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	oishi@ims.ac.jp
+MAINTAINER=	chris@netbsd.org
 HOMEPAGE=	http://sylpheed.good-day.net/index.cgi.en
 COMMENT=	X based e-mail and netnews client
 
@@ -28,7 +27,7 @@ CONFIGURE_ARGS+=	--enable-compface
 PKG_SYSCONFSUBDIR=	sylpheed
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
-BUILDLINK_DEPENDS.gpgme=	gpgme>=0.3.5
+BUILDLINK_DEPENDS.gpgme=	gpgme>=0.3.10
 
 .include "../../mk/bsd.prefs.mk"
 BUILD_DEFS+=		USE_INET6 USE_OPENLDAP
@@ -49,7 +48,7 @@ CONFIGURE_ARGS+=	--enable-ldap
 .include "../../databases/openldap/buildlink2.mk"
 .endif
 
-CONF_FILES=         ${FILESDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
+CONF_FILES=	${FILESDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 
 .include "../../converters/libiconv/buildlink2.mk"
 .include "../../graphics/gdk-pixbuf/buildlink2.mk"
