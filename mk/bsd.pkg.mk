@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.970 2002/04/29 06:43:34 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.971 2002/04/29 09:12:20 seb Exp $
 #
 # This file is in the public domain.
 #
@@ -2422,7 +2422,7 @@ _SU_TARGET=								\
 	if [ `${ID} -u` = 0 ]; then					\
 		${MAKE} ${MAKEFLAGS} $$realtarget;			\
 	elif [ "X${BATCH}" != X"" ]; then				\
-		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run mtree."; \
+		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run $$action for ${PKGNAME}."; \
 		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
 	else								\
 		args="";						\
