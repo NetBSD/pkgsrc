@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/02/14 17:21:33 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2004/02/19 01:37:45 wiz Exp $
 
 DISTNAME=	vorbis-tools-1.0
 PKGNAME=	tremor-tools-1.0.0.8
@@ -15,7 +15,7 @@ BUILD_DEFS+=	USE_INET6
 
 CONFLICTS=	vorbis-[0-9]*
 
-USE_BUILDLINK2=		yes
+USE_BUILDLINK3=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_GNU_TOOLS+=		make
@@ -33,11 +33,11 @@ pre-configure:
 	cd ${WRKSRC} && ${AUTOCONF}
 
 .include "../../mk/automake.mk"
-.include "../../audio/tremor/buildlink2.mk"
-.include "../../audio/libvorbis/buildlink2.mk"
-.include "../../audio/libao/buildlink2.mk"
-.include "../../audio/libogg/buildlink2.mk"
-.include "../../www/curl/buildlink2.mk"
-.include "../../mk/pthread.buildlink2.mk"
+.include "../../audio/tremor/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/libao/buildlink3.mk"
+.include "../../audio/libogg/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
