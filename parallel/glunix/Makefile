@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/05/27 09:53:36 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2000/06/12 12:01:59 wiz Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -27,10 +27,10 @@ NOW_ROOT=	${LOCALBASE}/now
 FLAGS= "-m486 -DL_ENDIAN"
 .endif
 
-MAKE_ENV+= OPSYS=${OPSYS} ARCH=${MACHINE} NOW_ROOT=${NOW_ROOT}
+MAKE_ENV+= OPSYS=${OPSYS} ARCH=${MACHINE_ARCH} NOW_ROOT=${NOW_ROOT}
 MAKE_ENV+= PORTSDIR=${PKGDIR} WRKDIR=${WRKDIR} FLAGS=${FLAGS}
 
-SCRIPTS_ENV+= ARCH=${MACHINE} RM=${RM} NOW_ROOT=${NOW_ROOT}
+SCRIPTS_ENV+= ARCH=${MACHINE_ARCH} RM=${RM} NOW_ROOT=${NOW_ROOT}
 
 .if exists(/usr/sbin/user)
 USER_CMD=       /usr/sbin/user
