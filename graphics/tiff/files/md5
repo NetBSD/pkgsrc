@@ -1,4 +1,4 @@
-$NetBSD: md5,v 1.5 2000/01/06 01:25:24 wiz Exp $
+$NetBSD: md5,v 1.6 2000/04/01 00:05:28 wiz Exp $
 
-MD5 (tiff-v3.5.4.tar.gz) = 3957aeace6b66720751f497157e16e53
-MD5 (libtiff-lzw-compression-kit.tar.gz) = 7372ce27aa47f048c83aa59239a685d1
+MD5 (tiff-v3.5.5.tar.gz) = 407d65a98c7621ad6e2c64cd3d1e7a40
+MD5 (libtiff-lzw-compression-kit-1.1.tar.gz) = 771663ad1196fab093b1dd512ecd3061
