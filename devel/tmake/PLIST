@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:05 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/11 12:26:51 grant Exp $
 bin/progen
 bin/tmake
-lib/tmake/${LOWER_OPSYS}-g++/app.t
-lib/tmake/${LOWER_OPSYS}-g++/lib.t
-lib/tmake/${LOWER_OPSYS}-g++/subdirs.t
-lib/tmake/${LOWER_OPSYS}-g++/tmake.conf
+lib/tmake/netbsd-g++/app.t
+lib/tmake/netbsd-g++/lib.t
+lib/tmake/netbsd-g++/subdirs.t
+lib/tmake/netbsd-g++/tmake.conf
 lib/tmake/unix/app.t
 lib/tmake/unix/generic.t
 lib/tmake/unix/lib.t
@@ -20,6 +20,6 @@ share/examples/tmake/main.cpp
 share/examples/tmake/wc.t
 @dirrm share/examples/tmake
 @dirrm share/doc/tmake
-@dirrm lib/tmake/${LOWER_OPSYS}-g++
+@dirrm lib/tmake/netbsd-g++
 @dirrm lib/tmake/unix
 @dirrm lib/tmake
