@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.3 2002/11/12 13:45:36 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.4 2002/11/13 00:59:35 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -334,6 +334,7 @@ if [ "x$restart" = "xno" ] ; then
     for pkgdir in $list
     do
 	    if [ ! -d $pkgdir ]; then
+		    echo " "
 		    echo "WARNING:  the package directory $pkgdir is listed in" > /dev/stderr
 		    echo $pkgdir | sed 's;/.*;/Makefile;g' > /dev/stderr
 		    echo "but the directory does not exist.  Please fix this!" > /dev/stderr
