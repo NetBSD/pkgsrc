@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 1999/06/16 21:37:15 mjl Exp $
+# $NetBSD: Makefile,v 1.2 1999/07/06 08:05:02 jlam Exp $
 #
 
 DISTNAME=	sci.0.3.8
@@ -9,7 +9,7 @@ MASTER_SITES=	http://linuxparts.com/
 MAINTAINER=	packages@netbsd.org
 HOMEPAGE=	http://linuxparts.com/software.html
 
-DEPENDS+=       ncurses-1.9.9g:../../devel/ncurses
+DEPENDS+=       ncurses-4.2:../../devel/ncurses
 
 WRKSRC=         ${WRKDIR}/sci
 
