@@ -1,196 +1,145 @@
---- Makefile.in.orig	Sun Jul  9 05:04:14 2000
-+++ Makefile.in	Thu Jul 27 21:55:59 2000
-@@ -37,16 +37,12 @@
- VP4 = @top_srcdir@/src/generic
- VP5 = @top_srcdir@/src/unix
- VP6 = @top_srcdir@/src/html
--VP7 = @top_srcdir@/src/png
--VP8 = @top_srcdir@/src/jpeg
--VP9 = @top_srcdir@/src/tiff
--VP10 = @top_srcdir@/src/zlib
- VP11 = @top_srcdir@/src/iodbc
+$NetBSD: patch-ab,v 1.1.1.2 2000/08/31 22:24:00 dmcmahill Exp $
+
+--- Makefile.in.orig	Sun Aug 20 04:52:53 2000
++++ Makefile.in	Thu Aug 31 16:20:35 2000
+@@ -20,11 +20,11 @@
  
- # the comment at the end of the next line is needed because otherwise autoconf
- # would remove this line completely - it contains a built-in hack to remove
- # any VPATH assignment not containing ':'
--VPATH = $(VP1)@PATH_IFS@$(VP2)@PATH_IFS@$(VP3)@PATH_IFS@$(VP4)@PATH_IFS@$(VP5)@PATH_IFS@$(VP6)@PATH_IFS@$(VP7)@PATH_IFS@$(VP8)@PATH_IFS@$(VP9)@PATH_IFS@$(VP10)@PATH_IFS@$(VP11) # ':' for autoconf
-+VPATH = $(VP1)@PATH_IFS@$(VP2)@PATH_IFS@$(VP3)@PATH_IFS@$(VP4)@PATH_IFS@$(VP5)@PATH_IFS@$(VP6)@PATH_IFS@$(VP11) # ':' for autoconf
+ .c.o :
+-	$(CCC) -c @DEP_INFO_FLAGS@ $(CFLAGS) $(PICFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile $(CCC)  -c @DEP_INFO_FLAGS@ $(CFLAGS) -o $@ $<
  
- top_srcdir = @top_srcdir@
- prefix = @prefix@
-@@ -75,6 +71,8 @@
+ .cpp.o :
+-	$(CC) -c @DEP_INFO_FLAGS@ $(CPPFLAGS) $(PICFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile $(CC) -c @DEP_INFO_FLAGS@ $(CPPFLAGS) -o $@ $<
  
- top_builddir = .
+ .cxx.o :
+-	$(CC) -c @DEP_INFO_FLAGS@ $(CPPFLAGS) $(PICFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile $(CC) -c @DEP_INFO_FLAGS@ $(CPPFLAGS) -o $@ $<
  
-+EXTRALIBS=-lz -L@prefix@/lib -R@prefix@/lib -ljpeg -lpng -ltiff
-+
- INSTALL = @INSTALL@
+ ########################### Paths #################################
+@@ -79,8 +79,9 @@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
  INSTALL_DATA = @INSTALL_DATA@
-@@ -110,10 +108,6 @@
- COMMDIR  = $(WXDIR)/src/common
- HTMLDIR  = $(WXDIR)/src/html
- UNIXDIR  = $(WXDIR)/src/unix
--PNGDIR   = $(WXDIR)/src/png
--JPEGDIR  = $(WXDIR)/src/jpeg
--TIFFDIR  = $(WXDIR)/src/tiff
--ZLIBDIR  = $(WXDIR)/src/zlib
- GTKDIR   = $(WXDIR)/src/gtk
- MOTIFDIR = $(WXDIR)/src/motif
- MSWDIR   = $(WXDIR)/src/msw
-@@ -153,125 +147,6 @@
- OBJECTS = @ALL_OBJECTS@
- DEPFILES = @ALL_DEPFILES@
++INSTALL_DATA_DIR = ${BSD_INSTALL_DATA_DIR}
+ # my autoconf doesn't set this
+-#INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ # maybe do an additional chmod if needed?
+-INSTALL_SCRIPT = @INSTALL@
++#INSTALL_SCRIPT = @INSTALL@
+ transform = @program_transform_name@
  
--# the object files of sublibraries (we assume that they don't change [often],
--# so we don't generate these lists with tmake but embed them here)
--ZLIBOBJS    = \
--		adler32.o \
--		compress.o \
--		crc32.o \
--		gzio.o \
--		uncompr.o \
--		deflate.o \
--		trees.o \
--		zutil.o \
--		inflate.o \
--		infblock.o \
--		inftrees.o \
--		infcodes.o \
--		infutil.o \
--		inffast.o
--
--PNGOBJS     = \
--		png.o \
--		pngread.o \
--		pngrtran.o \
--		pngrutil.o \
--		pngpread.o \
--		pngtrans.o \
--		pngwrite.o \
--		pngwtran.o \
--		pngwutil.o \
--		pngerror.o \
--		pngmem.o \
--		pngwio.o \
--		pngrio.o \
--		pngget.o \
--		pngset.o
--
--
--JPEGOBJS    = \
--		jcomapi.o \
--		jutils.o \
--		jerror.o \
--		jmemmgr.o \
--		jmemnobs.o \
--		jcapimin.o \
--		jcapistd.o \
--		jctrans.o \
--		jcparam.o \
--		jdatadst.o \
--		jcinit.o \
--		jcmaster.o \
--		jcmarker.o \
--		jcmainct.o \
--		jcprepct.o \
--		jccoefct.o \
--		jccolor.o \
--		jcsample.o \
--		jchuff.o \
--		jcphuff.o \
--		jcdctmgr.o \
--		jfdctfst.o \
--		jfdctflt.o \
--		jfdctint.o \
--		jdapimin.o \
--		jdapistd.o \
--		jdtrans.o \
--		jdatasrc.o \
--		jdmaster.o \
--		jdinput.o \
--		jdmarker.o \
--		jdhuff.o \
--		jdphuff.o \
--		jdmainct.o \
--		jdcoefct.o \
--		jdpostct.o \
--		jddctmgr.o \
--		jidctfst.o \
--		jidctflt.o \
--		jidctint.o \
--		jidctred.o \
--		jdsample.o \
--		jdcolor.o \
--		jquant1.o \
--		jquant2.o \
--		jdmerge.o
--
--TIFFOBJS	= \
--		tif_aux.o \
--		tif_close.o \
--		tif_codec.o \
--		tif_compress.o \
--		tif_dir.o \
--		tif_dirinfo.o \
--		tif_dirread.o \
--		tif_dirwrite.o \
--		tif_dumpmode.o \
--		tif_error.o \
--		tif_fax3.o \
--		tif_fax3sm.o \
--		tif_getimage.o \
--		tif_jpeg.o \
--		tif_flush.o \
--		tif_lzw.o \
--		tif_luv.o \
--		tif_next.o \
--		tif_open.o \
--		tif_packbits.o \
--		tif_pixarlog.o \
--		tif_predict.o \
--		tif_print.o \
--		tif_read.o \
--		tif_swab.o \
--		tif_strip.o \
--		tif_thunder.o \
--		tif_tile.o \
--		tif_unix.o \
--		tif_version.o \
--		tif_warning.o \
--		tif_write.o \
--		tif_zip.o
--
- IODBCOBJS = \
- 		catalog.o \
- 		connect.o \
-@@ -515,11 +390,6 @@
- 	cp $(WXDIR)/lib/vms.opt $(DISTDIR)/lib
- 	cp $(WXDIR)/lib/vms_gtk.opt $(DISTDIR)/lib
- 	mkdir $(DISTDIR)/src
--	mkdir $(DISTDIR)/src/zlib
--	cp $(ZLIBDIR)/*.h $(DISTDIR)/src/zlib
--	cp $(ZLIBDIR)/*.c $(DISTDIR)/src/zlib
--	cp $(ZLIBDIR)/README $(DISTDIR)/src/zlib
--	cp $(ZLIBDIR)/*.mms $(DISTDIR)/src/zlib
+@@ -304,8 +305,11 @@
+ all: @WX_ALL@
  
- # this target is the common part of distribution script for all GUI toolkits,
- # but is not used when building wxBase distribution
-@@ -550,7 +420,6 @@
- 	mkdir $(DISTDIR)/src/html/bitmaps
- 	mkdir $(DISTDIR)/src/$(TOOLKITDIR)
- 	mkdir $(DISTDIR)/src/png
--	mkdir $(DISTDIR)/src/jpeg
- 	mkdir $(DISTDIR)/src/tiff
- 	mkdir $(DISTDIR)/src/iodbc
- 	mkdir $(DISTDIR)/src/unix
-@@ -573,9 +442,6 @@
- 	cp $(PNGDIR)/*.h $(DISTDIR)/src/png
- 	cp $(PNGDIR)/*.c $(DISTDIR)/src/png
- 	cp $(PNGDIR)/README $(DISTDIR)/src/png
--	cp $(JPEGDIR)/*.h $(DISTDIR)/src/jpeg
--	cp $(JPEGDIR)/*.c $(DISTDIR)/src/jpeg
--	cp $(JPEGDIR)/README $(DISTDIR)/src/jpeg
- 	cp $(TIFFDIR)/*.h $(DISTDIR)/src/tiff
- 	cp $(TIFFDIR)/*.c $(DISTDIR)/src/tiff
- 	cp $(TIFFDIR)/README $(DISTDIR)/src/tiff
+-@WX_LIBRARY_NAME_STATIC@:  $(OBJECTS)
++CREATE_LINKS: $(top_builddir)/lib/@WX_LIBRARY_NAME@
++
++CREATE_INSTALLED_LINKS: preinstall
++
++$(top_builddir)/lib/@WX_LIBRARY_NAME@:  $(OBJECTS)
+ 	@$(INSTALL) -d ./lib
+-	$(AR) $(AROPTIONS) ./lib/$@ $(OBJECTS)
+-	$(RANLIB) ./lib/$@
++	${LIBTOOL} --mode=link cc -o $(top_builddir)/lib/@WX_LIBRARY_NAME@  ${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib -version-info 0:1:1
+ 
+ @WX_LIBRARY_NAME_STATIC_GL@:  glcanvas.o
+@@ -314,52 +318,12 @@
+ 	$(RANLIB) ./lib/$@
+ 
+-@WX_LIBRARY_NAME_SHARED@:  $(OBJECTS)
+-	@$(INSTALL) -d ./lib
+-	$(SHARED_LD) ./lib/$@ $(BURNT_LIBRARY_NAME) $(OBJECTS) $(EXTRALIBS)
+-	
+ @WX_LIBRARY_NAME_SHARED_GL@:  glcanvas.o
+ 	@$(INSTALL) -d ./lib
+ 	$(SHARED_LD) ./lib/$@ $(BURNT_LIBRARY_NAME_GL) glcanvas.o $(EXTRALIBS)
+ 	
+-CREATE_LINKS: @WX_LIBRARY_NAME_SHARED@
+-	@$(RM) ./lib/@WX_LIBRARY_LINK1@
+-	@$(RM) ./lib/@WX_LIBRARY_LINK2@
+-	@$(RM) ./lib/@WX_LIBRARY_LINK3@
+-	cd lib \
+-		&& $(LN_S) @WX_TARGET_LIBRARY@ @WX_LIBRARY_LINK1@ \
+-		&& $(LN_S) @WX_TARGET_LIBRARY@ @WX_LIBRARY_LINK2@ \
+-		&& $(LN_S) @WX_TARGET_LIBRARY@ @WX_LIBRARY_LINK3@
+-	
+-CREATE_LINKS_GL: @WX_LIBRARY_NAME_SHARED_GL@
+-	@$(RM) ./lib/@WX_LIBRARY_LINK1_GL@
+-	@$(RM) ./lib/@WX_LIBRARY_LINK2_GL@
+-	@$(RM) ./lib/@WX_LIBRARY_LINK3_GL@
+-	cd lib \
+-		&& $(LN_S) @WX_TARGET_LIBRARY_GL@ @WX_LIBRARY_LINK1_GL@ \
+-		&& $(LN_S) @WX_TARGET_LIBRARY_GL@ @WX_LIBRARY_LINK2_GL@ \
+-		&& $(LN_S) @WX_TARGET_LIBRARY_GL@ @WX_LIBRARY_LINK3_GL@
+-	
+-CREATE_INSTALLED_LINKS: preinstall
+-	$(RM) $(libdir)/@WX_LIBRARY_LINK1@
+-	$(RM) $(libdir)/@WX_LIBRARY_LINK2@
+-	$(RM) $(libdir)/@WX_LIBRARY_LINK3@
+-	cd $(libdir) \
+-		&& $(LN_S) @WX_LIBRARY_NAME_SHARED@ @WX_LIBRARY_LINK1@ \
+-		&& $(LN_S) @WX_LIBRARY_NAME_SHARED@ @WX_LIBRARY_LINK2@ \
+-		&& $(LN_S) @WX_LIBRARY_NAME_SHARED@ @WX_LIBRARY_LINK3@
+-	
+-CREATE_INSTALLED_LINKS_GL: preinstall_gl
+-	$(RM) $(libdir)/@WX_LIBRARY_LINK1_GL@
+-	$(RM) $(libdir)/@WX_LIBRARY_LINK2_GL@
+-	$(RM) $(libdir)/@WX_LIBRARY_LINK3_GL@
+-	cd $(libdir) \
+-		&& $(LN_S) @WX_LIBRARY_NAME_SHARED_GL@ @WX_LIBRARY_LINK1_GL@ \
+-		&& $(LN_S) @WX_LIBRARY_NAME_SHARED_GL@ @WX_LIBRARY_LINK2_GL@ \
+-		&& $(LN_S) @WX_LIBRARY_NAME_SHARED_GL@ @WX_LIBRARY_LINK3_GL@
+-	
+ $(OBJECTS):	$(WXDIR)/include/wx/defs.h $(WXDIR)/include/wx/object.h
+ 
+ parser.o:    parser.c lexer.c
+-	$(CCLEX) -c $(CFLAGS) $(PICFLAGS) -o $@ parser.c
++	${LIBTOOL} --mode=compile $(CCLEX) -c $(CFLAGS)  -o $@ parser.c
+ 
+ parser.c:	$(COMMDIR)/parser.y lexer.c
+@@ -393,24 +357,22 @@
+ # this is the real install target: copies the library, wx-config and the
+ # headers to the installation directory
+-preinstall: $(top_builddir)/lib/@WX_TARGET_LIBRARY@ $(top_builddir)/wx@TOOLKIT_NAME@-config
++preinstall: $(top_builddir)/lib/@WX_LIBRARY_NAME@ $(top_builddir)/wx@TOOLKIT_NAME@-config
+ 	@echo " "
+ 	@echo " Installing wxWindows..."
+ 	@echo " "
+ 
+-	$(INSTALL) -d $(prefix)
+-	$(INSTALL) -d $(bindir)
+-	$(INSTALL) -d $(libdir)
+ 
+ 	$(INSTALL_SCRIPT) $(top_builddir)/wx@TOOLKIT_NAME@-config $(bindir)/wx@TOOLKIT_NAME@-config
+ 	cd $(bindir) && rm -f wx-config && $(LN_S) wx@TOOLKIT_NAME@-config wx-config
+-	$(INSTALL_PROGRAM) $(top_builddir)/lib/@WX_TARGET_LIBRARY@ $(libdir)/@WX_TARGET_LIBRARY@
++	${LIBTOOL} --mode=install ${INSTALL_DATA} $(top_builddir)/lib/@WX_LIBRARY_NAME@ ${libdir}
++
+ 
+-	$(INSTALL) -d $(libdir)/wx
+-	$(INSTALL) -d $(libdir)/wx/include
+-	$(INSTALL) -d $(libdir)/wx/include/wx
+-	$(INSTALL) -d $(libdir)/wx/include/wx/@TOOLKIT_NAME@
++	$(INSTALL_DATA_DIR) $(libdir)/wx
++	$(INSTALL_DATA_DIR) $(libdir)/wx/include
++	$(INSTALL_DATA_DIR) $(libdir)/wx/include/wx
++	$(INSTALL_DATA_DIR) $(libdir)/wx/include/wx/@TOOLKIT_NAME@
+ 	$(INSTALL_DATA) $(top_builddir)/include/wx/@TOOLKIT_DIR@/setup.h $(libdir)/wx/include/wx/@TOOLKIT_NAME@/setup.h
+ 	
+-	$(INSTALL) -d $(includedir)/wx
++	$(INSTALL_DATA_DIR) $(includedir)/wx
+ 	@if test "$(USE_GUI)" = 1; then $(INSTALL) -d $(includedir)/wx/@TOOLKIT_DIR@; fi
+ 	@if test "$(USE_GUI)" = 1; then $(INSTALL) -d $(includedir)/wx/html; fi
+@@ -423,8 +385,8 @@
+ 	done
+ 
+-	$(INSTALL) -d $(localedir)
++	$(INSTALL_DATA_DIR) (localedir)
+ 	@for p in $(WX_LINGUAS); do \
+-	  $(INSTALL) -d $(localedir)/$$p; \
+-	  $(INSTALL) -d $(localedir)/$$p/LC_MESSAGES; \
++	  $(INSTALL_DATA_DIR) $(localedir)/$$p; \
++	  $(INSTALL_DATA_DIR) $(localedir)/$$p/LC_MESSAGES; \
+ 	  $(INSTALL_DATA) $(top_srcdir)/locale/$$p.mo $(localedir)/$$p/LC_MESSAGES/wxstd.mo; \
+ 	  echo "$(INSTALL_DATA) $(top_srcdir)/locale/$$p.mo $(localedir)/$$p/LC_MESSAGES/wxstd.mo"; \

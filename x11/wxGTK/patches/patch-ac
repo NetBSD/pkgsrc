@@ -1,23 +1,87 @@
---- configure.orig	Thu Jul 27 21:25:46 2000
-+++ configure	Thu Jul 27 21:26:53 2000
-@@ -8706,14 +8706,14 @@
- WX_LIBRARY_NAME_STATIC="lib${WX_LIBRARY}.a"
- WX_LIBRARY_NAME_STATIC_GL="lib${WX_LIBRARY}_gl.a"
+$NetBSD: patch-ac,v 1.1.1.2 2000/08/31 22:24:00 dmcmahill Exp $
+
+--- src/makelib.env.in.orig	Sun Aug 20 04:52:57 2000
++++ src/makelib.env.in	Thu Aug 31 14:03:25 2000
+@@ -34,23 +34,21 @@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_DATA = @INSTALL_DATA@
++INSTALL_DATA = @INSTALL_DATA_DIR@
  
--WX_LIBRARY_NAME_SHARED="lib${WX_LIBRARY}-${WX_RELEASE}.so.${WX_CURRENT}.${WX_REVISION}.${WX_AGE}"
--WX_LIBRARY_NAME_SHARED_GL="lib${WX_LIBRARY}_gl-${WX_RELEASE}.so.${WX_CURRENT}.${WX_REVISION}.${WX_AGE}"
-+WX_LIBRARY_NAME_SHARED="lib${WX_LIBRARY}.so.${WX_CURRENT}.${WX_REVISION}.${WX_AGE}"
-+WX_LIBRARY_NAME_SHARED_GL="lib${WX_LIBRARY}_gl.so.${WX_CURRENT}.${WX_REVISION}.${WX_AGE}"
+-TARGETLIB_STATIC = $(TARGET_LIBNAME).a
+-TARGETLIB_SHARED = $(TARGET_LIBNAME).so.$(LIBVERSION_CURRENT).$(LIBVERSION_REVISION).$(LIBVERSION_AGE)
+-TARGETLIB_LINK1 = $(TARGET_LIBNAME).so.$(LIBVERSION_CURRENT)
+-TARGETLIB_LINK2 = $(TARGET_LIBNAME).so
++#TARGETLIB_STATIC = $(TARGET_LIBNAME).a
++#TARGETLIB_SHARED = $(TARGET_LIBNAME).so.$(LIBVERSION_CURRENT).$(LIBVERSION_REVISION).$(LIBVERSION_AGE)
  
--WX_LIBRARY_LINK1="lib${WX_LIBRARY}-${WX_RELEASE}.so.${WX_CURRENT}"
--WX_LIBRARY_LINK2="lib${WX_LIBRARY}-${WX_RELEASE}.so"
-+WX_LIBRARY_LINK1="lib${WX_LIBRARY}.so.${WX_CURRENT}.${WX_REVISION}"
-+WX_LIBRARY_LINK2="lib${WX_LIBRARY}.so.${WX_CURRENT}"
- WX_LIBRARY_LINK3="lib${WX_LIBRARY}.so"
--WX_LIBRARY_LINK1_GL="lib${WX_LIBRARY}_gl-${WX_RELEASE}.so.${WX_CURRENT}"
--WX_LIBRARY_LINK2_GL="lib${WX_LIBRARY}_gl-${WX_RELEASE}.so"
-+WX_LIBRARY_LINK1_GL="lib${WX_LIBRARY}_gl.so.${WX_CURRENT}.${WX_REVISION}"
-+WX_LIBRARY_LINK2_GL="lib${WX_LIBRARY}_gl.so.${WX_CURRENT}"
- WX_LIBRARY_LINK3_GL="lib${WX_LIBRARY}_gl.so"
+-TARGETLIB_SONAME = @WX_TARGET_LIBRARY_SONAME@
  
- SHARED_LD=
+ # Clears all default suffixes
+-.SUFFIXES:	.o .cpp .c .cxx
++.SUFFIXES:	.o .cpp .c .cxx
+ 
+-.c.o :
+-	$(CCC) -c $(CFLAGS) $(PICFLAGS) -o $@ $<
++.c.o :
++	${LIBTOOL} --mode=compile $(CCC) -c $(CFLAGS)  -o $@ $<
+ 
+-.cpp.o :
+-	$(CC) -c $(CPPFLAGS) $(PICFLAGS) -o $@ $<
++.cpp.o :
++	${LIBTOOL} --mode=compile $(CC) -c $(CPPFLAGS)  -o $@ $<
+ 
+-.cxx.o :
+-	$(CC) -c $(CPPFLAGS) $(PICFLAGS) -o $@ $<
++.cxx.o :
++	${LIBTOOL} --mode=compile $(CC) -c $(CPPFLAGS)  -o $@ $<
+ 
+ # the comment at the end of the next line is needed because otherwise autoconf
+@@ -62,40 +60,19 @@
+ 
+ 
+-all: libtype_@WX_TARGET_LIBRARY_TYPE@
++all: $(TARGET_LIBNAME).la 
+ 
+-libtype_so: CREATE_LINKS
+ 
+-libtype_a: $(TARGETLIB_STATIC)
+-
+-
+-$(TARGETLIB_SHARED): $(OBJECTS)
+-	@$(INSTALL) -d $(top_builddir)/lib
+-	$(SHARED_LD) $(top_builddir)/lib/$@ $(TARGETLIB_SONAME) $(OBJECTS)
+-
+-CREATE_LINKS: $(TARGETLIB_SHARED)
+-	cd $(top_builddir)/lib \
+-		&& $(RM) $(TARGETLIB_LINK1) $(TARGETLIB_LINK2) \
+-		&& $(LN_S) $(TARGETLIB_SHARED) $(TARGETLIB_LINK1) \
+-		&& $(LN_S) $(TARGETLIB_SHARED) $(TARGETLIB_LINK2)
+-
+-$(TARGETLIB_STATIC): $(OBJECTS)
++$(TARGET_LIBNAME).la: $(OBJECTS)
+ 	@$(INSTALL) -d $(top_builddir)/lib
+-	ar $(AROPTIONS) $(top_builddir)/lib/$@ $(OBJECTS)
+-	$(RANLIB) $(top_builddir)/lib/$@
+-
+-install: install_@WX_TARGET_LIBRARY_TYPE@ install_headers
++	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJECTS:.o=.lo} \
++	-rpath ${PREFIX}/lib -version-info major:minor \
+ 
+-install_so:
+-	$(INSTALL_PROGRAM) $(top_builddir)/lib/$(TARGETLIB_SHARED) $(libdir)/$(TARGETLIB_SHARED)
+-	@$(RM) $(libdir)/$(TARGETLIB_LINK1) $(libdir)/$(TARGETLIB_LINK2)
+-	cd $(libdir) \
+-		&& $(LN_S) $(TARGETLIB_SHARED) $(TARGETLIB_LINK1) \
+-		&& $(LN_S) $(TARGETLIB_SHARED) $(TARGETLIB_LINK2)
++install: install_lib install_headers
+ 
+-install_a:
+-	$(INSTALL_PROGRAM) $(top_builddir)/lib/$(TARGETLIB_STATIC) $(libdir)/$(TARGETLIB_STATIC)
++install_lib:
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${TARGET_LIBNAME}.la ${PREFIX}/lib
+ 
+ install_headers:
+-	$(INSTALL) -d $(includedir)/wx/$(HEADER_SUBDIR)
++	$(INSTALL_DATA_DIR)  $(includedir)/wx/$(HEADER_SUBDIR)
+ 	@for h in $(HEADERS); do \
+ 	  $(INSTALL_DATA) $(HEADER_PATH)/$(HEADER_SUBDIR)/$$h $(includedir)/wx/$(HEADER_SUBDIR)/$$h; \

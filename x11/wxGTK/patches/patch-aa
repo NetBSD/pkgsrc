@@ -1,16 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/07/30 00:19:08 tsarna Exp $
+$NetBSD: patch-aa,v 1.1.1.2 2000/08/31 22:24:00 dmcmahill Exp $
 
-We're Unix-like, not Windows-like.
-
---- include/wx/defs.h.orig	Wed Jul 26 20:36:00 2000
-+++ include/wx/defs.h	Wed Jul 26 20:36:21 2000
-@@ -25,7 +25,8 @@
- #if defined(__UNIX__) || defined(__unix) || defined(__unix__) || \
+--- include/wx/defs.h.orig	Sun Aug 20 04:52:54 2000
++++ include/wx/defs.h	Thu Aug 31 12:38:24 2000
+@@ -26,5 +26,6 @@
      defined(____SVR4____) || defined(__LINUX__) || defined(__sgi) || \
      defined(__hpux) || defined(sun) || defined(__SUN__) || defined(_AIX) || \
 -    defined(__EMX__) || defined(__VMS) || defined(__BEOS__)
 +    defined(__EMX__) || defined(__VMS) || defined(__BEOS__) || \
-+    defined(__NetBSD__)
++    defined(__NetBSD__) || defined(__OpenBSD__) || defined(__FreeBSD__)
  
      #define __UNIX_LIKE__
- 
