@@ -1,0 +1,159 @@
+--- tmac/doc-ditroff.orig	Thu Feb 17 01:55:54 1994
++++ tmac/doc-ditroff	Fri May  2 01:53:41 1997
+@@ -240,33 +240,58 @@
+ '       in 0
+ .\}
+ .el \{\
+-.       nr nS 0
+-.       nr nA 0
+-.       nr nF 0
+-.       nr nT 0
+-.       nr nY 0
+-.       nr oT 0
+-.       if "\\$1"SYNOPSIS" \{\
+-.		na
+-.		nr nS 1
++.	ie "\\$1"名称" \{\
++.		hK
++'		in 0
+ .	\}
+-.       if "\\$1"DESCRIPTION" \{\
+-.		nr fY 0
+-.		nr fZ 0
+-.		nr fB 0
+-.		nr Fb 0
+-.		ds Fb
++.	el \{\
++.	       nr nS 0
++.	       nr nA 0
++.	       nr nF 0
++.	       nr nT 0
++.	       nr nY 0
++.	       nr oT 0
++.	       if "\\$1"SYNOPSIS" \{\
++.			na
++.			nr nS 1
++.		\}
++.	       if "\\$1"書式" \{\
++.			na
++.			nr nS 1
++.		\}
++.	       if "\\$1"DESCRIPTION" \{\
++.			nr fY 0
++.			nr fZ 0
++.			nr fB 0
++.			nr Fb 0
++.			ds Fb
++.		\}
++.	       if "\\$1"解説" \{\
++.			nr fY 0
++.			nr fZ 0
++.			nr fB 0
++.			nr Fb 0
++.			ds Fb
++.		\}
++.       	if "\\$1"SEE" \{\
++.               	nr nA 1
++.	               na
++.       	\}
++.       	if "\\$1"関連項目" \{\
++.               	nr nA 1
++.	               na
++.       	\}
++.		if "\\$1"FILES" .nr nF 1
++.		if "\\$1"関連ファイル" .nr nF 1
++.       	if "\\$1"STANDARDS" .nr nT 1
++.       	if "\\$1"規格" .nr nT 1
++.		if "\\$1"AUTHORS" .nr nY 1
++.		if "\\$1"作者" .nr nY 1
++.		if "\\$1"SEE" .nr sE 1
++.		if "\\$1"関連項目" .nr sE 1
++.		in 0
++.       	nr aN 0
+ .	\}
+-.       if "\\$1"SEE" \{\
+-.               nr nA 1
+-.               na
+-.       \}
+-.       if "\\$1"FILES" .nr nF 1
+-.       if "\\$1"STANDARDS" .nr nT 1
+-.       if "\\$1"AUTHORS" .nr nY 1
+-.	if "\\$1"SEE" .nr sE 1
+-.       in 0
+-.       nr aN 0
+ .\}
+ .pL
+ 'sp
+--- tmac/doc-nroff.orig	Sat Jan  4 21:39:20 1992
++++ tmac/doc-nroff	Fri May  2 01:53:48 1997
+@@ -190,26 +190,44 @@
+ '       in 0
+ .\}
+ .el \{\
+-.       nr nS 0
+-.       nr nA 0
+-.       nr nF 0
+-.       nr nT 0
+-.       nr nY 0
+-.       nr aN 0
+-.       nr oT 0
+-.       if "\\$1"SEE" .nr nA 1
+-.       if "\\$1"FILES" .nr nF 1
+-.       if "\\$1"STANDARDS" .nr nT 1
+-.       if "\\$1"SYNOPSIS" .nr nS 1
+-.       if "\\$1"DESCRIPTION" \{\
+-.               rr fB
+-.               rr Fb
+-.               ds Fb
+-.               nr fY 0
+-.               nr fZ 0
++.	ie "\\$1"名称" \{\
++.		hK
++'		in 0
++.	\}
++.	el \{\
++.       	nr nS 0
++.       	nr nA 0
++.       	nr nF 0
++.       	nr nT 0
++.       	nr nY 0
++.       	nr aN 0
++.       	nr oT 0
++.       	if "\\$1"SEE" .nr nA 1
++.       	if "\\$1"関連項目" .nr nA 1
++.       	if "\\$1"FILES" .nr nF 1
++.       	if "\\$1"関連ファイル" .nr nF 1
++.       	if "\\$1"STANDARDS" .nr nT 1
++.       	if "\\$1"規格" .nr nT 1
++.       	if "\\$1"SYNOPSIS" .nr nS 1
++.       	if "\\$1"書式" .nr nS 1
++.       	if "\\$1"DESCRIPTION" \{\
++.               	rr fB
++.               	rr Fb
++.               	ds Fb
++.               	nr fY 0
++.               	nr fZ 0
++.       	\}
++.       	if "\\$1"解説" \{\
++.               	rr fB
++.               	rr Fb
++.               	ds Fb
++.               	nr fY 0
++.               	nr fZ 0
++.       	\}
++.		if "\\$1"AUTHORS" .nr nY 1
++.		if "\\$1"作者" .nr nY 1
++.       	in 0
+ .       \}
+-.	if "\\$1"AUTHORS" .nr nY 1
+-.       in 0
+ .\}
+ .pL
+ 'sp
+@@ -221,5 +239,6 @@
+ \&\fP\s0\&
+ .in \\n(.iu+\\n(Tiu
+ .if "\\$1"SEE" .nr sE 1
++.if "\\$1"関連項目" .nr sE 1
+ .ns
+ ..
