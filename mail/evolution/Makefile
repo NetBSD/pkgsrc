@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/10/06 14:44:01 rh Exp $
+# $NetBSD: Makefile,v 1.11 2001/10/24 11:51:54 tron Exp $
 
 DISTNAME=		evolution-0.15
 CATEGORIES=		mail time gnome
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	YES
 
 BUILDLINK_DEPENDS.gdk-pixbuf=		gdk-pixbuf>=0.9.0
 BUILDLINK_DEPENDS.gdk-pixbuf-gnome=	gdk-pixbuf-gnome>=0.9.0
-BUILDLINK_DEPENDS.db3=			db3-2.9
+BUILDLINK_DEPENDS.db3=			db3>=2.9
 
 GNU_CONFIGURE=		YES
 USE_GMAKE=		YES
