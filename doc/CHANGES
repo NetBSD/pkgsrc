@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6469 2004/07/06 14:54:54 xtraeme Exp $
+$NetBSD: CHANGES,v 1.6470 2004/07/06 15:04:48 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3278,3 +3278,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added gzrecover-0.2 [xtraeme 2004-07-06]
 	Added libhydrogen-0.8.0 [xtraeme 2004-07-06]
 	Added hydrogen-0.8.0 [xtraeme 2004-07-06]
+	Added fsv-0.9 [xtraeme 2004-07-06]
