@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/07/04 22:35:40 agc Exp $
+$NetBSD: distinfo,v 1.2 2004/07/08 18:33:07 agc Exp $
 
 SHA1 (gramofile-1.6.tar.gz) = 6e5365d9e04801725be694fefcff5fc10ea2f912
 Size (gramofile-1.6.tar.gz) = 108596 bytes
-SHA1 (patch-aa) = 204d1879eca0d2ae9a8426d3f06f8b4f2a97b213
+SHA1 (patch-aa) = 0e3912dc5c5470f5ca9cb5916467af7ffa8b52fb
+SHA1 (patch-ab) = cdb6ed27cb4e4f6fc91a34a12369caa2a52e94d9
+SHA1 (patch-ac) = f6d8bafe59fa5ab55d14999436edb28cc1c01c29
