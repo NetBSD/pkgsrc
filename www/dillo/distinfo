@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2004/03/14 01:26:55 xtraeme Exp $
+$NetBSD: distinfo,v 1.17 2004/05/26 08:06:56 adam Exp $
 
-SHA1 (dillo-0.8.0.tar.bz2) = 32c6e2805c8c03ce3ea6fa98dd7af568ea745bee
-Size (dillo-0.8.0.tar.bz2) = 396058 bytes
-SHA1 (patch-ab) = 1e71983377f5de2c68b322f085526af33e2efcc2
+SHA1 (dillo-0.8.1.tar.bz2) = 1a75de677f9c88365ee28e4f5a0bbebba31cc7d9
+Size (dillo-0.8.1.tar.bz2) = 400697 bytes
+SHA1 (patch-ab) = b170b651773c226604df0bc645fe43865fb8985f

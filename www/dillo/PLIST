@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/03/14 01:26:55 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2004/05/26 08:06:56 adam Exp $
 bin/dillo
 bin/dpid
 bin/dpidc
@@ -29,3 +29,10 @@ share/doc/dillo/Selection.txt
 share/examples/dillo/dillorc.default
 @dirrm share/examples/dillo
 @dirrm share/doc/dillo
+@dirrm lib/dillo/dpi/https
+@dirrm lib/dillo/dpi/hello
+@dirrm lib/dillo/dpi/ftp
+@dirrm lib/dillo/dpi/downloads
+@dirrm lib/dillo/dpi/bookmarks
+@dirrm lib/dillo/dpi
+@dirrm lib/dillo
