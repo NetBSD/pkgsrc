@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2003/10/19 21:05:35 bouyer Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2004/02/26 16:22:03 agc Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
-PKGREVISION=	1
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://thumper.bellcore.com/pub/nsb/
 EXTRACT_SUFX=	.tar.Z
@@ -14,11 +13,12 @@ COMMENT=	Implementation of MIME, the Multipurpose Internet Mail Extensions
 CONFLICTS+=	elm>=2.5.5 mm-2.7
 
 USE_BUILDLINK2=		YES
+WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_PKGINSTALL=		YES
 USE_X11=		YES
 
 CFLAGS+=	-DPKG_SYSCONFDIR='\\\"${PKG_SYSCONFDIR}\\\"'
-MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} CHMOD=${CHMOD} SED=${SED}
 
 EGDIR=		${PREFIX}/share/examples/metamail
 CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
