@@ -1,3 +1,3 @@
-$NetBSD: md5,v 1.3 1999/05/03 19:45:44 tv Exp $
+$NetBSD: md5,v 1.4 2000/04/12 17:51:58 jdolecek Exp $
 
-MD5 (php-3.0.7.tar.gz) = 3881388d0bc88f0fda5bb925d908314a
+MD5 (php-3.0.16.tar.gz) = 0dc379181f625c30f635c2cf3080acb1

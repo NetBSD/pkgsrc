@@ -1,13 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 1999/05/03 21:32:46 tv Exp $
-bin/dbfadd
-bin/dbfcreat
-bin/dbfdel
-bin/dbfget
-bin/dbflst
-bin/dbfndx
-bin/dbfpack
-bin/dbfscan
-bin/dbftst
+@comment $NetBSD: PLIST,v 1.5 2000/04/12 17:51:58 jdolecek Exp $
 bin/php
 bin/php2convert
 etc/php3.ini.example
