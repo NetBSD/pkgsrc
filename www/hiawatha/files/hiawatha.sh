@@ -1,11 +1,12 @@
-#! /bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: hiawatha.sh,v 1.1.1.1 2001/04/15 02:56:40 jwise Exp $
+# $NetBSD: hiawatha.sh,v 1.2 2003/08/04 11:00:32 jmmv Exp $
 #
 # PROVIDE: hiawatha
 # REQUIRE: DAEMON
 
 PREFIX=@PREFIX@
+PKG_SYSCONFDIR=@PKG_SYSCONFDIR@
 
 pidfile=/var/run/hiawatha.pid
 
@@ -19,7 +20,7 @@ CLASSPATH=${PREFIX}/lib/java/hiawatha/hiawatha.jar:${PREFIX}/lib/java/hiawatha/x
 export CLASSPATH
 
 name="hiawatha"
-command="${JAVA_HOME}/bin/java com.pault.hiawatha.Server ${PREFIX}/etc/hiawatha.cfg"
+command="${JAVA_HOME}/bin/java com.pault.hiawatha.Server ${PKG_SYSCONFDIR}/hiawatha.cfg"
 
 if [ ! -d /var/spool/hiawatha ]
 then
