@@ -1,0 +1,36 @@
+$NetBSD: patch-ag,v 1.7 2001/10/14 19:55:48 jlam Exp $
+
+--- lib/ExtUtils/MM_Unix.pm.orig	Thu Mar 15 10:25:20 2001
++++ lib/ExtUtils/MM_Unix.pm	Mon Oct  1 03:51:12 2001
+@@ -1059,6 +1059,22 @@
+     my($ldfrom) = '$(LDFROM)';
+     $armaybe = 'ar' if ($^O eq 'dec_osf' and $armaybe eq ':');
+     my(@m);
++
++    # Set LLIBPERL to nothing on static perl platforms, and to the flags
++    # needed to link against the shared libperl library on shared perl
++    # platforms.  We peek at lddlflags to see if we need -Wl,-R or -R
++    # to add paths to the run-time library search path.
++    #
++    my($llibperl) = '';
++    if (($^O eq 'netbsd') and ($Config{'useshrplib'} eq 'true')) {
++	if ($Config{'lddlflags'} =~ /-Wl,-R/) {
++	    $llibperl = '-L$(PERL_INC) -Wl,-R$(INSTALLARCHLIB)/CORE -lperl';
++	} elsif ($Config{'lddlflags'} =~ /-R/) {
++	    $llibperl = '-L$(PERL_INC) -R$(INSTALLARCHLIB)/CORE -lperl';
++	}
++    }
++    push(@m,'LLIBPERL = '.$llibperl."\n");
++
+     push(@m,'
+ # This section creates the dynamically loadable $(INST_DYNAMIC)
+ # from $(OBJECT) and possibly $(MYEXTLIB).
+@@ -1088,7 +1104,7 @@
+ ');
+ 
+     push(@m,'	LD_RUN_PATH="$(LD_RUN_PATH)" $(LD) '.$ldrun.' $(LDDLFLAGS) '.$ldfrom.
+-		' $(OTHERLDFLAGS) -o $@ $(MYEXTLIB) $(PERL_ARCHIVE) $(LDLOADLIBS) $(PERL_ARCHIVE_AFTER) $(EXPORT_LIST)');
++		' $(OTHERLDFLAGS) -o $@ $(MYEXTLIB) $(PERL_ARCHIVE) $(LLIBPERL) $(LDLOADLIBS) $(PERL_ARCHIVE_AFTER) $(EXPORT_LIST)');
+     push @m, '
+ 	$(CHMOD) $(PERM_RWX) $@
+ ';
