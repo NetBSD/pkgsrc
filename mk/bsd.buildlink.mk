@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.54 2002/01/06 02:36:40 tron Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.55 2002/02/26 22:24:00 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:
@@ -139,15 +139,6 @@ MAKE_ENV+=		BUILDLINK_LDFLAGS="${_BUILDLINK_LDFLAGS}"
 
 ECHO_BUILDLINK_MSG?=	${ECHO_MSG} "=>"
 
-# Filter out libtool archives from the list of file to link into
-# ${BUILDLINK_DIR}.  Linking against a libtool archive causes the final
-# installed locations of the libraries to be used, which defeats what
-# buildlink tries to accomplish, so we avoid this when we can.
-#
-_LIBTOOL_ARCHIVE_FILTER=						\
-	${SED}	-e 's|[^[:blank:]]*lib/[^[:blank:]]*.la$$||g'		\
-		-e 's|[^[:blank:]]*lib/[^[:blank:]]*.la[[:blank:]]||g'
-
 _BUILDLINK_USE: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cookie=${BUILDLINK_DIR}/.${.TARGET:S/-buildlink//}_buildlink_done; \
@@ -155,7 +146,6 @@ _BUILDLINK_USE: .USE
 		${ECHO_BUILDLINK_MSG} "Linking ${.TARGET:S/-buildlink//} files into ${BUILDLINK_DIR}."; \
 		${MKDIR} ${BUILDLINK_DIR};				\
 		files="${BUILDLINK_FILES.${.TARGET:S/-buildlink//}:S/^/${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}\//g}"; \
-		files="`${ECHO} $${files} | ${_LIBTOOL_ARCHIVE_FILTER}`"; \
 		for file in $${files}; do				\
 			rel_file=`${ECHO} $${file} | ${SED} -e "s|${BUILDLINK_PREFIX.${.TARGET:S/-buildlink//}}/||"` ; \
 			if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
@@ -169,7 +159,13 @@ _BUILDLINK_USE: .USE
 					${MKDIR} $${dir};		\
 				fi;					\
 				${RM} -f $${dest};			\
-				${LN} -sf $${file} $${dest};		\
+				case $${file} in			\
+				*.la)					\
+					;;				\
+				*)					\
+					${LN} -sf $${file} $${dest};	\
+					;;				\
+				esac;					\
 				if [ -z "${BUILDLINK_TRANSFORM.${.TARGET:S/-buildlink//}:Q}" ]; then \
 					${ECHO} $${file} >> $${cookie};	\
 				else					\
