@@ -5,8 +5,8 @@ NNAAMMEE
 
 SSYYNNOOPPSSIISS
      mmttrreeee [--ccCCddDDeellLLPPrruuUUWWxx] [--ii | --mm] [--ff _s_p_e_c] [--pp _p_a_t_h] [--kk _k_e_y_w_o_r_d_s]
-     [--KK _k_e_y_w_o_r_d_s] [--RR _k_e_y_w_o_r_d_s] [--EE _t_a_g_s] [--II _t_a_g_s] [--NN _d_b_d_i_r] [--ss _s_e_e_d]
-     [--XX _e_x_c_l_u_d_e_-_f_i_l_e]
+           [--KK _k_e_y_w_o_r_d_s] [--RR _k_e_y_w_o_r_d_s] [--EE _t_a_g_s] [--II _t_a_g_s] [--NN _d_b_d_i_r]
+           [--ss _s_e_e_d] [--XX _e_x_c_l_u_d_e_-_f_i_l_e]
 
 DDEESSCCRRIIPPTTIIOONN
      The mmttrreeee utility compares the file hierarchy rooted in the current di-
@@ -46,8 +46,8 @@ DDEESSCCRRIIPPTTIIOONN
      --II _t_a_g_s
            Add the comma separated tags to the ``inclusion'' list.  Non-direc-
            tories with tags which are in the inclusion list are printed with
-           --DD. If no inclusion list is provided, the default is to display all
-           files.
+           --DD.  If no inclusion list is provided, the default is to display
+           all files.
 
      --ii    If specified, set the schg and/or sappnd flags.
 
@@ -199,7 +199,7 @@ DDEESSCCRRIIPPTTIIOONN
 
      ssiizzee    The size, in bytes, of the file.
 
-     ttaaggss    Comma delimited tags to be matched with --EE and --II. These may be
+     ttaaggss    Comma delimited tags to be matched with --EE and --II.  These may be
              specified without leading or trailing commas, but will be stored
              internally with them.
 
@@ -236,8 +236,8 @@ DDEESSCCRRIIPPTTIIOONN
           separated by whitespace.  If `all' is specified, unset all of the
           keywords.
 
-     3.   A file specification, consisting of a path name, followed by whites-
-          pace, followed by zero or more whitespace separated keyword/value
+     3.   A file specification, consisting of a path name, followed by white-
+          space, followed by zero or more whitespace separated keyword/value
           pairs.
 
           The path name may be preceded by whitespace characters.  The path
@@ -251,9 +251,9 @@ DDEESSCCRRIIPPTTIIOONN
           from comments.
 
           Each of the keyword/value pairs consist of a keyword, followed by an
-          equals sign (`='), followed by the keyword's value, without whites-
-          pace characters.  These values override, without changing, the glob-
-          al value of the corresponding keyword.
+          equals sign (`='), followed by the keyword's value, without white-
+          space characters.  These values override, without changing, the
+          global value of the corresponding keyword.
 
           The first path name entry listed must be a directory named `.', as
           this ensures that intermixing full and relative path names will work
@@ -313,4 +313,4 @@ HHIISSTTOORRYY
      rrmmdd116600, sshhaa11, ttaaggss, and aallll keywords, --DD, --EE, --II, --ll, --LL, --NN, --PP, --RR, --WW,
      and --XX flags, and support for full paths appeared in NetBSD 1.6.
 
-NetBSD 1.6                     December 22, 2002                             5
+NetBSD 1.6                     December 22, 2002                    NetBSD 1.6
