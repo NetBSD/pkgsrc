@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.12 2003/09/12 19:42:06 tron Exp $
+$NetBSD: distinfo,v 1.13 2004/05/13 18:27:48 adam Exp $
 
-SHA1 (pine4.58.tar.bz2) = 5522426ef925813218ce1a3fbb939591778b59f1
-Size (pine4.58.tar.bz2) = 2837321 bytes
+SHA1 (pine4.60.tar.bz2) = 7276fad1325a7d6c96a80454e12dcc05e2ad8b78
+Size (pine4.60.tar.bz2) = 2996963 bytes
 SHA1 (patch-aa) = 13a6268321e3620c9438d19abec92072c7aecab4
-SHA1 (patch-ab) = ff843a907a8bb2015e7e79d5b221b6b024823130
-SHA1 (patch-ac) = 5f648f4e34d78af439ed2ea4953543aab4bd232f
-SHA1 (patch-ad) = 1180abc4909f4120ec91ba14854da9445be3ac6a
+SHA1 (patch-ab) = 8f254beb0fc5d7e8f04ee442db64fccecd1d3eb2
+SHA1 (patch-ac) = 0b14723354ef24109015c482acf62f338de4998a
+SHA1 (patch-ad) = a5145664372b0ad308a0ee2501211e927d343971
 SHA1 (patch-ae) = f228f3c7f61be31a36730b252dfa37d611e8be4b
 SHA1 (patch-af) = ebc41187ea97f57f1553a6919c81c773013a1428
 SHA1 (patch-ag) = 7166128e46a10b879c44caea1207b84d13d1b0f4
