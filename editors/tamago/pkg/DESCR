@@ -17,3 +17,7 @@ C-u C-\	Switch the input method.
 	chinese-cns-egg-wnn-zy
 	korean-egg-wnn
 You may need more Wnn or sj3 package/server.
+
+Current Version Information:
+cvs checkout:
+  :pserver:anonymous@cvs.m17n.org:/cvs/tamago via null passwd.
