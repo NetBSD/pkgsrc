@@ -1,21 +1,22 @@
-$NetBSD: patch-ac,v 1.1 2002/11/25 20:16:27 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2003/04/02 12:03:44 wiz Exp $
 
---- input/xwin/Makefile.in.orig	Sun May 16 13:50:59 1999
+--- input/xwin/Makefile.in.orig	Wed Mar 19 22:19:06 2003
 +++ input/xwin/Makefile.in
-@@ -334,13 +334,11 @@ mostlyclean-generic distclean-generic cl
- maintainer-clean-generic clean mostlyclean distclean maintainer-clean
+@@ -382,13 +382,13 @@ uninstall-am: uninstall-info-am uninstal
+ 	uninstall-am uninstall-info-am uninstall-inputlibLTLIBRARIES
  
  
 -xev.c:	../x/xev.c
-+xev.c:	../x/xev.c ../x/xev.h
++xev.c:	../x/xev.c xev.h
  	rm -f xev.c
  	ln -s ../x/xev.c .
--
--xev.lo:
--	rm -f xev.lo
--	ln -s ../x/xev.lo .
++xev.h: ../x/xev.h
 +	rm -f xev.h
 +	ln -s ../x/xev.h .
  
+-xev.lo:
+-	rm -f xev.lo
+-	ln -s ../x/xev.lo .
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

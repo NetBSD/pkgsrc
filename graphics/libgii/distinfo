@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.5 2003/01/02 23:15:44 jmmv Exp $
+$NetBSD: distinfo,v 1.6 2003/04/02 12:03:42 wiz Exp $
 
-SHA1 (libgii-0.6.tar.gz) = d83d7b045343b1f745e6557208532c959e9e825f
-Size (libgii-0.6.tar.gz) = 258201 bytes
-SHA1 (patch-aa) = addcc0f20a0676464806f152e9466d344ef052ef
-SHA1 (patch-ab) = a3052dbb66ffcd6815709cbcaf6eda3d2b138c77
-SHA1 (patch-ac) = 3c1787495d633f04e7a430de074f36ce19cfb390
-SHA1 (patch-ad) = 0a3ca686488d26b7a55f2e86a3f10ec2d52e1643
-SHA1 (patch-ae) = 56fd144dd17a270838935ac333f27e4948aae28e
+SHA1 (libgii-0.8.3.src.tar.bz2) = d66517e602ecb7766eed707284699a75f4f42f93
+Size (libgii-0.8.3.src.tar.bz2) = 373117 bytes
+SHA1 (patch-ab) = 8a152d9b3cedeb9164c6c05059a82068b854dbef
+SHA1 (patch-ac) = f68870863504ab268071c842a1ef346235c2242c
+SHA1 (patch-ad) = d34c4862c383d42a12a991fbf9437f0a42d42026
+SHA1 (patch-ae) = 0efd1b558d098a6645e409092db0238b71507e75
+SHA1 (patch-af) = 364d793e1f78f87102d497d83c29b334575421e3
+SHA1 (patch-ag) = cdf19f624e0b87f7e33c9430cc622e8fca10fb47
