@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/04/14 16:15:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2004/05/30 07:52:08 minskim Exp $
 
 DISTNAME=		ed2k-gtk-gui-0.6.2
 CATEGORIES=		net
@@ -20,11 +20,7 @@ SUBST_STAGE.shell=	post-patch
 SUBST_FILES.shell=	ed2k_gui/misc.c
 SUBST_SED.shell=	-e 's,/bin/bash,/bin/sh,g'
 
-SUBST_CLASSES+=		gtk24
-SUBST_MESSAGE.gtk24=	"Fixing build with GTK+ 2.4."
-SUBST_STAGE.gtk24=	post-patch
-SUBST_FILES.gtk24=	ed2k_gui/Makefile.in
-SUBST_SED.gtk24=	-e 's|-D.*_DISABLE_DEPRECATED||g'
+BUILDLINK_TRANSFORM+=	S:-DGTK_DISABLE_DEPRECATED:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pkgconfig/buildlink3.mk"
