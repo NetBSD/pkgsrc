@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2002/08/19 18:58:00 mycroft Exp $
+# $NetBSD: Makefile,v 1.7 2002/08/20 00:54:57 wiz Exp $
 
 DISTNAME=	ogle_gui-0.8.5
 CATEGORIES=	graphics
@@ -26,6 +26,9 @@ BUILDLINK_DEPENDS.libxml2=	libxml2>=2.4.19
 #LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
 LDFLAGS+=	-Wl,-R${LOCALBASE}/lib/ogle -L${LOCALBASE}/lib/ogle
+
+.include "../../devel/binutils/buildlink.mk"
+.include "../../lang/gcc/Makefile.gcc"
 
 .include "../../textproc/libxml2/buildlink.mk"
 .include "../../x11/gtk/buildlink.mk"
