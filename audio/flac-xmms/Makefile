@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2002/12/24 18:55:34 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2003/02/14 23:56:28 wiz Exp $
 #
 
-DISTNAME=	flac-1.0.4
-PKGNAME=	flac-xmms-1.0.4
+DISTNAME=	flac-1.1.0
+PKGNAME=	flac-xmms-1.1.0
 CATEGORIES=	audio archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flac/}
 
@@ -16,14 +16,15 @@ GNU_CONFIGURE=		yes
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool-disable-static
 
 XMMS_WRKSRC=	${WRKSRC}/src/plugin_xmms
 
-do-build:
-	@cd ${XMMS_WRKSRC}/../plugin_common && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
-	@cd ${XMMS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+#do-build:
+#	@cd ${XMMS_WRKSRC}/../plugin_common && ${SETENV} ${MAKE_ENV} \
+#		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
+#	@cd ${XMMS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
+#		${MAKE_PROGRAM} ${MAKE_FLAGS} -f ${MAKEFILE} ${ALL_TARGET}
 
 do-install:
 	@cd ${XMMS_WRKSRC} && ${SETENV} ${MAKE_ENV} \
