@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/01/09 23:03:19 cube Exp $
+
+SHA1 (ion-devel-20031211.tar.gz) = ced31be7a6d31006455b1210c045faaf4b747d98
+Size (ion-devel-20031211.tar.gz) = 313355 bytes
+SHA1 (patch-aa) = 7a1284b4151f05d3fa98d07d1bffb05db8428a79
+SHA1 (patch-ab) = b63395c877957621d76f57fa42e710241d5903c0
+SHA1 (patch-ac) = 7739e037122fb98c5e70575350a634e084a48b8b
+SHA1 (patch-ad) = f54cfff3e250116b417cb0d3bd9329d9d0ea5405
+SHA1 (patch-ae) = f3c1a38ba162964a173cbe37559e54fc687e8134
