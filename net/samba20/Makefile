@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2001/08/03 13:24:34 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2001/08/22 15:42:19 jlam Exp $
 
 DISTNAME=		samba-2.0.10
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -76,10 +76,7 @@ FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 MESSAGE_SUBST+=		ETCDIR=${SAMBA_ETCDIR}
 
 pre-install:
-	for file in nmbd.sh smbd.sh; do					\
-		${SED} ${FILES_SUBST_SED}				\
-			${FILESDIR}/$${file} > ${WRKDIR}/$${file};	\
-        done
+	${SED} ${FILES_SUBST_SED} ${FILESDIR}/samba.sh > ${WRKDIR}/samba.sh
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
@@ -98,8 +95,7 @@ post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${EXAMPLESDIR}
 	${CHMOD} -R ugo-w ${EXAMPLESDIR}
 
-	${INSTALL_SCRIPT} ${WRKDIR}/nmbd.sh ${PREFIX}/etc/rc.d/nmbd
-	${INSTALL_SCRIPT} ${WRKDIR}/smbd.sh ${PREFIX}/etc/rc.d/smbd
+	${INSTALL_SCRIPT} ${WRKDIR}/samba.sh ${PREFIX}/etc/rc.d/samba
 	${MV} ${PREFIX}/bin/convert_smbpasswd ${PREFIX}/sbin/convert_smbpasswd
 	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh		\
 		${PREFIX}/sbin/mksmbpasswd
