@@ -1,0 +1,11 @@
+--- sysincludes.h.original	Wed Jan 21 17:53:59 1998
++++ sysincludes.h	Wed Jan 21 17:44:09 1998
+@@ -11,6 +11,8 @@
+ /*                                                                     */
+ /***********************************************************************/
+ 
++#include <sys/param.h>
++
+ #ifdef BSD
+ /* on BSD we prefer gettimeofday, ... */
+ # ifdef HAVE_GETTIMEOFDAY
