@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2003/07/21 16:43:44 martti Exp $
+# $NetBSD: Makefile,v 1.18 2003/12/03 02:42:35 xtraeme Exp $
 #
 
 DISTNAME=	pilrc-2.9p9
@@ -48,7 +48,7 @@ PLIST_SUBST+=	PILRCUI='@comment '
 #	${CHMOD} +x ${WRKSRC}/missing
 
 pre-patch:
-	cd ${WRKSRC} && tr -d '\015' < ${DISTDIR}/${DIFFS} \
+	cd ${WRKSRC} && ${TR} -d '\015' < ${DISTDIR}/${DIFFS} \
 		| ${PATCH} --quiet -p1
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR} ${DOCDIR}/images
