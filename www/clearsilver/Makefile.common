@@ -1,0 +1,30 @@
+# $NetBSD: Makefile.common,v 1.1 2004/11/29 00:08:57 epg Exp $
+
+DISTNAME=		clearsilver-0.9.13
+CLEARSILVER_BASE=       ${DISTNAME:S/-/-base-/}
+CATEGORIES=		www
+MASTER_SITES=		http://www.clearsilver.net/downloads/
+
+# Work around ruby/modules.mk setting DIST_SUBDIR.
+DIST_SUBDIR=		.
+
+MAINTAINER=		epg@NetBSD.org
+HOMEPAGE=		http://www.clearsilver.net/
+COMMENT=		Fast, powerful, language-neutral HTML template system
+
+DISTINFO_FILE=		${.CURDIR}/../../www/clearsilver/distinfo
+FILESDIR=       	${.CURDIR}/../../www/clearsilver/files
+PATCHDIR=		${.CURDIR}/../../www/clearsilver/patches
+
+GNU_CONFIGURE=		yes
+USE_BUILDLINK3=		yes
+USE_GNU_TOOLS+=		make
+
+CONFIGURE_ARGS+=	--disable-apache
+CONFIGURE_ARGS+=	--disable-csharp
+CONFIGURE_ARGS+=	--disable-java
+CONFIGURE_ARGS+=	--disable-perl
+CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--disable-ruby
+
+.include "../../devel/zlib/buildlink3.mk"
