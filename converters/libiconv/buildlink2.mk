@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.5 2003/03/14 19:37:32 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.6 2003/06/29 11:19:09 wiz Exp $
 
 .if !defined(ICONV_BUILDLINK2_MK)
 ICONV_BUILDLINK2_MK=	# defined
@@ -12,7 +12,7 @@ BUILDLINK_PKGSRCDIR.iconv?=	../../converters/libiconv
 _NEED_ICONV=		YES
 _BLNK_LIBICONV_FOUND=	NO
 .else
-.  if exists(/usr/include/iconv.h)
+.  if exists(/usr/include/iconv.h) && exists(/usr/lib/libiconv.so)
 _NEED_ICONV=		NO
 _BLNK_LIBICONV_LIST!=	${ECHO} /usr/lib/libiconv.*
 .    if ${_BLNK_LIBICONV_LIST} != "/usr/lib/libiconv.*"
