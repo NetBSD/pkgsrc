@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2001/08/20 01:51:04 hubertf Exp $
+$NetBSD: patch-ac,v 1.5 2001/08/24 12:52:06 hubertf Exp $
 
---- ftp.cc.orig	Mon Jan 17 12:49:41 2000
-+++ ftp.cc	Mon Aug 20 03:45:51 2001
+--- plpftp/ftp.cc.orig	Mon Jan 17 12:49:41 2000
++++ plpftp/ftp.cc	Mon Aug 20 03:45:51 2001
 @@ -34,6 +34,10 @@
  #include <sys/stat.h>
  #include <signal.h>
