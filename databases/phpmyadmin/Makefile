@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2001/07/10 13:43:01 tron Exp $
+# $NetBSD: Makefile,v 1.3 2001/07/10 13:56:43 tron Exp $
 
 DISTNAME=	phpMyAdmin-2.2.0rc1
 PKGNAME=	phpmyadmin-2.1.99.1nb1
@@ -17,10 +17,13 @@ DOC_FILES=	CREDITS DEVELOPERS Documentation.html INSTALL LICENSE README \
 		TODO
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/images
+	${INSTALL_DATA_DIR} ${PREFIX}/share/phpmyadmin/lang
 	${INSTALL_SCRIPT} ${WRKSRC}/*.js ${PREFIX}/share/phpmyadmin
 	${INSTALL_SCRIPT} ${WRKSRC}/*.php3 ${PREFIX}/share/phpmyadmin
 	${INSTALL_DATA} ${WRKSRC}/images/*.* ${PREFIX}/share/phpmyadmin/images
+	${INSTALL_SCRIPT} ${WRKSRC}/lang/*.php3 ${PREFIX}/share/phpmyadmin/lang
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/phpmyadmin
 	for FILE in ${DOC_FILES}; do \
 	  ${INSTALL_DATA} ${WRKSRC}/$$FILE ${PREFIX}/share/doc/phpmyadmin; \
