@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2004/03/25 22:49:14 jlam Exp $
+$NetBSD: patch-aa,v 1.11 2004/04/09 23:37:28 danw Exp $
 
 --- Makefile.in.orig	Mon Mar  1 18:58:59 2004
 +++ Makefile.in
@@ -22,18 +22,24 @@ $NetBSD: patch-aa,v 1.10 2004/03/25 22:49:14 jlam Exp $
  INSTALL_LIBRARY		= ${INSTALL}
  INSTALL_DATA		= ${INSTALL} -m 644
  
-@@ -190,8 +190,8 @@ TCL_EXE			= tclsh
- # configure script.  You shouldn't normally need to modify any of
+@@ -191,7 +191,7 @@ TCL_EXE			= tclsh
  # these definitions by hand.
  
--STLIB_LD		= @STLIB_LD@
+ STLIB_LD		= @STLIB_LD@
 -SHLIB_LD		= @SHLIB_LD@
-+STLIB_LD		= ${LIBTOOL} --mode=link @CC@ -rpath ${PREFIX}/lib
 +SHLIB_LD		= ${LIBTOOL} --mode=link @CC@ -rpath ${PREFIX}/lib
  SHLIB_CFLAGS		= @SHLIB_CFLAGS@
  SHLIB_LD_FLAGS		= @SHLIB_LD_FLAGS@
  SHLIB_LD_LIBS		= @SHLIB_LD_LIBS@
-@@ -254,8 +254,9 @@ DLTEST_DIR		= @TCL_SRC_DIR@/unix/dltest
+@@ -217,6 +217,7 @@ BUILD_DLTEST		= @BUILD_DLTEST@
+ #BUILD_DLTEST		=
+ 
+ TCL_LIB_FILE		= @TCL_LIB_FILE@
++TCL_LA_FILE		= ${TCL_LIB_FILE:C/@SHLIB_SUFFIX@/.la/}
+ #TCL_LIB_FILE		= libtcl.a
+ 
+ # Generic lib name used in rules that apply to tcl and tk
+@@ -254,8 +255,9 @@ DLTEST_DIR		= @TCL_SRC_DIR@/unix/dltest
  # Must be absolute to so the corresponding tcltest's tcl_library is absolute.
  TCL_BUILDTIME_LIBRARY	= @TCL_SRC_DIR@/library
  
@@ -44,16 +50,41 @@ $NetBSD: patch-aa,v 1.10 2004/03/25 22:49:14 jlam Exp $
  
  # Flags to be passed to mkLinks to control whether the manpages
  # should be compressed and linked with softlinks
-@@ -474,7 +475,7 @@ objs: ${OBJS}
+@@ -445,7 +447,7 @@ SRCS = $(GENERIC_SRCS) $(UNIX_SRCS) $(ST
+ 
+ all: binaries libraries doc
+ 
+-binaries: ${LIB_FILE} $(STUB_LIB_FILE) $(TCL_BUILD_EXP_FILE) tclsh
++binaries: ${TCL_LA_FILE} $(STUB_LIB_FILE) $(TCL_BUILD_EXP_FILE) tclsh
+ 
+ libraries:
+ 
+@@ -453,7 +455,7 @@ doc:
+ 
+ # The following target is configured by autoconf to generate either
+ # a shared library or non-shared library for Tcl.
+-${LIB_FILE}: ${OBJS} ${STUB_LIB_FILE}
++${TCL_LA_FILE}: ${OBJS} ${STUB_LIB_FILE}
+ 	rm -f $@
+ 	@MAKE_LIB@
+ 
+@@ -473,8 +475,8 @@ tclLibObjs:
+ objs: ${OBJS}
  
  
- tclsh: ${TCLSH_OBJS} ${TCL_LIB_FILE}
+-tclsh: ${TCLSH_OBJS} ${TCL_LIB_FILE}
 -	${CC} ${LDFLAGS} ${TCLSH_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} \
++tclsh: ${TCLSH_OBJS} ${TCL_LA_FILE}
 +	${LD} ${LDFLAGS} ${TCLSH_OBJS} @TCL_BUILD_LIB_SPEC@ ${LIBS} \
  		${CC_SEARCH_FLAGS} -o tclsh
  
  # Resetting the LIB_RUNTIME_DIR below is required so that
-@@ -486,7 +487,7 @@ tcltest: ${TCLTEST_OBJS} ${TCL_LIB_FILE}
+@@ -482,11 +484,11 @@ tclsh: ${TCLSH_OBJS} ${TCL_LIB_FILE}
+ # burned into its ld search path. This keeps tcltest from
+ # picking up an already installed version of the Tcl library.
+ 
+-tcltest: ${TCLTEST_OBJS} ${TCL_LIB_FILE} ${BUILD_DLTEST}
++tcltest: ${TCLTEST_OBJS} ${TCL_LA_FILE} ${BUILD_DLTEST}
  	$(MAKE) tcltest-real LIB_RUNTIME_DIR=`pwd`
  
  tcltest-real:
@@ -62,7 +93,7 @@ $NetBSD: patch-aa,v 1.10 2004/03/25 22:49:14 jlam Exp $
  		${CC_SEARCH_FLAGS} -o tcltest
  
  # Note, in the target below TCL_LIBRARY needs to be set or else
-@@ -1054,7 +1055,7 @@ tclMacOSXBundle.o: $(MAC_OSX_DIR)/tclMac
+@@ -1054,7 +1056,7 @@ tclMacOSXBundle.o: $(MAC_OSX_DIR)/tclMac
  
  xttest:  ${XTTEST_OBJS} ${GENERIC_OBJS} ${UNIX_OBJS} ${COMPAT_OBJS} \
  	@DL_OBJS@ ${BUILD_DLTEST}
