@@ -1,8 +1,20 @@
-# $NetBSD: Makefile,v 1.15 2002/04/04 12:29:48 tron Exp $
+# $NetBSD: Makefile,v 1.16 2002/07/02 12:47:47 wiz Exp $
+
+DISTNAME=		flash_${DISTUNAME}
+CATEGORIES=		graphics www
+MASTER_SITES=		http://download.macromedia.com/pub/shockwave/flash/${SUB}/
+
+MAINTAINER=		packages@netbsd.org
+HOMEPAGE=		http://www.flash.com/
+COMMENT=		MacroMedia Flash Player Netscape plugin
 
 ONLY_FOR_PLATFORM=      *-*-i386 SunOS-*-sparc
 
+DIST_SUBDIR=		flash/${FLASH_VERS}
+
 .include "../../mk/bsd.prefs.mk"
+
+SUB=			english/${DISTUNAME}/${FLASH_VERS}
 
 .if (${MACHINE_ARCH} == "i386")
 FLASH_VERS=		5.0r47
@@ -20,19 +32,9 @@ FLASH_VERS=		5.0
 .endif
 PKGNAME=		ns-flash-${FLASH_VERS:S/r/./}
 
-DISTNAME=		flash_${DISTUNAME}
-DIST_SUBDIR=		flash/${FLASH_VERS}
-CATEGORIES=		graphics www
-SUB=			english/${DISTUNAME}/${FLASH_VERS}
-MASTER_SITES=		http://download.macromedia.com/pub/shockwave/flash/${SUB}/
-
 # Must update communicator/navigator to at least 4.76nb1
 CONFLICTS+=		communicator<=4.76nb1
 CONFLICTS+=		navigator<=4.76nb1
-
-MAINTAINER=		packages@netbsd.org
-HOMEPAGE=		http://www.flash.com/
-COMMENT=		MacroMedia Flash Player Netscape plugin
 
 RESTRICTED=             "Redistribution not permitted"
 NO_SRC_ON_FTP=		${RESTRICTED}
