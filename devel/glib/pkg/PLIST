@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 1998/08/19 09:29:26 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/10/04 18:03:20 tron Exp $
 bin/glib-config
 include/glib/glib.h
 include/glib/glibconfig.h
-lib/libglib11.a
-lib/libglib11.la
-lib/libglib11.so.0.2
+include/glib/gmodule.h
+lib/libglib.a
+lib/libglib.la
+lib/libglib.so.3.0
+lib/libgmodule.a
+lib/libgmodule.la
+lib/libgmodule.so.3.0
 share/aclocal/glib.m4
 @dirrm include/glib
