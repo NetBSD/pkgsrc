@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5605 2004/04/16 12:34:53 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5606 2004/04/16 13:44:45 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1995,3 +1995,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated tkgate to 1.6inb2 [minskim 2004-04-16]
 	Updated cadaver to 0.22.1 [recht 2004-04-16]
 	Updated neon to 0.24.5 [xtraeme 2004-04-16]
+	Updated gst-plugins-theora to 0.8.1nb1 [jmmv 2004-04-15]
