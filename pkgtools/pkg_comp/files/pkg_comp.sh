@@ -1,9 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.10 2003/08/30 21:11:31 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.11 2003/09/07 22:31:18 jmmv Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
-# Copyright (c) 2002, 2003, Julio Merino <jmmv@netbsd.org>
+# Copyright (c) 2002, 2003, Julio M. Merino Vidal <jmmv@netbsd.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -47,7 +47,7 @@ _TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
                 SETS_X11 USE_XPKGWEDGE REAL_SRC REAL_SRC_OPTS REAL_PKGSRC \
                 REAL_PKGSRC_OPTS REAL_DISTFILES REAL_DISTFILES_OPTS \
                 REAL_PACKAGES REAL_PACKAGES_OPTS REAL_PKGVULNDIR \
-                NETBSD_RELEASE MOUNT_SCRIPT UMOUNT_SCRIPT"
+                NETBSD_RELEASE MOUNT_SCRIPT UMOUNT_SCRIPT SYNC_UMOUNT"
 
 env_clean()
 {
@@ -102,6 +102,7 @@ env_setdefaults()
     : ${NETBSD_RELEASE:=no}
     : ${MOUNT_SCRIPT:=}
     : ${UMOUNT_SCRIPT:=}
+    : ${SYNC_UMOUNT:=no}
 }
 
 # ----------------------------------------------------------------------
@@ -123,12 +124,12 @@ usage()
 copy_vulnerabilities()
 {
     if [ "$USE_AUDIT_PACKAGES" = "yes" ]; then
-        echo "PKG_COMP ==> Installing new \`vulnerabilities' file"
-        if [ ! -f "$REAL_PKGVULNDIR/vulnerabilities" ]; then
-            echo "$REAL_PKGVULNDIR/vulnerabilities not found."
+        echo "PKG_COMP ==> Installing new \`pkg-vulnerabilities' file"
+        if [ ! -f "$REAL_PKGVULNDIR/pkg-vulnerabilities" ]; then
+            echo "$REAL_PKGVULNDIR/pkg-vulnerabilities not found."
         else
             mkdir -p $DESTDIR/$PKGVULNDIR
-            cp $REAL_PKGVULNDIR/vulnerabilities $DESTDIR/$PKGVULNDIR
+            cp $REAL_PKGVULNDIR/pkg-vulnerabilities $DESTDIR/$PKGVULNDIR
         fi
     fi
 }
@@ -243,13 +244,16 @@ fsumount()
 
     echo " done."
 
-    printf "Syncing: 1"
-    sync ; sleep 1
-    printf " 2"
-    sync ; sleep 1
-    printf " 3"
-    sync ; sleep 1
-    echo " done."
+    if [ "$SYNC_UMOUNT" != "no" ]; then
+        printf "Syncing: 1"
+        sync ; sleep 1
+        printf " 2"
+        sync ; sleep 1
+        printf " 3"
+        sync ; sleep 1
+        echo " done."
+    fi
+
     if [ "$fsfailed" = "yes" ]; then
         err "FATAL: failed to umount all filesystems"
     else
@@ -390,6 +394,8 @@ pkg_makeroot()
     # signals to umount them.
     trap "echo \"*** Process aborted ***\" ; fsumount ; exit 1" INT QUIT
 
+    check_pkg_install
+
     if [ "$USE_AUDIT_PACKAGES" = "yes" ]; then
         pkg_build security/audit-packages
     fi
@@ -505,7 +511,7 @@ pkg_build()
         err "invalid packages:$invalid"
     fi
 
-    copy_vulnerabilities
+    check_pkg_install    # executes copy_vulnerabilities too
 
     # Build them
     fsmount
@@ -541,6 +547,29 @@ EOF
             echo "    $p"
         done
     fi
+}
+
+check_pkg_install()
+{
+    copy_vulnerabilities
+
+    echo "PKG_COMP ==> Checking that pkg_install is up to date"
+    fsmount
+    script=`mktemp $DESTDIR/pkg_comp/tmp/pkg_comp-XXXX`.sh
+    cat > $script <<EOF
+#!/bin/sh
+cd /usr/pkgsrc/pkgtools/pkg_comp
+fail=\$(make show-var VARNAME=PKG_FAIL_REASON)
+if echo \$fail | grep "package tools need to be updated" >/dev/null; then
+    echo "PKG_COMP ==> pkg_install is out of date; rebuilding"
+    cd /usr/pkgsrc/pkgtools/pkg_install
+    make && make install && make clean
+fi
+EOF
+    chmod +x $script
+    chroot $DESTDIR /pkg_comp/tmp/`basename $script`
+    rm $script
+    fsumount
 }
 
 # ----------------------------------------------------------------------
