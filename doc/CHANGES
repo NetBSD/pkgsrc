@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9303 2005/02/25 09:54:43 adam Exp $
+$NetBSD: CHANGES,v 1.9304 2005/02/25 10:23:05 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1080,3 +1080,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated hdf5 to 1.6.3 [adam 2005-02-25]
 	Updated ngrep to 1.43 [adam 2005-02-25]
 	Updated netcdf to 3.6.0p1 [adam 2005-02-25]
+	Updated cyrus-imapd to 2.2.12 [adrianp 2005-02-25]
