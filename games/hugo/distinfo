@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.2 2004/05/28 14:24:04 dillo Exp $
+$NetBSD: distinfo,v 1.3 2004/06/15 13:21:21 grant Exp $
 
 SHA1 (hugo-3.0.07/hugov30_unix_source.tar.gz) = 4b3afc3b4f03ff23643460321d76127980184ec0
 Size (hugo-3.0.07/hugov30_unix_source.tar.gz) = 213002 bytes
 SHA1 (hugo-3.0.07/hugolib.zip) = 76b5580461a6c6f15780f554d2e23574ef78e24d
 Size (hugo-3.0.07/hugolib.zip) = 67669 bytes
-SHA1 (patch-aa) = 841a92743e3b6db56d79806bde2687d30019570b
-SHA1 (patch-ab) = a2e5b86d69aefb0be46b69c91b08a4335bc81637
+SHA1 (patch-aa) = c291ff5787189bf6f0261e10ef1b5b46243719a3
+SHA1 (patch-ab) = 4d2753b45b1e16c7213e1ee99860519bf889e11d
 SHA1 (patch-ac) = 43df8bc8b35cb5525f582a6d11eba89d063fbe76
 SHA1 (patch-ad) = 454c364a4fe45d1fc94b768db85443fcc8ef8204
 SHA1 (patch-ae) = ce4dc59544819330f1f8eeb45100e871c3aa0b3d
