@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2004/11/17 02:31:34 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.2 2004/11/28 19:19:52 jlam Exp $
 #
 
 DISTNAME=		mplayerplug-in-2.70
@@ -38,7 +38,7 @@ post-extract:
 		${FILESDIR}/mozilla-${f}.pc.in > ${WRKSRC}/mozilla-${f}.pc
 .endfor	
 
-post-buildlink:
+post-wrapper:
 	@${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig
 	@${CP} ${WRKSRC}/*.pc ${BUILDLINK_DIR}/lib/pkgconfig	
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/10/10 17:46:07 jdolecek Exp $
+# $NetBSD: Makefile,v 1.4 2004/11/28 19:19:51 jlam Exp $
 
 PKGNAME=		postgresql73-lib-${BASE_VERS}
 PKGREVISION=		# empty
@@ -29,7 +29,7 @@ PLIST_SUBST+=		LIBECPG=
 PLIST_SUBST+=		LIBPQ=
 .endif
 
-post-buildlink:
+post-wrapper:
 #
 # Avoid conflict between "${LOCALBASE}/include/openssl/des.h" and
 # "/usr/include/crypt.h" -- we want the definitions in the former.

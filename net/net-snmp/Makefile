@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2004/11/05 10:33:07 seb Exp $
+# $NetBSD: Makefile,v 1.26 2004/11/28 19:19:52 jlam Exp $
 
 DISTNAME=	net-snmp-5.1.2
 PKGREVISION=	2
@@ -111,7 +111,7 @@ RCD_SCRIPTS=	snmpd snmptrapd
 .include "../../lang/perl5/module.mk"
 .include "../../lang/perl5/buildlink3.mk"
 
-post-buildlink:
+post-wrapper:
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.5.[123]*-i386)
 	${MKDIR} ${BUILDLINK_DIR}/include/sys
 	${CP} ${FILESDIR}/disklabel.h ${BUILDLINK_DIR}/include/sys
