@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.10 2004/12/23 04:22:19 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.11 2004/12/23 18:49:41 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -23,3 +23,5 @@ Pullup ticket 181 - requested by Thomas Klausner
 security fix for xzgv
 Pullup ticket 182 - requested by Johnny C. Lam
 security fix for mit-krb5
+Pullup ticket 183 - requested by Mark Davies
+build fix for kde3
