@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1450 2004/04/25 22:42:51 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1451 2004/04/26 03:07:46 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -2708,7 +2708,7 @@ real-su-install: ${MESSAGE}
 		fi;							\
 	else								\
 		${ECHO_MSG} "Warning: not superuser, can't run mtree."; \
-		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
+		${ECHO_MSG} "Become ${ROOT_USER} and try again to ensure correct permissions."; \
 	fi
 .else
 	${_PKG_SILENT}${_PKG_DEBUG}[ -d ${PREFIX} ] || ${MKDIR} ${PREFIX}
@@ -3342,7 +3342,7 @@ _SU_TARGET=								\
 		${MAKE} ${MAKEFLAGS} $$realtarget;			\
 	elif [ "X${BATCH}" != X"" ]; then				\
 		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run $$action for ${PKGNAME}."; \
-		${ECHO_MSG} "Become root and try again to ensure correct permissions."; \
+		${ECHO_MSG} "Become ${ROOT_USER} and try again to ensure correct permissions."; \
 	else								\
 		args="";						\
 		if [ "X${FORCE_PKG_REGISTER}" != X"" ]; then		\
@@ -3355,7 +3355,7 @@ _SU_TARGET=								\
 			${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
 			${PRE_ROOT_CMD};				\
 		fi;                                             	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Becoming root@`${HOSTNAME_CMD}` to $$action ${PKGBASE}."; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Becoming ${ROOT_USER}@`${HOSTNAME_CMD}` to $$action ${PKGBASE}."; \
 		${ECHO_N} "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
 		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH=$${PATH}:${SU_CMD_PATH_APPEND} ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
 	fi
