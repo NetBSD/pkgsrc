@@ -1,0 +1,82 @@
+$NetBSD: patch-ae,v 1.1 1999/04/03 16:17:02 tron Exp $
+
+--- tkConfig.sh.in.orig	Tue Mar  9 07:53:51 1999
++++ tkConfig.sh.in	Sat Apr  3 16:52:02 1999
+@@ -14,13 +14,13 @@
+ # RCS: @(#) $Id: patch-ae,v 1.1 1999/04/03 16:17:02 tron Exp $
+ 
+ # Tk's version number.
+-TK_VERSION='@TK_VERSION@'
+-TK_MAJOR_VERSION='@TK_MAJOR_VERSION@'
+-TK_MINOR_VERSION='@TK_MINOR_VERSION@'
+-TK_PATCH_LEVEL='@TK_PATCH_LEVEL@'
++TK_VERSION="@TK_VERSION@"
++TK_MAJOR_VERSION="@TK_MAJOR_VERSION@"
++TK_MINOR_VERSION="@TK_MINOR_VERSION@"
++TK_PATCH_LEVEL="@TK_PATCH_LEVEL@"
+ 
+ # -D flags for use with the C compiler.
+-TK_DEFS='@DEFS@'
++TK_DEFS="@DEFS@"
+ 
+ # Flag, 1: we built a shared lib, 0 we didn't
+ TK_SHARED_BUILD=@TK_SHARED_BUILD@
+@@ -29,35 +29,35 @@
+ TK_DBGX=@TK_DBGX@
+ 
+ # The name of the Tk library (may be either a .a file or a shared library):
+-TK_LIB_FILE='@TK_LIB_FILE@'
++TK_LIB_FILE="@TK_LIB_FILE@"
+ 
+ # Additional libraries to use when linking Tk.
+-TK_LIBS='@XLIBSW@ @DL_LIBS@ @LIBS@ @MATH_LIBS@'
++TK_LIBS="@XLIBSW@ @DL_LIBS@ @LIBS@ @MATH_LIBS@"
+ 
+ # Top-level directory in which Tcl's platform-independent files are
+ # installed.
+-TK_PREFIX='@prefix@'
++TK_PREFIX="@prefix@"
+ 
+ # Top-level directory in which Tcl's platform-specific files (e.g.
+ # executables) are installed.
+-TK_EXEC_PREFIX='@exec_prefix@'
++TK_EXEC_PREFIX="@exec_prefix@"
+ 
+ # -I switch(es) to use to make all of the X11 include files accessible:
+-TK_XINCLUDES='@XINCLUDES@'
++TK_XINCLUDES="@XINCLUDES@"
+ 
+ # Linker switch(es) to use to link with the X11 library archive.
+-TK_XLIBSW='@XLIBSW@'
++TK_XLIBSW="@XLIBSW@"
+ 
+ # -l flag to pass to the linker to pick up the Tcl library
+-TK_LIB_FLAG='@TK_LIB_FLAG@'
++TK_LIB_FLAG="@TK_LIB_FLAG@"
+ 
+ # String to pass to linker to pick up the Tk library from its
+ # build directory.
+-TK_BUILD_LIB_SPEC='@TK_BUILD_LIB_SPEC@'
++TK_BUILD_LIB_SPEC="@TK_BUILD_LIB_SPEC@"
+ 
+ # String to pass to linker to pick up the Tk library from its
+ # installed directory.
+-TK_LIB_SPEC='@TK_LIB_SPEC@'
++TK_LIB_SPEC="@TK_LIB_SPEC@"
+ 
+ # Location of the top-level source directory from which Tk was built.
+ # This is the directory that contains a README file as well as
+@@ -65,10 +65,10 @@
+ # different place than the directory containing the source files, this
+ # points to the location of the sources, not the location where Tk was
+ # compiled.
+-TK_SRC_DIR='@TK_SRC_DIR@'
++TK_SRC_DIR="@TK_SRC_DIR@"
+ 
+ # Needed if you want to make a 'fat' shared library library
+ # containing tk objects or link a different wish.
+-TK_CC_SEARCH_FLAGS='@TK_CC_SEARCH_FLAGS@'
+-TK_LD_SEARCH_FLAGS='@TK_LD_SEARCH_FLAGS@'
++TK_CC_SEARCH_FLAGS="@TK_CC_SEARCH_FLAGS@"
++TK_LD_SEARCH_FLAGS="@TK_LD_SEARCH_FLAGS@"
+ 
