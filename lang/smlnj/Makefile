@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2004/04/09 23:19:37 snj Exp $
+# $NetBSD: Makefile,v 1.8 2004/06/06 04:38:29 snj Exp $
+#
 
 DISTNAME=	boot.${BOX}-unix
 PKGNAME=	smlnj-${SML_VERSION}
 CATEGORIES=	lang
-MASTER_SITES=	http://www.smlnj.org/dist/working/${SML_VERSION}/ \
+MASTER_SITES=	ftp://flint.cs.yale.edu/pub/smlnj/working/${SML_VERSION}/ \
 		http://smlnj.cs.uchicago.edu/dist/working/${SML_VERSION}/ \
 		ftp://flint.cs.yale.edu/pub/smlnj/working/${SML_VERSION}/
 DISTFILES=	MLRISC.tgz			\
@@ -27,7 +28,7 @@ MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Popular functional language from Bell Labs
 
-SML_VERSION=	110.45
+SML_VERSION=	110.42
 
 # Other mirror sites that generally carry only released versions of SML
 # 	ftp://rodin.stanford.edu/pub/smlnj/release/
