@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2144 2003/05/04 22:22:13 salo Exp $
+$NetBSD: CHANGES,v 1.2145 2003/05/05 11:00:38 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1851,3 +1851,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added elf-0.5.3 [salo 2003-05-04]
 	Updated elib to 1.0nb1 [seb 2003-05-04]
 	Updated driftnet to 0.1.6nb2 [salo 2003-05-04]
+	Added elfsh-0.43b [mjl 2003-05-05]
