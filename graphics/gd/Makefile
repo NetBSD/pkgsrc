@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/06/21 00:55:08 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2000/07/18 15:21:00 agc Exp $
 # FreeBSD Id: Makefile,v 1.2 1997/02/14 07:55:45 asami Exp
 #
 
@@ -24,6 +24,7 @@ NO_CONFIGURE=	# defined
 .if ${OPSYS} == "SunOS"
 DEPENDS+=	zlib-*:../../devel/zlib
 CPPFLAGS+=	-I${LOCALBASE}/include				# zlib.h
+MAKE_ENV+=	EXTRA_LIBS="-lsocket -lnsl ${LOCALBASE}/lib/libz.a"
 .endif
 
 # When the API changes and breaks binary-compatibility with the previous
@@ -34,8 +35,9 @@ GD_MAJOR=	1
 GD_MINOR=	9
 MAKE_ENV+=	GD_MAJOR="${GD_MAJOR}" GD_MINOR="${GD_MINOR}"
 
+EVAL_PREFIX+=	XPMDIR=xpm
 MAKE_ENV+=	CPPFLAGS="${CPPFLAGS}"
 CPPFLAGS+=	-I${LOCALBASE}/include				# png.h
-CPPFLAGS+=	-I${X11BASE}/include -I${X11BASE}/include/X11	# xpm.h
+CPPFLAGS+=	-I${XPMDIR}/include -I${XPMDIR}/include/X11	# xpm.h
 
 .include "../../mk/bsd.pkg.mk"

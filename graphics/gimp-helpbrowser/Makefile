@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/07/15 20:39:19 agc Exp $
+# $NetBSD: Makefile,v 1.9 2000/07/18 15:21:00 agc Exp $
 
 DISTNAME=		gimp-1.1.24
 PKGNAME=		${DISTNAME:S/-/-helpbrowser-/}
@@ -19,7 +19,7 @@ USE_GMAKE=		yes
 USE_PKGLIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-EVAL_PREFIX+=		GTKDIR=gtk+
+EVAL_PREFIX+=		GTKDIR=gtk+ GNOMEDIR=gnome-libs IGIMPDIR=gimp
 CONFIGURE_ARGS+=	--with-gtk-prefix="${GTKDIR}" \
 			--disable-perl \
 			--disable-python
@@ -32,8 +32,8 @@ PATCHDIR=		${GIMPDIR}/patches
 
 CPPFLAGS=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib
-GNOME_CONFIG=		${X11BASE}/bin/gnome-config
-GIMP_CONFIG=		${X11BASE}/bin/gimp-config
+GNOME_CONFIG=		${GNOMEDIR}/bin/gnome-config
+GIMP_CONFIG=		${IGIMPDIR}/bin/gimp-config
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE}
 
 .include "../../mk/bsd.prefs.mk"
