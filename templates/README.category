@@ -1,13 +1,13 @@
-<!-- $NetBSD: README.category,v 1.9 1999/12/10 13:53:06 hubertf Exp $ -->
+<!-- $NetBSD: README.category,v 1.10 2001/01/16 02:37:47 hubertf Exp $ -->
 <html>
 <head>
 <title>The NetBSD Packages Collection: %%CATEGORY%%</title>
 </head>
-<body bgcolor=#ffffff>
+<body bgcolor="#ffffff">
 
 <a href="http://www.mckusick.com/beastie/mainpage/copyright.html">
-<img align=right src="../templates/pkg-daemon.gif" alt="Daemon Power"
-	width=127 height=121 border=0>
+<img align="right" src="../templates/pkg-daemon.gif" alt="Daemon Power"
+	width="147" height="121" border="0">
 </a>
 <h1>The NetBSD Packages Collection: <i>%%CATEGORY%%</i></h1>
 
