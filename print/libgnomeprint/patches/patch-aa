@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2002/07/12 17:15:54 wiz Exp $
+
+--- installer/Makefile.am.orig	Thu Mar  7 23:44:11 2002
++++ installer/Makefile.am
+@@ -20,10 +20,10 @@
+ 	$(LIBGNOMEPRINT_LIBS) \
+ 	$(INTLLIBS) -lpopt
+ 
+-EXTRA_DIST = README.installer
++EXTRA_DIST = README.installer.2
+ 
+ readmedir = $(datadir)/fonts
+-readme_DATA = README.installer
++readme_DATA = README.installer.2
+ 
+ if INSTALL_FONTS
+ INSTALL_COMMAND = ./libgnomeprint-2.0-font-install \
