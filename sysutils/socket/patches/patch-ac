@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.1 1999/02/02 23:00:40 tron Exp $
+
+--- globals.h.orig	Sun Aug 30 21:04:27 1992
++++ globals.h	Tue Feb  2 23:52:03 1999
+@@ -8,6 +8,11 @@
+ */
+ 
+ #include "patchlevel.h"
++ 
++#if HAVE_SYS_PARAM_H
++# include <sys/param.h>
++#endif
++
+ 
+ /* globals for socket */
+ 
+@@ -49,4 +54,7 @@
+ extern int crlfflag ;
+ extern int active_socket ;
+ extern char *progname ;
+-extern char *sys_errlist[], *sys_siglist[] ;
++
++#if !(defined(BSD) && (BSD >=199306))
++     extern char *sys_errlist[], *sys_siglist[] ;
++#endif
