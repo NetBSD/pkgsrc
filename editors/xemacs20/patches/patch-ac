@@ -1,13 +1,5 @@
 --- lib-src/Makefile.in.in.orig	Fri Feb 13 18:39:45 1998
 +++ lib-src/Makefile.in.in	Fri Feb 13 18:40:20 1998
-@@ -55,6 +55,7 @@
- 
- INSTALL = @INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
-+INSTALL_SCRIPT = ${INSTALL} -m 555
- INSTALL_DATA = @INSTALL_DATA@
- 
- ## ========================== Lists of Files ===========================
 @@ -197,7 +198,7 @@
  	if test `(cd ${archlibdir} && $(pwd))` \
  	     != `(cd ${srcdir}     && $(pwd))`; then \
