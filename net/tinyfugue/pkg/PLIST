@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 1998/04/26 09:51:22 frueauf Exp $
 bin/tf
 bin/tf-40a6
 lib/tf-40a6-lib/CHANGES
