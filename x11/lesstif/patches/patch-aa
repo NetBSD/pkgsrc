@@ -1,21 +1,22 @@
-$NetBSD: patch-aa,v 1.12 2000/04/27 13:14:49 tron Exp $
+$NetBSD: patch-aa,v 1.13 2000/05/25 15:25:44 drochner Exp $
 
---- Makefile.in.orig	Sun Apr 16 02:38:45 2000
-+++ Makefile.in	Mon Apr 17 14:57:34 2000
-@@ -127,14 +127,14 @@
+--- Makefile.in.orig	Mon May 15 02:49:26 2000
++++ Makefile.in	Thu May 18 19:57:07 2000
+@@ -131,7 +131,7 @@
  # Lets put the informational stuff in a sub directory to avoid 
  # poluting /usr/local for default installs.
  #
 -rootdir = $(exec_prefix)/LessTif
 +rootdir = $(exec_prefix)/share/doc/lesstif
- root_DATA = AUTHORS BUG-REPORTING COPYING COPYING.LIB CREDITS 	KNOWN_BUGS NEWS README RELEASE-POLICY TODO
+ root_DATA = AUTHORS BUG-REPORTING COPYING COPYING.LIB CREDITS \
+ 	KNOWN_BUGS NEWS README RELEASE-POLICY TODO release-notes.txt
  
- 
- EXTRA_DIST = acconfig.h configure 		BUG-REPORTING CREDITS KNOWN_BUGS RELEASE-POLICY
+@@ -140,7 +140,7 @@
+ 		BUG-REPORTING CREDITS KNOWN_BUGS RELEASE-POLICY NOTES
  
  
 -htmldir = $(exec_prefix)/LessTif/doc
 +htmldir = $(exec_prefix)/share/doc/lesstif
- html_DATA = NOTES
+ html_DATA = release-notes.html
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

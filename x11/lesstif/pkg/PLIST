@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2000/04/27 13:14:59 tron Exp $
+@comment $NetBSD: PLIST,v 1.24 2000/05/25 15:25:44 drochner Exp $
 LessTif/FAQ
 LessTif/Motif1.2/include/Mrm/MrmAppl.h
 LessTif/Motif1.2/include/Mrm/MrmDecls.h
@@ -385,7 +385,6 @@ share/doc/lesstif/Install
 share/doc/lesstif/INSTALL.html
 share/doc/lesstif/KNOWN_BUGS
 share/doc/lesstif/NEWS
-share/doc/lesstif/NOTES
 share/doc/lesstif/README
 share/doc/lesstif/RELEASE-POLICY
 share/doc/lesstif/SyntheticResources.txt
@@ -409,6 +408,7 @@ share/doc/lesstif/lists.html
 share/doc/lesstif/mirrors.html
 share/doc/lesstif/platforms.html
 share/doc/lesstif/release-notes.html
+share/doc/lesstif/release-notes.txt
 share/doc/lesstif/release-policy.html
 share/doc/lesstif/test_policy.html
 share/doc/lesstif/test_summary.html
