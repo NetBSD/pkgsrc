@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1539 2003/03/04 16:23:36 hubertf Exp $
+$NetBSD: CHANGES,v 1.1540 2003/03/04 16:29:22 seb Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -914,3 +914,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Removed sendmail88 [seb 2003-03-04]
 	Updated streamtuner to 0.9.1 [salo 2003-03-04]
 	Added slurm-0.2.1 [hubertf 2003-03-04]
+	Added p5-Config-General-2.15 [seb 2003-03-04]
