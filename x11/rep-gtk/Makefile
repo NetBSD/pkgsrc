@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2004/10/03 00:18:38 tv Exp $
+# $NetBSD: Makefile,v 1.27 2004/10/15 21:02:29 tv Exp $
 
 DISTNAME=		rep-gtk-0.15
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		x11 lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rep-gtk/}
 
@@ -14,7 +14,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 
-PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 REPEXECDIR=		libexec/rep/${MACHINE_GNU_PLATFORM}
 INSTALL_ALIASES=	${PREFIX}/${REPEXECDIR}/install-aliases
 
@@ -23,13 +22,25 @@ INSTALL_ALIASES=	${PREFIX}/${REPEXECDIR}/install-aliases
 .include "../../lang/librep/buildlink3.mk"
 .include "../../x11/gnome-libs/buildlink3.mk"
 
-post-install:
+post-install: fix-libs
 	${INSTALL_ALIASES} -c ${FILESDIR} ${PREFIX}/${REPEXECDIR}
-	${RM} -f ${PLIST_SRC}
-	cd ${PREFIX} && ${FIND} ${REPEXECDIR}				\
-		-name "gnomelib.*" -print > ${PLIST_SRC}
-	cd ${PREFIX} && ${FIND} ${REPEXECDIR}/gui/gnome			\
-		-name "lib.*" -print >> ${PLIST_SRC}
-	${CAT} ${PKGDIR}/PLIST >> ${PLIST_SRC}
+
+# Apparently, librep is a gross abuser of libtool, and breaks most of
+# libtool's rules about linking and installing.  Worse yet, it encourages
+# users of the library to reuse its libtool abuse.  So we have to whack the
+# installed .la files to make them correct as if libtool were *correctly*
+# invoked in the first place.
+fix-libs:
+.for lib in	gdk-pixbuf.la gnome-canvas-pixbuf.la gnome-canvas.la \
+		gnomelib.la gnomeui.la gtk.la gui/gnome.la \
+		gui/gnome/canvas-pixbuf.la gui/gnome/canvas.la \
+		gui/gnome/libglade.la gui/gnome/lib.la gui/gnome/ui.la \
+		gui/gtk.la gui/gtk/gdk-pixbuf.la gui/gtk/gtk.la \
+		gui/gtk/libglade.la gui/gtk/types.la libglade-gnome.la \
+		libglade.la sgtk-types.la
+	${SETENV} WRKDIR=${WRKDIR:Q} INSTALL_DATA=${INSTALL_DATA:Q} \
+		${SH} ${FILESDIR}/fix-la \
+		${PREFIX}/libexec/rep/${MACHINE_GNU_PLATFORM}/${lib}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
