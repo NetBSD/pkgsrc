@@ -1,25 +1,36 @@
-$NetBSD: patch-aa,v 1.5 2003/02/13 23:25:07 grant Exp $
+$NetBSD: patch-aa,v 1.6 2003/03/06 19:08:11 jlam Exp $
 
---- Makefile.orig	Thu Jan 30 21:54:23 2003
+--- Makefile.orig	Thu Mar  6 10:50:37 2003
 +++ Makefile
-@@ -6,18 +6,15 @@
+@@ -29,23 +29,19 @@ Makeconf:
+ install: installbin installkeymaps installman
  
- # Configuration defaults
+ installbin: rdesktop
+-	mkdir -p $(DESTDIR)/$(bindir)
+-	install rdesktop $(DESTDIR)/$(bindir)
+-	strip $(DESTDIR)/$(bindir)/rdesktop
+-	chmod 755 $(DESTDIR)/$(bindir)/rdesktop
++	${BSD_INSTALL_PROGRAM_DIR} $(DESTDIR)/$(bindir)
++	${BSD_INSTALL_PROGRAM} rdesktop $(DESTDIR)/$(bindir)
  
--prefix      = /usr/local
-+prefix      = $(PREFIX)
- exec_prefix = $(prefix)
- bindir      = $(exec_prefix)/bin
- mandir      = $(prefix)/man
--datadir     = $(prefix)/share/rdesktop
--
--KEYMAP_PATH = $(datadir)/keymaps/
-+datadir     = $(DATADIR)
+ installman: doc/rdesktop.1
+-	mkdir -p $(DESTDIR)/$(mandir)/man1
+-	cp doc/rdesktop.1 $(DESTDIR)/$(mandir)/man1
+-	chmod 644 $(DESTDIR)/$(mandir)/man1/rdesktop.1
++	${BSD_INSTALL_MAN_DIR} $(DESTDIR)/$(mandir)/man1
++	${BSD_INSTALL_MAN} doc/rdesktop.1 $(DESTDIR)/$(mandir)/man1
  
- RDPOBJ   = rdesktop.o tcp.o iso.o mcs.o secure.o licence.o rdp.o orders.o bitmap.o cache.o xwin.o xkeymap.o ewmhints.c
- CRYPTOBJ = crypto/rc4_enc.o crypto/rc4_skey.o crypto/md5_dgst.o crypto/sha1dgst.o crypto/bn_exp.o crypto/bn_mul.o crypto/bn_div.o crypto/bn_sqr.o crypto/bn_add.o crypto/bn_shift.o crypto/bn_asm.o crypto/bn_ctx.o crypto/bn_lib.o
+ installkeymaps:
+-	mkdir -p $(DESTDIR)/$(KEYMAP_PATH)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)/$(KEYMAP_PATH)
+ # Prevent copying the CVS directory
+-	cp keymaps/?? keymaps/??-?? $(DESTDIR)/$(KEYMAP_PATH)
+-	cp keymaps/common $(DESTDIR)/$(KEYMAP_PATH)
+-	cp keymaps/modifiers $(DESTDIR)/$(KEYMAP_PATH)
+-	chmod 644 $(DESTDIR)/$(KEYMAP_PATH)/*
++	${BSD_INSTALL_DATA} keymaps/?? keymaps/??-?? $(DESTDIR)/$(KEYMAP_PATH)
++	${BSD_INSTALL_DATA} keymaps/common $(DESTDIR)/$(KEYMAP_PATH)
++	${BSD_INSTALL_DATA} keymaps/modifiers $(DESTDIR)/$(KEYMAP_PATH)
  
--include Makeconf  # configure-generated
- 
- 
- rdesktop: $(RDPOBJ) $(CRYPTOBJ)
+ proto:
+ 	cproto -DMAKE_PROTO -o proto.h *.c
