@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2003/09/24 13:43:48 tron Exp $
+$NetBSD: distinfo,v 1.5 2003/09/24 13:47:33 tron Exp $
 
 SHA1 (oneko-1.1b.tar.gz) = b7c924dbcc28565e7bfa05cbfdcf8a98085bfd2d
 Size (oneko-1.1b.tar.gz) = 47714 bytes
 SHA1 (oneko-1.2.diff.gz) = 0594737a32d0a0d32c9261ed7f38165818ad593b
 Size (oneko-1.2.diff.gz) = 12637 bytes
-SHA1 (patch-aa) = 25af6f51aa5490f13ea8794a9f2e6556c4aa8c21
+SHA1 (patch-aa) = d4818a97e0f8c0c3ef41b31019d8e0ac18190a5f
 SHA1 (patch-ab) = 8f2e9bbb490e47094bd934f8b4badea94daed795
