@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 1998/03/28 01:07:53 tv Exp $
+# $NetBSD: Makefile,v 1.3 1998/05/29 19:57:27 tv Exp $
 
 LIB=		rsaref
+LIBDIR=		${PREFIX}/lib
 CFLAGS=		-O2 -I.
 SHLIB_MAJOR=	2
 SHLIB_MINOR=	0
-NOPROFILE=	1
 NOLINT=		1
 
 SRCS=	desc.c digit.c md2c.c nn.c prime.c rsa.c r_encode.c r_dh.c \
