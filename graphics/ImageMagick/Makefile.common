@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2005/01/22 08:37:38 jdolecek Exp $
+# $NetBSD: Makefile.common,v 1.30 2005/01/23 04:09:05 dsainty Exp $
 
 IM_MAJOR_VER=		6.1.9
 IM_MINOR_VER=		1
@@ -18,7 +18,8 @@ MASTER_SITES=	ftp://ftp.imagemagick.net/pub/ImageMagick/ \
 		ftp://ftp.nluug.nl/pub/ImageMagick/ \
 		ftp://ftp.yggdrasil.com/mirrors/site/ftp.simplesystems.org/pub/ImageMagick/ \
 		ftp://ftp.fu-berlin.de/unix/X11/graphics/ImageMagick/ \
-		ftp://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/
+		ftp://ftp.sunet.se/pub/multimedia/graphics/ImageMagick/ \
+		http://www.imagemagick.net/download/
 EXTRACT_SUFX=	.tar.bz2
 
 WRKSRC=		${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
