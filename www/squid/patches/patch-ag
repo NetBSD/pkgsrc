@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.8 2001/04/14 10:05:01 tron Exp $
+$NetBSD: patch-ag,v 1.9 2001/12/12 17:06:20 taca Exp $
 
---- configure.orig	Thu Jan 18 18:58:25 2001
-+++ configure	Sat Apr 14 11:49:08 2001
+--- configure.orig	Thu Nov 29 08:56:25 2001
++++ configure
 @@ -711,11 +711,11 @@
  REGEXLIB=''	# -lregex
  LIBREGEX=''	# libregex.a
@@ -28,3 +28,14 @@ $NetBSD: patch-ag,v 1.8 2001/04/14 10:05:01 tron Exp $
      SNMP_OBJS='$(SNMP_OBJS)'
      SNMP_MAKEFILE=./snmplib/Makefile
      makesnmplib=snmplib
+@@ -4501,8 +4501,8 @@
+ 	GCCVER=`$CC -v 2>&1 | awk '$2 ==  "version" {print $3}'`
+ 	case "$GCCVER" in
+ 	2.95.[123])
+-		echo "Removing -O for gcc on $host with GCC $GCCVER"
+-		CFLAGS="`echo $CFLAGS | sed -e 's/-O[0-9]*//'`"
++		echo "Making -O[2-9] to -O for gcc on $host with GCC $GCCVER"
++		CFLAGS="`echo $CFLAGS | sed -e 's/-O[0-9]*/-O/'`"
+ 		;;
+ 	esac
+ fi
