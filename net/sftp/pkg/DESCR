@@ -1,0 +1,7 @@
+sftp is an ftp replacement that runs over an ssh tunnel. Two programs
+are included - sftp and sftpserv. When sftp is run and a host is
+connected to (either by running 'sftp remotehost' or 'open remotehost'
+from the sftp prompt), an ssh connection is initiated to the remote
+host, and sftpserv is run. So, sftpserv must be in your path on
+the remote host. Note that since sftpserv is run from ssh, no root
+privileges are necessary.

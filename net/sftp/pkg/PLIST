@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/12/21 22:37:51 hubertf Exp $
+bin/rsftp
+bin/sftp
+bin/sftpserv
+man/man1/sftp.1
+share/doc/README.sftp
