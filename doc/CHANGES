@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9423 2005/03/05 03:02:56 minskim Exp $
+$NetBSD: CHANGES,v 1.9424 2005/03/05 09:14:11 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1276,3 +1276,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Added p5-Class-MakeMethods-1.010 [tv 2005-03-04]
 	Updated horde to 3.0.3 [adrianp 2005-03-04]
 	Updated mathomatic to 12.1d [minskim 2005-03-05]
+	Updated riece to 1.0.7a [uebayasi 2005-03-05]
