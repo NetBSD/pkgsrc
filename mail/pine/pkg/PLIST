@@ -1,8 +1,12 @@
+@comment $NetBSD: PLIST,v 1.2 1997/11/22 05:41:47 hubertf Exp $
 bin/pico
 bin/pilot
 bin/pine
 lib/libpico.so.1.3
 @exec /sbin/ldconfig -m %B
+@unexec /sbin/ldconfig -m %B
+lib/pine.conf
+lib/pine.conf.fixed
 bin/pgpencrypt
 bin/pgpdecode
 bin/pgpsign

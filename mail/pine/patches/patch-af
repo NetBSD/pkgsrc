@@ -19,19 +19,3 @@
   DEFAULTDRIVERS=imap nntp pop3 mh tenex mtx mmdf bezerk news phile dummy
   LN=ln -s
   MAKE=make
-***************
-*** 118,123 ****
---- 118,130 ----
-  		STDPROTO=bezerkproto MAILSPOOL=/var/mail \
-  		ACTIVEFILE=/usr/lib/news/active NEWSSPOOL=/usr/spool/news \
-  		RSHPATH=/usr/bin/rsh CFLAGS="-g -O -pipe -DNFSKLUDGE $(EXTRACFLAGS)"
-+ 
-+ bsf:	# FreeBSD
-+ 	$(MAKE) $(ARCHIVE) OS=bsi EXTRADRIVERS="$(EXTRADRIVERS)" \
-+ 		STDPROTO=bezerkproto MAILSPOOL=/var/mail \
-+ 		ACTIVEFILE=/usr/local/news/lib/active NEWSSPOOL=/var/news \
-+               RSHPATH=/usr/bin/rsh CFLAGS="${CFLAGS} -DNFSKLUDGE $(EXTRACFLAGS)" \
-+ 		LDFLAGS="-lcrypt"
-  
-  cvx:	# Convex
-  	$(MAKE) mtest OS=$@ EXTRADRIVERS="$(EXTRADRIVERS)" \
