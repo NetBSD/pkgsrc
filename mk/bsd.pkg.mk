@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.226 1999/03/12 10:19:14 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.227 1999/03/16 09:50:28 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -2214,7 +2214,7 @@ tags:
 # - substituting ${OPSYS}, ${MACHINE_ARCH} and ${MACHINE_GNU_ARCH}
 
 .if ${OPSYS} == "NetBSD"
-IMAKE_MAN_CMD=	${CAT}
+IMAKE_MAN_CMD=
 .ifdef MANZ
 MANZ_EXPRESSION= -e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$\)|\1.gz|' \
 		-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]$$\)|\1.gz|'
@@ -2222,7 +2222,7 @@ MANZ_EXPRESSION= -e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]$$
 MANZ_EXPRESSION= -e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}man[1-9ln]/.*[1-9ln]\)\.gz$$|\1|' \
 		-e 's|\(^\([^/]*/\)*man/\([^/]*/\)\{0,1\}cat[1-9ln]/.*[0-9ln]\)\.gz$$|\1|'
 .endif # MANZ
-MANZ_NAWK_CMD=	${CAT}
+MANZ_NAWK_CMD=
 .elif ${OPSYS} == "SunOS"
 .ifdef USE_IMAKE
 IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*[0-9ln](\.gz)?$$/ { \
@@ -2231,9 +2231,9 @@ IMAKE_MAN_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*[0-9ln](\.gz)?
 	s = $$0; sub("/cat", "/man", s); sub("\.0(\.gz)?$$", sect, s);	\
 	if (match($$0, "\.gz$$") > 0) { ext = ".gz";} else { ext = "";} \
 	$$0 = sprintf("%s%s", s, ext);					\
-	} { print $$0; }'
+	} { print $$0; }' |
 .else
-IMAKE_MAN_CMD=	${CAT}
+IMAKE_MAN_CMD=
 .endif # USE_IMAKE
 .ifdef MANZ
 MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
@@ -2242,7 +2242,7 @@ MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/
 	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*[0-9ln]\.gz$$/ {	\
 		$$0 = sprintf("%s.gz", $$0);				\
 	}								\
-	{ print $$0; }'
+	{ print $$0; }' |
 .else
 MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/ { \
 		$$0 = substr($$0, 1, length($$0) - 3);			\
@@ -2250,7 +2250,7 @@ MANZ_NAWK_CMD=	${AWK} '/^([^\/]*\/)*man\/([^\/]*\/)?man[1-9ln]\/.*[1-9ln]\.gz$$/
 	/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*[0-9ln]\.gz$$/ {	\
 		$$0 = substr($$0, 1, length($$0) - 3);			\
 	}								\
-	{ print $$0; }'
+	{ print $$0; }' |
 .endif # MANZ
 MANZ_EXPRESSION= 
 .endif # SunOS
@@ -2262,8 +2262,8 @@ ${PLIST}: ${PLIST_SRC}
 		${ECHO} "Please set PLIST_SRC in the package Makefile.";\
 	else								\
 		${CAT} ${PLIST_SRC} |					\
-			${MANZ_NAWK_CMD} |				\
-			${IMAKE_MAN_CMD} |				\
+			${MANZ_NAWK_CMD} 				\
+			${IMAKE_MAN_CMD} 				\
 			${SED} 	${MANZ_EXPRESSION}			\
 				-e 's|\$${OPSYS}|${OPSYS}|g'		\
 				-e 's|\$${OS_VERSION}|${OS_VERSION}|g'	\
