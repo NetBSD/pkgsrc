@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2003/06/23 19:05:09 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.7 2003/06/30 12:06:09 seb Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -8,7 +8,6 @@ bin/xcbm2
 bin/xpet
 bin/xplus4
 bin/xvic
-@unexec ${INSTALL_INFO} --delete --info-dir=%D/info %D/info/vice.info
 info/vice.info
 info/vice.info-1
 info/vice.info-2
@@ -17,7 +16,6 @@ info/vice.info-4
 info/vice.info-5
 info/vice.info-6
 info/vice.info-7
-@exec ${INSTALL_INFO} --info-dir=%D/info %D/info/vice.info
 man/man1/c1541.1
 man/man1/petcat.1
 man/man1/vice.1

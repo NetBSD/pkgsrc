@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2003/06/23 19:05:09 kristerw Exp $
+# $NetBSD: Makefile,v 1.32 2003/06/30 12:06:08 seb Exp $
 #
 
 DISTNAME=		vice-1.12
@@ -30,6 +30,9 @@ USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_GMAKE=		YES
 GNU_CONFIGURE=		YES
+
+USE_NEW_TEXINFO=	YES
+INFO_FILES=		vice.info
 
 # These changes are rather common, so sed instead of patch:
 post-patch:
@@ -73,7 +76,6 @@ post-install:
 #.include "../../graphics/png/buildlink2.mk"
 .include "../../graphics/xpm/buildlink2.mk"
 
-.include "../../mk/texinfo.mk"
 .include "../../mk/bsd.pkg.mk"
 
 # This is the emulator's recommended setting.  We place it last so that it
