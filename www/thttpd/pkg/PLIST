@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 1999/04/10 22:01:10 tron Exp $
+sbin/thttpd
+sbin/syslogtocern
+sbin/makeweb
+sbin/htpasswd
+man/man8/thttpd.8
+man/man8/syslogtocern.8
+man/man8/nph-redirect.8
+man/man8/ssi.8
+man/man1/makeweb.1
+man/man1/htpasswd.1
+www/cgi-bin/nph-redirect
+www/cgi-bin/phf
+www/cgi-bin/ssi
+@dirrm www/cgi-bin
+@dirrm www
