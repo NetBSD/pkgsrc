@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/17 15:25:39 recht Exp $
+$NetBSD: distinfo,v 1.2 2004/06/21 14:56:36 drochner Exp $
 
 SHA1 (libcddb-0.9.4.tar.gz) = ea64a127bedbf953c7a7a380d15f867a6244f8eb
 Size (libcddb-0.9.4.tar.gz) = 272751 bytes
+SHA1 (patch-aa) = 0793d6cf41a4ea4f0ef0ce6de88401ec880b9077

@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2004/06/21 14:56:36 drochner Exp $
+
+--- lib/cddb_net.c.orig	2003-05-25 16:25:46.000000000 +0200
++++ lib/cddb_net.c
+@@ -24,12 +24,15 @@
+ #include <netdb.h>
+ #include <setjmp.h>
+ #include <signal.h>
+-#include <time.h>
++#include <sys/time.h>
+ #include <unistd.h>
+ #include <sys/select.h>
+ #include <sys/socket.h>
+ #include <sys/types.h>
+ #include "cddb/cddb_ni.h"
++#ifdef TIME_WITH_SYS_TIME
++#include <time.h>
++#endif
+ 
+ 
+ /* Utility functions */
