@@ -1,14 +1,13 @@
-$NetBSD: patch-ac,v 1.4 2002/10/03 15:46:57 abs Exp $
+$NetBSD: patch-ac,v 1.5 2003/09/03 12:35:12 martin Exp $
 
---- mserv/config.h.in.orig	Tue Jan 25 19:59:08 2000
-+++ mserv/config.h.in
-@@ -11,6 +11,9 @@
- #define RETSIGTYPE void
- 
- /* Define if we have soundcard.h */
-+#undef HAVE_SOUNDCARD_H
-+
-+/* Define if we have sys/soundcard.h */
- #undef HAVE_SYS_SOUNDCARD_H
- 
- /* Define if we have strsep() */
+--- mserv/mserv.c.orig	2003-08-03 16:57:20.000000000 +0200
++++ mserv/mserv.c	2003-09-03 13:52:35.000000000 +0200
+@@ -67,7 +67,7 @@
+ #include "cmd.h"
+ #include "acl.h"
+ #include "mp3info.h"
+-#include "soundcard.h"
++#include "mservsoundcard.h"
+ #include "defconf.h"
+ #include "conf.h"
+ #include "opt.h"
