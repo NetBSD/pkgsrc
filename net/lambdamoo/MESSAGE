@@ -1,5 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2002/07/15 22:57:29 heinz Exp $
+
 To start LambdaMOO automatically on boot, add the following to /etc/rc.local
 	su - lambdamoo -c "./restart.sh LambdaCore-12Apr99 7777"
 
 To log in
 	telnet localhost 7777
+
+===========================================================================
