@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2002/04/12 13:20:01 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2002/04/13 07:07:49 agc Exp $
 #
 
 DISTNAME=		xplanet-0.93
@@ -15,6 +15,7 @@ CONFIGURE_ARGS+=	--with-gl-dir=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-glut-dir=${BUILDLINK_DIR}
 
 USE_GMAKE=		yes
+USE_X11=		yes
 
 LIBS=			-lpbm -lppm -lpgm
 MAKE_ENV+=		LIBS="${LIBS}"
