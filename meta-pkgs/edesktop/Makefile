@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 1999/08/30 09:15:29 jlam Exp $
+# $NetBSD: Makefile,v 1.7 1999/11/28 02:41:01 hubertf Exp $
 #
 
 DISTNAME=	edesktop-1.0
@@ -15,7 +15,7 @@ DEPENDS+=	mutt-*:../../mail/mutt
 DEPENDS+=	econf-0.15:../../x11/econf
 DEPENDS+=	xv-3.10apl1:../../graphics/xv
 DEPENDS+=	ee-0.3.8:../../graphics/ee
-DEPENDS+=	gimp-1.0.4:../../graphics/gimp
+DEPENDS+=	gimp-1.*:../../graphics/gimp
 DEPENDS+=	xpaint-2.5.6:../../graphics/xpaint
 DEPENDS+=	xfig-3.2.2:../../graphics/xfig
 DEPENDS+=	emacs-20.3:../../editors/emacs
