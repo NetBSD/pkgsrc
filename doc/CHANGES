@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4064 2003/12/13 10:44:31 wiz Exp $
+$NetBSD: CHANGES,v 1.4065 2003/12/13 10:49:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3357,3 +3357,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated thunderbird-bin to 0.4 [grant 2003-12-13]
 	Updated bzflag to 1.10.0 [xtraeme 2003-12-13]
 	Updated nut to 9.3 [wiz 2003-12-13]
+	Updated iozone to 3.211 [wiz 2003-12-13]
