@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.14 2004/02/17 11:51:54 jlam Exp $
+$NetBSD: patch-ad,v 1.15 2004/12/17 18:55:47 tron Exp $
 
 --- lib/util_getent.c.orig	Fri Feb 13 11:02:10 2004
 +++ lib/util_getent.c
@@ -12,7 +12,7 @@ $NetBSD: patch-ad,v 1.14 2004/02/17 11:51:54 jlam Exp $
 +	int buflen;
 +#endif
  	
- 	pent = (struct sys_pwent *) malloc(sizeof(struct sys_pwent));
+ 	pent = SMB_MALLOC_P(struct sys_pwent);
  	if (pent == NULL) {
 @@ -156,9 +161,38 @@ struct sys_pwent * getpwent_list(void)
  		pent->pw_uid = pwd->pw_uid;
@@ -40,10 +40,10 @@ $NetBSD: patch-ad,v 1.14 2004/02/17 11:51:54 jlam Exp $
 +				}
 +			}
 +			*bp = '\0';
-+			if ((pent->pw_gecos = strdup(buf)) == NULL)
++			if ((pent->pw_gecos = SMB_STRDUP(buf)) == NULL)
 +				goto err;
 +#else
- 			if ((pent->pw_gecos = strdup(pwd->pw_gecos)) == NULL)
+ 			if ((pent->pw_gecos = SMB_STRDUP(pwd->pw_gecos)) == NULL)
  				goto err;
 +#endif
  		}
@@ -51,5 +51,5 @@ $NetBSD: patch-ad,v 1.14 2004/02/17 11:51:54 jlam Exp $
 +  gecos_done:
 +#endif
  		if (pwd->pw_dir) {
- 			if ((pent->pw_dir = strdup(pwd->pw_dir)) == NULL)
+ 			if ((pent->pw_dir = SMB_STRDUP(pwd->pw_dir)) == NULL)
  				goto err;
