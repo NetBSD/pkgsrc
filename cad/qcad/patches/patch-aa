@@ -1,71 +1,67 @@
-$NetBSD: patch-aa,v 1.5 2003/03/15 00:25:42 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.6 2003/04/29 21:51:54 jtb Exp $
 
---- Makefile.orig	Sun Mar 25 06:17:10 2001
-+++ Makefile	Fri Mar 14 07:13:56 2003
-@@ -8,11 +8,13 @@
+--- Makefile.orig
++++ Makefile
+@@ -8,20 +8,20 @@
+ 
  ####### Compiler, tools and options
  
--CC	=	g++
--CFLAGS	=	-Wall -W -O2 -fno-strength-reduce
-+#CC	=	g++
-+CXXFLAGS+=	-fno-strength-reduce
-+CFLAGS+=	-fno-strength-reduce
-+CXXFLAGS_NOOPT=	${CXXFLAGS:C/-O[0-9]*//g}
- INCPATH	=	-I$(QTDIR)/include
--LINK	=	g++
--LFLAGS	=	-static
--LIBS	=	-L$(QTDIR)/lib -lqt -L/usr/X11R6/lib -lX11
--MOC	=	moc
-+LINK	=	$(CXX)
-+LFLAGS	=	${LDFLAGS}
-+LIBS	=	-L$(QTDIR)/lib -lqt -L${X11BASE}/lib -lGLU -lGL -lXmu -lXext -lX11 -lm -lSM -lICE -lXmu -lpng -lz -ljpeg
-+MOC	=	$(QTDIR)/bin/moc
+-CC       = gcc
+-CXX      = g++
+-LEX      = flex
+-YACC     = yacc
+-CFLAGS   = -pipe -Wall -W -O2  -DQT_NO_DEBUG
+-CXXFLAGS = -pipe -Wall -W -O2  -DQT_NO_DEBUG
++CC       ?= gcc
++CXX      ?= g++
++LEX      ?= flex
++YACC     ?= yacc
++CFLAGS   += -Wall -W -DQT_NO_DEBUG
++CXXFLAGS += -Wall -W -DQT_NO_DEBUG
+ LEXFLAGS = 
+ YACCFLAGS= -d
+-INCPATH  = -I$(QTDIR)/include -I$(QTDIR)/mkspecs/linux-g++
++INCPATH  = -I$(QTDIR)/include -I$(X11BASE)/include
+ LINK     = g++
+ LFLAGS   = 
+-LIBS     = $(SUBLIBS)  -Wl,-rpath,$(QTDIR)/lib  -L$(QTDIR)/lib  -L/usr/X11R6/lib -lqt -lXext -lX11 -lm
+-AR       = ar cqs
+-RANLIB   = 
++LIBS     = -Wl,-R,$(QTDIR)/lib -L$(QTDIR)/lib -Wl,-R$(X11BASE)/lib -L$(X11BASE)/lib -Wl,-R$(LOCALBASE)/lib -L$(LOCALBASE)/lib -lqt-mt -lGLU -lGL -lXmu -lXext -lX11 -lm -lSM -lICE -lXmu -lpng -lz -ljpeg
++AR       ?= ar cqs
++RANLIB   ?= 
+ MOC      = $(QTDIR)/bin/moc
+ UIC      = $(QTDIR)/bin/uic
+ QMAKE    = qmake
+@@ -1766,10 +1766,16 @@
  
- ####### Files
-@@ -368,11 +370,11 @@
- 
- .cpp.o:
--	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
-+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
- 
- .cxx.o:
--	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
-+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
- 
- .cc.o:
--	$(CC) -c $(CFLAGS) $(INCPATH) -o $@ $<
-+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o $@ $<
- 
- .C.o:
-@@ -1791,4 +1793,7 @@
- 		ractiondef.h \
+ moc_rappwin.o: moc_rappwin.cpp rappwin.h ractiondef.h \
  		rprgdef.h
 +.if (${MACHINE_ARCH} == "alpha")
 +	$(CXX) -c $(CXXFLAGS_NOOPT) $(INCPATH) -o $@ moc_rappwin.cpp
 +.endif
  
- moc_rattribdialog.o: moc_rattribdialog.cpp \
-@@ -1869,4 +1874,7 @@
- 		rfontdialog.h \
- 		rgraphdef.h
+ moc_rattribdialog.o: moc_rattribdialog.cpp rattribdialog.h rcombobox.h \
+ 		rgraphdef.h \
+ 		rprgdef.h
 +.if (${MACHINE_ARCH} == "alpha")
 +	$(CXX) -c $(CXXFLAGS_NOOPT) $(INCPATH) -o $@ moc_rfontdialog.cpp
 +.endif
  
- moc_rgraphic.o: moc_rgraphic.cpp \
-@@ -1882,4 +1890,7 @@
- 		rmath.h \
+ moc_rbuttongroup.o: moc_rbuttongroup.cpp rbuttongroup.h 
+ 
+@@ -1836,8 +1842,14 @@
+ 		rtypes.h \
+ 		rprgdef.h \
  		rmathdef.h
 +.if (${MACHINE_ARCH} == "alpha")
 +	$(CXX) -c $(CXXFLAGS_NOOPT) $(INCPATH) -o $@ moc_rgraphic.cpp
 +.endif
  
- moc_rgroupbox.o: moc_rgroupbox.cpp \
-@@ -1963,4 +1974,7 @@
- 		rlistboxitem.h \
- 		rwidget.h
+ moc_rgroupbox.o: moc_rgroupbox.cpp rgroupbox.h 
 +.if (${MACHINE_ARCH} == "alpha")
 +	$(CXX) -c $(CXXFLAGS_NOOPT) $(INCPATH) -o $@ moc_rlayerwidget.cpp
 +.endif
  
- moc_rlibrarybrowser.o: moc_rlibrarybrowser.cpp \
+ moc_rhatchdialog.o: moc_rhatchdialog.cpp rhatchdialog.h rcombobox.h \
+ 		rgraphdef.h \
