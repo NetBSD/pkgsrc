@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.797 2001/08/16 01:49:09 dogcow Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.798 2001/08/20 14:41:48 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -2034,7 +2034,7 @@ real-install: do-su-install
 real-package: _PORT_USE
 
 # sudo or priv are acceptable substitutes
-SU_CMD?=	${SU} - root -c
+SU_CMD?=	${SU} root -c
 PRE_ROOT_CMD?=	${TRUE}
 
 do-su-install: 
