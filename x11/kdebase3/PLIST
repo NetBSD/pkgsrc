@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2004/11/18 11:48:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2004/12/10 06:05:16 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -2719,478 +2719,6 @@ share/kde/icons/hicolor/16x16/apps/khotkeys.png
 share/kde/icons/hicolor/32x32/apps/khotkeys.png
 share/kde/icons/locolor/16x16/apps/kcmfontinst.png
 share/kde/icons/locolor/32x32/apps/kcmfontinst.png
-share/kde/locale/en_US/entry.desktop
-share/kde/locale/l10n/C/entry.desktop
-share/kde/locale/l10n/C/flag.png
-share/kde/locale/l10n/ad/entry.desktop
-share/kde/locale/l10n/ad/flag.png
-share/kde/locale/l10n/ae/entry.desktop
-share/kde/locale/l10n/ae/flag.png
-share/kde/locale/l10n/af/entry.desktop
-share/kde/locale/l10n/af/flag.png
-share/kde/locale/l10n/ag/entry.desktop
-share/kde/locale/l10n/ag/flag.png
-share/kde/locale/l10n/ai/entry.desktop
-share/kde/locale/l10n/ai/flag.png
-share/kde/locale/l10n/al/entry.desktop
-share/kde/locale/l10n/al/flag.png
-share/kde/locale/l10n/am/entry.desktop
-share/kde/locale/l10n/am/flag.png
-share/kde/locale/l10n/an/entry.desktop
-share/kde/locale/l10n/an/flag.png
-share/kde/locale/l10n/ao/entry.desktop
-share/kde/locale/l10n/ao/flag.png
-share/kde/locale/l10n/ar/entry.desktop
-share/kde/locale/l10n/ar/flag.png
-share/kde/locale/l10n/as/entry.desktop
-share/kde/locale/l10n/as/flag.png
-share/kde/locale/l10n/at/entry.desktop
-share/kde/locale/l10n/at/flag.png
-share/kde/locale/l10n/au/entry.desktop
-share/kde/locale/l10n/au/flag.png
-share/kde/locale/l10n/aw/entry.desktop
-share/kde/locale/l10n/aw/flag.png
-share/kde/locale/l10n/az/entry.desktop
-share/kde/locale/l10n/az/flag.png
-share/kde/locale/l10n/ba/entry.desktop
-share/kde/locale/l10n/ba/flag.png
-share/kde/locale/l10n/bb/entry.desktop
-share/kde/locale/l10n/bb/flag.png
-share/kde/locale/l10n/bd/entry.desktop
-share/kde/locale/l10n/bd/flag.png
-share/kde/locale/l10n/be/entry.desktop
-share/kde/locale/l10n/be/flag.png
-share/kde/locale/l10n/bf/entry.desktop
-share/kde/locale/l10n/bf/flag.png
-share/kde/locale/l10n/bg/entry.desktop
-share/kde/locale/l10n/bg/flag.png
-share/kde/locale/l10n/bh/entry.desktop
-share/kde/locale/l10n/bh/flag.png
-share/kde/locale/l10n/bi/entry.desktop
-share/kde/locale/l10n/bi/flag.png
-share/kde/locale/l10n/bj/entry.desktop
-share/kde/locale/l10n/bj/flag.png
-share/kde/locale/l10n/bm/entry.desktop
-share/kde/locale/l10n/bm/flag.png
-share/kde/locale/l10n/bn/entry.desktop
-share/kde/locale/l10n/bn/flag.png
-share/kde/locale/l10n/bo/entry.desktop
-share/kde/locale/l10n/bo/flag.png
-share/kde/locale/l10n/br/entry.desktop
-share/kde/locale/l10n/br/flag.png
-share/kde/locale/l10n/bs/entry.desktop
-share/kde/locale/l10n/bs/flag.png
-share/kde/locale/l10n/bt/entry.desktop
-share/kde/locale/l10n/bt/flag.png
-share/kde/locale/l10n/bw/entry.desktop
-share/kde/locale/l10n/bw/flag.png
-share/kde/locale/l10n/by/entry.desktop
-share/kde/locale/l10n/by/flag.png
-share/kde/locale/l10n/bz/entry.desktop
-share/kde/locale/l10n/bz/flag.png
-share/kde/locale/l10n/ca/entry.desktop
-share/kde/locale/l10n/ca/flag.png
-share/kde/locale/l10n/caribbean.desktop
-share/kde/locale/l10n/cc/entry.desktop
-share/kde/locale/l10n/cc/flag.png
-share/kde/locale/l10n/cd/entry.desktop
-share/kde/locale/l10n/cd/flag.png
-share/kde/locale/l10n/centralafrica.desktop
-share/kde/locale/l10n/centralamerica.desktop
-share/kde/locale/l10n/centralasia.desktop
-share/kde/locale/l10n/centraleurope.desktop
-share/kde/locale/l10n/cf/entry.desktop
-share/kde/locale/l10n/cf/flag.png
-share/kde/locale/l10n/cg/entry.desktop
-share/kde/locale/l10n/cg/flag.png
-share/kde/locale/l10n/ch/entry.desktop
-share/kde/locale/l10n/ch/flag.png
-share/kde/locale/l10n/ci/entry.desktop
-share/kde/locale/l10n/ci/flag.png
-share/kde/locale/l10n/ck/entry.desktop
-share/kde/locale/l10n/ck/flag.png
-share/kde/locale/l10n/cl/entry.desktop
-share/kde/locale/l10n/cl/flag.png
-share/kde/locale/l10n/cm/entry.desktop
-share/kde/locale/l10n/cm/flag.png
-share/kde/locale/l10n/cn/entry.desktop
-share/kde/locale/l10n/cn/flag.png
-share/kde/locale/l10n/co/entry.desktop
-share/kde/locale/l10n/co/flag.png
-share/kde/locale/l10n/cr/entry.desktop
-share/kde/locale/l10n/cr/flag.png
-share/kde/locale/l10n/cu/entry.desktop
-share/kde/locale/l10n/cu/flag.png
-share/kde/locale/l10n/cv/entry.desktop
-share/kde/locale/l10n/cv/flag.png
-share/kde/locale/l10n/cx/entry.desktop
-share/kde/locale/l10n/cx/flag.png
-share/kde/locale/l10n/cy/entry.desktop
-share/kde/locale/l10n/cy/flag.png
-share/kde/locale/l10n/cz/entry.desktop
-share/kde/locale/l10n/cz/flag.png
-share/kde/locale/l10n/de/entry.desktop
-share/kde/locale/l10n/de/flag.png
-share/kde/locale/l10n/dj/entry.desktop
-share/kde/locale/l10n/dj/flag.png
-share/kde/locale/l10n/dk/entry.desktop
-share/kde/locale/l10n/dk/flag.png
-share/kde/locale/l10n/dm/entry.desktop
-share/kde/locale/l10n/dm/flag.png
-share/kde/locale/l10n/do/entry.desktop
-share/kde/locale/l10n/do/flag.png
-share/kde/locale/l10n/dz/entry.desktop
-share/kde/locale/l10n/dz/flag.png
-share/kde/locale/l10n/eastasia.desktop
-share/kde/locale/l10n/easteurope.desktop
-share/kde/locale/l10n/ec/entry.desktop
-share/kde/locale/l10n/ec/flag.png
-share/kde/locale/l10n/ee/entry.desktop
-share/kde/locale/l10n/ee/flag.png
-share/kde/locale/l10n/eg/entry.desktop
-share/kde/locale/l10n/eg/flag.png
-share/kde/locale/l10n/eh/entry.desktop
-share/kde/locale/l10n/eh/flag.png
-share/kde/locale/l10n/er/entry.desktop
-share/kde/locale/l10n/er/flag.png
-share/kde/locale/l10n/es/entry.desktop
-share/kde/locale/l10n/es/flag.png
-share/kde/locale/l10n/et/entry.desktop
-share/kde/locale/l10n/et/flag.png
-share/kde/locale/l10n/fi/entry.desktop
-share/kde/locale/l10n/fi/flag.png
-share/kde/locale/l10n/fj/entry.desktop
-share/kde/locale/l10n/fj/flag.png
-share/kde/locale/l10n/fk/entry.desktop
-share/kde/locale/l10n/fk/flag.png
-share/kde/locale/l10n/fm/entry.desktop
-share/kde/locale/l10n/fm/flag.png
-share/kde/locale/l10n/fo/entry.desktop
-share/kde/locale/l10n/fo/flag.png
-share/kde/locale/l10n/fr/entry.desktop
-share/kde/locale/l10n/fr/flag.png
-share/kde/locale/l10n/ga/entry.desktop
-share/kde/locale/l10n/ga/flag.png
-share/kde/locale/l10n/gb/entry.desktop
-share/kde/locale/l10n/gb/flag.png
-share/kde/locale/l10n/gd/entry.desktop
-share/kde/locale/l10n/gd/flag.png
-share/kde/locale/l10n/ge/entry.desktop
-share/kde/locale/l10n/ge/flag.png
-share/kde/locale/l10n/gh/entry.desktop
-share/kde/locale/l10n/gh/flag.png
-share/kde/locale/l10n/gi/entry.desktop
-share/kde/locale/l10n/gi/flag.png
-share/kde/locale/l10n/gm/entry.desktop
-share/kde/locale/l10n/gm/flag.png
-share/kde/locale/l10n/gn/entry.desktop
-share/kde/locale/l10n/gn/flag.png
-share/kde/locale/l10n/gp/entry.desktop
-share/kde/locale/l10n/gp/flag.png
-share/kde/locale/l10n/gq/entry.desktop
-share/kde/locale/l10n/gq/flag.png
-share/kde/locale/l10n/gr/entry.desktop
-share/kde/locale/l10n/gr/flag.png
-share/kde/locale/l10n/gt/entry.desktop
-share/kde/locale/l10n/gt/flag.png
-share/kde/locale/l10n/gu/entry.desktop
-share/kde/locale/l10n/gu/flag.png
-share/kde/locale/l10n/gw/entry.desktop
-share/kde/locale/l10n/gw/flag.png
-share/kde/locale/l10n/gy/entry.desktop
-share/kde/locale/l10n/gy/flag.png
-share/kde/locale/l10n/hk/entry.desktop
-share/kde/locale/l10n/hk/flag.png
-share/kde/locale/l10n/hn/entry.desktop
-share/kde/locale/l10n/hn/flag.png
-share/kde/locale/l10n/hr/entry.desktop
-share/kde/locale/l10n/hr/flag.png
-share/kde/locale/l10n/ht/entry.desktop
-share/kde/locale/l10n/ht/flag.png
-share/kde/locale/l10n/hu/entry.desktop
-share/kde/locale/l10n/hu/flag.png
-share/kde/locale/l10n/id/entry.desktop
-share/kde/locale/l10n/id/flag.png
-share/kde/locale/l10n/ie/entry.desktop
-share/kde/locale/l10n/ie/flag.png
-share/kde/locale/l10n/il/entry.desktop
-share/kde/locale/l10n/il/flag.png
-share/kde/locale/l10n/in/entry.desktop
-share/kde/locale/l10n/in/flag.png
-share/kde/locale/l10n/iq/entry.desktop
-share/kde/locale/l10n/iq/flag.png
-share/kde/locale/l10n/ir/entry.desktop
-share/kde/locale/l10n/ir/flag.png
-share/kde/locale/l10n/is/entry.desktop
-share/kde/locale/l10n/is/flag.png
-share/kde/locale/l10n/it/entry.desktop
-share/kde/locale/l10n/it/flag.png
-share/kde/locale/l10n/jm/entry.desktop
-share/kde/locale/l10n/jm/flag.png
-share/kde/locale/l10n/jo/entry.desktop
-share/kde/locale/l10n/jo/flag.png
-share/kde/locale/l10n/jp/entry.desktop
-share/kde/locale/l10n/jp/flag.png
-share/kde/locale/l10n/ke/entry.desktop
-share/kde/locale/l10n/ke/flag.png
-share/kde/locale/l10n/kg/entry.desktop
-share/kde/locale/l10n/kg/flag.png
-share/kde/locale/l10n/kh/entry.desktop
-share/kde/locale/l10n/kh/flag.png
-share/kde/locale/l10n/ki/entry.desktop
-share/kde/locale/l10n/ki/flag.png
-share/kde/locale/l10n/km/entry.desktop
-share/kde/locale/l10n/km/flag.png
-share/kde/locale/l10n/kn/entry.desktop
-share/kde/locale/l10n/kn/flag.png
-share/kde/locale/l10n/kp/entry.desktop
-share/kde/locale/l10n/kp/flag.png
-share/kde/locale/l10n/kr/entry.desktop
-share/kde/locale/l10n/kr/flag.png
-share/kde/locale/l10n/kw/entry.desktop
-share/kde/locale/l10n/kw/flag.png
-share/kde/locale/l10n/ky/entry.desktop
-share/kde/locale/l10n/ky/flag.png
-share/kde/locale/l10n/kz/entry.desktop
-share/kde/locale/l10n/kz/flag.png
-share/kde/locale/l10n/la/entry.desktop
-share/kde/locale/l10n/la/flag.png
-share/kde/locale/l10n/lb/entry.desktop
-share/kde/locale/l10n/lb/flag.png
-share/kde/locale/l10n/lc/entry.desktop
-share/kde/locale/l10n/lc/flag.png
-share/kde/locale/l10n/li/entry.desktop
-share/kde/locale/l10n/li/flag.png
-share/kde/locale/l10n/lk/entry.desktop
-share/kde/locale/l10n/lk/flag.png
-share/kde/locale/l10n/lr/entry.desktop
-share/kde/locale/l10n/lr/flag.png
-share/kde/locale/l10n/ls/entry.desktop
-share/kde/locale/l10n/ls/flag.png
-share/kde/locale/l10n/lt/entry.desktop
-share/kde/locale/l10n/lt/flag.png
-share/kde/locale/l10n/lu/entry.desktop
-share/kde/locale/l10n/lu/flag.png
-share/kde/locale/l10n/lv/entry.desktop
-share/kde/locale/l10n/lv/flag.png
-share/kde/locale/l10n/ly/entry.desktop
-share/kde/locale/l10n/ly/flag.png
-share/kde/locale/l10n/ma/entry.desktop
-share/kde/locale/l10n/ma/flag.png
-share/kde/locale/l10n/mc/entry.desktop
-share/kde/locale/l10n/mc/flag.png
-share/kde/locale/l10n/md/entry.desktop
-share/kde/locale/l10n/md/flag.png
-share/kde/locale/l10n/mg/entry.desktop
-share/kde/locale/l10n/mg/flag.png
-share/kde/locale/l10n/mh/entry.desktop
-share/kde/locale/l10n/mh/flag.png
-share/kde/locale/l10n/middleeast.desktop
-share/kde/locale/l10n/mk/entry.desktop
-share/kde/locale/l10n/mk/flag.png
-share/kde/locale/l10n/ml/entry.desktop
-share/kde/locale/l10n/ml/flag.png
-share/kde/locale/l10n/mm/entry.desktop
-share/kde/locale/l10n/mm/flag.png
-share/kde/locale/l10n/mn/entry.desktop
-share/kde/locale/l10n/mn/flag.png
-share/kde/locale/l10n/mo/entry.desktop
-share/kde/locale/l10n/mo/flag.png
-share/kde/locale/l10n/mq/entry.desktop
-share/kde/locale/l10n/mq/flag.png
-share/kde/locale/l10n/mr/entry.desktop
-share/kde/locale/l10n/mr/flag.png
-share/kde/locale/l10n/ms/entry.desktop
-share/kde/locale/l10n/ms/flag.png
-share/kde/locale/l10n/mt/entry.desktop
-share/kde/locale/l10n/mt/flag.png
-share/kde/locale/l10n/mu/entry.desktop
-share/kde/locale/l10n/mu/flag.png
-share/kde/locale/l10n/mv/entry.desktop
-share/kde/locale/l10n/mv/flag.png
-share/kde/locale/l10n/mw/entry.desktop
-share/kde/locale/l10n/mw/flag.png
-share/kde/locale/l10n/mx/entry.desktop
-share/kde/locale/l10n/mx/flag.png
-share/kde/locale/l10n/my/entry.desktop
-share/kde/locale/l10n/my/flag.png
-share/kde/locale/l10n/mz/entry.desktop
-share/kde/locale/l10n/mz/flag.png
-share/kde/locale/l10n/na/entry.desktop
-share/kde/locale/l10n/na/flag.png
-share/kde/locale/l10n/nc/entry.desktop
-share/kde/locale/l10n/nc/flag.png
-share/kde/locale/l10n/ne/entry.desktop
-share/kde/locale/l10n/ne/flag.png
-share/kde/locale/l10n/nf/entry.desktop
-share/kde/locale/l10n/nf/flag.png
-share/kde/locale/l10n/ng/entry.desktop
-share/kde/locale/l10n/ng/flag.png
-share/kde/locale/l10n/ni/entry.desktop
-share/kde/locale/l10n/ni/flag.png
-share/kde/locale/l10n/nl/entry.desktop
-share/kde/locale/l10n/nl/flag.png
-share/kde/locale/l10n/no/entry.desktop
-share/kde/locale/l10n/no/flag.png
-share/kde/locale/l10n/northafrica.desktop
-share/kde/locale/l10n/northamerica.desktop
-share/kde/locale/l10n/northeurope.desktop
-share/kde/locale/l10n/np/entry.desktop
-share/kde/locale/l10n/np/flag.png
-share/kde/locale/l10n/nr/entry.desktop
-share/kde/locale/l10n/nr/flag.png
-share/kde/locale/l10n/nu/entry.desktop
-share/kde/locale/l10n/nu/flag.png
-share/kde/locale/l10n/nz/entry.desktop
-share/kde/locale/l10n/nz/flag.png
-share/kde/locale/l10n/oceania.desktop
-share/kde/locale/l10n/om/entry.desktop
-share/kde/locale/l10n/om/flag.png
-share/kde/locale/l10n/pa/entry.desktop
-share/kde/locale/l10n/pa/flag.png
-share/kde/locale/l10n/pe/entry.desktop
-share/kde/locale/l10n/pe/flag.png
-share/kde/locale/l10n/pf/entry.desktop
-share/kde/locale/l10n/pf/flag.png
-share/kde/locale/l10n/pg/entry.desktop
-share/kde/locale/l10n/pg/flag.png
-share/kde/locale/l10n/ph/entry.desktop
-share/kde/locale/l10n/ph/flag.png
-share/kde/locale/l10n/pk/entry.desktop
-share/kde/locale/l10n/pk/flag.png
-share/kde/locale/l10n/pl/entry.desktop
-share/kde/locale/l10n/pl/flag.png
-share/kde/locale/l10n/pm/entry.desktop
-share/kde/locale/l10n/pm/flag.png
-share/kde/locale/l10n/pn/entry.desktop
-share/kde/locale/l10n/pn/flag.png
-share/kde/locale/l10n/pr/entry.desktop
-share/kde/locale/l10n/pr/flag.png
-share/kde/locale/l10n/ps/entry.desktop
-share/kde/locale/l10n/ps/flag.png
-share/kde/locale/l10n/pt/entry.desktop
-share/kde/locale/l10n/pt/flag.png
-share/kde/locale/l10n/pw/entry.desktop
-share/kde/locale/l10n/pw/flag.png
-share/kde/locale/l10n/py/entry.desktop
-share/kde/locale/l10n/py/flag.png
-share/kde/locale/l10n/qa/entry.desktop
-share/kde/locale/l10n/qa/flag.png
-share/kde/locale/l10n/ro/entry.desktop
-share/kde/locale/l10n/ro/flag.png
-share/kde/locale/l10n/ru/entry.desktop
-share/kde/locale/l10n/ru/flag.png
-share/kde/locale/l10n/rw/entry.desktop
-share/kde/locale/l10n/rw/flag.png
-share/kde/locale/l10n/sa/entry.desktop
-share/kde/locale/l10n/sa/flag.png
-share/kde/locale/l10n/sb/entry.desktop
-share/kde/locale/l10n/sb/flag.png
-share/kde/locale/l10n/sc/entry.desktop
-share/kde/locale/l10n/sc/flag.png
-share/kde/locale/l10n/sd/entry.desktop
-share/kde/locale/l10n/sd/flag.png
-share/kde/locale/l10n/se/entry.desktop
-share/kde/locale/l10n/se/flag.png
-share/kde/locale/l10n/sg/entry.desktop
-share/kde/locale/l10n/sg/flag.png
-share/kde/locale/l10n/sh/entry.desktop
-share/kde/locale/l10n/sh/flag.png
-share/kde/locale/l10n/si/entry.desktop
-share/kde/locale/l10n/si/flag.png
-share/kde/locale/l10n/sk/entry.desktop
-share/kde/locale/l10n/sk/flag.png
-share/kde/locale/l10n/sm/entry.desktop
-share/kde/locale/l10n/sm/flag.png
-share/kde/locale/l10n/sn/entry.desktop
-share/kde/locale/l10n/sn/flag.png
-share/kde/locale/l10n/so/entry.desktop
-share/kde/locale/l10n/so/flag.png
-share/kde/locale/l10n/southafrica.desktop
-share/kde/locale/l10n/southamerica.desktop
-share/kde/locale/l10n/southasia.desktop
-share/kde/locale/l10n/southeastasia.desktop
-share/kde/locale/l10n/southeurope.desktop
-share/kde/locale/l10n/sr/entry.desktop
-share/kde/locale/l10n/sr/flag.png
-share/kde/locale/l10n/st/entry.desktop
-share/kde/locale/l10n/st/flag.png
-share/kde/locale/l10n/sv/entry.desktop
-share/kde/locale/l10n/sv/flag.png
-share/kde/locale/l10n/sy/entry.desktop
-share/kde/locale/l10n/sy/flag.png
-share/kde/locale/l10n/sz/entry.desktop
-share/kde/locale/l10n/sz/flag.png
-share/kde/locale/l10n/tc/entry.desktop
-share/kde/locale/l10n/tc/flag.png
-share/kde/locale/l10n/td/entry.desktop
-share/kde/locale/l10n/td/flag.png
-share/kde/locale/l10n/tg/entry.desktop
-share/kde/locale/l10n/tg/flag.png
-share/kde/locale/l10n/th/entry.desktop
-share/kde/locale/l10n/th/flag.png
-share/kde/locale/l10n/tj/entry.desktop
-share/kde/locale/l10n/tj/flag.png
-share/kde/locale/l10n/tk/entry.desktop
-share/kde/locale/l10n/tk/flag.png
-share/kde/locale/l10n/tm/entry.desktop
-share/kde/locale/l10n/tm/flag.png
-share/kde/locale/l10n/tn/entry.desktop
-share/kde/locale/l10n/tn/flag.png
-share/kde/locale/l10n/to/entry.desktop
-share/kde/locale/l10n/to/flag.png
-share/kde/locale/l10n/tp/entry.desktop
-share/kde/locale/l10n/tp/flag.png
-share/kde/locale/l10n/tr/entry.desktop
-share/kde/locale/l10n/tr/flag.png
-share/kde/locale/l10n/tt/entry.desktop
-share/kde/locale/l10n/tt/flag.png
-share/kde/locale/l10n/tv/entry.desktop
-share/kde/locale/l10n/tv/flag.png
-share/kde/locale/l10n/tw/entry.desktop
-share/kde/locale/l10n/tw/flag.png
-share/kde/locale/l10n/tz/entry.desktop
-share/kde/locale/l10n/tz/flag.png
-share/kde/locale/l10n/ua/entry.desktop
-share/kde/locale/l10n/ua/flag.png
-share/kde/locale/l10n/ug/entry.desktop
-share/kde/locale/l10n/ug/flag.png
-share/kde/locale/l10n/us/entry.desktop
-share/kde/locale/l10n/us/flag.png
-share/kde/locale/l10n/uy/entry.desktop
-share/kde/locale/l10n/uy/flag.png
-share/kde/locale/l10n/uz/entry.desktop
-share/kde/locale/l10n/uz/flag.png
-share/kde/locale/l10n/va/entry.desktop
-share/kde/locale/l10n/va/flag.png
-share/kde/locale/l10n/vc/entry.desktop
-share/kde/locale/l10n/vc/flag.png
-share/kde/locale/l10n/ve/entry.desktop
-share/kde/locale/l10n/ve/flag.png
-share/kde/locale/l10n/vg/entry.desktop
-share/kde/locale/l10n/vg/flag.png
-share/kde/locale/l10n/vi/entry.desktop
-share/kde/locale/l10n/vi/flag.png
-share/kde/locale/l10n/vn/entry.desktop
-share/kde/locale/l10n/vn/flag.png
-share/kde/locale/l10n/vu/entry.desktop
-share/kde/locale/l10n/vu/flag.png
-share/kde/locale/l10n/westafrica.desktop
-share/kde/locale/l10n/westeurope.desktop
-share/kde/locale/l10n/wf/entry.desktop
-share/kde/locale/l10n/wf/flag.png
-share/kde/locale/l10n/ws/entry.desktop
-share/kde/locale/l10n/ws/flag.png
-share/kde/locale/l10n/ye/entry.desktop
-share/kde/locale/l10n/ye/flag.png
-share/kde/locale/l10n/yu/entry.desktop
-share/kde/locale/l10n/yu/flag.png
-share/kde/locale/l10n/za/entry.desktop
-share/kde/locale/l10n/za/flag.png
-share/kde/locale/l10n/zm/entry.desktop
-share/kde/locale/l10n/zm/flag.png
-share/kde/locale/l10n/zw/entry.desktop
-share/kde/locale/l10n/zw/flag.png
 share/kde/mimelnk/application/x-kate-project.desktop
 share/kde/mimelnk/application/x-konsole.desktop
 share/kde/mimelnk/application/x-ksysguard.desktop
@@ -3538,287 +3066,757 @@ share/kde/wallpapers/kde_passion.jpg
 share/kde/wallpapers/only_k.jpg
 share/kde/wallpapers/seaofconero.jpg
 share/kde/wallpapers/triplegears.jpg
-@dirrm share/kde/wallpapers
+${PKGLOCALEDIR}/locale/en_US/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/C/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/C/flag.png
+${PKGLOCALEDIR}/locale/l10n/ad/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ad/flag.png
+${PKGLOCALEDIR}/locale/l10n/ae/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ae/flag.png
+${PKGLOCALEDIR}/locale/l10n/af/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/af/flag.png
+${PKGLOCALEDIR}/locale/l10n/ag/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ag/flag.png
+${PKGLOCALEDIR}/locale/l10n/ai/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ai/flag.png
+${PKGLOCALEDIR}/locale/l10n/al/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/al/flag.png
+${PKGLOCALEDIR}/locale/l10n/am/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/am/flag.png
+${PKGLOCALEDIR}/locale/l10n/an/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/an/flag.png
+${PKGLOCALEDIR}/locale/l10n/ao/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ao/flag.png
+${PKGLOCALEDIR}/locale/l10n/ar/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ar/flag.png
+${PKGLOCALEDIR}/locale/l10n/as/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/as/flag.png
+${PKGLOCALEDIR}/locale/l10n/at/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/at/flag.png
+${PKGLOCALEDIR}/locale/l10n/au/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/au/flag.png
+${PKGLOCALEDIR}/locale/l10n/aw/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/aw/flag.png
+${PKGLOCALEDIR}/locale/l10n/az/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/az/flag.png
+${PKGLOCALEDIR}/locale/l10n/ba/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ba/flag.png
+${PKGLOCALEDIR}/locale/l10n/bb/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bb/flag.png
+${PKGLOCALEDIR}/locale/l10n/bd/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bd/flag.png
+${PKGLOCALEDIR}/locale/l10n/be/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/be/flag.png
+${PKGLOCALEDIR}/locale/l10n/bf/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bf/flag.png
+${PKGLOCALEDIR}/locale/l10n/bg/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bg/flag.png
+${PKGLOCALEDIR}/locale/l10n/bh/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bh/flag.png
+${PKGLOCALEDIR}/locale/l10n/bi/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bi/flag.png
+${PKGLOCALEDIR}/locale/l10n/bj/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bj/flag.png
+${PKGLOCALEDIR}/locale/l10n/bm/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bm/flag.png
+${PKGLOCALEDIR}/locale/l10n/bn/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bn/flag.png
+${PKGLOCALEDIR}/locale/l10n/bo/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bo/flag.png
+${PKGLOCALEDIR}/locale/l10n/br/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/br/flag.png
+${PKGLOCALEDIR}/locale/l10n/bs/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bs/flag.png
+${PKGLOCALEDIR}/locale/l10n/bt/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bt/flag.png
+${PKGLOCALEDIR}/locale/l10n/bw/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bw/flag.png
+${PKGLOCALEDIR}/locale/l10n/by/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/by/flag.png
+${PKGLOCALEDIR}/locale/l10n/bz/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/bz/flag.png
+${PKGLOCALEDIR}/locale/l10n/ca/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ca/flag.png
+${PKGLOCALEDIR}/locale/l10n/caribbean.desktop
+${PKGLOCALEDIR}/locale/l10n/cc/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cc/flag.png
+${PKGLOCALEDIR}/locale/l10n/cd/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cd/flag.png
+${PKGLOCALEDIR}/locale/l10n/centralafrica.desktop
+${PKGLOCALEDIR}/locale/l10n/centralamerica.desktop
+${PKGLOCALEDIR}/locale/l10n/centralasia.desktop
+${PKGLOCALEDIR}/locale/l10n/centraleurope.desktop
+${PKGLOCALEDIR}/locale/l10n/cf/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cf/flag.png
+${PKGLOCALEDIR}/locale/l10n/cg/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cg/flag.png
+${PKGLOCALEDIR}/locale/l10n/ch/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ch/flag.png
+${PKGLOCALEDIR}/locale/l10n/ci/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ci/flag.png
+${PKGLOCALEDIR}/locale/l10n/ck/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ck/flag.png
+${PKGLOCALEDIR}/locale/l10n/cl/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cl/flag.png
+${PKGLOCALEDIR}/locale/l10n/cm/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cm/flag.png
+${PKGLOCALEDIR}/locale/l10n/cn/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cn/flag.png
+${PKGLOCALEDIR}/locale/l10n/co/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/co/flag.png
+${PKGLOCALEDIR}/locale/l10n/cr/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cr/flag.png
+${PKGLOCALEDIR}/locale/l10n/cu/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cu/flag.png
+${PKGLOCALEDIR}/locale/l10n/cv/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cv/flag.png
+${PKGLOCALEDIR}/locale/l10n/cx/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cx/flag.png
+${PKGLOCALEDIR}/locale/l10n/cy/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cy/flag.png
+${PKGLOCALEDIR}/locale/l10n/cz/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/cz/flag.png
+${PKGLOCALEDIR}/locale/l10n/de/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/de/flag.png
+${PKGLOCALEDIR}/locale/l10n/dj/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/dj/flag.png
+${PKGLOCALEDIR}/locale/l10n/dk/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/dk/flag.png
+${PKGLOCALEDIR}/locale/l10n/dm/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/dm/flag.png
+${PKGLOCALEDIR}/locale/l10n/do/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/do/flag.png
+${PKGLOCALEDIR}/locale/l10n/dz/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/dz/flag.png
+${PKGLOCALEDIR}/locale/l10n/eastasia.desktop
+${PKGLOCALEDIR}/locale/l10n/easteurope.desktop
+${PKGLOCALEDIR}/locale/l10n/ec/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ec/flag.png
+${PKGLOCALEDIR}/locale/l10n/ee/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ee/flag.png
+${PKGLOCALEDIR}/locale/l10n/eg/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/eg/flag.png
+${PKGLOCALEDIR}/locale/l10n/eh/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/eh/flag.png
+${PKGLOCALEDIR}/locale/l10n/er/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/er/flag.png
+${PKGLOCALEDIR}/locale/l10n/es/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/es/flag.png
+${PKGLOCALEDIR}/locale/l10n/et/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/et/flag.png
+${PKGLOCALEDIR}/locale/l10n/fi/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/fi/flag.png
+${PKGLOCALEDIR}/locale/l10n/fj/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/fj/flag.png
+${PKGLOCALEDIR}/locale/l10n/fk/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/fk/flag.png
+${PKGLOCALEDIR}/locale/l10n/fm/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/fm/flag.png
+${PKGLOCALEDIR}/locale/l10n/fo/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/fo/flag.png
+${PKGLOCALEDIR}/locale/l10n/fr/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/fr/flag.png
+${PKGLOCALEDIR}/locale/l10n/ga/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ga/flag.png
+${PKGLOCALEDIR}/locale/l10n/gb/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gb/flag.png
+${PKGLOCALEDIR}/locale/l10n/gd/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gd/flag.png
+${PKGLOCALEDIR}/locale/l10n/ge/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ge/flag.png
+${PKGLOCALEDIR}/locale/l10n/gh/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gh/flag.png
+${PKGLOCALEDIR}/locale/l10n/gi/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gi/flag.png
+${PKGLOCALEDIR}/locale/l10n/gm/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gm/flag.png
+${PKGLOCALEDIR}/locale/l10n/gn/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gn/flag.png
+${PKGLOCALEDIR}/locale/l10n/gp/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gp/flag.png
+${PKGLOCALEDIR}/locale/l10n/gq/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gq/flag.png
+${PKGLOCALEDIR}/locale/l10n/gr/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gr/flag.png
+${PKGLOCALEDIR}/locale/l10n/gt/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gt/flag.png
+${PKGLOCALEDIR}/locale/l10n/gu/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gu/flag.png
+${PKGLOCALEDIR}/locale/l10n/gw/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gw/flag.png
+${PKGLOCALEDIR}/locale/l10n/gy/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/gy/flag.png
+${PKGLOCALEDIR}/locale/l10n/hk/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/hk/flag.png
+${PKGLOCALEDIR}/locale/l10n/hn/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/hn/flag.png
+${PKGLOCALEDIR}/locale/l10n/hr/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/hr/flag.png
+${PKGLOCALEDIR}/locale/l10n/ht/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ht/flag.png
+${PKGLOCALEDIR}/locale/l10n/hu/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/hu/flag.png
+${PKGLOCALEDIR}/locale/l10n/id/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/id/flag.png
+${PKGLOCALEDIR}/locale/l10n/ie/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ie/flag.png
+${PKGLOCALEDIR}/locale/l10n/il/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/il/flag.png
+${PKGLOCALEDIR}/locale/l10n/in/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/in/flag.png
+${PKGLOCALEDIR}/locale/l10n/iq/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/iq/flag.png
+${PKGLOCALEDIR}/locale/l10n/ir/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ir/flag.png
+${PKGLOCALEDIR}/locale/l10n/is/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/is/flag.png
+${PKGLOCALEDIR}/locale/l10n/it/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/it/flag.png
+${PKGLOCALEDIR}/locale/l10n/jm/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/jm/flag.png
+${PKGLOCALEDIR}/locale/l10n/jo/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/jo/flag.png
+${PKGLOCALEDIR}/locale/l10n/jp/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/jp/flag.png
+${PKGLOCALEDIR}/locale/l10n/ke/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ke/flag.png
+${PKGLOCALEDIR}/locale/l10n/kg/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/kg/flag.png
+${PKGLOCALEDIR}/locale/l10n/kh/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/kh/flag.png
+${PKGLOCALEDIR}/locale/l10n/ki/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ki/flag.png
+${PKGLOCALEDIR}/locale/l10n/km/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/km/flag.png
+${PKGLOCALEDIR}/locale/l10n/kn/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/kn/flag.png
+${PKGLOCALEDIR}/locale/l10n/kp/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/kp/flag.png
+${PKGLOCALEDIR}/locale/l10n/kr/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/kr/flag.png
+${PKGLOCALEDIR}/locale/l10n/kw/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/kw/flag.png
+${PKGLOCALEDIR}/locale/l10n/ky/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ky/flag.png
+${PKGLOCALEDIR}/locale/l10n/kz/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/kz/flag.png
+${PKGLOCALEDIR}/locale/l10n/la/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/la/flag.png
+${PKGLOCALEDIR}/locale/l10n/lb/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/lb/flag.png
+${PKGLOCALEDIR}/locale/l10n/lc/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/lc/flag.png
+${PKGLOCALEDIR}/locale/l10n/li/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/li/flag.png
+${PKGLOCALEDIR}/locale/l10n/lk/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/lk/flag.png
+${PKGLOCALEDIR}/locale/l10n/lr/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/lr/flag.png
+${PKGLOCALEDIR}/locale/l10n/ls/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ls/flag.png
+${PKGLOCALEDIR}/locale/l10n/lt/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/lt/flag.png
+${PKGLOCALEDIR}/locale/l10n/lu/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/lu/flag.png
+${PKGLOCALEDIR}/locale/l10n/lv/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/lv/flag.png
+${PKGLOCALEDIR}/locale/l10n/ly/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ly/flag.png
+${PKGLOCALEDIR}/locale/l10n/ma/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ma/flag.png
+${PKGLOCALEDIR}/locale/l10n/mc/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mc/flag.png
+${PKGLOCALEDIR}/locale/l10n/md/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/md/flag.png
+${PKGLOCALEDIR}/locale/l10n/mg/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mg/flag.png
+${PKGLOCALEDIR}/locale/l10n/mh/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mh/flag.png
+${PKGLOCALEDIR}/locale/l10n/middleeast.desktop
+${PKGLOCALEDIR}/locale/l10n/mk/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mk/flag.png
+${PKGLOCALEDIR}/locale/l10n/ml/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ml/flag.png
+${PKGLOCALEDIR}/locale/l10n/mm/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mm/flag.png
+${PKGLOCALEDIR}/locale/l10n/mn/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mn/flag.png
+${PKGLOCALEDIR}/locale/l10n/mo/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mo/flag.png
+${PKGLOCALEDIR}/locale/l10n/mq/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mq/flag.png
+${PKGLOCALEDIR}/locale/l10n/mr/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mr/flag.png
+${PKGLOCALEDIR}/locale/l10n/ms/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ms/flag.png
+${PKGLOCALEDIR}/locale/l10n/mt/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mt/flag.png
+${PKGLOCALEDIR}/locale/l10n/mu/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mu/flag.png
+${PKGLOCALEDIR}/locale/l10n/mv/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mv/flag.png
+${PKGLOCALEDIR}/locale/l10n/mw/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mw/flag.png
+${PKGLOCALEDIR}/locale/l10n/mx/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mx/flag.png
+${PKGLOCALEDIR}/locale/l10n/my/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/my/flag.png
+${PKGLOCALEDIR}/locale/l10n/mz/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/mz/flag.png
+${PKGLOCALEDIR}/locale/l10n/na/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/na/flag.png
+${PKGLOCALEDIR}/locale/l10n/nc/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/nc/flag.png
+${PKGLOCALEDIR}/locale/l10n/ne/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ne/flag.png
+${PKGLOCALEDIR}/locale/l10n/nf/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/nf/flag.png
+${PKGLOCALEDIR}/locale/l10n/ng/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ng/flag.png
+${PKGLOCALEDIR}/locale/l10n/ni/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ni/flag.png
+${PKGLOCALEDIR}/locale/l10n/nl/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/nl/flag.png
+${PKGLOCALEDIR}/locale/l10n/no/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/no/flag.png
+${PKGLOCALEDIR}/locale/l10n/northafrica.desktop
+${PKGLOCALEDIR}/locale/l10n/northamerica.desktop
+${PKGLOCALEDIR}/locale/l10n/northeurope.desktop
+${PKGLOCALEDIR}/locale/l10n/np/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/np/flag.png
+${PKGLOCALEDIR}/locale/l10n/nr/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/nr/flag.png
+${PKGLOCALEDIR}/locale/l10n/nu/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/nu/flag.png
+${PKGLOCALEDIR}/locale/l10n/nz/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/nz/flag.png
+${PKGLOCALEDIR}/locale/l10n/oceania.desktop
+${PKGLOCALEDIR}/locale/l10n/om/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/om/flag.png
+${PKGLOCALEDIR}/locale/l10n/pa/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/pa/flag.png
+${PKGLOCALEDIR}/locale/l10n/pe/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/pe/flag.png
+${PKGLOCALEDIR}/locale/l10n/pf/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/pf/flag.png
+${PKGLOCALEDIR}/locale/l10n/pg/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/pg/flag.png
+${PKGLOCALEDIR}/locale/l10n/ph/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ph/flag.png
+${PKGLOCALEDIR}/locale/l10n/pk/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/pk/flag.png
+${PKGLOCALEDIR}/locale/l10n/pl/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/pl/flag.png
+${PKGLOCALEDIR}/locale/l10n/pm/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/pm/flag.png
+${PKGLOCALEDIR}/locale/l10n/pn/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/pn/flag.png
+${PKGLOCALEDIR}/locale/l10n/pr/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/pr/flag.png
+${PKGLOCALEDIR}/locale/l10n/ps/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ps/flag.png
+${PKGLOCALEDIR}/locale/l10n/pt/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/pt/flag.png
+${PKGLOCALEDIR}/locale/l10n/pw/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/pw/flag.png
+${PKGLOCALEDIR}/locale/l10n/py/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/py/flag.png
+${PKGLOCALEDIR}/locale/l10n/qa/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/qa/flag.png
+${PKGLOCALEDIR}/locale/l10n/ro/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ro/flag.png
+${PKGLOCALEDIR}/locale/l10n/ru/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ru/flag.png
+${PKGLOCALEDIR}/locale/l10n/rw/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/rw/flag.png
+${PKGLOCALEDIR}/locale/l10n/sa/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sa/flag.png
+${PKGLOCALEDIR}/locale/l10n/sb/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sb/flag.png
+${PKGLOCALEDIR}/locale/l10n/sc/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sc/flag.png
+${PKGLOCALEDIR}/locale/l10n/sd/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sd/flag.png
+${PKGLOCALEDIR}/locale/l10n/se/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/se/flag.png
+${PKGLOCALEDIR}/locale/l10n/sg/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sg/flag.png
+${PKGLOCALEDIR}/locale/l10n/sh/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sh/flag.png
+${PKGLOCALEDIR}/locale/l10n/si/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/si/flag.png
+${PKGLOCALEDIR}/locale/l10n/sk/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sk/flag.png
+${PKGLOCALEDIR}/locale/l10n/sm/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sm/flag.png
+${PKGLOCALEDIR}/locale/l10n/sn/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sn/flag.png
+${PKGLOCALEDIR}/locale/l10n/so/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/so/flag.png
+${PKGLOCALEDIR}/locale/l10n/southafrica.desktop
+${PKGLOCALEDIR}/locale/l10n/southamerica.desktop
+${PKGLOCALEDIR}/locale/l10n/southasia.desktop
+${PKGLOCALEDIR}/locale/l10n/southeastasia.desktop
+${PKGLOCALEDIR}/locale/l10n/southeurope.desktop
+${PKGLOCALEDIR}/locale/l10n/sr/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sr/flag.png
+${PKGLOCALEDIR}/locale/l10n/st/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/st/flag.png
+${PKGLOCALEDIR}/locale/l10n/sv/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sv/flag.png
+${PKGLOCALEDIR}/locale/l10n/sy/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sy/flag.png
+${PKGLOCALEDIR}/locale/l10n/sz/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/sz/flag.png
+${PKGLOCALEDIR}/locale/l10n/tc/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/tc/flag.png
+${PKGLOCALEDIR}/locale/l10n/td/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/td/flag.png
+${PKGLOCALEDIR}/locale/l10n/tg/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/tg/flag.png
+${PKGLOCALEDIR}/locale/l10n/th/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/th/flag.png
+${PKGLOCALEDIR}/locale/l10n/tj/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/tj/flag.png
+${PKGLOCALEDIR}/locale/l10n/tk/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/tk/flag.png
+${PKGLOCALEDIR}/locale/l10n/tm/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/tm/flag.png
+${PKGLOCALEDIR}/locale/l10n/tn/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/tn/flag.png
+${PKGLOCALEDIR}/locale/l10n/to/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/to/flag.png
+${PKGLOCALEDIR}/locale/l10n/tp/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/tp/flag.png
+${PKGLOCALEDIR}/locale/l10n/tr/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/tr/flag.png
+${PKGLOCALEDIR}/locale/l10n/tt/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/tt/flag.png
+${PKGLOCALEDIR}/locale/l10n/tv/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/tv/flag.png
+${PKGLOCALEDIR}/locale/l10n/tw/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/tw/flag.png
+${PKGLOCALEDIR}/locale/l10n/tz/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/tz/flag.png
+${PKGLOCALEDIR}/locale/l10n/ua/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ua/flag.png
+${PKGLOCALEDIR}/locale/l10n/ug/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ug/flag.png
+${PKGLOCALEDIR}/locale/l10n/us/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/us/flag.png
+${PKGLOCALEDIR}/locale/l10n/uy/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/uy/flag.png
+${PKGLOCALEDIR}/locale/l10n/uz/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/uz/flag.png
+${PKGLOCALEDIR}/locale/l10n/va/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/va/flag.png
+${PKGLOCALEDIR}/locale/l10n/vc/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/vc/flag.png
+${PKGLOCALEDIR}/locale/l10n/ve/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ve/flag.png
+${PKGLOCALEDIR}/locale/l10n/vg/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/vg/flag.png
+${PKGLOCALEDIR}/locale/l10n/vi/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/vi/flag.png
+${PKGLOCALEDIR}/locale/l10n/vn/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/vn/flag.png
+${PKGLOCALEDIR}/locale/l10n/vu/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/vu/flag.png
+${PKGLOCALEDIR}/locale/l10n/westafrica.desktop
+${PKGLOCALEDIR}/locale/l10n/westeurope.desktop
+${PKGLOCALEDIR}/locale/l10n/wf/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/wf/flag.png
+${PKGLOCALEDIR}/locale/l10n/ws/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ws/flag.png
+${PKGLOCALEDIR}/locale/l10n/ye/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/ye/flag.png
+${PKGLOCALEDIR}/locale/l10n/yu/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/yu/flag.png
+${PKGLOCALEDIR}/locale/l10n/za/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/za/flag.png
+${PKGLOCALEDIR}/locale/l10n/zm/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/zm/flag.png
+${PKGLOCALEDIR}/locale/l10n/zw/entry.desktop
+${PKGLOCALEDIR}/locale/l10n/zw/flag.png
+@dirrm ${PKGLOCALEDIR}/locale/l10n/zw
+@dirrm ${PKGLOCALEDIR}/locale/l10n/zm
+@dirrm ${PKGLOCALEDIR}/locale/l10n/za
+@dirrm ${PKGLOCALEDIR}/locale/l10n/yu
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ye
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ws
+@dirrm ${PKGLOCALEDIR}/locale/l10n/wf
+@dirrm ${PKGLOCALEDIR}/locale/l10n/vu
+@dirrm ${PKGLOCALEDIR}/locale/l10n/vn
+@dirrm ${PKGLOCALEDIR}/locale/l10n/vi
+@dirrm ${PKGLOCALEDIR}/locale/l10n/vg
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ve
+@dirrm ${PKGLOCALEDIR}/locale/l10n/vc
+@dirrm ${PKGLOCALEDIR}/locale/l10n/va
+@dirrm ${PKGLOCALEDIR}/locale/l10n/uz
+@dirrm ${PKGLOCALEDIR}/locale/l10n/uy
+@dirrm ${PKGLOCALEDIR}/locale/l10n/us
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ug
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ua
+@dirrm ${PKGLOCALEDIR}/locale/l10n/tz
+@dirrm ${PKGLOCALEDIR}/locale/l10n/tw
+@dirrm ${PKGLOCALEDIR}/locale/l10n/tv
+@dirrm ${PKGLOCALEDIR}/locale/l10n/tt
+@dirrm ${PKGLOCALEDIR}/locale/l10n/tr
+@dirrm ${PKGLOCALEDIR}/locale/l10n/tp
+@dirrm ${PKGLOCALEDIR}/locale/l10n/to
+@dirrm ${PKGLOCALEDIR}/locale/l10n/tn
+@dirrm ${PKGLOCALEDIR}/locale/l10n/tm
+@dirrm ${PKGLOCALEDIR}/locale/l10n/tk
+@dirrm ${PKGLOCALEDIR}/locale/l10n/tj
+@dirrm ${PKGLOCALEDIR}/locale/l10n/th
+@dirrm ${PKGLOCALEDIR}/locale/l10n/tg
+@dirrm ${PKGLOCALEDIR}/locale/l10n/td
+@dirrm ${PKGLOCALEDIR}/locale/l10n/tc
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sz
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sy
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sv
+@dirrm ${PKGLOCALEDIR}/locale/l10n/st
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sr
+@dirrm ${PKGLOCALEDIR}/locale/l10n/so
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sn
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sm
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sk
+@dirrm ${PKGLOCALEDIR}/locale/l10n/si
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sh
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sg
+@dirrm ${PKGLOCALEDIR}/locale/l10n/se
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sd
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sc
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sb
+@dirrm ${PKGLOCALEDIR}/locale/l10n/sa
+@dirrm ${PKGLOCALEDIR}/locale/l10n/rw
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ru
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ro
+@dirrm ${PKGLOCALEDIR}/locale/l10n/qa
+@dirrm ${PKGLOCALEDIR}/locale/l10n/py
+@dirrm ${PKGLOCALEDIR}/locale/l10n/pw
+@dirrm ${PKGLOCALEDIR}/locale/l10n/pt
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ps
+@dirrm ${PKGLOCALEDIR}/locale/l10n/pr
+@dirrm ${PKGLOCALEDIR}/locale/l10n/pn
+@dirrm ${PKGLOCALEDIR}/locale/l10n/pm
+@dirrm ${PKGLOCALEDIR}/locale/l10n/pl
+@dirrm ${PKGLOCALEDIR}/locale/l10n/pk
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ph
+@dirrm ${PKGLOCALEDIR}/locale/l10n/pg
+@dirrm ${PKGLOCALEDIR}/locale/l10n/pf
+@dirrm ${PKGLOCALEDIR}/locale/l10n/pe
+@dirrm ${PKGLOCALEDIR}/locale/l10n/pa
+@dirrm ${PKGLOCALEDIR}/locale/l10n/om
+@dirrm ${PKGLOCALEDIR}/locale/l10n/nz
+@dirrm ${PKGLOCALEDIR}/locale/l10n/nu
+@dirrm ${PKGLOCALEDIR}/locale/l10n/nr
+@dirrm ${PKGLOCALEDIR}/locale/l10n/np
+@dirrm ${PKGLOCALEDIR}/locale/l10n/no
+@dirrm ${PKGLOCALEDIR}/locale/l10n/nl
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ni
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ng
+@dirrm ${PKGLOCALEDIR}/locale/l10n/nf
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ne
+@dirrm ${PKGLOCALEDIR}/locale/l10n/nc
+@dirrm ${PKGLOCALEDIR}/locale/l10n/na
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mz
+@dirrm ${PKGLOCALEDIR}/locale/l10n/my
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mx
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mw
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mv
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mu
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mt
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ms
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mr
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mq
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mo
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mn
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mm
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ml
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mk
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mh
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mg
+@dirrm ${PKGLOCALEDIR}/locale/l10n/md
+@dirrm ${PKGLOCALEDIR}/locale/l10n/mc
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ma
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ly
+@dirrm ${PKGLOCALEDIR}/locale/l10n/lv
+@dirrm ${PKGLOCALEDIR}/locale/l10n/lu
+@dirrm ${PKGLOCALEDIR}/locale/l10n/lt
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ls
+@dirrm ${PKGLOCALEDIR}/locale/l10n/lr
+@dirrm ${PKGLOCALEDIR}/locale/l10n/lk
+@dirrm ${PKGLOCALEDIR}/locale/l10n/li
+@dirrm ${PKGLOCALEDIR}/locale/l10n/lc
+@dirrm ${PKGLOCALEDIR}/locale/l10n/lb
+@dirrm ${PKGLOCALEDIR}/locale/l10n/la
+@dirrm ${PKGLOCALEDIR}/locale/l10n/kz
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ky
+@dirrm ${PKGLOCALEDIR}/locale/l10n/kw
+@dirrm ${PKGLOCALEDIR}/locale/l10n/kr
+@dirrm ${PKGLOCALEDIR}/locale/l10n/kp
+@dirrm ${PKGLOCALEDIR}/locale/l10n/kn
+@dirrm ${PKGLOCALEDIR}/locale/l10n/km
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ki
+@dirrm ${PKGLOCALEDIR}/locale/l10n/kh
+@dirrm ${PKGLOCALEDIR}/locale/l10n/kg
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ke
+@dirrm ${PKGLOCALEDIR}/locale/l10n/jp
+@dirrm ${PKGLOCALEDIR}/locale/l10n/jo
+@dirrm ${PKGLOCALEDIR}/locale/l10n/jm
+@dirrm ${PKGLOCALEDIR}/locale/l10n/it
+@dirrm ${PKGLOCALEDIR}/locale/l10n/is
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ir
+@dirrm ${PKGLOCALEDIR}/locale/l10n/iq
+@dirrm ${PKGLOCALEDIR}/locale/l10n/in
+@dirrm ${PKGLOCALEDIR}/locale/l10n/il
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ie
+@dirrm ${PKGLOCALEDIR}/locale/l10n/id
+@dirrm ${PKGLOCALEDIR}/locale/l10n/hu
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ht
+@dirrm ${PKGLOCALEDIR}/locale/l10n/hr
+@dirrm ${PKGLOCALEDIR}/locale/l10n/hn
+@dirrm ${PKGLOCALEDIR}/locale/l10n/hk
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gy
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gw
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gu
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gt
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gr
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gq
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gp
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gn
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gm
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gi
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gh
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ge
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gd
+@dirrm ${PKGLOCALEDIR}/locale/l10n/gb
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ga
+@dirrm ${PKGLOCALEDIR}/locale/l10n/fr
+@dirrm ${PKGLOCALEDIR}/locale/l10n/fo
+@dirrm ${PKGLOCALEDIR}/locale/l10n/fm
+@dirrm ${PKGLOCALEDIR}/locale/l10n/fk
+@dirrm ${PKGLOCALEDIR}/locale/l10n/fj
+@dirrm ${PKGLOCALEDIR}/locale/l10n/fi
+@dirrm ${PKGLOCALEDIR}/locale/l10n/et
+@dirrm ${PKGLOCALEDIR}/locale/l10n/es
+@dirrm ${PKGLOCALEDIR}/locale/l10n/er
+@dirrm ${PKGLOCALEDIR}/locale/l10n/eh
+@dirrm ${PKGLOCALEDIR}/locale/l10n/eg
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ee
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ec
+@dirrm ${PKGLOCALEDIR}/locale/l10n/dz
+@dirrm ${PKGLOCALEDIR}/locale/l10n/do
+@dirrm ${PKGLOCALEDIR}/locale/l10n/dm
+@dirrm ${PKGLOCALEDIR}/locale/l10n/dk
+@dirrm ${PKGLOCALEDIR}/locale/l10n/dj
+@dirrm ${PKGLOCALEDIR}/locale/l10n/de
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cz
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cy
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cx
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cv
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cu
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cr
+@dirrm ${PKGLOCALEDIR}/locale/l10n/co
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cn
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cm
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cl
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ck
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ci
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ch
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cg
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cf
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cd
+@dirrm ${PKGLOCALEDIR}/locale/l10n/cc
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ca
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bz
+@dirrm ${PKGLOCALEDIR}/locale/l10n/by
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bw
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bt
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bs
+@dirrm ${PKGLOCALEDIR}/locale/l10n/br
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bo
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bn
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bm
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bj
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bi
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bh
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bg
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bf
+@dirrm ${PKGLOCALEDIR}/locale/l10n/be
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bd
+@dirrm ${PKGLOCALEDIR}/locale/l10n/bb
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ba
+@dirrm ${PKGLOCALEDIR}/locale/l10n/az
+@dirrm ${PKGLOCALEDIR}/locale/l10n/aw
+@dirrm ${PKGLOCALEDIR}/locale/l10n/au
+@dirrm ${PKGLOCALEDIR}/locale/l10n/at
+@dirrm ${PKGLOCALEDIR}/locale/l10n/as
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ar
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ao
+@dirrm ${PKGLOCALEDIR}/locale/l10n/an
+@dirrm ${PKGLOCALEDIR}/locale/l10n/am
+@dirrm ${PKGLOCALEDIR}/locale/l10n/al
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ai
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ag
+@dirrm ${PKGLOCALEDIR}/locale/l10n/af
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ae
+@dirrm ${PKGLOCALEDIR}/locale/l10n/ad
+@dirrm ${PKGLOCALEDIR}/locale/l10n/C
+@dirrm ${PKGLOCALEDIR}/locale/l10n
+@comment in kde: @dirrm share/kde/wallpapers
 @exec ${MKDIR} %D/share/kde/templates/.source/emptydir
 @dirrm share/kde/templates/.source/emptydir
 @dirrm share/kde/templates/.source
 @dirrm share/kde/templates
-@dirrm share/kde/sounds
-@comment dirrm share/kde/servicetypes
+@comment in kde: @dirrm share/kde/sounds
+@comment in kde: @dirrm share/kde/servicetypes
 @dirrm share/kde/services/useragentstrings
 @dirrm share/kde/services/searchproviders
-@comment dirrm share/kde/services/kded
-@comment dirrm share/kde/services
-@dirrm share/kde/mimelnk/print
-@comment dirrm share/kde/mimelnk/fonts
-@comment dirrm share/kde/mimelnk/application
-@comment dirrm share/kde/mimelnk
-@dirrm share/kde/locale/l10n/zw
-@dirrm share/kde/locale/l10n/zm
-@dirrm share/kde/locale/l10n/za
-@dirrm share/kde/locale/l10n/yu
-@dirrm share/kde/locale/l10n/ye
-@dirrm share/kde/locale/l10n/ws
-@dirrm share/kde/locale/l10n/wf
-@dirrm share/kde/locale/l10n/vu
-@dirrm share/kde/locale/l10n/vn
-@dirrm share/kde/locale/l10n/vi
-@dirrm share/kde/locale/l10n/vg
-@dirrm share/kde/locale/l10n/ve
-@dirrm share/kde/locale/l10n/vc
-@dirrm share/kde/locale/l10n/va
-@dirrm share/kde/locale/l10n/uz
-@dirrm share/kde/locale/l10n/uy
-@dirrm share/kde/locale/l10n/us
-@dirrm share/kde/locale/l10n/ug
-@dirrm share/kde/locale/l10n/ua
-@dirrm share/kde/locale/l10n/tz
-@dirrm share/kde/locale/l10n/tw
-@dirrm share/kde/locale/l10n/tv
-@dirrm share/kde/locale/l10n/tt
-@dirrm share/kde/locale/l10n/tr
-@dirrm share/kde/locale/l10n/tp
-@dirrm share/kde/locale/l10n/to
-@dirrm share/kde/locale/l10n/tn
-@dirrm share/kde/locale/l10n/tm
-@dirrm share/kde/locale/l10n/tk
-@dirrm share/kde/locale/l10n/tj
-@dirrm share/kde/locale/l10n/th
-@dirrm share/kde/locale/l10n/tg
-@dirrm share/kde/locale/l10n/td
-@dirrm share/kde/locale/l10n/tc
-@dirrm share/kde/locale/l10n/sz
-@dirrm share/kde/locale/l10n/sy
-@dirrm share/kde/locale/l10n/sv
-@dirrm share/kde/locale/l10n/st
-@dirrm share/kde/locale/l10n/sr
-@dirrm share/kde/locale/l10n/so
-@dirrm share/kde/locale/l10n/sn
-@dirrm share/kde/locale/l10n/sm
-@dirrm share/kde/locale/l10n/sk
-@dirrm share/kde/locale/l10n/si
-@dirrm share/kde/locale/l10n/sh
-@dirrm share/kde/locale/l10n/sg
-@dirrm share/kde/locale/l10n/se
-@dirrm share/kde/locale/l10n/sd
-@dirrm share/kde/locale/l10n/sc
-@dirrm share/kde/locale/l10n/sb
-@dirrm share/kde/locale/l10n/sa
-@dirrm share/kde/locale/l10n/rw
-@dirrm share/kde/locale/l10n/ru
-@dirrm share/kde/locale/l10n/ro
-@dirrm share/kde/locale/l10n/qa
-@dirrm share/kde/locale/l10n/py
-@dirrm share/kde/locale/l10n/pw
-@dirrm share/kde/locale/l10n/pt
-@dirrm share/kde/locale/l10n/ps
-@dirrm share/kde/locale/l10n/pr
-@dirrm share/kde/locale/l10n/pn
-@dirrm share/kde/locale/l10n/pm
-@dirrm share/kde/locale/l10n/pl
-@dirrm share/kde/locale/l10n/pk
-@dirrm share/kde/locale/l10n/ph
-@dirrm share/kde/locale/l10n/pg
-@dirrm share/kde/locale/l10n/pf
-@dirrm share/kde/locale/l10n/pe
-@dirrm share/kde/locale/l10n/pa
-@dirrm share/kde/locale/l10n/om
-@dirrm share/kde/locale/l10n/nz
-@dirrm share/kde/locale/l10n/nu
-@dirrm share/kde/locale/l10n/nr
-@dirrm share/kde/locale/l10n/np
-@dirrm share/kde/locale/l10n/no
-@dirrm share/kde/locale/l10n/nl
-@dirrm share/kde/locale/l10n/ni
-@dirrm share/kde/locale/l10n/ng
-@dirrm share/kde/locale/l10n/nf
-@dirrm share/kde/locale/l10n/ne
-@dirrm share/kde/locale/l10n/nc
-@dirrm share/kde/locale/l10n/na
-@dirrm share/kde/locale/l10n/mz
-@dirrm share/kde/locale/l10n/my
-@dirrm share/kde/locale/l10n/mx
-@dirrm share/kde/locale/l10n/mw
-@dirrm share/kde/locale/l10n/mv
-@dirrm share/kde/locale/l10n/mu
-@dirrm share/kde/locale/l10n/mt
-@dirrm share/kde/locale/l10n/ms
-@dirrm share/kde/locale/l10n/mr
-@dirrm share/kde/locale/l10n/mq
-@dirrm share/kde/locale/l10n/mo
-@dirrm share/kde/locale/l10n/mn
-@dirrm share/kde/locale/l10n/mm
-@dirrm share/kde/locale/l10n/ml
-@dirrm share/kde/locale/l10n/mk
-@dirrm share/kde/locale/l10n/mh
-@dirrm share/kde/locale/l10n/mg
-@dirrm share/kde/locale/l10n/md
-@dirrm share/kde/locale/l10n/mc
-@dirrm share/kde/locale/l10n/ma
-@dirrm share/kde/locale/l10n/ly
-@dirrm share/kde/locale/l10n/lv
-@dirrm share/kde/locale/l10n/lu
-@dirrm share/kde/locale/l10n/lt
-@dirrm share/kde/locale/l10n/ls
-@dirrm share/kde/locale/l10n/lr
-@dirrm share/kde/locale/l10n/lk
-@dirrm share/kde/locale/l10n/li
-@dirrm share/kde/locale/l10n/lc
-@dirrm share/kde/locale/l10n/lb
-@dirrm share/kde/locale/l10n/la
-@dirrm share/kde/locale/l10n/kz
-@dirrm share/kde/locale/l10n/ky
-@dirrm share/kde/locale/l10n/kw
-@dirrm share/kde/locale/l10n/kr
-@dirrm share/kde/locale/l10n/kp
-@dirrm share/kde/locale/l10n/kn
-@dirrm share/kde/locale/l10n/km
-@dirrm share/kde/locale/l10n/ki
-@dirrm share/kde/locale/l10n/kh
-@dirrm share/kde/locale/l10n/kg
-@dirrm share/kde/locale/l10n/ke
-@dirrm share/kde/locale/l10n/jp
-@dirrm share/kde/locale/l10n/jo
-@dirrm share/kde/locale/l10n/jm
-@dirrm share/kde/locale/l10n/it
-@dirrm share/kde/locale/l10n/is
-@dirrm share/kde/locale/l10n/ir
-@dirrm share/kde/locale/l10n/iq
-@dirrm share/kde/locale/l10n/in
-@dirrm share/kde/locale/l10n/il
-@dirrm share/kde/locale/l10n/ie
-@dirrm share/kde/locale/l10n/id
-@dirrm share/kde/locale/l10n/hu
-@dirrm share/kde/locale/l10n/ht
-@dirrm share/kde/locale/l10n/hr
-@dirrm share/kde/locale/l10n/hn
-@dirrm share/kde/locale/l10n/hk
-@dirrm share/kde/locale/l10n/gy
-@dirrm share/kde/locale/l10n/gw
-@dirrm share/kde/locale/l10n/gu
-@dirrm share/kde/locale/l10n/gt
-@dirrm share/kde/locale/l10n/gr
-@dirrm share/kde/locale/l10n/gq
-@dirrm share/kde/locale/l10n/gp
-@dirrm share/kde/locale/l10n/gn
-@dirrm share/kde/locale/l10n/gm
-@dirrm share/kde/locale/l10n/gi
-@dirrm share/kde/locale/l10n/gh
-@dirrm share/kde/locale/l10n/ge
-@dirrm share/kde/locale/l10n/gd
-@dirrm share/kde/locale/l10n/gb
-@dirrm share/kde/locale/l10n/ga
-@dirrm share/kde/locale/l10n/fr
-@dirrm share/kde/locale/l10n/fo
-@dirrm share/kde/locale/l10n/fm
-@dirrm share/kde/locale/l10n/fk
-@dirrm share/kde/locale/l10n/fj
-@dirrm share/kde/locale/l10n/fi
-@dirrm share/kde/locale/l10n/et
-@dirrm share/kde/locale/l10n/es
-@dirrm share/kde/locale/l10n/er
-@dirrm share/kde/locale/l10n/eh
-@dirrm share/kde/locale/l10n/eg
-@dirrm share/kde/locale/l10n/ee
-@dirrm share/kde/locale/l10n/ec
-@dirrm share/kde/locale/l10n/dz
-@dirrm share/kde/locale/l10n/do
-@dirrm share/kde/locale/l10n/dm
-@dirrm share/kde/locale/l10n/dk
-@dirrm share/kde/locale/l10n/dj
-@dirrm share/kde/locale/l10n/de
-@dirrm share/kde/locale/l10n/cz
-@dirrm share/kde/locale/l10n/cy
-@dirrm share/kde/locale/l10n/cx
-@dirrm share/kde/locale/l10n/cv
-@dirrm share/kde/locale/l10n/cu
-@dirrm share/kde/locale/l10n/cr
-@dirrm share/kde/locale/l10n/co
-@dirrm share/kde/locale/l10n/cn
-@dirrm share/kde/locale/l10n/cm
-@dirrm share/kde/locale/l10n/cl
-@dirrm share/kde/locale/l10n/ck
-@dirrm share/kde/locale/l10n/ci
-@dirrm share/kde/locale/l10n/ch
-@dirrm share/kde/locale/l10n/cg
-@dirrm share/kde/locale/l10n/cf
-@dirrm share/kde/locale/l10n/cd
-@dirrm share/kde/locale/l10n/cc
-@dirrm share/kde/locale/l10n/ca
-@dirrm share/kde/locale/l10n/bz
-@dirrm share/kde/locale/l10n/by
-@dirrm share/kde/locale/l10n/bw
-@dirrm share/kde/locale/l10n/bt
-@dirrm share/kde/locale/l10n/bs
-@dirrm share/kde/locale/l10n/br
-@dirrm share/kde/locale/l10n/bo
-@dirrm share/kde/locale/l10n/bn
-@dirrm share/kde/locale/l10n/bm
-@dirrm share/kde/locale/l10n/bj
-@dirrm share/kde/locale/l10n/bi
-@dirrm share/kde/locale/l10n/bh
-@dirrm share/kde/locale/l10n/bg
-@dirrm share/kde/locale/l10n/bf
-@dirrm share/kde/locale/l10n/be
-@dirrm share/kde/locale/l10n/bd
-@dirrm share/kde/locale/l10n/bb
-@dirrm share/kde/locale/l10n/ba
-@dirrm share/kde/locale/l10n/az
-@dirrm share/kde/locale/l10n/aw
-@dirrm share/kde/locale/l10n/au
-@dirrm share/kde/locale/l10n/at
-@dirrm share/kde/locale/l10n/as
-@dirrm share/kde/locale/l10n/ar
-@dirrm share/kde/locale/l10n/ao
-@dirrm share/kde/locale/l10n/an
-@dirrm share/kde/locale/l10n/am
-@dirrm share/kde/locale/l10n/al
-@dirrm share/kde/locale/l10n/ai
-@dirrm share/kde/locale/l10n/ag
-@dirrm share/kde/locale/l10n/af
-@dirrm share/kde/locale/l10n/ae
-@dirrm share/kde/locale/l10n/ad
-@dirrm share/kde/locale/l10n/C
-@dirrm share/kde/locale/l10n
-@dirrm share/kde/locale/en_US
-@comment dirrm share/kde/locale
-@comment dirrm share/kde/icons/locolor/32x32/apps
-@comment dirrm share/kde/icons/locolor/16x16/apps
-@comment dirrm share/kde/icons/hicolor/32x32/apps
-@comment dirrm share/kde/icons/hicolor/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/scalable/apps/gnome
-@comment dirrm share/kde/icons/crystalsvg/scalable/apps
-@comment dirrm share/kde/icons/crystalsvg/64x64/devices
-@comment dirrm share/kde/icons/crystalsvg/64x64/apps
-@comment dirrm share/kde/icons/crystalsvg/48x48/filesystems
-@comment dirrm share/kde/icons/crystalsvg/48x48/devices
-@comment dirrm share/kde/icons/crystalsvg/48x48/apps
-@comment dirrm share/kde/icons/crystalsvg/32x32/filesystems
-@comment dirrm share/kde/icons/crystalsvg/32x32/devices
-@comment dirrm share/kde/icons/crystalsvg/32x32/apps
-@comment dirrm share/kde/icons/crystalsvg/32x32/actions
-@comment dirrm share/kde/icons/crystalsvg/22x22/apps
-@comment dirrm share/kde/icons/crystalsvg/22x22/actions
-@comment dirrm share/kde/icons/crystalsvg/16x16/filesystems
-@comment dirrm share/kde/icons/crystalsvg/16x16/devices
-@comment dirrm share/kde/icons/crystalsvg/16x16/apps
-@comment dirrm share/kde/icons/crystalsvg/16x16/actions
-@comment dirrm share/kde/icons/crystalsvg/128x128/apps
-@comment dirrm share/kde/icons
+@comment in kde: @dirrm share/kde/services/kded
+@comment in kde: @dirrm share/kde/services
+@comment in kde: @dirrm share/kde/mimelnk/print
+@comment in kde: @dirrm share/kde/mimelnk/fonts
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/mimelnk
+@comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@dirrm share/kde/icons/crystalsvg/scalable/apps/gnome
+@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/devices
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/filesystems
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/devices
+@comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/filesystems
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/devices
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/filesystems
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/devices
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
+@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/kde/icons
 @dirrm share/kde/fonts/override
 @dirrm share/kde/fonts
 @dirrm share/kde/doc/kdm
 @dirrm share/kde/doc
 @dirrm share/kde/config/kdm
-@comment dirrm share/kde/config.kcfg
-@comment dirrm share/kde/config
-@comment dirrm share/kde/autostart
+@comment in kde: @dirrm share/kde/config.kcfg
+@comment in kde: @dirrm share/kde/config
+@comment in kde: @dirrm share/kde/autostart
 @dirrm share/kde/apps/plugin
 @dirrm share/kde/apps/naughtyapplet/pics
 @dirrm share/kde/apps/naughtyapplet
 @dirrm share/kde/apps/kwrite
 @dirrm share/kde/apps/kwin/pics
-@dirrm share/kde/apps/kwin
+@comment in kde: @dirrm share/kde/apps/kwin
 @dirrm share/kde/apps/ksysguard/pics
 @dirrm share/kde/apps/ksysguard
 @dirrm share/kde/apps/ksplash/pics
@@ -3844,26 +3842,28 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/apps/konsole/icons
 @dirrm share/kde/apps/konsole
 @dirrm share/kde/apps/konqueror/tiles
-@dirrm share/kde/apps/konqueror/servicemenus
+@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
 @dirrm share/kde/apps/konqueror/profiles
 @dirrm share/kde/apps/konqueror/pics
 @dirrm share/kde/apps/konqueror/icons/crystalsvg/16x16/actions
 @dirrm share/kde/apps/konqueror/icons/crystalsvg/16x16
 @dirrm share/kde/apps/konqueror/icons/crystalsvg
 @dirrm share/kde/apps/konqueror/icons
+@comment in kde: @dirrm share/kde/apps/konqueror/dirtree/remote
+@comment in kde: @dirrm share/kde/apps/konqueror/dirtree
 @dirrm share/kde/apps/konqueror/about
-@dirrm share/kde/apps/konqueror
+@comment in kde: @dirrm share/kde/apps/konqueror
 @dirrm share/kde/apps/konqsidebartng/websidebar
-@dirrm share/kde/apps/konqsidebartng/virtual_folders/services
+@comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders/services
 @dirrm share/kde/apps/konqsidebartng/virtual_folders/remote/web
 @dirrm share/kde/apps/konqsidebartng/virtual_folders/remote/ftp
 @dirrm share/kde/apps/konqsidebartng/virtual_folders/remote
-@dirrm share/kde/apps/konqsidebartng/virtual_folders
+@comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders
 @dirrm share/kde/apps/konqsidebartng/kicker_entries
 @dirrm share/kde/apps/konqsidebartng/entries
 @dirrm share/kde/apps/konqsidebartng/dirtree
 @dirrm share/kde/apps/konqsidebartng/add
-@dirrm share/kde/apps/konqsidebartng
+@comment in kde: @dirrm share/kde/apps/konqsidebartng
 @dirrm share/kde/apps/konqlistview/kpartplugins
 @dirrm share/kde/apps/konqlistview
 @dirrm share/kde/apps/konqiconview/kpartplugins
@@ -3894,9 +3894,9 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/apps/kicker/icons/crystalsvg/16x16
 @dirrm share/kde/apps/kicker/icons/crystalsvg
 @dirrm share/kde/apps/kicker/icons
-@dirrm share/kde/apps/kicker/extensions
-@dirrm share/kde/apps/kicker/applets
-@dirrm share/kde/apps/kicker
+@comment in kde: @dirrm share/kde/apps/kicker/extensions
+@comment in kde: @dirrm share/kde/apps/kicker/applets
+@comment in kde: @dirrm share/kde/apps/kicker
 @dirrm share/kde/apps/khotkeys
 @dirrm share/kde/apps/khelpcenter/plugins/Tutorials
 @dirrm share/kde/apps/khelpcenter/plugins/Scrollkeeper
@@ -3921,11 +3921,11 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/apps/kdisplay
 @dirrm share/kde/apps/kdewizard/pics
 @dirrm share/kde/apps/kdewizard
-@dirrm share/kde/apps/kdesktop/programs
+@comment in kde: @dirrm share/kde/apps/kdesktop/programs
 @dirrm share/kde/apps/kdesktop/pics
 @dirrm share/kde/apps/kdesktop/patterns
 @dirrm share/kde/apps/kdesktop/DesktopLinks
-@dirrm share/kde/apps/kdesktop
+@comment in kde: @dirrm share/kde/apps/kdesktop
 @dirrm share/kde/apps/kdeprintfax/icons/crystalsvg/16x16/actions
 @dirrm share/kde/apps/kdeprintfax/icons/crystalsvg/16x16
 @dirrm share/kde/apps/kdeprintfax/icons/crystalsvg
@@ -3933,7 +3933,7 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/apps/kdeprintfax
 @dirrm share/kde/apps/kdeprint_part
 @dirrm share/kde/apps/kdeprint/template
-@comment dirrm share/kde/apps/kdeprint
+@comment in kde: @dirrm share/kde/apps/kdeprint
 @dirrm share/kde/apps/kdcop
 @dirrm share/kde/apps/kcontroledit/icons/locolor/16x16/actions
 @dirrm share/kde/apps/kcontroledit/icons/locolor/16x16
@@ -3945,20 +3945,20 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/apps/kcontroledit/icons/crystalsvg
 @dirrm share/kde/apps/kcontroledit/icons
 @dirrm share/kde/apps/kcontroledit
-@dirrm share/kde/apps/kcontrol/pics
-@dirrm share/kde/apps/kcontrol
-@comment dirrm share/kde/apps/kconf_update
+@comment in kde: @dirrm share/kde/apps/kcontrol/pics
+@comment in kde: @dirrm share/kde/apps/kcontrol
+@comment in kde: @dirrm share/kde/apps/kconf_update
 @dirrm share/kde/apps/kcmlocale/pics
 @dirrm share/kde/apps/kcmlocale
 @dirrm share/kde/apps/kcmkeys
 @dirrm share/kde/apps/kcminput/pics
 @dirrm share/kde/apps/kcminput
 @dirrm share/kde/apps/kcmcss
-@comment dirrm share/kde/apps/kcm_componentchooser
+@comment in kde: @dirrm share/kde/apps/kcm_componentchooser
 @dirrm share/kde/apps/kbookmark
-@dirrm share/kde/apps/kate/scripts
+@comment in kde: @dirrm share/kde/apps/kate/scripts
 @dirrm share/kde/apps/kate/plugins/katedefaultproject
-@dirrm share/kde/apps/kate/plugins
+@comment in kde: @dirrm share/kde/apps/kate/plugins
 @dirrm share/kde/apps/kate/icons/locolor/22x22/actions
 @dirrm share/kde/apps/kate/icons/locolor/22x22
 @dirrm share/kde/apps/kate/icons/locolor/16x16/actions
@@ -3970,7 +3970,7 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/apps/kate/icons/crystalsvg/16x16
 @dirrm share/kde/apps/kate/icons/crystalsvg
 @dirrm share/kde/apps/kate/icons
-@comment dirrm share/kde/apps/kate
+@comment in kde: @dirrm share/kde/apps/kate
 @dirrm share/kde/apps/kappfinder/apps/Utilities/XUtilities
 @dirrm share/kde/apps/kappfinder/apps/Utilities
 @dirrm share/kde/apps/kappfinder/apps/Toys
@@ -3998,20 +3998,20 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/kde/apps/drkonqi
 @dirrm share/kde/apps/clockapplet/pics
 @dirrm share/kde/apps/clockapplet
-@comment dirrm share/kde/apps
-@dirrm share/kde/applnk/Utilities
-@dirrm share/kde/applnk/Toys
-@dirrm share/kde/applnk/System/ScreenSavers
-@dirrm share/kde/applnk/System
-@dirrm share/kde/applnk/Settingsmenu
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/Utilities
+@comment in kde: @dirrm share/kde/applnk/Toys
+@comment in kde: @dirrm share/kde/applnk/System/ScreenSavers
+@comment in kde: @dirrm share/kde/applnk/System
+@comment in kde: @dirrm share/kde/applnk/Settingsmenu
 @dirrm share/kde/applnk/Settings/WebBrowsing
 @dirrm share/kde/applnk/Settings/LookNFeel/Themes
 @dirrm share/kde/applnk/Settings/LookNFeel
-@dirrm share/kde/applnk/Settings
-@dirrm share/kde/applnk/Internet
-@dirrm share/kde/applnk/.hidden
-@dirrm share/kde/applnk
-@comment dirrm share/kde
+@comment in kde: @dirrm share/kde/applnk/Settings
+@comment in kde: @dirrm share/kde/applnk/Internet
+@comment in kde: @dirrm share/kde/applnk/.hidden
+@comment in kde: @dirrm share/kde/applnk
+@comment in kde: @dirrm share/kde
 @dirrm share/doc/kde/HTML/en/kxkb
 @dirrm share/doc/kde/HTML/en/kwrite
 @dirrm share/doc/kde/HTML/en/ksysguard
@@ -4038,7 +4038,7 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/doc/kde/HTML/en/kinfocenter/interrupts
 @dirrm share/doc/kde/HTML/en/kinfocenter/dma
 @dirrm share/doc/kde/HTML/en/kinfocenter/devices
-@dirrm share/doc/kde/HTML/en/kinfocenter
+@comment in kde: @dirrm share/doc/kde/HTML/en/kinfocenter
 @dirrm share/doc/kde/HTML/en/kicker
 @dirrm share/doc/kde/HTML/en/khelpcenter/visualdict
 @dirrm share/doc/kde/HTML/en/khelpcenter/userguide
@@ -4051,6 +4051,19 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/doc/kde/HTML/en/kdesu
 @dirrm share/doc/kde/HTML/en/kdeprint
 @dirrm share/doc/kde/HTML/en/kdebugdialog
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdebase-apidocs/kwin/lib/html
+@dirrm share/doc/kde/HTML/en/kdebase-apidocs/kwin/lib/html
+@dirrm share/doc/kde/HTML/en/kdebase-apidocs/kwin/lib
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdebase-apidocs/kwin/html
+@dirrm share/doc/kde/HTML/en/kdebase-apidocs/kwin/html
+@dirrm share/doc/kde/HTML/en/kdebase-apidocs/kwin
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdebase-apidocs/kioslave/imap4/html
+@dirrm share/doc/kde/HTML/en/kdebase-apidocs/kioslave/imap4/html
+@dirrm share/doc/kde/HTML/en/kdebase-apidocs/kioslave/imap4
+@dirrm share/doc/kde/HTML/en/kdebase-apidocs/kioslave
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdebase-apidocs/kate/html
+@dirrm share/doc/kde/HTML/en/kdebase-apidocs/kate/html
+@dirrm share/doc/kde/HTML/en/kdebase-apidocs/kate
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdebase-apidocs/libkonq/html
 @dirrm share/doc/kde/HTML/en/kdebase-apidocs/libkonq/html
 @dirrm share/doc/kde/HTML/en/kdebase-apidocs/libkonq
@@ -4099,17 +4112,17 @@ share/kde/wallpapers/triplegears.jpg
 @dirrm share/doc/kde/HTML/en/kcontrol/bell
 @dirrm share/doc/kde/HTML/en/kcontrol/background
 @dirrm share/doc/kde/HTML/en/kcontrol/arts
-@dirrm share/doc/kde/HTML/en/kcontrol
+@comment in kde: @dirrm share/doc/kde/HTML/en/kcontrol
 @dirrm share/doc/kde/HTML/en/kate
-@comment dirrm share/doc/kde/HTML/en
-@dirrm share/desktop-directories
-@comment dirrm share/applications/kde
-@comment dirrm lib/kde3
-@dirrm lib/kconf_update_bin
+@comment in kde: @dirrm share/doc/kde/HTML/en
+@comment in kde: @dirrm share/desktop-directories
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3
+@comment in kde: @dirrm lib/kconf_update_bin
 @dirrm include/kwin
 @dirrm include/ksplash
 @dirrm include/ksgrd
 @dirrm include/kate/utils
-@comment dirrm include/kate
+@comment in kde: @dirrm include/kate
 @dirrm etc/xdg/menus/applications-merged
 @comment dirrm etc/xdg/menus
