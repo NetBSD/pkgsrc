@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1096 2003/12/02 23:41:28 recht Exp $
+$NetBSD: TODO,v 1.1097 2003/12/03 00:20:41 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -430,9 +430,7 @@ Suggested package updates
 	o xfce-4.0.1 [martti]
 	o xfstt-1.6
 	o xisp-2.7 [pkg/19566]
-	o xmame-0.77.1
 	o xmcd-3.2.1
-	o xmess-0.77.1
 	o xmms-1.2.8
 	o xmms-crossfade-0.3.4
 	o xmule-1.7.1 [jmmv]
