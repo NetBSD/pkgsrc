@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/09 10:48:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2005/02/09 20:16:34 wiz Exp $
 bin/allegro-config
 bin/colormap
 bin/dat
@@ -29,6 +29,7 @@ include/allegro/fix.h
 include/allegro/fixed.h
 include/allegro/fli.h
 include/allegro/fmaths.h
+include/allegro/font.h
 include/allegro/gfx.h
 include/allegro/graphics.h
 include/allegro/gui.h
