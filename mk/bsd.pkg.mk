@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.325 1999/08/26 15:29:58 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.326 1999/08/27 11:23:48 rh Exp $
 #
 # This file is in the public domain.
 #
@@ -1550,7 +1550,7 @@ pkg-su-deinstall: uptodate-pkgtools
 	else								\
 		make=`${TYPE} ${MAKE} | ${AWK} '{ print $$NF }'`;	\
 		${ECHO_MSG} "===>  Becoming root@`/bin/hostname` to deinstall ${PKGNAME}."; \
-		${SU_CMD} "cd ${.CURDIR}; $$make ${.MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} root-deinstall"; \
+		${SU_CMD} "cd ${.CURDIR}; $$make ${.MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} root-deinstall DEINSTALLDEPENDS=${DEINSTALLDEPENDS}"; \
 	fi
 
 
