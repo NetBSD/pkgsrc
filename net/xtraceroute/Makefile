@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2004/10/03 00:18:02 tv Exp $
+# $NetBSD: Makefile,v 1.37 2004/12/18 15:50:42 grant Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -25,6 +25,11 @@ CONFIGURE_ARGS+= --with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
 # the --with-GL-prefix switch for this.
 CONFIGURE_ARGS+= --with-GL-prefix=${LOCALBASE}
 CONFIGURE_ARGS+= --with-lib-MesaGL
+
+.include "../../mk/bsd.prefs.mk"
+.if !empty(LOWER_OPSYS:Mirix5*)
+CONFIGURE_ARGS+= --with-traceroute=/usr/etc/traceroute
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xtraceroute
