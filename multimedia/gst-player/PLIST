@@ -1,0 +1,55 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/06 13:55:48 jmmv Exp $
+bin/gst-player
+include/${PKGNAME}/gst/gstvideowidget.h
+include/${PKGNAME}/gst/gtk-playlist.h
+lib/bonobo/servers/Gst-Player-Control.server
+lib/bonobo/servers/Gst-Player-View.server
+lib/libgstplayer.a
+lib/libgstplayer.la
+lib/libgstplayer.so
+lib/libgstplayer.so.0
+lib/libgstplayer.so.0.0
+libexec/gst-player-control
+libexec/gst-player-view
+man/man1/gst-player.1
+share/application-registry/gst-player.applications
+share/applications/gst-player.desktop
+share/gconf/schemas/gst-player.schemas
+share/gnome-2.0/ui/gst-player-view-ui.xml
+share/gst-player/ui/about-logo.png
+share/gst-player/ui/demaximize.png
+share/gst-player/ui/forward.png
+share/gst-player/ui/gst-player-48.png
+share/gst-player/ui/gst-player-logo.png
+share/gst-player/ui/gst-player-playing.png
+share/gst-player/ui/gst-player.glade
+share/gst-player/ui/maximize.png
+share/gst-player/ui/mediacontrol.glade
+share/gst-player/ui/next.png
+share/gst-player/ui/pause.png
+share/gst-player/ui/play.png
+share/gst-player/ui/playlist.glade
+share/gst-player/ui/playlist.png
+share/gst-player/ui/previous.png
+share/gst-player/ui/stop.png
+share/gst-player/ui/volume-max.png
+share/gst-player/ui/volume-medium.png
+share/gst-player/ui/volume-min.png
+share/gst-player/ui/volume-zero.png
+share/gst-player/ui/volume.png
+share/gst-player/ui/volume_mute.png
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gst-player.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gst-player.mo
+share/mime-info/gst-player.keys
+share/pixmaps/gst-player-48.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/mime-info
+@dirrm share/gst-player/ui
+@dirrm share/gst-player
+@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
+@comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
+@comment in xdg-dirs: @dirrm share/application-registry
+@comment in libbonobo: @dirrm lib/bonobo/servers
+@dirrm include/${PKGNAME}/gst
+@dirrm include/${PKGNAME}
