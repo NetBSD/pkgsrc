@@ -34,8 +34,8 @@ AC_CHECK_HEADERS([arpa/nameser.h assert.h bind/bitypes.h dirent.h err.h \
 	string.h sys/bitypes.h sys/byteorder.h sys/cdefs.h sys/dir.h \
 	sys/endian.h sys/file.h sys/mkdev.h sys/mount.h sys/ndir.h \
 	sys/param.h sys/poll.h sys/queue.h sys/time.h sys/ttycom.h \
-	sys/stat.h sys/statvfs.h sys/vfs.h sys/types.h termcap.h termios.h \
-	time.h tzfile.h unistd.h util.h utmp.h vis.h])
+	sys/stat.h sys/statvfs.h sys/vfs.h sys/types.h sys/vfs.h termcap.h \
+	termios.h time.h tzfile.h unistd.h util.h utmp.h vis.h])
 
 dnl Checks for typedefs, structures, and compiler characteristics.
 AC_C___ATTRIBUTE__
