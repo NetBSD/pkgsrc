@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2001/06/21 16:38:33 rh Exp $
+# $NetBSD: Makefile,v 1.21 2001/06/26 13:09:11 zuntum Exp $
 # FreeBSD: ports/audio/xmms/Makefile,v 1.9 2000/02/11 01:46:12 cpiazza Exp
 
 DISTNAME=	xmms-1.2.5
@@ -10,21 +10,15 @@ MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.xmms.org/
 COMMENT=	X Multimedia System --- An audio player with a Winamp GUI
 
-DEPENDS+=	gtk+>=1.2.7:../../x11/gtk
-DEPENDS+=	libmikmod>=3.1.7:../libmikmod
-DEPENDS+=	esound>=0.2.8:../esound
-DEPENDS+=	libvorbis-*:../libvorbis
-DEPENDS+=	libxml>=1.8.5:../../textproc/libxml
-
+USE_BUILDLINK_ONLY=	YES
+USE_CONFIG_WRAPPER=	YES
 USE_LIBTOOL=	yes
 USE_X11=	yes
 USE_MESA=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
-CPPFLAGS+=	-I${LOCALBASE}/include
 CPPFLAGS+=	-D_POSIX_THREAD_SYSCALL_SOFT=1
-CONFIGURE_ENV+=	XML_CONFIG="${LOCALBASE}/bin/xml-config"
 CONFIGURE_ARGS+=--without-gnome
 LTCONFIG_OVERRIDE=${WRKSRC}/ltconfig
 
@@ -49,4 +43,9 @@ pre-configure:
 	${LN} -fs /usr/include/soundcard.h ${WRKDIR}/sys/soundcard.h
 .endif
 
+.include "../../audio/libmikmod/buildlink.mk"
+.include "../../audio/esound/buildlink.mk"
+.include "../../audio/libvorbis/buildlink.mk"
+.include "../../textproc/libxml/buildlink.mk"
+.include "../../x11/gtk/buildlink.mk"
 .include "../../mk/bsd.pkg.mk"
