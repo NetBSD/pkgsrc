@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2004/01/22 12:58:19 adam Exp $
+# $NetBSD: Makefile,v 1.31 2004/03/03 00:20:19 snj Exp $
 #
 
 PKGNAME=	MesaLib-${MESA_VERSION}
@@ -16,11 +16,15 @@ INSTLIBS=	${WRKSRC}/src/mesa/libGL.la \
 		${WRKSRC}/src/glw/libGLw.la \
 		${WRKSRC}/src/mesa/libOSMesa.la
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
 # The sparc asm included with Mesa does not build on sparc64
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc64"
 CONFIGURE_ARGS+=	--disable-sparc
+.endif
+
+.if !empty(CC_VERSION:Mgcc-3*)
+BUILDLINK_TRANSFORM+=   S:-O[23]:
 .endif
 
 pre-build:
