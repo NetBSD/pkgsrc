@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2001/04/14 21:43:44 jtb Exp $
+# $NetBSD: Makefile,v 1.5 2001/05/03 21:06:13 jtb Exp $
 
 DISTNAME=		ncview-1.92c
 CATEGORIES=		graphics
@@ -15,7 +15,10 @@ GNU_CONFIGURE=		yes
 USE_XAW=		yes
 USE_X11BASE=		yes
 
-EVAL_PREFIX+=		NETCDF=netcdf UDUNITS=udunits
+NETCDF_DEFAULT=		${LOCALBASE}
+EVAL_PREFIX+=		NETCDF=netcdf
+UDUNITS_DEFAULT=	${LOCALBASE}
+EVAL_PREFIX+=		UDUNITS=udunits
 
 CONFIGURE_ARGS+=	--with-netcdf_incdir=${NETCDF}/include
 CONFIGURE_ARGS+=	--with-netcdf_libdir=${NETCDF}/lib
