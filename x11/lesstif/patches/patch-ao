@@ -1,7 +1,4 @@
-$NetBSD: patch-ao,v 1.2 1999/11/24 17:34:10 hubertf Exp $
-
-Place(s) where this was (most probably...) in before:
-     NetBSD: patch-ao,v 1.1 1999/11/03 04:18:47 jlam Exp 
+$NetBSD: patch-ao,v 1.3 1999/11/24 17:38:51 hubertf Exp $
 
 diff -x *.orig -urN ./lib/Xlt/configure /usr/pkgsrc/x11/lesstif/work.i386.unpatched/lesstif-0.89.4/lib/Xlt/configure
 --- ./lib/Xlt/configure	Fri Nov  5 21:17:11 1999
