@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2001/02/18 19:17:24 tron Exp $
+
+--- epgui/help.tcl.orig	Wed Feb 14 22:31:37 2001
++++ epgui/help.tcl	Sun Feb 18 20:11:30 2001
+@@ -26,7 +26,7 @@
+ } {} {-rcfile} bold { } {} {path} underlined {
+ Specify an alternate configuration file. Default: on UNIX ~/.nxtvepgrc, on Windows nxtvepg.ini in the current directory.
+ } {} {-dbdir} bold { } {} {directory} underlined {
+-Specify an alternate directory for the databases. Default: On UNIX /usr/tmp/nxtvdb, on Windows the current directory. Note that the database management is not equipped for concurrent writing, so if you have more than one TV tuner card in your system or network, relocate the directory into the users' homes.
++Specify an alternate directory for the databases. Default: On UNIX /tmp/nxtvdb, on Windows the current directory. Note that the database management is not equipped for concurrent writing, so if you have more than one TV tuner card in your system or network, relocate the directory into the users' homes.
+ } {} {-card} bold { } {} {index} underlined {
+ Specify which tuner card to use, if you have more than one. The given index is appended to /dev/vbi and /dev/video. Default: index 0, i.e. the card in the first PCI slot.
+ } {} {-provider} bold { } {} {CNI} underlined {

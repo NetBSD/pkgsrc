@@ -1,0 +1,31 @@
+$NetBSD: patch-ad,v 1.1.1.1 2001/02/18 19:17:24 tron Exp $
+
+--- nxtvepg.1x.orig	Wed Feb 14 22:31:37 2001
++++ nxtvepg.1x	Sun Feb 18 20:13:22 2001
+@@ -234,7 +234,7 @@
+ on Windows nxtvepg.ini in the current directory.
+ .Ip "\fB\-dbdir\fR \fIdirectory\fR" 4
+ Specify an alternate directory for the databases.
+-Default: On \s-1UNIX\s0 /usr/tmp/nxtvdb, on Windows the current directory.
++Default: On \s-1UNIX\s0 /tmp/nxtvdb, on Windows the current directory.
+ Note that the database management is not equipped for concurrent writing,
+ so if you have more than one \s-1TV\s0 tuner card in your system or network,
+ relocate the directory into the users\*(R' homes.
+@@ -910,7 +910,7 @@
+ Configuration file where all personal settings are stored. Per default
+ this is created in your home directory, but a different path and file
+ name can be specified with the \fB\-rcfile\fR option.
+-.Ip "\fB/usr/tmp/nxtvdb/nxtvdb-####\fR" 4
++.Ip "\fB/tmp/nxtvdb/nxtvdb-####\fR" 4
+ Directory containing one file for each provider's database.
+ Can be changed with the \fB\-dbdir\fR command line option.
+ The last 4 digits of the file names are the hexadecimal \s-1CNI\s0 (Country
+@@ -1142,7 +1142,7 @@
+ 
+ .IX Item "\fB~/.nxtvepgrc\fR"
+ 
+-.IX Item "\fB/usr/tmp/nxtvdb/nxtvdb-####\fR"
++.IX Item "\fB/tmp/nxtvdb/nxtvdb-####\fR"
+ 
+ .IX Item "\fB/dev/vbi0\fR, \fB/dev/vbi1\fR, etc."
+ 
