@@ -1,29 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2004/12/04 16:24:17 wiz Exp $
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/es_NI/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnucash.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnucash.mo
+@comment $NetBSD: PLIST,v 1.17 2004/12/26 21:34:47 wiz Exp $
 bin/dump-finance-quote
 bin/gnc-prices
 bin/gnc-test-env
@@ -49,6 +24,7 @@ include/gnucash/SchedXaction.h
 include/gnucash/Scrub.h
 include/gnucash/TransLog.h
 include/gnucash/Transaction.h
+include/gnucash/account-quickfill.h
 include/gnucash/basiccell.h
 include/gnucash/cell-factory.h
 include/gnucash/cellblock.h
@@ -199,48 +175,50 @@ libexec/gnucash/overrides/guile
 man/man1/gnc-prices.1
 man/man1/gnucash.1
 share/aclocal/gnucash.m4
-share/doc/html/gnucash/Account_8h.html
-share/doc/html/gnucash/SchedXaction_8h.html
-share/doc/html/gnucash/Transaction_8h.html
-share/doc/html/gnucash/TransLog_8h.html
-share/doc/html/gnucash/annotated.html
-share/doc/html/gnucash/classes.html
-share/doc/html/gnucash/date_8h.html
-share/doc/html/gnucash/doxygen.css
-share/doc/html/gnucash/doxygen.gif
-share/doc/html/gnucash/files.html
-share/doc/html/gnucash/functions.html
-share/doc/html/gnucash/globals.html
-share/doc/html/gnucash/gnc-hbci-trans-templ_8h.html
-share/doc/html/gnucash/gnc-log-replay_8h.html
-share/doc/html/gnucash/gnc-ofx-import_8h.html
-share/doc/html/gnucash/gnc-pricedb_8h.html
-share/doc/html/gnucash/gnc-ui-util_8h.html
-share/doc/html/gnucash/group__Date.html
-share/doc/html/gnucash/group__Engine.html
-share/doc/html/gnucash/group__Import__Export.html
-share/doc/html/gnucash/group__UI.html
-share/doc/html/gnucash/import-account-matcher_8h.html
-share/doc/html/gnucash/import-backend_8h.html
-share/doc/html/gnucash/import-commodity-matcher_8h.html
-share/doc/html/gnucash/import-main-matcher_8h.html
-share/doc/html/gnucash/import-match-map_8h.html
-share/doc/html/gnucash/import-match-picker_8h.html
-share/doc/html/gnucash/import-settings_8h.html
-share/doc/html/gnucash/import-utilities_8h.html
-share/doc/html/gnucash/index.html
-share/doc/html/gnucash/modules.html
-share/doc/html/gnucash/structGNCDateEdit.html
-share/doc/html/gnucash/struct__FormulaCell.html
-share/doc/html/gnucash/struct__GNCFrequency.html
-share/doc/html/gnucash/struct__temporalStateData.html
-share/doc/html/gnucash/structaccount__group__s.html
-share/doc/html/gnucash/structaccount__s.html
-share/doc/html/gnucash/structgnc__template__xaction__data.html
-share/doc/html/gnucash/structgncp__SchedXaction.html
-share/doc/html/gnucash/structgncp__freq__spec.html
-share/doc/html/gnucash/structsplit__s.html
-share/doc/html/gnucash/structtimespec64.html
+share/doc/gnucash/Account_8h.html
+share/doc/gnucash/SchedXaction_8h.html
+share/doc/gnucash/TransLog_8h.html
+share/doc/gnucash/Transaction_8h.html
+share/doc/gnucash/annotated.html
+share/doc/gnucash/classes.html
+share/doc/gnucash/combocell_8h.html
+share/doc/gnucash/date_8h.html
+share/doc/gnucash/doxygen.css
+share/doc/gnucash/doxygen.gif
+share/doc/gnucash/files.html
+share/doc/gnucash/functions.html
+share/doc/gnucash/globals.html
+share/doc/gnucash/gnc-hbci-trans-templ_8h.html
+share/doc/gnucash/gnc-log-replay_8h.html
+share/doc/gnucash/gnc-ofx-import_8h.html
+share/doc/gnucash/gnc-pricedb_8h.html
+share/doc/gnucash/gnc-ui-util_8h.html
+share/doc/gnucash/group__Account__Quickfill.html
+share/doc/gnucash/group__Date.html
+share/doc/gnucash/group__Engine.html
+share/doc/gnucash/group__Import__Export.html
+share/doc/gnucash/group__UI.html
+share/doc/gnucash/import-account-matcher_8h.html
+share/doc/gnucash/import-backend_8h.html
+share/doc/gnucash/import-commodity-matcher_8h.html
+share/doc/gnucash/import-main-matcher_8h.html
+share/doc/gnucash/import-match-map_8h.html
+share/doc/gnucash/import-match-picker_8h.html
+share/doc/gnucash/import-settings_8h.html
+share/doc/gnucash/import-utilities_8h.html
+share/doc/gnucash/index.html
+share/doc/gnucash/modules.html
+share/doc/gnucash/structGNCDateEdit.html
+share/doc/gnucash/struct__FormulaCell.html
+share/doc/gnucash/struct__GNCFrequency.html
+share/doc/gnucash/struct__temporalStateData.html
+share/doc/gnucash/structaccount__group__s.html
+share/doc/gnucash/structaccount__s.html
+share/doc/gnucash/structgnc__template__xaction__data.html
+share/doc/gnucash/structgncp__SchedXaction.html
+share/doc/gnucash/structgncp__freq__spec.html
+share/doc/gnucash/structsplit__s.html
+share/doc/gnucash/structtimespec64.html
 share/examples/gnucash/Money95bank_fr.qif
 share/examples/gnucash/Money95invst_fr.qif
 share/examples/gnucash/Money95mfunds_fr.qif
@@ -323,6 +301,7 @@ share/gnucash/accounts/es_ES/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/es_ES/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/es_ES/acctchrt_spouseretire.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_brokerage.gnucash-xea
+share/gnucash/accounts/fr_FR/acctchrt_business.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_carloan.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_cdmoneymkt.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_childcare.gnucash-xea
@@ -606,6 +585,31 @@ share/gnucash/scm/tip-of-the-day.scm
 share/gnucash/scm/txf-help.scm
 share/gnucash/scm/txf.scm
 share/gnucash/scm/xml-generator.scm
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/es_NI/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnucash.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnucash.mo
 share/mime-info/gnucash.keys
 share/mime-info/gnucash.mime
 share/pixmaps/gnucash/gnucash-icon.png
@@ -621,6 +625,7 @@ share/pixmaps/gnucash/stock_split_watermark.png
 @dirrm share/gnucash/scm/generic-import
 @dirrm share/gnucash/scm
 @dirrm share/gnucash/guile-modules/www
+@exec ${MKDIR} %D/share/gnucash/guile-modules/srfi
 @dirrm share/gnucash/guile-modules/srfi
 @dirrm share/gnucash/guile-modules/gnucash/tax
 @dirrm share/gnucash/guile-modules/gnucash/report/locale-specific
@@ -647,7 +652,7 @@ share/pixmaps/gnucash/stock_split_watermark.png
 @dirrm share/gnucash/accounts/C
 @dirrm share/gnucash/accounts
 @dirrm share/gnucash
-@dirrm share/doc/html/gnucash
+@dirrm share/doc/gnucash
 @dirrm share/examples/gnucash
 @dirrm libexec/gnucash/overrides
 @dirrm libexec/gnucash

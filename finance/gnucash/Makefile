@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2004/12/04 16:24:17 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2004/12/26 21:34:46 wiz Exp $
 
-DISTNAME=		gnucash-1.8.9
-PKGREVISION=		5
+DISTNAME=		gnucash-1.8.10
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -26,49 +25,23 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--with-perl-includes=${PERL5_ARCHLIB}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
-CONFIGURE_ENV+=		PKG_CONFIG_PATH="${PREFIX}/lib/pkgconfig:${X11BASE}/lib/pkgconfig"
 
 # code is using char/unsigned char inconsistently
 BUILDLINK_TRANSFORM+=  rm:-Werror
 
 AM_MAKEFLAGS=		LIBTOOL='${LIBTOOL} ${LIBTOOL_FLAGS}'
-MAKE_ENV+=		AM_MAKEFLAGS="${AM_MAKEFLAGS}"
+MAKE_ENV+=		AM_MAKEFLAGS=${AM_MAKEFLAGS:Q}
 
 INFO_FILES=		gnucash-design.info
 
-# 1.8.9 includes empty info file, so we must rebuild it
-USE_MAKEINFO=		yes
-
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-post-wrapper:
-	if [ ! -f /usr/include/wctype.h ]; then				\
-		${TOUCH} ${BUILDLINK_DIR}/include/wctype.h;		\
-	fi
-.endif
-
-post-extract:
-	cd ${WRKSRC}/src/doc/design/ && \
-		${MAKEINFO} ${INFO_FILES:S/.info/.texinfo/}
-
-GNUCASH_GUILE_MAKEFILE_IN_FILES= \
-	src/app-file/Makefile.in src/app-utils/Makefile.in \
-	src/business/business-core/Makefile.in \
-	src/business/business-gnome/Makefile.in \
-	src/business/dialog-tax-table/Makefile.in \
-	src/core-utils/Makefile.in \
-	src/engine/Makefile.in \
-	src/gnc-module/Makefile.in \
-	src/gnc-module/test/mod-bar/Makefile.in \
-	src/gnc-module/test/mod-baz/Makefile.in \
-	src/gnc-module/test/mod-foo/Makefile.in \
-	src/gnome-search/Makefile.in \
-	src/gnome-utils/Makefile.in \
-	src/gnome/Makefile.in \
-	src/import-export/binary-import/Makefile.in \
-	src/register/register-core/Makefile.in \
-	src/report/report-gnome/Makefile.in
+#.if ${OPSYS} == "NetBSD"
+#post-wrapper:
+#	if [ ! -f /usr/include/wctype.h ]; then				\
+#		${TOUCH} ${BUILDLINK_DIR}/include/wctype.h;		\
+#	fi
+#.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gal/buildlink3.mk"
