@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2003/01/16 05:40:54 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2003/03/05 13:14:56 wiz Exp $
 
-DISTNAME=	Mowitz-0.2.1
+DISTNAME=	Mowitz-0.2.2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://siag.nu/pub/mowitz/
 
@@ -9,6 +9,8 @@ HOMEPAGE=	http://siag.nu/mowitz/
 COMMENT=	"More widgets" library
 
 USE_BUILDLINK2=	yes
+USE_LIBTOOL=	yes
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=	yes
 USE_X11=	yes
 
