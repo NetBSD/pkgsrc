@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2002/12/09 11:07:20 ad Exp $
+
+SHA1 (raidmgt.tgz) = d67b954b9f089734a2a77a52ded1584ea12fa7ec
+Size (raidmgt.tgz) = 722714 bytes
+SHA1 (patch-ab) = 24c7cdcd9576651ac9cea30127ee474aa7f3ff28
+SHA1 (patch-ac) = fb9cad0e76f9f2aef416cc731e271cae8eade6ee
+SHA1 (patch-ad) = 57ff83cdbfc2acd384f4e3ee56ed0b6a103ab834
+SHA1 (patch-ae) = 95beb3e29891efd919f9051c0ea690f72fbc350f
+SHA1 (patch-af) = ea17ec9920ac5468f64c8279b681d4bdd6dd3a02
+SHA1 (patch-ag) = 9b08ca81ce8cbc80f94c0ffc5a8b69c89a65e07a
+SHA1 (patch-ai) = e40e81bc2896693ab9f51bf6dcec2e1667ea993a
