@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2003/08/06 06:49:35 jtb Exp $
+@comment $NetBSD: PLIST,v 1.7 2004/04/22 15:00:08 drochner Exp $
 bin/gif2h5
 bin/h52gif
 bin/h5cc
-bin/h5createU8
 bin/h5debug
 bin/h5diff
 bin/h5dump
@@ -142,6 +141,7 @@ share/doc/html/hdf5/RM_H5T.html
 share/doc/html/hdf5/RM_H5Z.html
 share/doc/html/hdf5/References.html
 share/doc/html/hdf5/TechNotes.html
+share/doc/html/hdf5/TechNotes/Basic_perform.html
 share/doc/html/hdf5/TechNotes/BigDataSmMach.html
 share/doc/html/hdf5/TechNotes/ChStudy_1000x1000.gif
 share/doc/html/hdf5/TechNotes/ChStudy_250x250.gif
@@ -390,18 +390,6 @@ share/doc/html/hdf5/fortran/F90Flags.html
 share/doc/html/hdf5/fortran/F90UserNotes.html
 share/doc/html/hdf5/fortran/Makefile
 share/doc/html/hdf5/fortran/Makefile.in
-share/doc/html/hdf5/fortran/h5_FORTRAN.html
-share/doc/html/hdf5/fortran/h5a_FORTRAN.html
-share/doc/html/hdf5/fortran/h5d_FORTRAN.html
-share/doc/html/hdf5/fortran/h5e_FORTRAN.html
-share/doc/html/hdf5/fortran/h5f_FORTRAN.html
-share/doc/html/hdf5/fortran/h5g_FORTRAN.html
-share/doc/html/hdf5/fortran/h5i_FORTRAN.html
-share/doc/html/hdf5/fortran/h5p_FORTRAN.html
-share/doc/html/hdf5/fortran/h5r_FORTRAN.html
-share/doc/html/hdf5/fortran/h5s_FORTRAN.html
-share/doc/html/hdf5/fortran/h5t_FORTRAN.html
-share/doc/html/hdf5/fortran/h5z_FORTRAN.html
 share/doc/html/hdf5/group_p1.gif
 share/doc/html/hdf5/group_p2.gif
 share/doc/html/hdf5/group_p3.gif
