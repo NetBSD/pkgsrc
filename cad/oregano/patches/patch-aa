@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2000/02/16 20:56:06 rh Exp $
+
+--- configure.orig	Sun Jan 30 18:28:31 2000
++++ configure	Wed Feb 16 21:00:08 2000
+@@ -2941,7 +2941,7 @@
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lxml `$GNOME_CONFIG --libs xml` $LIBS"
++LIBS="-lxml `$GNOME_CONFIG --libs xml` $LIBS -lz"
+ cat > conftest.$ac_ext <<EOF
+ #line 2947 "configure"
+ #include "confdefs.h"
