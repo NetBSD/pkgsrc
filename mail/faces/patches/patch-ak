@@ -1,0 +1,22 @@
+diff -ur ../faces-DIST/filters/ikon2icon.c ./filters/ikon2icon.c
+--- ../faces-DIST/filters/ikon2icon.c	Mon Apr 15 13:40:02 1991
++++ ./filters/ikon2icon.c	Fri Oct  1 14:32:15 1999
+@@ -13,12 +13,17 @@
+  *  either to the comments or the code of this program, but if reported
+  *  to me, then an attempt will be made to fix them.
+  */
++#include <sys/param.h>
+ 
+ #include <stdio.h>
+ 
+ #define  PATCHLEVEL  1
+ 
+-#define  GETS        (void) gets     /* To make lint happy. */
++#if (defined(BSD) && BSD >= 199306)
++#define  GETS(s)	{ (void)fgets(s, sizeof(s), stdin); s[sizeof(s) - 1] = 0; }
++#else
++#define  GETS(s)        (void) gets(s)     /* To make lint happy. */
++#endif
+ #define  PRINTF      (void) printf
+ #define  SPRINTF     (void) sprintf
+ #define  SSCANF      (void) sscanf

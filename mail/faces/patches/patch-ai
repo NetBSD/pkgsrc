@@ -1,0 +1,9 @@
+diff -ur ../faces-DIST/faces.sendmail ./faces.sendmail
+--- ../faces-DIST/faces.sendmail	Mon Jul  1 11:25:50 1991
++++ ./faces.sendmail	Fri Oct  1 14:32:02 1999
+@@ -37,4 +37,4 @@
+ 	-e ': copy' \
+ 	-e p \
+ 	-e n \
+-	-e 'b copy' | /usr/lib/sendmail "$@"
++	-e 'b copy' | /usr/sbin/sendmail "$@"

@@ -1,0 +1,13 @@
+diff -ur ../faces-DIST/mon.c ./mon.c
+--- ../faces-DIST/mon.c	Tue Nov 19 15:00:48 1991
++++ ./mon.c	Fri Oct  1 14:32:18 1999
+@@ -23,7 +23,8 @@
+ #endif /* SYSV32 || hpux */
+ #include <sys/types.h>
+ #include <sys/stat.h>
+-#if ( !defined(mips) && !defined(TOPIX) ) || defined(ultrix)
++#include <sys/param.h>
++#if ( !defined(mips) && !defined(TOPIX) ) || defined(ultrix) || (defined(BSD) && BSD >= 199306)
+ #include <sys/time.h>
+ #else
+ #ifdef SYSTYPE_BSD43

@@ -1,0 +1,30 @@
+diff -ur ../faces-DIST/scripts/Makefile ./scripts/Makefile
+--- ../faces-DIST/scripts/Makefile	Tue May  7 08:55:26 1991
++++ ./scripts/Makefile	Fri Oct  1 14:32:12 1999
+@@ -15,16 +15,16 @@
+ BINDIR	= /usr/local/faces/bin
+ 
+ install:
+-	install -c -m 755 addxface $(BINDIR)
+-	install -c -m 755 mailq.faces $(BINDIR)
+-	install -c -m 755 from.faces $(BINDIR)
+-	install -c -m 755 lpqall.faces $(BINDIR)
+-	install -c -m 755 rotary.faces $(BINDIR)
+-	install -c -m 755 facesaddr $(BINDIR)
+-	install -c -m 755 facesall $(BINDIR)
+-	install -c -m 755 mkfacesindex $(BINDIR)
+-	install -c -m 755 newscheck.faces $(BINDIR)
+-	install -c -m 755 newsfrom.faces $(BINDIR)
++	install -c -o bin -m 755 addxface $(BINDIR)
++	install -c -o bin -m 755 mailq.faces $(BINDIR)
++	install -c -o bin -m 755 from.faces $(BINDIR)
++	install -c -o bin -m 755 lpqall.faces $(BINDIR)
++	install -c -o bin -m 755 rotary.faces $(BINDIR)
++	install -c -o bin -m 755 facesaddr $(BINDIR)
++	install -c -o bin -m 755 facesall $(BINDIR)
++	install -c -o bin -m 755 mkfacesindex $(BINDIR)
++	install -c -o bin -m 755 newscheck.faces $(BINDIR)
++	install -c -o bin -m 755 newsfrom.faces $(BINDIR)
+ 
+ install2:
+ 	install -c -m 755 faces $(LBINDIR)

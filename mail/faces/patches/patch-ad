@@ -1,101 +1,34 @@
-$NetBSD: patch-ad,v 1.2 1998/08/07 11:09:35 agc Exp $
-
-diff -c -N ../faces/scripts/Makefile ./scripts/Makefile
-*** ../faces/scripts/Makefile	Tue May  7 00:55:26 1991
---- ./scripts/Makefile	Wed Dec 11 09:30:23 1996
-***************
-*** 15,30 ****
-  BINDIR	= /usr/local/faces/bin
-  
-  install:
-! 	install -c -m 755 addxface $(BINDIR)
-! 	install -c -m 755 mailq.faces $(BINDIR)
-! 	install -c -m 755 from.faces $(BINDIR)
-! 	install -c -m 755 lpqall.faces $(BINDIR)
-! 	install -c -m 755 rotary.faces $(BINDIR)
-! 	install -c -m 755 facesaddr $(BINDIR)
-! 	install -c -m 755 facesall $(BINDIR)
-! 	install -c -m 755 mkfacesindex $(BINDIR)
-! 	install -c -m 755 newscheck.faces $(BINDIR)
-! 	install -c -m 755 newsfrom.faces $(BINDIR)
-  
-  install2:
-  	install -c -m 755 faces $(LBINDIR)
---- 15,30 ----
-  BINDIR	= /usr/local/faces/bin
-  
-  install:
-! 	install -c -o bin -m 755 addxface $(BINDIR)
-! 	install -c -o bin -m 755 mailq.faces $(BINDIR)
-! 	install -c -o bin -m 755 from.faces $(BINDIR)
-! 	install -c -o bin -m 755 lpqall.faces $(BINDIR)
-! 	install -c -o bin -m 755 rotary.faces $(BINDIR)
-! 	install -c -o bin -m 755 facesaddr $(BINDIR)
-! 	install -c -o bin -m 755 facesall $(BINDIR)
-! 	install -c -o bin -m 755 mkfacesindex $(BINDIR)
-! 	install -c -o bin -m 755 newscheck.faces $(BINDIR)
-! 	install -c -o bin -m 755 newsfrom.faces $(BINDIR)
-  
-  install2:
-  	install -c -m 755 faces $(LBINDIR)
-diff -c -N ../faces/scripts/addxface ./scripts/addxface
-*** ../faces/scripts/addxface	Tue Nov 19 05:05:58 1991
---- ./scripts/addxface	Tue Dec 10 17:52:45 1996
-***************
-*** 15,21 ****
-  # than version v1.6.0:
-  #$olddb = 1;
-  
-! $faces = '/usr/local/faces';
-  $umask = 000;
-  
-  # addxface - install any X-Face: in the header of the given mail message
---- 15,21 ----
-  # than version v1.6.0:
-  #$olddb = 1;
-  
-! $faces = '/usr/local/share/faces';
-  $umask = 000;
-  
-  # addxface - install any X-Face: in the header of the given mail message
-diff -c -N ../faces/scripts/facesall ./scripts/facesall
-*** ../faces/scripts/facesall	Mon Nov 25 01:30:24 1991
---- ./scripts/facesall	Tue Dec 10 17:57:49 1996
-***************
-*** 20,26 ****
-  #$olddb = 1;
-  
-  $cols = 15; $rows = 13;
-! $FACEDIR = '/usr/local/faces';
-  
-  # facesall - show all available faces in the given faces bitmap directory
-  # usage: facesall [ -a ] [ bitmap_directory ]
---- 20,26 ----
-  #$olddb = 1;
-  
-  $cols = 15; $rows = 13;
-! $FACEDIR = '/usr/local/share/faces';
-  
-  # facesall - show all available faces in the given faces bitmap directory
-  # usage: facesall [ -a ] [ bitmap_directory ]
-diff -c -N ../faces/scripts/mkfacesindex ./scripts/mkfacesindex
-*** ../faces/scripts/mkfacesindex	Tue Nov 19 05:05:58 1991
---- ./scripts/mkfacesindex	Tue Dec 10 17:58:16 1996
-***************
-*** 15,21 ****
-  # than version v1.6.0:
-  #$olddb = 1;
-  
-! $FACEDIR = '/usr/local/faces';
-  
-  # mkfacesindex - make a .index file at the root of a faces database that
-  #		 facesall can use more speedily instead of tabulating the
---- 15,21 ----
-  # than version v1.6.0:
-  #$olddb = 1;
-  
-! $FACEDIR = '/usr/local/share/faces';
-  
-  # mkfacesindex - make a .index file at the root of a faces database that
-  #		 facesall can use more speedily instead of tabulating the
-Common subdirectories: ../faces/scripts/rotary and ./scripts/rotary
+diff -ur ../faces-DIST/compface/compface.1 ./compface/compface.1
+--- ../faces-DIST/compface/compface.1	Fri Mar 15 15:10:29 1991
++++ ./compface/compface.1	Fri Oct  1 14:32:06 1999
+@@ -12,6 +12,8 @@
+ .LP
+ .B uncompface
+ [
++.B \-X
++] [
+ .I infile
+ [
+ .I outfile
+@@ -25,7 +27,7 @@
+ face image files.
+ .I uncompface
+ is an inverse filter which performs an inverse transformation with no
+-loss of data.
++loss of data. 
+ The algorithm used is highly tuned for its purpose and achieves better
+ than a five to one compression ratio on average.
+ Arguments operate identically for both programmes.
+@@ -56,6 +58,12 @@
+ .I compface
+ averages less than 200 characters.
+ The average number of output lines is three.
++.SH OPTIONS
++.TP 12
++.B \-X
++The same as
++.I uncompface
++| ikon2xbm. Usefull for exmh!
+ .SH DIAGNOSTICS
+ Exit status is normally 0.
+ Possible errors include IO errors when opening, reading or writing
