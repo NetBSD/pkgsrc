@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.42 2002/12/07 22:41:00 jmmv Exp $
+$NetBSD: TODO,v 1.43 2002/12/07 23:40:22 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -90,7 +90,6 @@ Suggested package updates
 	o crossfire-1.4.0
 	o ctwm-3.6
 	o cups-1.1.17
-	o curl-7.10.2
 	o cyrus-imapd-2.1.10
 	o dante-1.1.13
 	o db4-4.1.24
