@@ -1,0 +1,47 @@
+$NetBSD: patch-ae,v 1.1 2001/10/16 15:08:56 agc Exp $
+
+Remove the instruction on how to get to the gtk interface since
+we don't have one.
+
+--- mtr.8	2001/10/16 11:24:00	1.1
++++ mtr.8	2001/10/16 11:24:58
+@@ -8,7 +8,7 @@
+ .SH SYNOPSIS
+ .B mtr 
+ [\c
+-.B \-hvrctglsni\c
++.B \-hvrctlsni\c
+ ]
+ [\c
+ .B \-\-help\c
+@@ -35,9 +35,6 @@
+ .B \-\-no-dns\c
+ ]
+ [\c
+-.B \-\-gtk\c
+-]
+-[\c
+ .B \-\-interval\ SECONDS\c
+ ]
+ [\c
+@@ -147,20 +144,6 @@
+ .B mtr 
+ to display numeric IP numbers and not try to resolve the
+ host names. 
+-
+-.TP
+-.B \-g
+-.TP
+-.B \-\-gtk
+-.br
+-Use this option to force
+-.B mtr 
+-to use the GTK+ based X11 window interface (if available).  
+-GTK+ must have been available on the system when 
+-.B mtr 
+-was built for this to work.  See the GTK+ web page at 
+-.B http://www.gimp.org/gtk/
+-for more information about GTK+.
+ 
+ .TP
+ .B \-s
