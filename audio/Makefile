@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.109 2001/08/16 02:27:39 hubertf Exp $
+# $NetBSD: Makefile,v 1.110 2001/08/16 06:22:32 lukem Exp $
 #
 
 COMMENT=	Audio tools
 
+SUBDIR+=	abcde
 SUBDIR+=	amp
 SUBDIR+=	audacity
 SUBDIR+=	aumix
 SUBDIR+=	bladeenc
 SUBDIR+=	cam
+SUBDIR+=	cd-discid
 SUBDIR+=	cdd
 SUBDIR+=	cddbd
 SUBDIR+=	cdparanoia
