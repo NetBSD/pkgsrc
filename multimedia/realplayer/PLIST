@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 13:09:57 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2004/02/17 19:24:42 wiz Exp $
 bin/realplay
 lib/RealPlayer8/Codecs/14_4.so.6.0
 lib/RealPlayer8/Codecs/28_8.so.6.0
@@ -9,11 +9,13 @@ lib/RealPlayer8/Codecs/dnet.so.6.0
 lib/RealPlayer8/Codecs/drv1.so.6.0
 lib/RealPlayer8/Codecs/drv2.so.6.0
 lib/RealPlayer8/Codecs/drv3.so.6.0
+${RV9}lib/RealPlayer8/Codecs/drv4.so.6.0
 lib/RealPlayer8/Codecs/dspr.so.6.0
 lib/RealPlayer8/Codecs/rncolor.so.6.0
 lib/RealPlayer8/Codecs/rv10.so.6.0
 lib/RealPlayer8/Codecs/rv20.so.6.0
 lib/RealPlayer8/Codecs/rv30.so.6.0
+${RV9}lib/RealPlayer8/Codecs/rv40.so.6.0
 lib/RealPlayer8/Codecs/sipr.so.6.0
 lib/RealPlayer8/Codecs/tokr.so.6.0
 lib/RealPlayer8/Common/pnrscmgr.so.6.0
