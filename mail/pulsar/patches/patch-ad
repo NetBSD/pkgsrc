@@ -1,0 +1,25 @@
+$NetBSD: patch-ad,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
+
+--- src/Makefile.in.orig	Thu Sep  4 20:15:21 2003
++++ src/Makefile.in
+@@ -25,7 +25,7 @@
+   install-recursive clean-recursive distclean-recursive
+ 
+ CC = @CC@
+-CFLAGS = -Wall @CFLAGS@ @DEFS@ -I./mailstore -I./cfg -I./users -I./util -I./md5
++CFLAGS = -Wall @CFLAGS@ @DEFS@ -I./mailstore -I./cfg -I./users -I./util -I./md5 -I.
+ LDFLAGS = @LDFLAGS@
+ LDLIBS = @LIBS@
+ 
+@@ -198,7 +198,7 @@ distclean-recursive:
+ 	@set -e; for i in $(SUB_DIRS); do cd $$i; $(MAKE) distclean ; cd .. ; done
+ 
+ install-files:
+-	${INSTALL} -m 0755 -g root -o root -d ${sbindir}
+-	${INSTALL} -m 0500 -g root -o root -s pulsar ${sbindir}
+-	${INSTALL} -m 0555 -g root -o root -s pulsar_crypt ${sbindir}
+-	${INSTALL} -m 0500 -g root -o root -s pulsar_deliver ${sbindir}
++	${INSTALL} -m 0755 -d ${sbindir}
++	${INSTALL} -m 0500 -s pulsar ${sbindir}
++	${INSTALL} -m 0555 -s pulsar_crypt ${sbindir}
++	${INSTALL} -m 0500 -s pulsar_deliver ${sbindir}
