@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2004/08/26 18:24:50 wennmach Exp $
+
+SHA1 (duplicity-0.4.1.tar.gz) = 09353d59d1b7264740bed9bec02c72668bfd659a
+Size (duplicity-0.4.1.tar.gz) = 101621 bytes
+SHA1 (patch-aa) = 48866f297e2dcffd5da98b8298d6acf08821f7e8
