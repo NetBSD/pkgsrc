@@ -1,0 +1,7 @@
+Linux compatibility package based on the SuSE Linux distribution, take a
+look at "http://www.suse.com/" for more information about it.
+
+This package supports aout and ELF binaries linked with libc 5 or libc 6.
+However, there are no aout libraries included. You can add Linux RPM
+packages to this package with "linux-rpm -i ..." and remove them with
+"linux-rpm -e ..." again.
