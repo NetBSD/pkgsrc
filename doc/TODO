@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1292 2004/01/10 20:18:08 heas Exp $
+$NetBSD: TODO,v 1.1293 2004/01/10 20:26:27 jschauma Exp $
 
 Suggested new packages
 ======================
@@ -123,7 +123,6 @@ Suggested package updates
 	o avifile-devel-0.7.34-20030319
 	o awstats-5.9
 	o balsa-1.4.4
-	o blender-2.31a
 	o blib-1.1.4
 	o blinkensim-2.5
 	o blinkentools-2.5
