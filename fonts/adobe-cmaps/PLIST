@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/15 22:41:45 kei Exp $
+@comment $NetBSD: PLIST,v 1.3 2003/12/23 18:01:48 sketch Exp $
 share/Adobe/Resource/CMap/78-EUC-H
 share/Adobe/Resource/CMap/78-EUC-V
 share/Adobe/Resource/CMap/78-H
@@ -466,6 +466,8 @@ share/Adobe/Resource/rksj-cmaps/TCVN-RKSJ-H
 @dirrm share/Adobe/Resource/ak12
 @dirrm share/Adobe/Resource/aj20/CMap
 @dirrm share/Adobe/Resource/aj20
+@dirrm share/Adobe/Resource/aj15/CMap
+@dirrm share/Adobe/Resource/aj15
 @dirrm share/Adobe/Resource/ai0/CMap
 @dirrm share/Adobe/Resource/ai0
 @dirrm share/Adobe/Resource/ag14/CMap

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2003/07/17 21:36:54 grant Exp $
+# $NetBSD: Makefile,v 1.5 2003/12/23 18:01:48 sketch Exp $
 
 DISTNAME=	adobe-cmaps-20030126
 CATEGORIES=	print
@@ -59,7 +59,10 @@ do-install:
 		for file in pdfcorefonts/$${dir}/*; do			\
 			case $${file} in				\
 			*.pdf)	;;					\
-			*)	${LN} -sf ../$${file} ${RESOURCEDIR}/CMap ;; \
+			*)						\
+				${RM} -f ${RESOURCEDIR}/CMap/`${BASENAME} $${file}`; \
+				${LN} -sf ../$${file} ${RESOURCEDIR}/CMap; \
+				;;					\
 			esac;						\
 		done;							\
 	done
