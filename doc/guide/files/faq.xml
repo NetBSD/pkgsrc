@@ -1,0 +1,537 @@
+<!-- $NetBSD: faq.xml,v 1.1.1.1 2004/10/21 14:27:43 grant Exp $ -->
+
+<chapter id="faq"> <?dbhtml filename="faq.html"?>
+  <title>Frequently Asked Questions</title>
+
+  <para> This section contains hints, tips &amp; tricks on special
+    things in pkgsrc that we didn't find a better place for in the
+    previous chapters, and it contains items for both pkgsrc users and
+    developers. </para>
+
+  <sect1>
+    <title>Is there a mailing list for pkg-related discussion?</title>
+
+    <para> Yes, <email>tech-pkg@NetBSD.org</email> is the list for
+      discussing package related issues. To subscribe do: </para> 
+
+    <programlisting>&cprompt; echo subscribe tech-pkg | mail majordomo@NetBSD.org</programlisting>
+
+    <para> An archive of the list is available at
+      <ulink url="http://mail-index.NetBSD.org/tech-pkg/">http://mail-index.NetBSD.org/tech-pkg/</ulink>. </para>     
+</sect1>
+
+
+<sect1>
+    <title>Where's the pkgviews documentation?</title>
+
+    <para> Pkgviews is tightly integrated with buildlink. You can find a 
+      pkgviews User's guide in
+      <filename>pkgsrc/mk/buildlink3/PKGVIEWS_UG</filename>. 
+      </para>
+</sect1>
+
+
+<sect1>
+    <title>Utilities for package management (pkgtools)</title>
+
+    <para>
+      The <filename>pkgsrc/pkgtools</filename> directory pkgtools
+      contains a number of useful utilities for both users and
+      developers of pkgsrc.  This section attempts only to make the
+      reader aware of the utilities and when they might be useful, and
+      not to duplicate the documentation that comes with each package.
+      </para>
+
+    <para>
+      Utilities used by pkgsrc (automatically installed when needed):
+      </para>
+      
+    <itemizedlist>
+      <listitem>
+        <para> <pkg>pkgtools/x11-links</pkg>: symlinks for use by
+          buildlink </para>
+      </listitem>
+    </itemizedlist>
+    
+    <para> OS tool augmentation (automatically installed when needed):
+      </para>
+      
+    <itemizedlist>
+      <listitem>
+        <para> <pkg>pkgtools/digest</pkg>:
+          calculates SHA1 checksums (and other kinds)
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>pkgtools/libnbcompat</pkg>:
+          compat library for pkg tools
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>pkgtools/mtree</pkg>:
+          installed on non-BSD systems due to lack of native mtree
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>pkgtools/pkg_install</pkg>:
+          up-to-date replacement for /usr/sbin/pkg_install, or for
+          use on operating systems where pkg_install is not present
+        </para>
+      </listitem>
+    </itemizedlist>
+    
+    <para>    Utilities used by pkgsrc (not automatically installed):
+      </para> 
+    
+    <itemizedlist>
+      <listitem>
+        <para> <pkg>pkgtools/pkg_tarup</pkg>:
+          create a binary package from an already-installed package.
+          used by 'make replace' to save the old package
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>pkgtools/xpkgwedge</pkg>:
+          put X11 packages someplace else (enabled by default)
+        </para>
+      </listitem>
+    </itemizedlist>
+    
+    <para> Utilities for keeping track of installed packages, being up
+      to date, etc: </para> 
+    
+    <itemizedlist>
+      <listitem>
+        <para> <pkg>pkgtools/pkg_chk</pkg>:
+          installs pkg_chk, which reports on packages whose installed
+          versions do not match the latest pkgsrc entries
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>pkgtools/pkgdep</pkg>:
+          makes dependency graphs of packages, to aid in choosing a
+          strategy for updating
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>pkgtools/pkgdepgraph</pkg>:
+          make graph from above (uses graphviz)
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>pkgtools/pkglint</pkg>:
+          This provides two distinct abilities:
+          check a pkgsrc entry for correctness (pkglint)
+          check for and remove out-of-date distfiles and binary
+          packages (lintpkgsrc)
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>pkgtools/pkgsurvey</pkg>:
+          report what packages you have installed
+        </para>
+      </listitem>
+    </itemizedlist>
+    
+    <para> Utilities for people maintaining or creating individual
+      packages: </para> 
+    
+    <itemizedlist>
+      <listitem>
+        <para> <pkg>pkgtools/pkgdiff</pkg>:
+          automate making and maintaining patches for a package (includes
+          pkgdiff, pkgvi, mkpatches, ...)
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>pkgtools/rpm2pkg</pkg>, <pkg>pkgtools/url2pkg</pkg>:
+          aids in converting to pkgsrc
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>pkgtools/gensolpkg</pkg>:
+          convert pkgsrc to a Solaris package
+        </para>
+      </listitem>
+    </itemizedlist>
+    
+    <para> Utilities for people maintaining pkgsrc (or more obscure
+      pkg utilities) </para> 
+    
+    <itemizedlist>
+      <listitem>
+        <para> <pkg>pkgtools/pkgconflict</pkg>:
+          find packages that conflict but aren't marked as such
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>pkgtools/pkg_comp</pkg>:
+          build packages in a chrooted area
+        </para>
+      </listitem>
+      <listitem>
+        <para> <pkg>pkgtools/libkver</pkg>:
+          spoof kernel version for chrooted cross builds
+        </para>
+      </listitem>
+    </itemizedlist>
+</sect1>
+
+
+<sect1>
+    <title>How to use pkgsrc as non-root</title>
+    
+     <para>  If you want to use pkgsrc as non-root user, you can set
+      some variables  to make pkgsrc work under these
+      conditions. Please see   <ulink
+      url="http://mail-index.NetBSD.org/tech-pkg/2003/09/27/0023.html">this
+      message</ulink> for more details.  </para> 
+</sect1>
+
+
+<sect1>
+    <title>How can I install/use XFree86 from pkgsrc?</title>
+
+    <para> If you want to use XFree86 from pkgsrc instead of your
+      system's own X11 (<filename>/usr/X11R6</filename>,
+      <filename>/usr/openwin</filename>, ...), you will have to 
+      add the following lines into <filename>mk.conf</filename>:
+      </para>
+
+    <programlisting>
+      X11_TYPE=XFree86
+    </programlisting>
+</sect1>
+
+
+<sect1>
+    <title>How can I install/use X.org from pkgsrc?</title>
+
+    <para> If you want to use X.org from pkgsrc instead of your system's
+      own X11 (<filename>/usr/X11R6</filename>,
+      <filename>/usr/openwin</filename>, ...) you will have to add the
+      following lines into <filename>mk.conf</filename>: </para>
+
+    <programlisting>
+      X11_TYPE=xorg
+    </programlisting>
+</sect1>
+
+
+<sect1>
+    <title>How to fetch files from behind a firewall</title>
+
+    <para> If you are sitting behind a firewall which does not allow
+      direct connections to Internet hosts (i.e. non-NAT), you may
+      specify the relevant proxy hosts. This is done using an
+      environment variable in the form of a URL e.g. in Amdahl, the
+      machine <quote>orpheus.amdahl.com</quote> is one of the
+      firewalls, and it uses port 80 as the proxy port number. So the
+      proxy environment variables are: </para>
+
+    <programlisting>  ftp_proxy=ftp://orpheus.amdahl.com:80/
+http_proxy=http://orpheus.amdahl.com:80/</programlisting>
+</sect1>
+
+    
+<sect1>
+    <title>How do I tell <command>make fetch</command> to do passive FTP?</title>
+
+    <para> This depends on which utility is used to retrieve distfiles. From <filename>bsd.pkg.mk</filename>, <varname>FETCH_CMD</varname> is assigned the first available command from the following list: </para>
+
+    <programlisting>${LOCALBASE}/bin/ftp
+/usr/bin/ftp</programlisting>
+
+    <para> On a default NetBSD installation, this will be
+      <filename>/usr/bin/ftp</filename>, which automatically tries
+      passive connections first, and falls back to active connections
+      if the server refuses to do passive. For the other tools, add
+      the following to your <filename>/etc/mk.conf</filename> file:
+      <varname>PASSIVE_FETCH=1</varname>. </para> 
+
+    <para> Having that option present will prevent
+      <filename>/usr/bin/ftp</filename> from falling back to active
+      transfers. </para>
+</sect1>
+
+    
+<sect1>
+    <title>How to fetch all distfiles at once</title>
+
+    <para> You would like to download all the distfiles in a single
+      batch from work or university, where you can't run a
+      <command>make fetch</command>. There is an archive of distfiles
+      on <ulink
+      url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/">ftp.NetBSD.org</ulink>,
+      but downloading the entire directory may not be appropriate.
+      </para>
+
+    <para> The answer here is to do a <command>make
+      fetch-list</command> in <filename>/usr/pkgsrc</filename> or one
+      of it's subdirectories, carry the resulting list to your machine
+      at work/school and use it there If you don't have a
+      NetBSD-compatible ftp(1) (like lukemftp) at work, don't forget
+      to set <varname>FETCH_CMD</varname> to something that fetches a
+      URL: </para>
+
+    <para> At home: </para>
+
+    <screen><prompt>%</prompt> <userinput>cd /usr/pkgsrc</userinput>
+<prompt>%</prompt> <userinput>make fetch-list FETCH_CMD=wget DISTDIR=/tmp/distfiles >/tmp/fetch.sh</userinput>
+<prompt>%</prompt> <userinput>scp /tmp/fetch.sh work:/tmp</userinput></screen>
+
+    <para> At work: </para>
+
+    <screen><prompt>%</prompt> <userinput>sh /tmp/fetch.sh</userinput></screen>
+
+    <para> then tar up <filename>/tmp/distfiles</filename> and take it
+      home. </para>
+
+    <para> If you have a machine running NetBSD, and you want to get
+      <emphasis>all</emphasis> distfiles (even ones that aren't for
+      your machine architecture), you can do so by using the
+      above-mentioned <command>make fetch-list</command> approach, or
+      fetch the distfiles directly by running: </para>
+
+    <screen><prompt>%</prompt> <userinput>make mirror-distfiles</userinput></screen>
+
+    <para> If you even decide to ignore
+      <varname>NO_{SRC,BIN}_ON_{FTP,CDROM}</varname>, then you can get
+      everything by running: </para>
+
+    <screen><prompt>%</prompt> <userinput>make fetch NO_SKIP=yes</userinput></screen>
+</sect1>
+
+
+<sect1>
+    <title>What does <quote>Don't know how to make /usr/share/tmac/tmac.andoc</quote> mean?</title>
+
+    <para> When compiling the <pkg>pkgtools/pkg_install</pkg> package,
+      you get the error from make that it doesn't know how to make
+      <filename>/usr/share/tmac/tmac.andoc</filename>? This indicates
+      that you don't have installed the <quote>text</quote> set on
+      your machine (nroff, ...). It is recommended to do that to
+      format manpages.  </para>
+
+    <para> In the case of the <pkg>pkgtools/pkg_install</pkg> package,
+      you can get away with setting <varname>NOMAN=YES</varname>
+      either in the environment or in
+      <filename>/etc/mk.conf</filename>.  </para>
+</sect1>
+
+
+<sect1>
+    <title>What does <quote>Could not find bsd.own.mk</quote> mean?</title>
+
+    <para> You didn't install the compiler set,
+      <filename>comp.tgz</filename>, when you installed your NetBSD
+      machine. Please get it and install it, by extracting it in
+      <filename>/</filename>: </para>
+
+    <screen><prompt>#</prompt> <userinput>cd /</userinput>
+<prompt>#</prompt> <userinput>tar --unlink -zxvpf .../comp.tgz</userinput></screen>
+
+    <para> <filename>comp.tgz</filename> is part of every NetBSD
+      release. Get the one that corresponds to your release (determine
+      via <command>uname -r</command>).  </para>
+</sect1>
+
+
+<sect1>
+    <title>Using 'sudo' with pkgsrc</title>
+
+    <para>
+      When installing packages as non-root user and using the
+      just-in-time su(1) feature of pkgsrc, it can become annoying to
+      type in the root password for each required package
+      installed. To avoid this, the sudo package can be used, which
+      does password caching over a limited time.  To use it, install
+      sudo (either as binary package or from <pkg>security/sudo</pkg>)
+      and then put the following into your
+      <filename>/etc/mk.conf</filename>: </para>
+
+    <programlisting>
+        .if exists(/usr/pkg/bin/sudo)
+        SU_CMD=/usr/pkg/bin/sudo /bin/sh -c
+        .endif
+    </programlisting>
+</sect1>
+
+
+<sect1 id="faq.conf">
+    <title>Configuration files handling and placement</title>
+
+    <para>  The global variable <varname>PKG_SYSCONFBASE</varname>
+      (and some others)  can be set by the system administrator in
+      <filename>/etc/mk.conf</filename>  to define the place where
+      configuration files get installed. Therefore, packages must be
+      adapted to  support this feature. Keep in mind that you should
+      only install files that  are strictly necessary in the
+      configuration directory, files that can  go to
+      <filename>$PREFIX/share</filename> should go there.  </para> 
+
+    <para> We will take a look at available variables first
+      (<filename>bsd.pkg.mk</filename> contains more
+      information). <varname>PKG_SYSCONFDIR</varname> is where the
+      configuration files for a package may be found (that is, the
+      full path, e.g. <filename>/etc</filename> or
+      <filename>/usr/pkg/etc</filename>). This value may be customized
+      in various ways: </para>
+
+    <orderedlist>
+      <listitem>
+        <para> <varname>PKG_SYSCONFBASE</varname> is the main config
+          directory under which all package configuration files are to
+          be found. Users will typically want to set it to
+          <filename>/etc</filename>, or accept the default location of
+          <filename>$PREFIX/etc</filename>.  </para>
+      </listitem>
+
+      <listitem>
+        <para> <varname>PKG_SYSCONFSUBDIR</varname> is the
+          subdirectory of <varname>PKG_SYSCONFBASE</varname> under
+          which the configuration files for a particular package may
+          be found. Defaults to <varname>${SYSCONFBASE}</varname>.
+          </para>
+      </listitem>
+
+      <listitem>
+        <para>      <varname>PKG_SYSCONFVAR</varname> is the special
+          suffix used to      distinguish any overriding values for a
+          particular package      (see next item). It defaults to
+          <varname>${PKGBASE}</varname>, but      for a collection of
+          related packages that should all have the same
+          <varname>PKG_SYSCONFDIR</varname> value, it can be set in
+          each of      the package Makefiles to a common value.
+          </para> 
+      </listitem>
+
+      <listitem>
+        <para>
+          <varname>PKG_SYSCONFDIR.${PKG_SYSCONFVAR}</varname>
+          overrides the value of
+          <varname>${PKG_SYSCONFDIR}</varname> for packages with the
+          same value      for <varname>PKG_SYSCONFVAR</varname>.
+          </para> 
+
+        <para> As an example, all the various KDE packages may want to
+          set <varname>PKG_SYSCONFVAR</varname> to <quote>kde</quote>
+          so admins can set <varname>PKG_SYSCONFDIR.kde</varname> in
+          <filename>/etc/mk.conf</filename> to define where to install
+          KDE config files.  </para>
+      </listitem>
+    </orderedlist>
+
+    <para> Programs' configuration directory should be defined during
+          the configure stage. Packages that use GNU autoconf can
+          usually do this by using the <quote>--sysconfdir</quote>
+          parameter, but this brings some problems as we will see now.
+          When you change this pathname in packages, you should not
+          allow them to install files in that directory
+          directly. Instead they need to install those files under
+          <filename>share/examples/${PKGNAME}</filename> so
+          <filename>PLIST</filename> can register them.  </para>
+
+    <para> Once you have the required configuration files in place
+      (under the <filename>share/examples</filename> directory) the
+      variable <varname>CONF_FILES</varname> should be set to copy
+      them into <varname>PKG_SYSCONFDIR</varname>. The contents of
+      this variable is formed by pairs of filenames; the first element
+      of the pair specifies the file inside the examples directory
+      (registered by <filename>PLIST</filename>) and the second
+      element specifies the target file. This is done this way to
+      allow binary packages to place files in the right directory
+      using
+      <filename>INSTALL</filename>/<filename>DEINSTALL</filename>
+      scripts which are created automatically.  The package
+      <filename>Makefile</filename> must also set
+      <varname>USE_PKGINSTALL=YES</varname> to use these automatically
+      generated scripts.  The automatic copying of config files can be
+      toggled by setting the environment variable
+      <varname>PKG_CONFIG</varname> prior to package installation.
+      </para>
+
+    <para> Here is an example, taken from mail/mutt/Makefile: </para>
+
+    <programlisting>  EGDIR=            ${PREFIX}/share/doc/mutt/samples
+CONF_FILES=   ${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc</programlisting>
+
+    <para>  As you can see, this package installs configuration files
+      inside  <varname>EGDIR</varname>, which are registered by
+      <filename>PLIST</filename>. After that, the variable
+      <varname>CONF_FILES</varname> lists  the installed file first
+      and then the target file. Users will also get an  automatic
+      message when files are installed using this method. </para> 
+</sect1>
+
+
+<sect1 id="audit-packages">
+    <title>Automated security checks</title>
+
+    <para> Please be aware that there can often be bugs in third-party
+      software, and some of these bugs can leave a machine vulnerable
+      to exploitation by attackers.  In an effort to lessen the
+      exposure, the NetBSD packages team maintains a database of
+      known-exploits to packages which have at one time been included
+      in pkgsrc.  The database can be downloaded automatically, and a
+      security audit of all packages installed on a system can take
+      place.  To do this, install the
+      <pkg>security/audit-packages</pkg> package.  It has two
+      components: </para>
+
+    <orderedlist>
+      <listitem>
+        <para> <quote>download-vulnerability-list</quote>, an easy way
+          to download a list of the security vulnerabilities
+          information. This list is kept up to date by the NetBSD
+          security officer and the NetBSD packages team, and is
+          distributed from the NetBSD ftp server: </para>
+
+        <para> <ulink
+          url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/pkg-vulnerabilities"/>
+          </para>  
+      </listitem>
+
+      <listitem>
+        <para> <quote>audit-packages</quote>, an easy way to audit the
+          current machine, checking       each vulnerability which is
+          known. If a vulnerable package is       installed, it will
+          be shown by output to stdout, including a       description
+          of the type of vulnerability, and a URL containing more
+          information.  </para> 
+      </listitem>
+    </orderedlist>
+
+    <para> Use of the audit-packages package is strongly recommended!
+      </para>
+
+    <para> The following message is displayed as part of the
+      audit-packages installation procedure: </para>
+
+    <screen>
+===========================================================================
+$NetBSD: faq.xml,v 1.1.1.1 2004/10/21 14:27:43 grant Exp $
+
+You may wish to have the vulnerabilities file downloaded daily so that
+it remains current.  This may be done by adding an appropriate entry
+to the root users crontab(5) entry.  For example the entry
+
+# download vulnerabilities file
+0 3 * * * ${PREFIX}/sbin/download-vulnerability-list >/dev/null 2>&1
+
+will update the vulnerability list every day at 3AM. You may wish to do
+this more often than once a day.
+
+In addition, you may wish to run the package audit from the daily
+security script.  This may be accomplished by adding the following
+lines to /etc/security.local
+
+if [ -x ${PREFIX}/sbin/audit-packages ]; then
+          ${PREFIX}/sbin/audit-packages
+fi
+
+===========================================================================
+    </screen>
+  </sect1>
+
+</chapter>
