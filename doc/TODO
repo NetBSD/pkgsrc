@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.77 2002/12/17 16:59:49 wiz Exp $
+$NetBSD: TODO,v 1.78 2002/12/17 19:41:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -93,10 +93,8 @@ Suggested package updates
 	o cups-1.1.17
 	o dante-1.1.13
 	o db4-4.1.24
-	o dctc-0.83.9
 	o dylan-compiler-2.3.9
 	o dylan-interpreter-2.3.9
-	o easytag-0.25
 	o eel2-2.0.8 [pkg/19410]
 	o eggdrop-1.6.13
 	o eog2-1.0.4 [pkg/19412]
