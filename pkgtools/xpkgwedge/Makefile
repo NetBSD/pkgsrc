@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2001/09/09 20:36:43 agc Exp $
-#
+# $NetBSD: Makefile,v 1.30 2001/10/14 16:42:58 tron Exp $
 
-DISTNAME=	xpkgwedge-1.6
+DISTNAME=	xpkgwedge-1.7
 CATEGORIES=	pkgtools devel x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -47,6 +46,9 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/config
 	${INSTALL_DATA} ${FILESDIR}/xpkgwedge.def ${PREFIX}/lib/X11/config
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgxmkmf ${PREFIX}/bin/pkgxmkmf
+	for FILE in bdftopcf fstobdf mkfontdir; do \
+	  ${LN} -fs ${X11BASE}/bin/$$FILE ${PREFIX}/bin; \
+	done
 
 post-install:
 	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
