@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/09/27 11:07:23 wiz Exp $
+
+--- src/tuxpaint.c.orig	Wed Sep 25 22:29:34 2002
++++ src/tuxpaint.c
+@@ -6162,8 +6162,15 @@ char * get_fname(char * name)
+ #else
+   if (getenv("HOME") != NULL)
+   {
+-    snprintf(f, sizeof(f), "%s/.tuxpaint/%s",
+-	     getenv("HOME"), name);
++    if (*name == '\0') {
++      snprintf(f, sizeof(f), "%s/.tuxpaint",
++	       getenv("HOME"));
++    }
++    else
++    {
++      snprintf(f, sizeof(f), "%s/.tuxpaint/%s",
++	       getenv("HOME"), name);
++    }
+   }
+   else
+   {
