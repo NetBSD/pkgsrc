@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7254 2004/09/26 01:14:42 dmcmahill Exp $
+$NetBSD: CHANGES,v 1.7255 2004/09/26 01:15:46 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4431,5 +4431,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated subversion to 1.0.8 [epg 2004-09-25]
 	Added palmpower-1.0.2 [rh 2004-09-25]
 	Updated kanjipad to 2.0.0 [wiz 2004-09-25]
-	Added digikamplugins-0.6.2 [2004-09-26]
+	Added digikamplugins-0.6.2 [seb 2004-09-26]
 	Added tnt-1.2.2 [dmcmahill 2004-09-26]
