@@ -1,0 +1,3 @@
+execute "run-lmbench" to run the benchmark.
+There is a Makefile in your share/lmbench/results directory
+that can be used to format your results as well.

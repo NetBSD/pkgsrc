@@ -1,0 +1,117 @@
+$NetBSD: patch-af,v 1.1 1998/08/30 17:46:26 garbled Exp $
+--- scripts/config-run.orig	Fri Jul 31 12:55:19 1998
++++ scripts/config-run	Sun Aug 30 08:08:52 1998
+@@ -3,7 +3,7 @@
+ # Configure parameters for lmbench.
+ # 1.23 98/07/31 lm@lm.bitmover.com
+ 
+-OS=`../scripts/os`
++OS=`XXXPREFIXXXX/bin/lmbench/os`
+ L='====================================================================='
+ echo $L; 
+ cat<<EOF;
+@@ -36,20 +36,20 @@
+ ############################################################################
+ echo $L; echo "";
+ echo "Hang on, we are calculating your timing granularity."
+-../bin/$OS/msleep 250
+-ENOUGH=`../bin/$OS/enough`
++XXXPREFIXXXX/bin/lmbench/msleep 250
++ENOUGH=`XXXPREFIXXXX/bin/lmbench/enough`
+ export ENOUGH 
+ echo "OK, it looks like you can time stuff down to $ENOUGH usec resolution."
+ echo ""
+ echo "Hang on, we are calculating your timing overhead."
+-../bin/$OS/msleep 250
+-TIMING_O=`../bin/$OS/timing_o`
++XXXPREFIXXXX/bin/lmbench/msleep 250
++TIMING_O=`XXXPREFIXXXX/bin/lmbench/timing_o`
+ export TIMING_O
+ echo "OK, it looks like your gettimeofday() costs $TIMING_O usecs."
+ echo ""
+ echo "Hang on, we are calculating your loop overhead."
+-../bin/$OS/msleep 250
+-LOOP_O=`../bin/$OS/loop_o`
++XXXPREFIXXXX/bin/lmbench/msleep 250
++LOOP_O=`XXXPREFIXXXX/bin/lmbench/loop_o`
+ export LOOP_O
+ echo "OK, it looks like your benchmark loop costs $LOOP_O usecs."
+ echo ""
+@@ -89,9 +89,9 @@
+ # Certain machines tend to barf when you try and bcopy 8MB.
+ # Figure out how much we can use.
+ echo "Checking to see if you have $MB MB; please wait for a moment..."
+-AVAILMEM=`../bin/$OS/memsize $MB`
+-AVAILMEM=`../bin/$OS/memsize $MB`
+-AVAILMEM=`../bin/$OS/memsize $MB`
++AVAILMEM=`XXXPREFIXXXX/bin/lmbench/memsize $MB`
++AVAILMEM=`XXXPREFIXXXX/bin/lmbench/memsize $MB`
++AVAILMEM=`XXXPREFIXXXX/bin/lmbench/memsize $MB`
+ if [ $AVAILMEM -lt 8 ]
+ then    echo $0 aborted: Not enough memory, only ${AVAILMEM}MB available. 
+ 	exit 1
+@@ -185,7 +185,7 @@
+ then	
+ 	for i in $disks
+ 	do	if [ -r $i ]
+-		then	../bin/$OS/flushdisk $i
++		then	XXXPREFIXXXX/bin/lmbench/flushdisk $i
+ 			if [ $? -eq 1 ]
+ 			then	echo "Must be root to run disk benchmarks."
+ 				echo "Root is needed to flush the buffer cache"
+@@ -206,7 +206,7 @@
+ echo $L
+ echo ""
+ echo "Calculating mhz, please wait for a moment..."
+-MHZ=`../bin/$OS/mhz`
++MHZ=`XXXPREFIXXXX/bin/lmbench/mhz`
+ cat > /dev/tty <<EOF
+ I think your CPU mhz is 
+ 
+@@ -363,11 +363,11 @@
+ 		;;
+ esac
+ 
+-INFO=`../scripts/info`
++INFO=`XXXPREFIXXXX/bin/lmbench/info`
+ if [ $MAIL = yes ]
+-then	if [ ! -f ../bin/$OS/$INFO ]
+-	then	cp ../scripts/info-template ../bin/$OS/$INFO
+-		chmod +w ../bin/$OS/$INFO
++then	if [ ! -f $INFO ]
++	then	cp XXXPREFIXXXX/bin/lmbench/info-template XXXPREFIXXXX/share/lmbench/$INFO
++		chmod +w XXXPREFIXXXX/share/lmbench/$INFO
+ 		REUSE=no
+ 	else	
+ 		REUSE=view
+@@ -381,7 +381,7 @@
+ 				;;
+ 			[Vv]*)	REUSE=view
+ 				echo $L
+-				more ../bin/$OS/$INFO
++				more XXXPREFIXXXX/share/lmbench/$INFO
+ 				echo $L
+ 				;;
+ 	    		*)	REUSE=yes
+@@ -409,7 +409,7 @@
+ 		then	EDITOR=$TMP
+ 		fi
+ 		if [ X$EDITOR != "none" ]
+-		then	$EDITOR ../bin/$OS/`../scripts/info`
++		then	$EDITOR XXXPREFIXXXX/share/lmbench/`XXXPREFIXXXX/share/lmbench/info`
+ 		fi
+ 	fi
+ fi
+@@ -424,9 +424,10 @@
+ 
+ EOF
+ 
+-VERSION=`../scripts/version`
++VERSION=`XXXPREFIXXXX/bin/lmbench/version`
++CONFIG=XXXPREFIXXXX/share/lmbench/`XXXPREFIXXXX/bin/lmbench/config`
+ 
+-cat<<EOF > ../bin/$OS/`../scripts/config`
++cat <<EOF >$CONFIG
+ DISKS="$DISKS"
+ DISK_DESC="$DISK_DESC"
+ ENOUGH=$ENOUGH
