@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/08/18 05:02:21 hubertf Exp $
+
+--- Makefile.in.orig	Sat Dec 25 23:16:10 1999
++++ Makefile.in
+@@ -75,7 +75,7 @@
+ VERSION = @VERSION@
+ 
+ lib_LTLIBRARIES = neato.la
+-libdir = /usr/lib/xmms/Visualization
++libdir = `${XMMS_CONFIG} --visualization-plugin-dir`
+ 
+ neato_la_LDFLAGS = -module -avoid-version
+ LIBS = @GTK_LIBS@
