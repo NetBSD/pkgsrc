@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2002/09/09 00:59:00 markd Exp $
+# $NetBSD: Makefile,v 1.38 2002/09/23 13:41:15 markd Exp $
 
 DISTNAME=		R-1.5.1
 CATEGORIES=		math
@@ -92,7 +92,7 @@ post-install:
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 	( cd ${PREFIX};							\
 	  for dir in ${INSTALL_DIRS}; do				\
-		${FIND} $${dir#${PREFIX}/} \( -type f -or -type l \) -print; \
+		${FIND} $${dir#${PREFIX}/} \( -type f -o -type l \) -print; \
 	  done;								\
 	) | ${GREP} -v "lib/R/doc/html/packages.html" |			\
 	${GREP} -v "lib/R/doc/html/search/index.txt" | 			\
