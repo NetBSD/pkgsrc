@@ -1,0 +1,18 @@
+cscope is an interactive, screen-oriented tool that allows the user to
+browse through C source files for specified elements of code.
+
+By default, cscope examines the C (.c and .h), lex (.l), and yacc (.y)
+source files in the current directory. cscope may also be invoked for
+source files named on the command line. In either case, cscope
+searches the standard directories for #include files that it does not
+find in the current directory. cscope uses a symbol cross-reference,
+cscope.out by default, to locate functions, function calls, macros,
+variables, and preprocessor symbols in the files.
+
+cscope builds the symbol cross-reference the first time it is used on
+the source files for the program being browsed. On a subsequent
+invocation, cscope rebuilds the cross-reference only if a source file
+has changed or the list of source files is different. When the
+cross-reference is rebuilt, the data for the unchanged files are
+copied from the old cross-reference, which makes rebuilding faster
+than the initial build.

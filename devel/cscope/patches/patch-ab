@@ -1,0 +1,37 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/04/20 07:03:55 itojun Exp $
+*** i386/Makefile.orig	Tue Apr 18 10:43:47 2000
+--- i386/Makefile	Thu Apr 20 15:52:18 2000
+***************
+*** 42,48 ****
+  
+  INS= install
+! INSDIR=/usr/local/bin
+! INSMANDIR=/usr/local/man/man1
+  MANPAGE=../doc/cscope.1
+  
+  OBJ = dir.o crossref.o scanner.o lookup.o command.o display.o find.o \
+--- 42,48 ----
+  
+  INS= install
+! INSDIR=${PREFIX}/bin
+! INSMANDIR=${PREFIX}/man/man1
+  MANPAGE=../doc/cscope.1
+  
+  OBJ = dir.o crossref.o scanner.o lookup.o command.o display.o find.o \
+***************
+*** 163,169 ****
+  
+  install: all
+  	$(INS) -s -m 755 $(PROGRAM) $(INSDIR)
+! 	$(INS) -m 755 $(MANPAGE) $(INSMANDIR)
+  
+  clean:
+  	rm -f *.o *.out lex.yy.c y.tab.? scanner.c egrep.c
+--- 163,169 ----
+  
+  install: all
+  	$(INS) -s -m 755 $(PROGRAM) $(INSDIR)
+! #	$(INS) -m 755 $(MANPAGE) $(INSMANDIR)
+  
+  clean:
+  	rm -f *.o *.out lex.yy.c y.tab.? scanner.c egrep.c
