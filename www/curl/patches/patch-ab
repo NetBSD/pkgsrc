@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.3 2002/08/25 21:52:05 jlam Exp $
+$NetBSD: patch-ab,v 1.4 2003/02/09 08:46:36 shell Exp $
 
---- lib/ftp.c.orig	Mon Apr 29 11:57:25 2002
-+++ lib/ftp.c	Fri Jul 19 04:22:35 2002
-@@ -1576,12 +1576,13 @@
+--- lib/ftp.c.orig	Sun Feb  9 16:35:53 2003
++++ lib/ftp.c
+@@ -1998,12 +1998,13 @@ CURLcode ftp_perform(struct connectdata 
  
  #ifdef HAVE_STRFTIME
-     if(data->set.get_filetime && data->info.filetime) {
+     if(data->set.get_filetime && (data->info.filetime>=0) ) {
 +      time_t filetime = data->info.filetime;
        struct tm *tm;
  #ifdef HAVE_LOCALTIME_R
