@@ -52,7 +52,7 @@
   	$(AR2) libjpeg.a
   
 ! libjpeg.so.7.0: @ANSI2KNR@  $(LIBOBJECTS:S/o$/so/g)
-! 	ld -Bshareable -o libjpeg.so.7.0 $(LIBOBJECTS:S/o$/so/g)
+! 	ld -x -Bshareable -Bforcearchive -o libjpeg.so.7.0 $(LIBOBJECTS:S/o$/so/g)
 ! 
 ! cjpeg: $(COBJECTS) libjpeg.so.7.0
 ! 	$(LN) $(LDFLAGS) -o cjpeg $(COBJECTS) -L. -ljpeg $(LDLIBS)
