@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1.1.1 2000/12/05 00:06:49 jtb Exp $
+$NetBSD: patch-ag,v 1.2 2001/05/10 23:43:26 jtb Exp $
 
 --- torture.c.orig	Mon Dec 12 20:01:07 1994
 +++ torture.c
@@ -6,9 +6,9 @@ $NetBSD: patch-ag,v 1.1.1.1 2000/12/05 00:06:49 jtb Exp $
  
  #include	<stdio.h>
 -#include	"matrix2.h"
-+#include	<meschach/matrix2.h>
++#include	"meschach/matrix2.h"
  #include	<math.h>
 -#include        "matlab.h"
-+#include        <meschach/matlab.h>
++#include        "meschach/matlab.h"
  
  #define	errmesg(mesg)	printf("Error: %s error: line %d\n",mesg,__LINE__)

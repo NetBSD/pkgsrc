@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/12/05 00:06:46 jtb Exp $
+$NetBSD: patch-ac,v 1.2 2001/05/10 23:43:26 jtb Exp $
 
 --- iotort.c.orig	Fri Jan 14 00:46:45 1994
 +++ iotort.c
@@ -6,6 +6,6 @@ $NetBSD: patch-ac,v 1.1.1.1 2000/12/05 00:06:46 jtb Exp $
  
 -#include "sparse.h"
 -#include "zmatrix.h"
-+#include <meschach/sparse.h>
-+#include <meschach/zmatrix.h>
++#include "meschach/sparse.h"
++#include "meschach/zmatrix.h"
  
