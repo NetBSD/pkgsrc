@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/13 07:51:34 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/10/13 08:19:54 jlam Exp $
 
 .if !defined(BLACKDOWN_JDK13_BUILDLINK2_MK)
 BLACKDOWN_JDK13_BUILDLINK2_MK=	# defined
@@ -7,6 +7,7 @@ BUILDLINK_PACKAGES+=			blackdown-jdk13
 BUILDLINK_PKGBASE.blackdown-jdk13?=	blackdown-jdk13
 BUILDLINK_DEPENDS.blackdown-jdk13?=	blackdown-jdk13-[0-9]*
 BUILDLINK_PKGSRCDIR.blackdown-jdk13?=	../../lang/blackdown-jdk13
+BUILDLINK_DEPMETHOD.blackdown-jdk13?=	build
 
 BUILDLINK_PREFIX.blackdown-jdk13=	${LOCALBASE}
 BUILDLINK_FILES_CMD.blackdown-jdk13= \
