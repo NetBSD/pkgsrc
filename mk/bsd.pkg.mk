@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.215 1999/02/14 21:15:12 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.216 1999/02/16 03:23:04 hubertf Exp $
 #
 # This file is in the public domain.
 #
@@ -1109,11 +1109,12 @@ _PORT_USE: .USE
 		exit 1;							\
 	fi
 .endif	# CONFLICTS
-	@if [ -d ${PKG_DBDIR}/${PKGNAME} ]; then \
-		${ECHO_MSG} "===>  ${PKGNAME} is already installed - perhaps an older version?"; \
-		${ECHO_MSG} "      If so, you may wish to \`\`${MAKE} deinstall'' and install"; \
+	@found="`${PKG_INFO} -e \"${PKGNAME:C/-[^-]*$/-*/}\" || ${TRUE}`"; \
+	if [ "$$found" != "" ]; then					\
+		${ECHO_MSG} "===>  $$found is already installed - perhaps an older version?"; \
+		${ECHO_MSG} "      If so, you may wish to \`\`pkg_delete $$found'' and install"; \
 		${ECHO_MSG} "      this port again by \`\`${MAKE} reinstall'' to upgrade it properly."; \
-		${ECHO_MSG} "      If you really wish to overwrite the old port of ${PKGNAME}"; \
+		${ECHO_MSG} "      If you really wish to overwrite the old package of $$found"; \
 		${ECHO_MSG} "      without deleting it first, set the variable \"FORCE_PKG_REGISTER\""; \
 		${ECHO_MSG} "      in your environment or the \"${MAKE} install\" command line."; \
 		exit 1; \
