@@ -1,0 +1,23 @@
+--- Imakefile.orig	Thu Mar  5 04:19:56 1998
++++ Imakefile	Sun Jun 28 18:56:38 1998
+@@ -60,6 +60,20 @@
+     EXTRASYSLIBS = -ldl
+ #endif
+ 
++EXTINCSRC=	$(X11BASE)/include/X11/extensions
++SERVERSRC=	..
++XINCLUDESRC=	$(X11BASE)/include/X11
++
++TCLLIBDIR=	$(LOCALBASE)/lib
++TCLINCDIR=	$(LOCALBASE)/include/tcl8.0
++TCLLIBNAME=	tcl80
++TCLLIBRARY=	-L$(TCLLIBDIR) -l$(TCLLIBNAME)
++
++TKLIBDIR=	$(LOCALBASE)/lib
++TKINCDIR=	$(LOCALBASE)/include/tk8.0
++TKLIBNAME=	tk80
++TKLIBRARY=	-L$(TKLIBDIR) -l$(TKLIBNAME)
++
+ #if XF86SetupUsesStaticTk
+        TKLIBRARY = StaticLibrary($(TKLIBDIR),$(TKLIBNAME))
+ #endif
