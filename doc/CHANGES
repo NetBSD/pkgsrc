@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6501 2004/07/08 18:37:01 agc Exp $
+$NetBSD: CHANGES,v 1.6502 2004/07/08 18:38:11 erh Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3312,3 +3312,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added libetpan-0.32 [xtraeme 2004-07-08]
 	Added wimon-0.2 [xtraeme 2004-07-08]
 	Updated gramofile-1.6 to 1.6nb1 [agc 2004-07-08]
+	Added p5-Date-Business-1.2 [erh 2004-07-08]
