@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2002,v 1.5 2003/11/30 14:12:50 taca Exp $
+$NetBSD: CHANGES-2002,v 1.6 2005/02/26 15:40:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3414,7 +3414,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated bonobo-activation to 2.1.0 [rh 2002-10-27]
 	Updated sylpheed-claws to 0.8.5 [grant 2002-10-27]
 	Added cyrus-sasl-2.1.9 [chris 2002-10-27]
-	Added cyrus-imapd-2.1.9 [chris 2002-10-27]
+	Added cyrus-imapd21-2.1.9 [chris 2002-10-27]
 	Updated bidwatcher to 1.3.6 [tron 2002-10-27]
 	Updated qt3-libs to 3.0.6 [skrll 2002-10-28]
 	Updated qt3-docs to 3.0.6 [skrll 2002-10-28]
