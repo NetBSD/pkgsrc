@@ -1,19 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2004/08/09 10:49:00 kristerw Exp $
+$NetBSD: patch-ab,v 1.9 2004/08/17 09:54:30 drochner Exp $
 
---- pngtest.c.orig	Sun Aug  8 04:42:44 2004
-+++ pngtest.c	Mon Aug  9 12:44:34 2004
-@@ -511,8 +511,9 @@
-       buffer and once to get a new free list entry. */
-    {
-       /* Disable malloc_fn and free_fn */
-+      memory_infop pinfo;
-       png_set_mem_fn(png_ptr, NULL, NULL, NULL);
--      memory_infop pinfo = (memory_infop)png_malloc(png_ptr,
-+      pinfo = (memory_infop)png_malloc(png_ptr,
-          (png_uint_32)png_sizeof (*pinfo));
-       pinfo->size = size;
-       current_allocation += size;
-@@ -579,7 +580,7 @@
+--- pngtest.c.orig	2004-08-17 11:24:59.000000000 +0200
++++ pngtest.c
+@@ -578,7 +578,7 @@ png_debug_free(png_structp png_ptr, png_
           }
           if (pinfo->next == NULL)
           {
@@ -22,7 +11,7 @@ $NetBSD: patch-ab,v 1.8 2004/08/09 10:49:00 kristerw Exp $
              break;
           }
           ppinfo = &pinfo->next;
-@@ -1438,8 +1439,8 @@
+@@ -1435,8 +1435,8 @@ main(int argc, char *argv[])
                 current_allocation);
              while (pinfo != NULL)
              {
@@ -33,14 +22,14 @@ $NetBSD: patch-ab,v 1.8 2004/08/09 10:49:00 kristerw Exp $
                 pinfo = pinfo->next;
              }
           }
-@@ -1513,8 +1514,8 @@
+@@ -1510,8 +1510,8 @@ main(int argc, char *argv[])
                  current_allocation);
               while (pinfo != NULL)
               {
 -                fprintf(STDERR," %lu bytes at %x\n",
 -                   pinfo->size, (unsigned int)pinfo->pointer);
-+                fprintf(STDERR," %lu bytes at %p\n", pinfo->size,
-+		  pinfo->pointer);
++                fprintf(STDERR," %lu bytes at %p\n",
++                   pinfo->size, pinfo->pointer);
                  pinfo = pinfo->next;
               }
            }
