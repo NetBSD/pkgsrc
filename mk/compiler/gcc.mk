@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.40 2004/02/06 04:38:10 jlam Exp $
+# $NetBSD: gcc.mk,v 1.41 2004/02/06 18:45:03 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	one
@@ -28,7 +28,7 @@ _CC:=	${_dir_}/${CC:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
 .      endif
 .    endfor
 .    if !empty(_CC:M/*)
-MAKEFLAGS+=	_CC="${_CC}"
+MAKEFLAGS+=	_CC=${_CC:Q}
 .    endif
 .  endif
 
@@ -196,7 +196,7 @@ _NEED_NEWER_GCC!=	\
 	else								\
 		${ECHO} "YES";						\
 	fi
-MAKEFLAGS+=	_NEED_NEWER_GCC="${_NEED_NEWER_GCC}"
+MAKEFLAGS+=	_NEED_NEWER_GCC=${_NEED_NEWER_GCC}
 .  endif
 .  if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && \
     !empty(_NEED_NEWER_GCC:M[yY][eE][sS])
