@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2001/08/28 10:42:56 ad Exp $
+# $NetBSD: Makefile,v 1.86 2001/09/15 14:21:59 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -23,6 +23,7 @@ SUBDIR+=	gnupg
 SUBDIR+=	gpa
 SUBDIR+=	isakmpd
 SUBDIR+=	john
+SUBDIR+=	keychain
 SUBDIR+=	kth-krb4
 SUBDIR+=	libbf
 SUBDIR+=	libcrack
