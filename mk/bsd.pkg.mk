@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1010.2.1 2002/07/22 16:25:50 agc Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1010.2.2 2002/07/22 18:01:21 agc Exp $
 #
 # This file is in the public domain.
 #
@@ -662,7 +662,7 @@ uptodate-xpkgwedge: uptodate-digest
 
 # Latest version of pkgtools required for this file.
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-PKGTOOLS_REQD=		20020402
+PKGTOOLS_REQD=		20020722
 .else
 PKGTOOLS_REQD=		20020402
 .endif
