@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 1998/01/29 11:52:10 bouyer Exp $
+# $NetBSD: Makefile,v 1.6 1998/02/08 23:42:51 hubertf Exp $
 # FreeBSD Id: Makefile,v 1.87 1997/10/15 04:58:31 max Exp
 #
 
@@ -45,7 +45,7 @@
 #    SUBDIR += xbill
 #    SUBDIR += xbl
 #    SUBDIR += xblackjack
-#    SUBDIR += xblast
+    SUBDIR += xblast
 #    SUBDIR += xboard
 #    SUBDIR += xboing
 #    SUBDIR += xchomp
