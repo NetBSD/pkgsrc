@@ -1,4 +1,6 @@
-Midnight Commander is a visual shell much like a file manager, only with way
-more features.  It is text mode, but also includes mouse support if you are
-running GPM.  Its coolest feature is the ability to ftp, view tar, zip
-files, and poke into RPMs for specific files.
+GNU Midnight Commander is a user-friendly yet powerful file manager
+and visual shell, useful to novice and guru alike. It provides a
+clear, user-friendly, and somewhat protected interface to a Unix
+system while making many frequent file operations more efficient and
+preserving the full power of the command prompt. You will wonder how
+you could ever live without it.
