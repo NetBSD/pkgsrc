@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6862 2004/08/13 08:16:00 cube Exp $
+$NetBSD: CHANGES,v 1.6863 2004/08/13 10:27:46 agc Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3810,3 +3810,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libelf to 0.8.5nb1 [cube 2004-08-13]
 	Updated lftp to 3.0.7 [salo 2004-08-13]
 	Updated ion to 20040729 [cube 2004-08-13]
+	Added hydan-0.13 [agc 2004-08-13]
