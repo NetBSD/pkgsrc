@@ -1,11 +1,11 @@
-# $NetBSD: buildlink2.mk,v 1.1 2002/10/21 14:42:13 wiz Exp $
+# $NetBSD: buildlink2.mk,v 1.2 2002/12/01 21:57:06 gson Exp $
 #
 
 .if !defined(TCL_SNACK_BUILDLINK2_MK)
 TCL_SNACK_BUILDLINK2_MK=	# defined
 
 BUILDLINK_PACKAGES+=			tcl-snack
-BUILDLINK_DEPENDS.tcl-snack?=		tcl-snack>=2.2a2
+BUILDLINK_DEPENDS.tcl-snack?=		tcl-snack>=2.2
 BUILDLINK_PKGSRCDIR.tcl-snack?=		../../audio/tcl-snack
 
 EVAL_PREFIX+=	BUILDLINK_PREFIX.tcl-snack=tcl-snack
