@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5000 2004/02/26 04:02:48 xtraeme Exp $
+$NetBSD: CHANGES,v 1.5001 2004/02/26 05:58:23 epg Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1049,3 +1049,5 @@ Changes to the packages collection and infrastructure in 2004:
 	Added mlview-0.6.2 [jmmv 2004-02-25]
 	Updated cvsps to 2.0rc1 [schmonz 2004-02-26]
 	Added mklivecd-0.1 [xtraeme 2004-02-26]
+	Added clearsilver-0.9.7 [epg 2004-02-26]
+	Added trac-0.5.1 [epg 2004-02-26]
