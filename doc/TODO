@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2969 2005/01/27 16:23:34 adam Exp $
+$NetBSD: TODO,v 1.2970 2005/01/27 17:48:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -953,6 +953,7 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
+	o qt3-3.3.4
 	o quagga-0.97.4
 	o quake2forge-0.3
 	o qvplay-0.95
