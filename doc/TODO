@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1983 2004/07/31 11:45:19 wiz Exp $
+$NetBSD: TODO,v 1.1984 2004/07/31 14:22:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -166,6 +166,7 @@ Suggested package updates
 	o Xbae-4.50.0
 	o abiword-2.0.9
 	o ald-0.1.6 [pkg/26431]
+	o allegro-4.1.15
 	o anjuta-1.2.2
 	o apache-ant-1.6.2
 	o ap-jk-5.0.25
@@ -228,8 +229,9 @@ Suggested package updates
 	o fsviewer-0.2.5
 	o gauche-0.8
 	o gcvs-1.0
+	o gdb-6.2
 	o generator-0.35
-	o getmail-4.0.1 [schmonz]
+	o getmail-4.0.2 [schmonz]
 	o gettext-0.14.1
 	o ghostscript-8.00 (apfl)
 	o ghostscript-8.01 (gnu)
@@ -307,6 +309,7 @@ Suggested package updates
 	o mozilla-stable-1.4.2
 	o mrproject-0.9.1
 	o msmtp-1.2.0 [pkg/26425]
+	o msmtp-1.2.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.2.2
 	o musicpd-0.11.4
@@ -323,7 +326,7 @@ Suggested package updates
 	o nsd-2.1.1
 	o nslint-2.1a3
 	o nulib2-2.0.2
-	o nut-9.18
+	o nut-9.19
 	o nxtvepg-2.7.0
 	o ocaml-3.07pl2
 	o onyx-5.1.1
