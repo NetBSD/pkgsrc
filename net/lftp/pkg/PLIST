@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2000/02/18 20:01:34 wiz Exp $
+bin/lftp
+bin/ftpget
+bin/lftpget
+man/man1/lftp.1
+man/man1/ftpget.1
+share/locale/de/LC_MESSAGES/lftp.mo
+share/locale/es/LC_MESSAGES/lftp.mo
+share/locale/ko/LC_MESSAGES/lftp.mo
+share/locale/pl/LC_MESSAGES/lftp.mo
+share/locale/ru/LC_MESSAGES/lftp.mo
+share/locale/it/LC_MESSAGES/lftp.mo
+share/locale/pt_BR/LC_MESSAGES/lftp.mo
+share/locale/zh_CN/LC_MESSAGES/lftp.mo
+share/lftp/import-ncftp
+share/lftp/import-netscape
+@dirrm share/lftp
