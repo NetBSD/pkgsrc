@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2004/07/22 01:04:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2004/07/26 19:16:53 schmonz Exp $
 # FreeBSD Id: ports/sysutils/ucspi-tcp/Makefile,v 1.12 2000/07/10 01:41:24 steve Exp
 
 DISTNAME=	ucspi-tcp-0.88
@@ -17,6 +17,8 @@ RESTRICTED=	"modified source and binaries may not be distributed"
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 USE_BUILDLINK3=	yes
 
 ALL_TARGET=	it
@@ -25,6 +27,8 @@ INSTALL_TARGET=	setup check
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=	3.0
 .endif
+
+INSTALLATION_DIRS=	bin man man/man1
 
 do-configure:
 	${ECHO} ${CC} ${CFLAGS} > ${WRKSRC}/conf-cc
