@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 1998/08/07 11:11:04 agc Exp $
+$NetBSD: patch-ac,v 1.3 1999/02/17 19:10:30 tls Exp $
 
 *** vncserver.orig	Tue Jul 28 16:16:07 1998
 --- vncserver	Tue Jul 28 16:17:02 1998
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.2 1998/08/07 11:11:04 agc Exp $
   
   # Add font path and color database stuff here, e.g.:
   #
-! $cmd .= " -fp /usr/X11R6/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
+! $cmd .= " -fp /usr/X11R6/lib/X11/fonts/misc/,/usr/X11R6/lib/fonts/75dpi/";
 ! $cmd .= " -co /usr/X11R6/lib/X11/rgb";
   #
   
