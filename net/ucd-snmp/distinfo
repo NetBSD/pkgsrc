@@ -1,13 +1,10 @@
-$NetBSD: distinfo,v 1.2 2001/04/21 11:23:37 wiz Exp $
+$NetBSD: distinfo,v 1.3 2002/02/13 16:41:40 tron Exp $
 
-SHA1 (ucd-snmp-4.1.2.tar.gz) = c64f484e7e39fc5dcd849cd04e49c0a8a347b909
-Size (ucd-snmp-4.1.2.tar.gz) = 1190965 bytes
-SHA1 (patch-aa) = 42e29fb9d367e2d6fa4dc732029318cdeaab2f49
-SHA1 (patch-ab) = 8a84b33f725d63747c82f6ac983a72cea5fde8f2
-SHA1 (patch-ac) = 15553340d44a165b204bf4173e92544a807a99a6
-SHA1 (patch-ad) = 9783298ad1f0f5f9dd26b70e0f02489b6a528111
-SHA1 (patch-ae) = e42a4771cb1b657a8d991b3e55e947ba035cbeb1
-SHA1 (patch-af) = f852a27fa97b0eb2df2c1a4cd4b543dbfa338056
-SHA1 (patch-ag) = 0fb036f17a32862939ec9bd02d1a264aed6fd198
-SHA1 (patch-ah) = 6e93ab2ca5bce53fa72c2393de8357da0670a9b1
-SHA1 (patch-ai) = c82a49f494c4f119a15e58e9848db1589edadcbf
+SHA1 (ucd-snmp-4.2.3.tar.gz) = ee4f9543dcfef129313db0a2d2c49230a1ba1c4f
+Size (ucd-snmp-4.2.3.tar.gz) = 1658006 bytes
+SHA1 (patch-aa) = 43a0b1f1b0deb2403b8950684e759d40819fce2f
+SHA1 (patch-ab) = a4bd7337b6c57791d5d0ab936d0fac6c2b1bd497
+SHA1 (patch-ac) = 7bfecf250fa933f498308c170487ff401031fe3a
+SHA1 (patch-af) = eb2fd9cfd1830e9a931bcd712a83938bc04dca42
+SHA1 (patch-ag) = 4e51af5d595d26e4b641757ad27737af76286893
+SHA1 (patch-ah) = 31c8ac63b9e21cb198481d4a299faf0cf9427788
