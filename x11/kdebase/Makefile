@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 1999/06/04 00:05:50 tron Exp $
+# $NetBSD: Makefile,v 1.37 1999/06/04 00:07:04 tron Exp $
 # FreeBSD Id: Makefile,v 1.6 1997/11/27 00:35:27 se Exp
 #
 
@@ -30,7 +30,6 @@ CONFIGURE_ENV=	KDEDIR=${PREFIX} \
 PLIST_SRC=	${WRKDIR}/PLIST
 PLIST_DIRS=	share/kde/applnk share/kde/apps/kappfinder \
 		share/kde/apps/kdisknav share/kde/icons share/kde/mimelnk
-
 
 KDE_DIRS=	share/doc/kde/HTML/cs share/doc/kde/HTML/da \
 		share/doc/kde/HTML/de share/doc/kde/HTML/el \
