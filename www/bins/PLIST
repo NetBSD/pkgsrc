@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/09/25 00:09:32 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2002/10/26 19:38:12 dmcmahill Exp $
 bin/bins
 bin/bins_edit
 man/man1/bins.1
@@ -44,11 +44,15 @@ share/examples/bins/templates.joi/path.html
 share/examples/bins/templates.joi/subalbum.html
 share/examples/bins/templates.joi/subjectpath.html
 share/examples/bins/templates.joi/thumbnail.html
+share/examples/bins/templates.joi/thumbnav.html
+share/examples/bins/templates.joi/thumbnavrow.html
 share/examples/bins/templates.joi/tree.html
+share/examples/bins/templates.joi/static/actthumb.png
 share/examples/bins/templates.joi/static/albumtree.png
 share/examples/bins/templates.joi/static/back.png
 share/examples/bins/templates.joi/static/contact.png
 share/examples/bins/templates.joi/static/exit.png
+share/examples/bins/templates.joi/static/home.png
 share/examples/bins/templates.joi/static/imagelist.png
 share/examples/bins/templates.joi/static/info.png
 share/examples/bins/templates.joi/static/large.png
@@ -57,7 +61,9 @@ share/examples/bins/templates.joi/static/medium.png
 share/examples/bins/templates.joi/static/mediumActive.png
 share/examples/bins/templates.joi/static/meshman.css
 share/examples/bins/templates.joi/static/next.png
+share/examples/bins/templates.joi/static/nextInactive.png
 share/examples/bins/templates.joi/static/prev.png
+share/examples/bins/templates.joi/static/prevInactive.png
 share/examples/bins/templates.joi/static/preview.js
 share/examples/bins/templates.joi/static/small.png
 share/examples/bins/templates.joi/static/smallActive.png
