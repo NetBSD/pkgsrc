@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2004/04/17 20:03:57 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2004/06/28 19:36:31 jmmv Exp $
 
-DISTNAME=	gnome-devel-2.6.0
-PKGREVISION=	1
+DISTNAME=	gnome-devel-2.6.2
 CATEGORIES=	meta-pkgs devel gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
