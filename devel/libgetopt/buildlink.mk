@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.4 2001/05/25 04:49:15 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.5 2001/05/26 05:44:09 jlam Exp $
 #
 # This Makefile fragment is included by packages that use getopt_long().
 #
@@ -15,6 +15,9 @@
 #     search path.
 # (5) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
+
+.if !defined(GETOPT_BUILDLINK_MK)
+GETOPT_BUILDLINK_MK=	# defined
 
 .if exists(/usr/include/getopt.h)
 GETOPT_H=		/usr/include/getopt.h
@@ -60,3 +63,5 @@ link-getopt-libs:
 		fi;							\
 	done
 .endif
+
+.endif	# GETOPT_BUILDLINK_MK

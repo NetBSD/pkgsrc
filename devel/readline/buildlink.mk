@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.3 2001/05/25 04:49:16 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.4 2001/05/26 05:44:09 jlam Exp $
 #
 # This Makefile fragment is included by packages that use readline().
 #
@@ -21,6 +21,9 @@
 #
 # NOTE:	You may need to do some more work to get libedit recognized over
 #	libreadline, especially by GNU configure scripts.
+
+.if !defined(READLINE_BUILDLINK_MK)
+READLINE_BUILDLINK_MK=	# defined
 
 READLINE_REQD?=		2.2
 
@@ -112,3 +115,5 @@ link-readline-libs:
 			${LN} -sf $${lib} $${dest};			\
 		fi;							\
 	done
+
+.endif	# READLINE_BUILDLINK_MK

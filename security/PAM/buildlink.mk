@@ -1,4 +1,4 @@
-# $NetBSD: buildlink.mk,v 1.1 2001/05/24 16:41:08 jlam Exp $
+# $NetBSD: buildlink.mk,v 1.2 2001/05/26 05:44:10 jlam Exp $
 #
 # This Makefile fragment is included by packages that use libpam.
 #
@@ -12,6 +12,9 @@
 #     search path, and
 # (6) Add ${BUILDLINK_LIBDIR} to the front of the linker's library search
 #     path.
+
+.if !defined(PAM_BUILDLINK_MK)
+PAM_BUILDLINK_MK=	# defined
 
 PAM_REQD?=		0.72
 
@@ -57,3 +60,5 @@ link-pam-libs:
 			${LN} -sf $${lib} $${dest};			\
 		fi;							\
 	done
+
+.endif	# PAM_BUILDLINK_MK
