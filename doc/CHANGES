@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1715 2003/03/22 01:34:52 wiz Exp $
+$NetBSD: CHANGES,v 1.1716 2003/03/22 01:46:38 salo Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1229,3 +1229,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated suse_base to 7.3nb3 [dillo 2003-03-22]
 	Updated suse64_base to 6.4nb8 [dillo 2003-03-22]
 	Updated xchat2 to 2.0.1 [wiz 2003-03-22]
+	Updated sylpheed-claws to 0.8.11 [salo 2003-03-22]
