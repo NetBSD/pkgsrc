@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/04/12 21:26:21 zuntum Exp $
+$NetBSD: patch-aa,v 1.2 2001/04/18 15:57:26 zuntum Exp $
 
 --- lib/aviplay/audio.cpp.orig	Fri Dec 15 07:53:05 2000
 +++ lib/aviplay/audio.cpp
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/12 21:26:21 zuntum Exp $
  	try
  	{
 -    	    audio_fd=open("/dev/dsp",O_RDWR|O_NDELAY);
-+    	    audio_fd=open("/dev/audio",O_RDWR|O_NDELAY);
++    	    audio_fd=open("/dev/sound",O_RDWR|O_NDELAY);
  	    if(audio_fd<=0)
    		throw FATAL("Can't open audio device");
  	    if(audio_fd>0)
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/04/12 21:26:21 zuntum Exp $
  	{
  	    if(audio_fd>0)::close(audio_fd);
 -	    audio_fd=open("/dev/dsp", O_RDWR);
-+	    audio_fd=open("/dev/audio", O_RDWR);
++	    audio_fd=open("/dev/sound", O_RDWR);
  	}
          if(audio_fd<=0)
       	    throw FATAL("Can't open audio device");
