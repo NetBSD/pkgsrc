@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2524 2003/06/17 15:32:15 salo Exp $
+$NetBSD: CHANGES,v 1.2525 2003/06/17 17:41:10 agc Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -2479,3 +2479,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated cpuflags to 0.51 [abs 2003-06-17]
 	Updated nmap to 3.28 [salo 2003-06-17]
 	Updated nmapfe to 0.95nb6 [salo 2003-06-17]
+	Added tet3-3.3h [agc 2003-06-17]
