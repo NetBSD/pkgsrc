@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8196 2004/12/01 11:24:23 markd Exp $
+$NetBSD: CHANGES,v 1.8197 2004/12/01 11:49:28 markd Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5692,3 +5692,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated mathomatic to 11.5c [minskim 2004-12-01]
 	Updated electric to 7.00 [dmcmahill 2004-12-01]
 	Updated mimedefang to 2.49 [markd 2004-12-01]
+	Updated xmms-arts to 0.7.1 [markd 2004-12-01]
