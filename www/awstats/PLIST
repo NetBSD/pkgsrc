@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/12 23:53:50 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2004/02/11 12:18:10 grant Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_exportlib.pl
 awstats/bin/awstats_updateall.pl
@@ -440,7 +440,7 @@ awstats/icon/os/linux.png
 awstats/icon/os/mac.png
 awstats/icon/os/macintosh.png
 awstats/icon/os/macosx.png
-awstats/icon/os/${LOWER_OPSYS}.png
+awstats/icon/os/netbsd.png
 awstats/icon/os/netware.png
 awstats/icon/os/next.png
 awstats/icon/os/openbsd.png
