@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2004/06/10 21:11:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2004/06/10 21:16:35 jmmv Exp $
 #
 
 DISTNAME=	Crypt-SSLeay-0.51
@@ -16,9 +16,11 @@ DEPENDS+=	p5-libwww>=5.48:../../www/p5-libwww
 USE_BUILDLINK3=		YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Crypt/SSLeay/.packlist
 
-post-patch:
-	@cd ${WRKSRC} && ${SED} "s|%%SSLBASE%%|${BUILDLINK_PREFIX.openssl}|" Makefile.PL \
-		> Makefile.PL.tmp && ${MV} Makefile.PL.tmp Makefile.PL
+SUBST_CLASSES+=		openssl
+SUBST_STAGE.openssl=	pre-configure
+SUBST_MESSAGE.openssl=	"Fixing path to OpenSSL."
+SUBST_FILES.openssl=	Makefile.PL
+SUBST_SED.openssl=	-e 's|%%SSLBASE%%|${BUILDLINK_PREFIX.openssl}|g'
 
 .include "../../lang/perl5/module.mk"
 .include "../../security/openssl/buildlink3.mk"
