@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2003/01/01 19:06:01 kim Exp $
+# $NetBSD: Makefile,v 1.11 2003/06/10 06:29:06 wiz Exp $
 
-DISTNAME=	abcde-2.0.3
-PKGREVISION=	3
+DISTNAME=	abcde-2.1.4
 CATEGORIES=	audio
-MASTER_SITES=	http://frantica.lly.org/~rcw/abcde/
+MASTER_SITES=	http://www.hispalinux.es/~data/files/
 DISTFILES=	${DISTNAME:S/-/_/}.orig.tar.gz
 
 MAINTAINER=	lukem@netbsd.org
@@ -24,7 +23,7 @@ MESSAGE_SUBST+=	EGDIR=${EGDIR}
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 pre-configure:
-	@cd ${WRKSRC} && for f in abcde abcde.1; do			\
+	@cd ${WRKSRC} && for f in abcde; do				\
 		${SED} "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},"		\
 			$$f > $$f.tmp &&				\
 		${MV} $$f.tmp $$f;					\
