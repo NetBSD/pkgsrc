@@ -1,0 +1,4 @@
+$NetBSD: distinfo,v 1.1.1.1 2003/03/07 16:17:49 bouyer Exp $
+
+SHA1 (fbsql.c) = 58e0116bd09b30aaf028f33c7a3192e2b0047b67
+Size (fbsql.c) = 19615 bytes
