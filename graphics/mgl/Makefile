@@ -1,22 +1,19 @@
-# $NetBSD: Makefile,v 1.6 2001/02/25 04:17:51 hubertf Exp $
+# $NetBSD: Makefile,v 1.7 2001/03/20 13:54:31 wiz Exp $
+#
 
-DISTNAME=       mgl2-alpha-019
-PKGNAME=        mgl-0.1.9a
+DISTNAME=       mgl2-alpha-020
+PKGNAME=        mgl-0.2.0a
 CATEGORIES=     graphics
 MASTER_SITES=   http://at.sakura.ne.jp/~suz/arc/
 
-PATCH_SITES=	http://at.sakura.ne.jp/~suz/arc/
-PATCHFILES=	mgl2-alpha-019-for-netbsd15.patch.gz
-PATCH_DIST_STRIP=	-p1
-
 MAINTAINER=     fk200329@fsinet.or.jp
 HOMEPAGE=	http://www.netbsd.org/Ports/hpcmips/mgl2.html
-COMMENT=	Graphics library for NEC Mobilegear/PocketBSD,NetBSD/hpcmips
+COMMENT=	Graphics library for NEC Mobilegear/PocketBSD, NetBSD/hpcmips
 
-DEPENDS= 	jpeg-6b:../../graphics/jpeg \
-		png>=1.0.3:../../graphics/png \
-		libungif>=4.1.0:../../graphics/libungif \
-		mglfonts>=0.1:../../fonts/mglfonts
+DEPENDS+= 	jpeg-6b:../../graphics/jpeg
+DEPENDS+=	png>=1.0.3:../../graphics/png
+DEPENDS+=	libungif>=4.1.0:../../graphics/libungif
+DEPENDS+=	mglfonts>=0.1:../../fonts/mglfonts
 
 USE_GMAKE= yes
 
@@ -31,6 +28,7 @@ MGL2MEMOS=	README-1st.doc TODO.txt bench.txt draw_engine.doc emsvr.doc \
 BINDOCS=	README.doc imsoft.doc
 MGTERMDOCS=	bugs.doc mgterm.doc
 MILDOCS=	mil.doc
+NINEDOCS=	README.txt CHANGES.doc
 MGLFONTUTILS=	mgl_fontcreate.c
 MGLUTILS=	kill_mgl.sh mglcons.sh set_mgl.sh
 
@@ -78,6 +76,7 @@ post-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/memo
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/mgterm
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/mil
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/nine
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/bin
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/doc
 .for i in ${MGLDOCS}
@@ -97,6 +96,9 @@ post-install:
 .endfor
 .for i in ${MILDOCS}
 	@${INSTALL_DATA} ${WRKSRC}/mil/${i} ${PREFIX}/share/doc/mgl2/mil/
+.endfor
+.for i in ${NINEDOCS}
+	@${INSTALL_DATA} ${WRKSRC}/nine/${i} ${PREFIX}/share/doc/mgl2/nine/
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
