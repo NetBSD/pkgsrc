@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 1999/09/08 07:54:36 rh Exp $
+# $NetBSD: Makefile,v 1.9 1999/09/08 12:46:55 rh Exp $
 #
 
 DISTNAME=	gcombust-0.1.21
 CATEGORIES=	x11 sysutils
 MASTER_SITES=	http://www.abo.fi/~jmunsin/gcombust/
 
-MAINTAINER=	hubertf@netbsd.org
+MAINTAINER=	rh@netbsd.org
 HOMEPAGE=	http://www.abo.fi/~jmunsin/gcombust/
 
 DEPENDS+=	mkhybrid-1.12b5.2:../mkhybrid
