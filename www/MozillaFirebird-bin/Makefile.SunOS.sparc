@@ -1,6 +1,0 @@
-# $NetBSD: Makefile.SunOS.sparc,v 1.4 2004/01/04 05:01:03 grant Exp $
-
-MOZ_VER=	0.6.1
-DISTNAME=	MozillaFirebird-${MOZ_VER}-sparc-sun-solaris2.7
-
-MOZ_PLATFORM=	solaris
