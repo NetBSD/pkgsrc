@@ -1,0 +1,57 @@
+US3   is a diphone database  for  american english, consisting of 2065
+diphones, male voice.
+
+The following  phoneme  symbols are  assumed in the us3 diphone  sets. It
+slightly different than the SAMPA alphabet since  american english is not
+british english.
+
+SYMBOL  PRONOUNCED LIKE IN
+p     drop proxy 
+t     plot tromp
+4     later (flapped allophone of t)
+k     rock  crop
+
+b     cob box
+d     nod dot
+g     jog gospel
+
+f     prof fox
+s     boss sonic
+S     wash shop
+tS    notch chop
+T     cloth thomp
+
+v     salve volley
+z     was zombie
+Z     garage jacques
+dZ    dodge jog
+D     clothe thy
+
+m     palm mambo
+n     john novel
+N     bong
+l     doll lockwood
+l=    litle
+r     star roxanne
+j     yacht
+w     show womble
+h     harm
+r=    her urgent
+
+i     even
+A     arthur
+u     oodles
+I     illness
+E     else
+{     apple
+V     nut
+U     good
+@     about
+EI    able
+AI    island
+OI    oyster
+@U    over
+aU    out
+O     all
+
+-Julian Assange <proff@iq.org>
