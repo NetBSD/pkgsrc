@@ -1,8 +1,7 @@
-# $NetBSD: Makefile.common,v 1.29 2004/05/14 08:46:05 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.30 2004/06/24 09:17:34 cjep Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
-PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=w3m/}
 
@@ -15,7 +14,7 @@ USE_BUILDLINK3=	yes
 GNU_CONFIGURE=	# defined
 USE_GNU_TOOLS+=	make	# Needed for some combinations of options...
 
-W3M_VERS=	0.5
+W3M_VERS=	0.5.1
 
 # For w3mman, xface2xpm, cgi scripts.
 USE_PERL5=	run
@@ -64,6 +63,7 @@ CONFIGURE_ARGS+=	--enable-keymap=w3m
 
 _W3M_USE_IMAGE?=	NO
 .if ${_W3M_USE_IMAGE} == YES
+USE_X11=		YES
 CONFIGURE_ARGS+=	--enable-image=x11
 .else
 CONFIGURE_ARGS+=	--disable-image
