@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1032 2002/08/22 08:21:26 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1033 2002/08/23 11:26:07 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -894,8 +894,11 @@ MASTER_SITE_GNOME+=	\
 
 MASTER_SITE_SOURCEFORGE+=	\
 	http://belnet.dl.sourceforge.net/sourceforge/ \
-	http://unc.dl.sourceforge.net/sourceforge/ \
+	http://cesnet.dl.sourceforge.net/sourceforge/ \
 	http://telia.dl.sourceforge.net/sourceforge/ \
+	http://twtelecom.dl.sourceforge.net/sourceforge/ \
+	http://umn.dl.sourceforge.net/sourceforge/ \
+	http://unc.dl.sourceforge.net/sourceforge/ \
 	ftp://ftp3.sourceforge.net/pub/sourceforge/ \
 	ftp://ftp.tuwien.ac.at/opsys/linux/sourceforge/
 
