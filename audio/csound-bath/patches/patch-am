@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1.1.1 2001/04/27 17:17:18 wiz Exp $
+
+--- french-strings.orig	Thu Apr  5 14:28:59 2001
++++ french-strings	Thu Apr  5 14:29:08 2001
+@@ -174,7 +174,7 @@
+ 174,"...fait !\n"
+ *175,"/dev/audio : cannot do AUDIO_GETINFO"
+ *176,"/dev/audio : couldn't write all bytes requested\n"
+-*177,"/dev/dsp : couldn't write all bytes requested\n"
++*177,"/dev/audio : couldn't write all bytes requested\n"
+ *178,"100th system exclusive $%x, length %d\n"
+ 179,"6-channel"
+ 180,"L'AIFF ne supporte pas le codage de %s"

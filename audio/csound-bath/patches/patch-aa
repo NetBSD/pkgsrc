@@ -1,0 +1,83 @@
+$NetBSD: patch-aa,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
+
+--- Makefile.orig	Sun Mar 25 18:53:17 2001
++++ Makefile
+@@ -1,11 +1,11 @@
+ #								Csound Makefile
+ # edit the following definitions according to need:
+ 
+-INCLUDE	= /usr/local/include
+-LIB	= /usr/local/lib
+-DEST	= /usr/local/bin
+-SHARE	= /usr/share/csound
+-MAN	= /usr/local/man
++INCLUDE	= $(PREFIX)/include
++LIB	= $(PREFIX)/lib
++DEST	= $(PREFIX)/bin
++SHARE	= $(PREFIX)/share/csound
++MAN	= $(PREFIX)/man
+ MAN1	= $(MAN)/man1
+ CAT1	= $(MAN)/cat1
+ # these directories must exist for stages beyond 'make csound'
+@@ -24,7 +24,7 @@
+ #	.c.o:
+ #		$(CC) $(CFLAGS) -c $*.c -o $@
+ 
+-DEFINES = -DWINDOWS -DRTAUDIO -DSFIRCAM -DSYS5 -DLINUX -DPIPES -DMACROS -DTCLTK
++DEFINES = -DRTAUDIO -DSFIRCAM -DSYS5 -DLINUX -DPIPES -DMACROS -DBSD -DPREFIX=\"$(PREFIX)\"
+ # choose any of -
+ #	-DSYS5	    invoke System 5 headers (e.g. 'string.h' for 'strings.h')
+ #	-DWINDOWS   include window system calls (X11, SGI, or FG graphics)
+@@ -52,7 +52,7 @@
+ # Be sure to include 'LINUXaudio.o' under 'AUDOBJ' below as well.
+ #                                  --  Jonathan Mohr  1995 Oct 17
+ 
+-CFLAGS = -O2 $(RPM_OPT_FLAGS) $(DEFINES)
++CFLAGS = $(RPM_OPT_FLAGS) $(DEFINES)
+ #	-O		Simple optimisation
+ #	-O2		to be more specific about the optimization level
+ #	-f		compile single-precision floats (4.3,VAX,DEC-RISC)
+@@ -73,7 +73,7 @@
+ #	-I/usr/openwin/include		Solaris openwin interface
+ #	-I/usr/demo/SOUND/include	Solaris sound interface
+ 
+-LIBS =	-L /usr/X11R6/lib -lX11 -lbsd -ltcl -ltk -lm 
++LIBS =	$(LDFLAGS) -lossaudio -lm 
+ #	-lefence
+ #	-lm		    		required
+ #	-lX11				for X window calls
+@@ -90,8 +90,8 @@
+ #	-L/usr/demo/SOUND/lib		on Solaris 2.4
+ #	-L/usr/X11R6/li			on LINUX
+ 
+-WINSRC = winX11.c
+-WINOBJ = winX11.o
++WINSRC =
++WINOBJ =
+ # ;if WINDOWS enabled in DEFINES, choose one of -
+ #	winX11.o	for X11 window graphics
+ #	winSGI.o	for SGI window graphics
+@@ -335,15 +335,15 @@
+ 		cd midifils; rm -f *.bak *~
+ 		cd cscofils; rm -f *.bak *~
+ 
+-CSLinux.bin.tgz: /usr/local/bin/csound /usr/local/bin/hetro \
+-	/usr/local/bin/lpanal /usr/local/bin/pvanal /usr/local/bin/scot \
+-	/usr/local/bin/scsort /usr/local/bin/extract /usr/local/bin/sndinfo \
+-	/usr/local/bin/scale /usr/local/bin/mixer /usr/local/bin/extractor \
+-	/usr/local/bin/envext /usr/local/bin/pvlook /usr/local/bin/sdif2ad \
+-	/usr/local/bin/dnoise /usr/local/bin/srconv /usr/local/lib/csound.txt
+-	(cd /usr/local/bin; tar cvzf ~/csound/CSLinux.bin.tgz csound \
++CSNetBSD.bin.tgz: $(PREFIX)/bin/csound $(PREFIX)/bin/hetro \
++	$(PREFIX)/bin/lpanal $(PREFIX)/bin/pvanal $(PREFIX)/bin/scot \
++	$(PREFIX)/bin/scsort $(PREFIX)/bin/extract $(PREFIX)/bin/sndinfo \
++	$(PREFIX)/bin/scale $(PREFIX)/bin/mixer $(PREFIX)/bin/extractor \
++	$(PREFIX)/bin/envext $(PREFIX)/bin/pvlook $(PREFIX)/bin/sdif2ad \
++	$(PREFIX)/bin/dnoise $(PREFIX)/bin/srconv $(PREFIX)/lib/csound.txt
++	(cd $(PREFIX)/bin; tar cvzf ~/csound/CSLinux.bin.tgz csound \
+ 	hetro lpanal pvanal scot scsort extract sndinfo scale mixer \
+-	extractor envext pvlook sdif2ad dnoise srconv -C /usr/local/lib csound.txt)
++	extractor envext pvlook sdif2ad dnoise srconv -C $(PREFIX)/lib csound.txt)
+ 
+ Csound.tar.gz:  all_files \
+ 	$(CSRCS) $(HDRS) \

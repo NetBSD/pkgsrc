@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2001/04/27 17:17:17 wiz Exp $
+
+--- getstring.c.orig	Sat May 13 08:52:27 2000
++++ getstring.c	Thu Apr  5 14:12:02 2001
+@@ -99,14 +99,14 @@
+       db = fopen(name, "rb");
+     }
+     if (db == NULL) {
+-      strcpy(name, "/usr/local/lib/csound.txt");
+-      db = fopen("/usr/local/lib/csound.txt", "rb");
++      sprintf(name, "%s/share/csound/csound.txt", PREFIX);
++      db = fopen(name, "rb");
+     }
+     if (db == NULL) {
+       fprintf(stderr, "failed to find Strings DataBase file.\n"
+               "Use the CSSTRNGS environment variable or you must put the \n"
+-              "file \"csound.txt\" in your local, SFDIR, SADIR, SSDIR or \n"
+-              "system directories for csound to work\n");
++              "file \"csound.txt\" in your %s/share/csound, SFDIR, SADIR, SSDIR or \n"
++              "system directories for csound to work\n", PREFIX);
+       exit(1);
+     }
+     err_printf("Using %s\n", name);
