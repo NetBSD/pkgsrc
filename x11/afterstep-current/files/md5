@@ -1,14 +1,4 @@
-$NetBSD: md5,v 1.5 1999/08/21 15:16:57 fredb Exp $
+$NetBSD: md5,v 1.6 1999/08/29 14:16:13 fredb Exp $
 
-MD5 (AfterStep/AfterStep-1.7.126.tar.bz2) = 1a91e9fde98b2d249ab8ea6fba34c610
-MD5 (AfterStep/1.7.126-01-sasha-endian_deps.patch.gz) = 36fd29327d2d05382d031c64bdc71fbe
-MD5 (AfterStep/1.7.126-02-allanon-security_and_avoidcover.patch.gz) = 8c469aaad3c0579d58f0dca43989e717
-MD5 (AfterStep/1.7.126-03-allanon-depend.patch.gz) = 2471ccfe5ee63d6eb8481a541f767607
-MD5 (AfterStep/1.7.126-04-allanon-shade.patch.gz) = 366673f0b86fa79af9c2f08b9d19e21f
-MD5 (AfterStep/1.7.126-05-jan-menu_shortcuts.patch.gz) = 8a886d96f269981e5eae354a2db9115c
-MD5 (AfterStep/1.7.126-06-alcorn-aslib_modules.patch.gz) = f04d00e43821a3b5322e84ad68ca860d
-MD5 (AfterStep/1.7.126-07-tildouf_allanon-icon_titles.patch.gz) = 2ac34d5e98b5960c2ab8b8e5844d1f9b
-MD5 (AfterStep/1.7.126-08-allanon-audit_and_wharf.patch.gz) = 2364f27cd3d9c102c00fe8b2ca5fe956
-MD5 (AfterStep/1.7.126-09-sasha_allanon-gradients.patch.gz) = bf2172fdf59c65cc00f6bb5d5540a7c9
-MD5 (AfterStep/1.7.126-10-sasha_allanon_tigr-pager_colors.patch.gz) = 6cb8ec16f16104b1c4d7f00287887473
-MD5 (AfterStep/1.7.126-11-allanon-mode_130.patch.gz) = 2e70b8888ffff74abbbf181f45b7143e
+MD5 (AfterStep/AfterStep-1.7.142.tar.bz2) = 7378c78b10025b1a313ab1c7dad079dd
+MD5 (AfterStep/1.7.142-01-sasha-png_jpg_warnings.patch.gz) = c49f966792fbb1ae1b13e553ec08c69e

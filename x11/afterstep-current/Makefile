@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 1999/08/24 10:16:38 fredb Exp $
+# $NetBSD: Makefile,v 1.7 1999/08/29 14:16:12 fredb Exp $
 
-DISTNAME=		AfterStep-1.7.126
-PKGNAME=		afterstep-1.7.137
+DISTNAME=		AfterStep-1.7.142
+PKGNAME=		AfterStep-1.7.143
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.afterstep.org/devel/snapshots/ \
 			ftp://ftp.afterstep.org/devel/archives/1.7/ \
@@ -17,17 +17,7 @@ PATCH_SITES=		ftp://ftp.afterstep.org/devel/patches/ \
 	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/ \
 	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/contrib/ \
 	ftp://ftp.digex.net/pub/X11/window-managers/afterstep/devel/patches/archive/
-PATCHFILES=		1.7.126-01-sasha-endian_deps.patch.gz \
-			1.7.126-02-allanon-security_and_avoidcover.patch.gz \
-			1.7.126-03-allanon-depend.patch.gz \
-			1.7.126-04-allanon-shade.patch.gz \
-			1.7.126-05-jan-menu_shortcuts.patch.gz \
-			1.7.126-06-alcorn-aslib_modules.patch.gz \
-			1.7.126-07-tildouf_allanon-icon_titles.patch.gz \
-			1.7.126-08-allanon-audit_and_wharf.patch.gz \
-			1.7.126-09-sasha_allanon-gradients.patch.gz \
-			1.7.126-10-sasha_allanon_tigr-pager_colors.patch.gz \
-			1.7.126-11-allanon-mode_130.patch.gz
+PATCHFILES=		1.7.142-01-sasha-png_jpg_warnings.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		fb@enteract.com
