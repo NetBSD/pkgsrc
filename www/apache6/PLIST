@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2002/10/06 12:50:00 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/09/12 08:26:45 itojun Exp $
 bin/checkgid
 bin/dbmmanage
 bin/htdigest
@@ -101,7 +101,7 @@ share/httpd/htdocs/index.html.ru.ucs2
 share/httpd/htdocs/index.html.ru.ucs4
 share/httpd/htdocs/index.html.ru.utf8
 share/httpd/htdocs/index.html.se
-share/httpd/htdocs/index.html.zh
+share/httpd/htdocs/index.html.zh-tw.big5
 share/httpd/htdocs/manual/LICENSE
 share/httpd/htdocs/manual/bind.html.en
 share/httpd/htdocs/manual/bind.html.fr
@@ -115,7 +115,9 @@ share/httpd/htdocs/manual/configuring.html.en
 share/httpd/htdocs/manual/configuring.html.fr
 share/httpd/htdocs/manual/configuring.html.html
 share/httpd/htdocs/manual/configuring.html.ja.jis
-share/httpd/htdocs/manual/content-negotiation.html
+share/httpd/htdocs/manual/content-negotiation.html.en
+share/httpd/htdocs/manual/content-negotiation.html.html
+share/httpd/htdocs/manual/content-negotiation.html.ja.jis
 share/httpd/htdocs/manual/custom-error.html.en
 share/httpd/htdocs/manual/custom-error.html.fr
 share/httpd/htdocs/manual/custom-error.html.html
@@ -134,13 +136,13 @@ share/httpd/htdocs/manual/handler.html.en
 share/httpd/htdocs/manual/handler.html.html
 share/httpd/htdocs/manual/handler.html.ja.jis
 share/httpd/htdocs/manual/header.html
-share/httpd/htdocs/manual/howto/htaccess.html
 share/httpd/htdocs/manual/howto/auth.html
 share/httpd/htdocs/manual/howto/cgi.html.en
 share/httpd/htdocs/manual/howto/cgi.html.html
 share/httpd/htdocs/manual/howto/cgi.html.ja.jis
 share/httpd/htdocs/manual/howto/footer.html
 share/httpd/htdocs/manual/howto/header.html
+share/httpd/htdocs/manual/howto/htaccess.html
 share/httpd/htdocs/manual/howto/ssi.html.en
 share/httpd/htdocs/manual/howto/ssi.html.html
 share/httpd/htdocs/manual/howto/ssi.html.ja.jis
@@ -200,6 +202,7 @@ share/httpd/htdocs/manual/misc/windoz_keepalive.html
 share/httpd/htdocs/manual/mod/core.html.en
 share/httpd/htdocs/manual/mod/core.html.fr
 share/httpd/htdocs/manual/mod/core.html.html
+share/httpd/htdocs/manual/mod/core.html.ja.jis
 share/httpd/htdocs/manual/mod/directive-dict.html.en
 share/httpd/htdocs/manual/mod/directive-dict.html.fr
 share/httpd/htdocs/manual/mod/directive-dict.html.html
@@ -219,19 +222,21 @@ share/httpd/htdocs/manual/mod/index.html.en
 share/httpd/htdocs/manual/mod/index.html.fr
 share/httpd/htdocs/manual/mod/index.html.html
 share/httpd/htdocs/manual/mod/index.html.ja.jis
-share/httpd/htdocs/manual/mod/mod_alias.html.en
-share/httpd/htdocs/manual/mod/mod_alias.html.ja.jis
-share/httpd/htdocs/manual/mod/mod_auth.html.en
-share/httpd/htdocs/manual/mod/mod_auth.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_access.html.en
 share/httpd/htdocs/manual/mod/mod_access.html.html
 share/httpd/htdocs/manual/mod/mod_access.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_actions.html.en
 share/httpd/htdocs/manual/mod/mod_actions.html.html
 share/httpd/htdocs/manual/mod/mod_actions.html.ja.jis
+share/httpd/htdocs/manual/mod/mod_alias.html.en
+share/httpd/htdocs/manual/mod/mod_alias.html.html
+share/httpd/htdocs/manual/mod/mod_alias.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_asis.html.en
 share/httpd/htdocs/manual/mod/mod_asis.html.html
 share/httpd/htdocs/manual/mod/mod_asis.html.ja.jis
+share/httpd/htdocs/manual/mod/mod_auth.html.en
+share/httpd/htdocs/manual/mod/mod_auth.html.html
+share/httpd/htdocs/manual/mod/mod_auth.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_auth_anon.html
 share/httpd/htdocs/manual/mod/mod_auth_db.html
 share/httpd/htdocs/manual/mod/mod_auth_dbm.html
@@ -262,7 +267,9 @@ share/httpd/htdocs/manual/mod/mod_info.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_isapi.html
 share/httpd/htdocs/manual/mod/mod_log_agent.html
 share/httpd/htdocs/manual/mod/mod_log_common.html
-share/httpd/htdocs/manual/mod/mod_log_config.html
+share/httpd/htdocs/manual/mod/mod_log_config.html.en
+share/httpd/htdocs/manual/mod/mod_log_config.html.html
+share/httpd/htdocs/manual/mod/mod_log_config.html.ja.jis
 share/httpd/htdocs/manual/mod/mod_log_referer.html
 share/httpd/htdocs/manual/mod/mod_mime.html.en
 share/httpd/htdocs/manual/mod/mod_mime.html.html
