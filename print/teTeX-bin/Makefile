@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2003/12/24 12:51:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.52 2004/01/04 17:52:50 wiz Exp $
 
 DISTNAME=	tetex-src-${TETEX_BIN_VERS}
 PKGNAME=	teTeX-bin-${TETEX_BIN_VERS}
@@ -9,13 +9,12 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	TeX distribution for UNIX compatible systems - executables, version 2
 
-CONFLICTS+=	teTeX2-bin-[0-9]*
+# games/omega previously installed an omega executable too
+CONFLICTS+=	teTeX2-bin-[0-9]* omega<0.90.4nb1
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	teTeX-share>=2.0.2:../teTeX-share
 DEPENDS+=	dialog-0.6z*:../../misc/dialog
-
-CONFLICTS+=	omega-[0-9]*
 
 INFO_FILES=	latex.info dvips.info web2c.info kpathsea.info
 
