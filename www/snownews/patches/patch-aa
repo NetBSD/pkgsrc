@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2004/04/09 00:04:23 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2004/11/20 00:30:29 wiz Exp $
 
---- Makefile.inc.orig	2004-03-07 14:41:07.000000000 -0700
-+++ Makefile.inc
-@@ -1,8 +1,6 @@
--CC = gcc
--MAKE = make
- INSTALL = install
--PREFIX = /usr/local
--LOCALEPATH = $(PREFIX)/share/locale
-+PREFIX = $(LOCALBASE)
-+LOCALEPATH = $(PREFIX)/$(PKGLOCALEDIR)/locale
- DISTFILES = AUTHOR COPYING CREDITS Changelog README README.de README.colors README.patching INSTALL INSTALL.solaris INSTALL.FreeOpenNetBSD opml2snow \
- 	Makefile Makefile.inc Makefile.solaris \
- 	doc po scripts \
+--- interface.c.orig	2004-10-31 22:09:14.000000000 +0100
++++ interface.c
+@@ -1540,7 +1540,7 @@ void UIMainInterface (void) {
+ 					first_scr_ptr = first_ptr;
+ 					highlighted = first_ptr;
+ 					first_bak = NULL;
+-				} else if (highlighted->feedcategories != NULL) {
++				} else if ((highlighted != NULL) && (highlighted->feedcategories != NULL)) {
+ 					filters[0] = strdup (highlighted->feedcategories->name);
+ 					filteractivated = 1;
+ 				}
