@@ -1,0 +1,4 @@
+This is a copy of NetBSD-current's pax tool in a format which is
+able to be installed as a package.  It simply replaces the tool in
+/bin, but doesn't register itself as a package, so that no
+de-installation can take place.
