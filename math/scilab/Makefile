@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2003/06/11 20:50:56 abs Exp $
+# $NetBSD: Makefile,v 1.39 2003/07/12 13:22:16 dillo Exp $
 #
 
 DISTNAME=	${SCIBASE}.src
@@ -68,7 +68,7 @@ post-install:
 
 # the "SCI=0 && unset SCI" is done because some of the tests really will
 # fail if SCI is set to anything.
-test: build
+do-test:
 	SCI=0 && unset SCI && cd ${WRKSRC}/tests && \
 		${MAKE_ENV} ${MAKE_PROGRAM} tests 2>&1 | \
 		 tee ${WRKDIR}/tests.log
