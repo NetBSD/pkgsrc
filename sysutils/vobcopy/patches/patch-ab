@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/04/08 14:17:57 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2004/04/22 15:28:47 drochner Exp $
 
---- vobcopy.c.orig	2003-09-02 12:53:29.000000000 +0200
-+++ vobcopy.c	2003-09-02 12:54:40.000000000 +0200
-@@ -62,7 +62,7 @@
+--- vobcopy.c.orig	2004-03-26 19:53:10.000000000 +0100
++++ vobcopy.c	2004-04-22 15:54:46.000000000 +0200
+@@ -63,20 +63,22 @@
  #include <fcntl.h>
  #include <unistd.h>
  #include <dirent.h> /*for readdir*/
@@ -11,3 +11,79 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/04/08 14:17:57 drochner Exp $
  #include <sys/param.h>
  #else
  #include <sys/vfs.h>
+ #endif
+ #include <dvdread/dvd_reader.h>
+ /* for solaris, but is also present in linux */
+-#if (defined(BSD) && (BSD >= 199306)) ||(defined(__APPLE__) && defined(__GNUC__))
++#if (defined(BSD) && (BSD >= 199306) && !defined(__NetBSD__)) ||(defined(__APPLE__) && defined(__GNUC__)) || (defined(__NetBSD__) && (__NetBSD_Version__ < 200040000))
+ /* I don't know if *BSD have getopt-long... please tell me! */
+ //#define HAVE_GETOPT_LONG
+ #include <sys/mount.h>
++#define USE_STATFS
+ #else
+ #if (defined(__linux__))
+ #include <sys/statfs.h> 
++#define USE_STATFS
+ #define HAVE_GETOPT_LONG
+ #else
+ #include <sys/statvfs.h> 
+@@ -143,14 +145,6 @@
+   bool              quiet_flag = FALSE;
+   struct stat       buf;
+ 
+-  /**
+-   * This case here has to be examined for every system vobcopy shall run under
+-   */
+-#if defined( __linux__ ) || ( defined( BSD ) && ( BSD >= 199306 )) || (defined (__APPLE__) && defined(__GNUC__))
+-  struct statfs     buf1;
+-#elif !defined(__sun__)
+-  struct statvfs    buf1;
+-#endif
+   dvd_reader_t      *dvd = NULL;
+   dvd_file_t        *dvd_file;
+   extern char       *optarg;
+@@ -354,7 +348,7 @@
+ 
+ #if defined( __USE_FILE_OFFSET64 ) || ( defined( BSD ) && ( BSD >= 199306 ) ) || (defined (__APPLE__) && defined(__GNUC__))
+ 	  case'l': /*large file output*/
+-	    max_filesize_in_blocks = 4500000000000000; 
++	    max_filesize_in_blocks = 4500000000000000LL; 
+ 	  /* 2^63 / 2048 (not exactly) */
+ 	  large_file_flag = TRUE;
+ 	  break;
+@@ -1702,7 +1696,7 @@
+ off_t freespace_getter( char *path, int verbosity_level )
+ {
+ 
+-#if defined( __linux__ ) || ( defined( BSD ) && ( BSD >= 199306 ) ) || (defined (__APPLE__) && defined(__GNUC__))
++#ifdef USE_STATFS
+   struct statfs     buf1;
+ #else 
+   struct statvfs    buf1; 
+@@ -1710,7 +1704,7 @@
+ /*   ssize_t temp1, temp2; */
+   long temp1, temp2;
+   off_t sum;
+-#if defined( __linux__ ) || ( defined( BSD ) && ( BSD >= 199306 ) ) || (defined (__APPLE__) && defined(__GNUC__))
++#ifdef USE_STATFS
+   statfs( path, &buf1 );
+   if( verbosity_level >= 1 )
+     fprintf( stderr, "Used the linux statfs\n" );
+@@ -1739,7 +1733,7 @@
+ off_t usedspace_getter( char *path, int verbosity_level )
+ {
+ 
+-#if defined( __linux__ ) || ( defined( BSD ) && ( BSD >= 199306 ) ) || (defined (__APPLE__) && defined(__GNUC__))
++#ifdef USE_STATFS
+   struct statfs     buf2;
+ #else 
+   struct statvfs    buf2; 
+@@ -1747,7 +1741,7 @@
+ /*   ssize_t temp1, temp2; */
+   long temp1, temp2;
+   off_t sum;
+-#if defined( __linux__ ) || ( defined( BSD ) && ( BSD >= 199306 ) ) || (defined (__APPLE__) && defined(__GNUC__))
++#ifdef USE_STATFS
+   statfs( path, &buf2 );
+   if( verbosity_level >= 1 )
+     fprintf( stderr, "Used the linux statfs\n" );
