@@ -1,0 +1,74 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/10 10:09:21 seb Exp $
+bin/offlineimap
+${PYSITELIB}/offlineimap/CustomConfig.py
+${PYSITELIB}/offlineimap/CustomConfig.pyc
+${PYSITELIB}/offlineimap/__init__.py
+${PYSITELIB}/offlineimap/__init__.pyc
+${PYSITELIB}/offlineimap/accounts.py
+${PYSITELIB}/offlineimap/accounts.pyc
+${PYSITELIB}/offlineimap/folder/Base.py
+${PYSITELIB}/offlineimap/folder/Base.pyc
+${PYSITELIB}/offlineimap/folder/IMAP.py
+${PYSITELIB}/offlineimap/folder/IMAP.pyc
+${PYSITELIB}/offlineimap/folder/LocalStatus.py
+${PYSITELIB}/offlineimap/folder/LocalStatus.pyc
+${PYSITELIB}/offlineimap/folder/Maildir.py
+${PYSITELIB}/offlineimap/folder/Maildir.pyc
+${PYSITELIB}/offlineimap/folder/UIDMaps.py
+${PYSITELIB}/offlineimap/folder/UIDMaps.pyc
+${PYSITELIB}/offlineimap/folder/__init__.py
+${PYSITELIB}/offlineimap/folder/__init__.pyc
+${PYSITELIB}/offlineimap/imaplib.py
+${PYSITELIB}/offlineimap/imaplib.pyc
+${PYSITELIB}/offlineimap/imapserver.py
+${PYSITELIB}/offlineimap/imapserver.pyc
+${PYSITELIB}/offlineimap/imaputil.py
+${PYSITELIB}/offlineimap/imaputil.pyc
+${PYSITELIB}/offlineimap/init.py
+${PYSITELIB}/offlineimap/init.pyc
+${PYSITELIB}/offlineimap/localeval.py
+${PYSITELIB}/offlineimap/localeval.pyc
+${PYSITELIB}/offlineimap/mbnames.py
+${PYSITELIB}/offlineimap/mbnames.pyc
+${PYSITELIB}/offlineimap/repository/Base.py
+${PYSITELIB}/offlineimap/repository/Base.pyc
+${PYSITELIB}/offlineimap/repository/IMAP.py
+${PYSITELIB}/offlineimap/repository/IMAP.pyc
+${PYSITELIB}/offlineimap/repository/LocalStatus.py
+${PYSITELIB}/offlineimap/repository/LocalStatus.pyc
+${PYSITELIB}/offlineimap/repository/Maildir.py
+${PYSITELIB}/offlineimap/repository/Maildir.pyc
+${PYSITELIB}/offlineimap/repository/__init__.py
+${PYSITELIB}/offlineimap/repository/__init__.pyc
+${PYSITELIB}/offlineimap/syncmaster.py
+${PYSITELIB}/offlineimap/syncmaster.pyc
+${PYSITELIB}/offlineimap/threadutil.py
+${PYSITELIB}/offlineimap/threadutil.pyc
+${PYSITELIB}/offlineimap/ui/Blinkenlights.py
+${PYSITELIB}/offlineimap/ui/Blinkenlights.pyc
+${PYSITELIB}/offlineimap/ui/Curses.py
+${PYSITELIB}/offlineimap/ui/Curses.pyc
+${PYSITELIB}/offlineimap/ui/Noninteractive.py
+${PYSITELIB}/offlineimap/ui/Noninteractive.pyc
+${PYSITELIB}/offlineimap/ui/TTY.py
+${PYSITELIB}/offlineimap/ui/TTY.pyc
+${PYSITELIB}/offlineimap/ui/Tk.py
+${PYSITELIB}/offlineimap/ui/Tk.pyc
+${PYSITELIB}/offlineimap/ui/UIBase.py
+${PYSITELIB}/offlineimap/ui/UIBase.pyc
+${PYSITELIB}/offlineimap/ui/__init__.py
+${PYSITELIB}/offlineimap/ui/__init__.pyc
+${PYSITELIB}/offlineimap/ui/debuglock.py
+${PYSITELIB}/offlineimap/ui/debuglock.pyc
+${PYSITELIB}/offlineimap/ui/detector.py
+${PYSITELIB}/offlineimap/ui/detector.pyc
+${PYSITELIB}/offlineimap/version.py
+${PYSITELIB}/offlineimap/version.pyc
+man/man1/offlineimap.1
+share/examples/offlineimap/offlineimap.conf
+share/examples/offlineimap/offlineimap.conf.minimal
+@dirrm share/examples/offlineimap
+@dirrm ${PYSITELIB}/offlineimap/ui
+@dirrm ${PYSITELIB}/offlineimap/repository
+@dirrm ${PYSITELIB}/offlineimap/folder
+@dirrm ${PYSITELIB}/offlineimap
