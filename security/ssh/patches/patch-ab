@@ -1,54 +1,52 @@
-$NetBSD: patch-ab,v 1.5 1998/11/04 23:43:39 tron Exp $
+$NetBSD: patch-ab,v 1.6 1999/05/10 21:34:46 tron Exp $
 
---- configure.orig	Wed Jul  8 18:41:14 1998
-+++ configure	Thu Nov  5 00:28:07 1998
-@@ -1996,12 +1996,6 @@
+--- configure.in.orig	Mon May 10 23:27:44 1999
++++ configure.in	Mon May 10 23:27:53 1999
+@@ -317,9 +317,9 @@
  
  export CFLAGS CC
  
 -# Socket pairs appear to be broken on several systems.  I don't know exactly
 -# where, so I'll use pipes everywhere for now.
--cat >> confdefs.h <<\EOF
--#define USE_PIPES 1
--EOF
--
+-AC_DEFINE(USE_PIPES)
++dnl # Socket pairs appear to be broken on several systems.  I don't know exactly
++dnl # where, so I'll use pipes everywhere for now.
++dnl AC_DEFINE(USE_PIPES)
  
- echo $ac_n "checking that the compiler works""... $ac_c" 1>&6
- echo "configure:2008: checking that the compiler works" >&5
-@@ -7344,15 +7338,15 @@
-    case "$enableval" in
+ AC_MSG_CHECKING([that the compiler works])
+ AC_TRY_RUN([ main(int ac, char **av) { return 0; } ],
+@@ -909,8 +909,8 @@
+     fi
+     AC_MSG_RESULT(Assuming TIS headers and libraries are in $withval.)
+     AC_DEFINE(HAVE_TIS)
+-    CFLAGS="$CFLAGS -I$withval -DHAVE_TIS"
+-    LIBS="-L$withval -lauth -lfwall $LIBS"
++    CFLAGS="$CFLAGS -I$withval/include -DHAVE_TIS"
++    LIBS="-L$withval/lib -lauth -lfwall $LIBS"
+     AC_MSG_WARN(Remember to read README.TIS. The connection between sshd and TIS authentication
+ server is clear text!)
+     ;;
+@@ -1236,14 +1236,14 @@
+ [ case "$enableval" in
    no)
-        echo "$ac_t""no" 1>&6
+        AC_MSG_RESULT(no)
 -       SSHINSTALLMODE=0711
 +       SSHINSTALLMODE=0511
         ;;
-   *)   echo "$ac_t""yes" 1>&6
+   *)   AC_MSG_RESULT(yes)
 -       SSHINSTALLMODE=04711
 +       SSHINSTALLMODE=04511
         ;;
-   esac 
- else
-   echo "$ac_t""yes" 1>&6
+   esac ],
+   AC_MSG_RESULT(yes)
 -  SSHINSTALLMODE=04711
 +  SSHINSTALLMODE=04511
+ )
  
- fi
+ AC_MSG_CHECKING(whether to enable TCP_NODELAY)
+@@ -1345,4 +1345,4 @@
+ AC_SUBST(SSHDCONFOBJS)
+ AC_SUBST(SSHINSTALLMODE)
  
-@@ -7632,7 +7626,7 @@
- ac_given_srcdir=$srcdir
- ac_given_INSTALL="$INSTALL"
- 
--trap 'rm -fr `echo "Makefile sshd.8 ssh.1 make-ssh-known-hosts.1 zlib-1.0.4/Makefile config.h" | sed "s/:[^ ]*//g"` conftest*; exit 1' 1 2 15
-+trap 'rm -fr `echo "Makefile sshd.8 ssh.1 make-ssh-known-hosts.pl make-ssh-known-hosts.1 zlib-1.0.4/Makefile config.h" | sed "s/:[^ ]*//g"` conftest*; exit 1' 1 2 15
- EOF
- cat >> $CONFIG_STATUS <<EOF
- 
-@@ -7740,7 +7734,7 @@
- 
- cat >> $CONFIG_STATUS <<EOF
- 
--CONFIG_FILES=\${CONFIG_FILES-"Makefile sshd.8 ssh.1 make-ssh-known-hosts.1 zlib-1.0.4/Makefile"}
-+CONFIG_FILES=\${CONFIG_FILES-"Makefile sshd.8 ssh.1 make-ssh-known-hosts.pl make-ssh-known-hosts.1 zlib-1.0.4/Makefile"}
- EOF
- cat >> $CONFIG_STATUS <<\EOF
- for ac_file in .. $CONFIG_FILES; do if test "x$ac_file" != x..; then
+-AC_OUTPUT(Makefile sshd.8 ssh.1 make-ssh-known-hosts.1 zlib-1.0.4/Makefile)
++AC_OUTPUT(Makefile sshd.8 ssh.1 make-ssh-known-hosts.pl make-ssh-known-hosts.1 zlib-1.0.4/Makefile)
