@@ -1,0 +1,30 @@
+$NetBSD: patch-ak,v 1.1 2001/09/19 08:57:07 joda Exp $
+
+--- src/mkid.c~	Tue Jul  9 06:19:09 1996
++++ src/mkid.c	Wed Sep 19 10:21:00 2001
+@@ -33,7 +33,6 @@
+ #include "hash.h"
+ #include "scanners.h"
+ #include "error.h"
+-#include "xalloca.h"
+ #if HAVE_LIMITS_H
+ # include <limits.h>
+ #endif
+@@ -363,7 +362,7 @@
+ 	{
+ 	  if (fstat (fileno (source_FILE), &st) < 0)
+ 	    {
+-	      char *file_name = ALLOCA (char, PATH_MAX);
++	      char file_name[PATH_MAX];
+ 	      maybe_relative_file_name (file_name, flink, cw_dlink);
+ 	      error (0, errno, _("can't stat `%s'"), file_name);
+ 	    }
+@@ -372,7 +371,7 @@
+ 	}
+       if (verbose_flag)
+ 	{
+-	  char *file_name = ALLOCA (char, PATH_MAX);
++	  char file_name[PATH_MAX];
+ 	  maybe_relative_file_name (file_name, flink, cw_dlink);
+ 	  printf ("%d: %s: %s", member->mf_index, lang->lg_name, file_name);
+ 	  fflush (stdout);
