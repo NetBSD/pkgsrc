@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/01/11 00:48:41 tron Exp $
+# $NetBSD: Makefile,v 1.5 1999/01/16 05:50:28 tron Exp $
 
 DISTNAME=		enlightenment-0.14
 CATEGORIES=		x11
@@ -8,7 +8,7 @@ MAINTAINER=		root@garbled.net
 HOMEPAGE=		http://www.enlightenment.org/
 
 DEPENDS+=		ImageMagick-4.1.7:../../graphics/ImageMagick
-DEPENDS+=		imlib-1.8.2:../../graphics/imlib
+DEPENDS+=		imlib-1.9.0:../../graphics/imlib
 DEPENDS+=		fnlib-0.3:../../graphics/fnlib
 DEPENDS+=		esound-0.2.4:../../audio/esound
 DEPENDS+=		p5-gtk-0.4:../../x11/p5-gtk
