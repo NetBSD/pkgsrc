@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2003/07/17 21:31:57 grant Exp $
+# $NetBSD: Makefile,v 1.16 2004/01/11 15:58:45 cjep Exp $
 
 DISTNAME=	netcdf-3.5.0
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 CATEGORIES=	devel
 MASTER_SITES=	ftp://www.gfd-dennou.org/arch/netcdf/unidata-mirror/
