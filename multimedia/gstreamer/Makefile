@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2004/12/26 06:32:47 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2005/01/06 11:23:44 jmmv Exp $
 #
 
-DISTNAME=		gstreamer-0.8.7
-PKGREVISION=		1
+DISTNAME=		gstreamer-0.8.8
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gstreamer/0.8/}
 EXTRACT_SUFX=		.tar.bz2
@@ -31,6 +30,8 @@ CONFIGURE_ARGS+=	HAVE_GTK_DOC=no
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-control.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer.pc.in
 
+MAKE_DIRS+=		${GST_DBDIR}
+
 PYTHON_VERSIONS_ACCEPTED=	24 24pth 23 23pth 22 22pth
 
 .include "../../mk/bsd.prefs.mk"
@@ -40,15 +41,6 @@ PYTHON_VERSIONS_ACCEPTED=	24 24pth 23 23pth 22 22pth
 # won't work at all.
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb1
 .endif
-
-# XXX: Set up compatibility links for gstreamer-0.8.3; this is just a
-# workaround for our broken libtool naming, and it should be removed when
-# our libtool is fixed.
-post-install:
-.for f in gstcontrol gstreamer
-	cd ${PREFIX}/lib && ${LN} -fs lib${f}-0.8.so.5 lib${f}-0.8.so.3
-	cd ${PREFIX}/lib && ${LN} -fs lib${f}-0.8.so.5.0 lib${f}-0.8.so.3.0
-.endfor
 .undef f
 
 .include "../../devel/glib2/buildlink3.mk"
