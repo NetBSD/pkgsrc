@@ -1,5 +1,5 @@
 A very small and fast graphical web browser using GTK+.
 
-It is still in early development, so many features are still misisng:
-ftp and https protocol support, frames, and cockies.  Table support
+It is still in early development, so many features are still missing:
+ftp and https protocol support, frames, and cookies.  Table support
 is incomplete.
