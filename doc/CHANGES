@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4415 2004/01/10 09:55:09 jmmv Exp $
+$NetBSD: CHANGES,v 1.4416 2004/01/10 14:27:57 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -143,3 +143,13 @@ Changes to the packages collection and infrastructure in 2004:
 	Moved static-bash2 to bash2-static [grant 2004-01-10]
 	Moved static-ast-ksh to ast-ksh-static [grant 2004-01-10]
 	Added cuetools-0.4 [jmmv 2004-01-10]
+	Updated wxGTK to 2.4.2 [recht 2004-01-10]
+	Updated audacity to 1.0.0.2nb8 [recht 2004-01-10]
+	Updated boolean to 6.4nb4 [recht 2004-01-10]
+	Updated rapidsvn to 0.4.0nb4 [recht 2004-01-10]
+	Updated xchm to 0.8nb2 [recht 2004-01-10]
+	Updated amule to 1.2.3nb2 [recht 2004-01-10]
+	Updated bittorrent to 3.3nb3 [recht 2004-01-10]
+	Updated pyslsk to 1.2.4nb3 [recht 2004-01-10]
+	Updated xmule to 1.7.1nb3 [recht 2004-01-10]
+	Updated py-wxWindows to 2.4.2.4nb3 [recht 2004-01-10]
