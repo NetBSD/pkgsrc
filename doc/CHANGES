@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.224 2002/10/11 01:07:23 grant Exp $
+$NetBSD: CHANGES,v 1.225 2002/10/11 06:17:06 martti Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3175,3 +3175,5 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ptl2 to 2.1.8nb1 [tron 2002-10-10]
 	Updated dict-server to 1.8.0 [uebayasi 2002-10-11]
 	Updated dict-client to 1.8.0 [uebayasi 2002-10-11]
+	Updated xpmroot to 2.4.12 [martti 2002-10-11]
+	Updated fvwm2 to 2.4.12 [martti 2002-10-11]
