@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2004/07/25 12:36:03 grant Exp $
+# $NetBSD: Makefile,v 1.141 2004/08/04 06:43:52 minskim Exp $
 
 DISTNAME=		openssh-3.8.1p1
 PKGNAME=		openssh-3.8.1.1
@@ -72,6 +72,10 @@ MESSAGE_SRC+=		${.CURDIR}/MESSAGE.pam
 # linker directly results in undefined symbols for obvious reasons.
 #
 CONFIGURE_ENV+=		LD=${CC:Q}
+
+.if ${OPSYS} == "Interix"
+CONFIGURE_ENV+=		ac_cv_type_struct_timespec=yes
+.endif
 
 # Enable S/Key support on NetBSD, Darwin, and Solaris.
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "Darwin") || (${OPSYS} == "SunOS")

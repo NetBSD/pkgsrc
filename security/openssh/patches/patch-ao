@@ -1,0 +1,31 @@
+$NetBSD: patch-ao,v 1.5 2004/08/04 06:43:53 minskim Exp $
+
+--- uidswap.c.orig	Mon Feb 23 20:17:30 2004
++++ uidswap.c
+@@ -83,6 +83,7 @@ temporarily_use_uid(struct passwd *pw)
+ 			xfree(saved_egroups);
+ 	}
+ 
++#ifndef __INTERIX
+ 	/* set and save the user's groups */
+ 	if (user_groupslen == -1) {
+ 		if (initgroups(pw->pw_name, pw->pw_gid) < 0)
+@@ -105,6 +106,7 @@ temporarily_use_uid(struct passwd *pw)
+ 	/* Set the effective uid to the given (unprivileged) uid. */
+ 	if (setgroups(user_groupslen, user_groups) < 0)
+ 		fatal("setgroups: %.100s", strerror(errno));
++#endif /* __INTERIX */
+ #ifndef SAVED_IDS_WORK_WITH_SETEUID
+ 	/* Propagate the privileged gid to all of our gids. */
+ 	if (setgid(getegid()) < 0)
+@@ -152,8 +154,10 @@ restore_uid(void)
+ 	setgid(getgid());
+ #endif /* SAVED_IDS_WORK_WITH_SETEUID */
+ 
++#ifndef __INTERIX
+ 	if (setgroups(saved_egroupslen, saved_egroups) < 0)
+ 		fatal("setgroups: %.100s", strerror(errno));
++#endif /* __INTERIX */
+ 	temporarily_use_uid_effective = 0;
+ }
+ 

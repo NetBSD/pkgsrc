@@ -1,0 +1,19 @@
+$NetBSD: patch-ai,v 1.6 2004/08/04 06:43:52 minskim Exp $
+
+--- dns.h.orig	Mon Nov 17 04:19:29 2003
++++ dns.h
+@@ -31,6 +31,7 @@
+ #ifndef DNS_H
+ #define DNS_H
+ 
++#ifndef __INTERIX
+ enum sshfp_types {
+ 	SSHFP_KEY_RESERVED,
+ 	SSHFP_KEY_RSA,
+@@ -52,5 +53,6 @@ enum sshfp_hashes {
+ 
+ int	verify_host_key_dns(const char *, struct sockaddr *, const Key *, int *);
+ int	export_dns_rr(const char *, const Key *, FILE *, int);
++#endif /* __INTERIX */
+ 
+ #endif /* DNS_H */

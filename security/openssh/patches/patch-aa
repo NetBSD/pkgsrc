@@ -1,9 +1,18 @@
-$NetBSD: patch-aa,v 1.34 2004/05/10 18:12:24 wiz Exp $
+$NetBSD: patch-aa,v 1.35 2004/08/04 06:43:52 minskim Exp $
 
---- configure.orig	2004-04-18 14:51:57.000000000 +0200
+--- configure.orig	Sun Apr 18 07:51:57 2004
 +++ configure
-@@ -4816,6 +4816,9 @@ EOF
+@@ -4814,8 +4814,18 @@ EOF
+ EOF
+ 
  	;;
++
++*-*-interix3)
++	cat >>confdefs.h <<\EOF
++#define MISSING_HOWMANY 1
++EOF
++
++	;;
  esac
  
 +# pkgsrc handles any rpath settings this package needs
@@ -12,7 +21,7 @@ $NetBSD: patch-aa,v 1.34 2004/05/10 18:12:24 wiz Exp $
  # Allow user to specify flags
  
  # Check whether --with-cflags or --without-cflags was given.
-@@ -17263,12 +17266,20 @@ fi
+@@ -17263,12 +17273,20 @@ fi
  rm -f conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
@@ -35,7 +44,7 @@ $NetBSD: patch-aa,v 1.34 2004/05/10 18:12:24 wiz Exp $
  	cat >>confdefs.h <<EOF
  #define CONF_UTMPX_FILE "$conf_utmpx_location"
  EOF
-@@ -17323,12 +17334,20 @@ fi
+@@ -17323,12 +17341,20 @@ fi
  rm -f conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -58,7 +67,7 @@ $NetBSD: patch-aa,v 1.34 2004/05/10 18:12:24 wiz Exp $
  	cat >>confdefs.h <<EOF
  #define CONF_WTMPX_FILE "$conf_wtmpx_location"
  EOF
-@@ -18237,7 +18256,7 @@ echo "OpenSSH has been configured with t
+@@ -18237,7 +18263,7 @@ echo "OpenSSH has been configured with t
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"
