@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/04/01 18:21:20 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2004/04/15 16:36:20 jmmv Exp $
 bin/gnomevfs-cat
 bin/gnomevfs-copy
 bin/gnomevfs-info
@@ -54,9 +54,6 @@ lib/gnome-vfs-2.0/include/gnome-vfs-file-size.h
 lib/gnome-vfs-2.0/modules/libbzip2.a
 lib/gnome-vfs-2.0/modules/libbzip2.la
 lib/gnome-vfs-2.0/modules/libbzip2.so
-lib/gnome-vfs-2.0/modules/libcdda.a
-lib/gnome-vfs-2.0/modules/libcdda.la
-lib/gnome-vfs-2.0/modules/libcdda.so
 lib/gnome-vfs-2.0/modules/libcomputer.a
 lib/gnome-vfs-2.0/modules/libcomputer.la
 lib/gnome-vfs-2.0/modules/libcomputer.so
@@ -179,7 +176,6 @@ share/doc/html/gnome-vfs-2.0/mime-registry.html
 share/doc/html/gnome-vfs-2.0/modules.html
 share/doc/html/gnome-vfs-2.0/right.png
 share/doc/html/gnome-vfs-2.0/up.png
-share/examples/gnome-vfs-2.0/modules/cdda-module.conf
 share/examples/gnome-vfs-2.0/modules/default-modules.conf
 share/examples/gnome-vfs-2.0/modules/ssl-modules.conf
 share/examples/gnome-vfs-2.0/vfolders/applications-all-users.vfolder-info
