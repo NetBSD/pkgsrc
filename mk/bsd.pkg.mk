@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1438 2004/04/07 14:26:50 tv Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1439 2004/04/11 20:17:37 jschauma Exp $
 #
 # This file is in the public domain.
 #
@@ -2976,7 +2976,7 @@ _AIXLIB_AWK= \
 do-shlib-handling:
 .if ${SHLIB_HANDLING} == "YES"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	sos=`${EGREP} -h -x '.*/lib[^/]+\.so' ${PLIST} || ${TRUE}`;	\
+	sos=`${EGREP} -h '^.*/lib[^/]+\.so$$' ${PLIST} || ${TRUE}`;	\
 	if [ "$$sos" != "" ]; then					\
 		shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;	\
 		if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 		\
@@ -2991,7 +2991,7 @@ do-shlib-handling:
 			else 						\
 				${RM} ${PLIST}.tmp ;			\
 			fi ; 						\
-			cnt=`${EGREP} -c -x '@exec[ 	]*${LDCONFIG}' ${PLIST} || ${TRUE}`; \
+			cnt=`${EGREP} -c '^@exec[ 	]*${LDCONFIG}$$' ${PLIST} || ${TRUE}`; \
 			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then 	\
 				if [ $$cnt -eq 0 ]; then		\
 					${ECHO} "@exec ${LDCONFIG}" >> ${PLIST}; \
