@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2004/12/20 11:31:06 grant Exp $
-# FreeBSD Id: Makefile,v 1.13 1997/06/27 18:38:15 jfitz Exp
-#
+# $NetBSD: Makefile,v 1.36 2005/03/24 21:12:59 wiz Exp $
 
 DISTNAME=	libnet-1.19
 PKGNAME=	p5-Net-1.19

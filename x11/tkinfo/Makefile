@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/05/12 15:08:20 minskim Exp $
-# FreeBSD Id: Makefile,v 1.15 1997/12/16 09:26:12 tg Exp
-#
+# $NetBSD: Makefile,v 1.20 2005/03/24 21:13:04 wiz Exp $
 
 DISTNAME=	tkinfo-2.8
 CATEGORIES=	x11

@@ -1,9 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2004/12/03 15:15:03 wiz Exp $
-#
-# NetBSD "imm" package
-# The original was based on the imm-3.5a1 FreeBSD port maintained
-# by Bill Fenner, but the new one had to be redone completely.
-#
+# $NetBSD: Makefile,v 1.21 2005/03/24 21:12:57 wiz Exp $
 
 DISTNAME=	imm36a1
 PKGNAME=	imm-3.6a1

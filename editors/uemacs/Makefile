@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:14:06 agc Exp $
-# FreeBSD: ports/editors/uemacs/Makefile,v 1.14 1999/10/07 06:49:01 tg Exp
+# $NetBSD: Makefile,v 1.8 2005/03/24 21:12:54 wiz Exp $
 
 DISTNAME=	ue400dev
 PKGNAME=	uemacs-4.0

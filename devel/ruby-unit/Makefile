@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/03/06 17:19:06 taca Exp $
-# FreeBSD: ports/devel/ruby-runit/Makefile,v 1.10 2001/01/19 09:41:15 knu Exp
+# $NetBSD: Makefile,v 1.11 2005/03/24 21:12:53 wiz Exp $
 
 DISTNAME=	rubyunit-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-unit-${VERSION}
