@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2002/08/25 18:40:03 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2002/12/04 07:59:36 tron Exp $
 
 DISTNAME=	jade-1.2.1
 PKGREVISION=	4
@@ -48,6 +48,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/dsssl/* ${PREFIX}/share/sgml/jade
 # Installed by print/tex-jadetex
 	${RM} ${PREFIX}/share/sgml/jade/*jadetex.*
+
+post-build:
+	cd ${BUILDLINK_DIR}/lib; \
+	${FIND} ${WRKSRC} -name "lib*.so" | ${XARGS} -n 1 ${LN} -fs
 
 .include "../../devel/gettext-lib/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
