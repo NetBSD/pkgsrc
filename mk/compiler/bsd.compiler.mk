@@ -1,4 +1,4 @@
-# $NetBSD: bsd.compiler.mk,v 1.2 2004/02/01 01:31:58 jlam Exp $
+# $NetBSD: bsd.compiler.mk,v 1.3 2004/02/01 01:36:22 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -63,17 +63,17 @@ BSD_COMPILER_MK=	defined
 #
 .if defined(USE_GCC2)
 GCC_REQD?=		2.8.0
-PKGSRC_COMPILER=	gcc
+PKGSRC_COMPILER?=	gcc
 .elif defined(USE_GCC3)
 GCC_REQD?=		3.0
-PKGSRC_COMPILER=	gcc
+PKGSRC_COMPILER?=	gcc
 .elif defined(USE_PKGSRC_GCC)
 _USE_PKGSRC_GCC=	yes
-PKGSRC_COMPILER=	gcc
+PKGSRC_COMPILER?=	gcc
 .elif defined(USE_SUNPRO)
-PKGSRC_COMPILER=	sunpro
+PKGSRC_COMPILER?=	sunpro
 .elif defined(USE_MIPSPRO)
-PKGSRC_COMPILER=	mipspro
+PKGSRC_COMPILER?=	mipspro
 .else
 PKGSRC_COMPILER?=	gcc
 .endif
