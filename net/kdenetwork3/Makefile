@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2004/02/04 14:42:23 markd Exp $
+# $NetBSD: Makefile,v 1.27 2004/03/01 13:08:42 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
 CATEGORIES=	net
@@ -17,6 +17,10 @@ REPLACE_PERL=		ksirc/dsirc
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		ac_cv_sys_file_offset_bits=no
+.endif
+
+.if !exists(${X11BASE}/lib/libXss.so)
+CONFIGURE_ENV+=		ac_cv_lib_Xss_XScreenSaverQueryInfo="no"
 .endif
 
 .include "../../converters/uulib/buildlink2.mk"
