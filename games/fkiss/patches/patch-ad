@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2003/12/03 23:45:29 ben Exp $
+$NetBSD: patch-ad,v 1.3 2003/12/04 00:28:02 ben Exp $
 
---- sound.c.orig	2000-10-16 22:10:55.000000000 -0700
+--- sound.c.orig	2001-11-11 23:05:37.000000000 -0800
 +++ sound.c
-@@ -43,6 +43,12 @@
+@@ -57,6 +57,12 @@ char id_sound[] = "$Id: sound.c,v 1.21 2
  # include <machine/soundcard.h>
  #endif
  
@@ -15,16 +15,7 @@ $NetBSD: patch-ad,v 1.2 2003/12/03 23:45:29 ben Exp $
  #ifndef DEV_SOUND
  # define DEV_SOUND	"/dev/audio"
  #endif
-@@ -61,7 +67,7 @@
- 
- #include "ulaw.h"
- 
--
-+char *midi_player = "/usr/bin/midiplay";
- char *sound_device = DEV_SOUND;
- int sound_debug = 1;		/* debug information print level
- 				 * 0: print nothing, silent
-@@ -218,7 +224,7 @@
+@@ -235,7 +241,7 @@ void play_sync(fd)
  {
    if (sound_debug >= 2)
      fputs("sync", stderr);
@@ -33,21 +24,3 @@ $NetBSD: patch-ad,v 1.2 2003/12/03 23:45:29 ben Exp $
    if (sound_debug >= 2)
      fputs(" ", stderr);
  }
-@@ -640,6 +646,17 @@
-   if (!sound_enable)
-     return 0;
- 
-+  bufp = name;
-+  while (strstr(bufp + 1, ".mid") != NULL) bufp = strstr(bufp + 1, ".mid");
-+  while (strstr(bufp + 1, ".MID") != NULL) bufp = strstr(bufp + 1, ".MID");
-+  if ((!strncmp(bufp, ".mid", 4) || !strncmp(bufp, ".MID", 4)) &&
-+	strlen(bufp) < 6)
-+  {
-+    snprintf(buf, sizeof(buf), "%s %s", midi_player, name);
-+    ks_system2(buf);
-+    return 0;
-+  }
-+
-   bzero(&sf, sizeof(sf));
-   bzero(buf, sizeof(buf));
-   if (name == NULL) {
