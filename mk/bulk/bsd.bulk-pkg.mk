@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.69 2005/01/17 08:52:50 jmmv Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.70 2005/01/19 20:58:00 tv Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -52,6 +52,12 @@ WC?=	wc
 # exist or are up to date and they take quite a while to rebuild.  So unless
 # they're known to exist and be up to date, don't use them.
 USE_BULK_CACHE?=	no
+
+# This variable may be set to 'no' to avoid automatic rebuilding of dependent
+# packages based solely on timestamps of the package's pkgsrc files and/or
+# its dependency binary packages.  This will cause rebuilding only when the
+# full version number of the package changes (e.g., via PKGREVISION bump).
+USE_BULK_TIMESTAMPS?=	yes
 
 # Shall we remove any packages which are installed, but not required
 # to build this package
@@ -117,6 +123,10 @@ ORDERFILE?=	${BULKFILESDIR}/.order${BULK_ID}
 # File which is used as a timestamp for when the build started.  This is used
 # eventually for looking for leftover files (files not properly deinstalled)
 STARTFILE?=	${BULKFILESDIR}/.start${BULK_ID}
+
+# File created and used by lintpkgsrc(8) to cache package metadata for
+# pruning and bulk-upload exclusions.
+LINTPKGSRC_DB?=	${BULKFILESDIR}/.lintpkgsrc.db${BULK_ID}
 
 # File which is used as a database for bulk builds in which SPECIFIC_PKGS is
 # defined.  This database is used to hold all the dependency and index
@@ -190,23 +200,25 @@ clean-bulk-cache:
 # check if the $REF file is uptodate, i.e. is newer than any of
 # the pkg files; prints "1" if upto date, "0" if not.
 bulk-check-uptodate:
-	@uptodate=1 ; \
-	if [ -f "${REF}" ]; then \
-		${SHCOMMENT} "Check files of this package" ; \
-		newfiles="`${FIND} . -type f -newer "${REF}" -print | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' || ${TRUE}`" ; \
-		nnewfiles="`${FIND} . -type f -newer "${REF}" -print | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' | ${WC} -l`" ; \
-		if [ "$$nnewfiles" -gt 0 ]; then \
-			${ECHO_MSG} >&2 "BULK> Package ${PKGNAME} ($$newfiles) modified since last 'make package' re-packaging..." ; \
-			uptodate=0 ; \
+	@uptodate=1; \
+	if [ "$USE_BULK_TIMESTAMPS" = "yes" ]; then \
+		if [ -f "${REF}" ]; then \
+			${SHCOMMENT} "Check files of this package"; \
+			newfiles="`${FIND} . -type f -newer "${REF}" -print | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' || ${TRUE}`"; \
+			nnewfiles="`${FIND} . -type f -newer "${REF}" -print | ${EGREP} -v -e ./work -e COMMENT -e DESCR -e README.html -e CVS -e '^\./\.' | ${WC} -l`"; \
+			if [ "$$nnewfiles" -gt 0 ]; then \
+				${ECHO_MSG} >&2 "BULK> Package ${PKGNAME} ($$newfiles) modified since last 'make package' re-packaging..."; \
+				uptodate=0; \
+			else \
+				${ECHO_MSG} >&2 "BULK> ${REF} is up to date."; \
+			fi; \
 		else \
-			${ECHO_MSG} >&2 "BULK> ${REF} is up to date." ; \
-		fi ; \
-	else \
-		${ECHO_MSG} >&2 "BULK> Package ${PKGNAME} not built yet, packaging..." ; \
-		uptodate=0 ; \
-	fi ; \
+			${ECHO_MSG} >&2 "BULK> Package ${PKGNAME} not built yet, packaging..."; \
+			uptodate=0; \
+		fi; \
+	fi; \
 	if [ "$$uptodate" = "1" ]; then \
-		${SHCOMMENT} "Check required binary packages" ; \
+		${SHCOMMENT} "Check required binary packages"; \
 		(${DEPENDS:C/:.*$//:@d@${ECHO} ${d:Q};@} ${TRUE}) | \
 		while read dep; do \
 			${SHCOMMENT} "check against the binary pkg that pkg_add would pick, too:" ; \
@@ -215,7 +227,7 @@ bulk-check-uptodate:
 			if [ -z "$$pkg" ]; then \
 				${ECHO_MSG} >&2 "BULK> Required binary package $$dep does not exist, rebuilding... " ; \
 				uptodate=0 ; \
-			elif [ -n "$$(${FIND} $$pkg -prune -newer ${REF} -print)" ]; then \
+			elif [ "$USE_BULK_TIMESTAMPS" = "yes" ] && [ -n "$$(${FIND} $$pkg -prune -newer ${REF} -print)" ]; then \
 				${ECHO_MSG} >&2 "BULK> Required binary package $$dep (`basename $$pkg`) is newer, rebuilding... " ; \
 				uptodate=0 ; \
 			else \

@@ -1,5 +1,5 @@
 # build.conf
-# $NetBSD: build.conf-example,v 1.22 2004/08/12 22:18:07 sketch Exp $
+# $NetBSD: build.conf-example,v 1.23 2005/01/19 20:58:01 tv Exp $
 #
 # config file in /bin/sh syntax for {,pre,post}-build
 #
@@ -12,7 +12,7 @@
 FTPx=`date +%Y%m%d.%H%M`
 FTPURL="pub/NetBSD/pkgstat/${FTPx}"		# relative to ~ftp !
 FTP="/home/ftp/${FTPURL}"			# absolute base path
-FTPHOST="ftp://ftp.machi.ne"                    # host for broken.html
+FTPHOST="ftp://ftp.machi.ne"			# host for broken.html
 
 # Where build will mail the report
 ADMIN="you@some.whe.re"
@@ -39,6 +39,14 @@ CVS_USER="yourlogin"
 # prune distfiles to remove those which are out of date
 # can be set to 'yes' or 'no'.
 PRUNEDISTFILES=no
+
+# prune binary packages to remove those which are out of date
+# can be set to 'yes' or 'no'.
+PRUNEPACKAGES=yes
+
+# whether to cache the lintpkgsrc database for PRUNE* or uploading
+# can be set to 'yes' or 'no'.
+LINTPKGSRC_CACHE=no
 
 # Proxies (optional):
 #ftp_proxy=http://proxy.machi.ne:3128/
