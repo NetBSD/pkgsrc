@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.7123 2004/09/08 16:02:27 wulf Exp $
+$NetBSD: CHANGES,v 1.7124 2004/09/08 16:29:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4221,3 +4221,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated cfitsio to 2.500 [wiz 2004-09-08]
 	Updated doc++ to 3.4.10 [wiz 2004-09-08]
 	Updated ical to 2.3.1 [wulf 2004-09-08]
+	Updated gcvs to 1.0 [wiz 2004-09-08]
