@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.10 1998/11/18 13:04:24 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 1999/01/01 01:56:51 frueauf Exp $
 # FreeBSD Id: Makefile,v 1.19 1998/03/08 06:44:48 obrien Exp
 #
 
-DISTNAME=		lsof_4.37_W
-PKGNAME=		lsof-4.37
+DISTNAME=		lsof_4.39_W
+PKGNAME=		lsof-4.39
+WRKSRC=			${WRKDIR}/${SRCBALL_NAME}
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
 			ftp://ftp.cert.dfn.de/pub/tools/admin/lsof/  \
@@ -14,19 +15,14 @@ MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/  \
 MAINTAINER=		packages@netbsd.org
 HOMEPAGE=		http://www-rcd.cc.purdue.edu/~abe/
 
-CONFLICTS=		lsof-4.29 lsof-4.31 lsof-4.33 lsof-4.36
+CONFLICTS=		lsof-*
 
-WRKSRC=			${WRKDIR}/${SRCBALL_NAME}
 DIST_SUBDIR=		lsof
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	Configure
 OPSYS!=			uname -s
-.if (${OPSYS} == "FreeBSD")
-CONFIGURE_ARGS=		-n freebsd
-.elif (${OPSYS} == "NetBSD")
 CONFIGURE_ARGS=		-n netbsd
-.endif
 
 SRCBALL_NAME=		${DISTNAME:S/_W$//}
 
