@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.options,v 1.6 2004/07/30 21:38:07 jlam Exp $
+# $NetBSD: Makefile.options,v 1.7 2004/07/30 21:44:43 jlam Exp $
 
 # Global and legacy options
 #
@@ -50,7 +50,7 @@ PKG_OPTIONS.postfix=	${POSTFIX_OPTIONS}
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postfix
-PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql mysql4 pcre sasl tls
+PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql mysql4 pcre pgsql sasl tls
 .include "../../mk/bsd.options.mk"
 
 ###
@@ -118,20 +118,16 @@ AUXLIBS+=	-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql		\
 		-lmysqlclient -lz -lm
 .endif
 
-## ###
-## ### Support using a PostgreSQL database server for table lookups.
-## ###
-## .if !empty(PKG_OPTIONS:Mpgsql)
-## .  include "../../mk/pgsql.buildlink3.mk"
-## .  include "../../security/openssl/buildlink3.mk"
-## PATCHFILES+=		postfix-pg.postfix-2.0.0.2.patch
-## PATCH_SITES+=		http://www.mat.cc/postfix/
-## PATCH_DIST_STRIP=	-p1
-##
-## CCARGS+=	-DHAS_PGSQL -I${PGSQL_PREFIX}/include/pgsql
-## AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq \
-##		-L${BUILDLINK_PREFIX.openssl}/lib -lcrypt
-## .endif
+###
+### Support using a PostgreSQL database server for table lookups.
+###
+.if !empty(PKG_OPTIONS:Mpgsql)
+.  include "../../mk/pgsql.buildlink3.mk"
+.  include "../../security/openssl/buildlink3.mk"
+CCARGS+=	-DHAS_PGSQL -I${PGSQL_PREFIX}/include/pgsql
+AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq \
+		-L${BUILDLINK_PREFIX.openssl}/lib -lcrypt -lssl -lcrypto
+.endif
 
 ###
 ### SASL support for SMTP authentication.  If neither SASLv1 or SASLv2 is
