@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.3 2004/06/09 22:22:09 kivinen Exp $
+$NetBSD: patch-af,v 1.4 2004/06/30 14:22:49 kivinen Exp $
 
 --- apm_read.c.orig	2001-11-23 23:07:19.000000000 +0200
 +++ apm_read.c
@@ -10,12 +10,20 @@ $NetBSD: patch-af,v 1.3 2004/06/09 22:22:09 kivinen Exp $
  
  #include "state.h"
  extern struct apm_state state;
-@@ -136,18 +137,163 @@ void ReadAPMDevice( )		/* FreeBSD versio
+@@ -136,18 +137,183 @@ void ReadAPMDevice( )		/* FreeBSD versio
  	state.time_left = info.ai_batt_time / 60;
  }
  #elif defined(__NetBSD__)||defined(__OpenBSD__)
 +
 +#include <sys/envsys.h>
++
++/* We cannot use ifdef ENVSYS_SWATTHOUR etc as it is enum. The
++   ENVSYS_FFRACVALID was added at the same time as WATTHOUR and INDICATOR, so
++   we use it to see if we have the support for those. */
++#ifdef ENVSYS_FFRACVALID
++#define HAVE_ENVSYS_SWATTHOUR
++#define HAVE_ENVSYS_INDICATOR
++#endif /* ENVSYS_FFRACVALID */
 +
 +int match_end(const char *str, const char *end_part)
 +{
@@ -33,7 +41,7 @@ $NetBSD: patch-af,v 1.3 2004/06/09 22:22:09 kivinen Exp $
 +	int count = 0;
 +        envsys_basic_info_t ebis;
 +	envsys_tre_data_t etds;
-+	int32_t design, charge, warn_cap, low_cap, rate;
++	int32_t design, charge, warn_cap, low_cap, discharge_rate, charge_rate;
 +	int connected, charging, percent, time_units, battery_status;
 +
 +	if ((fd = open(sysmon_device_file, O_RDONLY)) == -1) {
@@ -45,7 +53,8 @@ $NetBSD: patch-af,v 1.3 2004/06/09 22:22:09 kivinen Exp $
 +	charge = 0;
 +	warn_cap = 0;
 +	low_cap = 0;
-+	rate = 0;
++	charge_rate = 0;
++	discharge_rate = 0;
 +	connected = 0;
 +	charging = 0;
 +	percent = 0;
@@ -74,6 +83,7 @@ $NetBSD: patch-af,v 1.3 2004/06/09 22:22:09 kivinen Exp $
 +		if (!(etds.validflags & ENVSYS_FCURVALID))
 +			continue;
 +
++#ifdef HAVE_ENVSYS_SWATTHOUR
 +		if (etds.units == ENVSYS_SWATTHOUR) {
 +			/* Watt hours, this must be battery capacity info. */
 +			if (match_end(ebis.desc, " design cap")) {
@@ -85,7 +95,10 @@ $NetBSD: patch-af,v 1.3 2004/06/09 22:22:09 kivinen Exp $
 +			} else if (match_end(ebis.desc, " low cap")) {
 +				low_cap += etds.cur.data_s;
 +			}
-+		} else if (etds.units == ENVSYS_INDICATOR) {
++		}
++#endif /* HAVE_ENVSYS_SWATTHOUR */
++#ifdef HAVE_ENVSYS_INDICATOR
++		if (etds.units == ENVSYS_INDICATOR) {
 +			/* Indicator of something, check for connected. */
 +			if (match_end(ebis.desc, " connected")) {
 +				connected = etds.cur.data_us;
@@ -93,11 +106,16 @@ $NetBSD: patch-af,v 1.3 2004/06/09 22:22:09 kivinen Exp $
 +				charging = etds.cur.data_us;
 +			}
 +
-+		} else if (etds.units == ENVSYS_SWATTS) {
++		}
++#endif /* HAVE_ENVSYS_INDICATOR */
++		if (etds.units == ENVSYS_SWATTS) {
 +			/* Watts, this must discharge rate. */
 +			if (match_end(ebis.desc, " discharge rate")) {
-+				rate += etds.cur.data_s;
++				discharge_rate += etds.cur.data_s;
++			} else if (match_end(ebis.desc, " charge rate")) {
++				charge_rate += etds.cur.data_s;
 +			}
++
 +		}
 +	}
 +
@@ -144,8 +162,10 @@ $NetBSD: patch-af,v 1.3 2004/06/09 22:22:09 kivinen Exp $
 +		++state.update;
 +	}
 +
-+	if (rate > 0) {
-+		time_units = charge / (rate / 60);
++	if (discharge_rate > 0) {
++		time_units = charge / (discharge_rate / 60);
++	} else if (charge_rate > 0 && design > 0 && charging) {
++		time_units = (design - charge) / (charge_rate / 60);
 +	}
 +
 +	/* we can display maximum 99:59 */
