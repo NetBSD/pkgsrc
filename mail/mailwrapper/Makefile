@@ -1,45 +1,38 @@
-# $NetBSD: Makefile,v 1.16 2004/01/20 12:19:43 agc Exp $
+# $NetBSD: Makefile,v 1.17 2004/07/23 23:01:23 jlam Exp $
 
 DISTNAME=	mailwrapper-19990412
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-COMMENT=	NetBSD 1.4's wrapper to support arbitrary Mail Transport Agents
+COMMENT=	wrapper to support arbitrary Mail Transport Agents
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
 WRKSRC=			${WRKDIR}/mailwrapper
-USE_PKGINSTALL=		yes
-NO_CONFIGURE=		yes
 MANCOMPRESSED_IF_MANZ=	yes
 
-.if exists(/usr/sbin/mailwrapper)
-PKG_SKIP_REASON= "${PKGNAME} is part of your ${OPSYS} distribution"
-.endif
+USE_PKGINSTALL=		yes
+DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+EGDIR=			${PREFIX}/share/examples/mailwrapper
 
-EGDIR=		${PREFIX}/share/examples/mailwrapper
-CONF_FILES=	${EGDIR}/mailer.conf ${PKG_SYSCONFDIR}/mailer.conf
+MAILWRAPPEES=	/usr/bin/mailq						\
+		/usr/bin/newaliases	/usr/sbin/newaliases		\
+		/usr/sbin/sendmail	/usr/lib/sendmail
+FILES_SUBST=	MAILWRAPPEES=${MAILWRAPPEES:Q}
 
-LIBEXECDIR=	/usr/libexec/sendmail
-SENDMAIL=	/usr/sbin/sendmail
-
-post-patch:
-.for f in mailer.conf.5 mailwrapper.8 mailwrapper.c
-	${SED} -e 's|/etc/mailer.conf|${PKG_SYSCONFDIR}/mailer.conf|g' \
-		< ${WRKSRC}/$f > ${WRKSRC}/$f.new
-	${MV} ${WRKSRC}/$f.new ${WRKSRC}/$f
-.endfor
-.undef f
+do-configure:
+	cd ${WRKSRC};							\
+	for file in mailer.conf.5 mailwrapper.8 mailwrapper.c; do	\
+		${MV} $$file $$file.save;				\
+		${SED} -e "s|/etc/\(mailer.conf\)|${PKG_SYSCONFDIR}/\\1|g" \
+			$$file.save > $$file;				\
+	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/mailer.conf ${EGDIR}/mailer.conf
-	${INSTALL_DATA_DIR} ${LIBEXECDIR}
-	${MV} -i ${SENDMAIL} ${LIBEXECDIR} </dev/null 2>/dev/null || ${TRUE}
-	${LN} -fs ${PREFIX}/sbin/mailwrapper /usr/bin/mailq
-	${LN} -fs ${PREFIX}/sbin/mailwrapper /usr/bin/newaliases
-	${LN} -fs ${PREFIX}/sbin/mailwrapper ${SENDMAIL}
+	${INSTALL_DATA} ${WRKSRC}/mailer.conf ${EGDIR}/mailer.conf.sendmail
 
 .include "../../mk/bsd.pkg.mk"
