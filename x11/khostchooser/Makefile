@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 1999/10/09 20:27:36 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2000/04/13 00:20:38 dmcmahill Exp $
 #
 
 DISTNAME=	khostchooser-0.3
@@ -19,11 +19,12 @@ USE_X11BASE=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--datadir=${PREFIX}/share/kde \
-		--with-qt-dir=${PREFIX} \
-		--with-qt-includes=${PREFIX}/include/qt
+		--with-qt-dir=${X11BASE}/qt1 
 CFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	KDEDIR=${PREFIX} \
+		QTDIR=${X11BASE}/qt1 \
+		MOC=${X11BASE}/qt1/bin/moc \
 		CXXFLAGS="${CFLAGS}" \
-		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib"
+		all_libraries="-Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -Wl,-R${X11BASE}/lib -L${X11BASE}/lib"
 
 .include "../../mk/bsd.pkg.mk"

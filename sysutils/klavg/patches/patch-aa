@@ -1,28 +1,32 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/11/06 15:57:41 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2000/04/13 00:11:49 dmcmahill Exp $
 
---- Makefile.orig	Mon Jun 28 08:44:35 1999
-+++ Makefile	Fri Nov  5 14:29:58 1999
-@@ -2,12 +2,15 @@
- 
+--- Makefile.orig	Wed Apr 12 20:06:49 2000
++++ Makefile	Wed Apr 12 20:05:44 2000
+@@ -3,15 +3,18 @@
  KLAVGVER=1.1
  
-+QTDIR=	${X11BASE}
++QTDIR=	${X11BASE}/qt1
 +KDEDIR=	${X11BASE}
 +
  #------------
  
 -INCDIR = -I$(QTDIR)/include  -I$(KDEDIR)/include -I/usr/include/qt
 -CFLAGS = -DKLAVGVERSION=\"$(KLAVGVER)\" -O2 -fno-strength-reduce -Wall -W -I/usr/X11R6/include
-+INCDIR = -I$(QTDIR)/include/qt  -I$(KDEDIR)/include
++INCDIR = -I$(QTDIR)/include  -I$(KDEDIR)/include
 +CFLAGS = -DKLAVGVERSION=\"$(KLAVGVER)\" -O2 -fno-strength-reduce -Wall -W -I${X11BASE}/include
  LIBCFLAGS = 
 -LFLAGS = -L/usr/X11R6/lib -L$(QTDIR)/lib -L$(KDEDIR)/lib \
-+LFLAGS = -L${X11BASE}/lib -Wl,-R${X11BASE} -L$(QTDIR)/lib -L$(KDEDIR)/lib \
++LFLAGS = -L${X11BASE}/lib -Wl,-R${X11BASE} -L$(QTDIR)/lib -Wl,-R$(QTDIR)/lib -L$(KDEDIR)/lib \
           -lqt -lkdecore -lkdeui -lkfile -lkfm -lXext -lX11
  
  CC  = gcc
-@@ -61,6 +64,4 @@
- 	cd ..; rm -f klavg-$(KLAVGVER).tar klavg-$(KLAVGVER).tar.gz; tar --exclude CVS -cvf klavg-$(KLAVGVER).tar klavg; gzip -9 klavg-$(KLAVGVER).tar
+-#MOC = $(QTDIR)/bin/moc
+-MOC = moc
++MOC = $(QTDIR)/bin/moc
++#MOC = moc
+ SHELL =	/bin/sh
+ 
+@@ -62,5 +65,3 @@
  
  install: $(TARGET)
 -	cp klavg /usr/bin
