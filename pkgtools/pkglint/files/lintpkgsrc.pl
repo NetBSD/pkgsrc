@@ -1,6 +1,6 @@
 #!@PREFIX@/bin/perl
 
-# $NetBSD: lintpkgsrc.pl,v 1.46 2001/04/27 16:10:36 abs Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.47 2001/05/01 15:52:50 abs Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -765,7 +765,7 @@ sub parse_makefile_vars
 		$vars{$key} = $_;
 		$loop = 1;
 		}
-	    elsif ($vars{$key} =~ m#\${(\w+):([CS]([^{}])[^{}\3]+\3[^{}\3]*\3g?(|:[^{}]+))}#)
+	    elsif ($vars{$key} =~ m#\${(\w+):([CS]([^{}])[^{}\3]+\3[^{}\3]*\3[g1]*(|:[^{}]+))}#)
 		{
 		my($left, $subvar, $right) = ($`, $1, $');
 		my(@patterns) = split(':', $2);
@@ -783,7 +783,7 @@ sub parse_makefile_vars
 		debug("substitutelist: $key ($result) $subvar (@patterns)\n");
 		foreach (@patterns)
 		    {
-		    if (! m#([CS])/([^/]+)/([^/]*)/(g?)#)
+		    if (! m#([CS])/([^/]+)/([^/]*)/([1g]*)#)
 			{ next; }
 
 		    my($how, $from, $to, $global) = ($1, $2, $3, $4);
@@ -792,8 +792,15 @@ sub parse_makefile_vars
 		    if ($how eq 'S') # Limited substitution - keep ^ and $
 			{ $from =~ s/([?.{}\]\[*+])/\\$1/g; }
 		    $to =~ s/\\(\d)/\$$1/g; # Change \1 etc to $1
+
+		    my($notfirst);
+		    if ($global =~ s/1//)
+			{ ($from, $notfirst) = split('\s', $from, 2); }
+
 		    debug("substituteperl: $subvar, $how, $from, $to\n");
 		    eval "\$result =~ s/$from/$to/$global";
+		    if (defined $notfirst)
+			{ $result .= " $notfirst"; }
 		    }
 		$vars{$key} = $left . $result . $right;
 		$loop = 1;
