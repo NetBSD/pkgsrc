@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2003/09/23 05:34:35 adam Exp $
+# $NetBSD: Makefile,v 1.52 2003/09/28 21:26:44 seb Exp $
 
 DISTNAME=		Wine-20030911
 PKGNAME=		${DISTNAME:S/W/w/}
-WRKSRC= 		${WRKDIR}/${DISTNAME:tl}
+WRKSRC= 		${WRKDIR}/${DISTNAME:S/W/w/}
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.ibiblio.org/Linux/ALPHA/wine/development/ \
 			${MASTER_SITE_SOURCEFORGE:=wine/} \
