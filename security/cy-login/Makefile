@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/02/08 03:00:29 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2004/03/23 06:13:30 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy-login/}
 COMMENT=	Cyrus SASL LOGIN authentication plugin
@@ -12,7 +12,7 @@ SASL_PLUGIN=	YES
 CONFIGURE_ARGS+=	--enable-login		# LOGIN
 CONFIGURE_ARGS+=	--enable-plain		# PLAIN
 .if defined(USE_PAM)
-.  include "../../security/PAM/buildlink2.mk"
+.  include "../../security/PAM/buildlink3.mk"
 BUILD_DEFS+=		USE_PAM
 CONFIGURE_ARGS+=	--with-pam=${BUILDLINK_PREFIX.pam}
 .endif
