@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5062 2004/03/02 23:15:32 snj Exp $
+$NetBSD: CHANGES,v 1.5063 2004/03/03 01:42:14 recht Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1120,3 +1120,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bozohttpd to 20040218nb2 [wiz 2004-03-02]
 	Updated sylpheed to 0.9.10 [chris 2004-03-02]
 	Updated bzflag to 1.10.4 [snj 2004-03-02]
+	Updated mono to 0.30.2 [recht 2004-03-03]
