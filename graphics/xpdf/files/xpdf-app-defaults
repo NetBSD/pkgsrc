@@ -12,3 +12,5 @@ xpdf.t1CourierBold:          @@LOCALBASE@@/share/ghostscript/fonts/n022004l.pfb
 xpdf.t1CourierBoldOblique:   @@LOCALBASE@@/share/ghostscript/fonts/n022024l.pfb
 xpdf.t1Symbol:               @@LOCALBASE@@/share/ghostscript/fonts/s050000l.pfb
 xpdf.t1ZapfDingbats:         @@LOCALBASE@@/share/ghostscript/fonts/d050000l.pfb
+xpdf.freeTypeControl:        aa
+xpdf.t1libControl:           aa
