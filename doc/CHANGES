@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2934 2003/07/30 12:02:30 jmmv Exp $
+$NetBSD: CHANGES,v 1.2935 2003/07/30 13:38:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3068,3 +3068,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated xconq to 7.4.1nb1 [kleink 2003-07-30]
 	Updated delegate to 8.5.2nb1 [jmmv 2003-07-30]
 	Updated dynipclient to 3.00nb1 [jmmv 2003-07-30]
+	Updated easytag to 0.28.1 [wiz 2003-07-30]
