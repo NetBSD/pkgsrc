@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2004/02/18 23:25:13 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2004/06/26 20:27:15 recht Exp $
 #
 
 DISTNAME=	Xalan-C_1_6-src
 PKGNAME=	xalan-c-1.6
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://archive.apache.org/dist/xml/xalan-c/source/
 
