@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.162 2002/10/04 14:57:47 hubertf Exp $
+$NetBSD: CHANGES,v 1.163 2002/10/04 15:05:13 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -3108,3 +3108,4 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated audacity to 1.0.0.2 [jlam 2002-10-04]
 	Added dictd-1.8.0 [uebayasi 2002-10-04]
 	Updated x2vnc to 1.4 [hubertf 2002-10-04]
+	Added otpCalc-0.96 [hubertf 2002-10-04]
