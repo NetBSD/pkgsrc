@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 1999/10/22 23:35:37 tron Exp $
+# $NetBSD: Makefile,v 1.27 1999/12/06 00:47:09 hubertf Exp $
 #
 
 DISTNAME=	ORBit-0.5.0
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.gnome.org/
 
 DEPENDS+=	glib-1.2.*:../../devel/glib
 DEPENDS+=	gindent-*:../../devel/gindent
+DEPENDS+=	gettext-0.10.*:../../devel/gettext
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
