@@ -1,7 +1,0 @@
-man/man4/en.4.gz
-man/man4/natm.4.gz
-man/man4/pvc.4.gz
-man/man8/pvcsif.8.gz
-man/man8/pvctxctl.8.gz
-sbin/pvcsif
-sbin/pvctxctl
