@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2004/04/08 01:03:33 fredb Exp $
+# $NetBSD: Makefile,v 1.29 2004/04/23 23:39:07 snj Exp $
 
 DISTNAME=	uudeview-0.5.20
 PKGNAME=	xdeview-0.5.20
@@ -13,7 +13,7 @@ USE_X11=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-tcl="${LOCALBASE}" --enable-tk="${LOCALBASE}"
 LDFLAGS+=	-s -lX11
-USE_BUILDLINK2=	yes
+USE_BUILDLINK3=	yes
 
 ALL_TARGET=	xdeview
 INSTALL_TARGET=	install-tcl
@@ -21,6 +21,6 @@ INSTALL_TARGET=	install-tcl
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/xdeview.1 ${PREFIX}/man/man1
 
-.include "../../converters/uulib/buildlink2.mk"
-.include "../../x11/tk/buildlink2.mk"
+.include "../../converters/uulib/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
