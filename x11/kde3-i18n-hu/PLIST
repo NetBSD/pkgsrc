@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/06 10:21:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2004/04/20 14:38:39 markd Exp $
 share/doc/kde/HTML/hu/amor/common
 share/doc/kde/HTML/hu/amor/index.cache.bz2
 share/doc/kde/HTML/hu/amor/index.docbook
@@ -400,24 +400,6 @@ share/kde/locale/hu/LC_MESSAGES/crashesplugin.mo
 share/kde/locale/hu/LC_MESSAGES/cupsdconf.mo
 share/kde/locale/hu/LC_MESSAGES/cvsservice.mo
 share/kde/locale/hu/LC_MESSAGES/dcopservice.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kde-i18n.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdeaccessibility.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdeaddons.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdeadmin.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdeartwork.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdebase.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdeedu.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdegames.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdegraphics.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdelibs.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdemultimedia.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdenetwork.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdepim.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdesdk.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdetoys.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdeutils.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_kdevelop.mo
-share/kde/locale/hu/LC_MESSAGES/desktop_quanta.mo
 share/kde/locale/hu/LC_MESSAGES/devicesapplet.mo
 share/kde/locale/hu/LC_MESSAGES/dirfilterplugin.mo
 share/kde/locale/hu/LC_MESSAGES/display.mo
@@ -580,6 +562,7 @@ share/kde/locale/hu/LC_MESSAGES/kdesktop.mo
 share/kde/locale/hu/LC_MESSAGES/kdessh.mo
 share/kde/locale/hu/LC_MESSAGES/kdesu.mo
 share/kde/locale/hu/LC_MESSAGES/kdesud.mo
+share/kde/locale/hu/LC_MESSAGES/kdevelop.mo
 share/kde/locale/hu/LC_MESSAGES/kdevtipofday.mo
 share/kde/locale/hu/LC_MESSAGES/kdf.mo
 share/kde/locale/hu/LC_MESSAGES/kdgantt.mo
@@ -642,6 +625,7 @@ share/kde/locale/hu/LC_MESSAGES/kghostview.mo
 share/kde/locale/hu/LC_MESSAGES/kgoldrunner.mo
 share/kde/locale/hu/LC_MESSAGES/kgpg.mo
 share/kde/locale/hu/LC_MESSAGES/kgpgcertmanager.mo
+share/kde/locale/hu/LC_MESSAGES/kgreet_classic.mo
 share/kde/locale/hu/LC_MESSAGES/khangman.mo
 share/kde/locale/hu/LC_MESSAGES/khelpcenter.mo
 share/kde/locale/hu/LC_MESSAGES/khexedit.mo
@@ -697,6 +681,10 @@ share/kde/locale/hu/LC_MESSAGES/kmenuedit.mo
 share/kde/locale/hu/LC_MESSAGES/kmessedwords.mo
 share/kde/locale/hu/LC_MESSAGES/kmid.mo
 share/kde/locale/hu/LC_MESSAGES/kmidi.mo
+share/kde/locale/hu/LC_MESSAGES/kmilo_generic.mo
+share/kde/locale/hu/LC_MESSAGES/kmilo_kvaio.mo
+share/kde/locale/hu/LC_MESSAGES/kmilo_powerbook.mo
+share/kde/locale/hu/LC_MESSAGES/kmilod.mo
 share/kde/locale/hu/LC_MESSAGES/kmines.mo
 share/kde/locale/hu/LC_MESSAGES/kminipagerapplet.mo
 share/kde/locale/hu/LC_MESSAGES/kmix.mo
@@ -714,6 +702,7 @@ share/kde/locale/hu/LC_MESSAGES/knotify.mo
 share/kde/locale/hu/LC_MESSAGES/kodo.mo
 share/kde/locale/hu/LC_MESSAGES/kolf.mo
 share/kde/locale/hu/LC_MESSAGES/kolourpicker.mo
+share/kde/locale/hu/LC_MESSAGES/kommander.mo
 share/kde/locale/hu/LC_MESSAGES/kompare.mo
 share/kde/locale/hu/LC_MESSAGES/konq_smbmounterplugin.mo
 share/kde/locale/hu/LC_MESSAGES/konqsidebar_mediaplayer.mo
