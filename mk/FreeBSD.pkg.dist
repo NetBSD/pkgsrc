@@ -1,4 +1,4 @@
-#	$NetBSD: FreeBSD.pkg.dist,v 1.50 2004/10/04 20:47:41 cube Exp $
+#	$NetBSD: FreeBSD.pkg.dist,v 1.51 2004/10/09 09:17:12 jmmv Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -474,6 +474,10 @@
                 ..
             ..
             az
+                LC_MESSAGES
+                ..
+            ..
+            az_IR
                 LC_MESSAGES
                 ..
             ..
