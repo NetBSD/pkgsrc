@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2003/12/30 15:57:53 bad Exp $
+$NetBSD: distinfo,v 1.16 2004/11/22 12:42:46 shannonjr Exp $
 
 SHA1 (isakmpd-20030903.tar.gz) = 3400947199759a69b878ea396a598d9df174c6e8
 Size (isakmpd-20030903.tar.gz) = 358314 bytes
@@ -11,3 +11,4 @@ SHA1 (patch-aj) = 16e592ec1666b70ba6726e4a20878333ca50d7c2
 SHA1 (patch-ak) = e168240460695a86533237856f3997b5c06d7805
 SHA1 (patch-al) = eb6c16bf8d98219ab5d70dc5378a47772ec4dc23
 SHA1 (patch-am) = 6220da76dcf0d2a150f8803ce5728469a4e66c31
+SHA1 (patch-an) = 4df8fdbaf5852c0177244e6ea62533b1c454ec94
