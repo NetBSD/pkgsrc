@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/02/23 17:03:42 bouyer Exp $
+$NetBSD: patch-aa,v 1.2 1999/04/04 23:34:46 tron Exp $
 
 --- configure.orig	Sat Jul 18 10:34:33 1998
 +++ configure	Sat Jul 18 10:35:03 1998
