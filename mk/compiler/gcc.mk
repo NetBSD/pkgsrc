@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.9 2004/02/02 10:34:00 jlam Exp $
+# $NetBSD: gcc.mk,v 1.10 2004/02/02 10:49:26 jlam Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -95,6 +95,9 @@ MAKEFLAGS+=		_IGNORE_GCC=yes
 .  elif !empty(_LANGUAGES.gcc)
 _GCC_PKGSRCDIR=		../../lang/gcc
 _GCC_DEPENDENCY=	gcc>=${_GCC_REQD}:../../lang/gcc
+.    if !empty(_LANGUAGES.gcc:Mc++)
+USE_GCC_SHLIB?=		yes
+.    endif
 .  endif
 .elif defined(_NEED_GCC3)
 #
@@ -119,6 +122,7 @@ MAKEFLAGS+=		_IGNORE_GCC3CXX=yes
 .  elif !empty(_LANGUAGES.gcc:Mc++)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-c++
 _GCC_DEPENDENCY+=	gcc3-c++>=${_GCC_REQD}:../../lang/gcc3-c++
+USE_GCC_SHLIB?=		yes
 .  endif
 .  if !empty(PKGPATH:Mlang/gcc3-f77)
 _IGNORE_GCC3F77=	yes
@@ -126,6 +130,7 @@ MAKEFLAGS+=		_IGNORE_GCC3F77=yes
 .  elif !empty(_LANGUAGES.gcc:Mfortran)
 _GCC_PKGSRCDIR+=	../../lang/gcc3-f77
 _GCC_DEPENDENCY+=	gcc3-f77>=${_GCC_REQD}:../../lang/gcc3-f77
+USE_GCC_SHLIB?=		yes
 .  endif
 .endif
 _GCC_DEPENDS=		${_GCC_PKGBASE}>=${_GCC_REQD}
