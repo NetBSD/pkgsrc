@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.8 2001/05/20 05:23:28 jonb Exp $
+# $NetBSD: Makefile,v 1.9 2002/01/10 13:18:06 jlam Exp $
 #
 
-PKGNAME=	ap-${DISTNAME}
+PKGNAME=		ap-php-${BASE_VERS}
+PKGREVISION=		# empty
+COMMENT=		Apache module for PHP3
 
-COMMENT=	PHP3 server module for Apache
+USE_BUILDLINK_ONLY=	yes
 
-DEPENDS+=	apache{,6}-1.3.*:../../www/apache
+.include "../../www/php3/Makefile.common"
 
-USE_PERL5=	# defined
+DEPENDS+=		php>=${BASE_VERS}:../../www/php3
+DEPENDS+=		apache{,6}>=1.3:../../www/apache
 
-CONFIGURE_ARGS+=	--with-apxs=${LOCALBASE}/sbin/apxs
-CONFIGURE_ENV+=		PERL_PATH=${PERL5}
-
-BUILDING_SERVER_MODULE=	yes
+CPPFLAGS+=		-DPHP_INTERNAL_FUNCS
 
 do-install:
-	@cd ${WRKSRC} && ${CP} libphp3.so mod_php3.so
-	@${PREFIX}/sbin/apxs -i ${WRKSRC}/mod_php3.so
+	${INSTALL_DATA} ${WRKSRC}/libphp3.so ${PREFIX}/lib/httpd/mod_php3.so
 
-.include "../php3/Makefile"
+.include "../../www/apache/buildlink.mk"
+.include "../../mk/bsd.pkg.mk"
