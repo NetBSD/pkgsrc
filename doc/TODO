@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2003 2004/08/04 18:24:14 jlam Exp $
+$NetBSD: TODO,v 1.2004 2004/08/04 19:59:59 minskim Exp $
 
 Suggested new packages
 ======================
@@ -298,7 +298,6 @@ Suggested package updates
 	o maradns-1.0.23
 	o marbles-1.0.6
 	o matchbox-0.8.2 [pkgsrc-wip]
-	o mathomatic-11.3c
 	o micq-0.4.11
 	o midnight-commander-4.6.0
 	o minicom-2.1
