@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.5 2001/06/28 22:23:00 abs Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.6 2001/06/29 11:24:51 abs Exp $
 
 hw_model=`sysctl -n hw.model`
 
@@ -35,14 +35,15 @@ case $hw_model in
     *)			echo "Unknown hw.model '$hw_model'" >&2
 esac
 
-if [ -n "$FLAGS" ];then
+if [ -n "$FLAGS" ]; then
     gcc_ver=`gcc -v 2>&1 | awk '/gcc version/ {print $3}'`
     case $gcc_ver in
 	egcs* )
 	    gcc_ver=2.8 ;;
     esac
 
-    if [ "$gcc_ver" \< 2.8 ];then		# Old gcc, such as in NetBSD 1.3
+    # Old gcc, such as 2.7.x in NetBSD 1.3
+    if [ "$gcc_ver" \< 2.8 ]; then
 	FLAGS=`awk -v "flags=$FLAGS" '
 {map["-m"$1] = "-m"$2}
 END{print map[flags]}' <<EOD
