@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.2969 2003/08/02 13:23:26 drochner Exp $
+$NetBSD: CHANGES,v 1.2970 2003/08/02 15:52:56 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3175,3 +3175,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added zope25-RenderableCharts-0.6 [drochner 2003-08-02]
 	Updated sqlite to 2.8.5 [drochner 2003-08-02]
 	Updated pyxml to 0.8.3 [drochner 2003-08-02]
+	Added avidemux-2.0.10 [jmmv 2003-08-02]
