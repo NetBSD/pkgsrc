@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/02/04 08:03:39 mrg Exp $
+@comment $NetBSD: PLIST,v 1.2 2001/04/28 01:28:05 jtb Exp $
 ${COMPAT_LIBDIR}/libamu.so.1.1
 ${COMPAT_LIBDIR}/libbfd.so.3.0
 ${COMPAT_LIBDIR}/libbz2.so.0.0
@@ -8,6 +8,8 @@ ${COMPAT_LIBDIR}/libcurses.so.2.2
 ${COMPAT_LIBDIR}/libedit.so.2.2
 ${COMPAT_LIBDIR}/libg2c.so.0.0
 ${COMPAT_LIBDIR}/libgnumalloc.so.0.0
+${COMPAT_LIBDIR}/libi386.so.0.2
+${COMPAT_LIBDIR}/libkeycap.so.0.0
 ${COMPAT_LIBDIR}/libkvm.so.5.0
 ${COMPAT_LIBDIR}/libm.so.0.1
 ${COMPAT_LIBDIR}/libntp.so.0.0
