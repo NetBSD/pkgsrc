@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2782 2004/12/27 18:21:32 wiz Exp $
+$NetBSD: TODO,v 1.2783 2004/12/27 21:13:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -734,7 +734,6 @@ Suggested package updates
 	o opera7-7.54u1
 	o oregano-0.21
 	o oroborus-2.0.13.1
-	o osh-041028
 	o oss-3.99.1i [also available for 2.0]
 	o p5-Apache-ASP-2.57
 	o p5-Apache-Gallery-0.9.1
