@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2003/03/15 20:15:28 kei Exp $
+# $NetBSD: Makefile,v 1.101 2003/03/23 10:12:20 jmmv Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -61,7 +61,6 @@ SUBDIR+=	lgrind
 SUBDIR+=	libgnomeprint
 SUBDIR+=	libgnomeprintui
 SUBDIR+=	lilypond
-SUBDIR+=	lyx
 SUBDIR+=	magicfilter
 SUBDIR+=	mgv
 SUBDIR+=	mp
