@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/05 10:29:16 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2003/07/05 10:41:35 seb Exp $
 bin/${PKGNAME}
 bin/gforth
 bin/gforth-fast
@@ -200,8 +200,12 @@ share/gforth/site-forth/siteinit.fs
 @dirrm share/gforth/0.5.0/arch/power
 @dirrm share/gforth/0.5.0/arch/shboom
 @dirrm share/gforth/0.5.0/arch/sparc
-@unexec ${RMDIR} %D/share/gforth/site-forth 2>/dev/null || ${TRUE}
+@dirrm share/gforth/0.5.0/arch
 @dirrm share/gforth/0.5.0
+@unexec ${RMDIR} %D/share/gforth/site-forth 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gforth 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/gforth/site-forth 2>/dev/null || ${TRUE}
 @dirrm lib/gforth/0.5.0
+@dirrm lib/gforth
