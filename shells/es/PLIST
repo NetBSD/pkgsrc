@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:26:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2005/03/10 16:58:39 tv Exp $
 bin/es
 bin/esdebug
-man/man1/es.1.gz
+man/man1/es.1
