@@ -1,10 +1,16 @@
-# $NetBSD: DEINSTALL,v 1.1.1.1 2002/10/02 20:33:31 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2002/10/02 21:06:53 jlam Exp $
 
 OSSLIBDIR="@OSSLIBDIR@"
 SFILES="@SFILES@"
 
 case ${STAGE} in
 DEINSTALL)
+	#
+	# Ensure the OSS LKM is unloaded.
+	#
+	if [ -f @RCD_SCRIPTS@/oss ]; then
+		@RCD_SCRIPTS@/oss forcestop
+	fi
 	#
 	# Unconditionally remove the OSS files in /etc.
 	#

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: oss.sh,v 1.2 2002/10/02 20:46:46 jlam Exp $
+# $NetBSD: oss.sh,v 1.3 2002/10/02 21:06:55 jlam Exp $
 #
 # PROVIDE: oss
 # REQUIRE: aftermountlkm
@@ -12,23 +12,31 @@ fi
 
 name="oss"
 rcvar=$name
-required_files="/etc/oss.conf"
+required_files="/etc/oss.conf @OSSLIBDIR@/devices.cfg"
 start_cmd="oss_start"
 stop_cmd="oss_stop"
 
 oss_start()
 {
-	if [ -x @PREFIX@/bin/soundon ]; then
+	missing_files=
+	for file in ${required_files}; do
+		if [ ! -f "${file}" ]; then
+			missing_files="${missing_files} ${file}"
+		fi
+	done
+	if [ -z "${missing_files}" -a -x @PREFIX@/sbin/soundon ]; then
 		@ECHO@ "Starting ${name}."
-		@PREFIX@/bin/soundon
+		@PREFIX@/sbin/soundon
 	fi
 }
 
 oss_stop()
 {
-	if [ -x @PREFIX@/bin/soundoff ]; then
-		@ECHO@ "Stopping ${name}."
-		@PREFIX@/bin/soundoff
+        if modstat -n oss >/dev/null; then
+		if [ -x @PREFIX@/sbin/soundoff ]; then
+			@ECHO@ "Stopping ${name}."
+			@PREFIX@/sbin/soundoff
+		fi
 	fi
 }
 

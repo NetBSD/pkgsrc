@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/02 20:33:30 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2002/10/02 21:06:53 jlam Exp $
 
 DISTNAME=	oss397d-netbsd-v1.6
 PKGNAME=	oss-3.97d
@@ -64,9 +64,9 @@ do-install: chroot
 	${LN} -sf ../lib/oss/play ${PREFIX}/bin/ossplay
 	${LN} -sf ../lib/oss/record ${PREFIX}/bin/ossrecord
 	${LN} -sf ../lib/oss/savemixer ${PREFIX}/bin/osssavemixer
-	${LN} -sf ../lib/oss/soundconf ${PREFIX}/bin/soundconf
-	${LN} -sf ../lib/oss/soundoff ${PREFIX}/bin/soundoff
-	${LN} -sf ../lib/oss/soundon ${PREFIX}/bin/soundon
+	${LN} -sf ../lib/oss/soundconf ${PREFIX}/sbin/soundconf
+	${LN} -sf ../lib/oss/soundoff ${PREFIX}/sbin/soundoff
+	${LN} -sf ../lib/oss/soundon ${PREFIX}/sbin/soundon
 
 	${RM} -rf ${WRKSRC}/bin ${WRKSRC}/sbin ${WRKSRC}/usr
 	${RM} -f ${WRKSRC}/dev/mixer0 ${WRKSRC}/dev/null
