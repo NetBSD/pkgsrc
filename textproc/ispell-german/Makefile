@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2004/01/24 15:13:20 grant Exp $
+# $NetBSD: Makefile,v 1.7 2004/03/12 19:54:51 recht Exp $
 #
 
-DISTNAME=	igerman98-20021114
-PKGNAME=	ispell-german-20021114
+DISTNAME=	igerman98-20030222
+PKGNAME=	ispell-german-20030222
 CATEGORIES=	textproc
 MASTER_SITES=	http://j3e.de/ispell/igerman98/dict/
 EXTRACT_SUFX=	.tar.bz2
@@ -24,5 +24,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/german.hash ${PREFIX}/lib
 	(cd ${PREFIX}/lib && ${LN} -s german.aff deutsch.aff)
 	(cd ${PREFIX}/lib && ${LN} -s german.hash deutsch.hash)
+	(cd ${PREFIX}/lib && ${LN} -s german.aff ngerman.aff)
+	(cd ${PREFIX}/lib && ${LN} -s german.hash ngerman.hash)
 
 .include "../../mk/bsd.pkg.mk"
