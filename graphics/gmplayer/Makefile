@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2003/10/26 14:05:25 tron Exp $
+# $NetBSD: Makefile,v 1.30 2003/10/26 22:01:04 kristerw Exp $
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
 PKGREVISION=	2
@@ -11,7 +11,7 @@ SKIN_SITES=	http://www.mplayerhq.hu/MPlayer/Skin/		\
 COMMENT=	Software only MPEG-1/2/4 video decoder with a GTK+ interface
 
 SKINS +=	default-1.7${EXTRACT_SUFX}			\
-		AlienMind-1.0${EXTRACT_SUFX}			\
+		AlienMind-1.1${EXTRACT_SUFX}			\
 		BlueHeart-1.4${EXTRACT_SUFX}			\
 		CornerMP-1.0${EXTRACT_SUFX}			\
 		CornerMP-aqua-1.0${EXTRACT_SUFX}		\
