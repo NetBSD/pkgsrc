@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.54 2004/05/07 01:14:50 xtraeme Exp $
+# $NetBSD: Makefile,v 1.55 2004/07/01 15:14:03 recht Exp $
 
-DISTNAME=	libxml2-2.6.9
+DISTNAME=	libxml2-2.6.10
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.6/}
-EXTRACT_SUFX=	.tar.bz2
+#MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.6/}
+#EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	ftp://xmlsoft.org/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/
 COMMENT=	XML parser library from the GNOME project
 
