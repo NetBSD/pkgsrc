@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1338 2004/01/26 12:11:25 adam Exp $
+$NetBSD: TODO,v 1.1339 2004/01/28 12:10:27 recht Exp $
 
 Suggested new packages
 ======================
@@ -222,6 +222,7 @@ Suggested package updates
 	o libmpeg3-1.5.3
 	o libole2-2.2.8
 	o libtool-1.5 [skrll]
+	o libtool-1.5.2
 	o licq-1.2.7
 	o lilypond-2.0.0
 	o lincity-1.12.0 [http://lincity.sourceforge.net/]
