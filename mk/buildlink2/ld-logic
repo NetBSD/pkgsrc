@@ -1,0 +1,8 @@
+# $NetBSD: ld-logic,v 1.3.4.2 2002/12/26 17:08:57 jlam Exp $
+
+case $arg in
+-Wl,*)
+	arg=`$echo "X$arg" | $Xsed -e "s|^-Wl,||g" -e "s|,| |g"`
+	addtoprivatecache=yes
+	;;
+esac

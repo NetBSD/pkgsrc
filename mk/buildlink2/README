@@ -1,0 +1,46 @@
+$NetBSD: README,v 1.5.4.2 2002/12/26 17:08:57 jlam Exp $
+
+For more general information about the use of buildlink2, see the file
+buildlink2.txt in this directory.
+
+ 0 buildlink2 Wrapper Script System
+ ==================================
+
+The purpose of the buildlink2 wrapper script system is to replace calls to
+compiler tool with scripts that tranlate any arguments into their buildlink
+equivalents, then invoke the actual compiler tools with the translated
+arguments.  The pkgsrc/mk/buildlink2 directory contains bits of the wrapper
+script system for the buildlink2 framework.  The wrapper script system is
+composed of three parts: the main wrapper script, the "cache", and the
+"logic" script.
+
+ 0.1 Main wrapper script
+ =======================
+
+The main wrapper script for a compiler tool (cc, ld, as, etc.) is
+generated from wrapper.sh, except for the libtool wrapper script which is
+generated from libtool.sh.  The wrapper scripts share a common set of logic
+files that translate arguments into their buildlink equivalents.
+
+ 0.2 Cache
+ =========
+
+The cache is a giant Bourne shell "case" statement that stores
+pre-translated arguments from previous wrapper invocations.  This allows
+speedy translation of already-seen arguments without having to run the
+utilities needed to perform a translation from scratch.  There are two
+caches: the common cache and a wrapper-specific cache.  The common cache
+is used by all wrapper scripts.  The wrapper-specific cache is read before
+the common cache and contains wrapper-specific argument translation that
+shouldn't be used by other wrapper scripts.
+
+ 0.3 Logic script
+ ================
+
+The logic script contains a large "case" statement that handles the
+actual translation of an argument into its buildlink equivalent.  The logic
+script also invokes a wrapper-specific logic script which may contain extra
+commands that perform further translation of an argument after the main
+translation has been performed by the logic script.  Finally, the logic
+script may save the translations results into a cache file if requested by
+the wrapper script.
