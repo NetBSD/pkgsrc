@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 15:59:12 agc Exp $
+$NetBSD: distinfo,v 1.6 2005/02/23 16:07:34 wiz Exp $
 
 SHA1 (loudmouth-0.17.2.tar.bz2) = 8dcc61ae95c3d852d1cf88f3198e0e023e70db7e
 RMD160 (loudmouth-0.17.2.tar.bz2) = c90f046af52a951c0a163fd4f516b82d4709d74e
 Size (loudmouth-0.17.2.tar.bz2) = 286981 bytes
+SHA1 (patch-aa) = c4b37369a347cb557b10739143de588b1c6008b4
