@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 09:19:32 jlam Exp $
+
+--- ext/standard/config.m4.orig	Wed Nov  1 12:20:14 2000
++++ ext/standard/config.m4	Wed Nov  1 12:20:36 2000
+@@ -120,10 +120,6 @@ main() {
+ 
+ AC_CHECK_FUNC(dlopen, [AC_DEFINE(HAVE_LIBDL,1,[ ])])
+ 
+-AC_CHECK_LIB(pam, pam_start, [
+-  EXTRA_LIBS="$EXTRA_LIBS -lpam"
+-  AC_DEFINE(HAVE_LIBPAM,1,[ ]) ], []) 
+-
+ AC_CHECK_FUNCS(getcwd getwd)
+ 
+ AC_CRYPT_CAP

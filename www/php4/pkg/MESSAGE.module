@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE.module,v 1.1.1.1 2000/12/17 09:19:32 jlam Exp $
+
+To enable this package, add the following lines to php.ini:
+
+	extension_dir=@PREFIX@/@PHP_EXTENSION_DIR@
+	extension=@MODNAME@.so
+
+and restart your PHP4-enabled HTTP server to load this module.
+===========================================================================
