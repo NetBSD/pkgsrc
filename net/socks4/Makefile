@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2004/08/18 14:25:04 tv Exp $
+# $NetBSD: Makefile,v 1.20 2004/09/08 15:03:15 sketch Exp $
 #
 
 DISTNAME=	export.socks.cstc.4.2.2
@@ -11,7 +11,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.socks.nec.com/socksv4.html
 COMMENT=	Old library, server and client for using proxy firewall software
 
-CONFLICTS=	socks5-[0-9]*
+CONFLICTS=	socks5-[0-9]* dante*
 LICENSE=	no-commercial-use
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
