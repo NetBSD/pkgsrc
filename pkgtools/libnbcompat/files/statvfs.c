@@ -1,4 +1,4 @@
-/*	$NetBSD: statvfs.c,v 1.2 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: statvfs.c,v 1.3 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -36,13 +36,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "nbcompat/nbconfig.h"
-
-#if HAVE_STRING_H
-#include <string.h>	/* memcpy() */
-#endif
-
-#include "nbcompat/statvfs.h"
+#include <nbcompat.h>
+#include <nbcompat/string.h>
+#include <nbcompat/statvfs.h>
 
 static void fs2vfs(struct statvfs *vfs, const struct statfs *sfs);
 

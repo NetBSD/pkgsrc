@@ -1,4 +1,4 @@
-/*	$NetBSD: err.h,v 1.3 2004/08/16 17:24:57 jlam Exp $	*/
+/*	$NetBSD: err.h,v 1.4 2004/08/23 03:32:13 jlam Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993
@@ -38,15 +38,22 @@
 #ifndef	_NBCOMPAT_ERR_H_
 #define	_NBCOMPAT_ERR_H_
 
+#if HAVE_ERR_H
+# include <err.h>
+#endif
+
 #if !HAVE_ERR
-void    err(int, const char *, ...);
-void    errx(int, const char *, ...);
-void	verr(int, const char *, va_list);
-void	verrx(int, const char *, va_list);
-void    warn(const char *, ...);
-void    warnx(const char *, ...);
-void	vwarn(const char *, va_list);
-void	vwarnx(const char *, va_list);
+void	err __P((int, const char *, ...));
+void	errx __P((int, const char *, ...));
+void	verr __P((int, const char *, va_list));
+void	verrx __P((int, const char *, va_list));
+#endif
+
+#if !HAVE_WARN
+void	warn __P((const char *, ...));
+void	warnx __P((const char *, ...));
+void	vwarn __P((const char *, va_list));
+void	vwarnx __P((const char *, va_list));
 #endif
 
 #endif /* !_NBCOMPAT_ERR_H_ */

@@ -1,4 +1,4 @@
-/*	$NetBSD: stat.h,v 1.1 2004/08/10 18:47:55 jlam Exp $	*/
+/*	$NetBSD: stat.h,v 1.2 2004/08/23 03:32:13 jlam Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -61,6 +61,10 @@ int	lchmod(const char *, mode_t);
 
 #if !defined(ALLPERMS)
 # define ALLPERMS	(S_ISUID|S_ISGID|S_ISTXT|S_IRWXU|S_IRWXG|S_IRWXO)
+#endif
+
+#if !defined(DEFFILEMODE)
+# define DEFFILEMODE	(S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH)
 #endif
 
 #endif	/* !_NBCOMPAT_STAT_H_ */

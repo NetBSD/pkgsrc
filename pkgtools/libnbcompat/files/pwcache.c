@@ -1,4 +1,4 @@
-/*	$NetBSD: pwcache.c,v 1.7 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: pwcache.c,v 1.8 2004/08/23 03:32:12 jlam Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -66,38 +66,48 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "nbcompat/nbconfig.h"
-
-#if HAVE_SYS_CDEFS_H
-#include <sys/cdefs.h>
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
+/*
+ * XXX Undefine the renames of these functions so that we don't
+ * XXX rename the versions found in the host's <pwd.h> by mistake!
+ */
+#undef group_from_gid
+#undef user_from_uid
 #endif
 
+#include <nbcompat.h>
+#include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
 #if 0
 static char sccsid[] = "@(#)cache.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: pwcache.c,v 1.7 2004/08/16 17:24:56 jlam Exp $");
+__RCSID("$NetBSD: pwcache.c,v 1.8 2004/08/23 03:32:12 jlam Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
-#include <sys/types.h>
-#include <sys/param.h>
+#if 0
+#include "namespace.h"
+#endif
 
-#include <assert.h>
+#include <nbcompat/types.h>
+#include <nbcompat/param.h>
+
+#include <nbcompat/assert.h>
 #include <nbcompat/grp.h>
 #include <nbcompat/pwd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include <nbcompat/stdio.h>
+#include <nbcompat/stdlib.h>
+#include <nbcompat/string.h>
+#include <nbcompat/unistd.h>
+
+#if HAVE_NBTOOL_CONFIG_H
+/* XXX Now, re-apply the renaming that we undid above. */
+#define	group_from_gid	__nbcompat_group_from_gid
+#define	user_from_uid	__nbcompat_user_from_uid
+#endif
 
 #if 0
-#ifndef __ELF__
-#define _user_from_uid	user_from_uid
-#define _group_from_gid	group_from_gid
-#define _pwcache_userdb	pwcache_userdb
-#define _pwcache_groupdb	pwcache_groupdb
-#else
 #ifdef __weak_alias
 __weak_alias(user_from_uid,_user_from_uid)
 __weak_alias(group_from_gid,_group_from_gid)
@@ -105,9 +115,9 @@ __weak_alias(pwcache_userdb,_pwcache_userdb)
 __weak_alias(pwcache_groupdb,_pwcache_groupdb)
 #endif
 #endif
-#endif
 
-#include "pwcache.h"
+#if !HAVE_PWCACHE_USERDB || HAVE_NBTOOL_CONFIG_H
+#include "private/pwcache.h"
 
 /*
  * routines that control user, group, uid and gid caches (for the archive
@@ -150,10 +160,6 @@ static	int	uidtb_start(void);
 static	int	gidtb_start(void);
 static	int	usrtb_start(void);
 static	int	grptb_start(void);
-
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(cond)	assert(cond)
-#endif
 
 
 static u_int
@@ -258,12 +264,12 @@ grptb_start(void)
 /*
  * user_from_uid()
  *	caches the name (if any) for the uid. If noname clear, we always
- *	return the the stored name (if valid or invalid match).
+ *	return the stored name (if valid or invalid match).
  *	We use a simple hash table.
  * Return
  *	Pointer to stored name (or a empty string)
  */
-#ifndef HAVE_USER_FROM_UID
+#if !HAVE_USER_FROM_UID
 const char *
 user_from_uid(uid_t uid, int noname)
 {
@@ -303,7 +309,7 @@ user_from_uid(uid_t uid, int noname)
 	if ((pw = (*_pwcache_getpwuid)(uid)) == NULL) {
 		/*
 		 * no match for this uid in the local password file
-		 * a string that is the uid in numberic format
+		 * a string that is the uid in numeric format
 		 */
 		if (ptr == NULL)
 			return (NULL);
@@ -324,17 +330,17 @@ user_from_uid(uid_t uid, int noname)
 	}
 	return (ptr->name);
 }
-#endif
+#endif /* !HAVE_USER_FROM_UID */
 
 /*
  * group_from_gid()
  *	caches the name (if any) for the gid. If noname clear, we always
- *	return the the stored name (if valid or invalid match).
+ *	return the stored name (if valid or invalid match).
  *	We use a simple hash table.
  * Return
  *	Pointer to stored name (or a empty string)
  */
-#ifndef HAVE_GROUP_FROM_GID
+#if !HAVE_GROUP_FROM_GID
 const char *
 group_from_gid(gid_t gid, int noname)
 {
@@ -395,7 +401,7 @@ group_from_gid(gid_t gid, int noname)
 	}
 	return (ptr->name);
 }
-#endif
+#endif /* !HAVE_GROUP_FROM_GID */
 
 /*
  * uid_from_user()
@@ -403,7 +409,7 @@ group_from_gid(gid_t gid, int noname)
  * Return
  *	the uid (if any) for a user name, or a -1 if no match can be found
  */
-#ifndef HAVE_UID_FROM_USER
+#if !HAVE_UID_FROM_USER
 int
 uid_from_user(const char *name, uid_t *uid)
 {
@@ -461,7 +467,7 @@ uid_from_user(const char *name, uid_t *uid)
 	*uid = ptr->uid = pw->pw_uid;
 	return (0);
 }
-#endif
+#endif /* !HAVE_UID_FROM_USER */
 
 /*
  * gid_from_group()
@@ -469,7 +475,7 @@ uid_from_user(const char *name, uid_t *uid)
  * Return
  *	the gid (if any) for a group name, or a -1 if no match can be found
  */
-#ifndef HAVE_GID_FROM_GROUP
+#if !HAVE_GID_FROM_GROUP
 int
 gid_from_group(const char *name, gid_t *gid)
 {
@@ -528,7 +534,7 @@ gid_from_group(const char *name, gid_t *gid)
 	*gid = ptr->gid = gr->gr_gid;
 	return (0);
 }
-#endif
+#endif /* !HAVE_GID_FROM_GROUP */
 
 #define FLUSHTB(arr, len, fail)				\
 	do {						\
@@ -541,7 +547,7 @@ gid_from_group(const char *name, gid_t *gid)
 		fail = 0;				\
 	} while (/* CONSTCOND */0);
 
-#ifndef HAVE_PWCACHE_USERDB
+#if !HAVE_PWCACHE_USERDB
 int
 pwcache_userdb(
 	int		(*a_setpassent)(int),
@@ -567,9 +573,9 @@ pwcache_userdb(
 
 	return (0);
 }
-#endif
+#endif /* !HAVE_PWCACHE_USERDB */
 
-#ifndef HAVE_PWCACHE_GROUPDB
+#if !HAVE_PWCACHE_GROUPDB
 int
 pwcache_groupdb(
 	int		(*a_setgroupent)(int),
@@ -595,7 +601,7 @@ pwcache_groupdb(
 
 	return (0);
 }
-#endif
+#endif /* !HAVE_PWCACHE_GROUPDB */
 
 
 #ifdef TEST_PWCACHE
@@ -659,3 +665,4 @@ main(int argc, char *argv[])
 	return (0);
 }
 #endif	/* TEST_PWCACHE */
+#endif	/* !HAVE_PWCACHE_USERDB */

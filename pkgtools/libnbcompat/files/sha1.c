@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.c,v 1.5 2004/08/16 17:24:56 jlam Exp $	*/
+/*	$NetBSD: sha1.c,v 1.6 2004/08/23 03:32:12 jlam Exp $	*/
 /*	$OpenBSD: sha1.c,v 1.9 1997/07/23 21:12:32 kstailey Exp $	*/
 
 /*
@@ -15,26 +15,29 @@
  *   34AA973C D4C4DAA4 F61EEB2B DBAD2731 6534016F
  */
 
-#include "nbcompat/nbconfig.h"
-#include "nbcompat/nbtypes.h"
-
 #define SHA1HANDSOFF		/* Copies data before messing with it. */
 
 #if defined(_KERNEL) || defined(_STANDALONE)
 #include <sys/param.h>
+#include <sys/sha1.h>
 #include <sys/systm.h>
 #define _DIAGASSERT(x)	(void)0
 #else
-/* #include "namespace.h" */
-#include <assert.h>
-#include <string.h>
+#if 0
+#include "namespace.h"
+#endif
+#include <nbcompat.h>
+#include <nbcompat/types.h>
+#include <nbcompat/assert.h>
+#include <nbcompat/sha1.h>
+#include <nbcompat/string.h>
 #endif
 
-#include "nbcompat/sha1.h"
-
-#ifndef _DIAGASSERT
-#define _DIAGASSERT(cond)	assert(cond)
+#if HAVE_NBTOOL_CONFIG_H
+#include "nbtool_config.h"
 #endif
+
+#if !HAVE_SHA1_H
 
 /*
  * XXX Kludge until there is resolution regarding mem*() functions
@@ -70,10 +73,12 @@
 
 
 #if 0
+#if !defined(_KERNEL) && defined(__weak_alias)
 __weak_alias(SHA1Transform,_SHA1Transform)
 __weak_alias(SHA1Init,_SHA1Init)
 __weak_alias(SHA1Update,_SHA1Update)
 __weak_alias(SHA1Final,_SHA1Final)
+#endif
 #endif
 
 typedef union {
@@ -81,7 +86,13 @@ typedef union {
     u_int l[16];
 } CHAR64LONG16;
 
-#ifdef __sparc_v9__
+/* old sparc64 gcc could not compile this */
+#undef SPARC64_GCC_WORKAROUND
+#if defined(__sparc64__) && defined(__GNUC__) && __GNUC__ < 3
+#define SPARC64_GCC_WORKAROUND
+#endif
+
+#ifdef SPARC64_GCC_WORKAROUND
 void do_R01(u_int32_t *a, u_int32_t *b, u_int32_t *c, u_int32_t *d, u_int32_t *e, CHAR64LONG16 *);
 void do_R2(u_int32_t *a, u_int32_t *b, u_int32_t *c, u_int32_t *d, u_int32_t *e, CHAR64LONG16 *);
 void do_R3(u_int32_t *a, u_int32_t *b, u_int32_t *c, u_int32_t *d, u_int32_t *e, CHAR64LONG16 *);
@@ -165,7 +176,7 @@ void SHA1Transform(state, buffer)
     d = state[3];
     e = state[4];
 
-#ifdef __sparc_v9__
+#ifdef SPARC64_GCC_WORKAROUND
     do_R01(&a, &b, &c, &d, &e, block);
     do_R2(&a, &b, &c, &d, &e, block);
     do_R3(&a, &b, &c, &d, &e, block);
@@ -272,9 +283,9 @@ void SHA1Final(digest, context)
 	finalcount[i] = (u_char)((context->count[(i >= 4 ? 0 : 1)]
 	 >> ((3-(i & 3)) * 8) ) & 255);	 /* Endian independent */
     }
-    SHA1Update(context, (const u_char *)"\200", 1);
+    SHA1Update(context, (u_char *)"\200", 1);
     while ((context->count[0] & 504) != 448)
-	SHA1Update(context, (const u_char *)"\0", 1);
+	SHA1Update(context, (u_char *)"\0", 1);
     SHA1Update(context, finalcount, 8);  /* Should cause a SHA1Transform() */
 
     if (digest) {
@@ -283,3 +294,5 @@ void SHA1Final(digest, context)
 		((context->state[i>>2] >> ((3-(i & 3)) * 8) ) & 255);
     }
 }
+
+#endif /* HAVE_SHA1_H */
