@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2002/10/30 09:14:27 rh Exp $
+# $NetBSD: Makefile,v 1.2 2002/11/02 02:42:03 rh Exp $
 #
 
 DISTNAME=		glade-1.1.2
@@ -22,8 +22,9 @@ USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 CONFIGURE_ENV+=		LOCALEDIR=${PKGLOCALEDIR}
-CONFIGURE_ARGS+=	--localstatedir=${X11PREFIX}/var/lib
+CONFIGURE_ARGS+=	--localstatedir=${SCROLLKEEPER_DATADIR}
 
-.include "../../databases/gnome-db/buildlink2.mk"
+.include "../../textproc/scrollkeeper/buildlink2.mk"
 .include "../../print/libgnomeprintui/buildlink2.mk"
+.include "../../databases/gnome-db/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
