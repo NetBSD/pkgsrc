@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.4 2003/09/23 05:30:33 grant Exp $
+# $NetBSD: Makefile.in,v 1.5 2003/09/23 06:05:13 grant Exp $
 
 SUBDIRS=	lib add admin create delete info view
 
@@ -13,3 +13,5 @@ distclean: clean
 	rm -f config.log config.status configure.lineno
 	rm -f Makefile */Makefile
 	rm -f lib/config.h
+	rm -f view/linkfarm.sh
+	rm -f view/pkg_view.sh
