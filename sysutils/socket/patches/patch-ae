@@ -1,0 +1,39 @@
+$NetBSD: patch-ae,v 1.1 1999/02/02 23:00:41 tron Exp $
+
+--- siglist.c.orig	Sun Aug 30 15:50:48 1992
++++ siglist.c	Tue Feb  2 23:58:03 1999
+@@ -23,6 +23,7 @@
+ 
+ #include <stdio.h>
+ #include <signal.h>
++#include <stdlib.h>
+ 
+ #if !defined (NSIG)
+ #  if defined (_NSIG)
+@@ -32,12 +33,17 @@
+ #  endif /* !_NSIG */
+ #endif /* !NSIG */
+ 
+-char *sys_siglist[NSIG];
++#if HAVE_SYS_PARAM_H
++# include <sys/param.h>
++#endif
+ 
+-extern *malloc ();
++#if !(defined(BSD) && (BSD >=199306))
++char *sys_siglist[NSIG];
++#endif
+ 
+-initialize_siglist ()
++void initialize_siglist ()
+ {
++#if !(defined(BSD) && (BSD >=199306))
+   register int i;
+ 
+   for (i = 0; i < NSIG; i++)
+@@ -219,4 +225,5 @@
+ 	  sprintf (sys_siglist[i], "Unknown Signal #%d", i);
+ 	}
+     }
++#endif /* !(defined(BSD) && (BSD >=199306)) */
+ }

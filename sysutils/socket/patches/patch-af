@@ -1,0 +1,10 @@
+$NetBSD: patch-af,v 1.1 1999/02/02 23:00:41 tron Exp $
+
+--- socket.1.orig	Wed Sep  9 16:38:19 1992
++++ socket.1	Tue Feb  2 23:52:03 1999
+@@ -158,4 +158,4 @@
+ .SH VERSION
+ This manual page describes Socket\-1.1.
+ .SH AUTHOR
+-Juergen Nickelsen <nickel@cs.tu-berlin.de>
++Juergen Nickelsen <jn@berlin.snafu.de>
