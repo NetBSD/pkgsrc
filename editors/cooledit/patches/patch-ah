@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1.1.1 2002/07/07 19:45:39 dmcmahill Exp $
+
+--- widget/editcmd.c.orig	Sat Oct 27 14:36:12 2001
++++ widget/editcmd.c
+@@ -249,6 +249,7 @@
+     FILE *file;
+     char *savename = 0;
+     int this_save_mode, fd;
++    extern char *edit_get_write_filter (char *writename, char *filename);
+ 
+     if (!filename)
+ 	return 0;
