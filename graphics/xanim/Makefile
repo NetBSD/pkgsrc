@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2001/08/27 20:36:56 is Exp $
+# $NetBSD: Makefile,v 1.23 2001/10/21 15:40:51 mycroft Exp $
 
 DISTNAME=	xanim2801
 PKGNAME=	xanim-2.80.1nb1
@@ -64,4 +64,7 @@ EXTRA_FILES=	xa2.0_cvid_netbsd68k.o.Z \
 EXTRA_FILES=	xa2.0_cvid_sparcCOFF.o.Z \
 		xa2.0_iv32_sparcCOFF.o.Z \
 		xa1.0_cyuv_sparcAOUT.o.Z
+.elif (${MACHINE_OBJ_ARCH} == "powerpc-ELF")
+EXTRA_FILES=	xa2.0_cvid_linuxPPC.o.Z \
+		xa1.0_cyuv_linuxPPC.o.Z
 .endif
