@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2003/09/01 23:34:57 seb Exp $
+# $NetBSD: Makefile,v 1.5 2003/11/05 16:03:03 jschauma Exp $
 #
 
 DISTNAME=	skampi4
-PKGNAME=	skampi-4.0
+PKGNAME=	skampi-4.0.1
 CATEGORIES=	benchmarks parallel
 MASTER_SITES=	http://liinwww.ira.uka.de/~skampi/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}_userman.ps.gz
@@ -20,9 +20,10 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_PERL5=	run
 REPLACE_PERL=	report_generator/dorep4.pl
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 do-build:
-	${GUNZIP_CMD} ${DISTDIR}/${DISTNAME}_userman.ps.gz -c > \
+	${GUNZIP_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}_userman.ps.gz -c > \
 		${WRKSRC}/${DISTNAME}_userman.ps
 	(cd ${WRKSRC} &&					\
 		${PREFIX}/bin/mpicc -o skosfile skosfile.c -lm)
@@ -37,7 +38,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/skampi
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}_userman.ps 	\
 		${PREFIX}/share/doc/skampi/
-	${INSTALL_DATA} ${DISTDIR}/skampili.ps ${PREFIX}/share/doc/skampi/
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/skampili.ps 	\
+		${PREFIX}/share/doc/skampi/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/skampi
 	${INSTALL_DATA} ${WRKSRC}/.skampi 			\
 		${PREFIX}/share/examples/skampi/dot.skampi
