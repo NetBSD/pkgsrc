@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/01/23 21:50:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2004/01/31 22:19:06 xtraeme Exp $
 
-DISTNAME=	libxml2-2.6.4
+DISTNAME=	libxml2-2.6.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.6/}
 EXTRACT_SUFX=	.tar.bz2
