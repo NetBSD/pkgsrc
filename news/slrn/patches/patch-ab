@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 1998/10/31 23:06:31 frueauf Exp $
+$NetBSD: patch-ab,v 1.3 1999/05/18 22:01:36 mjl Exp $
 
---- src/Makefile.in.orig	Tue Sep  8 14:59:21 1998
-+++ src/Makefile.in	Sat Oct 31 21:27:37 1998
-@@ -62,7 +62,7 @@
+--- src/Makefile.in.orig	Tue May 18 23:42:20 1999
++++ src/Makefile.in	Tue May 18 23:44:24 1999
+@@ -61,7 +61,7 @@
  prefix = @prefix@
  exec_prefix = @exec_prefix@
  BINDIR = @bindir@
@@ -10,27 +10,27 @@ $NetBSD: patch-ab,v 1.2 1998/10/31 23:06:31 frueauf Exp $
 +DOCDIR = $(prefix)/share/slrn
  MANDIR = @mandir@
  MACRODIR = @datadir@/slrn
- #----------------------------------------------------------------------------
-@@ -118,19 +118,16 @@
+ 
+@@ -128,19 +128,16 @@
  distclean: clean
  	/bin/rm -rf $(OBJDIR) Makefile sysconf.h
  install: all $(BINDIR)
--	$(INSTALL) -m 755 -o root -g root $(OBJDIR)/slrn $(BINDIR)
--	-$(INSTALL) -m 755 -o root -g root $(OBJDIR)/slrnpull $(BINDIR)
--	$(INSTALL) -d $(DOCDIR) -m 755 -o root -g root
--	$(INSTALL) -m 644 -o root -g root ../doc/* $(DOCDIR)
--	$(INSTALL) -m 644 -o root -g root ../COPYRIGHT $(DOCDIR)
--	$(INSTALL) -m 644 -o root -g root ../COPYING $(DOCDIR)
--	$(INSTALL) -m 644 -o root -g root ../README $(DOCDIR)
--	$(INSTALL) -m 644 -o root -g root ../changes.txt $(DOCDIR)
--	$(INSTALL) -m 644 -o root -g root ../doc/slrn.1 $(MANDIR)/man1
--	$(INSTALL) -d $(DOCDIR)/slrnpull -m 755 -o root -g root
--	$(INSTALL) -m 644 -o root -g root ../slrnpull/* $(DOCDIR)/slrnpull
--	$(INSTALL) -d $(MACRODIR) -m 755 -o root -g root
--	$(INSTALL) -m 644 -o root -g root ../macros/*.sl $(MACRODIR)
+-	$(INSTALL) -m 755 $(INSTALL_OWNER) $(OBJDIR)/slrn $(BINDIR)
+-	-$(INSTALL) -m 755 $(INSTALL_OWNER) $(OBJDIR)/slrnpull $(BINDIR)
+-	$(INSTALL) -d $(DOCDIR) -m 755 $(INSTALL_OWNER)
+-	cd ../doc; $(INSTALL) -m 644 $(INSTALL_OWNER) $(README_FILES) $(DOCDIR)
+-	$(INSTALL) -m 644 $(INSTALL_OWNER) ../COPYRIGHT $(DOCDIR)
+-	$(INSTALL) -m 644 $(INSTALL_OWNER) ../COPYING $(DOCDIR)
+-	$(INSTALL) -m 644 $(INSTALL_OWNER) ../README $(DOCDIR)
+-	$(INSTALL) -m 644 $(INSTALL_OWNER) ../changes.txt $(DOCDIR)
+-	$(INSTALL) -m 644 $(INSTALL_OWNER) ../doc/slrn.1 $(MANDIR)/man1
+-	$(INSTALL) -d $(DOCDIR)/slrnpull -m 755 $(INSTALL_OWNER)
+-	$(INSTALL) -m 644 $(INSTALL_OWNER) ../slrnpull/* $(DOCDIR)/slrnpull
+-	$(INSTALL) -d $(MACRODIR) -m 755 $(INSTALL_OWNER)
+-	$(INSTALL) -m 644 $(INSTALL_OWNER) ../macros/*.sl $(MACRODIR)
 +	$(INSTALL) -c -m 755  $(OBJDIR)/slrn $(BINDIR)
 +	$(INSTALL) -d $(DOCDIR) -m 755 
-+	$(INSTALL) -c -m 644 ../doc/* $(DOCDIR)
++	-$(INSTALL) -c -m 644 ../doc/* $(DOCDIR)
 +	$(INSTALL) -c -m 644  ../COPYRIGHT $(DOCDIR)
 +	$(INSTALL) -c -m 644  ../COPYING $(DOCDIR)
 +	$(INSTALL) -c -m 644  ../README $(DOCDIR)
