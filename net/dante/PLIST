@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2002/07/12 14:47:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2002/07/12 15:13:08 wiz Exp $
 bin/socksify
 include/dante/socks.h
+lib/libdsocks.a
 lib/libdsocks.la
 lib/libdsocks.so
 lib/libdsocks.so.1
