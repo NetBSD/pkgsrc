@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1857 2004/06/23 16:25:29 snj Exp $
+$NetBSD: TODO,v 1.1858 2004/06/23 22:30:41 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -376,7 +376,6 @@ Suggested package updates
 	o slib-3a1
 	o smalltalk-2.1.8
 	o smarteiffel-1.1 [replacing smalleiffel]
-	o smokeping-1.29 [pkg/25549]
 	o snd-7.4
 	o snes9x-1.42
 	o snownews-1.5.3

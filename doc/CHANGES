@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6293 2004/06/23 18:40:41 minskim Exp $
+$NetBSD: CHANGES,v 1.6294 2004/06/23 22:29:15 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3038,3 +3038,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated firefox to 0.9 [taya 2004-06-23]
 	Updated mips64emul to 20040623 [xtraeme 2004-06-23]
 	Updated awstats to 6.1 [minskim 2004-06-23]
+	Updated smokeping to 1.30 [adrianp 2004-06-23]
