@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/03/07 01:23:28 heinz Exp $
+# $NetBSD: Makefile,v 1.2 2004/03/07 01:36:07 heinz Exp $
 #
 
 DISTNAME=		Sys-Hostname-Long-1.0
@@ -14,6 +14,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_BUILDLINK3=		yes
 USE_LANGUAGES=		# empty
+
+PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Sys/Hostname/Long/.packlist
 
 pre-configure:
 	@ ${RM} ${WRKSRC}/lib/Sys/Hostname/Long.pm.orig
