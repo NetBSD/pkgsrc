@@ -1,8 +1,17 @@
-$NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
+$NetBSD: patch-am,v 1.9 2003/07/26 21:38:23 jmmv Exp $
 
---- configure.orig	Sun Oct  6 16:35:02 2002
+--- configure.orig	2002-10-06 22:35:02.000000000 +0200
 +++ configure
-@@ -3630,10 +3630,7 @@ fi
+@@ -3094,6 +3094,8 @@ rm -f conftest*
+         echo "$ac_t""$have_oss" 1>&6
+         if test x$have_oss = xyes; then
+             CFLAGS="$CFLAGS -DOSS_SUPPORT"
++            LDFLAGS="$LDFLAGS $LIBOSSAUDIO"
++            SDL_LIBS="$SDL_LIBS $LIBOSSAUDIO"
+             AUDIO_SUBDIRS="$AUDIO_SUBDIRS dsp"
+             AUDIO_DRIVERS="$AUDIO_DRIVERS dsp/libaudio_dsp.la"
+             AUDIO_SUBDIRS="$AUDIO_SUBDIRS dma"
+@@ -3630,10 +3632,7 @@ fi
      if test x$enable_audio = xyes -a x$enable_nas = xyes; then
          echo $ac_n "checking for NAS audio support""... $ac_c" 1>&6
  echo "configure:3633: checking for NAS audio support" >&5
@@ -13,7 +22,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
          echo "$ac_t""$have_nas" 1>&6
          if test x$have_nas = xyes; then
              CFLAGS="$CFLAGS -DNAS_SUPPORT"
-@@ -3782,7 +3779,7 @@ fi
+@@ -3782,7 +3781,7 @@ fi
                    NASMFLAGS="-f aoutb"
                    ;;
                *)
@@ -22,7 +31,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
                    ;;
              esac
              
-@@ -5385,34 +5382,53 @@ else
+@@ -5385,34 +5384,53 @@ else
  fi
  
      if test x$enable_video = xyes -a x$enable_video_aalib = xyes; then
@@ -99,7 +108,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
  
              VIDEO_SUBDIRS="$VIDEO_SUBDIRS aalib"
              VIDEO_DRIVERS="$VIDEO_DRIVERS aalib/libvideo_aa.la"
-@@ -5755,19 +5771,20 @@ else
+@@ -5755,19 +5773,20 @@ else
  fi
  
      if test x$enable_threads = xyes -a x$enable_pth = xyes; then
@@ -127,7 +136,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
    ;;
    *)
    IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=":"
-@@ -5775,27 +5792,27 @@ else
+@@ -5775,27 +5794,27 @@ else
    for ac_dir in $ac_dummy; do 
      test -z "$ac_dir" && ac_dir=.
      if test -f $ac_dir/$ac_word; then
@@ -163,7 +172,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
              SDL_CFLAGS="$SDL_CFLAGS $PTH_CFLAGS"
              SDL_LIBS="$SDL_LIBS $PTH_LIBS"
              CFLAGS="$CFLAGS -DENABLE_PTH"
-@@ -5844,8 +5861,8 @@ fi
+@@ -5844,8 +5863,8 @@ fi
              pthread_lib="-pthread"
              ;;
          *-*-netbsd*)
@@ -174,7 +183,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -6760,56 +6777,45 @@ else
+@@ -6760,56 +6779,45 @@ else
    echo "$ac_t""no" 1>&6
  fi
  
@@ -253,7 +262,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
  if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -6814,12 +6820,12 @@ if eval "test \"`echo '$''{'ac_cv_header
+@@ -6814,12 +6822,12 @@ if eval "test \"`echo '$''{'ac_cv_header
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    cat > conftest.$ac_ext <<EOF
@@ -269,7 +278,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -6835,47 +6841,64 @@ rm -f conftest*
+@@ -6835,47 +6843,64 @@ rm -f conftest*
  fi
  if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -354,7 +363,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
  if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -6880,12 +6903,12 @@ if eval "test \"`echo '$''{'ac_cv_header
+@@ -6880,12 +6905,12 @@ if eval "test \"`echo '$''{'ac_cv_header
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    cat > conftest.$ac_ext <<EOF
@@ -370,7 +379,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -6901,14 +6924,14 @@ rm -f conftest*
+@@ -6901,14 +6926,14 @@ rm -f conftest*
  fi
  if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -389,7 +398,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
  if eval "test \"`echo '$''{'ac_cv_header_$ac_safe'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
  else
-@@ -6913,12 +6936,12 @@ if eval "test \"`echo '$''{'ac_cv_header
+@@ -6913,12 +6938,12 @@ if eval "test \"`echo '$''{'ac_cv_header
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    cat > conftest.$ac_ext <<EOF
@@ -405,7 +414,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
  ac_err=`grep -v '^ *+' conftest.out | grep -v "^conftest.${ac_ext}\$"`
  if test -z "$ac_err"; then
    rm -rf conftest*
-@@ -6934,7 +6957,7 @@ rm -f conftest*
+@@ -6934,7 +6959,7 @@ rm -f conftest*
  fi
  if eval "test \"`echo '$ac_cv_header_'$ac_safe`\" = yes"; then
    echo "$ac_t""yes" 1>&6
@@ -414,7 +423,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
  else
    echo "$ac_t""no" 1>&6
  fi
-@@ -6942,14 +6965,10 @@ fi
+@@ -6942,14 +6967,10 @@ fi
          if test x$have_usb_h = xyes; then
              CFLAGS="$CFLAGS -DHAVE_USB_H"
          fi
@@ -430,7 +439,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
          fi
  
          echo $ac_n "checking for usbhid""... $ac_c" 1>&6
-@@ -7313,6 +7332,7 @@ __EOF__
+@@ -7313,6 +7334,7 @@ __EOF__
          CheckESD
          CheckNAS
          CheckX11
@@ -438,7 +447,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
          CheckAAlib
          CheckOpenGL
          CheckPTHREAD
-@@ -7331,9 +7351,9 @@ __EOF__
+@@ -7331,9 +7353,9 @@ __EOF__
  
          # Set up files for the audio library
          if test x$enable_audio = xyes; then
@@ -451,7 +460,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
          fi
          # Set up files for the cdrom library
          if test x$enable_cdrom = xyes; then
-@@ -7342,9 +7362,6 @@ __EOF__
+@@ -7342,9 +7364,6 @@ __EOF__
          fi
          # Set up files for the thread library
          if test x$enable_threads = xyes; then
@@ -461,7 +470,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
              CopyUnixThreadSource
          fi
          # Set up files for the timer library
-@@ -8759,7 +8776,7 @@ fi
+@@ -8759,7 +8778,7 @@ fi
  
  # Set runtime shared library paths as needed
  
@@ -470,7 +479,7 @@ $NetBSD: patch-am,v 1.8 2002/10/31 22:19:51 jlam Exp $
    SDL_RLD_FLAGS="-Wl,-rpath,\${exec_prefix}/lib"
  fi
  if test $ARCH = solaris; then
-@@ -9143,7 +9160,8 @@ s%@X_EXTRA_LIBS@%$X_EXTRA_LIBS%g
+@@ -9143,7 +9162,8 @@ s%@X_EXTRA_LIBS@%$X_EXTRA_LIBS%g
  s%@PKG_CONFIG@%$PKG_CONFIG%g
  s%@DIRECTFB_CFLAGS@%$DIRECTFB_CFLAGS%g
  s%@DIRECTFB_LIBS@%$DIRECTFB_LIBS%g
