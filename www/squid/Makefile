@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2002/11/24 11:01:17 taca Exp $
+# $NetBSD: Makefile,v 1.72 2002/11/25 07:17:25 tron Exp $
 
 DISTNAME=	squid-2.5.STABLE1
 PKGNAME=	squid-2.5.1
@@ -35,7 +35,7 @@ PATCHFILES=	squid-2.5.STABLE1-disable-ident-lookups.patch \
 #		squid-2.5.STABLE1-spaces.patch		# seems to broken?
 PATCH_DIST_STRIP=       -p1
 
-MAINTAINER=	tron@netbsd.org
+MAINTAINER=	taca@netbsd.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
 
