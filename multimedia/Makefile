@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.16 2004/01/26 14:52:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2004/01/26 15:15:05 jmmv Exp $
 #
 
 COMMENT=	Multimedia utilities
 
 SUBDIR+=	alevt
 SUBDIR+=	avidemux
+SUBDIR+=	avifile
+SUBDIR+=	avifile-devel
 SUBDIR+=	divxplayer
 SUBDIR+=	flashplayer
 SUBDIR+=	fxtv
@@ -23,7 +25,7 @@ SUBDIR+=	moz-mplayer
 SUBDIR+=	mplayer
 SUBDIR+=	mplayer-share
 SUBDIR+=	mplex
-SUBDIR+=	ns-player
+SUBDIR+=	ns-flash
 SUBDIR+=	realplayer
 SUBDIR+=	realplayer-codecs
 SUBDIR+=	trplayer
