@@ -1,0 +1,88 @@
+$NetBSD: patch-ae,v 1.1.1.1 2001/02/28 22:18:41 jtb Exp $
+
+--- /dev/null	Wed Feb 28 21:02:46 2001
++++ hdf/util/Makefile
+@@ -0,0 +1,83 @@
++UTILS= hdf24to8 hdfcomp hdfed hdfls hdfpack hdftopal hdftor8	\
++	paltohdf r8tohdf ristosds vmake vshow hdf8to24		\
++	hdf2jpeg jpeg2hdf fp2hdf hdfunpac vcompat
++
++all: ${UTILS}
++
++BINDIR= ${PREFIX}/bin
++LIBDIR= ${PREFIX}/lib
++
++HDFLIB= -L${.CURDIR}/../src
++JPEGLIB= -R${JPEGBASE}/lib -L${JPEGBASE}/lib
++JPEGINC= -I${JPEGBASE}/include
++ZLIB= -lz
++
++LDFLAGS+= -Wl,-R${LIBDIR} ${HDFLIB} ${JPEGLIB}
++
++LDADD+= -ldf -ljpeg -lz -lm
++
++CPPFLAGS+= -Dunix ${JPEGINC} -I${.CURDIR}/../src
++
++fp2hdf: fp2hdf.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++hdf24to8: hdf24to8.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++hdf2jpeg: hdf2jpeg.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++hdf8to24: hdf8to24.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++hdfcomp: hdfcomp.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++hdfed: he_main.o he_cntrl.o he_disp.o he_file.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++hdfls: hdfls.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++hdfpack: hdfpack.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++hdftopal: hdftopal.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++hdftor8: hdftor8.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++hdfunpac: hdfunpac.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++jpeg2hdf: jpeg2hdf.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++paltohdf: paltohdf.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++r8tohdf: r8tohdf.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++ristosds: ristosds.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++vcompat: vcompat.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++vmake: vmake.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++vshow: vshow.o
++	${CC} ${CPPFLAGS} ${CFLAGS} $? ${LDFLAGS} ${LDADD} -o $@
++
++
++install: ${UTILS}
++	@for f in ${UTILS}; do					\
++		i="${BSD_INSTALL_PROGRAM} $$f ${BINDIR}";	\
++		${ECHO} $$i; $$i;				\
++	done
++
++clean:
++	rm -f *.o ${UTILS} hdfed
