@@ -1,6 +1,42 @@
-@comment $NetBSD: PLIST,v 1.4 2002/10/02 08:25:13 minoura Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/03/10 01:43:58 uebayasi Exp $
 bin/gauche-config
 bin/gosh
+@unexec ${INSTALL_INFO} --delete %D/info/gauche-refe.info %D/info/dir
+info/gauche-refe.info.gz
+info/gauche-refe.info-1.gz
+info/gauche-refe.info-2.gz
+info/gauche-refe.info-3.gz
+info/gauche-refe.info-4.gz
+info/gauche-refe.info-5.gz
+info/gauche-refe.info-6.gz
+info/gauche-refe.info-7.gz
+info/gauche-refe.info-8.gz
+info/gauche-refe.info-9.gz
+info/gauche-refe.info-10.gz
+info/gauche-refe.info-11.gz
+info/gauche-refe.info-12.gz
+info/gauche-refe.info-13.gz
+info/gauche-refe.info-14.gz
+info/gauche-refe.info-15.gz
+@exec ${INSTALL_INFO} %D/info/gauche-refe.info %D/info/dir
+@unexec ${INSTALL_INFO} --delete %D/info/gauche-refj.info %D/info/dir
+info/gauche-refj.info.gz
+info/gauche-refj.info-1.gz
+info/gauche-refj.info-2.gz
+info/gauche-refj.info-3.gz
+info/gauche-refj.info-4.gz
+info/gauche-refj.info-5.gz
+info/gauche-refj.info-6.gz
+info/gauche-refj.info-7.gz
+info/gauche-refj.info-8.gz
+info/gauche-refj.info-9.gz
+info/gauche-refj.info-10.gz
+info/gauche-refj.info-11.gz
+info/gauche-refj.info-12.gz
+info/gauche-refj.info-13.gz
+info/gauche-refj.info-14.gz
+info/gauche-refj.info-15.gz
+@exec ${INSTALL_INFO} %D/info/gauche-refj.info %D/info/dir
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/auxsys.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/fcntl.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche-config
@@ -40,6 +76,8 @@ lib/gauche/${PKGVERSION}/include/gc_pthread_redirects.h
 lib/gauche/site/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/example.so
 lib/libgauche.a
 lib/libgauche.so
+man/man1/gauche-config.1
+man/man1/gosh.1
 share/gauche/${PKGVERSION}/aclocal.m4
 share/gauche/${PKGVERSION}/lib/dbm.scm
 share/gauche/${PKGVERSION}/lib/dbm/ndbm.scm
@@ -153,46 +191,6 @@ share/gauche/${PKGVERSION}/lib/util/toposort.scm
 share/gauche/${PKGVERSION}/lib/util/tree.scm
 share/gauche/${PKGVERSION}/lib/www/cgi.scm
 share/gauche/site/lib/example.scm
-@unexec ${INSTALL_INFO} --delete %D/info/gauche-refe.info %D/info/dir
-info/gauche-refe.info-1.gz
-info/gauche-refe.info-10.gz
-info/gauche-refe.info-11.gz
-info/gauche-refe.info-12.gz
-info/gauche-refe.info-13.gz
-info/gauche-refe.info-14.gz
-info/gauche-refe.info-15.gz
-info/gauche-refe.info-2.gz
-info/gauche-refe.info-3.gz
-info/gauche-refe.info-4.gz
-info/gauche-refe.info-5.gz
-info/gauche-refe.info-6.gz
-info/gauche-refe.info-7.gz
-info/gauche-refe.info-8.gz
-info/gauche-refe.info-9.gz
-info/gauche-refe.info.gz
-@exec ${INSTALL_INFO} %D/info/gauche-refe.info %D/info/dir
-@unexec ${INSTALL_INFO} --delete %D/info/gauche-refj.info %D/info/dir
-info/gauche-refj.info-1.gz
-info/gauche-refj.info-10.gz
-info/gauche-refj.info-11.gz
-info/gauche-refj.info-12.gz
-info/gauche-refj.info-13.gz
-info/gauche-refj.info-14.gz
-info/gauche-refj.info-15.gz
-info/gauche-refj.info-2.gz
-info/gauche-refj.info-3.gz
-info/gauche-refj.info-4.gz
-info/gauche-refj.info-5.gz
-info/gauche-refj.info-6.gz
-info/gauche-refj.info-7.gz
-info/gauche-refj.info-8.gz
-info/gauche-refj.info-9.gz
-info/gauche-refj.info.gz
-@exec ${INSTALL_INFO} %D/info/gauche-refj.info %D/info/dir
-share/man/man1/gauche-config.1
-share/man/man1/gosh.1
-@dirrm share/man/man1
-@dirrm share/man
 @dirrm share/gauche/site/lib
 @dirrm share/gauche/site
 @dirrm share/gauche/${PKGVERSION}/lib/www
