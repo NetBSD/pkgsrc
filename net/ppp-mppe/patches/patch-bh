@@ -1,11 +1,11 @@
 $NetBSD$
 
---- pppd/chap_ms.c	Mon Mar 15 19:14:24 1999
-+++ pppd/chap_ms.c	Thu Jun 24 16:05:42 1999
-@@ -31,4 +31,12 @@
+--- pppd/chap_ms.c.orig	Fri Aug 13 08:46:12 1999
++++ pppd/chap_ms.c	Wed Dec  8 14:52:48 1999
+@@ -31,6 +31,14 @@
   *   You should also use DOMAIN\\USERNAME as described in README.MSCHAP80
   */
-+
+ 
 +/*
 + * Mods by Tim Hockin, Cobalt Networks Inc. <thockin@cobaltnet.com> June 1999
 + *
@@ -13,9 +13,11 @@ $NetBSD$
 + * Migrated all MPPE code to mppe.c, shared crypto code to extra_crypto.c
 + *
 + */
++
+ #define RCSID	"$Id: chap_ms.c,v 1.15 1999/08/13 06:46:12 paulus Exp $"
  
- #ifndef lint
-@@ -51,11 +59,13 @@
+ #ifdef CHAPMS
+@@ -49,11 +57,13 @@
  #include "pppd.h"
  #include "chap.h"
  #include "chap_ms.h"
@@ -31,8 +33,8 @@ $NetBSD$
  #endif
 +#include "extra_crypto.h"
  
- typedef struct {
-     u_char LANManResp[24];
+ static const char rcsid[] = RCSID;
+ 
 @@ -65,21 +75,19 @@
  /* We use MS_CHAP_RESPONSE_LEN, rather than sizeof(MS_ChapResponse),
     in case this struct gets padded. */
@@ -265,8 +267,8 @@ $NetBSD$
 +#ifdef MPPE
 +    mppe_gen_master_key(secret, secret_len, rchallenge);
 +#endif
-     BCOPY(&response, cstate->response, MS_CHAP_RESPONSE_LEN);
-     cstate->resp_length = MS_CHAP_RESPONSE_LEN;
++    BCOPY(&response, cstate->response, MS_CHAP_RESPONSE_LEN);
++    cstate->resp_length = MS_CHAP_RESPONSE_LEN;
 +}
 +
 +int
@@ -351,8 +353,8 @@ $NetBSD$
 +		cstate->resp_name, Challenge);
 +    NtPasswordHash(Password, PasswordLen, PasswordHash);
 +    ChallengeResponse(Challenge, PasswordHash, response.NTResp);
-+    BCOPY(&response, cstate->response, MS_CHAP_RESPONSE_LEN);
-+    cstate->resp_length = MS_CHAP_RESPONSE_LEN;
+     BCOPY(&response, cstate->response, MS_CHAP_RESPONSE_LEN);
+     cstate->resp_length = MS_CHAP_RESPONSE_LEN;
 +#ifdef MPPE
 +    mppe_gen_master_key_v2(Password, PasswordLen, response.NTResp, 0);
 +#endif
