@@ -1,14 +1,14 @@
-$NetBSD: patch-ac,v 1.5 2001/05/24 04:28:20 jlam Exp $
+$NetBSD: patch-ac,v 1.6 2001/08/10 04:50:08 jlam Exp $
 
---- src/af/util/xp/ut_endian.h.orig	Sat Feb 24 03:49:29 2001
+--- src/af/util/xp/ut_endian.h.orig	Wed Jul 18 10:48:29 2001
 +++ src/af/util/xp/ut_endian.h
-@@ -28,6 +28,13 @@
- 	#else
- 		#define UT_BIG_ENDIAN
- 	#endif
+@@ -48,6 +48,13 @@
+         #elif defined(_LITTLE_ENDIAN)
+                 #define UT_LITTLE_ENDIAN
+         #endif
 +#elif defined(__NetBSD__)
 +	#include <machine/endian.h>
-+	#if BYTE_ORDER == LITTLE_ENDIAN		
++	#if BYTE_ORDER == LITTLE_ENDIAN         
 +		#define UT_LITTLE_ENDIAN
 +	#elif BYTE_ORDER == BIG_ENDIAN
 +		#define UT_BIG_ENDIAN
