@@ -1,0 +1,9 @@
+Provide keyboard shortcuts for X11R6, specifically intended for use with
+the Blackbox window manager but usable with any.
+
+Can bind actions such as executing commands, altering the states of windows,
+switching workspaces, etc. to arbitrary keys.
+
+Note: since the basic package does not install the qt-based configuration
+tool, bbkeys ought to be invoked with the -noqt option unless you also
+install the wm/bbkeys-qt package.

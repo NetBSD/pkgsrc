@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/10 20:00:26 hubertf Exp $
+bin/bbkeys
+bin/bbkeysConfigC
+share/bbtools/README.bbkeys
+share/bbtools/bbkeys.bb
+share/bbtools/bbkeys.nobb
+@dirrm share/bbtools
