@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.8340 2004/12/15 13:54:19 salo Exp $
+$NetBSD: CHANGES,v 1.8341 2004/12/15 17:02:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -5919,3 +5919,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated ruby-quota to 0.5.1nb1 [taca 2004-12-15]
 	Updated mkvtoolnix to 1.0.1 [salo 2004-12-15]
 	Updated mmg to 1.0.1 [salo 2004-12-15]
+	Updated p5-WWW-Mechanize to 1.04 [wiz 2004-12-15]
