@@ -1,4 +1,4 @@
-$NetBSD: STATUS,v 1.25 2003/10/26 07:29:49 grant Exp $
+$NetBSD: STATUS,v 1.26 2004/03/17 16:50:57 danw Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -45,11 +45,11 @@ blank	-	Unknown
 ---------------------------------------------------------------------------
 Package                 Darwin   FreeBSD   IRIX   Linux   OpenBSD   Solaris
 ---------------------------------------------------------------------------
-audio/mpg123                        Y        Y      Y                  Y
+audio/mpg123               Y*       Y        Y      Y                  Y
 devel/cvs                  Y        Y        Y      Y        Y         Y
 devel/gettext              Y        Y        Y      Y        Y         Y
 devel/libtool              Y        Y        Y      Y        Y         Y
-devel/ncurses                       Y        Y      Y        X*        Y
+devel/ncurses              Y        Y        Y      Y        X*        Y
 editors/vim                Y        Y        Y      Y                  Y
 editors/xemacs                                      Y
 editors/emacs                                Y      Y
@@ -62,12 +62,12 @@ misc/screen                Y        Y        Y      Y                  Y
 net/wget                   Y        Y        Y      Y
 news/slrn                  Y        Y        Y      Y        Y
 print/gv                                     Y      Y
-print/teTeX                                         Y
-print/xpdf                                          Y
-security/openssh                             Y      Y                  Y
+print/teTeX                Y                        Y
+print/xpdf                 Y                        Y
+security/openssh           Y                 Y      Y                  Y
 security/openssl           Y                 Y      Y        N         Y
-shells/tcsh                N        Y        Y      Y        Y         Y
-wm/blackbox                                  Y      Y
+shells/tcsh                Y        Y        Y      Y        Y         Y
+wm/blackbox                Y                 Y      Y
 www/apache                 Y        Y        Y      Y        Y         Y
 www/links                  Y        Y        Y      Y                  Y
 www/lynx                   Y        Y        N*     Y                  Y
@@ -76,6 +76,7 @@ www/lynx                   Y        Y        N*     Y                  Y
 ---------------------------------------------------------------------------
 notes:
 
+Darwin/mpg123: no darwin support in mpg123, but mpg123-esound works
 OpenBSD/ncurses: does not install a shared libncurses++ library.
 IRIX/lynx: only builds without "--enable-nls"
 
