@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/01/15 12:42:14 skrll Exp $
+$NetBSD: patch-ab,v 1.2 2003/07/02 17:45:48 jmmv Exp $
 
 --- Makefile.in.orig	Tue Oct 10 16:36:14 2000
 +++ Makefile.in
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2001/01/15 12:42:14 skrll Exp $
 +# We need the ICU library if we are using the ICUBridge
 +ifdef XALAN_USE_ICU
 +LD_RPATH_PRE=  -Wl,-rpath,
-+PLATFORM_LIB_LINK_OPTIONS=$(LD_RPATH_PRE)/usr/lib $(LD_RPATH_PRE)/usr/local/lib $(LD_RPATH_PRE)/usr/pkg/lib
++PLATFORM_LIB_LINK_OPTIONS=$(LD_RPATH_PRE)/usr/lib $(LD_RPATH_PRE)/usr/local/lib $(LD_RPATH_PRE)${LOCALBASE}/lib
 +endif
 +
 +
