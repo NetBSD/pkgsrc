@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2004/11/28 06:41:04 jlam Exp $
+# $NetBSD: builtin.mk,v 1.9 2005/01/26 16:17:16 jlam Exp $
 
 _READLINE_H=		/usr/include/readline.h
 _READLINE_READLINE_H=	/usr/include/readline/readline.h
@@ -101,7 +101,7 @@ CHECK_BUILTIN.readline?=	no
 .if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
 .  if !empty(_BLNK_LIB_FOUND.readline:M[nN][oO]) && \
       !empty(_BLNK_LIB_FOUND.edit:M[yY][eE][sS])
-BUILDLINK_TRANSFORM+=		l:history:edit
+BUILDLINK_TRANSFORM+=		l:history:edit:termcap
 BUILDLINK_TRANSFORM+=		l:readline:edit:termcap
 .  endif
 .endif
