@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/03 00:12:30 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2004/03/08 22:18:19 seb Exp $
 bin/.gitaction
 bin/git
 bin/gitaction
@@ -13,10 +13,6 @@ bin/gitunpack
 bin/gitview
 bin/gitwipe
 bin/gitxgrep
-info/git.info
-info/git.info-1
-info/git.info-2
-info/git.info-3
 lib/git/term/.gitrc.aixterm
 lib/git/term/.gitrc.ansi
 lib/git/term/.gitrc.common
