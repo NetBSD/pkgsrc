@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2000/03/27 08:54:57 tron Exp $
+# $NetBSD: Makefile,v 1.9 2000/05/16 14:46:44 veego Exp $
 #
 
 DISTNAME=		perl5.004_04
@@ -12,12 +12,18 @@ HOMEPAGE=		http://language.perl.com/index.html
 
 USE_PERL5=		yes
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
 .if exists(/usr/libexec/ld.elf_so)
 PLIST_SRC=		${PKGDIR}/PLIST-elf
 .elif exists(/usr/libexec/ld.so)
 PLIST_SRC=		${PKGDIR}/PLIST-aout
 .else
 IGNORE=			"needs shared object support"
+.endif
+.elif ${OPSYS} == "SunOS"
+PLIST_SRC=		${PKGDIR}/PLIST-elf
 .endif
 PATCHDIR=		../perl5/patches
 
@@ -27,6 +33,9 @@ CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX} -Duseshrplib=true \
 			-Darchname=${MACHINE_ARCH}-${LOWER_OPSYS} \
 			-Dusemymalloc=false
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	-Dcc="${CC}"
+.endif
 MAKE_ENV+=		LD_LIBRARY_PATH=${WRKSRC}
 ALL_TARGET=		perl
 
