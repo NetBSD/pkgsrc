@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2000/10/25 22:02:35 mycroft Exp $
+# $NetBSD: Makefile,v 1.44 2000/10/26 07:53:37 mycroft Exp $
 
 DISTNAME=	mozilla-source-M18
 PKGNAME=	mozilla-0.m18
@@ -47,11 +47,15 @@ SCRIPTS_ENV+=	BINGRP=${BINGRP}
 SCRIPTS_ENV+=	BINMODE=${BINMODE}
 SHAREMODE?=	644
 
+XPTCFILES+=	xptcinvoke_asm_ppc_netbsd.s xptcinvoke_ppc_netbsd.cpp
+XPTCFILES+=	xptcstubs_asm_ppc_netbsd.s xptcstubs_ppc_netbsd.cpp
+XPTCFILES+=	xptcinvoke_asm_sparc_netbsd.s xptcinvoke_sparc_netbsd.cpp
+XPTCFILES+=	xptcstubs_asm_sparc_netbsd.s xptcstubs_sparc_netbsd.cpp
+
 post-extract:
-	${CP} ${FILESDIR}/xptcinvoke_asm_ppc_netbsd.s ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/
-	${CP} ${FILESDIR}/xptcinvoke_ppc_netbsd.cpp ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/
-	${CP} ${FILESDIR}/xptcstubs_asm_ppc_netbsd.s ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/
-	${CP} ${FILESDIR}/xptcstubs_ppc_netbsd.cpp ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/
+.for F in ${XPTCFILES}
+	${CP} ${FILESDIR}/${F} ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/${F}
+.endfor
 
 pre-configure:
 	(cd ${WRKSRC} && autoconf)
