@@ -1,0 +1,18 @@
+XFlame is a cool little graphics hack originally made by the Rasterman
+and modified by me, Rahul Jain.
+
+It does what you would expect it to do, draw a flame on the screen.
+
+FEATURES:
+* User-settable window size
+* User-settable color spectrum
+* Frame rate limiting so you can still crack RC5 keys in the background :)
+  (default 10 fps)
+* Option to draw to the root window
+* Single pass, 2 pass (default), and 4 pass interlacing
+* Option to draw only the changed portion of the image to the screen in 8
+  bit color only, resulting in a massive increase in speed w/ large windows
+  (e.g., root window).
+* Colormap niceness options
+* Swallow-able into FVWM2's Button Bar
+

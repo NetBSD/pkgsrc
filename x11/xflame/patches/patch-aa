@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 1998/12/05 03:56:15 hubertf Exp $
+
+--- Imakefile.BAK	Sat Dec  5 04:43:29 1998
++++ Imakefile	Sat Dec  5 04:48:26 1998
+@@ -29,9 +29,9 @@
+ CleanTarget()
+ 
+ # To get around a messiness in Imake on Solaris
+-LD_RUN_PATH +=
+-install::
+-	export LD_RUN_PATH
++#LD_RUN_PATH +=
++#install::
++#	export LD_RUN_PATH
+ 
+ InstallProgram(xflame,$(BINDIR))
+ 
