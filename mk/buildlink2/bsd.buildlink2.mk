@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink2.mk,v 1.56 2002/11/26 08:59:06 jlam Exp $
+# $NetBSD: bsd.buildlink2.mk,v 1.57 2002/11/26 22:46:59 jlam Exp $
 #
 # An example package buildlink2.mk file:
 #
@@ -305,21 +305,15 @@ _BLNK_TRANSFORM+=	${_BLNK_PROTECT}
 #
 # Convert direct paths to shared libraries into "-Ldir -llib" equivalents.
 #
-_BLNK_TRANSFORM+=	p:${LOCALBASE}
 _BLNK_TRANSFORM+=	p:${X11BASE}
+_BLNK_TRANSFORM+=	p:${LOCALBASE}
 _BLNK_TRANSFORM+=	p:/usr/lib
 #
 # Convert direct paths to static libraries in ${LOCALBASE} or ${X11BASE}
 # into references into ${BUILDLINK_DIR}.
 #
-_BLNK_TRANSFORM+=	static:${LOCALBASE}:${_BLNK_MANGLE_DIR.BUILDLINK_DIR}
 _BLNK_TRANSFORM+=	static:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11_DIR}
-#
-# Transform references into ${LOCALBASE} into ${BUILDLINK_DIR}.
-#
-_BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
-_BLNK_TRANSFORM+=	I:${LOCALBASE}:${_BLNK_MANGLE_DIR.BUILDLINK_DIR}
-_BLNK_TRANSFORM+=	L:${LOCALBASE}:${_BLNK_MANGLE_DIR.BUILDLINK_DIR}
+_BLNK_TRANSFORM+=	static:${LOCALBASE}:${_BLNK_MANGLE_DIR.BUILDLINK_DIR}
 #
 # Transform references into ${X11BASE} into ${BUILDLINK_X11_DIR} but if
 # the package doesn't use X11, then just remove these references altogether.
@@ -330,6 +324,12 @@ _BLNK_TRANSFORM+=	L:${X11BASE}:${_BLNK_MANGLE_DIR.BUILDLINK_X11_DIR}
 .else
 _BLNK_TRANSFORM+=	r:${X11BASE}
 .endif
+#
+# Transform references into ${LOCALBASE} into ${BUILDLINK_DIR}.
+#
+_BLNK_TRANSFORM+=	${BUILDLINK_TRANSFORM}
+_BLNK_TRANSFORM+=	I:${LOCALBASE}:${_BLNK_MANGLE_DIR.BUILDLINK_DIR}
+_BLNK_TRANSFORM+=	L:${LOCALBASE}:${_BLNK_MANGLE_DIR.BUILDLINK_DIR}
 .for _localbase_ in /usr/pkg /usr/local
 .  if ${LOCALBASE} != ${_localbase_}
 _BLNK_TRANSFORM+=	r:${_localbase_}
