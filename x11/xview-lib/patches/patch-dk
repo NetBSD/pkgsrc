@@ -1,0 +1,12 @@
+$NetBSD: patch-dk,v 1.1 2001/12/20 09:20:07 tron Exp $
+
+--- lib/libxview/file_chooser/xv_path_util.h.orig	Sun Jun 26 03:05:20 1994
++++ lib/libxview/file_chooser/xv_path_util.h	Thu Dec 20 10:09:16 2001
+@@ -41,6 +41,7 @@
+ 
+ 
+ #define xv_free_ref(str)	{if((str)) {xv_free((str)); (str) = NULL;}}
++#define xv_free_regex_t(str)  {if((str)) {regfree((str)); free  ((str)); (str) = NULL;}}
+ 
+ 
+ EXTERN_FUNCTION(void  xv_error_sprintf, (Frame frame, int use_footer, char *format, DOTDOTDOT) );

@@ -1,0 +1,12 @@
+$NetBSD: patch-bm,v 1.1 2001/12/20 09:19:58 tron Exp $
+
+--- lib/libxview/misc/getlogindr.c.orig	Tue Jun 29 07:16:30 1993
++++ lib/libxview/misc/getlogindr.c	Thu Dec 20 10:09:16 2001
+@@ -17,6 +17,7 @@
+ 
+ #include <stdio.h>
+ #include <pwd.h>
++#include <sys/param.h>
+ #include <xview_private/i18n_impl.h>
+ #include <xview/xv_error.h>
+ 

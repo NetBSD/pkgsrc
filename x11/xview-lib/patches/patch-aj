@@ -1,55 +1,33 @@
-$NetBSD: patch-aj,v 1.2 2000/06/16 14:16:54 pooka Exp $
---- lib/libxview/textsw/txt_file.c.orig	Sat Jan  8 03:32:48 2000
-+++ lib/libxview/textsw/txt_file.c	Sat Jan  8 03:57:02 2000
-@@ -45,14 +45,23 @@
+$NetBSD: patch-aj,v 1.3 2001/12/20 09:19:55 tron Exp $
+
+--- lib/libxview/filter/filter.c.orig	Tue Jun 29 07:14:57 1993
++++ lib/libxview/filter/filter.c	Thu Dec 20 10:09:16 2001
+@@ -39,11 +39,12 @@
  
- extern CHAR    *STRCAT();
- extern CHAR    *STRNCAT();
--#ifdef SVR4
-+
-+#if (defined(SVR4) || (__NetBSD_Version__ >= 103080000))
-+#define GETCWD
-+#endif
-+
-+#ifdef GETCWD
- extern char    *getcwd();
- #else
- extern char    *getwd();
--#endif /* SVR4 */
-+#endif /* GETCWD */
- extern int      errno, sys_nerr;
- #if (defined(BSD) && (BSD >= 199306))
-+#if __NetBSD_Version__ > 103080000
-+#include <errno.h>
-+#else
- extern const char *const sys_errlist[];
-+#endif
- #else
- extern char    *sys_errlist[];
- #endif
-@@ -358,21 +367,21 @@
+ char           *stream_fgets();
+ 
+-enum CharClass
++static enum CharClass
+                 breakProc();
+-struct CharAction
++static struct CharAction
+                 digits();
+-
++static
++		any_shell_meta();
+ 
+ struct filter_rec **
+ xv_parse_filter_table(in, filename)
+@@ -203,10 +204,10 @@
+ {
+     int             i;
+     for (i = 0; table[i] != NULL; i++) {
+-	cfree((char *) table[i]->call);
++	free((char *) table[i]->call);
+ 	free((char *) table[i]);
      }
+-    cfree((char *) table);
++    free((char *) table);
+ }
  
- #ifdef		OW_I18N
--#ifdef SVR4
-+#ifdef GETCWD
-     if (getcwd(pathname_mb, MAXPATHLEN) == 0)
- #else
-     if (getwd(pathname_mb) == 0)
--#endif /* SVR4 */
-+#endif /* GETCWD */
- 	return (0);
-     (void) mbstowcs(pathname, pathname_mb, MAXPATHLEN-1);
- 
- #else		/* OW_I18N */
- 
--#ifdef SVR4
-+#ifdef GETCWD
-     if (getcwd(pathname, MAXPATHLEN) == 0)
- #else
-     if (getwd(pathname) == 0)
--#endif /* SVR4 */
-+#endif /* GETCWD */
- 	return (0);
- #endif		/* OW_I18N */
- 
+ static struct CharAction

@@ -1,16 +1,34 @@
-$NetBSD: patch-af,v 1.2 1998/08/07 11:18:36 agc Exp $
+$NetBSD: patch-af,v 1.3 2001/12/20 09:19:55 tron Exp $
 
---- ../alt/lib/libxview/notify/ndet_fd.c	Tue Jun 29 07:18:08 1993
-+++ lib/libxview/notify/ndet_fd.c	Sat Jul 26 00:42:21 1997
-@@ -27,8 +27,9 @@
- #define GETDTABLESIZE() \
- (dtablesize_cache?dtablesize_cache:(dtablesize_cache=(int)sysconf(_SC_OPEN_MAX)))
- #else
--#define GETDTABLESIZE() \
--    (dtablesize_cache?dtablesize_cache:(dtablesize_cache=getdtablesize()))
-+#define GETDTABLESIZE()						\
-+    (dtablesize_cache ? dtablesize_cache :			\
-+    (dtablesize_cache = MIN(getdtablesize(), FD_SETSIZE)))
- #endif SVR4
+--- lib/libxview/base/base.h.orig	Tue Jun 29 07:14:42 1993
++++ lib/libxview/base/base.h	Thu Dec 20 10:09:16 2001
+@@ -6,10 +6,15 @@
+  *	file for terms of the license.
+  */
  
- static int      ndet_fd_table_size;	/* Number of descriptor slots
++#include <sys/param.h>
+ #ifndef xview_base_DEFINED
+ #define xview_base_DEFINED
+ #include <string.h>
++#if (defined(BSD) && (BSD >= 199103))
++#include <stdlib.h>
++#else
+ #include <malloc.h>
++#endif
+ 
+ #include <xview/xv_c_types.h>
+ 
+@@ -54,10 +59,12 @@
+  * non-SVR4 systems.
+  */
+ #ifndef SUNOS41
++#if !(defined(BSD) && (BSD >= 199103))
+ #define XV_OS_SVR4
+-#define XV_USE_TTCOMPAT
+ #define SYSV_WAIT 
+ #define SYSV_UCONTEXT 
++#endif
++#define XV_USE_TTCOMPAT
+ #define XV_USE_XVFCNTL 
+ #endif
+  

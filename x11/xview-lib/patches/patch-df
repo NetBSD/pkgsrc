@@ -1,0 +1,13 @@
+$NetBSD: patch-df,v 1.1 2001/12/20 09:20:06 tron Exp $
+
+--- lib/libxview/textsw/txt_filter.c.orig	Tue Jun 29 07:17:39 1993
++++ lib/libxview/textsw/txt_filter.c	Thu Dec 20 10:09:58 2001
+@@ -31,7 +31,7 @@
+ #include <signal.h>
+ #include <string.h>
+ 
+-#ifdef sparc
++#if defined(sparc) && !(defined(BSD) && (BSD >= 199306))
+ #ifdef SVR4
+ #include <unistd.h>
+ #else
