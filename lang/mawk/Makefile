@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.5 1999/09/04 15:22:02 agc Exp $
+# $NetBSD: Makefile,v 1.6 2000/03/24 17:56:49 jlam Exp $
 #
 
-DISTNAME=       mawk1.2.2
-PKGNAME=        mawk-1.2.2
+DISTNAME=       mawk1.3.3
+PKGNAME=        mawk-1.3.3
 WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	lang
-MASTER_SITES=   ftp://ftp.oxy.edu/public/
+MASTER_SITES=   ftp://ftp.whidbey.net/pub/brennan/ \
+		ftp://ftp.fu-berlin.de/pub/unix/languages/mawk
 
 MAINTAINER=	agc@netbsd.org
 
