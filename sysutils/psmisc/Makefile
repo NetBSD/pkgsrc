@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2001/07/14 07:42:55 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2001/08/20 03:55:32 jlam Exp $
 
 DISTNAME=		psmisc-20.1
 CATEGORIES=		sysutils
@@ -10,8 +10,9 @@ COMMENT=		miscellaneous procfs tools: killall, pidof, and pstree
 
 CONFLICTS+=		pstree-[0-9]*
 
-GNU_CONFIGURE=		# defined
 USE_BUILDLINK_ONLY=	# defined
+GNU_CONFIGURE=		# defined
+LIBS+=			${LIBGETOPT}
 
 # "make install" doesn't install the link from killall -> pidof.
 post-install:
