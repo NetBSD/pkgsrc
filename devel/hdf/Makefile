@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2002/05/03 23:14:52 jtb Exp $
+# $NetBSD: Makefile,v 1.13 2002/10/09 18:34:58 wiz Exp $
 
 DISTNAME=		HDF4.1r5
 PKGNAME=		hdf-4.1r5
@@ -10,7 +10,7 @@ HOMEPAGE=		http://hdf.ncsa.uiuc.edu/hdf4.html
 COMMENT=		NCSA Hierarchical Data Format
 
 USE_FORTRAN=		# defined
-USE_BUILDLINK_ONLY=	# defined
+USE_BUILDLINK2=		# defined
 
 post-patch:
 	${MV} -f ${WRKSRC}/mfhdf/libsrc/netcdf.h.in 		\
@@ -34,6 +34,6 @@ test:	build
 	@cd ${WRKSRC}/mfhdf/ncdump && ${SETENV} ${MAKE_ENV} ${MAKE} test
 	@cd ${WRKSRC}/mfhdf/nctest && ${SETENV} ${MAKE_ENV} ${MAKE} test
 
-.include "../../devel/zlib/buildlink.mk"
-.include "../../graphics/jpeg/buildlink.mk"
+.include "../../devel/zlib/buildlink2.mk"
+.include "../../graphics/jpeg/buildlink2.mk"
 .include "../../mk/bsd.pkg.mk"
