@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2003/04/07 17:39:19 tron Exp $
+# $NetBSD: Makefile,v 1.41 2003/04/11 15:13:42 jschauma Exp $
 
 DISTNAME=	teTeX-src-1.0.7
 PKGNAME=	teTeX-bin-1.0.7
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=		${WRKDIR}/teTeX-1.0
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/1.0/distrib/sources/}
@@ -68,9 +68,14 @@ OWN_DIRS_PERMS+=	${TEXFONTSDIR}/tfm ${ROOT_USER} ${ROOT_GROUP} 1777
 
 post-install:
 	@${RM} ${PREFIX}/share/texmf/web2c/*.log
-	### someone needs to adjust papersize to this:
-	#${LOCALBASE}/bin/texconfig dvips paper a4
-	#${LOCALBASE}/bin/texconfig xdvi a4
+.if defined(PAPERSIZE)
+	${LOCALBASE}/bin/texconfig dvips paper ${PAPERSIZE:tl}
+.  if ${PAPERSIZE} == "Letter"
+	${LOCALBASE}/bin/texconfig xdvi us
+.  else
+	${LOCALBASE}/bin/texconfig xdvi ${PAPERSIZE:tl}
+.  endif
+.endif
 	${LOCALBASE}/bin/texconfig font ro
 	${LOCALBASE}/bin/texconfig font vardir /var/spool/texfonts
 	${LOCALBASE}/bin/texconfig font options appendonlydir varfonts
