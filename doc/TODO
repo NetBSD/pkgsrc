@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.2894 2005/01/14 09:19:44 adam Exp $
+$NetBSD: TODO,v 1.2895 2005/01/14 09:33:27 adam Exp $
 
 Suggested new packages
 ======================
@@ -507,7 +507,6 @@ Suggested package updates
 	o gift-0.11.8.1
 	o gift-fasttrack-0.8.8
 	o gift-openft-0.2.1.4
-	o gimageview-0.2.27
 	o git-4.3.20
 	o gkrellm-leds-0.8.2
 	o gkrellm-volume-2.1.13
