@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.11 1999/04/14 20:51:44 garbled Exp $
+# $NetBSD: Makefile,v 1.12 1999/05/22 19:41:31 tv Exp $
 #
 
-DISTNAME=		unix02b4
+DISTNAME=		unix02s4
 PKGNAME=		xmess-0.2b4.1
 CATEGORIES=		emulators games x11
-MASTER_SITES=		http://internetter.com/titan/mess/
+MASTER_SITES=		http://mess.emuverse.com/files/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		mycroft@NetBSD.ORG
-HOMEPAGE=		http://internetter.com/titan/mess/
+HOMEPAGE=		http://mess.emuverse.com/
 
 DEPENDS=		unzip-5.40:../../archivers/unzip
 DEPENDS+=		xpm-3.4k:../../graphics/xpm
