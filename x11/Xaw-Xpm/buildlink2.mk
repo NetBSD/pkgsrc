@@ -1,4 +1,4 @@
-# $NetBSD: buildlink2.mk,v 1.2 2002/08/25 19:23:26 jlam Exp $
+# $NetBSD: buildlink2.mk,v 1.3 2002/09/23 08:29:58 jlam Exp $
 
 .if !defined(XAWXPM_BUILDLINK2_MK)
 XAWXPM_BUILDLINK2_MK=	# defined
@@ -17,7 +17,10 @@ BUILDLINK_FILES.Xaw-Xpm+=	lib/libXaw3d.*
 BUILDLINK_TARGETS+=	Xaw-Xpm-buildlink
 
 LIBXAW?=	-L${BUILDLINK_PREFIX.Xaw-Xpm}/lib			\
-		-L${BUILDLINK_PREFIX.xpm}/lib -lXaw3d -lXpm
+		-Wl,-R${BUILDLINK_PREFIX.Xaw-Xpm}/lib			\
+		-L${BUILDLINK_PREFIX.xpm}/lib				\
+		-Wl,-R${BUILDLINK_PREFIX.xpm}/lib			\
+		-lXaw3d -lXpm
 
 Xaw-Xpm-buildlink: _BUILDLINK_USE
 
