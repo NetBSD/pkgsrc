@@ -1,12 +1,0 @@
-$NetBSD: patch-ae,v 1.2 2002/02/10 12:51:00 abs Exp $
-
---- magick/magick.c.orig	Sun Sep 16 23:36:12 2001
-+++ magick/magick.c
-@@ -421,6 +421,7 @@
- #endif
-   SetClientName(filename);
-   (void) setlocale(LC_ALL,"");
-+  (void) setlocale(LC_CTYPE,"C");
-   (void) setlocale(LC_NUMERIC,"C");
- }
- 
