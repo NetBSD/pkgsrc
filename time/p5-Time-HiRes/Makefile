@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2003/12/28 00:27:08 heinz Exp $
+# $NetBSD: Makefile,v 1.13 2004/01/05 22:16:25 jlam Exp $
 #
 
 DISTNAME=		Time-HiRes-1.52
@@ -12,7 +12,9 @@ MAINTAINER=		bad@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/author/JHI/Time-HiRes/
 COMMENT=		Perl5 module for high resolution time, sleep, and alarm
 
-USE_BUILDLINK2=		YES
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_BUILDLINK3=		YES
 
 PERL5_CONFIGURE=	YES
 PERL5_PACKLIST=		${PERL5_SITEARCH}/auto/Time/HiRes/.packlist
