@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 1999/03/20 00:23:55 tron Exp $
+# $NetBSD: Makefile,v 1.10 1999/04/16 20:14:01 jlam Exp $
 
 DISTNAME=	WMMail.app-0.62
 PKGNAME=	wmmail-0.62
@@ -9,7 +9,7 @@ MAINTAINER=	tron@netbsd.org
 HOMEPAGE=	http://www.eecg.utoronto.ca/~chanb/wmmail.html
 
 BUILD_DEPENDS+=	automake:../../devel/automake
-DEPENDS+=	windowmaker-0.51.2:../../x11/windowmaker
+DEPENDS+=	windowmaker-0.52.0:../../x11/windowmaker
 
 USE_X11BASE=	yes
 USE_GMAKE=	yes
