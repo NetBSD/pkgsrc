@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2002/09/18 10:47:06 agc Exp $
+# $NetBSD: Makefile,v 1.325 2002/09/19 01:52:47 uebayasi Exp $
 #
 
 COMMENT=	Development utilities
@@ -134,6 +134,7 @@ SUBDIR+=	libbonoboui
 SUBDIR+=	libctl
 SUBDIR+=	libdockapp
 SUBDIR+=	libetm
+SUBDIR+=	libevent
 SUBDIR+=	libg++
 SUBDIR+=	libgetopt
 SUBDIR+=	libglade
