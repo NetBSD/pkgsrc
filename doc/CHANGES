@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1182 2003/01/21 11:50:36 wiz Exp $
+$NetBSD: CHANGES,v 1.1183 2003/01/21 12:42:40 rh Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -353,3 +353,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated libgtop to 1.0.13nb1 [tron 2003-01-21]
 	Updated ncurses to 5.3 [wiz 2003-01-21]
 	Updated jikes to 1.18 [skrll 2003-01-21]
+	Updated gnustep-objc to 1.2.2nb1 [rh 2003-01-21]
