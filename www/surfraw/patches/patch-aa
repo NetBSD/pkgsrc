@@ -1,22 +1,16 @@
-$NetBSD: patch-aa,v 1.1 2000/10/31 13:48:38 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2001/04/11 11:17:55 jlam Exp $
 
---- Makefile.in.orig	Tue Sep 26 15:54:35 2000
-+++ Makefile.in
-@@ -313,7 +313,7 @@
- check: check-recursive
- installcheck-am:
+--- Makefile.in.orig	Fri Jan 12 21:39:41 2001
++++ Makefile.in	Wed Apr 11 06:49:15 2001
+@@ -282,9 +282,9 @@
  installcheck: installcheck-recursive
+ all-am: Makefile $(SCRIPTS) $(DATA)
+ 
 -install-exec-am: install-binSCRIPTS install-sysconfDATA
 +install-exec-am: install-binSCRIPTS
- install-exec: install-exec-recursive
  
- install-data-am:
-@@ -322,7 +322,7 @@
- install-am: all-am
- 	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
- install: install-recursive
 -uninstall-am: uninstall-binSCRIPTS uninstall-sysconfDATA
 +uninstall-am: uninstall-binSCRIPTS
- uninstall: uninstall-recursive
- all-am: Makefile $(SCRIPTS) $(DATA)
- all-redirect: all-recursive
+ 
+ install-exec: install-exec-recursive install-exec-am
+ 	@$(NORMAL_INSTALL)
