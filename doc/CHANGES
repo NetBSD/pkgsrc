@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.4552 2004/01/22 13:42:55 xtraeme Exp $
+$NetBSD: CHANGES,v 1.4553 2004/01/22 13:54:46 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -399,3 +399,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added swfdec-gtk2-0.2.1 [jmmv 2004-01-22]
 	Updated pango to 1.2.5nb1 [jmmv 2004-01-22]
 	Added quake3server-ut-3.0 [xtraeme 2004-01-22]
+	Removed xmule [jmmv 2004-01-22]
