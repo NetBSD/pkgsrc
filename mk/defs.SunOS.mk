@@ -1,4 +1,4 @@
-# $NetBSD: defs.SunOS.mk,v 1.23.2.1 2002/06/23 18:54:43 jlam Exp $
+# $NetBSD: defs.SunOS.mk,v 1.23.2.2 2002/08/21 05:19:45 jlam Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -26,7 +26,8 @@ GUNZIP_CMD?=	/usr/bin/gunzip -f
 GZCAT?=		/usr/bin/gzcat
 GZIP?=		-9
 GZIP_CMD?=	/usr/bin/gzip -nf ${GZIP}
-.else
+.endif
+.if exists(${LOCALBASE}/bin/gzip)
 GUNZIP_CMD?=	${LOCALBASE}/bin/gunzip -f
 GZCAT?=		${LOCALBASE}/bin/zcat
 GZIP?=		-9
@@ -73,6 +74,7 @@ GROUPADD?=		/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	dt		# default 1.2 compatible libs type
 NOLOGIN?=		${FALSE}
+ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		root
 ROOT_USER?=		root
 SERIAL_DEVICES?=	/dev/null

@@ -1,4 +1,4 @@
-# $NetBSD: endian.mk,v 1.1 2002/04/22 02:30:51 jlam Exp $
+# $NetBSD: endian.mk,v 1.1.2.1 2002/08/21 05:19:46 jlam Exp $
 #
 # Determine the endianness of the platform by checking header files.
 #
@@ -40,7 +40,7 @@ MACHINE_ENDIAN!=							\
 			${ECHO} "\#endif";				\
 			${ECHO} "\#endif";				\
 			${ECHO} "BYTE_ORDER";				\
-		) | ${CC} -E - | ${GREP} "^\\(1234\\|4321\\)"		\
+		) | ${CC} -E - | ${EGREP} "^(1234|4321)"		\
 	`;								\
 	case `${ECHO} $${byte_order}` in				\
 	1234)	${ECHO} little ;;					\

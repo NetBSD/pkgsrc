@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink.mk,v 1.61 2002/04/25 00:03:32 jlam Exp $
+# $NetBSD: bsd.buildlink.mk,v 1.61.2.1 2002/08/21 05:19:39 jlam Exp $
 #
 # This Makefile fragment is included by package buildlink.mk files.  This
 # file does the following things:

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.37 2002/03/04 21:10:47 hubertf Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.37.2.1 2002/08/21 05:19:48 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -102,6 +102,10 @@ INDEXFILE?=	${_PKGSRCDIR}/.index${BULK_ID}
 # the correct order is one where packages that are required by others are built
 # before the packages which require them.
 ORDERFILE?=	${_PKGSRCDIR}/.order${BULK_ID}
+
+# file which is used as a timestamp for when the build started.  This is used eventually
+# for looking for leftover files (files not properly deinstalled)
+STARTFILE?=	${_PKGSRCDIR}/.start${BULK_ID}
 
 # a list of pkgs which we should _never_ delete during a build.  The primary use is for digest
 # and also for xpkgwedge.  Add pkgtools/xpkgwedge in /etc/mk.conf to do an xpkgwedged bulk build.
@@ -295,6 +299,11 @@ bulk-package:
 				fi ;\
 			done ;\
 		fi ;\
+		if [ -f ${INTERACTIVE_COOKIE} ]; then \
+			${ECHO_MSG} "BULK> Removing old marker for INTERACTIVE_STAGE..." ; \
+			${ECHO_MSG} ${RM} -f ${INTERACTIVE_COOKIE} ; \
+			${DO}       ${RM} -f ${INTERACTIVE_COOKIE} ; \
+		fi ;\
 		${ECHO_MSG} ${MAKE} package '(${PKGNAME})' 2>&1 ; \
 		${DO}     ( ${MAKE} package 2>&1 ); \
 		) 2>&1 | tee -a ${BUILDLOG} ; \
@@ -336,6 +345,9 @@ bulk-package:
 				done ;\
 			fi ;\
 			nerrors=`${GREP} -c '^\*\*\* Error code' ${BROKENFILE} || true`; \
+			if [ -f ${INTERACTIVE_COOKIE} ]; then \
+				nerrors="0"; \
+			fi; \
 			${ECHO_MSG} " $$nerrors ${PKGPATH}/${BROKENFILE} $$nbrokenby " >> ${_PKGSRCDIR}/${BROKENFILE} \
 			) 2>&1 | tee -a ${BROKENFILE}; \
 		fi ; \

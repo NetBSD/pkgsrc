@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: NetBSD.pkg.dist,v 1.21 2002/04/04 18:13:39 jdolecek Exp $
+#	$NetBSD: NetBSD.pkg.dist,v 1.21.2.1 2002/08/21 05:19:37 jlam Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -134,6 +134,10 @@
 	games
         ..
 	locale
+            ar
+                LC_MESSAGES
+                ..
+            ..
             az
                 LC_MESSAGES
                 ..
@@ -222,6 +226,10 @@
                 LC_MESSAGES
                 ..
             ..
+            hi
+                LC_MESSAGES
+                ..
+            ..
             hr
                 LC_MESSAGES
                 ..
@@ -247,6 +255,14 @@
                 ..
             ..
             lt
+                LC_MESSAGES
+                ..
+            ..
+            lv
+                LC_MESSAGES
+                ..
+            ..
+            ms
                 LC_MESSAGES
                 ..
             ..
@@ -326,6 +342,10 @@
                 LC_MESSAGES
                 ..
             ..
+            vi
+                LC_MESSAGES
+                ..
+            ..
             wa
                 LC_MESSAGES
                 ..
@@ -378,6 +398,8 @@
             ..
 	    es_ES.ISO_8859-1
             ..
+	    et_EE.ISO_8859-15
+	    ..
 	    fi_FI.ISO_8859-1
             ..
 	    fr_BE.ISO_8859-1
@@ -412,14 +434,20 @@
             ..
 	    no_NO.ISO_8859-1
             ..
+	    pl_PL.ISO_8859-2
+	    ..
 	    pt_PT.ISO_8859-1
             ..
+	    ru_RU.KOI8-R
+	    ..
 	    ru_SU.CP866
             ..
             ru_SU.KOI8-R
             ..
 	    sv_SE.ISO_8859-1
             ..
+	    uk_UA.KOI8-U
+	    ..
 	    uk_UA.ISO_8859-1
 	    ..
         ..

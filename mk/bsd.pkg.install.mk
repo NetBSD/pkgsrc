@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.install.mk,v 1.18.2.1 2002/06/23 18:54:38 jlam Exp $
+# $NetBSD: bsd.pkg.install.mk,v 1.18.2.2 2002/08/21 05:19:40 jlam Exp $
 #
 # This Makefile fragment is included by package Makefiles to use the common
 # INSTALL/DEINSTALL scripts.  To use this Makefile fragment, simply:
@@ -52,6 +52,7 @@ INSTALL_SRC?=		${INSTALL_TEMPLATES}
 FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		LOCALBASE=${LOCALBASE}
 FILES_SUBST+=		X11BASE=${X11BASE}
+FILES_SUBST+=		PKG_SYSCONFBASE=${PKG_SYSCONFBASE}
 FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 FILES_SUBST+=		PKGBASE=${PKGBASE}
 
@@ -107,9 +108,10 @@ USE_USERGROUP=		YES
 #	same way, but the package admin isn't prompted to customize the file
 #	at post-install time.
 #
-# RCD_SCRIPTS works lists the basenames of the rc.d scripts.  It's assumed that
-#	they live in ${PREFIX}/etc/rc.d, and the scripts will be copied into
-#	${RCD_SCRIPTS_DIR} with ${RCD_SCRIPTS_MODE} permissions.
+# RCD_SCRIPTS works lists the basenames of the rc.d scripts.  They are
+#	expected to be found in ${RCD_SCRIPTS_EXAMPLEDIR}, and the scripts
+#	will be copied into ${RCD_SCRIPTS_DIR} with ${RCD_SCRIPTS_MODE}
+#	permissions.
 #
 CONF_FILES?=		# empty
 CONF_FILES_MODE?=	0644
@@ -120,6 +122,7 @@ SUPPORT_FILES_PERMS?=	# empty
 RCD_SCRIPTS?=		# empty
 RCD_SCRIPTS_MODE?=	0755
 RCD_SCRIPTS_DIR?=	/etc/rc.d
+RCD_SCRIPTS_EXAMPLEDIR?=	${PREFIX}/etc/rc.d
 FILES_SUBST+=		CONF_FILES=${CONF_FILES:Q}
 FILES_SUBST+=		CONF_FILES_MODE=${CONF_FILES_MODE}
 FILES_SUBST+=		CONF_FILES_PERMS=${CONF_FILES_PERMS:Q}
@@ -129,6 +132,7 @@ FILES_SUBST+=		SUPPORT_FILES_PERMS=${SUPPORT_FILES_PERMS:Q}
 FILES_SUBST+=		RCD_SCRIPTS=${RCD_SCRIPTS:Q}
 FILES_SUBST+=		RCD_SCRIPTS_MODE=${RCD_SCRIPTS_MODE}
 FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
+FILES_SUBST+=		RCD_SCRIPTS_EXAMPLEDIR=${RCD_SCRIPTS_EXAMPLEDIR}
 
 # OWN_DIRS contains a list of directories for this package that should be
 #       created and should attempt to be destroyed by the INSTALL/DEINSTALL
@@ -145,7 +149,8 @@ FILES_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 #
 MAKE_DIRS?=		# empty
 MAKE_DIRS_PERMS?=	# empty
-_MAKE_DIRS=		${PKG_SYSCONFDIR} ${RCD_SCRIPTS_DIR} ${MAKE_DIRS}
+_MAKE_DIRS=		${PKG_SYSCONFDIR} ${MAKE_DIRS}
+_MAKE_DIRS+=		${RCD_SCRIPTS_DIR}
 OWN_DIRS?=		# empty
 OWN_DIRS_PERMS?=	# empty
 FILES_SUBST+=		MAKE_DIRS=${_MAKE_DIRS:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.24.2.1 2002/06/23 18:54:43 jlam Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.24.2.2 2002/08/21 05:19:45 jlam Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -72,6 +72,7 @@ MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 MOTIF12_TYPE_DEFAULT?=	lesstif12	# default 1.2 compatible libs type
 NOLOGIN?=		/sbin/nologin
 PKG_TOOLS_BIN?=		/usr/sbin
+ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=	wheel
 
