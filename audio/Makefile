@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2002/12/21 23:26:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.161 2003/02/14 23:57:33 hubertf Exp $
 #
 
 COMMENT=	Audio tools
@@ -166,16 +166,28 @@ SUBDIR+=	xmcd
 SUBDIR+=	xmix
 SUBDIR+=	xmmix
 SUBDIR+=	xmms
+SUBDIR+=	xmms-bezier
+SUBDIR+=	xmms-bump-scope
 SUBDIR+=	xmms-crossfade
 SUBDIR+=	xmms-dflowers
 SUBDIR+=	xmms-dscope
 SUBDIR+=	xmms-dspectogram
 SUBDIR+=	xmms-dspectralizer
 SUBDIR+=	xmms-fmradio
+SUBDIR+=	xmms-funtimedancer
 SUBDIR+=	xmms-gdancer
+SUBDIR+=	xmms-infinity
+SUBDIR+=	xmms-iris
+SUBDIR+=	xmms-jakdaw
+SUBDIR+=	xmms-jess
 SUBDIR+=	xmms-mad
+SUBDIR+=	xmms-madspin
 SUBDIR+=	xmms-neato
+SUBDIR+=	xmms-nebulus
+SUBDIR+=	xmms-paranormal
 SUBDIR+=	xmms-sid
+SUBDIR+=	xmms-synaesthesia
+SUBDIR+=	xmms-tv-scope
 SUBDIR+=	xmms-vismsa
 SUBDIR+=	xmp
 SUBDIR+=	xmradio
