@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2000/12/17 23:32:10 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2000/12/18 00:21:55 wiz Exp $
 # $FreeBSD Id: Makefile,v 1.15 1998/02/07 22:59:16 hoek Exp
 #
 
-DISTNAME=	ical-2.2
+DISTNAME=	ical-2.2.1
 CATEGORIES=	time
-MASTER_SITES=	http://www.research.digital.com/SRC/personal/Sanjay_Ghemawat/ical/icalbins/
+MASTER_SITES=	http://members.nbci.com/majahj/ical/
 
 MAINTAINER=	packages@netbsd.org
-HOMEPAGE=	http://www.research.digital.com/SRC/personal/Sanjay_Ghemawat/ical/
+HOMEPAGE=	http://members.nbci.com/majahj/ical/
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
@@ -17,8 +17,5 @@ CONFIGURE_ARGS=	--prefix=${PREFIX} \
 		--with-tclconfig=${PREFIX}/lib \
 		--with-tclsh=${PREFIX}/bin/tclsh \
 		--with-tkconfig=${PREFIX}/lib
-
-post-install:
-	@strip ${PREFIX}/bin/${DISTNAME}
 
 .include "../../mk/bsd.pkg.mk"
