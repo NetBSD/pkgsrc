@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5051 2004/03/01 22:52:25 heinz Exp $
+$NetBSD: CHANGES,v 1.5052 2004/03/01 23:06:29 snj Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1108,3 +1108,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libtasn1 to 0.2.7 [jmmv 2004-03-01]
 	Updated gnutls to 1.0.8 [jmmv 2004-03-01]
 	Added enigma-0.81 [heinz 2004-03-01]
+	Updated gqview to 1.4.1 [snj 2004-03-01]
