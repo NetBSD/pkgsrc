@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.119 2004/10/03 00:14:41 tv Exp $
+# $NetBSD: Makefile,v 1.120 2004/11/06 21:41:52 kristerw Exp $
 #
 
-DISTNAME=		xmame-0.86
-PKGREVISION=	1
+DISTNAME=		xmame-0.87
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -113,6 +112,7 @@ do-install:
 		${PREFIX}/bin/${TARGET}
 	${INSTALL_PROGRAM} ${WRKSRC}/romcmp ${PREFIX}/bin/romcmp
 	${INSTALL_PROGRAM} ${WRKSRC}/chdman ${PREFIX}/bin/chdman
+	${INSTALL_PROGRAM} ${WRKSRC}/xml2info ${PREFIX}/bin/xml2info
 	${INSTALL_MAN} ${WRKSRC}/doc/${TARGET}.6			\
 		${PREFIX}/man/man6/${TARGET}.6
 	${INSTALL_DATA_DIR} ${ROMPATH}
