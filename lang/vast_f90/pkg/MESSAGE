@@ -1,0 +1,10 @@
+==========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 1999/09/16 13:35:34 wennmach Exp $
+
+i386:	To run the Linux binary vast-f90, you need COMPAT_LINUX and
+	EXEC_ELF32 in your kernel, plus the developer Linux toolchain,
+        as provided by e. g. emulators/suse_devel.
+
+Please read the VAST license: ${PREFIX}/share/doc/vast_f90/LICENSE
+
+==========================================================================
