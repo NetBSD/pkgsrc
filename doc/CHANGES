@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.6353 2004/06/27 17:32:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.6354 2004/06/27 20:21:52 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -3113,3 +3113,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated jdbc-postgresql74 to 7.4.3 [recht 2004-06-27]
 	Updated intltool to 0.31 [jmmv 2004-06-27]
 	Removed xml-i18n-tools [jmmv 2004-06-27]
+	Updated uptimec to 0.2p3 [xtraeme 2004-06-27]
