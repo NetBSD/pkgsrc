@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2003/01/29 21:38:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2003/06/05 17:20:27 jmmv Exp $
 
 DISTNAME=	jade-1.2.1
 PKGREVISION=	6
@@ -11,7 +11,7 @@ MAINTAINER=	rh@NetBSD.ORG
 HOMEPAGE=	http://www.jclark.com/jade/
 COMMENT=	Object-oriented SGML/XML parser toolkit and DSSSL engine
 
-PATCH_SITES=		http://ftp.debian.org/debian/pool/main/j/jade/
+PATCH_SITES=		${MASTER_SITE_DEBIAN:=pool/main/j/jade/}
 PATCHFILES=		jade_1.2.1-18.diff.gz
 PATCH_DIST_STRIP=	-p1
 
