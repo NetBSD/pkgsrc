@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1409 2004/02/17 12:16:39 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1410 2004/02/18 13:32:38 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1352,15 +1352,10 @@ SCRIPTS_ENV+= CURDIR=${.CURDIR} DISTDIR=${DISTDIR} \
 SCRIPTS_ENV+=	BATCH=yes
 .endif
 
-# Initialize a variable used by Makefiles to check whether to prepend
-# to the PATH.
-#
-PREPEND_PATH?=	# empty
-
 # Get the proper dependencies and set the PATH to use the compiler
 # named in PKGSRC_COMPILER.
 #
-.include "../../mk/compiler/bsd.compiler.mk"
+.include "../../mk/compiler.mk"
 
 .if !empty(USE_BUILDLINK2:M[nN][oO]) && !empty(USE_BUILDLINK3:M[nN][oO])
 NO_BUILDLINK=		# defined
@@ -1375,8 +1370,16 @@ NO_BUILDLINK=		# defined
 
 .include "../../mk/tools.mk"
 
+_PREPENDED_TO_PATH?=	# empty
+.for _dir_ in ${PREPEND_PATH}
+.  if empty(_PREPENDED_TO_PATH:M${_dir_})
+_PREPENDED_TO_PATH+=	${_dir_}
+PATH:=			${_dir_}:${PATH}
+.  endif
+.endfor
+
 PATH_ENV+=	PATH=${PATH:Q}
-PATH_ENV+=	PREPEND_PATH=${PREPEND_PATH:Q}
+PATH_ENV+=	_PREPENDED_TO_PATH=${_PREPENDED_TO_PATH:Q}
 
 .MAIN: all
 
