@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.103 2004/11/30 18:26:41 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2005/03/24 11:00:38 wiz Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=		16
+PKGREVISION=		17
 
 COMMENT=		Core component of GNU Network Object Management Environment
 
-DEPENDS+=		xscreensaver-gnome>=4.14:../xscreensaver-gnome
 DEPENDS+=		gnome-session>=1.4.2:../../x11/gnome1-session
 DEPENDS+=		gnome-panel>=1.4.2:../../x11/gnome1-panel
 BUILD_DEPENDS+=		gtk-doc>=0.9:../../textproc/gtk-doc
