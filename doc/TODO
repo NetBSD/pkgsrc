@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3241 2005/03/20 14:15:21 ben Exp $
+$NetBSD: TODO,v 1.3242 2005/03/20 17:52:55 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -993,7 +993,6 @@ Suggested package updates
 	o scew-0.4.0
 	o scheme48-1.1
 	o scm-5d9
-	o screws-0.56 [pkg/28646]
 	o scribus-1.2.1
 	o scrollz-1.9.4
 	o sdig-0.40
