@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/01/20 12:27:16 agc Exp $
+# $NetBSD: Makefile,v 1.8 2004/01/24 15:14:11 grant Exp $
 #
 
 DISTNAME=	wmMoonClock-1.27
@@ -11,7 +11,7 @@ COMMENT=	Shows lunar ephemeris to fairly high accuracy
 
 WRKSRC=         ${WRKDIR}/${DISTNAME}/Src
 USE_BUILDLINK2=	YES
-USE_GMAKE=	YES
+USE_GNU_TOOLS+=	make
 USE_X11BASE=	YES
 
 MAKE_FLAGS+=    EXTRA_LOCAL_LIBS=${EXTRA_LOCAL_LIBS}
