@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 1998/08/15 14:19:53 frueauf Exp $
+@comment $NetBSD: PLIST,v 1.2 1998/09/14 20:47:35 garbled Exp $
 bin/xbill
 man/man6/xbill.6
 share/xbill/pixmaps/about.xpm
@@ -62,8 +62,6 @@ share/xbill/bitmaps/os2.xbm
 share/xbill/bitmaps/redhat.xbm
 share/xbill/bitmaps/sgi.xbm
 share/xbill/bitmaps/sun.xbm
-share/xbill/scores
-@unexec rm -f %D/share/xbill/scores
 @dirrm share/xbill/pixmaps
 @dirrm share/xbill/bitmaps
 @dirrm share/xbill

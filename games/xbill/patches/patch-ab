@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 1998/09/14 20:47:35 garbled Exp $
+--- Scorelist.cc.orig	Mon Sep 14 13:13:16 1998
++++ Scorelist.cc	Mon Sep 14 13:14:21 1998
+@@ -1,9 +1,9 @@
+ #include "objects.h"
+ 
+ FILE *Scorelist::open_file(char *mode) {
+-	char file[255];
+-	sprintf (file, "%sscores", XBILL_HOME);
+-	return fopen (file, mode);
++/*	char file[255];
++	sprintf (file, "%sscores", XBILL_HOME);*/
++	return fopen ("/var/games/xbill.scores", mode);
+ }
+ 
+ void Scorelist::read() {
