@@ -1,4 +1,4 @@
-# $NetBSD: defs.NetBSD.mk,v 1.49.2.2 2003/08/01 19:00:31 jlam Exp $
+# $NetBSD: defs.NetBSD.mk,v 1.49.2.3 2003/08/14 07:37:04 jlam Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -125,6 +125,7 @@ _OPSYS_HAS_MANZ=	yes	# MANZ controls gzipping of man pages
 _OPSYS_HAS_OSSAUDIO=	yes	# libossaudio is available
 _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_RPATH_NAME=	-R	# name of symbol in rpath directive to linker 
+_OPSYS_DEFAULT_PATH=	/bin:/usr/bin:/sbin:/usr/sbin
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG=	-V simple -b 	# switch to patch(1) for backup suffix
 _PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are

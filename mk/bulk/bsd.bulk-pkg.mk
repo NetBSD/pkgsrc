@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.45.2.1 2003/08/01 19:00:36 jlam Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.45.2.2 2003/08/14 07:37:07 jlam Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@netbsd.org>
@@ -161,7 +161,7 @@ bulk-check-uptodate:
 	if [ "$$uptodate" = "1" ]; then \
 		${SHCOMMENT} "Check required binary packages" ; \
 		deps=`${PKG_INFO} -qf ${REF} \
-		      | ${GREP} ^@pkgdep \
+		      | ${GREP} '^@pkgdep' \
 		      | ${SED} 's,@pkgdep.,,g'`; \
 		for dep in $$deps ; do \
 			${SHCOMMENT} "check against the binary pkg that pkg_add would pick, too:" ; \
@@ -195,7 +195,7 @@ bulk-package:
 		${ECHO_MSG} '###' ; \
 		${ECHO_MSG} '###' `date`: ; \
 		${ECHO_MSG} '### ${MAKE} ${.TARGET} for ${PKGNAME}' ; \
-		${ECHO_MSG} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} ^d | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
+		${ECHO_MSG} '### Current pkg count: ' `${LS} -l ${PKG_DBDIR} | ${GREP} '^d' | ${WC} -l` installed packages: `${LS} ${PKG_DBDIR} | ${GREP} -v pkgdb.byfile.db`; \
 		${ECHO_MSG} '###' ; \
 	fi \
 	) 2>&1 | tee -a ${BUILDLOG}
