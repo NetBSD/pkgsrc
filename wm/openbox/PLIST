@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/12/23 08:34:36 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2003/12/23 08:41:55 jmmv Exp $
 bin/gnome-panel-control
 bin/kdetrayproxy
 bin/openbox
@@ -18,12 +18,12 @@ lib/libobrender.so.2
 lib/libobrender.so.2.0
 lib/pkgconfig/obparser-3.0.pc
 lib/pkgconfig/obrender-3.0.pc
+share/examples/openbox/menu.xml
+share/examples/openbox/rc.xml
 share/gnome/wm-properties/openbox.desktop
 ${PKGLOCALEDIR}/locale/en@boldquot/LC_MESSAGES/openbox.mo
 ${PKGLOCALEDIR}/locale/en@quot/LC_MESSAGES/openbox.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/openbox.mo
-share/examples/openbox/menu.xml
-share/examples/openbox/rc.xml
 share/openbox/menu.xsd
 share/openbox/rc.xsd
 share/openbox/themeupdate.py
@@ -51,7 +51,6 @@ share/themes/Om4Ob/openbox-3/shade_hover.xbm
 share/themes/Om4Ob/openbox-3/shade_toggled.xbm
 share/themes/Om4Ob/openbox-3/themerc
 share/themes/TheBear/openbox-3/themerc
-@dirrm share/examples/openbox
 @dirrm share/themes/TheBear/openbox-3
 @unexec ${RMDIR} %D/share/themes/TheBear 2>/dev/null || ${TRUE}
 @dirrm share/themes/Om4Ob/openbox-3
@@ -65,6 +64,7 @@ share/themes/TheBear/openbox-3/themerc
 @unexec ${RMDIR} %D/share/themes 2>/dev/null || ${TRUE}
 @dirrm share/openbox
 @comment in gnome2-dirs: @dirrm share/gnome/wm-properties
+@dirrm share/examples/openbox
 @dirrm include/openbox/3.0/openbox
 @dirrm include/openbox/3.0
 @dirrm include/openbox
