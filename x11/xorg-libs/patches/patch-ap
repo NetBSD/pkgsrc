@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2004/09/16 19:36:10 minskim Exp $
+
+--- extras/Xpm/lib/CrDatFrI.c.orig	2004-03-04 11:46:10.000000000 -0600
++++ extras/Xpm/lib/CrDatFrI.c
+@@ -124,6 +124,8 @@ XpmCreateDataFromXpmImage(data_return, i
+      */
+     header_nlines = 1 + image->ncolors;
+     header_size = sizeof(char *) * header_nlines;
++    if (header_size >= SIZE_MAX / sizeof(char *))
++	return (XpmNoMemory);
+     header = (char **) XpmCalloc(header_size, sizeof(char *));
+     if (!header)
+ 	return (XpmNoMemory);
