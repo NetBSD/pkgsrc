@@ -1,0 +1,91 @@
+$NetBSD: patch-ab,v 1.1.1.1 2002/10/03 19:26:12 wiz Exp $
+
+--- Makefile.in.orig	Sat Jul 27 23:09:40 2002
++++ Makefile.in
+@@ -59,7 +59,7 @@ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+ APIVERSION = @APIVERSION@
+ LN = @LN@
+-MAKEINFO = @MAKEINFO@
++MAKEINFO = /usr/bin/makeinfo
+ PACKAGE = @PACKAGE@
+ PERL = @PERL@
+ TAR = @TAR@
+@@ -137,11 +137,11 @@ install-binSCRIPTS: $(bin_SCRIPTS)
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	@list='$(bin_SCRIPTS)'; for p in $$list; do \
+ 	  if test -f $$p; then \
+-	    echo " $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`"; \
+-	    $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
++	    echo " $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`-$(APIVERSION)"; \
++	    $(INSTALL_SCRIPT) $$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`-$(APIVERSION); \
+ 	  else if test -f $(srcdir)/$$p; then \
+-	    echo " $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`"; \
+-	    $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`; \
++	    echo " $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`-$(APIVERSION)"; \
++	    $(INSTALL_SCRIPT) $(srcdir)/$$p $(DESTDIR)$(bindir)/`echo $$p|sed '$(transform)'`-$(APIVERSION); \
+ 	  else :; fi; fi; \
+ 	done
+ 
+@@ -183,7 +183,7 @@ DVIPS = dvips
+ .texi.info:
+ 	@cd $(srcdir) && rm -f $@ $@-[0-9] $@-[0-9][0-9]
+ 	cd $(srcdir) \
+-	  && $(MAKEINFO) `echo $< | sed 's,.*/,,'`
++	  && $(MAKEINFO) --no-split `echo $< | sed 's,.*/,,'`
+ 
+ .texi.dvi:
+ 	TEXINPUTS=.:$$TEXINPUTS \
+@@ -227,34 +227,26 @@ DVIPS = dvips
+ install-info-am: $(INFO_DEPS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(infodir)
+-	@list='$(INFO_DEPS)'; \
+-	for file in $$list; do \
+-	  d=$(srcdir); \
+-	  for ifile in `cd $$d && echo $$file $$file-[0-9] $$file-[0-9][0-9]`; do \
+-	    if test -f $$d/$$ifile; then \
+-	      echo " $(INSTALL_DATA) $$d/$$ifile $(DESTDIR)$(infodir)/$$ifile"; \
+-	      $(INSTALL_DATA) $$d/$$ifile $(DESTDIR)$(infodir)/$$ifile; \
+-	    else : ; fi; \
+-	  done; \
+-	done
++	d=$(srcdir); \
++	if test -f $$d/automake.info; then \
++	   echo " $(INSTALL_DATA) $$d/automake.info $(DESTDIR)$(infodir)/automake14.info"; \
++	   $(INSTALL_DATA) $$d/automake.info $(DESTDIR)$(infodir)/automake14.info; \
++	  else : ; fi; 
+ 	@$(POST_INSTALL)
+-	@if $(SHELL) -c 'install-info --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
+-	  list='$(INFO_DEPS)'; \
+-	  for file in $$list; do \
+-	    echo " install-info --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/$$file";\
+-	    install-info --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/$$file || :;\
+-	  done; \
++	@if $(SHELL) -c '/usr/bin/install-info --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
++	    echo " /usr/bin/install-info --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/automake14.info";\
++	    /usr/bin/install-info --info-dir=$(DESTDIR)$(infodir) $(DESTDIR)$(infodir)/automake14.info || :;\
+ 	else : ; fi
+ 
+ uninstall-info:
+ 	$(PRE_UNINSTALL)
+-	@if $(SHELL) -c 'install-info --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
++	@if $(SHELL) -c '/usr/bin/install-info --version | sed 1q | fgrep -s -v -i debian' >/dev/null 2>&1; then \
+ 	  ii=yes; \
+ 	else ii=; fi; \
+ 	list='$(INFO_DEPS)'; \
+ 	for file in $$list; do \
+ 	  test -z "$$ii" \
+-	    || install-info --info-dir=$(DESTDIR)$(infodir) --remove $$file; \
++	    || /usr/bin/install-info --info-dir=$(DESTDIR)$(infodir) --remove $$file; \
+ 	done
+ 	@$(NORMAL_UNINSTALL)
+ 	list='$(INFO_DEPS)'; \
+@@ -488,7 +480,6 @@ installcheck-am: installcheck-local
+ installcheck: installcheck-recursive
+ install-exec-am: install-binSCRIPTS
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-exec-hook
+ install-exec: install-exec-recursive
+ 
+ install-data-am: install-info-am install-pkgvdataDATA install-scriptDATA
