@@ -1,0 +1,14 @@
+$NetBSD: patch-ak,v 1.1.1.1 2002/06/25 15:31:34 taca Exp $
+
+--- script/installbin.sh.orig	Tue Oct  9 14:22:31 2001
++++ script/installbin.sh
+@@ -30,7 +30,9 @@
+    mv $BINDIR/$p2 $BINDIR/$p2.old
+  fi
+  cp $p $BINDIR/
++ strip $BINDIR/$p2
+  chmod $INSTALLPERMS $BINDIR/$p2
++ rm -f $BINDIR/$p2.old
+ 
+  # this is a special case, mount needs this in a specific location
+  if [ $p2 = smbmount ]; then

@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1.1.1 2002/06/25 15:31:34 taca Exp $
+
+--- lib/pidfile.c.orig	Fri Nov  9 18:26:50 2001
++++ lib/pidfile.c
+@@ -43,7 +43,7 @@
+ 	unsigned ret;
+ 	pstring pidFile;
+ 
+-	slprintf(pidFile, sizeof(pidFile)-1, "%s/%s.pid", lp_lockdir(), name);
++	slprintf(pidFile, sizeof(pidFile)-1, "%s/%s.pid", lp_piddir(), name);
+ 
+ 	fd = sys_open(pidFile, O_NONBLOCK | O_RDONLY, 0644);
+ 	if (fd == -1) {
+@@ -84,7 +84,7 @@
+ 	pstring pidFile;
+ 	pid_t pid;
+ 
+-	slprintf(pidFile, sizeof(pidFile)-1, "%s/%s.pid", lp_lockdir(), name);
++	slprintf(pidFile, sizeof(pidFile)-1, "%s/%s.pid", lp_piddir(), name);
+ 
+ 	pid = pidfile_pid(name);
+ 	if (pid != 0) {
