@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.89 2005/02/25 22:20:36 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2004Q4,v 1.1.2.90 2005/02/26 07:25:47 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2004Q4 branch:
@@ -189,3 +189,5 @@ Pullup ticket 313 - requested by Adrian Portelli
 security fix for cyrus-imapd22
 Pullup ticket 309 - requested by Adrian Portelli
 security fix for phpmyadmin
+Pullup ticket 311 - requested by Lubomir Sedlacik
+security fix for curl
