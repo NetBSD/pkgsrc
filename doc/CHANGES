@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.1845 2003/04/04 22:39:08 rh Exp $
+$NetBSD: CHANGES,v 1.1846 2003/04/05 18:19:45 perry Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -1465,3 +1465,4 @@ Changes to the packages collection and infrastructure in 2003:
 	Added wol-0.6.0 [zuntum 2003-04-04]
 	Updated createbuildlink to 2.5 [rh 2003-04-04]
 	Added liblive-2003.04.04 [rh 2003-04-04]
+	Updated etcupdate to 20030305 [perry 2003-03-05]
