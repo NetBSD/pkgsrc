@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.5174 2004/03/09 15:17:29 taya Exp $
+$NetBSD: CHANGES,v 1.5175 2004/03/09 18:09:34 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -1346,3 +1346,4 @@ Changes to the packages collection and infrastructure in 2004:
 	Added kde3-i18n-sr_Latn-3.2.1 [markd 2004-03-09]
 	Added kde3-i18n-tg-3.2.1 [markd 2004-03-09]
 	Removed MozillaFirebird [taya 2004-03-09]
+	Updated wavesurfer to 1.4.6nb1 [minskim 2004-03-09]
