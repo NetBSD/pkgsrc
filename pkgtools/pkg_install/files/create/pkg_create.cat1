@@ -4,13 +4,13 @@ NNAAMMEE
      ppkkgg__ccrreeaattee - a utility for creating software package distributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__ccrreeaattee [--EEhhllOORRUUVVvv] [--BB _b_u_i_l_d_-_i_n_f_o_-_f_i_l_e] [--CC _c_p_k_g_s] [--DD _d_i_s_p_l_a_y_f_i_l_e]
-                [--KK _p_k_g___d_b_d_i_r] [--PP _d_p_k_g_s] [--XX _e_x_c_l_u_d_e_f_i_l_e]
-                [--bb _b_u_i_l_d_-_v_e_r_s_i_o_n_-_f_i_l_e] [--ii _i_s_c_r_i_p_t] [--II _r_e_a_l_p_r_e_f_i_x]
-                [--kk _d_s_c_r_i_p_t] [--LL _S_r_c_D_i_r] [--mm _m_t_r_e_e_f_i_l_e] [--pp _p_r_e_f_i_x]
-                [--rr _r_s_c_r_i_p_t] [--ss _s_i_z_e_-_p_k_g_-_f_i_l_e] [--SS _s_i_z_e_-_a_l_l_-_f_i_l_e]
-                [--nn _p_r_e_s_e_r_v_e_-_f_i_l_e] [--tt _t_e_m_p_l_a_t_e] --cc _c_o_m_m_e_n_t --dd _d_e_s_c_r_i_p_t_i_o_n
-                --ff _p_a_c_k_l_i_s_t _p_k_g_-_n_a_m_e
+     ppkkgg__ccrreeaattee [--EEhhllOORRUUVVvv] [--BB _b_u_i_l_d_-_i_n_f_o_-_f_i_l_e] [--bb _b_u_i_l_d_-_v_e_r_s_i_o_n_-_f_i_l_e]
+                [--CC _c_p_k_g_s] [--DD _d_i_s_p_l_a_y_f_i_l_e] [--II _r_e_a_l_p_r_e_f_i_x] [--ii _i_s_c_r_i_p_t]
+                [--KK _p_k_g___d_b_d_i_r] [--kk _d_s_c_r_i_p_t] [--LL _S_r_c_D_i_r] [--mm _m_t_r_e_e_f_i_l_e]
+                [--nn _p_r_e_s_e_r_v_e_-_f_i_l_e] [--PP _d_p_k_g_s] [--pp _p_r_e_f_i_x] [--rr _r_s_c_r_i_p_t]
+                [--SS _s_i_z_e_-_a_l_l_-_f_i_l_e] [--ss _s_i_z_e_-_p_k_g_-_f_i_l_e] [--tt _t_e_m_p_l_a_t_e]
+                [--XX _e_x_c_l_u_d_e_f_i_l_e] --cc _c_o_m_m_e_n_t --dd _d_e_s_c_r_i_p_t_i_o_n --ff _p_a_c_k_l_i_s_t _p_k_g_-
+                _n_a_m_e
 
 DDEESSCCRRIIPPTTIIOONN
      The ppkkgg__ccrreeaattee command is used to create packages that will subsequently
@@ -47,7 +47,7 @@ OOPPTTIIOONNSS
              low).
 
      --cc _[_-_]_d_e_s_c
-             Fetch package ``one line description'' from file _d_e_s_c or, if pre-
+             Fetch package (one line description) from file _d_e_s_c or, if pre-
              ceded by --, the argument itself.  This string should also give
              some idea of which version of the product (if any) the package
              represents.
@@ -63,8 +63,8 @@ OOPPTTIIOONNSS
      --EE      Add an empty views file to the package.
 
      --ff _p_a_c_k_l_i_s_t
-             Fetch ``packing list'' for package from the file _p_a_c_k_l_i_s_t or
-             ssttddiinn if _p_a_c_k_l_i_s_t is a -- (dash).
+             Fetch (packing list) for package from the file _p_a_c_k_l_i_s_t or ssttddiinn
+             if _p_a_c_k_l_i_s_t is a -- (dash).
 
      --hh      Force tar to follow symbolic links, so that the files they point
              to are dumped, rather than the links themselves.
@@ -105,8 +105,13 @@ OOPPTTIIOONNSS
              _p_r_e_f_i_x, where _p_r_e_f_i_x is the name of the first directory named by
              a @@ccwwdd directive.
 
-     --OO      Go into a `packing list Only' mode.  This is used to do `fake
-             pkg_add' operations when a package is installed.  In such cases,
+     --nn _p_r_e_s_e_r_v_e_-_f_i_l_e
+             The file is used to denote that the package should not be delet-
+             ed.  This is intended for use where the deletion of packages may
+             present a bootstrap problem.
+
+     --OO      Go into a (packing list only) mode.  This is used to do (fake
+             pkg_add) operations when a package is installed.  In such cases,
              it is necessary to know what the final, adjusted packing list
              will look like.
 
@@ -120,7 +125,7 @@ OOPPTTIIOONNSS
              form of @@bbllddddeepp directives.
 
      --pp _p_r_e_f_i_x
-             Set _p_r_e_f_i_x as the initial directory ``base'' to start from in se-
+             Set _p_r_e_f_i_x as the initial directory (base) to start from in se-
              lecting files for the package.
 
      --RR      Re-order any directories in the pkg/PLIST file into reverse al-
@@ -128,25 +133,20 @@ OOPPTTIIOONNSS
              removed before parent directories.
 
      --rr _r_s_c_r_i_p_t
-             Set _r_s_c_r_i_p_t to be the ``requirements'' procedure for the package.
+             Set _r_s_c_r_i_p_t to be the (requirements) procedure for the package.
              This can be any executable program (or shell script).  It will be
              invoked automatically at installation/deinstallation time to de-
              termine whether or not installation/deinstallation should pro-
              ceed.
 
      --SS _s_i_z_e_-_a_l_l_-_f_i_l_e
-             Store the given file for later querying with the pkg_info(1) _-_S
+             Store the given file for later querying with the pkg_info(1) --SS
              flag.  The file is expected to contain the size (in bytes) of all
              files of this package plus any required packages added up and
              stored as a ASCII string, terminated by a newline.
 
-     --nn _p_r_e_s_e_r_v_e_-_f_i_l_e
-             The file is used to denote that the package should not be delet-
-             ed.  This is intended for use where the deletion of packages may
-             present a bootstrap problem.
-
      --ss _s_i_z_e_-_p_k_g_-_f_i_l_e
-             Store the given file for later querying with the pkg_info(1) _-_s
+             Store the given file for later querying with the pkg_info(1) --ss
              flag.  The file is expected to contain the the size (in bytes) of
              all files of this package added up and stored as a ASCII string,
              terminated by a newline.
@@ -167,11 +167,11 @@ OOPPTTIIOONNSS
 
      --XX _e_x_c_l_u_d_e_f_i_l_e
              Pass _e_x_c_l_u_d_e_f_i_l_e as a ----eexxcclluuddee--ffrroomm argument to ttaarr when creat-
-             ing final package.  See ttaarr man page (or run ttaarr with ----hheellpp
-             flag) for further information on using this flag.
+             ing final package.  See tar(1) for further information on using
+             this flag.
 
 PPAACCKKIINNGG LLIISSTT DDEETTAAIILLSS
-     The ``packing list'' format (see --ff) is fairly simple, being nothing more
+     The (packing list) format (see --ff) is fairly simple, being nothing more
      than a single column of filenames to include in the package.  However,
      since absolute pathnames are generally a bad idea for a package that
      could be installed potentially anywhere, there is another method of spec-
@@ -197,11 +197,11 @@ PPAACCKKIINNGG LLIISSTT DDEETTAAIILLSS
                      the example case _b_i_n_/_e_m_a_c_s
              %%DD      Expand to the current directory prefix, as set with @@ccwwdd,
                      in the example case _/_u_s_r_/_l_o_c_a_l.
-             %%BB      Expand to the ``basename'' of the fully qualified file-
-                     name, that is the current directory prefix, plus the last
-                     filespec, minus the trailing filename.  In the example
-                     case, that would be _/_u_s_r_/_l_o_c_a_l_/_b_i_n.
-             %%ff      Expand to the ``filename'' part of the fully qualified
+             %%BB      Expand to the (basename) of the fully qualified filename,
+                     that is the current directory prefix, plus the last file-
+                     spec, minus the trailing filename.  In the example case,
+                     that would be _/_u_s_r_/_l_o_c_a_l_/_b_i_n.
+             %%ff      Expand to the (filename) part of the fully qualified
                      name, or the converse of %%BB, being in the example case,
                      _e_m_a_c_s.
      @@uunneexxeecc _c_o_m_m_a_n_d
@@ -213,7 +213,7 @@ PPAACCKKIINNGG LLIISSTT DDEETTAAIILLSS
              package, but not directly known to the package's table of con-
              tents (and hence not automatically removable).  The advantage of
              using @@uunneexxeecc over a deinstallation script is that you can use
-             the ``special sequence expansion'' to get at files regardless of
+             the (special sequence expansion) to get at files regardless of
              where they've been potentially redirected (see --pp).
      @@mmooddee _m_o_d_e
              Set default permission for all subsequently extracted files to
@@ -310,4 +310,4 @@ BBUUGGSS
      cations due to exec argument-space limitations (this depends on the value
      returned by ssyyssccoonnff(___S_C___A_R_G___M_A_X)).
 
-NetBSD 1.6.1_STABLE            January 10, 2003                              5
+NetBSD 1.6.1_STABLE            September 2, 2003                             5
