@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.6 2001/05/23 15:35:01 wiz Exp $
+
+--- cipher/Makefile.am.orig	Thu Mar  8 14:47:11 2001
++++ cipher/Makefile.am
+@@ -43,7 +43,7 @@
+ endif
+ 
+ 
+-DYNLINK_MOD_CFLAGS = -DIS_MODULE @DYNLINK_MOD_CFLAGS@
++DYNLINK_MOD_CFLAGS = -DIS_MODULE -fPIC @DYNLINK_MOD_CFLAGS@
+ 
+ #libcipher_a_LDFLAGS =
+ libcipher_a_SOURCES = cipher.c	\
