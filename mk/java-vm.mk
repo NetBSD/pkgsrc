@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.37 2005/01/24 19:32:33 tv Exp $
+# $NetBSD: java-vm.mk,v 1.38 2005/02/11 16:36:49 tv Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -324,9 +324,8 @@ CLASSPATH_cmd=		${ECHO} `for p in					\
 CLASSPATH?=		${CLASSPATH_cmd:sh}
 .endif
 
-CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH:Q} JAVA_HOME=${PKG_JAVA_HOME}
-MAKE_ENV+=		CLASSPATH=${CLASSPATH:Q} JAVA_HOME=${PKG_JAVA_HOME}
-SCRIPTS_ENV+=		CLASSPATH=${CLASSPATH:Q} JAVA_HOME=${PKG_JAVA_HOME}
+ALL_ENV+=		CLASSPATH=${CLASSPATH:Q}
+ALL_ENV+=		JAVA_HOME=${PKG_JAVA_HOME}
 BUILD_DEFS+=		PKG_JVM PKG_JAVA_HOME
 MAKEFLAGS+=		PKG_JVM=${PKG_JVM}
 PREPEND_PATH+=		${PKG_JAVA_HOME}/bin
