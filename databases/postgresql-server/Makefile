@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2002/09/19 09:04:08 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2002/10/19 03:03:51 jlam Exp $
 
 PKGNAME=		postgresql-server-${BASE_VERS}
 COMMENT=		PostgreSQL database server programs
@@ -8,12 +8,12 @@ DEPENDS+=		postgresql-client>=${BASE_VERS}:../../databases/postgresql-client
 # mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-mips
 
-USE_BUILDLINK2=		YES
+USE_BUILDLINK2=		# defined
 
 .include "../../databases/postgresql/Makefile.common"
 
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-DIRS_TO_BUILD=		src/backend
+CONFIGURE_ARGS+=	--with-openssl=${SSLBASE}
+BUILD_DIRS=		${WRKSRC}/src/backend
 
 .if defined(USE_PAM)
 .  include "../../security/PAM/buildlink2.mk"
@@ -38,7 +38,7 @@ PKG_GROUPS=		${PGGROUP}
 RCD_SCRIPTS=		pgsql
 OWN_DIRS_PERMS=		${PGHOME} ${PGUSER} ${PGGROUP} 0755
 
-do-build:
+post-buildlink:
 #
 # Avoid conflict between "${LOCALBASE}/include/openssl/des.h" and
 # "/usr/include/crypt.h" -- we want the definitions in the former.
@@ -46,10 +46,6 @@ do-build:
 .if (${OPSYS} == "SunOS")
 	${TOUCH} ${BUILDLINK_DIR}/include/crypt.h
 .endif
-.for DIR in ${DIRS_TO_BUILD}
-	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${ALL_TARGET}
-.endfor
 
 pre-install:
 	@case "X${PGUSER}" in						\
@@ -63,12 +59,6 @@ pre-install:
 		${FALSE};						\
 		;;							\
 	esac
-
-do-install:
-.for DIR in ${DIRS_TO_BUILD}
-	cd ${WRKSRC}/${DIR} && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${INSTALL_TARGET}
-.endfor
 
 post-install:
 	${GTAR} zxCf ${PREFIX}/man ${WRKSRC}/doc/man.tar.gz		\

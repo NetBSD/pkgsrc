@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2002/08/30 16:58:44 wiz Exp $
+$NetBSD: MESSAGE,v 1.6 2002/10/19 03:03:51 jlam Exp $
 
 To enable this package, put the following into your /etc/rc.conf:
 
@@ -10,8 +10,8 @@ To enable this package, put the following into your /etc/rc.conf:
 
 and make sure
 
-	/usr/pkg/etc/rc.d/pgsql start
+	${RCD_SCRIPTS_DIR}/pgsql start
 
-is started at boot time.
+is run at boot time.
 
 ===========================================================================
