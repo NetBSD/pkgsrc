@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.9091 2005/02/09 14:58:44 tron Exp $
+$NetBSD: CHANGES,v 1.9092 2005/02/09 15:31:34 ben Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -816,3 +816,4 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated nmapfe to 0.9.5nb20 [salo 2005-02-09]
 	Updated apr to 0.9.6.2.0.53 [tron 2005-02-09]
 	Updated apache2 to 2.0.53 [tron 2005-02-09]
+	Updated fprot-workstation-bin to 4.5.3 [ben 2005-02-09]

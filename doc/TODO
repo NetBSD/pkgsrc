@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.3010 2005/02/09 14:33:49 wiz Exp $
+$NetBSD: TODO,v 1.3011 2005/02/09 15:31:34 ben Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,6 @@ Suggested package updates
 	o fop-0.20.5
 	o fort77-1.18
 	o fox-1.2.13
-	o fprot-workstation-bin-4.5.2
 	o freetds-0.62.4
 	o ftpproxy-1.2.3
 	o fugu-1.2.3
