@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.90 2001/03/27 03:20:04 hubertf Exp $
+# $NetBSD: Makefile,v 1.91 2001/03/30 15:08:42 mycroft Exp $
 #
 
-DISTNAME=       fetchmail-5.7.2
+DISTNAME=       fetchmail-5.7.7
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.ccil.org/pub/esr/fetchmail/ \
 		http://www.tuxedo.org/~esr/fetchmail/ \
@@ -16,6 +16,7 @@ BUILD_USES_MSGFMT=	yes
 
 USE_LIBINTL=	yes
 GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
 CONFIGURE_ARGS+=--without-hesiod
 CONFIGURE_ENV+=  LDFLAGS="${CFLAGS}"
 
