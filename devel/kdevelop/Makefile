@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2000/07/17 13:58:20 agc Exp $
+# $NetBSD: Makefile,v 1.19 2000/08/16 01:33:26 hubertf Exp $
 
 DISTNAME=	kdevelop-1.2
 CATEGORIES=	devel kde
@@ -18,7 +18,7 @@ DEPENDS+=       kdoc-2*:../../textproc/kdoc
 USE_PERL5=	yes
 USE_X11BASE=	yes
 USE_GMAKE=	yes
-USE_PKGLIBTOOL=	yes
+USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 EVAL_PREFIX+=	QT1DIR=qt1 KDEBASEDIR=kdebase
