@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/03/11 08:27:09 grant Exp $
+# $NetBSD: Makefile,v 1.5 2004/03/11 19:07:03 minskim Exp $
 
 MOZILLA=	firefox-gtk2
 MOZILLA_BIN=	firefox-bin
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 DISTNAME=	firefox-source-${MOZ_VER}
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/ \
-		ftp://ftp.mozilla.org/pub/mozilla.org/firefox/${MOZ_VER}/ \
+		ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/ \
 		http://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/ \
 		ftp://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/
 
