@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2002/09/11 10:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2002/11/28 18:48:16 drochner Exp $
 
 .include "../gdk-pixbuf/Makefile.common"
 
@@ -10,6 +10,8 @@ CONFLICTS+=	gdk-pixbuf<0.10.1
 BUILDLINK_DEPENDS.gdk-pixbuf=	gdk-pixbuf>=0.11.0nb1
 
 USE_X11=	# defined
+# gtk-doc wants an X11 DISPLAY during build, so disable it
+CONFIGURE_ENV+=	GTKDOC=false
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/gdk-pixbuf/gnome-canvas-pixbuf.h \
