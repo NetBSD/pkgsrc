@@ -1,0 +1,30 @@
+$NetBSD: patch-ac,v 1.1.2.2 2005/03/02 22:15:42 salo Exp $
+
+--- src/text/gftp-text.c.orig	2005-01-25 01:11:00.000000000 +0000
++++ src/text/gftp-text.c	2005-03-02 20:32:41.000000000 +0000
+@@ -155,7 +155,9 @@
+ gftp_text_ask_question (const char *question, int echo, char *buf, size_t size)
+ {
+   struct termios term, oldterm;
++#if GLIB_MAJOR_VERSION > 1
+   gchar *locale_question;
++#endif
+   sigset_t sig, sigsave;
+   char *pos, *termname;
+   int singlechar;
+@@ -185,6 +187,7 @@
+   else
+     infd = stdin;
+ 
++#if GLIB_MAJOR_VERSION > 1
+   locale_question = g_locale_from_utf8 (question, -1, NULL, NULL, NULL);
+   if (locale_question != NULL)
+     {
+@@ -193,6 +196,7 @@
+       g_free (locale_question);
+     }
+   else
++#endif
+     printf ("%s%s%s ", GFTPUI_COMMON_COLOR_BLUE, question,
+             GFTPUI_COMMON_COLOR_DEFAULT);
+ 
