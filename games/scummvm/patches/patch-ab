@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2003/05/14 09:26:18 tron Exp $
+$NetBSD: patch-ab,v 1.2 2003/08/04 08:21:05 adam Exp $
 
---- common.rules.orig	2002-11-21 05:08:36.000000000 +0100
-+++ common.rules	2003-05-14 11:18:54.000000000 +0200
+--- common.rules.orig	2003-07-20 03:01:47.000000000 +0200
++++ common.rules	2003-08-04 09:47:58.000000000 +0200
 @@ -1,5 +1,7 @@
  # Common build rules, used by the sub modules and their module.mk files
  
@@ -9,4 +9,4 @@ $NetBSD: patch-ab,v 1.1 2003/05/14 09:26:18 tron Exp $
 +
  # Convenience library target
  $(MODULE)/lib$(MODULE).a: $(MODULE_OBJS)
- 	$(AR) $@ $+
+ 	-$(RM) $@
