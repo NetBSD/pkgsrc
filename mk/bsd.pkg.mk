@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.266 1999/05/17 22:24:15 tron Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.267 1999/05/20 19:21:02 tron Exp $
 #
 # This file is in the public domain.
 #
@@ -1112,6 +1112,7 @@ do-configure:
 	    CFLAGS="${CFLAGS}" \
 	    INSTALL="`${TYPE} ${INSTALL} | ${AWK} '{ print $$NF }'` -c -o ${BINOWN} -g ${BINGRP}" \
 	    INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
+	    INSTALL_SCRIPT="${INSTALL_SCRIPT}" \
 	    ${CONFIGURE_ENV} ./${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS})
 .endif
 .if defined(USE_IMAKE)
