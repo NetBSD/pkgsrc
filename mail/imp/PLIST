@@ -1,16 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2003/10/18 13:08:49 cjep Exp $
-
-
-share/horde/imp/locale/ar_OM/LC_MESSAGES/imp.mo
-share/horde/imp/locale/ar_SY/LC_MESSAGES/imp.mo
-share/horde/imp/locale/is_IS/LC_MESSAGES/imp.mo
-share/horde/imp/locale/mk_MK/LC_MESSAGES/imp.mo
-share/horde/imp/locale/th_TH/LC_MESSAGES/imp.mo
+@comment $NetBSD: PLIST,v 1.9 2004/06/26 20:35:48 adrianp Exp $
 share/doc/imp/CHANGES
 share/doc/imp/COPYING
 share/doc/imp/CREDITS
 share/doc/imp/INSTALL
 share/doc/imp/README
+share/doc/imp/RELEASE_NOTES
 share/examples/imp/imp.conf
 share/horde/imp/compose.php
 share/horde/imp/config/conf.php.dist
@@ -101,6 +95,8 @@ share/horde/imp/lib/api.php
 share/horde/imp/lib/base.php
 share/horde/imp/lib/constants.php
 share/horde/imp/lib/version.php
+share/horde/imp/locale/ar_OM/LC_MESSAGES/imp.mo
+share/horde/imp/locale/ar_SY/LC_MESSAGES/imp.mo
 share/horde/imp/locale/bg_BG/LC_MESSAGES/imp.mo
 share/horde/imp/locale/ca_ES/LC_MESSAGES/imp.mo
 share/horde/imp/locale/ca_ES/help.xml
@@ -122,8 +118,11 @@ share/horde/imp/locale/fi_FI/LC_MESSAGES/imp.mo
 share/horde/imp/locale/fi_FI/help.xml
 share/horde/imp/locale/fr_FR/LC_MESSAGES/imp.mo
 share/horde/imp/locale/fr_FR/help.xml
+share/horde/imp/locale/gl_ES/LC_MESSAGES/imp.mo
 share/horde/imp/locale/hu_HU/LC_MESSAGES/imp.mo
 share/horde/imp/locale/hu_HU/help.xml
+share/horde/imp/locale/id_ID/LC_MESSAGES/imp.mo
+share/horde/imp/locale/is_IS/LC_MESSAGES/imp.mo
 share/horde/imp/locale/it_IT/LC_MESSAGES/imp.mo
 share/horde/imp/locale/it_IT/help.xml
 share/horde/imp/locale/ja_JP/LC_MESSAGES/imp.mo
@@ -131,6 +130,7 @@ share/horde/imp/locale/ko_KR/LC_MESSAGES/imp.mo
 share/horde/imp/locale/ko_KR/help.xml
 share/horde/imp/locale/lt_LT/LC_MESSAGES/imp.mo
 share/horde/imp/locale/lv_LV/LC_MESSAGES/imp.mo
+share/horde/imp/locale/mk_MK/LC_MESSAGES/imp.mo
 share/horde/imp/locale/nb_NO/LC_MESSAGES/imp.mo
 share/horde/imp/locale/nb_NO/help.xml
 share/horde/imp/locale/nl_NL/LC_MESSAGES/imp.mo
@@ -153,6 +153,7 @@ share/horde/imp/locale/sl_SI/LC_MESSAGES/imp.mo
 share/horde/imp/locale/sr_YU/LC_MESSAGES/imp.mo
 share/horde/imp/locale/sv_SE/LC_MESSAGES/imp.mo
 share/horde/imp/locale/sv_SE/help.xml
+share/horde/imp/locale/th_TH/LC_MESSAGES/imp.mo
 share/horde/imp/locale/uk_UA/LC_MESSAGES/imp.mo
 share/horde/imp/locale/uk_UA/help.xml
 share/horde/imp/locale/zh_CN/LC_MESSAGES/imp.mo
@@ -178,7 +179,9 @@ share/horde/imp/po/et_EE.po
 share/horde/imp/po/extract.pl
 share/horde/imp/po/fi_FI.po
 share/horde/imp/po/fr_FR.po
+share/horde/imp/po/gl_ES.po
 share/horde/imp/po/hu_HU.po
+share/horde/imp/po/id_ID.po
 share/horde/imp/po/imp.pot
 share/horde/imp/po/is_IS.po
 share/horde/imp/po/it_IT.po
@@ -271,7 +274,6 @@ share/horde/imp/templates/search/javascript.inc
 share/horde/imp/templates/search/main.inc
 share/horde/imp/test.php
 share/horde/imp/view.php
-
 @dirrm share/horde/imp/templates/search
 @dirrm share/horde/imp/templates/prefs
 @dirrm share/horde/imp/templates/message
@@ -336,8 +338,12 @@ share/horde/imp/view.php
 @dirrm share/horde/imp/locale/it_IT
 @dirrm share/horde/imp/locale/is_IS/LC_MESSAGES
 @dirrm share/horde/imp/locale/is_IS
+@dirrm share/horde/imp/locale/id_ID/LC_MESSAGES
+@dirrm share/horde/imp/locale/id_ID
 @dirrm share/horde/imp/locale/hu_HU/LC_MESSAGES
 @dirrm share/horde/imp/locale/hu_HU
+@dirrm share/horde/imp/locale/gl_ES/LC_MESSAGES
+@dirrm share/horde/imp/locale/gl_ES
 @dirrm share/horde/imp/locale/fr_FR/LC_MESSAGES
 @dirrm share/horde/imp/locale/fr_FR
 @dirrm share/horde/imp/locale/fi_FI/LC_MESSAGES
