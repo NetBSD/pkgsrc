@@ -1,0 +1,40 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2001/11/01 01:01:14 zuntum Exp $
+#
+
+PKGNAME=$1
+STAGE=$2
+
+BINGRP=@BINGRP@
+CHGRP=@CHGRP@
+CHOWN=@CHOWN@
+DB_SUFFIX=@DB_SUFFIX@
+PKG_PREFIX=@PKG_PREFIX@
+QPOPPER_APOP_AUTH=@QPOPPER_APOP_AUTH@.${DB_SUFFIX}
+QPOPPER_USER=@QPOPPER_USER@
+USER_CMD="@USER_CMD@"
+
+case "${STAGE}" in
+PRE-INSTALL)
+	${USER_CMD} info -e ${QPOPPER_USER} ||
+		${USER_CMD} add -g ${BINGRP} \
+		    -d /nonexistent -s /sbin/nologin ${QPOPPER_USER}
+	;;
+POST-INSTALL)
+	if [ -f ${QPOPPER_APOP_AUTH} ]; then \
+		${CHOWN} ${QPOPPER_USER} ${QPOPPER_APOP_AUTH}; \
+		${CHGRP} ${BINGRP} ${QPOPPER_APOP_AUTH}; \
+	fi
+	cat <<EOF
+===========================================================================
+
+In order to enable POP service, you should add the following line
+to your /etc/inetd.conf:
+
+    pop3 stream tcp nowait root ${PKG_PREFIX}/libexec/qpopper qpopper -s
+
+===========================================================================
+EOF
+	;;
+esac

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1999/01/29 21:05:57 tron Exp $
-bin/xrolodex
-man/cat1/xrolodex.0
-lib/X11/app-defaults/XRolodex

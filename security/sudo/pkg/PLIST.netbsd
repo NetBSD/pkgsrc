@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.netbsd,v 1.1 2000/07/26 15:12:10 veego Exp $
-man/man5/sudoers.5
-man/man8/sudo.8
-man/man8/visudo.8

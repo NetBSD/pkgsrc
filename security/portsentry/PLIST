@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:33 zuntum Exp $
+etc/portsentry.ignore
+etc/portsentry.conf
+sbin/portsentry

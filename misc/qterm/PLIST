@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:21 zuntum Exp $
+bin/qterm
+man/man1/qterm.1
+etc/qtermtab

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:51 zuntum Exp $
+bin/mmv
+man/man1/mmv.1

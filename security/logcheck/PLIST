@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:55 zuntum Exp $
+bin/logtail
+etc/logcheck.hacking.sample
+etc/logcheck.ignore.sample
+etc/logcheck.sh
+etc/logcheck.violations.ignore.sample
+etc/logcheck.violations.sample

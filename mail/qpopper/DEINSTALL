@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/11/01 01:01:14 zuntum Exp $
+#
+
+PKGNAME=$1
+STAGE=$2
+
+DB_SUFFIX=@DB_SUFFIX@
+QPOPPER_APOP_AUTH=@QPOPPER_APOP_AUTH@.${DB_SUFFIX}
+QPOPPER_USER=@QPOPPER_USER@
+
+case "${STAGE}" in
+DEINSTALL)
+	cat <<EOF
+===========================================================================
+
+If you won't be using ${PKGNAME} any longer, you may want to remove
+user "${QPOPPER_USER}" and delete a file "${QPOPPER_APOP_AUTH}".
+
+===========================================================================
+EOF
+	;;
+esac

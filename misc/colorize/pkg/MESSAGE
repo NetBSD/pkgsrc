@@ -1,7 +1,0 @@
-$NetBSD: MESSAGE,v 1.1.1.1 2001/03/26 04:11:11 zuntum Exp $
-======================================================================
-
-  You may want to install ${PREFIX}/share/examples/colorize/colorizerc
-  to ${PREFIX}/etc or alternatively to ~/.colorizerc
-
-======================================================================

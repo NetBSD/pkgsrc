@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/30 08:17:03 taca Exp $
-${RUBY_ARCHLIBDIR}/md5.so
-${RUBY_DOCDIR}/md5/md5.txt
-${RUBY_DOCDIR}/md5/ja/md5.txt.ja
-@dirrm ${RUBY_DOCDIR}/md5/ja
-@dirrm ${RUBY_DOCDIR}/md5

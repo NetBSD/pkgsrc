@@ -1,0 +1,9 @@
+======================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 01:24:59 zuntum Exp $
+
+To use "newmkdep" either use "make MKDEP=newmkdep ..." or add an
+assignment like this to "/etc/mk.conf":
+
+MKDEP = newmkdep
+
+======================================================================

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:43 zuntum Exp $
+${RUBY_SITEARCHLIBDIR}/sha1.so
+${RUBY_DOCDIR}/sha1/README
+@dirrm ${RUBY_DOCDIR}/sha1

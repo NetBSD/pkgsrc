@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST.common,v 1.1 2001/11/01 01:31:17 zuntum Exp $
+@unexec install-info --delete --info-dir=%D/info %D/info/info-stnd.info
+@unexec install-info --delete --info-dir=%D/info %D/info/info.info
+@unexec install-info --delete --info-dir=%D/info %D/info/texinfo
+bin/makeinfo
+bin/texi2dvi
+bin/texindex
+bin/install-info
+bin/info
+info/info-stnd.info
+info/info.info
+info/texinfo
+info/texinfo-1
+info/texinfo-10
+info/texinfo-11
+info/texinfo-12
+info/texinfo-2
+info/texinfo-3
+info/texinfo-4
+info/texinfo-5
+info/texinfo-6
+info/texinfo-7
+info/texinfo-8
+info/texinfo-9
+@exec install-info --info-dir=%D/info %D/info/info-stnd.info
+@exec install-info --info-dir=%D/info %D/info/info.info
+@exec install-info --info-dir=%D/info %D/info/texinfo

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:12 zuntum Exp $
+qmail/bin/qmail-delivery-conf
+qmail/bin/qmail-pop3d-conf
+qmail/bin/qmail-qmqpd-conf
+qmail/bin/qmail-qmtpd-conf
+qmail/bin/qmail-smtpd-conf

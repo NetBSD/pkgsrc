@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1999/12/26 17:20:33 itojun Exp $
-libexec/distribute
-libexec/archive
-man/man1/distribute.1

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:04 zuntum Exp $
+bin/ptlgcc
+bin/ptlg++
+lib/libPTL.a
+lib/libPTL.so
+lib/libPTL.so.2.0

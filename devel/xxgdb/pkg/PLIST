@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 1998/03/01 21:21:16 tron Exp $
-bin/xxgdb
-lib/X11/app-defaults/XDbx
-man/man1/xxgdb.1

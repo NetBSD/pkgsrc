@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/03/21 23:36:07 jwise Exp $
-lib/python2.0/lib-dynload/ExpectPymodule.so
-share/examples/python/py-expect/ask.py
-share/examples/python/py-expect/glob.py
-share/examples/python/py-expect/ping.py
-share/examples/python/py-expect/telnet.py
-share/examples/python/py-expect/xping.py
-@dirrm share/examples/python/py-expect

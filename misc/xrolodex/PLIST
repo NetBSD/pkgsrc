@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:56 zuntum Exp $
+bin/xrolodex
+man/cat1/xrolodex.0
+lib/X11/app-defaults/XRolodex

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:50 zuntum Exp $
+bin/cpuflags
+man/man1/cpuflags.1
+share/mk/cpuflags.mk

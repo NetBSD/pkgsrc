@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/30 23:31:20 taca Exp $
-${RUBY_SITEARCHLIBDIR}/textbuf.so
-${RUBY_DOCDIR}/textbuf/README.en
-${RUBY_DOCDIR}/textbuf/ja/README.ja
-@dirrm ${RUBY_DOCDIR}/textbuf/ja
-@dirrm ${RUBY_DOCDIR}/textbuf

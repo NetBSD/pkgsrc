@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2001/05/16 08:08:42 jlam Exp $
-
-To enable the ${PKGNAME} plugin, please run the SquirrelMail
-configuration script:
-
-        cd ${SMDIR}/config && ./conf.pl
-
-===========================================================================

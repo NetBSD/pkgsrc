@@ -1,0 +1,15 @@
+==========================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 01:29:39 zuntum Exp $
+
+  StarOffice has now been installed in ${PREFIX}/Office51.
+
+  Before using this package for the first time, each user has to run
+  ${PREFIX}/bin/sosetup.  Thereafter, StarOffice can be started using
+  the ${PREFIX}/bin/soffice command.
+
+  Please note that under NetBSD the program will pop up a requester,
+  complaining that it is unable to load the 'PluginManager' component.
+  This is normal and can be ignored (you can simply click away the
+  requester).
+
+==========================================================================

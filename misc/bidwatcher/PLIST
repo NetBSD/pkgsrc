@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:34 zuntum Exp $
+bin/bidwatcher
+share/doc/bidwatcher/AUTHORS
+share/doc/bidwatcher/COPYING
+share/doc/bidwatcher/INSTALL
+share/doc/bidwatcher/NEWS
+share/doc/bidwatcher/README
+share/doc/html/bidwatcher/quick_start.html
+@dirrm share/doc/html/bidwatcher
+@dirrm share/doc/bidwatcher

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:57 zuntum Exp $
+bin/gperf
+@unexec install-info --delete %D/info/gperf.info %D/info/dir
+info/gperf.info
+@exec install-info %D/info/gperf.info %D/info/dir
+man/man1/gperf.1.gz

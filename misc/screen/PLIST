@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:31 zuntum Exp $
+bin/screen
+bin/${DISTNAME}
+man/man1/screen.1
+@unexec install-info --delete %D/info/screen.info %D/info/dir
+info/screen.info
+@exec install-info %D/info/screen.info %D/info/dir
+@unexec if [ -f %D/bin/screen.old ]; then rm -f %D/bin/screen.old ; fi
+share/examples/screen/screenrc
+@dirrm share/examples/screen

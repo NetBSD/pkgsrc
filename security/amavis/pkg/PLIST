@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2001/10/22 06:41:31 martti Exp $
-bin/zipsecure
-bin/securetar
-sbin/scanmails
-share/examples/amavis/LICENSE.sendmail
-share/examples/amavis/amavis.m4
-@dirrm share/examples/amavis

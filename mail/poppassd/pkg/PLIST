@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/10 15:15:06 taca Exp $
-libexec/poppassd
-man/man8/poppassd.8
-share/doc/poppassd.License

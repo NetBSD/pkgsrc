@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:42 zuntum Exp $
+bin/gpg
+bin/gpgv
+@unexec install-info --delete --info-dir=%D/info %D/info/gpg.info
+@unexec install-info --delete --info-dir=%D/info %D/info/gpgv.info
+info/gpg.info
+info/gpgv.info
+@exec install-info --info-dir=%D/info %D/info/gpg.info
+@exec install-info --info-dir=%D/info %D/info/gpgv.info
+${IDEA}lib/gnupg/idea
+lib/gnupg/rndegd
+lib/gnupg/rndunix
+lib/gnupg/tiger
+man/man1/gpg.1
+man/man1/gpgv.1
+share/gnupg/FAQ
+share/gnupg/faq.html
+share/gnupg/options.skel
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/es_ES/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnupg.mo
+${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnupg.mo
+@dirrm share/gnupg
+@dirrm lib/gnupg

@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# $NetBSD: DEINSTALL,v 1.1 2001/11/01 01:16:54 zuntum Exp $
+#
+
+[ -d /var/adm/tmp ] && rmdir /var/adm/tmp
+[ -d /var/adm ]     && rmdir /var/adm
+exit 0

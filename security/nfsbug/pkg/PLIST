@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1998/11/12 23:48:35 frueauf Exp $
-bin/nfsbug
-bin/nfsshell

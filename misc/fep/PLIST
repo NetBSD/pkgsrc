@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:01 zuntum Exp $
+bin/fep
+man/man1/fep.1.gz

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:59:41 zuntum Exp $
+bin/coolmail
+lib/X11/app-defaults/Coolmail
+man/man1/coolmail.1

@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:14 zuntum Exp $
+${RUBY_SITELIBDIR}/amstd/bench.rb
+${RUBY_SITELIBDIR}/amstd/bug.rb
+${RUBY_SITELIBDIR}/amstd/collfrom.rb
+${RUBY_SITELIBDIR}/amstd/constdef.rb
+${RUBY_SITELIBDIR}/amstd/dispatch.rb
+${RUBY_SITELIBDIR}/amstd/errutil.rb
+${RUBY_SITELIBDIR}/amstd/extmod.rb
+${RUBY_SITELIBDIR}/amstd/fileutils.rb
+${RUBY_SITELIBDIR}/amstd/futils.rb
+${RUBY_SITELIBDIR}/amstd/gconst.rb
+${RUBY_SITELIBDIR}/amstd/getdep.rb
+${RUBY_SITELIBDIR}/amstd/info.rb
+${RUBY_SITELIBDIR}/amstd/must.rb
+${RUBY_SITELIBDIR}/amstd/pipeline.rb
+${RUBY_SITELIBDIR}/amstd/rbparams.rb
+${RUBY_SITELIBDIR}/amstd/recycle.rb
+${RUBY_SITELIBDIR}/amstd/rubyemu.rb
+${RUBY_SITELIBDIR}/amstd/strquote.rb
+${RUBY_SITELIBDIR}/amstd/symbol.rb
+${RUBY_SITELIBDIR}/amstd/timer.rb
+${RUBY_SITELIBDIR}/amstd/to_s.rb
+${RUBY_SITELIBDIR}/amstd/version.rb
+@dirrm ${RUBY_SITELIBDIR}/amstd
+${RUBY_DOCDIR}/amstd/README.en
+${RUBY_DOCDIR}/amstd/ja/README.ja
+${RUBY_DOCDIR}/amstd/ja/amstd-ja.rd
+@dirrm ${RUBY_DOCDIR}/amstd/ja
+@dirrm ${RUBY_DOCDIR}/amstd

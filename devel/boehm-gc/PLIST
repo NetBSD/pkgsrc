@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:31 zuntum Exp $
+include/gc.h
+include/gc_cpp.h
+lib/libgc.a
+lib/libleak.a
+man/man3/gc.3

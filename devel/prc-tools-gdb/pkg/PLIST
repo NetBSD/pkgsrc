@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/04/25 17:39:16 wiz Exp $
-bin/m68k-palmos-gdb
-man/man1/m68k-palmos-gdb.1

@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:56 zuntum Exp $
+bin/mcrypt
+bin/mdecrypt
+man/man1/mcrypt.1
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/mcrypt.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/mcrypt.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/mcrypt.mo

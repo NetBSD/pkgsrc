@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 1997/11/06 10:02:57 agc Exp $
-bin/splitvt
-man/man1/splitvt.1.gz

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/06/29 11:24:51 abs Exp $
-bin/cpuflags
-man/man1/cpuflags.1
-share/mk/cpuflags.mk

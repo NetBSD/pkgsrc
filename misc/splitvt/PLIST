@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:38 zuntum Exp $
+bin/splitvt
+man/man1/splitvt.1.gz

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:55 zuntum Exp $
+bin/ssldump
+man/man1/ssldump.1

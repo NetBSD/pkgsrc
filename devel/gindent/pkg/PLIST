@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 1999/08/20 06:12:59 kim Exp $
-bin/gindent
-man/man1/gindent.1
-@unexec install-info --delete %D/info/indent.info %D/info/dir
-info/indent.info
-@exec install-info %D/info/indent.info %D/info/dir

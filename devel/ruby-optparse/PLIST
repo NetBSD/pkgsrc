@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:24 zuntum Exp $
+${RUBY_SITELIBDIR}/optparse.rb
+${RUBY_DOCDIR}/optparse/ChangeLog
+${RUBY_DOCDIR}/optparse/README.en
+${RUBY_DOCDIR}/optparse/ja/FIRSTSTEP.ja.html
+${RUBY_DOCDIR}/optparse/ja/README.ja
+${RUBY_DOCDIR}/optparse/ja/optparse.ja.html
+@dirrm ${RUBY_DOCDIR}/optparse/ja
+${RUBY_DOCDIR}/optparse/optparse.en.html
+@dirrm ${RUBY_DOCDIR}/optparse
+${RUBY_EXAMPLESDIR}/optparse/cmd-ls.rb
+${RUBY_EXAMPLESDIR}/optparse/cmd.rb
+${RUBY_EXAMPLESDIR}/optparse/getopts.test.en
+${RUBY_EXAMPLESDIR}/optparse/ja/getopts.test
+@comment ${RUBY_EXAMPLESDIR}/optparse/ja/jfold.rb
+@dirrm ${RUBY_EXAMPLESDIR}/optparse/ja
+${RUBY_EXAMPLESDIR}/optparse/shellwords.rb
+${RUBY_EXAMPLESDIR}/optparse/time.rb
+${RUBY_EXAMPLESDIR}/optparse/uri.rb
+${RUBY_EXAMPLESDIR}/optparse/opttest.rb
+@dirrm ${RUBY_EXAMPLESDIR}/optparse
+man/man1/optparse.1

@@ -1,0 +1,68 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2001/11/01 01:17:04 zuntum Exp $
+
+PKGNAME=$1
+STAGE=$2
+
+case ${STAGE} in
+PRE-INSTALL)
+	if ! dd if=/dev/urandom of=/dev/null bs=1 count=1 2>/dev/null >/dev/null
+	then
+		cat << EOF
+===========================================================================
+You need a working /dev/urandom for ${PKGNAME} to work.
+
+Please make sure you have a kernel compiled from a config file
+containing the line:
+
+	pseudo-device	rnd
+===========================================================================
+EOF
+		exit 1
+	fi
+	;;
+POST-INSTALL)
+	SSH_CONF_DIR=@SSH_CONF_DIR@
+	SSH_EXAMPLE_DIR=${PKG_PREFIX}/share/examples/openssh
+	INSTALL_DATA="@INSTALL_DATA@"
+
+	if [ ! -d ${SSH_CONF_DIR} ]
+	then
+		echo "Creating directory ${SSH_CONF_DIR} for ssh config files.."
+		@MKDIR@ ${SSH_CONF_DIR}
+	fi
+	for file in ssh_config sshd_config
+	do
+		if [ ! -f ${SSH_CONF_DIR}/${file} ]
+		then
+			echo "Installing example ${file} in ${SSH_CONF_DIR}.."
+			${INSTALL_DATA} ${SSH_EXAMPLE_DIR}/${file} \
+				${SSH_CONF_DIR}/${file}
+		fi
+	done
+	if [ ! -f ${SSH_CONF_DIR}/ssh_host_key ]
+	then
+		echo "Generating an RSA1 secret host key in ${SSH_CONF_DIR}.."
+		${PKG_PREFIX}/bin/ssh-keygen -t rsa1 -N "" \
+			-f ${SSH_CONF_DIR}/ssh_host_key
+	fi
+	if [ ! -f ${SSH_CONF_DIR}/ssh_host_rsa_key ]
+	then
+		echo "Generating an RSA secret host key in ${SSH_CONF_DIR}.."
+		${PKG_PREFIX}/bin/ssh-keygen -t rsa -N "" \
+			-f ${SSH_CONF_DIR}/ssh_host_rsa_key
+	fi
+	if [ ! -f ${SSH_CONF_DIR}/ssh_host_dsa_key ]
+	then
+		echo "Generating a DSA secret host key in ${SSH_CONF_DIR}.."
+		${PKG_PREFIX}/bin/ssh-keygen -t dsa -N "" \
+			-f ${SSH_CONF_DIR}/ssh_host_dsa_key
+	fi
+	;;
+*)
+	echo "Unexpected argument: ${STAGE}"
+	exit 1
+	;;
+esac
+exit 0

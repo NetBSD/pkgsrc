@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/07/01 11:58:20 taca Exp $
-${RUBY_SITELIBDIR}/bsearch.rb

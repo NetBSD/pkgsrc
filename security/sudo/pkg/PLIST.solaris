@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.solaris,v 1.1 2000/07/26 15:12:11 veego Exp $
-man/man1m/sudo.1m
-man/man1m/visudo.1m
-man/man4/sudoers.4

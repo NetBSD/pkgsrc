@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:59:57 zuntum Exp $
+etc/exim/configure
+etc/exim/mailer.conf.exim
+etc/rc.d/exim
+sbin/exicyclog
+sbin/exigrep
+sbin/exim
+sbin/exim_dbmbuild
+sbin/exim_dumpdb
+sbin/exim_fixdb
+sbin/exim_lock
+sbin/exim_newaliases
+sbin/exim_tidydb
+sbin/eximstats
+sbin/exinext
+sbin/exiqsumm
+sbin/exiwhat
+man/man8/exim.8
+@unexec rmdir /var/log/exim 2>/dev/null || true
+@dirrm etc/exim

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:59:45 zuntum Exp $
+bin/cue
+share/examples/cue/sample.cuerc
+@dirrm share/examples/cue

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/06/16 03:30:51 jlam Exp $
-share/aclocal/gettext.m4
-share/aclocal/lcmessage.m4
-share/aclocal/progtest.m4

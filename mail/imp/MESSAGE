@@ -1,0 +1,29 @@
+==========================================================================
+$NetBSD: MESSAGE,v 1.1 2001/11/01 01:00:17 zuntum Exp $
+
+Please refer to the file:
+
+	${PREFIX}/share/doc/imp/SECURITY
+
+on how to secure the IMP installation.  It is at least recommended that
+you change the default database password used by horde-phplib and imp.
+You may setup the Horde/IMP installation by pointing a web browser at:
+
+	http://www.domain.com/horde/setup.php3
+
+or by manually editting:
+
+	${IMPDIR}/config/defaults.php3
+
+You will also need to make IMP accessible through your HTTP server.  If
+you are running Apache and ap-php, then you can add the following lines
+to httpd.conf:
+
+	Include ${APACHE_SYSCONFDIR}/horde.conf
+	Include ${APACHE_SYSCONFDIR}/imp.conf
+
+to make Horde accessible through:
+	
+	http://www.domain.com/horde/imp/
+
+==========================================================================

@@ -1,0 +1,26 @@
+#!/bin/sh
+#
+# $NetBSD: INSTALL,v 1.1 2001/11/01 01:01:03 zuntum Exp $
+#
+
+PKGNAME=$1
+STAGE=$2
+
+case "${STAGE}" in
+POST-INSTALL)
+	cat <<EOF
+===========================================================================
+
+In order to enable poppassd service, you should add the following line
+to your /etc/services:
+
+    poppass	106/tcp		poppassd
+
+And /etc/inetd.conf:
+
+    poppass stream tcp nowait root ${PKG_PREFIX}/libexec/poppassd poppassd
+
+===========================================================================
+EOF
+	;;
+esac

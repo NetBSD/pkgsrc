@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:31:32 zuntum Exp $
+bin/pkg-config
+man/man1/pkg-config.1
+share/aclocal/pkg.m4
+@exec mkdir -p %D/lib/pkgconfig
+@dirrm lib/pkgconfig

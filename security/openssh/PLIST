@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:04 zuntum Exp $
+bin/scp
+bin/sftp
+bin/slogin
+bin/ssh
+bin/ssh-add
+bin/ssh-agent
+bin/ssh-keygen
+bin/ssh-keyscan
+etc/rc.d/sshd
+libexec/sftp-server
+man/man1/scp.1
+man/man1/sftp.1
+man/man1/slogin.1
+man/man1/ssh-add.1
+man/man1/ssh-agent.1
+man/man1/ssh-keygen.1
+man/man1/ssh-keyscan.1
+man/man1/ssh.1
+man/man8/sftp-server.8
+man/man8/sshd.8
+sbin/sshd
+share/examples/openssh/ssh_config
+share/examples/openssh/ssh_prng_cmds
+share/examples/openssh/sshd_config
+@dirrm share/examples/openssh

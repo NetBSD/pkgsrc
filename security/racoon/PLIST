@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:37 zuntum Exp $
+sbin/racoon
+man/man8/racoon.8
+man/man5/racoon.conf.5
+share/doc/racoon/README.certificate
+share/doc/racoon/FAQ
+@dirrm share/doc/racoon
+share/examples/racoon/racoon.conf.sample
+@dirrm share/examples/racoon

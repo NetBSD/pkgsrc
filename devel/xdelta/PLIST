@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:18 zuntum Exp $
+bin/edsio-comp
+bin/xdelta
+bin/xdelta-config
+include/edsio.h
+include/edsio_edsio.h
+include/xdelta.h
+include/xd_edsio.h
+@unexec install-info --delete %D/info/xdelta.info %D/info/dir
+info/xdelta.info
+@exec install-info %D/info/xdelta.info %D/info/dir
+lib/libedsio.so.0.0
+lib/libedsio.so.0
+lib/libedsio.so
+lib/libedsio.la
+lib/libedsio.a
+lib/libxdelta.so.2.0
+lib/libxdelta.so.2
+lib/libxdelta.so
+lib/libxdelta.la
+lib/libxdelta.a
+man/man1/xdelta.1
+share/aclocal/xdelta.m4
