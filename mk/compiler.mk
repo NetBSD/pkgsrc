@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.35 2004/09/21 15:01:39 jlam Exp $
+# $NetBSD: compiler.mk,v 1.36 2004/10/06 09:49:53 grant Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -17,6 +17,7 @@
 #		mipspro-ucode	Silicon Graphics, Inc. MIPSpro (o32)
 #		sunpro		Sun Microsystems, Inc. WorkShip/Forte/Sun
 #				ONE Studio
+#		xlc		IBM's XL C/C++ compiler suite
 #
 #	The default is "gcc".  You can use ccache and/or distcc with an
 #	appropriate PKGSRC_COMPILER setting, e.g. "ccache distcc gcc".
@@ -88,7 +89,7 @@ PKGSRC_COMPILER?=	gcc
 _USE_PKGSRC_GCC=	yes
 .endif
 
-_COMPILERS=		gcc mipspro mipspro-ucode sunpro
+_COMPILERS=		gcc mipspro mipspro-ucode sunpro xlc
 _PSEUDO_COMPILERS=	ccache distcc
 
 .if defined(NOT_FOR_COMPILER) && !empty(NOT_FOR_COMPILER)
