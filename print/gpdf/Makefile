@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2004/06/28 15:37:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.19 2004/09/21 17:12:39 jmmv Exp $
 #
 
-DISTNAME=	gpdf-0.132
+DISTNAME=	gpdf-2.8.0
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gpdf/0.132/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gpdf/2.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
@@ -32,6 +32,7 @@ GCONF2_SCHEMAS=		gpdf.schemas
 .include "../../devel/pkgconfig/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
