@@ -9,7 +9,7 @@
  #------------------------------------------
 -O	= -O
 -I 	= -I/usr/local/X11R5/include
-+O	= -O2 -m486
++O	= -O2
 +I 	= -I/usr/X11R6/include
  
 -L 	= -L/usr/local/X11R5/lib -lXaw -lXmu -lXt -lXext -lX11 -lm
