@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2003/02/14 17:07:52 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2003/02/16 16:35:47 jmmv Exp $
 
 DISTNAME=		gtkhtml-1.1.7
 PKGREVISION=		1
@@ -19,6 +19,8 @@ GNU_CONFIGURE=		YES
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+
+CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
 .include "../../devel/bonobo/buildlink2.mk"
 .include "../../devel/gal/buildlink2.mk"
