@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2004/08/21 11:17:55 markd Exp $
+
+--- lib/write.cpp.orig	2004-08-19 01:38:57.000000000 +1200
++++ lib/write.cpp
+@@ -898,6 +898,11 @@ bool WriteThread::diskSpaceTest(const st
+ 
+ bool WriteThread::diskSpaceTest(const string &fileName, unsigned long fileSize)
+ {
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 200040000) /* NetBSD 2.0D */
++#define statfs statvfs
++#define f_bsize f_frsize
++#endif
++
+     struct statfs stat;
+ 
+     string path = extractFilePath(fileName);
