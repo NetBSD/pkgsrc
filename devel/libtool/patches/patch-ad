@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.31 2004/02/08 11:21:58 skrll Exp $
+$NetBSD: patch-ad,v 1.7 2004/02/08 11:21:58 skrll Exp $
 
---- configure.orig	2004-01-25 12:36:38.000000000 +0000
-+++ configure
-@@ -4424,10 +4424,13 @@ beos*)
+--- libltdl/configure.orig	2004-01-25 12:36:58.000000000 +0000
++++ libltdl/configure
+@@ -3642,10 +3642,13 @@ beos*)
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.31 2004/02/08 11:21:58 skrll Exp $
    ;;
  
  cygwin*)
-@@ -8135,9 +8138,10 @@ beos*)
+@@ -8040,9 +8043,10 @@ beos*)
    shlibpath_var=LIBRARY_PATH
    ;;
  
@@ -33,7 +33,7 @@ $NetBSD: patch-ab,v 1.31 2004/02/08 11:21:58 skrll Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -8253,15 +8257,15 @@ kfreebsd*-gnu)
+@@ -8158,15 +8162,15 @@ kfreebsd*-gnu)
  
  freebsd*)
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
@@ -55,7 +55,7 @@ $NetBSD: patch-ab,v 1.31 2004/02/08 11:21:58 skrll Exp $
        need_version=yes
        ;;
    esac
-@@ -8340,12 +8344,7 @@ hpux9* | hpux10* | hpux11*)
+@@ -8245,12 +8249,7 @@ hpux9* | hpux10* | hpux11*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -69,7 +69,7 @@ $NetBSD: patch-ab,v 1.31 2004/02/08 11:21:58 skrll Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -8381,7 +8380,7 @@ linux*oldld* | linux*aout* | linux*coff*
+@@ -8286,7 +8285,7 @@ linux*oldld* | linux*aout* | linux*coff*
  
  # This must be Linux ELF.
  linux*)
@@ -78,7 +78,7 @@ $NetBSD: patch-ab,v 1.31 2004/02/08 11:21:58 skrll Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -8505,7 +8504,7 @@ sco3.2v5*)
+@@ -8410,7 +8409,7 @@ sco3.2v5*)
    ;;
  
  solaris*)
@@ -87,32 +87,3 @@ $NetBSD: patch-ab,v 1.31 2004/02/08 11:21:58 skrll Exp $
    need_lib_prefix=no
    need_version=no
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
-@@ -10854,6 +10853,13 @@ if test -z "$aix_libpath"; then aix_libp
-     if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
-       archive_cmds_CXX='$LD -Bshareable  -o $lib $predep_objects $libobjs $deplibs $postdep_objects $linker_flags'
-       wlarc=
-+      # Determine if we need to override the c++rt0 that is
-+      # picked up by analysing output_verbose_link_cmds
-+      if test -f ${PREFIX}/lib/c++rt0/c++rt0.o.PIC; then
-+        cpprt0_file="${PREFIX}/lib/c++rt0/c++rt0.o.PIC"
-+      else
-+        cpprt0_file=
-+      fi
-       hardcode_libdir_flag_spec_CXX='-R$libdir'
-       hardcode_direct_CXX=yes
-       hardcode_shlibpath_var_CXX=no
-@@ -11226,6 +11232,14 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-     esac
-   done
- 
-+  case "$host_os" in
-+  netbsd*)
-+    if test -n "$cpprt0_file"; then
-+      predep_objects_CXX=`eval echo $predep_objects_CXX | sed -e 's:/usr/lib/c++rt0.o:$cpprt0_file:'`
-+    fi
-+    ;;
-+  esac
-+
-   # Clean up.
-   rm -f a.out a.exe
- else
